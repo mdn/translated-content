@@ -1,0 +1,96 @@
+---
+title: 创建Python XPCOM组件
+slug: Creating_a_Python_XPCOM_component
+translation_of: Mozilla/Tech/XPCOM/Creating_a_Python_XPCOM_component
+---
+<p><a href="http://books.mozdev.org/html"><em>Creating Applications with Mozilla</em></a> 已经包含了一个<a href="http://books.mozdev.org/html/mozilla-chp-8-sect-2.html" title="http://books.mozdev.org/html/mozilla-chp-8-sect-2.html">教程</a>用于编写简单的基于JavaScript和C++（实现<code>nsISimple</code>接口）的组件，本文阐述如何通过Python语言使用<a href="/en-US/docs/PyXPCOM" title="/en-US/docs/PyXPCOM">PyXPCOM</a>创建相同的组件。</p>
+<p>(Note that some details may be missing)</p>
+<h2 id="Preparation" name="Preparation">准备</h2>
+<p>如果你还没有PyXPCOM的二进制文件，请参考<a href="/en-US/docs/Building_PyXPCOM" title="/en-US/docs/Building_PyXPCOM">Building PyXPCOM</a>以编译PyXPCOM的二进制文件。</p>
+<div class="note">
+  Tip: 你可以从<a href="http://pyxpcomext.mozdev.org/" title="http://pyxpcomext.mozdev.org/">PythonExt</a>得到PyXPCOM的二进制文件归档拷贝，解压缩xpi文件并得到任何你想要的东西。</div>
+
+<p>如果你想在通常的Python可执行环境中使用PyXPCOM，你需要告诉Python在哪里可以找到PyXPCOM库。或许最好的办法就是在应用中设置变量PYTHONPATH指向'bin/python'目录。当然这在你的组件通过Mozilla被加载时是没有必要的因为Python加载器会完成sys.path的修改。</p>
+<p>然后你可以</p>
+<pre>import xpcom
+</pre>
+<p>在任何Python模块里（大多数情况下是在你的组件中）。</p>
+<h2 id="Defining_the_interface" name="Defining_the_interface">定义接口</h2>
+<p>创建一个名为"nslPySimple.idl"的文件用于定义接口：</p>
+<pre>#include "nsISupports.idl"
+[scriptable, uuid(2b324e9d-a322-44a7-bd6e-0d8c83d94883)]
+interface nsIPySimple : nsISupports
+{
+    attribute string yourName;
+    void write( );
+    void change(in string aValue);
+};
+</pre>
+<p>这与在<a href="http://books.mozdev.org/html/mozilla-chp-8-sect-2.html" title="/zh-Chttp://books.mozdev.org/html/mozilla-chp-8-sect-2.html">这里</a>使用<code>nsISimple是相同的。理论上由于多个组件可以共享一个接口，因此使用了相同的接口文件。</code></p>
+<p>需要特别留意一下，Python和JavaScript都是弱类型的语言，所以比较容易从一个到另一个传递信息。</p>
+<p>Note: There are exceptions; see <a href="http://aspn.activestate.com/ASPN/Mail/Message/pyxpcom/2484414">this discussion</a> for information on the use of <code>string</code> and <code>wstring</code> for unicode transfer. See <a href="http://www.mozilla.org/scriptable/xpidl/idl-authors-guide/rules.html">here</a> for info on describing interfaces, and on which types can be used.</p>
+<h3 id="Registering_the_interface" name="Registering_the_interface">注册接口</h3>
+<p>在"components"目录中执行如下命令：</p>
+<pre>../xpidl -m typelib -w -v -I /usr/share/idl/mozilla/ nsIPySimple.idl
+</pre>
+<p>在Windows中你必须要将idl目录指定成Mozilla构建目录。例如：</p>
+<pre>xpidl.exe -m typelib -w -v -I C:\source\mozilla\obj-i686-pc-mingw32\dist\idl foo.idl
+</pre>
+<p>然后xpidl将创建nslPySimple.xpt文件并正确放置到目录中（如'components'目录）。</p>
+<h2 id="Implementing_the_component" name="Implementing_the_component">实现组件</h2>
+<p>不同于C++，PyXPCOM为你做了很多事情。</p>
+<p>创建了一个名为"py_simple.py"的文件用于实际的代码（同样是在'components'目录中）。</p>
+<pre>from xpcom import components, verbose
+
+class PySimple: #PythonTestComponent
+    _com_interfaces_ = components.interfaces.nsIPySimple
+    _reg_clsid_ = "{c456ceb5-f142-40a8-becc-764911bc8ca5}"
+    _reg_contractid_ = "@mozilla.org/PySimple;1"
+    def __init__(self):
+        self.yourName = "a default name" # or mName ?
+
+    def __del__(self):
+        if verbose:
+            print "PySimple: __del__ method called - object is destructing"
+
+    def write(self):
+        print self.yourName
+
+    def change(self, newName):
+        self.yourName = newName
+</pre>
+<p>接口下来是注册组件；这个步骤相同于其它组件，但在Python组件不可用的状态下会失败。</p>
+<p>为了注册组件，<code>你需要在bin目录中</code><code>touch</code><code>（创建）一个隐藏文件.autoreg，或者是删除xpti.dat文件。之后在下一次Mozilla</code>启动时会重新构建组件的索引，包括任何'components'目录下新的组件。这对接下来通过命令行启动Mozilla以查看组件是否注册成功来讲非常有帮助。</p>
+<h3 id="Generating_implementation_templates" name="Generating_implementation_templates">生成实现模板</h3>
+<p>xpcom.xpt模块被用于内部以处理类型信息，但它有一个非常好的功能，可以为任何接口的Python实现生成一个模板。</p>
+<p>以脚本的方式执行这个文件并且以接口名字作为参数。例如：</p>
+<pre>% cd c:\mozilla\bin\python\xpcom
+% python xpt.py nsISample
+class nsISample:
+    _com_interfaces_ = xpcom.components.interfaces.nsISample
+    # If this object needs to be registered, the following 2 are also needed.
+    # _reg_clsid_ = "{a new clsid generated for this object}"
+    # _reg_contractid_ = "The.Object.Name"
+
+    def get_value( self ):
+        # Result: string
+        pass
+    def set_value( self, param0 ):
+        # Result: void - None
+        # In: param0: string
+        pass
+</pre>
+<p>正如你所见到的，输出的是有效的Python代码，并带有每个方法的基本的方法签名和有效的注释信息。</p>
+<h2 id="Testing_it" name="Testing_it">测试</h2>
+<p>为了看到执行结果，你需要从命令行启动Firefox，因为那才是执行结果被打印出来的地方。</p>
+<h2 id="External_links" name="External_links">外部连接</h2>
+<ul>
+  <li><a href="http://books.mozdev.org/html/mozilla-chp-8-sect-2.html">Creating XPCOM components</a>, on which this short tutorial is based.</li>
+  <li>A three-part tutorial on <a href="http://www-128.ibm.com/developerworks">ibm developerWorks</a>:
+    <ul>
+      <li><a href="http://www-128.ibm.com/developerworks/webservices/library/co-pyxp1/">Getting to know PyXPCOM</a> - info on building PyXPCOM (and maybe Mozilla) to get it to work.</li>
+      <li><a href="http://www-128.ibm.com/developerworks/webservices/library/co-pyxp2.html">Getting started with PyXPCOM, part 2</a> - accessing xpcom from Python.</li>
+      <li><a href="http://www-128.ibm.com/developerworks/webservices/library/co-pyxp3/">Getting started with PyXPCOM, part 3</a> - Creating your own components. The problem with this one is that the <a href="http://www-128.ibm.com/developerworks/webservices/library/co-pyxp3/listing2.html">sample code they give</a> is slightly broken (it ends with a "retu" which shouldn't be there. I haven't tried it, but it looks like nothing is missing, so getting rid of the "retu" should make it work fine.).</li>
+    </ul>
+  </li>
+</ul>

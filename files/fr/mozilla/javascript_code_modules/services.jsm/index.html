@@ -1,0 +1,283 @@
+---
+title: Services.jsm
+slug: Mozilla/JavaScript_code_modules/Services.jsm
+tags:
+  - Add-ons
+  - Extensions
+  - Interface
+  - JavaScript
+  - Modules
+  - Services
+  - XPCOM
+translation_of: Mozilla/JavaScript_code_modules/Services.jsm
+---
+<p>{{ gecko_minversion_header("2") }}</p>
+
+<p><span class="seoSummary">Le service Sercices.jsm Javascript module code offre un large assortiment de getters paresseux qui simplifient les processus d'obtention la reference des services communement utilisé.</span></p>
+
+<p>Pour l'utiliser, vous devez en premier importer le code module dans l'environement Javascript: </p>
+
+<pre class="eval"><span class="nowiki">Components.utils.import("resource://gre/modules/Services.jsm");</span>
+</pre>
+
+<p>Then you can obtain references to services by simply accessing them from the <code>Services</code> object exported by the code module. For example, to obtain a reference to the preferences service:</p>
+
+<pre class="brush: js">var prefsService = Services.prefs;
+</pre>
+
+<h2 id="Provided_service_getters">Provided service getters</h2>
+
+<table class="standard-table" style="width: auto;">
+ <tbody>
+  <tr>
+   <td class="header">Service accessor</td>
+   <td class="header">Service interface</td>
+   <td class="header">Service name</td>
+  </tr>
+  <tr>
+   <td><code>androidBridge</code></td>
+   <td>{{ interface("nsIAndroidBridge") }}</td>
+   <td><sup><a href="#note1">1</a></sup></td>
+  </tr>
+  <tr>
+   <td><code>appinfo</code></td>
+   <td>{{ interface("nsIXULAppInfo") }}<br>
+    {{ interface("nsIXULRuntime") }}</td>
+   <td>Application information service</td>
+  </tr>
+  <tr>
+   <td><code>appShell</code></td>
+   <td>{{ interface("nsIAppShellService") }}</td>
+   <td>Application shell service</td>
+  </tr>
+
+  <tr>
+   <td><code>blocklist</code></td>
+   <td>{{ interface("nsIBlocklistService") }}</td>
+   <td>Blocklist service</td>
+  </tr>
+  <tr>
+   <td><code>cache</code></td>
+   <td>{{ interface("nsICacheService") }}</td>
+   <td>Cache service</td>
+  </tr>
+  <tr>
+   <td><code>cache2</code></td>
+   <td>{{ interface("nsICacheStorageService") }}</td>
+   <td>Cache storage service</td>
+  </tr>
+  <tr>
+   <td><code>clipboard</code></td>
+   <td>{{ interface("nsIClipboard") }}</td>
+   <td>Clipboard</td>
+  </tr>
+  <tr>
+   <td><code>console</code></td>
+   <td>{{ interface("nsIConsoleService") }}</td>
+   <td>Error console service</td>
+  </tr>
+  <tr>
+   <td><code>contentPrefs</code></td>
+   <td>{{ interface("nsIContentPrefService") }}</td>
+   <td>Content Preferences service</td>
+  </tr>
+  <tr>
+   <td><code>cookies</code></td>
+   <td>{{ interface("nsICookieManager2") }}</td>
+   <td>Cookie Manager 2 service</td>
+  </tr>
+  <tr>
+   <td>cpmm</td>
+   <td>{{ interface("nsIMessageSender") }}</td>
+   <td><a href="/en-US/Firefox/Multiprocess_Firefox/Message_Manager/Message_manager_overview#Child_process_message_manager">Child process message manager</a><sup><a href="#note4">4</a></sup></td>
+  </tr>
+  <tr>
+   <td><code>crashmanager</code></td>
+   <td><a class="external" href="http://dxr.mozilla.org/mozilla-central/source/toolkit/components/crashes/CrashManager.jsm">CrashManager.jsm</a></td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td><code>dirsvc</code></td>
+   <td>{{ interface("nsIDirectoryService") }}<br>
+    {{ interface("nsIProperties") }}</td>
+   <td>Directory service</td>
+  </tr>
+  <tr>
+   <td><code>domStorageManager</code></td>
+   <td>{{ interface("nsIDOMStorageManager") }}</td>
+   <td>DOM Storage Manager</td>
+  </tr>
+  <tr>
+   <td><code>DOMRequest</code></td>
+   <td>{{ interface("nsIDOMRequestService") }}</td>
+   <td>DOMRequest service</td>
+  </tr>
+  <tr>
+   <td><code>downloads</code></td>
+   <td>{{ interface("nsIDownloadManager") }}</td>
+   <td>Download manager</td>
+  </tr>
+  <tr>
+   <td><code>droppedLinkHandler</code></td>
+   <td>{{ interface("nsIDroppedLinkHandler") }}</td>
+   <td>Dropped link handler service</td>
+  </tr>
+  <tr>
+   <td><code>els</code></td>
+   <td>{{ interface("nsIEventListenerService") }}</td>
+   <td>Event listener service</td>
+  </tr>
+  <tr>
+   <td><code>eTLD</code></td>
+   <td>{{ interface("nsIEffectiveTLDService") }}</td>
+   <td>EffectiveTLD service</td>
+  </tr>
+  <tr>
+   <td><code>focus</code></td>
+   <td>{{ interface("nsIFocusManager") }}</td>
+   <td>Focus manager</td>
+  </tr>
+  <tr>
+   <td><code>io</code></td>
+   <td>{{ interface("nsIIOService") }}<br>
+    {{ interface("nsIIOService2") }}</td>
+   <td>I/O Service</td>
+  </tr>
+  <tr>
+   <td><code>locale</code></td>
+   <td>{{ interface("nsILocaleService") }}</td>
+   <td>Locale service</td>
+  </tr>
+  <tr>
+   <td><code>logins</code></td>
+   <td>{{ interface("nsILoginManager") }}</td>
+   <td>Password Manager service</td>
+  </tr>
+  <tr>
+   <td><code>metro</code></td>
+   <td>{{ interface("nsIWinMetroUtils") }}</td>
+   <td><sup><a href="#note2">2</a></sup></td>
+  </tr>
+  <tr>
+   <td>mm</td>
+   <td>{{ interface("nsIMessageBroadcaster") }}<br>
+    {{ interface("nsIFrameScriptLoader") }}</td>
+   <td><a href="/en-US/Firefox/Multiprocess_Firefox/Message_Manager/Message_manager_overview#Global_frame_message_manager">Global frame message manager</a><sup><a href="#note3">3</a></sup></td>
+  </tr>
+  <tr>
+   <td><code>obs</code></td>
+   <td>{{ interface("nsIObserverService") }}</td>
+   <td>Observer service</td>
+  </tr>
+  <tr>
+   <td><code>perms</code></td>
+   <td>{{ interface("nsIPermissionManager") }}</td>
+   <td>Permission manager service</td>
+  </tr>
+  <tr>
+   <td>ppmm</td>
+   <td>{{ interface("nsIMessageBroadcaster") }}<br>
+    {{ interface("nsIProcessScriptLoader") }}</td>
+   <td><a href="/en-US/Firefox/Multiprocess_Firefox/Message_Manager/Message_manager_overview#Global_parent_process_message_manager">Global parent process message manager</a><sup><a href="#note3">3</a></sup></td>
+  </tr>
+  <tr>
+   <td><code>prefs</code></td>
+   <td>{{ interface("nsIPrefBranch") }}<br>
+    {{ interface("nsIPrefBranch2") }}<br>
+    {{ interface("nsIPrefService") }}</td>
+   <td>Preferences service</td>
+  </tr>
+  <tr>
+   <td><code>prompt</code></td>
+   <td>{{ interface("nsIPromptService") }}</td>
+   <td>Prompt service</td>
+  </tr>
+  <tr>
+   <td><code>scriptloader</code></td>
+   <td>{{ interface("mozIJSSubScriptLoader") }}</td>
+   <td>JavaScript subscript loader service</td>
+  </tr>
+  <tr>
+   <td><code>scriptSecurityManager</code></td>
+   <td>{{ interface("nsIScriptSecurityManager") }}</td>
+   <td>Script security manager</td>
+  </tr>
+  <tr>
+   <td><code>search</code></td>
+   <td>{{ interface("nsIBrowserSearchService") }}</td>
+   <td>Browser search service</td>
+  </tr>
+  <tr>
+   <td><code>startup</code></td>
+   <td>{{ interface("nsIAppStartup") }}</td>
+   <td>Application startup service</td>
+  </tr>
+  <tr>
+   <td><code>storage</code></td>
+   <td>{{ interface("mozIStorageService") }}</td>
+   <td><a href="/en-US/Storage" title="en-US/Storage">Storage API</a> service</td>
+  </tr>
+  <tr>
+   <td><code>strings</code></td>
+   <td>{{ interface("nsIStringBundleService") }}</td>
+   <td>String bundle service</td>
+  </tr>
+  <tr>
+   <td><code>sysinfo</code></td>
+   <td>{{ interface("nsIPropertyBag2") }}</td>
+   <td>System info service</td>
+  </tr>
+  <tr>
+   <td><code>telemetry</code></td>
+   <td>{{ interface("nsITelemetry") }}</td>
+   <td>Telemetry service</td>
+  </tr>
+  <tr>
+   <td><code>tm</code></td>
+   <td>{{ interface("nsIThreadManager") }}</td>
+   <td><a href="/en-US/The_Thread_Manager" title="en-US/The Thread Manager">Thread Manager</a> service</td>
+  </tr>
+  <tr>
+   <td><code>uriFixup</code></td>
+   <td>{{ interface("nsIURIFixup") }}</td>
+   <td>URI Fixup service</td>
+  </tr>
+  <tr>
+   <td><code>urlFormatter</code></td>
+   <td>{{ interface("nsIURLFormatter") }}</td>
+   <td>URL Formatter service</td>
+  </tr>
+  <tr>
+   <td><code>vc</code></td>
+   <td>{{ interface("nsIVersionComparator") }}</td>
+   <td>Version comparator service</td>
+  </tr>
+  <tr>
+   <td><code>wm</code></td>
+   <td>{{ interface("nsIWindowMediator") }}</td>
+   <td>Window mediator service</td>
+  </tr>
+  <tr>
+   <td><code>ww</code></td>
+   <td>{{ interface("nsIWindowWatcher") }}</td>
+   <td>Window watcher service</td>
+  </tr>
+ </tbody>
+</table>
+
+<p><a id="note1" name="note1"><sup>1</sup> Mobile only</a><br>
+ <a id="note2" name="note2"><sup>2</sup> Windows only</a><br>
+ <a id="note3" name="note3"><sup>3</sup> Main process only</a><br>
+ <a id="note4" name="note4"><sup>4</sup> Child process only</a></p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a class="internal" href="/en-US/JavaScript_code_modules/Using" title="en-US/JavaScript code modules/Using
+    JavaScript code
+    modules">Using JavaScript code modules</a></li>
+ <li><a class="internal" href="/en-US/JavaScript_code_modules" title="en-US/JavaScript code
+    modules">JavaScript code modules</a></li>
+ <li><a class="internal" href="/en-US/XPCOM/mozilla::services_namespace" title="mozilla::services C++ namespace">mozilla::services C++ namespace</a></li>
+ <li><a href="http://dxr.mozilla.org/mozilla-central/source/toolkit/modules/Services.jsm">Services.jsm source on DXR</a></li>
+</ul>

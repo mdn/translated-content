@@ -1,0 +1,103 @@
+---
+title: Boîte de dialogue de fichier
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Boîte_de_dialogue_de_fichier
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Open_and_Save_Dialogs
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Créer_des_boîtes_de_dialogue" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Création_d'un_assistant">Suivant  »</a></p>
+</div>
+
+<p>Un type commun de boîtes de dialogue est celui avec lequel un utilisateur peut sélectionner un fichier à ouvrir où à enregistrer.</p>
+
+<h3 id="S.C3.A9lecteurs_de_fichiers" name="S.C3.A9lecteurs_de_fichiers">Sélecteurs de fichiers</h3>
+
+<p>Un sélecteur de fichiers est une boîte dialogue qui permet à l'utilisateur de sélectionner un fichier. Il est fréquemment utilisé pour les commandes de menu « Ouvrir... » ou « Enregistrer sous... », mais vous pouvez l'utiliser dès que l'utilisateur a besoin de sélectionner un fichier. L'appel à l'interface <a href="/fr/XPCOM" title="fr/XPCOM">XPCOM</a> <code><a href="/fr/NsIFilePicker" title="fr/NsIFilePicker">nsIFilePicker</a></code> est nécessaire pour implémenter un sélecteur de fichiers.</p>
+
+<div class="note">Notez que le sélecteur de fichiers ne fonctionne qu'avec des URLs chrome.</div>
+
+<p>Vous pouvez utiliser le sélecteur de fichiers dans l'un de ces trois modes :</p>
+
+<ul>
+ <li><code>Open</code> : Il est demandé à l'utilisateur de sélectionner un fichier à ouvrir.</li>
+ <li><code>GetFolder</code> : Il est demandé à l'utilisateur de sélectionner un répertoire/dossier.</li>
+ <li><code>Save</code> : Il est demandé à l'utilisateur de sélectionner le nom sous lequel sera sauvegardé le fichier.</li>
+</ul>
+
+<p>L'apparence de la boîte de dialogue sera différente pour chaque type et variera selon la plateforme. Une fois que l'utilisateur aura sélectionné le fichier ou le répertoire/dossier, celui-ci pourra être lu ou enregistré.</p>
+
+<p>L'interface du sélecteur de fichiers <code><a href="/fr/NsIFilePicker" title="fr/NsIFilePicker">nsIFilePicker</a></code> est responsable de l'affichage de la boîte de dialogue dans l'un des trois modes. Vous pouvez définir plusieurs fonctionnalités de la boîte de dialogue en utilisant cette interface. Une fois que la boîte de dialogue est fermée, vous pouvez utiliser les fonctions de l'interface pour obtenir le fichier qui a été sélectionné.</p>
+
+<h4 id="Cr.C3.A9ation_d.27un_s.C3.A9lecteur_de_fichier" name="Cr.C3.A9ation_d.27un_s.C3.A9lecteur_de_fichier">Création d'un sélecteur de fichier</h4>
+
+<p>Pour commencer, vous devez créer un composant du sélecteur de fichiers et l'initialiser.</p>
+
+<pre>var nsIFilePicker = Components.interfaces.nsIFilePicker;
+var fp = Components.classes["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
+fp.init(window, "Sélectionnez un fichier", nsIFilePicker.modeOpen);
+</pre>
+
+<p>Tout d'abord, un nouvel objet sélecteur de fichiers est créé et stocké dans une variable <code>fp</code>. La fonction <code>init</code> est utilisée pour initialiser le sélecteur de fichiers. Cette fonction prend trois arguments : la fenêtre qui ouvre la boîte de dialogue, le titre de la boîte de dialogue et son mode. Ici, le mode est 'modeOpen' qui est utilisé pour une boîte de dialogue Ouvrir. Vous pouvez aussi utiliser 'modeGetFolder' et 'modeSave' pour les deux autres modes. Ces modes sont des constantes de l'interface <code>nsIFilePicker</code>.</p>
+
+<h4 id="R.C3.A9pertoire_par_d.C3.A9faut_et_filtres" name="R.C3.A9pertoire_par_d.C3.A9faut_et_filtres">Répertoire par défaut et filtres</h4>
+
+<p>Il y a deux fonctionnalités que vous pouvez définir pour la boîte de dialogue avant qu'elle ne soit affichée.</p>
+
+<ul>
+ <li>La première est le répertoire/dossier par défaut qui est affiché à l'ouverture de la boîte de dialogue.</li>
+ <li>La seconde est un filtre indiquant la liste des types de fichiers à afficher dans la boîte de dialogue. Elle pourrait être utilisée, par exemple, pour ne lister que les fichiers .html.</li>
+</ul>
+
+<p>Vous pouvez définir le répertoire par défaut en renseignant la proprieté <code>displayDirectory</code> de l'objet du sélecteur de fichiers. Le répertoire doit être un objet <code><a href="/fr/NslLocalFile" title="fr/NslLocalFile">nslLocalFile</a></code>. Si vous ne le définissez pas, un répertoire par défaut sera sélectionné pour vous. Pour appliquer des filtres, appelez la fonction <code>appendFilters()</code> pour définir les types de fichiers que vous souhaitez voir s'afficher.</p>
+
+<pre>fp.appendFilters(nsIFilePicker.filterHTML | nsIFilePicker.filterImages);
+fp.appendFilters(nsIFilePicker.filterText | nsIFilePicker.filterAll);
+</pre>
+
+<ul>
+ <li>Le premier exemple ajoutera des filtres pour les fichiers HTML et les images. L'utilisateur ne pourra sélectionner que ces types de fichiers. La manière de procéder est spécifique à la plateforme. Sur quelques plateformes, chaque filtre sera séparé et l'utilisateur pourra choisir entre les fichiers HTML et les fichiers images.</li>
+ <li>Le second exemple ajoutera des filtres pour les fichiers textes et pour tous les fichiers. L'utilisateur a ainsi une option pour n'afficher que les fichiers textes ou tous les fichiers.</li>
+</ul>
+
+<p>Vous pouvez aussi utiliser 'filterXML' et 'filterXUL' pour filtrer les fichiers XML et XUL. Si vous voulez filtrer des fichiers personnalisés, vous pouvez utiliser la fonction <code>appendFilter()</code> :</p>
+
+<pre>fp.appendFilter("Fichiers Audio","*.wav; *.mp3");
+</pre>
+
+<p>Cette ligne ajoutera un filtre pour les fichiers audio Wav et MP3. Le premier argument est le titre du type de fichier et le second est une liste de masques de fichiers séparés par un point virgule. Vous pouvez mettre autant de masques que vous le souhaitez. Vous pouvez appeler <code>appendFilter</code> autant de fois que nécessaire pour ajouter les filtres supplémentaires. L'ordre dans lequel vous les ajoutez détermine leur priorité. Habituellement, le premier ajouté est sélectionné par défaut.</p>
+
+<h4 id="Obtention_du_fichier_s.C3.A9lectionn.C3.A9" name="Obtention_du_fichier_s.C3.A9lectionn.C3.A9">Obtention du fichier sélectionné</h4>
+
+<p>Enfin, vous pouvez afficher la boîte de dialogue en appelant la fonction <code>show()</code>. Elle ne prend aucun argument mais retourne un code d'état qui indique ce que l'utilisateur a sélectionné. Notez que la fonction ne retourne aucune valeur tant que l'utilisateur n'a pas sélectionné un fichier. La fonction retourne une des trois constantes suivantes :</p>
+
+<dl>
+ <dt>'returnOK' </dt>
+ <dd> : l'utilisateur a sélectionné un fichier et a pressé le bouton « OK ». Le fichier que l'utilisateur a sélectionné sera stocké dans la propriété <code>file</code> du sélecteur de fichiers.</dd>
+ <dt>'returnCancel' </dt>
+ <dd> : l'utilisateur a pressé le bouton « Annuler ».</dd>
+ <dt>'returnReplace' </dt>
+ <dd> : dans le mode enregistrement, cette valeur de retour signifie que l'utilisateur a sélectionné un fichier à remplacer ('returnOK' sera retournée lorsque l'utilisateur aura rentré le nom d'un nouveau fichier).</dd>
+</dl>
+
+<p>Vous devrez tester la valeur de retour et ensuite utiliser l'objet <code>file</code> du sélecteur de fichiers en utilisant la propriété <code>file</code>.</p>
+
+<pre>var res = fp.show();
+if (res == nsIFilePicker.returnOK){
+  var thefile = fp.file;
+  // --- faire quelque chose avec le fichier ici ---
+}
+</pre>
+
+<hr>
+<p>Par la suite, nous verrons comment créer un assistant.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Créer_des_boîtes_de_dialogue" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Création_d'un_assistant">Suivant  »</a></p>
+</div>
+
+<p><span class="comment">Interwiki</span></p>

@@ -1,0 +1,321 @@
+---
+title: Tools/Debugger.Object
+slug: Tools/Debugger.Object
+translation_of: Tools/Debugger.Object
+---
+<div>{{ToolsSidebar}}</div>
+
+<h1 id="Debugger.Object">Debugger.Object</h1>
+
+<p><code>Debugger.Object</code> インスタンスはデバッグ対象のオブジェクトを表し、その参照オブジェクトを検査および変更するためのリフレクション指向のメソッドを提供します。参照先のプロパティは、<code>Debugger.Object</code> インスタンスのプロパティとして直接表示されません。デバッガは<code>Debugger.Object.prototype.getOwnPropertyDescriptor</code> や <code>Debugger.Object.prototype.defineProperty</code> のようなメソッドを介してのみデバッガにアクセスし、デバッガが誤ってリファレンスの getter と setter を呼び出さないようにします。</p>
+
+<p>SpiderMonkey は、特定の <a href="/ja/docs/Tools/Debugger" title="The Debugger object"><code>Debugger</code></a> インスタンスに提示する各デバッグオブジェクトに対して、<code>Debugger.Object</code> インスタンスを1つだけ作成します。つまり、デバッガが2つの異なるルートを介して同じオブジェクトに遭遇した場合 (おそらく2つの関数が同じオブジェクトで呼び出される)、SpiderMonkey は毎回同じ <code>Debugger.Object</code> インスタンスをデバッガに提示します。これは、デバッガが <code>==</code> 演算子を使用して、2つの <code>Debugger.Object</code> インスタンスが同じデバッグオブジェクトを参照していることを認識し、<code>Debugger.Object</code> インスタンスに独自のプロパティを配置して特定のデバッグオブジェクトに関するメタデータを格納できることを意味します。</p>
+
+<p>異なるコンパートメントの JavaScript コードは、同じオブジェクトの異なるビューを持つことができます。たとえば Firefox では、特権区画内のコードは、コンテンツコードによってそのオブジェクトのプロパティに対して行われた再定義または拡張を伴わずにコンテンツ DOM 要素オブジェクトを認識します。デバッガのコードがデバッグ対象と同じように各オブジェクトを確実に見るために、各 <code>Debugger.Object</code> インスタンスは特定のコンパートメントから見えるようにその参照を表示します。この「表示コンパートメント」は、デバッガが指示対象をどのようにして来るかに合わせて選択されます。結果として、単一の <a href="/ja/docs/Tools/Debugger" title="The Debugger object"><code>Debugger</code></a> インスタンスは実際には複数の <code>Debugger.Object</code> インスタンスを持つことができます。つまり、参照先が表示される各コンパートメントに1つです。</p>
+
+<p>複数の <a href="/ja/docs/Tools/Debugger" title="The Debugger object"><code>Debugger</code></a> インスタンスが同じコードをデバッグしている場合、各 <a href="/ja/docs/Tools/Debugger" title="The Debugger object"><code>Debugger</code></a> は指定されたオブジェクトに対して個別の <code>Debugger.Object</code> インスタンスを取得します。これにより、各 <a href="/ja/docs/Tools/Debugger" title="The Debugger object"><code>Debugger</code></a> インスタンスを使用するコードは、他のデバッガとの干渉を心配することなく、独自の <code>Debugger.Object</code> インスタンスに任意のプロパティを配置できます。</p>
+
+<p>ほとんどの <code>Debugger.Object</code> インスタンスは、デバッガの動作と状態をデバッガに公開するプロセスで SpiderMonkey によって作成されますが、デバッガは<code>Debugger.Object.prototype.makeDebuggeeValue</code> を使用して、指定されたデバッグ対象オブジェクトの <code>Debugger.Object</code> インスタンスを作成するか、<code>Debugger.Object.prototype.copy</code> および <code>Debugger.Object.prototype.create</code> を使用して、デバッグ区画に新しいオブジェクトを作成します。</p>
+
+<p><code>Debugger.Object</code> インスタンスはガベージコレクタから参照先を保護します。<code>Debugger.Object</code> インスタンスが生存している限り、指示対象はそのまま残ります。これは、ガベージコレクションが <code>Debugger.Object</code> インスタンスに目に見える影響を与えないことを意味します。</p>
+
+<h2 id="Debugger.Object_プロトタイプのAccessorプロパティ">Debugger.Object プロトタイプのAccessorプロパティ</h2>
+
+<p><code>Debugger.Object</code> インスタンスは、プロトタイプから次のアクセサプロパティを継承します。</p>
+
+<dl>
+ <dt><code>proto</code></dt>
+ <dd>
+ <p>参照先のプロトタイプ (新しい <code>Debugger.Object</code> インスタンス)、またはプロトタイプがない場合は <code>null</code></p>
+ </dd>
+ <dt><code>class</code></dt>
+ <dd>
+ <p>指示対象の ECMAScript <code>[[Class]]</code> を表す文字列。</p>
+ </dd>
+ <dt><code>callable</code></dt>
+ <dd>
+ <p>参照先が呼び出し可能なオブジェクト (関数や関数プロキシなど) であれば <code>true</code>。そうでなければ false。</p>
+ </dd>
+ <dt><code>name</code></dt>
+ <dd>
+ <p>参照先の名前 (名前付き関数の場合)。指示対象が無名関数か全く関数でない場合、これは <code>undefined</code> です。</p>
+
+ <p>このアクセサは、<br>
+  関数が (関数を囲みスコープ内の名前にバインドする) 関数宣言をインスタンス化した結果であるか、(関数を本体の内部でのみ名前にバインドする) 関数式を評価しているかにかかわらず、ソースコード内で <code>function</code> キーワードの後に現れた名前を返します。</p>
+ </dd>
+ <dt><code>displayName</code></dt>
+ <dd>
+ <p>指示対象が表示名を持つ関数であれば、指示対象の表示名。参照先が関数でない場合、または表示名がない場合は、これは <code>undefined</code> です。</p>
+
+ <p>関数に指定された名前がある場合、その表示名は指定された名前と同じです。この場合、<code>displayName</code> と <code>name</code> プロパティは等しくなります。</p>
+
+ <p>関数に名前がない場合、SpiderMonkey はそのコンテキストに応じて適切な名前を推測しようとします。例えば：</p>
+
+ <pre><code>function f() {}          // display name: f (the given name)
+var g = function () {};  // display name: g
+o.p = function () {};    // display name: o.p
+var q = {
+  r: function () {}      // display name: q.r
+};</code></pre>
+
+ <p>表示名は適切な JavaScript 識別子、または適切な式でなくてもよいことに注意してください。関数が特定の変数またはプロパティの値としてすぐに割り当てられない場合でも役立つ名前を見つけようとします。したがって、a の中で定義された b を参照するために <code><em>a</em>/<em>b</em></code> を使用し、a に割り当てられた式のどこかで発生する関数を参照するために <code><em>a</em>&lt;</code> を使用します。例えば：</p>
+
+ <pre><code>function h() {
+  var i = function() {};    // display name: h/i
+  f(function () {});        // display name: h/&lt;
+}
+
+var s = f(function () {});  // display name: s&lt;</code></pre>
+ </dd>
+ <dt><code>parameterNames</code></dt>
+ <dd>
+ <p>指示対象がデバッグ関数の場合、そのパラメータの名前を文字列の配列として指定します。指示対象がデバッグ機能でないか、まったく機能していない場合、これは <code>undefined</code> です。</p>
+
+ <p>指示対象がパラメータ名を使用できないホスト関数である場合は、パラメータごとに1つの要素を持つ配列を返します。それぞれの配列は <code>undefined</code> です。</p>
+
+ <p>参照先が関数プロキシの場合は、空の配列を返します。</p>
+
+ <p>指示対象が非構造化パラメータを使用する場合、配列の要素はパラメータの構造を反映します。たとえば、参照先が次のように宣言された関数である場合、</p>
+
+ <pre><code>function f(a, [b, c], {d, e:f}) { ... }</code></pre>
+
+ <p>この <code>Debugger.Object</code> インスタンスの <code>parameterNames</code> プロパティの値は次のようになります。</p>
+
+ <pre><code>["a", ["b", "c"], {d:"d", e:"f"}]</code></pre>
+ </dd>
+ <dt><code>script</code></dt>
+ <dd>
+ <p>参照先がデバッグコードである関数の場合、<a href="/ja/docs/Tools/Debugger-API/Debugger.Script" title="Debugger.Script"><code>Debugger.Script</code></a> インスタンスとしての、その関数のスクリプトです。参照先が関数プロキシであるかデバッグコードでない場合、これは <code>undefined</code> です。</p>
+ </dd>
+ <dt><code>environment</code></dt>
+ <dd>
+ <p>参照先がデバッグコードである関数である場合、作成時にその関数を囲む字句環境を表す <a href="/ja/docs/Tools/Debugger-API/Debugger.Environment" title="Debugger.Environment"><code>Debugger.Environment</code></a> インスタンス。参照先が関数プロキシであるかデバッグコードでない場合、これは <code>undefined</code> です。</p>
+ </dd>
+ <dt><code>proxyHandler</code></dt>
+ <dd>
+ <p>参照先がデバッグコードによって割り当てられたハンドラオブジェクトのプロキシである場合、これはハンドラオブジェクトです。プロキシのプロパティのアクセスを実装するためにメソッドが呼び出されるオブジェクトです。指示対象が、デバッグコードによってハンドラオブジェクトが割り当てられたプロキシでない場合、これは <code>null</code> です。</p>
+ </dd>
+ <dt><code>proxyCallTrap</code></dt>
+ <dd>
+ <p>参照先がデバッグコードによってハンドラオブジェクトが割り当てられた関数プロキシの場合、これはコールトラップ関数です。これは関数プロキシが呼び出されたときに呼び出される関数です。指示対象が、デバッグコードによってハンドラオブジェクトが割り当てられた関数プロキシでない場合、これは <code>null</code> です。</p>
+ </dd>
+ <dt><code>proxyConstructTrap</code></dt>
+ <dd>
+ <p>対象オブジェクトがデバッグコードによって割り当てられた関数プロキシである場合、その構築トラップ関数、つまり関数プロキシが <code>new</code> の式を介して呼び出されるときに呼び出される関数。指示対象が、デバッグコードによってハンドラオブジェクトが割り当てられた関数プロキシでない場合、これは <code>null</code> です。</p>
+ </dd>
+ <dt><code>global</code></dt>
+ <dd>
+ <p>参照先が割り当てられたスコープのグローバルオブジェクトを参照する <code>Debugger.Object</code> インスタンス。これは、クロスコンパートメントラッパーをアンラップしません。参照先がラッパーである場合、結果はラッパーのグローバルであり、ラップされたオブジェクトのグローバルではありません。結果はラッパーを介さずにグローバルに直接参照されます。</p>
+ </dd>
+ <dt><code>hostAnnotations</code></dt>
+ <dd>
+ <p>参照先に関する追加のメタデータを提供する JavaScript オブジェクト。存在しない場合は <code>null</code>。メタデータオブジェクトは、この <code>Debugger.Object</code> インスタンスと同じコンパートメントにあります。同じメタデータオブジェクトが、指定された <code>Debugger.Object</code> インスタンスに対して毎回返されます。</p>
+
+ <p>典型的な JavaScript 組み込みは、アプリケーション固有の機能をスクリプトに公開するための「ホストオブジェクト」を提供します。<code>hostAnnotations</code> アクセサは、デバッガが関心を持っている可能性がある参照先に関する追加情報の埋め込みを調べます。返されるオブジェクトのプロパティの意味は、埋め込みまでです。 たとえば、Web ブラウザは、グローバルオブジェクトのホスト注釈を提供して、トップレベルのウィンドウ、iframe、および内部 JavaScript スコープを区別することがあります。</p>
+
+ <p>規約では、ホストアノテーションオブジェクトに文字列値の <code>"type"</code> プロパティがあり、これはオブジェクトのクラスと一緒に、参照先がどのようなものであるかを示します。ホストアノテーションオブジェクトの他のプロパティは、型に応じて詳細を提供します。たとえば、Firefox では、JavaScript モジュールのグローバルオブジェクトのメタデータオブジェクトは次のようになります。</p>
+
+ <pre><code>{ "type":"jsm", "uri":"resource:://gre/modules/XPCOMUtils.jsm" }</code></pre>
+
+ <p>Firefox はそのホストオブジェクトに対して [DebuggerHostAnnotationsForFirefox annotations] を提供します。</p>
+ </dd>
+</dl>
+
+<h2 id="Debugger.Object_プロトタイプの関数プロパティ">Debugger.Object プロトタイプの関数プロパティ</h2>
+
+<p>以下で説明する関数は、この値を使用して <code>Debugger.Object</code> インスタンスを参照する場合にのみ呼び出すことができます。他の種類のオブジェクトのメソッドとして使用することはできません。 この説明では、「この <code>Debugger.Object</code> インスタンスの参照先」を意味するために「参照先」が使用されています。</p>
+
+<p>他に指定されていない限り、これらのメソッドは<a href="/ja/docs/Tools/Debugger-API/Debugger.Frame#Invocation_Functions_and_%E2%80%9Cdebugger%E2%80%9D_Frames">呼び出し関数</a>ではありません。呼び出しによってデバッグコードが実行されると (ハンドラがデバッグコードであるアクセサプロパティを取得または設定するため、またはデバッグコードであるトラップを持つプロキシであるため)、コールは <a href="Conventions#the-debugger.debuggeewouldrun-exception" title="Debugger API: DebuggeeWouldRun"><code>Debugger.DebuggeeWouldRun</code></a> 例外をスローします。</p>
+
+<dl>
+ <dt><code>getProperty(<em>name</em>)</code></dt>
+ <dd>
+ <p>参照先の名前付きプロパティの値を返します。名前がない場合は <code>undefined</code> を返します。名前は文字列でなければなりません。 結果はデバッグ値です。</p>
+ </dd>
+ <dt><code>setProperty(<em>name</em>,<em>value</em>)</code></dt>
+ <dd>
+ <p>値が存在しない場合はプロパティを作成します。名前は文字列でなければならず、値はデバッグ値でなければなりません。</p>
+ </dd>
+ <dt><code>getOwnPropertyDescriptor(<em>name</em>)</code></dt>
+ <dd>
+ <p>参照先のnameという名前のプロパティのプロパティ記述子を返します。指示対象にそのようなプロパティがない場合は <code>undefined</code> を返します。(この関数は標準の <code>Object.getOwnPropertyDescriptor</code> 関数のように動作しますが、検査対象オブジェクトは暗黙的です。返されたプロパティ記述子は、デバッガのグローバルオブジェクトにスコープされたコードによって割り当てられます<br>
+   (したがって、デバッガのコンパートメントにあります)。そしてその <code>value</code>、<code>get</code>、<code>set</code> プロパティ(存在する場合) は debuggee の値です)。</p>
+ </dd>
+ <dt><code>getOwnPropertyNames()</code></dt>
+ <dd>
+ <p>デバッガで <code>Object.getOwnPropertyNames(<em>referent</em>)</code> が呼び出され、その結果がデバッガのグローバルオブジェクトのスコープにコピーされたかのように、すべての参照先のプロパティを指定する文字列の配列を返します。</p>
+ </dd>
+ <dt><code>defineProperty(<em>name</em>,<em>attributes</em>)</code></dt>
+ <dd>
+ <p>プロパティディスクリプタ記述子で説明されているように、name という名前の参照先にプロパティを定義します。属性の <code>value</code>、<code>get</code>、および <code>set</code> プロパティはすべてデバッグ対象の値でなければなりません。(この関数は対象オブジェクトが暗黙的で、関数と記述子とは異なるコンパートメントにあることを除いて、<code>Object.defineProperty</code> のように動作します)。</p>
+ </dd>
+ <dt><code>defineProperties(<em>properties</em>)</code></dt>
+ <dd>
+ <p>properties によって与えられたプロパティを参照に追加します。(この関数はターゲットオブジェクトが暗黙的であることを除いて、<code>Object.defineProperties</code> のように動作し、properties 引数とは異なるコンパートメントにあります)。</p>
+ </dd>
+ <dt><code>deleteProperty(<em>name</em>)</code></dt>
+ <dd>
+ <p>参照の name という名前のプロパティを削除します。プロパティが正常に削除された場合、または参照先にそのようなプロパティがない場合は true を返します。プロパティが設定可能でない場合は false を返します。</p>
+ </dd>
+ <dt><code>seal()</code></dt>
+ <dd>
+ <p>レポジトリへのプロパティの追加や削除を防止します。そしてこの <code>Debugger.Object</code> インスタンスを返します。(この関数は標準の <code>Object.seal</code> 関数のように動作しますが、封印されるオブジェクトは暗黙的で、呼び出し元とは異なるコンパートメントにあります)。</p>
+ </dd>
+ <dt><code>freeze()</code></dt>
+ <dd>
+ <p>プロパティが参照に追加されたり参照から削除されたりするのを防ぎ、各プロパティを書き込み不能としてマークします。そしてこの <code>Debugger.Object</code> インスタンスを返します。(この関数は標準の <code>Object.freeze</code> 関数のように動作しますが、封印されるオブジェクトは暗黙的で、呼び出し元とは異なるコンパートメントにあります)。</p>
+ </dd>
+ <dt><code>preventExtensions()</code></dt>
+ <dd>
+ <p>レポジトリにプロパティが追加されないようにします。(この関数は標準の <code>Object.preventExtensions</code> 関数と同じように動作しますが、操作対象は暗黙的で、呼び出し元とは異なるコンパートメントになります)。</p>
+ </dd>
+ <dt><code>isSealed()</code></dt>
+ <dd>
+ <p>指示対象が封印されている場合、つまり拡張可能ではなく、すべてのプロパティが設定不可能とマークされている場合に true を返します。(この関数は標準の <code>Object.isSealed</code> 関数と同じように動作しますが、検査されるオブジェクトは暗黙的で、呼び出し元とは異なるコンパートメントにあります)。</p>
+ </dd>
+ <dt><code>isFrozen()</code></dt>
+ <dd>
+ <p>参照先が固定されている場合、つまり拡張可能ではなく、すべてのプロパティが設定不可能で読み取り専用であるとマークされている場合に true を返します。(この関数は標準の <code>Object.isSealed</code> 関数のように動作しますが、検査されるオブジェクトは暗黙的で、呼び出し元とは異なるコンパートメントにあります)。</p>
+ </dd>
+ <dt><code>isExtensible()</code></dt>
+ <dd>
+ <p>参照先が拡張可能である場合、つまり新しい参照先が定義可能な場合は true を返します。(この関数は標準の <code>Object.isExtensible</code> 関数のように動作しますが、検査されるオブジェクトは暗黙的で、呼び出し元とは異なるコンパートメントにあります)。</p>
+ </dd>
+ <dt><code>copy(<em>value</em>)</code></dt>
+ <dd>
+ <p>HTML5 の "構造化クローニング" アルゴリズムを適用して、参照オブジェクトのグローバルオブジェクト (したがって参照オブジェクトのコンパートメント) に値のコピーを作成し、そのコピーを参照する <code>Debugger.Object</code> インスタンスを返します。</p>
+
+ <p>これはプリミティブ値をそのまま返します。つまり、<code>Debugger.Object.prototype.copy</code> を「構造化クローニング」アルゴリズムの制限内で、汎用「デバッグ値からデバッグ対象値へ」変換関数として使用できます。</p>
+ </dd>
+ <dt><code>create(<em>prototype</em>, [<em>properties</em>])</code></dt>
+ <dd>
+ <p>参照オブジェクトのグローバル (したがって参照オブジェクトのコンパートメント) に新しいオブジェクトを作成し、そのオブジェクトを参照する <code>Debugger.Object</code> を返します。<br>
+  新しいオブジェクトのプロトタイプは prototype であり、これは <code>Debugger.Object</code> インスタンスでなければなりません。<br>
+  新しいオブジェクトのプロパティは、プロパティが <code>Debugger.Object.prototype.defineProperties</code> に渡されたかのように、properties によって指定されたもので、新しい <code>Debugger.Object</code> インスタンスが <code>this</code> の値として渡されます。</p>
+ </dd>
+ <dt><code>makeDebuggeeValue(<em>value</em>)</code></dt>
+ <dd>
+ <p>デバッグ対象の値を表す debuggee 値を返します。value がプリミティブの場合、そのまま返します。value がオブジェクトの場合、この <code>Debugger.Object</code> の参照先のコンパートメントで適切にラップされたオブジェクトを表す <code>Debugger.Object</code> インスタンスを返します。</p>
+
+ <p>value がオブジェクトの場合は、debuggee グローバルに割り当てられている必要はなく、デバッグ区画にも割り当てられている必要はありません。デバッガが debuggee 値として使用したい任意のオブジェクトにすることができます。</p>
+
+ <p>上で説明したように、各 <code>Debugger.Object</code> インスタンスは、特定のコンパートメントから見たときにその参照を提示します。<br>
+  <code>Debugger.Object</code> がインスタンス化され、オブジェクト o が与えられた場合、<code><em>d</em>.makeDebuggeeValue(<em>o</em>)</code> 呼び出しは、dの区画内のコードが示すようにoを表す <code>Debugger.Object</code> インスタンスを返します。</p>
+ </dd>
+ <dt><code>decompile([<em>pretty</em>])</code></dt>
+ <dd>
+ <p>指示対象がデバッグコードである関数である場合、その結果とその結果の参照関数に相当する関数定義の JavaScript ソースコードを文字列として返します。pretty が存在し、真であれば、インデントされたコードを改行で生成します。 参照先がデバッグコードである関数でない場合は、<code>undefined</code> を返します。</p>
+ </dd>
+ <dt><code>call(<em>this</em>,<em>argument</em>, ...)</code></dt>
+ <dd>指示対象が呼び出し可能である場合は、この値と引数の値を使用して呼び出すことができ、呼び出しがどのように完了したかを示す<a href="/ja/docs/Tools/Debugger-API/Conventions#%E5%AE%8C%E4%BA%86%E5%80%A4">完了値</a>を返します。これはデバッグ対象の値、あるいはコンストラクタとして参照先を呼び出すには <code>{ asConstructor: true }</code> でなければなりません。SpiderMonkey は <code>this</code> の値自体を適切に提供します。各引数はデバッグ対象の値でなければなりません。現存するすべてのハンドラメソッド、ブレークポイント、ウォッチポイントなどは、呼び出し中も有効なままです。参照が呼び出し可能でない場合は、<code>TypeError</code> をスローします。この関数は、<a href="/ja/docs/Tools/Debugger-API/Debugger.Frame#Invocation_Functions_and_%E2%80%9Cdebugger%E2%80%9D_Frames">呼び出し関数の規則</a>に従います。</dd>
+ <dt><code>apply(<em>this</em>,<em>arguments</em>)</code></dt>
+ <dd>
+ <p>指示対象が呼び出し可能である場合は、与えられたこの値と引数の引数値で呼び出され、呼び出しがどのように完了したかを示す<a href="/ja/docs/Tools/Debugger-API/Conventions#%E5%AE%8C%E4%BA%86%E5%80%A4">完了値</a>を返します。これはデバッグ対象の値、あるいは関数をコンストラクタとして呼び出すには <code>{ asConstructor: true }</code> でなければなりません。SpiderMonkey は <code>this</code> の値自体を適切に提供します。引数は、デバッガの値の配列 (デバッガ内の配列) または空の配列として扱われる <code>null</code> または <code>undefined</code> のいずれかでなければなりません。現存するすべてのハンドラメソッド、ブレークポイント、ウォッチポイントなどは、呼び出し中も有効なままです。参照が呼び出し可能でない場合は、<code>TypeError</code> をスローします。この関数は、<a href="/ja/docs/Tools/Debugger-API/Debugger.Frame#Invocation_Functions_and_%E2%80%9Cdebugger%E2%80%9D_Frames">呼び出し関数の規則</a>に従います。</p>
+ </dd>
+ <dt><code>evalInGlobal(<em>code</em>, [<em>options</em>])</code></dt>
+ <dd>
+ <p>指示対象がグローバルオブジェクトである場合、そのグローバル環境内のコードを評価し、どのように完了したかを記述する<a href="/ja/docs/Tools/Debugger-API/Conventions#%E5%AE%8C%E4%BA%86%E5%80%A4">補完値</a>を返します。 コードは文字列です。 現存するすべてのハンドラメソッド、ブレークポイント、ウォッチポイントなどは、呼び出し中も有効なままです。 この関数は、<a href="/ja/docs/Tools/Debugger-API/Debugger.Frame#Invocation_Functions_and_%E2%80%9Cdebugger%E2%80%9D_Frames">呼び出し関数の規則</a>に従います。 参照先がグローバルオブジェクトでない場合は、<code>TypeError</code> 例外をスローします。</p>
+
+ <p>Use Strict ディレクティブが含まれている場合、コードは厳密なモードコードとして解釈されます。</p>
+
+ <p>コードが厳密なモードコードでない場合、変数宣言は参照グローバルオブジェクトに影響を与えます。(ECMAScript 仕様で使用されている用語では、評価コードの実行コンテキストの <code>VariableEnvironment</code> が参照先です)</p>
+
+ <p>options 引数は、<a href="/ja/docs/Tools/Debugger-API/Debugger.Frame#Function_Properties_of_the_Debugger.Frame_Prototype_Object" title="Debugger.Frame: Eval"><code>Debugger.Frame.prototype.eval</code></a> の場合と同じです。</p>
+ </dd>
+ <dt><code>evalInGlobalWithBindings(<em>code</em>,<em>bindings</em>, [<em>options</em>])</code></dt>
+ <dd>
+ <p><code>evalInGlobal</code> に似ていますが、変数オブジェクトとして参照先を使用してコードを評価しますが、lexical 環境はオブジェクトバインディングからのバインディングで拡張されています。値が isvalue である namedname というバインディングの各自の enumerable プロパティについては、lexical 環境で、code が namedname で評価され、その値は isvalue である変数をインクルードします。各値はデバッグ値でなければなりません。(これは <code>with</code> 文と似ていません。コードはバインディングオブジェクトに何の影響も与えることなく、導入されたバインディングにアクセス、割り当て、削除することができます)。</p>
+
+ <p>このメソッドを使用すると、デバッガコードは、指定されたデバッグコードで参照可能な一時的なバインディングを導入することができます。また、既存のデバッグ環境を変更することなく、デバッガが保持するデバッグの値を参照できます。</p>
+
+ <p><code>evalInGlobal</code> と同様に、<code>evalInGlobalWithBindings</code> に渡されたコードが厳密なモードコードでない場合、コードがバインディングに従って拡張された環境で評価されても、それに含まれる宣言はすべて参照対象グローバルオブジェクトに影響を与えます。(ECMAScript 仕様で使用されている条件では、非厳密な評価コードの実行コンテキストの <code>VariableEnvironment</code> が参照先であり、バインディングは評価コードの <code>LexicalEnvironment</code> である新しい宣言環境に表示されます)。</p>
+
+ <p>options 引数は、<a href="/ja/docs/Tools/Debugger-API/Debugger.Frame#Function_Properties_of_the_Debugger.Frame_Prototype_Object" title="Debugger.Frame: Eval"><code>Debugger.Frame.prototype.eval</code></a> の場合と同じです。</p>
+ </dd>
+ <dt><code>asEnvironment()</code></dt>
+ <dd>
+ <p>参照先がグローバルオブジェクトである場合は、参照先を表す <a href="/ja/docs/Tools/Debugger-API/Debugger.Environment" title="Debugger.Environment"><code>Debugger.Environment</code></a> インスタンスをコードを評価するための可変環境として返します。参照先がグローバルオブジェクトでない場合は、<code>TypeError</code> をスローします。</p>
+ </dd>
+ <dt><code>setObjectWatchpoint(<em>handler</em>)</code><em>(future plan)</em></dt>
+ <dd>
+ <p>すべての参照先のプロパティにウォッチポイントを設定し、呼び出しハンドラのメソッドでイベントを報告します。この <code>Debugger.Object</code> インスタンスの以前のウォッチポイントハンドラはすべて置き換えられます。handler が null の場合、参照先は監視されなくなります。ハンドラには、以下のメソッドがあります。</p>
+
+ <dl>
+  <dt><code>add(<em>frame</em>,<em>name</em>,<em>descriptor</em>)</code></dt>
+  <dd>
+  <p>name という名前のプロパティが referent.Descriptor に追加されました。これは、<code>Debugger.Object.prototype.defineProperty</code> で受け入れられたソートのプロパティ記述子で、新たに追加されたプロパティの属性を与えます。</p>
+  </dd>
+  <dt><code>delete(<em>frame</em>,<em>name</em>)</code></dt>
+  <dd>
+  <p>name という名前のプロパティは、参照対象から削除されようとしています。</p>
+  </dd>
+  <dt><code>change(<em>frame</em>,<em>name</em>,<em>oldDescriptor</em>,<em>newDescriptor</em>)</code></dt>
+  <dd>
+  <p>参照先の既存の namedname という名前のプロパティは、oldDescriptor によって与えられたものから newDescriptor によって与えられたものに変更されています。このハンドラメソッドはその値以外のプロパティの属性が変更されている場合にのみ呼び出されます。値だけが変更されている場合、SpiderMonkey はハンドラの <code>set</code> メソッドを呼び出します。</p>
+  </dd>
+  <dt><code>set(<em>frame</em>,<em>oldValue</em>,<em>newValue</em>)</code></dt>
+  <dd>
+  <p>参照先の name という名前のデータプロパティは、値が oldValue から newValue へ変更されようとしています。</p>
+
+  <p>SpiderMonkey は、成功するデータプロパティへの代入に対してのみこのメソッドを呼び出します。書き込み不可能なデータプロパティへの割り当ては、デバッガに通知することなく失敗します。</p>
+  </dd>
+  <dt><code>extensionsPrevented(<em>frame</em>)</code></dt>
+  <dd>
+  <p>オブジェクトは、<code>Object.preventExtensions</code>の呼び出しにより、拡張不可能になりました</p>
+  </dd>
+ </dl>
+
+ <p>すべてのウォッチポイントハンドラメソッドについて：</p>
+
+ <ul>
+  <li>
+   <p>ハンドラ呼び出しは、<code>this</code> の値としてハンドラオブジェクト自体を受け取ります</p>
+  </li>
+  <li>
+   <p>Theframe 引数は現在のスタックフレームで、そのコードは報告されるオブジェクトに対して操作を実行しようとしています</p>
+  </li>
+  <li>
+   <p>メソッドが <code>undefined</code> を返した場合、SpiderMonkey はオブジェクトに対して通知された変更を行い、正常に実行を続行します。メソッドがオブジェクトを返す場合：</p>
+  </li>
+  <li>
+   <p>オブジェクトに値が true である <code>superseded</code> プロパティがある場合、SpiderMonkey は通知された変更を行いません</p>
+  </li>
+  <li>
+   <p>オブジェクトに <code>resume</code> プロパティがある場合、その値は<a href="Conventions#resumption-values">再開値</a>として取得され、実行の進行方法を示します (ただし、<code>return</code> 再開値はサポートされていません)</p>
+  </li>
+  <li>
+   <p>与えられたメソッドがハンドラにない場合、そのソートのイベントは無視されます。ウォッチポイントを設定した後にハンドラにメソッドを追加する、またはハンドラからメソッドを削除することは、対応するイベントのレポートを有効または無効にするために、イベントが発生するたびにwatchpoint consultshandler のプロパティです</p>
+  </li>
+  <li>
+   <p>ハンドラのメソッドに渡される値はデバッグ値です。 Handlerのメソッドに渡される記述子は、デバッガのコンパートメント内の通常のオブジェクトですが、デバッガの値である記述子の <code>value</code>、<code>get</code>、および <code>set</code> プロパティは例外で、<code>Debugger.Object.prototype.defineProperty</code> によって期待される値の一種です</p>
+  </li>
+  <li>
+   <p>ウォッチポイントハンドラコールは、クロスコンパートメントなスレッド内コールです。コールはプロパティを変更したスレッドとインハンドラのメソッドのコンパートメント (通常はデバッガのコンパートメントと同じ) で行われます</p>
+  </li>
+ </ul>
+
+ <p>新しいウォッチポイントは、この <code>Debugger.Object</code> インスタンスが属する <a href="/ja/docs/Tools/Debugger" title="The Debugger object"><code>Debugger</code></a> インスタンスに属します。<a href="/ja/docs/Tools/Debugger" title="The Debugger object"><code>Debugger</code></a> インスタンスを無効にすると、このウォッチポイントは無効になります。</p>
+ </dd>
+ <dt><code>clearObjectWatchpoint()</code><em>(future plan)</em></dt>
+ <dd>
+ <p>指示対象に設定されているオブジェクトウォッチポイントをすべて削除します。</p>
+ </dd>
+ <dt><code>setPropertyWatchpoint(<em>name</em>,<em>handler</em>)</code><em>(future plan)</em></dt>
+ <dd>
+ <p>コール先ハンドラのメソッドでイベントを報告する、参照先のプロパティー (name) にウォッチポイントを設定します。この <code>Debugger.Object</code> インスタンスのこのプロパティの以前のウォッチポイントハンドラが置き換えられます。handler が null の場合、プロパティは監視されなくなります。Handlerは、<code>extensionsPrevented</code> イベントを受け取らない点を除き、 <code>Debugger.Object.prototype.setObjectWatchpoint</code> について説明したとおりです。</p>
+ </dd>
+ <dt><code>clearPropertyWatchpoint(<em>name</em>)</code><em>(future plan)</em></dt>
+ <dd>
+ <p>name という名前の参照先のプロパティに設定されているウォッチポイントをすべて削除します。</p>
+ </dd>
+ <dt><code>unwrap()</code></dt>
+ <dd>
+ <p>指示対象がこの <code>Debugger.Object</code> のコンパートメントのラップ解除が許可されているラッパーの場合は、ラップされたオブジェクトを参照する <code>Debugger.Object</code> インスタンスを返します。指示対象のラップを解除できない場合は <code>null</code> を返します。指示対象がラッパーでない場合は、この <code>Debugger.Object</code> インスタンスをそのまま返します。</p>
+ </dd>
+ <dt><code>unsafeDereference()</code></dt>
+ <dd>
+ <p>この <code>Debugger.Object</code> インスタンスの参照先を返します。</p>
+
+ <p>対象が内部オブジェクト (HTML5 <code>Window</code> オブジェクトなど) である場合は、対応する外部オブジェクト (HTML5 <code>WindowProxy</code> オブジェクトなど) を返します。これにより、<code>unsafeDereference</code> は、呼び出し関数を使用せずにデバッグコードで直接使用するのに適した値を生成するのに役立ちます。</p>
+ このメソッドは、デバッガコードをデバッグコードから保護するための <code>Debugger.Object</code> インスタンスのメンブレンを貫通し、デバッガコードが <code>Debugger.Object</code> のリフレクション指向のインターフェイスではなく、標準のクロスコンパートメントラッパーを介してデバッグオブジェクトにアクセスできるようにします。このメソッドを使用すると、大きなコードベースをこの Debugger API に徐々に適合させることが容易になります。コードの適切な部分で <code>Debugger.Object</code> インスタンスを使用できますが、このメソッドを使用して直接更新されていないコードに直接オブジェクト参照を渡します。</dd>
+</dl>

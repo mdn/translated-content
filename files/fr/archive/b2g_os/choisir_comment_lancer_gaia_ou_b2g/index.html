@@ -1,0 +1,80 @@
+---
+title: Choisir comment exécuter Gaia ou B2G
+slug: Archive/B2G_OS/Choisir_comment_lancer_Gaia_ou_B2G
+tags:
+  - B2G
+  - Compilation
+  - Gaia
+translation_of: Archive/B2G_OS/Choosing_how_to_run_Gaia_or_B2G
+---
+<p></p>
+
+<p>En fonction de vos besoins spécifiques, vous avez un large choix d'options disponibles, <span id="result_box" lang="fr"><span class="hps">à prendre en considération </span><span class="hps">lors d'expérimentations</span> <span class="hps">avec Firefox</span> <span class="hps">OS</span> <span class="hps">ou</span> <span class="hps">l'interface utilisateur</span> <a href="/fr/docs/Mozilla/Firefox_OS/Platform/Gaia/Introduction_a_Gaia"><span class="hps">Gaia</span></a><span>.</span> <span class="hps">Vous pouvez choisir</span> <span class="hps">parmi les</span> <span class="hps">options suivantes </span><span>;</span> <span class="hps">chacune possède ses avantages</span> <span class="hps">et ses</span> <span class="hps">inconvénients</span><span>,</span> <span class="hps">et</span> <span class="hps">certaines sont plus</span> <span class="hps">souples que d'autres</span><span>.</span></span></p>
+
+<h2 id="Exécuter_B2G_sur_le_bureau">Exécuter B2G sur le bureau</h2>
+
+<p>Il est possible de compiler un simulateur de Firefox OS et d'exécuter Gaia sur celui-ci. Ce logiciel est basé sur Firefox, mais propose une expérience semblable à un appareil sur Firefox OS. <span id="result_box" lang="fr"><span class="hps">Actuellement</span> <span class="hps">Mozilla</span> <span class="hps">fournit des</span> <a href="https://developer.mozilla.org/en-US/Firefox_OS/Developing_Gaia"><span class="hps">nightly builds</span></a> <span class="hps">de</span> <span class="hps">cette application</span> <span class="hps">pour les développeurs</span><span>.</span> <span class="hps">Si vous</span> <span class="hps">êtes familier avec</span> <span class="hps">la construction du</span> <span class="hps">code de base</span> <span class="hps">de Firefox</span> <span class="hps">ou</span> des <span class="hps">projets</span> <span class="hps">C++ </span><span>, vous pouvez compiler</span> <span class="hps">vous-même</span> <span class="hps">cette application</span><span>.</span></span></p>
+
+<h3 id="Avantages">Avantages</h3>
+
+<ul>
+ <li>Le simulateur fournit une fenêtre de la taille d'un mobile.</li>
+ <li>L'expérience est, pratiquement à tous les égards, similaire à celle d'un véritable appareil mobile.</li>
+ <li>La plupart des APIs sont disponibles (mais pas toutes).</li>
+</ul>
+
+<h3 id="Inconvénients">Inconvénients</h3>
+
+<ul>
+ <li>Vous devez avoir au préalable un compilateur C/C++ d'installé.</li>
+ <li>Vous devez compiler Gecko et le simulateur vous-même.</li>
+ <li>Les outils de développement de Firefox ne sont pas disponibles.</li>
+</ul>
+
+<h3 id="Pourquoi_exécuter_le_simulateur_B2G">Pourquoi exécuter le simulateur B2G ?</h3>
+
+<p>C'est une solution convenable pour tester tout en développant. C'est un bon moyen pour obtenir une meilleure idée de la façon dont votre application ou votre code va fonctionner dans un environnement semblable, sans avoir à flasher un téléphone à chaque fois que vous voulez tester quelque chose.</p>
+
+<div class="note"><strong>Note:</strong> Avant de proposer une application, vous devez absolument le tester sur un véritable appareil !</div>
+
+<h3 class="note" id="Variétés_de_simulateurs">Variétés de simulateurs</h3>
+
+<p>Il y a plusieurs variétés de simulateurs Firefox OS disponibles :</p>
+
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/Boot_to_Gecko/Using_Firefox_OS_Simulator" title="/en-US/docs/Mozilla/Boot_to_Gecko/Using_Firefox_OS_Simulator">Firefox OS Simulator add-on</a></dt>
+ <dd>Cette extension est le premier outil pour tester les applications sur Firefox OS et la solution recommandée pour la plupart des utilisateurs. Elle supporte les outils de développement, l'ajout d'applications à l'environement de test...</dd>
+ <dt>Developer desktop builds</dt>
+ <dd>Ces compilateurs du simulateur sont des applications stand-alone qui servent principalement d'aide aux développeurs du coeur de Firefox OS, pour vérifier les caractéristiques techniques. </dd>
+ <dt>Localizer desktop builds</dt>
+ <dd>Les compilateurs sont utilisés par les équipes de localisation dans leur travail et pour tester leurs localisations de Firefox OS et des aplications Firefox OS.</dd>
+ <dt>
+ <h2 id="Exécuter_B2G_sur_un_émulateur">Exécuter B2G sur un émulateur</h2>
+ </dt>
+ <dd>Cette solution se situe entre les simulateurs (qui sont seulement des reproductions des plus hauts niveaux de Firefox OS) et l'appareil mobile (qui vous fait bénéficier de l'expérience complète). Par rapport aux simulateurs, les émulateurs exécutent un Firefox OS basé sur un système ARM (l'émulateur x86 étant obsolète) qui reprioduit la quasi-totalité de l'expérience sur téléphone (à l'exception de quelques évènements réseau/radio).</dd>
+</dl>
+
+<h2 id="Exécuter_B2G_sur_un_appareil_mobile">Exécuter B2G sur un appareil mobile</h2>
+
+<p>La meilleure façon de tester votre travail sur B2G ou Gaia est de compiler puis installer Firefox OS sur un véritable appareil mobile. C'est également le processus le plus compliqué.</p>
+
+<h3 id="Avantages_2">Avantages</h3>
+
+<ul>
+ <li>Vous bénéficiez de l'expérience complète sur appareil mobile.</li>
+ <li>Toutes les APIs sont disponibles.</li>
+ <li>Vous pouvez tester les performances de votre code dans un cadre réel.</li>
+</ul>
+
+<h3 id="Inconvénients_2">Inconvénients</h3>
+
+<ul>
+ <li>Vous devez avoir installé un compilateur C/C++ complet.</li>
+ <li>Vous devez compiler Gecko et Gaia vous-même.</li>
+ <li>Vous devez avoir un appareil mobile compatible sur lequel installer le système d'exploitation B2G.</li>
+ <li>Vous devez flasher l'appareil avec B2G, ce qui désinstallera n'importe quel système d'exploitation présent.</li>
+</ul>
+
+<h3 id="Pourquoi_exécuter_B2G_sur_un_appareil_mobile">Pourquoi exécuter B2G sur un appareil mobile</h3>
+
+<p>Il s'agit, évidemment, de la façon la plus précise pour tester tout code ou tout projet web sur B2G ou Gaia. En testant votre projet sur un véritable appareil mobile, vous pouvez vous assurer que votre projet fonctionne et s'affiche bien et utilise toutes les APIs de l'appareil correctement. De plus, vous devriez <strong>toujours</strong> tester sur du matériel réel avant d'embarquer du code ; omettre cette étape peut avoir des conséquences imprévues qui peuvent être difficiles à prévoir.</p>

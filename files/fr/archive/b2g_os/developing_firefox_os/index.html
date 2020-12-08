@@ -1,0 +1,49 @@
+---
+title: Développer Firefox OS
+slug: Archive/B2G_OS/Developing_Firefox_OS
+tags:
+  - B2G
+  - Développer
+  - Firefox OS
+  - TopicStub
+translation_of: Archive/B2G_OS/Developing_Firefox_OS
+---
+<div class="summary">
+ <p>Cette section fournit une documentation utile couvrant différentes façons de modifier/améliorer l'expérience Firefox OS (nom de code Boot2Gecko ou B2G) pendant le processus de build, ainsi que la façon dont vous pouvez aider à développer des parties de la plateforme bas niveau telles que <a href="/fr/docs/Mozilla/Gecko">Gecko</a> et <a href="/fr/Firefox_OS/Platform/Gonk">Gonk</a>.</p>
+</div>
+<div class="note">
+ <p><strong>Note</strong> : Si vous êtes intéressés spécifiquement par le développement de Gaia, l'interface de Firefox OS, vous devriez plutôt consulter nos pages <a href="/fr/Firefox_OS/Developing_Gaia">Développer pour Gaia</a>.</p>
+</div>
+<h2 id="Notes_de_contribution_générales">Notes de contribution générales</h2>
+<p>Gecko étant partie intégrante du navigateur Firefox, contribuer à des parties de Gecko relatives à Firefox OS est similaire à contribuer à Gecko de manière générale ; il en est de même pour Gonk. Pour cela, vous avez besoin de vous familiariser avec la communauté, d'apprendre le fonctionnement de l'arborescence du code, et de trouver des bugs sur lesquels travailler. La page <a href="/fr/docs/Introduction">Contribuer à Mozilla</a> est un bon endroit pour se familiariser avec le processus de contribution.</p>
+<p>Vous devriez en apprendre plus sur Gecko, comment il fonctionne et comment il est structuré. La <a href="/fr/docs/Gecko">page MDN sur Gecko</a> y rassemble des notes utiles, de même que la page <a href="https://wiki.mozilla.org/Gecko:Overview">Gecko:Overview</a> sur le Wiki Mozilla. Pour plus d'informations sur les API (spécifiques à Firefox OS), la page <a href="https://wiki.mozilla.org/WebAPI">WebAPI</a> du Wiki Mozilla donne un aperçu travail, et la page <a href="/fr/docs/WebAPI">WebAPI</a> du MDN rassemble les documentation de toutes les API.</p>
+<p>Ensuite, regardez <a href="/fr/Firefox_OS/Platform/Gonk">Gonk</a>, le kernel sur lequel s'appuie Firefox OS. Pour faire simple, Gonk est une autre cible de portage pour Gecko, comme c'est le cas avec les versions de bureau de Firefox sur Mac OS X, Windows et Linux. Gonk en lui-même n'est qu'une version minimaliste du Android Open Source Project — nous essayons autant que possible de ne pas changer Gonk lui-même puisque nous n'avons pas le contrôle du code source, et que les partenaires avec lesquels nous travaillons pour créer les appareils Firefox OS fournissent générallement un code spéfique à leurs appareils pour faire l'interface entre l'appareil et Gecko/Gonk.</p>
+<p>Cependant, il y a encore du travail à réaliser avec les API. La plupart du code Gecko spécifique Gonk utilise <code>#ifdef MOZ_WIDGET_GONK</code> pour ne l'activer que dans Firefox OS, et/ou est contenu dans les sous-répertoires <code>gonk</code> tels que <code>gecko-dev/hal/gonk</code>. Essayez de cloner localement le dépôt <a href="https://github.com/mozilla/gecko-dev">gecko-dev</a> et d'y jeter un œil. Notre article <a href="https://developer.mozilla.org/en-US/docs/Mozilla_Source_Code_Directory_Structure">Mozilla Source Code Directory Structure</a> est aussi très utile.</p>
+<p>Ensuite, vous devriez apprendre l'<a href="https://developer.mozilla.org/fr/Firefox_OS/Platform/Architecture">Architecture de Firefox OS</a>, comment <a href="https://developer.mozilla.org/fr/Firefox_OS/Compiler">Compiler Firefox OS</a> (commencez avec le <a href="https://developer.mozilla.org/fr/docs/Mozilla/Boot_to_Gecko/Building_and_installing_Boot_to_Gecko/R%C3%A9sum%C3%A9_processus_compilation_Firefox_OS">Résumé du processus de compilation de Firefox OS</a>), et comment <a href="https://developer.mozilla.org/fr/Firefox_OS/Portage">Porter Firefox OS</a> sur d'autres appareils.</p>
+<p>Firefox OS est développé en une série de Modules séparés : regardez la page <a href="https://wiki.mozilla.org/Modules/FirefoxOS">Firefox OS Modules</a> pour vous donner une idée sur la façon dont le code est regroupé, vérifiez qui est le propriétaire du module pour savoir à qui vous adresser si vous avez besoin d'aide.</p>
+<div class="note">
+ <p><strong>Note </strong>: Pour trouver de l'aide, les meilleurs endroits pour commencer sont la <a href="https://lists.mozilla.org/listinfo/dev-b2g">mailing list dev-b2g</a> et l'espace de chat #b2g sur l'<a href="https://wiki.mozilla.org/IRC">IRC Mozilla</a>.</p>
+</div>
+<h2 id="Sujets_spécifiques_de_développement_de_Firefox_OS">Sujets spécifiques de développement de Firefox OS</h2>
+<dl>
+ <dt>
+  <a href="https://developer.mozilla.org/fr/Firefox_OS/Developing_Firefox_OS/Rapporter_Bug_Firefox_OS">Rapporter de bugs à propos de Firefox OS</a></dt>
+ <dd>
+  Cet article fournit un guide permettant de renseigner des bug sur l'ensemble des aspects de Firefox OS.</dd>
+ <dt>
+  <a href="https://developer.mozilla.org/fr/docs/Modifier_le_fichier_hosts" title="/en-US/docs/Mozilla/Firefox_OS/Tips_and_tricks/modifying_hosts_file">Modifier le fichier hosts</a></dt>
+ <dd>
+  Un guide sur ce qui peut être accompli en modifiant le fichier hosts.</dd>
+ <dt>
+  <a href="https://developer.mozilla.org/fr/Firefox_OS/Customisation_avec_le_fichier_.userconfig" title="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Customization_with_the_.userconfig_file">Customisation avec le fichier .userconfig</a></dt>
+ <dd>
+  Comment customiser la construction et l'exécution de Firefox OS en changeant le fichier <code>.userconfig</code>.</dd>
+ <dt>
+  <a href="https://developer.mozilla.org/fr/Firefox_OS/deboguer/personnaliser_script_b2g.sh">Personnaliser le script b2g.sh</a></dt>
+ <dd>
+  Une explication sur ce qui peut être accompli en personnalisant le script b2g.sh, qui fait fonctionner l'application b2g et contrôle différents aspects du système.</dd>
+ <dt>
+  <a href="https://developer.mozilla.org/fr/Firefox_OS/Portage" title="/en-US/docs/Mozilla/Firefox_OS/Porting">Porter Firefox OS</a></dt>
+ <dd>
+  Information sur la façon de porter Firefox OS sur de nouveaux appareils.</dd>
+</dl>

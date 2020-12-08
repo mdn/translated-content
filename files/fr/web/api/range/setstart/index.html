@@ -1,0 +1,121 @@
+---
+title: Range.setStart()
+slug: Web/API/Range/setStart
+tags:
+  - API
+  - DOM
+  - Method
+  - Range
+translation_of: Web/API/Range/setStart
+---
+<p>{{ApiRef("DOM")}}</p>
+
+<p>La methode <strong><code>Range.setStart() </code></strong>définit la position de départ d'un {{ domxref("Range") }}.</p>
+
+<p>Si le <code>startNode</code> est un {{ domxref("Node") }}  de type <code>Text</code>, <code>Comment</code>, ou <code>CDATASection</code>, alors startOffset est le nombre de caractères depuis le départ du <code>startNode</code>. Pour les autres types de <code>Nœud</code>, <code>startOffset</code> est le nombre de noeuds enfants entre le debut du <code>startNode</code>.</p>
+
+<p><span id="result_box" lang="fr"><span>Si vous définissez le point de départ en dessous (plus bas dans le document), le point final entraînera une plage réduite avec les points de départ et de fin réglés tous les deux sur la position de départ spécifiée.</span></span></p>
+
+<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+
+<pre class="syntaxbox"><em>range</em>.setStart(<em>startNode</em>, <em>startOffset</em>);
+</pre>
+
+<h3 id="Parameters" name="Parameters">Paramètres</h3>
+
+<dl>
+ <dt><em>startNode</em></dt>
+ <dd>{{ domxref("Node") }} ou {{ domxref("Range") }} devrait démarrer.</dd>
+ <dt><em>startOffset</em></dt>
+ <dd><span id="result_box" lang="fr"><span>Un entier supérieur ou égal à zéro représentant le décalage pour le début du {{domxref ("Range")}} à partir du début de startNode</span></span>.</dd>
+</dl>
+
+<h2 id="Example" name="Example">Example</h2>
+
+<pre class="brush: js">var range = document.createRange();
+var startNode = document.getElementsByTagName("p").item(2);
+var startOffset = 0;
+range.setStart(startNode,startOffset);
+</pre>
+
+<h2 id="Specification" name="Specification">Spécifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM WHATWG', '#dom-range-setstart', 'Range.setStart()')}}</td>
+   <td>{{Spec2('DOM WHATWG')}}</td>
+   <td>No change.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM2 Traversal_Range', 'ranges.html#Level2-Range-method-setStart', 'Range.setStart()')}}</td>
+   <td>{{Spec2('DOM2 Traversal_Range')}}</td>
+   <td>Initial specification.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilité_navigateurs">Compatibilité navigateurs</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop("1.0")}}</td>
+   <td>9.0</td>
+   <td>9.0</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Edge</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("1.0")}}</td>
+   <td>9.0</td>
+   <td>9.0</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="/en-US/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
+</ul>

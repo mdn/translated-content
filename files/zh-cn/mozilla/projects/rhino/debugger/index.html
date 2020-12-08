@@ -1,0 +1,220 @@
+---
+title: Rhino Debugger
+slug: Mozilla/Projects/Rhino/Debugger
+translation_of: Mozilla/Projects/Rhino/Debugger
+---
+<p>The Rhino JavaScript debugger is a GUI that allows debugging of interpreted JavaScript scripts run in Rhino. Note that this debugger <strong>will not</strong> work with JavaScript scripts run in the mozilla browser since Rhino is not the engine used in such environments.</p>
+<p><img alt="" height="460" src="jsdebug.jpg" width="600"></p>
+<p>Current limitations:</p>
+<ul>
+ <li>No breakpoint menu</li>
+</ul>
+<h2 id="Using_the_Rhino_JavaScript_Debugger">Using the Rhino JavaScript Debugger</h2>
+<p>The Mozilla Rhino JavaScript engine includes a source-level debugger for debugging JavaScript scripts. The debugger is itself a Java program which you may run as</p>
+<pre class="code" style="white-space: -moz-pre-wrap; white-space: pre-wrap;">java org.mozilla.javascript.tools.debugger.Main [options] [filename.js] [script-arguments]
+
+</pre>
+<p>where the options are the same as the shell.</p>
+<p>The Rhino JavaScript Debugger can debug scripts running in multiple threads and provides facilities to set and clear breakpoints, control execution, view variables, and evaluate arbitrary JavaScript code in the current scope of an executing script.</p>
+<dl>
+ <dt>
+  <a id="console" name="console">Console Window</a></dt>
+ <dd>
+  The debugger redirects the System.out, System.in, and System.err streams to an internal JavaScript console window which provides an editable command line for you to enter JavaScript code and view system output. The console window maintains a history of the commands you have entered. You may move backward and forward through the history list by pressing the Up/Down arrow keys on the keyboard.</dd>
+ <dt>
+  <a id="opening" name="opening">Opening Scripts</a></dt>
+ <dd>
+  You may select the <b>
+  <i>
+   File-&gt;Open</i>
+  </b> menu item on the menu bar to load JavaScript scripts contained in files. This action will display a file-selection dialog box prompting you for the location of a script to load. The selected file will be compiled and displayed in a new window.</dd>
+ <dt>
+  <a id="running" name="running">Running Scripts</a></dt>
+ <dd>
+  You may select the <b>
+  <i>
+   File-&gt;Run</i>
+  </b> menu item on the menu bar to execute JavaScript scripts contained in files. This action will display a file-selection dialog box prompting you for the location of a script to execute. The loaded script will be run in a new thread and control will be given to the debugger on its first instruction.</dd>
+</dl>
+<h2 id="Controlling_Execution">Controlling Execution</h2>
+<p>The debugger provides the following facilities for you to control the execution of scripts you are debugging:</p>
+<dl>
+ <dt>
+  <a id="stepinto" name="stepinto">Step Into</a></dt>
+ <dd>
+  To single step entering any function calls, you may do any of the following:
+  <ul>
+   <li>Select the <b>
+    <i>
+     Debug-&gt;Step Into</i>
+    </b>menu item on the menu bar</li>
+   <li>Press the <b>
+    <i>
+     Step Into</i>
+    </b> button on the toolbar</li>
+   <li>Press the F11 key on the keyboard</li>
+  </ul>
+  <p>Execution will resume. If the current line in the script contains a function call control will return to the debugger upon entry into the function. Otherwise control will return to the debugger at the next line in the current function.</p>
+ </dd>
+ <dt>
+  <a id="stepover" name="stepover">Step Over</a></dt>
+ <dd>
+  To single step to the next line in the current function, you may do any of the following:
+  <ul>
+   <li>Select the <b>
+    <i>
+     Debug-&gt;Step Over</i>
+    </b> menu item on the menu bar</li>
+   <li>Press the <b>
+    <i>
+     Step Over</i>
+    </b> button on the toolbar</li>
+   <li>Press the F7 key on the keyboard</li>
+  </ul>
+  <p>Execution will resume but control will return to the debugger at the next line in the current function or top-level script.</p>
+ </dd>
+ <dt>
+  <a id="stepout" name="stepout">Step Out</a></dt>
+ <dd>
+  To continue execution until the current function returns you may do any of the following:
+  <ul>
+   <li>Select the <b>
+    <i>
+     Debug-&gt;Step Out</i>
+    </b> menu item on the menu bar</li>
+   <li>Press the <b>
+    <i>
+     Step Out</i>
+    </b> button on the toolbar</li>
+   <li>Press the F8 key on the keyboard</li>
+  </ul>
+  <p>Execution will resume until the current function returns or a breakpoint is hit.</p>
+ </dd>
+ <dt>
+  <a id="go" name="go">Go</a></dt>
+ <dd>
+  To resume execution of a script you may do any of the following:
+  <ul>
+   <li>Select the <b>
+    <i>
+     Debug-&gt;Go</i>
+    </b> menu item on the menu bar</li>
+   <li>Press the <b>
+    <i>
+     Go</i>
+    </b> button on the toolbar</li>
+   <li>Press the F5 key on the keyboard</li>
+  </ul>
+  <p>Execution will resume until a breakpoint is hit or the script completes.</p>
+ </dd>
+ <dt>
+  <a id="break" name="break">Break</a></dt>
+ <dd>
+  To stop all running scripts and give control to the debugger you may do any of the following:
+  <ul>
+   <li>Select the <b>
+    <i>
+     Debug-&gt;Break</i>
+    </b> menu item on the menu bar</li>
+   <li>Press the <b>
+    <i>
+     Break</i>
+    </b> button on the toolbar</li>
+   <li>Press the Pause/Break key on the keyboard</li>
+  </ul>
+ </dd>
+ <dt>
+  Break on Exceptions</dt>
+ <dd>
+  To give control to the debugger whenever a JavaScript is exception is thrown select the <b>
+  <i>
+   Debug-&gt;Break on Exceptions</i>
+  </b> checkbox from the menu bar. Whenever a JavaScript exception is thrown by a script a message dialog will be displayed and control will be given to the debugger at the location the exception is raised.</dd>
+ <dt>
+  Break on Function Enter</dt>
+ <dd>
+  Selecting <b>
+  <i>
+   Debug-&gt;Break on Function Enter</i>
+  </b> will give control to the debugger whenever the execution is entered into a function or script.</dd>
+ <dt>
+  Break on Function Exit</dt>
+ <dd>
+  Selecting <b>
+  <i>
+   Debug-&gt;Break on Function Return</i>
+  </b> will give control to the debugger whenever the execution is about to return from a function or script.</dd>
+ <dt>
+  Moving Up and Down the Stack</dt>
+ <dd>
+  The lower-left (dockable) pane in the debugger main window contains a combo-box labeled "Context:" which displays the current stack of the executing script. You may move up and down the stack by selecting an entry in the combo-box. When you select a stack frame the variables and watch windows are updated to reflect the names and values of the variables visible at that scope.</dd>
+ <dt>
+  <a id="setclearbkpts" name="setclearbkpts">Setting and Clearing Breakpoints</a></dt>
+ <dd>
+  The main desktop of the debugger contains file windows which display the contents of each script you are debugging. You may set a breakpoint in a script by doing one of the following:
+  <ul>
+   <li>Place the cursor on the line at which you want to set a breakpoint and right-click with the mouse. This action will display a pop-up menu. Select the <b>
+    <i>
+     Set Breakpoint</i>
+    </b> menu item.</li>
+   <li>Simply single-click on the line number of the line at which you want to set a breakpoint.</li>
+  </ul>
+  <p>If the selected line contains executable code a red dot will appear next to the line number and a breakpoint will be set at that location.</p>
+  <p>You may clear breakpoint in a script by doing one of the following:</p>
+  <ul>
+   <li>Place the cursor on the line at which you want to clear a breakpoint and right-click with the mouse. This action will display a pop-up menu. Select the <b>
+    <i>
+     Clear Breakpoint</i>
+    </b> menu item.</li>
+   <li>Simply single-click on the red dot or the line number of the line at which you want to clear a breakpoint.</li>
+  </ul>
+  <p>The red dot will disappear and the breakpoint at that location will be cleared.</p>
+ </dd>
+</dl>
+<h2 id="Viewing_Variables">Viewing Variables</h2>
+<p>The lower-left (dockable) pane in the debugger main window contains a tab-pane with two tabs, labeled "this" and "Locals". Each pane contains a tree-table which displays the properties of the current object and currently visible local variables, respectively.</p>
+<dl>
+ <dt>
+  <a id="this" name="this">This</a></dt>
+ <dd>
+  The properties of the current object are displayed in the <b>
+  <i>
+   this</i>
+  </b> table. If a property is itself a JavaScript object the property may be expanded to show its sub-properties. The <b>
+  <i>
+   this</i>
+  </b> table is updated each time control returns to the debugger or when you change the stack location in the <b>
+  <i>
+   Context:</i>
+  </b> window.</dd>
+ <dt>
+  <a id="locals" name="locals">Locals</a></dt>
+ <dd>
+  The local variables of the current function are displayed in the <b>
+  <i>
+   Locals</i>
+  </b> table. If a variable is itself a JavaScript object the variable may be expanded to show its sub-properties. The <b>
+  <i>
+   Locals</i>
+  </b> table is updated each time control returns to the debugger or when you change the stack location in the <b>
+  <i>
+   Context:</i>
+  </b> window</dd>
+ <dt>
+  Watch Window</dt>
+ <dd>
+  You may enter arbitrary JavaScript expressions in the <b>
+  <i>
+   Watch:</i>
+  </b> table located in the lower-right (dockable) pane in the debugger main window. The expressions you enter are re-evaluated in the current scope and their current values displayed each time control returns to the debugger or when you change the stack location in the <b>
+  <i>
+   Context:</i>
+  </b> window.</dd>
+ <dt>
+  Evaluation Window</dt>
+ <dd>
+  The <b>
+  <i>
+   Evaluate</i>
+  </b> pane located in the lower-right (dockable) pane in the debugger main window contains an editable command line where you may enter arbitrary JavaScript code. The code is evaluated in the context of the current stack frame. The window maintains a history of the commands you have entered. You may move backward or forward through the history by pressing the Up/Down arrow keys on the keyboard.</dd>
+</dl>

@@ -1,0 +1,496 @@
+---
+title: nsIZipWriter
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsIZipWriter
+tags:
+  - Firefox 3
+  - Interfaces
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIZipWriter
+---
+<p> <code>nsIZipWriter</code> インタフェースは、スクリプトを使ってデータを Zip ファイル形式にアーカイブできる簡単な方法を提供します。アーカイブに対する操作はひとつずつ実行することも、キューに入れておいて後で実行することもできます。</p>
+<p>実行したい操作をすべてキューに追加したら、<code><a href="#processQueue.28.29">processQueue()</a></code> を呼び出せば、キューに追加した順番通りに操作が実行されます。キューの途中で実行された操作は、オブザーバの対象外で発生したエラーもすべて例外として投げます。</p>
+<p>バックグラウンドでキューを実行中に、インタフェースに対して同時に操作を行おうとした場合、<code>NS_ERROR_IN_PROGRESS</code> という例外が投げられます。</p>
+<p>ファイル名やディレクトリ名の区切り記号には必ずスラッシュ ("/") を使い、また 1 文字目がスラッシュで始まっていてはいけません。</p>
+<div class="blockIndicator note"><strong>註:</strong> ディレクトリ内のファイルエントリを追加するために、そのディレクトリのエントリを追加しておく必要はありませんが、一部の Zip ユーティリティでは問題が生じる可能性がありますので、あらかじめディレクトリエントリを明示的に追加しておいた方が良いでしょう。</div>
+<p><br>
+ </p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/modules/libjar/zipwriter/public/nsIZipWriter.idl" rel="custom">modules/libjar/zipwriter/public/nsIZipWriter.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">最終更新: Gecko 1.9 (Firefox 3)</span></div>
+</div>
+<p>継承元: <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code></p>
+<p>実装: <code>@mozilla.org/zipwriter;1</code>. インスタンスを作成するには、以下のように記述します。</p>
+<pre class="eval">var zipWriter = Components.classes["@mozilla.org/zipwriter;1"]
+                          .createInstance(Components.interfaces.nsIZipWriter);
+</pre>
+<h2 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E6.A6.82.E8.A6.81" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E6.A6.82.E8.A6.81">メソッドの概要</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="#addEntryDirectory.28.29">addEntryDirectory</a>(in AUTF8String aZipEntry, in PRTime aModTime, in boolean aQueue);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#addEntryChannel.28.29">addEntryChannel</a>(in AUTF8SZtring aZipEntry, in PRTime aModTime, in PRInt32 aCompression, in <a href="/ja/NsIChannel" title="ja/NsIChannel">nsIChannel</a> aChannel, in boolean aQueue)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#addEntryFile.28.29">addEntryFile</a>(in AUTF8SZtring aZipEntry, in PRInt32 aCompression, in nsIFile aFile, in boolean aQueue)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#addEntryStream.28.29">addEntryStream</a>(in AUTF8SZtring aZipEntry, in PRTime aModTime, in PRInt32 aCompression, in <a href="/ja/nsIInputStream" title="ja/nsIInputStream">nsIInputStream</a> aStream, in boolean aQueue)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#close.28.29">close</a>()</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/ja/nsIZipEntry" title="ja/nsIZipEntry">nsIZipEntry</a> <a href="#getEntry.28.29">getEntry</a>(in <a href="/ja/AUTF8String" title="ja/AUTF8String">AUTF8String</a> aZipEntry);</code></td>
+  </tr>
+  <tr>
+   <td><code>boolean <a href="#hasEntry.28.29">hasEntry</a>(in AUTF8String aZipEntry);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#open.28.29">open</a>(in <a href="/ja/NsIFile" title="ja/NsIFile">nsIFile</a> aFile, in PRInt32 aIoFlags);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#processQueue.28.29">processQueue</a>(in nsIRequestObserver aObserver, in nsISupports aContext)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#removeEntry.28.29">removeEntry</a>(in AUTF8String aZipEntry, in boolean aQueue)</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id=".E5.B1.9E.E6.80.A7" name=".E5.B1.9E.E6.80.A7">属性</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">属性</td>
+   <td class="header">型</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code>comment</code></td>
+   <td><code><a href="/ja/ACString" title="ja/ACString">ACString</a></code></td>
+   <td>開かれている Zip ファイルに関連付けられているコメントを取得あるいは設定します。開かれている Zip ファイルがない場合は、例外 <code>NS_ERROR_NOT_INITIALIZED</code> が投げられます。</td>
+  </tr>
+  <tr>
+   <td><code>inQueue</code></td>
+   <td><code>boolean</code></td>
+   <td>バックグラウンドのキューで操作が実行中の場合は <code>true</code>、バックグラウンド操作が実行中でない場合は <code>false</code>。<em>読み取り専用。</em></td>
+  </tr>
+  <tr>
+   <td><code>file</code></td>
+   <td><code><a href="/ja/NsIFile" title="ja/NsIFile">nsIFile</a></code></td>
+   <td>書き込みを行う Zip ファイル。<em>読み取り専用。</em></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id=".E5.AE.9A.E6.95.B0" name=".E5.AE.9A.E6.95.B0">定数</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">定数</td>
+   <td class="header">値</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code>COMPRESSION_NONE</code></td>
+   <td>0</td>
+   <td>ファイルを圧縮しない。</td>
+  </tr>
+  <tr>
+   <td><code>COMPRESSION_FASTEST</code></td>
+   <td>1</td>
+   <td>ファイルをアーカイブに追加する際、最速の圧縮方法を使用します。</td>
+  </tr>
+  <tr>
+   <td><code>COMPRESSION_DEFAULT</code></td>
+   <td>6</td>
+   <td>ファイルをアーカイブに追加する際、標準の圧縮方法を使用します。</td>
+  </tr>
+  <tr>
+   <td><code>COMPRESSION_BEST</code></td>
+   <td>9</td>
+   <td>ファイルをアーカイブに追加する際、最も圧縮率の高い圧縮方法を使用します。</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89">メソッド</h2>
+<h3 id="addEntryDirectory.28.29" name="addEntryDirectory.28.29">addEntryDirectory()</h3>
+<p>Zip ファイルに新しいディレクトリエントリを追加します。</p>
+<div class="blockIndicator note"><strong>註:</strong> ディレクトリ内のファイルエントリを追加するために、そのディレクトリのエントリを追加しておく必要はありませんが、一部の Zip ユーティリティでは問題が生じる可能性がありますので、あらかじめディレクトリエントリを明示的に追加しておいた方が良いでしょう。</div>
+<pre class="eval"> void addEntryDirectory(
+   in AUTF8String aZipEntry,
+   in PRTime aModTime,
+   in boolean aQueue
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0" name=".E5.BC.95.E6.95.B0">引数</h6>
+<dl>
+ <dt>
+  <code>aZipEntry</code></dt>
+ <dd>
+  Zip ファイルに追加するディレクトリエントリのパス。</dd>
+ <dt>
+  <code>aModTime</code></dt>
+ <dd>
+  エントリの変更日時。ミリ秒単位。</dd>
+ <dt>
+  <code>aQueue</code></dt>
+ <dd>
+  操作をキューに追加して後で実行する場合は <code>true</code>、操作を即座に実行する場合は <code>false</code>。</dd>
+</dl>
+<h6 id=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96" name=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96">投げられる例外</h6>
+<dl>
+ <dt>
+  <code>NS_ERROR_NOT_INITIALIZED</code></dt>
+ <dd>
+  開かれている Zip ファイルがありません。</dd>
+ <dt>
+  <code>NS_ERROR_FILE_ALREADY_EXISTS</code></dt>
+ <dd>
+  指定されたパスは既に Zip ファイルの中に存在します。</dd>
+ <dt>
+  <code>NS_ERROR_IN_PROGRESS</code></dt>
+ <dd>
+  Zip Writer は他の操作を実行中です。</dd>
+</dl>
+<h3 id="addEntryChannel.28.29" name="addEntryChannel.28.29">addEntryChannel()</h3>
+<p>チャンネルから Zip ファイルにデータを追加します。</p>
+<pre class="eval"> void addEntryChannel(
+   in AUTF8String aZipEntry,
+   in PRTime aModTime,
+   in PRInt32 aCompression,
+   in nsIChannel aChannel,
+   in boolean aQueue
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_2" name=".E5.BC.95.E6.95.B0_2">引数</h6>
+<dl>
+ <dt>
+  <code>aZipEntry</code></dt>
+ <dd>
+  Zip ファイルに追加するファイルエントリのパス。これは Zip ファイル内に配置されるパスになります。</dd>
+ <dt>
+  <code>aModTime</code></dt>
+ <dd>
+  エントリの変更日時。ミリ秒単位。</dd>
+ <dt>
+  <code>aCompression</code></dt>
+ <dd>
+  使用する圧縮方法を表す <a href="#Constants">圧縮定数</a> のいずれか。</dd>
+ <dt>
+  <code>aChannel</code></dt>
+ <dd>
+  データを取得するチャンネル。</dd>
+ <dt>
+  <code>aQueue</code></dt>
+ <dd>
+  操作をキューに追加して後で実行する場合は <code>true</code>、操作を即座に実行する場合は <code>false</code>。</dd>
+</dl>
+<h6 id=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96_2" name=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96_2">投げられる例外</h6>
+<dl>
+ <dt>
+  <code>NS_ERROR_NOT_INITIALIZED</code></dt>
+ <dd>
+  開かれている Zip ファイルがありません。</dd>
+ <dt>
+  <code>NS_ERROR_FILE_ALREADY_EXISTS</code></dt>
+ <dd>
+  指定されたパスは既に Zip ファイルの中に存在します。</dd>
+ <dt>
+  <code>NS_ERROR_IN_PROGRESS</code></dt>
+ <dd>
+  Zip Writer は他の操作を実行中です。</dd>
+</dl>
+<h3 id="addEntryFile.28.29" name="addEntryFile.28.29">addEntryFile()</h3>
+<p>新しいファイルもしくはディレクトリを Zip ファイルに追加します。指定されたファイルがディレクトリの場合、この呼び出しは以下と同じことになります。</p>
+<pre class="eval"> addEntryDirectory(aZipEntry, aFile.lastModifiedTime, aQueue);
+</pre>
+<pre class="eval"> void addEntryFile(
+   in AUTF8String aZipEntry,
+   in PRInt32 aCompression,
+   in nsIFile aFile,
+   in boolean aQueue
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_3" name=".E5.BC.95.E6.95.B0_3">引数</h6>
+<dl>
+ <dt>
+  <code>aZipEntry</code></dt>
+ <dd>
+  Zip ファイルに追加するファイルエントリのパス。これは Zip ファイル内に配置されるパスになります。</dd>
+ <dt>
+  <code>aCompression</code></dt>
+ <dd>
+  使用する圧縮方法を表す <a href="#Constants">圧縮定数</a> のいずれか。</dd>
+ <dt>
+  <code>aFile</code></dt>
+ <dd>
+  データと変更日時を取得するファイル。</dd>
+ <dt>
+  <code>aQueue</code></dt>
+ <dd>
+  操作をキューに追加して後で実行する場合は <code>true</code>、操作を即座に実行する場合は <code>false</code>。</dd>
+</dl>
+<h6 id=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96_3" name=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96_3">投げられる例外</h6>
+<dl>
+ <dt>
+  <code>NS_ERROR_NOT_INITIALIZED</code></dt>
+ <dd>
+  開かれている Zip ファイルがありません。</dd>
+ <dt>
+  <code>NS_ERROR_FILE_ALREADY_EXISTS</code></dt>
+ <dd>
+  指定されたパスは既に Zip ファイルの中に存在します。</dd>
+ <dt>
+  <code>NS_ERROR_IN_PROGRESS</code></dt>
+ <dd>
+  Zip Writer は他の操作を実行中です。</dd>
+</dl>
+<h3 id="addEntryStream.28.29" name="addEntryStream.28.29">addEntryStream()</h3>
+<p>入力ストリームから Zip ファイルにデータを追加します。</p>
+<pre class="eval"> void addEntryStream(
+   in AUTF8String aZipEntry,
+   in PRTime aModTime,
+   in PRInt32 aCompression,
+   in nsIInputStream aStream,
+   in boolean aQueue
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_4" name=".E5.BC.95.E6.95.B0_4">引数</h6>
+<dl>
+ <dt>
+  <code>aZipEntry</code></dt>
+ <dd>
+  Zip ファイルに追加するファイルエントリのパス。これは Zip ファイル内に配置されるパスになります。</dd>
+ <dt>
+  <code>aModTime</code></dt>
+ <dd>
+  エントリの変更日時。ミリ秒単位。</dd>
+ <dt>
+  <code>aCompression</code></dt>
+ <dd>
+  使用する圧縮方法を表す <a href="#Constants">圧縮定数</a> のいずれか。</dd>
+ <dt>
+  <code>aStream</code></dt>
+ <dd>
+  データを取得する入力ストリーム。</dd>
+ <dt>
+  <code>aQueue</code></dt>
+ <dd>
+  操作をキューに追加して後で実行する場合は <code>true</code>、操作を即座に実行する場合は <code>false</code>。</dd>
+</dl>
+<h6 id=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96_4" name=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96_4">投げられる例外</h6>
+<dl>
+ <dt>
+  <code>NS_ERROR_NOT_INITIALIZED</code></dt>
+ <dd>
+  開かれている Zip ファイルがありません。</dd>
+ <dt>
+  <code>NS_ERROR_FILE_ALREADY_EXISTS</code></dt>
+ <dd>
+  指定されたパスは既に Zip ファイルの中に存在します。</dd>
+ <dt>
+  <code>NS_ERROR_IN_PROGRESS</code></dt>
+ <dd>
+  Zip Writer は他の操作を実行中です。</dd>
+</dl>
+<h3 id="close.28.29" name="close.28.29">close()</h3>
+<p>Zip ファイルを閉じます。</p>
+<pre class="eval"> void close();
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_5" name=".E5.BC.95.E6.95.B0_5">引数</h6>
+<p>なし。</p>
+<h6 id=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96_5" name=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96_5">投げられる例外</h6>
+<dl>
+ <dt>
+  <code>NS_ERROR_NOT_INITIALIZED</code></dt>
+ <dd>
+  開かれている Zip ファイルがありません。</dd>
+ <dt>
+  <code>NS_ERROR_IN_PROGRESS</code></dt>
+ <dd>
+  Zip Writer は他の操作を実行中です。</dd>
+</dl>
+<p>Zip ファイルの仕上げが失敗した場合、他の例外が投げられる場合もあります。</p>
+<h3 id="getEntry.28.29" name="getEntry.28.29">getEntry()</h3>
+<p>開かれている Zip ファイルから特定のエントリを取得します。</p>
+<pre class="eval"> nsIZipEntry getEntry(
+   in AUTF8String aZipEntry,
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_6" name=".E5.BC.95.E6.95.B0_6">引数</h6>
+<dl>
+ <dt>
+  <code>aZipEntry</code></dt>
+ <dd>
+  取得するファイルエントリのパス。</dd>
+</dl>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4" name=".E6.88.BB.E3.82.8A.E5.80.A4">戻り値</h6>
+<p>指定したエントリについて説明した <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIZipEntry" title="">nsIZipEntry</a></code> オブジェクト。あるいは、該当するエントリが存在しなかった場合 <code>null</code>。</p>
+<h3 id="hasEntry.28.29" name="hasEntry.28.29">hasEntry()</h3>
+<p>特定のエントリが Zip ファイル内に存在するかどうかを判別します。</p>
+<pre class="eval"> boolean hasEntry(
+   in AUTF8String aZipEntry,
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_7" name=".E5.BC.95.E6.95.B0_7">引数</h6>
+<dl>
+ <dt>
+  <code>aZipEntry</code></dt>
+ <dd>
+  確認を行うファイルエントリのパス。</dd>
+</dl>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4_2" name=".E6.88.BB.E3.82.8A.E5.80.A4_2">戻り値</h6>
+<p>指定されたパスのエントリが Zip ファイル内に存在する場合は <code>true</code>、存在しない場合は <code>false</code> を返します。</p>
+<h3 id="open.28.29" name="open.28.29">open()</h3>
+<p>指定された Zip ファイルを開きます。</p>
+<pre class="eval"> void open(
+   in nsIFile aFile,
+   in PRInt32 aIoFlags
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_8" name=".E5.BC.95.E6.95.B0_8">引数</h6>
+<dl>
+ <dt>
+  <code>aFile</code></dt>
+ <dd>
+  開く Zip ファイル。</dd>
+ <dt>
+  <code>aIoFlags</code></dt>
+ <dd>
+  <code>prio.h</code> で指定された、Zip ファイルのオープンフラグ。</dd>
+</dl>
+<h6 id=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96_6" name=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96_6">投げられる例外</h6>
+<dl>
+ <dt>
+  <code>NS_ERROR_ALREADY_INITIALIZED</code></dt>
+ <dd>
+  Zip ファイルは既に開かれています。</dd>
+ <dt>
+  <code>NS_ERROR_INVALID_ARG</code></dt>
+ <dd>
+  <code>aFile</code> 引数が null です。</dd>
+ <dt>
+  <code>NS_ERROR_FILE_NOT_FOUND</code></dt>
+ <dd>
+  指定されたファイルが見つからず、フラグでそのファイルの作成が許可されていません。または、指定されたファイルを含むディレクトリが存在しません。</dd>
+ <dt>
+  <code>NS_ERROR_FILE_CORRUPTED</code></dt>
+ <dd>
+  指定されたファイルは識別可能な Zip ファイルではありません。</dd>
+</dl>
+<p>ファイルが破損していた場合やサポートされていない形式だった場合など、ファイルを開くのに失敗すると、他の例外が投げられる場合もあります。</p>
+<h3 id="processQueue.28.29" name="processQueue.28.29">processQueue()</h3>
+<p>キュー全体の処理が完了するかエラーが発生するまで、キューに追加されたすべての項目を処理します。最初の操作が開始されたときと、最後の操作が完了したときに、オブザーバに通知が行われます。</p>
+<p>エラーが発生した場合はすべてオブザーバに通知されます。</p>
+<p>キューが完了するか、エラーが起きて途中までのキューの処理が中止されるまで、Zip Writer はビジー状態になります。途中までの処理に失敗した場合、残りの項目はキューに留まります。再度 <code>processQueue()</code> を呼び出すと、操作が中断されたところから再開されます。</p>
+<pre class="eval"> void processQueue(
+   in nsIRequestObserver aObserver,
+   in nsISupports aContext
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_9" name=".E5.BC.95.E6.95.B0_9">引数</h6>
+<dl>
+ <dt>
+  <code>aObserver</code></dt>
+ <dd>
+  キューから通知を受け取るオブザーバ。</dd>
+ <dt>
+  <code>aContext</code></dt>
+ <dd>
+  オブザーバに渡すコンテキスト。</dd>
+</dl>
+<h6 id=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96_7" name=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96_7">投げられる例外</h6>
+<dl>
+ <dt>
+  <code>NS_ERROR_NOT_INITIALIZED</code></dt>
+ <dd>
+  開かれている Zip ファイルがありません。</dd>
+ <dt>
+  <code>NS_ERROR_IN_PROGRESS</code></dt>
+ <dd>
+  キューの処理は既に実行中です。</dd>
+</dl>
+<h3 id="removeEntry.28.29" name="removeEntry.28.29">removeEntry()</h3>
+<p>Zip ファイルからエントリを削除します。</p>
+<pre class="eval"> void removeEntry(
+   in AUTF8String aZipEntry,
+   in boolean aQueue
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_10" name=".E5.BC.95.E6.95.B0_10">引数</h6>
+<dl>
+ <dt>
+  <code>aZipEntry</code></dt>
+ <dd>
+  Zip ファイルから削除するエントリのパス。</dd>
+ <dt>
+  <code>aQueue</code></dt>
+ <dd>
+  削除の操作をキューに追加する場合は <code>true</code>。即座に実行する場合は <code>false</code>。</dd>
+</dl>
+<h6 id=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96_8" name=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96_8">投げられる例外</h6>
+<dl>
+ <dt>
+  <code>NS_ERROR_NOT_INITIALIZED</code></dt>
+ <dd>
+  開かれている Zip ファイルがありません。</dd>
+ <dt>
+  <code>NS_ERROR_IN_PROGRESS</code></dt>
+ <dd>
+  キューの処理は既に実行中です。</dd>
+ <dt>
+  <code>NS_ERROR_FILE_NOT_FOUND</code></dt>
+ <dd>
+  指定されたパスにエントリが存在しません。</dd>
+</dl>
+<p>Zip ファイルの更新に失敗した場合、他の例外が投げられる場合もあります。</p>
+<h2 id=".E4.BE.8B" name=".E4.BE.8B">例</h2>
+<h3 id=".E3.82.B3.E3.83.A1.E3.83.B3.E3.83.88.E3.82.92_Zip_.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AB.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B" name=".E3.82.B3.E3.83.A1.E3.83.B3.E3.83.88.E3.82.92_Zip_.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AB.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B">コメントを Zip ファイルに追加する</h3>
+<pre>var zipWriter = Components.Constructor("@mozilla.org/zipwriter;1", "nsIZipWriter");
+var zipW = new zipWriter();
+
+zipW.open(myZipFilePath, PR_RDWR | PR_CREATE_FILE | PR_TRUNCATE);
+zipW.comment = "This is a comment.";
+zipW.close();
+</pre>
+<p><code>PR_RDWR</code> とそれに続くオプションは、どのインタフェースにも含まれていない定数です (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=433295">Bug 433295</a> 参照)。このため、上記のコードを実際に動作させるには、以下のようなコードを追加する必要があります。</p>
+<pre>const PR_RDONLY      = 0x01;
+const PR_WRONLY      = 0x02;
+const PR_RDWR        = 0x04;
+const PR_CREATE_FILE = 0x08;
+const PR_APPEND      = 0x10;
+const PR_TRUNCATE    = 0x20;
+const PR_SYNC        = 0x40;
+const PR_EXCL        = 0x80;
+</pre>
+<p><a href="/ja/Code_snippets/File_I//O_File" title="ja/Code_snippets/File_I//O_File">I/O Snippets</a> も参照してください。</p>
+<h3 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.92_Zip_.E3.82.A2.E3.83.BC.E3.82.AB.E3.82.A4.E3.83.96.E3.81.AB.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.92_Zip_.E3.82.A2.E3.83.BC.E3.82.AB.E3.82.A4.E3.83.96.E3.81.AB.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B">ファイルを Zip アーカイブに追加する</h3>
+<p>このコードは、<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile" title="">nsIFile</a></code> <code>theFile</code> で指定されたファイルを、Zip アーカイブへ同期的に追加するものです。</p>
+<pre>var zipWriter = Components.Constructor("@mozilla.org/zipwriter;1", "nsIZipWriter");
+var zipW = new zipWriter();
+
+zipW.open(myZipFilePath, PR_RDWR | PR_CREATE_FILE | PR_TRUNCATE);
+zipW.addEntryFile("Path/For/This/File/In/Zip Archive", Components.interfaces.nsIZipWriter.COMPRESSION_DEFAULT, theFile, false);
+zipW.close();
+</pre>
+<p>引数のうち <code>nyZipFilePath</code> は、実際にはパスではなく、新しい Zip ファイルの場所を指定する <code>nsIFile</code> インスタンスのことを指しています。ファイルそのものは存在していなくても構いませんが、そのファイルを含むディレクトリ (つまり nsIFile.parent) は必ず存在している必要があります。</p>
+<h3 id=".E3.81.9D.E3.81.AE.E4.BB.96.E3.81.AE.E4.BE.8B" name=".E3.81.9D.E3.81.AE.E4.BB.96.E3.81.AE.E4.BE.8B">その他の例</h3>
+<p>他の例については、ソースツリー内のユニットテストを参照してください。</p>
+<ul>
+ <li><code><a href="https://dxr.mozilla.org/mozilla-central/source/modules/libjar/zipwriter/test/unit" rel="custom">modules/libjar/zipwriter/test/unit</a></code></li>
+</ul>
+<h2 id=".E9.96.A2.E9.80.A3.E8.A8.98.E4.BA.8B" name=".E9.96.A2.E9.80.A3.E8.A8.98.E4.BA.8B">関連記事</h2>
+<ul>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIZipReader" title="">nsIZipReader</a></code></li>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile" title="">nsIFile</a></code></li>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIChannel" title="">nsIChannel</a></code></li>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIInputStream" title="">nsIInputStream</a></code></li>
+</ul>

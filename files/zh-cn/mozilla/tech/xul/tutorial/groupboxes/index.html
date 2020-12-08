@@ -1,0 +1,85 @@
+---
+title: 分组框
+slug: Mozilla/Tech/XUL/Tutorial/Groupboxes
+translation_of: Archive/Mozilla/XUL/Tutorial/Groupboxes
+---
+<p>    本章介绍在组框中添加元素的方法。</p>
+<div id="section_1">
+ <h3 class="editable" id="Groupboxes"><span>Groupboxes </span></h3>
+ <div class="editIcon">
+  <a href="../../../../en/XUL_Tutorial/Groupboxes#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+ <p>    HTML 通过了 <code>fieldset</code> 元素来使元素分组，一般的会在元素的边上画一个框来显示元素的关系。比如一系列单选按钮。XUL 也通过了 <code><span class="lang lang-en"><a href="../../../../en/XUL/groupbox" rel="internal">groupbox</a> </span></code>元素来完成相似的功能。</p>
+ <p>    就像名字暗示的一样 <code><span class="lang lang-en"><a href="../../../../en/XUL/groupbox" rel="internal">groupbox</a> <span style="font-family: Verdana,Tahoma,sans-serif;">是一类box，这意味着在其中的元素可以安装box指定的形式排列。与一般的box相比groupbox有两点不同。</span></span></code></p>
+ <ul>
+  <li>默认的组框会画出边界，你可以使用 CSS 来改变这种行为。</li>
+  <li>groupbox 支持在边框顶部画出标题。</li>
+ </ul>
+ <p>    因为组框是一种box，你可以使用如 <code><span class="lang lang-en"><a href="../../../../en/XUL/Attribute/orient" rel="internal">orient</a> </span></code>及 <code><span class="lang lang-en"><a href="../../../../en/XUL/Attribute/flex" rel="internal">flex</a> 等属性<span style="font-family: Verdana,Tahoma,sans-serif;">。你可以把任何你想放入box中的元素放入组框中，无论他们有什么关系。</span></span></code></p>
+ <p>    组框顶端的标签使用 <code><span class="lang lang-en"><a href="../../../../en/XUL/caption" rel="internal">caption</a> <span style="font-family: Verdana,Tahoma,sans-serif;">元素创建，类似于</span></span></code> HTML 中的<code>legend</code> 元素，请把 <code><span class="lang lang-en"><a href="../../../../en/XUL/caption" rel="internal">caption</a> </span></code>作为第一个元素放入组框。</p>
+ <div id="section_2">
+  <h4 class="editable" id="一个组框的例子"><span>一个组框的例子 </span></h4>
+  <div class="editIcon">
+   <a href="../../../../en/XUL_Tutorial/Groupboxes#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+  <p>    下面的例子显示一个简单组框。</p>
+  <p><span class="lang lang-en"><span id="Example_1"><strong>Example 1</strong></span> </span> : <span class="lang lang-en"><a class="external" href="http://developer.mozilla.org/samples/xultu/examples/ex_titledbox_1.xul.txt" rel="external nofollow" title="http://developer.mozilla.org/samples/xultu/examples/ex_titledbox_1.xul.txt">Source</a> <a class="external" href="http://developer.mozilla.org/samples/xultu/examples/ex_titledbox_1.xul" rel="external nofollow" title="http://developer.mozilla.org/samples/xultu/examples/ex_titledbox_1.xul">View</a> </span></p>
+  <div class="float-right">
+   <img alt="Image:titledbox1.png" class="internal" src="../../../../@api/deki/files/891/=Titledbox1.png"></div>
+  <pre>&lt;groupbox&gt;
+  &lt;caption label="Answer"/&gt;
+  &lt;description value="Banana"/&gt;
+  &lt;description value="Tangerine"/&gt;
+  &lt;description value="Phone Booth"/&gt;
+  &lt;description value="Kiwi"/&gt;
+&lt;/groupbox&gt;
+</pre>
+  <p>    以上代码表示：四条文本被一个以 <em>Answer </em>为标签的box框起来，注意组框默认的定向方式为垂直定向，所以元素会排成一列。</p>
+ </div>
+ <div id="section_3">
+  <h4 class="editable" id="更复杂的标题"><span>更复杂的标题</span></h4>
+  <div class="editIcon">
+   <a href="../../../../en/XUL_Tutorial/Groupboxes#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+  <p>    你可以在 <code><span class="lang lang-en"><a href="../../../../en/XUL/caption" rel="internal">caption</a> <span style="font-family: Verdana,Tahoma,sans-serif;">元素中添加子元素构造一个更复杂的标题，比如，</span></span></code>Mozilla的字体选择面板使用一个下拉菜单作为标题。尽管任何元素都可以在这里使用，通常的是使用下拉菜单和复选框。</p>
+  <p><span class="lang lang-en"><span id="Example_2"><strong>Example 2</strong></span> </span> : <span class="lang lang-en"><a class="external" href="http://developer.mozilla.org/samples/xultu/examples/ex_titledbox_2.xul.txt" rel="external nofollow" title="http://developer.mozilla.org/samples/xultu/examples/ex_titledbox_2.xul.txt">Source</a> <a class="external" href="http://developer.mozilla.org/samples/xultu/examples/ex_titledbox_2.xul" rel="external nofollow" title="http://developer.mozilla.org/samples/xultu/examples/ex_titledbox_2.xul">View</a> </span></p>
+  <div class="float-right">
+   <img alt="Image:groupbox2.png" class="internal" src="../../../../@api/deki/files/706/=Groupbox2.png"></div>
+  <pre>&lt;groupbox flex="1"&gt;
+  &lt;caption&gt;
+    &lt;checkbox label="Enable Backups"/&gt;
+  &lt;/caption&gt;
+  &lt;hbox&gt;
+    &lt;label control="dir" value="Directory:"/&gt;
+    &lt;textbox id="dir" flex="1"/&gt;
+  &lt;/hbox&gt;
+  &lt;checkbox label="Compress archived files"/&gt;
+&lt;/groupbox&gt;
+</pre>
+  <p><br>
+       这个例子里一个 <a href="../../../../en/XUL_Tutorial/Input_Controls#Checkboxes_and_Radio_Buttons" rel="internal">checkbox</a> 被作为标题。我看可以根据复选框是否被选中，使用脚本来控制组框中的元素是否有效。组框中包含了一个有 <span class="lang lang-en"><a href="../../../../en/XUL/label" rel="internal">label</a> 和</span> <span class="lang lang-en"><a href="../../../../en/XUL/textbox" rel="internal">textbox</a> </span>的水平框，文本框和组框均被设定为是可变的，所以元素会随着窗口延伸。复选框出现在组框底下是因为组框默认为垂直定向。下一章我们为find files 对话框添加一个组框。</p>
+ </div>
+</div>
+<div id="section_4">
+ <h3 class="editable" id="单选组"><span>单选组</span></h3>
+ <div class="editIcon">
+  <a href="../../../../en/XUL_Tutorial/Groupboxes#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+ <p>    你可以使用 <code><span class="lang lang-en"><a href="../../../../en/XUL/radiogroup" rel="internal">radiogroup</a> <span style="font-family: Verdana,Tahoma,sans-serif;">把单选按钮组织在一起。</span></span></code> <code><span class="lang lang-en"><a href="../../../../en/XUL/radiogroup" rel="internal">radiogroup</a> </span></code>是一种box，你可以在其中放置任何元素，并且他对 <code><span class="lang lang-en"><a href="../../../../en/XUL/radio" rel="internal">radio</a> <span style="font-family: Verdana,Tahoma,sans-serif;">按钮具有特殊的处理。</span></span></code></p>
+ <p>    那些放在单选组里的单选按钮会被组织起来，即使它在其他的box中 。也可添加额外的元素，如下例：</p>
+ <p><span class="lang lang-en"><span id="Example_3"><strong>Example 3</strong></span> </span> : <span class="lang lang-en"><a class="external" href="http://developer.mozilla.org/samples/xultu/examples/ex_titledbox_3.xul.txt" rel="external nofollow" title="http://developer.mozilla.org/samples/xultu/examples/ex_titledbox_3.xul.txt">Source</a> <a class="external" href="http://developer.mozilla.org/samples/xultu/examples/ex_titledbox_3.xul" rel="external nofollow" title="http://developer.mozilla.org/samples/xultu/examples/ex_titledbox_3.xul">View</a> </span></p>
+ <pre>&lt;radiogroup&gt;
+  &lt;radio id="no" value="no" label="No Number"/&gt;
+  &lt;radio id="random" value="random" label="Random Number"/&gt;
+  &lt;hbox&gt;
+    &lt;radio id="specify" value="specify" label="Specify Number:"/&gt;
+    &lt;textbox id="specificnumber"/&gt;
+  &lt;/hbox&gt;
+&lt;/radiogroup&gt;
+</pre>
+ <p>    注意 <code><span class="lang lang-en"><a href="../../../../en/XUL/radiogroup" rel="internal">radiogroup</a> <span style="font-family: Verdana,Tahoma,sans-serif;">不会画出边框。如果需要边框及标题请放置在</span></span></code> <code><span class="lang lang-en"><a href="../../../../en/XUL/groupbox" rel="internal">groupbox</a> <span style="font-family: Verdana,Tahoma,sans-serif;">中。</span></span></code></p>
+ <p>    接下来，我们使用学到的新知识来为findfile对话框添加元素。<a href="../../../../en/XUL_Tutorial/Adding_More_Elements" rel="internal">（additional elements to the find files dialog</a>.）</p>
+ <p> </p>
+ <div class="prevnext">
+  <p><span style="float: left;">« <a href="../../../../en/XUL_Tutorial/Box_Model_Details" rel="internal">Previous</a></span> <span style="float: right;"><a href="../../../../en/XUL_Tutorial/Adding_More_Elements" rel="internal">Next</a> »</span></p>
+ </div>
+ <p>  </p>
+ <p> </p>
+</div>
+<p> </p>

@@ -1,0 +1,151 @@
+---
+title: Repackaging Firefox
+slug: Archive/Mozilla/Firefox/Repackaging_Firefox
+translation_of: Archive/Mozilla/Firefox/Repackaging_Firefox
+---
+<p>Firefox は、例えば社員やクライアントといった、特定のユーザグループのニーズに合わせてカスタマイズできます。また、開発当初から柔軟性やカスタマイズ性を考慮して設計されているので、カスタマイズの手順は単純で管理も容易です。
+</p>
+<h3 id=".E5.A4.A7.E5.88.87.E3.81.AA.E6.B3.95.E7.9A.84.E7.95.99.E6.84.8F.E4.BA.8B.E9.A0.85" name=".E5.A4.A7.E5.88.87.E3.81.AA.E6.B3.95.E7.9A.84.E7.95.99.E6.84.8F.E4.BA.8B.E9.A0.85"> 大切な法的留意事項 </h3>
+<p>作業に取りかかる前に、大切なこととして、Firefox の配布に関する法的な事項を理解し遵守してください。Firefox の改変版を配布するにあたっては、Mozilla からの書面による認可が必要です。認可を得るためには、<a class=" link-mailto" href="mailto:licensing@mozilla.com" rel="freelink">licensing@mozilla.com</a> にご連絡ください。
+</p>
+<h3 id=".E3.81.BE.E3.81.9A.E3.81.AF.E3.81.98.E3.82.81.E3.81.AB" name=".E3.81.BE.E3.81.9A.E3.81.AF.E3.81.98.E3.82.81.E3.81.AB"> まずはじめに </h3>
+<p>では、技術的な詳細に移ります。下の図は、手順および関係する部品の概要です。
+</p><p><img alt="画像:Repackaging overview graph-1.jpg">
+</p><p>作業をはじめるにあたって、次のものが必要になります。
+</p>
+<ul><li> Macintosh コンピュータ (Windows または Linux のみを対象にしている場合でも必要です)；PowerPC であるか Intel ベースであるかは問いません。
+</li><li> <a class="external" href="http://benjamin.smedbergs.us/release-repackager/">再パッケージ用ツール</a>. 現在、リンク先のページは Firefox 1.5.x にしか言及していませんが、Firefox 2 にも適用できます。
+</li><li> 必要なロケールに対応した素の Firefox 2 インストーラファイル (Windows .exe, Mac .dmg, または Linux .tar.gz)。この資料の執筆時点での最新ビルドは、 <a class="external" href="http://stage.mozilla.org/pub/mozilla.org/firefox/releases/latest/">こちら</a> にあります。
+</li><li> 必要に応じた変更を施すための「distro extension」。
+</li></ul>
+<p>これらすべてをインストールしたら、カスタム手順はかなり簡単です。
+</p>
+<ol><li> Firefox インストーラをダウンロードします。
+</li><li> 他の Mac アプリケーションと同じように再パッケージ用ツールをインストールします。起動して、GUI が表示されるか確認します。
+</li><li> Firefox をカスタマイズするための拡張機能を用意します。
+</li></ol>
+<h3 id="distro_extension" name="distro_extension"> distro extension </h3>
+<p>変更点すべて (例：標準のホームページの変更や標準ブックマークの追加) を、ひとつの Firefox 拡張機能として集約できます。私たちは、このような拡張機能を 「distro extension」 と呼びます。 というのも、これで、新しいブランド名を付けたりと、Firefox の新しい 「ディストリビューション」 を作成できるからです。拡張機能を利用することで、Firefox の新バージョンへとアップグレードする際に、変更点が簡単に追跡できるようになるとともに、ユーザ側のメリットとしては、設定が正しく行われていれば、Mozilla が配布する Firefox のアップデートを安全に受け取れるようになります。さらに詳しく説明しましょう。
+</p><p>この記事の目的は、拡張機能の作成方法を解説することではありませんが (拡張機能の作成方法は、Mozilla Developer Center にある <a class="external" href="http://developer.mozilla.org/en/docs/Extensions">このセクション</a> を参照してください)、ここに簡単なチュートリアルとしてまとめておきます。また DEX を作成するにあたっての具体的なヒントも記載しておきます。
+</p><p>Firefox にバンドルしたい拡張機能がすでに手元にあり、標準設定を数カ所変更する以外に他に拡張機能をバンドルしたくない場合は、既存の拡張機能で必要な作業をすべて行うことができます。そうはいっても、このチュートリアルには目を通しておくことをお奨めします。というのも、このチュートリアルには、こうしたタイプの拡張機能を作成する際に特有のヒントが掲載されていますし、ユーザがスムーズにアップグレードできるようにするためにいくつかのオプションを変更する必要もあるからです。最低限、「重要な拡張機能設定項目」 というセクションだけは必ず目を通しておいてください。
+</p>
+<h4 id=".E3.82.B5.E3.83.B3.E3.83.97.E3.83.AB_DEX" name=".E3.82.B5.E3.83.B3.E3.83.97.E3.83.AB_DEX"> サンプル DEX </h4>
+<p>作業を開始するにあたってのベストな方法は、シンプルな DEX を参考にして、必要に応じて変更を施すというものです。こちらの <img alt="画像:Sample.xpi"> をダウンロードします (リンクを辿り、右クリックから 'リンク先を保存...' を選択します)。XPI ファイルの実体は ZIP ファイルです。解凍にあたっては、どの ZIP プログラムを使ってもかまいません (Windows では WinZIP、Mac や Linux では zip など)。この XPI には次の内容物が含まれています。
+</p>
+<pre class="eval">chrome.manifest
+components/PartnerBookmarks.js
+defaults/preferences/partner.js
+install.rdf
+locale/ar/partner.properties
+locale/cs/partner.properties
+locale/da/partner.properties
+locale/de/partner.properties
+locale/el/partner.properties
+locale/en-GB/partner.properties
+locale/en-US/partner.properties
+locale/es-AR/partner.properties
+locale/es-ES/partner.properties
+locale/fi/partner.properties
+locale/fr/partner.properties
+locale/he/partner.properties
+locale/hu/partner.properties
+locale/it/partner.properties
+locale/ja/partner.properties
+locale/ja-JP-mac/partner.properties
+locale/ko/partner.properties
+locale/nb-NO/partner.properties
+locale/nl/partner.properties
+locale/pl/partner.properties
+locale/pt-BR/partner.properties
+locale/pt-PT/partner.properties
+locale/ru/partner.properties
+locale/sk/partner.properties
+locale/sv-SE/partner.properties
+locale/tr/partner.properties
+locale/zh-CN/partner.properties
+locale/zh-TW/partner.properties
+partner-bookmarks.xml
+</pre>
+<p>上のファイルを一つ一つ見ていきましょう。
+</p><p><b>&lt;tt&gt;chrome.manifest&lt;/tt&gt;</b>
+</p><p>XPI に含まれるコンポーネントのリスト。
+</p><p><b>&lt;tt&gt;components/PartnerBookmarks.js&lt;/tt&gt;</b>
+</p><p>CCK 拡張機能からで、プロファイル作成の際に標準ブックマークを操作できるようにします。このファイルを編集する必要はありません。
+</p><p><b>&lt;tt&gt;defaults/preferences/partner.js&lt;/tt&gt;</b>
+</p><p>この DEX のための標準設定。
+</p><p><b>&lt;tt&gt;install.rdf&lt;/tt&gt;</b>
+</p><p>作者 (所属組織)、ユニーク ID、対象となる Firefox のバージョンといった、拡張機能のメタ情報。
+</p><p><b>&lt;tt&gt;locale/*/partner.properties&lt;/tt&gt;</b>
+</p><p>ローカライズが必要な設定情報。対象ロケールで求められる値が記載された各プロパティファイルには、エントリーが記載されていなければなりません。
+</p><p>値が *すべての* ロケールについて同じ場合には、&lt;tt&gt;partner.js&lt;/tt&gt; ファイルそのものに設定を書き込むことができます。より詳しくは 「Preferences」 セクションを参照してください。
+</p><p><b>&lt;tt&gt;partner-bookmarks.xml&lt;/tt&gt;</b>
+</p><p>標準ブックマークはここで設定されています。
+</p><p>必要なものは以上です！ ここで全ファイルを確認してください。参考資料として <a class="external" href="http://developer.mozilla.org/">MDC</a> も忘れずに。
+</p>
+<h4 id=".E3.83.AD.E3.82.B1.E3.83.BC.E3.83.AB" name=".E3.83.AD.E3.82.B1.E3.83.BC.E3.83.AB"> ロケール </h4>
+<p>インストーラ配布対象予定のロケール (そのため再パッケージが必要です) と、お使いの DEX でサポートされているロケールとの間には違いがあります。可能なら、お使いの DEX は Firefox がサポートするすべてのロケールをサポートするようにしておくと良いでしょう。
+</p><p>というのも、2 種類のロケールをサポートする DEX を作成して出荷し、後になって 3 番目のロケールを出荷することになった場合、第 3 のロケールをサポートするために DEX を作り直す必要があります。つまり、DEX のバージョンを変更しなければならないことになり、過去のバージョンを使っているユーザは必要がないのにアップグレードしなければならなくなります。
+</p><p>一方、すべてのロケールをサポートする DEX を作成してしまえば、当初はロケール数が少なくても、アップグレードの手間なくサポートロケールを増やせます。
+</p><p>もちろん、この方法は文字列のローカライズが必要ない場合か、プログラミング的にローカライズ可能な場合 (例：<span class="nowiki">http://&lt;locale&gt;.example.com/</span> のように、URL にロケールを追加するだけの場合) に限りますが、ロケールサポートを考える上では考慮に値する方法です。
+</p>
+<h4 id=".E8.A8.AD.E5.AE.9A.E9.A0.85.E7.9B.AE" name=".E8.A8.AD.E5.AE.9A.E9.A0.85.E7.9B.AE"> 設定項目 </h4>
+<p>設定項目は、拡張機能のなかで設定したい 2 つの主要なもののうちの一つです (もう一つはブックマークです)。Firefox には 2 種類の設定項目があり、両方とも &lt;tt&gt;partner.js&lt;/tt&gt; ファイルにあります。
+</p>
+<ul><li> ローカライズ可能な設定項目。Firefox がローカライズされた値を引っ張って来れるプロパティファイルをポインティングする &lt;tt&gt;<a class=" external" rel="freelink">chrome://</a>&lt;/tt&gt; URI の値を持っています。
+</li><li> ローカライズ不能な設定項目。直接 &lt;tt&gt;partner.js&lt;/tt&gt; に書き込まれた値を持っています。
+</li></ul>
+<p>次のように、直接 &lt;tt&gt;partner.js&lt;/tt&gt; ファイルにローカライズ可能な設定項目のための値を設定することも可能です。
+</p>
+<pre class="eval">pref("localizable.preference.name", "data:text/plain,localizable.preference.name=Some value.");
+</pre>
+<p>そうすれば、その設定項目のためにプロパティファイルを利用する必要はなくなります。そのため、設定項目の *すべて* で同じ値を利用できる場合、プロパティファイルは一切必要なくなります。
+</p><p>ただし、どの設定項目がローカライズ可能で、どの設定項目がローカライズ不能なのかは理解しておく必要はあります。この点についてより詳しくは MDC にある資料を参照してください。
+</p>
+<h5 id=".E9.87.8D.E8.A6.81.E3.81.AA.E6.8B.A1.E5.BC.B5.E6.A9.9F.E8.83.BD.E8.A8.AD.E5.AE.9A.E9.A0.85.E7.9B.AE" name=".E9.87.8D.E8.A6.81.E3.81.AA.E6.8B.A1.E5.BC.B5.E6.A9.9F.E8.83.BD.E8.A8.AD.E5.AE.9A.E9.A0.85.E7.9B.AE"> 重要な拡張機能設定項目 </h5>
+<p>Mozilla が提供する設定項目のセットがあります。この設定項目は、あなたのディストリビューションを追跡し、それに応じてアップグレードの計画を立てるためのものです。この項目を利用すれば、Mozilla からあなたのディストリビューションに対してアップグレードを配布することができるようになります。ですから、これら設定項目はもっとも重要なものと言えます。
+</p><p>必要な値は Mozilla が提供します。&lt;tt&gt;app.partner.'name'&lt;/tt&gt; 設定では、名称および設定値の両方で同じ値を使っていることに留意してください。
+</p><p>これらの設定は、すべてローカライズ不能ですので、直接 &lt;tt&gt;partner.js&lt;/tt&gt; で設定され、プロパティファイル内にある必要はありません。
+</p>
+<pre class="eval">mozilla.partner.id=&lt;name&gt;
+app.partner.&lt;name&gt;=&lt;name&gt;
+app.distributor=&lt;name&gt;
+app.distributor.channel=&lt;name&gt;
+</pre>
+<h5 id=".E3.81.9D.E3.81.AE.E4.BB.96.E3.81.AE.E8.A8.AD.E5.AE.9A.E9.A0.85.E7.9B.AE" name=".E3.81.9D.E3.81.AE.E4.BB.96.E3.81.AE.E8.A8.AD.E5.AE.9A.E9.A0.85.E7.9B.AE"> その他の設定項目 </h5>
+<p>設定の中には、パートナーディストリビューション共通の設定があります。ただし、ここでは設定項目をすべて列挙することはしません。もし、多くのパートナーが再パッケージを行う際に便利だと思われる設定項目を見つけた場合は、同じようなスタイルを用いて、下にその項目を追加してください。
+</p>
+<h6 id=".E3.83.AD.E3.83.BC.E3.82.AB.E3.83.A9.E3.82.A4.E3.82.BA.E4.B8.8D.E8.83.BD.E3.81.AA.E8.A8.AD.E5.AE.9A.E9.A0.85.E7.9B.AE" name=".E3.83.AD.E3.83.BC.E3.82.AB.E3.83.A9.E3.82.A4.E3.82.BA.E4.B8.8D.E8.83.BD.E3.81.AA.E8.A8.AD.E5.AE.9A.E9.A0.85.E7.9B.AE"> ローカライズ不能な設定項目 </h6>
+<pre class="eval">browser.EULA.2.accepted=&lt;boolean&gt;
+</pre>
+<p>この設定項目を false にすると、Firefox は初回起動時にエンドユーザライセンス許諾を表示します。標準設定では true になっていますので、Firefox はライセンス許諾を表示しません。
+</p>
+<h6 id=".E3.83.AD.E3.83.BC.E3.82.AB.E3.83.A9.E3.82.A4.E3.82.BA.E5.8F.AF.E8.83.BD.E3.81.AA.E8.A8.AD.E5.AE.9A.E9.A0.85.E7.9B.AE" name=".E3.83.AD.E3.83.BC.E3.82.AB.E3.83.A9.E3.82.A4.E3.82.BA.E5.8F.AF.E8.83.BD.E3.81.AA.E8.A8.AD.E5.AE.9A.E9.A0.85.E7.9B.AE"> ローカライズ可能な設定項目 </h6>
+<pre class="eval">browser.startup.homepage=&lt;string&gt;
+browser.startup.homepage_reset=&lt;string&gt;
+</pre>
+<p>標準ホームページの URL と、ユーザが設定項目で "標準設定に戻す" とした場合に復旧されるホームページ。これら二つとも同じ URL でなければなりません。
+</p>
+<pre class="eval">startup.homepage_welcome_url=&lt;string&gt;
+</pre>
+<p>初回起動時に表示されるページの URL。これは、Firefox が初めて実行された時に、ホームページと共に表示されます。
+</p>
+<pre class="eval">browser.search.defaultenginename=&lt;string&gt;
+</pre>
+<p>標準の検索エンジンの名前。ここでは、ドロップダウンメニューに表示される検索エンジンの順番は変更されず、標準エンジンの選択のみができます。大文字・小文字の区別があります。
+</p>
+<h3 id="Firefox_.E3.81.AE.E5.86.8D.E3.83.91.E3.83.83.E3.82.B1.E3.83.BC.E3.82.B8" name="Firefox_.E3.81.AE.E5.86.8D.E3.83.91.E3.83.83.E3.82.B1.E3.83.BC.E3.82.B8"> Firefox の再パッケージ </h3>
+<p>必要な部品がすべてそろったら、あとは再パッケージ用ツールを立ち上げて、フィールドに入力してカスタマイズインストーラを設定するだけです。
+</p><p><img alt="画像:Repackager.jpg">
+</p>
+<ul><li> 「Extension」 セクションではあなたの DEX を説明します。「Choose」 をクリックして、あなたの拡張機能が含まれている XPI ファイルを選択します。ID および Name フィールドは自動的に入力されます。
+<ul><li> Firefox 2.0.0.3 以前を再パッケージする際は、必ず最新の再パッケージ用ツールをダウンロードしてください。最新版には、新たなチェックボックスが追加されており、起動時に設定移行ウィザードの起動を無効化できます。ホームページが標準とは異なる場合、このチェックボックスに印をつけて、設定移行ウィザードが上書きしてしまわないようにします。
+</li></ul>
+</li><li> 「Additional XPI」 セクションでは、カスタマイズインストーラにバンドルする 2 つ目の拡張機能を選択できます。2 つ目の拡張機能をインストールしない場合は、空欄のままにしておきます。
+</li><li> 「Repackaging」 セクションでは、実際の再パッケージ作業そのものを設定します。
+<ul><li> まず、「Choose」 でソースディレクトリを指定します。ソースディレクトリとは、カスタマイズしたい元のオリジナル Firefox の Windows インストーラ、Mac ディスクイメージ (.dmg)、Linux tarball のことです。
+</li><li> 次に、カスタマイズインストーラを保存したいディレクトリをターゲットディレクトリとして設定します。
+</li></ul>
+</li><li> 「Platforms」 セクションでは、カスタマイズインストーラが対象とするプラットフォームを選択します。生成したいプラットフォームの横のボックスにチェックを入れます。ソースディレクトリに、各プラットフォームごとの標準の Firefox インストールパッケージがあることを必ず確認してください。ソースディレクトリにある各プラットフォームに対応した元のインストーラパッケージの名前が、チェックボックスの横に表示されます。
+</li></ul>
+<p>再パッケージ用ツールが処理をし、カスタマイズインストーラを指定したターゲットディレクトリに書き出していきます。新しい Firefox インストーラを配布する前に、上述の許可を取得することを忘れないでください。
+</p>

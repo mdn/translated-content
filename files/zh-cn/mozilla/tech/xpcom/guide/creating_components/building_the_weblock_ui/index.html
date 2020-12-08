@@ -1,0 +1,297 @@
+---
+title: Building the WebLock UI
+slug: Mozilla/Tech/XPCOM/Guide/Creating_components/Building_the_WebLock_UI
+tags:
+  - XPCOM
+  - 所有分类
+translation_of: Mozilla/Tech/XPCOM/Guide/Creating_components/Building_the_WebLock_UI
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/Creating_XPCOM_Components:Finishing_the_Component" style="float: left;">« 上一页</a><a href="/zh-CN/docs/Creating_XPCOM_Components:Packaging_WebLock">下一页  »</a></p>
+</div><p></p>
+
+<p>到目前为止我们建立了一个可以安装到Gecko应用中的组件。你所使用的XPCOM接口和工具是通用的跨平台的，可以被Gecko Runtime Environment或者任何Mozilla1.2以后任何基于Gecko的应用（这时GRE已经可用）。</p>
+
+<p>本章，我们将建立<strong>WebLock</strong>组件的用户接口，这就意味着添加到<em>现有的</em> Mozilla 浏览器<sup><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Guide/Creating_components/Building_the_WebLock_UI#endnote_other-mozlike-browsers">[other-mozlike-browsers]</a></sup>. 他使用 <abbr title="XML UI Language">XUL</abbr>, 这是一个Gecko知道如何呈现用户界面的XML语言, 同时它也跟特定的Mozilla用户界面交互, 为此它要把自己作为UI的扩展安装起来. Specifically, the user interface we create in this chapter will be<em>overlaid</em> into the statusbar of the browser component, where it will provide a small icon the user can click to access the web lock interface.</p>
+
+<p><span id="WebLock_Indicator_in_Browser"><a id="WebLock_Indicator_in_Browser"></a><strong>WebLock Indicator in Browser</strong></span></p>
+
+<p><img alt="Image:web-lock-ui.png"></p>
+
+<h3 id="User_Interface_Package_List" name="User_Interface_Package_List">User Interface Package List</h3>
+
+<p>本章所描述的用户界面包括4个文件:</p>
+
+<ul>
+ <li><code>webLockOverlay.xul</code> is the file that defines the little status icon in the browser.</li>
+ <li><code>weblock.xul</code> defines the web lock manager dialog.</li>
+ <li><code>weblock.css</code> provides style rules for both of the XUL files.</li>
+ <li><code>weblock.js</code> provides JavaScript functions for both of the XUL files.</li>
+</ul>
+
+<p>下面章节描述每个文件的功能。. In the following chapter we'll describe how you can take these files and create a<em>package</em> , an installable archive that includes the <strong>WebLock</strong> component and the new UI.</p>
+
+<p>因为这些步骤 (特别是 overlay section) 与Mozilla非常相关, the chapter is divided up into a couple of different sections. 第二部分, <a href="#XUL">XUL</a>, 描述XML-based 用户接口语言 (XUL) 以及他如何创建一个对话框访问<strong>WebLock</strong> 组件和它的服务. 第三部分, <a href="#Overlaying_New_User_Interface_Into_Mozilla">Overlaying New User Interface Into Mozilla</a>, 描述如何建立一个overlay到浏览器以便Mozilla build能访问这个对话框. 在overlay section, 我们讨论如何从Mozilla导入scripts, images, 和其他资源到你的 UI, 这会是比较复杂的部分.</p>
+
+<p>If the <strong>WebLock</strong> component is being installed in Mozilla or another Gecko-based browser, then this third section shows you how to create the entry point in the browser for controlling the web locking. If you are planning on deploying the <strong>WebLock</strong> component in some other application, you'll have to devise a different means of access (e.g., native widgetry that instantiates and controls the <strong>WebLock</strong> component).</p>
+
+<h3 id="Client_Code_Overview" name="Client_Code_Overview">Client Code Overview</h3>
+
+<p>在我们开始实际用户界面以前，我们应该首先建立访问<strong>WebLock</strong>组件和它的接口来控制browser的Web locking的客户代码.</p>
+
+<p>首先, it's important to be able to 表达Lock的基本状态as soon as it's loaded. 如同安全网页icon, weblock icon 在browser右下角，提示browser是否当前是锁定的. Since the <strong>WebLock</strong> component is always initialized as unlocked, we can have the 客户代码 - 接口中的JavaScript代码 - 表达并跟踪状态 as the user manipulates the <code>iWebLock</code> interface. A boolean <code>wLocked</code> variable can do this:</p>
+
+<pre>// initialize the wLocked variable as unlocked
+var wLocked = 0;
+</pre>
+
+<p>Then the functions that get called from the interface and call through to the <code>lock</code> and <code>unlock</code> methods of the <strong>WebLock</strong> component must also adjust this variable accordingly:</p>
+
+<pre>function wLock()
+{
+  // check to see if locking is on or off
+  weblock.lock();
+  wLocked = 1;
+}
+
+function wUnLock()
+{
+  // check to see if locking is on or off
+  weblock.unlock();
+  wLocked = 0;
+}
+</pre>
+
+<p>这些函数的前提是<strong>WebLock</strong> 组件对于 JavaScript可见，in the form of the <code>weblock</code> object being used in the snippets above. As you can see, <code>weblock</code> is initialized as a global JavaScript variable, available in the scope of these functions and others:</p>
+
+<pre>var weblock = Components.classes["@dougt/weblock"]
+                        .getService()
+                        .QueryInterface(Components.interfaces.iWebLock);
+</pre>
+
+<p>In addition to this basic setup, you must also write JavaScript that uses the <code>AddSite</code> method to add new sites to the white list. This is a bit more complicated, because it requires that you work with the currently loaded page or provide other UI (e.g., a textfield where you can enter an arbitrary URL) for specifying URLs. In the <a href="#XUL">XUL</a> section we'll go into how the user interface is defined. This section describes the functions that are called from the interface and how they interact with the <strong>WebLock</strong> component.</p>
+
+<p>The URL that the <code>AddSite</code> method expects is a string, so we can pass a string directly in from the user interface, or we can do a check on the string and verify that it's a valid URL. In this tutorial, focusing as it is on the <strong>WebLock</strong> functionality (rather than the UI), we'll assume the strings we get from the UI itself are URLs we actually want to write to the white list:</p>
+
+<pre>function addThisSite()
+{
+  var tf = document.getElementById("dialog.input");
+  // weblock is global and declared above
+  weblock.AddSite(tf.value);
+}
+</pre>
+
+<p>这段javascript可以直接被 XUL widget调用, where the input string is retrieved as the <code>value</code> property of the <code>textbox</code> element.</p>
+
+<p>你还需要建立一个函数当用户点击weblock icon的时候来显示<strong>WebLock</strong> 窗口. That function uses the <code>openDialog</code> method from the <code>window</code> object and takes the URL to the XUL file in which the dialog is defined:</p>
+
+<pre>function loadWebLock()
+{
+  window.openDialog("chrome://weblock/weblock.xul");
+}
+</pre>
+
+<h3 id="XUL" name="XUL">XUL</h3>
+
+<p>The entire user interface of the Mozilla browser and all of the applications that go with it, including the mail client, the IRC client, and others, have been defined in an XML language called XUL. Elements in the XUL markup map to widgets in the interface that Gecko renders in a fairly straightforward way - so, for instance, the root element of an application window is the element <code>&lt;window/&gt;</code>, the root element of the dialog we'll be creating here is <code>&lt;dialog/&gt;</code>, and so forth. Within a XUL application file, elements like <code>&lt;button/&gt;</code>, <code>menu/&gt;</code>, and <code>checkbox/&gt;</code> can be hooked up to an event model, to scripts, and to the XPCOM interfaces that carry out a lot of the browser functionality in Mozilla.</p>
+
+<p>In <a href="cn/Creating_XPCOM_Components/Using_XPCOM_Components">Using XPCOM Components</a> you saw how XPCOM objects are reflected into the interface layer as JavaScript objects. In this chapter, now that we've created the <strong>WebLock</strong> component and made it available to XPCOM, we create the UI that actually instantiates the <strong>WebLock</strong> component and uses its methods to control page loading in the browser.</p>
+
+<p>In the previous section, we outlined the JavaScript that interacts with the <strong>WebLock</strong> component. In this section, we are going to create the XUL interface that calls the JavaScript methods when the user interacts with it.</p>
+
+<h4 id="The_XUL_Document" name="The_XUL_Document">The XUL Document</h4>
+
+<p>The first thing to do is create the actual XUL document in which the user interface for the dialog and the events that initiate interaction with the web locking are defined. At the top of all XUL documents, an XML declaration is followed by the root element for the document, which is usually <code>&lt;window/&gt;</code> 对于对话框，也可以是<code>&lt;dialog/&gt;</code>. The "shell" for the XUL file, then, looks like this:</p>
+
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;dialog id="weblock_ui"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        title="Web Lock Manager"
+        persist="screenX screenY"
+        screenX="24" screenY="24"&gt;
+
+&lt;/dialog&gt;
+</pre>
+
+<p>注意这部分XUL文件也包含了stylesheet declaration, which imports CSS rules and applies them to particular parts of the interface. In Gecko, CSS 被用来几乎控制所有的XUL界面表现 - its color, position, style, and to some extent its behavior as well. The web lock manager dialog does not deviate from the look of a standard dialog, so it can use a single declaration to import the "global" skin from the browser and make it available to the widgets you define in <code>weblock.xul</code>.</p>
+
+<p>You can save this first, 最外层的web lock dialog部分称为<code>weblock.xul</code>, 你要把它放在附录B所描述的安装包里.</p>
+
+<div class="side-note">
+<p>注意这个文件包含了当用户/管理员点击web locking icon的时候弹出的对话框. 这部分UI - 需要动态地装载到Mozilla runtime - 在<a href="#Overlaying_New_User_Interface_Into_Mozilla">Overlaying New User Interface Into Mozilla</a>.</p>
+</div>
+
+<p>描述</p>
+
+<p>最终的对话框看起来是.</p>
+
+<p><span id="Web_Lock_Manager_Dialog"><a id="Web_Lock_Manager_Dialog"></a><strong>Web Lock Manager Dialog</strong></span></p>
+
+<p><img alt="Image:Weblock-sitelist-ui.png"></p>
+
+<p>As you can see, it's a simple interface, providing just enough widgetry to lock and unlock the browser and to add new sites to the list. The entire XUL file for the web lock manager dialog is defined in <a href="#weblock.xul">weblock.xul</a> below.</p>
+
+<h4 id="The_Locking_UI" name="The_Locking_UI">The Locking UI</h4>
+
+<p>Once you have the basic XUL wrapper set up for your interface, the next step is to define that part of the interface that locks and unlocks the browser. One of the most efficient ways to expose this is to use radio buttons, which allow the user to toggle a particulart state, as the figure above illustrates.</p>
+
+<p>In XUL individual <code>&lt;radio/&gt;</code> elements are contained within a parent element called <code>&lt;radiogroup/&gt;</code>. Grouping radio elements together creates the toggling UI by requiring that one or another of the elements be selected, but not both.</p>
+
+<p>The XUL that defines the radiogroup in the web lock manager dialog is this:</p>
+
+<pre>&lt;radiogroup&gt;
+   &lt;radio label="lock"/&gt;
+   &lt;radio label="unlock" selected="true"/&gt;
+&lt;/radiogroup&gt;
+</pre>
+
+<p>Since the <strong>WebLock</strong> component always starts up in the unlocked position, you can add the <code>selected="true"</code> attribute and value on the unlock radio button and reset it dynamically as the user takes action.</p>
+
+<h4 id="Site_Adding_UI" name="Site_Adding_UI">Site Adding UI</h4>
+
+<p>The next step is to create that part of the user interface that lets you add a new site to the white list. There are other, more sophisticated ways to do this; you may also want to include some UI that lets you view the white list or edit it as a list. In this part of the tutorial, however, we only provide the means of adding an URL provided as a string (which is not checked for validity) and passing it through to the <code>AddSite</code> API we defined in the earlier part of the tutorial.</p>
+
+<pre>&lt;separator class="thin"/&gt;
+
+&lt;hbox align="center"&gt;
+  &lt;textbox id="url.input" flex="1"/&gt;
+  &lt;button label="Add this URL" oncommand="addThisSite();"/&gt;
+&lt;/hbox&gt;
+</pre>
+
+<p>This snippet introduces a couple of new general layout widgets in XUL. The separator that appears at the top of this snippet creates a little divider between widgets like the kind you see in menus that divide sets of functionality available there. The parent of the textbox that users enter an URL into is something called an <code>&lt;hbox/&gt;</code>, which is a layout widget - often invisible - that controls the way its child elements are rendered. In this case the <code>&lt;hbox/&gt;</code> centers the textbox and the button children, and it orients them horizontally (in contrast to the <code>&lt;vbox/&gt;</code>, which orients its children vertically).</p>
+
+<p>Notice also that when it's clicked, the button executes a JavaScript function called <code>addThisSite()</code>, which we've already defined in the <code>weblock.js</code> file in <a href="#Client_Code_Overview">Client Code Overview</a> above.</p>
+
+<h4 id="weblock.xul" name="weblock.xul"><code>weblock.xul</code></h4>
+
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;dialog id="weblock_mgg"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	title="Web Lock Manager"
+        style="width: 30em;"
+        persist="screenX screenY"
+        screenX="24" screenY="24"&gt;
+
+  &lt;script src="chrome://weblock/content/weblock.js"/&gt;
+
+  &lt;hbox&gt;
+    &lt;separator orient="vertical" class="thin"/&gt;
+    &lt;vbox flex="1"&gt;
+      &lt;separator class="thin"/&gt;
+      &lt;hbox align="center"&gt;
+        &lt;textbox id="dialog.input" flex="1"/&gt;
+        &lt;button label="Add this URL"
+                oncommand="addThisSite();"/&gt;
+      &lt;/hbox&gt;
+      &lt;hbox align="center"&gt;
+        &lt;radiogroup onchange="toggleLock();"&gt;
+          &lt;radio label="lock"/&gt;
+          &lt;radio label="unlock"/&gt;
+        &lt;/radiogroup&gt;
+        &lt;spacer flex="1"/&gt;
+      &lt;/hbox&gt;
+    &lt;/vbox&gt;
+  &lt;/hbox&gt;
+
+&lt;/dialog&gt;
+</pre>
+
+<h3 id="Overlaying_New_User_Interface_Into_Mozilla" name="Overlaying_New_User_Interface_Into_Mozilla">Overlaying New User Interface Into Mozilla</h3>
+
+<p>你已经有了一个可以跟<strong>WebLock</strong>组件交互的对话框, 但是你怎么把它装到browser中? 然后你怎么访问它呢? 当安装和准备好以后,<strong>WebLock</strong> 组件已经可以用了: XPCOM finds it and adds it to the list of registered components, and then WebLock observes the XPCOM startup event and initializes itself.</p>
+
+<p>But you still have to add your new UI into the browser so it can call the component, and the Mozilla overlay mechanism is the way to do this. Overlays 是 XUL文件可以用来注册他们自己以便动态地嵌入到Browser UI合适的位置.</p>
+
+<h4 id="webLockOverlay.xul" name="webLockOverlay.xul"><code>webLockOverlay.xul</code></h4>
+
+<p>The XUL that defines the new icon is small: 这是一个调用JavaScript function来装载前面我们定义的<code>weblock.xul</code> 文件的小图表. The icon is actually a separate <code>&lt;statusbarpanel/&gt;</code> element that gets overlaid into the main browser, along with some JavaScript and some CSS to control the behavior and appearance of the element, respectively. Here is that XUL file in its entirety:</p>
+
+<p><span id="The_WebLock_Overlay"><a id="The_WebLock_Overlay"></a><strong>The WebLock Overlay</strong></span></p>
+
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://navigator/content/weblock.css" type="text/css"?&gt;
+
+&lt;overlay id="weblockOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+  &lt;script type="application/x-javascript"
+          src="chrome://weblock/content/weblock.js"/&gt;
+
+  &lt;statusbar id="status-bar"&gt;
+    &lt;statusbarpanel class="statusbarpanel-iconic"
+                    id="weblock-status"
+                    insertbefore="offline-status"
+                    oncommand="loadWebLock();"
+                    status="none"/&gt;
+  &lt;/statusbar&gt;
+
+&lt;/overlay&gt;
+</pre>
+
+<p>文件的根元素不是<code>&lt;window/&gt;</code> 而是<code>&lt;overlay/&gt;</code>. In overlays 被 XUL elements用来把他们和其他元素相区分的<code>id</code>属性被设置称为browser中他们要嵌入部分的值. In this case, the weblock <code>&lt;statusbarpanel/&gt;</code> appears as a child of the <code>&lt;statusbar/&gt;</code> element with <code>id</code> "status-bar". This <code>id</code> is the same one used by the <code>&lt;statusbar/&gt;</code> in <code>navigator.xul</code>, which means that the overlay mechanism will merge the new UI here (i.e., the weblock statusbarpanel) and the UI already defined within that browser <code>&lt;statusbar/&gt;</code> at runtime.</p>
+
+<h3 id="Other_Resources" name="Other_Resources">Other Resources</h3>
+
+<p>这部分描述剩下的需要添加和打包到<strong>WebLock</strong>组件来提供web locking用户界面的文件。</p>
+
+<div class="side-note">
+<p><span id="Other_Front_End_Resources"><a id="Other_Front_End_Resources"></a><strong>Other Front End Resources</strong></span></p>
+
+<p>在某些UI包中, 本地化 resources are also defined. These include DTDs in which the language in which the UI is labelled can be extracted into external files, which are swapped with DTDs for other languages. For example, user interface packages often include an English DTD that defines labels and strings for button and menus and other elements in the interface. When the user selects a different<em>language pack</em> , all of the English that's been externalized in these files is dynamically replaced with the new choice. In addition to DTDs, the localization parts of a user interface may also include string bundles in which strings that are used in the interface JavaScript can be similarly replaced. 有一些技术通过单独的文件来提供这种功能. 包含<em>bindings</em> in XML files,<em>metadata</em> in RDF files, whole collections of CSS files called<em>skins</em> , and others.</p>
+</div>
+
+<h4 id="weblock.css" name="weblock.css">weblock.css</h4>
+
+<p>The following style rules are defined in <code>weblock.css</code>, a CSS file that is loaded by the overlay and applied to the icon in the browser that reflects the current status of the web lock and provides access to the web lock manager dialog.</p>
+
+<pre>statusbarpanel#weblock-status
+{
+  list-style-image: url("chrome://weblock/wlock.gif");
+}
+
+statusbarpanel#weblock-status[status="locked"]
+{
+  list-style-image: url("chrome://weblock/wl-lock.gif");
+}
+
+statusbarpanel#weblock-status[status="unlocked"]
+{
+  list-style-image: url("chrome://weblock/wl-un.gif");
+}
+</pre>
+
+<p>The style rules are distinguished by the state of the <code>status</code> attribute on the element in the XUL with the <code>id</code> "weblock-status." As you can see above, when the status of the element is set to "locked", the image <code>wl-lock.gif</code> is used to show the state, and when the web locking is unlocked, it uses <code>wl-un.gif</code>. (Note: We include three images to represent the state of the weblock, but <code>wlock.gif</code> and <code>wl-lock.gif</code> are identical, since weblock is presumed to be unlocked when it's loaded. This tutorial makes use of only two different states, but you can further customize the look of the weblock using the three images if you wish.)</p>
+
+<p>Since the presentation of the weblock manager dialog itself doesn't require any special styles, these are all the rules you need in the <code>weblock.css</code>. Note that the <code>weblock.xul</code> file in which the manager is defined imports only the global skin:</p>
+
+<pre>&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+</pre>
+
+<p>Save <code>weblock.css</code> in your working directory.</p>
+
+<p>You should now have the four files listed at the top of this chapter as the "packing list" for the <strong>WebLock</strong> package (see <a href="#User_Interface_Package_List">User Interface Package List</a>). Don't worry for now about where these files are. 下一章, <a href="cn/Creating_XPCOM_Components/Packaging_WebLock">Packaging WebLock</a>, 我们讨论如何打包这些文件以便 <strong>WebLock</strong> 组件或者别的资源利用它们.</p>
+
+<h4 id="Image_Resources" name="Image_Resources">Image Resources</h4>
+
+<p>如果你学习本教程并且希望使用<strong>WebLock</strong>组件在statusbar中的图片，你可以从 <a class="external" href="http://www.brownhen.com/weblock下载他们和其他" rel="freelink">http://www.brownhen.com/weblock下载他们和其他</a><strong>weblock</strong>相关资源. The GIF files that represent the various states are:</p>
+
+<ul>
+ <li><code>wlock.gif</code></li>
+ <li><code>wl-lock.gif</code></li>
+ <li><code>wl-un.gif</code></li>
+</ul>
+
+<ol>
+ <li><div class="blockIndicator note"><strong>Note:</strong> other-mozlike-browsers</div> 或者你可能会很喜欢这些东西. 还有一些基于 Gecko的browsers ，例如Beonex 和 IBM Web Browser 也会共享很多Mozilla用户界面成分, 你也可能装载 <strong>WebLock</strong> 组件和用户界面到其中. 不过请注意, <strong>WebLock</strong>有可能还不能保证完全安装到Mozilla Firefox，因为firefox有一些新的变化 (这本书是2003的版本).</li>
+</ol>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/Creating_XPCOM_Components:Finishing_the_Component" style="float: left;">« 上一页</a><a href="/zh-CN/docs/Creating_XPCOM_Components:Packaging_WebLock">下一页  »</a></p>
+</div> <p></p><div class="licenseblock">
+<p>Copyright (c) 2003 by Doug Turner and Ian Oeschger. This material may be distributed only subject to the terms and conditions set forth in the <a class="external" href="http://www.opencontent.org/openpub/" rel="noopener">Open Publication License</a>, v1.02 or later. Distribution of substantively modified versions of this document is prohibited without the explicit permission of the copyright holder. Distribution of the work or derivative of the work in any standard (paper) book form is prohibited unless prior permission is obtained from the copyright holder.</p>
+</div><p></p>

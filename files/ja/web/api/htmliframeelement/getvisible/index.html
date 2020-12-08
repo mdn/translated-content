@@ -1,0 +1,33 @@
+---
+title: HTMLIFrameElement.getVisible
+slug: Web/API/HTMLIFrameElement/getVisible
+tags:
+  - B2G
+  - Browser
+  - Firefox OS
+  - Non Standard
+  - WebAPI
+translation_of: Mozilla/Gecko/Chrome/API/Browser_API/getVisible
+---
+<div>
+  {{non-standard_header}} {{B2GOnlyHeader2('privileged')}}</div>
+<h2 id="Summary" name="Summary">概要</h2>
+<p><code>getVisible</code> メソッドは、 {{HTMLElement("iframe")}} 要素の現在の可視状態の取得に用います。</p>
+<h2 id="Syntax" name="Syntax">構文</h2>
+<pre class="syntaxbox"><var>instanceOfDOMRequest</var> = <em>instanceOfHTMLIframeElement</em>.getVisible();</pre>
+<h3 id="Return" name="Return">Return</h3>
+
+<p>リクエストの成功とエラーを処理するために {{domxref("DOMRequest")}} オブジェクトを返します。要求が成功した場合、リクエストの <code>result</code> はブラウザ {{HTMLElement("iframe")}} の可視状態を示す真偽値となります。</p>
+<h2 id="Example" name="Example">例</h2>
+<pre class="brush:js;highlight:[2,5]">var browser = document.querySelector("iframe[mozbrowser]");
+var request = browser.getVisible();
+
+request.onsuccess = function () {
+  console.log("The visible state is: " + this.result ? "true" : "false");
+}</pre>
+<h2 id="Specification" name="Specification">仕様</h2>
+<p>どの仕様書にも含まれていません。</p>
+<h2 id="See_also" name="See_also">関連情報</h2>
+<ul>
+  <li><a href="/ja/docs/WebAPI/Browser">Browser API の利用</a></li>
+</ul>

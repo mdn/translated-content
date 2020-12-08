@@ -1,0 +1,89 @@
+---
+title: 開発者向けFirefox OS 1.1
+slug: Archive/B2G_OS/Releases/1.1
+translation_of: Archive/B2G_OS/Releases/1.1
+---
+<div class="summary">
+ <p><span class="seoSummary">Firefox OS 1.1はプレリリースのバージョンです。 first offered to partners for release on October 21, 2013. Its Gecko component is based on Firefox 18 (see <a href="/en-US/docs/Mozilla/Firefox/Releases/18" title="/en-US/docs/Mozilla/Firefox/Releases/24">Firefox 18 for developers</a>) just like <a href="/en-US/Firefox_OS/Releases/1.0.1">Firefox OS 1.0.1</a>, but with some additional bugfixes and APIs added. This page details the developer features newly implemented in Firefox OS 1.1.</span></p>
+</div>
+<h2 id="HTML">HTML</h2>
+<p>Firefox OS-specific:</p>
+<ul>
+ <li><code>&lt;input type="file"&gt;</code> enabled (see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=832923" title="FIXED: Implement &lt;input type='file'> on B2G">バグ 832923</a> for details).</li>
+</ul>
+<h2 id="JavaScript">JavaScript</h2>
+<p>Firefox OS-specific:</p>
+<ul>
+ <li>When detecting <code>&lt;video&gt;</code> support for different formats, <code>HTMLMediaElement.prototype.canPlayType</code> now correctly reports <code>false</code> for h.264 video.</li>
+</ul>
+<h2 id="DOMAPI">DOM/API</h2>
+<p>Firefox OS-specific:</p>
+<ul>
+ <li><span id="summary_alias_container"><span id="short_desc_nonedit_display">Device Storage API: When getting a cursor callback from <code>navigator.getDeviceStorage("sdcard").enumerate</code>, <code><span id="summary_alias_container"><span id="short_desc_nonedit_display">this.done</span></span></code> is undefined (see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=902565" title='this.done in cursor callback of naviagtor.getDeviceStorage("sdcard").enumerate is undefined'>バグ 902565</a>). This is fixed in Firefox 1.2. The referenced bug discusses possible compatibility checks/workarounds for this issue. </span></span></li>
+ <li>SMS, MMS and MobileMessage-related APIs have landed
+  <ul>
+   <li><a href="/ja/docs/Web/API/Window/navigator/mozMobileMessage" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>window.navigator.mozMobileMessage</code></a></li>
+   <li><a href="/ja/docs/Web/API/Window/navigator/mozSms" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>window.navigator.mozSms</code></a></li>
+   <li><a href="/ja/docs/Web/API/MozMmsEvent" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>MozMmsEvent</code></a></li>
+   <li><a href="/ja/docs/Web/API/MozMmsMessage" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>MozMmsMessage</code></a></li>
+   <li><a href="/ja/docs/Web/API/MozMobileMessageManager" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>MozMobileMessageManager</code></a></li>
+   <li><a href="/ja/docs/Web/API/MozMobileMessageThread" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>MozMobileMessageThread</code></a></li>
+   <li><a href="/ja/docs/Web/API/MozSmsEvent" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>MozSmsEvent</code></a></li>
+   <li><a href="/ja/docs/Web/API/MozSmsFilter" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>MozSmsFilter</code></a></li>
+   <li><a href="/ja/docs/Web/API/MozSmsManager" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>MozSmsManager</code></a></li>
+   <li><a href="/ja/docs/Web/API/MozSmsMessage" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>MozSmsMessage</code></a></li>
+   <li><a href="/ja/docs/Web/API/MozSmsSegmentInfo" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>MozSmsSegmentInfo</code></a></li>
+   <li>nsIMobileMessageCallback (Gecko Internal API)</li>
+   <li>nsIMobileMessageCursorCallback (Gecko Internal API)</li>
+   <li>nsIMobileMessageService (Gecko Internal API)</li>
+   <li>nsIMobileMessageDatabaseService (Gecko Internal API)</li>
+   <li>nsIMmsService (Gecko Internal API)</li>
+   <li>
+    <div>
+     nsISmsService (Gecko Internal API</div>
+   </li>
+  </ul>
+ </li>
+ <li><a href="/en-US/docs/WebAPI/Simple_Push">Simple Push</a> (Push Notifications API) has landed</li>
+ <li><a href="http://help.vodafone.co.nz/app/answers/detail/a_id/3230">WAP Push</a> has landed</li>
+</ul>
+<h2 id="Firefox_OS_HD_サポート">Firefox OS HD サポート</h2>
+<p>Since Firefox OS 1.1, there are HD versions available to provide HD support for high-DPI devices. This is mostly just a visual change, dealt with in the same way that you'd deal with other devices of differing resolution, and you'll encounter nothing much in the way of underlying platform differences.</p>
+<h2 id="Fixed_Firefox_OS_Issues">Fixed Firefox OS Issues</h2>
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=817972">817972</a>: [Bluetooth][File-Transfer] Support multiple files transferring.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=834672">834672</a>: AppProtocolHandler.js should never throw.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=839500">839500</a>: Gaia‘s identity.js opens a browser process that‘s stuck in the foreground. Therefore, if you open the marketplace app, you lose ~10% of available app memory until you reboot the phone.</li>
+ <li>Memory fix for Persona logins.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=834773">834773</a>: Using the pick activity and confirming an image for the gallery — app gets hung with no perceived perf for 5–10 seconds</li>
+</ul>
+<p><a href="http://mzl.la/1bqXGXS">Resolved crashes</a></p>
+<h2 id="Feature_highlights_for_Firefox_OS_1.1">Feature highlights for Firefox OS 1.1</h2>
+<ul>
+ <li>Multimedia Messaging (MMS) support added to the messaging app so that you can send pictures, video, and audio to contacts, or a text message to multiple people at the same time.</li>
+ <li>Saving images, video, and audio from the browser is now supported.</li>
+ <li>Email account contacts can now be imported from Gmail and Windows Live Mail (Outlook).</li>
+ <li>Email image, audio and video attachment download has been implemented.</li>
+ <li>Attaching and sending Gallery images now supported.</li>
+ <li>Email draft mode has been implemented.</li>
+ <li>Improvements to the dialer and contacts, such as easily adding a dialed number to an existing contact and dialer suggestions to easily find contacts.</li>
+ <li>Cell Broadcast implemented for simultaneous delivery of emergency messages to subscribed users.</li>
+ <li>Major performance improvements around application launch time and scrolling.</li>
+ <li><b>Music</b> search to find music by artist, album or song title.</li>
+ <li>Firefox OS offers <b>Calendar</b> features such as:
+  <ul>
+   <li>Separate detail and edit views.</li>
+   <li>Alarm sound notification selection.</li>
+   <li>Direct event creation at specific date/time.</li>
+  </ul>
+ </li>
+</ul>
+<h2 id="See_also">See also</h2>
+<ul>
+ <li><a href="http://www.mozilla.org/en-US/firefox/os/notes/1.1/" title="http://www.mozilla.org/en-US/firefox/os/notes/1.1/">Firefox OS 1.1 Notes</a></li>
+</ul>
+<h2 id="以前のバージョン">以前のバージョン</h2>
+<p></p><div class="multiColumnList">
+<ul>
+<li><a href="/ja/docs/Mozilla/Firefox_OS/Releases/1.0.1">Firefox OS 1.0.1 for developers</a></li></ul>
+</div><p></p>

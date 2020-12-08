@@ -1,0 +1,58 @@
+---
+title: XUL_教程/进度条
+slug: Mozilla/Tech/XUL/Tutorial/Progress_Meters
+tags:
+  - XUL_教程
+translation_of: Archive/Mozilla/XUL/Tutorial/Progress_Meters
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:List_Controls" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:Adding_HTML_Elements">下一页  »</a></p>
+</div><p></p>
+<p> </p>
+<h3 id=".E6.B7.BB.E5.8A.A0.E4.B8.80.E4.B8.AA.E8.BF.9B.E5.BA.A6.E6.9D.A1" name=".E6.B7.BB.E5.8A.A0.E4.B8.80.E4.B8.AA.E8.BF.9B.E5.BA.A6.E6.9D.A1">添加一个进度条</h3>
+<p>进度条是条状的，它用来指示一个任务完成了多少。你通常可以在当下载文件或当执行一个很长的操作时看到它。XUL有一个<code><a href="/zh-CN/docs/Mozilla/Tech/XUL/progressmeter" title="progressmeter">progressmeter</a></code>元素可以用来创建这些。有两种类型的进度条: 确定的和不确定的。</p>
+<p>确定的进度条可以用在当你已经知道完成某个操作的时间长度时。进度条将会被往上填充，并且在充 满时，操作刚好完成。这会用在文件的长度已经知道的下载文件对话框。</p>
+<p>不确定进度条会用于当你不知道一个操作的时间长度的情况。进度条是动态的就像一个不停循环移动的杆或一个可调整的框，发生在平台和外观被使用。</p>
+<p>确定的进度条: <img alt="Image:prog-det.png" class="internal" src="/@api/deki/files/2673/=Prog-det.png"></p>
+<p>不确定的进度条: <img alt="Image:prog-udet.png" class="internal" src="/@api/deki/files/2674/=Prog-udet.png"></p>
+<p>进度条的语法如下：</p>
+<pre>&lt;progressmeter
+    id="identifier"
+    mode="determined"
+    value="50%"/&gt;
+</pre>
+<p>属性如下:</p>
+<dl>
+ <dt>
+  <code id="a-id"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code> </dt>
+ <dd>
+  进度条的唯一标识符。</dd>
+ <dt>
+  <a href="/cn/XUL/Attribute/progressmeter.mode" title="cn/XUL/Attribute/progressmeter.mode">mode</a></dt>
+ <dd>
+  进度条的类型。如果这里设置为<code>determined</code>，进度条就是确定型进行度，在任务完成时在填满。如果这里设置为<code>undetermined</code>，这个进度条就是不确定型进度条，用于当你不知道花费时间的长度时。如果不指定这个属性默认值为确定型。</dd>
+ <dt>
+  <code id="a-value"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code> </dt>
+ <dd>
+  当前进度条的尺度值。你只能在确定型进度条中使用这个属性。这个值可以设成从0%到100%的百分值。这个值可以在任务结束时由脚本来改变。</dd>
+</dl>
+<div class="highlight">
+ <h5 id=".E6.96.87.E4.BB.B6.E6.9F.A5.E6.89.BE.E7.9A.84.E4.BE.8B.E5.AD.90" name=".E6.96.87.E4.BB.B6.E6.9F.A5.E6.89.BE.E7.9A.84.E4.BE.8B.E5.AD.90">文件查找的例子</h5>
+ <p>让我们添加一个进度条到我们文件查找的对话框吧。我们应该使用不确定的进度条因为我们不知道能搜索到多少文件或者要多久才能搜索完成。然而，现在我们将要增加一个普通的因为动态的可以避免在开发期间的困恼。 进度条仅显示在搜索过程中。我们将在后面的脚本中对它进行开合控制。</p>
+ <pre class="eval">&lt;hbox&gt;
+
+  <span class="highlightred">&lt;progressmeter value="50%" style="margin: 4px;"/&gt;</span>
+
+  &lt;spacer flex="1"/&gt;
+&lt;/hbox&gt;
+</pre>
+ <p>值被设成50%因此我们能在窗口上看到尺度。边缘被设成4像素因此它会与窗口的边缘分开。最开始，我们只希望进度条被显示在搜索开始时。脚本会在需要时显示和隐藏它。</p>
+ <p>例子太长了。 <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-progress.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-progress.xul">View</a></p>
+ <p><img alt="Image:progress1.png" class="internal" src="/@api/deki/files/2675/=Progress1.png"></p>
+ <p> </p>
+</div>
+<p>在下一节，我们将学习如何<a href="/cn/XUL_教程/添加HTML元素" title="cn/XUL_教程/添加HTML元素">在窗口增加HTML的附加元素</a>。</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:List_Controls" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:Adding_HTML_Elements">下一页  »</a></p>
+</div><p></p>
+<p></p>

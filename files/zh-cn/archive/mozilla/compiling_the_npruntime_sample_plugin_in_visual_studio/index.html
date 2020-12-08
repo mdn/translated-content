@@ -1,0 +1,46 @@
+---
+title: Compiling The npruntime Sample Plugin in Visual Studio
+slug: Archive/Mozilla/Compiling_The_npruntime_Sample_Plugin_in_Visual_Studio
+translation_of: Archive/Mozilla/Compiling_The_npruntime_Sample_Plugin_in_Visual_Studio
+---
+<h2 id="General_decisions" name="General_decisions">通用选项</h2>
+
+<ul>
+ <li>DLL的文件名<br>
+  必须以 "np" (不是 "ns") 开头并且以 ".dll" 结尾(我在这个地方一次又一次的犯错，小心)</li>
+ <li>mimetype<br>
+  映射了这个插件处理的数据类型. 同时也是网页唤起你的插件的一个标识. 应该像是 "application/x-vnd-yourorganization-yourfiletype" 或者 在IANA上注册的类型 (不太可能)或者是一种标准类型(例如，如果你想要播放MPEG文件的话).</li>
+ <li>文件扩展名<br>
+  映射了插件处理的数据类型，尤其是当插件从Windows系统的本地磁盘中加载的时候。</li>
+</ul>
+
+<h2 id="Build" name="Build">Build</h2>
+
+<ol>
+ <li>创建一个<strong>Win32 GUI library工程</strong> (DLL) (在.NET 2003版本中: 选择模板中的<strong>Win32</strong> , 然后在弹出的对话框中找到<strong>应用程序类型</strong>，勾选<strong>DLL</strong>, 不添加公共头文件。)(在VS2008版本中，选择<strong>Visualc++|Win32|Win32 Project</strong>, 然后在向导中勾选DLL).</li>
+ <li>如果向导询问你是否创建一个空项目，那么勾选它。否则你需要在后面手动删除向导给你创建的文件。</li>
+ <li>请注意接下来的DLL创建中文件名必须以"<strong>np</strong>"开头, 你可以以这样的命名格式给你的工程命名，或者在后面的步骤中重命名你的项目。</li>
+ <li>（如果你不是创建了一个空项目才需要进行此步骤）从你的工程与磁盘中删除.cpp文件、.h文件、ReadMe文件。</li>
+ <li>复制npruntime例子插件源码到新创建工程的VS目录下，然后使用VS的界面向导方式添加这些文件到工程中。(<strong>.cpp</strong>文件添加到"源文件", <strong>.h</strong> 文件添加到 "头文件", <strong>.rc</strong> 文件添加到"资源文件"). 例子可以从以下网址获取：<br>
+  <a class="external" href="/en/Plugins/Samples_and_Test_Cases" title="https://developer.mozilla.org/en/Plugins/Samples_and_Test_Cases">https://developer.mozilla.org/en/Plugins/Samples_and_Test_Cases</a></li>
+ <li>下载<a href="http://code.google.com/p/npapi-sdk/" style="font-weight: bold;" title="http://code.google.com/p/npapi-sdk/">NPAPI SDK</a>.</li>
+ <li>添加<strong>NPAPI SDK的include目录 </strong>(例如 : C:\npapi-sdk\headers) 到项目属性<strong>|(所有配置)|C++|常规|附加包含目录</strong>. 注意: 如果你的项目仍然为空，C++树可能无法查看。所以先添加一些文件吧。</li>
+ <li>Add the following preprocessor definitions to <strong>Project Properties|(all configurations)|C++|Preprocessor|Preprocessor Definitions:</strong> <strong><code>WIN32;_WINDOWS;XP_WIN32;XP_WIN;_X86_;NPSIMPLE_EXPORTS</code></strong></li>
+ <li>Disable precompiled headers using <strong>Project Properties|(all configurations)|C++|Precompiled headers|Create/Use precompiled header</strong>. They may be already disabled.</li>
+ <li>Define the function exports by adding the <strong>.def</strong> filename (e.g. nprt.def) to <strong>Project Properties|(all configurations)|Linker|Input|Module Definition File</strong>. It could be either the full path or the path relative to the project directory.</li>
+ <li>Optional: Open the above <strong>.def</strong> file and change "NPRT" to the filename of your dll as VS sees it (without "np", if you decided to rename later)</li>
+ <li>Optional: Edit the <strong>.rc</strong> file and and the top of <strong>npp_gate.cpp</strong> for the description, mimetype, file extension etc. to reflect your plugin</li>
+ <li>Remove the function <strong><code>NPP_GetJavaClass</code></strong> from <strong>npp_gate.cpp</strong></li>
+ <li>Build</li>
+ <li>Rename the resulting DLL so that the filename starts with "<strong>np</strong>" and ends with ".dll" (or "32.dll"? 8.3?) and copy it in Mozilla's "plugins" folder</li>
+ <li>Start Mozilla and open <strong>about:plugins</strong> to verify the plugin is detected</li>
+ <li>Open the file "test.html" and begin testing. Make sure the mimetypes of your html embed tags match the mimetype specified in your <strong>nprt.rc</strong> file and the top of your <strong>npp_gate.cpp</strong> file</li>
+</ol>
+
+<h2 id="Version_Issues" name="Version_Issues">Version Issues</h2>
+
+<ol>
+ <li>If VC++ compiler throws you <strong><code>error C2664</code></strong> on 'DrawText' function call, you may replace it by 'DrawTextA'. In fact, all win32 API functions dealing with character strings can be added an 'A' to the end to avoid unicode cast errors.</li>
+ <li>Visual C++ 2008 Express don't support C99 standard about <strong>int32_t</strong>, <strong>uint32_t</strong>. You have to add <strong>#include "nptypes.h"</strong> in top of <strong>plugin.h</strong> file.</li>
+ <li>Feel free to append here your issues fixes if the above guide helped you.</li>
+</ol>

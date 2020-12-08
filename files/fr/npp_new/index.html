@@ -1,0 +1,105 @@
+---
+title: NPP New
+slug: NPP_New
+translation_of: Archive/Plugins/Reference/NPP_New
+---
+<p>« <a class="new" href="https://developer.mozilla.org/fr/docs/Gecko_Plugin_API_Reference" rel="nofollow">Gecko Plugin API Reference</a> « <a class="new" href="https://developer.mozilla.org/fr/docs/Gecko_Plugin_API_Reference/Plug-in_Side_Plug-in_API" rel="nofollow">Plug-in Side Plug-in API</a></p>
+
+<h3 id="Summary" name="Summary">Résumé</h3>
+
+<p>Crées une nouvelle instance de greffon (plugin).</p>
+
+<h3 id="Syntax" name="Syntax">Syntaxe</h3>
+
+<pre>#include &lt;npapi.h&gt;
+
+NPError NPP_New(NPMIMEType    pluginType,
+                NPP instance, uint16 mode,
+                int16 argc,   char *argn[],
+                char *argv[], NPSavedData *saved);
+</pre>
+
+<h3 id="Parameters" name="Parameters">Paramètres</h3>
+
+<p>La fonction dispose des paramètres suivants :</p>
+
+<dl>
+ <dt>pluginType</dt>
+ <dd>Pointeur sur le type MIME de la nouvelle instance du greffon.</dd>
+</dl>
+
+<dl>
+ <dt>instance</dt>
+ <dd>Données privées spécifiques à l'instance accessibles au greffon et au navigateur (Le navigateur ne les modifie pas). Elles sont stockées dans instance-&gt;pdata.</dd>
+</dl>
+
+<dl>
+ <dt>mode</dt>
+ <dd>Mode d'affichage du greffon. Valeurs:
+ <ul>
+  <li>NP_EMBED: (1) L'instance a été créée via un tag EMBED et partage la fenêtre du navigateur avec d'autres contenus.</li>
+  <li>NP_FULL: (2) L'instance a été créée par un fichier séparé et est le contenu premier de la fenêtre</li>
+ </ul>
+ </dd>
+</dl>
+
+<dl>
+ <dt>argc</dt>
+ <dd>Nombre d'arguments HTML dans le tag EMBED pour un greffon embarqué (détermine le nombre d'attributs dans les vecteurs argn et rgv).</dd>
+</dl>
+
+<dl>
+ <dt>argn[]</dt>
+ <dd>Vecteur des noms des attributs transmis au greffon depuis le tag EMBED.</dd>
+</dl>
+
+<dl>
+ <dt>argv[]</dt>
+ <dd>Vecteur des valeurs des attributs transmis au greffon depuis le tag EMBED.</dd>
+</dl>
+
+<dl>
+ <dt>saved</dt>
+ <dd>Pointer to data saved by <a href="/fr/NPP_Destroy" title="fr/NPP
+    Destroy">NPP_Destroy</a> [<a href="/en/NPP_Destroy" title="en/NPP_Destroy">en</a>-<a href="/ja/NPP_Destroy" title="ja/NPP
+    Destroy">ja</a>] for a previous instance of this plug-in at the same URL. If non-null, the browser passes ownership of the <a href="/fr/NPSavedData" title="fr/NPSavedData">NPSavedData</a> [<a href="/en/NPSavedData" title="en/NPSavedData">en</a>-<a href="/ja/NPSavedData" title="ja/NPSavedData">ja</a>] object back to the plug-in. The plug-in is responsible for freeing the memory for the <a href="/fr/NPSavedData" title="fr/NPSavedData">NPSavedData</a> [<a href="/en/NPSavedData" title="en/NPSavedData">en</a>-<a href="/ja/NPSavedData" title="ja/NPSavedData">ja</a>] and the buffer it contains.</dd>
+</dl>
+
+<h3 id="Returns" name="Returns">Valeurs retournées</h3>
+
+<ul>
+ <li>En cas de succès : NPERR_NO_ERROR.</li>
+ <li>En cas d'erreur : Le greffon n'est pas chargé et un code d'erreur est retourné (<a href="../../../../fr/NPAPI/Constantes#Codes_Erreurs" rel="internal">Codes Erreurs</a> [<a href="../../../../en/NPAPI/Constants#Error_Codes" rel="internal">en</a>-<a href="../../../../ja/NPAPI/Constants#Error_Codes" rel="internal">ja</a>]). </li>
+</ul>
+
+<h3 id="Description" name="Description">Description</h3>
+
+<p><code>NPP_New</code> crée une nouvelle instance de greffon. Elle est appelée après <a href="/fr/NP_Initialize" title="fr/NP Initialize">NP_Initialize</a> [<a href="/en/NP_Initialize" title="en/NP_Initialize">en</a>-<a href="/ja/NP_Initialize" title="ja/NP Initialize">ja</a>] et transmet le type MIME, le mode d'affichage et, pour les greffons embarqués, des informations concernant arguments du tag EMBED.</p>
+
+<p>Un nouveau pointeur d'instance de <a href="/fr/NPP" title="fr/NPP">NPP</a>  [<a href="/en/NPP" title="en/NPP">en</a>-<a href="/ja/NPP" title="ja/NPP">ja</a>] est crée par le greffon. Il reste valide jusqu'à la destruction de l'instance par <a href="/fr/NPP_Destroy" title="fr/NPP
+Destroy">NPP_Destroy</a> [<a href="/en/NPP_Destroy" title="en/NPP_Destroy">en</a>-<a href="/ja/NPP_Destroy" title="ja/NPP
+Destroy">ja</a>].</p>
+
+<p>Si les données d'une ancienne instance ont été sauvées lors de l'appel de <a href="/fr/NPP_Destroy" title="fr/NPP
+Destroy">NPP_Destroy</a> [<a href="/en/NPP_Destroy" title="en/NPP_Destroy">en</a>-<a href="/ja/NPP_Destroy" title="ja/NPP
+Destroy">ja</a>], l'instance crée redémarre selon les paramètres en question.</p>
+
+<p>Tous les attributs du tag EMBED (privés comme standards) sont transmis à <code>NPP_New</code> dans les vecteurs argn et argv. Le navigateur ignore tous les attributs non-standards issus du tag EMBED. Cela permet aux développeurs d'utiliser des attributs privés pour définir des options spécifiques à l'instance (ou de nouvelles informations pour le greffon). Placez les options privées à la fin de la liste des attributs standards dans le tag EMBED.</p>
+
+<h3 id="See_Also" name="See_Also">Voir aussi</h3>
+
+<p><a href="/fr/NPP" title="fr/NPP">NPP</a> [<a href="/en/NPP" title="en/NPP">en</a>-<a href="/ja/NPP" title="ja/NPP">ja</a>] -&gt; <a href="/fr/NPP_New" title="fr/NPP
+New">NPP_New</a> [<a href="/en/NPP_New" title="en/NPP_New">en</a>-<a href="/ja/NPP_New" title="ja/NPP New">ja</a>], <a href="/fr/NPP_Destroy" title="fr/NPP
+Destroy">NPP_Destroy</a> [<a href="/en/NPP_Destroy" title="en/NPP_Destroy">en</a>-<a href="/ja/NPP_Destroy" title="ja/NPP
+Destroy">ja</a>], <a href="/fr/NPP_HandleEvent" title="fr/NPP
+HandleEvent">NPP_HandleEvent</a> [<a href="/en/NPP_HandleEvent" title="en/NPP_HandleEvent">en</a>-<a href="/ja/NPP_HandleEvent" title="ja/NPP HandleEvent">ja</a>], <a href="/fr/NPP_SetWindow" title="fr/NPP SetWindow">NPP_SetWindow</a> [<a href="/en/NPP_SetWindow" title="en/NPP SetWindow">en</a>-<a href="/ja/NPP_SetWindow" title="ja/NPP
+SetWindow">ja</a>]<br>
+ <a href="/fr/NP_Shutdown" title="fr/NP Shutdown">NP_Shutdown</a> [<a href="/en/NP_Shutdown" title="en/NP_Shutdown">en</a>-<a href="/ja/NP_Shutdown" title="ja/NP Shutdown">ja</a>], <a href="/fr/NP_Initialize" title="fr/NP Initialize">NP_Initialize</a> [<a href="/en/NP_Initialize" title="en/NP_Initialize">en</a>-<a href="/ja/NP_Initialize" title="ja/NP Initialize">ja</a>]<br>
+ <a href="/fr/NPWindow" title="fr/NPWindow">NPWindow</a> [<a href="/en/NPWindow" title="en/NPWindow">en</a>-<a href="/ja/NPWindow" title="ja/NPWindow">ja</a>]<br>
+ <a href="/fr/NPSavedData" title="fr/NPSavedData">NPSavedData</a> [<a href="/en/NPSavedData" title="en/NPSavedData">en</a>-<a href="/ja/NPSavedData" title="ja/NPSavedData">ja</a>]<br>
+ <a href="/fr/NP_Port" title="fr/NP
+Port">NP_Port</a> [<a href="/en/NP_Port" title="en/NP
+Port">en</a>-<a href="/ja/NP_Port" title="ja/NP Port">ja</a>]<br>
+ <a href="/fr/NPAPI/Constantes#Codes_Erreurs" title="fr/NPAPI/Constantes#Codes Erreurs">Codes Erreurs</a> [<a href="/en/NPAPI/Constants#Error_Codes" title="en/NPAPI/Constants#Error Codes">en</a>-<a href="/ja/NPAPI/Constants#Error_Codes" title="ja/NPAPI/Constants#Error Codes">ja</a>]</p>
+
+<p>{{ languages( { "ja": "ja/NPP_New", "en": "en/NPP_New" } ) }}</p>

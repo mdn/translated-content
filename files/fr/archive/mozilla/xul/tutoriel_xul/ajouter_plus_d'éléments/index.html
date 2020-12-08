@@ -1,0 +1,73 @@
+---
+title: Ajouter plus d'éléments
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Ajouter_plus_d'éléments
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_More_Elements
+---
+<p> </p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Les_boîtes_de_groupe" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Piles_et_Paquets">Suivant  »</a></p>
+</div>
+<p>Nous allons conclure ce chapitre en ajoutant des boîtes sur notre fenêtre de recherche de fichiers.</p>
+<div class="highlight">
+  <h3 id="Ajout_d.27.C3.A9l.C3.A9ments_.C3.A0_notre_exemple_de_recherche_de_fichiers" name="Ajout_d.27.C3.A9l.C3.A9ments_.C3.A0_notre_exemple_de_recherche_de_fichiers">Ajout d'éléments à notre exemple de recherche de fichiers</h3>
+  <p>Nous allons ajouter maintenant des éléments à notre boîte de dialogue de recherche de fichiers. Premièrement, nous allons ajouter la possiblité de faire une recherche sur d'autres informations, comme la taille et la date du fichier.</p>
+  <pre class="eval">&lt;hbox&gt;
+  <span class="highlightred">&lt;menulist id="searchtype"&gt;     &lt;menupopup&gt;       &lt;menuitem label="Nom"/&gt;       &lt;menuitem label="Taille"/&gt;       &lt;menuitem label="Date de modification"/&gt;     &lt;/menupopup&gt;   &lt;/menulist&gt;   &lt;spacer style="width: 10px;"/&gt;   &lt;menulist id="searchmode"&gt;     &lt;menupopup&gt;       &lt;menuitem label="Est"/&gt;       &lt;menuitem label="N'est pas"/&gt;     &lt;/menupopup&gt;   &lt;/menulist&gt;   &lt;spacer style="width: 10px;"/&gt;</span>
+  &lt;textbox id="find-text" flex="1" style="min-width: 15em;"/&gt;
+&lt;/hbox&gt;
+</pre>
+  <div class="float-right">
+    <img alt="Image:xultu_boxfinal1.png" class="internal" src="/@api/deki/files/1502/=Xultu_boxfinal1.png"></div>
+  <p>Deux <a href="/fr/Tutoriel_XUL/Les_contrôles_de_listes#Zones_de_listes_d.C3.A9roulantes" title="fr/Tutoriel_XUL/Les_contrôles_de_listes#Zones_de_listes_d.C3.A9roulantes">listes déroulantes</a> ont été ajoutées à la boîte de dialogue. Un espacement (<code><a href="/fr/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code>) a été inséré entre chaque élément pour les séparer. Ces espacements ont une taille explicite de 10 pixels chacun. Vous noterez que si la fenêtre est redimensionnée, le champ de saisie s'agrandit mais pas les autres composants. Vous noterez également que le libellé a été enlevé.</p>
+  <p>Si vous redimensionnez la fenêtre verticalement, les éléments ne changeront pas de taille. C'est parce qu'ils sont à l'intérieur de boîtes horizontales. Ce serait mieux si les boutons « Rechercher » et « Annuler » restaient toujours en bas de la fenêtre. Il est facile de le faire en ajoutant un <code><a href="/fr/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code> entre les deux boîtes horizontales.</p>
+  <pre class="eval"><span class="highlightred">&lt;spacer style="height: 10px"/&gt;</span>
+&lt;hbox&gt;
+  &lt;menulist id="searchtype"&gt;
+    &lt;menupopup&gt;
+      &lt;menuitem label="Nom"/&gt;
+      &lt;menuitem label="Taille"/&gt;
+      &lt;menuitem label="Date de modification"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menulist&gt;
+  &lt;spacer style="width: 10px;"/&gt;
+  &lt;menulist id="searchmode"&gt;
+    &lt;menupopup&gt;
+      &lt;menuitem label="Est"/&gt;
+      &lt;menuitem label="N'est pas"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menulist&gt;
+  &lt;spacer style="width: 10px;"/&gt;
+  &lt;textbox id="find-text" flex="1" style="min-width: 15em;"/&gt;
+&lt;/hbox&gt;
+
+<span class="highlightred">&lt;spacer style="height: 10px" flex="1"/&gt;</span>
+
+&lt;hbox&gt;
+</pre>
+  <p>Maintenant, quand la boîte de dialogue est redimensionnée, les deux boutons resteront en place tout en bas de la boîte de dialogue. Le premier <code><a href="/fr/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code> ajoute un espacement entre le titre du libellé et les éléments des critères de recherche.</p>
+  <p>Il serait plus joli d'avoir une bordure autour des critères de recherche. Il y a deux moyens pour le faire. Vous pouvez utiliser la propriété CSS <code>border</code> ou vous pouvez utiliser l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/groupbox" title="groupbox">groupbox</a></code>. La première méthode nécessite que nous appliquions le style sur la boîte elle-même. Nous utiliserons plutôt l'autre méthode. Un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/groupbox" title="groupbox">groupbox</a></code> a l'avantage de dessiner une boîte avec un joli effet d'incrustation, en adéquation avec le thème courant.</p>
+  <p>Changeons maintenant la boîte <code><a href="/fr/docs/Mozilla/Tech/XUL/box" title="box">box</a></code> en <code><a href="/fr/docs/Mozilla/Tech/XUL/groupbox" title="groupbox">groupbox</a></code> :</p>
+  <pre class="eval"><span class="highlightred">&lt;groupbox orient="horizontal"&gt;</span>
+  <span class="highlightred"><span class="nowiki">&lt;caption label="Critères de recherche"/&gt;</span></span>
+  &lt;menulist id="searchtype"&gt;
+  .
+  .
+  .
+  &lt;spacer style="width: 10px;"/&gt;
+  &lt;textbox id="find-text" flex="1" style="min-width: 15em;"/&gt;
+<span class="highlightred">&lt;/groupbox&gt;</span>
+</pre>
+  <p><a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxfinal.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxfinal.xul">Voir</a></p>
+  <p><img alt="Image:xultu_boxfinal2.png" class="internal" src="/@api/deki/files/1503/=Xultu_boxfinal2.png"></p>
+  <p>Il reste d'autres problèmes cosmétiques. Nous pourrions avoir un <code><a href="/fr/docs/Mozilla/Tech/XUL/groupbox" title="groupbox">groupbox</a></code> qui s'étend verticalement vers le bas de la boîte. Mais aussi, nous pourrions modifier quelques marges afin de mieux positionner les éléments.</p>
+</div>
+<hr>
+<p>Nous verrons dans la suite comment créer des piles.</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Les_boîtes_de_groupe" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Piles_et_Paquets">Suivant  »</a></p>
+</div>
+<p><span class="comment">Interwiki</span></p>

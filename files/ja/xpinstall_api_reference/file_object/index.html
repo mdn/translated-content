@@ -1,0 +1,17 @@
+---
+title: File Object
+slug: XPInstall_API_Reference/File_Object
+tags:
+  - NeedsTranslation
+  - TopicStub
+translation_of: Archive/Mozilla/XPInstall/Reference/File_Object
+---
+<div><div class="warning"><p>このページは <a href="https://developer.mozilla.org/ja/docs/XPInstall_API_Reference">XPInstall API Reference</a> の一部です。もしあなたが <a href="https://developer.mozilla.org/ja/docs/Extensions">拡張機能</a>や<a href="https://developer.mozilla.org/ja/docs/Themes">テーマ</a>、<a href="https://developer.mozilla.org/ja/docs/Plugins">プラグイン</a>の開発者であるならば、この API のほとんどが必要ないことに注意してください。特に、XPI のコンテンツをインストールし、登録するために使用される <code>install.js</code> スクリプトは、新たに宣言される <code><a href="https://developer.mozilla.org/ja/docs/Install_Manifests">install.rdf</a></code> マニフェストや新しい <a href="https://developer.mozilla.org/ja/docs/Bundles">パッケージング体系</a> のために非推奨です。</p></div></div>
+
+<h2 id="File" name="File">File</h2>
+
+<p>Use the File object to manipulate local files and directories during the installation process.</p>
+
+<h3 id="Overview" name="Overview">Overview</h3>
+
+<p>The File object has methods for analyzing the file system and preparing it (as when new directories, program shortcuts, version comparisons, or deletions are required) for newly installed software packages. The File object works in conjunction with the <a href="/en/XPInstall_API_Reference/Install_Object" title="en/XPInstall_API_Reference/Install_Object"> Install</a> object.</p>

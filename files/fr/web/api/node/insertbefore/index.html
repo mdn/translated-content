@@ -1,0 +1,214 @@
+---
+title: element.insertBefore
+slug: Web/API/Node/insertBefore
+tags:
+  - API
+  - DOM
+  - Enfant
+  - Insertion
+  - Méthodes
+  - Noeud
+translation_of: Web/API/Node/insertBefore
+---
+<p>{{APIRef("DOM")}}</p>
+
+<p>La méthode <code><strong>Node.insertBefore()</strong></code> insère un nœud juste avant le noeud de référence en tant qu'enfant du nœud parent spécifié. Si l'enfant donné est une référence à un noeud existant dans le document, <code>insertBefore()</code> le déplace vers sa nouvelle position (il n'est pas nécessaire de supprimer le noeud de son parent avant son ajout à un autre noeud).</p>
+
+<p>Cela signifie que le noeud ne peut pas être à 2 points du document simultanément. Donc, si le noeud a déjà un parent, le noeud est d'abord supprimé puis inséré dans la nouvelle position. La méthode {{domxref("Node.cloneNode()")}}  peut être utilisée pour réaliser une copie du noeud avant son ajout sous le nouveau parent. Notez que les copies faites avec <code>cloneNode</code> ne seront pas automatiquement synchronisées.</p>
+
+<p>Si le noeud de référence est <code>null</code> , le noeud spécifié est ajouté à la fin de la liste des enfants du noeud parent spécifié.</p>
+
+<p>Si l'enfant donné est un {{domxref("DocumentFragment")}}, le contenu entier du {{domxref("DocumentFragment")}} est déplacé dans la liste des enfants du noeud parent spécifié.</p>
+
+<h2 id="Syntaxe" name="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox">var <em>insertedNode</em> = <em>parentNode</em>.insertBefore(<em>newNode</em>, <em>referenceNode</em>);
+</pre>
+
+<p>Si  <code><var>referenceNode</var></code>  vaut <code>null</code>,  <code><var>newNode</var></code>  est inséré à la fin de la liste des nœuds enfants.</p>
+
+<div class="note">
+<p><em><code>referenceNode</code></em> <strong>n'est pas</strong> un paramètre facultatif -- vous devez explicitement transmettre un <code>Node</code> ou <code>null</code>. Ne pas le fournir ou transmettre des valeurs invalides provoque des <a href="https://code.google.com/p/chromium/issues/detail?id=419780">comportements différents</a> selon les différentes versions des navigateurs.</p>
+</div>
+
+<h2 id="Exemple" name="Exemple">Valeur retournée</h2>
+
+<p>La valeur renvoyée est l'enfant ajouté sauf si le <code>newNode</code> est un {{domxref("DocumentFragment")}}, auquel cas, le {{domxref("DocumentFragment")}}  vide est retourné.</p>
+
+<h2 id="Exemple" name="Exemple">Exemple</h2>
+
+<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>parentElement<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
+   <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>span</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>childElement<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>foo bar<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>span</span><span class="punctuation token">&gt;</span></span>
+<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
+
+<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span><span class="punctuation token">&gt;</span></span><span class="language-javascript script token">
+<span class="comment token">// Crée un nouveau noeud à insérer</span>
+<span class="keyword token">var</span> newNode <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createElement</span><span class="punctuation token">(</span><span class="string token">"span"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+<span class="comment token">// Obtient une référence sur le noeud parent</span>
+<span class="keyword token">var</span> parentDiv <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">"childElement"</span><span class="punctuation token">)</span><span class="punctuation token">.</span>parentNode<span class="punctuation token">;</span>
+
+<span class="comment token">// Commence le cas test [ 1 ] : un childElement existe --&gt; tout fonctionne correctement</span>
+<span class="keyword token">var</span> sp2 <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">"childElement"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+parentDiv<span class="punctuation token">.</span><span class="function token">insertBefore</span><span class="punctuation token">(</span>newNode<span class="punctuation token">,</span> sp2<span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="comment token">// Fin du cas test [ 1 ]</span>
+
+<span class="comment token">// Commence le cas test [ 2 ] : childElement est d'un Type indéfini</span>
+<span class="keyword token">var</span> sp2 <span class="operator token">=</span> undefined<span class="punctuation token">;</span> <span class="comment token">// Il n'existe pas de noeud à l'ID "childElement"</span>
+parentDiv<span class="punctuation token">.</span><span class="function token">insertBefore</span><span class="punctuation token">(</span>newNode<span class="punctuation token">,</span> sp2<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// Fusion dynamique implicite pour le type du noeud</span>
+<span class="comment token">// Fin du cas test [ 2 ]</span>
+
+<span class="comment token">// Commence le cas test [ 3 ] : childElement est d'un Type "undefined" (string) (<em>chaîne de caractères</em>)</span>
+<span class="keyword token">var</span> sp2 <span class="operator token">=</span> <span class="string token">"undefined"</span><span class="punctuation token">;</span> <span class="comment token">// </span></span></code> <code class="language-html"><span class="language-javascript script token"><span class="comment token">Il n'existe pas de noeud à l'ID "childElement"</span></span></code> <code class="language-html"><span class="language-javascript script token">
+parentDiv<span class="punctuation token">.</span><span class="function token">insertBefore</span><span class="punctuation token">(</span>newNode<span class="punctuation token">,</span> sp2<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// Génère "Type Error: Invalid Argument" (<em>Erreur du Type : Argument non valide</em>) </span>
+<span class="comment token">// Fin du cas test [ 3 ]</span>
+</span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span></code></pre>
+
+<p> </p>
+
+<ul>
+ <li><code>insertedNode</code> Le noeud en cours d'insertion, c'est-à-dire <code>newNode</code></li>
+ <li><code>parentNode</code> Le parent du nouveau noeud inséré.</li>
+ <li><code>newNode</code> Le noeud à insérer.</li>
+ <li><code>referenceNode</code> Le noeud devant lequel le <code>newNode</code> est inséré.</li>
+</ul>
+
+<h2 id="Exemple_2">Exemple</h2>
+
+<pre class="brush:html line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>parentElement<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
+  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>span</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>childElement<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>foo bar<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>span</span><span class="punctuation token">&gt;</span></span>
+<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
+
+<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span><span class="punctuation token">&gt;</span></span><span class="language-javascript script token">
+<span class="comment token">// Crée un nouvel élément &lt;span&gt; simple</span>
+<span class="keyword token">var</span> sp1 <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createElement</span><span class="punctuation token">(</span><span class="string token">"span"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+<span class="comment token">// Obtient une référence à l'élément avant lequel nous voulons insérer</span>
+<span class="keyword token">var</span> sp2 <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">"childElement"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="comment token">// Obtient une référence à l'élément parent</span>
+<span class="keyword token">var</span> parentDiv <span class="operator token">=</span> sp2<span class="punctuation token">.</span>parentNode<span class="punctuation token">;</span>
+
+<span class="comment token">// Insère le nouvel élément dans le DOM avant sp2</span>
+parentDiv<span class="punctuation token">.</span><span class="function token">insertBefore</span><span class="punctuation token">(</span>sp1<span class="punctuation token">,</span> sp2<span class="punctuation token">)</span><span class="punctuation token">;</span>
+</span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span></code></pre>
+
+<p>Il n'existe pas de méthode <code>insertAfter</code>. Il peut être émulé avec une combinaison des méthodes <code>insertBefore</code><a class="internal" href="/fr/DOM/element.insertBefore" title="fr/DOM/element.insertBefore"> </a>et <code><a href="https://developer.mozilla.org/fr/docs/Web/API/Node/nextSibling" title="fr/DOM/element.nextSibling">nextSibling</a></code>.</p>
+
+<p>Dans l'exemple ci-dessus, <code>sp1</code> pourrait être inséré après <code>sp2</code> en utilisant :</p>
+
+<pre class="brush:js">parentDiv.insertBefore(sp1, sp2.nextSibling);
+</pre>
+
+<p>Si <code>sp2</code> n'a pas d'enfant suivant, c'est qu'il est le dernier enfant. Dans ce cas, <code>sp2.nextSibling</code> renverra <code>null</code> et <code>sp1</code> sera donc inséré à la fin de la liste des nœuds enfants (c'est-à-dire immédiatement après <code>sp2</code>).</p>
+
+<h2 id="Exemple_3">Exemple</h2>
+
+<p>Insérer un élément avant le premier élément enfant en utilisant la propriété <a href="https://developer.mozilla.org/fr/docs/Web/API/Node/firstChild" title="Node.firstChild">firstChild</a>.</p>
+
+<pre class="brush:js line-numbers  language-js"><code class="language-js"><span class="comment token">// Obtenir une référence à l'élément dans lequel nous voulons insérer un nouveau noeud</span>
+<span class="keyword token">var</span> parentElement <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">'parentElement'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="comment token">// Obtenir une référence au premier enfant</span>
+<span class="keyword token">var</span> theFirstChild <span class="operator token">=</span> parentElement<span class="punctuation token">.</span>firstChild<span class="punctuation token">;</span>
+
+<span class="comment token">// Créer un nouvel élément</span>
+<span class="keyword token">var</span> newElement <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createElement</span><span class="punctuation token">(</span><span class="string token">"div"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+<span class="comment token">// Insérer le nouvel élément avant le premier enfant</span>
+parentElement<span class="punctuation token">.</span><span class="function token">insertBefore</span><span class="punctuation token">(</span>newElement<span class="punctuation token">,</span> theFirstChild<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+
+<p>Si l'élément n'a pas de premier enfant, alors <code>firstChild</code> est <code>null</code>. L'élément est toujours ajouté au parent après le dernier enfant. Comme l'élément parent n'avait pas de premier enfant, il n'avait pas non plus de dernier enfant. Par conséquent, le nouvel élément est le seul élément, après l'insertion.</p>
+
+<h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilité des navigateurs</h2>
+
+<p>{{CompatibilityTable()}}</p>
+
+<div id="compat-desktop">
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>1.0</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Edge</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+</div>
+
+<h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Spécifications</h2>
+
+<p> </p>
+
+<table class="spectable standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Spécification</th>
+   <th scope="col">Statut</th>
+   <th scope="col">Commentaire</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM WHATWG','#dom-node-insertbefore','Node.insertBefore')}}</td>
+   <td>{{Spec2('DOM WHATWG')}}</td>
+   <td>Corrige les erreurs dans l'algorithme d'insertion</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM4','#dom-node-insertbefore','Node.insertBefore')}}</td>
+   <td>{{Spec2('DOM4')}}</td>
+   <td>Décrit l'algorithme plus en détail</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM3 Core','core.html#ID-952280727','Node.insertBefore')}}</td>
+   <td>{{Spec2('DOM3 Core')}}</td>
+   <td>Pas de changement notable</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM2 Core','core.html#ID-952280727','Node.insertBefore')}}</td>
+   <td>{{Spec2('DOM2 Core')}}</td>
+   <td>Pas de changement notable</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM1','level-one-core.html#method-insertBefore','Node.insertBefore')}}</td>
+   <td>{{Spec2('DOM1')}}</td>
+   <td>Définition initiale</td>
+  </tr>
+ </tbody>
+</table>

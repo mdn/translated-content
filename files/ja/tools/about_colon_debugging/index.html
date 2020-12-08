@@ -1,0 +1,211 @@
+---
+title: 'about:debugging'
+slug: 'Tools/about:debugging'
+translation_of: 'Tools/about:debugging'
+---
+<p>{{ToolsSidebar}}</p>
+
+<p>about:debugging ページは、1 か所からさまざまなデバッグ対象に Firefox の開発ツールを接続できる場所を提供します。現在サポートしているデバッグ対象は、リスタートレスアドオン、タブ、Worker の 3 種類です。</p>
+
+<h2 id="Opening_the_aboutdebugging_page" name="Opening_the_aboutdebugging_page">about:debugging ページを開く</h2>
+
+<p>about:debugging を開く方法がいくつかあります:</p>
+
+<ul>
+ <li>Firefox の URL バーに "about:debugging" と入力します。</li>
+ <li><em>Firefox 47 の新機能</em>: メニューの [ツール] &gt; [ウェブ開発] で、[Service Worker] をクリックします。</li>
+ <li><em>Firefox 47 の新機能</em>: メインツールバーまたはハンバーガーメニュー (<img alt="" src="https://mdn.mozillademos.org/files/12712/hamburger.png" style="height: 20px; width: 22px;">) の中にあるレンチのアイコン (<img alt="" src="https://mdn.mozillademos.org/files/12710/wrench-icon.png" style="height: 21px; width: 21px;">) をクリックして、[Service Worker] を選択します。</li>
+</ul>
+
+<p>about:debugging を開くと左側に、2 つの主要なビュー (アドオンと Worker) を切り替えることができるサイドバーがあります。</p>
+
+<p>システムアドオンがこのページのリストに表示されるかどうかは、<code>devtools.aboutdebugging.showSystemAddons</code> プリファレンスの設定によって異なります。システムアドオンを表示する必要がある場合は <code>about:config</code> に移動し、この値が <code>true</code> に設定されていることを確認します。</p>
+
+<h2 id="Add-ons" name="Add-ons">アドオン</h2>
+
+<div class="note">
+<p>about:debugging のアドオンセクションは、<a href="/ja/Add-ons/Bootstrapped_extensions">基本的なブートストラップ型拡張機能</a>、<a href="/ja/Add-ons/SDK">Add-on SDK を使用したアドオン</a>、<a href="/ja/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a> を含む、再起動不要なアドオンのみサポートしています。</p>
+</div>
+
+<p>このページでは 2 つのことを行えます:</p>
+
+<ul>
+ <li>ディスクから一時的にアドオンを読み込む</li>
+ <li><a href="/ja/Add-ons/Add-on_Debugger">アドオンデバッガー</a> をリスタートレスアドオンに接続する</li>
+</ul>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/15009/debugger-revised.png" style="display: block; height: 612px; margin-left: auto; margin-right: auto; width: 700px;"></p>
+
+<h3 id="Connecting_the_Add-on_Debugger" name="Connecting_the_Add-on_Debugger">アドオンデバッガーを接続する</h3>
+
+<div class="note">
+<p>現在、WebExtensions のデバッグにはアドオンデバッガーではなくブラウザーツールボックスを使用することを推奨していますので注意してください。詳しくは <a href="/ja/Add-ons/WebExtensions/Debugging">WebExtensions のデバッグ</a> をご覧ください。</p>
+</div>
+
+<p>about:debugging のページに、現在インストールされているリスタートレスアドオンを一覧表示します (注記: このリストには、Firefox のプリインストールアドオンも含まれます)。アドオン名の隣に、[デバッグ] ボタンがあります。</p>
+
+<p>[デバッグ] ボタンが無効化されている場合は、[アドオンのデバッグを有効化] にチェックを入れてください。</p>
+
+<p>[デバッグ] をクリックすると、接続を許可するかを尋ねるダイアログボックスが表示されます。[OK] をクリックすると、<a href="/ja/docs/Mozilla/Add-ons/Add-on_Debugger">アドオンデバッガー</a> を新しいウィンドウで表示します。時々、デバッガーのウィンドウが Firefox のメインウィンドウの裏に隠れる場合がありますので注意してください。</p>
+
+<p>{{EmbedYouTube("tGGcA3bT3VA")}}</p>
+
+<p>このツールでできることについては、<a href="/ja/docs/Mozilla/Add-ons/Add-on_Debugger">アドオンデバッガー</a> のページをご覧ください。</p>
+
+<div class="note">
+<p><a id="Enabling_add-on_debugging" name="Enabling_add-on_debugging">[アドオンのデバッグを有効化]</a> は、設定項目 <code>devtools.chrome.enabled</code> および <code>devtools.debugger.remote-enabled</code> を有効化することにより動作します。アドオンのデバッグを有効にするため、両方の設定を有効にしなければなりません。チェックボックスにチェックを入れると両方の設定を <code>true</code> に、またチェックを外すと両方の設定を <code>false</code> に変更します。</p>
+
+<p>about:config で設定項目を変更する、あるいは <a href="/ja/docs/Tools/Tools_Toolbox#Settings">開発ツールのオプション</a> で [ブラウザーとアドオンのデバッグを有効] および [リモートデバッガーを有効] にチェックを入れる方法も使用できます。</p>
+</div>
+
+<h3 id="Loading_a_temporary_add-on" name="Loading_a_temporary_add-on">一時的にアドオンを読み込む</h3>
+
+<p>[一時的なアドオンを読み込む] ボタンを使用して、任意の種類のリスタートレスアドオンを、ディスク上のディレクトリーから一時的に読み込むことができます。ボタンをクリックして、アドオンのファイルがあるディレクトリーに移動してファイルを選択してください。一時的なアドオンが、"一時的な拡張機能" の見出しの下に表示されます。</p>
+
+<p>アドオンのパッケージングや署名は不要です。Firefox を再起動するまで、アドオンがインストールされた状態になります。</p>
+
+<p>{{EmbedYouTube("sAM78GU4P34")}}</p>
+
+<p>XPI からアドオンをインストールする場合と比較して、この方法には以下の大きな利点があります:</p>
+
+<ul>
+ <li>アドオンのコードを変更したときに、XPI をリビルドして再インストールする必要はありません。</li>
+ <li>署名機能を無効化する必要なしに、未署名のアドオンを読み込むことができます。</li>
+</ul>
+
+<h3 id="Updating_a_temporary_add-on" name="Updating_a_temporary_add-on">一時的なアドオンを更新する</h3>
+
+<p>この方法でアドオンをインストールした場合に、アドオンのファイルを更新するとどうなるのでしょうか?</p>
+
+<h4 id="Before_Firefox_48" name="Before_Firefox_48">Firefox 48 より前</h4>
+
+<ul>
+ <li><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> や <a href="/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">ポップアップ</a> といったオンデマンドで読み込むファイルを変更した場合は、変更箇所は自動的に取り込まれて、次に content script を読み込むときやポップアップを表示するときに確認できます。</li>
+ <li><a href="/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">background scripts</a> といった終始読み込まれているファイルを変更した場合は、about:addons ページでアドオンを無効化および再有効化することにより、変更箇所を取り込むことができます。</li>
+ <li><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> ファイルといったインストール時にのみパースされるファイルを変更した場合は、Firefox を再起動してアドオンを再度読み込まなければなりません。</li>
+</ul>
+
+<div class="note">
+<p>Firefox 48 より前のバージョンでは、Firefox を再起動せずに [一時的なアドオンを読み込む] ボタンを押してアドオンを再度読み込むことは<em>できません</em>ので注意してください。</p>
+</div>
+
+<h4 id="Firefox_48_onwards" name="Firefox_48_onwards">Firefox 48 以降</h4>
+
+<ul>
+</ul>
+
+<p>Firefox 48 から以下のようになります:</p>
+
+<ul>
+ <li>従来どおり: <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> や <a href="/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">ポップアップ</a> といったオンデマンドで読み込むファイルを変更した場合は、変更箇所は自動的に取り込まれて、次に content script を読み込むときやポップアップを表示するときに確認できます。</li>
+ <li>上記以外の場合のよりよい方法: [デバッグ] ボタンの隣にある [再読み込み] をクリックします。これは以下のことを行います:
+  <ul>
+   <li><a href="/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">background scripts</a> のような、永続的なスクリプトを再読み込みします。</li>
+   <li>manifest.json ファイルを再度解析しますので、<code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code>、<code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code>、<code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> などのキーの変更点の効果が生じます。</li>
+  </ul>
+ </li>
+</ul>
+
+<div class="note">
+<p>Firefox 49 より、再読み込みボタンは一時的なアドオンに限り使用できますので注意してください。他のアドオンでは無効になります。</p>
+</div>
+
+<h2 id="Tabs" name="Tabs">タブ</h2>
+
+<p>Firefox 49 より、<code>about:debugging</code> で タブ ページを使用できます。これは現在の Firefox のインスタンスで開いている、デバッグ可能なすべてのタブを一覧表示します。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13617/about-debugging-tabs.png" style="display: block; height: 628px; margin: 0px auto; width: 900px;"></p>
+
+<p>それぞれの項目の隣に、<em>デバッグ</em> ボタンがあります。ボタンをクリックするとそのタブに特化したツールボックスが開き、タブの内容をデバッグできます。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13619/about-debugging-tabs-toolbox.png" style="display: block; height: 628px; margin: 0px auto; width: 900px;"></p>
+
+<div class="note">
+<p>この機能は、デスクトップ版のタブのデバッグで即座に有用なものではありません。すでに十分なほど簡単に、タブをデバッグするためのツールボックスを開くことができます。一方、リモートデバッグのサポートを始めるために <code>about:debugging</code> を使うときはとても有用であり、またこのページは、モバイルデバイスのブラウザーやシミュレーターなどでデバッグが可能なタブを表示します。この作業の最新状況については {{bug(1212802)}} をご覧ください。</p>
+</div>
+
+<h2 id="Workers" name="Workers">Worker</h2>
+
+<p>Worker ページでは、Worker を以下のようにカテゴライズして表示します:</p>
+
+<ul>
+ <li>すべての登録済み <a href="/ja/docs/Web/API/Service_Worker_API">Service Worker</a></li>
+ <li>すべての登録済み <a href="/ja/docs/Web/API/SharedWorker">Shared Worker</a></li>
+ <li><a href="/ja/docs/Web/API/ChromeWorker">Chrome Worker</a> や <a href="/ja/docs/Web/API/Web_Workers_API/Using_web_workers#Dedicated_workers">Dedicated Worker</a> を含む、その他の Worker</li>
+</ul>
+
+<p>それぞれの Worker に開発ツールを接続する、および Service Worker にプッシュ通知を送ることができます。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13058/about-debugging-workers.png" style="display: block; height: 642px; margin-left: auto; margin-right: auto; width: 784px;"></p>
+
+<h3 id="Service_worker_state" name="Service_worker_state">Service Worker の状態</h3>
+
+<p>Firefox 52 より Service Worker のリストで、Service Worker の <a href="https://developers.google.com/web/fundamentals/instant-and-offline/service-worker/lifecycle">ライフサイクル</a> における状態を表示します。以下の 3 種類の状態に分類します:</p>
+
+<ul>
+ <li><em>"登録中"</em>: これは Service Worker の初期登録から、ページを制御するまでの間のすべての状態を示します。すなわち "installing"、"activating"、"waiting" の状態を含みます。</li>
+ <li><em>"実行中"</em>: Service Worker は、現在実行中です。Service Worker はインストールおよびアクティベーション済みであり、現在イベントを処理しています。</li>
+ <li><em>"停止"</em>: Service Worker はインストールおよびアクティベーション済みですが、アイドル状態の後に終了されました。</li>
+</ul>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14488/service-worker-status.png" style="display: block; height: 555px; margin-left: auto; margin-right: auto; width: 900px;"></p>
+
+<div class="note">
+<p>この章では <a href="https://serviceworke.rs/push-simple/">https://serviceworke.rs/push-simple/</a> にある、シンプルな Service Worker のデモを使用しています。</p>
+</div>
+
+<h3 id="Debugging_workers" name="Debugging_workers">Worker をデバッグする</h3>
+
+<p>すでに Service Worker が実行中である場合は、Worker の隣に [デバッグ] ボタンおよび [プッシュ] ボタンがあります。Worker が未実行である場合は、[開始] ボタン 1 つだけがあります。ボタンをクリックすると Service Worker が開始します。</p>
+
+<p>[デバッグ] ボタンを押すと、JavaScript デバッガーとコンソールを Worker に接続します。ブレークポイントを設置する、コードをステップ実行する、変数を確認する、コードを評価するなどの操作ができます:</p>
+
+<p>{{EmbedYouTube("Z8ax79sHWDU")}}</p>
+
+<h3 id="Registering_workers" name="Registering_workers">Worker を登録する</h3>
+
+<p>最初は、<em>Service Worker</em> や <em>Shared Worker</em> の配下に Worker が表示されていないでしょう。Worker を登録すると、リストが更新されます:</p>
+
+<p>{{EmbedYouTube("wy4kyWFhFF4")}}</p>
+
+<div class="note">
+<p>Firefox 47 より前のバージョンでは、Service Worker が実際に動作したときにのみ表示します。</p>
+</div>
+
+<h3 id="Unregistering_service_workers" name="Unregistering_service_workers">Service Worker の登録を解除する</h3>
+
+<div class="geckoVersionNote">
+<p>Firefox 48 の新機能</p>
+</div>
+
+<p>Firefox 48 より、登録済みの Service Worker の隣に [登録解除] という名称のリンクがあります:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13056/unregister-sw.png" style="display: block; margin-left: auto; margin-right: auto; width: 700px;"></p>
+
+<p>リンクをクリックすると、Service Worker の登録を解除します。</p>
+
+<h3 id="Sending_push_events_to_service_workers" name="Sending_push_events_to_service_workers">Service Worker に Push イベントを送る</h3>
+
+<div class="note">
+<p>about:debugging での Push イベント送信は、Firefox 47 の新機能です。</p>
+</div>
+
+<p>プッシュ通知をデバッグするには、<a href="/ja/docs/Web/API/PushEvent">PushEvent</a> のリスナーにブレークポイントを設定してください。ただし、プッシュ通知のデバッグはサーバーが不要であり、ローカルで実施できます。[プッシュ] ボタンをクリックすると、Service Worker に Push イベントを送信できます:</p>
+
+<p>{{EmbedYouTube("62SkLyA-Zno")}}</p>
+
+<h3 id="Service_workers_not_compatible" name="Service_workers_not_compatible">互換性がない Service Worker</h3>
+
+<div>
+<p>Firefox 49 より、現在のブラウザーの設定に対して互換性がないため使用やデバッグが行えない Service Worker について、Worker ページの Service Worker セクションで警告メッセージを表示します。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13613/sw-not-compatible.png" style="display: block; height: 705px; margin: 0px auto; width: 1011px;"></p>
+</div>
+
+<p>Service Worker は、いくつかの理由で使用できない場合があります:</p>
+
+<ul>
+ <li>プライベートブラウジングウィンドウを使用しているとき</li>
+ <li>履歴の設定を、[履歴を一切記憶させない] または [常にプライベートブラウジングモード] に設定しているとき</li>
+ <li><code>about:config</code> で設定項目 <code>dom.serviceWorkers.enable</code> を false に設定しているとき</li>
+</ul>

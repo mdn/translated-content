@@ -1,0 +1,371 @@
+---
+title: タブブラウザ用コード
+slug: Code_snippets/Tabbed_browser
+tags:
+  - Add-ons
+  - Extensions
+translation_of: Archive/Add-ons/Tabbed_browser
+---
+<p>このページには Firefox のタブブラウザを扱うのに有用なコードがリストされています。あなた自身のコードを挿入すべき場所には通常コメントが入れられています。</p>
+<p>通常、それぞれのコードには初期化の際に実行するべきコードが含まれています。これらは <a href="/ja/Extension_Frequently_Asked_Questions#Why_doesn.27t_my_script_run_properly.3F" title="ja/Extension_Frequently_Asked_Questions#Why_doesn.27t_my_script_run_properly.3F">load リスナー</a>で実行するのがいいでしょう。コードはブラウザウィンドウのコンテキストの中で実行されることを想定しています。もし、ブラウザでないウィンドウでタブを操作したい場合は、ブラウザウィンドウへの参照を最初に取得する必要があります。詳細は <a href="/ja/Working_with_windows_in_chrome_code" title="ja/Working_with_windows_in_chrome_code">chrome コードでウィンドウを操作する</a> を参照してください。</p>
+<p>{{ 英語版章題("Multiple meanings for the word 'browser'") }}</p>
+<h3 id="Getting_access_to_the_browser" name="Getting_access_to_the_browser">「ブラウザ」という単語の意味</h3>
+<p>「ブラウザ」という単語はいろいろな使い方をされます。当然、Firefoxのアプリケーション全体は“ブラウザ”と呼ばれます。Firefoxブラウザの中にはタブがあり、一般のウェブページブラウザのイメージからしても、{{ XULElem("browser") }}要素というXUL的なイメージからしても、内側のそれぞれのタブもブラウザです。さらに、この文書中や一部のFirefoxのソースに現れる「ブラウザ」には、FirefoxのXULウィンドウ中の“tabbrowser要素”を意味するものもあります。</p>
+<p>{{ 英語版章題("Getting access to the Browser") }}</p>
+<h3 id=".E3.83.96.E3.83.A9.E3.82.A6.E3.82.B6.E3.81.B8.E3.81.AE.E3.82.A2.E3.82.AF.E3.82.BB.E3.82.B9.E6.96.B9.E6.B3.95" name=".E3.83.96.E3.83.A9.E3.82.A6.E3.82.B6.E3.81.B8.E3.81.AE.E3.82.A2.E3.82.AF.E3.82.BB.E3.82.B9.E6.96.B9.E6.B3.95">ブラウザへのアクセス方法</h3>
+<p>{{ 英語版章題("From main window") }}</p>
+<h4 id="メインウィンドウから">メインウィンドウから</h4>
+<p>browser.xul にオーバーレイするような拡張機能では普通ですが、FirefoxのグローバルなChromeWindowで実行されるコードならば、大域変数 <code>gBrowser</code> を使って{{ XULElem("tabbrowser") }}要素にアクセスできます。</p>
+<pre>// gBrowser はブラウザウィンドウ (browser.xul) のスコープからのみアクセス可能
+gBrowser.addTab(...);
+</pre>
+<p><code>gBrowser</code> が未定義ならば、あなたのコードはブラウザウィンドウのスコープで実行されていないか、もしくは早すぎる段階で実行されています。<code>gBrowser</code> にはブラウザウィンドウが完全にロードされた後でのみアクセス出来ます。ウィンドウが開かれたすぐ後に <code>gBrowser</code> に対して何かしたければ、 load イベントを<a href="/ja/DOM/element.addEventListener" title="ja/DOM/element.addEventListener">リッスン</a> し、イベントリスナの中で <code>gBrowser</code> を使ってください。</p>
+<p>{{ 英語版章題("From a sidebar") }}</p>
+<h4 id="サイドバーから">サイドバーから</h4>
+<p>基本的には、拡張機能がサイドバーで動作しているなら以下のようにできます。</p>
+<pre class="brush: js">var mainWindow = window.QueryInterface(Components.interfaces.nsIInterfaceRequestor)
+                   .getInterface(Components.interfaces.nsIWebNavigation)
+                   .QueryInterface(Components.interfaces.nsIDocShellTreeItem)
+                   .rootTreeItem
+                   .QueryInterface(Components.interfaces.nsIInterfaceRequestor)
+                   .getInterface(Components.interfaces.nsIDOMWindow);
+
+mainWindow.gBrowser.addTab(...);
+</pre>
+<p>{{ 英語版章題("From a dialog") }}</p>
+<h4 id="ダイアログから">ダイアログから</h4>
+<p>もし、コードがブラウザウィンドウから直接立ち上げられたダイアログで実行されているなら、以下のようにできます。</p>
+<pre class="brush: js">window.opener.gBrowser.addTab(...);
+</pre>
+<p>もし、<code>window.opener</code> が動作しないなら、このコードによって最も最近使われたブラウザウィンドウを取得できます。</p>
+<pre class="brush: js">var wm = Components.classes["@mozilla.org/appshell/window-mediator;1"]
+                   .getService(Components.interfaces.nsIWindowMediator);
+var mainWindow = wm.getMostRecentWindow("navigator:browser");
+mainWindow.gBrowser.addTab(...);
+</pre>
+<p>{{ 英語版章題("Opening a URL in a new tab") }}</p>
+<h3 id=".E6.96.B0.E3.81.97.E3.81.84.E3.82.BF.E3.83.96.E3.82.92.E9.96.8B.E3.81.8F" name=".E6.96.B0.E3.81.97.E3.81.84.E3.82.BF.E3.83.96.E3.82.92.E9.96.8B.E3.81.8F">新しいタブを開く</h3>
+<pre>// タブの追加
+gBrowser.addTab("http://www.google.com/");
+
+// タブの追加とアクティブ化
+gBrowser.selectedTab = gBrowser.addTab("http://www.google.com/");
+</pre>
+<p>{{ 英語版章題("Manipulating content of a new tab") }}</p>
+<h4 id="Manipulating_content_of_a_new_tab" name="Manipulating_content_of_a_new_tab">新しいタブのコンテンツの操作</h4>
+<p>新しく開かれたタブのコンテンツについて仕事をしたいときは、内容がロードされ終わるまで待つ必要があります。</p>
+<pre class="brush: js">// 間違った方法(ページがロードし終わってない)
+var newTab = gBrowser.getBrowserForTab(gBrowser.addTab("http://www.google.com/"));
+alert(newTab.contentDocument.body.innerHTML);
+
+// よい方法
+var newTab = gBrowser.getBrowserForTab(gBrowser.addTab("http://www.google.com/"));
+newTab.addEventListener("load", function() {
+  newTab.contentDocument.body.innerHTML = "&lt;div&gt;hello world&lt;/div&gt;";
+}, true);
+</pre>
+<p>(このonLoadハンドラのイベントターゲットはXULの'tab'要素になります。) 詳しくは<a href="/ja/XUL/tabbrowser#m-getBrowserForTab" title="ja/XUL/tabbrowser#m-getBrowserForTab">tabbrowser</a> の getBrowserForTab() を見てください。</p>
+<p>{{ 英語版章題("Opening a URL in the correct window/tab") }}</p>
+<h3 id="URL_.E3.82.92.E9.81.A9.E5.88.87.E3.81.AA.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.82.84.E3.82.BF.E3.83.96.E3.81.A7.E9.96.8B.E3.81.8F" name="URL_.E3.82.92.E9.81.A9.E5.88.87.E3.81.AA.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.82.84.E3.82.BF.E3.83.96.E3.81.A7.E9.96.8B.E3.81.8F">URL を適切なウィンドウやタブで開く</h3>
+<p>簡単にURLをタブで開くことができるメソッドが <code><a class="external" href="http://mxr.mozilla.org/mozilla-central/source/browser/base/content/utilityOverlay.js" rel="external nofollow" title="http://mxr.mozilla.org/mozilla-central/source/browser/base/content/utilityOverlay.js">chrome://browser/content/utilityOverlay.js</a></code> にあります。<code>openUILinkIn</code> と <code>openUILink</code> です。</p>
+<dl> <dt><code>openUILinkIn( url, where, allowThirdPartyFixup, postData, referrerUrl ) </code></dt> <dd><code>where</code>: <ul> <li>"current" 現在のタブ (もしブラウザウィンドウがなければ、代わりに新しいウィンドウで開く)</li> <li>"tab" 新しいタブ (もしブラウザウィンドウがなければ、代わりに新しいウィンドウで開く)</li> <li>"tabshifted" "tab"と同じだが、デフォルトが「新しいタブを選択する」ならバックグラウンドで開く。逆も同様。</li> <li>"window" 新しいウィンドウ</li> <li>"save" ディスクに保存する (ファイル名は指定できない!)</li> </ul> </dd> <dt><code>openUILink( url, e, ignoreButton, ignoreAlt, allowKeywordFixup, postData, referrerUrl ) </code></dt> <dd>
+</dd></dl>
+<p>次のコードでは、押されたマウスのボタンや、押されている Ctrl などのホットキーによって、新しいタブ、現在のタブ、現在のウィンドウのどこに URL が開かれるかが決まります。このコードは {{ XULElem("menuitem") }} 用のものですが、他の XUL 要素でも同じように動作します。このコードは browser.xul のオーバーレイでのみ動作します。</p>
+<p>XUL:</p>
+<pre class="eval">&lt;menuitem oncommand="myExtension.foo(event)" onclick="checkForMiddleClick(this, event)" label="Click me"/&gt;
+</pre>
+<p>JS:</p>
+<pre class="brush: js">var myExtension = {
+  foo: function(event) {
+    openUILink("http://www.example.com", event, false, true);
+  }
+}
+</pre>
+<p>{{ 英語版章題("Reusing tabs") }}</p>
+<h4 id="Reusing_tabs" name="Reusing_tabs">タブの再利用</h4>
+<p>毎回必要なときに新しいブラウザウィンドウやタブを開くより、もしあれば必要としている URL をすでに表示している既存のタブを再利用することを考える方がよいでしょう。この方法をとれば、あなたの拡張機能が作成するブラウザやタブを最小にすることができます。</p>
+<p>{{ 英語版章題("Reusing by URL/URI") }}</p>
+<h5 id="URL.2FURI_.E3.81.AB.E3.82.88.E3.82.8A.E5.86.8D.E5.88.A9.E7.94.A8.E3.81.99.E3.82.8B" name="URL.2FURI_.E3.81.AB.E3.82.88.E3.82.8A.E5.86.8D.E5.88.A9.E7.94.A8.E3.81.99.E3.82.8B">URL/URI により再利用する</h5>
+<p>さまざまな拡張機能で共通する機能として、拡張機能のボタンやリンクをユーザがクリックしたときに、ブラウザウィンドウで <code>chrome://</code> URI (ヘルプや about 情報など) や外部の (オンラインの <code>http(s)://</code>) HTML 文書を開くようにしています。次のコードは、すでに必要な URL や URI を表示しているタブを再利用する方法を示しています。もし、存在しなければ、指定された URL や URI を新しいタブで開きます。</p>
+<pre class="brush: js">function openAndReuseOneTabPerURL(url) {
+  var wm = Components.classes["@mozilla.org/appshell/window-mediator;1"]
+                     .getService(Components.interfaces.nsIWindowMediator);
+  var browserEnumerator = wm.getEnumerator("navigator:browser");
+
+  // 必要としている URL を開いている browser が無いか確認する
+  var found = false;
+  while (!found &amp;&amp; browserEnumerator.hasMoreElements()) {
+    var browserWin = browserEnumerator.getNext();
+    var tabbrowser = browserWin.gBrowser;
+
+    // browser インスタンスの全てのタブを確認する
+    var numTabs = tabbrowser.browsers.length;
+    for (var index = 0; index &lt; numTabs; index++) {
+      var currentBrowser = tabbrowser.getBrowserAtIndex(index);
+      if (url == currentBrowser.currentURI.spec) {
+
+        // URL はすでに開いています。タブを選択します。
+        tabbrowser.selectedTab = tabbrowser.tabContainer.childNodes[index];
+
+        // *この*ブラウザウィンドウにフォーカスを移す
+        browserInstance.focus();
+        found = true;
+        break;
+      }
+    }
+  }
+
+  // URL が開かれてないので新たに開く
+  if (!found) {
+    var recentWindow = wm.getMostRecentWindow("navigator:browser");
+    if (recentWindow) {
+      // 既存のブラウザウィンドウを利用する
+      recentWindow.delayedOpenTab(url, null, null, null, null);
+    }
+    else {
+      // すでに開いているブラウザウィンドウがないので、新たに開く
+      window.open(url);
+    }
+  }
+}
+</pre>
+<p>{{ 英語版章題("Reusing by other criteria") }}</p>
+<h5 id="Reusing_by_other_criteria" name="Reusing_by_other_criteria">その他の条件によって再利用する</h5>
+<p>すでにどのような URL/URI を開いているかにかかわらず、既存のタブを再利用したいということがあるでしょう。そのタブがほかのブラウザコンポーネントにでなく、あなたの拡張機能により開かれたとします。最初にタブを開くときに独自の属性を付加しておくことで、タブを再利用できます。後々そのタブを再利用したい時には、開かれているすべてのタブからその独自の属性をもったタブを探します。そのようなタブがあれば、そのタブのURL/URIを変更し、そのタブを選択してフォーカスします。そうでなければ (ユーザがタブを閉じたか、そもそもそのようなタブを開いていないかでしょう)、独自の属性をもった新しいタブを作ります。</p>
+<pre class="brush: js">function openAndReuseOneTabPerAttribute(attrName, url) {
+  var wm = Components.classes["@mozilla.org/appshell/window-mediator;1"]
+                     .getService(Components.interfaces.nsIWindowMediator);
+  for (var found = false, index = 0, tabbrowser = wm.getEnumerator('navigator:browser').getNext().gBrowser;
+       index &lt; tabbrowser.tabContainer.childNodes.length &amp;&amp; !found;
+       index++) {
+
+    // 次のタブを取得
+    var currentTab = tabbrowser.tabContainer.childNodes[index];
+
+    // このタブは独自の属性をもっているかな?
+    if (currentTab.hasAttribute(attrName)) {
+
+      // Yes -- それを選択・フォーカス
+      tabbrowser.selectedTab = currentTab;
+
+      // 他のブラウザウィンドウがフォーカスされている場合、*この*ウィンドウをフォーカス
+      tabbrowser.ownerDocument.defaultView.focus();
+      found = true;
+    }
+  }
+
+  if (!found) {
+    // ここから開かれたタブはない。新規に開く。
+    var browserEnumerator = wm.getEnumerator("navigator:browser");
+    var tabbrowser = browserEnumerator.getNext().gBrowser;
+
+    // タブを作成
+    var newTab = tabbrowser.addTab(url);
+    newTab.setAttribute(attrName, "xyz");
+
+    // タブを選択・フォーカス
+    tabbrowser.selectedTab = newTab;
+
+    // 他のブラウザウィンドウがフォーカスされている場合、*この*ウィンドウをフォーカス
+    tabbrowser.ownerDocument.defaultView.focus();
+  }
+}
+</pre>
+<p>この関数は以下のように呼びます。</p>
+<pre class="eval"><span class="nowiki">openAndReuseOneTabPerAttribute("myextension-myattribute", "http://developer.mozilla.org/")</span>.
+</pre>
+<p>{{ 英語版章題("Closing a tab") }}</p>
+<h3 id=".E3.82.BF.E3.83.96.E3.82.92.E9.96.89.E3.81.98.E3.82.8B" name=".E3.82.BF.E3.83.96.E3.82.92.E9.96.89.E3.81.98.E3.82.8B">タブを閉じる</h3>
+<p>このサンプルは現在選択されているタブを閉じます。</p>
+<pre class="eval">gBrowser.removeCurrentTab();
+</pre>
+<p>また、引数として XUL の {{ XULElem("tab") }} 要素を一つだけ取る、より汎用的な <code>removeTab</code> というメソッドもあります。</p>
+<p>{{ 英語版章題("Changing active tab") }}</p>
+<h3 id=".E9.81.B8.E6.8A.9E.E3.81.95.E3.82.8C.E3.81.A6.E3.81.84.E3.82.8B.E3.82.BF.E3.83.96.E3.82.92.E5.A4.89.E6.9B.B4.E3.81.99.E3.82.8B" name=".E9.81.B8.E6.8A.9E.E3.81.95.E3.82.8C.E3.81.A6.E3.81.84.E3.82.8B.E3.82.BF.E3.83.96.E3.82.92.E5.A4.89.E6.9B.B4.E3.81.99.E3.82.8B">選択されているタブを変更する</h3>
+<p>タブを一つ右へ移動します。</p>
+<pre>gBrowser.tabContainer.advanceSelectedTab(1, true);
+</pre>
+<p>こちらは左へ移動します。</p>
+<pre>gBrowser.tabContainer.advanceSelectedTab(-1, true);
+</pre>
+<p>{{ 英語版章題("Detecting page load") }}</p>
+<h3 id=".E3.83.9A.E3.83.BC.E3.82.B8.E8.AA.AD.E3.81.BF.E8.BE.BC.E3.81.BF.E3.81.AE.E6.A4.9C.E5.87.BA" name=".E3.83.9A.E3.83.BC.E3.82.B8.E8.AA.AD.E3.81.BF.E8.BE.BC.E3.81.BF.E3.81.AE.E6.A4.9C.E5.87.BA">ページ読み込みの検出</h3>
+<p><a href="/ja/Code_snippets/On_page_load" title="ja/Code_snippets/On_page_load">Code snippets:On page load</a> も参照してください。</p>
+<pre class="brush: js">function examplePageLoad(event) {
+  if (event.originalTarget instanceof HTMLDocument) {
+    var win = event.originalTarget.defaultView;
+    if (win.frameElement) {
+      // タブにフレームが読み込まれました。winはフレームセットのtop windowで
+      // なければなりません。もし、このウェブページに frame/iframe が
+      // 読み込まれたときに何もしないなら、次の行のコメントアウトを外してください
+      // return;
+      // ルートドキュメントを探索する
+      win = win.top;
+    }
+  }
+}
+
+// ブラウザウィンドウが初期化されるまでコールバック関数を追加しようとしないで
+// ください。タブブラウザへのコールバックの追加はブラウザウィンドウが
+// 読み込まれたあとにする必要があります。
+window.addEventListener("load", function () {
+  // ドキュメントが読み込まれるたびに実行されるコールバック関数を追加する
+  // ドキュメント内部の frame/iframe にも適用されるので注意が必要
+  gBrowser.addEventListener("load", examplePageLoad, true);
+}, false);
+
+...
+// もし、必要なくなれば
+gBrowser.removeEventListener("load", examplePageLoad, true);
+...
+</pre>
+<p>{{ 英語版章題("Notification when a tab is added or removed") }}</p>
+<h3 id=".E3.82.BF.E3.83.96.E3.81.8C.E8.BF.BD.E5.8A.A0.E3.82.82.E3.81.97.E3.81.8F.E3.81.AF.E5.89.8A.E9.99.A4.E3.81.95.E3.82.8C.E3.81.9F.E3.81.A8.E3.81.8D.E3.81.AB.E9.80.9A.E7.9F.A5.E3.81.99.E3.82.8B_.28Firefox_2.2B.29" name=".E3.82.BF.E3.83.96.E3.81.8C.E8.BF.BD.E5.8A.A0.E3.82.82.E3.81.97.E3.81.8F.E3.81.AF.E5.89.8A.E9.99.A4.E3.81.95.E3.82.8C.E3.81.9F.E3.81.A8.E3.81.8D.E3.81.AB.E9.80.9A.E7.9F.A5.E3.81.99.E3.82.8B_.28Firefox_2.2B.29">タブが追加もしくは削除されたときに通知する</h3>
+<pre class="brush: js">function exampleTabAdded(event) {
+  var browser = gBrowser.getBrowserForTab(event.target);
+  // browser は追加された browser をさす XUL 要素です
+}
+
+function exampleTabMoved(event) {
+  var browser = gBrowser.getBrowserForTab(event.target);
+  // browser は移動した browser をさす XUL 要素です
+}
+
+function exampleTabRemoved(event) {
+  var browser = gBrowser.getBrowserForTab(event.target);
+  // browser は削除された browser をさす XUL 要素です
+}
+
+// 初期化中に
+var container = gBrowser.tabContainer;
+container.addEventListener("TabOpen", exampleTabAdded, false);
+container.addEventListener("TabMove", exampleTabMoved, false);
+container.addEventListener("TabClose", exampleTabRemoved, false);
+
+// 必要なくなれば
+container.removeEventListener("TabOpen", exampleTabAdded, false);
+container.removeEventListener("TabMove", exampleTabMoved, false);
+container.removeEventListener("TabClose", exampleTabRemoved, false);
+</pre>
+<div class="geckoVersionNote"> <p>{{ gecko_callout_heading("1.9.1") }}</p> <p>Gecko 1.9.1 {{ geckoRelease("1.9.1") }} から、簡単に<a href="/En/Listening_to_events_on_all_tabs" title="https://developer.mozilla.org/en/Listening_to_events_on_all_tabs"> すべてのタブのイベントをlistenする</a> 方法が使えます。</p>
+</div>
+<p>{{ 英語版章題("Notification when a tab's attributes change") }}</p>
+<p>{{ h2_gecko_minversion("タブの属性が変更されたときに通知する", "2.0") }}</p>
+<p>Gecko 2.0 以降では、<code>TabAttrModified</code> をlistenすることでタブの属性の変更を検知することができます。以下の属性が変更されると、このイベントが送られます。</p>
+<ul> <li>{{ xulattr("label") }}</li> <li>{{ xulattr("crop") }}</li> <li>{{ xulattr("busy") }}</li> <li>{{ xulattr("image") }}</li> <li>{{ xulattr("selected") }}</li>
+</ul>
+<pre class="deki-transform">function exampleTabAttrModified(event) {
+  var tab = event.target;
+  // ここで、タブに何の変更があったのかチェックする
+}
+
+// 初期化時に
+var container = gBrowser.tabContainer;
+container.addEventListener("TabAttrModified", exampleTabAttrModified, false);
+
+// 必要なくなったとき
+container.removeEventListener("TabAttrModified", exampleTabAttrModified, false);
+</pre>
+<p>{{ 英語版章題("Notification when a tab is pinned or unpinned") }}</p>
+<p>{{ h2_gecko_minversion("タブがアイコン化したとき、解除されたときに通知する", "2.0") }}</p>
+<p>Gecko 2.0 以降では、タブはアイコン化(<span style="color: #008000;">pin</span>)できます。すなわち、タブは特別なアプリケーションタブ (アイコンタブ) となって、タブバーの先頭に固定され、ファビコンだけを表示します。<code>TabPinned</code> と <code>TabUnpinned</code> イベントを監視することで、タブがアイコン化したり解除されたりしたときに検知できます。</p>
+<pre class="brush: js">function exampleTabPinned(event) {
+  var browser = gBrowser.getBrowserForTab(event.target);
+  // browser はアイコン化したブラウザのXUL要素
+}
+
+function exampleTabUnpinned(event) {
+  var browser = gBrowser.getBrowserForTab(event.target);
+  // browser はアイコン化したブラウザのXUL要素
+}
+
+// 初期化
+var container = gBrowser.tabContainer;
+container.addEventListener("TabPinned", exampleTabPinned, false);
+container.addEventListener("TabUnpinned", exampleTabUnpinned, false);
+
+// 必要なくなったとき
+container.removeEventListener("TabPinned", exampleTabPinned, false);
+container.removeEventListener("TabUnpinned", exampleTabUnpinned, false);
+</pre>
+<p>{{ 英語版章題("Detecting tab selection") }}</p>
+<h3 id=".E3.82.BF.E3.83.96.E3.81.8C.E9.81.B8.E6.8A.9E.E3.81.95.E3.82.8C.E3.81.9F.E3.81.93.E3.81.A8.E3.82.92.E6.A4.9C.E5.87.BA.E3.81.99.E3.82.8B_.28Firefox_2.2B.29" name=".E3.82.BF.E3.83.96.E3.81.8C.E9.81.B8.E6.8A.9E.E3.81.95.E3.82.8C.E3.81.9F.E3.81.93.E3.81.A8.E3.82.92.E6.A4.9C.E5.87.BA.E3.81.99.E3.82.8B_.28Firefox_2.2B.29">タブが選択されたことを検出する</h3>
+<p>次のコードでブラウザの新たにタブが選択されたことを検出できます。</p>
+<pre class="brush: js">function exampleTabSelected(event) {
+  var browser = gBrowser.<span><span>selectedBrowser</span></span>;
+  // browser はその時に選択された browser の XUL 要素
+}
+
+// 初期化中に
+var container = gBrowser.tabContainer;
+container.addEventListener("TabSelect", exampleTabSelected, false);
+
+// 必要なくなれば
+container.removeEventListener("TabSelect", exampleTabSelected, false);
+</pre>
+<p>{{ 英語版章題("Getting document of currently selected tab") }}</p>
+<h3 id=".E7.8F.BE.E5.9C.A8.E9.81.B8.E6.8A.9E.E3.81.95.E3.82.8C.E3.81.A6.E3.81.84.E3.82.8B.E3.82.BF.E3.83.96.E3.81.AE.E3.83.89.E3.82.AD.E3.83.A5.E3.83.A1.E3.83.B3.E3.83.88.E3.82.92.E5.8F.96.E5.BE.97.E3.81.99.E3.82.8B" name=".E7.8F.BE.E5.9C.A8.E9.81.B8.E6.8A.9E.E3.81.95.E3.82.8C.E3.81.A6.E3.81.84.E3.82.8B.E3.82.BF.E3.83.96.E3.81.AE.E3.83.89.E3.82.AD.E3.83.A5.E3.83.A1.E3.83.B3.E3.83.88.E3.82.92.E5.8F.96.E5.BE.97.E3.81.99.E3.82.8B">現在選択されているタブのドキュメントを取得する</h3>
+<p>次のコードで現在選択されているタブのドキュメントを取得できます。このコードはブラウザウィンドウのスコープで動作します (ブラウザウィンドウへのオーバーレイで動作させる時など) 。</p>
+<pre class="eval">gBrowser.contentDocument;
+</pre>
+<p>もしくは</p>
+<pre class="eval">content.document
+</pre>
+<p>ブラウザウィンドウから開かれたウィンドウやダイアログで動作させる場合は、このコードを使って、そのウィンドウを開いたブラウザウィンドウの、選択されているタブで表示されているドキュメントを取得できます。</p>
+<pre class="eval">window.opener.content.document
+</pre>
+<p>ブラウザウィンドウから開かれたものでないウィンドウやダイアログからは、<a href="/ja/XPCOM_Interface_Reference/nsIWindowMediator" title="ja/nsIWindowMediator">nsIWindowMediator</a> を使って、一番最近使われたブラウザウィンドウの、選択されているタブで表示されているドキュメントを取得できます。</p>
+<pre class="brush: js">var wm = Components.classes["@mozilla.org/appshell/window-mediator;1"].
+         getService(Components.interfaces.nsIWindowMediator);
+var recentWindow = wm.getMostRecentWindow("navigator:browser");
+return recentWindow ? recentWindow.content.document.location : null;
+</pre>
+<p><a href="/ja/Working_with_windows_in_chrome_code#Content_windows" title="ja/Working_with_windows_in_chrome_code#Content_windows">chrome コードでウィンドウを操作する</a> も参照してください。</p>
+<p>{{ 英語版章題("Enumerating tabs") }}</p>
+<h3 id=".E3.82.BF.E3.83.96.E3.81.AE.E5.88.97.E6.8C.99" name=".E3.82.BF.E3.83.96.E3.81.AE.E5.88.97.E6.8C.99">タブの列挙</h3>
+<p>ブラウザで開いている全てのタブを取得するには、最初にブラウザウィンドウへの参照を取得します。もし、Firefox の <code>browser.xul</code> オーバーレイから実行されているコード (たとえば、ツールバーボタンやメニューでの <em>click</em> ハンドラなど) なら、現在のウィンドウにすでに定義されている変数である <code>window</code> でアクセスできます。しかしながら、それ自身のウィンドウから実行されているコード (たとえば、設定やオプションダイアログなど) なら、<code><a href="/ja/XPCOM_Interface_Reference/nsIWindowMediator" title="ja/nsIWindowMediator">nsIWindowMediator</a></code> をブラウザのウィンドウを取得するのに利用する必要があります。</p>
+<p>次に、<code>&lt;tabbrowser/&gt;</code>要素を取得します。前の手順で取得したブラウザのウィンドウを <code>win</code> とすると、<code>win.gBrowser</code> によって取得できます。もし、<code>browser.xul</code> オーバーレイの中で動作しているなら、より簡単に <code>window.gBrowser</code> でなく、<code>gBrowser</code> で取得可能です。</p>
+<p>最後に、<code>gBrowser.browsers.length</code> により開いているタブの数を取得し、<code>gBrowser.getBrowserAtIndex()</code> により <code>&lt;browser/&gt;</code> 要素を取得します。たとえば、</p>
+<pre class="brush: js">var num = gBrowser.browsers.length;
+for (var i = 0; i &lt; num; i++) {
+  var b = gBrowser.getBrowserAtIndex(i);
+  try {
+    dump(b.currentURI.spec); // 開いている全てのタブの URL をコンソールへ出力
+  } catch(e) {
+    Components.utils.reportError(e);
+  }
+}
+</pre>
+<p><code>&lt;browser/&gt;</code> や <code>&lt;tabbrowser/&gt;</code> 要素でどんなメソッドが利用できるかについてより詳細は、<a href="/ja/DOM_Inspector" title="ja/DOM_Inspector">DOM Inspector</a> を利用するか、<a class="external" href="http://lxr.mozilla.org/seamonkey/source/toolkit/content/widgets/browser.xml">browser.xml</a> や <a class="external" href="http://lxr.mozilla.org/seamonkey/source/toolkit/content/widgets/tabbrowser.xml">tabbrowser.xml</a> の対応する XBL バインディングを参照してください。</p>
+<p>{{ 英語版章題("Getting the browser that fires the http-on-modify-request notification") }}</p>
+<h3 id="http-on-modify-request_通知が発火されたブラウザを取得する">http-on-modify-request 通知が発火されたブラウザを取得する</h3>
+<p>HTTP リクエストの中にはタブと関係ないものもあることに注意してください。例えば、RSS フィードの更新、拡張機能マネージャのリクエスト、XPCOMからの XMLHttpRequest などです。それらの場合、次のコードはnullを返します。</p>
+<pre class="brush: js">observe: function (subject, topic, data) {
+  if (topic == "http-on-modify-request") {
+    subject.QueryInterface(Components.interfaces.nsIHttpChannel);
+    var url = subject.URI.spec; /* リクエストされたurl。きっと必要になるでしょう。 */
+    var browser = this.getBrowserFromChannel(subject);
+    if (browser != null) {
+      /* 何かの処理 */
+    }
+  }
+},
+
+getBrowserFromChannel: function (aChannel) {
+  try {
+    var notificationCallbacks =
+      aChannel.notificationCallbacks ? aChannel.notificationCallbacks : aChannel.loadGroup.notificationCallbacks;
+
+    if (!notificationCallbacks)
+      return null;
+
+    var domWin = notificationCallbacks.getInterface(Components.interfaces.nsIDOMWindow);
+    return gBrowser.getBrowserForDocument(domWin.top.document);
+  }
+  catch (e) {
+    dump(e + "\n");
+    return null;
+  }
+}
+</pre>
+<p>{{ languages( { "en": "en/Code_snippets/Tabbed_browser", "fr": "fr/Extraits_de_code/Onglets_de_navigation", "pl": "pl/Fragmenty_kodu/Przegl\u0105danie_w_kartach" } ) }}</p>

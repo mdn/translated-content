@@ -1,0 +1,135 @@
+---
+title: nsIDownload
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsIDownload
+tags:
+  - Firefox 3
+  - Interfaces
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIDownload
+---
+<p> <code>nsIDownload</code> インタフェースは、ダウンロードオブジェクトを表します。ダウンロードオブジェクトは、ダウンロードマネージャによって利用されています。(ダウンロード待ち、ダウンロード中、ダウンロード完了後のファイルを管理する <code><a href="ja/NsIDownloadManager">nsIDownloadManager</a></code> を参照してください)</p>
+<div class="note">
+ <b>注意:</b> ダウンロードが完了すると、ダウンロードマネージャは <code>nsIDownload</code> オブジェクトの更新を停止します。完了ステータスは、<code>nsIDownloadManager::DOWNLOAD_FINISHED</code>、<code>nsIDownloadManager::DOWNLOAD_FAILED</code>、<code>nsIDownloadManager::DOWNLOAD_CANCELED</code> のいずれかになります。</div>
+<p><br>
+ </p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/downloads/public/nsIDownload.idl" rel="custom">toolkit/components/downloads/public/nsIDownload.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">最終更新: Gecko 1.9 (Firefox 3)</span></div>
+</div>
+<p>継承元: <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITransfer" title="">nsITransfer</a></code></p>
+<h2 id=".E5.B1.9E.E6.80.A7" name=".E5.B1.9E.E6.80.A7">属性</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">属性</td>
+   <td class="header">型</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code>targetFile</code></td>
+   <td><code><a href="ja/NsILocalFile">nsILocalFile</a></code></td>
+   <td>ダウンロードされたファイルが保存される (あるいはダウンロードが完了している場合は保存された) 場所を示します。
+    <i>
+     読み取り専用。</i>
+   </td>
+  </tr>
+  <tr>
+   <td><code>percentComplete</code></td>
+   <td><code><a href="ja/PRint32">PRint32</a></code></td>
+   <td>完了したファイル転送の割合。ファイルサイズが不明な場合は -1 となります。
+    <i>
+     読み取り専用。</i>
+   </td>
+  </tr>
+  <tr>
+   <td><code>amountTransferred</code></td>
+   <td><code><a href="ja/PRUint64">PRUint64</a></code></td>
+   <td>完了したダウンロードのバイト数。
+    <i>
+     読み取り専用。</i>
+   </td>
+  </tr>
+  <tr>
+   <td><code>size</code></td>
+   <td><code><a href="ja/PRUint64">PRUint64</a></code></td>
+   <td>ファイルの合計サイズ (バイト)。ファイルサイズが不明な場合は <code>LL_MAXUINT</code> となります。
+    <i>
+     読み取り専用。</i>
+   </td>
+  </tr>
+  <tr>
+   <td><code>source</code></td>
+   <td><code><a href="ja/NsIURI">nsIURI</a></code></td>
+   <td>ダウンロードファイルの取得元 URI。
+    <i>
+     読み取り専用。</i>
+   </td>
+  </tr>
+  <tr>
+   <td><code>cancelable</code></td>
+   <td><code><a href="ja/NsICancelable">nsICancelable</a></code></td>
+   <td>ダウンロードをキャンセルするために使用できるオブジェクト。ダウンロード完了後、この値は <code>null</code> に設定されます。
+    <i>
+     読み取り専用。</i>
+   </td>
+  </tr>
+  <tr>
+   <td><code>displayName</code></td>
+   <td><code><a href="ja/AString">AString</a></code></td>
+   <td>ユーザが読める形での転送の説明。
+    <i>
+     読み取り専用。</i>
+   </td>
+  </tr>
+  <tr>
+   <td><code>startTime</code></td>
+   <td><code>long long</code></td>
+   <td>ファイル転送が開始された時刻。
+    <i>
+     読み取り専用。</i>
+   </td>
+  </tr>
+  <tr>
+   <td><code>speed</code></td>
+   <td><code>double</code></td>
+   <td>ダウンロードの転送速度 (バイト/秒)。
+    <i>
+     読み取り専用。</i>
+   </td>
+  </tr>
+  <tr>
+   <td><code>MIMEInfo</code></td>
+   <td><code><a href="ja/NsIMIMEInfo">nsIMIMEInfo</a></code></td>
+   <td>この任意の属性は、MIME タイプ、ヘルパーアプリケーション、ダウンロード完了後にヘルパーアプリケーションを自動的に実行するかどうかなど、ターゲットに関連する MIME 情報を提供します。</td>
+  </tr>
+  <tr>
+   <td><code>id</code></td>
+   <td><code>unsigned long</code></td>
+   <td>データベース内でダウンロードを固有に識別できる ID。</td>
+  </tr>
+  <tr>
+   <td><code>state</code></td>
+   <td><code>short</code></td>
+   <td>ダウンロードの状況。<a href="ja/NsIDownloadManager#Constants">nsIDownloadManager の定数一覧</a> を参照してください。</td>
+  </tr>
+  <tr>
+   <td><code>referrer</code></td>
+   <td><code><a href="ja/NsIURI">nsIURI</a></code></td>
+   <td>ダウンロードのリファラ URI。これは HTTP ダウンロードの場合のみ使用され、<code>null</code> になる可能性もあります。</td>
+  </tr>
+  <tr>
+   <td><code>resumable</code></td>
+   <td><code>boolean</code></td>
+   <td>ダウンロードを中止後に再開できるかどうかを示します。これは、ダウンロードが HTTP/1.1 あるいは FTP を通じて行われていて、サーバが再開に対応している場合のみ有効になります。</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id=".E9.96.A2.E9.80.A3.E8.A8.98.E4.BA.8B" name=".E9.96.A2.E9.80.A3.E8.A8.98.E4.BA.8B">関連記事</h2>
+<p><code><a href="ja/NsIDownloadManager">nsIDownloadManager</a></code>, <code><a href="ja/NsIDownloadProgressListener">nsIDownloadProgressListener</a></code>, <code><a href="ja/NsIXPInstallManagerUI">nsIXPInstallManagerUI</a></code></p>

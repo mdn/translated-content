@@ -1,0 +1,119 @@
+---
+title: Tester les modifications du code de Gaia
+slug: Archive/B2G_OS/Developing_Gaia/Tester_modifications_Gaia
+tags:
+  - Firefox OS
+  - Gaia
+  - Guide
+  - Integration
+  - Testing
+  - UI
+translation_of: Archive/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes
+---
+<div class="summary">
+<p><span class="seoSummary">Une fois que vous avez apporté vos changements au code de Gaia et que ça semble fonctionner, vous devez effectuer des tests pour vous assurer que vos modifications fonctionnent, y compris avec le reste du code. Une fois que c'est le cas, vous pourrez proposer un correctif pour le projet. Cet article explique cette procédure de test.</span></p>
+</div>
+
+<p>La procédure de test consiste généralement à :</p>
+
+<ul>
+ <li>Déboguer avec les outils standards</li>
+ <li>Lancer des tests automatisés</li>
+</ul>
+
+<p>La suite de l'article explique chacune de ces étapes.</p>
+
+<h2 id="Déboguer_avec_les_outils_standards">Déboguer avec les outils standards</h2>
+
+<p>Si vous êtes développeur web, vous serez familier avec le débogage de Gaia. Dans l'article <a href="/en-US/Firefox_OS/Developing_Gaia/Running_the_Gaia_codebase#Running_Gaia_in_Desktop_Firefox">lancer Gaia dans Firefox pour ordinateur</a> et <a href="/en-US/Firefox_OS/Developing_Gaia/Making_Gaia_code_changes#Simple_code_change_example">comment apporter des modifications simples</a>, les outils de développement nécessaires ont déjà été présentés. Pour modifier le code de façon plus complexe, vous devrez tirer pleinement parti des outils de débogage présent dans l'écran de Firefox pour ordinateur.<br>
+ <br>
+ <strong>Note</strong> : Pour plus d'instructions sur l'utilisation de ces outils, voir <a href="/fr/docs/Outils">la section de MDN sur les outils de développement</a>.</p>
+
+<h2 id="Les_tests_automatisés">Les tests automatisés</h2>
+
+<p>Une fois le code édité, vous devez lancer la suite de tests standards qui accompagnent Gaia avant de soumettre un correctif. Cela doit vous permettre de vous assurer que vos modifications n'affectent pas les fonctionnalités essentielles existantes du téléphone. Les tests que vous pouvez lancer sont :</p>
+
+<ul>
+ <li>les tests unitaires</li>
+ <li>les test d'intégration</li>
+ <li>les tests de performance</li>
+ <li>les tests d'interface utilisateur</li>
+</ul>
+
+<p>Généralement, il est demandé que lancer ces tests avant de soumettre un correctif. Si c'est votre première contribution, vous pouvez envoyer votre correctif sans avoir fait les tests. En revanche, vous devez demander de l'aide pour pouvoir lancer les tests à l'avenir. Avant de lancer les tests, veillez à mettre à jour votre dépôt de Gaia afin de disposer de la dernière version des tests.</p>
+
+<div class="note">
+<p><strong>Note </strong>: Pour plus d'informations, vous pouvez lire la page sur les <a href="/en-US/Firefox_OS/Platform/Automated_testing">tests automatisés de Firefox OS</a>.</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong> : Si possible, lancez ces tests sur un vrai appareil si vous en avez un (certaines fonctionnalités ne sont pas supportées dans un émulateur). Si vous ne disposez pas d'un appareil Firefox OS, vous pouvez lancer les tests avec B2G Desktop ou Firefox Nightly.</p>
+</div>
+
+<h3 id="Les_tests_unitaires">Les tests unitaires</h3>
+
+<p>Les tests unitaires sont des tests effectués sur des fragments (<em>unités</em>) de code, assemblés dans une application plus large. Pour le projet Gaia, ces unités sont les applications individuelles. Gaia utilise :</p>
+
+<ul>
+ <li><a href="http://visionmedia.github.io/mocha/">mocha</a> comme <em>framework</em> de test</li>
+ <li><a href="http://chaijs.com/api/assert/">chai</a> comme bibliothèque d'assertion</li>
+ <li><a href="http://sinonjs.org/">sinon.js</a> comme bibliothèque de copiage (<em>mock &amp; stub</em>)</li>
+ <li><a href="http://blanketjs.org/">blanket.js</a> comme outil pour mesurer la couverture des tests</li>
+</ul>
+
+<p>Pour installer et mettre en place un serveur de tests unitaires, vous pouvez lancer les commandes suivantes (cela peut prendre quelques minutes, vous pouvez en profitez pour vous faire une tasse de thé) :</p>
+
+<pre class="brush: bash">DEBUG=1 make
+export FIREFOX=/Applications/FirefoxNightly.app/Contents/MacOS/firefox
+bin/gaia-test
+</pre>
+
+<p>Celà ouvrira une page web en local, avec une liste de tests unitaires. Pour les lancer :</p>
+
+<ul>
+ <li>Choisissez les tests que vous voulez lancer, à partir de la liste sur la page web précédemment ouverte (un astérisque apparaît auprès de chacun d'eux).</li>
+ <li>Appuyez sur le bouton exécuter "Execute".</li>
+ <li>Défilez la page vers le bas pour voir les résultats du test</li>
+</ul>
+
+<p>Tout en maintenant la page web local ouverte, vous pouvez lancer la suite de tests complète, dans une nouvelle fenêtre de terminal, avec la commande suivantes :</p>
+
+<pre class="brush: bash">make test-agent-test</pre>
+
+<div class="note">
+<p><strong>Note </strong>: Cela peut prendre beaucoup de temps étant donné la quantité de tests à effectuer (jusqu'à environ une heure). Dans la plupart des cas, il n'est nécessaire que de lancer les tests pour l'application que vous avez modifiée. Vous pouvez restreindre les tests en ajoutant  <code>APP=&lt;nom du dossier de l'application&gt;</code> à la fin de la commande : par exemple <code>APP=settings</code>.</p>
+</div>
+
+<div class="note">
+<p><strong>Note </strong>: Pour plus d'informations sur les tests unitaires, vous pouvez également lire la page sur <a href="/fr/Firefox_OS/Platform/Automated_testing/Gaia_unit_tests">les tests unitaires de Gaia</a>.</p>
+</div>
+
+<h3 id="Les_tests_d'intégration">Les tests d'intégration</h3>
+
+<p>Tester l'intégration consiste à tester comment les différentes unités de code fonctionnent entre elles. C'est l'étape logique qui intervient après les tests unitaires. Les tests d'intégration de Gaia utilisent Marionnette qui permet de lancer un script en JavaScript avec un serveur basé sur Python. Ce script peut communiquer avec Gecko et peut donc contrôler le navigateur ainsi que l'appareil Firefox OS et les faire interagir.</p>
+
+<p>Pour lancer les tests d'intégration, vous pouvez lancer la commande suivante :</p>
+
+<pre class="brush: bash">make test-integration</pre>
+
+<div class="note">
+<p><strong>Note</strong> : De même qu'avec les tests unitaires, lancer toute la suite de tests pour l'intégration peut prendre beaucoup de temps. Vous pouvez ajouter <code>APP=&lt;dossier de l'application&gt;</code> à la fin de la commande pour ne tester qu'une seule application, par exemple <code>APP=calendar</code>.</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: Pour lancer les tests d'intégration sur un périphérique différent, il faut ajouter <code>GAIA_DEVICE_TYPE=&lt;device type="" name=""&gt;</code> à la commande précédente pour spécifier le type de périphérique, par exemple <code>GAIA_DEVICE_TYPE=tv</code>. Si ce n'est pas fait, les tests peuvent échouer.</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong> : Pour plus d'informations sur les tests d'intégration, lire l'article sur <a href="/fr/Firefox_OS/Platform/Automated_testing/Gaia_integration_tests">les tests d'intégration de Gaia</a>.</p>
+</div>
+
+<h3 id="Les_tests_de_performance">Les tests de performance</h3>
+
+<p>Les tests de performance de Gaia sont lancés avec <a href="/fr/docs/Mozilla/Firefox_OS/Automated_testing/Raptor">l'utilitaire Raptor CLI</a>. Raptor permet d'automatiser le lancement d'une application plusieurs fois et d'afficher des statistiques sur sa durée de démarrage. Après un test, Raptor affiche de plus les informations d'utilisation mémoire de l'application.</p>
+
+<p>Pour lancer les tests de performance Raptor, voir <a href="/fr/docs/Mozilla/Firefox_OS/Automated_testing/Raptor#Getting_Started">Raptor: Bien commencer.</a></p>
+
+<h3 id="Les_tests_d'interfaces_utilisateurs">Les tests d'interfaces utilisateurs</h3>
+
+<p>Voir la page <a href="/Firefox_OS/Platform/Automated_testing/gaia-ui-tests">d'introduction sur les Tests d'interface utilisateur Gaia</a>.</p>

@@ -1,0 +1,39 @@
+---
+title: XUL_教程/分组方式
+slug: Mozilla/Tech/XUL/Tutorial/The_Box_Model
+tags:
+  - XUL_教程
+translation_of: Archive/Mozilla/XUL/Tutorial/The_Box_Model
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:More_Button_Features" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:Element_Positioning">下一页  »</a></p>
+</div><p></p>
+<p> </p>
+<h3 id=".E7.AE.B1.E4.BD.93.E5.85.A5.E9.97.A8" name=".E7.AE.B1.E4.BD.93.E5.85.A5.E9.97.A8">盒模型入门</h3>
+<p>在XUL里主要的布局叫做“盒模型”。这个模型允许你把窗口分割成连续的盒子。在盒子里面元素可以按水平或垂直方向排列。通过将一系列的盒子结合在一起，使用定位格和元素的<code><code id="a-flex"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code>属性，你可以控制窗口的布局。</p>
+<p>虽然盒模型是XUL元素布局的基础部份，但原理并不复杂，只有几条简单的规则。一个盒子可以将它的子盒布置在两个方向之一，水平或垂直。水平盒子将它的元素进行水平排列，而垂直盒子将它的元素进行垂直排列。你可以把一个盒子想像HTML表格中的一行或一列。除了可以在子元素中放置不同的属性还可以使用一些样式表属性来控制子盒的精确定位和尺寸。</p>
+<h4 id=".E7.AE.B1.E4.BD.93.E4.BE.8B.E5.AD.90" name=".E7.AE.B1.E4.BD.93.E4.BE.8B.E5.AD.90">盒的例子</h4>
+<p>下面是定义盒子的基本语法:</p>
+<pre>&lt;hbox&gt;
+  &lt;!-- horizontal elements --&gt;
+&lt;/hbox&gt;
+
+&lt;vbox&gt;
+  &lt;!-- vertical elements --&gt;
+&lt;/vbox&gt;
+</pre>
+<p><code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/hbox" title="hbox">hbox</a></code></code>元素用来创建一个水平方向的盒子。每个放在<code>hbox</code>中的元素将被水平地排成一行。<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/vbox" title="vbox">vbox</a></code></code> 元素用来创建一个垂直方向的盒子。添加进来的元素将会被垂直地放在前一个的下面。</p>
+<p>同样有一个普通的<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/box" title="box">box</a></code></code>元素默认是水平方向的，和<code>hbox</code>的意思相同。然而，你可以使用<code><code id="a-orient"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code></code> 属生去操作盒子的方向。你可以设置这个属性的值为<code>horizontal</code> 去创建一个水平的盒子和<code>vertical</code>去创建一个垂直的盒子。</p>
+<p>因此，下面两行的效果是一样的:</p>
+<pre>&lt;vbox&gt;&lt;/vbox&gt;
+
+&lt;box orient="vertical"&gt;&lt;/box&gt;
+</pre>
+<p>下面例子展示怎么垂直放置三个按钮。</p>
+<p><span id="%E4%BE%8B1"><a id="%E4%BE%8B1"></a><strong>例1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxes_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxes_1.xul">View</a></p>
+<div class="float-right">
+ <img alt="Image:boxes-ex1.png" class="internal" src="/@api/deki/files/2644/=Boxes-ex1.png"></div>
+<pre>&lt;vbox&gt;
+  &lt;button id="yes" label="Yes"/&gt;
+  &lt;button id="no" label="No"/&gt;
+  &lt;</pre>

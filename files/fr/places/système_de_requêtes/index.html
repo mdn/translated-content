@@ -1,0 +1,209 @@
+---
+title: Système de requêtes
+slug: Places/Système_de_requêtes
+tags:
+  - Développement_de_Mozilla
+  - Extensions
+  - Firefox 3
+  - Places
+translation_of: Mozilla/Tech/Places/Querying
+---
+<p></p>
+
+<p>L'historique et les marque-pages de Firefox sont accessibles à l'aide des API de requêtes « <a href="fr/Places">Places</a> ». Ces API permettent d'exécuter des requêtes complexes sur l'historique, les marque pages ou les deux à la fois (à partir de Firefox 3 Alpha 6). Le résultat d'une requête est un objet qui contiendra une liste à plat ou une structure arborescente des données correspondantes. Les définitions de l'API de requête et des structures de données résultantes sont accessibles dans <code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/places/public/nsINavHistoryService.idl" rel="custom">toolkit/components/places/public/nsINavHistoryService.idl</a></code>. Cette page fournit une introduction à certaines opérations courantes, et des exemples d'utilisation des API principales.</p>
+
+<h3 id="Ex.C3.A9cution_d.27une_requ.C3.AAte" name="Ex.C3.A9cution_d.27une_requ.C3.AAte">Exécution d'une requête</h3>
+
+<p>Les requêtes Places sont formées de plusieurs parties basiques :</p>
+
+<ul>
+ <li>L'objet de requête : <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryQuery" title="">nsINavHistoryQuery</a></code>, stocke les paramètres de recherche</li>
+ <li>Les options de requête : <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryQueryOptions" title="">nsINavHistoryQueryOptions</a></code>, permet de configurer les résultats de la recherche</li>
+ <li>Le service d'historique : <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryService" title="">nsINavHistoryService</a></code>, exécute la requête</li>
+</ul>
+
+<p>La première étape est de créer la requête et ses options, et de les remplir avec les paramètres désirés. Utilisez <code>nsINavHistoryService.getNewQuery()</code> et <code>nsINavHistoryService.getNewQueryOptions()</code> pour obtenir des objets vides. Les valeurs par défaut pour ces objets résulteront en une requête renvoyant tout l'historique de votre navigateur dans une liste à plat :</p>
+
+<pre>var historyService = Components.classes["@mozilla.org/browser/nav-history-service;1"]
+                               .getService(Components.interfaces.nsINavHistoryService);
+
+// en l'absence de paramètres de requête, on obtiendra tout l'historique
+// XXX l'ordre de tri par défaut est... ?
+var options = historyService.getNewQueryOptions();
+
+// en l'absence de paramètres de requête, on obtiendra tout
+var query = historyService.getNewQuery();
+
+// exécution de la requête
+var result = historyService.executeQuery(query, options);
+
+</pre>
+
+<h4 id="Types_de_r.C3.A9sultats" name="Types_de_r.C3.A9sultats">Types de résultats</h4>
+
+<p><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryQueryOptions" title="">nsINavHistoryQueryOptions</a></code> dispose d'une propriété <code>resultType</code> permettant de configurer le groupement et niveau de détail à renvoyer dans les résultats. Les différentes valeurs pour cette propriété sont listées ci-dessous. Ces valeurs sont également des propriétés de <code>nsINavHistoryQueryOptions</code>, et l'on y accède de la manière suivante : <code>Components.interfaces.nsINavHistoryQueryOptions.RESULTS_AS_VISIT</code>.</p>
+
+<ul>
+ <li><strong>RESULTS_AS_URI</strong> : C'est la valeur par défaut, et elle renvoie un nœud de résultat de type <code>RESULT_TYPE_URI</code> pour chaque URI correspondant à la requête. La date de visite pour chaque nœud sera celle de la dernière visite pour cette URL.</li>
+ <li><strong>RESULTS_AS_VISIT</strong> : Cette option renvoie une entrée pour chaque fois qu'une page a été visitée selon la requête formulée. Le résultat peut contenir plusieurs entrées par URL, chacune avec une date différente. Les nœuds sont de type <code>RESULT_TYPE_VISIT</code>, et fournissent un ID de session pour chaque visite. Cet ID de session est identique pour toutes les pages qui ont été atteintes en cliquant sur des liens. Une nouvelle session démarre lorsque l'utilisateur entre une nouvelle URL ou suit un marque-page (XXX lier vers des détails supplémentaires concernant ce qui constitue une session).</li>
+ <li><strong>RESULTS_AS_FULL_VISIT</strong> : Il s'agit d'une version étendue de <code>RESULT_TYPE_VISIT</code>. Les résultats sont de type <code>RESULT_TYPE_FULL_VISIT</code> et fournissent des informations supplémentaires concernant la visite, comme la référence suivie et la manière dont la transition s'est faite (entrée manuelle, redirection, lien, etc.)</li>
+</ul>
+
+<h4 id="Param.C3.A8tres_de_recherche_basiques_d.27une_requ.C3.AAte" name="Param.C3.A8tres_de_recherche_basiques_d.27une_requ.C3.AAte">Paramètres de recherche basiques d'une requête</h4>
+
+<p><span class="comment">const unsigned long TIME_RELATIVE_EPOCH = 0 const unsigned long TIME_RELATIVE_TODAY = 1 const unsigned long TIME_RELATIVE_NOW = 2 attribute PRTime beginTime attribute unsigned long beginTimeReference readonly attribute boolean hasBeginTime readonly attribute PRTime absoluteBeginTime attribute PRTime endTime attribute unsigned long endTimeReference readonly attribute boolean hasEndTime readonly attribute PRTime absoluteEndTime attribute AString searchTerms readonly attribute boolean hasSearchTerms attribute long minVisits attribute long maxVisits attribute boolean onlyBookmarked attribute boolean domainIsHost attribute AUTF8String domain readonly attribute boolean hasDomain attribute boolean uriIsPrefix attribute nsIURI uri readonly attribute boolean hasUri attribute boolean annotationIsNot attribute AUTF8String annotation readonly attribute boolean hasAnnotation readonly attribute unsigned long folderCount</span></p>
+
+<h4 id="Options_de_configuration_basiques_d.27une_requ.C3.AAte" name="Options_de_configuration_basiques_d.27une_requ.C3.AAte">Options de configuration basiques d'une requête</h4>
+
+<p><span class="comment">const unsigned short GROUP_BY_DAY = 0 const unsigned short GROUP_BY_HOST = 1 const unsigned short GROUP_BY_DOMAIN = 2 const unsigned short GROUP_BY_FOLDER = 3 const unsigned short SORT_BY_NONE = 0 const unsigned short SORT_BY_TITLE_ASCENDING = 1 const unsigned short SORT_BY_TITLE_DESCENDING = 2 const unsigned short SORT_BY_DATE_ASCENDING = 3 const unsigned short SORT_BY_DATE_DESCENDING = 4 const unsigned short SORT_BY_URI_ASCENDING = 5 const unsigned short SORT_BY_URI_DESCENDING = 6 const unsigned short SORT_BY_VISITCOUNT_ASCENDING = 7 const unsigned short SORT_BY_VISITCOUNT_DESCENDING = 8 const unsigned short SORT_BY_KEYWORD_ASCENDING = 9 const unsigned short SORT_BY_KEYWORD_DESCENDING = 10 const unsigned short SORT_BY_DATEADDED_ASCENDING = 11 const unsigned short SORT_BY_DATEADDED_DESCENDING = 12 const unsigned short SORT_BY_LASTMODIFIED_ASCENDING = 13 const unsigned short SORT_BY_LASTMODIFIED_DESCENDING = 14 const unsigned short SORT_BY_ANNOTATION_ASCENDING = 15 const unsigned short SORT_BY_ANNOTATION_DESCENDING = 16 const unsigned short RESULTS_AS_URI = 0 const unsigned short RESULTS_AS_VISIT = 1 const unsigned short RESULTS_AS_FULL_VISIT = 2 attribute unsigned short sortingMode attribute AUTF8String sortingAnnotation attribute unsigned short resultType attribute boolean excludeItems attribute boolean excludeQueries attribute boolean excludeReadOnlyFolders attribute boolean expandQueries attribute boolean includeHidden attribute boolean showSessions attribute unsigned long maxResults const unsigned short QUERY_TYPE_HISTORY = 0 const unsigned short QUERY_TYPE_BOOKMARKS = 1 const unsigned short QUERY_TYPE_UNIFIED = 2 attribute unsigned short queryType</span></p>
+
+<h4 id="Requ.C3.AAtes_complexes" name="Requ.C3.AAtes_complexes">Requêtes complexes</h4>
+
+<p>Il est possible de passer un ou plusieurs objets <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryQuery" title="">nsINavHistoryQuery</a></code> à <code>executeQueries()</code>. Au sein d'un objet de requête, tous les paramètres sont combinés ensemble avec l'opérateur<em>ET</em>. Les conditions pour différents objets de requête sont ensuite combinées avec l'opérateur<em>OU</em>. Ceci permet une implémentation et une interface plus simples qu'une opération logique complète avec des clauses imbriquées tout en restant expressif.</p>
+
+<p>Voici un exemple de requête pour toutes les pages visitées qui contiennent le mot « firefox » dans le titre/l'URL ou qui ont été visitées aujourd'hui sur le site mozilla.org.</p>
+
+<pre>// le premier objet de requête cherche « firefox » dans le titre/l'URL
+var query1 = historyService.getNewQuery();
+query1.searchTerms = "firefox";
+
+// le second objet de requête cherche des pages visitées dans les dernières 24 heures ET provenant de mozilla.org
+var query2 = historyService.getNewQuery();
+query2.beginTimeReference = query2.TIME_RELATIVE_NOW;
+query2.beginTime = -24 * 60 * 60 * 1000000; // 24 heures en microsecondes
+query2.endTimeReference = query2.TIME_RELATIVE_NOW;
+query2.endTime = 0; // maintenant
+query2.domain = "mozilla.org";
+
+var result = historyService.executeQueries([query1, query2], 2, options);
+</pre>
+
+<div class="note"><strong>Note</strong> : La recherche par mots-clés ne fonctionne pas correctement au travers des requêtes<em>OU</em>. Le comportement actuel effectue la requête normale et sélectionne ensuite les mots-clés de la première requête et filtre tous les résultats. (En d'autres termes, les mots-clés de la première requête sont combinés avec<em>ET</em> pour toutes les requêtes.) Les mots-clés des requêtes qui suivent sont ignorés. Il s'agit du <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=320332" title="Fix query filtering and keyword searching - does not work for multiple OR'ed queries">bug 320332</a>.</div>
+
+<h4 id="Requ.C3.AAtes_de_marque-pages" name="Requ.C3.AAtes_de_marque-pages">Requêtes de marque-pages</h4>
+
+<p>Un guide expliquant comment effectuer rapidement des requêtes simples sur les marque-pages se trouve dans <a href="fr/Places/Acc%c3%a8s_aux_marque-pages">Accès aux marque-pages</a>.</p>
+
+<p>Le contenu des dossiers de marque-pages peut être obtenu en définissant le membre « folders » dans l'objet de requête. Cet élément est un tableau d'ID de dossiers venant du service de marque-pages. Typiquement, vous ne donnerez qu'un ID de dossier dans cette liste, ce qui vous fournira le contenu de ce dossier. Vous pouvez cependant définir plusieurs dossiers et le résultat sera l'union de tous ces dossiers.</p>
+
+<div class="warning"><strong>Attention</strong> : Il existe une option GROUP_BY_FOLDER qui est censée affecter les requêtes de marque-pages. Celle-ci n'est pas implémentée, comme l'indique le <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=331487" title="Fix GROUP_BY_FOLDER in query system">bug 331487</a>. Vous devriez toujours utiliser cette option si vous voulez une hiérarchie de marque-pages. L'absence de cette option signifiera que la valeur de retour doit être une liste à plat de tous les éléments de marque-pages dans tous les dossiers renvoyés par la requête.</div>
+
+<p>Pour le tri, vous utiliserez généralement <code>SORT_BY_NONE</code> (la valeur par défaut), puisque celle-ci renverra les éléments dans leur ordre « naturel » tel que spécifié par l'utilisateur dans le gestionnaire de marque-pages. D'autres tris fonctionneront cependant.</p>
+
+<p>Pour les requêtes de marque-pages, vous ne voudrez généralement pas de paramètres de requête pour obtenir tous les éléments des dossiers demandés. C'est lorsque vous spécifiez exactement un dossier, <code>GROUP_BY_FOLDER</code> et aucun paramètre de requête que le système sera le plus efficient dans la recherche et la maintenance à jour des résultats, puisque cela correspond exactement à un dossier de marque-pages.</p>
+
+<pre>var bookmarkService = Components.classes["@mozilla.org/browser/nav-bookmarks-service;1"]
+                                .getService(Components.interfaces.nsINavBookmarksService);
+// |query| et |options| sont des objets créés dans la section précédente
+query.setFolders([bookmarkService.toolbarRoot], 1);
+options.setGroupingMode([options.GROUP_BY_FOLDER], 1);
+var result = historyService.executeQuery(query, options);
+</pre>
+
+<h3 id="S.C3.A9rialisation_des_requ.C3.AAtes" name="S.C3.A9rialisation_des_requ.C3.AAtes">Sérialisation des requêtes</h3>
+
+<p>Les requêtes et objets d'options peuvent être sérialisées en une chaîne commençant par « place: » à l'aide de <code>queriesToQueryString</code>. La chaîne résultante peut être enregistrée ou ajoutée aux marque-pages. Lorsqu'une URI « place: » est ajoutée aux marque-pages, elle permettra l'affichage des résultats de la requête lorsqu'elle sera ouverte par l'utilisateur. Les objets originaux peuvent être retirés de la chaîne avec <code>queryStringToQueries</code>.</p>
+
+<p>Faites attention, <code>queryStringToQueries</code> peut ne renvoyer aucun objet de requête si la chaîne est vide. Votre code doit gérer ce cas. Il y aura par contre toujours une structure d'options renvoyée. Si aucune option n'a été spécifiée, elle aura les valeurs par défaut. S'il aucun paramètre de requête n'avait été spécifié mais que la chaîne n'était pas vide (il y avait des options), il est possible que vous obteniez un objet de requête contenant les valeurs de requête par défaut.</p>
+
+<p>Voici un exemple de sérialisation et désérialisation de deux requêtes et d'un objet d'options :</p>
+
+<pre>var queryString = historyService.queriesToQueryStrings([query1, query2], 2, options);
+
+var queriesRef = { };
+var queryCountRef = { };
+var optionsRef = { };
+historyService.queryStringToQueries(queryString, queriesRef, queryCountRef, optionsRef);
+// utilisez maintenant queriesRef.value, optionsRef.value
+</pre>
+
+<p>Une référence des termes disponibles pour les URI « place: » est disponible dans <a href="fr/Places/PlaceURI">PlaceURI</a>.</p>
+
+<h3 id="Utilisation_des_r.C3.A9sultats" name="Utilisation_des_r.C3.A9sultats">Utilisation des résultats</h3>
+
+<p>La manière la plus courante d'utiliser les résultats et d'implémenter une vie. Une vue intégrée mettant les résultats dans des contrôles d'arbres existent, mais vous pouvez également implémenter la vôtre. Consultez <a href="fr/Places/Vues">Places:Vues</a> pour plus de détails. Cette section explique comment accéder aux résultats directement, par exemple si vous créez votre propre vue ou désirez simplement y accéder sans les afficher.</p>
+
+<p><em>Note : faites attention lorsque vous accédez à des nœuds sans conserver de références à ceux-ci. Les notifications envoyées à l'historique et au système de marque-pages, ainsi que les commandes exécutées par le programmeur comme un tri peuvent provoquer un changement dans la structure et des nœuds peuvent être insérés, retirés ou remplacés.</em></p>
+
+<p>L'objet <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryResult" title="">nsINavHistoryResult</a></code> renvoyé par <code>executeQuery()</code>/<code>executeQueries()</code> contient la liste des correspondances de la requête de marque-pages ou d'historique donnée. Ces résultats sont conservés dans une structure arborescente de nœuds. Le type d'un nœud peut être obtenu à l'aide de son attribut <code>type</code>. Celui-ci indique l'interface à utiliser avec <code>QueryInterface</code> sur le nœud afin d'en obtenir des informations plus détaillées :</p>
+
+<ul>
+ <li><strong>nsINavHistoryResultNode</strong> : Classe de base pour tous les nœuds. Contient une URI, un titre et d'autres informations générales.</li>
+ <li><strong>nsINavHistoryVisitResultNode</strong> : Dérivée de <code>nsINavHistoryResultNode</code>, contient des informations de session.</li>
+ <li><strong>nsINavHistoryFullVisitResultNode</strong> : Dérivée de <code>nsINavHistoryVisitResultNode</code>, contient des informations concernant la manière dont l'utilisateur a atteint la page.<em>Note : actuellement non implémentée, voir le <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=320831" title="Expose visit ID in result nodes.">bug 320831</a>.</em></li>
+ <li><strong>nsINavHistoryContainerResultNode</strong> : Nœud conteneur général donnant accès à ses enfants. Dérivé de <code>nsINavHistoryResultNode</code>. Les dossiers de marque-pages sont de ce type.</li>
+ <li><strong>nsINavHistoryQueryResultNode</strong> : Un type de conteneur représentant une requête du système d'historique. Il permet d'obtenir les options et paramètres de requête.</li>
+ <li><strong>nsINavHistoryFolderResultNode</strong> : Dérivée de <code>nsINavHistoryQueryResultNode</code>, ceci représente un type spécial de requête correspondant au contenu exact d'un des dossiers de marque-âges. Elle donne accès à son ID de dossier et se met à jour plus rapidement qu'une requête générale.</li>
+</ul>
+
+<p>Exemple de détection du type d'un nœud</p>
+
+<pre>var Ci = Components.interfaces;
+switch(node.type)
+  case node.RESULT_TYPE_URI:
+    dump("Résultat URI " + node.uri + "\n");
+    break;
+  case node.RESULT_TYPE_VISIT:
+    var visit = node.QueryInterface(Ci.nsINavHistoryVisitResultNode);
+    dump("Résultat de visite " + node.uri + " session = " + visit.sessionId + "\n");
+    break;
+  case node.RESULT_TYPE_FULL_VISIT:
+    var fullVisit = node.QueryInterface(Ci.nsINavHistoryFullVisitResultNode);
+    dump("Résultat complet de visite " + node.uri + " session = " + fullVisit.sessionId + " transitionType = " +
+         fullVisit.transitionType + "\n");
+    break;
+  case node.RESULT_TYPE_HOST:
+    var container = node.QueryInterface(Ci.nsINavHistoryContainerResultNode);
+    dump("Hôte " + container.title + "\n");
+    break;
+  case node.RESULT_TYPE_REMOTE_CONTAINER:
+    var container = node.QueryInterface(Ci.nsINavHistoryContainerResultNode);
+    dump("Conteneur distant " + container.title + " type = " + container.remoteContainerType + "\n");
+    break;
+  case node.RESULT_TYPE_QUERY:
+    var query = node.QueryInterface(Ci.nsINavHistoryQueryResultNode);
+    dump("Requête, URI place = " + query.uri + "\n");
+    break;
+  case node.RESULT_TYPE_FOLDER:
+    // Notez que le dossier est également de type type nsINavHistoryContainerResultNode par défaut,
+    // mais qu'il n'est pas possible de faire un QI sur nsINavHistoryQueryResultNode pour accéder
+    // à la requête et aux options qui l'ont créé.
+    dump("Dossier " + node.title + " id = " + node.itemId + "\n");
+    break;
+  case node.RESULT_TYPE_SEPARATOR:
+    dump("-----------\n");
+    break;
+}
+</pre>
+
+<h4 id="Conteneurs" name="Conteneurs">Conteneurs</h4>
+
+<p>Les conteneurs conservent des listes d'autres conteneurs et de nœuds de résultats. Chaque résultat a un conteneur représentant la racine de la requête. Il peut être obtenu à l'aide de l'attribut <code>root</code> du résultat. Pour les requêtes générales, ce conteneur racine est un <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryQueryResultNode" title="">nsINavHistoryQueryResultNode</a></code> avec les paramètres de requête et options fournis dans la requête d'origine. Pour les requêtes correspondant à un dossier de marque-pages, il s'agira d'un <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryContainerResultNode" title="">nsINavHistoryContainerResultNode</a></code>.</p>
+
+<p>Les conteneurs peuvent être ouverts ou fermés. Ceci correspond aux états <code>open</code> et <code>closed</code> dans une vue arborescente, et peut également correspondre à l'affichage et le masquage de menus. Pour obtenir le contenu d'un conteneur, il faut d'abord l'ouvrir. La plupart des conteneurs se remplissent d'eux-mêmes paresseusement, ouvrir un conteneur correspond donc à exécuter la requête donnée. Tant qu'un conteneur est ouvert, il écoutera les nofifications du système d'historique et de marque-pages et modifiera son contenu pour rester à jour. Pour cette raison, il vaut mieux fermer un conteneur dès que vous en avez terminé avec lui, car cela amènera de meilleures performances. Si vous fermez un conteneur et le rouvrez avant qu'aucune notification de changement d'historique ou de marque-pages se fasse, les résultats seront généralement encore là et l'opération sera rapide.</p>
+
+<p>Exemple d'examen d'un conteneur :</p>
+
+<pre>var cont = result.root;
+cont.containerOpen = true;
+for (var i = 0; i &lt; cont.childCount; i ++) {
+  var node = cont.getChild(i);
+  dump(node.title + "\n");
+}
+cont.containerOpen = false;
+</pre>
+
+<h4 id="L.27interface_de_visualisation_des_r.C3.A9sultats" name="L.27interface_de_visualisation_des_r.C3.A9sultats">L'interface de visualisation des résultats</h4>
+
+<p>Si vous faites correspondre un résultat à une interface utilisateur, vous pouvez implémenter l'interface <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryResultViewer" title="">nsINavHistoryResultViewer</a></code> et l'attacher au résultat avec l'attribut <code>nsINavHistoryResult.viewer</code>. Cet afficheur sera appelé lorsque l'arbre des résultats change, que ce soit le résultat d'une action de l'utilisateur ou de notifications des systèmes de marque-pages et d'historique. Votre implémentation pourra alors refléter ces changement dans l'interface utilisateur.</p>
+
+<p>Une interface de visualisation toute faite pour un <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeBoxObject" title="">nsITreeBoxObject</a></code> est fournie, elle gère les nécessités d'affichage complexes d'un arbre. Cette interface d'objet est <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryResultTreeViewer" title="">nsINavHistoryResultTreeViewer</a></code> (un descendant de <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryResultViewer" title="">nsINavHistoryResultViewer</a></code>) et peut être créée à l'aide du contrat <code>@mozilla.org/browser/nav-history/result-tree-viewer;1</code>.</p>
+
+<pre>var treeviewer =
+  Components.classes["@mozilla.org/browser/nav-history/result-tree-viewer;1"]
+            .createInstance(Components.interfaces.nsINavHistoryResultTreeViewer);
+result.viewer = treeviewer;
+mytree.view = treeviewer.QueryInterface(Components.interfaces.nsITreeView);
+</pre>
+
+<p>Tant le résultat que l'arbre s'enregistreront automatiquement auprès de l'objet de visualisation, respectivement à l'aide de l'attribut <code>result</code> et de la méthode <code>setTree</code>. Ne le faites pas explicitement.</p>

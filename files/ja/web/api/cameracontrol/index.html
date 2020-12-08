@@ -1,0 +1,105 @@
+---
+title: CameraControl
+slug: Web/API/CameraControl
+tags:
+  - API
+  - DOM
+  - DOM Reference
+  - Firefox OS
+  - Graphics
+  - JavaScript
+  - Reference
+  - WebAPI
+translation_of: Archive/B2G_OS/API/CameraControl
+---
+<p>{{APIRef("Camera API")}}</p>
+
+<p>{{ non-standard_header() }}</p>
+
+<p>{{B2GOnlyHeader2('privileged')}}</p>
+
+<p><span class="seoSummary">{{domxref("CameraManager.getCamera()")}} メソッドを使用してカメラへの参照を取得する時、成功時に呼び出されるコールバック関数を指定します。この関数は、引数として <code>CameraControl</code> オブジェクトを受け取ります。このオブジェクトのメソッドとプロパティは、カメラの管理と使用に使います。</span></p>
+
+<h2 id="Properties" name="Properties">プロパティ</h2>
+
+<dl>
+ <dt>{{domxref("CameraControl.capabilities")}} {{readonlyinline}}</dt>
+ <dd>{{domxref("CameraCapabilities")}} オブジェクトは、与えられたカメラについてのすべてのキャパビリティ示します。</dd>
+ <dt>{{domxref("CameraControl.effect")}}</dt>
+ <dd>カメラで使用するエフェクトを定義する文字列 (デフォルトは <code>none</code>) です。この値は、{{domxref("CameraCapabilities.effects")}} に定義された値のいずれかでなければなりません。</dd>
+ <dt>{{domxref("CameraControl.exposureCompensation")}} {{readonlyinline}}</dt>
+ <dd>カメラの露光補正に使用する値です。この属性は読み取り専用です。露光値を変更するには、{{domxref("CameraControl.setExposureCompensation()")}} メソッドを呼び出す必要があります。</dd>
+ <dt>{{domxref("CameraControl.flashMode")}}</dt>
+ <dd>フラッシュの仕方を定義する文字列です。何らかの値が設定されると、カメラにフラッシュが搭載されていれば、この値はデフォルトで <code>auto</code>、搭載されていなければ <code>none</code> になります。値を設定する時は、{{domxref("CameraCapabilities.flashModes")}} に定義されたオプションのリストから選択しなければなりません。</dd>
+ <dt>{{domxref("CameraControl.focalLength")}} {{readonlyinline}}</dt>
+ <dd>カメラの焦点距離を絞るミリメートル単位の数値です。</dd>
+ <dt>{{domxref("CameraControl.focusAreas")}}</dt>
+ <dd>カメラのオートフォーカスする領域を定義するオブジェクトの <a href="/docs/JavaScript/Reference/Global_Objects/Array" title="/docs/JavaScript/Reference/Global_Objects/Array"><code>配列</code></a> です。</dd>
+ <dt>{{domxref("CameraControl.focusDistanceFar")}} {{readonlyinline}}</dt>
+ <dd>この値は、画像の被写界深度を定義するための {{domxref("CameraControl.focusDistanceNear")}} と共に使用する、メートル単位の距離です。このプロパティの値は、<code><a href="/docs/JavaScript/Reference/Global_Objects/Infinity" title="/docs/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code> になる可能性があります。</dd>
+ <dt>{{domxref("CameraControl.focusDistanceNear")}} {{readonlyinline}}</dt>
+ <dd>この値は、画像の被写界深度を定義するための {{domxref("CameraControl.focusDistanceFar")}} と共に使用する、メートル単位の距離です。</dd>
+ <dt>{{domxref("CameraControl.focusDistanceOptimum")}} {{readonlyinline}}</dt>
+ <dd>この値は、被写体が最も鮮明に映るメートル単位の距離です。</dd>
+ <dt>{{domxref("CameraControl.focusMode")}}</dt>
+ <dd>カメラが使用するフォーカスモードの種類を定義する文字列 (デフォルトで <code>auto</code> または <code>fixed</code>) です。この値は {{domxref("CameraCapabilities.focusModes")}} から選択されなければなりません。</dd>
+ <dt>{{domxref("CameraControl.meteringAreas")}}</dt>
+ <dd>カメラがオートフォーカスする領域を定義するオブジェクトの <a href="/docs/JavaScript/Reference/Global_Objects/Array" title="/docs/JavaScript/Reference/Global_Objects/Array"><code>配列</code></a> です。</dd>
+ <dt>{{domxref("CameraControl.onShutter")}}</dt>
+ <dd>カメラの "shutter" イベントのイベントハンドラです。シャッター音または視覚的なシャッター効果を発生させる関数を指定します。</dd>
+ <dt>{{domxref("CameraControl.onClosed")}}</dt>
+ <dd>同じアプリ内で新しい <code>CameraControl</code> オブジェクトに引き継がれた時に呼び出されるイベントハンドラです。</dd>
+ <dt>{{domxref("CameraControl.onRecorderStateChange")}}</dt>
+ <dd>レコーダーの状態が変更された時、つまり、記録処理中にエラーが発生した時や記録データのいずれかの制限 ({{domxref("CameraControl.startRecording()")}} 参照) に達した時に呼び出される関数です。</dd>
+ <dt>{{domxref("CameraControl.sceneMode")}}</dt>
+ <dd>カメラが使用するシーンモードを定義する文字列 (デフォルトで <code>auto</code>) です。この値は、{{domxref("CameraCapabilities.sceneModes")}} から選択されなければなりません。</dd>
+ <dt>{{domxref("CameraControl.whiteBalanceMode")}}</dt>
+ <dd>カメラのホワイトバランスのモードを定義する文字列 (デフォルトで <code>auto</code>) です。この値は、{{domxref("CameraCapabilities.whiteBalanceModes")}} から選択されなければなりません。</dd>
+ <dt>{{domxref("CameraControl.zoom")}}</dt>
+ <dd>カメラが使用するズームファクタモードの種類を定義する数値 (デフォルトで <code>1</code>) です。この値は、{{domxref("CameraCapabilities.zoomRatios")}} から選択されなければなりません。</dd>
+</dl>
+
+<h2 id="Methods" name="Methods">メソッド</h2>
+
+<dl>
+ <dt>{{ domxref("CameraControl.autoFocus()") }}</dt>
+ <dd>カメラ画像のフォーカスを合わせます。</dd>
+ <dt>{{ domxref("CameraControl.getPreviewStream()") }}</dt>
+ <dd>カメラから動画ストリームを取得します。このメソッドは任意のタイミングで使用できます。</dd>
+ <dt>{{ domxref("CameraControl.getPreviewStreamVideoMode()") }}</dt>
+ <dd>カメラから動画ストリームを取得します。特定の動画モードで使用できます。</dd>
+ <dt>{{ domxref("CameraControl.release()") }}</dt>
+ <dd>カメラをリリースし、他のアプリケーションがカメラを使えるようにします。</dd>
+ <dt>{{ domxref("CameraControl.resumePreview()") }}</dt>
+ <dd>{{domxref("CameraControl.takePicture()")}} メソッドの呼び出しで一時停止された動画ストリームのプレビューを再開します。</dd>
+ <dt>{{ domxref("CameraControl.setConfiguration()") }}</dt>
+ <dd>アドホックな設定変更をします。</dd>
+ <dt>{{ domxref("CameraControl.setExposureCompensation()") }}</dt>
+ <dd>露光補正ファクタを指定します。</dd>
+ <dt>{{ domxref("CameraControl.startRecording()") }}</dt>
+ <dd>動画ストリームの記録を開始します。</dd>
+ <dt>{{ domxref("CameraControl.stopRecording()") }}</dt>
+ <dd>動画ストリームの記録を停止します。</dd>
+ <dt>{{ domxref("CameraControl.pauseRecording()") }}</dt>
+ <dd>動画ストリームの記録を一時停止します。</dd>
+ <dt>{{ domxref("CameraControl.resumeRecording()") }}</dt>
+ <dd>一時停止された動画ストリームの記録を再開します。</dd>
+ <dt>{{ domxref("CameraControl.takePicture()") }}</dt>
+ <dd>写真を撮ります。写真データは {{domxref("Blob")}} で受け取ります。</dd>
+</dl>
+
+<h2 id="Specification" name="Specification">仕様</h2>
+
+<p>{{page("/ja/docs/Web/API/Navigator/mozCameras","Specification")}}</p>
+
+<h2 id="Permissions" name="Permissions">許可設定</h2>
+
+<p>{{page("/ja/docs/Web/API/Navigator/mozCameras","Permissions")}}</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>{{ domxref("CameraManager") }}</li>
+ <li>{{ domxref("CameraCapabilities") }}</li>
+ <li>{{ domxref("navigator.mozCamera") }}</li>
+</ul>

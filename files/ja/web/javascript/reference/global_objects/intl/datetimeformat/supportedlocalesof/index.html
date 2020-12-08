@@ -1,0 +1,128 @@
+---
+title: Intl.DateTimeFormat.supportedLocalesOf()
+slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocalesOf
+tags:
+  - DateTimeFormat
+  - Internationalization
+  - JavaScript
+  - Method
+  - Prototype
+translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocalesOf
+---
+<div>{{JSRef("Global_Objects", "DateTimeFormat", "Intl,Collator,NumberFormat")}}</div>
+
+<h2 id="概要">概要</h2>
+
+<p>ランタイムのデフォルトローケルに戻る必要なしでフォーマットしている日時でサポートしている提供されているローケルを含んでいる配列を返します。</p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="syntaxbox"><code>Intl.DateTimeFormat.supportedLocalesOf(<var>locales</var>[, <var>options</var>])</code></pre>
+
+<h3 id="Parameters" name="Parameters">引数</h3>
+
+<dl>
+ <dt><code>locales</code></dt>
+ <dd>BCP47言語タグの文字列、そのような文字列の配列。 <code>locales</code>引数の一般的な形式に対して、{{jsxref("Global_Objects/Intl", "Intl page", "#Locale_identification_and_negotiation", 1)}}を確かめて下さい。</dd>
+ <dt><code>options</code></dt>
+ <dd>
+ <p>オプション。次のプロパティを持つオブジェクト:</p>
+
+ <dl>
+  <dt><code>localeMatcher</code></dt>
+  <dd>使っているローケルマッチングアルゴリズム。利用可能な値は<code>"lookup"</code>、<code>"best fit"</code>。デフォルトでは <code>"best fit"</code>。このオプションについての情報のために、{{jsxref("Global_Objects/Intl", "Intl page", "#Locale_negotiation", 1)}}を確かめて下さい。</dd>
+ </dl>
+ </dd>
+</dl>
+
+<h2 id="説明">説明</h2>
+
+<p><code>locales</code>で提供されている言語タグのサブセットを持つ配列を返します。返される言語タグは、ランタイムがローケルマッチングアルゴリズムを使って考慮してフォーマットしている日時でのローケルをサポートしていてるので、デフォルトローケルに戻る必要はありません。</p>
+
+<h2 id="例">例</h2>
+
+<h3 id="例_supportedLocalesOfを使う">例: <code>supportedLocalesOf</code>を使う</h3>
+
+<p>日時のフォーマットで、バリ語ではなく、インドネシア語とドイツ語をサポートしているランタイムを仮定すると、<code>supportedLocalesOf</code>はインドネシア語とドイツ語の言語タグを返します。ピンインは日時のフォーマットには適切ではなくインドネシア語では使われません。インドネシアの特定のドイツ語はサポートされそうにもありません。 <code>"lookup"</code>アルゴリズムの指定に注意して下さい。<code>"best fit"</code>はインドネシア語はバリ語に対して、十分にふさわしいと決定するかもしれません。というのも、 ほとんどのバリの人はインドネシア語も理解するからです。それゆえバリ言語タグも同様に返します。</p>
+
+<pre class="brush: js">var locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
+var options = { localeMatcher: 'lookup' };
+console.log(Intl.DateTimeFormat.supportedLocalesOf(locales, options).join(', '));
+// → "id-u-co-pinyin, de-ID"
+</pre>
+
+<h2 id="仕様">仕様</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状況</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES Int 1.0', '#sec-12.2.2', 'Intl.DateTimeFormat.supportedLocalesOf')}}</td>
+   <td>{{Spec2('ES Int 1.0')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>機能</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>基本サポート</td>
+   <td>{{CompatChrome("24")}}</td>
+   <td>{{CompatGeckoDesktop("29")}}</td>
+   <td>{{CompatIE("11")}}</td>
+   <td>{{CompatOpera("15")}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>機能</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>基本サポート</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatChrome("26")}}</td>
+   <td>{{CompatNo}}<br>
+    {{bug("864843")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="関連情報">関連情報</h2>
+
+<ul>
+ <li>{{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}</li>
+</ul>

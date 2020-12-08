@@ -1,0 +1,108 @@
+---
+title: Mozilla Crypto FAQ
+slug: Mozilla_Crypto_FAQ
+tags:
+  - NSS
+translation_of: Archive/Mozilla/Mozilla_crypto_FAQ
+---
+<p></p><div class="warning warningHeader">
+    <p><strong>警告:</strong> <strong>この記事の内容は古くなっている可能性があります。</strong> このドキュメントの最終更新は 2000 年です。</p>
+</div>
+<p></p><p>このドキュメントでは、Mozilla Web ブラウザについて、そしてメール／ニュースクライアントとそこでサポートされる SSL、S/MIME、および暗号化機能を基にした関連する機能についてよく受ける質問について答えていきたいと思います。このドキュメントはあくまで参考であり、法律的な意味を持つアドバイスではないということを念頭においてください。あなたが暗号化機能を持つソフトウェアを開発し配付 (特に商業的な販売や頒布) をしたいと考えている場合は、あなたが住む地域に適用される法律や規制について専門的な知識を持つ弁護士に相談してください。
+</p><p>RSA 公開鍵アルゴリズムがパブリックドメインに加えられ、そして完全にオープンソース暗号化機能実装が Mozilla コードベースに加えられたために、この「Mozilla 暗号化機能 FAQ」を更新しました。この FAQ にある情報はまた、2000 年 1 月 14 日に制定され 2000 年 2 月 11 日に公開された合衆国の新しい暗号化機能輸出規制について、SSL、S/MIME、および PKI 機能の Mozilla プロジェクトでの利用について、さらに 2000 年 2 月 17 日に輸出管理局により発行された「バーンシュタイン勧告」についても反映しています。
+</p><p>この FAQ にある質問は、暗号化および関連するセキュリティ機能に対する Mozilla のサポート、Mozilla の暗号化機能に関連する貢献者にとって大切な情報、そして暗号化テクノロジーに関する合衆国の規制についての一般的な質問を扱っていきます。
+</p>
+<h3 id="Mozilla_における暗号化機能"> Mozilla における暗号化機能 </h3>
+<h4 id="Mozilla_と暗号化機能についての問題はすべて解決したのでしょうか？"> Mozilla と暗号化機能についての問題はすべて解決したのでしょうか？ </h4>
+<p>ほとんど解決しました。RSA 特許がパブリックドメイン化された今、Mozilla 暗号化機能開発はほとんど制限なく進めることができます。近い将来、Mozilla コードベースには完全なオープンソース暗号化機能ライブラリが組み込まれ、Mozilla には標準機能として SSL サポートが組み込まれることになります。
+</p><p>合衆国政府が 2000 年 1 月に輸出規制を緩和して暗号化機能を実装したオープンソースソフトウェアのソースコードの輸出を許可して以来、Mozilla 暗号化機能開発の主な法的障害は RSA Security, Inc. が RSA 公開鍵アルゴリズムの特許を合衆国で保持しているという事実だけとなりました。2000 年 2 月、iPlanet E-Commerce Solutions (Sun-Netscape Alliance) はパーソナルセキュリティマネージャ (PSM) およびネットワークセキュリティサービス (NSS) のソースコードを mozilla.org を通じて公開しました。このソースコードには SSL プロトコルへのサポートが含まれていますが、RSA 特許および関連する法的問題が原因で RSA や他の暗号化機能アルゴリズムのためのコードはもともと含まれていませんでした。
+</p><p>2000 年 9 月 6 日、RSA Security は RSA 特許をパブリックドメイン化しました。これはその特許が効力を失う 2 週間前 (2000 年 9 月 20 日) のことです。その後すぐに、NSS 開発者は RSA アルゴリズムのオープンソース実装に向けての作業を開始しました。このコードは、以前他の暗号化機能アルゴリズムのために開発されたコードとともに、NSS オープンソース暗号化機能の新しいバージョン 3.1 および PKI ライブラリに含まれることになります。
+</p><p>この新しい RSA 可能な NSS は、オープンソース PSM ソフトウェアの将来のバージョンに含まれる予定です。これにより、Mozilla での SSL サポートが提供されることになります。この時点で、NSS および PSM の両方が mozilla.org サイトから入手できるオープンソースコードを利用したビルドが完全に可能になり、NSS および PSM は mozilla.org により公開される Mozilla バイナリに組み込まれることになります。
+</p><p>RSA 特許に関してより詳しい情報は、パブリックドメインに特許の公開を宣言した <a class="external" href="http://www.rsasecurity.com/news/pr/000906-1.html">RSA Security プレスリリース</a> <span style="color: darkgreen; background: #ef9;">【訳注: 現在リンク切れ】</span> および <a class="external" href="http://www.patents.ibm.com/details?&amp;pn=US04405829__">RSA 特許</a> <span style="color: darkgreen; background: #ef9;">【訳注: 現在リンク切れ】</span> そのものをご覧ください。
+</p><p>新しい合衆国暗号化機能輸出規制についてのより詳しい情報は、新しい規制を宣言した合衆国商務省の <a class="external" href="http://www.cdt.org/crypto/admin/000112commerceannounce.shtml">プレスリリース</a> と <a class="external" href="http://www.cdt.org/crypto/admin/000114cryptoregs.pdf">更新された規制</a> (PDF) そのものをご覧ください。オープンソースソフトウェアのソースコードの輸出は、<a class="external" href="http://www.access.gpo.gov/bis/ear/pdf/740.pdf">Part 740</a> (PDF)、section 740.13(e)、「Unrestricted encryption source code」で、バイナリの輸出については 740.17 で触れられています。
+</p><p><span>(You may also be interested in a more <a class="external" href="http://www.hecker.org/writings/encryption-export-changes.html" title="http://www.hecker.org/writings/encryption-export-changes.html">in-depth analysis</a> of the new regulations, with an emphasis on how they affect open source software.)</span>
+</p><p>現在 Mozilla プロジェクトの一部として開発されている SSL、S/MIME、PKI、他の暗号化機能ソースコードについてのより詳しい情報は、<a class="external" href="http://www.mozilla-japan.org/projects/security/pki/">PKI プロジェクトページ</a>を、そしてもちろん <a class="external" href="http://www.mozilla-japan.org/projects/security/pki/src/download.html">ソースコード</a>そのものをご覧ください。さらに PKI ソースコードの公開については、オリジナルの <a class="external" href="http://www.iplanet.com/alliance/press_room/press_releases/011800.html">Sun-Netscape Alliance のプレスリリース</a> <span style="color: darkgreen; background: #ef9;">【訳注: 現在リンク切れ】</span> および対応する <a class="external" href="http://home.netscape.com/newsref/pr/newsrelease793.html">mozilla.org のプレスリリース</a> をご覧ください。
+</p>
+<h4 id="これまでに_Mozilla_暗号化コードに実装された機能には何があるのでしょう？_Mozilla_が_SSL_と_SMIME_を完全にサポートするのはいつになるのでしょう？"> これまでに Mozilla 暗号化コードに実装された機能には何があるのでしょう？ Mozilla が SSL と S/MIME を完全にサポートするのはいつになるのでしょう？ </h4>
+<p>Mozilla 暗号化機能コードには、RSA および他の暗号化機能アルゴリズムの完全実装が間もなく行われるでしょう。これは、Mozilla のための完全なオープンソース SSL 実装の基礎をなすものです。S/MIME サポートもまた開発途上にありますが、1.0 リリースの後にならないと Mozilla では利用できないかもしれません。
+</p><p>ネットワークセキュリティサービス (NSS) ライブラリのバージョン 3.1 には、RSA 公開鍵アルゴリズム (現在はパブリックドメインにあります) を含めて、Mozilla での SSL サポートに必要な暗号化アルゴリズムの完全なオープンソース実装が含まれる予定です。NSS 3.1 には PSM の 1.3 リリースが利用される予定で、これにより Mozilla に対して SSL の完全なオープンソース実装が提供されることになります。PSM 1.3 はまた Mozilla ユーザーが個人のデジタル証明書を入手したり、他の PKI 関連の機能を実行するためのサポートを提供します。
+</p><p>様々な実装問題が原因で、Macintosh での Mozilla への PSM サポートは、Windows、Linux、他のプラットフォームでの PSM サポートに比べるとやや遅れ気味となっていることを念頭においてください。さらに、NSS 開発者は S/MIME による安全なメッセージのサポートのためのコードを作成していますが、Mozilla 内での完全な S/MIME サポートには更なる開発が必要で、Mozilla 1.0 のリリース後まで利用できない可能性があることも念頭においてください。
+</p><p>最後に、NSS (ひいては PSM) は、ライセンスされた RSA BSAFE Crypto-C ライブラリ (バージョン 4.1 または 5.0) を利用してビルドが可能であることを覚えておいてください。iPlanet E-Commerce Solutions は、RSA BSAFE Library を取り込んだパーソナルセキュリティマネージャの Netscape ブランドのバイナリバージョンを公開しました。Netscape PSM ソフトウェアはインストールして、Mozilla バイナリバージョンで利用することができます。
+</p><p>PSM、NSS、他の暗号化機能関連の Mozilla 開発についての最新の情報については、<a class="link-news" href="news://news.mozilla.org/netscape.public.mozilla.crypto">netscape.public.mozilla.crypto ニューズグループ</a> や対応する <a class="link-mailto" href="mailto:mozilla-crypto-request@mozilla.org?subject=subscribe">mozilla-crypto メーリングリスト</a> をご覧ください。NSS 3.1 についてのより詳しい情報は <a class="external" href="http://www.mozilla-japan.org/projects/security/pki/nss/plan_3_1.html">NSS 3.1 計画</a> および <a class="external" href="http://www.mozilla-japan.org/projects/security/pki/nss/buildnss_31.html">NSS 3.1 ビルドガイド</a> を、PSM 1.3 についてのより詳しい情報は David Drinan によって投稿された <a class="link-news" href="news://news.mozilla.org/399C830B.91F4195D%40netscape.com">PSM 1.3 タスクリスト</a> をご覧ください。
+</p><p>Netscape PSM バイナリについてのより詳しい情報は、<a class="external" href="http://docs.iplanet.com/docs/manuals/psm/psm-mozilla/">Netscape Personal Security Manager for Mozilla</a> <span style="color: darkgreen; background: #ef9;">【訳注: 現在リンク切れ】</span> のページをご覧ください。
+</p>
+<h4 id="Mozilla_暗号化機能コードのためのオープンソースライセンスとはどのようなものですか？"> Mozilla 暗号化機能コードのためのオープンソースライセンスとはどのようなものですか？ </h4>
+<p>公開されたソースコードは、MPL および GPL のもとでデュアルライセンスされています。
+</p><p>Mozilla SSL、S/MIME、および PKI ソースコードは、代替ライセンスとしての GNU General Public License (バージョン 2.0 以降) とともに Mozilla Public License (バージョン 1.1) のもとでライセンスされています。MPL 条項の許か GPL 条項の許かどちらかを選択してコードを利用することができます。
+</p><p>このようなライセンス形態は、公開されたパーソナルセキュリティマネージャおよびネットワークセキュリティサービスのソースコードができるだけ多くの状況で利用できるようにするために選択されました。例えば、PSM および NSS コードは MPL 条項のものと Mozilla で利用できますし、GNU および GPL 条項下の他のプロジェクトで利用することも可能です。オリジナルの PSM および NSS コードに変更を加えて配付する場合、その変更部分を MPL および GPL 下で利用できるようにしてくださいとお願いしています。(mozilla.org では提供された変更部分が MPL および GPL でライセンスされていない限り、将来の PSM/NSS ソースリリースには組み込まれないということを念頭においてください。) </p><p>より詳しい情報は、<a class="external" href="http://www.mozilla-japan.org/MPL/MPL-1.1.html">Mozilla Public License</a> および <a class="external" href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License</a> をご覧ください。PSM および NSS ソースコードへのライセンスについての具体的な質問は、<a class="link-news" href="news://news.mozilla.org/netscape.public.mozilla.license">netscape.public.mozilla.license</a> ニューズグループ、または対応する <a class="link-mailto" href="mailto:mozilla-license-request@mozilla.org?subject=subscribe">mozilla-license メーリングリスト</a> に投稿してください。
+</p>
+<h4 id="mozilla.org_は暗号化機能コードへの新しい貢献を受け入れるのですか？"> mozilla.org は暗号化機能コードへの新しい貢献を受け入れるのですか？ </h4>
+<p>特許や他の法律問題によって、提供されたコードを Mozilla 開発者の共同体一般で利用することが妨げられない限り、受け入れます。暗号化機能コードへの新たな貢献はまた、他の Mozilla への貢献と同じく、適切な Mozilla モジュールオーナーによるレビューおよび承認が必要です。
+</p><p>暗号化機能アルゴリズムや技術の実装に関連する特許についてのより詳しい情報は、RSA Laboratories の <a class="external" href="http://www.rsasecurity.com/rsalabs/faq/index.html">暗号化機能 FAQ</a> にある <a class="external" href="http://www.rsasecurity.com/rsalabs/faq/6-3.html">暗号化機能に関する特許</a> をご覧ください。さらに、暗号化機能関連コードの Mozilla モジュールオーナーの名前とメールアドレスについては <a class="external" href="http://www.mozilla-japan.org/projects/security/pki/">オープンソース PKI プロジェクト</a> のページをご覧ください。
+</p>
+<h4 id="SSL_や_SMIME_とは別の_PGP_や他のプロトコルへの_Mozilla_のサポートはどうですか？_Mozilla_で_GNU_Privacy_Guard_や他の_PGP_バージョンを利用することができるのでしょうか？"> SSL や S/MIME とは別の PGP や他のプロトコルへの Mozilla のサポートはどうですか？ Mozilla で GNU Privacy Guard や他の PGP バージョンを利用することができるのでしょうか？ </h4>
+<p>PGP および他のセキュリティ関連プロトコルやフォーマットへのサポートは、SSL や S/MIME と同じように Mozilla に追加される可能性があります。Mozilla プロジェクト内でそのようなサポートについての作業に関心を持っている人がいる場合、歓迎です。Mozilla に PGP サポートを可能にする作業の中では、少なくとも 2 つが知られています。
+</p><p>上で述べたように、PSM コードは、PGP を含む Mozilla の他のセキュリティ計画へのサポートを追加するために利用されている汎用のハイレベル Mozilla パブリック API を利用することによって、Mozilla での SSL および (将来は) S/MIME サポートを実装します。Mozilla プロジェクト内でこのようなサポートについて作業を行ないたいと考えている人には、そうした作業をしていただきたいと思います。ただし、SSL および S/MIME のように、mozilla.org は、 (商業販売や頒布のための製品を作成している Mozilla 開発者を含めて) すべての Mozilla 開発者が一般的に利用できないような、特許を受けたアルゴリズムを実装するコードは管理しないことを覚えておいてください。
+</p><p>さらに、PGP および他のセキュリティ計画への Mozilla のサポートが私的なセキュリティベンダーや独立した個人によって提供される可能性があることも覚えておいてください。様々なインターネットフォーラムでなされた声明に基づくと、GNU Privacy Guard の開発者達は、Mozilla からの GnuPG 機能のリクエストをサポートするプラグインモジュールを作成する可能性があるようです。Network Associates もまた、Mozilla のための PGP プラグインの商品を作成する可能性があります。これらの計画についてのより詳しい情報は、こうしたベンダーや開発者に直接連絡を取ってください。
+</p><p>PGP 実装を製作している会社や独立した開発者への連絡先を含めた <a class="external" href="http://dmoz.org/Computers/Security/Products_and_Tools/Cryptography/PGP/">一般的な PGP 情報</a> は、Open Directory レファレンスをご覧ください。
+</p>
+<h4 id="他のソフトウェアが_PSM_で管理されている既存のユーザーキーや証明書を再び利用できるように、PSM_キーと証明書データベースの形式を記述した情報は利用できるのでしょうか？"> 他のソフトウェアが PSM で管理されている既存のユーザーキーや証明書を再び利用できるように、PSM キーと証明書データベースの形式を記述した情報は利用できるのでしょうか？ </h4>
+<p>はい。データベース形式についての文書が入手可能です。ただし、データベース形式が将来にわたっても同じかどうかは保証できません。
+</p><p>iPlanet E-Commerce Solutions からの SSL、S/MIME、そして一般的な PKI ソースコードの最初のリリースは、キーおよび証明書データベース形式についての資料が含まれています。一般的な Mozilla についての資料と同様、mozilla.org は、リリースされた SSL、S/MIME、そして PKI ソースコードについてのデータベース形式、API、そして他のテクニカルな面について解説した資料の提供を喜んで管理します。
+</p><p>ただし、Mozilla モジュール内部での API と同様、mozilla.org はキーおよび証明書データベースの形式が将来に渡っても同じであるかどうかは保証できません。時として既存のアプリケーションとの互換性がなくなるような変更が導入される可能性があります。さらに、アプリケーションから直接データベースを変更することで、データベースの破壊やそれに伴う PSM および PSM を利用する Mozilla のようなアプリケーションに問題をもたらすリスクも発生します。これらの理由から、Mozilla 開発者や他の人たちは、NSS ライブラリによって提供されるパブリック API のみを通してキーおよび証明書データベースにアクセスしてください。
+</p><p>より詳しい情報は、<a class="external" href="http://www.mozilla-japan.org/projects/security/pki/nss/db_formats.html">cert7.db 証明書データベース</a> をご覧ください。さらに、<a class="external" href="http://www.sei.cmu.edu/publications/documents/99.reports/99tn010/99tn010dtic.html">「Into the Black Box: A Case Study in Obtaining Visibility into Commercial Software」</a>、「<a class="external" href="http://www.drh-consultancy.demon.co.uk/cert7.html">「Netscape Certificate Database Information」</a>、そして「<a class="external" href="http://www.drh-consultancy.demon.co.uk/key3.html">「Netscape Communicator Key Database Format」</a> をご覧ください。こうした文書は、(PSM キーおよび証明書データベース形式と互換性のある) Netscape Communicator 4.x のキーおよび証明書データベースの形式を解説しようと試みた結果生まれたものです。
+</p>
+<h3 id="Mozilla_貢献者のための情報"> Mozilla 貢献者のための情報 </h3>
+<h4 id="Mozilla_FTP_サイトをミラーしたいのですが、合衆国暗号化機能輸出規制に関して何か対策をする必要がありますか？"> Mozilla FTP サイトをミラーしたいのですが、合衆国暗号化機能輸出規制に関して何か対策をする必要がありますか？ </h4>
+<p>いいえ、する必要はありません。単に Mozilla サイトをそのままミラーリングしている限り、輸出管理局や NSA に通知をする必要はありません。あなたが合衆国外の人であれば、どのような場合でもそのような通知を提供する必要はありません。ただし、暗号化機能テクノロジーに関連するあなたの国の法律や規制を遵守するために対処が必要となる可能性があります。
+</p><p>Mozilla FTP サイトのミラーとして、あなたには自動的にオープンソース暗号化機能コードも配付されます。あなたが合衆国の住民で合衆国内にミラーサイトがある場合、あなたは暗号化機能ソフトウェアの輸出を管轄する合衆国規定に従うことが求められます。あなたの具体的な問題はあなたの実際の状況によりますし、私たちはあなたに対して法律的なアドバイスを提供することはできません。
+</p><p>しかし、バーンシュタイン・ケースに関連して発行された勧告では、輸出管理局 (Bureau of Export Administration: BXA) は次のように述べました。「既に投稿されたソースコードのミラーまたはアーカイブサイトへの投稿に関しては、最初の投稿に関してのみ通知が必要である。」 BXA および NSA は Mozilla サイトへの暗号化機能関連のソースコードの投稿の通知を既に受けています。また、この意見に照らして、私たちは通知の提供をミラーサイトに要請<i>しない</i>ことを決定しました。
+</p><p>どのような場合でも、輸出管理規制で定められた通知手続きは合衆国の住民および合衆国内に設置されたサイトに対してのみ適用されるものです。あなたが合衆国の市民や住民ではなく、ミラーサイトが合衆国外に設置されている場合、あなたは合衆国の暗号化機能輸出規制の対象とはなりません。ただし、暗号化機能に関連した他の規制の対象となる可能性がありますし、あなたが住む地域で適用されているあらゆる規制に従う責任があります。
+</p><p>オープンソース暗号化機能ソースコードの輸出に関連する通知要請についての情報は、<a class="external" href="http://w3.access.gpo.gov/bxa/ear/ear_data.html">輸出管理規制</a> <span style="color: darkgreen; background: #ef9;">【訳注: <a class='"external"' href='"http://w3.access.gpo.gov/bis/"'>新しいリンク</a>】</span>、特に <a class="external" href="http://frwebgate.access.gpo.gov/cgi-bin/getdoc.cgi?dbname=bxa&amp;docid=f:740.pdf">Part 740</a> <span style="color: darkgreen; background: #ef9;">【訳注: <a class='"external"' href='"http://w3.access.gpo.gov/bis/ear/pdf/740.pdf"'>新しいリンク</a>】</span>、section 740.13(e)、「Unrestricted encryption source code」、および 740.17(g)、「Reporting requirements」をご覧ください。輸出管理局によるミラーサイトに対する通知要請についての声明については、BXA の James Lewis から Daniel Bernstein の顧問である Cindy Cohn に宛てた 2000 年 2 月 17 日付けの手紙に含まれた <a class="external" href="http://cryptome.org/bxa-bernstein.htm">バーンシュタイン勧告声明</a> の「Notification Requirements」をご覧ください。
+</p>
+<h3 id="暗号化機能ソフトウェアに対する合衆国輸出規制についての更なる情報"> 暗号化機能ソフトウェアに対する合衆国輸出規制についての更なる情報 </h3>
+<h4 id="合衆国からの輸出を管理する合衆国政府の法律や規制の中で、暗号化機能ソフトウェアに関するものは何ですか？"> 合衆国からの輸出を管理する合衆国政府の法律や規制の中で、暗号化機能ソフトウェアに関するものは何ですか？ </h4>
+<p>輸出管理規制、1979年の輸出管理法 (The Export Administration Act of 1979)、そして関連する合衆国大統領特別命令が、合衆国からの暗号化機能ソフトウェアの輸出について述べています。
+</p><p>暗号化機能ソフトウェアの合衆国からの輸出を統括する合衆国政府のおもな規制には、15 CFR (「CFR」とは「Code of Federal Regulations」 (連邦規則集) のこと) chapter VII subchapter C、または 15 CFR Parts 730-774 としても知られる輸出管理規制 (Export Administration Regulations: EAR) があります。輸出管理規制は輸出管理局 (Bureau of Export Administration: BXA) によって制定され、主に 50 USC (「USC」とは「United States Code」 (合衆国法典) のこと) 補遺条項 2401-2420 としても知られる、 (修正条項としての) 1979年の輸出管理法に定められた要求を満たすことを目的としています。EAA は一時的な法律として通過しました。ただし、合衆国大統領は、50 USC 1701-1706 としても知られる国際緊急経済権力法下で規定された権限を行使して、EAA および EAR を継続する命令を定期的に発行してきました。
+</p><p>より詳しい情報は、<a class="external" href="http://frwebgate.access.gpo.gov/cgi-bin/getdoc.cgi?dbname=bxa&amp;docid=f:730.pdf">15 CFR Part 730</a> <span style="color: darkgreen; background: #ef9;">【訳注: <a class='"external"' href='"http://w3.access.gpo.gov/bis/ear/pdf/730.pdf"'>新しいリンク</a> でもちょっと自信なし】</span>、section 730.2 (EAR に対する法定権限に関して)、および資料 <a class="external" href="http://frwebgate.access.gpo.gov/cgi-bin/getdoc.cgi?dbname=bxa&amp;docid=f:lagauth.pdf">「Principal Statutory Authority for the Export Administration Regulations」</a> <span style="color: darkgreen; background: #ef9;">【訳注: 現在リンク切れ】</span> をご覧ください。この資料には、 (修正条項としての) 1979 年の輸出管理法、 (修正条項としての) 国際緊急経済権力法、そして関連する法律や特別命令が含まれています。
+</p>
+<h4 id="合衆国からの暗号化機能ソフトウェアの輸出は、国際武器流通規定_(ITAR)_により管理されているのだと思っていました。ITAR_はどうなったのですか？"> 合衆国からの暗号化機能ソフトウェアの輸出は、国際武器流通規定 (ITAR) により管理されているのだと思っていました。ITAR はどうなったのですか？ </h4>
+<p>ITAR は今でも存在しますが、もう暗号化機能ソフトウェアの輸出管理という面では利用されていません。この目的に関しては、EAR にとってかわられました。
+</p><p>1996 年 11 月 15 日の大統領特別命令 13026 によって、輸出管理規制 (EAR) 下にある規制、並びに輸出管理下にある他のすべての商業製品に関する非軍事目的の暗号化機能の輸出に対する権限は、合衆国国務省から商務省に移行されました。その時に暗号化機能を持つハードウェア、ソフトウェア、そしてテクノロジーは、EAR の合衆国武器リスト (U.S. Munitions List) から商品統制リスト (Commerce Control List: CCL) へと移行されました。
+</p><p>より詳しい情報は、資料 <a class="external" href="http://frwebgate.access.gpo.gov/cgi-bin/getdoc.cgi?dbname=bxa&amp;docid=f:lagauth.pdf">「Principal Statutory Authority for the Export Administration Regulations」</a> <span style="color: darkgreen; background: #ef9;">【訳注: 現在リンク切れ】</span> をご覧ください。この資料には特別命令 13026 が含まれています。
+</p>
+<h4 id="合衆国による暗号化機能ソフトウェアの輸出規制は、違憲だとされたのではなかったですか？"> 合衆国による暗号化機能ソフトウェアの輸出規制は、違憲だとされたのではなかったですか？ </h4>
+<p>特定の事例に関しては違憲ですが、決定はまだ覆される可能性があります。さらに、新しい合衆国暗号化機能輸出規制に照らし合わせて、事例そのものが無効とされる可能性もあります。
+</p><p>数年に渡って Daniel Bernstein 教授 (現在シカゴのイリノイ大学) は、暗号化機能ソフトウェアや暗号化に関連する製品 (例: 「技術援助」) に対する合衆国輸出管理規制が違憲であると主張して、合衆国政府に対して訴訟をおこなってきました。 (Berstein 教授の訴えはもともと ITAR および関連する規制に対してのものでした。当時は暗号化機能ソフトウェアに関して、現在の輸出管理規制がまだ効力を持っていなかったためです。) Bernstein 教授は、合衆国の輸出規制が結果的にある種の表現 (例: 電子版での暗号化機能ソースコードの公開) を阻害あるいは禁止するようなライセンススキームになっており、そのため合衆国憲法修正第一条下で違憲であると主張しました。これに対して合衆国政府は、暗号化機能ソフトウェアが安全なコミュニケーションおよびデータ交換に利用できるというその機能のみを根拠に規制されており、輸出規制が「暗号化機能ソフトウェアは、そのソフトウェアの持つ情報的価値を理由にではなく、その機能を理由に管理される」としているように、暗号化機能ソフトウェアを規制することは国家の安全保障上の問題で修正第一条による保護に優先すると主張しました。政府はまた、暗号化機能ソフトウェアを電子版で公開することは印刷版で公開された場合よりもその機能をより簡単に利用でき、規制でこの二つの公開形式を別々に扱うことを正当化するのに十分であると主張しました。
+</p><p>1997 年 8 月 25 日、カリフォルニア州北部地域の連邦地域裁判所は、「[合衆国政府の] 暗号化機能規制は修正第一条に違反する違憲な事前抑制令である」という (Marilyn Hall Patel 判事による) 最終判決を発行しました。合衆国政府はこの決定に対し、第九連邦巡回控訴院に控訴しましたが、1999 年 5 月 6 日、巡回控訴院は地域裁判所の決定を 2 対 1 で支持しました。多数派の Betty Fletcher 判事は、暗号化機能に対する ITAR および EAR 輸出規制が表現の自由の違憲な事前抑制令であり、合衆国憲法修正第一条下では承認できない、としました。
+</p><p>しかしこの決定は合衆国輸出管理規制の憲法問題を解決することにはなりませんでした。合衆国司法省はこの決定に対し控訴を求めました。はじめに第九連邦巡回控訴院の 11 人の判事全員に対して (<i>en banc</i> 裁判または full court と呼ばれます <span style="color: darkgreen; background: #ef9;">【訳注: どちらも「裁判官全員出席の大法廷」の意味】</span>)、さらに連邦最高裁判所も視野に入れています。控訴手続きが完了するまで、合衆国政府は現在の合衆国輸出規制を施行し続けるでしょう。
+</p><p>新しい暗号化機能輸出規制に照らして、Bernstein 教授がもともと要求したこと (暗号化機能ソースコードをオンラインで公開すること) が今や自由にできることから、バーンシュタイン・ケースが無効と宣言される可能性もあります。
+</p><p>より詳しい情報は、<a class="external" href="http://www.eff.org/">Electronic Frontier Foundation</a> によって管理されている <a class="external" href="http://www.eff.org/pub/Legal/Cases/Bernstein_v_DoS/">バーンシュタイン・ケースについてのアーカイブ</a>、特に第九連邦巡回控訴院の <a class="external" href="http://www.eff.org/bernstein/Legal/19990506_circuit_decision.html">決定</a>、その直後に合衆国輸出管理局によって発行された <a class="external" href="http://www.eff.org/bernstein/19990507_bxa_pressrel.html">プレスリリース</a>、そして合衆国 <a class="external" href="http://w3.access.gpo.gov/bxa/ear/ear_data.html">輸出管理規定</a>、特に <a class="external" href="http://frwebgate.access.gpo.gov/cgi-bin/getdoc.cgi?dbname=bxa&amp;docid=f:ccl5-pt2.pdf">15 CFR Part 774、補遺 No. 1、category 5、 Part 2</a>、entry 5D002 ("技術援助" についての記述) および <a class="external" href="http://frwebgate.access.gpo.gov/cgi-bin/getdoc.cgi?dbname=bxa&amp;docid=f:734.pdf">15 CFR Part 734</a> <span style="color: darkgreen; background: #ef9;">【訳注: <a class='"external"' href='"http://w3.access.gpo.gov/bis/ear/pdf/734.pdf"'>新しいリンク</a>】</span>、段落 734.3(b)(2) と (b)(3)、そしてそれに伴う注記 (印刷版 vs. 電子版) をご覧ください。さらに、バーンシュタインの弁護士による輸出管理局に対して出された<a class="external" href="http://cryptome.org/bernstein-bxa.htm">勧告声明の要求</a>とその結果要求に対して BXA から発行された <a class="external" href="http://cryptome.org/bxa-bernstein.htm">勧告声明</a> もご覧ください。
+</p>
+<h4 id="暗号化機能ソフトウェアについての合衆国の輸出規制については、どこで知ることができますか？"> 暗号化機能ソフトウェアについての合衆国の輸出規制については、どこで知ることができますか？ </h4>
+<p>暗号化機能ソフトウェアや関連する話題に関する合衆国輸出管理についてのより詳しい情報は、次のオンライン資料をご覧ください。
+</p>
+<ul><li> <a class="external" href="http://www.eff.org/">Electronic Freedom Foundation</a> (EFF) によって管理されている <a class="external" href="http://www.eff.org/pub/Privacy/ITAR_export/index.html">ITAR、EAR および暗号化機能輸出アーカイブ</a>。
+</li><li> <a class="external" href="http://www.epic.org/">Electronic Privacy Information Center</a> (EPIC) よって管理されている <a class="external" href="http://www.epic.org/crypto/">暗号化機能方針ページ</a>。
+</li><li> <a class="external" href="http://www.cdt.org/">Center for Democracy and Technology</a> (CDT) によって管理されている <a class="external" href="http://www.cdt.org/crypto/">暗号化機能ページ</a>。
+</li></ul>
+<p>暗号化機能ソフトウェアに対する合衆国の輸出管理の歴史と政治についてもっと知りたい場合は、次の本が良いかもしれません。
+</p>
+<ul><li> Whitfield Diffie および Susan Landau 著、<a class="external" href="http://www.amazon.com/exec/obidos/ISBN=0262041677/">Privacy on the Line: The Politics of Wiretapping and Encryption</a>。最近の暗号化およびプライバシー問題を巡る政治的攻防の歴史的文脈や技術的背景について。
+</li><li> Philip Agre および Marc Rotenberg (編)、<a class="external" href="http://www.amazon.com/exec/obidos/ISBN=026201162X/">Technology and Privacy: The New Landscape</a>。プライバシーや影響するテクノロジーの発展について様々な視点についての 10編の考察。
+</li><li> Bruce Schneier および David Banisar (編)、<a class="external" href="http://www.amazon.com/exec/obidos/ISBN=0471122971/">The Electronic Privacy Papers: Documents on the Battle for Privacy in the Age of Surveillance</a>。合衆国の暗号化機能についての方針および関連する話題についての公開資料を集めたもの。
+</li><li> Lance Hoffman (編)、<a class="external" href="http://www.amazon.com/exec/obidos/ISBN=0387944419/">Building in Big Brother: The Cryptographic Policy Debate</a>。クリッパー・チップをめぐる懸念やデジタル・テクノロジー法を中心に、初期 (1995年まで) の考察や公開資料を集めたもの。
+</li><li> Electronic Privacy Information Center 著、<a class="external" href="http://www.amazon.com/exec/obidos/ASIN/1893044076/">Cryptography &amp; Liberty 2000: An International Survey of Encryption Policy</a>。百ヶ国以上の国を網羅した暗号化機能に関連する政府方針の年間調査シリーズの最新版。
+</li><li> Stewart Baker および Paul Hurst 著、<a class="external" href="http://www.amazon.com/exec/obidos/ISBN=9041106359">The Limits of Trust: Cryptography, Governments, and Electronic Commerce</a>。合衆国を含めて世界の様々な国の暗号化機能に関する規制の法的枠組みについての非常に深い (しかし非常に古い) 議論。
+</li></ul>
+<p>プライバシー全般やプライバシー問題に関連する政策を論じた、さらに多くのお勧めの本は <a class="external" href="http://www.epic.org/bookstore/">EPIC bookstore</a> をご覧ください。
+</p>
+<div class="originaldocinfo">
+<h2 id="原文書の情報"> 原文書の情報 </h2>
+<ul><li> 著者: <a class="link-mailto" href="mailto:hecker@mozilla.org">Frank Hecker</a>
+</li><li> 最終更新日: September 10, 2000 (Version 2.11)
+</li><li> 著作権: Portions of this content are © 1998–2007 by individual mozilla.org contributors; content available under a Creative Commons license | <a class="external" href="http://www.mozilla.org/foundation/licensing/website-content.html">詳細</a>
+</li></ul>
+</div>
+<div class="noinclude">
+</div>

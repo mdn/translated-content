@@ -1,0 +1,48 @@
+---
+title: Firefox OSのMarionetteの設定
+slug: Archive/B2G_OS/Automated_testing/Setting_up_Marionette
+translation_of: 'https://marionette-client.readthedocs.io/en/latest/'
+---
+<h2 id="Building_Firefox_OS_with_Marionette_enabled">Building Firefox OS with Marionette enabled</h2>
+<p>Marionette's server component is part of gecko, and is compiled into a B2G build when ENABLE_MARIONETTE=1 is present in your mozconfig.</p>
+<p><strong>For device builds</strong> (including the emulator), Marionette is enabled by default in all VARIANT=eng (engineering) builds. This is the default type of build created if you use ./config.sh &lt;config&gt;, ./build.sh. Marionette is not included in VARIANT=user builds, which is the type of build QA normally uses for testing.</p>
+<p><strong>For B2G desktop builds</strong>, you'll need to add the line ENABLE_MARIONETTE=1 to your mozconfig before building.</p>
+<h2 id="Setting_up_the_Marionette_client">Setting up the Marionette client</h2>
+<p>The Marionette client is a Python package with which you can run Marionette tests. You'll need to set this up on your machine before using it.</p>
+<p>To do so, you can either install it from pypi:</p>
+<pre>$ pip install marionette_client</pre>
+<p>Or from a gecko build tree:</p>
+<pre>$ cd $GECKO_DIR/testing/marionette/client
+
+$ python setup.py develop</pre>
+<p>You can perform these steps inside a virtualenv if you wish.</p>
+<p>To verify Marionette is installed:</p>
+<pre><code>$ python</code>
+
+<code>&gt;&gt;&gt; from marionette import Marionette</code></pre>
+<h2 id="Verifying_Marionette_is_running">Verifying Marionette is running</h2>
+<h4 id="On_a_device">On a device</h4>
+<p>Please make sure the [Settings &gt; Device Information &gt; More Information &gt;  Developer &gt; Remote debugging] is OFF.</p>
+<p>Connect your device to your computer and verify it appears in adb devices, then set up adb port forwarding to Marionette's port:</p>
+<pre>$ adb devices
+List of devices attached
+full_unagi    device
+
+$ adb forward tcp:2828 tcp:2828
+
+$ telnet localhost 2828
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+66:{
+  "from": "root",
+  "applicationType", "gecko",
+  "traits": []
+}</pre>
+<p>If you see the above output, Marionette is running on your device.</p>
+<h4 id="On_an_emulator">On an emulator</h4>
+<p>Launch the emulator using the <code>./run-emulator.sh</code> script, then follow the above steps.</p>
+<h4 id="On_a_B2G_desktop_build">On a B2G desktop build</h4>
+<p>For desktop B2G builds, you need to add an additional pref in order for Marionette to successfully run:  <code>marionette.force-local = true</code>.  You can add this pref in gaia/profile/user.js as user_pref("marionette.force-local", true), then re-build your gaia profile before starting the B2G desktop build.</p>
+<p>When using a B2G desktop build, you don't need to use adb port forwarding. After launching the build, telnetting to localhost 2828 should result in the same output shown above.</p>
+<p> </p>

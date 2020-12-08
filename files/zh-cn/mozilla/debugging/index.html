@@ -1,0 +1,139 @@
+---
+title: 调试
+slug: Mozilla/Debugging
+translation_of: Mozilla/Debugging
+---
+<p>Debugging a project as large as Mozilla can be a daunting task. Fortunately, over the years, Mozilla developers have come up with not just technologies and features to help you debug code, but have devised tips and techniques that can help too. Also available are assorted tools that you can use when debugging.</p>
+<table class="topicpage-table">
+  <tbody>
+    <tr>
+      <td colspan="2">
+        <h2 class="Documentation" id="Documentation_topics">Documentation topics</h2>
+        <h2 id="Debugging_on_top_of_the_Mozilla_platform">Debugging on top of the Mozilla platform</h2>
+        <dl>
+          <dt>
+            <a href="/en-US/docs/Debugging_JavaScript" title="Debugging JavaScript">Debugging JavaScript code</a></dt>
+          <dd>
+            How to debug JavaScript code, with a focus on debugging code in the Mozilla project itself.</dd>
+          <dt>
+            <a href="/en-US/docs/Debugging_a_XULRunner_Application" title="Debugging a XULRunner Application">Debugging a XULRunner application</a></dt>
+          <dd>
+            Tips and suggestions that will help you debug your <a href="/en-US/docs/XULRunner" title="XULRunner">XULRunner</a> based application.</dd>
+          <dt>
+            <a href="/en-US/docs/Mozilla/Boot_to_Gecko/Debugging_on_Boot_to_Gecko" title="">Debugging on Boot to Gecko</a></dt>
+          <dd>
+            Debugging Firefox OS (apps and the platform itself)</dd>
+          <dt>
+            <a href="/en-US/docs/Debugging_Update_Problems" title="Debugging Update Problems">Debugging update problems</a></dt>
+          <dd>
+            Learn how to debug update problems in Mozilla-based applications.</dd>
+        </dl>
+        <h2 id="Debugging_the_Mozilla_platform">Debugging the Mozilla platform</h2>
+        <h3 id="Using_debuggers_with_Mozilla">Using debuggers with Mozilla</h3>
+        <dl>
+          <dt>
+            <a href="/en-US/docs/Debugging_Mozilla_on_Windows_FAQ" title="Debugging Mozilla on Windows FAQ">Debugging Mozilla on Windows FAQ</a></dt>
+          <dd>
+            Questions (and answers) about debugging Mozilla on Windows.</dd>
+          <dt>
+            <a href="/en-US/docs/Debugging_on_Mac_OS_X" title="Debugging on Mac OS X">Debugging Mozilla on Mac OS X</a></dt>
+          <dd>
+            Questions (and answers) about debugging Mozilla on Mac OS X.</dd>
+          <dt>
+            <a href="/en-US/docs/Debugging_Mozilla_with_gdb" title="Debugging Mozilla on Linux FAQ">Debugging Mozilla with gdb</a></dt>
+          <dd>
+            gdb is our primary debugger on Mac and Linux.</dd>
+          <dt>
+            <a href="/en-US/docs/Debugging_Mozilla_with_lldb" title="Debugging Mozilla with lldb">Debugging Mozilla with lldb</a></dt>
+          <dd>
+            lldb is the new debugger on Mac.</dd>
+        </dl>
+        <h3 id="Advanced_debugging_techniques">Advanced debugging techniques</h3>
+        <dl>
+          <dt>
+            <a href="/en-US/docs/Debugging_Mozilla_with_Valgrind" title="Debugging Mozilla with valgrind">Debugging Mozilla with valgrind</a></dt>
+          <dd>
+            valgrind is a memory debugger for Mac and Linux. It is slow, but good for tracking down difficult memory safety bugs.</dd>
+          <dt>
+            <a href="/en-US/docs/Debugging/Record_and_Replay_Debugging_Firefox" title="Debugging/Record and Replay Debugging Firefox">Replay debugging Firefox with VMWare Workstation</a></dt>
+          <dd>
+            How to setup record and replay debugging on Firefox, to help debug intermittent mochitest failures.</dd>
+        </dl>
+        <h3 id="Debugging_specific_parts_of_the_Mozilla_codebase">Debugging specific parts of the Mozilla codebase</h3>
+        <dl>
+          <dt>
+            <a href="/en-US/docs/Debugging/Debugging_OpenGL" title="Debugging/Debugging OpenGL">Debugging OpenGL</a> {{gecko_minversion_inline("2.0")}}</dt>
+          <dd>
+            If you're working on code that involves OpenGL calls, and need to debug it, you can turn on a special OpenGL debugging mode.</dd>
+          <dt>
+            <a href="/en-US/docs/Debugging_Frame_Reflow" title="Debugging_Frame_Reflow">Debugging frame reflow</a> and <a href="/en-US/docs/Debugging_Table_Reflow" title="Debugging_Table_Reflow">Debugging table reflow</a></dt>
+          <dd>
+            Notes on debugging issues in Gecko's layout engine.</dd>
+        </dl>
+        <h2 id="Miscellaneous">Miscellaneous</h2>
+        <dl>
+          <dt>
+            <a href="/en-US/docs/Debugging_Safari" title="Debugging Safari">Debugging Safari</a></dt>
+          <dd>
+            Some tips for debugging Safari</dd>
+          <dt>
+            <a href="/en-US/docs/Debugging_Chrome" title="Debugging Chrome">Debugging Chrome</a></dt>
+          <dd>
+            Some tips for debugging Chrome</dd>
+          <dt>
+            <a href="/en-US/docs/Debugging_Internet_Explorer" title="Debugging Internet Explorer">Debugging Internet Explorer</a></dt>
+          <dd>
+            Some tips for debugging Internet Explorer</dd>
+        </dl>
+      </td>
+      <td>
+        <h3 id="Providing_useful_information_to_the_Mozilla_developers">Providing useful information to the Mozilla developers</h3>
+        <dl>
+          <dt>
+            <a href="/en-US/docs/How_to_get_a_stacktrace_for_a_bug_report" title="How_to_get_a_stacktrace_for_a_bug_report">How to get a stacktrace for a bug report</a></dt>
+          <dd>
+            Useful information you can provide about a crash.</dd>
+          <dt>
+            <a href="/en-US/docs/Performance/Reporting_a_Performance_Problem" title="Performance/Reporting_a_Performance_Problem">Reporting a Performance Problem</a></dt>
+          <dd>
+            ...using the Gecko Profiler extension.</dd>
+          <dt>
+            <a href="/en-US/docs/Debugging_a_hang_on_OS_X" title="Debugging a hang on OS X">Debugging a hang on Mac OS X</a></dt>
+          <dd>
+            Collecting "samples" to attach to a bug.</dd>
+          <dt>
+            <a href="/en-US/docs/Remote_debugging" title="Remote_debugging">Remote debugging</a></dt>
+          <dd>
+            Core dumps and examples of remote debugging. Useful if a developer can't reproduce your crash.</dd>
+          <dt>
+            <a href="/en-US/docs/Mozilla/Debugging/HTTP_logging" title="/en-US/docs/Mozilla/Debugging/HTTP_logging">HTTP logging</a></dt>
+          <dd>
+            How to log HTTP network traffic for debugging purposes.</dd>
+        </dl>
+        <h2 class="Tools" id="Debugging_tools">Debugging tools</h2>
+        <dl>
+          <dt>
+            <a href="/en-US/docs/Tools" title="Tools">Tools</a></dt>
+          <dd>
+            Assorted tools that will help you debug your code or web site.</dd>
+          <dt>
+            <a href="http://ftp.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/" title="http://ftp.mozilla.org/pub/mozilla.org/firefox/tinderbox-builds/">Download a debug build</a></dt>
+          <dd>
+            Recent automatically compiled debug builds are available. Note that these are replaced frequently by our tinderboxes. The debug builds have "-debug" at the end of their file names.</dd>
+        </dl>
+        <h2 id="Related_topics">Related topics</h2>
+        <dl>
+          <dt>
+            <a href="/en-US/docs/Performance" title="Storage/Performance">Performance and profiling</a></dt>
+          <dd>
+            Troubleshooting performance problems.</dd>
+          <dt>
+            <a href="/en-US/docs/Debugging/Debugging_memory_leaks" title="Debugging memory leaks">Debugging memory leaks</a></dt>
+          <dd>
+            Learn about tools and techniques that will help you debug memory leaks.</dd>
+        </dl>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p> </p>

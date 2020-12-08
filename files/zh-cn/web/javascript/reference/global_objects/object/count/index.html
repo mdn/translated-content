@@ -1,0 +1,88 @@
+---
+title: Object.prototype.__count__
+slug: Web/JavaScript/Reference/Global_Objects/Object/count
+tags:
+  - JavaScript
+  - Object
+  - Obsolete
+  - Property
+  - Prototype
+translation_of: Archive/Web/JavaScript/Object.count
+---
+<div>{{JSRef}} {{obsolete_header("2")}}</div>
+
+<p> <strong><code>__count__</code></strong> 属性曾经用来存放对象的可枚举的属性的个数，但是已经被废除。</p>
+
+<h2 id="语法">语法</h2>
+
+<pre class="syntaxbox"><code><var>obj</var>.__count__</code></pre>
+
+<h2 id="示例">示例</h2>
+
+<pre class="brush: js">{ 1: 1 }.__count__              // 1
+[].__count__                    // 0
+[1].__count__                   // 1
+[1, /* hole */, 2, 3].__count__ // 3
+</pre>
+
+<h2 id="详细说明">详细说明</h2>
+
+<p>无需详细说明</p>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="更多请参看">更多请参看</h2>
+
+<ul>
+ <li><a class="external" href="http://whereswalden.com/2010/04/06/more-changes-coming-to-spidermonkey-the-magical-__count__-property-of-objects-is-being-removed/">[Blog post] More changes coming to SpiderMonkey: the magical __count__ property is being removed</a></li>
+</ul>

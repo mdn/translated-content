@@ -1,0 +1,37 @@
+---
+title: XBL
+slug: Archive/Mozilla/XBL
+tags:
+  - XBL
+translation_of: Archive/Mozilla/XBL
+---
+<p>
+<b>XML Binding Language</b> (<b>XBL</b>, parfois aussi appelé langage de liaison extensible) est un langage permettant de décrire des liaisons pouvant être attachées à des éléments dans d'autres documents. L'élément auquel la liaison est attachée, appelé l'élément lié (<i>bound element</i>), acquiert le nouveau comportement spécifié par la liaison.
+</p><p>Les liaisons peuvent contenir des gestionnaires d'évènements enregistrés sur l'élément lié, une implémentation de nouvelles méthodes et propriétés devenant accessibles depuis cet élément, et du contenu anonyme qui sera inséré par dessous l'élément lié.
+</p><p>La plupart des éléments d'interface <a href="fr/XUL">XUL</a> sont au moins partiellement implémentés à l'aide de XBL. Vous pouvez construire vos propres éléments réutilisables à partir d'éléments <a href="fr/XUL">XUL</a>, <a href="fr/HTML">HTML</a>, <a href="fr/SVG">SVG</a>, et d'autres primitives à l'aide de XBL.
+</p>
+<h3 id="Spécifications"> Spécifications </h3>
+<ul><li> XBL 1.0 est spécifié dans la <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0">Référence XBL 1.0</a>. Malheureusement, l'implémentation actuelle dans Mozilla diffère de la spécification, et il n'y a pas de document connu décrivant les différences. Il est à espérer que la référence sera mise à jour pour décrire ces différences.<br>XBL 1.0 est une technologie spécifique à Mozilla, et n'est pas un standard du <a class="external" href="http://w3.org/">W3C</a>. Cependant, au moins deux standards sont en cours d'élaboration : sXBL et XBL 2.0.
+</li><li> <a class="external" href="http://w3.org/TR/sXBL/">sXBL</a> du W3C (actuellement un brouillon de travail daté de 2005) signifie <i>SVG's XML Binding Language</i> (langage de liaisons XML pour SVG). Il est supposé inclure un sous-ensemble des fonctionnalités de XBL 2.0 nécessaires à <a href="fr/SVG">SVG</a>. Il est similaire dans l'esprit au XBL de Mozilla, mais il y a quelques différences subtiles (et d'autres moins). Par exemple, les noms des éléments sont différents. Certaines fonctionnalités de XBL sont également absentes de sXBL, comme l'héritage des liaisons et la définition de méthodes/propriétés sur les éléments liés.
+</li><li> <a class="external" href="http://www.mozilla.org/projects/xbl/xbl2.html">XBL 2.0</a> (<a class="external" href="http://w3.org/TR/XBL/">brouillon de travail du W3C</a>) est en cours de développement pour résoudre des problèmes découverts dans XBL 1.0 et pour permettre des implémentations dans un plus grand ensemble de navigateurs Web. Mozilla envisage d'implémenter XBL2 dans les futures versions de <a href="fr/Gecko">Gecko</a>.
+</li></ul>
+<p>Certaines des différences entre sXBL et XBL2 ont été relevées dans <a class="external" href="http://annevankesteren.nl/2005/11/xbl">un article d'Anne van Kesteren</a> (en anglais).
+</p><p>Une présentation des différences entre le XBL de Mozilla et XBL2 est disponible dans <a class="external" href="http://groups.google.com/group/mozilla.dev.tech.xbl/msg/af3d4e37cce1d907">ce message de Jonas Sicking</a> (avril 2007).
+</p>
+<h3 id="Voir_aussi"> Voir aussi </h3>
+<ul><li> <a href="fr/Tutoriel_XUL/Introduction_%c3%a0_XBL">Introduction à XBL</a> dans le <a href="fr/Tutoriel_XUL">Tutoriel XUL</a>.
+</li><li> Le <a class="external" href="http://mb.eschew.org/15.php">chapitre XBL</a> de « <a class="external" href="http://mb.eschew.org/">Rapid Application Development with Mozilla</a> »
+</li><li> <a class="external" href="http://www.w3.org/TR/xbl-primer/">XBL 2.0 Primer (en)</a> (brouillon)
+</li><li> <a>Plus de ressources sur XBL…</a>
+</li></ul>
+<h3 id="Communauté"> Communauté </h3>
+<ul><li> Voir les forums Mozilla…
+</li></ul>
+<p></p><ul>
+  <li><a href="https://lists.mozilla.org/listinfo/dev-tech-xbl"> Liste de diffusion</a></li>
+
+
+  <li><a href="http://groups.google.com/group/mozilla.dev.tech.xbl"> 		newsgroup</a></li>
+  <li><a href="http://groups.google.com/group/mozilla.dev.tech.xbl/feeds"> Flux de syndication</a></li>
+</ul>
+<p></p>

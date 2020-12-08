@@ -1,0 +1,98 @@
+---
+title: Gonk
+slug: Archive/B2G_OS/Platform/Gonk
+translation_of: Archive/B2G_OS/Platform/Gonk
+---
+<div class="summary">
+<p>Gonk 是 <a href="../../../../en-US/docs/Mozilla/Firefox_OS" title="/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a> 平台底层的操作系统, 包括基于  <a class="external external-icon" href="http://source.android.com/">Android Open Source Project</a> (AOSP) 的 Linux Kernel 和用户空间硬件抽象层 (HAL) 。本文旨在介绍Gonk的组成；要获取更多有关 Firefox OS 架构和 Gonk 如何在其中适配的知识，请参考 <a href="../../../../en-US/Firefox_OS/Platform/Architecture">Firefox OS architecture</a> 指南。</p>
+</div>
+
+<h2 id="Gonk_overview">Gonk overview</h2>
+
+<p>Gonk 在 Firefox OS stack 中可看作是 kernel 层级的组件，在 Gecko 和 底层硬件中间充当接口的作用。Gonk 对底层的硬件进行控制，并且将硬件信息及操控接口暴露给 Gecko中的 Web APIs。Gonk 可以看作是一个 黑盒， 在屏幕后面做了所有复杂细节的工作用于在硬件层级上对 mobile device 进行控制。</p>
+
+<p>Gonk 只是一个简单的 Linux 发行版本，其中包括了 Android 的一些组件（如 GPS 和 Camera）以及由  Mozilla 扩展的常用的开源工程，如 libusb, bluez, 进而将所有的层级集成到 Firefox OS 架构中。这种设计方式对 OEM 将软件组件从其他 Android 实现上移植过来是非常方便的。</p>
+
+<p>Gonk 是一个设备接口层，可看作是 硬件和 Gecko 之间的适配器。 Gonk is a relatively simple Linux distribution that can be treated as a Gecko Port paired with Gecko porting layers — so Gonk is a <strong>porting target</strong> of <a href="https://developer.mozilla.org/en-US/docs/Gecko">Gecko</a>, just like there's a port of Gecko to OS X, Windows, and Android.</p>
+
+<div class="note">
+<p><strong>Note</strong>: Since different mobile devices may have different chipsets and other hardware specs, devices may contain different Gonk distributions.</p>
+</div>
+
+<p>由于 Firefox OS 工程对 Gonk 的完整控制，我们可以向 Gecko 中暴露一些在其他操作系统中无法实现的接口。例如， Gecko 已经可以直接对 full telephone stack 直接进行发给男问，并在 Gonk 中显示出 frame buffer。</p>
+
+<h2 id="Gonk_架构">Gonk 架构</h2>
+
+<p>Each mobile phone model has a specialized combination of Gonk components based on the system libraries, device drivers, and firmware required to operate the device. These components are determined by the OEM in collaboration with chipset manufacturers and ODMs. The following figure shows an example Gonk implementation:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/9489/gonk-architecture.png" style="width: 987px; height: 329px; margin: 0px auto; display: block;"></p>
+
+<p>This example shows the following main components (which represent only a subset of the possible components in any given Gonk implementation):</p>
+
+<ul>
+ <li><strong>Linux Kernel</strong>: Uses libraries from Android (GPS, camera, etc.) and other open source projects (Linux, libusb, bluez, and so on).</li>
+ <li><strong>Radio Interface Layer (RIL)</strong>: Interacts with the modem hardware (telephony) in the phone. Consists of two components:
+  <ul>
+   <li><strong>rild daemon</strong>: Talks to the modem firmware.</li>
+   <li><strong>rilProxy</strong>: Proxies messages between rild and the b2g process</li>
+  </ul>
+ </li>
+ <li><strong>mediaserver process</strong>: 控制 audio 和 video 的播放。Gecko 与 media server 通过 Android RPC 机制进行通信。</li>
+ <li><strong>netd process</strong>:  与 network 接口 (Wifi) 硬件直接交互的 Network dameon</li>
+ <li><strong>Bluetooth, etc.</strong>: Bluetooth and other service-level daemons provide access to hardware capabilities.</li>
+</ul>
+
+<p>Gonk 也会启动，管理以及关闭 b2g process， b2g process 属于 Firefox OS 的 Gecko 层。The b2g process acts as a client to service-level daemons in Gonk that interact directly with the hardware and expose to Gecko the underlying hardware functionality of the phone. Gecko talks with these daemons via inter-process communication (IPC). These components collaboratively exchange commands and protocols to request and provide services.</p>
+
+<div class="note">
+<p><strong>Note</strong>: For more information on Gonk architecture, see the <a href="https://developer.mozilla.org/en-US/Firefox_OS/Platform/Architecture">Firefox OS architecture guide</a>.</p>
+</div>
+
+<h2 id="Porting_Gonk">Porting Gonk</h2>
+
+<p>Because Firefox OS is based on the Android kernel, existing device drivers, firmware, service daemons, and other components can be ported to work with Firefox OS, usually with minimal effort. If a custom component (for example, a custom RIL or new daemon) is needed, or if a modification must be made to an ODM’s reference design, then additional integration and testing effort might be required.</p>
+
+<p>In b2g, clients communicate with service-level daemons via inter-process communication (IPC). The client initiates a socket connection to the service-level daemon, submits the request (using the server’s request protocol) over that connection, receives the response, and closes the connection. OEMs are responsible for designing and implementing this inter-process communication between clients and servers.</p>
+
+<div class="note">
+<p><strong>Note</strong>: For more information about how the porting process works, see <a href="https://developer.mozilla.org/en-US/Firefox_OS/Developing_Firefox_OS/Porting">Porting Firefox OS</a>.</p>
+</div>
+
+<h3 id="How_Mozilla_works_on_Gonk_ports_with_OEMs_and_phone_manufacturers">How Mozilla works on Gonk ports with OEMs and phone manufacturers</h3>
+
+<p>Every Gonk implementation is the result of collaboration among Mozilla, OEMs, and associated manufacturers (ODMs, chipset manufacturers).</p>
+
+<p>Mozilla provides source repositories and support files for Gonk in its Firefox OS distributions. The source repositories include the base Linux kernel (with only slight changes) and hooks into Gecko.</p>
+
+<p>OEMs are responsible for building, compiling, testing, certifying, and distributing the Firefox OS system image for a given device model. For the Gonk portion of the system image, OEMs are responsible for the bulk of the effort in order to ensure the seamless integration between Web API calls and phone hardware functionality. The type and scope of effort required is highly dependent on the specific chipsets and other hardware components used on the phone.</p>
+
+<h3 id="Device_components">Device components</h3>
+
+<p>OEMs collaborate with chipset manufacturers and ODMs to provide all of the device-specific components that are needed to run the mobile device. For example, a manufacturer of the Wi-Fi components would provide the chipset and affiliated software. Components might include:</p>
+
+<ul>
+ <li>Drivers — For supported phone functionality, such as modem (data and voice), Wi-fi, Bluetooth, display, camera, audio, and so on.</li>
+ <li>Firmware — Some hardware (the network interface card, for example) might load firmware off the flash drive.</li>
+ <li>Service-level daemons — For invoking and managing the operation of various hardware components. This can include support libraries and startup scripts.</li>
+</ul>
+
+<h3 id="Integration_between_Gonk_and_Gecko">Integration between Gonk and Gecko</h3>
+
+<p>OEMs must ensure that hardware capabilities in the mobile device are correctly and completely exposed to the Web APIs implemented in Gecko. This involves:</p>
+
+<ul>
+ <li>building or adapting (in Gonk) service-level daemons, along with any associated drivers or firmware, to manage the hardware functionality</li>
+ <li>setting up (in b2g) all the methods needed to communicate with the service-level daemons</li>
+</ul>
+
+<h2 id="Gonk_源代码">Gonk 源代码</h2>
+
+<p>The main <a href="https://github.com/mozilla-b2g/B2G">B2G repo on Github</a> contains officially supported Gonk ports for a variety of devices, so you can treat it as Gonk’s repository. The list of supported devices is available in <code>B2G/config.sh</code>.</p>
+
+<p>The b2g process (along with other things), defined in Gonk, can be found at <a href="https://github.com/mozilla-b2g/gonk-misc">mozilla-b2g/gonk-misc</a>. Modifications to b2g source code are made here.</p>
+
+<div class="note">
+<p><strong>Note</strong>: In the <a href="https://github.com/mozilla/gecko-dev">Gecko source</a> there’s a <code>b2g/</code> folder that contains the Gonk Port of Gecko: this consists of a Linux kernel, HAL, and other OEM-specific libraries.</p>
+</div>
+
+<p>Gonk 层每天的工作主要集中在 porting system 到不同的板子上，并且确保 Gecko 在不同的设备上能够正常工作。</p>

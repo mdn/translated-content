@@ -1,0 +1,44 @@
+---
+title: WifiManager.forget()
+slug: Web/API/WifiManager/forget
+tags:
+  - API
+  - B2G
+  - Non Standard
+  - WebAPI
+translation_of: Archive/B2G_OS/API/WifiManager/forget
+---
+<div>{{APIRef("Firefox OS")}} {{non-standard_header}}</div>
+
+<div>{{B2GOnlyHeader2('certified')}}</div>
+
+<p>La méthode <strong><code>forget</code></strong> est utilisée pour « oublier » un réseau WiFi. Cela permettra d'éliminer le réseau de la liste des réseaux connus et de supprimer tous les paramètres de configuration liés à ce réseau.</p>
+
+<p>Si le dispositif est connecté à ce réseau, il en est déconnecté.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre>var request = navigator.mozWifiManager.forget(network);</pre>
+
+<h3 id="Paramètres">Paramètres</h3>
+
+<dl>
+ <dt><code>network</code></dt>
+ <dd>Un objet réseau fournit par les méthodes {{domxref("WifiManager.getNetworks","getNetworks")}} ou {{domxref("WifiManager.getKnownNetworks","getKnownNetworks")}}.</dd>
+</dl>
+
+<h3 id="Résultats">Résultats</h3>
+
+<p>Elle renvoie un objet <a href="https://developer.mozilla.org/fr/docs/Web/API/DOMRequest"><code>DOMRequest</code></a> gérant le succès ou l'échec de l'opération.</p>
+
+<h2 id="Spécification">Spécification</h2>
+
+<p>Ne fait pas partie d'aucune spécification.</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>{{domxref("WifiManager")}}</li>
+ <li>{{domxref("MozWifiStatusChangeEvent")}}</li>
+ <li>The <a href="/fr/docs/WebAPI/WiFi_Information">WifI Information API</a></li>
+</ul>

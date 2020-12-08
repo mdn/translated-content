@@ -1,0 +1,65 @@
+---
+title: 使用JavaXPCOM在Java应用程序中嵌入Mozilla
+slug: Mozilla/Tech/XPCOM/Language_bindings/JavaXPCOM/使用JavaXPCOM在Java应用程序中嵌入Mozilla
+tags:
+  - 'JavaXPCOM:Articles'
+translation_of: Archive/Mozilla/Embedding_Mozilla_in_a_Java_Application_using_JavaXPCOM
+---
+<p>
+</p><p><br>
+<a href="cn/XULRunner">XULRunner</a>中包含了<a href="cn/JavaXPCOM">JavaXPCOM</a>组件，允许Java代码与XPCOM对象交互。在这片文章中您将会看到，在Java中使用XPCOM对象，要比在C++中容易得多。
+</p>
+<h4 id=".E5.BF.85.E8.A6.81.E6.9D.A1.E4.BB.B6" name=".E5.BF.85.E8.A6.81.E6.9D.A1.E4.BB.B6"> 必要条件 </h4>
+<ul><li> Java 1.4.2或者更新
+</li><li> XULRunner
+</li></ul>
+<div class="note">
+<p><b>2006-01-16</b>：XULRunner目前还没有官方发布版本，因此，为了能XULRunner加上JavaXPCOM一起使用，您应该马上下载1.8.0版分支的一个每夜构建。（<a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/nightly/latest-mozilla1.8.0/xulrunner-1.8.0.1.en-US.linux-i686.tar.gz">Linux</a>，<a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/nightly/latest-mozilla1.8.0/xulrunner-1.8.0.1.en-US.mac.dmg">Mac OS X</a>，<a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/nightly/latest-mozilla1.8.0/xulrunner-1.8.0.1.en-US.win32.zip">Windows</a>）。下面提到的<i>MozillaInterfaces.jar</i>文件可以在<i>sdk</i>顶层文件夹中找到。
+</p>
+</div>
+<h4 id=".E5.B5.8C.E5.85.A5" name=".E5.B5.8C.E5.85.A5"> 嵌入 </h4>
+<p>为了在Java应用程序中嵌入Mozilla，您需要将库文件<i>MozillaInterfaces.jar</i>加入您的classpath中。这个库（它是SDK的一部分）提供了启动Mozilla和调用XPCOM方法所必需的接口。
+</p><p>要开始嵌入，我们使用<a href="https://dxr.mozilla.org/mozilla-central/source/extensions/java/xpcom/interfaces/Mozilla.java" rel="custom">Mozilla</a>单件类提供的方法。首先，Java应用程序必须找到一个合适的XULRunner安装：
+</p>
+<pre class="eval"> Mozilla mozilla = Mozilla.getInstance();
+ GREVersionRange[] range = new GREVersionRange[1];
+ range[0] = new GREVersionRange("1.8.*", false, "1.9", false);
+   <span class="highlightgreen">// work with trunk nightly version 1.9a1  ^^</span>
+
+ try {
+   File grePath = Mozilla.getGREPathWithProperties(range, null);
+   LocationProvider locProvider = new LocationProvider(grePath);
+   mozilla.initEmbedding(grePath, grePath, locProvider);
+ } catch (FileNotFoundException e) {
+   <span class="highlightgreen">// this exception is thrown if greGREPathWithProperties cannot find a GRE</span>
+ } catch (XPCOMException e) {
+   <span class="highlightgreen">// this exception is thrown if initEmbedding failed</span>
+ }
+</pre>
+<p><code>LocationProvider</code>是Java应用程序提供的一个类。它实现了<a href="https://dxr.mozilla.org/mozilla-central/source/extensions/java/xpcom/interfaces/IAppFileLocProvider.java" rel="custom">IAppFileLocProvider</a>接口，并且告诉XPCOM那里可以找到那些文件和目录。
+</p><p><code>initEmbedding</code>方法启动嵌入进程，允许Java应用程序与XPCOM和Mozilla一起工作。一旦Java应用程序使用完Mozilla，就需要中止嵌入进程：
+</p>
+<pre class="eval"> try {
+   mozilla.termEmbedding();
+ } catch (XPCOMException e) {
+   <span class="highlightgreen">// this exception is thrown if termEmbedding failed</span>
+ }
+</pre>
+<h4 id=".E4.B8.8EXPCOM.E5.AF.B9.E8.B1.A1.E4.B8.80.E8.B5.B7.E5.B7.A5.E4.BD.9C" name=".E4.B8.8EXPCOM.E5.AF.B9.E8.B1.A1.E4.B8.80.E8.B5.B7.E5.B7.A5.E4.BD.9C"> 与XPCOM对象一起工作 </h4>
+<p>现在，Mozilla已经嵌入了，Java应用程序可以和XPCOM对象工作了。<code>Mozilla</code>类提供了多种方法使工作更加容易，例如<code>getServiceManager</code>，<code>getComponentManager</code>，和<code>newLocalFile</code>。为了在XPCOM对象中增加查询和调用的方法，JavaXPCOM允许Java应用程序传递Java类对象给XPCOM方法。
+</p><p>例如：
+</p>
+<pre class="eval"> Mozilla mozilla = Mozilla.getInstance();
+ WindowCreator creator = new WindowCreator();  <span class="highlightgreen">// implements nsIWindowCreator</span>
+
+ nsIServiceManager serviceManager = mozilla.getServiceManager();
+
+ nsIWindowWatcher windowWatcher = (nsIWindowWatcher) serviceManager
+   .getServiceManagerByContractID(NS_WINDOWWATCHER_CONTRACTID,
+     nsIWindowWatcher.NS_IWINDOWWATCHER_IID);
+ windowWatcher.setWindowCreator(creator);
+</pre>
+<p>在这个例子中，我们有一个叫<code>WindowCreator</code>的类，它实现了<code>nsIWindowCreator</code>接口，我们想要在Mozilla中注册它。要做到这点，我们首先获取服务管理器（service manager），通过它，我们可以获取Mozilla窗口监视器的引用。
+</p>
+<div class="noinclude">
+</div>

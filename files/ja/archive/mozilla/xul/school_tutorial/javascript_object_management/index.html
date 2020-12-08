@@ -1,0 +1,224 @@
+---
+title: JavaScript Object Management
+slug: Archive/Mozilla/XUL/School_tutorial/JavaScript_Object_Management
+tags:
+  - JavaScript
+  - Object
+  - Tutorials
+translation_of: Archive/Add-ons/Overlay_Extensions/XUL_School/JavaScript_Object_Management
+---
+<div>
+  <div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/School_tutorial/Adding_Sidebars" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/School_tutorial/XPCOM_Objects">次のページ  »</a></p>
+</div></div>
+
+
+
+
+
+<h2 id="Chrome_JavaScript" name="Chrome_JavaScript">Chrome JavaScript</h2>
+<p>このセクションでは、JavaScript オブジェクトを効果的に扱う方法を見ていきます。拡張機能におけるもっとも一般的な chrome コードの例から始めましょう。これには、アプローチの仕方が複数あります。ここでは、私たちが見つけた最も効果的で一貫した方法を紹介します。</p>
+<p>JavaScript オブジェクトをうまく管理する最初の手順は、Firefox のコードや他の拡張機能と競合しないことが分かっている名前空間を持つことです。名前空間の宣言は、そのファイル内で行うことが最善です。名前空間を宣言した JavaScript ファイルをすべての XUL ファイル内に含めてください。</p>
+<pre class="brush: js">/**
+ * XULSchoolChrome 名前空間.
+ */
+if ("undefined" == typeof(XULSchoolChrome)) {
+  var XULSchoolChrome = {};
+};
+</pre>
+<div class="note">
+  私たちが通常従っている名前付けの標準は、最初の部分に開発グループ名 (または企業名)、次の部分にプロジェクト名を付けています。しかしながら、ほとんどの拡張機能は個々の小さなプロジェクトで開発されています。これらの場合は、プロジェクト名だけの名前空間を持つ現実的なアプローチに従っています。私たちも、後で取り上げる JavaScript コードモジュールに似たものと区別するため、chrome の名前空間に 'Chrome' を追加します。モジュールを使用する予定がないときは、名前から 'chrome' の部分を外してください。</div>
+<p>名前空間の <em>XULSchoolChrome</em> が <em>var</em> を使用してどのように宣言されているか注意してください。名前空間を window chrome 内のどこからでも使用できるように、グローバルオブジェクトにする必要があります。</p>
+<p>名前空間は通常の JavaScript オブジェクトであるため、どのような関数でも含められます。ここで、名前空間に含まれるすべてのオブジェクトで横断的に使用したい共通のユーティリティ関数やプロパティを記述するとよいでしょう。次の例では、オブザーバサービスなどの頻繁に使用される XPCOM サービスが名前空間のメンバに含められています。</p>
+<pre class="brush: js">/**
+ * XULSchoolChrome 名前空間
+ */
+if ("undefined" == typeof(XULSchoolChrome)) {
+  var XULSchoolChrome = {
+    /**
+     * このオブジェクトの初期化
+     */
+    init : function() {
+      this.obsService =
+        Cc["@mozilla.org/observer-service;1"].getService(Ci.nsIObserverService);
+    }
+  };
+
+  /**
+   * コンストラクタ
+   */
+  (function() {
+    this.init();
+  }).apply(XULSchoolChrome);
+};</pre>
+<p>JavaScript オブジェクトは、インデックス付き文字列の配列として扱うこともできます。</p>
+<pre class="brush: js">// 以下は同じ
+XULSchoolChrome.Hello = {};
+XULSchoolChrome["Hello"] = {};
+
+// 以下は同じ
+XULSchoolChrome.Hello.init();
+XULSchoolChrome.Hello["init"]();</pre>
+<p>これは、動的に生成された名前を持つ属性や関数をセットしたい場合にとても役立ちます。これは、JavaScript の特異なプロパティの一つです。すべてのオブジェクトは、名前と値以外に何も割り当てられていません。どの JavaScript オブジェクトにも、好きな時に、関数や属性を追加したり置き換えたりできます。これは変な仕様に見えますが、コードが複雑になってきた時に助けになる強力な機能です。例えば、Firefox の chrome 内のオブジェクトのメソッドを置き換えることができるため、その通常行われる動作を変更できます。これは最終手段にすべきですが、場合によってはとても役立ちます。</p>
+<p>通常、XUL ウィンドウの制御にそれほど多くのコードを必要としないため、一つの JavaScript ファイルだけで足りるでしょう。多くのコードを必要とする複雑な動作をさせる場合は、それらを複数のオブジェクトとファイルに分けるでしょう。XUL ウィンドウには、必要なだけ複数のスクリプトを含めることができます。</p>
+<p>chrome オブジェクトを初期化するには、通常、初期化コードを window の "load" イベントハンドラから実行します。<a href="/ja/docs/XUL/Attribute/onload" title="XUL/Attribute/onload">load イベント</a>は、window 上の DOM が完全に読み込まれた後のそれらがユーザに表示される前に発生します。このタイミングで、ユーザに変更を加えられることなく、window 内の要素を操作したり変更したりできます。</p>
+<pre class="brush: js">/**
+ * Controls the browser overlay for the Hello World extension.
+ */
+XULSchoolChrome.BrowserOverlay = {
+  /**
+   * オブジェクトの初期化
+   */
+  init : function(aEvent) {
+    this._stringBundle = document.getElementById("xulschoolhello-string-bundle");
+    // ここで window の DOM を変更できます
+  }
+  // 他のコード
+};
+
+window.addEventListener(
+  "load", function() { XULSchoolChrome.BrowserOverlay.init(); }, false);</pre>
+<p>load ハンドラ内では、window を読み込み中に閉じることや、新しいウィンドウを開いたり、警告、ダイアログを表示することはできません (すべきではありません)。これらが行われる前に window の読み込みが完了しなければなりません。このような悪い UI は避けてください。本当にこのような動作が必要な場合は、遅延した後にコードが実行されるようにタイムアウトを設定します。</p>
+<pre class="brush: js">init : function(aEvent) {
+  let that = this;
+
+  this._stringBundle = document.getElementById("xs-hw-string-bundle");
+  window.setTimeout(
+    function() {
+      window.alert(that._stringBundle.getString("xulschoolhello.greeting.label")); }, 0);
+}</pre>
+<p><a href="/ja/docs/DOM/window.setTimeout" title="DOM/window.setTimeout">setTimeout</a> 関数は、2 番目の引数で指定されたミリ秒後に 1 番目の引数の関数を実行します。この例では、関数がすぐに実行されるように遅延を 0 に設定しています。Firefox には、最低 10 ～ 15 ミリ秒の遅延がある (John Resig 氏のブログ記事 <a href="http://ejohn.org/blog/analyzing-timer-performance/">Analyzing Timer Performance</a> を参照) ため、実際はすぐに実行されません。これは、window の読み込みを完了させるのに十分な時間です。</p>
+<div class="panel" style="border-width: 1px;">
+  <div class="panelContent">
+    <div class="note">
+      コードの実行を開始する時間を制御するには、<a href="/ja/docs/DOM/window.setTimeout" title="DOM/window.setTimeout">window.setTimeout</a> 関数と <a href="/ja/docs/DOM/window.setInterval" title="DOM/window.setInterval">window.setInterval</a> 関数を使用してください。JavaScript コードモジュールや XPCOM オブジェクトを使用する場合は、window オブジェクトがすぐに使用可能になりません。代わりに <a href="/ja/docs/nsITimer" title="nsITimer">nsITimer</a> を使用してください。</div>
+  </div>
+</div>
+<div class="note">
+  David Baron 氏のブログ記事 <a href="http://dbaron.org/log/20100309-faster-timeouts" title="http://dbaron.org/log/20100309-faster-timeouts">setTimeout with a shorter delay</a> では、JavaScript コードを並列化する簡単な方法により、本当の 0 ミリ秒のタイムアウトを達成する方法を提案しています。</div>
+<p>コールバック関数を引数として送る方法と <em>this</em> を参照する代わりの方法 (私たちは <em>that</em> と呼んでいます) に注目してください。これは、<a href="/ja/docs/JavaScript/Reference/Operators/Special_Operators/this_Operator" title="JavaScript/Reference/Operators/Special Operators/this Operator">メソッドバインディング</a>と呼ばれる JavaScript の機能 (癖と言った方が良いかもしれません) のために必要なことのすべてです。この方法の短所は、<em>this</em> 参照が期待通りの動作をしないことです。これにはいくつかの回避策がありますが、ここでは、そのうちの一つである、私たちが見つけた最もエレガントで読みやすいものを使用します。</p>
+<div class="panel" style="border-width: 1px;">
+  <div class="panelContent">
+    <div class="note">
+      私たちが従う一般的なガイドラインは次の通りです: コールバック関数をセットする時は、<em>function() { /* あなたのコード。大抵は単一の関数呼び出し。 */ }</em> のように匿名関数で囲む。関数内で <em>this</em> を参照しなければならない場合は、<em>this</em> と等しい <em>that</em> と呼ばれる変数を宣言し、匿名関数内で <em>that</em> を使用する。</div>
+  </div>
+</div>
+<p>JavaScript は、驚くべき柔軟性をもたらす機能を有していますが、Java などの他の言語のように厳格でないなど、いくつかの不便なところもあります。オブジェクトメンバを保護する <em>private</em> や <em>public</em> キーワードが無いことが、この明らかな例です。代わりに、private メンバや public メンバを名前の付け方で区別する方法がよく用いられています。これらのスコープは全く強制されていませんが、他のメンバとうまく使い分けて private メンバが使用されないようにできます。</p>
+<div class="panel" style="border-width: 1px;">
+  <div class="panelContent">
+    <div class="note">
+      JavaScript オブジェクトの private 属性名やメソッド名の先頭に "<em>_</em>" を付けてください。例えば、<em>_stringBundle</em>, <em>_createUserNode()</em> のようにします。</div>
+  </div>
+</div>
+
+
+
+
+
+<h3 id="Exercise" name="Exercise">練習問題</h3>
+<p>ここでは、chrome のある一面をテストするための短い練習問題を出します。Hello World 拡張を変更して、"Hello! This message has been shown 5 times." のように、メッセージが表示された回数を表示するようにしてください。 このカウンタを <em>BrowserOverlay</em> オブジェクト内の変数として保持し、メッセージが表示されるたびにカウントを増やしてください。</p>
+<p>これが正しく動作したら、次のことを行ってください: メッセージを何回か開き、カウント数を増やします。次に、新しいウィンドウを開き、その新しいウィンドウからメッセージを表示してください。何が起こると思いますか？ カウント数は何回になるでしょうか？</p>
+<p>期待通りでなかったかもしれませんが、新しいウィンドウのカウントはリセットされました。ウィンドウごとにカウンタが保持されているため、拡張機能が期待通りの動作になりませんでした。これは、基本的な教えです: <strong>chrome はグローバルではなく、window 固有のものです。</strong>すべてのスクリプトやオブジェクトは、各ウィンドウに複製され、ウィンドウごとに独立した動作をします。ここに落とし穴があります。ほとんどの Firefox ユーザ、特にパワーユーザはいつでも一つのウィンドウしか開かないため、全体を見下ろすのはとても簡単です。一つのウィンドウでテストして動作するからといって油断してはいけません。必ず、複数のウィンドウを開いて拡張機能をテストしてください。</p>
+<p>多くの場合、すべての開いた Firefox ウィンドウで矛盾の無いようにデータを統合する必要があります。これにはいくつかの方法があります。Preferences を用いる方法もそのうちの一つですが、これはチュートリアルの別のセクションで取り上げます。他の 2 つの方法は、JavaScript コードモジュール (Firefox 3 以降) や XPCOM を用いる方法です。</p>
+
+
+
+
+
+<h2 id="JavaScript_Code_Modules" name="JavaScript_Code_Modules">JavaScript コードモジュール</h2>
+<p><a href="/ja/docs/JavaScript_code_modules/Using" title="JavaScript_code_modules/Using">JavaScript コードモジュール</a> (JSM としても知られています) は、Firefox 3 の新機能です。これは、ウィンドウ間ですべてを同期するための最善のツールです。セットアップはとても簡単です。初めにすべきことは、<em>chrome.manifest</em> にモジュールのエントリを追加することです。</p>
+<pre class="code-java">resource  xulschoolhello     modules/</pre>
+<p>JavaScript コードモジュールは、<em>chrome</em> プロトコルとよく似た <em>resource</em> プロトコルでアクセスされます。chrome と同じように、パッケージ名とパスを定義します。ここでは、分かりやすくしておくために、JSM ファイルの場所をプロジェクトのルートの下の <em>modules</em> ディレクトリに置きます。例えば、このディレクトリの <em>messageCount.js</em> ファイルへアクセスする URL は次のようになります。</p>
+<pre class="code-java">resource:<span class="code-comment">//xulschoolhello/messageCount.js</span></pre>
+<p>コードモジュールは、通常の JavaScript ファイルです。新しい名前やファイルの種類はでてきません。Mozilla は、これらのファイルの拡張子に <em>.jsm</em> を標準で使用していますが、<em>.js</em> でも良いことになっています。ここでは、開発者の環境でデフォルトのファイルの関連付けを変更しなくても済むように、<em>.js</em> を使用することにします。</p>
+<p><a href="/../../../../@api/deki/files/4232/=HelloWorld3.zip" title="/@api/deki/files/4232/=HelloWorld3.zip">JSM を追加した Hello World プロジェクト</a>をダウンロードして、<em>modules</em> ディレクトリ内のファイルを含めるために必要なビルドシステムの変更箇所を確認してください。変更箇所は僅かです。<em>modules</em> ディレクトリ内に小さな <em>Makefile.in</em> ファイルを追加し、すべてを切り離して管理します。</p>
+<p>セットアップについてはここで取り上げません。話を元に戻しましょう。JavaScript コードモジュールとは何でしょうか？</p>
+<p>JavaScript コードモジュールは、宣言された要素が public であることを指定する、通常の JavaScript ファイルです。すべてのモジュールファイルは、次のように宣言で始めます。</p>
+<pre class="code-java"><span class="code-keyword">var</span> EXPORTED_SYMBOLS = [ <span class="code-quote">"XULSchool"</span> ];</pre>
+<p>EXPORTED_SYMBOLS は、このファイルが <em>XULSchool</em> という名前のオブジェクトだけを記述していることを Firefox に教える特別な識別子です。いくつかのオブジェクトや関数、変数をこのファイル上で宣言できますが、外側から見えるオブジェクトは、名前空間に使用している <em>XULSchool</em> だけです。名前空間を付けることにより、名前空間のオブジェクト以外にエクスポートするものについて心配する必要がなくなります。この名前空間内のすべてのオブジェクトも、<em>XULSchool</em> オブジェクトのメンバであるため、同様にエクスポートされます。</p>
+<p>モジュールファイルは、次のコードで、chrome スクリプトや他のコードモジュールにインポートすることができます。</p>
+<pre class="brush: js">Components.utils.import("<a rel="freelink">resource://xulschoolhello/messageCount.js</a>");</pre>
+<div class="note">
+  <a href="/ja/docs/Components.utils.import" title="Components.utils.import">Components.utils.import</a> を使用する場合、コードモジュールは、<strong>file:</strong> や <strong>resource:</strong> でディスク上のファイルを指す URLを使用して読み込まれなければなりません。特に、<strong>chrome:</strong> URL は使用できないので注意してください (これは、jar アーカイブの外のファイルを指すために使用します)。</div>
+<p>このセクションで変更した Hello World のコードモジュールの例を見ていきましょう。ここでは、2 個のファイルを定義しています。一つは名前空間を宣言し、もう一つは前回の練習問題で取り上げたメッセージをカウントする関数です。</p>
+<pre class="brush: js">var EXPORTED_SYMBOLS = [ "XULSchool" ];
+
+const Cc = Components.classes;
+const Ci = Components.interfaces;
+
+/**
+ * XULSchool namespace.
+ */
+if ("undefined" == typeof(XULSchool)) {
+  var XULSchool = {};
+};</pre>
+<p>このコードを説明する必要はないでしょう。モジュールレベルで使用する名前空間を宣言しています。chrome 名前空間のオブジェクトはウィンドウごとに分かれているため、このように、chrome とは別の、すべてのウィンドウに対してユニークなモジュール名前空間のオブジェクトで定義する必要があります。コードモジュール上でウィンドウ固有のデータをセットすることは、問題を引き起こすだけです。そのため、何を chrome で定義し、何を定義すべきでないかを慎重に決めてください。</p>
+<p>上記で宣言された 2 つの定数は、コードサイズを減らすために使用されます。私たちのコードでは、頻繁に XPCOM コンポーネントを使用する必要があるため、このようにしています。</p>
+<pre class="brush: js">this.obsService =
+  Components.classes["@mozilla.org/observer-service;1"].getService(Components.interfaces.nsIObserverService);</pre>
+<p>このコードを次のように短くできます。</p>
+<pre class="brush: js">this.obsService =
+  Cc["@mozilla.org/observer-service;1"].getService(Ci.nsIObserverService);</pre>
+<p>これら 2 つの定数は overlay 内で定義する必要はありません。これらはすでに、Firefox の <em>browser.js</em> ファイル内でグローバルに定義されています。ただし、独自のウィンドウを作成する時や、chrome の外のコードで動作させる時のみ定義する必要があります (また、SeaMonkey のメインウィンドウではこれらの定数が宣言されていません)。</p>
+<div class="panel" style="border-width: 1px;">
+  <div class="panelContent">
+    <div class="note">
+      Cc と Ci 定数を、overlay でないすべての XUL window、すべての JSM ファイル、すべての XPCOM コンポーネント (後述) に含めてください。今すぐ必要でなくても含めておいてください。これを習慣にするとよいでしょう。</div>
+  </div>
+</div>
+<p>モジュールが window のスコープの外側で動作する点は、強調する価値があります。chrome 内のスクリプトと異なり、モジュールは、<em>window</em> や <em>document</em>、<em>openUILink</em> のような他のグローバル関数などのオブジェクトへのアクセスがありません。これらはすべて UI コンポーネントと UI 操作であるため、chrome 内で実行されるほうがよいです。</p>
+<div class="panel" style="border-width: 1px;">
+  <div class="panelContent">
+    <div class="note">
+      一般のガイドラインとして、私たちのすべてのビジネスロジックをサービスオブジェクトを通して利用可能な JSM 内に保持し、chrome スクリプトはプレゼンテーションロジックを扱うことに制限されます。</div>
+  </div>
+</div>
+<p>私たちは、ほとんどのコードを静的オブジェクトや具体化する必要のない単独のオブジェクトを通して扱います。しかし、時々、クラスを定義したり複数のインスタンスを作成できるようにしたりする必要があります。よくある例として、ローカルデータベースやリモート API との対話があります。データは実体の配列に変換されることが多いため、クラスを通して提供されるのが望ましいです。次の例は、クラスを定義する方法の一つです。</p>
+<pre class="brush: js">/**
+ * ユーザクラス。 Hello World ユーザを表す (中身は何でもよい)
+ */
+XULSchool.User = function(aName, aURL) {
+  this._name = aName;
+  this._url = aURL;
+};
+
+/**
+ * ユーザクラスのメソッド
+ */
+XULSchool.User.prototype = {
+  /* ユーザの名前 */
+
+  _name : null,
+  /* ユーザの URL */
+
+  _url : null,
+
+  /**
+   * ユーザ名の取得
+   * @ユーザ名を返す
+   */
+  get name() {
+    return this._name;
+  },
+
+  /**
+   * ユーザ URL の取得
+   * @ユーザ URL を返す
+   */
+  get url() {
+    return this._url;
+  }
+};</pre>
+<p>この例では、Hello World 拡張のための架空の <em>User</em> クラスを定義しました。function キーワードを使用してクラスを定義することは変に思えますが、これが JavaScript での方法です。関数もまたオブジェクトなのです。クラスの定義は、同時にコンストラクタとしての役割も果たします。そして、他のすべてのメンバは <em>prototype</em> 属性を使用して定義できます。上記の例では、<em>name</em> と <em>url</em> メンバのための "getter" プロパティを定義しています。このように、User クラスが不変のインスタンスを持っているため、クラスを利用するオブジェクトはうまく振る舞い、変更すべきでないものは変更しません。</p>
+<p>インスタンスの作成と使用する方法はとても簡単です。</p>
+<pre class="brush: js;auto-links:false;">let user = new XULSchool.User("Pete", "http://example.com/pete");
+
+window.alert(user.name);</pre>
+<p>これは、JavaScript で一般的に行われる方法です。JSM や chrome、通常のウェブページ内でもこれを使用できます。実体はアプリケーション全体を通して使用される傾向があるので、私たちは、これらのクラスをモジュールレベルで定義することが最善のアプローチであると考えています。</p>
+<p>JSM は、ウィンドウから独立したオブジェクトを扱うには最善の解決策です。続くセクションでは、XPCOM について取り上げます。これは、JSM より前に用いられた代替手段であり、Mozilla アプリケーションの基礎の一つです。次のセクションは、拡張機能開発において XPCOM を使用しなければならない多くの一般的な状況を取り上げるので読み飛ばさないでください。あなた自身のコンポーネントを XPCOM で実装することもあるかもしれません。</p>
+
+<div><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/School_tutorial/Adding_Sidebars" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/School_tutorial/XPCOM_Objects">次のページ  »</a></p>
+</div></div>
+
+<p><small>This tutorial was kindly donated to Mozilla by Appcoast.</small></p>

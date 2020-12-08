@@ -1,0 +1,195 @@
+---
+title: 'Images, tableaux et décalages mystérieux'
+slug: 'Archive/Misc_top_level/Images,_tableaux_et_décalages_mystérieux'
+tags:
+  - CSS
+translation_of: 'Archive/Misc_top_level/Images,_Tables,_and_Mysterious_Gaps'
+---
+<p> </p>
+
+<p>Quelle que soit l'époque à laquelle vous avez créé vos premières pages Web, il y a de fortes chances pour vous ayez utilisé l'un ou l'autre graphisme basé sur le schéma classique « tableaux imbriqués et pléthore d'images ». Que vous ayez découpé un logo en plusieurs morceaux afin de l'adapter correctement à la mise en page, ou que vous ayez utilisé une multitude de GIF d'espacement à un seul pixel, les principes (et les dangers) restent les mêmes. Dans les premiers temps du Web, cette approche fonctionnait car les navigateurs adaptaient les dimensions des cellules de tableaux à celles des images qu'elles contenaient.</p>
+
+<p>Avançons rapidement jusqu'en 2001, avec l'apparition de nombreux navigateurs respectant les standards qui affichent les pages Web en utilisant HTML et CSS plutôt que leur propre algorithme propriétaire de rendu. Grâce à une partie obscure de la spécification CSS, chaque mise en page basée sur une disposition précise de petites images dans des cellules de tableau devient un désastre visuel ne demandant qu'à se produire. Il suffit d'un navigateur moderne et du bon DOCTYPE, et badaboum !</p>
+
+<h3 id="Les_composants" name="Les_composants">Les composants</h3>
+
+<p>Regardons de plus près à l'endroit où cela se produit, et pourquoi cela pose problème. Commençons par un exemple simple, illustré par le figure 1 : un tableau d'une seule cellule contenant une image.</p>
+
+<p><img alt="Figure 1" src="/@api/deki/files/718/=Images-tables-gaps-figure1.gif"></p>
+
+<p>Évidemment, la plupart des mises en page sont un peu plus compliquées que cela, mais cela convient parfaitement pour notre démonstration. Une image, une cellule — c'est tout ce qu'il faut. Il n'y a apparemment aucun problème dans cet exemple. Et il n'est pas censé y en avoir puisque cet exemple reproduit le comportement traditionnel des navigateurs.</p>
+
+<p>Voyons maintenant ce que cet exemple donne dans un navigateur moderne lorsque la page a un DOCTYPE strict.</p>
+
+<p><img alt="Figure 2" src="/@api/deki/files/721/=Images-tables-gaps-figure2.gif"></p>
+
+<p>Remarquez l'espace supplémentaire sous l'image de la figure 2. Le balisage du tableau et de la cellule n'a pas changé — c'est le mode de rendu qui est différent. Plutôt que « d'adapter » l'image elle-même, le navigateur enveloppe maintenant la ligne sur laquelle repose l'image. L'image repose sur une ligne parce que c'est, par défaut, un élément de type inline (en-ligne). Il n'en faut pas plus.</p>
+
+<h3 id="Construction_d.27un_contenu_en-ligne" name="Construction_d.27un_contenu_en-ligne">Construction d'un contenu en-ligne</h3>
+
+<p>Afin de comprendre ce qui se passe exactement, regardons de plus près la construction d'une boîte de type en-ligne, le placement d'une image dans une boîte en-ligne, et enfin, le placement d'une boîte en-ligne dans une cellule de tableau. Tout d'abord, prenons une boite en-ligne basique contenant du texte, telle que montrée sur la figure 3.</p>
+
+<p><img alt="Figure 3" src="/@api/deki/files/722/=Images-tables-gaps-figure3.gif"></p>
+
+<p>La partie la plus cruciale de la figure 3 est la ligne de référence (ou ligne de base, représentée par la ligne bleue), et sa position dans la boîte en-ligne. Le positionnement exact de cette ligne dépend de la police « par défaut » de la boîte en-ligne (représentée par le cadre rouge), qui est déterminée par la valeur de la propriété CSS <a href="/fr/docs/Web/CSS/font-family" title="La propriété font-family permet de définir une liste, ordonnée par priorité, de polices à utiliser pour mettre en forme le texte de l'élément ciblé."><code>font-family</code></a> pour l'élément contenant la boîte en-ligne. Il n'est pas possible pour un auteur de changer directement la position de la ligne de référence, elle ne bougera pas d'où elle s'est mise. L'espace sous la ligne de base est appelé « espace descendant » car c'est l'endroit où s'affichent les jambages des lettres bas de casse comme « j » et « p ». La figure 4 montre ce qui arrive lorsqu'on ajoute une image à cet ensemble.</p>
+
+<p><img alt="Figure 4" src="/@api/deki/files/723/=Images-tables-gaps-figure4.gif"></p>
+
+<p>Remarquez l'endroit où se pose l'image par défaut : son bord inférieur est aligné avec la ligne de référence de la boîte en-ligne. Ce placement peut être modifié à l'aide de la propriété <a href="/fr/docs/Web/CSS/vertical-align" title="La propriété vertical-align définit l'alignement vertical d'une boîte en ligne (inline) ou d'une cellule de tableau."><code>vertical-align</code></a> — nous en reparlons plus loin — mais presque personne ne modifie sa valeur par défaut. Enlevons le texte et conservons l'image seule, comme sur la figure 5.</p>
+
+<p><img alt="Figure 5" src="/@api/deki/files/724/=Images-tables-gaps-figure5.gif"></p>
+
+<p>Nous avons donc une image posée sur la ligne de référence d'une boîte de type en-ligne qui ne contient que cette image. Imaginez maintenant ce que nous obtenons en mettant cette ligne dans une cellule de tableau (figure 6).</p>
+
+<p><img alt="Figure 6" src="/@api/deki/files/725/=Images-tables-gaps-figure6.gif"></p>
+
+<p>Et là, ça y est — des espaces s'ouvrent là où il n'y en avait pas auparavant. C'est pire avec de petites images comme celles qui ne font qu'un pixel, comme l'illustre la figure 7.</p>
+
+<p><img alt="Figure 7" src="/@api/deki/files/726/=Images-tables-gaps-figure7.gif"></p>
+
+<p>Maintenant, toutes sortes d'espaces s'ouvrent inopinément. C'est suffisant pour rendre fou un graphiste.</p>
+
+<h3 id="Les_solutions_possibles" name="Les_solutions_possibles">Les solutions possibles</h3>
+
+<p>Une solution évidente existe — arrêter de créer des mises en page dépendantes de tableaux ou utilisant des images découpées ou d'espacement de 1 pixel — mais elle n'est pas terriblement pratique pour de nombreux graphistes Web, et elle n'aide pas à corriger les anciennes conceptions qui volent en éclats dans les navigateurs récents. Une autre solution évidente consiste à vous assurer que votre document ne déclenchera pas le mode de rendu « standard ».</p>
+
+<p>Cela peut ce faire à l'aide d'une déclaration DOCTYPE qui appellera le <a href="fr/Mode_quirks_de_Mozilla">mode « quirks »</a> ou le <a href="fr/Mode_presque_standard_de_Gecko">mode « presque standard »</a>, ou en ne mettant tout simplement pas de DOCTYPE dans votre document. L'absence de DOCTYPE empêchera la validation et ce n'est par conséquent par recommandé. Pour les auteurs qui travaillent avec des documents récupérés d'autres personnes, un DOCTYPE pour le mode « quirks » est le meilleur choix. Dans le cas où l'auteur écrit un nouveau document ou s'il désire migrer une mise en page en respectant le plus possible les standards, alors le mode « presque standard » est probablement plus adapté.</p>
+
+<p>Bien sûr, les documents écrits en XHTML Strict ou en HTML Strict appelleront le mode de rendu « standard », aussi allons-nous voir deux méthodes basiques de résoudre ce problème dans les documents stricts, et un certain nombre de façons d'appeler les « corrections ».</p>
+
+<h4 id="D.C3.A9finir_les_images_comme_.C3.A9l.C3.A9ments_de_type_bloc" name="D.C3.A9finir_les_images_comme_.C3.A9l.C3.A9ments_de_type_bloc">Définir les images comme éléments de type bloc</h4>
+
+<p>Le premier choix, et un de ceux qui fonctionnera pour les graphismes chargés en images, est de convertir les images, qui sont par défaut des éléments en-ligne, en éléments de type bloc. Faites cela et une image ne créera plus de boîte en-ligne, ce qui résoudra le problème — en supposant que l'image est le seul élément contenu dans la cellule de tableau. Dans le cas le plus simple, il faudra ajouter une règle de style comme celle qui suit :</p>
+
+<pre class="eval">td img {display: block;}
+</pre>
+
+<p>Observons l'application de cette règle au code HTML suivant :</p>
+
+<pre>&lt;table cellspacing="0" cellpadding="0" border="0" width="500"&gt;
+
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;img src="nav1.gif"&gt;&lt;img src="nav2.gif"&gt;&lt;img src="nav3.gif"&gt;
+      &lt;img src="nav4.gif"&gt;&lt;img src="nav5.gif"&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+
+  &lt;tr&gt;
+    &lt;td style="background: red;"&gt;
+      &lt;img src="smallred.gif" height="1" width="1"&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;p style="margin: 0.5em;"&gt;Ce texte est dans une
+      autre cellule de tableau. Au milieu du texte se
+      trouve une icône &lt;img src="icon2.gif"&gt; indiquant
+      un lien externe. It's very worldly.  Lorem
+      ipsum, dolor sit amet…&lt;/p&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+
+&lt;/table&gt;
+</pre>
+
+<p>Comme on peut le voir sur la figure 8, cela fonctionne dans certain cas, mais ce n'est pas vrai toutes les images.</p>
+
+<p><img alt="Figure 8" src="/@api/deki/files/727/=Images-tables-gaps-figure8.gif"></p>
+
+<p>La fine ligne rouge indique que la cellule est redimensionnée à 1 pixel de hauteur par l'image GIF d'espacement de 1 pixel, comme le voulait le graphiste. Malheureusement, les boutons en haut de la cellule sont maintenant des éléments de type bloc et ils s'empilent les uns au dessus des autres au lieu de s'afficher côte-à-côte.</p>
+
+<p>Une solution possible consiste à ajouter une classe CSS pour toutes les images nécessitant une redéfinition en éléments de type bloc et d'écrire la règle qui correspond :</p>
+
+<pre>td img.decoration {display: block;}
+
+&lt;td&gt;
+  &lt;img src="reddot.gif" class="decoration"&gt;
+&lt;/td&gt;
+</pre>
+
+<p>Selon le graphisme, cela pourrait conduire à ajouter de nombreuses classes pour ce simple effet. Ce sera particulièrement vrai si de nombreuses cellules de 1 pixel destinées à créer des lignes d'empilement idéales sont présentes, ou quelque chose dans ce genre. Si vous disposez d'un balisage se prêtant bien à cette approche, vous pouvez définir des classes CSS sur les rangs de tableau plutôt que sur les images. Ainsi vous auriez :</p>
+
+<pre class="eval">tr.decoration img { display: block; }
+</pre>
+
+<p>… avec la modification du code HTML suivante :</p>
+
+<pre>&lt;tr class="decoration"&gt;
+  &lt;td style="background: red;"&gt;
+    &lt;img src="smallred.gif" height="1" width="1"&gt;
+  &lt;/td&gt;
+&lt;/tr&gt;
+</pre>
+
+<p>Le résultat obtenu est que le GIF d'espacement devient un élément de type bloc, sans que l'on touche aux autres images. Cela conduit au résultat décrit par la figure 9.</p>
+
+<p><img alt="Figure 9" src="/@api/deki/files/728/=Images-tables-gaps-figure9.gif"></p>
+
+<p>Vous pouvez également classer les cellules plutôt que les rangs, si c'est le meilleur choix pour vous. Dans tous les cas, définir les images en élément de type bloc peut avoir des effets inattendus si vos cellules de tableau contiennent plus d'une image, comme sur la figure 8.</p>
+
+<p>Bien sûr, bien que nous ayons une cellule d'espacement de 1 pixel à la figure 9, nous avons toujours un espace indésirable sous les boutons et sur toute la largeur. Enlever cet espace pourrait être aussi facile que de mettre chaque image dans une cellule de tableau et de les définir en élément de type bloc, mais laissons-les toutes dans la même cellule que nous puissions illustrer une autre approche.</p>
+
+<h4 id="Utilisation_de_l.27alignement_vertical" name="Utilisation_de_l.27alignement_vertical">Utilisation de l'alignement vertical</h4>
+
+<p>L'autre solution consiste à laisser l'image comme élément en-ligne et de modifier son alignement vertical par rapport à la ligne de référence de la boîte en-ligne. Par exemple, vous pouvez essayez ce qui suit :</p>
+
+<pre class="eval">td img { vertical-align: bottom; }
+</pre>
+
+<p>Ceci alignera les bords inférieurs des images avec les bords inférieurs des boîtes de type en-ligne, plutôt qu'avec la ligne de base. Comme vous pouvez le voir sur la figure 10, nous obtenons l'effet souhaité : l'espace sous les images de la barre de navigation a disparu. Cependant, la cellule décorative est toujours trop grande, et les autres images sont mal alignées par rapport au texte qui les entoure.</p>
+
+<p><img alt="Figure 10" src="/@api/deki/files/719/=Images-tables-gaps-figure10.gif"></p>
+
+<p>Une fois encore, nous pourrions définir des classes d'images, de cellules ou de rangs afin de nous rapprocher de l'effet désiré. Cependant, les styles affichés ci-dessus ne surmonteront pas le problème des images d'espacement, parce que la boîte en-ligne qui les entoure aura la hauteur de la police pour la cellule, et ne rétrécira donc pas. L'image se déplacera vers le bas de la cellule, mais la cellule ne « rétractera » pas sur l'image. De plus, toute autre image de taille plus petite que la boîte en-ligne aura toujours un espace autour d'elle — comme cela se produit avec la cellule de séparation rouge. L'image d'espacement de 1 pixel est maintenant alignée dans la cellule avec le bord inférieur de celle-ci, mais la ligne de référence est de retour et elle a la taille du texte normal.</p>
+
+<p>Voyez, par exemple, la figure 11, où la taille de la police a été considérablement augmentée. Les images de la barre de navigation ont maintenant un espace en dessous d'elles, et la bande rouge est bien plus large.</p>
+
+<p><img alt="Figure 11" src="/@api/deki/files/720/=Images-tables-gaps-figure11.gif"></p>
+
+<p>Il est difficile d'éviter cela, parce que les images sont, dans cette solution, encore des éléments de type en-ligne et participent donc toujours à la création d'une boîte de type en-ligne. Si cette boîte devient suffisamment grande, l'espace commencera à apparaître autour des images.</p>
+
+<h3 id="Voir_plus_loin" name="Voir_plus_loin">Voir plus loin</h3>
+
+<p>Grâce à l'implémentation minutieuse de CSS2 dans Mozilla, ce problème des images en-ligne dans des cellules de tableaux créant des espaces non désirés a été porté à l'attention du groupe de travail CSS du W3C. Plusieurs propositions de corrections ont été soumises, mais l'une des plus prometteuses est la propriété <a class="external" href="http://www.w3.org/TR/css3-box/#line-box-contain">line-box-contain</a>, qui a été proposée pour l'intégration dans CSS3. Si cette propriété devait être adoptée, alors tous les navigateurs la supportant pourraient émuler le comportement traditionnel de « rétrécissement », sans risquer d'autre problème d'affichage avec la règle suivante :</p>
+
+<pre class="eval">td {line-box-contain: font replaced;}  /* proposée pour CSS3 */
+</pre>
+
+<p>Il existe d'autres solutions possibles dans le brouillon de travail CSS3, comme <a class="external" href="http://www.w3.org/TR/css3-box/#line-height">line-height-policy (en)</a>. Évidemment, plus vite des solutions seront trouvées et implémentées, plus les auteurs seront contents.</p>
+
+<h3 id="Recommandations" name="Recommandations">Recommandations</h3>
+
+<p>En l'absence du support de CSS3, il est difficile d'établir un ensemble précis de règles permettant de résoudre chaque occurrence de ces problèmes, car la meilleure solution pour un document donné dépendra grandement de sa structure. Si votre document utilise un balisage transitionnel, assurez-vous que son DOCTYPE corresponde et qu'il n'appelle pas le mode « standard ». Cela évitera aux navigateurs d'utiliser les modes de rendu standards, et ainsi tous les problèmes liés à la disposition des images seront résolus. Si vous utilisez un balisage strict, ou si vous avez besoin pour toute autre raison d'avoir un mode de rendu « standard », alors souvenez-vous de ces conseils :</p>
+
+<ul>
+ <li>Une image seule dans une cellule de tableau (par exemple, les GIF d'espacement de 1 pixel) doit être définie comme un élément de type bloc.</li>
+ <li>Une image dans une cellule de tableau contenant d'autres images doit être alignée verticalement avec le bas de la boîte de type en-ligne.</li>
+ <li>Une image dans une cellule de tableau contenant d'autres images et du texte doit être, le cas échéant, alignée verticalement suivant les situations.</li>
+</ul>
+
+<p>Avec un cocktail judicieux des différentes approches et une réduction du nombre de GIF d'espacement de 1 pixel — qui ne sont absolument pas nécessaires dans un navigateur respectant les standards CSS — il est toujours possible de contourner cet étrange effet du support des standards.</p>
+
+<p>La meilleure solution est de s'assurer que les images soient toujours dans les cellules elles-mêmes, ce qui permet de les définir comme éléments de type bloc, mais comme toujours, cela dépendra de la conception de l'auteur.</p>
+
+<h3 id="Articles_connexes" name="Articles_connexes">Articles connexes</h3>
+
+<ul>
+ <li><a href="fr/Mode_presque_standard_de_Gecko">Mode presque standard de Gecko</a></li>
+ <li><a href="fr/Mode_quirks_de_Mozilla">Mode quirks de Mozilla</a></li>
+</ul>
+
+<div class="originaldocinfo">
+<h3 id="Informations_sur_le_document_original" name="Informations_sur_le_document_original">Informations sur le document original</h3>
+
+<ul>
+ <li>Auteur(s) : Eric A. Meyer</li>
+ <li>Dernière mise à jour : 21 mars 2003</li>
+ <li>Copyright : © 2001-2003 Netscape.</li>
+</ul>
+</div>
+
+<p><span class="comment">Interwiki Languages Links</span></p>
+
+<p></p>

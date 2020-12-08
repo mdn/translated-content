@@ -1,0 +1,113 @@
+---
+title: '特権アプリとしてテストする: 自身のGaiaアプリを配信する'
+slug: Archive/B2G_OS/Debugging/Testing_in_a_privileged_context
+tags:
+  - セキュリティ
+  - テスト
+translation_of: Archive/B2G_OS/Debugging/Testing_in_a_privileged_context
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/Mozilla/Firefox_OS/Debugging/Intercepting_traffic_using_a_proxy" style="float: left;">« 前のページ</a><br></p>
+</div><p></p>
+
+<div class="summary">
+<p id="Testing_in_a_Privileged_Context.3A_Shipping_your_own_Gaia_Apps">お気づきの通り、JavaScriptを実行しても<a href="/docs/WebAPI">輝かしい全てのWebAPI</a>にアクセスできるわけではありません。特定のAPIを利用するアプリは、そのAPIへのアクセスを<a href="/docs/Apps/Manifest">アプリマニフェスト</a>のなかで要求しなければなりません。 <span class="seoSummary">この記事では、マーケットに特権アプリを配信する前にアプリをテストする方法をお伝えします。</span></p>
+</div>
+
+<p>現在起動しているアプリのメタデータとマニフェストを変数として取得するには、このようなコードを利用できます。</p>
+
+<p> </p>
+
+<pre class="brush: js">navigator.mozApps.getSelf().onsuccess = function(e) {
+  appself = e.result;
+}</pre>
+
+<p>このコードではアプリのメタデータを<code>appself</code>という変数に格納します。</p>
+
+<p>同様に、もし起動しているものと別のアプリのパーミッションを閲覧したい場合、b2gデスクトップのテストビルドで利用できる"許可設定 (Permissions)"からテストしたいアプリを確認してみてください。b2gデスクトップは現在インストールされている全てのアプリの許可設定をエミュレートするものです。</p>
+
+<p>いくつかの既存のWebAPIは、どんな種類のアプリでも利用できません。それらのAPIを利用するには、最上級の権限で (つまり、認定アプリとして) インストールする必要があります。自身でそれを行うには、b2gレイヤのトップであるGaiaをカスタマイズしたバージョンをビルドする必要があります。これを行うには、<code>git</code>や<code>make</code>といった環境で作業しなければなりません。Firefox OSのビルド環境の設定について詳しくは<a href="/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites" title="/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites">Firefox OS ビルドの必要条件</a>を確認してください。</p>
+
+<p>この場合は、Firefox OS全てをビルドする必要はなく、Gaiaだけで十分です。どのようにするか見てみましょう。</p>
+
+<h2 id="Gaiaをダウンロードしてビルドする"><strong>Gaiaをダウンロードしてビルドする</strong></h2>
+
+<p>最初に、Gaiaをダウンロードしてビルドする必要があります。これによってb2gデスクトップでロードできるプロファイルを作成します。以下のコマンドを使えば完了です。</p>
+
+<pre class="brush: bash">$ git clone https://github.com/mozilla-b2g/gaia
+$ cd gaia
+$ make
+</pre>
+
+<div class="warning">
+<p><strong>警告:</strong> 初めてGaiaをビルドする場合、<a href="/docs/XULRunner" title="/docs/XULRunner">XULRunner</a>のダウンロードを要求されます。これは500MBほどあるため、ダウンロードに少々時間がかかり、また多くの空き容量が必要です。</p>
+</div>
+
+<p> </p>
+
+<p>この操作は標準的なGaiaをビルドします。つまりカスタマイズの準備が整ったということです。</p>
+
+<h3 id="カスタマイズしたアプリを準備する"><strong>カスタマイズしたアプリを準備する</strong></h3>
+
+<p>XULRunnerがダウンロードされている間、<a href="https://github.com/mozilla-b2g/gaia">Gaiaのソースコードを読むこと</a>をおすすめします。ダウンロードが進行している間にカスタマイズしたアプリを準備してしまえるでしょう。</p>
+
+<p>Gaiaに内容されている全てのアプリ (設定、電話帳、ブラウザ等) は<code>apps/</code>ディレクトリに保存されています。これはあなたの特権アプリもそこに置く必要があるということです。この記事のために、<a href="https://github.com/freddyb/allperms"><em>allperms</em></a>という名前のサンプルアプリを作り、GitHubで公開しています。</p>
+
+<p>Gaiaの<code>apps/</code>ディレクトリのなかにサンプルアプリを clone して、コードツリーを変更してみましょう:</p>
+
+<pre>cd apps
+git clone <span class="nolink">https://github.com/freddyb/allperms.git</span>
+</pre>
+
+<p>最初のGaiaのビルドが完了し、<code>xulrunner-sdk</code>がダウンロードされたら、<code>apps/</code>のなかに<code>allperms</code>を含めてGaiaを再ビルドすることができます。しかし心配ありません、ほとんどのものはすでにコンパイルされているため、再ビルドは非常に早いはずです。単に以下を実行します:</p>
+
+<pre>make
+</pre>
+
+<h2 id="新しいプロファイルを使ったB2G_デスクトップを読み込む"><span class="mw-headline">新しいプロファイルを使ったB2G デスクトップを読み込む</span></h2>
+
+<p><a href="/docs/Mozilla/Firefox_OS/Using_the_B2G_desktop_client" title="/docs/Mozilla/Firefox_OS/Using_the_B2G_desktop_client">B2G デスクトップ</a>には主に2つの実行ファイルがあります: <code>b2g</code>と<code>b2g-bin</code>です。コマンドラインの引数を指定したい場合は後者を利用します。</p>
+
+<div class="note">
+<p><strong>Note:</strong> B2G デスクトップアプリケーションについての補足情報については<a href="/docs/Mozilla/Firefox_OS/Using_the_B2G_desktop_client" title="/docs/Mozilla/Firefox_OS/Using_the_B2G_desktop_client">B2G デスクトップクライアントを使用する</a>を確認してください。</p>
+</div>
+
+<p><code>-profile</code>オプションであなたがビルドしたGaiaのプロファイルへのパスを指定し、<code>b2g</code>の実行ファイルを読み込みます。</p>
+
+<h3 id="Linux">Linux</h3>
+
+<pre class="brush: bash">$ b2g-bin -profile /path/to/gaia/profile
+</pre>
+
+<h3 id="Mac_OS_X">Mac OS X</h3>
+
+<p>Max OS Xでは、gaiaのディレクトリからコマンドを起動するには以下のようにします。(あなたが標準的なアプリケーションフォルダにB2Gをインストールしていると想定しています)</p>
+
+<pre class="brush: bash">$ /Applications/B2G.app/Contents/MacOS/b2g-bin -profile /path/to/gaia/profile
+</pre>
+
+<h3 id="Windows">Windows</h3>
+
+<p>この部分は準備中です。</p>
+
+<h3 id="期待する動作">期待する動作</h3>
+
+<p>全てがうまくいくと、ロックスクリーンが見えているはずです:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/5059/lockscreen.png" style="width: 320px; height: 480px;"></p>
+
+<p>B2G デスクトップを利用する際には、<a href="/docs/Mozilla/Firefox_OS/Using_the_B2G_desktop_client#Command_line_options" title="/docs/Mozilla/Firefox_OS/Using_the_B2G_desktop_client#Command_line_options">いくつかの便利なコマンドラインオプションがあります</a>。</p>
+
+<div class="note">
+<p><strong>Note: </strong>このプロファイルは<strong>標準の設定</strong>で再度スタートします。テストの環境を整えるために行った全てのカスタマイズは、再度行う必要があります。これには<a href="/docs/Marionette" title="/docs/Marionette">Marionette</a>やプロキシ、証明書の設定も含みます。</p>
+</div>
+
+<h2 id="完了">完了</h2>
+
+<p>あなたの<code>allperms</code>アプリはインストールされ、全ての利用可能なパーミッションを備えているはずです。</p>
+
+<p>次に、<a href="/docs/Mozilla/Firefox_OS/Debugging_and_Security_Testing_with_Firefox_OS" title="/docs/Mozilla/Firefox_OS/Debugging_and_Security_Testing_with_Firefox_OS">Debugging and security testing with Firefox OS</a>を参考にしてMarionetteのステップを再度繰り返すことで、全てのWebAPIにアクセスできるテスト用の環境を用意することができます。</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/Mozilla/Firefox_OS/Debugging/Intercepting_traffic_using_a_proxy" style="float: left;">« 前のページ</a><br></p>
+</div><p></p>

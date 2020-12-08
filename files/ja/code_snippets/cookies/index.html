@@ -1,0 +1,21 @@
+---
+title: Cookie
+slug: Code_snippets/Cookies
+tags:
+  - Add-ons
+  - Extensions
+translation_of: Archive/Add-ons/Code_snippets/Cookies
+---
+<p> </p><p>{{ 英語版章題("Removing all cookies") }}
+</p>
+<h3 id=".E5.85.A8.E3.81.A6.E3.81.AE.E3.82.AF.E3.83.83.E3.82.AD.E3.83.BC.E3.82.92.E5.89.8A.E9.99.A4.E3.81.99.E3.82.8B"> 全てのクッキーを削除する </h3>
+<p>次のコードは Firefox/Seamonkey 上で全てのクッキーを削除する方法を示しています。
+</p>
+<pre class="eval">Components.classes["@mozilla.org/cookiemanager;1"]
+          .getService(Components.interfaces.nsICookieManager).removeAll();
+</pre>
+<p><br>
+</p>
+<div class="noinclude">
+</div>
+{{ languages( { "en": "en/Code_snippets/Cookies", "fr": "fr/Extraits_de_code/Cookies", "pl": "pl/Fragmenty_kodu/Ciasteczka" } ) }}

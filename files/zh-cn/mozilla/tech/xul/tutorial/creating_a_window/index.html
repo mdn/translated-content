@@ -1,0 +1,116 @@
+---
+title: 创建一个窗口
+slug: Mozilla/Tech/XUL/Tutorial/Creating_a_Window
+translation_of: Archive/Mozilla/XUL/Tutorial/Creating_a_Window
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Manifest_Files" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:Adding_Buttons">下一页  »</a></p>
+</div><p></p>
+
+<p> </p>
+
+<p>前面提到: 我们要在本教程中创建一个简单的查找文件工具。不过开始之前，我们得先看看XUL文件的基本语法。</p>
+
+<p> </p>
+
+<h3 id=".E5.88.9B.E5.BB.BA.E4.B8.80.E4.B8.AA_XUL_.E6.96.87.E4.BB.B6" name=".E5.88.9B.E5.BB.BA.E4.B8.80.E4.B8.AA_XUL_.E6.96.87.E4.BB.B6">创建一个 XUL 文件</h3>
+
+<p>一个 XUL 文件可以有任何名字，但它必须拥有一个 .xul 的扩展名。最简单的 XUL 文件具有下述结构：</p>
+
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;window
+    id="findfile-window"
+    title="查找文件"
+    orient="horizontal"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+&lt;!-- Other elements go here --&gt;
+&lt;/window&gt;
+</pre>
+
+<p>这个窗口不会做任何事情，因为它没有包含任何用户界面元素。那些元素会在下面的部分中添加。这里对上面的代码进行逐行断开解释：</p>
+
+<ol>
+ <li><strong>&lt;?xml version="1.0"?&gt;</strong><br>
+  这一行只是简单声明这是一个 XML 文件。你通常在每一个 xul 文件的顶端都会添加这一行，非常像在一个 HTML 文件的顶端添加 HTML 的标识。</li>
+ <li><strong>&lt;?xml-stylesheet href="<a class="external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;</strong><br>
+  这一行是用来指定文件使用的样式表的。这是 XML 文件用以导入样式表的语法。在这种情况下，我们从一个皮肤包的全局部分导入样式。我们没有指定特定的文件，所以 Mozilla 会确定使用文件夹中的哪一个文件。在这种情况下，会选中最重要的 global.css 文件。这个文件包括了所有 XUL 元件的默认声明。因为 XML 并不知道如何显示元件，因此这个文件指出怎样去做。通常，你会将这一行放在每一个 XUL 文件的顶部。你也可以采用类似语法导入其他的样式表。需要注意的是你一般都会在你的样式表文件中导入全局样式表。</li>
+ <li><strong>&lt;window</strong><br>
+  这一行说明你在描述一个 <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/window" title="window">window</a></code> 。每一个用户界面窗口都在一个单独的文件中进行描述。这个标记非常类似 HTML 中包围全部内容的 BODY 标记。 <a href="/cn/XUL/window#Attributes" title="cn/XUL/window#Attributes">一些属性</a>可以放到 <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/window" title="window">window</a></code> 标记中——在本例中有四个属性。在本例中，每一个属性都占一个单独的行，但并不是必须这样做。</li>
+ <li><strong>id="findfile-window"</strong><br>
+  <code><code id="a-id"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> 属性用作标识以便窗口被脚本所引用。你通常会为所有的软件放上 <code>id</code> 属性。虽然名字可由你任起，但应该是有一定关联的。</li>
+ <li><strong>title="查找文件"</strong><br>
+  The <code><code id="a-title"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/title">title</a></code></code> Attribute 属性描述显示时将在窗口的标题栏上显现的文本。在本例中将显示'查找文件'。</li>
+ <li><strong>orient="horizontal"</strong><br>
+  <code><code id="a-orient"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code></code> 属性确定窗口中元件的排布。值 <code>horizontal</code> 意味着元件应该横过窗口水平放置。你也可以使用值 <code>vertical</code>，这表示元件将成一列放置。这是默认值，所以如果你希望使用垂直方向的话可以将这个属性完全关闭。</li>
+ <li><strong>xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;</strong><br>
+  这一行声名了 XUL 的名空间，你应该将它放到窗口元件以表示它的所有子元件都是 XUL。注意这个 URL 实际上不需要下载的。Mozilla 内部会识别这个 URL。</li>
+ <li><strong><span class="nowiki">&lt;!-- 其他元件写到这里 --&gt;</span></strong><br>
+  将这个注释块替换成其他显示在窗口中的元件（按钮、菜单以及其他用户界面组件）。我们在接下面的部分将添加一些元件。</li>
+ <li><strong>&lt;/window&gt;</strong><br>
+  最后，我们需要在文件的结尾关闭 <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/window" title="window">window</a></code> 标记。</li>
+</ol>
+
+<h3 id=".E6.89.93.E5.BC.80.E7.AA.97.E5.8F.A3" name=".E6.89.93.E5.BC.80.E7.AA.97.E5.8F.A3">打开窗口</h3>
+
+<p>声明完一个窗口，如果打开它呢？这里有几种方法：</p>
+
+<ul>
+ <li>如果是进行开发，你可以直接在浏览器的定位栏(location bar)中输入URL(chrome:、file:或其它形式的URL)。如果使用chrome则要按前面所讲的注册包。如果使用file:协议，可以直接打开。chrome的好处是可以获得比一般URL更多的权限。不过，现在还用不上。但建议还是把chrome配好。</li>
+ <li>如果.xul文件已经与Mozilla作了关联，在资源管理器上双击即可。这种方式与file:方式效果一样。</li>
+</ul>
+
+<p>不过，因为我们的XUL中没有定义其它元素，因此使用Mozilla打开时，什么也看不到。并且在浏览器中打开时，窗口会显示在浏览器中，这不是一个真正的应用，不过进行测试没有关系。</p>
+
+<ul>
+ <li>正确的方法是使用Javascript来打开。使用window.open()函数，同打开HTML文档一样。不过需要一个额外的参数，叫"chrome"，它用来指明要打开的文档是一个chrome文档。语法描述如下：
+  <blockquote>
+  <p>window.open(url,windowname,flags);</p>
+
+  <p>其中 flags 必须包含 "chrome"。</p>
+
+  <p>例如：<br>
+   window.open("<a class="external" rel="freelink">chrome://navigator/content/navigator.xul</a>", "bmarks", "chrome,width=600,height=300");</p>
+  </blockquote>
+ </li>
+ <li>还可以在命令行下使用-chrome参数来指明Mozilla启动时打开的XUL文件。例如：
+  <blockquote>
+  <p>mozilla -chrome <a class="external" rel="freelink">chrome://findfile/content/findfile.xul</a></p>
+
+  <p>mozilla -chrome resource:/chrome/findfile/content/findfile.xul</p>
+  </blockquote>
+ </li>
+</ul>
+
+<p>-chrome参数并不会带来特殊权限，而是chrome URL备具特殊权限。</p>
+
+<p>到这里可以把已经学过的做一个测试。包的组织不一定要是content/skin/locale这种形式。象我的测试就是：</p>
+
+<blockquote>
+<p>d:\project\test\xul\findfile</p>
+</blockquote>
+
+<p>现在目录下有两个文件：</p>
+
+<blockquote>
+<p>findfile.xul和contents.rdf</p>
+</blockquote>
+
+<p>然后修改installed-chrome.txt文件。</p>
+
+<p>切换到Mozilla目录，然后在命令行下输入：</p>
+
+<blockquote>
+<p>mozilla -chrome <a class="external" rel="freelink">chrome://findfile/content/filefile.xul</a></p>
+</blockquote>
+
+<p dir="ltr">不过执行完后，什么都没有，就一个标题条。</p>
+
+<p dir="ltr">(英文原文: <a class="external" href="http://developer.mozilla.org/en/docs/XUL_Tutorial:Creating_a_Window">XUL_Tutorial:Creating_a_Window</a> ) 本篇wiki基于limodou的学习记录: <a class="external" href="http://blog.donews.com/limodou/archive/2005/01/10/233420.aspx">XUL学习:XUL Tutorial(五) -- Creating a Window</a></p>
+
+<p dir="ltr"> </p>
+
+<p dir="ltr"></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Manifest_Files" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:Adding_Buttons">下一页  »</a></p>
+</div><p></p>

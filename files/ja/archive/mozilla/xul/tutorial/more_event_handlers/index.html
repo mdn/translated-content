@@ -1,0 +1,148 @@
+---
+title: イベントハンドラの詳細
+slug: Archive/Mozilla/XUL/Tutorial/More_Event_Handlers
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/More_Event_Handlers
+---
+<p> </p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Adding_Event_Handlers" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Keyboard_Shortcuts">次のページ  »</a></p>
+</div>
+<p>このセクションでは、イベントオブジェクトについて調査し、その後、付加的なイベントについても説明します。</p>
+<p><span id="The_Event_Object"></span></p>
+<h3 id=".E3.82.A4.E3.83.99.E3.83.B3.E3.83.88.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88" name=".E3.82.A4.E3.83.99.E3.83.B3.E3.83.88.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88">イベントオブジェクト</h3>
+<p>それぞれのイベントハンドラは、<a href="ja/DOM/event">イベントオブジェクト</a>を保持する引数を、1 つとります。 属性形式のイベントリスナーでは、このイベントは、スクリプトコードから「<code>event</code>」という名前で参照可能な暗黙の引数になります。 <a href="ja/DOM/element.addEventListener">addEventListener</a> 形式の場合は、リスナー関数の第 1 引数がイベントオブジェクトになります。 イベントオブジェクトには、イベント処理の間に調査可能なプロパティがたくさんあります。 プロパティの完全な一覧は、<a class="external" href="http://xulplanet.com/references/objref/Event.html">XULPlanet のオブジェクトリファレンス</a> で参照可能です。</p>
+<p>前のセクションでは、イベントが発生した要素への参照を保持する、<code><a href="ja/DOM/event">event</a></code> の <code><a href="ja/DOM/event.target">target</a></code> プロパティについて見ています。 それと類似したプロパティである <code><a href="ja/DOM/event.currentTarget">currentTarget</a></code> は、現在処理中のイベントリスナーを持っている要素を保持しています。 下の例では、<code><a href="ja/DOM/event.currentTarget">currentTarget</a></code> は常に <code>vbox</code> を保持しますが、 <code><a href="ja/DOM/event.target">target</a></code> は、特定の要素、つまり <code>button</code> か <code>checkbox</code> のどちらか活性化された方を保持します。</p>
+<p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advevents_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advevents_1.xul">表示</a></p>
+<pre>&lt;vbox oncommand="alert(event.currentTarget.tagName);"&gt;
+  &lt;button label="OK"/&gt;
+  &lt;checkbox label="Show images"/&gt;
+&lt;/vbox&gt;
+</pre>
+<p><span id="Stop_Event_Propagation"></span></p>
+<h4 id=".E3.82.A4.E3.83.99.E3.83.B3.E3.83.88.E4.BC.9D.E6.92.AD.E3.81.AE.E4.B8.AD.E6.AD.A2" name=".E3.82.A4.E3.83.99.E3.83.B3.E3.83.88.E4.BC.9D.E6.92.AD.E3.81.AE.E4.B8.AD.E6.AD.A2">イベント伝播の中止</h4>
+<p>どこかでイベントを処理したのなら、そのイベントがどこまで<span style="border-bottom: 1px dashed green;" title="propagation">伝播</span> されたかに関係なく、そのイベントが他の要素にも送信されるのを止めたい、 言い換えると、<span style="border-bottom: 1px dashed green;" title="capturing">捕捉</span>フェーズや、<span style="border-bottom: 1px dashed green;" title="bubbling">浮上</span>フェーズが続かないように停止したいことがあると思います。 イベント伝播を停止する方法は、イベントリスナーを要素へ結びつける方法に依存して、いくつかの手段があります。</p>
+<p>イベントの捕捉フェーズは、浮上フェーズの前に行われることを思い出してください。 捕捉リスナーは、常に浮上リスナーの前に起動されます。 イベント捕捉処理によって、イベントの伝播が中止された場合、後続の捕捉リスナーや全ての浮上リスナーは、イベントの通知を受けることはありません。 イベントの伝播を中止させるには、以下の例で示すように、イベントオブジェクトの <code><a href="ja/DOM/event.stopPropagation">stopPropagation</a></code> メソッドを呼び出します。</p>
+<p><span id="%E4%BE%8B_2"><a id="%E4%BE%8B_2"></a><strong>例 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advevents_2.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advevents_2.xul">表示</a></p>
+<pre>&lt;hbox id="outerbox"&gt;
+  &lt;button id="okbutton" label="OK"/&gt;
+&lt;/hbox&gt;
+
+&lt;script&gt;
+function buttonPressed(event){
+  alert('Button was pressed!');
+}
+
+function boxPressed(event){
+  alert('Box was pressed!');
+  event.stopPropagation();
+}
+
+var button = document.getElementById("okbutton");
+button.addEventListener('command',buttonPressed,true);
+
+var outerbox = document.getElementById("outerbox");
+outerbox.addEventListener('command',boxPressed,true);
+&lt;/script&gt;
+</pre>
+<p>この例では、個別のイベントリスナーがボタンとボックスのそれぞれに設定されています。 <code><a href="ja/DOM/event.stopPropagation">stopPropagation</a></code> メソッドが、ボックスのリスナーから呼び出されるため、ボタンのリスナーが呼び出されることはありません。 <code><a href="ja/DOM/event.stopPropagation">stopPropagation</a></code> の呼び出しを取り除いた場合、両方のリスナーが呼び出され、両方のアラートが現れることになります。</p>
+<p><span id="Prevent_Default_Action"></span></p>
+<h4 id=".E3.83.87.E3.83.95.E3.82.A9.E3.83.AB.E3.83.88.E3.81.AE.E5.8B.95.E4.BD.9C.E3.82.92.E5.A6.A8.E3.81.92.E3.82.8B" name=".E3.83.87.E3.83.95.E3.82.A9.E3.83.AB.E3.83.88.E3.81.AE.E5.8B.95.E4.BD.9C.E3.82.92.E5.A6.A8.E3.81.92.E3.82.8B">デフォルトの動作を妨げる</h4>
+<p>イベントに対応するイベントハンドラが登録されていない場合は、捕捉と浮上の両方のフェーズが終了した後、要素はそのイベントをデフォルトの方法で処理します。 何が行われるかは、イベントの種類と要素の種類に依存します。 例えば、「popupshowing」イベントは、ポップアップへ表示直前に送られて、デフォルトの動作はポップアップの表示になります。 このデフォルトの動作を妨げた場合、ポップアップは表示されなくなります。 デフォルトの動作を<span style="border-bottom: 1px dashed green;" title="prevent">妨げる</span>には、イベントオブジェクトの <code><a href="ja/DOM/event.preventDefault">preventDefault</a></code> メソッドを、以下の例のように呼び出すことで可能です。</p>
+<p><span id="%E4%BE%8B_3"><a id="%E4%BE%8B_3"></a><strong>例 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advevents_3.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advevents_3.xul">表示</a></p>
+<pre>&lt;button label="Types" type="menu"&gt;
+  &lt;menupopup onpopupshowing="event.preventDefault();"&gt;
+    &lt;menuitem label="Glass"/&gt;
+    &lt;menuitem label="Plastic"/&gt;
+  &lt;/menupopup&gt;
+&lt;/button&gt;
+</pre>
+<p>あるいは、属性イベントリスナーの場合は、単にコードから false を返すことでも可能です。 デフォルトの動作をさせないことと、 <code><a href="ja/DOM/event.stopPropagation">stopPropagation</a></code> メソッドで、イベントの伝播を中止することとは同じではないことに注意してください。 デフォルトの動作が妨げられたとしても、イベントの伝播は続行されます。 同様に <code><a href="ja/DOM/event.stopPropagation">stopPropagation</a></code> メソッドは、デフォルトの動作を妨げません。 両方とも止めたい場合は、両方のメソッドを呼び出さなければなりません。</p>
+<p>伝播、あるいはデフォルトの動作のいずれにおいても、いったん中止された場合、そのイベントに対しては、どちらも再開させることはできないことに注意してください。</p>
+<p>以下に、利用可能なイベントの一部について記述します。 完全な一覧は、<a class="external" href="http://www.xulplanet.com/references/elemref/ref_EventHandlers.html">XULPlanet のイベントリファレンス</a> で参照することができます。</p>
+<p><span id="Mouse_Events"></span></p>
+<h3 id=".E3.83.9E.E3.82.A6.E3.82.B9.E3.82.A4.E3.83.99.E3.83.B3.E3.83.88" name=".E3.83.9E.E3.82.A6.E3.82.B9.E3.82.A4.E3.83.99.E3.83.B3.E3.83.88">マウスイベント</h3>
+<p>マウス固有の動作に対する処理に用いられるイベントを、以下に記述します。</p>
+<dl>
+ <dt>
+  click </dt>
+ <dd>
+  要素の上で、マウスボタンが押されて離されたときに呼び出されます。</dd>
+</dl>
+<dl>
+ <dt>
+  dblclick </dt>
+ <dd>
+  マウスボタンがダブルクリックされたときに呼び出されます。</dd>
+</dl>
+<dl>
+ <dt>
+  mousedown </dt>
+ <dd>
+  要素の上で、マウスボタンが押された瞬間に呼び出されます。イベントハンドラはマウスボタンが押された直後に、離されるのを待たず、呼び出されます。</dd>
+</dl>
+<dl>
+ <dt>
+  mouseup </dt>
+ <dd>
+  要素の上で、マウスボタンが離されたときに呼び出されます。</dd>
+</dl>
+<dl>
+ <dt>
+  mouseover </dt>
+ <dd>
+  要素の上に、マウスポインタが重なったときに呼び出されます。これを要素のハイライト処理に利用することもできますが、 CSS で自動的に行う方法が提供されているため、イベント処理で行うべきではありません。といっても、ステータスバーに何らかのヘルプを表示させたい場合には使う必要があるでしょう。</dd>
+</dl>
+<dl>
+ <dt>
+  mousemove </dt>
+ <dd>
+  要素の上で、マウスポインタが動いたときに呼び出されます。ユーザがマウスを動かすたびにイベントが呼び出されるため、このハンドラで時間を要する処理を行うことは避けるべきです。</dd>
+</dl>
+<dl>
+ <dt>
+  mouseout </dt>
+ <dd>
+  要素の上から、マウスポインタが離れたときに呼び出されます。要素のハイライトを消したり、ステータスバーのテキストを取り除くために利用できます。</dd>
+</dl>
+<p>利用者が、マウスボタンを押し下げたまま、マウスをあちこちに動かすときに発生する、ドラッグ関連のイベントもあります。 それらのイベントは、<a href="ja/Drag_and_Drop">ドラッグ＆ドロップ</a>に記述されています。</p>
+<p><span id="Mouse_Button_Event_Properties"></span></p>
+<h4 id=".E3.83.9E.E3.82.A6.E3.82.B9.E3.83.9C.E3.82.BF.E3.83.B3.E3.82.A4.E3.83.99.E3.83.B3.E3.83.88.E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3" name=".E3.83.9E.E3.82.A6.E3.82.B9.E3.83.9C.E3.82.BF.E3.83.B3.E3.82.A4.E3.83.99.E3.83.B3.E3.83.88.E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3">マウスボタンイベントプロパティ</h4>
+<p>マウスボタンイベントが発生した場合、イベントオブジェクトにはどのマウスボタンが押されたかや、マウスポインタの位置などを表す、付加的なプロパティが多数利用可能になります。 どのマウスボタンが押されたかは、<code><a href="ja/DOM/event">event</a></code> の <code><a href="ja/DOM/event.button">button</a></code> プロパティにより得られます。 設定される値は、 0 が左ボタン、1 が中央ボタン、2 右はボタンになります。 ただし、マウスの設定を変えた場合、これらの値とは異なっていることがあります。</p>
+<p><code><a href="ja/DOM/event.detail">detail</a></code> プロパティは、ボタンが何回連続して素早くクリックされたかを保持しています。 これによりシングルクリック、ダブルクリック、トリプルクリックの判別が可能になります。 もちろん、ダブルクリックのみのチェックを行いたい場合は、代わりに dblclick を使うことができます。 click イベントは最初のクリックで一度、次のクリックでもう一度、３度目のクリックで更にもう一度といった具合に送出されますが、 dblclick イベントは、ダブルクリックごとに、一度だけ送出されます。</p>
+<p><code><a href="ja/DOM/event.button">button</a></code> と <code><a href="ja/DOM/event.detail">detail</a></code> プロパティは、マウスボタン関連のイベントにのみ設定され、マウスポインタ移動関連のイベントには設定されません。 例えば、mousemove イベントでは、両プロパティとも 0 に設定されます。</p>
+<p><span id="Mouse_Position_Event_Properties"></span></p>
+<h4 id=".E3.83.9E.E3.82.A6.E3.82.B9.E4.BD.8D.E7.BD.AE.E3.82.A4.E3.83.99.E3.83.B3.E3.83.88.E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3" name=".E3.83.9E.E3.82.A6.E3.82.B9.E4.BD.8D.E7.BD.AE.E3.82.A4.E3.83.99.E3.83.B3.E3.83.88.E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3">マウス位置イベントプロパティ</h4>
+<p>また、イベントが発生したときのマウス位置の座標を保持するプロパティについては、すべてのマウスイベントで設定されます。 設定される座標は、2 つあり、それぞれ基点が異なっています。 まず、<code><a href="ja/DOM/event.screenX">screenX</a></code> と <code><a href="ja/DOM/event.screenY">screenY</a></code> プロパティは、画面 (screen) の左上隅からの相対座標を示しています。 次に、<code><a href="ja/DOM/event.clientX">clientX</a></code> と <code><a href="ja/DOM/event.clientY">clientY</a></code> プロパティは、文書の左上隅からの相対座標を示しています。 マウス座標を表示する例を、以下に示します。</p>
+<p><span id="%E4%BE%8B_4"><a id="%E4%BE%8B_4"></a><strong>例 4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advevents_4.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advevents_4.xul">表示</a></p>
+<pre>&lt;script&gt;
+
+function updateMouseCoordinates(event){
+  var text = "X:" + event.clientX + " Y:" + event.clientY;
+  document.getElementById("xy").value = text;
+}
+&lt;/script&gt;
+
+&lt;label id="xy"/&gt;
+&lt;hbox width="400" height="400" onmousemove="updateMouseCoordinates(event);"/&gt;
+</pre>
+<p>この例では、効果の確認を容易にするために、ボックスのサイズを明示的に指定しています。 イベントハンドラは、<code><a href="ja/DOM/event.clientX">clientX</a></code> と <code><a href="ja/DOM/event.clientY">clientY</a></code> プロパティを取得して文字列に変換し、ラベルの <code>value</code> プロパティに代入しています。 引数として、「<code>event</code>」を <code>updateMouseCoordinates</code> 関数に渡さなければならないことに注意してください。 また、マウスを、ボックスの境界を越して素早く動かしたとき、座標の更新がボックスの境界である 400 の手前で止まることが確認できると思います。 これは、mousemove イベントが、マウスの動く速さに依存した間隔で発生するために、 マウスが境界から若干離れたところにある場合でも、次のイベントが発生するまでの間に、境界を越した位置まで移動することができるためです。 明らかに、マウスの軌跡にあるすべての画素を通過するごとに mousemove イベントを送出するのが非効率すぎるということは理解してもらえる思います。</p>
+<p><span id="Element_Relative_Coordinates"></span></p>
+<h4 id=".E8.A6.81.E7.B4.A0.E7.9B.B8.E5.AF.BE.E3.81.AE.E5.BA.A7.E6.A8.99" name=".E8.A6.81.E7.B4.A0.E7.9B.B8.E5.AF.BE.E3.81.AE.E5.BA.A7.E6.A8.99">要素相対の座標</h4>
+<p>イベントが発生した場所を、ウインドウ全体ではなく、その要素との相対的な座標で取得したいことは、しばしばあると思います。 そのためには、次のコードで示すように、イベントの位置から要素の位置を引き算することで求めることが可能です。</p>
+<pre>var element = event.target;
+var elementX = event.clientX - element.boxObject.x;
+var elementY = event.clientY - element.boxObject.y;
+</pre>
+<p>XUL 要素は、ボックスオブジェクトを持っており、<code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/boxObject">boxObject</a></span></code></code> プロパティを利用して取得できます。 ボックスオブジェクトについての詳細は、<a href="ja/XUL_Tutorial/Box_Objects">後のセクション</a>で学ぶことになりますが、 ここでは、とりあえず要素の x, y 座標を含む、要素の表示のされ方に関係する情報を保持しているものであると理解してください。 この例のコードでは、<code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/boxObject">boxObject</a></span></code></code> から得られる要素の座標と、イベントの座標の引き算を行うことで、要素内の相対的なイベントの位置を算出しています。</p>
+<p><span id="Load_Events"></span></p>
+<h3 id="load_.E3.82.A4.E3.83.99.E3.83.B3.E3.83.88" name="load_.E3.82.A4.E3.83.99.E3.83.B3.E3.83.88">load イベント</h3>
+<p>load イベントは、XUL ファイルの読み込みが完了して、内容が表示される直前に、文書 (<code><code><a href="/ja/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> タグ) に送出されます。 通常、このイベントは、利用者にウインドウが使用可能になる前に行う必要のある、フィールドの初期化などの処理を行うために使用されます。 なお、こういった初期化処理は、スクリプトを関数の外のトップレベルに追加するのではなく、load イベントを利用して行うべきです。 そうしないと、XUL 要素が読み込まれる前だったり、完全に初期化されていないことがあるため、何かが予期した動作にならない可能性があります。 load イベントを使うには、 <code><code><a href="/ja/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> タグ内に <code><code id="a-onload"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/onload">onload</a></code></code> 属性を設定します。 必要に応じて、インターフェイスを初期化するコードを load ハンドラから呼び出すようにしてください。</p>
+<p>ウインドウが閉じられたとき、あるいはブラウザに表示されている場合で、ページが別の URL に変えられたときに呼び出される、unload イベントというのもあります。 このイベントは、例えば変更された情報を保存する場合などに利用できます。</p>
+<p>次のセクションでは、キーボードショートカットの追加方法について見ていきます。</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Adding_Event_Handlers" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Keyboard_Shortcuts">次のページ  »</a></p>
+</div>

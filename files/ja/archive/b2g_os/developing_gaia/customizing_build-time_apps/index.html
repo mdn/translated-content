@@ -1,0 +1,173 @@
+---
+title: ビルド時のアプリをカスタマイズする
+slug: Archive/B2G_OS/Developing_Gaia/Customizing_build-time_apps
+tags:
+  - Apps
+  - Customization
+  - Firefox OS
+  - Gaia
+  - Guide
+  - ガイド
+translation_of: Archive/B2G_OS/Developing_Gaia/Customizing_build-time_apps
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details open>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/ja/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<div class="summary">
+<p><span class="seoSummary">開発者や端末ベンダとして、様々な理由から Firefox OS 端末の初回実行時に出てくるアプリをカスタマイズしたくなるでしょう。この記事ではそうするための異なる仕組みを説明します。</span></p>
+</div>
+
+<h2 id="Gaia内のアプリの場所">Gaia内のアプリの場所</h2>
+
+<p>Firefox OS で動かされるアプリは、Gaiaソースツリー内の2つの場所に含まれます:</p>
+
+<ul>
+ <li><a href="https://github.com/mozilla-b2g/gaia/tree/master/apps">gaia/apps/</a>: ここではシステムのデフォルトアプリ、例えばカレンダー、eメール、設定、などが見られます。</li>
+ <li><a href="https://github.com/mozilla-b2g/gaia/tree/master/dev_apps">gaia/dev-apps</a>: ここではその他のアプリ、例えばカスタマイズ処理で入るものが見られます。</li>
+</ul>
+
+<p>あなたのGaia/B2Gビルドで省略/追加したい場合、下記に述べる色々な方法でできます。</p>
+
+<h2 id="ブルートフォースでカスタマイズする方法">ブルートフォースでカスタマイズする方法</h2>
+
+<p>"ブルートフォース"手法は、単に今回のビルドに入れたくないアプリを、ビルド前に削除します。</p>
+
+<h2 id="設定リストを編集する">設定リストを編集する</h2>
+
+<p>より洗練された方法は、<code>apps-*.list</code> ファイル (<a href="https://github.com/mozilla-b2g/gaia/tree/master/build/config">gaia/build/config/</a> の中の色々な端末ディレクトリ、例えば <code>phone/</code> や <code>tablet/</code> の中に見られる) を編集して、ビルド時に含めたいアプリへのパスを入れます。例えば、<a href="https://github.com/mozilla-b2g/gaia/blob/master/build/config/phone/apps-production.list">gaia/build/config/phone/apps-production.list</a> は下記のようです:</p>
+
+<pre class="brush: bash">apps/bluetooth
+apps/bookmark
+apps/browser
+apps/calendar
+apps/callscreen
+etc.</pre>
+
+<p>注意点として、ディレクトリ内の全アプリを指定できます、このように:</p>
+
+<pre class="brush: bash">apps/*</pre>
+
+<p><code>ビルド時に利用できるアプリを決定するのに、どのapps-*.list</code> ファイルが使われるかを選ぶ仕組みは <a href="https://github.com/mozilla-b2g/gaia/blob/master/Makefile">gaia/Makefile</a> 内にあり、下記のようです:</p>
+
+<pre class="brush: cpp"><span class="nv">GAIA_DEVICE_TYPE</span><span class="o">?=</span>phone
+  ...
+GAIA_APP_TARGET?=engineering
+  ...
+ifeq ($(MAKECMDGOALS), demo)
+GAIA_DOMAIN=thisdomaindoesnotexist.org
+GAIA_APP_TARGET=demo
+else ifeq ($(MAKECMDGOALS), dogfood)
+DOGFOOD=1
+else ifeq ($(MAKECMDGOALS), production)
+PRODUCTION=1
+endif
+  ...
+ifeq ($(PRODUCTION), 1)
+GAIA_OPTIMIZE=1
+GAIA_APP_TARGET=production
+endif
+
+ifeq ($(DOGFOOD), 1)
+GAIA_APP_TARGET=dogfood
+endif
+  ...
+ifndef GAIA_APP_CONFIG
+GAIA_APP_CONFIG=build$(SEP)config$(SEP)apps-$(GAIA_APP_TARGET).list
+endif</pre>
+
+<p>最初は、the <code>GAIA_APP_TARGET</code> 変数<code>に engineering が</code>、the <code><span class="nv">GAIA_DEVICE_TYPE</span></code>に<code> phone が</code>セットされます、なのでGaiaをソースからビルドするのにデフォルトでは <a href="https://github.com/mozilla-b2g/gaia/blob/master/build/config/phone/apps-engineering.list">gaia/config/phone/app-engineering.list</a> (この中に全てのテスト、デモなどがあります)が使われます。</p>
+
+<p>他のアプリリストを使用するよう指定するには、<code>make</code> コマンド実行時に別のオプションを指定します。例えば<a href="https://github.com/mozilla-b2g/gaia/blob/master/build/config/phone/apps-production.list">gaia/build/config/phone/apps-production.list</a>を使ってビルドするには、これを使います。</p>
+
+<pre class="brush: bash">PRODUCTION=1 make</pre>
+
+<p><code>DEMO=1</code> を指定してビルドする場合、<a href="https://github.com/mozilla-b2g/gaia/blob/master/build/config/phone/apps-demo.list">apps-demo.list</a>が使われます。<code>DOGFOOD=1</code> を指定してビルドする場合、<a href="https://github.com/mozilla-b2g/gaia/blob/master/build/config/phone/apps-dogfood.list">apps-dogfood.list</a>が使われます。</p>
+
+<p><a href="https://github.com/mozilla-b2g/gaia/blob/master/Makefile">gaia/Makefile</a> 内の <code>GAIA_APP_CONFIG</code> を編集して、完全に指定を上書きしたり、自分自身の <code>apps-*.list</code> ファイルを提供したりできます。</p>
+
+<p><a href="https://github.com/mozilla-b2g/gaia/blob/master/Android.mk#L24-L28">gaia/Android.mk</a> には下記の行が含まれます:</p>
+
+<pre class="brush: cpp">ifneq ($(filter user userdebug, $(TARGET_BUILD_VARIANT)),)
+GAIA_MAKE_FLAGS += PRODUCTION=1
+B2G_SYSTEM_APPS := 1
+endif</pre>
+
+<p>ビルド時に、<code>VARIANT=user</code> <code>や VARIANT=userdebug</code> がセットされた場合 (これらは<code>TARGET_BUILD_VARIANT</code> 変数の反映まで巻き戻ります)、 <code>Gaiaビルド時に PRODUCTION=1</code> が自動的にセットされます。</p>
+
+<div class="note">
+<p><strong>記</strong>: 他にどんな make オプションが使えるのかは<a href="/Firefox_OS/Developing_Gaia/make_options_reference">make オプションのリファレンス</a>で見つけられます。</p>
+</div>
+
+<h2 id="Marketのカスタマイズを使う">Marketのカスタマイズを使う</h2>
+
+<p>3つ目の、最も洗練された (だが最も複雑な) 方法はカスタマイズの使用です。これによってビルド時に個別のディレクトリ内でカスタマイズ指示をする事が、コアGaiaリポジトリを変更することなく可能になります。別個のディレクトリ内に独自のカスタマイズを入れたり、ソース由来の既存ディレクトリを使用したりできます。</p>
+
+<p>例えば、<code>GAIA_DISTRIBUTION_DIR</code> 変数により、場所の指定をカスタマイズするサンプルは、このようになります:</p>
+
+<pre class="brush: bash"><code class="language-html">GAIA_DISTRIBUTION_DIR=<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>DISTRIBUTION_PATH</span><span class="punctuation token">&gt;</span></span> make production</code></pre>
+
+<p>配布の仕組みをもっとカスタマイズする例は、<a href="https://github.com/mozilla-b2g/gaia/tree/master/customization">https://github.com/mozilla-b2g/gaia/tree/master/customization</a>を参照して下さい。</p>
+
+<p>カスタマイズは完全に別の話題です。これをもっと知るには、<a href="/Firefox_OS/Developing_Firefox_OS/Market_customizations_guide">Market Customizations guide</a>を読んで下さい。</p>
+
+<div class="note">
+<p><strong>記</strong>: あなたのGaiaビルドの一部に特別な外部アプリを入れたい場合、それらを特定の方法でビルドして、次に <code>gaia/dev-apps/</code> フォルダ内に置く必要があります。<a href="/Firefox_OS/Developing_Firefox_OS/Market_customizations_guide#Building_Prebundled_web_apps">Building Prebundled web apps</a>を読んで詳細を見つけて下さい。</p>
+</div>
+
+<div class="warning">
+<p><strong>重要</strong>: 端末ベンダーが配布用の B2G/Gaia ビルドを作成する場合、Firefox Marketplaceアプリを電話・タブレット・その他に含める許可を得る前に、一定の条件を満たす必要があります。詳細は Mozilla まで連絡して下さい。</p>
+</div>
+
+<p> </p>

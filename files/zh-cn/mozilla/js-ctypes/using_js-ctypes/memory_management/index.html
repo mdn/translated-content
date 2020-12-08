@@ -1,0 +1,88 @@
+---
+title: 内存管理
+slug: Mozilla/js-ctypes/Using_js-ctypes/Memory_Management
+tags:
+  - GC
+  - js-ctypes
+  - 内存管理
+translation_of: Mozilla/js-ctypes/Using_js-ctypes/Memory_Management
+---
+<section class="Quick_links" id="Quick_Links">
+<ol>
+ <li><a href="/en-US/docs/Mozilla/js-ctypes"><strong><em>js-ctypes</em></strong></a></li>
+ <li class="toggle">
+  <details><summary>Introduction</summary>
+  <ol>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/Debugging_Tips" title="Editorial review completed.">Debugging Tips</a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/Declaring_and_calling_functions" title="Functions are declared using the Library object's declare() method. Once declared, functions can be called using standard function syntax.">Declaring and Calling Functions</a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/Declaring_and_Using_Callbacks" title="C functions occasionally take function pointers as arguments, which are generally used as callbacks. In these cases, js-ctypes allows you to pass a regular JavaScript function as the callback. This is very powerful, since it allows native code to transparently call into JavaScript.">Declaring and Using Callbacks</a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/Declaring_types" title="The ctypes object offers a number of constructor methods that let you declare types. Every type is represented by a CType object, which, in turn, provides a constructor method you can call to define values of those types. Each type you declare using js-ctypes corresponds to a compatible C declaration.">Declaring types</a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/Memory_Management" title="If JS code creates a structure or an array, that memory will be valid as long as the JS object stays alive. Pointers to that memory must be carefully managed to make sure the underlying memory is still referenced.">Memory Management</a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/Standard_OS_Libraries" title="This article gives the names of standard libraries that can be accessed with js-ctypes. These libraries are what enable js-ctypes to work. The alternative to standard libraries is creating your own DLL (for Windows) or SO (for Linux) file with C functions that can be called from your add-on with js-ctypes. The DLL/SO/etc file you make must be shipped with your add-on. Standard libraries offer the advantage of not having to ship anything. They are already available on the operating system for you. You just need to supply the path to appropriate files and set up the proper types of values/arguments in the js-ctypes code. This article allows you to find out what types to give to values/arguments by supplying links to the documentation of the OS libraries.">Standard OS Libraries</a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/Type_conversion" title="In js-ctypes, data could be converted implicitly when passing to or returning from a FunctionType call, or setting pointer content, an array element or a struct field.">Type conversion</a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/Working_with_ArrayBuffers" title="An ArrayBuffer is a simply byte array. The js-ctypes equivalent is a ctypes.uint8_t.array(###) (ctypes.unsigned_char are also ctypes.uint8_t).">Working with ArrayBuffers</a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/Working_with_data" title="Data types for use with js-ctypes are represented by CType objects. These are JavaScript constructors; as such, they're callable functions that you can use to create new CData objects of that type. There are several ways you can go about creating new CData objects.">Working with data</a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/ctypes.open" title="At the heart of js-ctypes is the ctypes.open() function. This must be called before any work can commence. There are two options:">ctypes.open</a></li>
+  </ol>
+  </details>
+ </li>
+ <li class="toggle">
+  <details><summary>References</summary>
+  <ol>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/ABI" title="This article describes the calling conventions with respect to js-ctypes while programming x86 and x86-64/x64/AMD64 architectures. A calling convention is an implementation-level (low-level) scheme regarding how subroutines receive parameters from their caller and how they revert."><code>ABI</code></a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/ArrayType" title="ArrayType represents C arrays"><code>ArrayType</code></a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/CData" title="A CData object represents a C value or function located in memory."><code>CData</code></a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/CType" title="All data types declared using the js-ctypes API are represented by CType objects. These objects have assorted methods and properties that let you create objects of these types, find out information about them, and so forth. The specific properties and methods on each object vary depending on the data type represented."><code>CType</code></a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/FunctionType" title=""><code>FunctionType</code></a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/Int64" title="Because JavaScript doesn't currently include standard support for 64-bit integer values, js-ctypes offers the Int64 and UInt64 objects to let you work with C functions and data that need (or may need) values represented using a 64-bit data type."><code>Int64</code></a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/Library" title="The Library object represents a native library loaded by the ctypes open() method. Its methods let you declare symbols exported by the library, and to manage the library."><code>Library</code></a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/PointerType" title="Returns a new CType object describing a new pointer data type."><code>PointerType</code></a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/StructType" title="Returns a CType object describing a new structure data type. This data type provides the ability to define and manipulate values of the C struct type."><code>StructType</code></a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/UInt64" title="As JavaScript doesn't currently include standard support for 64-bit integer values, js-ctypes offers the Int64 and UInt64 objects to let you work with C functions and data that need (or may need) to use data represented using a 64-bit data type."><code>UInt64</code></a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/ctypes" title="The ctypes object contains methods and predefined data types used to create and manage a library."><code>ctypes</code></a></li>
+  </ol>
+  </details>
+ </li>
+ <li class="toggle">
+  <details><summary>Examples</summary>
+  <ol>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/Examples/Add_to_iPhoto" title="This extension for Mac OS X serves as a demonstration of how to use js-ctypes to call Mac OS X Carbon, Core Foundation, and other system frameworks from an extension written entirely in JavaScript.">Add to iPhoto</a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/Examples/Using_C_structs_and_pointers" title="In this example, we show how to use C structs and pointers with js-ctypes.">Using C struct and pointers</a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/Examples/Using_COM_from_js-ctypes" title="The Windows API mostly concerns itself with the interaction between the operating system and an application. For communication between the different Windows applications among themselves, Microsoft has developed a series of technologies alongside the main Windows API. This started out with Dynamic Data Exchange (DDE), which was superseded by Object Linking and Embedding (OLE) and later by the Component Object Model (COM), Automation Objects, ActiveX controls, and the .NET Framework.">Using COM from js-ctypes</a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/Examples/Using_Objective-C_from_js-ctypes" title="Objective-C has its own syntax, it cannot be written directly with js-ctypes. This guide explains how to convert Objective-C code into js-ctypes code.">Using Objective-C from js-ctypes</a></li>
+  </ol>
+  </details>
+ </li>
+</ol>
+</section>
+
+<h2 id="内存管理">内存管理</h2>
+
+<p>If JS code creates a structure or an array, that memory will be valid as long as the JS object stays alive. Pointers to that memory must be carefully managed to make sure the underlying memory is still referenced.</p>
+
+<p>When binary code hands back a pointer/handle to allocated memory, the JS code must make sure to free that memory with the correct allocator. It is usually best to expose a freeing function from the binary.</p>
+
+<h3 id="保持_objects_活着">保持 objects 活着</h3>
+
+<p>The following js-ctypes objects will hold references to objects, keeping them alive. This is not an exhaustive list, but will help you to  understand memory management and how it affects your use of js-ctypes:</p>
+
+<ul>
+ <li>A function or static data declared using the <a href="https://wiki.developer.mozilla.org/en-US/docs/js-ctypes/js-ctypes_reference/Library#declare()"><code>declare()</code></a> method will hold that library alive.</li>
+ <li>A <a href="https://wiki.developer.mozilla.org/en-US/docs/js-ctypes/js-ctypes_reference/CType"><code>CType</code></a> will hold referent <a href="https://wiki.developer.mozilla.org/en-US/docs/js-ctypes/js-ctypes_reference/CType"><code>CType</code></a> objects alive.</li>
+ <li>A <code><a href="https://wiki.developer.mozilla.org/en-US/docs/js-ctypes/js-ctypes_reference/CData">CData</a></code> will hold referent <code><a href="https://wiki.developer.mozilla.org/en-US/docs/js-ctypes/js-ctypes_reference/CData">CData</a></code> objects alive, under specific circumstances. For example, a <code><a href="https://wiki.developer.mozilla.org/en-US/docs/js-ctypes/js-ctypes_reference/CData">CData</a></code> object produced by accessing a field of a structure or the internals of an array will hold the referent objects alive.</li>
+</ul>
+
+<h3 id="什么不保持_objects_活着">什么不保持 objects 活着</h3>
+
+<p>It's important to note that getting direct access to the contents of a <code><a href="https://wiki.developer.mozilla.org/en-US/docs/js-ctypes/js-ctypes_reference/CData">CData</a></code> object using <a href="https://wiki.developer.mozilla.org/en-US/docs/js-ctypes/js-ctypes_reference/CData#address()"><code>address()</code></a>, <a href="https://wiki.developer.mozilla.org/en-US/docs/js-ctypes/js-ctypes_reference/CData#addressOfElement()"><code>addressOfElement()</code></a>, or <a href="https://wiki.developer.mozilla.org/en-US/docs/js-ctypes/js-ctypes_reference/CData#contents"><code>contents</code></a>, will result in a <code><a href="https://wiki.developer.mozilla.org/en-US/docs/js-ctypes/js-ctypes_reference/CData">CData</a></code> object that <strong>does not</strong> hold its referent alive. Be sure to hold an explicit reference so that the referent object doesn't get into garbage collection, before you're done using it.</p>
+
+<h3 id="闭包">闭包</h3>
+
+<p>You also need to be sure to retain references to any JavaScript code that native code may call back into. This should be obvious, but is important enough to be worth stating explicitly.</p>
+
+<h3 id="有疑问时_malloc">有疑问时, malloc()</h3>
+
+<p>When you need to keep data around, you can use <code>malloc()</code> to allocate it directly. This bypasses JavaScript's memory management and lets you handle memory management yourself.</p>
+
+<ul>
+</ul>

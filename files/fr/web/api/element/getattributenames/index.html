@@ -1,0 +1,116 @@
+---
+title: Element.getAttributeNames()
+slug: Web/API/Element/getAttributeNames
+tags:
+  - API
+  - Attributs
+  - DOM
+  - Element
+  - Méthodes
+translation_of: Web/API/Element/getAttributeNames
+---
+<p>{{APIRef("DOM")}}</p>
+
+<p><code>Element.getAttributeNames()</code> renvoie les noms des attributs de l'élément sous la forme d'un {{jsxref("Array")}} (<em>tableau</em>) de chaînes de caractères. Si l'élément n'a pas d'attributs, il retourne un tableau vide.</p>
+
+<p>L'utilisation de <code>getAttributeNames()</code> complété par {{domxref("Element.getAttribute","getAttribute()")}}, est une alternative efficiente et performante pour l'accès à {{domxref("Element.attributes")}}.</p>
+
+<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+
+<pre class="syntaxbox"><em>let attributeNames</em> = element.getAttributeNames();
+</pre>
+
+<h2 id="Example" name="Example">Exemple</h2>
+
+<pre class="brush:js">// Itérer sur les attributs de l'élément
+for(let name of element.getAttributeNames())
+{
+	let value = element.getAttribute(name);
+	console.log(name, value);
+}
+</pre>
+
+<h2 id="Polyfill">Polyfill</h2>
+
+<pre class="line-numbers  language-html"><code class="language-html">if (Element.prototype.getAttributeNames == undefined) {
+  Element.prototype.getAttributeNames = function () {
+    var attributes = this.attributes;
+    var length = attributes.length;
+    var result = new Array(length);
+    for (var i = 0; i &lt; length; i++) {
+      result[i] = attributes[i].name;
+    }
+    return result;
+  };
+}</code></pre>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Spécification</th>
+   <th scope="col">Statut</th>
+   <th scope="col">Commentaire</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("DOM WHATWG", "#dom-element-getattributenames", "Element.getAttributeNames")}}</td>
+   <td>{{Spec2("DOM WHATWG")}}</td>
+   <td>Définition initiale.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Fonctionnalité</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatChrome(61)}}</td>
+   <td>{{CompatGeckoDesktop(45)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatOpera(48)}}</td>
+   <td>{{CompatSafari(9)}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Fonctionnalité</th>
+   <th>Android Webview</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatChrome(61)}}</td>
+   <td>{{CompatChrome(61)}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatOperaMobile(48)}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>

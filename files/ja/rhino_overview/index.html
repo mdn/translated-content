@@ -1,0 +1,82 @@
+---
+title: Rhino Overview
+slug: Rhino_Overview
+tags:
+  - Rhino
+translation_of: Mozilla/Projects/Rhino/Overview
+---
+<h3 id=".E3.81.AF.E3.81.98.E3.82.81.E3.81.AB" name=".E3.81.AF.E3.81.98.E3.82.81.E3.81.AB">はじめに</h3>
+
+<p><a href="ja/JavaScript">JavaScript</a> を使用する多くの人たちは、ウェブ・ページの <a href="ja/HTML">HTML</a> にスクリプトを書き加えていました。しかしながら、Rhino は言語中核だけを実装したもので、HTML ドキュメントを操作するオブジェクトやメソッドは含んでいません。</p>
+
+<p>Rhino が含んでいるものは</p>
+
+<ul>
+ <li><a href="ja/New_in_JavaScript_1.7">JavaScript 1.7</a> のすべての機能</li>
+ <li>Java を直接スクリプト記述できる</li>
+ <li><a href="ja/Rhino_Shell">JavaScript シェル</a>: これは JavaScript のスクリプトを実行するためのもの</li>
+ <li><a href="ja/Rhino_JavaScript_Compiler">JavaScript コンパイラ</a>: これは JavaScript ソースファイルを Java のクラスファイルに変換するもの</li>
+ <li><a class="external" href="http://www.mozilla-japan.org/rhino/debugger.html">JavaScript デバッガ</a>: Rhino でスクリプトを実行するためのもの</li>
+</ul>
+
+<h3 id=".E8.A8.80.E8.AA.9E.E3.81.AB.E3.81.A4.E3.81.84.E3.81.A6" name=".E8.A8.80.E8.AA.9E.E3.81.AB.E3.81.A4.E3.81.84.E3.81.A6">言語について</h3>
+
+<p>JavaScript 言語自体は、<a class="external" href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">Standard ECMA-262 ECMAScript: 汎用的な、クロス・プラットフォームのプログラミング言語</a> で標準化されています。 Rhino 1.5 は JavaScript 1.5 の実装で、それは Standard 第 3 版 (3rd Edition) に適合したものです。</p>
+
+<p>また、Rhino 1.6 では <a class="external" href="http://www.ecma-international.org/publications/standards/Ecma-357.htm">ECMA-357 ECMAScript for XML (E4X)</a> を実装しました。標準についての詳細は 仕様書を、Rhino の実装についての詳細は <a class="external" href="http://www.mozilla-japan.org/rhino/rhino16R1.html#E4X">Rhino バージョン 1.6R1 リリースノート</a> を参照してください。</p>
+
+<p>さらに、Rhino は JavaAdapter を実装しました。それは、 JavaScript に Java のインターフェースを実装 (implement) したり、 Java のクラスを拡張 (extend) して JavaScript のオブジェクトにしたりできるものです。詳しくは、<code class="filename">enum.js</code> の例を参照してください。</p>
+
+<p>JavaScript が載った多数の本やチュートリアルが利用できます。<a class="external" href="http://www.oreilly.com/catalog/jscript5/">JavaScript: The Definitive Guide</a> is recommended, and contains a chapter on Rhino.</p>
+
+<h3 id=".E9.9D.9E.E6.8E.A8.E5.A5.A8.E3.81.AE.E6.A9.9F.E8.83.BD" name=".E9.9D.9E.E6.8E.A8.E5.A5.A8.E3.81.AE.E6.A9.9F.E8.83.BD">非推奨の機能</h3>
+
+<p>JavaScript 1.2 で採用されたいくつかの言語機能は、現在は使用を控えるべきです。これらの機能は "computational reflection" (自己反映計算) を許すものです。すなわち、スクリプトそれ自体に、スクリプトを評価する方法に対する決定権や影響力を与えるものです。これらの機能は一般に、広く役立つものではありません。さらに、それらは実装による制限に著しい制約を課したり、最適化を妨げたりします。非推奨の機能は、<code>__proto__</code> 及び <code>__parent__</code> プロパティ、そして <code>With</code>、<code>Closure</code>、<code>Call</code> といったコンストラクタです。 言語バージョン 1.4 で、これらの構文の呼び出しを試みると、エラーになるはずです。他のバージョンについては、警告が表示されるでしょう。{{ 訳注("試してみてもエラーや警告は出なかった") }}</p>
+
+<h3 id=".E5.9B.BD.E9.9A.9B.E5.8C.96" name=".E5.9B.BD.E9.9A.9B.E5.8C.96">国際化</h3>
+
+<p>JavaScript エンジンからのメッセージ出力は、デフォルトではプロパティ・ファイル <code class="filename">org/mozilla/javascript/resources/Messages.properties</code> から検索されます。カレント・ロケールに対応している拡張のプロパティ・ファイルがあれば、その代わりに使用されるはずです。{{ 訳注("日本語環境において、<code>Messages_ja.properties</code> ファイルへ 該当するメッセージが登録されているときには、そちらが優先される。その場合、Unicode エスケープにて記述されている必要がある") }}</p>
+
+<h3 id="JavaScript_.E8.A8.80.E8.AA.9E.E3.83.90.E3.83.BC.E3.82.B8.E3.83.A7.E3.83.B3" name="JavaScript_.E8.A8.80.E8.AA.9E.E3.83.90.E3.83.BC.E3.82.B8.E3.83.A7.E3.83.B3">JavaScript 言語バージョン</h3>
+
+<p>JavaScript エンジンのいくつかの振る舞いは、言語のバージョンに依存します。ブラウザー内蔵のものでの この言語バージョンは、 <code>SCRIPT</code> タグの <code>LANGUAGE</code> 属性に、<code>"JavaScript1.2"</code> のような値を指定することで切り替えることができます。</p>
+
+<p>バージョン 1.3 以上であれば ECMA に適合しています。</p>
+
+<h4 id=".E6.BC.94.E7.AE.97.E5.AD.90.E3.81.AE_.3D.3D_.E3.81.A8_.21.3D" name=".E6.BC.94.E7.AE.97.E5.AD.90.E3.81.AE_.3D.3D_.E3.81.A8_.21.3D">演算子の <code>==</code> と <code>!=</code></h4>
+
+<p>バージョン 1.2 では、演算子の <code>==</code> と <code>!=</code> は、厳密な (不) 等価になります。バージョン 1.3 以上であれば、<code>==</code> と <code>!=</code> は ECMA と同じ意味です。すべてのバージョンでの、厳密な (不) 等価演算子は、 <code>===</code> と <code>!==</code> です。</p>
+
+<h4 id=".E3.83.96.E3.83.BC.E3.83.AB.E5.80.A4.E3.81.B8.E5.A4.89.E6.8F.9B" name=".E3.83.96.E3.83.BC.E3.83.AB.E5.80.A4.E3.81.B8.E5.A4.89.E6.8F.9B">ブール値へ変換</h4>
+
+<p>バージョン 1.3 より前は、<code>Boolean(new Boolean(false))</code> は偽 (<code>false</code>) でした。バージョン 1.3 以上では、それは真 (<code>true</code>) です (従って ECMA に適合しています)。{{ 訳注("オブジェクトが存在するから <code>true</code>") }}</p>
+
+<h4 id="Array.prototype.toString_and_Object.prototype.toString" name="Array.prototype.toString_and_Object.prototype.toString"><code>Array.prototype.toString and Object.prototype.toString</code></h4>
+
+<p>バージョン 1.2 では、(このメソッドで) 配列またはオブジェクトのリテラル表記を返します (<code>"{{ mediawiki.external(1,2,3) }}"</code> とか <code>"{a:1, b:2}"</code> みたいな)。バージョン 1.3 以上では、これらの関数は ECMA に適合しています。</p>
+
+<h4 id="Array_.E3.82.B3.E3.83.B3.E3.82.B9.E3.83.88.E3.83.A9.E3.82.AF.E3.82.BF" name="Array_.E3.82.B3.E3.83.B3.E3.82.B9.E3.83.88.E3.83.A9.E3.82.AF.E3.82.BF"><code>Array</code> コンストラクタ</h4>
+
+<p>数値の引数 <var>i</var> の <code>Array(<var>i</var>)</code> は、バージョン 1.2 では、<var>i</var> に等しいひとつの要素を持つ配列を構築します。他の、ECMA に適合したバージョンでは、(要素は無いが <code>length</code> プロパティが <var>i</var> である配列を構築する) ように使われます。</p>
+
+<h4 id="String.prototype.substring" name="String.prototype.substring"><code>String.prototype.substring</code></h4>
+
+<p>バージョン 1.2 では、最初の引数が第二引数未満である場合、2 つの引数は交換されません。他のすべてのバージョンは ECMA に適合しています。{{ 訳注("正しくは、最初の引数が第二引数より大きいとそれらの引数は交換されるが、バージョン 1.2 では交換されない") }}</p>
+
+<h4 id="String.prototype.split" name="String.prototype.split"><code>String.prototype.split</code></h4>
+
+<p>バージョン 1.2 では、引数に単一のスペース文字が与えられたとき、分割は Perl4 特殊ケースのように行われます (先行の空白文字 (whitespace) をスキップし、空白文字で分割)。他のすべてのバージョンの、スペース文字での分割は、ECMA 仕様に沿っています。{{ 訳注() }}</p>
+
+<h3 id=".E3.82.BB.E3.82.AD.E3.83.A5.E3.83.AA.E3.83.86.E3.82.A3" name=".E3.82.BB.E3.82.AD.E3.83.A5.E3.83.AA.E3.83.86.E3.82.A3">セキュリティ</h3>
+
+<p>Rhino のセキュリティ機能は、コードの一部 (そして、次々生成されるかもしれないような、あらゆるコード) から、起源を追跡記録する能力を持っています。これらの機能は、Netscape Navigator の JavaScript での、従来の、URL ベース セキュリティポリシーの実装を可能にします。実行する JavaScript コードが信頼できるような、組み込み環境であれば、セキュリティ機能を無視してもよいでしょう。</p>
+
+<p>信頼できない JavaScript コードを実行する (かもしれない) 環境に 組み込む場合、 セキュリティ機能を有効にするために、2 つのことを行わなければなりません。まず、生成されたすべての <code>Context</code> は、<code>SecuritySupport</code> インターフェースを実装したオブジェクトのインスタンスを提供しなければなりません。{{ 訳注("Rhino 1.5R4 以降は, 新しいセキュリティ・インターフェースに置き換えられた") }} これは、セキュリティ関連タスクを実行するのに必要なサポート機能を、Rhino に提供するでしょう。</p>
+
+<p>次に、リソースバンドル <code>org.mozilla.javascript.resources.Security</code> 内の <code>security.requireSecurityDomain</code> プロパティの値を、<code>true</code> に変更すべきです。このプロパティの値は、<code>Context</code> の <code>isSecurityDomainRequired</code> メソッドを呼び出すことによって、実行時に判別することができます。このプロパティを <code>true</code> にセットすると、コンパイルあるいは JavaScript を評価 (evaluate) するどんな呼び出しも、 JavaScript コードを識別できるような何らかのオブジェクト・タイプのセキュリティ・ドメイン・オブジェクトを提供しなければなりません。代表的なクライアント環境への組み込みでは、このオブジェクトは、スクリプトを提供したサーバーの URL の文字列かもしれません。あるいは、証明書ベース (certificate-based) のセキュリティポリシーのためのコード部分の署名の表現を含んでいるオブジェクトかもしれません。</p>
+
+<p>JavaScript コードが制限された動作を試みる場合に、セキュリティ・ドメインは次のような方法で獲得することができます。そのクラスのコンテキストは、セキュリティ・マネージャから取得すべきです (<code>java.lang.SecurityManager.getClassContext()</code> を参照してください)。それから、制限された動作の要求によって呼び出されたコードのクラスは、クラスのコンテキストの配列から 適切なインデックスによって取得することができます。呼び出し側が JavaScript ならば、取得したクラスは、たぶん 2 つのタイプのうちの 1 つです。まず、解釈モードが有効である場合、それはインタープリターのクラスかもしれません。次に、クラスファイル生成がサポートされている場合、それは生成されたクラスかもしれません。組み込んだ環境で、<code>Context</code> クラス内の <code>isInterpreterClass()</code> を呼び出して、2 つのケースを識別することができます。それがインタープリター・クラスである場合は、<code>Context</code> の <code>getInterpreterSecurityDomain()</code> メソッドを呼び出すことで、現在解釈し実行中のスクリプトあるいは関数の、セキュリティ・ドメインを得ることができます。そうでなければ、それは生成されたクラスに違いありません。そして、組み込んだ環境で、<code>SecuritySupport</code> を実装したクラスの <code>getSecurityDomain()</code> を呼び出すことができます。クラスが定義され読み込まれた場合に、適切なセキュリティ・ドメインはそれに付随し、このメソッドを呼び出すことで獲得することができます。一旦セキュリティ・ドメインが決定されたならば、組み込んだ環境で、アクセス可能かどうか判断するのに、適切ないかなるチェックでも実行することができます。</p>
+
+<div class="noinclude"> </div>
+
+<p>{{ languages( { "en": "en/Rhino_Overview" } ) }}</p>

@@ -1,0 +1,152 @@
+---
+title: 数量詞
+slug: Web/JavaScript/Guide/Regular_Expressions/Quantifiers
+tags:
+  - JavaScript
+  - Reference
+  - Regular Expressions
+  - quantifiers
+  - regex
+translation_of: Web/JavaScript/Guide/Regular_Expressions/Quantifiers
+---
+<p>{{jsSidebar("JavaScript Guide")}}{{draft}}</p>
+
+<p>数量詞はマッチする文字や式の数を示します。</p>
+
+<h2 id="Types" name="Types">種類</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">文字</th>
+   <th scope="col">意味</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code><em>x</em>*</code></td>
+   <td>
+    <p>直前の文字 <em>x</em> の 0 回以上の繰り返しにマッチします。例えば <code>/bo*/</code> は "A ghost booooed" の "boooo" や "A bird warbled" の "b" にマッチしますが、"A goat grunted" ではマッチしません。</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code><em>x</em>+</code></td>
+   <td>
+    <p>直前の文字 <em>x</em> の 1 回以上の繰り返しにマッチします。<code>{1,}</code> に相当します。例えば <code>/a+/</code> は "candy" の "a" や "caaaaaaandy" のすべての "a" にマッチします。</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code><em>x</em>?</code></td>
+   <td>
+    <p>直前の文字 <em>x</em> の 0 回か 1 回の出現にマッチします。例えば <code>/e?le?/</code> は "angel" の "el" や "angle" の "le"、あるいは "oslo" の "l" にマッチします。</p>
+
+    <p><code>*</code>、<code>+</code>、<code>?</code>、<code>{}</code> といった量指定子の直後に使用した場合、その量指定子をデフォルトとは逆の{{原語併記("非貪欲", "non-greedy")}} （最短）マッチにします。デフォルトは{{原語併記("欲張り", "greedy")}}（最長）マッチです。</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code><em>x</em>{<em>n</em>}</code></td>
+   <td>
+    <p><code>n</code> には正の整数が入ります。直前の文字 <em>x</em> がちょうど <code>n</code> 回出現するものにマッチします。例えば <code>/a{2}/</code> は "candy" の "a" にはマッチしませんが、"caaandy" の最初の 2 個の "a" にはマッチします。</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code><em>x</em>{<em>n</em>,}</code></td>
+   <td>
+    <p><code>n</code> には正の整数が入ります。直前の文字 <em>x</em> の少なくとも <code>n</code> 回の出現にマッチします。例えば、<code>/a{2,}/</code> は "candy" の "a" にはマッチしませんが、"caandy" や "caaaaaaandy" の "a" のすべてにマッチします。</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code><em>x</em>{<em>n</em>,<em>m</em>}</code></td>
+   <td>
+    <p><code>n</code> には 0 と正の整数が、<code>m</code> には <code>n</code> より大きい正の整数が入ります。直前の文字 <em>x</em> が少なくとも <code>n</code> 回、多くても <code>m</code> 回出現するものにマッチします。例えば <code>/a{1,3}/</code> は "cndy" ではマッチせず、"candy" の 'a'、"caandy" の 最初の 2 個の "a"、"caaaaaaandy" の最初の 3 個の "a" にマッチします。"caaaaaaandy" では元の文字列に "a" が 4 個以上ありますが、マッチするのは "aaa" であることに注意してください。</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><code><em>x</em>*?</code><br>
+     <code><em>x</em>+?</code><br>
+     <code><em>x</em>??</code><br>
+     <code><em>x</em>{n}?</code><br>
+     <code><em>x</em>{n,}?</code><br>
+     <code><em>x</em>{n,m}?</code></p>
+   </td>
+   <td>
+    <p>既定では <code>*</code> や <code>+</code> といった数量詞は{{原語併記("貪欲", "greedy")}} です。つまり、できる限り多くの文字列とマッチしようとします。数量詞の後にある <code>?</code> 文字は{{原語併記("非貪欲", "non-greedy")}} 数量詞をつくります: つまり、マッチが見つかるとすぐに停止します。例えば、"some &lt;foo&gt; &lt;bar&gt; new &lt;/bar&gt; &lt;/foo&gt; thing" といった文字列が与えられたなら:</p>
+
+    <ul>
+     <li><code>/&lt;.*&gt;/</code> はおそらく "&lt;foo&gt; &lt;bar&gt; new &lt;/bar&gt; &lt;/foo&gt;" にマッチするでしょう</li>
+     <li><code>/&lt;.*?&gt;/</code> はおそらく "&lt;foo&gt;" にマッチするでしょう</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="例">例</h2>
+
+<h3 id="任意の文字">任意の文字</h3>
+
+<pre class="brush: js">var britishText = "He asked his neighbour a favour.";
+var americanText = "He asked his neighbor a favor.";
+
+var regexpEnding = /\w+ou?r/g;
+// \w+ 1つ以上の文字
+// o   "o" が続く
+// u?  任意で "u" が続く
+// r   "r" が続く
+
+console.table(britishText.match(regexpEnding));
+// ["neighbour", "favour"]
+
+console.table(americanText.match(regexpEnding));
+// ["neighbor", "favor"]
+</pre>
+
+<h3 id="貪欲と非貪欲の比較">貪欲と非貪欲の比較</h3>
+
+<pre class="brush: js">var text = "I must be getting somewhere near the centre of the earth.";
+var greedyRegexp = /[\w ]+/;
+// [\w ]      ラテンアルファベットまたは空白
+//      +     1回以上
+
+console.log(text.match(greedyRegexp)[0]);
+// "I must be getting somewhere near the centre of the earth."
+// テキストのすべてがマッチ
+
+var nonGreedyRegexp = /[\w ]+?/; // クエスチョンマークに注目
+console.log(text.match(nonGreedyRegexp));
+// "I"
+// マッチは可能なもので最小
+</pre>
+
+<h2 id="仕様">仕様</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">策定状況</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-quantifier', 'RegExp: Quantifiers')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="ブラウザサポート">ブラウザサポート</h2>
+
+<div>
+
+
+<p>{{Compat("javascript.builtins.RegExp.quantifiers")}}</p>
+</div>
+
+<h2 id="関連情報">関連情報</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions">正規表現</a></li>
+ <li><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp"><code>RegExp()</code> コンストラクタ</a></li>
+</ul>

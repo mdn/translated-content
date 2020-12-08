@@ -1,0 +1,20 @@
+---
+title: XQuery
+slug: XQuery
+translation_of: Archive/XQuery
+---
+<p><a class="external" href="http://www.w3.org/TR/xquery/">XQuery</a> is a W3C standard language which is meant to be for XML what SQL is for relational data--i.e., the ability to search, sort, extract, and remold data. It offers powerful and yet intuitive searching based on XPath, has SQL-like syntax for the query portion, and has scripting features such as function and variable definitions, XML-inclusion, etc.
+</p><p>While XQuery is currently not supported in Firefox (whether through JavaScript to developers or to browser users), at least one extension has been developed to give a preliminary support for XQuery for browser users (and serving as a simple model for how XQuery can be implemented within extensions).
+</p><p><a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/5515">XqUSEme</a> is a working proof-of-concept (so far tested on Windows; Mac does not work) extension which allows one to perform XQueries on external URLs, the currently loaded webpage (even if originally from poorly formed HTML), and/or XML (including well-formed XHTML) documents stored locally.
+</p><p>The extension now includes and interfaces with the open-source version of <a class="external" href="http://www.saxonica.com/">Saxonica's Saxon B</a> by default, while optionally allowing association with an installation of Berkeley DB XML, as a database system has the advantage of allowing local storage and indexing (though this extension currently only performs the XQueries). Other popular native XML databases might also be supported (e.g., eXist) in the future, especially now that the extension has added some basic support for the open-standard (<a class="external" href="http://jcp.org/en/jsr/detail?id=225">XQJ</a>) for Java and eXist is in the midst of getting such an API. Berkeley DB XML was the initial choice by the extension developer for its support across many languages (C++, Java, Python, Perl, PHP, etc.) (besides its also being open source).
+</p><p>A simple <a class="external" href="http://bahai-library.com/zamir/examples.xhtml">usage example</a> is available.
+</p>
+<h3 id="Notes_for_developers_wishing_to_access_XQuery_in_their_own_extensions">Notes for developers wishing to access XQuery in their own extensions</h3>
+<p>At present, the extension works simply by using <a href="cn/LiveConnect">LiveConnect</a> to work with Berkeley DB XML's Java API (and via a Java wrapper class which circumvents LiveConnect's <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=391642">current inability</a> to handle some types of Java exceptions properly). </p><p>However, use of the approach of the <a href="cn/Java_in_Firefox_Extensions">Java Firefox extension</a> might be used to turn the above extension concept into an XPCOM component (giving it access to all open windows), and for Berkeley DB XML, possibly implementing it in C++ instead, which is that database's original language of development. </p><p>However, the extension demonstrates a technique which does not depend on using XPCOM, while still giving full privileges.
+</p>
+<h3 id="Tutorials">Tutorials</h3>
+<ul><li> <a class="external" href="http://www.w3schools.com/xquery/default.asp">W3Schools</a>
+</li><li> <a class="external" href="http://www.stylusstudio.com/xquery_primer.html">Learn XQuery in 10 minutes</a>
+</li><li> <a class="external" href="http://www.ibm.com/developerworks/xml/library/x-xquery.html">An introduction to XQuery</a>
+</li></ul>
+{{ languages( { "en": "en/XQuery" } ) }}

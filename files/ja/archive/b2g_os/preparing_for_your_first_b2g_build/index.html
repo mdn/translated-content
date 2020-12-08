@@ -1,0 +1,273 @@
+---
+title: 初回 B2G ビルドの準備
+slug: Archive/B2G_OS/Preparing_for_your_first_B2G_build
+tags:
+  - B2G OS
+  - Build documentation
+  - building b2g os
+translation_of: Archive/B2G_OS/Preparing_for_your_first_B2G_build
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/ja/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<div class="summary">
+<p>B2G をビルド可能にするには、リポジトリの複製とビルドツリーの構成(configure)が必要です。この記事ではその方法を説明します。</p>
+</div>
+
+<p>インターネットの接続によっては、構成作業では、B2G OSのビルドに必要となるファイルをダウンロードするのに何時間もかかる事があります。待つことは楽しくないので、このページを通して読んで構成スクリプトを開始した後に、<a class="vt-p" href="/ja/docs/Tools/Firefox_OS_Simulator" title="/en-US/docs/Mozilla/Firefox_OS/Using_Firefox_OS_Simulator">B2G OS simulator</a>をセットアップして試してみることや、<a class="vt-p" href="/ja/docs/Web/Apps" title="/en-US/docs/Apps">アプリ開発者向け文書</a>（アプリの設計、作成が含まれています）を読んで慣れたり、以降のビルド手順に慣れておくことを検討してください。</p>
+
+<div class="note">
+<p>OS X を使って Flame 用の B2G OS をビルドする場合、<a href="/ja/Firefox_OS/Building_and_installing_Firefox_OS/Building_Firefox_OS_for_flame_on_OSX">OS Xで flame 用の B2G OS をビルドする</a> のMDNページを見て下さい。</p>
+</div>
+
+<h2 id="B2G_リポジトリの複製">B2G リポジトリの複製</h2>
+
+<p>B2G OSをビルドするのにいくつか便利なツールがあり、全てが1つのリポジトリに入っています。最初のステップはgitでこれらのツールを作業ディレクトリにダウンロードする事です:</p>
+
+<pre><code>git clone git://github.com/mozilla-b2g/B2G.git &amp;&amp; cd B2G
+</code></pre>
+
+<ul>
+ <li>Checkout the pine branch of Gecko</li>
+</ul>
+
+<pre class="line-numbers  language-html"><code class="language-html">$ hg clone https://hg.mozilla.org/projects/pine/ pine</code></pre>
+
+<p>If you run in to a UnicodeEncodeError: ascii codec error here try to set your git user with</p>
+
+<pre> <code>vim ~/.gitconfig</code>
+</pre>
+
+<p>(type "i" for inserting) and this lines:</p>
+
+<pre><code>$ [user]
+$        name = yourname
+$        email = youremailaddress@url.tld</code>
+$ [color]
+$        ui = auto</pre>
+
+<p>hit the "esc" button and quit with ":wq"</p>
+
+<ul>
+ <li>Configure B2G for the device :</li>
+</ul>
+
+<pre class="line-numbers  language-html"><code class="language-html">$ ./config.sh <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>device</span><span class="punctuation token">&gt;</span></span></code></pre>
+
+<p>ie device = flame-kk or aries</p>
+
+<ul>
+ <li>Configure B2G to use the kanikani branch of Gaia</li>
+</ul>
+
+<pre class="line-numbers  language-html"><code class="language-html">$ vim .repo/manifests/base.xml
+<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>project</span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>gaia<span class="punctuation token">"</span></span> <span class="attr-name token">path</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>gaia<span class="punctuation token">"</span></span> <span class="attr-name token">remote</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>mozillaorg<span class="punctuation token">"</span></span> <span class="attr-name token">revision</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>kanikani<span class="punctuation token">"</span></span> <span class="punctuation token">/&gt;</span></span>
+$ cd gaia
+$ git reset --hard mozillaorg/kanikani
+$ cd ..</code></pre>
+
+<ul>
+ <li>Configure B2G to use the pine branch of Gecko</li>
+</ul>
+
+<pre class="line-numbers  language-html"><code class="language-html">$ vim .userconfig</code></pre>
+
+<pre class="line-numbers  language-html"><code class="language-html">export B2G_DIR=${B2G_DIR:-$(cd $(dirname $0); pwd)}
+echo "B2G_DIR = ${B2G_DIR}"
+export GECKO_PATH=${B2G_DIR}/pine
+echo "GECKO_PATH = ${GECKO_PATH}"</code></pre>
+
+<ul>
+ <li>Configure, build and flash B2G</li>
+ <li>plug in your device that has the android base or firefox os base build</li>
+</ul>
+
+<pre class="line-numbers  language-html"><code class="language-html">$ ./build.sh
+$ ./flash.sh</code></pre>
+
+<p><strong>Notes:</strong></p>
+
+<ul>
+ <li>If you get an error about a mismatched base build at the build step you don't have the required existing version of Android/B2G on your device. You'll need to flash the version of Android specified by the build script or get hold of a backup-aries folder.</li>
+</ul>
+
+<div class="note"><strong>Note:</strong> This is not the full list of build targets, see <code>config.sh</code> or refer to the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Building_and_installing_Firefox_OS/Compatible_Devices">Compatible Devices</a> page.</div>
+
+<p>If your build target isn't listed, you should stop right now and help <a href="https://developer.mozilla.org/en-US/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">port B2G OS!</a></p>
+
+<h2 id="Configuring_B2G_for_your_device" name="Configuring_B2G_for_your_device">端末に合わせて B2G を構成する</h2>
+
+<div class="warning"><strong>重要</strong>: <strong>Android 4.3以降 (Jelly Bean, KitKat, Lollipop)</strong>とそれをべースにしたプラットフォームが動作している端末のみが (今のFirefox OS端末では) サポート対象です。あなたのスマートフォンが本当にこれらのバージョンで動作しているか確認してください。そうでなければ、次のステップはおそらく失敗するでしょう。より詳しくは <a href="https://developer.mozilla.org/ja/docs/Mozilla/Firefox_OS/Building_and_installing_Firefox_OS/Compatible_Devices">互換性のある端末</a> ページを見てください。</div>
+
+<h3 id="エミュレータ用ビルドを構築する">エミュレータ用ビルドを構築する</h3>
+
+<p>もし実機でなくエミュレータをビルドするのであれば、ARM デバイスエミュレータを取得する “emulator*”、もしくは x86 エミュレータをビルドする “emulator-x86*″ のいずれかを指定できます。後者はより速いですが、実際のモバイル端末ほど正確には表示せず、よくサポートされていません。つまり x86エミュレータ を使うのは勧められません。</p>
+
+<p>ARM のJellybeanエミュレータをビルドするには、下記コマンドを使用します :</p>
+
+<pre>./<code class="language-html">config.sh emulator-jb</code>
+</pre>
+
+<p>エミュレータ用ビルドは64-bit Linuxで失敗がちなのに気をつけて下さい。</p>
+
+<h3 id="プロプライエタリ_Blob">プロプライエタリ Blob</h3>
+
+<p>端末に B2G OS をインストールする時、 プロプライエタリBlobを一通り含める必要があるでしょう。これらは初回ビルド実行時に端末から抜き出されますが、将来参照できるようにフル・バックアップを取ることもお勧めします。いったん B2G OS がインストールされると、これらをリカバーする方法はありません!</p>
+
+<p><a href="https://developer.mozilla.org/Firefox_OS/Debugging/Developer_settings">開発者設定</a>で、端末の <a href="https://developer.mozilla.org/Firefox_OS/Debugging/Developer_settings#Remote_debugging">リモートデバッグ</a> が有効になっているのを確かめます。<code>adb devices</code> コマンドで端末が見えるのを確認すると、これ似たものが見えるでしょう:</p>
+
+<pre class="line-numbers  language-html" style="font-size: 14px;"><code class="language-html">$ adb devices
+List of devices attached
+ABCXXXXXXX       device</code></pre>
+
+<p>端末がリストにない場合、UDEV ルールを確認します。</p>
+
+<div class="note">
+<p><strong>Note</strong>: If you have permission issues, check that your screen is unlocked and that you have authorized access to your phone. You see a message on your device for that. If the issue persists used <code>adb root </code>and <code>adb remount.</code></p>
+</div>
+
+<p><code>adb pull</code> コマンドで、電話機のパーティションをバックアップします:</p>
+
+<pre class="line-numbers  language-html"><code class="language-html">adb pull /system <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>backup</span> <span class="attr-name token">target</span> <span class="attr-name token">dir</span><span class="punctuation token">&gt;</span></span>/system</code></pre>
+
+<p>電話機によりますが、<code>/data</code> と <code>/vendor</code> ディレクトリを取得しないといけない事もあります:</p>
+
+<pre class="line-numbers  language-html"><code class="language-html">adb pull /data <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>backup</span> <span class="attr-name token">target</span> <span class="attr-name token">dir</span><span class="punctuation token">&gt;</span></span>/data
+adb pull /vendor <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>backup</span> <span class="attr-name token">target</span> <span class="attr-name token">dir</span><span class="punctuation token">&gt;</span></span>/vendor</code></pre>
+
+<p>pull コマンドが "insufficient permission" メッセージと共に失敗する場合、次を試します:</p>
+
+<ul>
+ <li>カスタムROMのroot権限を与えられているかを確認します (例 CyanogenModでは、<em>Settings &gt; System &gt; Developer Options &gt; Root Access</em> の値を <em>Apps and ADB</em> か <em>ADB only</em> に変えます)。</li>
+ <li>udev ルールを正しくセットアップしているか検証します (<a href="#For_Linux:_configure_the_udev_rule_for_your_phone">For Linux: configure the udev rule for your phone</a> を見てください)。</li>
+</ul>
+
+<h2 id="次のステップへ">次のステップへ</h2>
+
+<p>この時点で、<a href="https://developer.mozilla.org/ja/Firefox_OS/Building">B2G OSのビルド</a>の準備ができているでしょう。</p>
+
+<h2 id="高度な構成オプション">高度な構成オプション</h2>
+
+<h3 id="システムバックアップを用いてビルドを構成する">システムバックアップを用いてビルドを構成する</h3>
+
+<p>もしあなたのスマートフォンが既に Android ではなく、B2G ツリーにバイナリ BLOB がないけど、賢明にも<a class="vt-p" href="/ja/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites##.E3.82.B9.E3.83.9E.E3.83.9B.E3.81.AE.E3.82.B7.E3.82.B9.E3.83.86.E3.83.A0.E3.83.91.E3.83.BC.E3.83.86.E3.82.A3.E3.82.B7.E3.83.A7.E3.83.B3.E3.82.92.E3.83.90.E3.83.83.E3.82.AF.E3.82.A2.E3.83.83.E3.83.97.E3.81.99.E3.82.8B" title="/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites#Backup_the_phone_system_partition"><code>/system</code> パーティションのバックアップを取って</a>いたのであれば、こんな感じにバックアップを元にビルドを実行することができます :</p>
+
+<pre>ANDROIDFS_DIR=&lt;systemディレクトリの親ディレクトリの絶対パス&gt; ./config.sh &lt;target&gt;
+</pre>
+
+<p>ビルドシステムはデフォルトで <code>backup-&lt;target&gt;/system</code> といった既存のバックアップフォルダを調べます。つまりファイルをこの場所に置けば、ディレクトリを指定する必要はありません。</p>
+
+<h3 id="Building_against_a_custom_Gecko" name="Building_against_a_custom_Gecko">カスタム Gecko を対象とするビルド</h3>
+
+<p>（マニフェストで指定された）デフォルト使用の Gecko とは異なるバージョンをベースにして、Boot to Gecko をビルドしたい、もしくはする必要がある場合があるかもしれません。それを可能にするには<code> .userconfig</code> ファイルを編集してください。例として、mozilla-central を対象にしてビルドしたい場合であれば :</p>
+
+<pre>GECKO_PATH=/path/to/mozilla-central
+GECKO_OBJDIR=/path/to/mozilla-central/objdir-gonk
+</pre>
+
+<div class="note">
+<p><strong><strong>記</strong>:</strong> Mac OS X でカスタム Gecko を対象とするビルドを行う場合、mozilla-central ディレクトリは、必ず、大文字と小文字を区別するファイルシステムに作成してください。</p>
+</div>
+
+<p>注意するのは、リポジトリをプルする前 (つまり上記の<code>config.shの前</code>) に行っても、後の時点のどちらでもよいです。複数ビルドを保持することもできます (デバッグオン/オフなど) 。その方法は複数の.userconfigファイル(異なるセッティングで--もちろん、それぞれ別のOBJDIRでないといけない) を用意して .userconfig をその時々のビルドしたいコンフィグへのシンボリックリンクに貼るようにします。</p>
+
+<p>詳細情報は、<a class="vt-p" href="https://developer.mozilla.org/ja/Firefox_OS/Customization_with_the_.userconfig_file#Gecko.E3.81.AE.E3.82.BD.E3.83.BC.E3.82.B9.E3.83.84.E3.83.AA.E3.83.BC.E3.82.92.E5.A4.89.E6.9B.B4.E3.81.99.E3.82.8B" title="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Customization_with_the_.userconfig_file#Changing_the_Gecko_source_tree">Gecko ソースツリーを変更する</a>を読んでください。</p>
+
+<h3 id="ブランチをビルドする">ブランチをビルドする</h3>
+
+<p>デフォルトブランチ以外をビルドしたい場合 (<strong>記: デフォルトブランチは"master"でないかもしれません!</strong>)、config.shの頭にブランチ名をつけるだけです、このように:</p>
+
+<pre class="language-html">BRANCH=ブランチ名 ./config.sh &lt;端末&gt;</pre>
+
+<p>ブランチ名はとても論理的で、大まかに製品/バージョンに従っており、<code>v1-train</code>, <code>v1.0.0</code>, <code>v1.0.1</code>, <code>v1.1</code>, <code>v1.1.0hd</code>, <code>v1.2, v1.3, v1.4<code>, v2.0</code></code>  などと将来にわたって続きます。例として、ARMエミュレータ用のB2G B2G 1.2では、この様に入力します</p>
+
+<pre class="language-html">BRANCH=v1.2 ./config.sh emulator</pre>
+
+<p>config.sh をすでに実行済みなら、<code>B2G/.repo/manifests <code>に移動し、</code></code>"<code>git branch -a</code>" を実行す<code>ることで</code> (それまでは追加されていません)<code>、ブランチ名を見ることができます。</code><strong>ブランチ名は行の最終トークンです。例えば"<code>v1-train</code>"や"<code>master</code>"</strong>:</p>
+
+<pre class="language-html">  remotes/origin/master
+  remotes/origin/v1-train
+  remotes/origin/v1.0.0
+  remotes/origin/v1.0.1</pre>
+
+<p>さらにカスタマイズするには<a class="vt-p" href="/ja/docs/Mozilla/Firefox_OS/Customization_with_the_.userconfig_file" title="Mozilla/Firefox_OS/Customization_with_the_.userconfig_file">.userconfigのカスタマイズ</a>を見て下さい。</p>
+
+<h3 id="Copying_your_B2G_tree_to_a_new_machine" name="Copying_your_B2G_tree_to_a_new_machine">B2G ツリーを新しいマシンにコピーする</h3>
+
+<p>もしB2Gツリーを整備済みで新しいコンピュータを入手した場合（いいな！）、あるコンピュータから別のコンピュータに単純に移行するだけなら、全てを整備するのに比べ、非常に楽に実行できるようになりました。そうするには、古いコンピュータのドライブを新しいコンピュータにマウントして、こうします :</p>
+
+<pre>rsync -a <em>source</em>/ <em>dest</em>/
+</pre>
+
+<p><code>source</code> はソースツリーのフルパスで（末尾のスラッシュを含みます）、<code>dest</code> は移動先です（末尾のスラッシュは同様に重要です！）。</p>
+
+<div class="note">
+<p><strong><strong>記</strong>:</strong> もし他のプラットフォームのコンピュータからファイルをコピーした場合は、ビルドプロセスを開始する前に、'<code>./build.sh clean</code>' を確実に実行してください。実行しなかった場合、コンパイル時に問題が発生する可能性があります。</p>
+</div>
+
+<p>これを実行したら、この文書の残りの全てをスキップして、このまま<a href="/ja/docs/Mozilla/Boot_to_Gecko/Building_Boot_to_Gecko" title="Mozilla/Boot_to_Gecko/Building_Boot_to_Gecko">ビルド</a>に移動することができます。</p>
+
+<h3 id="B2Gツリーを更新する">B2Gツリーを更新する</h3>
+
+<p>リポジトリがより新しいバージョンの B2G に更新された時、B2Gツリーを更新したくなるでしょう。これを行うには、下記コマンドを実行します:</p>
+
+<pre class="language-html">git fetch origin
+git checkout origin/master</pre>
+
+<p>これらが正しく動いたかをチェックするには、こう実行し:</p>
+
+<pre class="language-html">git show HEAD</pre>
+
+<p>そして表示されたコミットが <a class="vt-p" href="https://github.com/mozilla-b2g/B2G/commits/master" title="https://github.com/mozilla-b2g/B2G/commits/master">https://github.com/mozilla-b2g/B2G/commits/master</a> の最新のコミットと一致するかをチェックします。</p>

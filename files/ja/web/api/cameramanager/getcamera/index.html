@@ -1,0 +1,133 @@
+---
+title: CameraManager.getCamera()
+slug: Web/API/CameraManager/getCamera
+tags:
+  - API
+  - Firefox OS
+  - Graphics
+  - JavaScript
+  - Method
+  - Non Standard
+  - Reference
+  - WebAPI
+translation_of: Archive/B2G_OS/API/CameraManager/getCamera
+---
+<div>{{APIRef("Camera API")}}{{ non-standard_header() }}{{B2GOnlyHeader2('privileged')}}</div>
+
+<h2 id="Summary" name="Summary">概要</h2>
+
+<p>このメソッドは、端末上の利用可能なカメラの一つに、そのカメラの識別子を指定してアクセスするために使用します。利用可能なカメラのリストは、{{domxref("CameraManager.getListOfCameras()")}} メソッドを呼び出して取得してください。</p>
+
+<h2 id="Syntax_(pre_Firefox_OS_2.2)" name="Syntax_(pre_Firefox_OS_2.2)">構文 (Firefox OS 2.1 まで)</h2>
+
+<pre>CameraManager.getCamera(camera, cameraConfiguration, onsuccess[, onerror]);</pre>
+
+<h3 id="Parameters" name="Parameters">引数</h3>
+
+<dl>
+ <dt><code>camera</code></dt>
+ <dd>利用したいカメラを指定します (端末には複数のカメラが搭載されているでしょう)。</dd>
+ <dt><code>cameraConfiguration</code></dt>
+ <dd>このカメラのオプションを設定するオブジェクト: <code>mode</code>, <code>previewSize</code> および <code>recorderProfile</code></dd>
+ <dt><code>onsuccess</code></dt>
+ <dd>{{domxref("CameraControl")}} オブジェクトを引数に取るコールバック関数。</dd>
+ <dt><code>onerror</code></dt>
+ <dd>エラー文字列を引数に取るオプションのコールバック関数。</dd>
+</dl>
+
+<h2 id="Example" name="Example">例</h2>
+
+<pre class="brush: js">var options = {
+  mode: 'picture',
+  recorderProfile: 'jpg',
+  previewSize: {
+    width: 352,
+    height: 288
+  }
+};
+
+var camera = navigator.mozCameras.getListOfCameras()[0];
+
+function onSuccess(camera) {
+  // Do stuff with the camera
+};
+
+function onError(error) {
+  console.warn(error);
+};
+
+navigator.mozCameras.getCamera(camera, options, onSuccess, onError);
+</pre>
+
+<h2 id="Syntax_(Firefox_OS_2.2)" name="Syntax_(Firefox_OS_2.2)">構文 (Firefox OS 2.2 以降)</h2>
+
+<pre>Promise CameraManager.getCamera(camera, cameraConfiguration);</pre>
+
+<h3 id="Parameters_2">Parameters</h3>
+
+<dl>
+ <dt><code>camera</code></dt>
+ <dd>利用したいカメラを指定します (端末には複数のカメラが搭載されているでしょう)。</dd>
+ <dt><code>cameraConfiguration</code></dt>
+ <dd>このカメラのオプションを設定するオブジェクト: <code>mode</code>, <code>previewSize</code> および <code>recorderProfile</code></dd>
+</dl>
+
+<h3 id="Return_Value" name="Return_Value">戻り値</h3>
+
+<p>{{domxref("Promise")}} を返します。Promise の <code>.then()</code> 関数は以下の 2 個の引数を受け取ります:</p>
+
+<dl>
+ <dt><code>onsuccess</code></dt>
+ <dd>カメラオブジェクトを引数に取るコールバック関数。このオブジェクトには、{{domxref("CameraControl")}} オブジェクトである <code>camera</code> プロパティと端末の実際の設定値を含む <code>configuration</code> プロパティが含まれます。</dd>
+ <dt><code>onerror</code></dt>
+ <dd>エラー文字列を引数に取るオプションのコールバック関数。</dd>
+</dl>
+
+<h2 id="Example_2" name="Example_2">例</h2>
+
+<pre class="brush: js">var options = {
+  mode: 'picture',
+  recorderProfile: 'jpg',
+  previewSize: {
+    width: 352,
+    height: 288
+  }
+};
+
+var camera = navigator.mozCameras.getListOfCameras()[0];
+
+function onSuccess(cameraObj) {
+  var cameraControl = cameraObj.camera;
+  // Do stuff with the cameraControl
+};
+
+function onError(error) {
+  console.warn(error);
+};
+
+navigator.mozCameras.getCamera(camera, options).then(onSuccess, onError);
+</pre>
+
+<h2 id="Specification" name="Specification">仕様</h2>
+
+<p>標準仕様には含まれていません。<a href="/docs/WebRTC">WebRTC</a> がモバイル端末で広くサポートされるようになった時、これと置き換えられる予定です。</p>
+
+<h2 id="Permissions" name="Permissions">許可設定</h2>
+
+<p>Firefox OS 1.4 まで Camera API は Certified API だったため、サードパーティアプリからはアクセスできませんでした。Firefox OS 2.0 からは許可レベルが Privileged に下げられたため、開発者が独自のアプリで利用できるようになりました。</p>
+
+<pre class="brush: json">"type": "privileged"</pre>
+
+<pre class="brush: json">"permissions": {
+  "camera": {
+    "description": "Required for accessing cameras on the device."
+  }
+}</pre>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>{{domxref("CameraManager.getListOfCameras()")}}</li>
+ <li>{{domxref("CameraControl")}}</li>
+ <li>{{domxref("navigator.mozCamera","navigator.mozCamera")}}</li>
+</ul>

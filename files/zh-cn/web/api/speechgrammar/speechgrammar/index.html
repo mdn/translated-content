@@ -1,0 +1,137 @@
+---
+title: SpeechGrammar.SpeechGrammar()
+slug: Web/API/SpeechGrammar/SpeechGrammar
+tags:
+  - API
+  - SpeechGrammar
+  - Web
+  - Web Speech API
+  - 实验性
+  - 引用
+  - 构造函数
+  - 语音识别
+translation_of: Web/API/SpeechGrammar/SpeechGrammar
+---
+<p>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</p>
+
+<p><code><strong>SpeechGrammar</strong></code> 是 {{domxref("SpeechGrammar")}} 接口的构造函数，创建一个新的 <code>SpeechGrammar</code> 对象实例。</p>
+
+<h2 id="语法">语法</h2>
+
+<pre class="syntaxbox">var mySpeechGrammar = new SpeechGrammar();</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<p>无。</p>
+
+<h2 id="样例">样例</h2>
+
+<pre class="brush: js">var grammar = '#JSGF V1.0; grammar colors; public &lt;color&gt; = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
+var recognition = new SpeechRecognition();
+var speechRecognitionList = new SpeechGrammarList();
+speechRecognitionList.addFromString(grammar, 1);
+recognition.grammars = speechRecognitionList;
+
+var newGrammar = new SpeechGrammar();
+newGrammar.src = '#JSGF V1.0; grammar names; public &lt;name&gt; = chris | kirsty | mike;'
+speechRecognitionList[1] = newGrammar; // 将 SpeechGrammar 对象添加到列表中
+</pre>
+
+<h2 id="规格">规格</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">规格</th>
+   <th scope="col">状态</th>
+   <th scope="col">描述</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Speech API', '#speechreco-section', 'SpeechGrammar()')}}</td>
+   <td>{{Spec2('Web Speech API')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatChrome(33)}} <sup>[1]</sup></td>
+   <td>{{CompatGeckoDesktop(44)}} <sup>[2]</sup></td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
+   <td>{{CompatUnknown}}</td>
+   <td>2.5</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<ul>
+ <li>[1] 语音识别接口目前在 Chrome 中是带前缀的，因此你需要使用带有前缀的名称，例如 <code>webkitSpeechRecognition</code>；此外你还需要将你的代码运行在一个 Web 服务器上来保证其正常工作。</li>
+ <li>[2] 虽然当前的语音识别在桌面版的 Firefox 中不会正常工作，但还是可以在 <a>about:config</a>中，可以通过 <code>media.webspeech.recognition.enable</code> 来启用 —— 一旦所需的内部权限解决后，它很快就会启用。</li>
+</ul>
+
+<h3 id="Firefox_OS_权限">Firefox OS 权限</h3>
+
+<p>如需在应用中使用语音识别，你必须在你的 <a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Build/Manifest">manifest</a> 中指明下面的权限：</p>
+
+<pre class="brush: json">"permissions": {
+  "audio-capture" : {
+    "description" : "Audio capture"
+  },
+  "speech-recognition" : {
+    "description" : "Speech recognition"
+  }
+}</pre>
+
+<p>若还需要设置应用的特权类型，因此你还需要包含以下这项：</p>
+
+<pre class="brush: json">  "type": "privileged"</pre>
+
+<h2 id="相关链接">相关链接</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
+</ul>

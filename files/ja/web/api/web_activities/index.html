@@ -1,0 +1,586 @@
+---
+title: Web アクティビティ
+slug: Web/API/Web_Activities
+tags:
+  - API
+  - B2G
+  - Firefox OS
+  - Guide
+  - Web Activities
+  - Web アクティビティ
+  - WebAPI
+  - 非標準
+translation_of: Archive/B2G_OS/API/Web_Activities
+---
+<p>{{ non-standard_header() }}</p>
+<div class="warning">
+ <p style="text-align: center;">この API は Firefox for Android 上で動いているインストール済みコードで使用可能であり、Firefox for Android 32+ の Firefox for Android Web アプリでの使用を想定しています。</p>
+</div>
+<div class="summary">
+ <p><span class="seoSummary">Web アクテビティはアプリケーションが他の（普通はユーザーが選択した）アプリケーションへ動作を委譲する方法を定義します。</span></p>
+</div>
+<p>Web アクテビティは現在 Firefox OS 上でのみ有効です。仕様の全体は  <a href="https://wiki.mozilla.org/WebAPI/WebActivities" title="https://wiki.mozilla.org/WebAPI/WebActivities">WikiMo で見ることができます</a>。</p>
+<h2 id="アクティビティ">アクティビティ</h2>
+<p>アクティビティとは、画像の選択やメールの送信などユーザーが行いたいと思うことです。アプリ作成者はあるアクティビティを処理するものとして、あるいはあるアクティビティを委譲するものとしてアプリを定義することができます。</p>
+<h2 id="アプリをアクティビティハンドラーとして登録する">アプリをアクティビティハンドラーとして登録する</h2>
+<p>アプリ作成者は、一つ以上のアクティビティを処理するアプリをビルドすることができます。これは、ほかのアプリから呼び出して、アクティビティで定義したある特定の動作を行わせられるということです。例えばフォトマネージャーをビルドしたいとしましょう。ほかのアプリケーションからそれを使って写真を選択することができます。このアプリは、アクティビティハンドラーとしてほかのアプリのワークフロー上の一部となるのです。</p>
+<h3 id="アクティビティの登録">アクティビティの登録</h3>
+<p>現在のところ、アプリをアクティビティハンドラーとして登録する方法は一つだけです。それはアプリマニフェスト内で宣言することです。</p>
+<div class="note">
+ <p>注：どんなアプリでも自分自身をアクティビティハンドラーとして登録したり独自のアクティビティを作成できます。どちらの場合もアプリマニフェストで同じように行います。ただ、新しいアクティビティを作る時には URL をアクティビティの接頭辞にしてアクティビティ名の衝突を避けるのがベストプラクティスとされています（例：example.org/myActivity または org.example.myActivity）。</p>
+</div>
+<h4 id="アプリマニフェスト（または宣言による登録）">アプリマニフェスト（または宣言による登録）</h4>
+<p>アプリがあるアクティビティを処理するよう期待されるということを表明するには、以下の例のように<a href="/ja/Apps/Manifest" title="/en-US/docs/Apps/Manifest">アプリマニフェスト</a>を使う必要があります。</p>
+<pre class="brush: js">{
+  // その他のアプリマニフェスト関連事項
+
+  // アクティビティの登録
+  "activities": {
+
+    // 処理するアクティビティ名（ここでは"pick"）
+    "pick": {
+      "href": "./pick.html",
+      "disposition": "inline",
+      "filters": {
+        "type": ["image/*","image/jpeg","image/png"]
+      },
+      "returnValue": true
+    }
+  }
+}
+</pre>
+<h4 id="動的な登録">動的な登録</h4>
+<p>アプリが {{domxref("window.navigator","navigator")}} オブジェクトを使って動的に登録できるようにする予定があります。ですが、この API はまだ使用できません。この API に関連した動きを追いかけるには {{bug("775181")}} を参照してください。</p>
+<h4 id="アクティビティハンドラーの記述">アクティビティハンドラーの記述</h4>
+<dl>
+ <dt>
+  <code>href</code></dt>
+ <dd>
+  これは、ほかのアプリや Web ページがこのアプリでサポートしているアクティビティを起動し、アクティビティを実行するのにこのアプリが選ばれた場合に開かれるページを指定します。ページは disposition プロパティに指定した方法で開かれます。
+  <div class="note">
+   <strong>注：</strong> このページの URL は<a href="/en-US/docs/JavaScript/Same_origin_policy_for_JavaScript" title="/en-US/docs/JavaScript/Same_origin_policy_for_JavaScript">同一生成元ポリシー</a>の制約を受けます。</div>
+ </dd>
+</dl>
+<dl>
+ <dt>
+  <code>disposition</code> {{optional_inline()}}</dt>
+</dl>
+<dl>
+ <dd>
+  アクティビティが起動された時に、href で指定したページがどのように表示されるかを指定します。指定する場合、値は以下のどちらかでなければなりません（省略時のデフォルトは window）。
+  <ul>
+   <li><strong><code>window</code></strong> - アクティビティを処理するページは新規「ウィンドウ」で開きます（モバイルデバイスでは、この表示はアクティビティをリクエストした元のアプリを置き換えるでしょう）。このページはサポートするアクティビティごとに {{domxref("Navigator.mozSetMessageHandler()","navigator.mozSetMessageHandler()")}} を呼び、それから受け取ったメッセージに合わせてアクティビティを実行する必要があります。</li>
+   <li><strong><code>inline</code></strong> - アクティビティを処理するページはオーバーレイで開きます（モバイルデバイスでは、このページはアクティビティをリクエストした元のアプリ上のポップアップで描画されるでしょう）。その後の振る舞いは disposition が window の場合と完全に同じです。</li>
+  </ul>
+ </dd>
+</dl>
+<dl>
+ <dt>
+  <code>returnValue</code> {{optional_inline()}}</dt>
+ <dd>
+  アクティビティが値を返すか否かを宣言します。アプリケーションが値を返す物ではない場合、 UA はアプリケーションが選択されてすぐに
+  <i>
+   success</i>
+  イベントを送信することができます。値を返す時には、アクティビティハンドラーは、アクティビティが成功した場合には {{domxref("MozActivityRequestHandler.postResult()")}} を、失敗した場合には {{domxref("MozActivityRequestHandler.postError()")}} を呼ぶ必要があります（ここで {{domxref("MozActivityRequestHandler")}} はアクティビティハンドラーが {{domxref("Navigator.mozSetMessageHandler()","mozSetMessageHandler")}} 内で指定する関数に渡す第一引数の型）。 <em>success</em> イベントと <em>error</em> イベントはそれぞれ {{domxref("MozActivityRequestHandler.postResult()","postResult")}}、{{domxref("MozActivityRequestHandler.postError()","postError")}} がアクティビティハンドラーに呼ばれた後に発火します。</dd>
+</dl>
+<dl>
+ <dt>
+  <code>filters</code> {{optional_inline()}}</dt>
+ <dd>
+  各プロパティでフィルターを指定する形式の辞書。このフィルターは、アプリがあるアクティビティを処理するのに適切かどうか決定する際に適用されます。フィルター名は自由形式のテキストで、{{domxref("MozActivityOptions")}} の {{domxref("MozActivityOptions.data","data")}} プロパティ内の名前を反映させるべきです。フィルターの値は基本的な値（文字列または数値）、基本的な値の配列、あるいはフィルター定義オブジェクトのいずれかです。フィルターの条件が全て満たされた場合にのみ、アクティビティが処理可能だと見做されます。</dd>
+</dl>
+<p>フィルターの適用方法は以下のように各フィルターの値によります。</p>
+<ul>
+ <li>フィルターの値が基本的な値の場合、対応する {{domxref("MozActivityOptions.data")}} プロパティは任意ですが、もし存在すればフィルターが指定する物と同一でなければなりません。</li>
+ <li>フィルターの値が基本的な値の配列である場合、対応する {{domxref("MozActivityOptions.data")}} プロパティは任意ですが、もし存在すれば、その値はフィルターが指定する配列内の値のいずれかと等しくなければなりません。</li>
+ <li>フィルターの値がフィルター定義オブジェクトの場合、そのフィルターは対応する {{domxref("MozActivityOptions.data")}} プロパティがオブジェクトの定めるルールに従う場合に満たされたとされますフィルター定義オブジェクトには以下のプロパティが定義できます。
+  <ul>
+   <li><code>required</code>: 対応する {{domxref("MozActivityOptions.data")}} プロパティが存在する必要がある（true）か否（false）かを指定するブール値。</li>
+   <li><code>value</code>: 基本的な値か基本的な値の配列。対応する {{domxref("MozActivityOptions.data")}} プロパティの値はフィルターで定義する値のいずれかに等しくなければならない。</li>
+   <li><code>min</code>: 数値が期待される場合、対応する {{domxref("MozActivityOptions.data")}} プロパティの値はこの値以上でなければならない。</li>
+   <li><code>max</code>: 数値が期待される場合、対応する {{domxref("MozActivityOptions.data")}} プロパティの値はこの値以下でなければならない。</li>
+   <li><code>pattern</code>: <a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions" title="/en-US/docs/JavaScript/Guide/Regular_Expressions">JavaScript の正規表現</a>の文法に従った文字列のパターン。対応する {{domxref("MozActivityOptions.data")}} プロパティの値はこのパターンにマッチしなければならない。<strong>Firefox OS v1.2 以降でサポート。</strong></li>
+   <li><code>patternFlags</code>: パターンが使われる場合、追加で i や g といった正規表現のフラグを指定するのにこのプロパティを使うことができる。<strong>Firefox OS v1.2 以降でサポート。</strong></li>
+   <li><code>regexp</code>: <a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions" title="/en-US/docs/JavaScript/Guide/Regular_Expressions">JavaScript の正規表現</a>の文法に従った正規表現リテラルを含む文字列。対応する {{domxref("MozActivityOptions.data")}} プロパティの値はこのパターンにマッチしなければならない。pattern フラグと異なり、値に部分マッチさせることができるため、文字列の始点と終点にマッチさせるにはそれぞれメタ文字の ^ と $ を使う必要がある。<strong>Firefox OS v1.0 と v1.1 のみでサポート。</strong> よって pattern と regexp の両方を使うことが望ましい。</li>
+  </ul>
+ </li>
+</ul>
+<h2 id="アクティビティの処理">アクティビティの処理</h2>
+<p>アプリケーションをアクティビティハンドラーとして宣言した場合には、他のアプリからのアクティビティリクエストを受け取った時に何らかのアクションを実行して実効性を持たせる必要があります。</p>
+<p>アクティビティを処理するには必要なアクションを全て実行する関数を登録しなければなりません。そのためには {{domxref("Navigator.mozSetMessageHandler()","navigator.mozSetMessageHandler()")}} でメッセージハンドラーを設定し（アクティビティ名ではなく）<code>'activity'</code> を明示的に割り当てる必要があります。アクティビティハンドラー関数の引数として {{domxref("MozActivityRequestHandler")}} オブジェクトが渡されます。</p>
+<pre class="brush: js">navigator.mozSetMessageHandler('activity', function(activityRequest) {
+  // アクティビティ処理のための何かをする
+});</pre>
+<p>アクティビティハンドラー関数がアクションを実行する際に、必要であればアクティビティについての情報を読み出して返答を送り返すためにアクティビティリクエストをつかうことになります。</p>
+<p>アクティビティを呼び出すアプリは幾らかのデータ（後述）を提供する必要があります。このデータはリクエストの {{domxref("MozActivityRequestHandler.source","source")}} プロパティ経由で伝わり、{{domxref("MozActivityOptions")}} オブジェクトになっています。 このオブジェクトはアクティビティ呼び出しの {{domxref("MozActivityOptions.name","name")}} と関連する {{domxref("MozActivityOptions.data","data")}} を提供します。</p>
+<pre class="brush: js">navigator.mozSetMessageHandler('activity', function(activityRequest) {
+  var option = activityRequest.source;
+
+  if (option.name === "pick") {
+    // アクティビティ処理のための何かをする
+  }
+});</pre>
+<p>アクティビティを処理するためのアクションを全て実行すれば、リクエストの {{domxref("MozActivityRequestHandler.postResult()","postResult()")}} メソッドを呼んでアクティビティを委譲してきたアプリに結果を送り返すことができます。</p>
+<p>問題が起きた場合にはリクエストの {{domxref("MozActivityRequestHandler.postError()","postError()")}} メソッドを呼んでアクティビティに関するエラーメッセージを送り返すことができます。</p>
+<pre class="brush: js">navigator.mozSetMessageHandler('activity', function(activityRequest) {
+  var option = activityRequest.source;
+
+  if (option.name === "pick") {
+    // アクティビティ処理のための何かをする
+    ...
+
+    // 結果を送り返す
+    if (picture) {
+      activityRequest.postResult(picture);
+    } else {
+      activityRequest.postError("Unable to provide a picture");
+    }
+  }
+});</pre>
+<div class="note">
+ <p><strong>注：</strong>{{domxref("MozActivityRequestHandler.postError()","postError()")}} も {{domxref("MozActivityRequestHandler.postResult()","postResult()")}} も呼ばれなかった場合 -- 例えばユーザーが（デスクトップ版であればタブを閉じたり、モバイルデバイスであればホームスクリーンに戻ったりして）アプリケーションから離脱した場合 -- にはどこかの時点で UA がエラーを送ることが期待されます。</p>
+</div>
+<h2 id="アクテビティの開始">アクテビティの開始</h2>
+<p><em>Web アクティビティ</em>の他方では、我らがアプリにアクティビティを委譲したいアプリがあります。この委譲を実行するには {{domxref("MozActivity")}} オブジェクトをインスタンス化することによってアクティビティを呼び出す必要があります。このオブジェクトには、アクティビティハンドラーからのレスポンスを待つことのできる {{domxref("DOMRequest")}} オブジェクトである、ということ以上のことはありません。アクティビティはオブジェクトが作成されるなり開始し、UI は可能な限り速やかにユーザーに表示されます。</p>
+<pre class="brush: js" id=".C2.A0">var activity = new MozActivity({
+  // "pick" アクティビティを要求
+  name: "pick",
+
+  // アクティビティのフィルターに必要なデータを提供
+  data: {
+    type: "image/jpeg"
+  }
+});
+
+activity.onsuccess = function() {
+  var picture = this.result;
+  console.log("A picture has been retrieved");
+};
+
+activity.onerror = function() {
+  console.log(this.error);
+};
+</pre>
+<h3 id="追加情報：コンタクト情報の取得">追加情報：コンタクト情報の取得</h3>
+<p>Firefox OS 1.3 以下では、コンタクト情報の取得は以下のように処理します。</p>
+<pre class="brush: js">switch (this.activityDataType) {
+  case 'webcontacts/tel':
+    type = 'contact';
+    dataSet = theContact.tel;
+    noDataStr = _('no_contact_phones');
+    break;
+  case 'webcontacts/contact':
+    type = 'number';
+    dataSet = theContact.tel;
+    noDataStr = _('no_contact_phones');
+    break;
+  case 'webcontacts/email':
+    type = 'email';
+    dataSet = theContact.email;
+    noDataStr = _('no_contact_email');
+    break;
+}</pre>
+<p>その後、ある人の名前と電話番号が欲しい場合には次のようにそれを使用できます。</p>
+<pre class="brush: js">var pick = new MozActivity({
+  name: "pick",
+  data: {
+    type: "webcontacts/contact"
+  }
+});
+
+pick.onsuccess = function () {
+  console.log("got contact");
+  var contact = this.result;
+  if( contact ){
+    console.log( "Name " + contact.name + " number "+ contact.number );
+  }
+};</pre>
+<p>Firefox OS 2.0+ では、次のように、webcontacts/contact を使う際にコンタクト情報全体を取得できるようにするか、というフィールドを追加しました。</p>
+<pre class="brush: js">var pick = new MozActivity({
+  name: "pick",
+  data: {
+    type: "webcontacts/contact",
+    fullContact: "true"
+  }
+});</pre>
+<p>これは <code>Contact</code> オブジェクトを返します。下のように直接そのプロパティを使うことができます。</p>
+<pre class="brush: js">pick.onsuccess = function (Contact) {
+  console.log( "Name " + Contact.name + " number "+ Contact.number );
+};</pre>
+<h3 id="Firefox_OS_のアクティビティ">Firefox OS のアクティビティ</h3>
+<p>Firefox OS のネイティブインターフェイスである <a href="/ja/docs/Mozilla/Firefox_OS/Gaia" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Gaia">Gaia</a> は基本的なアクティビティを定義している組み込みアプリケーションを多数提供しています。そのアクティビティは以下の通りです。</p>
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">アクティビティ名</th>
+   <th scope="col">アプリケーション</th>
+   <th scope="col">期待するデータ（フィルター）</th>
+   <th scope="col">注</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>browse</code></td>
+   <td>Gallery</td>
+   <td>
+    <pre class="brush: js">
+type: "photos"</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td><code>configure</code></td>
+   <td>Settings</td>
+   <td>
+    <pre class="brush: js">
+target: "device"</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td><code>costcontrol/balance</code></td>
+   <td>Costcontrol</td>
+   <td>なし</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td><code>costcontrol/data_usage</code></td>
+   <td>Costcontrol</td>
+   <td>なし</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td><code>costcontrol/telephony</code></td>
+   <td>Costcontrol</td>
+   <td>なし</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td><code>dial</code></td>
+   <td>Communication</td>
+   <td>
+    <pre class="brush: js">
+type: "webtelephony/number",
+number: {
+  regexp: "^[\\d\\s+#*().-]{0,50}$"
+}</pre>
+   </td>
+   <td>アプリが電話呼び出しを渡したい時に使用。</td>
+  </tr>
+  <tr>
+   <td colspan="1" rowspan="3"><code>new</code></td>
+   <td>Communication</td>
+   <td>
+    <pre class="brush: js">
+type: "webcontacts/contact"</pre>
+   </td>
+   <td>アプリが新しいコンタクトエントリーを作成したい時に使用。</td>
+  </tr>
+  <tr>
+   <td>Email</td>
+   <td>
+    <pre class="brush: js">
+type: "mail"</pre>
+   </td>
+   <td>
+    <p>アプリが新規メールを送信したい時に使用。メールアプリは "url" または "URI" プロパティとして渡された <a href="http://tools.ietf.org/html/rfc6068">mailto URI</a> 文字列をパースすることができます。添付ファイルは "blob" の配列と "filenames" の配列を、n 番目のファイル名は n 番目の blob に対応、というように対応させながら追加することで渡せます。</p>
+   </td>
+  </tr>
+  <tr>
+   <td>SMS</td>
+   <td>
+    <pre class="brush: js" id="LC48">
+type: "websms/sms",
+number: {
+  regexp: "^[\\w\\s+#*().-]{0,50}$"
+}</pre>
+   </td>
+   <td>アプリが SMS を送信したい時に使用。</td>
+  </tr>
+  <tr>
+   <td colspan="1">nfc-ndef-discovered</td>
+   <td>n/a</td>
+   <td>なし</td>
+   <td>アプリが他デバイス上のアプリと data/tag を交換したい時に使用。</td>
+  </tr>
+  <tr>
+   <td colspan="1" rowspan="4"><code>open</code></td>
+   <td>Communication</td>
+   <td>
+    <pre class="brush: js">
+type: "webcontacts/contact"</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>Gallery</td>
+   <td>
+    <pre class="brush: js">
+type: [
+  "image/jpeg",
+  "image/png",
+  "image/gif",
+  "image/bmp"
+]</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>Music</td>
+   <td>
+    <pre class="brush: js">
+type: [
+  "audio/mpeg",
+  "audio/ogg",
+  "audio/mp4"
+]</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>Video</td>
+   <td>
+    <pre class="brush: js">
+type: [
+  "video/webm",
+  "video/mp4",
+  "video/3gpp",
+  "video/youtube"
+]</pre>
+    <p>{{domxref("Blob")}} オブジェクトとなっている blob プロパティも必要です。</p>
+   </td>
+   <td>アプリが動画を表示したい時に使用（view アクティビティでも同様のことが可能）。</td>
+  </tr>
+  <tr>
+   <td colspan="1" rowspan="2"><code>pick</code></td>
+   <td>Camera, Gallery, Wallpaper</td>
+   <td>
+    <pre class="brush: js">
+type: ["image/*", "image/jpeg"]</pre>
+   </td>
+   <td>アプリが画像を取得したい時に使用。</td>
+  </tr>
+  <tr>
+   <td>Communication</td>
+   <td>
+    <pre class="brush: js">
+type: [
+  "webcontacts/contact",
+  "webcontacts/email"
+]</pre>
+    <p>Firefox OS 2.0 以降では、下のように fullContact: "true" というフィールドを指定して、プロパティに直接アクセスできる完全なオブジェクトを返すことができます。</p>
+    <pre class="brush: js">
+type: [
+  "webcontacts/contact",
+  fullContact: "true"
+]</pre>
+   </td>
+   <td>アプリがコンタクト情報またはメールを読み込みたい時に使用。</td>
+  </tr>
+  <tr>
+   <td><code>record</code></td>
+   <td>Camera</td>
+   <td>
+    <pre class="brush: js">
+type: ["photos", "videos"]</pre>
+   </td>
+   <td>アプリが何らかの動画を撮りたい時に使用。</td>
+  </tr>
+  <tr>
+   <td><code>save-bookmark</code></td>
+   <td>Homescreen</td>
+   <td>
+    <pre class="brush: js" id="LC46">
+type: "url",
+url: {
+  required:true,
+  regexp:/^https?:/
+}</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td colspan="1" rowspan="2"><code>share</code></td>
+   <td>Bluetooth</td>
+   <td>
+    <pre class="brush: js">
+number: 1
+</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>Email, Wallpaper</td>
+   <td>
+    <pre class="brush: js">
+type: "image/*"</pre>
+   </td>
+   <td>アプリが画像をシェアしたい時に使用。</td>
+  </tr>
+  <tr>
+   <td colspan="1" rowspan="4"><code>view</code></td>
+   <td>Browser</td>
+   <td>
+    <pre class="brush: js">
+type: "url"
+url: {
+  required: true,
+  regexp: /^https?:.{1,16384}$/
+}</pre>
+   </td>
+   <td>アプリが URL を開きたい時に使用。</td>
+  </tr>
+  <tr>
+   <td>Email</td>
+   <td>
+    <pre class="brush: js" id="LC64">
+type: "url",
+url: {
+  required:true,
+  regexp: "^mailto:"
+}</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>PDFs</td>
+   <td>
+    <pre class="brush: js">
+type: "application/pdf"</pre>
+   </td>
+   <td>アプリが PDF ドキュメントの内容を表示したい時に使用。</td>
+  </tr>
+  <tr>
+   <td>Video</td>
+   <td>
+    <pre class="brush: js">
+type: [
+  "video/webm",
+  "video/mp4",
+  "video/3gpp",
+  "video/youtube"
+]</pre>
+    <p>文字列である url プロパティも必要です。</p>
+   </td>
+   <td>アプリが動画を表示したい時に使用（open アクティビティでも同様のことが可能）。</td>
+  </tr>
+  <tr>
+   <td><code>update</code></td>
+   <td>Communication</td>
+   <td>
+    <pre class="brush: js">
+type: "webcontacts/contact"</pre>
+   </td>
+   <td>アプリがコンタクト情報を更新したい時に使用。</td>
+  </tr>
+ </tbody>
+</table>
+<h3 id="Firefox_for_Android_のアクティビティ">Firefox for Android のアクティビティ</h3>
+<p>Firefox for Android 32+ では、WebappRT を使っている Web アプリが Web アクティビティ経由で Android のネイティブのインテントを送ることができます。セキュリティ上の理由から、明示的に対応付けされているアクティビティ/インテントのみがサポートされています。該当するアクティビティは以下の通りです。</p>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th colspan="2">MozActivity</th>
+   <th colspan="4">Android のインテント</th>
+  </tr>
+  <tr>
+   <th>アクティビティ名</th>
+   <th>期待されるデータ</th>
+   <th>アクション名</th>
+   <th>Extras</th>
+   <th>MIME</th>
+   <th>URI</th>
+  </tr>
+  <tr>
+   <td><code>dial</code></td>
+   <td>
+    <pre class="brush: js">
+type: "webtelephony/number",
+number: "+11234567890"</pre>
+   </td>
+   <td><code>DIAL</code></td>
+   <td> </td>
+   <td> </td>
+   <td><code>tel:+11234567890</code></td>
+  </tr>
+  <tr>
+   <td><code>open</code></td>
+   <td>
+    <pre class="brush: js">
+type: "image/jpeg",
+uri: "http://mozilla.org/image.jpg"</pre>
+   </td>
+   <td><code>VIEW</code></td>
+   <td> </td>
+   <td><code>image/jpeg</code></td>
+   <td><code>http://mozilla.org/image.jpg</code></td>
+  </tr>
+  <tr>
+   <td><code>pick</code></td>
+   <td>
+    <pre class="brush: js">
+type: "image/jpeg"</pre>
+   </td>
+   <td><code>GET_CONTENT</code></td>
+   <td> </td>
+   <td><code>image/jpeg</code></td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td rowspan="2"><code>send</code></td>
+   <td>
+    <pre class="brush: js">
+type: "text/plain",
+text: "my message"</pre>
+   </td>
+   <td><code>SEND</code></td>
+   <td><code>TEXT: "my message"</code></td>
+   <td><code>text/plain</code></td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>
+    <pre class="brush: js">
+type: "text/html",
+html_text: "&lt;strong&gt;my&lt;/strong&gt; message"</pre>
+   </td>
+   <td><code>SEND</code></td>
+   <td><code>HTML_TEXT: "&lt;strong&gt;my&lt;/strong&gt; message"</code></td>
+   <td><code>text/html</code></td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td rowspan="2"><code>view</code></td>
+   <td>
+    <pre class="brush: js">
+type: "url",
+url: "http://mozilla.org/"</pre>
+   </td>
+   <td><code>VIEW</code></td>
+   <td> </td>
+   <td> </td>
+   <td><code>http://mozilla.org/</code></td>
+  </tr>
+  <tr>
+   <td>
+    <pre class="brush: js">
+type: "url",
+uri: "mailto:user@mozilla.org"</pre>
+   </td>
+   <td><code>VIEW</code></td>
+   <td> </td>
+   <td> </td>
+   <td><code>mailto:user@mozilla.org</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="仕様">仕様</h2>
+<p><em>Web アクティビティ</em>はどの仕様にも含まれていません。ですが、提案中の <a href="https://dvcs.w3.org/hg/web-intents/raw-file/tip/spec/Overview-respec.html" title="http://www.w3.org/TR/web-intents/">Web Intents</a> 仕様と共通する部分があります。実際、Mozilla は <em>Web アクティビティ</em>を <em>Web Intents </em>への <a href="https://wiki.mozilla.org/WebAPI/WebActivities" title="https://wiki.mozilla.org/WebAPI/WebActivities">対案</a> として提案しています。このことについての詳細は <a href="http://lists.w3.org/Archives/Public/public-web-intents/2012Jun/0061.html" title="http://lists.w3.org/Archives/Public/public-web-intents/2012Jun/0061.html">Web Intents タスクフォースの ML</a> 上の議論をご覧ください。</p>
+<h2 id="関連項目">関連項目</h2>
+<ul>
+ <li>{{domxref("MozActivity")}}</li>
+ <li>{{domxref("MozActivityRequestHandler")}}</li>
+ <li>{{domxref("MozActivityOptions")}}</li>
+ <li>{{domxref("Navigator.mozSetMessageHandler()","navigator.mozSetMessageHandler()")}}</li>
+ <li><a href="https://hacks.mozilla.org/2013/01/introducing-web-activities/" title="https://hacks.mozilla.org/2013/01/introducing-web-activities/">Introducing Web Activities</a>（<a href="https://dev.mozilla.jp/2013/01/introducing-web-activities/">日本語訳</a>）</li>
+</ul>

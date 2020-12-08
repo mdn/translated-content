@@ -1,0 +1,107 @@
+---
+title: インストーラの作成
+slug: Archive/Mozilla/XUL/Tutorial/Creating_an_Installer
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+  - 要更新
+translation_of: Archive/Mozilla/XUL/Tutorial/Creating_an_Installer
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Cross_Package_Overlays" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Install_Scripts">次のページ  »</a></p>
+</div>
+
+<p>このセクションでは、XUL アプリケーションをインストーラにパッケージングする方法について説明します。</p>
+
+<h3 id="XPInstall_.E3.83.91.E3.83.83.E3.82.B1.E3.83.BC.E3.82.B8" name="XPInstall_.E3.83.91.E3.83.83.E3.82.B1.E3.83.BC.E3.82.B8">XPInstall パッケージ</h3>
+
+<p>Mozilla には、XUL ウィンドウやスクリプト、スキンなどのファイルを、インストーラとして単一のファイルにまとめることが可能なメカニズムがあります。 作成したインストーラは、利用者がダウンロードできる場所に置くことが可能です。 そのパッケージがダウンロードされて、インストールされるときのために、簡単なスクリプトを使用することができます。 このメカニズムは、<a href="/ja/docs/XPInstall">XPInstall</a> (Cross platform Install) と呼ばれています。</p>
+
+<p>XPInstall によるインストーラは、JAR ファイルとしてパッケージされることになります。 この JAR ファイルの中には、様々なインストール対象のファイルを、全て追加することが可能です。 加えてインストーラには、インストール処理を行うために使用する、インストールスクリプト (install.js) が含まれている必要があります。 このスクリプトは、ファイルやコンポーネントをインストールするために使用可能な様々なインストール関数にアクセスすることになります。<span style="color: darkgreen; background: #ef9;">【訳注: Firefox では、install.rdf に置き換えられています】</span></p>
+
+<p>インストーラとしての JAR ファイルは、他のアーカイブと区別するために、通常は .xpi という拡張子 (発音は zippy) をつけます。 通常、このインストーラは、新しいスキンやプラグイン、パッケージといった Mozilla のコンポーネントをインストールするために使用されることになります。</p>
+
+<p>インストーラが起動されてコンポーネントがインストールされるときには、いくつかの段階を経る必要があります。 以下で、順を追って説明していきます。</p>
+
+<ol>
+ <li>利用者が、インストール対象のソフトウェアをダウンロードするための Web ページを作成します。 このページには、インストールトリガーと呼ばれる、インストール処理を起動するための小さなスクリプトを含めておきます。</li>
+ <li>インストールトリガーによって、利用者に対して、そのパッケージがインストールされる旨を記したダイアログが表示されます。 インストールトリガーは、複数のインストーラを起動する事も可能です。 この場合は、リストとして表示されます。 利用者は、ダイアログで継続かキャンセルかの選択をすることになります。</li>
+ <li>利用者が継続を選択した場合には、XPI ファイルによるインストーラがダウンロードされます。 この処理の間は、プログレスバーが表示されています。</li>
+ <li>インストールアーカイブから、install.js ファイルが展開されて、実行されます。 このスクリプトは、アーカイブのどのファイルがインストールされるべきかを示すインストール機能を呼び出します。</li>
+ <li>このスクリプトが完了したとき、新しいパッケージのインストールも終了したことになります。 複数 (multiple)パッケージがインストールされる場合には、それらのスクリプトは順番 (sequence)に実行されます。</li>
+</ol>
+
+<h3 id=".E3.82.A4.E3.83.B3.E3.82.B9.E3.83.88.E3.83.BC.E3.83.AB.E3.83.88.E3.83.AA.E3.82.AC.E3.83.BC" name=".E3.82.A4.E3.83.B3.E3.82.B9.E3.83.88.E3.83.BC.E3.83.AB.E3.83.88.E3.83.AA.E3.82.AC.E3.83.BC">インストールトリガー</h3>
+
+<p>上記したように、インストール処理はインストールトリガーによって開始されます。 ここでは、専用のグローバルオブジェクトである <code>InstallTrigger</code> が使用されることになり、 このオブジェクトには、インストール処理を開始するために使用可能なメソッドがいくつか含まれています。 このオブジェクトは、ローカルでもリモートコンテンツからでも利用できるため、 Web サイトからダウンロードして使用するのに適しています。</p>
+
+<p>それでは、例としてインストールトリガーを作ってみることにしましょう。 ここでは、<code>InstallTrigger.install()</code> という関数を使用します。 この関数には 2 つの引数を取り、1 つ目はインストールするパッケージのリスト、 2 つ目はインストールが完了した時に呼び出されるコールバック関数になります。 以下に例を示します。</p>
+
+<pre>function doneFn ( name , result ){
+  alert("The package " + name + " was installed with a result of " + result);
+}
+
+var xpi = new Object();
+xpi["Calendar"] = "calendar.xpi";
+InstallTrigger.install(xpi,doneFn);
+</pre>
+
+<p>まず、コールバック関数の <code>doneFn()</code> を定義します。この関数はインストールが完了したときに呼び出されることになります。 もちろん、この関数には好きな名前をつけることができます。 この関数には 2 つの引数が渡されることになります。 最初の引数はインストールされたパッケージの名前で、 これは、複数コンポーネントをインストールする際には重要です。 2 つ目の引数は結果 (result)を示すコードです。 結果が 0 ならば、インストールは問題なく成功したことを示し、 結果が 0 以外ならば、エラーが発生したことを意味して、 この場合は、引数の値としてエラーコードが設定されることになります。 ここでは、<code>doneFn()</code> 関数は、単に利用者にアラートボックスを表示するだけです。</p>
+
+<p>次に、インストーラの名称 (Calendar) と URL (calendar.xpi) を保持する <code>xpi</code> 配列を作成します。 ここには、インストールしたいパッケージ分だけ、同様の行を追加できます。 そして、最後に <code>install</code> 関数をコールします。</p>
+
+<p>スクリプトのこの部分が実行されたときに、calendar.xpi ファイルがインストールされることになります。</p>
+
+<div class="highlight">
+<h4 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AE.E4.BE.8B" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AE.E4.BE.8B">ファイル検索ダイアログの例</h4>
+
+<p>それでは、ファイル検索ダイアログで、試してみることにしましょう。</p>
+
+<pre>function doneFn ( name , result ){
+  if (result) alert("An error occured: " + result);
+}
+
+var xpi = new Object();
+xpi["Find Files"] = "findfile.xpi";
+InstallTrigger.install(xpi,doneFn);
+</pre>
+</div>
+
+<h3 id="XPI_.E3.82.A2.E3.83.BC.E3.82.AB.E3.82.A4.E3.83.96" name="XPI_.E3.82.A2.E3.83.BC.E3.82.AB.E3.82.A4.E3.83.96">XPI アーカイブ</h3>
+
+<div class="note"><strong>注意</strong>: 新規に <a href="/ja/docs/XULRunner">XULRunner のアプリケーション</a>、<a href="/ja/docs/Extensions">拡張</a>、<a href="/ja/docs/Themes">テーマ</a>を作成する場合は、<a href="/ja/docs/Bundles">Bundles</a> の方を参照してください。</div>
+
+<p>インストーラ本体の XPI ファイルには、<code>install.js</code> という名称のファイルを含んでいる必要があります。 これは <a href="/ja/docs/JavaScript">JavaScript</a> ファイルで、インストール処理の間を通して実行されます。 また、それ以外に含まれるファイルは、インストールするファイルで、 通常はアーカイブの形式にまとめられて、その中のディレクトリに置かれることになりますが、 それが必須というわけではありません。 通常、クロムのファイルは、chrome ディレクトリと似た構造にまとめておきます。</p>
+
+<p>このため、多くの場合、XPI アーカイブに含まれるファイルは、インストールスクリプト (install.js) と JAR ファイルだけになり、 JAR ファイルには、そのアプリケーションで使用される全てのファイルが含まれることになります。 例えば、Mozilla に同梱されているコンポーネントは、この形式で保存されています。</p>
+
+<p>また、XPI ファイルは、単なる ZIP ファイルの一種に過ぎませんので、 作成とファイルの追加には、汎用の zip ユーティリティを使用することが可能です。</p>
+
+<div class="highlight">
+<h4 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AE.E4.BE.8B_2" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AE.E4.BE.8B_2">ファイル検索ダイアログの例</h4>
+
+<p>ファイル検索ダイアログの場合は、以下のような構造でアーカイブを作成することになります。</p>
+
+<pre>install.js
+findfile
+  content
+    contents.rdf
+    findfile.xul
+    findfile.js
+  skin
+    contents.rdf
+    findfile.css
+  locale
+    contents.rdf
+    findfile.dtd
+</pre>
+</div>
+
+<p>パッケージに置く各パートに対応して <code>content</code>、<code>skin</code>、<code>locale</code> ディレクトリが追加されています。 また、クロムファイルを登録するのに必要な contents.rdf ファイルも追加されています。</p>
+
+<p>次のセクションでは、インストールスクリプトについて、もっと詳しく見ていきます。</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Cross_Package_Overlays" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Install_Scripts">次のページ  »</a></p>
+</div>

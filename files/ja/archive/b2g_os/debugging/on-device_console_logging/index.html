@@ -1,0 +1,66 @@
+---
+title: デバイス上でコンソールログを取る
+slug: Archive/B2G_OS/Debugging/On-device_console_logging
+tags:
+  - B2G
+  - Firefox OS
+  - デバッグ
+translation_of: Archive/B2G_OS/Debugging/On-device_console_logging
+---
+<div class="summary">
+ <p><span class="seoSummary"><a href="/ja/docs/Mozilla/Firefox_OS/Debugging/Using_the_Remote_Web_Console" title="/en-US/docs/Mozilla/Firefox_OS/Debugging/Using_the_Remote_Web_Console">remote web console</a>を使ってコンソールログを出力、閲覧できるのに加え、 端末のファイル保存領域にログ出力できて、次に後ほど<a href="http://developer.android.com/tools/help/logcat.html" title="http://developer.android.com/tools/help/logcat.html"><code>logcat</code></a>ユーティリティを使ってUSB接続したコンピュータからログを取得できます。この記事ではこの機能を有効化し、ログを出力し、ログを取る方法を網羅します。</span></p>
+</div>
+<h2 id="コンソールログ取得の有効化">コンソールログ取得の有効化</h2>
+<p><span style="line-height: 1.5;">製品版のFirefox OS端末ではコンソールログの出力(例えば、</span><span style="line-height: 1.5;"><a href="/ja/docs/Web/API/Console/log" title="デバッガの Web コンソールにメッセージを出力します。"><code>console.log()</code></a>)</span><span style="line-height: 1.5;">は標準では無効となっています。有効にするには端末の</span><a style="line-height: 1.5;" href="/ja/Firefox_OS/Debugging/Developer_settings">開発者メニュー</a>に行き<em>コンソールを有効化</em><span style="line-height: 1.5;">の設定を有効にして下さい。</span></p>
+<h2 id="ログを取得する">ログを取得する</h2>
+<p>一度、コンソールを有効化にすれば、デスクトップのFirefox OSと同じように動作します。<a href="/ja/docs/Web/API/Console" title="Console オブジェクトは、ブラウザのデバッグコンソール(例えば Firefox の Web コンソール)へアクセスする機能を提供します。このオブジェクトの詳細な動作はブラウザによって異なりますが、一般的に共通の機能セットがサポートされています。"><code>console</code></a> のメソッドを使うことでテキストログをコンソールに出力することができます。以下に例を記載します。</p>
+<pre class="brush: js">console.info("Starting up the foobar hardware!");
+var err = foobar.start();
+if (err) {
+  console.error("--Error %d starting up the foobar hardware!", err);
+}
+</pre>
+<div class="note">
+ <p><b>注意</b>: <a href="/ja/docs/Web/API/Console" title="Console オブジェクトは、ブラウザのデバッグコンソール(例えば Firefox の Web コンソール)へアクセスする機能を提供します。このオブジェクトの詳細な動作はブラウザによって異なりますが、一般的に共通の機能セットがサポートされています。"><code>console</code></a> にコンソールログ機能の使い方について記載されています。</p>
+</div>
+<h2 id="logcatを使用する">logcatを使用する</h2>
+<p>Firefox OS端末では出力されたログは端末内に保存されるのですが、端末からはログを確認する為のインタフェースはありません。その為、コンピュータを使用してそのログを確認する必要があります。<span style="line-height: 1.5;">Android SDKに含まれる</span><code style="font-style: normal; line-height: 1.5;">adb</code><span style="line-height: 1.5;">から</span><code style="font-style: normal; line-height: 1.5;">logcat</code><span style="line-height: 1.5;">コマンドを使う必要があります(</span><a style="line-height: 1.5;" href="/en-US/Firefox_OS/Debugging/Installing_ADB">Installing ADB</a> もあわせて見てみて下さい<span style="line-height: 1.5;">)。</span></p>
+<p>幸運なことに、<code style="font-style: normal; line-height: 1.5;">logcat</code><span style="line-height: 1.5;"> はとてもシンプルに使うことが出来ます。一度</span><code style="font-style: normal; line-height: 1.5;">adb</code><span style="line-height: 1.5;">をインストールしてしまえば、端末をUSBをでコンピュータに繋いでターミナルから以下のコマンドを入力するだけです。</span></p>
+<pre class="brush: bash">adb logcat</pre>
+<p>以下は実際の端末で出力されたログになります( これらのログは端末内の <span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: 1.5;">/dev/log/system/</span><span style="line-height: 1.5;">に保存されています)。</span></p>
+<pre class="brush: bash">I/Vold    (  107): Vold 2.1 (the revenge) firing up
+D/Vold    (  107): Volume sdcard state changing -1 (Initializing) -&gt; 0 (No-Media)
+D/Vold    (  107): Volume emmc state changing -1 (Initializing) -&gt; 0 (No-Media)
+D/Vold    (  107): Volume sdcard state changing 0 (No-Media) -&gt; 2 (Pending)
+D/Vold    (  107): Volume sdcard state changing 2 (Pending) -&gt; 1 (Idle-Unmounted)
+W/Vold    (  107): Duplicate state (1)
+W/Vold    (  107): Duplicate state (1)
+W/Vold    (  107): Duplicate state (1)
+W/Vold    (  107): Duplicate state (1)
+W/Vold    (  107): Duplicate state (1)
+W/Vold    (  107): Duplicate state (1)
+W/Vold    (  107): Duplicate state (1)
+W/Vold    (  107): Duplicate state (1)
+W/Vold    (  107): Duplicate state (1)
+W/Vold    (  107): Duplicate state (1)
+W/Vold    (  107): Duplicate state (1)
+W/Vold    (  107): Duplicate state (1)
+W/Vold    (  107): Duplicate state (1)
+D/Vold    (  107): Volume emmc state changing 0 (No-Media) -&gt; 2 (Pending)
+D/Vold    (  107): Volume emmc state changing 2 (Pending) -&gt; 1 (Idle-Unmounted)
+D/VoldCmdListener(  107): volume list
+D/VoldCmdListener(  107): volume mount sdcard
+I/Vold    (  107): /dev/block/vold/179:20 being considered for volume sdcard
+D/Vold    (  107): Volume sdcard state changing 1 (Idle-Unmounted) -&gt; 3 (Checking)
+W/Vold    (  107): Skipping fs checks
+I/Vold    (  107): Device /dev/block/vold/179:20, target /mnt/sdcard mounted @ /mnt/secure/staging
+D/Vold    (  107): Volume sdcard state changing 3 (Checking) -&gt; 4 (Mounted)
+D/VoldCmdListener(  107): volume mount emmc
+I/Vold    (  107): /dev/block/vold/179:33 being considered for volume emmc
+D/Vold    (  107): Volume emmc state changing 1 (Idle-Unmounted) -&gt; 3 (Checking)
+W/Vold    (  107): Skipping fs checks
+I/Vold    (  107): Device /dev/block/vold/179:33, target /mnt/emmc mounted @ /mnt/secure/staging
+D/Vold    (  107): Volume emmc state changing 3 (Checking) -&gt; 4 (Mounted)
+
+etc.
+</pre>

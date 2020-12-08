@@ -1,0 +1,139 @@
+---
+title: DOMRequest
+slug: Archive/B2G_OS/API/DOMRequest
+tags:
+  - API
+  - DOM
+  - 回调
+translation_of: Archive/B2G_OS/API/DOMRequest
+---
+<div><section class="Quick_links" id="Quick_Links"><ol><li><strong><a href="/zh-CN/docs/Mozilla/Firefox_OS/API/Archive"><code>Archive</code></a></strong></li><li class="toggle"><details open><summary>Related pages for DOM (Non-standard)</summary><ol><li><a href="/zh-CN/docs/Mozilla/Firefox_OS/API/DOMCursor"><code>DOMCursor</code></a></li></ol></details></li></ol></section></div>
+
+<p>DOMRequest对象表示正在进行的操作。 它提供在操作完成时调用的回调，以及对操作结果的引用。 启动一个进行中的操作，DOM方法会返回一个DOMRequest对象，您可以使用该对象来监视该操作的进度。</p>
+
+<p></p><div class="note"><strong>Note:</strong> 此特性在 <a href="/zh-CN/docs/Web/API/Web_Workers_API">Web Worker</a> 中可用。</div><p></p>
+
+<h2 id="属性">属性</h2>
+
+<dl>
+ <dt><a href="/zh-CN/docs/Web/API/DOMRequest/onsuccess" title="此页面仍未被本地化, 期待您的翻译!"><code>DOMRequest.onsuccess</code></a></dt>
+ <dd>当由DOMRequest表示的操作完成时调用的回调处理程序。</dd>
+ <dt><a href="/zh-CN/docs/Web/API/DOMRequest/onerror" title="此页面仍未被本地化, 期待您的翻译!"><code>DOMRequest.onerror</code></a></dt>
+ <dd>当处理操作发生错误时调用的回调处理程序。</dd>
+ <dt><a href="/zh-CN/docs/Web/API/DOMRequest/readyState" title="此页面仍未被本地化, 期待您的翻译!"><code>DOMRequest.readyState</code></a></dt>
+ <dd>表示操作是否已完成运行的字符串。 其值为“done”或“pending”。</dd>
+ <dt><a href="/zh-CN/docs/Web/API/DOMRequest/result" title="此页面仍未被本地化, 期待您的翻译!"><code>DOMRequest.result</code></a></dt>
+ <dd>操作的结果。</dd>
+ <dt><a href="/zh-CN/docs/Web/API/DOMRequest/error" title="此页面仍未被本地化, 期待您的翻译!"><code>DOMRequest.error</code></a></dt>
+ <dd>错误信息（如果有）。</dd>
+</dl>
+
+<h2 id="方法">方法</h2>
+
+<p>无.</p>
+
+<h2 id="例子">例子</h2>
+
+<p>使用DOMRequest对象的onsuccess，onerror，result和error属性的一个示例。</p>
+
+<pre class="brush:js">var pending = navigator.mozApps.install(manifestUrl);
+
+pending.onsuccess = function () {
+  // Save the App object that is returned
+  var appRecord = this.result;
+  alert('Installation successful!');
+};
+pending.onerror = function () {
+  // Display the name of the error
+  alert('Install failed, error: ' + this.error.name);
+};</pre>
+
+<h2 id="规范">规范</h2>
+
+<p>目前不是任何规范的一部分。</p>
+
+<h2 id="浏览器支持">浏览器支持</h2>
+
+<div><p class="warning"><strong><a href="https://github.com/mdn/browser-compat-data">We're converting our compatibility data into a machine-readable JSON format</a></strong>.
+            This compatibility table still uses the old format,
+            because we haven't yet converted the data it contains.
+            <strong><a href="/zh-CN/docs/MDN/Contribute/Structures/Compatibility_tables">Find out how you can help!</a></strong></p>
+
+<div class="htab">
+    <a id="AutoCompatibilityTable" name="AutoCompatibilityTable"></a>
+    <ul>
+        <li class="selected"><a>Desktop</a></li>
+        <li><a>Mobile</a></li>
+    </ul>
+</div></div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><a href="/en-US/Firefox/Releases/13" title="Released on 2012-06-05.">13.0</a> (13.0)</td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+  </tr>
+  <tr>
+   <td>Available in workers</td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><a href="/en-US/Firefox/Releases/41" title="Released on 2015-09-22.">41.0</a> (41.0)</td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td>13.0 (13.0)</td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+  </tr>
+  <tr>
+   <td>Available in workers</td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td>41.0 (41.0)</td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="另见">另见</h2>
+
+<ul>
+ <li><a href="/zh-CN/docs/Web/API/DOMCursor" title="此页面仍未被本地化, 期待您的翻译!"><code>DOMCursor</code></a></li>
+</ul>

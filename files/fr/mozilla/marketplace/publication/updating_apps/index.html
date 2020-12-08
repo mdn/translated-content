@@ -1,0 +1,68 @@
+---
+title: Mises à jour des applications
+slug: Mozilla/Marketplace/Publication/Updating_apps
+translation_of: Archive/Mozilla/Marketplace/Publishing/Updating_apps
+---
+<div class="summary">
+<p>Cet article explique le processus par lequel vous mettez à jour des applications publiées, auto-éditées ou publiées sur le<span class="seoSummary"> <a href="https://marketplace.firefox.com/">Firefox Marketplace</a>.</span></p>
+</div>
+
+<div class="note">
+<p><span class="transpan"><span id="tran0">Une fois qu'une application a été installée par un utilisateur, il n'est plus possible de changer son nom par une mise à jour. De nouvelles installations cependant, prendront le nouveau nom de l'application. Ceci est une mesure de sécurité pour éviter les changements de nom sans scrupules.</span></span></p>
+</div>
+
+<h2 id="Mise_à_jour_des_applications_hébergées"><span class="short_text" id="result_box" lang="fr"><span>Mise à jour de</span>s <span>applications hébergées</span></span></h2>
+
+<p><a href="/en-US/Marketplace/Options/Hosted_apps">Hosted Apps</a> <span id="result_box" lang="fr"><span>respectent</span> <span>les règles normales de</span> <span>mise en cache Web</span><span>,</span> <span>et peuvent</span> <span>utiliser des mécanismes</span> <span>avancés</span> <span>pour améliorer le démarrage</span><span> ou</span> <span>pour permettre</span> <span>une utilisation hors ligne</span><span>,</span> <span>tels que</span></span> <span class="transpan"><span style="background-color: #d3d8f1;"> </span></span> <a href="https://developer.mozilla.org/en-US/docs/HTML/Using_the_application_cache">AppCache</a>. Par conséquent<span id="result_box" lang="fr"><span>, il</span> <span>n'y a normalement pas</span> <span>de règles spéciales pour</span> <span>la mise à jour</span> <span>des</span> <span>applications</span> <span>-</span> <span>il vous suffit de</span> <span>mettre à jour l'</span><span>application sur votre</span> <span>site.</span></span></p>
+
+<p>Cependant, quelques changements sur vos applications peuvent impliquer des mises à jour du <a href="/en-US/Apps/Build/Manifest">manifeste.</a></p>
+
+<h3 id="Changer_le_contenu_d'un_manifeste">Changer le contenu d'un manifeste</h3>
+
+<p><span class="transpan"><span id="tran0">Pour mettre à jour les caractéristiques d'une application publiée - comme le nom d'application, le nom du développeur, les langues, les icônes - vous appliquez simplement ces changements au manifeste que vous hébergez. Si vous avez soumis l'application au Marketplace de Firefox et qu'un de ces changements est considéré comme significatif, l'application est marquée pour</span></span> <a href="#Re_review_of_updated_apps">évaluation</a>.</p>
+
+<p><span class="transpan"><span id="tran0">Les moments d'exécution sur le Web et l'OS de Firefox devraient automatiquement détecter ces changements et déclencher une mise à jour chez l'utilisateur. Cependant, vous pouvez manuellement déclencher des mises à jour en inscrivant un champ de version dans le manifeste d'application. Votre application peut alors vérifier la version en inspectant la valeur retournée {{ domxref ("Apps.getInstalled") }}</span></span> . <span class="transpan"><span id="tran0">Si la version installée de l'utilisateur n'est pas à jour, votre application peut déclencher une mise à jour utilisant {{ domxref ("Apps.install") }}. Notez que quelques changements à un manifeste, et en conséquence une installation, peuvent exiger l'approbation de l'utilisateur avant l'exécution de la mise à jour.</span></span></p>
+
+<p>La valeur de version n'est pas utilisée par l'OS de Firefox ni pendant les temps d'exécution sur le Web, donc vous pouvez utiliser n'importe quel schéma de version vous convenant.</p>
+
+<h3 id="Changement_de_l'emplacement_d'un_manifeste">Changement de l'emplacement d'un manifeste</h3>
+
+<p>Vous pouvez vouloir changer l'emplacement du fichier du manifeste de votre application. Typiquement, vous ferez cela pour déplacer l'application vers un nouveau domaine ou vers un sous-domaine qui vous permettront de livrer plusieurs applications hébergées.</p>
+
+<p><span class="transpan"><span id="tran0">Si vous voulez  faire ceci pour des applications soumises au Marketplace de Firefox, retournez à la soumission d'application et dans la page "</span></span> Edit Details "<span class="transpan"><span> changez la valeur de l'URL du manifeste. La suite dépendra du statut de votre application :</span></span></p>
+
+<ul>
+ <li><span id="result_box" lang="fr"><span>pour une</span> application <span>publiée</span> <span>(</span><span>ou approuvée</span> <span>mais non publiée</span><span>)</span> <span>,</span> <span>l'application</span> <span>est marquée</span> <span>pour évaluation et</span> <span>vous serez</span> <span>contacté</span> <span>si</span> <span>(</span><span>et seulement si</span><span>) des</span> <span>problèmes ultérieurs</span> <span>sont découverts.</span></span></li>
+ <li>Pour des applications non approuvées, l'évaluation se déroulera normalement.</li>
+</ul>
+
+<h3 id="Avis_sur_les_applications_mises_à_jour"><span class="short_text" id="result_box" lang="fr"><span>Avis sur</span> <span>les applications</span> <span>mises à jour</span></span></h3>
+
+<p><span id="result_box" lang="fr"><span>Lorsqu'une</span> <span>applicationi</span> <span>hébergé</span>e <span>est signalée</span> <span>pour évaluation</span> <span>à la suite d'</span><span>une mise à jour</span><span>, ce qui suit</span> <span>se produit </span><span>:</span></span></p>
+
+<ul>
+ <li>Le statut  de l'application ne change pas, une application publiée reste publiée .</li>
+ <li><span id="result_box" lang="fr"><span>L'application</span> <span>est ajoutée à la</span> <span>file d'attente des évaluations à réaliser</span><span> et</span> <span>quand son tour arrive</span><span> (</span><span>entre</span><span> quelques</span> <span>heures et quelques</span> <span>jours plus tard</span><span>) un évaluateur</span> <span>examine</span> <span>les changements et </span><span>:</span></span>
+  <ul>
+   <li><span class="short_text" id="result_box" lang="fr"><span>efface</span> <span>le marquage (flag)</span></span> .</li>
+   <li><span id="result_box" lang="fr">la <span>rejette</span>, <span>si l'application</span> <span>est</span> <span>complètement cassée,</span></span><span lang="fr"> <span>et vous contacte.</span> <span>Cela supprimera l'application de Firefox Marketplace, si elle a été publiée.</span></span></li>
+   <li> <span class="short_text" id="result_box" lang="fr"><span>vous</span> <span>contacte pour</span> <span>de plus amples informations</span><span>.</span></span>   </li>
+  </ul>
+ </li>
+</ul>
+
+<div class="warning">
+<p><span id="result_box" lang="fr"><span>Dans la mesure du possible</span><span>, vous devez</span> <span>éviter de changer</span> <span>l'emplacement</span> <span>de l'application</span> <span>/</span> <span>manifeste</span> <span>après</span> <span>la publication</span> <span>dans le</span> <span>Marketplace de</span> <span>Firefox</span><span>,</span> <span>en raison de</span> <span>l'impact sur</span> <span>l'utilisateur.</span> <span>Un changement</span> <span>de l'</span><span>emplacement du manifeste</span> <span>se traduira par</span> <span>une nouvelle instance</span> <span>installée de</span> <span>l'</span><span>application lorsque</span></span> {{ domxref("Apps.install") }} <span class="short_text" id="result_box" lang="fr"><span>est invoquée</span></span> . <span id="result_box" lang="fr"><span>De nombreux utilisateurs</span> <span>trouveront cela</span> <span>perturbant.</span></span></p>
+</div>
+
+<h2 id="Mise_à_jour_des_applications_empaquetées"><span class="short_text" id="result_box" lang="fr"><span>Mise à jour</span> <span>des applications</span> <span>empaquetées</span></span></h2>
+
+<p><span class="short_text" lang="fr"><span>Les </span></span><a href="/en-US/docs/Web/Apps/Packaged_apps">Packaged Apps</a> <span id="result_box" lang="fr"> <span>ont un processus</span> <span>de mise à jour</span> <span>différent de celui des</span> <span>applications hébergées</span><span>.</span> <span>Pour mettre à jour</span> <span>une</span> <span>application</span> <span>empaquet</span><span>ée,</span> <span>vous téléchargez</span> <span>une nouvelle version</span> du <span>fichier zip</span> <span>sur le</span> <span>Marketplace de</span> <span>Firefox</span><span>.</span> <span>L'</span><span>application mise à jour</span> <span>est ensuite</span> <span>évaluée et</span><span>,</span> <span>lorsqu'elle est approuvée</span><span>,</span> <span>publiée sur le</span> <span>Marketplace</span><span>.</span></span>  <span id="result_box" lang="fr"><span>Cela déclenche</span> <span>une mise à jour</span> de <span>toutes les</span> <span>versions installées</span><span>.</span> <span>Les utilisateurs de l'OS</span> <span>Firefox</span><span> peuvent</span> <span>également demander</span> <span>une mise à jour</span> <span>en utilisant l'application</span> <span>Paramètres.</span> <span>Pour télécharger</span> <span>une nouvelle</span> <span>version de votre application</span><span>, connectez-vous</span> <span>au Marketplace</span> <span>avec le</span> <span>même compte que</span> pour <span>la présentation précédente,</span> <span>puis cliquez sur</span> <span>l'icône d'engrenage</span> <span>en haut à droite</span> <span>et cliquez sur</span> <span>«</span></span> My Submissions <span lang="fr"><span>» <em>(mes soumissions)</em>.</span></span>   <span id="result_box" lang="fr"><span>Sous</span> <span>l'en-tête</span> <span>«</span></span> Manage My Submissions <span lang="fr"><span>» <em>(gérer mes soumissions)</em> et</span> pour <span>l'application en question</span><span>, cliquez sur</span> <span>"Status</span> <span>&amp;</span> <span>Versions</span><span>.</span><span>"</span> <span>De là</span><span>, faites défiler</span> <span>vers le bas et</span> <span>cliquez sur "</span></span> Select a File " <em>(</em><span lang="fr"><em><span>Sélectionner un fichier</span></em><span><em>)</em> sous </span></span> "Upload New Version" <em><span lang="fr"><span>(</span><span>Télécharger</span> <span>la nouvelle version).</span></span></em>  <span id="result_box" lang="fr"><span>À partir de là, vous</span> <span>pouvez</span> <span>choisir de ne pas</span> <span>avoir</span> <span>une </span> <span>publication</span> <span>automatique de votre application</span> <span>après son évaluation</span> <span>en décochant la case</span> <span> </span></span> "Publish my app in the Firefox Marketplace as soon as it's reviewed". <span lang="fr"> <span>Les appareils des utilisateurs</span> <span>vérifier</span>ont chaque<span> jour l'existence de</span><span> mises à jour</span> <span>d'applications</span><span>,</span> <span>et</span> <span>verront</span> <span>une notification</span> <span>d'une mise à jour</span> <span>disponible</span> <span>pour son téléchargement</span> <span>à leur discrétion.</span></span></p>
+
+<p><img alt="Would you like to publish to marketplace upon review?" src="https://mdn.mozillademos.org/files/8523/publish_checkbox.png" style="height: 232px; width: 1000px;"></p>
+
+<ul>
+ <li> <span id="result_box" lang="fr"><span>Lorsque l'application</span> <span>empaquetée</span> <span>mise à jour</span> <span>est publiée, le</span> <span>mini-</span><span>manifeste</span> <span>est mis à jour</span> <span>pour pointer vers le</span> <span>fichier zip</span> <span>mis à jour</span> <span>(</span><span>le mini-</span><span>manifeste n'est</span> <span>pas</span> <span>l'application principale</span> <span>manifeste)</span><span>.</span> <span>L'en-tête</span> </span> <code>ETag</code> <span lang="fr"> <span>est modifié,</span> <span>ce qui déclenche</span> <span>une mise à jour</span> <span>sur le téléphone</span> <span>Firefox</span> <span>OS</span><span>.</span></span></li>
+ <li>L'OS Firefox <span id="result_box" lang="fr"><span>vérifie</span> <span>une fois</span> <span>par jour par sondage téléphonique, les</span> <span>modifications apportées aux</span><span> applications</span><span>.</span> </span> <span id="result_box" lang="fr"><span>Pour ce faire, il examine l'URL du mini-manifeste, puis interroge l'URL dans le champ package_path dans le mini-manifeste.</span></span> <span lang="fr"> <span>Cela se fait</span> avec la méthode</span> <code>checkForUpdate()</code> dans la <a href="/en-US/docs/Web/API/App"><code>App</code> object</a>. <span id="result_box" lang="fr"><span>Lorsque</span> <span>l'en-tête</span> <span>ETag</span> <span>change, il</span> <span>sait que l'</span><span>application a été</span> <span>mise à jour</span><span>.</span> <span>Ensuite,</span> <span>il vérifie</span> <span>si le</span> <span>fichier zip</span> <span>a changé.</span></span></li>
+ <li>Firefox OS <span id="result_box" lang="fr"><span>contrôle</span> <span>le lot</span> <span>pour les mises à jour</span> <span>des applications</span><span>.</span></span></li>
+</ul>

@@ -1,0 +1,92 @@
+---
+title: Application packagée
+slug: Mozilla/Marketplace/Options/Packaged_apps
+translation_of: Archive/Mozilla/Marketplace/Options/Packaged_apps
+---
+<div class="summary">
+<p><span class="seoSummary">Une application packagée est un .zip contenant toutes les ressources nécessaires (HMTL, CSS, JavaScript, manifest, etc.) au format Open Web APP plutôt que laisser les ressources sur un serveur web. Cet article contient une introduction aux applications packagée et des liens vers tout ce dont vous avez besoin de connaitre en tant que developpeur.</span></p>
+</div>
+
+<p>Une application packagée est un fichier .zip qui contient tous les fichiers nécessaires au bon fonctionnement des Open Web App ainsi que le <a href="/en-US/Apps/Build/Manifest">manifeste</a> au dossier racine du zip. Le manifeste fournis les détails de l'application tels que la description, l'icône qui identifie l'application,... Le package est alors utilisé pour installer l'application dans Firefox OS, Firefox pour android et Firefox pour ordinateur. Une fois installée, l'app fonctionne sur l'appareil de l'utilisateur, mais est toujours capable d'accéder a des ressources externes, comme une base de données externe.</p>
+
+<p>Il y a trois types d'<a name="#types_of_packaged_apps">application packagée</a> : les applications web, les applications privilégiées et les applications certifiées. Alors que les applications web sont distribuables sans contraintes, les applications privilégiées et certifiées sont numériquement signées pour permettre l'utilisation de <a href="/en-US/Apps/Build/App_permissions">privilèges et d'API certifiées</a>. Les applications privilégiées sont signées durant le processus de revue des applications Marketplace, ce qui certifie qu'elles sont signées par des constructeurs d'appareils ou des opérateurs.</p>
+
+<p>En plus de ces possibilitées, les applications packagées permettent un temps de démarrage plus court car toutes les ressources sont déjà téléchargées car installées. Cette fonctionalité fait des applications packagées l'approche recomandée pour fournir des Open Web App aux téléphones Firefox OS et Android et pour Firefox pour ordinateur.</p>
+
+<div class="note">
+<p><strong>Note :</strong> Actuellement, Firefox Marketplace supporte les applications web et privilégiées. De plus, Firefox Marketplace supporte les applications payantes pour Firefox OS seulement et les applications gratuites pour Firefox pour Android et Firefox pour ordinateur. Le support des applications payantes pour toutes le plateformes est en développement.</p>
+</div>
+
+<h2 id="Type_d'applications_packagées"><a name="types_of_packaged_apps">Type d'applications packagées</a></h2>
+
+<p>Il y a trois types d'application packagée : les applications web, les applications privilégiées et les applications certifiées. Chaque type d'application packagée correspond a un niveau du modèle de <a href="/en-US/docs/Mozilla_Web_Services_Security_Model#App_Security">sécurité des applications</a> implémenté dans Firefox OS. Cette section fourni des informations sur chaque type d'application packagée.</p>
+
+<h3 id="Application_Web">Application Web</h3>
+
+<p>Une application web est celle qui n'utilise pas de privilège ou de certification. Quand elle est soumise au Marketplace, elle est signée, mais cela ne permet pas d'utiliser les privilèges ou les certifications. Ces applications ne sont pas sujettes aux  <a href="/en-US/Apps/CSP">politiques de sécurité des contenus</a> nécessaires aux applications certifiées et privilégiées.</p>
+
+<p>Ce type d'application packagée ne requière pas le champ <code>field</code> dans son fichier <code>manifest.webapp</code> car la valeur par défaut (<code>web</code>) est correcte.</p>
+
+<p>Les applications web peuvent être <a href="/en-US/Marketplace/Options/Self_publishing">auto-publiées</a> ou distribuées <em>via</em> le Firefox Marketplace. Elles peuvent aussi être fournies aux utilisateurs via le mécanisme d'<a href="/en-US/Marketplace/Options/Hosted_apps">application hébergée</a>.</p>
+
+<h3 id="Application_privilégiée">Application privilégiée</h3>
+
+<p>Une application privilégiée peut-être considérée comme l'équivalent des applications natives sur des plateformes comme iOS et Android. Durant sa soumission au Firefox Marketplace, ce type d'application passe par un processus spécial. En effet, cela donne au utilisateurs de ces applications l'assurance qu'elles ont été soigneusement revues pour de potentiels problèmes de sécurité, de vie privée ou de fonctionnement.</p>
+
+<p>Pour spécifier qu'une application est privilégiée, ajoutez le <a href="/en-US/Apps/Build/Manifest">type</a> <code>field</code> dans le <code>manifest.webapp</code> et passez-le à <code>privileged</code>. Chaque API privilégiée que votre application nécessite doit être spécifiée dans le champ <code>permissions</code> du manifeste.</p>
+
+<p>Vous devez mettre les <a href="/en-US/Apps/CSP">CSP</a> suivantes dans le manifeste d'une application privilégiée :</p>
+
+<pre class="brush: js">"default-src *; script-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline'"</pre>
+
+<p>Ces applications ne peuvent être distribuées que <code>via</code> le Firefox Marketplace.</p>
+
+<h3 id="Application_certifiée">Application certifiée</h3>
+
+<div class="geckoVersionNote">
+<p>Les applications certifiées ne sont généralement pas disponibles pour les développeurs tiers et ne sont pas distribuées <em>via</em> le Firefox Marketplace. Le but sur le long terme est que toutes les API nécessitant le niveau certifié ne nécessitent plus que le niveau privilégié. Si vous voulez voir une API particulière devenir disponible, venez nous en parler sur la mailling list <a href="https://lists.mozilla.org/listinfo/dev-webapps">dev-webapps</a>.</p>
+</div>
+
+<p>Une application certifiée permet l'utilisation d'API certifiées, qui permettent d'accéder aux fonctions critiques du système. Contrairement aux applications privilégiées, les permissions d'API pour les applications certifiées sont implicites et donc toutes activées par défaut sans l'approbation explicite de l'utilisateur. Une application certifiée doit être approuvée pour un constructeur ou un opérateur.</p>
+
+<p>Pour spécifiée qu'elle est certifiée, l'application doit contenir le champ <code>field</code> avec la valeur <code>certified</code> dans le <code>manifest.webapp</code>. Chaque API privilégiée que votre application nécessite doit être spécifiée dans le champs <code>permissions</code> du manifeste.</p>
+
+<p>Vous devez mettre les <a href="/en-US/Apps/CSP">CSP</a> suivantes dans le manifeste d'une application privilégiées :</p>
+
+<pre class="brush: js">"default-src *; script-src 'self'; object-src 'none'; style-src 'self'"</pre>
+
+<p>Ceci a pour effet d'implémenter des règles plus strictes pour les CSP par rapport aux applications certifiées. Si vous voulez comprendre les raisons derrières ces motivations, lisez la <a href="https://wiki.mozilla.org/Apps/Security#Default_CSP_policy">politique des CSP par défaut</a> et le <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=768029">bug 768029</a>.</p>
+
+<p>Les applications certifiées sont pré-chargées dans les appareils par les constructeurs et les opérateurs.</p>
+
+<h2 id="Tester_des_applications_packagées">Tester des applications packagées</h2>
+
+<p>Pour installer des applications dans le simulateur Firefox OS ou directement dans un téléphone, voyez le guide d'utilisation du <a href="/en-US/Firefox_OS/Using_the_App_Manager">manager d'application</a>. Vous pouvez aussi installer sur un appareil via un serveur web en suivant le guide pour <a href="https://developer.mozilla.org/en-US/Marketplace/Options/Self_publishing">publier des applications</a> par vous-mêmes.  N'oubliez pas que si vous déployez par vous-même, seules les applications web pourront être installées.</p>
+
+<h2 id="Publiez_votre_application_packagée">Publiez votre application packagée</h2>
+
+<p>Vous avez deux options pour publier vos applications : le Firefox Marketplace ou par vous-même.</p>
+
+<h3 id="Publier_sur_le_Firefox_Marketplace">Publier sur le Firefox Marketplace</h3>
+
+<p>Le processus pour publier une application packagée est décrit dans la section parlant de la <a href="/en-US/Marketplace/Publishing">publication d'application</a>.</p>
+
+<p>Quand vous soumettez votre application, le fichier zip est stockée sur le Firefox Marketplace et celui-ci génère un nouveau manifest appellé <strong>mini-manifeste</strong>, basé sur votre manifeste. Quand un utilisateur installe votre application, le mini-manifeste est passé à la fonction <a href="/en-US/docs/Web/API/Apps.installPackage"><code>Apps.installPackage()</code></a> qui va l'installer. Ce mini-manifeste est utilisé seulement pour des questions d'installation et de mise à jour et n'est pas utilisé par votre application pour fonctionner.</p>
+
+<h3 id="La_publier_vous-même">La publier vous-même</h3>
+
+<p>Il est possible de publier vous-même votre application en dehors du Firefox Marketplace via votre propre serveur web. Vous trouverez des détails sur la page dédiée à <a href="https://developer.mozilla.org/en-US/Marketplace/Options/Self_publishing">ce sujet</a>.</p>
+
+<h2 id="Mettre_a_jour_votre_application">Mettre a jour votre application</h2>
+
+<p>Pour des informations sur la mise à jour d'application, voyez la page dédiée à <a href="/en-US/Marketplace/Publishing/Updating_apps">ce sujet</a>.</p>
+
+<h2 id="Plus_d'information">Plus d'information</h2>
+
+<ul>
+ <li><a href="/en-US/Firefox_OS/Security/Security_model">Firefox OS security Overview</a></li>
+ <li><a href="/en-US/Firefox_OS/Security/Application_security">Application Security</a></li>
+ <li><a href="https://github.com/robnyman/Firefox-OS-Boilerplate-App" title="https://github.com/robnyman/Firefox-OS-Boilerplate-App">Firefox OS Boilerplate App</a></li>
+</ul>
+
+<p> </p>

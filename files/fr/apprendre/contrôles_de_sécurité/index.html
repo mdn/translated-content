@@ -1,0 +1,49 @@
+---
+title: Contrôles de sécurité
+slug: Apprendre/Contrôles_de_sécurité
+tags:
+  - Beginner
+  - Security
+  - Tutorial
+translation_of: Archive/Security/Controls
+---
+<p>{{draft}}</p>
+
+<div class="summary">
+<p>Cet article aborde les contrôles de sécurité : leurs différentes catégories, pourquoi ils sont toujours pertinents ainsi que leurs différentes faiblesses.</p>
+</div>
+
+<table class="learn-box standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Prérequis :</th>
+   <td>Vous devez au préalable connaître <a href="/fr/Apprendre/Confidentialité_intégrité_et_disponibilité">les objectifs majeurs en termes de sécurité</a>, <a href="/fr/Apprendre/Les_vulnérabilités">ce qu'est une vulnérabilité</a> et <a href="/fr/Apprendre/Les_menaces">ce qu'est une menace</a>.</td>
+  </tr>
+  <tr>
+   <th scope="row">Objectifs :</th>
+   <td>Apprendre ce qu'est un contrôle de sécurité et comment une combinaison de contrôles de sécurité permet de protéger des données et des systèmes.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Les données sensibles doivent être protégées afin qu'elles ne souffrent pas d'un défaut de confidentialité, d'integrité ou de disponibilité. Les mesures de protection (aussi appelées « contrôles de sécurité ») se distinguent en deux catégories. Tout d'abord, les faiblesses d'un système doivent être corrigées. Si un système possède une faille connue qu'un attaquant peut exploiter, le système doit être mis à jour afin que la vulnérabilité soit retirée ou réduite. Ensuite, le système ne doit offrir que les fonctionnalités nécessaires à chaque utilisateur autorisé, personne ne doit pouvoir utiliser des fonctionnalités dont il n'a pas besoin. C'est ce qu'on appelle <em>les moindres privilèges</em>.  Limiter les fonctionnalités accessibles et résoudre les failles connues visent un même but : fournir le minimum de chances à un attaquant pour entrer dans un système.</p>
+
+<h2 id="Pédagogie_active">Pédagogie active</h2>
+
+<p><em>Il n'y a pas encore de matériau interactif pour cet article. <a href="/fr/docs/MDN/Débuter_sur_MDN">N'hésitez pas à contribuer</a>.</em></p>
+
+<h2 id="Aller_plus_loin">Aller plus loin</h2>
+
+<p>Il existe trois types de contrôles de sécurité :</p>
+
+<ul>
+ <li><em>Les contrôles de gestion </em>: Ces contrôles portent sur la gestion du risque et sur la gestion de la sécurité du système d'informations.</li>
+ <li><em>Les contrôles opérationnels </em>: ces contrôles sont implémentés et utilisés par les personnes (et non par les systèmes).</li>
+ <li><em>Les contrôles techniques </em>: ces contrôles sont principalement implémentés et utilisés par les systèmes (matériels ou logiciels).</li>
+</ul>
+
+<p>Ces trois types de contrôles sont nécessaires afin d'obtenir une sécurité robuste. Ainsi, une règle de sécurité relève d'un contrôle de gestion mais est implémentée par des personnes (contrôle opérationnel) et des systèmes (contrôle technique). Prenons l'exemple du hameçonnage. Une entreprise peut décider d'avoir des règles afin que les utilisateurs ne visitent pas de sites web malveillants. Les contrôles de sécurité contre le hameçonnage incluent : des contrôles de gestion pour définir la règle à suivre, des contrôles techniques pour surveiller le contenu des <em>e-mails</em> et des sites web visités et des contrôles opérationnels en formant les utilisateurs afin que ceux-ci réalisent quand ils font face à une tentative de hameçonnage.</p>
+
+<p>La mise en place de contrôles de sécurité a généralement un inconvénient : les systèmes soumis aux contrôles sont moins pratiques voire plus difficiles à utiliser. Lorsque l'utilisabilité pose problème, de nombreux utilisateurs contourneront les contrôles de sécurité. Par exemple, si les mots de passe doivent être longs et complexes, les utilisateurs pourraient être amenés à les écrire sur des notes. Trouver le bon équilibre entre sécurité, utilisabilité et fonctionnalité est un défi complexe à relever mais qu'il est nécessaire de résoudre convenablement.</p>
+
+<p>Un autre principe fondamental des contrôles de sécurité consiste à utiliser plusieurs couches de sécurité. Des données sensibles peuvent par exemple être stockées sur un serveur protégé par différents contrôles : un pare-feu réseau, un pare-feu interne et des correctifs liés au système d'exploitation. Avoir plusieurs couches de sécurité permet de  parer au cas où une couche ne fonctionne pas ou ne permet pas de contrevenir à une menace donnée. Généralement, c'est une bonne idée que d'utiliser une combinaison de contre-mesures entre le réseau et le serveur et de contre-mesures internes au serveur.</p>

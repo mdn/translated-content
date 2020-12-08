@@ -1,0 +1,630 @@
+---
+title: XUL accessibility guidelines
+slug: Archive/Mozilla/XUL/XUL_accessibility_guidelines
+tags:
+  - Accessibility
+  - XUL
+translation_of: Archive/Mozilla/XUL/XUL_accessibility_guidelines
+---
+<h2 id="Introduction" name="Introduction">序文</h2>
+
+<p>XUL アクセシビリティガイドラインへようこそ。以下の原理と実践によって、身体障害または感覚障害、会話の困難なユーザを含むすべてのユーザを楽しませ、XUL アプリケーションを様々な方法で利用できるように書くことができます。Accessibility is not difficult, but does require a basic understanding of the different types of disabilities, commonly used assistive technologies, and special accessibility features built into the XUL languages. 特に必要なものは、あなたの意識的な努力とすべての人を考慮する願望です。</p>
+
+<p>これらのガイドラインは、すべての人(アクセシビリティの前提がない人でも)が理解できるように、十分に明解で詳しいことが望まれます。さらに、Mozilla プロジェクトの中には、あなたの XUL アプリケーションをフルアクセス可能にするために、あなたを助け、関心事や質問に応えてくれるアクセシビリティ開発者のための活発なコミュニティがあります。</p>
+
+<p>また、これらのガイドラインをテストすることができる <a href="/ja/docs/XUL_accessibility_tool" title="XUL_accessibility_tool"> XUL アクセシビリティツール</a> もありますが、アクセシビリティの判定を人によるものと置き換えることができるツールはありません。アクセシビリティを判定するには、このガイドラインを理解することが極めて重要です。</p>
+
+
+<table class="standard-table">
+  <caption>
+    さらに学んでください</caption>
+  <tbody>
+    <tr>
+      <th>アクセシビリティ</th>
+      <th>OS の機能</th>
+      <th>Mozilla コミュニティ</th>
+    </tr>
+    <tr>
+      <td><a href="http://www.mozilla.org/access/today">Software Accessibility - Where Are We Today?</a> アクセシビリティ入門および支援技術、Mozilla のリソース。
+        <p><a href="http://webaim.org/intro/">Introduction to Web Accessibility</a>. WebAIM より、Web アクセシビリティの概要。</p>
+        <p><a href="http://diveintoaccessibility.org/">Dive Into Accessibility</a>. ダウンロード可能な、ヒントやキャラクタースケッチのある Web アクセシビリティの本。</p>
+        <p><a href="http://support.mozilla.com/ja/docs/kb/Assistive+technology+compatibility">支援技術との互換性</a>. 一般的な支援技術とそれらに互換性のある XUL のレベルの一覧。</p>
+        <a class="link-irc" href="irc://irc.freenode.net/#accessibility">#accessibility</a>. インターネットアクセシビリティを取り巻く、全般的な議論のためのアクセシビリティ・チャンネル(IRC)。カンファレンスで役に立っています。</td>
+      <td><a href="http://www.apple.com/accessibility/">Apple Accessibility</a>. Apple アクセシビリティへの入り口。
+        <p><a href="http://larswiki.atrc.utoronto.ca/wiki">LARS (Linux Accessibility Resource Site)</a>. Linux アクセシビリティ全般の入り口。</p>
+        <a href="http://www.microsoft.com/enable/">Microsoft Accessibility</a>. Microsoft アクセシビリティの入り口。</td>
+      <td><a href="/ja/docs/Accessibility" title="Accessibility">アクセシビリティ - MDC</a>. Mozilla Developer Center 上のアクセシビリティの中心。
+        <p><a href="http://groups.google.com/group/mozilla.support.accessibility">mozilla.support.accessibility</a>. Mozilla アクセシビリティ・ニュースグループ。</p>
+        <a class="link-irc" href="irc://irc.mozilla.org/#accessibility">#accessibility</a>. Mozilla の IRC サーバ上のアクセシビリティ・チャンネル。</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+<h2 id="Guidelines" name="Guidelines">ガイドライン</h2>
+
+
+
+
+
+
+
+<h3 id="Keyboard_access" name="Keyboard_access">キーボードアクセス</h3>
+<p>キーボードアクセスは、マウスを使えないユーザにとって重要です。多くのスクリーンリーダユーザと身体障害のあるユーザは、主な入力ツールとしてキーボードに頼っています。彼らは、思うとおりに簡単に使用でき、よく文書化されたキーボードコントロールを必要としています。</p>
+
+
+
+
+
+<h4 id="Tab_order" name="Tab_order">タブの移動順</h4>
+<p><b>論理的なタブの移動順を提供</b> し、ユーザがすべてのコンテンツをキーボードでナビゲートできるようにします。特に指定しなければ、タブで移動する順番はコード内の要素の並び順を基にして定義されます。必要ならば、tabindex 属性によってプログラム的に設定することもできます。しかし、これを使用するときは控えめに設定し、余すところ無くテストするべきです。ナビゲートの順番は、一般的に左から右、上から下へと論理的にするべきです。ナビゲートの順番はアプリケーションの種類や言語の読む方向によって異なります。</p>
+<p>タブの移動順を論理的にし、すべてのインタラクティブな要素へマウスを使用せずに簡単にアクセスできるようにしてください。また、すべての機能をアプリケーションで直接実行するか、メニュー項目またはコンテキストメニューから実行できるようにするべきです。</p>
+
+
+
+
+
+<h4 id="Trees" name="Trees">ツリー</h4>
+<p><b>アクセスできない操作のための代替機能を提供</b> してください。XUL ツリーのコラムピッカとコラムヘッダは、ほとんどの現代的なオペレーティングシステム標準のツリーの振る舞いと同じく、キーボードからアクセスすることができません。そのため、この機能へアクセスするための代替キーボードアクセスを提供する必要があります。</p>
+
+
+<div class="float-right">
+  <img alt="Firefox のブックマークマネージャ内の 表示メニューのスクリーンショット" src="/@api/deki/files/437/=XUL_a11y_treesort.png"></div>
+
+
+<p>Firefox の "ブックマークマネージャ" は、ツリーをよりアクセシブルにするための方法を例示しています。ブックマークマネージャは、各コラムの情報によってブックマークを並べ替えたり、表示するコラムを選ぶことができます。コラムヘッダとツリーの右上隅にあるコラムピッカは、フォーカスすることができず、キーボードから操作することができません。ブックマークマネージャでは、キーボードユーザのために、この機能を表示メニューから利用できるようにしています。</p>
+
+
+
+
+
+<h4 id="Toolbarbuttons" name="Toolbarbuttons">ツールバーボタン</h4>
+<p>デフォルトでは、<a href="/ja/docs/XUL/toolbarbutton">ツールバーボタン</a>をキーボードでフォーカスすることはできません。これに対応するための推奨される方法は、メニュー項目やコンテキストメニューなど、 <b>ツールバーのすべての機能をアプリケーション内のどこかに複製する</b> ことです。機能が複製された場所にアクセスできない (ウィンドウにメニューバーが無い) 場合は、特別な CSS ルール <i><a href="/ja/docs/CSS/-moz-user-focus">-moz-user-focus</a>: normal</i> を追加することによって、ツールバーボタンをフォーカス可能にすることができます。(Firefox の印刷プレビューウィンドウがこのテクニックを使用しています。) これは最後の手段であり、ウィンドウ全体で矛盾が無いように使用しなければなりません(例えば、ツールバーボタンのすべてをタブで移動できるようにするか、すべてそうしないか)。</p>
+
+
+
+
+<h4 id="Keyboard_shortcuts" name="Keyboard_shortcuts">キーボードショートカット</h4>
+<p>キーボードショートカットは、キーボードアクセスを必要とするユーザにとって、とても役に立ちます。キーボードショートカットを提供するには多くの方法があります。これらは <a href="/ja/docs/XUL_Tutorial/Keyboard_Shortcuts">XUL Tutorial:Keyboard Shortcuts</a> によく文書化されています。</p>
+
+<p><b>キーボードショートカットを設定するときは十分に注意する必要があります。</b> (Firefox や他の XUL アプリケーション用の) 拡張機能を作成するときは、割り当てるショートカットがベースアプリケーションですでに定義されているものを妨げないようにします。キーボードショートカットを設定するときは、次のリソースを参考にしてください。</p>
+<div style="max-width: 35em;">
+  <table class="standard-table">
+    <caption>
+      さらに学んでください</caption>
+    <tbody>
+      <tr>
+        <th>キーボードショートカットとアクセスキー</th>
+      </tr>
+      <tr>
+        <td><a href="http://www.mozilla-japan.org/access/keyboard/">Mozilla キーボード・プラン FAQ とクロスリファレンス</a> (<a href="http://www.mozilla.org/access/keyboard/">英語版</a>)。クロスプラットフォームでの問題点と未使用のキーの組み合わせを定義するための、すばらしいガイドです。
+          <p><a href="http://www.mozilla-japan.org/docs/end-user/moz_shortcuts.html">Mozilla キーボードショートカット</a> (<a href="http://www.mozilla.org/docs/end-user/moz_shortcuts.html">英語版</a>)。様々な Mozilla アプリケーションのキーボードショートカットの完全な一覧です。</p>
+          <a href="/ja/docs/XUL_Accesskey_FAQ_and_Policies">Mozilla のアクセスキーに関する FAQ</a>。アクセスキー属性を使用するための短いリファレンスです。</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+
+
+<h4 id="Context_menus" name="Context_menus">コンテキストメニュー</h4>
+<p>コンテキストメニューは、コンテンツエリアまたは要素上でマウスを右クリック(または、Windows では Shift + F10 か VK_APPS、Mac では Ctrl + クリックか Ctrl + Space を押下) したときに現れる小さなメニューです。<b>コンテキストメニューを生成するには、<i>oncontextmenu</i> イベントハンドラまたは <i>context</i> 属性を使用してください。</b> マウスの右クリックボタンに特別なコードを割り当てて開いてはいけません。oncontextmenu イベントおよび context 属性は、キーボードボタンや適切なマウスボタンを含む、プラットフォーム固有のコンテキストメニューの呼び出しによって動作します。</p>
+
+
+
+
+<h4 id="Mouse_dependent_scripting" name="Mouse_dependent_scripting">マウスに依存したスクリプト</h4>
+<p><i>onmouseover</i> および <i>onmousemove</i>, <i>ondrag</i> などのマウスイベントに関連付けられた機能は、マウスの使用によってのみ動作します。これらの機能のための、キーボードでアクセス可能な代替アクセスポイントを提供してください。キーボードショートカットに加えて、コンテキストメニュー項目や他の XUL 要素も考慮してください。</p>
+
+
+
+
+<h4 id="Scrolling" name="Scrolling">スクロール</h4>
+<p><b>キーボードでスクロールできるようにしてください。</b> 多くの XUL 要素は CSS を使用してスクロールを設定することができます。arrowscrollbox や listbox などのその他の要素は、自動的にスクロールを生成します。一般的なルールとして、ユーザがキーボードを使用してすべてのコンテンツにスクロールできない場合は、要素に設定されたスクロールへはアクセスできません。例えば、arrowscrollbox はフォーカスできず、キーボードを使用してスクロールすることができない要素です。しかしながら、listbox はフォーカスを受け取り、スクロールすることができる要素です。ほとんどの XUL 要素は、スタイルに "<code>overflow: auto</code>" または "<code>overflow: scroll</code>" を設定することによってスクロールを設定することができます。この伸縮性のある要素の使用には注意してください。</p>
+
+
+
+
+<h4 id="Maintaining_focus" name="Maintaining_focus">フォーカスの管理</h4>
+<p>一般的には、ユーザが現在のフォーカス位置を制御するべきです。<b>自動的にフォーカスを変更しないようにしてください。</b>しかしながら、フォーカスされた要素(またはその親要素) を無効にしたり、隠したり、破棄するとフォーカスを失う原因となります。これを避けるには、<b>フォーカスされた要素が無効になったり、隠れたり、破棄される前にフォーカスを次の要素に移動してください。</b></p>
+<p>次の例は、要素が破棄される前に呼び出すことができ、フォーカスをチェックして必要ならそれを移動する JavaScript 関数です。</p>
+
+<pre class="brush:js">function moveFocus(element) {
+    if(element == document.commandDispatcher.focusedElement) {
+        document.commandDispatcher.advanceFocus();
+        return true;
+    }
+
+    return false;
+}</pre>
+
+<p>不意にフォーカスを変更することは、ユーザを混乱させ、道に迷わせます。合衆国におけるよくある例として、電話番号を入力するフォームでこの事が起こります。合衆国の電話番号は、主にWeb 上で XXX-XXX-XXXX または (XXX) XXX-XXXX の 2通りの表示の仕方があります。このパターンを強制するために、一部のフォームは 3つのフォームフィールドを提供しています。問題は、ユーザが最初のフォームフィールドに 3桁の数字を入力したら 2番目のフォームフィールドにジャンプする機能を開発者が追加したときに起こります。この振る舞いは次のフォームフィールドでも繰り返されます。最初のフォームに数字を入力後、ユーザ自身がフォームフィールドを移動すると、ジャンプ操作が繰り返されてフォームフィールドを一つ抜かしてしまうことになります。</p>
+
+
+
+<h4 id="Initial_dialog_focus" name="Initial_dialog_focus">ダイアログの初期フォーカス</h4>
+<p>XUL ダイアログ 内の初期フォーカス(例えば、ダイアログを最初に開いたときのフォーカス) は、ダイアログ自身ではなく、常に特定のコントロール上にあるべきです。タブ付きのダイアログ内のフォーカスは、通常、選択されたタブの最初のコントロールから始めるべきです。その他のダイアログ内のフォーカスは、最初のコントロールから始めるべきです。(とはいえ、そうしたほうが良い理由があれば、ダイアログ上に無くても他のコントロールから始めることもできます。)</p>
+
+
+
+
+
+
+
+<h4 id="Testing_keyboard_access" name="Testing_keyboard_access">キーボードアクセスのテスト</h4>
+<p>キーボードアクセシビリティをテストするには、単純に <b>あなたのマウスを引っこ抜くか無効に</b> して、アプリケーションをキーボードのみで使用してみることです。タブの移動順が論理的かどうか検証してください。直接、またはメニュー項目やコンテキストメニューなどの代替手段ですべての機能にアクセスできるかどうか確かめてください。ユーザがすべてのコンテンツを読めるようにしてください。</p>
+
+
+
+<h3 id="Assistive_information" name="Assistive_information">支援情報</h3>
+<p>支援技術のユーザは、視覚ユーザにとって直感的であることを関連付けて意味を理解するために、追加のマークアップを必要とします。この追加のマークアップは <i>支援情報(assistive information)</i> として知られています。追加の支援情報を提供するのは簡単ですが、利益が少なく視覚的な変更が無いためによく忘れられてしまいます。</p>
+
+
+
+
+<h4 id="Alternative_text" name="Alternative_text">代替テキスト</h4>
+<p><b>意味を持つ画像に代替テキストを提供してください。</b>代替テキストは、画像が純粋な飾りとして使用される場合は必要ではありません。代替テキストの記述は、HTML 画像には "alt" 属性、画像を使用する XUL 要素(例えば、画像要素、画像付きのボタン) には "tooltiptext" 属性を使用してください。画像付きのツールバーボタンには、テキストラベルを <i>label</i> 属性で使用し、画像の代替テキストを <i>tooltiptext</i> 属性で使用することが推奨されます。以下のコードの例をご覧ください。</p>
+
+<pre class="brush:xml">&lt;image src="stop.png" tooltiptext="中止" /&gt;
+
+&lt;html:img src="stop.jpg" alt="中止" /&gt;
+&lt;html:img src="decorative_image.jpg" alt="" /&gt; &lt;!-- HTML 内では alt 属性が必要です。--&gt;
+
+&lt;toolbarbutton label="中止" image="stop.png" tooltiptext="ページの読み込みを中止します" /&gt;</pre>
+
+
+
+
+
+
+
+<h4 id="Title" name="Title">タイトル</h4>
+<p>ウィンドウ、ウィザード、ダイアログなどの window コンテナ要素に <b>ユニークなタイトルを提供</b> してください。タイトルはアプリケーションについての最も基本的な情報をユーザに提供します。タイトルは、アプリケーションが開かれたりアクティブになったときに、スクリーンリーダによって最初に読み上げられます。ユーザは、それがどこに位置しているかを感じ取って、タイトルを参照して戻ることもできます。タイトルはアプリケーションの最上部に表示されます。以下のコードの例をご覧ください。</p>
+
+
+<pre class="brush:xml">&lt;dialog id="print_dialog" title="印刷"                  ...&gt;
+&lt;window id="mywindow"     title="マイ アプリケーション" ...&gt;
+&lt;wizard id="reg_window"   title="ソフトウェアの登録"    ...&gt;</pre>
+
+
+
+
+
+
+
+<h4 id="Form_labels" name="Form_labels">フォームのラベル</h4>
+<p>ラベルはフォーム要素に自動的に関連付けられません。(label 要素からの) テキストラベルをフォーム要素に結びつけるには <b><a href="/ja/docs/XUL/label#a-control">control</a> 属性を使用</b>してください。スクリーンリーダはフォームフィールドに入るとラベルを大声で読み上げます。2行目にかかるラベルには description 要素を使用しないでください。代わりに、以下のパスワード欄のようにラベルのテキストを label タグで囲み、value 属性は使用しないでください。</p>
+
+
+<pre class="brush:xml">&lt;label control="login-username" value="ユーザ名:"/&gt;
+&lt;textbox id="login-username"/&gt;
+
+&lt;label control="login-password"&gt;パスワード:&lt;/label&gt;
+&lt;textbox id="login-password" type="password"/&gt;</pre>
+
+<p>フォームが大きくなるほど、レイアウトや構造が難しくなりがちです。フォームを視覚的に構成するには様々な方法がありますが、常に <b>すべてのフォーム要素にテキストラベルを提供</b> してください。フォーム要素は、他のフォーム要素のラベルに使用するべきではありません。</p>
+
+
+
+<div class="float-right">
+  <img alt="Firefox オプションダイアログ内のプライバシーパネルのスクリーンショット" src="/@api/deki/files/435/=XUL_a11y_privacy.png"></div>
+
+
+
+<p>フォーム要素が caption 付きの groupbox にカプセル化されている場合、スクリーンリーダなどの支援技術は、フォーム要素のラベルと一緒に caption も読み上げます。例えば、環境設定のプライバシーセクション下には 、履歴および Cookie、プライバシー情報の 3つの caption 付き groupbox があります。ユーザが "例外サイト..." ボタンにタブ移動すると、"クッキー {小休止} 例外サイト {小休止} ボタン。" というように聞こえます。次にタブ移動すると、"クッキー {小休止} クッキー保存する期間 {小休止} サイトが指定した期限まで {小休止} 三分の一 {小休止} コンボボックス。" と読み上げられます。<span style="color: darkgreen; background: #ef9;">【訳注: 日本語での読み上げは未確認】</span> スクリーンリーダがラベルのみを読み上げる場合は、"例外サイト" ボタンや "クッキーを保存する期間" コンボボックスが何を指したのか、ユーザが推測しなくてはいけません。</p>
+<p>groupbox は、ラジオボタンのグループやチェックボックスのグループ分け(例えば、すべてにチェックを入れる場合) に不可欠です。入れ子になった groupbox を見た目には分からないようにする場合は、CSS を使用して内部の groupbox の border を隠してください。そうすれば、残したコードによって支援技術のユーザに利益をもたらすことができます。</p>
+<p>複雑なフォームは、標準の XUL 属性で可能なものよりもさらに詳しいラベル付けシステムが必要になることがあります。例えば、Firefox オプションダイアログ内のプライバシーパネル(上記で扱ったもの) の、最初の項目の <code>[checkbox] 表示したページの履歴を [textbox] 日分記憶する</code> です。ここで checkbox の正しいラベル("表示したページの履歴を X 日分記憶する") を示すのは難問です。この checkbox には 3つの異なる部分が含まれ、2番目に現在の値が入力された textbox があります。textbox の正しいラベルも同様ですが、私たちは支援技術にそれを 2度も読み上げたり表示させたくありません。私たちには、それぞれをラベル付けしている checkbox と editbox、隣接するテキストラベルのすべてをソース内で一つの実体として指定する方法が必要です。</p>
+<p>この問題を解決するには、checkbox と textbox の両方をコンポーネントのグループ全体によってラベル付けするため、<i>aria-labelledby</i> 属性 (注: L が重なるのは ARIA は英国式のスペルを使用するため) を両方のコントロールに使用します。XUL に置き換えると次のようになります。</p>
+
+<pre class="brush:xml">&lt;checkbox id="rememberHistoryDays" aria-labelledby="historyDaysPreLabel historyBox historyDaysPostLabel"&gt;
+&lt;label id="historyDaysPreLabel"&gt;表示したページの履歴を&lt;/label&gt;
+&lt;textbox id="historyDays" aria-labelledby="historyDaysPreLabel historyBox historyDaysPostLabel"/&gt;
+&lt;label id="historyDaysPostLabel" &gt;日分記憶する&lt;/label&gt;</pre>
+
+<p>aria-labelledby 属性は、コントロール内 (通常は checkbox や radio button など) に埋め込まれたコントロールに役立ちます。しかし、すべての他の場合は &lt;label control="[id]"&gt; で十分です。</p>
+
+
+
+
+
+
+
+<h4 id="Testing_assistive_information" name="Testing_assistive_information">支援情報のテスト</h4>
+<p>多くの方法の中でスクリーンリーダを用いたテストは、キーボードナビゲーションと基礎をなす UI の構造/セマンティクスが同時にテストされるため、最高のテスト方法です。これは、ユーザインタフェースのアクセシビリティに関してはすばらしい指標ですが、完全なテストを意味するわけではありません。結局、アプリケーションが完全にアクセシブルであるためには、様々な異なるソフトウェアと支援技術の構成を使用するエンドユーザによってアプリケーションがテストされることです。</p>
+<p>もしスクリーンリーダを利用する手段がない(または利用者を知らない) 場合は、ソースコード全体をチェックして、上記のガイドラインに相応しいかどうか確かめてください。そして、あなたのアプリケーションのアクセシビリティ(および他の側面) について、エンドユーザがフィードバックできるようにしてください。</p>
+
+
+
+
+<h3 id="Display" name="Display">表示</h3>
+<p>"プレゼンテーションこそすべて" と、よく言われます。プレゼンテーションが不可欠な場合は真実ですが、ドキュメントもまた、ユーザがアクセシビリティに必要な表示設定を呼び出せる構造であるべきです。プレゼンテーションも、ウィンドウやフォントサイズの変更に対して柔軟であるべきです。協力的なアプリケーションはユーザの環境に上手く適応します。</p>
+
+
+
+
+<h4 id="System_defaults" name="System_defaults">システムの既定値</h4>
+<p><b>システムの既定値を支持してください。</b>多くのユーザがコンピュータのフォントサイズを通常よりも大きく設定するか、色設定を変更しています。XUL メニューおよびラベル、その他のウィジェットは、それらのフォント、サイズ、色設定の既定値を OS に指定されたユーザ設定から取得します。それらをあなたが指定して変更するべき避けられない理由が無い限り、それらの既定値を尊重してください。それらを変更する場合は、CSS でサイズの既定値に相対サイズ(例えば、pt や px よりも % や em) を使用してください。</p>
+
+
+
+
+<h4 id="Color" name="Color">色調</h4>
+<p>色調は重要なツールです。異なる色調は、オブジェクトやテキストに異なる意味を持たせることができます。しかしながら、ユーザに情報や意味を伝えるには <b>色調のみでは不十分</b> です。一部のユーザ(主に色覚障害や全盲のユーザ) は、正確な色を識別することができません。一部のユーザは、あなたのアプリケーションの既定のカラースキームを上書きしています。色調は、他の方法でも意味を伝えられるようにした後にのみ、オブジェクトやテキストの意味を向上させるために使用するべきです。</p>
+
+
+
+
+
+<h4 id="Flexible_sizing" name="Flexible_sizing">伸縮自在なサイズ指定</h4>
+<p>XUL について優れていることの一つは、視覚的レイアウトのコントロールが簡単なことです。Web 上では、視覚的デザインが決められたサイズに納められることがよくあります。XUL を用いれば、アプリケーションウィンドウのサイズ変更に対して要素を伸縮自在(flex) にすることができます。この機能を提供するには flex 属性を使用してください。</p>
+
+
+
+
+
+<h4 id="Testing_display" name="Testing_display">表示テスト</h4>
+<p>あなたのアプリケーションが、ユーザ定義のフォントと色設定を使用して、機能的で心地よい見た目かどうか検証してください。検証には、システムの表示設定をアクセシブルなテーマ(Windows 上では、左alt + 左shift + PrintScreenキーを押下して利用できるハイコントラストなテーマなど) に変更して行ってください。テキストが正しく強調表示され、フォントカラーが意味を伝えるためだけに使用されていないことを確認してください。ウィンドウのサイズが変更されても、アプリケーションが上品に適合するようにしてください。</p>
+
+
+
+
+
+<h3 id="Human_computer_interaction" name="Human_computer_interaction">人間とコンピュータの対話(HCI)</h3>
+<p>あなたがアプリケーションを使用するとき、ある程度のコントロールとフィードバックを期待するでしょう。ユーザに分かりやすい使用説明とフィードバックを提供し、ユーザ自身でエラーを修正できるようにしてください。障害をもつ一部のユーザは、すばやい反応をすることが困難です。作業を処理するための十分な時間を与えてください。</p>
+
+
+
+
+<h4 id="Instruction" name="Instruction">使用説明</h4>
+<p>ヘルプ文書をユーザに提供してください。簡単なアプリケーションであっても、ヘルプ文書やユーザが参照するための説明書を用意するべきです。説明書には、キーボードショートカットとその他のアクセシビリティに関する事柄を記述してください。ユーザはアプリケーションのすべての主要な機能について、完全な説明を求めています。詳細な使用方法についてのすべてを含むヘルプ文書も提供してください。</p>
+
+
+
+
+
+<h4 id="Alerts" name="Alerts">警告表示</h4>
+<p>ユーザに重要な情報を伝えるために、アクセシブルな警告表示を提供してください。警告を知らせるには、スクリプトや <a href="/ja/docs/XUL/notificationbox">notificationbox</a> 要素を使用してください。</p>
+<p>緊急なイベントの合図に、音声や視覚的な警告のみの使用は避けてください。音量を下げていたりオフにしているユーザや聴覚障害をもつユーザは、音声のみの警告を理解することができません。視覚障害をもつユーザは、スクリーンリーダに知らせることができる機能的なテキストの警告表示を除き、純粋に視覚的な警告表示に注目することができません。</p>
+
+
+
+
+<h4 id="Interactive_elements" name="Interactive_elements">対話的な要素</h4>
+<p>認識してクリックするのが難しい <b>小さなターゲットの使用を避けてください。</b>対話的な要素が、アプリケーションの静的な部分と他の要素から十分に識別できるレイアウトとコントラストになっているかどうか検証してください。</p>
+
+
+
+
+<h4 id="Error_recovery" name="Error_recovery">エラーの復旧</h4>
+<p>ユーザがアプリケーションのエラーの原因であっても、<b>上品に復旧できるようにしてください</b>。例えば、フォーム内で数字を入力する個所に文字を入力しても、アプリケーションが中断するべきではありません。ユーザが問題に気付き、エラーを修正できるようにするべきです。</p>
+
+
+
+
+<h4 id="Response_time" name="Response_time">反応時間</h4>
+<p>時間を割り当てるときは <b>ユーザに制限時間を知らせ</b>、ユーザが制限時間を調整してさらに延長できるようにしてください。現代技術の奇跡の一つは、最もきびしい身体的障害をもつ人々でさえコンピュータを使えることです。一部のユーザはマウススティック(口でくわえた棒) やアイトラッキング(目線の追跡) などの動き検出装置を使用して文字を入力します。この方法は操作が遅くなりがちです。その他のユーザにとっては、アプリケーションで起きている処理を認識するための時間が必要です。</p>
+
+
+
+
+
+<h4 id="Testing_human_computer_interaction" name="Testing_human_computer_interaction">HCI のテスト</h4>
+<p>ヘルプ文書を更新してください。警告表示が適切な XUL 用を通して表示されているか検証してください。ユーザに、自身の操作によるエラーについての情報を持たせ、その説明とエラーの原因となる操作を再現する機会を与えてください。ユーザが反応時間をコントロールできるようにしてください。</p>
+
+
+
+
+
+<h3 id="Media" name="Media">メディア</h3>
+
+
+
+
+
+
+
+<h4 id="Audio" name="Audio">音声</h4>
+<p>ポッドキャストなどの情報を提供する音声ファイルは、音声をテキスト化することによってアクセシブルにすることができます。テキスト化された文書は、話者を明らかにし、その他の笑い声や歌声など関連する音を記述するべきです。音声のテキスト化には時間がかかりますが、これは音声コンテンツをアクセシブルにするための唯一の方法です。</p>
+
+
+
+
+
+
+<h4 id="Video" name="Video">映像</h4>
+<p>映像ファイルは、同期した字幕を追加することによってアクセシブルにすることができます。メディアを格納する多くのフォーマットは、字幕を表示するための手段を提供しています。また、映像にも描写的なテキスト化されたコピーがあるべきです。通常、字幕の作成とテキスト化は同じ歩調で行われます。一方があれば、もう一方を導き出すことは簡単です。</p>
+<table class="standard-table">
+  <caption>さらに学んでください</caption>
+  <tbody>
+    <tr>
+      <th>字幕の作成</th>
+    </tr>
+    <tr>
+      <td><a href="http://webaim.org/techniques/captions/">WebAIM article: Web Captioning Overview</a><br>
+        <br>
+        <a href="http://webaim.org/resources/captioning/">WebAIM resource: Captioning Resources</a></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+<h4 id="Animation" name="Animation">アニメーション</h4>
+<p>アニメーションや動きのあるもの、音声などは、一部のユーザの注意をそらし混乱させます。メディアや動きのあるもののオンとオフを切り替えるための仕組みを提供してください。</p>
+<p>点滅やフラッシュはすべての人に迷惑なだけでなく、一秒あたり 3回以上の頻度になると、ユーザに光感受性てんかんの発作を引き起こす原因となることがあります。点滅やフラッシュが必要な場合は、それが表示される前にユーザに警告してください。</p>
+
+
+
+
+
+<h4 id="Testing_media" name="Testing_media">メディアのテスト</h4>
+<p>メディアの代替となるものは、アクセシブルなフォーマットで利用できるようにしてください。</p>
+
+
+
+
+
+<h3 id="Other_issues" name="Other_issues">その他の問題</h3>
+
+
+
+
+
+
+<h4 id="Custom_widgets" name="Custom_widgets">カスタムウィジェット</h4>
+<p>既に存在する機能の再生産は避けてください。カスタムコンポーネントはアクセシビリティを意識して構築するようにしてください。新しいウィジェットが他のウィジェットやユーザ定義カラー、テーマとうまく協力できるように <a href="http://www.w3.org/TR/CSS21/ui.html#system-colors">CSS システムカラー</a> を使用してください。</p>
+<table class="standard-table">
+  <caption>さらに学んでください</caption>
+  <tbody>
+    <tr>
+      <th>アクセシブルなカスタムウィジェット</th>
+    </tr>
+    <tr>
+      <td><a href="/ja/docs/Accessible_DHTML">アクセシブルな DHTML</a><br>
+        <br>
+        <a href="/ja/docs/Building_accessible_custom_components_in_XUL">XUL のアクセシブルなカスタムコンポーネントの構築</a></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+<h2 id="XUL_accessibility_checklist" name="XUL_accessibility_checklist">XUL アクセシビリティ・チェックリスト</h2>
+<p>新しい XUL アプリケーションのアクセシビリティをすばやく検証するために、また既に存在するアプリケーションのアクセシビリティの問題を修正するための開始点として、以下のチェックリストを使用してください。</p>
+
+
+
+
+
+<h3 id="Keyboard_access" name="Keyboard_access">キーボードアクセス</h3>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <th scope="col">チェックポイント</th>
+      <th scope="col">合格</th>
+      <th scope="col">不合格</th>
+    </tr>
+    <tr>
+      <th scope="row">タブの移動順</th>
+      <td>論理的なタブの移動順が提供されています。</td>
+      <td>タブ移動によって予期しない位置にジャンプします。</td>
+    </tr>
+    <tr>
+      <th scope="row">ツリー</th>
+      <td>コラムピッカや、コラムの並べ替えなどの追加された機能のようなアクセシブルではない機能を、キーボードから利用するための機能が提供されています。</td>
+      <td>コラムピッカやその他の機能を、キーボードから利用するための機能が提供されていません。</td>
+    </tr>
+    <tr>
+      <th scope="row">ツールバーボタン</th>
+      <td>ツールバーボタンの機能をキーボードから利用するための代替機能が提供されています。</td>
+      <td>ツールバーボタンの機能をキーボードから利用するための代替機能が提供されていません。</td>
+    </tr>
+    <tr>
+      <th scope="row">キーボードショートカット</th>
+      <td>重要な機能のためのキーボードショートカットがあります。</td>
+      <td>キーボードショートカットはありません。</td>
+    </tr>
+    <tr>
+      <th scope="row">コンテキストメニュー</th>
+      <td>コンテキストメニューは <i>oncontextmenu</i> イベントハンドラによって呼び出されます。</td>
+      <td>コンテキストメニューは、マウスの右クリックや他の呼び出し方法が直接コードに書かれています。</td>
+    </tr>
+    <tr>
+      <th scope="row">マウスに依存したスクリプト</th>
+      <td>すべてのマウス操作と同等のアクセシブルな操作がキーボードでできます。</td>
+      <td>マウスでのみ実行できる操作があります。</td>
+    </tr>
+    <tr>
+      <th scope="row">スクロール</th>
+      <td>すべてのスクロール可能な要素はキーボードでコントロールできます。</td>
+      <td>スクロールはキーボードで行えません。</td>
+    </tr>
+    <tr>
+      <th scope="row">フォーカス</th>
+      <td>キーボードのフォーカスは管理され、予期せずに移動しません。</td>
+      <td>フォーカスが予期せずに移動したり無効になったりします。</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+<h3 id="Assistive_information" name="Assistive_information">支援情報</h3>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <th scope="col">チェックポイント</th>
+      <th scope="col">合格</th>
+      <th scope="col">不合格</th>
+    </tr>
+    <tr>
+      <th scope="row">代替テキスト</th>
+      <td>意味を持つ画像に代替テキストが提供されています。</td>
+      <td>意味を持つ画像に代替テキストがありません。または画像の機能に不適当な代替テキストが提供されています。</td>
+    </tr>
+    <tr>
+      <th scope="row">タイトル</th>
+      <td>ダイアログやウィザードを含むすべてのウィンドウに説明的なタイトルがあります。</td>
+      <td>ウィンドウにタイトルが欠けているか、正しいタイトルではありません。</td>
+    </tr>
+    <tr>
+      <th scope="row">フォームのラベル</th>
+      <td>フォーム要素すべてにラベルが関連付けられ、ラジオボタンは groupbox で囲まれています。</td>
+      <td>フォーム要素にラベルが無いか、ラベルと要素にプログラム的な繋がりが無いか、またはラジオボタンが groupbox で囲まれていません。</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+<h3 id="Display" name="Display">表示</h3>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <th scope="col">チェックポイント</th>
+      <th scope="col">合格</th>
+      <th scope="col">不合格</th>
+    </tr>
+    <tr>
+      <th scope="row">システムの既定値</th>
+      <td>システム設定が組み込まれています。</td>
+      <td>システム設定が組み込まれていません。</td>
+    </tr>
+    <tr>
+      <th scope="row">色調</th>
+      <td>色の違いのみで意味を伝えていません。フォントカラーと背景カラーのコントラスト差が十分にあります。</td>
+      <td>色の違いのみで意味を伝えています。またはフォントカラーと背景カラーに十分なコントラスト差を提供していません。</td>
+    </tr>
+    <tr>
+      <th scope="row">伸縮自在なサイズ</th>
+      <td>視覚的な要素とコンテナは上品にサイズ変更します。</td>
+      <td>視覚的な要素とコンテナは上品にサイズ変更しません。</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+<h3 id="Human_computer_interaction" name="Human_computer_interaction">人間とコンピュータの対話(HCI)</h3>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <th scope="col">チェックポイント</th>
+      <th scope="col">合格</th>
+      <th scope="col">不合格</th>
+    </tr>
+    <tr>
+      <th scope="row">使用説明</th>
+      <td>キーボードショートカットの記述を含むヘルプ文書が提供されています。</td>
+      <td>ヘルプ文書は提供されていないか未完成です。</td>
+    </tr>
+    <tr>
+      <th scope="row">警告表示</th>
+      <td>警告表示は alert スクリプト機能や notificationbox 要素を使用して表示されます。</td>
+      <td>警告表示は視覚的に、または音によって伝えられます。または alert スクリプト機能や notificationbox 要素以外の方法を使用して伝えられます。</td>
+    </tr>
+    <tr>
+      <th scope="row">対話的な要素</th>
+      <td>対話的な要素は十分に大きく識別できます。</td>
+      <td>対話的な要素は小さすぎるか、アプリケーションの他の部分と十分なコントラスト差がありません。</td>
+    </tr>
+    <tr>
+      <th scope="row">エラーの復旧</th>
+      <td>ユーザがエラーを起こしたときに警告表示されます。ユーザにエラーを修正するための説明と機会が提供されています。</td>
+      <td>エラーの表示がありません。または十分な説明がなされていません。</td>
+    </tr>
+    <tr>
+      <th scope="row">反応時間</th>
+      <td>ユーザは時間制限を知っており、その反応時間を適切にコントロールすることができます。</td>
+      <td>ユーザは時間制限に気付きません。または反応時間を適切にコントロールすることができません。</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+<h3 id="Media" name="Media">メディア</h3>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <th scope="col">チェックポイント</th>
+      <th scope="col">合格</th>
+      <th scope="col">不合格</th>
+    </tr>
+    <tr>
+      <th scope="row">音声</th>
+      <td>音声トラックをテキスト化したものが提供されています。</td>
+      <td>音声はテキスト化されていません。</td>
+    </tr>
+    <tr>
+      <th scope="row">映像</th>
+      <td>映像に字幕が付けられており、テキスト化したものが提供されています。</td>
+      <td>字幕やテキスト化したものが提供されていません。</td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>アニメーション全体をユーザがコントロールでき、フラッシュするコンテンツについて警告されています。</td>
+      <td>アニメーション全体をコントロールできないか、フラッシュするコンテンツについての警告がありません。</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+<h3 id="Other" name="Other">その他</h3>
+<table class="fullwidth-table">
+  <tbody>
+    <tr>
+      <th scope="col">チェックポイント</th>
+      <th scope="col">合格</th>
+      <th scope="col">不合格</th>
+    </tr>
+    <tr>
+      <th scope="row">カスタムウィジェット</th>
+      <td>カスタムウィジェットにアクセシブルな機能が提供されています。</td>
+      <td>カスタムウィジェットはアクセシブルではありません。</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+<h3 id="Further_References" name="Further_References">追加のリファレンス</h3>
+<ul>
+  <li>公式の W3C アクセシビリティガイドラインは間もなくリリースされます: <a href="http://www.w3.org/TR/WCAG20/">2.0</a> および <a href="http://www.w3.org/TR/WCAG20-TECHS/">2.0 のための技術</a> は <a href="http://www.w3.org/TR/WAI-WEBCONTENT/">1.0</a> に代わるものになります。これらは言語中立なガイドラインを含みます。また、XHTML 名前空間を使用して HTML を XUL の内部に含められることと同様に、XUL と密接に関連する <a href="/ja/docs/XHTML">XHTML</a> のための技術を参照しています。</li>
+</ul>

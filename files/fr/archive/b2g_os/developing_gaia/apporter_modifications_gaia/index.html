@@ -1,0 +1,87 @@
+---
+title: Apporter des modifications au code de Gaia
+slug: Archive/B2G_OS/Developing_Gaia/Apporter_modifications_Gaia
+tags:
+  - B2G
+  - Contributing
+  - Firefox OS
+  - Gaia
+  - GitHub
+  - Guide
+  - code changes
+translation_of: Archive/B2G_OS/Developing_Gaia/Making_Gaia_code_changes
+---
+<div class="summary">
+<p><span class="seoSummary">Maintenant que vous pouvez lancer Gaia dans Firefox et que vous connaissez certains éléments sur le fonctionnement du code, vous devriez pouvoir commencer à contribuer au projet. Cet article décrit comment apporter des modifications et où trouver des bugs sur lesquels travailler.</span></p>
+</div>
+
+<h2 id="Bonnes_pratiques_Git">Bonnes pratiques Git</h2>
+
+<ol>
+ <li>Quand vous apportez des modifications au code de Gaia, la première chose à faire est de se mettre à jour par rapport à la branche <code>master</code> du dépôt original (<em>remote</em> <code>upstream</code>) :
+
+  <pre class="brush: bash">cd chemin/dossier/gaia
+git checkout master
+git pull upstream master</pre>
+ </li>
+ <li>Maintenant, allez sur une nouvelle branche en faisant un « <em>checkout</em> », c'est sur cette branche que vous apporterez vos corrections :
+  <pre class="brush: bash">git checkout -b mon-correctif</pre>
+ </li>
+ <li>Enfin, allez dans votre répertoire <code>gaia/apps</code> et éditez les fichiers des applications.</li>
+</ol>
+
+<h2 id="Exemple_de_modification_simple_du_code">Exemple de modification simple du code</h2>
+
+<p>Pour voir les effets de vos modifications :</p>
+
+<ol>
+ <li>Réalisez vos changements souhaités dans le code de Gaia, et sauvegardez les.</li>
+ <li>Arrêtez Firefox ou le simulateur lancé dans WebIDE.</li>
+ <li>Reconstruisez le profil Gaia avec la commande <code>make</code>.</li>
+ <li>Démarrez Firefox ou le simulateur lancé dans WebIDE.</li>
+</ol>
+
+<p>Voyons cela en réalisant un simple changement de couleur de texte, de l'horloge dans l'écran de verrouillage :</p>
+
+<p><img alt="Gaia lockscreen showing the clock display in white text" src="https://mdn.mozillademos.org/files/7929/gaia-lockscreen-clock.png" style="display: block; height: 623px; margin: 0px auto; width: 369px;"></p>
+
+<ol>
+ <li>Une des meilleures méthodes pour trouver comment le style est défini est d'utiliser les outils de développement. Effectuez un « Ctrl droit + clic » sur l'horloge dans Firefox (pour ordinateur) puis sélectionnez <em>Examiner l'élément</em> dans le menu contextuel.</li>
+ <li>Vous pouvez alors déterminer quel fichier CSS est utilisé et doit être édité. Pour cet exemple, il s'agit de <code>gaia/apps/system/lockscreen/style/lockscreen.css</code>. Il suffit d'éditer les styles CSS dans la partie droite de l'affichage pour obtenir l'effet souhaité.</li>
+ <li>Une fois que vous êtes satisfait-e du résultat, vous pouvez directement éditer le fichier puis le sauvegarder.</li>
+ <li>Ensuite, rafraîchissez l'onglet (ou utiliser le bouton de réactualisation), le serveur HTTP servira instantanément les changements :</li>
+</ol>
+
+<p><img alt="Gaia lockscreen showing the clock display modified from white to red text" src="https://mdn.mozillademos.org/files/7931/gaia-lockscreen-clock-modified.png" style="display: block; height: 622px; margin: 0px auto; width: 366px;"><br>
+ <br>
+ <br>
+ Les limitations de la simulation dans Firefox pour lancer Gaia :</p>
+
+<ul>
+ <li>Le rendu des applications est très proche du fonctionnement sur un appareil réel, vous pourrez cependant observer quelques différences.</li>
+ <li>Toutes les API matérielles ne sont pas supportées dans Firefox pour ordinateur. Vous pourrez trouver une liste de celles qui sont activées dans le fichier <a href="https://github.com/mozilla-b2g/gaia/blob/master/build/preferences.js">preferences.js</a>.</li>
+</ul>
+
+<h2 id="Où_trouver_des_bugs_à_corriger">Où trouver des bugs à corriger</h2>
+
+<p>La meilleure façon de trouver des bugs Firefox OS sur lesquels travailler est de consulter l'application de <a href="http://www.joshmatthews.net/bugsahoy/?b2g=1">Josh Matthews : Bugs Ahoy</a>. Cette application cherche directement parmi les bugs de la plate-forme Bugzilla de Mozilla et les affiche de façon simple et organisée. Une fois que vous avez identifié un bug sur lequel vous voulez travailler, rendez-vous sur la page Bugzilla pour ce bug (créez un compte si ce n'est pas déjà fait) puis assignez-vous pour le bug dans le champ « <em>assigned to</em> ». Une fois que c'est fait, vous pouvez commencer à travailler avec les outils vus ci-avant.</p>
+
+<h3 id="Aide_et_astuces">Aide et astuces</h3>
+
+<ul>
+ <li>Lorsque vous travaillez sur des bugs mentorés, un des membres de l'équipe en charge de Gaia surveillera votre progression et vous fournira l'aide nécessaire sur le code et le processus de correction. Si vous commencez à contribuer pour Firefox OS, ça peut être utile de choisir parmi ces bugs mentorés. Pour les trouver : ce sont les pages de bugs Firefox OS dont le champ « Mentor » est rempli. Buys Ahoy liste ces bugs mentorés.</li>
+ <li>Si vous êtes un nouvel utilisateur de Bugzilla, vous ne pourrez pas vous affecter vous-même le travail pour un bug. Si vous ne pouvez pas changer le champ « <em>assigned to</em> », demandez au mentor affecté à ce bug de vous l'affecter. Vous pouvez également le demander dans les commentaires du bug.</li>
+ <li>Une fois que vous avez acquis un peu plus d'expérience avec ce processus, n'hésitez pas à demander à quelqu'un de vous donner le droit de pouvoir vous affecter des bugs à vous-même.</li>
+ <li>Pour trouver des bugs simples à résoudre et commencer à contribuer, vous pouvez également chercher ceux qui ont une balise <code>[good first bug]</code> dans le champ « <em>whiteboard</em> ». Vous pouvez également lister les bugs simples grâce à Bugs Ahoy : <a href="http://www.joshmatthews.net/bugsahoy/?b2g=1&amp;simple=1">http://www.joshmatthews.net/bugsahoy/?b2g=1&amp;simple=1</a>.</li>
+ <li>Dans Bugzilla, vous pouvez enregistrer des recherches. Ainsi, si vous voulez suivre les bugs sur l'application Clock (l'horloge) de Gaia, vous pouvez sauvegarder la requête suivante :</li>
+</ul>
+
+<p><a href="https://bugzilla.mozilla.org/buglist.cgi?columnlist=product%2Ccf_blocking_b2g%2Cbug_status%2Cresolution%2Cshort_desc&amp;resolution=---&amp;query_based_on=CLOCK&amp;query_format=advanced&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;component=Gaia%3A%3AClock&amp;product=Boot2Gecko&amp;known_name=CLOCK&amp;list_id=10497922">https://bugzilla.mozilla.org/buglist.cgi?columnlist=product%2Ccf_blocking_b2g%2Cbug_status%2Cresolution%2Cshort_desc&amp;resolution=---&amp;query_based_on=CLOCK&amp;query_format=advanced&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;component=Gaia%3A%3AClock&amp;product=Boot2Gecko&amp;known_name=CLOCK&amp;list_id=9776392</a></p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="https://mozilla.app.box.com/s/wzgsb3lkqglv0dnfdgzs">Les spécifications de Gaia pour les visuels et l'interaction utilisateur</a></li>
+ <li><a href="https://etherpad.mozilla.org/gaia-meeting-notes">L'Etherpad pour la réunion hebdomadaire sur Gaia</a></li>
+ <li><a href="https://datazilla.mozilla.org/">Datazilla </a>: L'utilitaire de Mozilla pour les tests de performance</li>
+</ul>

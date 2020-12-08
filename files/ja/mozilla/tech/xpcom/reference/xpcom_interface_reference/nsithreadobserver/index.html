@@ -1,0 +1,125 @@
+---
+title: nsIThreadObserver
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsIThreadObserver
+tags:
+  - Firefox 3
+  - Interfaces
+  - Threads
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIThreadObserver
+---
+<p> <code>nsIThreadObserver</code> インタフェースを実装すると、オブザーバが階層化されたイベントキューを実装できます。</p>
+<p>例えば、以下のようにして、GUI ツールキットのために処理中のイベントを、あるスレッドのイベントの上に重ね合わせることができます。</p>
+<pre class="eval">var NativeQueue;
+Observer = {
+  onDispatchedEvent(thread) {
+    NativeQueue.signal();
+  }
+  onProcessNextEvent(thread, mayWait, recursionDepth) {
+    if (NativeQueue.hasNextEvent()) {
+      NativeQueue.processNextEvent();
+    }
+    while (mayWait &amp;&amp; !thread.hasPendingEvent()) {
+      NativeQueue.wait();
+      NativeQueue.processNextEvent();
+    }
+  }
+};
+</pre>
+<div class="warning">
+ <b>警告:</b> このインタフェースの実装はスレッドセーフでなければなりません。</div>
+<p>継承元: <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code></p>
+<p><br>
+ </p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/xpcom/threads/nsIThreadInternal.idl" rel="custom">xpcom/threads/nsIThreadInternal.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">最終更新: Gecko 1.9 (Firefox 3)</span></div>
+</div>
+<h2 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E6.A6.82.E8.A6.81" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E6.A6.82.E8.A6.81">メソッドの概要</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void onDispatchedEvent(in nsIThreadInternal thread);</code></td>
+  </tr>
+  <tr>
+   <td><code>void onProcessNextEvent(in nsIThreadInternal thread, in boolean mayWait, in unsigned long recursionDepth);</code></td>
+  </tr>
+  <tr>
+   <td><code>void afterProcessNextEvent(in nsIThreadInternal thread, in unsigned long recursionDepth);</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89">メソッド</h2>
+<h3 id="onDispatchedEvent.28.29" name="onDispatchedEvent.28.29">onDispatchedEvent()</h3>
+<p>イベントがスレッドに割り当てられた後に呼び出されます。このメソッドはどのスレッドからも呼び出すことができます。</p>
+<div class="blockIndicator note"><strong>註:</strong> このメソッドの呼び出し中にスレッドのオブザーバを変更することは有効です。</div>
+<pre class="eval">void onDispatchedEvent(
+  in nsIThreadInternal thread
+)
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0" name=".E5.BC.95.E6.95.B0">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;thread&lt;/tt&gt;</dt>
+ <dd>
+  イベントが割り当てられた <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThread" title="">nsIThread</a></code>。</dd>
+</dl>
+<h3 id="onProcessNextEvent.28.29" name="onProcessNextEvent.28.29">onProcessNextEvent()</h3>
+<p>イベントが処理される前に、<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThread" title="">nsIThread</a></code> の <code><a href="ja/NsIThread#processNextEvent.28.29">processNextEvent()</a></code> メソッドによって呼び出されます。このメソッドはターゲットのスレッド上でのみ呼び出すことができます。</p>
+<div class="blockIndicator note"><strong>註:</strong> このメソッドの呼び出し中にスレッドのオブザーバを変更することは有効です。</div>
+<pre class="eval">void onProcessNextEvent(
+  in nsIThreadInternal thread,
+  in boolean mayWait,
+  in unsigned long recursionDepth
+</pre>
+<p>);</p>
+<h6 id=".E5.BC.95.E6.95.B0_2" name=".E5.BC.95.E6.95.B0_2">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;thread&lt;/tt&gt;</dt>
+ <dd>
+  イベントの処理が行われている <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThread" title="">nsIThread</a></code>。</dd>
+ <dt>
+  &lt;tt&gt;mayWait&lt;/tt&gt;</dt>
+ <dd>
+  スレッドの呼び出しをブロックすることをメソッドに許可する場合は <code>true</code>。この引数は、例えばスレッド停止中などは <code>false</code> になります。</dd>
+ <dt>
+  &lt;tt&gt;recursionDepth&lt;/tt&gt;</dt>
+ <dd>
+  現在の呼び出しに加えて、呼び出しスタック上での <code>ProcessNextEvent()</code> の呼び出し回数。</dd>
+</dl>
+<h3 id="afterProcessNextEvent.28.29" name="afterProcessNextEvent.28.29">afterProcessNextEvent()</h3>
+<p>イベントが処理された後に、<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThread" title="">nsIThread</a></code> の <code><a href="ja/NsIThread#processNextEvent.28.29">processNextEvent()</a></code> メソッドによって呼び出されます。このメソッドはターゲットのスレッド上でのみ呼び出すことができます。</p>
+<div class="blockIndicator note"><strong>註:</strong> このメソッドの呼び出し中にスレッドのオブザーバを変更することは有効です。</div>
+<pre class="eval">void afterProcessNextEvent(
+  in nsIThreadInternal thread,
+  in unsigned long recursionDepth
+)
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_3" name=".E5.BC.95.E6.95.B0_3">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;thread&lt;/tt&gt;</dt>
+ <dd>
+  イベントの処理が行われた <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThread" title="">nsIThread</a></code>。</dd>
+ <dt>
+  &lt;tt&gt;recursionDepth&lt;/tt&gt;</dt>
+ <dd>
+  現在の呼び出しに加えて、呼び出しスタック上での <code>ProcessNextEvent()</code> の呼び出し回数。</dd>
+</dl>
+<h2 id=".E9.96.A2.E9.80.A3.E8.A8.98.E4.BA.8B" name=".E9.96.A2.E9.80.A3.E8.A8.98.E4.BA.8B">関連記事</h2>
+<ul>
+ <li><a href="ja/The_Thread_Manager">The Thread Manager</a></li>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThreadManager" title="">nsIThreadManager</a></code></li>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThread" title="">nsIThread</a></code></li>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThreadPool" title="">nsIThreadPool</a></code></li>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThreadInternal" title="">nsIThreadInternal</a></code></li>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThreadEventFilter" title="">nsIThreadEventFilter</a></code></li>
+</ul>

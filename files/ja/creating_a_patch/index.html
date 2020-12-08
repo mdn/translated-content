@@ -1,0 +1,79 @@
+---
+title: パッチの作成
+slug: Creating_a_patch
+tags:
+  - Developing Mozilla
+translation_of: Mercurial/Using_Mercurial
+---
+<p> </p>
+<p><a href="ja/Mozilla_Source_Code_Via_CVS">ソースコードを入手</a>し、変更を加え、<a href="ja/Build_and_Install">ビルド</a>し、<a href="ja/Mozilla_automated_testing">テスト</a>を行ったあとには (さらに可能ならば、あなたのパッチのテストも含む)、それらの変更について<a href="ja/Getting_your_patch_in_the_tree">レビューを受け、チェックイン</a>してもらいましょう。そのためには、
+  <i>
+    パッチファイル</i>
+  または
+  <i>
+    差分ファイル</i>
+  と呼ばれる変更点を列挙したファイルを作成する必要があります。これは <b>cvs diff</b> または <b>hg diff</b> コマンドで作成することができます。</p>
+<div class="note">
+  <p>この記事は CVS について書かれています。Mozilla 2 (つまり 1.9.0 以降のすべて) では、もう一つのソースコントロールシステムである <a href="ja/Mercurial">Mercurial</a> に切り替わりました。考え方が同じであっても、特定のコマンドやヒントは適用できません。すべての hg のコマンド一覧とヒントについては <a href="ja/Mercurial_FAQ#How_can_I_diff_and_patch_files.3F">Mercurial FAQ#How can I diff and patch files?</a> をご覧ください。</p>
+</div>
+<p>あなたの変更を寄贈したいときは、ソースコードの最新バージョン (CVS HEAD, "trunk" としても知られています。または一部のパッチについては、アクティブなブランチの先端) に対する diff かどうかに注意してください。</p>
+<p>最上層の &lt;tt&gt;mozilla/&lt;/tt&gt; ディレクトリから &lt;tt&gt;cvs diff&lt;/tt&gt; を実行してパッチを生成すると、あなたのパッチを適用する必要のある人々に感謝されるでしょう。 (こうすると、彼らはパッチを見ずに、最上層のディレクトリから &lt;tt&gt;patch -p0 &lt;
+  <i>
+    your_patch</i>
+  &lt;/tt&gt; を実行してパッチを適用することができます。) {{ 英語版章題("Creating a diff of a single file") }}</p>
+<h3 id=".E5.8D.98.E4.B8.80.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AE.E5.B7.AE.E5.88.86.E3.82.92.E4.BD.9C.E6.88.90.E3.81.99.E3.82.8B" name=".E5.8D.98.E4.B8.80.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AE.E5.B7.AE.E5.88.86.E3.82.92.E4.BD.9C.E6.88.90.E3.81.99.E3.82.8B">単一ファイルの差分を作成する</h3>
+<p>リポジトリ内の現在のファイルに対する一つの差分ファイルを作成するには、次のコマンドを使用します:</p>
+<pre class="eval">$ cvs diff -u8p FILENAME
+</pre>
+<pre class="eval">$ hg diff -p -U 8 FILENAME
+</pre>
+<p>このコマンドで、前後 8 行分が追加された、'ユニファイド'フォーマット(&lt;tt&gt;-u&lt;/tt&gt;) と呼ばれる差分ファイルを作成することができます。この差分ファイルは、デフォルトで標準出力に出力されます。この出力をリダイレクトするには次のようにします:</p>
+<pre class="eval">$ cvs diff -u8p FILENAME &gt; OUT_FILE
+</pre>
+<pre class="eval">$ hg diff -p -U 8 FILENAME &gt; OUT_FILE
+</pre>
+<p>{{ 英語版章題("Creating a diff for multiple files") }}</p>
+<h3 id=".E8.A4.87.E6.95.B0.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AE.E5.B7.AE.E5.88.86.E3.82.92.E4.BD.9C.E6.88.90.E3.81.99.E3.82.8B" name=".E8.A4.87.E6.95.B0.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AE.E5.B7.AE.E5.88.86.E3.82.92.E4.BD.9C.E6.88.90.E3.81.99.E3.82.8B">複数ファイルの差分を作成する</h3>
+<p>FILENAME に通常のファイル名の代わりにディレクトリ名を与えると、そのディレクトリのサブディレクトリも同様に、再帰的に検索されます。例えば、</p>
+<pre class="eval">$ cvs diff -u8p mozilla/&lt;残りのパス&gt;/ &gt; OUT_FILE
+</pre>
+<pre class="eval">$ hg diff -p -U 8 mozilla/&lt;残りのパス&gt;/ &gt; OUT_FILE
+</pre>
+<p>こうすると、リポジトリ内のバージョンに対して現在のディレクトリとそのサブディレクトリ内のすべてのファイルを比較します。そして、一つに結合され、前後 8 行分が含まれた差分ファイルを OUT_FILE と名付けられたファイルに書き出します。</p>
+<p>ソースファイルを開かずにパッチを理解できるようにするには、その前後に十分な行を含めるべきです。 既定のガイドラインでは前後 8 行ですが、パッチを理解するのにさらに必要な場合は、8 よりも大きな数値に置き換えてください。また、前後の行を多く含めるほど、オリジナルのソースに対して作成された差分から大きな違いがあるファイルにパッチを適用することになりやすいので注意してください。</p>
+<p>{{ 英語版章題("Including new files in a patch") }}</p>
+<h3 id=".E3.83.91.E3.83.83.E3.83.81.E3.81.AB.E6.96.B0.E3.81.97.E3.81.84.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.92.E5.90.AB.E3.82.81.E3.82.8B" name=".E3.83.91.E3.83.83.E3.83.81.E3.81.AB.E6.96.B0.E3.81.97.E3.81.84.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.92.E5.90.AB.E3.82.81.E3.82.8B">パッチに新しいファイルを含める</h3>
+<p>パッチに新しいファイルを含めるには、&lt;tt&gt;-N&lt;/tt&gt; オプションを使用してください。</p>
+<pre class="eval">$ cvs diff -u8pN mozilla/&lt;残りのパス&gt;/ &gt; OUT_FILE
+</pre>
+<p>ここでよく起こる問題は、<b>cvs diff</b> コマンドが <b>cvs add</b> されていない新しいファイルを含まず、cvs add がリポジトリへの書き込みアクセスを必要とすることです。</p>
+<p>解決法としては、<a class="external" href="http://viper.haque.net/~timeless/redbean/"><b>cvsdo</b> ユーティリティ</a> を使用することです。これは、ファイルがリポジトリへ追加されたと cvs に思わせるために &lt;tt&gt;CVS/Entries&lt;/tt&gt; を編集します。</p>
+<pre class="eval">$ cvsdo add NEWFILE
+$ cvs diff -u8pN NEWFILE &gt; OUT_FILE
+</pre>
+<p>新しいディレクトリのファイルを含むパッチを生成するのは少々やっかいです。はじめに、新しいディレクトリに含まれていないものすべての diff を生成します:</p>
+<pre class="eval">$ cvsdo add newfiles
+$ cvs diff -u8pN NEWFILES &gt; OUT_FILE
+</pre>
+<p>次に、新しいディレクトリごとに <code>cvsdo add</code> を実行し、そのディレクトリ内のファイルにも同じようにします。</p>
+<pre class="eval">$ cvsdo add mozilla/&lt;残りのパス&gt;/newdir/
+$ cvsdo add mozilla/&lt;残りのパス&gt;/newdir/newfile
+</pre>
+<p>そして、新しいディレクトリごとに <code>cvsdo diff</code> を実行して diff に変更点を追加します。</p>
+<pre class="eval">$ cvsdo diff mozilla/&lt;残りのパス&gt;/newdir/ &gt;&gt; OUT_FILE
+</pre>
+<p>{{ 英語版章題("Patches with lots of whitespace changes") }}</p>
+<h3 id=".E5.A4.9A.E3.81.8F.E3.81.AE.E7.A9.BA.E7.99.BD.E3.82.92.E5.A4.89.E6.9B.B4.E3.81.97.E3.81.9F.E3.83.91.E3.83.83.E3.83.81" name=".E5.A4.9A.E3.81.8F.E3.81.AE.E7.A9.BA.E7.99.BD.E3.82.92.E5.A4.89.E6.9B.B4.E3.81.97.E3.81.9F.E3.83.91.E3.83.83.E3.83.81">多くの空白を変更したパッチ</h3>
+<p>パッチの生成時に、&lt;tt&gt;diff&lt;/tt&gt; が空白の変更を無視するように指定することができます。これは、<code>if</code> ステートメント内のコードの字送りのように多くの字下げを変更した場合、特に役立ちます。空白の変更を含まないパッチを作成するには、&lt;tt&gt;-w&lt;/tt&gt; フラグを使用してください。次のような場合:</p>
+<pre class="eval">$ cvs diff -u8pN mozilla/&lt;残りのパス&gt;/ &gt; OUTFILE
+</pre>
+<p>これをオリジナルのパッチに使用し、次に他のパッチでは、</p>
+<pre class="eval">$ cvs diff -u8pNw mozilla/&lt;残りのパス&gt;/ &gt; OUTFILE-w
+</pre>
+<p>このようにする場合は、<b>両方</b>のパッチが該当のバグに添付されているかどうか確認してください (&lt;tt&gt;-w&lt;/tt&gt; なしのパッチは、レビュアによる空白の変更が正しく行われているかどうかの確認と、あなたの変更を適用するためにチェックインする人に必要です)。</p>
+<p>{{ 英語版章題("Automated review tools") }}</p>
+<h3 id=".E8.87.AA.E5.8B.95.E3.83.AC.E3.83.93.E3.83.A5.E3.83.BC.E3.83.84.E3.83.BC.E3.83.AB" name=".E8.87.AA.E5.8B.95.E3.83.AC.E3.83.93.E3.83.A5.E3.83.BC.E3.83.84.E3.83.BC.E3.83.AB">自動レビューツール</h3>
+<p>パッチに含まれるエラーを捕捉するための、あなたやレビュアの仕事を少しだけ楽にするツールが利用できます。このツールが役立つでしょう: <a class="external" href="http://www.johnkeiser.com/cgi-bin/jst-review-cgi.pl">JST Review Simulacrum</a></p>
+<p>{{ 英語版章題("The next step") }}</p>
+<h3 id=".E6.AC.A1.E3.81.AE.E3.82.B9.E3.83.86.E3.83.83.E3.83.97" name=".E6.AC.A1.E3.81.AE.E3.82.B9.E3.83.86.E3.83.83.E3.83.97">次のステップ</h3>
+<p><a href="ja/Getting_your_patch_in_the_tree">Getting your patch in the tree</a></p>

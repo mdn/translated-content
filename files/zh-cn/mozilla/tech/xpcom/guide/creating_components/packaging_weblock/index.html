@@ -1,0 +1,136 @@
+---
+title: Packaging WebLock
+slug: Mozilla/Tech/XPCOM/Guide/Creating_components/Packaging_WebLock
+tags:
+  - XPCOM
+  - 所有分类
+translation_of: Mozilla/Tech/XPCOM/Guide/Creating_components/Packaging_WebLock
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/Creating_XPCOM_Components:Building_the_WebLock_UI" style="float: left;">« 上一页</a><a href="/zh-CN/docs/创建_XPCOM_组件:建立_Gecko_SDK">下一页  »</a></p>
+</div><p></p>
+
+<p>这是教程最后一部分, 我们将把所有的web所有的组件成分打包成可安装到其他应用中的形式 - the library itself, the type library, the header file, and the user interface resources. The first section, <a href="#Component_Installation_Overview">Component Installation Overview</a>, describes the general installation process in Mozilla. The following sections describe the steps you can take to organize the <strong>WebLock</strong> component for distribution and installation.</p>
+
+<div class="side-note">
+<p>请注意: 这个教程主要是关注组件开发本身, 所以这部分描述有关打包和安装到Gecko的过程是很简单的. 如果你希望了解详细的打包和安装组件到基于Gecko应用的信息，应该参考http://www.mozilla.org/projects/xpinstall.</p>
+</div>
+
+<h3 id="Component_Installation_Overview" name="Component_Installation_Overview">Component Installation Overview</h3>
+
+<p>XPInstall是一组JavaScript APIs用来建立安装脚本. 使用XPInstall,你可以为装载到Gecko-based应用，Mozilla extensions,或者individual components的组件建立web-based安装脚本. <strong>WebLock</strong> component安装脚本也可以用来注册组件到browser(see <a href="cn/Creating_XPCOM_Components/Component_Internals#Registration_Methods_in_XPCOM">Registration Methods in XPCOM</a> for more information on registration).</p>
+
+<p>下面的例子安装脚本使用了Mozilla XPInstall技术来操作安装并且以高层次Javascript对象的方式来跟Mozilla's<em>chrome registry</em> 交互。</p>
+
+<div class="side-note">
+<p><span id="What_Is_the_Chrome_Registry?"><a id="What_Is_the_Chrome_Registry?"></a><strong>What Is the Chrome Registry?</strong></span></p>
+
+<p>Like the Windows registry, the chrome registry is a database of information about applications, skins, and other extensions that have been installed in a Gecko application. Since Mozilla and other Gecko-based applications are cross-platform, this database is abstracted above the operating system or any particular platform's registry.</p>
+
+<p>The chrome registry lives in a series of RDF/XML files in the application directory of Mozilla and other Gecko-based browsers, where new installs, user configurable data, skins, and other information are related to one another and the application itself.</p>
+</div>
+
+<p>XPInstall中的JavaScript APIs <code>Install</code> 对象下载包含了安装文件的JAR并且调用注册方法来告诉 Mozilla 新的组件和用来调用<strong>WebLock</strong>组件的UI. <a href="#WebLock_Installation_Script">WebLock Installation Script</a> 是完整的<em>trigger installation script</em> , 可以从网页触发. 文件被存储在JAR file <code>weblock.jar</code>, 这是一个简单的ZIP文件，以XPI结尾，有时候也可能包含一个内部的安装脚本<code>install.js</code>.</p>
+
+<p>一旦你把组件和<strong>Weblock</strong>相关资源正确打包(see the following section, <a href="#Archiving_Resources">Archiving Resources</a>), <strong>WebLock</strong>安装脚本是一个简单的事情(see <a href="#The_WebLock_Installation_Script">The WebLock Installation Script</a>).</p>
+
+<h3 id="Archiving_Resources" name="Archiving_Resources">Archiving Resources</h3>
+
+<p>Once you have compiled all the resources that make up the <strong>WebLock</strong> component and the files that make up the user interface that will be added to the browser, you can place these within a subdirectory called <code>weblock</code>.</p>
+
+<p>Place the entire subdirectory into a ZIP archive and name the archive <code>weblock.xpi</code>. The archive, its subdirectory structure, and its contents should look like this:</p>
+
+<p><span id="%3Ccode%3Eweblock.xpi%3C/code%3E_Archive_Viewed_in_WinZIP"><a id="%3Ccode%3Eweblock.xpi%3C/code%3E_Archive_Viewed_in_WinZIP"></a><strong><code>weblock.xpi</code> Archive Viewed in WinZIP</strong></span></p>
+
+<p><img alt="Image:weblock-zipped-package.png"></p>
+
+<p>Note that the top level of the archive holds the <code>install.js</code> installation file, an RDF manifest for the package as a whole, and the component files (<code>weblock.xpt</code> and <code>weblock4.dll</code>). The component files are copied to the components directory of the Gecko application, and the weblock subdirectory gets copied over into the chrome subdirectory, where its UI resources can be added dynamically to the XUL-based Gecko application.</p>
+
+<p>The next section shows how this process of downloading, copying and registering the necessary files from the XPI can be achieved with an XPInstall installation script.</p>
+
+<h3 id="The_WebLock_Installation_Script" name="The_WebLock_Installation_Script">The <strong>WebLock</strong> Installation Script</h3>
+
+<p>安装脚本是一个存储在XPI中的JavaScript文件. 他必须在包的根目录 (i.e., <code>weblock.xpi</code>) itself. 一旦触发 (see <a href="#The_WebLock_Trigger_Script">The WebLock Trigger Script</a>), 安章脚本将:</p>
+
+<ul>
+ <li>downloads the <strong>WebLock</strong> component and places it in the <code>components</code> directory</li>
+ <li>copies the <code>weblock</code> subdirectory in the Mozilla chrome application subdirectory</li>
+ <li>registers both the component and the UI</li>
+</ul>
+
+<p>The XPInstall API提供了一些核心方法<sup><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Guide/Creating_components/Packaging_WebLock#endnote_essential-methods">[essential-methods]</a></sup>例如 <code>initInstall</code>, <code>registerChrome</code>, <code>addFile</code>, and others.</p>
+
+<p><span id="WebLock_Installation_Script"><a id="WebLock_Installation_Script"></a><strong>WebLock Installation Script</strong></span></p>
+
+<pre>// initialize the installation
+var err = initInstall("WebLock", "weblock", 1.0);
+
+var componentsDir = getFolder("Components");
+var cf = getFolder("Chrome");
+
+// add the DLL and say where it'll go
+addFile("weblock.dll", 1.0, "weblock.dll", componentsDir, "");
+
+// add the typelib also
+addFile("weblock.xpt", "1.0", "weblock.xpt", componentsDir, "");
+
+// add the weblock subdirectory of the XPI and specify that
+// it be installed in the chrome application directory
+err = addDirectory("weblock", "1.0", "", chromeDir, "");
+
+// ? have to register component here or with regxpcom?
+
+// register the new UI with the mozilla chrome registry
+
+registerChrome(CONTENT, getFolder(cf,"weblock.xpi"),"weblock");
+registerChrome(SKIN, getFolder(cf, "weblock.xpi"),"weblock");
+
+// perform the installation if there are no errors
+if (err==SUCCESS)
+  performInstall();
+else
+  cancelInstall(err);
+</pre>
+
+<h3 id="The_WebLock_Trigger_Script" name="The_WebLock_Trigger_Script">The <strong>WebLock</strong> Trigger Script</h3>
+
+<p>The <code>trigger script</code> is the script placed on a web page that actually initiates an XPInstall installation and calls the installation script that appears in the XPI. The following HTML specifies a complete webpage in which the trigger script is defined as a JavaScript function, <code>installWebLock</code>, that gets called when the user clicks the hyperlink.</p>
+
+<pre>&lt;html&gt;
+&lt;title&gt;WebLock Installation&lt;/title&gt;
+&lt;script type="text/javascript"&gt;
+/*
+ * Trigger function that downloads the XPI so the
+ * install.js file inside can be read and executed
+ */
+function installWebLock()
+{
+  weblock_xpi = {'WebLock Extension': 'weblock.xpi'};
+  InstallTrigger.install(weblock_xpi);
+}
+&lt;/script&gt;
+
+&lt;h1&gt;Install WebLock&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href="#" onclick="installWebLock();"&gt;install weblock&lt;/a&gt;&lt;/p&gt;
+
+&lt;/html&gt;
+</pre>
+
+<h3 id="Distributing_Your_Component" name="Distributing_Your_Component">Distributing Your Component</h3>
+
+<p>Once you have the component packaged properly and the necessary installation and trigger scripts, you are ready to distribute your component so others can install it in their Gecko applications.</p>
+
+<p>In Mozilla and Netscape browsers, XPInstall makes this process especially easy by providing the file format (XPI) and the necessary installation scripts for doing a web-based installation. As <a href="#WebLock_Installation_Script">WebLock Installation Script</a> demonstrates, XPInstall uses special keywords to refer to common installation directories such as <code>components</code> in a generalized, cross-platform way.</p>
+
+<p>If you are installing <strong>WebLock</strong> in an Gecko-based application for which XPInstall is not available, then you will have to devise a separate installation scheme. We leave this as an exercise for the reader.</p>
+
+<ol>
+ <li><div class="blockIndicator note"><strong>Note:</strong> install-object-methods</div> The methods are available on the main <code>Install</code> object, which is implied in the script below in the same way that the <code>window</code> object is implied in JavaScript manipulation of the DOM of a web page. In other words, the fragment <code>initInstall()</code> from the script is equivalent to <code>Install.initInstall()</code>.</li>
+</ol>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/Creating_XPCOM_Components:Building_the_WebLock_UI" style="float: left;">« 上一页</a><a href="/zh-CN/docs/创建_XPCOM_组件:建立_Gecko_SDK">下一页  »</a></p>
+</div><p></p><div class="licenseblock">
+<p>Copyright (c) 2003 by Doug Turner and Ian Oeschger. This material may be distributed only subject to the terms and conditions set forth in the <a class="external" href="http://www.opencontent.org/openpub/" rel="noopener">Open Publication License</a>, v1.02 or later. Distribution of substantively modified versions of this document is prohibited without the explicit permission of the copyright holder. Distribution of the work or derivative of the work in any standard (paper) book form is prohibited unless prior permission is obtained from the copyright holder.</p>
+</div><p></p>

@@ -1,0 +1,103 @@
+---
+title: VREyeParameters
+slug: Web/API/VREyeParameters
+translation_of: Web/API/VREyeParameters
+---
+<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+
+<p><a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> の <strong><code>VREyeParameters</code></strong> インターフェイスは，指定した眼のためにシーンを正しくレンダリングするためのすべての情報（視界(field of view)の情報を含む）を表現します．</p>
+
+<p>このインターフェイスは {{domxref("VRDisplay.getEyeParameters()")}} メソッドを通じてアクセスできます．</p>
+
+<h2 id="プロパティ">プロパティ</h2>
+
+<dl>
+ <dt>{{domxref("VREyeParameters.offset")}} {{readonlyInline}}</dt>
+ <dd><dfn>ユーザの両眼の中心点から指定した眼の中心へのオフセット量を示します．単位はメートルです．</dfn></dd>
+ <dt>{{domxref("VREyeParameters.fieldOfView")}} {{readonlyInline}}</dt>
+ <dd><dfn>指定した眼の現在の視界(FOV)を示しています．これはユーザが瞳孔間距離(IPD)の調整することによって変化します．</dfn></dd>
+ <dt>{{domxref("VREyeParameters.renderWidth")}} {{readonlyInline}}</dt>
+ <dd>それぞれの眼のビューポートの推奨レンダーターゲット幅を示します．単位はピクセルです．</dd>
+ <dt>{{domxref("VREyeParameters.renderHeight")}} {{readonlyInline}}</dt>
+ <dd>それぞれの眼のビューポートの推奨レンダーターゲット高さを示します．単位はピクセルです．</dd>
+</dl>
+
+<h2 id="例">例</h2>
+
+<pre>TBD.</pre>
+
+<h2 id="仕様">仕様</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('WebVR', '#vreyeparameters', 'VREyeParameters')}}</td>
+   <td>{{Spec2('WebVR')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
+ <li><a href="http://mozvr.com/">MozVr.com</a> — Mozilla VRチームのデモ，ダウンロード，その他のリソース．</li>
+</ul>

@@ -1,0 +1,111 @@
+---
+title: Midas editor module security preferences
+slug: Midas/Security_preferences
+translation_of: Mozilla/Projects/Midas/Security_preferences
+---
+<div class="note">
+<p><strong>Note:</strong> If you've reached this page from a message box in Firefox or another Mozilla product, try using keyboard shortcuts for the Cut, Copy, and Paste commands:</p>
+
+<p>注意：如果你从火狐信息邮箱，或者火狐的其他产品有到达这个页面，试着使用键盘快捷键，剪切，复制，黏贴命令。</p>
+
+<ul>
+ <li>Copy: Ctrl+C or Ctrl+Insert (command+C on Mac)</li>
+ <li>复制：Ctrl+C 或者 Ctrl+Insert （命令+C在Mac系统）</li>
+ <li>Paste: Ctrl+V or Shift+Insert (command+V on Mac)</li>
+ <li>黏贴：Ctrl+V 或者 Shift+Insert (命令+V 在Mac系统)</li>
+ <li>Cut: Ctrl+X or Shift+Delete (command+X on Mac)</li>
+ <li>剪切：Ctrl+X 或者 Shift+Delete (命令+X 在Mac系统)</li>
+</ul>
+
+<p>The information on the rest of this page is for Web developers and advanced users. Please do not try to modify this page.</p>
+
+<p>这个网页剩余的信息是为了网页开发者好和高级的用户。请不要试着修改这个页面。</p>
+
+<p> </p>
+</div>
+
+<p>To protect users' private information, unprivileged scripts cannot invoke the Cut, Copy, and Paste commands in Midas, which is Mozilla's rich text editor component.</p>
+
+<p>在Midas中为了保护用户的私有信息，没有权限的脚本 不能调用剪切，复制和黏贴命令，那个是火狐强大的文本编辑组件。</p>
+
+<p>This means that the corresponding buttons on the <a href="http://www-archive.mozilla.org/editor/midasdemo/" title="http://www-archive.mozilla.org/editor/midasdemo/">Mozilla Rich Text Editing demo page</a> will not work. To enable these functions, you must modify your browser preferences.</p>
+
+<p>这个意味着那个符号命令的按钮在火狐强大文本编辑演示页面不能够工作。为了启动这个功能，你可以修改浏览器的首选项。</p>
+
+<div class="warning">
+<p><strong>Warning:</strong> Changing these preferences can leave your browser insecure, especially if you grant permission to untrusted sites.</p>
+
+<p>警告：改变这个首选项可能不安全的离开你的浏览器，尤其如果你获得允许为了不真实的网站。</p>
+
+<p>Only change these settings as needed to try the demo above and to test your own add-on or Firefox-internal code, and be sure to restore the default settings when you're done!</p>
+
+<p>仅仅改变这些设置如需要试着演示上面的和测试你拥有的添加在或者火狐内部的代码，当你做的时候确保恢复默认的设置。</p>
+</div>
+
+<h2 id="Changing_the_preferences_in_Firefox">Changing the preferences in Firefox</h2>
+
+<p>在火狐中改变首选项。</p>
+
+<ol>
+ <li>Quit Firefox. If you have Quick Launch running (on Windows, this is an icon in the toolbar), quit that too.</li>
+ <li>退出火狐。如果你有快速的开始运行（在windows，这是一个图标在那个工具池里），也退出。</li>
+ <li><a class="external" href="http://support.mozilla.com/en-US/kb/Profiles">Find your Firefox profile directory</a>.</li>
+ <li>找到你的火狐资料目录</li>
+ <li>Open the <code class="filename">user.js</code> file from that directory in a text editor. If there's no <code>user.js</code> file, create one.</li>
+ <li>打开那个user.js文件从在文本编辑器的目录。如果没有user.js文件，创建一个。</li>
+ <li>Add these lines to <code class="filename">user.js</code>:</li>
+ <li>在user.js中添加下面这些行。</li>
+ <li>
+  <pre class="code">user_pref("capability.policy.policynames", "allowclipboard");
+user_pref("capability.policy.allowclipboard.sites", "https://www-archive.mozilla.org");
+user_pref("capability.policy.allowclipboard.Clipboard.cutcopy", "allAccess");
+user_pref("capability.policy.allowclipboard.Clipboard.paste", "allAccess");
+</pre>
+ </li>
+ <li>Change the URL <span class="external"><code class="url">https://www.mozilla.org</code></span> to the site for which you want to enable this function.</li>
+ <li>改变那个URL <span class="external"><code class="url">https://www.mozilla.org</code> 这个网站，你想要使用这个功能。</span></li>
+ <li>Save the file and restart Firefox. The Clipboard buttons in the demo, or similar buttons on the sites you listed, should now function.</li>
+ <li>保存这个文件和重启火狐。那在演示中的剪切板按钮或者在网站中你列表类似的按钮，应该有现在的功能。</li>
+</ol>
+
+<div class="note">
+<p><strong>Note:</strong> The preference is site as well as protocol specific. For example:</p>
+
+<p>注意；那个首选项网址也是特定协议。例如</p>
+
+<pre>user_pref("capability.policy.allowclipboard.sites", "http://www-archive.mozilla.org")
+</pre>
+
+<p>is not the same as:</p>
+
+<p>不是相同的和下面的</p>
+
+<pre>user_pref("capability.policy.allowclipboard.sites", "https://www-archive.mozilla.org")
+</pre>
+
+<p>This is because the first uses <a href="/en-US/docs/HTTP" title="/en-US/docs/HTTP">HTTP</a> while the second uses HTTPS.</p>
+
+<p>这是因为第一个使用HTTP 然而第二个使用HTTPS</p>
+
+<p>If you want to allow multiple URLs to access the Paste operation, separate the URLs with a space. For example:</p>
+
+<p>如果你想要允许多条URL访问那个黏贴操作，使用独立的URL的一个空间。例如：</p>
+
+<pre>user_pref("capability.policy.allowclipboard.sites", "https://www-archive.mozilla.org https://developer.mozilla.org")
+</pre>
+</div>
+
+<p>Again, keep in mind the security risks involved here and be sure to remove permission to access the clipboard once you no longer need it enabled.</p>
+
+<p>再次说明，牢记那个安全危机在这里涉及的，和确保移除允许访问那个剪切板一旦你不在需要启动它。</p>
+
+<h2 id="See_also">See also</h2>
+
+<p>另见：</p>
+
+<ul>
+ <li id="For_more_information_about_security_policies.2C_see_this_article_about_Configurable_Security_Policies.">For more information about security policies, see this article about <a href="http://www.mozilla.org/projects/security/components/ConfigPolicy.html" title="http://www.mozilla.org/projects/security/components/ConfigPolicy.html">Configurable Security Policies</a>.</li>
+ <li>更多的信息关于安全政策看这篇文章关于配置安全政策。</li>
+ <li><a href="/en-US/docs/Web/Security/CSP">CSP</a> and <a href="/en-US/docs/Web/Security/CSP/CSP_policy_directives">Policy Directives</a>.</li>
+ <li>CSP和政策指令。</li>
+</ul>

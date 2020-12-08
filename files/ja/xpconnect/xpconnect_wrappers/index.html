@@ -1,0 +1,36 @@
+---
+title: XPConnect ラッパー
+slug: XPConnect/XPConnect_wrappers
+translation_of: Mozilla/Tech/XPCOM/Language_bindings/XPConnect/XPConnect_wrappers
+---
+<p>このドキュメントは、<a href="/ja/docs/Mozilla/Tech/XPCOM/Language_bindings/XPConnect">XPConnect</a> ラッパーオブジェクトの概要を説明しています (技術的な説明については、<a href="/ja/docs/Mozilla/Gecko/Script_security">XPConnect セキュリティの層</a>を参照してください)。ラッパーの処理に関する実用的なアドバイスについては、<a href="/ja/docs/Mozilla/Tech/Xray_vision">chrome からコンテンツ DOM に安全にアクセスする</a>を参照してください。</p>
+
+<p>開発者は XPConnect でラッパーが大きな役割を果たしていることを理解しています。あまり知らされていない開発者は、ラッパーが存在し、何らかの重要性を持っていることを理解していますが、いつラッパーを使用すべきか、ラッパーを見なければならないかはわかりません。</p>
+
+<div class="note"><strong>Note:</strong> Wrappers can appear in the console log; for example "[object XrayWrapper [object blah]]". Because these are wrapped, you won't be able to peek down inside them from the console.</div>
+
+<h2 id="XPConnect_オブジェクトの基本">XPConnect オブジェクトの基本</h2>
+
+<h3 id="XPCWrappedNative">XPCWrappedNative</h3>
+
+<p>These objects are created when any natively implemented XPCOM object (that is, any object implemented in C++) needs to be reflected into JavaScript. This includes all DOM objects (including <code>Window</code>) and chrome elements that are reflected into JavaScript.</p>
+
+<p>This wrapper is responsible for mapping calls <em>from</em> JavaScript <em>into</em> C++. This means that when you say <code>window.focus()</code>, you're calling into XPCWrappedNative code.</p>
+
+<p>If you call '<code>toString()</code>' and get "<code>[xpconnect wrapped nsIFoo]</code>" then the reference is to a <code>XPCWrappedNative</code> object with interface <code>nsIFoo</code>.</p>
+
+<p>They are implicitly created by XPConnect and you should not have to worry about how that happens. There are several types of wrapped natives, but I won't cover those here.</p>
+
+<h3 id="XPCWrappedJS">XPCWrappedJS</h3>
+
+<p>These objects are the exact opposite of XPCWrappedNative. They exist to reflect an object <em>from</em> JavaScript <em>into</em> C++. This means that whenever you pass your JavaScript object into a C++ function, we create one of these wrappers. For example, if you've implemented some component with an interface <code>nsIFoo</code> and you pass your JavaScript object into a C++ function taking an <code>nsIFoo</code>, an XPCWrappedJS is created around your object. C++ calls are routed through XPCWrappedJS code into your JavaScript implementation.</p>
+
+<p>These wrappers are created by XPConnect, so you should not have to worry about how to construct them or whether to construct them.</p>
+
+<p><strong>Double wrapping.</strong> There is one case where an XPCWrappedNative wraps another wrapper object. This case is where a JS object was passed in via some IDL-declared interface, creating an XPCWrappedJS, and is now being returned to JavaScript via some other interface. In order to preserve API compatibility, an XPCWrappedNative is created around the XPCWrappedJS.</p>
+
+<h2 id="chrome_にさらされたセキュリティラッパー">chrome にさらされたセキュリティラッパー</h2>
+
+<p>To learn about security wrappers, see the article on <a href="/en-US/docs/Mozilla/Gecko/Script_security">script security in Gecko</a>.</p>
+
+<p>Note that a previous version of the current page recommended using <code>__exposedProps__</code> to expose objects from chrome to content. This is now deprecated and we are in the process of removing support for it. If you need to make objects or functions defined in chrome code accessible to content, use <a href="/en-US/docs/Components.utils.cloneInto">Components.utils.cloneInto</a> or <a href="/en-US/docs/Components.utils.exportFunction">Components.utils.exportFunction</a>.</p>

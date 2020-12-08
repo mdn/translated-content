@@ -1,0 +1,44 @@
+---
+title: Firefox OS 2.1 for developers
+slug: Archive/B2G_OS/Releases/2.1
+translation_of: Archive/B2G_OS/Releases/2.1
+---
+<div class="summary">
+<p>Le composant Gecko de Firefox OS 2.1 est basé sur <strong>Firefox 33/34</strong>. <span class="seoSummary">Cette page détaille les fonctionnalités pour développeurs nouvellement implémentées dans Gecko et spécifiques à Firefox OS 2.1.</span></p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: Pour les fonctionnalités générales de Gecko, qui sont généralement aussi présentes dans Firefox OS Gecko, consulter <a href="/en-US/docs/Mozilla/Firefox/Releases/33" title="/en-US/docs/Mozilla/Firefox/Releases/28">Firefox 33 release notes for developers</a> et <a href="/en-US/docs/Mozilla/Firefox/Releases/34" title="/en-US/docs/Mozilla/Firefox/Releases/28">Firefox 34 release notes for developers</a>.</p>
+</div>
+
+<h2 id="Changement_de_plateforme">Changement de plateforme</h2>
+
+<p>Firefox OS est habitué à avoir une politique de sécurité  "application unique par origine", mais ceci a été levé à partir de Firefox 34/Firefox OS 2.1 (lire <a href="https://developer.mozilla.org/fr/Apps/FAQs/About_app_manifests">cette FAQ</a> pour plus d'informations). Si vous avez quand même besoin de supporter les anciennes versions, hébergez vos applis sur des origines différentes; une stratégie consiste à  <a href="/en-US/Marketplace/Publishing/Adding_a_subdomain">créer différents sous domaines </a>pour vos applis.</p>
+
+<h2 id="Changement_d'API_web">Changement d'API web</h2>
+
+<ul>
+ <li>Les gestionnaire d'évènement d'appariement de l' <a href="/en-US/docs/WebAPI/WebBluetooth">API Web Bluetooth </a> — <a href="/fr/docs/Web/API/BluetoothAdapter/ondevicepaired" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>BluetoothAdapter.ondevicepaired</code></a> et <a href="/fr/docs/Web/API/BluetoothAdapter/ondeviceunpaired" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>BluetoothAdapter.ondeviceunpaired</code></a> — ont été ajouté (voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1036234" title="FIXED: Implement pairing in BluetoothAdapter (event handlers)">bug 1036234</a>).</li>
+ <li>Des mise à jour des méthodes d'appariement de l' <a href="/en-US/docs/WebAPI/WebBluetooth">API Web Bluetooth</a> ont été ajouté (voir<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1036233" title="FIXED: Implement pairing in BluetoothAdapter (methods)">bug 1036233</a>):
+  <ul>
+   <li>Promise&lt;void&gt; <a href="/fr/docs/Web/API/BluetoothAdapter/pair" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>BluetoothAdapter.pair</code></a>(DOMString aAddress)</li>
+   <li>Promise&lt;void&gt; <a href="/fr/docs/Web/API/BluetoothAdapter/unpair" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>BluetoothAdapter.unpair</code></a>(DOMString aAddress)</li>
+   <li>sequence&lt;BluetoothDevice&gt; <a href="/fr/docs/Web/API/BluetoothAdapter/getPairedDevices" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>BluetoothAdapter.getPairedDevices</code></a></li>
+  </ul>
+ </li>
+ <li>Le support pour l' <a href="https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html">API Web Speech</a> est en suspens : un patch a été soumis (voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1032964" title="[B2G][SpeechRTC][User Story]: Enabling Voice input in Firefox OS">bug 1032964</a>).</li>
+ <li><span class="author-g-41mtsa1hor7b107c i">L'API FileHandle a été renommée en MutableFile, et LockedFile a été renommée en FileHandle (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1006485" title="FIXED: FileHandle: Rename FileHandle to MutableFile and LockedFile to FileHandle">bug 1006485</a>).</span></li>
+</ul>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>Firefox OS 2.1 Notes (Le lien sera disponible une fois que l'article sera publié)</li>
+</ul>
+
+<h2 id="Anciennes_Versions">Anciennes Versions</h2>
+
+<p></p><div class="multiColumnList">
+<ul>
+<li><a href="/fr/docs/Mozilla/Firefox_OS/Versions/2.0">Firefox OS 2.0 pour les développeurs</a></li><li><a href="/fr/docs/Mozilla/Firefox_OS/Versions/1.4">Firefox OS 1.4 pour les développeurs</a></li><li><a href="/fr/docs/Mozilla/Firefox_OS/Versions/1.3">Firefox OS 1.3 pour les développeurs</a></li><li><a href="/fr/docs/Mozilla/Firefox_OS/Versions/1.2">Firefox OS 1.2 pour les développeurs</a></li><li><a href="/fr/docs/Mozilla/Firefox_OS/Versions/1.1">Firefox OS 1.1 pour les développeurs</a></li><li><a href="/fr/docs/Mozilla/Firefox_OS/Versions/1.0.1">Firefox OS 1.0.1 pour les développeurs</a></li></ul>
+</div><p></p>

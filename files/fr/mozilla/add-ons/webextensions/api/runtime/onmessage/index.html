@@ -1,0 +1,327 @@
+---
+title: runtime.onMessage
+slug: Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
+tags:
+  - API
+  - Add-ons
+  - Event
+  - Extensions
+  - Non-standard
+  - Reference
+  - WebExtensions
+  - onmessage
+  - runtime
+translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
+---
+<nav>{{AddonSidebar()}}</nav>
+
+<p>Utilisez cet événement pour écouter les messages d’une autre partie de votre extension. Par exemple, utilisez-le :</p>
+
+<p>Voici quelques exemples de cas d'utilisation :</p>
+
+<ul>
+ <li><strong>dans un <a href="/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts">script de contenu</a></strong>, pour écouter les messages d’un <a href="/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">script d’arrière-plan</a> ;</li>
+ <li><strong>dans un script d’arrière-plan</strong>, pour écouter les messages d’un script de contenu ;</li>
+ <li><strong>dans une <a href="/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages">page d’options</a> ou un script de <a href="/fr/Add-ons/WebExtensions/User_interface_components#Popups">popup</a></strong>, pour écouter les messages d’un script d’arrière-plan ;</li>
+ <li><strong>dans un script d’arrière plan</strong>, pour écouter les messages d’une page d’options ou d’un script de popup.</li>
+</ul>
+
+<p>Pour envoyer un message reçu par l'écouteur <code>onMessage</code>, utilisez {{WebExtAPIRef("runtime.sendMessage()")}} ou (pour envoyer un message à un script de contenu) {{WebExtAPIRef("tabs.sendMessage()")}}.</p>
+
+<div class="blockIndicator note">
+<p>Évitez de créer plusieurs écouteurs <code>onMessage</code> pour le même type de message, car l'ordre dans lequel plusieurs auditeurs vont tirer n'est pas garanti.</p>
+
+<p>Lorsque vous voulez garantir la livraison d'un message à un point final spécifique, utilisez l'<a href="fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts##Les_messages_en_flux_continu">approche basée sur la connexion pour échanger des messages</a>.</p>
+</div>
+
+<p>Avec le message lui-même, l’écouteur reçoit en paramètres :</p>
+
+<ul>
+ <li>Un objet <code>sender</code> donnant les détails sur l’expéditeur du message ;</li>
+ <li>Une fonction <code>sendResponse</code> qui peut être utilisé pour renvoyer une réponse à l'expéditeur.</li>
+</ul>
+
+<p>Vous pouvez envoyer une réponse synchrone au message en appelant la fonction <code>sendResponse</code> dans votre écouteur. <a href="/fr/Add-ons/WebExtensions/API/runtime/onMessage#Sending_a_synchronous_response">Voir un exemple</a>.</p>
+
+<p>Pour envoyer un réponse asynchrone, il existe deux options :</p>
+
+<ul>
+ <li>Renvoyer <code>true</code> à partir de l’écouteur d’événement. Cela permet de conserver la fonction <code>sendResponse</code> après le retour de l’écouteur, ce qui vous permet de l’appeler plus tard. <a href="/fr/Add-ons/WebExtensions/API/runtime/onMessage#Sending_an_asynchronous_response_using_sendResponse">Voir un exemple</a>.</li>
+ <li>Renvoyer une <code>Promise</code> depuis l’écouteur d’événement, et la résoudre lorsque vous avez la réponse (ou la rejeter en cas d’erreur). <a href="/fr/Add-ons/WebExtensions/API/runtime/onMessage#Sending_an_asynchronous_response_using_a_Promise">Voir un exemple</a>.</li>
+</ul>
+
+<div class="warning">
+<p>Retourner une <code>Promise</code> est maintenant le moyen préféré car <code>sendResponse</code> <a class="external" href="https://github.com/mozilla/webextension-polyfill/issues/16#issuecomment-296693219">sera retirée de la spécification W3C</a>.</p>
+
+<p>La bibliothèque populaire <a class="external" href="https://github.com/mozilla/webextension-polyfill">webextension-polyfill</a> a déjà supprimé cette fonction de son implémentation.</p>
+</div>
+
+<div class="blockIndicator note">
+<p>Vous pouvez également utiliser une <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">approche basée sur la connexion pour échanger des messages</a>.</p>
+</div>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox">browser.runtime.onMessage.addListener(listener)
+browser.runtime.onMessage.removeListener(listener)
+browser.runtime.onMessage.hasListener(listener)</pre>
+
+<p>Les événements ont trois fonctions :</p>
+
+<dl>
+ <dt><code>addListener(listener)</code></dt>
+ <dd>Ajoute un écouteur à cet événement.</dd>
+ <dt><code>removeListener(listener)</code></dt>
+ <dd>Cesse d’écouter cet événement. L’argument <code>listener</code> est l’écouteur à supprimer.</dd>
+ <dt><code>hasListener(listener)</code></dt>
+ <dd>Vérifie si un <code>listener</code> est enregistré pour cet événement. Retourne <code>true</code> s’il écoute, <code>false</code> sinon.</dd>
+</dl>
+
+<h2 id="Syntaxe_de_addListener">Syntaxe de addListener</h2>
+
+<h3 id="Paramètres">Paramètres</h3>
+
+<dl>
+ <dt><em><code>listener</code></em></dt>
+ <dd>
+ <p>Une fonction d’écoute qui sera appelée lorsque cet événement se produira. La fonction recevra les arguments suivants :</p>
+
+ <dl class="reference-values">
+  <dt><em><code>message</code></em></dt>
+  <dd><code>object</code>. Le message lui-même. C’est un objet JSON-ifiable.</dd>
+ </dl>
+
+ <dl class="reference-values">
+  <dt><em><code>sender</code></em></dt>
+  <dd>Un objet {{WebExtAPIRef("runtime.MessageSender")}} représentant l’expéditeur du message.</dd>
+ </dl>
+
+ <dl class="reference-values">
+  <dt><code>s<em>endResponse</em></code></dt>
+  <dd>
+  <p>Une fonction à appeler, au plus une fois, pour envoyer une réponse au <code><var>message</var></code>. La fonction prend un seul argument, qui peut être n'importe quel objet JSON-ifiable. Cet argument est renvoyé à l'expéditeur du message.</p>
+
+  <p>Si vous avez plus d'un écouteur <code>onMessage()</code> dans le même document, alors un seul peut envoyer une réponse.</p>
+
+  <p>Pour envoyer une réponse de manière synchrone, appelez <code>sendResponse()</code> avant le retour de la fonction d'écoute.</p>
+
+  <p>Pour envoyer une réponse de manière asynchrone</p>
+
+  <ul>
+   <li>soit garder une référence à l'argument <code>sendResponse()</code> et retourner <code>true</code> depuis la fonction listenener. Vous pourrez alors appeler <code>sendResponse()</code> après le retour de la fonction d'écoute.</li>
+   <li>ou retournez une {{jsxref("Promise")}} à partir de la fonction d'écoute et résolvez la promise lorsque la réponse est prête. C'est un moyen privilégié</li>
+  </ul>
+  </dd>
+ </dl>
+
+ <p>La fonction <code><var>listener</var></code> peut renvoyer un booléen ou une {{jsxref("Promise")}}.</p>
+
+ <div class="blockIndicator note">
+ <p><strong>Important:</strong> N'appelez pas <code>addListener()</code> en utilisant une fonction  <code>async</code> :</p>
+
+ <pre class="brush: js example-bad">// don't do this
+browser.runtime.onMessage.addListener(
+  async (data, sender) =&gt; {
+    if (data.type === 'handle_me') { return 'done'; }
+  }
+);
+</pre>
+
+ <p>L'auditeur consommera ainsi chaque message qu'il reçoit, ce qui empêchera effectivement tous les autres auditeurs de recevoir et de traiter des messages.</p>
+
+ <p>Si vous souhaitez adopter une approche asynchrone, utilisez plutôt une Promise, comme ceci :</p>
+
+ <pre class="brush: js example-good">browser.runtime.onMessage.addListener(
+  (data, sender) =&gt; {
+    if (data.type === 'handle_me') {
+      return Promise.resolve('done');
+    }
+  }
+);
+</pre>
+ </div>
+ </dd>
+</dl>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<p class="hidden">La table de compatibilité sur cette page est générée à partir de données structurées. Si vous souhaitez contribuer aux données, veuillez consulter <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> et nous envoyer une <em>pull request.</em></p>
+
+<p>{{Compat("webextensions.api.runtime.onMessage()")}}</p>
+
+<h2 id="Exemples">Exemples</h2>
+
+<h3 id="Exemple_simple">Exemple simple</h3>
+
+<p>Ce script de contenu écoute les événements clic dans la page web. Si le clic a eu lieu sur un lien, il envoie un message à la page d’arrière-plan avec l’URL cible :</p>
+
+<pre class="brush: js">// content-script.js
+
+window.addEventListener("click", notifyExtension);
+
+function notifyExtension(e) {
+  if (e.target.tagName != "A") {
+    return;
+  }
+  browser.runtime.sendMessage({"url": e.target.href});
+}</pre>
+
+<p>Le script d’arrière-plan écoute ces messages et affiche une notification à l’aide de l’API <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications">notifications</a></code>.</p>
+
+<pre class="brush: js">// background-script.js
+
+browser.runtime.onMessage.addListener(notify);
+
+function notify(message) {
+  browser.notifications.create({
+    "type": "basic",
+    "iconUrl": browser.extension.getURL("link.png"),
+    "title": "Vous avez cliqué sur un lien !",
+    "message": message.url
+  });
+}</pre>
+
+<h3 id="Envoyer_une_réponse_synchrone">Envoyer une réponse synchrone</h3>
+
+<p>Le script de contenu suivant envoie un message au script d’arrière plan lorsque l’utilisateur ou l’utilisatrice clique sur la page. Il enregistre également toute réponse envoyé par le script d’arrière-plan :</p>
+
+<pre class="brush: js">// content-script.js
+
+function handleResponse(message) {
+  console.log(`le script d’arrière-plan a répondu : ${message.response}`);
+}
+
+function handleError(error) {
+  console.log(`Erreur : ${error}`);
+}
+
+function sendMessage(e) {
+  var sending = browser.runtime.sendMessage({content: "message du script de contenu"});
+  sending.then(handleResponse, handleError);
+}
+
+window.addEventListener("click", sendMessage);</pre>
+
+<p>Voici une version du script d’arrière-plan correspondant, qui envoie une réponse de manière synchrone depuis l’intérieur de l’écouteur :</p>
+
+<pre class="brush: js">// background-script.js
+
+function handleMessage(request, sender, sendResponse) {
+  console.log(`le script de contenu a envoyé un message : ${request.content}`);
+  sendResponse({response: "réponse du script d’arrière-plan"});
+}
+
+browser.runtime.onMessage.addListener(handleMessage);</pre>
+
+<p>Et voici une autre version, qui utilise {{jsxref("Promise.resolve()")}} :</p>
+
+<pre class="brush: js">// background-script.js
+
+function handleMessage(request, sender, sendResponse) {
+  console.log(`le script de contenu a envoyé un message : ${request.content}`);
+  return Promise.resolve({response: "réponse du script d’arrière-plan"});
+}
+
+browser.runtime.onMessage.addListener(handleMessage);</pre>
+
+<h3 id="Envoi_d’une_réponse_asynchrone_à_l’aide_de_sendResponse">Envoi d’une réponse asynchrone à l’aide de sendResponse</h3>
+
+<p>Voici un autre version du script d’arrière-plan de l’exemple précédent. Il envoie une réponse de manière asynchrone, après le retour de l’écouteur. Remarquez le <code>return true;</code> dans l’écouteur : cela indique au navigateur que vous avez l’intention d’utiliser l’argument <code>sendResponse</code> après le retour de l’écouteur.</p>
+
+<pre class="brush: js">// background-script.js
+
+function handleMessage(request, sender, sendResponse) {
+  console.log(`le script de contenu a envoyé un message : ${request.content}`);
+  setTimeout(() =&gt; {
+    sendResponse({response: "réponse asynchrone du script d’arrière-plan"});
+  }, 1000);
+  return true;
+}
+
+browser.runtime.onMessage.addListener(handleMessage);</pre>
+
+<h3 id="Envoi_d’une_réponse_asynchrone_à_l’aide_d’une_promesse">Envoi d’une réponse asynchrone à l’aide d’une promesse</h3>
+
+<p>Ce script de contenu reçoit le premier lien <code>&lt;a&gt;</code> dans la page, et envoie un message demandant si l’emplacement du lien fait partie des marque-pages. Il attend comme réponse un {{jsxref("Boolean", "booléen")}} : <code>true</code> si l’emplacement est dans les marque-pages, <code>false</code> sinon.</p>
+
+<pre class="brush: js">// content-script.js
+
+const firstLink = document.querySelector("a");
+
+function handleResponse(isBookmarked) {
+  if (isBookmarked) {
+    firstLink.classList.add("bookmarked");
+  }
+}
+
+browser.runtime.sendMessage({
+  url: firstLink.href
+}).then(handleResponse);</pre>
+
+<p>Voici le script d’arrière plan. Il utilise <code>{{WebExtAPIRef("bookmarks.search()")}}</code> pour voir si le lien est dans les marque-pages, ce qui renvoie une {{jsxref("Promise", "promesse")}} :</p>
+
+<pre class="brush: js">// background-script.js
+
+function isBookmarked(message, sender, response) {
+  return browser.bookmarks.search({
+    url: message.url
+  }).then(function(results) {
+    return results.length &gt; 0;
+  });
+}
+
+browser.runtime.onMessage.addListener(isBookmarked);</pre>
+
+<p>Si le gestionnaire asynchrone ne renvoie pas de promise, vous pouvez explicitement construire une promise. Cet exemple plutôt artificiel envoie une réponse après un délai d’une seconde, en utilisant <code><a href="/fr/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">Window.setTimeout()</a></code> :</p>
+
+<pre class="brush: js">// background-script.js
+
+function handleMessage(request, sender, sendResponse) {
+  return new Promise(resolve =&gt; {
+    setTimeout(() =&gt; {
+      resolve({response: "réponse asynchrone du script d’arrière-plan"});
+    }, 1000);
+  });
+}
+
+browser.runtime.onMessage.addListener(handleMessage);</pre>
+
+<p>{{WebExtExamples}}</p>
+
+<div class="note"><strong>Remerciements </strong>
+
+<p>Cette API est basée sur l’API Chromium <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> dans le code de Chromium code.</p>
+
+<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
+</div>
+
+<div class="hidden">
+<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are
+// met:
+//
+//    * Redistributions of source code must retain the above copyright
+// notice, this list of conditions and the following disclaimer.
+//    * Redistributions in binary form must reproduce the above
+// copyright notice, this list of conditions and the following disclaimer
+// in the documentation and/or other materials provided with the
+// distribution.
+//    * Neither the name of Google Inc. nor the names of its
+// contributors may be used to endorse or promote products derived from
+// this software without specific prior written permission.
+//
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+</pre>
+</div>

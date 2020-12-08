@@ -1,0 +1,154 @@
+---
+title: Object.observe()
+slug: Web/JavaScript/Reference/Objets_globaux/Object/observe
+tags:
+  - JavaScript
+  - Méthode
+  - Object
+  - Obsolete
+  - Reference
+translation_of: Archive/Web/JavaScript/Object.observe
+---
+<div>{{JSRef}}{{obsolete_header}}</div>
+
+<p>La méthode <strong><code>Object.observe()</code></strong> est utilisée afin d'observer de façon asynchrone les modifications apportées à un objet. Cette méthode fournit un flux d'information qui correspondent aux changement apportés à l'objet, dans l'ordre dans lequel ils se sont produits. Cependant, cette API a été dépréciée et retirée des navigateurs. À la place, il est préférable d'utiliser l'objet {{jsxref("Proxy")}}.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox">Object.observe(<var>obj</var>, <var>callback</var>[,<var>listeChangements</var>])</pre>
+
+<h3 id="Paramètres">Paramètres</h3>
+
+<dl>
+ <dt><code>obj</code></dt>
+ <dd>L'objet qu'on souhaite observer.</dd>
+ <dt><code>callback</code></dt>
+ <dd>La fonction qui est appelée à chaque fois qu'un changement est effectué. Elle est invoquée avec l'argument suivant :
+ <dl>
+  <dt><code>changes</code></dt>
+  <dd>Un tableau d'objets dont chaque élément représente une modification. Les propriétés de ces objets sont :
+  <ul>
+   <li><strong><code>name </code></strong>: Le nom de la propriété qui a été modifiée.</li>
+   <li><strong><code>object</code></strong> : L'objet modifié une fois le changement apporté.</li>
+   <li><strong><code>type</code></strong> : Une chaîne de caractères qui indique le type de modification qui a eu lieu. Elle peut valoir <code>"add"</code>, <code>"update"</code>, ou <code>"delete"</code>.</li>
+   <li><strong><code>oldValue </code></strong>: Propriété présente uniquement pour les types <code>"update"</code> et <code>"delete"</code>. Elle correspond à la valeur de l'objet avant la modification.</li>
+  </ul>
+  </dd>
+ </dl>
+ </dd>
+ <dt><code>listeChangements</code></dt>
+ <dd>La liste des types de changements qu'on souhaite observer sur l'objet donné avec la fonction de retour donnée. Par défaut, si cet argument n'est pas utilisé, le tableau utilisé sera <code>["add", "update", "delete", "reconfigure", "setPrototype", "preventExtensions"]</code>.</dd>
+</dl>
+
+<h3 id="Valeur_de_retour">Valeur de retour</h3>
+
+<p>L'objet qu'on souhaite observer.</p>
+
+<h2 id="Description">Description</h2>
+
+<p>La fonction <code>callback</code> est appelée chaque fois qu'une modification est apportée à <code>obj</code> avec comme argument le tableau listant l'ensemble des modifications, dans l'ordre dans lequel elles se sont produites.</p>
+
+<h2 id="Exemples">Exemples</h2>
+
+<h3 id="Enregistrer_les_différents_types_de_modifications">Enregistrer les différents types de modifications</h3>
+
+<pre class="brush: js">var obj = {
+  toto: 0,
+  truc: 1
+};
+
+Object.observe(obj, function(changes) {
+  console.log(changes);
+});
+
+obj.machin = 2;
+// [{name: 'machin', object: , type: 'add'}]
+
+obj.toto = 'coucou';
+// [{name: 'toto', object: , type: 'update', oldValue: 0}]
+
+delete obj.machin;
+// [{name: 'machin', object: , type: 'delete', oldValue: 2}]
+
+Object.defineProperty(objet,'toto', {writable: false});
+// [{name: 'toto', object: &lt;obj&gt;, type: 'reconfigure'}]
+
+Object.setPrototypeOf(obj, {});
+//  [{name: '__proto__',object: &lt;obj&gt;, type: 'setPrototype', oldValue: &lt;prototype&gt;}]
+
+Object.seal(obj);
+// [
+//    {name: 'toto', object: &lt;obj&gt;, type: 'reconfigure'},
+//    {name: 'machin', object: &lt;obj&gt;, type: 'reconfigure'},
+//    {object: &lt;obj&gt;, type: 'preventExtensions'}
+// ]
+</pre>
+
+<h3 id="Lier_des_données">Lier des données</h3>
+
+<pre class="brush: js">// Un objet représentant un utilisateur
+var utilisateur = {
+  id: 0,
+  nom: 'Brendan Eich',
+  titre: 'Mr.'
+};
+
+// Une fonction de salutation
+function majSalutation() {
+  user.greeting = 'Bonjour, ' + utilisateur.titre + ' ' + utilisateur.nom + ' !';
+}
+majSalutation();
+
+Object.observe(utilisateur, function(changes) {
+  changes.forEach(function(change) {
+    // Pour chaque modification qui porte sur le nom ou le titre
+    // on met à jour la salutation
+    if (change.name === 'nom' || change.name === 'titre') {
+      majSalutation();
+    }
+  });
+});
+</pre>
+
+<h3 id="Exemple_Enregistrer_des_changements_personnalisés">Exemple : Enregistrer des changements personnalisés</h3>
+
+<pre class="brush: js">// On représente un point sur un plan bidimensionnel
+var point = {x: 0, y: 0, distance: 0};
+
+function setPosition(pt, x, y) {
+  // On effectue un changement personnalisé
+  Object.getNotifier(pt).performChange('reposition', function() {
+    var exDistance = pt.distance;
+    pt.x = x;
+    pt.y = y;
+    pt.distance = Math.sqrt(x * x + y * y);
+    return {exDistance: exDistance};
+  });
+}
+
+Object.observe(point, function(changes) {
+  console.log('Distance modifiée : ' + (point.distance - changes[0].exDistance));
+}, ['reposition']);
+
+setPosition(point, 3, 4);
+// Distance modifiée : 5</pre>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<p><a href="https://github.com/arv/ecmascript-object-observe">Proposition de spécification (<em>straw man proposal</em>).</a></p>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<div>
+<div class="hidden">Le tableau de compatibilité de cette page a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à consulter <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> et à nous envoyer une <em>pull request</em>.</div>
+
+<p>{{Compat("javascript.builtins.Object.observe")}}</p>
+</div>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>{{jsxref("Object.unobserve()")}} {{obsolete_inline}}</li>
+ <li>{{jsxref("Array.observe()")}} {{obsolete_inline}}</li>
+ <li><a href="https://esdiscuss.org/topic/an-update-on-object-observe">Retrait de la proposition pour <code>Object.Observer</code> (en anglais)</a></li>
+</ul>

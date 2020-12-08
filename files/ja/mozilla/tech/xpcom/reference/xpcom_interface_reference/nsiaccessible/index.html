@@ -1,0 +1,484 @@
+---
+title: nsIAccessible
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsIAccessible
+tags:
+  - Accessibility
+  - Interfaces
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIAccessible
+---
+<p> </p>
+<p><code>nsIAccessible</code> インタフェースは、MSAA や ATK のようなプラットフォーム固有のアクセシビリティ API をサポートする、クロスプラットフォームなインタフェースです。ATK の一般的な accessibility オブジェクトと同様に、<code>IAccessible</code> をサポートするのに必要なもののすべてが含まれています。</p>
+<p>accessible tree 内のオブジェクトについての情報を取得するために、処理中の accessibility クライアントによって使用されます。accessible tree は DOM tree 内の (ドキュメントやフォーカス可能な要素、テキストのような) ノード のサブセットです。Mozilla は <code>nsIAccessible</code> の実装を要求があるときに生成します。</p>
+<p>参照: <code><a class="external" href="http://www.mozilla.org/projects/ui/accessibility" rel="freelink">http://www.mozilla.org/projects/ui/accessibility</a></code> に詳しい情報があります。 </p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/accessible/public/nsIAccessible.idl" rel="custom">accessible/public/nsIAccessible.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">最終更新: Gecko 1.9 (Firefox 3)</span></div>
+</div>
+<p>継承元: <a href="ja/NsISupports">nsISupports</a></p>
+<p><span id="Method_overview"></span></p>
+<h2 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E6.A6.82.E8.A6.81" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E6.A6.82.E8.A6.81">メソッドの概要</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code><a href="ja/NsIDOMDOMStringList">nsIDOMDOMStringList</a> <a href="#getKeyBindings.28.29">getKeyBindings</a>(in PRUint8 aActionIndex);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#getFinalState.28.29">getFinalState</a>(out unsigned long aState, out unsigned long aExtraState);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#groupPosition.28.29">groupPosition</a>(out long aGroupLevel, out long aSimilarItemsInGroup, out long aPositionInGroup);</code></td>
+  </tr>
+  <tr>
+   <td><code>nsIAccessible <a href="#getChildAtPoint.28.29">getChildAtPoint</a>(in long x, in long y);</code></td>
+  </tr>
+  <tr>
+   <td><code>nsIAccessible <a href="#getChildAt.28.29">getChildAt</a>(in long aChildIndex);</code></td>
+  </tr>
+  <tr>
+   <td><code>nsIAccessible <a href="#getAccessibleToRight.28.29">getAccessibleToRight</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>nsIAccessible <a href="#getAccessibleToLeft.28.29">getAccessibleToLeft</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>nsIAccessible <a href="#getAccessibleAbove.28.29">getAccessibleAbove</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>nsIAccessible <a href="#getAccessibleBelow.28.29">getAccessibleBelow</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>nsIAccessible <a href="#getAccessibleRelated.28.29">getAccessibleRelated</a>(in unsigned long aRelationType);</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="ja/NsIAccessibleRelation">nsIAccessibleRelation</a> <a href="#getRelation.28.29">getRelation</a>(in unsigned long index);</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="ja/NsIArray">nsIArray</a> <a href="#getRelations.28.29">getRelations</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#getBounds.28.29">getBounds</a>(out long x, out long y, out long width, out long height);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#setSelected.28.29">setSelected</a>(in boolean isSelected);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#extendSelection.28.29">extendSelection</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#takeSelection.28.29">takeSelection</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#takeFocus.28.29">takeFocus</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>AString <a href="#getActionName.28.29">getActionName</a>(in PRUint8 index);</code></td>
+  </tr>
+  <tr>
+   <td><code>AString <a href="#getActionDescription.28.29">getActionDescription</a>(in PRUint8 aIndex);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#doAction.28.29">doAction</a>(in PRUint8 index);</code></td>
+  </tr>
+ </tbody>
+</table>
+<p><span id="Attributes"></span></p>
+<h2 id=".E5.B1.9E.E6.80.A7" name=".E5.B1.9E.E6.80.A7">属性</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">属性</td>
+   <td class="header">型</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code id="parent">parent</code></td>
+   <td><code>nsIAccessible</code></td>
+   <td>accessible tree 内の親ノード。</td>
+  </tr>
+  <tr>
+   <td><code id="nextSibling">nextSibling</code></td>
+   <td><code>nsIAccessible</code></td>
+   <td>accessible tree 内の次の兄弟ノード。</td>
+  </tr>
+  <tr>
+   <td><code id="previousSibling">previousSibling</code></td>
+   <td><code>nsIAccessible</code></td>
+   <td>accessible tree 内の前の兄弟ノード。</td>
+  </tr>
+  <tr>
+   <td><code id="firstChild">firstChild</code></td>
+   <td><code>nsIAccessible</code></td>
+   <td>accessible tree 内の最初の子ノード。</td>
+  </tr>
+  <tr>
+   <td><code id="lastChild">lastChild</code></td>
+   <td><code>nsIAccessible</code></td>
+   <td>accessible tree 内の最後の子ノード。</td>
+  </tr>
+  <tr>
+   <td><code id="children">children</code></td>
+   <td><code><a href="ja/NsIArray">nsIArray</a></code></td>
+   <td>この要素の子ノードすべての配列。</td>
+  </tr>
+  <tr>
+   <td><code id="childCount">childCount</code></td>
+   <td><code>long</code></td>
+   <td>accessible 子ノードの数。</td>
+  </tr>
+  <tr>
+   <td><code id="indexInParent">indexInParent</code></td>
+   <td><code>long</code></td>
+   <td>この親に含まれる子ノードのリストの、0 を基点とした accessible の index。または、この accessible が親ノードを持たない場合は <code>-1</code> を返す。</td>
+  </tr>
+  <tr>
+   <td><code id="name">name</code></td>
+   <td><code>AString</code></td>
+   <td>Accessible の名前 -- このノードのメインテキストと同等。</td>
+  </tr>
+  <tr>
+   <td><code id="value">value</code></td>
+   <td><code>AString</code></td>
+   <td>Accessible の値 -- このノードの数量または二次テキストと同等。role 属性を使用するウィジェットは、この値に valuenow 属性の使用を強制することができます。</td>
+  </tr>
+  <tr>
+   <td><code id="description">description</code></td>
+   <td><code>AString</code></td>
+   <td>Accessible の説明 -- このノードに関連付けられた長いテキスト。</td>
+  </tr>
+  <tr>
+   <td><code id="keyboardShortcut">keyboardShortcut</code></td>
+   <td><code>AString</code></td>
+   <td>Alt+D のように accesskey 名のローカライズされた文字列を提供。修飾子はユーザおよびプラットフォームの設定に影響されます。通常は <code>alt+文字</code>、または単にアクセスキーの文字がメニュー項目に使用されます。</td>
+  </tr>
+  <tr>
+   <td><code id="defaultKeyBinding">defaultKeyBinding</code></td>
+   <td><code>AString</code></td>
+   <td>ファイルを開くための <code>Ctrl+O</code> など、既定の動作のためのグローバルキーボードアクセラレータのローカライズされた文字列を提供。</td>
+  </tr>
+  <tr>
+   <td><code id="role">role</code></td>
+   <td><code>unsigned long</code></td>
+   <td>関連付けられた要素の accessible role の数。値はプラットフォームごとに異なります。<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAccessibleRole" title="">nsIAccessibleRole</a></code> 内で定義された <code>ROLE_*</code> 定数を参照してください。
+    <p>これは、<code>finalRole</code> がするように role 属性を考慮に入れません。</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code id="finalRole">finalRole</code></td>
+   <td><code>unsigned long</code></td>
+   <td>accessible role の数。値はプラットフォームごとに異なります。<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAccessibleRole" title="">nsIAccessibleRole</a></code> 内で定義された <code>ROLE_*</code> 定数を参照してください。ウィジェットは、final role を強制するために role 属性を使用することができます。</td>
+  </tr>
+  <tr>
+   <td><code id="help">help</code></td>
+   <td><code>AString</code></td>
+   <td>ノードに関連付けられたヘルプテキスト。</td>
+  </tr>
+  <tr>
+   <td><code id="focusedChild">focusedChild</code></td>
+   <td><code>nsIAccessible</code></td>
+   <td>フォーカスされたノードの accessible 子ノード。</td>
+  </tr>
+  <tr>
+   <td><code id="attributes">attributes</code></td>
+   <td><code><a href="ja/NsIPersistentProperties">nsIPersistentProperties</a></code></td>
+   <td>Accessible の属性。</td>
+  </tr>
+  <tr>
+   <td><code id="relationsCount">relationsCount</code></td>
+   <td><code>unsigned long</code></td>
+   <td>このオブジェクトに関連する accessible の数を返す。</td>
+  </tr>
+  <tr>
+   <td><code id="numActions">numActions</code></td>
+   <td><code>PRUint8</code></td>
+   <td>この accessible に関連付けられた accessible action の数。</td>
+  </tr>
+ </tbody>
+</table>
+<p><span id="Methods"></span></p>
+<h2 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89">メソッド</h2>
+<h3 id="getKeyBindings.28.29" name="getKeyBindings.28.29">getKeyBindings()</h3>
+<p>このメソッドは、与えられた accessible にサポートされた action index のための、グローバルキーボードアクセラレータのローカライズされた文字列を提供します。</p>
+<pre class="eval"> nsIDOMDOMStringList getKeyBindings(
+   in PRUint8 aActionIndex
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0" name=".E5.BC.95.E6.95.B0">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aActionIndex&lt;/tt&gt;</dt>
+ <dd>
+  与えられた action の index。</dd>
+</dl>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4" name=".E6.88.BB.E3.82.8A.E5.80.A4">戻り値</h6>
+<p>グローバルキーボードアクセラレータのローカライズされた文字列の配列を返す。</p>
+<h3 id="getFinalState.28.29" name="getFinalState.28.29">getFinalState()</h3>
+<p>このメソッドは final state を回収します。Accessible state -- ノードの真偽値プロパティについて書かれたビットフィールド。多くの state は、既知の確かな role 属性がサポートする有効なものだけです。</p>
+<pre class="eval"> void getFinalState(
+   out unsigned long aState,
+   out unsigned long aExtraState
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_2" name=".E5.BC.95.E6.95.B0_2">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aState&lt;/tt&gt;</dt>
+ <dd>
+  最初のビットフィールド (参照: <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAccessibleStates" title="">nsIAccessibleStates</a></code> <code>STATE_*</code> constants)。</dd>
+ <dt>
+  &lt;tt&gt;aExtraState&lt;/tt&gt;</dt>
+ <dd>
+  2 番目のビットフィールド (参照: <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAccessibleStates" title="">nsIAccessibleStates</a></code> <code>EXT_STATE_*</code> constants)。</dd>
+</dl>
+<h3 id="groupPosition.28.29" name="groupPosition.28.29">groupPosition()</h3>
+<p>このメソッドはグループ化情報を返します。tree 項目、list 項目、tab パネルの label、radio ボタンなどに使用されます。また、テキストではないオブジェクトの収集にも使用されます。</p>
+<pre class="eval"> void groupPosition(
+   out long aGroupLevel,
+   out long aSimilarItemsInGroup,
+   out long aPositionInGroup
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_3" name=".E5.BC.95.E6.95.B0_3">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aGroupLevel&lt;/tt&gt;</dt>
+ <dd>
+  1 を基点とする。ARIA <code>level</code> プロパティと同様。</dd>
+ <dt>
+  &lt;tt&gt;aSimilarItemsInGroup&lt;/tt&gt;</dt>
+ <dd>
+  現在の項目を含み、1 を基点とする。ARIA <code>setsize</code> プロパティと同様。</dd>
+ <dt>
+  &lt;tt&gt;aPositionInGroup&lt;/tt&gt;</dt>
+ <dd>
+  1 を基点とする。ARIA <code>posinset</code> プロパティと同様。</dd>
+</dl>
+<h3 id="getChildAtPoint.28.29" name="getChildAtPoint.28.29">getChildAtPoint()</h3>
+<p>このメソッドは、スクリーンピクセルの (x, y) 座標を含む、accessible の子ノードを返します。</p>
+<p>この点の位置が現在の accessible 内で子ノードの外にある場合は、現在の accessible が返されます。</p>
+<p>この点の位置が現在の accessible または 子ノード内のどちらにもない場合は、<code>NULL</code> が返されます。</p>
+<pre class="eval"> nsIAccessible getChildAtPoint(
+   in long x,
+   in long y
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_4" name=".E5.BC.95.E6.95.B0_4">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;x&lt;/tt&gt;</dt>
+ <dd>
+  Accessible の X 座標。</dd>
+ <dt>
+  &lt;tt&gt;y&lt;/tt&gt;</dt>
+ <dd>
+  Accessible の Y 座標。</dd>
+</dl>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4_2" name=".E6.88.BB.E3.82.8A.E5.80.A4_2">戻り値</h6>
+<p>(x, y) 座標で与えられた accessible の子ノードを返す。</p>
+<h3 id="getChildAt.28.29" name="getChildAt.28.29">getChildAt()</h3>
+<p>このメソッドは、0 を基点とした index または 0 より小さい場合は最後の子ノードを使用して、accessible の N 番目の子ノードを返します。</p>
+<pre class="eval"> nsIAccessible getChildAt(
+   in long aChildIndex
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_5" name=".E5.BC.95.E6.95.B0_5">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aChildIndex&lt;/tt&gt;</dt>
+ <dd>
+  N 番目の子ノードの index。</dd>
+</dl>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4_3" name=".E6.88.BB.E3.82.8A.E5.80.A4_3">戻り値</h6>
+<p>0 を基点とした index または 0 より小さい場合は最後の子ノードを使用して、accessible の N 番目の子ノードを返す。</p>
+<h3 id="getAccessibleToRight.28.29" name="getAccessibleToRight.28.29">getAccessibleToRight()</h3>
+<p>このメソッドは、このノードの右側に配置された accessible ノードを返します。</p>
+<pre class="eval"> nsIAccessible getAccessibleToRight();
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_6" name=".E5.BC.95.E6.95.B0_6">引数</h6>
+<p>なし。</p>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4_4" name=".E6.88.BB.E3.82.8A.E5.80.A4_4">戻り値</h6>
+<p>このノードの右側に配置された accessible ノードを返す。</p>
+<h3 id="getAccessibleToLeft.28.29" name="getAccessibleToLeft.28.29">getAccessibleToLeft()</h3>
+<p>このメソッドは、このノードの左側に配置された accessible ノードを返します。</p>
+<pre class="eval"> nsIAccessible getAccessibleToLeft();
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_7" name=".E5.BC.95.E6.95.B0_7">引数</h6>
+<p>なし。</p>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4_5" name=".E6.88.BB.E3.82.8A.E5.80.A4_5">戻り値</h6>
+<p>このノードの左側に配置された accessible ノードを返す。</p>
+<h3 id="getAccessibleAbove.28.29" name="getAccessibleAbove.28.29">getAccessibleAbove()</h3>
+<p>このメソッドは、このノードの上側に配置された accessible ノードを返します。</p>
+<pre class="eval"> nsIAccessible getAccessibleAbove();
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_8" name=".E5.BC.95.E6.95.B0_8">引数</h6>
+<p>なし。</p>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4_6" name=".E6.88.BB.E3.82.8A.E5.80.A4_6">戻り値</h6>
+<p>このノードの上側に配置された accessible ノードを返す。</p>
+<h3 id="getAccessibleBelow.28.29" name="getAccessibleBelow.28.29">getAccessibleBelow()</h3>
+<p>このメソッドは、このノードの下側に配置された accessible ノードを返します。</p>
+<pre class="eval"> nsIAccessible getAccessibleBelow();
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_9" name=".E5.BC.95.E6.95.B0_9">引数</h6>
+<p>なし。</p>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4_7" name=".E6.88.BB.E3.82.8A.E5.80.A4_7">戻り値</h6>
+<p>このノードの下側に配置された accessible ノードを返す。</p>
+<h3 id="getAccessibleRelated.28.29" name="getAccessibleRelated.28.29">getAccessibleRelated()</h3>
+<p>このメソッドは、与えられた relation type (参照: <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAccessibleRelation" title="">nsIAccessibleRelation</a></code> で定義された定数) によって、これに関連する accessible を返します。</p>
+<pre class="eval"> nsIAccessible getAccessibleRelated(
+   in unsigned long aRelationType
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_10" name=".E5.BC.95.E6.95.B0_10">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aRelationType&lt;/tt&gt;</dt>
+ <dd>
+  accessible 間の relation type。</dd>
+</dl>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4_8" name=".E6.88.BB.E3.82.8A.E5.80.A4_8">戻り値</h6>
+<p>与えられた relation type によって提供された accessible に関連する accessible を返す。</p>
+<h3 id="getRelation.28.29" name="getRelation.28.29">getRelation()</h3>
+<p>このメソッドは、このオブジェクトに対する accessible relation を一つ返します。</p>
+<pre class="eval"> nsIAccessibleRelation getRelation(
+   in unsigned long index
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_11" name=".E5.BC.95.E6.95.B0_11">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;index&lt;/tt&gt;</dt>
+ <dd>
+  回収される relation の index。</dd>
+</dl>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4_9" name=".E6.88.BB.E3.82.8A.E5.80.A4_9">戻り値</h6>
+<p>このオブジェクトに対する accessible relation を一つ返す。</p>
+<h3 id="getRelations.28.29" name="getRelations.28.29">getRelations()</h3>
+<p>このメソッドは、このオブジェクトに対する複数の accessible relations を返します。</p>
+<pre class="eval"> nsIArray getRelations();
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_12" name=".E5.BC.95.E6.95.B0_12">引数</h6>
+<p>なし。</p>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4_10" name=".E6.88.BB.E3.82.8A.E5.80.A4_10">戻り値</h6>
+<p>このオブジェクトに対する複数の accessible relations を返す。</p>
+<h3 id="getBounds.28.29" name="getBounds.28.29">getBounds()</h3>
+<p>このメソッドは、画面上の accessible の (x および y) 座標ならびに accessible の width および height を返します。</p>
+<pre class="eval"> void getBounds(
+   out long x,
+   out long y,
+   out long width,
+   out long height
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_13" name=".E5.BC.95.E6.95.B0_13">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;x&lt;/tt&gt;</dt>
+ <dd>
+  Accessible の X 座標。</dd>
+ <dt>
+  &lt;tt&gt;y&lt;/tt&gt;</dt>
+ <dd>
+  Accessible の Y 座標。</dd>
+ <dt>
+  &lt;tt&gt;width&lt;/tt&gt;</dt>
+ <dd>
+  Accessible の幅。</dd>
+ <dt>
+  &lt;tt&gt;height&lt;/tt&gt;</dt>
+ <dd>
+  Accessible の高さ。</dd>
+</dl>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4_11" name=".E6.88.BB.E3.82.8A.E5.80.A4_11">戻り値</h6>
+<p>画面上の accessible の (x および y) 座標ならびに accessible の width および height を返す。</p>
+<h3 id="setSelected.28.29" name="setSelected.28.29">setSelected()</h3>
+<p>このメソッドは、この accessible を現在選択されたものに追加、または削除します。</p>
+<pre class="eval"> void setSelected(
+   in boolean isSelected
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_14" name=".E5.BC.95.E6.95.B0_14">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;isSelected&lt;/tt&gt;</dt>
+ <dd>
+  現在選択されたもの。</dd>
+</dl>
+<h3 id="extendSelection.28.29" name="extendSelection.28.29">extendSelection()</h3>
+<p>このメソッドは、現在の accessible アンカーノードからこの accessible へ、現在選択されたものを広げます。</p>
+<pre class="eval"> void extendSelection();
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_15" name=".E5.BC.95.E6.95.B0_15">引数</h6>
+<p>なし。</p>
+<h3 id="takeSelection.28.29" name="takeSelection.28.29">takeSelection()</h3>
+<p>このメソッドは、この accessible ノードのみを選択します。</p>
+<pre class="eval"> void takeSelection();
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_16" name=".E5.BC.95.E6.95.B0_16">引数</h6>
+<p>なし。</p>
+<h3 id="takeFocus.28.29" name="takeFocus.28.29">takeFocus()</h3>
+<p>このメソッドは、この accessible ノードにフォーカスします。</p>
+<p><code>STATE_FOCUSABLE</code> の状態は、このノードが普通にフォーカス可能かどうか示します。このノードがフォーカス可能かどうかを決めるのは、呼び出し側に責任があります。通常、フォーカス不能なノード (table など) 上の <code>accTakeFocus</code> はそのノードにフォーカスを設定していますが、通常は、ほとんどのスタイルシートで視覚的に示されません。</p>
+<pre class="eval"> void takeFocus();
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_17" name=".E5.BC.95.E6.95.B0_17">引数</h6>
+<p>なし。</p>
+<h3 id="getActionName.28.29" name="getActionName.28.29">getActionName()</h3>
+<p>このメソッドは、0 を基点とした index で accessible action の name を取得します。</p>
+<pre class="eval"> AString getActionName(
+   in PRUint8 index
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_18" name=".E5.BC.95.E6.95.B0_18">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;index&lt;/tt&gt;</dt>
+ <dd>
+  0 を基点とする index。</dd>
+</dl>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4_12" name=".E6.88.BB.E3.82.8A.E5.80.A4_12">戻り値</h6>
+<p>accessible action の name を返す。</p>
+<h3 id="getActionDescription.28.29" name="getActionDescription.28.29">getActionDescription()</h3>
+<p>このメソッドは、0 を基点とした index で accessible action の description を取得します。</p>
+<pre class="eval"> AString getActionDescription(
+   in PRUint8 aIndex
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_19" name=".E5.BC.95.E6.95.B0_19">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aIndex&lt;/tt&gt;</dt>
+ <dd>
+  0 を基点とする index。</dd>
+</dl>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4_13" name=".E6.88.BB.E3.82.8A.E5.80.A4_13">戻り値</h6>
+<p>accessible action の description を返す。</p>
+<h3 id="doAction.28.29" name="doAction.28.29">doAction()</h3>
+<p>このメソッドは、0 を基点とした index で accessible action を実行します。Action 番号 <code>0</code> はデフォルトの action です。</p>
+<pre class="eval"> void doAction(
+   in PRUint8 index
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_20" name=".E5.BC.95.E6.95.B0_20">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;index&lt;/tt&gt;</dt>
+ <dd>
+  0 を基点とする index。</dd>
+</dl>
+<p><span id="See_also"></span></p>
+<h3 id=".E5.8F.82.E7.85.A7" name=".E5.8F.82.E7.85.A7">参照</h3>
+<ul>
+ <li><a href="ja/Accessibility">Accessibility</a></li>
+ <li><a href="ja/NsIPersistentProperties">nsIPersistentProperties</a></li>
+ <li><a href="ja/NsIDOMDOMStringList">nsIDOMDOMStringList</a></li>
+ <li><a href="ja/NsIAccessibleRelation">nsIAccessibleRelation</a></li>
+</ul>
+<div class="noinclude">
+  </div>

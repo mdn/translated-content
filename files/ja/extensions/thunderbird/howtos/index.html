@@ -1,0 +1,127 @@
+---
+title: Thunderbird HowTos
+slug: Extensions/Thunderbird/HowTos
+tags:
+  - Add-ons
+  - Extensions
+  - NeedsTranslation
+  - TopicStub
+  - thunderbird
+  - 要更新
+translation_of: Mozilla/Thunderbird/Thunderbird_extensions/HowTos
+---
+<p>Please add questions or answers to this page so that other people can benefit from your work. Also, you will see that there are many topics for which there is a question, but no answer. <strong>Please help</strong> by adding an answer! (Adding another question helps too!)</p>
+
+<p>To get started creating the most basic extension framework, please see <a href="/ja/docs/Extensions/Thunderbird/Building_a_Thunderbird_extension" title="Building a Thunderbird extension">Building a Thunderbird Extension</a>.</p>
+
+<p>This page is organized into two parts: common TB use cases and common techniques. This provides a quick way to get you started. Both parts are about accomplishing things programatically, but these parts split everything into things users do that you would like to improve, and things you need to do to accomplish that goal.</p>
+
+<p>See also "<a href="/ja/docs/Extensions/Thunderbird/An_overview_of_the_Thunderbird_interface" title="Extensions/Thunderbird/An overview of the Thunderbird interface">An overview of Thunderbird components</a>". Many of the components described on that page have links to related examples.</p>
+
+<h2 id="Part_1.3A_Common_Thunderbird_Use_Cases" name="Part_1.3A_Common_Thunderbird_Use_Cases">Part 1: Common Thunderbird Use Cases</h2>
+
+<p>Each of the pages listed in this section contains a number of related topics. For example, the "Compose New Message" page contains sections that describe how to open a new message window, modify a message body, etc.</p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr style="vertical-align: top;">
+   <td>
+    <h3 id="Access_address_book" name="Access_address_book"><a href="/ja/docs/Thunderbird/Address_Book_Examples" title="https://developer.mozilla.org/En/Address_Book_Examples">Access address book</a></h3>
+
+    <ul>
+     <li><a href="/ja/docs/Thunderbird/Address_Book_Examples#How_do_I_get_all_address_books.3f" title="Address Book Examples#How do I get all address books.3f">Get all address books</a></li>
+     <li><a href="/ja/docs/Thunderbird/Address_Book_Examples#How_do_I_get_one_address_book.3f" title="Address Book Examples#How do I get one address book.3f">Get one address book</a></li>
+     <li><a href="/ja/docs/Thunderbird/Address_Book_Examples#How_do_I_search_for_a_particular_contact_property_%28name.2c_email%29.3f" title="Address Book Examples#How do I search for a particular contact property (name.2c email).3f">Search for a particular contact property (name, email)</a></li>
+     <li><a href="/ja/docs/Thunderbird/Address_Book_Examples#How_do_I_search_for_multiple_contacts.3f" title="Address Book Examples#How do I search for multiple contacts.3f">Search for multiple contacts</a></li>
+     <li><a href="/ja/docs/Thunderbird/Address_Book_Examples#How_do_I_add.2fedit.2fdelete_contacts.3f" title="Address Book Examples#How do I add.2fedit.2fdelete contacts.3f">Add / edit / Delete contacts</a></li>
+     <li><a href="/ja/docs/Thunderbird/Address_Book_Examples#How_do_I_add_and_use_my_own_properties.3f" title="Address Book Examples#How do I add and use my own properties.3f">Add and use custom properties</a></li>
+     <li><a href="/ja/docs/Thunderbird/Address_Book_Examples#How_do_I_add.2fedit.2fdelete_mailing_lists.3f" title="Address Book Examples#How do I add.2fedit.2fdelete mailing lists.3f">Add / edit / delete mailing lists</a></li>
+     <li><a href="/ja/docs/Thunderbird/Address_Book_Examples#How_do_I_display_properties_dialogs_to_the_user.3f" title="Address Book Examples#How do I display properties dialogs to the user.3f">Display properties dialogs to the user</a></li>
+     <li><a href="/ja/docs/Thunderbird/Address_Book_Examples#How_do_I_set_up_my_own_address_book.3f" title="Address Book Examples#How do I set up my own address book.3f">Set up custom address book</a></li>
+     <li><a href="/ja/docs/Thunderbird/Address_Book_Examples#How_do_I.c2.a0set_up_autocomplete_to_use_the_address_book.3f" title="Address Book Examples#How do I.c2.a0set up autocomplete to use the address book.3f">Set up auto-complete to use the address book</a></li>
+    </ul>
+
+    <h3 id="Compose_new_messages" name="Compose_new_messages"><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/Compose_New_Message" title="Extensions/Thunderbird/HowTos/Common Thunderbird Use Cases/Compose New Message">Compose new messages</a></h3>
+
+    <ul>
+     <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/Compose_New_Message#Open_New_Message_Window" rel="internal">Open New Message Window</a></li>
+     <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/Compose_New_Message#Modify_Recipient_List" rel="internal">Modify Recipient List</a> <strong>TODO</strong></li>
+     <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/Compose_New_Message#Modify_Header" rel="internal">Modify Header</a></li>
+     <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/Compose_New_Message#Add_Header" rel="internal">Add Header</a></li>
+     <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/Compose_New_Message#Modify_Message_Body" rel="internal">Modify Message Body</a></li>
+     <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/Compose_New_Message#Intercept_Outgoing_Message" rel="internal">Intercept Outgoing Message</a></li>
+     <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/Compose_New_Message#Get_Access_to_the_Compose_Window_before_the_Editing_is_Started" rel="internal">Get Access to the Compose Window before the Editing is Started</a></li>
+    </ul>
+   </td>
+   <td>
+    <h3 id="Folders_and_messages" name="Folders_and_messages"><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/Open_Folder" title="Extensions/Thunderbird/HowTos/Common Thunderbird Use Cases/Open Folder">Folders and messages</a></h3>
+
+    <ul>
+     <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/Open_Folder#Perform_Operation_on_Folder" rel="internal">Perform Operation on Folder</a></li>
+     <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/Open_Folder#Determine_Selected_Folder" rel="internal">Determine Selected Folder</a></li>
+     <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/Open_Folder#Check_for_New_Mail" rel="internal">Check for New Mail</a> <strong>TODO</strong></li>
+     <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/Open_Folder#Watch_for_New_Mail" rel="internal">Watch for New Mail</a></li>
+     <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/Open_Folder#List_Subfolders" rel="internal">List Subfolder</a></li>
+     <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/Open_Folder#List_Messages" rel="internal">List Message</a></li>
+     <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/Open_Folder#Select_Messages" rel="internal">Select Messages</a></li>
+     <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/Open_Folder#Inspect_Selected_Messages" rel="internal">Inspect Selected Messages</a></li>
+     <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/Open_Folder#Check_if_a_message_is_a_Feed_Item" title="Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/Open_Folder#Check_if_a_message_is_a_Feed_Item">Check if a Message is a Feed Item</a></li>
+     <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/Open_Folder#Move_Selected_Messages" rel="internal">Move Selected Message</a></li>
+     <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/Open_Folder#Copy_Selected_Messages" rel="internal">Copy Selected Message</a></li>
+    </ul>
+
+    <h3 id="View_message" name="View_message"><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/View_Message" title="Extensions/Thunderbird/HowTos/Common Thunderbird Use Cases/View Message">View message</a></h3>
+
+    <ul>
+     <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/View_Message#List_Attachments" rel="internal">List Attachments</a></li>
+     <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/View_Message#Read_Attachment" rel="internal">Read Attachment</a></li>
+     <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/View_Message#Save_Attachment" rel="internal">Save Attachment</a></li>
+     <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/View_Message#Access_Message" rel="internal">Access Message</a></li>
+     <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/View_Message#Get_Message_Body_by_Header" rel="internal">Get Message Body by Header</a></li>
+     <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/View_Message#Get_Message_Header_by_URI.2fURL" rel="internal">Get Message Header by URI/URL</a></li>
+     <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/View_Message#section_8" title="Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/View_Message#section_8">Get MIME Headers for any message</a></li>
+     <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/View_Message#Search_Messages" title="Extensions/Thunderbird/HowTos/Common Thunderbird Use Cases/View Message#Search Messages">Search Messages</a></li>
+     <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/View_Message#section_8" title="https://developer.mozilla.org/en/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/View_Message#section_8">Display a message yourself using &lt;iframe&gt;s</a></li>
+    </ul>
+
+    <h3 id="Reply_to_message" name="Reply_to_message"><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/Reply_to_Message" title="Extensions/Thunderbird/HowTos/Common Thunderbird Use Cases/Reply to Message">Reply to message</a></h3>
+
+    <ul>
+     <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/Reply_to_Message#Modify_Quoted_Message_%28before_normal_composition%29" rel="internal" title="Extensions/Thunderbird/HowTos/Common Thunderbird Use Cases/Reply to Message#Modify Quoted Message (before normal composition)">Modify Quoted Message (before normal composition)</a> <strong>TODO</strong></li>
+     <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/Reply_to_Message#section_1" title="https://developer.mozilla.org/en/Extensions/Thunderbird/HowTos/Common_Thunderbird_Use_Cases/Reply_to_Message#section_1">Reply to a given message, reply to all, forward it, reply to list, and all variants</a></li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Part_2.3A_Common_Thunderbird_Extension_Techniques" name="Part_2.3A_Common_Thunderbird_Extension_Techniques">Part 2: <a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Extension_Techniques" title="Extensions/Thunderbird/HowTos/Common Thunderbird Extension Techniques">Common Thunderbird Extension Techniques</a></h2>
+
+<div class="wiki-tree">
+<ul>
+ <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Extension_Techniques/Access_StringBundle_from_Overlay" rel="internal" title="Extensions/Thunderbird/HowTos/Common_Thunderbird_Extension_Techniques/Access_StringBundle_from_Overlay">Access StringBundle from Overlay</a></li>
+ <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Extension_Techniques/Access_Thunderbird_Window_Areas" rel="internal" title="Extensions/Thunderbird/HowTos/Common_Thunderbird_Extension_Techniques/Access_Thunderbird_Window_Areas">Access Thunderbird Window Areas</a></li>
+ <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Extension_Techniques/Access_Window" rel="internal" title="Extensions/Thunderbird/HowTos/Common_Thunderbird_Extension_Techniques/Access_Window">Access Window</a> <strong>NEW</strong>!</li>
+ <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Extension_Techniques/Access_Window_Area" rel="internal" title="Extensions/Thunderbird/HowTos/Common_Thunderbird_Extension_Techniques/Access_Window_Area">Access Window Area</a> <strong>TODO</strong></li>
+ <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Extension_Techniques/Add_Toolbar_Button" rel="internal" title="Extensions/Thunderbird/HowTos/Common_Thunderbird_Extension_Techniques/Add_Toolbar_Button">Add Toolbar Button</a></li>
+ <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Extension_Techniques/Add_New_Tab" rel="internal" title="Extensions/Thunderbird/HowTos/Common_Thunderbird_Extension_Techniques/Add_New_Tab">Add New Tab</a></li>
+ <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Extension_Techniques/Add_Option_to_Context_Menu" rel="internal" title="Extensions/Thunderbird/HowTos/Common_Thunderbird_Extension_Techniques/Add_Option_to_Context_Menu">Add Option to Context Menu</a> <strong>TODO</strong></li>
+ <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Extension_Techniques/Create_Custom_Column" rel="internal" title="Extensions/Thunderbird/HowTos/Common_Thunderbird_Extension_Techniques/Create_Custom_Column">Create Custom Column</a></li>
+ <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Extension_Techniques/Detect_Opening_Folder" rel="internal" title="Extensions/Thunderbird/HowTos/Common_Thunderbird_Extension_Techniques/Detect_Opening_Folder">Detect Opening Folder</a></li>
+ <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Extension_Techniques/Filter_Incoming_Mail" rel="internal" title="Extensions/Thunderbird/HowTos/Common_Thunderbird_Extension_Techniques/Filter_Incoming_Mail">Filter Incoming Mail</a> <strong>NEW!</strong></li>
+ <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Extension_Techniques/Get_Thunderbird_version" rel="internal" title="Extensions/Thunderbird/HowTos/Common_Thunderbird_Extension_Techniques/Get_Thunderbird_version">Get Thunderbird version</a></li>
+ <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Extension_Techniques/Modify_Folder_Pane_Display" rel="internal" title="Extensions/Thunderbird/HowTos/Common_Thunderbird_Extension_Techniques/Modify_Folder_Pane_Display">Modify Folder Pane Display</a> <strong>TODO</strong></li>
+ <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Extension_Techniques/Modify_Message_List" rel="internal" title="Extensions/Thunderbird/HowTos/Common_Thunderbird_Extension_Techniques/Modify_Message_List">Modify Message List</a> <strong>TODO</strong></li>
+ <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Common_Thunderbird_Extension_Techniques/Use_SQLite" rel="internal" title="Extensions/Thunderbird/HowTos/Common_Thunderbird_Extension_Techniques/Use_SQLite">Use SQLite</a></li>
+</ul>
+
+<h3 id="Activity_Manager" name="Activity_Manager">Activity Manager</h3>
+</div>
+
+<ul>
+ <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Activity_Manager#Showing_a_user-defined_activity_in_the_Activity_Manager_window" rel="internal"><u>Show a user-defined activity in the Activity Manager window</u></a> <strong>NEW</strong>!</li>
+ <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Activity_Manager#Showing_a_user-defined_activity_with_cancel_capability_%28JavaScript%29" rel="internal">Show a user-defined activity with cancel capability (JavaScript)</a> in the Activity Manager window <strong>NEW</strong>!</li>
+ <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Activity_Manager#Showing_a_user-defined_activity_with_undo_capability_%28C.2b.2b%29" rel="internal">Show a user-defined activity with undo capability (C++)</a> in the Activity Manager window <strong>NEW</strong>!</li>
+ <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Activity_Manager#Adding_an_activity_with_a_custom_context_type" rel="internal"><u>Add an activity with a custom context type</u></a> in the Activity Manager window <strong>NEW</strong>!</li>
+ <li><a href="/ja/docs/Extensions/Thunderbird/HowTos/Activity_Manager#Adding_a_fully_customized_activity" rel="internal">Add a fully customized activity</a> in the Activity Manager window <strong>NEW</strong>!</li>
+</ul>

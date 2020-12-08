@@ -1,0 +1,96 @@
+---
+title: 「開く」「保存」ダイアログ
+slug: Archive/Mozilla/XUL/Tutorial/Open_and_Save_Dialogs
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+  - 要更新
+translation_of: Archive/Mozilla/XUL/Tutorial/Open_and_Save_Dialogs
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Creating_Dialogs" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Creating_a_Wizard">次のページ  »</a></p>
+</div>
+
+<p>一般的に使われる種類のダイアログのひとつに、利用者がファイルを開いたり保存したりする際に利用されるファイル選択ダイアログがあります。</p>
+
+<h3 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.83.94.E3.83.83.E3.82.AB.E3.83.BC" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.83.94.E3.83.83.E3.82.AB.E3.83.BC">ファイルピッカー</h3>
+
+<p>利用者がファイルを選択するために使用するダイアログは、ファイルピッカー (<span style="color: green;">file picker</span>) と呼ばれています。 これは、「開く」と「保存」メニューコマンドでよく使われますが、 利用者がファイルを選択する必要のある場所ならばどこでも使用することが可能です。 ファイルピッカーの実装は、<a href="/ja/docs/XPCOM">XPCOM</a> の <a href="/ja/docs/NsIFilePicker">nsIFilePicker</a> インタフェースから利用できます。</p>
+
+<div class="note">ファイルピッカーは、chrome URL からのみ利用可能なことに注意してください。</div>
+
+<p>ファイルピッカーは、以下の 3 つのモードで使用できます。</p>
+
+<ul>
+ <li><strong><span style="border-bottom: 1px dashed green;" title="Open">開く</span></strong> - 利用者に、開くファイルの選択を求めます。</li>
+ <li><strong><span style="border-bottom: 1px dashed green;" title="Get Folder">フォルダ選択</span></strong> - 利用者に、フォルダ (ディレクトリ) の選択を求めます。</li>
+ <li><strong><span style="border-bottom: 1px dashed green;" title="Save">保存</span></strong> - 利用者に、保存するファイル名を選択するよう求めます。</li>
+</ul>
+
+<p>ダイアログの外観は、モードによって異なり、 プラットフォームによっても変化することになります。 また、利用者がダイアログで選択したファイルやフォルダは、アプリケーションから読み書きすることが可能です。</p>
+
+<p>ファイルピッカーのインタフェースである <a href="/ja/docs/NsIFilePicker">nsIFilePicker</a> は、ダイアログを 3 つのモードのいずれかで表示する機能を担当しています。 このインタフェースを使用して、ダイアログにいくつかの機能を設定することが可能です。 また、ダイアログが閉じられるときの処理では、このインタフェースのプロパティから、選択されたファイルを取得することが可能です。</p>
+
+<h4 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.83.94.E3.83.83.E3.82.AB.E3.83.BC.E3.81.AE.E7.94.9F.E6.88.90" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.83.94.E3.83.83.E3.82.AB.E3.83.BC.E3.81.AE.E7.94.9F.E6.88.90">ファイルピッカーの生成</h4>
+
+<p>最初に、ファイルピッカーコンポーネントを作成して、初期化する必要があります。</p>
+
+<pre>var nsIFilePicker = Components.interfaces.nsIFilePicker;
+var fp = Components.classes["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
+fp.init(window, "Select a File", nsIFilePicker.modeOpen);
+</pre>
+
+<p>まず、新しいファイルピッカーオブジェクトを作成して、変数 <code>fp</code> に保存します。 次に <code>init</code> 関数を使用して、ファイルピッカーの初期化を行います。 この関数は、引数として、ダイアログの開き元のウィンドウ、ダイアログのタイトル、モードの 3 つの引数を取ります。 この例の場合、モードは <code>modeOpen</code> で、これは「開く」用のダイアログにするために使用します。 また、これ以外に <code>modeGetFolder</code> と <code>modeSave</code> の 2 つのモードも使用することが可能です。 なお、これらのモードは、<code>nsIFilePicker</code> インタフェースの定数として定義されています。</p>
+
+<h4 id=".E3.83.87.E3.83.95.E3.82.A9.E3.83.AB.E3.83.88.E3.83.87.E3.82.A3.E3.83.AC.E3.82.AF.E3.83.88.E3.83.AA.E3.81.A8.E3.83.95.E3.82.A3.E3.83.AB.E3.82.BF" name=".E3.83.87.E3.83.95.E3.82.A9.E3.83.AB.E3.83.88.E3.83.87.E3.82.A3.E3.83.AC.E3.82.AF.E3.83.88.E3.83.AA.E3.81.A8.E3.83.95.E3.82.A3.E3.83.AB.E3.82.BF">デフォルトディレクトリとフィルタ</h4>
+
+<p>ダイアログを表示する前に可能な設定が 2 つあります。</p>
+
+<ul>
+ <li>1 つ目はデフォルトディレクトリで、これによってダイアログが開かれたときに表示されるディレクトリを指定します。</li>
+ <li>2 つ目はフィルタで、これによってダイアログに表示するべきファイル種別のリストを指定します。これを使うことで、例えば、HTML ファイル以外を非表示にすることが可能です。</li>
+</ul>
+
+<p>デフォルトディレクトリは、ファイルピッカーオブジェクトの <code>displayDirectory</code> プロパティにディレクトリを設定することで指定できます。 このときのディレクトリは、<code><a href="/ja/docs/NsILocalFile">nsILocalFile</a></code> オブジェクトで指定する必要があります。 なお、設定を行わない場合には、デフォルトとして適当なものが選択されることになります。 また、フィルタを追加する場合は、<code>appendFilters()</code> 関数を呼び出すことで、 表示させたいファイル種別の設定を行います。</p>
+
+<pre>fp.appendFilters(nsIFilePicker.filterHTML | nsIFilePicker.filterImages);
+fp.appendFilters(nsIFilePicker.filterText | nsIFilePicker.filterAll);
+</pre>
+
+<ul>
+ <li>最初の例は、HTML と画像ファイルのためのフィルタを追加します。この場合、利用者は、この種類のファイルからしか選択できません。このときの利用者の操作手順は、プラットフォームごとに固有になります。例えば、いくつかのプラットフォームでは、利用者には個々のフィルタ項目が分けて提示されることになるため、利用者は、HTML ファイル群と画像ファイル群のどちらを利用するかを選ぶことが可能です。</li>
+ <li>2 番目の例は、テキストファイルとすべてのファイルのためのフィルタを追加します。これによって、利用者はテキストファイルだけを表示するか、すべてのファイルを表示するかを選択することができます。</li>
+</ul>
+
+<p>また、フィルタには、 XML ファイルのための <code>filterXML</code> と、XUL ファイルのための <code>filterXUL</code> も使用することが可能です。 さらに、フィルタ対象のファイルを独自に指定したい場合には、以下のように <code>appendFilter()</code> 関数を使用することが可能です。</p>
+
+<pre>fp.appendFilter("Audio Files","*.wav; *.mp3");
+</pre>
+
+<p>この行は、Wave と MP3 のオーディオファイルのためのフィルタを追加します。 最初の引数はファイルの種類を示すタイトルで、2 番目はファイルマスクのリストをセミコロンで区切って指定します。 必要ならば、リストに指定するマスクは、増やしても減らしても構いません。 また別のフィルタを追加するために、必要なだけ何度でも <code>appendFilter()</code> を呼び出すことが可能です。 フィルタの優先度は追加された順番によって決定され、 通常は最初に追加したものがデフォルトで選択された状態になります。</p>
+
+<h4 id=".E9.81.B8.E6.8A.9E.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AE.E5.8F.96.E5.BE.97" name=".E9.81.B8.E6.8A.9E.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AE.E5.8F.96.E5.BE.97">選択ファイルの取得</h4>
+
+<p>最後に <code>show()</code> 関数を呼び出すことで、ダイアログが表示されます。 この関数は引数を取りませんが、返り値には利用者が選択した操作を示すステータスコードが返されます。 なお、この関数を呼び出した場合、利用者がファイル選択を行うまで処理が戻らないことに注意してください。 また、この関数の返り値は、以下の 3 つの定数のうちのどれかになります。</p>
+
+<ul>
+ <li><strong>returnOK</strong> - 利用者によってファイルの選択が行われ、OK が押されました。このとき利用者が選択したファイルは、ファイルピッカーの <code>file</code> プロパティに格納されます。</li>
+ <li><strong>returnCancel</strong> - 利用者によって Cancel が押されました。</li>
+ <li><strong>returnReplace</strong> - 保存モードのときに、利用者が既存のファイルを置き換えることを選択したことを示しています。(利用者が新規のファイル名を入力したときには、returnOK が返されます)</li>
+</ul>
+
+<p>このため、ファイルピッカーの <code>file</code> プロパティからファイルオブジェクトの取得を行う場合には、 以下のように、まず返り値のチェックを行う必要があります。</p>
+
+<pre>var res = fp.show();
+if (res == nsIFilePicker.returnOK){
+  var thefile = fp.file;
+  // --- do something with the file here ---
+}
+</pre>
+
+<p>次のセクションでは、ウィザードの作り方について見ていきます。</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Creating_Dialogs" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Creating_a_Wizard">次のページ  »</a></p>
+</div>

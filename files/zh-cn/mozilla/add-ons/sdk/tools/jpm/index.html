@@ -1,0 +1,652 @@
+---
+title: jpm
+slug: Mozilla/Add-ons/SDK/Tools/jpm
+tags:
+  - Add-on SDK
+  - JPM
+translation_of: Archive/Add-ons/Add-on_SDK/Tools/jpm
+---
+<p>{{AddonSidebar}}</p>
+
+<div class="note">
+<p>你能在Firefox 38或更高的版本中使用jpm。</p>
+
+<p>本文为jpm参考。</p>
+</div>
+
+<p><span class="seoSummary"><a href="/en-US/Add-ons/SDK/Tools/cfx">cfx</a> 的Node版本允许你测试、运行以及打包扩展。</span></p>
+
+<p>你也可以阅读 <a href="/en-US/Add-ons/SDK/Tutorials/Getting_Started_%28jpm%29">jpm教程</a> 开始学习。</p>
+
+<p>jpm 用法:</p>
+
+<pre class="brush: bash">jpm [command] [options]
+</pre>
+
+<p>jpm支持以下全局参数:</p>
+
+<pre class="brush: bash">-h, --help        - 显示帮助信息并退出
+-V, --version     - 打印出jpm版本号
+--addon-dir       - 源代码目录，默认为当前目录
+</pre>
+
+<h2 id="安装">安装</h2>
+
+<p>jpm发布在node包管理器 <a class="external external-icon" href="https://www.npmjs.org/package/jpm">npm</a> 上。</p>
+
+<h3 id="安装npm">安装npm</h3>
+
+<p>有两种方法来获取npm。</p>
+
+<ul>
+ <li>访问 <a href="http://nodejs.org/">nodejs.org</a> 下载并安装Node.js。Node.js 包含npm。</li>
+ <li>或者，如果你的系统有像 APT 这种包管理器，就用它来安装。例如，在 Ubuntu 或者 Debian 的终端窗口里，输入<code>sudo apt-get install nodejs nodejs-legacy npm</code></li>
+</ul>
+
+<p>要测试安装是否成功，运行：</p>
+
+<pre class="brush: bash">​/usr/bin/env node -v</pre>
+
+<p>如果出现错误提示  <em>/usr/bin/env: node: No such file or directory</em> 并且你的 nodejs 是通过包管理的方式安装的，那你的 nodejs 很有可能安装为其它的名字。为了保证jpm的兼容，PATH之中必须是以node为可执行文件名的。在Debian和Ubuntu系统上，你可以通过安装兼容包nodejs-legacy来解决这个问题：</p>
+
+<pre class="brush: bash"><code>sudo apt-get install nodejs-legacy</code></pre>
+
+<p><font face="Consolas, Liberation Mono, Courier, monospace">在其它的发行版中，你或许必须手动创建一共本地符号链接：​</font></p>
+
+<pre><code>sudo ln -s "$(which nodejs)" /usr/local/bin/node</code></pre>
+
+<h3 id="安装jpm"><code>安装jpm</code></h3>
+
+<p>在你安装好npm并且将其加入你的PATH中后，你可以像安装其他npm包一样来安装jpm。</p>
+
+<h4 id="全局安装jpm">全局安装jpm</h4>
+
+<pre><code>npm install jpm --global</code></pre>
+
+<p>取决于你的安装，你可能需要管理员权限执行:</p>
+
+<pre class="brush: bash"><code>sudo npm install jpm --global</code></pre>
+
+<h4 id="局部安装jpm"><code>局部安装jpm</code></h4>
+
+<p><code>如果你不想，或者不能够全局安装jpm，你或许可以只为你安装它：</code></p>
+
+<pre><code>npm install jpm</code></pre>
+
+<p><code>在局部安装的情况下，为了在终端中运行jpm，你必须首先将目录</code>"$HOME/node_modules/.bin/"添加到你的终端PATH中。将下行中的命令添加到$HOME/.profile的末尾来实现永久添加（.profile将在每次运行一个新终端时被执行）：</p>
+
+<pre><code>export PATH="$HOME/node_modules/.bin/:$PATH"</code></pre>
+
+<h4 id="通过git来安装jpm">通过git来安装jpm</h4>
+
+<p>另外，你也可以通过git安装jpm的最新版本</p>
+
+<pre>git clone https://github.com/mozilla-jetpack/jpm.git
+cd jpm
+npm install
+npm link
+</pre>
+
+<h3 id="jpm安装完毕后">jpm安装完毕后</h3>
+
+<p><span style="line-height: 1.5;">在全部搞定后，在命令行窗口中输入:</span></p>
+
+<pre class="brush: bash"><code>jpm</code></pre>
+
+<p>屏幕上显示了一系列可用的 jpm 命令。不同于 cfx，当在安装时使用了 --global 参数，你能在任何路径下启动的命令提示符中使用 jpm 命令。</p>
+
+<h3 id="还有问题？">还有问题？</h3>
+
+<p>如果你看不懂本文，要寻求帮助。SDK 用户和项目团队成员在<a class="external external-icon" href="http://groups.google.com/group/mozilla-labs-jetpack/topics">项目邮件列表</a>中讨论问题和建议。其他人也许会和你有一样的问题，所以试着搜索一下列表。也欢迎你发表一个新问题。你也可以在 <a class="external external-icon" href="http://irc.mozilla.org/">Mozilla 的 IRC 网络</a> 的 <a class="external external-icon" href="http://mibbit.com/?channel=%23jetpack&amp;server=irc.mozilla.org">#jetpack</a> 房间里和其他SDK的用户聊天。</p>
+
+<h2 id="命令参考">命令参考</h2>
+
+<p>有六个命令：</p>
+
+<table>
+ <tbody>
+  <tr>
+   <td><a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm#jpm_init"><code>jpm init</code></a></td>
+   <td>创建一个基本的 add-on 作为你 add-on 的开端。</td>
+  </tr>
+  <tr>
+   <td><a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm#jpm_run"><code>jpm run</code></a></td>
+   <td>运行一个带有你的 add-on 的 Firefox 实例。</td>
+  </tr>
+  <tr>
+   <td><a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm#jpm_test"><code>jpm test</code></a></td>
+   <td>运行你插件的单元测试</td>
+  </tr>
+  <tr>
+   <td><a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm#jpm_xpi"><code>jpm xpi</code></a></td>
+   <td>将你的插件打包为 <a href="https://developer.mozilla.org/zh-CN/docs/XPI">XPI</a> 文件（火狐的插件扩展文件名）</td>
+  </tr>
+  <tr>
+   <td><a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm#jpm_post"><code>jpm post</code></a></td>
+   <td>把你的 add-on 打包成 <a href="https://developer.mozilla.org/zh-CN/docs/XPI">XPI</a> 文件，然后发送到某一个URL。</td>
+  </tr>
+  <tr>
+   <td><a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm#jpm_watchpost"><code>jpm watchpost</code></a></td>
+   <td>无论是否有文件变更，把你的 add-on 打包成 <a href="https://developer.mozilla.org/zh-CN/docs/XPI">XPI</a> 文件发送到某一个URL。</td>
+  </tr>
+  <tr>
+   <td><a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm#jpm_sign"><code>jpm sign</code></a></td>
+   <td>将你的插件打包为 <a href="https://developer.mozilla.org/zh-CN/docs/XPI">XPI</a> 文件并且取回一个由Mozilla签名的新XPI文件。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="jpm_init">jpm init</h3>
+
+<p>这个命令从头开始初始化一个新的 add-on。</p>
+
+<p>新建一个目录，转到该目录下，然后运行 <code>jpm init</code>。</p>
+
+<pre><code>mkdir my-addon
+cd my-addon
+jpm init</code></pre>
+
+<p>然后你会被要求提供关于你的 add-on 的一些信息：这会用来创建 <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/package_json">package.json</a> 文件。</p>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/package_json#title">title</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/package_json#name">name</a>: 默认是你运行 <code>jpm init 的目录名。除非</code>package.json里有 <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/package_json#id"><code>id</code></a> 字段， jpm 在name前面加个<code>"@"</code>用作 <a href="https://developer.mozilla.org/en-US/Add-ons/Install_Manifests#id">add-on 安装清单的 <code>id</code> 字段</a>.</li>
+ <li><a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/package_json#version">version</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/package_json#description">description</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/package_json#main">entry point</a> (映射向package.json中的 "main")</li>
+ <li><a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/package_json#author">author</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/package_json#engines">engines</a> (支持哪些应用程序)</li>
+ <li><a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/package_json#license">license</a></li>
+</ul>
+
+<p>大部分字段都有一个默认值，显示在那些问题的后面的括号里。如果你按了回车，那么你的 add-on 就用那个默认值。</p>
+
+<p>一旦你提供了一个值或者接受了默认值，你会看到"package.json"的完整内容，并被询问是否接受。</p>
+
+<p>然后 jpm 创建一个基本的 add-on，作为你开发的起点，文件结构如下：</p>
+
+<ul>
+ <li>my-addon
+  <ul>
+   <li>index.js</li>
+   <li>package.json</li>
+   <li>test
+    <ul>
+     <li>test-index.js</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+<h3 id="jpm_run">jpm run</h3>
+
+<p>此命令运行一个新的装有你的 add-on 的 Firefox实例：</p>
+
+<pre><code>jpm run</code></pre>
+
+<p><code>jpm run</code> 有以下选项：</p>
+
+<table>
+ <tbody>
+  <tr>
+   <td><code>-b --binary BINARY</code></td>
+   <td>
+    <p>指定二进制文件，使用该版本的火狐。可以用全路径，也可以用相对路径。</p>
+
+    <pre>
+<code>jpm run -b /path/to/Firefox/Nightly</code></pre>
+    参看<a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm#Selecting_a_browser_version">选择浏览器版本</a>。</td>
+  </tr>
+  <tr>
+   <td><code>--binary-args CMDARGS</code></td>
+   <td>
+    <p>传递<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Command_Line_Options">附件参数</a>到 Firefox。</p>
+
+    <p>例如，为了传递 <code>-jsconsole</code>参数给 Firefox 并打开<a href="https://developer.mozilla.org/en-US/docs/Tools/Browser_Console">浏览器</a>，试试下面命令：</p>
+
+    <pre>
+<code>jpm run --binary-args -jsconsole</code></pre>
+
+    <p>要传递多个参数，或者参数中间有空格，就把他们用引号括起来：</p>
+
+    <pre>
+<code>jpm run --binary-args '-url mzl.la -jsconsole'</code></pre>
+   </td>
+  </tr>
+  <tr>
+   <td><code>--debug</code></td>
+   <td>运行这个 add-on 的<a href="https://developer.mozilla.org/en-US/Add-ons/Add-on_Debugger">Add-on 调试器</a>。</td>
+  </tr>
+  <tr>
+   <td><code>-o --overload PATH</code></td>
+   <td>
+    <p>不再使用 Firefox 内建的 SDK 模块，使用指定 PATH 路径下的模块。如果加了 <code>-o</code> 但 PATH 没有指定，jpm 会寻找 JETPACK_ROOT 环境变量用作路径</p>
+
+    <p>参看<a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm#Overloading_the_built-in_modules">重载内建模块</a>以获取更多信息</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>-p --profile=<code> PROFILE</code></code></td>
+   <td>
+    <p>在你每次调用jpm run时，jpm 默认使用一个干净的临时的 Firefox <a href="http://support.mozilla.com/en-US/kb/profiles">配置文件（profile）</a>。使用<code>--profile</code> 选项以使得 jpm 使用已有的配置文件来打开 Firefox。</p>
+
+    <p>PROFILE的值可以是一个profile的名字或路径。</p>
+
+    <p>参看 <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm#Using_profiles">使用 profile</a> 以获取更多信息。</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>-v --verbose</code></td>
+   <td>（查看）详细操作</td>
+  </tr>
+  <tr>
+   <td><code>--no-copy</code></td>
+   <td>
+    <div class="warning">小心使用，因为 <code>jpm run|test</code> 会改变很多配置，不要和你的主配置文件一起使用。</div>
+
+    <div class="note">只有使用 <code>--profile</code> 的时候回生效</div>
+    禁止配置文件的拷贝，允许重用配置。</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="jpm_test">jpm test</h3>
+
+<p>这个命令用来运行 add-on 的单元测试。命令：</p>
+
+<ul>
+ <li>查找在当前目录（或者 <code>--addon-dir</code> 目录）下的test文件夹。</li>
+ <li>打开所有名字以 "test-" 开头的文件。注意文件名中"test"后面的连字符号。<code>jpm test</code> 包含一个 "test-myCode.js" 文件，但会排除"test_myCode.js"或"test_myCode.js"。</li>
+ <li>调用文件中所有export的、以"test"开头的函数。</li>
+</ul>
+
+<pre><code>jpm test</code></pre>
+
+<p>查看 <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tutorials/Unit_testing">单元测试教程</a> 和 <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Low-Level_APIs/test_assert"> <code>assert</code> 模块参考文档</a>获取更多具体内容。</p>
+
+<p><code>jpm test</code> 接受一下选项：</p>
+
+<table>
+ <tbody>
+  <tr>
+   <td><code>-b --binary BINARY</code></td>
+   <td>
+    <p>指定所用 Firefox 的版本。BINARY 可被指定为绝对路径或者基于当前路径的相对路径。</p>
+
+    <pre>
+<code>jpm test -b /path/to/Firefox/Nightly</code></pre>
+
+    <p>请查看<a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm#Selecting_a_browser_version">选择一个浏览器版本</a>。</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>--binary-args CMDARGS</code></td>
+   <td>
+    <p>传递<a href="http://kb.mozillazine.org/Command_line_arguments">附件参数</a>给 Firefox。</p>
+
+    <p>例如，传递 <code>-jsconsole</code> 参数，它会打开<a href="https://developer.mozilla.org/en-US/docs/Tools/Browser_Console">浏览器控制台</a>，试试下面的命令：</p>
+
+    <pre>
+<code>jpm test --binary-args -jsconsole</code></pre>
+
+    <p>传递多个参数，或者参数间有空格，请将它们用引号括起来：</p>
+
+    <pre>
+<code>jpm test --binary-args '-url mzl.la -jsconsole'</code></pre>
+   </td>
+  </tr>
+  <tr>
+   <td><code>--debug</code></td>
+   <td>运行 <a href="https://developer.mozilla.org/en-US/Add-ons/Add-on_Debugger">add-on debugger</a> 附件到当前 add-on 上。</td>
+  </tr>
+  <tr>
+   <td><code>-f --filter FILE[:TEST]</code></td>
+   <td>
+    <p>只运行名字和 FILE 匹配的测试文件，且名字匹配 TEST（可选）的测试函数。</p>
+
+    <pre>
+<code>jpm test --filter base64:btoa</code></pre>
+
+    <p>上面的命令值会运行名字中含有"base64"的文件，在这些文件中只会运行名字中含有"btoa"的测试函数。</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>-o --overload PATH</code></td>
+   <td>
+    <p>不使用 Firefox 内建的模块，而使用 PATH 路径下的模块。如果 <code>-o</code> 指定而 PATH 被忽略，jpm会查找 JETPACK_ROOT 环境变量并将其用作路径。</p>
+
+    <p>查看<a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm#Overloading_the_built-in_modules">重载内建模块</a>以获取更多信息。</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>-p --profile<code> PROFILE</code></code></td>
+   <td>
+    <p>你每次运行jpm call时，默认地，jpm使用一个干净的临时 Firefox <a href="http://support.mozilla.com/en-US/kb/profiles">配置文件</a>。使用<code>--profile</code> 选项来让 jpm 使用一个现有配置文件来打开火狐。</p>
+
+    <p>PROFILE 的值可以是配置文件的名称或者指向配置文件的路径。</p>
+
+    <p>查看<a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm#Using_profiles">使用配置文件</a>来获取更多信息。</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>--stop-on-error</code></td>
+   <td>
+    <p>即使测试失败，jpm test 默认还会继续运行测试。指定 <code>--stop-on-error</code> 的话，会在第一次失败后停止运行测试</p>
+
+    <pre>
+<code>jpm test --stop-on-error</code></pre>
+   </td>
+  </tr>
+  <tr>
+   <td><code>--tbpl</code></td>
+   <td>用<a href="https://treeherder.mozilla.org/">Treeherder</a> 格式打印 test 的输出</td>
+  </tr>
+  <tr>
+   <td><code>--times NUMBER</code></td>
+   <td>
+    <p>运行几遍 test：</p>
+
+    <pre>
+<code>jpm test --times 2</code></pre>
+   </td>
+  </tr>
+  <tr>
+   <td><code>-v --verbose</code></td>
+   <td>详细操作。</td>
+  </tr>
+  <tr>
+   <td><code>--no-copy</code></td>
+   <td>
+    <p>小心使用，因为 <code>jpm run|test</code> 会修改许多首选项，这些首选项在你的主配置文件中从未用过。</p>
+
+    <p>这仅仅在使用 <code>--profile</code> 时生效。</p>
+    禁用配置未经的拷贝，允许用户重用配置文件。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="jpm_xpi">jpm xpi</h3>
+
+<p>这个命令将 add-on 打包为一个 <a href="https://developer.mozilla.org/en/XPI">XPI</a> 文件，这是 Mozilla 附加组件的安装文件的格式。</p>
+
+<pre><code>jpm xpi</code></pre>
+
+<p>它会在当前目录(或者 <code>--addon-dir</code> 指定的目录）查找 <code>package.json</code> 文件，并创建相关的 XPI 文件。它忽略任何 ZIP 或 XPI文件（译者注：OSX 上测试下来不会默认忽略这些文件，若要忽略请编辑.jpmignore文件），以及任何测试文件。它会包含其他所有文件。如果你想排除其他文件，查看 <a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/SDK/Tools/en-US/Add-ons/SDK/Tools/jpmignore">.jpmignore 文件</a>。</p>
+
+<p>一旦你构建了一个 XPI 文件，你可以通过提交到 <a href="http://addons.mozilla.org/">addons.mozilla.org</a> 来分发你的附加组件。</p>
+
+<p><code>jpm xpi</code> 接受下列选项：</p>
+
+<table>
+ <tbody>
+  <tr>
+   <td><code>-v --verbose</code></td>
+   <td>
+    <p>打印详细操作：</p>
+
+    <pre>
+<code>jpm xpi -v</code></pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="jpm_post">jpm post</h3>
+
+<p>这个命令把附加组件打包为 <a href="https://developer.mozilla.org/en/XPI">XPI</a> 后 post 到某个URL。</p>
+
+<pre><code>jpm post</code></pre>
+
+<p>查找当前目录（或 <code>--addon-dir</code>）下的<code>package.json</code> 文件，创建 XPI 文件，post 到 <code>--post-url</code>。</p>
+
+<p><code>jpm post</code> 接受以下选项：</p>
+
+<table>
+ <tbody>
+  <tr>
+   <td><code>--post-url URL</code></td>
+   <td>
+    <p>创建 XPI 文件后，将扩展 post 到这个URL。</p>
+
+    <pre>
+<code>jpm post --post-url http://localhost:8888/</code></pre>
+
+    <p>查看<a href="https://www.npmjs.com/package/jpm#using-post-and-watchpost">使用 Post 和 Watchpost</a> 获取更多信息。</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>-v --verbose</code></td>
+   <td>
+    <p>打印详细操作：</p>
+
+    <pre>
+<code>jpm post --post-url http://localhost:8888/ -v</code></pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="jpm_watchpost">jpm watchpost</h3>
+
+<p>这个命令在打包附件组件为 <a href="https://developer.mozilla.org/en/XPI">XPI</a> 文件后，无论文件是否改变都将其 post 到某个URL。</p>
+
+<pre><code>jpm watchpost</code></pre>
+
+<p>无论文件是否改变，在当前目录（或 <code>--addon-dir</code>）下创建一个 XPI并将其post到 <code>--post-url</code>。</p>
+
+<p><code>jpm watchpost</code> 接受以下选项：</p>
+
+<table>
+ <tbody>
+  <tr>
+   <td><code>--post-url URL</code></td>
+   <td>
+    <p>创建 XPI 文件后，将扩展 post 到这个URL。</p>
+
+    <pre>
+<code>jpm watchpost --post-url http://localhost:8888/</code></pre>
+
+    <p>查看 <a href="https://www.npmjs.com/package/jpm#using-post-and-watchpost">Using Post 和 Watchpost</a> 获取更多信息。</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>-v --verbose</code></td>
+   <td>
+    <p>打印详细信息：</p>
+
+    <pre>
+<code>jpm watchpost --post-url http://localhost:8888/ -v</code></pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="jpm_sign">jpm sign</h3>
+
+<p>此特性仅从 jpm 1.0.4 起被支持。</p>
+
+<p>此命令为你的附加组件重新生成一个新的被Mozilla签名的 <a href="https://developer.mozilla.org/en-US/docs/XPI">XPI</a> 文件。这就允许你<a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm#Supporting_updates_for_self-hosted_add-ons">自己托管你的 add-on</a>，这样用户可以在安装时避免 <a href="https://wiki.mozilla.org/Add-ons/Extension_Signing">signed add-ons are required</a> 错误。在用这个命令之前，你需要<a href="https://addons.mozilla.org/en-US/developers/addon/api/key/">在 addons.mozilla.org 创建 API 证书</a>。</p>
+
+<p>你可以为你已经生成的 XPI 文件签名，就像如下，通过传递 XPI 文件给 <code>--xpi</code>参数：</p>
+
+<pre id="comment_text_2"><code>jpm sign --api-key ${AMO_API_KEY} --api-secret ${AMO_API_SECRET} --xpi &lt;xpi file&gt;</code></pre>
+
+<p>或者，你可以省略 <code>--xpi</code> 参数，这样 <code>jpm sign</code> 会从当前目录（或者 <code>--addon-dir</code>）生成一个XPI文件。</p>
+
+<pre><code>jpm sign --api-key ${AMO_API_KEY} --api-secret ${AMO_API_SECRET}</code></pre>
+
+<p>上面提交了一个 <a href="https://developer.mozilla.org/en-US/docs/XPI/">XPI</a> 到 <a href="https://addons.mozilla.org/">addons.mozilla.org</a> <a href="http://olympia.readthedocs.org/en/latest/topics/api/signing.html">签名g API</a>，如果通过验证，然后下载一个签名后的 XPI 文件到工作目录。</p>
+
+<p>下面是一些运行 <code>sign</code> 命令的结果：</p>
+
+<ul>
+ <li>你的 add-on 通过验证，被 Mozilla 签名，并且一个新的签名后的 <a href="https://developer.mozilla.org/en-US/docs/XPI">XPI</a> 文件被下载到你的工作目录。</li>
+ <li>你的 add-on 没有通过验证，没有签名，你获取到一个详细报告的链接。修复验证错误以后，你可以再次运行这个命令。</li>
+ <li>你的 add-on 公公验证，但是它不能自动签名，因为你的 add-on 是<a href="https://developer.mozilla.org/en-US/Add-ons/Distribution">列表上的</a>。列表上的 add-ons 需要人工复核才能被签名。</li>
+ <li>你的 add-on 已经存在某个版本号了，所以它没有被签名。增加 <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/package_json">package.json</a> 文件中的版本号并且再次运行命令。</li>
+</ul>
+
+<p>在底层，<code>jpm sign</code> 在<a href="https://addons.mozilla.org/">addons.mozilla.org</a>里创建了一个不会被列出的附加组件，这就意味着你必须自己把XPI文件分发给你的用户来安装。如果你需要创建一个在列表中的附加组件，只要<a href="https://addons.mozilla.org/en-US/developers/addon/submit/2">直接将它提交到 addons.mozilla.org</a>，在那里它自动会被签名。如果你在安装一个已签名的附加组件时遇到困难，参看<a href="https://developer.mozilla.org/en-US/docs/Extension_Versioning%2C_Update_and_Compatibility#Debugging_and_solving_problems">调试</a>一节。</p>
+
+<p><code>jpm sign</code> 接收以下参数：</p>
+
+<table>
+ <tbody>
+  <tr>
+   <td><code>--api-key=API_KEY</code></td>
+   <td>
+    <p><a href="https://addons.mozilla.org/en-US/developers/addon/api/key/">addons.mozilla.org key管理页面</a>生成的API访问key（字符串）。</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>--api-secret=API_SECRET</code></td>
+   <td>
+    <p><a href="https://addons.mozilla.org/en-US/developers/addon/api/key/">addons.mozilla.org key 管理页面</a>生成的API访问密钥（字符串）。这个值应该被小心保密并且永远不要记录到版本控制中。如果你的密钥被破解，另一个开发者就能上传附加组件到你的账号上。你应该立即撤销泄露的API证书并且重新生成一份。</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>--api-url-prefix=http://.../api</code></td>
+   <td>
+    <p>可选的API URL前缀，如果你想使用一个试用签名的API。</p>
+
+    <p>例如，你可以通过<code>https://addons-dev.allizom.org/api/v3</code>的认证来使用<a href="https://addons.mozilla.org/">addons.mozilla.org</a>的开发者版本。</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>--xpi=/path/to/file.xpi</code></td>
+   <td>
+    <p>需要签名的<a href="https://developer.mozilla.org/en-US/docs/XPI">XPI</a>文件。如果没指定文件，一个新的XPI会在当前目录（或者<code>--addon-dir</code>）中生成。</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="一些技巧">一些技巧</h2>
+
+<h3 id="选择浏览器版本">选择浏览器版本</h3>
+
+<p>默认地，<code>jpm run</code> 和 <code>jpm test</code> 运行 release 版本的 FireFox。你可以有一两种办法来告诉 jpm 使用一个不同的版本：</p>
+
+<ul>
+ <li>
+  <p>你可以使用 <code>-b</code> 或者 <code>--binary</code> 选项来告诉 jpm 去使用一个不同版本的 Firefox。你可以提供一个指定二进制文件的路径：</p>
+
+  <pre><code>jpm run -b /path/to/Firefox/Nightly</code></pre>
+
+  <p>有个简化的方法，你可以传递"nightly"、"aurora"、"beta"或者"firefox"然后jpm会在默认位置寻找这些 Firefox 的版本：</p>
+
+  <pre><code>jpm run -b nightly</code></pre>
+ </li>
+ <li>
+  <p>你可以设置 <code>JPM_FIREFOX_BINARY</code> 环境变量为你想运行的 Firefox 版本的路径。在你调用 <code>jpm run</code> 或 <code>jpm test</code> 而不带 <code>-b</code> 选项时，jpm 首先检查 <code>JPM_FIREFOX_BINARY</code>，并且将其当做已设置的路径来用。</p>
+ </li>
+</ul>
+
+<h3 id="使用_.jpmignore_来忽略文件">使用 <code>.jpmignore</code> 来忽略文件</h3>
+
+<p>使用 <code>.jpmignore</code> 就像使用 <code>git</code> 的<code>.gitignore</code>，Mercurial 的 <code>.hgignore</code>，或者 npm 的 <code>.npmignore</code>。通过使用这个文件，你可以在使用 <code>jpm xpi</code> 编译 <code>.xpi</code> 文件时，让 <code>jpm</code> 知道你想要忽略哪些文件。</p>
+
+<p>这是个例子：</p>
+
+<pre><code># Ignore .DS_Store files created by mac
+.DS_Store
+
+# Ignore any zip or xpi files
+*.zip
+*.xpi</code></pre>
+
+<p>有着以上内容的 <code>.jpmignore</code> 文件会忽略所有的 zip 文件和 <code>.DS_Store</code> 文件，这些文件不会包括在 <code>jpm xpi</code> 所生成的 xpi 文件中。</p>
+
+<h3 id="使用配置"><a name="Using_profiles">使用配置</a></h3>
+
+<p>默认地，<code>jpm run</code> 每次都会使用一个新的配置。这就意味着前一次运行 <code>jpm</code> 时的任何配置，默认都不会在下一次中使用。</p>
+
+<p>这其中包括，比如你安装的任何附加组件，或者你的历史记录，或者任何使用 <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/High-Level_APIs/simple-storage">simple-storage</a> API 存储的数据。</p>
+
+<p>为了让 <code>jpm</code> 使用一个特定的配置，传递 <code>--profile</code> 选项，设定你想使用的配置文件的名字，或者是配置文件的路径。</p>
+
+<pre><code>jpm run --profile boogaloo</code></pre>
+
+<pre><code>jpm run --profile path/to/boogaloo</code></pre>
+
+<p>如果你提供了 <code>--profile</code> 但是它的参数不是一个已有配置文件的名字或路径，jpm 会打开 <a href="https://support.mozilla.org/en-US/kb/profile-manager-create-and-remove-firefox-profiles">配置文件管理器</a> 让你选择一个已有的配置文件或者创建一个新的配置文件：</p>
+
+<pre><code>jpm run --profile i-dont-exist</code></pre>
+
+<h3 id="开发时不用重启浏览器">开发时不用重启浏览器</h3>
+
+<p>因为每次调用 <code>jpm run</code> 时都会重启浏览，如果你十分频繁地修改附加组件，这就可能有点笨重了。一个替代的开发模型是使用 <a href="https://addons.mozilla.org/en-US/firefox/addon/autoinstaller/" rel="noreferrer">扩展自动安装器</a>附加组件：它会在特定端口监听新 XPI 文件并且自动安装它们。这样，你就能测试新的改动，而不用重启浏览器：</p>
+
+<ul>
+ <li>修改附件组件</li>
+ <li>运行 <code>jpm post --post-url http://localhost:8888/</code>，来创建 XPI 文件并提交。</li>
+</ul>
+
+<p>你甚至可以用一个简单的脚本来自动化这一工作流程。例如：</p>
+
+<pre><code>jpm watchpost --post-url http://localhost:8888/</code></pre>
+
+<p>注意，比起使用 <code>jpm run</code> 运行附加组件时的日志级别，你在使用这个方法时控制台定义的日志级别是不一样的。这意味着，如果你想看到 <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tutorials/Logging" rel="noreferrer"><code>console.log()</code></a> 消息的输出，你必须微调一下配置。查看 <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/console#Logging_Levels" rel="noreferrer">logging levels</a> 文档以获取这方面的详细信息。</p>
+
+<h3 id="重载内建模块">重载内建模块</h3>
+
+<p>你用来实现你的附加组件的SDK模快是 Firefox 内建的。当你使用 <code>jpm run</code> 或 <code>jpm xpi</code> 来运行或者打包附加组件时，附加组件使用其所在的 Firefox 版本中的模块版本。</p>
+
+<p>作为附件组件开发者，这一般就是你想要的。但是如果你在开发 SDK 模块本身，这就不合适了。这时你需要：</p>
+
+<ul>
+ <li>获取你想要的 SDK 模块的本地拷贝：一般来说就是从 <a href="https://github.com/mozilla/addon-sdk" rel="noreferrer">GitHub 仓库</a>中检出SDK。</li>
+ <li>设置 <code>JETPACK_ROOT</code> 环境变量，指向你的本地拷贝</li>
+ <li>传递 <code>-o</code> 选项到 <code>jpm run</code> 或 <code>jpm xpi</code>：</li>
+</ul>
+
+<pre><code>jpm run -o</code></pre>
+
+<p>这会通知 jpm 去使用 SDK 模块的本地拷贝，而不是 Firefox 内部的模块。如果你不想设置 <code>JETPACK_ROOT</code> 环境变量，你可以使用 <code>-o</code> 传递SDK模块本地拷贝的位置：</p>
+
+<pre><code>jpm run -o "/path/to/addon-sdk/"</code></pre>
+
+<p>路径必须是一个绝对路径并且指向 SDK 的根目录（不是 addon-sdk/sdk 或 addon-sdk/sdk/lib）。</p>
+
+<h3 id="支持自托管附加组件的更新">支持自托管附加组件的更新</h3>
+
+<p>此特性仅被 jpm 1.0.3 及之后版本支持，</p>
+
+<p>当你给你的附加组件来添加特性或者修复 bug 时，你想让之前安装好的附加组件将自己从老版本更新到新版本。</p>
+
+<p>如果你在 <a href="https://addons.mozilla.org/">addons.mozilla.org</a> 上列出你的附加组件，那么你要做的只是提交一个新的版本；附加组件默认会检查它们在 <a href="https://addons.mozilla.org/">addons.mozilla.org</a> 上的新版本。好了，你不用继续往下看这一节了。</p>
+
+<p>如果你没有在 <a href="https://addons.mozilla.org/">addons.mozilla.org</a> 上列出你的附加组件，你需要生成一个 Mozilla 签名的 XPI 文件并告诉 Firefox 哪里可以找到这个附加组件的新版本。方法就是：</p>
+
+<ul>
+ <li>每次你想要创建一个新版本时，你运行 <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm#jpm_sign">jpm sign</a></li>
+ <li>当你需要更新时，更新由你托管的签名好的附加组件</li>
+ <li>你维护一个“更新清单”，包含了指向那个 XPI 的URL</li>
+ <li>你的附加组件告诉 Firefox 哪里可以找到更新清单</li>
+</ul>
+
+<p>为了达到这个目的，package.json中需要包含两个额外的key ：</p>
+
+<ul>
+ <li><code><a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/package_json#updateURL">updateURL</a></code>：这个 URL 包含在 <code>jpm xpi</code> 所编译的 XPI 文件的<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Install_Manifests">安装清单</a>中。他指向了你的更新清单。<code>updateURL</code> 值<em>可以</em>是HTTPS的。如果不是，那么你也可以签名的更新清单，并且使用 package.json 文件中的 <code><a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/package_json#updateKey">updateKey</a></code> 字段来包含其公钥。参看 <a href="https://developer.mozilla.org/en-US/docs/Extension_Versioning%2C_Update_and_Compatibility#Securing_Updates">安全地更新</a> 以获取这方面更多信息</li>
+ <li><code><a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/package_json#updateLink">updateLink</a></code>：这个 URL 包含在那个更新清单文件中。它指向了 XPI，并且<em>必须</em>是一个 HTTPS URL。</li>
+</ul>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/11847/addons-update.svg" title="[https://mdn.mozillademos.org]"></p>
+
+<p>如果你设置了 <code>updateURL</code> 和 <code>updateLink</code>（如果 <code>updateKey</code> 不是 HTTPS 的，那也要包括 <code>updateKey</code>），那么 <code>jpm xpi</code> 会：</p>
+
+<ul>
+ <li>生成 XPI 文件时将 <code>updateURL</code> 设置为你提供的值。</li>
+ <li>和 XPI 文件一起，生成更新清单，并将清单中的 <code>updateURL</code> 设置为你提供的值。</li>
+</ul>
+
+<p>然后你将更新清单托管到 <code>updateURL</code>，并且将新版 XPI 托管到 <code>updateLink</code>。</p>
+
+<p>获取更多这方面的详细信息，参看<a href="https://developer.mozilla.org/en-US/docs/Extension_Versioning,_Update_and_Compatibility#Automatic_Add-on_Update_Checking">自动检查附件组件更新</a>。</p>
+
+<div id="xunlei_com_thunder_helper_plugin_d462f475-c18e-46be-bd10-327458d045bd"> </div>
+
+<div id="xunlei_com_thunder_helper_plugin_d462f475-c18e-46be-bd10-327458d045bd"> </div>

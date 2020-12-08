@@ -1,0 +1,119 @@
+---
+title: Firefox OS クラッシュレポート
+slug: Archive/B2G_OS/Debugging/Firefox_OS_crash_reporting
+tags:
+  - Debugging
+  - Firefox OS
+  - QA
+  - Testing
+translation_of: Archive/B2G_OS/Debugging/Firefox_OS_crash_reporting
+---
+<div class="summary">
+<p>このページは Firefox OS でクラッシュレポートを扱う方法を詳解します、それにはクラッシュレポートの取得や、強制クラッシュが含まれます。</p>
+</div>
+
+<div class="note">
+<p>記: たいていのデスクトップ版 Firefox の貢献者は about:crashes を使うのに慣れています (詳細は<a href="/ja/docs/Crash_reporting">Crash reporting</a> を読んで下さい)、しかしこれは Firefox OS でサポートされていません。</p>
+</div>
+
+<h2 id="その他のものを試みる前に">その他のものを試みる前に</h2>
+
+<p>下記の手順は、すでにこれら3ステップに従っていると仮定しています:</p>
+
+<ol>
+ <li>端末の<a href="/ja/Firefox_OS/Debugging/Developer_settings#Debugging_via_USB">リモートデバッグ</a>が有効で、<a href="/ja/Firefox_OS/Debugging/Installing_ADB">ADB</a> がインストールされているのを確認します。これはコンピュータと端末との通信を可能にします。</li>
+ <li>端末とコンピュータをUSB経由で接続します。</li>
+ <li>必要なポートフォワードを扱う <a href="https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/">ADB Helper アドオン</a> をデスクトップ版Firefox にインストールします。</li>
+</ol>
+
+<h3 id="BusyBoxをインストールする">BusyBoxをインストールする</h3>
+
+<p>BusyBoxユーティリティという、Firefox OSのテストやデバッグに役立つ ADB コマンドを追加するものをインストールするのも推奨されます。</p>
+
+<p>インストールするには、端末がスリープでないのを確認してから:</p>
+
+<ol>
+ <li><a href="https://wiki.mozilla.org/images/3/32/Busybox-b2g.tar.gz">BusyBoxをダウンロードします</a>。</li>
+ <li>tarballをそれなりの場所に展開します。</li>
+ <li>出てきた busybox-b2g ディレクトリに移動します。</li>
+ <li><code>./install.sh</code> を実行してインストールします。</li>
+</ol>
+
+<p>busybox ユーティリティの全ては <code>/system/bin 内にシンボリックリンクを追加します、よって</code> <code>ping</code> などのコマンドを直接使えます。次にサンプルコマンドを挙げます:</p>
+
+<pre class="brush: bash">adb shell ping 8.8.8.8   =&gt; ping command
+
+adb shell ifconfig wlan0 =&gt; check tx/rx bytes
+
+adb shell cat /proc/net/route    =&gt; check the default route
+
+adb shell iptables -t nat -nvL   =&gt; check if the packets are sent from application to IP layer, check Chain OUTPUT (policy ACCEPT 2 packets, 168 bytes)</pre>
+
+<h2 id="Firefox_OS_端末からクラッシュレポートを取得する">Firefox OS 端末からクラッシュレポートを取得する</h2>
+
+<p>クラッシュレポートを取得するFirefox OS アプリ — <a href="http://jds2501.github.io/webapi-permissions-tests/about-crashes.zip">About Crashes</a> — を作りました、これはバージョン 1.2+ で動きます。<br>
+ <br>
+ 端末にこれをインストールするには、次のステップに従います:</p>
+
+<ol>
+ <li>About Crashes は認定アプリなので、認定アプリのデバッグを有効にします (<a href="/ja/Firefox_OS/Using_the_App_Manager">アプリマネージャ</a>と<a href="/ja/docs/Tools/WebIDE#Debugging_certified_apps">WebIDE</a>用の操作方法を見ます)。</li>
+ <li>About Crashes アプリのzip ファイルを上記リンクからダウンロードしてローカルに展開します。</li>
+ <li>デスクトップ版Firefox で、<a href="/ja/Firefox_OS/Using_the_App_Manager">アプリマネージャ</a>か<a href="/en-US/docs/Tools/WebIDE">WebIDE</a> (お使いのFirefox バージョンによります) を開きます、場所は ツール&gt; Web 開発。</li>
+ <li>いずれのツールでも、About Crashes アプリをパッケージアプリに追加します (アプリマネージャ: <em>Add Packaged App</em> オプションの隣のプラス記号をクリック、WebIDE: 左側のドロップダウンメニューで <em>Add Packaged App...</em> を選択)。</li>
+ <li>端末をアプリマネージャ/WebIDEに接続します (アプリマネージャ: UIの底部にある一覧から見つける、WebIDE: <em>Select Runtime</em>から見つける)。</li>
+ <li>端末にアプリをインストールして開く (アプリマネージャ: アプリの <em>Update</em> ボタンを押す、WebIDE: "Play" ボタンを押す(<em>Install and Run</em>))。</li>
+ <li>端末でAbout Crashes の中の<em>Update</em> ボタンを押して最も最近のクラッシュを見る。</li>
+</ol>
+
+<h2 id="コマンドラインでクラッシュIDを取得する">コマンドラインでクラッシュIDを取得する</h2>
+
+<p>クラッシュIDをコマンドライン経由で取得でき、そうするにはターミナルで次のコマンドを入力します:</p>
+
+<pre class="brush: bash">adb shell ls -l /data/b2g/mozilla/Crash\ Reports/submitted/</pre>
+
+<p>クラッシュの一覧が長くて日付順にソートしたい場合、代わりに次のコマンドを使います:</p>
+
+<pre class="brush: bash">adb shell busybox ls -ltr /data/b2g/mozilla/Crash\ Reports/submitted/</pre>
+
+<h2 id="クラッシュレポートを取得・検証する">クラッシュレポートを取得・検証する</h2>
+
+<p>クラッシュレポートを検証するには:</p>
+
+<ol>
+ <li>拡張子なしのファイル名をコピーします。</li>
+ <li><a href="http://crash-stats.mozilla.org">Mozilla Crash Reports</a>に移動します。</li>
+ <li>拡張子なしのファイル名を右上の検索ボックスにペーストします。</li>
+</ol>
+
+<p>これで送信済みのクラッシュレポートが表示されます。</p>
+
+<h2 id="クラッシュを強制する方法">クラッシュを強制する方法</h2>
+
+<p>Firefox OS システムのクラッシュを引き起こすには、ターミナルで次のコマンドを入れてroot のプロセスIDを見つけます:</p>
+
+<pre class="brush: bash">adb shell ps | grep b2g</pre>
+
+<p>最初の行に <code>root</code> のある行を、そして<code>/system/b2g/b2g</code> を最後に見つけるでしょう。次のように見えるはず:</p>
+
+<pre class="brush: bash">root 109 1 191120 66024 ffffffff 400fa330 S /system/b2g/b2g</pre>
+
+<p>行の最初の数字は、プロセスをkill(強制停止)するのに必要となる kill プロセスid です。次のコマンドをこのIDをプレースホルダに当てはめて実行します:</p>
+
+<pre class="brush: bash">adb shell kill -11 [ENTER ID HERE]</pre>
+
+<p>root プロセスの停止は端末をクラッシュされるでしょう。</p>
+
+<h3 id="b2g用の_GDBスクリプトの実行方法">b2g用の GDBスクリプトの実行方法</h3>
+
+<ol>
+ <li>電話機でギャラリーアプリを起動し、ターミナルで次のコマンドを実行します:
+  <pre class="brush: bash">adb shell b2g-ps</pre>
+ </li>
+ <li>ギャラリーアプリのpid を控えて、次のコマンドを実行します:
+  <pre class="brush: bash">./run-gdb.sh attach &lt;pid&gt;</pre>
+ </li>
+ <li>クラッシュを起こす。</li>
+ <li>このコマンドを実行します:
+  <pre class="brush: bash">(gdb) bt</pre>
+ </li>
+</ol>

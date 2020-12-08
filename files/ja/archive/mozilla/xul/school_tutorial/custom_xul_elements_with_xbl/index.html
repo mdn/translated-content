@@ -1,0 +1,208 @@
+---
+title: Custom XUL Elements with XBL
+slug: Archive/Mozilla/XUL/School_tutorial/Custom_XUL_Elements_with_XBL
+tags:
+  - XUL
+translation_of: Archive/Add-ons/Overlay_Extensions/XUL_School/Custom_XUL_Elements_with_XBL
+---
+<div>
+  <div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/School_tutorial/Connecting_to_Remote_Content" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/School_tutorial/User_Notifications_and_Alerts">次のページ  »</a></p>
+</div></div>
+<blockquote>
+  <p><strong>XML Binding Language</strong> (<strong>XBL</strong> や拡張可能なバインディング言語 (Extensible Bindings Language) と呼ばれることもあります) は、他のドキュメント内の要素に取り付けられるバインディングを記述する言語です。バインディングを取り付ける要素は、「<em>XBL に結び付けられた要素</em>」と呼ばれ、バインディングで定義された新しい振る舞いを獲得します。</p>
+</blockquote>
+<p>これは、<a href="/ja/docs/XBL" title="XBL">XBL のページ</a>からの引用です。</p>
+<p>この暗号のような説明は、XBL で独自のカスタム要素を作成できるという、とても簡単なコンセプトについて述べています。XBL は XUL 内で多用されていますが、理論的にはどの XML 言語にも適用できます。XBL は標準化のために <a href="http://w3.org/">W3C</a> へ提案されましたが、現在は専ら XUL でしか使用されていません。</p>
+<p>XBL で新しい要素を作成し、それらのプロパティや属性、メソッド、イベントハンドラを定義できます。タブやボタン、入力コントロールなどの多くの複雑な要素が XBL と簡単な XUL 要素で実装されています。前にも説明したように、XUL は、ただのボックスやテキスト、画像です。</p>
+<p>ここでは、Hello World 拡張の変更したバージョンを使用して XBL について見ていきます。<a href="/@api/deki/files/4263/=HelloWorld6.zip" title="/@api/deki/files/4263/=HelloWorld6.zip">Hello World XBL プロジェクト</a>をダウンロードしてビルドし、しばらくの間テストしてください。Hello World メニューに新しい項目があるのが分かるでしょう。これは、リストに "Persons" を追加できる Binding Test ウィンドウを開きます。</p>
+<h2 id="XBL_Basics" name="XBL_Basics">XBL の基本</h2>
+<p>XBL バインディングを作成するには、XBL ファイルと、要素名をあなたの XBL 宣言に結び付ける CSS ファイルの 2 個のファイルが必要です。これらのファイルは両方とも、プロジェクトの <em>content</em> ディレクトリ内にあります:</p>
+<ul>
+  <li><em>person.xml</em> - これは、メインのバインディングファイルです。作成した新しい要素をコントロールするために必要なすべてのコードを保持しています。残りのセクションを通してこのコードを見ていきます。今は、<em>binding</em> 要素のはじめの部分 (<em>&lt;binding id="person"&gt;</em>) に注目してください。</li>
+  <li><em>bindings.css</em> - これは、要素名を XBL ファイルに関連付けるファイルです。<em>xshelloperson</em> 要素名を XBL ファイルで定義された binding に関連付けます。1 個のファイルで複数のバインディングができます。"#person" の部分は、私たちが求めるものの ID を示します。この CSS ファイルは、通常の skin によって置き換えるものではなく、style を定義するものでもありません。これは、content の振る舞いを定義するものなので、content ディレクトリ内に置きます。</li>
+</ul>
+<div class="note">
+  ツールバー要素に binding を用いる場合は、<em>chrome.manifest</em> ファイル内で <em>style</em> 指示子を使用してツールバーのカスタマイズダイアログに CSS ファイルを含めることを忘れないでください。</div>
+<p>これら 2 個のファイルで正しく定義すれば、新しい要素が使えるようになります。<em>bindingDialog.xul</em> ファイルを見ると、この CSS ファイルが含まれていることが分かるでしょう。これは、<em>xshelloperson</em> タグが他の XUL タグと同じように使用できるようになったことを意味します。ここでは "Persons" 要素を動的に追加しているため、<em>xshelloperson</em> 要素がどのように他の要素と同じように作成され DOM に追加されているかを知るには、JavaScript ファイルを見なければなりません。</p>
+<pre class="brush: js">addPerson : function(aEvent) {
+  // ...
+  let person = document.createElement("xshelloperson");
+  // ...
+  person.setAttribute("name", name);
+  person.setAttribute("greeting", greeting);
+  // ...
+  personList.appendChild(person);
+  // ...
+},
+</pre>
+<p>これは、XBL の利点が明らかになる箇所です。1 個のノードを作成し、いくつかの属性を設定するだけでよいのです。"Person" が作成されるたびに<strong>毎回</strong>、およそ 7 個のノードで構成された XUL 構造全体を作成する必要はありませんでした。XBL は、これらのノードを一体にして管理する必要があったものをカプセル化します。</p>
+<div class="panel" style="border-width: 1px;">
+  <div class="panelContent">
+    <div class="note">
+      ボーナスとして、すべてのシステムでネイティブに見せる "ファイルを開く" ダイアログを開く <a href="/ja/docs/XPCOM_Interface_Reference/nsIFilePicker" title="NsIFilePicker">nsIFilePicker</a>の使い方を調べてください。</div>
+  </div>
+</div>
+<p>それでは、<em>person.xml</em> XBL ファイルの中身を見ていきましょう。</p>
+
+
+<pre class="brush:xml">&lt;bindings xmlns="http://www.mozilla.org/xbl"
+  xmlns:xbl="http://www.mozilla.org/xbl"
+  xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;</pre>
+
+
+<p><a href="/ja/docs/XUL/bindings" title="XUL/bindings">bindings</a> 要素は、<a href="/ja/docs/XUL/binding" title="XUL/binding">binding</a> 要素のコンテナであり、このドキュメントのルートです。このドキュメントのデフォルトの名前空間が XBL であり、XUL 名前空間が "xul" として定義されている部分に注目してください。binding のコンテンツを定義する時は、このことを心に留めておく必要があります。"xul:" を追加しておかないと、あなたのコンテンツのノードにおかしなことが起こってしまいます。</p>
+
+<pre class="brush:xml">&lt;binding id="person"&gt;</pre>
+
+
+<p>一般的には、binding の定義はファイルごとに 1 個にしてください。バインディングは多くのコードを必要としがちなため、複数定義するとファイルが肥大化し、コードが読みづらくなります。一方で、バインディングが小さく他のバインディングと強い関連性があるなら、それらを 1 個のファイルで定義すると分かりやすくなります。CSS ファイルについては、あなたの拡張機能のすべてのバインディングを 1 個のファイルで宣言するとよいでしょう。</p>
+<h2 id="Content" name="Content">コンテンツ</h2>
+<p><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#content" title="XBL/XBL 1.0 Reference/Elements#content">content</a> タグ以下には、この要素で表示される XUL コンテンツを定義します。</p>
+
+<pre class="brush:xml">&lt;content&gt;
+  &lt;xul:hbox&gt;
+    &lt;xul:image class="xulshoolhello-person-image" xbl:inherits="src=image" /&gt;
+    &lt;xul:vbox flex="1"&gt;
+      &lt;xul:label xbl:inherits="value=name" /&gt;
+      &lt;xul:description xbl:inherits="value=greeting" /&gt;
+    &lt;/xul:vbox&gt;
+    &lt;xul:vbox&gt;
+      &lt;xul:button label="&amp;xulshoolhello.remove.label;"
+        accesskey="&amp;xulshoolhello.remove.accesskey;"
+        oncommand="document.getBindingParent(this).remove(event);" /&gt;
+    &lt;/xul:vbox&gt;
+  &lt;/xul:hbox&gt;
+&lt;/content&gt;</pre>
+
+
+<p>私たちの要素は、画像と 2 行のテキスト、ボタンを表示するとても簡単な要素です。ここでは、次の 3 つの重要なことに注意してください:</p>
+<ul>
+  <li>"xul:" 名前空間は、content 内のすべての XUL タグに対して使用されなければなりません。</li>
+  <li><em>xbl:inherits</em> 属性は、XUL 内部でそのノード上に設定された属性を使用させます。XUL ファイルで <em>&lt;xshelloperson name="Pete" greeting="Good morning" image="" /&gt;</em> のように記述すると、これらの属性が、この特別な属性を持つ content ノードに "継承" されます。<em>xul:label</em> 要素の <em>value</em> 属性は "Pete" になります。</li>
+  <li>button タグの <em>oncommand</em> 属性には、<em>document.getBindingParent(this)</em> という今までに見たことのないコードがあります。このコードは、<em>xshelloperson</em> タグに相当する DOM オブジェクトを取得し、そのメソッドやプロパティへアクセスできるようにします。この場合は、後で取り上げる <em>remove</em> メソッドを呼び出しています。</li>
+</ul>
+<p>コンテナ要素や他の子ノードを持つ要素を作成する必要がある場合は、content 内で子ノードが挿入される場所を示すための XBL <a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#children" title="XBL/XBL 1.0 Reference/Elements#children">children</a> タグを使用してください。<em>includes</em> 属性は、子ノードに少しの柔軟性を与えますが、あまり必要な場面はありません。</p>
+<p>考慮すべき重要なことが一つあります。どの <em>content</em> ノードでも <em>id</em> 属性を使用すべきではありません。これらのノードは他と同じ XUL DOM の一部であるため、<em>id</em> 属性を持たせると問題を起こす原因となります。同じドキュメント内にあなたの要素が複数与えられると、それらが内部で同じ <em>id</em> を持つことになってしまいます。この問題を回避するため、代わりに <em>anonid</em> 属性が使用できます:</p>
+
+
+<pre class="brush:xml">&lt;xul:label anonid="xulshoolhello-name-label" xbl:inherits="value=name" /&gt;</pre>
+
+<p>そして、バインディング内で JavaScript コードからノードへの参照を得るために、<a href="/ja/docs/XBL/XBL_1.0_Reference/DOM_Interfaces#getAnonymousElementByAttribute" title="XBL/XBL 1.0 Reference/DOM Interfaces#getAnonymousElementByAttribute">getAnonymousElementByAttribute</a> DOM メソッドを使用します:</p>
+
+<pre class="brush: js">let nameLabel = document.getAnonymousElementByAttribute(
+    this, "anonid", "xulshoolhello-name-label"
+);</pre>
+
+
+<h2 id="Implementation" name="Implementation">実装</h2>
+<p><a href="/ja/docs/XBL/XBL_1.0_Reference/Binding_Implementations" title="XBL/XBL 1.0 Reference/Binding Implementations">implementation</a> セクションでは、要素のほとんどのスクリプトを定義します。ここでは、メソッドとプロパティ、要素の <a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#constructor" title="XBL/XBL 1.0 Reference/Elements#constructor">function Object() { [native code] }</a> と <a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#destructor" title="XBL/XBL 1.0 Reference/Elements#destructor">destructor</a> も定義できます。JavaScript コードは、JavaScript と XML 構文の衝突を避けるため、<em>CDATA</em> セクション内にカプセル化されます。</p>
+<h3 id="Properties_and_Fields" name="Properties_and_Fields">プロパティとフィールド</h3>
+<p><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#field" title="XBL/XBL 1.0 Reference/Elements#field">field</a> タグと <a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#property" title="XBL/XBL 1.0 Reference/Elements#property">property</a> タグは、要素の変数を扱い、要素の外側からこれらの変数へアクセスできるようにします。</p>
+<p><em>field</em> は変更できる値を保持します。ただし、<em>readonly</em> 属性が設定されている場合は変更できません。これは、JavaScript オブジェクトの変数ととても似ています。通常は、 <em>field</em> を要素内部のプライベート変数のために使用します。</p>
+
+
+<pre class="brush:xml">&lt;field name="fieldName"&gt;defaultValue&lt;/field&gt;</pre>
+
+
+<p>あなたのバインディングメソッドの内側から、次のコードで field へアクセスできます:</p>
+<pre class="brush: js">this.fieldName</pre>
+
+
+<p>また、要素への参照がある場合は、要素の外側からもアクセスできます:</p>
+
+
+<pre class="brush: js">elementRef.fieldName</pre>
+
+
+<div class="note">JavaScript オブジェクトと同じように、すべての field はパブリックにアクセス可能です。私たちは、field が "private" 変数であることをしめすために、変数名に "_" を使用します。</div>
+
+
+<p><em>property</em> は、もう少し堅固です。これは、getter メソッドと setter メソッドで定義され、読み込み専用や書き込み専用のプロパティにすることができ、さらに複雑な振る舞いにもできます。私たちのバインディングでは 2 個のプロパティが定義されています。これは、要素内の 2 個の text 属性へ簡単にアクセスするためのものです。私たちが使用する次のコードは、<em>property</em> タグの短い書き方です:</p>
+
+
+<pre class="brush:xml">&lt;property
+  name="name"
+  onget="return this.getAttribute('name');"
+  onset="this.setAttribute('name', val);" /&gt;</pre>
+
+
+<p>getter や setter のコードが複数行にわたる場合は、次のさらにコンパクトな property タグを使用してください:</p>
+
+
+<pre class="brush:xml">&lt;property name="name"&gt;
+  &lt;getter&gt;&lt;![CDATA[
+    return this.getAttribute('name');
+  ]]&gt;&lt;/getter&gt;
+  &lt;setter&gt;&lt;![CDATA[
+    this.setAttribute('name', val);
+  ]]&gt;&lt;/setter&gt;
+&lt;/property&gt;</pre>
+
+
+<p>property は、field と同じようにアクセスできます。私たちは、これらをパブリックメンバに使用しています。</p>
+<div class="panel" style="border-width: 1px;">
+  <div class="panelContent">
+    <div class="note">
+      XBL バインディングを使用して XUL ドキュメントにノードを追加する時は、通常のすべての DOM 操作が行えます。ノードを移動したり削除したり、複製したりできます。ただし、ノードの移動時や複製時には、<strong>ノード内のすべての内部状態が失わる</strong>ことを知っておく必要があります。これは、すべての property と field がリセットされることを意味します。これらの DOM 操作を行った後も値を保持しておきたいときは、内部の値ではなく、属性値として設定しなければなりません。</div>
+  </div>
+</div>
+<h3 id="Methods" name="Methods">メソッド</h3>
+<p>私たちの "Person" バインディングには、リストからアイテムを削除する 1 つのメソッドがあります:</p>
+
+
+<pre class="brush:xml">&lt;method name="remove"&gt;
+  &lt;parameter name="aEvent" /&gt;
+  &lt;body&gt;&lt;![CDATA[
+    this.parentNode.removeChild(this);
+  ]]&gt;&lt;/body&gt;
+&lt;/method&gt;</pre>
+
+
+<p>見ての通り、method と受け取る parameter の定義はとても簡単です。通常の JavaScript コードと同じように、<em>return</em> キーワードを使用して戻り値を指定することもできます。この method は、親ノードから Person ノードを削除します。とても簡単でしょう。</p>
+<p>XBL のコードからは、XPCOM コンポーネントや JavaScript コードモジュール、利用可能な chrome スクリプトを使用するなど、どんなことでも行えます。主な欠点は、バインディング内で <em>script</em> タグを定義できないことです。スクリプトは、binding を使用する XUL ファイルに含まれた script に依存します。スクリプトと異なり、スタイルシートを <a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#stylesheet" title="XBL/XBL 1.0 Reference/Elements#stylesheet">stylesheet</a> XBL 要素を使用して含めることができます。ローカライズのための DTD ファイルと properties ファイルは通常の XUL ファイルと同じように扱うことができます。</p>
+<div class="panel" style="border-width: 1px;">
+  <div class="panelContent">
+    <div class="note">
+      常に心に留めておくべき 2 つの競合するパターンがあります。表現コードと論理コードのカプセル化と分離です。カプセル化を行う場合は、あなたの XBL を外部への依存から解放しなければなりません。つまり、スクリプト X がどこか外部に含まれていることを仮定するべきではありません。含まれていなければ、バインディングが失敗する原因になります。これは、すべてをバインディング内に収めなければならないことを示唆しています。一方で、バインディングは本当にただの表現モジュールでしかありません。ほとんどの XUL 要素は、基本的な表現方式を持っており、表現以外の機能はどこか他の場所で処理されます。加えて、XBL ファイルは、通常の JavaScript ファイルよりも管理しにくいです。簡単な側面での誤りのほうが解決しやすいため、私たちは XBL をできるだけ簡単しておくことを好みます。XBL の外部へ依存しなければならない場合は、そのようにしてください。それでも、外部とコミュニケートするカスタムイベントを使用することによって、分離と使途の広さを保つことができます。この方法は、特定のスクリプトへの依存を減らし、あなたのタグの表現部分が大きな振る舞いになります。</div>
+  </div>
+</div>
+<p>field や propertiy と同じように、method は、ノードに相当するオブジェクトへの参照があればとても簡単に呼び出せます。</p>
+<div class="panel" style="border-width: 1px;">
+  <div class="panelContent">
+    <div class="note">
+      XBL の要素が作成されドキュメントに挿入された直後、メソッドを呼び出し、プロパティを XBL 上のノードに設定する時に問題が起こることが分かっています。これはおそらく、ノードの挿入に関連する何らかの非同期の操作が原因です。ノードの挿入直後にそれを操作する必要がある場合は、タイムアウトを利用して操作を遅延させることをお勧めします (タイムアウトを 0 に設定するとうまく動作します)。</div>
+  </div>
+</div>
+<h2 id="Handlers" name="Handlers">ハンドラ</h2>
+<p><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#handlers" title="XBL/XBL 1.0 Reference/Elements#handlers">handlers</a> と <a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#handler" title="XBL/XBL 1.0 Reference/Elements#handler">handler</a> XBL 要素は、要素のイベントハンドラを定義するために使用されます。私たちは、"Person" 要素がクリックされた時に挨拶を表示するため、"click" ハンドラを使用しています:</p>
+
+
+<pre class="brush:xml">&lt;handler phase="bubbling" event="click"&gt;&lt;![CDATA[
+  window.alert(this.greeting);
+]]&gt;&lt;/handler&gt;</pre>
+
+
+<p>ハンドラは、多くの場合コード全体ではなく、バインディングの一部にだけ適用するイベントが必要な場合に使用されるため、あまり必要になることはありません。使用する場合は、通常の event 属性を <em>content</em> タグ内のノードに追加してください。</p>
+<p>Note that with handlers a convenience arises in the fact that "this" refers to the XBL element, and so internal components can be accessed using "this.".</p>
+<h2 id="Inheritance" name="Inheritance">継承</h2>
+<p>継承は、XBL の中でも最も強力な機能です。これは、既存のバインディングを拡張するバインディングを作成して多くのコードを再利用し、細かな振る舞いを変更できるようにします。必要なことは、binding 要素の <em>extends</em> 属性を使用することだけです:</p>
+
+
+<pre class="brush:xml">&lt;binding id="manager"
+  extends="chrome://xulschoolhello/content/person.xml#person"&gt;</pre>
+
+
+<p>このコードで "Person" バインディングと全く同じコピーが得られます。好きなように上書きしてください。</p>
+<p>例えば、全く異なる XUL コンテンツの <em>content</em> タグを追加し、<em>implementation</em> をそのままにしておくことができます。ただし、すべての <em>anonid</em> 属性に矛盾がないように十分注意してください。さらに、何らかのコードがノードを横断する場合は DOM 構造にも注意してください。残念なことに、content の一部分だけを上書きすることはできません。上書きしたいときは、content 全体を上書きしなければなりません。</p>
+<p>継承は一般的に、メソッドやプロパティの振る舞いを変更したい場合に行います。<em>content</em> タグを含めないことによって元の content をそのまま残しておき、上書きしたいメソッドやプロパティを追加するだけです。必要なことは、変更したものを継承元の名前と一致させることだけです。上書きされないすべてのメソッドやプロパティは、元の振る舞いを維持します。</p>
+<p><a href="/ja/docs/XUL/richlistbox" title="XUL/richlistbox">richlistbox</a> 要素を継承してわずかなコードを追加するだけで、高機能なアイテムツリーに変更したり、クリックするごとに状態を変化させるスイッチを作成したりできます。カスタム要素を作成する場合は、多くの時間を節約できることを心に留めてください。</p>
+<h2 id="Replacing_Existing_XUL_Elements" name="Replacing_Existing_XUL_Elements">既存の XUL 要素の置き換え</h2>
+<p>このセクションのはじめで見たとおり、実際のバインディング処理は、binding のタグ名を関連付ける簡単な CSS 規則によって決定されます。これは、CSS 規則を追加するだけで、binding を Firefox のどんな要素にも変更できることを意味します！ どの XUL ウィンドウのどのインタフェースでも変更できるため、とても強力です。これも、継承と共に簡単に行えます。要素を拡張し、置き換えることによって、Firefox ウィンドウの UI を強化できます。<a class="link-https" href="https://addons.mozilla.org/ja/firefox/addon/1815">Console²</a> 拡張機能が、エラーコンソールウィンドウを改善するために、その XUL 要素の置き換えています。</p>
+<p>要素の置き換えは常に最終手段であるべきです。メインのブラウザウィンドウ上で行う場合は特にそうです。間違った方法で置き換えると、とても簡単にアプリケーションや他の拡張機能の UI を壊してしまうため、十分に注意してください。要素の特定の部分だけを変更する必要がある場合は、それに限定した CSS 規則を使用してください。</p>
+<p><a href="/ja/docs/CSS/-moz-binding" title="CSS/-moz-binding">-moz-binding</a> プロパティは、どの CSS セレクタにも使用できます。</p>
+<div>
+  <div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/School_tutorial/Connecting_to_Remote_Content" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/School_tutorial/User_Notifications_and_Alerts">次のページ  »</a></p>
+</div></div>
+<p><small>This tutorial was kindly donated to Mozilla by Appcoast.</small></p>

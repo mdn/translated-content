@@ -1,0 +1,85 @@
+---
+title: 課金処理とレベニュー
+slug: Archive/Mozilla/Marketplace/Monetization/Payment_processing_and_your_revenue
+tags:
+  - Beginner
+  - Firefox OS
+  - Marketplace
+  - Tutorial
+translation_of: Archive/Marketplace/Monetization/Payment_processing_and_your_revenue
+---
+<div class="summary">
+<p>この記事には Firefox Marketplace の中や、アプリ内支払いがなされる時のトランザクション処理の方法についてと、その結果あなたが受け取るレベニューの情報があります。</p>
+</div>
+
+<p id="Pricing_and_handling_payments">Mozilla はパートナーと協働して、あなた アプリ開発者 とエンドユーザ両方にとって扱いやすいシステムを作りました。Mozilla は開発者と Bango や Boku をつないで、グローバルな顧客にはクレジットカードを、数が増えているマーケットには便利なキャリアの直接課金を提供します。Mozilla は現在、クレジットカードでは 14 の地域通貨と、キャリア直接課金では 6 ヶ国をサポートしています。地域通貨の課金がサポートされていない国ではUSD(USドル)でのクレジットカード課金があります。</p>
+
+<h2 id="概要">概要</h2>
+
+<p>Firefox Marketplace に並べられるそれぞれの有料アプリと、全てのアプリ内課金製品は支払い事業者によって販売されます。この事業者は記録の商人であり、取引を処理したり、売上税と付加価値税(VAT)を集めたり、地方の消費者法の適合性を確認したり、資金を配分したり、返金を処理したり、その他の商的義務を処理したりするのに責任を持ちます。Mozilla は購入者(アプリのユーザ) と販売者(アプリの開発者) を一緒にした場所を提供しますが、取引の関係者ではありません。<a class="external external-icon" href="http://www.bango.com">Bango</a> と <a class="external external-icon" href="http://www.boku.com/">Boku</a> は Firefox Marketplace 向けの支払い事業者です。</p>
+
+<p>支払い事業者は購入者(アプリのユーザ) と販売者(アプリの開発者) 間の取引を処理し、それにはクレジットカードの処理といった事も含まれます。支払い事業者は通常は、各取引にサービス提供用の手数料を課します。各支払い事業者のアカウントは、<a class="external external-icon" href="https://marketplace.firefox.com/developers/">Firefox Marketplace Developer Hub</a>にて作っておく必要があります。</p>
+
+<p>Firefox Marketplaceの運営をサポートし、アプリのプラットフォームを改良し、 <a class="external external-icon" href="http://www.mozilla.org/about/">我々のミッション(英語)</a>を前進させるために、Mozilla とそのパートナーは各取引の分前を取り、その分前から全体の取引手数料を支払います。現在は開発者には、Marketplace を使ったアプリ購入とアプリ内購入の 70% が残ります(VAT と、エンドユーザ価格に含まれる、手数料の後に)。Mozilla とパートナーは 30% を受取ります。</p>
+
+<p>Firefox Marketplace はできる限りたくさんの国、言語、通貨をサポートすることを目標にしています。我々はローカライズされた Marketplace をサポートして、全ての国から支払いが可能になるのを望んでいます。</p>
+
+<h2 id="あなたのレベニュー">あなたのレベニュー</h2>
+
+<p>この節には開発者のレベニューが決定されて、支払われる方法についてのより詳細があります。</p>
+
+<h3 id="収入分割はどうやって決められるのか">収入分割はどうやって決められるのか?</h3>
+
+<p>開発者の支払い口座を設定する時、支払いを得る通貨を選択します。支払いでサポートされている通貨は、USドル ($)、ユーロ (€)、と英国ポンド (£)が含まれます。税込み価格では、一般ルールとして、エンドユーザがアプリに支払った総量に、税金や特定の費用が控除された後の60%から70%を受け取るでしょう。税抜き価格では、価格表のエンドユーザ価格の60%から70%を受け取ります(なぜなら税金はエンドユーザの支払いに追加されるため)。 通貨の変動やVAT税率の差異により、正確な総計は地域により異なります。</p>
+
+<p>Bango の支払いレートはキャリアもクレジットカード同様に 70% です。Boku はキャリア用の 60% の支払いレートです。</p>
+
+<p>残った 30% (Bango) か 40% (Boku) はMozilla、モバイル事業者、支払い提供業者で分割されます。それには取引手数料とサービス料が含まれ、それは商的な取引処理に関連するかもしれません。Mozilla は、事前に結ばれた協定により、 5%から7.5%の間で受け取ります</p>
+
+<div class="note">
+<p>モバイル事業者の課金では、低い収入割合しかない事もあります。各国の詳細については<a href="https://developer.mozilla.org/ja/Marketplace/Monetization/Payments_Status">国別ガイド</a>ページを調べて、その国のモバイル事業者の分配情報を参考にして下さい。</p>
+</div>
+
+<h3 id="支払いを受ける_支払い口座をセットアップする">支払いを受ける: 支払い口座をセットアップする</h3>
+
+<p>国ごとの支払い種類アプリに課金したりアプリ内課金の受け取りができる前に、最初にあなたのアプリを配布することを選んだ地域や国において支払いサービスを提供する、支払い業者の口座をセットアップしなければなりません。各支払い提供業者はMozillaのサービス規約と別のサービス規約を持つ可能性があり、Firefox Marketplace でアプリを販売したり Firefox Marketplace のアプリ内課金を利用したりするには、その規約に同意する必要がある場合があります。</p>
+
+<p>支払い口座は<a class="external external-icon" href="https://marketplace.firefox.com/">Firefox Marketplace</a> での開発者アカウント内でセットアップできます。アプリの <em>Compatibility &amp; Payments</em> 節へ移動して、選択した地域の支払い口座を追加します。もっと詳しい情報は、アプリ発行ガイドの <a href="/ja/Marketplace/Publishing/Pricing/Payment_Accounts">支払いステータス</a> を見てください。</p>
+
+<h3 id="分配を受け取る_支払いを受ける">分配を受け取る: 支払いを受ける</h3>
+
+<p>いったんセットアップが完了したら、支払い事業者と直接関係を持つようになり、支払いがあるでしょう。売上や、顧客への返金額合計や、あなたへの支払い額合計 (VATの支払いが必要な地域ではVAT込みで) を項目別にする自己請求書(SBI)を受け取るでしょう。</p>
+
+<p>Firefox Marketplaceの開発アカウントを通じて、業者の支払いポータルにアクセス可能できます。支払いの条件、スケジュール、口座への精算にかかる時間 は、モバイル事業者の課金スケジュールや返金に影響する消費者法などにより、地域ごとに異なります。支払い事業者に対して、これらの条件を見直して下さ い。</p>
+
+<h2 id="税金">税金</h2>
+
+<p>この節は売上税が取り扱われる方法を説明します。</p>
+
+<h3 id="VAT付加価値税">VAT(付加価値税)</h3>
+
+<p>Bango と Bokuは課税当局へのVAT 消費税に類する税金 の軽減を扱います。それぞれの地域には、地域の法律に基づき色々な税金と送金の要求があり、詳細は会計士や税金の専門家に相談すべきです。自己発行の請求書は、BangoにVAT課税前の価格を請求します。支払い表で動作方法を確認できます。あなたが、販売者のVATが要求される地域の外にいる場合、課税当局から還元を受ける資格があり、会計士に相談すべきです。</p>
+
+<h3 id="税金と両替手数料を天引きする">税金と両替手数料を天引きする</h3>
+
+<p>Bango はUSドル($)、ユーロ(€)、または英ポンド(£)で支払います。Boku はUSドル($)、またはユーロ(€)で支払います。希望のものを選択できます。Bango と Bokuは法の求めにより、あなたへの支払いのためにお金を動かす場合、地方税を天引きしたり提出したりすることがあります。税の天引き率は国によって異なり、為替手数料に従うこともあります。地方の通貨をUSドルや、ユーロ、英ポンドと両替する時に、通貨交換料として1.9% から2.5% を請求されることもあります。我々はこれが全ての開発者にとって有利でない可能性があると理解しており、代替の解決策に向けて取り組んでいます。</p>
+
+<h2 id="参考情報">参考情報</h2>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/ja/Marketplace/Monetization/App_pricing">アプリの価格付け</a> ガイドには価格ポイントがどう使われ、また価格ポイントがクレジットカードや税金などと連携する方法についてのより詳しい情報があります。</li>
+ <li><a href="https://developer.mozilla.org/ja/Marketplace/Monetization/Payments_Status">支払いステータス</a>では、現在どの国がアプリ支払いを利用できるのかと、どの為替レートが使用されるのかと、それぞれの地域で意識する必要のあるその他のことを見ています。</li>
+</ul>
+
+<h2 class="offscreen" id="Document_Tags_and_Contributors">Document Tags and Contributors</h2>
+
+<div class="tag-attach-list contributors-sub"><strong>Tags:</strong>
+
+<ul class="tags tags-small">
+ <li><a href="https://developer.mozilla.org/en-US/docs/tag/Monetization">Monetization</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/tag/Payments">Payments</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/tag/Apps">Apps</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/tag/Marketplace">Marketplace</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/tag/Firefox%20OS">Firefox OS</a></li>
+</ul>
+</div>

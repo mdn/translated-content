@@ -1,0 +1,34 @@
+---
+title: B2G OS Architecture
+slug: Archive/B2G_OS/B2G_OS_Architecture
+translation_of: Archive/B2G_OS/Architecture
+---
+<h2 id="B2G_OS_アーキテクチャの説明">B2G OS アーキテクチャの説明</h2>
+
+<div class="twocolumns">
+<p>B2G OS を構成する 3つのレイヤー:</p>
+
+<ol>
+ <li><strong>Gaia</strong></li>
+ <li><strong>Gecko</strong></li>
+ <li><strong>Gonk</strong></li>
+</ol>
+
+<h3 id="Gaia">Gaia</h3>
+
+<p>Gaia は、HTML、CSS と Javascriptで作られているシステムアプリや電話、SMS、時計、カレンダーで構成されているユーザーインターフェースです。</p>
+
+<p><br>
+ <strong>Source Code</strong>: <a href="https://github.com/mozilla-b2g/gaia">https://github.com/mozilla-b2g/gaia</a></p>
+
+<h3 id="Gecko">Gecko</h3>
+
+<p>Gecko は、HTML, CSS と Javascript や 様々な デバイス <a href="https://discourse.mozilla-community.org/t/why-gaia-apps-are-turned-to-chrome/8011">chrome://</a> &amp; <a href="https://developer.mozilla.org/en-US/docs/Mozilla/B2G_OS/API">web API's</a>. を描画する、web レンダリングエンジンです。&lt;/br&gt;<br>
+ <strong>Source Code</strong>: <a href="https://github.com/mozilla/gecko-dev">https://github.com/mozilla/gecko-dev</a></p>
+
+<p dir="rtl"><code><img alt="" src="https://mdn.mozillademos.org/files/13803/b2gos.png" style="border-style: solid; border-width: 2px; float: left; height: 400px; margin-left: 20px; margin-right: 20px; width: 300px;"></code></p>
+</div>
+
+<h3 id="Gonk">Gonk</h3>
+
+<p>Gonk は、Android Kernel や <a href="https://source.android.com/devices/halref/">Hardware Abstraction Layer</a> (HAL) と デバイスドライバーで構成されています。</p>

@@ -1,0 +1,35 @@
+---
+title: 扩展的常见问题解答
+slug: Mozilla/Add-ons/Extension_Frequently_Asked_Questions_move
+translation_of: Archive/Mozilla/Extension_Frequently_Asked_Questions
+---
+<p>这里是关于<a class="internal" href="/cn/%E6%89%A9%E5%B1%95" title="cn/扩展">扩展</a>开发中最常见问题的解答集锦。其中的绝大多数是关于 FireFox 的，但是大部分能够方便的移植到 SeaMonkey，Thunderbird 或其它 Mozilla 应用上。</p>
+<p>如果你还不知道怎么开始，可以先看看我们的教程：<a class="internal" href="/cn/%E6%9E%84%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%89%A9%E5%B1%95" title="Cn/构建一个扩展">构建一个扩展</a>或者 <a class="external" href="http://kb.mozillazine.org/Getting_started_with_extension_development" title="http://kb.mozillazine.org/Getting_started_with_extension_development">MozillaZine 上的新手教程</a>。然后用<a class="external" href="http://ted.mielczarek.org/code/mozilla/extensionwiz/" title="http://ted.mielczarek.org/code/mozilla/extensionwiz/">扩展向导</a>创建一个供开始用的简单扩展。</p>
+<p>不要忘记先<a class="internal" href="/%E8%AE%BE%E7%BD%AE%E6%89%A9%E5%B1%95%E7%9A%84%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83" title="设置扩展的开发环境">设置好扩展的开发环境</a>。</p>
+<h2 id="调试">调试</h2>
+<p>调试之前先<a class="internal" href="/%E8%AE%BE%E7%BD%AE%E6%89%A9%E5%B1%95%E7%9A%84%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83" title="设置扩展的开发环境">设置扩展的开发环境</a>。</p>
+<p>如果调试的代码很复杂，可能会用到 <a class="internal" href="/cn/venkman" title="cn/Venkman">Venkman</a> JavaScript 调试器。在用 Venkman 调试扩展代码之前需要把 "Debug -&gt; Exclude Browser Files" 选项勾掉。</p>
+<h3 id="怎样记录代码中的错误？">怎样记录代码中的错误？</h3>
+<p>将<a class="internal" href="/%E8%AE%BE%E7%BD%AE%E6%89%A9%E5%B1%95%E7%9A%84%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83" title="设置扩展的开发环境"><strong>javascript.options.showInConsole</strong> 设为 <strong>true</strong></a>，这样错误就会被记录在<a class="internal" href="/cn/%E9%94%99%E8%AF%AF%E6%8E%A7%E5%88%B6%E5%8F%B0" title="cn/错误控制台">错误控制台</a>中，使得 bug 容易追踪些。</p>
+<h3 id="怎样显示扩展当前状态？">怎样显示扩展当前状态？</h3>
+<p>要想显示变量值，调试消息等，可以使用 alert()，dump() ，Components.utils.reportError() 或者控制台服务。当然也可以用 Venkman 调试器。</p>
+<h3 id="为什么我的脚本不能正确运行？">为什么我的脚本不能正确运行？</h3>
+<p>如果你的脚本不能如预期运行，第一个要检查的是错误控制台（参见#）。</p>
+<p>访问尚未加载完毕的 DOM 也常常是错误的来源。这种错误通常是因为初始化代码被放在程序顶层（即所有函数之外）。通过监听 <span style="font-family: Courier New;">load</span> 事件延期执行初始化代码可以解决这个问题（<span style="font-family: Courier New;">load</span> 事件表示窗口已经加载完毕）：</p>
+<pre class="eval">function exampleBrowserStartup(event)
+{
+  // 初始化代码
+}
+window.addEventListener("load", exampleBrowserStartup, false);
+</pre>
+<p> </p>
+<h3 id="不能访问网页的文档（document）对象">不能访问网页的文档（document）对象</h3>
+<p>要从 browser.xul 这个 overlay 中访问当前网页，应当使用 <span style="font-family: Courier New;">content.document </span>而不是 <span style="font-family: Courier New;">document。这是因为 document 表示浏览器窗口自身。更多信息参考 <a class="internal" href="/en/Working_with_windows_in_chrome_code" title="En/Working with windows in chrome code">Working with windows in chrome code</a>。</span></p>
+<h3 id="无法在扩展中使用_XMLHttpRequest">无法在扩展中使用 XMLHttpRequest</h3>
+<p>使用 XMLHttpRequest 发送接收信息时，一般都需要做跨域（crosss domain）操作。 一般来说跨域很麻烦，但因为在 chrome 窗口内发起请求时，是在安全区域内的，所以请求会被默许。</p>
+<p>You need to make sure that you are initializing the cross domain XMLHttpRequest from JavaScript code that is referencing a XUL window. If you try and execute the request in relation to the browser content document, as opposed to the "document" of the XUL window, you will receive a Permission Denied error.</p>
+<h3 id="XML_文件是规范的，但是却出现_XML_解析错误！">XML 文件是规范的，但是却出现 XML 解析错误！</h3>
+<h3 id="示例代码">示例代码</h3>
+<h3 id="得到更多帮助">得到更多帮助</h3>
+<p> </p>
+<p> </p>

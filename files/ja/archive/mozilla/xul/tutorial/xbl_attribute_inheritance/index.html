@@ -1,0 +1,97 @@
+---
+title: XBL 属性の継承
+slug: Archive/Mozilla/XUL/Tutorial/XBL_Attribute_Inheritance
+tags:
+  - Tutorials
+  - XBL
+  - XUL
+  - XUL_Tutorial
+  - 要更新
+translation_of: Archive/Mozilla/XUL/Tutorial/XBL_Attribute_Inheritance
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Anonymous_Content" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Adding_Properties_to_XBL-defined_Elements">次のページ  »</a></p>
+</div>
+<p>このセクションでは、匿名コンテントの要素に属性を継承する方法を見ていきます。</p>
+<h3 id=".E5.B1.9E.E6.80.A7.E3.82.92.E7.B6.99.E6.89.BF.E3.81.99.E3.82.8B" name=".E5.B1.9E.E6.80.A7.E3.82.92.E7.B6.99.E6.89.BF.E3.81.99.E3.82.8B">属性を継承する</h3>
+<p><a href="/ja/docs/XBL">XBL</a> を使うことによって、実際の実装を隠したまま、複合ウィジェットを構築することが可能です。 しかしながら、ここまでに説明した機能を使うだけでは、毎回同じような匿名コンテントしか生成させることはできません。 外枠のバインドされた要素に属性を付加することで、内部の要素に変更を加えることができるようになれば利用範囲が広がるはずです。</p>
+<pre><b>XUL:</b>
+
+&lt;searchbox/&gt;
+
+<b>XBL:</b>
+
+&lt;binding id="searchBinding"&gt;
+  &lt;content&gt;
+    &lt;xul:textbox/&gt;
+    &lt;xul:button label="Search"/&gt;
+  &lt;/content&gt;
+&lt;/binding&gt;
+</pre>
+<p>この例では、内部の <code><code><a href="/ja/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code> 要素に直接 <code><code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> 属性が置かれています。 このため、このバインディングを使用すると毎回同じラベルになってしまい、利用する側の意図とは合わない可能性があります。 この例の場合ならば、ラベルを指定するための属性は <code>searchbox</code> 側に置けた方が望ましいはずです。 こういった場合のために、XBL では <code>inherits</code> 属性が用意されており、これによってバインドされた要素の方に設定された属性情報を、XBL 側の要素に継承させることが可能になります。 <code>inherits</code> 属性は、XBL 側に置かれた、外枠の要素から属性を継承させたい要素、つまりこの例の場合はボタンに置く必要があります。 なお、この属性の値には、継承したい属性の名前をカンマで区切ったリストを設定します。</p>
+<pre>&lt;xul:textbox xbl:inherits="flex"/&gt;
+&lt;xul:button xbl:inherits="label"/&gt;
+</pre>
+<p>上記により、コンテントが生成されるときには、 <code><code><a href="/ja/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code></code> 要素は <code>searchbox</code> 要素から <code>flex</code> 属性を受け取り、 <code><code><a href="/ja/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code> 要素は <code>searchbox</code> 要素 から <code><code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> 属性を受け取ることになります。 この結果、テキスト入力欄の<span style="border-bottom: 1px dashed green;" title="flexibility">伸縮性</span>とボタンのラベルは、いずれもバインディングが使われるたびごとに変更できるようになります。 さらに、<code>searchbox</code> 要素の方の属性値をスクリプトで変更することで、テキスト入力欄とボタンの属性値を更新することが可能です。 なお、<code>inherits</code> 属性を設定できる要素の数には制限はなく、1 つの要素に複数の属性を継承させても構いません。</p>
+<p><code>inherits</code> 属性には XBL 名前空間に置くために、「<code>xbl:</code>」という接頭辞が付加されていることを確認してください。 この名前空間は、これらの行以前のどこかで宣言する必要がありますが、 通常は <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#bindings">bindings</a></code></code> 要素に置くようにします。 以下に例を示します。</p>
+<pre>&lt;bindings xmlns:xbl="http://www.mozilla.org/xbl"
+          xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;xbl:binding id="buttonBinding"&gt;
+  &lt;xbl:content&gt;
+    &lt;xul:button label="OK" xbl:inherits="label"/&gt;
+  &lt;/xbl:content&gt;
+&lt;/xbl:binding&gt;
+</pre>
+<p>この例のボタンは、<code><code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> 属性について継承が行われますが、 XBL の方でも、その属性に対する値が直接設定されています。 このテクニックは、バインドされた要素に属性が設定されないときのために、デフォルト値を設定しておく必要があるときに使用します。 つまり、このボタンの場合は、外枠の要素から <code><code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> 属性を継承することになりますが、 もしも <code><code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> 属性がない場合には、<code>OK</code> というデフォルト値が使用されることになります。</p>
+<p>また、XBL から生成される 2 つの要素に同じ名前の属性を継承させる必要があることもしばしばあると思います。 例えば、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/label" title="label">label</a></code></code> 要素と <code><code><a href="/ja/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code></code> 要素から、ラベル付きのテキスト入力欄 (横に説明用のテキストがあるテキスト入力欄) を作成する場合、 ラベルは表示するテキストのために <code><code id="a-value"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code></code> 属性を継承する必要があり、 またテキストボックスも、デフォルト値のため同様に <code><code id="a-value"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code></code> 属性を継承する必要があります。 これを解決するためには、外枠の要素では片方には別の名前の属性を割り当てておき、XBL 側では別の名前にした方の <code>inherits</code> 属性で、対応する属性名を明示するようにします。 以下の例は、これを行うためのものです。</p>
+<pre><b>XUL:</b>
+
+&lt;box class="labeledtextbox" title="Enter some text:" value="OK"/&gt;
+
+<b>CSS:</b>
+
+box.labeledtextbox {
+    -moz-binding: url('<a rel="freelink">chrome://example/skin/example.xml#labeledtextbox'</a>);
+}
+
+<b>XBL:</b>
+
+&lt;binding id="labeledtextbox"&gt;
+  &lt;content&gt;
+    &lt;xul:label xbl:inherits="value=title"/&gt;
+    &lt;xul:textbox xbl:inherits="value"/&gt;
+  &lt;/content&gt;
+&lt;/binding&gt;
+</pre>
+<p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code></code> 要素は、<code><code id="a-value"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code></code> 属性を直接継承しています。 このため、ラベルの方に <code><code id="a-value"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code></code> 属性を設定するためには、別の属性名を使っておいて、その値をマップする必要があります。 ラベルに設定された <code>inherits</code> 属性は、<code>labeledtextbox</code> 要素に設定された <code>title</code> 属性を捉え、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/label" title="label">label</a></code></code> 要素の <code><code id="a-value"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code></code> 属性にマップしています。 「&lt;内側の属性名&gt;=&lt;外枠の属性名&gt;」が、属性を別の属性にマップするための構文になります。 もう 1 つ、別の例を示します。</p>
+<pre><b>XUL:</b>
+
+&lt;box class="okcancel" oktitle="OK" canceltitle="Cancel" image="happy.png"/&gt;
+
+<b>CSS:</b>
+
+box.okcancel {
+    -moz-binding: url('<a rel="freelink">chrome://example/skin/example.xml#okcancel'</a>);
+}
+
+<b>XBL:</b>
+
+&lt;binding id="okcancel"&gt;
+  &lt;content&gt;
+    &lt;xul:button xbl:inherits="label=oktitle,image"/&gt;
+    &lt;xul:button xbl:inherits="label=canceltitle"/&gt;
+  &lt;/content&gt;
+&lt;/binding&gt;
+</pre>
+<p>この例の <code>oktitle</code> 属性の値は、最初のボタンの <code><code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> 属性にマップされます。 また、<code>canceltitle</code> 属性は、2 番目のボタンの <code><code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> 属性にマップされます。 さらに、最初のボタンには <code><code id="a-image"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/image">image</a></code></code> 属性も継承されます。 その結果、以下のようになります。</p>
+<pre>&lt;box class="okcancel" oktitle="OK" canceltitle="Cancel" image="happy.png"&gt;
+  &lt;button label="OK" image="happy.png"/&gt;
+  &lt;button label="Cancel"/&gt;
+&lt;/box&gt;
+</pre>
+<p>これらの属性は、内部の (匿名) コンテントに<span style="border-bottom: 1px dashed green;" title="duplicated">複製される</span>点に注意して下さい。 このため、<code>okcancel</code> クラスを持ったボックスの属性を変更した場合には、内部のボタンの値も自動的に更新されることになります。 また、属性名として独自のものを使用したことにも気が付いたかもしれません。 XUL では、これは正当な指定として扱われます。</p>
+<p>次のセクションでは、バインディングに対して、プロパティ、メソッド、イベントを追加する方法を見ていきます。</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Anonymous_Content" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Adding_Properties_to_XBL-defined_Elements">次のページ  »</a></p>
+</div>

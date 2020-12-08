@@ -1,0 +1,165 @@
+---
+title: WebIDE diagnostic de connexion
+slug: Outils/WebIDE/Diagnostic
+translation_of: Archive/WebIDE/Troubleshooting
+---
+<p>{{ToolsSidebar}}</p>
+
+<h2 id="Se_connecter_à_Firefox_pour_Android_via_USB">Se connecter à Firefox pour Android via USB</h2>
+
+<p>Si vous essayez de vous connecter à une instance de Firefox tournant sous Android que l'instance ne s'affiche pas, voici quelques manipulations que vous pouvez essayer :</p>
+
+<ul>
+ <li>
+  <p>Vérifiez votre version de Firefox : <strong>l'appareil doit avoir Firefox 36 ou plus</strong>. WebIDE ne détectera pas les versions plus anciennes automatiquement, vous avez donc besoin d'activer le suivi de port et de vous connecter au port de l'appareil. Pour cela, suivez les instructions du guide disponible <a class="external external-icon" href="/fr/docs/Tools/Remote_Debugging/Firefox_for_Android">ici</a>.</p>
+ </li>
+ <li>
+  <p>Vérifiez que vous avez activé le débogage distant dans Firefox : ouvrez Firefox pour Android, ouvrez son menu, sélectionnez <code>Paramètres</code>, et cochez la case a cocher située dans <code>Avancé &gt; débogage distant via USB</code>.</p>
+ </li>
+ <li>
+  <p>Vérifiez que le débogage USB est autorisé dans les options de développement de l'appareil.</p>
+ </li>
+ <li>
+  <p>Si vous ne voyez toujours pas votre appareil dans la fenêtre de WebIDE, essayez d'activer/désactiver le débogage distant sur le téléphone :</p>
+
+  <ul>
+   <li>
+    <p>Déconnectez votre appareil et désactivez le débogage distant sur votre téléphone.</p>
+   </li>
+   <li>
+    <p>Reconnectez l'appareil et activez le débogage distant. Cela relance l'instance de débogage du téléphone.</p>
+   </li>
+   <li>
+    <p>Essayez de nouveau de vous connecter avec WebIDE.</p>
+   </li>
+  </ul>
+ </li>
+ <li>
+  <p>Vérifiez le câble USB que vous utilisez :</p>
+
+  <ul>
+   <li>
+    <p> Essayez de débrancher puis de rebrancher votre câble USB.</p>
+   </li>
+   <li>
+    <p>Essayez de brancher votre câble USB sur un autre port USB.</p>
+   </li>
+   <li>
+    <p>Essayez avec un autre câble USB. Les câbles fournis avec les téléphones on tendance à se détériorer rapidement.</p>
+   </li>
+   <li>
+    <p>Essayez avec un câble USB plus court, Il arrive que les câbles USB longs posent des problèmes.</p>
+   </li>
+  </ul>
+ </li>
+ <li>
+  <p>Si vous utilisez Linux :</p>
+
+  <ul>
+   <li>
+    <p>Assurez vous d'avoir ajouté un fichier de règles  <code>udev</code> , comme documenté dans la troisième étape de ce guide pour <a class="external external-icon" href="http://developer.android.com/tools/device.html#setting-up">configurer un appareil Android</a>. <code>l'attribut idVendor</code> à utiliser pour le Geeksphone est "05c6", et <a class="external external-icon" href="http://developer.android.com/tools/device.html#VendorIds">cette page</a> liste les autres valeurs de l'attribut <code>idVendor</code>. Ensuite lancez la commande <code>adb devices</code> afin d'être sûr que votre appareil est bien dans la liste. Si l'appareil apparait en tant que  "no permission", vous avez besoin de redémarrer adb server (e.g. <code>adb kill-server;adb start-server</code>).</p>
+   </li>
+   <li>
+    <p>Si vous utilisez le package <code>android-tools-adb</code> de Debian, ADB Helper force peut être tout serveur ADB existant à se fermer. Ce package désactive les connections TCP au serveur, ce dont ADB Helper a besoin.</p>
+   </li>
+  </ul>
+ </li>
+ <li>
+  <p>Si vous utilisez Mac OS X :</p>
+
+  <ul>
+   <li>
+    <p>Si vous êtes un utilisateur de EasyTether, vous avez besoin de désinstaller ou de désactiver EasyTether : <code>sudo kextunload /System/Library/Extensions/EasyTetherUSBEthernet.kext</code></p>
+   </li>
+  </ul>
+ </li>
+ <li>
+  <p>Si vous utilisez Windows, vérifiez que votre appareil Android est correctement reconnu qu'il utilise le driver Google USB Driver qui est inclus dans le SDK Android.</p>
+ </li>
+</ul>
+
+<h2 id="Connecter_Firefox_pour_Android_via_Wi-Fi">Connecter Firefox pour Android via Wi-Fi</h2>
+
+<ul>
+ <li>
+  <p>Vérifiez vos versions de Firefox : Le débogage Wi-Fi nécessite Firefox 42 ou plus, et Firefox pour Android 42 ou plus sur le téléphone.</p>
+ </li>
+ <li>
+  <p>Les deux versions de Firefox (Android et ordinateur) doivent être connectés au même réseau Wi-Fi.</p>
+
+  <ul>
+   <li>
+    <p>De plus, l'ordinateur ne peut <strong>pas </strong>utiliser une connexion filaire qui redirige vers le réseau Wi-Fi. Les deux Firefox doivent être réellement connectés au Wi-Fi.</p>
+   </li>
+  </ul>
+ </li>
+ <li>
+  <p>Vérifiez que vous avez une application de scan de code barres. Nous recommandons <a href="https://play.google.com/store/apps/details?id=com.google.zxing.client.android">celle-ci</a>.</p>
+ </li>
+ <li>
+  <p>Certains réseaux Wi-Fi peuvent bloquer les paquets utilisés pour la découverte d'appareils réseau. Vérifiez avec votre administrateur réseau que ces actions sont autorisées :</p>
+
+  <ul>
+   <li>
+    <p>L'ordinateur et l'appareil Android doivent pouvoir envoyer des paquets UDP multicast sur les ports 50624-50625 à l'adresse multicast 224.0.0.115</p>
+   </li>
+   <li>
+    <p>Le modem réseau doit supporter les paquets UDP multicast</p>
+   </li>
+   <li>
+    <p>Les modems ne retransmettent pas ces paquets UDP multicast, il est donc nécessaire que les deux appareils communiquent directement avec le modem sans aucune bidouille entre.</p>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Impossible_de_charger_la_liste_des_projets">Impossible de charger la liste des projets</h2>
+
+<p>Si vous ouvrez WebIDE dans une version de Firefox puis passez à une version antérieure de Firefox avec le même profil, il est possible que vous ayez l'erreur  "Unable to load project list" en ouvrant WebIDE dans la version antérieure de Firefox.</p>
+
+<p>Cela peut se produire quand le système de stockage que WebIDE utilise (<a href="/fr/docs/Web/API/IndexedDB_API">IndexedDB</a>) a besoin de déplacer ou restructurer ses fichiers internes pour une version de Firefox plus récente. La liste du projet devient alors inaccessible à la version antérieure de Firefox.</p>
+
+<p>Aucune donnée n'a été perdue, mais vous devez cependant continuez d'utiliser la version récente de Firefox qui a été utilisée avec votre profil pour avoir la liste.</p>
+
+<p>Si vous voulez vraiment utiliser la version antérieure de Firefox, vous pouvez essayez de supprimer uniquement la liste de la façon décrite ci-dessous mais cette façon n'est pas recommandée et il peut en résulter des problèmes additionnels de pertes de données :</p>
+
+<ol>
+ <li>
+  <p>Fermer Firefox</p>
+ </li>
+ <li>
+  <p>Trouver le dossier contenant votre profil Firefox</p>
+ </li>
+ <li>
+  <p>Trouver le dossier <code>storage</code> à l'intérieur du dossier du profil.</p>
+ </li>
+ <li>
+  <p>Dans une partie de cet arbre de fichiers, il devrait y avoir des fichiers et/ou des dossiers qui commencent par <code>4268914080AsptpcPerjo</code> (un nom haché de la base de données)</p>
+ </li>
+ <li>
+  <p>Supprimer les fichiers/dossiers sus-mentionnés</p>
+ </li>
+ <li>
+  <p>Relancer Firefox et WebIDE</p>
+ </li>
+</ol>
+
+<h2 id="Activer_le_logging">Activer le logging</h2>
+
+<p>Vous pouvez activer les messages verbeux (verbose logging) pour obtenir des diagnostiques :</p>
+
+<ol start="1" style="list-style-type: decimal;">
+ <li>
+  <p>Ourvrez <a class="external external-icon" href="http://kb.mozillazine.org/About:config">about:config</a>, et ajoutez une nouvelle préférence nommée<code> extensions.adbhelper@mozilla.org.sdk.console.logLevel</code>, avec pour valeur de chaine de caractères <code>all</code>, et passez  <code>extensions.adbhelper@mozilla.org.debug</code> à <code>true</code>.</p>
+ </li>
+ <li>
+  <p>Dans le <a class="external external-icon" href="/fr/kb/disable-or-remove-add-ons">Manageur des modules complémentaires</a>, désactivez pour réactivez le module complémentaire ADB Helper.</p>
+ </li>
+ <li>
+  <p>Ouvrez la <a href="/fr/docs/Tools/Browser_Console">Console du navigateur </a>et vous verrez que les messages de la console sont préfixés par <code>adb</code>.Si les messages sont du chinois pour vous, <a href="/fr/docs/Tools/WebIDE/Troubleshooting#Get_help">demandez de l'aide</a>.</p>
+ </li>
+</ol>
+
+<h2 id="Obtenir_de_l'aide">Obtenir de l'aide</h2>
+
+<p>Allez dans la salle <a class="external external-icon" href="https://wiki.mozilla.org/DevTools/GetInvolved#Communication">#devtools sur IRC </a> et nous essayerons de vous aider.</p>

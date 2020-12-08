@@ -1,0 +1,482 @@
+---
+title: Mozilla 本地化风格指南
+slug: Mozilla/Localization/L10n_Style_Guide
+translation_of: Mozilla/Localization/L10n_Style_Guide
+---
+<h3 id="前言"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">前言</span></h3>
+
+<div id="magicdomid8"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">      风格指南定义</span><span id="result_box" lang="zh-CN"><span>风格指南</span><span>用于定义</span><span>我们</span><span>用来评价</span><span>翻译</span><span>质量的</span><span>标准</span><span>。</span><span>它</span><span>由</span><span> Mozilla 和 Mozilla 的</span><span>本地化</span><span>社区</span><span>定义的规则</span></span><span lang="zh-CN"><span>组成，主要针对如何以最佳的方式翻译 </span><span>Mozilla </span><span>的产品</span><span>、</span><span>网站和其他</span><span>项目。风格指南</span><span>可以用来</span><span>同时翻译</span><span>和评估</span><span>翻译</span><span>的</span><span>质量。</span><span>通过遵循这些</span><span>规则</span><span>，翻译人员会更容易得到</span><span>高质量的翻译，便于更好的</span><span>展示 Mozilla 的价值观和文化。这里我们列出国际上其他组织制定的一些风格指南的例子</span></span><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">:</span></div>
+
+<ul>
+ <li id="magicdomid9"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq url"><a href="https://help.apple.com/asg/mac/2013/ASG_2013.pdf">https://help.apple.com/asg/mac/2013/ASG_2013.pdf</a></span></li>
+ <li id="magicdomid10"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq url"><a href="https://www.microsoft.com/Language/zh-CN/StyleGuides.aspx">https://www.microsoft.com/Language/zh-CN/StyleGuides.aspx</a></span></li>
+ <li><a href="https://www.facebook.com/translations/style_guides">https://www.facebook.com/translations/style_guides</a></li>
+</ul>
+
+<div><span id="result_box" lang="zh-CN"><span>本风格</span><span>指南</span><span>分为</span><span>两个主要</span><span>部分：第一部分</span><span>和</span><span>特定语言相关</span><span>，必须由</span><span>每个</span><span> Mozilla 的</span><span>本地化社区</span><span>（包括</span><span>特定的语言</span><span>风格</span><span>，术语和</span><span>单位</span><span>）来定义的</span><span>规则；</span><span>第二个是由 </span><span>Mozilla </span><span>为所有</span><span>语言</span><span>定义的一般规则，可以帮助你</span><span>较好的翻译</span><span>（包括</span><span>准确度和</span><span>流畅性</span><span>原则</span><span>）</span><span>。</span></span></div>
+
+<h3 id="sect1"> </h3>
+
+<h2 id="简体中文相关_Mozilla_风格">简体中文相关 Mozilla 风格</h2>
+
+<ol style="margin-left: 80px;">
+</ol>
+
+<div id="magicdomid16">
+<h4 dir="ltr" id="基本要求" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 12.75pt;"><strong style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 700; text-decoration: none; vertical-align: baseline;">基本要求</strong></h4>
+
+<ol style="margin-top: 0pt; margin-bottom: 0pt;">
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">准确表述原文的意思、情感、立场、价值观；</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">既要避免翻译后反而模糊，也要避免翻译无须翻译的词语，力求浅显易懂；</span></p>
+
+  <ul>
+   <li style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+    <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">若有译法尚有争议的单词，应采用最常使用的译法，并在词语后以全角括号标注英文</span></p>
+   </li>
+  </ul>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">中文应该意思清晰且符合中文表达习惯，</span>同一句里不要重复出现相同主语（如“if you forget your password”应译为“如果您忘记了密码”），且应适当减少数词与量词<span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;"> ；</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">明显是美国文化的，或在中国大陆当代文化下难以理解的，可用相近的中国大陆文化代替，但不能与第 1 点抵触；</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">不必字对字、句对句翻译，原文如果表达不清晰，中文应该意译，并且应根据上下文和注释进行推断并填补或删减相应的信息，但不能与第 1 点抵触；</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">情况 5 不能太多；</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">对同样短语的翻译，前后必须一致，可利用 Pontoon 的 Translation Memory 查看以往译法，也可参考<a href="https://wiki.mozilla.org/L10n:Teams:zh-CN#L10n_Kits">其他工具</a>；</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;">对用户和开发者称“您”，对职员和志愿者称“你”<span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">，若需轻松的语气则一律用“你”；</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">不要使用机器翻译的成果来提交，也就是说您可以使用 Google Translate 来帮助您理解内容，但是不能不经考虑就把其自动翻译的结果放在翻译里；</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">若产品内显示的中文换行不理想，应适当增删文字，在网页上也可使用 \n 强制换行。</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">不太有把握的，请大胆地通过<a href="https://wiki.mozilla.org/L10n:Teams:zh-CN#How_to_join_this_team">这些方式</a>进行讨论。</span></p>
+ </li>
+</ol>
+</div>
+
+<div> </div>
+
+<div>
+<h3 id="术语表"><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd b"><strong>术语表</strong></span></h3>
+
+<div id="magicdomid29"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">这里我们列出一些可参考的 软件/互联网 相关的术语和定义的列表：</span></div>
+
+<ul>
+ <li>Mozilla 简体中文名词术语表：<a href="https://wiki.mozilla.org/Glossary_of_substantival_term_in_zh-CN_locale">https://wiki.mozilla.org/Glossary_of_substantival_term_in_zh-CN_locale</a></li>
+ <li>Mozilla 简体中文动词术语表： <a href="https://wiki.mozilla.org/Glossary_of_verbal_term_in_zh-CN_locale">https://wiki.mozilla.org/Glossary_of_verbal_term_in_zh-CN_locale</a></li>
+ <li id="magicdomid30"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">Microsoft 术语表  </span><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq url"><a href="https://www.microsoft.com/Language/zh-CN/Default.aspx">https://www.microsoft.com/Language/zh-CN/Default.aspx</a></span></li>
+ <li id="magicdomid31"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">Pootle的术语表: </span><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq url"><a href="https://mozilla.locamotion.org/zh-CN/terminology/essential.po">https://mozilla.locamotion.org/zh-CN/terminology/essential.po</a></span><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq"> </span></li>
+</ul>
+
+<div id="magicdomid33"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">使用对应术语翻译的时候，请注意要保持一致性。而且要注意避免以下几点：</span></div>
+
+<ul>
+ <li id="magicdomid34"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">同一项目内术语不一致</span></li>
+ <li>多项目术语不一致</li>
+ <li id="magicdomid37"><span class="author-a-z87zt8dz75zn14z76zz71z8z82zz86z2uq">使用其他领域的术语</span><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">(例如, 请勿在 Firefox 中使用医学用语)。</span></li>
+</ul>
+
+<div id="magicdomid100"> </div>
+
+<h4 id="词语形式"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj b"><strong>词语形式</strong></span></h4>
+
+<h5 id="复数"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">复数  </span></h5>
+
+<div id="magicdomid106"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">Pontoon 上 zh-CN 区分单复数。汉语由于没有区分单复数形式</span>，所以一般单数和复数翻译成一样即可。但有时区分单复数会带来更好效果。</div>
+
+<div id="magicdomid107"> </div>
+
+<h5 id="特殊符号"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj b"><strong>特殊符号</strong></span></h5>
+
+<div> </div>
+
+<div id="magicdomid117">
+<p dir="ltr" id="docs-internal-guid-bc308f52-cb22-5930-b22c-3ea64140e53f" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">常用的有以下几个：</span></p>
+
+<ul style="margin-top: 0pt; margin-bottom: 0pt;">
+ <li dir="ltr" style="list-style-type: disc; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">\n   换行</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: disc; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">\t   水平制表符</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: disc; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">\v  竖直制表符</span></p>
+ </li>
+</ul>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">您不需要将同样数量的格式标记放在翻译中，但是如果它们之一有在原文开始或者结束位置的时候，您必须在翻译中使之包含在对应的开始或者结束之处。</span></p>
+
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">如果要显示非转义字符，则需要使用 \ 来表明取消转义，如 " (半角双引号)表示字符串的开始或者结束，如果要在内容中使用该符号，则需输入 \"，还可以参考以下例子：</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">----------------------------------------------------------------</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">\"\\t\"</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">----------------------------------------------------------------</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">在运行时显示的结果是 "t"</span></p>
+
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">(2)XML 中的角括号和“&amp;”号</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 12.75pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">有一些模块中 XML 被频繁地使用，XML 将“&lt;”“&gt;”和“&amp;”视为保留字符，您不能将其直接添加到翻译中。必须将其实体以下面的形式表示：</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 12.75pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">&amp;lt 代表 &lt;； &amp;gt 代表 &gt;； &amp;amp 代表 &amp;。</span></p>
+
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 12.75pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">(3) TRUE 和 FALSE</span></p>
+<span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">“TRUE”和“FALSE”多不要翻译它们。如果程序读不到正确的值，可能会出现问题。</span></div>
+
+<div id="magicdomid118"> </div>
+
+<h5 id="标点的使用">标点的使用</h5>
+
+<p dir="ltr" id="docs-internal-guid-bc308f52-cb23-3790-6d9d-94db4a56c221" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">一般的原则是：除了小括号、省略号和破折号保留不变以外，都应该使用中文(全角)标点符号。英文标点符号后方常常跟随有一个半角空格，请在翻译成中文标点符号时将其去除。</span></p>
+
+
+<ol style="margin-top: 0pt; margin-bottom: 0pt;">
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">英文中的 , 在中文中可能是 ，或者 、</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">英文中的 . 在中文中应该是 ，或者 。，视上下文而定，多数是 。</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">英文中的 \"%s\" 在 GUI 程序中应该翻译为 “%s”， 而不是 \"%s\" 或者 \“%s\”，而且后者是不符合换码序列要求的。即在 GUI 程序中`something' 和 'something' 以及 \"something\" 都应该翻译为 “某事”</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">英文中的 : 应该翻译为：(全角)而不是 :(半角)， 而作为分隔符时(例如时间)，: 保留为英文(半角)的， 因为这个时候不是标点符号</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">英文中的 ( ) 应该一般都翻译成全角小括号（ ）。</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">英文中的“…”或“...”，应该保持不变，前者等价于半个全角中文省略号</span>。</p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">英文中的 -- 应该保持不变。由于全角破折号 —— 兼容性不好，有时显示为两个方格，所以不再使用。</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">其他标点符号的使用参见<a href="http://www.moe.gov.cn/s78/A19/yxs_left/moe_810/s230/201001/t20100115_75611.html">中华人民共和国 GB/T 15834-2011</a>。</span></p>
+ </li>
+</ol>
+
+<div id="magicdomid130"> </div>
+
+<h5 id="空格"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">空格 </span></h5>
+
+<div id="magicdomid135">
+<p dir="ltr" id="docs-internal-guid-bc308f52-cb25-8cbb-98d0-542b0c943575" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">为了美观，通常建议在中文与英文、中文与阿拉伯数字、英文与阿拉伯数字之间加入一个半角空格。例如：</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">----------------------------------------------------------------</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">原文 "Installing driver for %1"</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">翻译 "正在安装 %1 的驱动程序"</span></p>
+
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">原文 ""</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">"Parameter start_num specifies the character at which to start the search. "</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">"The first character is character number 1. If start_num is omitted, it is "</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">"assumed to be 1."</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">翻译 ""</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">"参数 start_num 指定开始搜索的字符位置。第一个字符序号为 1。如果省略 "</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">"start_num，默认它为 1。"</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">----------------------------------------------------------------</span></p>
+
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">对于小括号和全角双引号，其两侧不加空格：</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">----------------------------------------------------------------</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">原文 "Original idea and author (KDE1)"</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">翻译 "原始创意和作者(KDE1)"</span></p>
+
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">原文 ""</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">"The APM Management subsystem seems to be disabled.\n"</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">"Try executing \"apm -e 1\" (FreeBSD) and see if \n"</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">"that helps.\n"</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">翻译 ""</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">"APM 管理子系统似乎被禁用了。\n"</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">"试试执行“apm -e 1”（FreeBSD）并看看\n"</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 12.75pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">"是否有用。\n"</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 12.75pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">----------------------------------------------------------------</span></p>
+
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 12.75pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">包含 XML/HTML 标签的条目，如要在标签中的内容两侧添加空格，请把空格置于标签外侧，否则空格可能显示不出来。</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 12.75pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">----------------------------------------------------------------</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 12.75pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">这是 &amp;lt;b&amp;gt;HTML&amp;lt;/b&amp;gt; 的语法手册</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">----------------------------------------------------------------</span></p>
+</div>
+
+<h5 id="sect2"> </h5>
+
+<h5 id="菜单项中的快捷字符">菜<strong>单项中的快捷字符</strong></h5>
+
+<p><strong>  </strong>与 Gnome 或者 KDE 菜单不同，Firefox 中的菜单快捷键无需添加到翻译的字符串中。</p>
+
+<p>例如：</p>
+
+<p dir="ltr" id="docs-internal-guid-bc308f52-cb2a-3f5a-5f1d-c645a95edb1f" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 12.75pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">KDE 菜单：</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 12.75pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">----------------------------------------------------------------</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">msgid "C&amp;lear"</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">msgstr "清除(&amp;L)"</span></p>
+
+<p><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">----------------------------------------------------------------</span></p>
+
+<p><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">而 Firefox 中，直接翻译为 "清除"即可，不可添加 "(&amp;L)"。</span></p>
+
+<h5 id="翻译中参数的位置"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">翻译中参数的位置</span></h5>
+
+<p dir="ltr" id="docs-internal-guid-bc308f52-cb2d-272c-c8cc-dbacc8044e5b" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">有时候原来的参数顺序不符合中文的语法，一方面， 翻译可以通过调整副词、语序等手法来符合中文习惯，另外一方面，在必要的情况下，需要改变参数的位置，例如：</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">----------------------------------------------------------------</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">原文 "%1$S articles match rule %2$S"</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">翻译 "匹配规则 %2$S 的文章有 %1$S 个"</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">----------------------------------------------------------------</span></p>
+
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 12.75pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">即用 %1$S、%2$S、%3$S 等符号标明参数在原文里出现的位置。同时，任何一个参数的顺序进行了调整，则在这一句译文中所有参数都必须注明原文位置，否则无法通过格式检查。</span></p>
+
+<h5 id="关于换行"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">关于换行</span></h5>
+
+<p dir="ltr" id="docs-internal-guid-bc308f52-cb31-4d94-da10-a5b7e01d9684" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">对于很长的译文，就涉及到了换行问题。多数情况下没有限制，因为不影响最终的显示效果，只要阅读起来方便就行。下面几种格式都是正确的：</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">----------------------------------------------------------------</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">原文 ""</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">"Preview failed: neither the internal KDE PostScript viewer (KGhostView) nor "</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">"any other external PostScript viewer could be found."</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">翻译 ""</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">"预览失败：找不到 KDE 内建的 PostScript 查看器(KGhostView)或其它外部"</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">"的 PostScript 查看器。"</span></p>
+
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">原文 ""</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">"Preview failed: neither the internal KDE PostScript viewer (KGhostView) nor "</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">"any other external PostScript viewer could be found."</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">翻译 "预览失败：找不到 KDE 内建的 PostScript 查看器(KGhostView)或其它外部"</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">"的 PostScript 查看器。"</span></p>
+
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">原文 ""</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">"Preview failed: neither the internal KDE PostScript viewer (KGhostView) nor "</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">"any other external PostScript viewer could be found."</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">翻译 ""</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">"预览失败：找不到 KDE 内建的 PostScript 查"</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">"看器(KGhostView)或其它外部"</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">"的 PostScript 查看器。"</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: 'Courier New'; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">----------------------------------------------------------------</span></p>
+
+<h5 id="sect3"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">  </span></h5>
+
+<h5 id="关于时间的翻译"><span class="author-a-z66zuz70zqiz67zz73z3z90zhp4z68zz73zpj">关于时间的翻译</span></h5>
+
+<p dir="ltr" id="docs-internal-guid-bc308f52-cb32-7220-071f-4828037fcd32" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">鉴于关于日期和时间的译法十分复杂，现在将国家标准中有关规定简要介绍一下，并给出推荐译法。</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">国标 GB/T 7408-94</span><a href="http://people.ubuntu.com/~happyaron/l10n/GB(T)7408-94.pdf" style="text-decoration: none;"><u>《数据元和交换格式 信息交换 日期和时间表示法》</u></a></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">1994-12-06 发布，1995-08-01 实施   国家技术监督局发布</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">本标准等效采用国际标准 ISO 8601-1988《数据元和交换格式  信息交换 日期和时间表示法》</span></p>
+
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">以下是最需要注意的几个要点：</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">(1) 在日期格式中不能出现空格，即“2003 年”这样的格式是不符合国标的。</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">(2) 表示日期时，必须按照年月日的顺序；年份一般用四位数字，而月、日必须使用带前导零的两位数字；必须使用“-”作为分隔符，或完全不使用分隔符。 即“2004-01-03”或“20040103”来表示 2004年1月3日。</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">(3) 表示时间时，时、分、秒都必须使用两位数字，中间用“:”(半角括号)分隔，或完全不使用分隔符。小时计法采用 24 小时制，不区分上下午。</span></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">(4) 日期和时间写在一起的时候，应先写日期再写时间。在日期和时间都不使用分隔符的情况下，在中间添加字母“T”进行分隔，即“19850412T101530”。</span></p>
+
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">时间的表示方法同 date 命令的表示方法，现将常见的几个对应其含义列表如下：</span></p>
+
+<ol style="margin-top: 0pt; margin-bottom: 0pt;">
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">%%     一个 % 字符</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">%A      星期几(如“星期一”)</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">%B      月份(如“八月”)</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">%d      日期(00-31)</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">%D      日期，格式等于 %m/%d/%y (例如：08/25/09)</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">%F      日期，格式等于 %Y-%m-%d (例如：2009-08-25)</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">%g      ISO-8601 格式年份的最后两位(例如：09)</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">%G      ISO-8601 格式年份(例如：2009)</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">%H      小时(00-23)</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">%i       小时(00-12)</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">%m     月份(01-12)</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">%M     分钟(00-59)</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">%n      换行</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">%p      显示“上午”或者“下午”两个字</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">%S      秒(00-60)</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">%t       制表符</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">%T      时间，等于 %H:%M:%S</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">%x      日期(例如：12/31/99)</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">%X      时间(例如：23:13:48)</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">%y      年份的最后两位(例如：09)</span></p>
+ </li>
+ <li dir="ltr" style="list-style-type: decimal; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; margin-left: -8px;">
+  <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Verdana; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">%Y      年份(例如：2009)</span></p>
+ </li>
+</ol>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"> </p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;">参考文档： <a href="http://people.ubuntu.com/~happyaron/l10n/l10n-guide-zh-cn.pdf">开源软件简体中文翻译指南</a></p>
+
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"> </p>
+</div>
+
+<h2 id="Mozilla_l10n_通用翻译风格">Mozilla l10n 通用翻译风格</h2>
+
+<h3 id="准确度">准确度</h3>
+
+<h4 id="意译"><span class="author-p-1460 b"><strong>意译</strong></span></h4>
+
+<div id="magicdomid3"><span class="author-p-1460">翻译的重中之重是达意。译者需要首先本身理解文字的确切意思，然后尽量寻找自己语言中最贴切的文字，尽量不增加或删减任何多余的意义。 有时，要找到完全一致的翻译可能会很困难，当发生这样的情况时，多问问自己如下这些问题：</span></div>
+
+<ul>
+ <li><span class="author-p-1460">这个词语/句子/字符串 在英语中是什么意思？</span></li>
+ <li><span class="author-p-1460">作者想表达的真实意思是什么？</span></li>
+ <li><span class="author-p-1460">我应该如何使用我自己的语言表达那个意思？</span></li>
+</ul>
+
+<p><span class="author-p-1460">有些时候，旧的翻译记录以及机器翻译工具可能会提供错误的建议。如果您的翻译流程中使用了其中任何一种，请确保在提交翻译之前检查并修正。要完全避免文字直译，特别是对那些看起来在中英文之间相似，但是实际上意思可能不同的词。</span></p>
+
+<h4 id="不应翻译的内容">不应翻译的内容</h4>
+
+<h5 id="快捷键以及访问键">快捷键以及访问键</h5>
+
+<p>在 Firefox 或其他软件中，均可以使用键盘快捷键来调用特定的命令。例如，可以使用组合键 <code>CTRL+O</code> (Mac 为 <code>Cmd+O</code>  ) 打开一个文件。加速键则因操作系统而异，但是对应的字符一般也是可本地化的。这通常被称为快捷键或者命令键。例如，打开文件<code>… 菜单通常对应：</code></p>
+
+<pre class="sourcelines stripes"><span id="l61"><span class="k">&lt;!ENTITY</span> <span class="ni">openFileCmd.label</span> <span class="s2">"Open File…"</span><span class="k">&gt;</span></span>
+<span id="l62"><span class="k">&lt;!ENTITY</span> <span class="ni">openFileCmd.accesskey</span> <span class="s2">"O"</span><span class="k">&gt;</span></span>
+<span id="l63"><span class="k">&lt;!ENTITY</span> <span class="ni">openFileCmd.commandkey</span> <span class="s2">"o"</span><span class="k">&gt;</span></span></pre>
+
+<p>命令键保存在键 <code>openFileCmd.commandkey 中。一般情况下不应修改这个字符，因为通常即使不同的操作系统也</code>使用一样的快捷键（例如 CTRL+S 保存）或者类似的软件中同样的功能都会使用同样的快捷键（例如 CTRL+T 打开新的标签页）。除非该字符在对应的键盘布局中没有，我们才需对其进行修改。例如，意大利语中字母 [ 需要使用 ALT+<code>è 组合键，因此这样的命令键就无法正常工作。</code></p>
+
+<p>在如上的代码片段中也为 打开文件<code>… </code>定义了一个访问键，访问键用于使用键盘访问图形界面中的项目，例如：如果 文件 菜单定义了访问键 F，同时  打开文件<code>… 菜单定义了访问键 O，那么你可以按 ALT+F 来访问文件菜单，然后按 O 键来打开一个文件。</code></p>
+
+<p>访问键以及命令键，在 .dtd 和 .properties 文件中通常使用单独的行进行定义，而且在键 ID 中通常会包含 .accesskey 字符串。</p>
+
+<h5 id="变量"><span class="author-p-1460">变量</span></h5>
+
+<p><span class="author-p-1460">变量不应该被翻译。变量通常以特殊字符开始（例如 $，#，% 等），并后面无空格紧跟着词。例如：$BrandShortName 和 %S。如有需要，你可以移动变量在字符串中的位置。</span></p>
+
+<h5 id="品牌，版权以及商标"><strong><span class="author-p-1460">品牌，版权以及商标</span></strong></h5>
+
+<p><span class="author-p-1460">品牌名称，以及版权声明和商标不应被翻译，或者使用非拉丁语字符替换。详情请查看 <a href="https://www.mozilla.org/en-US/styleguide/communications/translation/">Mozilla 品牌指南</a> 。</span></p>
+
+<p><span style="font-family: open sans light,helvetica,arial,sans-serif; font-size: 1.286rem; letter-spacing: -0.014em; line-height: 1;">翻译特定文化相关的引用</span></p>
+
+<p>有时候，Mozilla 产品或网站项目（例如 市场宣传）中可能会引用美国文化相关的一些概念。翻译这些内容的时候，最好是找到自己文化中等同的一些文化概念。例如，一个美国人可能会说“干的漂亮，本垒打！”，本垒打指的是垒球中的成功范例。对应较贴切的翻译就是要使用类似等同的比喻，以足球为例，就可以翻译为“干的漂亮，好球！”。</p>
+
+<h4 id="法律相关内容">法律相关内容</h4>
+
+<p>Mozilla 项目也常包含一些法律内容，如最终用户许可，隐私政策等等。在进行这些内容的翻译时，要特别注意按 Mozilla 的文化以及价值观，确保翻译的精确，流畅，谨慎的进行审核。</p>
+
+<h3 id="流畅"><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">流畅</span></h3>
+
+<div id="magicdomid153"> </div>
+
+<div id="magicdomid154"><span class="author-a-w6z79zlakz82zxz85zz65zz86zz78zz89zz122zz89zd">要做到流畅的翻译，翻译者不应仅根据语言对应的标准语法，标点和拼写规则，还需尽量避免出现二义性，不一致性，难以理解等问题。</span></div>
+
+<div id="magicdomid155"> </div>

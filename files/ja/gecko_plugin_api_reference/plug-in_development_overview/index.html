@@ -1,0 +1,608 @@
+---
+title: Plug-in Development Overview
+slug: Gecko_Plugin_API_Reference/Plug-in_Development_Overview
+tags:
+  - NPAPI
+  - Plugins
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/Gecko_Plugin_API_Reference:Plug-in_Basics" style="float: left;">« 前のページ</a><a href="/ja/docs/Gecko_Plugin_API_Reference:Initialization_and_Destruction">次のページ  »</a></p>
+</div>
+
+<h3 id=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.AE.E4.BD.9C.E6.88.90" name=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.AE.E4.BD.9C.E6.88.90">プラグインの作成</h3>
+
+<p>一度プラグインにさせたいことを決めたら、それを作成することは単純な工程です。 基本的なプラグイン開発概観は以下の手続きで与えられます。</p>
+
+<ol>
+ <li>プラグインを計画します: プラグインソフトウェアに提供させたいサービスやブラウザとの相互作用のさせ方やプラグインが作成する特別なメディアを決めます。</li>
+ <li>プラグインに対する MIME タイプやファイルの拡張子を決めます（<a href="#プラグインの登録">プラグインの登録</a>を参照してください）。</li>
+ <li>開発環境を適切に設定してください。プラグインを作成するための多様な開発環境を使えます。しかし mozilla のソースやプラグイン SDK から必要なファイルを持ってくるようにしてください。</li>
+ <li>プラグインプロジェクトを作成してください。<br>
+  <small>既にビルドされているプラグインソフトウェアのある、mozilla ソースディレクトリ内のあなたのオペレーティングシステムに対して提供されているサンプルの一つから始めるか、SDK の提供するファイルを使用して開発環境内で新しいプラグインプロジェクトを構築するかできます。SDK の使用やそこで提供されているサンプルの使用についての情報に関してはプラグイン SDK 内の README を参照してください。</small></li>
+ <li>プラグインのコードを書いて基本的なプラグイン操作に対するプラグイン API メソッドを実装してください。プラグイン API のすべての主要な機能領域に対する分割された章と同様にこの章の中でプラグイン API メソッドの概観が見つかるでしょう。ブラウザからプラグインをアクセスできるようにすることについて更なる情報に関しては<a href="#プラグインのスクリプト化可能化">プラグインのスクリプト化可能化</a>を参照してください。</li>
+ <li>あなたのオペレーティングシステム用のプラグインをビルドしてください。「<a href="#プラグインのビルド">プラグインのビルド</a>」を参照してください。</li>
+ <li>あなたのオペレーティングシステム用のプラグインディレクトリにプラグインをインストールしてください。<a href="#プラグインのインストール">プラグインのインストール</a>を参照してください。</li>
+ <li>必要なときにプラグインをテストしデバックしてください。</li>
+ <li>HTML ページを作成してプラグインのオブジェクトを組み込んでください。使用する HTML 要素についての情報に関しては、<a href="ja/Gecko_Plugin_API_Reference/Plug-in_Basics#.E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E8.A1.A8.E7.A4.BA.E3.81.AE.E3.81.9F.E3.82.81.E3.81.AE_HTML_.E3.81.AE.E4.BD.BF.E7.94.A8">プラグイン表示のための HTML の使用</a>を参照してください。プラグインが動作しているのを見るために、プラウザ内でそれを呼ぶ単純な HTML ページを表示してください。</li>
+</ol>
+
+<h3 id=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.AE.E7.99.BB.E9.8C.B2" name=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.AE.E7.99.BB.E9.8C.B2">プラグインの登録</h3>
+
+<p>Gecko はサポートする MIME タイプによってプラグインを識別します。特定の MIME タイプのデータを表示する必要があれば、ブラウザはそのタイプをサポートするプラグインのオブジェクトを見つけて起動します。データは HTML ファイルの <code>object</code> 要素（ここで <code>object</code> や <code>embed</code> 要素は MIME タイプを直接指定するかそのタイプのファイルを参照します）やその MIME タイプの分割された非 HTML ファイルやサーバーに由来します。</p>
+
+<p>サーバーはファイルの拡張子をもとにプラグインによって登録された MIME タイプを探し、ブラウザにファイルを送り始めます。ブラウザはメディアタイプを調べて、そのタイプに登録されたプラグインが見つかったならば、そのプラグインソフトウェアを読み込みます。</p>
+
+<p>起動するとき、ブラウザはプラットフォーム用のプラグインディレクトリ内にプラグインモジュールが無いか調べてそれらを登録します。ブラウザはプラウザにとってプライベートなユーザ設定とプラグインディレクトリの内容を組み合わせることを通じて、どのプラグインがインストールされ、どのタイプをプラグインはサポートするのかを決めます。</p>
+
+<p>MIME タイプは（アプリケーションや画像のような）メジャーなタイプとマイナーなタイプから構成され、例えば<em>image/jpeg</em> のようになります。プラグイン用の新しい MIME タイプを定義したならば、IETF (<a class="external" href="http://www.ietf.org/">Internet Engineering Task Force</a>) でそれを登録しなければなりません。新しいUntil your new MIME タイプが登録されるまでは、名前に接頭語 "x-" を付けて、例えば<em>image/x-nwim</em> のようにしてください。MIME タイプについての更なる情報に関しては、以下の MIME RFC を参照してください:</p>
+
+<ul>
+ <li><a class="external" href="http://www.faqs.org/rfcs/rfc1521.html">RFC-1521</a>: "MIME: Mechanisms for Specifying and Describing the Forms of Internet Message Bodies"</li>
+ <li><a class="external" href="http://www.faqs.org/rfcs/rfc1590.html">RFC-1590</a>: "Media Type Registration Procedure."</li>
+</ul>
+
+<p>異なるプラットフォーム上でのプラグインの扱い方にはいくつかのバリエーションがあります。以下のセクションはプラットフォーム固有の発見と登録を説明しています:</p>
+
+<ul>
+ <li><a href="#MS_Windows">MS Windows</a></li>
+ <li><a href="#Unix">Unix</a></li>
+ <li><a href="#Mac_OS">Mac OS</a></li>
+ <li><a href="#Mac_OS_X">Mac OS X</a></li>
+</ul>
+
+<h5 id="MS_Windows" name="MS_Windows">MS Windows</h5>
+
+<p>Windows 上ではブラウザアプリケーションと同じディレクトリ内にプラグインがあります。典型的なインストールではプラグインディレクトリはここにあります:</p>
+
+<pre class="eval">  C:\Program Files\Mozilla Firefox\Plugins
+</pre>
+
+<p>レジストリを通してこのディレクトリを見つけることもできます。ブラウザはサブディレクトリを検索しません。プラグインは NP で始まり .DLL で終わる 8.3 ファイル名が付けられていなければなりません。</p>
+
+<p>プラグイン DLL に対する Windows バージョン情報は MIME タイプ、ファイルの拡張子、ファイルオープンテンプレート、プラグイン名と説明を決めます。MIME タイプとファイルの拡張子の文字列では、複数のタイプと拡張子は "|" 文字で区切られています。例えば:</p>
+
+<pre class="eval">   video/quicktime|audio/aiff|image/jpeg
+</pre>
+
+<p>ブラウザにプラグインを認識させるようにするには、プラグイン DLL のバージョンスタンプに以下の行が含まれていなければなりません:</p>
+
+<ul>
+ <li>File Extents: for file extensions</li>
+ <li>MIME Type: for MIME types</li>
+ <li>Language: for language in use</li>
+</ul>
+
+<p>開発環境で、言語が "US English" に設定され文字セットが "Windows Multilingual." に設定されているようにしてください。この言語と文字セットに対するリソースコードは 040904E4 です。</p>
+
+<h5 id="Unix" name="Unix">Unix</h5>
+
+<p>Unix では、プラグインはセクション <a href="ja/Gecko_Plugin_API_Reference/Plug-in_Basics#How_Gecko_Finds_Plug-ins">どのように Gecko はプラグインを見つけるのか</a> に従って見つけられます。プラグイン内でブラウザが呼ぶ関数は <code>NPP</code> で始まる一方でエクスポートされた関数は <code>NP</code> で始まることに注意してください。</p>
+
+<p>プラグインが扱う MIME タイプやファイルの拡張子を決めるために、ブラウザは個々のライブラリを読み込んで <code><a href="/ja/docs/NP_GetMIMEDescription">NP_GetMIMEDescription</a></code> エントリポイントへ呼びます。このエクスポートされた C 関数はセミコロンで区切られたタイプ、拡張子リストやタイプの説明を返すはずです。例えば: <code>image/xbm;xbm;X Bitmap</code> です。この情報はその結果 "about:plugins" にある JavaScript のオブジェクトの <code>navigator.mimetypes</code> 配列に現れるでしょう。</p>
+
+<p>about:plugins にある JavaScript のオブジェクトの <code>navigator.plugins</code> 配列に現れるプラグインの名前と説明を取り出すために初期化中に <code><a href="/ja/docs/NP_GetValue">NP_GetValue</a></code> が呼び出される一方で、スクリプトのインターフェイスを取得するためにプラグインが初期化された後で <code><a href="/ja/docs/NPP_GetValue">NPP_GetValue</a></code> が呼ばれます。</p>
+
+<div class="warning">
+<p>注意: Gecko はこれらの関数によって返された値をキャッシュしてプラグインのタイムスタンプが変化した場合にだけそれを呼びます。<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=125469" title="[pluggerrc changes not read] Plugin caching preventing dynamic mime types through NP_GetMIMEDescritpion">バグ 125469</a> を参照してください。</p>
+</div>
+
+<h4 id="Mac_OS" name="Mac_OS">Mac OS</h4>
+
+<p>On the Mac OS プラットフォーム上では、プラグインフォルダはブラウザアプリケーションと同じフォルダ内にあります。プラグインはファイルタイプ NSPL によって識別されます。ブラウザが起動しているとき、ブラウザはプラグインフォルダのサブフォルダについてプラグインを検索してフォルダや NSPL ファイルへのエイリアスをたどります。プラグインのファイル名は NP で始まっていなければなりません。</p>
+
+<p>プラグインによってサポートされた MIME タイプはリソースによって決められます。'STR#' 128 は交互に並ぶ文字列内で MIME タイプとファイルの拡張子を含んでいなければなりません。例えば:</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td>str 128</td>
+   <td>MIME タイプ</td>
+  </tr>
+  <tr>
+   <td>文字列 1</td>
+   <td>video/quicktime</td>
+  </tr>
+  <tr>
+   <td>文字列 2</td>
+   <td>mov, moov</td>
+  </tr>
+  <tr>
+   <td>文字列 3</td>
+   <td>audio/aiff</td>
+  </tr>
+  <tr>
+   <td>文字列 4</td>
+   <td>aiff</td>
+  </tr>
+  <tr>
+   <td>文字列 5</td>
+   <td>image/jpeg</td>
+  </tr>
+  <tr>
+   <td>文字列 6</td>
+   <td>jpg</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>いくつかの他の任意の文字列はプラグインについての有益な情報を含んでいるかもしれません。プラグインは 'STR#' 128 をサポートしていなければなりませんが以下の他のもののいずれもサポートを要求されません:</p>
+
+<ul>
+ <li>STR#' 127 は STR#' 128 内のタイプに対応する MIME タイプのリストを含めることができます。例えば、以下の説明リストは前の例のタイプに対応しています: 文字列 1: 「QuickTime ビデオ」 、文字列 4:「AIFF オーディオ」や文字列 5: 「JPEG 画像フォーマット」</li>
+</ul>
+
+<ul>
+ <li>STR#' 126: 文字列 1 はプラグインについて説明的なメッセージを含めることができます。HTML フォーマットのこのメッセージはブラウザの「プラグインについて」ページで表示されます。文字列 2 はプラグイン名を含めることができ、それゆえユーザの見る名前をディスク上のファイル名と違ったものにできます。</li>
+</ul>
+
+<h4 id="Mac_OS_X" name="Mac_OS_X">Mac OS X</h4>
+
+<p>Mac OS X 上では、Gecko が <code><a href="/ja/docs/NP_GetMIMEDescription">NP_GetMIMEDescription</a></code> エントリポイントを見つけたら、リソースを見る代わりにこの関数によって返された情報を使用します。</p>
+
+<p>Mac OS X のプラグインはセクション <a href="ja/Gecko_Plugin_API_Reference/Plug-in_Basics#Gecko_.E3.81.AE.E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.AE.E8.A6.8B.E3.81.A4.E3.81.91.E6.96.B9">Gecko のプラグインの見つけ方</a>に従って見つけられます。プラグインはファイルタイプ NSPL によって識別されます。</p>
+
+<h3 id=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.AE.E3.82.A4.E3.83.B3.E3.82.B9.E3.82.BF.E3.83.B3.E3.82.B9.E3.81.AE.E6.8F.8F.E7.94.BB" name=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.AE.E3.82.A4.E3.83.B3.E3.82.B9.E3.82.BF.E3.83.B3.E3.82.B9.E3.81.AE.E6.8F.8F.E7.94.BB">プラグインのインスタンスの描画</h3>
+
+<p>ページに描画する前に、プラグインはそれ自身の情報を提供し、ウィンドウかそれが描画する他の対象を設定し、再描画の準備をして、イベントを処理しなければなりません。</p>
+
+<p>ウィンドウを持たないプラグインはそれ自身を描画するために以下の Netscape メソッドを呼ぶことができます:</p>
+
+<ul>
+ <li><a href="ja/NPN_ForceRedraw">NPN_ForceRedraw</a>: ウィンドウを持たないプラグインに対する描画メッセージを強制します。</li>
+ <li><a href="ja/NPN_InvalidateRect">NPN_InvalidateRect</a>: 再描画や再読み込みの前にウィンドウを持たないプラグイン内の領域を無効化します。</li>
+ <li><a href="ja/NPN_InvalidateRegion">NPN_InvalidateRegion</a>: 再描画や再読み込みの前にウィンドウを持たないプラグイン内の領域を無効化します。</li>
+</ul>
+
+<p>ブラウザは以下のプラグインのメソッドを呼べます:</p>
+
+<ul>
+ <li><a href="ja/NPP_GetValue">NPP_GetValue</a>: プラグインに情報を問い合わせます。</li>
+ <li><a href="ja/NPP_Print">NPP_Print</a>: インスタンスに対してプラットフォーム固有の印刷操作を要求します。</li>
+ <li><a href="ja/NPP_SetValue">NPP_SetValue</a>: ブラウザの情報を設定します。</li>
+ <li><a href="ja/NPP_SetWindow">NPP_SetWindow</a>: プラグインが描画するウィンドウを設定します。</li>
+ <li><a href="ja/NPP_HandleEvent">NPP_HandleEvent</a>: インスタンスにプラットフォーム固有のイベントを引き渡します。</li>
+</ul>
+
+<p>プラグインは情報を問い合わせたり設定するために以下の Netscape メソッドを呼べます:</p>
+
+<ul>
+ <li><a href="ja/NPN_GetValue">NPN_GetValue</a>: ブラウザの情報を取得します。</li>
+ <li><a href="ja/NPN_SetValue">NPN_SetValue</a>: プラグインがブラウザの情報を設定します。</li>
+</ul>
+
+<p>これらの処理についての情報に関しては、 <a href="ja/Gecko_Plugin_API_Reference/Drawing_and_Event_Handling">描画とイベント処理</a>を参照してください。</p>
+
+<h3 id=".E3.83.A1.E3.83.A2.E3.83.AA.E3.81.AE.E5.87.A6.E7.90.86" name=".E3.83.A1.E3.83.A2.E3.83.AA.E3.81.AE.E5.87.A6.E7.90.86">メモリの処理</h3>
+
+<p>プラグイン開発者はメモリを割り当てたり解放するのにプラグイン API で提供されているメモリ機能を利用できます。</p>
+
+<ul>
+ <li>ブラウザからメモリを割り当てるのに <a href="ja/NPN_MemAlloc">NPN_MemAlloc</a> メソッドを使ってください。</li>
+ <li>NPN_MemAlloc で割り当てられたメモリを解放するのに <a href="ja/NPN_MemFree">NPN_MemFree</a> メソッドを使ってください。</li>
+ <li>（Mac OS のみで）メモリについて集約的な Mac Toolbox の関数を呼ぶ前にメモリを解放する <a href="ja/NPN_MemFlush">NPN_MemFlush</a> メソッドを使ってください。</li>
+</ul>
+
+<h3 id=".E3.82.B9.E3.83.88.E3.83.AA.E3.83.BC.E3.83.A0.E3.81.AE.E9.80.81.E4.BF.A1.E3.81.A8.E5.8F.97.E4.BF.A1" name=".E3.82.B9.E3.83.88.E3.83.AA.E3.83.BC.E3.83.A0.E3.81.AE.E9.80.81.E4.BF.A1.E3.81.A8.E5.8F.97.E4.BF.A1">ストリームの送信と受信</h3>
+
+<p>ストリームは URL とそれが含んでいるデータを表すオブジェクトです。ストリームはプラグインの特定のインスタンスと結びつけられています。しかしプラグインは一つのプラグインについて複数のインスタンスを持つことができます。ストリームバブラウザによって作り出されプラグインによって消費されます。個々のストリームはストリーム内のデータのフォーマットを識別する MIME タイプと結びついています。</p>
+
+<p>ブラウザによって作り出されたストリームは自動的にプラグインのインスタンスに送られたりプラグインによって要求されたりすることがありえます。プラグインは以下の送信モードのうち一つを選択できます:</p>
+
+<ul>
+ <li>通常モード: ブラウザはデータが利用可能になったときプラグインに逐次的にストリームのデータを送ります。</li>
+ <li>ランダムアクセスモード: ブラウザはプラグインがストリームの任意の場所から指定されたバイトの範囲を要求できるようにします。このモードはサーバのサポートが要求されます。</li>
+ <li>ファイルモード: ブラウザはキャッシュ内のローカルファイルにデータを保存してプラグインにそのファイルのパスを渡します。</li>
+</ul>
+
+<p>プラグインによって作り出されブラウザに送られるストリームはブラウザによって作り出された通常モードのストリームに似ていますが、逆です。ブラウザの通常モードのストリームでは、ブラウザはストリームが作成されたことを通知し更なる情報を押し込めるためにプラグインを呼びます。プラグインによって作り出されたストリームでは、逆に、プラグインはストリームを作りそれにデータを押し込めてそれを削除するために Netscape 関数を呼びます。</p>
+
+<h3 id="URL_.E3.81.A8.E3.81.AE.E9.80.A3.E5.8B.95" name="URL_.E3.81.A8.E3.81.AE.E9.80.A3.E5.8B.95">URL との連動</h3>
+
+<p>プラグイン API はネットワーク上の任意の URL からデータを取り出したり URL へデータを送信したり、他のドキュメントへのハイパーリンクを提供したり、HTTP を使用して CGI スクリプトへフォームデータを送信したり、FTP を使ってリモードサーバへファイルをアップロードしたりするのにプラグインが使えるメソッドを提供します。</p>
+
+<ul>
+ <li>表示する特定のブラウザウィンドウやフレームに URL を読み込んたり、新しいストリーム内でプラグインにその URL のデータを引き渡すようブラウザに要求するために <a href="ja/NPN_GetURL">NPN_GetURL</a> を使ってください。</li>
+ <li>The動作が完了したときにプラグインに結果を通知することを除いて <a href="ja/NPN_GetURLNotify">NPN_GetURLNotify</a> 関数は <code>NPN_GetURL</code> のように動作します。</li>
+ <li>メモリバッファやファイルから URL へデータを送るために <a href="ja/NPN_PostURL">NPN_PostURL</a> を使ってください。サーバからの結果は表示する特定のブラウザウィンドウやフレームに送られるか、新しいストリーム内のプラグインのインスタンスに引き渡されます。</li>
+ <li>動作が完了したときにプラグインに通知することを除いて、 <a href="ja/NPN_PostURLNotify">NPN_PostURLNotify</a> 関数は <code>NPN_PostURL</code> のように動作します。</li>
+</ul>
+
+<p>これらのメソッドの使用についての情報に関しては、 <a href="ja/Gecko_Plugin_API_Reference/URLs">URL</a> を参照してください。</p>
+
+<h3 id=".E3.83.90.E3.83.BC.E3.82.B8.E3.83.A7.E3.83.B3.E3.81.A8_UI_.E6.83.85.E5.A0.B1.E3.81.AE.E5.8F.96.E5.BE.97" name=".E3.83.90.E3.83.BC.E3.82.B8.E3.83.A7.E3.83.B3.E3.81.A8_UI_.E6.83.85.E5.A0.B1.E3.81.AE.E5.8F.96.E5.BE.97">バージョンと UI 情報の取得</h3>
+
+<p>Netscape のプラグイン API メソッド群はプラグインに基本的なサービスを提供します。以下の Netscape メソッドを使えます:</p>
+
+<ul>
+ <li>プラグインが表示されているブラウザを識別するには: この情報を読み込むために <a href="ja/NPN_UserAgent">NPN_UserAgent</a> メソッドを使ってください。</li>
+ <li>プラグインとブラウザのバージョンとが互換性があり異なるバージョンに対する代替の処理を提供している可能性があるかと決めるために: メジャーおよびマイナー番号における変化を調べるために <a href="ja/NPN_Version">NPN_Version</a> メソッドを使ってください。</li>
+</ul>
+
+<p>これらのメソッドの使用についての情報に関しては、<a href="ja/Gecko_Plugin_API_Reference/Version%2c_UI%2c_and_Status_Information">バージョン、UI とステータス情報</a>を参照してください。</p>
+
+<h3 id=".E3.82.B9.E3.83.86.E3.83.BC.E3.82.BF.E3.82.B9.E8.A1.8C.E3.81.B8.E3.81.AE.E3.83.A1.E3.83.83.E3.82.BB.E3.83.BC.E3.82.B8.E3.81.AE.E8.A1.A8.E7.A4.BA" name=".E3.82.B9.E3.83.86.E3.83.BC.E3.82.BF.E3.82.B9.E8.A1.8C.E3.81.B8.E3.81.AE.E3.83.A1.E3.83.83.E3.82.BB.E3.83.BC.E3.82.B8.E3.81.AE.E8.A1.A8.E7.A4.BA">ステータス行へのメッセージの表示</h3>
+
+<p>機能的に、あなたのプラグインはブラウザにシームレスに統合され現在のブラウザの機能に追加したものとして動作します。プラグインがブラウザユーザインターフェイスの一部だとユーザに感じさせるため、ステータス行メッセージを提供することでブラウザの振る舞いをまねることができます。ステータス行にメッセージを表示するために <a href="ja/NPN_Status">NPN_Status</a> メソッドを使ってください。</p>
+
+<p>このメソッドの使用についての情報に関しては、<a href="ja/Gecko_Plugin_API_Reference/Version%2c_UI%2c_and_Status_Information">バージョン、UI とステータス情報</a>を参照してください。</p>
+
+<h3 id=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.AE.E3.82.B9.E3.82.AF.E3.83.AA.E3.83.97.E3.83.88.E5.8C.96.E5.8F.AF.E8.83.BD.E5.8C.96" name=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.AE.E3.82.B9.E3.82.AF.E3.83.AA.E3.83.97.E3.83.88.E5.8C.96.E5.8F.AF.E8.83.BD.E5.8C.96">プラグインのスクリプト化可能化</h3>
+
+<p>スクリプト化可能なプラグインは <code>object</code> や <code>embed</code> 要素を通してアクセスしたときに JavaScript や DOM から呼ぶことのできるメソッドを提供するために拡張されたプラグインです。以下の例を考えてください。ここではメディアプレイヤープラグインは <code>SCRIPT</code> タグ内で呼ばれる <code>AdvanceToNextSong()</code> メソッドで操作できます:</p>
+
+<pre>&lt;object id="myPlugin"
+   type="audio/wav"
+   data="music.wav"&gt;
+&lt;/object&gt;
+
+&lt;script type="application/javascript"&gt;
+
+  var thePlugin = document.getElementById('myPlugin');
+
+  if (thePlugin)
+    thePlugin.AdvanceToNextSong();
+  else
+    alert("Plugin not installed correctly");
+
+&lt;/script&gt;
+</pre>
+
+<p>LiveConnect は 4.x NPAPI プラグインに対してこの種の振る舞いを提供します。しかし Gecko は現在 XPConnect を使っています。4.x Netscape ブラウザでスクリプト化可能にするために LiveConnect を以前使っていたプラグインは Gecko ベースのブラウザの基礎を形成している新しい XPCOM アーキテクチャーではこれが実現できる可能性はなくなりました。これは JRI/JNI スイッチが原因でバイナリレベルでの Java の互換性がもはや保証されなくなったからです。ブラウザのインターフェイス内の JavaScript が Netscape Communicator 4.x のプラグインに触れられるようにプラグインは現在 XPConnect と呼ばれる機構を使っています。</p>
+
+<p>LiveConnect が Java と JavaScript との橋渡しであるのに対して、XPCOM はコンポーネントをブラウザからスクリプト化可能にするためのより全般的なフレームワークです。しかし、XPConnect を通してプラグインをアクセス可能なものにするために、Mozilla のコードにいくつかの変更が加えられて、</p>
+
+<p>プラグインのスクリプト化可能性-JavaScript からプラグインのネイティブなメソッドを呼ぶ機能-についての情報に関しては以下を参照してください:</p>
+
+<ul>
+ <li><a class="external" href="http://www.mozilla.org/projects/plugins/scripting-plugins.html">Mozilla 内でのスクリプト書き</a></li>
+</ul>
+
+<p>この記事ではプラグインのコードに対する必要な修正を説明して <a href="ja/NPP_GetValue">NPP_GetValue</a> というこのスクリプト化可能性を提供するために更新された API の一つの実装の見本を提供しています。</p>
+
+<p>プラグインは JavaScript がアクセスを提供するブラウザや他の DOM オブジェクトにメソッドを呼ぶことができることに注意してください。このプラグインの「双方向のスクリプト化可能性」は以下の記事で説明されています:</p>
+
+<ul>
+ <li><a class="external" href="http://www.mozilla.org/projects/plugins/bi-directional-plugin-scripting.html">双方向のプラグインのスクリプト</a></li>
+</ul>
+
+<h3 id=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.AE.E3.83.93.E3.83.AB.E3.83.89" name=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.AE.E3.83.93.E3.83.AB.E3.83.89">プラグインのビルド</h3>
+
+<p>いったん前のセクションで説明したようにプラグインをスクリプト化可能にするために専用のコードや追加のファイルを加えると、ビルドの過程はかなり簡単です。 <code>plugins</code> フォルダに入れる DLL に加え、アプリケーションディレクトリ内の適切な場所にタイプライブラリと追加のヘッダファイルも置かなければなりません。このセクションはより詳しくこれら追加のスクリプト化可能性を説明しています。</p>
+
+<h4 id=".E3.83.93.E3.83.AB.E3.83.89.E3.80.81.E3.83.97.E3.83.A9.E3.83.83.E3.83.88.E3.83.95.E3.82.A9.E3.83.BC.E3.83.A0.E3.82.84.E3.82.B3.E3.83.B3.E3.83.91.E3.82.A4.E3.83.A9" name=".E3.83.93.E3.83.AB.E3.83.89.E3.80.81.E3.83.97.E3.83.A9.E3.83.83.E3.83.88.E3.83.95.E3.82.A9.E3.83.BC.E3.83.A0.E3.82.84.E3.82.B3.E3.83.B3.E3.83.91.E3.82.A4.E3.83.A9">ビルド、プラットフォームやコンパイラ</h4>
+
+<p>ビルドリソースは主要なプラットフォームのすべてに対して SDK で供給されています。Unix プラットフォームに対する makefile、Windows や Mac OS X IDE に対するプロジェクトファイル、定義ファイル、リソースファイル、SDK 内のサンプルやあなた自身のプラグインプロジェクトのビルドに対する他のリソースがあります。Gecko プラグインはすべての主要なプラットフォーム上のよく知られたコンパイラでコンパイルすることもできます - これらのコンパイラの上手な使い方についてはもちろんこのマニュアルの範囲外ですけれども。</p>
+
+<p>必要なリソース - 定義ファイル、ソースファイル、リソースファイル - はプラグイン SDK にあり、mozilla のソースツリーや単独でダウンロードできてビルドできるソフトウェアキットでも利用できます。 mozilla ソース内の <code><a href="https://dxr.mozilla.org/mozilla-central/source/mozilla/modules/plugin/tools/sdk/samples/basic" rel="custom">mozilla/modules/plugin/tools/sdk/samples/basic</a></code> にある基本的なプラグインのサンプルには主要なプラットフォーム上で基本的なプラグインをビルドするために必要なすべてのファイルがあります。</p>
+
+<h4 id="Mac_OS_X_.E7.94.A8.E3.81.AE_Carbon_.E5.8C.96.E3.81.95.E3.82.8C.E3.81.9F.E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.AE.E3.83.93.E3.83.AB.E3.83.89" name="Mac_OS_X_.E7.94.A8.E3.81.AE_Carbon_.E5.8C.96.E3.81.95.E3.82.8C.E3.81.9F.E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.AE.E3.83.93.E3.83.AB.E3.83.89">Mac OS X 用の Carbon 化されたプラグインのビルド</h4>
+
+<p>Mac OS X プラグインに対するビルドの過程は Mac「クラシック」プラグインや他のプラットフォーム上でのプラグインに対するものとよく似ています。しかし、Mac OS X プラットフォーム用のプラグインをうまくコンパイルするつもりならば注意しなければならないいくつかの違いがあります。</p>
+
+<p>主な違いは <code>npupp.h</code> ヘッダで見ることができ、ここで <code>TARGET_API_MAC_CARBON</code> が真なのでプリプロセッサー変数<code>_NPP_USE_UPP_</code> は <code>FALSE</code> か 0 に設定されています:</p>
+
+<pre>/* NPP_Initialize */
+
+#define _NPUPP_USE_UPP_ (TARGET_RT_MAC_CFM &amp;&amp; !TARGET_API_MAC_CARBON)
+
+#if _NPUPP_USE_UPP_
+
+
+typedef UniversalProcPtr NPP_InitializeUPP;
+
+enum {
+
+	uppNPP_InitializeProcInfo = kThinkCStackBased
+		| STACK_ROUTINE_PARAMETER(1, SIZE_CODE(0))
+		| RESULT_SIZE(SIZE_CODE(0))
+};
+
+
+#define NewNPP_InitializeProc(FUNC) \
+
+(NPP_InitializeUPP) NewRoutineDescriptor((ProcPtr)(FUNC),
+uppNPP_InitializeProcInfo, GetCurrentArchitecture())
+
+
+#define CallNPP_InitializeProc(FUNC) \
+
+(void)CallUniversalProc((UniversalProcPtr)(FUNC),uppNPP_InitializeProcInfo)
+
+
+
+#else
+
+
+
+typedef void (* NP_LOADDS NPP_InitializeUPP)(void);
+
+
+#define NewNPP_InitializeProc(FUNC) \
+
+((NPP_InitializeUPP) (FUNC))
+
+#define CallNPP_InitializeProc(FUNC) \
+
+(*(FUNC))()
+
+
+#endif
+</pre>
+
+<p>この場合、 <code>npupp.h</code> でも書かれている <code>NPPluginFuncs</code> 構造体内のすべての関数ポインタは実際の関数ポインタになり Carbon ランタイムによってサポートされていない「ルーチンディスクリプタ」ではありません:</p>
+
+<pre>typedef struct _NPPluginFuncs {
+
+    uint16 size;
+    uint16 version;
+    NPP_NewUPP newp;
+    NPP_DestroyUPP destroy;
+    NPP_SetWindowUPP setwindow;
+    NPP_NewStreamUPP newstream;
+    NPP_DestroyStreamUPP destroystream;
+    NPP_StreamAsFileUPP asfile;
+    NPP_WriteReadyUPP writeready;
+    NPP_WriteUPP write;
+    NPP_PrintUPP print;
+    NPP_HandleEventUPP event;
+    NPP_URLNotifyUPP urlnotify;
+    JRIGlobalRef javaClass;
+    NPP_GetValueUPP getvalue;
+    NPP_SetValueUPP setvalue;
+
+} NPPluginFuncs;
+</pre>
+
+<p>最後に、Mac クラシックプラグイン内では、メインエントリポイントはプラグインの main 関数に対するランタイムディスクリプタである "mainRD" と呼ばれるエクスポートされたシンボルである必要があります:</p>
+
+<pre>#ifdef XP_MAC
+
+/******************************************************************************************
+
+ * Mac platform-specific plugin glue stuff
+
+ *******************************************************************************************/
+
+
+/*
+ * Main entry point of the plugin.
+ * This routine will be called when the plugin is loaded. The function
+ * tables are passed in and the plugin fills in the NPPluginFuncs table
+ * and NPPShutdownUPP for Netscape's use.
+ */
+
+#if _NPUPP_USE_UPP_
+
+
+typedef UniversalProcPtr NPP_MainEntryUPP;
+
+enum {
+
+	uppNPP_MainEntryProcInfo = kThinkCStackBased
+		| STACK_ROUTINE_PARAMETER(1, SIZE_CODE(sizeof(NPNetscapeFuncs*)))
+		| STACK_ROUTINE_PARAMETER(2, SIZE_CODE(sizeof(NPPluginFuncs*)))
+		| STACK_ROUTINE_PARAMETER(3, SIZE_CODE(sizeof(NPP_ShutdownUPP*)))
+		| RESULT_SIZE(SIZE_CODE(sizeof(NPError)))
+
+};
+
+#define NewNPP_MainEntryProc(FUNC) \
+
+(NPP_MainEntryUPP) NewRoutineDescriptor((ProcPtr)(FUNC),
+uppNPP_MainEntryProcInfo, GetCurrentArchitecture())
+
+#define CallNPP_MainEntryProc(FUNC,  netscapeFunc, pluginFunc, shutdownUPP) \
+
+CallUniversalProc((UniversalProcPtr)(FUNC),
+(ProcInfoType)uppNPP_MainEntryProcInfo, (netscapeFunc),
+(pluginFunc), (shutdownUPP))
+</pre>
+
+<p>しかし、Carbon ランタイムプラグイン内では、「メイン」エントリポイントは同じプロトタイプを持つと期待されており、それをプラグインがエクスポートするのはよい形です。最低限、共有ライブラリの「メイン」エントリポイントはそのようなルーチンに設定されていなければなりません。</p>
+
+<h4 id="XPIDL_.E3.82.B3.E3.83.B3.E3.83.91.E3.82.A4.E3.83.A9.E3.81.AE.E5.8F.96.E5.BE.97.E3.81.A8.E4.BD.BF.E7.94.A8" name="XPIDL_.E3.82.B3.E3.83.B3.E3.83.91.E3.82.A4.E3.83.A9.E3.81.AE.E5.8F.96.E5.BE.97.E3.81.A8.E4.BD.BF.E7.94.A8">XPIDL コンパイラの取得と使用</h4>
+
+<p>プラグインに対するタイプライブラリやヘッダファイルを作成するために使わなければならない <a href="ja/XPIDL">XPIDL</a> コンパイラは mozilla のビルドの過程におけるいつもの産物です。mozilla のビルドの bin ディレクトリ内で、<code>xpidl</code> バイナリを見るべきです。以下の使用法の覚書内にあるように、欲しい出力の種類を指定するために -m オプションを使ってください。</p>
+
+<pre>使用法: ./xpidl [-m モード] [-w] [-v][-I パス] [-o basename | -e filename.ext] filename.idl
+
+       -a typelib へ注釈を出力する
+       -w 警告をオンにする（推奨）
+       -v 冗長モード (NYI)
+       -I ``#include "nsIThing.idl"'' に対するインクルードパスの最初にエントリを追加する
+       -o 出力に対して basename（例えば``/tmp/nsIThing''）を使う
+       -e 明示的な出力ファイル名を使用する
+       -m 出力モードを指定する:
+
+          header        C++ ヘッダを生成する             (.h)
+          typelib       XPConnect typelib を生成する     (.xpt)
+          doc           HTML ドキュメントを生成する      (.html)
+          java          Java インターフェイスを生成する  (.java)
+</pre>
+
+<p>例えば、プラグイン IDL ファイル nsITestPlugin.idl に対するヘッダファイルを作成するには、コマンドプロンプトで以下を入力するでしょう:</p>
+
+<pre>./xpidl -m header nsITestPlugin.idl
+</pre>
+
+<p>結果として生成されるヘッダファイル、<code>nsITestPlugin.h</code>、はそれから <code>nsTestPlug.dll</code> がビルドされるときにインクルードされるはずです。</p>
+
+<h4 id=".E3.82.BF.E3.82.A4.E3.83.97.E3.83.A9.E3.82.A4.E3.83.96.E3.83.A9.E3.83.AA" name=".E3.82.BF.E3.82.A4.E3.83.97.E3.83.A9.E3.82.A4.E3.83.96.E3.83.A9.E3.83.AA">タイプライブラリ</h4>
+
+<p>ヘッダファイルに加えて、プラグインに対するタイプライブラリも作らなければなりません。このファイル - 私たちの例では、nsITestPlugin.xpt - は XPIDL コンパイラから容易に生成することができ、ブラウザアプリケーションのプラグインサブディレクトリに置かれるはずです。</p>
+
+<p>タイプライブラリはプラットフォーム、言語やプログラミング環境を横断できるようにする方法でオブジェクトのインターフェイスを公開する特別なバイナリ非依存のインターフェイスファイルです。タイプライブラリはランタイム字にインターフェイスについての情報を提供し、これは XPCOM のようなクロスプラットフォームのコンポーネントフレームワークで必要とされます。</p>
+
+<p><code>nsITestPlugin.idl</code> IDL に対するタイプライブラリファイルを作るには、コマンドプロンプトで以下を入力するでしょう:</p>
+
+<pre>./xpidl -m typelib nsITestPlugin.idl
+</pre>
+
+<h3 id=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.AE.E3.82.A4.E3.83.B3.E3.82.B9.E3.83.88.E3.83.BC.E3.83.AB" name=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.AE.E3.82.A4.E3.83.B3.E3.82.B9.E3.83.88.E3.83.BC.E3.83.AB">プラグインのインストール</h3>
+
+<p>Netscape や Mozilla ブラウザの再設計で、プラグインや他のソフトウェアのインストール方法に劇的な変化がありました。Gecko は現在新しいブラウザコンポーネント、プラグイン、アプリケーションや他のあらゆるソフトウェアをインストールするのに使えるクロスプラットフォームのインストール API を提供しています。</p>
+
+<p>この API は二つの方法のうち一つで使えます。下の<a href="ja/Gecko_Plugin_API_Reference/Plug-in_Development_Overview#.E3.83.8D.E3.82.A4.E3.83.86.E3.82.A3.E3.83.96.E3.82.A4.E3.83.B3.E3.82.B9.E3.83.88.E3.83.BC.E3.83.A9.E3.83.BC">ネイティブインストーラー</a>で説明されているように、ダウンロードしてプラグインに対するバイナリのインストーラを実行する小さなインストールスクリプトを作ることができます。あるいは下の <a href="ja/Gecko_Plugin_API_Reference/Plug-in_Development_Overview#XPI_.E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.82.A4.E3.83.B3.E3.82.B9.E3.83.88.E3.83.BC.E3.83.AB">XPI プラグインインストール</a>セクションでドキュメント化された <code>XPInstall API</code> を使う完全なインストールを行えます。</p>
+
+<p>API についての全般的な情報については、以下を参照してください: <a href="ja/XPInstall">XPInstall API リファレンス</a></p>
+
+<h4 id=".E3.83.8D.E3.82.A4.E3.83.86.E3.82.A3.E3.83.96.E3.82.A4.E3.83.B3.E3.82.B9.E3.83.88.E3.83.BC.E3.83.A9.E3.83.BC" name=".E3.83.8D.E3.82.A4.E3.83.86.E3.82.A3.E3.83.96.E3.82.A4.E3.83.B3.E3.82.B9.E3.83.88.E3.83.BC.E3.83.A9.E3.83.BC">ネイティブインストーラー</h4>
+
+<p>プラグインは適切な領域にそれ自身をインストールするには <code>XPInstall API</code> を使わなければ行けません。プラグインは以前のように他のバイナリインストーラーを使ってもよく、その場合 XPIntall のアーカイブとそのインストールスクリプトは効果的にインストーラー実行可能ファイルに対する小さなラッパーとなり、そのバイナリをダウンロードしてユーザのシステム上でそれを実行します。以下のインストールスクリプトの例はどれくらい「ラッパー」を単純にできるかを概説します。</p>
+
+<pre>// DJ Double-Decker プラグインインストーラー
+
+err = initInstall("DJ Double-Decker プラグインインストーラー", "DJDD", "0.9");
+logComment("initInstall() が戻りました: " + err);
+err = execute("djdd.exe", "", true);
+logComment("execute() が戻りました: " + err);
+
+if(!err)
+{
+  err = performInstall();
+  logComment("performInstall() が戻りました: " + err);
+}
+</pre>
+
+<p>任意のログ（すなわち、関数の戻り値を調べるために個々の主な段階の後に使われる <code>logComment()</code> メソッド）を付けても、インストールは十行以下です。</p>
+
+<p>インストーラーをラップするためにこのような <code>XPInstall</code> スクリプトを使うことには、ブラウザと同じプロセスで実行することによる更なる利点があり、それはインストーラの実行可能ファイルを起動でき、すぐに制御を戻せるということです。</p>
+
+<p><code>initInstall</code> は名前やインストールについての他の情報を表すパラメータを伴ってインストールスクリプトを起動し始めます。次の行ではアーカイブ内に含まれるインストーラーを起動するために（ウィンドウオブジェクトはブラウザスクリプト内で暗黙的であるように、インストールスクリプト内では暗黙的に、Install オブジェクトのメンバである）<code>execute()</code> メソッドを使っています。<code>performInstall()</code> で実際のインストールが始まります。ローカルシステム上でインストーラーを実行するためにそれをインストールしなくてもよいということに注意してください。See theクロスプラットフォームのインストールについての更なる情報に関しては <a href="ja/XPInstall">XPInstall API</a> を参照して、<code>XPInstall API</code> がプラグインやそれを支えるファイルのインストールやブラウザへのプラグインの登録に必要な手続きを行っていることを示す、より詳細なプラグインのインストールに対する二番目の例を参照してください。</p>
+
+<p>このスクリプトは XPI と呼ばれる特別なアーカイブに含まれています。分けられた実行可能ファイルが実際のインストールを行うとき、XPI の中身はインストーラーの実行可能ファイルと <code>install.js</code> インストールスクリプト以外の何物でもありません。</p>
+
+<h4 id="XPI_.E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.82.A4.E3.83.B3.E3.82.B9.E3.83.88.E3.83.BC.E3.83.AB" name="XPI_.E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.82.A4.E3.83.B3.E3.82.B9.E3.83.88.E3.83.BC.E3.83.AB">XPI プラグインインストール</h4>
+
+<p>サードパーティのインストーラーを使わずに、自分でインストールするために XPInstall API を使うこともできます。以下のスクリプトはどのプラットフォームでも動作し、Netscape 6 ブラウザ内の JRE 1.3 プラグインをインストールします。この種のスクリプトはあらゆるタイプのインストーラに簡単に応用できます。</p>
+
+<pre>// この関数はキロバイトでディスクスペースを検証します
+
+function verifyDiskSpace(dirPath, spaceRequired)
+{
+
+  var spaceAvailable;
+
+  // 与えられたパス上の利用可能なディスクスペースを取得します
+  spaceAvailable = fileGetDiskSpaceAvailable(dirPath);
+
+  // 利用可能なディスクスペースをキロバイトに変換します
+  spaceAvailable = parseInt(spaceAvailable / 1024);
+
+  // 検証をします
+  if(spaceAvailable &lt; spaceRequired)
+  {
+    logComment("不十分なディスクスペース: " + dirPath);
+    logComment("  必要　　: " + spaceRequired + " K");
+    logComment("  利用可能: " + spaceAvailable + " K");
+    return(false);
+  }
+
+  return(true);
+}
+
+
+var srDest = 38628;
+var err = initInstall("Sun Java 2", "/Sun/Java2", "1.3");
+logComment("initInstall: " + err);
+
+var fPlugins= getFolder("Plugins");
+logComment("プラグインフォルダ: " + fPlugins);
+
+if (verifyDiskSpace(fPlugins, srDest))
+{
+    err = addDirectory("JRE_Plugin_Linux_i386",
+                       "1.3",
+                       "jre-image-i386",   // jar ソースフォルダ
+                       fPlugins,           // ターゲットフォルダ
+                       "java2",            // ターゲットサブディレクトリ
+                       true );             // フラグを強制します
+
+    logComment("addDirectory() が戻りました: " + err);
+
+    // シンボリックリンクの作成: plugins/libjavaplugin_oji.so -&gt;
+    //                           plugins/java2/plugin/i386/libjavaplugin_oji.so
+
+    var lnk = fPlugins + "libjavaplugin_oji.so";
+
+    var tgt = fPlugins + "java2/plugin/i386/ns600/libjavaplugin_oji.so";
+
+    var ignoreErr = execute("symlink.sh", tgt + " " + lnk, true);
+
+    logComment("execute symlink.sh "+tgt+" "+lnk+" が戻りました: "+ignoreErr);
+
+    if (err==SUCCESS)
+    {
+	    err = performInstall();
+	    logComment("performInstall() が戻りました: " + err);
+    }
+    else
+    {
+	    cancelInstall(err);
+	    logComment("cancelInstall() が戻りました: " + err);
+    }
+}
+else
+    cancelInstall(INSUFFICIENT_DISK_SPACE);
+</pre>
+
+<p>このスクリプトは Linux JRE プラグインをインストールしており Linux を起動していると想定しています。しかしプラットフォームの種類を調べたり、他のファイルの存在を調べたり、インストールスクリプト内で他の予備の関数を実行するために <a href="ja/XPInstall">XPInstall API</a> を使うこともできることに注意してください。</p>
+
+<p>クロスプラットフォームな方法でプラグインのサブディレクトリを決めたり指定するための <code>getFolder()</code> 関数内での "Plugins" キーワードの使用にも注意してください。返されるオブジェクトである <code>fPlugins</code> は、ローカルのマシン上の XPI 内のファイルがインストールされる場所を実際に指定する <code>addDirectory()</code> 関数内でこのバイナリファイルのインストールに対するターゲットフォルダとして使われます。</p>
+
+<h4 id=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.AE.E3.82.A4.E3.83.B3.E3.82.B9.E3.83.88.E3.83.BC.E3.83.AB.E3.81.A8_Windows_.E3.83.AC.E3.82.B8.E3.82.B9.E3.83.88.E3.83.AA" name=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.AE.E3.82.A4.E3.83.B3.E3.82.B9.E3.83.88.E3.83.BC.E3.83.AB.E3.81.A8_Windows_.E3.83.AC.E3.82.B8.E3.82.B9.E3.83.88.E3.83.AA">プラグインのインストールと Windows レジストリ</h4>
+
+<p>Windows プラットフォーム上でのインストール手続きの重要な側面はレジストリキーの読み取りで、それによってローカルにインストールされた Gecko ベースのブラウザ数やインストールされているブラウザやプラグインに対しての設定のされ方を決めます。</p>
+
+<p>InstallShield のようなネイティブな Windows のインストーラーを使うか <a href="ja/XPInstall">XPInstall API</a> を使ってインストールスクリプトを書くか（<a href="ja/Gecko_Plugin_API_Reference/Plug-in_Development_Overview#XPI_.E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.82.A4.E3.83.B3.E3.82.B9.E3.83.88.E3.83.BC.E3.83.AB">「XPI プラグインインストール」</a>を参照してください）どうかにかかわらず、このセクションで説明するように、レジストリにアクセスしたり、プラグインについての情報を読み書きしたり、異なる Gecko のインストール目標に対してインストールをカスタマイズできます。</p>
+
+<p>プラグインのインストールに影響を及ぼすレジストリキーは以下に列挙された多種の Gecko ベースの製品のサブキーです:</p>
+
+<pre>HKEY_LOCAL_MACHINE\Software\Mozilla
+</pre>
+
+<p>製品は Mozilla キーのサブキーとして載っています。Gecko ベースのブラウザを取得するためにこれらのサブキーを列挙でき、更にプラグインがインストールされているべきブラウザアプリケーションのディレクトリ、インストールされているバージョンなどのような重要な設定情報を読み込むためにこれらのサブキーを列挙できます。</p>
+
+<p>Plugins キー-値のペアは Gecko ベースの製品に対してどこにプラグインがインストールされているべきかを示しています:</p>
+
+<pre>Plugins = C:\Program Files\Mozilla Firefox\plugins
+</pre>
+
+<p>最新の Gecko ベースの製品を除くすべてに対して、Components キー-値のペアは重要な情報の一部も保持しています: 上の「タイプライブラリ」で説明したように、Gecko ベースの製品では Components サブディレクトリ内にタイプライブラリファイルか XPT を置く必要があります。</p>
+
+<pre>Components = C:\Program Files\Mozilla Firefox\components
+</pre>
+
+<p>製品のサブキー（例えば、Mozilla/Mozilla Firefox 2.0.0.1）には PathToExe キー-値のペアをさらす bin サブキーがあります。</p>
+
+<pre>PathToExe = C:\Program Files\Mozilla Firefox\firefox.exe
+</pre>
+
+<p>どのようにレジストリからのこれらの値が異なるターゲットに対するインストールを導くために使うことができるのかについての更なる情報に関して <code>XPInstall</code> レジストリ操作の例を参照してください。</p>
+
+<p>ネイティブなインストーラーを使っているならば、インストーラーは独自のやり方でレジストリにアクセスして更新します。<code>XPInstall API</code> を使っているならば、以下の例で説明するように、ソフトウェアをインストールすべきプラグインのサブディレクトリを見付けるために winReg 関数を使えます。</p>
+
+<pre>var winreg = getWinRegistry();
+winreg.setRootKey(winreg.HKEY_LOCAL_MACHINE);
+
+var index = 0;
+var baseKey = "Software\\Mozilla";
+
+while ( (MozillaVersion = winreg.enumKeys(baseKey,index)) != null )
+{
+  logComment("MozillaVersion = " + MozillaVersion);
+  subkey = baseKey + "\\" + MozillaVersion + "\\Extensions";
+  pluginsDir = winreg.getValueString ( subkey, "Plugins" );
+
+  if ( pluginsDir )
+    logComment("pluginsDir = " +  pluginsDir);
+  else
+    logComment("No plugins dir for " + baseKey + "\\" + MozillaVersion);
+
+  index++;
+}
+</pre>
+
+<p>以上のインストールの例を組み合わせると、この種類の Windows レジストリのパースによって異なるプラットフォームやブラウザ上でのプラグインのインストールを簡単にすることができます。 </p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/Gecko_Plugin_API_Reference:Plug-in_Basics" style="float: left;">« 前のページ</a><a href="/ja/docs/Gecko_Plugin_API_Reference:Initialization_and_Destruction">次のページ  »</a></p>
+</div>

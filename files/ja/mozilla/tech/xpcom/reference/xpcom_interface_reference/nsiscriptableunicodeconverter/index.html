@@ -1,0 +1,142 @@
+---
+title: nsIScriptableUnicodeConverter
+slug: >-
+  Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsIScriptableUnicodeConverter
+tags:
+  - Interfaces
+  - 'Interfaces:Scriptable'
+  - Unicode
+  - XPCOM
+  - XPCOM Interface Reference
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIScriptableUnicodeConverter
+---
+<div><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/intl/uconv/idl/nsIScriptableUConv.idl" rel="custom">intl/uconv/idl/nsIScriptableUConv.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+このインターフェイスは、スクリプトで使用するための Unicode エンコーダーです。
+</span>
+
+<div style="background: #eee; padding: 2px;">
+継承元: <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
+<span style="text-align: right; float: right;">最終更新: Gecko 1.8 (Firefox 1.5 / Thunderbird 1.5 / SeaMonkey 1.0)</span></div>
+</div></div>
+
+<p>Implemented by: <code>@mozilla.org/intl/scriptableunicodeconverter</code>. To create an instance, use:</p>
+
+<pre>var converter = Components.classes["@mozilla.org/intl/scriptableunicodeconverter"]
+                .createInstance(Components.interfaces.nsIScriptableUnicodeConverter);
+</pre>
+
+<h2 id="Method_overview" name="Method_overview">メソッドの概要</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>ACString <a href="/ja/docs/XPCOM_Interface_Reference/nsIScriptableUnicodeConverter#ConvertFromUnicode()" title="nsIScriptableUnicodeConverter#ConvertFromUnicode()">ConvertFromUnicode</a>(in AString aSrc);</code></td>
+  </tr>
+  <tr>
+   <td><code>ACString <a href="/ja/docs/XPCOM_Interface_Reference/nsIScriptableUnicodeConverter#Finish()" title="nsIScriptableUnicodeConverter#Finish()">Finish</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>AString <a href="/ja/docs/XPCOM_Interface_Reference/nsIScriptableUnicodeConverter#ConvertToUnicode()" title="nsIScriptableUnicodeConverter#ConvertToUnicode()">ConvertToUnicode</a>(in ACString aSrc);</code></td>
+  </tr>
+  <tr>
+   <td><code>AString <a href="/ja/docs/XPCOM_Interface_Reference/nsIScriptableUnicodeConverter#convertFromByteArray()" title="nsIScriptableUnicodeConverter#convertFromByteArray()">convertFromByteArray</a>([const,array,size_is(aCount)] in octet aData, in unsigned long aCount);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="/ja/docs/XPCOM_Interface_Reference/nsIScriptableUnicodeConverter#convertToByteArray()" title="nsIScriptableUnicodeConverter#convertToByteArray()">convertToByteArray</a>(in AString aString,[optional] out unsigned long aLen,[array, size_is(aLen),retval] out octet aData);</code></td>
+  </tr>
+  <tr>
+   <td><code><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIInputStream" title="">nsIInputStream</a></code> <a href="/ja/docs/XPCOM_Interface_Reference/nsIScriptableUnicodeConverter#convertToInputStream()" title="nsIScriptableUnicodeConverter#convertToInputStream()">convertToInputStream</a>(in AString aString);</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Attributes" name="Attributes">属性</h2>
+
+<table class="standard-table" style="width: auto;">
+ <tbody>
+  <tr>
+   <td class="header">属性名</td>
+   <td class="header">型</td>
+   <td class="header">概要</td>
+  </tr>
+  <tr>
+   <td><code>charset</code></td>
+   <td><code>string</code></td>
+   <td>現在の文字セット。要求された文字セットがサポートされていない場合、 <code>NS_ERROR_UCONV_NOCONV</code> がスローされる。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Methods" name="Methods">メソッド</h2>
+
+<h3 id="ConvertFromUnicode" name="ConvertFromUnicode()">ConvertFromUnicode()</h3>
+
+<p>Converts the data from Unicode to one Charset. Returns the converted string. After converting, Finish should be called and its return value appended to this return value.</p>
+
+<pre>ACString ConvertFromUnicode(
+  in AString aSrc
+);
+</pre>
+
+<h3 id="Finish" name="Finish()">Finish()</h3>
+
+<p>Returns the terminator string. Should be called after ConvertFromUnicode() and appended to that function's return value.</p>
+
+<pre>ACString Finish();
+</pre>
+
+<h3 id="ConvertToUnicode" name="ConvertToUnicode()">ConvertToUnicode()</h3>
+
+<p>Converts the data from one Charset to Unicode.</p>
+
+<pre>AString ConvertToUnicode(
+  in ACString aSrc
+);
+</pre>
+
+<h3 id="convertFromByteArray" name="convertFromByteArray()">convertFromByteArray()</h3>
+
+<p>Converts an array of bytes to a unicode string.</p>
+
+<pre>AString convertFromByteArray(
+  [const,array,size_is(aCount)] in octet aData,
+  in unsigned long aCount
+);
+</pre>
+
+<h3 id="convertToByteArray" name="convertToByteArray()">convertToByteArray()</h3>
+
+<p>Convert a unicode string to an array of bytes. Finish does not need to be called.</p>
+
+<pre>void convertToByteArray(in AString aString,
+  out unsigned long aLen, <span class="inlineIndicator optional optionalInline">Optional</span>
+  [array, size_is(aLen),retval] out octet aData
+);
+</pre>
+
+<h3 id="convertToInputStream" name="convertToInputStream()">convertToInputStream()</h3>
+
+<p>Converts a Unicode string to an input stream. The bytes in the stream are encoded according to the <code>charset</code> attribute. The returned stream is non-blocking.</p>
+
+<pre>nsIInputStream convertToInputStream(
+  in AString aString
+);
+</pre>
+
+<h6 id="convertToInputStream-Parameters" name="convertToInputStream-Parameters">引数</h6>
+
+<dl>
+ <dt><code>aString</code></dt>
+ <dd>The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+</dl>
+
+<h6 id="convertToInputStream-Return_value" name="convertToInputStream-Return_value">戻り値</h6>
+
+<p>An <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIInputStream" title="">nsIInputStream</a></code> that will present the text specified in <code>aString</code> as its data.</p>
+
+<h2 id="Examples" name="Examples">例</h2>
+
+<p>See <a href="/ja/docs/Reading_textual_data" title="Reading_textual_data">Reading textual data</a> and <a href="/ja/docs/Writing_textual_data" title="Writing_textual_data">Writing textual data</a> for examples.</p>

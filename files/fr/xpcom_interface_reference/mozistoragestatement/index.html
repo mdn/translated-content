@@ -1,0 +1,568 @@
+---
+title: mozIStorageStatement
+slug: XPCOM_Interface_Reference/mozIStorageStatement
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageStatement
+---
+<p></p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/storage/public/mozIStorageStatement.idl" rel="custom">storage/public/mozIStorageStatement.idl</a></code><span style="text-align: right; float: right;"><a href="/fr/docs/Interfaces/À_propos_des_interfaces_scriptables" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+Cette interface vous permet de créer et d'exécuter des instructions SQL sur une mozIStorageConnection.
+</span>
+
+<div style="background: #eee; padding: 2px;">
+Inherits from: <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageValueArray" title="">mozIStorageValueArray</a></code>
+<span style="text-align: right; float: right;">Last changed in Gecko 1.9.2 (Firefox 3.6 / Thunderbird 3.1 / Fennec 1.0)</span></div>
+</div><p></p>
+
+<p>Pour une introduction sur la façon d'utiliser cette interface, voir  <a href="/fr/Storage" title="/fr/Storage">document storage</a>.</p>
+
+<h2 id="Method_overview" name="Method_overview">Aperçu des méthode</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="#initialize()">initialize</a>(in <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageConnection" title="">mozIStorageConnection</a></code> aDBConnection, in AUTF8String aSQLStatement);</code> <span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 3.5 / Thunderbird 3.0 / SeaMonkey 2.0)">Obsolète depuis Gecko 1.9.1</span></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#finalize()">finalize</a>(); </code></td>
+  </tr>
+  <tr>
+   <td><code><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageStatement" title="">mozIStorageStatement</a></code> <a href="#clone()">clone</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>AUTF8String <a href="#getParameterName()">getParameterName</a>(in unsigned long aParamIndex);</code></td>
+  </tr>
+  <tr>
+   <td><code>unsigned long <a href="#getParameterIndex()">getParameterIndex</a>(in AUTF8String aName);</code></td>
+  </tr>
+  <tr>
+   <td><code>AUTF8String <a href="#getColumnName()">getColumnName</a>(in unsigned long aColumnIndex);</code></td>
+  </tr>
+  <tr>
+   <td><code>unsigned long <a href="#getColumnIndex()">getColumnIndex</a>(in AUTF8String aName);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#reset()">reset</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>AString <a href="#escapeStringForLIKE()">escapeStringForLIKE</a>(in AString aValue, in wchar aEscapeChar);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#bindParameters()">bindParameters</a>(in <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageBindingParamsArray" title="">mozIStorageBindingParamsArray</a></code> aParameters);</code> </td>
+  </tr>
+  <tr>
+   <td><code><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageBindingParamsArray" title="">mozIStorageBindingParamsArray</a></code> <a href="#newBindingParamsArray()">newBindingParamsArray</a>();</code> </td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#bindUTF8StringParameter()">bindUTF8StringParameter</a>(in unsigned long aParamIndex, in AUTF8String aValue);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#bindStringParameter()">bindStringParameter</a>(in unsigned long aParamIndex, in AString aValue);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#bindDoubleParameter()">bindDoubleParameter</a>(in unsigned long aParamIndex, in double aValue);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#bindInt32Parameter()">bindInt32Parameter</a>(in unsigned long aParamIndex, in long aValue);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#bindInt64Parameter()">bindInt64Parameter</a>(in unsigned long aParamIndex, in long long aValue);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#bindNullParameter()">bindNullParameter</a>(in unsigned long aParamIndex);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#bindBlobParameter()">bindBlobParameter</a>(in unsigned long aParamIndex, [array,const,size_is(aValueSize)] in octet aValue, in unsigned long aValueSize);</code></td>
+  </tr>
+  <tr>
+   <td><code><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStoragePendingStatement" title="">mozIStoragePendingStatement</a></code> <a href="#executeAsync()">executeAsync</a>(<code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageStatementCallback" title="">mozIStorageStatementCallback</a></code> aCallback);</code> </td>
+  </tr>
+  <tr>
+   <td><code>boolean <a href="#executeStep()">executeStep</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>boolean <a href="#step()">step</a>();</code> </td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#execute()">execute</a>();</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Attributs">Attributs</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Attribute</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>columnCount</code></td>
+   <td><code>unsigned long</code></td>
+   <td>Nombre de colonnes retourné. <strong>Lecture seule</strong><strong>. </strong></td>
+  </tr>
+  <tr>
+   <td><code>parameterCount</code></td>
+   <td><code>unsigned long</code></td>
+   <td>Nombre de paramètres. <strong>Lecture seule. </strong></td>
+  </tr>
+  <tr>
+   <td><code>params</code></td>
+   <td><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageStatementParams" title="">mozIStorageStatementParams</a></code></td>
+   <td>La liste des paramètres nommés, qui peut être demandés. Disponible uniquement pour le code JavaScript. <strong>Lecture seule</strong>. </td>
+  </tr>
+  <tr>
+   <td><code>row</code></td>
+   <td><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageStatementRow" title="">mozIStorageStatementRow</a></code></td>
+   <td>La ligne en cours, avec un accès à tous les données par leurs nom. Disponible uniquement au code JavaScript. <strong> Lecture seule. </strong> </td>
+  </tr>
+  <tr>
+   <td><code>state</code></td>
+   <td><code>long</code></td>
+   <td>L'état actuel défini par <code><a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/mozIStorageStatement#MOZ_STORAGE_STATEMENT_INVALID">mozIStorageStatement.MOZ_STORAGE_STATEMENT_INVALID</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/mozIStorageStatement#MOZ_STORAGE_STATEMENT_READY">mozIStorageStatement.MOZ_STORAGE_STATEMENT_READY</a></code>, or <code><a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/mozIStorageStatement#MOZ_STORAGE_STATEMENT_EXECUTING">mozIStorageStatement.MOZ_STORAGE_STATEMENT_EXECUTING</a></code>. <strong> Lecture seule. </strong></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Statement_status_constants">Statement status constants</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Constant</td>
+   <td class="header">Value</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>MOZ_STORAGE_STATEMENT_INVALID</code></td>
+   <td>0</td>
+   <td>L'instruction SQL est non valide.</td>
+  </tr>
+  <tr>
+   <td><code>MOZ_STORAGE_STATEMENT_READY</code></td>
+   <td>1</td>
+   <td>L'instruction SQL est prêt à être exécuté.</td>
+  </tr>
+  <tr>
+   <td><code>MOZ_STORAGE_STATEMENT_EXECUTING</code></td>
+   <td>2</td>
+   <td>L'instruction SQL est en cours d'exécution.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Methods" name="Methods">Methods</h2>
+
+<p id="initialize()"></p><div class="headingWithIndicator">
+        <h3 id="initialize()_2">initialize()</h3>
+        <span class="indicatorInHeadline obsolete obsoleteMethod">Obsolète depuis Gecko 1.9.1 (Firefox 3.5 / Thunderbird 3.0 / SeaMonkey 2.0)</span>
+        </div><p></p>
+
+<p></p><div class="blockIndicator note"><strong>Note :</strong>  Cette méthode a été supprimé pour Gecko 1.9.1. Pour initialiser une déclaration, les utilisateurs devraient appeler <code><a href="https://developer.mozilla.org/fr/docs/XPCOM_Interface_Reference/mozIStorageConnection#createStatement()">mozIStorageConnection.createStatement()</a></code>. Cette méthode existe depuis Gecko 1.8.0. </div><p></p>
+
+<p>Initialisation une requête avec l'instruction SQL donnée.</p>
+
+<pre class="eval">void initialize(
+  in mozIStorageConnection aDBConnection,
+  in AUTF8String aSQLStatement
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Paramètres</h6>
+
+<dl>
+ <dt><code>aDBConnection</code></dt>
+ <dd>Une <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageConnection" title="">mozIStorageConnection</a></code> à une base de données.</dd>
+ <dt><code>aSQLStatement</code></dt>
+ <dd>Chaîne représentant l'instruction SQL.</dd>
+</dl>
+
+<h3 id="finalize()" name="finalize()">finalize()</h3>
+
+<p>Finalise une déclaration qui libère toutes les ressources qui ont été allouées pour elle. Vous devez appeler cette méthode sur chaque instruction active avant d'appeler <code><a href="https://developer.mozilla.org/fr/docs/XPCOM_Interface_Reference/mozIStorageConnection#close()">mozIStorageConnection.close()</a></code>.</p>
+
+<pre class="eval">void finalize();
+</pre>
+
+<p></p><div class="blockIndicator note"><strong>Note :</strong> Cette méthode n'a pas besoin d'être utilisé par des utilisateurs locaux parce que vous devez libérer la déclaration avant d'arrêter. <code>finalize</code> sera appelé automatiquement lorsque le compteur de référence passe à zéro. </div><p></p>
+
+<h3 id="clone()" name="clone()">clone()</h3>
+
+<p>Crée une copie de la déclaration dont l'état sera <code><a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/mozIStorageStatement#MOZ_STORAGE_STATEMENT_READY">mozIStorageStatement.MOZ_STORAGE_STATEMENT_READY</a></code>.</p>
+
+<pre class="eval">mozIStorageStatement clone();</pre>
+
+<h6 id="Return_value" name="Return_value">Valeur de retour</h6>
+
+<p><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageStatement" title="">mozIStorageStatement</a></code> est une copie de l'instruction en cours.</p>
+
+<h3 id="getParameterName()" name="getParameterName()">getParameterName()</h3>
+
+<p>Obtient le nom du paramètre pour l'index spécifié.</p>
+
+<pre class="eval">AUTF8String getParameterName(
+  in unsigned long aParamIndex
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Paramètres</h6>
+
+<dl>
+ <dt><code>aParamIndex</code></dt>
+ <dd>
+ <p>L'index numérique de base zéro pour le paramètre appelé. Ce sera <code>n-1</code> par rapport au nombre utilisé dans SQL (&lt;code&gt;?1&lt;/code&gt; pour &lt;code&gt;0&lt;/code&gt;,  et ainsi de suite).</p>
+ </dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value">Valeur de retour</h6>
+
+<p>Un <code><a href="/fr/AUTF8String" title="/fr/AUTF8String">AUTF8String</a></code> représentant le nom de paramètre pour l'index spécifié.</p>
+
+<h3 id="getParameterIndex()" name="getParameterIndex()">getParameterIndex()</h3>
+
+<p>Obtient l'index du paramètre avec le nom spécifié. Cette méthode a été ajoutée en 1.9.0. En 1.8.1, il fallait utiliser <code><a href="https://developer.mozilla.org/fr/docs/XPCOM_Interface_Reference/mozIStorageStatement#getParameterIndexes()">getParameterIndexes()</a></code>. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=388048" title="FIXED: mozIStorageStatement::getParameterIndexes is useless">bug 388048</a> pour plus de détails.</p>
+
+<pre class="eval">unsigned long getParameterIndex(
+  in AUTF8String aName
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Paramètres</h6>
+
+<dl>
+ <dt><code>aName</code></dt>
+ <dd>Nom du paramètre pour obtenir l'index. Pour le paramètre 'foo', le format de nom est ':foo' dans 1.9.0 et 1.9.1. dans 1.9.2 le ':' a été abandonnée et la valeur du nom doit être juste 'foo'. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=528166" title="mozIStorageStatement getParameterIndex causes NS_ERROR_ILLEGAL_VALUE">bug 528166</a> pour plus de détails.</dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value">Valeur de retour</h6>
+
+<p>L'index numérique de base zéro pour le paramètre appelé. Ce sera <code>n-1</code> par rapport au nombre utilisé dans SQL (&lt;code&gt;?1&lt;/code&gt; pour &lt;code&gt;0&lt;/code&gt;,  et ainsi de suite).</p>
+
+<h3 id="getColumnName()" name="getColumnName()">getColumnName()</h3>
+
+<p>Obtient le nom de la colonne pour l'index spécifié.</p>
+
+<pre class="eval">AUTF8String getColumnName(
+  in unsigned long aColumnIndex
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Paramètres</h6>
+
+<dl>
+ <dt><code>aColumnIndex</code></dt>
+ <dd>
+ <p>L'indice numérique de base zéro de la colonne.</p>
+ </dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value">Valeur de retour</h6>
+
+<p>Un <code><a href="/fr/AUTF8String" title="/fr/AUTF8String">AUTF8String</a></code> avec le du nom de la colonne pour l'index spécifié.</p>
+
+<h3 id="getColumnIndex()" name="getColumnIndex()">getColumnIndex()</h3>
+
+<p>Obtient l'index de la colonne avec le nom spécifié.</p>
+
+<pre class="eval">unsigned long getColumnIndex(
+  in AUTF8String aName
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Paramètres</h6>
+
+<dl>
+ <dt><code>aName</code></dt>
+ <dd>Le nom de la colonne.</dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value">Return value</h6>
+
+<p>L'indice numérique de base zéro de la colonne.</p>
+
+<h3 id="reset()" name="reset()">reset()</h3>
+
+<p>Réinitialise les paramètres liés et l'état d'exécution de l'instruction.<strong> Doit </strong> être appelé avant de réutiliser la déclaration.</p>
+
+<p></p><div class="blockIndicator note"><strong>Note :</strong> Les utilisateurs JavaScript doivent toujours envelopper leur exécution dans un bloc try, et une déclaration de remise à zéro dans un bloc finally. </div><p></p>
+
+<p>Voir le <a href="/fr/Storage#Resetting_a_Statement" title="/fr/Storage#Resetting_a_Statement">document de synthèse sur le stockag</a> pour plus de détails.</p>
+
+<pre class="eval">void reset()
+</pre>
+
+<h3 id="escapeStringForLIKE()" name="escapeStringForLIKE()">escapeStringForLIKE()</h3>
+
+<p>Entre une chaîne pour une recherche SQL LIKE.</p>
+
+<p></p><div class="blockIndicator note"><strong>Note :</strong> Les utilisateurs devront utiliser le même caractère d'échappement lorsque ils font des déclarations telles que: <code>...LIKE '?1' ESCAPE '/'...</code>. Voir l'exemple de code pour plus de détails.</div><p></p>
+
+<pre class="eval">AString escapeStringForLIKE(
+  in AString aValue,
+  in wchar aEscapeChar
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Paramètres</h6>
+
+<dl>
+ <dt><code>aValue</code></dt>
+ <dd>Chaîne d'enter pour SQL LIKE.</dd>
+ <dt><code>aEscapeChar</code></dt>
+ <dd>Le caractère d'échappement à utiliser. En général <code>"/</code> " sera suffisant.</dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value">Valeur de retour</h6>
+
+<p>Une chaîne encodée UTF-16 qui a des caractères qui ont une signification particulière pour <code>aValue</code>.</p>
+
+<h6 id="Sample_Code">Sample Code</h6>
+
+<pre class="brush: js">var statement = dbConn.createStatement(
+  "SELECT * " +
+  "FROM table_name " +
+  "WHERE column_name LIKE :userInput ESCAPE '/'"
+);
+statement.params.userInput = statement.escapeStringForLIKE(someUserInput, "/");</pre>
+
+<h2 id="Binding_functions" name="Binding_functions">Fonctions de liaison</h2>
+
+<p>Ces fonctions sont discutés plus en détail avec exemple de code dans <a href="/fr/Storage#Binding_Parameters" title="/fr/Storage#Binding_Parameters">Storage</a>.</p>
+
+<p id="newBindingParamsArray()"></p><h3 id="newBindingParamsArray()_2">newBindingParamsArray()</h3><p></p>
+
+<p>Crée et retourne un nouvel <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageBindingParamsArray" title="">mozIStorageBindingParamsArray</a></code> objet qui peut être utilisé pour lier des valeurs multiples à des paramètres en cours de préparation pour appeler <code><a href="https://developer.mozilla.org/fr/docs/XPCOM_Interface_Reference/mozIStorageStatement#executeAsync()">executeAsync()</a></code>.</p>
+
+<pre>mozIStorageBindingParamsArray newBindingParamsArray();
+</pre>
+
+<h6 id="Paramètres">Paramètres</h6>
+
+<p>Aucun.</p>
+
+<p id="bindParameters()"></p><h3 id="bindParameters()_2">bindParameters()</h3><p></p>
+
+<p>Relie tous les paramètres dans un tableau spécifié à la déclaration en préparation pour appeler <code><a href="https://developer.mozilla.org/fr/docs/XPCOM_Interface_Reference/mozIStorageStatement#executeAsync()">executeAsync()</a></code>.</p>
+
+<div class="note"><strong>Remarque: </strong> À partir de <span title="(Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)">Gecko 2.0</span>, cette méthode renvoie <code>NS_ERROR_UNEXPECTED</code> si <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageBindingParamsArray" title="">mozIStorageBindingParamsArray</a></code> est vide .</div>
+
+<pre>void bindParameters(
+  in mozIStorageBindingParamsArray aParameters
+);
+</pre>
+
+<h6 id="Paramètres_2">Paramètres</h6>
+
+<dl>
+ <dt>aParameters</dt>
+ <dd>L'objet <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageBindingParamsArray" title="">mozIStorageBindingParamsArray</a></code> contenant un ou plusieurs objets <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageBindingParams" title="">mozIStorageBindingParams</a></code> contenant les paramètres liés à la déclaration avant l'exécution.</dd>
+</dl>
+
+<h3 id="bindUTF8StringParameter()" name="bindUTF8StringParameter()">bindUTF8StringParameter()</h3>
+
+<p>Associe un UTF8String à l'index spécifié.</p>
+
+<pre class="eval">void bindUTF8StringParameter(
+  in unsigned long aParamIndex,
+  in AUTF8String aValue
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Paramètres</h6>
+
+<dl>
+ <dt><code>aParamIndex</code></dt>
+ <dd>L'index numérique de base zéro pour le paramètre appelé. Ce sera <code>n-1</code> par rapport au nombre utilisé dans SQL (&lt;code&gt;?1&lt;/code&gt; pour &lt;code&gt;0&lt;/code&gt;,  et ainsi de suite).</dd>
+ <dt><code>aValue</code></dt>
+ <dd>Valeur lié à l'index spécifié.</dd>
+</dl>
+
+<h3 id="bindStringParameter()" name="bindStringParameter()">bindStringParameter()</h3>
+
+<p>Associe un paramètre de chaîne à l'index spécifié.</p>
+
+<pre class="eval">void bindStringParameter(
+  in unsigned long aParamIndex,
+  in AString aValue
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">paramêtres</h6>
+
+<dl>
+ <dt><code>aParamIndex</code></dt>
+ <dd>L'index numérique de base zéro pour le paramètre appelé. Ce sera <code>n-1</code> par rapport au nombre utilisé dans SQL (&lt;code&gt;?1&lt;/code&gt; pour &lt;code&gt;0&lt;/code&gt;,  et ainsi de suite).</dd>
+ <dt><code>aValue</code></dt>
+ <dd>Valeur lié à l'index spécifié.</dd>
+</dl>
+
+<h3 id="bindDoubleParameter()" name="bindDoubleParameter()">bindDoubleParameter()</h3>
+
+<p>Relie un réel double à l'index spécifié.</p>
+
+<pre class="eval">void bindDoubleParameter(
+  in unsigned long aParamIndex,
+  in double aValue
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Paramètres</h6>
+
+<dl>
+ <dt><code>aParamIndex</code></dt>
+ <dd>L'index numérique de base zéro pour le paramètre appelé. Ce sera <code>n-1</code> par rapport au nombre utilisé dans SQL (&lt;code&gt;?1&lt;/code&gt; pour &lt;code&gt;0&lt;/code&gt;,  et ainsi de suite).</dd>
+ <dt><code>aValue</code></dt>
+ <dd>Valeur lié à l'index spécifié.</dd>
+</dl>
+
+<h3 id="bindInt32Parameter()" name="bindInt32Parameter()">bindInt32Parameter()</h3>
+
+<p>Associe un Int32 à l'index spécifié.</p>
+
+<pre class="eval">void bindInt32Parameter(
+  in unsigned long aParamIndex,
+  in long aValue
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Paramètres</h6>
+
+<dl>
+ <dt><code>aParamIndex</code></dt>
+ <dd>L'index numérique de base zéro pour le paramètre appelé. Ce sera <code>n-1</code> par rapport au nombre utilisé dans SQL (&lt;code&gt;?1&lt;/code&gt; pour &lt;code&gt;0&lt;/code&gt;,  et ainsi de suite).</dd>
+ <dt><code>aValue</code></dt>
+ <dd>Valeur lié à l'index spécifié.</dd>
+</dl>
+
+<h3 id="bindInt64Parameter()" name="bindInt64Parameter()">bindInt64Parameter()</h3>
+
+<p>Associe un Int64 à l'index spécifié.</p>
+
+<pre class="eval">void bindInt64Parameter(
+  in unsigned long aParamIndex,
+  in long long aValue
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Paramètres</h6>
+
+<dl>
+ <dt><code>aParamIndex</code></dt>
+ <dd>L'index numérique de base zéro pour le paramètre appelé. Ce sera <code>n-1</code> par rapport au nombre utilisé dans SQL (&lt;code&gt;?1&lt;/code&gt; pour &lt;code&gt;0&lt;/code&gt;,  et ainsi de suite).</dd>
+ <dt><code>aValue</code></dt>
+ <dd>Valeur lié à l'index spécifié.</dd>
+</dl>
+
+<h3 id="bindNullParameter()" name="bindNullParameter()">bindNullParameter()</h3>
+
+<p>Associe un paramètre null à l'index spécifié.</p>
+
+<pre class="eval">void bindNullParameter(
+  in unsigned long aParamIndex
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Paramètres</h6>
+
+<dl>
+ <dt><code>aParamIndex</code></dt>
+ <dd>L'index numérique de base zéro pour le paramètre appelé. Ce sera <code>n-1</code> par rapport au nombre utilisé dans SQL (&lt;code&gt;?1&lt;/code&gt; pour &lt;code&gt;0&lt;/code&gt;,  et ainsi de suite).</dd>
+</dl>
+
+<h3 id="bindBlobParameter()" name="bindBlobParameter()">bindBlobParameter()</h3>
+
+<p>Associe un paramètre blob à l'index spécifié.</p>
+
+<pre class="eval">void bindBlobParameter(
+  in unsigned long aParamIndex,
+  [array,const,size_is(aValueSize)] in octet aValue,
+  in unsigned long aValueSize
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>aParamIndex</code></dt>
+ <dd>L'index numérique de base zéro pour le paramètre appelé. Ce sera <code>n-1</code> par rapport au nombre utilisé dans SQL (&lt;code&gt;?1&lt;/code&gt; pour &lt;code&gt;0&lt;/code&gt;,  et ainsi de suite).</dd>
+ <dt><code>aValue</code></dt>
+ <dd>Valeur lié à l'index spécifié.</dd>
+ <dt><code>aValueSize</code></dt>
+ <dd>Taille de <code>aValue</code>.</dd>
+</dl>
+
+<h2 id="Fonctions_d'exécution">Fonctions d'exécution</h2>
+
+<p>Ces fonctions sont discutés plus en détail avec exemple de code dans <a class="internal" href="/en/Storage#Executing_a_Statement" title="Executing a Statement">overview document</a>.</p>
+
+<p id="executeAsync()"></p><h3 id="executeAsync()_2">executeAsync()</h3><p></p>
+
+<p>Démarre l'exécution d'une requête asynchrone avec les paramètres liés. La routine de rappel facultative reçoit des notifications sur l'état d'avancement de la requête. Pour des exemples de code et plus de détails, voir <a href="/en/Storage#Asynchronously" title="/en/Storage#Asynchronously">Storage </a>.</p>
+
+<p></p><div class="blockIndicator note"><strong>Note :</strong> La déclaration n'a pas à être remis à zéro avant d'être réutilisés. </div><p></p>
+
+<pre>mozIStoragePendingStatement executeAsync(
+  [optional] mozIStorageStatementCallback aCallback
+);
+</pre>
+
+<h6 id="Paramètres_3">Paramètres</h6>
+
+<dl>
+ <dt><code>aCallback</code></dt>
+ <dd>Un objet de rappel qui sera informé des progrès, des erreurs, et de la fin de la requête. Ce paramètre est facultatif.</dd>
+</dl>
+
+<h6 id="Valeur_de_retour">Valeur de retour</h6>
+
+<p>Un objet <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStoragePendingStatement" title="">mozIStoragePendingStatement</a></code> qui peut être utilisé pour annuler l'exécution de l'instruction.</p>
+
+<h3 id="executeStep()">executeStep()</h3>
+
+<p>Exécute une requête synchrone avec les paramètres liés, et donne les résultats ligne par ligne. Pour des exemples de code et plus de détails, voir le <a href="/en/Storage#Synchronously" title="/en/Storage#Synchronously"> Storage </a>.</p>
+
+<p></p><div class="blockIndicator note"><strong>Note :</strong> La déclaration doit être remise à zéro avant d'être réutilisés. </div><p></p>
+
+<pre class="eval">boolean executeStep();
+</pre>
+
+<h6 id="Return_value" name="Return_value">Valeur de retour</h6>
+
+<p>Retourne un <code>boolean</code> indiquant s'il y a encor des lignes ou pas. les données par ligne peuvent être accessibles en utilisant la méthodes <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageValueArray" title="">mozIStorageValueArray</a></code> avec la déclaration.</p>
+
+<p id="step()"></p><h3 id="step()_2">step()</h3><p></p>
+
+<p>Identique un appelle <code><a href="https://developer.mozilla.org/fr/docs/XPCOM_Interface_Reference/mozIStorageStatement#executeStep()">executeStep()</a></code>, puis un appelle <code><a href="https://developer.mozilla.org/fr/docs/XPCOM_Interface_Reference/mozIStorageStatement#reset()">reset()</a></code> quand il n'y a plus de ligne à retourner.</p>
+
+<div class="note"><strong>Note: </strong> Cette méthode ne peut être appelée à partir du code JavaScript .</div>
+
+<pre>boolean step()</pre>
+
+<h6 id="Valeur_de_retour_2">Valeur de retour</h6>
+
+<p><code>true </code> s'il y a encor des lignes disponible dans les résultats, sinon <code>false</code>.</p>
+
+<h3 id="execute()">execute()</h3>
+
+<p>Exécutez la requête, sans tenir compte des résultats. Ceci est accompli en appelant <code><a href="https://developer.mozilla.org/fr/docs/XPCOM_Interface_Reference/mozIStorageStatement#executeStep()">executeStep()</a></code>, puis <code><a href="https://developer.mozilla.org/fr/docs/XPCOM_Interface_Reference/mozIStorageStatement#reset()">reset()</a></code>.</p>
+
+<pre class="eval"> void execute();
+</pre>
+
+<h2 id="See_also" name="See_also">Voir aussi</h2>
+
+<ul>
+ <li><a href="/fr/Storage" title="en/Storage">Storage</a> introduction and how-to article</li>
+ <li><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageConnection" title="">mozIStorageConnection</a></code> Database connection to a specific file or in-memory data storage</li>
+ <li><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageValueArray" title="">mozIStorageValueArray</a></code> Wraps an array of SQL values, such as a result row.</li>
+ <li><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageFunction" title="">mozIStorageFunction</a></code> Create a new SQLite function.</li>
+ <li><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageAggregateFunction" title="">mozIStorageAggregateFunction</a></code> Create a new SQLite aggregate function.</li>
+ <li><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageProgressHandler" title="">mozIStorageProgressHandler</a></code> Monitor progress during the execution of a statement.</li>
+ <li><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageAsyncStatement" title="">mozIStorageAsyncStatement</a></code></li>
+ <li><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageStatementWrapper" title="">mozIStorageStatementWrapper</a></code> Storage statement wrapper</li>
+ <li><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageBindingParams" title="">mozIStorageBindingParams</a></code></li>
+ <li><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageBindingParamsArray" title="">mozIStorageBindingParamsArray</a></code></li>
+</ul>

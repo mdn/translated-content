@@ -1,0 +1,194 @@
+---
+title: Ajout de méthodes
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Ajout_de_méthodes
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XBL
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_Methods_to_XBL-defined_Elements
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Ajout_de_propriétés" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Ajout_de_gestionnaire_d'évènements">Suivant  »</a></p>
+</div>
+
+<p>Nous allons voir comment ajouter des méthodes personnalisées aux éléments définis en <a href="/fr/XBL" title="fr/XBL">XBL</a>.</p>
+
+<h3 id="Les_m.C3.A9thodes" name="Les_m.C3.A9thodes">Les méthodes</h3>
+
+<p>En plus d'ajouter des propriétés de script à l'élément défini en XBL, vous pouvez aussi y ajouter des méthodes. Ces méthodes peuvent être appelées à partir d'un script. Les méthodes sont des fonctions d'objets, comme <code>window.open()</code>. Vous pouvez définir des méthodes personnalisées pour vos éléments en utilisant l'élément <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#method">method</a></code>. La syntaxe générale des méthodes est définie comme suit :</p>
+
+<pre>&lt;implementation&gt;
+  &lt;method name="method-name"&gt;
+    &lt;parameter name="parameter-name1"/&gt;
+    &lt;parameter name="parameter-name2"/&gt;
+    .
+    .
+    .
+    &lt;body&gt;
+      -- le script de la méthode vient ici --
+    &lt;/body&gt;
+  &lt;/method&gt;
+&lt;/implementation&gt;
+</pre>
+
+<p>Une déclaration de méthode se fait au travers de l'élément <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#implementation">implementation</a></code>, comme pour les champs et les propriétés. L'élément <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#method">method</a></code> contient deux types d'éléments fils, les éléments <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#parameter">parameter</a></code> qui décrivent les paramètres de la méthode et <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#body">body</a></code> qui contient le script de la méthode.</p>
+
+<p>La valeur de l'attribut <code>name</code> devient le nom de la méthode. De même, les attributs <code>name</code> des éléments <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#parameter">parameter</a></code> deviennent les noms de chaque paramètre. Chaque élément <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#parameter">parameter</a></code> est utilisé pour déclarer l'un des paramètres pour la méthode. Par exemple, si la méthode a trois paramètres, il y aura trois éléments <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#parameter">parameter</a></code>. Si vous n'avez pas besoin d'en avoir, la méthode n'aura pas de balise <code>parameter</code>.</p>
+
+<p>L'élément <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#body">body</a></code> contient le script qui est exécuté lorsque la méthode est appelée. Les noms des paramètres sont définis comme des variables dans le script comme s'ils étaient passés en paramètre. Par exemple, la fonction JavaScript suivante serait écrite en tant que méthode XBL comme ceci :</p>
+
+<pre class="eval">function getMaximum(num1,num2)
+{
+  if (num1&lt;=num2) return num2;
+  else return num1;
+}
+
+<strong>XBL:</strong>
+
+&lt;method name="getMaximum"&gt;
+  &lt;parameter name="num1"/&gt;
+  &lt;parameter name="num2"/&gt;
+  &lt;body&gt;
+    if (num1&amp;lt;=num2) return num2;
+    else return num1;
+  &lt;/body&gt;
+&lt;/method&gt;
+</pre>
+
+<p>Cette fonction, <code>getMaximum</code>, retourne la plus grande des valeurs passées chacune comme un paramètre dans la méthode. Notez que le symbole inférieur doit être un caractère d'échappement parce qu'autrement il ressemblerait au commencement d'une balise. Vous pouvez aussi utiliser une section CDATA pour échapper le bloc entier de code. Vous pouvez appeler la méthode en utilisant un code comme <code>element.getMaximum(5,10)</code> où <code>element</code> est une référence à un élément défini par l'élément XBL contenant la méthode <code>getMaximum</code> (L'élément de liaison).</p>
+
+<p>La balise <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#parameter">parameter</a></code> vous permet de définir des paramètres pour une méthode. Comme Mozilla utilise JavaScript pour son langage de script, et que JavaScript est un langage non typé, vous n'avez pas besoin de spécifier le type des paramètres. Cependant, dans le futur, d'autres langages devraient être utilisés avec XBL.</p>
+
+<h3 id="Acc.C3.A8s_au_contenu_anonyme" name="Acc.C3.A8s_au_contenu_anonyme">Accès au contenu anonyme</h3>
+
+<p>Il peut y avoir des fois où vous voulez modifier certains aspects des éléments définis dans l'élément <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#content">content</a></code>, que ce soit à partir d'une méthode <code>body</code> ou d'ailleurs. Ces éléments sont créés anonymement et ne sont pas accessibles à partir des fonctions habituelles du DOM (Modèle Objet de Document). Elles sont cachées de telle sorte que les développeurs n'aient pas besoin de savoir comment l'élément est implémenté pour l'utiliser. Cependant, il existe un moyen spécial pour obtenir ce contenu anonyme.</p>
+
+<p>Les éléments auxquels un comportement XBL est attaché ont une propriété spéciale qui contient un tableau des éléments fils anonymes. Chaque élément du tableau stocke chaque élément fils direct de l'élément XBL défini. Cette propriété spéciale ne peut pas être accessible directement. À la place, vous devez appeler la méthode <code>getAnonymousNodes</code> du document.</p>
+
+<pre>var value=document.getAnonymousNodes(element);</pre>
+
+<p>Ici, 'element' devrait être une référence à l'élément dont vous voulez obtenir le contenu anonyme. La fonction retourne un tableau d'éléments qui est le contenu anonyme. Pour obtenir des éléments en-dessous de celui-ci, vous pouvez utiliser les fonctions habituelles du DOM (Modèle Objet de Document) car elles ne sont pas cachées. Notez qu'il est possible pour un élément XBL lié d'être placé à l'intérieur d'un autre, auquel cas vous devrez utiliser une nouvelle fois la fonction <code>getAnonymousNodes</code>.</p>
+
+<p>L'exemple suivant crée une rangée de boutons :</p>
+
+<pre>&lt;binding id="buttonrow"&gt;
+  &lt;content&gt;
+    &lt;button label="Oui"/&gt;
+    &lt;button label="Non"/&gt;
+    &lt;button label="Trier par"/&gt;
+  &lt;/content&gt;
+&lt;/binding&gt;
+</pre>
+
+<p>Pour vous référer à chaque bouton, vous pouvez utiliser la fonction <code>getAnonymousNodes</code>, en lui passant une référence à l'élément auquel la liaison est attachée, en tant que paramètre. Dans le tableau renvoyé, le premier bouton est stocké dans le premier item du tableau (<code>getAnonymousNodes(element)[0]</code>), le deuxième bouton est stocké dans le deuxième item du tableau et le troisième est stocké dans le troisième item du tableau. Pour coder à l'intérieur d'une méthode de liaison, vous pouvez passer <code>this</code> comme paramètre à <code>getAnonymousNodes</code>.</p>
+
+<p>Le prochain exemple peut être utilisé pour créer un texte avec un libellé. La méthode <code>showTitle</code> sert à montrer ou à cacher un libellé. Elle fonctionne en obtenant une référence à l'élément titre en utilisant le tableau anonyme et en changeant sa visibilité.</p>
+
+<pre class="eval"><strong>XUL:</strong>
+
+&lt;box id="num" class="labeledbutton" title="Plusieurs choses :" value="52"/&gt;
+
+&lt;button label="Montrer" oncommand="document.getElementById('num').showTitle(true)"/&gt;
+&lt;button label="Cacher" oncommand="document.getElementById('num').showTitle(false)"/&gt;
+
+<strong>XBL:</strong>
+
+&lt;binding id="labeledbutton"&gt;
+  &lt;content&gt;
+    &lt;xul:label xbl:inherits="value=title"/&gt;
+    &lt;xul:label xbl:inherits="value"/&gt;
+  &lt;/content&gt;
+  &lt;implementation&gt;
+    &lt;method name="showTitle"&gt;
+      &lt;parameter name="state"/&gt;
+      &lt;body&gt;
+        if (state) document.getAnonymousNodes(this)[0].
+          setAttribute("style","visibility: visible");
+        else document.getAnonymousNodes(this)[0].
+          setAttribute("style","visibility: collapse");
+      &lt;/body&gt;
+    &lt;/method&gt;
+  &lt;/implementation&gt;
+&lt;/binding&gt;
+</pre>
+
+<p>Les deux boutons ajoutés dans le contenu XUL ont des gestionnaires <code id="a-oncommand"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/oncommand">oncommand</a></code> qui sont utilisés pour changer la visibilité du libellé. Chacun d'eux appelle la méthode <code>showTitle</code>. Cette méthode vérifie le paramètre <code>state</code> pour voir si l'élément sera caché ou montré. Dans un cas comme dans l'autre, elle récupère le premier élément du tableau anonyme. Celui-ci se rapporte au premier fils de l'élément <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#content">content</a></code> qui ici est le premier élément <code>label</code> de l'élément graphique. La visibilité est changée en modifiant le style de l'élément.</p>
+
+<h3 id="Acc.C3.A8s_depuis_l.27int.C3.A9rieur_du_contenu_anonyme" name="Acc.C3.A8s_depuis_l.27int.C3.A9rieur_du_contenu_anonyme">Accès depuis l'intérieur du contenu anonyme</h3>
+
+<p>Pour aller dans l'autre sens, et obtenir l'élément XUL liée depuis l'intérieur du contenu anonyme, utilisez la propriété <a href="/fr/DOM/element.parentNode" title="fr/DOM/element.parentNode">parentNode</a> du DOM (Modèle Objet de Document). Elle permet d'obtenir l'élément parent d'un élément. Par exemple, nous pourrions déplacer les boutons 'Montrer' et 'Cacher' dans le fichier XBL et faire la chose suivante :</p>
+
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_xblmethods_1.xml.txt">Source</a></p>
+
+<pre>&lt;binding id="labeledbutton"&gt;
+  &lt;content&gt;
+    &lt;xul:label xbl:inherits="value=title"/&gt;
+    &lt;xul:label xbl:inherits="value"/&gt;
+    &lt;xul:button label="Montrer" oncommand="parentNode.showTitle(true);"/&gt;
+    &lt;xul:button label="Cacher" oncommand="parentNode.showTitle(false);"/&gt;
+  &lt;/content&gt;
+  &lt;implementation&gt;
+    &lt;method name="showTitle"&gt;
+      &lt;parameter name="state"/&gt;
+      &lt;body&gt;
+        if (state) document.getAnonymousNodes(this)[0].setAttribute("style","visibility: visible");
+        else document.getAnonymousNodes(this)[0].setAttribute("style","visibility: collapse");
+      &lt;/body&gt;
+    &lt;/method&gt;
+  &lt;/implementation&gt;
+&lt;/binding&gt;
+</pre>
+
+<p>Les gestionnaires <code id="a-oncommand"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/oncommand">oncommand</a></code> obtiennent ici d'abord une référence à leur élément parent. Il ne s'agit pas de l'élément <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#content">content</a></code> mais de l'élément XUL auquel l'élément XBL est lié (Dans cet exemple, c'est la boîte avec la classe 'labeledbutton'). Ainsi, la méthode <code>showTitle</code> est appelée, et fonctionne comme avant.</p>
+
+<p>Les propriétés et méthodes personnalisées sont ajoutées seulement à l'élément XUL externe auquel l'élément XBL est lié. Aucun des éléments déclarés au sein de la balise <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#content">content</a></code> n'ont ces propriétés ou méthodes. C'est pourquoi nous devons obtenir l'élément parent d'abord.</p>
+
+<p>Les fils d'un élément placés dans le fichier XUL peuvent être récupérés par la voie normale et ne bougent pas même si vous utilisez la balise <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#children">children</a></code>. Par exemple :</p>
+
+<pre class="eval"><strong>XUL:</strong>
+
+&lt;box id="outer" class="container"&gt;
+  &lt;button label="Un"/&gt;
+  &lt;button label="Deux"/&gt;
+  &lt;button label="Trois"/&gt;
+  &lt;button label="Quatre"/&gt;
+&lt;/box&gt;
+
+<strong>XBL:</strong>
+
+&lt;binding id="labeledbutton"&gt;
+  &lt;content&gt;
+    &lt;description value="Une pile :"/&gt;
+    &lt;stack&gt;
+      &lt;children/&gt;
+    &lt;/stack&gt;
+  &lt;/content&gt;
+&lt;/binding&gt;
+</pre>
+
+<p>Si vous utilisez les fonctions du DOM (Modèle Objet de Document) telles que <code><a href="/fr/DOM/element.childNodes" title="fr/DOM/element.childNodes">childNodes</a></code> pour obtenir les fils d'un élément, vous verrez que la boîte XUL qui a l'<code id="a-id"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/id">id</a></code> 'outer', a 4 fils. Ceux-ci correspondent à ses 4 boutons, même si ces boutons sont dessinés à l'intérieur de la pile (<code><a href="/fr/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code>). La pile n'a qu'un seul fils, l'élément <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#children">children</a></code> lui-même. La longueur du tableau anonyme de la boîte externe est de deux, le premier élément étant l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/description" title="description">description</a></code> et le second étant l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code>.</p>
+
+<h3 id="Constructeurs_et_Destructeurs" name="Constructeurs_et_Destructeurs">Constructeurs et Destructeurs</h3>
+
+<p>XBL supporte deux méthodes spéciales créées avec des balises séparées, <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#constructor">constructor</a></code> et <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#destructor">destructor</a></code>. Un constructeur est appelé chaque fois qu'une liaison est attachée à un élément. Il est utilisé pour initialiser le contenu tel que le chargement de préférences ou l'initialisation des valeurs par défaut de champs. Le destructeur est appelé lorsqu'une liaison est enlevée d'un élément. Il peut s'avérer utile pour sauvegarder des informations.</p>
+
+<p>Il y a deux points à savoir lorsqu'une liaison est attachée à un élément. Le premier se produit lorsqu'une fenêtre est affichée. Tous les constructeurs des éléments qui ont un contenu XBL attaché seront invoqués. L'ordre dans lequel ils sont appelés ne devrait pas être pris en compte, car ils sont chargés à partir divers fichiers. Le gestionnaire de chargement de la fenêtre (<code id="a-onload"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/onload">onload</a></code>) n'est pas appelé tant que toutes les liaisons n'ont pas été attachées et leurs constructeurs exécutés. Le second point quand une liaison est attachée, est lorsque vous changez la propriété de style <a href="/fr/docs/Web/CSS/-moz-binding" title="La propriété -moz-binding, utilisée par les applications Mozilla, permet d'attacher une liaison (binding) XBL à un élément DOM."><code>-moz-binding</code></a> d'un élément. Après que son destructeur ait été appelé, la liaison existante sera enlevée. Ainsi, la nouvelle liaison sera ajoutée à sa place et son constructeur sera invoqué.</p>
+
+<p>Le script pour un constructeur ou un destructeur devrait être placé directement à l'intérieur de la balise appropriée. Il ne doit y avoir qu'un seul de chaque par liaison et ils ne prennent aucun argument. Voici quelques exemples :</p>
+
+<pre>&lt;constructor&gt;
+  if (this.childNodes[0].getAttribute("open") == "true"){
+    this.loadChildren();
+  }
+&lt;/constructor&gt;
+
+&lt;destructor action="saveMyself(this);"/&gt;
+</pre>
+
+<hr>
+<p>La prochaine section montre comment ajouter des gestionnaires d'événements aux éléments XBL définis.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Ajout_de_propriétés" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Ajout_de_gestionnaire_d'évènements">Suivant  »</a></p>
+</div>

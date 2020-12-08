@@ -1,0 +1,237 @@
+---
+title: '<ol> : l''élément de liste ordonnée'
+slug: Web/HTML/Element/ol
+tags:
+  - Element
+  - HTML
+  - Reference
+  - Web
+translation_of: Web/HTML/Element/ol
+---
+<div>{{HTMLRef}}</div>
+
+<p>L'élément HTML <strong><code>&lt;ol&gt;</code></strong> représente une liste ordonnée. Les éléments d'une telle liste sont généralement affichés avec un indicateur ordinal pouvant prendre la forme de nombres, de lettres, de chiffres romains ou de points. La mise en forme de la numérotation n'est pas utilisée dans la description HTML mais dans la feuille de style CSS associée grâce à la propriété {{cssxref("list-style-type")}}.</p>
+
+<div>{{EmbedInteractiveExample("pages/tabbed/ol.html", "tabbed-shorter")}}</div>
+
+<div class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</div>
+
+<h2 id="Attributs">Attributs</h2>
+
+<p>Cet élément dispose <a href="/fr/docs/Web/HTML/Attributs_universels">des attributs universels</a>.</p>
+
+<dl>
+ <dt>{{htmlattrdef("reversed")}} {{HTMLVersionInline(5)}}</dt>
+ <dd>Cet attribut booléen précise que les objets listés par l'élément sont affichés avec un ordre inversé (l'objet le moins important apparaît en première position).</dd>
+ <dt>{{htmlattrdef("start")}} {{HTMLVersionInline(5)}}</dt>
+ <dd>La valeur de cet attribut, un nombre entier, définit l'indice à partir duquel les objets de la liste sont numérotés. Bien que les indices des éléments puissent être des nombres romains ou des lettres la valeur de cet attribut doit être un nombre. Ainsi pour commencer la numérotation des éléments avec la lettre « C », il faudra entrer :<code> &lt;ol start="3"&gt;</code>. Cet attribut a été déprécié en HTML4 mais a été réintroduit en HTML5.</dd>
+</dl>
+
+<h3 id="Attributs_dépréciés_et_obsolètes">Attributs dépréciés et obsolètes</h3>
+
+<dl>
+ <dt>{{htmlattrdef("compact")}} {{deprecated_inline}}</dt>
+ <dd>
+ <p>Cet attribut booléen indique si la liste doit être affichée avec un style compact. L'interprétation de cet attribut dépend de l'agent utilisateur utilisé et ne fonctionne pas avec tous les navigateurs.</p>
+
+ <div class="warning"><strong>Attention !</strong> Cet attribut ne doit pas être utilisé car il a été déprécié : les feuilles de style CSS doivent être utilisées pour la mise en forme de l'élément {{HTMLElement("ol")}}. Afin d'obtenir un effet similaire à cet attribut, la propriété CSS {{cssxref("line-height")}} peut être utilisée avec une valeur de <code>80%</code>.</div>
+ </dd>
+</dl>
+
+<dl>
+ <dt>{{htmlattrdef("type")}} {{deprecated_inline}}</dt>
+ <dd>Cet attribut définit comment les nombres ordinaux doivent être affichés. Il peut valoir les caractères suivants :
+ <ul>
+  <li><code>a</code> : lettres minuscules</li>
+  <li><code>A</code> : lettres majuscules</li>
+  <li><code>i</code> : nombres romains en minuscules</li>
+  <li><code>I</code> : nombres romains en majuscules</li>
+  <li><code>1</code> : nombres</li>
+ </ul>
+ Le type sélectionné est alors utilisé pour toute la liste à moins qu'un élément {{HTMLElement("li")}} de la liste utilise une autre valeur pour l'attribut {{htmlattrxref("type", "li")}}
+
+ <div class="warning"><strong>Attention !</strong> Cet attribut ne doit pas être utilisé car il a été déprécié : les feuilles de style CSS doivent être utilisées pour la mise en forme de l'élément {{HTMLElement("ol")}}. La propriété CSS {{cssxref("list-style-type")}} doit être utilisé à la place de cet attribut.</div>
+ </dd>
+</dl>
+
+<h2 id="Note_d'utilisation">Note d'utilisation</h2>
+
+<ul>
+ <li>Les éléments {{HTMLElement("ol")}} et  {{HTMLElement("ul")}} représentent tous les deux une liste d'objets. Leur différence réside dans le fait qu'avec {{HTMLElement("ol")}} l'ordre est important. Un moyen mnémotechnique pour savoir lequel de ces deux éléments utiliser est d'essayer de changer l'ordre dans la liste : si sa signification a changé alors {{HTMLElement("ol")}} doit être utilisé, sinon {{HTMLElement("ul")}} doit être utilisé.</li>
+ <li>Il n'y pas de limitation concernant la profondeur ou l'éventuelle imbrication des listes définies par les éléments {{HTMLElement("ol")}} et {{HTMLElement("ul")}}.</li>
+</ul>
+
+<h2 id="Exemples">Exemples</h2>
+
+<h3 id="Exemple_simple">Exemple simple</h3>
+
+<h4 id="HTML">HTML</h4>
+
+<pre class="brush: html">&lt;ol&gt;
+  &lt;li&gt;Premier élément&lt;/li&gt;
+  &lt;li&gt;Deuxième élément&lt;/li&gt;
+  &lt;li&gt;Troisième élément&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+
+<h4 id="Résultat">Résultat</h4>
+
+<p>{{EmbedLiveSample("Exemple_simple","300","150")}}</p>
+
+<h3 id="Exemple_avec_start">Exemple avec <code>start</code></h3>
+
+<h4 id="HTML_2">HTML</h4>
+
+<pre class="brush: html">&lt;ol start="7"&gt;
+  &lt;li&gt;Premier élément&lt;/li&gt;
+  &lt;li&gt;Deuxième élément&lt;/li&gt;
+  &lt;li&gt;Troisième élément&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+
+<h4 id="Résultat_2">Résultat</h4>
+
+<p>{{EmbedLiveSample("Exemple_avec_start","300","150")}}</p>
+
+<h3 id="Utiliser_les_chiffres_romains">Utiliser les chiffres romains</h3>
+
+<h4 id="HTML_3">HTML</h4>
+
+<pre class="brush: html">&lt;ol type="i"&gt;
+  &lt;li&gt;toto&lt;/li&gt;
+  &lt;li&gt;truc&lt;/li&gt;
+  &lt;li&gt;bidule&lt;/li&gt;
+&lt;/ol&gt;</pre>
+
+<h4 id="Résultat_3">Résultat</h4>
+
+<p>{{EmbedLiveSample("Utiliser_les_chiffres_romains","300","150")}}</p>
+
+<h3 id="Listes_imbriquées">Listes imbriquées</h3>
+
+<h4 id="HTML_4">HTML</h4>
+
+<pre class="brush: html">&lt;ol&gt;
+  &lt;li&gt;Premier élément&lt;/li&gt;
+  &lt;li&gt;Deuxième élément  &lt;!-- La balise &lt;/li&gt; n'est pas encore placée ! --&gt;
+    &lt;ol&gt;
+      &lt;li&gt;Premier élément de la liste imbriquée&lt;/li&gt;
+      &lt;li&gt;Deuxième élément de la liste imbriquée&lt;/li&gt;
+      &lt;li&gt;Troisième élément de la liste imbriquée&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;                 &lt;!-- Voici la balise &lt;/li&gt; ! --&gt;
+  &lt;li&gt;Troisième élément&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+
+<h4 id="Résultat_4">Résultat</h4>
+
+<p>{{EmbedLiveSample("Listes_imbriquées","300","300")}}</p>
+
+<h3 id="Listes_imbriquées_avec_&lt;ol>_et_&lt;ul>">Listes imbriquées avec <code>&lt;ol&gt;</code> et <code>&lt;ul&gt;</code></h3>
+
+<h4 id="HTML_5">HTML</h4>
+
+<pre class="brush: html">&lt;ol&gt;
+  &lt;li&gt;Premier élément&lt;/li&gt;
+  &lt;li&gt;Deuxième élément  &lt;!-- La balise &lt;/li&gt; n'est pas placée ici ! --&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Premier élément de la liste non-ordonnée imbriquée&lt;/li&gt;
+      &lt;li&gt;Deuxième élément de la liste non-ordonnée imbriquée&lt;/li&gt;
+      &lt;li&gt;Troisième élément de la liste non-ordonnée imbriquée&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;                 &lt;!-- La balise &lt;/li&gt; est ici. --&gt;
+  &lt;li&gt;Troisième élément&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+
+<h4 id="Résultat_5">Résultat</h4>
+
+<p>{{EmbedLiveSample("Listes_imbriquées_avec_&amp;lt;ol&amp;gt;_et_&amp;lt;ul&amp;gt;","300","300")}}</p>
+
+<h2 id="Résumé_technique">Résumé technique</h2>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row"><dfn><a href="/fr/docs/Web/HTML/Catégorie_de_contenu">Catégories de contenu</a></dfn></th>
+   <td><a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux">Contenu de flux</a>, et du <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible">contenu tangible</a> si les enfants de l'élément <code>&lt;ol&gt;</code> incluent au moins un élément {{HTMLElement("li")}}.</td>
+  </tr>
+  <tr>
+   <th scope="row">Contenu autorisé</th>
+   <td>Zéro, un, ou plusieurs éléments {{HTMLElement("li")}} (qui peuvent imbriquer d'autres éléments {{HTMLElement("ol")}} ou {{HTMLElement("ul")}}).</td>
+  </tr>
+  <tr>
+   <th scope="row">Omission de balises</th>
+   <td>{{no_tag_omission}}</td>
+  </tr>
+  <tr>
+   <th scope="row">Parents autorisés</th>
+   <td>Tout élément acceptant du <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux">contenu de flux</a>.</td>
+  </tr>
+  <tr>
+   <th scope="row">Rôles ARIA autorisés</th>
+   <td>{{ARIARole("directory")}}, {{ARIARole("group")}}, {{ARIARole("listbox")}}, {{ARIARole("menu")}}, {{ARIARole("menubar")}}, {{ARIARole("radiogroup")}}, {{ARIARole("tablist")}}, {{ARIARole("toolbar")}}, {{ARIARole("tree")}}, {{ARIARole("presentation")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">Interface DOM</th>
+   <td>{{domxref("HTMLOListElement")}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Spécification</th>
+   <th scope="col">État</th>
+   <th scope="col">Commentaires</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-ol-element', '&lt;ol&gt;')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Aucune modification depuis la dernière dérivation W3C {{SpecName('HTML5 W3C')}}.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', "grouping-content.html#the-ol-element", "HTMLOListElement")}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td>Ajout des attributs <code>reversed</code> et <code>start</code>. L'attribut <code>type</code> n'est plus déprécié.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML4.01', 'struct/lists.html#h-10.2', '&lt;ol&gt;')}}</td>
+   <td>{{Spec2('HTML4.01')}}</td>
+   <td>Dépréciation des attributs <code>compact</code> et <code>type</code>.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<div class="hidden">Le tableau de compatibilité de cette page a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à consulter <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> et à nous envoyer une<em>pull request</em>.</div>
+
+<p>{{Compat("html.elements.ol")}}</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>Les autres éléments HTML relatifs aux listes :
+  <ul>
+   <li>{{HTMLElement("ul")}}</li>
+   <li>{{HTMLElement("li")}}</li>
+   <li>{{HTMLElement("menu")}}</li>
+   <li>l'élément {{HTMLElement("dir")}} qui est obsolète</li>
+  </ul>
+ </li>
+ <li>Les propriétés CSS pouvant servir à la mise en forme de l'élément <code>&lt;ol&gt;</code> :
+  <ul>
+   <li>{{cssxref("list-style")}} qui permet de choisir comment les nombres ordinaux sont affichés,</li>
+   <li><a href="/fr/docs/Web/CSS/Compteurs_CSS">Les compteurs CSS</a>, utiles pour gérer les listes imbriquées complexes,</li>
+   <li>{{cssxref("line-height")}} qui permet d'obtenir le même effet que l'attribut {{htmlattrxref("compact", "ol")}} qui est déprécié,</li>
+   <li>{{cssxref("margin")}} qui permet de contrôler l'indentation de la liste.</li>
+  </ul>
+ </li>
+</ul>

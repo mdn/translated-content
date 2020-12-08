@@ -1,0 +1,61 @@
+---
+title: NPP
+slug: NPP
+translation_of: Archive/Plugins/Reference/NPP
+---
+<p>« <a class="new" href="https://developer.mozilla.org/fr/docs/Gecko_Plugin_API_Reference" rel="nofollow">Gecko Plugin API Reference</a> « <a class="new" href="https://developer.mozilla.org/fr/docs/Gecko_Plugin_API_Reference/Plug-in_Side_Plug-in_API" rel="nofollow">Plug-in Side Plug-in API</a></p>
+
+<h3 id="Summary" name="Summary">Résumé</h3>
+
+<p>Représente une instance d'un greffon (plugin).</p>
+
+<h3 id="Syntax" name="Syntax">Syntaxe</h3>
+
+<pre>typedef struct _NPP
+{
+    void* pdata; /* plug-in private data */
+    void* ndata; /* Mozilla private data */
+} NPP_t;
+
+typedef NPP_t*  NPP;
+</pre>
+
+<h3 id="Fields" name="Fields">Champs</h3>
+
+<p>La structure de données dispose des champs suivants :</p>
+
+<dl>
+ <dt>pdata</dt>
+ <dd>Une valeur dont la définition dépend du greffon et qu'il peut utiliser comme pointeur vers une structure de données interne associée à l'instance. Ce champs n'est pas modifié par le navigateur.</dd>
+</dl>
+
+<dl>
+ <dt>ndata</dt>
+ <dd>Une valeur privée, contrôlée par le navigateur et utilisée pour stocker des données associées à l'instance. Cette valeur ne doit pas être modifiée par le greffon.</dd>
+</dl>
+
+<h3 id="Description" name="Description">Description</h3>
+
+<p>Gecko crées une structure NPP pour chaque instance de greffon puis transmet un pointeur la ciblant à <a href="/fr/NPP_New" title="fr/NPP New">NPP_New</a> [<a href="/en/NPP_New" title="en/NPP_New">en</a>-<a href="/ja/NPP_New" title="ja/NPP New">ja</a>]. Ce pointeur - manipulateur opaque d'instance de greffon - identifie l'instance sur laquelle les appels à l'API doivent opérer.</p>
+
+<p>La fonction <a href="/fr/NPP_Destroy" title="fr/NPP Destroy">NPP_Destroy</a> [<a href="/en/NPP_Destroy" title="en/NPP_Destroy">en</a>-<a href="/ja/NPP_Destroy" title="ja/NPP Destroy">ja</a>] informe le greffon de la suppression imminente de l'instance NPP. À la fin de cet appel, le pointeur NPP n'est plus valide.</p>
+
+<h3 id="See_Also" name="See_Also">Voir aussi</h3>
+
+<p><a href="/fr/NPP" title="fr/NPP">NPP</a>  [<a href="/en/NPP" title="en/NPP">en</a>-<a href="/ja/NPP" title="ja/NPP">ja</a>] -&gt; <a href="/fr/NPP_New" title="fr/NPP
+New">NPP_New</a> [<a href="/en/NPP_New" title="en/NPP_New">en</a>-<a href="/ja/NPP_New" title="ja/NPP New">ja</a>], <a href="/fr/NPP_Destroy" title="fr/NPP
+Destroy">NPP_Destroy</a> [<a href="/en/NPP_Destroy" title="en/NPP_Destroy">en</a>-<a href="/ja/NPP_Destroy" title="ja/NPP
+Destroy">ja</a>], <a href="/fr/NPP_HandleEvent" title="fr/NPP
+HandleEvent">NPP_HandleEvent</a> [<a href="/en/NPP_HandleEvent" title="en/NPP_HandleEvent">en</a>-<a href="/ja/NPP_HandleEvent" title="ja/NPP HandleEvent">ja</a>], <a href="/fr/NPP_SetWindow" title="fr/NPP SetWindow">NPP_SetWindow</a> [<a href="/en/NPP_SetWindow" title="en/NPP SetWindow">en</a>-<a href="/ja/NPP_SetWindow" title="ja/NPP
+SetWindow">ja</a>]<br>
+ <a href="/fr/NP_Shutdown" title="fr/NP Shutdown">NP_Shutdown</a> [<a href="/en/NP_Shutdown" title="en/NP_Shutdown">en</a>-<a href="/ja/NP_Shutdown" title="ja/NP Shutdown">ja</a>], <a href="/fr/NP_Initialize" title="fr/NP Initialize">NP_Initialize</a> [<a href="/en/NP_Initialize" title="en/NP_Initialize">en</a>-<a href="/ja/NP_Initialize" title="ja/NP Initialize">ja</a>]<br>
+ <a href="/fr/NPWindow" title="fr/NPWindow">NPWindow</a> [<a href="/en/NPWindow" title="en/NPWindow">en</a>-<a href="/ja/NPWindow" title="ja/NPWindow">ja</a>]<br>
+ <a href="/fr/NPSavedData" title="fr/NPSavedData">NPSavedData</a> [<a href="/en/NPSavedData" title="en/NPSavedData">en</a>-<a href="/ja/NPSavedData" title="ja/NPSavedData">ja</a>]<br>
+ <a href="/fr/NP_Port" title="fr/NP
+Port">NP_Port</a> [<a href="/en/NP_Port" title="en/NP
+Port">en</a>-<a href="/ja/NP_Port" title="ja/NP Port">ja</a>]<br>
+ <a href="/fr/NPAPI/Constantes#Codes_Erreurs" title="fr/NPAPI/Constantes#Codes Erreurs">Codes Erreurs</a> [<a href="/en/NPAPI/Constants#Error_Codes" title="en/NPAPI/Constants#Error Codes">en</a>-<a href="/ja/NPAPI/Constants#Error_Codes" title="ja/NPAPI/Constants#Error Codes">ja</a>]</p>
+
+<p> </p>
+
+<p>{{ languages( { "en": "en/NPP", "ja": "ja/NPP" } ) }}</p>

@@ -1,0 +1,87 @@
+---
+title: デフォルトスキンの変更
+slug: Archive/Mozilla/XUL/Tutorial/Modifying_the_Default_Skin
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Modifying_the_Default_Skin
+---
+<p>
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Styling_a_Tree" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Creating_a_Skin">次のページ  »</a></p>
+</div>
+<p>このセクションでは、ウィンドウのスキンを変更する方法について記述します。
+</p>
+<h3 id=".E3.82.B9.E3.82.AD.E3.83.B3.E3.81.AE.E5.9F.BA.E7.A4.8E" name=".E3.82.B9.E3.82.AD.E3.83.B3.E3.81.AE.E5.9F.BA.E7.A4.8E"> スキンの基礎 </h3>
+<p><a href="ja/Creating_a_Skin_for_Firefox/Getting_Started">スキン</a>は、スタイルシートや画像といった XUL ファイルに適用される<span style="border-bottom: 1px dashed green;" title="behavior">振る舞いの情報</span>をまとめたものです。
+異なるスキンを適用することで、機能的な部分を変更しなくてもウィンドウの外観を変更することが可能です。
+Firefox では、デフォルトでは 1 つのスキンが提供されていますが、
+それ以外のスキンをダウンロードすることも可能です。
+なお、異なるスキンを使用する場合も、XUL ファイル自体は同じになりますが、
+使用されるスタイルシートや画像は、異なったものが使用されます。
+</p><p>Firefox ウィンドウの外観を単純に個人的に変更したい場合は、単にウィンドウと関連付けられたスタイルシートを変更するだけで可能です。
+また、より大きな変更は、新規に<span style="border-bottom: 1px dashed green;" title="entirely">全体をカバーする</span>スキンを作成することで行うことができます。
+Firefox では、デフォルトのスキンを変更するために、テーママネージャを提供しています。
+(Mozilla の内部コードからは「スキン」、利用者のインターフェイスからは「テーマ」と呼ばれますが、これらは同じものを指しています)。
+</p><p>スキンは <a href="ja/CSS">CSS</a> を使用して記述し、
+要素を描画するとき使用する<a href="ja/CSS/Getting_Started/Color">色</a>、<a href="ja/CSS/Getting_Started/Boxes">境界線</a>、画像といったものを定義することが可能です。
+例えば、<code>classic.jar</code> ファイルには、デフォルトのスキンの定義が含まれています。
+このアーカイブ中のグローバルディレクトリには、様々な XUL 要素の表示方法を指定するための主要なスタイル定義が含まれています。
+このため、これらのファイルを変更することで、XUL アプリケーションの外観が変更できるようになります。
+</p>
+<h3 id="userChrome.css_.E3.81.AB.E3.82.88.E3.82.8B.E3.82.AB.E3.82.B9.E3.82.BF.E3.83.9E.E3.82.A4.E3.82.BA" name="userChrome.css_.E3.81.AB.E3.82.88.E3.82.8B.E3.82.AB.E3.82.B9.E3.82.BF.E3.83.9E.E3.82.A4.E3.82.BA"> userChrome.css によるカスタマイズ </h3>
+<p>ユーザープロファイルディレクトリにある <code>chrome</code> ディレクトリに <code>userChrome.css</code> という名前のファイルを置くことで、アーカイブ自身は変更せずに、設定を上書きすることが可能です。
+このディレクトリは、プロファイルを作成したときに作成され、いくつかの例が置かれているはずです。
+また、<code>userChrome.css</code> でクロムファイルをカスタマイズするのと同様に、
+ここに <code>userContent.css</code> ファイルを置くことで、ウェブページの表示をカスタマイズすることも可能です。
+</p><p>例えば、<code>userChrome.css</code> ファイルの一番最後に、次のような記述を追加すると、
+すべての <code><code><a href="/ja/docs/Mozilla/Tech/XUL/menubar" title="menubar">menubar</a></code></code> 要素の背景を赤に変更することができます。
+</p>
+<pre>menubar {
+  background-color: red;
+}
+</pre>
+<p>上記の変更をした後に開く Firefox のウィンドウは、すべてメニューバーが赤くなっているはずです。
+この変更はユーザースタイルシートで行われたため、すべてのウィンドウに対して影響することになります。
+つまり、ブラウザやブックマークのメニューバーはもちろん、チュートリアルで作成中のファイル検索ダイアログのメニューバーでさえも赤くなります。
+</p>
+<h3 id=".E3.82.B9.E3.82.AD.E3.83.B3.E3.81.AE.E3.83.91.E3.83.83.E3.82.B1.E3.83.BC.E3.82.B8" name=".E3.82.B9.E3.82.AD.E3.83.B3.E3.81.AE.E3.83.91.E3.83.83.E3.82.B1.E3.83.BC.E3.82.B8"> スキンのパッケージ </h3>
+<p>特定のウィンドウに対してのみ変更を有効にするには、その XUL ファイルに関連付けられているスタイルシートを変更する必要があります。
+たとえば、ブックマーク管理ウィンドウのメニューコマンドの周りに赤い枠をつけるのであれば、 <code>classic.jar</code> か、利用中のスキンのアーカイブにある <code>bookmarksManager.css</code> に、以下のような記述を追加します。
+</p>
+<pre>menuitem {
+  border: 1px solid red;
+}
+</pre>
+<p>スキンのアーカイブのいずれかを見れば、それらには多くのスタイルシートと多くの画像が含まれていることに気づくはずです。
+これらの画像は、スタイルシートから参照されるようになっています。
+XUL で作成するコンテントをスキン対応にすることを考慮する場合、直接 XUL ファイルから画像への参照を置くことは避けなければなりません。
+これはスキンのデザインによっては、画像は使用しない場合も、さらに複雑なデザインを必要とする可能性もあるからです。
+CSS から画像を参照するように変更することで、XUL から直接参照している箇所を取り除くことは容易にできます。
+また、これによって、XUL ファイルが特定の画像ファイル名に依存することも取り除くことが可能です。
+</p><p>CSS から、画像をボタンやチェックボックスなどの要素に設定するためには、
+以下のように、<code>list-style-image</code> プロパティを使用します。
+</p>
+<pre>checkbox {
+  list-style-image: url("chrome://findfile/skin/images/check-off.jpg");
+}
+
+checkbox[checked="true"] {
+  list-style-image: url("chrome://findfile/skin/images/check-on.jpg");
+}
+</pre>
+<p>このコードは、チェックボックスと関連付けられている画像を変更します。
+1 つめのスタイルでは、通常のチェックボックスの画像を設定し、
+2 つめのスタイルでは、チェックボックスがチェックされたときの画像を設定しています。
+2 つめセレクタにある「<code>checked=true</code>」の<span style="border-bottom: 1px dashed green;" title="modifier">修飾</span>によって、<code>checked</code> 属性が <code>true</code> になった要素にのみスタイルが適用されるようになっています。
+</p><p><small>
+<span id="%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8"><a id="%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8"></a><strong>関連ページ</strong></span> : <a href="ja/Creating_a_Skin_for_Firefox">Firefox のためのスキンの作成方法</a>、<a href="ja/CSS/Getting_Started">CSS:はじめに</a>
+</small>
+</p><p>次のセクションでは、新しいスキンを作成する方法について見ていきます。
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Styling_a_Tree" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Creating_a_Skin">次のページ  »</a></p>
+</div>
+
+<div class="noinclude">
+</div>

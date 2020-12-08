@@ -1,0 +1,47 @@
+---
+title: XMLHttpRequest.responseType
+slug: Web/API/XMLHttpRequest/responseType
+tags:
+  - XMLHttpRequest.responseType
+translation_of: Web/API/XMLHttpRequest/responseType
+---
+<p>{{APIRef('XMLHttpRequest')}}</p>
+
+<p><strong>XMLHttpRequest.responseType </strong>属性是一个枚举类型的属性，返回响应数据的类型。它允许我们手动的设置返回数据的类型。如果我们将它设置为一个空字符串，它将使用默认的"text"类型。</p>
+
+<p>在工作环境(Work Environment)中将responseType的值设置为"document"通常会被忽略. 当将responseType设置为一个特定的类型时，你需要确保服务器所返回的类型和你所设置的返回值类型是兼容的。那么如果两者类型不兼容呢?恭喜你，你会发现服务器返回的数据变成了null，即使服务器返回了数据。还有一个要注意的是，给一个同步请求设置responseType会抛出一个<code>InvalidAccessError</code> 的异常。</p>
+
+<p>responseType支持以下几种值：</p>
+
+<p>{{page("/zh-CN/docs/Web/API/XMLHttpRequestResponseType", "取值")}}</p>
+
+<h2 id="规范">规范</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">规范</th>
+   <th scope="col">状态</th>
+   <th scope="col">注释</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('XMLHttpRequest', '#the-responsetype-attribute')}}</td>
+   <td>{{Spec2('XMLHttpRequest')}}</td>
+   <td>WHATWG living standard</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+<div class="hidden">此页面中的兼容性表是根据结构化数据生成的。如果你想为数据做出贡献，请查看 <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> 并向我们发起拉取请求。</div>
+
+<p>{{Compat("api.XMLHttpRequest.responseType")}}</p>
+
+<h2 id="了解更多">了解更多</h2>
+
+<ul>
+ <li><a href="/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a></li>
+ <li><a href="/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML in XMLHttpRequest</a></li>
+ <li>响应数据： {{domxref("XMLHttpRequest.response", "response")}} 、 {{domxref("XMLHttpRequest.responseText", "responseText")}} 和 {{domxref("XMLHttpRequest.responseXML", "responseXML")}}</li>
+</ul>

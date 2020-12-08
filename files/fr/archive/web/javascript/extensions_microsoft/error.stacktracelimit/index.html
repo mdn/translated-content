@@ -1,0 +1,48 @@
+---
+title: Error.stackTraceLimit
+slug: Archive/Web/JavaScript/Extensions_Microsoft/Error.stackTraceLimit
+tags:
+  - JavaScript
+  - Microsoft
+  - Non-standard
+  - Propriété
+  - Reference
+translation_of: Archive/Web/JavaScript/Microsoft_Extensions/Error.stackTraceLimit
+---
+<div>{{JSRef}}{{Non-standard_header}}</div>
+
+<div class="warning"><strong>Attention !</strong> Cette propriété est spécifique à Microsoft et ne fonctionne qu'avec Internet Explorer.</div>
+
+<p>La propriété <strong><code>Error.stackTraceLimit</code></strong> permet d'obtenir ou de définir la limite de pile pour la trace, cela correspond au nombre de niveaux d'appels à afficher dans les erreurs. La limite par défaut vaut 10.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre>Error.stackTraceLimit</pre>
+
+<h3 id="Notes">Notes</h3>
+
+<p>La propriété <code>stackTraceLimit</code> peut être un entier compris entre 0 et {{jsxref("Infinity")}}. Si <code>stackTraceLimit</code> vaut 0 au moment où l'erreur est déclenché, aucune pile d'appel ne sera affichée. Si cette propriété vaut une valeur négative ou non-numérique, elle sera convertie en 0. Si <code>stackTraceLimit</code> vaut <code>Infinity</code>, toute la pile sera affichée. Dans les autres cas, <code>ToUint32</code> sera utilisée afin de convertir la valeur.</p>
+
+<h2 id="Exemples">Exemples</h2>
+
+<pre class="brush: js">try {
+  var err = new Error("my error");
+  Error.stackTraceLimit = 7;
+  throw err;
+} catch(e) {
+  console.log("Valeur de la limite pour la pile :");
+  console.log(Error.stackTraceLimit);
+}
+</pre>
+
+<h2 id="Prérequis">Prérequis</h2>
+
+<p>Cette fonctionnalité est prise en charge par Internet Explorer 10 et par les applications Windows 8.x Store.</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="/fr/docs/Web/JavaScript/Extensions_JavaScript_Microsoft">Les extensions JavaScript spécifiques de Microsoft</a></li>
+ <li>{{jsxref("Error.message")}} (la version spécifique à Microsoft est <code><a href="/fr/docs/Web/JavaScript/Extensions_JavaScript_Microsoft/Error.description">Error.description</a></code>)</li>
+ <li>{{jsxref("Error.name")}}</li>
+</ul>

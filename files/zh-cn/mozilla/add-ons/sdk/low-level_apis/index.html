@@ -1,0 +1,26 @@
+---
+title: 低层 API
+slug: Mozilla/Add-ons/SDK/Low-Level_APIs
+translation_of: Archive/Add-ons/Add-on_SDK/Low-Level_APIs
+---
+<p>{{AddonSidebar}}</p>
+
+<p>本节的模块实现了低层的 API，这些模块大至分为三类：</p>
+
+<ul>
+ <li>
+  <p>基础工具，比如 <a href="/en-US/Add-ons/SDK/Low-Level_APIs/util_collection">collection</a>。很多 add-ons 都有可能使用这个类别的模块。</p>
+ </li>
+ <li>
+  <p>为高层模块构建分块，比如 <a href="/en-US/Add-ons/SDK/Low-Level_APIs/event_core">events</a> 和 <a href="/en-US/Add-ons/SDK/Low-Level_APIs/content_worker">worker</a>。你更有可能使用它们构建你自己德尔模块，来扩展 SDK 本身。</p>
+ </li>
+ <li>
+  <p>权限模块，露出强大的低层功能，比如<a href="/en-US/Add-ons/SDK/Low-Level_APIs/window_utils">window/utils</a> 和 <a href="/en-US/Add-ons/SDK/Low-Level_APIs/net_xhr">net/xhr</a>。你可以使用这些模块，但是应该意识到获取访问权限的代价是必须采取更加详尽的预防措施。大部分情况下这些模块在"高层API中"有着简单的更加严格的同类模块。（例如，<a href="/en-US/Add-ons/SDK/High-Level_APIs/windows">windows</a> 或 <a href="/en-US/Add-ons/SDK/High-Level_APIs/request">request</a>）。</p>
+ </li>
+</ul>
+
+<p>这些模块仍在开发中，我们预期在将来发布的版本中会做出不兼容的变更。</p>
+
+<p>{{ LandingPageListSubpages ("/zh-CN/Add-ons/SDK/Low-Level_APIs", 5) }}</p>
+
+<p> </p>

@@ -1,0 +1,127 @@
+---
+title: Barres de menus simples
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Barres_de_menus_simples
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Simple_Menu_Bars
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Barre_d'outils" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Plus_de_fonctionnalités_de_menu">Suivant  »</a></p>
+</div>
+
+<p>Dans cette section, nous allons voir comment créer une barre de menu avec des menus dessus.</p>
+
+<h3 id="Cr.C3.A9er_un_menu" name="Cr.C3.A9er_un_menu">Créer un menu</h3>
+
+<p>XUL dispose de plusieurs façons différentes de créer des menus. Le moyen le plus basique est d'ajouter une barre de menu avec une ligne de menus dessus comme sur de nombreuses applications. Vous pouvez aussi créer des menus surgissants. Les fonctionnalités de menu XUL se composent de différents éléments qui vous permettent de créer des barres de menus ou des menus surgissants. Les items des menus peuvent être personnalisés assez facilement. Nous avons déjà vu <a href="/fr/Tutoriel_XUL/Les_contrôles_de_listes#Zones_de_listes_d.C3.A9roulantes" title="fr/Tutoriel_XUL/Les_contrôles_de_listes#Zones_de_listes_d.C3.A9roulantes">en partie comment faire des menus</a> en utilisant <code><a href="/fr/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code>. Cette section sera construite là-dessus.</p>
+
+<p>Les barres de menu sont généralement créées de la même façon que les barres d'outils. La barre de menu peut-être placée dans une <code><a href="/fr/docs/Mozilla/Tech/XUL/toolbox" title="toolbox">toolbox</a></code> et le menu fonctionne juste comme n'importe quel autre barre d'outils. XUL a quelques éléments spéciaux qui fournissent des fonctionnalités spéciales propres aux menus.</p>
+
+<p>Il y a cinq éléments associés à la création d'une barre de menu et de ses menus, qui sont expliqués brièvement ici et en détail après :</p>
+
+<dl>
+ <dt><code><a href="/fr/docs/Mozilla/Tech/XUL/menubar" title="menubar">menubar</a></code> </dt>
+ <dd>Le container de la ligne de menu.</dd>
+ <dt><code><a href="/fr/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code> </dt>
+ <dd>En dépit du nom, il s'agit en fait seulement du titre du menu sur la barre de menu. Cet élément peut être placé sur une barre de menu ou séparément.</dd>
+ <dt><code><a href="/fr/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> </dt>
+ <dd>La boîte déroulante qui apparaît quand vous cliquez sur le titre du menu. Cette boîte contient la liste des commandes de menu.</dd>
+ <dt><code><a href="/fr/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code> </dt>
+ <dd>Une commande individuelle sur un menu. Il est placé dans un <code><a href="/fr/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code>.</dd>
+ <dt><code><a href="/fr/docs/Mozilla/Tech/XUL/menuseparator" title="menuseparator">menuseparator</a></code> </dt>
+ <dd>Une barre de séparation sur un menu. Il est placé dans un <code><a href="/fr/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code>.</dd>
+</dl>
+
+<div class="note">
+<p>Vous pouvez personnaliser les menus sur la barre de menu comme vous le souhaitez pour toutes les plates-formes excepté pour le Macintosh. C'est parce que le Macintosh a son propre menu spécial en haut de l'écran contrôlé par le système. Bien que vous puissiez créer des menus personnalisés, toutes règles spéciales de style ou éléments non-menu que vous placez sur un menu peuvent ne pas être appliqués. Vous devez garder cette notion à l'esprit quand vous créez des menus.</p>
+</div>
+
+<h4 id="Exemple_d.27une_simple_barre_de_menu" name="Exemple_d.27une_simple_barre_de_menu">Exemple d'une simple barre de menu</h4>
+
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_menubar_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_menubar_1.xul">Voir</a></p>
+
+<div class="float-right"><img alt="Image:xultu_menubar_1.png" class="internal" src="/@api/deki/files/1531/=Xultu_menubar_1.png"></div>
+
+<pre>&lt;toolbox flex="1"&gt;
+  &lt;menubar id="sample-menubar"&gt;
+    &lt;menu id="file-menu" label="Fichier"&gt;
+      &lt;menupopup id="file-popup"&gt;
+        &lt;menuitem label="Nouveau"/&gt;
+        &lt;menuitem label="Ouvrir"/&gt;
+        &lt;menuitem label="Enregistrer"/&gt;
+        &lt;menuseparator/&gt;
+        &lt;menuitem label="Quitter"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+    &lt;menu id="edit-menu" label="Edition"&gt;
+      &lt;menupopup id="edit-popup"&gt;
+        &lt;menuitem label="Annuler"/&gt;
+        &lt;menuitem label="Refaire"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+  &lt;/menubar&gt;
+&lt;/toolbox&gt;
+</pre>
+
+<p>Ici, une simple barre de menu est créée en utilisant l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/menubar" title="menubar">menubar</a></code>. Il va créer une ligne pour y placer des menus. Deux menus, Fichier et Edition ont été créés ici. L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code> crée le titre en haut du menu, qui apparaît sur la barre de menu. Les menus déroulants sont créés en utilisant l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code>. Le menu va s'ouvrir quand l'utilisateur cliquera sur le titre du menu parent. La taille du menu sera suffisamment large pour que les commandes tiennent à l'intérieur. Les commandes elles-mêmes sont créées en utilisant l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code>. Chacune d'elles représente une unique commande dans le menu déroulant.</p>
+
+<p>Vous pouvez aussi créer des séparateurs sur les menus en utilisant l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/menuseparator" title="menuseparator">menuseparator</a></code>. Il est utilisé pour séparer des groupes d'items de menu.</p>
+
+<h4 id=".C3.89l.C3.A9ment_menubar" name=".C3.89l.C3.A9ment_menubar">Élément <code>menubar</code></h4>
+
+<p>La barre de menu est une boîte contenant des menus. Notez qu'elle a été placée dans une <code><a href="/fr/docs/Mozilla/Tech/XUL/toolbox" title="toolbox">toolbox</a></code> flexible. La barre de menu n'a pas d'attributs spéciaux mais c'est un type de boîte. De ce fait, vous pouvez créer une barre de menu verticale en affectant la valeur 'vertical' à l'attribut <code id="a-orient"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/orient">orient</a></code>.</p>
+
+<h4 id=".C3.89l.C3.A9ment_menu" name=".C3.89l.C3.A9ment_menu">Élément <code>menu</code></h4>
+
+<p>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code> fonctionne comme l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/button" title="button">button</a></code>. Il accepte certains attributs semblables plus quelques autres :</p>
+
+<dl>
+ <dt><code id="a-id"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/id">id</a></code> </dt>
+ <dd>L'identifiant unique du bouton de titre du menu.</dd>
+ <dt><code id="a-label"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/label">label</a></code> </dt>
+ <dd>Le texte qui apparaît sur le menu, comme Fichier ou Edition.</dd>
+ <dt><code id="a-disabled"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/disabled">disabled</a></code> </dt>
+ <dd>Cet attribut booléen détermine si le menu est désactivé. Bien que ce soit permis, il est rarement utile de désactiver un menu entier. Cet attribut peut être mis à 'true' (vrai) ou 'false' (faux). Bien sûr, cette dernière valeur est celle par défaut.</dd>
+ <dt><code id="a-accesskey"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/accesskey">accesskey</a></code> </dt>
+ <dd>Il s'agit de la touche que l'utilisateur peut presser pour activer le menu. Cette lettre est habituellement soulignée dans le titre du menu. Mozilla va regarder dans l'attribut <code id="a-label"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/label">label</a></code> et ajouter un caractère <em>soulignement</em> au caractère spécifié ici. Pour cette raison, vous devez spécifier un caractère qui existe dans le texte (bien que la touche fonctionnera toujours si ce n'est pas le cas).</dd>
+</dl>
+
+<div class="float-right"><img alt="Image:xultu_menubar_2.png" class="internal" src="/@api/deki/files/1532/=Xultu_menubar_2.png"></div>
+
+<p>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code> est normalement placé sur une barre de menu, bien que ce ne soit pas nécessaire. Cependant, il donnera une autre apparence. L'image montre à quoi l'exemple précédent ressemblerait sans la barre de menu.</p>
+
+<h4 id=".C3.89l.C3.A9ment_menupopup" name=".C3.89l.C3.A9ment_menupopup">Élément <code>menupopup</code></h4>
+
+<p>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> crée la fenêtre déroulante contenant les commandes de menu. C'est un type de boîte qui est orienté verticalement par défaut. Vous pouvez passer en orientation horizontale si vous le voulez, les <code><a href="/fr/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code>s seront alors placés sur une même ligne. Normalement seuls les <code><a href="/fr/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code>s et les <code><a href="/fr/docs/Mozilla/Tech/XUL/menuseparator" title="menuseparator">menuseparator</a></code>s sont placés dans un <code><a href="/fr/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code>. Vous pouvez placer n'importe quel élément dans un <code><a href="/fr/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code>, cependant ils seront ignorés sur un Macintosh.</p>
+
+<h4 id=".C3.89l.C3.A9ment_menuitem" name=".C3.89l.C3.A9ment_menuitem">Élément <code>menuitem</code></h4>
+
+<p>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code> est comme l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code> et comporte quelques attributs semblables.</p>
+
+<dl>
+ <dt><code id="a-id"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/id">id</a></code> </dt>
+ <dd>L'identifiant unique du bouton du menu.</dd>
+ <dt><code id="a-label"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/label">label</a></code> </dt>
+ <dd>Le texte qui apparaît sur l'item de menu, comme Ouvrir ou Enregistrer.</dd>
+ <dt><code id="a-disabled"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/disabled">disabled</a></code> </dt>
+ <dd>Cet attribut booléen détermine si l'item de menu est désactivé. Cet attribut peut être mis à 'true' (vrai) ou 'false' (faux), qui est la valeur par défaut.</dd>
+ <dt><code id="a-accesskey"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/accesskey">accesskey</a></code> </dt>
+ <dd>Il s'agit de la touche que l'utilisateur peut presser pour activer l'item de menu. Cette lettre est habituellement soulignée dans le libellé de l'item de menu. Mozilla va regarder dans l'attribut <code id="a-label"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/label">label</a></code> et ajouter un caractère <em>soulignement</em> au caractère spécifié ici. Pour cette raison, vous devez spécifier un caractère qui existe dans le texte.</dd>
+ <dt><code id="a-acceltext"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/acceltext">acceltext</a></code> </dt>
+ <dd>Cet attribut spécifie le texte de la touche de raccourci qui apparaît près du texte de la commande de menu. Cependant, il n'associe pas de touche d'action avec l'item de menu. Nous verrons comment faire cela plus tard.</dd>
+</dl>
+
+<h4 id=".C3.89l.C3.A9ment_menuseparator" name=".C3.89l.C3.A9ment_menuseparator">Élément <code>menuseparator</code></h4>
+
+<p>Le <code><a href="/fr/docs/Mozilla/Tech/XUL/menuseparator" title="menuseparator">menuseparator</a></code> n'a pas d'attribut spécial. Il crée juste une barre horizontale entre les items de menu.</p>
+
+<hr>
+<p>Nous allons maintenant voir quelques autres fonctions de menu.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Barre_d'outils" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Plus_de_fonctionnalités_de_menu">Suivant  »</a></p>
+</div>

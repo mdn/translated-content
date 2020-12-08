@@ -1,0 +1,93 @@
+---
+title: nsIFeedProgressListener
+slug: nsIFeedProgressListener
+tags:
+  - Interfaces
+  - Référence_de_l'API_XPCOM
+  - 'XPCOM:Références'
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIFeedProgressListener
+---
+<p>
+L'interface <code>nsIFeedProgressListener</code> définit les fonctions de rappel utilisées pendant l'analyse d'un flux RSS ou Atom. Les programmes utilisant l'API d'accés au contenu de flux ne sont pas obligés d'implémenter ces fonctions ; elles sont optionnelles, mais vous permettent de fournir des informations en retour pendant le processus d'analyse.
+</p><p><br>
+</p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/feeds/public/nsiFeedListener.idl" rel="custom">toolkit/components/feeds/public/nsiFeedListener.idl</a></code><span style="text-align: right; float: right;"><a href="/fr/docs/Interfaces/À_propos_des_interfaces_scriptables" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">Last changed in Gecko 1.8.1 (Firefox 2 / Thunderbird 2 / SeaMonkey 1.1)</span></div>
+</div>
+<p></p><p>Hérité de : <code><a href="fr/NsIFeedResultListener">nsIFeedResultListener</a></code>
+</p>
+<h2 id="Synoptique">Synoptique</h2>
+<table class="standard-table"> <tbody><tr>
+<td> <code>void <a href="fr/NsIFeedProgressListener#handleEntry.28.29">handleEntry</a>(in nsIFeedEntry entry, in nsIFeedResult result);</code>
+</td></tr>
+<tr>
+<td> <code>void <a href="fr/NsIFeedProgressListener#handleFeedAtFirstEntry.28.29">handleFeedAtFirstEntry</a>(in nsIFeedResult result);</code>
+</td></tr>
+<tr>
+<td> <code>void <a href="fr/NsIFeedProgressListener#handleStartFeed.28.29">handleStartFeed</a>(in nsIFeedResult result);</code>
+</td></tr>
+<tr>
+<td> <code>void <a href="fr/NsIFeedProgressListener#reportError.28.29">reportError</a>(in AString errorText, in long lineNumber, in boolean bozo);</code>
+</td></tr>
+</tbody></table>
+<h2 id="Méthodes">Méthodes</h2>
+<h3 id="handleEntry()">handleEntry()</h3>
+<p>Appelée après l'analyse de chaque entrée ou élément. Si le document est une entrée ou un élément unique, la méthode <code><a href="fr/NsIFeedProgressListener#handleFeedAtFirstEntry.28.29">handleFeedAtFirstEntry()</a></code> n'aura pas encore été appelée, et la <code><a href="fr/NsIFeedEntry">nsIFeedEntry</a></code> reçue aura la valeur <code>null</code> <code>parent</code>.
+</p>
+<pre class="eval"> void handleEntry(
+   in nsIFeedEntry entry,
+   in nsIFeedResult result
+ );
+</pre>
+<h6 id="Paramètres">Paramètres</h6>
+<dl><dt>&lt;tt&gt;entry&lt;/tt&gt;
+</dt><dd> Pointeur vers une <code><a href="fr/NsIFeedEntry">nsIFeedEntry</a></code> contenant des informations sur l'entrée qui vient d'être analysée.
+</dd><dt>&lt;tt&gt;result&lt;/tt&gt;
+</dt><dd> Pointeur vers une <code><a href="fr/NsIFeedResult">nsIFeedResult</a></code> contenant des informations sur l'entrée en cours d'analyse.
+</dd></dl>
+<h3 id="handleFeedAtFirstEntry()">handleFeedAtFirstEntry()</h3>
+<p>Appelée lorsque la première entrée ou le premier élément du flux est rencontré. Dans les flux Atom, toutes les données du flux doivent précéder les entrées ; dans les flux RSS ce n'est pas une obligation, mais c'est généralement respecté. En d'autres termes, lorsque cette méthode est appelée, il est très probable que toutes ou la plupart des métadonnées du flux ont été analysées et sont disponibles dans l'objet <code><a href="fr/NsIFeedResult">nsIFeedResult</a></code> reçu.
+</p>
+<pre class="eval"> void handleFeedAtFirstEntry(
+   in nsIFeedResult result
+ );
+</pre>
+<h6 id="Paramètres_2">Paramètres</h6>
+<dl><dt>&lt;tt&gt;result&lt;/tt&gt;
+</dt><dd>Une <code><a href="fr/NsIFeedResult">nsIFeedResult</a></code> décrivant le flux lorsque la première entrée est trouvée, mais avant son traitement.
+</dd></dl>
+<div class="note"><b>Note :</b> Si le type de flux est une entrée ou un élément unique, cet événement n'est jamais appelé.</div>
+<h3 id="handleStartFeed()">handleStartFeed()</h3>
+<p>Appelée dès qu'un début acceptable d'un flux est détecté ; ceci informe votre code que le flux semble bien être un flux de news et non un autre type document.
+</p>
+<pre class="eval"> void handleStartFeed(
+   in nsIFeedResult result
+ );
+</pre>
+<h6 id="Paramètres_3">Paramètres</h6>
+<dl><dt>&lt;tt&gt;result&lt;/tt&gt;
+</dt><dd> Un <code><a href="fr/NsIFeedResult">nsIFeedResult</a></code> décrivant l'état du flux au début de son analyse.
+</dd></dl>
+<h3 id="reportError()">reportError()</h3>
+<p>Appelée par le processeur de flux lorsque se produit une erreur d'analyse XML fatale, ou si le document n'est pas un flux.
+</p>
+<pre class="eval"> void reportError(
+   in AString errorText,
+   in long lineNumber,
+   in boolean bozo
+ );
+</pre>
+<p>Chaque méthode reçoit comme entrée au moins un <code><a href="fr/NsIFeedResult">nsIFeedResult</a></code> qui décrit l'état actuel du traitement.
+</p>
+<h2 id="Voir_également">Voir également</h2>
+<p><a href="fr/NsIFeedResultListener">nsIFeedResultListener</a>
+</p><p><br>
+<span>Liens Interwiki</span>
+</p>

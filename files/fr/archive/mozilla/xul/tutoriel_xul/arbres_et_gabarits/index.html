@@ -1,0 +1,93 @@
+---
+title: Arbres et Gabarits
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Arbres_et_Gabarits
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Trees_and_Templates
+---
+<p> </p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Exemples_de_syntaxe_de_gabarits" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Sources_de_données_RDF">Suivant  »</a></p>
+</div>
+<p>Nous allons voir maintenant comment utiliser un gabarit avec un arbre.</p>
+<h3 id="Ajout_de_sources_de_donn.C3.A9es_aux_arbres" name="Ajout_de_sources_de_donn.C3.A9es_aux_arbres">Ajout de sources de données aux arbres</h3>
+<p>Avec un arbre, vous utiliserez souvent un gabarit pour construire son contenu, pour manipuler un grand volume de données hiérarchisées. L'utilisation d'un gabarit avec un arbre est très proche au niveau de la syntaxe aux autres éléments. Vous avez besoin d'ajouter un attribut <code id="a-datasources"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/datasources">datasources</a></code> et <code id="a-ref"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/ref">ref</a></code> à la balise <code><a href="/fr/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code>, ce qui spécifie la source des données et le nœud racine à afficher. De nombreuses règles peuvent être utilisées pour indiquer différents contenus pour différents types de données.</p>
+<p>L'exemple suivant utilise l'historique comme source de données :</p>
+<pre>&lt;tree datasources="rdf:history" ref="NC:HistoryByDate"
+          flags="dont-build-content"&gt;
+</pre>
+<p>Comme il est décrit dans la section précédente, l'arbre peut utiliser un <em>constructeur</em> d'arbre pour la génération du gabarit à la place du constructeur normal de contenu. Les éléments ne seront pas créés pour chacune des lignes dans l'arbre, afin de le rendre plus performant. Lorsque l'attribut <code id="a-flags"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flags">flags</a></code> a pour valeur 'dont-build-content', comme dans l'exemple ci-dessus, il indique que le constructeur de l'arbre doit être utilisé. Si l'attribut n'est pas renseigné, le constructeur de contenu sera utilisé. Vous pouvez voir la différences en utilisant l'inspecteur DOM de Mozilla sur un arbre avec, puis sans l'attribut.</p>
+<p>Si vous utilisez le constructeur normal à la place, notez que le contenu ne sera pas construit avant qu'il soit nécessaire. Avec les arbres hiérarchiques, les enfants ne sont pas générés avant que le nœud parent ne soit ouvert par l'utilisateur.</p>
+<p>Dans le gabarit, il n'y aura qu'une cellule <code><a href="/fr/docs/Mozilla/Tech/XUL/treecell" title="treecell">treecell</a></code> pour chaque colonne dans l'arbre. Les cellules devront avoir un attribut <code id="a-label"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/label">label</a></code> afin de mettre un libellé à la cellule. Normalement, une propriété RDF se charge de récupérer le libellé à partir de la source de données.</p>
+<h4 id="Exemple_d.27arbre_construit_par_un_gabarit" name="Exemple_d.27arbre_construit_par_un_gabarit">Exemple d'arbre construit par un gabarit</h4>
+<p>L'exemple suivant montre un arbre construit à partir d'un gabarit, dans ce cas le système de fichier.</p>
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_treetempl_1.xul.txt">Source</a></p>
+<pre>&lt;tree id="my-tree" flex="1"
+       datasources="rdf:files" ref="file:///" flags="dont-build-content"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="Name" label="Nom" primary="true" flex="1"/&gt;
+    &lt;splitter/&gt;
+    &lt;treecol id="Date" label="Date" flex="1"/&gt;
+  &lt;/treecols&gt;
+
+    &lt;template&gt;
+      &lt;rule&gt;
+        &lt;treechildren&gt;
+          &lt;treeitem uri="rdf:*"&gt;
+            &lt;treerow&gt;
+              &lt;treecell label="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+              &lt;treecell label="rdf:http://home.netscape.com/WEB-rdf#LastModifiedDate"/&gt;
+            &lt;/treerow&gt;
+          &lt;/treeitem&gt;
+        &lt;/treechildren&gt;
+      &lt;/rule&gt;
+    &lt;/template&gt;
+&lt;/tree&gt;
+</pre>
+<p>Ici, un arbre est créé avec deux colonnes, pour le nom et la date d'un fichier. L'arbre doit afficher une liste de fichiers situés dans le répertoire racine. Une seule règle est utilisée, mais vous pouvez en ajouter d'autres si vous en avez besoin. Comme avec les autres gabarits, l'attribut <code id="a-uri"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/uri">uri</a></code> d'un élément indique où commencer pour générer du contenu. Les deux cellules puisent le nom et la date dans la source et place les valeurs dans le libellé de la cellule.</p>
+<p>Cet exemple montre pourquoi l'attribut <code id="a-uri"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/uri">uri</a></code> devient utile. Notez comment il a été placé dans le <code><a href="/fr/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code> dans l'exemple, même si ce n'est pas un descendant direct de l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/rule" title="rule">rule</a></code>. Nous avons besoin de mettre cet attribut seulement sur les éléments que nous voulons répéter pour chaque ressource. Comme nous ne voulons pas des éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code> multiples, l'attribut est placé ailleurs. Nous le mettons plutôt dans l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code>. En fait, les éléments à l'extérieur (ou au-dessus) de l'élément qui a l'attribut <code id="a-uri"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/uri">uri</a></code> ne sont pas dupliqués tandis que les éléments avec l'attribut <code id="a-uri"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/uri">uri</a></code> et les éléments à l'intérieur sont répétés pour chaque ressource.</p>
+<div class="float-right"><img alt="Image:xultu_rdfoutl1.jpg" class=" internal" src="/@api/deki/files/1542/=Xultu_rdfoutl1.jpg"></div>
+<p>Comme un constructeur d'arbre est utilisé et non un constructeur de contenu, la structure des éléments dans l'exemple ci-dessus doit être comme indiqué, avec l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code> à l'intérieur de <code><a href="/fr/docs/Mozilla/Tech/XUL/rule" title="rule">rule</a></code>. Bien que le constructeur d'arbres ne génère pas ces éléments, cette structure est nécessaire pour déterminer comment les générer correctement.</p>
+<p>Notez dans l'image que des éléments fils additionnels ont été ajoutés automatiquement sous les éléments du niveau supérieur. XUL sait comment ajouter des éléments fils quand les modèles ou règles contiennent des éléments arbre ou menu. Il génère alors les éléments d'arbre imbriqués selon les données disponibles dans le RDF.</p>
+<p>Une partie intéressante des sources de données RDF est que les valeurs sont déterminées seulement quand les données sont requises. Les valeurs qui sont plus profondes dans la hiérarchie de ressource ne sont pas déterminées jusqu'à ce que l'utilisateur atteigne ce nœud dans l'arbre. Ce mécanisme devient utile pour certaines sources où les données sont déterminées dynamiquement.</p>
+<h3 id="Trier_les_colonnes" name="Trier_les_colonnes">Trier les colonnes</h3>
+<p>Si vous essayez l'exemple précédent, vous pouvez noter que la liste de dossiers n'est pas triée. Les arbres qui produisent leurs données à partir d'une source ont la capacité facultative de trier leurs données. Vous pouvez trier de façon croissante ou décroissante sur n'importe quelle colonne. L'utilisateur peut changer la colonne de tri et la direction de tri en cliquant sur les en-têtes de colonne. Ce dispositif de tri n'est pas disponible pour des arbres dont le contenu est statique, bien que vous puissiez écrire un script pour trier ces données.</p>
+<p>Le tri implique trois attributs, qui doivent être placés sur les colonnes. Le premier attribut, <code id="a-sort"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/sort">sort</a></code>, doit être placé sur une propriété de RDF qui est employée alors comme critère de tri. Habituellement, c'est la même que celle utilisée pour le libellé de la cellule de cette colonne. Si vous le placez sur une colonne, les données seront triées dans cette colonne. L'utilisateur peut changer la direction de tri en cliquant sur l'en-tête de colonne. Si vous ne placez pas l'attribut <code id="a-sort"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/sort">sort</a></code> sur une colonne, les données ne pourront pas être triées par cette colonne.</p>
+<p>L'attribut <code id="a-sortDirection"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/sortDirection">sortDirection</a></code> (notez la casse mixte) est utilisé pour définir la direction dans laquelle la colonne sera triée par défaut. Trois valeurs sont possibles :</p>
+<dl> <dt>ascending </dt> <dd>les données sont affichées par ordre croissant.</dd> <dt>descending </dt> <dd>les données sont affichées par ordre décroissant.</dd> <dt>natural </dt> <dd>les données sont affichées dans le sens "naturel", c'est-à-dire l'ordre dans lequel elles sont apparaissent dans la source RDF.</dd>
+</dl>
+<p>Le dernier attribut, <code id="a-sortActive"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/sortActive">sortActive</a></code>, doit être défini à 'true' sur une seule colonne, celle qui sera triée par défaut.</p>
+<p>Bien que le tri fonctionnera correctement avec seulement ces attributs, vous pouvez également utiliser la classe de style <code>sortDirectionIndicator</code> sur une colonne qui peut être triée. Un petit triangle apparaîtra dans l'en-tête de colonne et indiquera le sens du tri. Sans cela, l'utilisateur pourra toujours trier les colonnes mais il n'aura pas d'indication sur la colonne triée.</p>
+<p>L'exemple suivant modifie les colonnes de l'exemple précédent pour inclure les fonctionnalités supplémentaires :</p>
+<pre>&lt;treecols&gt;
+  &lt;treecol id="Name" label="Nom" flex="1" primary="true"
+            class="sortDirectionIndicator" sortActive="true"
+            sortDirection="ascending"
+            sort="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+  &lt;splitter/&gt;
+  &lt;treecol id="Date" label="Date" flex="1" class="sortDirectionIndicator"
+           sort="rdf:http://home.netscape.com/WEB-rdf#LastModifiedDate"/&gt;
+&lt;/treecols&gt;
+</pre>
+<h3 id="L.27.C3.A9tat_persistant_des_colonnes" name="L.27.C3.A9tat_persistant_des_colonnes">L'état persistant des colonnes</h3>
+<p>Une chose supplémentaire que vous voudrez faire est de rendre persistant la colonne qui est actuellement triée, ainsi cet état est mémorisé entre chaque session. Pour ce faire, nous utilisons l'attribut <code id="a-persist"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/persist">persist</a></code> sur chaque élément <code><a href="/fr/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code>. Il peut être utile de rendre persistant cinq attributs : la taille de la colonne, l'ordre des colonne, la visibilité de la colonne, quelle colonne est actuellement triée et dans quel ordre. L'exemple suivant montre une simple colonne :</p>
+<pre>&lt;treecol id="Date" label="Date" flex="1"
+             class="sortDirectionIndicator"
+             persist="width ordinal hidden sortActive sortDirection"
+             sort="rdf:http://home.netscape.com/WEB-rdf#LastModifiedDate"/&gt;
+</pre>
+<p>D'autres détails sur l'attribut <code id="a-persist"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/persist">persist</a></code> seront décrits dans <a href="/fr/Tutoriel_XUL/Données_persistantes" title="fr/Tutoriel_XUL/Données_persistantes">une section ultérieure</a>.</p>
+<h3 id="Attributs_suppl.C3.A9mentaires_pour_les_r.C3.A8gles" name="Attributs_suppl.C3.A9mentaires_pour_les_r.C3.A8gles">Attributs supplémentaires pour les règles</h3>
+<p>Deux attributs supplémentaires peuvent être ajoutés sur l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/rule" title="rule">rule</a></code>, lui permettant d'appliquer des correspondances dans certaines circonstances. Les deux sont des booléens.</p>
+<dl> <dt><code id="a-iscontainer"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/iscontainer">iscontainer</a></code> </dt> <dd>Si cet attribut est mis à 'true', alors la règle s'appliquera sur toutes les ressources qui peuvent avoir des enfants. Par exemple, nous pouvons appliquer cette règle pour récupérer les dossiers des marque-pages. Il est utile car la source de données n'a pas besoin d'inclure un attribut spécial pour l'indiquer.</dd> <dt><code id="a-isempty"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/isempty">isempty</a></code> </dt> <dd>Si cet attribut est mis à 'true', alors la règle s'appliquera sur toutes les ressources qui n'ont pas d'enfants.</dd>
+</dl>
+<p>Une ressource pourrait être un conteneur et être vide en même temps. Toutefois, c'est différent pour une ressource qui n'est pas un conteneur. Par exemple, un dossier de marque-pages est un conteneur mais il peut avoir ou ne pas avoir d'enfants. Cependant, un simple marque-page ou un séparateur n'est pas un conteneur.</p>
+<p>Vous pouvez combiner ces deux éléments avec d'autres attributs de critères pour des règles plus spécifiques.</p>
+<hr>
+<p>Dans la section suivante, nous verrons quelques unes des sources de données fournies par Mozilla.</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Exemples_de_syntaxe_de_gabarits" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Sources_de_données_RDF">Suivant  »</a></p>
+</div>
+<p><span class="comment">Interwiki</span></p>

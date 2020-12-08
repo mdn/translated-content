@@ -1,0 +1,74 @@
+---
+title: 调试 JavaScript
+slug: Debugging_JavaScript
+translation_of: Mozilla/Debugging/Debugging_JavaScript
+---
+<p>This document is intended to help developers writing JavaScript code in Mozilla, mainly for Mozilla itself, but it may also be useful for web developers. It should give pointers to tools, aids and tricks which make debugging your code easier.</p>
+<h3 id="Web_Console"><a href="/en/Using_the_Web_Console" title="en/Using the Web Console">Web Console</a></h3>
+<p>This is the first place to go when you're debugging a web page; open the Web console using the <strong>Web Console</strong> option in the <strong>Web Developer</strong> menu. This shows any JavaScript errors in your app, as well as any logging calls from the <a href="/zh-CN/docs/Web/API/console" title="/zh-CN/docs/Web/API/console">console API.</a></p>
+<h3 id="Browser_Console"><a href="/zh-CN/docs/Tools/Browser_Console" title="/zh-CN/docs/Tools/Browser_Console">Browser Console</a></h3>
+<p>The Browser Console lets you see all JavaScript errors and logging in the browser, including from Firefox code. To enable it, go to <code>about:config</code> in the url bar and set <code>devtools.chrome.enabled</code> to<code> true</code>. Activate it through with the menu <strong>Tools &gt; Web Developer</strong> &gt; <strong>Browser Console</strong>.</p>
+<p>Log to the Browser Console using the standard <code>console </code>API after importing Console.jsm:</p>
+<pre class="brush: js">let console = (Cu.import("resource://gre/modules/devtools/Console.jsm", {})).console;
+<code>console.log("Hello from Firefox code");</code></pre>
+<h3 id="Error_Console" name="Error_Console"><a href="/en/Error_Console" title="en/Error_Console">Error Console</a></h3>
+<p>On versions of Firefox predating the Web Console, this is the first thing you should check when there's a problem. You can get to this by choosing the Error Console menu item under the Tools menu or using <span style="font-family: Courier New;">-jsconsole</span> on the command line.</p>
+<h3 id="JavaScript_Debugger" name="JavaScript_Debugger"><a href="/zh-CN/docs/Tools/Debugger" title="Tools/Debugger">Browser Debugger (Built-in)</a></h3>
+<p>On Firefox 19 or later, it's possible to use the built-in JS debugger on the browser itself.  Go to <code>about:config </code>and set the following two prefs:</p>
+<pre><code>devtools.chrome.enabled: true</code>
+<code>devtools.debugger.remote-enabled: true</code></pre>
+<p>After you restart the browser, you can access the Browser Debugger through <strong>Tools</strong> &gt; <strong>Web Developer</strong> &gt; <strong>Browser Toolbox</strong>. (Note that before Firefox 28, this was labeled "Browser Debugger" and only the debugger was available, not the whole toolbox.)</p>
+<p><a href="https://mdn.mozillademos.org/files/6285/screenshot3.png"><img alt='Access the "Browser Toolbox" through the menu' src="https://mdn.mozillademos.org/files/6913/Screen%20Shot%202014-02-06%20at%208.48.21%20AM.png" style="width: 550px; height: 407px;"></a></p>
+<p>Note that you must accept the incoming connection :</p>
+<p><a href="https://mdn.mozillademos.org/files/6287/screenshot4.png"><img alt="Accept the incoming connection from the toolbox" src="https://mdn.mozillademos.org/files/6915/Screen%20Shot%202014-02-06%20at%208.58.01%20AM.png" style="width: 550px; height: 211px;"></a></p>
+<p>Then, the Browser Toolbox displays the available tools for debugging. (Note that before Firefox 28, only the script debugger was available.) The use of these tools are the same as the <a href="/zh-CN/docs/Tools">Built-in Tools</a>.</p>
+<p><br>
+ <img alt="The connected browser toolbox" src="https://mdn.mozillademos.org/files/6917/Screen%20Shot%202014-02-06%20at%208.58.30%20AM.png" style="width: 550px; height: 398px;"></p>
+<h3 id="Strict_code_checking" name="Strict_code_checking">Strict code checking</h3>
+<p>If you set the pref <code>javascript.options.strict</code> to true, the JavaScript engine gives you more types of warnings on the Error Console, most of which hint at code bugs that are easy to oversee or even bad syntax. (The pref also warns on common JavaScript idioms that are not errors).</p>
+<h3 id="Console.log_in_Browser_Console">Console.log in Browser Console</h3>
+<p>You can dump variables in the Browser Console from addon code, by adding this line to import the console utility:</p>
+<p><code>const { console } = Components.utils.import("resource://gre/modules/devtools/Console.jsm", {});</code></p>
+<p>This has an advantage over dump in that you can list out properties of an object logged with console.log.</p>
+<h3 id="dump.28.29" name="dump.28.29"><code>dump()</code></h3>
+<p>The <code>dump()</code> function allows you to print text on the native console. Use <code>\n</code> to output a newline at the end.</p>
+<p>To see anything, you need to set the pref <code>browser.dom.window.dump.enabled</code> to true, e.g. in <code>about:config</code> (add new pref, it doesn't exist per default).</p>
+<p>Under Microsoft Windows you additionally need to start Firefox via the following command to have a native console :</p>
+<pre>firefox.exe -console
+</pre>
+<p>Using normal JavaScript object inspection, you can write a function that dumps a whole object, similar to this <code><a class="external" href="http://mxr.mozilla.org/mozilla/source/extensions/sroaming/resources/content/transfer/utility.js#426" title="http://mxr.mozilla.org/mozilla/source/extensions/sroaming/resources/content/transfer/utility.js#426">ddumpObject()</a></code>.</p>
+<h3 id="Log.jsm_(formerly_log4moz)"><a href="/zh-CN/docs/Mozilla/JavaScript_code_modules/Log.jsm">Log.jsm (formerly log4moz)</a></h3>
+<p>This is a partial implementation of the Log4* interfaces (for example, see <a class="external text" href="http://logging.apache.org/log4j/1.2/index.html" rel="nofollow">log4j</a> or <a class="external text" href="http://logging.apache.org/log4net/" rel="nofollow">log4net</a>).</p>
+<pre class="language-html">Components.utils.import("resource://gre/modules/Log.jsm");</pre>
+<h3 id="Call_stack" name="Call_stack">"debugger" keyword</h3>
+<p>You can halt Venkman or Chromebug at a line using the keyword <a class="external" href="http://www.mozilla.org/scriptable/javascript-stack-dumper.html"><code>debugger</code></a>. In debug builds this also dumps a stack trace to the console, even when the debugger is not running. In extensions you can print the callstack using <code><a href="/en/Components.stack" title="en/Components.stack">Components.stack</a></code> like this:</p>
+<pre class="brush: js">function getStackDump() {
+  var lines = [];
+  for (var frame = Components.stack; frame; frame = frame.caller) {
+    lines.push(frame.filename + " (" + frame.lineNumber + ")");
+  }
+  return lines.join("\n");
+}
+</pre>
+<h3 id="Scratchpad">Scratchpad</h3>
+<p>Scratchpad has chrome privileges if <code>devtools.chrome.enabled = true</code>. Change the scratchpad to evaluate in the context of the current browser window by setting <strong>Environment</strong> &gt; <strong>Browser</strong> in the menu.</p>
+<h3 id="See_Also">See Also</h3>
+<ul>
+ <li><a href="/en/Debugging_Mozilla_with_gdb" title="en/Debugging Mozilla with gdb">Debugging Mozilla with gdb</a></li>
+ <li><a href="/en/Setting_up_extension_development_environment" title="en/Setting up extension development environment">Setting up an extension development environment</a> (particularly <a href="/en/Setting_up_extension_development_environment#Development_preferences" title="en/Setting up extension development environment#Development preferences">development preferences</a> and <a href="/en/Setting_up_extension_development_environment#Development_extensions" title="en/Setting up extension development environment#Development extensions">development extensions</a>)</li>
+</ul>
+<div class="originaldocinfo">
+ <h2 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h2>
+ <ul>
+  <li>Author(s): Ben Bucksch</li>
+  <li>Created Date: September 12, 2005, Last Updated Date: November 10, 2009</li>
+  <li>Copyright Information: Portions of this content are © 1998–2007 by individual mozilla.org contributors; content available under a Creative Commons license | <a class="external" href="http://www.mozilla.org/foundation/licensing/website-content.html">Details</a>.</li>
+ </ul>
+</div>
+<div id="livemargins_control" style="position: absolute; display: none;">
+ <img alt="" height="5" style="position: absolute; left: -77px; top: -5px;" width="77"> <img alt="" style="position: absolute; left: 0pt; top: -5px;"> <img alt="" id="monitor-play-button" style="position: absolute; left: 1px; top: 0pt; opacity: 0.5; cursor: pointer;"></div>
+<p> </p>
+<div id="livemargins_control" style="position: absolute; display: none;">
+ <img alt="" height="5" style="position: absolute; left: -77px; top: -5px;" width="77"> <img alt="" style="position: absolute; left: 0pt; top: -5px;"> <img alt="" id="monitor-play-button" style="position: absolute; left: 1px; top: 0pt; opacity: 0.5; cursor: pointer;"></div>
+<div id="livemargins_control" style="position: absolute; display: none;">
+ <img alt="" height="5" style="position: absolute; left: -77px; top: -5px;" width="77"> <img alt="" style="position: absolute; left: 0pt; top: -5px;"> <img alt="" id="monitor-play-button" style="position: absolute; left: 1px; top: 0pt; opacity: 0.5; cursor: pointer;"></div>

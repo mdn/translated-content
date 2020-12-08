@@ -1,0 +1,378 @@
+---
+title: Signing a XPI
+slug: Archive/Add-ons/Signing_an_XPI
+translation_of: Archive/Add-ons/Signing_an_XPI
+---
+<div class="note"><em><strong>注意：这些说明已经过时了。扩展的签名工作是通过Mozilla而不是作者。请查看</strong></em> <em><strong><a href="https://developer.mozilla.org/en-US/Add-ons/Distribution"> 签名和发布你的 add-on</a> 。</strong></em></div>
+
+<div class="note">Note: These instructions are for how to test with a self-signed certificate. See <a href="/en/Signing_an_extension">Signing an extension</a> for a practical guide.</div>
+
+<h3 id="Introduction">Introduction</h3>
+
+<p>This article describes how to sign your own Firefox extensions with a code-signing certificate on a Windows platform. It was developed from the linux article <a class="link-https" href="https://www.mozdevgroup.com/docs/pete/Signing-an-XPI.html">So you want to sign your XPI package?</a> by <strong>MozDev Group's Pete Collins.</strong></p>
+
+<p>This article is a mirror of <a class="external" href="http://web.archive.org/web/20060529005859/forums.tjworld.net/viewtopic.php?p=210" title="http://web.archive.org/web/20060529005859/forums.tjworld.net/viewtopic.php?p=210">the original</a>, with minor reformatting, some new info and all links updated in March 2010.</p>
+
+<h3 id="Get_network_security_services">Get network security services</h3>
+
+<p>1. Download the latest <a class="external" href="http://www.mozilla.org/projects/security/pki/nss/index.html#Documentation">Network Security Services (NSS)</a> package from the Mozilla FTP site at <code><a class="link-ftp" href="ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/" rel="freelink">ftp://ftp.mozilla.org/pub/mozilla.or.../nss/releases/</a></code>. For Windows, you'll want the <code><strong>nss-3.11.4.zip</strong></code> package in the <code><strong>NSS_3_11_4_RTM/msvc6.0/WINNT5.0_OPT.OBJ/</strong></code> folder - it is by 2010 the only one with the right binaries.</p>
+
+<p>2. Extract the contents of the archive file to a local folder. In my case it's <code>C:\Apps\nss-3.11.4\</code></p>
+
+<h3 id="Get_Netscape_Portable_Runtime">Get Netscape Portable Runtime</h3>
+
+<p>1. Download the latest <a class="external" href="http://www.mozilla.org/projects/nspr" title="http://http://www.mozilla.org/projects/nspr">Netscape Portable Runtime</a> from the Mozilla FTP site: <code><a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/nspr/releases/" rel="freelink">http://ftp.mozilla.org/pub/mozilla.org/nspr/releases/</a></code>. For Windows you'll want the <strong>nspr-4.6.zip</strong> package in the <code><strong>v4.6/WINNT5.0_OPT.OBJ/</strong></code> folder.</p>
+
+<p>2. Extract the contents of the archive file to a local folder. In my case it's <code>C:\Apps\nspr-4.6\</code></p>
+
+<h3 id="Add_path">Add path</h3>
+
+<p>Add the NSS tools <strong>bin/</strong> and <strong>lib/</strong>, and the NSPR <strong>lib/</strong> directories to the system path. You can either set this permanently via Control Panel-&gt;System Properties-&gt;Advanced-&gt;Environment Variables-&gt;System Variables or do it each time you run the tools from the command-line (preferably using a batch file). Windows contains its own version of some of these files (e.g. certutil.exe) in the system directory (<code>\Windows\system32\</code>) so ensure the new paths are <strong>first</strong> in the PATH search list.</p>
+
+<pre>C:\&gt; set PATH=C:\Apps\nss-3.11.4\bin\;C:\Apps\nss-3.11.4\lib\;C:\Apps\nspr-4.6\lib\;%PATH%
+</pre>
+
+<p>An easier way is to copy everything from your new directories C:\Apps\nss-3.11.4\ and C:\Apps\nspr-4.6\ including sub directories to the same directory - fx C:\Apps\CodeSigning\ - and then run every command from that.</p>
+
+<h3 id="Initialize_the_certificate_database">Initialize the certificate database</h3>
+
+<p>Decide which folder to create the certificate database in. Use this command to create it (<strong>note</strong> the trailing dot is required).</p>
+
+<pre>C:\Projects\CodeSigning\&gt; certutil -N -d .
+</pre>
+
+<p>The <strong>dot</strong> will cause the database to be created in the <strong>current directory.</strong></p>
+
+<p>You will be prompted for the <em>NSS Certificate database password</em> - <strong>don't forget it!</strong></p>
+
+<pre>C:\Projects\CodeSigning\&gt; certutil -N -d .
+Enter a password which will be used to encrypt your keys.
+The password should be at least 8 characters long,
+and should contain at least one non-alphabetic character.
+
+Enter new password:
+Re-enter password:
+</pre>
+
+<h3 id="Create_a_test_certificate">Create a test certificate</h3>
+
+<p>Create a test certificate, using the -p option to set a password for the new certificate</p>
+
+<pre>C:\Projects\CodeSigning\&gt; signtool -G myTestCert -d . -p"password"
+using certificate directory: .
+
+WARNING: Performing this operation while the browser is running could cause
+corruption of your security databases. If the browser is currently running,
+you should exit the browser before continuing this operation. Enter
+"y" to continue, or anything else to abort: y
+
+
+Enter certificate information.  All fields are optional. Acceptable
+characters are numbers, letters, spaces, and apostrophes.
+certificate common name: XPI Test
+organization: TJworld
+organization unit: Software
+state or province: Nottingham
+country (must be exactly 2 characters): GB
+username: tj
+email address: certificates@lan.tjworld.net
+generated public/private key pair
+certificate request generated
+certificate has been signed
+certificate "myTestCert" added to database
+Exported certificate to x509.raw and x509.cacert.
+</pre>
+
+<p><strong>x509.cacert</strong> will be used to sign your XPI package. Check that it exists on the file system and in the certificate database:</p>
+
+<pre>C:\Projects\CodeSigning\&gt; dir x509*
+
+14/12/2005  15:13             1,031 x509.cacert
+14/12/2005  15:13               798 x509.raw
+
+C:\Projects\CodeSigning\&gt; certutil -d . -L
+myTestCert                                                   u,u,Cu
+</pre>
+
+<h3 id="Prepare_XPI_file_for_signing">Prepare XPI file for signing</h3>
+
+<p>Create a new folder just for signing, copy your existing XPI into it, unzip<sup>*</sup> it (maintaining paths), delete the XPI and return to the certificate-database folder.</p>
+
+<p><sup>*</sup>Assumes you have a zip utility available on your system path. This example is using the <strong>CygWin bin/zip.exe</strong> tool. You can use a graphical Zip tool provided it manages the internal sub-directory structure properly. An alternative is to use WinRar.</p>
+
+<div class="note">The <strong>7-Zip tool doesn't work</strong> when creating Mozilla XPI signed archives because it sorts the directory entries alphabetically, and <strong><em>Mozilla requires the first entry to be META-INF/zigbert.rsa</em></strong>.</div>
+
+<pre>C:\Projects\CodeSigning\&gt; md signed
+
+C:\Projects\CodeSigning\&gt; copy C:\Projects\fsb\fsb.xpi signed
+        1 file(s) copied.
+
+C:\Projects\CodeSigning\&gt; cd signed
+
+C:\Projects\CodeSigning\signed&gt; unzip fsb.xpi
+Archive:  fsb.xpi
+   creating: chrome/
+  inflating: chrome.manifest
+  inflating: chrome/fsb.jar
+  inflating: install.rdf
+
+C:\Projects\CodeSigning\signed&gt; del fsb.xpi
+
+C:\Projects\CodeSigning\signed&gt; cd ..
+</pre>
+
+<h3 id="Sign_XPI">Sign XPI</h3>
+
+<pre>C:\Projects\CodeSigning\&gt; signtool -d . -k myTestCert -p "password" signed/
+using certificate directory: .
+Generating signed//META-INF/manifest.mf file..
+--&gt; chrome/fsb.jar
+--&gt; chrome.manifest
+--&gt; install.rdf
+Generating zigbert.sf file..
+tree "signed/" signed successfully
+</pre>
+
+<h3 id="Re-package_XPI">Re-package XPI</h3>
+
+<p>Change to the <strong>signed/</strong> folder, create a new zip with the <strong>META-INF/zigbert.rsa</strong> file listed first, then add the remaining files.</p>
+
+<pre>C:\Projects\Certs\&gt; cd signed
+
+C:\Projects\CodeSigning\signed\&gt; zip fsb.xpi META-INF/zigbert.rsa
+  adding: META-INF/zigbert.rsa (deflated 35%)
+
+C:\Projects\CodeSigning\signed&gt; zip -r -D fsb.xpi * -x META-INF/zigbert.rsa
+  adding: META-INF/manifest.mf (deflated 37%)
+  adding: META-INF/zigbert.sf (deflated 40%)
+  adding: chrome/fsb.jar (deflated 74%)
+  adding: chrome.manifest (deflated 69%)
+  adding: install.rdf (deflated 62%)
+</pre>
+
+<h3 id="Test_your_certificate">Test your certificate</h3>
+
+<p>To test your certificate, install it into your browser, and attempt to load the signed extension by following these steps:</p>
+
+<p>1. Temporarily install the Test Certificate Authority into your Mozilla browser</p>
+
+<p>Rename the <strong>x509.cacert</strong> file generated earlier to <strong>x509.cert</strong></p>
+
+<p>Import it into Mozilla Firefox as a Software Developer Certificate Authority.</p>
+
+<div class="note">Don't forget to delete the certificate from Mozilla Firefox once you've finished testing</div>
+
+<p>Firefox 1.5: From the Tools menu choose Options-&gt;Advanced-&gt;Security-&gt;View Certificates-&gt;Authorities</p>
+
+<p>Firefox 1.0: From the Tools menu choose Options-&gt;Advanced-&gt;Certificates-&gt;Manage Certificates-&gt;Authorities</p>
+
+<p>Press the <strong>Import</strong> button.</p>
+
+<p>Navigate to the folder containing <strong>x509.cert</strong> and choose it.</p>
+
+<p>In the <strong>Downloading Certificate</strong> dialog, tick <strong>Trust this CA to identify software developers.</strong> and press the <strong>View</strong> button if you wish to examine the certificate more closely.</p>
+
+<p>Press the <strong>OK</strong> button and you'll see your new certificate in the list of Authorities.</p>
+
+<p>2. Attempt to install the signed extension</p>
+
+<p>Either drag and drop or browse to and download the signed XPI. When the Mozilla Firefox <strong>Software Installation</strong> dialog appears the <strong>organisation name</strong> of the certificate will appear where Firefox usually displays <strong><em>unsigned</em></strong>.</p>
+
+<p><a class="external" href="http://forums.tjworld.net/files/topic-130-install-signed-xpi.png">image</a></p>
+
+<h3 id="Obtaining_a_valid_software_developer_code-signing_certificate">Obtaining a valid software developer code-signing certificate</h3>
+
+<p> </p>
+
+<div class="warning"><strong>Warning:</strong> Currently Firefox expects XPI files to be signed with certificates that conform to the older Object Signing convention, rather than the newer Code Signing convention. This means that Firefox will refuse to install code signed via an intermediate certificate authority such as <strong>Certum Level I</strong> unless the user installs that intermediate CA certificate into Firefox first. Installing the intermediate CA certificate causes Firefox to mark the intermediate Code Signing CA certificate as a valid Object Signing CA certificate, which makes it all work. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=321156" title="Firefox does not honor some issuers' code signing certs for XPI signatures">bug 321156</a> has been filed to request a way to obviate the installation of intermediate Code Signing CA certs into Firefox.</div>
+
+<p>Now you know it all works, you need to add a real software developer's certificate to the NSS certificate database, and use that to sign the XPI. There are several issuers of software developer certificates, with the three key differentials: availability, cost and identity verification.</p>
+
+<p>Many issuers will not provide a software developer certificate to individuals (how ridiculous) so you may have to search hard to find one that will, and who also has a CA root Authority installed in Mozilla Firefox. Without the certificate-issuers CA root certificate Mozilla Firefox will not confirm the validity of your certificate to users who want to install your extension. Ideally you want a certificate that has a root CA installed in all major platforms (Microsoft Windows, Sun Java, Mozilla/Netscape Firefox/Navigator, Opera) so you only use one certificate for signing all your software, no matter which platform it is for.</p>
+
+<p>The cheapest universally supported (Mozilla, Java, Microsoft) certificate seems to be the Comodo Instant-SSL offering. You can get a <strong>free certificate for open-source developers</strong> from <a class="external" href="https://en.sklep.unizeto.pl/test_certificates" title="http://www.certum.eu/certum/cert,offer_software_publisher.xml">Unizeto Certum</a>, in 2010 it is a Certum Level III CA.</p>
+
+<p>Here are some current issuers:</p>
+
+<ul>
+ <li>Comodo Instant-SSL Code Signing</li>
+ <li>Digi-Sign Digi-Code</li>
+ <li>GeoTrust Code Signing</li>
+ <li>Thawte Code Signing (owned by Verisign)</li>
+ <li>Unizeto Certum Code-signing (<strong>free certificates for open-source authors</strong>)</li>
+ <li>Verisign Code Signing</li>
+</ul>
+
+<p>You will need to apply for a <strong>Code Signing Certificate</strong> and satisfy the Issuer's identity verification procedures. They will then issue a signed certificate. When you receive the signed certificate it must be imported into the certificate database.</p>
+
+<div class="note">Your browser will generate a new private key and <strong>Code Signing Request (CSR)</strong> in the background without you necessarily realising it. The CSR will be uploaded to the Issuer. Later, you <strong>must</strong> use the same browser when installing the new certificate because the key and certificate pair must be together.</div>
+
+<p><strong>Hint</strong>: When applying for a certificate ensure that the <strong>Organisation (O)</strong> contains your name and not the Issuer's default text, because this is what is displayed to users.</p>
+
+<p>For this guide I applied for a free certificate from Unizeto Certum. After completing the application process where I entered my details into the online application, I received an automated email requesting documentary evidence of my ID in the form of a photo-ID or similar. I have hi-resolution scanned images of my passport and drivers license for these situations so I placed them on my web-server temporarily in a hidden location and emailed Unizeto Certum with the details and location of the files. Within a few hours I received a confirmation email from a human accepting the ID images and giving me a hyperlink to the certifcate download area.</p>
+
+<p><strong>Install the certificate into Mozilla Firefox</strong> (which goes with the private key created earlier), and copy/paste the displayed <strong>certificate text</strong> into a new file called <strong><code>C:\Projects\CodeSigning\Certum Code Signing.cer</code></strong>.</p>
+
+<h3 id="Installing_real_certificate">Installing real certificate</h3>
+
+<p>There are two steps required to install the new certificate in the Code Signing NSS certificate database.</p>
+
+<pre class="eval"> 1. Install the Issuer's Certificate Authority Root
+ 2. Install your key and certificate
+</pre>
+
+<p>The root CA establishes the trust of your certificate. Many issuer's have multiple root CAs for different levels of trust. find out which one was used for your certificate and download it. You can view the details of your certificate in Mozilla Firefox and get this information from the <strong>Issued By Common Name</strong> (Unizeto Certum's free certificate CA is Certum Level III CA).</p>
+
+<p>Download the Root CA and any intermediate certificates used to sign your certificate from the Issuer; their web site will have a link somewhere to their root CAs and public certificates. (<a class="link-https" href="https://www.certum.eu/certum/cert,expertise_root_certificates.xml">Certum public key page</a>). I downloaded the <strong>Certum Root CA</strong> and <strong>Certum Level III CA Digital ID for web and SSL/TLS Servers</strong>, copied the text and saved them to the files <code><strong>C:\Projects\CodeSigning\Certum Root CA.cer</strong></code> and <code><strong>C:\Projects\CodeSigning\Certum Level III CA.cer</strong></code>.</p>
+
+<p>Open a command prompt (ensure the paths to the NSS tools are set as described above) in the CodeSigning folder, install the Issuer CA certificates, and check they have been added correctly.</p>
+
+<pre>C:\Projects\CodeSigning&gt; certutil -A -n "Certum Root CA" -t "TC,TC,TC" -d . -i "Certum Root CA.cer"
+
+C:\Projects\CodeSigning&gt; certutil -A -n "Certum Level III CA" -t "c,c,C" -d . -i "Certum Level III CA.cer"
+
+C:\Projects\CodeSigning&gt; certutil -L -d .
+myTestCert                                                   u,u,Cu
+Certum Root CA                                               CT,C,C
+Certum Level III CA                                          CT,C,C
+</pre>
+
+<p>The name given to the newly issued certificate in the Mozilla Firefox keystore is not the easiest key alias in the world to remember, so I've added an additional step here that lets you rename it (its not just a simple rename operation, unfortunately).</p>
+
+<p>To find the name, in Mozilla Firefox navigate to the Certificate Manager (described in Step 11), choose <strong>Your Certificates</strong>, select the new certificate, press <strong>View</strong>, choose <strong>Details</strong> and look at the first entry in the <strong>Certificate Fields</strong> tree-view.</p>
+
+<p>My Unizeto Certum certificate is named "TJ's Unizeto Sp. z o.o. ID" but I want it to be called "Code Signing (Certum)".</p>
+
+<p>The trick is to install the certificate (without the key) first and give your chosen nickname at that point. When the key/certificate pair is imported from Mozilla Firefox afterwards, the private key will be added but the certificate name will remain the same.</p>
+
+<pre>C:\Projects\CodeSigning&gt; certutil -A -n "Code Signing (Certum)" -t "u,u,u" -d . -i "Certum Code Signing.cer"
+
+C:\Projects\CodeSigning&gt; certutil -L -d .
+myTestCert                                                   u,u,Cu
+Certum Root CA                                               CT,C,C
+Certum Level III CA                                          CT,C,C
+Code Signing (Certum)                                        ,,
+
+C:\Projects\CodeSigning&gt; signtool -l -d .
+using certificate directory: .
+
+Object signing certificates
+---------------------------------------
+myTestCert
+    Issued by: myTestCert (XPI Test)
+    Expires: Tue Mar 14, 2006
+Code Signing (Certum)
+    Issued by: Certum Level III CA (Certum Level III CA)
+    Expires: Tue Mar 14, 2006
+---------------------------------------
+For a list including CA's, use "signtool -L"
+</pre>
+
+<p>Now you must export the new key/certificate pair from the Mozilla Firefox certificate database and into the NSS certificate database.</p>
+
+<p>The hardest part is locating Mozilla's key database. It consists of two files named <strong>key3.db</strong> and <strong>cert8.db</strong>. They usually live in the Mozilla Firefox <strong>user profile folder</strong>. I found mine in <code><strong>C:\Documents and Settings\TJ\Application Data\Mozilla\Firefox\Profiles\xxxxxxxx.default\</strong></code> where xxxxxxxx is a random string of characters.</p>
+
+<div class="warning"><strong>This procedure assumes you installed the new certificate into Mozilla Firefox</strong></div>
+
+<p>Here's the commands required to export it to a file, import it to the Code Signing database, and verify the signing attributes (u,u,u). Ensure you use the nickname of your certificate in place of mine, and the directory where your Mozilla Firefox key database files are:</p>
+
+<pre>C:\Projects\CodeSigning&gt; pk12util -o "Certum Code Signing.pkcs12" -n "TJ's Unizeto Sp. z o.o. ID" -d "C:\Documents and Settings\TJ\Application Data\Mozilla\Firefox\Profiles\xxxxxxxx.default"
+Enter password for PKCS12 file:
+Re-enter password:
+pk12util: PKCS12 EXPORT SUCCESSFUL
+
+C:\Projects\CodeSigning&gt; pk12util -i "Certum Code Signing.pkcs12" -d .
+Enter Password or Pin for "NSS Certificate DB":
+Enter password for PKCS12 file:
+pk12util: PKCS12 IMPORT SUCCESSFUL
+
+C:\Projects\CodeSigning&gt; certutil -L -d .
+myTestCert                                                   u,u,Cu
+Certum Root CA                                               CT,C,C
+Certum Level III CA                                          c,c,C
+Code Signing (Certum)                                        u,u,u
+</pre>
+
+<p>You should notice that the existing certificate has been updated.</p>
+
+<h3 id="Sign_extension_with_real_certificate">Sign extension with real certificate</h3>
+
+<p>This is a repeat of the earlier steps using the real certificate's details. Here's the output on a test directory:</p>
+
+<pre>C:\Projects\CodeSigning&gt;signtool -d . -k "Code Signing (Certum)" -p ******* test
+using certificate directory: .
+Generating test/META-INF/manifest.mf file..
+--&gt; test.txt
+Generating zigbert.sf file..
+tree "test" signed successfully</pre>
+
+<h3 id="Incorporating_signing_into_your_build_process">Incorporating signing into your build process</h3>
+
+<p>You may want to incorporate these steps into your existing build process. I have a <strong>build.bat</strong> file that automates the creation of the jar and xpi files. This example is using the CygWin bin/zip.exe tool.</p>
+
+<p><strong>build.bat</strong> is placed in the extension's root folder. E.g.</p>
+
+<p>/dev/fsb/<strong>build.bat</strong> /dev/fsb/install.rdf /dev/fsb/chrome.manifest /dev/fsb/chrome/ /dev/fsb/chrome/content/ /dev/fsb/chrome/locale/ /dev/fsb/chrome/skin/</p>
+
+<p>Here it is with the code-signing steps included:</p>
+
+<p> </p>
+
+<pre class="eval">@echo off
+set x=%cd%
+
+echo Building %x%.xpi ...
+echo Started at %DATE% %TIME% &gt; %x%\build.log
+
+md build\chrome
+
+cd chrome
+
+zip  -r -0 "%x%.jar" * &gt;&gt; %x%\build.log
+
+move "%x%.jar" ..\build\chrome &gt;&gt; %x%\build.log
+
+cd ..
+
+copy install.rdf build &gt;&gt; %x%\build.log
+
+copy chrome.manifest build &gt;&gt;%x%\build.log
+
+signtool.exe -d C:\Projects\CodeSigning -k "Code Signing (Certum)" -p "password" build/ &gt;&gt; %x%\build.log
+
+cd build
+
+zip "%x%.xpi" META-INF/zigbert.rsa &gt;&gt; %x%\build.log
+
+zip -r -D "%x%.xpi" * -x META-INF/zigbert.rsa &gt;&gt; %x%\build.log
+
+rem copy "%x%.xpi" ..\..\..\http\fsb.xpi &gt;&gt; %x%\build.log
+
+move "%x%.xpi" ..\ &gt;&gt; %x%\build.log
+
+cd ..
+
+rd build /s/q
+
+echo Done.</pre>
+
+<p>Make sure to replace <strong>password</strong> with your NSS Certificate database password.</p>
+
+<h3 id="Alternatives_to_NSSsigntool">Alternatives to NSS/signtool</h3>
+
+<p>There are several alternatives to using signtool that might suit your needs better, however please note that these alternatives are unofficial third party products.</p>
+
+<ul>
+ <li><a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/key-manager/" title="https://addons.mozilla.org/en-US/firefox/addon/key-manager/">Key Manager XUL Extension</a></li>
+ <li><a class="link-https" href="https://adblockplus.org/blog/signing-firefox-extensions-with-python-and-m2crypto" title="https://adblockplus.org/blog/signing-firefox-extensions-with-python-and-m2crypto">Wladimir Palant's Python Script</a> (blog post)</li>
+ <li><a class="link-https" href="https://github.com/nmaier/xpisign.py/" title="https://github.com/nmaier/xpisign.py/">xpisign.py Python Script</a></li>
+ <li><a class="external" href="http://o-regan.org/xpisigner-secure-your-firefox-extensions/download-xpisigner/" title="http://o-regan.org/xpisigner-secure-your-firefox-extensions/download-xpisigner/">XPISigner Java Tool</a></li>
+</ul>
+
+<h3 id="References">References</h3>
+
+<ul>
+ <li>The <a class="external" href="http://www.mozilla.org/projects/security/pki/nss/tools/">NSS Tools documentation</a></li>
+</ul>
+
+<p></p>

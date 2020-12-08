@@ -1,0 +1,92 @@
+---
+title: Monitoring WiFi access points
+slug: Archive/Misc_top_level/Monitoring_WiFi_access_points
+translation_of: Archive/Misc_top_level/Monitoring_WiFi_access_points
+---
+<p></p>
+
+<p>Avec les privilèges UniversalXPConnect le code peut scruter les points d'accès WiFi disponibles afin d'obtenir des informations à leur sujet, entre autres leur SSID, adresses MAC et la force du signal. Cette fonctionnalité a été introduite principalement pour permettre aux <a href="/Fr/Using_geolocation">services de geolocalisation</a> d'utiliser les services de localisation basés sur le WiFi.</p>
+
+<h2 id="Exemple">Exemple</h2>
+
+<p>Cette exemple affiche simplement une liste des points d'accès diponibles.</p>
+
+<pre class="brush: html">&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Exemple de scrutation WiFi&lt;/title&gt;
+&lt;script&gt;
+
+var count = 0;
+
+function test() {
+}
+
+test.prototype =
+{
+  onChange: function (accessPoints)
+  {
+    netscape.security.PrivilegeManager.enablePrivilege('UniversalXPConnect');
+    var d = document.getElementById("d");
+    d.innerHTML = "";
+
+    for (var i=0; i&lt;accessPoints.length; i++) {
+      var a = accessPoints[i];
+      d.innerHTML += "&lt;p&gt;" + a.mac + " " + a.ssid + " " + a.signal + "&lt;/p&gt;";
+    }
+
+    var c = document.getElementById("c");
+    c.innerHTML = "&lt;p&gt;" + count++ + "&lt;/p&gt;";
+
+  },
+
+  onError: function (value) {
+     alert("error: " +value);
+  },
+
+  QueryInterface: function(iid) {
+        netscape.security.PrivilegeManager.enablePrivilege('UniversalXPConnect');
+        if (iid.equals(Components.interfaces.nsIWifiListener) ||
+            iid.equals(Components.interfaces.nsISupports))
+            return this;
+        throw Components.results.NS_ERROR_NO_INTERFACE;
+   },
+}
+
+  netscape.security.PrivilegeManager.enablePrivilege('UniversalXPConnect');
+
+  var listener = new test();
+  var wifi_service = Components.classes["@mozilla.org/wifi/monitor;1"].getService(Components.interfaces.nsIWifiMonitor);
+
+  wifi_service.startWatching(listener);
+
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;div id="d"&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;div id="c"&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<h3 id="L'objet_nsIWifiListener">L'objet nsIWifiListener</h3>
+
+<p>La première action de ce code est de prototyper l'objet écouteur qui recevra les notifications de changement dna sla liste des points d'accès. Cet objet est décrit par les lignes 11 à 40.</p>
+
+<p>La méthode <code>onChange()</code> (lignes 13 à 27) commence par activer les privilèges UniversalXPConnect, puis vide le <code>div</code> (<code>d</code>) qui va recevoir la liste des points daccès mis à jour. La boucle lignes 19 à 22 itère ensuite sur la liste des points d'accès reçus dans le tableau accessPoints et les ajoute au contenu du <code>div</code>.</p>
+
+<p>Par la suite le <code>div c</code> est mis à jour avec le nombre de fois où liste a été  renouvellée.</p>
+
+<p>La méthode <code>onError()</code> fait simplement surgir une laert qui affiche le code erreur reçu.</p>
+
+<h3 id="Lancer_la_scrutation_des_points_d'accès">Lancer la scrutation des points d'accès</h3>
+
+<p>Pour commencer la scrutation des points d'accès, on instancie l'écouteur (ligne 44) puis  on attrape une référence à l'interface de scrutation WiFi ligne 45. La scrutation commence ligne 47 en appelant la méthode <code>startWatching()</code> sur l'interface.</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWifiMonitor" title="">nsIWifiMonitor</a></code></li>
+ <li><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWifiListener" title="">nsIWifiListener</a></code></li>
+ <li><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWifiAccessPoint" title="">nsIWifiAccessPoint</a></code></li>
+</ul>

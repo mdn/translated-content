@@ -1,0 +1,115 @@
+---
+title: 增加更多的元素
+slug: Mozilla/Tech/XUL/Tutorial/Adding_More_Elements
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_More_Elements
+---
+<div class="pageTitle">
+ <h1 id="添加元素">添加元素</h1>
+</div>
+<div id="page-top">
+ <div class="pageText" id="pageText">
+  <p> </p>
+  <p> </p>
+  <div class="prevnext">
+   <p><span style="float: left;">« <a href="../../../../en/XUL_Tutorial/Groupboxes" rel="internal">Previous</a></span> <span style="float: right;"><a href="../../../../en/XUL_Tutorial/Stacks_and_Decks" rel="internal">Next</a> »</span></p>
+  </div>
+  <p>  </p>
+  <p> </p>
+  <p>    我们继续通过为findfile对话框添加一些box来讨论box。</p>
+  <div class="highlight">
+   <div id="section_1">
+    <h3 class="editable" id="为_find_files_的例子添加元素"><span>为 find files 的例子添加元素</span></h3>
+    <div class="editIcon">
+     <a href="../../../../en/XUL_Tutorial/Adding_More_Elements#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+    <p>    现在我们将为findfile对话框添加一些元素，首先添加选择其他检索信息的能力（如尺寸和数据）：</p>
+    <pre class="eval">&lt;hbox&gt;
+  <span class="highlightred">&lt;menulist id="searchtype"&gt;
+    &lt;menupopup&gt;
+      &lt;menuitem label="Name"/&gt;
+      &lt;menuitem label="Size"/&gt;
+      &lt;menuitem label="Date Modified"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menulist&gt;
+  &lt;spacer style="width: 10px;"/&gt;
+  &lt;menulist id="searchmode"&gt;
+    &lt;menupopup&gt;
+      &lt;menuitem label="Is"/&gt;
+      &lt;menuitem label="Is Not"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menulist&gt;
+  &lt;spacer style="width: 10px;"/&gt;</span>
+  &lt;textbox id="find-text" flex="1" style="min-width: 15em;"/&gt;
+&lt;/hbox&gt;
+</pre>
+    <div class="float-right">
+     <img alt="Image:boxfinal1.png" class="internal" src="../../../../@api/deki/files/567/=Boxfinal1.png"></div>
+    <p>    加了两个 <a href="../../../../en/XUL_Tutorial/List_Controls#_Drop-down_Lists" rel="internal">drop down boxes</a> 。一个 <a href="../../../../en/XUL_Tutorial/Using_Spacers" rel="internal">spacer</a> 加进来用于分割各元素，每个空白有10像素，你会看到当窗口尺寸改变时，文本框会改变尺寸而其他元素不会 ，也会看到标签被移除了。</p>
+    <p>    如果垂直的改变窗口尺寸，元素不会改变尺寸，这是因为他们在水平的box中。 Find 和 Cancel 按钮总在春光看的底部是合适的。这很容易通过在两个水平box间添加空白实现。</p>
+    <pre class="eval"><span class="highlightred">&lt;spacer style="height: 10px"/&gt;</span>
+&lt;hbox&gt;
+  &lt;menulist id="searchtype"&gt;
+    &lt;menupopup&gt;
+      &lt;menuitem label="Name"/&gt;
+      &lt;menuitem label="Size"/&gt;
+      &lt;menuitem label="Date Modified"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menulist&gt;
+  &lt;spacer style="width: 10px;"/&gt;
+  &lt;menulist id="searchmode"&gt;
+    &lt;menupopup&gt;
+      &lt;menuitem label="Is"/&gt;
+      &lt;menuitem label="Is Not"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menulist&gt;
+  &lt;spacer style="width: 10px;"/&gt;
+  &lt;textbox id="find-text" flex="1" style="min-width: 15em;"/&gt;
+&lt;/hbox&gt;
+
+<span class="highlightred">&lt;spacer style="height: 10px" flex="1"/&gt;</span>
+
+&lt;hbox&gt;
+</pre>
+    <p>    现在当窗口改变尺寸，这两个按钮会移动以确保总在窗口的底部。 <span class="lang lang-en"><a href="../../../../en/XUL/spacer" rel="internal">spacer</a> 被添加在标题和检索条件之间。</span></p>
+    <p>    在检索条件上画上边框可能会更好看。可以使用 CSS <code>border</code> 属性或使用 <code><span class="lang lang-en"><a href="../../../../en/XUL/groupbox" rel="internal">groupbox</a> <span style="font-family: Verdana,Tahoma,sans-serif;">元素</span></span></code>，第一种方法需要设置box的样式。我们使用后一种方法。  <a href="../../../../en/XUL_Tutorial/Groupboxes" rel="internal">groupbox</a> 可以画出适合当前主题的漂亮的边框。</p>
+    <p>    把box改为 <code>groupbox</code>：</p>
+    <pre class="eval"><span class="highlightred">&lt;groupbox orient="horizontal"&gt;</span>
+  <span class="highlightred">&lt;caption label="Search Criteria"/&gt;</span>
+  &lt;menulist id="searchtype"&gt;
+  .
+  .
+  .
+  &lt;spacer style="width: 10px;"/&gt;
+  &lt;textbox id="find-text" flex="1" style="min-width: 15em;"/&gt;
+<span class="highlightred">&lt;/groupbox&gt;</span>
+</pre>
+    <div class="float-right">
+     <img alt="Image:boxfinal2.png" class="internal" src="../../../../@api/deki/files/568/=Boxfinal2.png"></div>
+    <p>   当然还有其他的美化方案，比如让组框延伸到窗口底边。也可以修饰一下边界让他们看起来更漂亮。</p>
+    <p>    我们会在这个教程中看到更多关于box的例子及其功能因为我们还有在findfile对话框中添加新的元素。</p>
+    <p>Find files example so far <span class="lang lang-en"><a class="external" href="http://developer.mozilla.org/samples/xultu/examples//findfile/findfile-boxfinal.xul.txt" rel="external nofollow" title="http://developer.mozilla.org/samples/xultu/examples//findfile/findfile-boxfinal.xul.txt">Source</a> <a class="external" href="http://developer.mozilla.org/samples/xultu/examples//findfile/findfile-boxfinal.xul" rel="external nofollow" title="http://developer.mozilla.org/samples/xultu/examples//findfile/findfile-boxfinal.xul">View</a> </span></p>
+   </div>
+  </div>
+  <p><br>
+        下一章，<a href="../../../../en/XUL_Tutorial/Stacks_and_Decks" rel="internal">create stacks</a>.</p>
+  <p> </p>
+  <div class="prevnext">
+   <p><span style="float: left;">« <a href="../../../../en/XUL_Tutorial/Groupboxes" rel="internal">Previous</a></span> <span style="float: right;"><a href="../../../../en/XUL_Tutorial/Stacks_and_Decks" rel="internal">Next</a> »</span></p>
+  </div>
+  <p>  </p>
+  <p> </p>
+ </div>
+</div>
+<div class="printfooter" id="printfooter">
+ <hr>
+ <p>Retrieved from "<a href="../../../../En/XUL_Tutorial/Adding_More_Elements">https://developer.mozilla.org/En/XUL_Tutorial/Adding_More_Elements</a>"</p>
+</div>
+<div class="collapsed" id="languages">
+ <h5 id="Languages">Languages</h5>
+ <ul style="display: none;">
+  <li><a href="../../../../es/Tutorial_de_XUL/A%c3%b1adiendo_m%c3%a1s_elementos" rel="internal">Español</a></li>
+  <li><a href="../../../../fr/Tutoriel_XUL/Ajouter_plus_d%27%c3%a9l%c3%a9ments" rel="internal">Français</a></li>
+  <li><a href="../../../../pl/Kurs_XUL/Dodawanie_innych_element%c3%b3w" rel="internal">Polski</a></li>
+  <li><a href="../../../../ja/XUL_Tutorial/Adding_More_Elements" rel="internal">日本語</a></li>
+ </ul>
+</div>
+<p> </p>

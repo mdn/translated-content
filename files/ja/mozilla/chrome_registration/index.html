@@ -1,0 +1,360 @@
+---
+title: Chrome Registration
+slug: Mozilla/Chrome_Registration
+tags:
+  - Toolkit API
+translation_of: Mozilla/Chrome_Registration
+---
+<p> </p>
+
+<h2 id="Chrome_.28.E3.82.AF.E3.83.AD.E3.83.A0.29_.E3.81.A8.E3.81.AF_.3F" name="Chrome_.28.E3.82.AF.E3.83.AD.E3.83.A0.29_.E3.81.A8.E3.81.AF_.3F">Chrome (クロム) とは?</h2>
+
+<p><a href="/ja/Chrome" title="ja/Chrome">Chrome</a> とは、アプリケーションウィンドウで、そのウィンドウのコンテンツ領域の外側にあるユーザーインターフェイス要素のセットのことです。 ツールバーやメニューバー、プログレスバー、およびウィンドウタイトルバーといった要素は、全て chrome の部分の典型的な例になります。</p>
+
+<p>Mozilla は拡張機能とテーマについて、ルートディレクトリに置かれた <code>chrome.manifest</code> を認識します。</p>
+
+<div class="geckoVersionNote">
+<p>{{ gecko_callout_heading("2.0") }}</p>
+
+<p>Gecko 1.9.2 およびそれ以前では、Mozilla はアプリケーションのルートから見て <code>chrome/*.manifest</code> の位置にあるマニフェストファイルも読み込みます。Gecko 2.0 {{ geckoRelease("2.0") }} 以降では、ルートに置かれた <code>chrome.manifest</code> だけがマニフェストファイルとして利用されますが、<a href="/ja/Chrome_Registration#manifest" title="ja/Chrome Registration#manifest"><code>manifest</code></a> コマンドを使う事で、任意のファイルを追加のマニフェストファイルとして読み込ませる事ができます。</p>
+</div>
+
+<p>{{ 英語版章題("Chrome_Providers") }}</p>
+
+<h2 id="Chrome_.E3.83.97.E3.83.AD.E3.83.90.E3.82.A4.E3.83.80" name="Chrome_.E3.83.97.E3.83.AD.E3.83.90.E3.82.A4.E3.83.80">Chrome プロバイダ</h2>
+
+<p>ある種類のウィンドウ (例: ブラウザ用ウィンドウ) のための chrome の{{ 訳語("供給元", "supplier") }}を、chrome プロバイダと呼びます。 特定のウィンドウに対して、ツールバー上に表示する画像から利用するテキストを記述したファイルまで、 コンテンツとウィンドウ自身の外観のための完全な chrome のセットを供給するために、 複数のプロバイダが一緒に動作することになります。</p>
+
+<p>chrome プロバイダの 3 つの基本型を以下に示します。</p>
+
+<p>{{ 英語版章題("Content") }}</p>
+
+<h3 id=".E3.82.B3.E3.83.B3.E3.83.86.E3.83.B3.E3.83.88" name=".E3.82.B3.E3.83.B3.E3.83.86.E3.83.B3.E3.83.88">コンテント</h3>
+
+<p>ウィンドウを記述するための主要なソースファイルは、コンテントプロバイダから供給されます。 これらは Mozilla の中から参照可能な任意の種類のファイルであることが可能ですが、 典型的には、ウィンドウやダイアログを記述するために設計されている XUL ファイルになります。 また、ユーザーインターフェイスを定義する JavaScript ファイルもコンテントパッケージに含まれ、 ほとんどの XBL バインディングファイルも同様です。</p>
+
+<p>{{ 英語版章題("Locale") }}</p>
+
+<h3 id=".E3.83.AD.E3.82.B1.E3.83.BC.E3.83.AB" name=".E3.83.AD.E3.82.B1.E3.83.BC.E3.83.AB">ロケール</h3>
+
+<p>ローカライズ可能なアプリケーションは、全てのローカライズのための情報をロケールプロバイダに保持します。 これにより、翻訳者は別の chrome パッケージを差し込むだけで、ソースコードのそれ以外の部分を変更することなく、アプリケーションの翻訳を行うことが可能になります。 ローカライズ可能な主なファイルは、DTD ファイルと Java スタイルのプロパティファイルの 2 つになります。</p>
+
+<p>{{ 英語版章題("Skin") }}</p>
+
+<h3 id=".E3.82.B9.E3.82.AD.E3.83.B3" name=".E3.82.B9.E3.82.AD.E3.83.B3">スキン</h3>
+
+<p>スキンプロバイダは、chrome の視覚的な外観を記述するための、完全なファイルのセットを提供する役割を持っています。 典型的なスキンプロバイダは、CSS ファイルと画像を提供することになります。</p>
+
+<p>{{ 英語版章題("The Chrome Registry") }}</p>
+
+<h2 id="Chrome_.E3.83.AC.E3.82.B8.E3.82.B9.E3.83.88.E3.83.AA" name="Chrome_.E3.83.AC.E3.82.B8.E3.82.B9.E3.83.88.E3.83.AA">Chrome レジストリ</h2>
+
+<p>Gecko の実行環境は、chrome レジストリとして知られる、chrome パッケージ名から chrome パッケージのディスク上の物理的な位置へのマッピングを提供するサービスを保守しています。</p>
+
+<p>この chrome レジストリが、コンフィグ可能で{{ 訳語("永続的", "persistent") }}であるため、 利用者は異なった chrome プロバイダをインストールして、好みのスキンやロケールを選択することが可能になります。 これは、xpinstall と、拡張マネージャによって実現されます。</p>
+
+<p>利用可能な chrome の chrome レジストリの情報のために、テキストのマニフェストが使用されます。 このマニフェストは、拡張機能やテーマのルートに置かれた「chrome.manifest」であり、XULRunner アプリケーションの chrome/*.manifest に該当します。</p>
+
+<p>このプレインテキストの chrome マニフェストは、以下のような単純な行ベースのフォーマットになっています。 各行は個々に{{ 訳語("解釈", "parse") }}されます。 つまり、その行が chrome レジストリにとって解釈可能な場合は、その行で指定される動作を行い、 不可能な場合 chrome レジストリはその行を無視します。 (警告メッセージが実行時エラーのコンソールに出力されます)</p>
+
+<pre class="eval">locale パッケージ名 ロケール名 path/to/files
+skin パッケージ名 テーマ名 path/to/files
+</pre>
+
+<p></p><div class="warning">パッケージ名に大文字と小文字が両方含まれている場合、Firefox 2, ThunderBird 2, および SeaMonkey 1.1 は chrome を認識しません。もし上記の例のパッケージ名の箇所が <strong>C</strong>amel<strong>C</strong>ase<strong>P</strong>ackage のようになっている場合には、\"chrome://<strong>c</strong>amel<strong>c</strong>ase<strong>p</strong>ackage/path/to/files に対する chrome が登録されていません\" のようなエラーメッセージが表示されるでしょう。Firefox 3, ThunderBird 3, および SeaMonkey 2 は大文字と小文字を両方含むパッケージ名に対応しています。このバグは Mozilla 1.9 で修正されました。<a class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=132183" title="https://bugzilla.mozilla.org/show_bug.cgi?id=132183">Bug 132183</a> を参照してください。</div><p></p>
+
+<p>{{ 英語版章題("Manifest Instructions") }}</p>
+
+<h2 id=".E3.83.9E.E3.83.8B.E3.83.95.E3.82.A7.E3.82.B9.E3.83.88.E5.91.BD.E4.BB.A4_.28Instruction.29" name=".E3.83.9E.E3.83.8B.E3.83.95.E3.82.A7.E3.82.B9.E3.83.88.E5.91.BD.E4.BB.A4_.28Instruction.29">マニフェスト命令 (Instruction)</h2>
+
+<h3 id=".E3.82.B3.E3.83.A1.E3.83.B3.E3.83.88" name=".E3.82.B3.E3.83.A1.E3.83.B3.E3.83.88">コメント</h3>
+
+<p>文字 '#' で始まる行はコメントです。 その行のそれ以降の文字は全て無視されます。</p>
+
+<pre class="eval"># この行はコメントです。ここには何でも書けます。
+</pre>
+
+<h3 id="content" name="content">manifest</h3>
+
+<p>{{ gecko_minversion_inline("2.0b4") }}</p>
+
+<pre>manifest <em>サブディレクトリ</em> <em>/foo.manifest [フラグ]</em>
+</pre>
+
+<p>この指定は追加のマニフェストファイルを読み込みます。これはコンポーネントや chrome の登録、プラットフォーム依存の登録用の指定を別ファイルに分割する場合に便利かもしれません。</p>
+
+<h3 id="binary-component">binary-component</h3>
+
+<p>{{ gecko_minversion_inline("2.0b2") }}</p>
+
+<pre>binary-component <em>components/mycomponent.dll</em> <em>[フラグ]</em>
+</pre>
+
+<p>Mozilla に対して、バイナリ形式のコンポーネントを登録し利用するよう指示します。コンポーネントが ABI に依存する物である場合には、これは abi フラグと同時に使用されるべきです。<a href="/ja/XPCOM/XPCOM_changes_in_Gecko_2.0" title="ja/XPCOM/XPCOM changes in Gecko 2.0">Firefox 4 よりも前のバージョンでは</a>、components ディレクトリにあるファイルは自動的に登録されていました。</p>
+
+<h3 id="interfaces">interfaces</h3>
+
+<p>{{ gecko_minversion_inline("2.0b2") }}</p>
+
+<pre>interfaces <em>components/mycomponent.xpt</em> <em>[フラグ]</em>
+</pre>
+
+<p>Mozilla に対して、XPIDL によって生成された typelib ファイルからインターフェースの情報を読み込むよう指示します。<a href="/ja/XPCOM/XPCOM_changes_in_Gecko_2.0" title="ja/XPCOM/XPCOM changes in Gecko 2.0">Firefox 4 よりも前のバージョンでは</a>、components ディレクトリにあるファイルは自動的に登録されていました。</p>
+
+<h3 id="component">component</h3>
+
+<p>{{ gecko_minversion_inline("2.0b2") }}</p>
+
+<pre>component <em>{00000000-0000-0000-0000-000000000000}</em> <em>components/mycomponent.js</em> <em>[フラグ]</em>
+</pre>
+
+<p>Mozilla に対して、JavaScript（あるいはその他の利用可能なスクリプト言語）で記述された XPCOM コンポーネントの実装についてコンポーネントの CID の情報を与えます。クラスID {0000...} はそのコンポーネントによって実装されているクラスIDと一致しなくてはなりません。</p>
+
+<h3 id="contract">contract</h3>
+
+<p>{{ gecko_minversion_inline("2.0b2") }}</p>
+
+<pre>contract <em>@foobar/mycontract;</em> <em>{00000000-0000-0000-0000-000000000000}</em> <em>[フラグ]</em>
+</pre>
+
+<p>コントラクト ID（ヒューマンリーダブルな文字列）を特定の実装のクラス ID にマッピングします。一般的には、1つのコントラクト ID はその直前に書かれた component エントリと対にして記述されるでしょう。</p>
+
+<h3 id="category">category</h3>
+
+<p>{{ gecko_minversion_inline("2.0b2") }}</p>
+
+<pre>category <em>カテゴリ名</em> <em>エントリ名</em> <em>値</em> <em>[フラグ]</em>
+</pre>
+
+<p>エントリを<a href="/ja/XPCOM_Interface_Reference/nsICategoryManager" title="ja/XPCOM Interface Reference/nsICategoryManager">カテゴリーマネージャ</a>に登録します。カテゴリによって、記述する内容の形式や意味は変わります。</p>
+
+<h3 id="content" name="content">content</h3>
+
+<p>この行により、コンテントパッケージが登録されます。</p>
+
+<pre class="eval">content <em>パッケージ名</em> <em>uri/to/files/</em> <em>[フラグ]</em>
+</pre>
+
+<p>これによって、URI <code>chrome://<em>パッケージ名</em>/content/...</code> によって参照された場合に実際のファイルシステム上の場所を解決するための情報が登録されます。 URI は、絶対指定か、このマニフェストファイルからの相対パスを指定します。 この URI 指定は、'/' で終了している必要があることに注意してください。</p>
+
+<h3 id="locale" name="locale">locale</h3>
+
+<p>この行により、ロケールパッケージが登録されます。</p>
+
+<pre class="eval">locale <em>パッケージ名</em> <em>ロケール名</em> <em>uri/to/files/</em> <em>[flags]</em>
+</pre>
+
+<p>これによって、URI <code>chrome://<em>packagename</em>/locale/...</code> によって参照されるロケールパッケージを登録します。 <em>ロケール名</em> は、「en」のように言語だけの識別子か、「en-US」のような「言語-国」の識別子になります。 もし、そのパッケージに複数のロケールが登録されている場合、 chrome レジストリは、利用者の{{ 訳語("設定", "preference") }}に最もふさわしいロケールを選択して利用することになります。</p>
+
+<div class="note">
+<p>{{ 訳注("日本語の場合のロケール名について") }}</p>
+
+<p>Firefox 1.5 以上は上位互換性を持っており、ja であろうが ja-JP であろうが問題なく動作します。 但し、*.manifest は ja/ja-JP-mac 世代の製品でしか使いませんから、contents.rdf でどうするかにかかわらず、ja を使用することを推奨します。</p>
+
+<p>Firefox/Thunderbird 1.5 以降での locale の選択は</p>
+
+<ol>
+ <li>general.useragenet.locale に完全一致するものがあればそれを使用</li>
+ <li>完全一致ではないが言語コードが一致するものがあればそれを使用</li>
+ <li>言語コードが一致するものがなければ en-US を使用</li>
+</ol>
+
+<p>という規則になっているので、拡張機能側では ja でも ja-JP でも好きな方を指定して動作上問題ありません。 Firefox/Thunderbird 1.5 以降しかサポートしないのに ja-JP を指定するというのはナンセンスですので推奨しませんが、Firefox/Thunderbird 1.0.x や Seamonkey 1.0.x などもサポートするのであれば ja でも ja-JP でも構いません。</p>
+
+<p>※ <a class="external" href="http://forums.firehacks.org/l10n/viewtopic.php?p=4923">Mozilla L10N フォーラムの記事 </a> から引用</p>
+</div>
+
+<h3 id="skin" name="skin">skin</h3>
+
+<p>この行により、スキンパッケージが登録されます。</p>
+
+<pre class="eval">skin <em>パッケージ名</em> <em>スキン名</em> <em>uri/to/files/</em> <em>[フラグ]</em>
+</pre>
+
+<p>これによって、URI <code><a class="external" rel="freelink">chrome://packagename/skin/</a>...</code> によって参照されるスキンパッケージを登録します。 <em>スキン名</em> にはインストールされるスキンを識別する{{ 訳語("適当な", "opaque") }}文字列を指定します。 もし、そのパッケージに複数のスキンが登録されている場合、 chrome レジストリは、利用者の{{ 訳語("設定", "preference") }}に最もふさわしいスキンを選択して利用することになります。</p>
+
+<h3 id="overlay" name="overlay">overlay</h3>
+
+<p>XUL オーバーレイは、以下の構文で登録されます。</p>
+
+<pre class="eval">overlay chrome://<em>オーバーレイが適用されるURI</em> chrome://<em>適用するオーバーレイのURI</em> <em>[フラグ]</em>
+</pre>
+
+<h3 id="style" name="style">style</h3>
+
+<p>スタイルオーバーレイ (chrome ページに適用するためのカスタム CSS) は、以下の構文で登録されます。</p>
+
+<pre class="eval">style chrome://<em>スタイルが適用されるURI</em> chrome://<em>スタイルシートのURI</em> <em>[フラグ]</em>
+</pre>
+
+<div class="note">
+<p>この機能はChrome URIのスタイルシートについてだけ利用できることに注意してください。</p>
+</div>
+
+<h3 id="override" name="override">override</h3>
+
+<p>{{ 訳語("拡張機能", "extension") }}や embedder で、アプリケーションや XULRunner が提供しているファイルをオーバーライドしたくなるケースがあります。 これは、chrome 登録マニフェストの 「override」命令で可能になります。</p>
+
+<pre class="eval">override chrome://<em>package</em>/<em>type</em>/<em>オーバーライドされる元のURI</em> <em>オーバーライドするURI</em> <em>[フラグ]</em>
+</pre>
+
+<p>注: override 指定は再帰的には適用されません。（ですので、<a class="external" rel="freelink">chrome://foo/content/bar/</a> を <a class="external" rel="freelink">file:///home/john/blah/</a> でオーバーライドしても、大抵の場合は意図した通りには動作しないでしょう。</p>
+
+<div class="note">
+<p>Gecko 1.8.1.5（Firefox 2.0.0.5）およびそれ以前のバージョンにはバグがあり、<em>オーバーライドするURI</em> の部分に相対パスを指定できませんでした。そのため、必ず絶対URIを指定する必要がありました。{{ Bug(323455) }} を参照してください。</p>
+</div>
+
+<h3 id="resource" name="resource">resource</h3>
+
+<p>{{ Fx_minversion_inline(3) }}</p>
+
+<p><a href="/ja/JavaScript_code_modules/Using" title="ja/JavaScript_code_modules/Using">JavaScript コードモジュール</a> を利用する場合、拡張機能やアプリケーションが<a href="/ja/Components.utils.import" title="ja/Components.utils.import">Components.utils.import</a> を使用してモジュールを読み込めるようにするために、resource プロトコルのエイリアスを作成する必要があるでしょう。エイリアスは <code>resource</code> 行を使うことによって作られます:</p>
+
+<pre class="eval">resource <em>エイリアス名</em> <em>uri/to/files/</em> <em>[flags]</em>
+</pre>
+
+<p>これは <code>resource://&lt;エイリアス名&gt;/</code> という URI に対して、与えられたパスへのマッピングを行います。</p>
+
+<div class="note">
+<p>Web 上のコンテンツを resource URI から読み込むことを防ぐようなセキュリティ上の制限事項は無いことに注意が必要です。ここで何を可視化しようとしているのかについて注意を払ってください。</p>
+</div>
+
+<p>{{ 英語版章題("Manifest Flags") }}</p>
+
+<h2 id=".E3.83.9E.E3.83.8B.E3.83.95.E3.82.A7.E3.82.B9.E3.83.88.E3.83.95.E3.83.A9.E3.82.B0" name=".E3.83.9E.E3.83.8B.E3.83.95.E3.82.A7.E3.82.B9.E3.83.88.E3.83.95.E3.83.A9.E3.82.B0">マニフェストフラグ</h2>
+
+<p>マニフェストの行は、空白区切りにより複数のフラグを持つことができ、 それらは登録行の最後に追加します。 これらのフラグは、そのパッケージの chrome に特殊な属性をマークしたり、 その行が使用される条件を制限するために使用されます。</p>
+
+<h3 id="application" name="application">application</h3>
+
+<p>{{ 訳語("拡張機能", "Extensions") }}は、複数のアプリケーションに対してインストールされる可能性があります。 特定のアプリケーションだけに適用する chrome 登録行を置きたい場合には、</p>
+
+<pre class="eval">application=<em>app-ID</em>
+</pre>
+
+<p>のフラグによって、拡張機能が <em>app-ID</em> で識別されるアプリケーションに対してインストールされる場合にのみ、この命令を適用することを示します。 複数の <code>application</code> フラグを単一の行に含めても構いません。 その場合は、その中のいずれかが一致した場合に適用されることになります。</p>
+
+<p>これは、異なるアプリケーションに対してどのように異なるオーバーレイを適用するかを示す例です。</p>
+
+<pre style="white-space: pre-wrap;">overlay chrome://browser/content/browser.xul chrome://myaddon/content/ffOverlay.xul application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+overlay chrome://messenger/content/mailWindowOverlay.xul chrome://myaddon/content/tbOverlay.xul application={3550f703-e582-4d05-9a08-453d09bdfdc6}
+overlay chrome://songbird/content/xul/layoutBaseOverlay.xul chrome://myaddon/content/sbOverlay.xul application=songbird@songbirdnest.com
+</pre>
+
+<h3 id="appversion" name="appversion">appversion</h3>
+
+<p>{{ 訳語("拡張機能", "Extensions") }}は、アプリケーションの複数のバージョンに対してインストールされる可能性があります。 特定のバージョンだけに適用する chrome 登録行を置きたい場合には、</p>
+
+<pre class="eval">appversion=<em>version</em>
+appversion&lt;<em>version</em>
+appversion&lt;=<em>version</em>
+appversion&gt;<em>version</em>
+appversion&gt;=<em>version</em>
+</pre>
+
+<p>のフラグによって、拡張機能が識別されたバージョンのアプリケーションにインストールされる場合にのみ、この命令を適用することを示します。 複数の <code>appversion</code> フラグを単一の行に含めても構いません。 その場合は、その中のいずれかが一致した場合に適用されることになります。 なお、バージョン文字列は、<a href="/ja/Toolkit_version_format" title="ja/Toolkit_version_format">Toolkit version format</a> に従っている必要があります。</p>
+
+<div class="note">
+<p>Gecko 1.8.0.13 および 1.8.1.5 以前のバージョンには、比較演算子 &lt;, &gt; または = を使用していてバージョン文字列の中に2つ以上のアルファベットが含まれている場合についてバグがありました。バグを踏んだ場合には、エラーコンソールに <code>appversion</code> フラグを解釈できなかった旨のメッセージが表示されていました。{{ Bug(380398) }} を参照してください。</p>
+</div>
+
+<h3 id="contentaccessible" name="contentaccessible">contentaccessible</h3>
+
+<p>{{ Fx_minversion_inline(3) }} chrome のリソースは、信頼されていないソースから読み込まれたページに含まれる、またはそのようなページに挿入された  &lt;img&gt;, &lt;script&gt; またはその他の要素から参照できなくなりました。この制限は、信頼できないソースの中で定義された要素と、信頼された拡張機能によって追加された要素のいずれに対しても適用されます。もしそのような参照を明示的に許可する必要がある場合には、古いバージョンのFirefox と同じ結果を得るために、<code>contentaccessible</code> フラグを <code>yes</code> と指定してください。詳細は<span class="comment"> {{ bug(436989) }} を参照してください。</span></p>
+
+<p><code>contentaccessible</code> フラグはコンテントパッケージに対してのみ適用でき、ロケールまたはスキンの登録に対しては無視されます。しかしながら、マッチしたロケールおよびスキンのパッケージは、コンテントパッケージにも露出するでしょう。</p>
+
+<p><strong>注:</strong> 古いバージョンの Firefox は <code>contentaccessible</code> フラグを解釈しないため、 Firefox 3 とそれ以前のバージョンの Firefox の両方に対応するよう設計された拡張機能は、フォールバックのための指定を必要とするでしょう。例：</p>
+
+<pre style="white-space: pre-wrap;">content packagename chrome/path/
+content packagename chrome/path/ contentaccessible=yes
+</pre>
+
+<p><span class="comment">これは {{ bug(292789) }} のため、</span><span class="comment">Firefox 3 RC 1 において変更されました。</span></p>
+
+<h3 id="os" name="os">os</h3>
+
+<p>{{ Fx_minversion_inline(3) }} 拡張機能（およびテーマ）は、Firefoxが動作しているオペレーティングシステムに依存した異なる機能を提供することができます。値はそのプラットフォームの <a href="/ja/OS_TARGET" title="ja/OS_TARGET">OS_TARGET</a> の値と比較されます。</p>
+
+<pre class="eval">os=WINNT
+os=Darwin
+</pre>
+
+<p>OSの名前のより詳しいリストは<a href="/ja/OS_TARGET" title="ja/OS_TARGET">OS_TARGET</a>を参照してください。OSの名前は大文字小文字は区別されません。</p>
+
+<h3 id="osversion" name="osversion">osversion</h3>
+
+<p>{{ Fx_minversion_inline(3) }} 拡張機能あるいはテーマは動作しているオペレーティングシステムのバージョンによって異なる挙動を示す必要に迫られることがあります。例えば、あるテーマでMac OS X 10.5（以降）用に、10.4（以前）とは異なる外観を適用したい場合はこのようになります:</p>
+
+<pre class="eval">osversion&gt;=10.5
+</pre>
+
+<h3 id="abi" name="abi">abi</h3>
+
+<p>{{ Fx_minversion_inline(4) }} コンポーネントが特定の API に対してのみ互換性がある場合、この指定で ABI を記述する事ができます。例：</p>
+
+<pre>binary-component abi=WINNT_<code>x86-MSVC </code></pre>
+
+<p>より詳しい情報は <a href="/ja/XPCOM_ABI" title="ja/XPCOM ABI">XPCOM ABI</a> を参照してください。</p>
+
+<h3 id="platform_.28.E3.83.97.E3.83.A9.E3.83.83.E3.83.88.E3.83.95.E3.82.A9.E3.83.BC.E3.83.A0.E5.9B.BA.E6.9C.89.E3.83.91.E3.83.83.E3.82.B1.E3.83.BC.E3.82.B8.29" name="platform_.28.E3.83.97.E3.83.A9.E3.83.83.E3.83.88.E3.83.95.E3.82.A9.E3.83.BC.E3.83.A0.E5.9B.BA.E6.9C.89.E3.83.91.E3.83.83.E3.82.B1.E3.83.BC.E3.82.B8.29">platform (プラットフォーム固有パッケージ)</h3>
+
+<p>パッケージの中には、プラットフォーム固有を示すために専用のフラグでマークされているものがあります。 このようなパッケージでは、コンテント、スキン、ロケールのうちのいくつかのパートが、実行されているプラットフォームによって異なっているために、 「Windows と OS/2」、「Macintosh」、「{{ 訳語("Unix 系", "unix-lile") }}」のプラットフォームのために、3 セットの異なるファイルが含まれることになります。 例えば、ダイアログの「OK」と「キャンセル」ボタンの並び順は、プラットフォームによって異なります。 また同様にいくつかの項目の名前も異なっています。</p>
+
+<p>「platform」{{ 訳語("修飾子", "modifier") }}は、コンテントの登録の場合のみ{{ 訳語("解釈", "parse") }}され、ロケールとスキンの登録では行われません。 しかしながら、このフラグはパッケージの content、locale、skin のどのパートに対しても、指定されれば適用されます。</p>
+
+<p>そのパッケージがプラットフォーム固有であることを示すためには、 以下の例のように「platform」修飾子を「content」行のパス指定の後に置きます。</p>
+
+<pre class="eval">content global-platform jar:toolkit.jar!/toolkit/content/global-platform/ platform
+</pre>
+
+<p>これを作成するマニフェストで指定すると、global-platform ディレクトリ以下には、 <code>win</code> (Windows/OS2)、 <code>mac</code> (OS9/OSX)、 <code>unix</code> (それ以外の全て) のサブディレクトリを置く必要があります。 これらのサブディレクトリ以外に置かれた任意のファイルは、全て無視されます。</p>
+
+<h3 id="xpcnativewrappers" name="xpcnativewrappers">xpcnativewrappers</h3>
+
+<p>Chrome パッケージでは、{{ 訳語("悪意のある", "malicious") }}コンテンツにアクセスした場合に、それらからパッケージのコードを自動的に保護するために、 セキュリティのメカニズムである <a href="/ja/XPCNativeWrapper" title="ja/XPCNativeWrapper">XPCNativeWrapper</a> を使用するかどうかを決めることができます。 詳細については、<a href="/ja/Safely_accessing_content_DOM_from_chrome" title="ja/Safely_accessing_content_DOM_from_chrome">chrome から コンテントの DOM に安全にアクセスする方法</a>を参照してください。</p>
+
+<p>このフラグは Firefox 1.5 以前では初期状態で有効となっており、Firefox 4 までの間は、 <code>xpcnativewrappers=no</code> と指定することによって手動で無効化することができました。</p>
+
+<div class="geckoVersionNote">
+<p>{{ gecko_callout_heading("2.0") }}</p>
+
+<p>このフラグは Gecko 2.0 {{ geckoRelease("2.0") }} で廃止されたため、<code>XPCNativeWrapper</code> はどのような方法によっても無効化できなくなりました。このフラグ無しで動作するようにあなたのアドオンを更新するには以下を参考にしてください：</p>
+
+<ul>
+ <li>あなたのアドオンがコンテンツ領域のオブジェクトに適用された XBL のバインディングに依存している場合（XBL のバインディングによって追加された関数を呼んだりプロパティの値を取得・設定したりするためにはそうする必要がありました）、生のオブジェクトに触るためにそのオブジェクトの <a href="/ja/wrappedJSObject" title="ja/wrappedJSObject"><code>wrappedJSObject</code></a> プロパティを参照する必要があるでしょう。</li>
+ <li>Web ページの中で定義された関数を呼び出したりプロパティにアクセスしたりする必要がある場合 -- 例えば、あなたのアドオンで Web ページの中で定義された JavaScript の関数を呼ぶボタンを追加したい場合。</li>
+</ul>
+</div>
+
+<p>xpcnativewrappers フラグは、コンテントパッケージのみに適用され、 ロケールとスキンの登録では識別されません。</p>
+
+<h2 id="Chrome_.E3.83.9E.E3.83.8B.E3.83.95.E3.82.A7.E3.82.B9.E3.83.88.E3.81.AE.E4.BE.8B" name="Chrome_.E3.83.9E.E3.83.8B.E3.83.95.E3.82.A7.E3.82.B9.E3.83.88.E3.81.AE.E4.BE.8B">Chrome マニフェストの例</h2>
+
+<pre class="eval" style="white-space: pre-wrap;">content       necko                   jar:comm.jar!/content/necko/
+locale        necko       en-US       jar:en-US.jar!/locale/en-US/necko/
+content       xbl-marquee             jar:comm.jar!/content/xbl-marquee/
+content       pipnss                  jar:pipnss.jar!/content/pipnss/
+locale        pipnss      en-US       jar:en-US.jar!/locale/en-US/pipnss/
+# Firefox-only
+overlay <a class="external" rel="freelink">chrome://browser/content/pageInfo.xul</a>           <a class="external" rel="freelink">chrome://pippki/content/PageInfoOverlay.xul</a> application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+# SeaMonkey-only
+overlay <a class="external" rel="freelink">chrome://navigator/content/pageInfo.xul</a>         <a class="external" rel="freelink">chrome://pippki/content/PageInfoOverlay.xul</a> application={92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}
+overlay <a class="external" rel="freelink">chrome://communicator/content/pref/preftree.xul</a> <a class="external" rel="freelink">chrome://pippki/content/PrefOverlay.xul</a>
+content       pippki                  jar:pippki.jar!/content/pippki/
+locale        pippki      en-US       jar:en-US.jar!/locale/en-US/pippki/
+content       global-platform         jar:toolkit.jar!/content/global-platform/ platform
+skin          global      classic/1.0 jar:classic.jar!/skin/classic/global/
+override <a class="external" rel="freelink">chrome://global/content/netError.xhtml</a> jar:embedder.jar!/global/content/netError.xhtml
+content       inspector               jar:inspector.jar!/content/inspector/
+</pre>
+
+<h2 id=".E5.8F.A4.E3.81.84_contents.rdf_.E5.BD.A2.E5.BC.8F.E3.81.AE.E3.83.9E.E3.83.8B.E3.83.95.E3.82.A7.E3.82.B9.E3.83.88" name=".E5.8F.A4.E3.81.84_contents.rdf_.E5.BD.A2.E5.BC.8F.E3.81.AE.E3.83.9E.E3.83.8B.E3.83.95.E3.82.A7.E3.82.B9.E3.83.88">古い contents.rdf 形式のマニフェスト</h2>
+
+<p>プレインテキスト形式のマニフェストの導入 (Firefox 1.5 と Toolkit 1.8 で実施) より前には、"contents.rdf" という名称の RDF によるマニフェストが chrome の登録のために使用されていました。 この形式は{{ 訳語("非推奨", "deprecated") }}です。 しかしながら、バージョン2より前の SeaMonkey は、プレインテキスト形式のマニフェストをまだサポートしていないため、 Firefox 1.0 に対する後方互換性の維持や、Mozilla スイート への対応が必要な拡張機能では、contents.rdf マニフェストが必要になります。</p>
+
+<p>{{ gecko_minversion_note("1.9.2", "<code>contents.rdf</code> 形式のマニフェストファイルは Gecko 1.9.2 以降では利用できなくなりました。この形式を使用しているアドオンであっても、既にインストールされていた物は動作し続けますが、新たにインストールすることはできません。アドオンを削除してインストールし直す際は、プレインテキスト形式のマニフェストを使うようにアドオンが修正されていることを確かめて下さい。") }}</p>
+
+<h2 id="Toolkit_API_.E5.85.AC.E5.BC.8F.E3.83.AA.E3.83.95.E3.82.A1.E3.83.AC.E3.83.B3.E3.82.B9" name="Toolkit_API_.E5.85.AC.E5.BC.8F.E3.83.AA.E3.83.95.E3.82.A1.E3.83.AC.E3.83.B3.E3.82.B9"><a href="/ja/Toolkit_API" title="ja/Toolkit_API">Toolkit API</a> 公式リファレンス</h2>
+
+<p>{{ page("en-US/docs/Toolkit_API/Official_References") }}</p>

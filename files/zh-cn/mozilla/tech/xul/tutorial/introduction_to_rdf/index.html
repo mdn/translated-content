@@ -1,0 +1,109 @@
+---
+title: XUL_教程/RDF介绍
+slug: Mozilla/Tech/XUL/Tutorial/Introduction_to_RDF
+translation_of: Archive/Mozilla/XUL/Tutorial/Introduction_to_RDF
+---
+<p> </p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Tree_Box_Objects" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:Templates">下一页  »</a></p>
+</div><p></p>
+<p> </p>
+<p>    本章我们关注与RDF (资源描述框架).</p>
+<h3 id="Resource_Description_Framework" name="Resource_Description_Framework">资源描述框架</h3>
+<p>    我们可以使用 <a href="/en/XUL_Tutorial/Trees" title="en/XUL_Tutorial/Trees">tree</a> 元素呈现数据集，就像书签和邮件管理器一样。然而这样却使向 <a href="/en/XUL" title="en/XUL">XUL</a> 文件中直接添加数据变得很不方便。直接在XUL文件中修改书签变得十分困难。这就需要RDF 数据结构。</p>
+<p><a href="/en/RDF" title="en/RDF">    RDF</a> （资源描述框架）是一种用于储存像书签或邮件这样的资源的格式。其他形式的数据可以被编码为RDF，也可以有RDF创建其他形式的数据。这是 Mozilla 处理像书签、邮件、历史等的方法。Mozilla 为这些常用的数据提供了数据源，使我们很容易使用他们。</p>
+<p>    你可以使用任意的RDF数据源来填充树结构，或者仅把RDF指向一个存有数据的XML文件。这使得显示含有许多行的树变得非常容易。RDF 也可以填充其他的 XUL 元素比如列表及菜单，见下一章。</p>
+<p>    这里是关于RDF的一个非常简略的概述，希望看到更为详尽的内容请访问XULPlanet上的 <a class="external" href="http://www.xulplanet.com/tutorials/mozsdk/rdfstart.php">Introduction to the RDF Model</a>。如果你刚刚接触RDF请继续向下阅读。</p>
+<p>    更多信息参见 <a class="external" href="http://www.w3.org/RDF/">RDF specification</a>.</p>
+<h4 id="RDF.2FXML" name="RDF.2FXML">RDF/XML</h4>
+<p>    RDF 包含这数据的图表示形式。 RDF/XML 时一种用于表示RDF数据的XML语言。它包含非常简单的元素集，下面的例子显示一个简单的RDF模板。</p>
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;RDF:RDF
+  xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"&gt;
+  ...
+&lt;/RDF:RDF&gt;
+</pre>
+<p>    与XUL头有些相似，<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> 元素被 <code>RDF</code> 元素代替。同样为RDF定义了名空间，在RDF元素中将填充一些数据。可以在Mozilla文件夹中找到一些 RDF/XML 文件的例子，他们以rdf作为后缀。</p>
+<h4 id="RDF_database" name="RDF_database">RDF 数据库</h4>
+<p>    让我们来以有RDF产生的书签列表为例。书签列表包含一系列记录，每项记录都有一系列数据相关联，比如书签标题，URL，访问日期等。</p>
+<p>    把书签当作数据库来考虑，这个数据库是一个含有多个域的表格。这个列表需要分级，因为我们需要利用文件夹来分组书签。每一个域都来源与RDF数据库，都由名字相关联。名字用URI描述。</p>
+<p>    例如Mozilla书签列表的名字的RUI描述如下：</p>
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td>Name</td>
+   <td><span class="nowiki">http://home.netscape.com/NC-rdf#Name</span></td>
+   <td>Bookmark name</td>
+  </tr>
+  <tr>
+   <td>URL</td>
+   <td><span class="nowiki">http://home.netscape.com/NC-rdf#URL</span></td>
+   <td>URL to link to</td>
+  </tr>
+  <tr>
+   <td>Description</td>
+   <td><span class="nowiki">http://home.netscape.com/NC-rdf#Description</span></td>
+   <td>Bookmark description</td>
+  </tr>
+  <tr>
+   <td>Last Visited</td>
+   <td><span class="nowiki">http://home.netscape.com/WEB-rdf#LastVisitDate</span></td>
+   <td>Date of last visit</td>
+  </tr>
+ </tbody>
+</table>
+<p>    这些是按照名空间加域名构造的。下一章，我们利用它来自动填充数据域。注意访问日期的名空间与其他的不同。</p>
+<h4 id="RDF.2FXML_file_example" name="RDF.2FXML_file_example">RDF/XML 文件样例</h4>
+<p>    下面是一个RDF/XML文件，有三条记录和三个域。</p>
+<pre>&lt;RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:ANIMALS="http://www.some-fictitious-zoo.com/rdf#"&gt;
+
+  &lt;RDF:Seq about="http://www.some-fictitious-zoo.com/all-animals"&gt;
+    &lt;RDF:li&gt;
+       &lt;RDF:Description about="http://www.some-fictitious-zoo.com/mammals/lion"&gt;
+         &lt;ANIMALS:name&gt;Lion&lt;/ANIMALS:name&gt;
+         &lt;ANIMALS:species&gt;Panthera leo&lt;/ANIMALS:species&gt;
+         &lt;ANIMALS:class&gt;Mammal&lt;/ANIMALS:class&gt;
+       &lt;/RDF:Description&gt;
+    &lt;/RDF:li&gt;
+    &lt;RDF:li&gt;
+       &lt;RDF:Description about="http://www.some-fictitious-zoo.com/arachnids/tarantula"&gt;
+         &lt;ANIMALS:name&gt;Tarantula&lt;/ANIMALS:name&gt;
+         &lt;ANIMALS:species&gt;Avicularia avicularia&lt;/ANIMALS:species&gt;
+         &lt;ANIMALS:class&gt;Arachnid&lt;/ANIMALS:class&gt;
+       &lt;/RDF:Description&gt;
+    &lt;/RDF:li&gt;
+    &lt;RDF:li&gt;
+       &lt;RDF:Description about="http://www.some-fictitious-zoo.com/mammals/hippopotamus"&gt;
+         &lt;ANIMALS:name&gt;Hippopotamus&lt;/ANIMALS:name&gt;
+         &lt;ANIMALS:species&gt;Hippopotamus amphibius&lt;/ANIMALS:species&gt;
+         &lt;ANIMALS:class&gt;Mammal&lt;/ANIMALS:class&gt;
+       &lt;/RDF:Description&gt;
+    &lt;/RDF:li&gt;
+  &lt;/RDF:Seq&gt;
+&lt;/RDF:RDF&gt;
+</pre>
+<p>    对每一种动物使用一条记录描述。每一个 <code>RDF:Description</code> 标签描述一条记录。每条记录定义了三个域：<code>name</code>， <code>species</code> ，<code>class</code>。虽然没有必要让每一条记录拥有相同的域，但是最好如此。</p>
+<p>    三个域都在 <code>ANIMALS</code>名空间下， <code>ANIMALS名空间在</code><code>RDF标签中定义<span style="font-family: Verdana,Tahoma,sans-serif;">。选择这个名字是因为它的意思，但完全可以选择其他名字。这里的名空间定义是有用的，因为如果使用样式表</span></code><code>class</code> 域可能发生冲突。</p>
+<p>     <code>Seq</code> 和 <code>li</code> 元素在列表中区分每一条记录，与HTML 列表中的定义很相似。 <code>Seq</code> 指明记录是有序的紧挨着的，对于无序内容使用 <code>Bag</code> 标签， <code>Alt 用于指明其中的记录只能选择其一</code>(如映射 URL)。</p>
+<p>    在XUL文件中可以通过名空间和域名来引用其中的数据，在上例中，下面的URI描述其中的数据域：</p>
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td>Name</td>
+   <td><span class="nowiki">http://www.some-fictitious-zoo.com/rdf#name</span></td>
+  </tr>
+  <tr>
+   <td>Species</td>
+   <td><span class="nowiki">http://www.some-fictitious-zoo.com/rdf#species</span></td>
+  </tr>
+  <tr>
+   <td>Class</td>
+   <td><span class="nowiki">http://www.some-fictitious-zoo.com/rdf#class</span></td>
+  </tr>
+ </tbody>
+</table>
+<p>    记下来，看看如何使用RDF来填充XUL数据。</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Tree_Box_Objects" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:Templates">下一页  »</a></p>
+</div><p></p>

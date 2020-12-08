@@ -1,0 +1,191 @@
+---
+title: Référence des outils pour Gaia
+slug: Archive/B2G_OS/Developing_Gaia/Gaia_tools_reference
+tags:
+  - Firefox OS
+  - Gaia
+  - Outils
+  - Reference
+  - Référence(2)
+translation_of: Archive/B2G_OS/Developing_Gaia/Gaia_tools_reference
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/fr/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details open>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/fr/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<div class="summary">
+<p>Cet article recense quelques outils pratiques pour travailler avec Gaia.</p>
+</div>
+
+<div class="note">
+<p><strong>Remarque</strong> : Des trucs et astuces très utiles pour le débogage de Firefox OS sont disponibles sur la <a href="https://wiki.mozilla.org/B2G/QA/Tips_And_Tricks">page B2G QA Tips and tricks (en anglais)</a>.</p>
+</div>
+
+<h2 id="MozITP">MozITP</h2>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Automated_testing/MozITP">MozITP</a> est un paquet tout-en-un regroupant des outils dédiés à Gaia. Il contient un outil de flashage (b2g_util), b2g-installer et un environnement de Test d'Intégration Gaia préconfigurés. Vous pouvez utiliser MozITP pour essayer les Tests d'Intégration Gaia sur Mulet, un émulateur ou sur de véritables appareils. Vous pouvez également flasher des builds à partir de TaskCluster ainsi que des builds sans blobs avec b2g-installer.</p>
+
+<h2 id="Foxbox">Foxbox</h2>
+
+<p><a href="https://github.com/gasolin/foxbox">Foxbox</a> est un script automatique de construction qui génère un environnement de développement Gaia complet. Cet environnement comprend une version de Gaia hébergée dans une VM, laquelle est également accessible depuis la machine hôte (ce qui signifie que vous pouvez toujours travailler avec pour utiliser votre éditeur de texte préféré, etc.) Cela fonctionne sur toutes les plates-formes, mais devrait surtout être pratique pour les utilisateurs de Windows car la procédure de compilation de Gaia ne fonctionne pas sur un environnement Windows standard.</p>
+
+<h2 id="Outils_de_sauvegarderestaurationflashage">Outils de sauvegarde/restauration/flashage</h2>
+
+<p>Outils pour sauvegarder votre profil, etc.</p>
+
+<h3 id="b2g_util">b2g_util</h3>
+
+<p>Le <a href="https://pypi.python.org/pypi/b2g_util">paquet d'outils b2g_util</a> fournit un ensemble d'outils pour vous aider avec le débogage de Firefox OS. Ce paquet permet de :</p>
+
+<ul>
+ <li>Vérifier la version de b2g installée</li>
+ <li>Récupérer le rapport de plantage</li>
+ <li>Réinitialiser l'appareil</li>
+ <li>Autoriser/interdire les applications certifiées dans WebIDE</li>
+ <li>Sauvegarder/restaurer votre profil (incomplet à l'heure actuelle, mais une solution de contournement est proposée pour l'instant.)</li>
+</ul>
+
+<p>Pour l'installer, vous avez besoin au préalable de Python 2.7, <a href="https://pypi.python.org/pypi/pip/">pip</a>, et <a href="https://pypi.python.org/pypi/setuptools">setuptools</a>. Vous pouvez ensuite lancer :</p>
+
+<pre class="brush: bash">sudo pip install -U b2g_util</pre>
+
+<p>Une fois l'installation terminée, vous pouvez connecter votre appareil et faire un test en exécutant la commande suivante pour obtenir la version de b2g installée :</p>
+
+<pre class="brush: bash">b2g_check_versions</pre>
+
+<h3 id="pc-sync-tool">pc-sync-tool</h3>
+
+<p><a href="https://marketplace.firefox.com/app/pcsync">pc-sync-tool</a> est une application disponible sur le Marketplace Firefox. Elle permet de sauvegarder vos données/profils. Elle s'utilise conjointement avec l'<a href="http://download.firefox.com.cn/ffosassistant.xpi">extension Firefox OS assistant</a> pour ordinateur.</p>
+
+<h3 id="Sauvegarde_et_restauration_de_profil">Sauvegarde et restauration de profil</h3>
+
+<p>Pour sauvegarder et restaurer les données, vous pouvez utiliser notre outil  <code>backup_restore_profile.py</code>, présent dans le <a href="https://github.com/Mozilla-TWQA/B2G-flash-tool">dépôt Git B2G-flash-tool</a>.</p>
+
+<ol>
+ <li>Cloner le dépôt précité (<code>git clone https://github.com/Mozilla-TWQA/B2G-flash-tool</code>.)</li>
+ <li>S'assurer que le téléphone est branché à l'ordinateur en USB, et que ADB (voir <a href="#Important_steps_to_follow_first">Important steps to follow first</a> ci-dessus) et Debugging via USB (dans les <a href="/fr/Firefox_OS/Déboguer/Les_paramètres_développeurs">Paramètres développeurs</a> de votre appareil) sont activés.</li>
+ <li>cd dans le répertoire cloné</li>
+</ol>
+
+<p>Pour sauvegarder les données :</p>
+
+<pre class="brush: bash">python backup_restore_profile.py -b</pre>
+
+<p>Cela devrait enregistrer le profil de votre appareil dans un répertoire appelé <code>mozilla-profile</code>, situé dans le même répertoire que le script. Pour restaurer votre sauvegarde :</p>
+
+<pre class="brush: bash">python backup_restore_profile.py -r</pre>
+
+<div class="note">
+<p><strong>Remarqe </strong>: Pour afficher la liste complète des options de l'outil, exécutez-le avec l'argument <code>-h</code> ou <code>--help</code>.</p>
+</div>
+
+<h3 id="B2G-flash-tool">B2G-flash-tool</h3>
+
+<p>Le dépôt <a href="https://github.com/Mozilla-TWQA/B2G-flash-tool">B2G-flash-tool</a> contient également plusieurs autres outils pour flasher rapidement de nouvelles versions sur les appareils et effectuer d'autres tâches similaires — idéal pour le contrôle qualité. Par exemple :</p>
+
+<ul>
+ <li><a href="https://github.com/Mozilla-TWQA/B2G-flash-tool/blob/master/flash_pvt.py">flash_pvt.py</a> — Le principal outil pour flasher de nouvelles builds.</li>
+ <li><a href="https://github.com/Mozilla-TWQA/B2G-flash-tool/blob/master/change_channel.sh">change_channel.sh</a> — Permet de changer rapidemet le canal de mise à jour du téléphone.</li>
+ <li><a href="https://github.com/Mozilla-TWQA/B2G-flash-tool/blob/master/check_versions.py">check_versions.py</a> — Retourne la version de B2G installée sur un appareil.</li>
+ <li><a href="https://github.com/Mozilla-TWQA/B2G-flash-tool/blob/master/shallow_flash.sh">shallow_flash.sh</a> — Shallow flashe Gaia et/ou Gecko sur un appareil (<a href="https://github.com/Mozilla-TWQA/B2G-flash-tool/blob/master/shallow_flash.bat">shallow_flash.bat</a> est aussi disponible pour Windows).</li>
+ <li><a href="https://github.com/Mozilla-TWQA/B2G-flash-tool/blob/master/update_system_fonts.sh">update_system_fonts.sh</a> — Met à jour les polices de caractères systèmes sur B2G v2.1 (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1032874" title="FIXED: [Flame][2.1] latest nightly update changed fonts to something which looks like Courier New">bug 1032874</a>).</li>
+</ul>
+
+<h2 id="Outils_de_débogage">Outils de débogage</h2>
+
+<p>Outils pour effectuer des tâches de débogage.</p>
+
+<h3 id="WebIDE">WebIDE</h3>
+
+<p>L'outil <a href="/en-US/docs/Tools/WebIDE">WebIDE</a> de Firefox mérite une mention spéciale ici — alors qu'il permet de tester et déboguer des applications, il se révèle également utile pour surveiller les performances, l'utilisation de la mémoire, etc. (voir <a href="/en-US/docs/Tools/WebIDE#Monitoring_performance">Monitoring performance</a>.)</p>
+
+<h3 id="get_crashreports.sh">get_crashreports.sh</h3>
+
+<p>Présent dans le dépôt <a href="https://github.com/Mozilla-TWQA/B2G-flash-tool">B2G-flash-tool</a>, <a href="https://github.com/Mozilla-TWQA/B2G-flash-tool/blob/master/get_crashreports.sh">get_crashreports.sh</a> récupère les rapports de plantage de l'appareil (<code>/data/b2g/mozilla/Crash Reports/</code>.)</p>
+
+<h3 id="Outils_du_répertoire_racine_de_B2G">Outils du répertoire racine de B2G</h3>
+
+<p>Un certain nombre de scripts présents dans le <a href="https://github.com/mozilla-b2g/B2G">répertoire racine de B2G</a> permettent d'effectuer diverses opérations utiles de débogage, parmi lesquels :</p>
+
+<ul>
+ <li><a href="https://github.com/mozilla-b2g/B2G/blob/master/run-gdb.sh">run-gdb.sh</a>: Lance le débogueur en ligne de commande gdb (voir <a href="/en-US/Firefox_OS/Debugging/Debugging_B2G_using_gdb">Debugging B2G using gdb and related tools</a> pour plus de détails.)</li>
+ <li><a href="https://github.com/mozilla-b2g/B2G/blob/master/run-valgrind.sh">run-valgrind.sh</a>: Lance le débogueur Valgrind (voir <a href="/en-US/Firefox_OS/Debugging/Debugging_B2G_using_valgrind">Debugging B2G using Valgrind</a> pour plus d'informations.)</li>
+ <li><a href="https://github.com/mozilla-b2g/B2G/blob/master/watch-procrank.sh">watch-procrank.sh</a>: Renvoie des informations sur la consommation mémoire via l'outil procrank.</li>
+</ul>
+
+<h2 id="Outils_divers">Outils divers</h2>
+
+<p>D'autres outils utiles se trouvent dans le répertoire <a href="https://github.com/mozilla-b2g/gaia/tree/master/tools">gaia/tools/</a> et dans d'autres endroits</p>
+
+<h3 id="png_recompress.sh">png_recompress.sh</h3>
+
+<p>Situé dans <a href="https://github.com/mozilla-b2g/gaia/tree/master/tools">gaia/tools/</a>, <a href="https://github.com/mozilla-b2g/gaia/blob/master/tools/png_recompress.sh">png_recompress.sh</a> est un outil de compression d'images PNG. Vous pouvez le lancer avec une commande de la forme suivante :</p>
+
+<pre class="brush: bash">$ ./tools/png_recompress.sh -v bg.png</pre>
+
+<p>Cela supprimera les méta-données inutiles et compressera davantage le png ; il peut économiser jusqu'à 99,5% sur la taille du fichier, ce qui aura un impact vraiment significatif sur la taille du ZIP de l'application ainsi que sur l'empreinte mémoire.</p>
+
+<h3 id="svg_recompress.sh">svg_recompress.sh</h3>
+
+<p>Situé dans <a href="https://github.com/mozilla-b2g/gaia/tree/master/tools">gaia/tools/</a>, <a href="https://github.com/mozilla-b2g/gaia/blob/master/tools/svg_recompress.sh">svg_recompress.sh</a> est un outil de compression SVG.</p>
+
+<h3 id="cache_sync.py">cache_sync.py</h3>
+
+<p>Situé dans <a href="https://github.com/mozilla-b2g/gaia/tree/master/tools">gaia/tools/</a>, <a href="https://github.com/mozilla-b2g/gaia/blob/master/tools/cache_sync.py">cache_sync.py</a> synchronise le cache hors-ligne d'une application externe avec une structure arborescente locale. Il faut le lancer depuis le répertoire de base d'une application située dans gaia/external-apps. Il construit un répertoire pour chaque origine connue du cache hors-ligne.</p>
+
+<h3 id="edit_prefs.sh">edit_prefs.sh</h3>
+
+<p>Situé dans le <a href="https://github.com/mozilla-b2g/B2G">répertoire racine de B2G</a>, <a href="https://github.com/mozilla-b2g/B2G/blob/master/edit-prefs.sh">edit_prefs.sh</a> offre une méthode simple pour récupérer les préférences d'un appareil.</p>
+
+<p> </p>

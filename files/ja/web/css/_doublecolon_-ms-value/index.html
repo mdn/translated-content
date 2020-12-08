@@ -1,0 +1,103 @@
+---
+title: '::-ms-value'
+slug: 'Web/CSS/::-ms-value'
+tags:
+  - CSS
+  - Microsoft 拡張
+  - Reference
+  - 標準外
+  - 疑似要素
+translation_of: 'Archive/Web/CSS/::-ms-value'
+---
+<div>{{non-standard_header}}</div>
+
+<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>::-ms-value</code></strong> <a href="/ja/docs/Web/CSS/Pseudo-elements">疑似要素</a>は <a href="/ja/docs/Web/CSS/Microsoft_CSS_extensions">Microsoft 拡張</a>で、テキストまたはパスワードの {{HTMLElement("input")}} コントロールの値、または {{HTMLElement("select")}} コントロールの中身に規則を適用します。</p>
+
+<h2 id="Allowable_properties" name="Allowable_properties">許可されているプロパティ</h2>
+
+<p>以下の CSS プロパティのみが <code>::-ms-value</code> をセレクターに含む規則で使用することができます。</p>
+
+<ul>
+ <li>{{cssxref("background-clip")}}</li>
+ <li>{{cssxref("background-color")}}</li>
+ <li>{{cssxref("background-image")}}</li>
+ <li>{{cssxref("background-origin")}}</li>
+ <li>{{cssxref("background-repeat")}}</li>
+ <li>{{cssxref("background-size")}}</li>
+ <li>{{cssxref("border-bottom-color")}}</li>
+ <li>{{cssxref("border-bottom-left-radius")}}</li>
+ <li>{{cssxref("border-bottom-right-radius")}}</li>
+ <li>{{cssxref("border-bottom-style")}}</li>
+ <li>{{cssxref("border-bottom-width")}}</li>
+ <li>{{cssxref("border-left-color")}}</li>
+ <li>{{cssxref("border-left-style")}}</li>
+ <li>{{cssxref("border-left-width")}}</li>
+ <li>{{cssxref("border-right-color")}}</li>
+ <li>{{cssxref("border-right-style ")}}</li>
+ <li>{{cssxref("border-right-width")}}</li>
+ <li>{{cssxref("border-top-color")}}</li>
+ <li>{{cssxref("border-top-left-radius")}}</li>
+ <li>{{cssxref("border-top-right-radius ")}}</li>
+ <li>{{cssxref("border-top-style")}}</li>
+ <li>{{cssxref("border-top-width")}}</li>
+ <li>{{cssxref("box-shadow")}}</li>
+ <li>{{cssxref("box-sizing")}}</li>
+ <li>{{cssxref("color")}}</li>
+ <li>{{cssxref("cursor")}}</li>
+ <li>{{cssxref("display")}} (<code>block</code>, <code>inline-block</code>, <code>none</code> の値)</li>
+ <li>{{cssxref("@font-face")}}</li>
+ <li>{{cssxref("font-size")}}</li>
+ <li>{{cssxref("font-style")}}</li>
+ <li>{{cssxref("font-weight")}}</li>
+ <li>{{cssxref("height")}}</li>
+ <li>{{cssxref("margin-bottom")}}</li>
+ <li>{{cssxref("margin-left")}}</li>
+ <li>{{cssxref("margin-right")}}</li>
+ <li>{{cssxref("margin-top")}}</li>
+ <li><code>-ms-background-position-x</code></li>
+ <li><code>-ms-background-position-y</code></li>
+ <li>{{cssxref("-ms-high-contrast-adjust")}}</li>
+ <li>{{cssxref("opacity")}}</li>
+ <li>{{cssxref("outline-color")}}</li>
+ <li>{{cssxref("outline-style")}}</li>
+ <li>{{cssxref("outline-width")}}</li>
+ <li>{{cssxref("padding-bottom")}}</li>
+ <li>{{cssxref("padding-left")}}</li>
+ <li>{{cssxref("padding-right")}}</li>
+ <li>{{cssxref("padding-top")}}</li>
+ <li>{{cssxref("transform")}}</li>
+ <li>{{cssxref("transform-origin")}}</li>
+ <li>{{cssxref("visibility")}}</li>
+ <li>{{cssxref("width")}}</li>
+</ul>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="syntaxbox">  {{csssyntax}}
+</pre>
+
+<h2 id="Example" name="Example">例</h2>
+
+<pre class="brush: css">input::-ms-value {
+  color: lime;
+  font-style: italic;
+}</pre>
+
+<p>既定のスタイルを無効にするには、以下のようにします。</p>
+
+<pre class="brush: css">select::-ms-value {
+  background-color: transparent;
+  color: inherit;
+}</pre>
+
+<h2 id="Specifications" name="Specifications">仕様書</h2>
+
+<p>どの仕様書でも定義されていません。</p>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+
+<p class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力したいのであれば、 <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</p>
+
+<p>{{Compat("css.selectors.-ms-value")}}</p>
+
+<div>{{CSSRef}}</div>

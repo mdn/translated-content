@@ -1,0 +1,94 @@
+---
+title: Embedding Gecko
+slug: Mozilla_Embedding_FAQ/Embedding_Gecko
+tags:
+  - Embedding Mozilla
+  - Mozilla_Embedding_FAQ
+translation_of: Mozilla/Gecko/Embedding_Mozilla/FAQ/Embedding_Gecko
+---
+<p>
+</p>
+<h2 id=".E7.AC.AC_2_.E7.AB.A0:_Gecko_.E3.81.AE.E7.B5.84.E3.81.BF.E8.BE.BC.E3.81.BF"> 第 2 章: Gecko の組み込み </h2>
+<h3 id=".E7.B5.84.E3.81.BF.E8.BE.BC.E3.82.80.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.AE.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.8C.E5.BF.85.E8.A6.81.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> 組み込むにはどのファイルが必要ですか？ </h3>
+<p>今のところ Mozilla ブラウザソースツリー全体をダウンロードしてビルドしなくてはなりません。それから組み込むアプリケーションで必要とするバイナリファイルを選択してください。ナイトリーの組み込みビルドはファイルマニフェストによって自動的に生成されますのでそこから探し始めるといいでしょう。
+</p>
+<h3 id=".E7.B5.84.E3.81.BF.E8.BE.BC.E3.81.BF.E3.83.93.E3.83.AB.E3.83.89.E3.81.AF.E3.81.A9.E3.81.AE.E3.82.88.E3.81.86.E3.81.AB.E4.BD.9C.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> 組み込みビルドはどのように作るのですか？ </h3>
+<p>まず <a href="ja/Build_Documentation">Mozilla をビルド</a> し、それから以下のコマンドを実行します。
+</p>
+<pre>cd mozilla/embedding/config
+make
+</pre>
+<p>注: objdir を使う場合は、代わりに mozilla/&lt;objdir&gt;/embedding/config に移動 (cd) し、そこで make します。
+</p><p>これはサンプルマニフェストによって指定されたファイルと chrome を含む mozilla/dist/Embed ディレクトリを作成します。テストアプリケーション、Unix では TestGtkEmbed、Win32 の場合は<code>MFCEmbed</code> を走らせれば、このサンプルビルドをテストすることができます。Unix の <code>TestGtkEmbed</code> を走らせるには、以下のコマンドを実行します。
+</p>
+<pre>cd mozilla/dist/Embed
+./run-mozilla.sh ./TestGtkEmbed
+</pre>
+<h3 id=".E7.B5.84.E3.81.BF.E8.BE.BC.E3.81.BF.E3.83.87.E3.82.A3.E3.82.B9.E3.83.88.E3.83.AA.E3.83.93.E3.83.A5.E3.83.BC.E3.82.B7.E3.83.A7.E3.83.B3.E3.81.AF.E3.81.A9.E3.81.AE.E3.82.88.E3.81.86.E3.81.AB.E4.BD.9C.E3.82.89.E3.82.8C.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> 組み込みディストリビューションはどのように作られるのですか？ </h3>
+<p>組み込みビルドのプロセスを見るには {{ Source("embedding/config/") }} を覗いてください。この basebrowser-win (または basebrowser-unix など) ファイルが、どのファイルをコピーする必要があるのかを決定しています。また、embed-jar.mn ファイルがどの chrome を必要とするのかを指定しています。
+</p><p>注意してほしいのですが、このサンプルには「典型的な」ファイルのサブセットしか含まれていません。製品で必要とする機能によっては、basebrowser -foo (この foo には win, unix またはそのほか適切なものが入ります) にファイルを追加したり、そこから削除したりしてください。あるいは、basebrowser-foo に追加して読み込まれる独自の client-foo ファイルを書いて、これらのファイルを補うこともできます。
+</p><p>例えば、FTP を必要としないのであれば「necko2」ライブラリを取り除くことができます。Mozilla ブラウザのグローバル履歴機能を利用するのであれば「appcomps」と「mork」ライブラリを付け加える必要があります。
+</p><p>組み込み配布の {{ Source("embedding/config/readme.html", "readme ファイル") }} にさらに詳しい情報があります。
+</p><p><small>TODO: 機能 &lt;-&gt; ファイルのより完全な図を提供すること</small>
+</p>
+<h3 id=".E3.81.AA.E3.81.9C.E3.82.A2.E3.83.97.E3.83.AA.E3.82.B1.E3.83.BC.E3.82.B7.E3.83.A7.E3.83.B3.E3.81.A8.E4.B8.80.E7.B7.92.E3.81.AB_XPT_.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.82.E9.85.8D.E5.B8.83.E3.81.99.E3.82.8B.E5.BF.85.E8.A6.81.E3.81.8C.E3.81.82.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> なぜアプリケーションと一緒に XPT ファイルも配布する必要があるのですか？ </h3>
+<p>XPT ファイルとは XPCOM タイプのライブラリであり、クロススレッド整理ルーチンによって使用されるインターフェースのバイナリ定義とオブジェクトを呼び出すための JavaScript を含んでいます。言い換えると、Gecko の正しい動作を保障するために、DLL と同じくらい必要不可欠なものです。
+</p><p>XPT ファイルは、xpt_link tool を使用することによって互いに結びつけることができ、これによってクラッターを減らし、起動時のパフォーマンスを改善することができます。これを目的とし た特別の perl スクリプトがあり、{{ Source("xpinstall/packager/xptlink.pl", "こちら") }} で参照できます。
+</p>
+<h3 id="Gecko_.E3.81.AE.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.BC.E3.83.95.E3.82.A7.E3.83.BC.E3.82.B9.E3.81.AE.E5.A4.89.E6.9B.B4.E3.81.AB.E3.81.A4.E3.81.84.E3.81.A6.E3.81.84.E3.81.8F.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.99.E3.82.8C.E3.81.B0.E3.82.88.E3.81.84.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> Gecko のインターフェースの変更についていくにはどうすればよいですか？ </h3>
+<p>Gecko の変更に影響を受けたくないのであれば、idl ディスクリプションで明確に FROZEN とマークされているインターフェースと API のみを使用してください。次の問い合わせで大抵の Frozen (凍結された) インターフェースが見つかるはずです: {{ LXRSearch("search", "string", "us+FROZEN", "Frozen Interface and APIs") }}。インターフェースは常にレビューと固定がなされていて、組み込み開発者の望むほとんどをカバーしています。
+</p><p>Unfrozen (凍結されていない) インターフェースを使用することもできます (これはオープンソースですからあなたを止めることはできません！)。さらに言えばこのコードの中心部分にさえ到達することができますが、その場合は自分の責任において行ってください。Mozilla の今後のリリースではこれらのインターフェースが変更されるかもしれず、その結果あなたのソースとバイナリが壊れるかもしれません。
+</p><p>さらに詳しい情報は <a class="external" href="http://www.mozilla.org/projects/embedding/embedapiref/embedapiTOC.html">Embedding API Reference</a> を参照してください。
+</p>
+<h3 id=".E3.81.9D.E3.82.8C.E3.81.AF.E5.B0.86.E6.9D.A5.E3.81.AE_GRE_.2F_Gecko_.2F_Mozilla_.E3.81.AE.E3.81.99.E3.81.B9.E3.81.A6.E3.81.AE.E3.83.90.E3.83.BC.E3.82.B8.E3.83.A7.E3.83.B3.E3.81.A7.E7.A7.81.E3.81.8C.E3.82.B3.E3.83.B3.E3.83.91.E3.82.A4.E3.83.AB.E3.81.97.E3.81.9F.E8.A3.BD.E5.93.81.E3.81.8C.E5.8B.95.E3.81.8F.E3.81.A8.E3.81.84.E3.81.86.E6.84.8F.E5.91.B3.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> それは将来の GRE / Gecko / Mozilla のすべてのバージョンで私がコンパイルした製品が動くという意味ですか？ </h3>
+<p>凍結されたインターフェースを使用している限り、その答えは「ほとんどのものは動く」です。残念ながら、vtable レイアウトはコンパイラによって異なることがあります。これは主に gcc のような Linux のコンパイラに影響を及ぼします。Linux のコンパイラは過去 2、3 年のうちに 1 回以上その vtable レイアウトを変更しました。<a href="ja/Binary_compatibility">バイナリ互換性</a> にあるドキュメントを参照してください。
+</p>
+<h3 id=".E3.82.B5.E3.83.9D.E3.83.BC.E3.83.88.E3.81.95.E3.82.8C.E3.81.A6.E3.81.84.E3.82.8B.E3.81.AE.E3.81.AF.E3.81.A9.E3.81.AE.E3.83.97.E3.83.A9.E3.83.83.E3.83.88.E3.83.95.E3.82.A9.E3.83.BC.E3.83.A0.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> サポートされているのはどのプラットフォームですか？ </h3>
+<p>端的にいえば、Mozilla が動くのであれば Gecko も動きますが、組み込みに関しては次の 3 つの主要なプラットフォームに集中しています。
+</p>
+<ul><li> Windows (95 は？ですが、98 以降は間違いなく動きます)
+</li><li> Linux (おそらく X-Window ベースの他のほとんどの Unix とその亜種でも動きます)
+</li><li> Macintosh OS X。MacOS 8.6 と 9 のサポートは Mozilla プロジェクトの移植部門にとっては価値のないものになってしまったので積極的な作業は行われなくなりました。
+</li></ul>
+<h3 id=".E7.B5.84.E3.81.BF.E8.BE.BC.E3.81.BF.E3.83.93.E3.83.AB.E3.83.89.E3.81.AF_HTTPS_.E3.81.AE.E3.82.88.E3.81.86.E3.81.AA.E5.AE.89.E5.85.A8.E3.81.AA.E3.83.97.E3.83.AD.E3.83.88.E3.82.B3.E3.83.AB.E3.82.92.E3.82.B5.E3.83.9D.E3.83.BC.E3.83.88.E3.81.97.E3.81.A6.E3.81.84.E3.81.BE.E3.81.99.E3.81.8B.EF.BC.9F"> 組み込みビルドは HTTPS のような安全なプロトコルをサポートしていますか？ </h3>
+<p>はい。組み込みには PSM がサポートされています。
+</p>
+<h3 id=".E7.A7.81.E3.81.AE.E3.82.A2.E3.83.97.E3.83.AA.E3.82.B1.E3.83.BC.E3.82.B7.E3.83.A7.E3.83.B3.E3.81.AF_Gecko_.E3.81.A8.E3.81.A9.E3.81.AE.E3.82.88.E3.81.86.E3.81.AB.E3.82.84.E3.82.8A.E5.8F.96.E3.82.8A.E3.81.99.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> 私のアプリケーションは Gecko とどのようにやり取りするのですか？ </h3>
+<p>組み込み API は、組み込まれたアプリケーションを制御する一連のインターフェースと、組み込まれたブラウザから非同期信号を受け取るためにその API を持つアプリケーションが必ず実装する別の一連のインターフェースを提供します。
+</p><p><small>TODO：jud の画像を挿入する？</small>
+</p>
+<h3 id="..._.E3.81.AA.E3.81.97.E3.81.A7.E7.B5.84.E3.81.BF.E8.BE.BC.E3.82.80.E3.81.93.E3.81.A8.E3.81.AF.E3.81.A7.E3.81.8D.E3.81.BE.E3.81.99.E3.81.8B.EF.BC.9F"> ... なしで組み込むことはできますか？ </h3>
+<p>(さらによくある質問のいくつか)
+</p>
+<ul><li> FTP サポート？ はい。
+</li><li> HTTPS サポート？ はい。
+</li><li> Network サポート？ いいえ、でもそのうち。
+</li><li> XUL サポート？ いいえ、でもそのうち、はい。
+</li><li> JavaScript サポート？ いいえ、でもそのうち。
+</li><li> CSS サポート？ いいえ、今後もありません。
+</li><li> DOM サポート？ いいえ、おそらく今後もないです。
+</li><li> XML サポート？ いいえ、おそらく今後もないです。
+</li><li> 国際文字セット？ はい。
+</li><li> Java サポート？ はい。
+</li></ul>
+<h3 id="Mozilla_.E3.81.AE_HTML_.E3.82.A8.E3.83.87.E3.82.A3.E3.82.BF.E3.81.AF.E7.B5.84.E3.81.BF.E8.BE.BC.E3.82.81.E3.81.BE.E3.81.99.E3.81.8B.EF.BC.9F"> Mozilla の HTML エディタは組み込めますか？ </h3>
+<p>いくらかは。最新の知らせによれば、ネイティブのアプリケーションにエディタを組み込むことは可能です。コマンド処理 API を通じてコマンド処理やアップデートも可能です。しかしいくつか欠けている機能 (例えば、エディタタイプのコントロール、HTML の挿入と引き出し) があります。加えて、Mike Judge が長らく待たれていたパッチ (1.0 での変更を逃してしまい、大きく遅れていました) を当てるので、コマンド処理 API はまもなく変更されます。
+</p><p>資料が欠けています。これは大部分が API の変更が未定なためです。<a href="ja/Embedding_the_Editor">エディタの組み込み</a> のページに詳しい情報がありますので参照してください。
+</p>
+<h3 id="Mozilla_.E3.81.AF.E3.81.A9.E3.81.AE.E3.82.A6.E3.82.A3.E3.82.B8.E3.82.A7.E3.83.83.E3.83.88.E3.83.84.E3.83.BC.E3.83.AB.E3.82.AD.E3.83.83.E3.83.88.E3.82.92.E4.BD.BF.E7.94.A8.E3.81.97.E3.81.A6.E3.81.84.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> Mozilla はどのウィジェットツールキットを使用しているのですか？ </h3>
+<p>Mozilla は HTML フォーム用の独自のクロスプラットフォームウィジェットを作っていて、サードパーティーのクロスプラットフォームツールキットも、プラットフォームが提供する専用のウィジェットも使用していません。この独自のウィジェットは GFX という Mozilla の描画ツールキット抽象化層で書かれています。スタイルは CSS で整えられ、それぞれのプラットフォーム独自のウィジェットに見えるように、各プラットフォームごとに細かい修正が施されています。これによってすべての プラットフォームのすべての HTML ウィジェットで、完全な CSS と DOM のサポートを可能にし、CSS と DOM の各部分に対する各プラットフォームごとのサポートを不要にします。
+</p><p>各プラットフォーム独自ウィジェットのサポートを望むたくさんのリクエストがありますが、今のところこのクロスプラットフォーム以外の第二のウィジェットをサポートする予定はありません。
+</p><p>将来的には、ウィジェットは XBL で定義されるようになるでしょう。
+</p>
+<h3 id=".E7.B5.84.E3.81.BF.E8.BE.BC.E3.81.BE.E3.82.8C.E3.81.9F_Mozilla_.E3.81.AF_Java_.E3.82.92.E3.82.B5.E3.83.9D.E3.83.BC.E3.83.88.E3.81.97.E3.81.A6.E3.81.84.E3.81.BE.E3.81.99.E3.81.8B.EF.BC.9F"> 組み込まれた Mozilla は Java をサポートしていますか？ </h3>
+<p>OJI プラグイン API を通じて Java のサポートを提供しています。Sun 提供の Java プラグインは 7MB のディスクスペースを必要とします (Linux)。Java サポートを必要とするのであれば、basebrowser-win / basebrowser-unix などのファイルを編集し、OJI セクションをアンコメントするか、組み込みディストリビューションを作成後に手動でこれらのファイルをコピーしなくてはなりません。
+</p>
+<h3 id=".E4.BB.96.E3.81.AE.E6.96.B9.E6.B3.95.E3.81.A7_Mozilla_.E3.82.92.E7.B5.84.E3.81.BF.E8.BE.BC.E3.82.81.E3.81.BE.E3.81.99.E3.81.8B.EF.BC.9F"> 他の方法で Mozilla を組み込めますか？ </h3>
+<p>組み込み API を直接プログラミングするほかに、次の方法で Mozilla を組み込むことができます：
+</p>
+<ul><li> GTK アプリケーションでは <a class="external" href="http://www.mozilla.org/unix/gtk-embedding.html">Gtk Mozilla Embedding Widget</a> が使用できます。
+</li><li> Win32 ActiveX アプリケーションでは <a class="external" href="http://www.iol.ie/%7Elocka/mozilla/mozilla.htm">Mozilla ActiveX Control</a> が使用できます。
+</li><li> Mac アプリケーションでは {{ Source("embedding/browser/powerplant/", "PPEmbed") }} が使用できます。
+</li><li> Java アプリケーションでは <a class="external" href="http://www.mozilla.org/projects/blackwood/webclient/">Webclient</a> が使用できます。(この wiki のホームページは、まだ作成中ですが、<a href="ja/Mozilla_Webclient">Mozilla Webclient</a> です)
+</li></ul>
+{{ languages( { "en": "en/Mozilla_Embedding_FAQ/Embedding_Gecko", "fr": "fr/FAQ_de_Mozilla_embarqu\u00e9/Embarquer_Gecko" } ) }}

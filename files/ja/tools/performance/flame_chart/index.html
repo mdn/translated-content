@@ -1,0 +1,103 @@
+---
+title: フレームチャート
+slug: Tools/Performance/Flame_Chart
+translation_of: Tools/Performance/Flame_Chart
+---
+<div>{{ToolsSidebar}}</div><div class="summary">
+<p>フレームチャートはパフォーマンスのプロファイリングを行っている間、ミリ秒ごとにコードの JavaScript スタックの状態を表示します。</p>
+
+<p>これは記録中の任意の時点でどの関数を実際に実行しているか、またどれだけの期間実行したか、さらにどこから呼び出されたかを知る手段を提供します。</p>
+</div>
+
+<p>呼び出しツリーとフレームチャートはどちらもサイトの JavaScript を分析するために使用します。またどちらも、記録している間定期的に取得する JavaScript エンジンのスタックのサンプルをデータとして使用します。</p>
+
+<p>しかし、呼び出しツリーは記録全体の合計に対してプログラムのどこでもっとも多くの時間がかかっているかを示すためにこれらのデータを編成するのに対して、フレームチャートは記録中のどこで特定の関数を実行していたかを示すためにこれらのデータを使用します。本質的には、記録中の任意の位置のコールスタックの状態を表示します。</p>
+
+<p>こちらは、プロファイルの一部分のフレームチャートを示したスクリーンショットです:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10989/perf-flame-chart-overview.png" style="display: block; height: 622px; margin-left: auto; margin-right: auto; width: 1676px;"></p>
+
+<p>始めに<a href="/ja/docs/Tools/Performance/UI_Tour#Recording_overview">記録の概要ペイン</a>で、フレームチャートに表示したい記録の一部分を選択していることがわかるでしょう。フレームチャートは大量のデータを表示しており、見やすい結果を得るためには通常、ズームインが必要です。</p>
+
+<p>フレームチャートビュー自体は、X 軸に沿って時間を表します。前出のスクリーンショットでは、1435ms から 1465ms の間を表示しています。Y 軸に沿ってその時点のコールスタックに存在する関数を、上にトップレベル、下に葉の関数の順に並べます。関数は区別しやすいように色分けします。</p>
+
+<p>これは記録中の任意の時点でどの関数を実際に実行しているか、またどれだけの期間実行したか、さらにどこから呼び出されたかを知る手段を提供します。</p>
+
+<h2 id="Zooming_and_panning" name="Zooming_and_panning">ズームとパン</h2>
+
+<p>フレームチャートを効果的に使用するため、ナビゲーションできることが必要でしょう。フレームチャートのナビゲーションに使用できる主要な操作が 2 つあります:</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><strong>ズーム</strong>: プロファイル全体のうち、フレームチャートに表示する選択範囲を増減します。</td>
+   <td>
+    <p>1) フレームチャート上でマウスホイールを上下に回します。</p>
+
+    <p>2) フレームチャート上で、トラックパッドで 2 本の指を上下に動かします。</p>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>パン</strong>: プロファイル全体内で、選択範囲を左右に動かします。</td>
+   <td>
+    <p>1) <a href="/ja/docs/Tools/Performance/UI_Tour#Recording_overview">記録の概要ペイン</a>で、選択範囲をクリック・アンド・ドラッグします。</p>
+
+    <p>2) フレームチャートでクリック・アンド・ドラッグします。</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>{{EmbedYouTube("BzfkBRFucp8")}}</p>
+
+<h2 id="An_example" name="An_example">例</h2>
+
+<p>フレームチャートがプログラムの動作をどのように明らかにできるかを見るため、シンプルな例を見ていきましょう。<a href="/ja/docs/Tools/Performance/Call_Tree">呼び出しツリー</a>のページとで使用したものと同じサンプルを使用します。これは、3 種類の異なるソートアルゴリズムを比較するものです。このプログラムの構造の概要は、<a href="/ja/docs/Tools/Performance/Examples/Sorting_algorithms_comparison">別のページ</a>で説明しています。</p>
+
+<p>ここでは、呼び出しツリーで使用したものと同じプロファイルのファイルを使用します。呼び出しツリーのページではプロファイル内のプログラム呼び出しグラフと、関連付けられたサンプル数を以下のように明らかにしました:</p>
+
+<pre>sortAll()                         //    8
+
+    -&gt; sort()                     //   37
+
+        -&gt; bubbleSort()           // 1345
+
+            -&gt; swap()             //  252
+
+        -&gt; selectionSort()        //  190
+
+            -&gt; swap()             //    1
+
+        -&gt; quickSort()            //  103
+
+            -&gt; partition()        //   12</pre>
+
+<p>始めに、ぷろぐらむがアクティブであった部分の全体を選択します:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10991/perf-flame-chart-zoomed-out.png" style="display: block; height: 350px; margin-left: auto; margin-right: auto; width: 1212px;"></p>
+
+<p>最上段の紫色の箇所は <code>sortAll()</code> の呼び出しであり、プログラムの始めから終りまで実行されています。その下にあるオリーブグリーン色は、<code>sort()</code> を呼び出しています。さらに下にあるくしの歯のようなものは、それぞれのソートアルゴリズムを実行する呼び出しです。</p>
+
+<p>ズームしましょう:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10993/perf-flame-chart-zoom-1.png" style="display: block; height: 350px; margin-left: auto; margin-right: auto; width: 1212px;"></p>
+
+<p>この部分は約 140 ミリ秒間です。また、<code>sort()</code> が呼び出した関数をより詳しく示しています。<code>sort()</code> のコードは以下のようなものです:</p>
+
+<pre class="brush: js">function sort(unsorted) {
+  console.log(bubbleSort(unsorted));
+  console.log(selectionSort(unsorted));
+  console.log(quickSort(unsorted));
+}</pre>
+
+<p>"bubb..." と記載されたオリーブグリーン色のマーカーは、おそらく <code>bubbleSort()</code> です。緑色のマーカーは、おそらく別のソートアルゴリズムです。ひと目見ただけで、バブルソートのブロックが他のアルゴリズムより幅が広い (存続時間が長い) ことがわかります。</p>
+
+<p>また、<code>bubbleSort()</code> から呼ばれている関数 (紫色) がいくつかあることもわかります。</p>
+
+<p>もう一度ズームしましょう:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10995/perf-flame-chart-zoom-2.png" style="display: block; height: 348px; margin-left: auto; margin-right: auto; width: 1212px;"></p>
+
+<p>この部分は約 20 ミリ秒間です。<code>bubbleSort()</code> の下にある紫色のマーカーは、<code>swap()</code> の呼び出しであることがわかります。それらをすべて数えると 253 個あることが、呼び出しツリービューで示されています。ズームした範囲内ではすべて <code>bubbleSort()</code> の下にありますが、呼び出しツリービューによればプロファイル内で 1 個は <code>selectionSort()</code> の下にあります。</p>
+
+<p>また、緑色のマーカーのうち 2 個は <code>selectionSort()</code> および <code>quickSort()</code> であることがわかる一方で、ソート関数の呼び出しの合間にプラットフォーム (Gecko) のコードを呼び出していることもわかります。これは、<code>sort()</code> 内で <code>console.log()</code> を呼び出していることに由来する可能性が高いと考えられます。</p>

@@ -1,0 +1,24 @@
+---
+title: Firefox OS apps 架构
+slug: Archive/B2G_OS/Platform/Apps_architecture
+translation_of: Archive/B2G_OS/Platform/Apps_architecture
+---
+<div class="summary">
+ <p>本文讲述了Firefox OS 应用启动和管理的内部原理。对 Firefox OS 平台开发者和将操作系统移植到硬件的团队是有用的。如果您仅仅是一个应用开发者，则不用了解这些细节，但又何妨一读，因为它是十分有趣的过程。</p>
+</div>
+<h2 id="app启动过程">app启动过程</h2>
+<p>当用户选择他们想要启动或需要启动的应用时， home screen app会通过<a href="/zh-CN/docs/Web/API/App" title="此页面仍未被本地化, 期待您的翻译!"><code>App</code></a> API,获取到一个app的引用，之后会调用 <a href="/zh-CN/docs/Web/API/App/launch" title="此页面仍未被本地化, 期待您的翻译!"><code>App.launch()</code></a> 方法启动这个应用。 </p>
+<p>Gecko 接收到请求后会向携带着 app 详情 向System app发送 <a href="/zh-CN/docs/Web/API/MozChromeEvent" title="此页面仍未被本地化, 期待您的翻译!"><code>mozChromeEvent</code></a> 事件。 System app 对事件进行处理：向 DOM tree中插入一个新的 <a href="/zh-CN/docs/Web/HTML/Element/iframe" title="HTML内联框架元素 &lt;iframe> 表示嵌套的浏览上下文，有效地将另一个HTML页面嵌入到当前页面中。在HTML 4.01中，文档可能包含头部和正文，或头部和框架集，但不能包含正文和框架集。但是，&lt;iframe>可以在正常的文档主体中使用。每个浏览上下文都有自己的会话历史记录和活动文档。包含嵌入内容的浏览上下文称为父浏览上下文。顶级浏览上下文（没有父级）通常是浏览器窗口。"><code>&lt;iframe&gt;</code></a> ，并且在这个新的 <a href="/zh-CN/docs/Web/HTML/Element/iframe" title="HTML内联框架元素 &lt;iframe> 表示嵌套的浏览上下文，有效地将另一个HTML页面嵌入到当前页面中。在HTML 4.01中，文档可能包含头部和正文，或头部和框架集，但不能包含正文和框架集。但是，&lt;iframe>可以在正常的文档主体中使用。每个浏览上下文都有自己的会话历史记录和活动文档。包含嵌入内容的浏览上下文称为父浏览上下文。顶级浏览上下文（没有父级）通常是浏览器窗口。"><code>&lt;iframe&gt;</code></a> 中装载 app。 此后 frame 就会是 app 的  home 了，直到 app终止。</p>
+<p>每个 app都需要一个 manifest文件来对 app进行描述，并且在它的包中有一个特定的文件结构。要了解更多详情，请参阅文章 <a href="/en-US/docs/Web/Apps/App_Manifest">App manifest</a>。</p>
+<h2 id="与_Gecko_通信">与 Gecko 通信</h2>
+<p>Gecko 和 Gaia 系统应用之间的通信是通过 <a href="/zh-CN/docs/Web/API/MozChromeEvent" title="此页面仍未被本地化, 期待您的翻译!"><code>mozChromeEvent</code></a> 和<a href="/zh-CN/docs/Web/API/MozContentEvent" title="此页面仍未被本地化, 期待您的翻译!"><code>mozContentEvent</code></a> 完成的。<code>mozChromeEvent </code>是从 chrome 到 content 的广播；<code>而 </code>  <code>mozContentEvent</code>s 是从 content 到  chrome 的广播。 这种通信过程用来控制可信任UI 的创建和关闭，以及为通知和其他工作注入需要的功能，如告诉System app 启动一个 app 。</p>
+<div class="note">
+ <p><strong>注意:</strong>  通过阅读  <a href="/en-US/Firefox_OS/Platform/Gaia/Gaia_apps/System">System app documentation</a> 您可以获取到关于这些事件工作的更多的内容。 通过阅读 <code><a href="https://dxr.mozilla.org/mozilla-central/source/b2g/chrome/content/shell.js" rel="custom">b2g/chrome/content/shell.js</a></code> 您也可已获取到更多使用的细节。 </p>
+</div>
+<h2 id="参见">参见</h2>
+<ul>
+ <li><a href="/en-US/docs/Web/Apps">Apps</a></li>
+ <li><a href="/zh-CN/docs/Web/API/App" title="此页面仍未被本地化, 期待您的翻译!"><code>App</code></a></li>
+ <li><a href="/en-US/Firefox_OS/Platform/Gaia/Gaia_apps/System">System app</a></li>
+ <li><a href="/en-US/Firefox_OS/Platform/Architecture">Firefox OS architecture</a></li>
+</ul>

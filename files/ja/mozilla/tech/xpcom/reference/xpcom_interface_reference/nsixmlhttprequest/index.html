@@ -1,0 +1,84 @@
+---
+title: nsIXMLHttpRequest
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsIXMLHttpRequest
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest
+---
+<div class="blockIndicator obsolete obsoleteHeader"><p><strong><span class="icon-only-inline" title="これは廃止されたAPIであり、今後の動作は保障されていません。ご注意下さい。"><i class="icon-trash"> </i></span> Gecko 60 で廃止 (Firefox 60 / Thunderbird 60 / SeaMonkey 2.57)</strong><br>この機能は廃止されました。まだいくつかのブラウザーで動作するかもしれませんが、いつ削除されてもおかしくないので、使わないようにしましょう。</p></div>
+
+<p><code>nsIXMLHttpRequest</code> along with <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIJSXMLHttpRequest" title="">nsIJSXMLHttpRequest</a></code> and <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequestEventTarget" title="">nsIXMLHttpRequestEventTarget</a></code> are Mozilla's implementation details of the DOM <a href="/en/DOM/XMLHttpRequest" title="en/DOM/XMLHttpRequest">XMLHttpRequest</a> object.</p>
+
+<div class="note"><strong>Note:</strong> If you're a web developer or a Mozilla add-on developer, please refer to the <a href="/en/DOM/XMLHttpRequest" title="en/DOM/XMLHttpRequest">XMLHttpRequest</a> documentation instead.</div>
+
+<p>This page contains documentation, specific to Mozilla application and add-on developers.</p>
+
+<p>The interface definition: <a href="https://dxr.mozilla.org/mozilla-central/source/dom/xhr/nsIXMLHttpRequest.idl">https://dxr.mozilla.org/mozilla-central/source/dom/xhr/nsIXMLHttpRequest.idl</a></p>
+
+<h3 id="Elevated_Privileges">Elevated Privileges</h3>
+
+<p>As mentioned in the "Non-Standard Properties" the property of <code>channel</code> was read-only. When using the XPCOM interface, as seen below in <a href="#Example_code">Example 2</a>, we can get access to this. The most obvious benefit is that we can set <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/NsIRequest#Constants">nsiRequest - Constants</a> in the <code>xhr.channel.loadFlags</code>. For instance, as done in <a href="#Example_code">Example 2</a>, the flag of <code>LOAD_ANONYMOUS</code> is added, this strips all user data (cookies, tokens, etc).</p>
+
+<h3 id="Using_event_handlers_from_native_code">Using event handlers from native code</h3>
+
+<p>(Not sure if it's up-to-date)</p>
+
+<p>From native code, the way to set up onload and onerror handlers is a bit different. Here is a comment from Johnny Stenback &lt;<a class="link-mailto" href="mailto:jst@netscape.com" rel="freelink">jst@netscape.com</a>&gt;:</p>
+
+<blockquote>The mozilla implementation of nsIXMLHttpRequest implements the interface nsIDOMEventTarget and that's how you're supported to add event listeners. Try something like this: nsCOMPtr&lt;nsIDOMEventTarget&gt; target(do_QueryInterface(myxmlhttpreq)); target-&gt;AddEventListener(NS_LITERAL_STRING("load"), mylistener, PR_FALSE) where mylistener is your event listener object that implements the interface nsIDOMEventListener. The 'onload', 'onerror', and 'onreadystatechange' attributes moved to nsIJSXMLHttpRequest, but if you're coding in C++ you should avoid using those.</blockquote>
+
+<p>Though actually, if you use addEventListener from C++ weird things will happen too, since the result will depend on what JS happens to be on the stack when you do it....</p>
+
+<p>Conclusion: Do not use event listeners on XMLHttpRequest from C++, unless you're aware of all the security implications. And then think twice about it.</p>
+
+<h2 id="Example_code" name="Example_code">サンプルコード</h2>
+
+<p>This is a simple example code for opening a simple HTTP request from a xul application (like a Mozilla extension) without using observers:</p>
+
+<pre class="eval"> var req = Components.classes["@mozilla.org/xmlextras/xmlhttprequest;1"].createInstance();
+ req.open('POST', "<a class="external" href="http://www.foo.bar:8080/nietzsche.do" rel="freelink">http://www.foo.bar:8080/nietzsche.do</a>", true);
+ req.send('your=data&amp;and=more&amp;stuff=here');
+</pre>
+
+<h2 id="Example_code" name="Example_code">Example 2</h2>
+
+<pre><code>var {Cu: utils, Cc: classes, Ci: instances} = Components;
+Cu.import('resource://gre/modules/Services.jsm');
+function xhr(url, cb) {
+    let xhr = Cc["@mozilla.org/xmlextras/xmlhttprequest;1"].createInstance(Ci.nsIXMLHttpRequest);
+
+    let handler = ev =&gt; {
+        evf(m =&gt; xhr.removeEventListener(m, handler, !1));
+        switch (ev.type) {
+            case 'load':
+                if (xhr.status == 200) {
+                    cb(xhr.response);
+                    break;
+                }
+            default:
+                Services.prompt.alert(null, 'XHR Error', 'Error Fetching Package: ' + xhr.statusText + ' [' + ev.type + ':' + xhr.status + ']');
+                break;
+        }
+    };
+
+    let evf = f =&gt; ['load', 'error', 'abort'].forEach(f);
+    evf(m =&gt; xhr.addEventListener(m, handler, false));
+
+    xhr.mozBackgroundRequest = true;
+    xhr.open('GET', url, true);
+    xhr.channel.loadFlags |= Ci.nsIRequest.LOAD_ANONYMOUS | Ci.nsIRequest.LOAD_BYPASS_CACHE | Ci.nsIRequest.INHIBIT_PERSISTENT_CACHING;
+    xhr.responseType = "arraybuffer"; //dont set it, so it returns string, you dont want arraybuffer. you only want this if your url is to a zip file or some file you want to download and make a nsIArrayBufferInputStream out of it or something
+    xhr.send(null);
+}
+
+xhr('https://www.gravatar.com/avatar/eb9895ade1bd6627e054429d1e18b576?s=24&amp;d=identicon&amp;r=PG&amp;f=1', data =&gt; {
+    Services.prompt.alert(null, 'XHR Success', data);
+    var file = OS.Path.join(OS.Constants.Path.desktopDir, "test.png");
+    var promised = OS.File.writeAtomic(file, new UInt8Array(data));
+    promised.then(
+        function() {
+            alert('succesfully saved image to desktop')
+        },
+        function(ex) {
+             alert('FAILED in saving image to desktop')
+        }
+    );
+});</code></pre>

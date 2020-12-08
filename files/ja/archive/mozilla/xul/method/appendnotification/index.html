@@ -1,0 +1,65 @@
+---
+title: appendNotification
+slug: Archive/Mozilla/XUL/Method/appendNotification
+tags:
+  - XUL Methods
+  - XUL Reference
+translation_of: Archive/Mozilla/XUL/Method/appendNotification
+---
+<div class="noinclude"><span class="breadcrumbs XULRefMeth_breadcrumbs">« <a href="/ja/docs/XUL_Reference" title="/ja/docs/XUL_Reference">XUL リファレンス HOME</a></span></div>
+
+<dl>
+ <dt><span id="m-appendNotification"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/appendNotification">appendNotification( label , value , image , priority , buttons )</a></code></span></dt>
+ <dd>戻り値の型: <em>要素</em></dd>
+ <dd>新しい notification を作成し、その通知を表示します。既に他の notification が高い優先度で提供されている場合、新しい notification は、その背後に追加されます。</dd>
+</dl>
+
+<ul>
+ <li>label - notification 上に表示するラベル。</li>
+ <li>value - notification の識別に使用される値。</li>
+ <li>image - notification 上に表示する画像の URL。</li>
+ <li>priority - 通知の優先度。優先レベルを参照。</li>
+ <li>buttons - notification 上に表示するボタン記述の配列。</li>
+ <li>eventCallback <span class="inlineIndicator optional optionalInline">Optional</span>  - a JavaScript function to call to notify you of interesting things that happen with the notification box. See <a href="/ja/docs/XUL/Method/appendNotification#Notification_box_events" title="XUL/Method/appendNotification#Notification_box_events">Notification box events</a>.</li>
+</ul>
+
+<dl>
+ <dt>優先レベル :</dt>
+ <dd>
+ <ul>
+  <li>PRIORITY_INFO_LOW</li>
+  <li>PRIORITY_INFO_MEDIUM</li>
+  <li>PRIORITY_INFO_HIGH</li>
+  <li>PRIORITY_WARNING_LOW</li>
+  <li>PRIORITY_WARNING_MEDIUM</li>
+  <li>PRIORITY_WARNING_HIGH</li>
+  <li>PRIORITY_CRITICAL_LOW</li>
+  <li>PRIORITY_CRITICAL_MEDIUM</li>
+  <li>PRIORITY_CRITICAL_HIGH</li>
+  <li>PRIORITY_CRITICAL_BLOCK</li>
+ </ul>
+ </dd>
+ <dt>ボタン :</dt>
+ <dd>buttons 引数はボタン記述の配列です。各記述は次のプロパティを持つオブジェクトです:
+ <ul>
+  <li>accessKey - ボタン上に表示するアクセスキー。</li>
+  <li>callback - ボタンが活性化した時に呼び出される関数。この関数には二つの引数が渡されます:
+   <ul>
+    <li>ボタンが関連付けられた &lt;notification&gt;。</li>
+    <li>appendNotification に渡されるボタン記述。</li>
+   </ul>
+  </li>
+  <li>label - ボタン上に表示するラベル。</li>
+  <li>popup - ボタンのための popup の id。null の場合、ボタンはボタンポップアップです。</li>
+ </ul>
+ </dd>
+</dl>
+
+<div class="noinclude">
+<div class="headingWithIndicator">
+    <h2 id="Notification_box_events">Notification box events</h2>
+    <span class="indicatorInHeadline minVer geckoMinVerMethod">Gecko 9.0 が必要(Firefox 9.0 / Thunderbird 9.0 / SeaMonkey 2.6)</span>
+</div>
+
+<p>If you specify the <code>eventCallback</code> parameter, it should be a JavaScript function that gets called when interesting things happen related to the notification box. This function receives as its only parameter a string indicating what event occurred. At this time, there's just one event type: "removed". This indicates that the notification box has been removed from its window.</p>
+</div>

@@ -1,0 +1,645 @@
+---
+title: ブラウザ要素をまたいだキーボードイベント
+slug: Archive/Firefox_OS/Platform/Keyboard_events_across_browser_elements
+tags:
+  - B2G
+  - Firefox OS
+  - TV
+  - events
+  - keyboard
+  - mozbrowser
+  - mozbrowserafterkeydown
+  - mozbrowserafterkeyup
+  - mozbrowserbeforekeydown
+  - mozbrowserbeforekeyup
+translation_of: Archive/B2G_OS/Platform/Keyboard_events_across_browser_elements
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/ja/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<p class="summary">このポストでは、 Firefox OS スマートTVプラットフォームにてTVリモコンをプログラムしてキーボードイベントを管理する試みを紹介します。</p>
+
+<p>The behavior of input events via hardware keys in Firefox OS varies widely from app to app. Early smartphones came with a limited number of keys — Power, Home, Volume up, Volume down — so it was easy for the software to determine an appropriate response for each keypress event. However, Smart TV remotes now come with many hardware keys, and defining the appropriate behavior when a key is pressed has become an important issue on the <a href="https://www.mozilla.org/en-US/firefox/os/devices/tv/">Firefox OS TV</a> platform. If a hardware key on a smart remote can be used both by apps and by the system, it’s important to determine which response is triggered when the key is pressed.</p>
+
+<p>Here we’ll classify keyboard events into four scenarios, describe dispatch scenarios for each, including how they interact with the system. This is the first of two posts about keyboard events for Firefox OS Smart TV.</p>
+
+<p><img alt="Figure.1" src="https://mdn.mozillademos.org/files/11413/f1.jpg" style="display: block; height: 533px; margin: 0px auto; width: 400px;"><br>
+ We begin with the ‘Info’ key on a TV remote. Often, it’s used by the hardware to display system information, although it’s possible for an application to use the same key to display app information. When a user presses the key, what action will be shown on screen — system info or app info?</p>
+
+<h2 id="4つのキーボードイベントシナリオ">4つのキーボードイベントシナリオ</h2>
+
+<p>To determine the appropriate behavior when hardware keys are pressed, we start by describing four scenarios for keyboard events.</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col"><strong>シナリオ</strong></th>
+   <th scope="col"><strong>説明</strong></th>
+   <th scope="col"><strong>イベント順序</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>SYSTEM-ONLY</td>
+   <td>For keys that should be handled by <em>mozbrowser-iframe-host-page</em> only.</td>
+   <td>system</td>
+  </tr>
+  <tr>
+   <td>SYSTEM-FIRST</td>
+   <td>For keys that can be handled by <em>mozbrowser-iframe-host-page</em> first and can then also be handled by <em>mozbrowser-iframe-embedded-page</em>.</td>
+   <td>system &gt; app</td>
+  </tr>
+  <tr>
+   <td>APP-CANCELLED</td>
+   <td>For keys that should be handled by <em>mozbrowser-iframe-embedded-page</em> only.</td>
+   <td>app</td>
+  </tr>
+  <tr>
+   <td>APP-FIRST</td>
+   <td>For keys that can be handled by <em>mozbrowser-iframe-embedded-page</em> first and can then also be handled by <em>mozbrowser-iframe-host-page</em>.</td>
+   <td>app &gt; system</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The <em>mozbrowser-iframe-host-page</em> and <em>mozbrowser-iframe-embedded-page</em> mentioned above are illustrated in the figure below. If <code>A.html</code> represents a host page whose source is <code>B.html</code>, then <code>A.html</code> is the <em>mozbrowser-iframe-host-page</em>, and <code>B.html</code> is <em>mozbrowser-iframe-embedded-page</em>. <a href="/en-US/docs/Web/HTML/Element/iframe#attr-mozbrowser">mozbrowser</a> uses the non-standard Firefox <a href="/en-US/docs/Web/API/Using_the_Browser_API">Browser API</a>, built for the implementation of key features and content experiences in Firefox OS apps.</p>
+
+<p><img alt="Fig. 2" src="https://mdn.mozillademos.org/files/11415/fig2.png" style="display: block; height: 222px; margin: 0px auto; width: 454px;"></p>
+
+<p>Suitable responses for any given keyboard events depend on the scenario. In the case illustrated above, let’s suppose that the Info key is categorized as APP-FIRST and the default action set by the system is to show system information. Thus, when we press the ‘Info’ key with app Z in the foreground, there are two possible results:</p>
+
+<ol>
+ <li>If app Z has an event handler that tells the ‘Info’ key to show app information, then app information will appear on screen when the user presses the ‘Info’ key on the remote.</li>
+ <li>If app Z doesn’t set an event handler for the ‘Info’ key, the default action is triggered — the screen will show the system information.</li>
+</ol>
+
+<h2 id="4つのシナリオ用のサンプルを実装する方法">4つのシナリオ用のサンプルを実装する方法</h2>
+
+<p>To implement examples illiustrating the four keyboard event scenarios described above, we’ve introduced four new keyboard events:</p>
+
+<ul>
+ <li><code>mozbrowserbeforekeydown</code> — fired <strong>before</strong> the <code>keydown</code> event.</li>
+ <li><code>mozbrowserafterkeydown</code> — fired <strong>after</strong> the <code>keydown</code> event.</li>
+ <li><code>mozbrowserbeforekeyup</code> — fired <strong>before</strong> the <code>keyup</code> event.</li>
+ <li><code>mozbrowserafterkeyup</code> — fired <strong>after</strong> the <code>keyup</code> event.</li>
+</ul>
+
+<p>These four keyboard events are only received by the <em>window</em> that embeds a <em>mozbrowser-iframe</em>.</p>
+
+<p>The keyboard events occur in a specific sequence over time: <code>mozbrowserbeforekeydown</code>, <code>mozbrowserafterkeydown</code>, <code>mozbrowserbeforekeyup</code>, <code>keyup</code>, <code>mozbrowserafterkeyup</code>.</p>
+
+<p>This gives developers a way to implement the four scenarios mentioned above. Conceptually, the scenarios SYSTEM-ONLY, SYSTEM-FIRST and APP-CANCELLED, and APP-FIRST can be implemented by setting proper handlers for the <code>mozbrowserbeforekey*</code> and <code>mozbrowserafterkey*</code> events. The SYSTEM-ONLY and SYSTEM-FIRST scenarios can be implemented by setting proper handlers for <code>mozbrowserbeforekey*</code> events and the APP-CANCELLED and APP-FIRST scenarios can be implemented via <code>mozbrowserafterkey*</code> events.</p>
+
+<h3 id="Firefox_OS_内の_iframe_構造">Firefox OS 内の iframe 構造</h3>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/11417/fig3.png" style="display: block; height: 291px; margin: 0px auto; width: 590px;"></p>
+
+<p>To understand how to implement the four scenarios, let’s first take a look at iframe structure in Firefox OS. The outermost iframe in Firefox OS is <a href="https://dxr.mozilla.org/mozilla-central/source/b2g/chrome/content/shell.html">shell.html</a>. It embeds an <strong>in-process</strong> iframe sourced from <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/system/index.html">system/index.html</a>. The system app (system/index.html) contains several web apps (essentially iframes) that can be <strong>in-process</strong> <code>(<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-remote">remote</a>=”false”</code>) or <strong>out-of-process</strong> (<code>remote=”true”</code>.) The relationship of these three layers is summarised in the following table:</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col"><strong>mozbrowser iframe host page</strong></th>
+   <th scope="col"><strong>mozbrowser iframe embedded page</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>shell.html</code></td>
+   <td><code>system/index.html</code></td>
+  </tr>
+  <tr>
+   <td><code>system/index.html</code></td>
+   <td>web apps(essentially iframes)</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="キーボードイベントのディスパッチ順序">キーボードイベントのディスパッチ順序</h3>
+
+<p>When a <code>keydown</code> event is sent to some element in a <em>mozbrowser-iframe-embedded-page</em>, the owner of the embedded iframe, i.e., the <em>mozbrowser-iframe-host-page</em>, will receive the <code>mozbrowserbeforekeydown</code> event before the <em>keydown</em> event is sent and the <code>mozbrowserafterkeydown</code> event after the event is sent to the <em>mozbrowser-iframe-embedded-page</em>.</p>
+
+<p>In Gecko, once there is one <code>keydown</code> event with the target in an out-of-process iframe, embedded in an HTML document, the <code>keydown</code> event is duplicated on the HTML document as well. The target of this duplicated event is set as the embedded <a href="/ja/docs/Web/HTML/Element/iframe" title="HTML のインラインフレーム要素 (&lt;iframe>) は、入れ子になった閲覧コンテキスト (browsing context) を表現し、効果的に現在のページに他の HTML ページを埋め込むことができます。"><code>&lt;iframe&gt;</code></a> element.</p>
+
+<p>This results in the keyboard event sequence shown in the diagram below. It illustrates all related <code>keydown</code> events and their relationship when a <code>keydown</code> event with a target in a <em>mozbrowser-iframe-embedded-page</em> needs to be dispatched.</p>
+
+<p><a href="https://mdn.mozillademos.org/files/11419/fig4.png"><img alt="" src="https://mdn.mozillademos.org/files/11419/fig4.png" style="display: block; height: 240px; margin: 0px auto; width: 800px;"></a></p>
+
+<p>In brief, events follow this sequence:</p>
+
+<ol>
+ <li>Before dispatching any <code>keydown</code> event, the <code>mozbrowserbeforekeydown</code> event is first dispatched to the window of <em>mozbrowser-iframe-host-page</em>.</li>
+ <li>The original <code>keydown</code> event (with a target in a <em>mozbrowser-iframe-embedded-page</em>) will be duplicated on the <em>mozbrowser-iframe-host-page</em> HTML document. Its target will be set to be the iframe that contains the <em>mozbrowser-iframe-embedded-page</em>.</li>
+ <li>The original <code>keydown</code> event will be dispatched to its target.</li>
+ <li>After the original <code>keydown</code> event dispatch is complete, the <code>mozbrowserafterkeydown</code> event will be dispatched to the window of <em>mozbrowser-iframe-host-page</em>.</li>
+</ol>
+
+<p>Notice that the event dispatch process described above follows the <a href="http://www.w3.org/TR/DOM-Level-3-Events/#event-flow">DOM tree event flow</a>. Event sequence and event targets are organized as shown in the following table:</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col"><strong>Order</strong></th>
+   <th scope="col"><strong>Event</strong></th>
+   <th scope="col"><strong>Target</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>1</td>
+   <td><code>mozbrowserbeforekeydown</code></td>
+   <td>window in <em>mozbrowser-iframe-host-page</em></td>
+  </tr>
+  <tr>
+   <td>2</td>
+   <td><code>keydown</code></td>
+   <td>iframe that contains the <em>mozbrowser-iframe-embedded-page</em> in <em>mozbrowser-iframe-host-page</em></td>
+  </tr>
+  <tr>
+   <td>3</td>
+   <td><code>keydown</code></td>
+   <td>original one in <em>mozbrowser-iframe-embedded-page</em></td>
+  </tr>
+  <tr>
+   <td>4</td>
+   <td><code>mozbrowserafterkeydown</code></td>
+   <td>window in <em>mozbrowser-iframe-host-page</em></td>
+  </tr>
+ </tbody>
+</table>
+
+<p><a href="https://mdn.mozillademos.org/files/11421/f5.png"><img alt="" src="https://mdn.mozillademos.org/files/11421/f5.png" style="display: block; height: 294px; margin: 0px auto; width: 800px;"></a></p>
+
+<p>The keyboard events <code>mozbrowserbeforekeydown</code>, <code>keydown</code>, and <code>mozbrowserafterkeydown</code> can be extended to nested mozbrowser iframes, like the iframe structure in Firefox OS described earlier. In this case, the <code>mozbrowserbeforekeydown</code> and <code>mozbrowserafterkeydown</code> events will be dispatched to the innermost <em>mozbrowser-iframe-host-page</em> as well as the outer one. Thus, in Firefox OS, <code>mozbrowserkeydown</code> and <code>mozbrowserafterkeydown</code> will be dispatched to the window of <code>system/index.html</code> and the window of <code>shell.html</code>. the above diagram illustrates the whole dispatch sequence of related events when a <code>keydown</code> event is dispatched to a web app. The sequence of events is as follows:</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col"><strong>順序</strong></th>
+   <th scope="col"><strong>イベント</strong></th>
+   <th scope="col"><strong>ターゲット</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>1</td>
+   <td><code>mozbrowserbeforekeydown</code></td>
+   <td>window in <code>shell.html</code></td>
+  </tr>
+  <tr>
+   <td>2</td>
+   <td><code>mozbrowserbeforekeydown</code></td>
+   <td>window in <code>system/index.html</code></td>
+  </tr>
+  <tr>
+   <td>3</td>
+   <td><code>keydown</code></td>
+   <td>iframe that contains the web app in <code>system/index.html</code></td>
+  </tr>
+  <tr>
+   <td>4</td>
+   <td><code>keydown</code></td>
+   <td>original one in web app</td>
+  </tr>
+  <tr>
+   <td>5</td>
+   <td><code>mozbrowserafterkeydown</code></td>
+   <td>window in <code>system/index.html</code></td>
+  </tr>
+  <tr>
+   <td>6</td>
+   <td><code>mozbrowserafterkeydown</code></td>
+   <td>window in <code>shell.html</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Although the <code>keyup</code> event must be fired after <code>keydown</code>, the <code>keydown</code> event and the <code>keyup</code> event are independent of each other. Moreover, the path <code>mozbrowserbeforekeyup</code>, <code>keyup</code>, <code>mozbrowserafterkeyup</code> is independent of the path <code>mozbrowserbeforekeydown</code>, <code>keydown</code>, <code>mozbrowserafterkeydown</code>. Therefore, it’s possible for these two paths to cross each other. The <code>mozbrowserbeforekeyup</code> event may arrive before the <code>keydown</code> event.</p>
+
+<p>In Firefox OS, most apps run <strong>out-of-process</strong>. This means that the app runs on its own process, not on the main process. After dispatching a given <code>key*</code> event to the system app, it takes time to send the original <code>key*</code> event to the process where the <em>mozbrowser-iframe-embedded-page</em> is located. In a similar manner, after a given <code>key*</code> event is dispatched to the <em>mozbrowser-iframe-embedded-page</em>’s process, time is required to send the <code>mozbrowserafterkey*</code> event back to the process where the <em>mozbrowser-iframe-host-page</em> is located.</p>
+
+<p>Consequently, the <code>mozbrowserbeforekeyup</code> event may arrive in the main Firefox OS process (where the system app lives), before the <code>keydown</code> event is dispatched to the app’s own process. Common results of the order of the <code>key*</code> events are demonstrated in the diagram below. The yellow series represents the <code>keydown</code> path, and the blue series show the <code>keyup</code> path. And yes, these two paths may cross each other.</p>
+
+<p><a href="https://mdn.mozillademos.org/files/11423/f6.png"><img alt="" src="https://mdn.mozillademos.org/files/11423/f6.png" style="display: block; height: 185px; margin: 0px auto; width: 800px;"></a></p>
+
+<h2 id="キーボードイベント向けの詳細実装">キーボードイベント向けの詳細実装</h2>
+
+<p>In this section we’ll take a closer look at each of the four scenarios, complete with example code for each event-handling scenario.</p>
+
+<h3 id="SYSTEM-ONLY">SYSTEM-ONLY</h3>
+
+<p>If a keyboard event is categorized as <strong>SYSTEM-ONLY</strong>, then the desired response is defined in <code>mozbrowserbeforekey*</code>’s event handler. Once this key is pressed, the system receives the <code>mozbrowserbeforekey*</code> event before the <code>key*</code> event is dispatched to an app. In addition, the <code>key*</code> events dispatch is cancelled once the system event handler is called. Now, we need to figure out a way to stop the event dispatch. Above we saw that the keyboard events are dispatched to the system process, then also to the app process. To stop dispatching events to the <em>the embedded page</em>, <a href="/en-US/docs/Web/API/Event/preventDefault"><em>event.preventDefault()</em></a> is a straightforward solution. The defined <em>default action</em> of the <code>mozbrowserbeforekey*</code> event is to dispatch the <code>key*</code> event. For this reason, by calling <code>event.preventDefault()</code> in <code>mozbrowserbeforekey*</code>’s event handler, <code>key*</code> events won’t be dispatched. The final result as follows:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/11425/f7.png" style="display: block; height: 475px; margin: 0px auto; width: 600px;"></p>
+
+<h3 id="SYSTEM-FIRST">SYSTEM-FIRST</h3>
+
+<p>This is very similar to the implementation of <strong>SYSTEM-ONLY</strong>. The only difference is that it’s not necessary to call <code>event.preventDefault()</code> in <code>mozbrowserbeforekey*</code>’s event handler. Apps are able to handle the <code>key*</code> event after the system finishes processing it.</p>
+
+<p><a href="https://mdn.mozillademos.org/files/11427/f8.png"><img alt="" src="https://mdn.mozillademos.org/files/11427/f8.png" style="display: block; height: 294px; margin: 0px auto; width: 800px;"></a></p>
+
+<h3 id="APP-CANCELLED">APP-CANCELLED</h3>
+
+<p>If specific keyboard events are designated for use by apps only, such as those assigned to the four colored keys on smart TV remotes, then <code>event.preventDefault()</code> will be called in the app’s <code>key*</code> event handler.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/11429/f9.jpg" style="display: block; height: 534px; margin: 0px auto; width: 400px;"></p>
+
+<p>The <code>event.preventDefault()</code> call cannot prevent the <code>mozbrowserafterkey*</code> event from being dispatched to the system, but the property <code>embeddedCancelled</code> of <code>mozbrowserafterkey*</code> will be set to <strong>true</strong> once the embedded app calls <code>event.preventDefault()</code>. The value of <code>embeddedCancelled</code> tells the system whether or not this event has been handled already. If the value is <code>true</code>, the system does nothing.</p>
+
+<p><a href="https://mdn.mozillademos.org/files/11431/f10.png"><img alt="" src="https://mdn.mozillademos.org/files/11431/f10.png" style="display: block; height: 294px; margin: 0px auto; width: 800px;"></a></p>
+
+<h3 id="APP-FIRST">APP-FIRST</h3>
+
+<p>The difference between <strong>APP-FIRST</strong> and <strong>APP-CANCELLED</strong> is that with <strong>APP-FIRST</strong> <code>event.preventDefault()</code> will not be called in the app’s event handler. Therefore, the value of <code>embeddedCancelled</code> is <strong>false</strong> and the system can take over the keyboard event.</p>
+
+<p><a href="https://mdn.mozillademos.org/files/11433/f11.png"><img alt="" src="https://mdn.mozillademos.org/files/11433/f11.png" style="display: block; height: 294px; margin: 0px auto; width: 800px;"></a></p>
+
+<h2 id="サンプルコード">サンプルコード</h2>
+
+<p>Here's some sample code to illustrate how developers can handle such events in their own apps.</p>
+
+<h3 id="イベントハンドラ">イベントハンドラ</h3>
+
+<pre><code class="hljs cs"><span class="hljs-function">function <span class="hljs-title">handleEvent</span>(<span class="hljs-params"><span class="hljs-keyword">event</span></span>) </span>{
+  dump(<span class="hljs-string">"Receive event '"</span> + <span class="hljs-keyword">event</span>.type + <span class="hljs-string">"'."</span>);
+  <span class="hljs-comment">// Handle event here.....</span>
+};
+
+<span class="hljs-function">function <span class="hljs-title">handleEventAndPreventDefault</span>(<span class="hljs-params"><span class="hljs-keyword">event</span></span>) </span>{
+  dump(<span class="hljs-string">"Receive event '"</span> + <span class="hljs-keyword">event</span>.type + <span class="hljs-string">"'."</span>);
+  <span class="hljs-comment">// Handle event here.....</span>
+
+  <span class="hljs-comment">// Call preventDefault() to stop the default action.</span>
+  <span class="hljs-comment">// It means that the event is already handled.</span>
+  <span class="hljs-keyword">event</span>.preventDefault();
+};
+
+<span class="hljs-function">function <span class="hljs-title">checkAttrAndHandleEvent</span>(<span class="hljs-params"><span class="hljs-keyword">event</span></span>) </span>{
+  dump(<span class="hljs-string">"Receive event '"</span> + <span class="hljs-keyword">event</span>.type +
+       <span class="hljs-string">"' with embeddedCancelled equals to '"</span> +
+       <span class="hljs-keyword">event</span>.embeddedCancelled + <span class="hljs-string">"'."</span>);
+  <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">event</span>.embeddedCancelled) {
+    <span class="hljs-comment">// Do something if the event wasn't being handled before!</span>
+    <span class="hljs-comment">// The following code should be executed in APP-FIRST scenario only!</span>
+  }
+};</code></pre>
+
+<h3 id="SYSTEM-ONLY_2">SYSTEM-ONLY</h3>
+
+<p>mozbrowser iframe host page:</p>
+
+<pre><code class="hljs javascript"><span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'mozbrowserbeforekeydown'</span>, handleEventAndPreventDefault);
+<span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'mozbrowserbeforekeyup'</span>, handleEventAndPreventDefault);
+<span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'mozbrowserafterkeydown'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>() </span>{ }); <span class="hljs-comment">// no use</span>
+<span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'mozbrowserafterkeyup'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>() </span>{ }); <span class="hljs-comment">// no use</span></code></pre>
+
+<p>The embedded page:</p>
+
+<pre><code class="hljs javascript"><span class="hljs-comment">// This function will never be triggered because the preventDefault() is called in mozbrowserbeforekeyXXX's handler.</span>
+<span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'keydown'</span>, handleEvent);
+<span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'keyup'</span>, handleEvent);</code></pre>
+
+<p>Results of <em>keydown</em>-related events:</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col"><strong>Order</strong></th>
+   <th scope="col"><strong>The embedded page</strong></th>
+   <th scope="col"><strong>mozbrowser iframe host page</strong></th>
+   <th scope="col"><strong>Output</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>1</td>
+   <td><code>mozbrowserbeforekeydown</code></td>
+   <td> </td>
+   <td>Receive event <code>mozbrowserbeforekeydown</code>.</td>
+  </tr>
+  <tr>
+   <td>2</td>
+   <td><code>mozbrowserafterkeydown</code></td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Results of <em>keyup</em>-related events:</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col"><strong>Order</strong></th>
+   <th scope="col"><strong>The embedded page</strong></th>
+   <th scope="col"><strong>The host page</strong></th>
+   <th scope="col"><strong>Output</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>1</td>
+   <td><code>mozbrowserbeforekeyup</code></td>
+   <td> </td>
+   <td>Receive event <code>mozbrowserbeforekeyup</code>.</td>
+  </tr>
+  <tr>
+   <td>2</td>
+   <td><code>mozbrowserafterkeyup</code></td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="SYSTEM-FIRST_2">SYSTEM-FIRST</h3>
+
+<p>mozbrowser iframe host page:</p>
+
+<pre><code class="hljs javascript"><span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'mozbrowserbeforekeydown'</span>, handleEvent);
+<span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'mozbrowserbeforekeyup'</span>, handleEvent);
+<span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'mozbrowserafterkeydown'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>() </span>{ }); <span class="hljs-comment">// no use</span>
+<span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'mozbrowserafterkeyup'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>() </span>{ }); <span class="hljs-comment">// no use</span></code></pre>
+
+<p>The embedded page:</p>
+
+<pre><code class="hljs coffeescript"><span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'keydown'</span>, handleEvent);
+<span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'keyup'</span>, handleEvent);</code></pre>
+
+<p>Received results of <em>keydown</em>-related events:</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col"><strong>Order</strong></th>
+   <th scope="col"><strong>mozbrowser-embedded page</strong></th>
+   <th scope="col"><strong>mozbrowser iframe host page</strong></th>
+   <th scope="col"><strong>Output</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>1</td>
+   <td><code>mozbrowserbeforekeydown</code></td>
+   <td> </td>
+   <td>Receive event <code>mozbrowserbeforekeydown</code>.</td>
+  </tr>
+  <tr>
+   <td>2</td>
+   <td> </td>
+   <td><code>keydown</code></td>
+   <td>Receive event <code>keydown</code>.</td>
+  </tr>
+  <tr>
+   <td>3</td>
+   <td><code>mozbrowserafterkeydown</code></td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Received results of <em>keyup</em>-related events:</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col"><strong>Order</strong></th>
+   <th scope="col"><strong>The embedded page</strong></th>
+   <th scope="col"><strong>mozbrowser iframe host page</strong></th>
+   <th scope="col"><strong>Output</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>1</td>
+   <td><code>mozbrowserbeforekeyup</code></td>
+   <td> </td>
+   <td>Receive event <code>mozbrowserbeforekeyup</code>.</td>
+  </tr>
+  <tr>
+   <td>2</td>
+   <td> </td>
+   <td><code>keyup</code></td>
+   <td>Receive event <code>keyup</code>.</td>
+  </tr>
+  <tr>
+   <td>3</td>
+   <td><code>mozbrowserafterkeyup</code></td>
+   <td> </td>
+   <td>Receive event <code>mozbrowserafterkeyup</code> with <code>embeddedCancelled</code> set to <code>true</code>.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="APP-CANCELLED_2">APP-CANCELLED</h3>
+
+<p>mozbrowser iframe host page:</p>
+
+<pre><code class="hljs javascript"><span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'mozbrowserbeforekeydown'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>() </span>{ }); <span class="hljs-comment">// no use</span>
+<span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'mozbrowserbeforekeyup'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>() </span>{ }); <span class="hljs-comment">// no use</span>
+<span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'mozbrowserafterkeydown'</span>, checkAttrAndHandleEvent);
+<span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'mozbrowserafterkeyup'</span>, checkAttrAndHandleEvent);</code></pre>
+
+<p>mozbrowser iframe embedded page:</p>
+
+<pre><code class="hljs coffeescript"><span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'keydown'</span>, handleEventAndPreventDefault);
+<span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'keyup'</span>, handleEventAndPreventDefault);</code></pre>
+
+<p>Received results of <em>keydown</em>-related events:</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col"><strong>Order</strong></th>
+   <th scope="col"><strong>The embedded page</strong></th>
+   <th scope="col"><strong>mozbrowser iframe host page</strong></th>
+   <th scope="col"><strong>Output</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>1</td>
+   <td><code>mozbrowserbeforekeydown</code></td>
+   <td> </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>2</td>
+   <td> </td>
+   <td><code>keydown</code></td>
+   <td>Receive event <code>keydown</code>.</td>
+  </tr>
+  <tr>
+   <td>3</td>
+   <td><code>mozbrowserafterkeydown</code></td>
+   <td> </td>
+   <td>Receive event <code>mozbrowserafterkeydown</code> with <code>embeddedCancelled</code> set to <code>true</code>.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Received results of keyup-related events:</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col"><strong>Order</strong></th>
+   <th scope="col"><strong>mozbrowser-embedded page</strong></th>
+   <th scope="col"><strong>mozbrowser iframe host page</strong></th>
+   <th scope="col"><strong>Output</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>1</td>
+   <td><code>mozbrowserbeforekeyup</code></td>
+   <td> </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>2</td>
+   <td> </td>
+   <td><code>keyup</code></td>
+   <td>Receive event <code>keyup</code>.</td>
+  </tr>
+  <tr>
+   <td>3</td>
+   <td><code>mozbrowserafterkeyup</code></td>
+   <td> </td>
+   <td>Receive event <code>mozbrowserafterkeyup</code> with <code>embeddedCancelled</code> equals to <code>true</code>.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="APP-FIRST_2">APP-FIRST</h3>
+
+<p>mozbrowser iframe host page:</p>
+
+<pre><code class="hljs javascript"><span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'mozbrowserbeforekeydown'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>() </span>{ }); <span class="hljs-comment">// no use</span>
+<span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'mozbrowserbeforekeyup'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>() </span>{ }); <span class="hljs-comment">// no use</span>
+<span class="hljs-comment">// This will be trigger after keydown event is</span>
+<span class="hljs-comment">// dispatched to mozbrowser iframe embedded page</span>
+<span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'mozbrowserafterkeydown'</span>, checkAttrAndHandleEvent);
+<span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'mozbrowserafterkeyup'</span>, checkAttrAndHandleEvent);</code></pre>
+
+<p>mozbrowser iframe embedded page:</p>
+
+<pre><code class="hljs coffeescript"><span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'keydown'</span>, handleEvent);
+<span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'keyup'</span>, handleEvent);</code></pre>
+
+<p>Received results of <em>keydown</em>-related events:</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col"><strong>Order</strong></th>
+   <th scope="col"><strong>mozbrowser-embedded page</strong></th>
+   <th scope="col"><strong>mozbrowser-iframe host page</strong></th>
+   <th scope="col"><strong>Output</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>1</td>
+   <td><code>mozbrowserbeforekeydown</code></td>
+   <td> </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>2</td>
+   <td> </td>
+   <td><code>keydown</code></td>
+   <td>Receive event <code>keydown</code>.</td>
+  </tr>
+  <tr>
+   <td>3</td>
+   <td><code>mozbrowserafterkeydown</code></td>
+   <td> </td>
+   <td>Receive event <code>mozbrowserafterkeydown</code> with <code>embeddedCancelled</code> set to <code>false</code>.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Received results of <em>keyup</em>-related events:</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col"><strong>Order</strong></th>
+   <th scope="col"><strong>mozbrowser-embedded page</strong></th>
+   <th scope="col"><strong>mozbrowser iframe host page</strong></th>
+   <th scope="col"><strong>Output</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>1</td>
+   <td><code>mozbrowserbeforekeyup</code></td>
+   <td> </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>2</td>
+   <td> </td>
+   <td><code>keyup</code></td>
+   <td>Receive event <code>keyup</code>.</td>
+  </tr>
+  <tr>
+   <td>3</td>
+   <td><code>mozbrowserafterkeyup</code></td>
+   <td> </td>
+   <td>Receive event <code>mozbrowserafterkeyup</code> with <code>embeddedCancelled</code> set to <code>false</code>.</td>
+  </tr>
+ </tbody>
+</table>

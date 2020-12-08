@@ -1,0 +1,78 @@
+---
+title: Paquetage multi extensions
+slug: Archive/Add-ons/Paquetage_multi_extensions
+tags:
+  - API_du_toolkit
+  - Extensions
+translation_of: Archive/Add-ons/Multiple_Item_Packaging
+---
+<div class="warning">
+<p>From the release of Firefox 53, multiple item extension packages are no longer supported and will not load. As a consequence, these packages are no longer accepted by AMO.</p>
+</div>
+
+<p>Un paquetage multi extensions fournit la possibilité de conditionner plusieurs <a href="/fr/Bundles" title="fr/Bundles">paquets installables</a> qui peuvent alors être chargés et installés par un utilisateur, ou fournis pré-empaquetés avec une application ou un programme externe. Chaque paquetage multi extensions doit utiliser un fichier <a href="/fr/Manifestes_d'installation" title="fr/Manifestes_d'installation">install.rdf</a> et a les mêmes exigences et possibilités qu'une <a href="/fr/Empaqueter_une_extension" title="fr/Empaqueter_une_extension">extension</a>, à l'exception de ce qui suit :</p>
+
+<p>Si l'utilisateur installe une version précédente de l'extension, il n'existe aucun moyen de le prévenir ni de l'en empêcher.</p>
+
+<p> </p>
+
+<h3 id="Structure_d.27un_paquetage_multi_extensions" name="Structure_d.27un_paquetage_multi_extensions">Structure d'un paquetage multi extensions</h3>
+
+<p>La structure d'un paquetage multi extensions est la forme simplifiée d'un <a href="/fr/Bundles" title="fr/Bundles">paquet installable</a> et requiert un fichier avec l'extension <code>.xpi</code>. Un paquetage multi extensions peut contenir aussi bien des extensions (fichiers <code>.xpi</code>) que des thèmes (fichiers <code>.jar</code>). La structure de base est indiquée ci-dessous:</p>
+
+<pre class="eval">/<a href="/fr/Manifestes_d'installation" title="fr/Manifestes_d'installation">install.rdf</a>                        <em>Manifeste d'installation</em>
+/extension1.xpi                     <em><a href="/fr/Empaqueter_une_extension" title="fr/Empaqueter_une_extension">Extension</a></em>
+/extension2.xpi                     <em><a href="/fr/Empaqueter_une_extension" title="fr/Empaqueter_une_extension">Extension</a></em>
+/theme1.jar                         <em><a href="/fr/Empaqueter_un_th%C3%A8me" title="fr/Empaqueter_un_thème">Theme</a></em>
+/theme2.jar                         <em><a href="/fr/Empaqueter_un_th%C3%A8me" title="fr/Empaqueter_un_thème">Theme</a></em>
+...
+</pre>
+
+<p>Le gestionnaire d'extension lira le <a href="/fr/Manifestes_d'installation" title="fr/Manifestes_d'installation">manifeste d'installation</a> pour déterminer si c'est un paquetage multi extensions et démarrera alors automatiquement l'installation de chaque paquet qu'il contient. Aucun autre fichiers, hormis le <a href="/fr/Manifestes_d'installation" title="fr/Manifestes_d'installation">manifeste d'installation</a> et les fichiers <code>.jar</code> ou <code>.xpi</code>, ne sera extrait ni utilisé.</p>
+
+<h3 id="install.rdf" name="install.rdf"><a href="/fr/Manifestes_d'installation" title="fr/Manifestes_d'installation">install.rdf</a></h3>
+
+<p>Un paquetage multi extensions n'a pas les mêmes obligations qu'une <a href="/fr/Empaqueter_une_extension" title="fr/Empaqueter_une_extension">extension</a> pour son <a href="/fr/Manifestes_d'installation" title="fr/Manifestes_d'installation">manifeste d'installation</a>. Les seuls éléments requis sont <code>em:id</code>, <code>em:targetApplication</code>, et <code>em:type</code>.</p>
+
+<p>Pour que les gestionnaires d'extensions de Firefox et Thunderbird 1.5 déterminent la nature du paquetage multi extensions, l'élément <code>em:type</code> spécifié dans votre <a href="/fr/Manifestes_d'installation" title="fr/Manifestes_d'installation">install.rdf</a> doit être à <code>32</code> et indiqué comme <code>&lt;em:type NC:parseType="Integer"&gt;32&lt;/em:type&gt;</code>. L'espace de nommage XML <code><span class="nowiki">xmlns:NC="http://home.netscape.com/NC-rdf#"</span></code> doit aussi être déclaré dans votre <a href="/fr/Manifestes_d'installation" title="fr/Manifestes_d'installation">install.rdf</a> comme indiqué ci-dessous:</p>
+
+<pre>...
+&lt;RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:NC="http://home.netscape.com/NC-rdf#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#"&gt;
+
+  &lt;Description about="urn:mozilla:install-manifest"&gt;
+    &lt;!-- nsIUpdateItem type for a Multiple Item Package --&gt;
+    &lt;em:type NC:parseType="Integer"&gt;32&lt;/em:type&gt;
+...</pre>
+
+<p>Pour les gestionnaires d'extensions de Firefox et Thunderbird 2.0, vous pouvez utiliser la précédente syntaxe ou <code>&lt;em:type&gt;32&lt;/em:type&gt;</code> comme indiqué ci-dessous:</p>
+
+<pre>...
+&lt;RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#"&gt;
+
+  &lt;Description about="urn:mozilla:install-manifest"&gt;
+    &lt;!-- nsIUpdateItem type for a Multiple Item Package --&gt;
+    &lt;em:type&gt;32&lt;/em:type&gt;
+...</pre>
+
+<p>En spécifiant <code>em:targetApplication</code>, l'élément <code>minVersion</code> indiqué doit être l'élément <code>minVersion</code> le plus élevé et l'élément <code>maxVersion</code> indiqué doit être l'élément <code>maxVersion</code> le plus bas de tous les <a href="/fr/Bundles" title="fr/Bundles">paquets installables</a> par le paquetage multi extensions pour l'élément <code>em:targetApplication</code>. Sinon chaque paquet incompatible ne sera pas installé, à moins qu'un test de compatibilité découvre une information de compatibilité mise à jour qui le rendrait compatible.</p>
+
+<h3 id="Installation" name="Installation">Installation</h3>
+
+<p>L'installation peut être effectuée en utilisant les méthodes existantes pour les extensions/thèmes et la même interface utilisateur est employée pour un paquetage multi extensions (les paquets contenus dans le paquetage multi extensions ne seront pas listés). Cela permet aussi d'afficher l'information de signature pour le paquetage multi extensions.</p>
+
+<p>Si un gestionnaire (le gestionnaire d'extensions/thèmes par exemple) est affiché après le chargement du paquetage multi extensions, le gestionnaire affichera chaque paquet contenu dans celui-ci, de la même manière que si l'utilisateur avait choisi d'installer plusieurs paquets simultanément. Le gestionnaire n'affichera pas le paquetage multi extensions dans la liste des paquets, un fois le chargement terminé du paquetage multi extensions.</p>
+
+<h3 id="R.C3.A9f.C3.A9rences_officielles_de_l.27API_du_toolkit" name="R.C3.A9f.C3.A9rences_officielles_de_l.27API_du_toolkit">Références officielles de l'<a href="/fr/API_du_toolkit" title="fr/API_du_toolkit">API du toolkit</a></h3>
+
+<p></p><p><span class="comment">Official References. Do not add to this list without contacting Benjamin Smedberg. Note that this page is included from the pages listed below. So: Don't Add Breadcrumbs!</span>
+</p>
+<ul><li> <a href="en/Bundles">Structure of an Installable Bundle</a>: describes the common structure of installable bundles, including extensions, themes, and XULRunner applications
+</li><li> <a href="en/Extension_Packaging">Extension Packaging</a>: specific information about how to package extensions
+</li><li> <a href="en/Theme_Packaging">Theme Packaging</a>: specific information about how to package themes
+</li><li> <a href="en/Multiple_Item_Packaging">Multiple-item Extension Packaging</a>: specific information about multiple-item extension XPIs
+</li><li> <a href="en/XUL_Application_Packaging">XUL Application Packaging</a>: specific information about how to package XULRunner applications
+</li><li> <a href="en/Chrome_Registration">Chrome Registration</a>
+</li></ul><p></p>

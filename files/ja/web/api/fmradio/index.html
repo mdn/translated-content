@@ -1,0 +1,120 @@
+---
+title: FMRadio
+slug: Web/API/FMRadio
+tags:
+  - API
+  - B2G
+  - Firefox OS
+  - Non Standard
+  - Reference
+  - WebAPI
+  - WebFM
+translation_of: Archive/B2G_OS/API/FMRadio
+---
+<p>{{ non-standard_header() }}</p>
+<p>{{ B2GOnlyHeader2('installed') }}</p>
+<h2 id="概要">概要</h2>
+<p>WebFM API は、端末の FM ラジオへのアクセスを提供します。このインターフェースは、FM ラジオの ON、OFF およびチューニングにより他の局への切り替えを可能にします。これらは {{domxref("window.navigator.mozFMRadio","navigator.mozFMRadio")}} プロパティを通してアクセスできます。</p>
+<h2 id="API_概観">API 概観</h2>
+<pre>interface FMRadio : EventTarget {
+   readonly attribute boolean enabled;
+   readonly attribute boolean antennaAvailable;
+   readonly attribute double frequency;
+   readonly attribute double frequencyUpperBound;
+   readonly attribute double frequencyLowerBound;
+   readonly attribute double channelWidth;
+
+   attribute Function onantennaavailablechange;
+   attribute Function onfrequencychange;
+   attribute Function onenabled;
+   attribute Function ondisabled;
+
+   DOMRequest enable(double frequency);
+   DOMRequest disable();
+   DOMRequest setFrequency(double frequency);
+   DOMRequest seekUp();
+   DOMRequest seekDown();
+   DOMRequest cancelSeek();
+}</pre>
+<h2 id="プロパティ">プロパティ</h2>
+<dl>
+ <dt>
+  {{domxref("FMRadio.enabled")}}</dt>
+ <dd>
+  ラジオが再生中かどうかを示します。</dd>
+ <dt>
+  {{domxref("FMRadio.antennaAvailable")}}</dt>
+ <dd>
+  アンテナが接続され利用可能かどうかを示します。</dd>
+ <dt>
+  {{domxref("FMRadio.frequency")}}</dt>
+ <dd>
+  現在のラジオ周波数を示します。</dd>
+ <dt>
+  {{domxref("FMRadio.frequencyUpperBound")}}</dt>
+ <dd>
+  <code>seek</code> メソッドで検索するラジオ局の周波数の最大値。</dd>
+ <dt>
+  {{domxref("FMRadio.frequencyLowerBound")}}</dt>
+ <dd>
+  <code>seek</code> メソッドで検索するラジオ局の周波数の最小値。</dd>
+ <dt>
+  {{domxref("FMRadio.channelWidth")}}</dt>
+ <dd>
+  周波数の範囲のチャンネル幅 (MHz 単位)。</dd>
+</dl>
+<h3 id="イベントハンドラ">イベントハンドラ</h3>
+<dl>
+ <dt>
+  {{domxref("FMRadio.onenabled")}}</dt>
+ <dd>
+  {{event("enabled")}} イベントのためのハンドラ。ラジオが ON になった時に発火します。</dd>
+ <dt>
+  {{domxref("FMRadio.ondisabled")}}</dt>
+ <dd>
+  {{event("disabled")}} イベントのためのハンドラ。ラジオが OFF になった時に発火します。</dd>
+ <dt>
+  {{domxref("FMRadio.onantennaavailablechange")}}</dt>
+ <dd>
+  {{event("antennaavailablechange")}} イベントのためのハンドラ。アンテナが抜き差しされた時に発火します。</dd>
+ <dt>
+  {{domxref("FMRadio.onfrequencychange")}}</dt>
+ <dd>
+  {{event("frequencychange")}} イベントのためのハンドラ。ラジオ周波数が変更されるたびに発火します。</dd>
+</dl>
+<h2 id="メソッド">メソッド</h2>
+<dl>
+ <dt>
+  {{domxref("FMRadio.enable()")}}</dt>
+ <dd>
+  与えられた周波数でラジオを ON にします。この関数は、引数なしで呼ばれた場合にエラーを投げます。命令の成功またはエラーを扱う {{domxref("DOMRequest")}} を返します。</dd>
+ <dt>
+  {{domxref("FMRadio.disable()")}}</dt>
+ <dd>
+  ラジオを OFF にします。{{domxref("DOMRequest")}} を返し、これが成功の場合、ラジオが正しく無効化されたことを示します。</dd>
+ <dt>
+  {{domxref("FMRadio.setFrequency()")}}</dt>
+ <dd>
+  非同期でラジオの周波数を変更します。周波数の値は、<code>frequencyLowerBound</code> と <code>frequencyUpperBound</code> の間にしなければなりません。この範囲外の値をセットしようとするとエラーになります。</dd>
+ <dd>
+  {{domxref("DOMRequest")}} を返し、これが成功の場合、周波数が正しく変更されたことを示します。</dd>
+ <dt>
+  {{domxref("FMRadio.seekUp()")}}</dt>
+ <dd>
+  次の周波数を探索します (通常は現在よりも高いほうの周波数)。ラジオチャンネルが見つかると、<code>frequencychange</code> イベントが発生します。{{domxref("DOMRequest")}} を返し、これが成功の場合、探索が開始されたことを示します。探索する周波数が上限に達すると、低い周波数に折り返して探索されます。</dd>
+ <dt>
+  {{domxref("FMRadio.seekDown()")}}</dt>
+ <dd>
+  上記と同じですが、現在よりも低いほうの周波数を探索します。探索する周波数が下限に達すると、高い周波数に折り返して探索されます。</dd>
+ <dt>
+  {{domxref("FMRadio.cancelSeek()")}}</dt>
+ <dd>
+  ラジオチャンネルの探索をキャンセルします。{{domxref("DOMRequest")}} を返し、これが成功の場合、周波数の探索がキャンセルされたことを示します。</dd>
+</dl>
+<h2 id="仕様書">仕様書</h2>
+<p>仕様はありません。</p>
+<h2 id="参照">参照</h2>
+<ul>
+ <li><a href="/docs/WebAPI/WebFM_API" title="/en-US/docs/WebAPI/WebFM_API">WebFM API</a></li>
+ <li><a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/fm" title="https://github.com/mozilla-b2g/gaia/tree/master/apps/fm">Gaia の FM ラジオアプリ</a></li>
+</ul>

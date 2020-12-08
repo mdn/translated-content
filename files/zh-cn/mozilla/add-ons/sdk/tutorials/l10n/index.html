@@ -1,0 +1,381 @@
+---
+title: Localization
+slug: Mozilla/Add-ons/SDK/Tutorials/l10n
+tags:
+  - Add-on SDK
+  - 本地化
+translation_of: Archive/Add-ons/Add-on_SDK/Tutorials/l10n
+---
+<p>该SDK支持本地化字符串出现在:</p>
+
+<ul>
+ <li><a href="/en-US/Add-ons/SDK/Tutorials/l10n#Using_Localized_Strings_in_JavaScript">你的主附加组件Add-on的 JavaScript代码</a></li>
+ <li><a href="/en-US/Add-ons/SDK/Tutorials/l10n#Using_Localized_Strings_in_HTML">你的附加组件一起打包的HTML文件</a></li>
+ <li><a href="/en-US/Add-ons/SDK/Tutorials/l10n#Using_Localized_Strings_in_Preferences">你的附加组件首选项中的 title 标题和 description 描述域</a></li>
+</ul>
+
+<p>目前为止还不支持本地化CSS和content scripts。</p>
+
+<h2 id="本地化字符串">本地化字符串</h2>
+
+<p>翻译后的字符串都保存在你的add-on扩展目录下一个名为 "locale"的目录 ，每个本地化地域对应一个文件。这些文件：</p>
+
+<ul>
+ <li>使用文件<a href="http://en.wikipedia.org/wiki/.properties"><code>.properties</code> 格式</a></li>
+ <li>被命名为 "xx-YY.properties", 这里的 "xx-YY" 是 <a href="https://wiki.mozilla.org/L10n:Locale_Codes"> </a> <a href="https://wiki.mozilla.org/L10n:Locale_Codes">name of the locale（本地化区域的名称）</a></li>
+ <li>包含所有你想要本地化的字符串，其中由一个本地化字符串标识ID和对应的本地化翻译字符串以 <code>"标识ID=本地化翻译的字符串</code>" 的格式组成。(contain one entry for each string you want to localize, consisting of an identifier for the string and its translation in that locale, in the format <code>identifier=translation</code>.)</li>
+ <li>需要使用没有BOM的UTF-8格式来编码(need to use UTF-8 without BOM encoding)</li>
+</ul>
+
+<p>假设你的附加组件包含一个单一的本地化字符串，用英语表示为“Hello！”，你想提供英语和法语的本地化支持。</p>
+
+<p>你需要添加两个文件到"locale"目录：</p>
+
+<pre>my-addon/
+         data
+         lib
+         locale/
+                en-US.properties
+                fr-FR.properties
+</pre>
+
+<p>"en-US.properties" 文件中内容:</p>
+
+<pre>hello_id= Hello!
+</pre>
+
+<p>"fr-FR.properties" 文件中内容:</p>
+
+<pre>hello_id= Bonjour !
+</pre>
+
+<p>现在，每当你的JavaScript或HTML向本地化系统请求hello_id标识的翻译，它将获得与当前区域语言一致的翻译。</p>
+
+<h2 id="在HTML中使用本地化字符串">在HTML中使用本地化字符串</h2>
+
+<div class="note">
+<p>本例使用的 <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action">action button</a> API需要 Firefox 29 或者更高版本。</p>
+</div>
+
+<p>要从HTML中引用本地化字符串，需要添加一个 <code>data-l10n-id</code> 的属性，到你想本地化的字符串所属的HTML标签中，然后为该属性指定一个ID值(To reference localized strings from HTML, add a <code>data-l10n-id</code> attribute to the HTML tag where you want the localized string to appear, and assign the identifier to it)：</p>
+
+<pre class="brush: html">&lt;html&gt;
+  &lt;body&gt;
+    &lt;h1 data-l10n-id="hello_id"&gt;&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>然后你就可以使用这个HTML文件来建立你的界面, 比如插入一个 panel 面板：</p>
+
+<pre class="brush: js">var button = require("sdk/ui/button/action").ActionButton({
+  id: "localized-hello",
+  label: "Localized hello",
+  icon: "./icon-16.png",
+  onClick: function() {
+    hello.show();
+  }
+});
+
+var hello = require("sdk/panel").Panel({
+  height: 75,
+  width: 150,
+  contentURL: require("sdk/self").data.url("my-panel.html")
+});</pre>
+
+<p>“en-US”和“fr-FR”提供了翻译标识为hello_id字符串的本地化文件，面板将根据当前区域语言设置，显示“Hello！”或者“Bonjour！”：</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7663/bonjour.png" style="width: 255px; height: 160px;"><img alt="" src="https://mdn.mozillademos.org/files/7665/hello.png" style="width: 255px; height: 160px;"></p>
+
+<p>翻译文本会插入到具有data-l10n-id属性集的节点中。任何之前存在的内容只是被替换掉了。(The translation is inserted into the node which has the <code>data-l10n-id</code> attribute set. Any previously existing content is just replaced.)</p>
+
+<p>本地化字符串只能作为text文本插入, 所以你不能使用下面的语句插入HTML：</p>
+
+<pre>hello_id= &lt;blink&gt;Hello!&lt;/blink&gt;
+</pre>
+
+<h3 id="Localizing_Element_Attributes">Localizing Element Attributes</h3>
+
+<div class="geckoVersionNote">这是 Firefox 39 上的新功能</div>
+
+<p><br>
+ 你可以在properties文件中，通过设置 l10n-id.attributeName 的值，本地化某些具有 l10n-id属性的元素的属性值。像这样(You can localize certain attributes of elements with an l10n-id by setting its value with l10n-id.attributeName in the properties file like)：<br>
+  </p>
+
+<pre>hello_id.accesskey= H</pre>
+
+<p>可以支持以下几个属性：</p>
+
+<ul>
+ <li><strong>accesskey</strong></li>
+ <li><strong>alt</strong></li>
+ <li><strong>label</strong></li>
+ <li><strong>title</strong></li>
+ <li><strong>placeholder</strong></li>
+</ul>
+
+<p>更多的<a href="/en-US/docs/Web/Accessibility/ARIA"> ARIA</a> 属性<strong>aria-label</strong>, <strong>aria-valuetext</strong> 和 <strong>aria-moz-hint</strong> 的本地化将通过在Firefox OS上同样的别名被支持(Further the localization of the <a href="/en-US/docs/Web/Accessibility/ARIA">ARIA</a> attributes <strong>aria-label</strong>, <strong>aria-valuetext</strong> and <strong>aria-moz-hint</strong> are supported with the same aliases as on Firefox OS)：</p>
+
+<ul>
+ <li><strong>ariaLabel</strong></li>
+ <li><strong>ariaValueText</strong></li>
+ <li><strong>ariaMozHint</strong></li>
+</ul>
+
+<h2 id="在JavaScript代码中使用本地化字符串">在JavaScript代码中使用本地化字符串</h2>
+
+<p>为了在主附加组件代码中引用本地化字符串，你需要这样做：</p>
+
+<pre class="brush: js">var _ = require("sdk/l10n").get;
+console.log(_("hello_id!"));</pre>
+
+<p><span>指定的 "_" 并不是必需的，但是作为<a href="https://www.gnu.org/software/gettext/gettext.html"> gettext </a>工具的默认约定，这能更好的配合其他默认使用 "_" 来表示本地化字符串的现有工具。</span></p>
+
+<ol>
+ <li>导入 <code>l10n</code> 模块，然后指定 "_" (下划线）为模块的 <code>get</code> 函数。</li>
+ <li>把所有涉及本地化的字符串放到 <code>_()</code> 函数中包括起来。</li>
+</ol>
+
+<p>如果你运行它，你会看到输出为预期的当前设置的区域语言:</p>
+
+<pre>info: Hello!
+</pre>
+
+<pre>info: Bonjour !
+</pre>
+
+<p>注意你不能在content scripts中 <code>require()</code> 一个模块，所以目前还不能在content script 中引用本地化字符串。</p>
+
+<h3 id="复数">复数</h3>
+
+<p> <code>l10n</code> 模快支持复数形式，不同的语言有不同的复数形态。例如，英语有两种形式：相对于"one"的单数形式，和对于"everything else, including zero"的复数形式：</p>
+
+<pre>one tomato
+no tomatoes
+two tomatoes
+</pre>
+
+<p>但是俄罗斯语对于以 1 结尾(除了11)的数字、以 2-4 结尾(除了12-14)的数字和其他数字，有着不同的复数形态：</p>
+
+<pre>один помидор     // one tomato
+два помидора     // two tomatoes
+пять помидоров   // five tomatoes
+</pre>
+
+<p>SDK使用 <a href="http://cldr.unicode.org/index">Unicode CLDR</a> 数据描述由不同的语言使用的不同复数形式。</p>
+
+<h4 id="Unicode_CLDR_复数形式">Unicode CLDR 复数形式</h4>
+
+<p>Unicode CLDR项目定义了用于描述一个特定语言的多个规则的一种方案。在这个方案中一种语言对应最多有六种不同的范围的数字，有以下类别区分：<em>zero(零个)，one(一个)，two(两个)，few(几个)，many(很多)，</em>和<em>other(其他)</em>。(The Unicode CLDR project defines a scheme for describing a particular language's plural rules. In this scheme a language maps each distinct range of numbers on to one of up to six forms, identified by the following categories: <em>zero</em>, <em>one</em>, <em>two</em>, <em>few</em>, <em>many</em>, and <em>other</em>.)</p>
+
+<p>英语有两种复数形式，可以表示为 "1" 映射到 "one" 和 "everything else" 映射到 "other"的形式(English has two forms, which can be described by mapping "1" to "one" and "everything else" to "other")：</p>
+
+<pre>one   → n is 1;
+other → everything else
+</pre>
+
+<p>俄罗斯语有四种形式，可以使用以下方式表示:</p>
+
+<pre>one   → n mod 10 is 1 and n mod 100 is not 11;
+few   → n mod 10 in 2..4 and n mod 100 not in 12..14;
+many  → n mod 10 is 0 or n mod 10 in 5..9 or n mod 100 in 11..14;
+other → everything else
+</pre>
+
+<p>所有语言的多个规则可以在CLDR的 <a href="http://unicode.org/repos/cldr-tmp/trunk/diff/supplemental/language_plural_rules.html">语言复数规则</a> 页面查到 (即使这个规则表相对于 <a href="http://unicode.org/repos/cldr/trunk/common/supplemental/plurals.xml">CLDR XML source</a> 已经过时了).</p>
+
+<h4 id="SDK中的复数形式">SDK中的复数形式</h4>
+
+<p>代码中，在 <code>_()</code>函数中的本地化ID参数之后提供一个额外的参数，用来表示代表多少个项的本地化字符串(In the code, you supply an extra parameter alongside the identifier, describing how many items there are)：</p>
+
+<pre class="brush: js">var _ = require("sdk/l10n").get;
+console.log(_("tomato_id"));
+console.log(_("tomato_id", 1));
+console.log(_("tomato_id", 2));
+console.log(_("tomato_id", 5));
+console.log(_("tomato_id", .5));</pre>
+
+<p>在 <code>.properties</code> 文件中通过使用 CLDR 关键字，对于每种语言可能的复数形式你可以自定义不同的本地化字符串。所以对于英语可以有两种本地化（注意"other" 分类不是 CDLR 关键字）。（In the <code>.properties</code> file for each language you can define a different localization for each plural form possible in that language, using the CLDR keywords. So in English we could have two plural localizations (note that the "other" category does <strong>not</strong> take the CLDR keyword)）</p>
+
+<pre># en-US translations
+tomato_id[one]= %d tomato
+tomato_id= %d tomatoes
+</pre>
+
+<p>俄罗斯语中可以定义四种本地化的复数形式：</p>
+
+<pre># ru-RU translations
+tomato_id[one]= %d помидор
+tomato_id[few]= %d помидора
+tomato_id[many]= %d помидоров
+tomato_id= %d помидоры
+</pre>
+
+<p>The localization module itself understands the CLDR definitions for each language, enabling it to map between, for example, "2" in the code and "few" in the <code>ru-RU.properties</code> file. Then it retrieves and returns the localization appropriate for the count you supplied.</p>
+
+<h3 id="Placeholders">Placeholders</h3>
+
+<p>The <code>l10n</code> module supports placeholders, allowing you to insert a string which should not be localized into one which is. The following "en-US" and "fr-FR" ".properties" files include placeholders:</p>
+
+<pre># en-US translations
+hello_id= Hello %s!
+</pre>
+
+<pre># fr-FR translations
+hello_id= Bonjour %s !
+</pre>
+
+<p>To use placeholders, supply the placeholder string after the identifier:</p>
+
+<pre class="brush: js">var _ = require("sdk/l10n").get;
+console.log(_("hello_id", "Bob"));
+console.log(_("hello_id", "Alice"));</pre>
+
+<p>In the "en-US" locale, this gives us:</p>
+
+<pre>info: Hello Bob!
+info: Hello Alice!
+</pre>
+
+<p>In "fr-FR" we get:</p>
+
+<pre>info: Bonjour Bob !
+info: Bonjour Alice !
+</pre>
+
+<h3 id="Ordering_Placeholders">Ordering Placeholders</h3>
+
+<p>When a localizable string can take two or more placeholders, translators can define the order in which placeholders are inserted, without affecting the code.</p>
+
+<p>Primarily, this is important because different languages have different rules for word order. Even within the same language, though, translators should have the freedom to define word order.</p>
+
+<p>For example, suppose we want to include a localized string naming a person's home town. There are two placeholders: the name of the person and the name of the home town:</p>
+
+<pre class="brush: js">var _ = require("sdk/l10n").get;
+console.log(_("home_town_id", "Bob", "London"));</pre>
+
+<p>An English translator might want to choose between the following:</p>
+
+<pre>"&lt;town_name&gt; is &lt;person_name&gt;'s home town."
+</pre>
+
+<pre>"&lt;person_name&gt;'s home town is &lt;town_name&gt;"
+</pre>
+
+<p>To choose the first option, the <code>.properties</code> file can order the placeholders as follows:</p>
+
+<pre>home_town_id= %2s is %1s's home town.
+</pre>
+
+<p>This gives us the following output:</p>
+
+<pre>info: London is Bob's home town.
+</pre>
+
+<h2 id="在首选项设置中的本地化字符串">在首选项设置中的本地化字符串</h2>
+
+<p>通过加入一个 <a href="/en-US/Add-ons/SDK/High-Level_APIs/simple-prefs">"preferences" 字段的结构到你的附加组件的 "package.json" 文件</a>中，你可以为你的附加组件定义首选项选项，用户可以在Firefox的 <a href="https://support.mozilla.org/en-US/kb/Using%20extensions%20with%20Firefox#w_how-to-change-extension-settings">Add-ons Manager</a> 看到和编辑它。</p>
+
+<p>Preferences (首选项)有一个必需的title标题项和一个可选的description描述项 这些字符串将出现在 Add-ons Manager中，来帮助向用户解释各个首选项设置的意义。</p>
+
+<ul>
+ <li>
+  <p>要对preferences中的title标题部分进行本地化，所有在"properties"文件中，形式为preferences中的name后面接着 <code>_title</code> 的本地化标识ID，其对应的值就是标题的本地化字符串。(To provide the localized form of the preference title, include an entry in your "properties" file whose identifier is the preference name followed by <code>_title</code>, and whose value is the localized title.)</p>
+ </li>
+ <li>
+  <p>要对preferences中的description描述部分进行本地化，所有在"properties"文件中，形式为preferences中的name后面接着 <code>_description</code> 的本地化标识ID，其对应的值就是描述的本地化字符串。(To provide the localized form of the preference description, include an entry in your "properties" file whose identifier is the preference name followed by <code>_description</code>, and whose value is the localized description.）</p>
+ </li>
+</ul>
+
+<p>例如, 假设你的 "package.json" 中只定义了一个设置选项：</p>
+
+<pre>{
+    "preferences": [
+        {
+            "type": "string",
+            "name": "monster_name",
+            "value": "Gerald",
+            "title": "Name"
+        }
+    ],
+    "name": "monster-builder",
+    "license": "MPL 2.0",
+    "author": "me",
+    "version": "0.1",
+    "fullName": "Monster Builder",
+    "id": "monster-builder@me.org",
+    "description": "Build your own monster"
+}
+</pre>
+
+<p>在你的"en-US.properties"文件中, 应该包括下面两个项：</p>
+
+<pre>monster_name_title= Name
+monster_name_description= What is the monster's name?
+</pre>
+
+<p>在你的"fr-FR.properties"文件中, 应该包括下面两个法语的翻译项：</p>
+
+<pre>monster_name_title= Nom
+monster_name_description= Quel est le nom du monstre ?
+</pre>
+
+<p>现在，当浏览器的区域设置为 "en-US", 用户会在 Add-ons Manager看到这样：</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6525/preference-us.png" style="width: 571px; height: 77px;"></p>
+
+<p>当浏览器区域设置为 "fr-FR", 用户会看到:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6523/preference-french.png"></p>
+
+<p>下拉菜单<code>menulist</code>和单选按钮<code>radio</code>的类型有多个选项，每一个选项的标签属性都会展示给用户。如果本地化文件中有一项是以前缀是"{name} _options" 为键的键值对，其中"{name}"是选项的标签名字，该键值对的值就是一个选项标签的本地化字符串。（The <code>menulist</code> and the <code>radio</code> preference types have options. The <code>label</code> attribute of each option is displayed to the user. If the locale file has a entry with the value of the <code>label</code> attribute prefixed with "{name}_options." as its key, where {name} is the name of the preference, its value is used as a localized label.）</p>
+
+<h2 id="Using_Identifiers">Using Identifiers</h2>
+
+<p>If the localization system can't find an entry for a particular identifier using the current locale, then it just returns the identifier itself.</p>
+
+<p>This has the nice property that you can write localizable, fully functional add-ons without having to write any locale files. You can just use the default language strings as your identifier, and subsequently supply <code>.properties</code> files for all the additional locales you want to support.</p>
+
+<p>For example, in the case above you could use "Hello!" as the identifier, and just have one <code>.properties</code> file for the "fr-FR" locale:</p>
+
+<pre>Hello!= Bonjour !
+</pre>
+
+<p>Then when the locale is "en-US", the system would fail to find a <code>.properties</code> file, and return "Hello!".</p>
+
+<p>However, this approach makes it difficult to maintain an add-on which has many localizations, because you're using the default language strings both as user interface strings and as keys to look up your translations. This means that if you want to change the wording of a string in the default language, or fix a typo, then you break all your locale files.</p>
+
+<h2 id="Locale_Updater">Locale Updater</h2>
+
+<p>The <a href="https://github.com/downloads/ochameau/locale-updater/locale-updater.xpi">locale updater</a> add-on makes it easier to update locale files. Once you've installed it, open the Add-on Manager, and you'll see a see a new button labeled "Update l10n" next to each add-on you've installed:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6515/locale-updater.png"></p>
+
+<p>Click the button and you'll be prompted for a new <code>.properties</code> file for that add-on. If you provide a new file, the add-on's locale data will be updated with the new file.</p>
+
+<h2 id="Limitations">Limitations</h2>
+
+<p>The current localization support is a first step towards full support, and contains a number of limitations.</p>
+
+<ul>
+ <li>
+  <p>There's no support for content scripts or CSS files: at the moment, you can only localize strings appearing in JavaScript files that can <code>require()</code> SDK modules and in HTML.</p>
+ </li>
+ <li>
+  <p>The set of locale files is global across an add-on. This means that a module isn't able to override a more general translation: so a module <code>informal.js</code> can't specify that "hello_id" occurring in its code should be localized to "Hi!".</p>
+ </li>
+ <li>
+  <p>The SDK tools compile the locale files into a JSON format when producing an XPI. This means that translators can't localize an add-on given the XPI alone, but must be given access to the add-on source.</p>
+ </li>
+ <li>
+  <p>The add-on developer must manually assemble the set of localizable strings that make up the locale files. In a future release we'll add a command to <code>cfx</code> that scans the add-on for localizable strings and builds a template <code>.properties</code> file listing all the strings that need to be translated.</p>
+ </li>
+</ul>
+
+<h2 id="See_Also_-_for_developers_looking_to_localize_non-SDK_add-ons">See Also - for developers looking to localize non-SDK add-ons</h2>
+
+<ul>
+ <li>How to localize html pages, xul files, and js/jsm files from bootstrapped add-ons: <a href="/en-US/Add-ons/Bootstrapped_extensions#Localization_%28L10n%29">Bootstrapped Extensions :: Localization (L10n)</a></li>
+ <li>XUL School Localization Tutorial: <a href="/en-US/docs/Mozilla/Tech/XUL/Tutorial/Localization">DTD/Entities method</a> and <a href="/en-US/docs/Mozilla/Tech/XUL/Tutorial/Property_Files">Properties method</a></li>
+ <li><a href="/en-US/docs/Mozilla/Localization/Localizing_an_extension">Localizing an extension</a></li>
+</ul>

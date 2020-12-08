@@ -1,0 +1,83 @@
+---
+title: Mozilla Networking Preferences
+slug: Mozilla_Networking_Preferences
+tags:
+  - Configuration management
+  - Necko
+translation_of: Mozilla/Preferences/Mozilla_networking_preferences
+---
+<h3 id=".E8.A6.81.E6.97.A8" name=".E8.A6.81.E6.97.A8"> 要旨 </h3>
+<p>ネットワークの動作に関係した設定のリスト。<br>設定可能な値とそれに対応する動作に関する記述。
+</p>
+<h3 id=".E6.83.B3.E5.AE.9A.E3.81.99.E3.82.8B.E8.AA.AD.E8.80.85" name=".E6.83.B3.E5.AE.9A.E3.81.99.E3.82.8B.E8.AA.AD.E8.80.85"> 想定する読者 </h3>
+<p>QA テスター、開発者、ネットワークの仕組みをよく理解している「パワーユーザ」。<br>設定に関する一般的な技術資料 (設定の変更方法など) を探しているなら、<a class="external" href="http://www.mozilla-japan.org/catalog/end-user/customizing/briefprefs.html">Mozilla の環境設定への簡単なガイド</a> をどうぞ。 </p>
+<h3 id=".E3.83.95.E3.82.A3.E3.83.BC.E3.83.89.E3.83.90.E3.83.83.E3.82.AF" name=".E3.83.95.E3.82.A3.E3.83.BC.E3.83.89.E3.83.90.E3.83.83.E3.82.AF"> フィードバック </h3>
+<p>フィードバックとコメントは {{ Bug(198252) }} まで。
+</p>
+<h3 id=".E6.A6.82.E8.A6.81" name=".E6.A6.82.E8.A6.81"> 概要 </h3>
+<p>各セクションはおおよそアルファベット順＋機能順になっています。設定は UI の利用頻度順になっています (アルファベット順でないこともあります)。関連したバグについては、それが不可欠である場合にだけ書いてあります。
+</p>
+<div class="note">
+<p>Note: Do not change any of these via <code>about:config</code> unless <b>you know what you are doing</b>. If you are uncertain what that phrase means, you probably do not. <br>
+</p>
+</div>
+<p>If you qualify, you are probably one or more of the following:
+</p>
+<ul><li> You have a feature-spec or code-level understanding of the preference.
+</li><li> You are doing testing and have a clear performance metric.
+</li><li> You are doing this in conjunction with a packet trace to monitor Necko's changed behavior.
+</li></ul>
+<h3 id=".E8.A8.AD.E5.AE.9A.E9.A0.85.E7.9B.AE" name=".E8.A8.AD.E5.AE.9A.E9.A0.85.E7.9B.AE"> 設定項目 </h3>
+<h4 id="HTTP_.28.E3.81.93.E3.81.AE.E3.82.BB.E3.82.AF.E3.82.B7.E3.83.A7.E3.83.B3.E3.81.AF.E4.BD.9C.E6.88.90.E4.B8.AD.E3.81.A7.E3.81.99.29" name="HTTP_.28.E3.81.93.E3.81.AE.E3.82.BB.E3.82.AF.E3.82.B7.E3.83.A7.E3.83.B3.E3.81.AF.E4.BD.9C.E6.88.90.E4.B8.AD.E3.81.A7.E3.81.99.29"> HTTP (このセクションは作成中です) </h4>
+<table class="fullwidth-table"> <tbody><tr> <th>設定名</th> <th>設定可能な値</th> <th>設定用 UI (太字) とコメント</th> </tr> <tr> <td><code>general.useragent.contentlocale</code></td> <td>文字列</td> <td> </td> </tr> <tr> <td><code>general.useragent.misc</code></td> <td>(メジャーバージョン番号) 文字列</td> <td> </td> </tr> <tr> <td><code>general.useragent.security</code></td> <td>文字列</td> <td> </td> </tr> <tr> <td><code>network.http.accept-encoding</code></td> <td><code>gzip,deflate</code> (デフォルト文字列)</td> <td>UI なし</td> </tr> <tr> <td><code>network.http.accept.default</code></td> <td><code>text/xml,application/xml,<br>application/xhtml+xml,text/html;</code><br><code>q=0.9,text/plain;</code><br><code>q=0.8,video/x-mng,image/png,<br>image/jpeg,image/gif;</code><br><code>q=0.2,*/*;q=0.1</code></td> <td> </td> </tr> <tr> <td><code>network.http.default-socket-type</code></td> <td>(空) デフォルト</td> <td>?</td> </tr> <tr> <td><code>network.http.keep-alive</code></td> <td><code>true</code> (デフォルト)</td> <td> </td> </tr> <tr> <td><code>network.http.keep-alive.timeout</code></td> <td><code>30</code></td> <td>UI なし</td> </tr> <tr> <td><code>network.http.max-connections</code></td> <td><code>24</code></td> <td> </td> </tr> <tr> <td><code>network.http.max-connections-per-server</code></td> <td><code>8</code></td> <td> </td> </tr> <tr> <td><code>network.http.max-persistent-connections-per-proxy</code></td> <td><code>4</code></td> <td> </td> </tr> <tr> <td><code>network.http.max-persistent-connections-per-server</code></td> <td><code>2</code></td> <td> </td> </tr> <tr> <td><code>network.http.pipelining</code></td> <td><code>false</code></td> <td>? (Mozilla ではグレー)</td> </tr> <tr> <td><code>network.http.pipelining.firstrequest</code></td> <td><code>false</code></td> <td> </td> </tr> <tr> <td><code>network.http.pipelining.maxrequests</code></td> <td><code>4</code></td> <td> </td> </tr> <tr> <td><code>network.http.proxy.keep-alive</code></td> <td><code>true</code> (デフォルト)</td> <td> </td> </tr> <tr> <td><code>network.http.proxy.pipelining</code></td> <td><code>false</code></td> <td>? (Mozilla ではグレー)</td> </tr> <tr> <td><code>network.http.proxy.version</code></td> <td><code>1.1</code> (デフォルト)<br><code>1.0</code></td> <td> </td> </tr> <tr> <td><code>network.http.redirection-limit</code></td> <td><code>20</code></td> <td> </td> </tr> <tr> <td><code>network.http.request.max-start-delay</code></td> <td><code>10</code></td> <td> </td> </tr> <tr> <td><code>network.http.sendRefererHeader</code></td> <td><code>2</code></td> <td> </td> </tr> <tr> <td><code>network.http.sendSecureXSiteReferrer</code></td> <td><code>true</code></td> <td> </td> </tr> <tr> <td><code>network.http.use-cache</code></td> <td><code>true</code></td> <td> </td> </tr> <tr> <td><code>network.http.version</code></td> <td><code>1.1</code> (デフォルト)<br><code>1.0</code></td> <td> </td> </tr>
+</tbody></table>
+<h4 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB"> ファイル </h4>
+<table class="fullwidth-table"> <tbody><tr> <th>設定名</th> <th>設定可能な値</th> <th>設定用 UI とコメント</th> </tr> <tr> <td><code>security.checkloaduri</code></td> <td><b><code>true</code> (デフォルト)</b><br><code>false</code></td> <td>UI なし<br><code>checkloaduri</code> はネットワーク上 (http: https: ftp:) のページ中の <a class=" external" rel="freelink">file://</a> URL を無効にします。これはセキュリティのためのものです。<br>エラーはダイアログボックスではなく JavaScript コンソールに表示されます。この設定は Gecko のバージョン 1.8 以前 (つまり Firefox 1.0 と Mozilla Suite ビルド) でのみ機能します。Firefox 1.5 や SeaMonkey 1.0 では、この設定自体、無効になっています。</td> </tr>
+</tbody></table>
+<h4 id="FTP_.28.E3.83.97.E3.83.AD.E3.82.AD.E3.82.B7.E3.81.AE.E3.82.BB.E3.82.AF.E3.82.B7.E3.83.A7.E3.83.B3.E3.82.82.E5.8F.82.E7.85.A7.29" name="FTP_.28.E3.83.97.E3.83.AD.E3.82.AD.E3.82.B7.E3.81.AE.E3.82.BB.E3.82.AF.E3.82.B7.E3.83.A7.E3.83.B3.E3.82.82.E5.8F.82.E7.85.A7.29"> FTP (プロキシのセクションも参照) </h4>
+<table class="fullwidth-table"> <tbody><tr> <th>設定名</th> <th>設定可能な値</th> <th>設定用 UI (太字) とコメント</th> </tr> <tr> <td><code>advanced.mailftp</code></td> <td><b><code>false</code> (デフォルト)</b><br><code>true</code></td> <td>設定 | 詳細 |<br><b>"{{ mediawiki.external('x') }} この電子メールアドレスを匿名 FTP パスワードとして送信する"</b><br><br>false なら、"<code><a class=" link-mailto" href="mailto:mozilla@example.com" rel="freelink">mozilla@example.com</a></code>" が anonymous FTP にアクセスする際のパスワードとして使われます。 ({{ Bug(101027) }})<br>true なら、<code>network.ftp.anonymous_password</code> の内容が anonymous FTP にアクセスする際のパスワードとして使われます。({{ Bug(57763) }} comment 28)</td> </tr> <tr> <td><code>network.ftp.anonymous_password</code></td> <td><b><code>空</code> (デフォルト)<br>任意の文字列</b></td> <td>設定 | 詳細 |<br>("{{ mediawiki.external(' ') }} この電子メールアドレスを匿名 FTP パスワードとして送信する" の下)<br><b>{{ mediawiki.external('テキストフィールド') }}</b><br><br>もし空なら、"<code><a class=" link-mailto" href="mailto:mozilla@example.com" rel="freelink">mozilla@example.com</a></code>" が anonymous FTP にアクセスする際のパスワードとして使われます。</td> </tr> <tr> <td><code>network.ftp.idleConnectionTimeout</code></td> <td><b><code>300</code> (デフォルト)</b><br>任意の整数値</td> <td>UI なし<br>単位は秒。<br>FTP への接続が開かれている場合、システム上の他の FTP クライアントが接続を開始するのを妨害する可能性があります (コントロールコネクションをひとつしか許さないサイトの場合)。 ({{ Bug(117875) }})</td> </tr> <tr> <td><code>network.dir.format</code></td> <td><code>0</code> = HTML 表示<br><code>1</code> = そのまま表示<br><code>2</code> = HTML 表示<br><code>3</code> = XUL 表示</td> <td>設定 | Debug | ネットワーク<br>Networking<br>Directory Listing Format<br><b>( ) HTML</b><br><b>( ) XUL (tree-based)</b></td> </tr>
+</tbody></table>
+<h4 id=".E3.82.AD.E3.83.A3.E3.83.83.E3.82.B7.E3.83.A5" name=".E3.82.AD.E3.83.A3.E3.83.83.E3.82.B7.E3.83.A5"> キャッシュ </h4>
+<table class="fullwidth-table"> <tbody><tr> <th>設定名</th> <th>設定可能な値</th> <th>設定用 UI (太字) とコメント</th> </tr> <tr> <td><code>browser.cache.disk.capacity</code></td> <td><b><code>51200</code> (デフォルト)</b></td> <td>設定 | 詳細 | キャッシュ<br><b>キャッシュ: {{ mediawiki.external('MB') }} MB</b><br>保存される値は KB 単位</td> </tr> <tr> <td><code>browser.cache.disk.parent_directory</code></td> <td><b>プロファイルフォルダ中にあるキャッシュフォルダへのパス (デフォルト)</b></td> <td><b>キャッシュのフォルダ: {{ mediawiki.external('テキストボックス') }}</b><br>注意: ディスクキャッシュとメモリキャッシュの内容は異なる (メモリキャッシュのサイズを大きなものにしても、メモリマップされたディスクの領域 = RAM ディスクのディスクキャッシュにキャッシュされるわけではない)。</td> </tr> <tr> <td><code>browser.cache.check_doc_frequency</code></td> <td><code>1</code> = ページにアクセスする毎に<br><code>0</code> = セッション毎<br><code>3</code> = キャッシュしたページが古いとき (デフォルト)<br><code>2</code> = しない</td> <td><b>キャッシュにあるページとネットワーク上のページの比較:</b></td> </tr> <tr> <td><code>browser.cache.disk.enable</code></td> <td><b><code>true</code> (デフォルト)</b></td> <td colspan="1" rowspan="2">設定 | Debug | Cache<br><b>{{ mediawiki.external('x') }} Enable Disk Cache</b><br><b>{{ mediawiki.external('x') }} Enable Memory Cache</b><br><br>ディスクキャッシュを無効にすると、ディスクキャッシュを 0 に設定したのと同じ効果になる。</td> </tr> <tr> <td><code>browser.cache.memory.enable</code></td> <td><b><code>true</code> (デフォルト)</b></td> </tr> <tr> <td><code>browser.cache.memory.capacity</code></td> <td>任意の整数値 (KB 単位)</td> <td>Mozilla 1.4b からは自動でサイズが設定されるようになりました ({{ Bug(105344) }})。<br>この値は自動設定の値より優先されます。<br>0 でメモリキャッシュ無効。<br>(<b>以前は <code>4096</code> = デフォルト</b> でした)</td> </tr> <tr> <td><code>network.http.use-cache</code></td> <td><b><code>true</code> (デフォルト)</b></td> <td>UI なし</td> </tr> <tr> <td><code>browser.cache.disk_cache_ssl</code></td> <td><b><code>false</code> (デフォルト)</b></td> <td>UI なし, 1.6a から追加 ({{ Bug(205921) }} 参照)</td> </tr> <tr> <td><code>network.prefetch-next</code></td> <td><b><code>true</code> (デフォルト)</b></td> <td>設定 | 詳細 | キャッシュ: リンクの事前読み込み<br><b>{{ mediawiki.external('x') }} 何もしていないときに事前読み込みします。事前読み込みに適した Web ページはより速く読み込むことができます。</b></td> </tr>
+</tbody></table>
+<h4 id="DNS" name="DNS"> DNS </h4>
+<table class="fullwidth-table"> <tbody><tr> <th>設定名</th> <th>設定可能な値</th> <th>設定用 UI (太字) とコメント</th> </tr> <tr> <td><code>network.dnsCacheExpiration</code></td> <td><b><code>60</code> (秒)</b></td> <td colspan="1" rowspan="2">ハードコーディングされていて、about:config では表示されない。<br>無効にするには、両方の値を作成して「0」にセットすること。</td> </tr> <tr> <td><code>network.dnsCacheEntries</code></td> <td><b><code>20</code> (エントリ)</b></td> </tr>
+</tbody></table>
+<h4 id="Cookie" name="Cookie"> Cookie </h4>
+<p>このセクションは、dwitte による Cookie 関連コードの再設計によって削除されました。<a href="ja/Cookies_Preferences_in_Mozilla">Cookies Preferences in Mozilla</a> を見てください。
+</p>
+<h4 id=".E3.83.97.E3.83.AD.E3.82.AD.E3.82.B7" name=".E3.83.97.E3.83.AD.E3.82.AD.E3.82.B7"> プロキシ </h4>
+<table class="fullwidth-table"> <tbody><tr> <th>設定名</th> <th>設定可能な値</th> <th>設定用 UI (太字) とコメント</th> </tr> <tr> <td><code>network.proxy.type</code></td> <td><code>0</code> = 直接接続<br><code>1</code> = 手動<br><code>2</code> = PAC<br><code>3</code> = 0 と同じ<br><code>4</code> = WPAD</td> <td>設定 | 詳細 | プロキシ<br>インターネットにアクセスするためのプロキシの設定<br><b>( ) インターネットに直接接続する</b><br><b>( ) Auto-detect proxy settings</b> (1.8 で導入)<br><b>( ) 手動でプロキシを設定する</b><br><b>( ) 自動でプロキシを設定する (URL)</b><br><br>3 は昔の Netscape Communicator で「直接接続」を指定するのに使われていた値です。</td> </tr> <tr> <td><code>network.proxy.http</code></td> <td colspan="1" rowspan="10">&lt;プロトコル&gt; プロキシ: ホスト名または IPv4 の IP アドレスが設定可能です。IPv6 の IP アドレスはテストが必要です。<br><br>ポート: 0 を指定すると、この手動指定のプロキシタイプの設定は server:port ともに無効になります。1〜65xxx が指定できます。</td> <td colspan="1" rowspan="2"><code>http:</code> で始まる URL に影響する</td> </tr> <tr> <td><code>network.proxy.http_port</code></td> </tr> <tr> <td><code>network.proxy.ssl</code></td> <td colspan="1" rowspan="2"><code>https:</code> で始まる URL に影響する<br>たぶん SIMAP と SNEWS にも影響する</td> </tr> <tr> <td><code>network.proxy.ssl_port</code></td> </tr> <tr> <td><code>network.proxy.ftp</code></td> <td colspan="1" rowspan="2"><code>ftp:</code> で始まる URL に影響する</td> </tr> <tr> <td><code>network.proxy.ftp_port</code></td> </tr> <tr> <td><code>network.proxy.gopher</code></td> <td colspan="1" rowspan="2"><code>gopher:</code> で始まる URL に影響する</td> </tr> <tr> <td><code>network.proxy.gopher_port</code></td> </tr> <tr> <td><code>network.proxy.socks</code></td> <td colspan="1" rowspan="2">アプリケーション側でプロキシが設定されていない場合に使用される。たぶん他のプロトコルに影響する</td> </tr> <tr> <td><code>network.proxy.socks_port</code></td> </tr> <tr> <td><code>network.proxy.socks_version</code></td> <td><b><code>5</code> (デフォルト)</b><br><code>4</code></td> <td>Communicator は SOCKS V4 のみをサポートしていた。</td> </tr> <tr> <td><code>network.proxy.no_proxies_on</code></td> <td><b><code>localhost, 127.0.0.1</code> (デフォルト)</b><br>FQDN、ホスト名、IPv4 アドレスと CIDR ブロックからなるコンマ区切りの文字列。<a href="ja/No_Proxy_For_configuration">No Proxy For 設定</a> も参照。</td> <td>Localhost へはデフォルトでプロキシを使用しない。{{ Bug(31510) }}</td> </tr> <tr> <td><code>network.proxy.autoconfig_url</code></td> <td><b>空 (デフォルト)</b><br>URL 文字列</td> <td>ホスト名ではなく、絶対 URI でなくてはならない。</td> </tr>
+</tbody></table>
+<h4 id=".E3.82.AA.E3.83.B3.E3.83.A9.E3.82.A4.E3.83.B3" name=".E3.82.AA.E3.83.B3.E3.83.A9.E3.82.A4.E3.83.B3"> オンライン </h4>
+<table class="fullwidth-table"> <tbody><tr> <th>設定名</th> <th>設定可能な値</th> <th>設定用 UI (太字) とコメント</th> </tr> <tr> <td><code>network.online</code></td> <td><b><code>true</code> = オンライン (デフォルト)<br><code>false</code> = オフライン</b></td> <td>Necko は network の状態をこの値へ反映させる。<br>この値を変更しても、実際のネットワークの状態は変更されない。<br>現在のプロファイルで「起動時にオンライン状態にするかを尋ねる」<br>が選択されている場合、値は変更されない。<br>({{ Bug(229677) }})。 </td></tr> <tr> <td><code>offline.startup_state</code></td> <td><b><code>0</code> = network.online の値を使用 (デフォルト)</b><br><code>1 = ユーザに聞く</code></td> <td>設定: Mail &amp; Newsgroups | オフラインとディスク領域 | 起動するとき:<br>(設定は全てのモジュールに影響するが、設定項目は最上位からここに移された。{{ Bug(202529) }})<br>{{ mediawiki.external('x') }} 前回のオンライン状態にする<br>(network.online の値を起動時にオンライン/オフライン状態を設定するのに使う)<br>{{ mediawiki.external(' ') }} 起動時にオンライン状態にするかを尋ねる<br>(Communicator とは違い、プロンプトは常に表示される。{{ Bug(239564) }})</td> </tr>
+</tbody></table>
+<h4 id="Gopher_.28.E3.83.97.E3.83.AD.E3.82.AD.E3.82.B7.E3.81.AE.E3.82.BB.E3.82.AF.E3.82.B7.E3.83.A7.E3.83.B3.E3.82.82.E5.8F.82.E7.85.A7.29" name="Gopher_.28.E3.83.97.E3.83.AD.E3.82.AD.E3.82.B7.E3.81.AE.E3.82.BB.E3.82.AF.E3.82.B7.E3.83.A7.E3.83.B3.E3.82.82.E5.8F.82.E7.85.A7.29"> Gopher (プロキシのセクションも参照) </h4>
+<table class="fullwidth-table"> <tbody><tr> <th>設定名</th> <th>設定可能な値</th> <th>設定用 UI (太字) とコメント (ユーザ設定については太字)</th> </tr> <tr> <td><code>network.dir.format</code></td> <td colspan="2" rowspan="1">FTP セクションを参照。</td> </tr>
+</tbody></table>
+<h4 id=".E3.82.B5.E3.83.9D.E3.83.BC.E3.83.88.E3.81.95.E3.82.8C.E3.81.A6.E3.81.84.E3.81.AA.E3.81.84" name=".E3.82.B5.E3.83.9D.E3.83.BC.E3.83.88.E3.81.95.E3.82.8C.E3.81.A6.E3.81.84.E3.81.AA.E3.81.84"> サポートされていない </h4>
+<table class="fullwidth-table"> <tbody><tr> <th>設定名</th> <th>設定可能な値</th> <th>設定用 UI (太字) とコメント (ユーザ設定については太字)</th> </tr> <tr> <td><code>browser.xul.error.pages.enabled</code></td> <td><code>false</code> (デフォルト)<br><code>true</code></td> <td>明示的に値を新規作成しない限り、about:config には現れない。({{ Bug(28586) }} 参照)</td> </tr> <tr> <td><code>network.protocol-handler.external.SCHEME</code></td> <td><code>false</code> (デフォルト)<br><code>true</code><br> </td><td>Mac と Windows: &lt;SCHEME&gt; で始まる URL を、OS のデフォルトハンドラに送る。<br>Linux/UNIX: URL をアプリケーションに送る。<br>例: <code>network.protocol-handler.external.mailto==true</code><br>は、Phoenix/Firebird/Firefox がデフォルトのメーラにアクセスするために使われます。<br>設定を読み込む前にロードされるハンドラーについては変更できません (例えば file:)</td> </tr>
+</tbody></table>
+<p><br>
+</p>
+<h4 id=".E5.BB.83.E6.AD.A2.2F.E5.89.8A.E9.99.A4_.28.E3.81.93.E3.81.AE.E3.83.AA.E3.82.B9.E3.83.88.E3.81.AF.E4.B8.8D.E5.AE.8C.E5.85.A8.29" name=".E5.BB.83.E6.AD.A2.2F.E5.89.8A.E9.99.A4_.28.E3.81.93.E3.81.AE.E3.83.AA.E3.82.B9.E3.83.88.E3.81.AF.E4.B8.8D.E5.AE.8C.E5.85.A8.29"> 廃止/削除 (このリストは不完全) </h4>
+<ul><li> <code>browser.cache.enable</code>
+</li><li> <code>browser.cache.disk.directory</code>
+</li><li> <code>networking.proxy.wais</code>
+</li><li> <code>networking.proxy.wais_port</code>
+</li><li> <code>network.http.connect.timeout</code>
+</li><li> <code>network.http.proxy.ssl.connect</code>
+</li></ul>
+<h4 id=".E8.AA.BF.E6.9F.BB.E4.B8.AD" name=".E8.AA.BF.E6.9F.BB.E4.B8.AD"> 調査中 </h4>
+<ul><li> <code>offline.startup_state</code>
+</li></ul>
+<div class="originaldocinfo">
+<h2 id=".E5.8E.9F.E6.96.87.E6.9B.B8.E3.81.AE.E6.83.85.E5.A0.B1" name=".E5.8E.9F.E6.96.87.E6.9B.B8.E3.81.AE.E6.83.85.E5.A0.B1"> 原文書の情報 </h2>
+<ul><li> 著者: Benjamin Chuang
+</li><li> 最終更新日: July 26, 2007
+</li><li> 著作権: Portions of this content are © 1998–2007 by individual mozilla.org contributors; content available under a Creative Commons license | <a class="external" href="http://www.mozilla.org/foundation/licensing/website-content.html">詳細</a>
+</li></ul>
+</div>
+<div class="noinclude">
+</div>
+{{ languages( { "en": "en/Mozilla_Networking_Preferences" } ) }}

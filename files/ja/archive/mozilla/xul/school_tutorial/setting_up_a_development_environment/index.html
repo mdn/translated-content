@@ -1,0 +1,124 @@
+---
+title: Setting Up a Development Environment
+slug: Archive/Mozilla/XUL/School_tutorial/Setting_Up_a_Development_Environment
+translation_of: >-
+  Archive/Add-ons/Overlay_Extensions/XUL_School/Setting_Up_a_Development_Environment
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_School/The_Essentials_of_an_Extension" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_School/Adding_menus_and_submenus">次のページ  »</a></p>
+</div>
+<h2 id="ツールの入手">ツールの入手</h2>
+<p>ここでは、アドオン開発 (または他の開発にも) に役立つ、ソースコードエディタ、ソースコントロールシステム、ビルドシステムの 3 つの基本的なツールを紹介します。</p>
+<p>コードを編集するための公式の Mozilla IDE は存在しません。他方で、拡張機能はウェブ開発と同じ (またはよく似た) 言語を使用しているため、ほとんどのテキストエディタや IDE が開発作業に使えます。ほとんどのオンラインで見つかる XUL ツールやプラグインは、プロジェクトのフォルダ構造を生成するテンプレートでしかありません。これらはあまり役に立たないでしょう。</p>
+<p>おすすめのエディタは、<a class="external" href="http://www.activestate.com/komodo_edit/" title="http://www.activestate.com/komodo_edit/">Komodo Edit</a> です。これは、フリーでオープンソースであり、クロスプラットフォームで動作します。また、Mozilla XULRunner プラットフォームをベースにしているため、Firefox の拡張機能開発を部分的にサポートしています。Komodo Edit には、XUL タグや属性の入力を自動補完する機能があり、<a href="/ja/docs/CSS_Reference/Mozilla_Extensions" title="CSS_Reference/Mozilla_Extensions">Mozilla の CSS 拡張仕様</a> ("-moz" で始まる CSS の値やプロパティ) もサポートしています。また、Firefox と似たアドオンシステムを備えており、拡張機能開発に役立つ Komodo の拡張機能もあります。他の多くのエディタよりも多くの拡張機能開発に役立つ機能を備えているため、ぜひ試してみることをお勧めします。このチュートリアルの例は Komodo Edit で扱っているため、ダウンロードしたファイルに <em>.kpf</em> ファイルが含まれていることがあります。これは、Komodo プロジェクトファイルです。</p>
+<p>ソースコントロール (バージョン管理システムとも言います) については、適当なものを使用することをお勧めします。私たちは <a class="external" href="http://subversion.tigris.org/">Subversion</a> を使用していますが、他のどのツールでもよいでしょう。このチュートリアルでは、その使用方法を取り上げません。</p>
+<p>XPI ファイルにパッケージ化するツールは、<a class="external" href="http://www.gnu.org/software/make/">make</a> の使用をお勧めします。これは、Mozilla が Firefox のビルドに使用しており、すべてのオペレーティングシステムで利用可能なシステムです。また、<em>make</em> は、ほとんどの UNIX ベースのシステムのデフォルトツールです。Mac OS X には、XCode Tools パッケージの一部としてインストールすることができます。Windows には、<a class="external" href="http://www.cygwin.com/">cygwin</a> からインストールできます。<em>cygwin</em> インストールの場合は、ダウンロードとインストールを行うパッケージのリストから、<em>make</em> と <em>zip</em> ユーティリティにチェックを入れてください。</p>
+<p>また、<em>make</em> を実行可能なシステムパス内に置いてください。<em>make</em> のセットアップ後、コマンドラインウィンドウを開き、 "make -ver" コマンドを実行して <em>make</em> のインストールされたバージョンが出力されることを確認してください。</p>
+<p>ぜひ、あなたのシステムで <em>make</em> をセットアップしてください。私たちのコードの例には、この <em>make</em> を使用して最終的な XPI ファイルをビルドし、インストールするために必要なすべてのファイルが付属しています。このツールをしようすることで、パッケージ化する時間を節約できます。または、バッチファイルでパッケージ化を行う同等のシステムを作成してもよいでしょう。</p>
+<h2 id="ビルドシステム">ビルドシステム</h2>
+<p>それでは、前回の練習問題で作成した Hello World の 2 番目のバージョンをビルドするためのプロジェクトをダウンロードしてください。</p>
+<p><a class="internal" href="/@api/deki/files/4229/=HelloWorld2.zip" title="/@api/deki/files/4229/=HelloWorld2.zip">Hello World 2 プロジェクト</a></p>
+<p>適当な場所にファイルを展開してください。<em>HelloWorld2</em> ディレクトリ内には、<em>bin</em> and <em>src</em> の 2 個のディレクトリがあります。<em>bin</em> は空のディレクトリです。ここには、ビルド時に作成されたファイルが格納されます。ビルドすると、このディレクトリに拡張機能の XPI ファイルが置かれます。</p>
+<p><em>src</em> ディレクトリ内のプロジェクトファイル (<em>HelloWorld2.kpf</em>) を Komodo Edit で開いてください。Projects タブには、<em>src</em> ディレクトリ内のディレクトリ構造が表示されています。この構造は、前回のセクションで展開した XPI とほとんど同じなので見覚えがあるでしょう。</p>
+<p>一つだけ補足すると、<em>src</em> ディレクトリの下に <em>Makefile</em> ファイル、<em>chrome</em> ディレクトリの下に <em>Makefile.in</em> ファイルがあります。これらは、<em>make</em> が XPI のビルドに使用するファイルです。後でこのファイルを読んで理解しなければなりません。また、少なくとも、あなたのプロジェクトに合わせて変更すべき部分を知らなければなりません。<em>make</em> と Makefiles について知るには、<a class="external" href="http://www.chemie.fu-berlin.de/chemnet/use/info/make/make_toc.html">GNU Make Manual</a> を参照するとよいでしょう。</p>
+<p>多くの場合、変更が必要な個所は <em>Makefile</em> の最初の数行だけです。これらは、拡張機能の名前 (JAR ファイルの名前にも使用されます) と ID (<em>install.rdf</em> 内に指定されます)、開発とテストのために拡張機能をインストールするプロファイルを定義します。これ以上のことは、後で扱います。</p>
+<p>はじめに、コマンドラインから XPI をビルドしてみましょう。システムのコマンドラインプログラムを開き、Hello World プロジェクトの <em>src</em> ディレクトリへ移動してください。次のコマンドを実行します:</p>
+<pre class="code-java">make</pre>
+<p>行うことはこれだけです。すべてがうまくいけば、コマンドラインに次のように出力されます:</p>
+<pre class="code-java">Creating chrome JAR file.
+  adding: content/browserOverlay.js (deflated 42%)
+  adding: content/browserOverlay.xul (deflated 59%)
+  adding: skin/browserOverlay.css (stored 0%)
+  adding: locale/ja/browserOverlay.dtd (deflated 52%)
+  adding: locale/ja/browserOverlay.properties (stored 0%)
+Creating chrome JAR file. Done!
+Creating XPI file.
+  adding: install.rdf (deflated 50%)
+  adding: chrome.manifest (deflated 60%)
+  adding: chrome/xulschoolhello.jar (deflated 30%)
+Creating XPI file. Done!
+
+Build finished successfully.</pre>
+<p><em>bin</em> ディレクトリを調べてください。ビルドされた <em>xulschoolhello2.xpi</em> ファイルと、プロジェクトファイルのコピーが含まれた <em>build</em> ディレクトリがあるはずです。<em>build</em> ディレクトリは、最終的な XPI がビルドされる前のファイルがコピーされる一時的な場所です。再び <em>make</em> を実行すると、ビルドプロセスの最後の行だけが表示されます。これは、<em>build</em> ディレクトリ内のファイルが最新であるため、<em>make</em> が行う作業がないことを示しています。ソースファイルに変更を加えると、<em>make</em> が XPI ファイルのビルドに必要な作業を再び行います。</p>
+<p>次のコマンドを実行 (再び、<em>src</em> から) するだけで、<em>bin</em> ディレクトリを掃除することができます:</p>
+<pre class="code-java">make clean</pre>
+<p>これらのコマンドは Komodo からも実行できます。メニューの Tool &gt; Run Command... をクリックし、"Run:" テキストボックスに次のコマンドを入力します:</p>
+<pre class="code-java">bash -c <span class="code-quote">"make"</span></pre>
+<p>または、"clean" を追加して clean コマンドを実行します。"bash -c" の部分は、Komodo に <em>bash</em> を使用させます。これは、何らかの理由でデフォルトのコマンドシェルが正しく設定されていない場合に入力します。この部分は必要ではありませんが、次に実行する <em>make</em> コマンドと矛盾しないようにするため、この方法で実行したほうがよいでしょう。</p>
+<p>"Run Command" ウィンドウの "More" ボタンをクリックして Advanced Options を表示し、"Start in" テキストボックスに <em>%p</em> (現在のプロジェクトのディレクトリパスを表す) を入力してください。"Add to Toolbox" チェックボックスをクリックしてチェックを入れると、このコマンドを Toolbox に保存できます。Toolbox を表示するには、メニューの View &gt; Tabs &gt; Toolbox をクリックします。これで、作成したコマンドをダブルクリックするだけで簡単に XPI ファイルをビルドできるようになりました。</p>
+<p>さらに改善しましょう。一度コードをテストしてデバッグすれば、その後何度も XPI をビルドしてインストールする作業が単調で退屈になってくるでしょう。これが、私たちが "make install" を紹介する理由です。これは、拡張機能がすでに Firefox のプロファイルにインストールされている場合にのみ動作します。また、ここで扱っているプロジェクトのように、アドオンの ID とプロファイルの場所を <em>Makefile</em> に設定する必要があります。この情報は、拡張機能をインストールして既存のインストールされたファイルを上書きする場所として使用されます。"make install" の実行時に Firefox が開いている場合は、変更を適用するために Firefox を再起動してください。XPI ファイルをインストールし直すよりよいでしょう。</p>
+<p>プロファイルの場所を正しく設定するために、Mozilla サポートサイトの<a class="external" href="http://support.mozilla.com/ja/kb/Profiles">プロファイルについての記事</a>をお読みください。このトピックについては、このセクションの後で深く掘り下げます。</p>
+<p>Windows でないシステム上で "make install" を動作させるには、さらに手順が必要です。インストール処理は、<em>OSTYPE</em> と呼ばれる export されていない環境変数を必要とします。手短に説明すると、コマンドラインから実行したいときは、次のようにする必要があります:</p>
+<pre class="code-java">export OSTYPE; make install</pre>
+<p>Komodo 内のコマンドの場合は、次のように入力します:</p>
+<pre class="code-java">bash -c <span class="code-quote">"export OSTYPE; make install"</span></pre>
+<p><em>export</em> コマンドは、"bash -c" を使用しないと正しく動作しないでしょう。</p>
+<div class="note">
+ <em>Makefile</em> ファイルでは、アドオンのインストール先のプロファイルフォルダを指定します。これは、<em>profile_dir</em> 変数で設定します (例では "xulschool-dev" プロファイルに設定されています)。あなたのアドオン開発用のプロファイルを作成する時は、簡単なプロファイル名を付け、インストールコマンドに使用するため <em>Makefile</em> に設定してください。</div>
+<h3 id="IDL_ファイルの構築">IDL ファイルの構築</h3>
+<p>拡張機能によっては、特殊な機能を追加するための XPCOM コンポーネントを開発する必要があります。このチュートリアルにも XPCOM についてのセクションがありますが、ここでは、拡張機能をビルドする時に XPCOM がもたらす影響について簡潔に議論します。このセクションは読み飛ばしても構いません。後で、XPCOM の使用が必要になった時に参照してください。</p>
+<p>XPCOM インターフェースは、IDL ファイルを使用して定義されます。これは、一つまたは複数のインターフェースの属性やメソッドを定義するテキストファイルです。これらの IDL ファイルは、バイナリ形式にコンパイルされ、XPT ファイルとして拡張機能に含まれます。</p>
+<p>IDL ファイルを XPT にコンパイルするには、<em>xpidl</em> と呼ばれるコマンドラインツールが必要です。このツールは、Mozilla <a href="/ja/docs/Gecko_SDK" title="Gecko SDK">Gecko SDK</a> に同梱されています。IDL をコンパイルする必要があるときは、SDK のページから、あなたのシステム用にコンパイルされたバージョンをダウンロードしてください。また、システムの必要要件にも注意してください。あなたのシステムがサポートされていない場合は、ご自身で Mozilla のソースから SDK をビルドしなければなりません。幸運を祈ります。</p>
+<p>次に、SDK の環境を整えてください。<em>xpidl.exe</em> (他のシステムでは <em>xpidl</em>) をデフォルトで実行可能なパスに置き、次のように、環境変数 <em>GECKO_SDK</em> を追加して SDK ビルドのパスを設定してください:</p>
+<pre class="code-java">export GECKO_SDK=/path/to/your/sdk</pre>
+<p>私たちのビルドシステムはここからピックアップします。Unix ベースのシステム上の Komodo で動作させるには、ホームディレクトリの <em>.bash_login</em> ファイルに、次のコマンドを追加します。</p>
+<pre class="code-java">bash -c ". ~/.bash_login; make"</pre>
+<p>XPCOM コンポーネントを持つプロジェクトの例は、このチュートリアルの XPCOM のセクションにあります。そこでは、さらに複雑な C++ XPCOM をビルドする方法についても言及しています。</p>
+<h3 id="拡張機能への署名">拡張機能への署名</h3>
+<p>ユーザが安全に拡張機能を使用できるようにするため、<a href="/ja/docs/Signing_an_extension" title="Signing an extension">拡張機能に署名を追加する</a>ことができます。署名は、あなたが拡張機能の作者であり、信頼された証明書認証局 (CA) から提供された正当な証明書が使用されていることを検証します。</p>
+<p>ユーザにとって注意すべき違いは、XPI のインストールダイアログで拡張機能があなたによって作成されたことが表示され、信頼された拡張機能であることが分かるだけです。ほとんどのユーザが、拡張機能の署名に頼るよりも公式のアドオンサイト (AMO) の方を信頼しているため、拡張機能に署名をすることは一般的ではありません。一方では、巨大な企業が自社の拡張機能に署名をすることが標準的な慣習になっています。</p>
+<p>拡張機能に署名できるようにするには、いくつかのライブラリをダウンロードする必要があります。<a href="/ja/docs/Signing_an_extension" title="Signing an extension"><span class="external">手順</span></a>に従って、以下のような内容を Makefile に追加してください:</p>
+<pre class="code-java"># The directory where the signature sources are located.
+signature_dir := signature
+
+# The signing key /certificate file.
+signature_extra_files := $(build_dir)/META-INF/manifest.mf \
+                         $(build_dir)/META-INF/zigbert.sf
+# The signing key /certificate file.
+signature_rsa_file = $(build_dir)/META-INF/zigbert.rsa# The signing key /certificate file.
+signature_files := $(signature_extra_files) \
+                   $(signature_rsa_file)
+
+$(signature_files): $(build_dir) $(xpi_built)
+  @signtool -d $(signature_dir) -k $(cert_name) \
+  -p $(cert_password) $(build_dir)</pre>
+<p>あなたのパスワードを Makefiles に記述しないように注意してください。また、証明書の情報は慎重に取り扱わなければなりません。これらは一人の人が扱い、リリースプロセスの最終段階に近いところでのみ行うのが良いでしょう。また、署名有りの開発版ビルドと署名無しのものを区別するため、<em>make signed</em> などの別の <em>make</em> コマンドを使います。</p>
+<h2 id="Firefox_プロファイルの管理">Firefox プロファイルの管理</h2>
+<p>テスト環境を他のすべてのものと分けておくことは、良い開発の慣習です。不安定な拡張機能が日常的に使用する Firefox のプロファイルを壊してデータが失われることは誰も望ません。テスト用の別の "バージョン" の Firefox を用意しておきましょう。Firefox プロファイルは、このためにあります。</p>
+<p>複数の Firefox プロファイルをセットアップする方法については、Mozilla サポートサイトの<a class="external" href="http://support.mozilla.com/ja/kb/Managing+profiles">プロファイルの管理</a>の記事をお読みください。プロファイルは好きな数だけ作成できます。また、これを複数のバージョンの Firefox で使用することもできます。例えば、あなたの拡張機能を Firefox 3.5 と Firefox 3.6 またはローカライズされたバージョンでテストできます。様々なバージョンの Firefox を好きなだけインストールし、それらのバージョンとプロファイルを織り交ぜて使用することができます。</p>
+<p>Windows と Linux では、サポート記事に書かれた方法で、あなたが作成したすべてのプロファイルのショートカットを簡単に作成できます。</p>
+<p>Mac OS X の開発者に対しては、"ショートカット" をセットアップする別の方法もあります。Automator アプリケーションを開いて <em>ユーティリティ &gt; シェルスクリプトを実行</em> を選び、テキストボックスにプロファイルを読み込むスクリプトを入力してください:</p>
+<pre class="code-java">/Applications/Firefox.app/Contents/MacOS/firefox-bin -no-remote -p MyProfile &gt; /dev/<span class="code-keyword">null</span> &amp;</pre>
+<p>"/dev/null" を適当なファイルに置き換えると、Firefox や他の拡張機能からの <em>dump</em> 出力を得ることができます。行末の <em>&amp;</em> は、Automator が Firefox のセッションが終わるまで待機しないようにします。ワークフローではなく、アプリケーションとして保存してください。簡単にアクセスできるように、これをデスクトップや Dock に保存するとよいでしょう。</p>
+<p>また、詳細なエラー情報を得られるように、テスト用のプロファイルの設定をいくつか変更してください。通常、Firefox の <a href="/ja/docs/Error_Console" title="Error Console">エラーコンソール</a> (ツール &gt; エラーコンソール) には、ウェブページの JavaScript エラーが表示されますが、設定を変更することによって、あなたの拡張機能からのエラー情報を得ることもできます。設定方法については、<a href="/ja/docs/Setting_up_extension_development_environment#Development_preferences" title="Setting up extension development environment#Development preferences"><span class="external">開発用の設定</span></a>をお読みください。</p>
+<h2 id="開発者向けの拡張機能">開発者向けの拡張機能</h2>
+<p>ウェブ開発やアドオン開発に役立つ、幅広い様々な Firefox の拡張機能があります。これらは、<a class="link-https" href="https://addons.mozilla.org/ja/firefox/browse/type:1/cat:4">Mozilla Add-ons サイト</a>で探すとよいでしょう。また、<a href="/ja/docs/Setting_up_extension_development_environment#Development_extensions" title="Setting up extension development environment#Development extensions"><span class="external">開発用拡張機能のリスト</span></a>も参照してください。このセクションでは、その中でもとても役立つものを紹介します。</p>
+<h3 id="DOM_Inspector">DOM Inspector</h3>
+<p><a href="/ja/docs/DOM_Inspector" title="DOM Inspector"><span class="external">DOM Inspector</span></a> は、以前は Firefox に同梱されていましたが、Firefox 3 からは別のアドオンとして分離されました。これは、HTML や XUL ドキュメントの DOM を調べたいときにとても役に立つ調査ツールです。また、適用された CSS 規則や組み合わされた JavaScript オブジェクトも調べることができます。使い方は、<a href="/ja/docs/Introduction_to_DOM_Inspector" title="Introduction to DOM Inspector">DOM Inspector 入門</a>のガイドをお読みください。</p>
+<p>DOM inspector は、ウィンドウのオーバーレイを適用する場所やデフォルトの CSS スタイル規則を置き換える方法を見つけるときに、特に役立ちます。対象のファイル名を知りたいときは、<a class="external" href="http://mxr.mozilla.org/">Mozilla のソースコード</a>から調べてください。また、完全に信頼できるものではありませんが、スタイルと属性の変更や JavaScript のコードの実行もできます。</p>
+<h3 id="JavaScript_Debugger">JavaScript Debugger</h3>
+<p>名前の通りのデバッガです。<a href="/ja/docs/Venkman" title="Venkman">Venkman JavaScript Debugger</a> は、JavaScript コードの実行をトレースできる素晴らしいツールです。</p>
+<p>拡張機能やブラウザのコードをデバッグするには、Loaded Scripts パネルで右クリックし、Exclude Browser Files のチェックを外します。読み込まれたスクリプトのリストは、Firefox のすべてのスクリプトを含むため、とても長くなります。ここで、ファイルに区別しやすい名前を付けたことが役立ってきます。Venkman は、ブレークポイントの設定、メソッドのステップインとステップアプト、JavaScript 実行からプロファイリング情報を得ることができます。また、変数を調べたり、式を監視し続けたり、実行中の任意の地点で JavaScript を評価したりできます。</p>
+<p>この拡張機能はほとんどメンテナンスされていないため、バグが多くあります。JavaScript の XPCOM や XBL ファイルのコードのデバッグは特に信頼できません。それにも係わらず、特定の機能が正しく動作しない原因を見つけたいときには真価を発揮するツールです。</p>
+<h3 id="Tamper_Data">Tamper Data</h3>
+<p><a class="link-https" href="https://addons.mozilla.org/ja/firefox/addon/966" title="https://addons.mozilla.org/ja/firefox/addon/966">Tamper Data</a> は、HTTP リクエストとその応答を傍受します。リクエストと応答をキャンセルし、それらが送信される前にペイロードデータを置き換えることができます。他にも <a class="link-https" href="https://addons.mozilla.org/ja/firefox/addon/3829">Live HTTP Headers</a> のような似たツールがありますが、Tamper Data は、私たちが最もよく使用するツールの一つです。後で、HTTP デバッグについても取り上げます。</p>
+<h3 id="Firebug">Firebug</h3>
+<p><a class="link-https" href="https://addons.mozilla.org/ja/firefox/addon/1843" title="https://addons.mozilla.org/ja/firefox/addon/1843">Firebug</a> 拡張には、これまで挙げてきたほとんどすべてのツールが含まれていますが、それらはウェブ開発に焦点が当てられていました。<a class="external" href="http://getfirebug.com/wiki/index.php/Chromebug_User_Guide" title="http://getfirebug.com/wiki/index.php/Chromebug_User_Guide">Chromebug</a> 拡張を追加すれば、Firefox が拡張機能開発にさらに役立つものになるでしょう。しかし、これまで挙げてきたアドオンを置き換えるには十分ではありません。</p>
+<p>一方で、Firebug はとても親しみやすく、ユーザインターフェースが統合され、より開発者向けであることが分かるでしょう。ぜひ試してみてください。</p>
+<h3 id="Leak_Monitor">Leak Monitor</h3>
+<p>メモリリークは常に、Firefox に対する大きな非難の的になっています。Mozilla は、時間をかけて真剣にメモリ使用量を検証し、また、いくつかのクリティカルな領域でパフォーマンスを改善し、あらゆる種類のメモリリークを取り除いてきました。</p>
+<p>しかしながら、拡張機能もメモリリークの原因になっています。Mozilla Add-ons のサイトで拡張機能を公開したい場合は、メモリリークを無くしておくべきでしょう。<a href="/ja/docs/Using_XPCOM_in_JavaScript_without_leaking" title="Using XPCOM in JavaScript without leaking"><span class="external">Using XPCOM in JavaScript</span></a>の、メモリリークを避けるためのガイドラインに従ってください。開発者が最も犯しがちな誤りの一つは、JavaScript のイベントリスナやオブザーバを登録して、それらを削除しないことです。削除するコードを常に含める簡単なことを習慣にするだけで、大きな違いが生まれます。</p>
+<p>あなたの拡張機能がメモリリークを起こさないようにするため、<a href="/ja/docs/Leak_Monitor" title="Leak Monitor"><span class="external">Leak Monitor 拡張</span></a>を使用してテストしてください。いつでも、ウィンドウを開いたり閉じたりしてテストしてください。メモリリークは、大抵この操作をした時に表面化してきます。</p>
+<h2 id="練習問題">練習問題</h2>
+<ul>
+ <li>XUL School 用の新しい Firefox プロファイルをセットアップしてください。普段使用している Firefox のウィンドウを閉じることなく、XUL School の Firefox を開いたり閉じたりできるようにしてください (もちろん、Firefox を使用していますね？)。XUL School プロジェクトに何か変更を加え、<em>make</em> と <em>make install</em> を行い、変更を加えた拡張機能が動作することを確認してください。</li>
+ <li>DOM Inspector をインストールしてください。このプロジェクトで追加したメニューの場所を見つけてください。Firefox によってデフォルトで適用されている CSS 規則を調べてください。最後に、メニュー項目の計算された CSS スタイルを見てください。Firefox の DOM の残りの部分を見て回り、そのノードが Firefox の UI の該当する部分を見つけてください。</li>
+ <li>JavaScript Debugger をインストールしてください。hello world 関数にブレークポイントを設定して実行してください。スコープ内で利用可能な変数を調べてください。ウィンドウ右側のコンソールで JavaScript コードを実行してください。</li>
+ <li>Tamper Data 拡張をインストールしてください。Tamper Data ウィンドウを開いてから Gmail や Facebook などの AJAX が多用されたページを開いてください (Start Tamper ボタンをクリックしてはいけません。この練習問題では使用しません)。送信されたリクエストによって何が起こっているかを特定してみてください。</li>
+</ul>
+<p>以上で、あなたのプロジェクトをすばやく監視し、変更をテストする方法が分かりました。次回は、オーバーレイや新しいウィンドウを通して Firefox に新しい UI 要素を追加する方法を学びます。</p>
+<div>
+ <div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_School/The_Essentials_of_an_Extension" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_School/Adding_menus_and_submenus">次のページ  »</a></p>
+</div></div>
+<p><span style="font-size: small;">This tutorial was kindly donated to Mozilla by Appcoast.Se</span></p>

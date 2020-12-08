@@ -1,0 +1,115 @@
+---
+title: 設定アプリ
+slug: Archive/Firefox_OS/Platform/Gaia/Gaia_apps/設定アプリ
+tags:
+  - Apps
+  - B2G
+  - B2G OS
+  - Gaia
+  - JavaScript
+  - Settings
+translation_of: Archive/B2G_OS/Platform/Gaia/Gaia_apps/Settings
+---
+<div class="summary">
+<p><span class="seoSummary">設定アプリは、デバイスの設定変更する事を許可し、アプリから表示要求のあったアクティビティに反応します。(例えば、ネットワーク接続していない時に、アプリが設定アプリに対して wifi 設定パネルを要求するなど) この記事では、この設定アプリがどのように動作しているか説明します。</span></p>
+</div>
+
+<h2 id="mozSettings_API_と_Data_binding">mozSettings API と Data binding</h2>
+
+<p>技術的にいうと、設定アプリは認定アプリが利用できる  <a href="/en-US/docs/Web/API/Navigator.mozSettings">window.navigator.mozSettings API</a> を利用して設定にアクセスするための UI を提供しています。設定アプリはバインドされたデータフィールドや mozSettings 値の様な基本的な設定操作を自動でハンドリングします。全ての</p>
+
+<p>The Settings app automatically handles basic settings operations such as binding data fields and mozSettings values — all basic operations such as toggling a setting or changing an input value will also result in the relevant mozSettings value being changed.</p>
+
+<p>The <code>window.navigator.mozSettings</code> API accesses the settings data from Gecko. The usage looks something like this:</p>
+
+<pre class="brush: js">navigator.mozSettings.createLock().set(values);</pre>
+
+<p>For set data.</p>
+
+<div class="note">
+<p><strong>Note</strong>: We need to use <code>createLock()</code> to lock the settings before reading or writing any <code>mozSettings</code> values.</p>
+</div>
+
+<p>To retrieve data, we could use get and set a callback function to start some operation upon the data:</p>
+
+<pre class="brush: js">var reqTimerGoBack =
+window.navigator.mozSettings.createLock().get('icc.goBackTimeout');
+reqTimerGoBack.onsuccess = function icc_getTimerGoBackSuccess() {
+  goBackTimer.timeout = reqTimerGoBack.result['icc.goBackTimeout'];
+    ...
+};</pre>
+
+<p>The data is stored in an <code>instance.result</code> dict.</p>
+
+<p>From B2G OS 2.0, a single <code>mozSettings</code> instance can be reused via <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/settings/js/modules/settings_cache.js">js/modules/settings_cache.js</a>:</p>
+
+<pre class="brush: js">var SettingsCache = require('modules/settings_cache');
+
+SettingsCache.getSettings(function(result){
+  var onlineSupportTitle = result['support.onlinesupport.title'];
+    ...
+});</pre>
+
+<h2 id="Navigation">Navigation</h2>
+
+<p>When users open the Settings app, they see several panels listed on the overview page, which are functional independent pages. <code>SettingsService.navigate</code> (<a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/settings/js/modules/settings_service.js">js/module/settings_service.js</a>) controls navigation between those pages.</p>
+
+<div class="note">
+<p><strong>Note</strong>: For legacy panels (which are not yet ported to the new structure), settings.currentPanel is used instead of SettingsService.navigate to navigate<br>
+ between panels.</p>
+</div>
+
+<p>Since B2G OS will support tablet devices as well as mobiles, the Settings app has two different types of navigation model implemented:</p>
+
+<ul>
+ <li>One column (for mobile)</li>
+ <li>Two column (for tablet)</li>
+</ul>
+
+<p>While called, <code>SettingsService.navigate</code> determines what navigation model to use via the following code:</p>
+
+<pre class="brush: js">if (_isTabletAndLandscape()) {
+  PageTransitions.twoColumn(oldPanel, newPanel, callback);
+} else {
+  PageTransitions.oneColumn(oldPanel, newPanel, callback);
+}</pre>
+
+<h2 id="Panels">Panels</h2>
+
+<p>From B2G OS 2.0 onwards, the basic panel structure is defined in <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/settings/js/modules/panel.js">js/modules/panel.js</a>. It defines six lifecycle stats:</p>
+
+<ul>
+ <li><code>init</code></li>
+ <li><code>beforeShow</code></li>
+ <li><code>show</code></li>
+ <li><code>hide</code></li>
+ <li><code>beforeHide</code></li>
+ <li><code>uninit</code></li>
+</ul>
+
+<p>All new settings panels are inherited from <code>SettingsPanel</code>, which extends <code>Panel</code>’s functionalities. The code is contained in <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/settings/js/modules/settings_panel.js">js/modules/settings_panel.js</a>:</p>
+
+<pre class="brush: js">onInit: function(panel, initOptions) {
+  ...
+
+  PanelUtils.activate(panel);
+},
+
+onBeforeShow: function(panel, beforeShowOptions) {
+  // Preset the panel every time when it is presented.
+  PanelUtils.preset(panel);
+  _addListeners(panel);
+  ...
+},</pre>
+
+<p><code>PanelUtils.activate</code> — defined in <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/settings/js/modules/panel_utils.js">js/modules/panel_utils.js</a> — is used to parse all links in the panel and adds corresponding handlers in <code>onInit</code> stat, and <code>PanelUtils.preset</code> is used to preset elements with the settings values in the <code>onBeforeShow</code> stat.</p>
+
+<p>All new settings panels are defined in the <a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/settings/js/panels">js/panels</a> folder.</p>
+
+<h2 id="AMD_module_and_Build_time_optimization">AMD module and Build time optimization</h2>
+
+<p>From B2G OS 2.0 onwards, the Settings app uses the <a href="http://en.wikipedia.org/wiki/Asynchronous_module_definition">AMD modules pattern</a> to implement each panel. The AMD modules are loaded via <a href="https://github.com/requirejs/alameda">Alemeda</a> (a lighter version of <a href="http://requirejs.org/">RequireJS</a>) and built/optimized using <code>r.js</code> (the RequireJS optimizer). The Settings app still had dependencies on files (<a href="https://github.com/mozilla-b2g/gaia/tree/master/shared/js">shared/js</a>) which aren’t AMD modules. For those it uses the <code>shim</code> options defined in <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/settings/js/config/require.js">settings/js/config/require.js</a>.</p>
+
+<h2 id="See_also">See also</h2>
+
+<p>The <a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/settings">Settings app has a build-in README</a> which is useful to read for a further information on Settings (Mainly written by Arthur Chen and Fred Lin).</p>

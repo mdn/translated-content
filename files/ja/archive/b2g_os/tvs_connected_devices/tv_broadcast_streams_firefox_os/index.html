@@ -1,0 +1,94 @@
+---
+title: Firefox OS 製品におけるテレビ放送ストリーム
+slug: Archive/B2G_OS/TVs_connected_devices/TV_broadcast_streams_Firefox_OS
+tags:
+  - DomMediaStream
+  - Gecko
+  - MediaStream
+  - TV
+  - framebuffer
+  - 放送ストリーム
+translation_of: Mozilla/Firefox_OS_for_TV/TV_broadcast_streams_Firefox_OS
+---
+<p class="summary">この記事では、Firefox OS においてテレビ放送ストリームを処理・表示を可能にした仕組みを説明します。</p>
+
+<p>テレビは Web プロットフォームにおいて新興領域です。これは最近の Web 技術を活用したものです。私たちは現在、エキサイティングなチャレンジとしてテレビで Web を扱い、今後 Web ベースアプリのエクスペリエンスを特徴とする、より面白いインタラクティブな機能を持つ Smart TV をもたらします。Firefox OS はプラットフォームプロバイダーとしてオープンな Web 技術を採用し、より多くのクロスプラットフォーム上で既存の Web アプリを動作させます。</p>
+
+<p>しかし現在のスマートテレビの最も一般的な使用方法は、プラットフォーム固有の機能をFirefox OS でサポートするために我々が実装すべきテレビ放送を扱う機能だけになります。</p>
+
+<h2 id="テレビ放送ストリーム">テレビ放送ストリーム</h2>
+
+<p>テレビ放送ストリーム技術は既に開発された技術であり、多くのテレビメーカの競争ポイントとなっています。これらはテレビにおける効果的な AV 同期工学技術を含む技術です。これは、最適化されたフレームレートでなめらかな視聴体験を提供することを意味し、メーカーはハードウェアでコードとレンダリング性能をチューニングしています。</p>
+
+<h3 id="Firefox_OS_でテレビ放送ストリームを実現する">Firefox OS でテレビ放送ストリームを実現する</h3>
+
+<p>本来 Web ブラウザ専用に設計された描画パイプラインを持つFirefox OS ではテレビ放送ストリームをネィティブサポートしていません。そのため、Firefox OS は現在、ハードウェアコンポーザーをサポートしておらず、テレビ放送ストリームをデコード・描画する際はメーカーのハードウェアアクセラレーションユーティリティーを必要とします。このような既存技術は信頼性が高く、メーカが既存の技術を捨てるようなものではありません。</p>
+
+<p>Firefox の Gecko はレンダリングパイプラインと現在のフレームの結果をフレームバッファにレンダリングする処理をハンドリングします。しかし、テレビメーカのハードウェアは自前のフレームバッファにレンダリングします。これら２つのフレームバッファはそれぞれ独立し、お互いにブロックしています。この問題を解決するために、<code>DomMediaStream のサブセットである DomHwMediaStream を実装するようにしています。</code></p>
+
+<p><a href="https://mdn.mozillademos.org/files/11387/%5E62AFD1F0AC6838ECDE44A052E8ED64C03785C0B44312605490%5Epimgpsh_fullsize_distr.jpg"><img alt="Figure 1: The hierarchy of DomHwMediaStream" src="https://mdn.mozillademos.org/files/11387/%5E62AFD1F0AC6838ECDE44A052E8ED64C03785C0B44312605490%5Epimgpsh_fullsize_distr.jpg" style="display: block; height: 248px; margin: 0px auto; width: 800px;" title="Figure 1: The hierarchy of DomHwMediaStream"></a></p>
+
+<p>上記の図は、API がオーバーレイイメージを作成し、<code>MediaStream にプライマリービデオトラックを追加していることを示す図です。画面サイズはテレビプログラム仕様に従い調整することが可能です。加えて、DomMediaStream は MediaStream</code> の DOM ラッパーであるため、ビルトインでテレビ放送ストリームをハンドリングするための基本的な幾つかの機能が備わっています。開発者は関連する情報にアクセスするための API  を活用することができます。</p>
+
+<p>サンプルを見ていきましょう</p>
+
+<pre class="brush: js">// 使えるテレビチューナー全てを取得する
+navigator.tv.getTuners().then(
+    function(aTuners) {
+
+      for ( var i = 0; i &lt; aTuners.length; ++i ) {
+          var tuner = aTuners[i];
+
+            // チューナーのソースが変更されるたびに新しい mediaStream の情報を取ることができます。
+          tuner.oncurrentsourcechanged = function(aEvent) {
+            getTracksInfo(tuner.stream);
+        };
+      }
+
+    },
+    function(aError) {
+      console.error( "Fail to get tuners: " + aError );
+    }
+);
+
+// 全てのトラック情報を取得する
+function getTracksInfo(aStream) {
+
+    var tracks = aStream.getTracks();
+
+    for ( var i = 0; i &lt; tracks.length; ++i ) {
+        var track = tracks[i];
+
+        console.log( "track info id: " + track.id );
+        console.log( "track info kind: " + track.kind );
+        console.log( "track info label: " + track.label );
+    }<code>
+}</code></pre>
+
+<p><code>DomHwMediaStream では、OverlayImage</code> は直接 GFX コンポーザーによって処理されます。<code>OverlayImage(特に転送レイヤー)は、フレームバッファーにレンダリングされたもので、ユーザーはテレビのフレームバッファを Gecko のフレームワーバーを介してアクセスすることができます。</code></p>
+
+<p><a href="https://mdn.mozillademos.org/files/11389/p2.jpg"><img alt="Figure 2: OverlayImage in DomHwMediaStream" src="https://mdn.mozillademos.org/files/11389/p2.jpg" style="display: block; height: 239px; margin: 0 auto; width: 600px;" title="Figure 2: OverlayImage in DomHwMediaStream"></a></p>
+
+<h3 id="長所と短所">長所と短所</h3>
+
+<p>このアプローチは長所・短所があります。最初に長所を解説します。</p>
+
+<ul>
+ <li>Gecko では AV 同期をハンドリングする機能を持っていないため、テレビメーカーは自身の AV 同期機構を継続して利用でき、以前同様のハードウェア描画や AV 同期モジュールを医療することができます。</li>
+ <li>Web 開発者は 慣れている Web 開発手法でテレビアプリを作成できるため、 Web API を活用するコンテントプロバイダーが多く参加できます。例えば、 <a href="/docs/Web/API/MediaStream_API">MediaStream API</a> は <code>videoStreamTrack</code> と <code>AudioStreamTrack</code> にアクセスするための <a href="/docs/Web/API/MediaStreamTrack">MediaStreamTrack</a> を提供しています。加えて、MediaStream API はテレビ放送ストリームを操作する MediaStream インターフェイスを使えます。API を変更するような特別な要求がある場合、メーカーは DOMMediaStream オブジェクトを継承し、追加・上書きができます。</li>
+ <li>この API を使う際は、ハードウェア描画するフレームバッファデータのコピーを必要としません。</li>
+</ul>
+
+<p>短所：</p>
+
+<ul>
+ <li>CSS をテレビ放送ストリームに適用させることができないのは、最も明らなものの１つです。上記で述べたように、Gecko とテレビハードウェアメーカーは独立しており、パフォーマンス問題になるようなピクセルデータ単位でテレビのフレームバッファを Gecko のレイヤーにコピーするような事をしない限りは、テレビ放送ストリームに CSS エフェクトをサポートすることができません。</li>
+ <li>もう１点は、Web Audio です。現在テレビ音声トラックは Geckoではなく、テレビハードウェアで処理(デコード、A-V同期)している事から、テレビ放送ストリームで <a href="/docs/Web/API/Web_Audio_API">Web Audio API</a> をサポートする事ができません。(近い将来解決する事を目指しています) Web Audio API はボリュームや音声チャンネルレイアウトの切り替え、音声チャンネルミキサーやテレビチャンネル間のクロスフェードのような強力な機能の様なシンプルかつパワフルなコントロールを扱えます。</li>
+</ul>
+
+<h2 id="最後に">最後に</h2>
+
+<p><br>
+ Web の強みはユビキタス配信プラットフォームですが、いくつかのプラットフォームでは独自機能を必要としている点に注意してください。テレビでは、Web とテレビコンテンツを共存させることができる描画パスを持った設計を持ち、より多くの開発者をエコシステムに参加させるような効果的な放送ストリームは極めて重要です。将来的にテレビメーカーがストリームイメージを直接 CSS エフェクトをサポートできるハードウェアコンポーザーを実現する事を目指しています。この方法でハードウェアコンポーザーはメーカーが画面エフェクトをカスタマイズする事ができる様になります。</p>
+
+<p>テレビは Web 開発者にとっては比較的新鮮なデバイスですが、クロスプラットフォーム Web 技術の能力で、より多くのイノベーションの機会をもたらしてくれる事を期待しています。</p>

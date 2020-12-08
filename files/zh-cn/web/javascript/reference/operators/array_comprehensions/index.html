@@ -1,0 +1,157 @@
+---
+title: 数组推导式
+slug: Web/JavaScript/Reference/Operators/Array_comprehensions
+tags:
+  - JavaScript
+  - Non-standard
+  - 参考
+  - 运算符
+translation_of: Archive/Web/JavaScript/Array_comprehensions
+---
+<div class="warning">
+<p><strong>非标准。不要使用！</strong><br>
+ 数组推导是非标准的。以后应该用 {{jsxref("Array.prototype.map")}}，{{jsxref("Array.prototype.filter")}}，{{jsxref("Functions/Arrow_functions", "箭头函数", "", 1)}}和{{jsxref("Operators/Spread_operator", "展开语法", "", 1)}}.。</p>
+</div>
+
+<p>{{jsSidebar("Operators")}} </p>
+
+<p><strong>数组推导式</strong>是一种 JavaScript 表达式语法，使用它，你可以在一个原有数组的基础上快速的构造出一个新的数组。但是它已经从标准和火狐中移除。不要用它！</p>
+
+<h2 id="语法">语法</h2>
+
+<pre class="syntaxbox">[for (x of iterable) x]
+[for (x of iterable) if (condition) x]
+[for (x of iterable) for (y of iterable) x + y]
+</pre>
+
+<h2 id="描述">描述</h2>
+
+<p>在数组推导式内部，可以使用下面两种子语句：</p>
+
+<ul>
+ <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></li>
+ <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else">if</a></li>
+</ul>
+
+<p>每个 <code>for-of</code> 语句都放在与其配对的 <code>if</code> 语句（可以有多个，也可以完全省略）的左边，每个数组推导式中可以包含多组这样的配对，但最终选取的表达式值只能有一个，且这个值（也可以是个数组推导式，也就是说可以嵌套）只能放在推导式的最右边，紧靠着右中括号。</p>
+
+<h2 id="示例">示例</h2>
+
+<h3 id="基本的数组推导式写法">基本的数组推导式写法</h3>
+
+<pre class="brush:js">[for (i of [ 1, 2, 3 ]) i*i ];
+// [ 1, 4, 9 ]
+
+var abc = [ "A", "B", "C" ];
+[for (letters of abc) letters.toLowerCase()];
+// [ "a", "b", "c" ]</pre>
+
+<h3 id="带有_if_语句的数组推导式">带有 if 语句的数组推导式</h3>
+
+<pre class="brush: js">var years = [ 1954, 1974, 1990, 2006, 2010, 2014 ];
+
+[for (year of years) if (year &gt; 2000) year];
+// [ 2006, 2010, 2014 ]
+
+[for (year of years) if (year &gt; 2000) if(year &lt; 2010) year];
+// [ 2006], 和下面的写法等效：
+
+[for (year of years) if (year &gt; 2000 &amp;&amp; year &lt; 2010) year];
+// [ 2006]
+</pre>
+
+<h3 id="用数组推导式比用数组的_map、filter_方法更简洁">用数组推导式比用数组的 <code>map</code>、<code>filter</code> 方法更简洁</h3>
+
+<p>对比数组的 {{jsxref("Array.map", "map")}} 和 {{jsxref("Array.filter", "filter")}} 方法：</p>
+
+<pre class="brush: js">var numbers = [ 1, 2, 3 ];
+
+numbers.map(function (i) { return i * i });
+[for (i of numbers) i*i ];
+// 返回值都是 [ 1, 4, 9 ]
+
+numbers.filter(function (i) { return i &lt; 3 });
+[for (i of numbers) if (i &lt; 3) i];
+// 返回值都是 [ 1, 2 ]
+</pre>
+
+<h3 id="带有两个数组的数组推导式">带有两个数组的数组推导式</h3>
+
+<p>用两个 <code>for-of</code> 语句迭代两个不同的数组：</p>
+
+<pre class="brush: js">var numbers = [ 1, 2, 3 ];
+var letters = [ "a", "b", "c" ];
+
+var cross = [for (i of numbers) for (j of letters) i+j];
+// [ "1a", "1b", "1c", "2a", "2b", "2c", "3a", "3b", "3c" ]
+
+var grid = [for (i of numbers) [for (j of letters) i+j]];
+// [
+//  ["1a", "1b", "1c"],
+//  ["2a", "2b", "2c"],
+//  ["3a", "3b", "3c"]
+// ]
+
+[for (i of numbers) if (i &gt; 1) for (j of letters) if(j &gt; "a") i+j]
+// ["2b", "2c", "3b", "3c"]，和下面的写法<strong>等效</strong>：
+
+[for (i of numbers) for (j of letters) if (i &gt; 1) if(j &gt; "a") i+j]
+// ["2b", "2c", "3b", "3c"]
+
+[for (i of numbers) if (i &gt; 1) [for (j of letters) if(j &gt; "a") i+j]]
+// [["2b", "2c"], ["3b", "3c"]]，和下面的写法<strong>不等效</strong>：
+
+[for (i of numbers) [for (j of letters) if (i &gt; 1) if(j &gt; "a") i+j]]
+// [[], ["2b", "2c"], ["3b", "3c"]]
+</pre>
+
+<h2 id="规范">规范</h2>
+
+<p>最初起草在ECMAScript 6草案中，但在第27版（2014年8月）中被移除。 请参阅ES 6的旧修订版的规范语义。</p>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+<div class="hidden"><span style='background-color: transparent; color: #333333; display: inline !important; float: none; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; white-space: normal;'>本页的浏览器兼容性表都是基于结构化数据，如果你想更新数据.可以查看</span> <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> <span style='background-color: transparent; color: #333333; display: inline !important; float: none; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; white-space: normal;'>并且请给我们发送合并请求</span>.</div>
+
+<p>{{Compat("javascript.operators.array_comprehensions")}}</p>
+
+<h2 id="同旧版的JS1.7JS1.8数组推导的不同之处">同旧版的JS1.7/JS1.8数组推导的不同之处</h2>
+
+<p> </p>
+
+<div class="warning">JS1.7/JS1.8数组推导 在Gecko的46版本中已经被移除了 ({{bug(1220564)}}).</div>
+
+<p><strong>旧版数组推导语法 (请不要再使用了!):</strong></p>
+
+<pre class="brush: js example-bad">[X for (Y in Z)]
+[X for each (Y in Z)]
+[X for (Y of Z)]
+</pre>
+
+<p>不同点:</p>
+
+<ul>
+ <li>ESNext数组推导为每个"for"创建了一个作用域而取代了整个作用域.
+  <ul>
+   <li>Old: <code>[()=&gt;x for (x of [0, 1, 2])][1]() // 2</code></li>
+   <li>New: <code>[for (x of [0, 1, 2]) ()=&gt;x][1]() // 1, each iteration creates a fresh binding for x. </code></li>
+  </ul>
+ </li>
+ <li>ESNext 同"for"进行赋值而取代了旧的赋值表达式.
+  <ul>
+   <li>Old: <code>[i * 2 for (i of numbers)]</code></li>
+   <li>New: <code>[for (i of numbers) i * 2]</code></li>
+  </ul>
+ </li>
+ <li>ESNext数组推导可由多个if和for组成</li>
+ <li>ESNext数组推导只和<code>{{jsxref("Statements/for...of", "for...of")}}</code>迭代才有效，而不会同 <code>{{jsxref("Statements/for...in", "for...in")}}</code> 迭代.</li>
+</ul>
+
+<p>点击查看 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1220564#c42">Bug 1220564, comment 42</a> 并提出建设性建议.</p>
+
+<h2 id="See_also" name="See_also">相关链接</h2>
+
+<ul>
+ <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of"><code>for...of</code></a></li>
+ <li>{{jsxref("Operators/Generator_comprehensions", "生成器推导式", "" ,1)}}</li>
+</ul>

@@ -1,0 +1,37 @@
+---
+title: Emscripten
+slug: Mozilla/Projects/Emscripten
+translation_of: Mozilla/Projects/Emscripten
+---
+<p><span class="seoSummary">Emscripten は LLVM のバイトコードの JavaScript へのコンパイラです。LLVM バイトコードは、例えば C/C++ を Clang でコンパイルすることで出力できます。バイトコードを JavaScript に変換することで、それらを Web ブラウザ上で動作させられます。</span></p>
+
+<div class="warning">
+<p><strong>重要</strong>：このページには Emscripten の簡単な概要のみが記載されています。詳しく知るには, <a href="http://kripken.github.io/emscripten-site/index.html">Emscripten の公式 WiKi </a>をご覧ください。</p>
+</div>
+
+<p>Emscripten を利用することで以下のことが可能となります。</p>
+
+<ul>
+ <li>C や C++ のコードを JavaScript へコンパイルできます</li>
+ <li>LLVM バイトコードに出力された他の言語のコードを、JavaScript へコンパイルできます。</li>
+ <li> C/C++ で記述された他の言語の処理系を JavaScript へ変換することで、その言語のコードを間接的に実行できます。既に Python や Lua の処理系が変換されています。</li>
+</ul>
+
+<p>Emscripten を利用することで、ネイティブコードを即座に Web 向けにできます。いくつもの独立した実装をもつ標準化されたプラットフォームを利用することで、PC から iPad まで様々な環境で動作させられます。</p>
+
+<p>つまり Emscripten を利用することで、手動で JavaScript への移植をする必要はなくなります。また JavaScript を学ぶ必要もなくなります。また既存のネイティブユーティリティやライブラリを利用できるため、 Web 開発者にとっても有益です。</p>
+
+<p>実際にポータブルな C/C++ コードベースは Emscripten を用いて JavaScript へコンパイル可能です。その範囲は、グラフィックスや音声の再生、ファイルの読み込みと処理を必要とするハイパフォーマンスなゲームから、Qt のようなアプリケーションフレームワークまでに及びます。</p>
+
+<p>Emscripten は高速なコードを生成します。標準の出力フォーマットは、高度な最適化を可能とする <a href="/docs/Games/Tools/asm.js">asm.js</a> となっています。</p>
+
+<div class="note">
+<p><strong>付記</strong>：興味をお持ちの方は <a href="http://kripken.github.io/emscripten-site/docs/introducing_emscripten/about_emscripten.html">他の Emscripten に関する記事を読み、デモをご覧ください</a>。その後、<a href="http://kripken.github.io/emscripten-site/docs/getting_started/index.html">利用をはじめる</a> と良いでしょう。</p>
+</div>
+
+<h2 id="MDN_上の他の記事">MDN 上の他の記事</h2>
+
+<ul>
+ <li>ゲーム開発において Emscripten はよく利用されています。 <a href="/ja/docs/Games">Games zone</a> には、ゲーム開発に関する記事がまとまっています。</li>
+ <li> <a href="/ja/docs/Mozilla/Projects/Emscripten/Techniques">Emscripten の技法</a>には、Emscripten WiKi にはない、Emscripten に関する有用なアイディアがまとまっています。</li>
+</ul>

@@ -1,0 +1,29 @@
+---
+title: JSRuntime
+slug: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JSRuntime
+translation_of: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JSRuntime
+---
+<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+
+<div>
+<p><font><font>在JSAPI中，</font></font><code><strong>JSRuntime</strong></code><font><font>是代表JavaScript引擎实例的顶级对象。</font><font>一个程序通常只有一个</font></font><code>JSRuntime</code><font><font>，即使它有很多线程。</font><font>这</font></font><code>JSRuntime</code><font><font>是JavaScript对象所居住的世界；</font><font>他们不能去其他人</font></font><code>JSRuntime</code><font><font>。</font></font></p>
+
+<p><font><font>所有JavaScript代码和大多数JSAPI调用都在内运行</font></font><code><strong>JSContext</strong></code><font><font>。</font><font>该</font></font><code>JSContext</code><font><font>是对一个孩子</font></font><code>JSRuntime</code><font><font>。</font><font>上下文可以运行脚本。</font><font>它包含</font></font><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_GetGlobalObject" title="该函数已过时：请改用JS_GetGlobalForObject或JS_GetGlobalForScopeChain。 属于上下文的全局对象的概念可能会在以后的SpiderMonkey版本中逐步淘汰。"><font><font>全局对象</font></font></a><font><font>和执行堆栈。</font></font><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_SetPendingException" title="JS_SetPendingException设置在上下文中引发的当前异常。 如果已经引发异常，则将其替换为给定的新异常。"><font><font>异常处理</font></font></a><font><font>，</font></font><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_SetErrorReporter" title="JS_SetErrorReporter使您可以在应用程序中定义和使用自己的错误报告机制。 发生错误并由JS_ReportError解析后，您定义的报告程序会自动传递JSErrorReport结构。 JS_SetErrorReporter"><font><font>错误报告</font></font></a><font><font>和某些</font></font><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_SetOptions" title="JS_SetOptions设置给定JS上下文cx的选项标志。 此函数返回包含标志的先前值的uint32值。"><font><font>语言选项</font></font></a><font><font>是基于Per-的</font></font><code>JSContext</code><font><font>。</font><font>创建上下文后，可以将上下文多次用于不同的脚本或JSAPI查询。</font><font>例如，浏览器可能会为每个HTML页面创建一个单独的上下文。</font><font>页面中的每个脚本都可以使用相同的上下文。</font></font></p>
+
+<p><font><font>对象</font></font><code>在同一个</code><font><font> </font></font><code>JSRuntime</code><font><font>内</font></font><code>JSContext</code><font><font>之间可以共享。对象与创建对象的上下文之间没有固定的关联。</font></font></p>
+
+<p><font><font>设置和拆卸a </font></font><code>JSRuntime</code><font><font>和a的</font><font>示例代码</font></font><code>JSContext</code><font><font>在</font></font><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_User_Guide" title="JSAPI用户指南"><font><font>JSAPI用户指南中</font></font></a><font><font>。</font></font></p>
+</div>
+
+<h3 id="Threads" name="Threads">线程</h3>
+
+<p><font><font>只有一个线程可以使用</font></font><code>JSContext </code><font><font>或</font></font><code>JSRuntime</code><font><font>。</font><font>较早的版本允许使用  </font></font><code>JS_ClearContextThread</code><font><font> 和其他功能将a </font></font><code>JSContext</code><font><font> 从一个线程</font><font>移动  </font><font>到另一个线程。</font><font>此功能已被删除。</font></font></p>
+
+<h2 id="相关文档"><font><font>相关文档</font></font></h2>
+
+<ul>
+ <li>{{jsapixref("JS_NewRuntime")}}</li>
+ <li>{{jsapixref("JS_DestroyRuntime")}}</li>
+ <li>{{jsapixref("JS_NewContext")}}</li>
+ <li>{{jsapixref("JS_DestroyContext")}}</li>
+</ul>

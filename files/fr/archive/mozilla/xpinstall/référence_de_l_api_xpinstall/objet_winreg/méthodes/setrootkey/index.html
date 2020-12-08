@@ -1,0 +1,42 @@
+---
+title: setRootKey
+slug: >-
+  Archive/Mozilla/XPInstall/Référence_de_l_API_XPInstall/Objet_WinReg/Méthodes/setRootKey
+translation_of: Archive/Mozilla/XPInstall/Reference/WinReg_Object/Methods/setRootKey
+---
+<p> </p>
+<h3 id="setRootKey" name="setRootKey">setRootKey</h3>
+<p>Change la clef racine à laquelle on veut accéder.</p>
+<h4 id="M.C3.A9thode_de" name="M.C3.A9thode_de">Méthode de</h4>
+<p>Objet <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_WinReg">WinReg</a></p>
+<h4 id="Syntaxe" name="Syntaxe">Syntaxe</h4>
+<pre class="eval">void setRootKey ( int key );
+</pre>
+<h4 id="Param.C3.A8tres" name="Param.C3.A8tres">Paramètres</h4>
+<p>La méthode <code>setRootKey</code> a le paramètre suivant :</p>
+<dl>
+ <dt>
+  <code>key</code></dt>
+ <dd>
+  Un nombre entier représentant la clef racine dans la base de registre.</dd>
+</dl>
+<h4 id="Retour" name="Retour">Retour</h4>
+<p>Aucun.</p>
+<h4 id="Description" name="Description">Description</h4>
+<p>La méthode <code>setRootKey</code> change la clef racine.</p>
+<p>Lorsqu'on crée un objet <code>WinReg</code>, il est défini pour accéder aux clefs de la section <code>HKEY_CLASSES_ROOT</code> de la base de registre. Si on désire accéder à des clefs d'une autre section, il est nécessaire d'utiliser cette méthode pour changer la clef racine.</p>
+<p>Sur les plate-formes Windows 16-bits, <code>HKEY_CLASSES_ROOT</code> est l'unique valeur validerel et cette méthode n'a aucun effet.</p>
+<p>Ces clefs racines sont représentées comme champs de l'objet <code>WinReg</code>. Les valeurs possibles sont :</p>
+<ul>
+ <li><code>HKEY_CLASSES_ROOT</code></li>
+ <li><code>HKEY_CURRENT_USER</code></li>
+ <li><code>HKEY_LOCAL_MACHINE</code></li>
+ <li><code>HKEY_USERS</code></li>
+</ul>
+<h4 id="Exemple" name="Exemple">Exemple</h4>
+<p>Pour utiliser la section <code>HKEY_USERS</code> section, utiliser ce code :</p>
+<pre class="eval">winreg = getWinRegistry();
+winreg.setRootKey(winreg.HKEY_USERS);
+</pre>
+<p><span class="comment">Interwiki Language Links</span></p>
+<p>{{ languages( { "en": "en/XPInstall_API_Reference/WinReg_Object/Methods/setRootKey" } ) }}</p>

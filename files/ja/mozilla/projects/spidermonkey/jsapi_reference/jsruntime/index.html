@@ -1,0 +1,23 @@
+---
+title: JSRuntime
+slug: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JSRuntime
+tags:
+  - JSAPI Reference
+  - SpiderMonkey
+translation_of: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JSRuntime
+---
+<p>
+
+</p><div class="breadcrumbs"><a href="/ja" title="ja">メインページ</a> » <a href="/ja/docs/SpiderMonkey" title="SpiderMonkey">SpiderMonkey</a> »
+ <a href="/ja/docs/SpiderMonkey/JSAPI_Reference" title="JSAPI_Reference">JSAPI リファレンス</a> »
+ <code>JSRuntime</code></div>
+
+<p></p>
+
+<p>JSAPIにおいて、<strong><code><a href="/ja/JSRuntime" title="ja/JSRuntime">JSRuntime</a></code></strong>はメモリ管理や<strong>グローバル</strong>なデータ構造などを扱う最高位のオブジェクトです。複数のスレッドが動作するプログラムにおいても、プログラム内の<code>JSRuntime</code>は一般的に一つだけです。<code>JSRuntime</code>はJavaScriptのオブジェクトを保持する空間であり、オブジェクトは複数の<code>JSRuntime</code>を跨いで移動することはできません。 <span class="comment">JSAPI, <strong>&lt;code&gt;<a href="/ja/JSRuntime">JSRuntime</a>&lt;/code&gt;</strong> is the top-level object that handles, among other things, memory management and "global" data structures. A program typically has only one &lt;code&gt;JSRuntime&lt;/code&gt;, even if it has many threads. The &lt;code&gt;JSRuntime&lt;/code&gt; is the universe in which JavaScript objects live; they can't travel to other &lt;code&gt;JSRuntime&lt;/code&gt;s.</span></p>
+
+<p><strong><code>JSContext</code></strong>は<code>JSRuntime</code>の子に位置し、すべてのJavaScriptコードとJSAPIの関数は<code>JSContext</code>を介して実行されます。<code>JSContext</code>内には、<a href="/ja/JS_GetGlobalObject" title="ja/JS_GetGlobalObject">global object</a>や実行時スタックなどが含まれます。 <a href="/ja/JS_SetPendingException" title="ja/JS_SetPendingException">例外処理</a>、<a href="/ja/JS_SetErrorReporter" title="ja/JS_SetErrorReporter">エラー報告</a>、一部の<a href="/ja/JS_SetOptions" title="ja/JS_SetOptions">JavaScriptのオプション</a> などは各<code>JSContext</code>ごとに管理されます。<code>JS_THREADSAFE</code>オプションを有効にしたビルドでは、複数のスレッドからJavaScriptのコードを呼び出し並行して実行できますが、呼び出し元のスレッドはそれぞれ独立した<code>JSContext</code>を持つ形になります。詳細は<code><a href="/ja/JS_THREADSAFE" title="ja/JS_THREADSAFE">JS_THREADSAFE</a></code>を参照してください。 <span class="comment">All JavaScript code and most JSAPI calls run within a <strong>&lt;code&gt;JSContext&lt;/code&gt;</strong>. The &lt;code&gt;JSContext&lt;/code&gt; is a child of the &lt;code&gt;JSRuntime&lt;/code&gt;. Among other things, it contains the <a href="/ja/JS_GetGlobalObject">global object</a> and the execution stack. <a href="/ja/JS_SetPendingException">Exception handling</a>, <a href="/ja/JS_SetErrorReporter">error reporting</a>, and some <a href="/ja/JS_SetOptions">language options</a> are per-&lt;code&gt;JSContext&lt;/code&gt;. In a &lt;code&gt;JS_THREADSAFE&lt;/code&gt; build, multiple threads may run JavaScript code concurrently, but each such thread must have its own &lt;code&gt;JSContext&lt;/code&gt;. See &lt;code&gt; <a href="/ja/JS_THREADSAFE">JS_THREADSAFE</a>&lt;/code&gt; for details.</span></p>
+
+<p>JavaScriptオブジェクトとそのコンテキストとの関係は固定されたものでなく、オブジェクトは<code>JSRuntime</code>を介してその子となる<code>JSContext</code>間で共有することができます。 <span class="comment">Objects may be shared among &lt;code&gt;JSContext&lt;/code&gt;s within a &lt;code&gt;JSRuntime&lt;/code&gt;. There's no fixed association between an object and a context.</span></p>
+
+<p>{{ languages( { "en": "en/JSRuntime" } ) }}</p>

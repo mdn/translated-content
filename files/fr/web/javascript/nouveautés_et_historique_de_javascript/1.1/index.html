@@ -1,0 +1,76 @@
+---
+title: Nouveautés de JavaScript 1.1
+slug: Web/JavaScript/Nouveautés_et_historique_de_JavaScript/1.1
+tags:
+  - JavaScript
+  - Versions
+translation_of: Archive/Web/JavaScript/New_in_JavaScript/1.1
+---
+<div>{{jsSidebar("New_in_JS")}}</div>
+
+<p>Ce document liste les modifications apportées à JavaScript entre Netscape Navigator 2.0 et 3.0. L'ancienne documentation Netscape décrit ceci comme <a href="http://web.archive.org/web/20060318153542/wp.netscape.com/eng/mozilla/3.0/handbook/javascript/index.html">« les fonctionnalités ajoutées après la version 1 »</a>. Netscape Navigator 3.0 est sorti le 19 août 1996. Netscape Navigator 3.0 était la deuxième version majeure du navigateur à supporter JavaScript.</p>
+
+<h2 id="Versions_de_JavaScript">Versions de JavaScript</h2>
+
+<p>Netscape Navigator 3.0 a introduit des versions pour le langage JavaScript :</p>
+
+<pre class="brush: html">&lt;SCRIPT LANGUAGE="JavaScript"&gt;    &lt;!-- JavaScript pour Navigator 2.0. --&gt;
+&lt;SCRIPT LANGUAGE="JavaScript1.1"&gt; &lt;!-- JavaScript pour Navigator 3.0. --&gt;</pre>
+
+<h2 id="Nouvelles_fonctionnalités_de_JavaScript_1.1">Nouvelles fonctionnalités de JavaScript 1.1</h2>
+
+<h3 id="Nouveaux_objets">Nouveaux objets</h3>
+
+<ul>
+ <li>{{jsxref("Array")}}</li>
+ <li>{{jsxref("Boolean")}}</li>
+ <li>{{jsxref("Function")}}</li>
+ <li>{{jsxref("Number")}}</li>
+</ul>
+
+<h3 id="Nouvelles_propriétés">Nouvelles propriétés</h3>
+
+<ul>
+ <li>{{jsxref("Number.MAX_VALUE")}}</li>
+ <li>{{jsxref("Number.MIN_VALUE")}}</li>
+ <li>{{jsxref("NaN")}}</li>
+ <li>{{jsxref("Number.NEGATIVE_INFINITY")}}</li>
+ <li>{{jsxref("Number.POSITIVE_INFINITY")}}</li>
+</ul>
+
+<h3 id="Nouvelles_méthodes">Nouvelles méthodes</h3>
+
+<ul>
+ <li>{{jsxref("Array.prototype.join()")}}</li>
+ <li>{{jsxref("Array.prototype.reverse()")}}</li>
+ <li>{{jsxref("Array.prototype.sort()")}}</li>
+ <li>{{jsxref("Array.prototype.split()")}}</li>
+</ul>
+
+<h3 id="Nouveaux_opérateurs">Nouveaux opérateurs</h3>
+
+<ul>
+ <li><code><a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_typeof">typeof</a></code></li>
+ <li><code><a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_void">void</a></code></li>
+</ul>
+
+<h3 id="Autres_fonctionnalités_apparues">Autres fonctionnalités apparues</h3>
+
+<ul>
+ <li><code><a href="/fr/docs/Web/HTML/Element/noscript">&lt;noscript&gt;</a></code></li>
+ <li><a href="/en-US/docs/Archive/Web/LiveConnect">LiveConnect</a> pour effectuer des communications entre Java et JavaScript.</li>
+</ul>
+
+<h2 id="Fonctionnalités_modifiées_avec_JavaScript_1.1">Fonctionnalités modifiées avec JavaScript 1.1</h2>
+
+<ul>
+ <li>Suppression d'objet : il est possible de retirer un objet en faisant pointer sa référence vers <code>null</code>.</li>
+ <li>Les propriétés <code>constructor</code> et <code>prototype</code> sont ajoutées sur les objets.</li>
+ <li><code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/eval">eval()</a></code> est désormais une méthode de chaque objet (ce n'est plus une fonction native). Elle évalue une chaîne de code JavaScript dans le contexte de l'objet donné.</li>
+ <li><code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Math/random">Math.random()</a></code> fonctionne pour toutes les plateformes.</li>
+ <li><code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/toString">toString()</a></code> : Ajout du paramètre permettant de spécifier la base dans laquelle représenter les valeurs numériques.</li>
+ <li><code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/isNaN">isNaN()</a></code> fonctionne pour toutes les plateformes (et plus seulement sur Unix)</li>
+ <li><code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/parseFloat">parseFloat()</a></code> et <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/parseInt">parseint()</a></code> renvoient désormais <code>NaN</code> sur toutes les plateformes si le premier caractère de la chaîne fournie ne peut pas être converti en un nombre. Auparavant, elles renvoyaient <code>NaN</code> sur Solaris et Irix et zéro (0) sur les autres plateformes.</li>
+</ul>
+
+<p> </p>

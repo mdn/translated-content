@@ -1,0 +1,160 @@
+---
+title: 'パート 4: Firefox OS をセットアップする再利用コマンド'
+slug: >-
+  Archive/B2G_OS/Automated_testing/gaia-ui-tests/Part_4_Reusing_commands_Firefox_OS_setup
+tags:
+  - Automation
+  - Firefox OS
+  - Gaia
+  - Python
+  - Testing
+  - gaia-ui-tests
+translation_of: >-
+  Archive/B2G_OS/Automated_testing/gaia-ui-tests/Part_4_Reusing_commands_Firefox_OS_setup
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/ja/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/Mozilla/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_3_Reusable_tests" style="float: left;">« 前のページ</a><a href="/ja/docs/Mozilla/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_5_Introducing_a_test_runner">次のページ  »</a></p>
+</div><p></p>
+
+<div class="summary">
+<p><span class="seoSummary">パート2とパート3では、動作するテストを理解しました。しかし、テストを実行する前にその状態をリセットしたい場合(例えば、開いているアプリケーションを停止する)、これを手動で行う必要があったでしょう。それは少し退屈なので、再び自動化する必要があります！この部分では、再利用できる独立したPythonのメソッドに少しのコードを発生せることによって、もっと自動化する方法を見ていきます。</span></p>
+</div>
+
+<h2 id="自動的に状態をリセット">自動的に状態をリセット</h2>
+
+<p>典型的なテストの実行開始時に、おそらくFirefox OSのロック画面を解除し、すべての実行中のアプリケーションを強制終了することを望みます。それでは、これを行う方法を見てみましょう。</p>
+
+<h3 id="ロック画面の解除">ロック画面の解除</h3>
+
+<p>先に進む前に、まだ行っていない場合 <em>Settings App &gt; Screen lock &gt; Lock screen</em> で再びロック画面を有効にします。</p>
+
+<p>ちょうどクラス内の場所で、あなたの <code>test_add_contact.py</code> ファイルに次のPythonのメソッドを追加します。:</p>
+
+<pre class="brush: python">def unlock_screen(self):
+    self.marionette.execute_script('window.wrappedJSObject.lockScreen.unlock();')</pre>
+
+<p>呼び出された時、このメソッドは現在のFirefox OSのロックを解除します。 今度は <code>self.marionette.start_session()</code> 行の下に、下記の行を追加することで、テスト内でこれを呼びましょう。:</p>
+
+<pre class="brush: python"># Unlock the screen
+self.unlock_screen()</pre>
+
+<h3 id="開いているすべてのアプリケーションの停止">開いているすべてのアプリケーションの停止</h3>
+
+<p>今、実行時に開いているすべてのアプリケーションを停止するために、私たちのコードにメソッドを追加します。これは下記のように見えます。:</p>
+
+<pre class="brush: python">    def kill_all(self):
+        self.marionette.switch_to_frame()
+        self.marionette.execute_async_script("""
+             // Kills all running apps, except the homescreen.
+             function killAll() {
+               let manager = window.wrappedJSObject.appWindowManager;
+
+               let apps = manager.getApps();
+               for (let id in apps) {
+                 let origin = apps[id].origin;
+                 if (origin.indexOf('verticalhome') == -1) {
+                   manager.kill(origin);
+                 }
+               }
+             };
+             killAll();
+             // return true so execute_async_script knows the script is complete
+             marionetteScriptFinished(true);
+            """)</pre>
+
+<p>直前のセクションで追加した <code>unlock_screen</code> メソッドの直後にこれを追加します。</p>
+
+<p>次に、テストの残りの部分と一緒にこれを実行するには、下記を追加します。つまり <code>self.unlock_screen()</code> 行の直後に追加します。:</p>
+
+<pre class="brush: python"># kill all open apps
+self.kill_all()</pre>
+
+<p>今、最後にテスト実行した後に連絡先アプリを開いたままにしておき、また再度テストを実行しようとする前にロック画面に戻してみてください。画面のロックが解除されることに加えて、テストが再実行される前に、開いている連絡先アプリが自動的に停止されます。だから、その状態は、今実行しているテストには影響しません。これは、テスト実行の長期間の信頼性のために重要です。</p>
+
+<p>再び数回テストを実行し、すべて動作するのとFirefox OSが正しくリセットされているかどうかを確認します。</p>
+
+<h2 id="ダイナミックウェイト">ダイナミックウェイト</h2>
+
+<p>パート3ではダイナミックウェイトの重要性を述べました。Marionetteには下記のような一般的な構文を使用した、WebDriver/Selenium2のようなウェイトがあります。:</p>
+
+<pre class="brush: python">from marionette_driver import Wait
+
+# Wait until element is displayed
+Wait(self.marionette).until(lambda m: m.find_element('id', 'element_id').is_displayed())</pre>
+
+<p>指定された要素が表示されるまで、このコードはウェイトします。この時点で、対話する準備が整ったと分かります。テストでこのコード構成を使用してみましょう。</p>
+
+<p>まず第一に、既存のインポート行の直後に、ウェイトインポート行を含めます:</p>
+
+<pre class="brush: python">from marionette_driver import Wait</pre>
+
+<p>今、コンタクトフレームが表示されるまで待機する <code>Wait()</code> メソッドで、連絡先アイコンをタップした後の2つ目の <code>time.sleep(2)</code> 関数(<code>self.marionette.switch_to_frame()</code> 行の直後)を、置き換えることができます。:</p>
+
+<pre class="brush: python">Wait(self.marionette).until(lambda m: m.find_element('css selector', "iframe[data-url*='contacts']").is_displayed())</pre>
+
+<p>新しい連絡先の作成を開始する + 記号をタップするとき、<em>Add contact</em> フォームが完全に表示されるまでスライドされるのを待ちたいです。<em>Done</em> (保存) ボタンは次にタップが必要となるもので、このため、継続する前に所定の位置にスライドされるのを待つでしょう。3つ目の <code>time.sleep(2)</code> 関数を、次の行で置き換えます。:</p>
+
+<pre class="brush: python">Wait(self.marionette).until(lambda m: m.find_element('id', 'save-button').location['y']== 0)</pre>
+
+<p>この例では、<em>Done</em> ボタンが画面の上部に到達するのを待ちます。アニメーション化されたときに、要素は複数のポイントに表示されます。しかし、その最終的な静止位置は、待つための最も安全なものです。</p>
+
+<p>また、要素が表示され"ない"のを待つこともできます。<em>Done</em>をタップした後で、残りのコードを実行する前に、同様な <code>Wait()</code> メソッドにnotをつけて使用し、<em>Done</em>ボタンが隠されるのを待ちます。4つ目と最終の <code>time.sleep(2)</code> 関数を、下記で置換します。:</p>
+
+<pre class="brush: python">Wait(self.marionette).until(lambda m: not m.find_element('id', 'save-button').is_displayed())</pre>
+
+<p>テストがOKに動作している場合には、素晴らしいです！テストのモジュール性と信頼性を向上させました。パート5では、テストを実行するためのテストランナーの使い方ご紹介します。</p>

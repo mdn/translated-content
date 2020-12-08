@@ -1,0 +1,36 @@
+---
+title: 例外処理文
+slug: Web/JavaScript/Guide/Exception_Handling_Statements
+---
+<h3 id=".E4.BE.8B.E5.A4.96.E5.87.A6.E7.90.86.E6.96.87" name=".E4.BE.8B.E5.A4.96.E5.87.A6.E7.90.86.E6.96.87">例外処理文</h3>
+<p><code>throw</code> 文を使用すると例外を投げることができます。また、<code>try...catch</code> 文を使用すると例外を処理することができます。</p>
+<p><code>try...catch</code> 文を使用して Java の例外を処理することもできます。この情報については <a href="/ja/Core_JavaScript_1.5_Guide/LiveConnect_Overview/JavaScript_to_Java_Communication#JavaScript_.E3.81.A7.E3.81.AE_Java_.E3.81.AE.E4.BE.8B.E5.A4.96.E3.81.AE.E5.87.A6.E7.90.86" title="ja/Core_JavaScript_1.5_Guide/LiveConnect_Overview/JavaScript_to_Java_Communication#JavaScript_.E3.81.A7.E3.81.AE_Java_.E3.81.AE.E4.BE.8B.E5.A4.96.E3.81.AE.E5.87.A6.E7.90.86">JavaScript での Java の例外の処理</a> および <a href="/ja/Core_JavaScript_1.5_Guide/LiveConnect_Overview/JavaScript_to_Java_Communication" title="ja/Core_JavaScript_1.5_Guide/LiveConnect_Overview/JavaScript_to_Java_Communication">Java と JavaScript との通信</a> をご覧ください。</p>
+<ul>
+  <li><a href="/ja/Core_JavaScript_1.5_Guide/Exception_Handling_Statements/throw_Statement" title="ja/Core_JavaScript_1.5_Guide/Exception_Handling_Statements/throw_Statement">throw 文</a></li>
+  <li><a href="/ja/Core_JavaScript_1.5_Guide/Exception_Handling_Statements/try...catch_Statement" title="ja/Core_JavaScript_1.5_Guide/Exception_Handling_Statements/try...catch_Statement">try...catch 文</a></li>
+</ul>
+<h3 id=".E4.BE.8B.E5.A4.96.E3.81.AE.E7.A8.AE.E9.A1.9E" name=".E4.BE.8B.E5.A4.96.E3.81.AE.E7.A8.AE.E9.A1.9E">例外の種類</h3>
+<p>JavaScript ではほとんどどんなオブジェクトでも投げることができます。とは言っても、必ずしもすべての投げられたオブジェクトが同等に作られているわけではありません。数値や文字列をエラーとして投げる方法はよく用いられますが、特にこの用途のために作られている例外の種類のうちのどれかを使用したほうがより効率的であることがよくあります。</p>
+<ul>
+  <li>ECMAScript の例外
+    <ul>
+      <li><a href="/ja/Core_JavaScript_1.5_Guide/Error" title="ja/Core_JavaScript_1.5_Guide/Error">Error</a></li>
+      <li><a href="/ja/Core_JavaScript_1.5_Guide/EvalError" title="ja/Core_JavaScript_1.5_Guide/EvalError">EvalError</a></li>
+      <li><a href="/ja/Core_JavaScript_1.5_Guide/RangeError" title="ja/Core_JavaScript_1.5_Guide/RangeError">RangeError</a></li>
+      <li><a href="/ja/Core_JavaScript_1.5_Guide/ReferenceError" title="ja/Core_JavaScript_1.5_Guide/ReferenceError">ReferenceError</a></li>
+      <li><a href="/ja/Core_JavaScript_1.5_Guide/SyntaxError" title="ja/Core_JavaScript_1.5_Guide/SyntaxError">SyntaxError</a></li>
+      <li><a href="/ja/Core_JavaScript_1.5_Guide/TypeError" title="ja/Core_JavaScript_1.5_Guide/TypeError">TypeError</a></li>
+      <li><a href="/ja/Core_JavaScript_1.5_Guide/URIError" title="ja/Core_JavaScript_1.5_Guide/URIError">URIError</a></li>
+    </ul>
+  </li>
+  <li>DOM の例外
+    <ul>
+      <li><a href="/ja/Core_JavaScript_1.5_Guide/DOMException" title="ja/Core_JavaScript_1.5_Guide/DOMException">DOMException</a></li>
+      <li><a href="/ja/Core_JavaScript_1.5_Guide/EventException" title="ja/Core_JavaScript_1.5_Guide/EventException">EventException</a></li>
+      <li><a href="/ja/Core_JavaScript_1.5_Guide/RangeException" title="ja/Core_JavaScript_1.5_Guide/RangeException">RangeException</a></li>
+      <li>... (?)</li>
+    </ul>
+  </li>
+  <li><a href="/ja/NsIXPCException" title="ja/NsIXPCException">nsIXPCException</a> (<a href="/ja/XPConnect" title="ja/XPConnect">XPConnect</a>)</li>
+</ul>
+<p>{{ PreviousNext("JavaScript/Guide/Comments", "JavaScript/Guide/Exception_Handling_Statements/throw_Statement") }}</p>

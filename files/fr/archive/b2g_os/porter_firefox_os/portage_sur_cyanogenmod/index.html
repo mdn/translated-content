@@ -1,0 +1,197 @@
+---
+title: Portage sur CyanogenMod
+slug: Archive/B2G_OS/Porter_Firefox_OS/Portage_sur_CyanogenMod
+tags:
+  - B2G
+  - cm-b2g
+  - cyanogenmod
+  - portage b2g cyanogenmod
+translation_of: Archive/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod
+---
+<p class="summary">B2G OS est traditionnellement construit sur une base <a href="https://android.googlesource.com/">AOSP</a>. Cependant, cela ne signifie pas que nous devons utiliser uniquement AOSP. Il en existe plusieurs forks qui ont pour objectif de supporter une gamme de matériel plus large. <a href="http://www.cyanogenmod.org/">CyanogenMod</a>, le plus populaire des forks d'AOSP, comporte des milliers d'ajouts, modifications, et bidouilles pour prendre en charge des <a href="http://get.cm/">centaines d'appareils Android du commerce</a>. <span class="seoSummary">Cet article explique comment porter Firefox en utilisant CyanogenMod.</span></p>
+
+<p>En construisant B2G OS sur une base CyanogenMod, il devient potentiellement possible de supporter autant d'appareils que le fait ce système. En raison de la multiplicité des appareils supportés par CyanogenMod, il est hautement probable que vous en ayez déjà un sur lequel il peut être compilé !</p>
+
+<div class="warning"><strong>Important</strong> : Ce guide s'adresse seulement aux utilisateurs expérimentés ; vous devez savoir au préalable comment construire CyanogenMod ou AOSP.</div>
+
+<p>Si vous n'avez jamais construit CyanogenMod pour votre appareil, nous vous conseillons fortement d'<a href="https://wiki.cyanogenmod.org/w/Build_Guides">apprendre comment le faire</a> avant de porter B2G OS. Cela pour deux raisons : vous apprendrez à utiliser les outils nécessaires au portage de B2G OS, et vous vérifierez la qualité du portage de CyanogenMod.</p>
+
+<p>Pour être plus clair : ce guide part du principe que votre appareil est déverrouillé et que CyanogenMod est installé dessus. Ce guide <em>ne va pas</em> vous apprendre à rooter et/ou déverrouiller votre appareil, ni à mettre en place votre machine de compilation ou utiliser git pour résoudre des échecs de fusion.</p>
+
+<p>Voici un résumé des étapes :</p>
+
+<ol>
+ <li>Télécharger le code source</li>
+ <li>Modifier les dépôts de l'appareil</li>
+ <li>Modifier le noyau</li>
+ <li>Compiler et installer</li>
+</ol>
+
+<h2 id="Télécharger_le_code_source">Télécharger le code source</h2>
+
+<div class="warning"><strong>À FAIRE :</strong> Fusionner le manifeste requis avec mozilla-b2g : <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1211870">Bugzilla: 1211870</a>.</div>
+
+<p>Nous disposons de plusieurs outils utiles pour compiler B2G OS, tous contenus dans un unique dépôt. Téléchargez ces outils via <strong><code>git</code></strong> pour créer votre répertoire de travail.</p>
+
+<pre><code>git clone https://github.com/cm-b2g/B2G.git &amp;&amp; cd B2G</code>
+</pre>
+
+<p>À présent, nous devons télécharger le code source.</p>
+
+<pre><code>./config.sh cm-porting</code>
+</pre>
+
+<p>Le script <strong><code>config.sh</code></strong> initialise l'outil <code>repo</code> en utilisant le manifeste <strong><code>base-l-cm.xml</code></strong> situé dans le dépôt <strong><code>b2g-manifest</code></strong>. Ce fichier XML est une liste de dépôts spécifiques à l'OS nécessaires à la compilation de B2G OS. Il fait ensuite appel à l'outil <strong><code>repo</code></strong> pour télécharger la totalité du code source.</p>
+
+<p>Le téléchargement de tous ces dépôts, dont certains font plusieurs giga-octets, va prendre un certain temps, il est donc recommandé de le faire pendant la nuit si la connexion est lente, ou juste avant manger si la connexion est plus rapide.</p>
+
+<p>Cette étape va également créer un fichier <strong><code>.config</code></strong> qui devra être éditer plus tard.</p>
+
+<h2 id="Manifeste_local_pour_votre_appareil">Manifeste local pour votre appareil</h2>
+
+<p>Le manifeste susmentionné ne contient aucun dépôt spécifique pour les appareils, ce qui diffère d'un manifeste classique. Nous avons besoin de créer un fichier <strong><code>local_manifest.xml</code></strong> avec tous les dépôts pour votre appareil. La manière la plus rapide de le faire consiste à utiliser <strong><code>breakfast</code></strong>, un outil automatisé écrit par CyanogenMod pour créer un manifeste local et télécharger les dépôts supplémentaires directement depuis le compte GitHub de CyanogenMod.</p>
+
+<pre><code>. build/envsetup.sh &amp;&amp; breakfast 123</code>
+</pre>
+
+<p>Remplacez <strong><code>123</code></strong> par le nom de code de votre appareil.</p>
+
+<p>Si votre appareil n'est pas officiellement supporté par CyanogenMod mais qu'il existe un portage non officiel, vous pouvez créer manuellement le fichier <strong><code>local_manifest.xml</code></strong> dans le dossier <strong><code>.repo/local_manifests</code></strong>. Un exemple est donné plus bas.</p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;manifest&gt;
+     &lt;remote name="xyz" fetch="git://github.com/xyz/" revision="cm-12.1" /&gt;
+     &lt;project name="device_oem_123" path="device/oem/123" remote="xyz" /&gt;
+     &lt;project name="device_oem_1xx-common" path="device/oem/1xx-common" remote="xyz" /&gt;
+     &lt;project name="kernel_oem_1xx" path="kernel/oem/1xx" remote="xyz" /&gt;
+     &lt;project name="vendor_oem" path="vendor/oem" remote="xyz" /&gt;
+&lt;/manifest&gt;</code>
+</pre>
+
+<p>Rappelez-vous d'exécuter <strong><code>repo sync</code></strong> après avoir créé votre manifeste !</p>
+
+<h2 id="Modifier_les_dépôts_de_l'appareil">Modifier les dépôts de l'appareil</h2>
+
+<p>Une partie de la configuration des appareils se trouve dans des fichiers overlay XML utilisés par le système de compilation d'AOSP pour définir les options par défaut des applications Android. Comme B2G OS ne les utilise pas, il faut donc réimplémenter certaines de ces options, comme le bouton d'accueil, le stockage émulé etc.</p>
+
+<p>Il est possible de définir les options par défaut les plus raisonnables en incluant deux fichiers issus de <strong><code>vendor/cm</code></strong>. La première ligne doit être ajoutée au <em>début</em> de <strong><code>device.mk</code></strong> et la seconde à la <em>fin</em> de <strong><code>BoardConfig.mk</code></strong>:</p>
+
+<pre><code># Extra mk import at the top of device.mk
+$(call inherit-product, vendor/cm/config/common_full.mk)
+
+# Extra mk import at the bottom of BoardConfig.mk
+include vendor/cm/BoardConfig.mk</code>
+</pre>
+
+<p>D'autres options sont encore nécessaires car beaucoup sont très spécifiques au matériel. Voici ci-dessous une liste des ajouts et suppressions habituels spécifiques aux appareils. Cette liste n'est pas exhaustive, mais l'ajout des deux lignes citées plus haut et définir tout ce qui suit vous donnera un système fonctionnel.</p>
+
+<pre><code># for Gecko to use the correct resolution assets
+# Valid options are: 1.5 | 2 | 2.25
+GAIA_DEV_PIXELS_PER_PX := 2.25</code>
+</pre>
+
+<pre><code># for Gecko to use the correct boot animation
+# Valid options are: hvga | fwvga | qHD | 720p | 1080p
+BOOTANIMATION_ASSET_SIZE := 1080p</code>
+</pre>
+
+<pre><code># for Gecko to support separate internal storage partition
+# This is for legacy devices only. You must prvide your own volume.cfg file
+GECKO_BOARD_SEPARATE_STORAGE_PARTITON := true</code>
+</pre>
+
+<pre><code># for Gecko to support virtual home button
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.moz.has_home_button=0</code>
+</pre>
+
+<pre><code># for Gecko to support usb mass storage
+# You may need to add mass_storage to init.oem.usb.rc
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+-    persist.sys.usb.config=mtp
++    persist.sys.usb.config=mass_storage</code>
+</pre>
+
+<pre><code># for Gecko to support NFC
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.moz.nfc.enabled=true
+
+PRODUCT_PACKAGES += \
+    nfcd</code>
+</pre>
+
+<pre><code># Changes in init.device.rc
+-on property:init.svc.bootanim=running
+-on property:init.svc.bootanim=stopped
+-on property:service.bootanim.exit=1
++on property:sys.boot_completed=1</code>
+</pre>
+
+<h2 id="Modifier_le_noyau">Modifier le noyau</h2>
+
+<p>B2G OS a besoin d'avoir certaines fonctionnalités de sécurité supplémentaires activées dans le noyau. Jusqu'à Marshmallow, ces fonctionnalités étaient absentes des noyaux Android, quelques patches supplémentaires devront donc être rétroportés sur le noyau pour de nombreux appareils. Pour référence, consultez <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=790923">Bugzilla: 790923</a>.</p>
+
+<p>Il suffit de faire le tri dans les patches pour votre noyau ; le système de construction va automatiquement activer les nouvelles fonctionnalités. Pour un exemple fonctionnel, voir le <a href="https://github.com/cm-b2g/android_kernel_lge_msm8974/commits/b2g/cm-12.1-YOG7D">noyau LGE MSM8994</a>.</p>
+
+<div class="warning"><strong>Important</strong> : Cette étape est obligatoire ! B2G OS ne démarrera pas sans ces fonctionnalités de sécurité !.</div>
+
+<h2 id="Compiler_et_installer">Compiler et installer</h2>
+
+<p>Vous vous souvenez du fichier <strong><code>.config</code></strong> créé précédemment ? Il faut maintenant remplacer <strong><code>cm-porting</code></strong> par le nom de code de votre appareil.</p>
+
+<pre><code>$ grep -r PRODUCT_NAME device/oem/123</code>
+</pre>
+
+<p>Note : n'utilisez pas la valeur dans <code>cm.mk</code>, utilisez celle de <strong><code>device.mk</code></strong>, elle devrait ressembler à quelque chose du genre <strong><code>full_123</code></strong>. Vous pouvez effectuer le remplacement à la main, ou le faire simplement avec <strong><code>sed</code></strong> :</p>
+
+<pre><code>$ sed -i "s/cm-porting/full_123/g" .config</code>
+</pre>
+
+<p>À présent, il est temps de lancer la compilation !</p>
+
+<pre><code>$ ./bldcm.sh</code>
+</pre>
+
+<p>Cela va prendre dans tous les cas de 30 minutes à deux ou trois heures, en fonction de votre PC, ça peut donc être le bon moment pour aller faire les magasins ou acheter un peu de popcorn.</p>
+
+<h3 id="Installation_de_B2G_OS_via_fastboot">Installation de B2G OS via fastboot</h3>
+
+<p>Dans le cas où votre appareil supporte <strong><code>fastboot</code></strong>, il est possible de flasher directement les images de partition :</p>
+
+<pre><code>cd out/target/product/123/
+fastboot flash boot boot.img
+fastboot flash recovery recovery.img
+fastboot flash system system.img
+fastboot flash userdata userdata.img</code>
+</pre>
+
+<h3 id="Installation_de_B2G_OS_via_recovery">Installation de B2G OS via recovery</h3>
+
+<p>Si votre appareil ne supporte pas fastboot, vous pouvez alors utiliser <strong><code>update.zip</code></strong> ià la place. Celui-ci peut être installé sur l'appareil en copiant le zip sur une carte SD ou via <strong><code>adb sideload</code></strong>. Entrez en mode recovery selon la méthode spécifique à votre appareil puis tapez :</p>
+
+<pre><code>adb sideload out/target/product/123/fota/fullimg/update.zip</code>
+</pre>
+
+<h2 id="Dépannage">Dépannage</h2>
+
+<p>Quelque chose ne fonctionne pas ? Il est temps de retrousser ses manches !</p>
+
+<p>Essayez tout d'abord de déterminer si la fonctionnalité est disponible dans CyanogenMod. Il pourrait s'agir simplement d'une configuration manquante dans B2G OS.</p>
+
+<p>Si ça <em>ne</em> fonctionne <em>pas</em> sur CyanogenMod, cela signifie alors que vous devez l'implémenter dans votre portage. Cela serait utile de soumettre votre correctif en amont également !</p>
+
+<h3 id="Appareils_64bits">Appareils 64bits</h3>
+
+<p>La plupart des appareils fabriqués depuis mi-2015 intègrent un SoC 64 bits. B2G ne peut pas être construit sous la forme d'un exécutable 64 bits mais heureusement les exécutables 32 bits fonctionnent. Nous pouvons forcer la construction de B2G en 32 bits avec deux correctifs situés dans le <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1245088">bogue #1245088</a>.</p>
+
+<p>Après cela, il suffit de définir :</p>
+
+<pre class="line-numbers  language-html"><code class="language-html">BUILD_MULTILIB_GECKO_AS_2ND_ARCH := true</code></pre>
+
+<h3 id="Appareil_photo">Appareil photo</h3>
+
+<p>Certaines parties d'Android ont été retirées du processus de construction car elles ne sont pas nécessaires. Si le blob de l'appareil photo signale des fonctions manquantes, vérifiez frameworks/base pour voir si celles-ci ont été supprimées. Il peut être possible de les réintégrer.</p>
+
+<h3 id="WiFi">WiFi</h3>
+
+<p>L'appareil peut ne pas voir certains points d'accès s'ils utilisent des canaux non officiels. Il semble que cela soit un problème de CyanogenMod ou même d'AOSP car différents matériels et fabricants sont concernés.</p>

@@ -1,0 +1,28 @@
+---
+title: Web コンテンツの互換性
+slug: Mozilla/Firefox/Multiprocess_Firefox/Web_content_compatibility
+translation_of: Mozilla/Firefox/Multiprocess_Firefox/Web_content_compatibility
+---
+<div>{{FirefoxSidebar}}</div>
+
+<p><span class="seoSummary">Firefoxにマルチプロセス機能を導入するには、Webコンテンツにシームレスで目に見えないものが必要ですが、過去の挙動からの例外や微妙な変更があります。 この資料では、遭遇する可能性のある既知の相違点について説明します。</span></p>
+
+<h2 id="イベント">イベント</h2>
+
+<p>ここでは、マルチプロセスのFirefoxの実装によって動作が変更されたイベントに関する情報を見つけることができます。</p>
+
+<h3 id="&lt;option>_から_&lt;select>_へイベントがバブルしない"><code>&lt;option&gt;</code> から <code>&lt;select&gt;</code> へイベントがバブルしない</h3>
+
+<p>以前より、Firefoxはキーボードとマウスのイベントを {{HTMLElement("option")}} 要素から {{HTMLElement("select")}} 要素にバブルアップさせました。この動作は多くのブラウザで矛盾（たとえば、イベントがChromeでバブルアップしないなど）しています。 Web互換性を高めるため（加えて技術的な理由のため）に、Firefoxがマルチプロセスモードで、<code>&lt;select&gt;</code>要素がドロップダウンリストとして表示されている場合、これらのイベントはバブルアップしません。<code>&lt;select&gt;</code>がインラインで表示され、<code>multiple</code>属性が定義されているか、<code>size</code>属性が1より大きい値に設定されている場合、これらのイベントはバブルアップします。<br>
+ <br>
+ イベントの {{HTMLElement("option")}} 要素を見るのではなく、{{HTMLElement("select")}} の {{event("change")}} イベントを監視する必要があります。詳細は {{bug(1090602)}} を参照してください。</p>
+
+<h2 id="関連情報">関連情報</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Mozilla/Firefox/Multiprocess_Firefox">Multiprocess Firefox</a></li>
+ <li>{{HTMLElement("option")}}</li>
+ <li>{{HTMLElement("select")}}</li>
+ <li>{{domxref("HTMLOptionElement")}}</li>
+ <li>{{domxref("HTMLSelectElement")}}</li>
+</ul>

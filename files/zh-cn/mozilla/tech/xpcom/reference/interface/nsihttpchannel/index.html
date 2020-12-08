@@ -1,0 +1,365 @@
+---
+title: nsIHttpChannel
+slug: Mozilla/Tech/XPCOM/Reference/Interface/nsIHttpChannel
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIHttpChannel
+---
+<p></p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/netwerk/protocol/http/nsIHttpChannel.idl" rel="custom">netwerk/protocol/http/nsIHttpChannel.idl</a></code><span style="text-align: right; float: right;"><a href="/zh-CN/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">脚本化</a></span></div>
+<span style="padding: 4px 2px;">
+
+This interface allows for the modification of HTTP request parameters and the inspection of the resulting HTTP response status and headers when they become available.
+</span>
+
+<div style="background: #eee; padding: 2px;">
+继承于: <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIChannel" title="">nsIChannel</a></code>
+<span style="text-align: right; float: right;">最后修改于Gecko 1.3 </span></div>
+</div><p></p>
+
+<p>To create an HTTP channel, use <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIIOService" title="">nsIIOService</a></code> with a HTTP URI, for example:</p>
+
+<pre class="eval">var ios = Components.classes["@mozilla.org/network/io-service;1"]
+                    .getService(Components.interfaces.nsIIOService);
+var ch = ios.newChannel("<a class="linkification-ext external" href="http://www.example.com/" title="Linkification: http://www.example.com/">http://www.example.com/</a>", null, null);
+</pre>
+
+<h2 id="Method_overview" name="Method_overview">方法概述</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>ACString <a href="#getRequestHeader()">getRequestHeader</a>(in ACString aHeader);</code></td>
+  </tr>
+  <tr>
+   <td><code>ACString <a href="#getResponseHeader()">getResponseHeader</a>(in ACString header);</code></td>
+  </tr>
+  <tr>
+   <td><code>boolean <a href="#isNoCacheResponse()">isNoCacheResponse</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>boolean <a href="#isNoStoreResponse()">isNoStoreResponse</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#setRequestHeader()">setRequestHeader</a>(in ACString aHeader, in ACString aValue, in boolean aMerge);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#setResponseHeader()">setResponseHeader</a>(in ACString header, in ACString value, in boolean merge);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#visitRequestHeaders()">visitRequestHeaders</a>(in nsIHttpHeaderVisitor aVisitor);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#visitResponseHeaders()">visitResponseHeaders</a>(in nsIHttpHeaderVisitor aVisitor);</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Attributes" name="Attributes">属性</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">属性名</td>
+   <td class="header">类型</td>
+   <td class="header">描述</td>
+  </tr>
+  <tr>
+   <td><code>allowPipelining</code></td>
+   <td><code><a href="/zh-CN/boolean" title="zh-CN/boolean">boolean</a></code></td>
+   <td>
+    <p>This attribute is a hint to the channel to indicate whether or not the underlying HTTP transaction should be allowed to be pipelined with other transactions. This should be set to <code>false</code>, for example, if the application knows that the corresponding document is likely to be very large.</p>
+
+    <p>This attribute is <code>true</code> by default, though other factors may prevent pipelining.</p>
+    This attribute may only be set before the channel is opened.
+
+    <h6 id="Exceptions_thrown" name="Exceptions_thrown">可能抛出的异常</h6>
+
+    <dl>
+     <dt><code>NS_ERROR_FAILURE</code></dt>
+     <dd>If set after the channel has been opened.</dd>
+    </dl>
+   </td>
+  </tr>
+  <tr>
+   <td><code>redirectionLimit</code></td>
+   <td><code><a href="/zh-CN/unsigned_long" title="zh-CN/unsigned long">unsigned long</a></code></td>
+   <td>
+    <p>This attribute specifies the number of redirects this channel is allowed to make. If zero, the channel will fail to redirect and will generate a <code>NS_ERROR_REDIRECT_LOOP</code> failure status.</p>
+    <div class="blockIndicator note"><strong>Note:</strong> An HTTP redirect results in a new channel being created. If the new channel supports <code>nsIHttpChannel</code>, then it will be assigned a value to its <code>redirectionLimit</code> attribute one less than the value of the redirected channel's <code>redirectionLimit</code> attribute. The initial value for this attribute may be a configurable preference (depending on the implementation).</div></td>
+  </tr>
+  <tr>
+   <td><code>referrer</code></td>
+   <td><code><code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI" title="">nsIURI</a></code></code></td>
+   <td>
+    <p>Get or set the URI of the HTTP <code>Referer:</code> header. This is the address (URI) of the resource from which this channel's URI was obtained (see RFC2616 section 14.36).</p>
+
+    <p>This attribute may only be set before the channel is opened.</p>
+    <div class="blockIndicator note"><strong>Note:</strong> The channel may silently refuse to set the Referer: header if the URI does not pass certain security checks (e.g., a "https://" URL will never be sent as the <code>referrer</code> for a plaintext HTTP request). The implementation is not required to throw an exception when the <code>referrer</code> URI is rejected.</div>
+
+    <h6 id="Exceptions_thrown" name="Exceptions_thrown">可能抛出的异常</h6>
+
+    <dl>
+     <dt><code>NS_ERROR_IN_PROGRESS</code></dt>
+     <dd>If set after the channel has been opened.</dd>
+    </dl>
+   </td>
+  </tr>
+  <tr>
+   <td><code>requestMethod</code></td>
+   <td><code><a href="/zh-CN/ACString" title="zh-CN/ACString">ACString</a></code></td>
+   <td>
+    <p>获取或设置HTTP请求方法(默认为"GET").设置时不区分大小写,获取时返回的都是大写字母组成的字符串.</p>
+
+    <p>该属性的值只能在通道打开之前进行设置.</p>
+
+    <p></p><div class="blockIndicator note"><strong>Note:</strong>  The data for a "POST" or "PUT" request can be configured via <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIUploadChannel" title="">nsIUploadChannel</a></code>. However, after setting the upload data, it may be necessary to set the request method explicitly. The documentation for <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIUploadChannel" title="">nsIUploadChannel</a></code> has further details. </div><p></p>
+
+    <h6 id="Exceptions_thrown" name="Exceptions_thrown">可能抛出的异常</h6>
+
+    <dl>
+     <dt><code>NS_ERROR_IN_PROGRESS</code></dt>
+     <dd>If set after the channel has been opened.</dd>
+    </dl>
+   </td>
+  </tr>
+  <tr>
+   <td><code>requestSucceeded</code></td>
+   <td><code><a href="/zh-CN/boolean" title="zh-CN/boolean">boolean</a></code></td>
+   <td>
+    <p>Returns <code>true</code> if the HTTP response code indicates success. The value of <code><a href="https://developer.mozilla.org/zh-CN/docs/XPCOM_Interface_Reference/nsIRequest#status()">nsIRequest.status()</a></code> will be NS_OK even when processing a <code><a href="/zh-CN/HTTP/HTTP_response_codes#404" title="https://developer.mozilla.org/zh-CN/HTTP/HTTP_response_codes#404">404 File Not Found</a></code> response because such a response may include a message body that (in some cases) should be shown to the user. Use this attribute to distinguish server error pages from normal pages, instead of comparing the response status manually against the set of valid response codes, if that is required by your application. <strong>Read only.</strong></p>
+
+    <h6 id="Exceptions_thrown" name="Exceptions_thrown">可能抛出的异常</h6>
+
+    <dl>
+     <dt><code>NS_ERROR_NOT_AVAILABLE</code></dt>
+     <dd>If called before the response has been received (before <code>onStartRequest()</code>).</dd>
+    </dl>
+   </td>
+  </tr>
+  <tr>
+   <td><code>responseStatus</code></td>
+   <td><code><a href="/zh-CN/unsigned_long" title="zh-CN/unsigned long">unsigned long</a></code></td>
+   <td>获取HTTP响应状态码(比如200). <strong>只读.</strong>
+    <h6 id="Exceptions_thrown" name="Exceptions_thrown">可能抛出的异常</h6>
+
+    <dl>
+     <dt><code>NS_ERROR_NOT_AVAILABLE</code></dt>
+     <dd>If called before the response has been received (before <code>onStartRequest()</code>).</dd>
+    </dl>
+   </td>
+  </tr>
+  <tr>
+   <td><code>responseStatusText</code></td>
+   <td><code><a href="/zh-CN/ACString" title="zh-CN/ACString">ACString</a></code></td>
+   <td>
+    <p>获取HTTP响应状态信息(比如"OK").</p>
+    <div class="blockIndicator note"><strong>Note:</strong> This returns the raw (possibly 8-bit) text from the server. There are no assumptions made about the charset of the returned text. You have been warned!</div> <strong>Read only.</strong>
+
+    <h6 id="Exceptions_thrown" name="Exceptions_thrown">可能抛出的异常</h6>
+
+    <dl>
+     <dt><code>NS_ERROR_NOT_AVAILABLE</code></dt>
+     <dd>If called before the response has been received (before <code>onStartRequest()</code>).</dd>
+    </dl>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Methods" name="Methods">方法</h2>
+
+<h3 id="getRequestHeader()" name="getRequestHeader()">getRequestHeader()</h3>
+
+<p>Get the value of a particular request header.</p>
+
+<pre class="eval">ACString getRequestHeader(
+  in ACString aHeader
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">参数</h6>
+
+<dl>
+ <dt><code>aHeader</code></dt>
+ <dd>需要查询的请求头名称,不区分大小写(比如"Cache-Control").</dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value">返回值</h6>
+
+<p>指定请求头的值.</p>
+
+<h6 id="Exceptions_thrown" name="Exceptions_thrown">可能抛出的异常</h6>
+
+<dl>
+ <dt><code>NS_ERROR_NOT_AVAILABLE</code></dt>
+ <dd>如果没有这个请求头</dd>
+</dl>
+
+<h3 id="getResponseHeader()" name="getResponseHeader()">getResponseHeader()</h3>
+
+<p>获取指定响应头的值.</p>
+
+<pre class="eval">ACString getResponseHeader(
+  in ACString header
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">参数</h6>
+
+<dl>
+ <dt><code>header</code></dt>
+ <dd>需要查询的响应头名称,不区分大小写(比如"Set-Cookie").</dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value">返回值</h6>
+
+<p>指定响应头的值.</p>
+
+<h6 id="Exceptions_thrown" name="Exceptions_thrown">可能抛出的异常</h6>
+
+<dl>
+ <dt><code>NS_ERROR_NOT_AVAILABLE</code></dt>
+ <dd>在响应头还未完全返回的时候调用了该方法(before <code>onStartRequest()</code>),或者响应中没有包含此响应头的情况下.</dd>
+</dl>
+
+<h3 id="isNoCacheResponse()" name="isNoCacheResponse()">isNoCacheResponse()</h3>
+
+<p>Returns <code>true</code> if the server sent the equivalent of a "Cache-Control: no-cache" response header. Equivalent response headers include: "Pragma: no-cache", "Expires: 0", and "Expires" with a date value in the past relative to the value of the "Date" header.</p>
+
+<pre class="eval">boolean isNoCacheResponse();
+</pre>
+
+<h6 id="Parameters" name="Parameters">参数</h6>
+
+<p>无</p>
+
+<h6 id="Return_value" name="Return_value">返回值</h6>
+
+<p>如果服务器返回了"Cache-control: no-cache"或者其他能够禁止缓存的响应头,则<code>该方法返回true</code>,否则返回<code>false</code>.</p>
+
+<h6 id="Exceptions_thrown" name="Exceptions_thrown">可能抛出的异常</h6>
+
+<dl>
+ <dt><code>NS_ERROR_NOT_AVAILABLE</code></dt>
+ <dd>在响应头还未完全返回的时候调用了该方法(before <code>onStartRequest()</code>).</dd>
+</dl>
+
+<h3 id="isNoStoreResponse()" name="isNoStoreResponse()">isNoStoreResponse()</h3>
+
+<pre class="eval">boolean isNoStoreResponse();
+</pre>
+
+<h6 id="Parameters" name="Parameters">参数</h6>
+
+<p>无</p>
+
+<h6 id="Return_value" name="Return_value">返回值</h6>
+
+<p>如果服务器返回了"Cache-Control: no-store"这样的响应头,则<code>该方法返回true</code>,否则返回<code>false</code>.</p>
+
+<h6 id="Exceptions_thrown" name="Exceptions_thrown">可能抛出的异常</h6>
+
+<dl>
+ <dt><code>NS_ERROR_NOT_AVAILABLE</code></dt>
+ <dd>在响应头还未完全返回的时候调用了该方法(before <code>onStartRequest()</code>).</dd>
+</dl>
+
+<h3 id="setRequestHeader()" name="setRequestHeader()">setRequestHeader()</h3>
+
+<p>This method is called to set the value of a particular request header. This method allows, for example, the cookies module to add "Cookie" headers to the outgoing HTTP request. This method may only be called before the channel is opened. If aValue is empty and aMerge is <code>false</code>, the header will be cleared.</p>
+
+<pre class="eval">void setRequestHeader(
+  in ACString aHeader,
+  in ACString aValue,
+  in boolean aMerge
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">参数</h6>
+
+<dl>
+ <dt><code>aHeader</code></dt>
+ <dd>指定请求头的名称,不区分大小写(例如"Cookie").</dd>
+ <dt><code>aValue</code></dt>
+ <dd>指定请求头的值(例如"X=1").</dd>
+ <dt><code>aMerge</code></dt>
+ <dd>如果该参数为<code>true</code>,则新指定的请求头的值会合并到该请求头已有的值的后面.如果指定的请求头不支持(或者说不适合)新旧值的合并操作,则这个参数会被忽略(比如"<span>Connection</span>"头就只能有一个值).具体那些请求头会忽略掉这个参数,本文档不会给出.如果该参数的值为<code>false</code>,则新指定的请求头的值会覆盖掉该请求头已有的值.</dd>
+</dl>
+
+<h6 id="Exceptions_thrown" name="Exceptions_thrown">可能抛出的异常</h6>
+
+<dl>
+ <dt><code>NS_ERROR_IN_PROGRESS</code></dt>
+ <dd>在通道已经打开之后才调用了该方法</dd>
+</dl>
+
+<h3 id="setResponseHeader()" name="setResponseHeader()">setResponseHeader()</h3>
+
+<p>设置指定响应头的值.This method allows, for example, the HTML content sink to inform the HTTP channel about HTTP-EQUIV headers found in HTML &lt;META&gt; tags. If value is empty and merge is <code>false</code>, the header will be cleared.</p>
+
+<pre class="eval">void setResponseHeader(
+  in ACString header,
+  in ACString value,
+  in boolean merge
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">参数</h6>
+
+<dl>
+ <dt><code>header</code></dt>
+ <dd>指定响应头的名称,不区分大小写(例如"Cache-Control").</dd>
+ <dt><code>value</code></dt>
+ <dd>指定响应头的值(例如"no-cache").</dd>
+ <dt><code>merge</code></dt>
+ <dd>如果该参数为<code>true</code>,则新指定的响应头的值会合并到该响应头已有的值的后面.如果指定的响应头不支持(或者说不适合)新旧值的合并操作,则这个参数会被忽略(比如"Content-Type"头就只能有一个值).具体那些响应头会忽略掉这个参数,本文档不会给出.如果该参数的值为<code>false</code>,则新指定的响应头的值会覆盖掉该响应头已有的值.</dd>
+</dl>
+
+<h6 id="Exceptions_thrown" name="Exceptions_thrown">可能抛出的异常</h6>
+
+<dl>
+ <dt><code>NS_ERROR_NOT_AVAILABLE</code></dt>
+ <dd>在响应头还未完全返回的时候调用了该方法(before <code>onStartRequest()</code>).</dd>
+ <dt><code>NS_ERROR_ILLEGAL_VALUE</code></dt>
+ <dd>If changing the value of this response header is not allowed.</dd>
+</dl>
+
+<h3 id="visitRequestHeaders()" name="visitRequestHeaders()">visitRequestHeaders()</h3>
+
+<p>Call this method to visit all request headers. Calling <code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIHttpChannel#setRequestHeader()">setRequestHeader()</a></code> while visiting request headers has undefined behavior. Don't do it!</p>
+
+<pre class="eval">void visitRequestHeaders(
+  in nsIHttpHeaderVisitor aVisitor
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">参数</h6>
+
+<dl>
+ <dt><code>aVisitor</code></dt>
+ <dd>The header visitor instance.</dd>
+</dl>
+
+<h3 id="visitResponseHeaders()" name="visitResponseHeaders()">visitResponseHeaders()</h3>
+
+<p>Call this method to visit all response headers.</p>
+
+<p>{</p><div class="warning"> Calling <code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIHttpChannel#setResponseHeader()">setResponseHeader()</a></code> while visiting response headers has undefined behavior. Don't do it! </div><p></p>
+
+<pre class="eval">void visitResponseHeaders(
+  in nsIHttpHeaderVisitor aVisitor
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">参数</h6>
+
+<dl>
+ <dt><code>aVisitor</code></dt>
+ <dd>The header visitor instance.</dd>
+</dl>
+
+<h6 id="Exceptions_thrown" name="Exceptions_thrown">可能抛出的异常</h6>
+
+<dl>
+ <dt><code>NS_ERROR_NOT_AVAILABLE</code></dt>
+ <dd>If called before the response has been received (before <code>onStartRequest()</code>).</dd>
+</dl>

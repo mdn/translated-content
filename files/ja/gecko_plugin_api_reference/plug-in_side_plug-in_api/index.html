@@ -1,0 +1,62 @@
+---
+title: Plug-in Side Plug-in API
+slug: Gecko_Plugin_API_Reference/Plug-in_Side_Plug-in_API
+tags:
+  - Gecko Plugin API Reference
+  - NPAPI
+  - NeedsEditorialReview
+  - Plugins
+translation_of: Plugins/Guide/Plug-in_Side_Plug-in_API
+---
+<div class="prevnext" style="text-align: right;">
+<p><a href="/ja/docs/Gecko_Plugin_API_Reference:Version,_UI,_and_Status_Information" style="float: left;">« 前のページ</a><a href="/ja/docs/Gecko_Plugin_API_Reference:Browser_Side_Plug-in_API">次のページ »</a></p>
+</div>
+
+<p>この章は <code>plug-in</code> オブジェクトに対して利用できるプラグイン API にあるメソッドを説明しています。プラグインによって実装されブラウザによって呼ばれることを示すために、これらすべてのメソッド名は <code>NPP_</code> で始まっています。どのようにこれらプラグイン API の二つの側面が相互作用するのかを概観するには、イントロダクションの<a href="/ja/docs/Gecko_Plugin_API_Reference/Plug-in_Basics#プラグインの動作の仕方">プラグインの動作の仕方</a>や<a href="/ja/docs/Gecko_Plugin_API_Reference/Plug-in_Basics#プラグイン構造の概観">プラグイン構造の概観</a>セクションを参照してください。</p>
+
+<h3 id=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E6.A6.82.E8.A6.81" name=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E6.A6.82.E8.A6.81">プラグインメソッド概要</h3>
+
+<dl>
+ <dt><code><a href="/ja/docs/NPP_Destroy">NPP_Destroy</a></code></dt>
+ <dd>プラグインの特定のインスタンスを削除します。</dd>
+ <dt><code><a href="/ja/docs/NPP_DestroyStream">NPP_DestroyStream</a></code></dt>
+ <dd>ストリームが閉じられ、あるいは破棄されようとしているとプラグインに告知します。</dd>
+ <dt><code><a href="/ja/docs/NP_GetEntryPoints">NP_GetEntryPoints</a></code></dt>
+ <dd>ドキュメントなし。</dd>
+ <dt><code><a href="/ja/docs/NP_GetMIMEDescription">NP_GetMIMEDescription</a></code></dt>
+ <dd>ドキュメントなし。</dd>
+ <dt><code><a href="/ja/docs/NPP_GetValue">NPP_GetValue</a></code></dt>
+ <dd>プラグインが情報を問い合わせできるようにします。</dd>
+ <dt><code><a href="/ja/docs/NP_GetValue">NP_GetValue</a></code></dt>
+ <dd>ブラウザがプラグインに情報を問い合わせできるようにします。</dd>
+ <dt><code><a href="/ja/docs/NPP_HandleEvent">NPP_HandleEvent</a></code></dt>
+ <dd>インスタンスにプラットフォーム固有のウィンドウイベントを引き渡します。</dd>
+ <dt><code><a href="/ja/docs/NP_Initialize">NP_Initialize</a></code></dt>
+ <dd>プラグインに対する全体的な初期化を提供します。</dd>
+ <dt><code><a href="/ja/docs/NPP_New">NPP_New</a></code></dt>
+ <dd>プラグインの新しいインスタンスを作成します。</dd>
+ <dt><code><a href="/ja/docs/NPP_NewStream">NPP_NewStream</a></code></dt>
+ <dd>プラグインのインスタンスに新しいデータストリームを通知します。</dd>
+ <dt><code><a href="/ja/docs/NPP_Print">NPP_Print</a></code></dt>
+ <dd>組み込みやフルスクリーンプラグインにプラットフォーム固有の印刷操作を要求します。</dd>
+ <dt><code><a href="/ja/docs/NPP_SetValue">NPP_SetValue</a></code></dt>
+ <dd>プラグインについての情報を設定します。</dd>
+ <dt><code><a href="/ja/docs/NPP_SetWindow">NPP_SetWindow</a></code></dt>
+ <dd>ウィンドウを作成したり、移動したり、サイズを変えたり、破棄したときにプラグインに告知します。</dd>
+ <dt><code><a href="/ja/docs/NP_Shutdown">NP_Shutdown</a></code></dt>
+ <dd>プラグインに対する全体的な後始末を提供します。</dd>
+ <dt><code><a href="/ja/docs/NPP_StreamAsFile">NPP_StreamAsFile</a></code></dt>
+ <dd>ストリームからのデータに対するローカルファイルの名前を提供します。</dd>
+ <dt><code><a href="/ja/docs/NPP_URLNotify">NPP_URLNotify</a></code></dt>
+ <dd>URL リクエストの完了をインスタンスに通知します。</dd>
+ <dt><code><a href="/ja/docs/NPP_Write">NPP_Write</a></code></dt>
+ <dd>プラグインのインスタンスにデータを引き渡します。</dd>
+ <dt><code><a href="/ja/docs/NPP_WriteReady">NPP_WriteReady</a></code></dt>
+ <dd>プラグインが消費できる最大のバイト数を決めます。</dd>
+</dl>
+
+<div class="noinclude">
+<div class="prevnext" style="text-align: right;">
+<p><a href="/ja/docs/Gecko_Plugin_API_Reference:Version,_UI,_and_Status_Information" style="float: left;">« 前のページ</a><a href="/ja/docs/Gecko_Plugin_API_Reference:Browser_Side_Plug-in_API">次のページ »</a></p>
+</div>
+</div>

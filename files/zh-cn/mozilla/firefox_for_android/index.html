@@ -1,0 +1,65 @@
+---
+title: Firefox for Android
+slug: Mozilla/Firefox_for_Android
+translation_of: Mozilla/Firefox_for_Android
+---
+<p>对于越来越多的人来说，移动设备是他们上网的主要方式，甚至是唯一方式。Firefox Android版（代号 Fennec）是一个开放的，可定制的，基于标准的浏览器，就像桌面版的Firefox。</p>
+
+<p>Firefox Android版从原生的Android小部件构建用户界面而不是XUL：这极大的提高了性能，特别是启动时间和内存消耗上。</p>
+
+<h2 id="有助于Firefox_for_Android">有助于Firefox for Android</h2>
+
+<p>关于Firefox for Android项目主要出发点的一些信息参见 <a href="https://wiki.mozilla.org/Mobile/Get_Involved">“Get Involved” 页</a>。</p>
+
+<p>你可以帮助我们建立和改善 Firefox for Android:</p>
+
+<ul>
+ <li><span id="result_box" lang="zh-CN"><span>帮助我们</span><span>进行</span><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_for_Android/Compatibility_Testing"><span>兼容性测试</span> </a></span></li>
+ <li>订阅 <a href="https://mail.mozilla.org/listinfo/mobile-firefox-dev">mobile-firefox-dev 邮件列表</a></li>
+ <li>
+  <div><span id="Dst[5][17:20:0:0]">在</span><a href="irc://irc.mozilla.org/#mobile"><span> </span><span id="Dst[5][22:24:2:4]">IRC</span><span> </span></a><span id="Dst[5][0:6:6:7]">联系我们的</span><span id="Dst[5][12:15:8:9]">团队</span></div>
+ </li>
+ <li>参加我们的<a href="https://wiki.mozilla.org/Mobile/Notes">周三开发会议</a></li>
+ <li>通过<a class="external" href="http://planet.firefox.com/mobile/">Planet Firefox Mobile</a>, <a href="http://fennecnightly.tumblr.com/">Tumblr</a> 和 <a class="link-https" href="https://twitter.com/FennecNightly" title="https://twitter.com/#!/mozmobile">Twitter</a> 关注我们的最新信息</li>
+ <li>在 <a href="https://wiki.mozilla.org/Mobile/Fennec/Android">Firefox for Android (Fennec) </a>上建立和修改</li>
+</ul>
+
+<h2 id="为移动web开发">为移动web开发</h2>
+
+<p class="ordinary-output target-output"><span>我们已经开始了一个</span><a href="https://developer.mozilla.org/En/Mobile"><span>为</span></a><span><a href="https://developer.mozilla.org/En/Mobile">移动设备</a></span><span><a href="https://developer.mozilla.org/En/Mobile"><span>设计</span></a>网站的指南</span><span>。</span></p>
+
+<p>With Firefox for Android, you've got access a number of APIs that expose the underlying capabilities of the device, closing the gap between the Web and native applications:</p>
+
+<ul>
+ <li><a class="external" href="http://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/" title="http://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/">Battery</a></li>
+ <li><a href="/en/DOM/Using_the_Camera_API" title="Using the Camera API">Camera</a></li>
+ <li><a href="/en/API/WebTelephony/Introduction_to_WebTelephony" title="Introduction to WebTelephony">WebTelephony</a></li>
+ <li><a href="/en/API/WebSMS/Introduction_to_WebSMS" title="Introduction to WebSMS">WebSMS</a></li>
+ <li><a href="/En/Using_geolocation" title="Using geolocation">Geolocation</a></li>
+ <li><a href="/en/Detecting_device_orientation" title="https://developer.mozilla.org/en/detecting_device_orientation">Orientation</a></li>
+</ul>
+
+<p>To test your web site on Firefox for Android, you can <a class="link-https" href="https://www.mozilla.org/en-US/mobile/">install it on an Android device</a> or <a class="link-https" href="https://wiki.mozilla.org/Mobile/Fennec/Android/Emulator">run it on your desktop using the Android Emulator</a>.</p>
+
+<h2 id="构建Mobile附加组件">构建Mobile附加组件</h2>
+
+<p><a href="/en/Extensions/Mobile" title="en/Extensions/Firefox_on_Android">Firefox for Android supports add-ons</a> using the exact same <a href="/en/Extensions" title="en/Extensions">extension system</a> used by all other Gecko-based applications. We did not invent a new add-on system. This means that building an add-on for Firefox on Android is the <a href="/en/Building_an_Extension" title="en/Building_an_Extension">same process</a> that would be used for desktop Firefox. Add-ons that work with desktop Firefox <strong>do not</strong> automatically work in Firefox on Android. The user interfaces are just too different.</p>
+
+<div class="note">Firefox on Android has a unique application identifier which must be used in <code>install.rdf</code>. The identifier is <code>{aa3c5121-dab2-40e2-81ca-7ea25febc110}</code></div>
+
+<p>Both classic restart-required and newer <a href="/en/Extensions/Bootstrapped_extensions" title="en/Extensions/Bootstrapped_extensions">restartless</a> add-on approaches are supported. Using the restartless approach is preferred whenever possible because the user experience is far superior to forcing an application restart when installing or removing an add-on.</p>
+
+<h3 id="快速概览">快速概览</h3>
+
+<ul>
+ <li>There is no visible XUL in the UI, so using overlays to try to add or change UI is useless.</li>
+ <li>Internal code and objects, like <code>gBrowser</code>, do not exist. Look at the Firefox on Android <a class="external" href="http://mxr.mozilla.org/mozilla-central/source/mobile/android/chrome/content/browser.js" title="http://mxr.mozilla.org/mozilla-central/source/mobile/android/chrome/content/browser.js"><code>browser.js</code></a> file to learn about the internals. Much of the same fundamental functionality exists.</li>
+ <li>Services like <code>nsIPromptService</code> and <code>nsIAlertsService</code> are implemented to use native Android UI.</li>
+ <li>There is a simple JavaScript object, called <a href="/en/Extensions/Mobile/API/NativeWindow" title="en/Extensions/Mobile/NativeWindow"><code>NativeWindow</code></a>, that allows you to manipulate parts of the native Android UI.</li>
+</ul>
+
+<h2 id="获取Firefox_for_Android的帮助">获取Firefox for Android的帮助</h2>
+
+<p>Documentation and tutorials for using and troubleshooting Firefox for Android are available on the <a class="external" href="http://support.mozilla.org/mobile" title="http://support.mozilla.org/mobile">Mozilla Support website</a>.</p>
+
+<p> </p>

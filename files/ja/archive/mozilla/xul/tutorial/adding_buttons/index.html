@@ -1,0 +1,68 @@
+---
+title: ボタンを追加する
+slug: Archive/Mozilla/XUL/Tutorial/Adding_Buttons
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_Buttons
+---
+<p> </p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Creating_a_Window" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Adding_Labels_and_Images">次のページ  »</a></p>
+</div>
+<p>このセクションでは、ウィンドウに簡単なボタンを追加する方法を見て行きます。</p>
+<p><span id="Adding_Buttons_to_a_Window"></span></p>
+<h3 id=".E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.81.AB.E3.83.9C.E3.82.BF.E3.83.B3.E3.82.92.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B" name=".E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.81.AB.E3.83.9C.E3.82.BF.E3.83.B3.E3.82.92.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B">ウィンドウにボタンを追加する</h3>
+<p>前回作成したウィンドウは、まだ中に何も置かれてないため、あまり面白いものではありませんでした。 このセクションでは、Find (検索) ボタンと Cancel (取消) ボタンの 2 つのボタンを追加します。 また、ウィンドウの中でこれらの配置を決める簡単な方法についても学びます。</p>
+<p>HTML と同様、XUL には、ユーザーインターフェイスの要素を作成するためのタグがたくさんあります。 最も基本的なものは、 <code><a href="/ja/docs/Mozilla/Tech/XUL/button" title="button">button</a></code> タグです。 この要素は、単純なボタンを作成するために使用します。</p>
+<p>button 要素には、2 つの主要なプロパティ、<code>label</code> と <code>image</code> があります。 通常、ボタンには、この 2 つのうちのどちらか、あるいは両方が必要になります。 したがって、ボタンには、「ラベルだけ」、「画像だけ」、あるいは「ラベルと画像の両方」を設定することが可能です。 ボタンは、ダイアログの「OK」および「Cancel」ボタンとして普段から使用されています。</p>
+<p><span id="Syntax_of_buttons"></span></p>
+<h4 id=".E3.83.9C.E3.82.BF.E3.83.B3.E8.A6.81.E7.B4.A0.E3.81.AE.E6.A7.8B.E6.96.87" name=".E3.83.9C.E3.82.BF.E3.83.B3.E8.A6.81.E7.B4.A0.E3.81.AE.E6.A7.8B.E6.96.87">ボタン要素の構文</h4>
+<p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code> タグの<span style="border-bottom: 1px dashed green;" title="syntax">構文</span>を以下に示します。</p>
+<pre>&lt;button
+    id="identifier"
+    class="dialog"
+    label="OK"
+    image="images/image.jpg"
+    disabled="true"
+    accesskey="t"/&gt;
+</pre>
+<p>ボタンの属性には以下のようなものがあり、全てオプションです。</p>
+<dl><dt> <code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code> </dt><dd> ボタンを識別するための一意な識別子。この属性は、全ての要素に存在します。id は、ボタンをスタイルシートやスクリプトから参照する必要があるときに使用します。この属性は、必要ない場合でも、出来るだけ全ての要素に対して設定しておいた方が良いと思います。なお、このチュートリアルで示す例の中では、単純化のために設定していない場合もあります。 </dd><dt> <code id="a-class"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/class">class</a></code> </dt><dd> ボタンのスタイルクラス。動作は HTML と同様です。ボタンが表示される外見のスタイルを指定するために使用します。この場合は、<code>dialog</code> という値が使用されています。ほとんどの場合、ボタンに対して class を使用する事はないと思います。 </dd><dt> <code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code> </dt><dd> OK や Cancel といった、ボタンに表示されるラベル。この属性が指定されていない場合、何のテキストも表示されません。 </dd><dt> <code id="a-image"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/image">image</a></code> </dt><dd> ボタンに表示される画像の URL。この属性が指定されていない場合、画像は表示されません。画像は、スタイルシート中で <a href="/ja/docs/Web/CSS/list-style-image" title="CSS の list-style-image プロパティは、リスト項目のマーカーとして使われる画像を設定します。"><code>list-style-image</code></a> プロパティを使用することによっても、指定することができます。 </dd><dt> <code id="a-disabled"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code> </dt><dd> この属性が <code>true</code> に設定された場合、そのボタンは無効になります。無効状態では、ボタンのテキストは通常灰色で表示されます。もしボタンが無効のときは、そのボタンの機能は実行出来ません。この属性が設定されない場合、ボタンは有効になります。ボタンの有効・無効の切り替えは、<a href="/ja/JavaScript" title="ja/JavaScript">JavaScript</a> で変更することができます。 </dd><dt> <code id="a-accesskey"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/accesskey">accesskey</a></code> </dt><dd> この属性は、ショートカットキーとして使用する文字で、可能な限り設定するようにします。この文字は、ラベルのテキストに含まれている文字であるべきで、通例、下線付きで表示されます。<span style="color: darkgreen; background: #ef9;">【訳注: ラベルが日本語の場合は、「開く (O) 」のようにショートカットキーは括弧で囲って付加しておきます】</span> 利用者が ALT キー (または、そのプラットフォームの同様のキー) を押しながらアクセスキーを押した場合、ボタンはそのウィンドウならどこからでもフォーカスを得ることが出来るはずです。 </dd></dl>
+<p>ボタンは、上に挙げたものよりも、さらに多くの属性をサポートしていることを補足しておきます。 他の属性については、<a href="/ja/XUL_Tutorial/More_Button_Features" title="ja/XUL_Tutorial/More_Button_Features">後で触れる予定</a>です。 以下にボタンの例をいくつか示します。</p>
+<p><span id="Some_examples_of_buttons"></span></p>
+<h4 id=".E3.83.9C.E3.82.BF.E3.83.B3.E3.81.AE.E4.BE.8B" name=".E3.83.9C.E3.82.BF.E3.83.B3.E3.81.AE.E4.BE.8B">ボタンの例</h4>
+<p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_buttons_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_buttons_1.xul">表示</a></p>
+<div class="float-right"><img alt="画像:buttons1.png" class="internal" src="/@api/deki/files/1870/=Buttons1.png"></div>
+<pre>&lt;button label="Normal"/&gt;
+&lt;button label="Disabled" disabled="true"/&gt;
+</pre>
+<p>上の例を表示させると、画像で示すようなボタンが作成されるはずです。 最初のボタンは Normal (通常) のボタンです。 二番目のボタンは Disabled (無効) になっているので、灰色表示 (グレイアウト) されています。</p>
+<p>ファイル検索ユーティリティのために簡単な Find (検索) ボタンを作成に取りかかることにします。 以下のサンプルコードはその方法を示しています。</p>
+<pre>&lt;button id="find-button" label="Find"/&gt;
+</pre>
+<div class="note">Firefox を利用している場合、ウェブページからは chrome ウィンドウを開くことができないため、このチュートリアルにある 「表示」リンクは通常のブラウザウィンドウで開かれることになります。このため、ボタンはウィンドウ幅いっぱいに引き延ばされて表示されてしまいます。これを防ぐには window タグに align="start" を与えます。</div>
+<div class="highlight">
+<p><span id="The_findfile.xul_example"></span></p>
+<h5 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AE.E4.BE.8B" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AE.E4.BE.8B">ファイル検索ダイアログの例</h5>
+<p>それでは、前のセクションで作成した findfile.xul ファイルに、上記のコードを追加してみましょう。コードは <code><a href="/ja/docs/Mozilla/Tech/XUL/window" title="window">window</a></code> タグの間に挿入する必要があります。追加するコードを、以下に赤字で示します：</p>
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="<a class=" external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;
+&lt;window id="findfile-window"
+    title="Find Files"
+    orient="horizontal"
+     xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+
+  <span style="color: rgb(255, 0, 0);"><span class="highlightred">&lt;button id="find-button" label="Find"/&gt;<br></span> <span class="highlightred"> &lt;button id="cancel-button" label="Cancel"/&gt;</span></span>
+&lt;/window&gt;
+</pre>
+<div class="float-right"><img alt="画像:buttons2.png" class="internal" src="/@api/deki/files/1872/=Buttons2.png"></div>
+<p>Find だけでなく、Cancel ボタンも追加されていることを注記しておきます。 水平配置 (<code>orient="horizontal"</code>) がウィンドウに与えられているため、二つのボタンは横に並んで表示されます。 この XUL ファイルを Mozilla で開くと、右の画像で示すようなウィンドウが表示されるはずです。</p>
+</div>
+<div class="note">テキストのラベルは直接 XUL ファイルに書き込むべきではない、という事を覚えておいてください。 <a href="/ja/XUL_Tutorial/Localization" title="ja/XUL_Tutorial/Localization">テキストのローカライズ</a>をやりやすくするために、実体 (<span style="color: green;">entity</span>) を使用するべきです。</div>
+<p>次のセクションでは、XUL ウィンドウにラベルと画像を追加する方法について調べます。</p>
+<p><small><span id="%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8"><a id="%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8"></a><strong>関連ページ</strong></span> : <a href="/ja/XUL_Tutorial/More_Button_Features" title="ja/XUL_Tutorial/More_Button_Features">その他のボタン機能</a></small></p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Creating_a_Window" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Adding_Labels_and_Images">次のページ  »</a></p>
+</div>

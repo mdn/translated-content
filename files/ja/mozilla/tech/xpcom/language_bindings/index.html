@@ -1,0 +1,25 @@
+---
+title: XPCOM 言語バインディング
+slug: Mozilla/Tech/XPCOM/Language_Bindings
+translation_of: Mozilla/Tech/XPCOM/Language_Bindings
+---
+<p><strong>XPCOM 言語バインディング</strong>は、以下の目的のために特定の言語と <a href="/ja/XPCOM" rel="internal" title="ja/XPCOM">XPCOM</a> との橋渡しを行います。</p>
+
+<ul>
+ <li>他の言語から XPCOM オブジェクトへのアクセス方法を提供します（「アクセス」とは、 XPCOM オブジェクトの読み込み・書き込み・生成・オブジェクトのメソッド呼び出しを意味します）。</li>
+ <li>他の言語で書かれた XPCOM オブジェクトのモジュールを「露出」させます。モジュールは XPCOM バインディングが存在する言語すべてからアクセスすることができるようになります。</li>
+</ul>
+
+<p>XPCOM レイヤー自身は C/C++ で書かれているため、 XPCOM API は C/C++ でサンドボックスの外側から呼び出すことができます。また、他の言語から XPCOM API を利用できるようにするためには別のレイヤーが必要になります。</p>
+
+<p>そのようなバインディング層が様々な言語に対して提供されています。</p>
+
+<ul>
+ <li><strong>JavaScript</strong>: <a href="/ja/XPConnect" rel="internal" title="ja/XPConnect">XPConnect</a> （これは Firefox に含まれています。 XUL アプリケーションで利用されています）</li>
+ <li><strong>Java</strong>: <a href="/ja/JavaXPCOM" rel="internal" title="ja/JavaXPCOM">JavaXPCOM</a> (これは Firefox には含まれていませんが、XULRunner の標準のビルドには梱包されており、また Eclipse のアプリケーションで利用されています）</li>
+ <li><strong>Python</strong>: <a href="/ja/PyXPCOM" rel="internal" title="ja/PyXPCOM">PyXPCOM</a> （これは標準のビルドには含まれていませんが、 ActiveState Komodo 製品では利用されています）</li>
+ <li><strong>Perl</strong>: <a href="/ja/PlXPCOM" rel="internal" title="ja/PlXPCOM">PlXPCOM</a></li>
+ <li><strong>Ruby</strong>: <a href="/ja/RbXPCOM" rel="internal" title="ja/RbXPCOM">RbXPCOM</a></li>
+</ul>
+
+<p>利用法が必要な場合は、それぞれのバインディングのページを参照してください。</p>

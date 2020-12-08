@@ -1,0 +1,476 @@
+---
+title: MMgc
+slug: MMgc
+translation_of: Archive/MMgc
+---
+<p><strong>MMgc</strong> is the Tamarin (née Macromedia) garbage collector, a memory management library that has been built as part of the AVM2/Tamarin effort. It is a static library that is linked into the Flash Player but kept separate, and can be incorporated into other programs.</p>
+<h2 id="Using_MMgc" name="Using_MMgc">Using MMgc</h2>
+<h3 id="Managed_vs._Unmanaged_Memory" name="Managed_vs._Unmanaged_Memory">Managed vs. Unmanaged Memory</h3>
+<p>MMgc is not only a garbage collector, but a general-purpose memory manager. The Flash Player uses it for nearly all memory allocations.</p>
+<p>MMgc can handle both managed and unmanaged memory.</p>
+<p>Managed memory is memory that is reclaimed automatically by the garbage collector. The garbage collector is "managing" it, detecting when the memory is no longer reachable from anywhere in the application and reclaiming it at that time. In MMgc, you get managed memory by subclassing GCObject/GCFinalizedObject/RCObject, or by calling GC::Alloc.</p>
+<p>Unmanaged memory is everything else. This is C++ memory management as you're accustomed to it. Memory can be allocated with the <code>new</code> operator, and must be explicitly deleted in your C++ code at some later time using the <code>delete</code> operator.</p>
+<p>Another way to think about it:</p>
+<ul>
+ <li>Unmanaged memory is C++ operators <code>new</code> and <code>delete</code></li>
+ <li>Managed memory is C++ operator <code>new</code>, with optional <code>delete</code></li>
+</ul>
+<p>MMgc contains a <em>page allocator</em> called <code>GCHeap</code>, which allocates large blocks (megabytes) of memory from the system and doles out 4KB pages to the unmanaged memory allocator (<code>FixedMalloc</code>) and the managed memory allocator (<code>GC</code>).</p>
+<h3 id="MMgc_namespace" name="MMgc_namespace">MMgc namespace</h3>
+<p>The MMgc library is in the C++ namespace <code>MMgc</code>.</p>
+<p>You can qualify references to classes in the library; for example: <code>MMgc::GC</code>, <code>MMgc::GCFinalizedObject</code>.</p>
+<p>Alternately, you can open the <code>MMgc</code> namespace in your C++ source so that you can refer to the objects more concisely:</p>
+<pre class="eval"> using namespace MMgc;
+ ...
+ GC* gc = GC::GetGC(this);
+ GCObject* gcObject;
+</pre>
+<h3 id="GC_class" name="GC_class">GC class</h3>
+<p>The class <code>MMgc::GC</code> is the main class of the GC. It represents a full, self-contained instance of the garbage collector.</p>
+<p>It may be multiply instantiated; you may have multiple instances of the garbage collector running at once.  Each instance manages its own set of objects; objects are not allowed to reference objects in other GC instances.</p>
+<p>The GC typically is constructed early in your program's initialization, and then passed to operations like <code>operator new</code> for allocating GC objects.</p>
+<p>There are a few methods that you may need to call directly, such as <code>Alloc</code> and <code>Free</code>.</p>
+<h4 id="GC::Alloc.2C_GC::Free" name="GC::Alloc.2C_GC::Free">GC::Alloc, GC::Free</h4>
+<p>The <code>Alloc</code> and <code>Free</code> methods are garbage-collected analogs for <code>malloc</code> and <code>free</code>. Memory allocated with <code>Alloc</code> doesn't need to be explicitly freed, although it can be freed with <code>Free</code> if it is known that there are no other references to it.</p>
+<p><code>Alloc</code> is often used to allocate arrays and other objects of variable size that contain GC pointers or are otherwise desirable to have in managed memory.</p>
+<p>These flags may be passed to <code>Alloc</code> to control the allocation type.</p>
+<pre class="eval">/**
+* flags to be passed as second argument to alloc
+*/
+enum AllocFlags
+{
+  kZero=1,
+  kContainsPointers=2,
+  kFinalize=4,
+  kRCObject=8
+};
+</pre>
+<p><code>kZero</code> zeros out the memory. Otherwise, the memory contains undefined values.</p>
+<p><code>kContainsPointers</code> indicates to the GC that the memory will contain pointers to other GC objects, and thus needs to be scanned by the GC's mark phase. If you know for certain that the objects will not contain GC pointers, leave this flag off; it will make the mark phase faster by excluding your object.</p>
+<p><code>kFinalize</code> and <code>kRCObject</code> are used internally by the GC; you should not need to set them in your user code.</p>
+<h4 id="GC::GetGC" name="GC::GetGC">GC::GetGC</h4>
+<p>Given the pointer to any GCObject, it is possible to get a pointer to the GC object that allocated it.</p>
+<pre class="eval">void GCObject::Method() {
+  GC* gc = MMgc::GC::GetGC(this);
+  ...
+}
+</pre>
+<p>This practice should be used sparingly, but is sometimes useful.</p>
+<h3 id="Base_Classes" name="Base_Classes">Base Classes</h3>
+<h4 id="GCObject" name="GCObject">GCObject</h4>
+<p>A basic garbage collected object.</p>
+<ul>
+ <li>A GCObject is allocated with parameterized operator new, passing the MMgc::GC object:</li>
+</ul>
+<pre class="eval">class MyObject : public MMgc::GCObject { ... };
+MyObject* myObject = new (gc) MyObject();
+</pre>
+<ul>
+ <li>Any pointers to a GCObject from unmanaged memory require the unmanaged object to be a GCRoot.</li>
+</ul>
+<pre class="eval">class MyUnmanagedObject : public MMgc::GCRoot {
+ MyObject *object;
+};
+</pre>
+<ul>
+ <li>Any pointers to a GCObject from managed memory require a DWB write barrier macro.</li>
+</ul>
+<pre class="eval">class MyOtherManagedObject : public MMgc::GCObject {
+ DWB(MyObject*) object;
+};
+</pre>
+<ul>
+ <li>Now for the good part... there is no need to delete instances of MyObject, because the GC will clean them up automatically when they are unreachable.</li>
+ <li>However, a GCObject <strong>can</strong> be deleted explicitly with the delete operator. Only do this if you know for certain that there are no other references, and you want to help the GC along:</li>
+</ul>
+<pre class="eval">// Optimization: Get rid of myObject now, because we know there are no other
+// references, so no need to wait for GC to clean it up.
+delete myObject;
+</pre>
+<ul>
+ <li>The destructor for a GCObject will <em>never</em> be called (unless the object is also a descendant of GCFinalizedObject... see below.)</li>
+</ul>
+<pre class="eval">class MyObject : public MMgc::GCObject {
+ ~MyObject() { assert(!"this will never be hit (unless we also descend from GCFinalizedObject)"); }
+};
+</pre>
+<h5 id="GCObject::GetWeakRef" name="GCObject::GetWeakRef">GCObject::GetWeakRef</h5>
+<pre class="eval">GCWeakRef *GetWeakRef() const;
+</pre>
+<p>The <code>GetWeakRef</code> method returns a weak reference to the object. Normally, a pointer to the object is considered a hard reference -- any such reference will prevent the object from being destroyed. Sometimes, it is desirable to hold a pointer to a GCObject, but to let the object be destroyed if there are no other references. GCWeakRef can be used for this purpose. It has a <code>get</code> method which returns the pointer to the original object, or <code>NULL</code> if that object has already been destroyed.</p>
+<h4 id="GCFinalizedObject" name="GCFinalizedObject">GCFinalizedObject</h4>
+<p>Base class: GCObject</p>
+<p>A garbage collected object with finalization support.</p>
+<p>All of the rules from GCObject above apply to GCFinalizedObject.</p>
+<p>The finalizer (C++ destructor) of a GCFinalizedObject will be invoked when MMgc collects the object.</p>
+<pre class="eval">class MyFinalizedObject : public MMgc::GCFinalizedObject
+{
+public:
+  ~MyFinalizedObject()
+  {
+    // Do finalization behavior, like closing network connections,
+    // freeing unmanaged memory owned by this object, etc.
+  }
+};
+</pre>
+<h4 id="RCObject" name="RCObject">RCObject</h4>
+<p>Base class: GCFinalizedObject</p>
+<p>This is a reference-counted, garbage collected object.</p>
+<p>RCObject is used instead of GCObject when more immediate reclamation of memory is desired. For instance, the avmplus::String class in AVM+ is a RCObject. Strings are created very frequently, and are often temporary objects with very short lifetimes. By making them RCObjects, the GC is able to reclaim them much faster and limit memory growth.</p>
+<p>All of the rules for GCObject apply to RCObject, and there are a few more:</p>
+<ul>
+ <li>Any pointer to a RCObject from unmanaged memory must use the DRC macro.</li>
+</ul>
+<pre class="eval">class MyObject : public MMgc::RCObject { ... };
+class MyUnmanagedObject : public MMgc::GCRoot {
+  DRC(MyObject*) myObject;
+};
+</pre>
+<ul>
+ <li>Any pointer to a RCObject from managed (GC) memory must use the DRCWB macro. This is true whether the object containing the pointer is GCObject or RCObject.</li>
+</ul>
+<pre class="eval">class MyObject : public MMgc::RCObject { ... };
+class MyOtherManagedGCObject : public MMgc::GCObject {
+  DRCWB(MyObject*) myObject;
+};
+class MyOtherManagedRCObject : public MMgc::RCObject {
+  DRCWB(MyObject*) myObject;
+};
+</pre>
+<ul>
+ <li>The RCObject must zero itself out on deletion. For this reason, RCObject's always have finalizers. Declare a destructor that zeros out all of the fields of your RCObject. See <a href="#Zeroing_RCObjects">Zeroing RCObjects</a> for more information.</li>
+</ul>
+<pre class="eval">class MyObject : public MMgc::RCObject {
+public:
+ MyObject() { x = 1; y = 2; z = 3; }
+ ~MyObject() { x = y = z = 0; }
+private:
+ int x;
+ int y;
+ int z;
+};
+</pre>
+<p> </p>
+<h4 id="GCRoot" name="GCRoot">GCRoot</h4>
+<p>If you have a pointer to a GCObject from an object in unmanaged memory, the unmanaged object must be a subclass of GCRoot.</p>
+<p>GCRoot must be subclassed by any unmanaged memory class that holds GC pointers.</p>
+<pre class="eval">class MyGCObject : public MMgc::GCObject { ... };
+class MyGCRoot : public MMgc::GCRoot {
+ MyGCObject* myGCObject;
+};
+</pre>
+<p>Note that a GCRoot is NOT a garbage-collected object. It is an unmanaged memory object that contains GC pointers.</p>
+<p>MMgc keeps a list of all GCRoots in the system and makes sure that it marks them. GCRoots are generally expected to be allocated using MMgc's unmanaged memory allocators, so that MMgc can figure out how big the GCRoot object is.</p>
+<p>Use of GCRoot is required to have GC pointers from unmanaged memory, since without GCRoot, those pointers won't be marked by the mark phase of the GC.</p>
+<p>Note that GCRoot can be used either by subclassing, or by creating a GCRoot and passing it the memory locations to treat as a root:</p>
+<pre class="eval">/** subclassing constructor */
+GCRoot(GC *gc);
+/** general constructor */
+GCRoot(GC *gc, const void *object, size_t size);
+</pre>
+<h3 id="Allocating_objects" name="Allocating_objects">Allocating objects</h3>
+<p>Allocating unmanaged objects is as simple as using global operator new/delete, the same way you always have.</p>
+<p>To allocate a managed (GC) object, you must use the parameterized form of operator new, and pass it a reference to the MMgc::GC object.</p>
+<pre class="eval">class MyObject : public MMgc::GCObject { ... };
+...
+MyObject* myObject = new (gc) MyObject();
+</pre>
+<h3 id="DWB.2FDRC.2FDRCWB" name="DWB.2FDRC.2FDRCWB">DWB/DRC/DRCWB</h3>
+<p>There are several smart pointer templates which must be used in your C++ code to work properly with MMgc.</p>
+<h4 id="DWB" name="DWB">DWB</h4>
+<p>DWB stands for Declared Write Barrier.</p>
+<p>It must be used on a pointer to a GCObject/GCFinalizedObject, when that pointer is a member variable of a class derived from GCObject/GCFinalizedObject/RCObject/RCFinalizedObject.</p>
+<pre class="eval">class MyManagedClass : public MMgc::GCObject
+{
+  // MyManagedClass is a GCObject, and
+  // avmplus::Hashtable is a GCObject, so use DWB
+  DWB(avmplus::Hashtable*) myTable;
+};
+</pre>
+<h4 id="DRC" name="DRC">DRC</h4>
+<p>DRC stands for Deferred Reference Counted.</p>
+<p>It must be used on a pointer to a RCObject/RCFinalizedObject, when that pointer is a member variable of a C++ class in unmanaged memory.</p>
+<pre class="eval">class MyUnmanagedClass
+{
+  // MyUnmanagedClass is not a GCObject, and
+  // avmplus::Stringp is a RCObject, so use DRC
+  DRC(Stringp) myString;
+};
+</pre>
+<h4 id="DRCWB" name="DRCWB">DRCWB</h4>
+<p>DRCWB stands for Deferred Reference Counted, with Write Barrier.</p>
+<p>It must be used on a pointer to a RCObject/RCFinalizedObject, when that pointer is a member variable of a class derived from GCObject/GCFinalizedObject/RCObject/RCFinalizedObject.</p>
+<pre class="eval">class MyManagedClass : public MMgc::GCObject
+{
+  // MyManagedClass is a GCObject, and
+  // avmplus::Stringp is a RCObject, so use DRCWB
+  DRCWB(Stringp) myString;
+};
+</pre>
+<h4 id="When_are_the_macros_not_needed.3F" name="When_are_the_macros_not_needed.3F">When are the macros not needed?</h4>
+<p>Write barriers are not needed for stack-based local variables, regardless of whether the object pointed to is GCObject, GCFinalizedObject, RCObject or RCFinalizedObject. The GC marks the entire stack during collection, and not incrementally, so write barriers aren't needed.</p>
+<p>Write barriers are not needed for pointers to GC objects from unmanaged memory (GCRoot). GCRoots are marked at the end of the mark phase, and not incrementally, so no write barriers are required. DRC() is required for RC objects, since the reference count must be maintained.</p>
+<p>Write barriers are not needed for C++ objects that exist purely on the stack, and never in the heap. The Flash Player class "NativeInfo" is a good example. Such objects are essentially the same as stack-based local variables.</p>
+<h3 id="Zeroing_RCObjects" name="Zeroing_RCObjects">Zeroing RCObjects</h3>
+<p>All RCObjects (including all subclasses) must zero themselves out completely upon destruction. Asserts enforce this. The reason is that our collector zeroes memory upon free and this was hurting performance. Since MMgc must traverse objects to decrement refcounts properly upon destruction, I just made destructors do zeroing too. This mostly applies to non-pointer fields as <code>DRCWB</code> smart pointers do this for you.</p>
+<h3 id="Poisoned_Memory" name="Poisoned_Memory">Poisoned Memory</h3>
+<p>In DEBUG builds, MMgc writes "poison" into deallocated memory as a debugging aid. Here's what the different poison values mean:</p>
+<table>
+ <tbody>
+  <tr>
+   <td><code>0xfafafafa</code></td>
+   <td>Uninitialized unmanaged memory</td>
+  </tr>
+  <tr>
+   <td><code>0xedededed</code></td>
+   <td>Unmanaged memory that was freed explicitly</td>
+  </tr>
+  <tr>
+   <td><code>0xbabababa</code></td>
+   <td>Managed memory that was freed by the Sweep phase of the garbage collector</td>
+  </tr>
+  <tr>
+   <td><code>0xcacacaca</code></td>
+   <td>Managed memory that was freed by an explicit call to GC::Free (including DRC reaping)</td>
+  </tr>
+  <tr>
+   <td><code>0xdeadbeef</code></td>
+   <td>This is written to the 4 bytes just after any object allocated via MMgc. It is used for overwrite detection.</td>
+  </tr>
+  <tr>
+   <td><code>0xfbfbfbfb</code></td>
+   <td>A block given back to the heap manager is memset to this (fb == free block).</td>
+  </tr>
+ </tbody>
+</table>
+<h3 id="Finalizers" name="Finalizers">Finalizers</h3>
+<p>If your C++ class is a subclass of GCFinalizedObject or RCFinalizedObject, it has finalizer support.</p>
+<p>A finalizer is a method which will be invoked by the GC when an unreachable object is about to be destroyed.</p>
+<p>It's similar to a destructor. It differs from a destructor in that it is usually called nondeterministically, i.e. in whatever random order the GC decides to destroy objects. C++ destructors are usually invoked in a comparatively predictable order, since they're invoked explicitly by the application code.</p>
+<p>In MMgc, the C++ destructor is actually used as the finalizer.</p>
+<p>If you don't subclass GCFinalizedObject or RCFinalizedObject, any C++ destructor on your garbage collected class will basically be ignored. Only if you subclass GCFinalizedObject or RCFinalizedObject will MMgc know that you want finalization behavior on your class.</p>
+<p>It's best to avoid finalizers if you can, since finalization behavior can be unpredictable and nondeterministic, and also slows down the GC since the finalizers need to be invoked.</p>
+<h4 id="Finalizer_Access_Rules" name="Finalizer_Access_Rules">Finalizer Access Rules</h4>
+<p>Finalizers are very restricted in the set of objects they may access. Finalizers may not perform any of the following actions:</p>
+<ul>
+ <li>Fire any write barriers</li>
+ <li>Dereference a pointer to any GC object, including member variables (except see below about RCObject references)</li>
+ <li>Allocate any GC memory (<code>GC::Alloc</code>), explicitly free GC memory (<code>GC::Free</code>)</li>
+ <li>Change the set of GC roots (create a GCRoot object or derivative)</li>
+ <li>Cause itself to become reachable</li>
+</ul>
+<p>If a finalized object holds a reference to an RCObject, it may safely call <code>decrementref</code> on the RCObject.</p>
+<h3 id="Threading" name="Threading">Threading</h3>
+<p>The GC routines are not currently thread safe, we're operating under the assumption that none of the player spawned threads create GC'd things. If this isn't true we hope to eliminate other threads from doing this and if we can't do that we will be forced to make our GC thread safe, although we hope we don't have to do that.</p>
+<p>Threading gets more complicated because it makes sense to re-write ChunkMalloc and ChunkAllocBase to get their blocks from the GCHeap. They can also take advantage of the 4K boundary to eliminate the 4 byte per allocation penalty.</p>
+<h2 id="Troubleshooting_MMgc" name="Troubleshooting_MMgc">Troubleshooting MMgc</h2>
+<h3 id="Dealing_with_bugs" name="Dealing_with_bugs">Dealing with bugs</h3>
+<p>GC bugs are hard.</p>
+<h4 id="Forgetting_a_write_barrier" name="Forgetting_a_write_barrier">Forgetting a write barrier</h4>
+<p>If you forget to put a write barrier on a pointer, the incremental mark process might miss the pointer being changed. The result will be an object that your code has a pointer to, but which the GC thinks is unreachable. The GC will destroy the object, and later you will crash with a dangling pointer.</p>
+<p>When you crash with what looks like a dangling pointer to a GC object, check for missing write barriers in the vicinity.</p>
+<h4 id="Forgetting_a_DRC" name="Forgetting_a_DRC">Forgetting a DRC</h4>
+<p>If you forget to put a DRC macro on a pointer to an RCObject from unmanaged memory, you can get a dangling pointer. The reference count of the object may go to zero, and the object will be placed in the ZCT. Later, the ZCT will be reaped and the object will be destroyed. But you still have a pointer to it. When you dereference the pointer later, you'll crash with a dangling pointer.</p>
+<p>When you crash with what looks like a dangling pointer to a RC object, look at who refers to the object. See if there are missing DRC macros that need to be put in.</p>
+<h4 id="Wrong_macro" name="Wrong_macro">Wrong macro</h4>
+<p>If you put DWB instead of DRCWB, you'll avoid dangling pointer issues from a missing write barrier, but you might hit dangling pointer issues from a zero reference count.</p>
+<p>If you crash with a dangling pointer to a RC object, check for DWB macros that need to be DRCWB.</p>
+<h4 id="Unmarked_unmanaged_memory" name="Unmarked_unmanaged_memory">Unmarked unmanaged memory</h4>
+<p>If you have pointers to GC objects in your unmanaged memory objects, the unmanaged objects need to be GCRoots.</p>
+<p>GCRoots are known to the GC and will be marked during a collection. Pointers must be marked for the GC to consider the objects "live"; otherwise, the objects will be considered unreachable and will be destroyed. And you'll be left with dangling pointers to these destroyed objects.</p>
+<p>If you get a crash dereferencing a pointer to a GC object, and the pointer was a member variable in an unmanaged (non-GC) object, check whether the unmanaged object is a GCRoot. If it isn't, maybe it needs to be.</p>
+<h4 id="Finding_missing_write_barriers" name="Finding_missing_write_barriers">Finding missing write barriers</h4>
+<p>There are some automatic aids in the MMgc library which can help you find missing write barriers. Look in MMgc/GC.cpp.</p>
+<pre class="eval">// before sweeping we check for missing write barriers
+bool GC::incrementalValidation = false;
+</pre>
+<pre class="eval">// check for missing write barriers at every Alloc
+bool GC::incrementalValidationPedantic = false;
+</pre>
+<p>If you suspect you have missing write barriers, turn these switches on in a DEBUG build. (The second switch will slow your application down a lot more than the first switch, so you could try the first, then the second.)</p>
+<p>When a missing write barrier is detected, MMgc will assert and drop you into the debugger, and will print out a message telling you which object contained the missing write barrier, the address of the member variable that needs it, and what object didn't get marked due to the missing write barrier.</p>
+<p>Sometimes, this missing write barrier detection will turn up a false positive. If you can't find anything wrong with the code, it might just be a false positive.</p>
+<h3 id="Debugging_Aids" name="Debugging_Aids">Debugging Aids</h3>
+<p>MMgc has several debugging aids that can be useful in your development work.</p>
+<h4 id="Underwrite.2Foverwrite_detection" name="Underwrite.2Foverwrite_detection">Underwrite/overwrite detection</h4>
+<p>MMgc can often detect when you write outside the boundaries of an object, and will throw an assert in debugging builds when this happens.</p>
+<h4 id="Leak_detection_.28for_unmanaged_memory.29" name="Leak_detection_.28for_unmanaged_memory.29">Leak detection (for unmanaged memory)</h4>
+<p>When the application is exiting, MMgc will detect memory leaks in its unmanaged memory allocators and print out the addresses and sizes of the leaked objects, and stack traces if stack traces are enabled.</p>
+<p>Stack traces are enabled via the <code>MMGC_MEMORY_PROFILER</code> feature and setting the MMGC_PROFILE environment variable to 1.  The <code>MMGC_MEMORY_PROFILER</code> feature is implied by the debugger feature and is always on in <code>DEBUG</code> builds.</p>
+<h4 id="Deleted_object_poisoning_and_write_detection" name="Deleted_object_poisoning_and_write_detection">Deleted object poisoning and write detection</h4>
+<p>MMgc will "poison" memory for deleted objects, and will detect if the poison has been written over by the application, which would indicate a write to a deleted object.</p>
+<h4 id="Stack_traces_.28walk_stack_frame_and_lookup_IPs.29" name="Stack_traces_.28walk_stack_frame_and_lookup_IPs.29">Stack traces (walk stack frame and lookup IPs)</h4>
+<p>When <code>#define MEMORY_INFO</code> is on, MMgc will capture a stack trace for every object allocation. This slows the application down but can be invaluable when debugging. Memory leaks will be displayed with their stack trace of origin.</p>
+<p>Sample stack trace:</p>
+<pre class="eval">xmlclass.cpp:391 toplevel.cpp:164 toplevel.cpp:507 interpreter.cpp:1098 interpreter.cpp:20 methodenv.cpp:47
+</pre>
+<h4 id="Allocation_traces.2C_deletion_traces_etc." name="Allocation_traces.2C_deletion_traces_etc.">Allocation traces, deletion traces etc.</h4>
+<p>If you're trying to see why memory is not getting reclaimed; GC::WhosPointingAtMe() can be called from the msvc debugger and will spit out objects that are pointing to the given memory location.</p>
+<h4 id="Memory_Profiler" name="Memory_Profiler">Memory Profiler</h4>
+<p>MMgc's memory profiler can display the state of your application's heap, showing the different classes of object in memory, along with object counts, byte counts, and percentage of total memory. It can also display stack traces for where every object was allocated. The report can be output to the console or to a file, and can be configured to be displayed pre/post sweep or via API call.</p>
+<p>The Memory Profiler use sRTTI and stack traces to get information by location and type:</p>
+<pre class="eval">class avmplus::GrowableBuffer - 24.9% - 3015 kb 514 items, avg 6007b
+    98.9% - 2983 kb - 512 items - poolobject.cpp:29 abcparser.cpp:948 …
+    0.8%  -   24 kb -   1 items - poolobject.cpp:29 abcparser.cpp:948 …
+class avmplus::String - 13.2% - 1602 kb 15675 items, avg 104b
+    65.6% - 1051 kb - 14397 items - stringobject.cpp:46 avmcore.cpp:2300 …
+    20.4% -  326 kb - 10439 items - avmcore.cpp:2300 abcparser.cpp:1077 …
+    6.5%  -  103 kb -  3311 items - avmcore.cpp:2300 abcparser.cpp:1077 …
+</pre>
+<h3 id="Other_Profiling_Tools">Other Profiling Tools</h3>
+<p>The gcstats flag on the GC object controls verbose output.  In the avmshell this is enable with the -memstats flag.  Output looks like this:</p>
+<pre>[mem] ------- gross stats -----
+[mem] private 5877 (23.0M) 100%
+[mem]    mmgc 5792 (22.6M) 98%
+[mem]            unmanaged 13 (52K) 0%
+[mem]            managed 2596 (10.1M) 44%
+[mem]            free 3081 (12.0M) 52%
+[mem]    jit 0 (0K) 0%
+[mem]    other 85 (340K) 1%
+[mem] bytes (interal fragmentation) 2527 (9.9M) 96%
+[mem]   managed bytes  2520 (9.8M) 97%
+[mem]   unmanaged bytes  7 (28K) 53%
+[mem] -------- gross stats end -----
+</pre>
+<p>Numbers are in pages (with M and K in parens).   Private is the number of private committed pages in the process, mmgc is the amount of memory GCHeap has asked for from the OS (not including JIT).   FixedMalloc vs. GC allocations are shown in the unmanaged vs. managed split.    Free is the amount of memory GCHeap is holding onto that isn't in use by the mutator.    Other is the delta between private and mmgc, it includes things like system malloc, stacks, loaded library data areas etc.   When this is enable this information is logged everytime we log something interesting.  So far something interesting means an incremental mark cycle, a sweep or a DRC reap.   They are logged like this:</p>
+<pre>[mem] sweep(21) reclaimed 910 whole pages (3640 kb) in 22.66 millis (2.4975 s)
+[mem] mark(1) 0 objects (180866 kb 205162 mb/s) in 0.88 millis (2.5195 s)
+[mem] DRC reaped 114040 objects (3563 kb) freeing 903 pages (7800 kb) in 17.41 millis (2.0015 s)
+</pre>
+<h2 id="How_MMgc_works" name="How_MMgc_works">How MMgc works</h2>
+<h3 id="Mark.2FSweep" name="Mark.2FSweep">Mark/Sweep</h3>
+<p>The MMgc garbage collector uses a mark/sweep algorithm. This is one of the most common garbage collection algorithms.</p>
+<p>Every object in the system has an associated "mark bit."</p>
+<p>A garbage collection is divided into two phases: Mark and Sweep.</p>
+<p>In the Mark phase, all of the mark bits are cleared. The garbage collector is aware of "roots", which are starting points from which all "live" application data should be reachable. The collector starts scanning objects, starting at the roots and fanning outwards. For every object it encounters, it sets the mark bit.</p>
+<p>When the Mark phase concludes, the Sweep phase begins. In the Sweep phase, every object that wasn't marked in the Mark phase is destroyed and its memory reclaimed. If an object didn't have its mark bit set during the Mark phase, that means it wasn't reachable from the roots anymore, and thus was not reachable from anywhere in the application code.</p>
+<p>The following Flash animation illustrates the working of a mark/sweep collector:</p>
+<p><strong>(temporarily not working)</strong> &lt;gflash&gt;600 300 GC.swf&lt;/gflash&gt;</p>
+<h4 id="One_pass" name="One_pass">One pass</h4>
+<p>The mark sweep algorithm described above decomposes into ClearMarks/Mark/Finalize/Sweep. In our original implementation ClearMarks/Finalize/Sweep visited every GC page and every object on that page. 3 passes! Now we have one pass where marks are cleared during sweep so clear marks isn't needed at the start. Also Finalize builds up a lists of pages that need sweeping so sweep doesn't need to visit every page. This has been shown to cut the Finalize/Sweep pause in half (which happens back to back atomically). Overall this wasn't a huge performance increase due to the fact the majority of our time is spent in the Mark phase.</p>
+<h3 id="Conservative_Collection" name="Conservative_Collection">Conservative Collection</h3>
+<p>MMgc is a conservative mark/sweep collector. Conservative means that it may not reclaim all of the memory that it is possible to reclaim; it will sometimes make a "conservative" decision and not reclaim memory that might've actually been free.</p>
+<p>Why make the collector conservative? It simplifies writing C++ application code to run on top of the collector. The alternative to conservative collection is exact collection. To do exact colllection, every C++ class and variable would need to specify exactly which variable contained a GC pointer or not. This is a lot to ask from our C++ developers, so instead, MMgc assumes that every memory location might potentially contain a GC pointer.</p>
+<p>That means that it might occasionally turn up a "false positive." A false positive is a memory location that looks like it contains a pointer to a GC object, but it's really just some JPEG image data or an integer variable or some other unrelated data. When the GC encounters a false positive, it has to assume that it MIGHT be a pointer since it doesn't have an exact description of whether that memory is a pointer or not. So, the not-really-pointed-to object will be leaked.</p>
+<p>Memory leaks don't sound like an OK thing, right? Well, memory leaks that result from programmer error tend to be bad leaks... leaks that grow over time. With such a leak, you can be pushing hundreds of megabytes of RAM real quick. With a conservative GC, the leaks tend to be random, such that they don't grow over time. The occasional random leak from a false positive can be OK. That doesn't mean we shouldn't worry about it at all, but often conservative GC suffices.</p>
+<p>It is possible that a future version of MMgc might do exact marking. This would be needed for a generational collector.</p>
+<h3 id="Deferred_Reference_Counting_.28DRC.29" name="Deferred_Reference_Counting_.28DRC.29">Deferred Reference Counting (DRC)</h3>
+<p>MMgc uses Deferred Reference Counting (DRC). DRC is a scheme for getting more immediate reclamation of objects, while still achieving high performance and getting the other benefits of garbage collection.</p>
+<h4 id="Classic_Reference_Counting" name="Classic_Reference_Counting">Classic Reference Counting</h4>
+<p>Previous versions of the Flash Player, up to Flash Player 7, used reference counting to track object lifetimes.</p>
+<pre class="eval">class Object
+{
+public:
+  Object() { refCount = 0; }
+  void AddRef() { refCount++; }
+  void Release() {
+    if (!--refCount) delete this;
+  }
+  int refCount;
+}
+</pre>
+<p>Reference counting is a kind of automatic memory management. Reference counting can track relationships between objects, and as long as AddRef and Release are called at the proper times, can reclaim memory from objects that are no longer referenced.</p>
+<h4 id="Problem:_Circular_References" name="Problem:_Circular_References">Problem: Circular References</h4>
+<p>Reference counting falls down when circular references occur in objects. If object A and object B are reference counted and refer to each other, their reference counts will both be nonzero even if no other objects in the system point to them. Locked in this embrace, they will never be destroyed.</p>
+<p><img alt="Image:Tamarin-MMGC-CircularReferences.png" class="internal" src="/@api/deki/files/387/=Tamarin-MMGC-CircularReferences.png"></p>
+<p>This is where garbage collection helps. Mark/sweep garbage collection can detect that these objects containing circular references are really not reachable from anywhere else in the application, and can reclaim them.</p>
+<p>The problem with going from reference counting to pure mark/sweep garbage collection is that a lot of time may be spent in the garbage collector. This time will pause the entire application, and give the impression of poor performance. Even with an incremental collector that doesn't have big pauses, a GC sweep only kicks in every so often, so memory usage can grow very quickly to a high peak before the GC collects unused objects.</p>
+<p>So, some kind of reference counting is still attractive to lower the amount of work the GC has to do, and to get more immediacy on memory reclamation.</p>
+<p>However, reference counting is also slow because the reference counts need to be constantly maintained. So, it's attractive to find some form of reference counting that doesn't require maintaining reference counts for every single reference.</p>
+<h4 id="Enter_Deferred_Reference_Counting" name="Enter_Deferred_Reference_Counting">Enter Deferred Reference Counting</h4>
+<p>In Deferred Reference Counting, a distinction is made between heap and stack references.</p>
+<p>Stack references to objects tend to be very temporary in nature. Stack frames come and go very quickly. So, performance can be gained by not performing reference counting on the stack references.</p>
+<p>Heap references are different since they can persist for long periods of time. So, in a DRC scheme, we continue to maintain reference counts in heap-based objects. So, reference counts are only maintained to heap-to-heap references.</p>
+<p>We basically ignore the stack and registers. They are considered stack memory.</p>
+<h4 id="Zero_Count_Table" name="Zero_Count_Table">Zero Count Table</h4>
+<p>Of course, when an object's reference count goes to zero, what happens? If the object was immediately destroyed, that could leave dangling pointers on the stack, since we didn't bump up the object's reference count when stack references were made to it.</p>
+<p>To deal with this, there is a mechanism called the Zero Count Table (ZCT).</p>
+<p>When an object reaches zero reference count, it is not immediately destroyed; instead, it is put in the ZCT.</p>
+<p>When the ZCT is full, it is "reaped" to destroy some objects.</p>
+<p>If an object is in the ZCT, it is known that there are no heap references to it. So, there can only be stack references to it. MMgc scans the stack to see if there are any stack references to ZCT objects. Any objects in the ZCT that are NOT found on the stack are deleted.</p>
+<h3 id="Incremental_Collection" name="Incremental_Collection">Incremental Collection</h3>
+<p>The Flash Player is frequently used for animations and video that must maintain a certain framerate to play properly. Applications are also getting larger and larger and consuming more memory with scripting giving way to full fledged application component models (ala Flex). Unfortunately the flash player suffers a periodic pause (at least every 60 seconds) due to garbage collection requirements that may cause unbounded pauses (the GC pause is proportional to the amount of memory the application is using). One way to avoid this unbounded pause is to break up the work the GC needs to do into "increments".</p>
+<p>In order to collect garbage we must trace all the live objects and mark them. This is the part of the GC work that takes the most time and the part that needs to be incrementalized. In order to incrementalize marking it needs to be a process that can be stopped and started. Our marking algorithm is a conservative marking algorithm that makes marking automatic, there are no Mark() methods the GC engine needs to call, marking is simply a tight loop that processes a queue. The way it works is that all GC roots are registered with the GC library and it can mark everything by traversing the roots. At the beginning all the GC roots are pushed onto the work queue. Items on the queue are conservatively marked and unmarked GC pointers discovered while processing each item are pushed on to the queue. When the queue is empty all the marking is complete. Thus the queue itself is a perfect way to maintain marking state between marking increments. This isn't an accident, the GC system was in part designed this way so that it could be easily incrementalized.</p>
+<p>The problem then becomes:</p>
+<ol>
+ <li>How to account for the fact that the mutator is changing the state of the heap between marking increments</li>
+ <li>How much time to spend marking in each increment</li>
+</ol>
+<h4 id="Mark_consistency" name="Mark_consistency">Mark consistency</h4>
+<p>A correct collector never deletes a live object (duh). In order to be correct we must account for a new or unmarked object being stored into an object we've already marked. In implementation terms this means a new or unmarked object is stored in an object that has already been processed by the marking algorithm and is no longer in the queue. Unless we do something we will delete this object and leave a dangling pointer to it in its referent.</p>
+<p>There are a couple different techniques for this, but the most popular one based on some research uses a tri-color algorithm with write barriers. Every object has 3 states: black, gray and white.</p>
+<table>
+ <tbody>
+  <tr>
+   <td><img alt="Image:Tamarin-MMGC-Gcblack.png" class="internal" src="/@api/deki/files/388/=Tamarin-MMGC-Gcblack.png"></td>
+   <td><strong>Black</strong> means the object has been marked and is no longer in the work queue</td>
+  </tr>
+  <tr>
+   <td><img alt="Image:Tamarin-MMGC-Gcgray.png" class="internal" src="/@api/deki/files/389/=Tamarin-MMGC-Gcgray.png"></td>
+   <td><strong>Gray</strong> means the object is in the work queue but not yet marked</td>
+  </tr>
+  <tr>
+   <td><img alt="Image:Tamarin-MMGC-Gcwhite.png" class="internal" src="/@api/deki/files/390/=Tamarin-MMGC-Gcwhite.png"></td>
+   <td><strong>White</strong> means the object isn't in the work queue and hasn't been marked</td>
+  </tr>
+ </tbody>
+</table>
+<p>The first increment will push all the roots on to the queue, thus after this step all the roots are gray and everything else is white. As the queue is processed all live objects go through two steps, from gray to black and white to gray. Whenever a pointer to a white object is written to a black object we have to intercept that write and remember to go back and put the white object in the work queue, that's what a write barrier does. The other scenarios we don't care about:</p>
+<ol>
+ <li>Gray written to Black/Gray/White - since the object is gray its on the queue and will be marked before we sweep</li>
+ <li>White written to Gray - the white object will be marked as reachable when the gray object is marked</li>
+ <li>White written to White - the referant will either eventually become gray if its reachable or not in which case both objects will get marked</li>
+ <li>Black written to Black/Gray/White - its black, its already been marked</li>
+</ol>
+<p>So a write barrier needs to be inserted anywhere we could possibly store a pointer to a white object into a black object. In practice this means:</p>
+<ol>
+ <li>Setting a property on an object to another object (creating an arch in the reachabilty graph)</li>
+ <li>Native code that writes a pointer to a GC object into another GC object</li>
+ <li>Writing an object to a GC root</li>
+</ol>
+<p>1 and 2 are pretty well isolated. 1 is the SetSlot method in the AVM- and some assembly code in the AVM+. #2 can be found by examining all non-const methods of GC objects (and making all fields private, something the AVM+ code base does already). #3 is a little harder because there are a good # of GC roots. This is an unfortunate artifact of the existing code base, the AVM+ is relatively clean and its reachability graph consists of basically 2 GC roots (the AvmCore and URLStreams) but the AVM- has a bunch (currently includes SecurityCallbackData, MovieClipLoader, CameraInstance, FAPPacket, MicrophoneInstance, CSoundChannel, URLRequest, ResponceObject, URLStream and UrlStreamSecurity). In order to make things easier we could avoid WB's for #3 by marking the root set twice. The first increment pushes the root set on to the queue and when the queue is empty we process the root set again, this second root set processing should very fast since the majority of objects should already be marked and the root set is usually small (marked objects are ignored and not pushed on to the work queue). This would mean that developers would only have to take into account #2 really when writing new code.</p>
+<h4 id="Illustration_of_Write_Barriers" name="Illustration_of_Write_Barriers">Illustration of Write Barriers</h4>
+<p>The following Flash animation demonstrates how a write barrier works.</p>
+<p><strong>(temporarily not working)</strong> &lt;gflash&gt;600 300 GC2.swf&lt;/gflash&gt;</p>
+<h4 id="Detecting_missing_Write_Barriers" name="Detecting_missing_Write_Barriers">Detecting missing Write Barriers</h4>
+<p>To make sure that we injected write barriers into all the right places we plan on implementing a debug mode that will search for missing write barriers. The signature of a missing write barrier is a black to white pointer that exists right before we sweep, after the sweep the pointer will point to deleted memory. Also we can check throughout the incremental mark by making sure any black -&gt; white pointers have been recorded by the write barrier. Furthermore we can run this check even more frequently than every mark increment, for instance every time our GC memory allocators request a new block from our primary allocator (the way our extremely helpful greedy collection mode works). This would of course be slow but with good code coverage should be capable of finding all missing write barriers. Only checking for missing write barriers before every sweep will probably be a small enough performance impact to enable it in DEBUG builds. The more frequent ones will have to be turned on manually.</p>
+<h4 id="Write_Barrier_Implementation" name="Write_Barrier_Implementation">Write Barrier Implementation</h4>
+<p>There are a couple options for implementing write barriers. At the finest level of granularity everytime a a white object is written to a black object we push the white object onto the work queue (thus making it grey). Another solution is to put the black object on the work queue, thus if multiple writes occur to the black object we only needed one push on the the queue. This could be a significant speedup if the black object was a large array getting populated with a bunch of new objects. On the other hand if the black is a huge array and only a couple slots had new objects written to them we are wasting time by marking the whole thing.</p>
+<p>A popular solution to this is what's called card marking. Here you divide memory into "cards" and when a white object is written to a black object you mark the card containing the slot the pointer to the white object was written to. After all marking is done you circle back and remark the black portion of any card that was flagged by the write barrier. There are two techniques to optimize this process. One is to save all the addresses of all pages that had cards marked (so you don't have to bring every page into memory to check its hand, so to speak). Another option is to check every page while doing the normal marking and it any of its cards where flagged handle them immediately since your already reading/writing from that page. The result will be at the end of the mark cycle fewer things need to be marked. These two optimizations can be combined.</p>
+<p>Increment Time Slice</p>
+<p>Before diving into the this it should be acknowledged that another way to go about this is to use a background thread and not worry about incremental marking. This approach was not chosen for the following reasons:</p>
+<ol>
+ <li>Coordinating the marking thread and the main thread will require locking and may suffer due to lock overhead/contention</li>
+ <li>Supporting Mac classic's cooperative threads makes this approach harder</li>
+ <li>Flash's frame based architecture gives us a very natural place to do this work</li>
+ <li>We have better control over how much time is spent marking without threads</li>
+</ol>
+<p>When SMP systems become more prevalent it may be worth investigating this approach because true parallelism may afford better performance.</p>
+<p>Another point to consider is whether marking should always be on or should be turned on and off at some point based on memory allocation patterns. I think we want the later because:</p>
+<ol>
+ <li>All WB's take the fast path when we're not marking, so the more time we spend out of the marking phase the better performance will be overall</li>
+ <li>Applications that have low or steady state memory requirements shouldn't suffer any marking penalty</li>
+</ol>
+<p>The first thing to determine is when we decide to start marking. Currently we make the decision on when to do a collection based on how much memory has been allocated since the last collection, if its over a certain fraction of the the total heap size we do a collection and if its not we expand. Similarly we can base the decision on when to start marking when we've consumed a certain portion of the heap since the last collection, call this the ISD (incremental start divisor). So if we go with an ISD of 4 we start marking when a quarter of the heap is left and an ISD of 1 means we're always marking.</p>
+<p>Now that we know when we start marking there are two conflicting goals to achieve in selecting the marking time slice:</p>
+<ol>
+ <li>Maintain the frame rate</li>
+ <li>Make sure the collector gets to the sweep stage soon enough to avoid too much heap expansion</li>
+</ol>
+<p>If we don't maintain the frame rate the movie will appear to pause and if we don't mark fast enough the mutator could get ahread of the collector and allocate memory so fast that the collection never finishes and memory grows unbounded. The ideal solution will result in only one mark incremental per frame unless the mutator is allocating memory so fast we need to mark more aggressively to get to the sweep. So the frequency of the incremental marking will be based on two factors: the rate at which we can trace memory and the rate at which the mutator is requesting more memory. Study of real world apps will be used to determine how best to factor these to rates together.</p>
+<h3 id="GCHeap" name="GCHeap">GCHeap</h3>
+<p>The GC library has a tiered memory allocation strategy, consisting of 3 parts:</p>
+<ol>
+ <li>A page-granular memory allocator called the <code>GCHeap</code></li>
+ <li>A set of fixed size allocators for sizes up to 2K</li>
+ <li>A large allocator for items over 2K</li>
+</ol>
+<p>When you want to allocate something we figure out what size class it's in and then ask that allocator for the memory. Each fixed size allocator maintains a doubly linked list of 4K blocks that it obtains from the <code>GCHeap</code>. These 4K blocks are aligned on 4K boundaries so we can easily allocate everything on 8-byte boundaries (a necessary consequence of the 32-bit atom design-- 3 type bits and 29 pointer bits). Also we store the <code>GCAlloc::GCBlock</code> structure at the beginning of the 4K block so each allocation doesn't need a pointer to its block (just zero the lower 12 bits of any GC-allocated thing to get the <code>GCBlock</code> pointer). The <code>GCBlock</code> contains bitmaps for marking and indicating if an item has a destructor that needs to be called (a <code>GCFinalizedObject</code> base class exists defining a virtual destructor for GC items that need it). Deleted items are stored in a per-block free list which is used if there are any otherwise we get the next free item at the end. If we don't have anything free and we reach the end, we get another block from the <code>GCHeap</code>.</p>
+<h4 id="GCHeap.27s_reserve.2Fcommit_strategy" name="GCHeap.27s_reserve.2Fcommit_strategy"><code>GCHeap</code>'s reserve/commit strategy</h4>
+<p><code>GCHeap</code> reserves 16MB of address space per heap region. The goal of reserving so much address space is so that subsequent expansions of the heap are able to obtain contiguous memory blocks. If we can keep the heap contiguous, that reduces fragmentation and the possibility of many small "Balkanized" heap regions.</p>
+<p>Reserving 16MB of space per heap region should not be a big deal in a 2GB address space... it would take a lot of Player instances running simultaneously to exhaust the 2GB address space of the browser process. By allocating contiguous blocks of address space and managing them ourselves, fragmentation of the IE heap may actually be decreased.</p>
+<p>On Windows, this uses the <code>VirtualAlloc</code> API to obtain memory. On Mac OS X and Unix, we use <code>mmap</code>. <code>VirtualAlloc</code> and <code>mmap</code> can reserve memory and/or commit memory. Reserved memory is just virtual address space. It consumes the address space of the process but isn't really allocated yet; there are no pages committed to it yet. Memory allocation really occurs when reserved pages are committed. Our strategy in <code>GCHeap</code> is to reserve a fairly large chunk of address space, and then commit pages from it as needed. By doing this, we're more likely to get contiguous regions in memory for our heap.</p>
+<p><code>GCHeap</code> serves up 4K blocks to the size class allocators or groups of contiguous 4K blocks for requests from the large allocator. It maintains a free list and blocks are coalesced with their neighbors when freed. If we use up the 16MB reserved chunk, we reserve another one, contiguously with the previous if possible.</p>
+<h4 id="When_memory_mapping_is_not_available" name="When_memory_mapping_is_not_available">When memory mapping is not available</h4>
+<p><code>GCHeap</code> can fall back on a malloc/free approach for obtaining memory if a memory mapping API like <code>VirtualAlloc</code> or <code>mmap</code> is not available. In this case, <code>GCHeap</code> will allocate exactly as much memory as is requested when the heap is expanded and not try to reserve additional memory pages to expand into. <code>GCHeap</code> won't attempt to allocate contiguous regions in this case.</p>
+<p>We currently use <code>VirtualAlloc</code> for Windows (supported on all flavors of Windows back to 95), <code>mmap</code> on Mach-O and Linux. On Classic and Carbon, we do not currently use a memory mapping strategy... these implementations are calling <code>MPAllocAligned</code>, which can allocate 4096-byte aligned memory. We could potentially bind to the Mach-O Framework dynamically from Carbon, if the user's system is Mac OS X, and call <code>mmap/munmap</code>.</p>

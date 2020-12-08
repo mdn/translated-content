@@ -1,0 +1,108 @@
+---
+title: XUL_教程/更多菜单特性
+slug: Mozilla/Tech/XUL/Tutorial/More_Menu_Features
+tags:
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/More_Menu_Features
+---
+<p> </p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Simple_Menu_Bars" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:Popup_Menus">下一页  »</a></p>
+</div><p></p>
+<p>在本节中，我们来学习如何创建子菜单和check菜单。</p>
+<h3 id=".E5.88.9B.E5.BB.BA.E5.AD.90.E8.8F.9C.E5.8D.95" name=".E5.88.9B.E5.BB.BA.E5.AD.90.E8.8F.9C.E5.8D.95">创建子菜单</h3>
+<p>使用已存在元素可以在其它菜单（递归菜单）中创建子菜单。记住可以在<code>menupopup</code>中放置任意元素。我们已经学过在<code>menuseparator</code>s中放置<code>menuitem</code>s。但是，还可以通过在<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code>元素中简单的放置<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code></code>元素来创建子菜单。这样也可以运行，因为菜单元素即使不直接放在菜单栏里面它也是有效的。下面的示例在　文件　菜单中创建了一个简单的子菜单：</p>
+<p><span id="Example_1"><a id="Example_1"></a><strong>Example 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advmenu_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advmenu_1.xul">View</a></p>
+<div class="float-right">
+ <img alt="Image:menubar-ex3.png"></div>
+<pre>&lt;toolbox flex="1"&gt;
+  &lt;menubar id="sample-menubar"&gt;
+    &lt;menu id="file-menu" label="File"&gt;
+      &lt;menupopup id="file-popup"&gt;
+        &lt;menu id="new-menu" label="New"&gt;
+          &lt;menupopup id="new-popup"&gt;
+            &lt;menuitem label="Window"/&gt;
+            &lt;menuitem label="Message"/&gt;
+          &lt;/menupopup&gt;
+        &lt;/menu&gt;
+        &lt;menuitem label="Open"/&gt;
+        &lt;menuitem label="Save"/&gt;
+        &lt;menuseparator/&gt;
+        &lt;menuitem label="Exit"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+  &lt;/menubar&gt;
+&lt;/toolbox&gt;
+</pre>
+<div class="highlight">
+ <h3 id=".E5.9C.A8.E6.88.91.E4.BB.AC.E7.9A.84.E3.80.80.E6.9F.A5.E6.89.BE.E6.96.87.E4.BB.B6.E3.80.80.E7.A4.BA.E4.BE.8B.E4.B8.AD.E5.8A.A0.E5.85.A5.E8.8F.9C.E5.8D.95" name=".E5.9C.A8.E6.88.91.E4.BB.AC.E7.9A.84.E3.80.80.E6.9F.A5.E6.89.BE.E6.96.87.E4.BB.B6.E3.80.80.E7.A4.BA.E4.BE.8B.E4.B8.AD.E5.8A.A0.E5.85.A5.E8.8F.9C.E5.8D.95">在我们的　查找文件　示例中加入菜单</h3>
+ <p>让我们在查找文件对话框中加入菜单。我们仅加入少量简单的命令至　文件　菜单和　编辑　菜单中。这与上面示例类似。</p>
+ <pre class="eval">&lt;toolbox&gt;
+
+ <span class="highlightred">&lt;menubar id="findfiles-menubar"&gt;
+  &lt;menu id="file-menu" label="File" accesskey="f"&gt;
+    &lt;menupopup id="file-popup"&gt;
+      &lt;menuitem label="Open Search..." accesskey="o"/&gt;
+      &lt;menuitem label="Save Search..." accesskey="s"/&gt;
+      &lt;menuseparator/&gt;
+      &lt;menuitem label="Close" accesskey="c"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menu&gt;
+  &lt;menu id="edit-menu" label="Edit" accesskey="e"&gt;
+    &lt;menupopup id="edit-popup"&gt;
+      &lt;menuitem label="Cut" accesskey="t"/&gt;
+      &lt;menuitem label="Copy" accesskey="c"/&gt;
+      &lt;menuitem label="Paste" accesskey="p" disabled="true"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menu&gt;
+ &lt;/menubar&gt;</span>
+
+&lt;toolbar id="findfiles-toolbar&gt;
+</pre>
+ <div class="float-right">
+  <img alt="Image:menubar1.png"></div>
+ <p>在此我们已经加入了两个菜单以及一些不同的菜单命令。注意菜单栏是如何放置在toolbox内的。在　打开搜索　和　保存搜索　后面的三个点通常提示用户本命令操作会打开一个对话框。每个菜单和菜单项已经加入了访问快捷键。在图中可以看到菜单标签内的字母已经被打上了下划线。而　粘贴　命令在此被禁止。我们假定没有什么可以用来粘贴。</p>
+ <p><span id="Our_Find_files_example_so_far"><a id="Our_Find_files_example_so_far"></a><strong>Our Find files example so far</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-advmenu.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-advmenu.xul">View</a></p>
+</div>
+<h3 id=".E7.BB.99.E8.8F.9C.E5.8D.95.E5.8A.A0.E5.85.A5.E5.8B.BE.E9.80.89.28check.29.E6.A0.87.E8.AE.B0" name=".E7.BB.99.E8.8F.9C.E5.8D.95.E5.8A.A0.E5.85.A5.E5.8B.BE.E9.80.89.28check.29.E6.A0.87.E8.AE.B0">给菜单加入勾选(check)标记</h3>
+<p>许多应用程序的菜单项都有check标记。例如，许可特性在命令里面会有一个check，而禁止特征则没有check在里面。当用户选择菜单后，check状态就进行了切换。你也可以在菜单项上创建radio按钮。</p>
+<p>check创建类似于<code><a href="/zh-CN/docs/Mozilla/Tech/XUL/checkbox" title="checkbox">checkbox</a></code>元素和<code><a href="/zh-CN/docs/Mozilla/Tech/XUL/radio" title="radio">radio</a></code>元素。包括了两个属性的使用：<code><a href="cn/XUL/Attribute/button.type">type</a></code>标识check的类型，而<code><a href="cn/XUL/Attribute/menuitem.name">name</a></code>标识同在一起的组命令。下面的示例创建一个带有check项的菜单。</p>
+<p><span id="Example_2"><a id="Example_2"></a><strong>Example 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advmenu_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advmenu_2.xul">View</a></p>
+<pre>&lt;toolbox&gt;
+  &lt;menubar id="options-menubar"&gt;
+    &lt;menu id="options_menu" label="Options"&gt;
+      &lt;menupopup&gt;
+        &lt;menuitem id="backups" label="Make Backups" type="checkbox"/&gt;
+        &lt;menuitem id="backups" label="Email Administrator" type="checkbox" checked="true"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+  &lt;/menubar&gt;
+&lt;/toolbox&gt;
+</pre>
+<p>加入的<code><a href="cn/XUL/Attribute/button.type">type</a></code>属性用来标识菜单项是可以check的。通过设置<code>checkbox</code>的值，通过选择菜单项，使它被勾选或取消勾选。</p>
+<h4 id=".E5.B8.A6.E6.9C.89radio.E6.A0.87.E8.AE.B0.E7.9A.84.E8.8F.9C.E5.8D.95" name=".E5.B8.A6.E6.9C.89radio.E6.A0.87.E8.AE.B0.E7.9A.84.E8.8F.9C.E5.8D.95">带有radio标记的菜单</h4>
+<p>除标准check菜单外，还可以通过设置<code><a href="cn/XUL/Attribute/button.type">type</a></code>的值为<code>radio</code>来创建radio风格的check型菜单。radio风格的check菜单用于在一组目录项中仅选择一项的时候。例如在一个菜单中每次只能选取一个生效的情况。当选取另外一项时，前面的选择项就会自动取消选择。</p>
+<p>为了将一组菜单项放置在一起，需要将每一项的<code><a href="cn/XUL/Attribute/menuitem.name">name</a></code>属性设置为一样，就会形成一个菜单组。示例如下：</p>
+<p><span id="Example_3"><a id="Example_3"></a><strong>Example 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advmenu_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advmenu_3.xul">View</a></p>
+<pre>&lt;toolbox&gt;
+  &lt;menubar id="planets-menubar"&gt;
+    &lt;menu id="planet-menu" label="Planet"&gt;
+      &lt;menupopup&gt;
+        &lt;menuitem id="jupiter" label="Jupiter" type="radio" name="ringed"/&gt;
+        &lt;menuitem id="saturn" label="Saturn" type="radio" name="ringed" checked="true"/&gt;
+        &lt;menuitem id="uranus" label="Uranus" type="radio" name="ringed"/&gt;
+        &lt;menuseparator/&gt;
+        &lt;menuitem id="earth" label="Earth" type="radio" name="inhabited" checked="true"/&gt;
+        &lt;menuitem id="moon" label="Moon" type="radio" name="inhabited"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+  &lt;/menubar&gt;
+&lt;/toolbox&gt;
+</pre>
+<p>试一下这个示例，可以发现前三个菜单项只有一个可以被勾选。它们被聚为一组，因为他们的name属性值相同。最后一个菜单项－－Earth，一个radio按钮，由于拥有不同的name属性值，因此不是这个菜单组的一部分。</p>
+<p>当然，聚集在一组中的项只能放置在相同的菜单中。虽然将它们相邻的放在一起比分开放要直观得多，但在菜单中并没有必要将它们放在一起。</p>
+<p>下一回，我们将学习如何<a href="cn/XUL_%e6%95%99%e7%a8%8b/%e5%bc%b9%e5%87%ba%e8%8f%9c%e5%8d%95">创建弹出菜单</a>。</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Simple_Menu_Bars" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:Popup_Menus">下一页  »</a></p>
+</div><p></p>
+<p></p>

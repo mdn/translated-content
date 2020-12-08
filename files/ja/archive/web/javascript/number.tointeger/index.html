@@ -1,0 +1,52 @@
+---
+title: Number.toInteger()
+slug: Archive/Web/JavaScript/Number.toInteger
+tags:
+  - JavaScript
+  - Method
+  - Number
+  - Obsolete
+  - メソッド
+  - 廃止
+translation_of: Archive/Web/JavaScript/Number.toInteger
+---
+<div>{{JSRef}} {{obsolete_header}}</div>
+
+<p><strong><code>Number.toInteger()</code></strong> メソッドは、渡された値を評価して整数に変換するために使用されていましたが、その実装は削除されました。</p>
+
+<p>変換後の値が {{jsxref("NaN")}}, {{jsxref("null")}}, {{jsxref("undefined")}} の場合、 0 が返されます。変換後の値が <code>false</code> の場合は 0、 <code>true</code>の場合は 1 が返されます。</p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="syntaxbox">Number.toInteger(<var>number</var>)</pre>
+
+<h3 id="Parameters" name="Parameters">引数</h3>
+
+<dl>
+ <dt><code>number</code></dt>
+ <dd>整数に変換しようとする値</dd>
+</dl>
+
+<h2 id="Examples" name="Examples">例</h2>
+
+<h3 id="Using_toInteger" name="Using_toInteger">toInteger の使用</h3>
+
+<pre class="brush: js">Number.toInteger(0.1);     // 0
+Number.toInteger(1);       // 1
+Number.toInteger(Math.PI); // 3
+Number.toInteger(null);    // 0
+</pre>
+
+<h2 id="Specifications" name="Specifications">仕様書</h2>
+
+<p>どの標準にも含まれていません。 <code>Number.toInteger()</code> は ECMAScript 第６版草稿仕様でサポートされていましたが、2013年8月23日にに草稿 Rev 17で廃止されました。</p>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+
+<p>どこでも対応されていません。歴史的には Firefox のバージョン 16 から 31 までが対応していました。</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>{{jsxref("Number")}}</li>
+</ul>

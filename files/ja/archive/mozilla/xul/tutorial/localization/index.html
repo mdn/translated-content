@@ -1,0 +1,337 @@
+---
+title: ローカライズ (地域化)
+slug: Archive/Mozilla/XUL/Tutorial/Localization
+tags:
+  - Internationalization
+  - Localization
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Localization
+---
+<p>
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Creating_a_Skin" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Property_Files">次のページ  »</a></p>
+</div>
+<p>XUL と XML には、実体 (<span style="color: green;">entity</span>)という仕組みがあり、これを利用すればアプリケーションの<span style="border-bottom: 1px dashed green;" title="localization">ローカライズ (地域化)</span>を簡単に行うことができます。
+</p>
+<h3 id=".E5.AE.9F.E4.BD.93.E5.AE.A3.E8.A8.80.E3.81.A8.E5.AE.9F.E4.BD.93.E5.8F.82.E7.85.A7" name=".E5.AE.9F.E4.BD.93.E5.AE.A3.E8.A8.80.E3.81.A8.E5.AE.9F.E4.BD.93.E5.8F.82.E7.85.A7"> 実体宣言と実体参照 </h3>
+<p>一般的に、多くのアプリケーションでは、インターフェイス中の文字列を他の言語に翻訳した版を、可能な限り簡単に構築できるような工夫がされています。
+このためには、通常は文字列のテーブルを対応する言語ごとに作成します。
+つまり、テキストを直接アプリケーションにハードコーディングする代わりに、
+文字列テーブルを参照するために使用する短いテキストだけを置くようにします。 <a href="ja/XML">XML</a> の提供する仕組みである<span style="border-bottom: 1px dashed green;" title="entity">実体</span>も、同様の目的に利用できます。
+</p><p><a href="ja/HTML">HTML</a> の利用経験があれば、実体については既にお馴染みのはずです。
+例えば、HTML の中に不等号の記号 ('&lt;' と '&gt;') を記述するために使用するコードである <code>&amp;lt;</code> と <code>&amp;gt;</code> は実体を参照する例になります。
+XML には、独自の実体を宣言するための構文があり、これを利用してテキストの列を実体として宣言できます。
+それらは実体参照を使用して参照され、宣言した値と置換されることになります。
+実体参照は、テキストが置ける場所ならば、属性値も含めてどこにでも置くことが可能です。
+以下は、ボタンに対して実体参照を使用する例になります。
+</p>
+<pre>&lt;button label="&amp;findLabel;"/&gt;
+</pre>
+<p>実体参照 <code>&amp;findLabel;</code> に対応する実体の値が、ラベルに表示されるテキストになります。
+ローカライズをするためには、サポートする各言語ごとに、その言語によって実体を宣言したファイルを作成します。
+例えば、英語の場合は、<code>&amp;findLabel;</code>に対応する実体は、テキスト "Find" が値になるように宣言します。
+</p>
+<h3 id="DTD_.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB" name="DTD_.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB"> DTD ファイル </h3>
+<p>実体は、DTD (<i>Document Type Declaration</i>) ファイルで宣言します。
+通常、DTD ファイルは、特定 (同じ種類) の XML ファイルに対して構文と意味内容を宣言するために使用されますが、
+実体を宣言するためにも利用できます。
+Mozilla の chrome システムでは、DTD ファイルは、&lt;tt&gt;locales&lt;/tt&gt; サブディレクトリに置かれています。
+なお、通常は、1 つの XUL ファイルに対して 1 つの DTD ファイル (拡張子が &lt;tt&gt;.dtd&lt;/tt&gt; のファイル) を作成します。
+</p><p>chrome ディレクトリの中を探していくと、利用している言語に対応したアーカイブが見つかるはずです (英語の場合は、デフォルトでは <code>en-US.jar</code> です)。
+ここには、例えば、 米国英語 (en-US) とフランス語 (fr) といったように、複数の言語に対応するために、複数のロケールファイルが置かれていることもあります。
+これらのアーカイブの中には、それぞれのウインドウのためのローカライズされたテキストが入っています。
+また、このアーカイブの構造は、<a href="ja/XUL_Tutorial/Creating_a_Skin">スキン</a>で使用しているディレクトリ構造と非常に良く似たものになります。
+</p><p>このアーカイブの中は、実体宣言を記述した DTD ファイルを置きます。
+また、DTD ファイルは、各 XUL ファイルに対して 1 つずつ作成し、ファイル名は、通常 &lt;tt&gt;.dtd&lt;/tt&gt; 拡張子を除いて同じにします。
+したがって、ファイル検索ダイアログの場合は、&lt;tt&gt;findfile.dtd&lt;/tt&gt; という名前のファイルが必要になります。
+</p><p>なお、インストールされていない chrome ファイルに対してなら、
+DTD ファイルは単に XUL ファイルと同じディレクトリに置いておいても構いません。
+</p>
+<div class="note"><b>注意:</b> 非 ASCII 文字を含む DTD ファイルは、UTF-8 でエンコードしなければなりません。言い換えると (<a class="external" href="http://www.mozdev.org/notes/l10n/unicode/editors-en.html">BOM なしの</a>) UTF-8 で保存する必要があります。 詳細は、<a class="external" href="http://www.mozilla-japan.org/projects/l10n/mlp_chrome.html#text">Mozilla の言語パック</a> を参照してください。</div>
+<p>XUL に対して DTD ファイルを作成した場合には、 XUL ファイルにその DTD ファイルを利用するよう指示する記述を加える必要があります。
+このために、以下の形式の行を XUL ファイルの先頭近くに加えてください。
+これを忘れた場合、実体の参照ができないためエラーが発生します。
+</p>
+<pre>&lt;!DOCTYPE window SYSTEM "chrome://findfile/locale/findfile.dtd"&gt;
+</pre>
+<p>この行によって、この XUL ファイルでは、URL で指定したファイルを DTD として利用するように指示します。
+この場合は、&lt;tt&gt;findfile.dtd&lt;/tt&gt; を DTD ファイルとして利用することを宣言しています。
+通常、この行は <code><code><a href="/ja/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> 要素の直前に置くことになります。
+</p>
+<h3 id=".E5.AE.9F.E4.BD.93.E5.AE.A3.E8.A8.80" name=".E5.AE.9F.E4.BD.93.E5.AE.A3.E8.A8.80"> 実体宣言 </h3>
+<p>実体は、以下に示すような簡単な構文で宣言します。
+</p>
+<pre>&lt;!ENTITY findLabel "Find"&gt;
+</pre>
+<p>この例では、<code>findLabel</code> という名前の実体を、「Find」という値で宣言しています。
+これによって、XUL ファイル中ならばどこであっても「<code>&amp;findLabel;</code>」というテキストが現れた場合は、「Find」というテキストに置き換えられるようになります。
+実体宣言の場合は (空要素で行うように) 最後にスラッシュを置かないことに注意してください。
+別の言語用の DTD ファイルでは、下記のように、その言語のテキストを代わりに置くことになります。
+</p>
+<pre class="eval"><b>日本語用:</b>
+&lt;!ENTITY findLabel "検索"&gt;
+</pre>
+<p>例えば、以下のテキストは...
+</p>
+<pre>&lt;description value="&amp;findLabel;"/&gt;
+</pre>
+<p>以下のように変換されます。
+</p>
+<pre class="eval"><b>英語版:</b>
+&lt;description value="Find"/&gt;
+
+<b>日本語版:</b>
+&lt;description value="検索"/&gt;
+</pre>
+<p>上記のように、ローカライズをするためには、インターフェイスに含まれている各ラベルやテキストに対して実体を宣言していくことになります。
+このため XUL ファイルには、直接表示されるテキストは、一切含めるべきではありません。
+</p><p>また、実体は、テキストラベルに加えて、言語環境が変わると異なる可能性がある任意の値に対して使用しておく必要があります。
+具体的には、<a href="ja/XUL_Tutorial/Keyboard_Shortcuts">アクセスキーやキーボードショートカット</a>などが考えられます。
+</p>
+<pre class="eval"> <b>XUL</b>
+ &lt;menuitem label="&amp;undo.label;" accesskey="&amp;undo.key;"/&gt;
+ <b>DTD</b>
+ &lt;!ENTITY undo.label "Undo"&gt;
+ &lt;!ENTITY undo.key "u"&gt;
+</pre>
+<p>上記の例では、Undo メニュー項目のラベルとアクセスキーの 2 つに実体が使用されています。
+</p>
+<h3 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.82.92.E5.A4.89.E6.9B.B4.E3.81.99.E3.82.8B" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.82.92.E5.A4.89.E6.9B.B4.E3.81.99.E3.82.8B"> ファイル検索ダイアログを変更する </h3>
+<div class="highlight">
+<p>それでは、ここまでの内容をまとめて適用する方法を確認するために、
+ファイル検索ダイアログを変更してみることにします。
+このために、すべてのテキスト文字列を DTD を使用するように変更します。
+変更後の XUL ファイル全体を下記に示します。
+今回の変更部分は赤い文字で示されています。
+</p>
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+
+&lt;?xml-stylesheet href="<a class=" external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;
+&lt;?xml-stylesheet href="findfile.css" type="text/css"?&gt;
+
+<span class="highlightred">&lt;!DOCTYPE window SYSTEM "<a class=" external" rel="freelink">chrome://findfile/locale/findfile.dtd</a>"&gt;</span>
+
+&lt;window
+  id="findfile-window"
+  title="<span class="highlightred">&amp;findWindow.title;</span>"
+  persist="screenX screenY width height"
+  orient="horizontal"
+  onload="initSearchList()"
+  xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+
+&lt;script src="findfile.js"/&gt;
+
+&lt;popupset&gt;
+   &lt;popup id="editpopup"&gt;
+     &lt;menuitem label="Cut" accesskey="<span class="highlightred">&amp;cutCmd.accesskey;</span>"/&gt;
+     &lt;menuitem label="Copy" accesskey="<span class="highlightred">&amp;copyCmd.accesskey;</span>"/&gt;
+     &lt;menuitem label="Paste" accesskey="<span class="highlightred">&amp;pasteCmd.accesskey;</span>" disabled="true"/&gt;
+   &lt;/popup&gt;
+&lt;/popupset&gt;
+
+&lt;keyset&gt;
+   &lt;key id="cut_cmd" modifiers="accel" key="<span class="highlightred">&amp;cutCmd.commandkey;</span>"/&gt;
+   &lt;key id="copy_cmd" modifiers="accel" key="<span class="highlightred">&amp;copyCmd.commandkey;</span>"/&gt;
+   &lt;key id="paste_cmd" modifiers="accel" key="<span class="highlightred">&amp;pasteCmd.commandkey;</span>"/&gt;
+   &lt;key id="close_cmd" keycode="VK_ESCAPE" oncommand="window.close();"/&gt;
+&lt;/keyset&gt;
+
+&lt;vbox flex="1"&gt;
+
+ &lt;toolbox&gt;
+
+  &lt;menubar id="findfiles-menubar"&gt;
+    &lt;menu id="file-menu" label="<span class="highlightred">&amp;fileMenu.label;</span>"
+        accesskey="<span class="highlightred">&amp;fileMenu.accesskey;</span>"&gt;
+      &lt;menupopup id="file-popup"&gt;
+        &lt;menuitem label="<span class="highlightred">&amp;openCmd.label;</span>"
+                  accesskey="<span class="highlightred">&amp;openCmd.accesskey;</span>"/&gt;
+        &lt;menuitem label="<span class="highlightred">&amp;saveCmd.label;</span>"
+                  accesskey="<span class="highlightred">&amp;saveCmd.accesskey;</span>"/&gt;
+        &lt;menuseparator/&gt;
+        &lt;menuitem label="<span class="highlightred">&amp;closeCmd.label;</span>"
+                  accesskey="<span class="highlightred">&amp;closeCmd.accesskey;" key="close_cmd" oncommand="window.close();</span>"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+    &lt;menu id="edit-menu" label="<span class="highlightred">&amp;editMenu.label;</span>"
+          accesskey="<span class="highlightred">&amp;editMenu.accesskey;</span>"&gt;
+      &lt;menupopup id="edit-popup"&gt;
+        &lt;menuitem label="<span class="highlightred">&amp;cutCmd.label;</span>"
+                  accesskey="<span class="highlightred">&amp;cutCmd.accesskey;</span>" key="cut_cmd"/&gt;
+        &lt;menuitem label="<span class="highlightred">&amp;copyCmd.label;</span>"
+                  accesskey="<span class="highlightred">&amp;copyCmd.accesskey;</span>" key="copy_cmd"/&gt;
+        &lt;menuitem label="<span class="highlightred">&amp;pasteCmd.label;</span>"
+                  accesskey="<span class="highlightred">&amp;pasteCmd.accesskey;</span>" key="paste_cmd" disabled="true"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+  &lt;/menubar&gt;
+
+  &lt;toolbar id="findfiles-toolbar"&gt;
+    &lt;toolbarbutton id="opensearch" label="<span class="highlightred">&amp;openCmdToolbar.label;</span>"/&gt;
+    &lt;toolbarbutton id="savesearch" label="<span class="highlightred">&amp;saveCmdToolbar.label;</span>"/&gt;
+  &lt;/toolbar&gt;
+ &lt;/toolbox&gt;
+
+ &lt;tabbox&gt;
+  &lt;tabs&gt;
+    &lt;tab label="<span class="highlightred">&amp;searchTab;</span>" selected="true"/&gt;
+    &lt;tab label="<span class="highlightred">&amp;optionsTab;</span>"/&gt;
+  &lt;/tabs&gt;
+
+  &lt;tabpanels&gt;
+
+   &lt;tabpanel id="searchpanel" orient="vertical" context="editpopup"&gt;
+
+   &lt;description&gt;
+     <span class="highlightred">&amp;findDescription;</span>
+   &lt;/description&gt;
+
+   &lt;spacer class="titlespace"/&gt;
+
+   &lt;groupbox orient="horizontal"&gt;
+     &lt;caption label="<span class="highlightred">&amp;findCriteria;</span>"/&gt;
+
+     &lt;menulist id="searchtype"&gt;
+       &lt;menupopup&gt;
+         &lt;menuitem label="<span class="highlightred">&amp;type.name;</span>"/&gt;
+         &lt;menuitem label="<span class="highlightred">&amp;type.size;</span>"/&gt;
+         &lt;menuitem label="<span class="highlightred">&amp;type.date;</span>"/&gt;
+       &lt;/menupopup&gt;
+     &lt;/menulist&gt;
+   &lt;spacer class="springspace"/&gt;
+     &lt;menulist id="searchmode"&gt;
+       &lt;menupopup&gt;
+         &lt;menuitem label="<span class="highlightred">&amp;mode.is;</span>"/&gt;
+         &lt;menuitem label="<span class="highlightred">&amp;mode.isnot;</span>"/&gt;
+       &lt;/menupopup&gt;
+     &lt;/menulist&gt;
+   &lt;spacer class="springspace"/&gt;
+
+   &lt;menulist id="find-text" flex="1"
+             editable="true"
+             datasources="<a class=" external" rel="freelink">file:///mozilla/recents.rdf</a>"
+             ref="<span class="nowiki">http://www.xulplanet.com/rdf/recent/all</span>"&gt;
+     &lt;template&gt;
+       &lt;menupopup&gt;
+         &lt;menuitem label="<span class="nowiki">rdf:http://www.xulplanet.com/rdf/recent#Label</span>" uri="rdf:*"/&gt;
+       &lt;/menupopup&gt;
+     &lt;/template&gt;
+   &lt;/menulist&gt;
+
+   &lt;/groupbox&gt;
+
+  &lt;/tabpanel&gt;
+
+  &lt;tabpanel id="optionspanel" orient="vertical"&gt;
+     &lt;checkbox id="casecheck" label="<span class="highlightred">&amp;casesensitive;</span>"/&gt;
+     &lt;checkbox id="wordscheck" label="<span class="highlightred">&amp;matchfilename;</span>"/&gt;
+    &lt;/tabpanel&gt;
+
+  &lt;/tabpanels&gt;
+ &lt;/tabbox&gt;
+
+ &lt;tree id="results" style="display: none;" flex="1"&gt;
+   &lt;treecols&gt;
+     &lt;treecol id="name" label="<span class="highlightred">&amp;results.filename;</span>" flex="1"/&gt;
+     &lt;treecol id="location" label="<span class="highlightred">&amp;results.location;</span>" flex="2"/&gt;
+     &lt;treecol id="size" label="<span class="highlightred">&amp;results.size;</span>" flex="1"/&gt;
+   &lt;/treecols&gt;
+
+   &lt;treechildren&gt;
+     &lt;treeitem&gt;
+       &lt;treerow&gt;
+         &lt;treecell label="mozilla"/&gt;
+         &lt;treecell label="/usr/local"/&gt;
+         &lt;treecell label="<span class="highlightred">&amp;bytes.before;</span>2520<span class="highlightred">&amp;bytes.after;</span>"/&gt;
+       &lt;/treerow&gt;
+     &lt;/treeitem&gt;
+   &lt;/treechildren&gt;
+ &lt;/tree&gt;
+
+ &lt;splitter id="splitbar" resizeafter="grow" style="display: none;"/&gt;
+
+ &lt;spacer class="titlespace"/&gt;
+
+ &lt;hbox&gt;
+   &lt;progressmeter id="progmeter" value="50%" style="display: none;"/&gt;
+   &lt;spacer flex="1"/&gt;
+   &lt;button id="find-button" label="<span class="highlightred">&amp;button.find;</span>"
+           oncommand="doFind()"/&gt;
+   &lt;button id="cancel-button" label="<span class="highlightred">&amp;button.cancel;</span>"
+           oncommand="window.close();"/&gt;
+ &lt;/hbox&gt;
+&lt;/vbox&gt;
+
+&lt;/window&gt;
+</pre>
+<p>各テキスト文字列は、実体参照に置き換えられています。
+また、DTD ファイルを読み込む指定は、XUL ファイルの先頭近くで行われています。
+今回追加した各実体は、この DTD ファイルで宣言されている必要があります。
+対応する宣言のない実体参照が XUL ファイルで行われていた場合、ウインドウは表示されません。
+</p><p>なお、実体の名前は重要でないことを補足しておきます。
+上記の例では、実体の名前に単語をピリオドで区切ったものを用いていますが、
+特に必要なわけではありません。
+上記の実体の命名規則は、Mozilla のコードでの慣例をまねているだけです。
+</p><p>「2520 bytes」というテキストが、2 つの実体を使用するように置き換えられていることに気が付いたでしょうか。
+これは、この部分のフレーズの組み立てが、ロケールによって異なる可能性があるからです。
+例えば、(英語のように) 「数値」「bytes」 の順ではなく、逆の順番で表示する必要がある言語も存在するかもしれません。
+もちろん、必要に応じて「KB」や「MB」に表示を変更したい場合は、さらに複雑なコードが必要になります。
+</p><p>また、アクセスキーとキーボードショートカットもロケールによって異なる可能性があるため実体参照に変更しています。
+</p><p>次に DTD ファイル (findfile.dtd) を示します。
+</p>
+<pre>&lt;!ENTITY findWindow.title "Find Files"&gt;
+&lt;!ENTITY fileMenu.label "File"&gt;
+&lt;!ENTITY editMenu.label "Edit"&gt;
+&lt;!ENTITY fileMenu.accesskey "f"&gt;
+&lt;!ENTITY editMenu.accesskey "e"&gt;
+&lt;!ENTITY openCmd.label "Open Search..."&gt;
+&lt;!ENTITY saveCmd.label "Save Search..."&gt;
+&lt;!ENTITY closeCmd.label "Close"&gt;
+&lt;!ENTITY openCmd.accesskey "o"&gt;
+&lt;!ENTITY saveCmd.accesskey "s"&gt;
+&lt;!ENTITY closeCmd.accesskey "c"&gt;
+&lt;!ENTITY cutCmd.label "Cut"&gt;
+&lt;!ENTITY copyCmd.label "Copy"&gt;
+&lt;!ENTITY pasteCmd.label "Paste"&gt;
+&lt;!ENTITY cutCmd.accesskey "t"&gt;
+&lt;!ENTITY copyCmd.accesskey "c"&gt;
+&lt;!ENTITY pasteCmd.accesskey "p"&gt;
+&lt;!ENTITY cutCmd.commandkey "X"&gt;
+&lt;!ENTITY copyCmd.commandkey "C"&gt;
+&lt;!ENTITY pasteCmd.commandkey "V"&gt;
+&lt;!ENTITY openCmdToolbar.label "Open"&gt;
+&lt;!ENTITY saveCmdToolbar.label "Save"&gt;
+&lt;!ENTITY searchTab "Search"&gt;
+&lt;!ENTITY optionsTab "Options"&gt;
+&lt;!ENTITY findDescription "Enter your search criteria below and select the Find button to begin the search."&gt;
+&lt;!ENTITY findCriteria "Search Criteria"&gt;
+&lt;!ENTITY type.name "Name"&gt;
+&lt;!ENTITY type.size "Size"&gt;
+&lt;!ENTITY type.date "Date Modified"&gt;
+&lt;!ENTITY mode.is "Is"&gt;
+&lt;!ENTITY mode.isnot "Is Not"&gt;
+&lt;!ENTITY casesensitive "Case Sensitive Search"&gt;
+&lt;!ENTITY matchfilename "Match Entire Filename"&gt;
+&lt;!ENTITY results.filename "Filename"&gt;
+&lt;!ENTITY results.location "Location"&gt;
+&lt;!ENTITY results.size "Size"&gt;
+&lt;!ENTITY bytes.before ""&gt;
+&lt;!ENTITY bytes.after "bytes"&gt;
+&lt;!ENTITY button.find "Find"&gt;
+&lt;!ENTITY button.cancel "Cancel"&gt;
+</pre>
+<p>これで、別の DTD ファイルを作るだけで、新しい言語に対応することが可能になりました。
+このように、chrome システムにより、異なるロケールごとに DTD ファイルを与えるようにしておけば、
+同じ XUL ファイルを任意の言語で利用することが可能です。
+</p><p><span id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"><a id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"></a><strong>ここまでのファイル検索ダイアログの例</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples//findfile/findfile-locale.xul.txt">ソース</a>
+</p>
+</div>
+<p>次のセクションでは、プロパティ ファイルについて見ていきます。
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Creating_a_Skin" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Property_Files">次のページ  »</a></p>
+</div>
+
+<div class="noinclude">
+</div>

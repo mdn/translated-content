@@ -1,0 +1,35 @@
+---
+title: Ajout de fournisseurs de données de protection anti-phishing
+slug: Ajout_de_fournisseurs_de_données_de_protection_anti-phishing
+translation_of: Mozilla/Adding_phishing_protection_data_providers
+---
+<p>La technologie de protection anti-phishing permet à Firefox de protéger l'utilisateur en comparant les URL visitées à une liste noire de sites contrefaits connus, et en l'avertissant lorsqu'il visite l'un de ces sites.</p>
+<h2 id="Installer_un_nouveau_fournisseur_de_donn.C3.A9es">Installer un nouveau fournisseur de données</h2>
+<p>Pour installer un fournisseur de données de protection, il faut définir un ensemble de préférences détaillant celui-ci.</p>
+<p>Chaque fournisseur possède un numéro d'identification unique, et le numéro 0 est attribué au fournisseur par défaut fourni avec Firefox. Lors de l'installation d’un nouveau fournisseur, vous devrez choisir le plus petit numéro suivant disponible.</p>
+<p>Pour trouver quel est ce numéro, vous pouvez construire une boucle récupérant la valeur de la préférence <code>browser.safebrowsing.provider.N.name</code> en incrémentant N jusqu'à obtenir une valeur nulle. Il vous suffit alors d'employer N.</p>
+<p>Vous pouvez trouver des exemples sur la façon de lire et écrire les préférences dans l'article sur <a href="/fr/Ajout_de_préférences_à_une_extension" title="fr/Ajout_de_préférences_à_une_extension">l'ajout des préférences à une extension</a> <small>(à traduire de <a href="/en/Adding_preferences_to_an_extension">en:Adding preferences to an extension</a> )</small>.</p>
+<p> </p>
+<h3 id="Pr.C3.A9f.C3.A9rences_indispensables">Préférences indispensables</h3>
+<dl> <dt><code>browser.safebrowsing.provider.<em>idnum</em>.name</code></dt> <dd>Un nom humainement lisible du fournisseur d’accès.</dd>
+</dl>
+<dl> <dt><code>browser.safebrowsing.provider.<em>idnum</em>.keyURL</code></dt> <dd>Une URL qui renvoie une clé privée pour le chiffrement des autres requêtes.</dd>
+</dl>
+<dl> <dt><code>browser.safebrowsing.provider.<em>idnum</em>.lookupURL</code></dt> <dd>L'URL servant à vérifier que les URL visitées ne sont pas sur la liste noire. Les requêtes qui lui sont adressées doivent être chiffrées avec la clé privée renvoyée par <code>keyURL</code>.</dd>
+</dl>
+<h3 id="Pr.C3.A9f.C3.A9rences_optionnelles">Préférences optionnelles</h3>
+<dl> <dt><code>browser.safebrowsing.provider.<em>idnum</em>.reportURL</code></dt> <dd>Une URL utilisée pour signaler au fournisseur quand un utilisateur visite un site pratiquant le phishing, et s'il tient compte de la mise en garde ou l'ignore.</dd>
+</dl>
+<dl> <dt><code>browser.safebrowsing.provider.<em>idnum</em>.updateURL</code></dt> <dd>Une URL employée pour demander une liste à jour des sites contrefaits. Le serveur fournit soit une liste entière, soit des mises à jour incrémentielles pour actualiser les tables du client.</dd>
+</dl>
+<dl> <dt><code>browser.safebrowsing.provider.<em>idnum</em>.reportGenericURL</code></dt> <dd>Actuellement inutilisée ; destinée au signalement des problèmes en rapport avec le service de protection contre le phishing.</dd>
+</dl>
+<dl> <dt><code>browser.safebrowsing.provider.<em>idnum</em>.reportErrorURL</code></dt> <dd>L'URL vers laquelle l'utilisateur est dirigé pour rapporter un site signalé à tort comme un site contrefait.</dd>
+</dl>
+<dl> <dt><code>browser.safebrowsing.provider.<em>idnum</em>.reportPhishURL</code></dt> <dd>L'URL vers laquelle l'utilisateur est dirigé pour rapporter un site contrefait qui n’est pas détecté par le système de protection.</dd>
+</dl>
+<h2 id="D.C3.A9termination_du_fournisseur_de_donn.C3.A9es_utilis.C3.A9_actuellement">Détermination du fournisseur de données utilisé actuellement</h2>
+<p>Si vous devez déterminer le numéro d'ID du fournisseur de données anti-phishing employé actuellement, vous pouvez lire la valeur de la préférence <code>browser.safebrowsing.dataProvider</code>.</p>
+<p> </p>
+
+<p>{{ languages( { "en": "en/Adding_phishing_protection_data_providers", "es": "es/A\u00f1adir_datos_para_la_protecci\u00f3n_anti-phishing", "it": "it/Aggiungere_fornitori_di_dati_anti-phishing", "ja": "ja/Adding_phishing_protection_data_providers", "pl": "pl/Dodawanie_dostawc\u00f3w_danych_ochrony_przed_phishingiem", "zh-tw": "zh_tw/\u65b0\u589e\u507d\u9020\u7db2\u7ad9\u6e05\u55ae\u4f86\u6e90" } ) }}</p>

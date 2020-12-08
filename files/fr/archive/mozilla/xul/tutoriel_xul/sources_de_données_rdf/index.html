@@ -1,0 +1,296 @@
+---
+title: Sources de données RDF
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Sources_de_données_RDF
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/RDF_Datasources
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Arbres_et_Gabarits" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Règles_avançées">Suivant  »</a></p>
+</div>
+
+<p>Nous nous intéresserons ici aux sources de données additionnelles, ainsi qu'à la manière d'utiliser vos propres fichiers <abbr title="Resource Description Framework">RDF</abbr> comme sources de données.</p>
+
+<h3 id="Autres_sources_de_donn.C3.A9es_pour_Mozilla" name="Autres_sources_de_donn.C3.A9es_pour_Mozilla">Autres sources de données pour Mozilla</h3>
+
+<p>Mozilla fournit nativement plusieurs sources de données. Certaines sont indiquées ici, avec quelques exemples. Leur fonctionnement est très similaire à celui des marque-pages, bien que les champs soient différents à chaque fois.</p>
+
+<div class="note"><abbr title="Note du traducteur">Ndt</abbr> : Les ressources RDF fournies par mozilla ne sont utilisables que par les applications qui sont enregistrées dans le chrome. Vous ne verrez donc pas les données dans certains des exemples proposés.</div>
+
+<h3 id="La_liste_d.27historique_de_navigation" name="La_liste_d.27historique_de_navigation">La liste d'historique de navigation</h3>
+
+<p>Cette source de données fournit l'accès à la liste d'historique de l'utilisateur, qui est une liste d'<abbr title="Uniform Resource Locator">URL</abbr>s que l'utilisateur a consulté récemment. On peut se référer à cette ressource en utilisant <code>rdf:history</code> comme source de données. La table ci-dessous montre les ressources (ou champs) que vous pouvez récupérer depuis la source de donnée "history". Utilisez les <abbr title="Uniform Resource Locator">URL</abbr>s ci-dessous là où vous souhaitez que la valeur de la ressource soit utilisée.</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td>Date</td>
+   <td><span class="nowiki">rdf:http://home.netscape.com/NC-rdf#Date</span></td>
+   <td>Date de la dernière visite</td>
+  </tr>
+  <tr>
+   <td>Name</td>
+   <td><span class="nowiki">rdf:http://home.netscape.com/NC-rdf#Name</span></td>
+   <td>Titre de la page</td>
+  </tr>
+  <tr>
+   <td>Page</td>
+   <td><span class="nowiki">rdf:http://home.netscape.com/NC-rdf#Page</span></td>
+   <td>Nom de la page</td>
+  </tr>
+  <tr>
+   <td>Referrer</td>
+   <td><span class="nowiki">rdf:http://home.netscape.com/NC-rdf#Referrer</span></td>
+   <td>Page d'origine (referrer)</td>
+  </tr>
+  <tr>
+   <td>URL</td>
+   <td><span class="nowiki">rdf:http://home.netscape.com/NC-rdf#URL</span></td>
+   <td>URL de la page</td>
+  </tr>
+  <tr>
+   <td>Visit Count</td>
+   <td><span class="nowiki">rdf:http://home.netscape.com/NC-rdf#VisitCount</span></td>
+   <td>Nombre de visites de la page</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Une liste d'historique typique affichera un arbre doté d'une sélection de ces champs. Pour les utiliser, placez les URL ci-dessus dans l'attribut <code id="a-label"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/label">label</a></code> des boutons ou des cellules d'un arbre. Vous pouvez utiliser 'NC:HistoryRoot' comme valeur de l'attribut <code id="a-ref"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/ref">ref</a></code>. Vous pouvez également utiliser la valeur 'NC:HistoryByDate' pour obtenir la liste d'historique triée par jour.</p>
+
+<h4 id="Exemple_d.27utilisation_de_la_liste_historique" name="Exemple_d.27utilisation_de_la_liste_historique">Exemple d'utilisation de la liste historique</h4>
+
+<p>Voyons un exemple d'affichage de la liste d'historique. Nous afficherons l'historique dans un arbre avec les trois colonnes Nom, URL et Date.</p>
+
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_datasrc_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_datasrc_1.xul">Voir</a></p>
+
+<pre>&lt;tree flex="1" datasources="rdf:history" ref="NC:HistoryRoot"&gt;
+
+  &lt;treecols&gt;
+    &lt;treecol id="name" label="Nom" flex="1"/&gt;
+    &lt;treecol id="url" label="URL" flex="1"/&gt;
+    &lt;treecol id="date" label="Date" flex="1"/&gt;
+  &lt;/treecols&gt;
+
+  &lt;template&gt;
+
+    &lt;rule&gt;
+      &lt;treechildren&gt;
+       &lt;treeitem uri="rdf:*"&gt;
+         &lt;treerow&gt;
+           &lt;treecell label="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+           &lt;treecell label="rdf:http://home.netscape.com/NC-rdf#URL"/&gt;
+           &lt;treecell label="rdf:http://home.netscape.com/NC-rdf#Date"/&gt;
+         &lt;/treerow&gt;
+       &lt;/treeitem&gt;
+      &lt;/treechildren&gt;
+    &lt;/rule&gt;
+
+  &lt;/template&gt;
+&lt;/tree&gt;
+</pre>
+
+<h3 id="Autres_sources_de_donn.C3.A9es" name="Autres_sources_de_donn.C3.A9es">Autres sources de données</h3>
+
+<p>Les tableaux ci-dessous listent quelques-unes des autres sources de données disponibles avec Mozilla. Vous pouvez les utiliser comme vous voulez.</p>
+
+<p><strong>Marque-pages ('rdf:bookmarks') :</strong></p>
+
+<p>Les marque-pages sont générés depuis la liste de marque-pages de l'utilisateur.</p>
+
+<p><br>
+ <strong>Ressources</strong></p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td>Date d'ajout</td>
+   <td><span class="nowiki">rdf:http://home.netscape.com/NC-rdf#BookmarkAddDate</span></td>
+   <td>Date à laquelle le marque-page a été ajouté</td>
+  </tr>
+  <tr>
+   <td>Description</td>
+   <td><span class="nowiki">rdf:http://home.netscape.com/NC-rdf#Description</span></td>
+   <td>Description du marque-page</td>
+  </tr>
+  <tr>
+   <td>Dernière modification</td>
+   <td><span class="nowiki">rdf:http://home.netscape.com/WEB-rdf#LastModifiedDate</span></td>
+   <td>Date de la dernière modification</td>
+  </tr>
+  <tr>
+   <td>Dernière visite</td>
+   <td><span class="nowiki">rdf:http://home.netscape.com/WEB-rdf#LastVisitDate</span></td>
+   <td>Date de la dernière visite</td>
+  </tr>
+  <tr>
+   <td>Nom</td>
+   <td><span class="nowiki">rdf:http://home.netscape.com/NC-rdf#Name</span></td>
+   <td>Nom du marque-page</td>
+  </tr>
+  <tr>
+   <td>Raccourci URL</td>
+   <td><span class="nowiki">rdf:http://home.netscape.com/NC-rdf#ShortcutURL</span></td>
+   <td>Champ de mots-clés personnalisés</td>
+  </tr>
+  <tr>
+   <td>URL</td>
+   <td><span class="nowiki">rdf:http://home.netscape.com/NC-rdf#URL</span></td>
+   <td>L'URL vers laquelle pointe le lien</td>
+  </tr>
+ </tbody>
+</table>
+
+<p><strong>Racines possibles pour les marque-pages</strong></p>
+
+<dl>
+ <dt>'NC</dt>
+ <dd>BookmarksRoot' : La racine de la hiérarchie des marque-pages</dd>
+</dl>
+
+<p> </p>
+
+<dl>
+ <dt>'NC</dt>
+ <dd>IEFavoritesRoot' : Le dossier de marque-pages correspondant aux « Favoris IE » de l'utilisateur</dd>
+</dl>
+
+<p> </p>
+
+<dl>
+ <dt>'NC</dt>
+ <dd>PersonalToolbarFolder' : Le dossier de marque-pages correspondant au dossier de la barre d'outils personnelle</dd>
+</dl>
+
+<p><strong>Fichiers('rdf:files') :</strong></p>
+
+<p>Une vue des fichiers de l'utilisateur.</p>
+
+<p><strong>Ressources</strong></p>
+
+<table class="donneestuto">
+ <tbody>
+  <tr>
+   <td>Nom</td>
+   <td><span class="nowiki">rdf:http://home.netscape.com/NC-rdf#Name</span></td>
+   <td>Nom du fichier</td>
+  </tr>
+  <tr>
+   <td>URL</td>
+   <td><span class="nowiki">rdf:http://home.netscape.com/NC-rdf#URL</span></td>
+   <td>URL du fichier</td>
+  </tr>
+ </tbody>
+</table>
+
+<p><strong>Racine possible des fichiers</strong></p>
+
+<dl>
+ <dt>'NC</dt>
+ <dd>FilesRoot' : Racine du système de fichiers (habituellement une liste de disques)</dd>
+</dl>
+
+<p> </p>
+
+<dl>
+ <dt>'URL d'un fichier' </dt>
+ <dd>En utilisant une URL de fichier pour l'attribut <code id="a-ref"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/ref">ref</a></code>, vous pouvez choisir un répertoire/dossier à retourner. Par exemple, vous pouvez utiliser <a class="external" rel="freelink">file:///windows</a> ou <a class="external" rel="freelink">file:///usr/local</a></dd>
+</dl>
+
+<p>La source de données de fichiers est un exemple de source de données qui ne détermine ses ressources que lorsque cela est nécessaire. Nous ne voulons pas que tous les fichiers du système de fichiers soient évalués avant d'afficher les données. Seuls nous intéressent les fichiers et répertoires que l'arbre (ou tout autre élément) doit afficher à un instant donné.</p>
+
+<h3 id="Sources_de_donn.C3.A9es_composites" name="Sources_de_donn.C3.A9es_composites">Sources de données composites</h3>
+
+<p>Vous pouvez spécifier plusieurs sources de données dans l'attribut <code id="a-datasources"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/datasources">datasources</a></code> en les séparant par des espaces, comme dans l'exemple ci-dessous. Les données seront ainsi lues dans toutes les sources de données mentionnées.</p>
+
+<pre>&lt;tree datasources="rdf:bookmarks rdf:history animals.rdf" ref="NC:BookmarksRoot"&gt;</pre>
+
+<p>Cet exemple lit les ressources des marque-pages, de l'historique et d'un fichier nommé 'animals.rdf'. Celles-ci sont combinées en une source de données composite et peuvent être utilisées comme une unique source de données.</p>
+
+<p>La source de donnée spéciale <code>rdf:null</code> correspond à une source vide. Vous pouvez utiliser cette source de données si vous voulez gérer dynamiquement la source via un script, sans avoir à l'initialiser tout de suite ou parce que vous ne connaissez pas son URL exacte.</p>
+
+<h3 id="Sources_de_donn.C3.A9es_RDF_personnalis.C3.A9es" name="Sources_de_donn.C3.A9es_RDF_personnalis.C3.A9es">Sources de données RDF personnalisées</h3>
+
+<p>Vous pouvez utiliser chacune des sources de données internes ci-dessus si vous le désirez. Il en existe plusieurs autres, pour le courrier électronique, les carnets d'adresses, les recherches... Cependant, vous pouvez utiliser votre propre source de données RDF, enregistrée dans un fichier RDF. Le fichier peut être local ou distant. Il suffit d'indiquer l'URL du fichier RDF dans l'attribut <code id="a-datasources"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/datasources">datasources</a></code>.</p>
+
+<p>L'utilisation des fichiers RDF apporte les mêmes fonctionnalités que n'importe quelle source de données interne. Vous pouvez utiliser des règles pour retrouver un type spécifique de contenu. Les attributs de l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/rule" title="rule">rule</a></code> seront respectés s'ils correspondent aux attributs d'un élément RDF <code>Description</code>. Vous pouvez également créer des fichiers RDF hiérarchiques.</p>
+
+<h4 id="Exemple_d.27utilisation_d.27un_fichier_RDF" name="Exemple_d.27utilisation_d.27un_fichier_RDF">Exemple d'utilisation d'un fichier RDF</h4>
+
+<p>Ce qui suit est un exemple d'utilisation d'un fichier RDF comme source de données. Le fichier RDF est relativement gros et peut être consulté séparément : <a href="https://developer.mozilla.org/samples/xultu/examples/animals.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/animals.rdf">RDF</a></p>
+
+<p><span id="Exemple_2"><a id="Exemple_2"></a><strong>Exemple 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_datasrc_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_datasrc_2.xul">Voir</a></p>
+
+<pre>&lt;tree flex="1" width="200" height="200"
+      datasources="animals.rdf" ref="http://www.some-fictitious-zoo.com/all-animals"&gt;
+
+  &lt;treecols&gt;
+    &lt;treecol id="name" label="Nom" primary="true" flex="1"/&gt;
+    &lt;treecol id="species" label="Espèces" flex="1"/&gt;
+  &lt;/treecols&gt;
+
+  &lt;template&gt;
+    &lt;rule&gt;
+      &lt;treechildren&gt;
+       &lt;treeitem uri="rdf:*"&gt;
+         &lt;treerow&gt;
+           &lt;treecell label="rdf:http://www.some-fictitious-zoo.com/rdf#name"/&gt;
+           &lt;treecell label="rdf:http://www.some-fictitious-zoo.com/rdf#species"/&gt;
+         &lt;/treerow&gt;
+       &lt;/treeitem&gt;
+      &lt;/treechildren&gt;
+    &lt;/rule&gt;
+
+  &lt;/template&gt;
+&lt;/tree&gt;
+</pre>
+
+<p><img alt="Image:xultu_datasrc1.png" class="internal" src="/@api/deki/files/1518/=Xultu_datasrc1.png"></p>
+
+<p>Ici, les données sont générées depuis le fichier RDF. L'attribut <code id="a-ref"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/ref">ref</a></code> a été positionné sur l'élément racine de ce fichier, qui est la balise de premier niveau <code>Seq</code>. Nous obtenons une liste complète d'animaux. Si nous avions voulu, nous aurions pu positionner l'attribut <code id="a-ref"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/ref">ref</a></code> sur n'importe quelle valeur de l'attribut <code id="a-about"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/about">about</a></code> afin de limiter la quantité de données retournées. Par exemple, pour afficher seulement les reptiles, nous pouvons utiliser la valeur '<span class="nowiki">http://www.some-fictitious-zoo.com/reptiles</span>'.</p>
+
+<h4 id="Exemple_de_d.C3.A9finition_de_l.27attribut_XULAttrref" name="Exemple_de_d.C3.A9finition_de_l.27attribut_XULAttrref">Exemple de définition de l'attribut <code id="a-ref"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/ref">ref</a></code></h4>
+
+<p>L'exemple ci-dessous montre comment afficher des éléments particuliers d'une source de données RDF en définissant l'attribut <code id="a-ref"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/ref">ref</a></code>.</p>
+
+<p><span id="Exemple_3"><a id="Exemple_3"></a><strong>Exemple 3</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_datasrc_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_datasrc_3.xul">Voir</a></p>
+
+<pre>&lt;window
+  id="example-window"
+  title="Mammifères du zoo"
+  xmlns:ANIMALS="http://www.some-fictitious-zoo.com/rdf#"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;button label="Cliquez ici pour voir les mammifères du zoo" type="menu"
+        datasources="animals.rdf" ref="http://www.some-fictitious-zoo.com/mammals"&gt;
+  &lt;template&gt;
+    &lt;rule ANIMALS:specimens="0"&gt;&lt;/rule&gt;
+    &lt;rule&gt;
+      &lt;menupopup&gt;
+        &lt;menuitem uri="rdf:*" label="rdf:http://www.some-fictitious-zoo.com/rdf#name"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/rule&gt;
+  &lt;/template&gt;
+&lt;/button&gt;
+
+&lt;/window&gt;
+</pre>
+
+<p>Dans le cas présent, nous voulons seulement la liste des mammifères, nous sélectionnons donc l'URI de la liste des mammifères. Vous remarquerez que la valeur de l'attribut <code id="a-ref"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/ref">ref</a></code> de notre exemple est '<span class="nowiki">http://www.some-fictitious-zoo.com/mammals</span>', ce qui correspond à l'un des éléments <code>Seq</code> du fichier RDF. Seuls les descendants de cette liste seront retournés.</p>
+
+<p>Nous avons utilisé deux règles ici. La première filtre toutes les ressources dont l'attribut <code>ANIMALS:specimen</code> est positionné à '0'. Vous pouvez voir cet attribut dans le fichier RDF pour chacun des éléments <code>Description</code>. Certains d'entre eux ont une valeur de '0'. Dans ce cas, la première règle s'applique. Puisque cette règle n'a pas de contenu, rien ne sera affiché pour les éléments concernés. Ainsi, nous pouvons cacher les données que nous ne voulons pas afficher.</p>
+
+<p>La seconde règle s'applique aux autres ressources et crée une rangée dans un menu surgissant. Le résultat final est un menu surgissant contenant tous les mammifères dont le spécimen n'est pas positionné à '0'.</p>
+
+<hr>
+<p>Dans la prochaine section, nous examinerons la syntaxe des règles complètes.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Arbres_et_Gabarits" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Règles_avançées">Suivant  »</a></p>
+</div>
+
+<p><span class="comment">Interwiki</span></p>

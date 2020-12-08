@@ -1,0 +1,27 @@
+---
+title: dispatchEvent example
+slug: DOM/dispatchEvent_example
+tags:
+  - DOM
+  - Gecko
+  - Gecko DOM Reference
+translation_of: Web/Guide/Events/Creating_and_triggering_events
+---
+<div class="noinclude">
+ {{ApiRef}}</div>
+<p>次の例では DOM メソッドを使用してチェックボックスのクリックをシミュレート（※スクリプトでクリックイベントを生成）しています。</p>
+<pre>function simulateClick() {
+  var evt = <a href="/ja/docs/DOM/document.createEvent" title="DOM/document.createEvent">document.createEvent</a>("MouseEvents");
+  evt.<a href="/ja/docs/DOM/event.initMouseEvent" title="DOM/event.initMouseEvent">initMouseEvent</a>("click", true, true, window,
+    0, 0, 0, 0, 0, false, false, false, false, 0, null);
+  var cb = document.getElementById("checkbox");
+  var canceled = !cb.<a href="/ja/docs/DOM/element.dispatchEvent" title="DOM/element.dispatchEvent">dispatchEvent</a>(evt);
+  if(canceled) {
+    // A handler called preventDefault
+    alert("canceled");
+  } else {
+    // None of the handlers called preventDefault
+    alert("not canceled");
+  }
+}</pre>
+<p><a class="button liveSample external" href="http://developer.mozilla.org/samples/domref/dispatchEvent.html">実際の表示を確認</a></p>

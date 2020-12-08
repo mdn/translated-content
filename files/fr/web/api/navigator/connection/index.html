@@ -1,0 +1,95 @@
+---
+title: Navigator.connection
+slug: Web/API/Navigator/connection
+tags:
+  - API
+  - Connexion
+  - Expérimental(2)
+  - Navigateur
+  - Propriété
+translation_of: Web/API/Navigator/connection
+---
+<p>{{APIRef("Network Information API")}}{{SeeCompatTable}}</p>
+
+<p><code><strong>Navigator.connection</strong></code> est une propriété en lecture seule, elle représente une {{domxref("NetworkInformation")}} qui contient les informations de la connexion du système, telles que la  bande passante actuelle du périphérique utilisateur ou si la connexion est mesurée. La propriété peut être utilisée pour sélectionner un contenu en haute ou basse définition, dépendant de la connexion de l'utilisateur.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox"><em>connexionInfo</em> = navigator.connection</pre>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Spécification</th>
+   <th scope="col">État</th>
+   <th scope="col">Commentaire</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Network Information', '#h-the-connection-attribute', 'Navigator.connection')}}</td>
+   <td>{{Spec2('Network Information')}}</td>
+   <td>Spécification initiale</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Fonctionnalité</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>61</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Fonctionnalité</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>2.2 {{property_prefix("webkit")}}</td>
+   <td>12.0<sup>[1]</sup></td>
+   <td>1.4</td>
+   <td>{{CompatNo}}</td>
+   <td>37</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">[1] L'API Network peut être désactivé en utilisant la préférence <code>dom.netinfo.enabled</code>.</div>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/fr/docs/Évènements_online_et_offline">Évènements online et offline</a></li>
+</ul>

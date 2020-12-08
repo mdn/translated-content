@@ -1,0 +1,376 @@
+---
+title: JavaScript シェルの紹介
+slug: Mozilla/Projects/SpiderMonkey/Introduction_to_the_JavaScript_shell
+tags:
+  - SpiderMonkey
+translation_of: Mozilla/Projects/SpiderMonkey/Introduction_to_the_JavaScript_shell
+---
+<div>{{SpiderMonkeySidebar("General")}}</div>
+
+<div class="summary">
+<p><strong>JavaScript シェル</strong> (<code>js</code>) は <a href="/ja/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a> ソース配布に含まれているコマンドラインプログラムです。 これは、Python の対話型プロンプト、Lisp の read-eval-print ループ、または Ruby の irb に相当する JavaScript です。この記事では、シェルを使用して JavaScript コードを試したり JavaScript プログラムを実行したりする方法について説明します。</p>
+</div>
+
+<p>SpiderMonkey JavaScript シェルを入手するには、<a href="/ja/docs/Mozilla/Projects/SpiderMonkey/Build_Documentation">SpiderMonkey ビルドドキュメント</a>を参照するか、<a href="https://archive.mozilla.org/pub/firefox/nightly/latest-mozilla-central/">Nightly Builds</a> からプラットフォーム用にコンパイルされたバイナリをダウンロードしてください。</p>
+
+<p>他の JavaScript シェルのリストについては、<a href="/ja/docs/JavaScript/Shells">JavaScript シェル</a>を参照してください。</p>
+
+<div class="note">
+<p>メモ: SpiderMonkey 44 {{geckoRelease(44)}} 以降、標準の Web 互換の JavaScript バージョンがデフォルトで使用されます (JS 1.7 以降ではなくなりました)。組み込みの <code>version()</code> シェルは、従来の機能をテストするためにまだ存在しています。</p>
+</div>
+
+<h2 id="Using_the_JavaScript_shell" name="Using_the_JavaScript_shell">JavaScript シェルを実行する</h2>
+
+<p>シェルには2つの動作モードがあります。インタラクティブシェルとして使用することができます。ここでは、プロンプトで JavaScript コードを入力してすぐに満足のいく結果を得ることができます。これは、新機能の実験やテストに便利です。実行する JavaScript プログラムファイルをコマンドラインで渡すこともできます。その場合、プログラムは自動的に実行されます。</p>
+
+<p>ビルドの資料に従って、make install を使用してビルド済みシェルをインストールした後は、次のコマンドを使用して対話モードでシェルを実行できます。</p>
+
+<pre class="eval">js
+</pre>
+
+<p style="text-align: right;">[ If you get " symbol lookup error: ./js: undefined symbol: PR_SetCurrentThreadName" e.g. from a Bash console when using a pre-compiled binary, try &lt;path to your Firefox's run-mozilla.sh&gt;/run-mozilla.sh ./js -- that worked for me]</p>
+
+<p>ファイル <code>foo.js</code> 内の JavaScript コードを実行したい場合は、次のコマンドを使用できます:</p>
+
+<pre class="eval">js foo.js
+</pre>
+
+<p><code>foo.js</code> を実行してからインタラクティブシェルにドロップするには、次のようにします:</p>
+
+<pre class="eval">js -f foo.js -i
+</pre>
+
+<h2 id="リファレンス">リファレンス</h2>
+
+<div class="note"><strong>メモ:</strong> JavaScript シェルは JavaScript エンジンのテスト環境として使用されるため、使用可能なオプションと組み込み関数は時間の経過とともに変わる可能性があります。</div>
+
+<h3 id="Command_line_options" name="Command_line_options">コマンドラインオプション</h3>
+
+<p>シェルを制御するために指定できるコマンドラインオプションは多数あります。これらは以下に要約されています。文書化されていないものがあるかどうかを確認するには、必ず自分の jsshell で <strong>-h</strong> を使用してください。</p>
+
+<dl>
+ <dt><code>-c, --compileonly</code></dt>
+ <dd>プログラムをコンパイルして実行しないようシェルに指示します。これは、プログラムを実行せずにプログラム内の構文エラーを素早くチェックするのに便利な方法です。</dd>
+ <dt><code>-e <em>script</em></code></dt>
+ <dd>指定した<em>スクリプト</em>を実行します。これは、実行するコードを含むリテラル文字列です。</dd>
+ <dt><code>-f <em>filename</em></code></dt>
+ <dd><em>filename</em> で指定された JavaScript プログラムを実行します。</dd>
+ <dt><code>-i</code></dt>
+ <dd>インタラクティブモードを有効にします。(ファイル名が指定されていない場合はデフォルト)</dd>
+ <dt><code>--no-ion</code></dt>
+ <dd>最適化 JIT コンパイラを無効にします。</dd>
+ <dt><code>--no-baseline</code></dt>
+ <dd>ベースライン JIT コンパイラを無効にします。</dd>
+ <dt><code>-P</code></dt>
+ <dd>ファイルの最初の行が "/usr/bin/env js -P" の場合、ファイルの内容は JavaScript エンジンによって解釈されます。</dd>
+ <dd>これにより、JavaScript ファイルを UNIX および OS X マシン上で実行可能にすることができます。</dd>
+ <dt><code>-s</code></dt>
+ <dd>厳密な警告モードを有効にします。</dd>
+ <dt><code>-w, --warnings</code></dt>
+ <dd>警告メッセージを有効にします。</dd>
+ <dt><code>-W</code>, --nowarnings</dt>
+ <dd>警告メッセージを無効にします。</dd>
+</dl>
+
+<h3 id="Environment_options" name="Environment_options">環境オプション</h3>
+
+<p>js シェルの動作を変更するために設定できる環境変数がいくつかあります。</p>
+
+<dl>
+ <dt><code>JS_STDOUT=<em>file</em></code></dt>
+ <dd>標準出力を <em>file</em> にリダイレクトします。</dd>
+ <dt><code>JS_STDERR=<em>file</em></code></dt>
+ <dd>標準エラー出力を <em>file</em> にリダイレクトします。</dd>
+</dl>
+
+<h3 id="Built-in_functions" name="Built-in_functions">組み込み関数</h3>
+
+<p>JavaScript シェルをより便利にするために、JavaScript プログラムからでもインタラクティブモードでも使える、多くの組み込み関数が提供されています。</p>
+
+<div class="warning">
+<p><strong>注</strong>: このリストは不完全であり、<a href="/ja/docs/Mozilla/Projects/SpiderMonkey/Shell_global_objects">Shell のグローバルオブジェクト</a>と重複しています。詳しくは {{Source("js/src/shell/js.cpp")}} を参照してください (<code>shell_functions</code>について)。</p>
+</div>
+
+<h4 id="build.28.29" name="build.28.29"><code>build()</code></h4>
+
+<p>JavaScript シェルが構築された日時を返します。</p>
+
+<div class="note"><strong>メモ:</strong> パラメータなしの <code>clear()</code> は本当にすべてをクリアします。これにはこれらすべての組み込み関数が含まれます。</div>
+
+<h4 id="clone.28function.2C_.5Bscope.5D.29" name="clone.28function.2C_.5Bscope.5D.29"><code>clone(<em>function, [scope]</em>)</code></h4>
+
+<p>指定された <var>function</var> オブジェクトを複製します。scope が指定されていない場合、新しいオブジェクトの親は元のオブジェクトのものと同じです。それ以外の場合、新しいオブジェクトは <em>scope</em> で指定されたオブジェクトの範囲内に配置されます。</p>
+
+<h4 id="countHeap" name="countHeap"><code>countHeap(<em>[start[, kind]]</em>)</code></h4>
+
+<p>{{ jsapi_minversion_inline("1.8") }} ヒープ内のライブ GC のもの、または <em>start</em> から到達可能なもので、指定された値が null ではないものの数を数えます。<em>kind</em> はすべてのものを数える <code>'all'</code> (デフォルト)、またはその種類のものだけを数えるための <code>'object'</code>, <code>'double'</code>, <code>'string'</code>, <code>'function'</code>, <code>'qname'</code>, <code>'namespace'</code>, <code>'xml'</code> のいずれかです。</p>
+
+<h4 id="evalcx.28string.5B.2C_object.5D.29" name="evalcx.28string.5B.2C_object.5D.29"><code>dumpHeap(<em>[fileName[, start[, toFind[, maxDepth[, toIgnore]]]]]</em>)</code></h4>
+
+<p>{{ jsapi_minversion_inline("1.8") }} 既存のすべてのオブジェクト (または特定の興味深い部分グラフ) のグラフをファイルにダンプします。詳しくは、この関数の C/C++ バージョン、<code>JS_DumpHeap</code> を参照してください。</p>
+
+<h4 id="evalcx.28string.5B.2C_object.5D.29" name="evalcx.28string.5B.2C_object.5D.29"><code>evalcx(<em>string[, object]</em>)</code></h4>
+
+<p>JavaScript コードを文字列で評価します。<em>object</em> が指定されている場合、コードはそのオブジェクト内で実行され、サンドボックスとして扱われます。</p>
+
+<p><em>string</em> が空で <em>object</em> が指定されていない場合、<code>evalcx()</code> は、意欲的な標準クラスを持つ新しいオブジェクトを返します。</p>
+
+<p><em>string</em> が "lazy" で <em>object</em> が指定されていない場合、<code>evalcx()</code> は lazy 標準クラスを持つ新しいオブジェクトを返します。</p>
+
+<div class="note"><strong>メモ:</strong> <code>evalcx()</code> は、シェル内で <code>evalInSandbox</code> のような環境をテストするために、JavaScript エンジンの内部で深く作業している人にのみ役立ちます。</div>
+
+<h4 id="gc.28.29" name="gc.28.29"><code>gc()</code></h4>
+
+<p>ガベージコレクタを実行してメモリを解放します。</p>
+
+<h4 id="gcparam.28.29" name="gcparam.28.29"><code>gcparam(<em>name[, value]</em>)</code></h4>
+
+<p>{{ jsapi_minversion_inline("1.8") }} ガベージコレクタのパラメータを読み込むか設定します。</p>
+
+<p>名前は <a href="https://searchfox.org/mozilla-central/source/js/src/builtin/TestingFunctions.cpp#464">https://searchfox.org/mozilla-central/source/js/src/builtin/TestingFunctions.cpp#464</a> の <code>FOR_EACH_GC_PARAM</code> で定義されているパラメータキーのいずれか (<code>'maxBytes'</code>、<code>'maxMallocBytes'</code>、'<code>gcNumber</code>' など) でなければなりません。</p>
+
+<p><em>value</em> が指定されていない場合、<code>gcparam()</code> は name という名前の GC パラメータに関連付けられている現在の値を返します。</p>
+
+<p><em>value</em> が指定されている場合、それは正の uint32 に変換可能でなければなりません。<code>gcparam()</code> は GC パラメータの <em>name</em> を <em>value</em> に設定します。</p>
+
+<p>詳しくは C/C++ 関数の <code><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_GetGCParameter">JS_GetGCParameter</a></code> および <a class="internal" href="https://developer.mozilla.org/En/SpiderMonkey/JSAPI_Reference/JS_SetGCParameter" title="en/SpiderMonkey/JSAPI Reference/JS SetGCParameter"><code>JS_SetGCParameter</code></a> を参照してください。</p>
+
+<h4 id="gczeal.28.29" name="gczeal.28.29"><code>gczeal(level)</code></h4>
+
+<p>{{ jsapi_minversion_inline("1.8") }} <code>DEBUG</code> のみ。デバッグ機能である GC の活動量のレベルを設定します。これは、通常の定期的なガベージコレクションの場合は 0、非常に頻繁な GC の場合は 1、非常に頻繁な GC の場合は 2 になります。<br>
+ 0 以外は JavaScript の実行を非常に遅くしますが、GC 関連のバグを明らかにしたり再現したりするのに役立ちます。詳しくは、この関数の C/C++ バージョンである <code><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_SetGCZeal">JS_SetGCZeal</a></code> を参照してください。</p>
+
+<h4 id="getpda.28object.29" name="getpda.28object.29"><code>getpda(<em>object</em>)</code></h4>
+
+<p>指定した <em>object</em> のプロパティ記述子を返します。</p>
+
+<h4 id="getslx.28object.29" name="getslx.28object.29"><code>getslx(<em>object</em>)</code></h4>
+
+<p>指定されたオブジェクトを構成するコードの行数であるスクリプト行エクステントを返します。</p>
+
+<h4 id="help.28.5Bcommand_....5D.29" name="help.28.5Bcommand_....5D.29"><code>help(<em>[command ...]</em>)</code></h4>
+
+<p>指定されたコマンド、または指定されていない場合は使用可能なすべての機能に関する簡単なヘルプ情報を表示します。</p>
+
+<h4 id="intern.28string.29" name="intern.28string.29"><code>intern(<em>string</em>)</code></h4>
+
+<p>指定された <var>string</var> をアトムテーブルに内部化します。すべての文字列はアトムと呼ばれる一意の識別子を持ちます。このシステムにより、文字列間の比較が簡単になります。</p>
+
+<div class="note"><strong>メモ:</strong> この関数は、JavaScript エンジンをテストするときにのみ使用されることを意図しています。</div>
+
+<h4 id="line2pc.28.5Bfunction.2C_.5D_line.29" name="line2pc.28.5Bfunction.2C_.5D_line.29"><code>line2pc(<em>[function, ] line</em>)</code></h4>
+
+<p>指定されたコード行に対応するプログラムカウンタ値を返します。<em>function</em> が指定されている場合、<em>line</em> は指定された関数へのオフセットです。</p>
+
+<h4 id="load.28filename1_.5Bfilename.5D.29" name="load.28filename1_.5Bfilename.5D.29"><code>load(<em>filename1</em> <em>[filename]</em>)</code></h4>
+
+<p>指定された名前で JavaScript ファイルをロードします。</p>
+
+<div class="note"><strong>メモ:</strong> JavaScript 以外のファイルをロードするには、<code>read()</code> を使用してください。</div>
+
+<h4 id="options.28.5Boption_....5D.29" name="options.28.5Boption_....5D.29"><code>options(<em>[option ...]</em>)</code></h4>
+
+<p>オプションを設定または取得できます。コマンドラインでオプションを指定した場合、<code>options</code> を呼び出した結果は、どのオプションを要求したかを示します。新しいオプションを渡して設定することもできます。</p>
+
+<p>利用可能なオプションは以下のとおりです:</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">オプション名</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code>strict</code></td>
+   <td>ストリクトモードが有効になります。</td>
+  </tr>
+  <tr>
+   <td><code>werror</code></td>
+   <td>警告はエラーとして扱われます。</td>
+  </tr>
+  <tr>
+   <td><code>atline</code></td>
+   <td><code>atline</code> が有効になっているとき、<code>//@line <em>num</em></code> の形式のコメントは次の行の番号を <code><em>num</em></code> に設定します。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="pc2line.28function.2C_.5Bpc.5D.29" name="pc2line.28function.2C_.5Bpc.5D.29"><code>pc2line(<em>function, [pc]</em>)</code></h4>
+
+<p>指定された <em>function</em> の最初の行に対応する JavaScript コードの行番号を返します。関数にプログラムカウンタオフセットを指定した場合は、そのオフセットを含むコード行の行番号が返されます。</p>
+
+<h4 id="print.28.5Bexpression_....5D.29" name="print.28.5Bexpression_....5D.29"><code>print(<em>[expression ...]</em>)</code></h4>
+
+<p><em>expression(s)</em> を評価し、その結果を <code>stdout</code> にスペース (" ") で区切って表示し、改行 ("\n") で終了します。</p>
+
+<h4 id="print.28.5Bexpression_....5D.29" name="print.28.5Bexpression_....5D.29"><code>putstr(<em>expression</em>)</code></h4>
+
+<p><em>expression</em> を評価し、その結果を <code>stdout</code> に表示します。</p>
+
+<h4 id="quit.28.29" name="quit.28.29"><code>quit(<em>[status]</em>)</code></h4>
+
+<p>シェルを終了します。省略した場合、<em>status</em> はデフォルトで 0 になります。</p>
+
+<h4 id="read.28filename.5B.2C_type.5D.29" name="read.28filename.5B.2C_type.5D.29"><code>read(<em>filename[, type]</em>)</code></h4>
+
+<p>ファイルの内容を読み込んで返します。typeが "binary" の場合は <code>Uint8Array</code> が返され、それ以外の場合は UTF-8 でデコードされた文字列が返されます。</p>
+
+<h4 id="readline.28.29" name="readline.28.29"><code>readline()</code></h4>
+
+<p><code>stdin</code> から単一行の入力を読み込み、呼び出し元に返します。これを使って JavaScript でインタラクティブシェルプログラムを作成することができます。</p>
+
+<h4 id="scatter.28fnArray.29" name="scatter.28fnArray.29">Reflect.parse()</h4>
+
+<p><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/Parser_API" title="en/SpiderMonkey/Parser_API">Parser API</a> を参照してください。</p>
+
+<div class="note"><strong>メモ:</strong> この関数は、JavaScript エンジンをテストするときにのみ使用することを意図しています。</div>
+
+<h4 id="seal.28object.5B.2C_deep.5D.29" name="seal.28object.5B.2C_deep.5D.29"><code>seal(<em>object[, deep]</em>)</code></h4>
+
+<p>指定した <em>object</em>、または <em>deep</em> が <code>true</code> の場合はオブジェクトグラフをシールします。オブジェクトまたはオブジェクトグラフを封印することで、それらのオブジェクトの変更を無効にします。</p>
+
+<h4 id="sleep.28dt.29" name="sleep.28dt.29"><code>sleep(dt)</code></h4>
+
+<p>{{ jsapi_minversion_inline("1.8") }} <code><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_THREADSAFE">JS_THREADSAFE</a></code> でのみビルドされます。<em>dt</em> 秒間スリープします。秒の端数がサポートされています。成功した場合に<code>true</code>、スリープが中断された場合に<code>false</code>を返します。</p>
+
+<h4 id="stackQuota" name="stackQuota"><code>stackQuota(<em>[number]</em>)</code> {{obsolete_inline}}</h4>
+
+<p>スクリプトスタッククォータを取得または設定します。</p>
+
+<h4 id="throwError.28.29" name="throwError.28.29"><code>throwError()</code></h4>
+
+<p><code>JS_ReportError()</code> 関数からエラーをスローします。</p>
+
+<div class="note"><strong>メモ:</strong> この関数は、JavaScript エンジンをテストするときにのみ使用することを意図しています。</div>
+
+<h4 id="trap.28.5Bfunction.2C_.5Bpc.2C.5D.5D_expression.29" name="trap.28.5Bfunction.2C_.5Bpc.2C.5D.5D_expression.29"><code>trap(<em>[function, [pc,]] expression</em>)</code></h4>
+
+<p>JavaScript コードの特定の位置にトラップを設定します。関数 <em>function</em> の <em>pc</em> で指定されたオフセットのバイトコードが実行されようとしているとき、式は評価されます。</p>
+
+<p><code>line2pc()</code> と組み合わせて使用すると、これは強力なデバッグメカニズムです。たとえば、関数 <code>doSomething()</code> の 6 行目が実行されたときにメッセージを表示したい場合は、次のように入力します。</p>
+
+<pre>trap(doSomething, line2pc(doSomething, 6), "print('line 6!\n')");
+</pre>
+
+<div class="note"><strong>メモ:</strong> トラップが設定されると、<code>untrap()</code> を使用してトラップを削除するまで、プログラム内の対応するバイトコードが <code>trap</code> バイトコードに置き換えられます。</div>
+
+<h4 id="untrap.28function_.5B.2C_pc.5D.29" name="untrap.28function_.5B.2C_pc.5D.29"><code>untrap(<em>function [, pc]</em>)</code></h4>
+
+<p>オフセット <em>pc</em> で指定した <em>function</em> からトラップを削除します。<em>pc</em> が指定されていない場合、トラップは関数のエントリポイントから削除されます。</p>
+
+<p>指定された場所にトラップがない場合、この機能は無効です。</p>
+
+<h4 id="version.28.5Bnumber.5D.29" name="version.28.5Bnumber.5D.29"><code>version(<em>[number]</em>)</code></h4>
+
+<p><code>version()</code> 関数を使用すると、JavaScript のバージョン番号を取得または設定できます。これは、特定のバージョンの JavaScript でのみ使用可能な構文にアクセスするのに役立ちます (たとえば、<a href="/ja/docs/Web/JavaScript/New_in_JavaScript/1.7#Using_JavaScript_1.7">JavaScript 1.7 の使用</a>を参照)。</p>
+
+<h3 id="Debug_functions" name="Debug_functions">デバッグ関数</h3>
+
+<p>これらの組み込み関数は <code>DEBUG</code> ビルドでのみ利用可能です。</p>
+
+<h4 id="dis.28.5Bfunction.5D.29" name="dis.28.5Bfunction.5D.29"><code>dis(<em>[function]</em>)</code></h4>
+
+<p>プログラム全体、または指定された <em>function</em> の JavaScript バイトコードを逆アセンブルします。</p>
+
+<p>たとえば、以下の JavaScript 関数を入力したとします。</p>
+
+<pre class="eval">function test() {
+  var i = 3;
+  print(i+2);
+}
+</pre>
+
+<p>それから <code>dis(test);</code> コマンドを実行すると、この出力が得られます。</p>
+
+<pre>main:
+00000:  uint16 3
+00003:  setvar 0
+00006:  pop
+00007:  name "print"
+00010:  pushobj
+00011:  getvar 0
+00014:  uint16 2
+00017:  add
+00018:  call 1
+00021:  pop
+00022:  stop
+
+Source notes:
+  0:     0 [   0] newline
+  1:     3 [   3] decl     offset 0
+  2:     7 [   4] newline
+  3:    18 [  11] xdelta
+  4:    18 [   0] pcbase   offset 11
+</pre>
+
+<h4 id="dissrc.28.5Bfunction.5D.29" name="dissrc.28.5Bfunction.5D.29"><code>dissrc(<em>[function]</em>)</code></h4>
+
+<p>プログラム全体または指定された <em>function</em> の JavaScript バイトコードを逆アセンブルして、ソース行を表示します。この関数は、シェルの起動時に <code>-f</code> フラグを使用するか、<code>load()</code> 関数を使用してファイルからロードされたプログラムに対してのみ機能します。</p>
+
+<p>プログラムに関数 <code>doStuff()</code> が含まれている場合は、次のようになります。</p>
+
+<pre>function doStuff(input) {
+	print("Enter a number: ");
+	var n1 = readline();
+	print("Enter another one: ");
+	var n2 = readline();
+
+	print("You entered " + n1 + " and " + n2 + "\n");
+}
+</pre>
+
+<p><code>dissrc(doStuff)</code> 関数を呼び出すと、次の出力が得られます。</p>
+
+<pre>;-------------------------  10:         print("Enter a number: ");
+00000:  10  name "print"
+00003:  10  pushobj
+00004:  10  string "Enter a number: "
+00007:  10  call 1
+00010:  10  pop
+;-------------------------  11:         var n1 = readline();
+00011:  11  name "readline"
+00014:  11  pushobj
+00015:  11  call 0
+00018:  11  setvar 0
+00021:  11  pop
+;-------------------------  12:         print("Enter another one: ");
+00022:  12  name "print"
+00025:  12  pushobj
+00026:  12  string "Enter another one: "
+00029:  12  call 1
+00032:  12  pop
+;-------------------------  13:         var n2 = readline();
+00033:  13  name "readline"
+00036:  13  pushobj
+00037:  13  call 0
+00040:  13  setvar 1
+00043:  13  pop
+;-------------------------  14:
+;-------------------------  15:         print("You entered " + n1 + " and " + n2 + "\n");
+00044:  15  name "print"
+00047:  15  pushobj
+00048:  15  string "You entered "
+00051:  15  getvar 0
+00054:  15  add
+00055:  15  string " and "
+00058:  15  add
+00059:  15  getvar 1
+00062:  15  add
+00063:  15  string "\\n"
+00066:  15  add
+00067:  15  call 1
+00070:  15  pop
+00071:  15  stop
+</pre>
+
+<h4 id="dumpheap.28.28.5BfileName.5B.2C_start.5B.2C_toFind.5B.2C_maxDepth.5B.2C_toIgnore.5D.5D.5D.5D.5D.29" name="dumpheap.28.28.5BfileName.5B.2C_start.5B.2C_toFind.5B.2C_maxDepth.5B.2C_toIgnore.5D.5D.5D.5D.5D.29"><code>dumpheap((<em>[fileName[, start[, toFind[, maxDepth[, toIgnore]]]]]</em>)</code></h4>
+
+<p>GC 情報をダンプします。これは <code><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_DumpHeap">JS_DumpHeap</a></code> の軽量なラッパーです。</p>
+
+<h4 id="gczeal.28zeal.29" name="gczeal.28zeal.29"><code>gczeal(<em>zeal</em>)</code></h4>
+
+<p>GC の危険性の発見に役立つように、頻繁な GC を有効にします。<em>zeal</em> は整数です。意味は <code><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_SetGCZeal">JS_SetGCZeal</a></code> のパラメータと同じです。</p>
+
+<h4 id="notes.28.5Bfunction.5D.29" name="notes.28.5Bfunction.5D.29"><code>notes(<em>[function]</em>)</code></h4>
+
+<p>指定した機能のソースノートを表示します。ソースノートには、バイトコードをソースコードにマップする情報が含まれています。これは、<code>dissrc()</code> 関数を使用する場合など、コードを逆コンパイルするときに使用されます。</p>

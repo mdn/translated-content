@@ -1,0 +1,233 @@
+---
+title: MTBF tests
+slug: Archive/B2G_OS/Automated_testing/MTBF_tests
+translation_of: Archive/B2G_OS/Automated_testing/MTBF_tests
+---
+<div class="summary">
+<p>Les essais de MTBF sont une suite de tests de Firefox OS construits au-dessus du framework  <a href="https://developer.mozilla.org/en-US/Firefox_OS/Automated_testing/gaia-ui-tests">Gaiatest (Tests IU Gaia)</a> . Les tests effectués sur de vrais dispositifs de Firefox OS, et utilisent <a href="https://developer.mozilla.org/en-US/docs/Mozilla/QA/Marionette">Marionette </a>pour conduire l'interface utilisateur de l'appareil. Ces tests sont conçus pour mesurer la stabilité / fiabilité de l'application, et de remplacer <a href="https://developer.mozilla.org/en-US/Firefox_OS/Automated_testing/Endurance">les tests d'endurance Gaia</a> maintenant abandonnées.</p>
+</div>
+
+<p><strong>Mean time between failures (MTBF)</strong> is the predicted elapsed time between inherent failures of a system during operation. MTBF can be calculated as the arithmetic mean (average) time between failures of a system. The MTBF is typically part of a model that assumes the failed system is immediately repaired (mean time to repair, or MTTR), as a part of a renewal process. This is in contrast to the mean time to failure (MTTF), which measures average time to failures with the modeling assumption that the failed system is not repaired (infinite repair time).</p>
+
+<h2 id="Current_Environment_Setup">Current Environment &amp; Setup</h2>
+
+<p>MTBF tests are run by automation; the test suite collects general test cases like send sms, email, set alarm, etc., and executes them to emulate typical user behavior.  Right now we have more than 10 Firefox OS phones concurrently running tests in our test lab.</p>
+
+<h3 id="How_often_are_the_tests_run">How often are the tests run?</h3>
+
+<p>MTBF is purposed to test on versions or branches with 0 functional failures.  it runs when everything passes in our smoke tests; the testing code should be in the Aurora (next release) branch.</p>
+
+<h3 id="Where_can_I_see_the_results">Where can I see the results?</h3>
+
+<p>MTBF is still being developed and you can mail us for an early report (try the <a href="https://lists.mozilla.org/listinfo/dev-b2g">dev-b2g</a> or <a href="https://lists.mozilla.org/listinfo/dev-gaia">dev-gaia</a> mailing lists).  You can set up the necessary environment to run the tests yourself and generate your own reports by following the below steps.</p>
+
+<h2 id="Running_the_tests">Running the tests</h2>
+
+<p>Let's go through the steps required to set up the Gaia-UI MTBF test environment and run the tests on your local machine and Firefox OS device.</p>
+
+<h3 id="Prerequisites">Prerequisites</h3>
+
+<ul>
+ <li>Ubuntu 12.04 (or better) x64 or Mac OS X (these instructions are confirmed for 10.8 but should work on previous versions of 10, theoretically.)</li>
+ <li>A Firefox OS device ALREADY FLASHED with an ENGINEERING build of Firefox OS B2G-18 V1-Train (1.1.)</li>
+ <li><a href="/en-US/Firefox_OS/Debugging/Installing_ADB">ADB installed</a>, and the environment variable <code>ADB_PATH</code> pointing to your ADB location.</li>
+</ul>
+
+<p>If you are on Ubuntu, you need to check that it is configured to support the USB connection to the Firefox OS device. To verify this, connect the device to your computer via USB, open a terminal and enter the <code>adb logcat</code> command to see if it connects. If not, you may need to set up a <a href="/en-US/Firefox_OS/Firefox_OS_build_prerequisites#For_Linux.3A_configure_the_udev_rule_for_your_phone">udev rule</a> for the device.</p>
+
+<div class="note">
+<p><strong>Note</strong>: At the point where you start running through the following steps, the Firefox OS device should not be connected to your computer. You will be told when to connect it in the steps below.</p>
+</div>
+
+<h3 id="Step_1_Clone_the_MTBF-Driver_repository_from_Mozilla-TWQA">Step 1: Clone the MTBF-Driver repository from Mozilla-TWQA</h3>
+
+<p>The Gaia-UI MTBF Tests are located in the Mozilla Github Gaia repository. Assuming that you haven’t done so already, the first step is to clone that repo:</p>
+
+<pre class="brush: bash">git clone https://github.com/Mozilla-TWQA/MTBF-Driver.git</pre>
+
+<p>You may want to go get a coffee and come back in five minutes. Furthermore, you can get all the branches and try to switch to the current MTBF branch (e.g. master or v1.4+.) In this case, master matches the current master branch Gaia, and v1.4+ matches the v1.4/v1.3 branch Gaia.</p>
+
+<h3 id="Step_2_Run_the_GaiaTest_setup">Step 2: Run the GaiaTest setup</h3>
+
+<p>The Gaia-UI MTBF tests are built upon the GaiaTest framework (which uses <a href="https://developer.mozilla.org/en-US/docs/Marionette" title="Marionette">Marionette</a>). The next step is to run the setup script to install GaiaTest and all of the required dependencies. You may wish to create a new virtual environment to use with the Gaia-UI MTBF Tests. If you don’t, you may need to use <code>sudo</code> while running the setup command. In your terminal, type:</p>
+
+<pre class="brush: bash">cd MTBF-Driver
+python setup.py develop</pre>
+
+<h3 id="Step_3_Get_memory_tools_if_you_need_them">Step 3: Get memory tools if you need them</h3>
+
+<p>To access the memory tools, find them in the <code>tools</code> directory in the <code>B2G</code> repo. If you've not already got this, clone it from Github like so (this is also a large download):</p>
+
+<pre class="brush: bash">git clone https://github.com/mozilla-b2g/B2G.git</pre>
+
+<p>You should copy the tools folder into the <code>MTBF-Driver/mtbf_drivers</code> directory.</p>
+
+<h3 id="Step_4_Set_test_vars_and_acknowledge_risks">Step 4: Set test vars and acknowledge risks</h3>
+
+<p>GaiaTest uses a special file to set certain variables that are required for test configuration, for example to tell the device which WiFi network it should use. Before running the Gaia-UI MTBF Tests, you must set up the test vars file. Make a copy of the <code>gaia/tests/python/gaia-ui-tests/gaiatest/testvars_template.json</code> file in its existing location (rename it to something memorable) and edit it:</p>
+
+<ul>
+ <li>If the Firefox OS device has a SIM card, add the corresponding phone number in the phone number field in the <code>carrier</code> section, e.g. <code>"phone_number": "5551234567"</code>.</li>
+ <li>Add the same phone number inside the <code>"remote_phone_number"</code> field.</li>
+ <li>In the <code>wifi</code> section, add the SSID for the Wifi network that the Firefox OS device is to connect to during the tests in the <code>ssid</code> field, for example <code>"ssid": "Wifi Network Name"</code>.</li>
+</ul>
+
+<p>Running the Gaia-UI MTBF tests will result in data being erased from the Firefox OS device and microSD card. This is to ensure that the tests start cleanly each time. For example, running a contacts test on a device that already has 10,000 contacts will have very different memory value results compared to running the same test on a device with no existing contacts. In order to run the tests, you must acknowledge that you are aware of this data loss risk. You should also <a href="/en-US/Firefox_OS/Developing_Gaia/Gaia_tools_reference#Backup_and_restore_profile">backup any data</a> you don't want to lose.</p>
+
+<p>To acknowledge the risks, add the following entry to your <code>testvars</code> file as the first field in the list: <code>"acknowledged_risks": true</code>.</p>
+
+<div class="note">
+<p><strong>Note</strong>: If the risks are not acknowledged in the <code>testvars</code> file, the tests will not run.</p>
+</div>
+
+<h3 id="Step_5_Connect_to_USB_and_ADB_Forward_the_Device">Step 5: Connect to USB and ADB Forward the Device</h3>
+
+<p>Attach the Firefox OS device to your computer via USB.</p>
+
+<div class="note">
+<p><strong>Note</strong>: If you’re using an Ubuntu VM, after attaching the device ensure the VM sees the device and connects to it; in the VM select <strong>VM &gt; Removable Devices &gt; Your Device &gt; Connect</strong> and wait for the device to connect to the VM.</p>
+</div>
+
+<p>Now tell <code>adb</code> to forward the device port to GaiaTest using the following command:</p>
+
+<pre class="brush: bash">adb forward tcp:2828 tcp:2828</pre>
+
+<div class="note">
+<p><strong>Note</strong>: If you are using the Firefox OS Leo device, you must first tell ADB to be the root user, like so:</p>
+
+<pre>adb root
+adb forward tcp:2828 tcp:2828</pre>
+</div>
+
+<h3 id="Step_6_Run_a_Test">Step 6: Run a Test</h3>
+
+<p>Now you’re ready to actually try running a test. Use the following commands:</p>
+
+<pre class="brush: bash">cd {MTBF Driver Folder}
+MTBF_TIME=1d MTBF_CONF=conf/local.json mtbf --address=localhost:2828 --testvars=mytestvars.json</pre>
+
+<p>We can parse the <code>MTBF_TIME</code> by d(ay), h(our), or m(inute).</p>
+
+<p>If you get a “connection refused” error it means the device USB connection didn’t work; just repeat the device connection and try again.</p>
+
+<p>The Firefox OS device b2g process should now restart, then the specified test will run with a single iteration. If you watch the Firefox OS device, you’ll see the device UI being manipulated by Marionette. After the test finishes, a memory checkpoint will be performed.</p>
+
+<div class="note">
+<p><strong>Note</strong>: The Gaia-UI MTBF tests now grab the Firefox OS device’s b2g process RSS value for the memory use checkpoint (it used to be the V-SIZE value.)</p>
+</div>
+
+<p>The test result will be displayed in the terminal window. Note that this result doesn’t include the b2g process memory value; this value is stored in a text file, created at the time of the checkpoint in the <code>checkpoints</code> directory. To see the resulting b2g process, open this file. This "suite_summary" file will contain the average b2g process memory use (RSS) value, averaged from all the test checkpoints (in our example there was only one checkpoint.)</p>
+
+<p>There are two other files present in the <code>checkpoints</code> folder (assuming the test run was the "add contact" test):</p>
+
+<ul>
+ <li>The <code>checkpoint_add_contact_(datetime)_summary.log</code> file contains a summary for the test run. This includes the number of iterations, all of the RSS value readings from each checkpoint, the average RSS value, etc.</li>
+ <li>The <code>checkpoint_add_contact_(datetime).log</code> file contains the raw data received from each of the device checkpoints, from which the summary files were produced.</li>
+</ul>
+
+<h3 id="Step_7_Using_Variables_and_Config_Files">Step 7: Using Variables and Config Files</h3>
+
+<p>We use envrionment variable MTBF_TIME for running duration.  The other one is MTBF_CONF which refers to json file, specific runner options include test case repository and list.  A normal config file should look like </p>
+
+<pre><code>{
+  "memory_report": false,
+  "logcat": true,
+  "overall_status": true,
+  "b2g_status": true,
+  "get_event": true,
+  "rootdir": "tests/mtbf",
+  "workspace": "/tmp/workspace",
+  "manifest_prefix": "mtbf",
+  "archive": "output",
+  "runlist": "runlist/all.list",
+  "level": 4
+}</code></pre>
+
+<ul>
+ <li>memory_report, locat, overall_status, b2g_status and get event help: options for collecting debug information.</li>
+ <li>rootdir: root of test case repository for searching and matching in runlist.</li>
+ <li>workspace: running materials will be stored here for replay.</li>
+ <li>manifest_prefix: currently not available.</li>
+ <li>archive: specifying folder for storing report and debug information</li>
+ <li>runlist: json file by a list of test case file path.  Test cases will be randomly picked and put into running queue.</li>
+ <li>level: specify how often a dummy case (to simulator user not focusing) should be triggered. level 0 is no test will be run, where level 5 means no dummy test enqueued.</li>
+</ul>
+
+<h2 id="Contributing_to_the_project">Contributing to the project</h2>
+
+<p>If you have any questions about the Firefox OS MTBF tests or are interested in contributing to this important automation development effort, feel free to contact us at wachen@mozilla.com</p>
+
+<h2 id="How_to_migrate_test_cases_from_Gaia-ui-tests">How to migrate test cases from Gaia-ui-tests</h2>
+
+<p>This section provides a guide to migrating tests between gaia-ui tests and MTBF.</p>
+
+<h3 id="Step_1_Rename" dir="ltr">Step 1: Rename</h3>
+
+<ul>
+ <li><code>from MtbfTestCase import GaiaMtbfTestCase</code>
+
+  <ul>
+   <li>(original) <code>from gaiatest import GaiaTestCase</code></li>
+  </ul>
+ </li>
+ <li><code>class XXX(GaiaMtbfTestCase)</code>
+  <ul>
+   <li>(original) <code>class XXX(GaiaTestCase)</code></li>
+  </ul>
+ </li>
+ <li>If it has a <code>setUp()</code> or <code>tearDown()</code> method, use <code>GaiaMtbfTestCase</code>
+  <ul>
+   <li>(original) <code>GaiaTestCase</code></li>
+  </ul>
+ </li>
+</ul>
+
+<h3 id="Step_2_Add" dir="ltr">Step 2: Add</h3>
+
+<ul>
+ <li>If there's no <code>setUp()</code> method , add it before the general test function.</li>
+ <li>Add <code>GaiaMtbfTestCase.setUp(self)</code> as the first step of <code>setUp()</code>.
+  <ul>
+   <li>Environment check/recovery and app initialization.</li>
+   <li><code>launch</code> &gt; <code>launch_by_touch</code> if possible.</li>
+   <li>Get the handle using <code>self.app_id</code>.</li>
+  </ul>
+ </li>
+ <li>If there's no <code>tearDown()</code> method, add it after the general test function.</li>
+ <li>Add <code>GaiaMtbfTestCase.tearDown(self)</code> as the last step of <code>tearDown()</code>.
+  <ul>
+   <li>Handle data after the test is finished (delete/remove/move/etc.)</li>
+  </ul>
+ </li>
+</ul>
+
+<h3 id="Step_3_Principles">Step 3: Principles</h3>
+
+<ul>
+ <li>Modify <code>assert()</code> functions in your tests (make sure they work for multiple test cases.)</li>
+ <li>If porting cases from Gaia-UI-Test, you need to declare <code>app</code> as a test class member.</li>
+ <li>If multiple apps init/launch in a case; please refer to the <code>card_view</code> cases.
+  <ul>
+   <li>Unless your clean actions don't involve UI interactions, avoid this scenario if you can.</li>
+   <li>For example, use device manager to remove the file on the device.</li>
+   <li>In such cases, you may need to call <code>marionette.refresh()</code> to get the latest update.</li>
+  </ul>
+ </li>
+ <li>Replace <code>datetime.fromtimestamp</code> with <code>datetime.utcfromtimestamp</code> if you want to implement calendar related cases.</li>
+</ul>
+
+<h3 id="Step_4_About_apps">Step 4: About apps</h3>
+
+<ol>
+ <li><code>apps</code> &gt; <code>mtbf_apps</code> if needed.</li>
+ <li>Import original apps.</li>
+ <li>Add <code>__init__()</code> and any functions you need.</li>
+</ol>
+
+<h3 id="Step_5_After_you_have_finished">Step 5: After you have finished</h3>
+
+<ol>
+ <li>Test each test case using <em>Test full suite &gt; Test full suite with shuffle</em></li>
+ <li>Check PEP8 errors</li>
+ <li>Use a pull request to add your test cases to the main repo! Do not push directly.</li>
+</ol>

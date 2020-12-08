@@ -1,0 +1,292 @@
+---
+title: 性能
+slug: Mozilla/Firefox/Multiprocess_Firefox/Message_Manager/Performance
+translation_of: Mozilla/Firefox/Multiprocess_Firefox/Message_Manager/Performance
+---
+<div>{{FirefoxSidebar}}</div><p>着重讲几点框架脚本/消息管理器的使用方式和替代方法，以避免相关的性能缺陷。</p>
+
+<p>要牢记几点：</p>
+
+<ul>
+ <li>附加组件启动时注册的脚本将在会话恢复时被执行。较长的执行时间会使浏览器启动后的响应速度缓慢。</li>
+ <li>框架脚本还可以在未恢复的标签页上被执行。所有开销不止发生在已激活的标签页，而是取决于会话中的标签页总数。</li>
+</ul>
+
+<div class="note">
+<p>下面的例子为了简洁，省略了一些样板代码</p>
+
+<p>“更好”的例子还省略了一些最佳实践。只是为了演示如何解决各子主题中描述的问题。</p>
+</div>
+
+<h2 id="性能的最佳实践">性能的最佳实践</h2>
+
+<h3 id="每个进程中声明无状态函数">每个进程中声明无状态函数</h3>
+
+<p>不良：</p>
+
+<pre class="brush: js">// addon.js
+<code>Services.mm.loadFrameScript</code>("framescript.js", true)
+</pre>
+
+<pre class="brush: js">// framescript.js
+
+const precomputedConstants = // ...
+
+function helper(window, action) {
+  // ...  do some work on the window
+}
+
+function doSomething(message) {
+  result = helper(content, message.data)
+  sendAsyncMessage("my-addon:response-from-child", {something: result})
+}
+
+addMessageListener("my-addon:request-from-parent", doSomething)
+</pre>
+
+<p> </p>
+
+<p>Why is this bad? Because declared functions are also objects. And since frame scripts get evaluated for each tab this means new function objects get instantiated, new constants get computed, block scopes must be set up etc.</p>
+
+<p>While it may seem fairly innocencous in this toy example, real scripts often have a lot more functions and initialize some fairly heavyweight objects.</p>
+
+<p>更好：</p>
+
+<p><em>addon.js 如上</em></p>
+
+<pre class="brush: js">// framescript.js
+Components.utils.import("resource://my-addon/processModule.jsm", {}).addFrame(this)
+</pre>
+
+<pre class="brush: js">// processModule.jsm
+
+const EXPORTED_SYMBOLS = ['addFrame'];
+
+const precomputedConstants = // ...
+
+function helper(window, action) {
+  // ... do some work on the window
+}
+
+function doSomething(message) {
+  frameGlobal = message.target
+  result = helper(frameGlobal.content, message.data)
+  frameGlobal.sendAsyncMessage("my-addon:response-from-child", {something: result})
+}
+
+function addFrame(frameGlobal) {
+  frameGlobal.addMessageListener("my-addon:request-from-parent", doSomething)
+}
+</pre>
+
+<p><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Using">Javascript modules</a> are per-process singletons and thus all their objects are only initialized once, which makes them suitable for stateless callbacks.<br>
+ <br>
+ But care must be taken to not leak references to the frame script global when it is passed into a JSM. Alternatively the frame's <a href="/en-US/Firefox/Multiprocess_Firefox/Message_Manager/Frame_script_environment">unload event</a> or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap">weak maps</a> can be used to ensure that frames can be cleaned up when their respective tab is closed.</p>
+
+<h3 id="每个进程中存放重量级的状态"><a name="per-process-state">每个进程中存放重量级的状态</a></h3>
+
+<p>不良：</p>
+
+<pre class="brush: js">// addon.js
+var main = new MyAddonService();
+
+main.onChange(stateChange);
+
+function stateChange() {
+  Services.mm.<code>broadcastAsyncMessage("my-addon:update-configuration", {newConfig: </code>main<code>.serialize()})</code>
+}
+</pre>
+
+<pre class="brush: js">// framescript.js
+var mainCopy;
+
+function onUpdate(message) {
+   mainCopy = MyAddonService.deserialize(message.data.newConfig);
+}
+
+addMessageListener("my-addon:update-configuration", onUpdate)
+
+
+// mainCopy used by other functions
+</pre>
+
+<p>The main issue here is that a separate object is kept for each tab. Not only does that increase memory footprint but the deserialization also has to be executed seperately for each tab, thus requiring more CPU time.</p>
+
+<p>不良：</p>
+
+<pre class="brush: js">// addon.js
+var main = new MyAddonService();
+
+main.onChange(stateChange);
+
+function stateChange() {
+  Services.ppmm.<code>broadcastAsyncMessage("my-addon:update-configuration", {newConfig: </code>main<code>.serialize()})</code>
+}</pre>
+
+<pre class="brush: js">// processModule.jsm
+const EXPORTED_SYMBOLS = ['getMainCopy'];
+
+var mainCopy;
+
+Services.cpmm.addMessageListener(<code>"my-addon:update-configuration"</code>, function(message) {
+  mainCopy = message.data.newConfig;
+})
+
+funtion getMainCopy() {
+  return mainCopy;
+}
+
+</pre>
+
+<pre class="brush: js">// framescript.js
+Components.utils.import("resource://my-addon/processModule.jsm")
+
+// getMainCopy() used by other functions
+</pre>
+
+<p> </p>
+
+<h3 id="不要在框架脚本中注册观察者（及其他到全局服务的回调）">不要在框架脚本中注册观察者（及其他到全局服务的回调）</h3>
+
+<p>不良：</p>
+
+<pre class="brush: js">//framescript.js
+Services.obs.addObserver("document-element-inserted", {
+  observe: function(doc, topic, data) {
+     if(doc.ownerGlobal.top != content)
+        return; // bail out if  this is for another tab
+     decorateDocument(doc);
+  }
+})</pre>
+
+<p>Observer notifications get fired for events that happen <em>anywhere</em> in the browser, they are not scoped to the current tab. If each framescript registers a seperate listener then the observed action will trigger the callbacks in all tabs.</p>
+
+<p>Additionally the example above does not clean unregister itself, thus leaking objects each time a tab is closed. Frame message manager  message and event listeners are limited in their lifetime to that of the frame itself, this does not apply  to observer registrations.</p>
+
+<p>更好：</p>
+
+<p><span style="display: none;"> </span><span style="display: none;"> </span><span style="display: none;"> </span><span style="display: none;"> </span> </p>
+
+<dl>
+ <dt>content-document-global-created 通知</dt>
+ <dd>可以用 <a href="/en-US/Firefox/Multiprocess_Firefox/Message_Manager/Frame_script_environment">DOMWindowCreated</a> 事件取代</dd>
+ <dt>其他观察者和服务</dt>
+ <dd>应该在 <a href="/en-US/docs/Mozilla/Firefox/Multiprocess_Firefox/Message_Manager/Process_scripts">进程脚本</a> 中注册，或者用 JSM 代替</dd>
+</dl>
+
+<p> </p>
+
+<h3 id="根据需要加载框架脚本">根据需要加载框架脚本</h3>
+
+<p>不良：</p>
+
+<pre class="brush: js">// addon.js
+<code>Services.mm.loadFrameScript</code>("framescript.js", /*delayed:*/ true)
+
+// stuff communicating with the framescript
+</pre>
+
+<pre class="brush: js">// framescript.js
+function onlyOnceInABlueMoon() {
+   // we only need this during a total solar eclipse while goat blood rains from the sky
+   sendAsyncMessage('my-addon:paragraph-count', {num: content.document.querySelectorAll('p').length})
+}
+addMessageListener("my-addon:request-from-parent", onlyOnceInABlueMoon)
+</pre>
+
+<p>更好：</p>
+
+<pre class="brush: js">// addon.js
+function onToolbarButton(event) {
+  let tabMM = gBrowser.mCurrentBrowser.frameLoader.messageManager;
+  let button = event.target;
+  let callback = (message) =&gt; {
+    tabMM.removeMessageListener("my-addon:paragraph-count", callback)
+    decorateButton(button, message.data.num)
+  }
+  tabMM.addMessageListener("my-addon:paragraph-count", callback);
+  tabMM.loadFrameScript("data:,sendAsyncMessage('my-addon:paragraph-count', {num: content.document.querySelectorAll('p').length})", false)
+}
+
+function decorateButton(button, count) {
+  // do stuff with result
+}
+</pre>
+
+<p>This executes the script only when it is needed and only in one tab and allows it to be garbage-collected immediately after execution.  As long as it the action does not happen frequently the memory and startup savings should outstrip the added cost of script evaluation.</p>
+
+<p>Delaying the script registration <a href="/en-US/docs/Observer_Notifications#Application_startup">until the session is restored</a> my provide some middle ground for some addons. It does not provide the same memory footprint reductions but it improves application startup.</p>
+
+<p> </p>
+
+<h3 id="向下推进信息，避免到父进程的调用">向下推进信息，避免到父进程的调用</h3>
+
+<p>不良：</p>
+
+<pre>// processscript.js
+
+function ContentPolicy() {
+  // ...
+}
+
+Object.assign(ContentyPolicy.prototype, {
+    classDescription: ..., classID: ..., contractID: ...,
+    QueryInterface: XPCOMUtils.generateQI([Ci.nsIContentPolicy]),
+
+    shouldLoad: function(type, location, origin, context) {
+
+       let resultList = Services.cpmm.sendSyncMessage("my-addon:check-load", {destination: location, source: origin}) // &lt;=== SYNC MESSAGE!
+
+       if(resultList.every((r) =&gt; r == true))
+           return Ci.nsIContentPolicy.<code>ACCEPT;
+
+       return Ci.nsIContentPolicy.REJECT_REQUEST;</code>
+    }
+});
+
+// more boilerplate code here
+</pre>
+
+<p>This example is a (somewhat condensed) <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentPolicy">content policy</a> which gets triggered for every network request in a child process to either allow or deny the request. Since the code calls to the parent process to check whether a specific request can be allowed it would slow down all page loads, as web pages generally issue dozens of requests.</p>
+
+<p>更好：</p>
+
+<p>Instead of only keeping the state in the parent an addon can employ a master-slave architecture where the parent has the authoritative state and replicates it to the child processes in advance so they can act based on their local copy.</p>
+
+<p>See the <a href="#per-process-state">previous chapter</a> on how to efficiently replicate addon state to each process.</p>
+
+<p> </p>
+
+<p> </p>
+
+<h3 id="附加组件卸载时的清理">附加组件卸载时的清理</h3>
+
+<p> </p>
+
+<p>不良：</p>
+
+<p>包括上述所有例子，*包括上述的“更好”*</p>
+
+<p>If your addon is restartless or uses the SDK then updates or the user turning it off and on will load to unload/reload events. Not handling those properly can lead to duplicate or conflicting code execution, especially when messages are sent. It can also lead to conflicts between the old and new code. Under some circumstances it may even cause exceptions when attempting to register something twice under the same ID.</p>
+
+<p>更好：</p>
+
+<pre class="brush: js">// addon.js
+function onUnload() {
+  Services.mm.removeDelayedFrameScript("resources://my-addon/framescript.js");
+  Services.ppmm.removeDelayedProcessScript("resources://my-addon/processcript.js");
+  Services.mm.broadcastAsyncMessage("my-addon:unload");
+  Services.ppmm.broadcastAsyncMessage("my-addon:unload");
+}
+</pre>
+
+<p>在框架/进程脚本中：</p>
+
+<ul>
+ <li>移除各种监听器</li>
+ <li>移除观察者通知</li>
+ <li>移除自定义的类和服务</li>
+ <li><a href="/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.Sandbox#Freeing_the_sandbox">nuke 沙盒</a></li>
+ <li><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Using#Unloading_code_modules">卸载 JSM</a></li>
+ <li>必要时还原内容 DOM 的状态，例如移除附加组件加入的不再需要的互动 UI 元素</li>
+</ul>

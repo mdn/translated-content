@@ -1,0 +1,89 @@
+---
+title: スクリーンショットを取る
+slug: Archive/B2G_OS/Debugging/taking_screenshots
+tags:
+  - Firefox OS
+  - スクリーンショット
+  - デバッグ
+translation_of: Archive/B2G_OS/Debugging/taking_screenshots
+---
+<div class="summary">
+<p><span class="seoSummary">アプリケーションのスクリーンショットを撮ることは、多くの状況で役立ちます。例えば顧客に成果を見せたり、アプリを Marketplace に発行したり。この記事では Firefox OS 電話機でスクリーンショットを撮る方法を説明します。</span></p>
+</div>
+
+<div class="note">
+<p><strong>記</strong>: Android 開発者は手馴れているでしょう: 手順は全く一緒です。</p>
+</div>
+
+<h2 id="電話機を準備する">電話機を準備する</h2>
+
+<ol>
+ <li>電話機で、<a href="/ja/Firefox_OS/Debugging/Developer_settings">Developer Settings</a> に移動し、<em>Remote Debugging</em> と <em>Console Enabled</em> をチェックします。</li>
+ <li>電話機に <a href="/ja/Firefox_OS/Debugging/Installing_ADB">ADB がインストールされていて</a>、動作するのを確認します。</li>
+ <li>電話機を USB 経由でコンピュータに接続します。</li>
+</ol>
+
+<h2 id="スクリーンショットを取る">スクリーンショットを取る</h2>
+
+<p>4 つの選択肢があります: ターミナルを使用するか、Eclipse で DDMS を使用するか、電話機で専用のボタンの組み合わせを使うか、アプリマネージャを使用するかです。</p>
+
+<h3 id="ターミナル">ターミナル</h3>
+
+<p>ターミナルウィンドウを開き、下記 3 つのコマンドを入力します:</p>
+
+<ol>
+ <li>下記のコマンドを使用しスクリーンショットを撮ります (<code>screenshot.png</code> の名前は変更可能です):<br>
+  <code>adb shell screencap -p /sdcard/screenshot.png</code></li>
+ <li>コンピュータに画像を移動します:<br>
+  <code>adb pull /sdcard/screenshot.png</code></li>
+ <li>端末からスクリーンショットを削除します:<br>
+  <code>adb shell rm /sdcard/screenshot.png</code></li>
+</ol>
+
+<p>あるいは、ffmpeg を使用することもできます:</p>
+
+<ol>
+ <li>ffmpeg がインストールされているのを確認します:
+  <ol>
+   <li>Mac で MacPorts を使用している場合、<code>sudo port install ffmpeg</code> を実行します。homebrew では、<code>brew install ffmpeg</code> を実行します。</li>
+   <li>Linux (Ubuntu/Debian) では、<code>sudo apt-get install ffmpeg</code> を使用します。</li>
+  </ol>
+ </li>
+ <li><code>cd</code> コマンドで <code>B2G/gaia</code> ディレクトリに移動します。</li>
+ <li><code>make screenshot</code> コマンドを使ってスクリーンショットを撮ります。</li>
+ <li><code>screenshot.png</code> という名前のスクリーンショットができます。</li>
+</ol>
+
+<h3 id="DDMS">DDMS</h3>
+
+<p>Eclipse を起動します。</p>
+
+<ol>
+ <li>DDMS を開きます: <em>Window &gt; Open Perspective &gt; Other &gt; DDMS</em></li>
+ <li>左側のパネルにある <em>Devices</em> タブ内で、<em>Screen capture</em> ボタンをクリックします。</li>
+ <li>いくつかのオプション付きの新規ウィンドウが開きます; <em>Save</em> ボタンをクリックしてスクリーンショットを保存します。</li>
+</ol>
+
+<div class="note">
+<p><strong>記</strong>: DDMS についてもっと学ぶには、<a href="http://developer.android.com/tools/debugging/ddms.html" title="DDMS documentation">DDMS documentation</a> をご覧ください。</p>
+</div>
+
+<h3 id="電話機のボタンの組み合わせ">電話機のボタンの組み合わせ</h3>
+
+<ol>
+ <li>Firefox OS バージョン 2.0 以下では、<em>Home</em> ボタンと <em>電源</em> ボタンを同時に数秒間長押しします。</li>
+ <li>Firefox OS バージョン 2.1 以降では、<em>Volume Down</em> ボタンと <em>電源</em> ボタンを同時に数秒間長押しします。</li>
+</ol>
+
+<p>これでスクリーンショットが撮られ、Gallery に保存されます。画像は SD カードからコンピュータに、最もやりやすい方法でコピーできます。</p>
+
+<div class="note">
+<p><strong>記</strong>: 多くの人にとって <em>Home</em> ボタンと <em>電源</em> ボタンが想定より難しい (特に片手では) ために、ボタンの組み合わせが変更されました。加えて、ハードウェアの <em>Home</em> ボタンがない端末がきちんとサポートされいていなかった (ロック画面のように Gaia のあちこちでソフトウェア <em>Home</em> ボタンが使えない)のが変更の原因です。</p>
+</div>
+
+<h3 id="アプリマネージャSimulator">アプリマネージャ/Simulator</h3>
+
+<ol>
+ <li><a href="https://developer.mozilla.org/ja/Firefox_OS/Using_the_App_Manager">アプリマネージャ</a> を開き、電話機と接続し、左の <strong>Device</strong> タブに移ります。</li>
+ <li>ページ下部 (Simulator を起動したのと同じ場所) にある <strong>スクリーンショット</strong> ボタンをクリックします。</li>
+</ol>

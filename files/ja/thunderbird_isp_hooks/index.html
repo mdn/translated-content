@@ -1,0 +1,176 @@
+---
+title: Thunderbird ISP hooks
+slug: Thunderbird_ISP_hooks
+tags:
+  - Administration
+  - enterprise
+translation_of: Mozilla/Projects/Thunderbird/Thunderbird_ISP_hooks
+---
+<h3 id=".E3.82.A4.E3.83.B3.E3.83.88.E3.83.AD.E3.83.80.E3.82.AF.E3.82.B7.E3.83.A7.E3.83.B3" name=".E3.82.A4.E3.83.B3.E3.83.88.E3.83.AD.E3.83.80.E3.82.AF.E3.82.B7.E3.83.A7.E3.83.B3">イントロダクション</h3>
+<p>ISP やウェブメールプロバイダから E メールにアクセスすることは、Thunderbird を使い始めようとする多くのユーザにとって大きな負担になります。ユーザは、POP または IMAP 受信サーバ名、認証方法、SSL/TLS などのセキュリティ設定、送信サーバ名などの固有の設定情報を知る必要があります。多くの ISP やウェブメールプロバイダは、様々な設定を持つ異なるメールクライアントでアカウント設定ができるように、ユーザを導くオンラインドキュメントを維持しなければなりません。</p>
+<p>現在の Thunderbird には、ISP およびウェブメールのユーザが簡単にアカウントを作成できるようにする仕組みがあります。新規ユーザがアカウントに関連付けられた E メールアドレスを入力すると、Thunderbird は残りのアカウントの詳細を設定します。Thunderbird 2 は gmail および .mac アカウントの ISP 情報を搭載しています。追加の ISP 設定は拡張機能としてインストールすることができます。</p>
+<p>このドキュメントでは、ISP 設定ファイルの書き方と Thunderbird 用の拡張機能としてバンドルする方法について説明します。</p>
+<h3 id=".E4.BB.95.E7.B5.84.E3.81.BF" name=".E4.BB.95.E7.B5.84.E3.81.BF">仕組み</h3>
+<p>考え方は至って簡単です。ISP やウェブメールプロバイダのためのアカウント設定は RDF または XML ファイルで指定されています。このファイルは、ユーザが拡張機能としてインストールすることができます。</p>
+<p>Thunderbird はこれらの設定ファイルを探し、新しいアカウントの項目をアカウント作成ウィザードに追加します。ユーザは氏名とユーザ名を入力し、残りのアカウント設定は設定ファイルから自動的に設定されます。</p>
+<p>以下の画像は、仮の ISP ファイルを追加したアカウント作成ウィザードのスクリーンショットです。</p>
+<p><img alt="Image:ISPAccountwizard.png" class="internal" src="/@api/deki/files/1737/=ISPAccountwizard.png"></p>
+<h3 id="ISP_.E8.A8.AD.E5.AE.9A.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AE.E4.BD.9C.E6.88.90" name="ISP_.E8.A8.AD.E5.AE.9A.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AE.E4.BD.9C.E6.88.90">ISP 設定ファイルの作成</h3>
+<p>設定ファイルは、メールアカウント (IMAP, News, POP3, movemail) および (適切な場合は) 送信サーバのデフォルト設定が書かれた、文字コードが UTF-8 の単純なテキストファイルです。</p>
+<h4 id=".E5.AE.9F.E4.BE.8B" name=".E5.AE.9F.E4.BE.8B">実例</h4>
+<p>こちらに、テンプレートとして利用できる ISP 設定ファイルの実例があります。</p>
+<ul>
+  <li>{{ Source("mailnews/base/ispdata/gmail.rdf") }}</li>
+  <li>{{ Source("mailnews/base/ispdata/dotmac.rdf") }}</li>
+  <li><a class="external" href="http://infosec.ufl.edu/tbird/Gatorlink.rdf" rel="freelink">http://infosec.ufl.edu/tbird/Gatorlink.rdf</a></li>
+</ul>
+<h4 id=".E3.82.A2.E3.82.AB.E3.82.A6.E3.83.B3.E3.83.88.E5.B1.9E.E6.80.A7.E3.81.AE.E8.BF.BD.E5.8A.A0" name=".E3.82.A2.E3.82.AB.E3.82.A6.E3.83.B3.E3.83.88.E5.B1.9E.E6.80.A7.E3.81.AE.E8.BF.BD.E5.8A.A0">アカウント属性の追加</h4>
+<p>メールアカウントには、それに関連付けられたいくつかのオブジェクトがあります。受信サーバ、送信 (SMTP) サーバ、そしてユーザ情報です。各オブジェクトは、設定ファイルの中で指定できる固有の設定を持っています。</p>
+<ul>
+  <li>設定ファイル内に記述する一般的な受信サーバに関するタグは、{{ Source("mailnews/base/public/nsIMsgIncomingServer.idl", "nsIMsgIncomingServer.idl") }} で指定されている属性に合わせます。(タグは、この IDL ファイルの「<code>attribute</code>」としてリストされているすべてのオブジェクトに自動的にマッピングされます)</li>
+  <li>ユーザ情報に関するタグも、同じように {{ Source("mailnews/base/public/nsIMsgIdentity.idl", "nsIMsgIdentity.idl") }} で指定されている属性に合わせます。</li>
+  <li>送信サーバに関するタグも、同じように {{ Source("mailnews/compose/public/nsISmtpServer.idl", "nsISmtpServer.idl") }} で指定されている属性に合わせます。</li>
+</ul>
+<p>注: 受信サーバの種類は文字列で、<code>imap</code>、<code>pop3</code>、<code>nntp</code> のいずれかです。以下は POP サーバを定義した例です。</p>
+<pre>&lt;!-- POP3 サーバ情報 --&gt;
+&lt;NC:incomingServer&gt;
+  &lt;NC:nsIMsgIncomingServer&gt;
+    &lt;NC:prettyName&gt;Mozilla ISP&lt;/NC:prettyName&gt;
+    &lt;NC:hostName&gt;pop.example.net&lt;/NC:hostName&gt;
+    &lt;NC:type&gt;pop3&lt;/NC:type&gt;
+    &lt;!--
+        Thunderbird 3 では、以下の設定が "TypeError: dest.setBoolAttribute is not a function"
+        を引き起こし、作成されるアカウントが不正なものとなってしまいます。
+        &lt;NC:rememberPassword&gt;true&lt;/NC:rememberPassword&gt;
+    --&gt;
+  &lt;/NC:nsIMsgIncomingServer&gt;
+&lt;/NC:incomingServer&gt;
+</pre>
+<p><code>NC:type</code> を <code>pop3</code> から <code>imap</code> に変えると、IMAP サーバのアカウントを作成できます。</p>
+<p>{{ Source("mailnews/base/public/nsIMsgIncomingServer.idl", "nsIMsgIncomingServer.idl") }} を見ると、<code>port</code> という一般的な属性があります。ISP は、nsIMsgIncomingServer にポート属性を導入することで、サーバに非標準のポートを指定することができます:</p>
+<pre>&lt;NC:incomingServer&gt;
+  &lt;NC:nsIMsgIncomingServer&gt;
+  ..
+  &lt;NC:port&gt;555&lt;/NC:port&gt;
+  ..
+  &lt;/NC:nsIMsgIncomingServer&gt;
+&lt;/NC:incomingServer&gt;
+</pre>
+<p><code>nsIMsgIncomingServer</code> に含まれている、ISP がよく設定したいと考えるもうひとつの一般的な属性は <code>socketType</code> です。この値には、<code>0</code> (標準のソケット)、<code>1</code> (可能であれば TLS を使用)、<code>2</code> (常に TLS を使用)、<code>3</code> (SSL を使用) のいずれかを指定できます。</p>
+<p><code>nsIMsgIncomingServer</code> に含まれている一般的な属性はすべてこの設定ファイルで指定できます。ユーザ情報と送信サーバの設定についても同様です。</p>
+<h5 id=".E7.89.B9.E5.AE.9A.E3.81.AE.E3.82.B5.E3.83.BC.E3.83.90.E5.90.91.E3.81.91.E3.81.AE.E5.B1.9E.E6.80.A7" name=".E7.89.B9.E5.AE.9A.E3.81.AE.E3.82.B5.E3.83.BC.E3.83.90.E5.90.91.E3.81.91.E3.81.AE.E5.B1.9E.E6.80.A7">特定のサーバ向けの属性</h5>
+<p>一般的な属性に加えて、一部の属性は特定の種類の受信サーバにのみ適用されます。これらをサーバ情報内のセクションに分けて指定してください。この例は IMAP サーバ用です:</p>
+<pre>&lt;NC:ServerType-imap&gt;
+  &lt;NC:nsIImapIncomingServer&gt;
+    &lt;NC:cleanupInboxOnExit&gt;true&lt;/NC:cleanupInboxOnExit&gt;
+  &lt;/NC:nsIImapIncomingServer&gt;
+&lt;/NC:ServerType-imap&gt;
+</pre>
+<p>これらのタグに一致する属性は次のコードで定義されています:</p>
+<ul>
+  <li>{{ Source("mailnews/imap/public/nsIImapIncomingServer.idl", "nsIImapIncomingServer.idl") }} : IMAP 向け</li>
+  <li>{{ Source("mailnews/local/public/nsIPop3IncomingServer.idl", "nsIPop3IncomingServer.idl") }} : POP3 サーバ向け</li>
+  <li>{{ Source("mailnews/local/public/nsIMovemailIncomingServer.idl", "nsIMovemailIncomingServer.idl") }} : movemail サーバ向け</li>
+  <li>{{ Source("mailnews/news/public/nsINntpIncomingServer.idl", "nsINntpIncomingServer.idl") }} : news サーバ向け</li>
+</ul>
+<h5 id=".E3.83.89.E3.83.A1.E3.82.A4.E3.83.B3.E3.82.92.E5.BF.85.E8.A6.81.E3.81.A8.E3.81.99.E3.82.8B.E3.83.A6.E3.83.BC.E3.82.B6.E5.90.8D" name=".E3.83.89.E3.83.A1.E3.82.A4.E3.83.B3.E3.82.92.E5.BF.85.E8.A6.81.E3.81.A8.E3.81.99.E3.82.8B.E3.83.A6.E3.83.BC.E3.82.B6.E5.90.8D">ドメインを必要とするユーザ名</h5>
+<p>一部の ISP やウェブメールプロバイダでは、受信サーバや送信サーバのユーザ名の後にドメイン名を追加する必要があります。これは、設定ファイル内で次のタグでを使用して指定することができます: <code>incomingServerUserNameRequiresDomain</code> および <code>smtpUserNameRequiresDomain</code>。</p>
+<p>この例は、ユーザ名にドメイン名が追加されたものを必要とする SMTP サーバ の例です。<code>smtpUserNameRequiresDomain</code> タグが <code>smtp</code> 要素を閉じた後に書かれていることに注意してください。</p>
+<pre>&lt;NC:smtp&gt;
+  &lt;NC:nsISmtpServer&gt;
+    &lt;NC:hostname&gt;smtp.mozilla.org&lt;/NC:hostname&gt;
+    &lt;NC:port&gt;465&lt;/NC:port&gt;
+    &lt;NC:trySSL&gt;3&lt;/NC:trySSL&gt;
+    &lt;NC:description&gt;Moco&lt;/NC:description&gt;
+  &lt;/NC:nsISmtpServer&gt;
+&lt;/NC:smtp&gt;
+
+&lt;NC:smtpUserNameRequiresDomain&gt;true&lt;/NC:smtpUserNameRequiresDomain&gt;
+&lt;NC:smtpRequiresUsername&gt;true&lt;/NC:smtpRequiresUsername&gt;
+&lt;NC:smtpCreateNewServer&gt;true&lt;/NC:smtpCreateNewServer&gt;
+&lt;NC:smtpUsePreferredServer&gt;true&lt;/NC:smtpUsePreferredServer&gt;
+</pre>
+<h3 id=".E8.A8.AD.E5.AE.9A.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AE.E4.BE.8B" name=".E8.A8.AD.E5.AE.9A.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AE.E4.BE.8B">設定ファイルの例</h3>
+<p>これは gmail をサポートするために私たちが生成した RDF ファイルです。この例をコピーする場合は、about 属性を "domain:gmail.com" から変更することを忘れないでください。</p>
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;!DOCTYPE RDF&gt;
+&lt;RDF:RDF
+    xmlns:NC="http://home.netscape.com/NC-rdf#"
+    xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"&gt;
+
+  &lt;RDF:Description about="NC:ispinfo"&gt;
+    &lt;NC:providers&gt;
+      &lt;NC:nsIMsgAccount about="domain:gmail.com"&gt;
+        &lt;!-- pop3 server info --&gt;
+        &lt;NC:incomingServer&gt;
+          &lt;NC:nsIMsgIncomingServer&gt;
+            &lt;NC:prettyName&gt;Gmail&lt;/NC:prettyName&gt;
+            &lt;NC:hostName&gt;pop.gmail.com&lt;/NC:hostName&gt;
+            &lt;NC:type&gt;pop3&lt;/NC:type&gt;
+            &lt;NC:ServerType-pop3&gt;
+              &lt;NC:nsIPopIncomingServer&gt;
+                &lt;NC:leaveMessagesOnServer&gt;true&lt;/NC:leaveMessagesOnServer&gt;
+                &lt;NC:deleteMailLeftOnServer&gt;false&lt;/NC:deleteMailLeftOnServer&gt;
+              &lt;/NC:nsIPopIncomingServer&gt;
+            &lt;/NC:ServerType-pop3&gt;
+            &lt;NC:loginAtStartUp&gt;true&lt;/NC:loginAtStartUp&gt;
+            &lt;NC:downloadOnBiff&gt;true&lt;/NC:downloadOnBiff&gt;
+            &lt;!--
+                Thunderbird 3 では、以下の設定が "TypeError: dest.setBoolAttribute is not a function"
+                を引き起こし、作成されるアカウントが不正なものとなってしまいます。
+                &lt;NC:rememberPassword&gt;true&lt;/NC:rememberPassword&gt;
+            --&gt;
+            &lt;NC:port&gt;995&lt;/NC:port&gt;
+            &lt;NC:socketType&gt;3&lt;/NC:socketType&gt;
+          &lt;/NC:nsIMsgIncomingServer&gt;
+        &lt;/NC:incomingServer&gt;
+
+        &lt;!-- smtp server info --&gt;
+        &lt;NC:smtp&gt;
+          &lt;NC:nsISmtpServer&gt;
+            &lt;NC:hostname&gt;smtp.gmail.com&lt;/NC:hostname&gt;
+            &lt;NC:port&gt;587&lt;/NC:port&gt;
+            &lt;NC:trySSL&gt;2&lt;/NC:trySSL&gt;
+            &lt;NC:description&gt;Gmail&lt;/NC:description&gt;
+          &lt;/NC:nsISmtpServer&gt;
+        &lt;/NC:smtp&gt;
+        &lt;NC:smtpRequiresUsername&gt;true&lt;/NC:smtpRequiresUsername&gt;
+        &lt;NC:smtpCreateNewServer&gt;true&lt;/NC:smtpCreateNewServer&gt;
+        &lt;NC:smtpUsePreferredServer&gt;true&lt;/NC:smtpUsePreferredServer&gt;
+
+        &lt;!-- identity defaults --&gt;
+        &lt;NC:identity&gt;
+          &lt;NC:nsIMsgIdentity&gt;
+          &lt;/NC:nsIMsgIdentity&gt;
+        &lt;/NC:identity&gt;
+
+        &lt;!-- other options --&gt;
+        &lt;NC:wizardSkipPanels&gt;true&lt;/NC:wizardSkipPanels&gt;
+        &lt;NC:wizardShortName&gt;Gmail&lt;/NC:wizardShortName&gt;
+        &lt;NC:wizardLongName&gt;Gmail&lt;/NC:wizardLongName&gt;
+        &lt;NC:wizardShow&gt;true&lt;/NC:wizardShow&gt;
+        &lt;NC:wizardPromote&gt;true&lt;/NC:wizardPromote&gt;
+        &lt;NC:emailProviderName&gt;Gmail&lt;/NC:emailProviderName&gt;
+        &lt;NC:sampleEmail&gt;example@gmail.com&lt;/NC:sampleEmail&gt;
+        &lt;NC:sampleUserName&gt;example&lt;/NC:sampleUserName&gt;
+        &lt;NC:emailIDDescription&gt;Gmail Username:&lt;/NC:emailIDDescription&gt;
+        &lt;NC:showServerDetailsOnWizardSummary&gt;true&lt;/NC:showServerDetailsOnWizardSummary&gt;
+      &lt;/NC:nsIMsgAccount&gt;
+    &lt;/NC:providers&gt;
+  &lt;/RDF:Description&gt;
+&lt;/RDF:RDF&gt;
+</pre>
+<h3 id=".E3.83.86.E3.82.B9.E3.83.88.E3.81.99.E3.82.8B" name=".E3.83.86.E3.82.B9.E3.83.88.E3.81.99.E3.82.8B">テストする</h3>
+<p>ISP 設定ファイルの作成時に、拡張機能としてインストールせずに、すばやく設定をテストすることができる方法があります。まず設定ファイルのコピーを &lt;path to thunderbird.exe&gt;\isp\ に置きます。gmail.rdf および rss.rdf がすでにその場所にあるはずです。Thunderbird を再起動すると、あなたのアカウント項目がアカウント作成ウィザードに記載されるでしょう。</p>
+<h3 id=".E9.85.8D.E5.B8.83" name=".E9.85.8D.E5.B8.83">配布</h3>
+<p>これで、ISP やウェブメールプロバイダのための設定ファイルの作成が完了しました。次はこれを配布しましょう。</p>
+<p>配布には 2 つの方法があります: 拡張機能として配布、またはカスタムビルドを配布します。</p>
+<h4 id=".E6.8B.A1.E5.BC.B5.E6.A9.9F.E8.83.BD" name=".E6.8B.A1.E5.BC.B5.E6.A9.9F.E8.83.BD">拡張機能</h4>
+<p>設定ファイルは、Mozilla の拡張機能システムを使って Thunderbird 2 にインストールできます。拡張機能は <a class="link-https" href="https://addons.mozilla.org/thunderbird/extensions/">Mozilla Add-ons</a> に登録することもできます。</p>
+<p>拡張機能には isp という名前のサブディレクトリ内に設定ファイルを含める必要があります。Thunderbird 2.0.0.x は有効な拡張機能の一覧から isp という名前のディレクトリを探します。アカウントウィザードは、これらの場所に見つかった RDF または XML 設定ファイルを読み込みます。</p>
+<h5 id=".E6.8B.A1.E5.BC.B5.E6.A9.9F.E8.83.BD.E3.81.AE.E3.82.B5.E3.83.B3.E3.83.97.E3.83.AB" name=".E6.8B.A1.E5.BC.B5.E6.A9.9F.E8.83.BD.E3.81.AE.E3.82.B5.E3.83.B3.E3.83.97.E3.83.AB">拡張機能のサンプル</h5>
+<p>テンプレートとして使用できる拡張機能の例があります: <a href="/@api/deki/files/1723/=Example-isp.xpi" title="File:ja/Media_Gallery/Example-isp.xpi">Media:Example-isp.xpi</a> をダウンロードしてください。XPI ファイルは、WinZIP のような ZIP プログラムを使用して展開できる、ただの ZIP ファイルです。</p>
+<h4 id=".E3.82.AB.E3.82.B9.E3.82.BF.E3.83.A0.E3.83.93.E3.83.AB.E3.83.89" name=".E3.82.AB.E3.82.B9.E3.82.BF.E3.83.A0.E3.83.93.E3.83.AB.E3.83.89">カスタムビルド</h4>
+<p>カスタマイズ版の Thunderbird 2 を配布されている場合は、<code>$INSTALLFOLDER/isp/</code> に RDF または XML ファイルを追加するだけです。<code>$INSTALLFOLDER</code> は <code>thunderbird.exe</code> があるフォルダです。Thunderbird はこれらの RDF ファイルを、このフォルダ内で探します。</p>
+<p>注: Thunderbird 1.5.0.x では、この指定の場所は <code>$INSTALLFOLDER/defaults/isp</code> にしなければなりません。</p>
+<p>{{ languages( { "en": "en/Thunderbird_ISP_hooks" } ) }}</p>

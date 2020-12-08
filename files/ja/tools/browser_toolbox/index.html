@@ -1,0 +1,74 @@
+---
+title: ブラウザーツールボックス
+slug: Tools/Browser_Toolbox
+tags:
+  - Debug
+  - Firefox
+  - JavaScript
+translation_of: Tools/Browser_Toolbox
+---
+<p>{{ToolsSidebar}}</p>
+
+<p>ブラウザーツールボックスは通常の <a href="/ja/docs/Tools/Tools_Toolbox">ツールボックス</a> とは異なり、ウェブページだけでなくアドオンやブラウザー自体の JavaScript をデバッグすることができます。ブラウザーツールボックスのコンテキストは単一のタブ内のページではなく、ブラウザー全体になります。</p>
+
+<div class="note">
+<p><em>注記: リスタートレスまたは SDK ベースのアドオンをデバッグしたい場合は、<a href="/ja/docs/Mozilla/Add-ons/Add-on_Debugger">アドオンデバッガー</a> を試してください。それら以外のアドオンでは、ブラウザーツールボックスを使用してください。</em></p>
+</div>
+
+<h2 id="Enabling_the_Browser_Toolbox" name="Enabling_the_Browser_Toolbox">ブラウザーツールボックスの有効化</h2>
+
+<div>
+<p>ブラウザーツールボックスはデフォルトで無効です。有効化するには、"ブラウザーとアドオンのデバッガを有効" および "リモートデバッガを有効" にチェックを入れなければなりません。</p>
+
+<p>開発ツールの <a href="/ja/docs/Tools/Settings">オプション</a> を開いて、"<a href="/ja/docs/Tools/Settings#Advanced_settings">詳細な設定</a>" で "ブラウザーとアドオンのデバッガーを有効" および "リモートデバッガーを有効" にチェックを入れてください。</p>
+
+<p><img alt="Developer Tools Settings" src="https://mdn.mozillademos.org/files/16236/settings_for_browser_debugger.png" style="border: 1px solid black; display: block; height: 744px; margin: 0 auto; width: 900px;"></p>
+</div>
+
+<h2 id="Opening_the_Browser_Toolbox" name="Opening_the_Browser_Toolbox">ブラウザーツールボックスを開く</h2>
+
+<p>メニューボタン <img alt="new fx menu" class="frameless wiki-image" src="https://support.cdn.mozilla.net/media/uploads/gallery/images/2014-01-10-13-08-08-f52b8c.png" style="line-height: 1.5;" title=""> をクリックして、メニュー項目 "開発ツール"、"ブラウザーツールボックス" の順に選択すると、ブラウザーツールボックスが開きます。</p>
+
+<p>Firefox 39 より、<kbd>Ctrl</kbd> + <kbd>Alt</kbd> +<kbd>Shift</kbd> + <kbd>I</kbd> のキーコンビネーション (Mac では <kbd>Cmd</kbd> + <kbd>Opt</kbd> +<kbd>Shift</kbd> + <kbd>I</kbd>) でも開くことができます。</p>
+
+<p>ブラウザーツールボックスを開くと、以下のようなダイアログを表示します (これは設定項目 <code>devtools.debugger.prompt-connection</code> を false にすることで無効化できます):</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/11119/browser-toolbox-warning.png" style="display: block; height: 326px; margin-left: auto; margin-right: auto; width: 600px;">OK をクリックすると、ブラウザーツールボックスを個別のウィンドウで表示します:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/11121/browser-toolbox.png" style="display: block; height: 649px; margin-left: auto; margin-right: auto; width: 900px;">ブラウザーの chrome ウィンドウの調査、またブラウザー自体および実行中のアドオンが読み込んでいるすべての JavaScript ファイルの確認とデバッグが可能です。また、以下の開発ツールへ全面的にアクセスできます:</p>
+
+<ul>
+ <li><a href="/ja/docs/Tools/Debugger">デバッガー</a> (<em>注記: リスタートレスまたは SDK ベースのアドオンをデバッグしたい場合は、<a href="/ja/docs/Mozilla/Add-ons/Add-on_Debugger">アドオンデバッガー</a>を試してください。)</em></li>
+ <li><a href="/ja/docs/Tools/Browser_Console">コンソール</a></li>
+ <li><a href="/ja/docs/Tools/Style_Editor">スタイルエディター</a></li>
+ <li><a href="/ja/docs/Tools/Profiler">パフォーマンス</a></li>
+ <li><a href="/ja/docs/Tools/Network_Monitor">ネットワークモニター</a></li>
+ <li><a href="/ja/docs/Tools/Scratchpad">スクラッチパッド</a></li>
+ <li><a href="/ja/docs/Tools/Page_Inspector">ページインスペクター</a></li>
+</ul>
+
+<p>chrome: および about: のページは一般のコンテンツページと同様に、通常の <a href="/ja/docs/Tools/Debugger">デバッガー</a> でデバッグできます。</p>
+
+<h2 id="Targeting_a_document" name="Targeting_a_document">対象ドキュメントを決める</h2>
+
+<p>通常のツールボックスでは、<a href="/ja/docs/Tools/Working_with_iframes">ドキュメント内の特定の iframe を対象にすることができるボタンがツールバーにあります</a>。Firefox 40 よりブラウザーツールボックスにも同じ外見のボタンがありますが、こちらは iframe だけでなくトップレベルの chrome ウィンドウや content ウィンドウもリストに含まれています。これにより content タブだけでなく個々の chrome ウィンドウやポップアップ内のドキュメントも調査できます。</p>
+
+<p>例えばブラウザーウィンドウが 2 つあり、そのうちひとつに content タブが 1 つ、もうひとつのウィンドウに content タブが 2 つある場合は、フレーム選択のリストが以下のようになります:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/11117/browser-toolbox-iframes.png" style="display: block; height: 652px; margin-left: auto; margin-right: auto; width: 900px;"></p>
+
+<h2 id="Debugging_popups" name="Debugging_popups">ポップアップをデバッグする</h2>
+
+<p>ポップアップをデバッグするのは難しいです。ポップアップを外に出すとすぐにブラウザがそれらを隠すからです。この動作を無効にする方法があります。ツールボックスメニューをクリックし、<strong>ポップアップの自動非表示を無効にする</strong>を選択します。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/16234/popup_auto-hide.png" style="display: block; height: 249px; margin: 0px auto; width: 350px;"></p>
+
+<p>これでポップアップを開くと、<kbd>Esc</kbd> キーを押すまで開いたままになります。 Inspector のノードピッカーを使用してそのパネルを選択し、その内容を調べて変更することができます。</p>
+
+<p>{{EmbedYouTube("6edXcunw4jM")}}</p>
+
+<p>同じテクニックを使って、<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/デバッグ#Debugging_popups">アドオンによって作成されたポップアップ</a>をデバッグできます。</p>
+
+<div class="note">
+<p><strong>メモ</strong>: この変更はブラウザを再起動しても永続的ではありません。ブラウザのツールボックスを閉じると、設定はクリアされます。</p>
+</div>

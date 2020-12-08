@@ -1,0 +1,198 @@
+---
+title: ボックスモデル
+slug: Archive/Mozilla/XUL/School_tutorial/The_Box_Model
+tags:
+  - XUL
+translation_of: Archive/Add-ons/Overlay_Extensions/XUL_School/The_Box_Model
+---
+<div><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/School_tutorial/Adding_events_and_commands" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/School_tutorial/Adding_windows_and_dialogs">次のページ  »</a></p>
+</div></div>
+
+
+<p>XUL をマスターするには、その<a href="/ja/docs/XUL_Tutorial/The_Box_Model" title="XUL Tutorial/The Box Model">ボックスモデル</a>をよく理解しておく必要があります。これは、XUL ドキュメント内におけるすべての要素の視覚的なレイアウトを決定するシステムです。異なるオペレーティングシステムや画面サイズと解像度で簡単にローカライズやスキンを施せるインタフェースを作成するために、どのように作用するかを知っておくことが重要です。</p>
+
+<p>XUL のボックスモデルには、垂直指向の HTML レイアウトモデルと比べて数多くの改善点があります。XUL では、垂直指向だけでなく、水平指向のレイアウトも定義でき、インタフェースデザインに優れた柔軟性を提供しています。</p>
+
+<p>XUL インタフェースは、次の基本的なコンポーネントに分けられます:</p>
+<ul>
+  <li>ボックス</li>
+  <li>テキスト</li>
+  <li>画像</li>
+  <li>整列と伸縮自在な配置</li>
+  <li>幅と高さ</li>
+  <li>マージンとパディング</li>
+</ul>
+
+<p>メニューやツールバー、ボタンなど、XUL におけるほとんどの複雑な要素は、これらの単純な構成要素からできています。複雑な要素は、後で取り上げる XBL を通して、単純なものから作成されます。この単純な考え方を理解しさえすれば、DOM インスペクタ と CSS を使用して XUL 要素を形作り、とても分かりやすく柔軟なレイアウトを作成できるようになるでしょう。</p>
+
+<p>このセクションで紹介するほとんどの例は、<a href="/samples/xultu/examples/aligner.xul" title="samples/xultu/examples/aligner.xul">XUL Box Alignment Example</a> を使用して作られています。これらの例で、ボックスモデルの基本的なパーツがどのように振る舞うかを試すことをお勧めします。</p>
+
+
+
+
+
+<h2 id="Boxes" name="Boxes">ボックス</h2>
+
+<p>XUL のボックスは、HTML の <a href="/ja/docs/Web/HTML/Element/div" title="HTML の コンテンツ分割要素 (&lt;div>) は、フローコンテンツの汎用コンテナーです。 CSS を用いてスタイル付けがされるまでは、コンテンツやレイアウトには影響を与えません。"><code>&lt;div&gt;</code></a> とよく似ています。これは、スタイル付けが無い、不可視の四角形のコンテナです (<code>div</code> にはデフォルトのスタイルがあります)。両者の振る舞いは似ていますが、XUL と HTML の根本的な違いの一つに、XUL のボックスは垂直指向と水平指向の両方のインタフェースがデザインできることがあります (<code>div</code> は垂直指向のみ)。</p>
+
+<p>XUL には、<a href="/ja/docs/XUL/hbox" title="XUL/hbox">hbox</a> および <a href="/ja/docs/XUL/vbox" title="XUL/vbox">vbox</a> 、<a href="/ja/docs/XUL/box" title="XUL/box">box</a> の 3 つの基本的なボックス要素があります。<code>hbox</code> 要素は、デフォルトで、その子ノードが左から右へ順に表示される水平指向のレイアウトになります。<em>vbox</em> 要素は、デフォルトで、その子ノードが上から下へ順に表示される垂直指向のレイアウトになります。<code>box</code> 要素は、どちらにでも指定できる一般的なバージョンですが、デフォルトで水平指向のレイアウトになります。 <code>hbox</code> とほとんど同じなので、あまり使用されません。</p>
+<p>以下は、3 個のボタンを持つ <code>hbox</code> のとても単純な例です:</p>
+
+<pre class="brush:xml">&lt;hbox&gt;
+  &lt;button label="Cat" /&gt;
+  &lt;button label="Parrot" /&gt;
+  &lt;button label="Porcupine" /&gt;
+&lt;/hbox&gt;
+</pre>
+<p>これは、Mac OS での外観です (黒の枠線を追加しています。デフォルトでは、ボックスにはありません):</p>
+
+<p><img height="64" src="/@api/deki/files/4199/=box1.png" width="303"></p>
+
+<p>代わりに <em>vbox</em> を使用すると次のようになります:</p>
+
+<p><img height="132" src="/@api/deki/files/4200/=box2.png" width="121"></p>
+
+
+<p>ボックス (および他の XUL 要素) の指向性は、<a href="/ja/docs/XUL/Attribute/orient" title="XUL/Attribute/orient">orient</a> 属性か <a href="/ja/docs/CSS/-moz-box-orient" title="CSS/-moz-box-orient">-moz-box-orient</a> CSS プロパティを使用して制御することができます。これらを使用すると <code>hbox</code> を垂直指向にしたり <em>vbox</em> を水平指向にしたりできますが、ほとんど役に立ちません。CSS プロパティは場合によって役に立つことがあるかもしれませんが、orient 属性は、コンテンツと体裁を同じところに記述することになるのでお勧めできません。</p>
+
+
+
+
+
+<h2 id="Flexibility" name="Flexibility">伸縮自在な配置</h2>
+<p>HTML の <code>div</code> は、CSS で寸法を指定しなければ、そのコンテンツと同じ大きさになります。これは XUL でも同様です。ただし、XUL の場合は 2 つの方向を考慮しなければなりません。<code>hbox</code> は、そのコンテンツの水平方向と同じ幅になりますが、利用可能な垂直方向のスペースをすべて占有します。<code>hbox</code> を水平方向に伸縮自在にするには、CSS プロパティの <a href="/ja/docs/CSS/-moz-box-flex" title="CSS/-moz-box-flex">-moz-box-flex</a> か、<a href="/ja/docs/XUL/Attribute/flex" title="XUL/Attribute/flex">flex</a> 属性を使用してください。これは、<em>vbox</em> における垂直方向にも同様に適用されます。</p>
+<p>通常の style 属性と異なり、<em>flex</em> 属性は、XUL コード内で使用されることが想定されています。この属性は頻繁に使用されます。この属性を使用しなければ、多くの CSS コードを記述する必要があるでしょう。いずれにせよ、いつでも CSS で上書きできるため、あなたの拡張機能のスキンが失われることはありません。</p>
+<p>伸縮自在な配置は数値で定義されます。ほとんどの要素のデフォルト値は 0 です。この値は、要素がその方向に引き伸ばされず、そのサイズは要素のコンテンツとパディングにより決定されることを意味します。要素を伸縮自在にしたいときは、この値を 1 に設定してください。この値に設定すると、要素が引き伸ばされる方向の利用可能なスペースを占有します。最初の例の hbox を伸縮自在にすると、次のようになります:</p>
+
+
+<p><img height="64" src="/@api/deki/files/4201/=hboxflex.png" width="585"></p>
+
+
+<p>ボックスは、水平方向の空いたスペースを覆うように引き伸ばされます。ボタンは元のサイズを保っています。</p>
+<p>ここで、"Cat" ボタンを伸縮自在にすると、次のようになります:</p>
+
+<p><img height="64" src="/@api/deki/files/4202/=catflex.png" width="585"></p>
+
+<p>伸縮自在にしたボタンが利用可能な内部のスペースを占め、他の 2 個のボタンはボックスの末尾まで移動しました。</p>
+<p>"Parrot" ボタンも伸縮自在にするとどうなるでしょうか？</p>
+
+
+<p><img height="64" src="/@api/deki/files/4203/=catparrotflex.png" width="585"></p>
+
+
+<p>両方のボタンの値が 1 に設定されているため、利用可能なスペースが 2 個のボタンに均等に与えられました。ただし、常にこうなるとは限らないので注意してください。ボタンの一つが、その最小サイズよりも長いラベルを持っていた場合、そのボタンのサイズはラベルの長さに合わせられます。他のボタンは、残りのスペースを与えられます。</p>
+<p>伸縮自在な要素を異なるサイズにしたいときは、1 よりも大きな値を設定してください。</p>
+
+<p><img height="64" src="/@api/deki/files/4204/=morecatflex.png" width="585"></p>
+
+<p>上図では、"Cat" ボタンの <em>flex</em> 属性の値は 3、"Parrot" ボタンの <em>flex</em> 属性の値は 1 に設定しています。値が 3 に設定された "Cat" ボタンが 1 よりも長くなりました。ここでも、要素のコンテンツによって長さが変わることに注意してください。この例では、ボタン内のラベルとパディングのサイズに依存します。"Parrot" ボタンのラベルがもっと長かった場合、サイズの比率は維持されません。</p>
+<p>伸縮自在な要素のサイズをさらに制御することができます。<a href="/ja/docs/XUL/Attribute/minwidth" title="XUL/Attribute/minwidth">minwidth</a> や <a href="/ja/docs/XUL/Attribute/maxwidth" title="XUL/Attribute/maxwidth">maxwidth</a>, <a href="/ja/docs/XUL/Attribute/minheight" title="XUL/Attribute/minHeight">minheight</a>, <a href="/ja/docs/XUL/Attribute/maxheight" title="XUL/Attribute/maxheight">maxheight</a> 属性を使用するか、これらに相当する CSS の <a href="/ja/docs/CSS/min-width" title="CSS/min-width">min-width</a> や <a href="/ja/docs/CSS/max-width" title="CSS/max-width">max-width</a>, <a href="/ja/docs/CSS/min-height" title="CSS/min-height">min-height</a>, <a href="/ja/docs/CSS/max-height" title="CSS/max-height">max-height</a> を使用してください。chrome の skin セクションの style コードを維持するため、後者の使用が推奨されます。これらの名前からも分かる通り、要素が大きすぎたり小さすぎたりしないように、引き延ばす範囲を制御できます。</p>
+<div class="panel" style="border-width: 1px;">
+  <div class="panelContent">
+    <div class="note">
+      すべての CSS プロパティによる長さは、注意して扱わなければなりません。可能な限り、絶対単位 (px) ではなく、相対単位 (em, %) を使用することをお勧めします。相対単位を使用すれば、アクセシビリティに制限のあるユーザによりフォントサイズが変更されていても、その設定に比例して UI のサイズが変更されます。この規則の一般的な例外は、CSS が画像と直接関連しており、ピクセル単位 (px) で扱う必要がある場合です。</div>
+  </div>
+</div>
+<p>また、HTML のように、固定サイズの要素も、<a href="/ja/docs/CSS/width" title="CSS/width">width</a> と <a href="/ja/docs/CSS/height" title="CSS/height">height</a> CSS プロパティまたは属性を使用して制御できます。これらの属性は、伸縮自在な要素には適用されません。</p>
+
+
+
+
+
+<h3 id="Margins.2C_paddings_and_spacers" name="Margins.2C_paddings_and_spacers">マージンとパディング、スペース</h3>
+<p>マージン (外側の余白) とパディング (内側の余白) は、要素間のスペースや要素の内側のスペースを定義するために、HTML と XUL の両方で頻繁に使用されます。<a href="/ja/docs/CSS/margin" title="CSS/margin">margin</a> は、要素とその周りの要素の間のスペースを決定し、<a href="/ja/docs/CSS/padding" title="CSS/padding">padding</a> は、コンテナ要素の境界とその子ノードの間のスペースを決定します。</p>
+<p>時には、要素の間に伸縮自在のスペースを定義する必要があるでしょう。この場合は、<a href="/ja/docs/XUL/spacer" title="XUL/spacer">spacer</a> 要素に <em>flex</em> 値を指定して使用してください。<em>spacer</em> 要素は完全に不可視で、スペースを空けることしかしません。これは、伸縮自在のスペースが必要な時にだけ使用してください。固定サイズのスペースが必要な場合は、マージンやパディングを使用し、XUL ドキュメントに不要なノードを追加することは避けてください。</p>
+
+
+
+
+
+<h2 id="Alignment" name="Alignment">整列</h2>
+<p>XUL は、HTML と異なり、要素を水平方向や垂直方向に整列させる簡単な方法を提供しています。<a href="/ja/docs/XUL/Attribute/align" title="XUL/Attribute/align">align</a> 属性と <a href="/ja/docs/XUL/Attribute/pack" title="XUL/Attribute/pack">pack</a> 属性、または CSS プロパティの <a href="/ja/docs/CSS/-moz-box-align" title="CSS/-moz-box-align">-moz-box-align</a> と <a href="/ja/docs/CSS/-moz-box-pack" title="CSS/-moz-box-pack">-moz-box-pack</a> のどちらかを使用できます。pack は、コンテナの指向する方向における子要素の配置を決定します。aline は、もう一方の方向における配置を決定します。伸縮自在な <code>hbox</code> の align を <em>center</em> に、pack を <em>end</em> に設定すると、次のようになります:</p>
+
+
+<p><img height="204" src="/@api/deki/files/4205/=alignment.png" width="427"></p>
+
+
+<p>要素の整列と伸縮自在な配置は合わせて使用できない場合があるので、特に注意してください。ボタンの一つを伸縮自在にした場合、pack を使用しても役に立ちませんが、align は役立ちます。また、垂直方向に利用可能なスペースが無かったとしても、flex や pack を <code>hbox</code> に使用しても意味がありません。コンテナ要素自身が伸縮自在であるか、そのコンテンツよりも固定幅が大きな必要があるからです。</p>
+
+
+
+
+
+<h2 id="Text" name="Text">テキスト</h2>
+<p>テキストを表示するために使用される XUL 要素は、<a href="/ja/docs/XUL/label" title="XUL/label">label</a> と <a href="/ja/docs/XUL/description" title="XUL/description">description</a> の 2 つがあります。これらはほとんど同じ振る舞いをしますが、異なる状況で使用されます。</p>
+<p><em>label</em> 要素は、主に、Firefox の設定ウィンドウで見られるような XUL フォーム内のテキストに使用します。次のコードは、<em>label</em> 要素の一般的な使用例です:</p>
+
+
+<pre class="brush:xml">&lt;label control="xulschoolhello-gretting-textbox"
+  value="&amp;xulschoolhello.typeGreeting.label;" /&gt;
+&lt;textbox id="xulschoolhello-gretting-textbox" /&gt;</pre>
+
+
+<p>label は、"Type a greeting message" のテキスト、次の textbox は、ユーザがメッセージを入力するフォームです。<a href="/ja/docs/XUL/Attribute/control" title="XUL/Attribute/control">control</a> 属性は、label を textbox へリンクします。ユーザが label 部分のテキストをクリックすると、textbox にフォーカスが移動します。また、ユーザがスクリーンリーダを使用している場合は、textbox にフォーカスが置かれると label のテキストが読み上げられます。</p>
+<p><em>description</em> 要素は、テキストが説明のための情報のみであることを意味し、フォームなどの入力要素と関連付けられていない場合に使用されます。</p>
+<p>XUL でテキストを扱うことは簡単に思われますが、実際はかなり扱いにくい対象です。他の言語にローカライズされた文字列が元の文字列よりも長くなることを、常に心に留めておかなければなりません。特に、英語の文字列よりも長くなります。また、長いテキストブロックの使用や、テキストの長さに合わせた UI の設計は避けてください。テキストがとても長くなること、UI が適応しなければならないことを常に心に留めてください。</p>
+<p>label は短くし、一行で表示されるようにすべきです。また、description は長くなることがあるので、複数行になってもすべて表示されるようにすべきです。description のテキストが折り返されるようにするには、テキストを、<em>value</em> 属性を使用せずに、要素の子ノードとして記述してください:</p>
+
+
+<pre class="brush:xml">&lt;description&gt;&amp;xulschoolhello.description.label;&lt;/description&gt;
+</pre>
+
+
+<p>このように記述しても、テキストは一行に入る分まで幅が広くなります。XUL ダイアログやウィンドウの内部で折り返す幅を指定するには、CSS を追加する必要があります。<em>description</em> の幅を制限するには、CSS プロパティの <em>width</em> を使用してください。指定した幅でテキストが折り返されます。</p>
+
+    <div class="note">
+      折り返す位置を合わせるためにテキストを複数の locale 文字列に分けてはいけません。一つのテキストを分けると、ローカライズを難しくしたり不可能にする場合があります。</div>
+
+<p>テキストの折り返しが <em>description</em> では不十分な、さらに複雑な状況もあります。例えば、<a href="/ja/docs/XUL_Tutorial/Templates" title="XUL Tutorial/Templates">templates</a> には <em>description</em> 要素のようにテキストを置けないため、テキストが正しく折り返されません。この問題の回避策は、代わりに <a href="/ja/docs/XUL/textbox" title="XUL/textbox">textbox</a> 要素を使用することです。 <a href="http://xulsolutions.blogspot.com/2006/07/how-to-handle-text-and-keep-your.html">XUL Solutions のブログ記事</a>で、このテキストの折り返しについてのガイドがあります。高等なテキストの扱い方をする場合は、これらのことを心に留めておいてください。</p>
+<p>長すぎるテキストを扱うもう一つの方法は、<a href="/ja/docs/XUL/Attribute/crop" title="XUL/Attribute/crop">crop</a> 属性を使用することです。テキストが、そのコンテナが許容するより長い場合は、超過した分が切り取られ、省略記号 "..." に置き換えられます。テキストを切り取る部分を選べますが、通常はテキストの末尾を切り取るため <em>end</em> を指定します。テキストの折り返しと似ていますが、crop は、テキストを表示するスペースが無い場合にのみ効果があります。そのため、CSS で幅を制限する必要があるでしょう。</p>
+
+
+
+
+
+<h3 id="Text_links" name="Text_links">テキストリンク</h3>
+<p>XUL では、とても簡単に <em>label</em> にリンクを作成することができます。必要なことは、label 要素に <a href="/ja/docs/XUL/Style/text-link" title="XUL/Style/text-link">text-link</a> クラスを設定し、<em>onclick</em> ハンドラを追加するだけです (<em>oncommand</em> では動作しません)。label がリンクと同じスタイルで表示されるため、ユーザは、それがリンクであることが分かるでしょう。</p>
+<p>HTML のように一部分だけをクリック可能にする場合はコツが要ります。label はリッチテキストを扱うことができないため、対応策では JavaScript を使用しなければなりません。可能性の一つは、locale の properties ファイルで、リンクであることが分かるように特別なマークアップを使用することです:</p>
+
+
+<pre class="brush:xml">xulschoolhello.linkedText.label = Go to &lt;a&gt;our site&lt;/a&gt; for more information</pre>
+
+
+<p>この構文は HTML と似ているため読みやすいでしょう。しかし、この書き方では string budle は何もしません。<a href="/ja/docs/JavaScript/Reference/Global_Objects/RegExp" title="JavaScript/Reference/Global_Objects/RegExp">正規表現</a>を使用して文字列を分割し、3 つの異なる label を生成する必要があります。リンクとなる label には、<em>text-link</em> クラスを設定します。また、CSS を使用して分割したテキスト間のスペースを調整する必要があるでしょう。</p>
+<p>もう一つの方法は、リンク部分を本物の HTML を使用してマークアップすることです。</p>
+
+<pre class="brush:xml">xulschoolhello.linkedText.label = Go to &lt;html:a onclick="%S"&gt;our site&lt;/html:a&gt; for more information</pre>
+
+
+<p>XUL ドキュメントに HTML を含めるには、ドキュメントのルートに名前空間を追加する必要があります:</p>
+
+<pre class="brush:xml">&lt;overlay id="xulschoolhello-browser-overlay"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  xmlns:html="http://www.w3.org/1999/xhtml"&gt;</pre>
+
+
+<p>こうすることで、properties ファイルの文字列をパースした結果が <em>html:p</em> (段落) 要素になります。また、<a href="/ja/docs/DOM/DOMParser" title="DOMParser">DOMParser</a> オブジェクトを使用して、XML を簡単にパースできます。</p>
+
+<div class="note">
+  XUL ドキュメントは厳格な XML であるため、XUL 内では厳格 (strict) な XHTML しか使用できません。書式のいいかげんな HTML は使用できません。</div>
+
+
+
+
+
+<h2 id="Exercise" name="Exercise">練習問題</h2>
+
+<p>DOM インスペクタを使用して Firefox の chrome を調べてください。ツールバーボタンやメニュー項目、テキストボックスなどを選択し、ボックスモデル、CSS スタイル規則、計算されたスタイルビューを調べてください。計算された <code>width</code> と <code>height</code> の値を調べ、パディングやマージンが XUL ノードの寸法にどのように影響しているか調べてください。</p>
+
+<p>Hello World 拡張を変更し、CSS だけを使用して Firefox の外観を大胆に変更してください。ボタンのサイズや外観を変更したりツールバーやステータスバーの背景色を変更したり、フォントのスタイル、サイズなどを変更して遊んでみてください。これは、本来は拡張機能にさせる事ではなく、テーマで行うことなので注意してください。しかしながら、Firefox の外観を簡単に変更する方法が分かると、とても楽しいでしょう。</p>
+
+<p>CSS に詳しくない場合は、このチュートリアルを進める前に、<a href="/ja/docs/CSS/Getting_Started" title="CSS/Getting Started">CSS の入門チュートリアル</a>や他のオンライン上の解説をよく読んでください。</p>
+
+<div><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/School_tutorial/Adding_events_and_commands" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/School_tutorial/Adding_windows_and_dialogs">次のページ  »</a></p>
+</div></div>
+
+<p><small>This tutorial was kindly donated to Mozilla by Appcoast.</small></p>

@@ -1,0 +1,86 @@
+---
+title: HTML in XMLHttpRequest
+slug: HTML_in_XMLHttpRequest
+---
+<p>W3C <a class="external" href="http://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html">XMLHttpRequest</a>规范添加了<a href="/en/DOM/XMLHttpRequest" title="en/DOM/XMLHttpRequest"><code>XMLHttpRequest</code></a>对象对HTML解析的支持(原本只支持XML解析).这项特性允许开发者使用<code>XMLHttpRequest</code>来获取一个HTML资源经过解析后的DOM对象.</p>
+<h3 id="限制">限制</h3>
+<p>为了避免用户使用<code>XMLHttpRequest</code>的同步模式,HTML解析被设计为只支持异步模式.而且,只有当<code>responseType</code>属性被设置为<code>"document"</code>时,HTML解析才会开启.这种限制是为了避免当用户只需要获取 <code>text/html</code>类型资源的<code>responseText</code>属性时浏览器做无用的HTML解析而浪费时间.另外,该限制也同样可以避免在HTTP错误页面(通常是<code>text/html</code>类型的响应)中<code>responseXML</code>属性为空的情况.</p>
+<h3 id="用法">用法</h3>
+<p>使用<code>XMLHttpRequest</code>时,把HTML资源作为DOM检索和把XML资源作为DOM检索的区别只有两点:1. 不可以使用同步模式. 2. 请求一个文档时,在调用<code>open()</code>方法之后,<code>send()</code>方法之前,必须明确的指定 <code>XMLHttpRequest</code>对象的<code>responseType</code>属性为字符串<code>"document"</code>.</p>
+<pre class="brush: js">var xhr = new XMLHttpRequest();
+xhr.onload = function() {
+  alert(this.responseXML.title);
+}
+xhr.open("GET", "file.html");
+xhr.responseType = "document";
+xhr.send();
+</pre>
+<h3 id="特性检测">特性检测</h3>
+<h4 id="方法1">方法1</h4>
+<p>此方法依赖于该特性的限制之一,即"强制异步模式".如果在同步模式中将"document"赋值给<code>XMLHttpRequest</code>对象的<code>responseType</code>属性,浏览器将会抛出异常.</p>
+<div class="line" id="LC13"> <pre class="brush: js"><span class="kd">function</span> <span class="nx">HTMLinXHR</span><span class="p">()</span> <span class="p">{
+</span>  if (!window.XMLHttpRequest)
+    return false;
+  var req = new window.XMLHttpRequest();
+  req.open('GET', window.location.href, false);
+  try {
+    req.responseType = 'document';
+  } catch(e) {
+    return true;
+  }
+  return false;
+}
+</pre>
+</div>
+<p>{{ JSFiddleLink('HTcKP/1/') }}</p>
+<p>该方法是同步执行的,并且不需要依赖任何外部资源.但是,由于该方法是间接的检测浏览器是否支持<code>XMLHttpRequest</code>对象的HTML解析特性,所以下面的检测方法2可能更加直接更加可靠一点.</p><h4 id="方法2">方法2</h4>
+<p>如何准确的检测浏览器是否支持<code>XMLHttpRequest</code>中的HTML解析有两个难点.首先,检测的结果只能在异步模式中获得,因为HTML解析只支持异步模式.其次,你必须真实的通过HTTP协议获取一个文件, 因为,如果使用<code>data:</code>URL,测试会因浏览器是否支持<code>data:</code>URL而受到影响.</p>
+<p>因此,要检测浏览器是否支持XMLHttpRequest中的HTML解析,需要在服务器上放置一个测试用的HTML文件,该测试文件体积较小,并且不是格式良好的XML文件:</p>
+<pre class="brush: js">&lt;title&gt;&amp;amp;&amp;&lt;&lt;/title&gt;</pre>
+<p>如果该文件被命名为<code>detect.html</code>, 那么下面的函数可以用来检测浏览器是否支持XMLHttpRequest中的HTML解析:</p>
+<pre class="brush: js">function detectHtmlInXhr(callback) {
+  if (!window.XMLHttpRequest) {
+    window.setTimeout(function() { callback(false); }, 0);
+    return;
+  }
+  var done = false;
+  var xhr = new window.XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (this.readyState == 4 &amp;&amp; !done) {
+      done = true;
+      callback(!!(this.responseXML &amp;&amp; this.responseXML.title &amp;&amp; this.responseXML.title == "&amp;&amp;&lt;"));
+    }
+  }
+  xhr.onabort = xhr.onerror = function() {
+    if (!done) {
+      done = true;
+      callback(false);
+    }
+  }
+  try {
+    xhr.open("GET", "detect.html");
+    xhr.responseType = "document";
+    xhr.send();
+  } catch (e) {
+    window.setTimeout(function() {
+      if (!done) {
+        done = true;
+        callback(false);
+      }
+    }, 0);
+  }
+}
+</pre>
+<p>参数<code>callback</code>是一个函数,如果浏览器支持HTML解析,那么该函数被异步调用的时候,<code>true</code>会作为唯一的参数传给<code>callback</code>,不支持的话,<code>false</code> 会作为唯一的参数传给<code>callback.</code></p>
+<p>{{ <span class="title">JSFiddleLink }}</span>('xfvXR/1/') </p><h3 id="字符编码">字符编码</h3>
+<p>如果HTTP响应头<code>Content-Type</code>字段定义了字符的编码类型, 那么文档的编码类型将指定为该编码. 否则, 如果文档存在BOM(byte order mark), 那么该BOM所表示的编码将会被使用. 再否则, 如果文档的前1024个字节中存在<code>meta</code> 元素,并且指定了文档的编码类型,那么该编码将会被使用.如果这些都没有指定,那么文件将会按UTF-8编码识别.</p>
+<h3 id="浏览器兼容性">浏览器兼容性</h3>
+<p>{{ CompatibilityTable() }}</p>
+<div id="compat-desktop"> <table class="compat-table"> <tbody> <tr> <th>Feature</th> <th>Chrome</th> <th>Firefox (Gecko)</th> <th>Internet Explorer</th> <th>Opera</th> <th>Safari (WebKit)</th> </tr> <tr> <td>Support</td> <td>18</td> <td>11</td> <td>---</td> <td>---</td> <td>{{ compatno() }}<br> (<a class="external" href="http://trac.webkit.org/changeset/103106">535.14</a>)</td> </tr> </tbody> </table>
+</div>
+<div id="compat-mobile"> <table class="compat-table"> <tbody> <tr> <th>Feature</th> <th>Android</th> <th>Firefox Mobile (Gecko)</th> <th>IE Phone</th> <th>Opera Mobile</th> <th>Safari Mobile</th> </tr> <tr> <td>Support</td> <td>---</td> <td>11</td> <td>---</td> <td>---</td> <td>---</td> </tr> </tbody> </table>
+</div>
+<h3 id="规范">规范</h3>
+<ul> <li>{{ spec("http://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html", "XMLHttpRequest", "ED") }}</li>
+</ul>
+<p>{{ languages({"ja":"ja/HTML_in_XMLHttpRequest","en":"en/HTML_in_XMLHttpRequest"}) }}</p>

@@ -1,0 +1,331 @@
+---
+title: Référence des options de make
+slug: Archive/B2G_OS/Developing_Gaia/Référence_options_make
+tags:
+  - Apps
+  - Firefox OS
+  - Gaia
+  - Make
+  - Options
+  - Reference
+  - Référence(2)
+translation_of: Archive/B2G_OS/Developing_Gaia/make_options_reference
+---
+<div class="summary">
+<p><span class="seoSummary">La commande <code>make</code> est utilisée à l'intérieur du dépôt Gaia pour créer un profil qui peut être chargé vers un appareil ou être lancé dans une version de <a href="/fr/Firefox_OS/Using_the_B2G_desktop_client">B2G Desktop</a>. Cet article illustre en détail les différentes options pour <code>make</code>.</span></p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong> : De nombreuses variables d'environnement sont utilisées dans le fichier Makefile. Celles-ci pouvant être supprimées à l'avenir, attention à ne pas construire d'outils qui reposeraient sur ces variables.</p>
+</div>
+
+<p>Les profils créés sont généralement enregistrés à la racine du répertoire de Gaia, par exemple <code>/gaia/profil</code>. Un profil contient généralement les éléments suivants :</p>
+
+<ul>
+ <li><code>defaults/</code> : Le répertoire qui contient les paramètres par défaut qui sont utilisés lors que le téléphone est réinitialisé.</li>
+ <li><code>extensions/</code> : Le répertoire qui contient les extensions.</li>
+ <li><code>settings.json </code>: Le fichier de paramètres.</li>
+ <li><code>user.js</code> : Une autre fichier qui contient les paramètres utilisateurs (autrement appelés préférences).</li>
+ <li><code>webapps/</code> : Le répertoire qui contient l'ensemble des applications web à installer sur le téléphone.</li>
+</ul>
+
+<div class="note">
+<p><strong>Note </strong>: Lorsque vous souhaitez construire un nouveau profil après en avoir déjà construit un, vous devez supprimer le profil existant au préalable.</p>
+</div>
+
+<h2 id="Utilisation_par_défaut">Utilisation par défaut</h2>
+
+<pre class="brush: bash">make</pre>
+
+<p>Cette commande créera une version neutre de Gaia, qui ne peut pas être utilisée pour le débogage. Pour construire une version avec une certaine marque, vous devrez utiliser <a href="#Official_Mozilla_branding_make">Official Mozilla branding make</a> ; pour construire une version de débogage, vous devrez utiliser <a href="#Debug_make">Debug make</a>.</p>
+
+<h2 id="Envoyer_vers_l'appareil">Envoyer vers l'appareil</h2>
+
+<pre class="brush: bash">make install-gaia
+
+make reset-gaia
+</pre>
+
+<p>Une fois <a href="/en-US/Firefox_OS/Debugging/Installing_ADB">ADB</a> (Android Debug Bridge) paramétré, ces « <em>cibles</em> » de <code>make</code> enverront Gaia sur l'appareil. <code>install-gaia</code> enverra uniquement les mises à jour depuis le répertoire de travail alors que <code>reset-gaia</code> nettoiera l'ensemble des configurations, profils, applications web et données en base avant d'envoyer Gaia sur l'appareil (cela créera une nouvelle base de données pour les réglages).</p>
+
+<div class="note">
+<p><strong>Note </strong>: Lorsque les commandes <code>make install-gaia</code> / <code>make reset-gaia</code> sont utilisées, Gaia est envoyée vers le téléphone avec une résolution par défaut qui est celle des ressources utilisées (1x). Pour définir un niveau de définition plus élevé, vous devrez utiliser les options<code> GAIA_DEV_PIXELS_PER_PX</code> ou <code>GAIA_DPPX</code> (voir le paragraphe <a href="/en-US/Firefox_OS/Developing_Gaia/make_options_reference#High_resolution_image_assets">Images en haute résolution</a> pour plus de détails sur ces options.). Lorsque vous envoyez Gaia sur votre appareil de cette façon, il est nécessaire de préciser (en plus des options des autres options de <code>make</code>) le facteur de forme de l'appareil. Ainsi pour un Flame, on aura <code>make install-gaia GAIA_DEV_PIXELS_PER_PX=1.5</code> (ou 2, ou 2.5, etc.). Pour plus d'informations, voir le tableau des facteurs de forme dans l'article <a href="/fr/Apps/Build/Icon_implementation_for_apps#512_icon_for_device_display">icônes de 512 pixels pour l'affichage sur l'appareil</a>.</p>
+</div>
+
+<h2 id="Construire_des_applications_spécifiques">Construire des applications spécifiques</h2>
+
+<pre class="brush: bash">APP=system make
+
+APP=system make install-gaia</pre>
+
+<p>Lorsqu'un profil existe déjà, l'option <code>APP</code> vous permet de spécifier les applications à réempaqueter plutôt que de réempaqueter puis de réenvoyer toutes les applications sur l'appareil. On notera que, bien que cette commande envoie le nouveau paquet de l'application ainsi que le manifeste, les changements du manifeste (ex. : les nouvelles permissions ou les agencements de clavier) ne sont pas détectés par Gecko.</p>
+
+<h2 id="Définir_un_répertoire_spécifique_pour_le_profil">Définir un répertoire spécifique pour le profil</h2>
+
+<p>Vous pouvez définir un répertoire spécifique dans lequel construire votre profil en utilisant l'option <code>PROFILE_FOLDER</code>. Par exemple :</p>
+
+<pre class="brush: bash">PROFILE_FOLDER=profile-b2g-desktop make</pre>
+
+<h2 id="Construire_pour_les_différents_types_d'appareil">Construire pour les différents types d'appareil</h2>
+
+<p>Il existe des options pour spécifier le type d'appareil visé.</p>
+
+<h3 id="Construire_une_version_de_Gaia_pour_téléphone">Construire une version de Gaia pour téléphone</h3>
+
+<pre class="brush: bash">GAIA_DEVICE_TYPE=phone make</pre>
+
+<p>Les applications pour cette versions seront celles de la liste<code> /gaia/build/config/phone/apps-engineering.list</code>.</p>
+
+<h3 id="Construire_une_version_de_Gaia_pour_tablette">Construire une version de Gaia pour tablette</h3>
+
+<pre class="brush: bash">GAIA_DEVICE_TYPE=tablet make</pre>
+
+<p>Les applications utilisées pour la construction seront celles de la liste <code>/gaia/build/config/tablet/apps-engineering.list</code>.</p>
+
+<h3 id="Créer_une_version_spark_de_Gaia">Créer une version spark de Gaia</h3>
+
+<pre class="brush: bash">GAIA_DISTRIBUTION_DIR=distros/spark make reset-gaia
+</pre>
+
+<p>Installe spark sur votre appareil. L'option du build.sh de B2G est celle-ci :</p>
+
+<pre class="brush: bash">GAIA_DISTRIBUTION_DIR=distros/spark ./build.sh
+</pre>
+
+<h2 id="Les_différents_types_de_version">Les différents types de version</h2>
+
+<p><code>make </code>dispose d'options pour préciser le type de version qu'on souhaite construire (chaque type de version ayant un objectif distinct) :</p>
+
+<h3 id="Version_de_production">Version de production</h3>
+
+<pre class="brush: bash">PRODUCTION=1 make</pre>
+
+<p>Cette instruction crée une version de production de Gaia. Cela signifie que :</p>
+
+<ul>
+ <li>Les applications de Gaia sont empaquetées, ce qui les rend plus difficile à déboguer mais ce qui permet la meilleure gestion des permissions d'API, etc.</li>
+ <li>Les applications de test ne sont pas intégrées à cette version</li>
+ <li>Par défaut, le débogage à distance est désactivé</li>
+ <li>L'écran de déverrouillage est activé (ce qui entraînera une coupure des connexions USB en cours)</li>
+ <li><a href="/docs/Mozilla/QA/Marionette">Marionette</a> est désactivé</li>
+ <li>L'écran de première utilisation est activé</li>
+ <li>Le cache hors ligne est activé.</li>
+</ul>
+
+<div class="note">
+<p><strong>Note </strong>: Pour cette instruction, vous pouvez également utiliser l'alias <code>make production</code>.</p>
+</div>
+
+<h3 id="Version_de_débogage">Version de débogage</h3>
+
+<pre class="brush: bash">DEBUG=1 make</pre>
+
+<p>La variable <code>DEBUG</code> permet de lancer Gaia avec des applications hébergées sur un serveur web intégré accessible sur le port <code>GAIA_PORT</code>, plutôt que les applications soient empaquetés et aient besoin d'être réempaquetés à chaque modification. Cela permet de tester plus facilement. Si vous lancez ce profil avec une version de Firefox Nightly, vous pourrez utiliser une version spécifique des outils de développement adaptée à B2G.</p>
+
+<p>De plus :</p>
+
+<ul>
+ <li>Les applications de tests sont inclues dans la version construite</li>
+ <li>Le débogage à distance est activé par déafut</li>
+ <li>L'écran de verrouillage est désactivé (les connexions USB ne seront pas interrompues)</li>
+ <li><a href="/docs/Mozilla/QA/Marionette">Marionette</a> est activé, ce qui permet de lancer les <a href="/Firefox_OS/Platform/Automated_testing/Gaia_unit_tests" title="/Firefox_OS/Platform/Automated_testing/Gaia_unit_tests">tests unitaires</a> de Gaia</li>
+ <li>L'écran de première utilisation est désactivé</li>
+ <li>Le cache hors ligne n'est pas activé, même s'il est généré.</li>
+</ul>
+
+<div class="note">
+<p><strong>A noter</strong>: Il y a un bogue ouvert (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1180103" title="B2G desktop client get an empty homescreen when run w/ debug profile (gaia/profile-debug)">bug 1180103</a>) lors de l'utilisation de profils debogage Gaia, provoque l'affichage d'un écran d'accueil vide quand il est lancé au travers de Firefox OS Simulator (ou WebIDE, ou autre.) Cela peut être contourné en construisant avec <code>DEBUG=1 DESKTOP=0 make</code> à la place (voir <a href="#Version_de_débogage_pour_l'appareil">Version_de_débogage_pour_l'appareil</a>.)</p>
+</div>
+
+
+<h3 id="Version_de_débogage_pour_l'appareil">Version de débogage pour l'appareil</h3>
+
+<pre class="brush: bash">DEVICE_DEBUG=1 make</pre>
+
+<p>Cela désactive l'écran de déverrouillage et active le débogage via les outils ADB, ce qui permet de déboguer ce qui se passe sur l'appareil.</p>
+
+<p>Dans Firefox OS &gt; 1.2, il faut préciser ce paramètre si vous voulez déboguer des applications web dans le <a href="/fr/docs/Outils/WebIDE">WebIDE</a>.</p>
+
+<h3 id="Version_de_débogage_sur_ordinateur">Version de débogage sur ordinateur</h3>
+
+<pre class="brush: bash">DEBUG=1 DESKTOP=0 make</pre>
+
+<p>Cette option permet de créer une version de débug pour ordinateur, à utiliser avec <a href="/Firefox_OS/Building_the_B2G_desktop_client">B2G pour ordinateur (<em>B2G desktop</em>)</a>.</p>
+
+<h3 id="Version_officielle_de_Mozilla">Version officielle de Mozilla</h3>
+
+<pre class="brush: bash">MOZILLA_OFFICIAL=1 make</pre>
+
+<p>Cette option permet de construire une version officielle de Mozilla.</p>
+
+<h3 id="Version_pour_l'utilisation_en_test(dogfood)">Version pour l'utilisation en test(<em>dogfood</em>)</h3>
+
+<pre class="brush: bash">DOGFOOD=1 make</pre>
+
+<p>Les options et utilitaires liés à une utilisation à des fins de tests sont activés. Par exemple, l'application sur les retours/informations d'utilisation (<em>feedback</em>) sera activée.</p>
+
+<h3 id="Version_pour_les_applications_système">Version pour les applications système</h3>
+
+<pre class="brush: bash">B2G_SYSTEM_APPS=1 make</pre>
+
+<p>Cette variable d'environnement vous permet d'envoyer une application sur <code>/system/b2g</code> plutôt que sur <code>/data/local</code>. Vous devriez utiliser cette option lorsque vous travaillez sur une version utilisateur. Cette variable est définie automatiquement lorsque vous utilisez la commande <code>make production</code>. Cette variable peut également être utilisée avec <code>install-gaia</code> ou <code>reset-gaia</code>.</p>
+
+<h3 id="Personnaliser_et_distribuer_une_version">Personnaliser et distribuer une version</h3>
+
+<pre class="brush: bash">GAIA_DISTRIBUTION_DIR=./dir</pre>
+
+<div class="note">
+<p><strong>Note </strong>: Lire l'article <a href="/en-US/Firefox_OS/Hacking_Firefox_OS/Market_customizations_guide">Construire une version de Gaia customisée</a> pour plus d'informations.</p>
+</div>
+
+<h2 id="Les_options_pour_le_débogagedéveloppement">Les options pour le débogage/développement</h2>
+
+<p>Certaines options de <code>make</code> permettent d'activer/désactiver des fonctionnalités de débogage ou de modifier des réglages utiles pour le développement.</p>
+
+<h3 id="Activer_le_débogage_à_distance">Activer le débogage à distance</h3>
+
+<pre class="brush: bash">REMOTE_DEBUGGER=1</pre>
+
+<p>Cela permet d'utiliser le débogage à distance pour l'appareil. Cela aura le même effet que d'activer l'option dans <a href="/fr/Firefox_OS/deboguer/parametres_developpeurs">les options de développement</a>.</p>
+
+<h3 id="Version_avec_optimisation_du_JavaScript">Version avec optimisation du JavaScript</h3>
+
+<pre class="brush: bash">GAIA_OPTIMIZE=1 make</pre>
+
+<p>Cette option déclenche un processus d'optimisation sur le code JavaScript utilisé pour Gaia qui consiste à concaténer/compresser les fichiers. Cette option est automatiquement utilisée avec <code>make production</code>. Cette option peut également être utilisée avec <code>install-gaia</code> ou <code>reset-gaia</code>.</p>
+
+<h3 id="Ressources_images_en_haute_résolution">Ressources images en haute résolution</h3>
+
+<pre class="brush: bash">GAIA_DEV_PIXELS_PER_PX=1.5 make</pre>
+
+<p>Ou, en utilisant l'alias :</p>
+
+<pre class="brush: bash">GAIA_DPPX=1.5 make</pre>
+
+<p>Lors de l'empaquetage de l'application, cette option remplacera les images par leurs équivalents <code>*@1.5x.(gif|jpg|png)</code> si ces fichiers existent. Vous aurez besoin d'utiliser l'option ci-dessus au sein d'une commande <code>make</code> standard, par exemple :</p>
+
+<pre class="brush: bash">GAIA_DEV_PIXELS_PER_PX=1.5 make reset-gaia
+
+GAIA_DEV_PIXELS_PER_PX=1.5 make install-gaia</pre>
+
+<p>Pour information, voici la liste des résolutions d'écran actuellement ciblées par Gaia :</p>
+
+<ul>
+ <li>qHD: ~540×960; device pixel ratio = 1.6875</li>
+ <li>WVGA: ~480×800; device pixel ratio = 1.5</li>
+ <li>HBGA (320x240); device pixel ratio = 1</li>
+</ul>
+
+<p>Utilisez l'option <code>GAIA_DEV_PIXELS_PER_PX</code> pour être sûr que les images s'affichent correctement sur les appareils qHD et WVGA. Voir l'article <a href="/docs/Mozilla/Mobile/Balise_meta_viewport#A_pixel_is_not_a_pixel" title="/docs/Mozilla/Mobile/Balise_meta_viewport#A_pixel_is_not_a_pixel">un pixel n'est pas un pixel</a> pour plus d'informations sur les pixels physiques et les pixels CSS.</p>
+
+<h3 id="Lancer_les_tests_d'intégration">Lancer les tests d'intégration</h3>
+
+<p>Vous pouvez lancer les tests d'intégration de Gaia en utilisant make. Voir <a href="/en-US/Firefox_OS/Platform/Automated_testing/Gaia_integration_tests">Gaia integration tests</a> pour plus de détails.</p>
+
+<h3 id="Lancer_les_tests_de_performance_Raptor">Lancer les tests de performance Raptor</h3>
+
+<p>Vous devez effectuer une configuration permettant de lancer les tests Raptor sur votre périphérique, avant de lancer les tests. Voir <a href="/en-US/Firefox_OS/Automated_testing/Raptor">Raptor</a> pour plus de détails.</p>
+
+<pre class="brush: bash">make raptor
+</pre>
+
+<h3 id="Profil_pour_les_appareils_avec_peu_de_mémoire">Profil pour les appareils avec peu de mémoire</h3>
+
+<pre class="brush: bash">GAIA_MEMORY_PROFILE=low make</pre>
+
+<p>Cette variable permet de générer un profil de Gaia qui utilise peu de mémoire. Cela permet de construire un profil adapté aux appareils avec peu de mémoire comme le Tarako.</p>
+
+<h3 id="Désactiver_l'écran_de_première_utilisation_(first_time_use_experience_-_FTU)">Désactiver l'écran de première utilisation (<em>first time use experience - FTU</em>)</h3>
+
+<pre class="brush: bash">NOFTU=1
+</pre>
+
+<p>Cette variable d'environnement permet de désactiver l'écran affiché lors de la première utilisation.</p>
+
+<h3 id="Désactiver_l'écran_de_déverrouillage">Désactiver l'écran de dé/verrouillage</h3>
+
+<p>Vous pouvez désactiver l'écran qui verrouille l'appareil en utilisant l'option <code>NO_LOCK_SCREEN</code>. Par exemple :</p>
+
+<pre class="brush: bash">NO_LOCK_SCREEN=1 make</pre>
+
+<h3 id="La_montée_en_charge_pour_le_volume_de_données">La montée en charge pour le volume de données</h3>
+
+<p>Plusieurs volumes de données de référence ont été créés pour permettre aux développeurs et aux testeurs d'installer rapidement un grand volume de données utilisées par plusieurs applications (généralement ce chargement a lieu sur un appareil nouvellement flashé).</p>
+
+<p>Les commandes suivantes permettent de charger différents volumes (à lancer depuis le répertoire de Gaia) :</p>
+
+<pre class="brush: bash">make reference-workload-light</pre>
+
+<ul>
+ <li>200 contacts</li>
+ <li>200 sms</li>
+ <li>50 entrées dans l'historique d'appel</li>
+ <li>20 images dans la galerie</li>
+ <li>20 chansons</li>
+ <li>5 vidéos</li>
+</ul>
+
+<pre class="brush: bash">make reference-workload-medium</pre>
+
+<ul>
+ <li>500 contacts</li>
+ <li>500 sms</li>
+ <li>100 entrées dans l'historique d'appel</li>
+ <li>50 images dans la galerie</li>
+ <li>50 chansons</li>
+ <li>10 vidéos</li>
+</ul>
+
+<pre class="brush: bash">make reference-workload-heavy</pre>
+
+<ul>
+ <li>1000 contacts</li>
+ <li>1000 sms</li>
+ <li>200 entrées dans l'historique d'appel</li>
+ <li>100 images dans la galerie</li>
+ <li>100 chansons</li>
+ <li>20 vidéos</li>
+</ul>
+
+<pre class="brush: bash">make reference-workload-x-heavy</pre>
+
+<ul>
+ <li>2000 contacts</li>
+ <li>2000 sms</li>
+ <li>500 entrées dans l'historique d'appel</li>
+ <li>250 images dans la galerie</li>
+ <li>250 chansons</li>
+ <li>50 vidéos</li>
+</ul>
+
+<p>Ces cibles peuvent être utilisées avec la variable d'environnement <code>APP</code> ou avec la variable<code> APPS</code> (contenant des noms d'applications, séparés par des espaces). Par exemple :</p>
+
+<pre class="brush: bash">APP=sms make reference-workload-light
+APPS="sms communications/contacts" make reference-workload-heavy
+</pre>
+
+<p>Les applications utilisables ici sont :</p>
+
+<pre class="brush: bash">APPS="gallery music video communications/contacts sms communications/dialer"</pre>
+
+<p>Pour installer des fichiers de musique dans la charge de données, vous devez avoir installé mid3v2. Cet utilitaire peut être installé avec la commande suivante :</p>
+
+<pre class="brush: bash">sudo apt-get install python-mutagen</pre>
+
+<p>Si vous utilisez Fedora ou RHEL, vous pouvez utiliser :</p>
+
+<pre class="brush: bash">sudo yum install python-mutagen</pre>
+
+<h3 id="Construire_la_documentation">Construire la documentation</h3>
+
+<p>La documentation relative à Gaia peut être construite grâce à jsdoc3. Pour générer la documentation, vous pouvez utiliser la commande suivante :</p>
+
+<pre class="brush: bash">make docs</pre>
+
+<h3 id="Activation_des_agencements_de_claviers_et_des_dictionnaires">Activation des agencements de claviers et des dictionnaires</h3>
+
+<p>Pour activer les agencements de clavier et les dictionnaires liés au moteur de saisie (<em>IME </em>pour <em>Input Method Editor</em> en anglais), vous pouvez utiliser la commande suivante :</p>
+
+<pre class="brush: bash">GAIA_KEYBOARD_LAYOUTS=en,zh-Hant-Zhuyin,el,de,fr,zh-Hans-Pinyin make</pre>
+
+<p>Actuellement, tous les claviers ne sont pas chargés par défaut en raison de problèmes d'espace disque. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1029951" title="FIXED: Allow built-in keyboard app to download latin-IMEngine dictionary dynamically">bug 1029951</a> est en cours de résolution pour permettre de découpler les agencements et les dictionnaires (pour permettre aux utilisateurs de télécharger le dictionnaire).</p>

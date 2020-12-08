@@ -1,0 +1,61 @@
+---
+title: NPP_SetValue
+slug: NPP_SetValue
+tags:
+  - NPAPI
+  - Plugins
+translation_of: Archive/Plugins/Reference/NPP_SetValue
+---
+<p> « <a href="https://developer.mozilla.org/ja/docs/Gecko_Plugin_API_Reference">Gecko Plugin API Reference</a> « <a href="https://developer.mozilla.org/ja/docs/Gecko_Plugin_API_Reference/Plug-in_Side_Plug-in_API">Plug-in Side Plug-in API</a>
+</p>
+
+<h3 id=".E6.A6.82.E8.A6.81" name=".E6.A6.82.E8.A6.81">概要</h3>
+
+<p>プラグインについての情報を設定します。</p>
+
+<h3 id=".E6.96.87.E6.B3.95" name=".E6.96.87.E6.B3.95">文法</h3>
+
+<pre>#include &lt;npapi.h&gt;
+
+NPError NPP_SetValue(void *instance,
+                     NPPVariable variable,
+                     void *value);
+</pre>
+
+<h3 id=".E3.83.91.E3.83.A9.E3.83.A1.E3.83.BC.E3.82.BF" name=".E3.83.91.E3.83.A9.E3.83.A1.E3.83.BC.E3.82.BF">パラメータ</h3>
+
+<p>この関数は以下のパラメータを取ります:</p>
+
+<dl>
+ <dt>instance</dt>
+ <dd>現在のプラグインのインスタンスへのポインタ。</dd>
+</dl>
+
+<dl>
+ <dt>variable</dt>
+ <dd>この呼び出しが設定しているプラグイン情報。値については、<a href="ja/NPP_GetValue">NPP_GetValue</a> を参照してください。</dd>
+</dl>
+
+<dl>
+ <dt>value</dt>
+ <dd>この関数によって返されるプラグイン情報に対する目的の値。</dd>
+</dl>
+
+<h3 id=".E6.88.BB.E3.82.8A.E5.80.A4" name=".E6.88.BB.E3.82.8A.E5.80.A4">戻り値</h3>
+
+<ul>
+ <li>成功ならば、この関数は <code>NPERR_NO_ERROR</code> を返します。</li>
+ <li>失敗ならば、プラグインは読み込まれず、この関数はエラーコードを返します。返しうる値については、<a href="ja/NPAPI/Constants#Error_Codes">エラーコード</a>を参照してください。</li>
+</ul>
+
+<h3 id=".E8.AA.AC.E6.98.8E" name=".E8.AA.AC.E6.98.8E">説明</h3>
+
+<p><code>NPP_SetValue</code> はプラグインがウィンドウを持つか持たないかどうかや JavaScript が有効かどうかいったプラグインに対するさまざまな特徴を設定します。設定できる値については、<a href="ja/NPP_GetValue">NPP_GetValue</a> を参照してください。 プラグインは <a href="ja/NPP_New">NPP_New</a> メソッドからこの関数を呼び出します。</p>
+
+<p>例えば、プラグインがウィンドウを持たないように設定するには、<code>NPPVpluginWindowBool</code> を設定する variable とし value パラメータを false にして <code>NPP_SetValue</code> を使ってください。プラグインがこれを呼ばなければ、ウィンドウを持つプラグインだとみなされます。</p>
+
+<h3 id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE" name=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE">関連項目</h3>
+
+<p><a href="ja/NPP_New">NPP_New</a>, <a href="ja/NPP_GetValue">NPP_GetValue</a></p>
+
+<p>{{ languages( { "en": "en/NPP_SetValue" } ) }}</p>

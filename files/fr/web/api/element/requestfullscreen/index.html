@@ -1,0 +1,123 @@
+---
+title: Element.requestFullscreen()
+slug: Web/API/Element/requestFullScreen
+tags:
+  - Méthode
+  - Plein écran
+translation_of: Web/API/Element/requestFullScreen
+---
+<div>{{APIRef("Fullscreen API")}}</div>
+
+<p>La méthode <code><strong>Element.requestFullscreen()</strong></code> envoie une requête asynchrone pour que l'élément soit affiché en plein écran.</p>
+
+<p>Il n'y a aucune garantie que l'élément passera effectivement en mode plein écran. Si la permission d'entrer en plein écran est acquise, le document recevra un événement {{event("fullscreenchange")}} pour l'informer qu'il est désormais en mode plein écran. Si la permission est refusée, le document recevra un événement {{event('fullscreenerror')}} à la place.</p>
+
+<p>Cette méthode doit être invoquée par l'interaction d'un utilisateur ou un changement d'orientation du périphérique, sinon elle échouera.</p>
+
+<div class="note">
+<p>Seuls les éléments présents dans l'espace de noms (namespace) HTML (c'est à dire, les éléments qui font partie du standard HTML), ainsi que les éléments {{HTMLElement("svg")}} et {{HTMLElement("math")}}, qui se trouvent dans le plus haut niveau du document ou dans une {{HTMLElement('iframe')}} avec l'attribut {{htmlattrxref("allowfullscreen", "iframe")}} peuvent être affichés en plein écran. Cela signifie que les éléments se trouvant dans une {{HTMLElement('frame')}} ou un {{HTMLElement('object')}} ne le peuvent pas.</p>
+</div>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox"><em>Element</em>.requestFullscreen();
+</pre>
+
+<h2 id="Exemple">Exemple</h2>
+
+<p>Avant d'appeler <code>requestFullScreen()</code>, mettez en place des gestionnaires (handlers) pour les évenements  {{event("fullscreenchange")}} et {{event("fullscreenerror")}}, pour savoir lorsque vous avez réussi à passer en mode plein écran (ou lorsque la permission de le faire a été refusée).</p>
+
+<p>tbd</p>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Spécification</th>
+   <th scope="col">Statut</th>
+   <th scope="col">Commentaire</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("Fullscreen", "#dom-element-requestfullscreen", "Element.requestFullScreen()")}}</td>
+   <td>{{Spec2("Fullscreen")}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Fonctionnalité</th>
+   <th>Chrome</th>
+   <th>Firefox</th>
+   <th>Internet Explorer</th>
+   <th>Edge</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Support basique</td>
+   <td>{{CompatVersionUnknown}}{{property_prefix("webkit")}}<sup>[1]</sup></td>
+   <td>{{CompatGeckoDesktop("9.0")}} as <code>mozRequestFullScreen</code><sup>[2]</sup><br>
+    {{CompatGeckoDesktop("47.0")}} (behind full-screen-api.unprefix.enabled</td>
+   <td>11{{property_prefix("ms")}}<sup>[3]</sup></td>
+   <td>{{CompatVersionUnknown}}<sup>[3]</sup></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Fonctionnalité</th>
+   <th>Chrome Android</th>
+   <th>Edge</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Support basique</td>
+   <td>{{CompatVersionUnknown}}{{property_prefix("webkit")}}<sup>[1]</sup></td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("9.0")}} as <code>mozRequestFullScreen</code><sup>[2]</sup><br>
+    {{CompatGeckoMobile("47.0")}} (behind full-screen-api.unprefix.enabled</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Également implémenté en tant que <code>webkitRequestFullScreen</code>.</p>
+
+<p>[2] Implémenté en tant que <code>mozRequestFullScreen</code> (remarquez le S majuscule pour <em>Screen</em>). Avant Firefox 44, Gecko autorisait incorrectement les éléments présents dans une  {{HTMLElement('frame')}} ou un {{HTMLElement('object')}} de demander, et d'obtenir, le mode plein écran. Dans les versions 44 et supérieures de Firefox, ceci a été corrigé : seuls les éléments dans le plus haut niveau du document ou dans une {{HTMLElement('iframe')}} avec l'attribut {{htmlattrxref("allowfullscreen", "iframe")}} peuvent être affichés en plein écran.</p>
+
+<p>[3] Voir la <a href="https://msdn.microsoft.com/en-us/library/dn254939%28v=vs.85%29.aspx">documentation sur MSDN</a>.</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/Fullscreen_API">Full-screen API</a></li>
+ <li>{{ domxref("Element.requestFullscreen()") }}</li>
+ <li>{{ domxref("Document.exitFullscreen()") }}</li>
+ <li>{{ domxref("Document.fullscreen") }}</li>
+ <li>{{ domxref("Document.fullscreenElement") }}</li>
+ <li>{{ cssxref(":fullscreen") }}</li>
+ <li>{{ HTMLAttrXRef("allowfullscreen", "iframe") }}</li>
+</ul>

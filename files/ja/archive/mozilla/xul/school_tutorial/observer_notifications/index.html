@@ -1,0 +1,112 @@
+---
+title: Observer Notifications
+slug: Archive/Mozilla/XUL/School_tutorial/Observer_Notifications
+tags:
+  - XUL
+translation_of: Archive/Add-ons/Overlay_Extensions/XUL_School/Observer_Notifications
+---
+<div>
+  <div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/School_tutorial/XPCOM_Objects" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/School_tutorial/Handling_Preferences">次のページ  »</a></p>
+</div></div>
+<p>時々、あなたのコードから他の部分のあなたのコードへメッセージを送信しなければならない場合があります。例えば、タスクが完了したことを通知し、いくつかの異なる操作が実行されるようにしたい場合です。これらの関数を直接呼び出すことによって実行できますが、XPCOM が、オブザーバと observer サービスを利用するさらによい方法を提供しています。</p>
+<p>オブザーバは、通知を監視 (待機) し、次の行動を起こすオブジェクトです。オブザーバを作成するには、 <a href="/ja/docs/nsIObserver" title="nsIObserver">nsIObserver</a> インタフェースを実装する必要があります。このインタフェースには、3 個の引数を取る <code>observe()</code> メソッドしかありません。1 番目の引数 (監視対象) は任意の XPCOM オブジェクト、2 番目の引数は通知トピック、最後の引数は通知に使用される文字列です。</p>
+<p>次のコードは、nsIObserver インタフェースの実装例です:</p>
+<pre class="brush:js">let testObserver = {
+  observe : function(aSubject, aTopic, aData) {
+    if (aTopic == "xulschoolhello-test-topic") {
+      window.alert("Data received: " + aData);
+    }
+  }
+}</pre>
+<p>このオブザーバを動作させるには、オブザーバを追加、削除、通知、列挙するメソッドを提供する <a href="/ja/docs/XPCOM_Interface_Reference/nsIObserverService">observer サービス</a>を使用する必要があります。</p>
+<p>observer サービスにオブザーバを追加するのは簡単です。 <a href="/ja/docs/XPCOM_Interface_Reference/nsIObserverService/addObserver" title="XPCOM Interface Reference/nsIObserverService/addObserver"><code>addObserver</code></a> メソッドに 3 個の引数を渡して呼び出すだけです。1 番目の引数は observer オブジェクト、2 番目の引数は通知トピック、3 番目の引数は observer サービスが observer への参照を保持するかどうかを示す真偽値です。通常は、3 番目の引数に <code>false</code> を設定してください。</p>
+<pre class="brush: js">let observerService =
+  Cc["@mozilla.org/observer-service;1"].getService(Ci.nsIObserverService);
+
+observerService.addObserver(testObserver, "xulschoolhello-test-topic", false);</pre>
+<div class="note">
+  <p>通知トピックは、 Firefox や他の拡張機能のトピックと競合しない、ユニークなものにしなければなりません。</p>
+</div>
+<p>特定のトピックのオブザーバを削除するには、<a href="/ja/docs/XPCOM_Interface_Reference/nsIObserverService/removeObserver" title="XPCOM Interface Reference/nsIObserverService/removeObserver"><code>removeObserver</code></a> メソッドを使用してください。このメソッドは、引数に observer オブジェクトと通知トピックを取ります。</p>
+<pre class="brush: js">observerService.removeObserver(testObserver, "xulschoolhello-test-topic");
+</pre>
+<p>通知トピックをリッスンするためにいくつかのオブザーバを登録した後、それらすべてに通知を送るための <a href="/ja/docs/XPCOM_Interface_Reference/nsIObserverService/notifyObservers" title="XPCOM Interface Reference/nsIObserverService/notifyObservers"><code>notifyObservers</code></a> メソッドが使用できます。このメソッドは 3 個の引数を取ります。1 番目の引数はオブザーバへ渡すための任意の XPCOM オブジェクト (null も可能)、2 番目の引数は通知トピック、最後の引数はこれらのオブザーバへ渡す追加の文字列 (<code>null</code> も可能) です。</p>
+<pre class="brush: js">observerService.notifyObservers(null, "xulschoolhello-test-topic", "hello");
+</pre>
+<h2 id="Non-chrome_to_chrome_communication" name="Non-chrome_to_chrome_communication">非 chrome と chrome の間のコミュニケーション</h2>
+<p>非 chrome と chrome の間のコミュニケーションは、オブザーバの主な使用目的の一つです。非 chrome は、JavaScript コードモジュール (JSM) や XPCOM を意味します。前回のセクションで見てきたように、JSM と XPCOM オブジェクトは、chrome からとても簡単に利用できます。しかし、与えられた chrome は window 依存ですが、非 chrome オブジェクトはそうではありません。chrome にメッセージを送るにはコツがいります。すべての window の chrome オブジェクトに対してメソッドを呼び出さなければならないでしょう。このような場合は、オブザーバを使うことで簡単にできます。</p>
+<p>非 chrome のコードから通知をどのように送るかを次のコード例で見てみましょう。</p>
+<pre class="brush: js">/**
+ * テスト通知トピックで登録されたすべてのオブザーバに通知する
+ */
+notifyTest : function() {
+  let observerService =
+    Cc["@mozilla.org/observer-service;1"].
+      getService(Ci.nsIObserverService);
+  let subject =
+    Cc["@mozilla.org/supports-string;1"].
+      createInstance(Ci.nsISupportsString);
+
+  // data 属性に文字列を割り当てる
+
+  subject.data = "This is a test.";
+  // 登録されたすべてのオブザーバに通知する
+  observerService.notifyObservers(
+    subject, "xulschoolhello-test-topic", "hello");
+}</pre>
+<p><code>notifyTest</code> メソッドでは、 "xs-hw-test-topic" 通知トピックについて登録されたすべてのオブザーバに対して通知するために <code>notifyObservers</code> が呼び出されます。入力引数は、短いテキストを持つ <code>nsISupportsString</code> のインスタンスと "Hello" 文字列です。</p>
+<p>chrome の browser オーバーレイファイルでは、window が読み込まれた時に "xs-hw-test-topic" 通知トピックをリッスンするオブザーバを登録します。<strong>必要なくなったオブザーバは削除しなければならない</strong>ことを心に留めてください。削除しなければメモリリークを起こします。そのため、登録されたオブザーバは、browser ウィンドウが閉じられると登録解除されます。</p>
+<pre class="brush: js">/**
+ * Hellow World 拡張のための browser オーバーレイの制御
+ */
+XULSchoolChrome.BrowserOverlay = {
+  /* Observer サービス */
+  _observerService : null,
+
+  /**
+   * このオブジェクトの初期化
+   */
+  init : function() {
+    this._observerService =
+      Cc["@mozilla.org/observer-service;1"].getService(Ci.nsIObserverService);
+    this._observerService.addObserver(this, "xulschoolhello-test-topic", false);
+  },
+
+  /**
+   * このオブジェクトの後始末
+   */
+  uninit : function() {
+    this._observerService.removeObserver(
+      this, "xulschoolhello-test-topic");
+  },
+
+  /**
+   * 登録された通知トピックの監視
+   * @param aSubject : 通知に関連付けられた nsISupports オブジェクト
+   * @param aTopic : 通知トピック
+   * @param aData : 通知に関連付けられた追加の文字列
+   */
+  observe : function(aSubject, aTopic, aData) {
+    if (aTopic == "xulschoolhello-test-topic") {
+      aSubject.QueryInterface(Ci.nsISupportsString);
+      window.alert("Subject: " + aSubject.data);  // =&gt; "This is a test"
+      window.alert("Data: " + aData);  // =&gt; "Hello"
+    }
+  }
+}
+
+window.addEventListener(
+  "load", function() { XULSchoolChrome.BrowserOverlay.init(); }, false);
+window.addEventListener(
+  "unload", function() { XULSchoolChrome.BrowserOverlay.uninit(); }, false);</pre>
+<p>1 つのオブザーバでいくつものトピックをリッスンできるため、<code>observe</code> メソッドでは通知トピックを検証しています。 <code>QueryInterface</code> メソッドを使用して、 <code>aSubject</code> オブジェクトのインタフェースを <code>nsISupportsString</code> に明示的に設定していることに気付いたでしょうか。これは、 <code>observe</code> メソッドの 1 番目の引数の型が <code>nsISupports</code> (前に見たように一般的なインタフェースです) であるため、正しいインタフェースを設定しないと、そのプロパティやメソッドへアクセスできないためです。</p>
+<p><code>notifyTest</code> メソッドが呼び出されると、<em>xulschoolhello-test-topic</em> で登録されたすべてのオブザーバが通知を受け取り、2 つの警告を表示します。Firefox のウィンドウが 2 つ開いているときは、オブザーバが両方のウィンドウへ通知され、両方のウィンドウで警告が表示されます。</p>
+<p>いつでも、同じオブザーバを使用して複数の通知トピックをリッスンすることができます。また、同じオブザーバに何度も通知トピックを追加しないように注意してください。同じオブザーバに複数の通知トピックを追加してしまうと、オブザーバ内の同じコードによって、何度も通知が送られてしまいます。</p>
+<h2 id="Useful_Firefox_notifications" name="Useful_Firefox_notifications">役立つ Firefox の通知</h2>
+<p>このセクションでは、オブザーバと observer サービスを使用してカスタム通知トピックを送受信する方法を扱いました。Firefox には多くの埋め込まれたオブザーバトピックがあり、それらを同じように監視することができます。 <a href="/ja/docs/Observer_Notifications" title="Observer Notifications">Observer Notifications</a> のページに、いくつかの役立つトピックの一覧があります。これらは時間をかけて学んでおく価値があります。</p>
+<div>
+  <div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/School_tutorial/XPCOM_Objects" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/School_tutorial/Handling_Preferences">次のページ  »</a></p>
+</div></div>
+<p><small>This tutorial was kindly donated to Mozilla by Appcoast.</small></p>

@@ -1,0 +1,53 @@
+---
+title: FileInfo
+slug: Archive/Mozilla/XUL/FileGuide/FileInfo
+translation_of: Archive/Mozilla/XUL/FileGuide/FileInfo
+---
+<h3 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.83.85.E5.A0.B1.E3.81.AE.E5.8F.96.E5.BE.97" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.83.85.E5.A0.B1.E3.81.AE.E5.8F.96.E5.BE.97">ファイル情報の取得</h3>
+<p><a href="ja/NsIFile">File</a> オブジェクトにはファイルについての情報を取得するための便利なプロパティがたくさんあります。<a href="ja/NsIFile/fileSize">fileSize</a> と <a href="ja/NsIFile/lastModifiedTime">lastModifiedTime</a> という 2 つの便利なプロパティを使うことでファイルのサイズや最終変更時刻をそれぞれ取得することができます。
+</p>
+<h4 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.B5.E3.82.A4.E3.82.BA" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.B5.E3.82.A4.E3.82.BA">ファイルサイズ</h4>
+<p><a href="ja/NsIFile/fileSize">fileSize</a> プロパティにはファイルサイズがバイト単位で納められています。ファイルが存在しなければ「ファイルが見つからない」という例外が発生します。この例外は try-catch ブロックで捕捉できますが、最初にファイルの <a href="ja/NsIFile/exists">exists</a> メソッドを使ってチェックするのがよりよい方法です。この例ではデスクトップ上のとあるファイルが存在するかをチェックし、ファイルサイズを変数 'filesize' に代入します。ファイルが存在しなければ 'filesize' 変数はデフォルト値の 0 から変化しません。
+</p>
+<pre>var filesize = 0;
+var file = IO.getFile("Desktop", "Saved File");
+if (file.exists())
+  filesize = file.fileSize;
+</pre>
+<p><a href="ja/NsIFile/fileSize">fileSize</a> プロパティに値をセットすることでファイルサイズを変更することも可能です。これはファイルを切り詰めるのには有用ですが、現在のファイルサイズよりも大きい値をセットするとファイルサイズが増加します。この場合、ファイルの新しい部分は空のデータで埋められます。例えば、次の行はファイルのサイズを 5000 バイトにします。
+</p>
+<pre>file.fileSize = 5000;
+</pre>
+<h4 id=".E5.A4.89.E6.9B.B4.E6.99.82.E5.88.BB" name=".E5.A4.89.E6.9B.B4.E6.99.82.E5.88.BB">変更時刻</h4>
+<p>ファイルが最後に変更された時刻は <a href="ja/NsIFile/lastModifiedTime">lastModifiedTime</a> プロパティを使うことで取得できます。このプロパティには 1970 年 1 月 1 日からミリ秒単位で計測した値が納められています。返された時刻を Date コンストラクタに渡すと便利です。
+</p>
+<pre>var lastmod = new Date(file.lastModifiedTime);
+</pre>
+<p>この例では <a href="ja/Core_JavaScript_1.5_Reference/Global_Objects/Date">Date</a> オブジェクトがファイルの変更時刻を元に作られます。
+</p><p><a href="ja/NsIFile/lastModifiedTime">lastModifiedTime</a> プロパティに値をセットすることでファイルの変更時刻を変更できます。あるいは、ファイルに書き込むだけでできます。その場合は値が自動的に調整されます。
+</p>
+<h4 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AE.E3.83.91.E3.83.BC.E3.83.9F.E3.83.83.E3.82.B7.E3.83.A7.E3.83.B3" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AE.E3.83.91.E3.83.BC.E3.83.9F.E3.83.83.E3.82.B7.E3.83.A7.E3.83.B3">ファイルのパーミッション</h4>
+<p>ファイルのパーミッションをチェックするためのメソッドもあります。以下の 4 つの関数は真偽を返します。
+</p>
+<ul><li><strong><a href="ja/NsIFile/isReadable">isReadable</a></strong> - ファイルが読み込み可能ならば真を返す。
+</li><li><strong><a href="ja/NsIFile/isWritable">isWritable</a></strong> - ファイルが書き込み可能ならば真を返す。
+</li><li><strong><a href="ja/NsIFile/isExecutable">isExecutable</a></strong> - ファイルが実行込み可能ならば真を返す。
+</li><li><strong><a href="ja/NsIFile/isHidden">isHidden</a></strong> - 隠しファイルならば真を返す。
+</li></ul>
+<p>この例では、ファイルが書き込み可能でない場合に例外が発生します。
+</p>
+<pre>if (!file.isWritable())
+  throw "File cannot be modified";
+</pre>
+<p>ファイルが変更可能かどうか定かでない場合は、例えば最初に <a href="ja/NsIFile/isWritable">isWritable</a> メソッドを使ってチェックするとよいでしょう。そうしないと、ファイルに書き込もうとしたときに例外が発生します。
+</p><p>通常、ほとんどの目的に対して上記の 4 つのメソッドで十分です。しかし、<a href="ja/NsIFile/permissions">permissions</a> プロパティを使って UNIX 形式のパーミッションフラグを取得することもできます。このプロパティはファイルのパーミッションを変更する必要がある場合にも必要です。
+</p>
+<pre>file.permissions = 0640;
+</pre>
+<p>パーミッションは 8 進数（0 から始まる）で表すのが一般的です。値を読みやすくするためです。この場合、最初の数字がそのファイルの所有者についてのパーミッションを、2 番目の数字がそのファイルのグループについてのパーミッションを、3 番目の数字がそのファイルのその他についてのパーミッションをそれぞれ表しています。値は読み込み可能の 4、書き込み可能の 2、実行可能の 1 という 3 値の和をとります。
+</p><p>出力ストリームを通してファイルが作られるときのデフォルトのパーミッションは 0644 であり、そのファイルは所有者は読み込み可能かつ書き込み可能であり、それ以外は読み込み専用であることを意味しています。
+</p><p>プラットフォームによっては未サポートのパーミッションがある可能性があるので注意してください。
+</p>
+<div class="noinclude">
+</div>
+{{ languages( { "en": "en/FileGuide/FileInfo" } ) }}

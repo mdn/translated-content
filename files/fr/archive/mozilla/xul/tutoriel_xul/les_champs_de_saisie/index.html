@@ -1,0 +1,126 @@
+---
+title: Les champs de saisie
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Les_champs_de_saisie
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Input_Controls
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL/Ajouter_des_libellés_et_des_images" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL/Les_contrôles_numériques">Suivant  »</a></p>
+</div>
+
+<p> </p>
+
+<p>XUL possède des éléments qui sont similaires aux champs <a href="/fr/DOM/form" title="fr/DOM/form">des formulaires</a> HTML.</p>
+
+<h3 id="Les_champs_de_saisie_de_texte" name="Les_champs_de_saisie_de_texte">Les champs de saisie de texte</h3>
+
+<p>Le HTML possède une balise <code>input</code> pouvant être utilisée comme champ de saisie de texte. XUL possède un élément similaire, <code><a href="/fr/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code>, utilisé comme champ de saisie de texte. Sans aucun attribut, l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code> crée une boîte dans laquelle l'utilisateur peut entrer du texte. Les boîtes de texte acceptent plusieurs attributs similaires à la balise <code>input</code> de l'HTML. En voici quelques uns :</p>
+
+<dl>
+ <dt><code id="a-id"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/id">id</a></code> </dt>
+ <dd>Un identifiant unique permettant d'identifier la boîte de texte.</dd>
+ <dt><code id="a-class"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/class">class</a></code> </dt>
+ <dd>La classe du style de la boîte de texte.</dd>
+ <dt><code id="a-value"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/value">value</a></code> </dt>
+ <dd>Si vous voulez donner une valeur par défaut à la boîte de texte, renseignez l'attribut <code id="a-value"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/value">value</a></code>.</dd>
+ <dt><code id="a-disabled"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/disabled">disabled</a></code> </dt>
+ <dd>Mettez la valeur 'true' pour empêcher l'insertion de texte.</dd>
+ <dt><code id="a-type"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/type">type</a></code> </dt>
+ <dd>Vous pouvez renseigner cet attribut avec la valeur spéciale 'password' pour créer une boîte de texte dans laquelle tout ce qui est saisi est caché. Il est utilisé habituellement pour les champs de saisie de mot de passe.</dd>
+ <dt><code id="a-maxlength"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/maxlength">maxlength</a></code> </dt>
+ <dd>Le nombre maximum de caractères que l'on peut saisir dans la boîte de texte.</dd>
+</dl>
+
+<div class="note">Notez que, tandis qu'en HTML différentes sortes de champs peuvent être créées avec l'élément <code>input</code>, il y a un élément différent pour chaque type de champs en XUL.</div>
+
+<p>L'exemple suivant montre quelques boîtes de texte :</p>
+
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_inputs_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_inputs_1.xul">Voir</a></p>
+
+<pre>&lt;label control="some-text" value="Entrez du texte"/&gt;
+&lt;textbox id="some-text"/&gt;
+&lt;label control="some-password" value="Entrez un mot de passe"/&gt;
+&lt;textbox id="some-password" type="password" maxlength="8"/&gt;
+</pre>
+
+<h4 id="Bo.C3.AEte_de_texte_multiligne" name="Bo.C3.AEte_de_texte_multiligne">Boîte de texte multiligne</h4>
+
+<p>Les exemples de boîtes de texte ci-dessus créent des champs de saisie qui ne peuvent être utilisés que pour la saisie d'une seule ligne de texte. Le HTML possède aussi un élément <code>textarea</code> pour créer une zone de saisie plus grande. Dans XUL, vous pouvez utiliser l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code> de la même façon -- deux éléments distincts ne sont pas nécessaires. Si vous mettez l'attribut <code id="a-multiline"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/multiline">multiline</a></code> à la valeur 'true', le champ de saisie de texte affichera plusieurs lignes.</p>
+
+<p>Par exemple :</p>
+
+<p><span id="Exemple_2"><a id="Exemple_2"></a><strong>Exemple 2</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_inputs_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_inputs_2.xul">Voir</a></p>
+
+<pre>&lt;textbox multiline="true"
+         value="Voici du texte qui pourrait s'étaler sur plusieurs lignes."/&gt;
+</pre>
+
+<p>Comme avec la balise <code>textarea</code> du HTML, vous pouvez utiliser les attributs <code id="a-rows"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/rows">rows</a></code> et <code id="a-cols"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/cols">cols</a></code> pour définir la taille. Ils vous permettent d'ajuster le nombre de lignes et de colonnes de caractères à afficher.</p>
+
+<div class="highlight">
+<h4 id="Notre_exemple_de_recherche_de_fichiers" name="Notre_exemple_de_recherche_de_fichiers">Notre exemple de recherche de fichiers</h4>
+
+<p>Maintenant, ajoutons un champ de saisie de recherche à la boîte de dialogue de recherche de fichiers. Nous allons utiliser l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code>.</p>
+
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-inputs.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-inputs.xul">Voir</a></p>
+
+<pre class="eval"><span class="highlightred">&lt;label value="Chercher :" control="find-text"/&gt;</span>
+<span class="highlightred">&lt;textbox id="find-text"/&gt;</span>
+
+&lt;button id="find-button" label="Rechercher"/&gt;
+</pre>
+
+<div class="float-right"><img alt="Image:xultu_inputs1.png" class="internal" src="/@api/deki/files/1525/=Xultu_inputs1.png"></div>
+
+<p>Ajoutez ces lignes avant les boutons que nous avons créés dans la section précédente. Si vous ouvrez cette fenêtre, vous verrez quelque chose ressemblant à l'image ci-dessous.</p>
+Notez que le libellé et le champ de saisie de texte sont maintenant apparus dans la fenêtre. La boîte de texte est complètement fonctionnelle et vous pouvez taper et sélectionner du texte dedans. Notez aussi que l'attribut <code id="a-control"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/control">control</a></code> a été utilisé. Ainsi, le champ de saisie est sélectionnée lorsque l'on clique sur son libellé.</div>
+
+<h3 id="Les_cases_.C3.A0_cocher_et_les_boutons_radio" name="Les_cases_.C3.A0_cocher_et_les_boutons_radio">Les cases à cocher et les boutons radio</h3>
+
+<p>Deux éléments supplémentaires sont utilisés pour la création des cases à cocher et des boutons radio. Ce sont des variantes de boutons. La case à cocher est utilisée pour des options qui peuvent être activées ou désactivées. Les boutons radio peuvent être utilisés dans un but similaire quand il y a un ensemble de boutons où un seul d'entre eux peut-être sélectionné à la fois.</p>
+
+<p>Vous pouvez employer la plupart des attributs des boutons avec les cases à cocher et les boutons radio. L'exemple ci-dessous montre des cases à cocher et boutons radio simples.</p>
+
+<pre>&lt;checkbox id="case-sensitive" checked="true" label="Sensible à la casse"/&gt;
+&lt;radio id="orange" label="Orange"/&gt;
+&lt;radio id="violet" selected="true" label="Violet"/&gt;
+&lt;radio id="yellow" label="Jaune"/&gt;
+</pre>
+
+<p>La première ligne crée une simple case à cocher. Quand l'utilisateur clique sur la case à cocher, son état coché et décoché s'inverse. L'attribut <code id="a-checked"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/checked">checked</a></code> peut être utilisé pour indiquer l'état par défaut. Il vous faudra l'initialiser soit à 'true', soit à 'false'. L'attribut <code id="a-label"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/label">label</a></code> peut être utilisé pour ajouter un libellé qui apparaitra à côté de la case à cocher. Pour les boutons radio, vous utiliserez l'attribut <code id="a-selected"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/selected">selected</a></code> à la place de l'attribut <code id="a-checked"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/checked">checked</a></code>. Initialisez le à 'true' pour avoir un bouton radio sélectionné par défaut, ou ne le mettez pas pour les autres boutons radio.</p>
+
+<h4 id=".C3.89lement_radiogroup" name=".C3.89lement_radiogroup">Élement <code>radiogroup</code></h4>
+
+<p>Pour grouper des boutons radio ensemble, vous devez utiliser l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code>. Un seul bouton radio peut-être sélectionné dans un <code><a href="/fr/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code>. Cliquez sur l'un deux désélectionnera tous les autres du même groupe. C'est ce que démontre l'exemple suivant.</p>
+
+<p><span id="Exemple_3"><a id="Exemple_3"></a><strong>Exemple 3</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_inputs_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_inputs_3.xul">Voir</a></p>
+
+<pre>&lt;radiogroup&gt;
+  &lt;radio id="orange" label="Orange"/&gt;
+  &lt;radio id="violet" selected="true" label="Violet"/&gt;
+  &lt;radio id="Jaune" label="Jaune"/&gt;
+&lt;/radiogroup&gt;
+</pre>
+
+<h4 id="Attributs" name="Attributs">Attributs</h4>
+
+<p>Comme pour les boutons, les cases à cocher et les boutons radio sont constitués d'un libellé et d'une image, où l'image change en fonction de l'état coché ou décoché. Les cases à cocher ont certains attributs communs aux boutons :</p>
+
+<dl>
+ <dt><code id="a-label"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/label">label</a></code> </dt>
+ <dd>Le libellé de la case à cocher ou du bouton radio.</dd>
+ <dt><code id="a-disabled"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/disabled">disabled</a></code> </dt>
+ <dd>Mettez la valeur à 'true' ou à 'false' pour désactiver ou activer la case à cocher ou le bouton radio.</dd>
+ <dt><code id="a-accesskey"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/accesskey">accesskey</a></code> </dt>
+ <dd>La touche clavier pouvant être utilisée comme raccourci pour sélectionner l'élément. La lettre spécifiée est habituellement soulignée dans le libellé.</dd>
+</dl>
+
+<hr>
+<p>Dans la prochaine section, nous allons voir quelques éléments pour la création de boîtes de listes.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL/Ajouter_des_libellés_et_des_images" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL/Les_contrôles_numériques">Suivant  »</a></p>
+</div>

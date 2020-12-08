@@ -1,0 +1,47 @@
+---
+title: XForms API Reference
+slug: Archive/Web/XForms/Référence_API_XForms
+tags:
+  - XForms
+translation_of: Archive/Web/XForms/API_Reference
+---
+<div class="note">
+<p>Cette page n'est que le début du recensement de la référence de l'API de XForms. Notez le mot <strong>début</strong> :-)</p>
+</div>
+
+<p> </p>
+
+<h3 id="Convention_de_nommage" name="Convention_de_nommage">Convention de nommage</h3>
+
+<p>L'interface XForms a les conventions de nommage suivantes :</p>
+
+<dl>
+ <dt>nsIXForms...Element </dt>
+ <dd>Interfaces implémentées par la partie C++ d'un contrôle.</dd>
+ <dt>nsIXFormsNS...Element </dt>
+ <dd>Interfaces étendant la spécification des interfaces XForms.</dd>
+ <dt>nsIXForms...UIElement </dt>
+ <dd>Interfaces implémentées par la partie JavaScript d'un contrôle.</dd>
+ <dt>nsIXForms...Accessors </dt>
+ <dd>Interfaces exposant l'état d'un nœud d'instance liée d'un contrôle donné.</dd>
+</dl>
+
+<h3 id="Interfaces_gel.C3.A9es" name="Interfaces_gel.C3.A9es">Interfaces gelées</h3>
+
+<dl>
+ <dt><a href="fr/NsIXFormsModelElement">nsIXFormsModelElement</a></dt>
+ <dd>L'interface modèle</dd>
+</dl>
+
+<h3 id="Interfaces_exp.C3.A9rimentales" name="Interfaces_exp.C3.A9rimentales">Interfaces expérimentales</h3>
+
+<dl>
+ <dt><a href="fr/NsIXFormsDelegate">nsIXFormsDelegate</a></dt>
+ <dd>L'interface<em>déléguée</em> de <a href="fr/XForms/Contr%c3%b4les_personnalis%c3%a9s">XForms:Contrôles personnalisés</a>.</dd>
+ <dt><a href="fr/NsIXFormsAccessors">nsIXFormsAccessors</a></dt>
+ <dd>L'interface<em>accessoires</em> de {{ mediawiki.external('XForms:Contrôles personnalisés') }}].</dd>
+ <dt><a href="fr/NsIXFormsNSModelElement">nsIXFormsNSModelElement</a></dt>
+ <dd>Extensions personnalisées de l'interface <a href="fr/NsIXFormsModelElement">nsIXFormsModelElement</a>.</dd>
+ <dt><a href="fr/NsIXFormsNSInstanceElement">nsIXFormsNSInstanceElement</a></dt>
+ <dd>Extensions personnalisées de l'élément instance.</dd>
+</dl>

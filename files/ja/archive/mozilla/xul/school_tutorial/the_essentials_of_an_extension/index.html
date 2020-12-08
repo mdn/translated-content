@@ -1,0 +1,347 @@
+---
+title: The Essentials of an Extension
+slug: Archive/Mozilla/XUL/School_tutorial/The_Essentials_of_an_Extension
+translation_of: Archive/Add-ons/Overlay_Extensions/XUL_School/The_Essentials_of_an_Extension
+---
+<div>
+  <div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/School_tutorial/Getting_Started_with_Firefox_Extensions" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/School_tutorial/Setting_Up_a_Development_Environment">次のページ  »</a></p>
+</div></div>
+
+
+
+
+
+<h2 id="The_install.rdf_File" name="The_install.rdf_File">install.rdf ファイル</h2>
+<p>前回のセクションでは、Hello World 拡張の内容を見ました。今回は、そのファイルとコードについて探ります。<em>install.rdf</em> ファイルから見ていきましょう。これを適当なテキストエディタで開いてください。</p>
+<p>このファイルは、<a href="http://ja.wikipedia.org/wiki/Resource_Description_Framework">RDF</a> と呼ばれる XML 風の特殊な書式で書かれています。RDF は、Firefox 本体のストレージ機構に使用されていますが、現在は、簡単なデータベースシステムへの置き換えが進んでいます。これらのストレージシステムについては後のセクションで取り上げます。</p>
+<p>それでは、このファイルの重要な部分を見ていきましょう。</p>
+<div class="code panel" style="border-width: 1px;">
+  <div class="codeContent panelContent">
+    <pre class="code-java">&lt;em:id&gt;helloworld@xulschool.com&lt;/em:id&gt;</pre>
+  </div>
+</div>
+<p>これは、拡張機能の固有の識別子です。Firefox が各拡張機能を区別できるように、それぞれに固有の ID を割り当てる必要があります。</p>
+<p>アドオンの ID には 2 通りの標準があります。一つは、Hello World の例でも使用されている、次のメールアドレスのような書式です: <em>&lt;project-name&gt;@&lt;yourdomain&gt;</em>。 もう一つの標準は、生成された <a href="http://ja.wikipedia.org/wiki/Uuid">UUID</a> 文字列を使用することです。これは、非常に重複することのないランダムな文字列です。UNIX ベースのシステムには、UUID を生成する <em>uuidgen</em> と呼ばれるコマンドラインツールがあります。他のプラットフォーム用の UUID を生成するツールもあります。囲み括弧は、実際に使用されている表記法です。ID が他に使用されていない固有のものであれば、どのような書式でも使用可能です。</p>
+<div class="code panel" style="border-width: 1px;">
+  <div class="codeContent panelContent">
+    <pre class="code-java">&lt;em:name&gt;XUL School Hello World&lt;/em:name&gt;
+&lt;em:description&gt;Welcome to XUL School!&lt;/em:description&gt;
+&lt;em:version&gt;0.1&lt;/em:version&gt;
+&lt;em:creator&gt;Appcoast&lt;/em:creator&gt;
+<span class="code-comment">&lt;em:homepageURL&gt;https://developer.mozilla.org/ja/XUL/School_tutorial&lt;/em:homepageURL</span></pre>
+  </div>
+</div>
+<p>これは、拡張機能がインストールされる前と後に表示されるデータです。アドオンマネージャで見ることもできます。ホームページの URL は、拡張機能を右クリックして [サイトを表示] を選択すると開くことができます。この他にも、貢献者や翻訳者の情報など多くのタグを追加することができます。install.rdf ファイルの<a href="/ja/docs/Install_Manifests" title="Install Manifests">仕様書</a>にすべての詳細があります。</p>
+<p>拡張機能は、複数の言語に翻訳できるので、拡張機能の説明や名前まで翻訳が必要になることがあります。Firefox 3 以降では、ローカライズ (言語に合わせて翻訳) された説明と名前を次のコードように追加します:</p>
+<div class="code panel" style="border-width: 1px;">
+  <div class="codeContent panelContent">
+    <pre class="code-java">&lt;em:localized&gt;
+  &lt;Description&gt;
+    &lt;em:locale&gt;es-ES&lt;/em:locale&gt;
+    &lt;em:name&gt;XUL School Hola Mundo&lt;/em:name&gt;
+    &lt;em:description&gt;Bienvenido a XUL School!&lt;/em:description&gt;
+  &lt;/Description&gt;
+&lt;/em:localized&gt;</pre>
+  </div>
+</div>
+<p><em>es-ES</em> ロケールの文字列は、スペイン (国コード: ES) のスペイン語 (言語コード: es) ロケールであることを示しています。必要に応じて <em>&lt;em:localized&gt;</em> セクションを追加してください。Firefox 2 では、このファイルのローカライズは<a href="/ja/docs/Localizing_extension_descriptions#Localizing_before_Gecko_1.9" title="Localizing extension descriptions#Localizing before Gecko 1.9">少々複雑</a>でした。ローカライズについては後のセクションで取り上げます。</p>
+<div class="code panel" style="border-width: 1px;">
+  <div class="codeContent panelContent">
+    <pre class="code-java">&lt;em:type&gt;2&lt;/em:type&gt;</pre>
+  </div>
+</div>
+<p>これは、インストールされるアドオンの種類が拡張機能であることを指定しています。他の type の値については、<a href="/ja/docs/Install_Manifests#type" title="Install Manifests#type">install.rdf の仕様</a>を参照してください。</p>
+<div class="code panel" style="border-width: 1px;">
+  <div class="codeContent panelContent">
+    <pre class="code-java">&lt;em:targetApplication&gt;
+  &lt;Description&gt;
+    &lt;em:id&gt;{ec8030f7-c20a-464f-9b0e-13a3a9e97384}&lt;/em:id&gt;
+    &lt;em:minVersion&gt;3.0&lt;/em:minVersion&gt;
+    &lt;em:maxVersion&gt;3.6.*&lt;/em:maxVersion&gt;
+  &lt;/Description&gt;
+&lt;/em:targetApplication&gt;</pre>
+  </div>
+</div>
+<p>このノードは、拡張機能のターゲットアプリケーションが Firefox、ターゲットバージョンが 3.0 から 3.6.* であることを指定しています。UUID は Firefox 固有の ID です。Thunderbird や SeaMonkey など他の Mozilla アプリケーションおよび Mozilla ベースのアプリケーションにも固有の ID があります。拡張機能を複数のアプリケーションとバージョンで動作させることもできます。例えば、Firefox の拡張機能を作った場合、少し書き加えるだけで Firefox とよく似た機能や UI を持つ SeaMonkey でも動作させることができるでしょう。</p>
+<p>minVersion および maxVersion は、拡張機能をがインストールできるバージョンの範囲を指定します。バージョンの表記については、<a href="/ja/docs/Toolkit_version_format" title="Toolkit version format">Toolkit のバージョン形式</a>を参照してください。アプリケーションやバージョン範囲がマッチしない場合はインストールできません。また、既にインストールされたアドオンは無効化されます。ユーザは、アプリケーションの設定を変更するか <a class="link-https" href="https://addons.mozilla.org/ja/firefox/addon/15003" title="https://addons.mozilla.org/ja/firefox/addon/15003">Add-on Compatibility Reporter</a> などのアドオンをインストールすることでバージョンチェックを無効にできます。</p>
+<p>上記が Firefox や他の Mozilla アプリケーションにアドオンをインストールするために必要な情報のすべてです。アドオンにエラーや足りない情報があると、インストール処理に失敗したり拡張機能が無効化された状態でインストールされる原因になります。</p>
+
+
+
+
+
+<h2 id="The_chrome.manifest_File" name="The_chrome.manifest_File">chrome.manifest ファイル</h2>
+<blockquote>
+  <p>chrome (クロム) とは、アプリケーションウィンドウのコンテンツ領域の外側を構成するユーザインタフェース要素のセットです。例えば、ツールバーやメニューバー、プログレスバー、ウィンドウのタイトルバーといった要素は、すべて chrome で構成された典型的な部分になります。</p>
+</blockquote>
+<p>これは、<a href="/ja/docs/Chrome_Registration" title="Chrome Registration">Chrome Registration</a> からの引用です。</p>
+<p>言い換えれば、chrome は、あなたが Firefox に見ているものすべてです。すべての Firefox ウィンドウには、(1) chrome で構成された部分と (2) Firefox のタブにウェブページを表示するコンテンツ領域の 2 つの部分が見えています。アドオンマネージャやダウンロードウィンドウなどのウィンドウは純粋な chrome だけで構成されています。Hello World の例のように、拡張機能のほとんどのコードは chrome フォルダ内にあります。</p>
+<p>chrome ファイルはすべて、拡張機能名が付いた JAR アーカイブ内にパッケージ化されています。chrome ファイルを一つのパッケージにまとめる必要はありませんが、パフォーマンス上の理由から、このようにパッケージ化することが推奨されています。</p>
+<p>展開した拡張機能のディレクトリ構造で見たとおり、chrome には、content, locale, skin の 3 つのセクションがあります。ほとんどの拡張機能では、これら 3 つとも必要です。<em>chrome.manifest</em> ファイルを (適当なテキストエディタで) 開くと、これらのディレクトリが含まれていることが分かります:</p>
+<div class="code panel" style="border-width: 1px;">
+  <div class="codeContent panelContent">
+    <pre class="code-java">content   xulschoolhello              jar:chrome/xulschoolhello.jar!/content/
+skin      xulschoolhello  classic/1.0 jar:chrome/xulschoolhello.jar!/skin/
+locale    xulschoolhello  en-US       jar:chrome/xulschoolhello.jar!/locale/en-US/</pre>
+  </div>
+</div>
+<p><em>chrome.manifest</em> ファイルは、Firefox に chrome ファイルのどこを探せばよいかを伝えるものです。上記のテキストは表のようにスペースを空けていますが、ファイルが読み込まれる時は連続したスペースが無視されるため、このように記述する必要はありません。</p>
+<p>行の先頭の単語は、Firefox に何が宣言されているかを伝えます (content, skin, locale 他)。二番目の単語はパッケージ名です。これは説明の必要はないでしょう。skin や locale の場合は、これらの適用対象を指定する三番目の値があります。skin と locale のエントリは、異なるテーマや言語ごとに複数記述できます。最も一般的な例としては、一つの global skin エントリに <em>classic/1.0</em>、言語ごとに一つの locale エントリを記述します。行の最後は、ファイルの場所を指定します。<em>jar:</em> スキームについて補足すると、これは、Firefox に JAR ファイル内の正しいパスからファイルを読み込むように伝えるものです。拡張機能の chrome ディレクトリをパッケージ化しない場合は、ファイルへのパスを <em>chrome/content/</em> のように変更するだけです。</p>
+<p><em>chrome.manifest</em> ファイルのエントリには、他にもいくつかのオプションを記述することができます。詳しくは、<a href="/ja/docs/Chrome_Registration" title="Chrome Registration">Chrome Registration</a> ページを参照してください。注意すべきこととして、OS 特有のエントリを記述することができます。これは、Firefox 3 以降のブラウザの外観が各オペレーティングシステムで異なるため、特に重要になります。メジャーなシステムに合わせて拡張機能を異なる外観にする必要がある場合は、次のように記述します:</p>
+<div class="code panel" style="border-width: 1px;">
+  <div class="codeContent panelContent">
+    <pre class="code-java">content   xulschoolhello              jar:chrome/xulschoolhello.jar!/content/
+skin      xulschoolhello  classic/1.0 jar:chrome/xulschoolhello.jar!/skin/unix/
+skin      xulschoolhello  classic/1.0 jar:chrome/xulschoolhello.jar!/skin/mac/ os=Darwin
+skin      xulschoolhello  classic/1.0 jar:chrome/xulschoolhello.jar!/skin/win/ os=WinNT
+locale    xulschoolhello  en-US       jar:chrome/xulschoolhello.jar!/locale/en-US/</pre>
+  </div>
+</div>
+<p>この方法は、Windows および Mac OS X, Linux 用のスキンをそれぞれのディレクトリに分けて定義しています。他のほとんどのシステムは UNIX ベースのため、"unix" スキンは、フラグなしのデフォルトスキンとして定義します。</p>
+
+
+
+
+
+<h2 id="chrome" name="chrome">chrome</h2>
+<p>先に述べた通り、chrome は、content, locale, skin の 3 つのセクションで構成されています。content は、ユーザインタフェース (XUL) とスクリプト (JS) のファイルを保持している最も重要なセクションです。skin セクションには、UI のルック＆フィールを定義するファイル (ウェブページのように CSS と画像を使用します) があります。最後に、locale セクションは、拡張機能内で使用されるすべてのテキストを DTD ファイルと properties ファイルに保持しています。このように分けることで、拡張機能のプログラム本体のコードを書き換えることなく、他の開発者が skin を置き換えるテーマを作成したり、翻訳者が別の言語にローカライズしたりできます。この仕組みが Firefox の拡張機能にすばらしい柔軟性をもたらしています。</p>
+<p>chrome ファイルへのアクセスは、chrome プロトコルを通します。chrome URI は、次のように定義します:</p>
+<div class="code panel" style="border-width: 1px;">
+  <div class="codeContent panelContent">
+    <pre class="code-java">chrome:<span class="code-comment">//packagename/section/path/to/file</span></pre>
+  </div>
+</div>
+<p>例えば、拡張機能内の <em>browserOverlay.xul</em> ファイルへアクセスしたい場合、chrome URI は、<em><a rel="freelink">chrome://xulschoolhello/content/browserOverlay.xul</a></em> になります。content 内に多くのファイルがあり、それらをサブディレクトリに分けたい時は、<em>chrome.manifest</em> を変更する必要はありません。必要なことは、URI の <em>content</em> の後に正しいパスを追加するだけです。skin と locale ファイルも同じ方法でアクセスできます。この時、パスに skin 名や locale 名を指定する必要はありません。同様に、Hello World 拡張内の DTD ファイルへアクセスする場合の chrome のパスは、<em><a rel="freelink">chrome://xulschoolhello/locale/browserOverlay.dtd</a></em> です。求める locale は Firefox が知っています。</p>
+<p>ここで、おもしろい実験をしましょう。Firefox の新しいタブを開き、ロケーションバーに <em><a rel="freelink">chrome://mozapps/content/downloads/downloads.xul</a></em> と入力して Enter キーを押してください。驚きましたか？ Firefox のタブ内にダウンロードウィンドウが開かれたでしょう！ ロケーションバーに chrome ファイルの URI を入力するだけでアクセスすることができます。これは、Firefox の一部、または他の拡張機能やあなたの拡張機能のスクリプトファイルを調べたいときに役立つ手軽な方法です。これらのファイルのほとんどはテキストファイルとして開かれますが、XUL ファイルだけは、通常のウィンドウに表示されるように実行され、表示されます。</p>
+
+
+
+
+
+<h3 id="content" name="content">content</h3>
+<p>content ディレクトリには 2 個のファイルがあります。はじめに、XUL ファイルから見ていきましょう。</p>
+<p><a href="/ja/docs/XUL" title="XUL">XUL</a> ファイルは、Firefox と拡張機能のユーザインタフェース要素を定義する XML ファイルです。XUL は HTML を元にしているため、両者に多くの似たところがあることが分かるでしょう。しかしながら、XUL は HTML よりも多くの点で改善されており、HTML が策定される過程で起こった多くのミスから学んでいます。XUL は、HTML よりもリッチで対話的なインタフェースを作成できます。また、少なくとも XUL のほうが簡単に作成できます。</p>
+<p>XUL ファイルは通常、ウィンドウとオーバーレイのどちらか片方を定義します。先ほど開いた <em>downloads.xul</em> ファイルのコードは、ダウンロードウィンドウを定義しています。Hello World 拡張に含まれる XUL ファイルはオーバーレイです。オーバーレイは、既存のウィンドウを拡張し、新しい要素を追加したり既存の要素を置き換えたりします。<em>chrome.manifest</em> ファイルで読み飛ばした行は、この XUL ファイルがメインのブラウザウィンドウのオーバーレイであることを示しています:</p>
+<div class="code panel" style="border-width: 1px;">
+  <div class="codeContent panelContent">
+    <pre class="code-java">overlay chrome:<span class="code-comment">//browser/content/browser.xul  chrome://xulschoolhello/content/browserOverlay.xul</span></pre>
+  </div>
+</div>
+<p>この行によって、Firefox が <em>browserOverlay.xul</em> のコンテンツをメインのブラウザウィンドウ (<em>browser.xul</em>) のオーバーレイとして適用する必要があることを知ります。Firefox 内のどのウィンドウやダイアログに対してもオーバーレイを宣言することができますが、メインのブラウザウィンドウにオーバーレイを適用する方法が最も一般的です。</p>
+<p>それでは、XUL ファイルの内容を見ていきましょう。最初の数行は、後で取り上げる skin と locale に関連する部分なので飛ばします。</p>
+<div class="code panel" style="border-width: 1px;">
+  <div class="codeContent panelContent">
+    <pre class="code-java">&lt;overlay id="xulschoolhello-browser-overlay"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;</pre>
+  </div>
+</div>
+<p>このファイルのルート要素は <em>overlay</em> です。他の XUL ドキュメントは <em>window</em> タグや <em>dialog</em> タグを使用しています。この要素は、XUL 内の他の要素と同様にユニークな id を持っています。2 番目の属性は、常に XUL ルート要素内で定義される名前空間です。この名前空間は、このノード以下のすべての子ノードが XUL であることを示しています。XUL に加えて HTML や SVG など、異なる種類のコンテンツをこのノード以下に記述する場合のみ、名前空間の宣言を変更する必要があります。</p>
+<div class="panel" style="border-width: 1px;">
+  <div class="panelContent">
+    <div class="note">
+      いくつかの場所で、<em>xulschoolhello-browser-overlay</em> のように id に名前を付けていることに気付くでしょう。これは、Firefox や他の拡張機能と同じ名前にならないようにするための名前空間の標準的な記述方法です。このように名前を付けることで、開発作業がしやすくなるでしょう。overlay 要素内のすべての id や style クラスは、メインのブラウザウィンドウ内の他の要素と同じ名前空間に置かれます。<em>container</em> や <em>input</em> のような一般的な id を使用してしまうと、Firefox や他の拡張機能の overlay 内で使用されている id と競合してしまいます。名前空間を使用することで、他の拡張機能との互換性の問題を最小限度に留められます。私たちは、ファイル名にキャメルケースを用い、要素 id と CSS style クラス名にダッシュと小文字を用います。</div>
+  </div>
+</div>
+<div class="code panel" style="border-width: 1px;">
+  <div class="codeContent panelContent">
+    <pre class="code-java">&lt;script type=<span class="code-quote">"application/x-javascript"</span>
+  src=<span class="code-quote">"chrome:<span class="code-comment">//xulschoolhello/content/browserOverlay.js"</span> /&gt;</span></pre>
+  </div>
+</div>
+<p>HTML のように、ここでは外部の JavaScript スクリプトファイルを XUL ファイルに含めています。<em>script</em> 要素は、XUL ファイル内に必要なだけ複数記述することができます。スクリプトファイル内のコードについては、後で見ることにします。</p>
+<div class="panel" style="border-width: 1px;">
+  <div class="panelContent">
+    <div class="note">
+      ここでも、私たちのコードの書き方について、どのような規則に従っているかが気になるでしょう。全般的な規則として、一行の長さが 80 文字を超えないようにしています。これは、特に XML ファイルではとても制限されているように感じますが、この数値は、どのテキストエディタでもファイルを扱いやすくするために選ばれています。古いコマンドラインエディタも、一行 80 文字で区切られたファイルなら扱えます。タブの桁数については、とてもはっきりしており、2 文字のスペースを使用して字下げします。私たちは、後で取り上げる Makefiles を除き、実際のタブ文字を使用しません。私たちのコードの書き方の標準のほとんどは、Mozilla や他のよく知られ、使用されている標準を基にしています。</div>
+  </div>
+</div>
+<p>locale セクションで取り上げる数行のコードは飛ばして、content の最も重要な部分へ移ります:</p>
+<div class="code panel" style="border-width: 1px;">
+  <div class="codeContent panelContent">
+    <pre class="code-java">&lt;menubar id="main-menubar"&gt;
+  &lt;menu id="xulschoolhello-hello-menu" label="&amp;xulschoolhello.hello.label;"
+    accesskey="&amp;xulschoolhello.helloMenu.accesskey;" insertafter="helpMenu"&gt;
+    &lt;menupopup&gt;
+      &lt;menuitem id="xulschoolhello-hello-menu-item"
+        label="&amp;xulschoolhello.hello.label;"
+        accesskey="&amp;xulschoolhello.helloItem.accesskey;"
+        oncommand="XULSchoolChrome.BrowserOverlay.sayHello(event);" /&gt;
+    &lt;/menupopup&gt;
+  &lt;/menu&gt;
+&lt;/menubar&gt;</pre>
+  </div>
+</div>
+<p>これは、ブラウザウィンドウに Hello World メニューを追加するコードです。このコードを書くには、<em>browser.xul</em> 内の XUL コードの知識が必要です。まず、メインメニューの id が <em>main-menubar</em> であることを知る必要があります。ここでは、独自のメニューを追加し、それをメインメニューバーのヘルプメニューのすぐ後に追加することを Firefox に知らせています。次の属性でメニューの追加位置を指定しています:</p>
+<div class="code panel" style="border-width: 1px;">
+  <div class="codeContent panelContent">
+    <pre class="code-java">insertafter=<span class="code-quote">"helpMenu"</span></pre>
+  </div>
+</div>
+<p><em>helpMenu</em> は、ブラウザのメインメニュー内のヘルプメニューに相当する、メニュー要素の id です。ブラウザ要素の id を見つける方法は後で取り上げます。ここでは、Hello World メニューを構成している要素を見ていきましょう。</p>
+<p><a href="/ja/docs/XUL/menubar" title="XUL/menubar">menubar</a> 要素は、アプリケーションウィンドウの上部に表示されるメニューバーを表します。メインの Firefox ウィンドウや他のウィンドウにも、この要素が使用されています。また、追加の拡張機能のウィンドウにもメニューバーがある場合があります。</p>
+<p>ここでは、Hello World メニューをメニューバーの "ルート" に追加したので、とても簡単に見つけられたでしょう。しかし、この方法は勧められません。すべての拡張機能がウィンドウ上部のメニューバーに追加したところを想像してみてください。少数の拡張機能が、飛行機のコックピットの計器類のように、メニューを拡張機能のオプションで満たしてしまうでしょう。拡張機能のメニューを置く推奨される場所は、<em>ツール</em> メニュー以下です。では、実際のコードを次のように変更しましょう:</p>
+<div class="code panel" style="border-width: 1px;">
+  <div class="codeContent panelContent">
+    <pre class="code-java">&lt;menupopup id=<span class="code-quote">"menu_ToolsPopup"</span>&gt;
+  &lt;menu id=<span class="code-quote">"xulschoolhello-hello-menu"</span> label=<span class="code-quote">"&amp;</span><span class="code-quote">xulschoolhello</span><span class="code-quote">.hello.label;"</span>
+    accesskey=<span class="code-quote">"&amp;</span><span class="code-quote">xulschoolhello</span><span class="code-quote">.helloMenu.accesskey;"</span>
+    insertafter=<span class="code-quote">"javascriptConsole,devToolsSeparator"</span>&gt;
+    &lt;menupopup&gt;
+      &lt;menuitem id=<span class="code-quote">"</span><span class="code-quote">xulschoolhello</span><span class="code-quote">-hello-menu-item"
+      </span>  label=<span class="code-quote">"&amp;</span><span class="code-quote">xulschoolhello</span><span class="code-quote">.hello.label;"</span>
+        accesskey=<span class="code-quote">"&amp;</span><span class="code-quote">xulschoolhello</span><span class="code-quote">.helloItem.accesskey;"</span>
+        oncommand=<span class="code-quote">"XULSchoolChrome.BrowserOverlay.sayHello(event);"</span> /&gt;
+    &lt;/menupopup&gt;
+  &lt;/menu&gt;
+&lt;/menupopup&gt;</pre>
+  </div>
+</div>
+<p>XUL ツリーの深いところにあるメニューにオーバーレイを適用しましたが、これは問題になりません。必要なものはオーバーレイを適用する要素の id だけです。上記のコードは、ツール <a href="/ja/docs/XUL/menu" title="XUL/menu">menu</a> 要素内の <a href="/ja/docs/XUL/menupopup" title="XUL/menupopup">menupopup</a> 要素の id を指定しています。<em>insertafter</em> 属性は、ツールメニューのエラーコンソールの下にメニューを追加することを Firefox に知らせています。この場所は、<a href="/ja/docs/Extension_Etiquette" title="Extension Etiquette"><span>拡張機能のエチケット</span>のページ</a>で推奨されています。メニューについて、詳しくはチュートリアルの後の章で取り上げます。ここでは、次の行に焦点を当てましょう:</p>
+<div class="code panel" style="border-width: 1px;">
+  <div class="codeContent panelContent">
+    <pre class="code-java">oncommand=<span class="code-quote">"XULSchoolChrome.BrowserOverlay.sayHello(event);"</span></pre>
+  </div>
+</div>
+<p>この属性は、イベントハンドラを定義しています。<em>command</em> イベントは、ほとんどの UI 要素のメインの動作に相当するため、Firefox で最も頻繁に使われます。属性の値は、関数を呼び出す JavaScript コードです。この関数は、<em>script</em> タグで XUL ファイルに含まれた JS ファイル内で定義されています。この JavaScript の関数は、ユーザが Hello World メニューのメニュー項目をクリックすると一度だけ呼び出されます。すべてのイベントハンドラは <em>event</em> という名前の特別なオブジェクトを定義しており、関数へ渡す引数としてよく使用されます。イベントハンドラについては、後で詳しく説明します。</p>
+<p>次に、JavaScript ファイルへ進みます。このファイルでイベントが起こった時に何が行われているかを見ていきましょう。</p>
+<div class="code panel" style="border-width: 1px;">
+  <div class="codeContent panelContent">
+    <pre class="brush: js">/**
+ * XULSchoolChrome namespace.
+ */
+if ("undefined" == typeof(XULSchoolChrome)) {
+  var XULSchoolChrome = {};
+};</pre>
+  </div>
+</div>
+<p>これは、<em>XULSchoolChrome</em> 名前空間を定義しています。JavaScript で定義したすべてのオブジェクトや変数はグローバルです。つまり、Firefox や他の拡張機能内のスクリプトが、このファイルの変数へアクセスできてしまうことを意味しています。また、<em>MenuHandler</em> や他の一般的な名前でオブジェクトを定義すると、それらが既存のオブジェクトと競合してしまうことも意味しています。ここでは、一つのグローバルオブジェクト <em>XULSchoolChrome</em> を定義しています。このオブジェクトの中に私たちのすべてのオブジェクトを収めることで、他の拡張機能によって複製されたり上書きされたりすることが起こらなくなります。</p>
+<p>このコードについて詳しくは、<a href="/ja/docs/JavaScript/Reference/Operators/Special_Operators/typeof_Operator" title="JavaScript/ Reference/Operators/Special Operators/typeof Operator"><span>typeof 演算子</span></a>のページをお読みください。JavaScript や一部の構文に詳しくない方に説明すると、<em>{}</em> に初期化することと <em>new Object()</em> に初期化することは同等です。</p>
+<div class="code panel" style="border-width: 1px;">
+  <div class="codeContent panelContent">
+    <pre class="brush: js">/**
+ * Controls the browser overlay <span class="code-keyword">for</span> the Hello World extension.
+ */
+XULSchoolChrome.BrowserOverlay = {</pre>
+  </div>
+</div>
+<p>最後の <em>BrowserOverlay</em> は私たちのオブジェクトです。このように冗長な名前を付けて参照する方法は落ち着かないかもしれませんが、そうするだけの価値があります。</p>
+<div class="panel" style="border-width: 1px;">
+  <div class="panelContent">
+    <div class="note">
+      すべての名前空間、オブジェクトおよびオブジェクトのメンバには、<a href="http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html">Javadoc</a> スタイルのコメントを使用します。これは Mozilla のコードで使用されているものと似た標準のスタイルです。ツールによっては、Javadoc からドキュメントを自動的に生成できます。</div>
+  </div>
+</div>
+<div class="code panel" style="border-width: 1px;">
+  <div class="codeContent panelContent">
+    <pre class="brush: js">sayHello : function(aEvent) {
+  let stringBundle = document.getElementById("xulschoolhello-string-bundle");
+  let message = stringBundle.getString("xulschoolhello.greeting.label");
+
+  window.alert(message);
+}</pre>
+  </div>
+</div>
+<p>ようやく、関数の宣言まできました。この 3 行のコードは、動作に必要なコードのすべてです。関数の中で宣言された最初の行は、overlay で定義された <a href="/ja/docs/XUL/stringbundle" title="XUL/stringBundle">stringbundle</a> 要素を保持する変数です。この変数は、<em>var</em> に似た <em>let</em> を使用していますが、var よりもスコープの範囲が制限されています。詳しくは、<a href="/ja/docs/JavaScript/New_in_JavaScript/1.7#Block_scope_with_let" title="New in JavaScript 1.7#Block scope with let"><span>let 宣言</span></a>のページをお読みください。Firefox の JavaScript に追加された比較的新しいものに注目するのはよいことですが、とても古いバージョンと互換性のある拡張機能を作る場合は、<em>var</em> を使用してください。</p>
+<p>正規の JavaScript と同じく、XUL ドキュメントを操作するために <a href="/ja/docs/DOM" title="DOM"><span>DOM</span></a> (Document Object Model) を使用することができます。初めに、ドキュメント内の <a href="/ja/docs/XUL/stringbundle" title="XUL/stringbundle"><span>stringbundle 要素</span></a>への参照を取得します。これは、ローカライズされた文字列を、その文字列を識別する "キー" を与えるだけで動的に取り扱うことができる特別な要素です。2 行目で、bundle 要素の <a href="/ja/docs/XUL/stringbundle#m-getString" title="XUL/stringbundle#m-getString">getString メソッド</a>を呼び出し、画面に表示されるローカライズされたメッセージを取得しています。次に、HTML ドキュメントで行うのと同じように、<a href="/ja/docs/DOM/window.alert" title="DOM/window.alert">window.alert</a> 関数をメッセージ付きで呼び出します。</p>
+
+
+
+
+
+<h3 id="locale" name="locale">locale</h3>
+<p>ロケールファイルには DTD と properties の 2 種類があり、この例では両方とも使用しています。DTD は、XUL 内のテキストを表示する方法として最も効率的な方法です。可能な限り、これを使用してください。しかし、動的に生成されるテキストには使用できないなど融通が利かない場合もあるので、ローカライズされた文字列を取得する代わりの方法が必要です。</p>
+<p>メニューのコードに戻ります。次のような属性に気が付くでしょう:</p>
+<div class="code panel" style="border-width: 1px;">
+  <div class="codeContent panelContent">
+    <pre class="code-java">label=<span class="code-quote">"&amp;xulschoolhello.hello.label;"</span> accesskey=<span class="code-quote">"&amp;xulschoolhello.helloItem.accesskey;"</span></pre>
+  </div>
+</div>
+<p>これらの属性は、メニューに表示されるテキストを定義している文字列キーです。この文字列キーは DTD ファイル (<em>browserOverlay.dtd</em>) で定義されています。DTD ファイルは、次のコードで XUL ファイルに含まれていました:</p>
+<div class="code panel" style="border-width: 1px;">
+  <div class="codeContent panelContent">
+    <pre class="code-java">&lt;!DOCTYPE overlay SYSTEM "chrome://xulschoolhello/locale/browserOverlay.dtd" &gt;</pre>
+  </div>
+</div>
+<p>DTD ファイルでは、キーとローカライズされた文字列が関連付けられているのが分かるでしょう:</p>
+<div class="code panel" style="border-width: 1px;">
+  <div class="codeContent panelContent">
+    <pre class="code-java">&lt;!ENTITY xulschoolhello.hello.label            <span class="code-quote">"Hello World!"</span>&gt;
+&lt;!ENTITY xulschoolhello.helloMenu.accesskey    <span class="code-quote">"l"</span>&gt;
+&lt;!ENTITY xulschoolhello.helloItem.accesskey    <span class="code-quote">"H"</span>&gt;</pre>
+  </div>
+</div>
+<p>XUL ファイルでは文字列キーが <em>&amp;</em> と <em>;</em> で囲まれているのに対して、DTD ファイルではキーだけが指定されていることに注意してください。これを守らないと、おかしなパースエラーが起こり、ローカライズが正しく行われません。</p>
+<p>アクセスキーは、キーボードだけでメニューをすばやく操作できるようにするためのショートカットです。これらは、視力が弱い人や身体に障害があるためマウスを使えない人の、アクセシビリティの問題を回避してメニューを操作できるようにする唯一の方法でもあります。Windows では、次の画像のように、アクセスキーに相当する文字に下線が引かれるのですぐに分かるでしょう (日本語版の場合は、アクセスキーが括弧付きで表示されます):</p>
+<div>
+  <p><img alt="" src="../../../../@api/deki/files/4226/=accesskeys.png" style="width: 167px; height: 58px;"></p>
+</div>
+<p>ほとんどのユーザインタフェースを制御する要素には <em>accesskey</em> 属性があります。これを使用してください。アクセスキーの値は、メニューなどのラベルテキストに含まれる文字を使用しなければならないため、そのラベルに合わせてローカライズされます (日本語版の場合は、英語版に合わせます)。また、アクセスキーが重複しないように気を付けなければなりません。例えば、メニューやサブメニューの同じ階層でアクセスキーが重複してはいけません。ウィンドウ内には多くのコントロールがあるため、アクセスキーを選定する際はさらに気を付けてください。特に気を付けなければならないのは、オーバーレイ上のアクセスキーの選定です。Hello World 拡張の場合は、メインメニュー項目のアクセスキーに "H" を使用することができません。これは、ヘルプメニューのアクセスキーに使用されています。同様に、"W" も Mac OS のウインドウメニューと重複するため使用できません。結局、ここでは "l" の文字を設定しています。</p>
+<p>DTD 文字列は、ドキュメントが読み込まれた時に確定され、設定されます。DOM を使用して Hello World メニューの <em>label</em> 属性の値を要求すると、文字列キーではなく、ローカライズされた文字列が取得されます。属性の値を新しい DTD キーに動的に変更することはできません。新しい値を直接設定する必要があります:</p>
+<div class="code panel" style="border-width: 1px;">
+  <div class="codeContent panelContent">
+    <pre class="brush: js">let helloItem = document.getElementById(<span class="code-quote">"xulschoolhello-hello-menu-item"</span>);
+
+<span class="code-comment">// alert には <span class="code-quote">"Hello World!"</span> と表示されます
+</span>alert(helloItem.getAttribute(<span class="code-quote">"label"</span>));
+<span class="code-comment">// 不可
+</span>helloItem.setAttribute(<span class="code-quote">"label"</span>, <span class="code-quote">"&amp;</span><span class="code-quote">xulschoolhello</span><span class="code-quote">.hello2.label;"</span>);
+<span class="code-comment">// 可
+</span>helloItem.setAttribute(<span class="code-quote">"label"</span>, <span class="code-quote">"Alternate message"</span>);
+<span class="code-comment">// 正解！
+</span>helloItem.setAttribute(<span class="code-quote">"label"</span>, someStringBundle.getString(<span class="code-quote">"</span><span class="code-quote">xulschoolhello</span><span class="code-quote">.hello2.label"</span>));</pre>
+
+  </div>
+</div>
+<p>これが、DTD 文字列をすべてのローカライズに適用できない理由です。そして、XUL ファイルに stringbundle で properties ファイルを含める必要がある理由です:</p>
+<div class="code panel" style="border-width: 1px;">
+  <div class="codeContent panelContent">
+    <pre class="code-java">&lt;stringbundleset id="stringbundleset"&gt;
+  &lt;stringbundle id="xulschoolhello-string-bundle"
+    src="chrome://xulschoolhello/locale/browserOverlay.properties" /&gt;
+&lt;/stringbundleset&gt;</pre>
+  </div>
+</div>
+<p><a href="/ja/docs/XUL/stringbundleset" title="XUL/stringbundleset">stringbundleset</a> 要素は、<a href="/ja/docs/XUL/stringbundle" title="XUL/stringbundle">stringbundle</a> 要素のコンテナです。これは、<em>browser.xul</em> 内のとても一般的な id の <em>stringbundleset</em> にオーバーレイを適用しているため、ドキュメントごとに一つでなければなりません。stringbundle の順番を入れ替えても違いがないため、<em>insertbefore</em> 属性や <em>insertafter</em> 属性は不要です。この要素は、完全に不可視です。overlay 要素に順番を指定する属性を記述しなくても、この要素は、親要素の最後の子要素として Firefox に追加されます。</p>
+<p>stringbundle に必要なものは、(後で要素を呼び出すための) id と properties ファイルへの chrome パスだけです。もちろん、properties ファイルも必要です:</p>
+<div class="code panel" style="border-width: 1px;">
+  <div class="codeContent panelContent">
+    <pre class="code-java">xulshoolhello.greeting.label = Hi! How are you?</pre>
+  </div>
+</div>
+<p>"=" 記号の周りのスペースは無視されます。また、空行も無視されます。<em>install.rdf</em> でのように、行頭を "#" 文字で始めるとコメントを追加することができます。</p>
+<p>たびたび、拡張機能に関する情報についてユーザに知らせたいときなど、ローカライズした文字列の一部に動的コンテンツを含めたくなることがあるでしょう。例えば、"Found 5 words matching the search query" の文字列の数字部分です。はじめに思いつくアイデアは、"Found" プロパティともう一つの "words matching..." プロパティを単に繋ぎ合わせる方法でしょう。これは、良い方法とはいえません。この方法では、ローカライズの作業がとても困難になり、別の言語の文法によっては文全体の並び順を変更しなければなりません。この問題を避けるため、プロパティ内にパラメータを使用する方法を用いてください:</p>
+<div class="code panel" style="border-width: 1px;">
+  <div class="codeContent panelContent">
+    <pre class="code-java">xulshoolhello.search.label = Found %S words matching the search query!</pre>
+  </div>
+</div>
+<p>このローカライズされた文字列を取得するには、<em>getString</em> の代わりに <a href="/ja/docs/XUL/stringbundle#m-getFormattedString" title="XUL/stringbundle#m-getFormattedString">getFormattedString</a> を使用します。パラメータが使用できるおかげで、複数のプロパティを使用する必要がなくなり、翻訳がとても楽になります。詳しくは、XUL チュートリアルの<a href="/ja/docs/XUL_Tutorial/Property_Files#Text_Formatting" title="XUL Tutorial/Property Files#Text Formatting">テキストのフォーマットセクション</a>をお読みください。また、<a href="/ja/docs/Localization_and_Plurals" title="Localization and Plurals">複数形とローカライズ</a>の記事も読んでください。この記事は、Firefox 3 で導入されたローカライズの新機能である、この最後の例よりもさらに洗練された、言語ごとに異なる複数形を扱う方法について書かれています。</p>
+
+
+
+
+
+<h3 id="skin" name="skin">skin</h3>
+<p>XUL のスタイル付けは、HTML のスタイル付けととてもよく似ています。ここでは詳しく取り上げません。XUL のボックスモデルにスタイル付けする時や、他のさらに詳しいトピックでいくつかの違いについて見ていきます。最小限のメニューと単純な警告メッセージにできるスタイル付けは、ほとんどありません。そのため、Hello World 拡張の XUL ファイルには、空の CSS ファイルと義務的な global スキンファイルだけが含められています:</p>
+<div class="code panel" style="border-width: 1px;">
+  <div class="codeContent panelContent">
+    <pre class="code-java">&lt;?xml-stylesheet type=<span class="code-quote">"text/css"</span> href=<span class="code-quote">"chrome:<span class="code-comment">//global/skin/"</span>  ?&gt;
+</span>&lt;?xml-stylesheet type=<span class="code-quote">"text/css"</span>
+  href=<span class="code-quote">"chrome:<span class="code-comment">//xulschoolhello/skin/browserOverlay.css"</span>  ?&gt;</span></pre>
+  </div>
+</div>
+<p>global スキンの CSS ファイルは、すべての XUL 要素とウィンドウのデフォルトのスタイルを保持しています。XUL ウィンドウにこのファイルを含めることを忘れると、おかしな表示になってしまいます。Hello World 拡張の場合は、すでにこの global CSS が含まれたメインブラウザの XUL ファイルにオーバーレイを適用しているため、本当は含める必要はありません。いずれにせよ、忘れてミスしないように、常に XUL ファイルに含んでおくほうが良いでしょう。好奇心の強い方は、ロケーションバーに chrome パスを入力してファイルを調べてみてください。</p>
+<p>この章では、Hello World 拡張のすべてのファイルをカバーしました。ここまで読んだあなたには、拡張機能開発の基本的な考え方が身についているはずです。次は、開発環境のセットアップへ進みましょう。その前に、簡単な練習問題があります。</p>
+
+
+
+
+
+<h2 id="Exercise" name="Exercise">練習問題</h2>
+<p>警告ウィンドウに表示される歓迎メッセージを変更し、Hello World メニューをツールメニュー内に移動してください。次に、XPI ファイルにパッケージしなおして再インストールしてください。XPI ファイルをブラウザにドラッグ＆ドロップするだけでインストールされます。変更した箇所が動作するかテストして検証してください。インストール時に問題が起こったときは、XPI ファイル内のディレクトリ構造が元のとおり正しく配置されていません。余計なディレクトリが追加されていないか確認してください。</p>
+<p>動作が確認できたら正解を見てください: <a href="/@api/deki/files/4227/=xulschoolhello2.xpi" title="/@api/deki/files/4227/=xulschoolhello2.xpi">Hello World 2</a></p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/School_tutorial/Getting_Started_with_Firefox_Extensions" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/School_tutorial/Setting_Up_a_Development_Environment">次のページ  »</a></p>
+</div>
+<p><small>This tutorial was kindly donated to Mozilla by Appcoast.</small></p>

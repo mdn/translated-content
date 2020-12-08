@@ -1,0 +1,212 @@
+---
+title: confirm
+slug: >-
+  Archive/Mozilla/XPInstall/Référence_de_l_API_XPInstall/Objet_Install/Méthodes/confirm
+translation_of: Archive/Mozilla/XPInstall/Reference/Install_Object/Methods/confirm
+---
+<p> </p>
+<h3 id="confirm" name="confirm">confirm</h3>
+<p>Affiche une boîte de dialogue modale de confirmation.</p>
+<h4 id="M.C3.A9thode_de" name="M.C3.A9thode_de">Méthode de</h4>
+<p>Objet <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install">Install</a></p>
+<h4 id="Syntaxe" name="Syntaxe">Syntaxe</h4>
+<pre class="eval">int confirm( Chaîne aText );
+</pre>
+<pre class="eval">int confirm( Chaîne aText,
+             Chaîne aDialogTitle,
+             Nombre aButtonFlags,
+             Chaîne aButton0Title,
+             Chaîne aButton1Title,
+             Chaîne aButton2Title,
+             Chaîne aCheckMsg,
+             Objet aCheckState );
+</pre>
+<h4 id="Param.C3.A8tres" name="Param.C3.A8tres">Paramètres</h4>
+<p>Pour la seconde syntaxe, la méthode étendue <code>confirm()</code> est supportée depuis Gecko 1.8. Elle accepte jusqu'à 8 paramètres. Dans les versions précédentes de Gecko seule la première syntaxe était supportée, méthode à un paramètre, qui retournera une erreur pour la forme étendue. Voir les notes à la fin de ce document pour une manière sûre d'implémenter une procédure de secours.</p>
+<dl>
+ <dt>
+  <code>aText</code></dt>
+ <dd>
+  La chaîne à afficher dans la boîte de confirmation. Cette chaîne est généralement sous la forme d'un message pour l'utilisateur (par exemple : « Êtes-vous sûr de vouloir effacer le(s) fichier(s) sélectionné(s) ? »).</dd>
+</dl>
+<dl>
+ <dt>
+  <code>aDialogTitle</code></dt>
+ <dd>
+  La chaîne à utiliser comme titre de la boîte de dialogue. La valeur par défaut est
+  <i>
+   Confirm</i>
+  (ou son équivalent localisé).</dd>
+</dl>
+<dl>
+ <dt>
+  <code>aButtonFlags</code></dt>
+ <dd>
+  Un ensemble de
+  <i>
+   flags</i>
+  définissant les boutons devant s'afficher dans la boîte de dialogue. La valeur est calculée en multipliant la position correspondante du bouton avec une constante de titre de bouton pour chaque bouton, puis en ajoutant les résultats et toutes autres options (voir <b>Autre constantes</b>).</dd>
+</dl>
+<dl>
+ <dd>
+  <b>Constantes de position des boutons</b>
+  <ul>
+   <li>BUTTON_POS_0: Le premier bouton logique</li>
+   <li>BUTTON_POS_1: Le deuxième bouton logique</li>
+   <li>BUTTON_POS_2: Le troisième bouton logique</li>
+  </ul>
+ </dd>
+</dl>
+<dl>
+ <dd>
+  <b>Constantes des titres des boutons</b>
+  <ul>
+   <li>BUTTON_TITLE_OK: Un bouton
+    <i>
+     OK</i>
+   </li>
+   <li>BUTTON_TITLE_CANCEL: Un bouton
+    <i>
+     Annuler</i>
+   </li>
+   <li>BUTTON_TITLE_YES: Un bouton
+    <i>
+     Oui</i>
+   </li>
+   <li>BUTTON_TITLE_NO: Un bouton
+    <i>
+     Non</i>
+   </li>
+   <li>BUTTON_TITLE_SAVE: Un bouton
+    <i>
+     Enregistrer</i>
+   </li>
+   <li>BUTTON_TITLE_DONT_SAVE: Un bouton
+    <i>
+     Ne pas enregistrer</i>
+   </li>
+   <li>BUTTON_TITLE_REVERT: Un bouton
+    <i>
+     Précédent</i>
+   </li>
+   <li>BUTTON_TITLE_IS_STRING: Titre personnalisé spécifié par le paramètre correspondant <code>aButtonXTitle</code></li>
+  </ul>
+ </dd>
+</dl>
+<dl>
+ <dd>
+  <b>Autres constantes</b>
+  <ul>
+   <li>BUTTON_POS_0_DEFAULT: Définit le bouton 0 comme bouton par défaut. Sauf indication contraire, c'est la valeur par défaut.</li>
+   <li>BUTTON_POS_1_DEFAULT: Définit le bouton 1 comme bouton par défaut.</li>
+   <li>BUTTON_POS_2_DEFAULT: Définit le bouton 2 comme bouton par défaut.</li>
+   <li>BUTTON_DELAY_ENABLE: Spécifie que les boutons ne doivent être actifs que passé un certain délai. Ceci ne s'applique qu'aux bouton 0 et 2, mais pas au bouton 1 (le bouton
+    <i>
+     Annuler</i>
+    ).</li>
+   <li>STD_OK_CANCEL_BUTTONS: Utilisez cela plutôt que les constantes ci-dessus pour avoir les boutons standard
+    <i>
+     OK</i>
+    et
+    <i>
+     Annuler</i>
+    . Si vous n'utilisez pas <code>aButtonFlags</code>, c'est l'argument par défaut.</li>
+   <li>STD_YES_NO_BUTTONS: Utilisez cela plutôt que les constantes ci-dessus pour avoir les boutons standard
+    <i>
+     Oui</i>
+    et
+    <i>
+     Non</i>
+    .</li>
+  </ul>
+ </dd>
+</dl>
+<dl>
+ <dd>
+  <b>Avertissement :</b> Ne faites aucune hypothèse quant au placement des boutons, l'implémentation de base peut librement décider de la place de chacun des trois boutons. Les exemples suivants montrent le résultat de l'appel de la fonction <code>confirm()</code> avec trois boutons 0='A', 1='B' et 2='C'.
+  <dl>
+   <dd>
+    <img align="none" alt="Firefox sous Linux"></dd>
+   <dd>
+    <img align="none" alt="Suite Mozilla sous Win32"></dd>
+  </dl>
+ </dd>
+ <dd>
+  Il est donc recommandé de n'utiliser que deux boutons dans la mesure du possible, et de garder à l'esprit que le bouton 1 à la même valeur de retour que « fenêtre fermée » (voir ci-dessous).</dd>
+</dl>
+<dl>
+ <dt>
+  <code>aButton0Title</code></dt>
+ <dd>
+  Titre personnalisé pour le bouton 0.</dd>
+</dl>
+<dl>
+ <dt>
+  <code>aButton1Title</code></dt>
+ <dd>
+  Titre personnalisé pour le bouton 1.</dd>
+</dl>
+<dl>
+ <dt>
+  <code>aButton2Title</code></dt>
+ <dd>
+  Titre personnalisé pour le bouton 2.</dd>
+</dl>
+<dl>
+ <dt>
+  <code>aCheckMsg</code></dt>
+ <dd>
+  Une chaîne à afficher comme étiquette d'une case à cocher.</dd>
+</dl>
+<dl>
+ <dt>
+  <code>aCheckState</code></dt>
+ <dd>
+  Un objet avec une propriété
+  <i>
+   valeur</i>
+  booléenne représentant l'état de la case à cocher : lorsque la boîte de dialogue s'affiche, sa case à cocher sera cochée lorsque la valeur de cet objet est <code>true</code>. Après la sélection d'un bouton (ou la fermeture de la fenêtre) par l'utilisateur, la propriété est mise à jour selon l'état de la case à cocher.</dd>
+</dl>
+<pre class="eval">var check = { value: false };
+var button = confirm("Êtes-vous sûr de vouloir installer FooBar 0.1?",
+                     "Confirmation",
+                     STD_YES_NO_BUTTONS,
+                     null,
+                     null,
+                     null,
+                     "Install FluxCompensator 0.4 as well",
+                     check);
+</pre>
+<h4 id="Retour" name="Retour">Retour</h4>
+<p>La valeur retournée est un entier indiquant quel bouton l'utilisateur a sélectionné :</p>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Valeur</td>
+   <td class="header">Bouton</td>
+  </tr>
+  <tr>
+   <td>0</td>
+   <td>'Annuler' ou bouton 1. <b>Également: l'utilisateur a fermé la fenêtre de dialogue</b></td>
+  </tr>
+  <tr>
+   <td>1</td>
+   <td>'OK' ou bouton 0</td>
+  </tr>
+  <tr>
+   <td>2</td>
+   <td>Le troisème bouton</td>
+  </tr>
+ </tbody>
+</table>
+<p>Les versions précédentes de l'API XPInstall mentionnaient que la valeur de retour de <code>confirm()</code> était un booléen. C'est incorrect, <code>confirm()</code> retourne toujours un nombre entier (0 ou 1 dans les versions antérieures à pre-Gecko-1.8).</p>
+<h4 id="Notes" name="Notes">Notes</h4>
+<p>La meilleure méthode pour détecter le support des boîtes de dialogue personnalisées est de déterminer l'existence des constantes de bouton. Les autres approches (par exemple, comparaison des buildID) ne sont pas recommandées.</p>
+<pre class="eval">if ("BUTTON_POS_0" in Install) {
+  // Utilisation de la méthode étendue de confirm()
+} else {
+  // Utilisation de la méthode classique de confirm()
+}
+</pre>
+<p><span class="comment">Interwiki Languages Links</span></p>
+<p>{{ languages( { "en": "en/XPInstall_API_Reference/Install_Object/Methods/confirm" } ) }}</p>

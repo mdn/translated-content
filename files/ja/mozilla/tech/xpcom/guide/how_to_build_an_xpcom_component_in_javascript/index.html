@@ -1,0 +1,190 @@
+---
+title: How to Build an XPCOM Component in Javascript
+slug: Mozilla/Tech/XPCOM/Guide/How_to_Build_an_XPCOM_Component_in_Javascript
+tags:
+  - Add-ons
+  - Extensions
+  - XPCOM
+translation_of: Mozilla/Tech/XPCOM/Guide/Building_components_in_JavaScript
+---
+<p>
+</p><p>これは JavaScript で XPCOM コンポーネントを作成するための "Hello World" 的なチュートリアルです。このチュートリアルでは、XPCOM がどのように、そしてなぜそのように動くのかということや、コードの例が何をするものなのかということは説明しません。詳細は <a href="ja/XPCOM">別の記事</a> を参照してください。このチュートリアルでは、コンポーネントをできる限り少数かつ簡単なステップで<b>動かす</b>ためにすべきことを説明していきます。
+</p><p>警告：これは Mac 上での結果です。Windows では手順が異なるかもしれません。
+</p><p><br>
+</p>
+<h2 id=".E5.AE.9F.E8.A3.85" name=".E5.AE.9F.E8.A3.85"> 実装 </h2>
+<p>このコンポーネントの例では "Hello World!" という文字列を返すメソッド 1 つだけを公開します。
+</p>
+<h3 id=".E3.82.A4.E3.83.B3.E3.82.BF.E3.83.95.E3.82.A7.E3.83.BC.E3.82.B9.E3.81.AE.E5.AE.9A.E7.BE.A9" name=".E3.82.A4.E3.83.B3.E3.82.BF.E3.83.95.E3.82.A7.E3.83.BC.E3.82.B9.E3.81.AE.E5.AE.9A.E7.BE.A9"> インタフェースの定義 </h3>
+<p>作ったコンポーネントを JavaScript から、あるいは他の XPCOM コンポーネント内で使用したいとなると、公開したいインタフェースを定義しなければなりません（そのコンポーネントを JavaScript から<b>のみ</b>使用したい場合は、ここで説明するインタフェースを作成せずに済むように <code>wrappedJSObject</code> というトリックを使うことができます。<a class="external" href="http://kb.mozillazine.org/Dev_:_Extending_the_Chrome_Protocol">ここ</a> に例があります）。
+</p><p>Mozilla アプリケーションには定義済みのインタフェースがたくさんあるため、新たに定義する必要がないかもしれません。既存の XPCOM インタフェースは Mozilla のソースコードの中のさまざまな場所で閲覧することができますし、<a class="external" href="http://xpcomviewer.mozdev.org/">XPCOMViewer</a> という、登録済みのインタフェースやコンポーネントを閲覧するための GUI を使うこともできます。Firefox 1.5 で動作する古いバージョンの XPCOMViewer は <a class="external" href="http://downloads.mozdev.org/xpcomviewer/">mozdev mirrors</a> からダウンロードできます。
+</p><p>もし必要なインタフェースが見つかれば、IDL を書いたり typelib をコンパイルしたりする必要はありません。<a href="#.E3.82.B3.E3.83.B3.E3.83.9D.E3.83.BC.E3.83.8D.E3.83.B3.E3.83.88.E3.81.AE.E4.BD.9C.E6.88.90">次のセクション</a> に飛んでもかまいません。
+</p><p>適当な既存のインタフェースが見つからなかった場合は独自に定義する必要があります。XPCOM はインタフェースの定義に <a href="ja/XPIDL">XPIDL</a> という IDL の方言を使用します。ここに今回の HelloWorld コンポーネント用の XPIDL 定義を示します。
+</p><p>HelloWorld.idl
+</p>
+<pre>#include "nsISupports.idl"
+
+[scriptable, uuid(xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)]
+interface nsIHelloWorld : nsISupports
+{
+  string hello();
+};
+</pre>
+<p>作成する XPCOM コンポーネントおのおのに新しい UUID を付ける必要があることに注意してください。詳細は <a href="ja/Generating_GUIDs">GUID の生成</a> を参照してください。
+</p>
+<h3 id="typelib_.E3.81.AE.E3.82.B3.E3.83.B3.E3.83.91.E3.82.A4.E3.83.AB" name="typelib_.E3.81.AE.E3.82.B3.E3.83.B3.E3.83.91.E3.82.A4.E3.83.AB"> typelib のコンパイル </h3>
+<p>インタフェース定義を Mozilla アプリケーションに登録して使用するためには、バイナリ形式 (XPT) にコンパイルする必要があります。コンパイルは Gecko SDK を用いて行うことができます。Mac、Linux、Windows 版の Gecko SDK の入手方法については <a href="ja/Gecko_SDK">Gecko SDK</a> という記事をお読みください。
+</p>
+<div class="note"><b>注意：</b>Mac 版の SDK は PowerPC 版のみダウンロード可能です。Intel 版が必要な場合はそのページの説明に従って自分でコンパイルする必要があります。</div>
+<p>このコマンドを実行して typelib をコンパイルします。ここで、&lt;tt&gt;{sdk_dir}&lt;/tt&gt; は Gecko SDK を解凍したディレクトリです。
+</p>
+<pre class="eval">{sdk_dir}/bin/xpidl -m typelib -w -v -I {sdk_dir}/idl -e HelloWorld.xpt HelloWorld.idl
+</pre>
+<p>これで HelloWorld.xpt という typelib ファイルが現在の作業ディレクトリに作成されます。
+</p>
+<h3 id=".E3.82.B3.E3.83.B3.E3.83.9D.E3.83.BC.E3.83.8D.E3.83.B3.E3.83.88.E3.81.AE.E4.BD.9C.E6.88.90" name=".E3.82.B3.E3.83.B3.E3.83.9D.E3.83.BC.E3.83.8D.E3.83.B3.E3.83.88.E3.81.AE.E4.BD.9C.E6.88.90"> コンポーネントの作成 </h3>
+<p>HelloWorld.js
+</p>
+<pre>/***********************************************************
+定数
+***********************************************************/
+
+// nsIHelloWorld.idl 内のインタフェース定義への参照
+const nsIHelloWorld = Components.interfaces.nsIHelloWorld;
+
+// すべてのコンポーネントがサポートしなければならない必須の基本インタフェースへの参照
+const nsISupports = Components.interfaces.nsISupports;
+
+// このコンポーネントを一意的に識別する UUID
+// http://kruithof.xs4all.nl/uuid/uuidgen にて生成可能
+const CLASS_ID = Components.ID("{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx}");
+
+// 説明
+const CLASS_NAME = "My Hello World Javascript XPCOM Component";
+
+// テキスト形式の一意識別子
+const CONTRACT_ID = "@dietrich.ganx4.com/helloworld;1";
+
+/***********************************************************
+クラス定義
+***********************************************************/
+
+// クラスコンストラクタ
+function HelloWorld() {
+};
+
+// クラス定義
+HelloWorld.prototype = {
+
+  // このインタフェースで公開したい関数の定義
+  hello: function() {
+      return "Hello World!";
+  },
+
+  QueryInterface: function(aIID)
+  {
+    if (!aIID.equals(nsIHelloWorld) &amp;&amp;
+        !aIID.equals(nsISupports))
+      throw Components.results.NS_ERROR_NO_INTERFACE;
+    return this;
+  }
+};
+
+/***********************************************************
+クラスファクトリ
+
+このオブジェクトはグローバルスコープである Components.classes のメンバ。
+コントラクト ID がキーになっている。例：
+
+myHelloWorld = Components.classes["@dietrich.ganx4.com/helloworld;1"].
+                          createInstance(Components.interfaces.nsIHelloWorld);
+
+***********************************************************/
+var HelloWorldFactory = {
+  createInstance: function (aOuter, aIID)
+  {
+    if (aOuter != null)
+      throw Components.results.NS_ERROR_NO_AGGREGATION;
+    return (new HelloWorld()).QueryInterface(aIID);
+  }
+};
+
+/***********************************************************
+モジュール定義（xpcom 登録）
+***********************************************************/
+var HelloWorldModule = {
+  registerSelf: function(aCompMgr, aFileSpec, aLocation, aType)
+  {
+    aCompMgr = aCompMgr.
+        QueryInterface(Components.interfaces.nsIComponentRegistrar);
+    aCompMgr.registerFactoryLocation(CLASS_ID, CLASS_NAME,
+        CONTRACT_ID, aFileSpec, aLocation, aType);
+  },
+
+  unregisterSelf: function(aCompMgr, aLocation, aType)
+  {
+    aCompMgr = aCompMgr.
+        QueryInterface(Components.interfaces.nsIComponentRegistrar);
+    aCompMgr.unregisterFactoryLocation(CLASS_ID, aLocation);
+  },
+
+  getClassObject: function(aCompMgr, aCID, aIID)
+  {
+    if (!aIID.equals(Components.interfaces.nsIFactory))
+      throw Components.results.NS_ERROR_NOT_IMPLEMENTED;
+
+    if (aCID.equals(CLASS_ID))
+      return HelloWorldFactory;
+
+    throw Components.results.NS_ERROR_NO_INTERFACE;
+  },
+
+  canUnload: function(aCompMgr) { return true; }
+};
+
+/***********************************************************
+モジュール初期化
+
+アプリケーションがコンポーネントを登録するときにこの関数が呼び出される。
+***********************************************************/
+function NSGetModule(aCompMgr, aFileSpec) { return HelloWorldModule; }
+
+</pre>
+<h2 id=".E3.82.A4.E3.83.B3.E3.82.B9.E3.83.88.E3.83.BC.E3.83.AB" name=".E3.82.A4.E3.83.B3.E3.82.B9.E3.83.88.E3.83.BC.E3.83.AB"> インストール </h2>
+<h3 id=".E6.8B.A1.E5.BC.B5.E6.A9.9F.E8.83.BD.E3.81.AB" name=".E6.8B.A1.E5.BC.B5.E6.A9.9F.E8.83.BD.E3.81.AB"> 拡張機能に </h3>
+<ol><li> HelloWorld.js と HelloWorld.xpt を {extensiondir}/components/ にコピーする
+</li><li> プロファイルディレクトリから compreg.dat と xpti.dat を削除する
+</li><li> アプリケーションを再起動する
+</li></ol>
+<h3 id="Firefox_.E3.81.AB" name="Firefox_.E3.81.AB"> Firefox に </h3>
+<ol><li> ソースから実行する場合、HelloWorld.js と HelloWorld.xpt を {objdir}/dist/bin/components ディレクトリにコピーする
+</li><li> components ディレクトリから compreg.dat と xpti.dat を削除する
+</li><li> プロファイルディレクトリから compreg.dat と xpti.dat を削除する
+</li><li> アプリケーションを再起動する
+</li></ol>
+<h2 id=".E3.82.B3.E3.83.B3.E3.83.9D.E3.83.BC.E3.83.8D.E3.83.B3.E3.83.88.E3.81.AE.E4.BD.BF.E7.94.A8" name=".E3.82.B3.E3.83.B3.E3.83.9D.E3.83.BC.E3.83.8D.E3.83.B3.E3.83.88.E3.81.AE.E4.BD.BF.E7.94.A8"> コンポーネントの使用 </h2>
+<pre>try {
+        // JavaScript 内でコンポーネントを使用できるようにするには、一般にこれが必要
+        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+
+        var myComponent = Components.classes['@dietrich.ganx4.com/helloworld;1']
+                                    .createInstance(Components.interfaces.nsIHelloWorld);
+
+        alert(myComponent.hello());
+} catch (anError) {
+        dump("ERROR: " + anError);
+}
+</pre>
+<h2 id=".E3.81.9D.E3.81.AE.E4.BB.96.E3.81.AE.E8.B3.87.E6.96.99" name=".E3.81.9D.E3.81.AE.E4.BB.96.E3.81.AE.E8.B3.87.E6.96.99"> その他の資料 </h2>
+<ul><li> XPCOM コンポーネントの JS での実装についての mozillazine フォーラムの 2 つのスレッド。説明、コードの例、トラブルシューティング情報もあり：
+<ul><li> <a class=" external" href="http://forums.mozillazine.org/viewtopic.php?t=308369" rel="freelink">http://forums.mozillazine.org/viewtopic.php?t=308369</a>
+</li><li> <a class=" external" href="http://forums.mozillazine.org/viewtopic.php?t=367298" rel="freelink">http://forums.mozillazine.org/viewtopic.php?t=367298</a>
+</li></ul>
+</li><li> <a class="external" href="http://kb.mozillazine.org/Implementing_XPCOM_components_in_JavaScript">Implementing XPCOM components in JavaScript</a> - kb.mozillazine.org 内
+</li><li> <a class="external" href="http://www.mozilla.org/scriptable/avoiding-leaks.html">Using XPCOM in JavaScript without leaking</a> - 必読
+</li><li> <a class="external" href="http://lxr.mozilla.org/seamonkey/source/xpcom/sample/nsSample.js">コンポーネントの例</a>
+</li><li> <a class="external" href="http://www.mozilla.org/scriptable/js-components-status.html">古い JS+XPCOM のメモ</a> - wrappedJSObject の情報もあり
+</li></ul>
+<div class="noinclude">
+</div>
+{{ languages( { "en": "en/How_to_Build_an_XPCOM_Component_in_Javascript", "zh-cn": "cn/How_to_Build_an_XPCOM_Component_in_Javascript" } ) }}

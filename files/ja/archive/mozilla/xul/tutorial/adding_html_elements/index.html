@@ -1,0 +1,163 @@
+---
+title: HTML 要素を追加する
+slug: Archive/Mozilla/XUL/Tutorial/Adding_HTML_Elements
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_HTML_Elements
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Progress_Meters" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Using_Spacers">次のページ  »</a></p>
+</div>
+
+<p>ボタンの追加もできたので、それ以外の要素もいくつか追加してみましょう。</p>
+
+<p><span id="Adding_HTML_Elements_to_a_Window"></span></p>
+
+<h2 id=".E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.81.AB_HTML_.E8.A6.81.E7.B4.A0.E3.82.92.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B" name=".E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.81.AB_HTML_.E8.A6.81.E7.B4.A0.E3.82.92.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B">ウィンドウに HTML 要素を追加する</h2>
+
+<p>XUL ファイルに、有効な XUL 要素が全て置けるのは当然ですが、 XUL ファイルには、加えて HTML 要素を直接追加する事も可能です。 実際、XUL ファイルでは、任意の HTML 要素が使用できます。 このことは Java アプレットや表といったものですら、ウィンドウ内に配置可能であることを意味しています。 しかしながら、XUL ファイルで HTML 要素を使用するのは可能な限り避けるべきです。 (その理由はいくつかありますが、主な理由は、後のセクションで説明する、<a href="ja/XUL_Tutorial/Box_Model_Details">レイアウトの制御</a>に関係しています)。 といっても、このセクションでは、とりあえず HTML 要素の使用方法について説明していくことにします。 XML は大文字・小文字を区別するため、HTML 要素でもタグと属性は小文字で入力しなければならないことを覚えておいてください。</p>
+
+<p><span id="XHTML_namespace"></span></p>
+
+<h3 id="XHTML_.E5.90.8D.E5.89.8D.E7.A9.BA.E9.96.93" name="XHTML_.E5.90.8D.E5.89.8D.E7.A9.BA.E9.96.93">XHTML 名前空間</h3>
+
+<p>XUL ファイルで HTML 要素を使用するには、XHTML <span style="border-bottom: 1px dashed green;" title="namespace">名前空間</span>を使用するために宣言を行なわなければなりません。 宣言により、Mozilla は、HTML タグを XUL タグから区別することができます。 このためには、次に示す属性を、XUL ファイルの <code><code><a href="/ja/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> タグか、最初に出てくる HTML 要素に追加する必要があります。</p>
+
+<pre class="eval"><span class="nowiki">xmlns:html="http://www.w3.org/1999/xhtml"</span>
+</pre>
+
+<p>これは HTML の宣言で、以前のセクションで説明した XUL の宣言と似ています。 この宣言は正確に上記の通り入力しなければなりません。誤っていると正常に動作しないので注意してください。 Mozilla はこの URL を実際にはダウンロードしませんが、HTML の宣言を指しているものとして認識しています。</p>
+
+<p>ファイル検索ウィンドウに追加する場合の例を示します。</p>
+
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="<a class="external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;
+&lt;window
+   id="findfile-window"
+   title="Find Files"
+   orient="horizontal"
+   <span class="highlightred"><span class="nowiki">xmlns:html="http://www.w3.org/1999/xhtml"</span></span>
+   xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+</pre>
+
+<p>これで、いつものように HTML タグを使用する事ができますが、以下のことは覚えておいて下さい。</p>
+
+<ul>
+ <li>上記のように HTML 名前空間を宣言した場合は、各々のタグの始めに <code>html:</code> という接頭辞を付けなければなりません。</li>
+ <li>タグは小文字でなければなりません。</li>
+ <li>全ての属性値は引用符で囲まれなければなりません。</li>
+ <li>XML では、内容を持たないタグの終わりには、スラッシュを置く必要があります。 これは後で示す例で明確になるはずです。</li>
+</ul>
+
+<p><span id="Using_HTML_elements"></span></p>
+
+<h3 id="HTML_.E8.A6.81.E7.B4.A0.E3.82.92.E5.88.A9.E7.94.A8.E3.81.99.E3.82.8B" name="HTML_.E8.A6.81.E7.B4.A0.E3.82.92.E5.88.A9.E7.94.A8.E3.81.99.E3.82.8B">HTML 要素を利用する</h3>
+
+<p>どんな HTML タグでも使用可能とはいっても、<code>head</code> や <code>body</code> は実際には役に立ちません。 HTML 要素を使用する具体的な例を以下に示します。</p>
+
+<pre>&lt;html:img src="banner.jpg"/&gt;
+
+&lt;html:input type="checkbox" value="true"/&gt;
+
+&lt;html:table&gt;
+  &lt;html:tr&gt;
+    &lt;html:td&gt;
+      A simple table
+    &lt;/html:td&gt;
+  &lt;/html:tr&gt;
+&lt;/html:table&gt;
+</pre>
+
+<p>この例では、<code>banner.jpg</code> ファイルから画像が作成され、チェックボックスと、セルが 1 つの表が作成されます。 可能な限り、常に XUL の機能の方を使用するべきことから、XUL でレイアウトのために表を使用することはおそらくないはずです。 (レイアウトを行なうための XUL 要素があります)。 各々のタグの前に <code>html:</code> という接頭辞が付いていることに注意してください。 これによって Mozilla は、それが HTML タグであって XUL タグではないと認識します。 <code>html:</code> 部分を取り除いた場合、ブラウザはこれらの要素が XUL 要素だと判断するため、表示されなくなります。 なぜなら、<code>img</code>、 <code>input</code>、 <code>table</code> などは有効な XUL タグではないからです。</p>
+
+<p>XULでは、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/description" title="description">description</a></code></code> または <code><code><a href="/ja/docs/Mozilla/Tech/XUL/label" title="label">label</a></code></code> 要素でラベルを追加することができます。 可能であれば、これらの XUL 要素を使用するべきです。 しかしながら、コントロールにラベルを追加するために、HTML の <code>label</code> 要素を使用したり、単純に (<code>p</code> や <code>div</code> のような) HTML のブロック要素の中にテキストを記述することも可能です。 以下に例を示します。</p>
+
+<p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_htmlelem_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_htmlelem_1.xul">表示</a></p>
+
+<pre>&lt;html:p&gt;
+  Search for:
+  &lt;html:input id="find-text"/&gt;
+  &lt;button id="okbutton" label="OK"/&gt;
+&lt;/html:p&gt;
+</pre>
+
+<p>このコードは、「Search for:」というテキストを表示し、その下に <code>input</code> 要素と OK ボタンが表示されます。 この例のように、XUL のボタンを HTML 要素の中に置くこともできる、という事に注意してください。 プレインテキストは、 (<code>p</code> タグのように) 通常はテキストの表示が許可されている HTML 要素の中に置かれたものだけが表示されます。 それ以外のものは、テキスト表示を許可する XUL 要素 (例えば <code>description</code> 要素) の中に置かれたもの以外は表示されません。 次の例を参照してください。</p>
+
+<p><span id="Examples_of_HTML_elements"></span></p>
+
+<h2 id="HTML_.E8.A6.81.E7.B4.A0.E3.81.AE.E4.BE.8B" name="HTML_.E8.A6.81.E7.B4.A0.E3.81.AE.E4.BE.8B">HTML 要素の例</h2>
+
+<p>ウィンドウに HTML 要素を追加する例を以下に示します。 どの例も、単純化するために <code>window</code> や他の共通する情報は除いてあります。</p>
+
+<p><span id="A_dialog_with_a_check_box"></span></p>
+
+<h3 id=".E3.83.81.E3.82.A7.E3.83.83.E3.82.AF.E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9.E4.BB.98.E3.81.8D.E3.81.AE.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AE.E4.BE.8B" name=".E3.83.81.E3.82.A7.E3.83.83.E3.82.AF.E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9.E4.BB.98.E3.81.8D.E3.81.AE.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AE.E4.BE.8B">チェックボックス付きのダイアログの例</h3>
+
+<p><span id="%E4%BE%8B_2"><a id="%E4%BE%8B_2"></a><strong>例 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_htmlelem_2.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_htmlelem_2.xul">表示</a></p>
+
+<pre>&lt;html:p&gt;
+  Click the box below to remember this decision.
+  &lt;html:p&gt;
+    &lt;html:input id="rtd" type="checkbox"/&gt;
+    &lt;html:label for="rtd"&gt;Remember This Decision&lt;/html:label&gt;
+  &lt;/html:p&gt;
+&lt;/html:p&gt;
+</pre>
+
+<div class="float-right"><img alt="画像:htmlelem-ex1.png"></div>
+
+<p>この例では、外側の <code>p</code> タグが、テキストを中に表示するために使われ、内側のものはテキストを複数行に分割するために使われています。</p>
+
+<p><span id="Text_outside_of_HTML_blocks"></span></p>
+
+<h3 id="HTML_.E3.83.96.E3.83.AD.E3.83.83.E3.82.AF.E3.81.AE.E5.A4.96.E9.83.A8.E3.81.AB.E3.81.82.E3.82.8B.E3.83.86.E3.82.AD.E3.82.B9.E3.83.88.E3.81.AE.E4.BE.8B" name="HTML_.E3.83.96.E3.83.AD.E3.83.83.E3.82.AF.E3.81.AE.E5.A4.96.E9.83.A8.E3.81.AB.E3.81.82.E3.82.8B.E3.83.86.E3.82.AD.E3.82.B9.E3.83.88.E3.81.AE.E4.BE.8B">HTML ブロックの外部にあるテキストの例</h3>
+
+<p><span id="%E4%BE%8B_3"><a id="%E4%BE%8B_3"></a><strong>例 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_htmlelem_3.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_htmlelem_3.xul">表示</a></p>
+
+<pre>&lt;html:div&gt;
+    Would you like to save the following documents?
+    &lt;html:hr/&gt;
+&lt;/html:div&gt;
+Expense Report 1
+What I Did Last Summer
+&lt;button id="yes" label="Yes"/&gt;
+&lt;button id="no" label="No"/&gt;
+</pre>
+
+<div class="float-right"><img alt="画像:htmlelem-ex2.png"></div>
+
+<p>画像からわかるように、<code>div</code> タグの中にあるテキストは表示されていますが、他のテキスト (Expense Report 1 と What I Did Last Summer) は表示されていません。 これは、テキストを表示できる HTML あるいは XUL 要素がテキストを囲んでいないからです。 このテキストを表示するには、<code>div</code> タグの中に置くか、テキストを <code>description</code> タグで囲む必要があります。</p>
+
+<p><span id="Invalid_HTML_elements"></span></p>
+
+<h3 id=".E7.84.A1.E5.8A.B9.E3.81.AA_HTML_.E8.A6.81.E7.B4.A0.E3.81.AE.E4.BE.8B" name=".E7.84.A1.E5.8A.B9.E3.81.AA_HTML_.E8.A6.81.E7.B4.A0.E3.81.AE.E4.BE.8B">無効な HTML 要素の例</h3>
+
+<pre>&lt;html:po&gt;Case 1&lt;/html:po&gt;
+&lt;div&gt;Case 2&lt;/div&gt;
+&lt;html:description value="Case 3"/&gt;
+</pre>
+
+<p>この 3 つの例はどれも表示されませんが、表示されない理由はそれぞれ違っています。</p>
+
+<dl>
+ <dt>Case 1 </dt>
+ <dd><code>po</code> は有効な HTML タグではなく、Mozilla はそれをどう表示したらよいかわかりません。</dd>
+</dl>
+
+<dl>
+ <dt>Case 2 </dt>
+ <dd><code>div</code> は HTML でのみ有効です。動作させるためには、<code>html:</code> 修飾子を加える必要があります。</dd>
+</dl>
+
+<dl>
+ <dt>Case 3 </dt>
+ <dd><code>description</code> 要素は XUL では有効ですが、HTML では無効です。<code>html:</code> 修飾子を付けてはいけません。</dd>
+</dl>
+
+<p>次のセクションでは、要素間に間隔を置く方法を学びます。</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Progress_Meters" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Using_Spacers">次のページ  »</a></p>
+</div>

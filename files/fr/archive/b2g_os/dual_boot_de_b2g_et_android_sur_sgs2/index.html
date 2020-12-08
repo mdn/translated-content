@@ -1,0 +1,110 @@
+---
+title: Dual boot de B2G et Android sur SGS2
+slug: Archive/B2G_OS/Dual_boot_de_B2G_et_Android_sur_SGS2
+tags:
+  - Archive
+  - B2G
+  - Mobile
+translation_of: Archive/B2G_OS/Building
+---
+<p></p>
+
+<p></p><div class="warning warningHeader">
+    <p><strong>Avertissement :</strong> Cette procédure ne fonctionne plus réellement. Elle fonctionne seulement avec Android 4 (Ice Cream Sandwich) et Siyah Kernel v 5.0.1. Les versions plus récentes ne fonctionnent pas non plus. Considerez ce guide comme archivé, vous l'utilisez à vos risques et périls.</p>
+</div><p></p>
+
+<p>Si vous voulez tester B2G de temps en temps mais continuer à utiliser Android comme OS principal et vous possédez un Samsung Galaxy S2, vous pouvez installer B2G dans une partition séparée (qui est déjà présente dans le téléphone) et choisir qui booter au démarrage du système.</p>
+
+<h2 id="Prérequis">Prérequis</h2>
+
+<p>Pour installer le dual boot Android et B2G, vous devez respecter ces prérequis :</p>
+
+<ul>
+ <li>Vous devez installer B2G pour Galaxy S2</li>
+ <li>Vous devez télécharger le <a href="http://d-h.st/AEZ">kernel Siyah</a> v. 5.0.1 pour Galaxy S2</li>
+ <li>Vous devez avoir l'outil simg2img, que vous optiendrez automatiquement en installant B2G selon le guide de MDN</li>
+ <li>Vous devez avoir l'outil heimdall, de préférence en version 1.3.1 car vous pourriez rencontrer des problèmes avec la version 1.3.2</li>
+</ul>
+
+<h2 id="Liste_des_opérations">Liste des opérations</h2>
+
+<p>Il faut effectuer plusieurs opérations dans l'ordre pour obtenir un dual boot opérationel. Les instructions suivantes doivent être effectuées en premier uniquement.</p>
+
+<p>Pour utiliser heimdall sans accès root, vous devez créer un fichier android.rules (la partie précédent l'extension .rules est arbitraire) et le placer dans /etc/udev/rules.d. Le fichier doit contenir la ligne suivante:</p>
+
+<pre>SUBSYSTEM=="usb", ATTRS{idVendor}=="04e8", MODE="0666"</pre>
+
+<p>Pour activer cette règle, vous devez redémarrer udev:</p>
+
+<pre>sudo service udev restart</pre>
+
+<p>et débrancher/rebrancher le téléphone. La règle ci-dessus va également autoriser adb à accèder au SGS2 sans droit root.</p>
+
+<h3 id="Flasher_le_kernel_Siyah">Flasher le kernel Siyah</h3>
+
+<p>Le kernel Siyah kernel est obligatoire pour le dual boot, car c'est lui qui le gère. Une fois que vous avez téléchargé et décompressé le fichier .tar, vous optiendrez un fichier nommé zImage. Pour le flasher sur votre téléphone, vous devez suivre ces étapes:</p>
+
+<ol>
+ <li>Eteignez votre téléphone</li>
+ <li>Redémarrez en mode Download (appuyez simultanément sur les boutons "<em>volume</em> <em>bas</em>" + "<em>home</em>" + "<em>power</em>"  puis quand le téléphone le demandera, "<em>volume haut</em>")</li>
+ <li>Utilisez heimdall pour flasher le kernel grâce à la commande suivante (le téléphone doit être connecté au PC):
+  <pre>heimdall flash --kernel /path/to/zImage</pre>
+ </li>
+</ol>
+
+<p>Une fois le kernel flashé, le téléphone va redémarrer.</p>
+
+<h3 id="Préparer_l'environnement_de_la_rom_B2G">Préparer l'environnement de la rom B2G</h3>
+
+<p>Une fois le kernel Siyah installé, il faut utiliser ces fonctions pour préparer l'environnement à l'installation de l'image B2G dans la deuxième partition. Suivez ces étapes :</p>
+
+<ol>
+ <li>Eteignez votre téléphone</li>
+ <li>Redémarrez en mode recovery (Appuyez simultanément sur les boutons "<span style="display: none;" id="cke_bm_81S">  </span><em>volume</em> <em>haut</em><span style="display: none;" id="cke_bm_81E"> </span><span style="display: none;" id="cke_bm_79E"> </span>" +  <em>"home"<span style="display: none;" id="cke_bm_82E"> </span> </em>+ <em>"power"</em>)<span style="display: none;" id="cke_bm_83E"> </span><span style="display: none;" id="cke_bm_80E"> </span></li>
+ <li>Dans l'interface tactile CWMR, allez dans "<em>dual-boot options</em>" -&gt; Wipe 2ndROM data/cache -&gt; Yes - Wipe. Cette opération prendra un certain temps.</li>
+</ol>
+
+<p>Une fois l'opération terminée, sélectionnez Retour puis faites Redémarrer maintenant pour redémarrer votre téléphone. Si vous regardez dans la carte SD de votre téléphone vous verrez qu'il y a désormais un dossier .secondrom contenant 2 fichiers nommés cache.img et data.img.</p>
+
+<h2 id="Mise_à_jour_de_B2G">Mise à jour de B2G</h2>
+
+<p>Les opérations suivantes doivent être réalisées à chaque compilation d'une nouvelle version de B2G.</p>
+
+<p>Afin de simplifier les instructions en ligne de commandes, il est recommandé de copier tous les fichiers nécessaires dans le même dossier (celui de votre choix). Les fichiers suivant sont nécessaires et doivent être copiés à l'intérieur du dossier:</p>
+
+<ul>
+ <li>simg2img, trouvable dans B2G/out/target/product/galaxys2/system/bin/</li>
+ <li>system.img, trouvable dans B2G/out/target/product/galaxys2/</li>
+ <li>userdata.img, trouvable dans B2G/out/target/product/galaxys2/</li>
+</ul>
+
+<p>Une fois que tout vos fichiers sont réunis au même endroit, effectuez les étapes suivantes:</p>
+
+<ol>
+ <li>Créez un fichier data.img file sur le fichier userdata.img.  Vous pouvez le faire avec la commande suivante:
+  <pre>simg2img userdata.img data.img</pre>
+ </li>
+ <li>Mettez le fichier data.img file dans le dossier .secondrom de votre téléphone. Vous pouvez le faire soit via le mode de stockage de fichier sur votre téléphone puis en le connectant à votre PC, sinon si USB Debug est activé, vous pouvez utiliser adb:
+  <pre>adb push /path/to/data.img /sdcard/.secondrom/data.img</pre>
+ </li>
+ <li>Eteignez votre téléphone</li>
+ <li>Redémarrez le en mode téléchargement (pressez en même temps le bouton <em>"volume bas" + home + le bouton power</em> ensuite, lorsque cela sera demandé appuyez sur le bouton <em>"volume haut"</em>)</li>
+ <li>Utilisez heimdall pour flasher le firmware B2G dans la seconde partition:
+  <pre>heimdall flash --hidden system.img</pre>
+ </li>
+</ol>
+
+<p>Une fois cela fait, votre téléphone va redémarrer et au démarrage vous pourrez démarrer sur votre seconde rom (B2G) en appuyant sur le bouton home pendant le décompte. Si tout s'est bien passé, une fois que vous aurez fini de démarrer sur B2G, un écran noir apparaîtra sur votre téléphone. Il vous faut maintenant installer Gaia.</p>
+
+<div class="note"><strong>Note:</strong> Tout dépend de la façon dont vous voulez tester B2G, mais vous pouvez ne pas avoir envie de mettre un nouveau fichier data.img file sur le téléphone à chaque mise à jour de B2G, sachant qu'il effacera toutes vos préférences, pour les applications installées et en général tout ce que vous aurez fait pendant l'utilisation de B2G.</div>
+
+<h2 id="Opérations_de_démarrage">Opérations de démarrage</h2>
+
+<p>Les opérations suivantes doivent être réalisées à chaque démarrage dans B2G.</p>
+
+<p>Malheureusement, il n'y a pas de technique simple permettant d'ajouter Gaia à l'intérieur de l'image système B2G system.img , de plus il sera perdu dès que vous éteindrez votre téléphone. De ce fait, il vous faudra installer Gaia à chaque démarrage sur B2G. Pour installer Gaia effectuez les commandes suivantes dans une console après avoir démarré sur B2G (vous devez avoir un écran noir) et avoir connecté votre téléphone à votre PC:</p>
+
+<pre>cd B2G/gaia
+GAIA_DOMAIN=foo.org make install-gaia</pre>
+
+<p>Une fois le téléchargement de Gaia terminé, l'interface B2G apparaitra sur votre écran.</p>

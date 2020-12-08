@@ -1,0 +1,328 @@
+---
+title: Localisation
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Localisation
+tags:
+  - Localisation
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Localization
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Créer_un_thème" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Les_fichiers_de_propriétés">Suivant  »</a></p>
+</div>
+
+<p>XUL et XML fournissent des entités qui sont une solution permettant la localisation.</p>
+
+<h3 id="Entit.C3.A9s" name="Entit.C3.A9s">Entités</h3>
+
+<p>De nombreuses applications sont construites de telle sorte que la traduction de l'interface en différentes langues soit le plus simple possible. En général, une table de chaînes de caractères est créée pour chaque langue. Au lieu de la coder directement dans l'application, chaque partie de texte est seulement une référence dans la table de chaînes. <a href="/fr/XML" title="fr/XML">XML</a> fournit des entités qui peuvent être utilisées dans un but similaire.</p>
+
+<p>Vous devriez déjà être familier avec les entités si vous avez déjà écrit en <a href="/fr/HTML" title="fr/HTML">HTML</a>. Les codes <code>&amp;lt;</code> et <code>&amp;gt;</code> sont des exemples d'entités qui peuvent être utilisées pour placer les signes "inférieur" et "supérieur" dans le texte. XML a une syntaxe qui autorise la déclaration de vos propres entités. Vous pouvez les utiliser de manière à ce que l'entité soit remplacée par sa valeur qui peut être une chaîne de caractères. Des entités peuvent être employées toutes les fois où du texte est utilisé, y compris pour les valeurs des attributs. L'exemple ci-dessous décrit l'utilisation d'une entité dans un bouton.</p>
+
+<pre>&lt;button label="&amp;findLabel;"/&gt;</pre>
+
+<p>Le texte qui apparaîtra sur le libellé sera la valeur de l'entité  <code>&amp;findlabel;</code></p>
+
+<p>Un fichier contenant les déclarations d'entités pour chaque langue supportée est créé. En français, on affectera probablement la valeur de texte 'Rechercher' à l'entité <code>&amp;findlabel;</code></p>
+
+<h3 id="Les_fichiers_DTD" name="Les_fichiers_DTD">Les fichiers DTD</h3>
+
+<p> </p>
+
+<p>Les entités sont déclarées dans des fichiers DTD (<em>Document Type Declaration</em>). Ces types de fichiers sont en général utilisés pour déclarer la syntaxe et la sémantique d'un fichier XML particulier, mais ils autorisent aussi la déclaration d'entités. Dans le système chrome de Mozilla, vous trouverez les fichiers DTD dans le sous-répertoire <code>locales</code>. Vous devriez normalement avoir un fichier DTD (avec un extension <code>dtd</code>) par fichier XUL.</p>
+
+<p> </p>
+
+<p>Si vous regardez dans le répertoire chrome, vous devriez voir une archive pour votre langue (<code>fr.jar</code> par défaut pour le français). Vous pouvez avoir les fichiers de locales dans des langues multiples, par exemple, Anglais US (en-US) et Danois (dk). Dans ces archives, vous trouverez les fichiers qui contiennent les traductions pour chaque fenêtre. La structure de l'archive est très similaire à la structure des répertoires utilisée pour <a href="/fr/Tutoriel_XUL/Créer_un_thème" title="fr/Tutoriel_XUL/Créer_un_thème">les thèmes</a>.</p>
+
+<p> </p>
+
+<p>Dans les archives, vous placerez les fichiers DTD, dans lesquels vous déclarez les entités. Normalement vous aurez un fichier DTD par fichier XUL, en général avec le même nom de fichier excepté qu'il aura une extension <code>.dtd</code>. Donc pour la fenêtre de dialogue de recherche de fichiers, vous aurez besoin d'un fichier nommé <code>findfile.dtd</code>.</p>
+
+<p> </p>
+
+<p>Pour les fichiers chromes non installés, vous pouvez juste mettre le fichier DTD dans le même répertoire que le fichier XUL.</p>
+
+<div class="note"><strong>Note :</strong> Vous devez encoder les fichiers en UTF-8 à cause des caractères non ASCII. De ce fait, vous devez les sauvegarder au format UTF-8 (<a class="external" href="http://www.mozdev.org/notes/l10n/unicode/editors-en.html">sans BOM</a>). Pour plus d'information, consultez <a class="external" href="http://www.mozilla.org/projects/l10n/mlp_chrome.html#text">Mozilla language Packs</a>.</div>
+
+<p>Une fois que vous avez créé le fichier DTD pour votre fichier XUL, vous aurez besoin d'ajouter une ligne dans le fichier XUL qui indiquera que vous voulez utilisez le fichier DTD. Sinon, des erreurs seront générées car il ne sera pas capable de trouver les entités. Il vous suffit d'ajouter une ligne de la forme suivante vers le début du fichier XUL :</p>
+
+<pre>&lt;!DOCTYPE window SYSTEM "chrome://findfile/locale/findfile.dtd"&gt;</pre>
+
+<p>Cette ligne spécifie que l'URL indiquée est à utiliser en tant que fichier DTD. Dans ce cas, nous avons déclaré que nous voulons utiliser le fichier DTD <code>findfile.dtd</code>. Cette ligne est en général placée juste avant l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/window" title="window">window</a></code>.</p>
+
+<p>Vous devez également ajouter la localisation dans le fichier <a href="/fr/Enregistrement_chrome#locale" title="fr/Enregistrement_chrome#locale">chrome.manifest</a>, par exemple :</p>
+
+<pre class="eval">locale findfile fr locale/
+</pre>
+
+<h3 id="D.C3.A9clarer_les_entit.C3.A9s" name="D.C3.A9clarer_les_entit.C3.A9s">Déclarer les entités</h3>
+
+<p>Les entités sont déclarées en utilisant une syntaxe simple vue ci-dessous :</p>
+
+<pre>&lt;!ENTITY findLabel "Rechercher"&gt;</pre>
+
+<p>Cet exemple crée une entité avec le nom 'findLabel' et la valeur 'Rechercher'. Elle signifie que quelque soit l'endroit où le texte '&amp;findLabel;' apparaîtra dans le fichier XUL, il sera remplacé par le texte 'Rechercher'. Notez que les déclarations d'entités n'ont pas de slash terminal. Dans le fichier DTD d'une autre langue, le texte pour cette langue sera utilisé à la place.</p>
+
+<pre class="eval"><strong>pour l'anglais:</strong>
+&lt;!ENTITY findLabel "Find"&gt;
+</pre>
+
+<p>Par exemple, le texte suivant :</p>
+
+<pre>&lt;description value="&amp;findLabel;"/&gt;</pre>
+
+<p>est converti en :</p>
+
+<pre class="eval"><strong>version française:</strong>
+&lt;description value="Rechercher"/&gt;
+
+<strong>version anglaise</strong>
+&lt;description value="Find"/&gt;
+</pre>
+
+<p>Vous devrez déclarer une entité pour chaque libellé ou chaîne de caractères que vous utiliserez dans votre interface. Vous ne devriez plus avoir de texte affiché directement dans le fichier XUL.</p>
+
+<p>En plus d'utiliser les entités pour les libellés, vous devriez les utiliser pour chaque valeur qui pourrait être différente selon la langue ; <a href="/fr/Tutoriel_XUL/Raccourcis_clavier" title="fr/Tutoriel_XUL/Raccourcis_clavier">les touches d'accès et les raccourcis claviers</a> par exemple.</p>
+
+<pre class="eval"><strong>XUL</strong>
+&lt;menuitem label="&amp;undo.label;" accesskey="&amp;undo.key;"/&gt;
+<strong>DTD</strong>
+&lt;!ENTITY undo.label "Annuler"&gt;
+&lt;!ENTITY undo.key "u"&gt;
+</pre>
+
+<p>L'exemple ci-dessus utilise deux entités, une pour le libellé de l'élément de menu Annuler et une seconde pour la touche d'accès.</p>
+
+<div class="highlight">
+<h3 id="Modification_de_la_bo.C3.AEte_de_dialogue_de_recherche_de_fichiers" name="Modification_de_la_bo.C3.AEte_de_dialogue_de_recherche_de_fichiers">Modification de la boîte de dialogue de recherche de fichiers</h3>
+
+<p>Jetons un œil sur la manière dont nous pourrions utiliser tout ce que nous avons appris en modifiant la boîte de dialogue de recherche de fichiers de manière à ce qu'elle utilise un fichier DTD pour toutes ses chaînes de caractères. La totalité du fichier XUL est décrite ci-dessous avec les changements décrits en rouge.</p>
+
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+
+&lt;?xml-stylesheet href="<a class="external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;
+&lt;?xml-stylesheet href="findfile.css" type="text/css"?&gt;
+
+<span class="highlightred">&lt;!DOCTYPE window SYSTEM "<a class="external" rel="freelink">chrome://findfile/locale/findfile.dtd</a>"&gt;</span>
+
+&lt;window
+  id="findfile-window"
+  title="<span class="highlightred">&amp;findWindow.title;</span>"
+  persist="screenX screenY width height"
+  orient="horizontal"
+  onload="initSearchList()"
+  xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+
+&lt;script src="findfile.js"/&gt;
+
+&lt;popupset&gt;
+   &lt;menupopup id="editpopup"&gt;
+     &lt;menuitem label="<span class="highlightred">&amp;cutCmd.label;</span>" accesskey="<span class="highlightred">&amp;cutCmd.accesskey;</span>"/&gt;
+     &lt;menuitem label="<span class="highlightred">&amp;copyCmd.label;</span>" accesskey="<span class="highlightred">&amp;copyCmd.accesskey;</span>"/&gt;
+     &lt;menuitem label="<span class="highlightred">&amp;pasteCmd.label;</span>" accesskey="<span class="highlightred">&amp;pasteCmd.accesskey;</span>" disabled="true"/&gt;
+   &lt;/menupopup&gt;
+&lt;/popupset&gt;
+
+&lt;keyset&gt;
+   &lt;key id="cut_cmd" modifiers="accel" key="<span class="highlightred">&amp;cutCmd.commandkey;</span>"/&gt;
+   &lt;key id="copy_cmd" modifiers="accel" key="<span class="highlightred">&amp;copyCmd.commandkey;</span>"/&gt;
+   &lt;key id="paste_cmd" modifiers="accel" key="<span class="highlightred">&amp;pasteCmd.commandkey;</span>"/&gt;
+   &lt;key id="close_cmd" keycode="VK_ESCAPE" oncommand="window.close();"/&gt;
+&lt;/keyset&gt;
+
+&lt;vbox flex="1"&gt;
+
+ &lt;toolbox&gt;
+
+  &lt;menubar id="findfiles-menubar"&gt;
+    &lt;menu id="file-menu" label="<span class="highlightred">&amp;fileMenu.label;</span>"
+        accesskey="<span class="highlightred">&amp;fileMenu.accesskey;</span>"&gt;
+      &lt;menupopup id="file-popup"&gt;
+        &lt;menuitem label="<span class="highlightred">&amp;openCmd.label;</span>"
+                  accesskey="<span class="highlightred">&amp;openCmd.accesskey;</span>"/&gt;
+        &lt;menuitem label="<span class="highlightred">&amp;saveCmd.label;</span>"
+                  accesskey="<span class="highlightred">&amp;saveCmd.accesskey;</span>"/&gt;
+        &lt;menuseparator/&gt;
+        &lt;menuitem label="<span class="highlightred">&amp;closeCmd.label;</span>"
+                  accesskey="<span class="highlightred">&amp;closeCmd.accesskey;" key="close_cmd" oncommand="window.close();</span>"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+    &lt;menu id="edit-menu" label="<span class="highlightred">&amp;editMenu.label;</span>"
+          accesskey="<span class="highlightred">&amp;editMenu.accesskey;</span>"&gt;
+      &lt;menupopup id="edit-popup"&gt;
+        &lt;menuitem label="<span class="highlightred">&amp;cutCmd.label;</span>"
+                  accesskey="<span class="highlightred">&amp;cutCmd.accesskey;</span>" key="cut_cmd"/&gt;
+        &lt;menuitem label="<span class="highlightred">&amp;copyCmd.label;</span>"
+                  accesskey="<span class="highlightred">&amp;copyCmd.accesskey;</span>" key="copy_cmd"/&gt;
+        &lt;menuitem label="<span class="highlightred">&amp;pasteCmd.label;</span>"
+                  accesskey="<span class="highlightred">&amp;pasteCmd.accesskey;</span>" key="paste_cmd" disabled="true"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+  &lt;/menubar&gt;
+
+  &lt;toolbar id="findfiles-toolbar"&gt;
+    &lt;toolbarbutton id="opensearch" label="<span class="highlightred">&amp;openCmdToolbar.label;</span>"/&gt;
+    &lt;toolbarbutton id="savesearch" label="<span class="highlightred">&amp;saveCmdToolbar.label;</span>"/&gt;
+  &lt;/toolbar&gt;
+ &lt;/toolbox&gt;
+
+ &lt;tabbox&gt;
+  &lt;tabs&gt;
+    &lt;tab label="<span class="highlightred">&amp;searchTab;</span>" selected="true"/&gt;
+    &lt;tab label="<span class="highlightred">&amp;optionsTab;</span>"/&gt;
+  &lt;/tabs&gt;
+
+  &lt;tabpanels&gt;
+
+   &lt;tabpanel id="searchpanel" orient="vertical" context="editpopup"&gt;
+
+   &lt;description&gt;
+     <span class="highlightred">&amp;findDescription;</span>
+   &lt;/description&gt;
+
+   &lt;spacer class="titlespace"/&gt;
+
+   &lt;groupbox orient="horizontal"&gt;
+     &lt;caption label="<span class="highlightred">&amp;findCriteria;</span>"/&gt;
+
+     &lt;menulist id="searchtype"&gt;
+       &lt;menupopup&gt;
+         &lt;menuitem label="<span class="highlightred">&amp;type.name;</span>"/&gt;
+         &lt;menuitem label="<span class="highlightred">&amp;type.size;</span>"/&gt;
+         &lt;menuitem label="<span class="highlightred">&amp;type.date;</span>"/&gt;
+       &lt;/menupopup&gt;
+     &lt;/menulist&gt;
+   &lt;spacer class="springspace"/&gt;
+     &lt;menulist id="searchmode"&gt;
+       &lt;menupopup&gt;
+         &lt;menuitem label="<span class="highlightred">&amp;mode.is;</span>"/&gt;
+         &lt;menuitem label="<span class="highlightred">&amp;mode.isnot;</span>"/&gt;
+       &lt;/menupopup&gt;
+     &lt;/menulist&gt;
+   &lt;spacer class="springspace"/&gt;
+
+   &lt;menulist id="find-text" flex="1"
+             editable="true"
+             datasources="<a class="external" rel="freelink">file:///mozilla/recents.rdf</a>"
+             ref="<span class="nowiki">http://www.xulplanet.com/rdf/recent/all</span>"&gt;
+     &lt;template&gt;
+       &lt;menupopup&gt;
+         &lt;menuitem label="<span class="nowiki">rdf:http://www.xulplanet.com/rdf/recent#Label</span>" uri="rdf:*"/&gt;
+       &lt;/menupopup&gt;
+     &lt;/template&gt;
+   &lt;/menulist&gt;
+
+   &lt;/groupbox&gt;
+
+  &lt;/tabpanel&gt;
+
+  &lt;tabpanel id="optionspanel" orient="vertical"&gt;
+     &lt;checkbox id="casecheck" label="<span class="highlightred">&amp;casesensitive;</span>"/&gt;
+     &lt;checkbox id="wordscheck" label="<span class="highlightred">&amp;matchfilename;</span>"/&gt;
+    &lt;/tabpanel&gt;
+
+  &lt;/tabpanels&gt;
+ &lt;/tabbox&gt;
+
+ &lt;tree id="results" style="display: none;" flex="1"&gt;
+   &lt;treecols&gt;
+     &lt;treecol id="name" label="<span class="highlightred">&amp;results.filename;</span>" flex="1"/&gt;
+     &lt;treecol id="location" label="<span class="highlightred">&amp;results.location;</span>" flex="2"/&gt;
+     &lt;treecol id="size" label="<span class="highlightred">&amp;results.size;</span>" flex="1"/&gt;
+   &lt;/treecols&gt;
+
+   &lt;treechildren&gt;
+     &lt;treeitem&gt;
+       &lt;treerow&gt;
+         &lt;treecell label="mozilla"/&gt;
+         &lt;treecell label="/usr/local"/&gt;
+         &lt;treecell label="<span class="highlightred">&amp;bytes.before;</span>2520<span class="highlightred">&amp;bytes.after;</span>"/&gt;
+       &lt;/treerow&gt;
+     &lt;/treeitem&gt;
+   &lt;/treechildren&gt;
+ &lt;/tree&gt;
+
+ &lt;splitter id="splitbar" resizeafter="grow" style="display: none;"/&gt;
+
+ &lt;spacer class="titlespace"/&gt;
+
+ &lt;hbox&gt;
+   &lt;progressmeter id="progmeter" value="50%" style="display: none;"/&gt;
+   &lt;spacer flex="1"/&gt;
+   &lt;button id="find-button" label="<span class="highlightred">&amp;button.find;</span>"
+           oncommand="doFind()"/&gt;
+   &lt;button id="cancel-button" label="<span class="highlightred">&amp;button.cancel;</span>"
+           oncommand="window.close();"/&gt;
+ &lt;/hbox&gt;
+&lt;/vbox&gt;
+
+&lt;/window&gt;
+</pre>
+
+<p>Chaque chaîne de caractères a été remplacée par une référence à une entité. Un fichier DTD a été inclus au début du fichier XUL. Chaque entité qui a été ajoutée doit être déclarée dans le fichier DTD. La fenêtre ne sera pas affichée si une entité non déclarée est trouvée dans le fichier XUL.</p>
+
+<p>Notez que le nom de l'entité n'est pas important. Dans l'exemple ci-dessus, les mots dans les entités ont été séparés par des points. Vous n'avez pas à faire ça. Les noms des entités ici suivent des conventions similaires au reste du code de Mozilla.</p>
+
+<p>Vous aurez noté que le texte '2520 octets' a été remplacé par deux entités. En fait, la structure de la phrase pourrait être différente dans une autre langue. Par exemple, le nombre pourrait apparaître après l'équivalent du mot 'octets' au lieu d'avant. Bien sûr, il est beaucoup plus compliqué de vouloir l'affichage des Ko ou des Mo selon les besoins.</p>
+
+<p>Les touches d'accès et les raccourcis claviers ont aussi été traduits dans les entités car ils seront peut être différents dans une autre langue.</p>
+
+<p>Voici le fichier DTD (findfile.dtd) :</p>
+
+<pre>&lt;!ENTITY findWindow.title "Recherche de fichiers"&gt;
+&lt;!ENTITY fileMenu.label "Fichier"&gt;
+&lt;!ENTITY editMenu.label "Edition"&gt;
+&lt;!ENTITY fileMenu.accesskey "f"&gt;
+&lt;!ENTITY editMenu.accesskey "e"&gt;
+&lt;!ENTITY openCmd.label "Ouvrir une recherche..."&gt;
+&lt;!ENTITY saveCmd.label "Sauvegarder une recherche..."&gt;
+&lt;!ENTITY closeCmd.label "Fermer"&gt;
+&lt;!ENTITY openCmd.accesskey "o"&gt;
+&lt;!ENTITY saveCmd.accesskey "s"&gt;
+&lt;!ENTITY closeCmd.accesskey "f"&gt;
+&lt;!ENTITY cutCmd.label "Couper"&gt;
+&lt;!ENTITY copyCmd.label "Copier"&gt;
+&lt;!ENTITY pasteCmd.label "Coller"&gt;
+&lt;!ENTITY cutCmd.accesskey "p"&gt;
+&lt;!ENTITY copyCmd.accesskey "c"&gt;
+&lt;!ENTITY pasteCmd.accesskey "l"&gt;
+&lt;!ENTITY cutCmd.commandkey "X"&gt;
+&lt;!ENTITY copyCmd.commandkey "C"&gt;
+&lt;!ENTITY pasteCmd.commandkey "V"&gt;
+&lt;!ENTITY openCmdToolbar.label "Ouvrir"&gt;
+&lt;!ENTITY saveCmdToolbar.label "Sauvegarder"&gt;
+&lt;!ENTITY searchTab "Rechercher"&gt;
+&lt;!ENTITY optionsTab "Options"&gt;
+&lt;!ENTITY findDescription "Entrez votre critère de recherche ci-dessous et appuyer sur le bouton Rechercher."&gt;
+&lt;!ENTITY findCriteria "Critère de recherche"&gt;
+&lt;!ENTITY type.name "Nom"&gt;
+&lt;!ENTITY type.size "Taille"&gt;
+&lt;!ENTITY type.date "Date de modification"&gt;
+&lt;!ENTITY mode.is "Est"&gt;
+&lt;!ENTITY mode.isnot "N'est pas"&gt;
+&lt;!ENTITY casesensitive "Recherche sensible à la casse"&gt;
+&lt;!ENTITY matchfilename "Rechercher un nom entier"&gt;
+&lt;!ENTITY results.filename "Nom de fichier"&gt;
+&lt;!ENTITY results.location "Emplacement"&gt;
+&lt;!ENTITY results.size "Taille"&gt;
+&lt;!ENTITY bytes.before ""&gt;
+&lt;!ENTITY bytes.after "octets"&gt;
+&lt;!ENTITY button.find "Rechercher"&gt;
+&lt;!ENTITY button.cancel "Annuler"&gt;
+</pre>
+
+<p>Maintenant pour changer de langue, tout ce que vous avez à faire est de créer un nouveau fichier DTD. En utilisant le système chrome pour ajouter le fichier DTD dans une langue différente, le même fichier XUL peut être utilisé pour toutes les langues.</p>
+</div>
+
+<hr>
+<p>Dans la prochaine section, nous regarderons les fichiers de propriétés.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Créer_un_thème" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Les_fichiers_de_propriétés">Suivant  »</a></p>
+</div>
+
+<p><span class="comment">Interwiki</span></p>

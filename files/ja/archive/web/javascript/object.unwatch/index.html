@@ -1,0 +1,70 @@
+---
+title: Object.prototype.unwatch()
+slug: Archive/Web/JavaScript/Object.unwatch
+tags:
+  - Debugging
+  - Deprecated
+  - JavaScript
+  - Method
+  - Object
+  - Obsolete
+  - Prototype
+  - Reference
+translation_of: Archive/Web/JavaScript/Object.unwatch
+---
+<div>{{JSRef}}</div>
+
+<div class="warning">
+<p><strong>非推奨の警告:</strong> <code>unwatch()</code> および {{jsxref("Object.prototype.watch", "watch()")}} は使用しないでください! これら 2 つのメソッドはバージョン 58 より前の Firefox しか実装しておらず、<strong>Firefox 58 以降で非推奨および削除されます</strong>。また、ウォッチポイントを使用するとパフォーマンスに大きな悪影響があり、特に <code>window</code> のようなグローバルオブジェクトで使用すると顕著です。通常は、代わりに <a href="/ja/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">セッターとゲッター</a> または <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy">proxy</a> を使用できます。</p>
+</div>
+
+<p><code><strong>unwatch()</strong></code> メソッドは、{{jsxref("Object.prototype.watch", "watch()")}} メソッドでセットしたウォッチポイントを取り除きます。</p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="syntaxbox"><code><var>obj</var>.unwatch(<var>prop</var>)</code></pre>
+
+<h3 id="Parameters" name="Parameters">引数</h3>
+
+<dl>
+ <dt><code>prop</code></dt>
+ <dd>監視を止めるオブジェクトのプロパティの名前</dd>
+</dl>
+
+<h3 id="Return_value" name="Return_value">返値</h3>
+
+<p>{{jsxref("undefined")}}。</p>
+
+<h2 id="Description" name="Description">解説</h2>
+
+<p>JavaScript のデバッガーは他のデバッグ用オプションと同様に、このメソッドで使用されるものと機能的に似たものを有しています。デバッガーについての情報は <a href="/ja/docs/Venkman">Venkman</a> をご覧ください。</p>
+
+<p>デフォルトで、このメソッドは {{jsxref("Object")}} の子孫であるあらゆるオブジェクトに継承されています。</p>
+
+<div class="note">
+<p><strong>注記:</strong> <code>unwatch()</code> が唯一の引数としてプロパティ名である <em>prop</em> しか持たない理由は、{{jsxref("Object.watch", "watch()")}} メソッドの "ハンドラーをひとつだけ許可する" 動作のためです。</p>
+</div>
+
+<h2 id="Examples" name="Examples">例</h2>
+
+<p>{{jsxref("Object.watch", "watch()")}} を参照のこと。</p>
+
+<h2 id="Specifications" name="Specifications">仕様書</h2>
+
+<p><span class="pl-s">どの標準にも含まれていません。</span></p>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+
+<p>どこでも対応されていません。歴史的には Firefox 1 から 57 が対応していました。</p>
+
+<h2 id="Compatibility_notes" name="Compatibility_notes">互換性情報</h2>
+
+<ul>
+ <li>Firefox 23 より、{{domxref("Document")}} で <code>unwatch()</code> を呼び出すと {{jsxref("TypeError")}} が発生します ({{bug(903332)}})。このリグレッションは Firefox 27 で修正しました。</li>
+</ul>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>{{jsxref("Object.watch()")}}</li>
+</ul>

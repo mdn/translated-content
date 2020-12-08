@@ -1,0 +1,132 @@
+---
+title: EventTarget
+slug: Web/API/EventTarget
+tags:
+  - API
+  - DOM
+  - DOM Events
+  - EventTarget
+  - Interface
+translation_of: Web/API/EventTarget
+---
+<p>{{ ApiRef("DOM Events") }}</p>
+
+<p><code>EventTarget</code> は、イベントを受け取り、そのためのリスナーを持つ可能性があるオブジェクトにより実装されたインターフェースです。</p>
+
+<p>{{domxref("Element")}} および {{domxref("document")}}、{{domxref("window")}} は、最も一般的なイベントターゲットですが、他のオブジェクトもイベントターゲットになります。例えば、{{domxref("XMLHttpRequest")}}、{{domxref("AudioNode")}}、{{domxref("AudioContext")}} 他。</p>
+
+<p>多くのイベントターゲット (要素、document、window を含む) も、<code>on...</code> プロパティや属性を経由した <a href="/docs/Web/Guide/DOM/Events/Event_handlers">イベントハンドラ</a> の設定をサポートしています。</p>
+
+<p>{{InheritanceDiagram}}</p>
+
+<h2 id="Constructor" name="Constructor">コンストラクター</h2>
+
+<dl>
+ <dt>{{domxref("EventTarget.EventTarget()","EventTarget()")}}</dt>
+ <dd>新しい <code>EventTarget</code> オブジェクトのインスタンスを作成します。</dd>
+</dl>
+
+<h2 id="Methods" name="Methods">メソッド</h2>
+
+<dl>
+ <dt>{{domxref("EventTarget.addEventListener()")}}</dt>
+ <dd><code>EventTarget</code> 上に特定のイベント種別のイベントハンドラを登録します。</dd>
+ <dt>{{domxref("EventTarget.removeEventListener()")}}</dt>
+ <dd><code>EventTarget</code> からイベントリスナーを削除します。</dd>
+ <dt>{{domxref("EventTarget.dispatchEvent()")}}</dt>
+ <dd>この <code>EventTarget</code> にイベントを送出します。</dd>
+</dl>
+
+<h3 id="Mozilla_chrome_コード向けの追加メソッド">Mozilla chrome コード向けの追加メソッド</h3>
+
+<p>on* プロパティを実装するために JavaScript で実装されたイベントターゲットを使用するための Mozilla 拡張があります。<a href="/docs/Mozilla/WebIDL_bindings">WebIDL バインディング</a> も参照してください。</p>
+
+<ul>
+ <li>void <strong>setEventHandler</strong>(DOMString type, EventHandler handler) {{non-standard_inline}}</li>
+ <li>EventHandler <strong>getEventHandler</strong>(DOMString type) {{non-standard_inline}}</li>
+</ul>
+
+<h2 id="Example" name="Example">例</h2>
+
+<h3 id="_Simple_implementation_of_EventTarget" name="_Simple_implementation_of_EventTarget">EventTarget の簡易実装</h3>
+
+<pre class="brush: js">var EventTarget = function() {
+  this.listeners = {};
+};
+
+EventTarget.prototype.listeners = null;
+EventTarget.prototype.addEventListener = function(type, callback) {
+  if (!(type in this.listeners)) {
+    this.listeners[type] = [];
+  }
+  this.listeners[type].push(callback);
+};
+
+EventTarget.prototype.removeEventListener = function(type, callback) {
+  if (!(type in this.listeners)) {
+    return;
+  }
+  var stack = this.listeners[type];
+  for (var i = 0, l = stack.length; i &lt; l; i++) {
+    if (stack[i] === callback){
+      stack.splice(i, 1);
+      return;
+    }
+  }
+};
+
+EventTarget.prototype.dispatchEvent = function(event) {
+  if (!(event.type in this.listeners)) {
+    return true;
+  }
+  var stack = this.listeners[event.type].slice();
+
+  for (var i = 0, l = stack.length; i &lt; l; i++) {
+    stack[i].call(this, event);
+  }
+  return !event.defaultPrevented;
+};
+</pre>
+
+<h2 id="Specifications" name="Specifications">仕様</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">策定状況</th>
+   <th scope="col">備考</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM WHATWG', '#interface-eventtarget', 'EventTarget')}}</td>
+   <td>{{Spec2('DOM WHATWG')}}</td>
+   <td>変更なし。</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM3 Events', 'DOM3-Events.html#interface-EventTarget', 'EventTarget')}}</td>
+   <td>{{Spec2('DOM3 Events')}}</td>
+   <td>いくつかの引数は任意 (<code>listener</code>)、または <code>null</code> 値を許可 (<code>useCapture</code>)。</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM2 Events', 'events.html#Events-EventTarget', 'EventTarget')}}</td>
+   <td>{{Spec2('DOM2 Events')}}</td>
+   <td>初期定義。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの実装状況</h2>
+
+<div>
+
+
+<p>{{Compat("api.EventTarget")}}</p>
+</div>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><a href="/docs/Web/Reference/Events">イベントリファレンス</a> - プラットフォームで利用可能なイベント。</li>
+ <li><a href="/docs/Web/Guide/DOM/Events">イベント開発者ガイド</a></li>
+ <li>{{domxref("Event")}} インターフェース</li>
+</ul>

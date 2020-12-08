@@ -1,0 +1,366 @@
+---
+title: Bug 提交指南
+slug: 质量保证/Bug_writing_guidelines
+tags:
+  - Bugzilla
+  - 可能过时
+  - 问答
+translation_of: Mozilla/QA/Bug_writing_guidelines
+---
+<div class="note">
+<p>This page needs a technical review from the Mozilla QA Team in Q4 2014. (Assigned to Ioana Chiorean.) The following articles have been merged into this page from QMO:</p>
+
+<ul>
+ <li><a class="link-https" href="https://quality.mozilla.org/docs/bugzilla/starter-kit/how-to-write-a-proper-bug/">How to write a proper bug</a></li>
+ <li><a class="link-https" href="https://quality.mozilla.org/docs/bugzilla/starter-kit/how-to-write-a-proper-bug-part-2/">How to write a proper bug - Part 2</a></li>
+</ul>
+
+<p><strong>If you need help with Mozilla software (for example with Firefox or Thunderbird), use one of the available <a href="http://www.mozilla.org/support/">support options</a>. <em>Do not edit this page! </em>Please <em>read</em> this page to learn how to report a bug using <a class="link-https" href="https://bugzilla.mozilla.org/">Bugzilla</a>, which is Mozilla's bug tracking system.</strong></p>
+
+<p>If you're new to reporting bugs, you may want to try getting help from the more experienced contributors. See the Community section on the <a href="/en-US/docs/QA">QA</a> page for pointers. If you're going to report a Firefox bug, you can also get assistance in the <span style="font-family: monospace;">#firefox</span> channel on <a href="http://irc.mozilla.org/">irc.mozilla.org</a>.</p>
+</div>
+
+<p>有效的问题报告会最可能得到处理。这份指南则阐释了如何来写出这样的报告。</p>
+
+<h2 id="准备">准备</h2>
+
+<ol>
+ <li>请确保你的软件是更新到最新的
+  <ul>
+   <li>理想情况下，请测试一个正在开发中的版本来看你所提交的问题是否已经处理掉。 (例如 <a href="http://www.mozilla.com/en-US/firefox/channel/">Firefox Beta, Aurora</a>, 或者 bleeding-edge <a class="link-https" href="https://nightly.mozilla.org/">Nightly</a>).</li>
+  </ul>
+ </li>
+ <li>在 <a class="link-https" href="https://bugzilla.mozilla.org/">Bugzilla</a> 上搜索，看看你的问题是否已经被提交。(<a href="http://www.mozilla.org/quality/help/screening-duplicates.html">教程</a>).</li>
+ <li>点击 <a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?format=guided">输入一个新bug </a> 表单，它就会指引你来完成绝大部分问题报告过程。如果你有多个问题需要报告， 请对每个问题分别提交一个问题报告。</li>
+</ol>
+
+<h2 id="写出清楚而准确的步骤来复现问题">写出清楚而准确的步骤来复现问题</h2>
+
+<p>开发者怎样可以在他的设备上复现这个问题？</p>
+
+<p>复现问题的步骤是<strong>问题报告中最重要的部分</strong>。如何开发者可以重现这个问题， 这个问题就可能得到处理。 如果复现问题的步骤不清晰， 我们就不会知道这个问题是否已经被处理。 </p>
+
+<p>除了与每个步骤交互的意图外，尽量精确的描述出与 Firefox 交互的方法。</p>
+
+<ul>
+ <li>不精确的描述: "用新窗口打开QQ邮箱".</li>
+ <li>精确的描述: "点击Ctrl+N新建浏览器窗口页，然后在地址栏输入<a class="link-https" href="https://mail.qq.com/" rel="freelink">https://mail.qq.com/</a> 并敲击回车键".</li>
+</ul>
+
+<p>在下面的步骤后，准确描述观察的结果和预期结果。明确区分实时（观察现象）和推测。</p>
+
+<ul>
+ <li>不精确的描述: "它不工作"</li>
+ <li>
+  <p>精确的描述: "它不是显示我的收件箱, 而是出现提示 'Your browser does not support cookies （你的浏览器不支持Cookies）(error -91)'."</p>
+ </li>
+</ul>
+
+<p>如果这个bug看起来非常严重，那么您的设置可能有一些不正常的地方，这是重现该bug的必要步骤之一。看看您是否可以在新的Firefox配置文件中重现此错误。如果错误只发生在您现有的概要文件中，请尝试找出重现错误需要哪些设置、扩展名或概要文件。</p>
+
+<ul>
+ <li><a href="http://www.chiark.greenend.org.uk/~sgtatham/bugs.html#intermittent">如果我的问题看起来像是偶然或随机发生的怎么办？</a></li>
+</ul>
+
+<h2 id="写出一个简洁的标题"><strong>写出一个简洁的标题</strong></h2>
+
+<p>怎样用尽量少的字来描述一个Bug? 这是开发人员将在你的反馈报告中看到的第一部分。</p>
+
+<p>好的标题将会在众多反馈中被迅速区分开。它应该是报告一个问题, 而不是建议的解决方案。</p>
+
+<p>下面有一些范例：</p>
+
+<ul>
+ <li>较好的: "取消复制文件对话框导致文件管理器崩溃"</li>
+ <li>较糟的：“软件闪退”</li>
+</ul>
+
+<ul>
+ <li>较好的: "滚动条的下箭头<span class="tlid-translation translation" lang="zh-CN"><span title="">在使用overflow:hidden设置样式的&lt;textarea&gt;中不起作用</span></span> "</li>
+ <li>较糟的: "浏览器应该在我的网站上可用"</li>
+</ul>
+
+<h2 id="Finding_the_correct_product_and_component" name="Finding_the_correct_product_and_component"><strong style="font-weight: bold;">查找出准确的 product 和 component分类</strong></h2>
+
+<p>你需要将你提交的问题分类到product和component, 来确保你提交的问题报告被相关的开发人员看到。</p>
+
+<p>如果你正在使用 Firefox，问题很可能出在 "Firefox", "Toolkit"或"Core"中。</p>
+
+<ul>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/describecomponents.cgi?product=Firefox">"Firefox"的组件列表 </a> - 大多数你直接接触到的Firefox部分</li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/describecomponents.cgi?product=Toolkit">"Tookit"的组件列表</a> - <span class="tlid-translation translation" lang="zh-CN"><span title="">界面小部件和一些前端功能</span></span></li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/describecomponents.cgi?product=Core">"Core"的组件列表</a> - <span class="tlid-translation translation" lang="zh-CN"><span title="">网页渲染，网络等</span></span></li>
+</ul>
+
+<p>如果有疑问，请搜索类似的错误并查看它们所在的分类。</p>
+
+<p>如果看起来以上的分类都不合适，那么在最合适的分类中寻找一个“通用”组件。</p>
+
+<h2 id="指定_bug_的类型">指定 bug 的类型</h2>
+
+<p>如果您正在报告一个崩溃错误，请包含一个Breakpad ID或附加堆栈跟踪，并在错误摘要中包含崩溃签名。如果您正在报告内存使用或溢出bug，请附上about:memory (Firefox 6+)的输出。理想情况下，找到一些步骤来重现在about:memory中显示的增长(即使在单击底部的“最小化内存使用”按钮之后)。如果您难以找到复制步骤，请尝试Firefox支持页面“高内存使用量”。如果您是c++开发人员，可以使用更精确的工具。</p>
+
+<div class="originaldocinfo">
+<h2 id="原始文档信息">原始文档信息</h2>
+
+<ul>
+ <li>Author(s): Jesse Ruderman, Gervase Markham</li>
+ <li>Other Contributors: Eli Goldberg, Claudius Gayle, Jan Leger, Felix Miata, Peter Mock, Chris Pratt, Chris Yeh, and others.</li>
+</ul>
+</div>
+
+<hr>
+<div class="note">
+<p>下面的文章源自QMO: <a class="link-https" href="https://quality.mozilla.org/docs/bugzilla/starter-kit/how-to-write-a-proper-bug/">如何合适地报告bug</a></p>
+</div>
+
+<h2 id="检查bug是否有效">检查bug是否有效</h2>
+
+<h3 id="验证您发现的问题是一个新bug">验证您发现的问题是一个新bug</h3>
+
+<p>要验证您所发现的是否确实是Mozilla产品中的一个新bug，请查看下面的检查方法，以确保值得为其创建一个新的bug报告。</p>
+
+<ul>
+ <li>确保它是<a href="http://support.mozilla.com/tiki-wiki_rankings.php?limit=500&amp;categId=1" title="Support @ Mozilla">软件bug</a>。 它应该是一个错误或缺陷导致浏览器错误导致错误和/或意外结果</li>
+ <li>通过查看您的特定版本，看看它是否是一个已知的bug <a href="http://www.mozilla.com/en-US/firefox/releases/">发行日志</a></li>
+ <li>通过查看<a href="http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-trunk/">这里</a>确保这个bug没有被修复。</li>
+ <li>通过<a href="https://developer.mozilla.org/En/Screening_duplicate_bugs#Searching guide">这里</a>确保bug未被报告。</li>
+</ul>
+
+<p>如果你不知道该做什么，看看<a href="IRC .mozilla.org">irc频道</a>的问答。如果没人回答，就看看或把问题发到<a href="/forums/quality-assurance-discussion/bugs">bugzilla论坛</a>。如果仍然没人回答再编写bug报告。</p>
+
+<h2 id="Bug报告">Bug报告</h2>
+
+<h3 id="怎么创建一个bug报告？">怎么创建一个bug报告？</h3>
+
+<ul>
+ <li>
+  <p>Mozilla用于报告，调查和修复错误的主要跟踪工具位于<a href="http://bugzilla.mozilla.org/Bugzilla">此处</a>。 记录错误的第一步是注册帐户。 为此，请转到Bugzilla的主页，然后单击页面顶部的“新帐户”超链接注册一个账户。</p>
+
+  <p>注册然后登录到您的新帐户后，返回Bugzilla主页并单击页面顶部的“新建”超链接。 单击找到错误的产品并填写生成的表单。 如果您在查找要提交错误的产品时遇到任何问题，请访问irc.mozilla.org上的问答频道，并向我们非常友好的MozQA社区寻求帮助。</p>
+ </li>
+</ul>
+
+<h3 id="在哪个社区可以发布bug报告？">在哪个社区可以发布bug报告？</h3>
+
+<p>在创建错误时，应该考虑几个原则。 比如：</p>
+
+<p>     保持描述和摘要<u>清晰简洁</u></p>
+
+<p>     仅报告错误报告中的一个问题</p>
+
+<p>     仅报告您的错误中的事实并删除您可能拥有的任何假设</p>
+
+<h3 id="bug报告的概要">bug报告的概要</h3>
+
+<ul>
+ <li><strong>概述</strong>: 在 60 个字符以内描述一个 bug。它应该快速且仅仅描述问题的出现，而不要写建议的解决方式。较好的: " 取消文件复制对话框会崩溃文件管理器 " 较差的: "软件崩溃了""浏览器应该在我的网站上工作"</li>
+ <li><strong>组件</strong>: 在软件的哪一个子部分存在问题？这个字段是提交任何 bug 报告 都必须要有的。请点击 "组件" 来查看每个 组件的描述。如果这些 组件 都不太适合，请选择 "通用"组件.</li>
+ <li><strong>操作系统</strong>: 在什么操作系统上发现该问题的。 (如 Linux, Windows XP, Mac OS X 等) 另外，<em>如果这个问题在不止一个操作系统上均会发生，请选择 “All”，如果您使用的操作系统不在列表内，请选择“Other”。</em></li>
+ <li><strong>说明</strong>: 问题报告的详细信息，包括：-<u>描述</u>: 对标题内容进行更详细的复述。例如：“在Mac上拖动选框选中任何页面的时候，<em>NSGetFactory 函数会导致崩溃</em>” (<em>"Drag-selecting any page crashes Mac builds in the NSGetFactory function")</em> -<u>Build版本号</u>: 你可以用地址栏访问"about:"页面来查看，或者如果你有 MozQA 的 <a href="https://addons.mozilla.org/en-US/firefox/addon/nightly-tester-tools/">Nightly Tester Tools</a> 扩展组件，在 Tools | Nightly Tester Tools 可以找到 build 版本号的内容。build 版本号的格式如下: <em>"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3) Gecko/20090305 Firefox/3.1b3"</em>. -<u>Additional Builds and Platforms</u>: 如果可以的话，请报告这个 bug 在其他平台或者其他浏览器上会不会发生， 如: <em>"在mozilla/5.0上不会发生 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3) Gecko/20081107 Firefox/3.1b2"</em>.</li>
+ <li><strong>重现步骤</strong>: 最小化，易于遵循的步骤将触发错误。 如果它们是必要的，请确保包含任何特殊的设置步骤。这方面的一个很好的例子如下所示：1）查看任何网页。 （我使用了默认示例页面，http：//www.baidu.com/）。 2）拖动选择页面。 具体来说，在按住鼠标按钮的同时，将鼠标指针从浏览器内容区域中的任意位置向下拖动到浏览器内容区域的底部。</li>
+ <li><strong>实际结果</strong>: 进行上述操作之后有什么结果。例如：<em>软件崩溃了。 (The application crashed.)</em></li>
+ <li><strong>正常结果</strong>: 正常情况下应该是什么结果，例如：“窗口应该向下滚动”，“某些内容应该被选中”，或者至少是“软件不该崩溃”<em>。</em></li>
+</ul>
+
+<p>继续阅读 <a href="http://quality.mozilla.org/docs/bugzilla/starter-kit/how-to-write-a-proper-bug-part-2/">How to Write a Proper Bug Report Part 2</a></p>
+
+<div class="originaldocinfo">
+<h2 id="Original_document_information">Original document information</h2>
+
+<ul>
+ <li>Author(s): Aakash Desai</li>
+ <li>Date last modified: June 3, 2013 at 2:41 am PST</li>
+</ul>
+</div>
+
+<hr>
+<div class="note">
+<p>The following article has been merged into this page from QMO: <a class="link-https" href="https://quality.mozilla.org/docs/bugzilla/starter-kit/how-to-write-a-proper-bug-part-2/">How to write a proper bug - Part 2</a></p>
+</div>
+
+<h1 id="Reporting_and_Writing_Good_Bugs">Reporting and Writing Good Bugs</h1>
+
+<p>By Tyler Downer</p>
+
+<h2 id="Contents">Contents</h2>
+
+<ul>
+</ul>
+
+<ol>
+ <li><a href="#thanks">Thank You</a></li>
+ <li><a href="#all">Read for all bugs</a></li>
+ <li><a href="#issue">Choose Your Issue </a></li>
+ <li><a href="#using">Using Bugzilla</a></li>
+ <li><a href="#info">Related Information</a></li>
+</ol>
+
+<ul>
+</ul>
+
+<h2 id="Thank_You!"><a id="thanks">Thank You!</a></h2>
+
+<p>So, you think have found a bug in Firefox and you want to report it to be fixed. Great and thank you. The Mozilla projects rely on users to find and report bugs. However, you need to make sure that you write a good bug report on Bugzilla (<a href="http://bugzilla.mozilla.org/">bugzilla.mozilla.org</a>) in order for it to be useful. These guidelines will help you write a good bug.</p>
+
+<p>Note: These instructions are written for Firefox, but similar ones apply for most Thunderbird and Seamonkey bugs, only details differ. Hopefully, a Thunderbird version of this page will be released with Thunderbird 3.</p>
+
+<h3 id="IMPORTANT">IMPORTANT</h3>
+
+<p>Please read <a href="#all">For All Bugs</a> thoroughly before going to your specific issue. The information contained there is critical to making sure your issue is with Firefox, and not with an extension or corruption in your profile.</p>
+
+<h2 id="For_all_Bugs"><a id="all">For all Bugs</a></h2>
+
+<p>No matter what type of bug you have found, make sure to follow these steps to confirm that it is a bug in a Firefox, and not an extension. To do that, follow these steps:</p>
+
+<ol>
+ <li>Update Firefox, add-ons and plugins to the most recent versions (this includes programs like Flash and Acrobat Reader). All of your plugins must be on the latest supported version, as well as Firefox. NOTE:Firefox 2 is no longer supported, and support for Firefox 3 will end by the end of the year. Please update to Firefox 3.5.</li>
+ <li>Start Firefox in <a href="http://support.mozilla.com/en-US/kb/Safe+Mode">Safe Mode</a> and try to find the bug. If the issue goes away:
+  <ol>
+   <li>Disable your extensions/themes one by one, until you find the one causing the issue.</li>
+   <li>Contact the developer of that extension.</li>
+   <li>Read below for more information on Extensions.</li>
+  </ol>
+ </li>
+ <li>If the issue is still there in Safe Mode, make a new profile with no extensions or changes (<a href="http://support.mozilla.com/en-US/kb/Managing+profiles">instructions here</a>). Then try to find the problem. If the issue goes away, your Firefox install was most likely corrupted. Migrate your bookmarks and other information to this new profile, and you should be good to go.</li>
+ <li>You can read <a href="http://support.mozilla.com/en-US/kb/Basic+Troubleshooting">Basic Troubleshooting</a> for more steps to try.</li>
+ <li>If the issue is still present after these steps, it is likely your problem is with Firefox. However, make sure to go to <a href="http://support.mozilla.com/">support.mozilla.com</a> and search for your issue there. Many problems can be solved with simple end-user support steps, and do not need to be reported as bugs. If you can not find any information to help on Mozilla support, keep reading to make sure your issue is really a bug, and to write a good helpful bug report.</li>
+ <li>One thing to help developers is to use the latest nightly development build. These are the absolute latest in development on the Firefox program and help developers know if the issue has already been fixed. Also, if a patch is written, it will be put in the trunk first, making it easy to test. You can find trunk builds at the <a href="ftp://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-trunk/">Mozilla FTP site</a>.</li>
+</ol>
+
+<h2 id="Extensions_Themes_and_Other_Applications">Extensions, Themes and Other Applications</h2>
+
+<p>If you are experiencing a problem with an add-on, plugin, or other programs, please follow these steps:</p>
+
+<ol>
+ <li>Update to the latest version. You can use Firefox's handy Add-on update manager to update extensions and themes. Some plugins and outside applications will have to be updated internally or manually from their website. It is very important that you are always using the latest version of plugins like Adobe Acrobat Reader, Flash Player, Real Player, VideoLAN and the like.</li>
+ <li><a href="http://support.mozilla.com/en-US/kb/Troubleshooting+extensions+and+themes">Read troubleshooting extensions and themes for more information.</a></li>
+ <li>If the problem lies with the extension (this can be proved using the steps listed <a href="http://www.soswd.com/writing_bugs.html#all">for all bugs</a>), then you should contact the developer of the extension or other application. Mozilla can not fix someone else's program for them.</li>
+ <li>If the issue lies with how Firefox uses the extension, the go ahead and report it to both Mozilla and the extension developer.</li>
+</ol>
+
+<h2 id="Choose_your_Issue"><a id="issue">Choose your Issue</a></h2>
+
+<p>After reading the information for All bugs above, choose your issue below.</p>
+
+<ul>
+</ul>
+
+<ol>
+ <li><a href="#crash">Crash</a></li>
+ <li><a href="#enhancement">Enhancement</a></li>
+ <li><a href="#internet">Internet Connectivity Issue</a></li>
+ <li><a href="#memory">Memory Leak</a></li>
+ <li><a href="#performance">Performance Issue</a></li>
+ <li><a href="#regression">Regression</a></li>
+ <li><a href="#site">Webpage</a></li>
+ <li><a href="#shakes">Window Shakes</a></li>
+ <li><a href="#not">For Bugs Not Listed </a></li>
+</ol>
+
+<ul>
+</ul>
+
+<h2 id="崩溃"><strong><a id="crash">崩溃</a></strong></h2>
+
+<p>If Firefox crashes, and you have already followed the steps <a href="http://www.soswd.com/writing_bugs.html#all">for all bugs</a> above, fill out a bug report with the following information:</p>
+
+<ol>
+ <li>Try to reproduce the bug (what you did to make the crash occur). If possible, try to reproduce it on different computers with the same version of Firefox, and with the current nightly development build of Firefox.</li>
+ <li>Make sure you turn on the crash reporter, and provide the crash ids with your bug report (those can be found by typing about:crashes in your URL bar and copying the appropriate number).</li>
+ <li>Make sure to read <a href="http://developer.mozilla.org/En/How_to_get_a_stacktrace_for_a_bug_report">how to get a stacktrace</a> and more information that is important for developers.</li>
+ <li>Now that you have all this information, create a bug with a severity of Critical. Give as much information as possible.</li>
+</ol>
+
+<h2 id="Enhancement"><a id="enhancement">Enhancement</a></h2>
+
+<p>When you would like a feature added to Firefox, it is called an Enhancement and the severity is marked as such. To file a good enhancement request, simply follow these two steps:</p>
+
+<ol>
+ <li>Make sure you have explored all possible settings and other areas of Firefox to confirm that what you want does not already exist.</li>
+ <li>Give a clear description on what, where and how this should be changed. Give the dialog box to be improved, maybe even a screenshot if it is a little known feature or it would assist in understanding. Remember, there are many areas of Firefox, so don't be offended if the Triage team asks for more details or why this should be added.</li>
+</ol>
+
+<h2 id="Internet_Connectivity_Issue"><a id="internet">Internet Connectivity Issue</a></h2>
+
+<p>If you are having issues connecting to the Internet, it is most likely not an issue with Firefox, but an incorrectly set up Firewall. Make sure your Internet settings are set up correctly, and follow the steps listed <a href="http://www.soswd.com/writing_bugs.html#all">for all bugs</a>, then search the Firefox Support site. They will let you know if it is something you should report on Bugzilla or not.</p>
+
+<h2 id="Memory_Leak"><a id="memory">Memory Leak</a></h2>
+
+<p>Memory Leaks are very difficult to diagnose, so make sure the issue is not with your machine. Then provide the following information:</p>
+
+<ol>
+ <li>Detailed information on your machine, what is happening when the leak occurs, and what seems to cause it.</li>
+ <li>Read the following information found on David Barron's blog (<a href="http://dbaron.org/log/2006-01#e20060110a">Part 1</a>, <a href="http://dbaron.org/log/2006-01#e20060114a">Part 2</a>)and the <a href="http://developer.mozilla.org/En/Debugging_memory_leaks">Mozilla Developer Center</a> on writing good memory leak bugs.</li>
+</ol>
+
+<h2 id="Performance_Issue_High_CPU_use_hard_drive_use_etc"><a id="performance">Performance Issue (High CPU use, hard drive use, etc)</a></h2>
+
+<p>Performance issues are also difficult to confirm and diagnose. The only real way to confirm them is to have a website (create a testcase, read <a href="http://developer.mozilla.org/en/Reducing_testcases">here</a> for more info) that we can use to confirm on any similar machine. Please try to test on at least one other machine of the same or similar configuration before reporting. Also, issues such as startup times are almost impossible to confirm and can be influenced by other factors, so please make a strong case before submitting. Developers are always working on performance, so your problem may be fixed in the next release of Firefox.</p>
+
+<h2 id="Regression"><a id="regression">Regression</a></h2>
+
+<p>If a bug has just recently occurred in Firefox that was not there before and is caused by an update, it is a regression. These usually only happen on the Trunk builds, though occasionally they creep onto the Releases. To properly report a regression:</p>
+
+<ol>
+ <li>Follow the steps listed <a href="#all">for all bugs</a>. Also, make sure you did not make a change recently to the settings or something else that could have caused this.</li>
+ <li>Install an older version of Firefox (starting with the most recent) to find out where the bug crept in. When you find it, then file that information.</li>
+</ol>
+
+<h2 id="Webpage_Displaying_Incorrectly"><a id="site">Webpage Displaying Incorrectly</a></h2>
+
+<p>Make sure that the issue you are seeing is a Firefox problem, and easy way to do this is follow these steps:</p>
+
+<ol>
+ <li>Test in another browser such as Internet Explorer, Opera or Safari. If the issue is still there, it is probably something wrong with the website and they should be contacted.</li>
+ <li>Follow the steps <a href="#all">for all bugs</a>. Extensions can mess with the rendering of a website, especially audio and video.</li>
+ <li>Try to reproduce the issue on another computer running Firefox. You can also adjust your screen resolution to see if that is causing the issue.</li>
+ <li>Try contacting the webmaster in charge of the website. Inform them of the problem, and ask if they know what could be causing it (some sites only work with certain browsers).</li>
+ <li>Finally, if the issue is still there, make a testcase that shows in the bare minimum what the problem it. Information on how to can be <a href="http://developer.mozilla.org/en/Reducing_testcases">found here</a>.</li>
+</ol>
+
+<h2 id="窗口抖动"><a id="shakes">窗口抖动</a></h2>
+
+<p>If you Firefox window begins to shake, vibrate, or move around without any action on your part, it is usually fixed easily by reading these webpages:</p>
+
+<ol>
+ <li>Follow the steps <a href="#all">for all bugs</a>. Extensions can cause window shakes.</li>
+ <li>Read this support document, <a href="http://support.mozilla.com/en-US/kb/Window+Shakes">Window Shakes</a>.</li>
+</ol>
+
+<h2 id="对于没有列出的问题"><a id="not">对于没有列出的问题</a></h2>
+
+<p>If the issue you are experiencing does not fall into these specific categories, follow the steps <a href="#all">for all bugs</a>, then write a clear, concise bug report. Make sure you eliminate any unnecessary information that could distract from the bug itself, and give a detailed steps to reproduce with all the information you think is necessary. Remember, no bug is too little to report and it will never get fixed unless it it reported.</p>
+
+<h2 id="使用Bugzilla"><a id="using">使用Bugzilla</a></h2>
+
+<p>Now that you have followed all these steps, found that your problem is with Firefox, and gathered the proper information, you can submit to bugzilla. When you submit a bug, make sure you read <a href="https://bugzilla.mozilla.org/page.cgi?id=bug-writing.html">Bug Filing Guidelines</a>. This provides basic information to make sure you fill the bug out completely Also, read the <a href="https://bugzilla.mozilla.org/page.cgi?id=etiquette.html">Etiquette</a> and <a href="http://www.mozilla.org/about/policies/privacy-policy.html">Privacy Policy</a>. Before filing any bug, make sure to search thoroughly for any duplicates of the same issue. Keep your bug reports down to only one issue per bug report, it may be closed because of too many issues in one report.</p>
+
+<h2 id="相关信息"><a id="info">相关信息</a></h2>
+
+<p>You can visit the following pages for more information on bug reports and good related resources:</p>
+
+<ul>
+</ul>
+
+<ol>
+ <li><a href="https://bugzilla.mozilla.org/page.cgi?id=bug-writing.html">Bug Writing Guidelines</a></li>
+ <li><a href="http://support.mozilla.com/">Mozilla Support </a></li>
+ <li><a href="http://developer.mozilla.org/">Mozilla Developer Center </a></li>
+ <li><a href="ftp://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-trunk/">Firefox Trunk builds</a></li>
+ <li><a href="http://bugzilla.mozilla.org/">Bugzilla</a></li>
+</ol>
+
+<ul>
+</ul>
+
+<p><a href="http://www.soswd.com/writing_bugs.html#top">返回顶部</a></p>
+
+<div class="originaldocinfo">
+<h2 id="Original_document_information_2">Original document information</h2>
+
+<ul>
+ <li>Author(s): Aakash Desai</li>
+ <li>Date last modified: May 27, 2010 at 1:45 pm PST</li>
+</ul>
+</div>

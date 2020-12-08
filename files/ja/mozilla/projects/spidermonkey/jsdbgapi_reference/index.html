@@ -1,0 +1,150 @@
+---
+title: JSDBGAPI Reference
+slug: Mozilla/Projects/SpiderMonkey/JSDBGAPI_Reference
+tags:
+  - JSDBGAPI_Reference
+  - JavaScript
+  - SpiderMonkey
+---
+<p>
+</p><p>見てのとおり、ほとんどすべての項目がドキュメント化されていません。
+</p><p>&lt;tt&gt;trap, untrap, watch, unwatch, line2pc&lt;/tt&gt; および &lt;tt&gt;pc2line&lt;/tt&gt; 関数の実装は {{ Source("js/src/js.c") }} をご覧ください。{{ Source("js/src/jsdbgapi.h") }} にも (わずかに) コメントがあります。
+</p><p>{{ 英語版章題("Breakpoints") }}
+</p>
+<h3 id=".E3.83.96.E3.83.AC.E3.83.BC.E3.82.AF.E3.83.9D.E3.82.A4.E3.83.B3.E3.83.88" name=".E3.83.96.E3.83.AC.E3.83.BC.E3.82.AF.E3.83.9D.E3.82.A4.E3.83.B3.E3.83.88"> ブレークポイント </h3>
+<ul><li> <code><a href="ja/JS_SetTrap">JS_SetTrap</a></code>
+</li><li> <code><a href="ja/JS_GetTrapOpcode">JS_GetTrapOpcode</a></code>
+</li><li> <code><a href="ja/JS_ClearTrap">JS_ClearTrap</a></code>
+</li><li> <code><a href="ja/JS_ClearScriptTraps">JS_ClearScriptTraps</a></code>
+</li><li> <code><a href="ja/JS_ClearAllTraps">JS_ClearAllTraps</a></code>
+</li><li> <code><a href="ja/JS_HandleTrap">JS_HandleTrap</a></code>
+</li><li> <code><a href="ja/JS_SetInterrupt">JS_SetInterrupt</a></code>
+</li><li> <code><a href="ja/JS_ClearInterrupt">JS_ClearInterrupt</a></code>
+</li></ul>
+<p>{{ 英語版章題("Watchpoints") }}
+</p>
+<h3 id=".E3.82.A6.E3.82.A9.E3.83.83.E3.83.81.E3.83.9D.E3.82.A4.E3.83.B3.E3.83.88" name=".E3.82.A6.E3.82.A9.E3.83.83.E3.83.81.E3.83.9D.E3.82.A4.E3.83.B3.E3.83.88"> ウォッチポイント </h3>
+<ul><li> <code><a href="ja/JS_SetWatchPoint">JS_SetWatchPoint</a></code>
+</li><li> <code><a href="ja/JS_ClearWatchPoint">JS_ClearWatchPoint</a></code>
+</li><li> <code><a href="ja/JS_ClearWatchPointsForObject">JS_ClearWatchPointsForObject</a></code>
+</li><li> <code><a href="ja/JS_ClearAllWatchPoints">JS_ClearAllWatchPoints</a></code>
+</li></ul>
+<p>{{ 英語版章題("Inspecting the stack") }}
+</p>
+<h3 id=".E3.82.B9.E3.82.BF.E3.83.83.E3.82.AF.E3.81.AE.E8.AA.BF.E6.9F.BB" name=".E3.82.B9.E3.82.BF.E3.83.83.E3.82.AF.E3.81.AE.E8.AA.BF.E6.9F.BB"> スタックの調査 </h3>
+<ul><li> <code><a href="ja/JS_PCToLineNumber">JS_PCToLineNumber</a></code>
+</li><li> <code><a href="ja/JS_LineNumberToPC">JS_LineNumberToPC</a></code>
+</li><li> <code><a href="ja/JS_GetFunctionScript">JS_GetFunctionScript</a></code>
+</li><li> <code><a href="ja/JS_GetFunctionNative">JS_GetFunctionNative</a></code>
+</li><li> <code><a href="ja/JS_GetFunctionFastNative">JS_GetFunctionFastNative</a></code>
+</li><li> <code><a href="ja/JS_GetScriptPrincipals">JS_GetScriptPrincipals</a></code>
+</li></ul>
+<ul><li> typedef <code><a href="ja/JSStackFrame">JSStackFrame</a></code>
+</li><li> <code><a href="ja/JS_FrameIterator">JS_FrameIterator</a></code>
+</li><li> <code><a href="ja/JS_GetFrameScript">JS_GetFrameScript</a></code>
+</li><li> <code><a href="ja/JS_GetFramePC">JS_GetFramePC</a></code>
+</li><li> <code><a href="ja/JS_GetScriptedCaller">JS_GetScriptedCaller</a></code>
+</li><li> <code><a href="ja/JS_StackFramePrincipals">JS_StackFramePrincipals</a></code>
+</li><li> <code><a href="ja/JS_EvalFramePrincipals">JS_EvalFramePrincipals</a></code>
+</li><li> <code><a href="ja/JS_GetFrameAnnotation">JS_GetFrameAnnotation</a></code>
+</li><li> <code><a href="ja/JS_SetFrameAnnotation">JS_SetFrameAnnotation</a></code>
+</li><li> <code><a href="ja/JS_GetFramePrincipalArray">JS_GetFramePrincipalArray</a></code>
+</li><li> <code><a href="ja/JS_IsNativeFrame">JS_IsNativeFrame</a></code>
+</li><li> <code><a href="ja/JS_GetFrameObject">JS_GetFrameObject</a></code> {{ Deprecated_inline() }}
+</li><li> <code><a href="ja/JS_GetFrameScopeChain">JS_GetFrameScopeChain</a></code>
+</li><li> <code><a href="ja/JS_GetFrameCallObject">JS_GetFrameCallObject</a></code>
+</li><li> <code><a href="ja/JS_GetFrameThis">JS_GetFrameThis</a></code>
+</li><li> <code><a href="ja/JS_GetFrameFunction">JS_GetFrameFunction</a></code>
+</li><li> <code><a href="ja/JS_GetFrameFunctionObject">JS_GetFrameFunctionObject</a></code>
+</li><li> <code><a href="ja/JS_IsConstructorFrame">JS_IsConstructorFrame</a></code>
+</li><li> <code><a href="ja/JS_IsDebuggerFrame">JS_IsDebuggerFrame</a></code>
+</li><li> <code><a href="ja/JS_GetFrameReturnValue">JS_GetFrameReturnValue</a></code>
+</li><li> <code><a href="ja/JS_SetFrameReturnValue">JS_SetFrameReturnValue</a></code>
+</li><li> <code><a href="ja/JS_GetFrameCalleeObject">JS_GetFrameCalleeObject</a></code>
+</li></ul>
+<ul><li> <code><a href="ja/JS_GetScriptFilename">JS_GetScriptFilename</a></code>
+</li><li> <code><a href="ja/JS_GetScriptBaseLineNumber">JS_GetScriptBaseLineNumber</a></code>
+</li><li> <code><a href="ja/JS_GetScriptLineExtent">JS_GetScriptLineExtent</a></code>
+</li><li> <code><a href="ja/JS_GetScriptVersion">JS_GetScriptVersion</a></code>
+</li></ul>
+<ul><li> <code><a href="ja/JS_GetTopScriptFilenameFlags">JS_GetTopScriptFilenameFlags</a></code>
+</li><li> <code><a href="ja/JS_GetScriptFilenameFlags">JS_GetScriptFilenameFlags</a></code>
+</li><li> <code><a href="ja/JS_FlagScriptFilenamePrefix">JS_FlagScriptFilenamePrefix</a></code>
+</li></ul>
+<ul><li> <code><a href="ja/JSFILENAME_NULL">JSFILENAME_NULL</a></code>
+</li><li> <code><a href="ja/JSFILENAME_SYSTEM">JSFILENAME_SYSTEM</a></code>
+</li><li> <code><a href="ja/JSFILENAME_PROTECTED">JSFILENAME_PROTECTED</a></code>
+</li></ul>
+<p>{{ 英語版章題("Evaluating debug code") }}
+</p>
+<h3 id=".E3.83.87.E3.83.90.E3.83.83.E3.82.B0.E3.82.B3.E3.83.BC.E3.83.89.E3.81.AE.E8.A9.95.E4.BE.A1" name=".E3.83.87.E3.83.90.E3.83.83.E3.82.B0.E3.82.B3.E3.83.BC.E3.83.89.E3.81.AE.E8.A9.95.E4.BE.A1"> デバッグコードの評価 </h3>
+<ul><li> <code><a href="ja/JS_EvaluateInStackFrame">JS_EvaluateInStackFrame</a></code>
+</li></ul>
+<p>{{ 英語版章題("Examining object properties") }}
+</p>
+<h3 id=".E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3.E3.81.AE.E6.A4.9C.E6.9F.BB" name=".E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3.E3.81.AE.E6.A4.9C.E6.9F.BB"> オブジェクトプロパティの検査 </h3>
+<ul><li> typedef <code><a href="ja/JSPropertyDesc">JSPropertyDesc</a></code>
+</li></ul>
+<ul><li> <code><a href="ja/JSPD_ENUMERATE">JSPD_ENUMERATE</a></code>
+</li><li> <code><a href="ja/JSPD_READONLY">JSPD_READONLY</a></code>
+</li><li> <code><a href="ja/JSPD_PERMANENT">JSPD_PERMANENT</a></code>
+</li><li> <code><a href="ja/JSPD_ALIAS">JSPD_ALIAS</a></code>
+</li><li> <code><a href="ja/JSPD_ARGUMENT">JSPD_ARGUMENT</a></code>
+</li><li> <code><a href="ja/JSPD_VARIABLE">JSPD_VARIABLE</a></code>
+</li><li> <code><a href="ja/JSPD_EXCEPTION">JSPD_EXCEPTION</a></code>
+</li><li> <code><a href="ja/JSPD_ERROR">JSPD_ERROR</a></code>
+</li></ul>
+<ul><li> typedef <code><a href="ja/JSPropertyDescArray">JSPropertyDescArray</a></code>
+</li></ul>
+<ul><li> <code><a href="ja/JS_PropertyIterator">JS_PropertyIterator</a></code>
+</li><li> <code><a href="ja/JS_GetPropertyDesc">JS_GetPropertyDesc</a></code>
+</li><li> <code><a href="ja/JS_GetPropertyDescArray">JS_GetPropertyDescArray</a></code>
+</li><li> <code><a href="ja/JS_PutPropertyDescArray">JS_PutPropertyDescArray</a></code>
+</li></ul>
+<p>{{ 英語版章題("Hooks") }}
+</p>
+<h3 id=".E3.83.95.E3.83.83.E3.82.AF" name=".E3.83.95.E3.83.83.E3.82.AF"> フック </h3>
+<ul><li> <code><a href="ja/JS_SetDebuggerHandler">JS_SetDebuggerHandler</a></code>
+</li><li> <code><a href="ja/JS_SetSourceHandler">JS_SetSourceHandler</a></code>
+</li><li> <code><a href="ja/JS_SetExecuteHook">JS_SetExecuteHook</a></code>
+</li><li> <code><a href="ja/JS_SetCallHook">JS_SetCallHook</a></code>
+</li><li> <code><a href="ja/JS_SetObjectHook">JS_SetObjectHook</a></code>
+</li><li> <code><a href="ja/JS_SetThrowHook">JS_SetThrowHook</a></code>
+</li><li> <code><a href="ja/JS_SetDebugErrorHook">JS_SetDebugErrorHook</a></code>
+</li><li> <code><a href="ja/JS_SetNewScriptHook">JS_SetNewScriptHook</a></code>
+</li><li> <code><a href="ja/JS_SetDestroyScriptHook">JS_SetDestroyScriptHook</a></code>
+</li></ul>
+<ul><li> <code><a href="ja/JS_GetGlobalDebugHooks">JS_GetGlobalDebugHooks</a></code>
+</li><li> <code><a href="ja/JS_SetContextDebugHooks">JS_SetContextDebugHooks</a></code>
+</li></ul>
+<p>{{ 英語版章題("Memory usage") }}
+</p>
+<h3 id=".E3.83.A1.E3.83.A2.E3.83.AA.E4.BD.BF.E7.94.A8.E9.87.8F" name=".E3.83.A1.E3.83.A2.E3.83.AA.E4.BD.BF.E7.94.A8.E9.87.8F"> メモリ使用量 </h3>
+<ul><li> <code><a href="ja/JS_GetObjectTotalSize">JS_GetObjectTotalSize</a></code>
+</li><li> <code><a href="ja/JS_GetFunctionTotalSize">JS_GetFunctionTotalSize</a></code>
+</li><li> <code><a href="ja/JS_GetScriptTotalSize">JS_GetScriptTotalSize</a></code>
+</li></ul>
+<p>{{ 英語版章題("System objects") }}
+</p>
+<h3 id=".E3.82.B7.E3.82.B9.E3.83.86.E3.83.A0.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88" name=".E3.82.B7.E3.82.B9.E3.83.86.E3.83.A0.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88"> システムオブジェクト </h3>
+<ul><li> <code><a href="ja/JS_IsSystemObject">JS_IsSystemObject</a></code>
+</li><li> <code><a href="ja/JS_NewSystemObject">JS_NewSystemObject</a></code>
+</li></ul>
+<p>{{ 英語版章題("Profiling") }}
+</p>
+<h3 id=".E5.88.86.E6.9E.90" name=".E5.88.86.E6.9E.90"> 分析 </h3>
+<p>これらの関数は、Mac プロファイラである Shark を使用して SpiderMonkey アプリケーションを分析するために使用されます。<a href="ja/Profiling_JavaScript_with_Shark">Profiling JavaScript with Shark</a> をご覧ください。
+</p>
+<ul><li> <code><a href="ja/JS_ConnectShark">JS_ConnectShark</a></code>
+</li><li> <code><a href="ja/JS_DisconnectShark">JS_DisconnectShark</a></code>
+</li><li> <code><a href="ja/JS_StartChudRemote">JS_StartChudRemote</a></code>
+</li><li> <code><a href="ja/JS_StopChudRemote">JS_StopChudRemote</a></code>
+</li></ul>
+<p>以下の <code><a href="ja/JSNative">JSNative</a></code> 関数は、上記 4 つの API をスクリプトに晒すために使用されます。
+</p>
+<ul><li> <code><a href="ja/Js_ConnectShark">js_ConnectShark</a></code>
+</li><li> <code><a href="ja/Js_DisconnectShark">js_DisconnectShark</a></code>
+</li><li> <code><a href="ja/Js_StartShark">js_StartShark</a></code>
+</li><li> <code><a href="ja/Js_StopShark">js_StopShark</a></code>
+</li></ul>
+{{ languages( { "en": "en/JSDBGAPI_Reference" } ) }}

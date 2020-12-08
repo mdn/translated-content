@@ -1,0 +1,131 @@
+---
+title: '-moz-border-bottom-colors'
+slug: Web/CSS/-moz-border-bottom-colors
+translation_of: Archive/Web/CSS/-moz-border-bottom-colors
+---
+<div>{{Non-standard_header}}{{CSSRef}}</div>
+
+<p>在Mozilla Firefox中, the <code>-moz-border-bottom-colors</code> CSS 属性的作用是给元素添加下边框的颜色。</p>
+
+<p>When an element has a border that is larger than a single CSS pixel, each line of pixels uses the next color specified in this property, from the outside in. This eliminates the need for nested boxes. If the border is wider than the number of specified colors, the remaining part of the border is the innermost color specified.</p>
+
+<p>{{cssinfo}}</p>
+
+<p>It does not apply</p>
+
+<ol>
+ <li>if {{Cssxref("border-style")}} is <code>dashed</code> or <code>dotted</code>.</li>
+ <li>to tables with <code>border-collapse: collapse</code>.</li>
+</ol>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush:css">/* Single &lt;color&gt; value */
+-moz-border-bottom-colors: #f0f0f0;
+
+/* Multiple &lt;color&gt; values */
+-moz-border-bottom-colors: #f0f0f0 #a0a0a0 #505050 #000000;
+
+/* Global values */
+-moz-border-bottom-colors: inherit;
+-moz-border-bottom-colors: initial;
+-moz-border-bottom-colors: unset;
+</pre>
+
+<h3 id="Values(属性值)">Values(属性值)</h3>
+
+<p>Accepts a white-space separated list of color values.</p>
+
+<dl>
+ <dt>&lt;颜色&gt;</dt>
+ <dd>Specifies the color of a line of pixels of the bottom border. <code>transparent</code> is valid. See {{cssxref("&lt;color&gt;")}} values for possible units.</dd>
+ <dt>none</dt>
+ <dd>Default, no colors are drawn or {{cssxref("border-color")}} is used, if specified.</dd>
+</dl>
+
+<h3 id="Formal_syntax">Formal syntax</h3>
+
+<pre class="syntaxbox">{{csssyntax}}</pre>
+
+<h2 id="Example">Example</h2>
+
+<pre class="brush:html">&lt;div id="example"&gt;Example&lt;/div&gt;
+</pre>
+
+<pre class="brush:css">#example {
+  padding: 20px;
+  background-color: gray;
+  border: 10px solid black;
+  -moz-border-top-colors: #e00 #c30 #c50 #c60 #c70 #c80 #c90 #ca0 #cb0 #cc0;
+  -moz-border-right-colors: red #f60 #f80 #f90 #fa0 #fb0 #fc0 #fd0 #fe0 #ff0;
+  -moz-border-bottom-colors: red #f60 #f80 #f90 #fa0 #fb0 #fc0 #fd0 #fe0 #ff0;
+  -moz-border-left-colors: #e00 #c30 #c50 #c60 #c70 #c80 #c90 #ca0 #cb0 #cc0;
+}
+</pre>
+
+<p>{{EmbedLiveSample("Example", 120, 90)}}</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>This property is not part of any specification.</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoDesktop("1.7")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{cssxref("border-color")}}</li>
+ <li>{{Cssxref("-moz-border-right-colors")}}</li>
+ <li>{{Cssxref("-moz-border-top-colors")}}</li>
+ <li>{{Cssxref("-moz-border-left-colors")}}</li>
+</ul>

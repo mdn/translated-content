@@ -1,0 +1,88 @@
+---
+title: CameraControl
+slug: Web/API/CameraControl
+translation_of: Archive/B2G_OS/API/CameraControl
+---
+<p>{{APIRef("Camera API")}}</p>
+
+<p>{{ non-standard_header() }}</p>
+
+<p><span class="seoSummary">When you use the {{domxref("CameraManager.getCamera()")}} method to get a reference to a camera, you specify a callback function to be invoked on success. That function receives as a parameter a <code>CameraControl</code> object. You can use its methods and properties to manage and make use of the camera.</span></p>
+
+<h2 id="Properties">Properties</h2>
+
+<dl>
+ <dt>{{domxref("CameraControl.capabilities")}} {{readonlyinline}}</dt>
+ <dd>A {{domxref("CameraCapabilities")}} object indicating all the capabilities for the given camera.</dd>
+ <dt>{{domxref("CameraControl.effect")}}</dt>
+ <dd>A string defining the effect to be used by the camera (<code>none</code> by default). Its value must be one of the values available in {{domxref("CameraCapabilities.effects")}}.</dd>
+ <dt>{{domxref("CameraControl.exposureCompensation")}} {{readonlyinline}}</dt>
+ <dd>A value used to compensate the camera exposure. This attribute is read-only; to change the exposure, you need to call the {{domxref("CameraControl.setExposureCompensation()")}} method.</dd>
+ <dt>{{domxref("CameraControl.flashMode")}}</dt>
+ <dd>A string that defines how the flash, if any, is to be used; this is <code>auto</code> by default if the device has a flash, <code>none</code> otherwise. When set, its value must be chosen from the list of options specified by  {{domxref("CameraCapabilities.flashModes")}}<code>.</code></dd>
+ <dt>{{domxref("CameraControl.focalLength")}} {{readonlyinline}}</dt>
+ <dd>A number that express the camera's focal length in millimeters.</dd>
+ <dt>{{domxref("CameraControl.focusAreas")}}</dt>
+ <dd>An <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array" title="/en-US/docs/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a> of one or more objects that define where the camera will perform auto-focusing.</dd>
+ <dt>{{domxref("CameraControl.focusDistanceFar")}} {{readonlyinline}}</dt>
+ <dd>This value is a distance in meter used with {{domxref("CameraControl.focusDistanceNear")}} to defined the image's depth of field. The value for this property may be <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Infinity" title="/en-US/docs/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code>.</dd>
+ <dt>{{domxref("CameraControl.focusDistanceNear")}} {{readonlyinline}}</dt>
+ <dd>This value is a distance in meter used with {{domxref("CameraControl.focusDistanceFar")}} to defined the image's depth of field.</dd>
+ <dt>{{domxref("CameraControl.focusDistanceOptimum")}} {{readonlyinline}}</dt>
+ <dd>This value is a distance in meter where the subject will appear sharpest.</dd>
+ <dt>{{domxref("CameraControl.focusMode")}}</dt>
+ <dd>A string that defines which kind of focus mode the camera should use (<code>auto</code> or <code>fixed</code> by default). Its value must be chosen from {{domxref("CameraCapabilities.focusModes")}}.</dd>
+ <dt>{{domxref("CameraControl.meteringAreas")}}</dt>
+ <dd>An <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array" title="/en-US/docs/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a> of one or more objects that define where the camera will perform auto-focusing.</dd>
+ <dt>{{domxref("CameraControl.onShutter")}}</dt>
+ <dd>A handler for the camera's "shutter" event, to trigger a shutter sound and/or a visual shutter indicator.</dd>
+ <dt>{{domxref("CameraControl.onClosed")}}</dt>
+ <dd>A handler called when a new <code>CameraControl</code> object in the same app takes over the camera.</dd>
+ <dt>{{domxref("CameraControl.onRecorderStateChange")}}</dt>
+ <dd>A function to call when the recorder changes state, either because the recording process encountered an error, or because one of the recording limits (see {{domxref("CameraControl.startRecording()")}}) was reached.</dd>
+ <dt>{{domxref("CameraControl.sceneMode")}}</dt>
+ <dd>A string that defines which scene mode the camera is to use (<code>auto</code> by default). Its value must be chosen from {{domxref("CameraCapabilities.sceneModes")}}.</dd>
+ <dt>{{domxref("CameraControl.whiteBalanceMode")}}</dt>
+ <dd>A string that defines which white balance mode the camera is to use (<code>auto</code> by default). Its value must be chosen from {{domxref("CameraCapabilities.whiteBalanceModes")}}.</dd>
+ <dt>{{domxref("CameraControl.zoom")}}</dt>
+ <dd>A number that defines which kind of zoom factor mode the camera is to use (1 by default). Its value must be chosen from {{domxref("CameraCapabilities.zoomRatios")}}.</dd>
+</dl>
+
+<h2 id="Methods">Methods</h2>
+
+<dl>
+ <dt>{{ domxref("CameraControl.autoFocus()") }}</dt>
+ <dd>Tells the camera to attempt to focus the image.</dd>
+ <dt>{{ domxref("CameraControl.getPreviewStream()") }}</dt>
+ <dd>Gets a video stream from the camera; you can use this in an arbitrary context.</dd>
+ <dt>{{ domxref("CameraControl.getPreviewStreamVideoMode()") }}</dt>
+ <dd>Gets a video stream from the camera based on a specific video mode.</dd>
+ <dt>{{ domxref("CameraControl.release()") }}</dt>
+ <dd>Releases the camera so that other applications can use it.</dd>
+ <dt>{{ domxref("CameraControl.resumePreview()") }}</dt>
+ <dd>Resumes the preview video stream after it's been paused by a call to {{domxref("CameraControl.takePicture()")}}.</dd>
+ <dt>{{ domxref("CameraControl.setExposureCompensation()") }}</dt>
+ <dd>Lets you specify the exposure compensation factor.</dd>
+ <dt>{{ domxref("CameraControl.startRecording()") }}</dt>
+ <dd>Lets you start recording a video stream.</dd>
+ <dt>{{ domxref("CameraControl.stopRecording()") }}</dt>
+ <dd>Lets you stop recording a video stream.</dd>
+ <dt>{{ domxref("CameraControl.takePicture()") }}</dt>
+ <dd>Lets you capture a single image, receiving it as a {{domxref("Blob")}}.</dd>
+</dl>
+
+<h2 id="Specification" name="Specification">Specification</h2>
+
+<p>{{page("/en-US/docs/Web/API/Navigator.MozCameras","Specification")}}</p>
+
+<h2 id="Permissions">Permissions</h2>
+
+<p>{{page("/en-US/docs/Web/API/Navigator.MozCameras","Permissions")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{ domxref("CameraManager") }}</li>
+ <li>{{ domxref("CameraCapabilities") }}</li>
+ <li>{{ domxref("navigator.mozCamera") }}</li>
+</ul>

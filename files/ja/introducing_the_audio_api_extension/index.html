@@ -1,0 +1,202 @@
+---
+title: Introducing the Audio API Extension
+slug: Introducing_the_Audio_API_Extension
+tags:
+  - 要更新
+translation_of: Archive/Mozilla/Introducing_the_Audio_API_Extension
+---
+<div class="overheadIndicator standardNote">
+  <div style="margin: 0 0 4px;">
+    <p>このページは未翻訳です。MDC のコンテンツ拡充にご協力ください。</p>
+    <p><a href="/en-US/docs/Introducing_the_Audio_API_Extension">原文</a> / <a href="/ja/docs/Project:Translation">MDN 技術ドキュメントの翻訳について</a></p>
+  </div>
+</div>
+<div>
+  </div>
+<p>The Audio Data API extension extends the HTML5 specification of the <a href="/ja/docs/Web/HTML/Element/audio" title="HTML &lt;audio> 要素は、ドキュメント内に音声コンテンツを埋め込むために使用します。この要素は、1 つ以上の音声ソースを含むことができます。音声ソースは src 属性または &lt;source> 要素を使用して表し、ブラウザーはもっとも適切なソースを選択します。また、MediaStream を使用してストリーミングメディアを指し示すこともできます。"><code>&lt;audio&gt;</code></a> and <a href="/ja/docs/Web/HTML/Element/video" title="HTML &lt;video> 要素は、映像コンテンツを埋め込むために用いられます。この要素は、複数の映像ソースを含むことができます。映像ソースは src 属性または &lt;source> 要素を使用して表し、ブラウザはもっとも適切なソースを選択します。"><code>&lt;video&gt;</code></a> media elements by exposing audio metadata and raw audio data. This enables users to visualize audio data, to process this audio data and to create new audio data.</p>
+<p><em>Please note that this document describes a non-standard experimental API.  This API is considered deprecated and may not be supported in future releases.  The World Wide Web Consortium (W3C) has chartered the <a href="http://www.w3.org/2011/audio/" title="http://www.w3.org/2011/audio/">Audio Working Group</a> to develop standardized audio API specifications.  Please refer to the Audio Working Group website for further details.</em></p>
+<h2 id="Reading_audio_streams" name="Reading_audio_streams">Reading audio streams</h2>
+<h3 id="The_loadedmetadata_event" name="The_loadedmetadata_event">The <strong>loadedmetadata</strong> event</h3>
+<p>When the metadata of the media element is available, it triggers a <strong>loadedmetadata</strong> event. This event has the following attributes:</p>
+<ul>
+  <li><strong>mozChannels</strong>: Number of channels</li>
+  <li><strong>mozSampleRate</strong>: Sample rate per second</li>
+  <li><strong>mozFrameBufferLength</strong>: Number of samples collected in all channels</li>
+</ul>
+<p>This information is needed later to decode the audio data stream. The following example extracts the data from an audio element:</p>
+<pre class="brush: js">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;JavaScript Metadata Example&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;audio id="audio-element"
+           src="song.ogg"
+           controls="true"
+           style="width: 512px;"&gt;
+    &lt;/audio&gt;
+    &lt;script&gt;
+      function loadedMetadata() {
+        channels          = audio.mozChannels;
+        rate              = audio.mozSampleRate;
+        frameBufferLength = audio.mozFrameBufferLength;
+      }
+      var audio = document.getElementById('audio-element');
+      audio.addEventListener('loadedmetadata', loadedMetadata, false);
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<h3 id="The_MozAudioAvailable_event" name="The_MozAudioAvailable_event">The <strong>MozAudioAvailable </strong>event</h3>
+<p>As the audio is played, sample data is made available to the audio layer and the audio buffer (size defined in <strong>mozFrameBufferLength</strong>) gets filled with those samples. Once the buffer is full, the event <strong>MozAudioAvailable</strong> is triggered. This event therefore contains the raw samples of a period of time. Those samples may or may not have been played yet at the time of the event and have not been adjusted for mute or volume settings on the media element. Playing, pausing, and seeking the audio also affect the streaming of this raw audio data.</p>
+<p>The <strong>MozAudioAvailable</strong> event has 2 attributes:</p>
+<ul>
+  <li><strong>frameBuffer</strong>: Framebuffer (i.e., an array) containing decoded audio sample data (i.e., floats)</li>
+  <li><strong>time</strong>: Timestamp for these samples measured from the start in seconds</li>
+</ul>
+<p>The framebuffer contains an array of audio samples. It's important to note that the samples are not separated by channels; they are all delivered together. For example, for a two-channel signal: Channel1-Sample1 Channel2-Sample1 Channel1-Sample2 Channel2-Sample2 Channel1-Sample3 Channel2-Sample3.</p>
+<p>We can extend the previous example to visualize the timestamp and the first two samples in a <a href="/ja/docs/Web/HTML/Element/div" title="HTML &lt;div> 要素はフローコンテンツのための汎用コンテナであり、本質的に何も表しません。スタイリングのためのグループ要素として (class 属性か id 属性を使用)、あるいは文書で言語が異なる部分を示す (lang 属性を使用) ために使用します。"><code>&lt;div&gt;</code></a> element:</p>
+<pre class="brush: js">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;JavaScript Visualization Example&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;audio id="audio-element"
+           src="revolve.ogg"
+           controls="true"
+
+           style="width: 512px;"&gt;
+    &lt;/audio&gt;
+	&lt;pre id="raw"&gt;hello&lt;/pre&gt;
+    &lt;script&gt;
+      function loadedMetadata() {
+        channels          = audio.mozChannels;
+        rate              = audio.mozSampleRate;
+        frameBufferLength = audio.mozFrameBufferLength;
+      }
+
+      function audioAvailable(event) {
+        var frameBuffer = event.frameBuffer;
+        var t = event.time;
+
+        var text = "Samples at: " + t + "\n";
+        text += frameBuffer[0] + "  " + frameBuffer[1];
+        raw.innerHTML = text;
+      }
+
+      var raw = document.getElementById('raw');
+      var audio = document.getElementById('audio-element');
+      audio.addEventListener('MozAudioAvailable', audioAvailable, false);
+      audio.addEventListener('loadedmetadata', loadedMetadata, false);
+
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<h2 id="Creating_an_audio_stream" name="Creating_an_audio_stream">Creating an audio stream</h2>
+<p>It is also possible to create and setup an <a href="/ja/docs/Web/HTML/Element/audio" title="HTML &lt;audio> 要素は、ドキュメント内に音声コンテンツを埋め込むために使用します。この要素は、1 つ以上の音声ソースを含むことができます。音声ソースは src 属性または &lt;source> 要素を使用して表し、ブラウザーはもっとも適切なソースを選択します。また、MediaStream を使用してストリーミングメディアを指し示すこともできます。"><code>&lt;audio&gt;</code></a> element for raw writing from script (i.e., without a <em>src</em> attribute). Content scripts can specify the audio stream's characteristics, then write audio samples. Users must create an audio object and then use the <code>mozSetup()</code> function to specify the number of channels and the frequency (in Hz). For example:</p>
+<pre class="brush: js">// Create a new audio element
+var audioOutput = new Audio();
+// Set up audio element with 2 channel, 44.1KHz audio stream.
+audioOutput.mozSetup(2, 44100);
+</pre>
+<p>Once this is done, the samples need to be created. Those samples have the same format as the ones in the <strong>mozAudioAvailable</strong> event. Then the samples are written in the audio stream with the function <code>mozWriteAudio()</code>. It's important to note that not all the samples might get written in the stream. The function returns the number of samples written, which is useful for the next writing. You can see an example below<code><span style="font-family: Verdana,Tahoma,sans-serif;">:</span></code></p>
+<pre class="brush: js">// Write samples using a JS Array
+var samples = [0.242, 0.127, 0.0, -0.058, -0.242, ...];
+var numberSamplesWritten = audioOutput.mozWriteAudio(samples);
+
+// Write samples using a Typed Array
+var samples = new Float32Array([0.242, 0.127, 0.0, -0.058, -0.242, ...]);
+var numberSamplesWritten = audioOutput.mozWriteAudio(samples);
+</pre>
+<p>In the following example, we create an audio pulse:</p>
+<pre class="brush: js">&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+     &lt;title&gt;Generating audio in real time&lt;/title&gt;   &lt;script type="text/javascript"&gt;
+     function playTone() {
+       var output = new Audio();
+      output.mozSetup(1, 44100);
+       var samples = new Float32Array(22050);
+
+       for (var i = 0; i &lt; samples.length ; i++) {
+         samples[i] = Math.sin( i / 20 );
+       }
+              output.mozWriteAudio(samples);
+     }
+   &lt;/script&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;p&gt;This demo plays a one second tone when you click the button below.&lt;/p&gt;
+   &lt;button onclick="playTone();"&gt;Play&lt;/button&gt;
+ &lt;/body&gt;
+ &lt;/html&gt;
+</pre>
+<p>The <code>mozCurrentSampleOffset()</code> method gives the audible position of the audio stream, meaning the position of the last heard sample.</p>
+<pre class="brush: js">// Get current audible position of the underlying audio stream, measured in samples.
+var currentSampleOffset = audioOutput.mozCurrentSampleOffset();
+</pre>
+<p>Audio data written using the <code>mozWriteAudio()</code> method needs to be written at a regular interval in equal portions, in order to keep a little ahead of the current sample offset (the sample offset that is currently being played by the hardware can be obtained with <code>mozCurrentSampleOffset()</code>), where "a little" means something on the order of 500 ms of samples. For example, if working with two channels at 44100 samples per second, a writing interval of 100 ms, and a pre-buffer equal to 500 ms, one would write an array of (2 * 44100 / 10) = 8820 samples, and a total of (currentSampleOffset + 2 * 44100 / 2).</p>
+<p>It's also possible to auto-detect the minimal duration of the pre-buffer, such that the sound is played without interruptions, and lag between writing and playback is minimal. To do this start writing the data in small portions and wait for the value returned by <code>mozCurrentSampleOffset()</code> to be greater than 0.</p>
+<pre class="brush: js">var prebufferSize = sampleRate * 0.020; // Initial buffer is 20 ms
+var autoLatency = true, started = new Date().valueOf();
+...
+// Auto latency detection
+if (autoLatency) {
+  prebufferSize = Math.floor(sampleRate * (new Date().valueOf() - started) / 1000);
+  if (audio.mozCurrentSampleOffset()) { // Play position moved?
+    autoLatency = false;
+}
+</pre>
+<h2 id="Processing_an_audio_stream" name="Processing_an_audio_stream">Processing an audio stream</h2>
+<p>Since the <strong>MozAudioAvailable</strong> event and the <code>mozWriteAudio()</code> method both use <code>Float32Array</code> values, it is possible to take the output of one audio stream and pass it directly (or process first and then pass) to a second. The first audio stream needs to be muted so that only the second audio element is heard.</p>
+<pre class="brush: js">&lt;audio id="a1"
+       src="song.ogg"
+       controls&gt;
+&lt;/audio&gt;
+&lt;script&gt;
+var a1 = document.getElementById('a1'),
+    a2 = new Audio(),
+    buffers = [];
+
+function loadedMetadata() {
+  // Mute a1 audio.
+  a1.volume = 0;
+  // Setup a2 to be identical to a1, and play through there.
+  a2.mozSetup(a1.mozChannels, a1.mozSampleRate);
+}
+
+function audioAvailable(event) {
+  // Write the current framebuffer
+  var frameBuffer = event.frameBuffer;
+  writeAudio(frameBuffer);
+}
+
+a1.addEventListener('MozAudioAvailable', audioAvailable, false);
+a1.addEventListener('loadedmetadata', loadedMetadata, false);
+
+function writeAudio(audio) {
+  buffers.push(audio);
+
+  // If there's buffered data, write that
+  while(buffers.length &gt; 0) {
+    var buffer = buffers.shift();
+    var written = a2.mozWriteAudio(buffer);
+    // // If all data wasn't written, keep it in the buffers:
+    if(written &lt; buffer.length) {
+      buffers.unshift(buffer.slice(written));
+      return;
+    }
+  }
+}
+&lt;/script&gt;
+</pre>
+<h2 id="See_also" name="See_also">関連情報</h2>
+<ul>
+  <li><a href="/ja/docs/Creating_a_Web_based_tone_generator" title="Creating a Web based tone generator">Creating a Web based tone generator</a></li>
+  <li><a href="/ja/docs/Visualizing_Audio_Spectrum" title="Visualizing Audio Spectrum"><span class="mw-headline" id="Complete_Example:_Visualizing_Audio_Spectrum">Visualizing an audio spectrum</span></a></li>
+  <li><a href="/ja/docs/Displaying_the_Mozilla_logo_with_the_Audio_Samples" title="Displaying the Mozilla logo with the Audio Samples"><span class="mw-headline">Displaying a graphic with audio samples</span></a></li>
+  <li><a href="/ja/docs/Creating_a_simple_synth" title="https://developer.mozilla.org/en/Creating_a_simple_synth">Creating a simple synth (using existing libraries)</a></li>
+  <li><a href="http://en.wikipedia.org/wiki/Digital_audio" title="http://en.wikipedia.org/wiki/Digital_audio">Wikipedia article on digital audio</a></li>
+</ul>

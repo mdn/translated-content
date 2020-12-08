@@ -1,0 +1,42 @@
+---
+title: XBL の継承
+slug: Archive/Mozilla/XUL/Tutorial/XBL_Inheritance
+tags:
+  - Tutorials
+  - XBL
+  - XUL
+  - XUL_Tutorial
+  - 要更新
+translation_of: Archive/Mozilla/XUL/Tutorial/XBL_Inheritance
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Adding_Event_Handlers_to_XBL-defined_Elements" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:XBL_Example">次のページ  »</a></p>
+</div>
+<p>このセクションでは、既存の <a href="/ja/docs/XBL">XBL</a> 定義を拡張する方法について見ていきます。</p>
+<h3 id=".E3.83.90.E3.82.A4.E3.83.B3.E3.83.87.E3.82.A3.E3.83.B3.E3.82.B0.E3.81.AE.E7.B6.99.E6.89.BF" name=".E3.83.90.E3.82.A4.E3.83.B3.E3.83.87.E3.82.A3.E3.83.B3.E3.82.B0.E3.81.AE.E7.B6.99.E6.89.BF">バインディングの継承</h3>
+<p>新たに作成したいと考えている XBL ウィジェットが既存のウィジェットに類似していることは、しばしばあると思います。 例えば、 XBL でポップアップの付いたボタンの作成を行いたい場合、 作成するボタンのために既存の XBL コードをコピーして使用するのも 1 つの方法ですが、 既存のボタンのコードから派生させて、単純に拡張する部分だけを作成すれば済むのであれば、 それに越したことは無いはずです</p>
+<p>どんなバインディングでも、他のバインディングの拡張として派生させることができます。 派生したバインディングに対しては、プロパティやメソッド、イベントハンドラを追加することが可能です。 また、派生バインディングは、継承元になるバインディング (および、継承ツリーで更に上流にあるバインディング) が定義するすべての機能を持っています。</p>
+<p>バインディングを、既存のバインディングの拡張として派生させるためには、<code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#binding">binding</a></code></code> タグに <code>extends</code> 属性を追加します。 例えば、以下のバインディングは、F4 キーが押された場合に、 値の先頭に「&lt;tt&gt;<span class="nowiki">http://www</span>&lt;/tt&gt;」というテキストを追加する機能をもったテキスト入力欄を作成します。</p>
+<p><span id="Example_1"><a id="Example_1"></a><strong>Example 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_xblinherit_1.xml.txt">ソース</a></p>
+<pre>&lt;binding id="textboxwithhttp"
+         extends="chrome://global/content/bindings/textbox.xml#textbox"&gt;
+  &lt;handlers&gt;
+    &lt;handler event="keypress" keycode="VK_F4"&gt;
+      this.value="http://www"+value;
+    &lt;/handler&gt;
+  &lt;/handlers&gt;
+&lt;/binding&gt;
+</pre>
+<p>この XBL は、XUL の <code><code><a href="/ja/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code></code> 要素を拡張しています。 上記の <code>extends</code> 属性に設定されているバインディングの URL は、<code>textbox</code> のためのバインディングの URL になります。 この指定によって、このバインディングには <code>textbox</code> のバインディングが提供するコンテントと振る舞いがすべて継承されることになります。 また、それに加えて、キーの押下イベントに応答するハンドラを追加しています。</p>
+<h3 id=".E8.87.AA.E5.8B.95.E8.A3.9C.E5.AE.8C.E6.A9.9F.E8.83.BD.E3.81.A4.E3.81.8D.E3.81.AE.E3.83.86.E3.82.AD.E3.82.B9.E3.83.88.E5.85.A5.E5.8A.9B.E6.AC.84" name=".E8.87.AA.E5.8B.95.E8.A3.9C.E5.AE.8C.E6.A9.9F.E8.83.BD.E3.81.A4.E3.81.8D.E3.81.AE.E3.83.86.E3.82.AD.E3.82.B9.E3.83.88.E5.85.A5.E5.8A.9B.E6.AC.84">自動補完機能つきのテキスト入力欄</h3>
+<p>前述の例は、Mozilla の URL 自動補完機能の仕組みと類似しています。 自動補完をサポートしたテキスト入力欄も、基本となるテキスト入力欄を拡張した XBL バインディングを持っているだけです。</p>
+<p><a href="/ja/docs/XUL/textbox_(Mozilla_autocomplete)">自動補完機能つきのテキスト入力欄</a>には、 URL が打ち込まれていくたびに補完候補のメニューをポップアップ表示するために、新たなイベント処理が追加されています。 この自動補完つきの入力欄は、独自のアプリケーションからでも使用できます。 このために必要なことは、単に 2 つの拡張属性を設定したテキスト入力欄を作ることだけです。</p>
+<pre>&lt;textbox type="autocomplete" searchSessions="history"/&gt;
+</pre>
+<p>既存のテキスト入力欄に自動補完機能を追加するためには、<code>type</code> に <code>autocomplete</code> を設定します。 また、補完のために探すデータの種類を指示するために、<code>searchSessions</code> を設定します。 この場合は、値として <code>history</code> を使用しているため、アクセス履歴にある URL を探すことになります。 (アドレスブックにあるアドレスを探すために、<code>addrbook</code> という値も使用できます)。</p>
+<div class="note">
+  Firefox では、自動補完機能の仕組みが Mozilla suite とは異なっています。詳細は <a href="/ja/docs/XUL/textbox_(Firefox_autocomplete)">XUL:textbox (Firefox autocomplete)</a> を参照してください。</div>
+<p>次のセクションでは、XBL で定義したウィジェットの例を見ていきます。</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Adding_Event_Handlers_to_XBL-defined_Elements" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:XBL_Example">次のページ  »</a></p>
+</div>

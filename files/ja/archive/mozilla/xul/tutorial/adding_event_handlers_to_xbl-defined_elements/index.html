@@ -1,0 +1,151 @@
+---
+title: XBL で定義した要素へのイベントハンドラの追加
+slug: Archive/Mozilla/XUL/Tutorial/Adding_Event_Handlers_to_XBL-defined_Elements
+tags:
+  - Tutorials
+  - XBL
+  - XUL
+  - XUL_Tutorial
+  - 要更新
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_Event_Handlers_to_XBL-defined_Elements
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Adding_Methods_to_XBL-defined_Elements" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:XBL_Inheritance">次のページ  »</a></p>
+</div>
+
+<p>続いては、XBL で定義された要素にイベントハンドラを追加する方法について見ていきます。</p>
+
+<h3 id=".E3.82.A4.E3.83.99.E3.83.B3.E3.83.88.E3.83.8F.E3.83.B3.E3.83.89.E3.83.A9" name=".E3.82.A4.E3.83.99.E3.83.B3.E3.83.88.E3.83.8F.E3.83.B3.E3.83.89.E3.83.A9">イベントハンドラ</h3>
+
+<p>通常の XUL の場合と同じように、XBL がバインドされた要素で発生したマウスクリックやキーの押し下げなどのイベントは、そのままコンテントの中にある個々の要素にも送られていきます。 XBL の場合には、イベントをトラップして処理するときにも専用の方法を用いる必要があると予測していたかもしれませんが、 前のセクションの最後の例で示したように、XBL のコンテントの中に置かれた要素には、必要に応じてイベントハンドラを追加することが可能です。 そのときの例では、いくつかのボタンに対して <code><code id="a-oncommand"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/oncommand">oncommand</a></code></code> ハンドラの追加を行いました。</p>
+
+<h4 id="handler_.E8.A6.81.E7.B4.A0" name="handler_.E8.A6.81.E7.B4.A0">handler 要素</h4>
+
+<p>しかしながら、コンテント全体、つまり <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#content">content</a></code></code> タグの中で定義されたすべての要素を対象にしたイベントハンドラを追加したい場合もあると思います。 これは、<span style="border-bottom: 1px dashed green;" title="focus">フォーカス</span>イベントや<span style="border-bottom: 1px dashed green;" title="blur">ブラー</span>イベントをトラップするような場面で役に立つはずです。 このようなイベントハンドラは、<code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#handler">handler</a></code></code> 要素を使用して定義できます。 この要素には、単一のイベントハンドラと対応するアクションを記述していきます。 また、必要なら、複数のハンドラを使用することも可能です。 イベントが <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#handler">handler</a></code></code> の対象イベントのどれともマッチしない場合は、通常の場合と同じように、単に内側のコンテントに送られることになります。</p>
+
+<p>一般的なハンドラの構文は、以下のようになります。</p>
+
+<pre>&lt;binding id="binding-name"&gt;
+  &lt;handlers&gt;
+    &lt;handler event="event-name" action="script"/&gt;
+  &lt;/handlers&gt;
+&lt;/binding&gt;
+</pre>
+
+<p>ハンドラはすべて、<code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#handlers">handlers</a></code></code> 要素の中に置きます。 個々の <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#handler">handler</a></code></code> 要素では、<code>event</code> 属性で指定した特定のイベントを処理するためのアクションを定義します。 イベントには、<code>click</code> や <code>focus</code> といった、XUL と JavaScript でサポートしている種類のものであれば指定することが可能です。 なお、使用するイベント名の最初に「on」を付けないことに注意してください。</p>
+
+<p>このハンドラは、イベントが発生したときにカスタムプロパティを変更するために、よく利用されます。 例えば、カスタムチェックボックスを作成する場合には、 checked プロパティを、利用者がチェックボックスをクリックしたときに変更する必要があるかもしれません。</p>
+
+<pre>&lt;handlers&gt;
+  &lt;handler event="mouseup" action="this.checked=!this.checked"/&gt;
+&lt;/handlers&gt;
+</pre>
+
+<p>上記のチェックボックス上で、利用者がマウスボタンをクリックして放したとき、 <code>mouseup</code> イベントが送出されて、ここで定義したハンドラが呼び出されます。 その結果、<code>checked</code> プロパティの状態が反転します。 また、同様に要素がフォーカスを得たときにプロパティを変更したい場合もあると思います。 このとき、場合によっては特殊なスタイルプロパティ <a href="/ja/docs/Web/CSS/-moz-user-focus" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>-moz-user-focus</code></a> を利用して、 要素がフォーカス可能であるか否かを変更する必要があるかもしれません。 このプロパティによって、要素がフォーカス可能かどうかを制御することが可能です。 (参照: <a href="/ja/docs/XUL_Tutorial/Focus_and_Selection">フォーカスと選択</a>)</p>
+
+<h4 id=".E3.83.9E.E3.82.A6.E3.82.B9.E3.82.A4.E3.83.99.E3.83.B3.E3.83.88.E3.82.92.E5.87.A6.E7.90.86.E3.81.99.E3.82.8B" name=".E3.83.9E.E3.82.A6.E3.82.B9.E3.82.A4.E3.83.99.E3.83.B3.E3.83.88.E3.82.92.E5.87.A6.E7.90.86.E3.81.99.E3.82.8B">マウスイベントを処理する</h4>
+
+<p>マウスイベントの場合、<code>button</code> 属性を使用することで、 ハンドラに対して特定のボタンで起こったイベントだけをトラップするように指定することが可能です。 この属性がない場合には、ハンドラは、どのボタンが押された場合のイベントでも全てトラップすることになります。 <code>button</code> 属性に設定する値には、左マウスボタンを対象にする場合は「<code>0</code>」、中央マウスボタンの場合は「<code>1</code>」、右マウスボタンの場合は「<code>2</code>」を設定します。</p>
+
+<pre>&lt;handlers&gt;
+  &lt;handler event="click" button="0" action="alert('Left button pressed');"/&gt;
+  &lt;handler event="mouseup" button="1" action="alert('Middle button pressed')"/&gt;
+  &lt;handler event="click" button="2" action="alert('Right button pressed');"/&gt;
+&lt;/handlers&gt;
+</pre>
+
+<h4 id=".E3.82.AD.E3.83.BC.E3.82.A4.E3.83.99.E3.83.B3.E3.83.88.E3.82.92.E5.87.A6.E7.90.86.E3.81.99.E3.82.8B" name=".E3.82.AD.E3.83.BC.E3.82.A4.E3.83.99.E3.83.B3.E3.83.88.E3.82.92.E5.87.A6.E7.90.86.E3.81.99.E3.82.8B">キーイベントを処理する</h4>
+
+<p>また、キーイベントの場合は、マッチさせるキーを指定したり、特定の修飾キーが押されている場合だけマッチするように限定したりするために、 XUL の <code><code><a href="/ja/docs/Mozilla/Tech/XUL/key" title="key">key</a></code></code> 要素が持っている属性に類似した、いくつかの属性を使用することが可能です。 前の例を拡張して、スペースバーが押された場合に、チェックボックスの <code>checked</code> プロパティの変更を行うようにする例を以下に示します。</p>
+
+<pre>&lt;handlers&gt;
+  &lt;handler event="keypress" key=" " action="this.checked=!checked"/&gt;
+&lt;/handlers&gt;
+</pre>
+
+<p>また、文字で表すことのできないキーをチェックするために、<code>keycode</code> 属性を使用することも可能です。 なお、キーコードの指定値など、さらに詳細な情報については、<a href="/ja/docs/XUL_Tutorial/Keyboard_Shortcuts">キーボードショートカット</a>のセクションを参照してください。 また、修飾キーについては、<code>modifiers</code> 属性を追加することでチェックできます。 ここには、以下の値のいずれかを設定します。</p>
+
+<dl>
+ <dt>alt</dt>
+ <dd>利用者が、Alt キーを押す必要があります。</dd>
+</dl>
+
+<dl>
+ <dt>control</dt>
+ <dd>利用者が、Control キーを押す必要があります。</dd>
+</dl>
+
+<dl>
+ <dt>meta</dt>
+ <dd>利用者が、Meta キーを押す必要があります。</dd>
+</dl>
+
+<dl>
+ <dt>shift</dt>
+ <dd>利用者が、Shift キーを押す必要があります。</dd>
+</dl>
+
+<dl>
+ <dt>accel</dt>
+ <dd>利用者が、そのプラットフォームで通常キーボードショートカットを呼び出すために使われる修飾キーを押す必要があります。</dd>
+</dl>
+
+<p>上記を設定すると、ハンドラはその修飾キーが押されていた場合のみ呼び出されます。 また、これらをスペースで区切って指定することで、複数の修飾キーが押されている場合のみに限定することも可能です。</p>
+
+<p>ハンドラで行うコードが複雑な場合、以下のような構文を代わりに使用することができます。</p>
+
+<pre>&lt;binding id="binding-name"&gt;
+  &lt;handlers&gt;
+    &lt;handler event="event-name"&gt;
+      -- handler code goes here --
+    &lt;/handler&gt;
+  &lt;/handlers&gt;
+&lt;/binding&gt;
+</pre>
+
+<h3 id=".E3.83.8F.E3.83.B3.E3.83.89.E3.83.A9.E3.81.AE.E4.BE.8B" name=".E3.83.8F.E3.83.B3.E3.83.89.E3.83.A9.E3.81.AE.E4.BE.8B">ハンドラの例</h3>
+
+<p>以下の例では、キーのハンドラをいくつか追加することで、単純なローカルのクリップボード機能を作成しています。</p>
+
+<p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_xblevents_1.xml.txt">ソース</a></p>
+
+<pre>&lt;binding id="clipbox"&gt;
+  &lt;content&gt;
+    &lt;xul:textbox/&gt;
+  &lt;/content&gt;
+  &lt;implementation&gt;
+    &lt;field name="clipboard"/&gt;
+  &lt;/implementation&gt;
+  &lt;handlers&gt;
+    &lt;handler event="keypress" key="x" modifiers="control"
+      action="this.clipboard=document.getAnonymousNodes(this)[0].value; document.getAnonymousNodes(this)[0].value='';"/&gt;
+    &lt;handler event="keypress" key="c" modifiers="control"
+      action="this.clipboard=document.getAnonymousNodes(this)[0].value;"/&gt;
+    &lt;handler event="keypress" key="v" modifiers="control"
+      action="document.getAnonymousNodes(this)[0].value=this.clipboard ? this.clipboard : '';"/&gt;
+  &lt;/handlers&gt;
+&lt;/binding&gt;
+</pre>
+
+<p>コンテントには、テキスト入力欄が 1 つだけあります。 また、クリップボードの内容を保存するために <code>clipboard</code> フィールドが追加されています。 このため、このクリップボードの操作対象は、この 1 つのテキストボックスのみに限られるということになります。 ただし、この要素を複数生成した場合には、個々のクリップボードは、それぞれでバッファを持つことになるので互いの操作が干渉することはありません。</p>
+
+<p>3 つのハンドラが、切り取り、コピー、貼り付けのために追加されています。 それぞれのハンドラには、呼び出すためのキーストロークが設定されています。 最初のハンドラは、切り取り操作で、Control キーと x キーが押された場合に呼び出されます。 <code>action</code> 属性に置かれたスクリプトでは、テキスト入力欄のテキストの切り取りと、<code>clipboard</code> フィールドへの保存を行います。 この例は、単純化するため、選択された部分のテキストを切り取るのではなく、単にテキスト全体の切り取りを行います。 このとき、このコードは以下のように動作します。</p>
+
+<ol>
+ <li>
+  <pre>this.clipboard=document.getAnonymousNodes(this)[0].value;
+</pre>
+  匿名コンテント配列の最初の要素、つまり、<code>content</code> 要素に置かれた最初 (唯一) の要素である <code>textbox</code> 要素への参照が取得されます。その <code>value</code> プロパティが取得されることで、テキスト入力欄のテキストが取得されます。続いて、この値を <code>clipboard</code> フィールドに代入します。これによって、テキスト入力欄のテキストが、この専用のクリップボードにコピーされることになります。</li>
+ <li>
+  <pre>document.getAnonymousNodes(this)[0].value=''
+</pre>
+  次に、<code>textbox</code> のテキストとして空の文字列を代入します。これは、テキスト入力欄の テキストをクリアする効果があります。</li>
+</ol>
+
+<p>また、コピー操作も同様ですが、処理後、テキストをクリアしない点が異なります。 貼り付け操作は逆の処理、 つまりテキスト入力欄の値に、<code>clipboard</code> フィールドの値を代入する操作が行われます。 なお、実用レベルで、こうしたクリップボードのキーボードショートカットを実装する場合には、 本物のクリップボードインタフェースを利用するとともに、選択中のテキストのみが処理されるようにする必要があるはずです。</p>
+
+<p>次のセクションでは、既存の XBL 定義を拡張する方法について見ていきます。</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Adding_Methods_to_XBL-defined_Elements" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:XBL_Inheritance">次のページ  »</a></p>
+</div>

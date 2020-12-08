@@ -1,0 +1,32 @@
+---
+title: cancelInstall
+slug: >-
+  Archive/Mozilla/XPInstall/Référence_de_l_API_XPInstall/Objet_Install/Méthodes/cancelInstall
+translation_of: Archive/Mozilla/XPInstall/Reference/Install_Object/Methods/cancelInstall
+---
+<p> </p>
+<h3 id="cancelInstall" name="cancelInstall">cancelInstall</h3>
+<p>Annule l'installation d'un logiciel, exécute un nettoyage des fichiers temporaires.</p>
+<h4 id="M.C3.A9thode_de" name="M.C3.A9thode_de">Méthode de</h4>
+<p>Objet <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install">Install</a></p>
+<h4 id="Syntaxe" name="Syntaxe">Syntaxe</h4>
+<pre class="eval">void cancelInstall()
+void cancelInstall( int errorCode )
+</pre>
+<h4 id="Param.C3.A8tres" name="Param.C3.A8tres">Paramètres</h4>
+<p>Aucun.</p>
+<h4 id="Retour" name="Retour">Retour</h4>
+<p>Un nombre entier correspondant à un code d'erreur. L'argument optionnel est un code d'erreur qui peut être retourné à la page de déclenchement. Pour la plupart des cas, il est recommandé d'utiliser l'un des codes standards. Mais un script peut, en fait, retourner tout entier valide. Pour une liste des valeurs possibles, et les <code>errorCode</code> personnalisés créés par l'auteur du script d'installation, voir <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Codes_retourn%c3%a9s">Codes retournés</a>.</p>
+<h4 id="Exemple" name="Exemple">Exemple</h4>
+<p>Utilisez le code suivant pour annuler ou pour finaliser une installation, basé sur une variable que vous aurez définie précédemment dans votre code :</p>
+<pre class="eval">initInstall("Royal Airways TripPlanner","/RoyalAirways/
+TripPlanner","1.0.0.0");
+...
+err = getLastError();
+if (!err)
+   performInstall();
+else
+   cancelInstall(err);
+</pre>
+<p><span class="comment">Interwiki Languages Links</span></p>
+<p>{{ languages( { "en": "en/XPInstall_API_Reference/Install_Object/Methods/cancelInstall" } ) }}</p>

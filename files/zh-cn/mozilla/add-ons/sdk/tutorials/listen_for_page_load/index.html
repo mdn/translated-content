@@ -1,0 +1,42 @@
+---
+title: 监听页面加载
+slug: Mozilla/Add-ons/SDK/Tutorials/Listen_for_Page_Load
+translation_of: Archive/Add-ons/Add-on_SDK/Tutorials/Listen_for_Page_Load
+---
+<p>{{AddonSidebar}}</p>
+
+<div class="note"><span>学习本教程之前你需要了解 <a href="/en-US/docs/Mozilla/Add-ons/SDK/Tutorials/Getting_Started_%28jpm%29"><code>jpm</code> 基础</a>。</span></div>
+
+<p>你可以使用 <a href="/zh-CN/Add-ons/SDK/High-Level_APIs/tabs"><code>tabs</code></a> 模块来获取关于新页面加载的通知。下面的附加组件监听标签页内建的 <code>ready</code> 事件，并且记录下每一个标签加载时的URL：</p>
+
+<pre class="brush: js">require("sdk/tabs").on("ready", logURL);
+
+function logURL(tab) {
+  console.log(tab.url);
+}
+</pre>
+
+<div class="note">
+<p>你会在<a href="/zh-CN/docs/Tools/Browser_Console">浏览器控制台</a>，而非 <a href="/zh-CN/docs/Tools/Web_Console">Web 控制台</a>中，找到这些输出的内容。</p>
+</div>
+
+<p>你不能直接访问标签页里面的内容。</p>
+
+<p>为了访问标签页内容，你需要使用 <code>tab.attach()</code> 把一个脚本附到标签页上。这个示例给每一个打开后的标签页附上了一个脚本。这个脚本给标签页的 document 加上了一个红色边框：</p>
+
+<pre class="brush: js">require("sdk/tabs").on("ready", runScript);
+
+function runScript(tab) {
+  tab.attach({
+    contentScript: "if (document.body) document.body.style.border = '5px solid red';"
+  });
+}
+</pre>
+
+<p>（本示例仅仅表示：可以像这样实现一些功能，而你应当使用 <a href="/zh-CN/Add-ons/SDK/High-Level_APIs/page-mod"><code>page-mod</code></a>，并且指定匹配模式为 "*"。）</p>
+
+<h2 id="了解更多">了解更多</h2>
+
+<p>想要了解更多关于如何在SDK中处理标签页的内容，请看 <a href="/zh-CN/Add-ons/SDK/High-Level_APIs/tabs"><code>tabs</code> API 参考</a>。你能够监听其他一些标签页事件，包括 <code>open</code>、<code>close</code>、和 <code>activate</code>。</p>
+
+<p>想要了解更多关于在标签页中运行脚本的事情，请看 <a href="/en-US/Add-ons/SDK/Tutorials/Modifying_the_Page_Hosted_by_a_Tab"><code>tab.attach() 使用教程</code></a>。</p>

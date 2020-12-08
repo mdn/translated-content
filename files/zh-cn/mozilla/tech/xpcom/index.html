@@ -1,0 +1,44 @@
+---
+title: XPCOM
+slug: Mozilla/Tech/XPCOM
+tags:
+  - XPCOM
+  - 所有分类
+translation_of: Mozilla/Tech/XPCOM
+---
+<p><strong>XPCOM</strong>（Cross Platform Component Object Model）是一种跨平台组件对象模型，其原理与微软的COM技术类似，它支持多种语言绑定（<a href="cn/XPCOM/Language_Bindings">Language Bindings</a>）。也就是说，我们可以使用C++、JAVA、JavaScript、Python、Ruby、Perl等语言来编写组件。而XPCOM的接口是用一种叫做<a href="cn/XPIDL">XPIDL</a>的IDL（Interface Description Language）来定义的。</p>
+
+<div>
+<p>XPCOM 本身提供了一套核心的组件和类，用于诸如内存管理，线程，基本数据结构（strings, arrays, variants）等 。但是大部分的XPCOM组件并不是这个核心库提供的，而是由很多第三方的平台（例如<a href="cn/Gecko">Gecko</a>或者<a href="Necko">Necko</a>）提供，或者由一个应用，甚至一个扩展提供。</p>
+
+<p> </p>
+
+<p></p><div class="row topicpage-table">
+    <div class="section"><dl><dl><dt class="landingPageList"><a href="/zh-CN/docs/Generic_factory">Generic factory</a></dt><dd class="landingPageList">Most XPCOM factories can be very simple. Rick Potts wrote a templated-based generic factory (nsFactory&lt;t&gt;) that simplifies the factory creation process that just requires writing a CreateInstance() method. The new nsIGenericFactory interface takes this a step further, by providing a single interface that can be reused anytime a simple implementation of nsIFactory is needed. Here is the interface, and a description of its use.&lt;/t&gt;</dd><dt class="landingPageList"><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Observer_Notifications">Observer Notifications</a></dt><dd class="landingPageList">The following are topics that you can observe during the course of an application. Unless otherwise noted you register for the topics using the <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIObserverService" title="">nsIObserverService</a></code>.</dd><dt class="landingPageList"><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Setting_HTTP_request_headers">Setting HTTP request headers</a></dt><dd class="landingPageList"><a href="https://developer.mozilla.org/en-US/docs/HTTP">HTTP</a> 是网络背后的核心技术之一。除了实质内容之外，一些重要的信息通过HTTP 头传递给HTTP 请求和响应。</dd><dt class="landingPageList"><a href="/zh-CN/docs/Storage">Storage</a></dt><dd class="landingPageList"><strong>Storage</strong> 存储是一个 <a class="external" href="http://www.sqlite.org/">SQLite</a> 数据库API。它可用于受信任的调用者，仅限于扩展和Firefox组件。</dd><dt class="landingPageList"><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Glue">XPCOM Glue</a></dt><dd class="landingPageList">The XPCOM Glue is a static library which component developers and embedders can link against. It allows developers to link only against the frozen XPCOM method symbols and maintain compatibility with multiple versions of XPCOM.</dd><dt class="landingPageList"><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference">XPCOM reference</a></dt><dd class="landingPageList">This reference describes the interfaces and functions provided by the <a href="/en-US/docs/Mozilla/Tech/XPCOM">XPCOM</a> library. In addition, it details the various helper classes and functions, as well as the components, provided by the <a href="/en-US/docs/Mozilla/Tech/XPCOM/Glue">XPCOM glue</a> library. The contents herein are oriented primarily toward extension developers and people embedding XPCOM in other projects.</dd></dl></dl></div>
+    <div class="section"><dl><dt class="landingPageList"><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Guide">XPCOM 指南</a></dt><dd class="landingPageList">本文提供了关于 XPCOM 的说明和使用文档，包括如何在你的工程中使用，如何为你的 Firefox 扩展等构建 XPCOM 组件。</dd><dt class="landingPageList"><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Interfacing_with_the_XPCOM_cycle_collector">与XPCOM cycle collector交互</a></dt><dd class="landingPageList">本文是对于在Firefox 3的XPCOM中引入的cycle collector的一个简要描述，描述了将一个已有的C++类修改为一个XPCOM cycle collection中的参与项的步骤。如果你认为你有关于类的循环引用导致的内存泄漏，那可以看看这个。</dd><dt class="landingPageList"><a href="/zh-CN/docs/Using_the_Clipboard">使用剪贴板</a></dt><dd class="landingPageList">This section provides information about cutting, copying and pasting to and from the clipboard.</dd><dt class="landingPageList"><a href="/zh-CN/docs/Creating_a_Python_XPCOM_component">创建Python XPCOM组件</a></dt><dd class="landingPageList"><a href="http://books.mozdev.org/html"><em>Creating Applications with Mozilla</em></a> 已经包含了一个<a href="http://books.mozdev.org/html/mozilla-chp-8-sect-2.html" title="http://books.mozdev.org/html/mozilla-chp-8-sect-2.html">教程</a>用于编写简单的基于JavaScript和C++（实现<code>nsISimple</code>接口）的组件，本文阐述如何通过Python语言使用<a href="/en-US/docs/PyXPCOM" title="/en-US/docs/PyXPCOM">PyXPCOM</a>创建相同的组件。</dd><dt class="landingPageList"><a href="/zh-CN/docs/Aggregating_the_In-Memory_Datasource">收集 In-Memory 数据源</a></dt><dd class="landingPageList"></dd><dt class="landingPageList"><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Language_Bindings">语言绑定</a></dt><dd class="landingPageList">一款 <strong>XPCOM 的语言绑定</strong>是连接某种特定的程序设计语言与 <a href="/cn/XPCOM" title="cn/XPCOM">XPCOM</a> 之间的纽带，它用来提供从语言到 XPCOM 对象的访问， 并且将此种语言写成的模块作为其他进行 XPCOM 绑定的程序语言的 XPCOM 对象。</dd></dl></div>
+    </div><p></p>
+
+<p></p><div class="blockIndicator communitybox">
+
+    <div class="column-container">
+        <h2 id="加入_XPCOM_社区">加入 XPCOM 社区</h2>
+        <div class="column-half">
+            <div class="communitysubhead">请选择你喜欢的方式加入我们：</div>
+            <ul class="communitymailinglist">
+  <li><a href="https://lists.mozilla.org/listinfo/dev-tech-xpcom"> 邮件列表</a></li>
+
+
+  <li><a href="http://groups.google.com/group/mozilla.dev.tech.xpcom"> 新闻组</a></li>
+  <li><a href="http://groups.google.com/group/mozilla.dev.tech.xpcom/feeds"> Web feed</a></li>
+</ul>
+        </div>
+        <div class="column-half">
+            <ul class="communitycontact"><li><strong>IRC: </strong><a href="irc://irc.mozilla.org/developers">#developers</a> <span class="smaller">(<a href="https://wiki.mozilla.org/IRC">了解 IRC</a>)</span></li><li><strong>Tools: </strong><a href="http://ted.mielczarek.org/code/mozilla/jscomponentwiz/">JavaScript Component Wizard</a>, <a href="http://www.mytools360.com-a.googlepages.com/home#XPComPro">Visual C++ Component Wizard</a>, <a href="http://www.yutools.com/wp/tools/yuxpcomwizard/?lang=en">Visual C++ Component Wizard for Visual Studio 2010</a></li></ul>
+        </div>
+    </div>
+</div><p></p>
+
+<p></p><section id="Quick_Links"><ol><li><a href="http://www.ibm.com/developerworks/library/os-xpcomfirefox/">Tutorial from IBM DeveloperWorks</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Creating_Custom_Firefox_Extensions_with_the_Mozilla_Build_System">Binary components tutorial</a></li><li><a href="http://www.iosart.com/firefox/xpcom/">Linux and Windows how-to guide</a></li><li><a href="http://starkravingfinkle.org/blog/2006/10/mozilla-platform-xpcom-in-c/">Windows example blog post</a></li><li><a href="http://wanderingstan.com/2007-11-16/geekout_how_to_make_a_c_xpcom_component">Another Windows example</a></li><li><a href="http://rcrowley.org/2007/07/17/cross-platform-xpcom-a-howto.html">Mac OS X example</a></li><li><a href="/en-US/docs/Web/JavaScript" title="JavaScript (JS) is a lightweight interpreted or JIT-compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat.">JavaScript</a></li></ol></section><p></p>
+</div>
+
+<p> </p>

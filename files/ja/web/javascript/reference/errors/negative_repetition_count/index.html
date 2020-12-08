@@ -1,0 +1,44 @@
+---
+title: 'RangeError: repeat count must be non-negative'
+slug: Web/JavaScript/Reference/Errors/Negative_repetition_count
+tags:
+  - Errors
+  - JavaScript
+  - RangeError
+translation_of: Web/JavaScript/Reference/Errors/Negative_repetition_count
+---
+<div>{{jsSidebar("Errors")}}</div>
+
+<h2 id="メッセージ">メッセージ</h2>
+
+<pre class="syntaxbox">RangeError: repeat count must be non-negative (Firefox)
+RangeError: Invalid count value (Chrome)
+</pre>
+
+<h2 id="エラータイプ">エラータイプ</h2>
+
+<p>{{jsxref("RangeError")}}</p>
+
+<h2 id="何がうまくいかなかったのか？">何がうまくいかなかったのか？</h2>
+
+<p>{{jsxref("String.prototype.repeat()")}} メソッドを使用しています。<code>count</code> パラメーターは、文字列の繰り返し回数を指定します。 これは 0 から正の {{jsxref("Infinity")}} 以下の値である必要があり、負数は使用できません。 有効値の範囲はこのように表現できます： [0, +∞)。</p>
+
+<h2 id="例">例</h2>
+
+<h3 id="無効なケース">無効なケース</h3>
+
+<pre class="brush: js example-bad">'abc'.repeat(-1); // RangeError </pre>
+
+<h3 id="有効なケース">有効なケース</h3>
+
+<pre class="brush: js example-good">'abc'.repeat(0);    // ''
+'abc'.repeat(1);    // 'abc'
+'abc'.repeat(2);    // 'abcabc'
+'abc'.repeat(3.5);  // 'abcabcabc' （count は整数に変換されます）
+</pre>
+
+<h2 id="関連項目">関連項目</h2>
+
+<ul>
+ <li>{{jsxref("String.prototype.repeat()")}}</li>
+</ul>

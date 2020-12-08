@@ -1,0 +1,59 @@
+---
+title: ParallelArray
+slug: Web/JavaScript/Reference/Global_Objects/ParallelArray
+tags:
+  - JavaScript
+  - Obsolete
+  - ParallelArray
+translation_of: Archive/Web/ParallelArray
+---
+<div>
+<div>{{jsSidebar("Objects")}}{{obsolete_header}}</div>
+</div>
+
+<div class="note">p&gt;<strong>ノート:</strong> このオブジェクトは Firefox 17 で実装され {{ Gecko(29) }} から削除されました。現在は Nightly チャネルでのみ ParallelJS (PJS) を使用可能です ({{ bug(944074) }})。</div>
+
+<p><strong>ParallelArray</strong> の目標は、ウェブアプリケーション上でデータ並列性を実現することです。ParallelArray 上で利用可能な高階関数は並列的に実行されます（ただし、並列的に実行できない場合は必要に応じて直列実行にフォールバックします）。並列実行性を保証したい場合には、Javascript の機能のうち、<a href="/en-US/docs/ParallelizableJavaScriptSubset" title="/en-US/docs/ParallelizableJavaScriptSubset">Firefox がサポートする並列可能なサブセット</a>のみを利用するようにすることが推奨されています。</p>
+
+<h2 id="構文">構文</h2>
+
+<pre class="syntaxbox">new ParallelArray()
+new ParallelArray([element0, element1, ...])
+new ParallelArray(arrayLength, elementalFunction)</pre>
+
+<h2 id="ParallelArray_インスタンス"><code>ParallelArray</code> インスタンス</h2>
+
+<h3 id="プロパティ">プロパティ</h3>
+
+<dl>
+ <dt>length</dt>
+ <dd><code>ParallelArray</code>の要素の数</dd>
+</dl>
+
+<h3 id="メソッド">メソッド</h3>
+
+<dl>
+ <dt>map</dt>
+ <dt>reduce</dt>
+ <dt>scan</dt>
+ <dt>scatter</dt>
+ <dt>filter</dt>
+ <dt>flatten</dt>
+ <dt>partition</dt>
+ <dt>get</dt>
+</dl>
+
+<h2 id="例">例</h2>
+
+<h3 id="例_並列的に_map_処理を行う">例: 並列的に <code>map</code> 処理を行う</h3>
+
+<pre class="brush: js">var p = new ParallelArray([0, 1, 2, 3, 4]);
+var m = p.map(function (v) {
+  return v + 1;
+});</pre>
+
+<h2 id="参考文献">参考文献</h2>
+
+<ul>
+ <li><a href="http://wiki.ecmascript.org/doku.php?id=strawman:data_parallelism" title="http://wiki.ecmascript.org/doku.php?id=strawman:data_parallelism">Ecmascript ParallelArray strawman</a></li>
+</ul>

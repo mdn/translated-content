@@ -1,0 +1,107 @@
+---
+title: Onglets
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Onglets
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Tabboxes
+---
+<p> </p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Positionnement_dans_une_pile" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Grilles">Suivant  »</a></p>
+</div>
+<p>Il est courant de voir des pages à onglets dans les boîtes de dialogues de préférences. Nous allons voir ici comment les créer.</p>
+<h3 id="Bo.C3.AEtes_d.27onglets" name="Bo.C3.AEtes_d.27onglets">Boîtes d'onglets</h3>
+<p>Les boîtes d'onglets sont typiquement utilisées dans une application de fenêtre de préférences. Une série d'onglets apparaît en travers du bord supérieur de la fenêtre. L'utilisateur peut cliquer sur chaque onglet pour voir la sélection des options. L'emploi d'onglets est très utile lorsque vous avez plus d'options qu'il ne peut en tenir sur l'écran.</p>
+<p>XUL offre une méthode pour créer de telles boîtes de dialogues. Elles nécessitent cinq nouveaux éléments qui sont décrits brièvement ici et plus en détail par la suite.</p>
+<dl> <dt><code><a href="/fr/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code> </dt> <dd>La boîte externe qui contient les onglets sur le haut et les pages correspondantes elles mêmes.</dd> <dt><code><a href="/fr/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code> </dt> <dd>La boîte interne qui contient les onglets individuellement. En d'autres termes, il s'agit d'un groupement d'onglets.</dd> <dt><code><a href="/fr/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code> </dt> <dd>Un onglet spécifique. Cliquer sur un onglet remonte la page de l'onglet au premier plan.</dd> <dt><code><a href="/fr/docs/Mozilla/Tech/XUL/tabpanels" title="tabpanels">tabpanels</a></code> </dt> <dd>Le container des pages.</dd> <dt><code><a href="/fr/docs/Mozilla/Tech/XUL/tabpanel" title="tabpanel">tabpanel</a></code> </dt> <dd>Le corps d'une page seule. Vous allez placer le contenu d'une page dans cette élément. Le premier <code><a href="/fr/docs/Mozilla/Tech/XUL/tabpanel" title="tabpanel">tabpanel</a></code> correspond au premier onglet, le second <code><a href="/fr/docs/Mozilla/Tech/XUL/tabpanel" title="tabpanel">tabpanel</a></code> correspond au second onglet, et ainsi de suite.</dd>
+</dl>
+<p>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code> est l'élément externe. Il est constitué de deux enfants, l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code> qui contient les en-têtes des onglets, et l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tabpanels" title="tabpanels">tabpanels</a></code> qui contient les pages d'onglets.</p>
+<p>La syntaxe typique d'une boîte d'onglets est décrite ci dessous :</p>
+<pre>&lt;tabbox id="tablist"&gt;
+   &lt;tabs&gt;
+     &lt;!-- les éléments tab viennent ici --&gt;
+   &lt;/tabs&gt;
+   &lt;tabpanels&gt;
+     &lt;!-- les éléments tabpanel viennent ici --&gt;
+   &lt;/tabpanels&gt;
+&lt;/tabbox&gt;
+</pre>
+<p>Les éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code> sont placés à l'intérieur d'un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code> qui se comporte comme une boîte normale. L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code> lui même a été placé à l'intérieur d'un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code>. Cet élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code> contient aussi l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tabpanels" title="tabpanels">tabpanels</a></code> qui apparaît en dessous de l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code> à cause de la disposition verticale de la boîte d'onglets.</p>
+<p>Il n'y a réellement rien de spécial au sujet des éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code> qui les rendent différents des boîtes. Comme pour les boîtes, les onglets peuvent contenir n'importe quels éléments. La différence est que les onglets ont un rendu sensiblement différent et seulement le contenu de la page d'un seul onglet sera visible à la fois, comme peut le faire l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/deck" title="deck">deck</a></code>.</p>
+<p>Le contenu des pages correspondant à chaque onglet doit être placé dans chaque élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tabpanel" title="tabpanel">tabpanel</a></code> correspondant. Il ne doit pas être mis dans un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code> qui contient, lui, le contenu descriptif de l'onglet sur le bord supérieur.</p>
+<p>Chaque élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tabpanel" title="tabpanel">tabpanel</a></code> devient une page de l'onglet affiché. La première page correspond au premier onglet, la seconde page correspond au second onglet, et ainsi de suite. Il y a une relation de un-à-un entre chaque élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code> et chaque élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tabpanel" title="tabpanel">tabpanel</a></code>.</p>
+<p>Pour déterminer la dimension d'une boîte d'onglets, la taille de la plus grande page est utilisée. Ainsi, si vous avez dix champs de saisie sur une page et seulement un sur une autre page, cette autre page sera dimensionnée pour s'ajuster à celle qui contient les dix champs de saisie en occupant plus d'espace. La surface occupée par la page d'un onglet ne change pas lorsque l'utilisateur bascule vers une page d'un autre onglet.</p>
+<h4 id="Exemple_de_bo.C3.AEte_d.27onglets" name="Exemple_de_bo.C3.AEte_d.27onglets">Exemple de boîte d'onglets</h4>
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_tabpanel_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_tabpanel_1.xul">Voir</a></p>
+<div class="float-right"><img alt="Image:xultu_tabpanel1.png" class=" internal" src="/@api/deki/files/1555/=Xultu_tabpanel1.png"></div>
+<pre>&lt;tabbox&gt;
+   &lt;tabs&gt;
+     &lt;tab label="Courrier"/&gt;
+     &lt;tab label="Forum"/&gt;
+   &lt;/tabs&gt;
+   &lt;tabpanels&gt;
+     &lt;tabpanel id="mailtab"&gt;
+       &lt;checkbox label="Vérifier automatiquement le courrier"/&gt;
+     &lt;/tabpanel&gt;
+     &lt;tabpanel id="newstab"&gt;
+       &lt;button label="Effacer le cache des forums"/&gt;
+     &lt;/tabpanel&gt;
+   &lt;/tabpanels&gt;
+&lt;/tabbox&gt;
+</pre>
+<p>Ici, deux onglets ont été ajoutés. Le premier est intitulé 'Courrier' et l'autre est intitulé 'Forum'. Lorsque l'utilisateur clique sur l'onglet 'Courrier', le contenu de la première page est affiché. Dans ce cas, la boîte avec la case à cocher intitulé 'Vérifier automatiquement le courrier' apparaîtra sous cet onglet. Le second onglet, lorsqu'il est cliqué, affichera la boîte contenant le bouton intitulé 'Effacer le cache des forums'.</p>
+<p>L'onglet courant sélectionné est donné par un attribut supplémentaire <code id="a-selected"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/selected">selected</a></code> initialisé à 'true' sur un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code>. Il sert à donner à l'onglet par défaut un aspect différent de telle façon qu'il apparaisse sélectionné. Un seul onglet peut avoir cet attribut avec une valeur 'true'.</p>
+<h4 id="Positionnement_des_onglets" name="Positionnement_des_onglets">Positionnement des onglets</h4>
+<p>Finalement, vous pouvez changer la position des onglets pour qu'ils apparaissent sur n'importe quel côté des pages d'onglets. Il suffit de définir les attributs <code id="a-orient"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/orient">orient</a></code> et <code id="a-dir"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/dir">dir</a></code> comme nécessaire. Souvenez vous que les éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code> sont des boîtes normales en terme de mise en page. D'ailleurs, l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code> se comporte comme une boîte normale ayant une orientation verticale par défaut, dans laquelle l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code> est une boîte ayant une orientation horizontale.</p>
+<div class="float-right"><img alt="Image:xultu_tabpanel_extra.png" class=" internal" src="/@api/deki/files/1557/=Xultu_tabpanel_extra.png"></div>
+<p>Par exemple, pour mettre les onglets le long du bord gauche, changez l'orientation de l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code> pour qu'elle soit verticale. Ils seront empilés les uns sur les autres. Ensuite, mettez une orientation horizontale sur le <code><a href="/fr/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code>. Les onglets appaîtront à gauche, et pas au dessus des pages d'onglets. Notez que la modification de l'orientation de l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tabpanels" title="tabpanels">tabpanels</a></code> n'aura aucun effet puisque les pages d'onglets sont empilées les unes sur les autres. (NdT : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_tabs.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_tabs.xul">Voir</a>)</p>
+<p>Vous pouvez placer les onglets le long du bord droit ou en bas en déplaçant l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code> après l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tabpanels" title="tabpanels">tabpanels</a></code>. De plus, vous devrez définir l'attribut <code id="a-dir"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/dir">dir</a></code> à 'reverse' sur <code><a href="/fr/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code>. Cependant, vous devriez laisser les onglets en haut car leur rendu graphique risque d'être mauvais avec certains thèmes graphiques particuliers.</p>
+<div class="highlight">
+<h3 id="Ajout_d.27onglets_.C3.A0_la_bo.C3.AEte_de_dialogue_de_recherche_de_fichiers" name="Ajout_d.27onglets_.C3.A0_la_bo.C3.AEte_de_dialogue_de_recherche_de_fichiers">Ajout d'onglets à la boîte de dialogue de recherche de fichiers</h3>
+<p>Ajoutons une seconde page à notre boîte de dialogue de recherche de fichiers. Nous allons créer un onglet 'Options' (en le sélectionnant par défaut) qui contiendra quelques options de recherche. Ce n'est peut être pas la meilleure interface pour faire cela, mais nous l'utiliserons pour la démonstration des onglets. Le libellé d'en-tête et la boîte de critères de recherche iront dans la première page d'onglet. Nous allons ajouter quelques options dans la seconde page d'onglet. La barre de progression et les boutons restent sur la boîte de dialogue principale, en dehors des onglets.</p>
+<pre class="eval">&lt;vbox flex="1"&gt;
+
+<span class="highlightred">&lt;tabbox selectedIndex="1"&gt;   &lt;tabs&gt;     &lt;tab label="Recherche"/&gt;     &lt;tab label="Options"/&gt;   &lt;/tabs&gt;    &lt;tabpanels&gt;    &lt;tabpanel id="searchpanel" orient="vertical"&gt;</span>
+
+    &lt;description&gt;
+     Entrez votre critère de recherche ci dessous et appuyer sur le
+     bouton Rechercher.
+    &lt;/description&gt;
+
+    &lt;spacer style="height: 10px"/&gt;
+
+    &lt;groupbox orient="horizontal"&gt;
+      <span class="nowiki">&lt;caption label="Critère de recherche"/&gt;</span>
+
+      &lt;menulist id="searchtype"&gt;
+        &lt;menupopup&gt;
+          &lt;menuitem label="Nom"/&gt;
+          &lt;menuitem label="Taille"/&gt;
+          &lt;menuitem label="Date de modification"/&gt;
+        &lt;/menupopup&gt;
+      &lt;/menulist&gt;
+      &lt;spacer style="width: 10px;"/&gt;
+      &lt;menulist id="searchmode"&gt;
+        &lt;menupopup&gt;
+          &lt;menuitem label="Est"/&gt;
+          &lt;menuitem label="N'est pas"/&gt;
+        &lt;/menupopup&gt;
+      &lt;/menulist&gt;
+
+      &lt;spacer style="height: 10px"/&gt;
+      &lt;textbox id="find-text" flex="1" style="min-width: 15em;"/&gt;
+
+    &lt;/groupbox&gt;
+   <span class="highlightred">&lt;/tabpanel&gt;     &lt;tabpanel id="optionspanel" orient="vertical"&gt;     &lt;checkbox id="casecheck" label="Recherche sensible à la casse"/&gt;     &lt;checkbox id="wordscheck" label="Nom de fichier entier"/&gt;    &lt;/tabpanel&gt;   &lt;/tabpanels&gt; &lt;/tabbox&gt;</span>
+</pre>
+<div class="float-right"><img alt="Image:xultu_tabpanel2.png" class=" internal" src="/@api/deki/files/1556/=Xultu_tabpanel2.png"></div>
+<p>Les éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code> ont été placés autour du contenu principal de la fenêtre. Vous pouvez voir les deux onglets, 'Recherche' et 'Options'. En cliquant sur chacun d'eux, vous faites apparaître les pages correspondantes. Comme montré sur l'image ci-dessus, les deux options de recherche apparaissent sur le deuxième onglet. La première page ressemble beaucoup à ce qu'elle était avant, exceptée la présence des onglets sur le bord supérieur.</p>
+Exemple de recherche de fichiers : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfiles-tabpanel.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfiles-tabpanel.xul">Voir</a></div>
+<hr>
+<p>Dans la section suivante, nous allons voir comment créer des grilles pour le placement de contenus.</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Positionnement_dans_une_pile" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Grilles">Suivant  »</a></p>
+</div>
+<p><span class="comment">Interwiki</span></p>

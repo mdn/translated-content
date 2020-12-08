@@ -1,0 +1,38 @@
+---
+title: ROLE_PANE
+slug: Mozilla/Tech/Accessibility/AT-APIs/Gecko/Roles/ROLE_PANE
+tags:
+  - AT_APIs
+  - Accessibility
+  - Reference
+translation_of: Mozilla/Tech/Accessibility/AT-APIs/Gecko/Roles/ROLE_PANE
+---
+<p><a href="/ja/docs/Accessibility:AT-APIs:Gecko:Roles">« Gecko Roles ページ</a></p>
+<p>フレームウィンドウやドキュメントウィンドウ内のペインを表します。ユーザは他のペイン間および現在のペインのコンテンツ内の間を移動できますが、異なるペイン内の項目間は移動できません。このように、ペインはフレームウィンドウやドキュメントより下位、個々のコントロールよりも上位のグループレベルを表します。</p>
+<h2 id="Interfaces" name="Interfaces">インターフェイス</h2>
+<ul>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAccessNode" title="">nsIAccessNode</a></code></li>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAccessible" title="">nsIAccessible</a></code></li>
+</ul>
+<h2 id="Mapped_to" name="Mapped_to">別名</h2>
+<ul>
+ <li>AT-SPI: <code>ROLE_PANEL</code></li>
+ <li>ATK: ATK_<code>ROLE_PANEL</code></li>
+ <li>UA: <code>NSAccessibilityGroupRole</code></li>
+ <li>MSAA/IA2: <code>ROLE_SYSTEM_GROUPING</code></li>
+</ul>
+<h2 id="Used_by" name="Used_by">使用する要素</h2>
+<ul>
+ <li>ARIA: <code><a class="external" href="https://w3c.github.io/aria/#region">region</a></code></li>
+ <li>HTML: first child of <a href="/ja/docs/Web/HTML/Element/frame" title="&lt;frame> は、別の HTML 文書を表示できる個々の領域を定義する HTML 要素です。 frame 要素は &lt;frameset> の内部で使用します。"><code>&lt;frame&gt;</code></a> or <a href="/ja/docs/Web/HTML/Element/iframe" title="HTML のインラインフレーム要素 (&lt;iframe>) は、入れ子になった閲覧コンテキストを表現し、現在の HTML ページに他のページを埋め込むことができます。"><code>&lt;iframe&gt;</code></a></li>
+ <li>XUL: &lt;<code><a href="/ja/docs/Mozilla/Tech/XUL/panel" title="panel">panel</a></code>/&gt;, &lt;<code><a href="/ja/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code>/&gt;</li>
+</ul>
+<h2 id="Features" name="Features">特徴</h2>
+<ul>
+ <li><code>nsIAccessible::value</code> は、現在のドキュメントの URL を露呈します。</li>
+ <li><code>nsIAccessible::name</code> は、現在のペインの <a href="/ja/docs/Web/HTML/Element/title" title="HTML 題名要素 (&lt;title>) は、ブラウザーのタイトルバーやページのタブに表示される文書の題名を定義します。"><code>&lt;title&gt;</code></a> を露呈します。</li>
+ <li>編集可能エリアでない限り、<code>STATE_READONLY</code> を設定します。</li>
+</ul>
+<p></p><section class="Quick_links" id="Quick_Links">
+
+</section><p></p>

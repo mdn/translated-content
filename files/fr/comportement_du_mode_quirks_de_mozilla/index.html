@@ -1,0 +1,66 @@
+---
+title: Comportement du mode quirks de Mozilla
+slug: Comportement_du_mode_quirks_de_Mozilla
+tags:
+  - Développement_Web
+translation_of: Mozilla/Mozilla_quirks_mode_behavior
+---
+<p>
+</p><p>Ce qui suit est une liste <i>sommaire</i> des différences qui existent entre les modes standard et quirks de Mozilla. Cette liste date de début juin 2001 (avec quelques ajouts depuis lors, mais pas la liste complète de ce qui a changé). Depuis lors, le changement le plus important est que beaucoup de déviations liées au contrôle des formulaires ont été retirées. Un autre changement souvent remarqué est qu'en mode standard, les feuilles de styles CSS qui portent un autre type MIME que <code>text/css</code> sont rejetées.
+</p>
+<h2 id="G.C3.A9n.C3.A9ralit.C3.A9s_et_style" name="G.C3.A9n.C3.A9ralit.C3.A9s_et_style"> Généralités et style </h2>
+<ul><li> Toutes les règles de style figurant dans {{ Source("layout/style/quirk.css") }} s'appliquent.
+</li><li> En mode quirks, les noms de classes CSS sont insensibles à la casse. En mode standard, les majuscules et minuscules sont significatives.
+</li><li> Les feuilles de style liées avec le document dont le type MIME renseigné est <code>text/css</code> seront toujours traitées comme du CSS même si le serveur donne un en-tête <code>Content-Type</code> différent de <code>text/css</code>.
+</li><li> L'analyseur CSS accepte les couleurs ne commençant pas par <code>#</code>.
+</li><li> L'analyseur CSS interprète les nombres sans unités comme des unités <code>px</code> (sauf pour la propriété {{ Cssxref("font-size") }} pour suivre ce que Netscape 4 faisait, et pour {{ Cssxref("line-height") }} et toute autre propriété où elles ont une signification distincte).
+</li><li> Les couleurs HTML sont traitées différemment (<code>#</code> n'est pas obligatoire et les chiffres manquants sont complétés d'une autre manière)
+</li><li> Une chaîne vide pour l'attribut {{ Cssxref("background") }} rend l'URL du fond vide uniquement en mode quirks.
+</li><li> Les polices système fonctionnent différemment en mode quirks (même si ce sont les contrôles de formulaires qui les utilisent qui devraient plutôt fonctionner différemment).
+</li><li> Les tailles de police HTML (1-7) et CSS (<code>xx-small</code> - <code>xx-large</code>) sont calculées légèrement différemment (voir le {{ Bug(18136) }}).
+</li><li> Les styles de puces des listes n'héritent pas de la taille de police de la liste en mode quirks.
+</li><li> La pseudo-classe {{ Cssxref(":hover") }} ne sera appliquée qu'au liens, images et contrôles de formulaires, à moins que le sélecteur indique un nom de balise, un ID ou un attribut.
+</li></ul>
+<h2 id="Rendu_de_bloc_et_inline" name="Rendu_de_bloc_et_inline"> Rendu de bloc et inline </h2>
+<ul><li> <b>{{ mediawiki.external('Cette différence est présente en mode presque standard.') }}</b> Le calcul de hauteur des lignes (pas {{ Cssxref("line-height") }}) est différent pour corriger les {{ Bug(5821) }} et {{ Bug(24186) }} (certains autres problèmes sont décrits dans le {{ Bug(22274) }}).
+</li><li> Un grand nombre de bidouillages sont faits pour obtenir des hauteurs en pourcentage pour les images, les tableaux, les objets et les applets (et d'autres éléments ?) pour « fonctionner » (de la façon dont elles fonctionnaient dans Netscape 4), bien que CSS précise que les hauteurs en pourcentage doivent se comporter comme des hauteurs « auto » lorsque l'élément parent n'a pas de hauteur fixe. Voir une description dans le {{ Bug("33443#c9") }}. Voir aussi le {{ Bug(41656) }} et ses copies. Certains de ces changements peuvent également causer d'autres effets (voir le {{ Bug(54119) }}).
+</li><li> L'élément <code>HR</code> est traité différemment dans les modes quirks et strict (et il est possible que ce soit mauvais dans les deux cas).
+</li></ul>
+<h2 id="Tableaux" name="Tableaux"> Tableaux </h2>
+<ul><li> Les couleurs de fond des tableaux fonctionnent différemment (voir le {{ Bug(4510) }}) Il n'est pas certain que ce soit nécessaire. <b>{{ mediawiki.external('Cette différence n\'existe plus') }}</b>
+</li><li> En mode quirks, <code>absmiddle</code> (géré incorrectement ?) et <code>middle</code> (peut-être également géré de manière incorrecte) sont acceptés comme valeurs de l'attribut <code>align</code> sur des cellules de tableaux et <code>absmiddle</code>, <code>abscenter</code> et <code>middle</code> sont gérés sur les tableaux et gérés de la même manière que <code>center</code>.
+</li><li> Le fond du document (et les couleurs ?) est appliqué sur les éléments <code>TD</code>, <code>TH</code>, <code>TR</code>, <code>THEAD</code>, <code>TBODY</code> et <code>TFOOT</code> (quand le fond du document est spécifié d'une certaine manière) (voir aussi le {{ Bug(70831) }} ).
+</li><li> La propriété {{ Cssxref("empty-cells") }} a la valeur par défaut <code>hide</code> en mode quirks, mais <code>show</code> (suivant l'errata CSS2) en mode standard (voir le {{ Bug(33244) }}) (la méthode correcte serait de le spécifier pour l'élément HTML <code>TABLE</code> dans <code>quirk.css</code>).
+</li><li> En mode quirks, les tableaux flottants ne passent jamais à la « ligne » suivante si ils sont trop larges pour passer à côté des autres éléments flottants, ils provoquent juste l'élargissement de la page (voir le {{ Bug(43086) }}).
+</li><li> En mode quirks, <code>colspan="0"</code> et <code>rowspan="0"</code> ne sont intentionnellement pas gérés comme décrit dans HTML4.
+</li><li> <code>hspace</code> et <code>vspace</code> sont gérés sur l'élément <code>TABLE</code> uniquement en mode quirks.
+</li><li> En mode quirks, lorsque des tableaux ont un style de bordure <code>inset</code> ou <code>outset</code>, la couleur de cette bordure est basée sur la couleur de fond du tableau ou de l'ancêtre le plus proche possédant un fond non transparent.
+</li><li> En mode quirks, les cellules de tableaux avec une bordure ont une largeur minimale d'un pixel.
+</li><li> À partir de Gecko 1.8 (voir le {{ Bug(277232) }}) : en mode quirks, une largeur fixe spécifiée sur une cellule de tableau réinitialise l'attribut <code>nowrap</code>. Si celui-ci est présent, la cellule ne sera jamais plus petite que la largeur fixe spécifiée.
+</li><li> La stratégie de rendu de base des tableaux ignore le padding (sur quoi ?) en mode quirks.
+</li><li> La stratégie de rendu de base des tableaux gère les largeurs différemment.
+</li></ul>
+<h2 id="Formulaires" name="Formulaires"> Formulaires </h2>
+<ul><li> Les tailles des entrées de type <i>Button</i> sont calculées différemment.
+</li><li> En mode standard, un élément <code>BUTTON</code> peut soumettre le formulaire uniquement s'il ne possède pas d'attribut <code>type</code>.
+</li><li> Les tailles des entrées de texte (et d'autres contrôles contenant du texte ?) sont calculées différemment (voir le {{ Bug("X") }})
+</li><li> Les polices pour les éléments <code>INPUT</code> <i>button</i> et <code>SELECT</code> sont calculées différemment.
+</li><li> Le fait qu'un bouton parmi un groupe radio soit toujours sélectionné (par défaut) requis par HTML n'est pas vérifié en mode quirks.
+</li></ul>
+<h2 id="Frames" name="Frames"> Frames </h2>
+<ul><li> En mode quirks, <code>marginwidth</code> et <code>marginheight</code> sur un élément <code>FRAME</code> sont propagés vers l'élément <code>BODY</code> qu'ils contient.
+</li><li> Dans une spécification de taille de cadres, <code>0*</code> est traité comme <code>1*</code> (voir le {{ Bug(40383) }}).
+</li><li> L'attribut <code>scrolling</code> sur <code>FRAME</code> est traité différemment.
+</li></ul>
+<h2 id="Analyseur_HTML" name="Analyseur_HTML"> Analyseur HTML </h2>
+<ul><li> En mode quirks, les commentaires HTML sont analysés d'une manière compatible avec les anciens navigateurs plutôt que de traiter « -- » comme le délimiteur de début et de fin de commentaire.
+</li></ul>
+<div class="originaldocinfo">
+<h3 id="Informations_sur_le_document_original" name="Informations_sur_le_document_original"> Informations sur le document original </h3>
+<ul><li> Auteur(s) : David Baron, Boris Zbarsky
+</li><li> Date de dernière mise à jour : 8 juillet 2003
+</li></ul>
+</div>
+<h3 id="Voir_aussi" name="Voir_aussi"> Voir aussi </h3>
+<p><a href="fr/Mode_quirks_de_Mozilla">Mode quirks de Mozilla</a>
+</p>{{ languages( { "en": "en/Mozilla_Quirks_Mode_Behavior", "ja": "ja/Mozilla_Quirks_Mode_Behavior" } ) }}

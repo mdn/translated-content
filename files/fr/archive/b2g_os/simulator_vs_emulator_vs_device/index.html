@@ -1,0 +1,74 @@
+---
+title: Simulateur vs. Émulateur vs. Appareil
+slug: Archive/B2G_OS/Simulator_vs_Emulator_vs_Device
+tags:
+  - Firefox OS
+  - QA
+  - test
+translation_of: Archive/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia
+---
+<p>Trois options de base sont possibles pour obtenir un environnement Firefox OS afin de travailler ou développer dessus. Il y a le Simulateur Firefox OS, l'Émulateur Firefox OS et enfin Firefox OS sur un téléphone compatible Firefox OS.</p>
+
+<p>Les utilisateurs finaux ne sont en contact avec Firefox OS que sur un véritable appareil, néanmoins, le Simulateur et l'Émulateur offrent une alternative accessible pour les développeurs qui visent Firefox OS. Pour la majorité d'entre-eux, le Simulateur ou l'Émulateur seront suffisants, mais gardez à l'esprit qu'il y a des cas où leur comportement sera partiel ou différent de celui d'un appareil. Les descriptions ci-dessous devraient vous aider à choisir parmi les trois options celle qui sera la meilleure pour vous.</p>
+
+<h2 id="Le_Simulateur_Firefox_OS">Le Simulateur Firefox OS</h2>
+
+<p>Le Simulateur Firefox OS est une extension pour le navigateur Firefox. Il est principalement destiné à être utilisé par les développeurs d'applications.</p>
+
+<h3 id="Avantages">Avantages</h3>
+
+<ul>
+ <li>De loin l'option la plus simple et la plus rapide à mettre en oeuvre parmi les trois.</li>
+</ul>
+
+<h3 id="Inconvénients">Inconvénients</h3>
+
+<ul>
+ <li>La moins complète des quatre options.</li>
+ <li>TODO lister ici ce que le simulateur ne gère pas</li>
+</ul>
+
+<h2 id="Le_client_Firefox_OS_pour_ordinateur">Le client Firefox OS pour ordinateur</h2>
+
+<p>Le <a href="/en-US/docs/Mozilla/Firefox_OS/Using_the_B2G_desktop_client">client Firefox OS pour ordinateur</a>, également appelé <em>B2G desktop client</em>, permet d'exécuter des applications Web et Gaia dans un environnement basé sur Gecko quelque peu similaire à un véritable appareil. Comme il n'émule pas le matériel de l'appareil, il n'est pas adapté pour tester les APIs des périphériques et ne remplace pas un vrai matériel pour faire des tests. Cependant, il intègre plusieurs APis qui ne sont pas disponibles dans Firefox comme les APIs Contacts et Settings. Il peut donc être utile pendant le développement de votre application, ou lors du travail sur l'interface utilisateur Gaia elle-même.</p>
+
+<h2 id="L'Émulateur_Firefox_OS">L'Émulateur Firefox OS</h2>
+
+<p>L'Émulateur Firefox OS est un programme compilé à partir du code source de Firefox OS et exécuté sur une machine de bureau. En général, les développeurs qui ont besoin d'un environnement Firefox OS plus complet que le Simulateur choisiront cette option. (Voir Opera Mobile Emulator pour les fonctionnalités)</p>
+
+<h3 id="Avantages_2">Avantages</h3>
+
+<ul>
+ <li>Ressemble davantage à un véritable appareil.</li>
+ <li>Peut être utilisé et testé avec le débogage à distance</li>
+ <li>Selenium peut y accéder pour les tests</li>
+ <li>Peut être configuré avec des profils prédéfinis (taille d'écran, caractéristiques, etc.)</li>
+ <li>TODO lister ce qu'il propose en plus ou en moins par rapport au simulateur.</li>
+</ul>
+
+<h3 id="Inconvénients_2">Inconvénients</h3>
+
+<ul>
+ <li>Mettre en place un environnement de construction Firefox OS et compiler les sources requiert beaucoup de ressources et de temps, et souvent cela nécessite des dépannages à différentes étapes du processus. (sauf si c'est un binaire téléchargé déjà construit comme Opera Mobile Emulator)</li>
+ <li>TODO lister les différences par rapport au comportement d'un appareil.</li>
+</ul>
+
+<h2 id="Firefox_OS_sur_un_appareil">Firefox OS sur un appareil</h2>
+
+<p>En général, les développeurs qui travaillent sur le code du coeur de Firefox OS (gonk, gecko) ou qui souhaitent tester leurs applications (ou des modifications de gaia) sur un vrai appareil choisiront cette option.</p>
+
+<h3 id="Avantages_3">Avantages</h3>
+
+<ul>
+ <li>C'est un objet concret - toutes les APIs sont disponibles.</li>
+ <li>TODO lister ce qu'il y a en plus ou en moins par rapport au simulateur.</li>
+</ul>
+
+<h3 id="Inconvénients_3">Inconvénients</h3>
+
+<ul>
+ <li>Compiler les sources consomme des ressources et du temps, des interventions de dépannage sont souvent nécessaires.</li>
+ <li>Parmi les trois options, c'est celle où les barrières sont les plus difficiles à franchir car cela impose au développeur de posséder un appareil qu'il veut bien flasher.</li>
+ <li>En fonction des problèmes rencontrés, le débogage sur un appareil réel peut se révéler plus difficile que sur le Simulateur ou l'Émulateur.</li>
+ <li>TODO lister plus de choses</li>
+</ul>

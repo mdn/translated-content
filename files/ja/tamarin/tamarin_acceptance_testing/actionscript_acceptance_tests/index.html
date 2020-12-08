@@ -1,0 +1,95 @@
+---
+title: Actionscript Acceptance Tests
+slug: Tamarin/Tamarin_Acceptance_Testing/Actionscript_Acceptance_Tests
+tags:
+  - NeedsTranslation
+  - TopicStub
+translation_of: >-
+  Archive/Mozilla/Tamarin/Tamarin_Acceptance_Testing/Actionscript_Acceptance_Tests
+---
+<p>The majority of the acceptance tests are written in actionscript and located in test/acceptance.</p>
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 1.7em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;">See <a class="internal" href="/En/Tamarin/Tamarin_Acceptance_Testing/Running_Tamarin_acceptance_tests" style="text-decoration: none; color: rgb(4, 137, 183) !important; cursor: default;" title="En/Tamarin/Tamarin Tests/Running Tamarin compliance tests">Running Tamarin Acceptance Tests</a> for instructions on running the acceptance test suite.</p>
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 1.7em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;">The most common tests are written in actionscript and end with .as.</p>
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 1.7em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;">The acceptance test template can be found <a class="internal" href="/En/Tamarin/Tamarin_Acceptance_Testing/Actionscript_Acceptance_Tests/Tamarin_Test_Template" style="text-decoration: none; color: rgb(4, 137, 183) !important; cursor: default;" title="En/Tamarin/Creating Tamarin Tests/Actionscript Acceptance Tests/Tamarin Test Template">here</a>.</p>
+<h4 id="Testing_versioned_bug_fixes">Testing versioned bug fixes</h4>
+<p>When testing versioned bug fixes (using Avmplus.System.swfVersion) there are a couple of requirements:</p>
+<div>
+<ul> <li>You must use <span style="font-family: 'Courier New';">System.swfVersion</span> when looking up the swfVersion.</li> <li>The test file can not be wrapped in a package or define classes as the file will be wrapped in a function when used in the ATS.  If you must use classes, define them in a sub-dir with the same name as the test.</li> <li>You must create a testname.as.avm_args file with the USES_SWFVERSION directive.</li>
+</ul>
+<h3 id="Support_Files">Support Files:</h3>
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 1.7em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;">There are a variety of support files available for non-standard actionscript tests.</p>
+<h4 id="testname.as.asc_args">testname.as.asc_args</h4>
+<p style="margin-left: 40px;">This file specifies additional arguments to pass to asc when compiling the test:</p>
+<pre style="margin-left: 40px;"># ASC args for file
+# two modes are available:
+# override| all command line arguments (except builtin.py) are ignored and replaced by these
+# merge| merge these args in with the current args
+# specifiy an arg that starts with -no will disable the arg... eg: -no-optimize
+merge| -AS3
+</pre>
+<p style="margin-left: 40px;">A dir.asc_args file can also be created with the same contents that will apply to the entire directory.  <br>
+testname.as.asc_args files will take precedence over the dir.asc_args file.</p>
+<h4 id="testname.as.avm_args">testname.as.avm_args</h4>
+<p style="margin-left: 40px;">This file specifies additional arguments to pass to the shell when running the test - the user can use the special variable $DIR to refer to the current directory.  This example passes in another .abc file as an argument to the file being run:</p>
+<pre style="margin-left: 40px;">-- $DIR/file.abc</pre>
+<p style="margin-left: 40px;">Another use would be to pass a specific argument to the shell:</p>
+<pre style="margin-left: 40px;">-Dtimeout
+</pre>
+<p style="margin-left: 40px;">This file can have multiple lines with different arguments.  When there are multiple lines, the harness will re-run the test for every line passing along the different arguments.</p>
+<p style="margin-left: 40px;">There is one special keyword that can be used, USES_SWFVERSION.  When that keyword is encountered, the test harness will run the test against all possible -swfversion versions:</p>
+<pre style="margin-left: 40px;"> USES_SWFVERSION</pre>
+<p style="margin-left: 40px;">is the equivalent of:</p>
+<pre style="margin-left: 40px;">-swfversion 9
+-swfversion 10
+-swfversion 11
+-swfversion 12
+...</pre>
+<p style="margin-left: 40px;">Any additional args on the  USES_SWFVERSION line will be passed to each run of the vm. (See Bug 587093 for details.)</p>
+<p style="margin-left: 40px;"><strong>Specifying multiple .abcs:</strong></p>
+<p style="margin-left: 40px;">If you desire to run a test with multiple .abc files (e.g: avmshell a.abc b.abc testname.abc) there is a special avm_args directive called multiabc that is specified surrounded by two pipe (|) symbols:</p>
+<pre style="margin-left: 40px;">|multiabc| $DIR/testname_support/a.abc $DIR/testname_support/b.abc</pre>
+<p style="margin-left: 40px;">The extra abc files will usually be placed in a _support dir (see Additional Files below).  Any avm arguments can be placed before the |multiabc| directive, or the line can start with the directive.  Any test arguments (--) must be placed after the multiabc file listings.  Here is a more complicated example that passes both avm args, multiple abcs and test args:</p>
+<pre style="margin-left: 40px;">-Ojit |multiabc|  $DIR/testname_support/a.abc -- test_args<br></pre>
+<p style="margin-left: 40px;">A dir.avm_args file can also be created with the same contents that will apply to the entire directory.<br>
+testname.as.avm_args files will take precedence over the dir.avm_args file</p>
+<h4 id="testname.as.tz">testname.as.tz</h4>
+<p style="margin-left: 40px;">If a test is only valid for certain timezones, the timezones can be specified in this support file.<br>
+Below is a sample file that covers the 4 main US timezones:</p>
+<p style="margin-left: 40px;"> </p>
+<pre># Place all timezones that this file applies to.
+# These values correspond to the value returned by time.tzname tuple.
+# (See http://docs.python.org/library/time.html for details)
+# e.g.: Eastern Standard Time/Eastern Daylight Time = ('EST','EDT')
+# Write timezones as tuples, one to each line.
+('EST', 'EDT')
+('CST', 'CDT')
+('MST', 'MDT')
+('PST', 'PDT')</pre>
+<h4 id="testname.err">testname.err</h4>
+<p style="margin-left: 40px;">This file is used when the test throws an uncatchable error.  The first line must contain the expected error (without the extra debugger information).  The exitcode is optional, but must be defined in this file if non-zero.</p>
+<pre style="margin-left: 40px;">VerifyError: Error #1021
+exitcode: 1
+</pre>
+<h4 id="testname.exitcode">testname.exitcode</h4>
+<p style="margin-left: 40px;">File that specifies the expected exitcode.  Should just be an integer with nothing else.  (Note that if a .err file is defined, the .exitcode file will be ignored).  In this example the .as test runs out of memory and so the expected exitcode is:</p>
+<pre style="margin-left: 40px;">128
+</pre>
+<h4 id="testname.out">testname.out</h4>
+<p style="margin-left: 40px;">File that specifies expected output.  This should only be used when it is not possible to generate the test using the standard test framework.  When this file is defined, the output from the testcase is matched line by line to the .out file and any difference is considered a failure.  May be used in conjunction with a .exitcode file.</p>
+<h4 id="testname.abc_">testname.abc_</h4>
+<p style="margin-left: 40px;">For special cases where the .as source is not available (e.g. fuzzed files) it is possible to check in a .abc_ which will let the test harness run compiled files without source.  The underscore is necessary otherwise the buildbot system will delete the .abc before starting up a testrun (not an issue when running locally, but makes it easy to differentiate between binary-only abc files and generated abcs.</p>
+<h3 id="Support_Directories">Support Directories</h3>
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 1.7em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;">In some cases a test may require additional files to successfully run.  There are two kinds of support directories available.</p>
+<h4 id="Files_to_be_included_when_compiling_the_test">Files to be included when compiling the test:</h4>
+<p style="margin-left: 40px;">If a test requires additional .as files to be included when compiling, a directory with the same name as the test (minus any extension) can be created.  The name is case-sensitive.</p>
+<p style="margin-left: 40px;">e.g:<br>
+Given a test named <code style="color: inherit; font-weight: inherit;">inheritClass.as</code>, the user can create a directory named <code style="color: inherit; font-weight: inherit;">inheritClass</code> and place files <code style="color: inherit; font-weight: inherit;">a.as</code> and <code style="color: inherit; font-weight: inherit;">b.as</code> in that directory.</p>
+<p style="margin-left: 40px;">When the harness compiles the <code style="color: inherit; font-weight: inherit;">inheritClass.as</code> test, the files in <code style="color: inherit; font-weight: inherit;">inheritClass</code> will be included:</p>
+<p style="margin-left: 40px;"><code style="color: inherit; font-weight: inherit;">java -jar asc.jar -import builtin.abc -in shell.as -in inheritClass/a.as -in inheritClass/b.as inheritClass.as</code></p>
+<h4 id="Additional_files_required_by_a_test">Additional files required by a test:</h4>
+<p style="margin-left: 40px;">If a test requires additional files to run, but are not to be included when compiling, a testname_support directory can be created.  The directory name should not include any testname extensions.  Any .as files in this directory will be compiled, but will not be run by the harness.</p>
+<p style="margin-left: 40px;">Note that if you have .as files in the _support dir, they will be compiled as if they are regular tests.  If you do not wish to have shell.as included when compiling, you must create a dir.asc_args file with an override parameter:</p>
+<pre style="margin-left: 40px;"># the following line will override all compile arguments and just compile a .as file with -import builtin.abc
+override|
+</pre>
+</div>

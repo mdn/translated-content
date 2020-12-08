@@ -1,0 +1,560 @@
+---
+title: XPIDL
+slug: Mozilla/Tech/XPIDL
+tags:
+  - Developing Mozilla
+  - Guide
+  - NeedsContent
+  - XPCOM
+  - xpidl
+translation_of: Mozilla/Tech/XPIDL
+---
+<p><strong>XPIDL</strong> は <a href="ja/XPCOM">XPCOM</a> インターフェースクラスを指定するためのインターフェース記述言語 (Interface Description Language) です。</p>
+
+<div class="boxed translate-rendered">
+<p>インターフェース記述言語 (IDL) は言語やマシンから独立したインターフェースの記述に使われます。IDL は言語に依存しないインターフェース定義をツールで自動生成するために利用されるような、インターフェースの記述を可能にします。 XPIDL は、将来的に WebIDL に収束する予定です。</p>
+
+<div class="note">
+<p><strong>Note:</strong> Starting in {{Gecko("9.0")}}, the older <a href="https://developer.mozilla.org/en-US/docs/XPIDL/xpidl" title="XPIDL/xpidl">xpidl</a> utility, which was previously used to generate C++ header files, typelib information, and so forth has been replaced with <a href="https://developer.mozilla.org/en-US/docs/XPIDL/pyxpidl" title="XPIDL/pyxpidl">pyxpidl</a> in the <a href="https://developer.mozilla.org/en-US/docs/Gecko_SDK" title="Gecko SDK">Gecko SDK</a>. <a href="https://developer.mozilla.org/en-US/docs/XPIDL/pyxpidl" title="XPIDL/pyxpidl">pyxpidl</a> has been used for some time now, but now the older tool has been fully retired.</p>
+</div>
+
+<h2 id="Writing_XPIDL_interface_files" name="Writing_XPIDL_interface_files">Writing XPIDL interface files</h2>
+
+<p>XPIDL は <a class="external external-icon" href="http://www.omg.org/gettingstarted/omg_idl.htm">OMG IDL</a> によく似ており、 IID と追加の型を処理する拡張構文があります。いくつかの例は Mozilla tree の {{Source("xpcom/base")}} と {{Source("xpcom/ds")}} ディレクトリにあります。</p>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/en-US/docs/XPIDL/Syntax" title="XPIDL/Syntax">XPIDL:Syntax</a> (Now up to date again)</li>
+ <li><a class="external external-icon" href="http://www.mozilla.org/scriptable/xpidl/syntax.html">XPIDL syntax</a> (Out of date)</li>
+ <li><a class="external external-icon" href="http://www.mozilla.org/scriptable/xpidl/idl-authors-guide/index.html">XPIDL Author's Guide</a> (Not as out of date)</li>
+</ul>
+
+<h2 id="Explanation_of_IDL_semantics" name="Explanation_of_IDL_semantics">Explanation of IDL semantics</h2>
+
+<p>A full guide to the syntax can be found at <a href="https://developer.mozilla.org/en-US/docs/XPIDL/Syntax" title="XPIDL/Syntax">XPIDL:Syntax</a>, which is written in an ABNF form.</p>
+
+<p>An xpidl file is essentially just a series of declarations. At the top level, we can define typedefs, native types, or interfaces. Interfaces may furthermore contain typedefs, natives, methods, constants, or attributes. Most declarations can have properties applied to them.</p>
+
+<h3 id="Types">Types</h3>
+
+<p>There are three ways to make types: a typedef, a native, or an interface. In addition, there are a few built-in native types. The built-in native types are those listed under the type_spec production above. The following is the correspondence table:</p>
+
+<table class="standard-table">
+ <caption>Table 1: Standard IDL types</caption>
+ <thead>
+  <tr>
+   <th scope="col">IDL</th>
+   <th scope="col">C++ in parameter</th>
+   <th scope="col">C++ out parameter</th>
+   <th scope="col">JS type</th>
+   <th scope="col">Notes</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>boolean</code></td>
+   <td><code>bool</code></td>
+   <td><code>bool *</code></td>
+   <td>boolean</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>char</code></td>
+   <td><code>char</code></td>
+   <td><code>char *</code></td>
+   <td>string</td>
+   <td>Only chars in range \u0000-\u00ff permitted</td>
+  </tr>
+  <tr>
+   <td><code>double</code></td>
+   <td><code>double</code></td>
+   <td><code>double *</code></td>
+   <td>number</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>float</code></td>
+   <td><code>float</code></td>
+   <td><code>float *</code></td>
+   <td>number</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>long</code></td>
+   <td><code>int32_t</code></td>
+   <td><code>int32_t *</code></td>
+   <td>number</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>long long</code></td>
+   <td><code>int64_t</code></td>
+   <td><code>int64_t *</code></td>
+   <td>number</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>octet</code></td>
+   <td><code>uint8_t</code></td>
+   <td><code>uint8_t *</code></td>
+   <td>number</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>short</code></td>
+   <td><code>int16_t</code></td>
+   <td><code>int16_t *</code></td>
+   <td>number</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>string</code></td>
+   <td><code>const char *</code></td>
+   <td><code>char **</code></td>
+   <td>string</td>
+   <td>
+    <p>Only chars in range \u0000-\u00ff permitted</p>
+
+    <p>Most of the time you don't want to use this type but AUTF8String or ACString</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>unsigned long</code></td>
+   <td><code>uint32_t</code></td>
+   <td><code>uint32_t *</code></td>
+   <td>number</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>unsigned long long</code></td>
+   <td><code>uint64_t</code></td>
+   <td><code>uint64_t *</code></td>
+   <td>number</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>unsigned short</code></td>
+   <td><code>uint16_t</code></td>
+   <td><code>uint16_t *</code></td>
+   <td>number</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>wchar</code></td>
+   <td><code>PRUnichar</code></td>
+   <td><code>PRUnichar *</code></td>
+   <td>string</td>
+   <td>Full Unicode set permitted</td>
+  </tr>
+  <tr>
+   <td><code>wstring</code></td>
+   <td><code>const PRUnichar *</code></td>
+   <td><code>PRUnichar **</code></td>
+   <td>string</td>
+   <td>
+    <p>Full Unicode set permitted</p>
+
+    <p>Most of the time you don't want to use this type but AString.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>In addition to this list, nearly every IDL file includes <code>nsrootidl.idl</code> in some fashion, which also defines the following types:</p>
+
+<table class="standard-table">
+ <caption>Table 2: Types provided by nsrootidl.idl</caption>
+ <thead>
+  <tr>
+   <th scope="col">IDL typedef</th>
+   <th scope="col">C++ in parameter</th>
+   <th scope="col">C++ out parameter</th>
+   <th scope="col">JS type</th>
+   <th scope="col">Notes</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>PRTime</code></td>
+   <td colspan="2" rowspan="1">(XPIDL <code>unsigned long long</code> typedef, 64 bits)</td>
+   <td rowspan="1">number</td>
+   <td rowspan="1">PRTime is in microseconds, while JS date assumes time in milliseconds</td>
+  </tr>
+  <tr>
+   <td><code>nsresult</code></td>
+   <td colspan="2" rowspan="1">(XPIDL <code>unsigned long</code> typedef, 32 bits)</td>
+   <td rowspan="1">number</td>
+   <td rowspan="1"></td>
+  </tr>
+  <tr>
+   <td><code>nsrefcnt</code></td>
+   <td colspan="2" rowspan="1">(XPIDL <code>unsigned long</code> typedef, 32 bits)</td>
+   <td rowspan="1">number</td>
+   <td rowspan="1"></td>
+  </tr>
+  <tr>
+   <td><code>size_t</code></td>
+   <td colspan="2" rowspan="1">(XPIDL <code>unsigned long</code> typedef, 32 bits)</td>
+   <td rowspan="1">number</td>
+   <td rowspan="1"></td>
+  </tr>
+  <tr>
+   <td><code>voidPtr</code></td>
+   <td><code>void *</code></td>
+   <td><code>void *</code></td>
+   <td>not allowed</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>charPtr</code></td>
+   <td><code>char *</code></td>
+   <td><code>char **</code></td>
+   <td>not allowed</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>unicharPtr</code></td>
+   <td><code>PRUnichar *</code></td>
+   <td><code>PRUnichar **</code></td>
+   <td>not allowed</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>nsIDRef</code></td>
+   <td><code>const nsID &amp;</code></td>
+   <td><code>nsID *</code></td>
+   <td>?</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>nsIIDRef</code></td>
+   <td><code>const nsIID &amp;</code></td>
+   <td><code>nsIID *</code></td>
+   <td>?</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>nsCIDRef</code></td>
+   <td><code>const nsCID &amp;</code></td>
+   <td><code>nsCID *</code></td>
+   <td>?</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>nsIDPtr</code></td>
+   <td><code>const nsID *</code></td>
+   <td><code>nsID **</code></td>
+   <td>?</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>nsIIDPtr</code></td>
+   <td><code>const nsIID *</code></td>
+   <td><code>nsIID **</code></td>
+   <td>?</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>nsCIDPtr</code></td>
+   <td><code>const nsCID *</code></td>
+   <td><code>nsCID **</code></td>
+   <td>?</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>nsIID</code></td>
+   <td><code>const nsIID</code></td>
+   <td><code>nsIID *</code></td>
+   <td>?</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>nsID</code></td>
+   <td><code>const nsID</code></td>
+   <td><code>nsID *</code></td>
+   <td>?</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>nsCID</code></td>
+   <td><code>const nsCID</code></td>
+   <td><code>nsCID *</code></td>
+   <td>?</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>nsQIResult</code></td>
+   <td><code>void *</code></td>
+   <td><code>void **</code></td>
+   <td>object</td>
+   <td>Should only be used with methods that act like QueryInterface</td>
+  </tr>
+  <tr>
+   <td><code>DOMString</code></td>
+   <td><code>const nsAString &amp;</code></td>
+   <td><code>nsAString &amp;</code></td>
+   <td>string</td>
+   <td>Full Unicode set permitted</td>
+  </tr>
+  <tr>
+   <td><code>AUTF8String</code></td>
+   <td><code>const nsACString &amp;</code></td>
+   <td><code>nsACString &amp;</code></td>
+   <td>string</td>
+   <td>Full Unicode set permitted (translated to UTF-8)</td>
+  </tr>
+  <tr>
+   <td><code>ACString</code></td>
+   <td><code>const nsACString &amp;</code></td>
+   <td><code>nsACString &amp;</code></td>
+   <td>string</td>
+   <td>Only chars in range \u0000-\u00ff permitted</td>
+  </tr>
+  <tr>
+   <td><code>AString</code></td>
+   <td><code>const nsAString &amp;</code></td>
+   <td><code>nsAString &amp;</code></td>
+   <td>string</td>
+   <td>Full Unicode set permitted</td>
+  </tr>
+  <tr>
+   <td><code>jsval</code></td>
+   <td><code>const jsval &amp;</code></td>
+   <td><code>jsval *</code></td>
+   <td>anything</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>jsid</code></td>
+   <td><code>jsid</code></td>
+   <td><code>jsid *</code></td>
+   <td>not allowed</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Typedefs in IDL are basically as they are in C or C++: you define first the type that you want to refer to and then the name of the type. Types can of course be one of the fundamental types, or any other type declared via a typedef, interface, or a native type.</p>
+
+<p>Native types are types which correspond to a given C++ type. Most native types are not scriptable: if it is not present in the list above, then it is certainly not scriptable (some of the above, particularly jsid, are not scriptable).</p>
+
+<p>The contents of the parentheses of a native type declaration (although native declarations without parentheses are parsable, I do not trust that they are properly handled by the xpidl handlers) is a string equivalent to the C++ type. XPIDL itself does not interpret this string, it just literally pastes it anywhere the native type is used. The interpretation of the type can be modified by having properties on the native declaration:</p>
+
+<table class="standard-table">
+ <caption>Table 3: Native type definitions</caption>
+ <tbody>
+  <tr>
+   <td>astring</td>
+   <td>This is an nsAString declaration. Overrides native string.</td>
+  </tr>
+  <tr>
+   <td>cstring</td>
+   <td>This is an nsACString declaration. Overrides native string.</td>
+  </tr>
+  <tr>
+   <td>domstring</td>
+   <td>This is an nsAString declaration. Overrides native string.</td>
+  </tr>
+  <tr>
+   <td>jsval</td>
+   <td>This type gets const when an in type. Special in typelib.</td>
+  </tr>
+  <tr>
+   <td>nsid</td>
+   <td>This type gets const when an in type. Special in typelib.</td>
+  </tr>
+  <tr>
+   <td>ptr</td>
+   <td>The type is really (native str)*</td>
+  </tr>
+  <tr>
+   <td>ref</td>
+   <td>The type is really (native str)&amp;</td>
+  </tr>
+  <tr>
+   <td>utf8string</td>
+   <td>This is an nsACString declaration whose text is UTF-8.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p class="warning">As far as I can tell, these properties also apply to typedefs. Need to verify.</p>
+
+<h3 id="Constants">Constants</h3>
+
+<p>Constants are technically legal at the top level, but xpidl I forbids them from being placed there; instead, they must be in an interface. The only constants supported are those which become integer types when compiled to source code; string constants and floating point constants, though parseable, cannot be made into a header or xpt file.</p>
+
+<p>Constants are emitted in header files using anonymous enums, although there is an outstanding patch that combines adjacent constants into the same anonymous enums to quiet enum mismatch warnings.</p>
+
+<h3 id="Interfaces">Interfaces</h3>
+
+<p>Specifying interfaces is the primary purpose of using xpidl. Interfaces are basically a collection of constants, methods, and attributes; in Mozilla, these are the primary ways in which JavaScript code can interact with native C++ code. Furthermore, interfaces can also inherit from another interface. Every interface should inherit <a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/nsISupports" title="nsISupports">nsISupports</a> in some fashion. However, it is generally not recommended to have a chain of interfaces inheriting from each other if you intend to have a chain of implementations for each interface, as it can cause problems in C++ code.</p>
+
+<table class="standard-table">
+ <caption>Table 4: Basic interface attributes</caption>
+ <thead>
+  <tr>
+   <th scope="col">Attribute</th>
+   <th scope="col">Interpretation</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>uuid(12345678-fedc-ba98-7654-0123456789ab)</code></td>
+   <td>This is the internal way this interface is accessed; it must be unique, and the uuid must be generated when creating the interface. After that, it doesn't need to be changed any more. For instructions on how to generate an UUID see <a href="https://developer.mozilla.org/en-US/docs/Generating_GUIDs" title="Generating GUIDs">Generating GUIDs</a>.</td>
+  </tr>
+  <tr>
+   <td><code>builtinclass</code></td>
+   <td>JavaScript classes are forbidden from implementing this interface. All children must also be marked with this property.</td>
+  </tr>
+  <tr>
+   <td><code>function</code></td>
+   <td>The JavaScript implementation of this interface may be a function that is invoked on property calls instead of an object with the given property</td>
+  </tr>
+  <tr>
+   <td><code>scriptable</code></td>
+   <td>This interface is usable by JavaScript classes. Must inherit from a <code>scriptable</code> interface.</td>
+  </tr>
+  <tr>
+   <td><code>deprecated</code></td>
+   <td>This interface should no longer be used. The compiler will emit warnings if you attempt to use this.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Methods_and_attributes">Methods and attributes</h3>
+
+<p>Interfaces declare a series of attributes and methods. Attributes in IDL are akin to JavaScript properties, in that they are a getter and (optionally) a setter pair. In JavaScript contexts, attributes are exposed as a regular property access, while native code sees attributes as a Get and possibly a Set method.</p>
+
+<p>Attributes can be declared readonly, in which case setting causes an error to be thrown in script contexts and native contexts lack the Set method, by using the "readonly" keyword.</p>
+
+<p>To native code, on attribute declared 'attribute type foo;' is syntactic sugar for the declaration of two methods 'type getFoo();' and 'void setFoo(in type foo);'. If foo were declared readonly, the latter method would not be present. Attributes support all of the properties of methods with the exception of <code>optional_argc</code>, as this does not make sense for attributes.</p>
+
+<p>There are some special rules for attribute naming. As a result of vtable munging by the MSVC++ compiler, an attribute with the name `IID' is forbidden. In addition, any attribute whose name matches the regex /^[a-z]{2,3}I[A-Z][a-z]/ is emitted with a warning, as its name looks like an nsIInterface or a mozIInterface declaration. Also like methods, if the first character of an attribute is lowercase in IDL, it is made uppercase in native code only.</p>
+
+<p>Methods define a return type and a series of in and out parameters. When called from a JavaScript context, they invocation looks as it is declared for the most part; some parameter properties can adjust what the code looks like. The calls are more mangled in native contexts.</p>
+
+<p>An important attribute for methods and attributes is scriptability. A method or attribute is scriptable if it is declared in a <code>scriptable</code> interface and it lacks a <code>noscript</code> or <code>notxpcom</code> property. Any method that is not scriptable can only be accessed by native code. However, scriptable methods must contain parameters and a return type that can be translated to script: any native type, save those declared with an <code>nsid</code>, <code>domstring</code>, <code>utf8string</code>, <code>cstring</code>, <code>astring</code>, or <code>jsval</code> property, may not be used in a scriptable method or attribute. An exception to the above rule is if the parameter has the <code>iid_is</code> property (a special case for some QueryInterface-like operations). In general, this means that the only usable native types are those declared in nsrootidl.idl (see above).</p>
+
+<p>Methods and attributes are mangled on conversion to native code. If a method is declared <code>notxpcom</code>, the mangling of the return type is prevented, so it is called mostly as it looks. Otherwise, the return type of the native method is nsresult, and the return type acts as a final outparameter if it is not void. The name is translated so that the first character is unconditionally uppercase; subsequent characters are unaffected. However, the presence of the <code>binaryname</code> property allows the user to select another name to use in native code (to avoid conflicts with other functions). For example, the method '[binaryname(foo)] void bar();' becomes 'nsresult Foo()' in native code (note that capitalization is still applied). However, the capitalization is not applied when using <code>binaryname</code> with attributes; i.e., <code>[binaryname(foo)] readonly attribute Quux bar;</code> becomes <code>Getfoo(Quux**)</code> in native code. Attributes named 'IID' and methods named 'GetIID' are forbidden, although this is checked before binaryname conversion.</p>
+
+<p>The <code>implicit_jscontext</code> and <code>optional_argc</code> parameters are properties which help native code implementations determine how the call was made from script. If <code>implicit_jscontext</code> is present on a method, then an additional JSContext *cx parameter is added just after the regular list which receives the context of the caller. If <code>optional_argc</code> is present, then an additional uint8_t _argc method is added at the end which receives the number of optional arguments that were actually used (obviously, you need to have an optional argument in the first place). Note that if both properties are set, the JSContext *cx is added first, followed by the uint8_t _argc, and then ending with return value parameter. Finally, as an exception to everything already mentioned, for attribute getters and setters the JSContext *cx comes before any other arguments.</p>
+
+<p>In addition, methods and attributes can be both marked as deprecated with the <code>deprecated</code> property, which causes compilers to emit deprecation usage warnings. Note that this is only verified in native code and not script code.</p>
+
+<p>The final native-only property is <code>nostdcall</code>. Normally, declarations are made in the stdcall ABI on Windows to be ABI-compatible with COM interfaces. Any non-scriptable method or attribute with <code>nostdcall</code> instead uses the thiscall ABI convention. Methods without this property generally use NS_IMETHOD in their declarations and NS_IMETHODIMP in their definitions to automatically add in the stdcall declaration specifier on requisite compilers; those that use this method may use a plain `nsresult' instead.</p>
+
+<h4 id="Source_and_Binary_Compatibility">Source and Binary Compatibility</h4>
+
+<p>Some consumers of IDL interfaces create binary plugins that expect the interfaces to be stored in a specific way in memory. In other words, some changes made to IDL interfaces require the author to modify the unique identifier (IID) in order to make it clear to plugins that utilize these interfaces that they have changed, and thus their plugin must be recompiled.</p>
+
+<p>Common changes to an interface, such as changes to a method signature, number of arguments, and number or type of attributes, automatically require an IID change. In addition, some changes to interface attributes require that an IID be changed, as well. When a change to an interface made by an XPIDL developer requires that third-party binary addons be recompiled, we say that it affects <em>binary compatibility</em>. When a change to an interface made by an XPIDL developer requires that third-party binary addons change their source code, we say that it affects <em>source compatibility. </em>In table 5, the columns on the far right indicate whether changes to a specific attribute affect source compatibility, binary compatibility, or both.</p>
+
+<table>
+ <caption>Table 5: Optional interface attributes</caption>
+ <thead>
+  <tr>
+   <th scope="row">Attribute</th>
+   <th scope="col">Valid for methods</th>
+   <th scope="col">Valid for attributes</th>
+   <th scope="col">Effect</th>
+   <th scope="col">Changes Source Compatibility?</th>
+   <th scope="col">Changes Binary Compatibility?</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>binaryname(foo)</code></td>
+   <td>Y</td>
+   <td>Y</td>
+   <td>Results in the C++ method being called "<code>Foo</code>"</td>
+   <td>Y</td>
+   <td>N</td>
+  </tr>
+  <tr>
+   <td><code>deprecated</code></td>
+   <td>Y</td>
+   <td>Y</td>
+   <td>Emits a compiler warning if used in C++ code</td>
+   <td>N</td>
+   <td>N</td>
+  </tr>
+  <tr>
+   <td><code>implicit_jscontext</code></td>
+   <td>Y</td>
+   <td>Y</td>
+   <td>Adds an additional <code>JSContext *cx</code> parameter to the C++ implementation</td>
+   <td>Y</td>
+   <td>Y</td>
+  </tr>
+  <tr>
+   <td><code>noscript</code></td>
+   <td>Y</td>
+   <td>Y</td>
+   <td>Prohibits the method/attribute from being accessible in JS code</td>
+   <td>N</td>
+   <td>N</td>
+  </tr>
+  <tr>
+   <td><code>nostdcall</code></td>
+   <td>Y</td>
+   <td>Y</td>
+   <td>The C++ implementation uses <code>virtual nsresult</code> instead of <code>NS_IMETHOD</code>/<code>NS_IMETHODIMP</code></td>
+   <td>Y</td>
+   <td>Y</td>
+  </tr>
+  <tr>
+   <td><code>notxpcom</code></td>
+   <td>Y</td>
+   <td>Y</td>
+   <td>The C++ implementation does not return <code>nsresult</code> (implies <code>noscript</code>)</td>
+   <td>Y</td>
+   <td>Y</td>
+  </tr>
+  <tr>
+   <td><code>optional_argc</code></td>
+   <td>Y</td>
+   <td>N</td>
+   <td>Adds an additional <code>uint8_t _argc</code> parameter to the C++ implementation</td>
+   <td>Y</td>
+   <td>Y</td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Method_parameters">Method parameters</h4>
+
+<p>Each method parameter can be specified in one of three modes: <code>in</code>, <code>out</code>, or <code>inout</code>. An out parameter is essentially an auxiliary return value, although these are moderately cumbersome to use from script contexts and should therefore be avoided if reasonable. An inout parameter is an in parameter whose value may be changed as a result of the method; these parameters are rather annoying to use and should generally be avoided if at all possible.</p>
+
+<p>Out and inout parameters are reflected as objects having the .value property which contains the real value of the parameter; it is not initialized in the case of out parameters and is initialized to the passed-in-value for inout parameters. The script code would need to set this property to assign a value to the parameter. Regular in parameters are reflected more or less normally, with numeric types all representing numbers, booleans as true or false, the various strings (including AString et al) as a JavaScript string, and nsid types as a Components.ID instance. In addition, the jsval type is translated as the appropriate JavaScript value (since a jsval is the internal representation of all JavaScript values), and objects that are marked nsIVariant have their<br>
+ types automatically boxed and unboxed as appropriate.</p>
+
+<p>The equivalent representations of all IDL types in native code is given in the earlier tables; parameters of type inout follow their out form. Native code should pay particular attention to not passing in null values for out parameters (although some parts of the codebase are known to violate this, it is strictly enforced at the JS&lt;-&gt;native barrier), and also ensuring that boolean types only receive values of 0 (false) or 1 (true).</p>
+
+<p>Representations of types additionally depend on some of the many types of properties they may have. The <code>array</code> property turns the parameter into an array; the parameter must also have a corresponding <code>size_is</code> property whose argument is the parameter that has the size of the array. In native code, the type gains another pointer indirection, and JavaScript arrays are used in script code. Script code callers can ignore the value of array parameter, but implementors must still set the values appropriately.</p>
+
+<p>The <code>const</code> and <code>shared</code> properties are special to native code. As its name implies, the const property makes its corresponding argument const. The shared property is only meaningful for out or inout parameters and it means that the pointer value should not be freed by the caller. Only the string, wstring, and native types having the nsid, domstring, utf8string, cstirng, astring, or jsval properties may be declared shared, and, even then, only if the parameter is not an array parameter. The shared property also makes its corresponding argument const.<br>
+ <br>
+ The <code>retval</code> property indicates that the parameter is actually acting as the return value, and it is only the need to assign properties to the parameter that is causing it to be specified as a parameter. It has no effect on native code, but script code uses it like a regular return value. Naturally, a method which contains a retval parameter must be declared void, and the parameter itself must be an out parameter and the last parameter.</p>
+
+<p>Other properties are the <code>optional</code> and <code>iid_is</code> property. The optional property indicates that script code may omit the property without problems; all subsequent parameters must either by optional themselves or the retval parameter. Note that optional out parameters still pass in a variable for the parameter, but its value will be ignored. The iid_is parameter indicates that the real IID of an nsQIResult parameter may be found in the corresponding parameter, to allow script code to automatically unbox the type.</p>
+
+<p>Not all type combinations are possible. Native types with the various string properties are all forbidden from being used as an inout parameter or as an array parameter. In addition, native types with the nsid property but lacking either a ptr or ref property are forbidden unless the method is notxpcom and it is used as an inparameter.</p>
+
+<p>For types that reference heap-allocated data (strings, arrays, interface pointers, etc), you must follow the XPIDL data ownership conventions in order to avoid memory corruption and security vulnerabilities:</p>
+
+<ul>
+ <li>For <code>in</code> parameters, the caller allocates and deallocates all data. If the callee needs to use the data after the call completes, it must make a private copy of the data, or, in the case of interface pointers, AddRef it.</li>
+ <li>For <code>out</code> parameters, the callee creates the data, and transfers ownership to the caller. For buffers, the callee allocates the buffer with NS_Alloc, and the caller frees the buffer with NS_Free. For interface pointers, the callee does the AddRef on behalf of the caller, and the caller must call Release.</li>
+ <li>For <code>inout</code> parameters, the callee must clean up the old data if it chooses to replace it. Buffers must be deallocated with NS_Free, and interface pointers must be Release'd. Afterwards, the above rules for <code>out</code> apply.</li>
+ <li>Shared out-parameters should not be freed, as they are intended to refer to constant string literals.</li>
+</ul>
+
+<h2 id="Resources" name="Resources">Resources (mostly outdated)</h2>
+
+<ul>
+ <li><a class="external external-icon" href="http://www.mozilla.org/scriptable/xpidl/notes/">Some unsorted notes</a> including a <a class="external external-icon" href="http://www.mozilla.org/scriptable/xpidl/notes/keywords.txt">keyword list</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/XPIDL/xpidl" title="XPIDL/xpidl">xpidl</a> is a tool for generating C++ headers, Java interfaces, <a href="https://developer.mozilla.org/en-US/docs/XPConnect" title="XPConnect">XPConnect</a> typelibs, and HTML documentation from XPIDL files</li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/XPIDL/Generating_xpt_on_Windows" title="XPIDL/Generating_xpt_on_Windows">Generating xpt files on Windows</a></li>
+ <li><a class="external external-icon" href="http://groups.google.com/group/mozilla.dev.extensions/browse_thread/thread/371b5f04e4ecdcfb/a9d48a45c9453d16?q=idl+OR+xpidl+variable+argument+group:mozilla.dev.*#a9d48a45c9453d16" title="http://groups.google.com/group/mozilla.dev.extensions/browse_thread/thread/371b5f04e4ecdcfb/a9d48a45c9453d16?q=idl+OR+xpidl+variable+argument+group:mozilla.dev.*#a9d48a45c9453d16">A Google groups post</a> with instructions on how to use variable-length argument lists using XPIDL.</li>
+</ul>
+</div>

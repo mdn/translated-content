@@ -1,0 +1,54 @@
+---
+title: Opening a Link in the Default Browser
+slug: Archive/Mozilla/XULRunner/Opening_a_Link_in_the_Default_Browser
+tags:
+  - Add-ons
+  - Extensions
+  - XUL
+  - XULRunner
+translation_of: Archive/Mozilla/XULRunner/Opening_a_Link_in_the_Default_Browser
+---
+<div class="warning">
+<p><i>警告</i>: この記事では仕様が未確定のインターフェイスを使っています。これらのインターフェイスは新しいバージョンの Mozilla で変更される可能性があり、その時はこのコードが動かなくなるかもしれません。
+</p>
+</div>
+<p><a href="ja/XULRunner">XULRunner</a> のアプリケーションからデフォルトブラウザで URI を開きたい時があるかもしれません。
+これは HTTP または HTTPS の URI についての場合が多いのですが、それについて使用できる外部ハンドラが存在するあらゆるスキームについてもこの方法を使用できます。
+これは <a href="ja/NsIExternalProtocolService">nsIExternalProtocolService</a> インターフェイスを使って行うことができます。
+</p>
+<pre class="eval">// まず ioservice を用いて <a href="ja/NsIURI">nsIURI</a> オブジェクトを作る
+var ioservice = Components.classes["@mozilla.org/network/io-service;1"]
+                          .getService(Components.interfaces.<a href="ja/NsIIOService">nsIIOService</a>);
+
+var uriToOpen = ioservice.newURI("<span class="nowiki">http://www.example.com/</span>", null, null);
+
+var extps = Components.classes["@mozilla.org/uriloader/external-protocol-service;1"]
+                      .getService(Components.interfaces.nsIExternalProtocolService);
+
+// そしてそれを開く
+extps.loadURI(uriToOpen, null);
+</pre>
+<p>デフォルトでは、外部プロトコルサービスは他のアプリケーションでリンクを開くことについてユーザに警告します。
+デフォルトアプリケーションで開いても安全な特定のプロトコルについての警告を抑制するには、デフォルトの設定項目をセットする必要があります（Thunderbird では以下の設定を使用しています）。
+</p>
+<pre class="eval">// suppress external-load warning for standard browser schemes
+pref("network.protocol-handler.warn-external.http", false);
+pref("network.protocol-handler.warn-external.https", false);
+pref("network.protocol-handler.warn-external.ftp", false);
+</pre>
+<p>あるスキームについての外部ハンドラが存在しているかどうか確認することもできます。これはそれを行う方法です。
+</p>
+<pre class="eval">var extps = Components.classes["@mozilla.org/uriloader/external-protocol-service;1"]
+                      .getService(Components.interfaces.nsIExternalProtocolService);
+if (extps.externalProtocolHandlerExists("http")) {
+  // <a class=" external" href="http://" rel="freelink">http://</a> URL に対するハンドラが存在する
+}
+</pre>
+<h4 id="IFrame_.E5.86.85.E3.81.AE.E3.83.AA.E3.83.B3.E3.82.AF" name="IFrame_.E5.86.85.E3.81.AE.E3.83.AA.E3.83.B3.E3.82.AF">IFrame 内のリンク</h4>
+<p>インラインフレームの "src" として指定されている html 文書内のリンクをデフォルトブラウザで開けるようにするには、次の設定項目をセットします。
+</p>
+<pre class="eval">pref("network.protocol-handler.expose-all", false);
+</pre>
+<p>これでうまくいくようです。
+</p><p><span class="comment">Interwiki Language Links</span>
+</p>

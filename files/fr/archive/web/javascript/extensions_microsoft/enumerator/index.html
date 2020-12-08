@@ -1,0 +1,98 @@
+---
+title: Enumerator
+slug: Archive/Web/JavaScript/Extensions_Microsoft/Enumerator
+tags:
+  - Enumerator
+  - JavaScript
+  - Microsoft
+  - Non-standard
+  - Reference
+translation_of: Archive/Web/JavaScript/Microsoft_Extensions/Enumerator
+---
+<div>{{JSRef}}{{non-standard_header}}</div>
+
+<div class="warning"><strong>Attention !</strong> Cet objet est une extension non-standard de Microsoft. Elle est uniquement prise en charge par Internet Explorer. Elle n'est pas prise en charge dans les applications Windows 8.x Store.</div>
+
+<p>L'objet <code><strong>Enumerator</strong></code> permet d'énumérer les éléments d'une collection.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre>enumObj = new Enumerator([collection])
+</pre>
+
+<h3 id="Paramètres">Paramètres</h3>
+
+<dl>
+ <dt><code>collection</code> {{optional_inline}}</dt>
+ <dd>Un objet <code>Collection</code>.</dd>
+</dl>
+
+<h3 id="Valeur_de_retour">Valeur de retour</h3>
+
+<dl>
+ <dt><code>enumObj</code></dt>
+ <dd>Le nom de la variable à laquelle l'objet <code>Enumerator</code> est affecté.</dd>
+</dl>
+
+<h3 id="Notes">Notes</h3>
+
+<p>Les collections diffèrent des tableaux car les éléments de la collection ne sont pas accessibles directement. Plutôt que d'utiliser des indices, on déplace le pointeur de l'élément courant vers le prochain élément de la collection.</p>
+
+<p>L'objet <code>Enumerator</code> fournit un moyen d'accéder aux éléments d'une collection à la façon de l'instruction <code>For...Each</code> en VBScript.</p>
+
+<h2 id="Exemples">Exemples</h2>
+
+<pre class="brush: js">var bytesPerGB = 1024 * 1024 * 1024;
+var fso = new ActiveXObject("Scripting.FileSystemObject");
+
+document.write(fso.Drives);
+var e = new Enumerator(fso.Drives);
+
+var driveString = "";
+
+e.moveFirst();
+while (e.atEnd() == false) {
+    var drv = e.item();
+    driveString += drv.Path + " - ";
+    if (drv.IsReady) {
+        var freeGB = drv.FreeSpace / bytesPerGB;
+        var totalGB = drv.TotalSize / bytesPerGB;
+        driveString += freeGB.toFixed(3) + " GB free of ";
+        driveString += totalGB.toFixed(3) + " GB";
+    } else {
+      driveString += "Not Ready";
+    }
+    driveString += "&lt;br /&gt;";
+    e.moveNext();
+}
+document.write(driveString);
+// Output: &lt;drive information
+</pre>
+
+<h2 id="Propriétés">Propriétés</h2>
+
+<p>L'objet <code>Enumerator</code> ne possède pas de propriété.</p>
+
+<h2 id="Méthodes">Méthodes</h2>
+
+<dl>
+ <dt><a href="/fr/docs/Web/JavaScript/Microsoft_JavaScript_extensions/Enumerator/atEnd"><code>Enumerator.atEnd</code></a></dt>
+ <dd>Renvoie une booléen qui indique si l'énumérateur a atteint la fin de la collection.</dd>
+ <dt><a href="/fr/docs/Web/JavaScript/Microsoft_JavaScript_extensions/Enumerator/item"><code>Enumerator.item</code></a></dt>
+ <dd>Renvoie l'élément courant de la collection.</dd>
+ <dt><a href="/fr/docs/Web/JavaScript/Microsoft_JavaScript_extensions/Enumerator/moveFirst"><code>Enumerator.moveFirst</code></a></dt>
+ <dd>Déplace le pointeur au premier élément de la collection.</dd>
+ <dt><a href="/fr/docs/Web/JavaScript/Microsoft_JavaScript_extensions/Enumerator/moveNext"><code>Enumerator.moveNext</code></a></dt>
+ <dd>Déplace le pointeur de la collection sur l'élément suivant.</dd>
+</dl>
+
+<h2 id="Prérequis">Prérequis</h2>
+
+<p>Cette fonctionnalité est prise en charge pour les modes suivants : Quirks, Internet Explorer 6 en mode standard, Internet Explorer 7 en mode standard, Internet Explorer 8 en mode standard, Internet Explorer 9 en mode standard et Internet Explorer 10 en mode standard. Cette fonctionnalité n'est pas prise en charge dans les applications Windows 8.x Store.</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="/fr/docs/Web/JavaScript/Extensions_JavaScript_Microsoft">Les extensions JavaScript spécifiques de Microsoft</a></li>
+ <li>{{jsxref("Boolean")}}</li>
+</ul>

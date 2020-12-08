@@ -1,0 +1,125 @@
+---
+title: Firefox OS for TV での hello world の例
+slug: Archive/B2G_OS/TVs_connected_devices/Hello_world_example
+tags:
+  - B2G
+  - Example
+  - Firefox OS
+  - Gaia
+  - TV
+  - WebIDE
+translation_of: Mozilla/Firefox_OS_for_TV/Hello_world_example
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/ja/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<p class="summary">この記事では、シンプルな hello world の例を紹介し、TVアプリを作って、シミュレータでテストするのがどんなに簡単なのかをお見せします。この記事では <a href="/en-US/docs/Tools/WebIDE">WebIDE</a> を使って行きます。</p>
+
+<h2 id="hello_world_を作成する">hello world を作成する</h2>
+
+<p>Let's build up a test app.</p>
+
+<ol>
+ <li>
+  <p>To open the WebIDE in Firefox Desktop, select <em>Tools &gt; Web Developer &gt; WebIDE</em> from the main menu:</p>
+
+  <p><img alt="" src="https://mdn.mozillademos.org/files/10444/11.09.37.png" style="display: block; height: 490px; margin: 0px auto; width: 640px;"></p>
+ </li>
+ <li>
+  <p>Now click <em>Open App</em> in the upper-left corner of WebIDE and choose <em>New App…</em> from the menu:</p>
+
+  <p><img alt="" src="https://mdn.mozillademos.org/files/10446/11.14.38.png"></p>
+ </li>
+ <li>
+  <p>Select <em>HelloWorld</em>, enter the <em>Project Name</em> and click <em>OK</em>:</p>
+
+  <p><img alt="" src="https://mdn.mozillademos.org/files/10448/11.15.06.png"></p>
+ </li>
+ <li>
+  <p>After specifying the directory to save the project in, WebIDE generates an app for you containing simple template code:</p>
+
+  <p><img alt="" src="https://mdn.mozillademos.org/files/10450/11.15.37.png"></p>
+ </li>
+ <li>
+  <p>Now you can program your app directly within WebIDE, or use any other editor that you prefer to edit your code.</p>
+ </li>
+</ol>
+
+<h2 id="TV_でアプリを実行する"><strong>TV でアプリを実行する</strong></h2>
+
+<p>If you have a Panasonic VIERA Firefox OS TV, you can find out how to run your apps on the TV via WebIDE by reading <a href="/en-US/docs/Mozilla/Firefox_OS/TVs_connected_devices/How_to_connect_WebIDE_to_TV_%28VIErA%29">How to connect WebIDE to TV (VIErA CX/CR series)</a>. If not, read on.</p>
+
+<ol>
+ <li>Follow the instructions in <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/TVs_connected_devices/Simulating_Firefox_OS_for_TV">Simulating Firefox OS for TV on your desktop</a> to launch the TV environment inside the Firefox OS simulator.</li>
+ <li>If you are using the available Firefox 2.6 simulator, simply skip to step 5. If you are using your own custom build, read on.</li>
+ <li>In WebIDE, click <em>Select Runtime</em> in the upper-right corner then select <em>Remote Runtime</em> from the menu.<br>
+  <img alt="" src="https://mdn.mozillademos.org/files/10452/11.37.40.png"></li>
+ <li>Enter <em>localhost:6000</em> in the dialog box and click <em>OK</em>:<br>
+  <img alt="" src="https://mdn.mozillademos.org/files/10454/11.37.47.png"></li>
+ <li>Click the <em>Install and Run</em> icon (the "Play" icon) in the WebIDE. You should now see your app running inside the Firefox OS Simulator:<br>
+  <img alt="" src="https://mdn.mozillademos.org/files/10466/11.39.40%202.png"></li>
+ <li>Click the <em>Debug App</em> icon (the "Tool" icon) in WebIDE to debug your app directly on the simulator using the DevTools <a href="/en-US/docs/Tools/Tools_Toolbox">Toolbox</a>:<br>
+  <img alt="" src="https://mdn.mozillademos.org/files/10468/11.40.10%202.png"></li>
+</ol>
+
+<div class="note">
+<p><strong>Note</strong>: Find out more about debugging your apps by reading <a href="/en-US/docs/Tools/WebIDE/Running_and_debugging_apps#Debugging_apps">Debugging apps</a>.</p>
+</div>
+
+<h2 id="次に移動する場所">次に移動する場所</h2>
+
+<p>Building web apps for TV mostly requires the same skills as building web apps generally; there are a few extra considerations to bear in mind, which are discussed in other articles linked from our <a href="/en-US/docs/Mozilla/Firefox_OS/TVs_connected_devices">TVs and connected devices page</a>.</p>
+
+<p>In terms of getting inspiration from existing apps, your can look at the apps that come with Gaia. Gaia 2.1 and above contains facilities for running on TV, and you can find apps for smart TVs in the <a href="https://github.com/mozilla-b2g/gaia/tree/master/tv_apps">gaia/tv_apps</a> directory. <code>smart-home</code> and <code>app-deck</code> are good apps to use as starter templates for your own apps, or to get ideas and inspiration from.</p>

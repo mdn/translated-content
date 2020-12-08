@@ -1,0 +1,196 @@
+---
+title: io/file
+slug: Mozilla/Add-ons/SDK/Low-Level_APIs/io_file
+translation_of: Archive/Add-ons/Add-on_SDK/Low-Level_APIs/io_file
+---
+<p>{{AddonSidebar}}</p>
+
+<div class="note">
+<p>Expérimental</p>
+</div>
+
+<p><span class="seoSummary">Permet d'accéder au système de fichiers local.</span></p>
+
+<h2 id="Utilisation">Utilisation</h2>
+
+<h3 id="Paths">Paths</h3>
+
+<p>Les specifications Path de cette API sont spécifiques à l'OS. Cela signifie que les chemins Windows sont spécifiés en utilisant le séparateur antislash (<code>\</code>), et sur les systèmes de type Unix comme Linux et OS X les slash sont utilisés (<code>/</code>).</p>
+
+<p>To ensure your add-on works for everyone, generate paths using the <a href="/en-US/Add-ons/SDK/Low-Level_APIs/io_file#join(...)"><code>join</code></a> function. Unfortunately this API does not currently provide a way to obtain an absolute base path which you could then use with <code>join</code>. For now, you need to <a href="/en-US/Add-ons/SDK/Tutorials/Chrome_Authority"><code>require("chrome")</code></a> and use the XPCOM directory service as described in <a href="/en-US/Add-ons/Code_snippets/File_I_O">this article about File I/O</a>.</p>
+
+<p>Note that if you do decide to hardcode Windows-style paths, be sure to escape backslashes in strings. For example, to specify the file at <code>C:\Users\Myk</code>, you need to use the string <code>"C:\\Users\\Myk"</code>, not <code>"C:\Users\Myk"</code>.  Read more about <a href="/en-US/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Escaping_characters">escaping characters in strings</a>.</p>
+
+<h2 id="Globals">Globals</h2>
+
+<h3 id="Functions">Functions</h3>
+
+<h4 class="addon-sdk-api-name" id="basename(path)"><code>basename(path)</code></h4>
+
+<div class="note">
+<p>The <code>path</code> parameter must be an absolute path, relative paths will cause an error.</p>
+
+<p>Use the <a href="/en-US/Add-ons/SDK/Low-Level_APIs/fs_path">fs/path</a> module for relative path support.</p>
+</div>
+
+<p>Returns the last component of the given path. For example, <code>basename("/foo/bar/baz")</code> returns <code>"baz"</code>. If the path has no components, the empty string is returned.</p>
+
+<h5 id="Parameters">Parameters</h5>
+
+<p><strong>path : string</strong><br>
+ The path of a file.</p>
+
+<h5 id="Returns">Returns</h5>
+
+<p><strong>string</strong> : The last component of the given path.</p>
+
+<h4 class="addon-sdk-api-name" id="dirname(path)"><code>dirname(path)</code></h4>
+
+<p>Returns the path of the directory containing the given file. If the file is at the top of the volume, the empty string is returned.</p>
+
+<h5 id="Parameters_2">Parameters</h5>
+
+<p><strong>path : string</strong><br>
+ The path of a file.</p>
+
+<h5 id="Returns_2">Returns</h5>
+
+<p><strong>string</strong> : The path of the directory containing the file.</p>
+
+<h4 class="addon-sdk-api-name" id="exists(path)"><code>exists(path)</code></h4>
+
+<p>Returns true if a file exists at the given path and false otherwise.</p>
+
+<h5 id="Parameters_3">Parameters</h5>
+
+<p><strong>path : string</strong><br>
+ The path of a file.</p>
+
+<h5 id="Returns_3">Returns</h5>
+
+<p><strong>boolean</strong> : True if the file exists and false otherwise.</p>
+
+<h4 class="addon-sdk-api-name" id="join(...)"><code>join(...)</code></h4>
+
+<p>Takes a variable number of strings, joins them on the file system's path separator, and returns the result.</p>
+
+<h5 id="Parameters_4">Parameters</h5>
+
+<p><strong>... : strings</strong><br>
+ A variable number of strings to join. The first string must be an absolute path.</p>
+
+<h5 id="Returns_4">Returns</h5>
+
+<p><strong>string</strong> : A single string formed by joining the strings on the file system's path separator.</p>
+
+<h4 class="addon-sdk-api-name" id="list(path)"><code>list(path)</code></h4>
+
+<p>Returns an array of file names in the given directory.</p>
+
+<h5 id="Parameters_5">Parameters</h5>
+
+<p><strong>path : string</strong><br>
+ The path of the directory.</p>
+
+<h5 id="Returns_5">Returns</h5>
+
+<p><strong>array</strong> : An array of file names. Each is a basename, not a full path.</p>
+
+<h4 class="addon-sdk-api-name" id="mkpath(path)"><code>mkpath(path)</code></h4>
+
+<p>Makes a new directory named by the given path. Any subdirectories that do not exist are also created. <code>mkpath</code> can be called multiple times on the same path.</p>
+
+<h5 id="Parameters_6">Parameters</h5>
+
+<p><strong>path : string</strong><br>
+ The path to create.</p>
+
+<h4 class="addon-sdk-api-name" id="open(path_mode)"><code>open(path, mode)</code></h4>
+
+<p>Returns a stream providing access to the contents of a file.</p>
+
+<h5 id="Parameters_7">Parameters</h5>
+
+<p><strong>path : string</strong><br>
+ The path of the file to open.</p>
+
+<p><strong>mode : string</strong><br>
+ An optional string, each character of which describes a characteristic of the returned stream.</p>
+
+<ul>
+ <li>If the string contains <code>"r"</code>, the file is opened in read-only mode.</li>
+ <li><code>"w"</code> opens the file in write-only mode.</li>
+ <li><code>"b"</code> opens the file in binary mode. If <code>"b"</code> is not present, the file is opened in text mode, and its contents are assumed to be UTF-8.</li>
+</ul>
+
+<p>If <em><code>mode</code></em> is not given, <code>"r"</code> is assumed, and the file is opened in read-only text mode.</p>
+
+<p>Apart from these options, this API always passes the following options:  <code>CREATE_FILE</code>, <code>TRUNCATE</code> (see <a href="https://dxr.mozilla.org/mozilla-central/source/nsprpub/pr/include/prio.h#550">https://dxr.mozilla.org/mozilla-central/source/nsprpub/pr/include/prio.h#550</a>). This means that:</p>
+
+<ul>
+ <li>if the file does not exist it is created</li>
+ <li>if the file exists, its length is truncated to zero</li>
+ <li>it is not possible to open the file in append mode.</li>
+</ul>
+
+<h5 id="Returns_6">Returns</h5>
+
+<p><strong>stream</strong> : If the file is opened in text read-only <code>mode</code>, a <code>TextReader</code> is returned, and if text write-only mode, a <code>TextWriter</code> is returned. See <a href="/en-US/Add-ons/SDK/Low-Level_APIs/io_text-streams"><code>text-streams</code></a> for information on these text stream objects. If the file is opened in binary read-only <code>mode</code>, a <code>ByteReader</code> is returned, and if binary write-only mode, a <code>ByteWriter</code> is returned. See <a href="/en-US/Add-ons/SDK/Low-Level_APIs/io_byte-streams"><code>byte-streams</code></a> for more information on these byte stream objects. Opened files should always be closed after use by calling <code>close</code> on the returned stream.</p>
+
+<h4 class="addon-sdk-api-name" id="read(path_mode)"><code>read(path, mode)</code></h4>
+
+<p>Opens a file and returns a string containing its entire contents.</p>
+
+<h5 id="Parameters_8">Parameters</h5>
+
+<p><strong>path : string</strong><br>
+ The path of the file to read.</p>
+
+<p><strong>mode : string</strong><br>
+ An optional string, each character of which describes a characteristic of the returned stream. If the string contains <code>"b"</code>, the contents will be returned in binary mode. If <code>"b"</code> is not present or <code>mode</code> is not given, the file contents will be returned in text mode.</p>
+
+<h5 id="Returns_7">Returns</h5>
+
+<p><strong>string</strong> : A string containing the file's entire contents.</p>
+
+<h4 class="addon-sdk-api-name" id="remove(path)"><code>remove(path)</code></h4>
+
+<p>Removes a file from the file system. To remove directories, use <code>rmdir</code>.</p>
+
+<h5 id="Parameters_9">Parameters</h5>
+
+<p><strong>path : string</strong><br>
+ The path of the file to remove.</p>
+
+<h4 class="addon-sdk-api-name" id="rmdir(path)"><code>rmdir(path)</code></h4>
+
+<p>Removes a directory from the file system. If the directory is not empty, an exception is thrown.</p>
+
+<h5 id="Parameters_10">Parameters</h5>
+
+<p><strong>path : string</strong><br>
+ The path of the directory to remove.</p>
+
+<h4 class="addon-sdk-api-name" id="isFile(path)"><code>isFile(path)</code></h4>
+
+<p>Returns true only if this path specifies a file.</p>
+
+<pre class="brush: js">const fileIO = require("sdk/io/file");
+
+let path = "/Users/Work/";
+let list = fileIO.list(path);
+
+for (i = 0; i &lt; list.length; i++) {
+  let item = fileIO.join(path, list[i]);
+  if (fileIO.isFile(item)) {
+    console.log(item + " is a file");
+  }
+  else {
+    console.log(item + " is a directory");
+  }
+}</pre>
+
+<h5 id="Parameters_11">Parameters</h5>
+
+<p><strong>path : string</strong><br>
+ The path of the object.</p>

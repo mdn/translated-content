@@ -1,0 +1,326 @@
+---
+title: Éxaminer et modifier le code HTML
+slug: Outils/Inspecteur/Comment/Examiner_et_éditer_le_code_HTML
+tags:
+  - Guide
+  - Inspector
+  - Outils
+  - Tools
+translation_of: Tools/Page_Inspector/How_to/Examine_and_edit_HTML
+---
+<div>{{ToolsSidebar}}</div>
+
+<p>Il est possible d’examiner et d'éditer le code HTML d'une page grâce au <a href="/fr/docs/Tools/Page_Inspector/UI_Tour#HTML_pane">panneau HTML</a>.</p>
+
+<h2 id="Naviguer_dans_le_HTML">Naviguer dans le HTML</h2>
+
+<h3 id="Fil_d'Ariane_HTML">Fil d'Ariane HTML</h3>
+
+<p>En bas du panneau HTML, se trouve un <a href="https://fr.wikipedia.org/wiki/Fil_d%27Ariane_%28ergonomie%29">fil d'Ariane</a>. Ce fil affiche l'a hiérarchie complète de l'élément sélectionné dans la page :</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/15499/57-html-panel.png" style="display: block; height: 274px; margin-left: auto; margin-right: auto; width: 633px;"></p>
+
+<p>Survoler un élément du fil mettra celui-ci en surbrillance dans la page.</p>
+
+<p>Le fil possède ses propres <a href="/fr/docs/Tools/Page_Inspector/Keyboard_shortcuts#Breadcrumbs_bar">raccourcis clavier</a>.</p>
+
+<div class="note">
+<p>Il est à noter que dans les versions antérieures à Firefox 48, le fil d'Ariane se trouvait en haut du panneau et non en bas.</p>
+</div>
+
+<h3 id="Recherche">Recherche</h3>
+
+<p>À partir de Firefox 45, la boite de recherche de l'Inspecteur trouve les correspondances dans tout le markup du document ouvert, ainsi que dans toutes les frames.</p>
+
+<p>Pour commencer une recherche, il suffit de cliquer sur la boîte de recherche pour l'agrandir ou bien d'utiliser les raccourcis clavier <kbd>Ctrl</kbd> + <kbd>F</kbd> , ou <kbd>Cmd</kbd> + <kbd>F</kbd> sous Mac.</p>
+
+<p>Lors de la saisie, une pop-up d'autocomplétion affiche toutes les classes ou ID  qui correspondent à la recherche en cours :</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/15495/html-code-search.png" style="display: block; height: 398px; margin-left: auto; margin-right: auto; width: 900px;"></p>
+
+<p>Pour itérer parmi les suggestions, il faut utiliser <kbd>Flèche Haut</kbd> et <kbd>Flèche Bas</kbd>. <kbd>Tab</kbd> permet de choisir la suggestion sélectionnée. <kbd>Entrée</kbd> permet alors de sélectionner le premier noeud correspondant.</p>
+
+<p>Si la recherche est faite sans utiliser de valeur d'autocomplétion, alors la recherche sera effectuée sur tout le texte du document, incluant les balises, les attributs, et le contenu textuel des noeuds.</p>
+
+<p>{{EmbedYouTube("AKBhnfp1Opo")}}</p>
+
+<p>Pour parcourir les résultats, il faut utiliser <kbd>Enter</kbd> . Depuis Firefox 48, il est possible d'itérer à l'envers avec  <kbd>Maj</kbd> + <kbd>Enter</kbd> .</p>
+
+<h3 id="Arbre_HTML">Arbre HTML</h3>
+
+<p>Le reste du panneau affiche le HTML de la page sous forme d'arbre (cette interface est également appelée Markup View). À la gauche de chaque nœud se trouve une flèche, cliquer sur celle-ci développera le nœud. appuyer sur la touche "Alt" développera tous les nœuds inclus dans l'élément.</p>
+
+<p><img alt="The new Firefox 57 inspector HTML tree." src="https://mdn.mozillademos.org/files/15503/57-html-tree.png" style="display: block; height: 433px; margin-left: auto; margin-right: auto; width: 600px;">Survoler un élément dans l'arbre mettra celui-ci en surbrillance dans la page.</p>
+
+<p>Les nœuds qui ne sont pas visibles (par exemple avec <a href="/fr/docs/Web/CSS/display">display:none)</a> sont affichés en transparence dans l'arbre.</p>
+
+<p>Depuis Firefox 53, une ellipse est affichée entre la balise ouvrante et fermante d'un élément réduit à cause d'un contenu trop long.</p>
+
+<p>Avant Firefox 53, il était impossible de déterminer si noeud réduit avait des enfants. Maintenant, ce cas est indiqué par une icône de points de suspension ( <img alt="" src="https://mdn.mozillademos.org/files/14925/child-node-indicator.png" style="height: 24px; width: 32px;"> )</p>
+
+<div class="note">
+<p><strong>Note</strong>: Il existe des raccourcis clavier fort pratiques qui peuvent être utilisés dans l'arbre HTML : voir la <a href="/fr/docs/Tools/Keyboard_shortcuts#HTML_pane">liste des raccourcis clavier</a>.</p>
+</div>
+
+<h3 id="before_et_after">::before et ::after</h3>
+
+<p>Depuis Firefox 35, il est possible d'inspecter les pseudo éléments ajoutés en utilisant {{cssxref("::before")}} <code>et</code> {{cssxref("::after")}} :</p>
+
+<p>{{EmbedYouTube("ecfqTGvzsNc")}}</p>
+
+<h3 id="Noeuds_ne_contenant_que_des_espaces">Noeuds ne contenant que des espaces</h3>
+
+<div class="geckoVersionNote">Nouveauté de Firefox 52</div>
+
+<p>Les développeurs web n'écrivent (généralement) pas tout leur code en une seule ligne. Ils utilisent des espaces, des retours à la ligne, ou des tabulations dans leur HTML pour le rendre plus lisible.</p>
+
+<p>Normalement, ces espaces n'ont aucun effet sur le visuel de la page. Mais en réalité, lorsqu'un navigateur analyse l'HTML, il génère automatiquement des noeuds de texte anonymes pour les éléments qui ne sont pas contenus dans des balises. Cela inclut les espaces (qui après tout, sont un type de texte).</p>
+
+<p>Si ces noeuds autogénérés sont des éléments <a href="/fr/docs/Web/Guide/CSS/Visual_formatting_model#Inline-level_elements_and_inline_boxes">"en ligne" (inline level)</a>, alors les navigateurs leur donneront une hauteur et largeur non nulle. Des espaces étranges entre les éléments apparaitront alors, même si aucun margin ou padding n'est appliqué sur ces éléments.</p>
+
+<p>Depuis Firefox 52, l'Inspecteur affiche ces noeuds d'espaces, afin de pouvoir savoir d'où viennent les espaces dans la mise en page. Ces noeuds sont représentés par un point: <img alt="" src="https://mdn.mozillademos.org/files/14931/new-whitespace-text-indicator.png" style="height: 23px; width: 30px;"> et affichent une infobulle explicative au survol :</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14929/whitespace-text-nodes-2.png" style="display: block; height: 1010px; margin-left: auto; margin-right: auto; width: 912px;"></p>
+
+<p>Il est possible de trouver une démonstration de ceci à l'adresse : <a href="https://mdn.github.io/devtools-examples/whitespace-only-demo/index.html">https://mdn.github.io/devtools-examples/whitespace-only-demo/index.html</a>.</p>
+
+<h3 id="Shadow_roots">Shadow roots</h3>
+
+<p>Tous les noeuds <em>shadow roots</em> présents dans le DOM sont exposés par la page HTML, de la même manière que le DOM normal. Le <em>shadow root</em> est représenté par un noeud nommé <code>#shadow-root</code> — il est possible de cliquer sur la flèche d'expansion pour voir le contenu complet du <em>shadow DOM</em>, et le manipuler, exactement comme avec les noeuds DOM normaux. Il existe cependant des limites, il n'est par exemple pas possible de glisser/déposer ou de supprimer des noeuds <em>shadow DOM</em>.</p>
+
+<p><img alt="A view of a shadow root shown inside the DOM tree in the Firefox DevTools" src="https://mdn.mozillademos.org/files/16051/shadow-root-in-html-pane.png" style="height: 485px; width: 1303px;"></p>
+
+<p>Si un <em>shadow DOM</em> contient un élément avec attribut <code>slot</code> ayant été inspiré dans un élément {{htmlelement("slot")}} — voir <a href="/fr/docs/Web/Web_Components/Using_templates_and_slots#Adding_flexibility_with_slots">Flexibilitée ajoutée par les slots</a> pour une explication de l'utilisation de ceux-ci --- cet élément sera affiché à l'intérieur de son élément {{htmlelement("slot")}} correspondant, avec un lien à côté. Cliquer sur ce lien affichera l'élément avec l'attibut <code>slot</code> tel qu'il existe en dehors du <em>shadow DOM</em></p>
+
+<p><img alt="A view of a shadow root shown inside the DOM tree in the Firefox DevTools" src="https://mdn.mozillademos.org/files/16063/slots.png" style="height: 208px; width: 672px;"></p>
+
+<p>Cette fonctionnalité est utile pour trouver la source du contenu d'un élément <code>&lt;slot&gt;</code></p>
+
+<div class="note">
+<p><strong>Note</strong>: L'inspection du <em>Shadow DOM</em> à été implémenté dans Firefox 61, mais est actuellement caché par la préférence <code>dom.webcomponents.shadowdom.enabled</code>. Elle sera activée par défaut lorsque les <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components">Web components/Shadow DOM</a> seront disponible dans la plateforme, l'estimation actuelle pour cela est Firefox 63.</p>
+</div>
+
+<h2 id="Menu_contextuel">Menu contextuel</h2>
+
+<p>Il est possible d’effectuer des tâches courantes sur un élément spécifique grâce au menu contextuel. Pour ouvrir celui-ci, il suffit de faire un clic droit sur l'élément :</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/9759/inspector-popup.png" style="display: block; margin-left: auto; margin-right: auto; width: 456px;"></p>
+
+<h3 id="Référence_du_menu_contextuel">Référence du menu contextuel</h3>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td>Modifier comme HTML</td>
+   <td><a href="#Editing_HTML">Modifie le code HTML de l'élément</a>.</td>
+  </tr>
+  <tr>
+   <td>Copier &gt;&gt; l’intérieur du HTML</td>
+   <td>Copie le contenu interne à l'élément HTML</td>
+  </tr>
+  <tr>
+   <td>Copier &gt;&gt; l’extérieur du HTML</td>
+   <td>Copie le contenu HTML à l'intérieur par rapport à l'élément courant en incluant la balise de l'élément courant</td>
+  </tr>
+  <tr>
+   <td>Copier &gt;&gt; le sélecteur CSS</td>
+   <td>Copie un sélecteur CSS qui sélectionne uniquement l'élément.</td>
+  </tr>
+  <tr>
+   <td>Copier &gt;&gt; le chemin CSS</td>
+   <td>Copie un sélecteur CSS qui représente le chemin complet vers l'élément</td>
+  </tr>
+  <tr>
+   <td>
+    <p>Copier &gt;&gt; le Data-URL de l'image</p>
+   </td>
+   <td>Copie l'image en tant que data:// URL, si l'élément sélectionné est une image.</td>
+  </tr>
+  <tr>
+   <td>Afficher les propriétés DOM</td>
+   <td>
+    <p>Ouvre la <a href="/fr/docs/Tools/Web_Console#The_split_console">console scindée</a> et entre la commande "<code>inspect($0)</code>" pour <a href="/fr/docs/Tools/Web_Console#Inspecting_objects">inspecter</a> l'élément actuellement sélectionné.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>Utiliser dans la console</td>
+   <td>
+    <div class="geckoVersionNote">
+    <p>Nouveau dans Firefox 43</p>
+    </div>
+
+    <p>Assigne le noeud actuellement sélectionné dans une variable nommée <code>temp0</code> (ou <code>temp1</code> si <code>temp0</code> est déjà utilisée, etc.), puis ouvre la <a href="/fr/docs/Tools/Web_Console#The_split_console">console scindée</a>, vous permettant d'interagir avec ce noeud depuis la ligne de commande.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>Tout étendre</td>
+   <td>
+    <div class="geckoVersionNote">
+    <p>Nouveau dans Firefox 44</p>
+    </div>
+    Étend l'élément sélectionné ainsi que tous ses enfants dans l'arbre HTML. C'est l'équivalent d'utiliser la touche <kbd>Alt</kbd>  et le bouton pour étendre un élément (le triangle en début de ligne)</td>
+  </tr>
+  <tr>
+   <td>Réduire</td>
+   <td>
+    <div class="geckoVersionNote">
+    <p>Nouveau dans Firefox 44</p>
+    </div>
+    Réduit l'élément sélectionné. C'est l'équivalent du bouton en forme de triangle en début de ligne.</td>
+  </tr>
+  <tr>
+   <td>Coller &gt;&gt; à l’intérieur du HTML</td>
+   <td>
+    <p>Colle le contenu du presse-papier dans le nœud en tant qu'<a href="/fr/docs/Web/API/element.innerHTML">innerHTML</a>.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>Coller &gt;&gt; à l’extérieur du HTML</td>
+   <td>Colle le contenu du presse-papier dans le nœud en tant qu'<a href="/fr/docs/Web/API/element.outerHTML">outerHTML</a>.</td>
+  </tr>
+  <tr>
+   <td>Coller &gt;&gt; Avant</td>
+   <td>Colle le contenu du presse-papier dans le document immédiatement avant le nœud sélectionné.</td>
+  </tr>
+  <tr>
+   <td>Coller &gt;&gt; Après</td>
+   <td>Colle le contenu du presse-papier dans le document immédiatement après le nœud sélectionné.</td>
+  </tr>
+  <tr>
+   <td>Coller &gt;&gt; Comme premier nœud enfant</td>
+   <td>Colle le contenu du presse-papier dans le document en tant que premier enfant du nœud sélectionné.</td>
+  </tr>
+  <tr>
+   <td>Coller &gt;&gt; Comme dernier nœud enfant</td>
+   <td>Colle le contenu du presse-papier dans le document en tant que dernier enfant du nœud sélectionné.</td>
+  </tr>
+  <tr>
+   <td>Faire défiler la vue jusqu'au noeud</td>
+   <td>
+    <p>Fait défiler la page jusqu'a ce que le noeud sélectionné soit visible.</p>
+
+    <p>À partir de Firefox 44, il est possible d'utiliser le raccourci clavier <kbd>S</kbd> fera la même action.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>Prendre une capture du noeud</td>
+   <td>Prend une capture du noeud sélectionné. La capture est directement sauvegardée dans votre dossier de téléchargement. Voir <a href="/fr/docs/Tools/Taking_screenshots">Prendre des captures</a>.</td>
+  </tr>
+  <tr>
+   <td>Créer un nouveau noeud</td>
+   <td>Crée une balise &lt;div&gt; en dernier enfant de l'élément sélectionné. Voir <a href="/fr/docs/Outils/Inspecteur/Comment/Examiner_et_%C3%A9diter_le_code_HTML$edit#Inserting_new_nodes">Insérer des nouveaux noeuds</a>.</td>
+  </tr>
+  <tr>
+   <td>Dupliquer le noeud</td>
+   <td>
+    <div class="geckoVersionNote">
+    <p>Nouveau dans Firefox 44</p>
+    </div>
+    Crée une copie de l'élément sélectionné, et l'insère immédiatement après.</td>
+  </tr>
+  <tr>
+   <td>Supprimer le nœud</td>
+   <td>Supprime l'élément</td>
+  </tr>
+  <tr>
+   <td>Attributs &gt;&gt; Ajouter un attribut</td>
+   <td>
+    <div class="geckoVersionNote">
+    <p>Nouveau dans Firefox 44</p>
+    </div>
+    Ajoute un attribut à l'élément.</td>
+  </tr>
+  <tr>
+   <td>Attributs &gt;&gt; Modifier l'attribut</td>
+   <td>
+    <div class="geckoVersionNote">
+    <p>Nouveau dans Firefox 44</p>
+    </div>
+    (seulement quand un attribut est sélectionné) Modifie l'attribut.</td>
+  </tr>
+  <tr>
+   <td>Attributs &gt;&gt; Supprimer l'attribut</td>
+   <td>
+    <div class="geckoVersionNote">
+    <p>Nouveau dans Firefox 44</p>
+    </div>
+    (seulement quand un attribut est sélectionné) Supprime l'attribut.</td>
+  </tr>
+  <tr>
+   <td>Attributs &gt;&gt; Copier la valeur de l'attribut</td>
+   <td>Copie la valeur de l'attribut</td>
+  </tr>
+  <tr>
+   <td>Ouvrir le lien dans un nouvel onglet</td>
+   <td>(seulement quand un lien - comme un attribut href - est sélectionné) Ouvre l'élément dans un nouvel onglet.</td>
+  </tr>
+  <tr>
+   <td>Ouvrir dans le Débogueur</td>
+   <td>(seulement quand un lien vers une source JS est sélectionné) Ouvre la source dans le Débogueur.</td>
+  </tr>
+  <tr>
+   <td>Ouvrir fichier dans l'éditeur de style</td>
+   <td>(seulement quand un lien vers une source CSS est sélectionné) Ouvre la source dan l'éditeur de style.</td>
+  </tr>
+  <tr>
+   <td>Copier l'adresse du lien</td>
+   <td>(seulement quand une URL est sélectionnée) Copie l'URL</td>
+  </tr>
+  <tr>
+   <td>:hover</td>
+   <td>Définit la pseudo classe CSS <a href="/fr/docs/Web/CSS/:hover" title="/en-US/docs/Web/CSS/:hover">:hover</a></td>
+  </tr>
+  <tr>
+   <td>:active</td>
+   <td>Définit la pseudo classe CSS <a href="/fr/docs/Web/CSS/:active" title="/en-US/docs/Web/CSS/:active">:active</a></td>
+  </tr>
+  <tr>
+   <td>:focus</td>
+   <td>Définit la pseudo classe CSS <a href="/fr/docs/Web/CSS/:focus" title="/en-US/docs/Web/CSS/:focus">:focus</a></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Éditer_le_code_HTML"><a name="Editing_HTML">Éditer le code HTML</a></h2>
+
+<p>Il est possible d'éditer les éléments HTML directement dans le panneau HTML. Il suffit de double cliquer sur le texte voulu, de le modifier puis d'appuyer sur Entrée. Les modifications sont immédiatement effectives.</p>
+
+<p>Pour éditer le <a href="/fr/docs/Web/API/Element.outerHTML">outerHTML</a>, il faut ouvrir le menu contextuel et sélectionner "Modifier comme HTML" . Une boite apparaîtra alors dans le panneau HTML :</p>
+
+<p><img alt="Edit HTML directly in the Inspector panel in Firefox 57" src="https://mdn.mozillademos.org/files/15505/57-edit-as-html.png" style="display: block; height: 332px; margin-left: auto; margin-right: auto; width: 600px;">N'importe quel fragment HTML peut être ajouté ici. Il est par exemple possible de changer les balises de l’élément, d'ajouter de nouvelles balises, de modifier des éléments existants, etc. Les modifications sont effectives dès que vous cliquez en-dehors de la boite</p>
+
+<p>À partir de Firefox 52, lors de l'édition, le menu contextuel est le même que pour le texte modifiable normal :</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14522/editable-context-menu.png" style="display: block; height: 241px; margin-left: auto; margin-right: auto; width: 200px;"></p>
+
+<h3 id="Copier_coller">Copier coller</h3>
+
+<p>Il est possible d'utiliser le <a href="/fr/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Element_popup_menu">menu popup</a> pour copier des noeuds dans l'arbre HTML.</p>
+
+<h3 id="Glisser_déposer">Glisser déposer</h3>
+
+<p>Il est possible de modifier l'HTML en déplaçant les noeuds dans l'arbre HTML. Il suffit de rester cliqué sur un élément et de le glisser vers le haut ou vers le bas. Lorsque le clic est relâché, l'élément sera inséré à la position voulue.</p>
+
+<p>{{EmbedYouTube("oI-a035nfWk")}}</p>
+
+<p>À partir de Firefox 44, il est possible d'annuler le glisser-déposer en utilisant la touche <kbd>Esc</kbd>.</p>
+
+<h3 id="Insérer_de_nouveaux_noeuds">Insérer de nouveaux noeuds</h3>
+
+<div class="geckoVersionNote">Nouveau dans Firefox 48</div>
+
+<p>À partir de Firefox 48, il y a une icône "+" en haut du panneau :</p>
+
+<p> </p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13082/inspector-insert-node.png" style="display: block; height: 337px; margin-left: auto; margin-right: auto; width: 547px;"></p>
+
+<p> </p>
+
+<p>Cliquer sur cette icône insère une balise <code><a href="/fr/docs/Web/HTML/Element/div">&lt;div&gt;</a></code> dans le document en tant que dernier enfant de l'élément sélectionné. Il est alors possible de modifier le contenu et le style du noeud, exactement comme n'importe quel autre élément.</p>
+
+<p>{{EmbedYouTube("NG5daffvVZM")}}</p>
+
+<p>L'option "Créer un nouveau noeud" dans le menu contextuel fait la même chose.</p>
+
+<p>Il est à noter que le bouton est désactivé si l'élément sélection est tel qu'ajouter un dernier enfant n'aurait aucun effet (par exemple un <code><a href="/fr/docs/Web/HTML/Element/html">&lt;html&gt;</a></code> ou un <code><a href="/fr/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code>). Cependant, il est actif dans moments ou il n'est pas valide d'insérer un élément <code>&lt;div&gt;</code>, ( <code><a href="/fr/docs/Web/HTML/Element/style">&lt;style&gt;</a></code> ou <code><a href="/fr/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> par exemple). Dans ces cas, l'élément ajouté est un texte.</p>

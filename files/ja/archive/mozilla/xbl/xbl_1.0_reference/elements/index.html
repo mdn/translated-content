@@ -1,0 +1,361 @@
+---
+title: Elements
+slug: Archive/Mozilla/XBL/XBL_1.0_Reference/Elements
+tags:
+  - XBL
+translation_of: Archive/Mozilla/XBL/XBL_1.0_Reference/Elements
+---
+<p> </p>
+<h2 id="bindings" name="bindings">bindings</h2>
+<p><span class="comment">This section is tested and adjusted for the current Firefox implementation. Please edit only if an actual behavior differs from the described one. Please do not edit only on the basis of another XBL specification.</span></p>
+<pre>&lt;!ELEMENT bindings ( binding* ) &gt;
+
+階層:   ルート要素
+子要素: &lt;binding&gt;
+</pre>
+<p><code>bindings</code> 要素は、あらゆる XBL 文書のルート要素となります。通常 XBL はデフォルトの名前空間として宣言されるべきであり (たとえ XBL 名前空間接頭辞を用いたとしても) 、バインディングで用いる他の名前空間を追加で宣言します。</p>
+<p><code>bindings</code> は0個以上の <code><a href="/ja/XBL/XBL_1.0_Reference/Elements#binding" title="ja/XBL/XBL_1.0_Reference/Elements#binding">binding</a></code> 要素を子要素に持ちます。各々の <code><a href="/ja/XBL/XBL_1.0_Reference/Elements#binding" title="ja/XBL/XBL_1.0_Reference/Elements#binding">binding</a></code> 子要素によって、他の文書中の要素へ適用する個々のバインディングを定義します。</p>
+<p>ひとつの要素には同時にひとつの（完結した、または他のバインディングを継承した）バインディングのみを適用することができます。複数のバインディングを適用させた場合、 CSS の規則と同じように最後のものだけが実際に適用されます。</p>
+<pre>HelloWorld example:
+
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Hello world!&lt;/title&gt;
+&lt;style type="text/css"&gt;
+p {
+ -moz-binding: url(hello.xml#default);
+}
+#p03 {
+ -moz-binding: url(hello.xml#hello2);
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body
+
+  &lt;p&gt;Default content&lt;/p&gt;
+  &lt;p&gt;Default content&lt;/p&gt;
+  &lt;p id="p03"&gt;Default content&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+// hello.xml
+
+&lt;?xml version="1.0"?&gt;
+&lt;bindings xmlns="http://www.mozilla.org/xbl"
+ xmlns:html="http://www.w3.org/1999/xhtml"&gt;
+  &lt;binding id="default"&gt;
+    &lt;content&gt;&lt;html:b&gt;Hello world! &lt;/html:b&gt;&lt;children/&gt;&lt;/content&gt;
+  &lt;/binding&gt;
+  &lt;binding id="hello2"&gt;
+    &lt;content&gt;&lt;html:b&gt;Hello from my binding! &lt;/html:b&gt;&lt;children/&gt;&lt;/content&gt;
+  &lt;/binding&gt;
+&lt;/bindings&gt;
+</pre>
+<p><a class="external" href="http://www.nskom.com/external/xbl/mdc/HelloWorld.html">この例を表示</a></p>
+<p>次: <code>&lt;big&gt;bindings &gt; <a href="/ja/XBL/XBL_1.0_Reference/Elements#binding" title="ja/XBL/XBL_1.0_Reference/Elements#binding">binding</a>&lt;/big&gt;</code> 要素</p>
+<h3 id=".E6.B3.A8.E6.84.8F" name=".E6.B3.A8.E6.84.8F">注意</h3>
+<ul>
+ <li>Mozilla 製品の現行の安定版リリース (例えば Firefox 2) では、行や列といった <code>table</code> のサブ要素に対してバインディングを適用することはできません。 <code>table</code> 要素自体にのみバインディングを適用することができます。これは Mozilla 製品の将来的なバージョンでは修正されるでしょう。詳しい情報や回避策については <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=83830" title="FIXED: Binding TD cells (with XBL) doesn't work, at all">バグ 83830</a> を参照してください。</li>
+ <li>XBL ファイルを含め、 XML 文書のデフォルトの文字エンコーディングは UTF-8 です。文字エンコーディングを明示的に宣言することで、デフォルトの文字エンコーディングをオーバーライドすることもできます。例: <code>&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;</code></li>
+ <li>名前空間宣言に書かれたURIは、名前空間を一意に識別するためのあいまいな<span style="color: darkgreen; background: #ef9;">【訳注: 原文は opaque】</span>文字列です。そのURIは必ずしも実際のスキーマ定義や名前空間に関連したリソースを指し示している必要はありません（し、実際に何もリソースが置かれていない場合が多いです）。<a class="external" href="http://www.w3.org/TR/REC-xml-names/#ns-decl">Namespaces in XML</a></li>
+ <li>デフォルトの名前空間に加え、バインディングのコンテントを定義するための他の名前空間を宣言することができます。最も有用な名前空間は、 HTML/XHTML, <a href="/ja/XUL" title="ja/XUL">XUL</a> (XML User Interface Language), <a href="/ja/SVG" title="ja/SVG">SVG</a> (Scalable Vector Graphics) そして <a class="external" href="http://www.w3.org/TR/xlink/">XLink</a> です。この場合のいくぶん汎用性の高い <code>bindings</code> 要素中での名前空間宣言はおおよそ以下のようになるでしょう:</li>
+</ul>
+<pre>&lt;bindings xmlns="http://www.mozilla.org/xbl"
+ xmlns:html = "http://www.w3.org/1999/xhtml"
+ xmlns:xul  = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+ xmlns:svg  = "http://www.w3.org/2000/svg"
+ xmlns:xlink= "http://www.w3.org/1999/xlink"&gt;
+</pre>
+<h2 id="binding" name="binding">binding</h2>
+<pre>&lt;!ENTITY % binding-content "(resources?,content?,implementation?,handlers?)"&gt;
+&lt;!ELEMENT binding %binding-content;&gt;
+&lt;!ATTLIST binding
+   id                     ID             #REQUIRED
+   extends                CDATA          #IMPLIED
+   display                CDATA          #IMPLIED
+   inheritstyle           true           #IMPLIED
+&gt;
+</pre>
+<p><code>binding</code> 要素は個々の XBL バインディングを定義します。 XBL バインディングは <em><a href="/ja/XBL/XBL_1.0_Reference/Elements#_content" title="ja/XBL/XBL_1.0_Reference/Elements#_content">匿名コンテント</a></em>, <em><a href="/ja/XBL/XBL_1.0_Reference/Elements#field" title="ja/XBL/XBL_1.0_Reference/Elements#field">フィールド</a></em>, <em><a href="/ja/XBL/XBL_1.0_Reference/Elements#property" title="ja/XBL/XBL_1.0_Reference/Elements#property">プロパティ</a></em>, <em><a href="/ja/XBL/XBL_1.0_Reference/Elements#method" title="ja/XBL/XBL_1.0_Reference/Elements#method">メソッド</a></em>, <em><a href="/ja/XBL/XBL_1.0_Reference/Elements#handlers" title="ja/XBL/XBL_1.0_Reference/Elements#handlers">イベントハンドラ</a></em> を HTML/XML 要素へ追加することができます。</p>
+<p>個々の XBL バインディングはスタイルシートまたはスクリプトによって要素へ適用させることができます。 (&lt;table&gt; の特性については <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=83830" title="FIXED: Binding TD cells (with XBL) doesn't work, at all">バグ 83830</a> を参照)</p>
+<p>CSS:</p>
+<pre>div {
+ -moz-binding: url(myBinding.xml#default);
+}
+</pre>
+<p>DOM:</p>
+<pre>elementReference.style.MozBinding = "url(myBinding.xml#default}";
+</pre>
+<p>上記の例はともに <code>myBinding.xml</code> ファイル中に定義された <code>id="default"</code> のバインディングを利用しています。</p>
+<p> Firefox 3 以降、 <code>data:</code> URL を使って文中にバインディングを埋め込むことができます。</p>
+<pre>div {
+  -moz-binding: url(data:text/xml;charset=utf-8,%3C%3Fxml%20version%3D%221.0%22%3F%3E%0A%3Cbindings%20id%3D%22xbltestBindings%22%20xmlns%3D%22http%3A//www.mozilla.org/xbl%22%3E%0A%20%20%3Cbinding%20id%3D%22xbltest%22%3E%3Ccontent%3EPASS%3C/content%3E%3C/binding%3E%0A%3C/bindings%3E%0A);
+}
+</pre>
+<p><code>data:</code> URL はフラグメント識別子 <span style="color: darkgreen; background: #ef9;">【訳注: #foo のようにして XML 中の特定の部分を示すもの】</span> をサポートしていないため、代わりに埋め込まれた XML 中に見つかった最初のバインディングが使用されます。ただし、例え参照することがなくても、バインディングには ID が必要であることに注意してください。</p>
+<p>念のため、先ほどの例で埋め込まれた XML がどのようなものかを示します:</p>
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;bindings id="xbltestBindings" xmlns="http://www.mozilla.org/xbl"&gt;
+  &lt;binding id="xbltest"&gt;&lt;content&gt;PASS&lt;/content&gt;&lt;/binding&gt;
+&lt;/bindings&gt;
+</pre>
+<p>CSS による宣言のみ、一連の要素に対して簡単にバインディングを適用することが可能です。 It also makes your binding partially functional if scripting is disabled. In the latter case all methods and handlers will be blocked, but the anonymous content and styling will be still used. したがって、特定の要素に対して動的にバインディングを適用する必要がある場合を除き、通常は CSS による宣言を用いるべきです。</p>
+<p><code>binding</code> 要素は <a href="/ja/XBL/XBL_1.0_Reference/Elements#resources" title="ja/XBL/XBL_1.0_Reference/Elements#resources">resources</a> タグ、 <a href="/ja/XBL/XBL_1.0_Reference/Elements#_content" title="ja/XBL/XBL_1.0_Reference/Elements#_content">content</a> タグ、 <a href="/ja/XBL/XBL_1.0_Reference/Elements#implementation" title="ja/XBL/XBL_1.0_Reference/Elements#implementation">implementation</a> タグ、 <a href="/ja/XBL/XBL_1.0_Reference/Elements#handlers" title="ja/XBL/XBL_1.0_Reference/Elements#handlers">handlers</a> タグを子要素に持つことができます。</p>
+<ul>
+ <li><code><strong>id</strong></code> - <code>id</code> 属性は文書中で一意となる識別子です。バインディングを適用する際にこの属性を用いるため、 <code>binding</code> 要素に必須の属性です。</li>
+ <li><code><strong>extends</strong></code> - <code>extends</code> 属性は、このバインディングの継承元バインディングの URL を特定するために用いられます (<a href="/ja/XBL/XBL_1.0_Reference/Binding_Implementations#Inheritance_of_Implementations" title="ja/XBL/XBL_1.0_Reference/Binding_Implementations#Inheritance_of_Implementations">Inheritance of Implementations</a> 参照)。 URL は特定の XBL 文書を参照します。 XBL 文書中の特定のバインディングの <code>id</code> を指し示すために # 表記 <span style="color: darkgreen; background: #ef9;">【訳注: 原文は notation】</span> を用いる必要があります。振る舞いは継承できますが、コンテントは継承できないことに注意してください。</li>
+ <li><code><strong>display</strong></code> - この属性によってタグがどのように表示されるかを指定します。この属性を用いると、既存の要素のレイアウトや表示特性を有する要素を作ることができます。たとえば、 'xul:button' という値によって、ボタンのように表示される要素を作ることができます。コロンの前の部分は名前空間接頭辞ですので、 XUL 名前空間も宣言しておく必要があります。すべてのタグが固有の表示特性を持つわけではありません。以下の XUL の表示特性を利用することができます: <code>browser</code>, <code>button</code>, <code>checkbox</code>, <code>description</code>, <code>editor</code>, <code>grippy</code>, <code>iframe</code>, <code>image</code>, <code>label</code>, <code>menu</code>, <code>menuitem</code>, <code>menubar</code>, <code>progressmeter</code>, <code>radio</code>, <code>resizer</code>, <code>scrollbar</code>, <code>scrollbox</code>, <code>spacer</code>, <code>splitter</code>, <code>titlebar</code>, <code>treechildren</code>, <code>treecol</code> 。この他に、いくつかの HTML, MathML, SVG タグも利用可能です。 'display' 属性は <code>extends</code> 属性がセットされてないと動作しません (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=119389" title="display= doesn't work if extends= is not present">バグ 119389</a>を参照)。このような場合 <code>display</code> 属性の値を <code>extends</code> 属性へセットしてください。</li>
+ <li><code><strong>inheritstyle</strong></code> - <code>inheritstyle</code> 属性はバインディング先の文書中で定義されたスタイルの規則を、 XBL バインディングによって生成された匿名コンテントに対しても適用するかどうかを指定します。この属性が true であれば、文書中のスタイルは XBL によって生成された匿名コンテントにも適用されるようになります。</li>
+</ul>
+<p> </p>
+<h2 id="content" name="content">content</h2>
+<pre>&lt;!ELEMENT content ANY&gt;
+&lt;!ATTLIST content
+   id               ID           #IMPLIED
+&gt;
+</pre>
+<p>バインディングは、バインドされた要素 <span style="color: darkgreen; background: #ef9;">【訳注: バインディングが適用された要素を意味し、バインディング先の文書中に存在する】</span> 内に配置する新たな要素を定義することができます。あたかもファイル中で直接コンテントを配置しているかのように画面上で表示されますが、バインドされた要素内のコンテントは匿名であり、通常の <a href="/ja/DOM" title="ja/DOM">DOM</a> からは見えません。バインドされた要素から匿名ノードへアクセスするために、 <a href="/ja/XBL/XBL_1.0_Reference/DOM_Interfaces#getAnonymousElementByAttribute" title="ja/XBL/XBL_1.0_Reference/DOM_Interfaces#getAnonymousElementByAttribute">getAnonymousElementByAttribute</a> と <a href="/ja/XBL/XBL_1.0_Reference/DOM_Interfaces#getAnonymousNodes" title="ja/XBL/XBL_1.0_Reference/DOM_Interfaces#getAnonymousNodes">getAnonymousNodes</a> 関数が利用できます。 <code>content</code> タグ内に配置できる唯一の XBL 要素は、 <a href="/ja/XBL/XBL_1.0_Reference/Elements#children" title="ja/XBL/XBL_1.0_Reference/Elements#children">children</a> タグです。バインディング中の &lt;content&gt; 要素の属性は、バインドされた要素へセットされます。</p>
+<ul>
+ <li><code><strong>id</strong></code> - <code>id</code> 属性は文書中で一意となる識別子です。</li>
+</ul>
+<h2 id="children" name="children">children</h2>
+<pre>&lt;!ELEMENT children EMPTY&gt;
+&lt;!ATTLIST children
+   id               ID                           #IMPLIED
+   includes         CDATA                        #IMPLIED
+&gt;
+</pre>
+<p>バインドされた要素内のすべての子要素が、バインディングにより生成されたコンテント中のどの場所へ配置されるかを指定します。</p>
+<p>通常、バインドされた要素自身が子要素としてコンテントを持っていた場合、匿名コンテントは生成されなくなります。しかし、 <code>children</code> 要素を用いることで、 HTML/XML 要素のコンテントを、 XBL によって生成された匿名コンテントへマージすることができます。</p>
+<p><code>children</code> タグ自身が子要素にコンテントを持つ場合、それはデフォルトのコンテントとなります。もしバインドされた要素がコンテントを持っていれば、デフォルトのコンテントは無視されます。逆にもしコンテントを持っていなければ、デフォルトのコンテントが追加されます。</p>
+<ul>
+ <li><code><strong>id</strong></code> - <code>id</code> 属性は文書中で一意となる識別子です。</li>
+ <li><code><strong>includes</strong></code> - <code>includes</code> 属性は、 <code>children</code> 要素で指定した挿入位置へ、特定のコンテントのみを配置できるようにするために用いられます。その値はタグ名か、あるいはカンマで区切られた複数のタグ名のリストとなります。 <code>includes</code> 属性の値とマッチしたタグ名のコンテントのみが、その挿入位置へ配置されます。この指定は直接の子要素にのみ適用されます。例えば、<code>&lt;customElement&gt;&lt;foobar&gt;&lt; hoge/&gt;&lt;/foobar&gt;&lt;/customElement&gt;</code> というXML文書片において、customElement要素に対し <code>&lt;binding id="customElement"&gt;&lt;content&gt;&lt;xul:box&gt;&lt;children includes="hoge"/&gt;&lt;/xul:box&gt;&lt;/content&gt;&lt;/binding&gt;</code> というバインディング定義が適用された場合、直接の子要素であるfoobar要素はincludes属性の指定にマッチしないために配置対象から除外され、結果として、<code>&lt;xul:box/&gt;</code> の内容は空のままとなります。</li>
+</ul>
+<h2 id="implementation" name="implementation">implementation</h2>
+<pre>&lt;!ENTITY % implementation-content "(method|property)*"&gt;
+&lt;!ELEMENT implementation %implementation-content;&gt;
+&lt;!ATTLIST implementation
+   id               ID           #IMPLIED
+   name             CDATA        #IMPLIED
+   implements       CDATA        #IMPLIED
+&gt;
+</pre>
+<p><code>implementation</code> 要素によって、バインドされた要素が保持するメソッドとプロパティの集合 <span style="color: darkgreen; background: #ef9;">【訳注: 以下、「実装」と呼ぶ】</span> を定義します。バインディングが適用されると、これらのメソッドやプロパティをバインドされた要素から直接呼び出すことができるようになります。</p>
+<ul>
+ <li><code><strong>id</strong></code> - <code>id</code> 属性は文書中で一意となる識別子です。</li>
+ <li><code><strong>name</strong></code> - <code>name</code> 属性は、個々の実装に対して名前を付与するために用いられます。この名前は後にその実装を参照するために用いられます。例えば JavaScript では、この属性の値が、その実装のために生成されたクラス名に対応します。<span style="color: darkgreen; background: #ef9;">【訳注: 原文: For example, in JavaScript the value of this attribute represents the name of the corresponding class that is constructed for the implementation.】</span> もし <code>name</code> 属性が指定されていなければ、バインディングの実装を個別に参照するために、バインディング文書の URI と id が用いられるようになります。</li>
+ <li><code><strong>implements</strong></code> - <code>implements</code> 属性は、バインディングによって実装されるインタフェースの集合を記述するために用いられます。その値はカンマで区切られたインタフェース名のリストです。もし対応していれば、厳密な型のある言語では、バインドされた要素はその要素がすでにサポートしているインタフェース (例えば HTMLElement) としてだけでなく、この属性に記述されたすべてのインタフェースとしても参照できるようになります。この機能への対応は任意です。</li>
+</ul>
+<h2 id="constructor" name="constructor">constructor</h2>
+<p><code>constructor</code> の内側にあるコードは、 <code>binding</code> が要素に対して適用されると同時に呼び出されます。したがってバインディングによって生成された匿名ノードへのフルアクセスはすでに可能となります。 <code>constructor</code> タグは <code>implementation</code> タグの内側に配置しなければなりません。</p>
+<ul>
+ <li><code><strong>id</strong></code> - <code>id</code> 属性は文書中で一意となる識別子です。</li>
+</ul>
+<div class="note">
+ <strong>注意:</strong>  Firefox 3 以前では、コンストラクタはドキュメントレイアウトの reflow が完了した時点で呼び出されるため、コンストラクタ中のコードでレイアウト情報を取得しようとしても、古くなった情報しか得られません。 Firefox 3 以降では、コンストラクタは reflow が発生しうる時点で呼び出されますので、最新のレイアウト情報を得ることができます。詳しくは <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=398404" title="FIXED: [FIX]Disallow reflow while processing constructors">バグ 398404</a> を参照してください。</div>
+<h2 id="destructor" name="destructor">destructor</h2>
+<p><code>destructor</code> の内側にあるコードは、要素から <code>binding</code> の適用を解除しようとすると同時に呼び出されます。これはリソースを破棄してメモリを解放するために用いられます。しかし、 <code>destructor</code> は呼び出されるはずの時に呼び出されないことがしばしばあります (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=230086" title="Destructor of XBL element isn't called when I remove this element from DOM">バグ 230086</a>参照)。 <code>destructor</code> タグは <code>implementation</code> タグの内側に配置しなければなりません。</p>
+<ul>
+ <li><code><strong>id</strong></code> - <code>id</code> 属性は文書中で一意となる識別子です。</li>
+</ul>
+<h2 id="method" name="method">method</h2>
+<pre>&lt;!ENTITY % method-content "(parameter*,body?)"&gt;
+&lt;!ELEMENT method %method-content;&gt;
+&lt;!ATTLIST method
+   id               ID           #IMPLIED
+   name             CDATA        #REQUIRED
+   type             CDATA        #IMPLIED
+&gt;
+</pre>
+<p><code>method</code> 要素は、バインディングの実装中の個々のメソッドを定義するために用いられます。</p>
+<ul>
+ <li><code><strong>id</strong></code> - <code>id</code> 属性は文書中で一意となる識別子です。</li>
+ <li><code><strong>name</strong></code> - <code>name</code> 属性の値は、メソッドがバインドされた要素へ結び付けられる際に付与される名前です。この値を用いてバインドされた要素から直接メソッドを呼び出すことができます。</li>
+</ul>
+<p><em>例</em></p>
+<pre>&lt;method name="scrollTo"&gt;
+  &lt;parameter name="index"/&gt;
+  &lt;body&gt;
+    this.setAttribute("scrollpos", index);
+  &lt;/body&gt;
+&lt;/method&gt;
+</pre>
+<h2 id="parameter" name="parameter">parameter</h2>
+<pre>&lt;!ELEMENT parameter EMPTY&gt;
+&lt;!ATTLIST parameter
+   id               ID           #IMPLIED
+   name             CDATA        #REQUIRED
+&gt;
+</pre>
+<p><code>parameter</code> 要素は、 <code>method</code> 要素の内側で用いられ、メソッドの個々の引数を表します。</p>
+<ul>
+ <li><code><strong>id</strong></code> - <code>id</code> 属性は文書中で一意となる識別子です。</li>
+ <li><code><strong>name</strong></code> - <code>name</code> 属性の値は、メソッドの <code>body</code> 要素内のスクリプトが引数を参照する際に用いられます。</li>
+</ul>
+<h2 id="body" name="body">body</h2>
+<pre>&lt;!ELEMENT body CDATA&gt;
+&lt;!ATTLIST body
+   id               ID           #IMPLIED
+&gt;
+</pre>
+<p><code>body</code> 要素は、対応する <code>method</code> の実際の処理を表します。その内容はメソッドが呼び出されたときに実行するスクリプトです。</p>
+<ul>
+ <li><code><strong>id</strong></code> - <code>id</code> 属性は文書中で一意となる識別子です。</li>
+</ul>
+<h2 id="field" name="field">field</h2>
+<pre>&lt;!ELEMENT field EMPTY&gt;
+&lt;!ATTLIST field
+   id               ID                  #IMPLIED
+   name             CDATA               #REQUIRED
+   readonly         (true|false)        #IMPLIED
+&gt;
+</pre>
+<p>フィールドは <code><a href="/ja/XBL/XBL_1.0_Reference/Elements#property" title="ja/XBL/XBL_1.0_Reference/Elements#property">プロパティ</a></code> に似ていますが、ゲッタとセッタを持つことができないという点で異なります。フィールドは、単純に値を保持するために有用です。 <code>field</code> 要素は、フィールドの初期値を決定するためのコードを内容として持つ必要があります。 <code>field</code> タグは、 <code>implementation</code> タグの内側に配置しなければなりません。</p>
+<ul>
+ <li><code><strong>id</strong></code> - <code>id</code> 属性は文書中で一意となる識別子です。</li>
+ <li><code><strong>name</strong></code> - フィールドの名前。これはバインドされた要素中でフィールドを参照するために用いられます。</li>
+ <li><code><strong>readonly</strong></code> - true とした場合、フィールドは読み取り専用となります。この属性を省略した場合、フィールドは読み書きともに可能となります。</li>
+</ul>
+<div class="note">
+ <strong>注意:</strong>  Firefox 3 では、フィールドは、バインディングを適用したときではなく、初めてアクセスしたときに評価されるようになります。通常の使用方法であればこの変更によって問題が起こることはずはありませんが、コードの動作に影響を与える場合もあり得ます。詳しくは <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=372769" title="FIXED: [FIX]&lt;field> evaluation happens at an unsafe time">バグ 372769</a> を参照してください。</div>
+<p>Firefox 3 でのこの変化によって、コードの動作が変わってしまうケースの例を示します。</p>
+<ol>
+ <li>2つのフィールドがあり、一方は <code>A</code> という名前で他方は <code>B</code> という名前だとします。フィールド <code>A</code> を <code>.B</code> にセットすると、 <code>.B</code> の値は <code>.A</code> へアクセス済みか否かに依存します。</li>
+ <li>バインディングのインスタンス生成後にプロトタイプチェーンへ proto を追加すると、これによってフィールドの値が影響を受けます（これは以前のバージョンの Firefox には当てはまりません）。</li>
+ <li>バインディング適用時、 <code><span class="nowiki">&lt;field name="parentNode"&gt;this.parentNode&lt;/field&gt;</span></code> は <code>parentNode</code> の値とはならず、 undefined となります。</li>
+ <li>バインディング適用前に（proto というよりも）オブジェクト自身へセットされたプロパティの値がフィールドによって変更されません。</li>
+</ol>
+<h2 id="property" name="property">property</h2>
+<pre>&lt;!ENTITY % property-content "(getter?,setter?)"&gt;
+&lt;!ELEMENT property %property-content;&gt;
+&lt;!ATTLIST property
+   id               ID                  #IMPLIED
+   name             CDATA               #REQUIRED
+   readonly         (true|false)        #IMPLIED
+   onget            CDATA               #IMPLIED
+   onset            CDATA               #IMPLIED
+&gt;
+</pre>
+<p><code>property</code> 要素は、実装中の個々のプロパティを表します。プロパティは <code>onget</code>/<code>onset</code> 属性または <code>property</code> 要素内の <a href="/ja/XBL/XBL_1.0_Reference/Elements#getter" title="ja/XBL/XBL_1.0_Reference/Elements#getter">getter</a>/<a href="/ja/XBL/XBL_1.0_Reference/Elements#setter" title="ja/XBL/XBL_1.0_Reference/Elements#setter">setter</a> 要素によって定義された、ゲッタとセッタ関数のペアによって構成されます。メソッドと同様に、バインディングが適用されると同時に、バインドされた要素から直接プロパティを取得できるようになります。 <code>property</code> タグは、 <code>implementation</code> タグの内側に配置しなければなりません。</p>
+<ul>
+ <li><code><strong>id</strong></code> - <code>id</code> 属性は文書中で一意となる識別子です。</li>
+ <li><code><strong>name</strong></code> - プロパティの名前。バインドされた要素中でプロパティを参照する際に用いられます。</li>
+ <li><code><strong>readonly</strong></code> - <code>readonly</code> 属性は、プロパティを読み取り専用にするために用いられ、プロパティの値は変更できなくなります。この属性を省略した場合、プロパティは読み書きともに可能となります。</li>
+ <li><code><strong>onget</strong></code> - <code>onget</code> 属性の値は、プロパティの値が呼び出されたときに実行されるスクリプトです。この属性がセットされている場合、 <code>property</code> 要素内にて定められた初期値は無視されます。その代わり、 <code>onget</code> 属性の値として表されたスクリプトの戻り値が、呼び出し元へ返されます。プロパティのゲッタは、 <code>property</code> 要素の子要素として <code>getter</code> タグを使用することでも定義可能です。</li>
+ <li><code><strong>onset</strong></code> - <code>onset</code> 属性の値は、プロパティの値が変更されようとしたときに実行されるスクリプトです。この属性がセットされている場合、 <code>property</code> 要素内にて定められた初期値は無視されます。スクリプト中の引数 <code>val</code> は、新たに割り当てられようとした値を表します。プロパティのセッタは、 <code>property</code> 要素の子要素として <code>setter</code> タグを用いることでも定義可能です。</li>
+</ul>
+<h2 id="getter" name="getter">getter</h2>
+<pre>&lt;!ELEMENT getter PCDATA&gt;
+&lt;!ATTLIST getter
+   id               ID                  #IMPLIED
+&gt;
+</pre>
+<p><code>getter</code> 要素内には、プロパティが呼び出されたときに実行するスクリプトを記述します。 <code>getter</code> タグは、 <code>property</code> タグの内側に配置しなければなりません。</p>
+<ul>
+ <li><code><strong>id</strong></code> - <code>id</code> 属性は文書中で一意となる識別子です。</li>
+</ul>
+<h2 id="setter" name="setter">setter</h2>
+<pre>&lt;!ELEMENT setter PCDATA&gt;
+&lt;!ATTLIST setter
+   id               ID                  #IMPLIED
+&gt;
+</pre>
+<p><code>setter</code> 要素内には、プロパティへ値をセットしようとしたときに実行するスクリプトを記述します。 <code>setter</code> タグは、 <code>property</code> タグの内側に配置しなければなりません。</p>
+<ul>
+ <li><code><strong>id</strong></code> - <code>id</code> 属性は文書中で一意となる識別子です。</li>
+</ul>
+<h2 id="handlers" name="handlers">handlers</h2>
+<pre>&lt;!ENTITY % handlers-content "handler*"&gt;
+&lt;!ELEMENT handlers %handlers-content;&gt;
+&lt;!ATTLIST handlers
+   id               ID                  #IMPLIED
+&gt;
+</pre>
+<p><code>handlers</code> 要素内では、バインディング先の文書内にて要素に対して付加するイベントハンドラを定義します。イベントハンドラは、バインディングが適用されると同時に追加され、バインディングが解除されると同時に削除されます。 <code>handlers</code> タグは <code>binding</code> タグ内に配置しなければなりません。</p>
+<ul>
+ <li><code><strong>id</strong></code> - <code>id</code> 属性は文書中で一意となる識別子です。</li>
+</ul>
+<h2 id="handler" name="handler">handler</h2>
+<pre>&lt;!ENTITY % handler-content "PCDATA"&gt;
+&lt;!ELEMENT handler %handler-content;&gt;
+&lt;!ATTLIST handler
+   id               ID                                  #IMPLIED
+   event            NMREF                               #REQUIRED
+   action           CDATA                               #IMPLIED
+   phase            (capturing|bubbling|target)         #IMPLIED
+   button           (1|2|3)                             #IMPLIED
+   modifiers        CDATA                               #IMPLIED
+   keycode          CDATA                               #IMPLIED
+   key              CDATA                               #IMPLIED
+   charcode         CDATA                               #IMPLIED
+   clickcount       (1|2|3)                             #IMPLIED
+   command          ID                                  #IMPLIED
+   preventdefault   false|true                          #IMPLIED
+&gt;
+</pre>
+<p><code>handler</code> 要素は、個々のイベントハンドラを表します。このイベントハンドラはバインディングが適用されたときにそのターゲットへ追加され、バインドされた要素からバインディングが解除されたときに削除されます。 <code>handler</code> の内側のスクリプトは、イベントハンドラに対応するイベントが発生したときに実行されます。 <code>handler</code> タグは、 <code>handlers</code> タグ内に配置しなければなりません。</p>
+<ul>
+ <li><code><strong>id</strong></code> - <code>id</code> 属性は文書中で一意となる識別子です。</li>
+ <li><code><strong>event</strong></code> - <code>event</code> 属性によって、このイベントハンドラが監視するイベントを指定します。その値は、 DOM の <code>DocumentEvent</code> インタフェースにしたがって生成された独自のイベントを含む、正当な DOM イベント名です。</li>
+ <li><code><strong>action</strong></code> - <code>action</code> 属性内には、イベントハンドラが発動したときに呼び出されるスクリプトを記述します。親要素 <code>handlers</code> の <code>type</code> 属性によって、スクリプト言語を指定します。イベントハンドラのスクリプトは <code>handler</code> 要素の子要素としても記述することができます。</li>
+ <li><code><strong>phase</strong></code> - この属性は、このイベントハンドラが監視すべきイベントフロー中のフェーズを指定します。その値は、 <code>capturing</code>, <code>bubbling</code>, <code>target</code> のいずれかとなります。フェーズが指定されている場合、イベントハンドリング処理のうちのそのフェーズ中でしかイベントハンドラは呼び出されないようになります。フェーズが指定されていない場合、デフォルトの <code>bubbling</code> であると想定されます。</li>
+ <li><code><strong>button</strong></code> - <code>button</code> 属性は、イベントハンドラに対して <em>フィルタ</em> を付加します。これはマウスハンドラが個々のボタンを指定するために用いられます。 DOM MouseEvent オブジェクトの <code>button</code> フィールドの値と <code>button</code> 属性の値とがマッチした場合のみ、イベントハンドラが発動するようになります。</li>
+ <li><code><strong>modifiers</strong></code> - <code>modifiers</code> 属性は、キーおよびマウスハンドラに対してフィルタを付加します。その値は、スペースまたはカンマで区切られた修飾キー (<span style="color: darkgreen; background: #ef9;">【訳注: Shift キーや Ctrl キーなど】</span>) のリストです。イベントハンドラが発動するためには、リスト中の修飾キーが発生した DOM Event オブジェクトへセットされている必要があります。 <code>modifiers</code> が空でなく、リスト中に存在しない修飾キーが DOM Event オブジェクトへセットされている場合、イベントハンドラは発動しません。<br>
+  サポートする修飾キー:
+  <ul>
+   <li><code>shift</code></li>
+   <li><code>alt</code></li>
+   <li><code>control</code></li>
+   <li><code>meta</code></li>
+   <li><code>accel</code> - プラットフォーム固有の主要アクセラレータキー。どの修飾キーが主要アクセラレータキーとなるかは、ユーザエージェントに一任される。 (Windows では Ctrl キー、 Mac では Meta キー)</li>
+   <li><code>accesskey</code> - ショートカットで用いられる、プラットフォーム固有の主要ニーモニックキー (Windows および Linux では Alt キー、 Mac では効果なし)</li>
+  </ul>
+ </li>
+ <li><code><strong>keycode</strong></code> - <code>keycode</code> 属性は、キーハンドラに対してフィルタを付加します。その値は、例えば <code>vk_enter</code> のような、特定のキーコードに対するキー識別子です。<br>
+  <em>筆者による注釈: 次期 DOM イベント仕様では、おそらく正しいキーコード文字列のリストがまとめられているだろう。</em><br>
+  この属性が存在する場合、イベントハンドラが発動するためには、 DOM KeyEvent オブジェクトの <a href="/ja/DOM/event.keyCode" title="ja/DOM/event.keyCode">keyCode</a> フィールドが属性の値とマッチしていなければなりません。</li>
+ <li><code><strong>charcode</strong></code> - <code>charcode</code> 属性は、キーハンドラに対してフィルタを付加します。その値は、例えば "<code>z</code>" のような一文字です。この属性が存在する場合、イベントハンドラが発動するためには、 DOM KeyEvent オブジェクトの <a href="/ja/DOM/event.charCode" title="ja/DOM/event.charCode">charCode</a> フィールドが属性の値とマッチしていなければなりません。<br>
+  <em>筆者による注釈: DOM イベントの成熟に伴い、より多くの属性が追加されるだろう。例えば、 MutationEvent [ DOMNodeInserted や DOMAttrModified 型などの、 DOM の変化に伴って発生するイベント は relatedTarget のようないくつかの新たなフィールドを定義しているので、フィルタリングの記述によってこれらに対応することになるかもしれない。</em></li>
+ <li><code><strong>key</strong></code> - <code>key</code> 属性は、 <code>charcode</code> と同じ意味を持ちます。</li>
+ <li><code><strong>clickcount</strong></code> - <code>clickcount</code> 属性は、イベントハンドラへ <em>フィルタ</em> を付加します。マウスハンドラに対して、ボタンが何回クリックされたかを指定するために用いられます。 DOM MouseEvent オブジェクトの <code>clickcount</code> フィールドの値と属性の値とがマッチした場合のみ、イベントハンドラが発動します。</li>
+ <li><code><strong>command</strong></code> - イベントハンドラが発動したときに呼び出すコマンドの ID 。クロム権限を持たない文書中で用いた場合、イベントハンドラ全体が無視されます。</li>
+ <li><code><strong>preventdefault</strong></code> - true をセットした場合、そのイベントのデフォルトの動作が実行されなくなります。 Event オブジェクトの <a href="/ja/DOM/event.preventDefault" title="ja/DOM/event.preventDefault">preventDefault</a> メソッドも参照してください。</li>
+</ul>
+<h2 id="resources" name="resources">resources</h2>
+<pre>&lt;!ENTITY % resources-content "(image?,stylesheet?)"&gt;
+&lt;!ELEMENT resources %resources-content;&gt;
+&lt;!ATTLIST property
+   id               ID                  #IMPLIED
+&gt;
+</pre>
+<p>バインディング内で使用する <a href="/ja/XBL/XBL_1.0_Reference#image" title="ja/XBL/XBL_1.0_Reference#image">image</a> 要素を前もってキャッシュしておくために用います。また、 <a href="/ja/XBL/XBL_1.0_Reference#stylesheet" title="ja/XBL/XBL_1.0_Reference#stylesheet">stylesheet</a> 要素をバインディング内で使用するために用います。 <code>resources</code> タグは、 <code>binding</code> タグの直下に配置しなければなりません。</p>
+<ul>
+ <li><code><strong>id</strong></code> - <code>id</code> 属性は文書中で一意となる識別子です。</li>
+</ul>
+<h2 id="stylesheet" name="stylesheet">stylesheet</h2>
+<pre>&lt;!ELEMENT stylesheet EMPTY&gt;
+&lt;!ATTLIST stylesheet
+   id               ID                  #IMPLIED
+   src              URI                 #REQUIRED
+&gt;
+</pre>
+<p><code>stylesheet</code> 要素によって、バインディングで使用するスタイルシートを宣言します。スタイルシート中のスタイル規則は、バインディングに対してのみ適用され、文書中の他の要素に対しては適用されません。 <code>stylesheet</code> タグは、 <code>resources</code> タグ内に配置しなければなりません。</p>
+<ul>
+ <li><code><strong>id</strong></code> - <code>id</code> 属性は文書中で一意となる識別子です。</li>
+ <li><code><strong>src</strong></code> - バインディングのコンテントへ適用するスタイルシートの URL。</li>
+</ul>
+<h2 id="image" name="image">image</h2>
+<pre>&lt;!ELEMENT image EMPTY&gt;
+&lt;!ATTLIST image
+   id               ID                  #IMPLIED
+   src              URI                 #REQUIRED
+&gt;
+</pre>
+<p>バインディング中で使用する画像リソースを宣言します。画像はバインディングが適用された直後にロードされます。画像を前もってロードし、後で利用するために用いられます。 <code>image</code> タグは、 <code>resources</code> タグ内に配置しなければなりません。</p>
+<ul>
+ <li><code><strong>id</strong></code> - <code>id</code> 属性は文書中で一意となる識別子です。</li>
+ <li><code><strong>src</strong></code> - ロードする画像の URL。</li>
+</ul>

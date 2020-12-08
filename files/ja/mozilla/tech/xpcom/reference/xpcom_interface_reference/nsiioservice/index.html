@@ -1,0 +1,456 @@
+---
+title: nsIIOService
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsIIOService
+tags:
+  - XPCOM
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIIOService
+---
+<div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/netwerk/base/public/nsIIOService.idl" rel="custom">netwerk/base/public/nsIIOService.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+This interface provides a set of URL parsing utility functions. These are provided as a convenience to the programmer and in some cases to improve performance by eliminating intermediate data structures and interfaces.
+</span>
+
+<div style="background: #eee; padding: 2px;">
+継承元: <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
+<span style="text-align: right; float: right;">最終更新: Gecko 1.2 </span></div>
+</div>
+
+<p>This interface duplicates many of the <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIProtocolHandler" title="">nsIProtocolHandler</a></code> methods in a protocol handler independent way (For example <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIIOService#newURI()">newURI()</a></code> inspects the scheme in order to delegate creation of the new URI to the appropriate protocol handler).</p>
+
+<div class="blockIndicator note"><strong>註:</strong> <code>nsIIOService</code> may only be used from the main thread.</div>
+
+<p>Implemented by <code>@mozilla.org/network/io-service;1</code> as a service:</p>
+
+<pre class="eval">var iOService = Components.classes["@mozilla.org/network/io-service;1"]
+                .getService(Components.interfaces.nsIIOService);
+</pre>
+
+<h2 id="Method_overview" name="Method_overview">メソッドの概要</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>boolean <a href="#allowPort()">allowPort</a>(in long aPort, in string aScheme);</code></td>
+  </tr>
+  <tr>
+   <td><code>ACString <a href="#extractScheme()">extractScheme</a>(in AUTF8String urlString);</code></td>
+  </tr>
+  <tr>
+   <td><code>unsigned long <a href="#getProtocolFlags()">getProtocolFlags</a>(in string aScheme);</code></td>
+  </tr>
+  <tr>
+   <td><code>nsIProtocolHandler <a href="#getProtocolHandler()">getProtocolHandler</a>(in string aScheme);</code></td>
+  </tr>
+  <tr>
+   <td><code>nsIChannel <a href="#newChannel()">newChannel</a>(in AUTF8String aSpec, in string aOriginCharset, in nsIURI aBaseURI); </code><span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 48 / Thunderbird 48 / SeaMonkey 2.45)">Gecko 48 で廃止</span></td>
+  </tr>
+  <tr>
+   <td><code>nsIChannel <a href="#newChannel2()">newChannel2</a>(in AUTF8String aSpec, in string aOriginCharset, in nsIURI aBaseURI, in nsIDOMNode aLoadingNode, in nsIPrincipal aLoadingPrincipal, in nsIPrincipal aTriggeringPrincipal, in uint32_t aSecurityFlags, in uint32_t aContentPolicyType);</code></td>
+  </tr>
+  <tr>
+   <td><code>nsIChannel <a href="#newChannelFromURI()">newChannelFromURI</a>(in nsIURI aURI); </code> <span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 48 / Thunderbird 48 / SeaMonkey 2.45)">Gecko 48 で廃止</span></td>
+  </tr>
+  <tr>
+   <td><code>nsIChannel <a href="#newChannelFromURI2()">newChannelFromURI2</a>(in nsIURI aURI, in nsIDOMNode aLoadingNode, in nsIPrincipal aLoadingPrincipal, in nsIPrincipal aTriggeringPrincipal, in unsigned long aSecurityFlags, in unsigned long aContentPolicyType);</code></td>
+  </tr>
+  <tr>
+   <td><code>nsIChannel <a href="#newChannelFromURIWithLoadInfo()">newChannelFromURIWithLoadInfo</a>(in nsIURI aURI, in nsILoadInfo aLoadInfo);</code></td>
+  </tr>
+  <tr>
+   <td><code>nsIChannel <a href="#newChannelFromURIWithProxyFlags2()">newChannelFromURIWithProxyFlags2</a>(in nsIURI aURI, in nsIURI aProxyURI, in uint32_t aProxyFlags,in nsIDOMNode aLoadingNode, in nsIPrincipal aLoadingPrincipal, in nsIPrincipal aTriggeringPrincipal, in uint32_t aSecurityFlags, in uint32_t aContentPolicyType); </code></td>
+  </tr>
+  <tr>
+   <td><code>nsIURI <a href="#newFileURI()">newFileURI</a>(in nsIFile aFile);</code></td>
+  </tr>
+  <tr>
+   <td><code>nsIURI <a href="#newURI()">newURI</a>(in AUTF8String aSpec, in string aOriginCharset, in nsIURI aBaseURI);</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Attributes" name="Attributes">属性</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Attribute</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>offline</code></td>
+   <td><code><a href="/en/boolean" title="en/boolean">boolean</a></code></td>
+   <td>Returns <code>true</code> if networking is in "<code>offline</code>" mode. When in <code>offline</code> mode, attempts to access the network will fail (although this does not necessarily correlate with whether there is actually a network available -- that's hard to detect without causing the dialer to come up). Observers will be notified of changes to this attribute.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Methods" name="Methods">メソッド</h2>
+
+<h3 id="allowPort" name="allowPort()">allowPort()</h3>
+
+<p>Checks if a port number is banned. This involves consulting a list of unsafe ports, corresponding to network services that may be easily exploitable. If the given port is considered unsafe, then the protocol handler (corresponding to aScheme) will be asked whether it wishes to override the IO service's decision to block the port. This gives the protocol handler ultimate control over its own security policy while ensuring reasonable, default protection.</p>
+
+<p>Is similar to <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIProtocolHandler#allowPort()">nsIProtocolHandler.allowPort()</a></code>.</p>
+
+<pre class="eval">boolean allowPort(
+  in long aPort,
+  in string aScheme
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>aPort</code></dt>
+ <dd>The port to check</dd>
+ <dt><code>aScheme</code></dt>
+ <dd>The scheme for the protocol handler that could override the IOService's decision.</dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value">Return value</h6>
+
+<p><code>true</code> if the port is allowed, <code>false</code> otherwise.</p>
+
+<h3 id="extractScheme" name="extractScheme()">extractScheme()</h3>
+
+<p>Utility to extract the scheme from a URL string, consistently and according to spec (see <a class="external" href="http://tools.ietf.org/html/rfc3986" title="http://tools.ietf.org/html/rfc3986">RFC 3986</a>).</p>
+
+<div class="blockIndicator note"><strong>註:</strong>  Most URL parsing is done via <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI" title="">nsIURI</a></code>, and in fact the scheme can also be extracted from a URL string via <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI" title="">nsIURI</a></code>. This method is provided purely as an optimization. </div>
+
+<pre class="eval">ACString extractScheme(
+  in AUTF8String urlString
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>urlString</code></dt>
+ <dd>The string for the URL to extract the scheme from.</dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value">Return value</h6>
+
+<p>A string corresponding to the scheme.</p>
+
+<h6 id="Exceptions_thrown" name="Exceptions_thrown">Exceptions thrown</h6>
+
+<dl>
+ <dt><code>NS_ERROR_MALFORMED_URI</code></dt>
+ <dd>If URL string is not of the right form.</dd>
+</dl>
+
+<h3 id="getProtocolFlags" name="getProtocolFlags()">getProtocolFlags()</h3>
+
+<p>Returns the protocol flags for a given scheme.</p>
+
+<pre class="eval">unsigned long getProtocolFlags(
+  in string aScheme
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>aScheme</code></dt>
+ <dd>The scheme for which to get the protocol flags.</dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value">Return value</h6>
+
+<p>The value of the <code>protocolFlags</code> attribute for the corresponding <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIProtocolHandler" title="">nsIProtocolHandler</a></code>.</p>
+
+<h3 id="getProtocolHandler" name="getProtocolHandler()">getProtocolHandler()</h3>
+
+<p>Returns a protocol handler for a given URI scheme.</p>
+
+<pre class="eval">nsIProtocolHandler getProtocolHandler(
+  in string aScheme
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>aScheme</code></dt>
+ <dd>The URI scheme for which to get a protocol handler.</dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value">Return value</h6>
+
+<p>An <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIProtocolHandler" title="">nsIProtocolHandler</a></code> for the scheme.</p>
+
+<h3 id="newChannel" name="newChannel()">newChannel()</h3>
+
+<p><span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 48 / Thunderbird 48 / SeaMonkey 2.45)">Gecko 48 で廃止</span><br>
+ <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIIOService#newURI()">newURI()</a></code> や <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIIOService#newChannelFromURI()">newChannelFromURI()</a></code> の重複した呼び出しを避けるショートカットメソッドです。</p>
+
+<pre class="eval">nsIChannel newChannel(
+  in AUTF8String aSpec,
+  in string aOriginCharset,
+  in nsIURI aBaseURI
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>aSpec</code></dt>
+ <dd>希望するuriのためのスペックです。</dd>
+ <dt><code>aOriginCharset</code></dt>
+ <dd>uriのためのキャラクタセットです。たぶんnullになるでしょう。</dd>
+ <dt><code>aBaseURI</code></dt>
+ <dd>スペックのためベースURLです。たぶんnullになるでしょう。もしaSpecが相対パスだった時このパラメーターは無視されます。</dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value">Return value</h6>
+
+<p>Returns an <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIChannel" title="">nsIChannel</a></code> based on <code>aSpec</code> and <code>aBaseURI</code>.</p>
+
+<h3 id="newChannel2" name="newChannel2()">newChannel2()</h3>
+
+<p><code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIIOService#newURI()">newURI()</a></code> や <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIIOService#newChannelFromURI()">newChannelFromURI()</a></code>の再呼び出しを避けるためのショートカットメソッドです。</p>
+
+<pre class="eval">nsIChannel newChannel2(
+   <code>in AUTF8String aSpec,
+   in string aOriginCharset,
+   in nsIURI aBaseURI,
+   in nsIDOMNode aLoadingNode,
+   in nsIPrincipal aLoadingPrincipal,
+   in nsIPrincipal aTriggeringPrincipal,
+   in uint32_t aSecurityFlags,
+   in uint32_t aContentPolicyType,
+</code>
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>aSpec</code></dt>
+ <dd>
+ <p>希望するuriのためのスペックです。</p>
+ </dd>
+ <dt><code>aOriginCharset</code></dt>
+ <dd>uriのためのキャラクタセットです。たぶんnullになるでしょう。</dd>
+ <dt><code>aBaseURI</code></dt>
+ <dd>スペックのためベースURLです。たぶんnullになるでしょう。もしaSpecが相対パスだった時このパラメーターは無視されます。</dd>
+ <dt><code>aLoadingNode</code></dt>
+ <dd><code>チャンネルのloadingDocumentです。この要素やドキュメントがリクエストの結果として使われるでしょう。これはこのリクエストへの結果としてアクセスされる要素やドキュメントです。例として画像をロードする場合、これはイメージがロードされるドキュメントになります。そしてCSSの場合、</code> <code>レンダリングがこのスタイルシートに影響を与えられる</code>ド<code>キュメントになります。もし可能なら、ロードが実行される要素を渡します。</code>しかしもしロードが XMLHttpRequestなどのJS API やforなどで複数の要素に渡って合体される場合は代わりにDocumentノードに渡します。ロードがアドオンや内部のブラウザ機能から来るようにロードがどんなドキュメントにも関連していない場合、nullを使います。</dd>
+ <dt><code>aLoadingPrincipal</code></dt>
+ <dd>チャンネルにロードするもののPrincipalです。 リクエストの結果としてこのドキュメントのprincipalが使用されます。 この値のデフォルトは aLoadingNode のprincipalです。そのため、もし aLoadingNode が渡された場合は、nullとして残すことができます。 しかし、aLoadingNode が null としてロードされている場合は、値を渡す必要があります。 例としてWebWorkerからロードする場合を考えてみます。この場合はworkerのprincipalを渡します。アドオンやブラウザ内部からロードする場合は、 system principalを渡します。This principal should almost always be the system principal if aLoadingNode is null. The only exception to this is for loads from WebWorkers since they don't have any nodes to be passed as aLoadingNode. Please note, aLoadingPrincipal is *not* the principal of the resource being loaded. But rather the principal of the context where the resource will be used.</dd>
+ <dt><code>aTriggeringPrincipal</code></dt>
+ <dd>The triggeringPrincipal of the load. The triggeringPrincipal is the principal of the resource that caused this particular URL to be loaded. Most likely the triggeringPrincipal and the loadingPrincipal are identical, in which case the triggeringPrincipal can be left out. In some cases the loadingPrincipal and the triggeringPrincipal are different however, e.g. a stylesheet may import a subresource. In that case the principal of the stylesheet which contains the import command is the triggeringPrincipal, and the principal of the document whose rendering is affected is the loadingPrincipal.</dd>
+ <dt><code>aSecurityFlags</code></dt>
+ <dd>このchannelのsecurityFlagsです。すべてのsecurityFlagsはnsILoadInfoで定義されています。</dd>
+ <dt><code>aContentPolicyType</code></dt>
+ <dd>このchannelのcontentPolicyTypeです。すべてのcontentPolicytypeはnsIContentPolicyで定義されています。</dd>
+ <dt><span style="color: darkgreen; background: #ef9;">【訳注: アドオン開発者が暫定的に使う場合はTYPE_OTHERを使う。firefox開発者はTYPE_OTHERを使うのは避けるべきです】</span></dt>
+ <dt><span style="color: darkgreen; background: #ef9;">【訳注: nsIContentPolicyがincludeしている nsIContentPolicyBase.idl に書いてあるっぽいです】</span></dt>
+</dl>
+
+<h6 id="Return_value" name="Return_value"> </h6>
+
+<h6 id="Return_value" name="Return_value">Return value</h6>
+
+<p>aSpecやaBaseURIに基づいた <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIChannel" title="">nsIChannel</a></code> を返します<code>。</code></p>
+
+<h3 id="newChannelFromURI" name="newChannelFromURI()">newChannelFromURI()</h3>
+
+<p><span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 48 / Thunderbird 48 / SeaMonkey 2.45)">Gecko 48 で廃止</span></p>
+
+<p>与えられたURIのチャンネルを作成します</p>
+
+<pre class="eval">nsIChannel newChannelFromURI(
+  in nsIURI aURI
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>aURI</code></dt>
+ <dd>An <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI" title="">nsIURI</a></code> from which to make a channel.</dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value">Return value</h6>
+
+<p>An <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIChannel" title="">nsIChannel</a></code> for the uri.</p>
+
+<h3 id="newChannelFromURI2" name="newChannelFromURI2()">newChannelFromURI2()</h3>
+
+<p>Creates a channel for a given URI.</p>
+
+<pre>nsIChannel newChannelFromURI2(
+  in nsIURI aURI,
+  in nsIDOMNode aLoadingNode,
+  in nsIPrincipal aLoadingPrincipal,
+  in nsIPrincipal aTriggeringPrincipal,
+  in unsigned long aSecurityFlags,
+  in unsigned long aContentPolicyType
+);</pre>
+
+<p>Please note, if you provide both a loadingNode and a loadingPrincipal, then loadingPrincipal must be equal to loadingNode-&gt;NodePrincipal(). But less error prone is to just supply a loadingNode.</p>
+
+<p>Keep in mind that URIs coming from a webpage should <em>never</em> use the systemPrincipal as the loadingPrincipal.</p>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>aURI</code></dt>
+ <dd>An <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI" title="">nsIURI</a></code> from which to make a channel.</dd>
+ <dt>aLoadingNode</dt>
+ <dd>The loadingDocument of the channel.<br>
+ The element or document where the result of this request will be used. This is the document/element that will get access to the result of this request. For example for an image load, it's the document in which the image will be loaded. And for a CSS stylesheet it's the document whose rendering will be affected by the stylesheet. If possible, pass in the element which is performing the load. But if the load is coming from a JS API (such as XMLHttpRequest) or if the load might be coalesced across multiple elements (such as for &lt;img&gt;) then pass in the Document node instead.<br>
+ <br>
+ For loads that are not related to any document, such as loads coming from addons or internal browser features, use null here.</dd>
+ <dt>aLoadingPrincipal                                                     </dt>
+ <dd>The loadingPrincipal of the channel.<br>
+ <br>
+ The principal of the document where the result of this request will be used.<br>
+ <br>
+ This defaults to the principal of aLoadingNode, so when aLoadingNode is passed this can be left as null. However for loads where aLoadingNode is null this argument must be passed.  For example for loads from a WebWorker, pass the principal of that worker. For loads from an addon or from internal browser features, pass the system principal. This principal should almost always be the system principal if aLoadingNode is null. The only exception to this is for loads from WebWorkers since they don't have any nodes to be passed as aLoadingNode. Please note, aLoadingPrincipal is *not* the principal of the resource being loaded. But rather the principal of the context here the resource will be used.</dd>
+ <dt>aTriggeringPrincipal                                                  </dt>
+ <dd>The triggeringPrincipal of the load.<br>
+ <br>
+ The triggeringPrincipal is the principal of the resource that caused this particular URL to be loaded. Most likely the triggeringPrincipal and the loadingPrincipal are identical, in which case the triggeringPrincipal can be left out. In some cases the loadingPrincipal and the triggeringPrincipal are different however, e.g. a stylesheet may import a subresource. In that case the principal of the stylesheet which contains the import command is the triggeringPrincipal, and the principal of the document whose rendering is affected is the loadingPrincipal.</dd>
+ <dt>aSecurityFlags                                                        </dt>
+ <dd>The securityFlags of the channel. Any of the securityflags defined in nsILoadInfo.idl</dd>
+ <dt>aContentPolicyType                                                        </dt>
+ <dd>The contentPolicyType of the channel. Any of the content types defined in nsIContentPolicy.idl              </dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value">Return value</h6>
+
+<p>An <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIChannel" title="">nsIChannel</a></code> for the uri.</p>
+
+<h3 id="newChannelFromURIWithLoadInfo" name="newChannelFromURIWithLoadInfo()">newChannelFromURIWithLoadInfo()</h3>
+
+<p>Creates a channel for a given URI. Equivalent to <code>newChannelFromURI2(aURI, aLoadingNode, ...)</code></p>
+
+<pre>nsIChannel newChannelFromURIWithLoadInfo(
+  in nsIURI aURI,
+  in nsILoadInfo aLoadInfo
+);</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>aURI</code></dt>
+ <dd>An <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI" title="">nsIURI</a></code> from which to make a channel.</dd>
+ <dt>aLoadInfo</dt>
+ <dd>A load info object.</dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value">Return value</h6>
+
+<p>An <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIChannel" title="">nsIChannel</a></code> for the uri.</p>
+
+<h3 id="newChannelFromURIWithProxyFlags2" name="newChannelFromURIWithProxyFlags2()">newChannelFromURIWithProxyFlags2()</h3>
+
+<p><br>
+ Creates a channel for a given URI. Equivalent to <code>newChannelFromURI2(aURI, aLoadingNode, ...)</code></p>
+
+<pre>nsIChannel newChannelFromURIWithProxyFlags2(
+  in nsIURI aURI,
+  in nsIURI aProxyURI,
+  in uint32_t aProxyFlags,
+  in nsIDOMNode aLoadingNode,
+  in nsIPrincipal aLoadingPrincipal,
+  in nsIPrincipal aTriggeringPrincipal,
+  in uint32_t aSecurityFlags,
+  in uint32_t aContentPolicyType
+);</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>aURI</code></dt>
+ <dd>An <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI" title="">nsIURI</a></code> from which to make a channel.</dd>
+ <dt>aProxyURI</dt>
+ <dd>nsIURI to use for proxy resolution. Can be null in which case aURI is used.</dd>
+ <dt>aPorxyFlags</dt>
+ <dd>Flags from nsIProtocolProxyService to use when resolving proxies for this new channel.</dd>
+ <dt>aLoadingNode</dt>
+ <dd>The loadingDocument of the channel. The element or document where the result of this request will be used. This is the document/element that will get access to the result of this request. For example for an image load, it's the document in which the image will be loaded. And for a CSS stylesheet it's the document whose rendering will be affected by the stylesheet. If possible, pass in the element which is performing the load. But if the load is coming from a JS API (such as XMLHttpRequest) or if the load might be coalesced across multiple elements (such as for ) then pass in the Document node instead. For loads that are not related to any document, such as loads coming from addons or internal browser features, use null here.</dd>
+ <dt>aLoadingPrincipal</dt>
+ <dd>The loadingPrincipal of the channel. The principal of the document where the result of this request will be used. This defaults to the principal of aLoadingNode, so when aLoadingNode is passed this can be left as null. However for loads where aLoadingNode is null this argument must be passed. For example for loads from a WebWorker, pass the principal of that worker. For loads from an addon or from internal browser features, pass the system principal. This principal should almost always be the system principal if aLoadingNode is null. The only exception to this is for loads from WebWorkers since they don't have any nodes to be passed as aLoadingNode. Please note, aLoadingPrincipal is *not* the principal of the resource being loaded. But rather the principal of the context where the resource will be used.</dd>
+ <dt>aTriggeringPrincipal</dt>
+ <dd>The triggeringPrincipal of the load. The triggeringPrincipal is the principal of the resource that caused this particular URL to be loaded. Most likely the triggeringPrincipal and the loadingPrincipal are identical, in which case the triggeringPrincipal can be left out. In some cases the loadingPrincipal and the triggeringPrincipal are different however, e.g. a stylesheet may import a subresource. In that case the principal of the stylesheet which contains the import command is the triggeringPrincipal, and the principal of the document whose rendering is affected is the loadingPrincipal.</dd>
+ <dt>aSecurityFlags</dt>
+ <dd>The securityFlags of the channel. Any of the securityflags defined in nsILoadInfo.</dd>
+ <dt>aContentPolicyType</dt>
+ <dd>The contentPolicyType of the channel. Any of the content types defined in nsIContentPolicy.</dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value">Return value</h6>
+
+<p>An <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIChannel" title="">nsIChannel</a></code> for the uri.</p>
+
+<h3 id="newFileURI" name="newFileURI()">newFileURI()</h3>
+
+<p>This method constructs a new URI from a <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile" title="">nsIFile</a></code>.</p>
+
+<pre class="eval">nsIURI newFileURI(
+  in nsIFile aFile
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>aFile</code></dt>
+ <dd>The <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile" title="">nsIFile</a></code> whose URI is desired.</dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value">Return value</h6>
+
+<p>An <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI" title="">nsIURI</a></code> corresponding to the file.</p>
+
+<h3 id="newURI" name="newURI()">newURI()</h3>
+
+<p>This method constructs a new URI by determining the scheme of the URI spec, and then delegating the construction of the URI to the protocol handler for that scheme. QueryInterface can be used on the resulting URI object to obtain a more specific type of URI.</p>
+
+<pre class="eval">nsIURI newURI(
+  in AUTF8String aSpec,
+  in string aOriginCharset,
+  in nsIURI aBaseURI
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>aSpec</code></dt>
+ <dd>The spec for the desired uri.</dd>
+ <dt><code>aOriginCharset</code></dt>
+ <dd>The charset for the uri. May be null.</dd>
+ <dt><code>aBaseURI</code></dt>
+ <dd>The base URI for the spec. May be null. If <code>aSpec</code> is an absolute URL, this parameter is ignored.</dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value">Return value</h6>
+
+<p>An <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI" title="">nsIURI</a></code> object corresponding to <code>aSpec</code> and <code>aBaseURI</code>.</p>
+
+<h6 id="Exceptions_thrown" name="Exceptions_thrown">Exceptions thrown</h6>
+
+<dl>
+ <dt><code>NS_ERROR_MALFORMED_URI</code></dt>
+ <dd>If URI does not begin with a valid scheme (as defined by <a href="https://tools.ietf.org/html/rfc3986">RFC 3986</a>) followed by a colon.</dd>
+</dl>
+
+<h2 id="Remarks" name="Remarks">備考</h2>
+
+<div class="blockIndicator note"><strong>註:</strong>  The proper way to create a new <code>nsIURI</code> is with <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIIOService#newURI()">newURI()</a></code> method defined above. Do NOT create a new <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI" title="">nsIURI</a></code> with <code>createInstance()</code>. </div>
+
+<p>This was a frozen interface see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=157131" title="FIXED: [meta] nsIIOService need to be frozen">バグ 157131</a> for details. From <span title="(Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)">Gecko 2.0</span> interfaces are no longer frozen.</p>
+
+<h2 id="See_also" name="See_also">関連項目</h2>
+
+<ul>
+ <li><a class="external" href="http://tools.ietf.org/html/rfc3986" title="http://tools.ietf.org/html/rfc3986">RFC 3986</a></li>
+</ul>

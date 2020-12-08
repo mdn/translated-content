@@ -1,0 +1,254 @@
+---
+title: 高度なルール
+slug: Archive/Mozilla/XUL/Tutorial/Advanced_Rules
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Advanced_Rules
+---
+<p>
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:RDF_Datasources" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Persistent_Data">次のページ  »</a></p>
+</div>
+<p>このセクションでは、さらに高度なルール構文について見ていきます。
+</p>
+<h3 id=".E5.AE.8C.E5.85.A8.E3.81.AA.E3.83.AB.E3.83.BC.E3.83.AB.E6.A7.8B.E6.96.87" name=".E5.AE.8C.E5.85.A8.E3.81.AA.E3.83.AB.E3.83.BC.E3.83.AB.E6.A7.8B.E6.96.87"> 完全なルール構文 </h3>
+<p>これまでに説明したルールの構文でも、ある程度のデータソースまでは十分役に立ちますが、
+データの表示にもっと複雑な方法が必要になることもあります。
+実のところ、これまでの簡易なルール構文は、以下で説明する完全なルール構文の短縮形に過ぎません。
+なお、簡易なルールの場合と同様に、完全なルールについても <code><code><a href="/ja/docs/Mozilla/Tech/XUL/rule" title="rule">rule</a></code></code> タグの中に置かれることになります。
+</p><p>完全なルールには、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/conditions" title="conditions">conditions</a></code></code>、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/bindings" title="bindings">bindings</a></code></code>、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/action" title="action">action</a></code></code>の 3 つのタグが含まれます。
+ただし、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/bindings" title="bindings">bindings</a></code></code> タグは常に必要なわけではありません。
+</p><p><code>conditions</code> 要素は、与えられたリソースをマッチさせる条件を指定するために使用します。
+ここには複数の条件が指定可能ですが、その場合は、すべての条件がマッチする必要があります。
+(簡易なルール構文では、条件は <code>rule</code> 要素自身に直接設定していました)。
+</p><p>そして、条件にマッチするリソースに対しては、<code>actions</code> タグの中のコンテントが生成されることになります。
+(簡易なルール構文では、生成するコンテントは <code>rule</code> タグ中に直接置かれていました)。
+</p>
+<h3 id=".E3.83.AB.E3.83.BC.E3.83.AB.E3.81.AE.E6.9D.A1.E4.BB.B6" name=".E3.83.AB.E3.83.BC.E3.83.AB.E3.81.AE.E6.9D.A1.E4.BB.B6"> ルールの条件 </h3>
+<p>テンプレートビルダーは、データソースからツリーやメニューなどの要素のコンテントを生成するとき、
+まず最初に <code>ref</code> 属性が参照しているリソースを探して、
+その後、そのリソースのすべての子リソースを走査していきます。
+そのとき、各リソースに対して条件が適用され、
+そのリソースに条件がマッチした場合には、<code>actions</code> 要素の中のコンテントが生成されることになり、マッチしない場合には、コンテントは生成されずに次に移ることになります。
+</p>
+<h4 id="content_.E8.A6.81.E7.B4.A0" name="content_.E8.A6.81.E7.B4.A0"> content 要素 </h4>
+<p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/conditions" title="conditions">conditions</a></code></code> 要素には 3 つの要素を含めることが可能です。
+1 つめの要素は <code><code><a href="/ja/docs/Mozilla/Tech/XUL/content" title="content">content</a></code></code> で、これは常に存在する必要があり、かつ 1 つしか存在してはなりません。
+この要素では、テンプレートビルダーがリソースを走査するときに渡される情報の<span style="border-bottom: 1px dashed green;" title="placeholder">置き場所</span>を提供します。
+具体的には、ここで条件のマッチ処理を行う際にルートリソースを参照できるよう保持しておく、変数の名前を指定することになります。
+なお、ルートリソースとはテンプレートを含む要素の <code><code id="a-ref"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/ref">ref</a></code></code> 属性で指定されるリソースのことです。
+</p><p><code>content</code> 要素の構文は以下のようになります。
+</p>
+<pre>&lt;content uri="?var"/&gt;
+</pre>
+<p>このクエスチョンマークは、それに続くテキストが変数名であることを指示しています。
+これにより、「<code>var</code>」変数を、条件の後の部分で利用することが可能になります。
+もちろん、このとき変数名として好きな名称を指定することが可能です。
+</p>
+<h4 id="member_.E8.A6.81.E7.B4.A0" name="member_.E8.A6.81.E7.B4.A0"> member 要素 </h4>
+<p>2 つめの要素は <code><code><a href="/ja/docs/Mozilla/Tech/XUL/member" title="member">member</a></code></code> で、これは子リソースを走査する必要があることを示すために使用します。
+この要素では、RDF でリスト記述するために使用する <code>Seq</code>、<code>Bag</code>、<code>Alt</code> 要素のいずれかをコンテナとして参照します。
+</p><p>例えば、以下に一部だけを示す、RDF/XML で記述された都市の一覧があり、
+</p>
+<pre>&lt;RDF:Seq about="http://www.xulplanet.com/rdf/weather/cities"&gt;
+  &lt;RDF:li resource="http://www.xulplanet.com/rdf/weather/city/Paris"/&gt;
+  &lt;RDF:li resource="http://www.xulplanet.com/rdf/weather/city/Manchester"/&gt;
+  &lt;RDF:li resource="http://www.xulplanet.com/rdf/weather/city/Melbourne"/&gt;
+  &lt;RDF:li resource="http://www.xulplanet.com/rdf/weather/city/Kiev"/&gt;
+&lt;/RDF:Seq&gt;
+
+&lt;RDF:Description about="http://www.xulplanet.com/rdf/weather/city/Paris"&gt;
+  &lt;cityset:name&gt;Paris&lt;/cityset:name&gt;
+&lt;/RDF:Description&gt;
+
+.
+.
+.
+</pre>
+<p>この各都市を、ツリーの行に表示していきたいとすると、
+<code><code><a href="/ja/docs/Mozilla/Tech/XUL/member" title="member">member</a></code></code> 要素は以下のように記述することになります。
+</p>
+<pre>&lt;tree id="citiesTree" datasources="weather.rdf"
+      ref="http://www.xulplanet.com/rdf/weather/cities"&gt;
+  &lt;template&gt;
+    &lt;rule&gt;
+      &lt;conditions&gt;
+        &lt;content uri="?list"/&gt;
+        &lt;member container="?list" child="?city"/&gt;
+      &lt;/conditions&gt;
+    &lt;rule&gt;
+  &lt;template&gt;
+&lt;/tree&gt;
+</pre>
+<p>このテンプレートを展開する場合、まずテンプレートビルダーは、<code><code id="a-ref"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/ref">ref</a></code></code> 属性の値の取得を行います。
+そして、取得したリソース <code><span class="nowiki">http://www.xulplanet.com/rdf/weather/cities</span></code> は、
+<code><code><a href="/ja/docs/Mozilla/Tech/XUL/content" title="content">content</a></code></code> タグで指定されている変数「<code>list</code>」に代入されます。
+これにより、ルートリソースと関連するリソースは、この「<code>list</code>」変数を使用して取得することが可能になります。
+</p><p>次に、テンプレートビルダーは、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/member" title="member">member</a></code></code> 要素の処理に移ります。
+ここで、ビルダーは順次その要素の子要素を走査していくことになります。
+このとき、リストを持つ親要素は <code><code id="a-container"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/container">container</a></code></code> 属性で指定し、子は <code>child</code> 属性で指定します。
+上記の例では、<code><code id="a-container"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/container">container</a></code></code> 属性の値は、「<code>list</code>」変数を使用して指定しています。
+このため、親には「<code>list</code>」変数の値、つまりルートリソース「<code><span class="nowiki">http://www.xulplanet.com/rdf/weather/cities</span></code>」が設定されることになります。
+その結果、 「<code><span class="nowiki">http://www.xulplanet.com/rdf/weather/cities</span></code>」 にリストされるすべての子要素が走査されます。
+</p><p>上記の RDF では、リソース 「<code><span class="nowiki">http://www.xulplanet.com/rdf/weather/cities</span></code>」には 4 つの子があり、それぞれ異なる都市を指しています。
+テンプレートビルダーは、子要素を繰り返しで処理し、そのとき対象の子要素と <code>child</code> 属性の値についてのマッチングが行われます。
+ただし、この場合は、単に値を「<code>city</code>」変数 に設定するだけになります。
+つまり、上記の記述によって、繰り返しの間、ビルダーに対象となる子リソースを「<code>city</code>」変数へ代入させることが可能です。
+</p><p>それ以外に条件は無いため、これらの 4 つのリソースは条件にマッチしたことになり、ビルダーはそれぞれに対してコンテントを生成します。
+といっても、上記の例では生成すべきコンテントは設定されていません。
+これは、もう少し後で追加する予定になっています。
+</p>
+<h4 id="triple_.E8.A6.81.E7.B4.A0" name="triple_.E8.A6.81.E7.B4.A0"> triple 要素 </h4>
+<p>3 つめの要素は <code><code><a href="/ja/docs/Mozilla/Tech/XUL/triple" title="triple">triple</a></code></code> です。
+これは RDF データソースに、指定のトリプル (または<span style="border-bottom: 1px dashed green;" title="assertion">言明</span>) が存在するかどうかをチェックするために使用します。
+トリプルとは、リソースにおけるプロパティのようなものと考えることができます。
+例えば、ブックマークと その URL の間にはトリプルが存在して、
+以下のようなグラフで表現されます
+</p>
+<pre>                                   URL
+(mozilla.org のブックマーク)  ──────→  [www.mozilla.org]
+</pre>
+<p>これは、「mozilla.org のブックマーク」というブックマークと、「www.mozilla.org」の間には、URL プロパティによるトリプルが存在することを意味しています。
+この表現において、最初の部分は「主語 (subject)」、矢印線は「述語 (predicate)」、最後の部分は「目的語 (object)」と呼ばれます。
+これを、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/triple" title="triple">triple</a></code></code> 要素で記述した場合、以下のように表現されます。
+</p>
+<pre>&lt;triple subject="A Bookmark to mozilla.org"
+        predicate="URL"
+        object="www.mozilla.org"/&gt;
+</pre>
+<p>これは、実際よりも若干単純化されていることに注意してください。
+通常の場合、述語は XML の名前空間を含む URI になり、
+主語は上記のようなブックマークのタイトルではなく、ブックマークのリソース id になります。
+なお、実際にはブックマークのタイトルは、データソースの中で Name を述語とする別のトリプルに含まれてます。
+</p><p><code>triple</code> 要素で、主語 (subject) と目的語 (object) については、変数を参照するように置き換えることができ、
+その場合は変数に設定された値が使用されることになります。
+ただし、変数の値がまだ定義されていない場合には、テンプレートビルダーは値をデータソースから探して変数に代入します。
+</p><p>例えば、都市のデータソースに天気予報の追加を行いたいとした場合、
+以下のような条件を使用することになります。
+</p>
+<pre>&lt;conditions&gt;
+  &lt;content uri="?list"/&gt;
+  &lt;member container="?list" child="?city"/&gt;
+  &lt;triple subject="?city"
+             predicate="http://www.xulplanet.com/rdf/weather#prediction"
+             object="?pred"/&gt;
+&lt;/conditions&gt;
+</pre>
+<p>テンプレートビルダーが上記を処理するとき、各都市のリソースを繰り返し処理していくところまでは先述の例と同じですが、
+上記では、加えられた <code>triple</code> を処理するために、 RDF データソースから都市の天気予報についての<span style="border-bottom: 1px dashed green;" title="assertion">言明</span>が検索されて、
+「<code>pred</code>」変数に予報が代入されることになります。
+ビルダーは 4 つの都市のそれぞれに対してこれを繰り返します。
+マッチ処理が済むと、ビルダーは予報が見つかった都市に対してのみコンテントの生成を行います。
+つまり、都市に予報のリソースが存在しない場合は、条件は満たされていないことになるため、その都市についてはコンテントの生成は行われないことになります。
+なお、簡易なルール構文を利用する場合と異なり、曖昧になることがないため、述語の先頭に「<code>rdf:</code>」を付ける必要がないことに注意してください。
+</p><p>また、下記の例のように、目的語 (object) の値を、インラインで直接指定することも可能です。
+</p>
+<pre>&lt;conditions&gt;
+  &lt;content uri="?city"/&gt;
+  &lt;triple subject="?city"
+             predicate="http://www.xulplanet.com/rdf/weather#prediction"
+             object="Cloudy"/&gt;
+&lt;/conditions&gt;
+</pre>
+<p>この例も以前のものと類似していますが、天気予報が「Cloudy (くもり)」の場合のみマッチするように指定している点が異なっています。
+その結果、この条件は予報が「Cloudy」になっている都市に対してのみ満たされることになります。
+</p><p>また、さらなるマッチ条件が必要な場合は、トリプルを追加することも可能です。
+例えば、上記の例にさらに温度と風速のチェックを追加する場合は、
+単に追加するリソースのための別のトリプルを追加するだけで済みます。
+この場合、条件はすべてのトリプルから値が得られた場合にのみマッチしたことになります。
+</p><p>以下の例は、新たにトリプルを追加して都市の名前をチェックします。
+このとき、名前は「<code>name</code>」変数に代入されます。
+この条件は、都市に名前があり、かつ予報があるときにのみマッチすることになります。
+</p>
+<pre>&lt;conditions&gt;
+  &lt;content uri="?list"/&gt;
+  &lt;member container="?list" child="?city"/&gt;
+  &lt;triple subject="?city"
+             predicate="http://www.xulplanet.com/rdf/weather#name"
+             object="?name"/&gt;
+  &lt;triple subject="?city"
+             predicate="http://www.xulplanet.com/rdf/weather#prediction"
+             object="?pred"/&gt;
+&lt;/conditions&gt;
+</pre>
+<h3 id=".E3.82.B3.E3.83.B3.E3.83.86.E3.83.B3.E3.83.88.E3.81.AE.E7.94.9F.E6.88.90" name=".E3.82.B3.E3.83.B3.E3.83.86.E3.83.B3.E3.83.88.E3.81.AE.E7.94.9F.E6.88.90"> コンテントの生成 </h3>
+<p>ルールがマッチしたときに生成されるコンテントは、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/action" title="action">action</a></code></code> 要素の中に指定します。
+これは、ツリーの行やメニュー項目、といったリソースに応じて生成したいコンテントになります。
+また、ここに置くコンテントからは、条件の部分で定義された変数を参照することが可能です。
+したがって、上記の天気の例の場合、「<code>name</code>」と「<code>pred</code>」変数を使用することで、都市名や天気予報を表示させることが可能です。
+なお、「<code>list</code>」や「<code>city</code>」変数も使用は可能ですが、
+それらはテキストではなくリソースの情報が保持されているため、表示させても利用者に意味がある情報にはならないでしょう。
+</p><p>簡易なルール構文では、リソース対応にコンテントを生成する必要がある要素は、<code>uri='rdf:*'</code> を置くことで指定していましたが、
+完全なルール構文の場合、<code><code id="a-uri"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/uri">uri</a></code></code> 属性の値は、条件の部分で設定される変数を指定する必要があります。
+通常、ここには、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/member" title="member">member</a></code></code> 要素の <code>child</code> 属性で設定する変数を指定します。
+</p>
+<h4 id=".E5.AE.8C.E5.85.A8.E3.81.AA.E3.83.84.E3.83.AA.E3.83.BC.E3.81.AE.E4.BE.8B" name=".E5.AE.8C.E5.85.A8.E3.81.AA.E3.83.84.E3.83.AA.E3.83.BC.E3.81.AE.E4.BE.8B"> 完全なツリーの例 </h4>
+<p>以下は、条件とアクションを含めた、ツリーを生成するための完全な例です。
+使用する RDF ファイルは、別ファイルになっています : <a href="https://developer.mozilla.org/samples/xultu/examples/weather.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/weather.rdf">RDF</a>
+</p><p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advrules_1.xul.txt">ソース</a>
+</p>
+<pre>&lt;tree id="weatherTree" flex="1" datasources="weather.rdf"
+      ref="http://www.xulplanet.com/rdf/weather/cities"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="city" label="City" primary="true" flex="1"/&gt;
+    &lt;treecol id="pred" label="Prediction" flex="1"/&gt;
+  &lt;/treecols&gt;
+
+  &lt;template&gt;
+    &lt;rule&gt;
+      &lt;conditions&gt;
+        &lt;content uri="?list"/&gt;
+        &lt;member container="?list" child="?city"/&gt;
+        &lt;triple subject="?city"
+                predicate="http://www.xulplanet.com/rdf/weather#name"
+                object="?name"/&gt;
+        &lt;triple subject="?city"
+                predicate="http://www.xulplanet.com/rdf/weather#prediction"
+                object="?pred"/&gt;
+      &lt;/conditions&gt;
+      &lt;action&gt;
+        &lt;treechildren&gt;
+          &lt;treeitem uri="?city"&gt;
+            &lt;treerow&gt;
+              &lt;treecell label="?name"/&gt;
+              &lt;treecell label="?pred"/&gt;
+            &lt;/treerow&gt;
+          &lt;/treeitem&gt;
+        &lt;/treechildren&gt;
+      &lt;/action&gt;
+    &lt;/rule&gt;
+  &lt;/template&gt;
+&lt;/tree&gt;
+</pre>
+<p>このツリーは、2 つの列を持ち、
+それぞれには、都市名 (<code>name</code>) の値と予報 (<code>pred</code>) の値が表示されます。
+</p>
+<div class="note">
+<p>ツリーで <code>dont-build-content</code> フラグを利用する場合には、 <code><code><a href="/ja/docs/Mozilla/Tech/XUL/content" title="content">content</a></code></code> 要素を <code><code><a href="/ja/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></code> 要素に置き換えてください。
+</p>
+</div>
+<h3 id=".E3.83.90.E3.82.A4.E3.83.B3.E3.83.87.E3.82.A3.E3.83.B3.E3.82.B0.E3.82.92.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B" name=".E3.83.90.E3.82.A4.E3.83.B3.E3.83.87.E3.82.A3.E3.83.B3.E3.82.B0.E3.82.92.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B"> バインディングを追加する </h3>
+<p>ルールに含めることができる最後の要素は、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/bindings" title="bindings">bindings</a></code></code> 要素で、その中には 1 つ以上の <code><code><a href="/ja/docs/Mozilla/Tech/XUL/binding" title="binding">binding</a></code></code> 要素を置くことが可能です。
+このルールで指定するバインディングは、トリプルと同じ構文を持っており、機能もほぼ同じになります。
+例えば、上記の天気の例に対しては、以下のようなバインディングを加えることが可能です。
+</p>
+<pre>&lt;bindings&gt;
+  &lt;binding subject="?city"
+             predicate="http://www.xulplanet.com/rdf/weather#temperature"
+             object="?temp"/&gt;
+&lt;/bindings&gt;
+</pre>
+<p>このバインディングは、各都市に対して気温 (temperature) リソースを取得し、「<code>temp</code>」変数に代入します。
+これはトリプルの挙動と似ていますが、バインディングは条件の判定に影響を与えない点が異なります。
+つまり、都市の情報が表示されるためには、都市名と予報が存在することが必要であるのに対して、
+気温についてはその必要はなく、リソースがある場合についてのみ「<code>temp</code>」変数に代入されて、アクションで利用可能になり、
+都市に気温のリソースがない場合には、「<code>temp</code>」変数に空の文字列に設定されることになります。
+</p><p>次のセクションでは XUL 要素の状態を保存する方法について見ていきます。
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:RDF_Datasources" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Persistent_Data">次のページ  »</a></p>
+</div>
+
+<div class="noinclude">
+</div>

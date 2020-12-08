@@ -1,0 +1,77 @@
+---
+title: Préface
+slug: Mozilla/Tech/XPCOM/Guide/Creating_components/Preface
+tags:
+  - Guide
+  - XPCOM
+translation_of: Mozilla/Tech/XPCOM/Guide/Creating_components/Preface
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Mozilla/Tech/XPCOM/Guide/Creating_components/An_Overview_of_XPCOM">Suivant  »</a></p>
+</div><p></p>
+
+<p>Cette section concerne Gecko et la création de composants <a href="https://developer.mozilla.org/fr/docs/XPCOM">XPCOM</a> pour des applications basées sur Gecko. Bien que l'accent soit mis sur les mesures concrètes que vous prenez pour créer un code C ++ valide dans un composant qui peut être utilisé dans Gecko, nous espérons que ces mesures nous donneront également l'occasion de discuter de tous les outils, les techniques et les technologies qui composent XPCOM. En conséquence, le livre est agencé de telle sorte que vous puissiez suivre et créer vos propres composants et en apprendre davantage sur XPCOM, comme dans un ouvrage de référence. Par exemple, l'introduction comprend une discussion sur les composants, et le premier chapitre - dans laquelle vous compilez le code de base et l'enregistrer avec Mozilla - éclair sur la relation entre les composants et les modules, les interfaces XPCOM et le processus d'enregistrement en général.</p>
+
+<p>Le début de chaque chapitre fournit une liste des principaux sujets abordés. Des barres latérales sont incluses pour mettre en évidence les détails techniques. À la fin du livre, vous aurez appris comment construire un composant XPCOM et vous comprendrez sont fonctionnement dans Gecko.</p>
+
+<h3 id="Pour_qui_est_ce_tutoriel">Pour qui est ce tutoriel ?</h3>
+
+<p><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XPCOM/Guide/Creating_components">La Création de composants XPCOM</a> est destinée aux développeurs C ++. Bien que vous pouvez créer des composants XPCOM en <a href="https://developer.mozilla.org/fr/docs/compiler_un_composant_xpcom_javascript">JavaScript</a> ou d'autres langages, le code de mise en œuvre des composants est écrit en C ++, et une grande partie de la discussion sur la façon de programmer un composant XPCOM utilise le C ++. Vous ne devez pas non plus être un expert C ++. Bien que les idées de base telles que l'héritage et l'encapsulation devraient vous être familiers. Leur utilisation est expliquée à chaque fois dans le tutoriel. En outre, beaucoup d'exemples sont en JavaScript,  utilisé dans Mozilla pour accéder aux composants XPCOM comme des objets scriptable, votre familiarité avec ce langage est également utile.</p>
+
+<p>XPCOM pour Cross Platform Component Object Model est similaire à Microsoft COM. Si vous avez une expérience avec ces technologies, beaucoup d'entre elles peuvent être appliquées à XPCOM. Cependant, ce tutoriel ne suppose aucune connaissance préalable du COM - toutes les idées de base seront présentés.</p>
+
+<p>Ce livre fournit un tutoriel sur la construction d'un composant XPCOM contrôlant le comportement d'un navigateur. Bien que XPCOM peux être utilisé dans de nombreux environnements qui sont sans rapport avec la navigation web, le principal client de XPCOM est Gecko. Il est open source, conforme aux standards, possède un navigateur Web embarquable, où il est plus facile et plus pratique d'illustrer les fonctionnalités d'XPCOM. Une description complète de ce composant peut être trouvé dans le chapitre <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Guide/Creating_components/Creating_the_Component_Code#What_We.27ll_Be_Working_On">ce que nous allons faire</a> du didacticiel.</p>
+
+<div class="note">
+<p>Malgré ce que dit le vieux document, XPCOM ne devrait pas être utilisé pour faire des <a href="en/Plugins">plugins NPAPI </a> scriptable. A partir de Gecko 1.7.5 (Firefox 1.0) une extension spéciale NPAPI pour scriptabilité est prise en charge, voir <a href="en/Gecko_Plugin_API_Reference/Scripting_plugins">plugins Scripting</a>.</p>
+</div>
+
+<h3 id="Organisation_du_Tutoriel">Organisation du Tutoriel</h3>
+
+<p>La liste suivante donne un aperçu des étapes que nous allons suivre pour construire un composant XPCOM appelé <strong>WebLock</strong>, qui prévoit une fonctionnalité de blocage de sites pour les navigateurs basés sur Gecko. Chacune de ces étapes a son propre chapitre, dans lequel un certain nombre de sujets liés à l'étape sont abordés.</p>
+
+<ul>
+ <li>Créer un module de code générique pour le composant.</li>
+ <li>Utilisez les macros C++, particulièrement les classes string et pointeurs intelligents, pour optimiser votre code.</li>
+ <li>Définir la fonctionnalité pour le composant; créer une interface <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Guide/Creating_components/en/XPIDL">XPIDL</a> pour cette fonctionnalité; créer le code de mise en œuvre spécifique à l'usage de l'interface du composant <strong>WebLock</strong>.</li>
+ <li>Terminer la mise en œuvre du composant <strong>WebLock</strong>: <code>nsIContentPolicy</code> , fichier I/O, de verrouillage, etc.</li>
+ <li>Création de l'interface utilisateur pour le composant de <strong>WebLock</strong>.</li>
+ <li>Emballage <strong>WebLock</strong> pour la distribution et l'installation.</li>
+</ul>
+
+<h3 id="Continuons_avec_des_exemples">Continuons avec des exemples</h3>
+
+<p>Il y a deux façons d'installer XPCOM sur votre machine pour que vous puissiez commencer à créer des composants. Si vous avez déjà Mozilla build ou le code source de Mozilla 1.2 ou ultérieure, vous pouvez utiliser le framework XPCOM disponible. Si non, la façon la plus simple d'obtenir et d'utiliser XPCOM est de télécharger le <a href="https://developer.mozilla.org/fr/docs/SDK_Gecko">SDK Gecko</a>, qui est un ensemble de bibliothèques et d'outils qui comporte le framework XPCOM.</p>
+
+<p>Que vous compiliez le code source ou utilisiez le SDK Gecko, vous pouvez construire vos propres composants en utilisant les composants existant dans Gecko. Le composant <strong>WebLock</strong> que nous décrirons dans ce tutoriel met ceci en pratique (et, nous l'espérons, de façon utile) en plus de la manipulation du navigateur. Pour que cela fonctionne, votre code source SDK Gecko ou Mozilla doit être de version 1.2 ou ultérieure (l'interface XPCOM n'a pas été entièrement fixée dans les versions antérieures).</p>
+
+<p>Ce livre suppose que vous utilisez SDK plutôt que de compiler le code source de Mozilla, bien que la différence entre ces deux approches soit minime. La construction, et l'obtention de l'accès à la programmation de composants Gecko est fournies en annexe à ce livre, <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Guide/Creating_components/Setting_up_the_Gecko_SDK">Configuration du SDK Gecko</a> .</p>
+
+<h3 id="Conventions">Conventions</h3>
+
+<p>Les conventions de formats ci-dessous sont utilisées pour désigner des types d'informations spécifiques dans le livre et rendre les choses plus faciles à analyser. Le but est d'utiliser aussi peu de formats que possible, mais de distinguer clairement les différents types d'informations.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Format</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><strong>gras</strong></td>
+   <td><strong>noms des composants</strong> apparaissent en gras dans le texte</td>
+  </tr>
+  <tr>
+   <td><code>monospace</code></td>
+   <td><code>lignes de code</code> , <code>noms d'interface</code> et <code>membres</code> d'interfaces (par exemple, <code>createInstance()</code>) apparaissent avec cette police. Les lignes de code sont placées dans des encarts séparés. En outre, <code>les noms de fichiers</code> et de <code>répertoires</code> possèdent également cette police.</td>
+  </tr>
+  <tr>
+   <td><em>italique</em></td>
+   <td><em>les variables</em> apparaissent en italique. Les termes importants et les nouveaux concepts sont également en italique la première fois qu'ils apparaissent dans le texte. Ces termes sont expliqués soit immédiatement après leur citation, ou bien le lecteur est renvoyé à une section dans le livre où ils sont décrits en détail.</td>
+  </tr>
+  <tr>
+   <td>lien</td>
+   <td>Références à d'autres sections, figures ou tableaux et leur liens vers ces articles.</td>
+  </tr>
+ </tbody>
+</table>

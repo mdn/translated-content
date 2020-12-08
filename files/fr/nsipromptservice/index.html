@@ -1,0 +1,701 @@
+---
+title: nsIPromptService
+slug: nsIPromptService
+tags:
+  - Traduction_à_relire
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIPromptService
+---
+<div class="note">Cette page vient d'être traduite, mais elle a besoin d'un relecteur différent du traducteur. Pensez également à toujours vérifier le contenu avec sa toute dernière version en anglais.</div>
+
+
+
+<h2 id="Résumé">Résumé</h2>
+
+<p><code>nsIPromptService</code> peut être utilisé pour afficher de simples boîtes de dialogue. Ses méthodes devrait être utilisées de préférence à la place de <a href="/en/DOM/window.alert" title="en/DOM/window.alert">window.alert()</a>, <a href="/en/DOM/window.confirm" title="en/DOM/window.confirm">window.confirm()</a>, et des autres fonctions similaires du DOM.</p>
+
+<p>Il est possible de définir les touches de raccourcis pour les boutons en insérant une esperluette ("&amp;") devant le caractère correspondant. Si vous souhaitez insérer cette esperluette directement dans le texte du bouton (c'est-à-dire dans la valeur de l'attribut <code>label</code>, sans utiliser de déclaration d'entité XML), utilisez-en deux ("&amp;&amp;").</p>
+
+<div class="note">Certaines des méthodes de cette interface utilisent des paramètres en entrée/sortie. En C++, les paramètres en sortie sont représentés par des pointeurs de pointeurs (<code>void**</code>). En JavaScript, ce type de paramètre nécessite plus de travail car vous ne pouvez directement récupérer des paramètres en sortie. Vous devez les englober dans un objet. Cet objet peut être vide ou bien comporter un attribut <code>value</code> dont la valeur correspond au type du paramètre en sortie.<br>
+Pour de plus amples informations sur les paramètres en sortie en JavaScript, voir <a href="/en/Working_with_out_parameters" style="text-decoration: none; color: rgb(4, 137, 183) !important; cursor: default;" title="en/Working with out parameters">Working with out parameters</a>.</div>
+
+
+
+<div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/embedding/components/windowwatcher/public/nsIPromptService.idl" rel="custom">embedding/components/windowwatcher/public/nsIPromptService.idl</a></code><span style="float: right; text-align: right;"><a href="/fr/docs/Interfaces/À_propos_des_interfaces_scriptables" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;"><em>Please add a summary to this article.</em> </span>
+
+<div style="background: #eee; padding: 2px;"><span> </span> <span style="float: right; text-align: right;">Last changed in Gecko 1.7.5 </span></div>
+</div>
+
+
+
+<p>Hérite de : <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code></p>
+
+<p>Implémenté par : <code>@mozilla.org/embedcomp/prompt-service;1</code>. Pour créer une instance, faire comme suit :</p>
+
+<pre>var prompts = Components.classes["@mozilla.org/embedcomp/prompt-service;1"]
+              .getService(Components.interfaces.nsIPromptService);</pre>
+
+<h2 id="Method_overview" name="Method_overview">Aperçu des méthodes</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="/fr/nsIPromptService#alert()" title="fr/nsIPromptService#alert()">alert</a>(in <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindow" title="">nsIDOMWindow</a></code> aParent, in wstring aDialogTitle, in wstring aText);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="/fr/nsIPromptService#alertCheck()" title="fr/nsIPromptService#alertCheck()">alertCheck</a>(in <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindow" title="">nsIDOMWindow</a></code> aParent, in wstring aDialogTitle,<br>
+                    in wstring aText, in wstring aCheckMsg, inout boolean aCheckState);</code></td>
+  </tr>
+  <tr>
+   <td><code>boolean <a href="/fr/nsIPromptService#confirm()" title="fr/nsIPromptService#confirm()">confirm</a>(in <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindow" title="">nsIDOMWindow</a></code> aParent, in wstring aDialogTitle, in wstring aText);</code></td>
+  </tr>
+  <tr>
+   <td><code>boolean <a href="/fr/nsIPromptService#confirmCheck()" title="fr/nsIPromptService#confirmCheck()">confirmCheck</a>(in <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindow" title="">nsIDOMWindow</a></code> aParent, in wstring aDialogTitle, in wstring aText,<br>
+                         in wstring aCheckMsg, inout boolean aCheckState);</code></td>
+  </tr>
+  <tr>
+   <td><code>PRInt32 <a href="/fr/nsIPromptService#confirmEx()" title="fr/nsIPromptService#confirmEx()">confirmEx</a>(in <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindow" title="">nsIDOMWindow</a></code> aParent,in wstring aDialogTitle,in wstring aText,<br>
+                      in unsigned long aButtonFlags,in wstring aButton0Title,<br>
+                      in wstring aButton1Title,in wstring aButton2Title,in wstring aCheckMsg,<br>
+                      inout boolean aCheckState);</code></td>
+  </tr>
+  <tr>
+   <td><code>boolean <a href="/fr/nsIPromptService#prompt()" title="fr/nsIPromptService#prompt()">prompt</a>(in <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindow" title="">nsIDOMWindow</a></code> aParent, in wstring aDialogTitle, in wstring aText,<br>
+                   inout wstring aValue, in wstring aCheckMsg, inout boolean aCheckState);</code></td>
+  </tr>
+  <tr>
+   <td><code>boolean <a href="/fr/nsIPromptService#promptUsernameAndPassword()" title="fr/nsIPromptService#promptUsernameAndPassword()">promptUsernameAndPassword</a>(in <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindow" title="">nsIDOMWindow</a></code> aParent, in wstring aDialogTitle,<br>
+                                      in wstring aText, inout wstring aUsername,<br>
+                                      inout wstring aPassword, in wstring aCheckMsg,<br>
+                                      inout boolean aCheckState);</code></td>
+  </tr>
+  <tr>
+   <td><code>boolean <a href="/fr/nsIPromptService#promptPassword()" title="fr/nsIPromptService#promptPassword()">promptPassword</a>(in <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindow" title="">nsIDOMWindow</a></code> aParent, in wstring aDialogTitle, in wstring aText,<br>
+                           inout wstring aPassword, in wstring aCheckMsg, inout boolean aCheckState);</code></td>
+  </tr>
+  <tr>
+   <td><code>boolean <a href="/fr/nsIPromptService#select()" title="fr/nsIPromptService#select()">select</a>(in <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindow" title="">nsIDOMWindow</a></code> aParent, in wstring aDialogTitle, in wstring aText,<br>
+                   in  PRUint32 aCount, [array, size_is(aCount)] in wstring aSelectList,<br>
+                   out long aOutSelection);</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Constants" name="Constants">Constantes</h2>
+
+<p>Les drapeaux décris ci-dessous sont combinés pour former le paramètre <code>aButtonFlags</code> passé à la méthode <a href="#confirmEx()">confirmEx()</a>. Tous les drapeaux sont des constantes de type <code>unsigned long</code> et sont accessibles via <code><code>Components.interfaces.nsIPromptService.<em>flagname</em></code></code> en JavaScript et <code>nsIPromptService::<em>flagname</em></code> en C++.</p>
+
+<h3 id="Drapeaux_de_position_de_bouton">Drapeaux de position de bouton</h3>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Constante</td>
+   <td class="header">Valeur</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>BUTTON_POS_0</code></td>
+   <td><code>1</code></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>BUTTON_POS_1</code></td>
+   <td><code>256</code></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>BUTTON_POS_2</code></td>
+   <td><code>65536</code></td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Drapeaux_de_titre_de_bouton">Drapeaux de titre de bouton </h3>
+
+<p>Ces drapeaux sont utilisés conjointement avec les d<span>rapeaux de position</span> pour modifier les textes des boutons de l'invite de commande.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Constante</td>
+   <td class="header">Valeur</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>BUTTON_TITLE_OK</code></td>
+   <td><code>1</code></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>BUTTON_TITLE_CANCEL</code></td>
+   <td><code>2</code></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>BUTTON_TITLE_YES</code></td>
+   <td><code>3</code></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>BUTTON_TITLE_NO</code></td>
+   <td><code>4</code></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>BUTTON_TITLE_SAVE</code></td>
+   <td><code>5</code></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>BUTTON_TITLE_DONT_SAVE</code></td>
+   <td><code>6</code></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>BUTTON_TITLE_REVERT</code></td>
+   <td><code>7</code></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>BUTTON_TITLE_IS_STRING</code></td>
+   <td><code>127</code></td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Drapeaux_de_bouton_par_défaut">Drapeaux de bouton par défaut</h3>
+
+<p>Ces drapeaux sont utilisés pour spécifier le bouton par défaut.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Constante</td>
+   <td class="header">Valeur</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>BUTTON_POS_0_DEFAULT</code></td>
+   <td>0</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>BUTTON_POS_1_DEFAULT</code></td>
+   <td>16777216</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td><code>BUTTON_POS_2_DEFAULT</code></td>
+   <td>33554432</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="BUTTON_DELAY_ENABLE">BUTTON_DELAY_ENABLE</h3>
+
+<table style="border-bottom-width: 0px; border-collapse: collapse; border-left-width: 0px; border-right-width: 0px; border-top-width: 0px; width: 100%;">
+ <tbody>
+  <tr>
+   <td rowspan="2">
+    <p>Le drapeau <code style="color: inherit; font-weight: inherit;">BUTTON_DELAY_ENABLE</code> désactive les boutons. Ils sont activés après un certaine durée. Son interprétation peut varier, puisque son seul intérêt est de s'assurer que l'utilisateur ne ferme pas trop rapidement une boîte de dialogue renseignant sur des informations sensibles (avertissement concernant la sécurité etc.). À proprement parlé, il peut être ignoré.</p>
+
+    <p>Un délai peut être utile non seulement pour donner plus de temps de réflexion à l'utilisateur avant d'agir, mais également comme mesure de sécurité contre les sites internet qui créent intentionnellement une <a class="external" href="http://fr.wikipedia.org/wiki/Situation_de_compétition" title="http://fr.wikipedia.org/wiki/Situation_de_compétition">situation de compétition</a>. Par exemple, un invite de commande affichant un message d'avertissement concernant la sécurité est affiché de manière inattendue et le bouton de validation est actionné involontairement.</p>
+
+    <table class="standard-table">
+     <tbody>
+      <tr>
+       <td class="header">Constante</td>
+       <td class="header">Valeur</td>
+      </tr>
+      <tr>
+       <td><code>BUTTON_DELAY_ENABLE</code></td>
+       <td>67108864</td>
+      </tr>
+     </tbody>
+    </table>
+   </td>
+   <td><img alt="" class="default" src="http://upload.wikimedia.org/wikipedia/commons/7/78/Race_condition.svg" style="border: solid lightgrey 1px;"></td>
+  </tr>
+  <tr>
+   <td style="width: 262px;">
+    <p>Situation de compétition dans un circuit logique. <span style="color: #3366ff;">∆<em>t</em><sub>1</sub></span> and <span style="color: #3366ff;">∆<em>t</em><sub>2</sub></span> représentent les délais de propagation des éléments logiques. Lorsque la valeur en entrée (A) est modifiée, le circuit produit en sortie in pic d'une durée <span style="color: #3366ff;">∆<em>t</em><sub>1</sub></span>.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Drapeaux_de_boutons_standards">Drapeaux de boutons standards</h3>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Constante</td>
+   <td class="header">Valeur</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>STD_OK_CANCEL_BUTTONS</code></td>
+   <td>513</td>
+   <td>
+    <p> boutons OK/Annuler.</p>
+
+    <p><code>(BUTTON_TITLE_OK *BUTTON_POS_0) +(BUTTON_TITLE_CANCEL * BUTTON_POS_1)</code></p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>STD_YES_NO_BUTTONS</code></td>
+   <td>1027</td>
+   <td>
+    <p> Boutons Oui/Non.</p>
+
+    <p><code>(BUTTON_TITLE_YES *BUTTON_POS_0) +(BUTTON_TITLE_NO * BUTTON_POS_1)</code></p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Methods" name="Methods">Méthodes</h2>
+
+<h3 id="alert()">alert()</h3>
+
+<p>Affiche une boîte de dialogue avec un bouton de confirmation. Cette méthode est similaire <a href="/fr/DOM/window.alert" title="fr/DOM/window.alert">window.alert()</a>, excepté qu'elle permet de spécifier le titre de la boîte de dialogue. Vous devriez utiliser cette méthode à la place de <code>window.alert</code>.</p>
+
+<pre>void alert(
+  in nsIDOMWindow aParent,
+  in wstring      aDialogTitle,
+  in wstring      aText
+);</pre>
+
+<h4 id="Paramètres">Paramètres</h4>
+
+<dl>
+ <dt><code>aParent</code></dt>
+ <dd>La fenêtre parente de la boîte de dialogue, ou <code>null</code>, dans le cas ou le parent est <code>nsIWindowWatcher.activeWindow</code>.</dd>
+ <dt><code>aDialogTitle</code></dt>
+ <dd>Le titre de la boîte de dialogue.</dd>
+ <dt><code>aText</code></dt>
+ <dd>Le texte de la boîte de dialogue.</dd>
+</dl>
+
+<h4 id="Exemple">Exemple</h4>
+
+<pre class="brush: js">var prompts = Components.classes[\"@mozilla.org/embedcomp/prompt-service;1\"]
+                        .getService(Components.interfaces.nsIPromptService);
+
+prompts.alert(null, \"Title of this Dialog\", \"Hello! You have now been alerted.\");</pre>
+
+<p><a href="/@api/deki/files/4072/=AlertExample.png" title="AlertExample.png"><img alt="AlertExample.png" class="default internal" src="/@api/deki/files/4072/=AlertExample.png"></a></p>
+
+<h3 id="alertCheck()">alertCheck()</h3>
+
+<p>Affiche une boîte de dialogue avec un bouton de confirmation et une case à cocher accompagnée de son libellé.</p>
+
+<pre>void alertCheck(
+  in    nsIDOMWindow aParent,
+  in    wstring      aDialogTitle,
+  in    wstring      aText,
+  in    wstring      aCheckMsg,
+  inout boolean      aCheckState
+);</pre>
+
+<h4 id="Paramètres_2">Paramètres</h4>
+
+<dl>
+ <dt><code>aParent</code></dt>
+ <dd>La fenêtre parente de la boîte de dialogue. Si null, la fenêtre parente sera <code>nsIWindowWatcher.activeWindow</code>.</dd>
+ <dt><code>aDialogTitle</code></dt>
+ <dd>Le titre de la boîte de dialogue.</dd>
+ <dt><code>aText</code></dt>
+ <dd>Le texte de la boîte de dialogue.</dd>
+ <dt><code>aCheckMsg</code></dt>
+ <dd>Le libellé de la case à cocher.</dd>
+ <dt><code>aCheckState</code></dt>
+ <dd>Contient l'état initial de la case à cocher, puis son état final une fois la boîte de dialogue fermée. Si vous utilisez cette méthode en Javascript, vous devez englober cet argument dans un objet dont la propriété <code>value</code> est un booléen spécifiant l'état initial (ou utiliser un objet vide).</dd>
+</dl>
+
+<h4 id="Exemple_2">Exemple</h4>
+
+<pre class="brush: js">var prompts = Components.classes[\"@mozilla.org/embedcomp/prompt-service;1\"]
+.getService(Components.interfaces.nsIPromptService);
+
+var check = {value: false}; // case à cocher décochée par défaut
+
+prompts.alertCheck(null, \"Title of this Dialog\", \"Hello! You have now been alerted.\",
+\"And this is a checkbox\", check);
+
+// check.value vaut true si la case est cochée, false sinon</pre>
+
+<p><a href="/@api/deki/files/4073/=AlertCheckExample.png" title="/@api/deki/files/4073/=AlertCheckExample.png"><img alt="" class="default internal" src="/@api/deki/files/4073/=AlertCheckExample.png"></a></p>
+
+<h3 id="confirm()">confirm()</h3>
+
+<p>Affiche une boîte de dialogue avec un bouton OK et un bouton Annuler.</p>
+
+<pre>boolean confirm(
+  in nsIDOMWindow aParent,
+  in wstring       aDialogTitle,
+  in wstring       aText
+);
+</pre>
+
+<h4 id="Paramètres_3">Paramètres</h4>
+
+<dl>
+ <dt><code>aParent</code></dt>
+ <dd>La fenêtre parente de la boîte de dialogue. Si null, la fenêtre parente sera nsIWindowWatcher.activeWindow.</dd>
+ <dt><code>aDialogTitle</code></dt>
+ <dd>Le titre de la boîte de dialogue.</dd>
+ <dt><code>aText</code></dt>
+ <dd>Le texte de la boîte de dialogue.</dd>
+</dl>
+
+<h4 id="Valeur_retournée">Valeur retournée</h4>
+
+<p><code>true</code> si le bouton OK est actionné, <code>false</code> si le bouton Annuler est actionné.</p>
+
+<h4 id="Exemple_3">Exemple</h4>
+
+<pre class="brush: js">var prompts = Components.classes[\"@mozilla.org/embedcomp/prompt-service;1\"]
+.getService(Components.interfaces.nsIPromptService);
+
+var result = prompts.confirm(null, \"Title of this Dialog\", \"Are you sure?\");
+
+// result vaut true si le bouton OK est actionné, false si c'est le bouton Annuler</pre>
+
+<h3 id="confirmCheck()">confirmCheck()</h3>
+
+<p>Affiche une boîte de dialogue avec un bouton OK et un bouton Annuler ainsi qu'une case à coché accompagnée de son libellé.</p>
+
+<pre>boolean confirmCheck(
+  in nsIDOMWindow aParent,
+  in wstring aDialogTitle,
+  in wstring aText,
+  in wstring aCheckMsg,
+  inout boolean aCheckState
+);
+</pre>
+
+<h4 id="Paramètres_4">Paramètres</h4>
+
+<dl>
+ <dt><code>aParent</code></dt>
+ <dd>La fenêtre parente de la boîte de dialogue. Si null, la fenêtre parente sera nsIWindowWatcher.activeWindow.</dd>
+ <dt><code>aDialogTitle</code></dt>
+ <dd>Le titre de la boîte de dialogue.</dd>
+ <dt><code>aText</code></dt>
+ <dd>Le texte de la boîte de dialogue.</dd>
+ <dt><code>aCheckMsg</code></dt>
+ <dd>Le libellé de la case à cocher. Si null, la case à cocher ne sera pas affichée.</dd>
+ <dt><code>aCheckState</code></dt>
+ <dd>Contient l'état initial de la case à cocher, puis son état final une fois la boîte de dialogue fermée. Si vous utilisez cette méthode en Javascript, vous devez englober cet argument dans un objet dont la propriété <code>value</code> est un booléen spécifiant l'état initial (ou utiliser un objet vide).</dd>
+</dl>
+
+<h4 id="Valeur_retournée_2">Valeur retournée</h4>
+
+<p><code style="color: rgb(37, 34, 29); font-weight: inherit;">true</code> <span id="1276028784195S" style="display: none;"> </span>si le bouton OK est actionné, <code style="color: rgb(37, 34, 29); font-weight: inherit;">false</code> si le bouton Annuler est actionné.</p>
+
+<h4 id="Exemple_4">Exemple</h4>
+
+<pre class="brush: js">var prompts = Components.classes[\"@mozilla.org/embedcomp/prompt-service;1\"]
+.getService(Components.interfaces.nsIPromptService);
+
+var check = {value: true}; // case à cocher cochée par défaut
+
+var result = prompts.confirmCheck(null, \"Title of this Dialog\", \"Are you sure?\",
+\"Don't ask again\", check);
+
+// check.value vaut true si la case à cocher est cochée ET que le bouton OK est actionné,
+// false si le bouton Annuler est actionné.</pre>
+
+<h3 id="confirmEx()">confirmEx()</h3>
+
+<p>Ouvre une boîte de dialogue comprenant 3 boutons et éventuellement une case à cocher accompagnée de son libellé.</p>
+
+<p>Les boutons sont numérotés de 0 à 2. L'application peut décider d'afficher ces boutons de gauche à droite  ou de droite à gauche. Le bouton 0 est activé par défaut à moins qu'un drapeau de bouton par défaut ne soit spécifié.</p>
+
+<p>Un bouton peut utiliser un libellé prédéfini, spécifié par l'un des drapeaux de libellé de bouton. Chaque libellé peut être multiplié par un drapeau de position de bouton pour assigner le libellé à un bouton particulié. Lorsque le drapeau <code>BUTTON_TITLE_IS_STRING</code> est utilisé pour un bouton, le paramètre de libellé de ce bouton est utilisé. Si la valeur de la position d'un bouton est à 0, le bouton ne sera pas affiché.</p>
+
+<p>L'exemple suivant créé une boîte de dialogue avec un bouton OK et un bouton avec un libellé personnalisé :</p>
+
+<p><code>aButtonFlags = (BUTTON_POS_0) * (BUTTON_TITLE_OK) +</code></p>
+
+<p><code>               (BUTTON_POS_1) * (BUTTON_TITLE_IS_STRING) +</code></p>
+
+<p><code>                BUTTON_POS_1_DEFAULT;</code></p>
+
+<div class="warning"><code>confirmEx</code> retourne toujours 1 lorsque l'utilisateur ferme la boîte de dialogue en utilisant le bouton de fermeture de la barre de titre ! <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=345067" title="Issues with prompt service's confirmEx - confirmEx always returns 1 when user closes dialog window using the X button in titlebar">bug 345067</a></div>
+
+<pre>PRInt32 confirmEx(
+  in nsIDOMWindow  aParent,
+  in wstring aDialogTitle,
+  in wstring aText,
+  in unsigned long aButtonFlags,
+  in wstring aButton0Title,
+  in wstring aButton1Title,
+  in wstring aButton2Title,
+  in wstring aCheckMsg,
+  inout boolean aCheckState
+);
+</pre>
+
+<h4 id="Paramètres_5">Paramètres</h4>
+
+<dl>
+ <dt><code>aParent</code></dt>
+ <dd>La fenêtre parente de la boîte de dialogue. Si null, la fenêtre parente sera nsIWindowWatcher.activeWindow.</dd>
+ <dt><code>aDialogTitle</code></dt>
+ <dd>Le titre de la boîte de dialogue.</dd>
+ <dt><code>aText</code></dt>
+ <dd>Le texte de la boîte de dialogue.</dd>
+ <dt><code>aButtonFlags</code></dt>
+ <dd><code>aButtonFlags</code> est une combinaison de <a href="/fr/nsIPromptService#Constantes" title="https://developer.mozilla.org/fr/nsIPromptService#Constantes">drapeaux de boutons</a>.</dd>
+ <dt><code>aButton0Title</code></dt>
+ <dd>Libellé du bouton 0 si la valeur <code>(BUTTON_TITLE_IS_STRING*BUTTON_TITLE_POS_0)</code> est utilisé pour le paramètre <code>aButtonFlags</code>.</dd>
+ <dt><code>aButton1Title</code></dt>
+ <dd>Libellé du bouton 1 si la valeur <code>(BUTTON_TITLE_IS_STRING*BUTTON_TITLE_POS_1)</code> est utilisé pour le paramètre <code>aButtonFlags</code>.</dd>
+ <dt><code>aButton2Title</code></dt>
+ <dd>Libellé du bouton 2 si la valeur <code>(BUTTON_TITLE_IS_STRING*BUTTON_TITLE_POS_2)</code> est utilisé pour le paramètre <code>aButtonFlags</code>.</dd>
+ <dt><code>aCheckMsg</code></dt>
+ <dd>Le libellé de la case à cocher.</dd>
+ <dt><code>aCheckState</code></dt>
+ <dd>Contient l'état initial de la case à cocher, puis son état final une fois la boîte de dialogue fermée. Si vous utilisez cette méthode en Javascript, vous devez englober cet argument dans un objet dont la propriété <code>value</code> est un booléen spécifiant l'état initial (ou utiliser un objet vide).</dd>
+</dl>
+
+<h4 id="Valeur_retournée_3">Valeur retournée</h4>
+
+<p>L'index du bouton actionné.</p>
+
+<h4 id="Exemple_5">Exemple</h4>
+
+<pre class="brush: js">var prompts = Components.classes[\"@mozilla.org/embedcomp/prompt-service;1\"]
+.getService(Components.interfaces.nsIPromptService);
+
+var check = {value: false}; // case à cocher décochée par défaut
+var flags = prompts.BUTTON_POS_0 * prompts.BUTTON_TITLE_SAVE +
+prompts.BUTTON_POS_1 * prompts.BUTTON_TITLE_IS_STRING +
+prompts.BUTTON_POS_2 * prompts.BUTTON_TITLE_CANCEL;
+// Ces drapeaux créent 3 boutons. Le premier est un bouton \"Save\", le
+// second la valeur de aButtonTitle1, et le troisième un bouton \"Cancel\"
+
+var button = prompts.confirmEx(null, \"Title of this Dialog\", \"What do you want to do?\",
+flags, \"\", \"Button 1\", \"\", null, check);
+
+// La case à cocher est cachée et button contient l'index du bouton acctionné,
+// 0, 1, ou 2.</pre>
+
+<p><a href="/@api/deki/files/4075/=confirmExExample.png" title="/@api/deki/files/4075/=confirmExExample.png"><img alt="" class="default internal" src="/@api/deki/files/4075/=confirmExExample.png"></a></p>
+
+<h3 id="prompt()">prompt()</h3>
+
+<p><span style="font-family: Verdana,Tahoma,sans-serif;">Ouvre une boîte de dialogue contenant un champ texte et éventuellement une case à cocher accompagnée de son libellé.</span></p>
+
+<pre>boolean prompt(
+  in nsIDOMWindow aParent,
+  in wstring aDialogTitle,
+  in wstring aText,
+  inout wstring aValue,
+  in wstring aCheckMsg,
+  inout boolean aCheckState
+);
+</pre>
+
+<h4 id="Paramètres_6">Paramètres</h4>
+
+<dl>
+ <dt><code>aParent</code></dt>
+ <dd>La fenêtre parente de la boîte de dialogue. Si null, la fenêtre parente sera nsIWindowWatcher.activeWindow.</dd>
+ <dt><code>aDialogTitle</code></dt>
+ <dd>Le titre de la boîte de dialogue.</dd>
+ <dt><code>aText</code></dt>
+ <dd>Le texte de la boîte de dialogue.</dd>
+ <dt><code>aValue</code></dt>
+ <dd>Contient la valeur par défaut du champ texte lors de l'appel de la méthode (la valeur <code>null</code> peut être utilisée pour un champ vide). Lorsque la méthode retourne le résultat, si l'utilisateur a actionné le bouton OK, ce paramètre contient la nouvelle valeur. Sinon, la valeur n'est pas modifiée. Si vous appelez cette méthode en JavaScript, vous devez englober cet argument dans un objet dont l'attribut <code>value</code> est une chaîne de caractère (ou utiliser un objet vide).</dd>
+ <dt><code>aCheckMsg</code></dt>
+ <dd>Le libellé de la case à cocher. Si null, la case à cocher ne sera pas affichée.</dd>
+ <dt><code>aCheckState</code></dt>
+ <dd>Contient l'état initial de la case à cocher, puis son état final une fois la boîte de dialogue fermée. Si vous utilisez cette méthode en Javascript, vous devez englober cet argument dans un objet dont la propriété <code>value</code> est un booléen spécifiant l'état initial (ou utiliser un objet vide).</dd>
+</dl>
+
+<h4 id="Valeur_retournée_4">Valeur retournée</h4>
+
+<p><code style="color: rgb(37, 34, 29); font-weight: inherit;">true</code> si le bouton OK est actionné, <code style="color: rgb(37, 34, 29); font-weight: inherit;">false</code> si le bouton Annuler est actionné.</p>
+
+<h4 id="Exemple_6">Exemple</h4>
+
+<pre class="brush: js">var prompts = Components.classes[\"@mozilla.org/embedcomp/prompt-service;1\"]
+.getService(Components.interfaces.nsIPromptService);
+
+var check = {value: false}; // case à cocher décochée par défaut
+var input = {value: \"Bob\"}; // valeur par défaut du champ texte à \"Bob\"
+var result = prompts.prompt(null, \"Title\", \"What is your name?\", input, null, check);
+
+// result vaut true si le bouton OK est actionné, false si c'est le bouton Cancel.
+// input.value content la valeur du champ texte si le bouton OKest actionné.</pre>
+
+<h3 id="promptUsernameAndPassword()">promptUsernameAndPassword()</h3>
+
+<p>Ouvre une boîte dialogue contenant un champ texte, un champ de mot de passe et éventuellement une case à cocher accompagnée de son libellé.</p>
+
+<pre>boolean promptUsernameAndPassword(
+  in nsIDOMWindow aParent,
+  in wstring aDialogTitle,
+  in wstring aText,
+  inout wstring aUsername,
+  inout wstring aPassword,
+  in wstring aCheckMsg,
+  inout boolean aCheckState
+);
+</pre>
+
+<h4 id="Paramètres_7">Paramètres</h4>
+
+<dl>
+ <dt><code>aParent</code></dt>
+ <dd>La fenêtre parente de la boîte de dialogue. Si null, la fenêtre parente sera nsIWindowWatcher.activeWindow.</dd>
+ <dt><code>aDialogTitle</code></dt>
+ <dd>Le titre de la boîte de dialogue.</dd>
+ <dt><code>aText</code></dt>
+ <dd>Le texte de la boîte de dialogue.</dd>
+ <dt><code>aUsername</code></dt>
+ <dd>Nom d'utilisateur par défaut (valeur nulle acceptée). Si l'utilisateur a fermé la fenêtre en actionnant le bouton OK, ce paramètre contient la nouvelle valeur saisie. Sinon, la valeur n'est pas modifiée. Si vous utilisez cette méthode en Javascript, vous devez englober cet argument dans un objet dont la propriété <code>value</code> est un booléen spécifiant l'état initial (ou utiliser un objet vide).</dd>
+ <dt><code>aPassword</code></dt>
+ <dd>Mot de passe par défaut (valeur nulle acceptée). Si l'utilisateur a fermé la fenêtre en actionnant le bouton OK, ce paramètre contient la nouvelle valeur saisie. Sinon, la valeur n'est pas modifiée. Si vous utilisez cette méthode en Javascript, vous devez englober cet argument dans un objet dont la propriété <code>value</code> est un booléen spécifiant l'état initial (ou utiliser un objet vide).</dd>
+ <dt></dt>
+ <dt style="font-style: normal; font-weight: bold;"><code style="color: rgb(37, 34, 29); font-weight: inherit;">aCheckMsg</code></dt>
+ <dd style="margin-top: 0px; margin-right: 0px; margin-bottom: 0.5em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 15px;">Le libellé de la case à cocher. Si null, la case à cocher ne sera pas affichée.</dd>
+ <dt style="font-style: normal; font-weight: bold;"><code style="color: rgb(37, 34, 29); font-weight: inherit;">aCheckState</code></dt>
+ <dd style="margin-top: 0px; margin-right: 0px; margin-bottom: 0.5em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 15px;">Contient l'état initial de la case à cocher, puis son état final une fois la boîte de dialogue fermée. Si vous utilisez cette méthode en Javascript, vous devez englober cet argument dans un objet dont la propriété <code>value</code> est un booléen spécifiant l'état initial (ou utiliser un objet vide).</dd>
+ <dt></dt>
+</dl>
+
+<h4 id="Valeur_retournée_5">Valeur retournée</h4>
+
+<p><code style="color: rgb(37, 34, 29); font-weight: inherit;">true</code> si le bouton OK est actionné, <code style="color: rgb(37, 34, 29); font-weight: inherit;">false</code> si le bouton Annuler est actionné.</p>
+
+<h4 id="Exemple_7">Exemple</h4>
+
+<pre>var prompts = Components.classes[\"@mozilla.org/embedcomp/prompt-service;1\"]
+.getService(Components.interfaces.nsIPromptService);
+
+var username = {value: \"user\"}; // nom d'utilisateur par défaut
+var password = {value: \"pass\"}; // mot de passe par défaut
+var check = {value: true}; // case à cocher cochée par défaut
+var result = prompts.promptUsernameAndPassword(null, \"Title\", \"Enter username and password:\",\nusername, password, \"Save\", check);
+
+// result vaut true si le bouton OK est actionné, false si c'est le bouton Cancel.
+// username.value, password.value, et check.value contiennent les nouvelles valeurs saisies si le bouton OK est actionné.</pre>
+
+<p><img alt="" class="internal" src="/@api/deki/files/4076/=promptUsernameAndPasswordExample.png" style="height: 200px; width: 365px;"></p>
+
+<h3 id="promptPassword()">promptPassword()</h3>
+
+<p><span style="font-family: Verdana,Tahoma,sans-serif;">Ouvre une boîte de dialogue contenant un champ mot de passe et éventuellement une case à cocher accompagnée de son libellé.</span></p>
+
+<pre>boolean promptPassword(
+  in nsIDOMWindow aParent,
+  in wstring aDialogTitle,
+  in wstring aText,
+  inout wstring aPassword,
+  in wstring aCheckMsg,
+  inout boolean aCheckState
+);</pre>
+
+<h4 id="Paramètres_8">Paramètres</h4>
+
+<dl>
+ <dt><code>aParent</code></dt>
+ <dd>La fenêtre parente de la boîte de dialogue. Si null, la fenêtre parente sera nsIWindowWatcher.activeWindow.</dd>
+ <dt><code>aDialogTitle</code></dt>
+ <dd>Le titre de la boîte de dialogue.</dd>
+ <dt><code>aText</code></dt>
+ <dd>Le texte de la boîte de dialogue.</dd>
+ <dt><code>aPassword</code></dt>
+ <dd>Mot de passe par défaut (valeur nulle acceptée). Si l'utilisateur a fermé la fenêtre en actionnant le bouton OK, ce paramètre contient la nouvelle valeur saisie. Sinon, la valeur n'est pas modifiée. Si vous utilisez cette méthode en Javascript, vous devez englober cet argument dans un objet dont la propriété <code>value</code> est un booléen spécifiant l'état initial (ou utiliser un objet vide).</dd>
+ <dt><code>aCheckMsg</code></dt>
+ <dd>Le libellé de la case à cocher. Si null, la case à cocher ne sera pas affichée.</dd>
+ <dt><code>aCheckState</code></dt>
+ <dd>Contient l'état initial de la case à cocher, puis son état final une fois la boîte de dialogue fermée. Si vous utilisez cette méthode en Javascript, vous devez englober cet argument dans un objet dont la propriété <code>value</code> est un booléen spécifiant l'état initial (ou utiliser un objet vide).</dd>
+</dl>
+
+<h4 id="Valeur_retournée_6">Valeur retournée</h4>
+
+<p><code>true</code> si le bouton OK est actionné, <code>false</code> si le bouton Annuler est actionné.</p>
+
+<pre class="brush: js" id="Exemple_8">Exemple</pre>
+
+<div id="section_42">
+<pre>var prompts = Components.classes[\"@mozilla.org/embedcomp/prompt-service;1\"]
+.getService(Components.interfaces.nsIPromptService);
+var password = {value: \"pass\"}; // mot de passe par défaut
+var check = {value: true}; // case à cocher cochée par défaut
+var result = prompts.promptPassword(null, \"Title\", \"Enter password:\", password, null, check);
+
+// result vaut true si le bouton OK est actionné, false si c'est le bouton Cancel.
+// password.value contient la nouvelle valeur saisie si le bouton OK est actionné<span class="comment" style="background-color: inherit; border-bottom-style: none; border-color: initial; border-left-style: none; border-right-style: none; border-top-style: none; border-width: initial; color: #008200; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">. }}</span> La case à cocher n'est pas affichée.</pre>
+
+
+</div>
+
+<h3 id="select()">select()</h3>
+
+<p>Ouvre une boîte de dialogue contenant une liste de chaîne de caractères. L'utilisateur ne peut en sélectionner qu'une seule.</p>
+
+<pre>boolean select(
+  in  nsIDOMWindow aParent,
+  in  wstring       aDialogTitle,
+  in  wstring       aText,
+  in  PRUint32     aCount,
+  [array, size_is(aCount)] in wstring aSelectList,
+  out long         aOutSelection
+);
+</pre>
+
+<h4 id="Paramètres_9">Paramètres</h4>
+
+<dl>
+ <dt><code>aParent</code></dt>
+ <dd>La fenêtre parente de la boîte de dialogue. Si null, la fenêtre parente sera nsIWindowWatcher.activeWindow.</dd>
+ <dt><code>aDialogTitle</code></dt>
+ <dd>Le titre de la boîte de dialogue.</dd>
+ <dt><code>aText</code></dt>
+ <dd>Le texte de la boîte de dialogue.</dd>
+ <dt><code>aCount</code></dt>
+ <dd>Taille du tableau <code>aSelectList</code>.</dd>
+ <dt><code>aSelectList</code></dt>
+ <dd>Liste de chaînes de caractères.</dd>
+ <dt><code>aOutSelection</code></dt>
+ <dd>Contient l'index de l'élément sélectionné dans la liste lorsque le bouton OK est actionné. Si vous utilisez cette méthode en Javascript, vous devez englober cet argument dans un objet dont la propriété <code>value</code> est un booléen spécifiant l'état initial (ou utiliser un objet vide).</dd>
+</dl>
+
+<h4 id="Valeur_retournée_7">Valeur retournée</h4>
+
+<p><code>true</code> si le bouton OK est actionné, <code>false</code> si le bouton Annuler est actionné.</p>
+
+<h4 id="Exemple_9">Exemple</h4>
+
+<pre class="brush: js">var prompts = Components.classes[\"@mozilla.org/embedcomp/prompt-service;1\"]
+.getService(Components.interfaces.nsIPromptService);
+
+var items = [\"Hello\", \"Welcome\", \"Howdy\", \"Hi\", \":)\"]; // liste d'éléments
+
+var selected = {};
+
+var result = prompts.select(null, \"Title\", \"What greeting do you want?\", items.length, items, selected);
+
+// result vaut true si le bouton OK est actionné, false si c'est le bouton Cancel.
+// selected contient l'index de l'élément sélectionné. Accédez à cet élément avec selected items[selected.value].</pre>
+
+<p><a href="/@api/deki/files/4074/=selectExample.png" title="/@api/deki/files/4074/=selectExample.png"><img alt="selectExample.png" class="default internal" src="/@api/deki/files/4074/=selectExample.png"></a></p>
+
+<h2 id="See_also" name="See_also">Voir également</h2>
+
+<ul>
+ <li><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPrompt" title="">nsIPrompt</a></code></li>
+ <li><a href="/en/Working_with_out_parameters" title="en/Working with out parameters">Working with out parameters</a></li>
+ <li><a class="external" href="http://kb.mozillazine.org/Prompt_service">Quelques exemples</a> (MozillaZine)</li>
+</ul>

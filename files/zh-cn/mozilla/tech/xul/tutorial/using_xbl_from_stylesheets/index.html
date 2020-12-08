@@ -1,0 +1,223 @@
+---
+title: 通过CSS和XBL创建可复用的内容
+slug: Mozilla/Tech/XUL/Tutorial/Using_XBL_from_stylesheets
+translation_of: Archive/Beginner_tutorials/Using_XBL_from_stylesheets
+---
+<p></p><section id="Quick_Links">
+<ol><li><a href="/zh-CN/docs/Web/Guide/CSS/Getting_Started/What_is_CSS">What is CSS?</a></li>
+   	<li><a href="/zh-CN/docs/Web/Guide/CSS/Getting_Started/Why_use_CSS">Why use CSS?</a></li>
+	<li><a href="/zh-CN/docs/Web/Guide/CSS/Getting_Started/How_CSS_works">How CSS works</a></li>
+	<li><a href="/zh-CN/docs/Web/Guide/CSS/Getting_Started/Cascading_and_inheritance">Cascading and inheritance</a></li>
+	<li><a href="/zh-CN/docs/Web/Guide/CSS/Getting_Started/Selectors">Selectors</a></li>
+    <li><a href="/zh-CN/docs/Web/Guide/CSS/Getting_Started/Readable_CSS">Readable CSS</a></li>
+    <li><a href="/zh-CN/docs/Web/Guide/CSS/Getting_Started/Text_styles">Text styles</a></li>
+	<li><a href="/zh-CN/docs/Web/Guide/CSS/Getting_Started/Color">Color</a></li>
+	<li><a href="/zh-CN/docs/Web/Guide/CSS/Getting_Started/Content">Content</a></li>
+	<li><a href="/zh-CN/docs/Web/Guide/CSS/Getting_Started/Lists">Lists</a></li>
+	<li><a href="/zh-CN/docs/Web/Guide/CSS/Getting_Started/Boxes">Boxes</a></li>
+	<li><a href="/zh-CN/docs/Web/Guide/CSS/Getting_Started/Layout">Layout</a></li>
+	<li><a href="/zh-CN/docs/Web/Guide/CSS/Getting_Started/Tables">Tables</a></li>
+	<li><a href="/zh-CN/docs/Web/Guide/CSS/Getting_Started/Media">Media</a></li>
+	<li><a href="/zh-CN/docs/Web/Guide/CSS/Getting_Started/JavaScript">JavaScript and CSS</a></li>
+	<li><a href="/zh-CN/docs/Web/Guide/CSS/Getting_Started/SVG_and_CSS">SVG and CSS</a></li>
+	<li><a href="/zh-CN/docs/Web/Guide/CSS/Getting_Started/XML_data">XML data</a></li>
+	<li><a href="/zh-CN/docs/Web/Guide/CSS/Getting_Started/XBL_bindings">XBL binding</a></li>
+	<li><a href="/zh-CN/docs/Web/Guide/CSS/Getting_Started/XUL_user_interfaces">XUL user interfaces</a></li>
+</ol>
+</section><p></p>
+
+<p>本页面介绍了如何在Mozilla中使用CSS来提升在复杂应用结构中的代码与资源的复用。</p>
+
+<div class="note">
+<p>提示：XBL不能通过HTTP来加载，所以XBL只能使用file:///scheme或者通过附加代码的方式进行本地访问。</p>
+</div>
+
+<p>你可以应用这项技术于一个简单的示例。</p>
+
+<h3 id="Information:_XBL_bindings" name="Information:_XBL_bindings">Information: XBL bindings</h3>
+
+<p>由标记语言和CSS提供的这个结构并不适用于组件需要自包含和复用的复杂应用。你可以将样式表(stylesheet)和脚本(script)放置在独立的文件中。但是你必须将这些文件加载到文档（html）中，最后形成一个整体。</p>
+
+<p>另一个结构上的限制则与内容有关。你可以使用CSS为选中的元素提供内容，但是内容限定在文本和图片，并且内容的位置只能是选中的元素前或者后。</p>
+
+<p>Mozilla provides a mechanism that overcomes these limitations: <em>XBL</em> (XML Bindings Language). You can use XBL to link selected elements to their own:</p>
+
+<p>Mozilla提供了一个机制来克服上述限制：XBL(XML Bindings Language)。</p>
+
+<ul>
+ <li>Stylesheets</li>
+ <li>Content</li>
+ <li>Properties and methods</li>
+ <li>Event handlers</li>
+</ul>
+
+<p>因此你可以避免在文档中链接每一个组件，你可以使用自包含的组件来方便维护和复用。</p>
+
+<table style="background-color: rgb(244, 244, 244); border: 1px solid rgb(51, 102, 187); margin-bottom: 1em; padding: 1em; width: 100%;">
+ <caption>More details</caption>
+ <tbody>
+  <tr>
+   <td>For more information about XBL bindings, see the <a href="/en-US/docs/XBL" title="en/XBL">XBL</a> page in this wiki.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Action:_An_XBL_demonstration" name="Action:_An_XBL_demonstration">Action: An XBL demonstration</h3>
+
+<p>创建一个新的html文档，doc6.html。将下面的内容拷贝到文件中：</p>
+
+<div style="width: 56em;">
+<pre class="brush: html">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"&gt;
+&lt;HTML&gt;
+
+&lt;HEAD&gt;
+&lt;TITLE&gt;Mozilla CSS Getting Started - XBL demonstration&lt;/TITLE&gt;
+&lt;LINK rel="stylesheet" type="text/css" href="style6.css"&gt;
+&lt;/HEAD&gt;
+
+&lt;BODY&gt;
+&lt;H1&gt;XBL demonstration&lt;/H1&gt;
+&lt;DIV id="square"&gt;Click Me&lt;/DIV&gt;
+&lt;/BODY&gt;
+
+&lt;/HTML&gt;
+</pre>
+</div>
+
+<p>创建一个新的CSS文件，style6.css。这个样式表包含了文档的样式。将下面的内容拷贝到CSS文件中：</p>
+
+<div style="width: 56em;">
+<pre class="brush: css">/*** XBL demonstration ***/
+#square {
+  -moz-binding: url("square.xbl#square");
+  }
+</pre>
+</div>
+
+<p>Make a new text file, <code>square.xbl</code>. This file contains the XBL binding. Copy and paste the content from here:</p>
+
+<p>创建一个新的文本文件，square.xbl。这个文件包含了XBL的绑定关系。将下面的内容拷贝到文件中。</p>
+
+<div style="">
+<pre class="brush: xml">&lt;?xml version="1.0"?&gt;
+&lt;!DOCTYPE bindings&gt;
+&lt;bindings xmlns="http://www.mozilla.org/xbl"
+          xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+          xmlns:html="http://www.w3.org/1999/xhtml"&gt;
+
+&lt;binding id="square"&gt;
+
+  &lt;resources&gt;
+    &lt;stylesheet src="bind6.css"/&gt;
+    &lt;/resources&gt;
+
+  &lt;content&gt;
+    &lt;html:div anonid="square"/&gt;
+    &lt;xul:button anonid="button" type="button"&gt;
+      &lt;children/&gt;
+      &lt;/xul:button&gt;
+    &lt;/content&gt;
+
+  &lt;implementation&gt;
+
+    &lt;field name="square"&gt;&lt;![CDATA[
+      document.getAnonymousElementByAttribute(this, "anonid", "square")
+      ]]&gt;&lt;/field&gt;
+
+    &lt;field name="button"&gt;&lt;![CDATA[
+      document.getAnonymousElementByAttribute(this, "anonid", "button")
+      ]]&gt;&lt;/field&gt;
+
+    &lt;method name="doDemo"&gt;
+      &lt;body&gt;&lt;![CDATA[
+        this.square.style.backgroundColor = "#cf4"
+        this.square.style.marginLeft = "20em"
+        this.button.setAttribute("disabled", "true")
+        setTimeout(this.clearDemo, 2000, this)
+        ]]&gt;&lt;/body&gt;
+      &lt;/method&gt;
+
+    &lt;method name="clearDemo"&gt;
+      &lt;parameter name="me"/&gt;
+      &lt;body&gt;&lt;![CDATA[
+        me.square.style.backgroundColor = "transparent"
+        me.square.style.marginLeft = "0"
+        me.button.removeAttribute("disabled")
+        ]]&gt;&lt;/body&gt;
+      &lt;/method&gt;
+
+    &lt;/implementation&gt;
+
+  &lt;handlers&gt;
+    &lt;handler event="click" button="0"&gt;&lt;![CDATA[
+     if (event.originalTarget == this.button) this.doDemo()
+     ]]&gt;&lt;/handler&gt;
+    &lt;/handlers&gt;
+
+  &lt;/binding&gt;
+
+&lt;/bindings&gt;
+</pre>
+</div>
+
+<p>Make a new CSS file, <code>bind6.css</code>. This separate stylesheet contains style for the binding. Copy and paste the content from here:</p>
+
+<p>创建一个新的CSS文件，bind6.css。这个独立的样式表包含了</p>
+
+<div style="width: 56em;">
+<pre class="brush: css">/*** XBL demonstration ***/
+[anonid="square"] {
+  width: 20em;
+  height: 20em;
+  border: 2px inset gray;
+  }
+
+[anonid="button"] {
+  margin-top: 1em;
+  padding: .5em 2em;
+  }
+</pre>
+</div>
+
+<p>在你的浏览器中打开文档然后按下按钮。</p>
+
+<p>这个维基页面并不支持JavaScript，所以无法再这里展示示例。示例看上去就如下面所示，分别是按下按钮之前和之后的效果。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <td><img alt="xbldemo0.png" class="default internal" src="/@api/deki/files/3377/=xbldemo0.png" style="height: 224px; width: 322px;"></td>
+   <td><img alt="xbldemo1.png" class="default internal" src="/@api/deki/files/3378/=xbldemo1.png" style="height: 224px; width: 322px;"></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>关于这个示例的提示：</p>
+
+<ul>
+ <li>这个html文档如通常一样链接文档样式表，但是并没有链接任何JavaScript代码。</li>
+ <li>这个文档中并没有包含任何按钮。它只包含了按钮标签的文本。这个按钮通过绑定来添加。</li>
+ <li>这个文档样式表链接了绑定文件。</li>
+ <li>这个绑定文件链接了它自己的样式表，并且提供了它自己的内容和JavaScript代码。所以绑定文件是自包含的。</li>
+</ul>
+
+<p>挑战</p>
+
+<table style="background-color: rgb(255, 255, 244); border: 1px solid rgb(51, 102, 187); margin-bottom: 0.5em; padding: 1em;">
+ <caption> </caption>
+ <tbody>
+  <tr>
+   <td>Change the XBL file so that the square doubles in width when it changes color, instead of jumping to the right.
+    <p>Use the DOM Inspector tool to inspect the document, revealing the added content.</p>
+
+    <p> </p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="What_next">What next?</h3>
+
+<p>If you had difficulty understanding this page, or if you have other comments about it, please contribute to its <a href="/Talk:en/CSS/Getting_Started/XBL_bindings" title="Talk:en/CSS/Getting_Started/XBL_bindings">Discussion</a> page.</p>
+
+<p>In this demonstration, the square and the button make a self-contained <em>widget</em> that functions within an HTML document. Mozilla has a specialized markup language for creating user interfaces. The next page demonstrates it: <strong><a href="/en/CSS/Getting_Started/XUL_user_interfaces" title="en/CSS/Getting_Started/XUL_user_interfaces">XUL user interfaces</a></strong>.</p>

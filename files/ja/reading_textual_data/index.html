@@ -1,0 +1,129 @@
+---
+title: Reading textual data
+slug: Reading_textual_data
+tags:
+  - Add-ons
+  - Extensions
+  - Internationalization
+translation_of: Archive/Mozilla/Reading_textual_data
+---
+<p>
+</p><p>この記事では、ストリーム、ファイル、ソケットからテキストデータを読み込む方法を説明します。
+</p>
+<div class="warning">
+<p><i>警告</i>：この記事では仕様が未確定のインタフェースを使用しています。これらのインタフェースは新しい Mozilla では変更になる可能性があり、そのときはコードが機能しなくなるかもしれません。
+</p>
+</div>
+<p>テキストデータを読み込むには、そのデータがどんな <b><a href="ja/Character_encoding">文字エンコーディング</a></b> なのかを知る必要があります。ファイルやネットワークソケットは、文字ではなくバイト列から成り立っています。このバイト列に意味を持たせるために文字エンコーディングを知る必要があるのです。
+</p>
+<h3 id=".E3.83.87.E3.83.BC.E3.82.BF.E3.81.AE.E6.96.87.E5.AD.97.E3.82.A8.E3.83.B3.E3.82.B3.E3.83.BC.E3.83.87.E3.82.A3.E3.83.B3.E3.82.B0.E3.81.AE.E6.B1.BA.E5.AE.9A" name=".E3.83.87.E3.83.BC.E3.82.BF.E3.81.AE.E6.96.87.E5.AD.97.E3.82.A8.E3.83.B3.E3.82.B3.E3.83.BC.E3.83.87.E3.82.A3.E3.83.B3.E3.82.B0.E3.81.AE.E6.B1.BA.E5.AE.9A"> データの文字エンコーディングの決定 </h3>
+<p>ネットワークチャンネル ({{ Interface("nsIChannel") }}) を使っているのであれば、その contentCharset プロパティを使うことができます。すべてのチャンネルからデータの文字エンコーディングがわかるわけではないので注意してください。代わりに、設定（<code>intl.charset.default</code>、ローカライズされた設定値）で保存されているデフォルトの文字エンコーディングを使うこともできます。
+</p><p>ファイルから読み込むとなると、これは答えづらい質問です。システムの文字エンコーディングを使うとうまくいくかもしれません。また、同様に設定からデフォルトの文字エンコーディングを取得し、それを使ってもいいでしょう。
+</p>
+<h3 id="Gecko_1.8_.E4.BB.A5.E9.99.8D" name="Gecko_1.8_.E4.BB.A5.E9.99.8D"> Gecko 1.8 以降 </h3>
+<h4 id=".E6.96.87.E5.AD.97.E5.88.97.E3.81.AE.E8.AA.AD.E3.81.BF.E8.BE.BC.E3.81.BF" name=".E6.96.87.E5.AD.97.E5.88.97.E3.81.AE.E8.AA.AD.E3.81.BF.E8.BE.BC.E3.81.BF"> 文字列の読み込み </h4>
+<p>Gecko 1.8 (SeaMonkey 1.0、Firefox 1.5) では、ストリーム ({{ Interface("nsIInputStream") }}) から文字列を読み込むのに {{ Interface("nsIConverterInputStream") }} を使うことができます。この作業は {{ Bug(295047) }} でなされました。
+</p><p>使用法：
+</p>
+<pre class="eval">var charset = /* 文字エンコーディングを調べる必要あり。この例では UTF-8 を使用。 */ "UTF-8";
+const replacementChar = Components.interfaces.nsIConverterInputStream.DEFAULT_REPLACEMENT_CHARACTER;
+var is = Components.classes["@mozilla.org/intl/converter-input-stream;1"]
+                   .createInstance(Components.interfaces.nsIConverterInputStream);
+is.init(fis, charset, 1024, replacementChar);
+</pre>
+<p>すると、<code>is</code> から文字列を読み込むことができます:
+</p>
+<pre class="eval">var str = {};
+var numChars = is.readString(4096, str);
+if (numChars != 0 /* EOF */)
+  var read_string = str.value;
+</pre>
+<p>ストリーム全体を読み取り、そのデータを処理するには：
+</p>
+<pre class="eval">var str = {};
+while (is.readString(4096, str) != 0) {
+  processData(str.value);
+}
+</pre>
+<p>一通り終わったら、ストリームを閉じるのを忘れないでください (<code>is.close()</code>)。プラットフォームによっては、その作業を忘れると後でファイルをリネームしたり削除しようとしたときに問題が生じることもあります。
+</p><p>特にファイル（ストリーム）の終わりだと（この場合だけというわけではありません）、要求より少ない文字を得ることになるかもしれないということに注意してください。
+</p>
+<h5 id=".E6.9C.AA.E3.82.B5.E3.83.9D.E3.83.BC.E3.83.88.E3.81.AE.E3.83.90.E3.82.A4.E3.83.88.E5.88.97" name=".E6.9C.AA.E3.82.B5.E3.83.9D.E3.83.BC.E3.83.88.E3.81.AE.E3.83.90.E3.82.A4.E3.83.88.E5.88.97"> 未サポートのバイト列 </h5>
+<p>対応する妥当な文字がないバイト列に対してどのような処理をするかを指定することができます。init の最後の（第 4）引数を使って置換すべき文字を指定します。nsIConverterInputStream.DEFAULT_REPLACEMENT_CHARACTER は U+FFFD 置換文字であり、これを使うのがよいでしょう。
+</p><p>置換を望まないのであれば、置換文字として 0x0000 を指定できます。そうすると、未サポートのバイトに達すると <code>readString</code> が例外を投げます。
+</p>
+<h4 id=".E8.A1.8C.E3.81.AE.E8.AA.AD.E3.81.BF.E8.BE.BC.E3.81.BF" name=".E8.A1.8C.E3.81.AE.E8.AA.AD.E3.81.BF.E8.BE.BC.E3.81.BF"> 行の読み込み </h4>
+<p>{{ Interface("nsIUnicharLineInputStream") }} インタフェースを使用すると、簡単に Unicode 文字のストリームから行全体を読み込めるようになります。これが非 ASCII 文字をサポートしているのを除いて、{{ Interface("nsILineInputStream") }} と同じように使うことができます。また、ヌルが埋め込まれた文字集合（UTF-16 や UTF-32）を問題なく扱えます。
+</p><p>使用例：
+</p>
+<pre class="eval">var charset = /* 文字エンコーディングを調べる必要あり。この例では UTF-8 を使用。 */ "UTF-8";
+var is = Components.classes["@mozilla.org/intl/converter-input-stream;1"]
+                   .createInstance(Components.interfaces.nsIConverterInputStream);
+// ここで、fis は読み込み元にしたい {{ Interface("nsIInputStream") }} と仮定
+is.init(fis, charset, 1024, 0xFFFD);
+</pre>
+<pre class="eval">if (is instanceof Components.interfaces.nsIUnicharLineInputStream) {
+  var line = {};
+  var cont;
+  do {
+    cont = is.readLine(line);
+
+    // line.value を利用できるようになった
+  } while (cont);
+}
+</pre>
+<p>この例では EOF までストリーム全体を読み込みます。
+</p>
+<h3 id=".E3.82.82.E3.81.A3.E3.81.A8.E5.8F.A4.E3.81.84.E3.83.90.E3.83.BC.E3.82.B8.E3.83.A7.E3.83.B3" name=".E3.82.82.E3.81.A3.E3.81.A8.E5.8F.A4.E3.81.84.E3.83.90.E3.83.BC.E3.82.B8.E3.83.A7.E3.83.B3"> もっと古いバージョン </h3>
+<h4 id=".E6.96.87.E5.AD.97.E5.88.97.E3.81.AE.E8.AA.AD.E3.81.BF.E8.BE.BC.E3.81.BF_2" name=".E6.96.87.E5.AD.97.E5.88.97.E3.81.AE.E8.AA.AD.E3.81.BF.E8.BE.BC.E3.81.BF_2"> 文字列の読み込み </h4>
+<p>古い gecko にはストリームから unicode データを読み込む簡単な方法はありません。手動でデータのブロックを読み込み、{{ Interface("nsIScriptableUnicodeConverter") }} を使って変換しなければなりません。
+</p><p>例：
+</p>
+<pre class="eval">// まずコンバータの取得と初期化
+var converter = Components.classes["@mozilla.org/intl/scriptableunicodeconverter"]
+                          .createInstance(Components.interfaces.nsIScriptableUnicodeConverter);
+converter.charset = /* 使いたい文字エンコーディング：この例では UTF-8 */ "UTF-8";
+
+// ストリームから文字列の読み込み
+// ここで istream は読み込み元にしたいストリームと仮定
+var scriptableStream = Components.classes["@mozilla.org/scriptableinputstream;1"]
+                                 .createInstance(Components.interfaces.nsIScriptableInputStream);
+scriptableStream.init(istream);
+var chunk = scriptableStream.read(4096);
+var text = converter.ConvertToUnicode(chunk);
+</pre>
+<p>しかしながら、UTF-16 や UTF-32 のような、ヌルが埋め込まれたバイトがある文字エンコーディングではこのメソッドは<b>機能しない</b>ことに注意してください。
+</p>
+<h4 id=".E8.A1.8C.E3.81.AE.E8.AA.AD.E3.81.BF.E8.BE.BC.E3.81.BF_2" name=".E8.A1.8C.E3.81.AE.E8.AA.AD.E3.81.BF.E8.BE.BC.E3.81.BF_2"> 行の読み込み </h4>
+<p>ストリームから unicode 行を読み込む、簡単で一般的な方法というものはありません。
+</p><p>ローカルファイルから行を読み込むという限られた用途では、以下の {{ Interface("nsIScriptableUnicodeConverter") }} を使ったコードでうまくいきます。UTF-16 や UTF-32 のような<b>ヌルが埋め込まれた文字エンコーディングでは、このコードはうまくいきません</b>。
+</p>
+<pre class="eval">// まずコンバータの取得と初期化
+var converter = Components.classes["@mozilla.org/intl/scriptableunicodeconverter"]
+                          .createInstance(Components.interfaces.nsIScriptableUnicodeConverter);
+converter.charset = /* 使いたい文字エンコーディング：この例では UTF-8 */ "UTF-8";
+
+// 'file' は 読み込みたいファイルを示す nsIFile の変数と仮定
+var fis = Components.classes["@mozilla.org/network/file-input-stream;1"]
+                    .createInstance(Components.interfaces.nsIFileInputStream);
+fis.init(file, -1, -1, 0);
+
+var lis = fis.QueryInterface(Components.interfaces.nsILineInputStream);
+var lineData = {};
+var cont;
+do {
+  cont = lis.readLine(lineData);
+  var line = converter.ConvertToUnicode(lineData.value);
+
+  // line を利用できるようになった
+
+} while (cont);
+fis.close();
+</pre>
+<p><br>
+</p>
+<h3 id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE" name=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"> 関連項目 </h3>
+<ul><li> <a href="ja/Writing_textual_data">テキストデータの書き込み</a>
+</li><li> <a class="external" href="http://www.joelonsoftware.com/articles/Unicode.html">Joel on Software: 少なくともすべてのソフトウェア開発者が最低限知っておくべき Unicode とキャラクタセットについて</a>
+</li></ul>
+{{ languages( { "en": "en/Reading_textual_data" } ) }}

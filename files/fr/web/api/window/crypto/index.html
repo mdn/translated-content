@@ -1,0 +1,88 @@
+---
+title: Window.crypto
+slug: Web/API/Window/crypto
+translation_of: Web/API/Window/crypto
+---
+<p>{{APIRef}}</p>
+
+<p>La propriété, en lecture seule, {{domxref("Window.crypto")}} retourne l'objet {{domxref("Crypto")}}  associé à l'objet global. Cet objet permet aux pages web d'avoir un accès à certains services liés à cryptographie.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox">var <em>cryptoObj</em> = window.crypto || window.msCrypto; // pour IE 11
+</pre>
+
+<h2 id="Specification" name="Specification">Spécifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Spécification</th>
+   <th scope="col">Statut</th>
+   <th scope="col">Commentaire</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("Web Crypto API", "#dfn-GlobalCrypto", "Window.crypto")}}</td>
+   <td>{{Spec2("Web Crypto API")}}</td>
+   <td>Définition initiale</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilité_navigateur">Compatibilité navigateur</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Fonctionnalité</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer / Edge</th>
+   <th>Chrome Opera Vivaldi</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Support de base</td>
+   <td>44 {{ CompatVersionUnknown() }}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>6 {{ property_prefix("-ms") }}</td>
+   <td>19</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Fonctionnalité</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Gecko Mobile</th>
+   <th>Firefox OS</th>
+   <th>Internet Explorer / Edge</th>
+   <th>Opera for Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Support de base</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>2 {{ CompatVersionUnknown() }}</td>
+   <td>10 {{ CompatVersionUnknown() }}</td>
+   <td>37 {{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>L'objet global {{domxref("Window")}}</li>
+</ul>

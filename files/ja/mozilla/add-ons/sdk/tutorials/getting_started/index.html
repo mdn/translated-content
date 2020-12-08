@@ -1,0 +1,167 @@
+---
+title: 入門
+slug: Mozilla/Add-ons/SDK/Tutorials/Getting_started
+translation_of: Mozilla/Add-ons/SDK/Tutorials/Getting_Started_%28jpm%29
+---
+<p><span style="color: rgb(68, 68, 68); font-family: 'helvetica neue', arial, helvetica, sans-serif; font-size: 13px; line-height: 19.9939994812012px;">SDK を</span><span style="color: rgb(68, 68, 68); font-family: 'helvetica neue', arial, helvetica, sans-serif; font-size: 13px; line-height: 19.9939994812012px;">使用してシンプルなアドオンの作成を始めるための手順の概略です</span><span style="color: rgb(68, 68, 68); font-family: 'helvetica neue', arial, helvetica, sans-serif; font-size: 13px; line-height: 19.9939994812012px;">。</span></p>
+<h2 id="必要条件">必要条件</h2>
+<p>SDK を使用してアドオンを作成するには、まず最初に <a href="/en-US/Add-ons/SDK/Tutorials/Installation" rel="noreferrer">SDKをインストールして起動するための手順</a>に従ってください。インストールは一度だけ行えばよく、SDK の起動はコマンドプロンプトごとに行う必要があります。準備が整ったら、コマンドプロンプトを見てください。</p>
+<p>Linux または Mac OS X の場合、コマンドプロンプトの先頭は SDK のルートディレクトリ名となります。</p>
+<pre>(addon-sdk)~/mozilla/addon-sdk &gt;
+</pre>
+<p>Windows の場合、コマンドプロンプトの先頭は SDK がインストールされたディレクトリの絶対パスとなります。</p>
+<pre>(C:\Users\mozilla\sdk\addon-sdk) C:\Users\Work\sdk\addon-sdk&gt;
+</pre>
+<h2 id="アドオンの初期化">アドオンの初期化</h2>
+<p>コマンドプロンプトで新しいディレクトリを作成してください。SDK のルートディレクトリ以下の場所以外であれば、任意の場所に作成することができます。作成後はそのディレクトリに移動し、<span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: 1.5;">cfx init </span><span style="line-height: 1.5;">を実行してください。</span></p>
+<pre>mkdir my-addon
+cd my-addon
+cfx init
+</pre>
+<p>そうした場合、以下のように出力されるでしょう。</p>
+<pre>* lib directory created
+* data directory created
+* test directory created
+* doc directory created
+* README.md written
+* package.json written
+* test/test-main.js written
+* lib/main.js written
+* doc/main.md written
+Your sample add-on is now ready for testing:
+try "cfx test" and then "cfx run". Have fun!"
+</pre>
+<h2 id="アドオンを実装する">アドオンを実装する</h2>
+<p>lib ディレクトリにある main.js ファイルに、アドオンのコードを書くことができます。これは前のステップで作成されたものです。main.js を開き、以下のコードを追加してください。</p>
+<pre class="brush: js">var buttons = require('sdk/ui/button/action');
+var tabs = require("sdk/tabs");
+
+var button = buttons.ActionButton({
+  id: "mozilla-link",
+  label: "Visit Mozilla",
+  icon: {
+    "16": "./icon-16.png",
+    "32": "./icon-32.png",
+    "64": "./icon-64.png"
+  },
+  onClick: handleClick
+});
+
+function handleClick(state) {
+  tabs.open("http://www.mozilla.org/");
+}
+</pre>
+<p>コードを追加したら、ファイルを保存してください。</p>
+<p>次に、以下の3つのアイコンファイルを data ディレクトリに保存してください。</p>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/7635/icon-16.png" style="width: 16px; height: 16px;"></td>
+   <td>icon-16.png</td>
+  </tr>
+  <tr>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/7637/icon-32.png" style="width: 32px; height: 32px;"></td>
+   <td>icon-32.png</td>
+  </tr>
+  <tr>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/7639/icon-64.png" style="width: 64px; height: 64px;"></td>
+   <td>icon-64.png</td>
+  </tr>
+ </tbody>
+</table>
+<div class="note">
+ <p>上記のコードは、Firefox 29 以降においてのみ使用できる<span style="line-height: 1.5;"> </span><a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action" style="line-height: 1.5;">action button</a><span style="line-height: 1.5;"> モジュールを使用していることに注意してください。それ以前のバージョンの Firefox を使用する場合、アイコンがブラウザウィンドウの右下に表示されることを除けば、以下のコードを使用して同じものを実装できます。</span></p>
+ <pre class="brush: js">var widgets = require("sdk/widget");
+var tabs = require("sdk/tabs");
+var widget = widgets.Widget({
+  id: "mozilla-link",
+  label: "Mozilla website",
+  contentURL: require("sdk/self").data.url("icon-16.png"),
+  onClick: function() {
+    tabs.open("http://www.mozilla.org/");
+  }
+});</pre>
+</div>
+<p>コマンドプロンプトに戻り、以下のコマンドを実行します。</p>
+<pre>cfx run
+</pre>
+<p>これは、開発中のアドオンがインストールされた状態でFirefoxの新規インスタンスを実行する、 SDK のコマンドです。Firefox が起動されると、ブラウザの右上にFirefox ロゴのアイコンが表示されます。そのアイコンをクリックすると、<a href="http://www.mozilla.org/" rel="noreferrer">http://www.mozilla.org/</a> が読み込まれた新しいタブが開きます。</p>
+<div class="note">
+ <p>cfx run と入力したとき、以下のようなメッセージが表示される場合があります。</p>
+ <pre class="bz_comment_text" id="comment_text_0">A given cfx option has an inappropriate value:
+  ZIP does not support timestamps before 1980</pre>
+ <p>もし表示されたのであれば、<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1005412">bug 1005412</a> に行き当たったことになります。これは、ダウンロードしたアイコンファイルに1970年のタイムスタンプが付与されていることを意味します。このバグが修正されるまでは、<a href="http://www.linfo.org/touch.html"><code>touch</code></a> コマンドを使ってタイムスタンプをアップデートすることによってバグを回避してください。</p>
+ <pre>touch icon-16.png</pre>
+</div>
+<p>このアドオンが行うことは、これで全部です。このアドオンは2つの SDK モジュールを使用しています。一つは、ボタンをブラウザに追加することができる <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action">action button</a> モジュール、もう一つは、基本的なタブの操作を可能にする <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs" rel="noreferrer">tabs</a> モジュールです。今回は、Firefox アイコンのボタンを作成し、それをクリックすると新しいタブで Mozilla ウェブサイトのホームページを読み込むためのハンドラを追加しました。</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/7643/mozilla-button.png" style="width: 382px; height: 221px; display: block; margin-left: auto; margin-right: auto;">先述のファイルを編集してみましょう。例えば、読み込むページを変更することができます。</p>
+<pre class="brush: js">var buttons = require('sdk/ui/button/action');
+var tabs = require("sdk/tabs");
+
+var button = buttons.ActionButton({
+  id: "mozilla-link",
+  label: "Visit Mozilla",
+  icon: {
+    "16": "./icon-16.png",
+    "32": "./icon-32.png",
+    "64": "./icon-64.png"
+  },
+  onClick: handleClick
+});
+
+function handleClick(state) {
+  tabs.open("https://developer.mozilla.org/");
+}</pre>
+<div class="note">
+ <p><span style="line-height: 1.5;">上記のコードは、Firefox 29 以降においてのみ使用できる</span><span style="line-height: 1.5;"> </span><a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action" style="line-height: 1.5;">action button</a><span style="line-height: 1.5;"> モジュールを使用していることに注意してください。それ以前のバージョンの Firefox を使用する場合、アイコンがブラウザウィンドウの右下に表示されることを除けば、以下のコードを使用して同じものを実装できます。</span></p>
+ <pre class="brush: js">var widgets = require("sdk/widget");
+var tabs = require("sdk/tabs");
+var widget = widgets.Widget({
+  id: "mozilla-link",
+  label: "Mozilla website",
+  contentURL: require("sdk/self").data.url("icon-16.png"),
+  onClick: function() {
+    tabs.open("http://developer.mozilla.org/");
+  }
+});</pre>
+</div>
+<p>コマンドプロンプトで、再び <code>cfx run</code> を実行してください。今度は <a href="https://developer.mozilla.org/">https://developer.mozilla.org/</a> が表示されます。</p>
+<h2 id="アドオンをパッケージ化する">アドオンをパッケージ化する</h2>
+<p>アドオンが完成して配布する準備ができたとき、XPI ファイルとしてパッケージ化する必要があります。これは Firfox アドオンとしてインストール可能なファイル形式です。XPI ファイルを独自の手段で配布するか、<a href="https://addons.mozilla.org" rel="noreferrer">https://addons.mozilla.org</a> で公開しましょう。そうすれば、ほかのユーザーがそのアドオンをダウンロードし、インストールすることできます。</p>
+<p><span style="line-height: 1.5;">アドオンのディレクトリで </span><code style="font-style: normal; line-height: 1.5;">cfx xpi</code><span style="line-height: 1.5;"> コマンドを実行するだけで、</span>XPI をビルドすることができます。</p>
+<pre>cfx xpi
+</pre>
+<p>そうした場合、以下のようなメッセージが表示されるでしょう。</p>
+<pre>Exporting extension to my-addon.xpi.
+</pre>
+<p>アドオンが動くかどうかテストするために、あなたがインストールした Firefox に XPI ファイルをインストールしてみましょう。Firefox で Ctrl+O の組み合わせ（Mac であれば Cmd+O）でキーを入力するか、Firefox の「ファイル」メニューから「ファイルを開く」を選択します。すると、ファイル選択ダイアログが表示されます。アドオンの XPI ファイルがある場所まで移動してファイルを開き、アドオンをインストールするためのプロンプトに従ってください。</p>
+<h2 id="要約">要約</h2>
+<p>このチュートリアルでは、3つのコマンドを使ってアドオンの構築およびパッケージ化を行いました。</p>
+<ul>
+ <li><code>cfx init</code> による空のアドオンのテンプレートの初期化。</li>
+ <li><code>cfx run</code>  による、アドオンがインストールされた状態での Firefox の新規インスタンスの実行。アドオンの動作確認を可能にします。</li>
+ <li><code>cfx xpi</code> による、配布可能な XPI ファイルとしてのアドオンのパッケージ化。</li>
+</ul>
+<p>これら3つのコマンドは、SDK を用いてアドオンを開発するときに使用する主要なコマンドです。利用可能な全てのコマンドとオプションを網羅した<a href="/en-US/Add-ons/SDK/Tools/cfx" rel="noreferrer" style="line-height: 1.5;">リファレンス</a><span style="line-height: 1.5;">も用意してます。</span></p>
+<p>アドオン自体のコードは、<a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action">action button</a> と <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs" rel="noreferrer">tabs</a> の2つのモジュールを使用しています。SDKの<a href="/en-US/Add-ons/SDK/High-Level_APIs" rel="noreferrer">高レベルなAPI</a> および <a href="/en-US/Add-ons/SDK/Low-Level_APIs" rel="noreferrer">低レベルなAPI</a> のリファレンスも用意しています。</p>
+<h2 id="次のステップ">次のステップ</h2>
+<p>SDKのAPIを使ってできることに慣れるためには、いくつかの<a href="/en-US/Add-ons/SDK/Tutorials" rel="noreferrer">チュートリアル</a>を進めてみてください。 </p>
+<h2 id="上級テクニック">上級テクニック</h2>
+<h3 id="組み込みのモジュールの上書き">組み込みのモジュールの上書き</h3>
+<p>アドオンを実装するために使用する SDK モジュールは、Firefox に組み込まれているものです。アドオンを <span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: 1.5;">cfx run</span><span style="line-height: 1.5;"> コマンドで実行したり、</span><code style="font-style: normal; line-height: 1.5;">cfx xpi</code><span style="line-height: 1.5;"> コマンドでパッケージ化したりする場合は、アドオンは Firefox が提供するバージョンのモジュールを使用します。</span></p>
+<p>アドオン開発者としては、通常これは望ましい挙動です。しかし、SDK のモジュール自体を開発する場合には、当然それは望ましくない挙動でしょう。この場合、仮にSDKを <a href="https://github.com/mozilla/addon-sdk" rel="noreferrer">GitHub リポジトリ</a>からチェックアウトし、そのルートディレクトリで <a href="/en-US/Add-ons/SDK/Tutorials/Installation" rel="noreferrer">bin/activate</a> スクリプトを実行するものとします。</p>
+<p>そのときは、"-o" オプションを渡して <code>cfx run</code> または <code>cfx xpi </code>コマンドを実行します。</p>
+<pre>cfx run -o
+</pre>
+<p>これにより、cfx は Firefox 組み込みのモジュールではなく、SDK モジュールのローカルコピーを使用するようになります。</p>
+<h3 id="cfx_を実行せずに開発する">cfx を実行せずに開発する</h3>
+<p><code>cfx run</code> を呼び出すたびにブラウザが再起動されるため、アドオンを頻繁に変更する場合、開発効率をいくらか損なうことになるでしょう。それに代わるものとして、特定のポートの新しい XPI ファイルを自動的にインストールする <a href="https://addons.mozilla.org/en-US/firefox/addon/autoinstaller/" rel="noreferrer" style="line-height: 1.5;">Extension Auto-Installer</a><span style="line-height: 1.5;"> アドオンを利用した開発があります。これにより、ブラウザを再起動する必要なく新しい変更点をテストすることができます。</span></p>
+<ul>
+ <li>アドオンに変更を加えます</li>
+ <li>cfx xpi コマンドを実行します</li>
+ <li>特定のポートにアドオンをポストします</li>
+</ul>
+<p>さらに、このワークフローを簡単なスクリプトで自動化できます。例えば、以下のようなスクリプトです。</p>
+<pre>while true ; do cfx xpi ; wget --post-file=codesy.xpi http://localhost:8888/ ; sleep 5 ; done
+</pre>
+<p>この方法を使った場合、<span style="line-height: 1.5;">アドオンを </span><code style="font-style: normal; line-height: 1.5;">cfx run</code><span style="line-height: 1.5;"> コマンドにより実行した場合と比べて、</span><span style="line-height: 1.5;">コンソールへのログ出力のレベルが異なることに注意してください。つまり、 </span><a href="/en-US/Add-ons/SDK/Tutorials/Logging" rel="noreferrer" style="line-height: 1.5;"><code>console.log()</code></a><span style="line-height: 1.5;"> が出力するメッセージを見たい場合、設定を微調整する必要があります。詳細については、</span><a href="/en-US/Add-ons/SDK/Tools/console#Logging_Levels" rel="noreferrer" style="line-height: 1.5;">ログ出力のレベル</a><span style="line-height: 1.5;">に関するドキュメントを参照してください。</span></p>

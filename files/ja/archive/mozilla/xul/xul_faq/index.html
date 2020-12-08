@@ -1,0 +1,19 @@
+---
+title: XUL FAQ
+slug: Archive/Mozilla/XUL/XUL_FAQ
+tags:
+  - XUL
+translation_of: Archive/Mozilla/XUL/XUL_FAQ
+---
+<p>この文書は、Mozillaのアプリケーションのユーザインターフェイスを表現するためのマークアップ言語である、<a href="/ja/XUL" title="ja/XUL">XUL</a>に関するよくある質問とその回答を含みます。</p>
+<p>他のFAQは<a href="/ja/Extension_FAQ" title="ja/Extension_FAQ">拡張機能のFAQ</a>などを参照してください...</p>
+<p>もしあなたの質問がここでまだ回答されていない場合は、 <a href="/ja/XUL" title="ja/XUL">XULの解説</a>で答えを探すか、XULニュースグループで質問してみてください。</p>
+<p> </p>
+<h4 id="XUL.E3.82.A2.E3.83.97.E3.83.AA.E3.82.B1.E3.83.BC.E3.82.B7.E3.83.A7.E3.83.B3.E3.82.92.E3.83.AC.E3.82.A4.E3.82.A2.E3.82.A6.E3.83.88.E3.81.99.E3.82.8B.E3.81.9F.E3.82.81.E3.81.AE.E5.84.AA.E7.A7.80.E3.81.AA.E8.A6.96.E8.A6.9A.E7.9A.84.E3.81.AA.E3.82.A8.E3.83.87.E3.82.A3.E3.82.BF.E3.81.AF.E3.81.82.E3.82.8A.E3.81.BE.E3.81.9B.E3.82.93.E3.81.8B.EF.BC.9F" name="XUL.E3.82.A2.E3.83.97.E3.83.AA.E3.82.B1.E3.83.BC.E3.82.B7.E3.83.A7.E3.83.B3.E3.82.92.E3.83.AC.E3.82.A4.E3.82.A2.E3.82.A6.E3.83.88.E3.81.99.E3.82.8B.E3.81.9F.E3.82.81.E3.81.AE.E5.84.AA.E7.A7.80.E3.81.AA.E8.A6.96.E8.A6.9A.E7.9A.84.E3.81.AA.E3.82.A8.E3.83.87.E3.82.A3.E3.82.BF.E3.81.AF.E3.81.82.E3.82.8A.E3.81.BE.E3.81.9B.E3.82.93.E3.81.8B.EF.BC.9F">XULアプリケーションをレイアウトするための優秀な視覚的なエディタはありませんか？</h4>
+<p>XULのために利用可能な製品品質の視覚的なエディタはありません。場合によっては出来の良いXMLエディタの助けを借りて、XULを手作業で編集するのが、推奨される方法です。大抵の場合は、Ted Mielczarekの <a class="external" href="http://ted.mielczarek.org/code/mozilla/xuledit/xuledit.xul">ライブXULエディタ</a> （<a class="external" href="http://ted.mielczarek.org/code/mozilla/extensiondev/">拡張機能開発者のための拡張機能</a>の一部でもあります）が有用 であることが分かります。</p>
+<p>XULの統合開発環境/エディタを開発することを目的とした（中止されたものと、継続中のものの）プロジェクトの一覧は<a class="wikimo" href="https://wiki.mozilla.org/XUL:IDE" title="wikimo:XUL:IDE">wikimo:XUL:IDE</a>にあります。</p>
+<h4 id="prefwindow.E3.83.99.E3.83.BC.E3.82.B9.E3.81.AE.E8.A8.AD.E5.AE.9A.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.81.AB.E9.96.A2.E3.81.99.E3.82.8B.E3.83.88.E3.83.A9.E3.83.96.E3.83.AB.E3.82.B7.E3.83.A5.E3.83.BC.E3.83.86.E3.82.A3.E3.83.B3.E3.82.B0" name="prefwindow.E3.83.99.E3.83.BC.E3.82.B9.E3.81.AE.E8.A8.AD.E5.AE.9A.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.81.AB.E9.96.A2.E3.81.99.E3.82.8B.E3.83.88.E3.83.A9.E3.83.96.E3.83.AB.E3.82.B7.E3.83.A5.E3.83.BC.E3.83.86.E3.82.A3.E3.83.B3.E3.82.B0">prefwindowベースの設定ウィンドウに関するトラブルシューティング</h4>
+<p><span class="comment">Troubleshooting prefwindow-based options windows</span></p>
+<p><span class="comment">これは <a href="/ja/Preferences System/Troubleshooting">設定システムのトラブルシューティング</a> に分割されるべきです。それはFAQです。</span> あなたが自作の<code><a href="/ja/docs/Mozilla/Tech/XUL/prefwindow" title="prefwindow">prefwindow</a></code>ベースの設定ウィンドウで問題に遭遇した時に、チェックするべき点：</p>
+<ul> <li>それぞれの<code><a href="/ja/docs/Mozilla/Tech/XUL/prefpane" title="prefpane">prefpane</a></code>要素は一意なIDを持っていますか？</li> <li><code>&lt;prefwindow&gt;</code>要素の中で、<code>&lt;prefpane&gt;</code>要素よりも前に何か要素を置いていませんか？（ここに何らかの要素を置くと、<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=296418" title="can't put tags/elements before prefpane elements in prefwindow">バグ 296418</a>を引き起こします。）</li> <li>prefpane要素は正しく入れ子になっていますか？</li> <li>それぞれのprefpaneは、空でもよいので、&lt;preferences&gt;&lt;/preferences&gt;ブロックを含んでいますか？</li> <li>prefpaneの中のscriptタグはきちんと閉じられていますか？</li> <li>prefpane要素の外に置かれたスクリプトから、prefpane要素の内容を参照していませんか？（ウィンドウの初期化中に、prefpane要素のonpaneloadイベントハンドラ、もしくはprefpane要素の中に置かれたスクリプト以外からprefpane要素の中にある要素を参照すると、設定ウィンドウを開いたときのアニメーション効果が止まらなくなることがあります。）</li> <li><code>prefwindow</code>はchrome URIでアクセスされたXULでのみ機能することに注意してください。</li>
+</ul>

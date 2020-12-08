@@ -1,0 +1,36 @@
+---
+title: The life of an HTML HTTP request
+slug: The_life_of_an_HTML_HTTP_request
+tags:
+  - Developing Mozilla
+  - DocShell
+  - Necko
+translation_of: Archive/Mozilla/The_life_of_an_HTML_HTTP_request
+---
+<p>
+</p><div class="warning warningHeader">
+    <p><strong>警告:</strong> <strong>この記事の内容は古くなっている可能性があります。</strong> このドキュメントの最終更新は 1999 年です。</p>
+</div>
+<p></p><p><img alt="Image:url_load.gif">
+</p><p><b>(1)</b> URL の読み込みは、（Webshell の中の LoadURL か LoadURI の一種から呼び出される）nsWebShell::DoLoadURL の中から始められます。Webshell は、その DocumentLoader が特定の URL を読み込む（"view" コマンドの実行する）ことを知らせます。[メモ: nsWebShell.mObserver を nsIStreamObserver として、webshell を nsIContentViewerContainer として DocLoader へ通過させる。]
+</p><p><b>(2)</b> DocumentLoader は、要求されたファイルの転送を始めるために、URL 付きで NS_OpenURI を呼び出します。Necko (ネットワークライブラリ）は URL のスキーマ（URL の最初の部分、この場合 http:）をチェックし、正しい nsIProtocolHandler（この場合は nsHTTPHandler）を特定し、nsIChannel（この場合は nsHTTPChannel）に問い合わせます。この channel はサーバへの接続を表現し、HTML データストリームの源となります。
+</p><p><b>(3)</b> データが Web サーバから届き始めると、nsIChannel は対応する DocumentLoader の OnStartRequest を呼び出します。この時点で channel は入ってくる content type を判断できます。そのため、DocumentLoader は "text/html" の content type に対応する nsIDocumentLoaderFactory （この場合 nsLayoutDLF）を見つけることができます。この factory は、nsIContentViewer を生成するために呼ばれます。この factory は ContentViewer を生成します。たいていの場合（この場合も含めて）、nsIDocument（この場合 nsHTMLDocument）も生成し、nsIDocument を ContentViewer (この場合 nsIDocumentViewer)に結び付けます。ContentViewer は、ContentViewerContainer（元の WebShell）へと Embed(): されます。
+</p><p><b>(4)</b> そして ドキュメントは入力ストリームを解析するために、nsIParser を生成します。HTML ドキュメント向けの nsIParser は nsParser で、nsIStreamListener も実装しているものです。この StreamListener は DocumentLoader へ戻され、要求に対する nsIChannel へ接続されます。
+</p><p><b>(5)</b> ドキュメント(この場合 nsHTMLDocument) はまた、nsIContentSink（この場合 nsHTMLContentSink）を生成し、nsIContentSink を parser とドキュメントへ結び付けます。そして、parser は結びついた StreamListener インタフェースを通して得られたストリームを解析し、ContentSink に置かれた nsIParserNodes へと変換します。
+</p><p>parser は通常、ストリームからデータを 8kb ブロック単位で得て、これらのブロックをブロックごとに解析します。それぞれの解析されたブロックのあとで、parser が一時ブロックのままでない限り、parser は解析されたデータを nsIParserNodes として ContentSink へ渡します。この場合ブロックされている間に受け取られたデータを解析した後でブロック解除されるまで parser は待機します。
+</p><p><b>(6)</b> そして、contentsink はドキュメントを記述する nsIContent ノードを組み立てます。これらのコンテントノードは、NS_NewHTMLXxxxElement() といった関数の呼び出しで生成されます。これらの要素ノードは、それぞれの DOM インタフェースと同様に nsIHTMLContent インタフェースを実装します。nsIContent::AppendChild() はコンテントツリーを組み立てるために使われますが、AppendChild は、コンテントモデルが変更されたかどうかについてドキュメントに知らせるかを示す "aNotify" 引数をとります。この引数はコンテントシンク（contentsink）が AppendChild を呼ぶときにはいつでも PR_FALSE です。コンテントシンクは、nsHTMLContentSink::WillInterrupt() や nsHTMLContentSink::DidBuildModel() といった場所でのコンテントモデルの変更（NotifyBody()）についてドキュメントに通知します。WillInterrup はデータ 8KB ブロックごとにパーサによって呼ばれます（パーサが一時的に止められていなければ）。
+</p><p><b>(7)</b> プレゼンテーションシェル（presentation shell：nsPresShell）が nsIDocument をともなう DocumentObserver として登録されるため、Document/Content ツリーの変更の通知を受け取りもします。これは nsIFrame 階層構造の生成と更新のために使われます。これは、nsCSSFrameConstructor によって行われます。nsCSSFrameConstructor はユーザエージェントのスタイルシート（ua.css）やドキュメントの指定するスタイルシートに定義された規則にしたがってそれぞれのコンテントノードのためのフレームを生成します。どのコンテントノードも一つ以上の nsIFrame に対応します。ただし、displaytype が none の内容をもつものは除きますが。コンテントノードから生成されたフレームがいくつかあるとすると、最初のフレームは primary ノードと呼ばれます。それに続くフレームは nsIFrame の GetNextInFlow() メソッドを使うことでアクセスできます。初期環流は nsHTMLContentSink::StartLayout() で行われます。StartLayout() は PresShell::InitialReflow() を呼びます。StartLayout は構文解析過程のとても早い段階で呼ばれます。HTML のために nsHTMLContentSink::OpenBody() の中で（ほかの場所に混じって）呼ばれます。
+</p><p><i>やらなくてはならないこと：nsIFrames がすでに存在する時に、変更の後どのように環流するのか？</i>
+</p><p><b>(8)</b> どの nsIFrame も画面に自分自身をどのように描画するかを知っています。PresShell[メモ：これは正しくありません。本当は誰が呼んでいるのでしょう？] がフレームをレイアウト（環流）するとき、すべてのフレームの nsIFrame::Paint() メソッドを呼びます。これらは表現内容とレンダリング内容への参照を描画のために渡します。レンダリング内容の実装はウィンドウへの描画方法を知っている native クラス（Unix では nsGtkRenderingContext）で行っています。
+</p><p><i>やらなくてはならないこと：Views、ViewManager、EventStateManagerは？</i>
+</p><p><a>Diagram</a> created with <a class="external" href="http://www.lysator.liu.se/~alla/dia/dia.html">DIA</a>.
+</p>
+<div class="originaldocinfo">
+<h2 id="原文書の情報"> 原文書の情報 </h2>
+<ul><li> 著者: <a class="link-mailto" href="mailto:alex@cendio.se">Alexander Larsson</a>
+</li><li> 最終更新日: October 8, 1999
+</li><li> 著作権: Portions of this content are © 1998–2007 by individual mozilla.org contributors; content available under a Creative Commons license | <a class="external" href="http://www.mozilla.org/foundation/licensing/website-content.html">詳細</a>
+</li></ul>
+</div>
+<div class="noinclude">
+</div>

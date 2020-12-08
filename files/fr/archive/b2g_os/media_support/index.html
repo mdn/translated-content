@@ -1,0 +1,59 @@
+---
+title: Support des médias dans Firefox OS
+slug: Archive/B2G_OS/Media_support
+tags:
+  - Firefox OS
+  - Guide
+  - HTML5
+  - Média(2)
+translation_of: Web/Media/Formats
+---
+<p></p><div class="overheadIndicator draft">
+    <p><strong>Brouillon</strong><br>
+    Cette page n'est pas terminée.</p>
+
+</div><p></p>
+
+<p>Aucun objet connecté moderne n'est complet sans un grand support multimédia, et Firefox OS en dispose assurément, en particulier avec la version 2.0 imminente. Voyez ici quels codecs sont supportés selon les versions de Firefox OS, et quelles sont les fonctionnalités selon les appareils.</p>
+
+<h2 id="Vidéo_H.264">Vidéo H.264</h2>
+
+<p>Firefox OS 2.0 introduit le support du codage et du décodage matériel des vidéos H.264 dans les flux médias WebRTC. Cela rend possible de soutenir des vidéoconférences ou des appels face-à-face avec une consommation optimisée de la batterie.</p>
+
+<h3 id="Activation_du_support_H.264">Activation du support H.264</h3>
+
+<p>À l'heure actuelle, certains appareils, tel que le téléphone développeur Flame, ne disposent pas d'un support vidéo H.264 activé par défaut. Vous devez définir un paramètre pour l'activer. Pour cela, vous avez besoin de modifier le fichier <code>prefs.js</code> situé dans votre profil sur l'appareil. Commencez par brancher l'appareil sur votre ordinateur sur lequel ont été au préalable <a href="/en-US/Firefox_OS/Firefox_OS_build_prerequisites#Install_adb">configurés les outils adb</a>.</p>
+
+<p>Tout d'abord, vous devez déterminer le nom du répertoire de votre profil. Vous pouvez le trouver de cette manière :</p>
+
+<pre>adb shell ls /data/b2g/mozilla</pre>
+
+<p>Parmi les informations affichées, vous verrez un répertoire dont le nom se compose de lettres et de chiffres aléatoires et qui se termine par ".default". Il s'agit du répertoire de votre profil. Utilisez ce nom lorsque vous verrez "xxxxxxxx" dans les instructions données à partir d'ici.</p>
+
+<p>Ensuite, récupérez le fichier <code>prefs.js</code> afin de pouvoir l'éditer :</p>
+
+<pre>adb pull /data/b2g/mozilla/xxxxxxx.default/prefs.js</pre>
+
+<p>Ouvrez le fichier obtenu dans votre éditeur de texte préféré ; ajoutez la ligne suivante à la fin du fichier et enregistrez vos modifications.</p>
+
+<pre>user_pref("media.peerconnection.video.h264_enabled", true);</pre>
+
+<p>À présent, tout ce qu'il vous reste à faire est d'envoyer le fichier modifié vers l'appareil et de redémarrer le processus <code>b2g</code> pour prendre en compte les changements, comme ceci :</p>
+
+<pre>adb push pref.js /data/b2g/mozilla/xxxxxxxx.default
+adb shell stop b2g
+adb shell start b2g
+</pre>
+
+<h2 id="Support_des_conteneurs_et_codecs">Support des conteneurs et codecs</h2>
+
+<p><em>Cette section contiendra (bientôt, espérons) des informations sur les codecs supportés, les conteneurs (formats de fichier) qui peuvent les encapsuler, et pour chacun quels appareils et versions de l'OS les prennent en charge.</em></p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="/fr/docs/Web/HTML/Utilisation_d'audio_et_video_en_HTML5">Utilisation d'audio et vidéo en HTML5</a></li>
+ <li><a href="/fr/docs/Web/HTML/formats_media_support">Formats Media supportés par les éléments HTML audio et vidéo</a></li>
+ <li><a href="/fr/docs/Web/HTML/Element/video" title="L'élément HTML &lt;video> intègre un contenu vidéo dans un document."><code>&lt;video&gt;</code></a></li>
+ <li><a href="/fr/docs/Web/HTML/Element/audio" title="L'élément HTML &lt;audio> est utilisé afin d'intégrer un contenu sonore dans un document. Il peut contenir une ou plusieurs sources audio représentées avec l'attribut src ou l'élément &lt;source>. S'il y a plusieurs sources, l'agent utilisateur choisira celle qui convient le mieux."><code>&lt;audio&gt;</code></a></li>
+</ul>

@@ -1,0 +1,124 @@
+---
+title: 框架脚本的加载与寿命
+slug: >-
+  Mozilla/Firefox/Multiprocess_Firefox/Message_Manager/Frame_script_loading_and_lifetime
+translation_of: >-
+  Mozilla/Firefox/Multiprocess_Firefox/Message_Manager/Frame_script_loading_and_lifetime
+---
+<div>{{FirefoxSidebar}}</div><h2 id="加载框架脚本">加载框架脚本</h2>
+
+<p>要加载一个框架脚本，使用 <code>loadFrameScript()</code> 函数。</p>
+
+<p>这行代码加载一个框架脚本到当前选中的标签页。该框架脚本只是将 "foo" 写入到命令行：</p>
+
+<pre class="brush: js">// chrome script
+var mm = gBrowser.selectedBrowser.messageManager;
+mm.loadFrameScript('data:,dump("foo\\n")', true);</pre>
+
+<p><code>loadFrameScript()</code> 有两个强制性参数：</p>
+
+<ul>
+ <li>一个 URL 指向要加载的框架脚本。</li>
+ <li>一个布尔变量，<code>allowDelayedLoad</code></li>
+</ul>
+
+<p>Note that if the message manager is a <a href="/en-US/Firefox/Multiprocess_Firefox/Message_Manager/Message_manager_overview#Global_frame_message_manager">global frame message manager</a> or a <a href="/en-US/Firefox/Multiprocess_Firefox/Message_Manager/Message_manager_overview#Window_message_manager">window message manager</a> then <code>loadFrameScript() </code>may load the script multiple times, once into each applicable frame.</p>
+
+<h3 id="chrome_URL">chrome: URL</h3>
+
+<p>扩展开发者通常会使用 <code>chrome://</code> URL 来指向一个框架脚本。</p>
+
+<p>要定义 <code>chrome://</code> URL 的映射和将一个框架脚本打包到扩展中，使用 "chrome.manifest" 文件来 <a href="/en/docs/Chrome_Registration">注册一个chrome URL</a>：</p>
+
+<pre class="brush: js">// chrome.manifest
+content my-e10s-extension content.js</pre>
+
+<pre class="brush: js">// chrome script
+mm.loadFrameScript("chrome://my-e10s-extension/content/content.js", true);</pre>
+
+<h3 id="allowDelayedLoad">allowDelayedLoad</h3>
+
+<p>如果消息管理器是一个 <a href="/en-US/Firefox/Multiprocess_Firefox/Message_Manager/Message_manager_overview#Global_frame_message_manager">全局框架消息管理器</a> 或者一个 <a href="/en-US/Firefox/Multiprocess_Firefox/Message_Manager/Message_manager_overview#Window_message_manager">窗口消息管理器</a>，那么：</p>
+
+<ul>
+ <li>
+  <p>如果 <code>allowDelayedLoad</code> 为 <code>true</code>，在 <code>loadFrameScript()</code> 调用后，框架脚本将加载到任何新的已打开的标签页。例如：</p>
+
+  <pre class="brush: js">var mm = window.messageManager;
+mm.loadFrameScript("chrome://my-e10s-extension/content/frame-script.js", true);</pre>
+
+  <p>这段脚本将加载到此窗口中目前已打开的所有标签页，以及未来进入的新打开的标签页。</p>
+ </li>
+ <li>如果 <code>allowDelayedLoad</code>  为 <code>false</code>，那么脚本只会在执行调用时已打开的标签页中加载。</li>
+</ul>
+
+<p>如果消息管理器是一个 <a href="/en-US/Firefox/Multiprocess_Firefox/Message_Manager/Message_manager_overview#Browser_message_manager">浏览器消息管理器</a>，你应该始终在这里传递 <code>true</code>。因为一个浏览器消息管理器永远只对应一个浏览器标签页，它的 <code>loadFrameScript()</code> 函数只加载框架脚本到一个标签页。因此传递 <code>allowDelayedLoad</code> 仅仅是一个方法来确保脚本被正确加载，在你的标签页在执行后还没有准备好时。</p>
+
+<p>如果你使用 <code>allowDelayedLoad</code>，你可以使用 <code>removeDelayedFrameScript</code> 取消它：</p>
+
+<pre class="brush: js">var mm = window.messageManager;
+<code>mm.removeDelayedFrameScript</code>("chrome://my-e10s-extension/content/frame-script.js");</pre>
+
+<p>这意味着我们将停止加载脚本到新的标签页。请注意，此函数不会移除已经加载的任何脚本。</p>
+
+<h2 id="框架脚本的寿命">框架脚本的寿命</h2>
+
+<p>框架脚本将在 <code>loadFrameScript()</code> 被调用后尽快加载。如果你设置了 <code>allowDelayedLoad</code>，脚本将加载到一个新的标签页，一旦其已被创建。</p>
+
+<p>框架脚本与浏览器的标签页相关联，而不是与页面。因此一旦你加载它们，它们就会持续存在，直至标签页被关闭，因此即便你重新加载或者文档重新导航也不会丢失。</p>
+
+<p>如果你想一个框架脚本在每次新文档被加载后执行操作，你需要监听一个适当的 DOM 事件，通常是 <code><a href="/en-US/docs/Web/Events/DOMWindowCreated">DOMWindowCreated</a></code>, <code><a href="/en-US/docs/Web/Events/DOMContentLoaded">DOMContentLoaded</a></code>,  或者 <code><a href="/en-US/docs/Web/Events/load">load</a></code>。</p>
+
+<h2 id="卸载框架脚本">卸载框架脚本</h2>
+
+<p>框架脚本会在托管它们的标签页被关闭时自动卸载。目前还没有办法在已加载它们的标签页之中卸载它们，除了关闭标签页。</p>
+
+<p>若要监听你的框架脚本被卸载的事件（例如由于标签页被关闭），你必须将 <code>addMessageListener</code> 的第三个参数设置为 true，例如下面的 <code>bootstrap.js</code> 的代码：</p>
+
+<pre class="brush: js">Services.mm.addMessageListener(
+    'my-addon-id',
+    {
+        receiveMessage: function() {
+            console.log('incoming message from frame script:', aMsg.data);
+        }
+    },
+    true // must set this argument to true, otherwise sending message from framescript will not work during and after the unload event on the ContentMessageManager triggers
+);</pre>
+
+<p>and then in your frame script listen for the unload event of the message manager (which is the global this), and then send a message. If you did not set third argument to true in <code>bootstrap.js</code> on <code>Services.mm.addMessageListener</code>, then this send message during and after unload event, will do nothing.</p>
+
+<pre class="brush: js">var gContentFrameMessageManager = this;
+
+addEventListener('unload', function(aEvent) {
+    if (aEvent.target == gContentFrameMessageManager) {
+        sendAsyncMessage('my-addon-id', 'framescript-died'); // if you did not set third argument of `Services.mm.addMessageListener` to `true`, then this will fail to send a message
+    }
+}, false);</pre>
+
+<h3 id="有关卸载升级操作时的卸载">有关卸载/升级操作时的卸载</h3>
+
+<p>在你的附加组件被卸载或禁用时，你应该：</p>
+
+<ul>
+ <li>如果使用了 <code>allowDelayedLoad</code>，调用 <code>removeDelayedFrameScript</code> 取消它，确保框架脚本不会加载到任何新的标签页。</li>
+ <li>禁用已加载的任何框架脚本。没有任何机制来卸载已加载的框架脚本，因此你需要发送一个消息到你的框架脚本来告诉它们禁用自己（例如撤销所有已取得的更改，以及移除事件监听器）。</li>
+</ul>
+
+<div class="note">
+<div class="warning">
+<p>There is a bug in non-e10s where this oder is not true. In e10s framescripts work fine on updating. For non-e10s waiting for <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1202125">Bug 1202125 - framescripts are not backwards loaded in message order in non-e10s</a>.</p>
+</div>
+
+<p>Note: you might think that there is a race condition here due to the asynchronous nature of the message passing:</p>
+
+<ul>
+ <li>your add-on is disabled for an upgrade</li>
+ <li>your add-on broadcasts "disable" to your frame scripts</li>
+ <li>your add-on is upgraded, and the new code loads new frame scripts</li>
+ <li>the new frame scripts receive the "disable" message, and stop working</li>
+</ul>
+
+<p>In fact, the message manager guarantees that <code>loadFrameScript</code> and <code>broadcastAsyncMessage</code> are guaranteed to affect frame scripts in the order that they are called, so in this case "disable" will be received and consumed before the new frame scripts are loaded.</p>
+</div>
+
+<p>At the moment frame scripts are cached until the browser restarts: this problem is tracked as <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1051238">bug 1051238</a>. This is especially a problem for <a href="/en-US/Add-ons/Bootstrapped_extensions">restartless add-ons</a>, because when a new version of the add-on is installed, the old frame scripts will not be unloaded. The workaround here is to randomize the frame script's URL, for example by appending <code>"?" + Math.random()</code> to it.</p>

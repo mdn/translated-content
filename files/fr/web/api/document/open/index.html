@@ -1,0 +1,118 @@
+---
+title: document.open
+slug: Web/API/Document/open
+tags:
+  - API
+  - DOM
+  - Méthodes
+  - Reference
+translation_of: Web/API/Document/open
+---
+<div>{{APIRef("DOM")}}</div>
+
+<div> </div>
+
+<p>La méthode <strong><code>document.open()</code></strong> ouvre un document pour <a href="https://developer.mozilla.org/fr/docs/Web/API/Document/write">l'écriture</a>.</p>
+
+<h2 id="Syntaxe" name="Syntaxe">Syntaxe</h2>
+
+<pre class="eval">document.open();
+</pre>
+
+<h2 id="Exemple" name="Exemple">Exemple</h2>
+
+<pre>// Dans cet exemple, le contenu du document est
+// écrasé au cours de la réinitialisation avec open()
+document.write("&lt;html&gt;&lt;p&gt;supprimez-moi&lt;/p&gt;&lt;/html&gt;");
+document.open();
+// Le document est vide.
+</pre>
+
+<h2 id="Notes" name="Notes">Notes</h2>
+
+<p>Si un document existe dans la cible, cette méthode le supprime (voir l'exemple ci-dessus).</p>
+
+<p>Par ailleurs, un appel automatique à <code>document.open()</code> est réalisé lorsque <a href="https://developer.mozilla.org/fr/docs/Web/API/Document/write">document.write()</a> est appelé après que la page ait été chargée, bien que ce ne soit pas défini dans la spécification du W3C. <span class="comment">documenter les paramètres à document.open ne figurant pas dans la spécification</span></p>
+
+<p>Cette méthode ne doit pas être confondue avec <a href="https://developer.mozilla.org/fr/docs/Web/API/Window/open">window.open()</a>. <code>document.open</code> permet d'écrire par dessus le document courant ou d'y ajouter du contenu, alors que <code>window.open</code> fournit une manière d'ouvrir une nouvelle fenêtre laissant le document courant intact. Comme <code>window</code> est l'objet, si on appelle juste <code>open(...)</code>, il sera traité comme un appel à <code>window.open(...)</code>. Le document ouvert peut être fermé à l'aide de <a href="https://developer.mozilla.org/fr/docs/Web/API/Document/close">document.close()</a>.</p>
+
+<p>Voir <a href="https://developer.mozilla.org/fr/docs/Mozilla/Gecko/Script_security#Security_checks" title="en/Security check basics">Security check basics</a>  pour plus d'informations sur les principaux.</p>
+
+<p>Si vous ne voulez pas créer une entrée d'historique, remplacez <code>open()</code> par <code>open("text/html", "replace")</code>.</p>
+
+<h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Spécifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Spécification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("DOM2 HTML", "html.html#ID-72161170", "document.open()")}}</td>
+   <td>{{Spec2("DOM2 HTML")}}</td>
+   <td>Définition initiale.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Fonctionnalité</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Fonctionnalité</th>
+   <th>Android</th>
+   <th>Edge</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Notes_propres_à_Gecko">Notes propres à Gecko</h2>
+
+<p><span id="result_box" lang="fr"><span>À partir de Gecko 1.9, cette méthode est soumise à la même règle d'origine que les autres propriétés et ne fonctionne pas si cela change l'origine du document.</span></span></p>
+
+<p><span id="result_box" lang="fr"><span>À partir de Gecko 1.9.2, <code>document.open()</code> utilise le <a href="https://developer.mozilla.org/fr/docs/Mozilla/Gecko/Script_security#Security_checks">principal</a> du document dont il utilise l'URI, au lieu de récupérer le principal hors de la pile.</span> <span>Par conséquent, vous ne pouvez plus appeler {{domxref ("document.write ()")}} dans un document non approuvé à partir de chrome, même en utilisant <code><a href="https://developer.mozilla.org/fr/docs/wrappedJSObject">wrappedJSObject</a></code>.</span></span></p>

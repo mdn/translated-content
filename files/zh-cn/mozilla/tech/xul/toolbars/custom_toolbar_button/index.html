@@ -1,0 +1,332 @@
+---
+title: 自定义工具栏按钮
+slug: Mozilla/Tech/XUL/Toolbars/Custom_toolbar_button
+translation_of: Archive/Mozilla/XUL/Toolbars/Custom_toolbar_button
+---
+<p>此教程教您一步步为 Firefox, SeaMonkey 2.0, Thunderbird 或 Sunbird 制作工具栏按钮 (对于 SeaMonkey 1.x，请查看 <a href="/en/XUL/Toolbars/Custom_toolbar_button/SeaMonkey" title="en/Custom_Toolbar_Button/SeaMonkey">Custom Toolbar Button:SeaMonkey</a>.)</p>
+<p>你不需要任何技巧和工具，所以需要的信息全部在本页。</p>
+<p> </p>
+<h3 id="Introduction" name="Introduction">介绍</h3>
+<p>本页所述技术不包括任何黑科技。你可以自己定制属于自己的扩展。</p>
+<p>适用示例上的代码可以制作出很多很有用的按钮，如果你懂得 JS 编程，你可以自己编代码，实现更多其他功能。</p>
+<p>如果你需要创建一个具某项功能的按钮，那么你来对地方了</p>
+<p>在此页你也能学到扩展程序的基础知识，有利于将来写更复杂的插件。注意，扩展程序非常简单，你或许得查看其他教程，那么-主 <a href="/en/Extensions" title="en/Extensions">扩展</a> 页就是您该去的地方。另外， <a href="/en/XUL/Toolbars/Creating_toolbar_buttons" title="en/Creating_toolbar_buttons">创建工具栏按钮</a> 这篇文章（译注：建议先看本文再看这个，那里面有几句没说清楚该放哪去）和 <a href="/en/Building_an_Extension" title="en/Building_an_Extension">创建一个扩展</a> 更好的展示了创建过程。</p>
+<h4 id="Supported_applications" name="Supported_applications">支持的程序</h4>
+<p>本文中步骤适用于下列 Mozilla 应用：</p>
+<ul>
+ <li>Firefox 1.5 以后</li>
+ <li>SeaMonkey 2.0 以后</li>
+ <li>Thunderbird 1.5 以后</li>
+ <li>Sunbird 0.3 以后</li>
+</ul>
+<p>提前发行版一般都支持 (alphas, betas 和 release candidates) 。</p>
+<p><strong>译注：本文的例子适用于很多Mozilla 开发的应用程序，原文用Application 代表这些程序，所以我按照原文翻译成了应用/程序，所以如果将来遇到应用/程序等字样，就是指Firefox 等。</strong></p>
+<div class="note">
+ <p><strong>Note: </strong> There is a similar tutorial for SeaMonkey 1.x on the page: <a href="/en/XUL/Toolbars/Custom_toolbar_button/SeaMonkey" title="en/Custom_Toolbar_Button/SeaMonkey">Custom Toolbar Button:SeaMonkey</a></p>
+ <p>Earlier versions and other Mozilla applications also support extensions, but some parts of this tutorial are not appropriate for them.</p>
+</div>
+<h4 id="Required_tools" name="Required_tools">所需工具</h4>
+<p>需要两个工具，系统一般都默认提供了：</p>
+<ul>
+ <li>能操作文件，文件夹的环境</li>
+ <li>纯文本编辑器</li>
+</ul>
+<h5 id="Character_encoding" name="Character_encoding">字符编码</h5>
+<p>有些文本编辑器有调整字符编码的选项。</p>
+<p>如果你使用拉丁 (ASCII) 字符，那就将你的文本编辑器设为除 Unicode 外的任意编码</p>
+<p>如果你的语言包含非拉丁字符，那保存文件时请选择 UTF-8 编码。</p>
+<p>要想测试编辑器，新建一个文件<code>test.txt</code>。在文件中输入属于您语言的文字，然后保存。</p>
+<p>使用火狐打开此文件，(例如，直接将文件拖动到火狐上，或在菜单中选择 文件 – 打开文件)。</p>
+<p>在火狐的菜单栏中，选择 查看– 字符编码 – Unicode (UTF-8)。然后看在此设置下，文本中的文字是否能正常显示。</p>
+<p>如果你的文本编辑器不支持 UTF-8，自己上网搜索装一个。</p>
+<h4 id="Optional_tools" name="Optional_tools">可选工具</h4>
+<p>可以使用任意图像编辑器编辑图片。</p>
+<p>可以使用 jar 工具或 zip 工具将此按钮项目压缩成跨平台的安装文件 (XPI)，方便别人安装使用。</p>
+<h3 id="Making_a_button" name="Making_a_button">制作一个按钮</h3>
+<p>按照下面10步完成</p>
+<p>完成所有步骤后，文件夹结构应该如下图所示：</p>
+<dl>
+ <dd>
+  <img alt="Directory and file structure" class="internal" src="/@api/deki/files/633/=Custom-button-structure.png"></dd>
+</dl>
+<p> profile 和 <code>extensions</code> 文件夹已存在，需要添加图中其他的文件和文件夹(当然此目录下可能还会有其他文件，只是没显示.)</p>
+<div style="margin-left: 4ex;">
+ <div style="margin-left: -4ex; width: 4ex; float: left;">
+  1.</div>
+ 前往应用程序的配置文件夹，然后找到<code>extensions</code> 文件夹。
+ <p><strong>注意: </strong> 至于如何找到配置文件夹，请查看：<a class="external" href="http://kb.mozillazine.org/Profile_folder">配置文件夹</a></p>
+ <p><em>说明: </em> 配置文件夹包含用户指定的设置，和主程序分开存放。所以程序重装或升级之后，这些信息不受影响。</p>
+ <div style="margin-left: -4ex; width: 4ex; float: left;">
+  2.</div>
+ 在 <code>extensions</code> 文件夹中，创建一个文件夹，名称如下：
+ <p>建议直接复制粘贴，以免出错</p>
+ <dl>
+  <dd>
+   <code><a class="link-mailto" href="mailto:custom-toolbar-button@example.com" rel="freelink">custom-toolbar-button@example.com</a></code></dd>
+ </dl>
+ <p>按照后面的步骤，创建两个文件和一个文件夹。</p>
+ <p><em>说明: </em> 此文件夹名称是用于区分不同扩展程序的唯一标识符。在稍后的部分会有详细的标识符。</p>
+ <div style="margin-left: -4ex; width: 4ex; float: left;">
+  3.</div>
+ 创建一个文本文档，名称为 <code>install.rdf</code>.
+ <p>完整复制下面内容，粘贴到文档中：</p>
+ <pre>&lt;?xml version="1.0"?&gt;
+
+&lt;RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#"&gt;
+
+  &lt;Description
+    about="urn:mozilla:install-manifest"
+
+    em:name="Custom Button"
+    em:description="My custom toolbar button"
+    em:creator="My name"
+
+    em:id="custom-toolbar-button@example.com"
+    em:version="1.0"
+    em:homepageURL="http://developer.mozilla.org/en/docs/Custom_Toolbar_Button"
+
+    em:iconURL="chrome://custombutton/content/icon.png" &gt;
+
+    &lt;em:targetApplication&gt;&lt;!-- Firefox --&gt;
+      &lt;Description
+        em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
+        em:minVersion="1.4"
+        em:maxVersion="99" /&gt;
+    &lt;/em:targetApplication&gt;
+
+    &lt;em:targetApplication&gt;&lt;!-- Thunderbird --&gt;
+      &lt;Description
+        em:id="{3550f703-e582-4d05-9a08-453d09bdfdc6}"
+        em:minVersion="1.4"
+        em:maxVersion="99" /&gt;
+    &lt;/em:targetApplication&gt;
+
+    &lt;em:targetApplication&gt;&lt;!-- Sunbird --&gt;
+      &lt;Description
+        em:id="{718e30fb-e89b-41dd-9da7-e25a45638b28}"
+        em:minVersion="0.2.9"
+        em:maxVersion="99" /&gt;
+    &lt;/em:targetApplication&gt;
+
+    &lt;em:file&gt;
+      &lt;Description
+        about="urn:mozilla:extension:custombutton"
+        em:package="content/custombutton/" /&gt;
+    &lt;/em:file&gt;
+
+  &lt;/Description&gt;
+
+&lt;/RDF&gt;
+</pre>
+ <p>可选：改变 name, description 和 creator。改变这三行中双引号间的文字即可</p>
+ <p>根据需求，移除不需要的软件说明部分（译注：假如你只想给firefox创建插件，那么就可以删掉别的部分）。</p>
+ <p>保存文件</p>
+ <p><em>说明: </em> 此文件包含应用程序扩展管理器需要的信息。target applications这一大段表示能运行扩展程序的应用以及版本号。 最后一段描述此插件会添加内容到应用程序。</p>
+ <div style="margin-left: -4ex; width: 4ex; float: left;">
+  4.</div>
+ 创建一个文本文档，名称为 <code>chrome.manifest</code>.
+ <p>完整复制下面内容，粘贴到文档中：</p>
+ <pre>content custombutton chrome/
+style chrome://global/content/customizeToolbar.xul chrome://custombutton/content/button.css
+
+# Firefox
+overlay	chrome://browser/content/browser.xul chrome://custombutton/content/button.xul
+
+# Thunderbird mail
+overlay	chrome://messenger/content/messenger.xul chrome://custombutton/content/button.xul
+
+# Thunderbird compose
+overlay	chrome://messenger/content/messengercompose/messengercompose.xul chrome://custombutton/content/button.xul
+
+# Thunderbird address book
+overlay	chrome://messenger/content/addressbook/addressbook.xul chrome://custombutton/content/button.xul
+
+# Sunbird
+overlay	chrome://calendar/content/calendar.xul chrome://custombutton/content/button.xul
+</pre>
+ <p>移除不需要的部分（同上段说明）。</p>
+ <p>保存文件</p>
+ <p><em>说明: </em> 此文件定义扩展的内容结构。先给工具栏窗口应用一个样式表。然后给每个工具栏都指定一个 overlay 。</p>
+ <div style="margin-left: -4ex; width: 4ex; float: left;">
+  5.</div>
+ 创建文件夹： <code>chrome</code>.
+ <p>按照下放说明，创建 5 个文件。</p>
+ <p><em>说明: </em>  <code>chrome</code> 文件夹包含扩展的可执行部分，即扩展是干什的。</p>
+ <div style="margin-left: -4ex; width: 4ex; float: left;">
+  6.</div>
+ 创建一个文本文档，名称为 <code>button.xul</code>.
+ <p>完整复制下面内容，粘贴到文档中：</p>
+ <pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-stylesheet type="text/css"
+  href="chrome://custombutton/content/button.css"?&gt;
+
+&lt;!DOCTYPE overlay &gt;
+&lt;overlay id="custombutton-overlay"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;script type="application/javascript"
+  src="chrome://custombutton/content/button.js"/&gt;
+
+&lt;!-- Firefox --&gt;
+&lt;toolbarpalette id="BrowserToolbarPalette"&gt;
+  &lt;toolbarbutton id="custom-button-1"/&gt;
+  &lt;/toolbarpalette&gt;
+
+&lt;!-- Thunderbird mail --&gt;
+&lt;toolbarpalette id="MailToolbarPalette"&gt;
+  &lt;toolbarbutton id="custom-button-1"/&gt;
+  &lt;/toolbarpalette&gt;
+
+&lt;!-- Thunderbird compose --&gt;
+&lt;toolbarpalette id="MsgComposeToolbarPalette"&gt;
+  &lt;toolbarbutton id="custom-button-1"/&gt;
+  &lt;/toolbarpalette&gt;
+
+&lt;!-- Thunderbird address book --&gt;
+&lt;toolbarpalette id="AddressBookToolbarPalette"&gt;
+  &lt;toolbarbutton id="custom-button-1"/&gt;
+  &lt;/toolbarpalette&gt;
+
+&lt;!-- Sunbird --&gt;
+&lt;toolbarpalette id="calendarToolbarPalette"&gt;
+  &lt;toolbarbutton id="custom-button-1"/&gt;
+  &lt;/toolbarpalette&gt;
+
+
+&lt;!-- button details --&gt;
+&lt;toolbarbutton id="custom-button-1"
+  label="Custom"
+  tooltiptext="My custom toolbar button"
+  oncommand="CustomButton[1]()"
+  class="toolbarbutton-1 chromeclass-toolbar-additional custombutton"
+  /&gt;
+
+&lt;/overlay&gt;
+</pre>
+ <p>可选：你可以自定义最后一块中的 label 和 tooltiptext 。更改双括号间的内容即可。</p>
+ <p>可选地，移除不需要的部分。。</p>
+ <p>保存文件。</p>
+ <p><em>说明: </em> 此 <a href="/en/XUL" title="en/XUL">XUL</a> 文件会添加一个按钮到应用程序的 toolbar customization palette。此文件还链接了CSS样式表 和 JavaScript 脚本。最后一部分描述按钮的信息（译注；就是按钮名+鼠标放上面会提示什么文字）</p>
+ <div style="margin-left: -4ex; width: 4ex; float: left;">
+  7.</div>
+ 创建一个文本文档，名称为： <code>button.css</code>.
+ <p>完整复制下面内容，粘贴到文档中：</p>
+ <pre>#custom-button-1,
+#wrapper-custom-button-1
+  {list-style-image: url("chrome://custombutton/content/button-1.png");}
+
+/* common style for all custom buttons */
+.custombutton
+  {-moz-image-region: rect( 0px 24px 24px  0px);}
+
+.custombutton:hover
+  {-moz-image-region: rect(24px 24px 48px  0px);}
+
+[iconsize="small"] .custombutton
+  {-moz-image-region: rect( 0px 40px 16px 24px);}
+
+[iconsize="small"] .custombutton:hover
+  {-moz-image-region: rect(24px 40px 40px 24px);}
+</pre>
+ <p>没有什么能优化的，保存文件即可</p>
+ <p><em>说明: </em> 此 <a href="/en/CSS" title="en/CSS">CSS</a> 样式表定义按钮如何显示。它链接到了按钮图片，指定了图片四个部分的尺寸。（译注；这里你就可以看文章开头提到的文章了，比这里举的例子更好实现，你只需在css中指定一大一小两个图片即可）</p>
+ <div style="margin-left: -4ex; width: 4ex; float: left;">
+  8.</div>
+ 创建一个文本文档，名称为： <code>button.js</code>.
+ <p>完整复制下面内容，粘贴到文档中：</p>
+ <div style="width: 40em;">
+  <pre>CustomButton = {
+
+1: function () {
+  alert("Just testing")
+  },
+
+}
+</pre>
+ </div>
+ <p>没有什么能优化的，保存文件即可</p>
+ <p>接下来一部分的教程包含几个实例代码，你可以用他们来实现有用的功能。</p>
+ <p><em>说明: </em> 此文件指定当按钮按下时执行什么操作。它使用  <a href="/en/JavaScript" title="en/JavaScript">JavaScript</a> 语言，加应用自己提供的一些特性。</p>
+ <div style="margin-left: -4ex; width: 4ex; float: left;">
+  9.</div>
+ 下载按钮图片。
+ <p>右击图片，另存为，保存到 <code>chrome</code> 目录下。请确保文件名为： <code>button-1.png</code></p>
+ <div style="margin: 0 0 1em 4ex; border: 6px solid #ddd; float: left;">
+  <img alt="button-1.png" class="internal" src="/@api/deki/files/576/=Button-1.png"></div>
+ <p style=""><em>说明: </em> 此图片包含四个部分。左上方是常用的图标。左下是深色的，按下按钮后显示，右侧的是小图标，工具栏设置成使用小图标时需要用。</p>
+ <div style="margin-left: -4ex; width: 4ex; float: left;">
+  10.</div>
+ 下载扩展的图片。
+ <p>右击图片，另存为，保存到 <code>chrome</code> 目录下。请确保文件名为：<code>icon.png</code></p>
+ <div style="margin: 0 0 1em 4ex; border: 6px solid #ddd; float: left;">
+  <img alt="icon.png" class="internal" src="/@api/deki/files/717/=Icon.png"></div>
+ <p style=""><em>说明: </em> 此图片显示在应用扩展管理窗口中。</p>
+</div>
+<h4 id="Testing_your_new_button" name="Testing_your_new_button">测试您的按钮</h4>
+<p>重启应用程序（firefox）</p>
+<p>右击工具栏，选中定制，或者在菜单中，依次选择：查看 – 工具栏 – 定制</p>
+<p>将刚才的新按钮拖动到工具栏，点击“退出定制”保存设置。</p>
+<p>点击按钮，应该能看到弹出信息了。</p>
+<h3 id="Further_development" name="Further_development">进一步开发</h3>
+<p>此部分描述如何进一步开发按钮。</p>
+<h4 id="Uninstalling_the_button" name="Uninstalling_the_button">卸载按钮</h4>
+<p>如果想卸载按钮，删掉步骤 2 创建的文件夹即可。</p>
+<p>或者，使用程序自己的 扩展管理窗口 正常卸载应用，在下次重启时应用就会删掉此文件夹。</p>
+<p>重启程序</p>
+<h4 id="Troubleshooting" name="Troubleshooting">排错</h4>
+<p>如果按钮没在工具栏中显示，或是其他问题，可以按照下列步骤排查。</p>
+<p>如果有必要，卸载按钮，重头开始，这次不要修改任何内容</p>
+<p>在能成功让按钮工作后，小心的修改文件。</p>
+<p>要想看到修改后的结果，需要重启应用。</p>
+<h5 id="Advanced_troubleshooting" name="Advanced_troubleshooting">高级排错</h5>
+<p>如果你有一定的技术只是，那么你可以使用应用程序的 JavaScript console 查看错误信息。但是不一定都有用，而且易混淆，或是看到了其他程序的执行结果。</p>
+<p>在 工具栏 - 开发者（web developer） - Browser Console 中开启 JS 选项。或使用快捷键"Ctrl + Shift + J"</p>
+<p> JavaScript console 里会显示 JavaScript, XUL 或 CSS 文件的信息。</p>
+<div class="note">
+ <strong>Note</strong>: The preference setting <a class="external" href="http://kb.mozillazine.org/Javascript.options.strict">javascript.options.strict</a> imposes restrictions that are not appropriate for the simple scripts in this tutorial. If you choose to use this setting, either ignore the warnings that it generates, or change the coding style to keep it quiet.</div>
+<h4 id="Programming_the_button" name="Programming_the_button">为按钮编程</h4>
+<p>要想改变按钮功能，去修改步骤 8 里的 <code>button.js</code> 。</p>
+<p>移除行: <code>alert("Just testing")</code> ，替换成其他 js 语句。</p>
+<p>可以在 <a href="/en/XUL/Toolbars/Custom_toolbar_button/Code_Samples" title="en/Custom_Toolbar_Button/Code_Samples">Code Samples</a> 查看很多代码示例，不用知道编程知识就能修改并使用。</p>
+<p>需要重启才能生效变更。</p>
+<h4 id="Adding_more_buttons" name="Adding_more_buttons">添加更多的按钮</h4>
+<p>要想添加更多的按钮，请编辑 <code>button.xul 文件，对于每个应用，复制指定</code> <code>custom-button-1 的那行</code>，然后将新行指定成 <code>custom-button-2</code>。</p>
+<p>重复最后一部分。在 <code>id</code> 和 <code>oncommand</code> 参数中，将 1 改为 2。然后改变 <code>label</code> 和 <code>tooltiptext</code> 。<strong>不要</strong>改变 <code>class</code> 参数。</p>
+<p>然后编辑 <code>button.css</code>。复制前三行，改变新行成为 <code>button-2</code>.</p>
+<p>编辑 <code>button.js</code> 为新按钮添加 js 语句。请确保<strong>添加的语句在最后一个花括号的前面</strong>，例如，这么添加命令：</p>
+<pre class="eval">2: function () {
+  alert("Just testing again")
+  },
+</pre>
+<p>为新按钮创建图标，命名为 <code>button-2.png</code>。下面提供的文件有40 像素宽，48像素高，256色，透明背景，PNG格式，其他格式也能工作。</p>
+<p>你可以下载使用下列图片：</p>
+<div style="margin: 0 0 1em 4ex; border: 6px solid #ddd; float: left;">
+ <img alt="button-2.png" class="internal" src="/@api/deki/files/580/=Button-2.png"></div>
+<div style="margin: 0 0 1em 4ex; border: 6px solid #ddd; float: left;">
+ <img alt="button-3.png" class="internal" src="/@api/deki/files/583/=Button-3.png"></div>
+<div style="margin: 0 0 1em 4ex; border: 6px solid #ddd; float: left;">
+ <img alt="button-4.png" class="internal" src="/@api/deki/files/586/=Button-4.png"></div>
+<div style="margin: 0 0 1em 4ex; border: 6px solid #ddd; float: left;">
+ <img alt="button-5.png" class="internal" src="/@api/deki/files/589/=Button-5.png"></div>
+<p style="">重启程序，并将新按钮添加到工具栏。</p>
+<p>你可以重复这些步骤，创建更多按钮</p>
+<h3 id="Distributing_your_button_to_other_users" name="Distributing_your_button_to_other_users">将您的按钮分发给其他用户</h3>
+<p>如果你想将按钮程序分发给他人，那就必须做些修改以和其他扩展程序做区分。</p>
+<p>创建一个扩展 ID，格式为：</p>
+<dl>
+ <dd>
+  <code><em>something</em>@<em>domain-name</em></code></dd>
+</dl>
+<p>必须包含at符号 (<code>@</code>)，格式和邮箱地址挺像，但不必是真实邮箱地址。@符号的前后，只能使用字符 ： A-Z， a-z， 0-9， 英文句号( . )， 连字符（-）和下划线（_）。如果您没有域名（domain-name），可以自己编个，如果你想让这域名看着不像真正的域名，那就在结尾加个 <code>.invalid</code> 。</p>
+<p>使用你的 扩展ID （extension ID）重命名文件夹，然后在 <code>install.rdf</code> 文件中指定相同的 ID。</p>
+<p><code>在 install.rdf</code> 文件中，移除您扩展不能正常工作的应用项。例如，如果您的按钮只能在 Thunderbird 上运行，就删除 Firefox 和 Sunbird 的部分。同样道理，修改 <code>button.xul</code> 和 <code>chrome.manifest</code>.</p>
+<p>改变所有文件中的 "custombutton", "custom-button" 和 "CustomButton" 字样。</p>
+<p>可以自己更改的：</p>
+<ul>
+ <li>按钮的图片</li>
+ <li>扩展的图片： <code>icon.png</code></li>
+ <li> <code>install.rdf</code> 中的版本号和主页</li>
+</ul>
+<p>使用 jar 工具或 zip 工具打包整个文件夹的内容命名为 <code>.xpi</code> 文件。方便用于其他程序。</p>
+<p>用户可在应用程序的扩展管理窗口中安装此 XPI 文件。</p>

@@ -1,0 +1,130 @@
+---
+title: View Controller
+slug: Places/View_Controller
+tags:
+  - Developing Mozilla
+  - Extensions
+  - Places
+translation_of: Mozilla/Tech/Places/View_Controller
+---
+<p></p><div class="blockIndicator draft">
+    <p><strong>草案</strong><br>
+    このページは完成していません。</p>
+
+</div><p></p>
+
+<p>コントローラはPlaces <a class="external" href="http://ja.wikipedia.org/wiki/Model_View_Controller" rel="external nofollow" title="http://ja.wikipedia.org/wiki/Model_View_Controller">model-view-controller</a> 設計におけるコンポーネントの1つです。コントローラは有効化、無効化を受け取り、<a href="/ja/Displaying_Places_information_using_views" title="ja/Displaying_Places_information_using_views">Places view</a>の状態を元にコマンドを実行します。</p>
+
+<p>Placesは組み込み済みのコントローラを提供していますが、異なった目的のコントローラはアプリケーション中で使われており、Placesに特有のものではありません。一般的なコントローラの情報については、XULチュートリアル内の<a class="internal" href="/XUL_Tutorial/Commands" rel="internal">Commands</a>および<a href="/ja/XUL_Tutorial/Updating_Commands" rel="internal">Updating Commands</a>のページを参照してください。</p>
+
+<h2 id="The_built-in_controller">The built-in controller</h2>
+
+<p>Placesでは<code>PlacesController</code>という組み込みコントローラが提供されており、<code><a href="https://dxr.mozilla.org/mozilla-central/source/browser/components/places/content/controller.js" rel="custom">browser/components/places/content/controller.js</a></code>にてプロトタイプが定義されています。<a class="internal" href="/ja/Displaying_Places_information_using_views" title="ja/Displaying Places information using views">組み込みPlacesビュー</a>では<code>PlacesController</code>自動的にが使われるので、組み込みビューを使用する場合、コントローラを新たに書き起こす必要はありません。しかしながら、XUL文書内に<code>PlacesController</code>のソースを含める必要があります。ソースを含めるのには、<code><a href="https://dxr.mozilla.org/mozilla-central/source/browser/components/places/content/placesOverlay.xul" rel="custom">browser/components/places/content/placesOverlay.xul</a></code>をオーバーレイするのが推奨されます。このファイルは、組み込みPlacesコンテクストメニューとXUL <code>commandset</code>を含みます。詳しくは、<a class="internal" href="/ja/Displaying_Places_information_using_views#Instantiating" title="ja/Displaying Places information using views#Instantiating">Displaying Places information using views</a>を参照してください。</p>
+
+<p><code>PlacesController</code>でサポートされている全てのコマンドをあなたのカスタムビューがサポートしており、また、<code>PlacesController</code>のコマンドしかサポートしていないのであれば、<code>PlacesController</code>をそのまま使うこともできます。もしあなたのビューが、これらのコマンドのサブセットだけをサポートしているのならば、<code>PlacesController</code>の長所のみを使用できるかもしれません。後述の<a href="#Creating_custom_controllers">Creating custom controllers</a>を参照してください。</p>
+
+<h2 id="Places_commands">Places commands</h2>
+
+<p><code>PlacesController</code> がサポートしているコマンド及びその詳細が下記に一覧されています。</p>
+
+<p>コマンドの多くが、コントローラのビューにおいて現在選択されているノードを操作します。ただし注記しておきます。ビューの<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPlacesView" title="">nsIPlacesView</a></code>インターフェイスの<code>selectedNode</code> プロパティを読み取ることによって選択されたノードは発見されます。<code>selectedNode</code> プロパティではビューはひとつのノードしか選択しないと仮定されているので、<code>selectedNode</code> プロパティに依存するコマンドもまた、ビューがひとつのノードしか選択していないと仮定しており、ビューが複数のノードを選択している場合にはコマンドは動作しません。</p>
+
+<p>いくつかのコマンドはコントローラのビューの結果に新規ノードを追加します。結果としてノードが挿入される位置は、ビューの<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPlacesView" title="">nsIPlacesView</a></code>インターフェイスの<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPlacesView" title="">nsIPlacesView</a></code>プロパティで定義された位置となります。</p>
+
+<dl>
+ <dt>placesCmd_deleteDataHost </dt>
+ <dd><code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIPrivateBrowsingService#removeDataFromDomain()">nsIPrivateBrowsingService.removeDataFromDomain()</a></code>.を呼び出すことによって、選択されたノードのドメインについての全てのデータを削除します。</dd>
+ <dt>placesCmd_moveBookmarks</dt>
+ <dd>選択されたノードを別のフォルダに移動させるのに使われるUIが表示されます。先述の1つのノードの選択に関する注記は適用されません。このコマンドはビューの<span class="lang lang-en"><code><a href="/ja/nsIPlacesView#getSelectionNodes%28%29" rel="internal">nsIPlacesView.getSelectionNodes()</a>を呼び出します。</code></span></dd>
+ <dt>placesCmd_new:bookmark</dt>
+ <dd><code><a class="internal" href="/ja/Places_utilities_for_JavaScript#showAddBookmarkUI.28.29" title="ja/Places utilities for JavaScript#showAddBookmarkUI.28.29">PlacesUIUtils.showAddBookmarkUI()</a>を呼び出すことによって、新規ブックマークを追加する際に使われるUIを表示します。</code>新規ブックマークはビューの挿入位置に挿入されます。もし挿入位置が存在しない場合は、<code>NS_ERROR_NOT_AVAILABLEが投げられます。</code></dd>
+ <dt>placesCmd_new:folder</dt>
+ <dd><code><a class="internal" href="/ja/Places_utilities_for_JavaScript#showAddFolderUI()" title="ja/Places utilities for JavaScript#showAddFolderUI()">PlacesUIUtils.showAddFolderUI()</a></code><code>を呼び出すことによって、新規フォルダを追加する際に使われるUIを表示します。</code>新規フォルダはビューの挿入位置に挿入されます。もし挿入位置が存在しない場合は、<code>NS_ERROR_NOT_AVAILABLEが投げられます。</code></dd>
+ <dt>placesCmd_new:livemark</dt>
+ <dd><code><a class="internal" href="/ja/Places_utilities_for_JavaScript#showAddLivemarkUI()" title="ja/Places utilities for JavaScript#showAddLivemarkUI()">PlacesUIUtils.showAddLivemarkUI()</a></code>.<code>を呼び出すことによって、新規ライブブックマークを追加する際に使われるUIを表示します。</code>新規<code>ライブブックマーク</code>はビューの挿入位置に挿入されま す。もし挿入位置が存在しない場合は、<code>NS_ERROR_NOT_AVAILABLEが投げられます。</code></dd>
+ <dt>placesCmd_new:separator</dt>
+ <dd>ビューの現在の挿入位置に新規セパレータが追加されます。もし挿入位置が存在しない場合は、<code>NS_ERROR_NOT_AVAILABLEが投げられます。</code></dd>
+ <dt>placesCmd_open</dt>
+ <dd><a class="internal" href="/ja/Places_utilities_for_JavaScript#openNodeIn()" title="ja/Places utilities for JavaScript#openNodeIn()">PlacesUIUtils.openNodeIn()</a>を呼び出し、現在のタブに、ビューで選択しているノードを開きます。</dd>
+ <dt>placesCmd_open:tab</dt>
+ <dd><a class="internal" href="/ja/Places_utilities_for_JavaScript#openNodeIn()" title="ja/Places utilities for JavaScript#openNodeIn()">PlacesUIUtils.openNodeIn()</a>を呼び出し、新規タブに、ビューで選択しているノードを開きます。</dd>
+ <dt>placesCmd_open:window</dt>
+ <dd><a class="internal" href="/ja/Places_utilities_for_JavaScript#openNodeIn()" title="ja/Places utilities for JavaScript#openNodeIn()">PlacesUIUtils.openNodeIn()</a>を呼び出し、新規ウィンドウに、ビューで選択しているノードを開きます。</dd>
+ <dt>placesCmd_reload</dt>
+ <dd><code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsILivemarkService#reloadLivemarkFolder()">nsILivemarkService.reloadLivemarkFolder()</a></code>を呼び出し、ビューで選択されているノードがライブブックマークであれば、再読み込みをします。</dd>
+ <dt>placesCmd_reloadMicrosummary</dt>
+ <dd><code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIMicrosummaryService#refreshMicrosummary()">nsIMicrosummaryService.refreshMicrosummary()</a></code>を呼び出し、ビューで選択されているノードがmicrosummaryであれば、再読み込みをします。</dd>
+ <dt>placesCmd_show:info</dt>
+ <dd><code><a class="internal" href="/ja/Places_utilities_for_JavaScript#showItemProperties()" title="ja/Places utilities for JavaScript#showItemProperties()">PlacesUIUtils.showItemProperties()</a>を呼び出し、ビューで選択されているノードの</code><code>プロパティ編集UIを表示します。</code></dd>
+ <dt>placesCmd_sortBy:name</dt>
+ <dd><code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIPlacesTransactionsService#sortFolderByName()">nsIPlacesTransactionsService.sortFolderByName()</a></code>を呼び出し、選択されているノードがフォルダであれば、フォルダ内のソートを行います。</dd>
+</dl>
+
+<p><code>PlacesController</code> はまた、標準の編集コマンドをサポートしています。</p>
+
+<dl>
+ <dt>cmd_copy</dt>
+ <dd>ビューで選択されているノードをクリップボードにコピーします。先述の1つのノードの選択に関する注記は適用されません。このコマンドはビューの<code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIPlacesView#getSelectionNodes()">nsIPlacesView.getSelectionNodes()</a></code><span class="lang lang-en"><code>を 呼び出します。</code></span></dd>
+ <dt>cmd_cut</dt>
+ <dd>ビューで選択されているノードをクリップボードにコピーし、ノードを削除します。このコマンドの実装は、コピーに続けて削除を行う単純なものです。</dd>
+ <dt>cmd_delete</dt>
+ <dd>ビューで選択されているノードを削除します。 このコマンドはビューの<code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIPlacesView#getRemovableSelectionNodes()">nsIPlacesView.getRemovableSelectionNodes()</a></code><span class="lang lang-en"><code>を呼び出します。</code></span></dd>
+ <dt>cmd_paste</dt>
+ <dd>ビューの結果の現在の挿入位置にクリップボードのノードを追加します。もし挿入位置が存在しない場合は、<code>NS_ERROR_NOT_AVAILABLEが投げられます。</code></dd>
+ <dt>cmd_redo</dt>
+ <dd><code><a class="internal" href="/ja/Places_utilities_for_JavaScript" title="ja/Places utilities for JavaScript">PlacesUIUtils</a></code>で保持された<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPlacesTransactionsService" title="">nsIPlacesTransactionsService</a></code>インスタンスの<code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsITransactionManager#redoTransaction()">nsITransactionManager.redoTransaction()</a></code>を呼び出して、最後のPlacesトランザクションをredoします。</dd>
+ <dt>cmd_selectAll</dt>
+ <dd>ビューの<code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIPlacesView#selectAll()">nsIPlacesView.selectAll()</a></code>を呼び出し、ビュー中の全てのノードを選択します。</dd>
+ <dt>cmd_undo</dt>
+ <dd><code><a class="internal" href="/ja/Places_utilities_for_JavaScript" title="ja/Places utilities for JavaScript">PlacesUIUtils</a></code>で保持された<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPlacesTransactionsService" title="">nsIPlacesTransactionsService</a></code>インスタンスの<code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsITransactionManager#undoTransaction()">nsITransactionManager.undoTransaction()</a></code>を呼び出して、最後のPlacesトランザクションをundoします。</dd>
+</dl>
+
+<h2 id="Creating_custom_controllers">Creating custom controllers</h2>
+
+<p><code>PlacesController</code> がサポートしていないコマンドを使いたい場合、または<code>PlacesController</code> ではない方法でコマンドを制御したい場合、あなた自身によりコントローラを記述する必要があります。さもなくば、カスタムビューも記述している場合は、カスタムビューを使用しているとしても、<code>PlacesController</code>をそのまま使用することとなります。コントローラに慣れていない場合は、XULチュートリアル内の <a class="internal" href="/ja/XUL_Tutorial/Commands" title="ja/XUL Tutorial/Commands">Commands</a> 及び <a href="/ja/XUL_Tutorial/Updating_Commands" title="ja/XUL_Tutorial/Updating_Commands">Updating Commands</a>を参照してください。</p>
+
+<p>組み込みビューのためのコントローラを自ら記述しているのならば、ビューが自動的にPlacesControllerのインスタンスである標準のコントローラを接続するという事実の利点を使うことができます。あなたのカスタムビューは、PlacesControllerがサポートしていようがしていまいが、オーバーライドを望む方法でコマンドをサポートする必要があります。他のすべてのコマンドは、ビュー標準のコントローラによって制御されます。あなたのコントローラが標準のものを上書きするのを保証するため、ビュー内のコントローラの一覧において、標準コントローラを前に持ってくるべきです。（なぜこうするべきか納得できない場合は、前段にリンクがあるチュートリアルを参照してください）<br>
+ ビューは単純に標準コントローラを最後に配置します。そのため、<code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIControllers#insertControllerAt()">nsIControllers.insertControllerAt()</a></code> を呼び出して、indexの値を0として設定してください。</p>
+
+<p>下記の例では、ビューの標準コントローラによってコマンドの制御をオーバーライドされる <code>placesCmd_open</code>と、カスタムコマンドである<code>aCommandOfMyOwn</code>の、2つのコマンドを制御するコントローラを作成しています。他のすべてのコマンドは、ビューの標準コントローラによって制御されます。</p>
+
+<pre class="brush: js">var controller = {
+  doCommand: function (aCmd) {
+    switch (aCmd) {
+    case "placesCmd_open":
+      alert("No.");
+      break;
+    case "aCommandOfMyOwn":
+      alert("Shrimp and white wine.");
+      break;
+    }
+  },
+  isCommandEnabled: function (aCmd) {
+    return true;
+  },
+  onEvent: function (aEventName) {},
+  supportsCommand: function (aCmd) {
+    return ["placesCmd_open", "aCommandOfMyOwn"].indexOf(aCmd) &gt;= 0;
+  }
+};
+var treeView = document.getElementById("myTreeView");
+treeView.controllers.insertControllerAt(0, controller);
+</pre>
+
+<p>あなたのカスタムコントローラがカスタムビュー向けである場合、PlacesControllerによってサポートされるいくつかのコマンドの制御も含まれます。また、幸運なことにPlacesControllerがこれらのコマンドを制御する方法は、PlacesControllerに頼ることであなたの作業量を減らします。2つ方策があります。前段で述べたように、一方はPlacesControllerのインスタンス、もう一方はカスタムコントローラ、の二つを付随させることができます。または、あなたの使い方にあわせて修正されたPlacesControllerのインスタンスか、またはPlacesControllerインスタンスを加太代わりするための完全なカスタムコントローラのどちらか一方のみをコントローラとして使うことです。</p>
+
+<p>下記の例では、<code>PlacesController</code> オブジェクトを作成することで、 <code>placesCmd_open</code>コマンドの制御をオーバーライドし、そして他の全てのコマンドは標準の挙動に頼っています。このケースでは、仮定したビューのコントローラは私たちがここで作成したカスタムコントローラだけであるので、それが優先されるのはあまり重要ではありません。それ故、<code>insertControllerAt()の代わりに</code><code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIControllers#appendController()">nsIControllers.appendController()</a></code>を呼び出すことでコントローラを追加しています。</p>
+
+<pre class="brush: js">var treeView = document.getElementById("myCustomTreeView");
+var controller = new PlacesController(treeView);
+controller._doCommand = controller.doCommand;
+controller.doCommand = function (aCmd) {
+  if (aCmd === "placesCmd_open")
+    alert("No.");
+  else
+    this._doCommand(aCmd);
+};
+treeView.controllers.appendController(controller);
+</pre>
+
+<p></p>

@@ -1,0 +1,202 @@
+---
+title: Gecko FAQ
+slug: Gecko_FAQ
+tags:
+  - Gecko
+  - NeedsMigrationReview
+translation_of: Gecko/FAQ
+---
+<h2 id="What_is_Gecko.3F" name="What_is_Gecko.3F">Gecko とは何ですか？</h2>
+<p><a href="/ja/docs/Gecko" title="Gecko">Gecko</a> とは、オープンソースのブラウザエンジンで、<a href="/ja/docs/HTML" title="HTML">HTML</a> 4、<a href="/ja/docs/CSS" title="CSS">CSS</a> 1/2、W3C <a href="/ja/docs/DOM" title="DOM">DOM</a>、<a href="/ja/docs/XML" title="XML">XML</a>、<a href="/ja/docs/JavaScript" title="JavaScript">JavaScript</a> といったオープンなインターネット標準をサポートするように設計されています。</p>
+<p>Gecko は、Mozilla Firefox、SeaMonkey、Camino など、様々なブラウザで利用されており、mozilla.org で継続して開発されています。Gecko はかつては Raptor や NGLayout というコードネームで知られてきました。しかし、商標の問題から新しい名前へと変更されました。</p>
+<p>より詳しくは {{ interwiki('wikipedia', 'Gecko_(layout_engine)', 'Wikipedia の Gecko に関する記事') }} をご覧ください。</p>
+
+
+
+
+<h2 id="What_is_a_layout_engine.3F" name="What_is_a_layout_engine.3F">レイアウトエンジンとは何ですか？</h2>
+<p>基本的には {{ interwiki('wikipedia', 'Layout_engine', 'レイアウトエンジン') }} は、内容 (HTML、XML、画像ファイル、アプレットなど) や整形のための情報 (CSS、ハードコードされた HTML タグなど) を取り込み、中身を整形してスクリーンに表示します。レイアウトエンジンは、ブラウザウィンドウの chrome の内部にある空白領域を描画します。</p>
+<p>形式的には、レイアウトエンジンはドキュメントの配置手段を定義し、ページに内容を配置します。Gecko のコアはとても速いレイアウトエンジンです。Gecko はまた、様々なドキュメント形式 (HTML、XML、SVG など) を解析する能力、合成や変換を含む進歩したレンダリング能力、そして埋め込まれた JavaScript と <a href="/ja/docs/Plugins" title="Plugins">プラグイン</a> のサポートを提供します。</p>
+<p>Gecko はとても速く、強力であるため、ブラウザのインターフェース (chrome) を作るためにも使われています。言い換えると、Gecko はドキュメントの内容を表示するだけでなく、スクロールバー、ツールバー、そしてメニューも同様に描画します。詳しくは <a href="/ja/docs/XUL" title="XUL">XUL</a> をご覧ください。</p>
+
+
+
+<h2 id="How_is_a_layout_engine_like_Gecko_different_from_a_Web_browser.3F" name="How_is_a_layout_engine_like_Gecko_different_from_a_Web_browser.3F">Gecko のようなレイアウトエンジンは Web ブラウザとはどのように違うのですか？</h2>
+
+<p>Gecko は、スクリーン上にコンテントを表示するために必要な土台を提供します。このような土台には、レイアウトエンジンやブラウザコンポーネントの補足物が含まれます。しかし、Gecko は、Firefox のような首尾一貫した、ユーザーフレンドリーなアプリケーション (メニュー、ツールバーなどを含む) の様に、こうした全てのコンポーネントがパッケージ化されているわけではありません。</p>
+<p>mozilla.org は、Firefox、Thunderbird、SeaMonkey、Camino など、独自開発のアプリケーションに必要な構成要素を組み上げます。そしてその成果は mozilla.org から自由にダウンロードできます。Netscape は Netscape Navigator として名付けられた独自のバージョンをリリースしていました。他の会社は、Gecko を組み込んだ独自のソフトウェアやハードウェア製品をリリースしています。XULRunner を通じて Gecko を使っているアプリケーションの一部を <a href="/ja/docs/XULRunner_Hall_of_Fame" title="XULRunner_Hall_of_Fame">XULRunner Hall of Fame</a> でご覧いただけます。</p>
+<p>ISV やハードウェアベンダーのようなサードパーティは、彼らのアプリケーション、またはハードウェアデバイスにおいて使いたいコンポーネントを選択します。あるブラウザの構成要素、例えばブックマーク、履歴、アドレス帳のようなものは、Gecko の一部としては提供されません。しかし、これら全ての構成要素のためのソースは mozilla.org から自由にダウンロードできます。</p>
+
+
+
+<h2 id="Why_was_Gecko_built.3F" name="Why_was_Gecko_built.3F">なぜ新しいレイアウトエンジンを作成しているのですか？</h2>
+
+
+<p>もとの Mozilla ブラウザ、それは Navigator 1.0 として最初にリリースされましたが、それは次のキラーアプリケーションを作るという情熱を持った小さなチームによってまたたく間に開発されました。そして彼らは非常に成功しました。現在 Web は進化していて、Netscape は将来の製品を作るための次世代レイアウトエンジンを再設計、再開発するためのすばらしいチームを集めています。Gecko は、ダイナミックな新しい時代のコンテントを可能にしてくれます。そのコンテントは、より高度なインタラクティブ性を備え、Web 開発者は以前に比べてプレゼンテーション制御を簡単に行えるようになります。そして、独占の API でなくてオープンで勧告されたインターネット標準を使います。是非、<a class="external" href="http://www.mozilla.org/newlayout/getinvolved.html">チームに参加</a> してください。</p>
+
+
+
+<h2 id="How_is_mozilla.org_using_Gecko.3F" name="How_is_mozilla.org_using_Gecko.3F">mozilla.org はどのように Gecko を使っているのですか？</h2>
+<p>mozilla.org は Gecko レイアウトエンジンと他のブラウザコンポーネントから Mozilla ブラウザアプリケーションを組み立てています。</p>
+
+
+
+<h2 id="How_does_Mozilla_use_Gecko.3F" name="How_does_Mozilla_use_Gecko.3F">Netscape ではどのように Gecko を利用しようと計画してるのですか？</h2>
+<p>Gecko は Netscape 6 ブラウザスイートの中心部分に置かれ、Navigator や Messenger といったあらゆるコンポーネントを動かします。Gecko テクノロジーはまた、Netscape.com ポータルサイトを表示し、素早く魅力的なコンテンツやサービスをもお届けします。Gecko の構造は、より短時間で市場に出され、さらなる革新、より低コストでの開発、より簡単な配布やアップデート、そしてより良いクロスプラットフォームサポートを可能にすることで、将来にわたって Netscape を支えることでしょう。</p>
+
+
+
+<h2 id="How_can_other_companies_and_organizations_use_Gecko.3F" name="How_can_other_companies_and_organizations_use_Gecko.3F">他の企業や団体は Gecko をどのように使用できるのですか？</h2>
+<p>Gecko は小さく、軽く、そしてオープンソースであるため、他の会社や団体も簡単に再利用できます。多くのハードウェアベンダーはネットワークへのアクセス機能を持つ装置を作っていて、ウェブブラウジングの機能を含めたいと考えています。同様に、多くのソフトウェア開発者はアプリケーションにウェブブラウシングの機能を取り入れたいと考えていますが、独自にブラウザを開発したいとまでは考えていません。こうした開発者は、Gecko が提供する中から、欲しいブラウザコンポーネントを選択することができ、そうしたコンポーネントを独自の製品と共にパッケージ化することができるのです。</p>
+
+
+
+
+<h2 id="Which_open_standards_is_the_Gecko_development_project_working_to_support.2C_and_to_what_extent_does_it_support_them.3F" name="Which_open_standards_is_the_Gecko_development_project_working_to_support.2C_and_to_what_extent_does_it_support_them.3F">Gecko はどのオープン標準をサポートし、そしてどの程度までそれらをサポートできるのですか？</h2>
+<p>2000 年の終わりまでに、Gecko は次に挙げるオープンインターネット標準の勧告を完全にサポートすることが見込まれています。ただし、以下に注としてあげる分野や現在 <a class="link-https" href="https://bugzilla.mozilla.org/">Bugzilla</a> でオープンバグとして報告されているバグを除きます。</p>
+<ul>
+  <li>HTML 4.0 - 完全サポート。ただし以下は除きます。
+    <ul>
+      <li>要素 - BDO, BASEFONT</li>
+      <li>属性 - A 要素の shape 属性、abbr、axis、headers、scope-row、scope-col、scope-rowgroup、scope-colgroup、charoff、datasrc、datafld、dataformat、datapagesize、summary、event、dir、表コラムの align、OPTION の label 属性、AREA 要素の代替テキスト、longdesc</li>
+      <li>様々なメタデータ属性 - cite, datetime, lang, hreflang</li>
+      <li>双方向テキストレイアウト。これはヘブライ語とアラビア語のみで使用されます (IBM が将来のリリースで双方向テキストをサポートできるように作業を開始しました)</li>
+    </ul>
+  </li>
+  <li>スタイルシート
+    <ul>
+      <li>CSS 1 - 完全サポート。ただし以下は除きます。
+        <ul>
+          <li>HTML column 要素へのスタイルの適用</li>
+          <li>author style を無効にする能力</li>
+          <li>特定の Mozilla 拡張擬似クラスの名前は moz- prefix を持っていません</li>
+        </ul>
+      </li>
+      <li>CSS 2 - 部分的サポートが予定されており、CSS2 positioning へのサポートを含めてすでに Gecko にビルドされています。ただし特定のレベルのサポートを達成するためのコミットメントはまったく行われていません。</li>
+    </ul>
+  </li>
+  <li>DOM
+    <ul>
+
+      <li>Level 0</li>
+      <li>Level 1 Core - 完全サポート
+        <ul>
+          <li>EntityReferences が DOM1 を通じて利用できるようにしています。XML 実装のための DOM1 仕様の規定によると、エンティティは自動的にインラインに展開されるため DOM1 を通じての利用は不可能です：私たちの実装はこの規定を外挿して EntityReferences にも適用します。</li>
+          <li>より詳しい情報は、<a href="/ja/docs/DOM" title="DOM">Mozilla での DOM</a> を参照してください。</li>
+        </ul>
+      </li>
+      <li>Level 1 HTML</li>
+      <li>DOM 2 - DOM2 event、DOM 2 Style、DOM2 Core を含めて、DOM 2 のほとんどはすでに Gecko に実装されています。DOM 3 のサポートも将来のリリースで予定されています。</li>
+    </ul>
+  </li>
+  <li>XML 1.0 - 完全サポート。ただし、デフォルトの属性値を操作するための処理を除く。</li>
+  <li>RDF - 完全サポート。ただし、aboutEach、aboutEachPrefix、および parseType を除く。</li>
+  <li>JavaScript 1.5 - ECMA-262 Edition 3 (ECMAscript) 適合を含む。ただし、Date.toDateString および Date.toTimeString は実装されていません。</li>
+  <li>転送プロトコル - HTTP 1.1 (gzip 圧縮を含む)、FTP</li>
+  <li>SSL</li>
+  <li>Unicode</li>
+  <li>OJI (Open Java Interface)</li>
+  <li>画像フォーマット
+    <ul>
+      <li>PNG</li>
+      <li>GIF</li>
+      <li>JPEG, PJPEG</li>
+    </ul>
+  </li>
+</ul>
+
+
+
+<h2 id="Does_.22full_support.22_mean_that_Gecko_has_zero_bugs_today_or_will_have_zero_bugs_at_some_point_in_the_future.3F" name="Does_.22full_support.22_mean_that_Gecko_has_zero_bugs_today_or_will_have_zero_bugs_at_some_point_in_the_future.3F">「完全サポート」とは、Gecko にはまったくバグがないということですか？それとも将来バグをまったくないようにするということですか？</h2>
+<p>決してバグがないということではありません。Robert O'Callahan が {{ Bug(25707) }} で述べているように、「完全に HTML4/CSS1 に適合しているからといって、‘100% バグがない’わけではない。もしバグを完全になくそうとしたら、誰も完全に適合したブラウザなど生み出せないだろう。」</p>
+<p>Web ページは恣意的なまでに長く複雑で、深くネストされたマークアップになる可能性もあるため、あるブラウザでは仕様が勧告しているようには表示できない Web ページを構築することは可能なのです。QA テストやテストケース開発が続けられる限り、どの時点を取ってみてもオープンソース Gecko コードベースには既知の問題が存在し、それはこれまでにも世に送り出されてきた商業製品にも当てはまりますし、これから送り出される Gecko ベースの製品にもリリースの時点での既知の問題は付きまとうでしょう。(同じ考え方は、もちろん、他のどのブラウザエンジン開発プロジェクトや、それを基礎にした製品にも当てはまります)</p>
+<p>オープンソース Gecko コードベースでの既知のバグは、<a class="link-https" href="https://bugzilla.mozilla.org/">Bugzilla</a> に報告されています。ここに、上で述べた標準に関連するバグの一覧へのリンクを載せておきます。現在進行中のバグのリストには、重複していたり、時代遅れだったり、再現性のないもの、妥当でないもの、そして正しく報告されていないものがどうしても含まれてしまうことに注意してください。</p>
+<div class="note">
+  これらのリンク自体もおそらく古くなっているでしょう。</div>
+<ul>
+  <li><a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW,ASSIGNED,REOPENED&amp;component=Layout">Layout</a> コンポーネントは、様々な仕様が関連しうるコンテントレイアウトに関するバグを追跡します。</li>
+  <li>HTML 4.0
+    <ul>
+      <li><a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW,ASSIGNED,REOPENED&amp;component=Form+Submission&amp;component=HTML+Element&amp;component=HTML+Form+Controls&amp;component=HTMLFrames&amp;component=HTMLTables">要素、フォームコントロール、フレーム、表、そしてフォーム送信</a></li>
+      <li><a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW,ASSIGNED,REOPENED&amp;keywords=html4&amp;keywords_type=anywords">html4 キーワード</a> と共にマークされたバグ</li>
+      <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=7954">HTML 4.01 適合</a> に関して特に重要な問題を追跡するための「メタバグ」</li>
+    </ul>
+  </li>
+  <li>CSS: <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW,ASSIGNED,REOPENED&amp;component=Style+System">Style System</a> コンポーネント (<a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW,ASSIGNED,REOPENED&amp;component=Style+System&amp;keywords=css1&amp;keywords_type=anywords">css1</a>、<a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW,ASSIGNED,REOPENED&amp;component=Style+System&amp;keywords=css2&amp;keywords_type=anywords">css2</a>、<a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW,ASSIGNED,REOPENED&amp;component=Style+System&amp;keywords=css3&amp;keywords_type=anywords">css3</a> キーワードと共にマークされたバグ報告も参照してください)</li>
+  <li>DOM: <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW,ASSIGNED,REOPENED&amp;component=DOM+Level+0">DOM0</a>、<a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW,ASSIGNED,REOPENED&amp;component=DOM+Level+1">DOM1</a>、<a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW,ASSIGNED,REOPENED&amp;component=DOM+Level+2">DOM2</a>、<a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW,ASSIGNED,REOPENED&amp;component=Event+Handling">イベント処理</a> コンポーネントを参照してください。</li>
+  <li><a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW,ASSIGNED,REOPENED&amp;component=XML">XML</a></li>
+  <li><a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW,ASSIGNED,REOPENED&amp;component=RDF">RDF</a></li>
+  <li>コア JavaScript 言語インタープリタ (<a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW,ASSIGNED,REOPENED&amp;component=Javascript+Engine">JavaScript エンジン</a>)</li>
+  <li>HTTP 1.1 適合バグは一般的に <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW,ASSIGNED,REOPENED&amp;component=Necko">Networking, Networking - General, and Networking: Cache</a> コンポーネントにあります。</li>
+  <li><a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW,ASSIGNED,REOPENED&amp;component=OJI">OJI</a></li>
+  <li><a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW,ASSIGNED,REOPENED&amp;component=ImageLib">Imagelib</a> 画像ライブラリ (併せて <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW,ASSIGNED,REOPENED&amp;component=JPEG+Image+Handling">JPEG 画像処理</a> および <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW,ASSIGNED,REOPENED&amp;component=PNG+Image+Handling">PNG 画像処理</a> も参照してください)</li>
+  <li>SSL 関連のバグは <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW,ASSIGNED,REOPENED&amp;component=Security%3A+Crypto">Crypto</a> コンポーネントに報告されています。</li>
+</ul>
+<p>Gecko ベースの特定の商業製品にある既知のバグについての情報は、その製品のリリースノートを参照してください。</p>
+
+
+
+<h2 id="How_does_Gecko_format_XML_documents.3F" name="How_does_Gecko_format_XML_documents.3F">Gecko では XML ドキュメントをどのように整形するのですか？</h2>
+<p>Gecko は、XML 文書をフォーマットするために CSS と <a href="/ja/docs/XSLT" title="XSLT">XSLT</a> の使用をサポートします。</p>
+<p>XML 文書が CSS と XSLT いずれとも関連付けられていない場合、Gecko は独自のスタイルを適用してその文書を表示します。</p>
+
+
+
+<h2 id="How_does_Gecko_help_content_developers.3F" name="How_does_Gecko_help_content_developers.3F">Gecko はコンテンツ製作者にとってどう役に立つのでしょう？</h2>
+
+<p>コンテンツ製作者は、異なる、互換性のない、専用の DOM を様々なベンダーのブラウザでサポートするために全ての Web ページを何度も開発、テストすることに疲れ、うんざりしています。彼らは、以下のことを可能にするために、全てのベンダーが上記の W3C DOM と他の標準をきちんとサポートすることを要求していました。</p>
+<ol>
+  <li>豊富で強力な整形のシステムと配置のためのオブジェクトモデルを持つこと</li>
+  <li>「一度書けばどこでも見られる」</li>
+</ol>
+<p>これらの標準を協力にサポートすることで、Gecko は、世界中の Web コンテントや Web アプリケーション開発者のためのプラットフォームとなることができるのです。</p>
+
+
+
+<h2 id="Are_Gecko.27s_APIs_based_on_ActiveX.3F_COM.3F_JavaBeans.3F" name="Are_Gecko.27s_APIs_based_on_ActiveX.3F_COM.3F_JavaBeans.3F">Gecko の API は ActiveX に基づくのですか？ それとも COM？ JavaBeans？</h2>
+<p>Gecko は、XPCOM (プラットホームを横切って働く COM のサブセット) のおかげで、全てのプラットホームで再使用できます。COM (Digital によって開発されて、Microsoft によって後で採用される) は、Windows プラットホームの上のモジュール式のインタフェースのためのデファクトスタンダードです。</p>
+<p>さらに、Windows プラットホーム上では、Gecko の XPCOM インタフェースが VB 開発者が利用することができる ActiveX コントロールでラップされています (ActiveX が Windows 専用の技術であるので、ActiveX ラッパーは、他のプラットホームで利用可能ではありません)。</p>
+<p>JavaBean wrapper は現在開発中ではありません、しかし、将来そのような開発を排除する Gecko のアーキテクチャは何もありません。これらのインターフェースのソースコードとドキュメントは mozilla.org で入手できます。</p>
+<p>組み込み API に関する今後の計画については、{{ interwiki('wikimo', 'Mozilla_2:Embedding_APIs', 'wikimo:Mozilla 2:Embedding APIs') }} をご覧ください。</p>
+
+
+
+<h2 id="Are_Gecko.27s_APIs_compatible_with_Microsoft.27s_Trident_APIs.3F" name="Are_Gecko.27s_APIs_compatible_with_Microsoft.27s_Trident_APIs.3F">Gecko の API は Microsoft の Trident API と互換性がありますか？</h2>
+<p>Gecko の XPCOM インタフェースは Microsoft のものとは違います。両モデルの最も重要な違いは、インタフェースにおける Document Object Model (DOM) の反映に影響しています。</p>
+<p>Microsoft の Trident インタフェースは独占の API で DOM を反映しますが、Gecko は W3C によって勧告された標準に従って DOM を公開します。他にも非互換性が存在します。Adam Lock は現在、部分的な互換性層 (compatibility layer) を開発しています。これにより、開発者はより簡単に Microsoft のエンジンから NGLayout エンジンに移行することができるようになるかもしれません。</p>
+
+
+
+<h2 id="Which_platforms_does_Gecko_run_on.3F" name="Which_platforms_does_Gecko_run_on.3F">Gecko はどのプラットフォームで動作しますか？</h2>
+<p>Gecko は現在、Win32 (Windows 95、Windows 98、Windows NT 4、Windows 2000、Windows XP)、Mac、そして Linux で動作します。インターネットから mozilla.org に参加している OEM や貢献者らは、Gecko を他のプラットフォームに移植しようとしています。そのような移植作業には、Solaris、HP/UX、AIX、Irix、OS/2、OpenVMS、BeOS、そして Amiga その他があります。</p>
+
+
+
+<h2 id="What_are_the_components_of_Gecko.3F" name="What_are_the_components_of_Gecko.3F">Gecko のコンポーネントは何ですか？</h2>
+<p>Gecko は以下のコンポーネントを含んでいます:</p>
+<ul>
+  <li>ドキュメントパーサ (HTML と XML を処理します)</li>
+  <li>内容モデルをもつレイアウトエンジン</li>
+  <li>スタイルシステム (CSS などを処理します)</li>
+  <li>JavaScript ランタイム (<a href="/ja/docs/SpiderMonkey" title="SpiderMonkey">SpiderMonkey</a>)</li>
+  <li>画像ライブラリ</li>
+  <li>ネットワークライブラリ (<a href="/ja/docs/Necko" title="Necko">Necko</a>)</li>
+  <li>プラットホームに特有のグラフィックスレンダリングと Win32、X と Mac のためのウィジェットセット</li>
+  <li>ユーザ設定ライブラリ</li>
+  <li>Navigator プラグインインタフェースをサポートする Mozilla プラグイン API (<a href="/ja/docs/NPAPI" title="NPAPI">NPAPI</a>)</li>
+  <li>Open Java Interface（OJI）、Sun Java 1.2 JVM 付き</li>
+  <li><a href="/ja/docs/RDF" title="RDF">RDF</a> バックエンド</li>
+  <li>フォントライブラリ</li>
+  <li>セキュリティライブラリ (<a href="/ja/docs/NSS" title="NSS">NSS</a>)</li>
+</ul>
+<div class="originaldocinfo">
+
+
+
+<h2 id="Original_Document_Information" name="Original_Document_Information">原文書の情報</h2>
+  <ul>
+    <li>著者: Angus</li>
+    <li>貢献者: Ekrock, Vidur, Hidday, Drunclear</li>
+    <li>著作権: Portions of this content are © 1998–2006 by individual mozilla.org contributors; content available under a Creative Commons license</li>
+  </ul>
+</div>

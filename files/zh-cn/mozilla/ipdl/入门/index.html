@@ -1,0 +1,670 @@
+---
+title: IPDL入门
+slug: Mozilla/IPDL/入门
+translation_of: Mozilla/IPDL/Tutorial
+---
+<p>IPDL – IPC Inter-process communication Protocol Definition Language，全称的意思是进程间通信协议定义语言。这是Mozilla特有的一种使C++代码能以有组织地、安全地在进程或者线程间传递信息的语言。Firefox中有关多进程插件和选项卡的所有消息均以IPDL语言声明。</p>
+
+<div class="note">如果想尝试添加一个新的IPDL协议, 参考 <a href="/zh-CN/docs/Mozilla/IPDL/Creating_a_New_Protocol">创建一个新的协议</a>.</div>
+
+<p>所有的IPDL信息都是由 <strong>父端</strong> 和 <strong>子端</strong> 发送，二者也被称为 <strong>角色</strong>。 IPDL <strong>协议 </strong>声明了 角色间该如何进行通信：它声明了角色间可能发送的消息，以及描述了何时允许发送消息的状态机。</p>
+
+<p>父端角色通常是对话中更持久的一方：</p>
+
+<table>
+ <caption>父端/子端角色</caption>
+ <thead>
+  <tr>
+   <th scope="col"></th>
+   <th scope="col">父端</th>
+   <th scope="col">子端</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">IPC 选项卡</th>
+   <td>Chrome 进程</td>
+   <td>Content 进程</td>
+  </tr>
+  <tr>
+   <th scope="row">IPC 插件</th>
+   <td>Content 进程</td>
+   <td>Plugin 进程</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>每个协议都会在单独的文件中声明。IPDL 编译器会据每个IPDL 协议中生成一些 C++头文件。生成的代码帮忙解决了 底层通信层(套接字和管道)的一些细节、构造和发送消息，以及确保所有角色遵守其规范，并处理一些错误情况。以下 IPDL代码 定义了 浏览器角色 和 插件角色 的非常基本的交互：</p>
+
+<pre><strong>async protocol</strong> PPlugin
+{
+<strong>child:</strong>
+  <strong>async</strong> Init(nsCString pluginPath);
+  <strong>async</strong> Shutdown();
+
+<strong>parent:</strong>
+  <strong>async</strong> Ready();
+};
+</pre>
+
+<p>这段代码声明了 <code>PPlugin</code> 协议。 有两条消息从 父端发送到了子端, <code>Init()</code> 和<code>Shutdown()</code>。 另外还有一条消息从子端发送到了父端, <code>Ready()</code>。</p>
+
+<div class="note">IPDL 协议要以字母 P开头. 声明了该协议的文件也必须是对应的名称,如 PPlugin.ipdl.</div>
+
+<h3 id="生成的_C_代码"><span class="mw-headline">生成的 C++ 代码</span></h3>
+
+<p>PPlugin.ipdl 被编译后会在构建树目录 ipc/ipdl/_ipdlheaders/ 生成头文件<code>PPluginParent.h</code>,和  <code>PPluginChild.h</code>。PPluginParent 和 PPluginChild 都是待实现的抽象类. 每个传出消息都是可以调用的C++方法。每个传入的消息都是必须实现的纯虚拟C++^方法:</p>
+
+<pre>class PPluginParent
+{
+public:
+  bool SendInit(const nsCString&amp; pluginPath) {
+    // generated code to send an Init() message
+  }
+
+  bool SendShutdown() {
+    // generated code to send a Shutdown() message
+  }
+
+protected:
+  /**
+   * A subclass of PPluginParent must implement this method to handle the Ready() message.
+   */
+  bool RecvReady() = 0;
+};
+
+class PPluginChild
+{
+protected:
+  bool RecvInit(const nsCString&amp; pluginPath) = 0;
+  bool RecvShutdown() = 0;
+
+public:
+  bool SendReady() {
+    // generated code to send a Ready() message
+  }
+};
+</pre>
+
+<p>这些父级和子级抽象类负责所有的 “协议层” 问题, 如序列化数据，发送和接收消息，以及检查协议安全性。实现者需要做的是创建子类来执行每条消息中涉及的实际工作。下面是浏览器实现者 使用 PPluginParent 的一个非常简单的方法示例。</p>
+
+<pre>class PluginParent : public PPluginParent
+{
+public:
+  PluginParent(const nsCString&amp; pluginPath) {
+    // launch child plugin process
+    SendInit(pluginPath);
+  }
+
+  ~PluginParent() {
+    SendShutdown();
+  }
+
+protected:
+  bool RecvReady() {
+    mObservers.Notify("ready for action");
+  }
+};
+</pre>
+
+<p>下面是C++实现者在增加插件过程中如何使用PPluginChild的代码：</p>
+
+<pre>class PluginChild : public PPluginChild
+{
+protected:
+  void RecvInit(const nsCString&amp; pluginPath) {
+    mPluginLibrary = PR_LoadLibrary(pluginPath.get());
+    SendReady();
+  }
+  void RecvShutdown() {
+    PR_UnloadLibrary(mPluginLibrary);
+  }
+
+private:
+  PRLibrary* mPluginLibrary;
+};
+</pre>
+
+<p>调用子流程并将这些协议角色 关联到我们的IPC “传输层” 超出了本文档的范围。有关更多详细信息，请参见<a href="https://wiki.developer.mozilla.org/en-US/docs/IPDL/Processes_and_Threads"> IPDL进程和线程</a>。<br>
+ <br>
+ 因为 协议消息 被表示为C++方法，所以很容易忘记它们实际上是异步消息：默认情况下，C++方法将在消息被分发之前立即返回。<br>
+ <br>
+ Recv* 方法的参数(本例中的 <em>const nsCString&amp; pluginPath</em>) 是对临时对象的引用，因此如果需要保留它们的数据，请复制它们。</p>
+
+<h3 id="方向"><span class="mw-headline">方向</span></h3>
+
+<p>每种消息类型都包括一个“方向”。消息方向 是指 消息是可以从父端 发送到 子端，抑或是从子端发送到父端，或者两种方式都可以。有三个关键字充当了方向说明符。上面介绍的 <strong>child</strong>，第二个是 <strong>parent</strong>，这意味着在 parent 标签下声明的消息只能从 子端发送到父端。第三个是<strong>both</strong>，这意味着声明的消息可以进行双向发送。下面的简要示例 显示了如何使用这些 说明符，以及这些说明符如何 影响 生成的 抽象角色类。</p>
+
+<pre>// PDirection.ipdl
+<strong>async protocol</strong> PDirection
+{
+<strong>child:</strong>
+  <strong>async</strong> Foo();  // can be sent from-parent-to-child
+<strong>parent:</strong>
+  <strong>async</strong> Bar();  // can be sent from-child-to-parent
+<strong>both:</strong>
+  <strong>async</strong> Baz();  // can be sent both ways
+};
+</pre>
+
+<pre>// PDirectionParent.h
+class PDirectionParent
+{
+protected:
+  virtual void RecvBar() = 0;
+  virtual void RecvBaz() = 0;
+
+public:
+  void SendFoo() { /* boilerplate */ }
+  void SendBaz() { /* boilerplate */ }
+};
+</pre>
+
+<pre>// PDirectionChild.h
+class PDirectionChild
+{
+protected:
+  virtual void RecvFoo() = 0;
+  virtual void RecvBaz() = 0;
+
+public:
+  void SendBar() { /* boilerplate */ }
+  void SendBaz() { /* boilerplate */ }
+};
+</pre>
+
+<p>您可以在协议规范中多次使用  <code>child</code>, <code>parent</code>, 和 <code>both</code>标签。它们的行为类似于C++中的<code>public</code>, <code>protected</code>, 和 <code>private </code>标签。</p>
+
+<h3 id="参数"><span class="mw-headline">参数</span></h3>
+
+<p>消息声明允许任意数量的 <strong>参数</strong>。参数指定与消息一起发送的数据。它们的值由 发送方 序列化，由 接收方 反序列化。IPDL支持内置 和 自定义基元类型，以及 联合union 和数组。</p>
+
+<div>
+<div>
+<div class="f">
+<p>内置的简单类型包括C++整型(bool，char，int，double) 和 XPCOM字符串类型(nsString，nsCString)。IPDL会自动导入这些类型，因为它们很常见，而且base IPC 库知道如何序列化和反序列化这些类型。有关自动导入类型的最新列表，请参见 <code>ipc/ipdl/ipdl/builtin.py</code> 。</p>
+
+<p>角色 可以作为参数传递。C++签名将在一侧接受 PProtocolParent*，在另一侧将其转换为PProtocolChild*。</p>
+
+<h4 id="Maybe_类型">Maybe 类型</h4>
+
+<p>如果要传递可能未定义的参数，可以在类型名称后添加<code>?</code> 后缀。接下来你就可以传递 <code>mozilla::Maybe </code>对象而不是具体的值。</p>
+
+<pre>protocol PMaybe
+{
+child:
+  async Maybe(nsCString? maybe);
+};
+</pre>
+
+<h4 id="自定义基本类型">自定义基本类型</h4>
+
+<p>当需要发送 IPDL内置类型 之外的 类型数据 时，可以在IPDL规范中添加  <code>using </code>声明。您的C++代码必须提供 <a href="https://wiki.developer.mozilla.org/en-US/docs/IPDL/Type_Serialization">自定义序列化程序和反序列化 </a>程序。</p>
+
+<pre><strong>using</strong> mozilla::plugins::NPRemoteEvent;
+
+<strong>sync protocol</strong> PPluginInstance
+{
+<strong>child:</strong>
+  <strong>async</strong> HandleEvent(NPRemoteEvent);
+};
+</pre>
+
+<h4 id="联合Union">联合Union</h4>
+
+<p>IPDL 内置支持声明 联合Union 类型。</p>
+
+<pre><strong>using</strong> struct mozilla::void_t from "ipc/IPCMessageUtils.h";
+
+<strong>union</strong> Variant
+{
+  void_t;
+  bool;
+  int;
+  double;
+  nsCString;
+  PPluginScriptableObject;
+};</pre>
+
+<p>此 联合Union 生成一个C++接口，其内容如下：</p>
+
+<pre><strong style="font-weight: bold;">struct</strong> Variant
+{
+  enum Type {
+    Tvoid_t, Tbool, Tint, Tdouble, TnsCString, TPPlugionScriptableObject
+  };
+  Type type();
+  void_t&amp; get_void_t();
+  bool&amp; get_bool();
+  int&amp; get_int();
+  double&amp; get_double();
+  nsCString&amp; get_nsCString();
+  PPluginScriptableObject* get_PPluginScriptableObject();
+};
+</pre>
+
+<p>Union.type() 可用于确定 IPDL 消息处理程序中接收到的联合Union 类型，其余函数 给予对其内容的访问权限。要初始化 联合Union ，只需为其分配一个有效值，如下所示：</p>
+
+<pre>aVariant = false;
+</pre>
+
+<h4 id="结构_Struct">结构 Struct</h4>
+
+<p>IPDL 具有对 可序列化数据类型 的 任意集合 的内置支持。</p>
+
+<pre><strong>struct</strong> NameValuePair
+{
+  nsCString name;
+  nsCString value;
+};</pre>
+
+<p>在实现代码中，可以像这样创建和使用这些结构：</p>
+
+<pre>NameValuePair entry(aString, anotherString);
+foo(entry.name(), entry.value()); // Named accessor functions return references to the members
+</pre>
+
+<h4 id="数组_Array">数组 Array</h4>
+
+<p>IPDL具有简单的数组语法：</p>
+
+<pre>InvokeMethod(nsCString[] args);</pre>
+
+<p>·在C++中，这被转换为 <a href="https://wiki.developer.mozilla.org/en-US/docs/XPCOM_array_guide#nsTArray.3cT.3e" title="en-US/docs/XPCOM array guide#nsTArray.3cT.3e">nsTArray</a> 引用：</p>
+
+<pre>virtual bool RecvInvokeMethod(nsTArray&lt;nsCString&gt;&amp; args);
+</pre>
+</div>
+</div>
+</div>
+
+<p>如果在单独的  <em>.ipdlh</em> 文件中定义了  IPDL生成的数据结构，则可以在多个 协议 中使用它们。这些文件必须像常规 <em>.ipdl</em> 文件一样添加到<em>ipdl.mk</em>  makefile中，并且它们使用相同的语法(除了它们不能声明协议)。要使用  <em>Foo.ipdlh </em>中定义的结构，请按如下方式包含它。</p>
+
+<pre>// in a .ipdl file
+<strong>include</strong> Foo;
+</pre>
+
+<h3 id="同步和RPC消息传递">同步和RPC消息传递</h3>
+
+<p>到目前为止，所有消息都是异步的。消息发送出去的同时，C++方法会立即返回。但是，如果我们希望等待消息被处理，或者从消息中获取返回值，该怎么办呢？</p>
+
+<p>在 IPDL 中，有三种不同的语义：</p>
+
+<ol>
+ <li><strong>异步</strong>(<strong>asynchronous</strong>) 语义；发送方未被阻塞。</li>
+ <li>等待，直到接收方确认它收到了消息。我们称之为 <strong>同步(synchronous</strong> <strong>) </strong>语义，因为发送方阻塞，直到接收方接收到消息并发回回复。消息可能具有返回值。</li>
+ <li> <strong>rpc </strong>语义是同步语义的变体，见下文。</li>
+</ol>
+
+<p>请注意，父端 可以向 子端 发送消息，反之亦然，因此上述三种情况下的“发送者”和“接收者”可以是父端  或 子端 。消息传递语义以 同样的方式 应用于两个方向。因此，例如在从 子端 到 父端的同步语义中， 子端 将阻塞，直到 父端 接收到消息 和 响应到达为止，而在从父端 到 子端 的异步语义中，父端 不会阻塞。</p>
+
+<p>创建插件实例时，浏览器应该阻塞，直到实例创建完成，并且需要插件返回的一些信息：</p>
+
+<pre><strong>sync protocol</strong> PPluginInstance
+{
+<strong>child:</strong>
+    <strong>sync</strong> Init() <strong>returns</strong> (bool windowless, bool ok);
+};
+</pre>
+
+<p>我们在插件协议中添加了两个新的关键字，<strong>sync </strong>和 <strong>returns </strong>。<strong>同步</strong>(<strong>sync)  </strong>将消息标记为正在同步发送。<strong>returns </strong>关键字 标识了 在对消息的响应中 返回的值列表的开始。</p>
+
+<h4 id="异步消息的返回值">异步消息的返回值</h4>
+
+<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1313200">Bug 1313200</a> 引入了 将 <strong>returns</strong>  与 <strong>async</strong><strong>异步 </strong>消息一起使用的能力：</p>
+
+<pre><strong>protocol</strong> PPluginInstance
+{
+<strong>child:
+    async</strong> AsyncInit() <strong>returns</strong> (bool windowless, bool ok);
+    <strong>async </strong>OtherFunction() <strong>returns</strong> (bool ok);
+};
+</pre>
+
+<p>对于调用方，每个带有 <strong>returns</strong> 块的 <strong>async </strong>异步消息 <code>MessageName </code>都将为 <code>SendMessageName </code>生成两个重载。第一个重载将有一个 resolve回调 和 reject 回调 作为其最后两个参数；第二个重载将没有任何 <em>额外 </em>参数，但它将返回 <code>PProtocol{Parent,Child}::MessageNamePromise </code>，这是一个 <code>MozPromise</code>类型。</p>
+
+<p>第一个重载的 resolve 回调 以及 <code>MozPromise </code>的<code>Then()</code> 方法的成功回调都只有一个参数。如果消息只返回<strong>returns</strong> 一个值 (例如上面的<code>OtherFunction</code>)，则对于resolve 和success回调，参数都是<strong>returns</strong>返回值本身(作为<code>const</code>常量引用)；如果消息<strong>returns</strong> 返回多个值(例如上面的<code>InitAsync</code>)，则对于resolve 和success 回调，参数都是返回值的元组(例如，<code>Tuple&lt;bool, bool&gt;</code>)。另一方面， reject/failure  回调接受 <code>mozilla::ipc::ResponseRejectReason&amp;&amp;</code>，并在发生致命错误(如IPC错误)时调用。因此，除了 callback/promise 样式响应处理之外，这两个重载在功能上是等效的。</p>
+
+<p>生成的C++代码如下：</p>
+
+<pre>class PPluginInstanceParent
+{
+ public:
+  typedef MozPromise&lt;Tuple&lt;bool, bool&gt; ResponseRejectReason, true&gt; AsyncInitPromise;
+  typedef MozPromise&lt;bool, ResponseRejectReason, true&gt; OtherFunctionPromise;
+
+  void
+  SendAsyncInit(mozilla::ipc::ResolveCallback&lt;Tuple&lt;bool, bool&gt;&gt;&amp;&amp; aResolve,
+                mozilla::ipc::RejectCallback&amp;&amp; aReject);
+
+  RefPtr&lt;AsyncInitPromise&gt;
+  SendAsyncInit();
+
+  void
+  SendOtherFunction(mozilla::ipc::ResolveCallback&lt;bool&gt;&amp;&amp; aResolve,
+                    mozilla::ipc::RejectCallback&amp;&amp; aReject);
+
+  RefPtr&lt;OtherFunctionPromise&gt;
+  SendOtherFunction();
+};
+</pre>
+
+<p>在被调用方，除了声明的消息参数外，<code>RecvMessageName </code>将有一个 <code>MessageNameResolver&amp;&amp; </code>函数作为其最终(附加)参数。调用此函数将 初始化 调用传递给<code>SendMessageName</code>的回调 或 <code>SendMessageName</code>返回的promise解析。<br>
+ <br>
+ 生成的C++将产生如下所示的结果：</p>
+
+<pre>class PPluginInstanceChild
+{
+ public:
+  typedef std::function&lt;void(Tuple&lt;const bool&amp;, const bool&amp;&gt;)&gt; AsyncInitResolver;
+  typedef std::function&lt;void(const bool&amp;)&gt; OtherFunctionResolver;
+
+  virtual mozilla::ipc::IPCResult
+  RecvAsyncInit(AsyncInitResolver&amp;&amp; aResolve) = 0;
+
+  virtual mozilla::ipc::IPCResult
+  RecvOtherFunction(OtherFunctionResolver&amp;&amp; aResolver) = 0
+};
+</pre>
+
+<p>为了使程序员更容易注意到阻塞的本质，Synchronous和RPC消息的C++方法名称是不同的：</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col"></th>
+   <th scope="col">发送方</th>
+   <th scope="col">接收方</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">async/sync</th>
+   <td>Send<em>MessageName</em></td>
+   <td>Recv<em>MessageName</em></td>
+  </tr>
+  <tr>
+   <th scope="row">rpc</th>
+   <td>Call<em>MessageName</em></td>
+   <td>Answer<em>MessageName</em></td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="消息语义强度">消息语义强度<span class="mw-headline"> </span></h4>
+
+<p>IPDL协议 也像消息一样具有 “语义限定符”。这里的不同之处在于这里的语语义限定符是可选的； 默认语义是异步的。 必须指出的是 协议的语义至少与其 最强的消息语义 一样“强”，其中<strong>同步语义 “强于” 异步</strong>。这意味着异步协议无法在不违反 此类型规则 的情况下声明同步消息，而<strong>同步协议可以声明异步消息</strong>。下面显示了具有同步消息的恰当协议。</p>
+
+<pre><strong>sync protocol</strong> PPluginInstance
+{
+<strong>child:
+    </strong><strong>sync</strong> Init() <strong>returns</strong> (bool windowless, bool ok);
+};</pre>
+
+<p>该方法生成的C++代码将 外参指针 用于 返回值：</p>
+
+<pre>class PPluginInstanceParent
+{
+  ...
+  bool SendInit(bool* windowless, bool* ok) { ... };
+};
+
+class PPluginInstanceChild
+{
+  ...
+  virtual bool RecvInit(bool* windowless, bool* ok) = 0;
+}</pre>
+
+<h4 id="RPC_语义"><span class="mw-headline">RPC 语义</span></h4>
+
+<p>“RPC” 代表“远程过程调用”，该第三种语义对 过程调用语义 进行建模。RPC 和 sync 语义之间的差别, 快速总结一下就是，RPC 允许“重入”消息处理程序：虽然参与者在等待RPC“调用”的“应答”时被阻塞，但它可以被 <em>解除阻塞</em> 以处理新的传入RPC<em>调用</em>。</p>
+
+<p>在下面的示例协议中，子端角色 提供了一个 “CallMeCallYou()” RPC接口，父接口提供一个 “CallYou()” RPC接口。 <code><strong>rpc</strong></code> 限定符意味着，如果父对象对子参与者调用“CallMeCallYou()”，那么子参与者在服务这个调用时，可以回调到父参与者的 “CallYou()” 消息。</p>
+
+<pre><strong>rpc</strong> <strong>protocol</strong> Example {
+<strong>child</strong>:
+    <strong>rpc</strong> CallMeCallYou() <strong>returns</strong> (int rv);
+
+<strong>parent</strong>:
+    <strong>rpc</strong> CallYou() <strong>returns</strong> (int rv);
+};
+</pre>
+
+<p>如果这是一个sync 同步协议，那么在为“CallMeCallYou()”消息提供服务时，将不允许 子端角色 调用 父端角色 的 “CallYou()” 方法。(子端角色 将被 极端“偏见” 终止。)</p>
+
+<h4 id="首选语义">首选语义<span class="mw-headline"> </span></h4>
+
+<p>尽可能使用异步<strong>async</strong> 语义。<br>
+ <br>
+ 不鼓励对 消息回复 进行阻塞。如果您真的需要阻塞 回复，请 <em>非常小心 </em>地使用<strong>sync</strong> 同步语义。不小心使用同步消息可能会陷入麻烦；虽然 IPDL 可以检查 和/或 保证您的代码不会死锁，但很容易通过阻塞导致严重的性能问题。<br>
+ <br>
+ 请不要使用RPC语义。RPC语义的存在主要是为了支持 远程插件(NPAPI)，这我们别无选择。</p>
+
+<div class="note">Chrome 对 content调用(用于IPC选项卡) 必须仅使用异步语义。为了保持响应性，chrome 进程需要永不阻塞 可能处于繁忙或挂起的 content 进程。</div>
+
+<h3 id="消息分发顺序">消息分发顺序</h3>
+
+<p>传递是“按顺序”的，也就是说，消息按照发送的顺序传递给接收者，而不考虑消息的语义。如果角色A发送消息M1，接着是M2来发送给角色B，B将被唤醒以处理M1，然后是M2。</p>
+
+<h2 id="子协议和协议管理">子协议和协议管理</h2>
+
+<p>到目前为止，我们已经看到了一个单一的协议，但现实世界中没有一个孤立的情况会有一个单一的协议。相反，协议被安排在<strong>子协议</strong>的受管层次结构中。子协议绑定到追踪其生命周期并充当工厂的“管理器”。协议层次结构从一个顶级协议开始，所有的 子协议角色 最终都是从该协议创建的。在Mozilla中有两个主要的顶层协议：用于远程插件的 <a class="external" href="http://mxr.mozilla.org/mozilla-central/source/dom/plugins/ipc/PPluginModule.ipdl" title="http://mxr.mozilla.org/projects-central/source/electrolysis/dom/plugins/PPluginModule.ipdl">PPluginModule</a>和用于远程选项卡的 <a class="external" href="http://mxr.mozilla.org/mozilla-central/source/dom/ipc/PContent.ipdl" title="http://mxr.mozilla.org/mozilla-central/source/dom/ipc/PContent.ipdl">PContent</a>。</p>
+
+<p>以下示例扩展了 顶级的 plugin协议来管理插件实例。</p>
+
+<pre><code>// ----- file PPlugin.ipdl
+
+<strong>include protocol</strong> PPluginInstance;</code>
+
+<code><strong>rpc protocol</strong> PPlugin
+{
+<strong>    manages</strong> PPluginInstance;
+<strong>child:</strong>
+    <strong>rpc</strong> Init(nsCString pluginPath) <strong>returns</strong> (bool ok);
+    // This part creates constructor messages
+    <strong style="font-weight: bold;">rpc </strong>PPluginInstance(nsCString type, nsCString[] args) <strong>returns</strong> (int rv);
+</code><code>};</code>
+</pre>
+
+<pre><code>// ----- file PPluginInstance.ipdl
+
+<strong>include protocol</strong> PPlugin;
+
+<strong>rpc protocol</strong> PPluginInstance
+{
+<strong>    manager</strong> PPlugin;
+<strong>child:</strong>
+    <strong>rpc</strong> __delete__();
+    SetSize(int width, int height);
+};</code>
+</pre>
+
+<p>这个例子有几个新元素：`include protocol`将另一个协议声明导入到这个文件中。请注意，这不是预处理器指令，而是IPDL语言的一部分。生成的C++代码将为 导入的协议 提供适当的#include预处理器指令。<br>
+ <br>
+ `manages`语句声明此协议管理PPluginInstance。PPlugin协议必须为PPluginInstance角色声明构造函数和析构函数消息。`manages`语句还意味着PPluginInstance角色与创建它们的插件角色的生命周期有关：如果此PPlugin实例被销毁，则与其关联的所有PPluginInstance都将失效或销毁。<br>
+ <br>
+ 令人困惑的是，强制 构造函数和析构函数消息(分别为PPluginInstance 和 __delete__ )存在于不同的位置。 构造函数必须位于管理协议中，而析构函数属于 被管理的子协议。·这些消息具有与C++构造函数相似的语法，但行为不同。构造函数和析构函数像其他IPDL消息一样具有参数、方向、语义和返回值。必须为每个托管协议声明构造函数和析构函数消息。</p>
+
+<p>每个子协议必须包含一个`manager`语句。<br>
+ <br>
+ 在C++层，子类和父类中的子类都必须实现用于allocate和deallocate子协议角色的方法。构造函数和析构函数被转换为消息的标准C++方法。<br>
+ <br>
+ 注意：__delete__是一个内置构造，并且是唯一不需要重写实现的IPDL消息(即Recv/Answer__delete__)。然而，当应该对协议的析构 进行某些操作而不是使用DeallocPProtocol功能时，鼓励被覆盖的实现。</p>
+
+<pre>class PPluginParent
+{
+  /* Allocate a PPluginInstanceParent when the first form of CallPluginInstanceConstructor is called */
+  virtual PPluginInstanceParent* AllocPPluginInstance(const nsCString&amp; type, const nsTArray&lt;nsCString&gt;&amp; args, int* rv) = 0;
+
+  /* Deallocate the PPluginInstanceParent after PPluginInstanceDestructor is done with it */
+  virtual bool DeallocPPluginInstance(PPluginInstanceParent* actor) = 0;
+
+  /* constructor message */
+  virtual CallPPluginInstanceConstructor(const nsCString&amp; type, const nsTArray&lt;nsCString&gt;&amp; args, int* rv) { /* generated code */ }
+
+  /* alternate form of constructor message: supply your own PPluginInstanceParent* to bypass AllocPPluginInstance */
+  virtual bool CallPPluginInstanceConstructor(PPluginInstanceParent* actor, const nsCString&amp; type, const nsTArray&lt;nsCString&gt;&amp; args, int* rv)
+  { /* generated code */ }
+
+  /* destructor message */
+  virtual bool Call__delete__(PPluginInstanceParent* actor) { /* generated code */ }
+
+  /* Notification that actor deallocation is imminent, IPDL mechanisms are now unusable */
+  virtual void ActorDestroy(ActorDestroyReason why);
+
+  ...
+};
+
+class PPluginChild
+{
+  /* Allocate a PPluginInstanceChild when we receive the PPluginInstance constructor */
+  virtual PPluginInstanceChild* AllocPPluginInstance(const nsCString&amp; type, const nsTArray&lt;nsCString&gt;&amp; args, int* rv) = 0;
+
+  /* Deallocate a PPluginInstanceChild after we handle the PPluginInstance destructor */
+  virtual bool DeallocPPluginInstance(PPluginInstanceChild* actor) = 0;
+
+  /* Answer the constructor message. Implementing this method is optional: it may be possible to answer the message directly in AllocPPluginInstance. */
+  virtual bool AnswerPPluginInstanceConstructor(PPluginInstanceChild* actor, const nsCString&amp; type, const nsTArray&lt;nsCString&gt;&amp; args, int* rv) { }
+
+  /* Answer the destructor message. */
+  virtual bool Answer__delete__(PPluginInstanceChild* actor) = 0;
+
+  /* Notification that actor deallocation is imminent, IPDL mechanisms are now unusable */
+  virtual void ActorDestroy(ActorDestroyReason why);
+
+  ...
+};</pre>
+
+<h4 id="子协议角色的生命周期">子协议角色的生命周期</h4>
+
+<p>AllocPProtocol 和 DeallocPProtocol 是一对匹配的函数。这些功能的典型实现是使用' new '和' delete ':</p>
+
+<pre>class PluginChild : PPluginChild
+{
+ virtual PPluginInstanceChild* AllocPPluginInstance(const nsCString&amp; type, const nsTArray&lt;nsCString&gt;&amp; args, int* rv)
+  {
+    return new PluginInstanceChild(type, args, rv);
+  }
+
+  virtual bool DeallocPPluginInstanceChild(PPluginInstanceChild* actor)
+  {
+    delete actor; // actor destructors are always virtual, so it's safe to call delete on them!
+    return true;
+  }
+
+  ...
+};</pre>
+
+<p>然而，在某些情况下，外部代码可能包含对需要引用计数或其他生命周期策略的角色实现的引用。在这种情况下，alloc/dealloc 可以执行不同的操作。以下是引用计数的示例：</p>
+
+<pre>class ExampleChild : public nsIObserver, public PExampleChild { ... };
+
+virtual PExampleChild* TopLevelChild::AllocPExample()
+{
+  RefPtr&lt;ExampleChild*&gt; actor = new ExampleChild();
+  return actor.forget();
+}
+
+virtual bool TopLevelChild::DeallocPExample(PExampleChild* actor)
+{
+  NS_RELEASE(static_cast&lt;ExampleChild*&gt;(actor));
+  return true;
+}
+</pre>
+
+<p>如果实现协议的对象不能在AllocPFoo内构造，先前已经构造，并且在其整个生命周期中不需要IPDL连接，或者实现引用计数的协议(第一种形式的构造函数不可用)，则可以使用第二种形式的 SendPFooConstructor：</p>
+
+<pre>class ExampleChild
+{
+public:
+    void DoSomething() {
+        aManagerChild-&gt;SendPExampleConstructor(this, ...);
+    }
+};
+</pre>
+
+<p>在内部，第一个构造函数表单只需调用</p>
+
+<pre>PExample(Parent|Child)* actor = AllocPExample(...);
+SendPExampleConstructor(actor, ...);
+return actor;
+</pre>
+
+<p>效果一致。</p>
+
+<h4 id="子协议删除">子协议删除</h4>
+
+<p>值得了解协议删除过程。·考虑到简单的协议：</p>
+
+<pre>// --- PExample.ipdl
+<strong>include protocol</strong> PSubExample;
+
+<strong>async protocol</strong> PExample
+{
+    <strong>manages</strong> PSubExample;
+
+<strong>p</strong><strong>arent:
+    async </strong>PChild();
+};
+
+// --- PSubExample.ipdl
+<strong>include protocol</strong> PExample;
+
+<strong>async protocol</strong> PSubExample
+{
+    <strong>manager </strong>PExample;
+
+<strong>child:
+</strong>    <strong>async</strong> __delete__();
+};
+</pre>
+
+<p>我们假设存在 PSubExampleParent/Child，这样一些元素现在希望从父端触发协议的删除。</p>
+
+<pre><code><code>aPSubExampleParent-&gt;Send__delete__();</code></code></pre>
+
+<p>will trigger the following ordered function calls:</p>
+
+<pre>PSubExampleParent::ActorDestroy(Deletion)
+/* Deletion is an enumerated value indicating
+   that the destruction was intentional */
+PExampleParent::DeallocPSubExample()</pre>
+
+<pre>PSubExampleChild::Recv__delete__()
+PSubExampleChild::ActorDestroy(Deletion)
+PExampleChild::DeallocPSubExample()</pre>
+
+<p>ActorDestroy是一个生成的函数，它允许代码在知道参与者释放即将到来的情况下运行。·这对于生命周期在IPDL之外的角色很有用 。例如，可以设置一个标志，表明与IPDL相关的功能不再安全使用。</p>
+
+<h4 id="从C访问协议树">从C++访问协议树</h4>
+
+<p>The IPDL compiler generates methods that allow actors to access their manager (if the actor isn't top-level) and their managees (if any) from C++.  For a protocol PFoo managed by PManager, that manages PManagee, the methods are</p>
+
+<p>IPDL编译器生成允许参与者从C++访问其管理器(如果参与者不是顶级)和受管对象(如果有的话)的方法。对于协议PFoo，由 管理 PManagee的 PManager管理，这些方法是</p>
+
+<pre>PManager* PFoo::Manager()
+const InfallibleTArray&lt;PManagee*&gt; PFoo::ManagedPManagee();
+void PFoo::ManagedPManagee(InfallibleTArray&lt;PManagee*&gt;&amp;);
+</pre>
+
+<h2 id="关闭和错误处理">关闭和错误处理</h2>
+
+<p>实现IPDL消息的C++方法返回<code>bool</code>：true表示成功，false表示灾难性失败。如果数据已损坏或格式错误，则消息实现应从消息实现返回false。只要消息实现返回false，IPDL就会立即开始灾难性的错误处理：子进程(tab或plugin)的通信通道将被断开，并且进程将终止。对于“正常”错误条件，如无法加载网络请求，不要从消息处理程序返回false！正常的错误应该用消息或返回值发出信号。</p>
+
+<p><em>注意: 以下段落尚未实施</em><em>.</em> IPDL跟踪两个端点之间的所有活动协议。如果子侧崩溃或挂起：:</p>
+
+<ul>
+ <li>当前活动的任何同步或RPC消息都将返回false。</li>
+ <li>将不再接受进一步的消息(C++方法将返回false)。</li>
+ <li>每个IPDL参与者都将收到OnError消息。</li>
+ <li>将在每个管理器协议上调用 DeallocPSubprotocol，以解除分配任何活动子协议。</li>
+</ul>
+
+<p>销毁管理器协议时，将通知所有子协议：</p>
+
+<ul>
+ <li>不再接受进一步的消息。</li>
+ <li>将在管理器协议上调用DeallocPSubprotocol，以解除分配任何活动子协议</li>
+</ul>
+
+<p>当顶层协议被破坏时，这等同于关闭该连接的整个IPDL机制，因为不能再发送更多的消息，并且所有子协议都被销毁。</p>

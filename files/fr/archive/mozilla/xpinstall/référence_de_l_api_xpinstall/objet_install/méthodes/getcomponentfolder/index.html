@@ -1,0 +1,40 @@
+---
+title: getComponentFolder
+slug: >-
+  Archive/Mozilla/XPInstall/Référence_de_l_API_XPInstall/Objet_Install/Méthodes/getComponentFolder
+translation_of: Archive/Mozilla/XPInstall/Reference/Install_Object/Methods/getComponentFolder
+---
+<p> </p>
+<h3 id="getComponentFolder" name="getComponentFolder">getComponentFolder</h3>
+<p>Retourne un objet représentant le répertoire dans lequel le composant est installé.</p>
+<h4 id="M.C3.A9thode_de" name="M.C3.A9thode_de">Méthode de</h4>
+<p>Objet <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install">Install</a></p>
+<h4 id="Syntaxe" name="Syntaxe">Syntaxe</h4>
+<pre class="eval">Object getComponentFolder
+   (Chaîne registryName);
+
+Object getComponentFolder (
+   Chaîne registryName,
+   Chaîne subDirectory);
+</pre>
+<h4 id="Param.C3.A8tres" name="Param.C3.A8tres">Paramètres</h4>
+<p>La méthode <code>getComponentFolder</code> a les paramètres suivants :</p>
+<dl>
+ <dt>
+  <code>registryName</code></dt>
+ <dd>
+  Dans la
+  <i>
+   Client Version Registry</i>
+  , le chemin du composant dont on veut obtenir le répertoire d'installation.</dd>
+ <dt>
+  <code>subDirectory</code></dt>
+ <dd>
+  Une chaîne qui spécifie le nom d'un sous-répertoire. Si le sous-répertoire spécifié n'existe pas, il est créé. Ce paramètre est disponible dans Netscape 6 et peut être sensible à la casse (selon le système d'exploitation).</dd>
+</dl>
+<h4 id="Retour" name="Retour">Retour</h4>
+<p>Un objet représentant le répertoire dans lequel le composant est installé ou <code>NULL</code> si le composant ne peut pas être trouvé ou si <code>subDirectory</code> se réfère à un fichier qui existe déjà.</p>
+<h4 id="Description" name="Description">Description</h4>
+<p>La méthode <code>getComponentFolder</code> récupère l'emplacement d'un paquetage logiciel précédemment installé. Généralement, cette méthode est utilisée avec les méthodes <code><a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/addFile">addFile</a></code> ou <code><a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/addDirectory">addDirectory</a></code>.</p>
+<p><span class="comment">Interwiki Languages Links</span></p>
+<p>{{ languages( { "en": "en/XPInstall_API_Reference/Install_Object/Methods/getComponentFolder" } ) }}</p>

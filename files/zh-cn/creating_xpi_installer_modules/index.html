@@ -1,0 +1,190 @@
+---
+title: Creating XPI Installer Modules
+slug: Creating_XPI_Installer_Modules
+tags:
+  - Extensions
+  - XPInstall
+translation_of: Archive/Mozilla/XPInstall/Creating_XPI_installer_modules
+---
+<h2 id="Introduction" name="Introduction">Introduction</h2>
+<div class="note">
+  <p>这篇文章已经比较旧了，并且主要是针对Mozilla Suite和SeaMonkey (知道他成为Toolkit). 针对其他的应用，比如Firefox和Thundebird的Addons应该参照<a href="/en-US/docs/Toolkit_API#Official_References">in a different way</a>].</p>
+</div>
+<p>Mozilla has introduced major changes to the way that themes and all the other parts of the UI are packaged. This new packaging scheme is called <a href="/en-US/docs/XPI" title="XPI">XPI</a> (pronounced "zippy"), and interacts with <a href="/en-US/docs/XPInstall" title="XPInstall">XPInstall</a>. A XPI file typically contains the resources to be installed (in this case the <em>barley.jar</em> we want to have installed in the <code>Mozilla/bin/chrome/</code> directory) and an install script that guides the installation process.</p>
+<p>Under the <code>chrome/</code> directory, you'll notice that in addition to the package subdirectories, there are now also a handful of <a href="http://java.sun.com/j2se/1.5.0/docs/guide/jar/jar.html">JAR files</a>, or Java archives (see figure below). JAR is a file format based on the ZIP file format and is used for aggregating multiple files into a single file. These archives are redundant with the subdirectories: Mozilla now installs both the compressed and uncompressed versions of the UI, though you can change this when you build Mozilla yourself.</p>
+<pre>chrome/
+  US/
+  US.jar
+  chatzilla/
+  chatzilla.jar
+  chrome.rdf
+  chromelist.txt
+  classic/
+  classic.jar
+  comm/
+  comm.jar
+  content-packs/
+  content-packs.jar
+  embed-sample/
+  embed-sample.jar
+  en-US/
+  en-US.jar
+  en-mac/
+  en-mac.jar
+  en-unix/
+  en-unix.jar
+  en-win/
+  en-win.jar
+  help/
+  help.jar
+  inspector/
+  inspector.jar
+  installed-chrome.txt
+  messenger/
+  messenger.jar
+  ...
+</pre>
+<p>In addition to these JAR files, there are also several new <a href="/en-US/docs/RDF" title="RDF">RDF</a> files. These new files represent a redesign of the way that the Mozilla UI is packaged and installed. Though the chrome directory still includes subdirectories of uncompressed files by default, a new way to aggregate and distribute the files has improved performance, made the UI components more portable and easier to install, and made the installation process a much easier one.</p>
+<p>However, this new arrangement does not make things much easier for the web or user interface developer. The relatively simple process of finding the appropriate resources (i.e. <a href="/en-US/docs/XUL" title="XUL">XUL</a>, <a href="/en-US/docs/JavaScript" title="JavaScript">JavaScript</a>, or <a href="/en-US/docs/CSS" title="CSS">CSS</a> files) in the chrome subdirectories and editing them with a text editor has been replaced by something a lot of developers find more confusing and esoteric. This article describes the new packaging scheme of Mozilla and offers a tutorial for creating a new package that can then be redistributed, installed, and made available to users.</p>
+<h2 id="The_XPI_Packaging_Scheme" name="The_XPI_Packaging_Scheme">The XPI Packaging Scheme</h2>
+<p>A complete description of the new packaging scheme is beyond the scope of this article. The reader is referred to <a href="http://www.mozilla.org/build/jar-packaging.html">JAR Packaging</a>, which describes the design, goals, and options available for JAR packaging in some depth. What follows is a <em>very</em> brief overview of the design and a description of what Mozilla expects in installable packages.</p>
+<p>Resources are collected in JAR archives whose contents are specified in <em>contents.rdf</em> files at their own top level. The <em>contents.rdf</em> file explains the structure and contents of the archive to Mozilla's chrome registry; as long as the explanation is accurate, the contents can be arranged in almost any way you want. In the package you create in this tutorial, for example, all of the resources are located under the <code>content/</code> subdirectory, but they could just as easily have been archived directly at the top--along with skin and locale resources, if you wanted.</p>
+<p>Where before a single <em>manifest.rdf</em> file described the resources in an entire package directory or archive, now <em>contents.rdf</em> files can be used for as large or as small a part of your package description as you want; you can use several <em>contents.rdf</em> files in your package to describe the various parts (e.g., one for the skin of your package, another for the content, and so on), or you can use a single one, as was common before.</p>
+<p>Mozilla is alerted to these content specifications and the resources they manage either through registration as part of an installation process (as described in this tutorial) or by way of a shortcut file called <code>installed-chrome.txt</code>, in which developers can point at their new contents.rdf files and have them registered as they develop (a process we do not describe here). One way of another, the chrome registry is shown the contents.rdf files; the contents.rdf files in turn point to new resources, and the resources are then registered with Mozilla and accessible to the user.</p>
+<h2 id="Creating_a_New_Package" name="Creating_a_New_Package">Creating a New Package</h2>
+<p>The package described in this section is a very simple one, but it uses the new packaging scheme and the chrome registry to make itself a piece of self-contained and redistributable software. Once you have created a package like the one described here, Mozilla users can download and install it in a single step.</p>
+<h3 id="The_Barley_Package" name="The_Barley_Package">The Barley Package</h3>
+<p><img align="right" alt="The Barley window" src="/@api/deki/files/40/=Barley_Window.png">The barley package is a simple <a href="/en-US/docs/XUL" title="XUL">XUL</a> window with a couple of buttons and an image element. One of the buttons, labeled "show aphids", displays an alert dialog by calling a function defined in the JavaScript file <em>barley.js</em>.</p>
+<p>Since we are not updating the Mozilla UI to provide special access to this window (e.g., an item in the Tasks menu or elsewhere), the measure of the success of the installation of the barley package is that the user can, as before, invoke our software by using a special startup option:</p>
+<pre>mozilla -chrome chrome://barley/content
+</pre>
+<p>This option tells Mozilla to load a chrome other than the default, which is the main browser window. For this option to work, the designated chrome must have been installed and registered properly with Mozilla. The <code>chrome://</code> url pointer corresponds to the directory <code>Mozilla/bin/chrome/barley/content</code>, where the main XUL file and the other resources live once they are installed.</p>
+<h3 id="Package_Creation_Overview" name="Package_Creation_Overview">Package Creation Overview</h3>
+<p>This tutorial describes the following sequence of steps for creating a new package:</p>
+<ul>
+  <li><a href="#Developing_the_Resources">Developing the Resources</a></li>
+  <li><a href="#Organizing_the_Resources">Organizing the Resources</a></li>
+  <li><a href="#Creating_the_contents.rdf_File">Creating the contents.rdf File</a></li>
+  <li><a href="#Making_the_Barley_Install_Script">Making the Barley Install Script</a></li>
+  <li><a href="#Creating_a_XPI">Creating a XPI</a></li>
+</ul>
+<p>You can examine (or install!) the package described here by downloading the <a href="http://www.mozilla.org/docs/xul/xulnotes/barley.xpi">Barley XPI file</a> and using a ZIP unarchiver{{Ref("zip")}} to open it.</p>
+<p>All of the resources described in this article are in the XPI archive and can be adapted for use in your own development.</p>
+<h3 id="Developing_the_Resources" name="Developing_the_Resources">Developing the Resources</h3>
+<p>Needless to say, one of the first things you will have to create is the actual software you wish to make redistributable. The Barley package UI is a single XUL window with an accompanying image:</p>
+<pre class="brush:xml">&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://communicator/skin/" type="text/css"?&gt;
+
+&lt;window title="barley window"
+  xmlns:html="http://www.w3.org/1999/xhtml"
+  xmlns="http://www.mozilla.org/keymaster/gat...re.is.only.xul"
+  width="175" height="375" x="20" y="20" persist="width height x y"
+  orient="vertical"
+  autostretch="always"&gt;
+
+  &lt;script src="barley.js"/&gt;
+
+  &lt;image src="barley.gif" /&gt;
+    &lt;box orient="horizontal" autostretch="never"&gt;
+      &lt;button label="barley corn" /&gt;
+      &lt;button label="show aphids" oncommand="bar();" /&gt;
+    &lt;/box&gt;
+&lt;/window&gt;
+</pre>
+<p>The other files that the window imports are defined in <font color="darkblue">dark blue</font>. Note that the stylesheet processing instruction at the top of the XUL file does not refer to any new skin, but imports <code>communicator.css</code> to make use of that skin's basic widget styles.</p>
+<p>The JavaScript file <em>barley.js</em> contains a single function, <code>bar()</code>, defined as follows:</p>
+<pre class="brush:js">function bar() {
+  alert("aphids");
+}</pre>
+<p>If you want to use the same GIF image that is used in the Barley package, it can be grabbed from <a href="http://www.mozilla.org/docs/xul/xulnotes/barley.gif">here</a>.</p>
+<p>While you are developing these resources and before you have made them a package of their own, you can test the basic layout and functionality by opening <em>barley.xul</em> from within Mozilla by using File -&gt; Open. Though Mozilla will not display the file as a separate window (much less interpret it as a separate package), you ought to be able to see the image and the JavaScript function working as defined in <em>barley.js</em> (provided that both all three files are in the same working directory).</p>
+<h3 id="Organizing_the_Resources" name="Organizing_the_Resources">Organizing the Resources</h3>
+<p>Now that you have created the basic files to be included in your package, you should put them all in a single directory so that they can be bundled up. When your package includes its own theme, localization packs, or other components it's convenient (but not necessary to create a subdirectory structure that reflects the role of the different parts. For the Barley package, you only need to create a single subdirectory, <code>content/</code> (see figure below).</p>
+<pre>barley/
+  content/
+    barley.gif
+    barley.js
+    barley.xul
+</pre>
+<h3 id="Creating_the_contents.rdf_File" name="Creating_the_contents.rdf_File">Creating the contents.rdf File</h3>
+<p>One of the most important ingredients of the software package is the <em>contents.rdf</em> file that describes the contents of the package in terms that the chrome registry can make sense of. For a package such as this one with its own content but no special localization or custom skin, the <em>contents.rdf</em> file describes package in terms of its relation to the "root" package of Mozilla. In the following listing, the items in red are particular to the barley package and can be edited for your own distribution:</p>
+<pre class="brush:xml">&lt;?xml version="1.0"?&gt;
+&lt;RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:chrome="http://www.mozilla.org/rdf/chrome#"&gt;
+
+ &lt;!-- list all the packages being supplied --&gt;
+ &lt;RDF:Seq about="urn:mozilla:package:root"&gt;
+   &lt;RDF:li resource="urn:mozilla:package:barley"/&gt;
+ &lt;/RDF:Seq&gt;
+
+ &lt;!-- package information --&gt;
+ &lt;RDF:Description about="urn:mozilla:package:barley"
+   chrome:displayName="Barley Grain"
+   chrome:author="Ian Oeschger"
+   chrome:name="barley"&gt;
+ &lt;/RDF:Description&gt;
+
+&lt;/RDF:RDF&gt;
+</pre>
+<p>Create a contents.rdf file like the one in the listing above and put it in the <code>content/</code> subdirectory with the other package resources.</p>
+<pre> barley/
+  content/
+    barley.gif
+    barley.js
+    barley.xul
+    contents.rdf
+</pre>
+<p>These four files are all you need in your new package. The next step is to zip up the contents of the working directory. Using a ZIP archiver{{Ref("zip")}}, create a new archive of the <code>content/</code> subdirectory and name it <em>barley.jar</em>:</p>
+<p><img alt="Image:Barley_JAR.png" src="/@api/deki/files/39/=Barley_JAR.png"></p>
+<p>Once this step is complete, the Barley package is in the same state as the JAR packages of the Mozilla UI. <em>comm.jar</em>, <em>en-US.jar</em>, and all of the other archived UI packages have a similar--if slightly more complex--structure and content specification as the <em>barley.jar</em>.</p>
+<h3 id="Making_the_Barley_Install_Script" name="Making_the_Barley_Install_Script">Making the Barley Install Script</h3>
+<p>What remains is to package up your JAR file in such a way that it can be installed using Mozilla's XPInstall technology. The XPI file format is used to designate archives that use Mozilla's XPInstall to install themselves.</p>
+<p>For Barley, that installation script should read as follows:</p>
+<pre class="brush:js">// initInstall(name + version, name, version);
+var err = initInstall("barley v", "barley", "");
+
+logComment("initInstall: " + err);
+
+addFile("Barley Grain",       // displayName from contents.rdf
+  "barley.jar",               // JAR source
+  getFolder("Chrome"),        // target folder
+  "");                        // target subdir
+
+// registerChrome(TYPE, location, source)
+registerChrome(PACKAGE | DELAYED_CHROME, getFolder("Chrome","barley.jar"), "content/");
+
+if (err==SUCCESS) {
+  performInstall();
+} else {
+  cancelInstall(err);
+}</pre>
+<p>Note that there is no version number on Barley, and so the <em>name + version</em> parameter has a "v" and then nothing else. Note also the use of resource attributes specified in the <em>contents.rdf</em> file in the JAR. It is the correspondence of this installation script, the resources themselves, and the contents.rdf file that registers the package and makes it available.</p>
+<h3 id="Creating_a_XPI" name="Creating_a_XPI">Creating a XPI</h3>
+<p>The final step in the tutorial is to create a XPI archive in which the <em>install.js</em> script and the <em>barley.jar</em> can be redistributed. The archiving of an archive may seem a little redundant--and if you want you can instead use the XPI to archive the install script and "flat", or uncompressed, versions of the resources. But the XPI puts all of the resources of your package together, including the instructions for installing it. Like the JAR format that Mozilla uses to archive the UI packages, the XPI format is just a specially-ordered ZIP file. For a XPI file to be valid and installable, it must contain an installation script like the one above that tells Mozilla XPInstall where to put the new resources and how to register them.</p>
+<p>To create a XPI, use your ZIP archiver{{Ref("zip")}} again to archive the JAR file and the installation script <em>install.js</em>. The archive, named <code>barley.xpi</code>, should contain the following two files:</p>
+<pre>barley.jar
+install.js
+</pre>
+<p>This ZIP file, when opened from Mozilla using File -&gt; Open, will initialize its own installation and display a message like the following:</p>
+<p><img alt="Image:Barley_dlog.png" src="/@api/deki/files/41/=Barley_dlog.png"></p>
+<p>When you click OK, Mozilla installs the new package. Exit Mozilla and restart it with</p>
+<pre>mozilla -chrome chrome://barley/content</pre>
+<p>and the new package displays. The resources are installed in the <code>mozilla/bin/chrome/</code> directory, and the XPI itself can be redistributed for installation on other machines.</p>
+<h2 id="Notes" name="Notes">Notes</h2>
+<ol>
+  <li>{{Note("zip")}} There exist a lot of ZIP archivers/unarchivers. For Unix, you can either use the preinstalled <code>zip</code> tool, or e.g. <a href="http://www.7-zip.org/">7-Zip</a> (free software). For Windows, you can e.g. use <a href="http://www.7-zip.org/">7-Zip</a> (free software), or <a href="http://www.winzip.com/">WinZip</a> (commercial).</li>
+</ol>
+<h2 id="See_also" name="See_also">See also</h2>
+<ul>
+  <li><a href="http://www.mozilla.org/build/jar-packaging.html">JAR Packaging</a></li>
+  <li><a href="http://java.sun.com/j2se/1.5.0/docs/guide/jar/jar.html">The JAR File Specification</a></li>
+</ul>
+<div class="originaldocinfo">
+  <h2 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h2>
+  <ul>
+    <li>Author(s): <a class="link-mailto" href="mailto:oeschger@netscape.com">Ian Oeschger</a></li>
+    <li>Original Document: <a href="http://www.mozilla.org/docs/xul/xulnotes/xulnote_packages.html">Creating New Packages for Mozilla</a></li>
+    <li>Last Updated Date: March 8, 2003</li>
+    <li>Copyright Information: Copyright (C) <a class="link-mailto" href="mailto:oeschger@netscape.com">Ian Oeschger</a></li>
+  </ul>
+</div>

@@ -1,0 +1,127 @@
+---
+title: Set.prototype.has()
+slug: Web/JavaScript/Reference/Global_Objects/Set/has
+tags:
+  - ECMAScript 2015
+  - JavaScript
+  - set
+translation_of: Web/JavaScript/Reference/Global_Objects/Set/has
+---
+<div>{{JSRef("Global_Objects", "Set")}}</div>
+
+<h2 id="Summary" name="Summary">概述</h2>
+
+<p><strong>has() </strong>方法返回一个布尔值来指示对应的值value是否存在Set对象中。</p>
+
+<h2 id="Syntax" name="Syntax">语法</h2>
+
+<pre class="syntaxbox"><code><em>mySet</em>.has(value);</code></pre>
+
+<h3 id="参数">参数</h3>
+
+<dl>
+ <dt>value</dt>
+ <dd>必需。用以测试该值是否存在于 Set 对象中。</dd>
+</dl>
+
+<h3 id="返回值">返回值</h3>
+
+<dl>
+ <dt>Boolean</dt>
+ <dd>如果指定的值（value）存在于Set对象当中，返回<code>true</code>；否则返回 <code>false</code>。</dd>
+</dl>
+
+<h2 id="Examples" name="Examples">示例</h2>
+
+<h3 id="Example:_Testing_size_of_all_array_elements" name="Example:_Testing_size_of_all_array_elements">使用 <code>has</code> 方法</h3>
+
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> mySet <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Set</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+mySet<span class="punctuation token">.</span><span class="function token">add</span><span class="punctuation token">(</span><span class="string token">'foo'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+mySet<span class="punctuation token">.</span><span class="function token">has</span><span class="punctuation token">(</span><span class="string token">'foo'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>  <span class="comment token">// 返回 true</span>
+mySet<span class="punctuation token">.</span><span class="function token">has</span><span class="punctuation token">(</span><span class="string token">'bar'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>  <span class="comment token">// 返回 false</span>
+
+<span class="keyword token">var</span> set1 <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Set</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="keyword token">var</span> obj1 <span class="operator token">=</span> <span class="punctuation token">{</span><span class="string token">'key1'</span><span class="punctuation token">:</span> <span class="number token">1</span><span class="punctuation token">}</span><span class="punctuation token">;</span>
+set1<span class="punctuation token">.</span><span class="function token">add</span><span class="punctuation token">(</span>obj1<span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+set1<span class="punctuation token">.</span><span class="function token">has</span><span class="punctuation token">(</span>obj1<span class="punctuation token">)</span><span class="punctuation token">;</span>        <span class="comment token">// 返回 true</span>
+set1<span class="punctuation token">.</span><span class="function token">has</span><span class="punctuation token">(</span><span class="punctuation token">{</span><span class="string token">'key1'</span><span class="punctuation token">:</span> <span class="number token">1</span><span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// 会返回 false，因为其是另一个对象的引用</span>
+set1<span class="punctuation token">.</span><span class="function token">add</span><span class="punctuation token">(</span><span class="punctuation token">{</span><span class="string token">'key1'</span><span class="punctuation token">:</span> <span class="number token">1</span><span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// 现在 set1 中有2条（不同引用的）对象了</span></code></pre>
+
+<h2 id="规范">规范</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-set.prototype.has', 'Set.prototype.has')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>38</td>
+   <td>{{CompatGeckoDesktop("13.0")}}</td>
+   <td>11</td>
+   <td>25</td>
+   <td>7.1</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{ CompatNo() }}</td>
+   <td>38</td>
+   <td>{{CompatGeckoMobile("13.0")}}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>iOS 8</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="相关连接"><span style="font-size: 30px; letter-spacing: -1px; line-height: 30px;"><strong>相关连接</strong></span></h2>
+
+<ul>
+ <li>{{jsxref("Set")}}</li>
+ <li>{{jsxref("Set.prototype.add()")}}</li>
+ <li>{{jsxref("Set.prototype.delete()")}}</li>
+</ul>

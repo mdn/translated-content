@@ -1,0 +1,364 @@
+---
+title: dialog
+slug: Mozilla/Tech/XUL/dialog
+translation_of: Archive/Mozilla/XUL/dialog
+---
+<div class="noinclude"><span class="breadcrumbs XULRef_breadcrumbs">
+ « <a href="/zh-CN/docs/XUL_Reference">XUL Reference home</a>    [
+ <a href="#Examples">示例</a> |
+ <a href="#Attributes">属性</a> |
+ <a href="#Properties">特性</a> |
+ <a href="#Methods">方法</a> |
+ <a href="#Related">相关</a> ]
+</span></div>
+<p>在 <a href="/zh-cn/XUL/window" title="zh-cn/XUL/window">window</a> 元素调用对话框时应使用此元素。<code id="a-buttons"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/buttons">buttons</a></code> 属性可以用于设置哪些按钮应该出现在对话框中。这些按钮将被放置在用户平台指定的位置。</p>
+<p>更多有用信息可以查看 <a href="/en/XUL_Tutorial/Creating_Dialogs" title="en/XUL_Tutorial/Creating_Dialogs">XUL tutorial</a> 和 <a href="/en/Code_snippets/Dialogs_and_Prompts" title="en/Code_snippets/Dialogs_and_Prompts">Dialogs and prompts</a> (代码片段)。</p>
+<dl> <dt>属性</dt> <dd><a href="#a-buttonaccesskeyaccept">buttonaccesskeyaccept</a>, <a href="#a-buttonaccesskeycancel">buttonaccesskeycancel</a>, <a href="#a-buttonaccesskeydisclosure">buttonaccesskeydisclosure</a>, <a href="#a-buttonaccesskeyextra1">buttonaccesskeyextra1</a>, <a href="#a-buttonaccesskeyextra2">buttonaccesskeyextra2</a>, <a href="#a-buttonaccesskeyhelp">buttonaccesskeyhelp</a>, <a href="#a-buttonalign">buttonalign</a>, <a href="#a-buttondir">buttondir</a>, <a href="#a-buttondisabledaccept">buttondisabledaccept</a>, <a href="#a-buttonlabelaccept">buttonlabelaccept</a>, <a href="#a-buttonlabelcancel">buttonlabelcancel</a>, <a href="#a-buttonlabeldisclosure">buttonlabeldisclosure</a>, <a href="#a-buttonlabelextra1">buttonlabelextra1</a>, <a href="#a-buttonlabelextra2">buttonlabelextra2</a>, <a href="#a-buttonlabelhelp">buttonlabelhelp</a>, <a href="#a-buttonorient">buttonorient</a>, <a href="#a-buttonpack">buttonpack</a>, <a href="#a-buttons">buttons</a>, <a href="#a-defaultButton">defaultButton</a>, <a href="#a-ondialogaccept">ondialogaccept</a>, <a href="#a-ondialogcancel">ondialogcancel</a>, <a href="#a-ondialogdisclosure">ondialogdisclosure</a>, <a href="#a-ondialogextra1">ondialogextra1</a>, <a href="#a-ondialogextra2">ondialogextra2</a>, <a href="#a-ondialoghelp">ondialoghelp</a>, <a href="#a-title">title</a></dd>
+</dl>
+<dl> <dt>特性</dt> <dd><a href="#p-buttons">buttons</a>, <a href="#p-defaultButton">defaultButton</a></dd>
+</dl>
+<dl> <dt>方法</dt> <dd><a href="#m-acceptDialog">acceptDialog</a>, <a href="#m-cancelDialog">cancelDialog</a>, <a href="#m-centerWindowOnScreen">centerWindowOnScreen</a>, <a href="#m-getButton">getButton</a>, <a href="#m-moveToAlertPosition">moveToAlertPosition</a></dd>
+</dl>
+<h3 id="Examples" name="Examples">示例</h3>
+<div class="float-right"><img alt="Image:XUL_ref_dialog.png" class="internal" src="/@api/deki/files/453/=XUL_ref_dialog.png"></div>
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?&gt;
+&lt;dialog id="donothing" title="Dialog example"
+   xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+   buttons="accept,cancel"
+   buttonlabelcancel="Cancel"
+   buttonlabelaccept="Save"
+   ondialogaccept="return doOK();"
+   ondialogcancel="return doCancel();"&gt;
+
+    &lt;dialogheader title="Options" description="My preferences"/&gt;
+    &lt;groupbox&gt;
+      &lt;caption label="Colour"/&gt;
+      &lt;radiogroup&gt;
+        &lt;radio label="Red"/&gt;
+        &lt;radio label="Green" selected="true"/&gt;
+        &lt;radio label="Blue"/&gt;
+      &lt;/radiogroup&gt;
+      &lt;label value="Nickname"/&gt;
+      &lt;textbox /&gt;
+   &lt;/groupbox&gt;
+&lt;/dialog&gt;
+</pre>
+<h3 id="Attributes" name="Attributes">属性</h3>
+<p> </p><div id="a-activetitlebarcolor">
+
+<dl>
+ <dt>
+  <code id="a-activetitlebarcolor"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/activetitlebarcolor">activetitlebarcolor</a></code> </dt>
+ <dd>
+  Type: <em>color string</em></dd>
+ <dd>
+  Specify background color of the window's titlebar when it is active (foreground). Moreover this hides separator between titlebar and window contents. <em>This only affects Mac OS X.</em></dd>
+</dl>
+
+<p> </p>
+</div> <div id="a-buttonaccesskeyaccept">
+
+<dl>
+ <dt>
+  <code id="a-buttonaccesskeyaccept"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/buttonaccesskeyaccept">buttonaccesskeyaccept</a></code></dt>
+ <dd>
+  Type: <em>string</em></dd>
+ <dd>
+  The access key to use for the "accept" button.</dd>
+</dl>
+<p> </p>
+
+<p> </p>
+</div> <div id="a-buttonaccesskeycancel">
+
+<dl>
+  <dt>
+    <code id="a-buttonaccesskeycancel"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/buttonaccesskeycancel">buttonaccesskeycancel</a></code></dt>
+  <dd>
+    Type: <em>string</em></dd>
+  <dd>
+    The access key to use for the "cancel" button.</dd>
+</dl>
+</div> <div id="a-buttonaccesskeydisclosure">
+
+<dl>
+  <dt>
+    <code id="a-buttonaccesskeydisclosure"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/buttonaccesskeydisclosure">buttonaccesskeydisclosure</a></code></dt>
+  <dd>
+    Type: <em>string</em></dd>
+  <dd>
+    The access key to use for the "disclosure" button.</dd>
+</dl>
+</div> <div id="a-buttonaccesskeyextra1">
+
+<dl>
+  <dt>
+    <code id="a-buttonaccesskeyextra1"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/buttonaccesskeyextra1">buttonaccesskeyextra1</a></code></dt>
+  <dd>
+    Type: <em>string</em></dd>
+  <dd>
+    The access key to use for the first extra button.</dd>
+</dl>
+</div> <div id="a-buttonaccesskeyextra2">
+
+
+<dl>
+ <dt><code id="a-buttonaccesskeyextra2"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/buttonaccesskeyextra2">buttonaccesskeyextra2</a></code></dt>
+ <dd>Type: <em>string</em></dd>
+ <dd>The access key to use for the second extra button.</dd>
+</dl>
+</div> <div id="a-buttonaccesskeyhelp">
+
+<dl>
+  <dt>
+    <code id="a-buttonaccesskeyhelp"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/buttonaccesskeyhelp">buttonaccesskeyhelp</a></code></dt>
+  <dd>
+    Type: <em>string</em></dd>
+  <dd>
+    The access key to use for the "help" button.</dd>
+</dl>
+</div> <div id="a-buttonalign">
+
+<dl>
+  <dt>
+    <code id="a-buttonalign"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/buttonalign">buttonalign</a></code></dt>
+  <dd>
+    Type: <em>string</em></dd>
+  <dd>
+    The value of the <code id="a-align"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/align">align</a></code> attribute for the box containing the buttons.</dd>
+</dl>
+</div> <div id="a-buttondir">
+
+
+<dl>
+ <dt><code id="a-buttondir"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/buttondir">buttondir</a></code></dt>
+ <dd>Type: <em>string</em></dd>
+ <dd>The value of the <code id="a-dir"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/dir">dir</a></code> attribute for the box containing the buttons.</dd>
+</dl>
+</div> <div id="a-buttondisabledaccept">
+
+
+<dl>
+ <dt><code id="a-buttondisabledaccept"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/buttondisabledaccept">buttondisabledaccept</a></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>If <code>true</code>, the accept button is disabled.</dd>
+</dl>
+</div> <div id="a-buttonlabelaccept">
+
+
+<dl>
+ <dt><code id="a-buttonlabelaccept"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/buttonlabelaccept">buttonlabelaccept</a></code></dt>
+ <dd>Type: <em>string</em></dd>
+ <dd>The label to appear on the "accept" button.</dd>
+</dl>
+</div> <div id="a-buttonlabelcancel">
+
+
+<dl>
+ <dt><code id="a-buttonlabelcancel"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/buttonlabelcancel">buttonlabelcancel</a></code></dt>
+ <dd>Type: <em>string</em></dd>
+ <dd>The label to appear on the "cancel" button.</dd>
+</dl>
+</div> <div id="a-buttonlabeldisclosure">
+
+
+<dl>
+ <dt><code id="a-buttonlabeldisclosure"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/buttonlabeldisclosure">buttonlabeldisclosure</a></code></dt>
+ <dd>Type: <em>string</em></dd>
+ <dd>The label to appear on the "disclosure" button.</dd>
+</dl>
+</div> <div id="a-buttonlabelextra1">
+
+<dl>
+ <dt>
+  <code id="a-buttonlabelextra1"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/buttonlabelextra1">buttonlabelextra1</a></code></dt>
+ <dd>
+  Type: <em>string</em></dd>
+ <dd>
+  The label to appear on the first extra button.</dd>
+</dl>
+
+<p> </p>
+</div> <div id="a-buttonlabelextra2">
+
+<dl>
+ <dt>
+  <code id="a-buttonlabelextra2"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/buttonlabelextra2">buttonlabelextra2</a></code></dt>
+ <dd>
+  Type: <em>string</em></dd>
+ <dd>
+  The label to appear on the second extra button.</dd>
+</dl>
+
+<p> </p>
+</div> <div id="a-buttonlabelhelp">
+
+
+<dl>
+ <dt><code id="a-buttonlabelhelp"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/buttonlabelhelp">buttonlabelhelp</a></code></dt>
+ <dd>Type: <em>string</em></dd>
+ <dd>The label to appear on the "help" button.</dd>
+</dl>
+</div> <div id="a-buttonorient">
+
+
+<dl>
+ <dt><code id="a-buttonorient"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/buttonorient">buttonorient</a></code></dt>
+ <dd>Type: <em>string</em></dd>
+ <dd>The value of the <code id="a-orient"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code> attribute for the box containing the buttons.</dd>
+</dl>
+</div> <div id="a-buttonpack">
+
+
+<dl>
+ <dt><code id="a-buttonpack"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/buttonpack">buttonpack</a></code></dt>
+ <dd>Type: <em>string</em></dd>
+ <dd>The value of the <code id="a-pack"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/pack">pack</a></code> attribute for the box containing the buttons.</dd>
+</dl>
+</div> <div id="a-buttons">
+
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/buttons">buttons</a></span></code></dt>
+ <dd>
+  类型: 列表，下面的值用逗号分隔</dd>
+ <dd>
+  需要显示在对话框上的按钮的一个列表，使用逗号分隔。将按钮放置在合适的位置，将根据用户平台自动执行基本的事件处理。在列表中可以使用以下值：
+  <ul>
+   <li><code>accept</code>：“确定”按钮，按下按钮时将接受更改。此按钮为默认按钮。</li>
+   <li><code>cancel</code>：“取消”按钮，将取消操作。</li>
+   <li><code>help</code>：“帮助”按钮，在对话框显示一个“帮助”按钮。</li>
+   <li><code>disclosure</code>：“更多信息”按钮，显示一个“more info”按钮。该按钮可能是一个按钮或一个三角形。</li>
+   <li><code>extra1</code>：一个可选的额外的按钮。你可以通过<code><code id="a-buttonlabelextra1"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/buttonlabelextra1">buttonlabelextra1</a></code></code> 属性设置它的label。</li>
+   <li><code>extra2</code>：第二个可选的额外的按钮。你可以通过 <code><code id="a-buttonlabelextra2"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/buttonlabelextra2">buttonlabelextra2</a></code></code> 属性设置它的label。</li>
+  </ul>
+ </dd>
+</dl>
+
+<p> </p>
+</div> <div id="a-defaultButton">
+
+
+<dl>
+ <dt><code id="a-defaultButton"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/defaultButton">defaultButton</a></code></dt>
+ <dd>Type: <em>string</em></dd>
+ <dd>Normally this attribute should not be set, but if it is, it specifies the default button in the dialog. Typically, this means that the button will be activated when the Enter key is pressed. This should be set to one of the same values as those for the <code id="a-buttons"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/buttons">buttons</a></code> attribute.</dd>
+</dl>
+</div> <div id="a-inactivetitlebarcolor">
+
+
+<dl>
+ <dt><code id="a-inactivetitlebarcolor"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/inactivetitlebarcolor">inactivetitlebarcolor</a></code> </dt>
+ <dd>Type: <em>color string</em></dd>
+ <dd>Specify background color of the window's titlebar when it is inactive (background). Moreover this hides separator between titlebar and window contents. <em>This affects only on Mac OS X.</em></dd>
+</dl>
+</div> <div id="a-ondialogaccept">
+
+
+<dl>
+ <dt><code id="a-ondialogaccept"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/ondialogaccept">ondialogaccept</a></code></dt>
+ <dd>Type: <em>script code</em></dd>
+ <dd>The code in this attribute is called when the accept button is pressed, or when the <span id="m-acceptDialog"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/acceptDialog">acceptDialog</a></code></span> method is called. If the handler returns <code>true</code>, the dialog will indeed go away, but if it returns <code>false</code> it will not.</dd>
+</dl>
+</div> <div id="a-ondialogcancel">
+
+
+<dl>
+ <dt><code id="a-ondialogcancel"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/ondialogcancel">ondialogcancel</a></code></dt>
+ <dd>Type: <em>script code</em></dd>
+ <dd>The code in this attribute is called when the "cancel" button is pressed or when the <span id="m-cancelDialog"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/cancelDialog">cancelDialog</a></code></span> method is called. If the routine returns true, the dialog will indeed go away, but if it returns false it will not.</dd>
+</dl>
+</div> <div id="a-ondialogdisclosure">
+
+
+<dl>
+ <dt><code id="a-ondialogdisclosure"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/ondialogdisclosure">ondialogdisclosure</a></code></dt>
+ <dd>Type: <em>script code</em></dd>
+ <dd>The code in this attribute is called when the "disclosure" button is pressed.</dd>
+</dl>
+</div> <div id="a-ondialogextra1">
+
+
+<dl>
+ <dt><code id="a-ondialogextra1"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/ondialogextra1">ondialogextra1</a></code></dt>
+ <dd>Type: <em>script code</em></dd>
+ <dd>The code in this attribute is called when the first extra button is pressed.</dd>
+</dl>
+</div> <div id="a-ondialogextra2">
+
+
+<dl>
+ <dt><code id="a-ondialogextra2"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/ondialogextra2">ondialogextra2</a></code></dt>
+ <dd>Type: <em>script code</em></dd>
+ <dd>The code in this attribute is called when the second extra button is pressed.</dd>
+</dl>
+</div> <div id="a-ondialoghelp">
+
+
+<dl>
+ <dt><code id="a-ondialoghelp"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/ondialoghelp">ondialoghelp</a></code></dt>
+ <dd>Type: <em>script code</em></dd>
+ <dd>The code in this attribute is called when the "help" button is pressed.</dd>
+</dl>
+</div> <div id="a-title">
+
+
+<dl>
+ <dt><code id="a-title"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/title">title</a></code></dt>
+ <dd>Type: <em>string</em></dd>
+ <dd>The text to appear in the title bar of the window.</dd>
+</dl>
+</div><p></p>
+<h3 id="Properties" name="Properties">特性</h3>
+<p> </p><div id="p-buttons">
+<dl> <dt><code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/buttons">buttons</a></span></code></dt> <dd>类型: 列表，下面的值用逗号分隔</dd> <dd>需要显示在对话框上的按钮的一个列表，使用逗号分隔。将按钮放置在合适的位置，将根据用户平台自动执行基本的事件处理。在列表中可以使用以下值： <ul> <li><code>accept</code>：“确定”按钮，按下按钮时将接受更改。此按钮为默认按钮。</li> <li><code>cancel</code>：“取消”按钮，将取消操作。</li> <li><code>help</code>：“帮助”按钮，在对话框显示一个“帮助”按钮。</li> <li><code>disclosure</code>：“更多信息”按钮，显示一个“more info”按钮。该按钮可能是一个按钮或一个三角形。</li> <li><code>extra1</code>：一个可选的额外的按钮。你可以通过<code><code id="a-buttonlabelextra1"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/buttonlabelextra1">buttonlabelextra1</a></code></code> 属性设置它的label。</li> <li><code>extra2</code>：第二个可选的额外的按钮。你可以通过 <code><code id="a-buttonlabelextra2"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/buttonlabelextra2">buttonlabelextra2</a></code></code> 属性设置它的label。</li> </ul> </dd>
+</dl>
+</div> <div id="p-defaultButton">
+
+<dl>
+ <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/defaultButton">defaultButton</a></span></code></dt>
+ <dd>Type: <em>string</em></dd>
+ <dd>Normally this attribute should not be set, but if it is, it specifies the default button in the dialog. Typically, this means that the button will be activated when the Enter key is pressed. This should be set to one of the same values as those for the <code id="a-buttons"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/buttons">buttons</a></code> attribute.</dd>
+</dl></div><p></p><h3 id="Methods" name="Methods">方法</h3>
+<p></p><table style="border: 1px solid rgb(204, 204, 204); margin: 0 0 10px 10px; padding: 0 10px; background: rgb(238, 238, 238); float: right; width: 250px;">
+<tbody>
+<tr>
+<td>
+<p><strong>Inherited Methods</strong><br>
+<small><code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.addEventListener">addEventListener()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.appendChild">appendChild()</a></code>, <span id="m-blur"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/blur">blur</a></code></span>, <span id="m-click"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/click">click</a></code></span>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.cloneNode">cloneNode()</a></code>, <a href="/En/DOM/Node.compareDocumentPosition" title="En/DOM/Node.compareDocumentPosition">compareDocumentPosition</a>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.dispatchEvent">dispatchEvent()</a></code>, <span id="m-doCommand"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/doCommand">doCommand</a></code></span>, <span id="m-focus"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/focus">focus</a></code></span>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttribute">getAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttributeNode">getAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttributeNodeNS">getAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttributeNS">getAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getBoundingClientRect">getBoundingClientRect()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getClientRects">getClientRects()</a></code>, <span id="m-getElementsByAttribute"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/getElementsByAttribute">getElementsByAttribute</a></code></span>, <span id="m-getElementsByAttributeNS"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/getElementsByAttributeNS">getElementsByAttributeNS</a></code></span>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getElementsByClassName">getElementsByClassName()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getElementsByTagName">getElementsByTagName()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getElementsByTagNameNS">getElementsByTagNameNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getFeature">getFeature()</a></code>, <a href="/En/DOM/Node.getUserData" title="En/DOM/Node.getUserData">getUserData</a>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasAttribute">hasAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasAttributeNS">hasAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasAttributes">hasAttributes()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasChildNodes">hasChildNodes()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.insertBefore">insertBefore()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.isDefaultNamespace">isDefaultNamespace()</a></code>, <a href="/En/DOM/Node.isEqualNode" title="En/DOM/Node.isEqualNode">isEqualNode</a>, <a href="/En/DOM/Node.isSameNode" title="En/DOM/Node.isSameNode">isSameNode</a>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.isSupported">isSupported()</a></code>, <a href="/En/DOM/Node.lookupNamespaceURI" title="En/DOM/Node.lookupNamespaceURI">lookupNamespaceURI</a>, <a href="/En/DOM/Node.lookupPrefix" title="En/DOM/Node.lookupPrefix">lookupPrefix</a>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.normalize">normalize()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.querySelector">querySelector()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.querySelectorAll">querySelectorAll()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeAttribute">removeAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeAttributeNode">removeAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeAttributeNS">removeAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeChild">removeChild()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeEventListener">removeEventListener()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.replaceChild">replaceChild()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttribute">setAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttributeNode">setAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttributeNodeNS">setAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttributeNS">setAttributeNS()</a></code>, <a href="/En/DOM/Node.setUserData" title="En/DOM/Node.setUserData">setUserData</a></small></p>
+
+</td>
+</tr>
+</tbody>
+</table> <dl>
+  <dt>
+    <span id="m-acceptDialog"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/acceptDialog">acceptDialog()</a></code></span></dt>
+  <dd>
+    Return type: <em>no return value</em></dd>
+  <dd>
+    Accepts the dialog and closes it, similar to pressing the OK button.</dd>
+</dl> <dl>
+ <dt><span id="m-cancelDialog"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/cancelDialog">cancelDialog()</a></code></span></dt>
+ <dd>Return type: <em>no return value</em></dd>
+ <dd>Cancels the dialog and closes it, similar to pressing the Cancel button.</dd>
+</dl> <dl>
+ <dt><span id="m-centerWindowOnScreen"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/centerWindowOnScreen">centerWindowOnScreen()</a></code></span></dt>
+ <dd>Return type: <em>no return value</em></dd>
+ <dd>Centers the dialog on the screen.</dd>
+</dl> <dl>
+  <dt>
+    <span id="m-getButton"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/getButton">getButton( type )</a></code></span></dt>
+  <dd>
+    返回值类型: <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/button" title="button">button</a></code>元素</dd>
+  <dd>
+    返回当前对话框中指定类型的<code><a href="/zh-CN/docs/Mozilla/Tech/XUL/button" title="button">button</a></code>元素.</dd>
+</dl> <dl>
+ <dt><span id="m-moveToAlertPosition"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/moveToAlertPosition">moveToAlertPosition()</a></code></span></dt>
+ <dd>Return type: <em>no return value</em></dd>
+ <dd>Moves and resizes the dialog to a position and size suitable for an alert box.</dd>
+</dl><p></p>
+<h3 id="Related" name="Related">相关</h3>
+<dl> <dt>Elements</dt> <dd><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/dialogheader" title="dialogheader">dialogheader</a></code></dd>
+</dl>
+<p></p>

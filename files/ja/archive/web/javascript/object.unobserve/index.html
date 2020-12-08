@@ -1,0 +1,98 @@
+---
+title: Object.unobserve()
+slug: Archive/Web/JavaScript/Object.unobserve
+tags:
+  - JavaScript
+  - Method
+  - Object
+  - Obsolete
+translation_of: Archive/Web/JavaScript/Object.unobserve
+---
+<div>{{JSRef}} {{obsolete_header}}</div>
+
+<p><strong><code>Object.unobserve()</code></strong> メソッドは、{{jsxref("Object.observe()")}} メソッドで設定した監視の解除に使われていましたが、非推奨となりブラウザーから削除されました。代わりに、一般的な {{jsxref("Proxy")}} オブジェクトを使用してください。</p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="syntaxbox">Object.unobserve(<var>obj</var>, <var>callback</var>)</pre>
+
+<h3 id="Parameters" name="Parameters">引数</h3>
+
+<dl>
+ <dt><code>obj</code></dt>
+ <dd>監視を停止するオブジェクト。</dd>
+ <dt><code>callback</code></dt>
+ <dd>オブジェクト <strong>obj</strong> の変更ごとに呼び出される、停止したい監視オブジェクトへの参照。</dd>
+</dl>
+
+<h3 id="Return_value" name="Return_value">戻り値</h3>
+
+<p>指定したオブジェクト。</p>
+
+<h2 id="Description" name="Description">説明</h2>
+
+<p>オブジェクトからオブザーバを削除 (監視を解除) するには、<code>Object.unobserve()</code> を {{jsxref("Object.observe()")}} の後に呼び出す必要があります。</p>
+
+<p>コールバックは関数への参照でなければならず、ここに匿名関数を使用しないでください。なぜなら、この参照は事前に行った監視の解除に使われるからです。コールバックとして匿名関数を使った場合、監視を解除できないので、<strong>Object.unobserve()</strong> の呼び出しは無意味となります。</p>
+
+<h2 id="Examples" name="Examples">使用例</h2>
+
+<h3 id="Unobserving_an_object" name="Unobserving_an_object">オブジェクト監視の解除</h3>
+
+<pre class="brush: js">var obj = {
+  foo: 0,
+  bar: 1
+};
+
+var observer = function(changes) {
+  console.log(changes);
+}
+
+Object.observe(obj, observer);
+​
+obj.newProperty = 2;
+// [{name: 'newProperty', object: &lt;obj&gt;, type: 'add'}]
+
+Object.unobserve(obj, observer);
+
+obj.foo = 1;
+// コールバックは呼び出されない。</pre>
+
+<h3 id="Using_an_anonymous_function" name="Using_an_anonymous_function">匿名関数を使った場合</h3>
+
+<pre class="brush: js">var person = {
+  name: 'Ahmed',
+  age: 25
+};
+
+Object.observe(person, function(changes) {
+  console.log(changes);
+});
+
+person.age = 40;
+// [{name: 'age', object: &lt;obj&gt;, oldValue: 25, type: 'update'}]
+
+Object.unobserve(person, function(changes) {
+  console.log(changes);
+});
+
+person.age = 63;
+// [{name: 'age', object: , oldValue: 40, type: 'update'}]
+// コールバックが常に呼び出される。
+</pre>
+
+<h2 id="Specifications" name="Specifications">仕様書</h2>
+
+<p><span class="pl-s">どの標準にも含まれていません。 <a href="https://github.com/arv/ecmascript-object-observe">Strawman が提案した仕様書</a>はこちらです。</span></p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>どこでも対応されていません。歴史的には Firefox 36 から 52 が対応していました。</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>{{jsxref("Object.observe()")}}</li>
+ <li>{{jsxref("Array.observe()")}}</li>
+ <li>{{jsxref("Array.unobserve()")}}</li>
+</ul>

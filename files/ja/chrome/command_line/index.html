@@ -1,0 +1,204 @@
+---
+title: Command Line
+slug: Chrome/Command_Line
+tags:
+  - Add-ons
+  - Extensions
+translation_of: Archive/Mozilla/XUL/Providing_Command-Line_Options
+---
+<div>{{outdated("英語版もあわせてご覧下さい。")}}</div>
+<p>拡張機能と XUL アプリケーションは <a href="/ja/docs/NsICommandLineHandler">nsICommandLineHandler</a> を実装したコンポーネントを書いてそれをカテゴリへレジストする事でコマンドラインパラメーターを拾うことができます。</p>
+<h2 id="Overview" name="Overview">Overview</h2>
+<p>この添付したコードは <a href="/ja/docs/XPCOM">XPCOM</a> フレームワークを用いて書かれたコンポーネントで、<a href="/ja/docs/XPConnect">XPConnect</a> を通して <a href="/ja/docs/JavaScript">JavaScript</a> からアクセスできます。</p>
+<p>Firefoxのコマンドラインをハンドル及び初期化についての公式な(簡明な)ページは <a href="/ja/docs/NsICommandLine">nsICommandLine</a> のドキュメントで見つける事ができます。これらは、<a href="/ja/docs/XPIDL">XPIDL</a> ファイルで定義されているインターフェイスの実装されているコードのリンクを見つけられるでしょう。またそれらは <code>.idl</code> ファイルと関係があります。</p>
+<p>次に例は二つのコマンドラインパラメータをインプリメントしたコンポーネントの例です。</p>
+
+<dl>
+  <dt><code>firefox.exe -myapp</code></dt>
+  <dd>My Applicationの chrome window を開きます。</dd>
+  <dt><code>firefox.exe -viewapp <var>url</var></code></dt>
+  <dd>My Applicationの chrome window を開き、nsIURL オブジェクトを通します。</dd>
+</dl>
+<p>JavaScriptでXPCOMを書くもしくはレジストするこれ以上の方法を見つけるには次の <a href="/ja/docs/How_to_Build_an_XPCOM_Component_in_Javascript"> チュートリアル</a> を試してください。</p>
+<p> コンポーネントを順番にレジストする方法は{{Anch("Sample code")}}セクションに詳細があり、大きなボックスにある JavaScript ファイルを<code>.js</code> という拡張子で保存して、Firefox が拡張機能をスキャンするディレクトリ(<a href="/ja/docs/Bundles">Bundles</a>を参照の事)へ入れてください。Windows における典型的な場所は<i>"C:\Program Files\Mozilla Firefox\components"</i> で、もしくはあなたの拡張機能の<code>components</code> ディレクトリになります。</p>
+<p>そのとき(Firefoxをシャットダウンしたとき)に、<code>compreg.dat</code> ファイルを削除して Firefox に強制的にコンポーネントのリストを再ビルドさせて、そしてFirefoxを再起動します。<code>compreg.dat</code> ファイルをあなたのプロファイルのディレクトリに見つけても、同じ名前のファイルがFirefox のディレクトリにある事に対して混乱しないでください。</p>
+<p>あなたのプロファイルのディレクトリはホームディレクトリ以下 (Linuxであれば、 <i>~/.mozilla/firefox</i> )もしくはたぶん 'Windows上では '"C:\Documents and Settings\(user-name)\Application Data\Mozilla\Firefox\Profiles\"<i> にあるでしょう。</i></p>
+<p>Firefoxを再起動した後には、 コンポーネントが新しくなっていれば新たに<code>compreg.dat</code> ファイルが作られるでしょう。</p>
+<p>その contact ID はこのようになります: <code>@mozilla.org/commandlinehandler/general-startup;1?type=myapp</code></p>
+<p>もし、<a class="external" href="http://ted.mielczarek.org/code/mozilla/extensiondev/">Extension Developer's Extension</a> がインストールされていれば、Javascript shellを通してコンポーネントにアクセスでき、ためしにComponents.classes や Components.classesByID 配列にアクセスできます。これらの例は <a href="/ja/docs/How_to_Build_an_XPCOM_Component_in_Javascript"> このチュートリアル</a>で見ることができます。</p>
+<h2 id="Sample_Code" name="Sample_Code">Sample Code</h2>
+
+<pre>const <a href="/ja/docs/NsIAppShellService">nsIAppShellService</a>    = Components.interfaces.nsIAppShellService;
+const <a href="/ja/docs/NsISupports">nsISupports</a>           = Components.interfaces.nsISupports;
+const <a href="/ja/docs/NsICategoryManager">nsICategoryManager</a>    = Components.interfaces.nsICategoryManager;
+const <a href="/ja/docs/NsIComponentRegistrar">nsIComponentRegistrar</a> = Components.interfaces.nsIComponentRegistrar;
+const <a href="/ja/docs/NsICommandLine">nsICommandLine</a>        = Components.interfaces.nsICommandLine;
+const <a href="/ja/docs/NsICommandLineHandler">nsICommandLineHandler</a> = Components.interfaces.nsICommandLineHandler;
+const <a href="/ja/docs/NsIFactory">nsIFactory</a>            = Components.interfaces.nsIFactory;
+const <a href="/ja/docs/NsIModule">nsIModule</a>             = Components.interfaces.nsIModule;
+const <a href="/ja/docs/NsIWindowWatcher">nsIWindowWatcher</a>      = Components.interfaces.nsIWindowWatcher;
+
+// <b>CHANGEME: to the chrome URI of your extension or application</b>
+const CHROME_URI = "<a class="external" rel="freelink">chrome://myapp/content/</a>";
+
+// <b>CHANGEME: change the contract id, CID, and category to be unique</b>
+// <b>to your application.</b>
+const clh_contractID = "@mozilla.org/commandlinehandler/general-startup;1?type=myapp";
+
+// use uuidgen to generate a unique ID
+const clh_CID = Components.ID("{2991c315-b871-42cd-b33f-bfee4fcbf682}");
+
+// category names are sorted alphabetically. Typical command-line handlers use a
+// category that begins with the letter "m".
+const clh_category = "m-myapp";
+
+/**
+ * Utility functions
+ */
+
+/**
+ * Opens a chrome window.
+ * @param aChromeURISpec a string specifying the URI of the window to open.
+ * @param aArgument an argument to pass to the window (may be null)
+ */
+function openWindow(aChromeURISpec, aArgument)
+{
+  var ww = Components.classes["@mozilla.org/embedcomp/window-watcher;1"].
+    getService(Components.interfaces.<a href="/ja/docs/NsIWindowWatcher">nsIWindowWatcher</a>);
+  ww.openWindow(null, aChromeURISpec, "_blank",
+                "chrome,menubar,toolbar,status,resizable,dialog=no",
+                aArgument);
+}
+
+/**
+ * The XPCOM component that implements <a href="/ja/docs/NsICommandLineHandler">nsICommandLineHandler</a>.
+ * It also implements <a href="/ja/docs/NsIFactory">nsIFactory</a> to serve as its own singleton factory.
+ */
+const myAppHandler = {
+  /* nsISupports */
+  QueryInterface : function clh_QI(iid)
+  {
+    if (iid.equals(<a href="/ja/docs/NsICommandLineHandler">nsICommandLineHandler</a>) ||
+        iid.equals(<a href="/ja/docs/NsIFactory">nsIFactory</a>) ||
+        iid.equals(<a href="/ja/docs/NsISupports">nsISupports</a>))
+      return this;
+
+    throw Components.results.<a href="/ja/docs/NS_ERROR_NO_INTERFACE">NS_ERROR_NO_INTERFACE</a>;
+  },
+
+  /* <a href="/ja/docs/NsICommandLineHandler">nsICommandLineHandler</a> */
+
+  handle : function clh_handle(cmdLine)
+  {
+    try {
+      // <b>CHANGEME: change "viewapp" to your command line flag that takes an argument</b>
+      var uristr = cmdLine.handleFlagWithParam("viewapp", false);
+      if (uristr) {
+        // convert uristr to an <a href="/ja/docs/NsIURI">nsIURI</a>
+        var uri = cmdLine.resolveURI(uristr);
+        openWindow(CHROME_URI, uri);
+        cmdLine.preventDefault = true;
+      }
+    }
+    catch (e) {
+      Components.utils.reportError("incorrect parameter passed to -viewapp on the command line.");
+    }
+
+    // <b>CHANGEME: change "myapp" to your command line flag (no argument)</b>
+    if (cmdLine.handleFlag("myapp", false)) {
+      openWindow(CHROME_URI, null);
+      cmdLine.preventDefault = true;
+    }
+  },
+
+  <b>// CHANGEME: change the help info as appropriate, but</b>
+  <b>// follow the guidelines in nsICommandLineHandler.idl</b>
+  <b>// specifically, flag descriptions should start at</b>
+  <b>// character 24, and lines should be wrapped at</b>
+  <b>// 72 characters with embedded newlines,</b>
+  <b>// and finally, the string should end with a newline</b>
+  helpInfo : "  -myapp               Open My Application\n" +
+             "  -viewapp &lt;uri&gt;       View and edit the URI in My Application,\n" +
+             "                       wrapping this description\n",
+
+  /* nsIFactory */
+
+  createInstance : function clh_CI(outer, iid)
+  {
+    if (outer != null)
+      throw Components.results.<a href="/ja/docs/NS_ERROR_NO_AGGREGATION">NS_ERROR_NO_AGGREGATION</a>;
+
+    return this.QueryInterface(iid);
+  },
+
+  lockFactory : function clh_lock(lock)
+  {
+    /* no-op */
+  }
+};
+
+/**
+ * The XPCOM glue that implements nsIModule
+ */
+const myAppHandlerModule = {
+  /* nsISupports */
+  QueryInterface : function mod_QI(iid)
+  {
+    if (iid.equals(<a href="/ja/docs/NsIModule">nsIModule</a>) ||
+        iid.equals(<a href="/ja/docs/NsISupports">nsISupports</a>))
+      return this;
+
+    throw Components.results.<a href="/ja/docs/NS_ERROR_NO_INTERFACE">NS_ERROR_NO_INTERFACE</a>;
+  },
+
+  /* nsIModule */
+  getClassObject : function mod_gch(compMgr, cid, iid)
+  {
+    if (cid.equals(clh_CID))
+      return myAppHandler.QueryInterface(iid);
+
+    throw Components.results.<a href="/ja/docs/NS_ERROR_NOT_REGISTERED">NS_ERROR_NOT_REGISTERED</a>;
+  },
+
+  registerSelf : function mod_regself(compMgr, fileSpec, location, type)
+  {
+    compMgr.QueryInterface(<a href="/ja/docs/NsIComponentRegistrar">nsIComponentRegistrar</a>);
+
+    compMgr.registerFactoryLocation(clh_CID,
+                                    "myAppHandler",
+                                    clh_contractID,
+                                    fileSpec,
+                                    location,
+                                    type);
+
+    var catMan = Components.classes["@mozilla.org/categorymanager;1"].
+      getService(<a href="/ja/docs/NsICategoryManager">nsICategoryManager</a>);
+    catMan.addCategoryEntry("command-line-handler",
+                            clh_category,
+                            clh_contractID, true, true);
+  },
+
+  unregisterSelf : function mod_unreg(compMgr, location, type)
+  {
+    compMgr.QueryInterface(nsIComponentRegistrar);
+    compMgr.unregisterFactoryLocation(clh_CID, location);
+
+    var catMan = Components.classes["@mozilla.org/categorymanager;1"].
+      getService(nsICategoryManager);
+    catMan.deleteCategoryEntry("command-line-handler", clh_category);
+  },
+
+  canUnload : function (compMgr)
+  {
+    return true;
+  }
+};
+
+/* The NSGetModule function is the magic entry point that XPCOM uses to find what XPCOM objects
+ * this component provides
+ */
+function NSGetModule(comMgr, fileSpec)
+{
+  return myAppHandlerModule;
+}
+</pre>

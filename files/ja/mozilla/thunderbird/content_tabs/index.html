@@ -1,0 +1,81 @@
+---
+title: Content Tabs
+slug: Mozilla/Thunderbird/Content_Tabs
+translation_of: Mozilla/Thunderbird/Content_Tabs
+---
+<div class="blockIndicator standardNote">
+<p>この記事は <a href="https://developer.mozilla.org/ja/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a>  の新機能について述べています</p>
+</div>
+<p>Content Tab を使うと Thunderbird でタブの中に、ユーザがブラウザと（ほとんど）同じように閲覧可能なリモートコンテンツを表示できるようになります。例えば、Thunderbird の <strong>ヘルプ | 新着情報</strong> メニューオプションはウェブコンテンツを表示するタブを開きます。Thunderbird チームはウェブサイトを経由してこのコンテンツをいつでも更新することができます。</p>
+<p>Content Tabs はフォーム、自動補完、パスワードマネージャ、Cookie、クイック検索、その他のブラウザの機能を活用することができます。</p>
+<h2 id="Content_Tab_を開く">Content Tab を開く</h2>
+<p>Content Tab は <a href="http://mxr.mozilla.org/comm-central/source/mail/base/content/tabmail.xml">tabmail</a> インタフェースを経由して開かれます。以下の例では、新着メッセージをタブに開くかメッセージウィンドウに開くかのユーザ設定を調べ、Thunderbird のナイトリービルドのための「新着情報」ページを（ユーザの設定に応じて、Content Tab または新規メッセージウィンドウに）表示します。</p>
+<pre class="brush: js">let url = "http://www.mozillamessaging.com/en-US/thunderbird/nightly/whatsnew/";
+let tabmail = document.getElementById("tabmail");
+if (!tabmail) {
+  // Try opening new tabs in an existing 3pane window
+  let mail3PaneWindow = Components.classes["@mozilla.org/appshell/window-mediator;1"]
+                                  .getService(Components.interfaces.nsIWindowMediator)
+                                  .getMostRecentWindow("mail:3pane");
+  if (mail3PaneWindow) {
+    tabmail = mail3PaneWindow.document.getElementById("tabmail");
+    mail3PaneWindow.focus();
+  }
+}
+
+if (tabmail)
+  tabmail.openTab("contentTab", {contentPage: url});
+else
+  window.openDialog("chrome://messenger/content/", "_blank",
+                    "chrome,dialog=no,all", null,
+                    { tabType: "contentTab",
+                      tabParams: {contentPage: url} });
+</pre>
+<p>Content Tab に何かを開くのをテストするには、以下の内容をエラーコンソールに入力して <strong>コードを評価</strong> をクリックします:</p>
+<pre class="brush: js">Components.classes['@mozilla.org/appshell/window-mediator;1'].getService(Components.interfaces.nsIWindowMediator).getMostRecentWindow("mail:3pane").document.getElementById("tabmail").openTab("contentTab", {contentPage: "http://www.mozillamessaging.com/en-US/thunderbird/nightly/whatsnew/"});
+</pre>
+<p>上の例はいずれもデフォルトのクリックハンドラで Content Tab を開きます。</p>
+<h2 id="クリックのハンドリング">クリックのハンドリング</h2>
+<p>Content Tab を指定されたクリックハンドラを用いずに開くには <code><a class=" external" href="http://mxr.mozilla.org/comm-central/search?string=defaultClickHandler&amp;find=/mail" title="http://mxr.mozilla.org/comm-central/search?string=defaultClickHandler&amp;find=/mail">defaultClickHandler</a></code> を使用します。デフォルトのクリックハンドラはすべての <code>about:、</code><code>http:、</code><code>https:</code> リンクを外部のブラウザに送り、それ以外は <code>network.protocol-handler.expose.*</code> の設定に応じて内部なたは外部にロードします。</p>
+<p>Contents Tab を開くときに <code>clickHandler</code> 引数を与えることによって明示的に <code>defaultClickHandler</code> を定義することができます。これは <code>clickHandler を定義しない場合と等価であることに注意してください</code>:</p>
+<pre class="brush: js">tabmail.openTab("contentTab", {contentPage: url,
+                               clickHandler: "specialTabs.defaultClickHandler(event);" });
+</pre>
+<p><code>clickHandler</code> は <code>contentTab</code> のために生成されたブラウザ要素の <code>onclick</code> 属性に挿入される値です。</p>
+<h3 id="閲覧するサイトを制限する">閲覧するサイトを制限する</h3>
+<p>Thunderbird は <a href="/ja/Core_JavaScript_1.5_Guide/Regular_Expressions" title="ja/Core JavaScript 1.5 Guide/Regular Expressions">正規表現</a> を引数に持つ <a class=" external" href="http://mxr.mozilla.org/comm-central/search?string=siteClickHandler&amp;find=/mail" title="http://mxr.mozilla.org/comm-central/search?string=siteClickHandler&amp;find=/mail">siteClickHandler</a> を提供します。これにより以下の機能が実現されます:</p>
+<ul> <li>クリックされたリンクが <code>http</code> または <code>https</code> スキームを持っており、正規表現がそのリンクにマッチしない場合、リンクは外部ブラウザで開かれます。</li> <li>それ以外は、リンクはブラウザ要素の内部に開かれます（そして <code>network.protocol-handler.expose.*</code> 設定にしたがって）。</li>
+</ul>
+<div class="blockIndicator note"><strong>註:</strong> <code>http</code> の制限とリダイレクトの可能性により、サイトが変わったり JavaScript を使用したりすると、<code>onclick</code> ハンドラは <code>contentTab</code> がひとつのサイトにとどまることを保証することができなくなるかもしれません。この機能を使用する拡張機能はハンドラを実装するときにこのことを考慮すべきです。</div>
+<p>サイト制限の良い例が <a class=" link-https" href="https://addons.mozilla.org/en-US/thunderbird/addon/10900" title="https://addons.mozilla.org/en-US/thunderbird/addon/10900">Personas</a> 拡張機能です。これはギャラリーを閲覧するための Content Tab を開きますが、ユーザがサイトの外に出ようとするとそれは外部ブラウザに飛ばされ、一般的な閲覧のためにより良いサポートを提供します。これを実現するコードは比較的単純であり、簡単に書くと以下のようになります:</p>
+<pre class="brush: js">let PersonasController = {
+  get _thunderbirdRegExp() {
+    delete this._thunderbirdRegExp;
+    return this._thunderbirdRegExp = new RegExp("^http://www.getpersonas.com/");
+  },
+
+
+  openURLInTab: function (url) {
+    ...
+    openTab("contentTab", { contentPage: url,
+                            clickHandler: "specialTabs.siteClickHandler(event, PersonaController._thunderbirdRegExp);" });
+    ...
+  }
+};
+</pre>
+<h3 id="その他のクリックハンドラ">その他のクリックハンドラ</h3>
+<p>拡張機能は自分自身のクリックハンドラを提供できますが、それは <a class=" external" href="http://mxr.mozilla.org/comm-central/search?string=siteClickHandler&amp;find=/mail" title="http://mxr.mozilla.org/comm-central/search?string=siteClickHandler&amp;find=/mail">siteClickHandler</a> を元にすべきであり、バグを修正する更新を定期的にチェックするべきです。</p>
+<h3 id="クリックハンドラを保存する">クリックハンドラを保存する</h3>
+<p>Content Tabs は <a href="http://mxr.mozilla.org/comm-central/source/mail/base/content/tabmail.xml">tabmail</a> が提供するセッション保存コードによってフックアップされます。クリックハンドラは Content Tab の URL と一緒に保存され、アプリケーションが再起動したときに復元されます。</p>
+<h2 id="Content_Tab_を拡張する">Content Tab を拡張する</h2>
+<p>拡張機能は Content Tab を二つの方法で拡張できます: 現在の Content Tab コードを拡張する事によって（これはすべての拡張機能に影響します）または、自信のテンプレートとサポートコードによって。</p>
+<p>専用タイプを実装するには、以下を参照してください:</p>
+<ul> <li><a href="http://mxr.mozilla.org/comm-central/source/mail/base/content/specialTabs.xul">specialTabs.xul</a> - Content Tab の XUL テンプレート</li> <li><a href="http://mxr.mozilla.org/comm-central/source/mail/base/content/specialTabs.js">specialTabs.js</a> - Content Tab の JavaScript 実装（<code>contentTabType</code> を参照）</li>
+</ul>
+<h2 id="セキュリティ">セキュリティ</h2>
+<p>拡張機能はセキュリティに注意すべきです。Thunderbird はデフォルトではブラウジングをサポートしていないので、今のところは最小限のセキュリティ UI しか提供していません。考慮すべきセキュリティ課題には以下が含まれます:</p>
+<ul> <li>URL バーを提供する</li> <li>セキュリティレベルを表示する</li> <li>このページ（<a href="/En/Displaying_web_content_in_an_extension_without_security_issues" title="En/Displaying web
+    content in an extension without security issues">displaying web content in an extension</a>）には関連情報が含まれています。</li>
+</ul>
+<h2 id="参照">参照</h2>
+<p>Thunderbird の Content Tab 実装に関するバグは <a class=" link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Thunderbird" title="https://bugzilla.mozilla.org/enter_bug.cgi?product=Thunderbird">Bugzilla</a> に登録してください。最初に <a class=" link-https" href="https://bugzilla.mozilla.org/buglist.cgi?query_format=advanced&amp;product=Thunderbird&amp;component=Toolbars+and+Tabs&amp;resolution=---" title="https://bugzilla.mozilla.org/buglist.cgi?query_format=advanced&amp;product=Thunderbird&amp;component=Toolbars+and+Tabs&amp;resolution=---">existing known bugs</a> をチェックしてください。あなたのバグが新しいものであれば、バグを作成するときに "Thunderbird" プロダクトと "Toolbars and Tabs" コンポーネントを指定してください。</p>

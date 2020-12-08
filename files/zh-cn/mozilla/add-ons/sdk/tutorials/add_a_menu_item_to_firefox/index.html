@@ -1,0 +1,92 @@
+---
+title: Add a Menu Item to Firefox
+slug: Mozilla/Add-ons/SDK/Tutorials/Add_a_Menu_Item_to_Firefox
+translation_of: Archive/Add-ons/Add-on_SDK/Tutorials/Add_a_Menu_Item_to_Firefox
+---
+<div class="note">
+ <p>学习本模块你需要 <a href="/en-US/Add-ons/SDK/Installation">安装SDK</a> 学习基础工具<a href="/en-US/Add-ons/SDK/Getting_Started_With_cfx"><code>cfx</code></a>.</p>
+</div>
+<div class="note">
+ <p>如果你使用 <a href="/en-US/Add-ons/SDK/Tools/jpm">jpm</a> 替代cfx, 使用第三方模块的方式是不同的, 你应该阅读 <a href="/en-US/Add-ons/SDK/Tutorials/Using_third-party_modules_%28jpm%29">jpm</a>的相应版本替代本教程.</p>
+ <p>给予Python可能未来废弃，使用JPM基于nodejs(译者备注).</p>
+</div>
+<p class="ordinary-output target-output"><span>SDK还不能为<span>火狐浏览器</span>提供一个API添加新的菜单项。</span><span>但它是可扩展的设计，所以任何人都可以建立和发布模块，使用插件开发者。</span><span>幸运的是</span><span>，</span><span>埃里克</span><span>沃尔德</span><span>写的</span><a href="https://github.com/mykmelez/menuitems-jplib"><span>MenuItems</span></a><span>模块，</span><span>能够使我们</span><span>添加菜单项</span><span>。</span></p>
+<p class="ordinary-output target-output"><span>本教程有双重的责任。</span><span>它描述的一般</span><span>方法，</span><span>使用一个外部的</span><span>，</span><span>在你的</span><span>插件</span><span>的第三方</span><span>模块</span><span>，</span><span>并</span><span>描述了如何</span><span>使用</span><span>特别的</span><span>MenuItems</span><span>模块</span><span>添加一个菜单项</span><span>。</span></p>
+<p class="ordinary-output target-output"><span>首先，创建一个新的扩展程序。</span><span>创建一个</span><span>目录名称为</span><span>“</span><span>clickme</span><span>”</span><span>（名称随意）</span><span>，</span><span>找到它并运行</span><code>cfx init</code><span>初始化</span><span>。</span></p>
+<pre>mkdir clickme
+cd clickme
+cfx init
+</pre>
+<p>通常将创建目录结构：</p>
+<ul>
+ <li>clickme
+  <ul>
+   <li>data</li>
+   <li>docs
+    <ul>
+     <li>main.md</li>
+    </ul>
+   </li>
+   <li>lib
+    <ul>
+     <li>main.js</li>
+    </ul>
+   </li>
+   <li>package.json</li>
+   <li>README.md</li>
+   <li>tests
+    <ul>
+     <li>test-main.js</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<div>
+  </div>
+<h2 id="安装_menuitems"><code>安装 menuitems</code></h2>
+<p>在 "clickme"下创建一个名称为"packages"的目录. 从 <a href="https://github.com/mykmelez/menuitems-jplib/zipball/4d6ae5b410d79cc16c9c76920fbaa8a367e44ca7">https://github.com/mykmelez/menuitems-jplib</a>  下载 <code>menuitems 并展开到刚才创建的</code>"packages" 目录下:</p>
+<pre>mkdir packages
+cd packages
+tar -xf ../erikvold-menuitems-jplib-d80630c.zip
+</pre>
+<h2 id="模块依赖">模块依赖</h2>
+<p class="ordinary-output target-output"><span>如果</span><span>第三方模块</span><span>只</span><span>取决于</span><span>SDK</span><span>模块</span><span>，</span><span>你</span><span>可以马上</span><span>使用它们</span><span>，</span><span>但如果</span><span>他们依赖于其他</span><span>第三方模块</span><span>，</span><span>你需要安装</span><span>的</span><span>依赖</span><span>以及</span><span>。</span></p>
+<p><span class="high-light-bg">在软件包的主目录，你会发现一个叫做</span> "package.json"的文件.  <span>打开它，看看一个</span>名称"dependencies"的入口.  <code>menuitems</code> 包的入口:</p>
+<pre>"dependencies": ["vold-utils"]
+</pre>
+<p>这告诉我们需要安装 <code>vold-utils</code> 包, 我们可以从<a href="https://github.com/mykmelez/vold-utils-jplib/zipball/a321447dc5d613df33023165854957c181dc3174">https://github.com/mykmelez/vold-utils-jplib</a> 下载，并添加到 <code>packages</code> 目录<code>下的旁边的menuitems</code>.</p>
+<h2 id="使用menuitems"><code>使用menuitems</code></h2>
+<p> <a href="https://github.com/mykmelez/menuitems-jplib/blob/master/docs/menuitems.md"><code>Menuitems</code>模块文档</a> <code>告诉使用MenuItem()创建一个新的菜单项</code>. <code>MenuItem()可接受的附加选项</code>, 我们将使用最迷你的配置:</p>
+<ul>
+ <li><code>id</code>: 菜单项标示符</li>
+ <li><code>label</code>:菜单项线上的文本</li>
+ <li><code>command</code>: 用户选择菜单项的响应函数</li>
+ <li><code>menuid</code>: 菜单项的父类标示符</li>
+ <li><code>insertbefore</code>: 我们希望出现的标示符之前的位置</li>
+</ul>
+<div>
+ <div>
+  <pre class="brush: js">var menuitem = require("menuitems").Menuitem({
+  id: "clickme",
+  menuid: "menu_ToolsPopup",
+  label: "Click Me!",
+  onCommand: function() {
+    console.log("clicked");
+  },
+  insertbefore: "menu_pageInfo"
+});</pre>
+  <div>
+    </div>
+ </div>
+</div>
+<p>接下来, 我们将<code>声明menuitems</code>的依赖包. 在你的add-on's <code>package.json文件添加一行</code>:</p>
+<pre>"dependencies": "menuitems"
+</pre>
+<p>Note that due to <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=663480">bug 663480</a>, if you add a <code>dependencies</code> line to <code>package.json</code>, and you use any modules from the SDK, then you must also declare your dependency on that built-in package, like this:</p>
+<pre>"dependencies": ["menuitems", "addon-sdk"]
+</pre>
+<p class="ordinary-output target-output"><span>现在我们要做的。</span><span>运行</span><span>插件</span><span>，</span><span>你会</span><span>看到新的项目</span><span>出现在工具</span><span>菜单：</span><span>选择它，</span><span>你会看到</span><code>info: clicked </code><span>出现在</span><span>控制台</span><span>。</span></p>
+<h2 id="Caveats">Caveats</h2>
+<p class="ordinary-output target-output"><span>第三方</span><span>模块</span><span>使用</span><span>不直接支持的</span><span>SDK功能</span><span>的好方法，</span><span>但由于</span><span>第三方模块</span><span>通常使用</span><span>低级别的</span><span>API</span><span>，</span><span>它们可以通过</span><span>Firefox的</span><span>新版本</span><span>了</span><span>。</span></p>
+<p> </p>

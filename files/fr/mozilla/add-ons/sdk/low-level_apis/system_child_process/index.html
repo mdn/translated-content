@@ -1,0 +1,50 @@
+---
+title: system/child_process
+slug: Mozilla/Add-ons/SDK/Low-Level_APIs/system_child_process
+translation_of: Archive/Add-ons/Add-on_SDK/Low-Level_APIs/system_child_process
+---
+<div class="note">
+<p>Expérimentale</p>
+</div>
+
+<p><span class="seoSummary">Une mise en œuvre de l'API <a href="http://nodejs.org/api/child_process.html" title="http://nodejs.org/api/child_process.html"> node.js <code>child_process</code></a>.</span></p>
+
+<p>Ce module vous permet d'exécuter un programme sous-jacent dans un nouveau processus. Il émule l'API node.js <code>child_process</code>, qui n'est pas documentées séparément. Cependant, il ya quelques différences :</p>
+
+<ul>
+ <li>utiliser le module <code>require("sdk/system/child_process")</code></li>
+ <li><code>fork()</code> n'est pas supporté</li>
+ <li><code>gid</code> et <code>uid</code> ne sont pas supportés</li>
+ <li>dans node.js, <code>spawn()</code> et <code>exec()</code> hériter des variables d'environnement du processus parent, par défaut. Les versions du SDK ne le font pas: alors quand vous spécifiez une commande, vous devez passer le chemin d'accès complet de la commande ou utilisez l'option <code>env</code> pour configurer l'environnement de processus enfant .</li>
+</ul>
+
+<p>Voici un exemple qui adapte l'exemple de la documentation de node.js pour <a href="http://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options" title="http://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options"> <code>spawn()</code> </a>:</p>
+
+<pre class="brush: js">var child_process = require("sdk/system/child_process");
+
+var ls = child_process.spawn('/bin/ls', ['-lh', '/usr']);
+
+ls.stdout.on('data', function (data) {
+  console.log('stdout: ' + data);
+});
+
+ls.stderr.on('data', function (data) {
+  console.log('stderr: ' + data);
+});
+
+ls.on('close', function (code) {
+  console.log('child process exited with code ' + code);
+});</pre>
+
+<h3 id="Utilisation_child_process_dans_les_extensions_non-jpm">Utilisation child_process dans les extensions non-jpm</h3>
+
+<p> </p>
+
+<pre>// Import SDK Stuff
+const COMMONJS_URI = 'resource://gre/modules/commonjs';
+const { require } = Cu.import(COMMONJS_URI + '/toolkit/require.js', {});
+var child_process = require('sdk/system/child_process');
+
+// Use it in the same way as in the example above</pre>
+
+<p> </p>

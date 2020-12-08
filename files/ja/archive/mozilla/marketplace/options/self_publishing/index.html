@@ -1,0 +1,150 @@
+---
+title: アプリの自主配布
+slug: Archive/Mozilla/Marketplace/Options/Self_publishing
+tags:
+  - Apps
+  - Beginner
+  - Firefox OS
+  - Guide
+  - Marketplace
+translation_of: Archive/Mozilla/Marketplace/Options/Self_publishing
+---
+<div class="summary">
+ <p><span class="seoSummary">アプリを Firefox Marketplace 経由で入手できないようにしたいという事情があるかも知れません。例えば、組織のメンバーにアプリを配布したり、ベータテストを実施したり、あるいは単に自分の好きなようにしたいといった場合です。このページでは、Firefox Marketplace 外でアプリを自主配布する方法を説明します。</span></p>
+</div>
+<p>Open Web App は {{ domxref("Apps.install") }} か {{ domxref("Apps.installPackage") }} を使って Firefox OS、Firefox for Android を実行しているデバイス、Firefox for Desktop を実行しているデスクトップマシンにインストールします。どちらの場合でも、インストールするアプリについて記述したマニフェストの URL を API に送ることで機能します。そのため、アプリの自主配布に必要な基本要件は以下のようになります。</p>
+<ol>
+ <li>アプリのマニフェストを保持するサーバー</li>
+ <li>（ホスト型アプリの場合は）アプリか、アプリをパッケージした ZIP ファイルを保持するサーバー</li>
+ <li>Web サイト上で適切に {{ domxref("Apps.install") }} か {{ domxref("Apps.installPackage") }} を呼ぶコード</li>
+</ol>
+<h2 id="制限事項">制限事項</h2>
+<p>Open Web App を自主配布する前に、以下の制限事項を把握しておきましょう。</p>
+<ul>
+ <li>自主配布アプリは<a href="/ja/Apps/App_permissions">アプリの許可設定</a>を使えない。この API を使うにはパッケージ型アプリにし、Firefox Marketplace の提出プロセスを使ってその ZIP ファイルに署名する必要がある</li>
+ <li>Firefox Marketplace のアプリ内課金を使えない</li>
+ <li>Firefox Marketplace の一覧に載るという恩恵にあずかれないため、自分でアプリを見付けてもらうための技術を実装する必要がある</li>
+</ul>
+<h2 id="パッケージ型アプリの自主配布">パッケージ型アプリの自主配布</h2>
+<p>ZIP をミニマニフェストと一緒にサーバー上に置くことでパッケージ型アプリを自主配布することができます。ミニマニフェストは ZIP と同じディレクトリーに置く必要があり、インストールプロセス中にアプリを特定するのに使われます。次に {{ domxref("Apps.installPackage") }} を呼び出してミニマニフェストの詳細を渡すスクリプトを作成します。どのようにやるのか詳細を見てみましょう。</p>
+<ol>
+ <li>
+  <p>アプリの中身を ZIP アーカイブして <code>package.zip</code> という名前にしま。 このファイルには、（メイン）<a href="https://developer.mozilla.org/en-US/Apps/Build/Manifest" title="Manifest documentation">マニフェスト</a>を含む全てのリソースファイルを入れます。</p>
+  <div class="warning">
+   <p>注意：パッケージ型アプリに入れる中身を ZIP アーカイブする時には、それを保持するディレクトリーは含めないように気をつけてください。親ディレクトリーをアーカイブするとマニフェストがおかしな場所に置かれることになり、パッケージ型アプリは無効になってしまいます。</p>
+  </div>
+ </li>
+ <li><code>manifest.webapp</code> というファイルを作成して以下に示す内容を追加します。このファイルは、パッケージ型アプリの ZIP ファイルに含まれるマニフェストを少し簡略化したバージョンなのでミニマニフェストとして知られています。これは {{ domxref("Apps.installPackage") }} がアプリのインストールを開始するのに使います。内容についての詳細情報は、後述の<a href="#Mini-manifest_fields">ミニマニフェストのフィールド</a>を参照してください。
+  <pre class="brush: js">{
+    "name": "サンプルアプリ",
+    "package_path" : "<a class="LinkyMobile-ext" href="http://my-server.com/my-app-directory/my-app.zip" title="Linkification: http://my-server.com/my-app-directory/my-app.zip">http://my-server.com/my-app-directory/package.zip</a>",
+    "version": "1",
+    "developer": {
+        "name": "とある開発者",
+        "url": "<a class="LinkyMobile-ext" href="http://my-server.com" title="Linkification: http://my-server.com">http://my-server.com</a>"
+    }
+}</pre>
+ </li>
+ <li>アプリをインストールするスクリプトを作成します。ここでは <code>index.html</code> という名前の簡単な HTML ファイルを使いますが、ボタンにスクリプトを追加するなど Web サイト上で適切に実行できるのであればどんな方法でも使えます。このページの JavaScript はパッケージ型アプリ用のインストーラー API（{{ domxref("Apps.installPackage") }}）を呼び、インストールが成功したか失敗したかを通知するコールバックも含んでいます。
+  <pre class="brush: html">&lt;html&gt;
+  &lt;body&gt;
+    &lt;p&gt;パッケージ型アプリのインストールページ&lt;/p&gt;
+    &lt;script&gt;
+      // ここの URL はフルの URL でなければなりません。
+      var manifestUrl = '<a class="LinkyMobile-ext" href="http://my-server.com/my-app-directory/package.manifest" title="Linkification: http://my-server.com/my-app-directory/package.manifest">http://my-server.com/my-app-directory/manifest.webapp</a>';
+      var req = navigator.mozApps.installPackage(manifestUrl);
+      req.onsuccess = function() {
+        alert(this.result.origin);
+      };
+      req.onerror = function() {
+        alert(this.error.name);
+      };
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+ </li>
+ <li><code>package.zip</code>、<code>manifest.webapp</code>、<code>index.html</code> をサーバーや Web サイトの好きなディレクトリー（このサンプルでは <code>my-app-directory</code>）にコピーしてファイルを設置します。</li>
+ <li>これで（Firefox OS 電話などの）対応デバイスを使ってアプリをインストールできます。単に <code>index.html</code> ファイル（このサンプルでは <code> <a class="LinkyMobile-ext" href="http://my-server.com/my-app-directory/package.manifest" title="Linkification: http://my-server.com/my-app-directory/package.manifest">http://my-server.com/my-app-directory/index.html</a></code> というパス）を開いて、アプリをインストールするかどうか確認するプロンプトを表示するだけです。インストールを続行し、完了すると、Web ページのスクリプトがインストールが成功したか失敗したかを示します。</li>
+</ol>
+<div class="note">
+ <p>ヒント：パッケージ型アプリはローカルに配置してデバイス上でテストすることができます。Web サーバーとデバイスは同じネットワーク上にある必要があり、サーバーはローカルネットワークからのリクエストを処理できなければなりません。ミニマニフェストの <code>package_path</code> では、絶対パスを記入する通常の方法（下記参照）と同じように絶対パスを記入するだけで構いません。標準以外のポート番号を使用する場合には、例えば <code><a class="LinkyMobile-ext" href="http://10.10.12.1:8080/package.zip" title="Linkification: http://10.10.12.1:8080/package.zip">http://10.10.12.1:8080/package.zip</a></code> のように忘れずにポートの情報も含めてください。</p>
+</div>
+<h3 id="ミニマニフェストのフィールド">ミニマニフェストのフィールド</h3>
+<p>Firefox Marketplace でアプリを公開するのであれば、ミニマニフェストは Firefox Marketplace が生成してくれるためその作成について考える必要はありません。ZIP に含まれているアプリのマニフェストファイルにある情報を使って生成してくれます。「メイン」マニフェストの内容に関する詳細は<a href="/ja/Apps/Manifest">アプリマニフェスト</a>で見ることができます。</p>
+<p>自主配布アプリでは自分でミニマニフェストを作る必要があります。一番いい方法は「メイン」マニフェストをコピーし、必要に応じて変更することです。コピーを使うと、<strong><code>name</code>、<code>version、</code><code>developer</code>、<code>locales</code> フィールドは（メインでもミニでも）どちらのマニフェストでも同じでなければならない</strong>というミニマニフェストの第一の要件に役立ちます。さらに追加する内容がいくつかあります。ミニマニフェスト特有のフィールドである <code>package_path、release_notes、</code><code>size です。</code></p>
+<dl>
+ <dt>
+  <code>package_path（必須）</code></dt>
+ <dd>
+  アプリの ZIP ファイルを保存している場所の絶対パス（<code><a class="LinkyMobile-ext" href="http://my-server.com/my-app-directory/package.manifest" title="Linkification: http://my-server.com/my-app-directory/package.manifest">http://my-server.com/my-app-directory/manifest.webapp</a></code> といったフル URL）。</dd>
+ <dt>
+  <code>release_notes（任意）</code></dt>
+ <dd>
+  アプリのリリースに関する情報。この情報は Firefox Marketplace では提出プロセスの一部として用意する。</dd>
+</dl>
+<dl>
+ <dt>
+  <code>size</code><code>（任意）</code></dt>
+ <dd>
+  アプリのバイト単位のサイズ。この情報はインストール中に進行状況を示すのに {{ domxref("Apps.installPackage") }} が使用する。</dd>
+</dl>
+<p>例として以下のようになります。</p>
+<pre class="brush: js">{
+  "name": "わたしのアプリ",
+  "package_path": "<a class="LinkyMobile-ext" href="http://thisdomaindoesnotexist.org/myapp.zip" title="Linkification: http://thisdomaindoesnotexist.org/myapp.zip">http://thisdomaindoesnotexist.org/myapp.zip</a>",
+  "version": "1.0",
+  "size": 172496,
+  "release_notes": "最初のリリース",
+  "developer": {
+    "name": "開発者名",
+    "url": "<a class="LinkyMobile-ext" href="http://thisdomaindoesnotexist.org/" title="Linkification: http://thisdomaindoesnotexist.org/">http://thisdomaindoesnotexist.org/</a>"
+  },
+  "locales": {
+    "fr-FR": {
+      "name": "Mon application"
+    },
+    "se-SE": {
+      "name": "Min balla app"
+    }
+  },
+  "icons": {
+    "16": "/icons/16.png",
+    "32": "/icons/32.png",
+    "256": "/icons/256.png"
+  }
+}
+</pre>
+<p>この例にあるほかのフィールドは次の通りです。</p>
+<dl>
+ <dt>
+  <code>name</code><code>（必須）</code></dt>
+ <dd>
+  アプリ名。最大文字数は 128 文字です。</dd>
+ <dt>
+  <code>version</code><code>（任意）</code></dt>
+ <dd>
+  アプリのバージョン。</dd>
+ <dt>
+  <code>developer</code><code>（任意）</code></dt>
+ <dd>
+  <code>name</code> フィールドと <code>url</code> からなる開発者についての情報。開発者情報はミニマニフェストファイルと ZIP 中のメインマニフェストファイルで一致しなければなりません。</dd>
+ <dt>
+  <code>locales</code><code>（任意）</code></dt>
+ <dd>
+  ローカライゼーション情報。キーは <code>xx-YY</code> というフォーマット。</dd>
+ <dt>
+  <code>icons</code><code>（任意）</code></dt>
+ <dd>
+  アプリで使用するアイコン。</dd>
+</dl>
+<p>マニフェストファイルの内容についての詳細は<a href="/ja/Apps/Manifest" title="Manifest documentation">アプリマニフェスト</a>を参照してください。</p>
+<h2 id="ホスト型アプリの自主配布">ホスト型アプリの自主配布</h2>
+<p>内容を Firefox Marketplace で公開するのと同じ方法で作っていれば、ホスト型アプリの自主配布はパッケージ型アプリに比べて単純です。これは基本的にはアプリの<a href="/ja/Apps/Manifest" title="Manifest documentation">マニフェストファイル</a>を作ることを意味しています。次に {{ domxref("Apps.install") }} を呼び出すコードを追加する必要があります。このコードは上で示したパッケージ型アプリで使うのと本質的に同じで、唯一違う点は、望むならマニフェストファイルの場所を表す相対参照を使えることです。</p>
+<h2 id="関連項目">関連項目</h2>
+<ul>
+ <li><a href="/ja/Apps/Apps_JavaScript_API">App Installation and Management APIs</a></li>
+ <li>{{ domxref("Apps.install") }}</li>
+ <li>{{ domxref("Apps.installPackage") }}</li>
+ <li><a href="/ja/Apps/Manifest" title="Manifest documentation">App manifest</a></li>
+ <li><a href="/ja/Apps/App_permissions">App permissions</a></li>
+</ul>

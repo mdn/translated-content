@@ -1,0 +1,63 @@
+---
+title: JS ConstructObject
+slug: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_ConstructObject
+tags:
+  - JSAPI Reference
+  - SpiderMonkey
+translation_of: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_ConstructObject
+---
+<p></p><div class="breadcrumbs"><a href="/ja" title="ja">メインページ</a> » <a href="/ja/docs/SpiderMonkey" title="SpiderMonkey">SpiderMonkey</a> »
+ <a href="/ja/docs/SpiderMonkey/JSAPI_Reference" title="JSAPI_Reference">JSAPI リファレンス</a> »
+ <code>JS_ConstructObject</code></div>
+<p></p>
+
+<p>新たにJavaScriptオブジェクトを生成し、コンストラクタを呼び出します。 <span class="comment">Create a new JavaScript object and invoke its constructor.</span></p>
+
+<h2 id=".E6.A7.8B.E6.96.87" name=".E6.A7.8B.E6.96.87">構文</h2>
+
+<pre class="eval"><a href="/ja/JSObject" title="ja/JSObject">JSObject</a> * <strong>JS_ConstructObject</strong>(<a href="/ja/JSRuntime" title="ja/JSRuntime">JSContext</a> *cx, <a href="/ja/JSClass" title="ja/JSClass">JSClass</a> *clasp,
+    <a href="/ja/JSObject" title="ja/JSObject">JSObject</a> *proto, <a href="/ja/JSObject" title="ja/JSObject">JSObject</a> *parent);
+</pre>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Name</th>
+   <th>Type</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td><code>cx</code></td>
+   <td><code><a href="/ja/JSRuntime" title="ja/JSRuntime">JSContext</a> *</code></td>
+   <td>新たなオブジェクトを配置するコンテキスト<span class="comment">The context in which to create the new object. {{ jsapi-requires-request }}&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;&lt;code&gt;clasp&lt;/code&gt;&lt;/td&gt; &lt;td&gt;&lt;code&gt;<a href="/ja/JSClass">JSClass</a> *&lt;/code&gt;&lt;/td&gt; &lt;td&gt;オブジェクト生成時に利用するクラスへのポインタ。&lt;code&gt;NULL&lt;/code&gt;を指定したときは、一般的なJavaScript &lt;code&gt;Object&lt;/code&gt;が生成されます。&lt;!--Pointer to the class to use for the new object. If this is &lt;code&gt;NULL&lt;/code&gt;, an ordinary JavaScript &lt;code&gt;Object&lt;/code&gt; is created.</span></td>
+  </tr>
+  <tr>
+   <td><code>proto</code></td>
+   <td><code><a href="/ja/JSObject" title="ja/JSObject">JSObject</a> *</code></td>
+   <td>クラスとなるプロトタイプオブジェクトへのポインタ<span class="comment">Pointer to the prototype object to use for the new class.</span></td>
+  </tr>
+  <tr>
+   <td><code>parent</code></td>
+   <td><code><a href="/ja/JSObject" title="ja/JSObject">JSObject</a> *</code></td>
+   <td>新たなオブジェクトの __parent__ プロパティに指定するオブジェクトへのポインタ<span class="comment">Pointer to which to set the new object's __parent__ property.</span></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id=".E8.A7.A3.E8.AA.AC" name=".E8.A7.A3.E8.AA.AC">解説</h2>
+
+<p><code>JS_ConstructObject</code>は、与えられたクラス、プロトタイプ、親オブジェクト、コンストラクタ関数をもとに新たなオブジェクトのインスタンスを生成する関数です。<code>cx</code>には、新たなオブジェクトを配置するランタイムと結び付けられたコンテキストへのポインタを指定します。<code>clasp</code>には、ファイナライズ処理などの内部関数が定義された既存クラスへのポインタを指定します。<code>proto</code>は、新たなオブジェクトのプロトタイプとなるオブジェクトへのポインタを指定する引数です。 <span class="comment">&lt;code&gt;JS_ConstructObject&lt;/code&gt; instantiates a new object based on a specified class, prototype, and parent object, and then invokes its constructor function. &lt;code&gt;cx&lt;/code&gt; is a pointer to a context associated with the runtime in which to establish the new object. &lt;code&gt;clasp&lt;/code&gt; is a pointer to an existing class to use for internal methods, such as finalize. &lt;code&gt;proto&lt;/code&gt; is an optional pointer to the prototype object with which to associate the new object.</span></p>
+
+<p>自分自身をプロトタイプオブジェクトにするには、<code>proto</code>に<code>NULL</code>を指定してください。このとき、<code>clasp</code>がプロトタイプを定義している場合には、<code>JS_ConstructObject</code>は新たなオブジェクトのプロトタイプにそれを用います。定義していない場合は、空オブジェクトスタブをプロトタイプとします。 <span class="comment">Set &lt;code&gt;proto&lt;/code&gt; to &lt;code&gt;NULL&lt;/code&gt; to force JS to assign a prototype object for you. In this case, &lt;code&gt;JS_ConstructObject&lt;/code&gt; attempts to assign the new object the prototype object belonging to &lt;code&gt;clasp&lt;/code&gt;, if one is defined there. Otherwise, it creates an empty object stub for the prototype.</span></p>
+
+<p><code>parent</code>には、新規オブジェクトの親プロパティとなるオブジェクトへのポインタを指定します。この引数はオプションであり、<code>parent</code>に<code>NULL</code>を指定することで親プロパティを持たないオブジェクトになります。 <span class="comment">&lt;code&gt;parent&lt;/code&gt; is an optional pointer to an existing object to which to set the new object's parent object property. You can set &lt;code&gt;parent&lt;/code&gt; to &lt;code&gt;NULL&lt;/code&gt; if you do not want to set the parent property.</span></p>
+
+<p><code>JS_ConstructObject</code>が成功したとき、新たに生成されたオブジェクトへのポインタをその返値とします。失敗したときは<code>NULL</code>を返します。 <span class="comment">On success, &lt;code&gt;JS_ConstructObject&lt;/code&gt; returns a pointer to the newly instantiated object. Otherwise it returns &lt;code&gt;NULL&lt;/code&gt;.</span></p>
+
+<h2 id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE" name=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE">関連項目</h2>
+
+<p>{{ LXRSearch("ident", "i", "JS_ConstructObject") }}</p>
+
+<p><a href="/ja/JS_DefineObject" title="ja/JS_DefineObject">JS_DefineObject</a>, <a href="/ja/JS_GetFunctionObject" title="ja/JS_GetFunctionObject">JS_GetFunctionObject</a>, <a href="/ja/JS_NewArrayObject" title="ja/JS_NewArrayObject">JS_NewArrayObject</a>, <a href="/ja/JS_NewObject" title="ja/JS_NewObject">JS_NewObject</a>, <a href="/ja/JS_ValueToObject" title="ja/JS_ValueToObject">JS_ValueToObject</a></p>
+
+<p>{{ languages( { "en": "en/JS_ConstructObject" } ) }}</p>

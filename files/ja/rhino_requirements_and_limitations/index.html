@@ -1,0 +1,33 @@
+---
+title: Rhino Requirements and Limitations
+slug: Rhino_Requirements_and_Limitations
+tags:
+  - Rhino
+translation_of: Mozilla/Projects/Rhino/Requirements_and_Limitations
+---
+<h2 id=".E8.A6.81.E4.BB.B6"> 要件 </h2>
+<p>Rhino の最新版は JDK 1.4 以降でしかテストされていません。古いバージョンは JDK 1.1 以降をサポートしています。
+</p><p>JavaAdapter の機能か、あるいは最適化のレベル 0 以上を使用するためには、クラスローダーの定義を許可するセキュリティマネージャのもとで Rhino を走らせる必要があります。{{ 訳注("Java アプリケーションへ組み込む場合に注意する必要がある") }}
+</p>
+<h2 id=".E5.88.B6.E9.99.90"> 制限 </h2>
+<h3 id="LiveConnect">LiveConnect</h3>
+<p>JavaObject のフィールド名とメソッド名が衝突している場合、そのフィールドの値は遅延検索され、それにより、直感に反し、より新しい割り当ての影響を受けます。
+</p>
+<pre>javaObj.fieldAndMethod = 5;
+var field = javaObj.fieldAndMethod;
+javaObj.fieldAndMethod = 7;
+// now, field == 7
+</pre>
+<p>(影響を受けない)その値を得たい場合、フィールドの値を強制的に JavaScript の型に変換することで解決できます。
+</p>
+<pre>javaObj.fieldAndMethod = 5;
+var field = javaObj.fieldAndMethod + 0; // force conversion now
+javaObj.fieldAndMethod = 7;
+// now, field == 5
+</pre>
+<h3 id="JSObject"> JSObject </h3>
+<p>Rhino では、<code class="filename">netscape.javascript.JSObject</code> クラスを、<b>これっぽっちも</b>サポートしていません。
+</p>
+<div class="noinclude">
+</div>
+{{ languages( { "en": "en/Rhino_Requirements_and_Limitations" } ) }}

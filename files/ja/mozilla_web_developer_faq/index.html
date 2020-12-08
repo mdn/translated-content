@@ -1,0 +1,227 @@
+---
+title: Mozilla Web Developer FAQ
+slug: Mozilla_Web_Developer_FAQ
+tags:
+  - Web Development
+translation_of: Mozilla/Mozilla_Web_Developer_FAQ
+---
+<p>この文書ではウェブページの作者が、特に Mozilla や Firefox などの Gecko ベースのブラウザーに関して頻繁に聞く質問に答えます。文書の最後にはより一般的なウェブページ作成の FAQ へのリンクを用意しています。</p>
+
+<h2 id="Quirks_.E3.83.A2.E3.83.BC.E3.83.89.E3.81.A8_Standards_.E3.83.A2.E3.83.BC.E3.83.89.E3.81.A8.E3.81.84.E3.81.86.E3.81.AE.E3.81.AF.E4.BD.95.EF.BC.9F" name="Quirks_.E3.83.A2.E3.83.BC.E3.83.89.E3.81.A8_Standards_.E3.83.A2.E3.83.BC.E3.83.89.E3.81.A8.E3.81.84.E3.81.86.E3.81.AE.E3.81.AF.E4.BD.95.EF.BC.9F">Quirks モードと Standards モードというのは何？</h2>
+
+<p>Mozilla には <a href="ja/Mozilla's_Quirks_Mode">Quirks と Almost Standards および Standards</a> という 2 つ半のレイアウトモードがあります。Standards モードでは Mozilla は <a class="external" href="http://www.w3.org/">World Wide Web Consortium</a> の <a class="external" href="http://www.w3.org/TR/#Recommendations">勧告</a> に従って書かれたドキュメントを W3C 勧告通りに扱うことを目指しています。Quirks モードでは — 後方互換性のため — Mozilla は過去のブラウザーの挙動をある程度真似しています。この場合 W3C 勧告に従うドキュメントが W3C 仕様に反して扱われることもあります。Almost Standards モードは、<a href="#.E3.83.AC.E3.82.A4.E3.82.A2.E3.82.A6.E3.83.88.E3.82.A8.E3.83.B3.E3.82.B8.E3.83.B3.E3.81.8C_Standards_.E3.83.A2.E3.83.BC.E3.83.89.E3.81.A7.E3.81.82.E3.82.8B.E9.9A.9B.E3.81.AB.E8.A1.A8.E4.B8.AD.E3.81.AE.E7.94.BB.E5.83.8F.E8.A1.8C.E9.96.93.E3.81.AB.E9.9A.99.E9.96.93.E3.81.8C.E3.81.82.E3.82.8B.E3.81.AE.E3.81.AF.E3.81.AA.E3.81.9C.EF.BC.9F">次の質問</a> の問題について昔からの方法で画像を表のセル中に描画するように扱うことを除いて、Standards モードと同じものです。モードは HTML ドキュメント冒頭の doctype 宣言 (あるいはその欠如) に基づいて選ばれます。</p>
+
+<ul>
+ <li>HTML で確実に「Standards モード」を起動する最も簡単な方法はこの DOCTYPE 宣言を使用することです:<br>
+  <code><span class="nowiki">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</span></code></li>
+ <li>HTML で確実に「Almost Standards モード」を起動する最も簡単な方法はこの DOCTYPE 宣言を使用することです:<br>
+  <code><span class="nowiki">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</span></code></li>
+</ul>
+
+<p>上の宣言は推奨されないマークアップをまったく含まない文書用です。下の宣言は推奨されないマークアップを含んでいるかも知れない文書用です。いずれにしろ文書は <a class="external" href="http://validator.w3.org/">検証</a> され CSS2 レイアウトモデルに準じるべきです。</p>
+
+<p>HTML で Quirks モード を起動する最も簡単な方法は DOCTYPE 宣言を省略することです。しかし、Quirks モードに依存する文書を新たに書くことは推奨できません。</p>
+
+<p>Almost Standards モード は Mozilla 1.1 ベータおよび Mozilla 1.0.1 で導入されました。それ以前のバージョンでは現在では Almost Standards モードを起動する DOCTYPE 宣言は Standards モードを起動していました。</p>
+
+<p>DOCTYPE 判別は <code>text/html</code> として渡された文書に対してのみ利用されます。XML として送信された文書は常に Standards レイアウトモードを起動します。これは <code>application/xhtml+xml</code> として送られた文書も含みます。この結果として、XHTML 1.0 Transitional 文書は 付録 C にかこつけて <code>text/html</code> として渡された場合は Almost Standards モード で描画されますが、(<em>しかるべく</em>して) <code>application/xhtml+xml</code> として渡された場合は Standards モードで描画されることになります。</p>
+
+<p>Since also <a class="external" href="http://hsivonen.iki.fi/doctype/">other contemporary browsers</a> have a standards mode, activating the Standards mode or the Almost Standards mode in other browsers as well (using the above-mentioned exact doctypes) is the best way to get consistent CSS layout results across different browsers. On the other hand, the quirks implemented in the quirks modes of different browsers vary from browser to browser.</p>
+
+<h2 id=".E3.83.AC.E3.82.A4.E3.82.A2.E3.82.A6.E3.83.88.E3.82.A8.E3.83.B3.E3.82.B8.E3.83.B3.E3.81.8C_Standards_.E3.83.A2.E3.83.BC.E3.83.89.E3.81.A7.E3.81.82.E3.82.8B.E9.9A.9B.E3.81.AB.E8.A1.A8.E4.B8.AD.E3.81.AE.E7.94.BB.E5.83.8F.E8.A1.8C.E9.96.93.E3.81.AB.E9.9A.99.E9.96.93.E3.81.8C.E3.81.82.E3.82.8B.E3.81.AE.E3.81.AF.E3.81.AA.E3.81.9C.EF.BC.9F" name=".E3.83.AC.E3.82.A4.E3.82.A2.E3.82.A6.E3.83.88.E3.82.A8.E3.83.B3.E3.82.B8.E3.83.B3.E3.81.8C_Standards_.E3.83.A2.E3.83.BC.E3.83.89.E3.81.A7.E3.81.82.E3.82.8B.E9.9A.9B.E3.81.AB.E8.A1.A8.E4.B8.AD.E3.81.AE.E7.94.BB.E5.83.8F.E8.A1.8C.E9.96.93.E3.81.AB.E9.9A.99.E9.96.93.E3.81.8C.E3.81.82.E3.82.8B.E3.81.AE.E3.81.AF.E3.81.AA.E3.81.9C.EF.BC.9F">レイアウトエンジンが Standards モードである際に表中の画像行間に隙間があるのはなぜ？</h2>
+
+<p>CSS2 のボックスレイアウトモデルではレイアウトボックスの <a class="external" href="http://www.w3.org/TR/REC-CSS2/visudet.html#q15">垂直サイズ</a> の初期値と画像の <a href="ja/CSS/vertical-align">垂直位置揃え</a> の初期値が以前のブラウザーの振る舞いとは異なります。レイアウトのこれらの特徴は画像 (場合によってはそれを囲んでいる <code>&lt;a&gt;</code> 要素) の <code>display</code> CSS プロパティを明示的に <code>block</code> と設定することで変更できます。</p>
+
+<p>例えば画像のみを含む表のセルが <code>&lt;td class="imgcell"&gt;</code> のようにマークアップされているなら、必要な CSS ルールは: <code>.imgcell img, .imgcell a { display: block; }</code></p>
+
+<p><a href="ja/Images%2c_Tables%2c_and_Mysterious_Gaps">より詳しい解説…</a></p>
+
+<h2 id="Why_are_there_still_gaps_even_between_text_rows_in_tables_when_the_layout_engine_is_in_the_Standards_mode_or_in_the_Almost_Standards_mode.3F" name="Why_are_there_still_gaps_even_between_text_rows_in_tables_when_the_layout_engine_is_in_the_Standards_mode_or_in_the_Almost_Standards_mode.3F">Why are there still gaps even between text rows in tables when the layout engine is in the Standards mode or in the Almost Standards mode?</h2>
+
+<p>In the Standards mode and in the Almost Standards mode Mozilla does not suppress the default margins of the first and last child element in table cells. Therefore, the default margins for paragraphs apply even with markup such as <code>&lt;td&gt;&lt;p&gt;foo&lt;/p&gt;&lt;/td&gt;</code>.</p>
+
+<p>Often the content of a cell in a table of tabular data does not constitute a paragraph. In that case, the easy solution is not to mark the contents of the cell as a paragraph.</p>
+
+<p>When the paragraph markup is called for but the default margins are unwanted, zero margins can be suggested using CSS.</p>
+
+<h2 id=".E3.82.B9.E3.82.BF.E3.82.A4.E3.83.AB.E3.82.B7.E3.83.BC.E3.83.88.E3.81.8C.E6.A9.9F.E8.83.BD.E3.81.97.E3.81.AA.E3.81.84.EF.BC.81_.E3.81.A9.E3.81.86.E3.81.97.E3.81.A6.EF.BC.9F" name=".E3.82.B9.E3.82.BF.E3.82.A4.E3.83.AB.E3.82.B7.E3.83.BC.E3.83.88.E3.81.8C.E6.A9.9F.E8.83.BD.E3.81.97.E3.81.AA.E3.81.84.EF.BC.81_.E3.81.A9.E3.81.86.E3.81.97.E3.81.A6.EF.BC.9F">スタイルシートが機能しない！ どうして？</h2>
+
+<p>チェックリストを用意しました:</p>
+
+<ul>
+ <li>HTML 文書の <a class="external" href="http://validator.w3.org/">有効性検査</a> はされましたか？ CSS はタグのごった煮とは合いません。
+
+  <ul>
+   <li><code>&lt;link&gt;</code> および <code>&lt;style&gt;</code> 要素は <code>&lt;head&gt;</code> 要素中に書かれるべきです。</li>
+  </ul>
+ </li>
+ <li>CSS スタイルシートは <a class="external" href="http://jigsaw.w3.org/css-validator/">文法チェック</a> にパスしていますか？ The <a class="external" href="http://www.w3.org/TR/CSS21/syndata.html#parsing-errors">CSS エラー処理の規則</a> では、間違った部分は推測によって修正するのではなく無視すべきとされています。
+  <ul>
+   <li>ゼロ以外の長さ値は数字と単位との間にスペースを入れずに適切な単位を付記するべきです (例: 1.2em)。</li>
+   <li>プロパティ名と値の間に使用する文字はコロンであり等号ではありません。</li>
+   <li><code>&lt;style&gt;</code> のような HTML マークアップは .css ファイル中には含めません。</li>
+   <li><code>font-face</code> は実際の CSS プロパティではありません。プロパティであるのは <code>font-family</code> であり、<code>@font-face</code> は @ルール です。{{ 訳注("あまり知られていないようですが CSS2 ではより柔軟なフォント指定の為に新たな @ルール として @font-face が定義されています。なお、「at-rule」の訳は「@規則」とされることがありますが、CSS ではスタイル指定記述 (セレクタと宣言のセット) を「ルール」と呼ぶのが通例であり、その特殊なものという位置づけですから同様に「@ルール」と呼ぶのが妥当だと思います。") }}</li>
+   <li><code>@import</code> を使用する場合、CSS ファイルの最初に書くべきです。</li>
+   <li>Mozilla 1.8a4 以降 (Firefox 1.0 は含まれません) では、CSS パースエラーは JavaScript コンソールに出力されます。</li>
+  </ul>
+ </li>
+ <li>サーバーが CSS ファイルを適切な <code>Content-Type</code> ヘッダで送信していますか？
+  <ul>
+   <li>正しいタイプは <code>text/css</code> です。</li>
+   <li><a href="#Quirks_.E3.83.A2.E3.83.BC.E3.83.89.E3.81.A8_Standards_.E3.83.A2.E3.83.BC.E3.83.89.E3.81.A8.E3.81.84.E3.81.86.E3.81.AE.E3.81.AF.E4.BD.95.EF.BC.9F">Standards モードと Almost Standards モード</a> では、適切なタイプで送信されたスタイルシートのみが適用されます。</li>
+   <li>サーバーが送信している HTTP ヘッダは、拡張機能の <a class="external" href="http://livehttpheaders.mozdev.org/">LiveHTTPHeaders</a> か <a class="external" href="http://web-sniffer.net/">Web sniffer</a> を利用することで確認できます。</li>
+  </ul>
+ </li>
+ <li>クラスおよび ID 名は大文字小文字を区別します。</li>
+ <li>XML では要素セレクタは大文字小文字を区別します。</li>
+ <li>スタイルシート処理命令は XML 文書の冒頭でのみ認められています。さらに、XML 文書でのみ機能し、<code>text/html</code> として渡された文書では機能しません。</li>
+ <li><code>width</code> や <code>height</code> は (初期設定では) <code>&lt;span&gt;</code> のような非置換インライン要素には適用されません。</li>
+ <li><code>text-align: center;</code> とするとブロック内部のインラインコンテントが中央に配置されます。ブロックボックス自体は中央配置されません (してはなりません)。ブロックはその <code>margin-left</code> と <code>margin-right</code> を <code>auto</code> に設定し、<code>width</code> をそのブロックがそれを含むブロックよりも狭くなる値に設定することで中央に配置されます。</li>
+</ul>
+
+<p>あまり無いことではありますが、バグに遭遇することもあります。</p>
+
+<h2 id="JavaScript_.E3.81.8C.E6.A9.9F.E8.83.BD.E3.81.97.E3.81.AA.E3.81.84.EF.BC.81_.E3.81.A9.E3.81.86.E3.81.97.E3.81.A6.EF.BC.9F" name="JavaScript_.E3.81.8C.E6.A9.9F.E8.83.BD.E3.81.97.E3.81.AA.E3.81.84.EF.BC.81_.E3.81.A9.E3.81.86.E3.81.97.E3.81.A6.EF.BC.9F">JavaScript が機能しない！ どうして？</h2>
+
+<p><code>document.all</code> や <code>document.layers</code> といった独自拡張のドキュメントオブジェクトは W3C DOM には含まれておらず、Mozilla ではサポートされていません。(なお、比較的新しいバージョンの Mozilla では、<code>document.all</code> の部分不検知サポートが含まれています。しかし、この機能は IE 専用に作られたサイトとの互換性のために存在しているだけです。新しいページに関して Mozilla の <code>document.all</code> サポートに依存すべきではありません。) <code class="script">document.getElementById()</code> メソッドを <a href="ja/Using_Web_Standards_in_your_Web_Pages/Using_the_W3C_DOM#W3C_DOM_.E3.81.A7.E8.A6.81.E7.B4.A0.E3.81.AB.E3.82.A2.E3.82.AF.E3.82.BB.E3.82.B9.E3.81.99.E3.82.8B">代わりに使用できます</a>。</p>
+
+<p>In the Standards mode Mozilla does not generate implicit top-level JavaScript variable bindings for elements with the <code>id</code> or <code>name</code> attribute. The correct way to access an element by id is to call the <code>document.getElementById()</code> method with the id as a string as the argument.</p>
+
+<p>また、古いクライアント判別コードは新しいブラウザーを閉め出すかも知れないことに注意してください。共通 API (W3C DOM) を採用する目的は実行環境への依存をなくすこと (相互運用性) であり、特定のブラウザーをチェックすることはその目的に反します。DOM を使用する場合には使用するつもりのメソッドやオブジェクトの存在を確認する方がより適切です。例えば、<code>document.getElementById()</code> の存在は次のようにして確認できます:</p>
+
+<pre class="eval">if(document.getElementById) {
+   /* code that uses document.getElementById() */
+}
+</pre>
+
+<h2 id="Mozilla_.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.A6_alt_.E3.83.84.E3.83.BC.E3.83.AB.E3.83.81.E3.83.83.E3.83.97.E3.82.92.E8.A1.A8.E7.A4.BA.E3.81.97.E3.81.A6.E3.81.8F.E3.82.8C.E3.81.AA.E3.81.84.E3.81.AE.EF.BC.9F" name="Mozilla_.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.A6_alt_.E3.83.84.E3.83.BC.E3.83.AB.E3.83.81.E3.83.83.E3.83.97.E3.82.92.E8.A1.A8.E7.A4.BA.E3.81.97.E3.81.A6.E3.81.8F.E3.82.8C.E3.81.AA.E3.81.84.E3.81.AE.EF.BC.9F">Mozilla はどうして <code>alt</code> ツールチップを表示してくれないの？</h2>
+
+<p>Windows プラットフォームで動作する 2 つのブラウザーの挙動から一般に考えられているのとは異なり、<code>alt</code> は「tooltip」ではなく「alternative」の短縮形です。<code>alt</code> 属性の値は画像のテキストによる「置き換え」であり、画像が存在しない時に表示されるものです。</p>
+
+<p>そうしてしまえば作者達が属性を誤用するのを促進してしまうことが分かっているので、Mozilla は <code>alt</code> 属性をツールチップとして表示しません。</p>
+
+<ul>
+ <li>置き換えテキストをツールチップとして表示すれば、一部の作者はテキストを画像の置き換えではなく補助ツールチップのつもりで使用して不作法な <code>alt</code> テキストを書いてしまいます。(画像を見ない人にとってテキスト置き換えが役に立たないという意味で「不作法」ということです)</li>
+ <li>置き換えテキストをツールチップとして表示すれば、他の作者はツールチップを表示したくないために置き換えテキストを一切提供したくなくってしまいます。(繰り返しますが、画像を見ない人が困るのです)</li>
+</ul>
+
+<p>Mozilla がツールチップとして表示するための <code>title</code> という<em>別の</em>属性があります。実際、HTML 4.01 仕様は <code>title</code> 属性はツールチップとして表示してもよいと提示しています。しかしながら、この決まった表示方法が要求されているわけではなく、例えば他のブラウザーはステータスバーに <code>title</code> 属性を表示しています。</p>
+
+<p>現在の所一部の人はニュースグループや Bugzilla で「でも IE は…」と騒ぎ主張しなければならないと感じているようですが、Mac IE 5 は <code>alt</code> および <code>title</code> 属性に対して Mozilla と同様の振る舞いを見せているし、Windows IE も <code>title</code> 属性をツールチップに表示するということを分かってください。</p>
+
+<h2 id="Mozilla_.E3.81.AF.E3.83.80.E3.82.A6.E3.83.B3.E3.83.AD.E3.83.BC.E3.83.89.E5.8F.AF.E8.83.BD.E3.81.AA.E3.83.95.E3.82.A9.E3.83.B3.E3.83.88.E3.82.92.E3.82.B5.E3.83.9D.E3.83.BC.E3.83.88.E3.81.97.E3.81.A6.E3.81.84.E3.82.8B.E3.81.AE.EF.BC.9F" name="Mozilla_.E3.81.AF.E3.83.80.E3.82.A6.E3.83.B3.E3.83.AD.E3.83.BC.E3.83.89.E5.8F.AF.E8.83.BD.E3.81.AA.E3.83.95.E3.82.A9.E3.83.B3.E3.83.88.E3.82.92.E3.82.B5.E3.83.9D.E3.83.BC.E3.83.88.E3.81.97.E3.81.A6.E3.81.84.E3.82.8B.E3.81.AE.EF.BC.9F">Mozilla はダウンロード可能なフォントをサポートしているの？</h2>
+
+<p>ダウンロード可能フォントはサポートされていません。</p>
+
+<p>ダウンロード可能フォントは以前のブラウザーが適切なサポートを欠いていた記述システムを用いたサイトで通常使用されています。これらのサイト (例えば一部のインドのサイト) ではブラウザーやオペレーティングシステムにはラテン語 {{ 訳注("英語など西欧の主言語はこれにあたる") }} フォントのように見えるが例えばデーバナーガリー文字 {{ 訳注("サンスクリット語やヒンディー語で使用される文字") }} を収めたちんぷんかんぷんなラテン語テキストを書いています。そのフォントでちんぷんかんぷんなラテン語が描画されると人間の読み手には何らかの言語で理解できるようになるわけです。ラテン語ベーステキストで他にも数学の記号としてギリシャ文字を含めるのに同じ手法が使用されています。</p>
+
+<p>明らかに、この手の応急的措置は Unicode 対応のブラウザーが現れてちんぷんかんぷんなラテン語を (Unicode の視点からすればそれがファイルに書かれているものであるため) ちんぷんかんぷんなラテン語として描画すれば破綻してしまいます。ダウンロード可能フォントをサポートするのではなく、Mozilla は真の問題に取り組んでいます。Unicode の多くの領域をサポートしているのです。</p>
+
+<p>しかしながら、一部のプラットフォームでは未だにインド語の記述へのサポートに関してバグがあります。例えば、Mac OS X では、Mozilla はシステムに付属するデーバナーガリーフォントを使用しませんが、TITUS Cyberbit などのサードパーティフォントを使用できます。</p>
+
+<p><em>多大な</em>労力が Mozilla の Unicode サポートにつぎ込まれています。クロスプラットフォームな方法でのダウンロード可能フォントのサポートもまた多大な作業となり更に過去のパテントの山を通り抜けていく必要がありますが、得られるものは僅かでしょう。ISO-8859-1 文字以外を描画する目的では Mozilla は既に Unicode のサポートを提供しており、それは長い目で見れば各サイトで別々の疑似ラテン語のダウンロード可能フォントを使用するよりも遙かに実りある手法なのです。</p>
+
+<h2 id="Why_aren.E2.80.99t_symbol.2Fdingbat_fonts_working.3F" name="Why_aren.E2.80.99t_symbol.2Fdingbat_fonts_working.3F">Why aren’t symbol/dingbat fonts working?</h2>
+
+<p>They are working. Characters in HTML 4 and XML documents are Unicode characters (even if the document has been encoded using a legacy encoding for transfer)—not font glyph indexes.</p>
+
+<p><code>&lt;font face="Symbol"&gt;a&lt;/font&gt;</code> means the character LATIN SMALL LETTER A (U+0061) preferably displayed using the Symbol font. Since the Symbol font does not have glyph for that character, another font is used. If you mean α, you should use GREEK SMALL LETTER ALPHA (U+03B1). If you are using a legacy encoding that cannot represent that character, you can use a numeric character reference: <code>&amp;#945;</code>.</p>
+
+<p>Likewise, to use a dingbat, you should use the appropriate Unicode character instead of trying to apply a dingbat font to an ASCII character. 例えば、to represent ☺, you should use WHITE SMILING FACE (U+263A).</p>
+
+<h2 id=".E3.81.A9.E3.81.86.E3.81.97.E3.81.A6_Mozilla_.E3.81.AF.E7.A7.81.E3.81.AE.E6.84.8F.E5.9B.B3.E3.81.99.E3.82.8B.E9.80.9A.E3.82.8A.E3.81.AB.E6.8F.8F.E7.94.BB.E3.81.97.E3.81.A6.E3.81.8F.E3.82.8C.E3.81.AA.E3.81.84.E3.81.AE.EF.BC.9F_.E7.A2.BA.E3.81.8B.E3.81.AB.E7.A7.81.E3.81.AE.E3.83.9A.E3.83.BC.E3.82.B8.E3.81.AF.E6.A8.99.E6.BA.96.E6.BA.96.E6.8B.A0.E3.81.A7.E3.81.AF.E3.81.AA.E3.81.84.E3.82.8F.E3.80.82.E3.81.A7.E3.82.82.E3.80.81.E3.81.A1.E3.82.83.E3.82.93.E3.81.A8.E3.81.97.E3.81.9F.E3.83.96.E3.83.A9.E3.82.A6.E3.82.B6.E3.81.A0.E3.81.A3.E3.81.9F.E3.82.89.E4.BD.95.E3.81.AF.E3.81.A8.E3.82.82.E3.81.82.E3.82.8C.E4.BD.9C.E8.80.85.E3.81.AE.E6.84.8F.E5.9B.B3.E9.80.9A.E3.82.8A.E3.81.AB.E3.83.9A.E3.83.BC.E3.82.B8.E3.82.92.E6.8F.8F.E7.94.BB.E3.81.99.E3.82.8B.E3.81.B9.E3.81.8D.E3.82.88.EF.BC.81" name=".E3.81.A9.E3.81.86.E3.81.97.E3.81.A6_Mozilla_.E3.81.AF.E7.A7.81.E3.81.AE.E6.84.8F.E5.9B.B3.E3.81.99.E3.82.8B.E9.80.9A.E3.82.8A.E3.81.AB.E6.8F.8F.E7.94.BB.E3.81.97.E3.81.A6.E3.81.8F.E3.82.8C.E3.81.AA.E3.81.84.E3.81.AE.EF.BC.9F_.E7.A2.BA.E3.81.8B.E3.81.AB.E7.A7.81.E3.81.AE.E3.83.9A.E3.83.BC.E3.82.B8.E3.81.AF.E6.A8.99.E6.BA.96.E6.BA.96.E6.8B.A0.E3.81.A7.E3.81.AF.E3.81.AA.E3.81.84.E3.82.8F.E3.80.82.E3.81.A7.E3.82.82.E3.80.81.E3.81.A1.E3.82.83.E3.82.93.E3.81.A8.E3.81.97.E3.81.9F.E3.83.96.E3.83.A9.E3.82.A6.E3.82.B6.E3.81.A0.E3.81.A3.E3.81.9F.E3.82.89.E4.BD.95.E3.81.AF.E3.81.A8.E3.82.82.E3.81.82.E3.82.8C.E4.BD.9C.E8.80.85.E3.81.AE.E6.84.8F.E5.9B.B3.E9.80.9A.E3.82.8A.E3.81.AB.E3.83.9A.E3.83.BC.E3.82.B8.E3.82.92.E6.8F.8F.E7.94.BB.E3.81.99.E3.82.8B.E3.81.B9.E3.81.8D.E3.82.88.EF.BC.81">どうして Mozilla は私の意図する通りに描画してくれないの？ 確かに私のページは標準準拠ではないわ。でも、ちゃんとしたブラウザーだったら何はともあれ作者の意図通りにページを描画するべきよ！</h2>
+
+<p>作者は Web 標準を用いてその意図を伝えることが求められます。そうしなければ、それぞれ特定の作者の意図を理解することはソフトウェアに実装するには物理的に不可能なのです。人間であれば意図を推定できるような場合でも、ソフトウェアがそのようにするのは大変遅く、バグを誘引することとなり、難しく複雑なものなのです。</p>
+
+<p>お決まりの反論は考えるまでもなく、Mozilla は何でもブラウザー <var>X</var> のするようにすればいいのよ (ここで <var>X</var> は大概反論を述べている人が好きな Mozilla 以外のブラウザー)、というものです。ですがしかし、先の主張で述べられたところでは簡単なことのように見えても、考え得るあらゆる場合にブラウザー <var>X</var> のようにするというのは決して簡単ではないのです。</p>
+
+<p>人が違えば Mozilla が合わせるべき <var>X</var> についての意見も異なります。第二の問題は Web 作者達は標準を逸脱した様々な方法を持ち出してくるのに大変創造的だということです。事実、ブラウザーへの入力は恣意的長さとなり、標準からの脱線方法が異なる数には上限がないのです。それゆえ、Mozilla が可能な入力すべてに対して正確にブラウザー <var>X</var> のように反応するかどうか確かめることは不可能なのです。(同様に、標準の多様な機能自身が組み合わされ得る方法の数にも上限はなく、ソフトウェア品質保証を厳しいものとしています)</p>
+
+<p>また、ブラウザー <var>X</var> の標準非準拠入力に対する反応の仕方は必ずしも意図的ではありません。一部の反応は複雑なプログラム内部での不明で意図されない相互作用に因るものです。ブラウザー <var>X</var> のソースコードを持っていたとしても、1 つあるいはそれ以上のプログラム内部の不明で意図されない相互作用を変更する危険を冒すことなく何一つ変えることなどできないでしょう。</p>
+
+<p>お決まりの反論となるのは、Mozilla はあり得る場合すべてでブラウザー <var>X</var> の振る舞いに合わせる必要などないわ、ただ特定されている一般的な場合だけ合わせればいいのよ、というものです。ですがこれは既に Mozilla がしていることになります。Mozilla の Standards モードは、明らかに、同じ標準をそれなりに正しく実装している他のブラウザーと既に互換性があります。その一方で、Mozilla の Quirks モードは一般的なレガシーブラウザーの振る舞いが原因である一般的な非標準状態に既に適応しています。</p>
+
+<p>リバースエンジニアリングやレガシーブラウザーを真似するのに時と労力を費やすのではなく、標準を実装するのに注力するほうがもっと効果があります。レガシーソフトのバグを一つ一つ真似るよりも標準は (他でも同様に実装されれば) よりしっかりと相互利用性を促進します。</p>
+
+<p>また、HTML は異なる表現メディアに適応するよう設計されているため、同じドキュメントでも異なった表示になるのは意図されたことなのです。</p>
+
+<h2 id="According_to_the_Accept_header.2C_Mozilla_prefers_application.2Fxhtml.2Bxml_over_text.2Fhtml._Should_I_serve_application.2Fxhtml.2Bxml_to_Mozilla.3F" name="According_to_the_Accept_header.2C_Mozilla_prefers_application.2Fxhtml.2Bxml_over_text.2Fhtml._Should_I_serve_application.2Fxhtml.2Bxml_to_Mozilla.3F">According to the <code>Accept</code> header, Mozilla prefers <code>application/xhtml+xml</code> over <code>text/html</code>. Should I serve <code>application/xhtml+xml</code> to Mozilla?</h2>
+
+<p>The preference for <code>application/xhtml+xml</code> was added to the <code>Accept</code> header in order to enable the serving of MathML to both Mozilla and IE with Apache without scripting back when the MathPlayer plug-in for IE did not handle <code>application/xhtml+xml</code>.</p>
+
+<p>If your document mixes MathML with XHTML, you should use <code>application/xhtml+xml</code>. If you’re developing XHTML Basic content for mobile devices and are serving it as <code>application/xhtml+xml</code>, you can serve it as <code>application/xhtml+xml</code> to Mozilla as well without taking special steps (except perhaps providing a different style sheet for the <code>handheld</code> and <code>screen</code> media).</p>
+
+<p>However, if you are using the usual HTML features (no MathML) and are serving your content as <code>text/html</code> to other browsers, there is no need to serve <code>application/xhtml+xml</code> to Mozilla. In fact, in versions prior to Gecko 1.9/Firefox 3, doing so would deprive the Mozilla users of incremental display, because incremental loading of XML documents has not been implemented in those versions. Serving valid HTML 4.01 as <code>text/html</code> ensures the widest browser and search engine support.</p>
+
+<p>There is a fad of serving <code>text/html</code> to IE but serving the same markup with no added value as <code>application/xhtml+xml</code> to Mozilla. This is usually done without a mechanism that would ensure the well-formedness of the served documents. Mechanisms that ensure well-formed output include serializing from a document tree object model (eg. DOM) and XSLT transformations that do not disable output escaping. When XHTML output has been retrofitted to a content management system that was not designed for XML from the ground up, the system usually ends up discriminating Mozilla users by serving tag soup labeled as XML to Mozilla (leading to a parse error) and serving the same soup labeled as tag soup to IE (not leading to a parse error).</p>
+
+<h2 id="How_is_the_treatment_of_application.2Fxhtml.2Bxml_documents_different_from_the_treatment_of_text.2Fhtml_documents.3F" name="How_is_the_treatment_of_application.2Fxhtml.2Bxml_documents_different_from_the_treatment_of_text.2Fhtml_documents.3F">How is the treatment of <code>application/xhtml+xml</code> documents different from the treatment of <code>text/html</code> documents?</h2>
+
+<ul>
+ <li>An XML parser (expat) is used instead of the tag soup parser.
+  <ul>
+   <li>Most well-formedness constraints are enforced. (Currently Mozilla does not catch character encoding errors, because the document is re-encoded using a lenient encoding converter before the document reaches the XML parser. This is a bug.) Despite common allegations to the contrary, the document is<em>not</em> checked for validity.</li>
+   <li>Externally defined character entities other than the five pre-defined ones (<code>&amp;lt;</code>, <code>&amp;gt;</code>, <code>&amp;amp;</code>, <code>&amp;quot;</code> and <code>&amp;apos;</code>) are only supported if the document references a public identifier for which there is a mapping in Mozilla’s pseudo-DTD catalog and the document has not been declared standalone.</li>
+   <li>In older versions of Mozilla as well as in old Mozilla-based products, there is no pseudo-DTD catalog and the use of externally defined character entities (other than the five pre-defined ones) leads to an XML parsing error. There are also other XHTML user agents that do not support externally defined character entities (other than the five pre-defined ones). Since non-validating XML processors are not required to support externally defined character entities (other than the five pre-defined ones), the use of externally defined character entities (other than the five pre-defined ones) is inherently unsafe in XML documents intended for the Web. The best practice is to use straight UTF-8 instead of entities. (Numeric character references are safe, too.)</li>
+   <li><code>document.write()</code> is not supported. The stream that is going into the parser can’t be tampered with in mid-parse.</li>
+   <li>Things that look like XML comments are treated as XML comments—even inside <code>script</code> or <code>style</code> elements.</li>
+   <li>Elements need to be in the XHTML namespace in order to be treated as XHTML elements.</li>
+   <li><code>meta</code> tags are not examined for character encoding information.</li>
+   <li><code>tbody</code>, <code>head</code>, <code>body</code>, and <code>html</code> are not inferred if the tags are not explicitly present.</li>
+   <li>CDATA sections are supported.</li>
+   <li>XML empty element notation (<code>&lt;foo/&gt;</code>) is supported.</li>
+   <li>White space characters in attribute values are <a class="external" href="http://www.w3.org/TR/REC-xml/#AVNormalize">normalized</a> to spaces at parse time, so the original white space never makes it to the DOM. This affects data round tripping using hidden form <code>input</code>s.</li>
+  </ul>
+ </li>
+ <li>In versions prior to Gecko 1.9/Firefox 3, the document is not loaded and rendered incrementally. That is, the document is displayed only after the entire document has been received and parsed. Contrary to a common misguided assertion, this is not done in response to a requirement set forth in any W3C specification. In particular, the XML specification does<em>not</em> require the entire document to be checked for errors before rendering can start. The lack of incremental loading and display is simply a bug (or a missing feature). This has been fixed in Gecko 1.9/Firefox 3.</li>
+ <li>The layout mode is the (Full) Standards Mode regardless of doctype.</li>
+ <li>CSS works according to the XML+CSS rules.
+  <ul>
+   <li>HTML-specific CSS exceptions do not apply. 例えば、the <code>body</code> element gets no special treatment.</li>
+   <li>CSS selectors are case-sensitive.</li>
+  </ul>
+ </li>
+ <li>The DOM is in the XML mode.
+  <ul>
+   <li>Namespace-aware variants of methods need to be used when working with elements (eg. <code>createElementNS()</code> instead of <code>createElement()</code>).</li>
+   <li>In older versions of Mozilla, the <code>document</code> object does not implement the <code>HTMLDocument</code> interface.</li>
+   <li>Element and attribute names are not normalized to upper case.</li>
+   <li>In older versions (including Firefox 1.0), content cannot be added using <code>innerHTML</code>.</li>
+  </ul>
+ </li>
+ <li>Other namespaces are supported.
+  <ul>
+   <li>MathML</li>
+   <li>Simple XLink</li>
+   <li>SVG (in SVG-enabled builds only)</li>
+   <li>XUL (Please note that XUL is Mozilla-specific and, therefore, using it on the public Web causes interoperabilty problems.)</li>
+  </ul>
+ </li>
+ <li><code>xml:base</code> is observed when following links.</li>
+ <li>Style sheets can be references using processing instructions.</li>
+</ul>
+
+<h2 id=".E6.B1.82.E3.82.81.E3.82.8B.E7.AD.94.E3.81.88.E3.81.8C.E8.A6.8B.E3.81.A4.E3.81.8B.E3.82.8A.E3.81.BE.E3.81.9B.E3.82.93.E3.81.A7.E3.81.97.E3.81.9F.E3.80.82_.E4.BD.95.E5.87.A6.E3.81.A7.E8.81.9E.E3.81.91.E3.81.B0.E3.81.84.E3.81.84.E3.81.AE.EF.BC.9F" name=".E6.B1.82.E3.82.81.E3.82.8B.E7.AD.94.E3.81.88.E3.81.8C.E8.A6.8B.E3.81.A4.E3.81.8B.E3.82.8A.E3.81.BE.E3.81.9B.E3.82.93.E3.81.A7.E3.81.97.E3.81.9F.E3.80.82_.E4.BD.95.E5.87.A6.E3.81.A7.E8.81.9E.E3.81.91.E3.81.B0.E3.81.84.E3.81.84.E3.81.AE.EF.BC.9F">求める答えが見つかりませんでした。何処で聞けばいいの？</h2>
+
+<p>comp.infosystems.www.authoring.* 階層にある質問に関連するニュースグループか、JavaScript/ECMAScript や DOM に関してであれば、comp.lang.javascript で聞いてみてください (もちろんそのグループの FAQ を最初に読んでから)。ウェブページ作成の質問を Mozilla 開発に関する議論のためのニュースグループでは聞かないようにお願いします。</p>
+
+<ul>
+ <li><a class="external" href="http://www.htmlhelp.com/faq/html/">comp.infosystems.www.authoring.html Web Authoring FAQ</a></li>
+ <li><a class="external" href="http://css.nu/faq/ciwas-mFAQ.html">comp.infosystems.www.authoring.stylesheets FAQ</a></li>
+ <li><a class="external" href="http://css.nu/faq/ciwas-aFAQ.html">ciwas stylesheet authoring FAQ</a></li>
+ <li><a class="external" href="http://www.jibbering.com/faq/">comp.lang.javascript FAQ</a></li>
+</ul>
+
+<div class="originaldocinfo">
+<h2 id=".E5.8E.9F.E6.96.87.E6.9B.B8.E3.81.AE.E6.83.85.E5.A0.B1" name=".E5.8E.9F.E6.96.87.E6.9B.B8.E3.81.AE.E6.83.85.E5.A0.B1">原文書の情報</h2>
+
+<ul>
+ <li>著者: <a class="link-mailto" href="mailto:hsivonen@iki.fi">Henri Sivonen</a> (このアドレスにページ作成関連の質問をしないでください)</li>
+ <li>最終更新日: May 12, 2007</li>
+ <li>著作権: Henri Sivonen</li>
+</ul>
+</div>
+
+<div class="noinclude"></div>
+
+<p>{{ languages( { "en": "en/Mozilla_Web_Developer_FAQ", "zh-cn": "cn/Mozilla_Web\u5f00\u53d1\u4eba\u5458_FAQ" } ) }}</p>

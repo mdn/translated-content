@@ -1,0 +1,752 @@
+---
+title: B2G OS のアーキテクチャ
+slug: Archive/B2G_OS/Architecture
+tags:
+  - Architecture
+  - B2G OS
+  - Guide
+  - IPC
+  - IPDL
+translation_of: Archive/B2G_OS/Architecture
+---
+<div class="summary">
+<p><span class="seoSummary">この記事では、B2G OS プラットフォームの高水準層の概要、主要なコンセプトの紹介、そして高水準層のコンポーネントがどのように低水準層と対話するかを説明します。</span></p>
+</div>
+
+<div class="note">
+<p><strong>注記:</strong> B2G OS はまだプレリリース段階の製品であることを忘れないようにしてください。ここで説明するアーキテクチャは必ずしも最終的なものではなく、変更される場合があります。</p>
+</div>
+
+<h2 id="Firefox_OS_terminology" name="Firefox_OS_terminology">B2G OS の用語</h2>
+
+<p>B2G OS のドキュメントをさらに読み進める前に理解しておくべき用語がいくつかあります。</p>
+
+<dl>
+ <dt>B2G</dt>
+ <dd>Boot to Gecko の略語です。</dd>
+ <dt>Boot to Gecko</dt>
+ <dd>B2G OS オペレーティングシステムのエンジニアリングコードネームです。プロジェクトに正式な名称がつくまでの長い間この言葉が使われたため、これが B2G OS を指す言葉として使われるのをよく見るでしょう。</dd>
+ <dt>B2G OS</dt>
+ <dd>B2G OS は基本的に、最終リリース製品を製造するため <strong>Boot to Gecko</strong> に加えられた、Mozilla (および OEM パートナー) のブランディングとサポートサービスです。</dd>
+ <dt><a href="/ja/docs/Mozilla/Firefox_OS/Gaia" title="Mozilla/Firefox_OS/Gaia">Gaia</a></dt>
+ <dd>B2G OS プラットフォームのユーザインタフェースです。B2G OS が起動してからスクリーンに描画されるものはすべて、Gaia 層で書かれています。Gaia はロックスクリーン、ホームスクリーン、そして現代的なスマートフォンに求められる標準的なアプリケーションを実装します。Gaia はすべて、HTML、CSS、JavaScript で実装されています。下層のオペレーティングシステムとの唯一のインタフェースはオープンな Web API であり、それらは Gecko 層で実装されています。サードパーティのアプリケーションも、Gaia 層と一緒にインストールできます。</dd>
+ <dt><a href="/ja/docs/Gecko" title="Accessibility/AT-APIs/Gecko">Gecko</a></dt>
+ <dd>これは、B2G OS のアプリケーションランタイムです。すなわち HTML、CSS、JavaScript という 3 つのオープン標準のすべてをサポートする層です。Gecko がサポートするすべてのオペレーティングシステムで、それらの API が良好に動作することを確実にします。つまり Gecko には、例えばネットワークスタック、グラフィックスタック、レイアウトエンジン、JavaScript 仮想マシン、ポーティング層を含みます。</dd>
+ <dt><a href="/ja/docs/Mozilla/Firefox_OS/Gonk" title="Mozilla/Firefox_OS/Gonk">Gonk</a></dt>
+ <dd>Gonk は B2G OS プラットフォームの低水準のオペレーティングシステムであり、Linux カーネル (<a href="http://source.android.com/">Android Open Source Project</a> (AOSP) を基にしています) とユーザ空間の Hardware Abstraction Layer (HAL) で構成されます。カーネルといくつかのユーザ層のライブラリーは、一般的なオープンソースプロジェクトのものです: Linux、libusb、bluez などです。HAL の他の部分には、Android プロジェクトと共有しているものもあります: GPS、カメラなどです。Gonk はとてもシンプルな Linux ディストリビューションであると表せます。Gonk は Gecko の<strong>移植対象</strong>です。つまり OS X、Windows、Android に移植した Gecko があるように、Gonk に移植した Gecko があります。B2G OS プロジェクトは Gonk を完全に管理しているため、他のオペレーティングシステムでは Gecko に開放されていないインタフェースを開放することができます。例えば、Gonk では Gecko がテレフォニースタック全体やディスプレイのフレームバッファーへ直接アクセスできますが、他のオペレーティングシステムではこれらにアクセスできません。</dd>
+ <dt><a name="Jank">Jank</a></dt>
+ <dd>モバイルアプリの分野でよく使用されるこの用語は、アプリ内の遅い、あるいは非効率なコード処理による影響を指します。これは UI の更新を妨げ、遅延や応答性の悪さを引き起こします。Gaia のエンジニアは何としてもこのような状態を避けるために、さまざまな最適化手法を使用しています。</dd>
+</dl>
+
+<h2 id="Overall_architecture" name="Overall_architecture">アーキテクチャの全体像</h2>
+
+<p>以下の図は、プロプライエタリなプラットフォームと B2G OS のアーキテクチャを比較したものです。</p>
+
+<p><img alt="on the left is a native mobile architecture stack, on the right is the B2G OS architecture. they are similarm except that the native stack is all proprietary device functionality, and the B2G OS stack is all done with open source and web technologies." src="https://mdn.mozillademos.org/files/9487/general-architecture.png" style="display: block; height: 488px; margin: 0px auto; width: 997px;"></p>
+
+<p>B2G OS では、オペレーティングシステムとアプリケーション層の間のネイティブ API がありません。この統合された設計により、パフォーマンスやユーザのリッチなスマートフォン体験を犠牲にすることなく、プラットフォームのオーバーヘッドを軽減するとともにセキュリティを簡略化します。</p>
+
+<ol>
+ <li><a href="/ja/Firefox_OS/Platform/Gaia">Gaia</a> はデバイスの中心的な Web アプリおよびユーザインターフェイス層です。これは HTML5、CSS、JavaScript で記述されており、UI がハードウェアや Gecko の機能と対話できるようにするためのさまざまな API を公開しています。</li>
+ <li><a href="/ja/docs/Mozilla/Gecko">Gecko</a> は B2G OS の Web エンジンおよびプレゼンテーション層であり、Web コンテンツと下層のデバイスの間のインターフェイスを提供することにより、ハードウェアと HTML を接続します。Gecko は HTML5 のパースとレンダリングエンジン、セキュアな Web API を通してハードウェア機能へプログラムからアクセス、包括的なセキュリティフレームワーク、アップデート管理、その他のコアサービスといった機能を提供します。</li>
+ <li><a href="/ja/Firefox_OS/Platform/Gonk">Gonk</a> は B2G OS スタックのカーネルレベルのコンポーネントであり、Gecko と下層のハードウェアの間のインターフェイスとして働きます。Gonk は下層のハードウェアを制御して、ハードウェアの機能を Gecko に実装された Web API に公開します。Gonk はハードウェアレベルの要求を定めることによりモバイルデバイスを制御するため、内部で複雑かつ詳細な処理すべてを行う "ブラックボックス" であると考えることができます。</li>
+ <li>モバイルデバイスは、B2G OS を実行する携帯電話機器です。OEM がモバイルデバイスの供給について責任を持ちます。</li>
+</ol>
+
+<h2 id="Specific_Firefox_OS_architecture" name="Specific_Firefox_OS_architecture">B2G OS の詳細なアーキテクチャ</h2>
+
+<p><img alt="B2G OS Architecture" src="/files/4605/FirefoxOS.png" style="display: block; height: 915px; margin: 0px auto; width: 754px;"></p>
+
+<h2 id="Firefox_OS_bootup_procedure" name="Firefox_OS_bootup_procedure">B2G OS のブート手順</h2>
+
+<p>このセクションでは B2G OS デバイスのブートプロセスについて、どの部分がどのように関わるかを説明します。要約すると一般的なシステムの起動フローは、カーネル空間のブートローダーから始まりネイティブコードの init、B2G、ユーザ空間の Gecko、そしてシステムアプリ、ウィンドウマネージャー、Gecko 内のホームスクリーンアプリと進みます。これらの上で、他のアプリすべてを実行します。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7491/bootup.png" style="display: block; height: 1979px; margin: 0px auto; width: 2112px;"></p>
+
+<h3 id="The_bootstrapping_process" name="The_bootstrapping_process">ブートストラッププロセス</h3>
+
+<p>B2G OS デバイスでまず電源を入れると、プライマリブートローダが実行されます。そこから主要なオペレーティングシステムを読み込むプロセスが、典型的な方法で進みます。これはチェイン内で順次、高水準ブートローダが次のローダを起動することの連鎖です。プロセスの最終段階で、実行は Linux カーネルに引き渡されます。</p>
+
+<p>ブートプロセスについて注意すべき点がいくつかあります:</p>
+
+<ul>
+ <li>ブートローダは通常、デバイスの起動中にユーザへ見せるものとしてスプラッシュスクリーンを始めに表示します。これは一般的に、ベンダーのロゴです。</li>
+ <li>ブートローダは、デバイスへイメージを書き込む機能を実装しています。機種によりそのプロトコルは異なります。ほとんどの電話機は <a href="http://android-dls.com/wiki/index.php?title=Fastboot" title="http://android-dls.com/wiki/index.php?title=Fastboot">fastboot プロトコル</a>を使用していますが、Samsung Galaxy S II は odin プロトコルを使用しています。</li>
+ <li>ブートストラッププロセスが終わるまでに、通常はモデムイメージが読み込まれてモデムプロセッサで実行されます。これがどのように行われるかはきわめてデバイス依存であり、独特な箇所になるでしょう。</li>
+</ul>
+
+<h3 id="The_Linux_kernel" name="The_Linux_kernel">Linux カーネル</h3>
+
+<p>Gonk で使用される Linux カーネルは、派生元である上流の Linux によく似ています (<a href="http://source.android.com/" title="http://source.android.com/">Android Open Source Project</a> に基づきます)。AOSP によって行われたが上流に反映されていない変更点もあります。加えて、時にベンダーはカーネルに変更を加えて、彼ら自身のスケジュールに基づいて上流に反映させます。もっとも、一般的には Linux カーネルに集積されていきます。</p>
+
+<p><a href="http://en.wikipedia.org/wiki/Linux_startup_process" title="http://en.wikipedia.org/wiki/Linux_startup_process">Linux のスタートアッププロセス</a>はインターネット上の他所で十分に文書化されていますので、この記事では扱いません。</p>
+
+<p>Linux カーネルはデバイスを起動して、必要不可欠なプロセスを実行します。これは <code>init.rc</code> や、それに後続して <code>b2g</code> (Gecko を含む、B2G OS の基本プロセス) および <code>rild</code> (さまざまなチップセットに固有であろう、テレフォニー関係のプロセス) などの必要なプロセスを起動するための <a href="https://github.com/mozilla-b2g/gonk-misc/blob/master/init.b2g.rc">init.b2g.rc</a> で定義されているプロセスを実行します。詳しくは後で説明します。プロセスの最終段階では、ほとんどの UNIX ライクなオペレーティングシステムと同様に、ユーザ空間の <code>init</code> プロセスが起動します。</p>
+
+<p><code>init</code> プロセスが起動すると、Linux カーネルがユーザ空間やハードウェアデバイスからのシステムコールや割り込みを制御します。多くのハードウェア機能は、<a href="http://en.wikipedia.org/wiki/Sysfs" title="http://en.wikipedia.org/wiki/Sysfs"><code>sysfs</code></a> を通してユーザ空間に開放されています。例えば、以下は Gecko でバッテリーの状態を読み出す<a href="https://github.com/cgjones/mozilla-central/blob/master/hal/gonk/GonkHal.cpp#L277" title="https://github.com/cgjones/mozilla-central/blob/master/hal/gonk/GonkHal.cpp#L277">コードスニペット</a>です:</p>
+
+<pre class="brush:cpp;">FILE *capacityFile = fopen("/sys/class/power_supply/battery/capacity", "r");
+double capacity = dom::battery::kDefaultLevel * 100;
+if (capacityFile) {
+  fscanf(capacityFile, "%lf", &amp;capacity);
+  fclose(capacityFile);
+}</pre>
+
+<h3 id="More_on_the_init_process" name="More_on_the_init_process">init プロセス</h3>
+
+<p>Gonk の <code>init</code> プロセスは、必要なファイルシステムのマウントやシステムサービスの起動を制御します。その後、プロセスマネージャとして働くために常駐します。これは他の UNIX ライクなオペレーティングシステムの init にとても似ています。init は、さまざまなサービスを起動するために行うべきことを示すコマンドで構成されるスクリプト (すなわち <code>init*.rc</code> ファイル) を実行します。B2G OS の <code>init.rc</code> は、典型的には B2G OS を起動するために必要なものを含むようパッチを当てた Android の <code>init.rc</code> であり、デバイスにより異なります。</p>
+
+<p><code>init</code> プロセスが制御する重要なタスクとして、<code>b2g</code> プロセスの起動があります。b2g は、B2G OS オペレーティングシステムの中核部分です。</p>
+
+<p><code>init.rc</code> で b2g を起動するコードは以下のようになります:</p>
+
+<pre>service b2g /system/bin/b2g.sh
+    class main
+    onrestart restart media</pre>
+
+<div class="note">
+<p><strong>注記:</strong> <code>init.rc</code> が Android のものとどれだけ違うかは、デバイスにより異なります。<code>init.b2g.rc</code> が単純に追加される場合もあれば、より多くのパッチが必要になる場合もあります。</p>
+</div>
+
+<h2 id="The_userspace_process_architecture" name="The_userspace_process_architecture">ユーザ空間プロセスのアーキテクチャ</h2>
+
+<p>ここで、B2G OS のさまざまなコンポーネントがどのように組み合わされていて、また互いに作用しあうかを高い水準で見ておくと役に立ちます。こちらの図は、B2G OS の基本的なユーザ空間プロセスを表しています。</p>
+
+<p><a href="/files/3849/B2G userspace architecture.svg"><img alt="Userspace diagram" src="/files/3849/B2G%20userspace%20architecture.svg" style="float: right; height: 491px; position: relative; width: 520px;"></a></p>
+
+<div class="note">
+<p><strong>注記:</strong> B2G OS は現在も開発中であるため、この図は変更される可能性があり、また完全に正確なものではないことに注意してください。</p>
+</div>
+
+<p><code>b2g</code> プロセスは、基本的なシステムプロセスです。これは高い権限で動作します。つまり、ほとんどのハードウェアデバイスにアクセスできます。<code>b2g</code> はモデムと通信したり、ディスプレイフレームバッファーに描画したり、GPS やカメラや他のハードウェア機能と対話したりします。内部的には、<code>b2g</code> は Gecko 層で動作します (<code>libxul.so</code> として実装されています)。Gecko 層の動作や <code>b2g</code> が Gecko とどのように通信するかについて、詳しくは <a href="#Gecko">Gecko</a> の章をご覧ください。</p>
+
+<h3 id="b2g" name="b2g">b2g</h3>
+
+<p><code>b2g</code> プロセスは、低権限の <strong>content プロセス</strong> を順番に起動するでしょう。これらのプロセスは、Web アプリケーションや他の Web コンテンツが読み込まれるところです。またこれらのプロセスは主要な Gecko のサーバプロセスと、<a href="/ja/docs/IPDL" title="IPDL">IPDL</a> というメッセージ伝送システムを通して通信します。</p>
+
+<p><code>b2g</code> プロセスは libxul を実行しており、これはデフォルトの設定を取得するために <code>b2g/app/b2g.js</code> を参照します。b2g は設定により示された HTML ファイルである <code>b2g/chrome/content/shell.html</code> を開きます。このファイルは <code>omni.ja</code> ファイル内に集積されています。<code>shell.html</code> には <code>b2g/chrome/content/shell.js</code> ファイルが含まれており、これは Gaia の <code>system</code> アプリを起動します。</p>
+
+<h3 id="rild" name="rild">rild</h3>
+
+<p><code>rild</code> プロセスは、モデムプロセッサへのインタフェースです。<code>rild</code> は <strong>Radio Interface Layer</strong> (RIL) を実装するデーモンです。これは、モデムハードウェアと対話するためにハードウェアベンダーによって実装されるプロプライエタリなコードの部分です。<code>rild</code> は、クライアントコードがモデムに結びつけられた UNIX ドメインソケットへ接続できるようにします。rild は <code>init</code> スクリプト内の以下のようなコードによって起動されます :</p>
+
+<pre>service ril-daemon /system/bin/rild
+    socket rild stream 660 root radio</pre>
+
+<h3 id="rilproxy" name="rilproxy">rilproxy</h3>
+
+<p>B2G OS では、<code>rild</code> のクライアントが <code>rilproxy</code> プロセスです。これは <code>rild</code> と <code>b2g</code> の間で単なる転送プロキシとして動作します。このプロキシは細部の実装として必要です。とても必要なものであるとだけ言っておきましょう。<a href="https://github.com/mozilla-b2g/rilproxy" title="https://github.com/mozilla-b2g/rilproxy"><code>rilproxy</code> のコードは GitHub にあります</a>。</p>
+
+<h3 id="mediaserver" name="mediaserver">mediaserver</h3>
+
+<p><a href="https://github.com/android/platform_frameworks_base/tree/ics-mr0-release/media/libmediaplayerservice" title="https://github.com/android/platform_frameworks_base/tree/ics-mr0-release/media/libmediaplayerservice"><code>mediaserver</code> プロセス</a>は、音声や動画の再生を制御します。Gecko は Android Remote Procedure Call (RPC) の仕組みを通して mediaserver と対話します。Gecko が再生可能なメディア (OGG Vorbis audio、OGG Theora video、<a href="http://www.webmproject.org/about/" title="http://www.webmproject.org/about/">WebM</a> video) は Gecko によってデコードされ、直接 <code>mediaserver</code> プロセスに送られます。他のメディアファイルは <code>libstagefright</code> によってデコードされます。libstagefright は、プロプライエタリなコーデックやハードウェアエンコーダにアクセスできます。</p>
+
+<div class="note">
+<p><strong>注記:</strong> <code>mediaserver</code> プロセスは、B2G OS の "一時的な" コンポーネントです。初期の開発作業を支援するために存在しており、いずれはなくなる予定です。ただし、おそらく早くても B2G OS 2.0 まではなくならないでしょう。</p>
+</div>
+
+<h3 id="netd" name="netd">netd</h3>
+
+<p><code>netd</code> プロセスは、ネットワークインタフェースの設定に使用されます。</p>
+
+<h3 id="wpa_supplicant" name="wpa_supplicant">wpa_supplicant</h3>
+
+<p><code>wpa_supplicant</code> プロセスは Wi-Fi アクセスポイントとの接続を制御する、標準的な UNIX スタイルのデーモンです。</p>
+
+<h3 id="dbus-daemon" name="dbus-daemon">dbus-daemon</h3>
+
+<p>dbus-daemon は <a href="http://www.freedesktop.org/wiki/Software/dbus" title="http://www.freedesktop.org/wiki/Software/dbus">D-Bus</a> を実装します。これは、B2G OS が Bluetooth 通信のために使用するメッセージバスシステムです。</p>
+
+<h2 id="Gecko" name="Gecko">Gecko</h2>
+
+<p><a href="/ja/docs/Gecko" title="Gecko">Gecko</a> は前述のとおり、B2G OS でユーザが見るものすべてを実装するために使用される Web 標準技術 (<a href="/ja/docs/HTML" title="HTML">HTML</a>、<a href="/ja/docs/CSS" title="CSS">CSS</a>、<a href="/ja/docs/JavaScript" title="JavaScript">JavaScript</a>) を実装したものです。また、電話機のハードウェアとの対話を制御します。HTML5 からハードウェアに接続する Web アプリは、Gecko に実装されたセキュアな Web API によって制御されます。 Web API は、下層のモバイルデバイスハードウェアの機能 (バッテリーやバイブレーションなど) やデバイスに保存されていたりデバイスで使用できるデータ (カレンダーや連絡先など) にプログラムからアクセスする機能を提供します。Web コンテンツは、HTML5 でアクセスできる Web API を使用します。</p>
+
+<p>アプリは、関連する HTML5 Web コンテンツの集合体で構成されます。B2G OS のモバイルデバイスで動作する Web アプリを構築するために開発者が行うことは、単なる Web コンテンツの組み立て、パッケージング、頒布です。この Web コンテンツは実行時に、Web ブラウザによって解釈、コンパイル、レンダリングされます。アプリについて詳しくは、<a href="/ja/Apps">アプリセンター</a>をご覧ください。</p>
+
+<div class="note">
+<p><strong>注記:</strong> <a href="http://dxr.mozilla.org">http://dxr.mozilla.org</a> を使用して Gecko のコードベースを検索できます。見栄えがよく、また良好な参照機能を提供しますが、限られたリポジトリでしか使用できません。あるいは、旧来の <a href="http://mxr.mozilla.org">http://mxr.mozilla.org</a> も使用できます。こちらはより多くの Mozilla プロジェクトを包含しています。</p>
+</div>
+
+<h3 id="Gecko_architecture_diagram" name="Gecko_architecture_diagram">Gecko のアーキテクチャ図</h3>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/5027/securityframework.png" style="height: 591px; width: 979px;"></p>
+
+<ul>
+ <li><strong>セキュリティフレームワーク</strong>に含まれるもの:
+
+  <ul>
+   <li><strong>Permission Manager</strong>: Web API の機能にアクセスするためのゲートウェイです。</li>
+   <li><strong>Access Control List</strong>: Web API の機能へアクセスするために必要な役割や許可設定のマトリックスです。</li>
+   <li><strong>Credential Validation</strong>: アプリやユーザの認証です。</li>
+   <li><strong>Permissions Store</strong>: Web API の機能へアクセスするために必要な特権のセットです。</li>
+  </ul>
+ </li>
+ <li><strong>Web API</strong>: ハードウェアの機能を Web コンテンツに公開する標準 API のセットです。下層のモバイルデバイスハードウェアの機能やデバイスに保存されていたりデバイスで使用できるデータへ、安全にプログラムからアクセスする機能を Web アプリに提供します。</li>
+ <li><strong>I/O</strong>: ハードウェアやデータストアへのインターフェイスです。</li>
+ <li><strong>Software Updates</strong>: システムソフトウェアやサードパーティーのアプリの更新を取得およびインストールします。</li>
+ <li><strong>Content Layout &amp; Rendering</strong>: Web コンテンツの解析・解釈・実行、およびコンテンツに付随する書式情報に従って整形したコンテンツをユーザに対して表示するエンジンです。</li>
+ <li><strong>b2g process</strong>: 携帯電話のハードウェア機能にアクセス可能な、高い特権を持ったシステムプロセスで実行される Gecko です。実行中のアプリは、b2g の子プロセスです。</li>
+</ul>
+
+<h3 id="Gecko_files_related_to_Firefox_OS" name="Gecko_files_related_to_Firefox_OS">B2G OS に関係する Gecko ファイル</h3>
+
+<h4 id="b2g_2" name="b2g_2">b2g/</h4>
+
+<p>b2g フォルダには、主要な B2G OS 関連の機能が入っています。</p>
+
+<h5 id="b2gchromecontent" name="b2gchromecontent">b2g/chrome/content</h5>
+
+<p>システムアプリ上で実行する JavaScript が入っています。</p>
+
+<h5 id="b2gchromecontentshell.html" name="b2gchromecontentshell.html">b2g/chrome/content/shell.html</h5>
+
+<p>Gaia へのエントリポイントである、システムアプリ向けの HTML です。<code>shell.html</code> は、<code>settings.js</code> および <code>shell.js</code> を読み込みます:</p>
+
+<pre class="brush: html">&lt;script type="application/javascript;version=1.8" src="chrome://browser/content/settings.js"&gt; &lt;/script&gt;
+&lt;script type="application/javascript;version=1.8" src="chrome://browser/content/shell.js"&gt; &lt;/script&gt;</pre>
+
+<p><code>settings.js</code> は、システムのデフォルトの設定パラメータを持っています。</p>
+
+<h5 id="b2gchromecontentshell.js" name="b2gchromecontentshell.js">b2g/chrome/content/shell.js</h5>
+
+<p><code>shell.js</code> は Gaia の <code>system</code> アプリが読み込む最初のスクリプトです。</p>
+
+<p><code>shell.js</code> はすべての必要なモジュールのインポート、重要なリスナの登録、Gaia と通信するための <code>sendCustomEvent</code> および <code>sendChromeEvent</code> の定義、そして webapp のインストールヘルパー (indexedDB クォータ、RemoteDebugger、キーボードヘルパー、スクリーンショットツール) の提供を行います。</p>
+
+<p>しかし <code>shell.js</code> でもっとも重要な機能は Gaia の <code>system</code> アプリを起動して、システム全体に関する管理処理を Gaia の <code>system</code> アプリに引き渡すことです。</p>
+
+<pre class="brush: js">let systemAppFrame =
+  document.createElementNS('http://www.w3.org/1999/xhtml', 'html:iframe');
+    ...
+  container.appendChild(systemAppFrame);</pre>
+
+<h5 id="b2gappb2g.js" name="b2gappb2g.js">b2g/app/b2g.js</h5>
+
+<p>このスクリプトはブラウザでの about:config や Gaia の pref.js のように、あらかじめ定義された設定を持っています。これらの設定内容は設定アプリで変更可能であり、また Gaia のビルドスクリプトで user.js による上書きも可能です。</p>
+
+<h4 id="domAPI" name="domAPI">dom/{API}</h4>
+
+<p>新たな API の実装 (post-b2g) は <code>dom/</code> に配置します。<code>navigator.cpp</code> など旧来の API は、<code>dom/base</code> に配置しています。</p>
+
+<h5 id="domapps" name="domapps">dom/apps</h5>
+
+<p><code>.jsm</code> が読み込まれます。これは <code>webapp.js</code> のような <code>.js</code> ファイルによる API 実装のインストールや <code>getSelf</code> などがあります。</p>
+
+<h5 id="domappsPermissionsTable.jsm" name="domappsPermissionsTable.jsm">dom/apps/PermissionsTable.jsm</h5>
+
+<p>すべての許可設定を <a href="http://mxr.mozilla.org/mozilla-central/source/dom/apps/PermissionsTable.jsm">PermissionsTable.jsm</a> で定義しています。</p>
+
+<h4 id="domwebidl" name="domwebidl">dom/webidl</h4>
+
+<p>WebIDL は、Web API の定義に使用する言語です。サポートする属性については <a href="/ja/docs/Mozilla/WebIDL_bindings">WebIDL_bindings</a> をご覧ください。</p>
+
+<h4 id="halgonk" name="halgonk">hal/gonk</h4>
+
+<p>このディレクトリには、Gonk のポーティング層に関するファイルが入っています。</p>
+
+<h4 id="Generated_files" name="Generated_files">Generated files</h4>
+
+<h5 id="modulelibprefsrcinitall.js" name="modulelibprefsrcinitall.js">module/libpref/src/init/all.js</h5>
+
+<p>すべての設定ファイルを包含します。</p>
+
+<h5 id="systemb2g_omni.ja_and_omni.js" name="systemb2g_omni.ja_and_omni.js">/system/b2g/ omni.ja および omni.js</h5>
+
+<p>デバイス内のリソース向けのスタイルパックを包含します。</p>
+
+<h3 id="Processing_input_events" name="Processing_input_events">入力イベントの処理</h3>
+
+<p>Gecko 内部のほとんどのアクションは、ユーザのアクションによって発生します。これらのアクションは入力イベント (ボタン押下、タッチスクリーンデバイスのタッチなど) で表されます。これらのイベントは、Gecko アプリケーションに対する主要な入口を表すために使用される Gecko のインタフェースである、<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAppShell" title="">nsIAppShell</a></code> の <a href="https://dxr.mozilla.org/mozilla-central/source/widget/gonk/nsAppShell.cpp" rel="custom">Gonk 実装</a>を通して Gecko に入力されます。すなわち、入力デバイスのドライバがユーザインタフェースへイベントを送信するために、Gecko のサブシステムに対応する <code>nsAppShell</code> オブジェクトのメソッドを呼び出します。</p>
+
+<p>例:</p>
+
+<pre class="brush:cpp;">void GeckoInputDispatcher::notifyKey(nsecs_t eventTime,
+                                     int32_t deviceId,
+                                     int32_t source,
+                                     uint32_t policyFlags,
+                                     int32_t action,
+                                     int32_t flags,
+                                     int32_t keyCode,
+                                     int32_t scanCode,
+                                     int32_t metaState,
+                                     nsecs_t downTime) {
+  UserInputData data;
+  data.timeMs = nanosecsToMillisecs(eventTime);
+  data.type = UserInputData::KEY_DATA;
+  data.action = action;
+  data.flags = flags;
+  data.metaState = metaState;
+  data.key.keyCode = keyCode;
+  data.key.scanCode = scanCode;
+  {
+    MutexAutoLock lock(mQueueLock);
+    mEventQueue.push(data);
+  }
+  gAppShell-&gt;NotifyNativeEvent();
+}</pre>
+
+<p>これらのイベントは、標準的な Linux の <code>input_event</code> システムから発生します。B2G OS では <a href="https://dxr.mozilla.org/mozilla-central/source/widget/gonk/libui/InputReader.cpp" rel="custom">light abstraction layer</a> を使用します。これは、イベントのフィルタリングなど便利な機能を提供します。<a href="https://dxr.mozilla.org/mozilla-central/source/widget/gonk/libui/EventHub.cpp" rel="custom">widget/gonk/libui/EventHub.cpp</a> で、入力イベントを生成するコードをご覧いただけます。</p>
+
+<p>イベントが Gecko に受け取られると、それらのイベントは <code><a href="https://dxr.mozilla.org/mozilla-central/source/widget/gonk/nsAppShell.cpp" rel="custom">nsAppShell</a></code> によって DOM へ送られます:</p>
+
+<pre class="brush:cpp;">static nsEventStatus sendKeyEventWithMsg(uint32_t keyCode,
+                                         uint32_t msg,
+                                         uint64_t timeMs,
+                                         uint32_t flags) {
+    nsKeyEvent event(true, msg, NULL);
+    event.keyCode = keyCode;
+    event.location = nsIDOMKeyEvent::DOM_KEY_LOCATION_MOBILE;
+    event.time = timeMs;
+    event.flags |= flags;
+    return nsWindow::DispatchInputEvent(event);
+}
+</pre>
+
+<p>その後、イベントは Gecko 自身によって処理されるか、さらなる処理のために <a href="/ja/docs/DOM_Client_Object_Cross-Reference/DOM_Events" title="DOM_Client_Object_Cross-Reference/DOM_Events">DOM events</a> として Web アプリケーションに発行されます。</p>
+
+<h3 id="Graphics" name="Graphics">グラフィックス</h3>
+
+<p>ごく低水準な部分では、Gecko はハードウェアのフレームバッファーをラップする GL コンテキストの描画に <a href="http://www.khronos.org/opengles/2_X/" title="http://www.khronos.org/opengles/2_X/">OpenGL ES 2.0</a> を使用します。これは以下のようなコードにより、<code><a href="https://dxr.mozilla.org/mozilla-central/source/widget/gonk/nsWindow.cpp" rel="custom">nsWindow</a></code> の Gonk 実装によって行われます:</p>
+
+<pre class="brush:cpp;">gNativeWindow = new android::FramebufferNativeWindow();
+sGLContext = GLContextProvider::CreateForWindow(this);</pre>
+
+<p><code>FramebufferNativeWindow</code> クラスは Android からそのまま取り込んでいます。<a href="https://github.com/android/platform_frameworks_base/blob/ics-mr1-release/libs/ui/FramebufferNativeWindow.cpp" title="https://github.com/android/platform_frameworks_base/blob/ics-mr1-release/libs/ui/FramebufferNativeWindow.cpp"><code>FramebufferNativeWindow.cpp</code></a> をご覧ください。これはバッファーをフレームバッファーデバイスからメモリーに対応付ける目的でグラフィックドライバーへアクセスするために <strong>gralloc</strong> API を使用します。</p>
+
+<p>Gecko は描画されたコンテンツをスクリーンに合成するために、自身の<a href="/ja/docs/Gecko/Layers" title="Gecko/Layers">レイヤー</a>システムを使用します。要約すると、以下のようなことが行われます:</p>
+
+<ol>
+ <li>Gecko がページの個々の部分をメモリバッファーに描画します。これらのバッファーはシステムメモリーにある場合があります。あるいは、これらが Gecko のアドレス空間にマッピングされたテクスチャであることもあり、これは Gecko が直接ビデオメモリーへ描画します。これは一般に、<a href="http://mxr.mozilla.org/mozilla-central/source/gfx/layers/basic/BasicThebesLayer.cpp#83" title="http://mxr.mozilla.org/mozilla-central/source/gfx/layers/basic/BasicThebesLayer.cpp#201"><code>BasicThebesLayer::PaintThebes()</code></a> メソッドで行われます。</li>
+ <li>そして、Gecko はこれらすべてのテクスチャを OpenGL コマンドを使用してスクリーンに合成します。この合成処理は <a href="http://mxr.mozilla.org/mozilla-central/source/gfx/layers/opengl/ThebesLayerOGL.cpp#124" title="http://mxr.mozilla.org/mozilla-central/source/gfx/layers/basic/BasicThebesLayer.cpp#201"><code>ThebesLayerOGL::RenderTo()</code></a> で行われます。</li>
+</ol>
+
+<p>Gecko が Web コンテンツのレンダリングをどのように制御するかの詳細は、本ドキュメントの範囲から外れます。</p>
+
+<h3 id="Hardware_Abstraction_Layer_(HAL)" name="Hardware_Abstraction_Layer_(HAL)">Hardware Abstraction Layer (HAL)</h3>
+
+<p>Gecko Hardware Abstraction Layer は、Gecko のポーティング層の一つです。これは、Gecko の高水準層が利用可能な C++ の API を使用して、複数のプラットフォームにまたがってシステムインタフェースへの低水準なアクセスを制御します。これらの API は Gecko HAL 自身の内部で、プラットフォームごとに実装されています。Gecko ではこの Hardware Abstraction Layer が、JavaScript に対して直接は公開されていません。この対話の部分は、Web API によって処理されます。</p>
+
+<p>高水準層から処理方式を見てみましょう。ユーザが電話機の機能 (電話をかける、Wi-Fi ネットワークにアクセスする、Bluetooth で接続するなど) を使用する要求を発すると、B2G OS のスタックの全階層がその要求の伝達に関わります。Gaia 層のアプリや Web コンテンツが Web API の呼び出し (HTML5 内の機能で実行されます) により、下層のデバイスへのアクセスを要求します。この Web API は Gecko に実装しています。Gecko は同様に、Gonk へ要求します。Gecko が発したひとつの要求は複合的な一連の操作を発生させることもあり、Gonk が携帯電話機内で操作の生成や制御を行います。</p>
+
+<h4 id="How_the_HAL_works" name="How_the_HAL_works">HAL の動作</h4>
+
+<p>例として <a href="/ja/docs/Web/API/Window/navigator/vibrate" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>Vibration</code></a> API について考えてみましょう。この API 向けの Gecko HAL は <a href="https://dxr.mozilla.org/mozilla-central/source/hal/Hal.h" rel="custom">hal/Hal.h</a> で定義されています。本質的には (明快さのために、メソッドのシグネチャを単純化します)、以下の関数があります:</p>
+
+<pre>void Vibrate(const nsTArray&lt;uint32&gt; &amp;pattern);</pre>
+
+<p>これは、指定されたパターンに従ってデバイスのバイブレーション機能を起動するために Gecko のコードから呼び出される関数です。これに対応する関数として、実行中のバイブレーションを止める関数があります。このメソッドの Gonk 実装は <a href="https://dxr.mozilla.org/mozilla-central/source/hal/gonk/GonkHal.cpp" rel="custom">hal/gonk/GonkHal.cpp</a> にあります:</p>
+
+<pre class="brush:cpp;">void Vibrate(const nsTArray&lt;uint32_t&gt; &amp;pattern) {
+  EnsureVibratorThreadInitialized();
+  sVibratorRunnable-&gt;Vibrate(pattern);
+}
+</pre>
+
+<p>このコードはデバイスのバイブレーションを開始するためのリクエストを、別のスレッドに送信します。そのスレッドは、<code>VibratorRunnable::Run()</code> で実装されています。このスレッドのメインループは以下のようになります:</p>
+
+<pre class="brush:cpp;">while (!mShuttingDown) {
+  if (mIndex &lt; mPattern.Length()) {
+    uint32_t duration = mPattern[mIndex];
+    if (mIndex % 2 == 0) {
+      vibrator_on(duration);
+    }
+    mIndex++;
+    mMonitor.Wait(PR_MillisecondsToInterval(duration));
+  }
+  else {
+    mMonitor.Wait();
+  }
+}
+</pre>
+
+<p><code>vibrator_on()</code> はバイブレーション装置を起動する、Gonk HAL の API です。内部では、このメソッドは <code>sysfs</code> を使用してカーネルオブジェクトに値を書き込むことにより、カーネルドライバーへメッセージを送信します。</p>
+
+<h4 id="Fallback_HAL_API_implementations" name="Fallback_HAL_API_implementations">代替の HAL API 実装</h4>
+
+<p>Gecko HAL の API は、すべてのプラットフォームにわたってサポートされています。バイブレーション装置へのインタフェースを公開しないプラットフォーム (デスクトップコンピュータなど) 向けに Gecko がビルドされたときは、HAL API の代替実装が使用されます。バイブレーションでは、これは <a href="https://dxr.mozilla.org/mozilla-central/source/hal/fallback/FallbackVibration.cpp" rel="custom">hal/fallback/FallbackVibration.cpp</a> に実装されています。</p>
+
+<pre class="brush:cpp;">void Vibrate(const nsTArray&lt;uint32_t&gt; &amp;pattern) {
+}</pre>
+
+<h4 id="Sandbox_implementations" name="Sandbox_implementations">サンドボックスの実装</h4>
+
+<p>ほとんどの Web コンテンツは低い権限の content プロセスで動作するため、これらのプロセスが (例えば) バイブレーション装置を起動・停止できるのに必要な権限を持っていると考えることはできません。加えて、潜在的な競合状態を制御するための中心的な場所が必要です。Gecko HAL ではこれを、HAL の "サンドボックス" 実装により実現しました。このサンドボックス実装は単純に、content プロセスから発生されたリクエストの代理となって "Gecko server" プロセスに転送します。代理のリクエストは IPDL を使用して送信されます。</p>
+
+<p>バイブレーションの場合、これは <a href="https://dxr.mozilla.org/mozilla-central/source/hal/sandbox/SandboxHal.cpp" rel="custom">hal/sandbox/SandboxHal.cpp</a> で実装されている <code>Vibrate()</code> 関数で制御されます:</p>
+
+<pre class="brush:cpp;">void Vibrate(const nsTArray&lt;uint32_t&gt;&amp; pattern, const WindowIdentifier &amp;id) {
+  AutoInfallibleTArray&lt;uint32_t, 8&gt; p(pattern);
+
+  WindowIdentifier newID(id);
+  newID.AppendProcessID();
+  Hal()-&gt;SendVibrate(p, newID.AsArray(), GetTabChildFrom(newID.GetWindow()));
+}</pre>
+
+<p>これは <code>PHal</code> インタフェースで定義されたメッセージを送信します。また <code>PHal</code> インタフェースは <a href="https://dxr.mozilla.org/mozilla-central/source/hal/sandbox/PHal.ipdl" rel="custom">hal/sandbox/PHal.ipdl</a> で、IPDL を用いて記述されています。このメソッドは、おおむね以下のように記述されています:</p>
+
+<pre>Vibrate(uint32_t[] pattern);</pre>
+
+<p>このメッセージの受信側は <a href="https://dxr.mozilla.org/mozilla-central/source/hal/sandbox/SandboxHal.cpp" rel="custom">hal/sandbox/SandboxHal.cpp</a> にある <code>HalParent::RecvVibrate()</code> メソッドであり、以下のようなものです:</p>
+
+<pre class="brush:cpp;">virtual bool RecvVibrate(const InfallibleTArray&lt;unsigned int&gt;&amp; pattern,
+            const InfallibleTArray&lt;uint64_t&gt; &amp;id,
+            PBrowserParent *browserParent) MOZ_OVERRIDE {
+
+  hal::Vibrate(pattern, newID);
+  return true;
+}</pre>
+
+<p>ここでは、説明に関係ない詳細部分を省略しています。それでも、メッセージが content プロセスから Gecko を通して Gonk へ、そして <code>Vibrate()</code> の Gonk HAL 実装、最終的にバイブレーション機能のドライバまでどのように進むかを示しています。</p>
+
+<h3 id="DOM_APIs" name="DOM_APIs">DOM API</h3>
+
+<p><strong>DOM インタフェース</strong> は、本質的には Web コンテンツが Gecko と通信する方法です。実際はさらに複雑であり、もし詳細に興味があるのでしたら <a href="/ja/docs/DOM/About_the_Document_Object_Model" title="DOM/About_the_Document_Object_Model">DOM について</a>のドキュメントを読むとよいでしょう。DOM インタフェースは <a href="/ja/docs/XPIDL" title="XPIDL">IDL</a> を使用して定義されます。IDL は JavaScript と C++ との間の他言語関数インタフェース (FFI) とオブジェクトモデル (OM) で構成されます。</p>
+
+<p>Vibration API は IDL インタフェースを通して Web コンテンツに公開されており、それは <code><a href="https://dxr.mozilla.org/mozilla-central/source/dom/interfaces/base/nsIDOMNavigator.idl" rel="custom">nsIDOMNavigator.idl</a>:</code> で提供されます。</p>
+
+<pre>[implicit_jscontext] void mozVibrate(in jsval aPattern);</pre>
+
+<p><a href="/ja/docs/SpiderMonkey/JSAPI_Reference/Jsval" title="SpiderMonkey/JSAPI_Reference/JSVAL_IS_OBJECT"><code>jsval</code></a> 引数は、<code>mozVibrate()</code> (これは未確定の Vibration 仕様に対する、私たちのベンダ接頭辞付きの実装です) が任意の JavaScript 値を入力として受け入れることを示します。IDL コンパイラである <a href="/ja/docs/XPIDL/xpidl" title="XPIDL/xpidl"><code>xpidl</code></a> は、のちに <code><a href="https://dxr.mozilla.org/mozilla-central/source/dom/base/Navigator.cpp" rel="custom">Navigator.cpp</a></code> の <code>Navigator</code> クラスによって実装される C++ のインタフェースを生成します。</p>
+
+<pre class="brush:cpp;">NS_IMETHODIMP Navigator::MozVibrate(const jsval&amp; aPattern, JSContext* cx) {
+  // ...
+  hal::Vibrate(pattern);
+  return NS_OK;
+}</pre>
+
+<p>このメソッドにはご覧いただいているものより多くのコードが含まれていますが、ここでの説明内容に対しては重要でないものです。ポイントは <code>hal::Vibrate()</code> の呼び出しが、制御を DOM から Gecko HAL に移していることです。ここから前の章で説明した HAL 実装に入り、デバイスドライバまで処理が進んでいきます。これに加えて、DOM 実装は実行しているプラットフォームが何か (Gonk、Windows、OS X など) はまったく気にしません。また、コードが content プロセスで実行しているか Gecko サーバプロセスで実行しているかも気にしません。これらの細部は、システムの低水準層が対処するために切り離されています。</p>
+
+<p>Vibration API はとてもシンプルな API であり、例としてよいものです。<a href="/ja/docs/API/WebSMS" title="API/WebSMS">SMS API</a> は content プロセスとサーバーとの接続に自身の "remoting" 層を使用する、より複雑な API の例になります。</p>
+
+<h2 id="Radio_Interface_Layer_(RIL)" name="Radio_Interface_Layer_(RIL)">Radio Interface Layer (RIL)</h2>
+
+<p>RIL は <a href="#The_userspace_process_architecture">The userspace process architecture</a> の章でも触れました。本章では、この層のさまざまな部品がどのように作用しあうかをもう少し詳しく見ていきます。</p>
+
+<p>RIL に関係する主要コンポーネントは以下の通りです:</p>
+
+<dl>
+ <dt><code>rild</code></dt>
+ <dd>プロプライエタリなモデムのファームウェアと対話するデーモンです。</dd>
+ <dt><code>rilproxy</code></dt>
+ <dd><code>rild</code> と Gecko の間でメッセージを中継するデーモンです (これは <code>b2g</code> プロセス内に実装されています)。これは <code>rild</code> と直接対話しようとするときに発生するパーミッションの問題を克服するものです。この問題が発生する理由は、<code>rild</code> は <code>radio</code> グループ内でのみ通信が可能であるためです。</dd>
+ <dt><code>b2g</code></dt>
+ <dd><strong>chrome プロセス</strong>としても知られるこのプロセスは、Gecko を実装します。そのうち Radio Interface Layer に関係する部分は、<a href="https://dxr.mozilla.org/mozilla-central/source/dom/system/gonk/ril_worker.js" rel="custom">dom/system/gonk/ril_worker.js</a> です。これは <code>rilproxy</code> を通して <code>rild</code> と対話するワーカースレッドや radio state machine、主に <code>ril_worker.js</code> と Gecko content プロセスを含む他の Gecko コンポーネントとの間でメッセージ交換を行うメインスレッドの <a href="/ja/docs/XPCOM" title="XPCOM">XPCOM</a> サービスである <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIRadioInterfaceLayer" title="">nsIRadioInterfaceLayer</a></code> インタフェースを実装します。</dd>
+ <dt>Gecko の content プロセス</dt>
+ <dd>Gecko の content プロセスにおいて <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIRILContentHelper" title="">nsIRILContentHelper</a></code> インタフェース は、<a href="/ja/docs/API/WebTelephony" title="API/WebTelephony">Telephony</a> API や <a href="/ja/docs/API/WebSMS" title="API/WebSMS">SMS</a> API といった部分の DOM を実装するコードが radio interface と対話できるようにする XPCOM サービスを提供するものであり、chrome プロセス内にあります。</dd>
+</dl>
+
+<h3 id="Example_Communicating_from_rild_to_the_DOM" name="Example_Communicating_from_rild_to_the_DOM">例: rild から DOM への通信</h3>
+
+<p>システムの低水準層が DOM コードとどのように通信するかを見ていきましょう。モデムは着信を受けると、独自の方法を使用して <code>rild</code> にそれを通知します。すると <code>rild</code> は、"オープン" なプロトコルに従ってクライアント向けのメッセージを用意します。これは <a href="https://github.com/mozilla-b2g/android-hardware-ril/blob/master/include/telephony/ril.h" title="https://github.com/mozilla-b2g/android-hardware-ril/blob/master/include/telephony/ril.h"><code>ril.h</code></a> に記述されています。着信の場合は <code>RIL_UNSOL_RESPONSE_CALL_STATE_CHANGED</code> メッセージが生成されて、<code>rild</code> が <code>rilproxy</code> へ送信します。</p>
+
+<p><a href="https://github.com/mozilla-b2g/rilproxy/blob/master/src/rilproxy.c" title="https://github.com/mozilla-b2g/rilproxy/blob/master/src/rilproxy.c"><code>rilproxy.c</code></a> で実装されている <code>rilproxy</code> は自身のメインループ内でそのメッセージを受け取ります。ループでは以下のようなコードを使用して、<code>rild</code> との接続に問い合わせを行います:</p>
+
+<pre class="brush:cpp;">ret = read(rilproxy_rw, data, 1024);
+
+if(ret &gt; 0) {
+  writeToSocket(rild_rw, data, ret);
+}</pre>
+
+<p><code>rild</code> からメッセージを受け取ると、そのメッセージは <code>rilproxy</code> と Gecko を接続するソケットを通じて Gecko へ転送されます。Gecko は転送されたメッセージを <a href="https://dxr.mozilla.org/mozilla-central/source/ipc/ril/Ril.cpp" rel="custom">IPC スレッド</a>で受け取ります:</p>
+
+<pre class="brush:cpp;">int ret = read(fd, mIncoming-&gt;Data, 1024);
+// ... handle errors ...
+mIncoming-&gt;mSize = ret;
+sConsumer-&gt;MessageReceived(mIncoming.forget());
+</pre>
+
+<p>これらのメッセージを消費するのは <a href="https://dxr.mozilla.org/mozilla-central/source/dom/system/gonk/SystemWorkerManager.cpp" rel="custom">SystemWorkerManager</a> であり、これはメッセージを再パッケージ化して、RIL ステートマシンを実装する <code><a href="https://dxr.mozilla.org/mozilla-central/source/dom/system/gonk/ril_worker.js" rel="custom">ril_worker.js</a></code> スレッドに配布します。これは <code>RILReceiver::MessageReceived()</code> メソッドで行われます:</p>
+
+<pre class="brush:cpp;">virtual void MessageReceived(RilRawData *aMessage) {
+  nsRefPtr&lt;DispatchRILEvent&gt; dre(new DispatchRILEvent(aMessage));
+  mDispatcher-&gt;PostTask(dre);
+}</pre>
+
+<p>そのスレッドに渡されたタスクは次に、JavaScript で実装されている <code>onRILMessage()</code> 関数を呼び出します。これには、JavaScript の API 関数である <code><a href="/ja/docs/SpiderMonkey/JSAPI_Reference/JS_CallFunctionName" title="SpiderMonkey/JSAPI_Reference/JS_CallFunctionName">JS_CallFunctionName</a>()</code> を使用します:</p>
+
+<pre>return JS_CallFunctionName(aCx, obj, "onRILMessage", NS_ARRAY_LENGTH(argv),
+                           argv, argv);</pre>
+
+<p><code>onRILMessage()</code> は <a href="https://dxr.mozilla.org/mozilla-central/source/dom/system/gonk/ril_worker.js" rel="custom">dom/system/gonk/ril_worker.js</a> で実装されており、メッセージバイトを処理して小分けします。小分けされたものはすべて、それぞれの適切なハンドラメソッドへ配られます:</p>
+
+<pre class="brush:js;">handleParcel: function handleParcel(request_type, length) {
+  let method = this[request_type];
+  if (typeof method == "function") {
+    if (DEBUG) debug("Handling parcel as " + method.name);
+    method.call(this, length);
+  }
+}
+</pre>
+
+<p>このコードはオブジェクトからリクエストタイプを取得して、それが JavaScript コードで関数として定義されているかを確かめて、それからメソッドを呼び出すように動作します。ril_worker.js ではメソッドの各リクエストタイプにリクエストタイプと同じ名前を与えていますので、この処理はとてもシンプルです。</p>
+
+<p>今回の例である <code>RIL_UNSOL_RESPONSE_CALL_STATE_CHANGED</code> では、以下のハンドラーが呼び出されます:</p>
+
+<pre class="brush:js;">RIL[UNSOLICITED_RESPONSE_CALL_STATE_CHANGED] = function UNSOLICITED_RESPONSE_CALL_STATE_CHANGED() {
+  this.getCurrentCalls();
+};</pre>
+
+<p>前出のコードで見たように通話の状態が変化したことの通知を受けたときは、ステートマシンが <code>getCurrentCall()</code> メソッドを呼び出すことで現在の通話の状態を取得します:</p>
+
+<pre class="brush:js;">getCurrentCalls: function getCurrentCalls() {
+  Buf.simpleRequest(REQUEST_GET_CURRENT_CALLS);
+}</pre>
+
+<p>これは現在アクティブなすべての通話の状態を問い合わせるために、<code>rild</code> へリクエストを送ります。リクエストは <code>RIL_UNSOL_RESPONSE_CALL_STATE_CHANGED</code> メッセージがたどったものと似た経路を、逆方向に戻っていきます (すなわち、<code>ril_worker.js</code> から <code>SystemWorkerManager</code>、<code>Ril.cpp</code>、<code>rilproxy</code>、そして <code>rild</code> のソケットへ向かいます)。同様に <code>rild</code> は同じ経路で応答を返して、最終的に <code>ril_worker.js</code> の <code>REQUEST_GET_CURRENT_CALLS</code> メッセージ用ハンドラへたどり着きます。そして、双方向の通信が始まります。</p>
+
+<p>それからは通話の状態が処理されて、以前の状態と比較されます。状態が変化した場合は、ril_worker.js がメインスレッドの <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIRadioInterfaceLayer" title="">nsIRadioInterfaceLayer</a></code> サービスに通知します:</p>
+
+<pre class="brush:js;">_handleChangedCallState: function _handleChangedCallState(changedCall) {
+  let message = {type: "callStateChange",
+                 call: changedCall};
+  this.sendDOMMessage(message);
+}</pre>
+
+<p><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIRadioInterfaceLayer" title="">nsIRadioInterfaceLayer</a></code> は <a href="https://dxr.mozilla.org/mozilla-central/source/dom/system/gonk/RadioInterfaceLayer.js" rel="custom">dom/system/gonk/RadioInterfaceLayer.js</a> に実装されており、メッセージはこれの <code>onmessage()</code> メソッドが受け取ります:</p>
+
+<pre class="brush:js;"> onmessage: function onmessage(event) {
+   let message = event.data;
+   debug("Received message from worker: " + JSON.stringify(message));
+   switch (message.type) {
+     case "callStateChange":
+       // This one will handle its own notifications.
+       this.handleCallStateChange(message.call);
+       break;
+   ...
+</pre>
+
+<p>ここで実際に行っていることは、Parent Process Message Manager (PPMM) を使用した、content プロセスへのメッセージ配送です:</p>
+
+<pre class="brush:js;">handleCallStateChange: function handleCallStateChange(call) {
+  [some internal state updating]
+  ppmm.sendAsyncMessage("RIL:CallStateChanged", call);
+}</pre>
+
+<p>content プロセスではメッセージを Child Process Message Manager (CPMM) から、<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIRILContentHelper" title="">nsIRILContentHelper</a></code> サービスの <code>receiveMessage()</code> で受け取ります:</p>
+
+<pre class="brush:js;">receiveMessage: function receiveMessage(msg) {
+  let request;
+  debug("Received message '" + msg.name + "': " + JSON.stringify(msg.json));
+  switch (msg.name) {
+    case "RIL:CallStateChanged":
+      this._deliverTelephonyCallback("callStateChanged",
+                                     [msg.json.callIndex, msg.json.state,
+                                     msg.json.number, msg.json.isActive]);
+      break;</pre>
+
+<p>これは、登録済みであるすべてのテレフォニーコールバックオブジェクトの <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIRILTelephonyCallback#callStateChanged()">nsIRILTelephonyCallback.callStateChanged()</a></code> メソッドを順々に呼び出します。<a href="/ja/docs/Web/API/Window/navigator/mozTelephony" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>window.navigator.mozTelephony</code></a> API にアクセスするすべての Web アプリケーションに、既存の call オブジェクトの状態の変化あるいは新たな <code>incoming</code> call イベントの発生といったイベントを Web アプリケーション内の JavaScript へ配送する、コールバックオブジェクトのようなものが登録されています。</p>
+
+<pre class="brush:cpp;">NS_IMETHODIMP Telephony::CallStateChanged(PRUint32 aCallIndex, PRUint16 aCallState,
+                                          const nsAString&amp; aNumber, bool aIsActive) {
+  [...]
+
+  if (modifiedCall) {
+    // Change state.
+    modifiedCall-&gt;ChangeState(aCallState);
+
+    // See if this should replace our current active call.
+    if (aIsActive) {
+      mActiveCall = modifiedCall;
+    }
+
+    return NS_OK;
+  }
+
+  nsRefPtr&lt;TelephonyCall&gt; call =
+          TelephonyCall::Create(this, aNumber, aCallState, aCallIndex);
+  nsRefPtr&lt;CallEvent&gt; event = CallEvent::Create(call);
+  nsresult rv = event-&gt;Dispatch(ToIDOMEventTarget(), NS_LITERAL_STRING("incoming"));
+  NS_ENSURE_SUCCESS(rv, rv);
+  return NS_OK;
+}</pre>
+
+<p>アプリケーションはこれらのイベントを受け取って、自身のユーザインタフェースなどを更新できます:</p>
+
+<pre class="brush:js;">handleEvent: function fm_handleEvent(evt) {
+  switch (evt.call.state) {
+    case 'connected':
+      this.connected();
+      break;
+    case 'disconnected':
+      this.disconnected();
+      break;
+    default:
+      break;
+  }
+}</pre>
+
+<p>高度な例として、<a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/communications/dialer/js/dialer.js" title="https://github.com/mozilla-b2g/gaia/blob/master/apps/communications/dialer/js/dialer.js">ダイヤラーアプリケーションの <code>handleEvent()</code></a> をご覧ください。</p>
+
+<h3 id="3G_data" name="3G_data">3G データ</h3>
+
+<p>RIL メッセージに、携帯電話サービスの "データ通信" を開始するものがあります。これは、モデムのデータ通信モードを有効にします。このデータ通信は、通常のインタフェースで設定可能な Linux カーネルの <a href="https://ja.wikipedia.org/wiki/Point-to-Point Protocol" title="Point-to-Point Protocol">Point-to-Point Protocol</a> (PPP) インタフェースデバイスを生成および起動します。</p>
+
+<div class="note">
+<p><strong>注記:</strong> この章は記述が必要です。</p>
+</div>
+
+<h3 id="Related_DOM_APIs" name="Related_DOM_APIs">関連 DOM API</h3>
+
+<p>ここでは、RIL 通信に関連する DOM API を紹介します:</p>
+
+<ul>
+ <li><a href="/ja/docs/API/WebTelephony/Introduction_to_WebTelephony" title="API/WebTelephony/Introduction_to_WebTelephony">Telephony API</a></li>
+ <li><a href="/ja/docs/API/WebSMS/Introduction_to_WebSMS" title="API/WebSMS/Introduction_to_WebSMS">SMS API</a></li>
+ <li>Mobile Connection API</li>
+</ul>
+
+<h2 id="WiFi" name="WiFi">WiFi</h2>
+
+<p>B2G OS の WiFi バックエンドは、単にほとんどの処理で <code>wpa_supplicant</code> を使用します。つまり、バックエンドの主な役割は単にサプリカントの管理や、WiFi ドライバーの読み込みやネットワークインタフェースの有効化・無効化といった付加的な作業になります。つまりバックエンドは、サプリカントの状態を追跡するステートによるステートマシンになります。</p>
+
+<div class="note">
+<p><strong>注記:</strong> WiFi で発生する興味深い事象のほとんどは、<code>wpa_supplicant</code> プロセスで起こりうる状態の変化に深く依存しています。</p>
+</div>
+
+<p>WiFi コンポーネントの実装は、2 つのファイルに分かれています:</p>
+
+<dl>
+ <dt><a href="https://dxr.mozilla.org/mozilla-central/source/dom/wifi/DOMWifiManager.js" rel="custom">dom/wifi/DOMWifiManager.js</a></dt>
+ <dd><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWifi.idl" title="">nsIWifi.idl</a></code> で定義されており、Web content に公開する API を実装します。</dd>
+ <dt><a href="https://dxr.mozilla.org/mozilla-central/source/dom/wifi/WifiWorker.js" rel="custom">dom/wifi/WifiWorker.js</a></dt>
+ <dd>ステートマシンと、サプリカントを操作するコードを実装します。</dd>
+</dl>
+
+<p>これら 2 つのファイルは互いに<a href="/ja/docs/The_message_manager" title="The_message_manager">メッセージマネージャ</a>を使用して通信します。バックエンドは "associate" などのアクションを求めるメッセージを受け入れて、アクションが完了したときに応答メッセージを返します。</p>
+
+<p>DOM 側は状態の変化や情報の更新を示すさまざまなメッセージと同様に、応答メッセージを受け入れます。</p>
+
+<div class="note">
+<p><strong>注記:</strong> どの同期 DOM API も、パイプの API 側にデータをキャッシュするよう実装されています。可能であれば同期メッセージは避けてください。</p>
+</div>
+
+<h3 id="WifiWorker.js" name="WifiWorker.js">WifiWorker.js</h3>
+
+<p>このファイルでは、WiFi インタフェースの背後にある主要なロジックを実装しています。これは chrome プロセス (マルチプロセスビルド) で実行され、SystemWorkerManager によってインスタンス化されます。このファイルはおおむね 2 つのセクションに分けられます: 大きな無名関数と <code>WifiWorker</code> (およびそのプロトタイプ) です。無形関数は最終的に、サプリカントへの接続やスキャン結果が利用可能になったといったイベントの通知を含むローカル API を提供することで、<code>WifiManager</code> になります。通常これには小さなロジックが含まれ、要求された情報への応答やサプリカントとの接続の細部を管理するのと合わせて唯一の利用者がそのアクションを制御できるようにします。</p>
+
+<p><code>WifiWorker</code> オブジェクトは、<code>WifiManager</code> とDOM の間にあります。これはイベントに反応して、それらを DOM に転送します。同様に DOM からの要求を受け取って、対応するアクションをサプリカントで実行します。また、サプリカントの状態に関する情報や次に何を行うべきかの管理も行います。</p>
+
+<h3 id="DOMWifiManager.js" name="DOMWifiManager.js">DOMWifiManager.js</h3>
+
+<p>これは DOM API を実装しており、メッセージを呼び出し元と実際の WiFi worker との間でやり取りします。これに関係する、とても小さなロジックがあります。</p>
+
+<div class="note">
+<p><strong>注記:</strong> chrome プロセスへの同期メッセージを避けるため、WiFi Manager は受け取ったメッセージに基づいて状態をキャッシュすることが必要です。</p>
+</div>
+
+<p>同期メッセージが 1 つあり、これは現在のサプリカントの状態を取得するために DOM API がインスタンス化されたときに送信されます。</p>
+
+<h3 id="DHCP" name="DHCP">DHCP</h3>
+
+<p>DHCP および DNS は標準的な Linux の DHCP クライアントである <code>dhcpcd</code> によって制御されます。しかし、これはネットワーク接続が失われたときに対応できません。このため、B2G OS はワイヤレスネットワークに接続するたびに <code>dhcpcd</code> を停止および再起動します。</p>
+
+<p><code>dhcpcd</code> はデフォルトルートの設定も担います。DNS サーバーについてカーネルに伝達するためには Network Manager を呼び出します。</p>
+
+<h2 id="Network_Manager" name="Network_Manager">Network Manager</h2>
+
+<p>Network Manager は 3G データ通信や WiFi コンポーネントによって開かれたネットワークインタフェースの設定を行います。</p>
+
+<div class="note">
+<p><strong>注記:</strong> この章は記述が必要です。</p>
+</div>
+
+<h2 id="Processes_and_threads" name="Processes_and_threads">プロセスとスレッド</h2>
+
+<p>B2G OS はすべてのアプリケーションスレッドの実装に POSIX スレッドを使用しており、それには各アプリケーションのメインスレッドだけでなく Web worker やヘルパースレッドも含まれます。プロセスやスレッドの優先度付けに Control groups を使用していることから、Linux カーネル の Completely Fair Scheduler に依存しています。プロセスの状態に応じて、異なる Control group を割り当てています。現在は、5 つの Control group に対応する 6 つのプライオリティレベルがあります:</p>
+
+<table class="standard-table">
+ <caption>プロセスのプライオリティレベル</caption>
+ <thead>
+  <tr>
+   <th scope="col">プライオリティ</th>
+   <th scope="col">Control group</th>
+   <th scope="col">用途</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>MASTER</code></td>
+   <td> </td>
+   <td>メイン b2g プロセス</td>
+  </tr>
+  <tr>
+   <td><code>FOREGROUND_HIGH</code></td>
+   <td><code>apps/critical</code></td>
+   <td><code>cpu</code> または <code>highpriority</code> の Wakelock を保持する重要なアプリケーション。現在は時計や通信のアプリケーション向けに予約されています。</td>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+   <td><code>FOREGROUND</code></td>
+   <td><code>apps</code></td>
+   <td>フォアグラウンドのアプリケーション</td>
+  </tr>
+  <tr>
+   <td><code>FOREGROUND_KEYBOARD</code></td>
+   <td><code>apps</code></td>
+   <td>キーボードアプリケーション</td>
+  </tr>
+  <tr>
+   <td><code>BACKGROUND_PERCEIVABLE</code></td>
+   <td><code>apps/bg_perceivable</code></td>
+   <td>音声を再生している、あるいは <code>cpu</code> または <code>highpriority</code> の Wakelock を保持しており、少なくともシステムメッセージハンドラを登録しているアプリケーション</td>
+  </tr>
+  <tr>
+   <td><code>BACKGROUND</code></td>
+   <td><code>apps/bg_non_interactive</code></td>
+   <td>バックグラウンドで実行している、上記以外のアプリケーション</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>同じ Control group を共有するレベルがありますが、これは現在、<a href="/ja/Firefox_OS/Platform/Out_of_memory_management_on_Firefox_OS">Out of Memory Killer</a> による扱われ方の違いをレベルの違いとしているためです。すべてのプライオリティは、設定によりビルド時に調節できます。関係する項目は <a href="http://hg.mozilla.org/mozilla-central/file/54e8c6492dc4/b2g/app/b2g.js#l610"><code>b2g/app/b2g.js</code></a> ファイルにあります。</p>
+
+<p>現在は以下の Control group を使用しています:</p>
+
+<table class="standard-table">
+ <caption>Control group</caption>
+ <thead>
+  <tr>
+   <th scope="col">パス</th>
+   <th scope="col">CPU 割り当て</th>
+   <th scope="col">説明</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td> </td>
+   <td>全 CPU 時間の 50%</td>
+   <td>メイン b2g プロセスやシステムデーモン向けに予約している、ルート Control group</td>
+  </tr>
+  <tr>
+   <td><code>apps</code></td>
+   <td>全 CPU 時間の 50%</td>
+   <td>一般のアプリケーション</td>
+  </tr>
+  <tr>
+   <td><code>apps/critical</code></td>
+   <td><code>apps</code> の 95%</td>
+   <td>重要なアプリケーション</td>
+  </tr>
+  <tr>
+   <td><code>apps/bg_perceivable</code></td>
+   <td><code>apps</code> の 10%</td>
+   <td>知覚可能なバックグラウンドアプリケーション</td>
+  </tr>
+  <tr>
+   <td><code>apps/bg_non_interactive</code></td>
+   <td><code>apps</code> の 5%</td>
+   <td>バックグラウンドアプリケーション</td>
+  </tr>
+ </tbody>
+</table>
+
+<div class="note">
+<p><strong>注記</strong>: Out of Memory Killer の詳細情報および B2G OS が低メモリ状態にどう対処するかについては、<a href="/ja/Firefox_OS/Platform/Out_of_memory_management_on_Firefox_OS">B2G OSの低メモリ管理</a>をご覧ください。</p>
+</div>
+
+<p>プロセス内ではメインスレッドがプロセスの "nice 値" を継承する一方、Web Worker のスレッドは 1 段階大きな "nice 値" が与えられますので低いプライオリティで実行されます。この措置は、CPU 負荷が高い worker がメインスレッドの実行を過度に遅くさせないために行います。現在、アプリケーションのスレッドはすべて、同じ Control group に割り当てます。プロセスのプライオリティは、アプリケーションがバックグラウンドやフォアグラウンドに変わる、新たなアプリケーションを起動する、既存のアプリケーションが CPU Wakelock を取得するなど、主要なイベントが発生するたびに変更されます。</p>
+
+<div class="note">
+<p><strong>注記:</strong> 現在 ICS デバイスの cgroups サポートは、カーネルのバグにより破損しています。</p>
+</div>

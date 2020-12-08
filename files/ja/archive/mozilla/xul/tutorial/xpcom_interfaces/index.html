@@ -1,0 +1,193 @@
+---
+title: XPCOM インターフェイス
+slug: Archive/Mozilla/XUL/Tutorial/XPCOM_Interfaces
+tags:
+  - Tutorials
+  - 'XPCOM:Language Bindings'
+  - XPConnect
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/XPCOM_Interfaces
+---
+<div><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Box_Objects" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:XPCOM_Examples">次のページ  »</a></p>
+</div></div>
+
+<p>このセクションでは、 Mozilla が利用しているオブジェクトシステムである <a href="/ja/docs/XPCOM">XPCOM</a> (Cross-platform Component Object Model) の概要を見ていきます。</p>
+
+<p><span id="Calling_Native_Objects"></span></p>
+
+<h3 id=".E3.83.8D.E3.82.A4.E3.83.86.E3.82.A3.E3.83.96.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E3.82.92.E5.91.BC.E3.81.B3.E5.87.BA.E3.81.99" name=".E3.83.8D.E3.82.A4.E3.83.86.E3.82.A3.E3.83.96.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E3.82.92.E5.91.BC.E3.81.B3.E5.87.BA.E3.81.99">ネイティブオブジェクトを呼び出す</h3>
+
+<p>これまで見てきたように、 XUL を使用することで、複雑なユーザインターフェイスを構築することができます。 さらに、XUL にスクリプトを付加することで、インターフェイスを変化させたり、要求されたタスクを実行させることも可能です。 しかしながら、JavaScript からは直接できないことも、たくさんあります。 例えば、メールアプリケーションを作成する場合、メールサーバに接続して、メールの送受信を行うスクリプトを書く必要がありますが、 JavaScript は、こういった処理を記述するために必要な能力は持っていません。</p>
+
+<p>こういった処理を実装するための唯一の方法は、メールを取得するためにネイティブコードを書くことになります。 また、スクリプトからネイティブコードを呼び出す方法も必要です。 このために、Mozilla ではネイティブコードを <a href="/ja/docs/XPCOM">XPCOM</a> (Cross-platform Component Object Model) を利用して起動するためのメソッドを提供しています。</p>
+
+<div class="note">Mozilla では、多数の XPCOM のコンポーネントとインターフェイスを提供しています。このため、ほとんどの場合、アプリケーションで独自にネイティブコードを書く必要はありません。このセクションを読み終えたら、<a class="external" href="http://xulplanet.com/references/xpcomref/">XULPlanet の XPCOM リファレンス</a>で、利用できそうなインターフェイスを探してみてください。</div>
+
+<p><span id="About_XPCOM"></span></p>
+
+<h3 id="XPCOM_.E3.81.AB.E3.81.A4.E3.81.84.E3.81.A6" name="XPCOM_.E3.81.AB.E3.81.A4.E3.81.84.E3.81.A6">XPCOM について</h3>
+
+<p>Mozilla は、それぞれが決まった役割を持ったコンポーネントの集合として構成されています。 例えば、「メニュー」や「ボタン」あるいは「要素」について、それぞれに対応するコンポーネントが存在しています。 また、コンポーネントは、インターフェイスと呼ばれる、いくつかの定義から構成されています。</p>
+
+<p>Mozilla では、インターフェイスは「コンポーネントが実装する必要のある機能のセット」を定義したものを指しています。 また、コンポーネントは「Mozilla の中で、何かをするためのコードを実装したもの」になります。 これらのコンポーネントは、インターフェイスで記述された機能を実装しています。 このとき、1 つのコンポーネントが複数のインターフェイスを実装することも、 複数のコンポーネントが同じインターフェイスを実装することもあります。</p>
+
+<p>例として、ファイルコンポーネントをとりあげてみることにします。 まず、ファイルが持っているプロパティと、ファイルに対して実行可能な関数を記述したインターフェイスを作成する必要があります。 ファイルのプロパティとしては、名前、変更日、サイズが必要で、 関数としては、そのファイルに対して、移動、コピー、削除などを行う機能が含まれるでしょう。</p>
+
+<p>この File インターフェイスには、ファイルの特徴的な性質についてのみを記述し、実装はしません。 File インターフェイスの実装は、コンポーネントに任されています。 このインターフェイスを実装するコンポーネントは、ファイルの名前、日付、サイズを得るためのコードに加えて、 コピーや名前の変更のためのコードも持つことになります。</p>
+
+<p>コンポーネントが、インターフェイスをどのように実装するかは、(実装に問題がある場合を除いて) コンポーネントを利用する側では意識する必要はありません。 もちろん、意識しようとしても実装はプラットフォームごとに異なっています。 例えば、Windows と Macintosh 版のファイルコンポーネントは、大きく異なっています。 しかしながら、両方とも同じインターフェイスを実装しているため、 このインターフェイスで規定された関数を利用してアクセスすることで、プラットフォームを意識せずにコンポーネントを利用できるわけです。</p>
+
+<p>Mozilla では、インターフェイス名の先頭に「nsI」または「mozI」を付加することで、それがインターフェイスであることが簡単に判別できるようになっています。 例えば、<code>nsIAddressBook</code> は、アドレス帳とやりとりするためのインターフェイスであり、 <code>nsISound</code> は、サウンドファイルを鳴らすために、 <code>nsILocalFile</code> は、ローカルファイルのために利用されます。 Mozilla に含まれているインターフェイスの一覧は、<a href="/ja/docs/Interfaces">Interfaces</a> を参照してください。</p>
+
+<p>多くの場合、 XPCOM コンポーネントは、一般的に JavaScript 単独ではできないことを行うため、ネイティブに実装されます。 このため、JavaScript からもそれらを呼び出す方法が用意されています。 詳細はもう少し後で説明しますが、これによって、コンポーネントから提供される任意の関数を、実装したインターフェイスの記述に従って呼び出すことができます。 例えば、一度コンポーネントが得られれば、<code>nsISound</code> が実装されているかをチェックすることができ、 実装されていれば、それを利用してサウンドを鳴らすことが可能になります。</p>
+
+<p>スクリプトから XPCOM を呼び出す処理は <a href="/ja/docs/XPConnect">XPConnect</a> と呼ばれ、 これはスクリプトオブジェクトからネイティブオブジェクトへの変換を行うレイヤーとして位置づけられています。</p>
+
+<p><span id="Creating_XPCOM_Objects"></span></p>
+
+<h3 id="XPCOM_.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E3.81.AE.E7.94.9F.E6.88.90" name="XPCOM_.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E3.81.AE.E7.94.9F.E6.88.90">XPCOM オブジェクトの生成</h3>
+
+<p>XPCOM コンポーネントを呼び出すには、3 つの手順を踏む必要があります。</p>
+
+<ol>
+ <li>コンポーネントを取得</li>
+ <li>コンポーネントから、利用したいインターフェイスを実装しているパートを取得</li>
+ <li>必要な関数を呼び出す</li>
+</ol>
+
+<p>一度、最初の 2 つの手順を行えば、最後の手順は何度でも必要なだけ繰り返すことができます。 例えば、ファイル名の変更を行いたいと考えているとします。 このためには、<code>nsILocalFile</code> インターフェイスが利用できます。 まず、最初の手順としてファイルコンポーネントを取得します。 次に、ファイルコンポーネントに問い合わせを行い、<code>nsILocalFile</code> インターフェイスを実装しているパートを取得します。 最後に、そのインターフェイスが提供している関数を呼び出します。 なお、このインターフェイスは、 1 つのファイルを表すために使用されます。 (訳注:言い換えると、このインターフェイスから生成されるインスタンスは 1 つのファイルに対応することになります)</p>
+
+<p>既に説明したように、インターフェイスはほとんど「nsI」か「mozI」で始まる名前を持っています。 一方、コンポーネントは URI に似た文字列を使用して参照することになります。 Mozilla は、利用可能なすべてのコンポーネントのリストを、自身のレジストリに登録しています。 また、特定の利用者は、必要に応じて新しいコンポーネントをインストールすることもでき、 これはプラグインとよく似た働きをします。</p>
+
+<p>Mozilla は、ファイルコンポーネントとして <code><a href="/ja/docs/NsILocalFile">nsILocalFile</a></code> インターフェイスを実装したコンポーネントを提供しています。 このコンポーネントは、文字列「<code>@mozilla.org/file/local;1</code>」で参照することができます。 この文字列は、コントラクト ID (<span style="color: green;">contract ID</span>) と呼ばれ、以下の構文を持っています。</p>
+
+<pre class="eval"> @&lt;internetdomain&gt;/module[/submodule[...]];&lt;version&gt;[?&lt;name&gt;=&lt;value&gt;[&amp;&lt;name&gt;=&lt;value&gt;[...]]]
+</pre>
+
+<p>また、他のコンポーネントについても同様の方法で参照できます。 <span style="color: darkgreen; background: #ef9;">【訳注: 「contract ID」は、カタカナで「コントラクト ID」としましたが、訳語として「契約 ID」を当てているページも存在します】</span></p>
+
+<p>コンポーネントのコントラクト ID を利用して、コンポーネントを取得することが可能です。 JavaScript コードでは、以下のように記述することができます。</p>
+
+<pre>var aFile = Components.classes["@mozilla.org/file/local;1"].createInstance();
+</pre>
+
+<p>上の例では、ファイルコンポーネントが取得され、変数<em>aFile</em> に代入されています。 この、<code><a href="/ja/docs/Components_object">Components</a></code> によって、コンポーネントに関するいくつかの関数を提供する一般オブジェクトを参照することができます。 ここでは、<code>classes</code> プロパティから、コンポーネントクラスを取得しています。 この <code>classes</code> プロパティは、利用可能なコンポーネントをすべて含む配列なので、 別のコンポーネントを取得する場合は、単に角括弧の中のコントラクト ID を、利用したいコンポーネントのコントラクト ID に置き換えるだけで済みます。 そして、最後の <code>createInstance()</code> 関数によってインスタンスが作成されます。</p>
+
+<p>なお、<code>createInstance()</code> は、コンポーネントが存在しない場合に null を戻すため、戻り値が null でないことをチェックする必要があります。</p>
+
+<p>ここまでの手順では、まだファイルコンポーネント自身の参照が得られただけです。 続いて、コンポーネントが実装する関数を呼び出すために、その関数が記述されているインターフェイス、 この例の場合は <code><a href="/ja/docs/NsILocalFile">nsILocalFile</a></code> を取得する必要があります。 このためには、2 行目に以下のようなコードに追加します。</p>
+
+<pre>var aFile = Components.classes["@mozilla.org/file/local;1"].createInstance();
+if (aFile) aFile.QueryInterface(Components.interfaces.nsILocalFile);
+</pre>
+
+<p>関数 <code>QueryInterface()</code> は、すべてのコンポーネントで提供されており、 コンポーネントから指定のインターフェイスを取得します。 この関数は 1 つの引数をとり、そこに取得したいインターフェイスを渡します。 <code>Components</code> オブジェクトの <code>interfaces</code> プロパティは、利用可能なすべてのインターフェイスのリストを含んでいます。 ここでは <code>nsILocalFile</code> インターフェイスを利用するため、これを <code>QueryInterface()</code> への引数として渡します。 これによって、変数 aFile は、コンポーネントの <code>nsILocalFile</code> インターフェイスを実装するパートを参照するようになります。</p>
+
+<p>上記の 2 行の JavaScript を使用すれば、任意のコンポーネントの任意のインターフェイスを取得することができます。 必要なことは、コンポーネントのコントラクト ID を、利用したいもののコントラクト ID に置き換え、インターフェイス名を変えるだけです。 もちろん名前を変数で指定してもかまいません。 例えば、サウンドインターフェイスは、以下のように取得することができます。</p>
+
+<pre>var sound = Components.classes["@mozilla.org/sound;1"].createInstance();
+if (sound) sound.QueryInterface(Components.interfaces.nsISound);
+</pre>
+
+<p>XPCOM のインターフェイスを作成するとき、別の XPCOM のインターフェイスを継承させることが可能です。 継承したインターフェイスは、そのインターフェイス独自の関数に加えて継承したすべての関数を持ちます。 すべてのインターフェイスは、<code>nsISupports</code> と呼ばれるトップレベルのインターフェイスを継承しています。 このインターフェイスは、JavaScript では、先述の関数 <code>QueryInterface()</code> 1 つだけを提供しています。 <code>QueryInterface()</code> 関数が、すべてのコンポーネントで利用できるのは、 <code>nsISupports</code> インターフェイスを、すべてのコンポーネントが実装していることによっています。</p>
+
+<p>XPCOM では、複数のコンポーネントで、同じインターフェイスを実装している場合があります。 多くの場合、それらはオリジナルのサブクラスですが、そうである必要はありません。 極端な話、<code>nsILocalFile </code> の機能を、別の任意のコンポーネントに実装することも可能です。 また、1 つのコンポーネントが複数のインターフェイスを実装する場合もあります。 これらに対応するために、関数を呼び出すためのインターフェイスの取得には、2 つの手順を踏む必要があるのです。</p>
+
+<p>といっても、上の 2 行は頻繁に使われるため、ショートカットも用意されています。</p>
+
+<pre>var aLocalFile = Components.classes["@mozilla.org/file/local;1"].createInstance(Components.interfaces.nsILocalFile);
+</pre>
+
+<p>これは上の 2 行と同じことをしますが、1 行に収められています。 これによって、インスタンスの作成とインターフェイスの問い合わせを、2 つの別の手順として分ける必要がなくなります。</p>
+
+<p>オブジェクトに対して <code>QueryInterface()</code> を呼び出したとき、要求したインターフェイスがオブジェクトでサポートされていない場合、<span style="border-bottom: 1px dashed green;" title="exception">例外</span>が送出されます。 インターフェイスがコンポーネントでサポートされているかどうか不明な場合は、チェックするために <code><a href="/ja/docs/JavaScript/Reference/Operators/Special_Operators/instanceof_Operator">instanceof</a></code> 演算子を使用することができます。</p>
+
+<pre>var aFile = Components.classes["@mozilla.org/file/local;1"].createInstance();
+if (aFile instanceof Components.interfaces.nsILocalFile){
+  // do something
+}
+</pre>
+
+<p><code>instanceof</code> 演算子 は、aFile が <code>nsILocalFile</code> インターフェイスを実装している場合に true を返します。 なお、このチェックを行った場合、<code>QueryInterface()</code> を呼び出したのと同じ副作用が発生します。 このため、それ以降、aFile は <code>nsILocalFile</code> が有効な状態になります。</p>
+
+<p><span id="Calling_the_Functions_of_an_Interface"></span></p>
+
+<h3 id=".E3.82.A4.E3.83.B3.E3.82.BF.E3.83.BC.E3.83.95.E3.82.A7.E3.82.A4.E3.82.B9.E3.81.AE.E9.96.A2.E6.95.B0.E3.82.92.E5.91.BC.E3.81.B3.E5.87.BA.E3.81.99" name=".E3.82.A4.E3.83.B3.E3.82.BF.E3.83.BC.E3.83.95.E3.82.A7.E3.82.A4.E3.82.B9.E3.81.AE.E9.96.A2.E6.95.B0.E3.82.92.E5.91.BC.E3.81.B3.E5.87.BA.E3.81.99">インターフェイスの関数を呼び出す</h3>
+
+<p>これで <code>nsILocalFile</code> インターフェイスを持ったコンポーネントを参照するオブジェクトを取得できたので、 このオブジェクトを通して <code>nsILocalFile</code> の関数を呼び出すことができるようになりました。 以下に、<code>nsILocalFile</code> インターフェイスのプロパティとメソッドの一部を示します。</p>
+
+<dl>
+ <dt>initWithPath</dt>
+ <dd>このメソッドは、パスとファイル名を与えて nsILocalFile オブジェクトを初期化します。最初の引数が「<code>/usr/local/mozilla</code>」といったようなファイルパスになります。(フルパスで指定する必要があります)</dd>
+ <dt>leafName</dt>
+ <dd>ディレクトリ部分を除いたファイル名になります。</dd>
+ <dt>fileSize</dt>
+ <dd>ファイルのサイズです。</dd>
+ <dt>isDirectory()</dt>
+ <dd>この nsILocalFile オブジェクトが保持するファイルパスが、ディレクトリである場合に true を返します。</dd>
+ <dt>remove(recursive)</dt>
+ <dd>ファイルを削除します。引数 recursive が true の場合、ディレクトリに含まれるすべてのファイルとサブディレクトリが再帰的に削除されます。</dd>
+ <dt>copyTo(directory,newname)</dt>
+ <dd>ファイルを他のディレクトリへコピーします。オプションで名前を変更することも可能です。引数 directory は、コピー先のディレクトリを保持する nsILocalFile オブジェクトである必要があります。</dd>
+ <dt>moveTo(directory,newname)</dt>
+ <dd>ファイルを別のディレクトリに移動するか、ファイル名の変更を行います。引数 directory は移動先のディレクトリを保持する nsILocalFile オブジェクトである必要があります。</dd>
+</dl>
+
+<p>これらを利用して、ファイルを削除する機能を作成する場合、 まず、nsILocalFile オブジェクトにファイルを対応させる必要があります。 このとき、どのファイルに対応させるかは、<code>initWithPath()</code> メソッドを呼び出すことで指示できます。 なお、この呼び出しでは、オブジェクトのプロパティに、ファイルのパスが代入されることだけが行われ、 与えられたパスが正しく存在するかといったチェックは行われません。 次に <code>remove()</code> 関数を呼び出します。 この関数は、真偽値 の引数を 1 つとり、そこで再帰的に削除するかどうかを指定します。 以下コードは、このファイル削除処理の記述例になります。</p>
+
+<pre>var aFile = Components.classes["@mozilla.org/file/local;1"].createInstance();
+if (aFile instanceof Components.interfaces.nsILocalFile){
+  aFile.initWithPath("/mozilla/testfile.txt");
+  aFile.remove(false);
+}
+</pre>
+
+<p>このコードは、ファイル <code>/mozilla/testfile.txt</code> を取り出して削除します。 このコードを (作成中のファイル検索ダイアログの) イベントハンドラに追加して、この例の動作を試してみてください。 なお、その際ファイル名を削除したい実在のファイルに変更する必要があります。</p>
+
+<p>上の一覧には、<code>copyTo()</code> と <code>moveTo()</code> という、それぞれファイルのコピーと移動に利用可能な 2 つの関数があります。 これらは、コピー先あるいは移動先のディレクトリとして、文字列ではなく nsILocalFile オブジェクトを引数にとることに注意してください。 つまり、ファイルコンポーネントを 2 つ取得する必要があるということです。 以下に、ファイルをコピーする例を示します。</p>
+
+<pre>function copyFile(sourcefile,destdir)
+{
+  // get a component for the file to copy
+  var aFile = Components.classes["@mozilla.org/file/local;1"]
+    .createInstance(Components.interfaces.nsILocalFile);
+  if (!aFile) return false;
+
+  // get a component for the directory to copy to
+  var aDir = Components.classes["@mozilla.org/file/local;1"]
+    .createInstance(Components.interfaces.nsILocalFile);
+  if (!aDir) return false;
+
+  // next, assign URLs to the file components
+  aFile.initWithPath(sourcefile);
+  aDir.initWithPath(destdir);
+
+  // finally, copy the file, without renaming it
+  aFile.copyTo(aDir,null);
+}
+
+copyFile("/mozilla/testfile.txt","/etc");
+</pre>
+
+<p><span id="XPCOM_Services"></span></p>
+
+<h3 id="XPCOM_.E3.82.B5.E3.83.BC.E3.83.93.E3.82.B9" name="XPCOM_.E3.82.B5.E3.83.BC.E3.83.93.E3.82.B9">XPCOM サービス</h3>
+
+<p>XPCOM コンポーネントの中には、サービスと呼ばれる特別なコンポーネントがいくつかあります。 サービスは、大域的なデータの取得と設定や、他のオブジェクトに対する処理を行う汎用的な関数を提供します。 サービスのインスタンスは、1 つだけが存在するようにするために、使用時に <code>createInstance()</code> によるインスタンス作成は行わず、 代わりに <code>getService()</code> を呼び出すことで、サービスコンポーネントへの参照を取得します。 それ以外の点では、サービスと他のコンポーネントに大きな違いはありません。</p>
+
+<p>Mozilla で提供されているサービスの 1 つとして、ブックマークサービスがあります。 これを利用して、利用者のカレントのブックマークリストにブックマークを追加することができます。 以下に例を示します。</p>
+
+<pre>var bmarks = Components.classes["@mozilla.org/browser/bookmarks-service;1"].getService();
+bmarks.QueryInterface(Components.interfaces.nsIBookmarksService);
+bmarks.addBookmarkImmediately("http://www.mozilla.org","Mozilla",0,null);
+</pre>
+
+<p>最初に、コンポーネント <code>"@mozilla.org/browser/bookmarks-service;1"</code> を取得して、そのサービスを、変数 <code>bmarks</code> に代入します。 次に、<code>QueryInterface()</code> を使用して、nsIBookmarksService インターフェイスを取得します。 これにより、このインターフェイスで提供されているブックマークを追加する関数 <code>addBookmarkImmediately()</code> が利用できるようになります。 この関数の最初の 2 つの引数は、ブックマークする URL とタイトルです。 3 番目の引数は、ブックマークの種類で、通常は 0 です。 また、最後の引数は、ブックマークするの文書の文字エンコーディングで、指定する必要がなければ null を渡してもかまいません。 この例を実行した場合、ブックマークに <code><span class="nowiki">http://www.mozilla.org</span></code> が Mozilla というタイトルで追加されるはずです。</p>
+
+<p>次のセクションでは、Mozilla で利用可能なインターフェイスのいくつかを見ていきます。</p>
+
+<div><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Box_Objects" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:XPCOM_Examples">次のページ  »</a></p>
+</div></div>

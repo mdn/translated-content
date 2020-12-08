@@ -1,0 +1,37 @@
+---
+title: Emscripten
+slug: Mozilla/Projects/Emscripten
+translation_of: Mozilla/Projects/Emscripten
+---
+<p><span class="seoSummary">Emscripten 是一个 LLVM (底层虚拟机)生成 JavaScript 的编译器. 它采用 LLVM 的字节码 (例如，使用 Clang 从 C/C++ 或者从其他语言生成的字节码) 并将其编译成可在 Web 上面运行的 </span>JavaScript<span class="seoSummary">。</span></p>
+
+<div class="warning">
+<p><strong>重要提示：</strong><font>本页简要介绍了 Emscripten 是什么。</font><font>要开始使用 Emscripten</font>，<a href="http://kripken.github.io/emscripten-site/index.html">请访问官方的Emscripten Wiki</a>。</p>
+</div>
+
+<p>使用 Emscripten，你可以</p>
+
+<ul>
+ <li>将 C 和 C++ 代码编译成 JavaScript</li>
+ <li>将可以翻译为 LLVM 字节码的任何其他代码编译为 JavaScript</li>
+ <li>将其他语言的 C / C ++ 运行时编译为 JavaScript，然后间接使用其他语言运行代码（已在Python和Lua中运行成功）！</li>
+</ul>
+
+<p>Emscripten 使原生代码可立即使用在 Web 上：是一个具有众多独立兼容的实现，可在从 PC 到 iPad 的任何地方运行的标准平台。</p>
+
+<p>借助 Emscripten，C / C ++ 开发人员无需手动将代码移植到 JavaScript 上，也无需学习 JavaScript。Web 开发人员也可以从中受益，因为他们可以在自己的站点中使用成千上万的已存在的原生实用程序和库。</p>
+
+<p>实际上，任何可移植的 C 或 C++ 代码库都可以通过 Emscripten 编译成 JavaScript，从需要渲染图形，播放声音，加载和处理文件的高性能游戏到诸如 Qt 的应用程序框架。</p>
+
+<p>Emscripten 生成的代码（其默认输出格式为 <a href="/en-US/docs/Games/Tools/asm.js">asm.js</a> ，这是 JavaScript 的高度优化子集）在许多情况下可以以接近原生的速度执行。</p>
+
+<div class="note">
+<p><strong>注意：</strong>听起来有趣吗? <a href="http://kripken.github.io/emscripten-site/docs/introducing_emscripten/about_emscripten.html">阅读有关 Emscripten 的更多信息并尝试一些 demo</a>，然后<a href="http://kripken.github.io/emscripten-site/docs/getting_started/index.html">开始使用它</a>。</p>
+</div>
+
+<h2 id="MDN上其他有趣的文章">MDN上其他有趣的文章</h2>
+
+<ul>
+ <li>我们的 <a href="/en-US/docs/Games">游戏专区</a> 包含了一些游戏开发相关的有用内容，这是一个 Emscripten 被广泛应用的领域</li>
+ <li>我们的 <a href="/en-US/docs/Mozilla/Projects/Emscripten/Techniques">Emscripten 技巧</a> 页面保存了许多未公开在 Emscripten Wiki 上的有关 Emscripten 的实用想法</li>
+</ul>

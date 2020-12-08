@@ -1,0 +1,47 @@
+---
+title: Menus défilants
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Menus_défilants
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Scrolling_Menus
+---
+<p> </p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Menus_surgissants" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Ajout_de_gestionnaires_d'évènements">Suivant  »</a></p>
+</div>
+<p>Cette section va décrire les menus défilants et comment utiliser le mécanisme avec d'autres éléments.</p>
+<h3 id="Cr.C3.A9er_un_grand_menu" name="Cr.C3.A9er_un_grand_menu">Créer un grand menu</h3>
+<p>Vous vous demandez peut-être ce qu'il se passerait si vous créez un menu avec beaucoup de commandes, de telle manière que tous les items ne peuvent pas s'afficher tous à l'écran en même temps. Mozilla fournit un mécanisme de défilement permettant de faire défiler les items.</p>
+<div class="float-right"><img alt="Image:xultu_menuscroll1.png" class=" internal" src="/@api/deki/files/1534/=Xultu_menuscroll1.png"></div>
+<p>Si l'espace disponible est trop petit, des flèches vont apparaître sur chaque extrémité du menu. Si vous bougez la souris sur les flèches, le menu va défiler vers le haut et vers le bas. Si l'espace disponible est assez grand, les flèches n'apparaîtront pas. Notez que le comportement exact du défilement dépendra du thème graphique utilisé.</p>
+<p>Ce comportement est automatique. Vous n'avez pas à faire quoi que se soit pour avoir des menus défilants. Il va s'appliquer aux menus des barres de menu, aux menus surgissants ou listes déroulantes. Il est implémenté en utilisant un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/arrowscrollbox" title="arrowscrollbox">arrowscrollbox</a></code>. Cet élément peut être utilisé pour créer une boîte de défilement avec des flèches.</p>
+<p>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/arrowscrollbox" title="arrowscrollbox">arrowscrollbox</a></code> peut être utilisé n'importe où une boîte normale peut être utilisée. Vous n'êtes pas obligé de l'utiliser pour des menus. Il s'agit toujours une boîte verticale pouvant contenir n'importe quel élément à l'intérieur. Vous pouvez l'utiliser pour implémenter une liste que vous ne voulez pas déroulante.</p>
+<h4 id="Exemple_-_liste_d.C3.A9filante_de_boutons" name="Exemple_-_liste_d.C3.A9filante_de_boutons">Exemple - liste défilante de boutons</h4>
+<p>L'exemple suivant montre comment créer une liste défilante de boutons (vous devrez redimensionner la fenêtre pour voir les boutons de flèches) :</p>
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_menuscroll_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_menuscroll_1.xul">Voir</a></p>
+<pre>&lt;arrowscrollbox orient="vertical" flex="1"&gt;
+  &lt;button label="Rouge"/&gt;
+  &lt;button label="Bleu"/&gt;
+  &lt;button label="Vert"/&gt;
+  &lt;button label="Jaune"/&gt;
+  &lt;button label="Orange"/&gt;
+  &lt;button label="Argent"/&gt;
+  &lt;button label="Lavande"/&gt;
+  &lt;button label="Or"/&gt;
+  &lt;button label="Turquoise"/&gt;
+  &lt;button label="Pêche"/&gt;
+  &lt;button label="Bordeaux"/&gt;
+  &lt;button label="Noir"/&gt;
+&lt;/arrowscrollbox&gt;
+</pre>
+<p>Si vous essayez cet exemple, il va d'abord s'ouvrir en pleine taille. Cependant, si vous réduisez la taille de la fenêtre, les flèches de défilement vont apparaître. Rendre la fenêtre plus grande à nouveau va faire disparaître les flèches.</p>
+<p>Vous pouvez mettre une propriété CSS <code>max-height</code> sur les <code><a href="/fr/docs/Mozilla/Tech/XUL/arrowscrollbox" title="arrowscrollbox">arrowscrollbox</a></code> pour limiter la taille de la boîte de défilement et ainsi faire apparaître les flèches tout le temps.</p>
+<p>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/arrowscrollbox" title="arrowscrollbox">arrowscrollbox</a></code> est principalement utile dans les menus et boîtes surgissantes.</p>
+<hr>
+<p>Par la suite, nous allons voir comment ajouter des gestionnaires d'événements à des éléments XUL.</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Menus_surgissants" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Ajout_de_gestionnaires_d'évènements">Suivant  »</a></p>
+</div>
+<p><span class="comment">Interwiki</span></p>

@@ -1,0 +1,33 @@
+---
+title: B2G OS アプリのアーキテクチャ
+slug: Archive/Firefox_OS/Platform/Apps_architecture
+tags:
+  - Apps
+  - B2G OS
+  - Guide
+translation_of: Archive/B2G_OS/Platform/Apps_architecture
+---
+<p>アプリケーションを開発、配布するにあたって、B2G OS 上でアプリがどのように起動、管理されるのか、その詳細について理解する必要はありませんが、多少なりとも関心はあるかもしれません。また、この情報は B2G OS プラットフォーム開発者や、OS を新しいハードウェアへ移植するチームにとっても有益なものとなるでしょう。</p>
+
+<h2 id="The_app_startup_process" name="The_app_startup_process">アプリの起動プロセス</h2>
+
+<p>ユーザが起動したいアプリを選択した場合、あるいはアプリが起動される必要がある場合、<a href="/ja/docs/Web/API/App" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>App</code></a> API からのアプリ参照を得ることによってホーム画面アプリが起動し、<a href="/ja/docs/Web/API/App/launch" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>App.launch()</code></a> メソッドを呼び出してアプリを起動します。</p>
+
+<p>Gecko はそのリクエストを受け取り、System アプリへ <a href="/ja/docs/Web/API/MozChromeEvent" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>mozChromeEvent</code></a> を送り、アプリの詳細を伝えます。System アプリは、自身の DOM ツリーへ新しい <a href="/ja/docs/Web/HTML/Element/iframe" title="HTML の &lt;iframe> 要素は、ブラウジングコンテキスト (browsing context) の入れ子を表現し、事実上現在のページに他の HTML ページを埋め込むことができます。HTML 4.01 では、文書は head および body、または head および frameset を持つことができ、body と frameset の両方は持ちません。しかし、&lt;iframe> は通常の文書 body 内で使用できます。ブラウジングコンテキストはそれぞれ、セッション履歴とアクティブな文書を持ちます。埋め込みコンテンツを含む側のブラウジングコンテキストを、親ブラウジングコンテキストと呼びます。トップレベルのブラウジングコンテキスト (親を持ちません) は通常ブラウザーウィンドウです。"><code>&lt;iframe&gt;</code></a> を挿入し、そこにアプリを読み込むことで、そのイベントを処理します。アプリが終了するまで、そのフレームがアプリの居場所となります。</p>
+
+<p>各アプリはアプリの情報を記述したマニフェストを必要とし、そのパッケージ内で特定のファイル構造を持ちます。詳しくは <a href="/ja/docs/Web/Apps/App_Manifest">アプリマニフェスト</a> の記事を参照してください。</p>
+
+<h2 id="Communication_with_Gecko" name="Communication_with_Gecko">Gecko との通信</h2>
+
+<p>Gecko と Gaia の System アプリ間の通信は <a href="/ja/docs/Web/API/MozChromeEvent" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>mozChromeEvent</code></a> と <a href="/ja/docs/Web/API/MozContentEvent" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>mozContentEvent</code></a> を通じて行われます。<code>mozChromeEvent</code> はクロームからコンテンツへの送出であり、<code>mozContentEvent</code> はコンテンツからクロームへの送出です。この通信は、信頼された UI の作成と閉鎖を管理したり、通知やその他のタスクのために必要な機能を挿入したりするのに使用されます。これにはあるアプリを起動するよう System アプリへ伝えることも含まれます。</p>
+
+<div class="note">
+<p><strong>注:</strong> これに関するドキュメントは、System アプリやその下層の対応コードに取り組んでいる開発者が主に関心を持つものとはいえ、整備する必要があります。今のところ、<code><a href="https://dxr.mozilla.org/mozilla-central/source/b2g/chrome/content/shell.js" rel="custom">b2g/chrome/content/shell.js</a></code> にあるコードを参照することで、これがどのように使われているか、多くの情報を収集できます。</p>
+</div>
+
+<h2 id="See_also" name="See_also">関連記事</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/Apps">Apps</a></li>
+ <li><a href="/ja/docs/Web/API/App" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>App</code></a></li>
+</ul>

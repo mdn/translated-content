@@ -1,0 +1,302 @@
+---
+title: 一般的なFirefoxテーマに関する問題と解決方法
+slug: Themes/Common_Firefox_theme_issues_and_solutions
+translation_of: Archive/Themes/Common_Firefox_theme_issues_and_solutions
+---
+<p>このページの目的は、テーマ開発者はどのようにして一般的な技術的問題を修正するか、についての話題を提示することです。 これは、AMOエディターの、コピーアンドペーストで一般的なテーマに関する課題のための話題を見直せる"boilerplate"エディターで掲示されている、<a href="https://wiki.mozilla.org/AMO:Editors/EditorGuide/CommonThemeProblems">一般的なテーマに関する問題</a>の説明と連携した文書です。この文書は2012年7月27日に始められ、 時間をかけて全て解決、もしくは一部の問題についての解決方法を書かれることを必要とし続けています。</p>
+
+<h2 id="特定のOSにおける問題">特定のOSにおける問題</h2>
+
+<h3 id="Windows_7">Windows 7</h3>
+
+<h4 id="Windows_7_Aero_missing_right-hand_title_bar_buttons">Windows 7 Aero missing right-hand title bar buttons</h4>
+
+<p>When tabs are on top and the menu bar is disabled, Firefox is missing the min/max/restore/close button on the right side of the title bar. Please see the following threads on MozillaZine for solutions to this issue:<br>
+ <a href="http://forums.mozillazine.org/viewtopic.php?f=18&amp;t=2131121" title="http://forums.mozillazine.org/viewtopic.php?f=18&amp;t=2131121">http://forums.mozillazine.org/viewtopic.php?f=18&amp;t=2131121</a><br>
+ <a href="http://forums.mozillazine.org/viewtopic.php?f=18&amp;t=1953371&amp;start=60" title="http://forums.mozillazine.org/viewtopic.php?f=18&amp;t=1953371&amp;start=60">http://forums.mozillazine.org/viewtopic.php?f=18&amp;t=1953371&amp;start=60</a></p>
+
+<h4 id="Windows_7_Aero_not_going_into_full_screen_mode_properly">Windows 7 Aero not going into full screen mode properly</h4>
+
+<p>On Win7 with Aero Glass support Firefox doesn't always go to full screen mode from a normal window properly. The resolution to this issue is to add the following code to your browser.css file somewhere below where the main-window is made transparent to support Aero glass.</p>
+
+<pre class="brush:css;">@media all and (-moz-windows-compositor) {
+  /* Make transition to Fullscreen mode seamlessly in Firefox 10+ */
+  #main-window[inFullscreen="true"] {
+    -moz-appearance: none;
+    background-color: -moz-dialog!important;
+  }
+}</pre>
+
+<p>For more information about this issue please see {{bug(732757)}} and {{bug(732757)}} and <a href="http://forums.mozillazine.org/viewtopic.php?f=18&amp;t=2438459">this MozillaZine thread</a>.</p>
+
+<h3 id="Mac_OS_X">Mac OS X</h3>
+
+<h4 id="OS_X_Lion_missing_toolbar_button_icons">OS X Lion missing toolbar button icons</h4>
+
+<p>Due to Firefox {{bug(679708)}} and {{bug(702558)}}, some toolbar buttons icons may be missing on Firefox 8 and later running on Mac OS X Lion. In order to work around this issue, you need to either rename any of the following files that are in your chrome://browser/skin/ folder and fix any references to those files, or copy them to the folder <code>chrome://browser/skin/lion/</code>:</p>
+
+<ul>
+ <li><code>keyhole-circle.png</code></li>
+ <li><code>Toolbar.png</code></li>
+ <li><code>toolbarbutton-dropmarker.png</code></li>
+ <li><code>tabbrowser/alltabs-box-bkgnd-icon.png</code></li>
+ <li><code>tabview/tabview.png</code></li>
+ <li><code>places/toolbar.png</code></li>
+</ul>
+
+<h3 id="Linux">Linux</h3>
+
+<h4 id="Linux_select_box_fields_are_showing_both_drop_arrow_and_spinner_arrows">Linux select box fields are showing both drop arrow and spinner arrows</h4>
+
+<p>On Linux: the styling of drop down select box fields may show both a drop arrow and up/down spinner arrows.  The problem is commonly caused by a <code>-moz-appearance:menulist</code> style rule in <code>chrome://global/skin/menulist.css</code>. Once the offending rule is found, it should be deleted and manual styling used.</p>
+
+<h4 id="App_button_not_styled_on_Linux_but_is_styled_on_Windows">App button not styled on Linux, but is styled on Windows</h4>
+
+<p>On Linux the Firefox app button that is displayed when tabs are on top and menu bar is disabled is not styled properly compared to Windows and is not changing colors when in private browsing mode. The cause of this issue is that Linux Firefox uses a different ID for the Firefox button from Windows. The fix is to make sure any style rule that references <code>#appmenu-button</code> also has a comparable reference to <code>#appmenu-toolbar-button</code> in <code>chrome://browser/skin/browser.css</code>. If your Firefox button relies on some button styling from toolbarbuttons.css you'll need to add comparable style rules for <code>#appmenu-toolbar-button</code> in <code>browser.css</code>.</p>
+
+<h2 id="ツールバーとメニュー">ツールバーとメニュー</h2>
+
+<h3 id="Firefox_application_button">Firefox application button</h3>
+
+<h4 id="Application_button_doesn't_change_styling_for_private_browsing_mode">Application button doesn't change styling for private browsing mode</h4>
+
+<p>When in private browsing mode there needs to be a visual difference to the Firefox app button that is displayed when tabs are on top and the menu bar is disabled.</p>
+
+<h4 id="Text_only_toolbar_buttons_not_aligned_properly">Text only toolbar buttons not aligned properly</h4>
+
+<p>When text only toolbar buttons are selected in customize toolbars, text labels in toolbar buttons may not align properly. The common cause of this is style rules that reference <code>[iconsize="small"]</code> without excluding <code>[mode="text"]</code>. The solution usually is to append <code>:not ([mode="text"])</code> to those style rules. For instance use <code>toolbar[iconsize="small"]:not ([mode="text"])</code>. A little experimenting may be required to fully address this issue with your theme.</p>
+
+<h3 id="Address_bar">Address bar</h3>
+
+<h4 id="Identity_box_is_missing_padlock_icons_for_secure_sites">Identity box is missing padlock icons for secure sites</h4>
+
+<p>In Firefox 14 and later the identity box has been significantly changed and the favicon has been replaced by an icon that indicates the website's status. In the case of secure sites the icon <strong>must</strong> be a padlock. To fix this issue, you need to copy the files <code>chrome://browser/skin/identity-icons-generic.png</code>, <code>chrome://browser/skin/identity-icons-https.png</code> and <code>chrome://browser/skin/identity-icons-https-ev.png</code> to your <code>browser</code> folder. You can modify/redesign these icons to match your theme provided appropriate padlock icons are used for secure sites but not on insecure sites. The following CSS rules also need to be copied to the proper location in the <code>browser.css</code> file and modified as necessary:</p>
+
+<pre class="brush:css;">  /* page proxy icon */
+
+  #page-proxy-favicon {
+    width: 16px;
+    height: 16px;
+    margin: 1px 3px;
+    list-style-image: url(chrome://browser/skin/identity-icons-generic.png);
+    -moz-image-region: rect(0, 16px, 16px, 0);
+  }
+
+  .verifiedDomain &gt; #identity-box-inner &gt; #page-proxy-stack &gt; #page-proxy-favicon {
+    list-style-image: url(chrome://browser/skin/identity-icons-https.png);
+  }
+
+  .verifiedIdentity &gt; #identity-box-inner &gt; #page-proxy-stack &gt; #page-proxy-favicon {
+    list-style-image: url(chrome://browser/skin/identity-icons-https-ev.png);
+  }
+
+  #identity-box:hover &gt; #identity-box-inner &gt; #page-proxy-stack &gt; #page-proxy-favicon {
+    -moz-image-region: rect(0, 32px, 16px, 16px);
+  }
+
+  #identity-box:hover:active &gt; #identity-box-inner &gt; #page-proxy-stack &gt; #page-proxy-favicon,
+  #identity-box[open=true] &gt; #identity-box-inner &gt; #page-proxy-stack &gt; #page-proxy-favicon {
+    -moz-image-region: rect(0, 48px, 16px, 32px);
+  }
+
+  #page-proxy-favicon[pageproxystate="invalid"] {
+    opacity: 0.5;
+  }
+</pre>
+
+<p>For more information about identity boxes please see the <a href="https://wiki.mozilla.org/AMO:Editors/EditorGuide/ThemeReviews#Identity_Boxes">identity box section</a> of the AMO editors theme review guidelines</p>
+
+<h4 id="No_visual_clue_for_disabled_url_bars">No visual clue for disabled url bars</h4>
+
+<p>There needs to be a visual clue when URL bar is disabled. To test this please go to {{bug(370495)}} using the default theme and activate the "click me" link. The URL bar of the resulting popup window is disabled.</p>
+
+<h3 id="Address_bar_door_hangers">Address bar "door hangers"</h3>
+
+<h4 id="Door_hanger_sync_panel_not_styled">Door hanger sync panel not styled</h4>
+
+<p>The sync panel at the bottom of the "door hanger" for the save password panel displayed when a user logs into a website needs to be styled to match rest of panel including border. This issue also applies to the edit bookmark panel, which is activated by double clicking on the bookmark star in the URL bar. For details, please see {{bug(708797)}}.</p>
+
+<h2 id="About_Pages">"About" Pages</h2>
+
+<h3 id="aboutaddons">about:addons</h3>
+
+<h4 id="Disabled_add-on_Icons_are_not_grey_scale">Disabled add-on Icons are not grey scale</h4>
+
+<p>In Tools &gt; Add-ons, the icons of disabled icons need to be converted to grey scale. To accomplish this copy the file <code>chrome://mozapps/skin/extensions/extensions.svg</code> from the default theme into the <code>mozapps/extensions/</code> folder of your theme and add the following style rule to the CSS file <code>extensions.css</code>:</p>
+
+<pre class="brush:css;">.addon[active="false"] .icon {
+ filter: url("chrome://mozapps/skin/extensions/extensions.svg#greyscale");
+ opacity:0.3;
+ }</pre>
+
+<h3 id="aboutmemory">about:memory</h3>
+
+<h4 id="Aboutmemory_nodes_do_not_collapse">About:memory nodes do not collapse</h4>
+
+<p>The styling of <code>about:memory</code> is a little messed up in that nodes do not collapse as they should when clicked on. To fix this issue you need to copy the following file from the latest version of Firefox to your theme: <code>chrome://global/content/aboutMemory.css</code>.</p>
+
+<h3 id="aboutpermissions">about:permissions</h3>
+
+<h4 id="Domain_names_don't_line_up_in_aboutpermissions">Domain names don't line up in about:permissions</h4>
+
+<p>The domains on the domain list of <code>about:permissions</code> do not line up properly due to missing placeholder icons for domains without favicons. This issue is fixed by adding the following CSS instructions to the file <code>browser/preferences/aboutPermissions.css</code>:</p>
+
+<pre class="brush:css;">.site-favicon {
+  height: 16px;
+  width: 16px;
+  -moz-margin-end: 4px;
+  list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
+}</pre>
+
+<h2 id="Web_developer_tools">Web developer tools</h2>
+
+<h3 id="Web_developer_toolbar">Web developer toolbar</h3>
+
+<p>{to be added}</p>
+
+<h3 id="Web_console">Web console</h3>
+
+<h4 id="Web_console_buttons_do_not_change_appearance">Web console buttons do not change appearance</h4>
+
+<p>On the web console (Tools &gt; Web Developer &gt; Web Console), the toolbar buttons on the left-hand side do not change their appearance between their toggled on and toggled off status as a result it is not possible to determine which buttons are enabled.</p>
+
+<h4 id="Web_console_close_button_is_missing">Web console close button is missing</h4>
+
+<p>The web console (Tools &gt; Web Developer &gt; Web Console) is missing its close button, which makes it impossible to close.</p>
+
+<h4 id="Web_console_close_button_sprite_mapping_is_messed_up">Web console close button sprite mapping is messed up</h4>
+
+<p>On the web console (Tools &gt; Web Developer &gt; Web Console) the sprite mapping for the close button is messed up.</p>
+
+<h3 id="Style_Inspector">Style Inspector</h3>
+
+<h4 id="Style_inspector_is_missing_button_icons_on_toolbar">Style inspector is missing button icons on toolbar</h4>
+
+<p>The style inspector is missing icons from its inspect and markup panel buttons on its toolbar. To fix this issue you need to copy the files <code>chrome://browser/skin/devtools/inspect-button.png</code> and <code>chrome://browser/skin/devtools/treepanel-button.png</code> from the default theme into your <code>browser/devetools/</code> folder. You also need to insert the following style rules into the proper place in the <code>browser/browser.css</code> file in your theme theme:</p>
+
+<pre class="brush:css;">/* Highlighter toolbar - HTML Tree */
+
+#inspector-treepanel-toolbutton {
+  list-style-image: url("chrome://browser/skin/devtools/treepanel-button.png");
+  -moz-margin-end: 0;
+ -moz-image-region: rect(0px 18px 16px 0px);
+}
+
+/* Highlighter toolbar */
+
+#inspector-inspect-toolbutton {
+  list-style-image: url("chrome://browser/skin/devtools/inspect-button.png");
+  -moz-image-region: rect(0px 16px 16px 0px);
+}</pre>
+
+<h4 id="Style_inspector_is_completely_unstyled">Style inspector is completely unstyled</h4>
+
+<p>The style inspector that is part of Firefox 10 and later needs to be styled. Using the default theme in the latest Firefox, please try Tools &gt; Web Developer &gt; Inspect to see how this new feature functions and how it should be styled. You'll probably want to copy the files from the folder <code>browser/devtools/</code> from the default theme into your theme and then modify as necessary to achieve the desired look.</p>
+
+<h4 id="Style_inspector's_bread_crumb_buttons_are_hard_to_read">Style inspector's bread crumb buttons are hard to read</h4>
+
+<p>The text labels of breadcrumbs on the style inspector (Tools &gt; Web Developer &gt; Inspect) are too similar to the background colors making them very hard to read. Please choose text label colors that stand out against the background color better. The style rules for these labels can be found near the end of <code>chrome://browser/skin/browser.css</code>. The color style for the following statements need to be adjusted:</p>
+
+<pre class="brush:css;">.inspector-breadcrumbs-button {</pre>
+
+<pre class="brush:css;">.inspector-breadcrumbs-button[checked] &gt; .inspector-breadcrumbs-tag {
+</pre>
+
+<pre class="brush:css;">.inspector-breadcrumbs-button[checked] &gt; .inspector-breadcrumbs-id {</pre>
+
+<pre class="brush:css;">.inspector-breadcrumbs-id,
+  .inspector-breadcrumbs-classes {</pre>
+
+<h4 id="Style_inspector_breadcrumb_button_backgrounds_are_not_consistent_between_pre-FF14_and_FF14">Style inspector breadcrumb button backgrounds are not consistent between pre-FF14 and FF14+</h4>
+
+<p>The use of the styling rule <code>fill</code> in {{cssxref("-moz-border-image")}} is incompatible with versions of Firefox older than Firefox14, however, its use is needed for Firefox 14 and later. Themes that use <code>-moz-border-image</code> and support both Firefox 14 and newer as well as older versions of Firefox need to use both the older and newer methodologies like the following example.  In most themes this issue specifically affects the breadcrumbs toolbar of the style inspector.</p>
+
+<pre class="brush:css;">.inspector-breadcrumbs-button {
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-middle.png") 2 13 2 13 stretch; /* For FF13- */
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-middle.png") 2 13 2 13 fill stretch; /* For FF14+ */
+}</pre>
+
+<h3 id="Responsive_design_view">Responsive design view</h3>
+
+<h4 id="Responsive_design_view_is_missing_background_for_unused_area">Responsive design view is missing background for unused area</h4>
+
+<p>The Responsive design view tool (Tools &gt; Web Developer &gt; Responsive Design View) needs background styling for the unused area of the content window.</p>
+
+<h3 id="Debugger">Debugger</h3>
+
+<h4 id="Debugger_toolbar_buttons_are_missing_icons">Debugger toolbar buttons are missing icons</h4>
+
+<p>On the Debugger (Tools &gt; Web Developer &gt; Debugger) the toolbar buttons are missing their icons.</p>
+
+<h2 id="Miscellaneous_issues">Miscellaneous issues</h2>
+
+<h3 id="HTML_5_media_controls">HTML 5 media controls</h3>
+
+<h4 id="HTML_5_media_controls_are_not_styled">HTML 5 media controls are not styled</h4>
+
+<p>The HTML5 video control bar is not styled. Please go to <a href="http://www.mozilla.org/mission/">Mozilla's Mission page</a> using both your theme and the default theme and try the video on that page. This issue needs to be corrected in the next version of your theme.</p>
+
+<h4 id="HTML_5_media_control_bar_is_missing_full_screen_button">HTML 5 media control bar is missing full screen button</h4>
+
+<p>The fullscreen icon is missing from the HTML5 video control bar. To test this go to <a href="http://www.mozilla.org/mission/">Mozilla's Mission page</a>.</p>
+
+<p><strong>Warning:</strong> If you copy over the Firefox 11 or newer style rules and graphics from the <code>media</code> folder in <code>omni.ja</code> you need to make the following changes in <code>videocontrols.css</code> or the pause and mute buttons will break in Firefox 10. Change the style rules:</p>
+
+<pre class="brush:css;"> .playButton[paused] {...}
+ .muteButton[muted] {...}</pre>
+
+<p>To:</p>
+
+<pre class="brush:css;"> .playButton[paused="true"] {...}
+ .muteButton[muted="true"] {...}</pre>
+
+<h2 id="Error_console_warnings">Error console warnings</h2>
+
+<h3 id="Unknown_namespace_for_videocontrols.css">Unknown namespace for videocontrols.css</h3>
+
+<p>The error console is reporting the following issue:</p>
+
+<pre>Warning: Unknown namespace prefix 'html'.  Ruleset ignored due to bad selector.
+Source file: chrome://global/skin/media/videocontrols.css</pre>
+
+<p>The solution to this issue is to add the following name space to the second line of the file right after, and in addition to, the existing <code>@namespace</code>:</p>
+
+<pre class="brush:css;">@namespace html url("http://www.w3.org/1999/xhtml");</pre>
+
+<p>You can generate the error console message by going to <a href="http://www.mozilla.org/mission/">Mozilla's Mission page</a>. If you are using the <a href="https://addons.mozilla.org/en-US/firefox/addon/console²">extension Console²</a> you can easily filter out content related messages to see just chrome issues.</p>
+
+<h3 id="Warning_Unknown_Property_(Obsolete_CSS_Rules)">Warning: Unknown Property (Obsolete CSS Rules)</h3>
+
+<h4 id="-moz-border-radius">-moz-border-radius</h4>
+
+<p>Firefox no longer supports <code>-moz-border-radius</code> style properties. Use CSS standard {{cssxref("border-radius")}} properties instead (supported by Firefox since Firefox 4).</p>
+
+<h4 id="-moz-box-shadow">-moz-box-shadow</h4>
+
+<p>Firefox no longer supports <code>-moz-box-shadow</code> style property. Use CSS standard {{cssxref("box-shadow")}} property instead (supported by Firefox since Firefox 4).</p>
+
+<h4 id="-moz-transition">-moz-transition</h4>
+
+<p>Firefox no longer supports <code>-moz-transition</code> style property. Use CSS standard {{cssxref("transition")}} property instead (supported by Firefox since Firefox 4).</p>
+
+<h2 id="Resources">Resources</h2>
+
+<h3 id="AMO_Editors_Theme_Testing_Guidelines"><a href="https://wiki.mozilla.org/AMO:Editors/EditorGuide/ThemeReviews" title="https://wiki.mozilla.org/AMO:Editors/EditorGuide/ThemeReviews">AMO Editors Theme Testing Guidelines</a></h3>
+
+<p>When developing and testing your themes, please refer to the <a href="https://wiki.mozilla.org/AMO:Editors/EditorGuide/ThemeReviews" title="https://wiki.mozilla.org/AMO:Editors/EditorGuide/ThemeReviews">theme testing guidelines</a> AMO editors use to review themes. This guide will help you thoroughly test your theme to find and fix issues before you push updates to AMO. This is document is a work in progress so feedback and/or suggestions is appreciated.</p>
+
+<h3 id="MDN_CSS_Reference"><a href="https://developer.mozilla.org/en/CSS/CSS_Reference" title="https://developer.mozilla.org/en/CSS/CSS_Reference">MDN CSS Reference</a></h3>
+
+<p>Mozilla's Developer Network maintains a great <a href="https://developer.mozilla.org/en/CSS/CSS_Reference" title="https://developer.mozilla.org/en/CSS/CSS_Reference">CSS reference</a>.</p>
+
+<h3 id="AMO_Themes_Forum"><a href="https://forums.mozilla.org/addons/viewforum.php?f=8" title="https://forums.mozilla.org/addons/viewforum.php?f=8">AMO Themes Forum</a></h3>
+
+<p>We'd like to encourage you to participate in the AMO (addons.mozilla.org)  forums <a href="https://forums.mozilla.org/addons/viewforum.php?f=8" title="https://forums.mozilla.org/addons/viewforum.php?f=8">theme forum</a>.</p>
+
+<h3 id="MozillaZine_Themes_Forum"><a href="http://forums.mozillazine.org/viewforum.php?f=18" title="http://forums.mozillazine.org/viewforum.php?f=18">MozillaZine Themes Forum</a></h3>
+
+<p>MozillaZine is NOT an official Mozilla website, but it does have the largest community of Firefox theme developers and is a great resource. Their <a href="http://forums.mozillazine.org/viewforum.php?f=18" title="http://forums.mozillazine.org/viewforum.php?f=18">theme development forum is here</a>.</p>
+
+<h3 id="MozillaZine_Firefox_Nightly_Theme_Changes_Thread"><a href="http://forums.mozillazine.org/viewtopic.php?f=18&amp;t=2173163" title="http://forums.mozillazine.org/viewtopic.php?f=18&amp;t=2173163">MozillaZine Firefox Nightly Theme Changes Thread</a></h3>
+
+<p>MozillaZine's <a href="http://forums.mozillazine.org/viewtopic.php?f=18&amp;t=2173163" title="http://forums.mozillazine.org/viewtopic.php?f=18&amp;t=2173163">Firefox nightly theme changes thread</a> is a great resource for keeping up to date with the latest changes to the Firefox UI and contains links to the Bugzilla bug reports, which detail what changes were made.</p>

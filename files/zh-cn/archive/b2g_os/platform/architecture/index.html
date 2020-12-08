@@ -1,0 +1,1024 @@
+---
+title: Firefox OS架构
+slug: Archive/B2G_OS/Platform/Architecture
+tags:
+  - Architecture
+  - B2G
+  - Firefox OS
+  - Guide
+  - IPC
+  - IPDL
+translation_of: Archive/B2G_OS/Architecture
+---
+<p> </p>
+
+<div class="overheadIndicator draft">
+<p><strong>草案</strong><br>
+ 本页尚未完工.</p>
+</div>
+
+<p> </p>
+
+<p>这篇文章是对Firefox OS平台的高度概览，介绍了一些关键的概念以及组件如何交互的过程。</p>
+
+<div class="note">
+<p><strong>Note:</strong> Firefox OS 仍然是未发布的产品，这里描述的架构并不是最终版本。</p>
+</div>
+
+<h2 id="Firefox_OS_术语">Firefox OS 术语</h2>
+
+<p>在进一步学习 Firefox OS 文档前，请先了解下面的术语。</p>
+
+<h2 id="架构框图" style="margin-bottom: 20px; line-height: 30px;">架构框图</h2>
+
+<dl>
+ <dt>B2G</dt>
+ <dd>Boot to Gecko 的简称。</dd>
+ <dt>Boot to Gecko</dt>
+ <dd>Firefox OS 操作系统的工程代号。 因为在该项目拥有官方名称之前B2G已经使用了很久的原因，它经常用于指代 Firefox OS。</dd>
+ <dt>Firefox OS</dt>
+ <dd>FIrefox OS 基本上是指 Mozilla及合作伙伴应用在 B2G上的品牌和服务支持， 最终将创建一个发布的产品。</dd>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Gaia" title="/en-US/docs/Mozilla/Firefox_OS/Gaia">Gaia</a></dt>
+ <dd>Firefox OS 平台的用户接口层。屏幕启动时渲染到屏幕上的一切都是Gaia层的产物。Gaia 实现了 lock screen, home screen, 和所有你所期待在智能手机上看到的标准应用。Gaia 完全使用 HTML, CSS, 和 JavaScript实现。Web APIs 是Gaia层到底层系统的唯一入口，Web APIs 是由Gecko 层实现的。第三方应用可以安装在Gaia层。</dd>
+ <dt><a href="/en-US/docs/Gecko" title="/en-US/docs/Accessibility/AT-APIs/Gecko">Gecko</a></dt>
+ <dd>Firefox OS 应用的运行环境；该层提供了对： HTML, CSS, and JavaScript三个标准的支持，它能确保APIs能够在gecko支持的系统上良好工作。也就是说，它包括了网络栈，图形栈，布局引擎，js虚拟机和端口层。</dd>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Gonk" title="/en-US/docs/Mozilla/Firefox_OS/Gonk">Gonk</a></dt>
+ <dd>Gonk 是Firefox OS平台更低层的系统，包括了 Linux kernel （基于 AOSP）和用户空间硬件抽象层 (HAL)。内核和一些用户空间库都是公共的开源项目：linux, libusb, bluez等。其他的一些硬件抽象层部分是与android项目共享的：GPS, camera等。你可以认为 Gonk 是一个非常简单的 Linux 版本。Gonk 是 Gecko 层的端口目标；也就是说 Gecko 层有到 Gonk 的端口，就像Gecko 到 Mac OS X, Windows, 和 Android 一样。因为Firefox OS 对 Gonk 拥有完全的控制权，相比其他操作系统，我们可以释放更多的接口到 Gecko。例如，Gecko 拥有到 Gonk 电话栈和帧缓冲区的直接入口，但在其他操作系统却没有。</dd>
+ <dt>Jank</dt>
+ <dd>这个术语经常用在移动app空间的讨论中，主要是指在app中缓慢/低效的代码操作会导致 block UI的更新甚至出现无响应状态。我们的gaia工程师会不惜一切代价使用各种优化技术来避免这一问题。</dd>
+ <dt> </dt>
+ <dt> </dt>
+ <dt><img alt="Firefox OS Architecture" src="/files/4605/FirefoxOS.png" style="height: 915px; width: 754px;"></dt>
+</dl>
+
+<p> </p>
+
+<h2 id="Firefox_OS_启动步骤" style="margin-bottom: 20px; line-height: 30px;">Firefox OS 启动步骤</h2>
+
+<p>本节主要描述了FIrefox OS 设备启动以及各模块交互的过程。简而言之，整个系统的启动流程是从内核空间的bootloaders开始，继而对native code初始化，到B2G至用户空间的Gecko，最后会到 Gaia 层 system app，window manager,homescreen app。而其他应用都是在它们上面执行的。</p>
+
+<p><img alt="Firefox os bootup " src="/files/7491/bootup.png"></p>
+
+<h2 id="自启动过程">自启动过程</h2>
+
+<p>当Firefox OS 设备启动时，执行过程从主要的引导装载程序（primary bootloader）开始。此时，会以常用的方式装载主操作系统。在这个链条中，一级级的装载会触发更高层次的迭代。这个过程最终是交由 Linux 内核处理。</p>
+
+<p>关于启动过程，这里有几点需要注意的地方：</p>
+
+<ul>
+ <li>在设备启动时，装载程序会显示第一个 splash 界面给用户。界面通常是一个厂商的logo。</li>
+ <li>装载程序会为设备实现一个图片的动画。不同的设备使用的协议是有差别的，绝大多数手机会使用 <a href="http://android-dls.com/wiki/index.php?title=Fastboot" title="http://android-dls.com/wiki/index.php?title=Fastboot">fastboot protocol</a>, 但是Samsung Galaxy S II 使用的是 odin 协议。</li>
+ <li>在启动过程结束时， modem image 通常会被装载并运行在 modem 处理器上。然而这些过程都是由设备不同而区分的，有的甚至是独有的。</li>
+</ul>
+
+<h2 id="Linux_内核">Linux 内核</h2>
+
+<p>Gonk使用的 Linux内核与原生Linux派生出的AOSP是非常相似的。与AOSP （<a href="http://source.android.com/" style="text-decoration: underline;" title="http://source.android.com/">Android Open Source Project</a> ）相比，它还有一些小的变化。另外，厂商还可能会对内核进行修改，并将这些变化按照自身的要求来设定。 一般而言， Linux内核是非常相近的。</p>
+
+<p>网络上对 <a href="http://en.wikipedia.org/wiki/Linux_startup_process" title="http://en.wikipedia.org/wiki/Linux_startup_process">startup process for Linux</a> 有许多详细的介绍，此处不会再赘述。</p>
+
+<p>Linux内核会带动设备的启动并且运行基本的过程。它会先执行 <code>init.rc </code> 中的步骤，继而运行 <code>init.b2g.rc</code> 来启动必须的步骤， 如包含的Gecko内的Firefox OS 基本过程以及 rild (电话相关由不同芯片组相关的进程）— 下面会有更详细的说明。 在过程结束时，正如绝大多数 UNIX-like 操作系统一样， 用户空间 <code style="font-style: normal;">init 进程会被启动。</code></p>
+
+<p>当 <code>init</code> 进程启动完成时，Linux内核会处理来自用户空间的系统请求，来自硬件的中断等。许多硬件特性会通过 <code><a href="http://en.wikipedia.org/wiki/Sysfs" title="http://en.wikipedia.org/wiki/Sysfs">sysfs</a> 暴露给用户空间</code>。例如这里的 <a href="https://github.com/cgjones/mozilla-central/blob/master/hal/gonk/GonkHal.cpp#L277">代码片段</a> 就在Gecko中读取电池的状态。</p>
+
+<pre class="brush:cpp;">FILE *capacityFile = fopen("/sys/class/power_supply/battery/capacity", "r");
+double capacity = dom::battery::kDefaultLevel * 100;
+if (capacityFile) {
+  fscanf(capacityFile, "%lf", &amp;capacity);
+  fclose(capacityFile);
+}</pre>
+
+<h2 id="init_进程">init 进程</h2>
+
+<p>在Gonk中的 <code>init</code> 进程会处理文件系统的加载请求以及派生的系统服务。在此之后，它会作为进程的管理器而存在。这与其他的 UNIX-like操作系统是非常类似的。它会 将<span style="font-family: 'Courier New','Andale Mono',monospace;">init*.rc </span>脚本文件解释成包含启动各种服务的命令的集合。Firefox OS <code>init.b2g.rc</code> 其实就是在 Android <code>init.rc</code> 文件的基础上添加一些关于启动Firefox OS的命令的文件。</p>
+
+<p><code>init</code> 进程启动过程中一个关键任务就是启动 <code>b2g</code> 进程，它是 Firefox OS 操作系统的核心所在。</p>
+
+<p><code>init.b2g.rc</code> 文件中启动b2g进程的命令如下所示：</p>
+
+<pre>service b2g /system/bin/b2g.sh
+    class main
+    onrestart restart media</pre>
+
+<p>您也可以查看下 <code><a href="https://github.com/mozilla-b2g/gonk-misc/blob/master/init.b2g.rc" title="https://github.com/mozilla-b2g/gonk-misc/blob/master/init.b2g.rc">init.b2g.rc</a> </code>文件内容，它是添加在 Android init.rc 文件后用来启动b2g进程的。<font face="'Courier New', 'Andale Mono', monospace"> </font></p>
+
+<div class="note">
+<p><strong>注意： </strong>对\不同的设备而言<strong>，</strong><code>init.rc</code> 与 Android 的 对应文件间的差别也是不同的。,<code>init.b2g.rc</code> 只是简单的附加在文件后面的，有时候 patch 文件显得会更重要些。</p>
+</div>
+
+<h2 id="userspace_进程架构">userspace 进程架构</h2>
+
+<p>现在如果概览一下Firefox OS的不同组件是如何组合在一起并与其他组件交互的过程是非常有用的。下图则包含了 Firefox OS 主要的 usersapce 进程。</p>
+
+<p><a href="/files/3849/B2G userspace architecture.svg"><img alt="Userspace diagram" src="/files/3849/B2G%20userspace%20architecture.svg" style="float: right; height: 491px; position: relative; width: 520px;"></a></p>
+
+<div class="note">
+<p><strong>注意: 我们应当知道，由于 FIrefox OS 正处在活跃开发阶段，这个框图可能会发生变化，不会那么准确。</strong></p>
+</div>
+
+<p><code>b2g</code> 进程是主要的系统进程。它会以非常高的优先级运行，并且会访问绝大多数的硬件设备。<span style="font-family: 'Courier New','Andale Mono',monospace;">b2g</span> 会和 modem 进行通信， 会在 display framerbuffer上绘图， 与 GPS， Camera 以及其他硬件交互。 <code style="font-style: normal;">b2g </code>内部运行在Gecko层（由 <code style="font-style: normal;">libxul.so</code> 实现）。查看 <a href="#Gecko">Gecko</a> 可以获得 Gecko层如何工作， <code style="font-style: normal;">b2g</code> 与Gecko如何通信的细节。</p>
+
+<h3 id="b2g">b2g</h3>
+
+<p><code>b2g</code> 进程可能会反过来孵化一些低优先级的 <strong>content processes。 </strong>这些进程都是关于 web 应用或其他的 web 内容装载的过程。这些进程会和Gecko server主进程通过 <a href="/en-US/docs/IPDL" style="text-decoration: underline;" title="/en-US/docs/IPDL">IPDL</a> 消息传送系统进行通信。</p>
+
+<h3 id="rild">rild</h3>
+
+<p><code>rild</code> 进程是 modem 处理器的接口。 <code>rild</code> 是实现 <strong>Radio Interface Layer</strong> (RIL) 的守护进程。 它是一个专有的代码，由硬件供应商与自己的modem 硬件实现。<code>rild</code> 使客户端代码连接它所绑定的 UNIX域的 socket成为可能。它会由 <code>init</code> 脚本中的如下代码启动：</p>
+
+<pre>service ril-daemon /system/bin/rild
+    socket rild stream 660 root radio</pre>
+
+<h3 id="rilproxy">rilproxy</h3>
+
+<p>在Firefox OS 中， <code>rild</code> 客户端就是 <code>rilproxy</code> 进程。它在 <code style="font-style: normal;">rild</code> 和 <span style="font-family: 'Courier New','Andale Mono',monospace;">b2g </span>扮演着简单的转发代理服务器的角色。这个代理需要的是实现的细节，可以说，这确实是非常必要的。<a href="https://github.com/mozilla-b2g/rilproxy"><code>riproxy</code> 代码</a>可以在Github上找到。</p>
+
+<h3 id="mediaserver">mediaserver</h3>
+
+<p><a href="https://github.com/android/platform_frameworks_base/tree/ics-mr0-release/media/libmediaplayerservice"><code>mediaserver</code> 进程</a>控制着音频和视频的播放。Gecko会通过 Android远程过程调用机制（RPC）与 其通信。Gecko可以播放的多媒体（OGG Vorbis 音频， OGG Theora 视频，以及 <a href="http://www.webmproject.org/about/" title="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;ved=0CDUQFjAA&amp;url=http%3A%2F%2Fwww.webmproject.org%2F&amp;ei=8Q84UOnoMoHH6wHZ44DwBA&amp;usg=AFQjCNHK9j6wyhUful5RmKCpU6b8GDfpYQ&amp;sig2=tCl8VxL3mCvrH86EyOwO_A">WebM</a> 视频）都是由 Gecko解码并直接发送给 <code>mediaserver</code> 进程。其他的多媒体文件是由 <code>libstagefright 解码的，它能够访问专用编码器和硬件编码器。</code></p>
+
+<div class="note">
+<p><strong>注意：</strong> <code>mediaserver</code> 进程时一个临时的Firefox OS组件， 对我们初始的开发会有帮助，但最终会离开。然而在 Firefox OS 2.0 之前，可能不会发生。</p>
+</div>
+
+<h3 id="netd">netd</h3>
+
+<p><code>netd</code> 进程用来对网络接口进行配置。</p>
+
+<h3 id="wpa_supplicant">wpa_supplicant</h3>
+
+<p><code>wpa_supplicant</code> 进程是标准的 UNIX样式的守护进程，会处理 WIFI 的连接。</p>
+
+<h3 id="dbus-daemon">dbus-daemon</h3>
+
+<p>dbus-daemon 实现了 <a href="http://www.freedesktop.org/wiki/Software/dbus" title="http://www.freedesktop.org/wiki/Software/dbus">D-Bus</a>( DBus 是指Firefox OS 用于蓝牙通信的一种消息总线系统）。</p>
+
+<p> </p>
+
+<h2 id="Gecko" style="margin-bottom: 20px; line-height: 30px;">Gecko</h2>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Gecko" title="/en-US/docs/Gecko">Gecko</a>，正如之前提到的，是对 web标准（ <a href="https://developer.mozilla.org/en-US/docs/HTML" style="text-decoration: underline;" title="/en-US/docs/HTML">HTML</a>, <a href="https://developer.mozilla.org/en-US/docs/CSS" title="/en-US/docs/CSS">CSS</a>, and<a href="https://developer.mozilla.org/en-US/docs/JavaScript" title="/en-US/docs/JavaScript">JavaScript</a>）的实现，用于实现用户在Firefox OS 上看到的一切界面。</p>
+
+<div class="note">
+<p><strong>注意：</strong> 您可以使用 <a href="http://dxr.mozilla.org/" style="text-decoration: underline;">http://dxr.mozilla.org</a> 来查找Gecko代码库。这个网站非常有趣，并且提供了较好的参照特性，但是代码库的数量有限。或者您可以尝试下传统的 <a href="http://mxr.mozilla.org/">http://mxr.mozilla.org</a> ，其中会包括更多的Mozilla 项目。</p>
+</div>
+
+<h3 id="与Firefox_OS_相关的_Gecko_文件" style="line-height: 24px; letter-spacing: normal;">与Firefox OS 相关的 Gecko 文件</h3>
+
+<h4 id="b2g_2" style="line-height: 18px; letter-spacing: normal;">b2g/</h4>
+
+<p>b2g 文件夹会包含了一些主要的Firefox OS 相关的功能。.</p>
+
+<h5 id="b2gchromecontent">b2g/chrome/content</h5>
+
+<p>包含了在system app 之上运行的 Javascript 文件。</p>
+
+<h5 id="b2gchromecontentshell.html">b2g/chrome/content/shell.html</h5>
+
+<p>Gaia的入口 — system app的html。 <code>shell.html</code> 会加载 <code>settings.js 和</code> <code>shell.js</code>:</p>
+
+<pre class="brush: html  language-html" style="padding-top: 1em; padding-right: 0px; padding-bottom: 1em; padding-left: 30px; border-left-width: 6px; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; background-color: rgba(234, 239, 242, 0.246094); text-shadow: none; direction: ltr; text-align: left; white-space: normal;"><code class="language-html" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; color: inherit; text-shadow: none; direction: ltr; white-space: pre;"><span class="script token"><span class="tag token" style="color: #990055;"><span class="tag token"><span class="punctuation token" style="color: #999999;">&lt;</span>script</span> <span class="attr-name token" style="color: #669900;">type</span><span class="attr-value token" style="color: #0077aa;"><span class="punctuation token" style="color: #999999;">=</span><span class="punctuation token" style="color: #999999;">"</span>application/javascript;version<span class="punctuation token" style="color: #999999;">=</span>1.8<span class="punctuation token" style="color: #999999;">"</span></span> <span class="attr-name token" style="color: #669900;">src</span><span class="attr-value token" style="color: #0077aa;"><span class="punctuation token" style="color: #999999;">=</span><span class="punctuation token" style="color: #999999;">"</span>chrome://browser/content/settings.js<span class="punctuation token" style="color: #999999;">"</span></span><span class="punctuation token" style="color: #999999;">&gt;</span></span> <span class="tag token" style="color: #990055;"><span class="tag token"><span class="punctuation token" style="color: #999999;">&lt;/</span>script</span><span class="punctuation token" style="color: #999999;">&gt;</span></span></span>
+<span class="script token"><span class="tag token" style="color: #990055;"><span class="tag token"><span class="punctuation token" style="color: #999999;">&lt;</span>script</span> <span class="attr-name token" style="color: #669900;">type</span><span class="attr-value token" style="color: #0077aa;"><span class="punctuation token" style="color: #999999;">=</span><span class="punctuation token" style="color: #999999;">"</span>application/javascript;version<span class="punctuation token" style="color: #999999;">=</span>1.8<span class="punctuation token" style="color: #999999;">"</span></span> <span class="attr-name token" style="color: #669900;">src</span><span class="attr-value token" style="color: #0077aa;"><span class="punctuation token" style="color: #999999;">=</span><span class="punctuation token" style="color: #999999;">"</span>chrome://browser/content/shell.js<span class="punctuation token" style="color: #999999;">"</span></span><span class="punctuation token" style="color: #999999;">&gt;</span></span> <span class="tag token" style="color: #990055;"><span class="tag token"><span class="punctuation token" style="color: #999999;">&lt;/</span>script</span><span class="punctuation token" style="color: #999999;">&gt;</span></span></span></code></pre>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 0px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 19px;"> </div>
+
+<p><code>settings.js</code> 包含了系统设置的默认参数。</p>
+
+<h5 id="b2gchromecontentshell.js">b2g/chrome/content/shell.js</h5>
+
+<p><code>shell.js</code> 是在 Gaia <code>system</code> app中装载的第一个脚本文件。.</p>
+
+<p><code>shell.js</code> 导入了所有需要的模块，注册键值监听，定义了 <code style="font-style: normal;">sendCustomEvent </code>和<code style="font-style: normal;">sendChromeEvent</code> 与Gaia 通信，并且提供了 webapp 的安装助手： indexedDB quota, RemoteDebugger, keyboard helper, 和screenshot 工具。</p>
+
+<p>但是<code>shell.js</code> 最重要的功能就是启动了 Gaia <code>system</code> app， 之后又将整个系统相关的管理工作移交给了 Gaia <code>system</code> app。</p>
+
+<pre class="brush: js  language-js" style="padding-top: 1em; padding-right: 0px; padding-bottom: 1em; padding-left: 30px; border-left-width: 6px; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; background-color: rgba(234, 239, 242, 0.246094); text-shadow: none; direction: ltr; text-align: left; white-space: normal;"><code class="language-js" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; color: inherit; text-shadow: none; direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">let</span> systemAppFrame <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">=</span>
+  document<span class="punctuation token" style="color: #999999;">.</span><span class="function token">createElementNS<span class="punctuation token" style="color: #999999;">(</span></span><span class="string token" style="color: #669900;">'http://www.w3.org/1999/xhtml'</span><span class="punctuation token" style="color: #999999;">,</span> <span class="string token" style="color: #669900;">'html:iframe'</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+    <span class="punctuation token" style="color: #999999;">.</span><span class="punctuation token" style="color: #999999;">.</span><span class="punctuation token" style="color: #999999;">.</span>
+  container<span class="punctuation token" style="color: #999999;">.</span><span class="function token">appendChild<span class="punctuation token" style="color: #999999;">(</span></span>systemAppFrame<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span></code></pre>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 0px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 19px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 38px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 57px;"> </div>
+
+<h5 id="b2gappb2g.js">b2g/app/b2g.js</h5>
+
+<p>这个脚本中包含了预定义的配置信息，如浏览器中的 about:config， 文件与 Gaia 中的 pref.js 类似。这些配置可以在 Settings app中更改，可以使用Gaia 构建脚本文件 Gaia user.js文件覆写。</p>
+
+<h4 id="domAPI" style="line-height: 18px; letter-spacing: normal;">dom/{API}</h4>
+
+<p>新的 API 实现（post-b2g）放置在 <code>dom/ 文件夹中；而旧的API 的 dom/base 文件夹中，如 </code> <code>navigator.cpp。</code></p>
+
+<h5 id="domapps">dom/apps</h5>
+
+<p><code>.jsm</code> 文件会被加载，是对<code>.js</code> API 的实现，如 <code>webapp.js</code> <font face="'Courier New', 'Andale Mono', monospace">等。</font></p>
+
+<h5 id="domappssrc">dom/apps/src/</h5>
+
+<p>所有的权限信息都在 <a href="http://mxr.mozilla.org/mozilla-central/source/dom/apps/src/PermissionsTable.jsm">PermissionsTable.jsm</a> 文件中定义。</p>
+
+<h4 id="domwebidl" style="line-height: 18px; letter-spacing: normal;">dom/webidl</h4>
+
+<p>WebIDL 是一种用来定义 web APIs 的语言。可查看 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/WebIDL_bindings" style="text-decoration: underline;">WebIDL_bindings</a> 文件来获取它所支持的特性。</p>
+
+<h4 id="halgonk" style="line-height: 18px; letter-spacing: normal;">hal/gonk</h4>
+
+<p>这个文件夹包含了 gonk 接口层的相关文件。</p>
+
+<h4 id="Generated_files" style="line-height: 18px; letter-spacing: normal;">Generated files</h4>
+
+<h5 id="modulelibprefsrcinitall.js">module/libpref/src/init/all.js</h5>
+
+<p>包含所有的配置文件。</p>
+
+<h5 id="systemb2g_omni.ja_and_omni.js">/system/b2g/ omni.ja and omni.js</h5>
+
+<p>包含了设备中的资源样式包。</p>
+
+<h3 id="输入事件处理" style="line-height: 24px; letter-spacing: normal;">输入事件处理</h3>
+
+<p>在Gekco层绝大多数动作都是由用户行为触发的。这些动作是由输入事件所表示的（如按钮点击，触屏设备的触控，等等）。这些事件是通过 <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAppShell" title="">nsIAppShell</a></code> 的 <a href="https://dxr.mozilla.org/mozilla-central/source/widget/gonk/nsAppShell.cpp" rel="custom">Gonk implementation</a> 传入的，这个接口用来表示Gecko 应用的最初入口点。也就是说， 输入设备会调用 nspAppShell对象的方法，来表示 Gecko子系统想要发送事件到用户界面。</p>
+
+<p>例如:</p>
+
+<pre class="brush:cpp;  language-cpp" style="padding-top: 1em; padding-right: 0px; padding-bottom: 1em; padding-left: 30px; border-left-width: 6px; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; background-color: rgba(234, 239, 242, 0.246094); text-shadow: none; direction: ltr; text-align: left; white-space: normal;"><code class="language-cpp" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; color: inherit; text-shadow: none; direction: ltr; white-space: pre;">void GeckoInputDispatcher<span class="punctuation token" style="color: #999999;">:</span><span class="punctuation token" style="color: #999999;">:</span><span class="function token">notifyKey<span class="punctuation token" style="color: #999999;">(</span></span>nsecs_t eventTime<span class="punctuation token" style="color: #999999;">,</span>
+                                     int32_t deviceId<span class="punctuation token" style="color: #999999;">,</span>
+                                     int32_t source<span class="punctuation token" style="color: #999999;">,</span>
+                                     uint32_t policyFlags<span class="punctuation token" style="color: #999999;">,</span>
+                                     int32_t action<span class="punctuation token" style="color: #999999;">,</span>
+                                     int32_t flags<span class="punctuation token" style="color: #999999;">,</span>
+                                     int32_t keyCode<span class="punctuation token" style="color: #999999;">,</span>
+                                     int32_t scanCode<span class="punctuation token" style="color: #999999;">,</span>
+                                     int32_t metaState<span class="punctuation token" style="color: #999999;">,</span>
+                                     nsecs_t downTime<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+  UserInputData data<span class="punctuation token" style="color: #999999;">;</span>
+  data<span class="punctuation token" style="color: #999999;">.</span>timeMs <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">=</span> <span class="function token">nanosecsToMillisecs<span class="punctuation token" style="color: #999999;">(</span></span>eventTime<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+  data<span class="punctuation token" style="color: #999999;">.</span>type <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">=</span> UserInputData<span class="punctuation token" style="color: #999999;">:</span><span class="punctuation token" style="color: #999999;">:</span>KEY_DATA<span class="punctuation token" style="color: #999999;">;</span>
+  data<span class="punctuation token" style="color: #999999;">.</span>action <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">=</span> action<span class="punctuation token" style="color: #999999;">;</span>
+  data<span class="punctuation token" style="color: #999999;">.</span>flags <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">=</span> flags<span class="punctuation token" style="color: #999999;">;</span>
+  data<span class="punctuation token" style="color: #999999;">.</span>metaState <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">=</span> metaState<span class="punctuation token" style="color: #999999;">;</span>
+  data<span class="punctuation token" style="color: #999999;">.</span>key<span class="punctuation token" style="color: #999999;">.</span>keyCode <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">=</span> keyCode<span class="punctuation token" style="color: #999999;">;</span>
+  data<span class="punctuation token" style="color: #999999;">.</span>key<span class="punctuation token" style="color: #999999;">.</span>scanCode <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">=</span> scanCode<span class="punctuation token" style="color: #999999;">;</span>
+  <span class="punctuation token" style="color: #999999;">{</span>
+    MutexAutoLock <span class="function token">lock<span class="punctuation token" style="color: #999999;">(</span></span>mQueueLock<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+    mEventQueue<span class="punctuation token" style="color: #999999;">.</span><span class="function token">push<span class="punctuation token" style="color: #999999;">(</span></span>data<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+  <span class="punctuation token" style="color: #999999;">}</span>
+  gAppShell<span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">-</span>&gt;<span class="function token">NotifyNativeEvent<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+<span class="punctuation token" style="color: #999999;">}</span></code></pre>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 0px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 19px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 38px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 57px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 76px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 95px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 114px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 133px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 152px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 171px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 190px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 209px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 228px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 247px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 266px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 285px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 304px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 323px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 342px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 361px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 380px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 399px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 418px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 437px;"> </div>
+
+<p>这些事件都来自于标准的Linux <span style="font-family: 'Courier New','Andale Mono',monospace;">input_event </span>系统。Firefox OS 使用了 <a href="https://dxr.mozilla.org/mozilla-central/source/widget/gonk/libui/InputReader.cpp" rel="custom">light abstraction layer</a> 来覆写它；它也提供了较好的特性如事件过滤机制。 您可以在 <a href="https://dxr.mozilla.org/mozilla-central/source/widget/gonk/libui/EventHub.cpp" rel="custom">widget/gonk/libui/EventHub.cpp</a> 文件的 <code style="font-style: normal;">EventHub::getEvents()</code> 的方法中找到创建输入事件的代码。</p>
+
+<p>当Gecko层接收到事件时，就会通过<code style="font-style: normal;"><a href="https://dxr.mozilla.org/mozilla-central/source/widget/gonk/nsAppShell.cpp" rel="custom">nsAppShell</a> </code>分发到DOM中。</p>
+
+<pre class="brush:cpp;  language-cpp" style="padding-top: 1em; padding-right: 0px; padding-bottom: 1em; padding-left: 30px; border-left-width: 6px; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; background-color: rgba(234, 239, 242, 0.246094); text-shadow: none; direction: ltr; text-align: left; white-space: normal;"><code class="language-cpp" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; color: inherit; text-shadow: none; direction: ltr; white-space: pre;">static nsEventStatus <span class="function token">sendKeyEventWithMsg<span class="punctuation token" style="color: #999999;">(</span></span>uint32_t keyCode<span class="punctuation token" style="color: #999999;">,</span>
+                                         uint32_t msg<span class="punctuation token" style="color: #999999;">,</span>
+                                         uint64_t timeMs<span class="punctuation token" style="color: #999999;">,</span>
+                                         uint32_t flags<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+    nsKeyEvent <span class="function token">event<span class="punctuation token" style="color: #999999;">(</span></span><span class="boolean token" style="color: #990055;">true</span><span class="punctuation token" style="color: #999999;">,</span> msg<span class="punctuation token" style="color: #999999;">,</span> NULL<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+    event<span class="punctuation token" style="color: #999999;">.</span>keyCode <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">=</span> keyCode<span class="punctuation token" style="color: #999999;">;</span>
+    event<span class="punctuation token" style="color: #999999;">.</span>location <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">=</span> nsIDOMKeyEvent<span class="punctuation token" style="color: #999999;">:</span><span class="punctuation token" style="color: #999999;">:</span>DOM_KEY_LOCATION_MOBILE<span class="punctuation token" style="color: #999999;">;</span>
+    event<span class="punctuation token" style="color: #999999;">.</span>time <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">=</span> timeMs<span class="punctuation token" style="color: #999999;">;</span>
+    event<span class="punctuation token" style="color: #999999;">.</span>flags <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">|</span><span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">=</span> flags<span class="punctuation token" style="color: #999999;">;</span>
+    <span class="keyword token" style="color: #0077aa;">return</span> nsWindow<span class="punctuation token" style="color: #999999;">:</span><span class="punctuation token" style="color: #999999;">:</span><span class="function token">DispatchInputEvent<span class="punctuation token" style="color: #999999;">(</span></span>event<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+<span class="punctuation token" style="color: #999999;">}</span></code></pre>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 0px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 19px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 38px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 57px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 76px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 95px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 114px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 133px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 152px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 171px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 190px;"> </div>
+
+<p>此后，事件就会由Gecko本身处理或作为 <a href="https://developer.mozilla.org/en-US/docs/DOM_Client_Object_Cross-Reference/DOM_Events" style="text-decoration: underline;" title="/en-US/docs/DOM_Client_Object_Cross-Reference/DOM_Events">DOM events</a> 分发到web 应用中进一步处理</p>
+
+<h3 id="图像" style="line-height: 24px; letter-spacing: normal;">图像</h3>
+
+<p>在底层, Gecko 会使用 <a href="http://www.khronos.org/opengles/2_X/" title="http://www.khronos.org/opengles/2_X/">OpenGL ES 2.0</a> to draw to a GL context that wraps the hardware frame buffers. 这是由 Gonk 层<span style="font-family: 'Courier New','Andale Mono',monospace;"><a href="https://dxr.mozilla.org/mozilla-central/source/widget/gonk/nsWindow.cpp" rel="custom">nsWindow</a> 实现的，代码如下：</span></p>
+
+<pre class="brush:cpp;  language-cpp" style="padding-top: 1em; padding-right: 0px; padding-bottom: 1em; padding-left: 30px; border-left-width: 6px; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; background-color: rgba(234, 239, 242, 0.246094); text-shadow: none; direction: ltr; text-align: left; white-space: normal;"><code class="language-cpp" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; color: inherit; text-shadow: none; direction: ltr; white-space: pre;">gNativeWindow <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">=</span> <span class="keyword token" style="color: #0077aa;">new</span> <span class="class-name token">android</span><span class="punctuation token" style="color: #999999;">:</span><span class="punctuation token" style="color: #999999;">:</span><span class="function token">FramebufferNativeWindow<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+sGLContext <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">=</span> GLContextProvider<span class="punctuation token" style="color: #999999;">:</span><span class="punctuation token" style="color: #999999;">:</span><span class="function token">CreateForWindow<span class="punctuation token" style="color: #999999;">(</span></span>this<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span></code></pre>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 0px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 19px;"> </div>
+
+<p><code>FramebufferNativeWindow</code> 类是直接 从Android拿过来的，可参考 <a href="https://github.com/android/platform_frameworks_base/blob/ics-mr1-release/libs/ui/FramebufferNativeWindow.cpp" title="https://github.com/android/platform_frameworks_base/blob/ics-mr1-release/libs/ui/FramebufferNativeWindow.cpp"><code>FramebufferNativeWindow.cpp</code></a>。为了能够将缓存从帧缓存设备映射到内存中，它使用了 <strong>gralloc</strong> API 来访问图像驱动。</p>
+
+<p>Gecko 使用了 <a href="https://developer.mozilla.org/en-US/docs/Gecko/Layers" title="/en-US/docs/Gecko/Layers">Layers</a> 系统来将复合后的内容画在屏幕上。总结一些，基本步骤是：</p>
+
+<ol>
+ <li>Gecko draws separate regions of pages into memory buffers. Sometimes these buffers are in system memory; other times, they're textures mapped into Gecko's address space, which means that Gecko is drawing directly into video memory. This is typically done in the method <a href="http://mxr.mozilla.org/mozilla-central/source/gfx/layers/basic/BasicThebesLayer.cpp#83" title="http://mxr.mozilla.org/mozilla-central/source/gfx/layers/basic/BasicThebesLayer.cpp#201"><code>BasicThebesLayer::PaintThebes()</code></a>.</li>
+ <li>Gecko then composites all of these textures to the screen using OpenGL commands. This composition occurs in <a href="http://mxr.mozilla.org/mozilla-central/source/gfx/layers/opengl/ThebesLayerOGL.cpp#124" title="http://mxr.mozilla.org/mozilla-central/source/gfx/layers/basic/BasicThebesLayer.cpp#201"><code>ThebesLayerOGL::RenderTo()</code></a>.</li>
+</ol>
+
+<p>The details of how Gecko handles the rendering of web content is outside the scope of this document.</p>
+
+<h3 id="硬件抽象层_(HAL)" style="line-height: 24px; letter-spacing: normal;">硬件抽象层 (HAL)</h3>
+
+<p>The Gecko hardware abstraction layer is one of the porting layers of Gecko. It handles low-level access to system interfaces across multiple platforms using a C++ API that's accessible to the higher levels of Gecko. These APIs are implemented on a per-platform basis inside the Gecko HAL itself. This hardware abstraction layer is not exposed directly to JavaScript code in Gecko.</p>
+
+<h4 id="How_the_HAL_works" style="line-height: 18px; letter-spacing: normal;">How the HAL works</h4>
+
+<p>Let's consider the <a href="/zh-CN/docs/Web/API/Window/navigator/vibrate" title="此页面仍未被本地化, 期待您的翻译!"><code>Vibration</code></a> API as an example. The Gecko HAL for this API is defined in <a href="https://dxr.mozilla.org/mozilla-central/source/hal/Hal.h" rel="custom">hal/Hal.h</a>. In essence (simplifying the method signature for clarity's sake), you have this function:</p>
+
+<pre class="language-html" style="padding-top: 1em; padding-right: 1em; padding-bottom: 1em; padding-left: 1em; border-left-width: 6px; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; background-color: rgba(234, 239, 242, 0.246094); text-shadow: none; direction: ltr; text-align: left; white-space: normal;">void Vibrate(const nsTArray&lt;uint32&gt; &amp;pattern);</pre>
+
+<p>This is the function called by Gecko code to turn on vibration of the device according to the specified pattern; a corresponding function exists to cancel any ongoing vibration. The Gonk implementation of this method is in <a href="https://dxr.mozilla.org/mozilla-central/source/hal/gonk/GonkHal.cpp" rel="custom">hal/gonk/GonkHal.cpp</a>:</p>
+
+<pre class="brush:cpp;  language-cpp" style="padding-top: 1em; padding-right: 0px; padding-bottom: 1em; padding-left: 30px; border-left-width: 6px; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; background-color: rgba(234, 239, 242, 0.246094); text-shadow: none; direction: ltr; text-align: left; white-space: normal;"><code class="language-cpp" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; color: inherit; text-shadow: none; direction: ltr; white-space: pre;">void <span class="function token">Vibrate<span class="punctuation token" style="color: #999999;">(</span></span>const nsTArray<span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">&lt;</span>uint32_t&gt; <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">&amp;</span>pattern<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+  <span class="function token">EnsureVibratorThreadInitialized<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+  sVibratorRunnable<span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">-</span>&gt;<span class="function token">Vibrate<span class="punctuation token" style="color: #999999;">(</span></span>pattern<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+<span class="punctuation token" style="color: #999999;">}</span></code></pre>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 0px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 19px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 38px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 57px;"> </div>
+
+<p>This code sends the request to start vibrating the device to another thread, which is implemented in <code>VibratorRunnable::Run()</code>. This thread's main loop looks like this:</p>
+
+<pre class="brush:cpp;  language-cpp" style="padding-top: 1em; padding-right: 0px; padding-bottom: 1em; padding-left: 30px; border-left-width: 6px; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; background-color: rgba(234, 239, 242, 0.246094); text-shadow: none; direction: ltr; text-align: left; white-space: normal;"><code class="language-cpp" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; color: inherit; text-shadow: none; direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">while</span> <span class="punctuation token" style="color: #999999;">(</span><span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">!</span>mShuttingDown<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+  <span class="keyword token" style="color: #0077aa;">if</span> <span class="punctuation token" style="color: #999999;">(</span>mIndex <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">&lt;</span> mPattern<span class="punctuation token" style="color: #999999;">.</span><span class="function token">Length<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+    uint32_t duration <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">=</span> mPattern<span class="punctuation token" style="color: #999999;">[</span>mIndex<span class="punctuation token" style="color: #999999;">]</span><span class="punctuation token" style="color: #999999;">;</span>
+    <span class="keyword token" style="color: #0077aa;">if</span> <span class="punctuation token" style="color: #999999;">(</span>mIndex <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">%</span> <span class="number token" style="color: #990055;">2</span> <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">==</span> <span class="number token" style="color: #990055;">0</span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+      <span class="function token">vibrator_on<span class="punctuation token" style="color: #999999;">(</span></span>duration<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+    <span class="punctuation token" style="color: #999999;">}</span>
+    mIndex<span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">++</span><span class="punctuation token" style="color: #999999;">;</span>
+    mMonitor<span class="punctuation token" style="color: #999999;">.</span><span class="function token">Wait<span class="punctuation token" style="color: #999999;">(</span></span><span class="function token">PR_MillisecondsToInterval<span class="punctuation token" style="color: #999999;">(</span></span>duration<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+  <span class="punctuation token" style="color: #999999;">}</span>
+  <span class="keyword token" style="color: #0077aa;">else</span> <span class="punctuation token" style="color: #999999;">{</span>
+    mMonitor<span class="punctuation token" style="color: #999999;">.</span><span class="function token">Wait<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+  <span class="punctuation token" style="color: #999999;">}</span>
+<span class="punctuation token" style="color: #999999;">}</span></code></pre>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 0px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 19px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 38px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 57px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 76px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 95px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 114px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 133px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 152px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 171px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 190px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 209px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 228px;"> </div>
+
+<p><code>vibrator_on()</code> is the Gonk HAL API that turns on the vibrator motor. Internally, this method sends a message to the kernel driver by writing a value to a kernel object using<code>sysfs</code>.</p>
+
+<h4 id="Fallback_HAL_API_implementations" style="line-height: 18px; letter-spacing: normal;">Fallback HAL API implementations</h4>
+
+<p>The Gecko HAL APIs are supported across all platforms. When Gecko is built for a platform that doesn't expose an interface to vibration motors (such as a desktop computer), then a fallback implementation of the HAL API is used. For vibration, this is implemented in <a href="https://dxr.mozilla.org/mozilla-central/source/hal/fallback/FallbackVibration.cpp" rel="custom">hal/fallback/FallbackVibration.cpp</a>.</p>
+
+<pre class="brush:cpp;  language-cpp" style="padding-top: 1em; padding-right: 0px; padding-bottom: 1em; padding-left: 30px; border-left-width: 6px; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; background-color: rgba(234, 239, 242, 0.246094); text-shadow: none; direction: ltr; text-align: left; white-space: normal;"><code class="language-cpp" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; color: inherit; text-shadow: none; direction: ltr; white-space: pre;">void <span class="function token">Vibrate<span class="punctuation token" style="color: #999999;">(</span></span>const nsTArray<span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">&lt;</span>uint32_t&gt; <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">&amp;</span>pattern<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+<span class="punctuation token" style="color: #999999;">}</span></code></pre>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 0px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 19px;"> </div>
+
+<h4 id="Sandbox_implementations" style="line-height: 18px; letter-spacing: normal;">Sandbox implementations</h4>
+
+<p>Because most web content runs in content processes with low privileges, we can't assume those processes have the privileges needed to be able to (for example), turn on and off the vibration motor. In addition, we want to have a central location for handling potential race conditions. In the Gecko HAL, this is done through a "sandbox" implementation of the HAL. This sandbox implementation simply proxies requests made by content processes and forwards them to the "Gecko server" process. The proxy requests are sent using IPDL.</p>
+
+<p>For vibration, this is handled by the <code>Vibrate()</code> function implemented in <a href="https://dxr.mozilla.org/mozilla-central/source/hal/sandbox/SandboxHal.cpp" rel="custom">hal/sandbox/SandboxHal.cpp</a>:</p>
+
+<pre class="brush:cpp;  language-cpp" style="padding-top: 1em; padding-right: 0px; padding-bottom: 1em; padding-left: 30px; border-left-width: 6px; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; background-color: rgba(234, 239, 242, 0.246094); text-shadow: none; direction: ltr; text-align: left; white-space: normal;"><code class="language-cpp" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; color: inherit; text-shadow: none; direction: ltr; white-space: pre;">void <span class="function token">Vibrate<span class="punctuation token" style="color: #999999;">(</span></span>const nsTArray<span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">&lt;</span>uint32_t&gt;<span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">&amp;</span> pattern<span class="punctuation token" style="color: #999999;">,</span> const WindowIdentifier <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">&amp;</span>id<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+  AutoInfallibleTArray<span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">&lt;</span>uint32_t<span class="punctuation token" style="color: #999999;">,</span> <span class="number token" style="color: #990055;">8</span>&gt; <span class="function token">p<span class="punctuation token" style="color: #999999;">(</span></span>pattern<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+
+  WindowIdentifier <span class="function token">newID<span class="punctuation token" style="color: #999999;">(</span></span>id<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+  newID<span class="punctuation token" style="color: #999999;">.</span><span class="function token">AppendProcessID<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+  <span class="function token">Hal<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span><span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">-</span>&gt;<span class="function token">SendVibrate<span class="punctuation token" style="color: #999999;">(</span></span>p<span class="punctuation token" style="color: #999999;">,</span> newID<span class="punctuation token" style="color: #999999;">.</span><span class="function token">AsArray<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">,</span> <span class="function token">GetTabChildFrom<span class="punctuation token" style="color: #999999;">(</span></span>newID<span class="punctuation token" style="color: #999999;">.</span><span class="function token">GetWindow<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+<span class="punctuation token" style="color: #999999;">}</span></code></pre>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 0px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 19px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 38px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 57px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 76px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 95px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 114px;"> </div>
+
+<p>This sends a message defined by the <code>PHal</code> interface, described by IPDL in <a href="https://dxr.mozilla.org/mozilla-central/source/hal/sandbox/PHal.ipdl" rel="custom">hal/sandbox/PHal.ipdl</a>. This method is described more or less as follows:</p>
+
+<pre class="language-html" style="padding-top: 1em; padding-right: 1em; padding-bottom: 1em; padding-left: 1em; border-left-width: 6px; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; background-color: rgba(234, 239, 242, 0.246094); text-shadow: none; direction: ltr; text-align: left; white-space: normal;">Vibrate(uint32_t[] pattern);</pre>
+
+<p>The receiver of this message is the <code>HalParent::RecvVibrate()</code> method in <a href="https://dxr.mozilla.org/mozilla-central/source/hal/sandbox/SandboxHal.cpp" rel="custom">hal/sandbox/SandboxHal.cpp</a>, which looks like this:</p>
+
+<pre class="brush:cpp;  language-cpp" style="padding-top: 1em; padding-right: 0px; padding-bottom: 1em; padding-left: 30px; border-left-width: 6px; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; background-color: rgba(234, 239, 242, 0.246094); text-shadow: none; direction: ltr; text-align: left; white-space: normal;"><code class="language-cpp" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; color: inherit; text-shadow: none; direction: ltr; white-space: pre;">virtual bool <span class="function token">RecvVibrate<span class="punctuation token" style="color: #999999;">(</span></span>const InfallibleTArray<span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">&lt;</span>unsigned int&gt;<span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">&amp;</span> pattern<span class="punctuation token" style="color: #999999;">,</span>
+            const InfallibleTArray<span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">&lt;</span>uint64_t&gt; <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">&amp;</span>id<span class="punctuation token" style="color: #999999;">,</span>
+            PBrowserParent <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">*</span>browserParent<span class="punctuation token" style="color: #999999;">)</span> MOZ_OVERRIDE <span class="punctuation token" style="color: #999999;">{</span>
+
+  hal<span class="punctuation token" style="color: #999999;">:</span><span class="punctuation token" style="color: #999999;">:</span><span class="function token">Vibrate<span class="punctuation token" style="color: #999999;">(</span></span>pattern<span class="punctuation token" style="color: #999999;">,</span> newID<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+  <span class="keyword token" style="color: #0077aa;">return</span> <span class="boolean token" style="color: #990055;">true</span><span class="punctuation token" style="color: #999999;">;</span>
+<span class="punctuation token" style="color: #999999;">}</span></code></pre>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 0px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 19px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 38px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 57px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 76px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 95px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 114px;"> </div>
+
+<p>This omits some details that aren't relevant to this discussion; however, it shows how the message progresses from a content process through Gecko to Gonk, then to the Gonk HAL implementation of <code>Vibrate()</code>, and eventually to the Vibration driver.</p>
+
+<h3 id="DOM_APIs" style="line-height: 24px; letter-spacing: normal;">DOM APIs</h3>
+
+<p><strong>DOM interfaces</strong> 从本质上说，是指web内容与Gecko的如何通信的。当然此处会涉及到更多的内容，如果您对更多的细节感兴趣，可以参考 <a href="https://developer.mozilla.org/en-US/docs/DOM/About_the_Document_Object_Model" title="/en-US/docs/DOM/About_the_Document_Object_Model">about the DOM</a> 。. DOM 接口是使用 <a href="https://developer.mozilla.org/en-US/docs/XPIDL" style="text-decoration: underline;" title="/en-US/docs/XPIDL">IDL</a> 定义的，包括外部功能接口(FFI) 和使用JavaScript 和 C++ 的对象模型（OM）。</p>
+
+<p>震动API是通过IDL接口暴露给web内容的，IDL接口定义在<code><a href="https://dxr.mozilla.org/mozilla-central/source/dom/interfaces/base/nsIDOMNavigator.idl" rel="custom">nsIDOMNavigator.idl</a>:</code></p>
+
+<pre class="language-html" style="padding-top: 1em; padding-right: 1em; padding-bottom: 1em; padding-left: 1em; border-left-width: 6px; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; background-color: rgba(234, 239, 242, 0.246094); text-shadow: none; direction: ltr; text-align: left; white-space: normal;">[implicit_jscontext] void mozVibrate(in jsval aPattern);</pre>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/SpiderMonkey/JSAPI_Reference/Jsval" title="/en-US/docs/SpiderMonkey/JSAPI_Reference/JSVAL_IS_OBJECT"><code>jsval</code></a> 参数表示 <code>mozVibrate()</code> (这个未定版的震动规范是以我们的厂商作为前缀实现的)会接受任何输入的JavaScript值。 IDL编译器 <code><a href="https://developer.mozilla.org/en-US/docs/XPIDL/xpidl" title="/en-US/docs/XPIDL/xpidl">xpidl</a> </code>会产生一个C++接口，这个接口由 定义在 <span style="font-family: 'Courier New','Andale Mono',monospace;"><a href="https://dxr.mozilla.org/mozilla-central/source/dom/base/Navigator.cpp" rel="custom">Navigator.cpp</a> 文件中的</span> <code>Navigator</code> 类 <code>实现。</code></p>
+
+<pre class="brush:cpp;  language-cpp" style="padding-top: 1em; padding-right: 0px; padding-bottom: 1em; padding-left: 30px; border-left-width: 6px; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; background-color: rgba(234, 239, 242, 0.246094); text-shadow: none; direction: ltr; text-align: left; white-space: normal;"><code class="language-cpp" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; color: inherit; text-shadow: none; direction: ltr; white-space: pre;">NS_IMETHODIMP Navigator<span class="punctuation token" style="color: #999999;">:</span><span class="punctuation token" style="color: #999999;">:</span><span class="function token">MozVibrate<span class="punctuation token" style="color: #999999;">(</span></span>const jsval<span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">&amp;</span> aPattern<span class="punctuation token" style="color: #999999;">,</span> JSContext<span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">*</span> cx<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+ <span class="comment token" style="color: #708090; display: inherit;"> // ...
+</span>  hal<span class="punctuation token" style="color: #999999;">:</span><span class="punctuation token" style="color: #999999;">:</span><span class="function token">Vibrate<span class="punctuation token" style="color: #999999;">(</span></span>pattern<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+  <span class="keyword token" style="color: #0077aa;">return</span> NS_OK<span class="punctuation token" style="color: #999999;">;</span>
+<span class="punctuation token" style="color: #999999;">}</span></code></pre>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 0px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 19px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 38px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 57px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 76px;"> </div>
+
+<p>您在这个方法中看到的源码要比这里要多，但这并非我们此次讨论的目的。关键点在于此处会调用 <code>hal::Vibrate()</code> 将控制行为从DOM层传送到GECKO HAL层。 在那里，我们会进入 在之前一节HAL 实现的讨论，并会一直走到图形驱动层。最重要的是，DOM的实现并不会关心它运行在那个平台 (Gonk, Windows, Mac OS X, 或者其他)。、它也不会关心这些代码时运行在 content 进程或者是 Gecko 服务器进程。这些细节都会由系统底层处理。</p>
+
+<p>震动 API 非常简单， 可以作为一个好的例子来讲解。 <a href="https://developer.mozilla.org/en-US/docs/API/WebSMS" title="/en-US/docs/API/WebSMS">SMS API</a> 则比较复杂会使用到自身的“远程”层级连接content 进程到服务器。</p>
+
+<h2 id="Radio_Interface_Layer_(RIL)" style="margin-bottom: 20px; line-height: 30px;">Radio Interface Layer (RIL)</h2>
+
+<p>The RIL was mentioned in the section <a href="#The_userspace_process_architecture">The userspace process architecture</a>. This section will examine how the various pieces of this layer interact in a bit more detail.</p>
+
+<p>The main components involved in the RIL are:</p>
+
+<dl>
+ <dt><code>rild</code></dt>
+ <dd>The daemon that talks to the proprietary modem firmware.</dd>
+ <dt><code>rilproxy</code></dt>
+ <dd>The daemon that proxies messages between <code>rild</code> and Gecko (which is implemented in the <code>b2g</code> process). This overcomes the permission problem that arises when trying to talk to <code>rild</code> directly, since <code>rild</code> can only be communicated with from within the <code>radio</code>group.</dd>
+ <dt><code>b2g</code></dt>
+ <dd>This process, also known as the <strong>chrome process</strong>, implements Gecko. The portions of it that relate to the Radio Interface Layer are <a href="https://dxr.mozilla.org/mozilla-central/source/dom/system/gonk/ril_worker.js" rel="custom">dom/system/gonk/ril_worker.js</a> (which implements a worker thread that talks to <code>rild</code> through <code>rilproxy</code> and implements the radio state machine; and the <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIRadioInterfaceLayer" title="">nsIRadioInterfaceLayer</a></code> interface, which is the main thread's <a href="https://developer.mozilla.org/en-US/docs/XPCOM" title="/en-US/docs/XPCOM">XPCOM</a>service that acts primarily as a message exchange between the <code>ril_worker.js</code> thread and various other Gecko components, including the Gecko content process.</dd>
+ <dt>Gecko's content process</dt>
+ <dd>Within Gecko's content process, the <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIRILContentHelper" title="">nsIRILContentHelper</a></code> interface provides an XPCOM service that lets code implementing parts of the DOM, such as the<a href="https://developer.mozilla.org/en-US/docs/API/WebTelephony" title="/en-US/docs/API/WebTelephony">Telephony</a> and <a href="https://developer.mozilla.org/en-US/docs/API/WebSMS" title="/en-US/docs/API/WebSMS">SMS</a> APIs talk to the radio interface, which is in the chrome process.</dd>
+</dl>
+
+<h3 id="Example_Communicating_from_rild_to_the_DOM" style="line-height: 24px; letter-spacing: normal;">Example: Communicating from rild to the DOM</h3>
+
+<p>Let's take a look at an example of how the lower level parts of the system communicate with DOM code. When the modem receives an incoming call, it notifies <code>rild</code> using a proprietary mechanism. <code>rild</code> then prepares a message for its client according to the "open" protocol, which is described in <a href="https://github.com/mozilla-b2g/android-hardware-ril/blob/master/include/telephony/ril.h" title="https://github.com/mozilla-b2g/android-hardware-ril/blob/master/include/telephony/ril.h"><code>ril.h</code></a>. In the case of an incoming call, a<code>RIL_UNSOL_RESPONSE_CALL_STATE_CHANGED</code> message is generated and sent by <code>rild</code> to<code>rilproxy</code>.</p>
+
+<p><code>rilproxy</code>, implemented in <a href="https://github.com/mozilla-b2g/rilproxy/blob/master/src/rilproxy.c" title="https://github.com/mozilla-b2g/rilproxy/blob/master/src/rilproxy.c"><code>rilproxy.c</code></a>, receives this message in its main loop, which polls its connection to <code>rild</code> using code like this:</p>
+
+<pre class="brush:cpp;  language-cpp" style="padding-top: 1em; padding-right: 0px; padding-bottom: 1em; padding-left: 30px; border-left-width: 6px; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; background-color: rgba(234, 239, 242, 0.246094); text-shadow: none; direction: ltr; text-align: left; white-space: normal;"><code class="language-cpp" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; color: inherit; text-shadow: none; direction: ltr; white-space: pre;">ret <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">=</span> <span class="function token">read<span class="punctuation token" style="color: #999999;">(</span></span>rilproxy_rw<span class="punctuation token" style="color: #999999;">,</span> data<span class="punctuation token" style="color: #999999;">,</span> <span class="number token" style="color: #990055;">1024</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+
+<span class="keyword token" style="color: #0077aa;">if</span><span class="punctuation token" style="color: #999999;">(</span>ret &gt; <span class="number token" style="color: #990055;">0</span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+  <span class="function token">writeToSocket<span class="punctuation token" style="color: #999999;">(</span></span>rild_rw<span class="punctuation token" style="color: #999999;">,</span> data<span class="punctuation token" style="color: #999999;">,</span> ret<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+<span class="punctuation token" style="color: #999999;">}</span></code></pre>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 0px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 19px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 38px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 57px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 76px;"> </div>
+
+<p>Once the message is received from <code>rild</code>, it's then forwarded along to Gecko on the socket that connects <code>rilproxy</code> to Gecko. Gecko receives the forwarded message on its <a href="https://dxr.mozilla.org/mozilla-central/source/ipc/ril/Ril.cpp" rel="custom">IPC thread</a>:</p>
+
+<pre class="brush:cpp;  language-cpp" style="padding-top: 1em; padding-right: 0px; padding-bottom: 1em; padding-left: 30px; border-left-width: 6px; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; background-color: rgba(234, 239, 242, 0.246094); text-shadow: none; direction: ltr; text-align: left; white-space: normal;"><code class="language-cpp" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; color: inherit; text-shadow: none; direction: ltr; white-space: pre;">int ret <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">=</span> <span class="function token">read<span class="punctuation token" style="color: #999999;">(</span></span>fd<span class="punctuation token" style="color: #999999;">,</span> mIncoming<span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">-</span>&gt;Data<span class="punctuation token" style="color: #999999;">,</span> <span class="number token" style="color: #990055;">1024</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span><span class="comment token" style="color: #708090; display: inherit;">
+// ... handle errors ...
+</span>mIncoming<span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">-</span>&gt;mSize <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">=</span> ret<span class="punctuation token" style="color: #999999;">;</span>
+sConsumer<span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">-</span>&gt;<span class="function token">MessageReceived<span class="punctuation token" style="color: #999999;">(</span></span>mIncoming<span class="punctuation token" style="color: #999999;">.</span><span class="function token">forget<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span></code></pre>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 0px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 19px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 38px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 57px;"> </div>
+
+<p>The consumer of these messages is <a href="https://dxr.mozilla.org/mozilla-central/source/dom/system/gonk/SystemWorkerManager.cpp" rel="custom">SystemWorkerManager</a>, which repackages the messages and dispatches them to the<code><a href="https://dxr.mozilla.org/mozilla-central/source/dom/system/gonk/ril_worker.js" rel="custom">ril_worker.js</a></code> thread that implements the RIL state machine; this is done in the<code>RILReceiver::MessageReceived()</code> method:</p>
+
+<pre class="brush:cpp;  language-cpp" style="padding-top: 1em; padding-right: 0px; padding-bottom: 1em; padding-left: 30px; border-left-width: 6px; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; background-color: rgba(234, 239, 242, 0.246094); text-shadow: none; direction: ltr; text-align: left; white-space: normal;"><code class="language-cpp" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; color: inherit; text-shadow: none; direction: ltr; white-space: pre;">virtual void <span class="function token">MessageReceived<span class="punctuation token" style="color: #999999;">(</span></span>RilRawData <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">*</span>aMessage<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+  nsRefPtr<span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">&lt;</span>DispatchRILEvent&gt; <span class="function token">dre<span class="punctuation token" style="color: #999999;">(</span></span><span class="keyword token" style="color: #0077aa;">new</span> <span class="class-name token">DispatchRILEvent</span><span class="punctuation token" style="color: #999999;">(</span>aMessage<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+  mDispatcher<span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">-</span>&gt;<span class="function token">PostTask<span class="punctuation token" style="color: #999999;">(</span></span>dre<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+<span class="punctuation token" style="color: #999999;">}</span></code></pre>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 0px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 19px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 38px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 57px;"> </div>
+
+<p>The task posted to that thread in turn calls the <code>onRILMessage()</code> function, which is implemented in JavaScript. This is done using the JavaScript API function<code><a href="https://developer.mozilla.org/en-US/docs/SpiderMonkey/JSAPI_Reference/JS_CallFunctionName" title="/en-US/docs/SpiderMonkey/JSAPI_Reference/JS_CallFunctionName">JS_CallFunctionName</a>()</code>:</p>
+
+<pre class="language-html" style="padding-top: 1em; padding-right: 1em; padding-bottom: 1em; padding-left: 1em; border-left-width: 6px; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; background-color: rgba(234, 239, 242, 0.246094); text-shadow: none; direction: ltr; text-align: left; white-space: normal;">return JS_CallFunctionName(aCx, obj, "onRILMessage", NS_ARRAY_LENGTH(argv), argv, argv);</pre>
+
+<p><code>onRILMessage()</code> is implemented in <a href="https://dxr.mozilla.org/mozilla-central/source/dom/system/gonk/ril_worker.js" rel="custom">dom/system/gonk/ril_worker.js</a>, which processes the message bytes and chops them into parcels. Each complete parcel is then dispatched to individual handler methods as appropriate:</p>
+
+<pre class="brush:js;  language-js" style="padding-top: 1em; padding-right: 0px; padding-bottom: 1em; padding-left: 30px; border-left-width: 6px; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; background-color: rgba(234, 239, 242, 0.246094); text-shadow: none; direction: ltr; text-align: left; white-space: normal;"><code class="language-js" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; color: inherit; text-shadow: none; direction: ltr; white-space: pre;">handleParcel<span class="punctuation token" style="color: #999999;">:</span> <span class="keyword token" style="color: #0077aa;">function</span> <span class="function token">handleParcel<span class="punctuation token" style="color: #999999;">(</span></span>request_type<span class="punctuation token" style="color: #999999;">,</span> length<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+  <span class="keyword token" style="color: #0077aa;">let</span> method <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">=</span> this<span class="punctuation token" style="color: #999999;">[</span>request_type<span class="punctuation token" style="color: #999999;">]</span><span class="punctuation token" style="color: #999999;">;</span>
+  <span class="keyword token" style="color: #0077aa;">if</span> <span class="punctuation token" style="color: #999999;">(</span><span class="keyword token" style="color: #0077aa;">typeof</span> method <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">==</span> <span class="string token" style="color: #669900;">"function"</span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+    <span class="keyword token" style="color: #0077aa;">if</span> <span class="punctuation token" style="color: #999999;">(</span>DEBUG<span class="punctuation token" style="color: #999999;">)</span> <span class="function token">debug<span class="punctuation token" style="color: #999999;">(</span></span><span class="string token" style="color: #669900;">"Handling parcel as "</span> <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">+</span> method<span class="punctuation token" style="color: #999999;">.</span>name<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+    method<span class="punctuation token" style="color: #999999;">.</span><span class="function token">call<span class="punctuation token" style="color: #999999;">(</span></span>this<span class="punctuation token" style="color: #999999;">,</span> length<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+  <span class="punctuation token" style="color: #999999;">}</span>
+<span class="punctuation token" style="color: #999999;">}</span></code></pre>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 0px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 19px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 38px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 57px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 76px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 95px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 114px;"> </div>
+
+<p>This code works by getting the request type from the object, making sure it's defined as a function in the JavaScript code, then calling the method. Since ril_worker.js implements each request type in a method given the same name as the request type, this is very simple.</p>
+
+<p>In our example, <code>RIL_UNSOL_RESPONSE_CALL_STATE_CHANGED</code>, the following handler is called:</p>
+
+<pre class="brush:js;  language-js" style="padding-top: 1em; padding-right: 0px; padding-bottom: 1em; padding-left: 30px; border-left-width: 6px; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; background-color: rgba(234, 239, 242, 0.246094); text-shadow: none; direction: ltr; text-align: left; white-space: normal;"><code class="language-js" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; color: inherit; text-shadow: none; direction: ltr; white-space: pre;">RIL<span class="punctuation token" style="color: #999999;">[</span>UNSOLICITED_RESPONSE_CALL_STATE_CHANGED<span class="punctuation token" style="color: #999999;">]</span> <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">=</span> <span class="keyword token" style="color: #0077aa;">function</span> <span class="function token">UNSOLICITED_RESPONSE_CALL_STATE_CHANGED<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+  this<span class="punctuation token" style="color: #999999;">.</span><span class="function token">getCurrentCalls<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+<span class="punctuation token" style="color: #999999;">}</span><span class="punctuation token" style="color: #999999;">;</span></code></pre>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 0px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 19px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 38px;"> </div>
+
+<p>As you see in the code above, when notification is received that the call state has changed, the state machine simply fetches the current call state by calling the<code>getCurrentCall()</code> method:</p>
+
+<pre class="brush:js;  language-js" style="padding-top: 1em; padding-right: 0px; padding-bottom: 1em; padding-left: 30px; border-left-width: 6px; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; background-color: rgba(234, 239, 242, 0.246094); text-shadow: none; direction: ltr; text-align: left; white-space: normal;"><code class="language-js" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; color: inherit; text-shadow: none; direction: ltr; white-space: pre;">getCurrentCalls<span class="punctuation token" style="color: #999999;">:</span> <span class="keyword token" style="color: #0077aa;">function</span> <span class="function token">getCurrentCalls<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+  Buf<span class="punctuation token" style="color: #999999;">.</span><span class="function token">simpleRequest<span class="punctuation token" style="color: #999999;">(</span></span>REQUEST_GET_CURRENT_CALLS<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+<span class="punctuation token" style="color: #999999;">}</span></code></pre>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 0px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 19px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 38px;"> </div>
+
+<p>This sends a request back to <code>rild</code> to request the state of all currently active calls. The request flows back along a similar path the <code>RIL_UNSOL_RESPONSE_CALL_STATE_CHANGED</code>message followed, but in the opposite direction (that is, from <code>ril_worker.js</code> to<code>SystemWorkerManager</code> to <code>Ril.cpp</code>, then <code>rilproxy</code> and finally to the <code>rild</code> socket). <code>rild</code>then responds in kind, back along the same path, eventually arriving in <code>ril_worker.js</code>'s handler for the <code>REQUEST_GET_CURRENT_CALLS</code> message. And thus bidirectional communication occurs.</p>
+
+<p>The call state is then processed and compared to the previous state; if there's a change of state, ril_worker.js notifies the <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIRadioInterfaceLayer" title="">nsIRadioInterfaceLayer</a></code> service on the main thread:</p>
+
+<pre class="brush:js;  language-js" style="padding-top: 1em; padding-right: 0px; padding-bottom: 1em; padding-left: 30px; border-left-width: 6px; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; background-color: rgba(234, 239, 242, 0.246094); text-shadow: none; direction: ltr; text-align: left; white-space: normal;"><code class="language-js" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; color: inherit; text-shadow: none; direction: ltr; white-space: pre;">_handleChangedCallState<span class="punctuation token" style="color: #999999;">:</span> <span class="keyword token" style="color: #0077aa;">function</span> <span class="function token">_handleChangedCallState<span class="punctuation token" style="color: #999999;">(</span></span>changedCall<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+  <span class="keyword token" style="color: #0077aa;">let</span> message <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">=</span> <span class="punctuation token" style="color: #999999;">{</span>type<span class="punctuation token" style="color: #999999;">:</span> <span class="string token" style="color: #669900;">"callStateChange"</span><span class="punctuation token" style="color: #999999;">,</span>
+                 call<span class="punctuation token" style="color: #999999;">:</span> changedCall<span class="punctuation token" style="color: #999999;">}</span><span class="punctuation token" style="color: #999999;">;</span>
+  this<span class="punctuation token" style="color: #999999;">.</span><span class="function token">sendDOMMessage<span class="punctuation token" style="color: #999999;">(</span></span>message<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+<span class="punctuation token" style="color: #999999;">}</span></code></pre>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 0px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 19px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 38px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 57px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 76px;"> </div>
+
+<p><code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIRadioInterfaceLayer" title="">nsIRadioInterfaceLayer</a></code> is implemented in <a href="https://dxr.mozilla.org/mozilla-central/source/dom/system/gonk/RadioInterfaceLayer.js" rel="custom">dom/system/gonk/RadioInterfaceLayer.js</a>; the message is received by its<code>onmessage()</code> method:</p>
+
+<pre class="brush:js;  language-js" style="padding-top: 1em; padding-right: 0px; padding-bottom: 1em; padding-left: 30px; border-left-width: 6px; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; background-color: rgba(234, 239, 242, 0.246094); text-shadow: none; direction: ltr; text-align: left; white-space: normal;"><code class="language-js" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; color: inherit; text-shadow: none; direction: ltr; white-space: pre;"> onmessage<span class="punctuation token" style="color: #999999;">:</span> <span class="keyword token" style="color: #0077aa;">function</span> <span class="function token">onmessage<span class="punctuation token" style="color: #999999;">(</span></span>event<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+   <span class="keyword token" style="color: #0077aa;">let</span> message <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">=</span> event<span class="punctuation token" style="color: #999999;">.</span>data<span class="punctuation token" style="color: #999999;">;</span>
+   <span class="function token">debug<span class="punctuation token" style="color: #999999;">(</span></span><span class="string token" style="color: #669900;">"Received message from worker: "</span> <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">+</span> JSON<span class="punctuation token" style="color: #999999;">.</span><span class="function token">stringify<span class="punctuation token" style="color: #999999;">(</span></span>message<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+   switch <span class="punctuation token" style="color: #999999;">(</span>message<span class="punctuation token" style="color: #999999;">.</span>type<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+     case <span class="string token" style="color: #669900;">"callStateChange"</span><span class="punctuation token" style="color: #999999;">:</span>
+      <span class="comment token" style="color: #708090; display: inherit;"> // This one will handle its own notifications.
+</span>       this<span class="punctuation token" style="color: #999999;">.</span><span class="function token">handleCallStateChange<span class="punctuation token" style="color: #999999;">(</span></span>message<span class="punctuation token" style="color: #999999;">.</span>call<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+       <span class="keyword token" style="color: #0077aa;">break</span><span class="punctuation token" style="color: #999999;">;</span>
+   <span class="punctuation token" style="color: #999999;">.</span><span class="punctuation token" style="color: #999999;">.</span><span class="punctuation token" style="color: #999999;">.</span></code></pre>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 0px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 19px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 38px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 57px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 76px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 95px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 114px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 133px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 152px;"> </div>
+
+<p>All this really does is dispatch the message to the content process using the Parent Process Message Manager (PPMM):</p>
+
+<pre class="brush:js;  language-js" style="padding-top: 1em; padding-right: 0px; padding-bottom: 1em; padding-left: 30px; border-left-width: 6px; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; background-color: rgba(234, 239, 242, 0.246094); text-shadow: none; direction: ltr; text-align: left; white-space: normal;"><code class="language-js" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; color: inherit; text-shadow: none; direction: ltr; white-space: pre;">handleCallStateChange<span class="punctuation token" style="color: #999999;">:</span> <span class="keyword token" style="color: #0077aa;">function</span> <span class="function token">handleCallStateChange<span class="punctuation token" style="color: #999999;">(</span></span>call<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+  <span class="punctuation token" style="color: #999999;">[</span>some internal state updating<span class="punctuation token" style="color: #999999;">]</span>
+  ppmm<span class="punctuation token" style="color: #999999;">.</span><span class="function token">sendAsyncMessage<span class="punctuation token" style="color: #999999;">(</span></span><span class="string token" style="color: #669900;">"RIL:CallStateChanged"</span><span class="punctuation token" style="color: #999999;">,</span> call<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+<span class="punctuation token" style="color: #999999;">}</span></code></pre>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 0px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 19px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 38px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 57px;"> </div>
+
+<p>In the content process, the message is received by <code>receiveMessage()</code> method in the <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIRILContentHelper" title="">nsIRILContentHelper</a></code> service, from the Child Process Message Manager (CPMM):</p>
+
+<pre class="brush:js;  language-js" style="padding-top: 1em; padding-right: 0px; padding-bottom: 1em; padding-left: 30px; border-left-width: 6px; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; background-color: rgba(234, 239, 242, 0.246094); text-shadow: none; direction: ltr; text-align: left; white-space: normal;"><code class="language-js" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; color: inherit; text-shadow: none; direction: ltr; white-space: pre;">receiveMessage<span class="punctuation token" style="color: #999999;">:</span> <span class="keyword token" style="color: #0077aa;">function</span> <span class="function token">receiveMessage<span class="punctuation token" style="color: #999999;">(</span></span>msg<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+  <span class="keyword token" style="color: #0077aa;">let</span> request<span class="punctuation token" style="color: #999999;">;</span>
+  <span class="function token">debug<span class="punctuation token" style="color: #999999;">(</span></span><span class="string token" style="color: #669900;">"Received message '"</span> <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">+</span> msg<span class="punctuation token" style="color: #999999;">.</span>name <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">+</span> <span class="string token" style="color: #669900;">"': "</span> <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">+</span> JSON<span class="punctuation token" style="color: #999999;">.</span><span class="function token">stringify<span class="punctuation token" style="color: #999999;">(</span></span>msg<span class="punctuation token" style="color: #999999;">.</span>json<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+  switch <span class="punctuation token" style="color: #999999;">(</span>msg<span class="punctuation token" style="color: #999999;">.</span>name<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+    case <span class="string token" style="color: #669900;">"RIL:CallStateChanged"</span><span class="punctuation token" style="color: #999999;">:</span>
+      this<span class="punctuation token" style="color: #999999;">.</span><span class="function token">_deliverTelephonyCallback<span class="punctuation token" style="color: #999999;">(</span></span><span class="string token" style="color: #669900;">"callStateChanged"</span><span class="punctuation token" style="color: #999999;">,</span>
+                                     <span class="punctuation token" style="color: #999999;">[</span>msg<span class="punctuation token" style="color: #999999;">.</span>json<span class="punctuation token" style="color: #999999;">.</span>callIndex<span class="punctuation token" style="color: #999999;">,</span> msg<span class="punctuation token" style="color: #999999;">.</span>json<span class="punctuation token" style="color: #999999;">.</span>state<span class="punctuation token" style="color: #999999;">,</span>
+                                     msg<span class="punctuation token" style="color: #999999;">.</span>json<span class="punctuation token" style="color: #999999;">.</span>number<span class="punctuation token" style="color: #999999;">,</span> msg<span class="punctuation token" style="color: #999999;">.</span>json<span class="punctuation token" style="color: #999999;">.</span>isActive<span class="punctuation token" style="color: #999999;">]</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+      <span class="keyword token" style="color: #0077aa;">break</span><span class="punctuation token" style="color: #999999;">;</span></code></pre>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 0px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 19px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 38px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 57px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 76px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 95px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 114px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 133px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 152px;"> </div>
+
+<p>This, in turn, calls the <code><a href="https://developer.mozilla.org/zh-CN/docs/XPCOM_Interface_Reference/nsIRILTelephonyCallback#callStateChanged()">nsIRILTelephonyCallback.callStateChanged()</a></code> methods on every registered telephony callback object. Every web application that accesses the <a href="/zh-CN/docs/Web/API/Window/navigator/mozTelephony" title="此页面仍未被本地化, 期待您的翻译!"><code>window.navigator.mozTelephony</code></a> API has registered one such callback object that dispatches events to the JavaScript code in the web application, either as a state change of an existing call object or a new <code>incoming</code> call event.</p>
+
+<pre class="brush:cpp;  language-cpp" style="padding-top: 1em; padding-right: 0px; padding-bottom: 1em; padding-left: 30px; border-left-width: 6px; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; background-color: rgba(234, 239, 242, 0.246094); text-shadow: none; direction: ltr; text-align: left; white-space: normal;"><code class="language-cpp" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; color: inherit; text-shadow: none; direction: ltr; white-space: pre;">NS_IMETHODIMP Telephony<span class="punctuation token" style="color: #999999;">:</span><span class="punctuation token" style="color: #999999;">:</span><span class="function token">CallStateChanged<span class="punctuation token" style="color: #999999;">(</span></span>PRUint32 aCallIndex<span class="punctuation token" style="color: #999999;">,</span> PRUint16 aCallState<span class="punctuation token" style="color: #999999;">,</span>
+                                          const nsAString<span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">&amp;</span> aNumber<span class="punctuation token" style="color: #999999;">,</span> bool aIsActive<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+  <span class="punctuation token" style="color: #999999;">[</span><span class="punctuation token" style="color: #999999;">.</span><span class="punctuation token" style="color: #999999;">.</span><span class="punctuation token" style="color: #999999;">.</span><span class="punctuation token" style="color: #999999;">]</span>
+
+  <span class="keyword token" style="color: #0077aa;">if</span> <span class="punctuation token" style="color: #999999;">(</span>modifiedCall<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+   <span class="comment token" style="color: #708090; display: inherit;"> // Change state.
+</span>    modifiedCall<span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">-</span>&gt;<span class="function token">ChangeState<span class="punctuation token" style="color: #999999;">(</span></span>aCallState<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+
+   <span class="comment token" style="color: #708090; display: inherit;"> // See if this should replace our current active call.
+</span>    <span class="keyword token" style="color: #0077aa;">if</span> <span class="punctuation token" style="color: #999999;">(</span>aIsActive<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+      mActiveCall <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">=</span> modifiedCall<span class="punctuation token" style="color: #999999;">;</span>
+    <span class="punctuation token" style="color: #999999;">}</span>
+
+    <span class="keyword token" style="color: #0077aa;">return</span> NS_OK<span class="punctuation token" style="color: #999999;">;</span>
+  <span class="punctuation token" style="color: #999999;">}</span>
+
+  nsRefPtr<span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">&lt;</span>TelephonyCall&gt; call <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">=</span>
+          TelephonyCall<span class="punctuation token" style="color: #999999;">:</span><span class="punctuation token" style="color: #999999;">:</span><span class="function token">Create<span class="punctuation token" style="color: #999999;">(</span></span>this<span class="punctuation token" style="color: #999999;">,</span> aNumber<span class="punctuation token" style="color: #999999;">,</span> aCallState<span class="punctuation token" style="color: #999999;">,</span> aCallIndex<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+  nsRefPtr<span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">&lt;</span>CallEvent&gt; event <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">=</span> CallEvent<span class="punctuation token" style="color: #999999;">:</span><span class="punctuation token" style="color: #999999;">:</span><span class="function token">Create<span class="punctuation token" style="color: #999999;">(</span></span>call<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+  nsresult rv <span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">=</span> event<span class="operator token" style="background-clip: initial; background-color: rgba(255, 255, 255, 0.496094); color: #a67f59;">-</span>&gt;<span class="function token">Dispatch<span class="punctuation token" style="color: #999999;">(</span></span><span class="function token">ToIDOMEventTarget<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">,</span> <span class="function token">NS_LITERAL_STRING<span class="punctuation token" style="color: #999999;">(</span></span><span class="string token" style="color: #669900;">"incoming"</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+  <span class="function token">NS_ENSURE_SUCCESS<span class="punctuation token" style="color: #999999;">(</span></span>rv<span class="punctuation token" style="color: #999999;">,</span> rv<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+  <span class="keyword token" style="color: #0077aa;">return</span> NS_OK<span class="punctuation token" style="color: #999999;">;</span>
+<span class="punctuation token" style="color: #999999;">}</span></code></pre>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 0px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 19px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 38px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 57px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 76px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 95px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 114px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 133px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 152px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 171px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 190px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 209px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 228px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 247px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 266px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 285px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 304px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 323px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 342px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 361px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 380px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 399px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 418px;"> </div>
+
+<p>Applications can receive these events and update their user interface and so forth:</p>
+
+<pre class="brush:js;  language-js" style="padding-top: 1em; padding-right: 0px; padding-bottom: 1em; padding-left: 30px; border-left-width: 6px; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; background-color: rgba(234, 239, 242, 0.246094); text-shadow: none; direction: ltr; text-align: left; white-space: normal;"><code class="language-js" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; color: inherit; text-shadow: none; direction: ltr; white-space: pre;">handleEvent<span class="punctuation token" style="color: #999999;">:</span> <span class="keyword token" style="color: #0077aa;">function</span> <span class="function token">fm_handleEvent<span class="punctuation token" style="color: #999999;">(</span></span>evt<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+  switch <span class="punctuation token" style="color: #999999;">(</span>evt<span class="punctuation token" style="color: #999999;">.</span>call<span class="punctuation token" style="color: #999999;">.</span>state<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
+    case <span class="string token" style="color: #669900;">'connected'</span><span class="punctuation token" style="color: #999999;">:</span>
+      this<span class="punctuation token" style="color: #999999;">.</span><span class="function token">connected<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+      <span class="keyword token" style="color: #0077aa;">break</span><span class="punctuation token" style="color: #999999;">;</span>
+    case <span class="string token" style="color: #669900;">'disconnected'</span><span class="punctuation token" style="color: #999999;">:</span>
+      this<span class="punctuation token" style="color: #999999;">.</span><span class="function token">disconnected<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+      <span class="keyword token" style="color: #0077aa;">break</span><span class="punctuation token" style="color: #999999;">;</span>
+    default<span class="punctuation token" style="color: #999999;">:</span>
+      <span class="keyword token" style="color: #0077aa;">break</span><span class="punctuation token" style="color: #999999;">;</span>
+  <span class="punctuation token" style="color: #999999;">}</span>
+<span class="punctuation token" style="color: #999999;">}</span></code></pre>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 0px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 19px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 38px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 57px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 76px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 95px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 114px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 133px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 152px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 171px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 190px;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 209px;"> </div>
+
+<p>Take a look at the implementation of <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/communications/dialer/js/dialer.js" title="https://github.com/mozilla-b2g/gaia/blob/master/apps/communications/dialer/js/dialer.js"><code>handleEvent()</code> in the Dialer application</a> as an extended example.</p>
+
+<h3 id="3G_data" style="line-height: 24px; letter-spacing: normal;">3G data</h3>
+
+<p>There is a RIL message that initiates a "data call" to the cellular service; this enables data transfer mode in the modem. This data call ends up creating and activating a <a href="https://zh.wikipedia.org/wiki/Point-to-Point Protocol" title="Point-to-Point Protocol">Point-to-Point Protocol</a> (PPP) interface device in the Linux kernel that can be configured using the usual interfaces.</p>
+
+<div class="note">
+<p><strong>Note:</strong> This section needs to be written.</p>
+</div>
+
+<h3 id="Related_DOM_APIs" style="line-height: 24px; letter-spacing: normal;">Related DOM APIs</h3>
+
+<p>This section lists DOM APIs that are related to RIL communications:</p>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/en-US/docs/API/WebTelephony/Introduction_to_WebTelephony" title="/en-US/docs/API/WebTelephony/Introduction_to_WebTelephony">Telephony API</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/API/WebSMS/Introduction_to_WebSMS" title="/en-US/docs/API/WebSMS/Introduction_to_WebSMS">SMS API</a></li>
+ <li>Mobile Connection API</li>
+</ul>
+
+<h2 id="WiFi" style="margin-bottom: 20px; line-height: 30px;">WiFi</h2>
+
+<p>Firefox OS 的WIFI后台只是简单的借助 <code>wpa_supplicant</code> 来完成绝大部分工作。也就是说，后台的主要工作就是对 supplicant 的简单管理以及一些初始化的工作，如装载WiFi 驱动和使能或禁止网络接口。后台本质上只是一个跟随supplicant 状态而变化的状态机。</p>
+
+<div class="note">
+<p><strong>注意:</strong> 在WIFI中发生的绝大部分事情会取决于 <code>wpa_supplicant</code> 进程状态的变化。</p>
+</div>
+
+<p>WIFI组件的实现可以分成两个文件：</p>
+
+<dl>
+ <dt><a href="https://dxr.mozilla.org/mozilla-central/source/dom/wifi/DOMWifiManager.js" rel="custom">dom/wifi/DOMWifiManager.js</a></dt>
+ <dd>实现了暴露给web 内容的API，这些API是定义在 <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWifi.idl" title="">nsIWifi.idl</a></code>中的。</dd>
+ <dt><a href="https://dxr.mozilla.org/mozilla-central/source/dom/wifi/WifiWorker.js" rel="custom">dom/wifi/WifiWorker.js</a></dt>
+ <dd>实现了关于 supplicant 的状态机和驱动代码。</dd>
+</dl>
+
+<p>这两个文件之间使用 <a href="https://developer.mozilla.org/en-US/docs/The_message_manager" title="/en-US/docs/The_message_manager">message manager</a> 通信。消息的后台监听需要特定的动作触发，如 "associate"， 当动作执行完成时也会返回一个消息。</p>
+
+<p>对响应方法的DOM侧监听与一些事件消息一样，都表示状态的变化和信息的更新。</p>
+
+<div class="note">
+<p><strong>Note:</strong> 任何同步的 DOM APIs 都是通过管道一侧的缓存数据实现的。如果可能的话，要尽量避免使用同步消息。</p>
+</div>
+
+<h3 id="WifiWorker.js" style="line-height: 24px; letter-spacing: normal;">WifiWorker.js</h3>
+
+<p>This file implements the main logic behind the WiFi interface. It runs in the chrome process (in multi-process builds) and is instantiated by the SystemWorkerManager. The file is generally broken into two sections: a giant anonymous function and <code>WifiWorker</code>(and its prototype). The anonymous function ends up being the <code>WifiManager</code> by providing a local API, including notifications for events such as connection to the supplicant and scan results being available. In general, it contains little logic and lets its sole consumer control its actions while it simply responds with the requested information and controls the details of the connection with the supplicant.</p>
+
+<p>The <code>WifiWorker</code> object sits between the <code>WifiManager</code> and the DOM. It reacts to events and forwards them to the DOM; in turn, it receives requests from the DOM and performs the appropriate actions on the supplicant. It also maintains state information about the supplicant and what it needs to do next.</p>
+
+<h3 id="DOMWifiManager.js" style="line-height: 24px; letter-spacing: normal;">DOMWifiManager.js</h3>
+
+<p>This implements the DOM API, transmitting messages back and forth between callers and the actual WiFi worker. There's very little logic involved.</p>
+
+<div class="note">
+<p><strong>Note:</strong> In order to avoid synchronous messages to the chrome process, the WiFi Manager does need to cache the state based on the received event.</p>
+</div>
+
+<p>There's a single synchronous message, which is sent at the time the DOM API is instantiated, in order to get the current state of the supplicant.</p>
+
+<h3 id="DHCP" style="line-height: 24px; letter-spacing: normal;">DHCP</h3>
+
+<p>DHCP and DNS are handled by <code>dhcpcd</code>, the standard Linux DHCP client. However, it's not able to react when the network connection is lost. Because of this, Firefox OS kills and restarts <code>dhcpcd</code> each time it connects to a given wireless network.</p>
+
+<p><code>dhcpcd</code> is also responsible for setting the default route; we call into the network manager to tell the kernel about DNS servers.</p>
+
+<h2 id="网络管理器" style="margin-bottom: 20px; line-height: 30px;">网络管理器</h2>
+
+<p>网络管理器会对由3G数据和WIFI组件打开的网络接口进行配置。</p>
+
+<div class="note">
+<p><strong>注意:</strong> 这部分内容需要完善。</p>
+</div>
+
+<h2 id="进程和线程" style="margin-bottom: 20px; line-height: 30px;">进程和线程</h2>
+
+<p>Firefox OS 操作系统使用 POSIX 线程机制实现所有的应用线程，包括每个应用的主线程，Web workers和辅助线程。优先值是由标准的Linux内核调度程序决定用来表示进程和线程执行时的优先级。根据进程的状态不同，我们设定了不同的优先值。当前共有7个等级：</p>
+
+<p>进程优先级等级</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Priority</th>
+   <th scope="col">Nice</th>
+   <th scope="col">Used for</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>MASTER</code></td>
+   <td>0</td>
+   <td>b2g 主进程</td>
+  </tr>
+  <tr>
+   <td><code>FOREGROUND_HIGH</code></td>
+   <td>0</td>
+   <td>持有 CPU wakelock 的应用</td>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+   <td><code>FOREGROUND</code></td>
+   <td>1</td>
+   <td>前台应用</td>
+  </tr>
+  <tr>
+   <td><code>FOREGROUND_KEYBOARD</code></td>
+   <td>1</td>
+   <td>键盘应用</td>
+  </tr>
+  <tr>
+   <td><code>BACKGROUND_PERCEIVABLE</code></td>
+   <td>7</td>
+   <td>播放音乐的后台应用</td>
+  </tr>
+  <tr>
+   <td><code>BACKGROUND_HOMESCREEN</code></td>
+   <td>18</td>
+   <td>homescreen 应用</td>
+  </tr>
+  <tr>
+   <td><code>BACKGROUND</code></td>
+   <td>18</td>
+   <td>运行在后台的所有其他应用</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>有些等级优先值是相同的，这是因为这些等级是低内存查杀机制处理的方式是不同的。所有的优先级都可以在构建时通过参数配置进行调整。您可以在 <code><a href="http://hg.mozilla.org/mozilla-central/file/54e8c6492dc4/b2g/app/b2g.js#l610">b2g/app/b2g.js</a>文件中找到相关实体。</code></p>
+
+<div class="note">
+<p><strong>注意</strong>: 要获取更多关于内存溢出（out-of-memory killer）以及 Firefoex OS 是如何管理低内存状态的内容，可以参阅 <a href="https://developer.mozilla.org/en-US/Firefox_OS/Platform/Out_of_memory_management_on_Firefox_OS">Out of memory management on Firefox OS</a>.</p>
+</div>
+
+<p>在一个进程内部，主线程继承了进程的优先值，同时则给定了web worker线程比主线程高一个值的优先值。因此web worker 线程优先级与主线程相比要低一些。之所以这么做是为了避免 CPU密集性的工作降低主线程的处理速度。当比较重要的事件（如一个应用转到前台或后台，启动一个新的应用或一个已存在的应用获得 CPU wakelock）发生时，进程优先级就会发生变化。当一个进程优先级发生变化时，其中所有的线程优先级就会对应的作出调整。</p>
+
+<div class="note">
+<p><strong>注意:</strong> cgroups 当前并没有用于资源的管理，它们在特定的设备及内核中显得并不可靠。</p>
+</div>
+
+<p> </p>

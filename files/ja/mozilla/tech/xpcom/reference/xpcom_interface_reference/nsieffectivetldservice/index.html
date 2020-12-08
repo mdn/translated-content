@@ -1,0 +1,173 @@
+---
+title: nsIEffectiveTLDService
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsIEffectiveTLDService
+tags:
+  - Interfaces
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIEffectiveTLDService
+---
+<p><code>nsIEffectiveTLDService</code>はホスト名を検証し、それがTLDであるように見えるもっとも長い部分を決定します。URIのベースドメインを決定する役割も持ちます。</p>
+<div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/netwerk/dns/public/nsIEffectiveTLDService.idl" rel="custom">netwerk/dns/public/nsIEffectiveTLDService.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">最終更新: Gecko 1.9 (Firefox 3)</span></div>
+</div>
+<p>継承元: <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code></p>
+<p>実装: @mozilla.org/network/effective-tld-service;1</p>
+<p>このサービスを使うには：</p>
+<pre>var eTLDService = Components.classes["@mozilla.org/network/effective-tld-service;1"]
+                                .getService(Components.interfaces.nsIEffectiveTLDService);
+</pre>
+<h2 id="メソッドの概要">メソッドの概要</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code><a href="/ja/ACString" title="ja/ACString">ACString</a> <a href="#getPublicSuffix.28.29">getPublicSuffix</a>(in <a href="/en/XPCOM_Interface_Reference/nsIURI" title="en/XPCOM Interface Reference/nsIURI">nsIURI</a> aURI);</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/ja/ACString" title="ja/ACString">ACString</a> <a href="#getBaseDomain.28.29">getBaseDomain</a>(in <a href="/en/XPCOM_Interface_Reference/nsIURI" title="en/XPCOM Interface Reference/nsIURI">nsIURI</a> aURI, [optional] in <a href="/en/PRUint32" title="en/PRUint32">PRUint32</a> aAdditionalParts);</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/ja/ACString" title="ja/ACString">ACString</a> <a href="#getPublicSuffixFromHost.28.29">getPublicSuffixFromHost</a>(in <a href="/en/AUTF8String" title="en/AUTF8String">AUTF8String</a> aHost);</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/ja/ACString" title="ja/ACString ">ACString</a> <a href="#getBaseDomainFromHost.28.29">getBaseDomainFromHost</a>(in <a href="/en/AUTF8String" title="en/AUTF8String">AUTF8String</a> aHost, [optional] in <a href="/en/PRUint32" title="en/PRUint32">PRUint32</a> aAdditionalParts);</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="メソッド">メソッド</h2>
+<h3 id="getPublicSuffix.28.29" name="getPublicSuffix.28.29">getPublicSuffix()</h3>
+<p>URIのパブリック接尾辞を返します。パブリック接尾辞はその下に個々のドメインが登録される最高位レベルのドメインです。パブリック接尾辞はひとつまたはそれ以上のドットを含みます。例えば、<code>www.bbc.co.uk</code>のパブリック接尾辞は<code>co.uk</code>になります、なぜならば<code>.uk</code> TLDはその下にドメインを登録することを許していないからです。その他の例として、<code>developer.mozilla.org</code>では<code>org</code>になります。</p>
+<pre>ACString getPublicSuffix(
+  in nsIURI aURI
+);
+</pre>
+<h6 id="引数">引数</h6>
+<dl>
+ <dt>
+  aURI</dt>
+ <dd>
+  解析するURI</dd>
+</dl>
+<p>戻り値</p>
+<p>パブリック接尾辞を含む<a href="/ja/ACString" title="ja/ACString">ACString</a>オブジェクト</p>
+<h6 id="例外">例外</h6>
+<dl>
+ <dt>
+  NS_ERROR_INVALID_ARG</dt>
+ <dd>
+  この例外は<code>aURI</code>に含まれるホスト名が空であった場合に発生します。</dd>
+ <dt>
+  NS_ERROR_HOST_IS_IP_ADDRESS</dt>
+ <dd>
+  この例外は<code>aURI</code>が数値、IPv4アドレス、IPv6アドレスのいずれかであった場合に発生します。</dd>
+</dl>
+<h3 id="getBaseDomain.28.29" name="getBaseDomain.28.29">getBaseDomain()</h3>
+<p>URIのベースドメインを返します。ベースドメインは、パブリック接尾辞に指定された数の追加ドメイン名を追加したものです。</p>
+<pre>ACString getBaseDomain(
+  in <a>nsIURI</a> aURI
+  [optional] in <a title="en/PRUint32">PRUint32</a> aAdditionalParts
+);
+</pre>
+<h6 id="引数_2">引数</h6>
+<dl>
+ <dt>
+  aURI</dt>
+ <dd>
+  解析するURI</dd>
+ <dt>
+  aAdditionalParts</dt>
+ <dd>
+  パブリック接尾辞に追加するドメイン名の数</dd>
+</dl>
+<h6 id="戻り値">戻り値</h6>
+<p>ベースドメインを含む<a href="/en/ACString" title="en/ACString">ACString</a>オブジェクト(パブリック接尾辞に、追加パート部分を足したもの)</p>
+<h6 id="例外_2">例外</h6>
+<dl>
+ <dt>
+  NS_ERROR_INVALID_ARG</dt>
+ <dd>
+  この例外は<code>aURI</code>が空であった場合に発生します。</dd>
+ <dt>
+  NS_ERROR_INSUFFICIENT_DOMAIN_LEVELS</dt>
+ <dd>
+  この例外は<code>aAdditionalParts</code>で指定された値に対してサブドメインが不足する場合に発生します。</dd>
+ <dt>
+  NS_ERROR_HOST_IS_IP_ADDRESS</dt>
+ <dd>
+  この例外は<code>aURI</code>が数値、IPv4アドレス、IPv6アドレスのいずれかであった場合に発生します。</dd>
+</dl>
+<h3 id="getPublicSuffixFromHost.28.29" name="getPublicSuffixFromHost.28.29">getPublicSuffixFromHost()</h3>
+<p>ホスト文字列のパブリック接尾辞を返します。さもなくば機能的には<a href="#getPublicSuffix()">getPublicSuffix()</a>と同じです。</p>
+<pre>ACString getPublicSuffixFromHost(
+  in AUTF8String aHost
+);
+</pre>
+<h6 id="引数_3">引数</h6>
+<dl>
+ <dt>
+  aHost</dt>
+ <dd>
+  解析されるホスト名</dd>
+</dl>
+<h6 id="戻り値_2">戻り値</h6>
+<p>パブリック接尾辞を含む<a href="/en/ACString" title="en/ACString">ACString</a>オブジェクト</p>
+<h6 id="例外_3">例外</h6>
+<dl>
+ <dt>
+  NS_ERROR_INVALID_ARG</dt>
+ <dd>
+  この例外は<code>aHost</code>が空であった場合に発生します。</dd>
+ <dt>
+  NS_ERROR_UNEXPECTED</dt>
+ <dd>
+  この例外は<code>aHost</code>がURI中に含まれることを許可されない文字を含む場合に<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIIDNService" title="">nsIIDNService</a></code>内のNormalize()メソッドにより発生します。</dd>
+</dl>
+<h3 id="getBaseDomainFromHost.28.29" name="getBaseDomainFromHost.28.29">getBaseDomainFromHost()</h3>
+<p>ホスト名のベースドメイン部分を返します。さもなくば機能的には<a href="#getBaseDomain()">getBaseDomain()</a>と同じです。</p>
+<pre>ACString getBaseDomainFromHost(
+  in AUTF8String aHost,
+  [optional] in PRUint32 aAdditionalParts
+);
+</pre>
+<h6 id="引数_4">引数</h6>
+<dl>
+ <dt>
+  aHost</dt>
+ <dd>
+  解析されるホスト名</dd>
+ <dt>
+  aAdditionalParts</dt>
+ <dd>
+  パブリック接尾辞に追加するドメイン名の数</dd>
+</dl>
+<h6 id="戻り値_3">戻り値</h6>
+<p>ベースドメインを含む<a href="/en/ACString" title="en/ACString">ACString</a>オブジェクト(パブリック接尾辞に、追加パート部分を足したもの)</p>
+<h6 id="例外_4">例外</h6>
+<dl>
+ <dt>
+  NS_ERROR_INVALID_ARG</dt>
+ <dd>
+  aHostが空であった場合に発生します。</dd>
+ <dt>
+  NS_ERROR_UNEXPECTED</dt>
+ <dd>
+  この例外は<code>aHost</code>がURI中に含まれることを許可されない文字を含む場合に<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIIDNService" title="">nsIIDNService</a></code>内のNormalize()メソッドにより発生します。</dd>
+ <dt>
+  NS_ERROR_INSUFFICIENT_DOMAIN_LEVELS</dt>
+ <dd>
+  この例外は<code>aAdditionalParts</code>で指定された値に対してサブドメインが不足する場合に発生します。</dd>
+ <dt>
+  NS_ERROR_HOST_IS_IP_ADDRESS</dt>
+ <dd>
+  この例外は<code>aHost</code>が数値、IPv4アドレス、IPv6アドレスのいずれかであった場合に発生します。</dd>
+</dl>
+<h3 id="言及">言及</h3>
+<p>全ての戻り値はASCII/ACEでエンコーディングされ、<a class="external" href="http://tools.ietf.org/html/rfc3454" title="http://tools.ietf.org/html/rfc3454">RFC 3454</a>に沿っています。</p>

@@ -1,0 +1,200 @@
+---
+title: Grilles
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Grilles
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Grids
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Onglets" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Cadres_de_contenu">Suivant  »</a></p>
+</div>
+
+<p>XUL dispose d'une série d'éléments pour créer des grilles sous forme de tableaux.</p>
+
+<h3 id="Disposition_tabulaire_XUL" name="Disposition_tabulaire_XUL">Disposition tabulaire XUL</h3>
+
+<p>XUL dispose d'un jeu d'éléments pour la mise en page sous la forme d'une grille en utilisant l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/grid" title="grid">grid</a></code>. Il a quelques similitudes avec la balise HTML <code>table</code>. La grille n'affiche rien du tout ; elle ne sert qu'à positionner d'autres éléments en ligne et en colonne.</p>
+
+<p>Une grille contient des éléments qui sont alignés comme avec des tableaux. À l'intérieur d'un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/grid" title="grid">grid</a></code>, vous déclarez deux choses : les colonnes et les lignes qui sont utilisées. À l'instar des tableaux HTML, vous pouvez mettre du contenu tels que des libellés et des boutons à l'intérieur des lignes. Toutefois, la grille permet un arrangement de votre contenu soit en ligne, soit en colonne. Il est fréquent de l'utiliser en ligne comme avec un tableau. Mais vous pouvez utiliser des colonnes pour définir la taille et l'apparence des colonnes dans une grille. Autrement, vous pouvez mettre du contenu à l'intérieur de colonnes, et utiliser les lignes pour définir l'apparence. Nous étudierons d'abord l'organisation des éléments en ligne.</p>
+
+<h4 id="D.C3.A9claration_d.27une_grille" name="D.C3.A9claration_d.27une_grille">Déclaration d'une grille</h4>
+
+<p>Pour déclarer une série de lignes, utilisez l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/rows" title="rows">rows</a></code>, qui doit être un élément enfant de <code><a href="/fr/docs/Mozilla/Tech/XUL/grid" title="grid">grid</a></code>. À l'intérieur, vous devez ajouter les éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/row" title="row">row</a></code>, qui représentent chacun des lignes. À l'intérieur d'un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/row" title="row">row</a></code>, vous devez mettre le contenu que vous souhaitez sur cette ligne.</p>
+
+<p>De la même façon, les colonnes sont déclarées avec l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/columns" title="columns">columns</a></code>, qui doit être un élément enfant de <code><a href="/fr/docs/Mozilla/Tech/XUL/grid" title="grid">grid</a></code>. À l'intérieur de cet élément viennent les éléments individuels <code><a href="/fr/docs/Mozilla/Tech/XUL/column" title="column">column</a></code>, un pour chaque colonne que vous voulez dans la grille.</p>
+
+<p>Un exemple sera plus clair :</p>
+
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_1.xul">Voir</a></p>
+
+<div class="float-right"><img alt="Image:xultu_grids1.png" class="internal" src="/@api/deki/files/1520/=Xultu_grids1.png"></div>
+
+<pre>&lt;grid flex="1"&gt;
+
+  &lt;columns&gt;
+    &lt;column flex="2"/&gt;
+    &lt;column flex="1"/&gt;
+  &lt;/columns&gt;
+
+  &lt;rows&gt;
+    &lt;row&gt;
+      &lt;button label="Lapin"/&gt;
+      &lt;button label="Éléphant"/&gt;
+    &lt;/row&gt;
+    &lt;row&gt;
+      &lt;button label="Koala"/&gt;
+      &lt;button label="Gorille"/&gt;
+    &lt;/row&gt;
+  &lt;/rows&gt;
+
+&lt;/grid&gt;
+</pre>
+
+<p>Deux lignes et deux colonnes ont été ajoutées dans une grille. Chaque colonne est déclarée avec l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/column" title="column">column</a></code>. Un attribut <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code> a été assigné à chacune de ces colonnes. Chaque ligne contient deux éléments qui sont des boutons. Le premier élément de chaque élément <code><a href="/fr/docs/Mozilla/Tech/XUL/row" title="row">row</a></code> est placé dans la première colonne de la grille, et le second élément de chaque ligne est placé dans la seconde colonne.</p>
+
+<div class="note">Notez que vous n'avez pas d'élément pour définir une cellule (il n'y a pas d'équivalent à l'élément HTML <code>td</code>). Au lieu de cela, vous placez vos contenus de cellules directement dans les éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/row" title="row">row</a></code>.</div>
+
+<h4 id="Grille_avec_d.27autres_.C3.A9l.C3.A9ments" name="Grille_avec_d.27autres_.C3.A9l.C3.A9ments">Grille avec d'autres éléments</h4>
+
+<p>Bien entendu, vous pouvez utiliser n'importe quel autre élément que l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/button" title="button">button</a></code>. Si vous voulez une cellule particulière contenant de multiples éléments, vous pouvez utiliser une boîte imbriquée <code><a href="/fr/docs/Mozilla/Tech/XUL/hbox" title="hbox">hbox</a></code> ou tout autre élément boîte. Une boîte <code><a href="/fr/docs/Mozilla/Tech/XUL/hbox" title="hbox">hbox</a></code> représente un seul élément, mais elle peut contenir autant d'éléments que vous le souhaitez. Par exemple :</p>
+
+<p><span id="Exemple_2"><a id="Exemple_2"></a><strong>Exemple 2</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_2.xul">Voir</a></p>
+
+<pre>&lt;grid flex="1"&gt;
+
+  &lt;columns&gt;
+    &lt;column/&gt;
+    &lt;column flex="1"/&gt;
+  &lt;/columns&gt;
+
+  &lt;rows&gt;
+    &lt;row&gt;
+      &lt;label control="doctitle" value="Titre du document:"/&gt;
+      &lt;textbox id="doctitle" flex="1"/&gt;
+    &lt;/row&gt;
+    &lt;row&gt;
+      &lt;label control="docpath" value="Répertoire:"/&gt;
+      &lt;hbox flex="1"&gt;
+        &lt;textbox id="docpath" flex="1"/&gt;
+        &lt;button label="Parcourir..."/&gt;
+      &lt;/hbox&gt;
+    &lt;/row&gt;
+  &lt;/rows&gt;
+
+&lt;/grid&gt;
+</pre>
+
+<div class="float-right"><img alt="Image:xultu_grids2.png" class="internal" src="/@api/deki/files/1521/=Xultu_grids2.png"></div>
+
+<p>Remarquez sur l'image ci-contre comment la première colonne contenant les libellés a seulement un unique élément pour chaque ligne. La seconde colonne contient sur sa seconde ligne une boîte qui elle-même contient deux éléments, <code><a href="/fr/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code> et <code><a href="/fr/docs/Mozilla/Tech/XUL/button" title="button">button</a></code>. Vous pouvez ajouter d'autres boîtes imbriquées ou une autre grille dans une simple cellule.</p>
+
+<p>Si vous redimensionnez la fenêtre du dernier exemple, vous verrez que les champs de saisie s'ajustent en conséquence, mais pas les autres éléments. En effet, des attributs <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code> ont été ajoutés à ces champs de saisie et à la seconde colonne. La première colonne n'a pas besoin d'être flexible car les libellés n'ont pas besoin de changer de taille.</p>
+
+<p>La largeur initiale d'une colonne est déterminée par le plus large de ses éléments. De même, la hauteur d'une ligne est déterminée par la taille des éléments de cette ligne. Vous pouvez employer des propriétés CSS <code id="a-minwidth"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/minwidth">minwidth</a></code>, <code id="a-maxwidth"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/maxwidth">maxwidth</a></code> et des propriétés similaires pour affiner les dimensions.</p>
+
+<h4 id="Organisation_en_colonnes" name="Organisation_en_colonnes">Organisation en colonnes</h4>
+
+<p>Vous pouvez également placer des éléments à l'intérieur des éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/column" title="column">column</a></code> au lieu des éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/row" title="row">row</a></code>. En procédant de la sorte, les lignes sont ajoutées seulement pour définir leur nombre.</p>
+
+<p><span id="Exemple_3"><a id="Exemple_3"></a><strong>Exemple 3</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_3.xul">Voir</a></p>
+
+<pre>&lt;grid&gt;
+  &lt;rows&gt;
+    &lt;row/&gt;
+    &lt;row/&gt;
+    &lt;row/&gt;
+  &lt;/rows&gt;
+
+  &lt;columns&gt;
+    &lt;column&gt;
+      &lt;label control="first" value="Premier nom:"/&gt;
+      &lt;label control="middle" value="Nom central:"/&gt;
+      &lt;label control="last" value="Dernier nom:"/&gt;
+    &lt;/column&gt;
+    &lt;column&gt;
+      &lt;textbox id="first"/&gt;
+      &lt;textbox id="middle"/&gt;
+      &lt;textbox id="last"/&gt;
+    &lt;/column&gt;
+  &lt;/columns&gt;
+
+&lt;/grid&gt;
+</pre>
+
+<p>Cette grille a trois lignes et deux colonnes. Les éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/row" title="row">row</a></code> servent juste à définir combien de lignes la grille contient. Vous pouvez ajouter un attribut <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code> à une ligne pour la rendre flexible. Le contenu est placé dans chaque colonne. Le premier élément de chaque élément <code><a href="/fr/docs/Mozilla/Tech/XUL/column" title="column">column</a></code> est placé sur la première ligne, le second élément sur la deuxième ligne et le troisième élément sur la troisième ligne.</p>
+
+<p>Si vous placez du contenu à la fois sur les colonnes et sur les lignes, le contenu de l'un va se superposer à l'autre, même s'il est aligné correctement dans la grille. Cet effet correspondrait à une grille d'éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code>.</p>
+
+<p>L'ordre des éléments dans la grille détermine lequel est affiché au premier plan et lequel est affiché à l'arrière-plan. Si l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/rows" title="rows">rows</a></code> est placé après l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/columns" title="columns">columns</a></code>, le contenu des lignes est affiché au premier plan. Si l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/columns" title="columns">columns</a></code> est placé après l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/rows" title="rows">rows</a></code>, le contenu des colonnes est affiché au premier plan. De même, les événements tels que les clics de souris et les touches de clavier sont seulement envoyés aux objets de premier plan. C'est pour cela que les colonnes sont définies après les lignes dans l'exemple ci-dessus. Si les colonnes avaient été placées en premier, les lignes auraient capturées les événements et aucun texte n'aurait pu être saisi dans les champs de saisie.</p>
+
+<h4 id="Flexibilit.C3.A9_des_grilles" name="Flexibilit.C3.A9_des_grilles">Flexibilité des grilles</h4>
+
+<p>Un des avantages des grilles par rapport à une série de boîtes imbriquées est que vous pouvez créer des cellules qui sont flexibles aussi bien horizontalement que verticalement. Il vous suffit de mettre un attribut <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code> sur les lignes et colonnes concernées. L'exemple suivant en fait la démonstration :</p>
+
+<p><span id="Exemple_4"><a id="Exemple_4"></a><strong>Exemple 4</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_4.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_4.xul">Voir</a></p>
+
+<pre>&lt;grid flex="1"&gt;
+ &lt;columns&gt;
+  &lt;column flex="5"/&gt;
+  &lt;column/&gt;
+  &lt;column/&gt;
+ &lt;/columns&gt;
+ &lt;rows&gt;
+  &lt;row flex="10"&gt;
+    &lt;button label="Cerise"/&gt;
+    &lt;button label="Citron"/&gt;
+    &lt;button label="Raisin"/&gt;
+  &lt;/row&gt;
+  &lt;row flex="1"&gt;
+    &lt;button label="Fraise"/&gt;
+    &lt;button label="Framboise"/&gt;
+    &lt;button label="Pêche"/&gt;
+  &lt;/row&gt;
+ &lt;/rows&gt;
+&lt;/grid&gt;
+</pre>
+
+<p>La première colonne et l'ensemble des lignes ont été rendus flexibles. Ainsi, chaque cellule de la première colonne est flexible horizontalement. De plus, chaque cellule est flexible verticalement car l'ensemble des lignes dispose de l'attribut <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code>. La cellule de la première colonne de la première ligne (le bouton 'Cerise') sera flexible horizontalement d'un facteur 5 et verticalement d'un facteur 10. La cellule suivante (le bouton 'Citron') ne sera flexible que verticalement.</p>
+
+<p>L'attribut <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code> a également été ajouté à l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/grid" title="grid">grid</a></code> afin que toute la grille soit flexible. Dans le cas contraire, elle ne s'agrandirait que dans une seule direction.</p>
+
+<h3 id=".C3.89tendre_une_colonne" name=".C3.89tendre_une_colonne">Étendre une colonne</h3>
+
+<p>Cela n'a aucun sens d'étendre une cellule sur un nombre particulier de colonnes ou de lignes multiples. Toutefois, il est possible de faire qu'une ligne ou qu'une colonne s'étende sur toute la largeur ou la hauteur de la grille. Il vous suffit d'ajouter un élément à l'intérieur d'un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/rows" title="rows">rows</a></code> qui ne soit pas à l'intérieur d'un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/row" title="row">row</a></code>. Par exemple, vous pouvez utiliser un type de boîte et y placer d'autres éléments si vous voulez en utiliser plusieurs. Voici un exemple simple :</p>
+
+<p><span id="Exemple_5"><a id="Exemple_5"></a><strong>Exemple 5</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_5.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_5.xul">Voir</a></p>
+
+<pre>&lt;grid&gt;
+  &lt;columns&gt;
+    &lt;column flex="1"/&gt;
+    &lt;column flex="1"/&gt;
+  &lt;/columns&gt;
+
+  &lt;rows&gt;
+    &lt;row&gt;
+      &lt;label value="Nord Ouest"/&gt;
+      &lt;label value="Nord Est"/&gt;
+    &lt;/row&gt;
+    &lt;button label="Équateur"/&gt;
+    &lt;row&gt;
+      &lt;label value="Sud Ouest"/&gt;
+      &lt;label value="Sud Est"/&gt;
+    &lt;/row&gt;
+  &lt;/rows&gt;
+&lt;/grid&gt;
+</pre>
+
+<p>Le bouton va s'étendre pour s'ajuster sur toute la largeur de la grille comme s'il n'était pas à l'intérieur d'une ligne de la grille. Vous pouvez utiliser une technique similaire pour ajouter un élément entre deux colonnes. Il s'étendra pour s'ajuster sur toute la hauteur de la grille. Vous pouvez combiner les deux si vous le souhaitez.</p>
+
+<hr>
+<p>Dans la section suivante, nous verrons comment ajouter des panneaux de contenu.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Onglets" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Cadres_de_contenu">Suivant  »</a></p>
+</div>
+
+<p><span class="comment">Interwiki</span></p>

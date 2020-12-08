@@ -1,0 +1,314 @@
+---
+title: B2G デスクトップクライアントを使用する
+slug: Archive/B2G_OS/Using_the_B2G_desktop_client
+tags:
+  - B2G OS
+  - Device
+  - Firefox OS
+  - Gaia
+  - Mobile
+  - simulator
+translation_of: Archive/B2G_OS/Building_the_B2G_OS_simulator
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/ja/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<div class="summary">
+<p>B2G OS シミュレーターを使用すると、実際の端末に似た Gecko ベースの環境で Gaia やウェブアプリを実行することができます。端末のハードウェアをエミュレートしないので、端末 API のテストをするには不適切ですし、実際のハードウェア上でのテストの代替にはなりません。しかし例えば <a href="https://developer.mozilla.org/ja/docs/WebAPI/Contacts">連絡先</a> と <a href="https://developer.mozilla.org/en-US/docs/WebAPI/Settings">設定</a> API といったFirefox で利用できない API を持っています。よって、アプリケーション開発の間や Gaia ユーザインターフェイス自体を動かしている間は有益でしょう。この記事では Firefox OS デスクトップクライアントのダウンロード、もしくはビルド、同様に使用方法を取り扱います。</p>
+</div>
+
+<div class="note">
+<p><strong>記:</strong> Firefox OS デスクトップクライアントを使うのに最も簡単な方法は <a href="https://developer.mozilla.org/docs/Tools/WebIDE">WebIDE</a> から <a href="https://developer.mozilla.org/docs/Tools/Firefox_OS_Simulator">Firefox OS Simulator add-on </a>を使う事です。 デスクトップクライアントをビルドする必要はありません。</p>
+</div>
+
+<h2 id="Download_a_nightly_build" name="Download_a_nightly_build">ナイトリービルドをダウンロードする</h2>
+
+<p><a href="http://nightly.mozilla.org" title="http://nightly.mozilla.org">Firefox ナイトリー</a> のように、B2G OS シミュレーターのデスクトップクライアント ( b2g- で識別されます) は最新のソースコードから毎日自動的にビルドされます。最新のビルドは <a href="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-central/" title="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-central/"> MozillaのFTP サーバから利用可能</a>です。必ずあなたの OS 向けの最新バージョンのアーカイブを選択してください。これで自分でビルドしなくてすむようになりますし、更にGaia のダウンロードもする必要がなくなります。</p>
+
+<p>アプリケーションは、必ず書き込み可能な場所にインストールしてください。アプリケーションはインクルードされた Gaia プロファイルを更新できる必要があります。</p>
+
+<p>自分自身でビルドしたい場合以外は、スキップして<a href="https://developer.mozilla.org/ja/docs/Mozilla/Boot_to_Gecko/Using_the_B2G_desktop_client$edit#Running_the_simulator" title="#Running_the_simulator">シミュレーターを実行する</a>に進みましょう。それはコードベースに変更を加えてテストしたい場合に必要です。</p>
+
+<h2 id="Building_the_desktop_client" name="Building_the_desktop_client">シミュレーターをビルドする</h2>
+
+<p>初めにやらなければいけないことは、<a href="/ja/docs/Developer_Guide/Build_Instructions#.E3.81.AF.E3.81.98.E3.82.81.E3.81.AB" title="Developer_Guide/Build_Instructions#Build_prerequisites">標準 Mozilla ビルド環境</a>をセットアップすることです。これを一旦行えば、必要なコードをプルダウンして、Firefox OS デスクトップクライアントをビルドするように、構成を行えるようになります。</p>
+
+<h3 id="Downloading_the_code_for_the_first_time" name="Downloading_the_code_for_the_first_time">初回用コードをダウンロードする</h3>
+
+<p>ソースコードを置きたいディレクトリに行き、Gecko が全て入っている <code>mozilla-central</code> リポジトリを複製しましょう :</p>
+
+<pre class="brush: bash language-html">hg clone http://hg.mozilla.org/mozilla-central</pre>
+
+<p><span style="line-height: 21px;">もしくは、Githubから同じコードをダウンロードできます:</span></p>
+
+<pre class="brush: bash language-html">git clone https://github.com/mozilla/gecko-dev</pre>
+
+<h3 id="Updating_the_code" name="Updating_the_code">コードを更新する</h3>
+
+<p>後で追加でビルドする場合、確実に最新版のコードで make したいと思うでしょう。これが最新の変更をプルする方法です :</p>
+
+<pre>cd mozilla-central
+hg pull -u
+</pre>
+
+<p>または、</p>
+
+<pre class="brush: bash language-html">cd gecko-dev
+git pull</pre>
+
+<h3 id="Create_a_mozconfig" name="Create_a_mozconfig"><code>mozconfig</code> を作成する</h3>
+
+<p>次に、Firefox の代わりに Boot to Gecko クライアントをビルドするビルドシステムを構成するために、<code>mozilla-central</code> ディレクトリに <code>mozconfig</code> ファイルを作成する必要があります。このファイルは下記を含みます:</p>
+
+<pre>. "$topsrcdir/b2g/config/mozconfigs/common"
+
+mk_add_options MOZ_OBJDIR=../build
+# この行は gecko-dev または mozilla-central を使用する場合にはコメントアウトする必要があります
+mk_add_options MOZ_MAKE_FLAGS="-j9 -s"
+
+ac_add_options --enable-application=b2g
+ac_add_options --disable-libjpeg-turbo
+
+# このオプションは Gaia のテストを実行可能にしたい場合に必要になります
+ac_add_options --enable-tests
+
+# mozTelephony/mozSms インタフェースを有効にする
+# 転送したい開発スマートフォンを実際に所有している場合のみ
+# この行を有効にしてください。起動時にクラッシュしたら、
+# この行がコメントになっているか確認してください
+#ac_add_options --enable-b2g-ril
+</pre>
+
+<p>B2G デスクトップクライアントで <a href="https://developer.mozilla.org/ja/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Mochitests">Mochitests</a> を実行したい場合(<code>mochitest-b2g-desktop</code> か <code>mochitest-plain</code> のいずれか) または <a href="https://developer.mozilla.org/ja/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Gaia_UI_Tests_Run_Tests">Gaia ユニットテスト</a>を実行したい場合、 <code>ENABLE_MARIONETTE=1</code> の行をこのファイルに含める必要もあります。</p>
+
+<h3 id="ビルドする">ビルドする</h3>
+
+<p>さて、デスクトップクライアントをビルドする準備ができましたので、以下のコマンドを <code>mozilla-central</code> ディレクトリの中で実行してください :</p>
+
+<pre>./mach build
+</pre>
+
+<p>ビルドクライアントは <code>objdir/dist/bin</code> ディレクトリ（<code>mozconfig</code> ファイルの <code>MOZ_OBJDIR</code> で指定した値に基づきます）の中に配置されます。</p>
+
+<div class="note">
+<p><strong>記:</strong> 問題がある場合、まず <a href="https://developer.mozilla.org/ja/docs/Developer_Guide/Build_Instructions#Build_prerequisites">ここ</a>で依存性を確認して下さい。</p>
+</div>
+
+<h2 id="Downloading_Gaia" name="Downloading_Gaia">Gaia をダウンロードする</h2>
+
+<p>デフォルトではデスクトップクライアントは空のスクリーンを表示します。というのはシステムアプリとしてどのウェブアプリを最初に読み込むのか知らないからです。システムアプリとデフォルトアプリの集合は Gaia と呼ばれる Firefox OS に搭載されていて、ダウンロードが必要です。</p>
+
+<p>Gaia を初めてダウンロードするには、GitHub にあるソースコードリポジトリを複製しましょう :</p>
+
+<pre>git clone https://github.com/mozilla-b2g/gaia
+cd gaia</pre>
+
+<p>既に存在する Gaia のクローンを更新するには、GitHub から最新の変更をプルできます :</p>
+
+<pre>cd gaia
+git pull
+</pre>
+
+<h2 id="custom-settings.json_を作成する">custom-settings.json を作成する</h2>
+
+<p>何をしているのかを知っていて、色々な調整オプションをセットしたい場合、<code>gaia/build/config/custom-settings.json</code> ファイルを作ってそこに追加できます、例えば:</p>
+
+<pre class="language-html"><code class="language-html">{
+  "lockscreen.enabled": false,
+  "lockscreen.locked": false,
+  "devtools.debugger.remote-enabled": true
+}</code></pre>
+
+<p>この例はロック画面をバイパスする便利な例で、そうしないとデスクトップではマウスやトラックパッドを使ってロック解除できないためバイパス不可能です。</p>
+
+<h3 id="Generating_a_profile" name="Generating_a_profile">プロファイルを生成する</h3>
+
+<p>次に、デスクトップクライアント用に Gaia のアプリをセットアップする必要があります。これはパッケージングされた Gaia アプリを端末にインストールするのと同じやり方で同梱し、また特権のあるシステムアプリ用のパーミッションも設定します。我々はこれをプロファイルを生成することで行います。以下のコマンドは(<code>gaia</code> ディレクトリでこれを実行してください) その処理を行います:</p>
+
+<pre>make DESKTOP_SHIMS=1 NOFTU=1 DEBUG=1
+</pre>
+
+<p>これで <code>gaia</code> ディレクトリの下に <code>profile-debug</code> ディレクトリが作成されたはずです。新しいプロファイルにはカスタマイズされた拡張機能と、B2G が正しく実行されるのに必要となるその他の構成が含まれています。</p>
+
+<h2 id="Running_the_desktop_client" name="Running_the_desktop_client">デスクトップクライアントを実行する</h2>
+
+<p>一旦クライアントをビルドして（もしくはナイトリーデスクトップアプリケーションをダウンロード、インストール）Gaia をダウンロードすれば、Firefox OS デスクトップクライアントを起動する準備が整います。</p>
+
+<h3 id="Running_on_Linux" name="Running_on_Linux">Linux で実行する</h3>
+
+<p>組み込まれた Gaia プロファイルを使用して、Linux でデスクトップクライアントを実行するには、単に <code>b2g</code> 実行可能ファイルを実行するだけです。そのバイナリは前にダウンロードしたアーカイブの中、もしくは、クライアントを自分でビルドした場合は <code>objdir/dist/bin</code> ディレクトリにあります。</p>
+
+<pre>b2g -profile gaia/profile-debug</pre>
+
+<p>あなたはうっとうしいレンダリングの問題で悩まされるかもしれません。それを回避するには、<code>gaia/profile/prefs.js</code> ファイルに以下の行を追加してください:</p>
+
+<pre>user_pref("layers.acceleration.disabled", true);
+</pre>
+
+<h3 id="Running_on_Mac" name="Running_on_Mac">Mac で実行する</h3>
+
+<p>ナイトリービルドをダウンロードした場合は、いつものように Finder から簡単に起動することができます。コンソールの出力は、Mac に含まれている標準コンソールユーティリティプログラムを実行すれば見ることができます。</p>
+
+<p>もし、異なる Gaia プロファイルを指定したい場合 (例えば上記と別にダウンロードしたGaiaプロファイル) は、<code>b2g</code> ラッパープログラムを使用しないで、<code>b2g</code> バイナリを実行する必要があります。<code>b2g</code> バイナリの場所と、プロファイルディレクトリの指定の際に絶対パスが必要な為に、コマンドラインは少し複雑です :</p>
+
+<pre>.../B2G.app/Contents/MacOS/b2g -profile /full/path/to/gaia/profile-debug
+</pre>
+
+<h3 id="Running_on_Windows" name="Running_on_Windows">Windows で実行する</h3>
+
+<p>Windows でナイトリービルドを実行するには、<code>b2g.exe</code> を起動するだけです。その代わりに <code>b2g-bin.exe</code> 実行可能ファイルを実行すると、実行内容のカスタマイズが可能です。これはバンドルされた Gaia を自動的に使用するラッパープログラムをバイパスします。</p>
+
+<h2 id="Command_line_options" name="Command_line_options">コマンドラインオプション</h2>
+
+<p>デスクトップクライアントを使っている時のランタイム体験を調整するのに、使用可能なコマンドラインオプションが多数存在します。<code>-help</code> オプションを使用することでオプションリストが取得できます。このセクションでは特に興味深いオプションのいくつかを取り上げます。</p>
+
+<h3 id="option-screen" name="option-screen">画面サイズを指定する</h3>
+
+<p><code>--screen</code> オプションを使用することでシミュレートしたい端末の画面サイズを指定できます :</p>
+
+<pre>b2g --screen=<em>&lt;width&gt;</em>x<em>&lt;height&gt;</em>[@<em>&lt;dpi&gt;</em>]</pre>
+
+<p><em>&lt;width&gt;</em>、<em>&lt;height&gt;</em>、<em>&lt;dpi&gt;</em> は、ほとんど見た目通りのパラメータです : 端末の画面の幅と高さはピクセルで、DPI で端末の解像度を指定します。例えば :</p>
+
+<pre>b2g --screen=320x480
+b2g --screen=320x480@160
+</pre>
+
+<p>オプションで、シミュレートしたい画面サイズと解像度を特定の端末名で指定可能です :</p>
+
+<ul>
+ <li><code>iphone</code></li>
+ <li><code>ipad</code></li>
+ <li><code>nexus_s</code></li>
+ <li><code>galaxy_nexus</code></li>
+ <li><code>galaxy_tab</code></li>
+ <li><code>wildfire</code></li>
+ <li><code>tattoo</code></li>
+ <li><code>salsa</code></li>
+ <li><code>chacha</code></li>
+</ul>
+
+<p><a href="https://github.com/mozilla/gecko-dev/blob/master/b2g/chrome/content/screen.js">screen.js</a>の中でこれらプリセット端末が定義されています。</p>
+
+<p>別の画面を選択するには、たぶん下記のようにプロファイルパスを指定する必要があります:</p>
+
+<div class="geckoVersionNote">
+<p>./b2g-bin --profile ./gaia/profile/ --screen=galaxy_tab</p>
+</div>
+
+<h3 id="option-console" name="option-console">JavaScript コンソールを開く</h3>
+
+<p>コマンドラインからの起動時に <code>-jsconsole</code> フラグを付けて起動すると、B2G デスクトップクライアントで JavaScript コンソールを開くことができます。ビルドが終わったら、実行するだけです :</p>
+
+<pre>.../b2g -jsconsole -profile <em>/path/to/your/profile</em></pre>
+
+<p>Mac にナイトリービルドをインストールした場合は、こんな感じに実行します :</p>
+
+<pre>/Applications/B2G.app/Contents/MacOS/b2g -jsconsole -profile <em>/path/to/your/profile</em></pre>
+
+<p id="option-runapp"><strong>記:</strong> Firefox OSの製品ビルドでは、デフォルトでコンソールログ出力 (例えば<a href="/ja/docs/Web/API/Console/log" title="デバッガの Web コンソールにメッセージを出力します。"><code>console.log()</code></a>) が無効です。有効にするには、 <a href="https://developer.mozilla.org/ja/Firefox_OS/Debugging/Developer_settings">開発者設定</a> を開き、<em>Console Enabled</em> 設定を有効にします。</p>
+
+<h3 id="option-runapp" name="option-runapp">起動時に指定したアプリケーションを起動する</h3>
+
+<p>デスクトップクライアントで b2g が起動する際に自動起動するアプリケーションを指定することも可能です。これはシステムが読み込みを完了した後、すぐに実行されます。これを行うには、<code>--runapp</code> オプションを使用して、実行するアプリケーションの名前をパラメータとして指定するだけです。例えば :</p>
+
+<pre> .../b2g -profile <em>/path/to/your/gaia/</em>profile-debug --runapp email</pre>
+
+<div class="note">
+<p><strong>記</strong>: 起動するアプリを探す前に、指定された名前は正規化が行われ、全て小文字へ変換され、全てのダッシュと全てのスペースは削除されます。正規化された名前はその後、利用可能なアプリのマニフェストのマニフェストから、同様に正規化された名前と比較されます。例えば、電子メールアプリの名前が現在 "E-mail" の場合、この正規化のおかげで <code>--runapp email</code> で動作します。</p>
+</div>
+
+<p>引数無しで、もしくは空の引数で <code>--runapp</code> オプションを指定した場合、シミュレーターは、使い方に関する概要メッセージと一緒に既知のアプリケーションのリストをターミナルに出力します。</p>
+
+<div class="note">
+<p><strong>注意 :</strong> <code>--runapp</code> オプションを使用する際は、副作用としてロック画面が無効になり、再有効化することができません。ロック画面をテストしたいプロファイルでは、このコマンドを使用しないか、設定アプリケーションを使用して手動で<em> Settings &gt; Screen Lock</em> を使って元に戻すことが前提になっています。もしそれが問題であれば、遠慮なくこの振る舞いを変更するパッチをコントリビュートしてください。</p>
+</div>
+
+<h2 id="Usage_tips" name="Usage_tips">使用法のヒント</h2>
+
+<p>このセクションは、B2G デスクトップクライアントを使用する いくつかの役立つヒントを提供します。</p>
+
+<ul>
+ <li>ESC キーは "back" ボタンと同じ機能を実行します。</li>
+ <li>Home キーは "home" ボタンと同じ機能を実行します。Mac では、Home キーは Fn + ← （Fn + 左矢印）で使用できます。</li>
+ <li>End キーは "電源" ボタンと同じ機能を実行します; Macでは、End キーは Fn + → (Fn + 右矢印)で使用できます。</li>
+ <li>Page Up と Page Down キーはそれぞれ"音量アップ" と "音量ダウン" ボタンと同じ機能を実行します;Macでは、Page Up キーは Fn + ↑ (Fn + 上矢印) で、Page Down キーは Fn + ↓ (Fn + 下矢印)で使用できます。</li>
+ <li>Home キーの長押しは "Card View"を開きます; Macでは、 Cmd + Fn + ← (Cmd + Fn + 左矢印) で "Card View"を開きます。</li>
+</ul>
+
+<h2 id="トラブルシューティング_シミュレーター起動時のブランク画面">トラブルシューティング: シミュレーター起動時のブランク画面</h2>
+
+<p><code>b2g -profile gaia/path/to/gaia/profile</code> を使ってb2gを起動した時、"Cannot reach app://system.gaiamobile.org" のエラーと一緒にブランク画面が表示されることがあります。これを修正するためにいくつか確認できることがあります:</p>
+
+<ul>
+ <li>gaiaディレクトリで <code>DEBUG=1 make</code> プロファイルを使ってリビルドする</li>
+ <li>b2g を再実行する</li>
+ <li>これで直らない場合、他のプロセスが 8080ポートをリッスンしていないか調べる。Gaia のデフォルトプロファイルは <code>httpd.js</code> を起動し、これは 8080ポートをリッスンします。デバッグプロファイル実行時に、B2G は localhost:8080 に接続します。ほかのプロセスが 8080ポート上で動いている場合、b2g はgaiaのホーム画面の表示に失敗するでしょう。
+  <ol>
+   <li>これに当てはまるのかを見つけ出すには、<code>httpd.js</code>のログ出力を有効にできます。このプロファイル内での <code>httpd.js</code> は<code>gaia/profile/extensions/httpd/content/httpd.js</code> の場所にいます。編集するのにこのファイルを開きます。</li>
+   <li><code>var DEBUG=false;</code> の行を <code>var DEBUG=true; に変更します。</code></li>
+   <li>ファイルを保存して B2G を再起動します。コンソールでhttpdのログを見る事ができるでしょう。</li>
+  </ol>
+ </li>
+</ul>
+
+<h2 id="Next_steps" name="Next_steps">次のステップへ</h2>
+
+<p>これでBoot to Gecko が動作するシミュレータービルドが手に入りましたので、テストしたり、開発したり、その他のことを実行させたりできるようになります :</p>
+
+<ul>
+ <li><a href="/ja/Firefox_OS/Debugging" title="Mozilla/Boot_to_Gecko/Debugging_on_Boot_to_Gecko">Boot to Gecko でデバッグする</a></li>
+ <li><a href="/ja/Firefox_OS/Platform/Testing" title="Mozilla/Boot_to_Gecko/Testing_Boot_to_Gecko">Boot to Gecko をテストする</a></li>
+</ul>

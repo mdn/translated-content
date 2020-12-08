@@ -1,0 +1,270 @@
+---
+title: menulist
+slug: Archive/Mozilla/XUL/menulist
+tags:
+  - XUL Elements
+  - XUL Reference
+translation_of: Archive/Mozilla/XUL/menulist
+---
+<div class="noinclude"><span class="breadcrumbs XULRef_breadcrumbs">
+ « <a href="/ja/docs/XUL/XUL_Reference">XUL リファレンス HOME</a>    [
+ <a href="#Examples">例</a> |
+ <a href="#Attributes">属性</a> |
+ <a href="#Properties">プロパティ</a> |
+ <a href="#Methods">メソッド</a> |
+ <a href="#Related">関連項目</a> ]
+</span></div>
+<p>ドロップダウン選択リストに使用される要素。ユーザは、<code>menulist</code> 内に表示された要素の一つを選択します。現在選択されたものは <code>menulist</code> 要素上に表示されます。ドロップダウンを生成するには、選択肢の <code><a href="/ja/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code> 要素を格納した <code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> を <code>menulist</code> 内に置いてください。menulist の選択が変更されると、command イベントによってコードが実行されます。</p>
+<p>詳しい情報は <a href="/ja/XUL_Tutorial/List_Controls" title="ja/XUL_Tutorial/List_Controls">XUL チュートリアル</a>にあります。</p>
+<dl><dt> 属性 </dt><dd> <a href="#a-accesskey">accesskey</a>, <a href="#a-crop">crop</a>, <a href="#a-disableautoselect">disableautoselect</a>, <a href="#a-disabled">disabled</a>, <a href="#a-editable">editable</a>, <a href="#a-focused">focused</a>, <a href="#a-image">image</a>, <a href="#a-label">label</a>, <a href="#a-oncommand">oncommand</a>, <a href="#a-open">open</a>, <a href="#a-preference">preference</a>, <a href="#a-readonly">readonly</a>, <a href="#a-sizetopopup">sizetopopup</a>, <a href="#a-tabindex">tabindex</a>, <a href="#a-value">value</a> </dd></dl> <dl><dt> プロパティ </dt><dd> <a href="#p-accessibleType">accessibleType</a>, <a href="#p-crop">crop</a>, <a href="#p-description">description</a>, <a href="#p-disableautoselect">disableautoselect</a>, <a href="#p-disabled">disabled</a>, <a href="#p-editable">editable</a>, <a href="#p-editor">editor</a>, <a href="#p-menulist.image">image</a>, <a href="#p-menulist.inputField">inputField</a>, <a href="#p-itemCount">itemCount</a>, <a href="#p-label">label</a>, <a href="#p-menuBoxObject">menuBoxObject</a>, <a href="#p-menupopup">menupopup</a>, <a href="#p-open">open</a>, <a href="#p-selectedIndex">selectedIndex</a>, <a href="#p-selectedItem">selectedItem</a>, <a href="#p-tabIndex">tabIndex</a>, <a href="#p-value">value</a> </dd></dl> <dl><dt> メソッド </dt><dd> <a href="#m-menulist.appendItem">appendItem</a>, <a href="#m-contains">contains</a>, <a href="#m-getIndexOfItem">getIndexOfItem</a>, <a href="#m-getItemAtIndex">getItemAtIndex</a>, <a href="#m-insertItemAt">insertItemAt</a>, <a href="#m-removeAllItems">removeAllItems</a>, <a href="#m-removeItemAt">removeItemAt</a>, <a href="#m-menulist.select">select</a> </dd></dl>
+<h3 id="Examples" name="Examples">例</h3>
+<pre>  &lt;menulist&gt;
+    &lt;menupopup&gt;
+      &lt;menuitem label="option 1" value="1"/&gt;
+      &lt;menuitem label="option 2" value="2"/&gt;
+      &lt;menuitem label="option 3" value="3"/&gt;
+      &lt;menuitem label="option 4" value="4"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menulist&gt;
+</pre>
+<h3 id="Attributes" name="Attributes">属性</h3>
+<p> </p><div id="a-accesskey">
+
+
+
+
+<dl>
+ <dt><code id="a-accesskey"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/accesskey">accesskey</a></code></dt>
+ <dd>型: <em>文字型</em></dd>
+ <dd>ショートカットキーとして使用される文字を設定します。この文字はその要素の <code><code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> 属性のテキストに現れる文字の一つでなければいけません。
+
+ </dd>
+</dl>
+
+
+</div> <div id="a-crop">
+
+
+<dl>
+ <dt><code id="a-crop"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/crop">crop</a></code></dt>
+ <dd>型: <em>下記の値のいずれか一つ</em></dd>
+ <dd>要素の label に与えられた空間が小さ過ぎるときは、<code>crop</code> 属性によって指定された側のテキストが切り取られます。テキストが切り取られた場所には省略記号 (ellipsis)が使用されます。ボックスの方向が反対の場合は、切り取られる場所も反対側になります。</dd>
+</dl>
+
+<ul>
+ <li><code>start</code>: テキストは先頭から切り取られます。</li>
+ <li><code>end</code>: テキストは末尾から切り取られます。</li>
+ <li><code>left</code>: <span title="これは非推奨 API です。未だ動作しているかも知れませんが、将来的に削除される可能性があります。"><i class="icon-thumbs-down-alt"> </i></span> テキストは左側から切り取られます。</li>
+ <li><code>right</code>: <span title="これは非推奨 API です。未だ動作しているかも知れませんが、将来的に削除される可能性があります。"><i class="icon-thumbs-down-alt"> </i></span> テキストは右側から切り取られます。</li>
+ <li><code>center</code>: テキストの中央が切り取られ、通常、テキストの先頭と末尾が表示されます。</li>
+ <li><code>none</code>: テキストは省略記号を使用して切り取られません。しかし、テキストがあまりに長い場合は単純に削除されます。削除する側は CSS の行揃え (text alignment)に依存します。</li>
+</ul>
+
+
+</div> <div id="a-disableautoselect">
+
+<dl><dt> <code id="a-disableautoselect"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/disableautoselect">disableautoselect</a></code> </dt><dd> 型: <em>論理型</em> </dd><dd> この属性が <code>true</code> または省略された場合、menu 上の選択された項目は、ユーザが textbox に入力したものと一致させるために更新されます。text が list 内のどの項目とも一致しない場合、menu の選択がクリアされます。この属性が <code>false</code> の場合、選択された項目は更新されません。この属性は editable な <code><a href="/ja/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code> にのみ適用されます。 </dd></dl>
+
+</div> <div id="a-disabled">
+
+<dl>
+  <dt>
+    <code id="a-disabled"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code></dt>
+  <dd>
+    型: <em>論理型</em></dd>
+  <dd>
+    要素が無効化されているかどうかを示します。ある要素が <code>true</code> に設定されていたら、その要素は無効化されています。無効化された要素は通常グレイ表示のテキストで描画されます。要素が無効化されていると、ユーザのアクションには応答せず、フォーカスもあてられず、<code>command</code> イベントも発生しません。
+
+  </dd>
+</dl>
+
+<p> </p>
+</div> <div id="a-editable">
+
+<dl><dt> <code id="a-editable"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/editable">editable</a></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code><a href="/ja/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code> の value を、value フィールドに直接入力して変更できるかどうかを指示します。これは、そばにドロップダウンの矢印を持つ textbox として描画されます。ユーザはテキストを textbox に入力するか、ドロップダウンの選択肢から一つを選択します。 </dd></dl>
+
+
+</div> <div id="a-focused">
+
+<dl><dt> <code id="a-focused"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/focused">focused</a></code> </dt><dd> 型: <em>論理型</em> </dd><dd> 要素がフォーカスされているとき、この属性値は <code>true</code> です。 </dd></dl>
+
+</div> <div id="a-image">
+
+<dl>
+  <dt>
+    <code id="a-image"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/image">image</a></code></dt>
+  <dd>
+    型: 画像の <em>URL</em></dd>
+  <dd>
+    要素上に表示する画像の URL。この属性が空または除外された場合、画像は表示されません。画像の位置は <code id="a-dir"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/dir">dir</a></code> 属性および <code id="a-orient"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code> 属性によって決定されます。</dd>
+</dl>
+
+
+</div> <div id="a-label">
+
+<dl><dt> <code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code> </dt><dd> 型: <em>文字列型</em> </dd><dd> 要素上に表示するlabel。 省略された場合、テキストは表示されない。 </dd></dl>
+
+
+</div> <div id="a-oncommand">
+
+<dl><dt> <code id="a-oncommand"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/oncommand">oncommand</a></code> </dt><dd> 型: <em>スクリプトコード</em> </dd><dd> このイベントハンドラは command が活性化した時、呼び出されます。これは、ユーザがメニュー項目を選択したり command に割り当てられたキーボードショートカットが押したりした場合に起こります。 </dd></dl>
+
+
+</div> <div id="a-open">
+
+<dl>
+  <dt><code id="a-open"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/open">open</a></code></dt>
+  <dd>型: <em>論理型</em></dd>
+  <dd><code>menu</code> の <code id="a-type"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/type">type</a></code> ボタンについて、メニューが開かれたとき、<code>open</code> 属性が <code>true</code> に設定されます。メニューが閉じられると <code>open</code> 属性は提供されません。</dd>
+</dl>
+</div> <div id="a-preference">
+
+<dl><dt> <code id="a-preference"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/preference">preference</a></code> </dt><dd> 型: <em>要素の id</em> </dd><dd> 要素を対応する <code><a href="/ja/docs/Mozilla/Tech/XUL/preference" title="preference">preference</a></code> につなぎます。この属性は <code><a href="/ja/docs/Mozilla/Tech/XUL/prefwindow" title="prefwindow">prefwindow</a></code> 内で使用された場合のみ効果があります。preference の値は、要素の <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/value">value</a></span></code> プロパティと一致するように更新されます。 </dd></dl>
+
+</div> <div id="a-readonly">
+
+<dl> <dt><code id="a-readonly"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/readonly">readonly</a></code></dt> <dd>型: <em>論理型</em></dd> <dd><code>true</code> に設定した場合、ユーザは要素の値を変更できません。しかし、スクリプトからは依然として値を変更できます。</dd> <div class="geckoVersionNote"><div class="geckoVersionHeading">
+Gecko 2 note
+<div style="font-size: 9px; line-height: 1; font-style: italic;">(Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)</div>
+</div> Gecko 2.0 まで、<code>readonly</code> 属性は XBL フィールド上で正しく動作しませんでした。</div>
+</dl>
+
+</div> <div id="a-sizetopopup">
+
+<dl><dt> <code id="a-sizetopopup"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/sizetopopup">sizetopopup</a></code> </dt><dd> 型: <em>下記の値のいずれか一つ</em> </dd><dd> menu の幅と <code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> の幅をどのように決定するかを指示します。<code>sizetopopup</code> 属性が設定されていないか、値に <code>none</code> が設定されている場合、menu が優先される幅になり、popup の幅は、この幅の外側まで拡張され、menu 自身の最大幅による影響を受けません。 </dd></dl>
+<ul> <li><code>none</code>: popup の幅は menu のサイズにはなりません。</li> <li><code>always</code>: <code>always</code> に設定すると、menu の幅は <code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> に必要な幅と同じになります。menu に最大幅が設定されている場合、popup もその幅になります。</li>
+</ul>
+
+</div> <div id="a-tabindex">
+
+<dl><dt> <code id="a-tabindex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/tabindex">tabindex</a></code> </dt><dd> 型: <em>整数型</em> </dd><dd> 要素のタブの順番。タブの順番は <code>tab</code> キーが押下されたときにフォーカスが移動する順番です。より大きな <code>tabindex</code> の値をもつ要素は、タブの遷移が後になります。 </dd></dl>
+
+</div> <div id="a-value">
+
+<dl><dt> <code id="a-value"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code> </dt><dd> 型: <em>文字列型</em> </dd><dd> 文字列の属性はデータ値を要素に関連付けます。特定の目的のために使われるわけではありませんが、スクリプトからあなた自身の用途のためにアクセスできます。 </dd></dl>
+
+
+</div>
+<h3 id="Properties" name="Properties">プロパティ</h3>
+<p> </p><div id="p-accessibleType">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/accessibleType">accessibleType</a></span></code> </dt><dd> 型: <em>整数型</em> </dd><dd> 要素の accessibility オブジェクトの種類を示す値。 </dd></dl>
+
+</div> <div id="p-crop">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/crop">crop</a></span></code> </dt><dd> 型: <em>文字列型</em> </dd><dd> <code id="a-crop"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/crop">crop</a></code> 属性の値の取得と設定。 </dd></dl>
+</div> <div id="p-description">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/description">description</a></span></code> </dt><dd> 型: <em>文字列型</em> </dd><dd> 現在選択されている <code><a href="/ja/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code> の description の設定。 </dd></dl>
+</div> <div id="p-disableautoselect">
+<dl><dt> <code><span><a href="http://api/ja/docs/XUL/Property/disableautoselect">disableautoselect</a></span></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code id="a-disableautoselect"><a href="http://api/ja/docs/Mozilla/Tech/XUL/Attribute/disableautoselect">disableautoselect</a></code> 属性の値の取得と設定。 </dd></dl>
+</div> <div id="p-disabled">
+<dl><dt> <code><span><a href="http://api/ja/docs/XUL/Property/disabled">disabled</a></span></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code id="a-disabled"><a href="http://api/ja/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code> 属性の値の取得と設定。 </dd></dl>
+</div> <div id="p-editable">
+<dl>
+ <dt>
+  <code><span><a href="http://api/ja/docs/XUL/Property/editable">editable</a></span></code> </dt>
+ <dd>
+  型: <em>論理型</em></dd>
+ <dd>
+  Returns <code>true</code> if the element is editable. Autocomplete fields are editable so this property always returns <code>true</code> for those.</dd>
+</dl>
+</div> <div id="p-editor">
+<dl><dt> <code><span><a href="http://api/ja/docs/XUL/Property/editor">editor</a></span></code> </dt><dd> 型: <em><a href="/ja/NsIEditor" title="ja/NsIEditor">nsIEditor</a></em> </dd><dd> editable なテキストのための <a href="/ja/NsIEditor" title="ja/NsIEditor">nsIEditor</a> への参照。このプロパティは読み取り専用です。 </dd></dl>
+</div> <div id="p-menulist.image">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/menulist.image">image</a></span></code> </dt><dd> 型: <em>image の URL</em> </dd><dd> 現在選択された項目に関連付けられた画像。 </dd></dl>
+</div> <div id="p-menulist.inputField">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/menulist.inputField">inputField</a></span></code> </dt><dd> 型: <em>textbox 要素</em> </dd><dd> 編集可能な menu list に使用される <code><a href="/ja/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code> 要素への参照。これは編集可能な <code><a href="/ja/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code> にのみ適用される、読み取り専用のプロパティです。 </dd></dl>
+
+
+<p>  </p></div> <div id="p-itemCount">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/itemCount">itemCount</a></span></code> </dt>
+  <dd>
+    型: <em>整数型</em></dd>
+  <dd>
+    子項目の数を保持する読み取り専用のプロパティ。</dd>
+</dl>
+
+
+</div> <div id="p-label">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/label">label</a></span></code></dt>
+  <dd>
+    型: <em>文字列型</em></dd>
+  <dd>
+    <code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code> 属性の値の取得と設定。</dd>
+</dl>
+
+</div> <div id="p-menuBoxObject">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/menuBoxObject">menuBoxObject</a></span></code> </dt><dd> 型: <em><a href="/ja/NsIMenuBoxObject" title="ja/NsIMenuBoxObject">nsIMenuBoxObject</a></em> </dd><dd> menu を実装する <a href="/ja/NsIMenuBoxObject" title="ja/NsIMenuBoxObject">nsIMenuBoxObject</a> への参照。 </dd></dl>
+</div> <div id="p-menupopup">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/menupopup">menupopup</a></span></code></dt>
+ <dd>
+  型: <em>menupopup 要素</em></dd>
+ <dd>
+  menu または menulist 要素で使用される <code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> への参照。このプロパティは読み取り専用です。</dd>
+</dl>
+<p> </p></div> <div id="p-open">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/open">open</a></span></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code id="a-open"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/open">open</a></code> 属性の値の取得と設定。 </dd></dl>
+
+</div> <div id="p-selectedIndex">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/selectedIndex">selectedIndex</a></span></code> </dt><dd> 型: <em>整数型</em> </dd><dd> 選択された項目の index を返します。また、このプロパティに index を設定して項目を選択する事もできます。このプロパティに <code>-1</code> を設定すると、項目の選択をすべて解除します。 </dd></dl>
+</div> <div id="p-selectedItem">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/selectedItem">selectedItem</a></span></code> </dt><dd> 型: <em>要素</em> </dd><dd> 選択できる要素がある要素の、現在選択されている項目を保持します。項目が選択されていないときは、この値は <code>null</code> になります。この値の設定によって項目を選択することができます。値が、このプロパティまたは <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/selectedIndex">selectedIndex</a></span></code> プロパティを通じて変更されるか、ユーザによって変更された場合、select イベントが要素に送られます。 </dd></dl>
+<p> </p>
+</div> <div id="p-tabIndex">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/tabIndex">tabIndex</a></span></code> </dt><dd> 型: <em>整数型</em> </dd><dd> <code id="a-tabindex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/tabindex">tabindex</a></code> 属性の値の取得と設定。 </dd></dl>
+</div> <div id="p-value">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/value">value</a></span></code></dt>
+  <dd>
+    型: <em>文字列型</em></dd>
+  <dd>
+    <code id="a-value"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code> 属性の値の取得と設定。</dd>
+</dl>
+</div>
+<h3 id="Methods" name="Methods">メソッド</h3>
+<table style="border: 1px solid rgb(204, 204, 204); margin: 0 0 10px 10px; padding: 0 10px; background: rgb(238, 238, 238); float: right; width: 250px;">
+<tbody>
+<tr>
+<td>
+<p><strong>XUL 要素からの継承</strong><br>
+<small> <span id="m-blur"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/blur">blur</a></code></span>, <span id="m-click"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/click">click</a></code></span>, <span id="m-doCommand"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/doCommand">doCommand</a></code></span>, <span id="m-focus"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/focus">focus</a></code></span>, <span id="m-getElementsByAttribute"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getElementsByAttribute">getElementsByAttribute</a></code></span> <span id="m-getElementsByAttributeNS"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getElementsByAttributeNS">getElementsByAttributeNS</a></code></span></small></p> <p><strong>DOM 要素からの継承</strong><br>
+<small> <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.addEventListener">addEventListener()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.appendChild">appendChild()</a></code>, <a href="/ja/DOM/Node.compareDocumentPosition" title="ja/DOM/Node.compareDocumentPosition">compareDocumentPosition</a>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.dispatchEvent">dispatchEvent()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getAttribute">getAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getAttributeNode">getAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getAttributeNodeNS">getAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getAttributeNS">getAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getElementsByTagName">getElementsByTagName()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getElementsByTagNameNS">getElementsByTagNameNS()</a></code>, <a href="/ja/DOM/Node.getFeature" title="ja/DOM/Node.getFeature">getFeature</a>, <a href="/ja/DOM/Node.getUserData" title="ja/DOM/Node.getUserData">getUserData</a>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.hasAttribute">hasAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.hasAttributeNS">hasAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.hasAttributes">hasAttributes()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.hasChildNodes">hasChildNodes()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.insertBefore">insertBefore()</a></code>, <a href="/ja/DOM/Node.isEqualNode" title="ja/DOM/Node.isEqualNode">isEqualNode</a>, <a href="/ja/DOM/Node.isSameNode" title="ja/DOM/Node.isSameNode">isSameNode</a>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.isSupported">isSupported()</a></code>, <a href="/ja/DOM/Node.lookupNamespaceURI" title="ja/DOM/Node.lookupNamespaceURI">lookupNamespaceURI</a>, <a href="/ja/DOM/Node.lookupPrefix" title="ja/DOM/Node.lookupPrefix">lookupPrefix</a>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.normalize">normalize()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeAttribute">removeAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeAttributeNode">removeAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeAttributeNS">removeAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeChild">removeChild()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeEventListener">removeEventListener()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.replaceChild">replaceChild()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.setAttribute">setAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.setAttributeNode">setAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.setAttributeNodeNS">setAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.setAttributeNS">setAttributeNS()</a></code>, <a href="/ja/DOM/Node.setUserData" title="ja/DOM/Node.setUserData">setUserData</a></small></p>
+
+</td>
+</tr>
+</tbody>
+</table> <dl><dt> <span id="m-menulist.appendItem"><code><a href="http://api/ja/docs/Mozilla/Tech/XUL/Method/menulist.appendItem">appendItem( label, value, description )</a></code></span> </dt><dd> 戻り値の型: <em>要素</em> </dd><dd> 新しい <code><a href="/ja/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code> 要素を作成し、menulist の末尾に追加します。値(<var>value</var>) と説明(<var>description</var>) の設定は任意です。この関数は新しい項目を返します。 </dd></dl> <dl>
+  <dt><span id="m-contains"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/contains">contains( item )</a></code></span> </dt>
+  <dd>戻り値の型: <em>論理型</em></dd>
+  <dd><code><a href="/ja/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code> が特定の <code><a href="/ja/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code> をその項目として含む場合、 <code>true</code> を返します。</dd>
+</dl> <dl>
+  <dt><span id="m-getIndexOfItem"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getIndexOfItem">getIndexOfItem( item )</a></code></span></dt>
+  <dd>戻り値の型: <em>整数型</em></dd>
+  <dd>指定した <var>item</var> の 0 を基点とした位置を返します。項目は、 list 内に表示された最初の項目から番号が付けられます。</dd>
+</dl> <dl>
+  <dt><span id="m-getItemAtIndex"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getItemAtIndex">getItemAtIndex( index )</a></code></span></dt>
+  <dd>戻り値の型: <em>要素</em></dd>
+  <dd>指定した <var>index</var> の位置の要素を返します。</dd>
+</dl> <dl>
+  <dt><span id="m-insertItemAt"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/insertItemAt">insertItemAt( index, label, value )</a></code></span></dt>
+  <dd>戻り値の型: <em>要素</em></dd>
+  <dd>このメソッドは新しい項目を生成し、それを指定した位置に挿入します。値の設定は任意です。新しい項目要素を返します。</dd>
+</dl> <dl>
+  <dt><span id="m-removeAllItems"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/removeAllItems">removeAllItems()</a></code></span></dt>
+  <dd>戻り値の型: <em>戻り値なし</em></dd>
+  <dd><a href="/ja/docs/XUL/menu">menu</a> 内の項目すべてを削除します。</dd>
+</dl> <dl>
+  <dt><span id="m-removeItemAt"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/removeItemAt">removeItemAt( index )</a></code></span></dt>
+  <dd>戻り値の型: <em>要素</em></dd>
+  <dd>要素内の指定した index の子項目を削除します。このメソッドは削除した項目を返します。</dd>
+</dl> <dl><dt> <span id="m-menulist.select"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/menulist.select">menulist.selectselect()</a></code></span> </dt><dd> 戻り値の型: <em>戻り値なし</em> </dd><dd> <code><a href="/ja/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code> の textbox 内のテキストすべてを選択します。このメソッドは <code id="a-editable"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/editable">editable</a></code> な menulist にのみ適用されます。 </dd></dl>
+<h3 id="Related" name="Related">関連項目</h3>
+<dl><dt> 要素 </dt><dd> <code><a href="/ja/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code>, <code><a href="/ja/docs/Mozilla/Tech/XUL/menubar" title="menubar">menubar</a></code>, <code><a href="/ja/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code>, <code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code>, <code><a href="/ja/docs/Mozilla/Tech/XUL/menuseparator" title="menuseparator">menuseparator</a></code> </dd></dl> <dl><dt> インタフェース </dt><dd> <a href="/ja/nsIAccessibleProvider" title="ja/nsIAccessibleProvider">nsIAccessibleProvider</a>, <a href="/ja/NsIDOMXULMenuListElement" title="ja/NsIDOMXULMenuListElement">nsIDOMXULMenuListElement</a> </dd></dl>
+<div class="noinclude">
+
+</div>

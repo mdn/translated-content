@@ -1,0 +1,284 @@
+---
+title: Module complémentaire B2G installer
+slug: Archive/B2G_OS/Building_and_installing_Boot_to_Gecko/B2G_installer_add-on
+tags:
+  - B2G
+  - B2G installer
+  - Installation
+  - Module complémentaire
+  - blobfree
+translation_of: Archive/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/fr/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/fr/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<p class="summary">Le module complémentaire <strong>B2G installer contribue à résoudre un problème de longue date : l'impossibilité de redistribuer des builds du système complet à cause des </strong>blobs (composants propriétaires.) Cet article détaille comment le module fonctionne et comment l'installer.</p>
+
+<div class="warning">
+<p><strong>Important </strong>: Ce module complémentaire en est encore à un stade expérimental et il a besoin d'un <strong>mainteneur</strong>. À l'heure actuelle, il est conseillé de ne l'utiliser qu'avec un appareil que vous savez comment reflasher en cas de problème. Il n'est supporté que sur Linux (32 et 64 bits) et OSX (64 bits) pour l'instant.</p>
+</div>
+
+<div class="warning">
+<p><strong>Important</strong> : En ce  qui concerne la première version de ce module, il est important de comprendre que ses objectifs sont en réalité de prendre en charge le cas pratique de base suivant : flasher B2G sur un appareil supporté, fonctionnant sous le système Android (ou CyanogenMod). La gestion des mises à jour de B2G et l'obtention des Blobs à partir d'une source autre que l'appareil lui-même ne sont pas (encore) abordées.</p>
+</div>
+
+<h2 id="Construire_une_distribution_sans_blob">Construire une distribution sans blob</h2>
+
+<p>Une solution au problème cité plus haut consiste à produire une distribution dite sans blob ou "blobfree" (voir le <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1175934" title="FIXED: [B2G] Add support to build blobfree images">bug 1175934</a>) qui englobe tout ce qui est nécessaire pour la compilation d'un appareil :</p>
+
+<ul>
+ <li>Système complet construit depuis les sources.</li>
+ <li>Informations sur la compatibilité de l'appareil.</li>
+ <li>Description des partitions.</li>
+ <li>Liste des Blobs nécessaires, avec les informations sur leurs destinations requises dans le build final.</li>
+</ul>
+
+<p>Une telle distribution sans blob peut être construite en spécifiant la cible <code>|blobfree|</code> <code>make</code> lors de la compilation de B2G :</p>
+
+<pre class="brush: bash">$ ./build.sh blobfree</pre>
+
+<div class="note">
+<p><strong>Note</strong> : Plus de détails là-dessus figurent dans la <a href="/fr/Firefox_OS/Compiler#Générer_une_archive_système_sans_aucun_blob_binaire">section blobfree de la page sur la compilation de B2G</a>.</p>
+</div>
+
+<p>Le module complémentaire B2G installer simplifie l'installation de ce type de distribution.</p>
+
+<h2 id="Ajout_du_support_d'un_nouvel_appareil">Ajout du support d'un nouvel appareil</h2>
+
+<p>Pour rendre un nouvel appareil disponible dans le module lorsque l'utilisateur branche un appareil compatible, quelques étapes sont requises :</p>
+
+<ol>
+ <li>Assurez-vous que la génération d'une distribution sans blob est prise en charge par votre appareil. Vérifiez la <a href="/fr/Firefox_OS/Compiler#Générer_une_archive_système_sans_aucun_blob_binaire">section blobfree de la page Compiler B2G. </a></li>
+ <li>Dès lors que votre appareil dispose de ce support, vous pouvez faire en sorte qu'il soit disponible à partir du module. Tout d'abord, clonez le <a href="https://github.com/mozilla-b2g/b2g-installer-builds/">dépôt des builds</a>.</li>
+ <li>Enregistrez un bogue dans <a href="https://bugzilla.mozilla.org">Bugzilla</a> pour le composant <strong>Firefox OS :: B2GInstaller</strong>.</li>
+ <li>Enrichissez <code>builds.json</code> avec les informations relatives à votre nouvel appareil.</li>
+ <li>Envoyez un PR sur Github, joignez-le au bogue que vous avez créé et faîtes une demande de <em>review :gerard-majax</em>.</li>
+</ol>
+
+<p>Le fichier <code>builds.json</code> contient un tableau d'objets, chacun décrivant un appareil compatible. Ces objets possèdent les propriétés suivantes :</p>
+
+<ul>
+ <li><code>id</code>: Le nom de l'appareil tel qu'il est affiché à l'utilisateur.</li>
+ <li><code>builds</code>: Un tableau des builds disponibles pour cet appareil. Chaque objet build du tableau doit avoir ces propriétés :
+  <ul>
+   <li><code>name </code>: La chaîne affichée lors de la sélection du build.</li>
+   <li><code>description </code>: Une description claire de ce qu'est ce build.</li>
+   <li><code>url</code> : URL du fichier de la distribution blobfree.</li>
+  </ul>
+ </li>
+ <li><code>adb </code>: Un ensemble de propriétés Android que l'appareil <strong>DOIT</strong> posséder pour être détecté comme compatible.</li>
+ <li><code>fastboot </code>: Un ensemble de variables Fastboot auxquelles celles de l'appareil <strong>DOIVENT</strong> correspondre pour être détecté comme compatible.</li>
+ <li><code>requiresRoot </code>: Valeur optionnelle qui définit si l'appareil doit être rootable pour pouvoir poursuivre l'installation. Par défaut, elle est définie à <code>true</code>.</li>
+</ul>
+
+<div class="note">
+<p><strong>Note</strong> : Chaque propriété Android ou variable Fastboot peut être comparée soit avec une chaîne de caractères (égalité stricte) soit avec un tableau (égalité stricte avec une des valeurs du tableau.)</p>
+</div>
+
+<h2 id="Installation">Installation</h2>
+
+<p>Pour installer le module complémentaire B2G installer, il faut suivre ces étapes :</p>
+
+<ul>
+ <li>Assurez-vous d'être sous <a href="https://nightly.mozilla.org/">Firefox Desktop Nightly</a> et d'avoir ADB Helper installé (v0.8.6 au minimum) — voir le lien en bas de la <a href="https://ftp.mozilla.org/pub/labs/fxos-simulator/">page fxos-simulator</a> pour l'installation.</li>
+ <li>Créez un <a href="/Firefox/Multiple_profiles">profil distinct</a>
+  <pre class="brush: bash">./firefox -P</pre>
+ </li>
+ <li><a href="https://wiki.mozilla.org/Addons/Extension_Signing#FAQ">outrepassez la signature des modules complémentaires</a> (risque de sécurité : c'est la raison pour laquelle vous devriez utiliser un profil séparé dans ce cas) :
+  <ul>
+   <li>Allez sur <code>about:config</code> (écrivez-le dans la barre de recherche).</li>
+   <li>désactivez <code>xpinstall.signatures.required</code> en double-cliquant dessus (la valeur par défaut est true, et la modifier en false va faire passer la ligne en gras).</li>
+  </ul>
+ </li>
+ <li>Installez le module complémentaire XPI B2G installer en utilisant une de ces méthodes :
+  <ul>
+   <li>Installez-le depuis les <a href="http://lissyx.github.io/b2g-installer/">pages Github</a> (recommandé).</li>
+   <li>Construisez-le vous-même — voir la section <a href="#Hacking">Hacking</a>.</li>
+  </ul>
+ </li>
+ <li>Vérifiez que vous disposez d'au moins 2Go d'espace disponible dans /tmp/.</li>
+ <li>Chargez la page <code>about:b2g-installer</code> (écrivez cela dans la barre de recherche). Vous pouvez avoir besoin de redémarrer le navigateur avant que cela ne marche pour la première fois.</li>
+ <li>Si vous souhaitez nous aider à améliorer le module, vous pouvez cocher la case pour collecter des informations directement à partir des sessions d'utilisation. Ce qui est collecté comme information est expliqué plus loin, dans la section <a href="#Données">Données</a>.</li>
+</ul>
+
+<p>Vous pouvez également faire usage d'une machine virtuelle préconçue sous la forme d'un paquet OVA. Elle offre une installation prête à l'emploi de B2G Installer qui prend en charge certains appareils automatiquement (udev, etc. déjà configurés.) Voir le <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1204482" title="FIXED: Provide a VirtualBox VM ready for B2G Installer use">bug 1204482</a> pour plus de détails.</p>
+
+<pre class="comment-text " id="ct-19"><a href="https://drive.google.com/file/d/0B8Ju6ek0Knd6aE5RdUkwTnlUTjQ/view?usp=sharing">https://drive.google.com/file/d/0B8Ju6ek0Knd6aE5RdUkwTnlUTjQ/view?usp=sharing</a>
+SHA1: 9cbf309fa48eb73d983150e6aab21f7facb4f327</pre>
+
+<h2 id="Utilisation">Utilisation</h2>
+
+<ol>
+ <li>Lorsque le module complémentaire démarre, il télécharge <code>builds.json</code> depuis <a href="https://github.com/mozilla-b2g/b2g-installer-builds/blob/master/builds.json">Github</a> pour obtenir la liste des builds disponibles. Il est toujours possible d'utiliser un fichier zip local.</li>
+ <li>Branchez votre appareil en USB et attendez qu'il soit détecté par le module.</li>
+ <li>Après que l'appareil ait été détecté comme étant supporté, une liste des builds sera proposée.</li>
+ <li>Sélectionnez le build que vous voulez, cliquez sur <em>Flash</em> et patientez.<span id="cke_bm_232E" style="display: none;"> </span></li>
+</ol>
+
+<h2 id="Captures_d'écran">Captures d'écran</h2>
+
+<p>Quand aucun appareil n'est branché :</p>
+
+<p><img alt="First page, no device plugged" src="https://mdn.mozillademos.org/files/12353/Capture%20du%202016-01-27%2016-13-38.png" style="display: block; height: 232px; margin: 0px auto; width: 320px;"></p>
+
+<p>Quand un build est sélectionné :</p>
+
+<p><img alt="Device plugged in and detected" src="https://mdn.mozillademos.org/files/12355/Capture%20du%202016-01-27%2016-14-25.png" style="display: block; height: 232px; margin: 0px auto; width: 320px;"></p>
+
+<p>Lors du flashage d'un appareil :</p>
+
+<p><img alt="Device plugged in and flashing a device" src="https://mdn.mozillademos.org/files/12357/Capture%20du%202016-01-27%2016-14-43.png" style="display: block; height: 232px; margin: 0px auto; width: 320px;"></p>
+
+<h2 id="Données">Données</h2>
+
+<p>Dans le but d'améliorer le module, nous collectons certaines données lorsqu'il est utilisé. Le principal objectif est de s'assurer que le module fonctionne correctement chez tout le monde. Nous collectons également des données pour savoir quels appareils intéressent les utilisateurs, de manière à ajuster les builds supportés en conséquence. Aucun pistage n'est fait.</p>
+
+<p>Nous envoyons deux pings de télémétrie externes pour collecter ces données :</p>
+
+<ul>
+ <li>Un lorsque l'appareil est détecté par le module après avoir été branché sur l'ordinateur (cela arrive à chaque fois que le module est actif <strong>*et*</strong> qu'un appareil avec ADB activé est branché.) À l'occasion de ce ping, nous enregistrons :
+
+  <ul>
+   <li>Les variables d'identification de l'appareil (modèle, id du build, fabricant, bootloader.)</li>
+   <li>Le fait qu'un build CyanogenMod est installé ou non sur cet appareil.</li>
+   <li>Le fait qu'un build supporté a été détecté ou non sur l'appareil.</li>
+  </ul>
+
+  <p>Exemple de données collectées lors du branchement d'un appareil supporté :</p>
+
+  <pre class="brush: json">{
+  "payload": {
+    "buildid": "KOT49H",
+    "isSupported": true,
+    "model": "Xperia Z3 Compact (B2G)",
+    "bootloader": "s1",
+    "manufacturer": "Sony"
+  }, [...]
+}</pre>
+
+  <p>Exemple de données collectées lors du branchement d'un appareil non supporté :</p>
+
+  <pre class="brush: json">{
+  "payload": {
+    "buildid": "LVY48I",
+    "isSupported": false,
+    "model": "Xperia Z1 Compact (B2G)",
+    "bootloader": "s1",
+    "manufacturer": "Sony"
+  }, [...]
+}
+</pre>
+ </li>
+ <li>Un à chaque fois qu'une procédure de flashage d'un appareil est exécutée. Cela se produit soit à la fin d'une procédure de flashage réussie, soit en cas d'échec. Pour ce ping, nous enregistrons :
+  <ul>
+   <li>Les mêmes variables que ci-dessus.</li>
+   <li>Si l'appareil fait déjà tourner un build B2G.</li>
+   <li>L'URL du build flashé (chemin complet pour un build public, nom du fichier sans le chemin complet pour un build local.)</li>
+   <li>Le fait que l'utilisateur conserve ses données ou non.</li>
+   <li>Le fait que le flashage ait réussi ou non.</li>
+  </ul>
+
+  <p>Exemple de données collectées si le flashage a réussi :</p>
+
+  <pre class="brush: json">{
+  "payload": {
+    "isSupported": true,
+    "installResult": true,
+    "runsB2G": true,
+    "buildid": "KOT49H",
+    "keepData": false,
+    "buildURL": "https://index.taskcluster.net/v1/task/gecko.v1.mozilla-central.latest.linux.nexus-4-kk-user.opt/artifacts/public/build/mako.blobfree-dist.zip",
+    "model": "AOSP on Mako",
+    "bootloader": "MAKOZ30d",
+    "manufacturer": "LGE"
+  }, [...]
+}</pre>
+
+  <p>Exemple de données collectées en cas d'échec du flashage :</p>
+
+  <pre class="brush: json">{
+  "payload": {
+    "isSupported": true,
+    "installResult": false,
+    "runsB2G": true,
+    "buildid": "KOT49H",
+    "keepData": false,
+    "buildURL": "https://index.taskcluster.net/v1/task/gecko.v1.mozilla-central.latest.linux.nexus-4-kk-eng.opt/artifacts/public/build/mako.blobfree-dist.zip",
+    "model": "AOSP on Mako",
+    "bootloader": "MAKOZ30d",
+    "manufacturer": "LGE"
+  }, [...]
+}</pre>
+ </li>
+</ul>
+
+<h2 id="Hacking">Hacking</h2>
+
+<ul>
+ <li>Le code réside dans le dépôt <a href="https://github.com/mozilla-b2g/b2g-installer/">b2g-installer</a>. Vous devez appliquer le patch sur un clone de mozilla-central, puis créer un lien symbolique <code>browser/extensions/b2g-installer</code> vers votre clone du dépôt <code>b2g-installer</code>.</li>
+ <li>Pour le compiler, vous devez lancer <code>|./mach build &amp;&amp; ./mach build package|</code>.</li>
+ <li>Le XPI résultant sera produit dans votre répertoire <code>MOZ_OBJDIR/dist/xpi-stage/b2g-installer/</code>.</li>
+ <li>Il contient une copie du code source des outils externes d'AOSP/CAF nécessaires à la construction des partitions.</li>
+ <li>Les tests sont écrits sous forme de tests mochitest/xpcshell.</li>
+ <li>Vérifiez également le méta-bogue et ses dépendances : <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1166276">Bogue 1166276</a></li>
+</ul>
+
+<h2 id="À_FAIRE">À FAIRE</h2>
+
+<ol>
+ <li>Sortir de la branche mozilla-central pour la compilation. Cela va sans doute imposer la réécriture des tests avec autre chose que mochitests.</li>
+ <li>Convertir moz.build en Makefile pour la construction des outils.</li>
+ <li>Prendre en charge des sources externes de blobs (nécessaire pour gérer les cas de mise à jour).</li>
+</ol>

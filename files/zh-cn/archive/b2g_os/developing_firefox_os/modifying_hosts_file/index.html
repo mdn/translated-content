@@ -1,0 +1,43 @@
+---
+title: 修改 hosts 文件
+slug: Archive/B2G_OS/Developing_Firefox_OS/modifying_hosts_file
+tags:
+  - Android
+  - B2G
+  - Firefox OS
+  - hosts
+translation_of: Archive/B2G_OS/Developing_Firefox_OS/modifying_hosts_file
+---
+<div class="summary">
+ <p>由于遭受攻击，阻止不希望的连接，将请求重定向到一个特定 IP 等原因，有时您需要对机器上的 hosts 文件进行编辑。本文则阐述了如何修改您 Fiefox OS 手机上的 hosts 文件。 在 Linux 系统下，它位于 /system/etc 目录下，而在 Mac OSX 系统下，位于 /etc 目录下。</p>
+</div>
+<h2 id="准备您的手机">准备您的手机</h2>
+<p>打开手机，进入<a href="/en-US/Firefox_OS/Debugging/Developer_settings#The_Developer_panel">开发者设置面板Developer settings panel</a> 检查一下：</p>
+<ul>
+ <li>"远程调试" (在 Firefox OS 1.4 以及以上版本，在 select 菜单中选择  "ADB and Devtools" )</li>
+ <li>"终端使能"</li>
+</ul>
+<p>将手机插入您的电脑上。</p>
+<p>下面，修改 hosts 文件的步骤就与 Android 相同了。 Android开发者则能够快速的进行设置。</p>
+<h2 id="终端中的步骤">终端中的步骤</h2>
+<ol>
+ <li>打开终端窗口</li>
+ <li>重新装载设备上的 /system 分区，以获得读-写 权限。
+  <pre class="brush: bash">adb remount</pre>
+ </li>
+ <li>在电脑上获取 hosts 文件
+  <pre class="brush: bash">adb pull /system/etc/hosts /tmp</pre>
+ </li>
+ <li>按照所需修改 /tmp/hosts 文件并保存。例如 :
+  <pre class="brush: bash">127.0.0.1         localhost
+ip.to.re.direct   hostName</pre>
+ </li>
+ <li>将修改的 hosts 文件推送到设备
+  <pre class="brush: bash">adb push /tmp/hosts /system/etc/hosts</pre>
+ </li>
+</ol>
+<p>这样就完成啦，您的 hosts 文件现在就应更新啦。</p>
+<div class="note">
+ <p><b>注意</b>: 要了解更多关于 ADB 的内容，请参考 <a href="http://developer.android.com/tools/help/adb.html" title="http://developer.android.com/tools/help/adb.html">ADB 文档</a>。</p>
+</div>
+<p> </p>

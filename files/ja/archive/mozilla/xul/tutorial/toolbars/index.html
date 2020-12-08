@@ -1,0 +1,68 @@
+---
+title: ツールバー
+slug: Archive/Mozilla/XUL/Tutorial/Toolbars
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Toolbars
+---
+<div>
+  <div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Splitters" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Simple_Menu_Bars">次のページ  »</a></p>
+</div></div>
+<p>ツールバーは、通常ウィンドウの上部に置かれ、よく使う機能を実行するための多数のボタンを持っています。 XUL では、ツールバーを作るための方法を提供しています。</p>
+<h2 id="Adding_a_Toolbar" name="Adding_a_Toolbar">ツールバーを追加する</h2>
+<p>XUL にはボックス型の要素がたくさんありますが、ツールバーもボックスの一種になります。 ツールバーには、ボタンが 1 行に並んで表示されるのが一般的ですが、どんな要素を置いてもかまいません。 例えば、 Mozilla のブラウザウィンドウのツールバーには、ページの URL を表示するテキスト入力欄があります。</p>
+<p>ツールバーは、ウィンドウの任意のサイドに、水平・垂直どちらでも好きな向きで置くことが可能です。もちろん、普通はテキスト入力欄を垂直ツールバーに置くようなことはしませんが、 実際のところ、ツールバーはボックスにすぎないため、ウィンドウ内の好きな場所に置くことができます。 極端なことをいえば、ウィンドウの真中に置いてもかまいません。 といっても、たいていは、ツールバーはまとめてウィンドウの上部に置かれます。 1 つ以上のツールバーを並べて置く場合、通常はツールボックスと呼ばれるものでグループ化しておきます。</p>
+<h3 id="A_simple_toolbar_inside_a_toolbox" name="A_simple_toolbar_inside_a_toolbox">単純なツールバー</h3>
+<p>以下は、ツールボックスに置かれた単純なツールバーの例です。</p>
+<p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_toolbar_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_toolbar_1.xul">表示</a></p>
+<pre>&lt;toolbox&gt;
+  &lt;toolbar id="nav-toolbar"&gt;
+    &lt;toolbarbutton label="Back"/&gt;
+    &lt;toolbarbutton label="Forward"/&gt;
+  &lt;/toolbar&gt;
+&lt;/toolbox&gt;
+</pre>
+<p><img alt="画像:toolbar1.jpg" src="/@api/deki/files/892/=Toolbar1.jpg"></p>
+<p>この例では、Back ボタンと Forward ボタンという 2 つのボタンを持つツールバーが 1 つ作られています。 そのツールバーは、ツールボックスの内に置かれます。 この例には、4 つの新しいタグが含まれています。 これらについて、以下に説明します。</p>
+<dl>
+  <dt>
+    <code><a href="/ja/docs/Mozilla/Tech/XUL/toolbox" title="toolbox">toolbox</a></code></dt>
+  <dd>
+    ツールバーを置くためのボックスです。</dd>
+  <dt>
+    <code><a href="/ja/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code></dt>
+  <dd>
+    1 つのツールバーです。ここには、ボタンなどのツールバーが持つアイテムが含まれます。</dd>
+  <dt>
+    <code><a href="/ja/docs/Mozilla/Tech/XUL/toolbarbutton" title="toolbarbutton">toolbarbutton</a></code></dt>
+  <dd>
+    ツールバー内のボタンです。このボタンは、普通のボタンと機能的には同じですが、通常は異なった外見をしています。</dd>
+</dl>
+<p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code></code> は、実際にツールバーを生成する、主となる要素です。 その内部には、個々のツールバーアイテムが置かれます。 通常はボタンですが、他の要素でもかまいません。</p>
+<p>上の例では、ツールバーは 1 つだけ作られています。 複数のツールバーを作ることも簡単で、 <code><code><a href="/ja/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code></code> 要素を、元からあるものの後に追加していくだけです。</p>
+<p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/toolbox" title="toolbox">toolbox</a></code></code> は、ツールバーのコンテナです。 アプリケーションによっては、ウィンドウの上部に複数のツールバーがあるものもあります。 それら全てを、1 つの <code><code><a href="/ja/docs/Mozilla/Tech/XUL/toolbox" title="toolbox">toolbox</a></code></code> 内に置くことができます。</p>
+<p>なお、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code></code> 要素を、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/toolbox" title="toolbox">toolbox</a></code></code> 内部に置くことは必須ではありません。</p>
+<h3 id="Customizable_toolbars" name="Customizable_toolbars">カスタマイズ可能なツールバー</h3>
+<p>Firefox などの Toolkit アプリケーションは、カスタマイズ可能なツールバーを持っています。 このため、多くの拡張機能ではツールバーボタンをツールバーに直接追加するのではなく、ツールバーパレットに追加しています。 カスタマイズ可能なツールバーについての詳細は、「<a href="/ja/docs/Creating_toolbar_buttons">ツールバーボタンの作成</a>」を参照してください。</p>
+<h2 id="Our_find_files_example" name="Our_find_files_example">ファイル検索ダイアログの例</h2>
+<p>それでは、ファイル検索ダイアログにツールバーを追加してみましょう。 実際の機能としては必要ありませんが、例を示すという目的で追加することにします。 2 つのボタン、Open ボタンと Save ボタンを追加します。 これらのボタンは、利用者が検索結果を保存し、後でそれを再び開くような機能を想定しています。</p>
+<pre>&lt;vbox flex="1"&gt;
+  <span class="highlightred">&lt;toolbox&gt;
+    &lt;toolbar id="findfiles-toolbar"&gt;
+      &lt;toolbarbutton id="opensearch" label="Open"/&gt;
+      &lt;toolbarbutton id="savesearch" label="Save"/&gt;
+    &lt;/toolbar&gt;
+  &lt;/toolbox&gt;</span>
+  &lt;tabbox&gt;
+</pre>
+<p>この例では、2 つのボタンを持つツールバーが追加されています。 画像から、これらが上辺にそって水平に表示されているのが分かると思います。 グリッピーも、ツールバーの左端に表示されています。 ツールバーを、タブボックス (<span style="color: green;">tabbox</span>) のすぐ上に、垂直ボックスで囲って置いている点に注意して下さい。 ツールバーを、それ以外の全てのものの上に表示させるためには、垂直配置が必要になります。</p>
+<p><img alt="画像:toolbar5.png" src="/@api/deki/files/896/=Toolbar5.png"></p>
+<p><span id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"><a id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"></a><strong>ここまでのファイル検索ダイアログの例</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-toolbar.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-toolbar.xul">表示</a></p>
+<p>次のセクションでは、ウィンドウへのメニューバーの追加の仕方を見ていきます。</p>
+<div>
+  <div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Splitters" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Simple_Menu_Bars">次のページ  »</a></p>
+</div></div>

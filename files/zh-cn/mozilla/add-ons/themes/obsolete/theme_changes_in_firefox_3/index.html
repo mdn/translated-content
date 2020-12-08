@@ -1,0 +1,92 @@
+---
+title: Firefox 3 的界面改动
+slug: Mozilla/Add-ons/Themes/Obsolete/Theme_changes_in_Firefox_3
+tags:
+  - Themes
+translation_of: Archive/Themes/Theme_changes_in_Firefox_3
+---
+<p>{{ Fx_minversion_header(3) }} {{ Draft() }}</p>
+<p>本文包含了更新FireFox主题以使其可以在<a href="cn/Firefox_3">Firefox 3</a>下良好表现所需进行的一些改动。</p>
+<div class="note">
+ <b>Note:</b> We could use an article called <a href="cn/Updating_themes_for_Firefox_3">Updating themes for Firefox 3</a> that would serve as a how-to guide for updating themes. If anyone with theming experience would like to write one, please do!</div>
+<h2 id=".E9.BB.98.E8.AE.A4.E4.B8.BB.E9.A2.98.E7.9A.84.E6.94.B9.E5.8A.A8" name=".E9.BB.98.E8.AE.A4.E4.B8.BB.E9.A2.98.E7.9A.84.E6.94.B9.E5.8A.A8">默认主题的改动</h2>
+<p>下表列出了Firefox 3默认主题的一些改动。你可以对照此表，确认你所需要做出的改动。</p>
+<h3 id=".E6.89.80.E6.9C.89.E6.96.87.E4.BB.B6" name=".E6.89.80.E6.9C.89.E6.96.87.E4.BB.B6">所有文件</h3>
+<h4 id=".E6.89.80.E6.9C.89.E5.B9.B3.E5.8F.B0" name=".E6.89.80.E6.9C.89.E5.B9.B3.E5.8F.B0">所有平台</h4>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">文件</td>
+   <td class="header">变更</td>
+  </tr>
+  <tr>
+   <td>&lt;tt&gt;browser/themes/*/browser/browser.css&lt;/tt&gt;</td>
+   <td>The width of the drag and drop indicator is no longer calculated during the drag (tabbrowser.xml). Instead a '-moz-margin-start' property must be added to .tab-drop-indicator-bar, with a value that is half of the width of the indicator image. Also, the visibility of the indicator is now controlled by setting collapsed in tabbrowser.xml. As a result, the 'display' property should be removed from .tab-drop-indicator-bar (including for dragging="true").</td>
+  </tr>
+ </tbody>
+</table>
+<h4 id="Mac_OS_X" name="Mac_OS_X">Mac OS X</h4>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">文件</td>
+   <td class="header">变动信息</td>
+  </tr>
+  <tr>
+   <td>&lt;tt&gt;browser/themes/pinstripe/browser/tabbrowser/tabDragIndicator.png&lt;/tt&gt;</td>
+   <td>删除了图片边缘多余的空白，现在图片尺寸变小。也许会对其他使用此图片的Mac平台下的主题产生影响。</td>
+  </tr>
+  <tr>
+   <td>&lt;tt&gt;browser/themes/pinstripe/browser/browser.css&lt;/tt&gt;</td>
+   <td>.tabbrowser-tab{{ mediawiki.external('first-tab=\"true\"') }} &gt; .tab-image-left不再具有margin-left属性，现在使用定义了相同宽度的.tabs-left元素来替代。在FireFox 2的默认皮肤Winstripe中已经作此处理。</td>
+  </tr>
+ </tbody>
+</table>
+<h3 id="browser.E7.9A.84.E6.94.B9.E5.8A.A8" name="browser.E7.9A.84.E6.94.B9.E5.8A.A8">&lt;tt&gt;browser&lt;/tt&gt;的改动</h3>
+<h3 id="global.E7.9A.84.E6.94.B9.E5.8A.A8" name="global.E7.9A.84.E6.94.B9.E5.8A.A8">&lt;tt&gt;global&lt;/tt&gt;的改动</h3>
+<h4 id=".E6.89.80.E6.9C.89.E5.B9.B3.E5.8F.B0_2" name=".E6.89.80.E6.9C.89.E5.B9.B3.E5.8F.B0_2">所有平台</h4>
+<p>“跳转到”按钮现在被放置在地址栏内部，所以此按钮所用的图片(&lt;tt&gt;<a class="external" rel="freelink">chrome://browser/skin/Go-arrow.png</a>&lt;/tt&gt;)需要设计的小一些。控制“跳转到”及其他地址栏中所用到的按钮的显示及隐藏的CSS规则为:</p>
+<pre class="eval">#urlbar[pageproxystate="invalid"] &gt; #urlbar-icons &gt; :not(#go-button) ,
+#urlbar[pageproxystate="valid"] &gt; #urlbar-icons &gt; #go-button {
+  visibility: collapse;
+}
+</pre>
+<h5 id=".E5.A2.9E.E5.8A.A0.E7.9A.84.E5.9B.BE.E7.89.87" name=".E5.A2.9E.E5.8A.A0.E7.9A.84.E5.9B.BE.E7.89.87">增加的图片</h5>
+<p>增加了以下图片:</p>
+<dl>
+ <dt>
+  &lt;tt&gt;<a class="external" rel="freelink">chrome://global/skin/icons/information-16.png</a>&lt;/tt&gt;</dt>
+ <dd>
+  Used when presenting information notices。</dd>
+ <dt>
+  &lt;tt&gt;<a class="external" rel="freelink">chrome://global/skin/icons/warning-16.png</a>&lt;/tt&gt;</dt>
+ <dd>
+  用作显示警告窗口。</dd>
+</dl>
+<h5 id=".E7.A7.BB.E9.99.A4.E7.9A.84.E5.9B.BE.E7.89.87" name=".E7.A7.BB.E9.99.A4.E7.9A.84.E5.9B.BE.E7.89.87">移除的图片</h5>
+<p>以下图片被移除:</p>
+<dl>
+ <dt>
+  &lt;tt&gt;<a class="external" rel="freelink">chrome://mozapps/skin/extensions/question.png</a>&lt;/tt&gt;</dt>
+ <dd>
+  不再使用。</dd>
+</dl>
+<h4 id="Mac_OS_X_2" name="Mac_OS_X_2">Mac OS X</h4>
+<p>为Mac OS X平台上的Firefox 3制作的皮肤需要在&lt;tt&gt;<a class="external" rel="freelink">chrome://global/skin/wizard.css</a>&lt;/tt&gt;末尾增加两条CSS规则:</p>
+<pre class="eval">.wizard-buttons-btm {
+  padding:<i>X</i>px;
+}
+
+.wizard-label-box {
+  display: none;
+}
+</pre>
+<p>此处的数字
+ <i>
+  X</i>
+ ，即&lt;tt&gt;.wizard-buttons-btm&lt;/tt&gt;中的padding值，需要和&lt;tt&gt;.wizard-buttons-box-2&lt;/tt&gt;中的margin值相同。</p>
+<h5 id=".E5.9B.BE.E7.89.87.E5.8F.98.E5.8A.A8" name=".E5.9B.BE.E7.89.87.E5.8F.98.E5.8A.A8">图片变动</h5>
+<p><a class="external" rel="freelink">chrome://global/skin/icons/loading_16.gif</a> 被chrome://global/skin/icons/loading_16.png 替代。</p>
+<h3 id="mozapps.E7.9A.84.E6.94.B9.E5.8A.A8" name="mozapps.E7.9A.84.E6.94.B9.E5.8A.A8">&lt;tt&gt;mozapps&lt;/tt&gt;的改动</h3>
+<h2 id=".E5.8F.82.E8.80.83.E6.96.87.E7.AB.A0" name=".E5.8F.82.E8.80.83.E6.96.87.E7.AB.A0">参考文章</h2>
+<p><a href="cn/Theme_changes_in_Firefox_2">Theme changes in Firefox 2</a></p>

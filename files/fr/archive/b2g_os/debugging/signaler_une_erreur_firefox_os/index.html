@@ -1,0 +1,121 @@
+---
+title: Signaler une erreur de Firefox OS
+slug: Archive/B2G_OS/Debugging/Signaler_une_erreur_Firefox_OS
+tags:
+  - Firefox OS
+  - QA
+  - crash
+  - débogage
+  - rapport d'erreur
+  - test
+translation_of: Archive/B2G_OS/Debugging/Firefox_OS_crash_reporting
+---
+<div class="summary">
+<p>Cette page détaille comment gérer la remontée d'erreurs sur Firefox OS, y compris la récupération des rapports d'erreurs et les plantages forcés.</p>
+</div>
+
+<div class="note">
+<p>Note : La plupart des contributeurs de Firefox pour ordinateur se servent du tag about:crashes pour retrouver les rapports d'erreurs (lire <a href="/en-US/docs/Crash_reporting">Crash reporting</a> pour plus de détails), mais cette méthode n'est pas supportée par Firefox OS.</p>
+</div>
+
+<h2 id="Avant_de_tenter_de_faire_autre_chose">Avant de tenter de faire autre chose</h2>
+
+<p>Les instructions suivantes supposent que vous avez déjà suivi ces trois étapes :</p>
+
+<ol>
+ <li>Assurez-vous que le <a href="/en-US/Firefox_OS/Debugging/Developer_settings#Debugging_via_USB">débogage à distance</a> est autorisé sur votre appareil et que <a href="/en-US/Firefox_OS/Debugging/Installing_ADB">ADB</a> est installé. Ceci autorise votre ordinateur à communiquer avec votre appareil.</li>
+ <li>Connectez votre appareil à votre ordinateur via USB.</li>
+ <li>Installez <a href="https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/">ADB Helper Add-on</a> sur le bureau Firefox pour gérer tout transfert de port nécessaire.</li>
+</ol>
+
+<h3 id="Installer_BusyBox">Installer BusyBox</h3>
+
+<p>Il est également recommandé que vous installiez notre service BusyBox qui ajoute un grand nombre de commandes utiles à ADB pour aider à tester et déboguer Firefox OS.</p>
+
+<p>Pour l'installer, assurez-vous que l'appareil est en marche puis :</p>
+
+<ol>
+ <li><a href="https://wiki.mozilla.org/images/3/32/Busybox-b2g.tar.gz">Téléchargez BusyBox</a> ;</li>
+ <li>Dézippez l'archive à un endroit précis ;</li>
+ <li>cd dans le dossier busybox-b2g extrait ;</li>
+ <li>Exécutez <code>./install.sh</code> pour l'installer.</li>
+</ol>
+
+<p>Tous les services busybox ont des liens symboliques en <code>/system/bin</code>, ce qui fait que vous pouvez exécuter des commandes comme <code>ping</code> directement. Voici quelques exemples de commandes :</p>
+
+<pre class="brush: bash">adb shell ping 8.8.8.8   =&gt; ping command
+
+adb shell ifconfig wlan0 =&gt; check tx/rx bytes
+
+adb shell cat /proc/net/route    =&gt; check the default route
+
+adb shell iptables -t nat -nvL   =&gt; check if the packets are sent from application to IP layer, check Chain OUTPUT (policy ACCEPT 2 packets, 168 bytes)</pre>
+
+<h2 id="Obtenir_des_rapports_d'erreurs_depuis_un_appareil_sous_Firefox_OS">Obtenir des rapports d'erreurs depuis un appareil sous Firefox OS</h2>
+
+<p>Nous avons créé une application Firefox OS pour nous permettre de récupérer des rapports d'erreurs — <a href="http://jds2501.github.io/webapi-permissions-tests/about-crashes.zip">About Crashes</a> — qui fonctionne sur les versions 1.2+.<br>
+ <br>
+ Pour l'installer sur votre appareil, suivez les étapes ci-dessous.</p>
+
+<ol>
+ <li>About Crashes est une application certifiée, vous devez donc autoriser le débogage des applications certifiées (voir les instructions de <a href="/en-US/Firefox_OS/Using_the_App_Manager#Debugging_Certified_Apps_2">App Manager</a>, et <a href="/en-US/docs/Tools/WebIDE#Debugging_certified_apps">WebIDE</a>).</li>
+ <li>Téléchargez le fichier zip About Crashes depuis le lien ci-dessus et l'extraire le fichier en local.</li>
+ <li>Dans le bureau Firefox, ouvrez <a href="/en-US/Firefox_OS/Using_the_App_Manager">App Manager</a> ou <a href="/en-US/docs/Tools/WebIDE">WebIDE</a> (en fonction de la version de Firefox que vous utilisez) sous Outils &gt; Développeur Web.</li>
+ <li>Dans un des outils, ajoutez l'application About Crashes comme une application packagée (App Manager : cliquez sur le plus à côté de l'option <em>Add Packaged App</em>, WebIDE: ouvrez le menu déroulant de gauche et sélectionnez <em>Add Packaged App...</em>).</li>
+ <li>Connectez votre appareil à App Manager/WebIDE (App Manager: vous le trouverez listé au bas de l'interface utilisateur, WebIDE: vous le trouverez sous <em>Select Runtime</em>).</li>
+ <li>Installez et ouvrez l'application sur l'appareil (App Manager: pressez le bouton <em>Update</em>, WebIDE: pressez le bouton "Play" (<em>Install and Run</em>)).</li>
+ <li>Sur l'appareil, pressez le bouton <em>Update</em> dans About Crashes pour voir vos erreurs les plus récentes.</li>
+</ol>
+
+<h2 id="Obtenir_des_IDs_d'erreurs_depuis_la_ligne_de_commande">Obtenir des IDs d'erreurs depuis la ligne de commande</h2>
+
+<p>Vous pouvez obtenir une liste d'IDs d'erreurs via la ligne de commande en saisissant la commande suivante dans votre terminal :</p>
+
+<pre class="brush: bash">adb shell ls -l /data/b2g/mozilla/Crash\ Reports/submitted/</pre>
+
+<p>Si vous avez une longue liste d'erreurs et que vous voulez les trier par date, utilisez cette commande-ci :</p>
+
+<pre class="brush: bash">adb shell busybox ls -ltr /data/b2g/mozilla/Crash\ Reports/submitted/</pre>
+
+<h2 id="ObtenirVérifier_le_rapport_d'erreur">Obtenir/Vérifier le rapport d'erreur</h2>
+
+<p>Pour vérifier un rapport d'erreur:</p>
+
+<ol>
+ <li>Copiez le nom de fichier sans l'extension.</li>
+ <li>Allez sur <a href="http://crash-stats.mozilla.org">Mozilla Crash Reports</a>.</li>
+ <li>Collez le nom de fichier sans l'extension dans la barre de recherche dans le coin en haut à droite.</li>
+</ol>
+
+<p>Cela devrait afficher le rapport d'erreurs que vous avez soumis.</p>
+
+<h2 id="Comment_forcer_un_plantage">Comment forcer un plantage</h2>
+
+<p>Pour déclencher un plantage du système Firefox OS, saisissez la commande suivante dans votre terminal pour trouver l'ID du processus source :</p>
+
+<pre class="brush: bash">adb shell ps | grep b2g</pre>
+
+<p>Vous allez devoir trouver la ligne qui commence par <code>root</code>, et qui finit par <code>/system/b2g/b2g</code>. Elle devrait ressembler à ceci :</p>
+
+<pre class="brush: bash">root 109 1 191120 66024 ffffffff 400fa330 S /system/b2g/b2g</pre>
+
+<p>Le nombre au début de la ligne est l'ID du processus kill que vous devrez utiliser pour <em>killer</em> ce processus. Exécutez la commande suivante, en remplaçant l'espace de texte réservé par l'ID :</p>
+
+<pre class="brush: bash">adb shell kill -11 [ENTER ID HERE]</pre>
+
+<p>Killer le processus root plantera votre l'appareil.</p>
+
+<h3 id="Comment_exécuter_le_script_GDB_pour_b2g">Comment exécuter le script GDB pour b2g</h3>
+
+<ol>
+ <li>Démarrez l'application Galerie sur le téléphone, puis exécutez la commande suivante dans votre terminal :
+  <pre class="brush: bash">adb shell b2g-ps</pre>
+ </li>
+ <li>Notez le pid de l'application Galerie, puis exécutez la commande suivante :
+  <pre class="brush: bash">./run-gdb.sh attach &lt;pid&gt;</pre>
+ </li>
+ <li>Provoquez le plantage.</li>
+ <li>Exécutez cette commande :
+  <pre class="brush: bash">(gdb) bt</pre>
+ </li>
+</ol>

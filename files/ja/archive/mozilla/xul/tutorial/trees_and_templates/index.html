@@ -1,0 +1,169 @@
+---
+title: ツリーとテンプレート
+slug: Archive/Mozilla/XUL/Tutorial/Trees_and_Templates
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Trees_and_Templates
+---
+<p>
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Templates" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:RDF_Datasources">次のページ  »</a></p>
+</div>
+<p>このセクションでは、テンプレートからツリーを生成する方法について説明します。
+</p><p><span id="Adding_Datasources_to_Trees"></span>
+</p>
+<h3 id=".E3.83.84.E3.83.AA.E3.83.BC.E3.81.AB.E3.83.87.E3.83.BC.E3.82.BF.E3.82.BD.E3.83.BC.E3.82.B9.E3.82.92.E8.A8.AD.E5.AE.9A.E3.81.99.E3.82.8B" name=".E3.83.84.E3.83.AA.E3.83.BC.E3.81.AB.E3.83.87.E3.83.BC.E3.82.BF.E3.82.BD.E3.83.BC.E3.82.B9.E3.82.92.E8.A8.AD.E5.AE.9A.E3.81.99.E3.82.8B"> ツリーにデータソースを設定する </h3>
+<p>ツリーを利用する場合、多量の階層データを取り扱うために、しばしばテンプレートを使用してコンテントをビルドすることになると思います。
+テンプレートをツリーに対して使用するときも、構文についてはそれ以外の要素の場合とほとんど同じです。
+つまり、データソースを指定する <code><code id="a-datasources"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/datasources">datasources</a></code></code> 属性と、
+表示するルートノードを指定する <code><code id="a-ref"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/ref">ref</a></code></code> 属性を、
+<code><code><a href="/ja/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code></code> 要素に設定する必要があります。
+また、種類の異なるデータに対して異なったコンテントを生成する必要があるときには、複数のルールを設定することも可能です。
+</p><p>以下に、ツリーのために履歴データソースを使用する例を示します。
+</p>
+<pre>&lt;tree datasources="rdf:history" ref="NC:HistoryByDate"
+          flags="dont-build-content"&gt;
+</pre>
+<p>前のセクションで説明したように、ツリーをテンプレートから生成するためには、おおむね通常のコンテントビルダーではなく、ツリービルダーの方が利用されます。
+言い換えれば、ツリーの行ごとに要素を生成するのではなく、もっと効率のよい方法が利用されているということです。
+上記の例のように、<code><code id="a-flags"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flags">flags</a></code></code> 属性に <code>dont-build-content</code> を値として設定することでツリービルダーの使用を指示します。
+この属性を削除した場合は、コンテントビルダーが使用されることになります。
+なお、Mozilla の DOM インスペクタを使用して、フラグの有るツリーと無いツリーを比較することによって、相違点を確認することが可能です。
+</p><p>また、コンテントビルダーの方を利用する場合は、通常、コンテントは実際に必要になるまでビルドされないことに注意してください。
+つまり、階層ツリーのときは、利用者が親項目を開くまで子項目は生成されません。
+</p><p>テンプレートでは、ツリーの各列に対し treecell 要素が存在することになります。 各セルに対しラベルを設定するために、セルは label 属性を持つ必要があります。
+これには通常、ラベルをデータソースから取得するために、 RDF プロパティを設定することになるでしょう。
+</p><p><span id="Template-built_Tree_Example"></span>
+</p>
+<h4 id=".E3.83.86.E3.83.B3.E3.83.97.E3.83.AC.E3.83.BC.E3.83.88.E3.81.8B.E3.82.89.E7.94.9F.E6.88.90.E3.81.97.E3.81.9F.E3.83.84.E3.83.AA.E3.83.BC.E3.81.AE.E4.BE.8B" name=".E3.83.86.E3.83.B3.E3.83.97.E3.83.AC.E3.83.BC.E3.83.88.E3.81.8B.E3.82.89.E7.94.9F.E6.88.90.E3.81.97.E3.81.9F.E3.83.84.E3.83.AA.E3.83.BC.E3.81.AE.E4.BE.8B"> テンプレートから生成したツリーの例 </h4>
+<p>以下の例は、テンプレートから生成したツリーを示しています。
+表示データとしては、ファイルシステムを利用します。
+</p><p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_treetempl_1.xul.txt">ソース</a>
+</p>
+<pre>&lt;tree id="my-tree" flex="1"
+       datasources="rdf:files" ref="file:///" flags="dont-build-content"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="Name" label="Name" primary="true" flex="1"/&gt;
+    &lt;splitter/&gt;
+    &lt;treecol id="Date" label="Date" flex="1"/&gt;
+  &lt;/treecols&gt;
+
+    &lt;template&gt;
+      &lt;rule&gt;
+        &lt;treechildren&gt;
+          &lt;treeitem uri="rdf:*"&gt;
+            &lt;treerow&gt;
+              &lt;treecell label="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+              &lt;treecell label="rdf:http://home.netscape.com/WEB-rdf#LastModifiedDate"/&gt;
+            &lt;/treerow&gt;
+          &lt;/treeitem&gt;
+        &lt;/treechildren&gt;
+      &lt;/rule&gt;
+    &lt;/template&gt;
+&lt;/tree&gt;
+</pre>
+<p>これにより、ファイル名と更新日の 2 列からなるツリーが生成されます。
+このツリーには、ルートディレクトリにあるファイルの一覧が表示されているはずです。
+今回、ルールは 1 つしか使用していませんが、必要であれば追加しても構いません。
+また、要素の <code>uri</code> 属性は、他のテンプレートの場合と同様に、コンテント生成の起点を示しています。
+行の中に置かれる 2 つのセルは、データソースから名前と日付を受け取り、その値をセルのラベルに設定します。
+</p><p>また、この例からは、テンプレートで <code>uri</code> 属性により生成の起点を指定することの使い勝手の良さも確認することができます。
+まず、この例では、<code>uri</code> 属性が <code><code><a href="/ja/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></code> 要素に設定されていますが、
+この要素は <code>rule</code> 要素の直接の子要素ではないことに注目してください。
+<code>uri</code> 属性は、各リソースごとに繰り返し生成させたい要素に対してのみ設定する必要があるので、
+複数生成する必要のない <code><code><a href="/ja/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code></code> 要素には設定せず、
+<code><code><a href="/ja/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></code> 要素に設定しています。
+つまり、<code><code id="a-uri"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/uri">uri</a></code></code> 属性が設定された要素の外側 (あるいは上位) の要素は複製されず、
+<code><code id="a-uri"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/uri">uri</a></code></code> 属性が設定された要素とその内側の要素が各リソースごとに複製されることになります。
+</p><p>なお、コンテントビルダーではなくツリービルダーを利用する場合、
+テンプレート中の要素は、上記の例で示したような、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code></code> 要素をルールの中に置く構造でなければなりません。
+ツリービルダーは、テンプレート中の要素を実際にはビルドしませんが、生成するべき内容を正しく認識させるために、テンプレートの中をこの構造にしておく必要があります。
+</p>
+<div class="float-right"><img alt="画像:rdfoutl1.jpg"></div>
+<p>画像から、トップレベルの要素の下に、自動的に入れ子の要素が付加されていることが確認できます。
+XUL には、テンプレートやルールにツリー関連の要素やメニュー関連の要素が含まれているときに、自動的に入れ子の要素を追加する機能が実装されています。
+このため、ツリー関連の要素は、RDF データが入れ子の構造を持ってさえいれば、
+それに基づいて必要なだけ入れ子で生成されます。
+</p><p>このときの RDF データソースの興味深い挙動のひとつとして、
+リソースの値は「必要になったときに必要な範囲だけが確定される」ということがあります。
+つまり、リソース階層の深い位置にある値は、利用者が下位の階層を表示させるツリー操作を行い、実際にそのノードを表示させるまで値は確定されません。
+これは、特にデータが動的に変化する種類のデータソースで有効に作用します。
+</p><p><span id="Sorting_Columns"></span>
+</p>
+<h3 id=".E5.88.97.E3.81.AE.E3.82.BD.E3.83.BC.E3.83.88" name=".E5.88.97.E3.81.AE.E3.82.BD.E3.83.BC.E3.83.88"> 列のソート </h3>
+<p>先述の例を実際に動作させたとき、ファイルがソートされていないことが気になるかもしれません。
+ツリーをデータソースから生成する場合は、オプションでデータをソートさせることが可能です。
+このとき、ツリーの任意の列をキーにして、昇順にも降順にもソートできます。
+また、利用者が列の見出しをクリックすることで、ソートする列を選択したり、ソートの方向 (昇順 / 降順) の切り替えを行うことも可能です。
+このソート機能は、静的コンテントから生成されたツリーにはありません。
+(静的コンテントの場合もデータをソートするスクリプトを作成することは可能です)。
+</p><p>ソート処理は、列 (<code>treecol</code>) に設定する必要がある 3 つの属性によって指定します。
+最初の <code>sort</code> 属性には、ソートキーとして利用するための RDF プロパティを設定する必要があります。
+通常、ここには、その列のセルのラベルに設定するものと同じ値を設定します。
+この属性を列に設定することで、その列のデータはソートされ、
+利用者が列の見出しをクリックしてソート方向を切り替えられる様になります。
+<code>sort</code> 属性の指定を取り除いた場合には、その列でデータをソートすることはできなくなります。
+</p><p>次の <code>sortDirection</code> 属性 (大文字が混ざっていることに注意) は、列のデフォルトのソート方向を指定するために使用します。
+ここには、以下の 3 つの値が指定可能です。
+</p>
+<dl><dt> ascending </dt><dd> データは昇順で表示されます。
+</dd><dt> descending </dt><dd> データは降順で表示されます。
+</dd><dt> natural </dt><dd> データはそのままの順で表示されます。つまり、 RDF データソースに格納されている順番で表示されます。
+</dd></dl>
+<p>最後の <code>sortActive</code> 属性は、デフォルトでソートする列に対して、<code>true</code> を値にして設定します。
+</p><p>ソート処理は上記の属性のみで正しく機能しますが、加えて、ソート可能な列には、スタイルクラス (<code>class</code> 属性) に <code>sortDirectionIndicator</code> を設定することも可能です。
+これによって、列の見出しにソート方向を示す小さな三角形が表示されるようになります。
+これを設定しない場合も、利用者が列をソートすることは可能ですが、どの列でソートされているかの表示がされなくなってしまいます。
+</p><p>以下に、前例の列の部分に上記の追加設定を加えたものを示します。
+</p>
+<pre>&lt;treecols&gt;
+  &lt;treecol id="Name" label="Name" flex="1" primary="true"
+            class="sortDirectionIndicator" sortActive="true"
+            sortDirection="ascending"
+            sort="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+  &lt;splitter/&gt;
+  &lt;treecol id="Date" label="Date" flex="1" class="sortDirectionIndicator"
+           sort="rdf:http://home.netscape.com/WEB-rdf#LastModifiedDate"/&gt;
+&lt;/treecols&gt;
+</pre>
+<p><span id="Persisting_Column_State"></span>
+</p>
+<h3 id=".E5.88.97.E3.81.AE.E7.8A.B6.E6.85.8B.E3.82.92.E4.BF.9D.E5.AD.98.E3.81.99.E3.82.8B" name=".E5.88.97.E3.81.AE.E7.8A.B6.E6.85.8B.E3.82.92.E4.BF.9D.E5.AD.98.E3.81.99.E3.82.8B"> 列の状態を保存する </h3>
+<p>現在どの列でソートされているかをセッション間で保存して、設定内容が<span style="border-bottom: 1px dashed green;" title="persist">持続する</span>ようにしたい場合があると思います。
+このためには、<code><code id="a-persist"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/persist">persist</a></code></code> 属性を、各 <code><code><a href="/ja/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code></code> 要素に対して設定します。
+設定を持続させるためには、<code>treecol</code> 要素が持つ、
+「列の幅 (<span style="color: green;">width</span>)」「列の並び順 (<span style="color: green;">ordinal</span>)」「列が可視であるか (<span style="color: green;">hidden</span>)」「現在ソートのために使用されている列 (<span style="color: green;">sortActive</span>)」「列のソート方向 (<span style="color: green;">sortDirection</span>)」
+の 5 つの属性を保存する必要があります。
+以下に、列に対してこれらを設定した例を示します。
+</p>
+<pre>&lt;treecol id="Date" label="Date" flex="1"
+             class="sortDirectionIndicator"
+             persist="width ordinal hidden sortActive sortDirection"
+             sort="rdf:http://home.netscape.com/WEB-rdf#LastModifiedDate"/&gt;
+</pre>
+<p>なお、<code><code id="a-persist"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/persist">persist</a></code></code> 属性についての詳細は、<a href="ja/XUL_Tutorial/Persistent_Data">後のセクション</a>で説明する予定です。
+</p><p><span id="Additional_Rule_Attributes"></span>
+</p>
+<h3 id=".E3.83.84.E3.83.AA.E3.83.BC.E3.81.AE.E3.81.9F.E3.82.81.E3.81.AE.E3.83.AB.E3.83.BC.E3.83.AB.E5.B1.9E.E6.80.A7" name=".E3.83.84.E3.83.AA.E3.83.BC.E3.81.AE.E3.81.9F.E3.82.81.E3.81.AE.E3.83.AB.E3.83.BC.E3.83.AB.E5.B1.9E.E6.80.A7"> ツリーのためのルール属性 </h3>
+<p>また、<code>rule</code> 要素に対して、ツリー固有の特殊な条件にマッチさせるために使用可能な 2 つの属性があります。
+</p>
+<dl><dt> iscontainer
+</dt><dd> この属性を値 <code>true</code> で設定した場合、ルールは子を持つことができるすべてのリソースにマッチします。例えば、このルールをブックマークフォルダにマッチさせるために使用することが可能です。これにより、 RDF データソース側にコンテナであることを示すための専用の属性を含めておく必要が無くなります。
+</dd><dt> isempty
+</dt><dd> この属性を値 <code>true</code> で設定した場合、ルールは子を持たないすべてのリソースにマッチすることになります。
+</dd></dl>
+<p>リソースは、コンテナである場合にも空であることもあります。
+この場合、リソースが空であることは、コンテナではないことを意味しません。
+例えば、ブックマークフォルダはコンテナですが、子を持つことも持たないこともあります。
+といっても、単一のブックマークやセパレータがコンテナになることはありません。
+</p><p>これらの属性を他の属性と組み合わせることで、より細かい条件にマッチするルールを作成することが可能です。
+</p><p>次のセクションでは、Mozilla が提供するデータソースについて、いくつかを見ていきます。
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Templates" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:RDF_Datasources">次のページ  »</a></p>
+</div>
+<p><br>
+</p>
+<div class="noinclude">
+</div>

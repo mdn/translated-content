@@ -1,0 +1,22 @@
+---
+title: ページ内の要素を再配置する
+slug: Tools/Page_Inspector/How_to/Reposition_elements_in_the_page
+translation_of: Tools/Page_Inspector/How_to/Reposition_elements_in_the_page
+---
+<div>{{ToolsSidebar}}</div><div class="geckoVersionNote">Firefox 48 の新機能</div>
+
+<p>Firefox 48 より、絶対的に配置されている要素をページ上でドラッグして移動できるようになりました。</p>
+
+<p>{{EmbedYouTube("Or5HM1FFhvE")}}</p>
+
+<p><code>{{cssxref("position")}}</code> プロパティが <code>absolute</code>、<code>relative</code> または <code>fixed</code> に設定されており、また {{cssxref("top")}}、{{cssxref("bottom")}}、{{cssxref("left")}}、{{cssxref("right")}} プロパティのいずれかが指定されていると、<a href="/ja/docs/Tools/Page_Inspector/UI_Tour#Computed_view">ボックスモデルビュー</a> にボタンを表示します:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14245/box-model-reposition.png" style="display: block; height: 472px; margin-left: auto; margin-right: auto; width: 610px;"></p>
+
+<p>ボタンをクリックすると、要素の隣にハンドルを 2 つ表示します:</p>
+
+<p><img alt="Example for changing the position of an element within the content" src="https://mdn.mozillademos.org/files/12986/in-content-box-model-editing.png" style="display: block; height: 215px; margin-left: auto; margin-right: auto; width: 388px;"></p>
+
+<p>このハンドルを使用して、ページ内で要素を移動できます。</p>
+
+<p>要素が絶対配置されている場合は、オフセット元を表す波線を表示します。相対配置の要素では、ノードの元の位置を波線で示します。オフセット量は、それぞれの方向について線とツールチップで示します。</p>

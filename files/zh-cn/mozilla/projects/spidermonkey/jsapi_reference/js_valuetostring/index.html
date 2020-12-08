@@ -1,0 +1,45 @@
+---
+title: SpiderMonkey/JSAPI_参考/JS_ValueToString
+slug: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_ValueToString
+translation_of: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_ValueToString
+---
+<p>把一个<code>jsval值</code> 转换成一个 <code>JSString</code>.</p>
+
+<p> </p>
+
+<h2 id="Syntax" name="Syntax">语法</h2>
+
+<pre class="eval"><a href="/en/SpiderMonkey/JSAPI_Reference/JSString" title="en/JSString">JSString</a> * <strong>JS_ValueToString</strong>(<a href="/en/SpiderMonkey/JSAPI_Reference/JSRuntime" title="en/JSRuntime">JSContext</a> *cx, <a href="/En/SpiderMonkey/JSAPI_Reference/Jsval" title="en/jsval">jsval</a> v);
+</pre>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Name</th>
+   <th>Type</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td><code>cx</code></td>
+   <td><code><a href="/en/SpiderMonkey/JSAPI_Reference/JSRuntime" title="en/JSRuntime">JSContext</a> *</code></td>
+   <td>The context in which to perform the conversion. {{ Jsapi-requires-request() }}</td>
+  </tr>
+  <tr>
+   <td><code>v</code></td>
+   <td><code><a href="/En/SpiderMonkey/JSAPI_Reference/Jsval" title="en/jsval">jsval</a></code></td>
+   <td>转换的jsval值.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Description" name="Description">描述</h2>
+
+<p><code>JS_ValueToString</code> converts a specified JS value, <code>v</code>, to a JS string. It implements the ToString operator specified in <span class="pl-s1"><span class="pl-s">ECMA 262-3 §</span></span>9. If <code>v</code> is an object, the actual conversion is performed by its <code><a href="/en/SpiderMonkey/JSAPI_Reference/JSObjectOps.defaultValue" title="en/JSObjectOps.defaultValue">JSClass.convert</a></code> callback, which may call the JavaScript methods <code>v.toString()</code> and/or <code>v.valueOf()</code>. On success, <code>JS_ValueToString</code> returns a pointer to a string. On error or exception, it returns <code>NULL</code>. This happens, for example, if <code>v</code> is an object and <code>v.toString()</code> throws an exception.</p>
+
+<p>The resulting <code>JSString</code> is subject to garbage collection unless you protect it using a local root, an object property, or the <code><a href="/en/SpiderMonkey/JSAPI_Reference/JS_AddRoot" title="en/JS_AddRoot">JS_AddRoot</a></code> function.</p>
+
+<h2 id="See_Also" name="See_Also">See Also</h2>
+
+<p>{{ LXRSearch("ident", "i", "JS_ValueToString") }}</p>
+
+<p><a href="/en/SpiderMonkey/JSAPI_Reference/JS_ConvertArguments" title="en/JS_ConvertArguments">JS_ConvertArguments</a>, <a href="/en/SpiderMonkey/JSAPI_Reference/JS_ConvertValue" title="en/JS_ConvertValue">JS_ConvertValue</a>, <a href="/en/SpiderMonkey/JSAPI_Reference/JS_GetTypeName" title="en/JS_GetTypeName">JS_GetTypeName</a>, <a href="/en/SpiderMonkey/JSAPI_Reference/JS_TypeOfValue" title="en/JS_TypeOfValue">JS_TypeOfValue</a>, <a href="/en/SpiderMonkey/JSAPI_Reference/JS_ValueToBoolean" title="en/JS_ValueToBoolean">JS_ValueToBoolean</a>, <a href="/en/SpiderMonkey/JSAPI_Reference/JS_ValueToFunction" title="en/JS_ValueToFunction">JS_ValueToFunction</a>, <a href="/en/SpiderMonkey/JSAPI_Reference/JS_ValueToInt32" title="en/JS_ValueToInt32">JS_ValueToInt32</a>, <a href="/en/SpiderMonkey/JSAPI_Reference/JS_ValueToNumber" title="en/JS_ValueToNumber">JS_ValueToNumber</a>, <a href="/en/SpiderMonkey/JSAPI_Reference/JS_ValueToObject" title="en/JS_ValueToObject">JS_ValueToObject</a></p>

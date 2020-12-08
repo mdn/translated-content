@@ -1,0 +1,135 @@
+---
+title: 安装
+slug: Mozilla/Add-ons/SDK/Tutorials/Installation
+tags:
+  - cfx安装
+  - 配置cfx环境
+translation_of: Mozilla/Add-ons/SDK/Tools/jpm#Installation
+---
+<h2 id="先决条件">先决条件</h2>
+
+<p><span style="color: #ff0000;">请不要把任何相关的开发工具和扩展程序（命名推荐小写英文和数字，不推荐特殊符号等），放到有空格的目录(如Progaram Files\Python)，会导致意想不到的错误，无法进行后续操作。(最新开发SDK可能修复了该错误，参见https://github.com/mozilla/addon-sdk/pull/1738)</span></p>
+
+<p>开发 Add-on SDK，你需要：</p>
+
+<ul>
+ <li>
+  <p><a href="http://www.python.org/">Python</a> 2.5，2.6 或 2.7。 <span class="short_text" id="result_box" lang="zh-CN"><span>需要注意的是在任何平台<span class="short_text" id="result_box" lang="zh-CN"><span>都是不支持</span></span></span></span> <span class="short_text" id="result_box" lang="zh-CN"><span>Python</span><span>3.x版本的</span></span> 。确保你已经安装过Python。</p>
+ </li>
+ <li>
+  <p>Firefox火狐浏览器(本教程针对最新的浏览器)。</p>
+ </li>
+ <li>
+  <p><span class="short_text" id="result_box" lang="zh-CN"><span>SDK本身</span><span>：</span><span>可以获取</span><span>SDK的最新</span><span>稳定版本</span><span>为</span></span> <a href="https://ftp.mozilla.org/pub/mozilla.org/labs/jetpack/jetpack-sdk-latest.tar.gz">tarball压缩包</a> 或 <a href="https://ftp.mozilla.org/pub/mozilla.org/labs/jetpack/jetpack-sdk-latest.zip">zip 文件</a>。</p>
+ </li>
+</ul>
+
+<p>另外，<span class="short_text" id="result_box" lang="zh-CN"><span>你</span><span>可以从它</span><span>的<a href="https://github.com/mozilla/addon-sdk">GitHub repository</a></span><span>库中</span><span>得到最新的</span><span>开发版本</span></span>。</p>
+
+<h2 id="为AMO开发扩展">为AMO开发扩展</h2>
+
+<p>如果提交到AMO只有最新发布或许使用。</p>
+
+<p class="ordinary-output target-output"><span>git</span><span> archive </span><span>需要扩展</span><span>一些Git</span><span>属性</span><span>占位符</span><span>。</span></p>
+
+<pre class="language-html">git checkout 1.16
+
+git archive 1.16 python-lib/cuddlefish/_version.py | tar -xvf -</pre>
+
+<h2 id="通过Homebrew自动安装到Mac_OS_X">通过Homebrew自动安装到Mac OS X</h2>
+
+<p><span class="short_text" id="result_box" lang="zh-CN"><span>使用以下命令</span><span>通过</span></span> <a href="http://brew.sh/">homebrew</a><span class="short_text" id="result_box" lang="zh-CN"><span>来安装</span><span>SDK<span class="short_text" id="result_box" lang="zh-CN"><span><span class="short_text" id="result_box" lang="zh-CN"><span>插件</span></span></span></span>工具：</span></span></p>
+
+<pre>brew install mozilla-addon-sdk</pre>
+
+<h2 id="安装到Mac_OS_XLinux">安装到Mac OS X/Linux</h2>
+
+<p><span class="short_text" id="result_box" lang="zh-CN"><span><span class="short_text" id="result_box" lang="zh-CN"><span>无论你</span><span>选择哪个方式都要</span></span>解压缩</span><span>文件的内容</span><span>作为根路径，</span><span>并通过</span><span>shell</span><span>/</span><span>命令提示符切换到</span><span>SDK的</span><span>根目录下</span><span>。</span><span>例如：</span></span></p>
+
+<pre>tar -xf addon-sdk.tar.gz
+cd addon-sdk
+</pre>
+
+<p>如果你是<span class="short_text" id="result_box" lang="zh-CN"><span>Bash的</span><span>用户，则继续运行</span></span>(大多数人都是的)：</p>
+
+<pre>source bin/activate
+</pre>
+
+<p><span class="short_text" id="result_box" lang="zh-CN"><span>如果你是</span><span>一个非</span><span>Bash的</span><span>用户</span><span>，</span><span>你应该运行</span><span>：</span></span></p>
+
+<pre>bash bin/activate
+</pre>
+
+<p><span class="short_text" id="result_box" lang="zh-CN"><span>命令提示符</span><span>现在应该</span><span>有一个包含</span><span>SDK的</span><span>根</span><span>目录名称</span><span>的新的前缀</span><span>：</span></span></p>
+
+<pre>(addon-sdk)~/mozilla/addon-sdk &gt;
+</pre>
+
+<h2 id="安装到Windows">安装到Windows</h2>
+
+<p>同样解压缩文件，并通过命令符进入到SDK根目录下，例如：</p>
+
+<pre>7z.exe x addon-sdk.zip
+cd addon-sdk
+</pre>
+
+<p>接着运行激活命令：</p>
+
+<pre>bin\activate
+</pre>
+
+<p><span class="short_text" id="result_box" lang="zh-CN"><span>同样可以看到命令提示符</span><span>现在应该</span><span>有一个包含</span><span>SDK的</span><span>根</span><span>目录名称</span><span>的<span class="short_text" id="result_box" lang="zh-CN"><span>新的</span></span>前缀</span><span>：</span></span></p>
+
+<pre>(C:\Users\mozilla\sdk\addon-sdk) C:\Users\Work\sdk\addon-sdk&gt;
+</pre>
+
+<h2 id="SDK_的虚拟环境">SDK 的虚拟环境</h2>
+
+<p><span id="result_box" lang="zh-CN"><span><span id="result_box" lang="zh-CN"><span>当命令</span><span>提示符</span></span>出现新的</span><span>前缀</span><span>表明</span><span>你的</span><span>已经搭建好了SDK的</span><span>运行环境</span><span>，那么你就可以使用</span><span>Add</span><span class="atn">-</span><span>on SDK来开发</span><span>的</span><span>命令行工具</span><span>。</span></span></p>
+
+<p>任何时候，你都可以通过运行 <code>deactivate 命令停用虚拟环境</code>.</p>
+
+<p class="ordinary-output target-output"><span>配置好的虚拟环境是特定于这个特定的命令提示符。</span><span>如果您关闭命令提示符， 它会关闭运行环境，你需要<code>source bin/activate</code>或<code> bin\activate 在</code>一个新的命令提示符重新激活它。</span><span>如果你</span><span>打开一个新命令提示符</span><span>，</span><span id="result_box" lang="zh-CN"><span>SDK将</span><span>不会被激活</span><span>在新的提示</span></span><span>。</span></p>
+
+<p><span id="result_box" lang="zh-CN"><span>可以</span><span>将SDK</span><span>的多个副本</span><span>拷贝在</span><span>磁盘上的</span><span>不同位置</span><span>，并</span><span>在它们之间切换</span><span>，甚至可以</span><span>让他们<span id="result_box" lang="zh-CN"><span>同时</span><span>激活</span></span>运行在</span><span>不同的命令</span><span>提示</span><span>符</span><span>。</span></span></p>
+
+<h3 id="制作启动项">制作启动项</h3>
+
+<p><span id="result_box" lang="zh-CN"><span>所有 </span><code>activate </code><span>的作用是通过设置环境变量，<span id="result_box" lang="zh-CN"><span>使位于</span><span>顶层</span><code> bin </code><span>目录下</span><span>的脚本</span></span></span><span> </span><span>位于当前命令符下</span><span>，制作的启动项 ，</span><span>通过永久</span><span>环境中的这些</span><span>变量</span><span>设置，以便</span><span>每一个新的</span><span>命令提示符下</span><span>都能读取它们</span><span>。</span><span>那么</span><span>就不需要每次都去打开新的命令提示符来激活</span><span><code> activate </code>。</span></span></p>
+
+<p class="ordinary-output target-output"><span>因为变量精确设置可能随SDK发布新版本的变化，所以最好是指激活脚本来确定哪些变量需要设置。</span><span>激活</span><span>使用不同的</span><span>脚本</span><span>设置</span><span>bash</span><span>环境</span><span>不同的变量</span><span>（</span><span>Linux</span><span>和</span><span>MAC</span><span> OS X</span><span>和Windows</span><span>环境</span><span>）</span><span>。</span></p>
+
+<h4 id="Windows">Windows</h4>
+
+<p><span id="result_box" lang="zh-CN"><span>在Windows上，</span><span>使用</span><span> <code>bin\activate\</code><code>activate.bat</code></span><span>批处理脚本，也可以</span><span>使用命令行</span><code>setx</code><span>工具或</span><span>控制面板</span><span>激活</span><span>永久</span><span>使用</span><span>。</span></span></p>
+
+<h4 id="LinuxMac_OS_X">Linux/Mac OS X</h4>
+
+<p>在 Linux 和 Mac OS X,<span id="result_box" lang="zh-CN"><span>使用</span></span><code>source bin/activate</code>/<code>activate</code> bash 脚本, 你可以 <code>~/.bashrc</code> ( Linux) <code>或~/.bashprofile</code> (Mac OS X) 来激活。</p>
+
+<p><span class="short_text" id="result_box" lang="zh-CN"><span>作为替代</span><span>，你</span><span>可以在</span><code> ~/bin </code><span class="hps">目录中</span><span>创建到</span><span>cfx </span><span>程序</span><span>的符号链接</span><span>：</span></span></p>
+
+<pre>ln -s PATH_TO_SDK/bin/cfx ~/bin/cfx
+</pre>
+
+<h2 id="完整性检查"><span class="short_text" id="result_box" lang="zh-CN"><span>完整性检查</span></span></h2>
+
+<p><span class="short_text" id="result_box" lang="zh-CN"><span>在shell提示符</span></span>运行:</p>
+
+<pre>cfx
+</pre>
+
+<p>它会产生下面信息，这里是第一行内容，后面<span>是</span><span>大量的</span><span>使用信息</span><span>：</span></p>
+
+<pre>Usage: cfx [options] [command]
+</pre>
+
+<p><span id="result_box" lang="zh-CN"><span>这是</span></span> <a href="/en-US/Add-ons/SDK/Tools/cfx"><span id="result_box" lang="zh-CN"><span>CFX</span><span>命令行程序</span></span></a>， <span id="result_box" lang="zh-CN"><span>是</span><span>主</span><span>界面</span><span>加载项</span><span>的SDK</span></span>，<span id="result_box" lang="zh-CN"><span>可以使用</span><span>它来</span><span>启动Firefox</span><span>和测试</span><span>插件，</span><span>打包</span><span>附加</span><span>分发</span><span>，查看</span><span>​​文档和</span><span>运行单元测试</span><span>。</span></span></p>
+
+<h2 id="出现问题">出现问题?</h2>
+
+<p>尝试通过<a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/SDK/Tutorials/Troubleshooting">故障排除页面</a>来解决遇到的问题。</p>
+
+<h2 id="下一步">下一步</h2>
+
+<p>接下来， 开始学习 <a href="/en-US/Add-ons/SDK/Tutorials/Getting_Started_With_cfx">cfx</a> 教程， <span class="short_text" id="result_box" lang="zh-CN"><span>其中</span><span>介绍了如何</span><span>使用</span><span>CFX的</span><span>工具来创建</span><span>附加组件</span><span>。</span></span></p>

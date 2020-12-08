@@ -1,0 +1,95 @@
+---
+title: Fonts for Mozilla's MathML engine
+slug: Mozilla_MathML_Project/Fonts
+translation_of: Mozilla/MathML_Project/Fonts
+---
+<div class="note">These instructions are for Gecko 31.0 {{GeckoRelease("31.0")}} and higher. For former versions see<a href="/en/Mozilla/MathML_Project/FontsMozilla1.8" title="en/Mozilla MathML Project/FontsMozilla1.8"> Fonts for Mozilla 1.8</a>, <a href="/en/Mozilla/MathML_Project/Fonts_for_Mozilla_1.9's_MathML_engine" title="en/Mozilla_MathML_Project/FontsMozilla1.9">Fonts for Mozilla 1.9</a> or <a href="/en/Mozilla/MathML_Project/FontsMozilla2.0" title="en/Mozilla MathML Project/FontsMozilla1.8">Fonts for Mozilla 2.0</a>.</div>
+
+<h2 id="安装说明">安装说明</h2>
+
+<h3 id="重置旧的安装程序">重置旧的安装程序</h3>
+
+<p>如果你已经安装过MathML之前的版本Gecko的字体，最好重新设定你的安装程序：</p>
+
+<ul>
+ <li><a href="http://www.stixfonts.org/">STIX 组合</a> 提供了 <a href="http://sourceforge.net/projects/stixfonts/files/Current%20Release/">several sets to use in various situations</a> ; 现在推荐的是 <em>STIX Word</em> (<code>STIX-Regular.otf</code>, <code>STIX-Bold.otf</code>, <code>STIX-BoldItalic.otf</code> and more importantly <code>STIX-Math.otf</code>) ，而the <em>STIX General</em> set (about 30 files) 现在不推崇. 类似的, <em>MathJax TeX</em> fonts 现在不推荐，以支持能够提供受欢迎的<a href="https://en.wikipedia.org/wiki/Computer_Modern">Computer Modern</a>样式的<em>Latin Modern Math</em> font . 如果你不需要为了其他的应用程序而使用<em>STIX General</em> or <em>MathJax TeX </em>, 你就可以卸载他们了. 当然, 你也可以仍然使用他们，但是要知道在将来，我们不在计划给这些字体提供支持了.</li>
+ <li>如果你已经使用Windows installer安装了MathML fonts package, 你可以卸载他 (他会自己移除<em>STIX General</em>, <em>MathJax TeX</em> and <em>Asana Math</em> fonts).</li>
+ <li>如果你已经安装了<a href="https://addons.mozilla.org/en-US/firefox/addon/mathml-fonts/">MathML fonts add-on</a>, 你可以将他升级至 &gt;= 2.1，这样就可使用新的 <em>XITS Math</em> and <em>Latin Modern Math</em> fonts. 如果他不是必要的，根据说明下载它是一个比较好的主意。</li>
+ <li>如果你之前已经改变了<code>font.mathfont-family</code>的引用, 最好是重新设定为默认值. 为了做到这点, enter the URL <code>about:config</code>, filter for <code>mathfont</code>, 通过the context menu on the preference就可以重新设定为默认值了.</li>
+</ul>
+
+<h3 id="Windows">Windows</h3>
+
+<p>On Windows 7 and higher, <em>Cambria Math</em> is installed by default and will be used for the MathML rendering so you do not have anything to do. If you are using Windows XP, you can obtain the Cambria Math font by installing Microsoft Office 2007+, Microsoft’s <a class="ref" href="http://www.microsoft.com/en-us/download/details.aspx?id=13" title="">PowerPoint Viewer</a>, or Microsoft’s <a class="ref" href="http://www.microsoft.com/en-us/download/details.aspx?id=3" title="">Office Compatibility Pack</a>. Otherwise you can install any <a href="#MATH_fonts">fonts with a MATH table</a> (<a href="http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/windows_fonts_addnew.mspx?mfr=true">follow Microsoft's instruction for Windows XP</a>) and they may also be included in TeX distributions such as <a href="https://www.tug.org/texlive/">TeX Live</a> or <a href="http://www.miktex.org/">MikTeX</a>.</p>
+
+<p><u>Warning:</u> Some fonts and some version of Windows are affected by <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1014498">rendering bug</a> causing too much space above and below the lines of text in some MATH fonts.</p>
+
+<h3 id="Mac">Mac</h3>
+
+<p>On Mac, you must install any of the <a href="#MATH_fonts">fonts with a MATH table</a>. For example, you can <a href="https://www.macports.org/install.php">install MacPorts</a> and <a href="https://trac.macports.org/wiki/TeXLivePackages#texlive-fonts-recommended">its texlive-fonts-recommended package</a> (Latin Modern Math and TeX Gyre). An enhancement request has been submitted to Apple to make a MATH font installed by default (<span class="probNo" id="displayFullDetailsProblemID">problem </span><span class="probNo" id="displayFullDetailsProblemID">16841023</span> for STIX and<span class="probNo" id="displayFullDetailsProblemID">17021145 </span>for Latin Modern).</p>
+
+<h3 id="Linux">Linux</h3>
+
+<p>On Linux, you must install any of the <a href="#MATH_fonts">fonts with a MATH table</a>. They are generally available from the package manager of many distributions, for example:</p>
+
+<ul>
+ <li>Debian/Ubuntu/Mint and other Debian-based distributions: <code>fonts-lmodern</code> (Latin Modern Math), <code>fonts-texgyre</code> (TeX Gyre Math), <code>oflb-asana-math-fonts</code> (Asana Math), <code>texlive-fonts-extra</code> (XITS). Note that the <code>fonts-stix</code> package in Debian stable (Wheezy) does not contain STIX Math yet, use XITS instead.</li>
+ <li>On Fedora: <code>texlive-lm-math</code> (Latin Modern Math), <code>texlive-tex-gyre-math</code> (TeX Gyre Fonts), <code>texlive-asana-math/oflb-asana-math-fonts</code> (Asana Math) or <code>stix-math-fonts</code> (STIX Math).</li>
+ <li>On openSUSE: <code>texlive-lm-math/ctan-latinmodern-fonts</code> (Latin Modern Math), <code>texlive-tex-gyre-math</code> (TeX Gyre Fonts), <code>texlive-Asana-Math</code> (Asana Math), <code>texlive-xits </code>(XITS Math) or <code>stix-fonts</code> (STIX Math).</li>
+ <li>On ArchLinux: <code>texlive-core</code> (Latin Modern Math, TeX Gyre Math), <code>texlive-fontsextra</code> (XITS Math, STIX Math, Asana Math).</li>
+ <li>In general, a <code>texlive</code> package is likely to provide the appropriate dependencies.</li>
+</ul>
+
+<p>If you installed "vanilla" TeX Live you will need to inform your system of fonts provided by it:</p>
+
+<pre>$ mkdir ~/.fonts
+$ mdir ~/.fonts/OTF
+$ for f in $(find /path/to/your/texlive/texmf-dist/fonts/opentype/public/ -maxdepth 1 -mindepth 1); do ln -s $f ~/.fonts/OTF/; done
+# fc-cache ~/.fonts
+# mkfontscale ~/.fonts/OT
+# mkfontdir ~/.fonts/OTF
+</pre>
+
+<h3 id="Android">Android</h3>
+
+<p>You must use the <a href="https://addons.mozilla.org/firefox/addon/mathml-fonts/">MathML-fonts add-on</a>. An enhancement request has been submitted to Google to make a <a href="#MATH_fonts">MATH font</a> installed by default. See this <a href="https://github.com/fred-wang/android-latin-modern-math">GitHub repository</a>.</p>
+
+<h3 id="Firefox_OS">Firefox OS</h3>
+
+<p>You must use the <a href="https://addons.mozilla.org/firefox/addon/mathml-fonts/">MathML-fonts add-on</a>. We <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=775060">plan to bundle</a> a <a href="#MATH_fonts">MATH font</a> in the default installation. There are known bugs due to <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1002526">font-inflation</a>.</p>
+
+<h3 id="Other_systems">Other systems</h3>
+
+<p>On other systems, consider installing a <a href="#Math_fonts">MATH font</a> using your package manager Note that these fonts are generally delivered with TeX distributions such as <a href="https://www.tug.org/texlive/">TeX Live</a>, but you might need to follow specific instructions so that your system is aware of the fonts. As a last resort, install the <a href="https://addons.mozilla.org/firefox/addon/mathml-fonts/">MathML fonts add-on</a>.</p>
+
+<h3 id="Arabic_Mathematical_Alphabetic_Symbols">Arabic Mathematical Alphabetic Symbols</h3>
+
+<p>Currently, very few fonts have appropriate glyphs for the Arabic Mathematical Alphabetic Symbols. If you are likely to need these characters, we recommend to install the XITS or <a href="http://www.amirifont.org/">Amiri</a> fonts. A bug has been <a href="http://sourceforge.net/p/stixfonts/tracking/51/">reported to the STIX consortium</a> to add coverage for these characters.</p>
+
+<h2 id="Fonts_with_a_MATH_table"><a name="MATH_fonts"></a>Fonts with a MATH table</h2>
+
+<p>Gecko's MathML layout algorithm has long been based on some TeX rules and private per-font tables. Unfortunately, this did not always work well with the modern OpenType/TrueType Unicode fonts used by browsers and installed by default on various systems. If one of the few mathematical fonts supported by Gecko were not installed on the user system, then the MathML rendering could be very poor.</p>
+
+<p>Starting with Gecko 31, it is recommended to use OpenType fonts that have a MATH table. This table is based on the TeX rules and was designed by Microsoft for Microsoft Word, it has been implemented in many modern TeX typesetting systems and is currently being standardized in the <a href="http://mpeg.chiariglione.org/standards/mpeg-4/open-font-format/text-isoiec-cd-14496-22-3rd-edition">ISO/IEC CD 14496-22 "Open Font Format"</a> (see section 6.3.6). <strong>This is still a work-in-progress: there are known bugs in browsers &amp; fonts and the fonts are not installed by default on many operating systems</strong>, but you can already start using these mathematical fonts instead of the old ones. See the <a href="https://wiki.mozilla.org/MathML:Open_Type_MATH_Table">implementation status on the Mozila wiki</a>.</p>
+
+<p>Here is a list of known fonts with a MATH table. Firefox users can install the <a href="https://addons.mozilla.org/en-US/firefox/addon/mathml-font-settings/">MathML-fontsettings add-on</a> to configure which font to use to render mathematical formulas.</p>
+
+<ul>
+ <li><a href="http://www.ctan.org/tex-archive/fonts/Asana-Math/">Asana Math</a></li>
+ <li><a href="http://www.microsoft.com/typography/fonts/family.aspx?FID=360">Cambria Math</a></li>
+ <li><a href="http://www.gust.org.pl/projects/e-foundry/lm-math">Latin Modern Math</a></li>
+ <li><a href="https://github.com/khaledhosny/libertine-math">Linux Libertine</a> (not released yet)</li>
+ <li><a href="http://tug.org/store/lucida/opentype.html">Lucida Bright Math</a></li>
+ <li><a href="http://www.typoma.com/en/fonts.html">Minion Math</a></li>
+ <li><a href="https://github.com/khaledhosny/euler-otf/releases">Neo Euler</a> (not released yet)</li>
+ <li><a href="http://sourceforge.net/projects/stixfonts/files/Current%20Release/STIXv1.1.1-word.zip/download">STIX Math</a></li>
+ <li><a href="http://www.gust.org.pl/projects/e-foundry/tg-math/download/index_html#Bonum_Math">TeX Gyre Bonum Math</a></li>
+ <li><a href="http://www.gust.org.pl/projects/e-foundry/tg-math/download/index_html#Pagella_Math">TeX Gyre Pagella Math</a></li>
+ <li><a href="http://www.gust.org.pl/projects/e-foundry/tg-math/download/index_html#Schola_Math">TeX Gyre Schola Math</a></li>
+ <li><a href="http://www.gust.org.pl/projects/e-foundry/tg-math/download/index_html#Termes_Math">TeX Gyre Termes Math</a></li>
+ <li><a href="https://github.com/khaledhosny/xits-math/releases">XITS Math</a></li>
+</ul>
+
+<h2 id="Using_mathematical_fonts_on_Web_pages">Using mathematical fonts on Web pages</h2>
+
+<p>Starting with Gecko 31.0 {{GeckoRelease("31.0")}}, it is now easy to set up the CSS style (and optional WOFF fonts) to use on your Web site. See the <a href="/en-US/docs/Web/MathML/Authoring#Mathematical_fonts">Authoring MathML page</a> for details and try the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/MathML_Project/MathML_Torture_Test">MathML Torture Test</a>. You can use <a href="http://www.fontforge.org/math.html">FontForge</a> to edit the MATH table and create your own mathematical fonts.</p>

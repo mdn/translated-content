@@ -1,0 +1,60 @@
+---
+title: Héritage XBL
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Héritage_XBL
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XBL
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/XBL_Inheritance
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Ajout_de_gestionnaire_d'évènements" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Exemple_XBL">Suivant  »</a></p>
+</div>
+
+<p>Dans cette section, nous verrons comment étendre des définitions <a href="/fr/XBL" title="fr/XBL">XBL</a> existantes.</p>
+
+<h3 id="H.C3.A9ritage" name="H.C3.A9ritage">Héritage</h3>
+
+<p>Parfois vous pouvez vouloir créer un élément graphique XBL qui est similaire à un élément existant. Par exemple, disons que vous souhaitez créer un bouton XBL avec une fenêtre surgissante. Une manière de faire pour le créer est de dupliquer le code XBL existant des boutons. Cependant, il serait préférable de simplement étendre ce code.</p>
+
+<p>N'importe quelle liaison peut être étendue avec une autre. La liaison fille peut ajouter des propriétés, des méthodes et des gestionnaires d'événements. La liaison fille aura toutes les caractéristiques qui la définissent en plus des caractéristiques de la liaison dont elle hérite (et celles dont cette liaison aura elle même hérité et ainsi de suite dans l'arbre).</p>
+
+<p>Pour étendre une liaison existante, ajoutez un attribut <code>extends</code> à l'intérieur de la balise <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#binding">binding</a></code>. Par exemple, la liaison suivante crée un champ de saisie qui ajoute le texte '<span class="nowiki">http://www</span>' au début de sa valeur lorsque la touche F4 est pressée.</p>
+
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_xblinherit_1.xml.txt">Source</a></p>
+
+<pre>&lt;binding id="textboxwithhttp"
+         extends="chrome://global/content/bindings/textbox.xml#textbox"&gt;
+  &lt;handlers&gt;
+    &lt;handler event="keypress" keycode="VK_F4"&gt;
+      this.value="http://www"+value;
+    &lt;/handler&gt;
+  &lt;/handlers&gt;
+&lt;/binding&gt;
+</pre>
+
+<p>L'élément XBL étend ici les fonctionnalités du champ de saisie XUL <code><a href="/fr/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code>. L'URL donnée dans l'attribut <code>extends</code> ci-dessus est l'URL de la liaison de la balise <code><a href="/fr/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code>. Elle signifie que la liaison hérite de tous les contenu et comportement fournis par la liaison de <code>textbox</code>. En plus, nous ajoutons un gestionnaire qui répond à l'événement 'keypress'.</p>
+
+<h3 id="Champ_de_saisie_semi-automatique" name="Champ_de_saisie_semi-automatique">Champ de saisie semi-automatique</h3>
+
+<p>L'exemple ci-dessus est similaire au dispositif de saisie semi-automatique qui fonctionne sous Mozilla. Un champ de saisie qui supporte la saisie semi-automatique n'est qu'un champ de saisie basique étendu avec une liaison XBL.</p>
+
+<p>Le <a href="/fr/XUL/textbox_(autocomplétion_de_Firefox)" title="fr/XUL/textbox_(autocomplétion_de_Firefox)">champ de saisie semi-automatique</a> ajoute une gestion spéciale d'événement de telle sorte que lorsqu'une URL est tapée, un menu va surgir proposant des suites de saisies possibles. Vous pouvez aussi l'utiliser dans vos propres applications. Créez simplement un <code><a href="/fr/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code> avec deux attributs spéciaux.</p>
+
+<pre>&lt;textbox type="autocomplete" searchSessions="history"/&gt;</pre>
+
+<p>Déclarez l'attribut <code>type</code> à 'autocomplete' pour ajouter un dispositif de saisie semi-automatique à un champ de saisie existant. Déclarez <code>searchSessions</code> pour indiquer le type de données à surveiller. Dans ce cas, la valeur 'history' surveillant les URLs dans l'historique est utilisée (Vous pouvez aussi utiliser la valeur 'addrbook' pour surveiller les adresses dans le carnet d'adresses.)</p>
+
+<div class="note">Firefox utilise un mécanisme d'autocomplétion différent de celui de la suite Mozilla, consultez <a href="/fr/XUL/textbox_(autocomplétion_de_Firefox)" title="fr/XUL/textbox_(autocomplétion_de_Firefox)">XUL:textbox (autocomplétion de Firefox)</a>.</div>
+
+<hr>
+<p>Dans la prochaine section, nous verrons un exemple d'élément graphique défini en XBL.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Ajout_de_gestionnaire_d'évènements" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Exemple_XBL">Suivant  »</a></p>
+</div>
+
+<p><span class="comment">Interwiki</span></p>

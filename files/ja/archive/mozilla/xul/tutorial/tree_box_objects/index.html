@@ -1,0 +1,204 @@
+---
+title: ツリーボックスオブジェクト
+slug: Archive/Mozilla/XUL/Tutorial/Tree_Box_Objects
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Tree_Box_Objects
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Tree_View_Details" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Introduction_to_RDF">次のページ  »</a></p>
+</div>
+
+<p>このセクションでは、ツリーの描画方法を制御するために利用できる、ツリーボックスオブジェクトについて説明します。</p>
+
+<p><span id="About_the_Tree_Box_Object"></span></p>
+
+<h3 id=".E3.83.84.E3.83.AA.E3.83.BC.E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E3.81.AE.E6.A6.82.E8.A6.81" name=".E3.83.84.E3.83.AA.E3.83.BC.E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E3.81.AE.E6.A6.82.E8.A6.81">ツリーボックスオブジェクトの概要</h3>
+
+<p>ボックスオブジェクトについては、<a href="ja/XUL_Tutorial/Box_Objects">少し前のセクション</a>で既に説明しましたが、 ツリーボックスオブジェクトは、ツリーでの利用に特化した専用のボックスオブジェクトで、 <a class="external" href="http://www.xulplanet.com/references/objref/TreeBoxObject.html">TreeBoxObject</a> インターフェイスを実装しています。</p>
+
+<p><span id="Redrawing_the_Tree"></span></p>
+
+<h4 id=".E3.83.84.E3.83.AA.E3.83.BC.E3.81.AE.E5.86.8D.E6.8F.8F.E7.94.BB.E3.82.92.E8.A6.81.E6.B1.82.E3.81.99.E3.82.8B" name=".E3.83.84.E3.83.AA.E3.83.BC.E3.81.AE.E5.86.8D.E6.8F.8F.E7.94.BB.E3.82.92.E8.A6.81.E6.B1.82.E3.81.99.E3.82.8B">ツリーの再描画を要求する</h4>
+
+<p>ツリーボックスオブジェクトの <code>rowCountChanged()</code> 関数は、前のセクションで既に見ています。 この関数は、ツリーに対して 1 つ以上の行が、追加または削除されたことを通知するもので、 ツリーでは影響を受ける領域についての再描画を行うことになります。 しかし、単に 1 つの行が何らかの方法で変更された場合、 例えばセルのラベルが変更されたときなどであれば、<code>rowCountChanged()</code> 関数を呼び出す必要はありません。 こういった場合には、かわりに別のいくつかの描画関数を利用します。 最も簡単なのは、<code>invalidateRow()</code> を呼び出すことで、これはツリーの中の指定した行の再描画を要求します。 このとき、ツリーはビューから更新されたデータを取得して画面上のツリーの内容を更新することになります。</p>
+
+<p>また、それ以外の再描画関数としては以下があります。</p>
+
+<ul>
+ <li><code>invalidateCell()</code> は、1 つのセルのみの再描画を要求します。</li>
+ <li><code>invalidateColumn()</code> は、1 つの列の再描画を要求します。</li>
+ <li><code>invalidateRange()</code> は、指定範囲の行についての再描画を要求します。</li>
+ <li><code>invalidate()</code> は、ツリー全体に対する再描画を要求します。</li>
+</ul>
+
+<p>なお、Mozilla は再描画処理をバックグラウンドで平行して行うことはしないため、実際の再描画は呼び出したスクリプトが終了するまでは行われないことに注意してください。</p>
+
+<p><span id="Scrolling_the_Tree"></span></p>
+
+<h4 id=".E3.83.84.E3.83.AA.E3.83.BC.E3.82.92.E3.82.B9.E3.82.AF.E3.83.AD.E3.83.BC.E3.83.AB.E3.81.95.E3.81.9B.E3.82.8B" name=".E3.83.84.E3.83.AA.E3.83.BC.E3.82.92.E3.82.B9.E3.82.AF.E3.83.AD.E3.83.BC.E3.83.AB.E3.81.95.E3.81.9B.E3.82.8B">ツリーをスクロールさせる</h4>
+
+<p>ツリーボックスオブジェクトから、ツリーをスクロールさせることも可能です。 このためには、4 つのメソッドが利用でき、これらは <a href="ja/XUL_Tutorial/Manipulating_Lists#.E3.83.AA.E3.82.B9.E3.83.88.E3.81.AE.E3.82.B9.E3.82.AF.E3.83.AD.E3.83.BC.E3.83.AB">リストボックス</a>にあるものと類似しています。 まず、特定の行へスクロールさせるために <code>scrollToRow()</code> 関数が利用できます。 以下に、簡単な例を示します。</p>
+
+<p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_treeboxobject_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_treeboxobject_1.xul">表示</a></p>
+
+<pre>&lt;script&gt;
+function doScroll(){
+  var value = document.getElementById("tbox").value;
+  var tree = document.getElementById("thetree");
+
+  var boxobject = tree.boxObject;
+  boxobject.QueryInterface(Components.interfaces.nsITreeBoxObject);
+  boxobject.scrollToRow(value);
+}
+&lt;/script&gt;
+
+&lt;tree id="thetree" rows="4"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="row" label="Row" primary="true" flex="1"/&gt;
+  &lt;/treecols&gt;
+  &lt;treechildren&gt;
+    &lt;treeitem label="Row 0"/&gt;
+    &lt;treeitem label="Row 1"/&gt;
+    &lt;treeitem label="Row 2"/&gt;
+    &lt;treeitem label="Row 3"/&gt;
+    &lt;treeitem label="Row 4"/&gt;
+    &lt;treeitem label="Row 5"/&gt;
+    &lt;treeitem label="Row 6"/&gt;
+    &lt;treeitem label="Row 7"/&gt;
+    &lt;treeitem label="Row 8"/&gt;
+    &lt;treeitem label="Row 9"/&gt;
+  &lt;/treechildren&gt;
+&lt;/tree&gt;
+
+&lt;hbox align="center"&gt;
+  &lt;label value="Scroll to row:"/&gt;
+  &lt;textbox id="tbox"/&gt;
+  &lt;button label="Scroll" oncommand="doScroll();"/&gt;
+&lt;/hbox&gt;
+</pre>
+
+<p>この例では、スクロール動作を確認しやすいように、 <code><code><a href="/ja/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code></code> 要素の <code>rows</code> 属性を設定して、同時に 4 行しか表示されないようにしてあるので注意してください。 また、最初の行へスクロールするためには 0 を与える必要があることにも注意してください。</p>
+
+<p>この、<code>doScroll()</code> 関数では、ツリーボックスオブジェクトの取得を行い、テキスト入力欄への入力値を引数に渡して、<code>scrollToRow()</code> 関数を呼び出しています。 また、この例から確認できるように、ツリーボックスオブジェクトも他のボックスオブジェクトと同様に <a class="external" href="http://www.xulplanet.com/references/objref/BoxObject.html">boxObject</a> プロパティから取得できます。 ただし、取得後に <code>QueryInterface()</code> を呼び出して、汎用のボックスオブジェクトを、専用のツリーボックスオブジェクトにキャストする必要があります。 なお、ツリーボックスオブジェクトにキャストした後でも、汎用のボックスオブジェクトの関数も利用可能です。</p>
+
+<p>それ以外スクロールのメソッドとしては、 <code>scrollByLines()</code>、<code>scrollByPages()</code>、<code>ensureRowIsVisible()</code> 関数があります。</p>
+
+<p><code>scrollByLines()</code> 関数は、指定した行数に応じてスクロールを行います。 このとき、正数を指定した場合は下方向に、負数の場合は上方向になります。 次の <code>scrollByPages()</code> 関数は、指定したページ数に応じたスクロールを行います。 この関数は、ツリーにフォーカスがあるときに、利用者が page up または page down キーの操作を行った場合にも自動的に呼び出されます。 なお、この場合の 1 ページはツリーに表示可能な行数と同じになります。 つまり、ツリーに同時に 10 行表示可能なときは、１ページは 10 行分の大きさになるということです。 ツリーが<span style="border-bottom: 1px dashed green;" title="flexible">伸縮可能</span>な場合に、利用者がリサイズを行うと、 ページの大きさもそれに応じて変わることになりますが、 このメソッドを利用すれば、そういった場合にもページサイズを自分で計算をする必要がないため便利です。 もっとも、ツリーボックスオブジェクトには、1 ページの行数を返す <code>getPageLength()</code> 関数もあるため、この計算自体は特段難しくはありません。 上の例では、<code>getPageLength()</code> は 4 を返すことになります。</p>
+
+<div class="note">
+<p>Firefox 1.0 と Mozilla 1.7、またはそれ以前のバージョンでは、<code>getPageLength()</code> 関数は <code>getPageCount()</code> という名前で呼ばれていました。名前が <code>getPageLength()</code> に変更されたのは、以前の名前では、その関数が 1 ページの行数を返すもので、全体のページ数を返すものではないということがわかりにくかったためです。なお、ページ数が必要な場合は、行の総数を 1 ページの行数で割れば算出できます。</p>
+</div>
+
+<p>最後の <code>ensureRowIsVisible()</code> 関数は、<code>scrollToRow()</code> と同様にスクロールを行いますが、 対象の行が、既に表示中の場合にはスクロールを行わない点が異なっています。</p>
+
+<p><span id="Cell_Coordinate"></span></p>
+
+<h3 id=".E3.82.BB.E3.83.AB.E3.81.AE.E5.BA.A7.E6.A8.99" name=".E3.82.BB.E3.83.AB.E3.81.AE.E5.BA.A7.E6.A8.99">セルの座標</h3>
+
+<p>ツリーボックスオブジェクトが提供している関数の中で最も興味を引くのは、 指定座標がツリーのどの部分に該当するかを調べたり、 逆にツリーの特定の部分が位置している座標を調べたりするための関数群でしょう。</p>
+
+<ul>
+ <li><code>getCellAt()</code> 関数は、特定の位置にあるセルを取得します。位置はピクセル単位で指定します。</li>
+ <li><code>getRowAt()</code> 関数は、特定の位置にある行を取得します。<code>getRowAt()</code> 関数は、座標を表す x と y の 2 つの引数をとります。</li>
+</ul>
+
+<pre>tree.boxObject.getRowAt( 50, 100 );
+</pre>
+
+<p>この例は、水平位置 50, 垂直位置 100 にある行のインデックスを返すことになります。 もっとも、行はツリーの左端から右端までを常に占めることになるため、 x 座標を指定することに実質意味はありません。</p>
+
+<div class="note">重要: 座標系は、ツリーが置かれている<span style="border-bottom: 1px dashed green;" title="document">文書</span>の左上隅が原点になります。ツリー要素の左上隅ではないので注意してください。</div>
+
+<p>なお、文書の左上隅を原点としているため、これらの関数に対しては、 以下の例の <code>getCellAt()</code> 関数の呼び出しのように イベントから取得した座標をそのまま渡してもかまいません。</p>
+
+<p><span id="%E4%BE%8B_2"><a id="%E4%BE%8B_2"></a><strong>例 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_treeboxobject_2.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_treeboxobject_2.xul">表示</a></p>
+
+<pre>&lt;script&gt;
+function updateFields(event){
+  var row = {}, column = {}, part = {};
+  var tree = document.getElementById("thetree");
+
+  var boxobject = tree.boxObject;
+  boxobject.QueryInterface(Components.interfaces.nsITreeBoxObject);
+  boxobject.getCellAt(event.clientX, event.clientY, row, column, part);
+
+  if (column.value &amp;&amp; typeof column.value != "string")
+      column.value = column.value.id;
+
+  document.getElementById("row").value = row.value;
+  document.getElementById("column").value = column.value;
+  document.getElementById("part").value = part.value;
+}
+&lt;/script&gt;
+
+&lt;tree id="thetree" flex="1" onmousemove="updateFields(event);"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="utensil" label="Utensil" primary="true" flex="1"/&gt;
+    &lt;treecol id="count" label="Count" flex="1"/&gt;
+  &lt;/treecols&gt;
+  &lt;treechildren&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Fork"/&gt;
+        &lt;treecell label="5"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Knife"/&gt;
+        &lt;treecell label="2"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Spoon"/&gt;
+        &lt;treecell label="8"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+  &lt;/treechildren&gt;
+&lt;/tree&gt;
+
+&lt;label value="Row:"/&gt;
+&lt;label id="row"/&gt;
+&lt;label value="Column:"/&gt;
+&lt;label id="column"/&gt;
+&lt;label value="Child Type:"/&gt;
+&lt;label id="part"/&gt;
+</pre>
+
+<p><code>getCellAt()</code> 関数は、座標の指定用に 2 つと、結果の<span style="border-bottom: 1px dashed green;" title="out parameter">出力用パラメータ</span>として 3 つの、合計 5 つの引数をとります。 この関数では複数の値を返す必要があるため、出力用パラメータを使用して関数から戻り値以外の値を受け取ることになります。 なお、出力用パラメータを使用するインターフェイスはこの他にもいくつかあり、 <a class="external" href="http://www.xulplanet.com/references/objref/">XULPlanet の オブジェクトリファレンス</a> で確認することが可能です。 (リファレンスでは、出力用パラメータは引数の前に「out」というキーワードを付けて区別されています)。 関数を呼び出すとき、こういった出力用パラメータには、空のオブジェクトを渡す必要があり、 呼び出された関数は、渡されたオブジェクトの <code>value</code> プロパティに必要な値を設定して返します。</p>
+
+<p><code>getCellAt()</code> 関数の 3 つの出力用パラメータには、「行 (<span style="color: green;">row</span>)」と「列 (<span style="color: green;">column</span>)」および「子の種類 (<span style="color: green;">part</span>)」が設定されて戻ります。 この例を実行した場合は、<code>mousemove</code> イベントのイベント座標を引数として渡すため、 <code>row</code> 引数の値には、マウスが重なっている行のインデックスが 設定されることになります。 なお、指定の座標が行とは重なっていない場合には、値として -1 が設定されます。 また、<code>column</code> 引数には、座標が指す列の情報として、 Mozilla 1.8 (<a href="ja/Firefox_1.5">Firefox 1.5</a>) 以降の場合は、対応する列オブジェクト (TreeColumn) が設定されます。 それより古いバージョンの場合は、ツリーの列の識別は、列に設定された id の文字列で行っていましたが、 新しいバージョンからは、個々の列に対応した列オブジェクトが存在しており、ここから列のデータを取得することが可能になっています。</p>
+
+<p>以下に示すコードにより、上の例はすべてのバージョンで動作するようになっています。</p>
+
+<pre>if (column.value &amp;&amp; typeof column.value != "string") column.value = column.value.id;
+</pre>
+
+<p>column が文字列のときは、 Mozilla 1.7 かそれ以前のバージョンで動作している場合なのでそのままスキップし、 それ以外は、それ以降のバージョンであるため、列オブジェクトから列 id を取得して column に設定することによって、旧バージョンと同等になるようにしています。 もしも、複数のバージョンで動作するコードを書く必要がある場合には、上記のチェックは必ず行わなければなりません。</p>
+
+<p><code>getCellAt()</code> の最後のパラメータは子の種類、つまり指定した座標はセルのどの部分にあたるかを示す文字列が設定されます。 前の例を実行してマウスをいろいろ動かすと、場所によってラベルが「text」か「cell」に変わることが確認できるはずです。 ここに設定された値が「text」の場合は、その領域はテキストの描画領域であることを、 「cell」の場合は、テキストの周辺部、 例えば通常は行の開閉に使う<span style="border-bottom: 1px dashed green;" title="twisty">ツイスティ</span>が描かれる左側の余白などであることを示しています。 ただし、そこにツイスティがある場合には、値として 「twisty」が設定されます。 これは利用者がツイスティをクリックしたか、行の他の部分をクリックしたかを判別したいときに使用すると便利です。 実際、これは利用者がツイスティをクリックしたときの内部コードでも使用されています。 また、値として「image」が設定される場合は、座標がセル内に置かれた画像にあたることを示しています。 なお、実際のアプリケーション開発では、たいていの場合は、座標が指す点がセルのどの部分にあたるかまでを気にする必要はなく、 単に、座標が指す点が、どの行のどの列に該当するかのみが分かれば十分である場合がほとんどです。</p>
+
+<p>また、<code>getCellAt()</code> の逆の動作、 つまり指定したセルが位置する座標を取得したい場合は、<code>getCoordsForCellItem()</code> 関数を使用します。 この関数は、以下に示すように 7 つの引数をとります。</p>
+
+<pre>var x = {}, y = {}, width = {}, height = {};
+if (typeof tree.columns != "undefined") column = tree.columns[column];
+tree.boxObject.getCoordsForCellItem( row, column, part, x, y, width, height );
+</pre>
+
+<p><code>row</code>、<code>column</code>、<code>part</code> の各引数は、 <code>getCellAt()</code> 関数で返ってくる値と同様のものを指定します。 ここでも、<code>column</code> に設定する値は、動作する Mozilla のバージョンに応じて、文字列と列オブジェクトの適切な方を使用する必要があります。 また part 引数でセル領域の種類を指定することで、テキスト (<span style="color: green;">text</span>)、セル全体 (<span style="color: green;">cell</span>)、 ツイスティ (<span style="color: green;">twisty</span>)、セル内の画像 (<span style="color: green;">image</span>) のいずれかの領域の座標を取得することが可能です。 領域の種類の指定には、<code>getCellAt()</code> 関数から返される値と同じものを使用します。 <code>getCoordsForCellItem()</code> 関数は、取得した x, y 座標の値、および幅と高さの値を、すべて出力用パラメータに返します。</p>
+
+<p>次のセクションでは、ツリーなどの要素の内容を自動的に設定するために利用可能な RDF について見ていきます。</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Tree_View_Details" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Introduction_to_RDF">次のページ  »</a></p>
+</div>
+
+<p> </p>
+
+<div class="noinclude"> </div>

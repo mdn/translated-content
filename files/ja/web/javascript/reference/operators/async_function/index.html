@@ -1,0 +1,151 @@
+---
+title: 非同期関数式
+slug: Web/JavaScript/Reference/Operators/async_function
+tags:
+  - Experimental
+  - Function
+  - JavaScript
+  - Operator
+  - Primary Expression
+translation_of: Web/JavaScript/Reference/Operators/async_function
+---
+<div>{{jsSidebar("Operators")}}</div>
+
+<p><strong><code>async function</code></strong> キーワードは、式内で async function を定義するために使用できます。</p>
+
+<h2 id="構文">構文</h2>
+
+<pre class="syntaxbox">async function [<em>name</em>]([<em>param1</em>[, <em>param2[</em>, ..., <em>paramN</em>]]]) {
+   <em>statements</em>
+}</pre>
+
+<h3 id="引数">引数</h3>
+
+<dl>
+ <dt><code>name</code></dt>
+ <dd>関数名。関数が<em>匿名</em>の場合、省略可能。名前は関数ボディー内のみのローカル。</dd>
+ <dt><code>paramN</code></dt>
+ <dd>関数に渡される引数名。</dd>
+ <dt><code>statements</code></dt>
+ <dd>関数ボディーを構成するステートメント。</dd>
+</dl>
+
+<h2 id="説明">説明</h2>
+
+<p><code>async function</code> 式は {{jsxref('Statements/async_function', 'async function statement')}} と非常に似ており、構文もほとんど同じです。async <code>function</code> 式と async <code>function</code> ステートメントの主な違いは、<code>async function</code> 式は<em>匿名</em>関数を生成するために<em>関数名</em>を省略できる点です。<code>async function</code> 式は、定義後直ちに実行される <strong>IIFE</strong>（即時実行関数式）として使用することもできます。詳細は <a href="/ja/docs/Web/JavaScript/Reference/Functions">function</a> の章を見てください。</p>
+
+<h2 id="例">例</h2>
+
+<h3 id="シンプルな例">シンプルな例</h3>
+
+<pre class="brush: js">function resolveAfter2Seconds(x) {
+  return new Promise(resolve =&gt; {
+    setTimeout(() =&gt; {
+      resolve(x);
+    }, 2000);
+  });
+};
+
+(async function(x) { // async function expression used as an IIFE
+  var a = resolveAfter2Seconds(20);
+  var b = resolveAfter2Seconds(30);
+  return x + await a + await b;
+})(10).then(v =&gt; {
+  console.log(v);  // prints 60 after 2 seconds.
+});
+
+var add = async function(x) { // async function expression assigned to a variable
+  var a = await resolveAfter2Seconds(20);
+  var b = await resolveAfter2Seconds(30);
+  return x + a + b;
+};
+
+add(10).then(v =&gt; {
+  console.log(v);  // prints 60 after 4 seconds.
+});
+</pre>
+
+<h2 id="仕様">仕様</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Async Function', '#async-function-definitions', 'async function')}}</td>
+   <td>{{Spec2('Async Function')}}</td>
+   <td>提案</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>機能</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th> Edge</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>基本サポート</td>
+   <td>{{CompatChrome(55)}}</td>
+   <td>{{CompatGeckoDesktop("52.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatOpera(42)}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>機能</th>
+   <th>Android</th>
+   <th>Android Webview</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>基本サポート</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile("52.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatOpera(42)}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatChrome(55)}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p> </p>
+
+<h2 id="関連項目">関連項目</h2>
+
+<ul>
+ <li>{{jsxref("Statements/async_function", "async function")}}</li>
+ <li>{{jsxref("AsyncFunction")}} オブジェクト</li>
+ <li>{{jsxref("Operators/await", "await")}}</li>
+</ul>

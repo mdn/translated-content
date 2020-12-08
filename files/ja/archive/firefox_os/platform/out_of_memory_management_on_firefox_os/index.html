@@ -1,0 +1,138 @@
+---
+title: Firefox OSの低メモリ管理
+slug: Archive/Firefox_OS/Platform/Out_of_memory_management_on_Firefox_OS
+tags:
+  - Firefox OS
+  - Gaia
+  - LMK
+  - OOM
+  - Out of memory
+  - low memory killer
+  - low memory notifications
+  - oom_adj
+translation_of: Archive/B2G_OS/Platform/Out_of_memory_management_on_Firefox_OS
+---
+<p>
+</p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/ja/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section>
+<p></p>
+<div class="summary">
+<p><span class="seoSummary">Firefox OSはメモリが制約された端末で実行され、そうしたシステムにおいて、使用可能なメモリをアプリが使い果たすのは簡単です。システムで使用可能なメモリが使い果たされた時、カーネルはメモリを解放するために、その他のプロセスを停止しなければなりません。この記事では低メモリキラーと低メモリ通知 ( この2つの端末上システムはシステムが低メモリになった時に、メインシステムを続けるためにどのプロセスを停止するかを管理する ) が動作する方法を説明します。</span></p>
+</div>
+
+<p>Firefox OS の操作はマルチプロセス ( 1つ動作している基本システムサービス「メインプロセス」と、潜在的なたくさんの「子プロセス」)　を含んでいます。一般的に、各アプリはその子プロセスとして実行されます。Firefox OS 環境上でアプリケーションはユーザーによって滅多に終了される事が無いので、新しいアプリがメモリを必要としたときや起動しているアプリが更なるメモリを必要としたときにメモリ空間を作る事が出来るようにシステムは自動でアプリのライフサイクルを管理しています。</p>
+
+<p>2つのサブシステム (<strong>低メモリキラー (LMK)</strong> と<strong> 低メモリ通知</strong>) はこの管理に利用されています。</p>
+
+<h2 id="低メモリキラー(LMK)">低メモリキラー(LMK)</h2>
+
+<p><a href="https://android.googlesource.com/kernel/common.git/+/edd540ea92954f896bfb7ee0ebf5dfdde6e6cb41/drivers/staging/android/lowmemorykiller.txt">LMK</a> は メモリの要求があったときにメモリ空間を確保するためにプロセスを終了させる Android カーネル のサブシステムです。メモリを確保するために最初に終了させるプロセスを選択するために、<a href="https://www.kernel.org/doc/Documentation/filesystems/proc.txt">/proc/&lt;pid&gt;/oom_adj か /proc/&lt;pid&gt;/oom_score_adj ファイル</a>によって各プロセスは優先度を決められています。プロセスの優先度は adjustment スコアまたは、oom_adj として知られています。<code>oom_adj </code>の値は小さいほど優先度の高いプロセスです。</p>
+
+<p>一般的に、大きい adjustment スコアはプロセスが終了されやすくなります。 LKM は一定のメモリ空き容量と、最小の adjustment スコアに応じて、複数のレベルを提供しています。システムの空き容量がある一定のレベルよりも低くなったときはいつも、望ましいレベルで定義された最小の adjustment スコアよりも高い adjustment スコアのプロセスは終了します。LKM は最初に大きいプロセスを終了させます。そして、閾値以上にメモリが確保されるまでくりかえします。</p>
+
+<div class="note">
+<p><strong>記</strong>: バックグラウンドのアプリがLMKに停止された時、タスクマネージャで端をスワイプすると"ゾンビアプリ"になっています: 次にそのアプリをブラウズした時、復活するでしょう。この状態で維持できるアプリの最大数は現在10個です。</p>
+</div>
+
+<div class="note">
+<p><strong>記</strong>: 端末がメモリ不足になった時に停止されたプロセスは、必ずしもOOM(メモリ不足)の "原因" とは限りません。</p>
+</div>
+
+<h3 id="プロセスの優先順位">プロセスの優先順位</h3>
+
+<p>Firefox OS では、アプリは以下の優先順ポリシーに従って終了されます。このポリシーは各アプリケーションに優先度を与え、このレベル(<a href="http://hg.mozilla.org/mozilla-central/file/545c35907eff/b2g/app/b2g.js#l661">現在は prefs のセット値として設定されている</a>)に OOM adjustment スコアを関連づける事によって実現しています。</p>
+
+<ol>
+ <li>最初に終了されるアプリは、最初に利用して起動しているバックグラウンドアプリです。</li>
+ <li>ユーザーによって認識されているバックグラウンドアプリは次に終了されます。(例えば、音楽プレイヤーがバックグラウンドで音楽を再生していたり、アプリが高い優先度を持っていたり、CPU  wakelock やシステムメッセージのハンドラーを登録していたりするバックグラウンドアプリの事)</li>
+ <li>もしキーボードアプリが起動していたら、次に終了されます。</li>
+ <li>フォアグランドアプリケーションは次に終了されます。</li>
+ <li>最後に、 <code>high-priority(</code>高い優先度) や CPU wakelocks を要求しているフォアグランドアプリケーションが最後に終了されます。</li>
+</ol>
+
+<div class="note">
+<p><strong>記</strong>: たいていの子プロセスは、フォアグランド動作時は <code>oom_adj 2</code> で動作します。バックグラウンドの子プロセスは<code>、oom_adj</code> <code>3</code> から <code>6</code> (を含む)の間で実行されます。<code>ある子プロセスがバックグラウンド時にどの oom_adj</code> を持っているかは、正確にファクタ数(音を鳴らしているのか、キーボードアプリなのか、など)で決まります。</p>
+</div>
+
+<p>このルールには2つの例外があります。</p>
+
+<ul>
+ <li>すべての子プロセスが終了してOS を再起動してしまうので、メインプロセスは LMK によって終了される事はありません。メインプロセスは<code> oom_adj</code> が 0 として動作しています。</li>
+ <li><strong>preallocated process</strong> と呼ばれる、新しいアプリケーションの起動で速度を上げるためのプロセスを保持しています。このプロセスはメモリ消費量が少ない事と、アプリケーションの起動を速くするため、通常生存したままです。すべてのプロセスを終了した後にメインプロセスを動作させるためのメモリが不足した場合にだけ、このプロセスは終了されます。</li>
+</ul>
+
+<h2 id="低メモリ通知">低メモリ通知</h2>
+
+<p>次のメモリが少なくなったときに利用するメカニズムは低メモリ通知です。 LMK は動作しているメモリが少なくなった事を通知する事が出来る<a href="https://www.codeaurora.org/cgit/quic/la//kernel/msm/commit/?id=b3f986cba580b14438b77b42070ebbc77b69d4c4">特別な閾値</a>を提供しています。システムアプリケーションと一般的なユーザーアプリケーションは監視サービスから通知される <code>memory-pressure </code>イベントに反応するために条件がくるのを待ち続けています。このイベントは C++ と chrome JS のコードだけに利用でき、直接アプリケーションが利用する事は出来ません。Gecko のコードベースを通じて、我々は利用可能なメモリを空けるためにイベントを利用します。(通常、内部キャッシュ(画像、DNS、sqlite等) を破棄し、再生可能なアセット(WebGL context等) を破棄したり、ガベッジコレクターやサイクルコレクターを実行させたりします)<br>
+ <br>
+ メモリが少ない状況に直面したら、最初の <code>memory-pressure</code> イベントが <code>low-memory</code> ペイロード付きで送信されるでしょう。定義した時間 (5秒) を経過してもメモリが少ない状況が続いていた場合、他の <code>memory-pressure</code> イベントが、<code>low-memory-ongoing</code> ペイロード付きで発火されます。このペイロードはメモリ不足の状態が継続しているときに利用され、私たちはキャッシュをフラッシュしたり、他のメモリを最少化するための安い方法を望みます。しかし、GC のような処理の重たいアプローチは成功しにくいでしょう。</p>
+
+<h2 id="LMKと低メモリ通知が協働する方法">LMKと低メモリ通知が協働する方法</h2>
+
+<p>現在、<a href="http://hg.mozilla.org/mozilla-central/file/545c35907eff/b2g/app/b2g.js#l722">低メモリーの閾値は バックグラウンドアプリケーションの LMK レベル以上に設定されていますが、ホームスクリーンより低く設定されています</a>。そのため、LMK と低メモリー通知の両方のアクションは、out of memory が端末で発生したときに以下のようにしないといけません。</p>
+
+<p>現在、2つの低メモリ閾値が使われています(<a href="https://hg.mozilla.org/mozilla-central/file/f617d69d602b/b2g/app/b2g.js#l787">ソフト</a> と <a href="https://hg.mozilla.org/mozilla-central/file/f617d69d602b/b2g/app/b2g.js#l782">ハード</a>閾値)。ソフトレベルはバックグラウンドアプリケーションのLMKレベルより大きく設定されていて、低メモリエラーが始まっているがアプリケーションが停止される前に、メモリ使用を最小化するのに使われます。いっぽうハードレベルは、LMKによってすべてのバックグラウンドアプリケーションが停止された後に、フォアグラウンドアプリケーションを生かし続けるために使われます。ただ1つのカーネルトリガーだけが利用できるため、この2つのレベルは、Geckoが動的にトリガーを調整できることにより、実装されています。端末が低メモリとなった時に、LMKと低メモリ通知の集約されたアクションは次の通り:</p>
+
+<ol>
+ <li>すべてのアプリに <code>memory-pressure </code>イベントを通知する</li>
+ <li>メモリがまだ不足している場合は、最近使用されていない順でバックグラウンドアプリを停止する</li>
+ <li>メモリがまだ不足している場合は、すべての残っているアプリに <code>memory-pressure</code> イベントを通知する</li>
+ <li>メモリ不足が継続している場合、5秒間隔で <code>memory-pressure</code> イベントを送信する。しかしGC/CC が反応しないように、実行中にマークする</li>
+ <li>認知していたり、高い優先度のバックグラウンドアプリを終了する</li>
+ <li>もし動作していたらキーボードアプリを終了する</li>
+ <li>フォアグランドアプリケーションを終了する</li>
+ <li>フォアグランドアプリケーションの高い優先度のものを終了する</li>
+ <li>preallocated process を終了する</li>
+</ol>

@@ -1,0 +1,191 @@
+---
+title: XPInstall API Reference
+slug: XPInstall_API_Reference
+tags:
+  - XPInstall
+  - XPInstall_API_reference
+translation_of: Archive/Mozilla/XPInstall/Reference
+---
+<div><div class="warning"><p>このページは <a href="https://developer.mozilla.org/ja/docs/XPInstall_API_Reference">XPInstall API Reference</a> の一部です。もしあなたが <a href="https://developer.mozilla.org/ja/docs/Extensions">拡張機能</a>や<a href="https://developer.mozilla.org/ja/docs/Themes">テーマ</a>、<a href="https://developer.mozilla.org/ja/docs/Plugins">プラグイン</a>の開発者であるならば、この API のほとんどが必要ないことに注意してください。特に、XPI のコンテンツをインストールし、登録するために使用される <code>install.js</code> スクリプトは、新たに宣言される <code><a href="https://developer.mozilla.org/ja/docs/Install_Manifests">install.rdf</a></code> マニフェストや新しい <a href="https://developer.mozilla.org/ja/docs/Bundles">パッケージング体系</a> のために非推奨です。</p></div></div>
+
+<h3 id="Objects" name="Objects">オブジェクト</h3>
+
+<h4 id="Install" name="Install"><a href="/ja/docs/XPInstall_API_Reference/Install_Object">Install</a></h4>
+
+<dl>
+ <dd><a href="/ja/docs/XPInstall_API_Reference/Install_Object/Properties">プロパティ</a></dd>
+ <dd><a href="/ja/docs/XPInstall_API_Reference/Install_Object/Methods">メソッド</a></dd>
+</dl>
+
+<dl>
+ <dd>
+ <dl>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/Install_Object/Methods/addDirectory">addDirectory</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/Install_Object/Methods/addFile">addFile</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/Install_Object/Methods/alert">alert</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/Install_Object/Methods/cancelInstall">cancelInstall</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/Install_Object/Methods/confirm">confirm</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/Install_Object/Methods/deleteRegisteredFile">deleteRegisteredFile</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/Install_Object/Methods/execute">execute</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/Install_Object/Methods/gestalt">gestalt</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/Install_Object/Methods/getComponentFolder">getComponentFolder</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/Install_Object/Methods/getFolder">getFolder</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/Install_Object/Methods/getLastError">getLastError</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/Install_Object/Methods/getWinProfile">getWinProfile</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/Install_Object/Methods/getWinRegistry">getWinRegistry</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/Install_Object/Methods/initInstall">initInstall</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/Install_Object/Methods/loadResources">loadResources</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/Install_Object/Methods/logComment">logComment</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/Install_Object/Methods/patch">patch</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/Install_Object/Methods/performInstall">performInstall</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/Install_Object/Methods/refreshPlugins">refreshPlugins</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/Install_Object/Methods/registerChrome">registerChrome</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/Install_Object/Methods/resetError">resetError</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/Install_Object/Methods/setPackageFolder">setPackageFolder</a></dd>
+ </dl>
+ </dd>
+</dl>
+
+<h4 id="InstallTrigger" name="InstallTrigger"><a href="/ja/docs/XPInstall_API_Reference/InstallTrigger_Object">InstallTrigger</a></h4>
+
+<dl>
+ <dd><em>プロパティなし</em></dd>
+ <dd><a href="/ja/docs/XPInstall_API_Reference/InstallTrigger_Object/Methods">メソッド</a></dd>
+</dl>
+
+<dl>
+ <dd>
+ <dl>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/InstallTrigger_Object/Methods/compareVersion">compareVersion</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/InstallTrigger_Object/Methods/enabled">enabled</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/InstallTrigger_Object/Methods/getVersion">getVersion</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/InstallTrigger_Object/Methods/install">install</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/InstallTrigger_Object/Methods/installChrome">installChrome</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/InstallTrigger_Object/Methods/startSoftwareUpdate">startSoftwareUpdate</a></dd>
+ </dl>
+ </dd>
+</dl>
+
+<h4 id="InstallVersion" name="InstallVersion"><a href="/ja/docs/XPInstall_API_Reference/InstallVersion_Object">InstallVersion</a></h4>
+
+<dl>
+ <dd><a href="/ja/docs/XPInstall_API_Reference/InstallVersion_Object/Properties">プロパティ</a></dd>
+ <dd><a href="/ja/docs/XPInstall_API_Reference/InstallVersion_Object/Methods">メソッド</a></dd>
+</dl>
+
+<dl>
+ <dd>
+ <dl>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/InstallVersion_Object/Methods/compareTo">compareTo</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/InstallVersion_Object/Methods/init">init</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/InstallVersion_Object/Methods/toString">toString</a></dd>
+ </dl>
+ </dd>
+</dl>
+
+<h4 id="File" name="File"><a href="/ja/docs/XPInstall_API_Reference/File_Object">File</a></h4>
+
+<dl>
+ <dd><em>プロパティなし</em></dd>
+ <dd><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods">メソッド</a></dd>
+</dl>
+
+<dl>
+ <dd>
+ <dl>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/copy">copy</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/dirCreate">dirCreate</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/dirGetParent">dirGetParent</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/dirRemove">dirRemove</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/dirRename">dirRename</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/diskSpaceAvailable">diskSpaceAvailable</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/execute">execute</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/exists">exists</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/isDirectory">isDirectory</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/isFile">isFile</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/macAlias">macAlias</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/modDate">modDate</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/modDateChanged">modDateChanged</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/move">move</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/remove">remove</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/rename">rename</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/size">size</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/windowsGetShortName">windowsGetShortName</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/windowsRegisterServer">windowsRegisterServer</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/windowsShortcut">windowsShortcut</a></dd>
+ </dl>
+ </dd>
+</dl>
+
+<h4 id="WinProfile" name="WinProfile"><a href="/ja/docs/XPInstall_API_Reference/WinProfile_Object">WinProfile</a></h4>
+
+<dl>
+ <dd><em>プロパティなし</em></dd>
+ <dd><a href="/ja/docs/XPInstall_API_Reference/WinProfile_Object/Methods">メソッド</a></dd>
+</dl>
+
+<dl>
+ <dd>
+ <dl>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/WinProfile_Object/Methods/getString">getString</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/WinProfile_Object/Methods/writeString">writeString</a></dd>
+ </dl>
+ </dd>
+</dl>
+
+<h4 id="WinReg" name="WinReg"><a href="/ja/docs/XPInstall_API_Reference/WinReg_Object">WinReg</a></h4>
+
+<dl>
+ <dd><em>プロパティなし</em></dd>
+ <dd><a href="/ja/docs/XPInstall_API_Reference/WinReg_Object/Methods">メソッド</a></dd>
+</dl>
+
+<dl>
+ <dd>
+ <dl>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/WinReg_Object/Methods/createKey">createKey</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/WinReg_Object/Methods/deleteKey">deleteKey</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/WinReg_Object/Methods/deleteValue">deleteValue</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/WinReg_Object/Methods/enumKeys">enumKeys</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/WinReg_Object/Methods/enumValueNames">enumValueNames</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/WinReg_Object/Methods/getValue">getValue</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/WinReg_Object/Methods/getValueNumber">getValueNumber</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/WinReg_Object/Methods/getValueString">getValueString</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/WinReg_Object/Methods/isKeyWritable">isKeyWritable</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/WinReg_Object/Methods/keyExists">keyExists</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/WinReg_Object/Methods/setRootKey">setRootKey</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/WinReg_Object/Methods/setValue">setValue</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/WinReg_Object/Methods/setValueNumber">setValueNumber</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/WinReg_Object/Methods/setValueString">setValueString</a></dd>
+  <dd><a href="/ja/docs/XPInstall_API_Reference/WinReg_Object/Methods/valueExists">valueExists</a></dd>
+ </dl>
+ </dd>
+</dl>
+
+<dl>
+ <dd><a href="/ja/docs/XPInstall_API_Reference/WinReg_Object/WinRegValue">WinRegValue constructor</a></dd>
+</dl>
+
+<h3 id="Other_Information" name="Other_Information">その他の情報</h3>
+
+<h4 id="Return_Codes" name="Return_Codes">リターンコード</h4>
+
+<p><a href="/ja/docs/XPInstall_API_Reference/Return_Codes">See complete list</a></p>
+
+<h4 id="Examples" name="Examples"><a href="/ja/docs/XPInstall_API_Reference/Examples">スクリプト例</a></h4>
+
+<dl>
+ <dd><a href="/ja/docs/XPInstall_API_Reference/Examples/Trigger_Scripts_and_Install_Scripts">Trigger Scripts and Install Scripts</a></dd>
+</dl>
+
+<h5 id="Code_Samples" name="Code_Samples">コード例</h5>
+
+<dl>
+ <dd><a href="/ja/docs/XPInstall_API_Reference/Examples/File.macAlias">File.macAlias</a></dd>
+ <dd><a href="/ja/docs/XPInstall_API_Reference/Examples/File.windowsShortcut">File.windowsShortcut</a></dd>
+ <dd><a href="/ja/docs/XPInstall_API_Reference/Examples/Install.addDirectory">Install.addDirectory</a></dd>
+ <dd><a href="/ja/docs/XPInstall_API_Reference/Examples/Install.addFile">Install.addFile</a></dd>
+ <dd><a href="/ja/docs/XPInstall_API_Reference/Examples/InstallTrigger.installChrome">InstallTrigger.installChrome</a></dd>
+ <dd><a href="/ja/docs/XPInstall_API_Reference/Examples/InstallTrigger.startSoftwareUpdate">InstallTrigger.startSoftwareUpdate</a></dd>
+ <dd><a href="/ja/docs/XPInstall_API_Reference/Examples/Windows_Install">Windows Install</a></dd>
+</dl>

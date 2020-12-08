@@ -1,0 +1,243 @@
+---
+title: デバッグ (Firefox 50 より前)
+slug: Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)
+translation_of: Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)
+---
+<div>{{AddonSidebar}}</div>
+
+<div class="note">
+<p>この記事では Firefox バージョン50よりも前で WebExtension API を使った拡張機能のデバッグする方法を説明しています。</p>
+
+<p>Firefox 50 以降をお使いの場合、<a href="/ja/Add-ons/WebExtensions/Debugging">メイン記事の拡張機能をデバッグする</a>を見てください。</p>
+</div>
+
+<p>この記事では、デフォルトでインストールされている Firefox 開発ツールを使って、WebExtension API で開発された拡張機能をどのようにデバッグするか説明します。Add-on SDK で開発したアドオンをデバッグする場合は、<a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/Add-on_Debugger">アドオンデバッガ</a> の解説を参照してください。</p>
+
+<p>{{英語版章題("A simple example: notify-link-clicks-i18n")}}</p>
+
+<ul>
+</ul>
+
+<h2 id="簡単なサンプル_notify-link-clicks-i18n">簡単なサンプル: notify-link-clicks-i18n</h2>
+
+<p>デバックツールへの接続方法を、簡単なサンプル拡張機能 "notify-link-clicks-i18n" を用いて説明します。このコードは <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">GitHub の WebExtensions examples リポジトリ</a> で公開されています。</p>
+
+<p>この拡張機能は以下から構成されています。</p>
+
+<ul>
+ <li>バックグラウンドスクリプト "background-script.js"</li>
+ <li>コンテンツスクリプト "content-script.js" （全てのページに読み込まれるスクリプト）</li>
+</ul>
+
+<p>ページ上のリンクをクリックするという動作は、コンテンツスクリプトがイベントとして感知します。リンクがクリックされた際、 リンクを含んだメッセージがコンテンツスクリプトからバックグラウンドスクリプトに送られます。</p>
+
+<p>バックグラウンドスクリプトがメッセージを受け取ると、リンクを含んだ通知画面が表示されます。</p>
+
+<p>"content-script.js" は次の通りです:</p>
+
+<pre class="brush: js">/*
+ <code class="language-js"><span class="comment token">リンクがクリックされた場合、バックグラウンドページにメッセージを送信する。
+ このメッセージにはリンクの URL が含まれている。</span></code>
+*/
+function notifyExtension(e) {
+  var target = e.target;
+  while ((target.tagName != "A" || !target.href) &amp;&amp; target.parentNode) {
+    target = target.parentNode;
+  }
+  if (target.tagName != "A")
+    return;
+
+  console.log("content script sending message");
+  chrome.runtime.sendMessage({"url": target.href});
+}
+
+/*
+ <code class="language-js"><span class="comment token">クリックイベントのリスナ関数に notifyExtension() を追加する</span></code>
+*/
+window.addEventListener("click", notifyExtension);
+</pre>
+
+<p>"background-script.js" は次の通りです:</p>
+
+<pre class="brush: js">/*
+ <code class="language-js"><span class="comment token">受信したメッセージを記録する。
+ 続いて通知画面を表示する。
+ この通知画面には、メッセージから読み取った URL が含まれている。</span></code>
+*/
+function notify(message) {
+  console.log("background script received message");
+  var title = chrome.i18n.getMessage("notificationTitle");
+  var content = chrome.i18n.getMessage("notificationContent", message.url);
+  chrome.notifications.create({
+    "type": "basic",
+    "iconUrl": chrome.extension.getURL("icons/link-48.png"),
+    "title": title,
+    "message": content
+  });
+}
+
+/*
+ <code class="language-js"><span class="comment token">content script からのメッセージを受信するリスナ関数に `notify()` を追加する</span></code>
+*/
+chrome.runtime.onMessage.addListener(notify);
+</pre>
+
+<p>以下の手順を実際に試してみる際は、 <a href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> リポジトリからコードを clone し、"notify-link-clicks-i18n" を<a href="/ja/Add-ons/WebExtensions/Packaging_and_installation"> インストールして下さい</a>。</p>
+
+<p>{{英語版章題("The Browser Toolbox")}}</p>
+
+<h2 id="ブラウザツールボックス">ブラウザツールボックス</h2>
+
+<p>拡張機能をデバッグするには <a href="/ja/docs/Tools/Browser_Toolbox">ブラウザツールボックス</a> を使用します。</p>
+
+<p>{{英語版章題("Prerequisites")}}</p>
+
+<h3 id="前提条件">前提条件</h3>
+
+<p>ブラウザツールボックスを使用する準備として、以下の手順を踏む必要があります。</p>
+
+<ul>
+ <li>Firefox 開発ツールを開く (Shift+Ctrl+I / F12)</li>
+ <li><a href="https://developer.mozilla.org/ja/docs/Tools/Settings">設定</a> タブ（歯車のアイコン）を開く</li>
+ <li>"詳細な設定" において下記の設定項目にチェックが入っているか確認する。
+  <ul>
+   <li><em>ブラウザとアドオンのデバッガを有効</em></li>
+   <li><em>リモートデバッグを有効</em></li>
+  </ul>
+ </li>
+</ul>
+
+<p>{{EmbedYouTube("LJAM2vXJ790")}}</p>
+
+<p>{{英語版章題("Opening the Browser Toolbox")}}</p>
+
+<h3 id="ブラウザツールボックスを開く">ブラウザツールボックスを開く</h3>
+
+<p>次に、ブラウザツールボックスを開きます。</p>
+
+<ul>
+ <li>Alt キーを押下して表示されるメニューで、"ツール" → "Web 開発" → "ブラウザツールボックス" の順にクリックします。ブラウザコンソールでは無いことに中止して下さい。</li>
+ <li>警告ダイアログが出るかもしれませんが OK を押して下さい。</li>
+</ul>
+
+<p>ブラウザツールボックスが新しいウインドウとして開きます。ここで Firefox のメインウィンドウが前面に表示された場合は、ブラウザツールボックスが前に表示されるように画面をクリックしてください。{{EmbedYouTube("fZ492zAAy3o")}}</p>
+
+<p>Firefox における "ツールボックス" とは、下図のように複数のツールがタブで句切られているウインドウの名前です。<img alt="" src="https://mdn.mozillademos.org/files/11873/browser-toolbox.png" style="display: block; height: 458px; margin-left: auto; margin-right: auto; width: 900px;">上記のツールボックスには 5 つのツール、"Inspector" / "Console" / "Debugger" / "Style Editor" / "Scratchpad" が含まれており、ウインドウの上部にあるタブで切り替えることができます。この記事では "Console（コンソール）" と "Debugger（デバッガ）" の 2 つのツールを使用します。</p>
+
+<p>{{英語版章題("Viewing log output")}}</p>
+
+<h3 id="ログの出力を見る">ログの出力を見る</h3>
+
+<p>コンソールタブでログを見ることができます。ここに表示されるメッセージは以下から出力されたものです。</p>
+
+<ul>
+ <li>バックグラウンドスクリプト</li>
+ <li>ポップアップの中で動作しているスクリプト</li>
+ <li>コンテンツスクリプト</li>
+</ul>
+
+<p>このメッセージには、<a href="/ja/docs/Web/API/Console">Console API</a> を使用しているコードから出力されたログも含まれています。また、JavaScript エンジンからもエラーメッセージが出力されます。</p>
+
+<p>それでは上記のサンプルを使って試してみましょう。ブラウザツールボックスのコンソールタブを選択し、何かしらの Web ページを開き、リンクをクリックし、コンテンツスクリプトやバックグラウンドスクリプトからメッセージが記録されるのを確認してみましょう。</p>
+
+<p>{{EmbedYouTube("Qpx0n8gP3Qw")}}</p>
+
+<p>ただし、ブラウザツールボックスはどんなメッセージも受け取るため、要らないメッセージも多く受け取ってしまう問題があります。この問題を解決するには<a href="/ja/docs/Tools/Web_Console/Console_messages#Filtering_and_searching">フィルタリングと検索</a>を参照して下さい。</p>
+
+<p>{{英語版章題("Debugging JavaScript")}}</p>
+
+<h3 id="JavaScript_をデバッグする">JavaScript をデバッグする</h3>
+
+<p>ブラウザツールボックスを用いると、バックグラウンドスクリプトやブラウザ上で動作しているスクリプト、ポップアップのページアクションで動作するスクリプトに対し、JavaScript デバッガでブレークポイントを設定することができます。</p>
+
+<p>拡張機能がインストールされて有効になっている間は、デバッガからバックグラウンドスクリプトにアクセス可能です。ポップアップスクリプトは、ポップアップが表示されている間にアクセス可能です。ポップアップスクリプトが読み込まれた時点ですぐにデバッガからアクセスしたい場合は、スクリプトの最初に <code><a href="/ja/docs/Web/JavaScript/Reference/Statements/debugger">debugger;</a></code> 文を挿入してみてください。</p>
+
+<p>JavaScript デバッガを使用するために、まずはブラウザツールボックスのデバッガタブを選択します。ここにはブラウザで動いている全てのソースコードが表示されています。そのため、<a href="/ja/docs/Tools/Debugger/How_to/Search_and_filter">検索ボックスをクリックしてソースの名前を入力し</a>、自分のスクリプトが表示されるようにします。</p>
+
+<p>自分のスクリプトを見つかったら、ブレークポイントをコードに設定したり、コードをステップ実行したり、<a href="/ja/docs/Tools/Debugger">他にもデバッガに可能なことは何でも実行できます</a>。</p>
+
+<p>{{EmbedYouTube("3edeJiG38ZA")}}</p>
+
+<p>{{英語版章題("JavaScript command line interpreter")}}</p>
+
+<h3 id="JavaScript_コマンドラインインタプリタ">JavaScript コマンドラインインタプリタ</h3>
+
+<p>コンソールには <a href="/ja/docs/Tools/Web_Console/The_command_line_interpreter">コマンドラインインタプリタ</a> が含まれており、実行しているプログラムの状態を調べたり操作することができます。この機能はコンソールを Web ページにアタッチしている際によく使いますが、ブラウザツールボックスでインタプリタを用いるのは一般に難しくなります（ブラウザツールボックスのコンソールは、デバッグしたい特定の拡張機能だけではなく、ブラウザ全体をスコープとしてしまうため）。</p>
+
+<p>とはいえ、次のようなトリックを使うと上手くいきます。デバッガがブレークポイントで停止している間は、そのプログラムにコンソールのスコープが設定されます。そのため、拡張機能のコードにブレークポイントを設定しておくことで、拡張機能中の関数を呼び出したり、変数値を再代入したりするなど、拡張機能に対して動的にアクセスすることができます。</p>
+
+<p>この機能は <a href="/ja/docs/Tools/Web_Console/Split_console">コンソールを常時表示</a> （画面の半分にはコンソールを、もう半分にはデバッガなどの異なるツールを表示）している際に特に効果的です。</p>
+
+<p>{{EmbedYouTube("xprf58qOtLY")}}</p>
+
+<p>{{英語版章題("Debugging content scripts")}}</p>
+
+<h3 id="コンテンツスクリプトをデバッグする">コンテンツスクリプトをデバッグする</h3>
+
+<p>ブラウザツールボックスには大きな制約が 1 つあります。それは、<a href="/ja/docs/Mozilla/Firefox/Multiprocess_Firefox">マルチプロセス Firefox</a> で開発している場合に、 JavaScript Debugger からコンテンツスクリプトにアタッチできない点です。</p>
+
+<p>マルチプロセス Firefox では少なくとも 2 つのプロセスに分かれています。一つはブラウザ自身の UI やシステムコードを実行し、他は Web ページのスクリプト実行などを担当する<em>コンテンツプロセス </em>です。ブラウザツールボックスは前者のプロセスにデバッガとしてアタッチします。しかし、コンテンツスクリプトは他のプロセスで実行しているため、ブラウザツールボックスのスクリプト一覧には表示されないのです。</p>
+
+<p>コンテンツスクリプトスクリプトをマルチプロセス Firefox でデバッグするには Browser Content Toolbox を使用して下さい。Browser Content Toolbox はブラウザツールボックスにちょうど似ていますが、開発ツールをブラウザのコンテンツプロセスにアタッチさせる点で異なり、コンテンツスクリプトにアクセスできるようになります。</p>
+
+<div class="note">
+<p>補足: この Browser Content Toolbox は、マルチプロセス Firefox で開発している場合にのみ必要なものであり、またその場合のみ利用可能です。</p>
+</div>
+
+<div class="warning">
+<p>ブラウザツールボックスのオプションで "Worker のデバッグを有効" を設定すると、Browser Content Toolbox でデバッグができなくなります。この問題は<span id="summary_alias_container"><span id="short_desc_nonedit_display"> </span></span> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1236892">Bug 1236892</a> で解決されるはずです。</p>
+</div>
+
+<p>{{EmbedYouTube("xAt3Q0PgJP4")}}</p>
+
+<p>{{英語版章題("Debugging popups")}}</p>
+
+<h3 id="ポップアップをデバッグする">ポップアップをデバッグする</h3>
+
+<div class="geckoVersionNote">Firefox 47 からの新機能です</div>
+
+<p>Firefox 47 から、ブラウザツールボックスでポップアップの中身をデバッグできるようになりました。デバッグは 3 つの手順からなります。</p>
+
+<ul>
+ <li>パネルの autohide を無効化する</li>
+ <li>ポップアップを開く</li>
+ <li>ポップアップを含んだドキュメントを選択する</li>
+</ul>
+
+<p>{{EmbedYouTube("EEU4NeAS1s4")}}</p>
+
+<h4 id="autohide_を無効化する">autohide を無効化する</h4>
+
+<p>パネルのデバッグに関してありがちな問題は、パネルの外をクリックすると隠れてしまう点です。そのため、まず初めにこの動作を無効化しておきましょう。ブラウザツールボックスで 4 つの小さい四角形からなるアイコンをクリックします。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/12622/disable-autohide.png" style="display: block; height: 417px; margin-left: auto; margin-right: auto; width: 877px;">すると、Escape キーを押した場合でもパネルが前面に表示されたままになるはずです。</p>
+
+<div class="note">
+<p>ここで設定した authohide の無効化は、拡張機能のポップアップのみならず、ハンバーガーメニュー (<img alt="" src="https://mdn.mozillademos.org/files/12712/hamburger.png" style="height: 20px; width: 22px;">) などによる <a href="/ja/docs/Tools/Browser_Toolbox#Debugging_popups">ブラウザ本体のポップアップ</a> にも適用されます。</p>
+
+<p>また、この設定はブラウザを再起動した後も引き継がれます。この件に関しては <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1251658">bug 1251658</a> で修正中ですが、現時点ではブラウザツールボックスを閉じる前に autohide を再び有効にしておくと良いでしょう。</p>
+
+<p>ブラウザの内部構造的には、この autohide ボタンは <code>ui.popup.disable_autohide</code> の設定項目を切り替えるだけのものです。そのため、about:config において手動で切り替えることも可能です。</p>
+</div>
+
+<h4 id="ポップアップを開く">ポップアップを開く</h4>
+
+<p>次にポップアップを開きます。ここでブラウザツールボックスに戻ると、パネルが開いたままになっているはずです。</p>
+
+<h4 id="ポップアップのフレームを選択する">ポップアップのフレームを選択する</h4>
+
+<p>ポップアップはそれ自身のフレームに読み込まれています。そのため、ブラウザツールボックスの <a href="/ja/docs/Tools/Browser_Toolbox#Targeting_a_document">フレーム選択ボタン</a> でポップアップのドキュメントを選択します。<img alt="" src="https://mdn.mozillademos.org/files/12624/frame-selection.png" style="display: block; height: 417px; margin-left: auto; margin-right: auto; width: 877px;">このドキュメントは以下のような名前を持っています。</p>
+
+<pre class="line-numbers  language-html"><code class="language-html">moz-extension://<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>some-uuid</span><span class="punctuation token">&gt;</span></span>/path/to/your-popup.html</code></pre>
+
+<p>{{EmbedYouTube("/9jdHDCKIN-U")}}</p>
+
+<p>こうしてツールボックスのスコープがポップアップに設定されました。インスペクタでポップアップの HTML や CSS の確認・変更が行えます。デバッガでは、ポップアップに読み込まれているスクリプトを検索したり、スクリプトにブレークポイントを設定することができます。</p>
+
+<p>{{英語版章題("What about the Add-on Debugger?")}}</p>
+
+<h2 id="Add-on_Debuggerとは？">Add-on Debuggerとは？</h2>
+
+<p>Firefox での拡張機能のデバッグは、今後 <a href="/ja/Add-ons/Add-on_Debugger">Add-on Debugger</a> が用いられる予定になっています。</p>
+
+<p>ブラウザツールボックスと比較した際、<a href="/ja/docs/Mozilla/Add-ons/Add-on_Debugger">Add-on Debugger</a> は拡張機能ファイルのみを表示するため、容易にスクリプトを探すことができるという大きな利点があります。しかし今のところ、コンソールメッセージを拡張機能から Add-on Debugger へ表示させられないため、ブラウザツールボックスのほうが便利です。</p>

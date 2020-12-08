@@ -1,0 +1,63 @@
+---
+title: NPObject
+slug: NPObject
+translation_of: Archive/Plugins/Reference/NPObject
+---
+<div>
+<div><span class="breadcrumbs np-plugin-scripting_breadcrumbs">« <a href="https://developer.mozilla.org/en-US/docs/Gecko_Plugin_API_Reference">Gecko Plugin API Reference</a> « <a href="https://developer.mozilla.org/en-US/docs/Gecko_Plugin_API_Reference/Scripting_plugins">Scripting plugins</a> </span></div>
+</div>
+
+<h2 id="Summary" name="Summary">Summary</h2>
+
+<p><code>NPObject</code> 是个包含着一个指向 <code><a href="/en-US/docs/NPClass">NPClass</a></code> 的指针，和一个整型的引用计数，还有可能的特定成员的实现（特定插件，或者特定的浏览器）的结构体。</p>
+
+<p><code>NPObject</code> 是用来展示被插件或者浏览器通过这些API暴露出来的对象的类型。浏览器通过这些API来暴露他们的窗口对象和其他可以通过它来获取的东西。</p>
+
+<p><code>NPObject</code>s 是有引用计数的对象, 所以调用者必须谨慎地释放他们的引用. Mozilla 提供了 <code><a href="/en-US/docs/NPN_CreateObject">NPN_CreateObject()</a></code>, <code><a href="/en-US/docs/NPN_RetainObject">NPN_RetainObject()</a></code>, <code><a href="/en-US/docs/NPN_ReleaseObject">NPN_ReleaseObject()</a></code>, 和 <code><a href="/en-US/docs/NPN_ReleaseVariantValue">NPN_ReleaseVariantValue()</a>这些函数来增加引用技术和进行常规的所有权的管理。</code></p>
+
+<p><code>NPObject</code> 的行为是通过调用 <code><a href="/en-US/docs/NPClass">NPClass</a> 中定义的一组回调函数来实现的</code>.</p>
+
+<h2 id="Syntax" name="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">struct NPObject {
+  NPClass *_class;
+  uint32_t referenceCount;
+  /*
+   * Additional space may be allocated here by types of NPObjects
+   */
+};
+</pre>
+
+<h2 id="Fields" name="Fields">Fields</h2>
+
+<dl>
+ <dt><code>_class</code></dt>
+ <dd>指向标明当前对象是哪个 <code><a href="/en-US/docs/NPClass">NPClass</a></code> 的成员的指针.</dd>
+ <dt><code>referenceCount</code></dt>
+ <dd>对象的引用计数.</dd>
+</dl>
+
+<div class="warning"><span style="color: #f0fff0;"><strong>警告：不要直接操纵_class 和 referenceCount 成员，用下面的函数来完成对它们的控制。</strong></span></div>
+
+<h2 id="Functions" name="Functions">Functions</h2>
+
+<ul>
+ <li><code><a href="/en-US/docs/NPN_CreateObject">NPN_CreateObject()</a></code></li>
+ <li><code><a href="/en-US/docs/NPN_RetainObject">NPN_RetainObject()</a></code></li>
+ <li><code><a href="/en-US/docs/NPN_ReleaseObject">NPN_ReleaseObject()</a></code></li>
+ <li><code><a href="/en-US/docs/NPN_Invoke">NPN_Invoke()</a></code></li>
+ <li><code><a href="/en-US/docs/NPN_InvokeDefault">NPN_InvokeDefault()</a></code></li>
+ <li><code><a href="/en-US/docs/NPN_Evaluate">NPN_Evaluate()</a></code></li>
+ <li><code><a href="/en-US/docs/NPN_GetProperty">NPN_GetProperty()</a></code></li>
+ <li><code><a href="/en-US/docs/NPN_SetProperty">NPN_SetProperty()</a></code></li>
+ <li><code><a href="/en-US/docs/NPN_RemoveProperty">NPN_RemoveProperty()</a></code></li>
+ <li><code><a href="/en-US/docs/NPN_HasProperty">NPN_HasProperty()</a></code></li>
+ <li><code><a href="/en-US/docs/NPN_HasMethod">NPN_HasMethod()</a></code></li>
+ <li><code><a href="/en-US/docs/NPN_SetException">NPN_SetException()</a></code></li>
+</ul>
+
+<h2 id="See_also" name="See_also">See also</h2>
+
+<ul>
+ <li><code><a href="/en-US/docs/NPClass">NPClass</a></code></li>
+</ul>

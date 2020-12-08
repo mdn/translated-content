@@ -1,0 +1,77 @@
+---
+title: extIEvents
+slug: Toolkit_API/extIEvents
+tags:
+  - FUEL
+  - Interfaces
+  - SMILE
+  - STEEL
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/Toolkit_API/extIEvents
+---
+<p></p>
+<p></p><div class="blockIndicator standardNote">
+<p>この記事は <a href="https://developer.mozilla.org/ja/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a>  の新機能について述べています</p>
+</div><p></p>
+<p><code>extIEvents</code> インタフェースは、カスタムイベントをサポートします。<code>extIEvents</code> は <code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/exthelper/extIApplication.idl" rel="custom">toolkit/components/exthelper/extIApplication.idl</a></code> で定義されています。</p>
+<p>XPCOM サービスを通して実装された <a class="internal" href="/ja/Toolkit_API/extIApplication" title="ja/Toolkit API/extIApplication"><code>extIApplication</code></a>: <a class="internal" href="/ja/Toolkit_API/FUEL" title="ja/Toolkit_API/FUEL">FUEL</a> (Firefox) または <a class="internal" href="/ja/Toolkit_API/STEEL" title="ja/Toolkit_API/STEEL">STEEL</a> (Thunderbird), <a class="internal" href="/ja/Toolkit_API/SMILE" title="ja/Toolkit_API/SMILE">SMILE</a> (SeaMonkey) のページの説明を参照してください。</p>
+<h2 id="Method_overview" name="Method_overview">メソッドの概要</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="#addListener.28.29">addListener</a>(in AString aEvent, in <a href="/ja/Toolkit_API/extIEventListener" title="ja/FUEL/EventListener">extIEventListener</a> aListener)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#removeListener.28.29">removeListener</a>(in AString aEvent, in <a href="/ja/Toolkit_API/extIEventListener" title="ja/FUEL/EventListener">extIEventListener</a> aListener)</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Attributes" name="Attributes">プロパティ</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">プロパティ</td>
+   <td class="header">型</td>
+   <td class="header">説明</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Methods" name="Methods">メソッド</h2>
+<h3 id="addListener.28.29" name="addListener.28.29">addListener()</h3>
+<p>イベントリスナをリストへ追加する。同一のイベントターゲットで同一のパラメータを持つ複数のイベントリスナを登録した場合、重複したインスタンスは破棄される。したがって、イベントリスナが 2 回呼ばれることはなく、<code>removeListener</code> メソッドによってイベントリスナを削除する必要も無い。</p>
+<pre class="eval">void addListener(in AString aEvent, in extIEventListener aListener)
+</pre>
+<h6 id="Parameters" name="Parameters">引数</h6>
+<dl>
+ <dt>
+  <code>aEvent</code></dt>
+ <dd>
+  イベントの名前。イベントのリストは、<a href="/ja/Toolkit_API/extIApplication" title="ja/Toolkit_API/extIApplication">extIApplication</a> で利用可能。</dd>
+ <dt>
+  <code>aListener</code></dt>
+ <dd>
+  追加するイベントリスナ。</dd>
+</dl>
+<h6 id="Return_value" name="Return_value">戻り値</h6>
+<p> </p>
+<h3 id="removeListener.28.29" name="removeListener.28.29">removeListener()</h3>
+<p>イベントリスナをリストから削除する。現在登録されているどのイベントリスナとも一致しない引数で <code>removeListener</code> を呼び出しても効果は無い。</p>
+<pre class="eval">void removeListener(in AString aEvent, in extIEventListener aListener)
+</pre>
+<h6 id="Parameters_2" name="Parameters_2">引数</h6>
+<dl>
+ <dt>
+  <code>aEvent</code></dt>
+ <dd>
+  イベントの名前。</dd>
+ <dt>
+  <code>aListener</code></dt>
+ <dd>
+  削除するイベントリスナ。</dd>
+</dl>
+<h6 id="Return_value_2" name="Return_value_2">戻り値</h6>
+<p> </p>
+<h2 id="See_also" name="See_also">参照</h2>
+<p><a class="internal" href="/ja/Toolkit_API/FUEL" title="ja/Toolkit_API/FUEL">FUEL</a> (Firefox), <a class="internal" href="/ja/Toolkit_API/STEEL" title="ja/Toolkit_API/STEEL">STEEL</a> (Thunderbird), <a class="internal" href="/ja/Toolkit_API/SMILE" title="ja/Toolkit_API/SMILE">SMILE</a> (SeaMonkey)</p>
+<p></p>

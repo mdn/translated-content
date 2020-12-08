@@ -1,0 +1,108 @@
+---
+title: Components object
+slug: Mozilla/Tech/XPCOM/Language_Bindings/Components_object
+tags:
+  - DOM
+  - Gecko
+  - Gecko DOM Reference
+  - 'XPCOM:Language Bindings'
+  - XPConnect
+  - 要更新
+translation_of: Mozilla/Tech/XPCOM/Language_Bindings/Components_object
+---
+<p><code>Components</code> オブジェクトは、<a href="/ja/docs/XPConnect">XPConnect</a> 機能が <a href="/ja/docs/JavaScript">JavaScript</a> へ反映されるのを仲介するオブジェクトです。<code>Components</code> オブジェクトは、実際には、XPConnect を利用するトップレベルのオブジェクトとして、JavaScript へ反映される {{Source("js/src/xpconnect/idl/xpccomponents.idl", "nsIXPCComponents")}} インタフェースのネイティブインスタンスです。</p>
+<p><code>Components</code> のプロパティの一部は高度な特権を必要とするため、Web ページ上では機能しません。</p>
+<p><code>Components</code> オブジェクトは次のメンバを持ちます。</p>
+<table class="fullwidth-table">
+  <tbody>
+    <tr>
+      <th>メンバ</th>
+      <th>説明</th>
+    </tr>
+    <tr>
+      <td><a href="/ja/docs/Components.classes"><code>classes</code></a></td>
+      <td>ContractID によるクラスの配列</td>
+    </tr>
+    <tr>
+      <td><a href="/ja/docs/Components.classesByID"><code>classesByID</code></a></td>
+      <td>CID によるクラスの配列</td>
+    </tr>
+    <tr>
+      <td><a href="/ja/docs/Components.Constructor"><code>function Object() { [native code] }</code></a></td>
+      <td>コンポーネントのコンストラクタのためのコンストラクタ</td>
+    </tr>
+    <tr>
+      <td><a href="/ja/docs/Components.Exception"><code>Exception</code></a></td>
+      <td>XPConnect の例外のためのコンストラクタ</td>
+    </tr>
+    <tr>
+      <td><a href="/ja/docs/Components.ID"><code>ID</code></a></td>
+      <td>XPCOM nsID のためのコンストラクタ</td>
+    </tr>
+    <tr>
+      <td><a href="/ja/docs/Components.interfaces"><code>interfaces</code></a></td>
+      <td>インタフェース名によるインタフェースの配列</td>
+    </tr>
+    <tr>
+      <td><a href="/ja/docs/Components.interfacesByID"><code>interfacesByID</code></a></td>
+      <td>IID によるインタフェースの配列</td>
+    </tr>
+    <tr>
+      <td><a href="/ja/docs/Components.isSuccessCode"><code>isSuccessCode</code></a></td>
+      <td>与えられた結果コードが成功かどうかを判別するための関数</td>
+    </tr>
+    <tr>
+      <td><a href="/ja/docs/Components.lastResult"><code>lastResult</code></a></td>
+      <td>直前の XPConnect 呼び出しの結果コード</td>
+    </tr>
+    <tr>
+      <td><a href="/ja/docs/Components.manager"><code>manager</code></a></td>
+      <td>グローバル XPCOM コンポーネントマネージャ</td>
+    </tr>
+    <tr>
+      <td><a href="/ja/docs/Components.results"><code>results</code></a></td>
+      <td>名前による既知の結果コードの配列</td>
+    </tr>
+    <tr>
+      <td><a href="/ja/docs/Components.returnCode"><code>returnCode</code></a></td>
+      <td>現在の呼び出しの未決定の結果</td>
+    </tr>
+    <tr>
+      <td><a href="/ja/docs/Components.stack"><code>stack</code></a></td>
+      <td>現在の JavaScript のコールスタック</td>
+    </tr>
+    <tr>
+      <td><a href="/ja/docs/Components.utils"><code>utils</code></a></td>
+      <td>いくつかの便利な機能へのアクセスを提供します。</td>
+    </tr>
+    <tr>
+      <td><a href="/ja/docs/Components.utils.evalInSandbox"><code>utils.evalInSandbox</code></a></td>
+      <td>JavaScript コードをサンドボックス内で実行。通常は限られた特権でコードを実行するときに使われます。</td>
+    </tr>
+    <tr>
+      <td><a href="/ja/docs/Components.utils.forceGC"><code>utils.forceGC</code></a></td>
+      <td>{{Gecko_minversion_inline(1.9)}} ガベージコレクションサイクルを強制します。</td>
+    </tr>
+    <tr>
+      <td><a href="/ja/docs/Components.utils.getWeakReference"><code>utils.getWeakReference</code></a></td>
+      <td>{{Gecko_minversion_inline(1.9)}} 渡されたオブジェクトの弱い参照を取得します。</td>
+    </tr>
+    <tr>
+      <td><a href="/ja/docs/Components.utils.import"><code>utils.import</code></a></td>
+      <td>{{Gecko_minversion_inline(1.9)}} JavaScript モジュールを、スコープを共有せずに現在のスクリプトに読み込みます。</td>
+    </tr>
+    <tr>
+      <td><a href="/ja/docs/Components.utils.lookupMethod"><code>utils.lookupMethod</code></a></td>
+      <td>XPCOM オブジェクトのネイティブの (例えばインタフェースで宣言された) メソッドやプロパティを参照します。<a href="/ja/docs/XPCNativeWrapper"><code>XPCNativeWrapper</code></a> と同じ役割を果たします。</td>
+    </tr>
+    <tr>
+      <td><a href="/ja/docs/Components.utils.reportError"><code>utils.reportError</code></a></td>
+      <td>JavaScript エラーオブジェクトを <a href="/ja/docs/Error_Console">エラーコンソール</a> に出力します。</td>
+    </tr>
+    <tr>
+      <td><a href="/ja/docs/Components.utils.Sandbox"><code>utils.Sandbox</code></a></td>
+      <td><code>evalInSandbox</code> で利用するサンドボックスオブジェクトを生成します。</td>
+    </tr>
+  </tbody>
+</table>
+<p><span class="comment">EDITORS! please keep descriptions of the following properties in sync with <a href="/ja/docs/Components.utils">Components.utils</a> page.</span></p>

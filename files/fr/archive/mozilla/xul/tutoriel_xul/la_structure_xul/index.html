@@ -1,0 +1,158 @@
+---
+title: La structure XUL
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/La_structure_XUL
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/XUL_Structure
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL/Introduction" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL/L'URL_Chrome">Suivant  »</a></p>
+</div>
+
+<p>Nous commencerons par regarder comment le système de fichiers de XUL est organisé sous Mozilla.</p>
+
+<h3 id="Comment_XUL_est_g.C3.A9r.C3.A9" name="Comment_XUL_est_g.C3.A9r.C3.A9">Comment XUL est géré</h3>
+
+<p>Dans Mozilla, XUL est géré pratiquement de la même manière que du HTML ou d'autres types de contenu. Lorsque vous entrez l'URL d'une page HTML dans le champs de saisie d'adresse du navigateur, ce dernier localise le site Web et télécharge le contenu. Le moteur d'affichage de Mozilla traite le contenu du code source HTML, et le transforme en un arbre de document. L'arbre est alors converti en un ensemble d'objets qui peuvent être affichés sur l'écran. Des styles <a href="/fr/CSS" title="fr/CSS">CSS</a>, des images et d'autres technologies sont utilisés pour contrôler la présentation. XUL fonctionne de la même manière.</p>
+
+<p>En fait, sous Mozilla, tous les types de documents, qu'il soit HTML ou XUL, ou même <a href="/fr/SVG" title="fr/SVG">SVG</a>, sont tous traités par le même code sous-jacent. Cela signifie que les mêmes propriétés CSS peuvent être utilisées pour styler à la fois du XUL et du HTML, et beaucoup de spécificités peuvent être partagées entre les deux. Cependant, quelques fonctionnalités restent spécifiques au HTML, comme les formulaires, et d'autres restent spécifiques au XUL, comme les <a href="/fr/Tutoriel_XUL/Overlays" title="fr/Tutoriel_XUL/Overlays">overlays</a>. Puisque les fichiers XUL et HTML sont traités de la même manière, vous pouvez les charger à partir du système de fichiers local, d'une page Web, d'une extension, ou d'une application autonome <a href="/fr/XULRunner" title="fr/XULRunner">XULRunner</a>.</p>
+
+<p>Les contenus provenant de sources distantes, comme par exemple <code><span class="nowiki">http://localhost/~username/</span></code>, qu'ils soient en HTML, XUL ou tout autre type de document, sont limités dans les opérations qu'ils peuvent réaliser pour des raisons de sécurité. C'est pour cela que Mozilla fournit une méthode pour installer localement du contenu et de l'enregistrer dans son système <strong><a href="/fr/Chrome" title="fr/Chrome">chrome</a></strong>. Une adresse URL spéciale <code>chrome://</code> est alors employée. Les fichiers ouverts depuis une adresse chrome reçoivent des privilèges plus élevés pour accéder aux fichiers locaux, ils peuvent accéder aux préférences et aux marque-pages, et réaliser d'autres opérations nécessitant certains privilèges. Bien entendu, les pages Web ne disposent pas de ces privilèges, à moins qu'ells soient signées avec un certificat numérique et que l'utilisateur ait obtenu un accès pour cela.</p>
+
+<p>La déclaration de paquetage chrome est la méthode par laquelle les extensions de Firefox ajoutent des fonctionnalités au navigateur. Les extensions sont de petits paquetages de fichiers XUL, Javascript, feuilles de styles et images, rassemblés en un seul fichier. Ce fichier peut être créé en utilisant un outil ZIP. Quand l'utilisateur le télécharge, il est installé sur sa machine. Il sera intégré dans le navigateur en utilisant une fonctionnalité spécifique appelée <a href="/fr/Overlays_XUL" title="fr/Overlays_XUL">overlay</a>, qui permet au XUL de l'extension et au XUL du navigateur de se combiner ensemble. Pour l'utilisateur, c'est comme si l'extension avait modifié le navigateur, mais en réalité, le code est séparé et l'extension peut être désinstallée facilement.</p>
+
+<p>Les paquetages déclarés ne sont pas nécessaires pour utiliser les overlays, bien sûr. Si ils ne le sont pas, vous ne pourrez pas y accéder via l'interface principale du navigateur, mais vous pourrez toujours y accéder depuis une URL chrome, si vous la connaissez.</p>
+
+<p>Des applications XUL autonomes peuvent également employer du code XUL inclus de façon similaire, mais il fera partie intégrante de l'application plutôt que de devoir être installé séparément comme une extension. Cependant, ce code XUL devra être déclaré dans le système chrome pour pouvoir s'afficher dans l'interface utilisateur de l'application.</p>
+
+<p>Il faut savoir que le navigateur Mozilla lui même regroupe en réalité toute une série de paquetages contenant des fichiers XUL, du JavaScript et des feuilles de styles. Ces fichiers sont ouverts depuis une URL chrome et ils ont des privilèges accrus et fonctionnent comme dans tous autres paquetages. Bien sûr, le navigateur est bien plus conséquent et plus sophistiqué que la plupart des extensions. Firefox et Thunderbird contiennent de nombreux composants qui sont tous écris en XUL et qui sont tous acceesibles via des URLs chrome. Vous pouvez examiner ces paquetages en parcourant le sous répertoire chrome où Firefox ou une application XUL a été installé.</p>
+
+<p>L'URL chrome commence toujours par 'chrome://'. De la même manière que les URLs <span class="nowiki">'http://'</span> réfèrent toujours aux sites Web distants, et que les URL 'file://' réfèrent toujours aux fichiers locaux, les URL 'chrome://' réfèrent toujours aux paquetages installés et aux extensions. Nous en verrons plus sur la syntaxe des URL chrome dans la prochaine section. Il est important de noter que lorsque l'on accède à du contenu depuis une URL chrome, il obtient les privilèges avancés tel que décrit plus haut contrairement aux autres types d'URL. Par exemple, une URL HTTP n'a pas de privilèges particuliers et une erreur apparaîtrait si une page Web essaie, par exemple, de lire un fichier local, alors qu'un fichier chargé depuis une URL chrome pourra lire des fichiers sans restrictions.</p>
+
+<p>Cette distinction est importante. Elle signifie qu'il y a certaines choses que le contenu des pages Web ne peut pas faire, comme lire les marque-pages de l'utilisateur. Cette distinction n'est pas basée sur le type du contenu affiché ; seul le type de l'URL est important. HTML et XUL placés sur un site Web n'ont pas de permissions supplémentaires. Mais HTML et XUL chargés avec une URL chrome obtiennent des permissions avancées.</p>
+
+<p>Si vous désirez utiliser XUL sur un site Web, il vous suffit de mettre les fichiers XUL sur le site Web comme vous le feriez avec un fichier HTML, et indiquer leurs URLs dans un navigateur (<code><span class="nowiki">http://localhost/xul.php</span></code>). Assurez vous que votre serveur Web est configuré pour transmettre les fichiers XUL avec le type mime <strong><code>application/vnd.mozilla.xul+xml</code></strong> (par ex en PHP <code>header('content-type: application/vnd.mozilla.xul+xml');</code>). Ce type mime permet à Mozilla de faire la différence entre HTML et XUL. Mozilla ne tient pas compte de l'extension du fichier sauf pour lire les fichiers locaux, mais vous devriez utiliser l'extension <code>.xul</code> pour tous les fichiers XUL. Vous pouvez ouvrir les fichiers XUL sur votre propre machine en les ouvrant dans le navigateur, ou en double cliquant sur le fichier dans votre gestionnaire de fichiers.</p>
+
+<div class="note">Souvenez vous que les fichiers XUL distants ont des restrictions significatives sur ce qu'ils peuvent faire.</div>
+
+<h3 id="Type_de_documents.C2.A0_HTML_XML_XUL_CSS" name="Type_de_documents.C2.A0:_HTML_XML_XUL_CSS">Type de documents : HTML XML XUL CSS</h3>
+
+<p>Tandis que la plupart des fonctionnalités sont partagées entre HTML et XUL, Mozilla utilise différents types de document pour chacun d'eux. Il y a trois principaux types de document dans Mozilla : HTML, XML et XUL. Bien entendu, le type HTML est utilisé pour les documents HTML, le type XUL est utilisé pour les documents XUL, et le type XML est utilisé pour les autres documents en XML. Puisque XUL est aussi du XML, il correspond à un sous-type du type générique XML. Il y a de subtiles différences dans les fonctionnalités. Par exemple, alors que les contrôles de formulaire dans les pages HTML sont accessibles via la propriété <code>document.forms</code>, cette propriété n'est pas disponible pour les documents XUL puisque XUL n'a pas de formulaire dans le sens HTML du terme. D'un autre coté, les fonctionnalités spécifiques de XUL comme les overlays ou les gabarits ne sont utilisables que dans les documents XUL.</p>
+
+<p>La distinction entre les documents est importante. Certaines fonctionnalités XUL sont utilisables dans des documents HTML ou XML si elles ne sont pas spécifiques au type de document  mais d'autres seront liées au type du document. Par exemple, vous pourrez vous servir des types de mise en page XUL dans d'autres documents car ils ne reposent pas sur le type de document pour fonctionner.</p>
+
+<p>Pour résumer les points précédents :</p>
+
+<ul>
+ <li>Mozilla affiche <a href="/fr/HTML" title="fr/HTML">HTML</a> et <a href="/fr/XUL" title="fr/XUL">XUL</a> en utilisant le même moteur de rendu et utilise <a href="/fr/CSS" title="fr/CSS">CSS</a> pour spécifier leur présentation.</li>
+ <li>XUL peut être chargé à partir d'un site distant, du système de fichiers local, ou installé comme un paquetage en étant accessible par une URL <a href="/fr/Chrome" title="fr/Chrome">chrome</a>. C'est ce que font les extensions du navigateur.</li>
+ <li>Les URLs chrome servent à accéder aux paquetages installés en les ouvrant avec des privilèges avancés.</li>
+ <li>HTML, XML et XUL représentent chacun un type différent de document. Certaines fonctionnalités peuvent être utilisées dans n'importe quel type de document tandis que d'autres sont spécifiques à un type de document.</li>
+</ul>
+
+<p>Les prochaines sections décrivent la structure de base d'un paquetage chrome qui peut être installé dans Mozilla. Cependant, si vous voulez seulement démarrer la création d'une simple application, rendez vous directement sur la page <a href="/fr/Tutoriel_XUL/Créer_une_fenêtre" title="fr/Tutoriel_XUL/Créer_une_fenêtre">Créer une fenêtre</a> et revenez sur cette section plus tard.</p>
+
+<h3 id="Organisation_d.27un_paquetage" name="Organisation_d.27un_paquetage">Organisation d'un paquetage</h3>
+
+<p>Mozilla est conçu de telle manière que vous pouvez pré-installer autant de composants que vous le souhaitez. Chaque extension est également un composant muni d'une adresse chrome différente. Il y a également un composant par thèmes graphiques ou langues. Chacun de ces composants, ou paquetages, est constitué d'un ensemble de fichiers décrivant l'interface utilisateur. Par exemple, le composant de messagerie décrit la fenêtre listant les messages des courriers, la fenêtre de rédaction et les boîtes de dialogues du carnet d'adresses.</p>
+
+<p>Les paquetages inclus dans Mozilla sont situés dans le répertoire chrome situé dans le répertoire d'installation de Mozilla. Ce répertoire chrome est l'endroit où sont situés tous les fichiers qui décrivent l'interface utilisateur employée par Mozilla, tels que le client de messagerie et d'autres applications. Typiquement pour une application, vous placerez vos fichiers XUL dans ce répertoire, sauf pour les extensions où les fichiers sont placés dans le répertoire extensions du profil utilisateur. La simple copie d'un fichier XUL dans le répertoire 'chrome' ne lui donne pas de droits supplémentaires et ne le rend pas accessible depuis une URL chrome. Pour que des droits supplémentaires lui soit attribués, vous devrez créer un fichier manifest et le placez dans le répertoire chrome. Ce fichier est facile à créer car il n'est composé que de quelques lignes. Il sert orienter une URL chrome vers l'emplacement d'un fichier ou d'un répertoire sur le disque où les fichiers XUL sont situés. Vous trouverez plus de détails sur la manière de créer ce fichier dans <a href="/fr/Tutoriel_XUL/Les_fichiers_manifest" title="fr/Tutoriel_XUL/Les_fichiers_manifest">une prochaine section</a>.</p>
+
+<p>La seule manière pour du contenu d'être accessible depuis une URL chrome est de créer un paquetage comme décrit dans les prochaines sections. Ce répertoire est nommé 'chrome' en référence aux répertoires où sont placés les paquetages chrome de Mozilla.</p>
+
+<p>Pour augmenter la confusion, il y a deux autres endroits où le mot "chrome" peut apparaître. Il y a l'argument en ligne de commande <code>-chrome</code> et le modificateur "chrome" de la fonction <code><a href="/fr/DOM/window.open" title="fr/DOM/window.open">window.open()</a></code>. L'appel à l'une de ces deux fonctionnalités n'autorise pas plus de privilèges. Elles sont plutôt utilisées pour ouvrir une nouvelle fenêtre principale sans l'interface utilisateur du navigateur comme les menus ou la barre d'outils. Vous utiliserez en général ces caractéristiques dans des applications XUL plus complexes lorsque vous ne voulez pas de fenêtre de navigation autour de vos boîtes de dialogue.</p>
+
+<p>Les fichiers d'un paquetage sont généralement combinés dans un simple fichier JAR. Un fichier JAR peut être créé et examiné en utilisant un utilitaire ZIP. Par exemple, ouvrez quelques uns des fichiers JAR du répertoire <code>chrome</code> de Mozilla pour voir la structure de leurs paquetages. Bien qu'il soit normal de combiner les fichiers dans un fichier JAR, les paquetages peuvent également être accessibles dans une forme décompressée à l'intérieur d'un ensemble de répertoire. Généralement, vous ne distribuerez pas un paquetage de cette façon, mais c'est une méthode pratique pendant le développement puisque vous pouvez éditer les fichiers du répertoire et ensuite les recharger sans avoir à ré-empaqueter ou réinstaller l'ensemble.</p>
+
+<p>Par défaut, les applications Mozilla analysent les fichiers XUL et les scripts, et mémorisent une version pré-compilée dans une session de l'application afin d'améliorer les performances. De ce fait, les fichiers XUL ne seront pas rechargés même si les fichiers sources ont été modifiés. Pour modifier ce mécanisme, il est nécessaire de modifier la préférence <code>nglayout.debug.disable_xul_cache</code>. Dans Firefox, cette préférence doit être ajoutée et définie à 'true' dans les préférences de l'utilisateur en tapant "about:config" dans la barre d'adresse. Vous pouvez aussi éditer manuellement le fichier des préférences <code>user.js</code> et y ajouter la ligne suivante :</p>
+
+<pre class="eval">pref("nglayout.debug.disable_xul_cache", true);
+</pre>
+
+<p>Il y a habituellement trois parties différentes dans un paquetage chrome, bien qu'elles soient facultatives. Chaque partie est enregistrée dans un répertoire différent. Ces trois ensembles décris en dessous sont le contenu, le thème graphique et la localisation. Un paquetage particulier pourrait fournir un ou plusieurs thèmes et localisations, mais un utilisateur peut les remplacer par les siens. De plus, un paquetage peut inclure plusieurs applications différentes, chacune accessible via des URLs chrome différentes. Le système de paquetage est suffisamment souple pour n'inclure que les parties dont vous avez besoin, et permettre le téléchargement séparé d'autres parties, comme le texte pour les différentes langues.</p>
+
+<p>Les trois types de paquetages chrome sont :</p>
+
+<p> </p>
+
+<dl>
+ <dt><strong>Content</strong> - Fenêtres et scripts</dt>
+ <dd>Contient les déclarations des fenêtres et des éléments d'interface utilisateur. Ceux-ci sont stockés dans les fichiers XUL, qui ont l'extension xul. Il peut y avoir plusieurs fichiers XUL, mais la fenêtre principale devrait toujours avoir un nom de fichier identique au nom du paquetage. Par exemple, le paquetage editor contiendra un fichier appelé <code>editor.xul</code>. Les scripts (<abbr title="Note du Traducteur">NdT</abbr> : javascript) sont placés dans des fichiers séparés à côté des fichiers XUL.</dd>
+ <dt><strong>Skin</strong> - feuilles de style, images et autres fichiers de thèmes</dt>
+ <dd>Les feuilles de style décrivent des détails de l'aspect d'une fenêtre. Elles sont stockées séparément des fichiers XUL pour faciliter la modification du thème d'une application. Toutes les images utilisées sont également stockées ici.</dd>
+ <dt><strong>Locale</strong> - fichiers spécifiques de langues</dt>
+ <dd>Tous les textes qui sont affichés dans une fenêtre sont stockés séparément. De cette façon, un utilisateur peut avoir une configuration pour sa propre langue.</dd>
+</dl>
+
+<h3 id="Paquetages_de_contenu" name="Paquetages_de_contenu">Paquetages de contenu</h3>
+
+<p>Le nom du fichier JAR devrait décrire ce qu'il contient, mais vous pouvez vous en assurer en regardant son contenu. Examinons par exemple le paquetage du navigateur inclus avec Firefox. Si vous décompressez les fichiers de <code>browser.jar</code>, vous verrez qu'ils forment une structure de répertoire ressemblant à :</p>
+
+<pre>content
+   browser
+      browser.xul
+      browser.js
+      --d'autres fichiers XUL et JS ici--
+      bookmarks
+         --les fichiers pour les marque-pages ici--
+      preferences
+         --les fichiers pour les préférences ici--
+.
+.
+.</pre>
+
+<p>On peut facilement identifier cela comme le contenu d'un paquetage, car le dossier supérieur s'appelle <code>content</code>. Pour les thèmes, le dossier aurait été appelé <code>skin</code> et pour les localisations, il aurait été appelé <code>locale</code>. En fait, ce n'est pas une obligation mais vous devriez suivre cette convention pour rendre votre paquetage plus clair. Certains paquetages peuvent inclure une section <em>content</em>, <em>skin</em> et <em>locale</em>. Dans ces paquetages, vous trouverez un sous-répertoire pour chaque section. Par exemple, Chatzilla est distribué de cette manière.</p>
+
+<p>Le dossier <code>content/browser</code> contient un certain nombre de fichiers avec les extensions <code>.xul</code> et <code>.js</code>. Les fichiers XUL sont ceux qui ont une extension <code>.xul</code>. Les fichiers avec l'extension <code>.js</code> sont des fichiers de JavaScript contenant les scripts qui gèrent les fonctionnalités d'une fenêtre. Beaucoup de fichiers XUL ont un ou plusieurs fichiers de script qui leur est associé.</p>
+
+<p>Dans la liste ci-dessus, deux fichiers ont été montrés. Il y en a évidemment d'autres, mais qui n'apparaissent pas pour des raisons de simplicité. Le fichier <code>browser.xul</code> est le fichier XUL qui décrit la fenêtre principale du navigateur. La fenêtre principale du contenu d'un paquetage devrait toujours porter le même nom que le nom du paquetage, avec une extension <code>.xul</code>. Dans ce cas, le paquetage étant nommé 'browser', le fichier sera <code>browser.xul</code>. D'autres fichiers XUL vont décrire des fenêtres différentes, comme par exemple le fichier <code>pageInfo.xul</code> qui décrit la boîte de dialogue 'Information sur la page'.</p>
+
+<p>Tous les paquetages contiennent un fichier <code>contents.rdf</code> qui décrit le paquetage, son auteur et les overlays qu'il utilise. Ce fichier est cependant devenu obsolète et a été remplacé par une mécanisme plus simple. Cette nouvelle méthode est le fichier manifest mentionné précédemment, et vous trouverez ce fichier dans le répertoire chrome avec une extension <code>.manifest</code>. Par exemple, <code>browser.manifest</code> décrit le paquetage browser.</p>
+
+<p>Plusieurs sous-répertoires, tels que <code>bookmarks</code> et <code>preferences</code>, décrivent des sections complémentaires au composant du navigateur. Ils sont placés dans des répertoires différents pour une meilleure organisation des fichiers.</p>
+
+<h3 id="Styles_et_th.C3.A8mes_graphiques" name="Styles_et_th.C3.A8mes_graphiques">Styles et thèmes graphiques</h3>
+
+<p>Bien que le code sous-jacent de Mozilla les appelle <em>skins</em> et que l'interface utilisateur les appelle <em>thèmes</em>, ils désignent la même chose. Le fichier <code>classic.jar</code> décrit le thème graphique inclus par défaut avec Firefox. La structure est semblable aux paquetages de contenu. Examinons par exemple le fichier <code>classic.jar</code> :</p>
+
+<pre>skin
+   classic
+      browser
+         browser.css
+         -- les autres fichiers thèmes du navigateur sont ici --
+      global
+         -- les fichiers thèmes globaux sont ici --
+.
+.
+.</pre>
+
+<p>Ici encore, le respect de cette structure de répertoires n'est pas nécessaire, mais elle est conventionnelle. En réalité, vous pouvez mettre les fichiers dans un seul répertoire de niveau supérieur sans aucun sous-répertoire. Cependant, pour des applications plus importantes, des sous-répertoires servent à séparer les différents composants. Dans l'exemple précédent, un répertoire est dédié aux fichiers du thème graphique du navigateur et un autre pour les fichiers du thème global. Le répertoire global contient les fichiers de styles applicables à tous les paquetages. Ces fichiers s'appliquent à tous les composants et seront inclus à toutes vos applications autonomes. La partie globale définit l'apparence de tous les éléments graphiques communs, tandis que les autres répertoires contiennent les fichiers propres à ces applications. Firefox inclut à la fois les fichiers du thème graphique global et du navigateur dans une seule archive, mais ils pourraient être inclus séparément.</p>
+
+<p>Un thème se compose de fichiers CSS et d'un certain nombre d'images utilisés pour définir l'aspect d'une interface. Le fichier <code>browser.css</code> est utilisé par <code>browser.xul</code> et contient les styles pour définir l'apparence des différences parties de l'interface du navigateur. À nouveau, notez le nom du fichier <code>browser.css</code>, qui a le même nom que le paquetage. En changeant de fichier CSS, vous pouvez modifier l'apparence d'une fenêtre sans changer son fonctionnement. C'est ainsi que vous pouvez créer un nouveau thème. La partie XUL est toujours la même, mais la partie contenant le thème peut varier indépendamment.</p>
+
+<h3 id="Localisation" name="Localisation">Localisation</h3>
+
+<p>Le fichier <code>en-US.jar</code> décrit l'information de langage pour chaque composant, dans le cas présent pour l'anglais des États-Unis. Comme pour les thèmes, chaque fichier de langue contient les fichiers qui indiquent le texte utilisé par le paquetage pour une langue spécifique. La structure de 'locale' étant similaire aux autres, elle ne sera pas listée ici.</p>
+
+<p>Le texte localisé est stocké dans deux types de fichiers, des fichiers DTD et des fichiers de propriétés. Les fichiers DTD ont une extension <code>.dtd</code> et contiennent les déclarations d'entités, une pour chaque chaîne de caractères qui est utilisée dans une fenêtre. Par exemple, le fichier <code>browser.dtd</code> contient des déclarations d'entités pour chaque commande du menu. En outre, des raccourcis clavier pour chaque commandes sont également définis, parce qu'ils peuvent être différents selon la langue. Les fichiers DTD sont utilisés par des fichiers XUL, et donc en général, vous en aurez un par fichier XUL. La partie 'locale' contient également des fichiers de propriétés qui sont similaires, mais qui sont utilisés par les fichiers de script. Le fichier <code>browser.properties</code> contient quelques chaînes de caractères de ce type.</p>
+
+<p>Cette structure vous permet de traduire Mozilla ou un composant dans une langue différente en ajoutant juste une nouvelle partie 'locale' pour cette langue. Vous n'avez pas à modifier le code XUL. De plus, d'autres personnes peuvent fournir des paquetages séparés qui appliquent des thèmes ou des localisations à votre partie contenu, apportant ainsi un nouveau thème ou une nouvelle langue sans avoir à modifier le paquetage original.</p>
+
+<h3 id="Autres_paquetages" name="Autres_paquetages">Autres paquetages</h3>
+
+<p>Il existe un paquetage spécial appelé toolkit (ou global). Nous avions déjà vu le répertoire global pour des thèmes. Le fichier <code>toolkit.jar</code> contient la partie du contenu lui correspondant. Il contient quelques boîtes de dialogues et définitions globales. Il définit également l'aspect par défaut et les fonctionnalités des divers éléments graphiques tels que des champs de saisie et des boutons. Les fichiers situés dans la partie globale de l'archive du thème contiennent l'apparence par défaut de tous les éléments XUL d'interface. Le paquetage toolkit est utilisé par toutes les applications XUL.</p>
+
+<h3 id="Ajouter_un_paquetage" name="Ajouter_un_paquetage">Ajouter un paquetage</h3>
+
+<p>Mozilla place dans le répertoire <code>chrome</code> les paquetages qui sont inclus avec l'installation, mais il n'y a pas d'obligation à cela. Lors de l'installation d'un autre paquetage, vous pouvez le placer n'importe où sur le disque dès lors que son fichier manifest pointe vers lui. Il est commun d'installer les nouveaux paquetages dans le répertoire <code>chrome</code> simplement par convenance. Cependant ils fonctionneront aussi bien à partir d'un autre répertoire, ou de quelque part sur votre réseau local. Vous ne pouvez pas les placer sur un site distant, à moins que le site distant soit monté sur le système de fichiers local.</p>
+
+<p>Il y a deux répertoires <code>chrome</code> utilisés par les applications XUL : l'un est au même emplacement que l'application, l'autre fait partie du profil utilisateur. Le premier permet aux paquetages d'être partagés à tous les utilisateurs tandis que le second permet un accès aux paquetages à un utilisateur spécifique. Les extensions qui sont installées dans un répertoire extension séparé ne sont également accessibles qu'à un utilisateur spécifique. Chaque fichiers manifest situés dans l'un ou l'autre des répertoires chrome seront examinés pour voir quels paquetages sont installés.</p>
+
+<hr>
+<p>Dans la prochaine section, nous regarderons comment se référer aux paquetages en utilisant les URL chrome.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL/Introduction" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL/L'URL_Chrome">Suivant  »</a></p>
+</div>

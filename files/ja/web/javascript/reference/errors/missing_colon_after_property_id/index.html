@@ -1,0 +1,77 @@
+---
+title: 'SyntaxError: missing : after property id'
+slug: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
+tags:
+  - Error
+  - Errors
+  - JavaScript
+  - SyntaxError
+translation_of: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
+---
+<div>{{jsSidebar("Errors")}}</div>
+
+<h2 id="メッセージ">メッセージ</h2>
+
+<pre class="syntaxbox">SyntaxError: missing : after property id
+</pre>
+
+<h2 id="エラータイプ">エラータイプ</h2>
+
+<p>{{jsxref("SyntaxError")}}</p>
+
+<h2 id="何がうまくいかなかったのか？">何がうまくいかなかったのか？</h2>
+
+<p><a href="/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer">オブジェクト初期化子</a>構文でオブジェクトを生成する場合、オブジェクトのプロパティのキーと値をコロン (<code>:</code>) で区切ります。</p>
+
+<pre class="brush: js">var obj = { propertyKey: 'value' };
+</pre>
+
+<h2 id="例">例</h2>
+
+<h3 id="コロン_vs._代入記号">コロン vs. 代入記号</h3>
+
+<p>この方法で代入記号をオブジェクト初期化子構文として使用できないため、このコードは失敗します。</p>
+
+<pre class="brush: js example-bad">var obj = { propertyKey = 'value' };
+// SyntaxError: missing : after property id
+</pre>
+
+<p>正しくはコロンを使用するか、オブジェクトを生成した後に角括弧を使用して新しいプロパティを割り当てます。</p>
+
+<pre class="brush: js example-good">var obj = { propertyKey: 'value' };
+
+// または
+
+var obj = { };
+obj['propertyKey'] = 'value';
+</pre>
+
+<h3 id="空のプロパティ">空のプロパティ</h3>
+
+<p>このような方法で空のプロパティを生成できません:</p>
+
+<pre class="brush: js example-bad">var obj = { propertyKey; };
+// SyntaxError: missing : after property id
+</pre>
+
+<p>値がないプロパティを定義する必要がある場合、値として {{jsxref("null")}} を使用します。</p>
+
+<pre class="brush: js example-good">var obj = { propertyKey: null };</pre>
+
+<h3 id="計算されたプロパティ">計算されたプロパティ</h3>
+
+<p>式からプロパティキーを生成する場合、角括弧を使用します。そうしなければ、プロパティ名は計算できません:</p>
+
+<pre class="brush: js example-bad">var obj = { 'b'+'ar': 'foo' };
+// SyntaxError: missing : after property id
+</pre>
+
+<p>式を括弧 <code>[]</code> に入れます:</p>
+
+<pre class="brush: js example-good">var obj = { ['b'+'ar']: 'foo' };</pre>
+
+<h2 id="関連項目">関連項目</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">オブジェクト初期化子</a></li>
+</ul>

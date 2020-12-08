@@ -1,0 +1,379 @@
+---
+title: radio
+slug: Mozilla/Tech/XUL/radio
+tags:
+  - XUL Elements
+  - XUL Reference
+translation_of: Archive/Mozilla/XUL/radio
+---
+<div class="noinclude">
+ <span class="breadcrumbs XULRef_breadcrumbs">
+ « <a href="/zh-CN/docs/XUL_Reference">XUL Reference home</a>    [
+ <a href="#Examples">示例</a> |
+ <a href="#Attributes">属性</a> |
+ <a href="#Properties">特性</a> |
+ <a href="#Methods">方法</a> |
+ <a href="#Related">相关</a> ]
+</span></div>
+<p>An element that can be turned on and off. Radio buttons are almost always grouped together in groups. Only one radio button within the same <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code> may be selected at a time. The user can switch which radio button is turned on by selecting it with the mouse or keyboard. Other radio buttons in the same group are turned off. A label, specified with the <code id="a-label"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code> attribute may be added beside the radio button.</p>
+<p>More information is available in the <a href="cn/XUL_Tutorial/Input_Controls">XUL tutorial</a>.</p>
+<dl>
+ <dt>
+  Attributes</dt>
+ <dd>
+  <a href="#a-accesskey">accesskey</a>, <a href="#a-command">command</a>, <a href="#a-crop">crop</a>, <a href="#a-disabled">disabled</a>, <a href="#a-focused">focused</a>, <a href="#a-group">group</a>, <a href="#a-image">image</a>, <a href="#a-label">label</a>, <a href="#a-selected">selected</a>, <a href="#a-tabindex">tabindex</a>, <a href="#a-value">value</a></dd>
+</dl>
+<dl>
+ <dt>
+  Properties</dt>
+ <dd>
+  <a href="#p-accessKey">accessKey</a>, <a href="#p-accessibleType">accessibleType</a>, <a href="#p-radio.control">control</a>, <a href="#p-crop">crop</a>, <a href="#p-disabled">disabled</a>, <a href="#p-image">image</a>, <a href="#p-label">label</a>, <a href="#p-radioGroup">radioGroup</a>, <a href="#p-selected">selected</a>, <a href="#p-tabIndex">tabIndex</a>, <a href="#p-value">value</a></dd>
+</dl>
+<h3 id="Examples" name="Examples">Examples</h3>
+<div class="float-right">
+ <img alt="Image:XUL_ref_radio.png"></div>
+<pre>&lt;radiogroup&gt;
+  &lt;radio id="orange" label="Red" accesskey="R"/&gt;
+  &lt;radio id="violet" label="Green"  accesskey="G" selected="true"/&gt;
+  &lt;radio id="yellow" label="Blue"  accesskey="B" disabled="true"/&gt;
+&lt;/radiogroup&gt;
+</pre>
+<h3 id="Attributes" name="Attributes">Attributes</h3>
+<p> </p><div id="a-accesskey">
+
+
+
+
+<dl>
+ <dt><code id="a-accesskey"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/accesskey">accesskey</a></code></dt>
+ <dd>类型:
+ <i>character【字符】</i>
+ </dd>
+ <dd>本属性允许为控件（元素）设定一个字符作为快捷键，这个字符应该是 <code><code id="a-label"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> 属性文本中的一个字符。该字符将会被加下划线以重点强调，平台和主体的变换并不影响这一表现行为。 当用户点击 ALT (在其他平台上具有类似功能的键) 和这个字符对应的按键时， 控件（元素）将立刻被从窗口中的某处激活或/并且获得焦点 <b>。虽说字符不分大小写，但是当label中存在大写字符和小写字符时，快捷键的字符将首先选择与之完全匹配的那一个，如果label中存在两个或更多的与accesskey字符相同的字符，其中的第一个字符将被加下划线。</b></dd>
+ <dt>      *(有些键在监听按键事件时，分别对应event.ctrlKey和event.metaKey。)</dt>
+</dl>
+
+<p> </p>
+
+<h4 id="Example" name="Example">Example</h4>
+
+<div class="float-right"><img alt="Image:XUL_ref_accesskey_attr.png"></div>
+
+<pre>&lt;vbox&gt;
+  &lt;label value="Enter Name" accesskey="e" control="myName"/&gt;
+  &lt;textbox id="myName"/&gt;
+  &lt;button label="Cancel" accesskey="n"/&gt;
+  &lt;button label="Ok" accesskey="O"/&gt;
+&lt;/vbox&gt;
+</pre>
+
+<h4 id="See_also" name="See_also">See also</h4>
+
+<p><code id="a-label"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code> attribute, <code id="a-acceltext"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/acceltext">acceltext</a></code> attribute</p>
+
+<p></p>
+</div> <div id="a-command">
+
+<dl>
+ <dt>
+  <code id="a-command"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/command">command</a></code></dt>
+ <dd>
+  Type:
+  <i>
+   element id</i>
+ </dd>
+ <dd>
+  Set to the <code id="a-id"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code> of a <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/command" title="command">command</a></code> element that is being observed by the element.</dd>
+</dl>
+
+<p></p>
+</div> <div id="a-crop">
+
+<dl>
+ <dt>
+  <code id="a-crop"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/crop">crop</a></code></dt>
+ <dd>
+  Type:
+  <i>
+   one of the values below</i>
+ </dd>
+ <dd>
+  If the label of the element is too big to fit in its given space, the text will be cropped on the side specified by the <code>crop</code> attribute. An ellipsis will be used in place of the cropped text. If the box direction is reversed, the cropping is reversed.</dd>
+</dl>
+<ul>
+ <li><code>start</code>: The text will be cropped on its left side.</li>
+ <li><code>end</code>: The text will be cropped on its right side.</li>
+ <li><code>left</code>: <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span> The text will be cropped on its left side.</li>
+ <li><code>right</code>: <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span> The text will be cropped on its right side.</li>
+ <li><code>center</code>: The text will be cropped in the middle, showing both the start and end of the text normally.</li>
+ <li><code>none</code>: The text will be not be cropped using an ellipsis. However, the text will simply be cut off if it is too large. The side depends on the CSS text alignment.</li>
+</ul>
+
+<p></p>
+</div> <div id="a-disabled">
+
+
+<dl>
+ <dt><code id="a-disabled"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code></dt>
+ <dd> </dd>
+ <dd>
+ <h5 id="类型boolean">类型:<em>boolean</em></h5>
+ </dd>
+ <dd>
+ <h5 id="表示元素是被禁用的。">表示元素是被禁用的。</h5>
+
+ <p>如果这个元素的disabled属性被设置为true，表示元素被禁用，被禁用的属性在页面上通常会显示灰色文本，它无法响应用户的操作，它也无法得到光标。</p>
+
+ <p>然而，这个元素仍然能够响应鼠标事件，如果要启用这个元素，把disabled设置为false</p>
+ </dd>
+</dl>
+
+<h4 id="示例：">示例：</h4>
+
+<div class="float-right"><img alt="Image:XUL_ref_attr_disabled.png" src="https://mdn.mozillademos.org/files/1742/XUL_ref_attr_disabled.png"></div>
+
+<pre><code>// Disabling an element
+document.getElementById('buttonRemove').setAttribute("disabled", "true");
+
+// Enabling back an element by removing the "disabled" attribute
+document.getElementById('buttonRemove').removeAttribute("disabled");</code></pre>
+
+<p></p><div class="blockIndicator standardNote standardNoteBlock">
+    <p><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Firefox/Releases/3.5">Firefox 3.5 note</a></p>
+    <p style="font-weight: 400;">For <a href="https://developer.mozilla.org/en-US/docs/XUL/keyset" title="en/XUL/Keyset"><code>keyset</code></a> elements, support for this attribute was added in Firefox 3.5.</p>
+</div><p></p>
+</div> <div id="a-focused">
+
+
+<dl>
+ <dt><code id="a-focused"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/focused">focused</a></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>This attribute is <code>true</code> if the element is focused.</dd>
+</dl>
+</div> <div id="a-group">
+
+
+<dl>
+ <dt><code id="a-group"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/group">group</a></code></dt>
+ <dd>Type: <em>string group name</em> </dd>
+ <dd>Buttons with type="radio" and the same value for their group attribute are put into the same group. Only one button from each group can be checked at a time. If the user selects one the buttons, the others in the group are unchecked.</dd>
+</dl>
+</div> <div id="a-image">
+
+<dl>
+ <dt>
+  <code id="a-image"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/image">image</a></code></dt>
+ <dd>
+  Type:
+  <i>
+   image URL</i>
+ </dd>
+ <dd>
+  The URL of the image to appear on the element. If this attribute is empty or left out, no image appears. The position of the image is determined by the <code id="a-dir"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/dir">dir</a></code> and <code id="a-orient"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code> attributes.</dd>
+</dl>
+
+<p></p>
+</div> <div id="a-label">
+
+<dl>
+ <dt>
+  <code id="a-label"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></dt>
+ <dd>
+  Type: <em>string</em></dd>
+ <dd>
+  The label that will appear on the element. If this is left out, no text appears.<br>
+  label 在元素上显示。如果左侧出界，则不显示任何文字。</dd>
+</dl>
+
+<p></p>
+</div> <div id="a-selected">
+
+<dl>
+ <dt>
+  <code id="a-selected"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/selected">selected</a></code></dt>
+ <dd>
+  Type:
+  <i>
+   boolean</i>
+ </dd>
+ <dd>
+  Indicates whether the element is selected or not. This value is read-only. To change the selection, set either the <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/selectedIndex">selectedIndex</a></span></code> or <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/selectedItem">selectedItem</a></span></code> property of the containing element.</dd>
+</dl>
+
+<p></p>
+</div> <div id="a-tabindex">
+
+
+<dl>
+ <dt><code id="a-tabindex"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/tabindex">tabindex</a></code></dt>
+ <dd>Type:<em>integer</em></dd>
+ <dd>当用户按下 "<kbd>tab</kbd>" 键时焦点移动到元素上的顺序。<code>tabindex</code> 数字越大，顺序越靠后。</dd>
+</dl>
+
+
+
+<p></p>
+</div> <div id="a-value">
+
+<dl>
+ <dt>
+  <code id="a-value"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code></dt>
+ <dd>
+  Type:
+  <i>
+   string</i>
+ </dd>
+ <dd>
+  The string attribute allows you to associate a data value with an element. It is not used for any specific purpose, but you can access it with a script for your own use.</dd>
+</dl>
+
+<p></p>
+</div><p></p>
+<h3 id="Properties" name="Properties">Properties</h3>
+<p> </p><div id="p-accessKey">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/accessKey">accessKey</a></span></code></dt>
+ <dd>
+  Type:
+  <i>
+   character</i>
+ </dd>
+ <dd>
+  Gets and sets the value of the <code id="a-accesskey"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/accesskey">accesskey</a></code> attribute.</dd>
+</dl>
+
+<p></p></div> <div id="p-accessibleType">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/accessibleType">accessibleType</a></span></code></dt>
+ <dd>
+  Type:
+  <i>
+   integer</i>
+ </dd>
+ <dd>
+  A value indicating the type of accessibility object for the element.</dd>
+</dl>
+
+<p></p></div> <div id="p-radio.control">
+
+<dl>
+ <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/radio.control">control</a></span></code></dt>
+ <dd>Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code> element</em></dd>
+ <dd>Returns the enclosing <code><a href="/en-US/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code> that the <code><a href="/en-US/docs/Mozilla/Tech/XUL/radio" title="radio">radio</a></code> element is contained within, which may or may not be its direct parent.</dd>
+</dl></div> <div id="p-crop">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/crop">crop</a></span></code></dt>
+ <dd>
+  Type:
+  <i>
+   string</i>
+ </dd>
+ <dd>
+  Gets and sets the value of the <code id="a-crop"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/crop">crop</a></code> attribute.</dd>
+</dl>
+
+<p></p></div> <div id="p-disabled">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/disabled">disabled</a></span></code></dt>
+ <dd>
+  Type:
+  <i>
+   boolean</i>
+ </dd>
+ <dd>
+  Gets and sets the value of the <code id="a-disabled"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code> attribute.</dd>
+</dl>
+
+<p></p></div> <div id="p-image">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/image">image</a></span></code></dt>
+ <dd>
+  Type:
+  <i>
+   image URL</i>
+ </dd>
+ <dd>
+  Gets and sets the value of the <code id="a-image"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/image">image</a></code> attribute.</dd>
+</dl>
+
+<p></p></div> <div id="p-label">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/label">label</a></span></code></dt>
+ <dd>
+  Type:
+  <i>
+   string</i>
+ </dd>
+ <dd>
+  Gets and sets the value of the <code id="a-label"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code> attribute.</dd>
+</dl>
+
+<p></p></div> <div id="p-radioGroup">
+
+<dl>
+ <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/radioGroup">radioGroup</a></span></code></dt>
+ <dd>Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code> element</em></dd>
+ <dd>Equivalent to the <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/control">control</a></span></code> property.</dd>
+</dl></div> <div id="p-selected">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/selected">selected</a></span></code>&lt;magic name="\"PAGENAME\"/"&gt;&lt;/magic&gt;</dt>
+ <dd>
+  Type:
+  <i>
+   boolean</i>
+ </dd>
+ <dd>
+  This property's value is <code>true</code> if this element is selected, or <code>false</code> if it is not. This property is read only.</dd>
+</dl></div> <div id="p-tabIndex">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/tabIndex">tabIndex</a></span></code></dt>
+ <dd>
+  Type:
+  <i>
+   integer</i>
+ </dd>
+ <dd>
+  Gets and sets the value of the <code id="a-tabindex"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/tabindex">tabindex</a></code> attribute.</dd>
+</dl>
+
+<p></p></div> <div id="p-value">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/value">value</a></span></code></dt>
+ <dd>
+  Type:
+  <i>
+   string</i>
+ </dd>
+ <dd>
+  Gets and sets the value of the <code id="a-value"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code> attribute.</dd>
+</dl>
+
+<p></p></div><p></p>
+<h3 id="Methods" name="Methods">Methods</h3>
+<p></p><table style="border: 1px solid rgb(204, 204, 204); margin: 0px 0px 10px 10px; padding: 0px 10px; background: rgb(238, 238, 238) none repeat scroll 0% 50%;"> <tbody> <tr> <td> <p><strong>Inherited from XUL element</strong><br> <small> <span id="m-blur"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/blur">blur</a></code></span>, <span id="m-click"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/click">click</a></code></span>, <span id="m-doCommand"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/doCommand">doCommand</a></code></span>, <span id="m-focus"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/focus">focus</a></code></span>, <span id="m-getElementsByAttribute"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/getElementsByAttribute">getElementsByAttribute</a></code></span></small></p> <p><strong>Inherited from DOM element</strong><br> <small> <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.addEventListener">addEventListener()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.appendChild">appendChild()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.dispatchEvent">dispatchEvent()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttribute">getAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttributeNode">getAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttributeNodeNS">getAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttributeNS">getAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getElementsByTagName">getElementsByTagName()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getElementsByTagNameNS">getElementsByTagNameNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasAttribute">hasAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasAttributeNS">hasAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasAttributes">hasAttributes()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasChildNodes">hasChildNodes()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.insertBefore">insertBefore()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.isSupported">isSupported()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.normalize">normalize()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeAttribute">removeAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeAttributeNode">removeAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeAttributeNS">removeAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeChild">removeChild()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeEventListener">removeEventListener()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.replaceChild">replaceChild()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttribute">setAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttributeNode">setAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttributeNodeNS">setAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttributeNS">setAttributeNS()</a></code></small></p> </td> </tr> </tbody>
+</table><p></p>
+<h3 id="Related" name="Related">Related</h3>
+<dl>
+ <dt>
+  Elements</dt>
+ <dd>
+  <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code>, <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/checkbox" title="checkbox">checkbox</a></code></dd>
+</dl>
+<dl>
+ <dt>
+  Interfaces</dt>
+ <dd>
+  <a href="cn/NsIAccessibleProvider">nsIAccessibleProvider</a>, <a href="cn/NsIDOMXULSelectControlItemElement">nsIDOMXULSelectControlItemElement</a>, <a href="cn/NsIDOMXULLabeledControlElement">nsIDOMXULLabeledControlElement</a></dd>
+</dl>
+<div class="noinclude">
+  </div>
+<p></p>

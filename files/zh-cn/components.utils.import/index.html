@@ -1,0 +1,82 @@
+---
+title: Components.utils.import
+slug: Components.utils.import
+translation_of: Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.import
+---
+<p></p>
+
+<p>这个方法在 <a href="/en/Firefox_3_for_developers" title="en/Firefox_3_for_developers">Firefox 3</a> 中被引入，它使得在不同的作用域之间分享代码变得更加容易。例如：你可以直接导入 <a href="/en/JavaScript_code_modules/XPCOMUtils.jsm" title="en/XPCOMUtils.jsm">XPCOMUtils.jsm</a> 而不必复制/粘贴冗长的XPCOM组件。</p>
+
+<p>查看 <a href="/en/JavaScript_code_modules/Using" title="en/Using_JavaScript_code_modules">Using JavaScript code modules</a> 了解更多细节。</p>
+
+<div class="note">
+<p><strong>Note:</strong>  <span title="(Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)">Gecko 2.0</span>  之前， JavaScript code modules 仅可以使用  <strong>file:</strong> 或 <strong>resource:</strong> URLs. <span title="(Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)">Gecko 2.0</span> 引入了对 <strong>chrome:</strong> URLs, even those inside JAR archives 的支持。</p>
+</div>
+
+<h3 id="Syntax" name="Syntax">Syntax（语法）</h3>
+
+<pre class="eval">Components.utils.import<em>(url</em> [, <em>scope</em>]);
+
+// Or, if you use a tool such as jslint which reports compiler errors for the above,
+
+Components.utils["import"](<em>url </em>[, <em>scope</em>]);</pre>
+
+<h3 id="Parameters" name="Parameters">Parameters（参数）</h3>
+
+<dl>
+ <dt><code>url</code></dt>
+ <dd><code>一个将被导入的script的URL，这个URL必须是在磁盘上的一个文件，可能在JAR之中。</code></dd>
+ <dt><code>scope</code></dt>
+ <dd><code>一个可选的导入对象，如果</code>省略则使用全局对象。当读取文件发生错误（如语法错误等）时会抛出异常。</dd>
+</dl>
+
+<h3 id="Example" name="Example">Example（例子）</h3>
+
+<pre class="eval">Components.utils.import("<a class="external" rel="freelink">resource://gre/modules/XPCOMUtils.jsm</a>");
+</pre>
+
+<h3 id="Difference_from_mozIJSSubScriptLoader" name="Difference_from_mozIJSSubScriptLoader">Difference from mozIJSSubScriptLoader（与mozIJSSubScriptLoader的区别）</h3>
+
+<p>The differences from <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIJSSubScriptLoader" title="">mozIJSSubScriptLoader</a></code>:</p>
+
+<ul>
+ <li>The behavior when importing/loading the same code from different locations:
+  <ul>
+   <li>the subscript loader evaluates the specified code each time it is invoked, with the caller's global object.</li>
+   <li><code>Components.utils.import</code> evaluates the code of each module only once, in its own scope.</li>
+  </ul>
+
+  <p>例如:</p>
+
+  <pre class="eval">var scope1 = {}, scope2 = {};
+Components.utils.import("<a class="external" rel="freelink">resource://gre/modules/JSON.jsm</a>", scope1);
+Components.utils.import("<a class="external" rel="freelink">resource://gre/modules/JSON.jsm</a>", scope2);
+assert(scope2.XPCOMUtils === scope1.XPCOMUtils);
+</pre>
+
+  <p>...returns <code>true</code>, whereas:</p>
+
+  <pre class="eval">var someURL = "<a class="external" rel="freelink">resource://gre/modules/JSON.jsm</a>";
+var obj1 = {}, obj2 = {};
+var loader = Components.classes["@mozilla.org/moz/jssubscript-loader;1"]
+                       .getService(Components.interfaces.mozIJSSubScriptLoader);
+loader.loadSubScript(someURL, obj1);
+loader.loadSubScript(someURL, obj2);
+assert(obj2 === obj1);
+</pre>
+
+  <p>...returns <code>false</code>.</p>
+
+  <p>这意味着<code> Components.utils.import 更适合用于在不同的作用域JS脚本之间分享代码（数据）</code>。</p>
+ </li>
+</ul>
+
+<h3 id="Additional_Resources" name="Additional_Resources">Additional Resources（其他资源）</h3>
+
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=238324" title="FIXED: Implement JavaScript code-sharing module system">bug 238324</a></li>
+ <li>The documentation in <a href="https://dxr.mozilla.org/mozilla-central/source/js/xpconnect/idl/xpccomponents.idl" rel="custom">xpccomponents.idl</a></li>
+ <li>The tests in <code><a href="https://dxr.mozilla.org/mozilla-central/source/js/xpconnect/tests/unit/" rel="custom">js/xpconnect/tests/unit/</a></code></li>
+</ul>
+
+<p></p>

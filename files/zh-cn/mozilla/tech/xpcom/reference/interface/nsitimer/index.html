@@ -1,0 +1,285 @@
+---
+title: nsITimer
+slug: Mozilla/Tech/XPCOM/Reference/Interface/nsITimer
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsITimer
+---
+<div id="page-top">
+ <div class="pageText" id="pageText">
+  <p>nsITimer 接口的功能是：在指定延迟后唤醒一个程序。</p>
+  <p><span class="lang lang-en"><code>nsITimer</code> 的定义文档： <span class="lang lang-en"><a class="external" href="http://mxr.mozilla.org/mozilla-central/source/xpcom/threads/nsITimer.idl" rel="external nofollow" title="http://mxr.mozilla.org/mozilla-central/source/xpcom/threads/nsITimer.idl"><code>xpcom/threads/nsITimer.idl</code></a> </span>。It is <span class="lang lang-en"><a href="../../../../en/Interfaces/About_Scriptable_Interfaces" rel="internal">scriptable</a> </span> and <span class="lang lang-en"> <a href="../../../../en/Interfaces/About_Frozen_Interfaces" rel="internal">unfrozen</a> (hasn't changed since 1.9.1) </span>. </span></p>
+  <p>继承自： <span class="lang lang-en"><code><a href="../../../../en/nsISupports" rel="internal">nsISupports</a></code> </span></p>
+  <p>实现： <code>@mozilla.org/timer;1</code>。创建实例如：</p>
+  <pre class="eval">var timer = Components.classes["@mozilla.org/timer;1"]
+                    .createInstance(Components.interfaces.nsITimer);
+</pre>
+  <div id="section_1">
+   <h2 class="editable" id="方法预览"><span>方法预览</span></h2>
+   <div class="editIcon">
+    <a href="/../../../../En/NsITimer#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+   <table class="standard-table">
+    <tbody>
+     <tr>
+      <td><code>void <a href="/../../../../En/NsITimer#initWithCallback.28.29" title="../../../../En/NsITimer#initWithCallback.28.29">initWithCallback</a>(in <span class="lang lang-en"><code><a href="../../../../en/nsITimerCallback" rel="internal">nsITimerCallback</a></code> </span> aCallback, in unsigned long aDelay, in unsigned long aType);</code></td>
+     </tr>
+     <tr>
+      <td><code>[noscript] void <a href="/../../../../En/NsITimer#initWithFuncCallback.28.29" title="../../../../En/NsITimer#initWithFuncCallback.28.29">initWithFuncCallback</a>(in <span class="lang lang-en"><code><a class="new" href="../../../../en/nsITimerCallbackFunc" rel="internal">nsITimerCallbackFunc</a></code> </span> aCallback, in voidPtr aClosure, in unsigned long aDelay, in unsigned long aType);</code></td>
+     </tr>
+     <tr>
+      <td><code>void <a href="/../../../../En/NsITimer#init.28.29" title="../../../../En/NsITimer#init.28.29">init</a>(in <span class="lang lang-en"><code><a href="../../../../en/nsIObserver" rel="internal">nsIObserver</a></code> </span> aObserver, in unsigned long aDelay, in unsigned long aType);</code></td>
+     </tr>
+     <tr>
+      <td><code>void <a href="/../../../../En/NsITimer#cancel.28.29" title="../../../../En/NsITimer#cancel.28.29">cancel</a>();</code></td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  <div id="section_2">
+   <h2 class="editable" id="属性"><span>属性</span></h2>
+   <div class="editIcon">
+    <a href="/../../../../En/NsITimer#" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+   <table class="standard-table">
+    <tbody>
+     <tr>
+      <td class="header">Attribute</td>
+      <td class="header">Type</td>
+      <td class="header">Description</td>
+     </tr>
+     <tr>
+      <td><code>delay</code></td>
+      <td><code>unsigned long</code></td>
+      <td>The timeout delay in millisecond.</td>
+     </tr>
+     <tr>
+      <td><code>type</code></td>
+      <td><code>unsigned long</code></td>
+      <td>Defines the timer type: one shot, repeating slack or repeating precise. Must be one of the constants defined under <span class="lang lang-en"><a href="/../../../../En/NsITimer#Constants" title="../../../../En/NsITimer#Constants">Constants</a> </span> on this page</td>
+     </tr>
+     <tr>
+      <td><code>callback</code></td>
+      <td><code>readonly <span class="lang lang-en"><code><a href="../../../../en/nsITimerCallback" rel="internal">nsITimerCallback</a></code> </span> </code></td>
+      <td>The <code>nsITimerCallback</code> object passed to <code>initWithCallback()</code>.</td>
+     </tr>
+     <tr>
+      <td><code>closure</code></td>
+      <td><code>[noscript] readonly voidPtr</code></td>
+      <td>
+       <p>The opaque pointer pass to <code>initWithFuncCallback()</code>.</p>
+      </td>
+     </tr>
+     <tr>
+      <td>target</td>
+      <td><span class="lang lang-en"><code><a class="new" href="../../../../en/nsIEventTarget" rel="internal">nsIEventTarget</a></code> </span></td>
+      <td>The <span class="lang lang-en"><code><a class="new" href="../../../../en/nsIEventTarget" rel="internal">nsIEventTarget</a></code> </span> to which the callback is dispatched.  This target must be set before calling any of the initialization methods.</td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  <div id="section_3">
+   <h2 class="editable" id="常量"><span>常量</span></h2>
+   <div class="editIcon">
+    <a href="/../../../../En/NsITimer#" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+   <table class="standard-table">
+    <tbody>
+     <tr>
+      <td class="header">Constant</td>
+      <td class="header">Value</td>
+      <td class="header">Description</td>
+     </tr>
+     <tr>
+      <td><code>TYPE_ONE_SHOT</code></td>
+      <td>0</td>
+      <td>Type of a timer that fires once only.</td>
+     </tr>
+     <tr>
+      <td><code>TYPE_REPEATING_SLACK</code></td>
+      <td>1</td>
+      <td>After firing, the timer is stopped and not restarted until its callback completes. Specified timer period will be at least the time between when processing for last firing the callback completes and when the next firing occurs.</td>
+     </tr>
+     <tr>
+      <td><code>TYPE_REPEATING_PRECISE</code></td>
+      <td>2</td>
+      <td>This repeating timer aims to have constant period between firings. The processing time for each timer callback should not influence the timer period. However, if the processing for the last timer firing could not be completed until just before the next firing occurs, then you could have two timer notification routines being executed in quick succession.</td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  <div id="section_4">
+   <h2 class="editable" id="方法"><span>方法</span></h2>
+   <div class="editIcon">
+    <a href="/../../../../En/NsITimer#" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+   <div id="section_5">
+    <h3 class="editable" id="initWithCallback()"><span>initWithCallback()</span></h3>
+    <div class="editIcon">
+     <a href="/../../../../En/NsITimer#" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+    <p>Initialize a timer to fire after the given millisecond interval. This version takes a function to call and a closure to pass to that function.</p>
+    <pre class="eval"> void initWithCallback (
+   in nsITimerCallback aCallback,
+   in unsigned long aDelay,
+   in unsigned long aType
+ );
+</pre>
+    <div id="section_6">
+     <h6 class="editable" id="Parameters"><span>Parameters</span></h6>
+     <div class="editIcon">
+      <a href="/../../../../En/NsITimer#" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+     <dl>
+      <dt>
+       <code>aFunc</code></dt>
+      <dd>
+       <span class="lang lang-en"><code><a href="../../../../en/nsITimerCallback" rel="internal">nsITimerCallback</a></code> </span> interface to call when timer expires.</dd>
+     </dl>
+     <dl>
+      <dt>
+       <code>aDelay</code></dt>
+      <dd>
+       timeout delay in milliseconds.</dd>
+     </dl>
+     <dl>
+      <dt>
+       <code>aType</code></dt>
+      <dd>
+       Defines the timer type: one shot, repeating slack or repeating precise. Must be one of the constants defined under <span class="lang lang-en"><a href="/../../../../En/NsITimer#Constants" title="../../../../En/NsITimer#Constants">Constants</a> </span> on this page.</dd>
+     </dl>
+    </div>
+   </div>
+   <div id="section_7">
+    <h3 class="editable" id="initWithFuncCallback()"><span>initWithFuncCallback()</span></h3>
+    <div class="editIcon">
+     <a href="/../../../../En/NsITimer#" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+    <p>Initialize a timer to fire after the given millisecond interval. This version takes a function to call and a closure to pass to that function.</p>
+    <pre class="eval"> [noscript] void initWithFuncCallback(
+   in nsTimerCallbackFunc aCallback,
+   in voidPtr aClosure,
+   in unsigned long aDelay,
+   in unsigned long aType
+ );
+</pre>
+    <div id="section_8">
+     <h6 class="editable" id="Parameters_2"><span>Parameters</span></h6>
+     <div class="editIcon">
+      <a href="/../../../../En/NsITimer#" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+     <dl>
+      <dt>
+       <code>aFunc</code></dt>
+      <dd>
+       a <span class="lang lang-en"><code><a class="new" href="../../../../en/nsITimerCallbackFunc" rel="internal">nsITimerCallbackFunc</a></code> </span> interface compatible function to call when timer fires.</dd>
+     </dl>
+     <dl>
+      <dt>
+       <code>aClosure</code></dt>
+      <dd>
+       An opaque pointer to pass to that function.</dd>
+     </dl>
+     <dl>
+      <dt>
+       <code>aDelay</code></dt>
+      <dd>
+       timeout delay in milliseconds.</dd>
+     </dl>
+     <dl>
+      <dt>
+       <code>aType</code></dt>
+      <dd>
+       Defines the timer type: one shot, repeating slack or repeating precise. Must be one of the constants defined under <span class="lang lang-en"><a href="/../../../../En/NsITimer#Constants" title="../../../../En/NsITimer#Constants">Constants</a> </span> on this page.</dd>
+     </dl>
+    </div>
+   </div>
+   <div id="section_9">
+    <h3 class="editable" id="init()"><span>init()</span></h3>
+    <div class="editIcon">
+     <a href="/../../../../En/NsITimer#" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+    <p>Initialize a timer that will fire after the specified delay. A user must keep a reference to this timer till it is no longer needed or has been canceled.</p>
+    <pre class="eval"> void init(
+   in nsIObserver aObserver,
+   in unsigned long aDelay,
+   in unsigned long aType
+ );
+</pre>
+    <div id="section_10">
+     <h6 class="editable" id="Parameters_3"><span>Parameters</span></h6>
+     <div class="editIcon">
+      <a href="/../../../../En/NsITimer#" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+     <dl>
+      <dt>
+       <code>aObserver</code></dt>
+      <dd>
+       A callback Object, that is capable listening to timer events. If the timer fires, the observer will be notified via the <span class="lang lang-en"><code><a href="../../../../en/nsIObserver" rel="internal">nsIObserver</a></code> </span> Interface. The subject is set to the <code>nsITimer</code> Object which fired, the topic is equal to "timer-callback" and data is always set to null.</dd>
+     </dl>
+     <dl>
+      <dt>
+       <code>aDelay</code></dt>
+      <dd>
+       timeout delay in milliseconds.</dd>
+     </dl>
+     <dl>
+      <dt>
+       <code>aType</code></dt>
+      <dd>
+       Defines the timer type: one shot, repeating slack or repeating precise. Must be one of the constants defined under <span class="lang lang-en"><a href="/../../../../En/NsITimer#Constants" title="../../../../En/NsITimer#Constants">Constants</a> </span> on this page.</dd>
+     </dl>
+    </div>
+   </div>
+   <div id="section_11">
+    <h3 class="editable" id="cancel()"><span>cancel()</span></h3>
+    <div class="editIcon">
+     <a href="/../../../../En/NsITimer#" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+    <p>Cancels the timer. This method works on all types, not just on repeating timers -- you might want to cancel a TYPE_ONE_SHOT timer, and even reuse it by re-initializing it (to avoid object destruction and creation costs by conserving one timer instance).</p>
+    <pre class="eval"> void cancel();
+</pre>
+    <div id="section_12">
+     <h6 class="editable" id="Parameters_4"><span>Parameters</span></h6>
+     <div class="editIcon">
+      <a href="/../../../../En/NsITimer#" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+     <p>None.</p>
+    </div>
+   </div>
+  </div>
+  <div id="section_13">
+   <h2 class="editable" id="备注"><span>备注</span></h2>
+   <div class="editIcon">
+    <a href="/../../../../En/NsITimer#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+   <p>TYPE_REPEATING_SLACK timer is the preferable repeating timer type for most situations<span id="1243145776531S" style="display: none;"> </span></p>
+  </div>
+  <div id="section_14">
+   <h2 class="editable" id="sect1"> </h2>
+   <div class="editIcon">
+    实例</div>
+   <div class="editIcon">
+    <a href="/../../../../En/NsITimer#" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+   <pre class="eval"> // we need a <span class="lang lang-en"><code><a href="../../../../en/nsITimerCallback" rel="internal">nsITimerCallback</a></code>
+</span> compatible...
+ // ... interface for the callbacks.
+ var event
+   = { notify: function(timer) { alert("Fire!"); } }
+
+ // Now it is time to create the timer...
+ var timer
+   = Components.classes["@mozilla.org/timer;1"]
+       .createInstance(Components.interfaces.nsITimer);
+
+ // ... and to initialize it, we want to call event.notify() ...
+ // ... one time after exactly ten second.
+ timer.initWithCallback(
+   event,
+   10000,
+   Components.interfaces.nsITimer.TYPE_ONE_SHOT);
+</pre>
+   <p> </p>
+  </div>
+  <div id="section_15">
+   <h2 class="editable" id="请参阅"><span>请参阅</span></h2>
+   <div class="editIcon">
+    <a href="/../../../../En/NsITimer#" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+   <p><span class="lang lang-en"><code><a class="new" href="../../../../en/nsITimerCallbackFunc" rel="internal">nsITimerCallbackFunc</a></code> </span>, <span class="lang lang-en"><code><a href="../../../../en/nsITimerCallback" rel="internal">nsITimerCallback</a></code></span></p>
+  </div>
+ </div>
+</div>
+
+<p><strong class="tag-label">标记：</strong></p>
+<div id="pageTags">
+ <div class="pageTagList">
+  <div class="item taglist">
+   <a href="/../../../../Special:Tags?tag=Interfaces&amp;language=en" title="Interfaces">Interfaces</a>, <a href="/../../../../Special:Tags?tag=Interfaces:Scriptable&amp;language=en" title="Interfaces:Scriptable">Interfaces:Scriptable</a>, <a href="/../../../../Special:Tags?tag=XPCOM&amp;language=en" title="XPCOM">XPCOM</a>, <a href="/../../../../Special:Tags?tag=XPCOM+API+Reference&amp;language=en" title="XPCOM API Reference">XPCOM API Reference</a></div>
+ </div>
+</div>
+<p> </p>

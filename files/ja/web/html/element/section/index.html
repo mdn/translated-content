@@ -1,0 +1,128 @@
+---
+title: '<section>: 汎用セクション要素'
+slug: Web/HTML/Element/section
+tags:
+  - HTML
+  - HTML セクション
+  - 'HTML:フローコンテンツ'
+  - 'HTML:区分コンテンツ'
+  - 'HTML:知覚可能コンテンツ'
+  - Reference
+  - ウェブ
+  - 要素
+translation_of: Web/HTML/Element/section
+---
+<div>{{HTMLRef}}</div>
+
+<p><span class="seoSummary"><strong>HTML の <code>&lt;section&gt;</code> 要素</strong>は、 HTML 文書の中で単独のセクション (区間) を表します。セクションを表現するより意味的に具体的な要素がない場合に使用します。</span>必ずではありませんが、通常はセクションには見出しがあります。</p>
+
+<div>{{EmbedInteractiveExample("pages/tabbed/section.html", "tabbed-standard")}}</div>
+
+<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただけるのであれば、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+
+<p>例えば、ナビゲーションメニューは {{htmlelement("nav")}} 要素で表しますが、検索結果の一覧や地図の表示やコントロールには具体的な要素がないので、 <code>&lt;section&gt;</code> の中に入れることができます。</p>
+
+<div class="note">
+<p><strong>メモ:</strong> 要素の内容が個別の記事をまとめたものであれば、 {{HTMLElement("article")}} 要素がより適しているかもしれません。</p>
+</div>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
+   <td><a href="/ja/docs/Web/HTML/Content_categories#Flow_content">フローコンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#Sectioning_content">区分コンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#Palpable_content">知覚可能コンテンツ</a></td>
+  </tr>
+  <tr>
+   <th scope="row">許可されている内容</th>
+   <td><a href="/ja/docs/Web/HTML/Content_categories#Flow_content">フローコンテンツ</a></td>
+  </tr>
+  <tr>
+   <th scope="row">タグの省略</th>
+   <td>{{no_tag_omission}}</td>
+  </tr>
+  <tr>
+   <th scope="row">許可されている親要素</th>
+   <td><a href="/ja/docs/Web/HTML/Content_categories#Flow_content">フローコンテンツ</a>を受け入れるすべての要素。ただし、 <code>&lt;section&gt;</code> 要素は {{HTMLElement("address")}} 要素の子孫要素として配置してはならない。</td>
+  </tr>
+  <tr>
+   <th scope="row">許可されている ARIA ロール</th>
+   <td>{{ARIARole("alert")}}, {{ARIARole("alertdialog")}}, {{ARIARole("application")}}, {{ARIARole("banner")}}, {{ARIARole("complementary")}}, {{ARIARole("contentinfo")}}, {{ARIARole("dialog")}}, {{ARIARole("document")}}, {{ARIARole("feed")}}, {{ARIARole("log")}}, {{ARIARole("main")}}, {{ARIARole("marquee")}}, {{ARIARole("navigation")}}, {{ARIARole("search")}}, {{ARIARole("status")}}, {{ARIARole("tabpanel")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">DOM インターフェイス</th>
+   <td>{{domxref("HTMLElement")}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Attributes" name="Attributes">属性</h2>
+
+<p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes" rel="internal">グローバル属性</a>のみがあります。</p>
+
+<h2 id="Usage_notes" name="Usage_notes">使用上の注意</h2>
+
+<ul>
+ <li>それぞれの <code>&lt;section&gt;</code> は識別可能であるべき、特に <code>&lt;section&gt;</code> の子要素に見出し ({{HTMLElement('h1')}}-{{HTMLElement('h6')}} 要素) を含めるべきです。</li>
+ <li><code>&lt;section&gt;</code> 要素の内容が単独で配信して意味がある場合は、代わりに {{HTMLElement("article")}} 要素を使用してください。</li>
+ <li><code>&lt;section&gt;</code> 要素を単なる汎用コンテナーとして使用しないでください。このような場合、特にスタイル付けのみの目的で区切るのは {{HTMLElement("div")}} の役割です。大まかに言えば、 section は文書のアウトラインに論理的に現れるものに使用してください。</li>
+</ul>
+
+<h2 id="Example" name="Example">例</h2>
+
+<h3 id="Before" name="Before">導入前</h3>
+
+<pre class="brush: html">&lt;div&gt;
+  &lt;h1&gt;Heading&lt;/h1&gt;
+  &lt;p&gt;Bunch of awesome content&lt;/p&gt;
+&lt;/div&gt;</pre>
+
+<h3 id="After" name="After">導入後</h3>
+
+<pre class="brush: html">&lt;section&gt;
+  &lt;h1&gt;Heading&lt;/h1&gt;
+  &lt;p&gt;Bunch of awesome content&lt;/p&gt;
+&lt;/section&gt;
+</pre>
+
+<h2 id="Specifications" name="Specifications">仕様書</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'sections.html#the-section-element', '&lt;section&gt;')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5.1', 'sections.html#the-section-element', '&lt;section&gt;')}}</td>
+   <td>{{Spec2('HTML5.1')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', 'sections.html#the-section-element', '&lt;section&gt;')}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+
+<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
+
+<p>{{Compat("html.elements.section")}}</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>その他の区分化関連要素: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}</li>
+ <li><a href="/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines">HTML のセクションとアウトラインの使用</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Region_role">ARIA: Region ロール</a></li>
+</ul>

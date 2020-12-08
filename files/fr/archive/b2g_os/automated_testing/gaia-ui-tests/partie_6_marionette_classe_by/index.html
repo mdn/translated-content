@@ -1,0 +1,77 @@
+---
+title: 'Partie 6: Utiliser des tuples, et la classe By de Marionette'
+slug: Archive/B2G_OS/Automated_testing/gaia-ui-tests/Partie_6_Marionette_classe_By
+tags:
+  - Automatisation
+  - B2G
+  - Firefox OS
+  - Gaia
+  - Marionette
+  - Python
+  - interface utilisateur
+  - tests
+translation_of: Archive/B2G_OS/Automated_testing/gaia-ui-tests/Part_6_Marionette_By_class
+---
+<p> </p><div style="text-align: right;" class="prevnext">
+    <p><a style="float: left;" href="/fr/docs/Mozilla/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_5_Introducing_a_test_runner">« Précédent</a><a href="/fr/docs/Mozilla/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_7_Writing_your_own_tests">Suivant  »</a></p>
+</div><p></p>
+
+<div class="summary">
+<p><span class="seoSummary">Jusqu'à présent dans notre code, nous avons utilisé de nombreux repères pour trouver des éléments spécifiques, que ce soit des applications (iFrames) ou des parties d'applications. De plus, nous avons écrit les repères directement dans le code et en conséquence, dupliqué du code. Pour améliorer la situation par la suite, une bonne pratique est d'abstraire ces repères dans des variables tuples Python pour ensuite les réutiliser. Dans cet article, nous allons vous montrer comment faire.</span></p>
+</div>
+
+<h2 id="Les_tuples_et_la_classe_By_de_Marionette">Les tuples et la classe By de Marionette</h2>
+
+<p>Considérons comme exemple le repère que nous avons utilisé pour localiser le iFrame de l'application Contacts :</p>
+
+<pre class="brush: python">'css selector', "iframe[data-url*='contacts']"</pre>
+
+<p>Nous utilisons ce repère à la fois quand on attend l'affichage du cadre et quand on passe à l'intérieur de ce dernier. Pour rendre les choses plus simples, on peut stocker ceci dans une variable (il faut aussi iomporter <code>By</code>) :</p>
+
+<pre class="brush: python">from marionette import By
+
+_contacts_frame_locator = (By.CSS_SELECTOR, "iframe[data-url*='contacts']")</pre>
+
+<p>La classe <code>By</code> de Marionette fournit un court-circuit pour accéder aux techiques de repérage comme <code>id</code>, le sélecteur CSS... Comme précédemment, on saisit l'élément en utilisant le sélecteur et ensuite on le stocke dans une variable tuple CSS. Si l'HTML (et le repère) change, alors il est plus facile de simplement mettre à jour la variable une fois, plutôt que de réaliser les changements aux deux endroits. Pour utiliser ce tuple, il faut l'inclure dans la méthode <code>find_element()</code> comme suit :</p>
+
+<pre class="brush: python">self.marionette.find_element(*self._contacts_frame_locator)</pre>
+
+<div class="note">
+<p><strong>Note </strong>: <code>*</code> — dans ce contexte — est du code Python pour dépiler la liste d'arguments ; cela sépare le tuple d'origine en deux arguments que nous devons passer dans <code>find_element()</code>. Pour plus d'informations et d'exemples, lire <a href="http://docs.python.org/2/tutorial/controlflow.html#unpacking-argument-lists">Unpacking argument lists</a> dans la documentation Python.</p>
+</div>
+
+<p>Un autre exemple de tuple, qui repère via l'attribut <code>id</code> :</p>
+
+<pre class="brush: python">_add_contact_button_locator = (By.ID, 'add-contact-button')</pre>
+
+<h2 id="Utilisation_de_tuples_et_By_dans_notre_test_Contacts">Utilisation de tuples et By dans notre test Contacts</h2>
+
+<p>Maintenant il est temps de réduire la duplication dans notre cas de test <code>test_add_contact.py</code> en déplaçant les repères hors du test vers le périmètre de la classe <code>TestContacts</code> où ils peuvent être partagés. Nous allons vous montrer comment substituer un couple de repères et laisser le reste comme exercice pour le lecteur.</p>
+
+<p>D'abord vous devez vous assurer d'importer <code>By</code>, en mettant la ligne suivante au début de votre code :</p>
+
+<pre class="brush: python">from marionette import By</pre>
+
+<p>Maintenant nous pouvons ajouter nos tuples en haut de la classe <code>TestContacts</code> ; ajoutez les lignes suivantes juste en dessous de la ligne <code>class TestContacts(unittest.TestCase) </code>:</p>
+
+<pre class="brush: python">_contacts_frame_locator = (By.CSS_SELECTOR, "iframe[data-url*='contacts']")
+_save_button_locator = (By.ID, "save-button")
+</pre>
+
+<p>Désormais, vous pouvez parcourir votre code et remplacer toutes les instances de</p>
+
+<pre class="brush: python">find_element('id', 'save-button')</pre>
+
+<p>par</p>
+
+<pre class="brush: python">find_element(*self._save_button_locator)</pre>
+
+<p>et toutes les instances de</p>
+
+<pre class="brush: python">find_element('css selector', "iframe[data-url*='contacts']")</pre>
+
+<p>avec</p>
+
+<pre class="brush: python">find_element(*self._contacts_frame_locator)</pre>
+
+<p>Et c'est tout pour le moment. Nous sommes sûrs que vous allez déjà voir les bénéfices de cette réutilisation de code, même dans cet exemple simple. La technique commence à devenir particulièrement efficace dès que vous commencez à écrire des tests plus complexes qui peuvent utiliser le même repère 5, 10 ou 20 fois.</p>

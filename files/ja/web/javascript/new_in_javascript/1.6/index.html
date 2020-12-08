@@ -1,0 +1,79 @@
+---
+title: JavaScript 1.6 の新機能
+slug: Web/JavaScript/New_in_JavaScript/1.6
+tags:
+  - E4X
+  - JavaScript
+  - JavaScript_version_overviews
+translation_of: Archive/Web/JavaScript/New_in_JavaScript/1.6
+---
+<div>{{jsSidebar("New_in_JS")}}</div>
+
+<p>JavaScript 1.6 では次のような新機能が導入されています。E4X、<code>Array</code> の新しいメソッド、そして Array および String の汎用化です。</p>
+
+<p>JavaScript 1.6 は <a href="/ja/Firefox_1.5_for_developers" title="ja/Firefox_1.5_for_developers">Firefox 1.5</a> 以降でサポートされています。</p>
+
+<h3 id="E4X" name="E4X">E4X</h3>
+
+<p>ECMAScript for XML (<a href="/ja/E4X" title="ja/E4X">E4X</a>) は <a href="/ja/JavaScript" title="ja/JavaScript">JavaScript</a> 内で <a href="/ja/XML" title="ja/XML">XML</a> コンテンツを作成したり処理したりする強力な技術です。私たちは、既存の <a href="/ja/DOM" title="ja/DOM">DOM</a> との透過的な統合など、E4X サポートの向上を続けていくつもりですが、XML ベースのウェブアプリケーションの開発者は Firefox 1.5 での E4X サポートの恩恵を受けることができます。</p>
+
+<p>E4X を利用する際も、あなたは標準的な MIME タイプを使用することができます:</p>
+
+<pre>&lt;script type="text/javascript"&gt;
+</pre>
+
+<p>しかし E4X の文法は、スクリプトを HTML コメント (<code><span class="nowiki">&lt;!--...--&gt;</span></code>) 内に埋め込むという、古いブラウザからスクリプトを見えなくするための一般的な方法と衝突する可能性があります。E4X はまた、スクリプトを XML の CDATA セクション (<code>&lt;![CDATA{{ mediawiki.external('...') }}]&gt;</code>) 内に埋め込むという、"&lt;" や "&gt;" という記号を使えるようにするよりモダンな方法 (これは HTML には適用できないので注意) とも衝突する可能性があります。よくわからない文法エラーが生じた場合は MIME タイプに "; e4x=1" を追加してください:</p>
+
+<pre>&lt;script type="text/javascript; e4x=1"&gt;
+</pre>
+
+<p>拡張機能のスクリプトは常に HTML コメントを E4X リテラルとして扱うことに注意してください。つまり、"e4x=1" が暗黙的に指定されている状態です。</p>
+
+<p>E4X については、<a href="/ja/Core_JavaScript_1.5_Guide/Processing_XML_with_E4X" title="ja/Core_JavaScript_1.5_Guide/Processing_XML_with_E4X">Processing XML with E4X</a> で説明されています。</p>
+
+<h3 id="Array_.E3.81.AE.E6.8B.A1.E5.BC.B5" name="Array_.E3.81.AE.E6.8B.A1.E5.BC.B5">Array の拡張</h3>
+
+<p><code><a href="/ja/JavaScript/Reference/Global_Objects/Array" title="ja/JavaScript/Reference/Global_Objects/Array">Array</a></code> のメソッドが新しく 7 つ追加されました。これらは項目の場所に関するメソッドと反復的なメソッドの 2 つに分類可能です。項目の場所に関するメソッドは:</p>
+
+<ul>
+ <li><code><a href="/ja/JavaScript/Reference/Global_Objects/Array/indexOf" title="ja/JavaScript/Reference/Global_Objects/Array/indexOf">indexOf()</a></code> - 与えられた項目が最初に出現するインデックスを返す。</li>
+ <li><code><a href="/ja/JavaScript/Reference/Global_Objects/Array/lastIndexOf" title="ja/JavaScript/Reference/Global_Objects/Array/lastIndexOf">lastIndexOf()</a></code> - 与えられた項目が最後に出現するインデックスを返す。</li>
+</ul>
+
+<p>反復的なメソッドは:</p>
+
+<ul>
+ <li><code><a href="/ja/JavaScript/Reference/Global_Objects/Array/every" title="ja/JavaScript/Reference/Global_Objects/Array/every">every()</a></code> - 配列の各項目において関数を実行し、訪れることのできたすべての項目について関数が true を返した場合に true を返す。</li>
+ <li><code><a href="/ja/JavaScript/Reference/Global_Objects/Array/filter" title="ja/JavaScript/Reference/Global_Objects/Array/filter">filter()</a></code> - 配列の各項目において関数を実行し、関数が true を返した項目全体からなる配列を返す。</li>
+ <li><code><a href="/ja/JavaScript/Reference/Global_Objects/Array/forEach" title="ja/JavaScript/Reference/Global_Objects/Array/forEach">forEach()</a></code> - 配列の各項目において関数を実行する。</li>
+ <li><code><a href="/ja/JavaScript/Reference/Global_Objects/Array/map" title="ja/JavaScript/Reference/Global_Objects/Array/map">map()</a></code> - 配列の各項目において関数を実行し、その結果の配列を返す。</li>
+ <li><code><a href="/ja/JavaScript/Reference/Global_Objects/Array/some" title="ja/JavaScript/Reference/Global_Objects/Array/some">some()</a></code> - 配列の各項目において関数を実行し、訪れることのできたどれかの項目について関数が true を返した場合に true を返す。</li>
+</ul>
+
+<p>詳しい情報については、<a href="/ja/Core_JavaScript_1.5_Guide/Working_with_Arrays#Introduced_in_JavaScript_1.6" title="ja/Core_JavaScript_1.5_Guide/Working_with_Arrays#Introduced_in_JavaScript_1.6">Working with Arrays</a>、もしくは、Nicholas C. Zakas の <a class="external" href="http://www.webreference.com/programming/javascript/ncz/column4/index.html">Mozilla's New Array Methods</a> という記事を参照してください。</p>
+
+<h3 id="Array_.E3.81.8A.E3.82.88.E3.81.B3_String_.E3.81.AE.E6.B1.8E.E7.94.A8.E5.8C.96" name="Array_.E3.81.8A.E3.82.88.E3.81.B3_String_.E3.81.AE.E6.B1.8E.E7.94.A8.E5.8C.96">Array および String の汎用化</h3>
+
+<p>時々、配列のメソッドを文字列に適用したい場合があり、次のようにして、文字列を文字の配列として取り扱うことがあります。例えば、変数 <var>str</var> に含まれる文字がすべて英字であることをチェックするには、次のように書くでしょう:</p>
+
+<pre>function isLetter(character) {
+  return (character &gt;= "a" &amp;&amp; character &lt;= "z");
+}
+
+if (Array.prototype.every.call(str, isLetter))
+  alert("文字列 '" + str + "' は英字のみ含んでいます!");
+</pre>
+
+<p>この記法はかなり無駄が多く、JavaScript 1.6 では{{ 原語併記("汎用的", "generic") }}な簡易表記が導入されました:</p>
+
+<pre>if (Array.every(str, isLetter))
+  alert("文字列 '" + str + "' は英字のみ含んでいます!");
+</pre>
+
+<p>同様に String のメソッドをどんなオブジェクトにも簡単に適用できます:</p>
+
+<pre>var num = 15;
+alert(String.replace(num, /5/, '2'));
+</pre>
+
+<p><a href="/ja/Core_JavaScript_1.5_Guide/Working_with_Arrays#Working_with_Array-like_objects" title="ja/Core_JavaScript_1.5_Guide/Working_with_Arrays#Working_with_Array-like_objects">Working with Array-like objects</a> も参照してください。</p>

@@ -1,0 +1,20 @@
+---
+title: NSS Key Log Format
+slug: NSS/Key_Log_Format
+tags:
+  - NSS Key Log Format
+translation_of: Mozilla/Projects/NSS/Key_Log_Format
+---
+<div class="note">
+<p>Starting with <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/NSS_3.24_release_notes">NSS 3.24</a> (around Firefox 48), the <code>SSLKEYLOGFILE</code> approach is disabled by default. Distributors can re-enable it at compile time though which is done for the official Firefox binaries. (See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1188657">bug 1188657</a>.)  it should work again on Firefox &gt;= 50</p>
+</div>
+
+<p>Key logs can be written by NSS so that external programs can decrypt TLS connections. Wireshark 1.6.0 and above can use these log files to decrypt packets. You can tell Wireshark where to find the key file via <em>Edit→Preferences→Protocols→SSL→(Pre)-Master-Secret log filename</em>.</p>
+
+<p>Key logging is enabled by setting the environment variable <code>SSLKEYLOGFILE &lt;</code>FILE&gt; to point to a file. This file is a series of lines. Comment lines begin with a sharp character ('#'). Otherwise the line takes one of these formats.</p>
+
+<p><code>RSA</code> &lt;space&gt; &lt;16 bytes of hex encoded encrypted pre master secret&gt; &lt;space&gt; &lt;96 bytes of hex encoded pre master secret&gt;</p>
+
+<p><code>CLIENT_RANDOM</code> &lt;space&gt; &lt;64 bytes of hex encoded <code>client_random</code>&gt; &lt;space&gt; &lt;96 bytes of hex encoded master secret&gt;</p>
+
+<p>The <code>RSA</code> form allows ciphersuites using RSA key-agreement to be logged and is supported in shipping versions of Wireshark. The <code>CLIENT_RANDOM</code> format allows other key-agreement algorithms to be logged but is only supported starting with Wireshark 1.8.0. For Wireshark usage, see <a href="https://wiki.wireshark.org/SSL">SSL - Wireshark Wiki</a>.</p>

@@ -1,0 +1,95 @@
+---
+title: Mozilla はどのように  MIME タイプを決定するのか
+slug: How_Mozilla_determines_MIME_Types
+tags:
+  - Necko
+  - Uriloader
+  - Web Development
+translation_of: Mozilla/How_Mozilla_determines_MIME_Types
+---
+<h2 id=".E5.B0.8E.E5.85.A5" name=".E5.B0.8E.E5.85.A5">導入</h2>
+
+<p>Mozilla ではすべてのデータが MIME タイプに基づいて扱われます。これはつまり、URI が読み込まれる都度 Mozilla はその MIME タイプを把握しなければならないということです。このためのいくつかの方法について解説していきます。</p>
+
+<h2 id="Content-Type.E3.80.8C.E3.83.92.E3.83.B3.E3.83.88.E3.80.8D" name="Content-Type.E3.80.8C.E3.83.92.E3.83.B3.E3.83.88.E3.80.8D">Content-Type「ヒント」</h2>
+
+<p>Mozilla には「content-type ヒント」という考え方があります。つまり例えば、<code>&lt;link type="text/css" rel="stylesheet" href="..."&gt;</code> 要素に対しては text/css を想定するということです。しかしこれよりもサーバが実際に送信する MIME タイプが（それが何であれ）優先されます。（この場合については標準準拠モードにおいてのみサーバによる指定が優先されます。<a href="/ja/docs/Web/HTML/Quirks_Mode_and_Standards_Mode">Mozilla's Quirks Mode</a> 及び <a class="external" href="/ja/docs/Mozilla_Web_Developer_FAQ">Web 開発者 FAQ</a> を参照のこと）</p>
+
+<p>Mozilla 1.6alpha から <code>&lt;a href="..." type="foo/bar"&gt;</code> についても同様の扱いが可能になっています。</p>
+
+<h2 id="HTTP" name="HTTP">HTTP</h2>
+
+<p>HTTP URI については、通常 Mozilla はサーバから送信される MIME タイプを取得してそれを使います。 <a class="external external-icon" href="https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775147(v=vs.85)">Internet Explorer の MIME タイプ推測処理</a>とは違い、通常 Mozilla は文書のタイプを判別しません。しかし、Mozilla 1.7alpha からはこのように内容判別を行います。</p>
+
+<p>サーバが次のうちのいずれか（大文字・小文字は区別する）</p>
+
+<ul>
+ <li>text/plain</li>
+ <li>text/plain; charset=ISO-8859-1</li>
+ <li>text/plain; charset=iso-8859-1</li>
+</ul>
+
+<p>の Content-Type を送信し、かつ Content-Encoding ヘッダは送信しなかったとき、Mozilla は受け取った最初のブロックの中身を見てテキストでないバイトの有無を確認します。テキストのバイトは 9～13、27、31～255 です。テキストでないバイトを見つけるとヘルパーアプリダイアログが表示され、そのファイルの拡張子に対応した MIME タイプが表示されます。</p>
+
+<p>また、<code>&lt;img src&gt;</code> により読み込まれた画像については、Mozilla の画像ライブラリが実際の画像の種類を知るために内容判別を行います（拡張子判別は決してしません）。</p>
+
+<p>サーバが Content-Type ヘッダを送信してこなければ、Mozilla は MIME タイプを知るのに Unknown Decoder を使います。</p>
+
+<h2 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB_URI" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB_URI">ファイル URI</h2>
+
+<p>file: URI については Mozilla は ExternalHelperAppService に MIME タイプを問い合わせます。</p>
+
+<h2 id="FTP" name="FTP">FTP</h2>
+
+<p>MIME タイプが指定されない HTTP URI 同様、FTP URI は Unknown Decoder によって調べられます。</p>
+
+<h2 id="Unknown_Decoder" name="Unknown_Decoder">Unknown Decoder</h2>
+
+<p>{{ Source("netwerk/streamconv/converters/nsUnknownDecoder.cpp") }} に収められており、{{ Source("netwerk/streamconv/converters/nsUnknownDecoder.cpp#287", "287 行目") }}以降の sSnifferEntries 配列および DetermineContentType 関数によって決められます。 ここでの処理は次のとおりです。</p>
+
+<ul>
+ <li>ファイルの最初に「マジックナンバー」がないか確かめます。現在これで PDF および Postscript の検出を行っています。</li>
+ <li>ファイルが <code>&lt;?xml</code> で始まっていればその URI の MIME タイプを ExternalHelperAppService で調べます。一般的な <code>text/xml</code> MIME タイプでは XUL ファイルが機能せず、XHTML ファイルは <code>text/xml</code> として解釈する際には別の DOM が生成されるためです。</li>
+ <li>画像ライブラリにコンテンツの MIME タイプを問い合わせます。これで Mozilla のサポートするすべての画像の種類について信頼性のある検出ができます。</li>
+ <li>一般的な HTML タグを探すことでデータが HTML であるかどうか調べます。</li>
+ <li>MIME タイプ推測のため URI を ExternalHelperAppService に渡します。</li>
+ <li>いずれも上手くいかない場合、バッファ（すなわちファイルの最初の 2～3 バイト）にヌル文字が含まれていないか検索されます。ヌル文字が見つからなければ <code>text/plain</code> とし、見つかれば <code>application/octet-stream</code> とします。</li>
+</ul>
+
+<h2 id="ExternalHelperAppService" name="ExternalHelperAppService">ExternalHelperAppService</h2>
+
+<p>（{{ Source("uriloader/exthandler/nsExternalHelperAppService.cpp") }} に収められています。）</p>
+
+<p>ファイルと MIME タイプの対応は次のように処理されます。</p>
+
+<ul>
+ <li>BeOS ではオペレーティングシステムにファイルのタイプを問い合わせます。（まだ完全ではありません。{{ Bug(217723) }}）</li>
+ <li>MacOS では OS にファイルのタイプを尋ねるのにタイプとクリエータのコードが使用されます。</li>
+ <li>ハードコーディングされた拡張子リストを確認します（現時点で 13 項目。{{ Source("uriloader/exthandler/nsExternalHelperAppService.cpp#371", "nsExternalHelperAppService.cpp 371 行目") }}。これは処理速度のためです。OS に問い合わせたり環境設定を調べたりするよりもハードコーディングされたリストからデータを探す方が速いのです。）</li>
+ <li>拡張子がそのリストにない場合が問題です。まず、オペレーティングシステムに MIME タイプを問い合わせます。</li>
+ <li>それでわからない場合、ユーザの指定したヘルパーアプリが拡張子により検索され、指定の MIME タイプが使用されます（編集/設定/ヘルパーアプリケーション のリストを参照）。これでわからなかった場合「その他の」MIME タイプリストが拡張子マッチで検索されます。{{ Source("uriloader/exthandler/nsExternalHelperAppService.cpp#418", "418 行目") }}のリスト全体も参照のこと。</li>
+ <li>これでもわからない場合、読み込まれているプラグインの中に当該拡張子を扱えるプラグインがないか調べ、MIME タイプを問い合わせます。</li>
+ <li>プラグインが登録されていない場合、拡張子とタイプが対応付けられた XPCOM カテゴリを拡張子で検索します。これにより拡張子からのさらなる対応付けがなされます。カテゴリ項目のキーは先頭にドットを含まない拡張子であり、値は MIME タイプです。拡張子は必ず小文字です。</li>
+</ul>
+
+<h2 id=".E3.83.98.E3.83.AB.E3.83.91.E3.83.BC.E3.82.A2.E3.83.97.E3.83.AA.E3.82.B1.E3.83.BC.E3.82.B7.E3.83.A7.E3.83.B3" name=".E3.83.98.E3.83.AB.E3.83.91.E3.83.BC.E3.82.A2.E3.83.97.E3.83.AA.E3.82.B1.E3.83.BC.E3.82.B7.E3.83.A7.E3.83.B3">ヘルパーアプリケーション</h2>
+
+<p>ヘルパーアプリケーションもある程度関係があります。Mozilla が取り扱えないタイプの URI を読み込んだ際にはヘルパーアプリダイアログが表示されます。このダイアログで表示される情報は以下のようにして得られています。</p>
+
+<ul>
+ <li>拡張子と MIME タイプのペアに対応するハンドラを OS に問い合わせます。ここでの拡張子は Content-Disposition ヘッダがあればそれを、なければ URL により決まることに注意して下さい。これが「デフォルトアプリケーション」として表示されます。</li>
+ <li>「データソース」（要はヘルパーアプリケーションのリスト）の項目を URI の MIME タイプで検索します。データソースはプロファイルディレクトリ内の <code>mimeTypes.rdf</code> です。見つからなければ拡張子（上記のように Content-Disposition）で検索します。いずれかの検索で見つかれば、そのアプリが「次で開く」フィールドに表示され、タイプの説明もこれを基にされます。</li>
+ <li>両方とも見つからない場合、その他の MIME タイプリストを再度検索し、拡張子リストと MIME タイプの説明が表示されます。</li>
+</ul>
+
+<div class="originaldocinfo">
+<h2 id=".E5.8E.9F.E6.96.87.E6.83.85.E5.A0.B1" name=".E5.8E.9F.E6.96.87.E6.83.85.E5.A0.B1">原文情報</h2>
+
+<ul>
+ <li>著者 : <a class="link-mailto" href="mailto:cbiesinger@web.de">Christian Biesinger</a></li>
+ <li>最終更新日 : 2005 年 3 月 7 日</li>
+ <li>著作権情報 : Copyright (C) <a class="link-mailto" href="mailto:cbiesinger@web.de">Christian Biesinger</a></li>
+</ul>
+</div>
+
+<p>{{ languages( { "en": "en/How_Mozilla_determines_MIME_Types" } ) }}</p>

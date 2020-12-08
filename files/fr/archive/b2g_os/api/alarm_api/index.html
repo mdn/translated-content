@@ -1,0 +1,184 @@
+---
+title: Alarm API
+slug: Archive/B2G_OS/API/Alarm_API
+translation_of: Archive/B2G_OS/API/Alarm_API
+---
+<p>{{DefaultAPISidebar("Alarm API")}}{{Non-standard_Header}}</p>
+
+<p class="summary">The <strong>Alarm API</strong> allows applications to schedule actions to be run in the future. For example, some applications like alarm-clock, calendar or auto-update might need to utilize the Alarm API to trigger particular device behaviors at specified time points.</p>
+
+<p>By itself, the Alarm API just allows to schedule alarms. An alarm is dispatched to applications through the System Message API, so applications which want to react to alarms have to register themselves to the <code>alarm</code> messages.</p>
+
+<p>Alarms are set using the {{DOMxRef("Navigator.mozAlarms")}} object which is an instance of the {{DOMxRef("MozAlarmsManager")}} interface.</p>
+
+<div class="blockIndicator note">
+<p><em><strong>Note:</strong></em> The term alarm in the Alarms API is not the same as an alarm used by the Clock app. The Alarms API wakes up applications, the Clock wakes up humans. The Clock <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/clock/js/alarm.js">uses the Alarm API</a> to be notified when the time is right to wake up humans.</p>
+</div>
+
+<h2 id="example" name="example">Schedule alarms</h2>
+
+<p>The first things to do when using alarm is to schedule alarms. There are two kind of alarms based on the respect of the time zone. In both case it's done using the {{DOMxRef("MozAlarmsManager.add()")}} method.</p>
+
+<div class="blockIndicator note">
+<p><strong>Note:</strong> If an alarm is not targeted at a specific application, the system will dispatch all the alarms to all the applications listening for alarms.</p>
+</div>
+
+<div class="blockIndicator note">
+<p><strong>Note</strong>: You need to use the same URL for setting and receiving an alarm. For example, If you invoke <code>navigator.mozAlarms.add()</code> on <code>foo.html</code> or <code>index.html?foo=bar</code>, but have <code style="white-space: nowrap;">{ "alarm": "/index.html" }</code> in your <a href="/en-US/Apps/Build/Manifest#messages">manifest messages field</a>, you'll never receive the alarm.</p>
+</div>
+
+<h3 id="Alarms_ignoring_time_zones">Alarms ignoring time zones</h3>
+
+<p>Those kind of alarms is dispatched based on the local time of the device. If the user of the device changes its time zone, the alarm will be dispatched based on the new time zone. For example, if a user is in Paris and sets an alarm that should be dispatched at 12 PM CET (<em>Central European Time</em>) and that user travels to San Francisco, the alarm will be dispatched at 12 PM PDT (<em>Pacific Daylight Time</em>).</p>
+
+<pre class="brush: js;">// This the date to schedule the alarm
+var myDate  = new Date("May 15, 2012 16:20:00");
+
+// This is arbitrary data pass to the alarm
+var data    = {
+  foo: "bar"
+}
+
+// The "ignoreTimezone" string is what make the alarm ignoring it
+var request = navigator.mozAlarms.add(myDate, "ignoreTimezone", data);
+
+request.onsuccess = function () {
+  console.log("The alarm has been scheduled");
+};
+
+request.onerror = function () {
+  console.log("An error occurred: " + this.error.name);
+};</pre>
+
+<h3 id="Alarms_honoring_time_zones">Alarms honoring time zones</h3>
+
+<p>Those kind of alarms are dispatched based on the time in the time zone that defines when the alarm has been scheduled. If for some reason, the user of the device changes its time zone the alarm will be dispatched based on the original time zone. For example, if a user is in Paris and set an alarm that should be dispatched at 12pm CET (<em>Central European Time</em>) and if that user travel to San Francisco, the alarm will be dispatched at 3 AM PDT (<em>Pacific Daylight Time</em>).</p>
+
+<pre class="brush: js;">// This the date to schedule the alarm
+var myDate  = new Date("May 15, 2012 16:20:00");
+
+// This is arbitrary data pass to the alarm
+var data    = {
+  foo: "bar"
+}
+
+// The "honorTimezone" string is what make the alarm honoring it
+var request = navigator.mozAlarms.add(myDate, "honorTimezone", data);
+
+request.onsuccess = function () {
+  console.log("The alarm has been scheduled");
+};
+
+request.onerror = function () {
+  console.log("An error occurred: " + this.error.name);
+};</pre>
+
+<h2 id="Managing_alarms">Managing alarms</h2>
+
+<p>Once an alarm is scheduled, it's still possible to manage it.</p>
+
+<p>The {{DOMxRef("MozAlarmsManager.getAll()")}} method will return the complete list of alarms currently scheduled by the application. This list is an <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code> of {{anch("mozAlarm")}} objects.</p>
+
+<h3 id="mozAlarm">mozAlarm</h3>
+
+<p>{{page("/en-US/docs/Web/API/MozAlarmsManager.getAll","mozAlarm")}}</p>
+
+<pre class="brush: js;">var request = navigator.mozAlarms.getAll();
+
+request.onsuccess = function () {
+  this.result.forEach(function (alarm) {
+    console.log('Id: ' + alarm.id);
+    console.log('date: ' + alarm.date);
+    console.log('respectTimezone: ' + alarm.respectTimezone);
+    console.log('data: ' + JSON.stringify(alarm.data));
+  });
+};
+
+request.onerror = function () {
+  console.log("An error occurred: " + this.error.name);
+};</pre>
+
+<p>The {{DOMxRef("MozAlarmsManager.remove")}} method is used to unschedule an existing alarm.</p>
+
+<pre class="brush: js;">var alarmId;
+
+// Set an alarm and store it's id
+var request = navigator.mozAlarms.add(new Date("May 15, 2012 16:20:00"), "honorTimezone");
+
+request.onsuccess = function () {
+  alarmId = this.result;
+}
+
+// ...
+
+// Later on, removing the alarm if it exists
+if (alarmId) {
+  navigator.mozAlarms.remove(alarmId);
+}</pre>
+
+<h2 id="Handling_alarms">Handling alarms</h2>
+
+<p>Any application can react when an alarm is dispatched by the system. In order to be able to handle any alarms, an application must register itself as an alarm handler. This is done through the System Messaging API in two steps:</p>
+
+<p>First, the applications must include <code>alarm</code> to the <a href="/en-US/docs/Apps/Manifest#messages" title="/en-US/docs/Apps/Manifest#messages">messages property of its application manifest</a> with the URL to the document which registers the callback function to be used when an alarm is dispatched.</p>
+
+<pre class="brush: js;">"messages": [
+  { "alarm": "/index.html" }
+]</pre>
+
+<p>Second, the application must bind a callback function with the <code>alarm</code> message. This is done using the {{DOMxRef("Navigator.mozSetMessageHandler()")}} method. This callback function will receive a {{Anch("mozAlarm")}} object containing the data attached to the alarm.</p>
+
+<pre class="brush: js;">navigator.mozSetMessageHandler("alarm", function (mozAlarm) {
+  alert("alarm fired: " + JSON.stringify(mozAlarm.data));
+});</pre>
+
+<p>If an application wants to know if there is a pending alarm at the system level, it's possible to use the {{DOMxRef("Navigator.mozHasPendingMessage()")}} method with the value <code>alarm</code>.</p>
+
+<pre class="brush: js;">navigator.mozHasPendingMessage("alarm"); </pre>
+
+<h2 id="Permissions_for_the_Alarm_API">Permissions for the Alarm API</h2>
+
+<p>Please note that while the Alarm API is not privileged or certified, you should still include <code>permissions</code> and <code>messages</code> entries in your <code>manifest.webapp</code> file when including it in an installable open Web app.</p>
+
+<pre class="brush: json;">{
+  "permissions": {
+    "alarms": {
+      "description": "Required to schedule alarms"
+    }
+  },
+  "messages": [
+    { "alarm": "/index.html" }
+  ]
+}</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName("Alarm API")}}</td>
+			<td>{{Spec2("Alarm API")}}</td>
+			<td>Initial specification.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>Supported in Firefox OS 1.0.1.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+	<li><a href="/en-US/Apps/Build/User_notifications/Using_Alarms_to_notify_users">Using Alarms to notify users</a></li>
+	<li>{{DOMxRef("Navigator.mozAlarms")}}</li>
+	<li>{{DOMxRef("MozAlarmsManager")}}</li>
+	<li>{{DOMxRef("Navigator.mozSetMessageHandler")}}</li>
+</ul>

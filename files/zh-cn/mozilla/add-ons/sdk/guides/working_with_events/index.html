@@ -1,0 +1,122 @@
+---
+title: Working with Events
+slug: Mozilla/Add-ons/SDK/Guides/Working_with_Events
+translation_of: Archive/Add-ons/Add-on_SDK/Guides/Working_with_Events
+---
+<p>The Add-on SDK supports event-driven programming.</p>
+<p>Objects emit events on state changes that might be of interest to add-on code, such as browser windows opening, pages loading, network requests completing, and mouse clicks. By registering a listener function to an event emitter an add-on can receive notifications of these events.</p>
+<p><span>We talk about content scripts in more detail in the <a href="/en-US/Add-ons/SDK/Guides/Content_Scripts">Working with Content Scripts</a> guide.</span></p>
+<p>Additionally, if you're using content scripts to interact with web content, you can define your own events and use them to communicate between the main add-on code and the content scripts. In this case one end of the conversation emits the events, and the other end listens to them.</p>
+<p>So there are two main ways you will interact with the EventEmitter framework:</p>
+<ul>
+ <li>
+  <p><strong>listening to built-in events</strong> emitted by objects in the SDK, such as tabs opening, pages loading, mouse clicks</p>
+ </li>
+ <li>
+  <p><strong>sending and receiving user-defined events</strong> between content scripts and add-on code</p>
+ </li>
+</ul>
+<p>This guide only covers the first of these; the second is explained in the <a href="/en-US/Add-ons/SDK/Guides/Content_Scripts">Working with Content Scripts</a> guide.</p>
+<h2 id="Adding_Listeners">Adding Listeners</h2>
+<p>You can add a listener to an event emitter by calling its <code>on(type, listener)</code> method.</p>
+<p>It takes two parameters:</p>
+<ul>
+ <li>
+  <p><strong><code>type</code></strong>: the type of event we are interested in, identified by a string. Many event emitters may emit more than one type of event: for example, a browser window might emit both <code>open</code> and <code>close</code> events. The list of valid event types is specific to an event emitter and is included with its documentation.</p>
+ </li>
+ <li>
+  <p><strong><code>listener</code></strong>: the listener itself. This is a function which will be called whenever the event occurs. The arguments that will be passed to the listener are specific to an event type and are documented with the event emitter.</p>
+ </li>
+</ul>
+<p>For example, the following add-on registers a listener with the <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs"><code>tabs</code></a> module to listen for the <code>ready</code> event, and logs a string to the console reporting the event:</p>
+<pre class="brush: js">var tabs = require("sdk/tabs");
+
+tabs.on("ready", function () {
+  console.log("tab loaded");
+});
+</pre>
+<p>It is not possible to enumerate the set of listeners for a given event.</p>
+<p>The value of <code>this</code> in the listener function is the object that emitted the event.</p>
+<h3 id="Listening_to_all_events">Listening to all events</h3>
+<div class="note">
+ <p>This example uses the <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action">action button</a> API, which is only available from Firefox 29 onwards.</p>
+</div>
+<p>From Firefox 28 onwards, you can pass the wildcard "*" as the <code>type</code> argument. If you do this, the listener will be called for any event emitted by that object, and its argument will be the name of the event:</p>
+<pre class="brush: js">var ui = require('sdk/ui');
+var panels = require("sdk/panel");
+var self = require("sdk/self");
+
+var panel = panels.Panel({
+  contentURL: self.data.url("panel.html")
+});
+
+panel.on("*", function(e) {
+  console.log("event " + e + " was emitted");
+});
+
+var button = ui.ActionButton({
+  id: "my-button",
+  label: "my button",
+  icon: "./icon-16.png",
+  onClick: handleClick
+});
+
+function handleClick(state) {
+  panel.show({
+    position: button
+  });
+}</pre>
+<p>This wildcard feature does not yet work for the <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs"><code>tabs</code></a> or <a href="/en-US/Add-ons/SDK/High-Level_APIs/windows"><code>windows</code></a> modules.</p>
+<h3 id="Adding_Listeners_in_Constructors">Adding Listeners in Constructors</h3>
+<p>Event emitters may be modules, as is the case for the <code>ready</code> event above, or they may be objects returned by constructors.</p>
+<p>In the latter case the <code>options</code> object passed to the constructor typically defines properties whose names are the names of supported event types prefixed with "on": for example, "onOpen", "onReady" and so on. Then in the constructor you can assign a listener function to this property as an alternative to calling the object's <code>on()</code> method.</p>
+<p>For example: the <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action"><code>ActionButton</code></a> object emits an event when the button is clicked.</p>
+<p>The following add-on creates a button and assigns a listener to the <code>onClick</code> property of the <code>options</code> object supplied to the button's constructor. The listener loads https://developer.mozilla.org/:</p>
+<pre class="brush: js">require("sdk/ui/button/action").ActionButton({
+  id: "visit-mozilla",
+  label: "Visit Mozilla",
+  icon: "./icon-16.png",
+  onClick: function() {
+    require("sdk/tabs").open("https://developer.mozilla.org/");
+  }
+});
+</pre>
+<p>This is exactly equivalent to constructing the button and then calling the button's <code>on()</code> method:</p>
+<pre class="brush: js">var button = require("sdk/ui/button/action").ActionButton({
+  id: "visit-mozilla",
+  label: "Visit Mozilla",
+  icon: "./icon-16.png"
+});
+
+button.on("click", function() {
+  require("sdk/tabs").open("https://developer.mozilla.org/");
+});
+</pre>
+<h2 id="Removing_Event_Listeners">Removing Event Listeners</h2>
+<p>Event listeners can be removed by calling <code>removeListener(type, listener)</code>, supplying the type of event and the listener to remove.</p>
+<p>The listener must have been previously been added using one of the methods described above.</p>
+<p>In the following add-on, we add two listeners to the <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs#ready"><code>tabs</code> module's <code>ready</code> event</a>. One of the handler functions removes the listener again.</p>
+<p>Then we open two tabs.</p>
+<pre class="brush: js">var tabs = require("sdk/tabs");
+
+function listener1() {
+  console.log("Listener 1");
+  tabs.removeListener("ready", listener1);
+}
+
+function listener2() {
+  console.log("Listener 2");
+}
+
+tabs.on("ready", listener1);
+tabs.on("ready", listener2);
+
+tabs.open("https://www.mozilla.org");
+tabs.open("https://www.mozilla.org");
+</pre>
+<p>We should see output like this:</p>
+<pre>info: tabevents: Listener 1
+info: tabevents: Listener 2
+info: tabevents: Listener 2
+</pre>
+<p>Listeners will be removed automatically when the add-on is unloaded.</p>

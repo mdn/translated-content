@@ -1,0 +1,43 @@
+---
+title: ScriptEngine()
+slug: Archive/Web/JavaScript/Extensions_Microsoft/ScriptEngine
+tags:
+  - Déprécié
+  - JavaScript
+  - Microsoft
+  - Méthode
+  - Non-standard
+  - Reference
+translation_of: Archive/Web/JavaScript/Microsoft_Extensions/ScriptEngine
+---
+<div>{{JSRef}}{{Non-standard_header}}{{Deprecated_Header}}</div>
+
+<p>La fonction <strong><code>ScriptEngine()</code></strong> renvoie le nom du langage de script utilisé.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre>ScriptEngine()</pre>
+
+<h3 id="Valeur_de_retour">Valeur de retour</h3>
+
+<p>La fonction <code>ScriptEngine()</code> renvoie une chaîne de caractères indiquant le moteur de script utilisé. Pour les anciennes versions d'Internet Explorer, cette chaîne était <code>"JScript"</code>.</p>
+
+<h2 id="Exemples">Exemples</h2>
+
+<pre class="brush: js">if (window.ScriptEngine) {
+  console.log(window.ScriptEngine());
+}
+// affiche JScript
+</pre>
+
+<h2 id="Prérequis">Prérequis</h2>
+
+<p>Cette fonctionnalité est prise en charge par les modes suivants : Quirks, Internet Explorer 6 en mode standard, Internet Explorer 7 en mode standard, Internet Explorer 8 en mode standard, Internet Explorer 9 en mode standard, Internet Explorer 10 en mode standard et Internet Explorer 11 en mode standard. Elle est également prise en charge par les applications Store (Windows 8 et Windows Phone 8.1).</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><code><a href="/fr/docs/Web/JavaScript/Microsoft_JavaScript_extensions/ScriptEngineBuildVersion">ScriptEngineBuildVersion()</a></code></li>
+ <li><code><a href="/fr/docs/Web/JavaScript/Microsoft_JavaScript_extensions/ScriptEngineMajorVersion">ScriptEngineMajorVersion()</a></code></li>
+ <li><code><a href="/fr/docs/Web/JavaScript/Microsoft_JavaScript_extensions/ScriptEngineMinorVersion">ScriptEngineMinorVersion()</a></code></li>
+</ul>

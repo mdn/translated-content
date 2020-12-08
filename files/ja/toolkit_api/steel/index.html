@@ -1,0 +1,33 @@
+---
+title: STEEL
+slug: Toolkit_API/STEEL
+tags:
+  - STEEL
+  - XPCOM
+  - XPCOM API Reference
+  - extensiones
+  - thunderbird
+translation_of: Mozilla/Tech/Toolkit_API/STEEL
+---
+<p></p><div class="blockIndicator standardNote">
+<p>この記事は <a href="https://developer.mozilla.org/ja/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a>  の新機能について述べています</p>
+</div><p></p>
+<p>STEEL は、<strong>S</strong>criptable <strong>T</strong>hunderbird <strong>E</strong>asy <strong>E</strong>xtension <strong>L</strong>ibrary の略称です。これは、<a class="internal" href="/ja/Toolkit_API/FUEL" title="ja/FUEL">FUEL</a> のように Thunderbird の拡張機能開発を容易にするインタフェースのセットです。</p>
+<p>現在、STEEL は <code><a href="http://mxr.mozilla.org/comm-central/source/mozilla/toolkit/components/exthelper/extIApplication.idl">extIApplication</a></code> のすべての関数を実装する <code><a href="http://mxr.mozilla.org/comm-central/source/mail/steel/steelIApplication.idl">steelIApplication</a></code> インタフェースを持っています。このライブラリは、Firefox ("<a class="internal" href="/ja/Toolkit_API/FUEL" title="ja/Toolkit_API/FUEL">FUEL</a>") と SeaMonkey ("<a class="internal" href="/ja/Toolkit_API/SMILE" title="ja/Toolkit_API/SMILE">SMILE</a>") にも実装されています。</p>
+<h3 id="オブジェクト">オブジェクト</h3>
+<h4 id="extIApplication_オブジェクト">extIApplication オブジェクト</h4>
+<ul> <li><a class="internal" href="/ja/Toolkit_API/extIApplication" title="ja/FUEL/Application">extIApplication</a></li> <li><a class="internal" href="/ja/Toolkit_API/extIConsole" title="ja/FUEL/Console">extIConsole</a></li> <li><a class="internal" href="/ja/Toolkit_API/extIEventItem" title="ja/FUEL/EventItem">extIEventItem</a></li> <li><a class="internal" href="/ja/Toolkit_API/extIEventListener" title="ja/FUEL/EventListener">extIEventListener</a></li> <li><a class="internal" href="/ja/Toolkit_API/extIEvents" title="ja/FUEL/Events">extIEvents</a></li> <li><a class="internal" href="/ja/Toolkit_API/extIExtension" title="ja/FUEL/Extension">extIExtension</a></li> <li><a class="internal" href="/ja/Toolkit_API/extIExtensions" title="ja/FUEL/Extension">extIExtensions</a></li> <li><a class="internal" href="/ja/Toolkit_API/extIPreference" title="ja/FUEL/Preference">extIPreference</a></li> <li><a class="internal" href="/ja/Toolkit_API/extIPreferenceBranch" title="ja/FUEL/PreferenceBranch">extIPreferenceBranch</a><a class="internal" href="/ja/Toolkit_API/extIPreference" title="ja/FUEL/Preference"><br> </a></li> <li><a class="internal" href="/ja/Toolkit_API/extISessionStorage" title="ja/FUEL/SessionStorage">extISessionStorage</a></li>
+</ul>
+<h4 id="steelIApplication_オブジェクト">steelIApplication オブジェクト</h4>
+<ul> <li><a class="internal" href="/ja/Toolkit_API/STEEL/steelIApplication" title="ja/Toolkit API/STEEL/steelIApplication">steelIApplication</a></li>
+</ul>
+<h3 id="XPCOM">XPCOM</h3>
+<p>STEEL の <a class="internal" href="/ja/Toolkit_API/STEEL/steelIApplication" title="ja/Toolkit API/STEEL/steelIApplication">steelIApplication</a> オブジェクトは XUL スクリプトにプリロードされますが、JavaScript の XPCOM コードにはプリロードされません。オブジェクトへは、他の XPCOM サービスと同じようにアクセスする必要があります:</p>
+<pre>var Application = Components.classes["@mozilla.org/steel/application;1"].getService(Components.interfaces.steelIApplication);
+</pre>
+<h3 id="他のリソース">他のリソース</h3>
+<ul> <li><a class="link-https" href="https://wiki.mozilla.org/User:Jminta/Steel" title="https://wiki.mozilla.org/User:Jminta/Steel">STEEL development plan</a>.</li> <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=408370" title="FIXED: STEEL 0.1">バグ 408370</a></li>
+</ul>
+<div class="noinclude">
+<p></p>
+</div>

@@ -1,0 +1,91 @@
+---
+title: nsIClipboard
+slug: Mozilla/Tech/XPCOM/Reference/Interface/nsIClipboard
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIClipboard
+---
+<p></p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/widget/public/nsIClipboard.idl" rel="custom">widget/public/nsIClipboard.idl</a></code><span style="text-align: right; float: right;"><a href="/zh-CN/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">脚本化</a></span></div>
+<span style="padding: 4px 2px;">
+
+This interface supports basic clipboard operations such as: setting, retrieving, emptying, matching and supporting clipboard data.
+</span>
+
+<div style="background: #eee; padding: 2px;">
+继承于: <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
+<span style="text-align: right; float: right;">最后修改于Gecko 1.8 (Firefox 1.5 / Thunderbird 1.5 / SeaMonkey 1.0)</span></div>
+</div><p></p>
+<h2 id="Method_overview" name="Method_overview"><span class="long_text short_text" id="result_box" lang="zh-CN"><span>方法</span><span>概述</span></span></h2>
+<table class="standard-table"> <tbody> <tr> <td><code>void <a href="#emptyClipboard()">emptyClipboard</a>(in long aWhichClipboard);</code></td> </tr> <tr> <td><code>void <a href="#forceDataToClipboard()">forceDataToClipboard</a>(in long aWhichClipboard);</code> <span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 1.5 / Thunderbird 1.5 / SeaMonkey 1.0)">已废弃 Gecko 1.8</span></td> </tr> <tr> <td><code>void <a href="#getData()">getData</a>(in nsITransferable aTransferable, in long aWhichClipboard);</code></td> </tr> <tr> <td><code>boolean <a href="#hasDataMatchingFlavors()">hasDataMatchingFlavors</a>([array, size_is(aLength)] in string aFlavorList, in unsigned long aLength, in long aWhichClipboard);</code></td> </tr> <tr> <td><code>void <a href="#setData()">setData</a>(in nsITransferable aTransferable, in nsIClipboardOwner anOwner, in long aWhichClipboard);</code></td> </tr> <tr> <td><code>boolean <a href="#supportsSelectionClipboard()">supportsSelectionClipboard</a>();</code></td> </tr> </tbody>
+</table>
+<h2 id="Constants" name="Constants">常量</h2>
+<p>Most users will expect clipboard operations to use the global clipboard. In fact, the <code>kSelectionClipboard</code> is peculiar to the X Windows System, and not used much even under X.</p>
+<table class="standard-table"> <tbody> <tr> <td class="header">常量名称</td> <td class="header">值</td> <td class="header">描述</td> </tr> <tr> <td><code>kSelectionClipboard</code></td> <td><code>0</code></td> <td>Clipboard for selection.</td> </tr> <tr> <td><code>kGlobalClipboard</code></td> <td><code>1</code></td> <td>Clipboard for global use.</td> </tr> </tbody>
+</table>
+<h2 id="Methods" name="Methods">方法</h2>
+<h3 id="emptyClipboard()" name="emptyClipboard()">emptyClipboard()</h3>
+<p>This method empties the clipboard and notifies the clipboard owner. It empties the "logical" clipboard. It does not clear the native clipboard.</p>
+<pre class="eval">void emptyClipboard(
+  in long aWhichClipboard
+);
+</pre>
+<h6 id="Parameters" name="Parameters">参数</h6>
+<dl> <dt><code>aWhichClipboard</code></dt> <dd>Specifies the clipboard to which this operation applies.</dd>
+</dl>
+<p></p><div class="headingWithIndicator">
+        <h3 id="forceDataToClipboard()">forceDataToClipboard()</h3>
+        <span class="indicatorInHeadline obsolete obsoleteMethod">已废弃 Gecko 1.8 (Firefox 1.5 / Thunderbird 1.5 / SeaMonkey 1.0)</span>
+        </div><p></p>
+<p>Some platforms support deferred notification for putting data on the clipboard This method forces the data onto the clipboard in its various formats This may be used if the application going away.</p>
+<pre class="eval">void forceDataToClipboard(
+  in long aWhichClipboard
+);
+</pre>
+<h6 id="Parameters" name="Parameters">参数</h6>
+<dl> <dt><code>aWhichClipboard</code></dt> <dd>Specifies the clipboard to which this operation applies.</dd>
+</dl>
+<h3 id="getData()" name="getData()">getData()</h3>
+<p>This method retrieves data from the clipboard into a transferable.</p>
+<pre class="eval">void getData(
+  in nsITransferable aTransferable,
+  in long aWhichClipboard
+);
+</pre>
+<h6 id="Parameters" name="Parameters">参数</h6>
+<dl> <dt><code>aTransferable</code></dt> <dd>The transferable to receive data from the clipboard.</dd> <dt><code>aWhichClipboard</code></dt> <dd>Specifies the clipboard to which this operation applies.</dd>
+</dl>
+<h3 id="hasDataMatchingFlavors()" name="hasDataMatchingFlavors()">hasDataMatchingFlavors()</h3>
+<p>This method provides a way to give correct UI feedback about, for instance, whether a paste should be allowed. It does <strong>not</strong> actually retrieve the data and should be a very inexpensive call. All it does is check if there is data on the clipboard matching any of the flavors in the given list.</p>
+<pre class="eval">boolean hasDataMatchingFlavors(
+  [array, size_is(aLength)] in string aFlavorList,
+  in unsigned long aLength,
+  in long aWhichClipboard
+);
+</pre>
+<h6 id="Parameters" name="Parameters">参数</h6>
+<dl> <dt><code>aFlavorList</code></dt> <dd>An array of ASCII strings.</dd> <dt><code>aLength</code></dt> <dd>The length of the <code>aFlavorList</code>.</dd> <dt><code>aWhichClipboard</code></dt> <dd>Specifies the clipboard to which this operation applies.</dd>
+</dl>
+<h6 id="Return_value" name="Return_value">返回值</h6>
+<p>Returns <code>true</code>, if data is present and it matches the specified flavor. Otherwise it returns <code>false</code>.</p>
+<h3 id="setData()" name="setData()">setData()</h3>
+<p>This method sets the data from a transferable on the native clipboard.</p>
+<pre class="eval">void setData(
+  in nsITransferable aTransferable,
+  in nsIClipboardOwner anOwner,
+  in long aWhichClipboard
+);
+</pre>
+<h6 id="Parameters" name="Parameters">参数</h6>
+<dl> <dt><code>aTransferable</code></dt> <dd>The transferable containing the data to put on the clipboard.</dd> <dt><code>anOwner</code></dt> <dd>The owner of the transferable.</dd> <dt><code>aWhichClipboard</code></dt> <dd>Specifies the clipboard to which this operation applies.</dd>
+</dl>
+<h3 id="supportsSelectionClipboard()" name="supportsSelectionClipboard()">supportsSelectionClipboard()</h3>
+<p>This method allows clients to determine if the implementation supports the concept of a separate clipboard for selection.</p>
+<pre class="eval">boolean supportsSelectionClipboard();
+</pre>
+<h6 id="Parameters" name="Parameters">参数</h6>
+<p>None.</p>
+<h6 id="Return_value" name="Return_value">返回值</h6>
+<p>Returns <code>true</code> if <code>kSelectionClipboard</code> is available. Otherwise it returns <code>false</code>.</p>
+<h2 id="See_also" name="See_also">相关链接</h2>
+<ul> <li><code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIClipboardOwner" title="">nsIClipboardOwner</a></code></li> <li><code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITransferable" title="">nsITransferable</a></code></li> <li><code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIArray" title="">nsIArray</a></code></li> <li><a class="internal" href="/zh-cn/Using_the_Clipboard" title="Using the Clipboard">Using the Clipboard</a></li>
+</ul>
+<p></p>

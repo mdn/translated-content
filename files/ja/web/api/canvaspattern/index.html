@@ -1,0 +1,118 @@
+---
+title: CanvasPattern
+slug: Web/API/CanvasPattern
+tags:
+  - API
+  - Canvas
+  - Interface
+  - Reference
+translation_of: Web/API/CanvasPattern
+---
+<div>{{APIRef("Canvas API")}}</div>
+
+<p><code><strong>CanvasPattern</strong></code> インターフェースは、{{domxref("CanvasRenderingContext2D.createPattern()")}} メソッドによって（画像、 canvas 要素、video 要素をもとに）生成される不透明なオブジェクトです。</p>
+
+<h2 id="プロパティ">プロパティ</h2>
+
+<p><em>不透明なオブジェクトを表し、公開されたプロパティはありません。</em></p>
+
+<h2 id="メソッド">メソッド</h2>
+
+<p><em>継承されたメソッドはありません。</em></p>
+
+<dl>
+ <dt>{{domxref("CanvasPattern.setTransform()")}} {{experimental_inline}}</dt>
+ <dd>パターンに線形の変化を表す {{domxref("SVGMatrix")}} を適用する。</dd>
+</dl>
+
+<h2 id="Specifications" name="Specifications">仕様</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "the-canvas-element.html#canvaspattern", "CanvasPattern")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>v5 で <code>setTransform()</code> メソッドを追加。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>機能</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>基本サポート</td>
+   <td>4.0</td>
+   <td>{{CompatGeckoDesktop("1.9.2")}}</td>
+   <td>9.0</td>
+   <td>9.0</td>
+   <td>3.1</td>
+  </tr>
+  <tr>
+   <td><code>setTransform()</code>{{experimental_inline}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoDesktop("33")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>機能</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>基本サポート</td>
+   <td>2.1</td>
+   <td>{{CompatGeckoMobile("1.9.2")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>10.0</td>
+   <td>3.2</td>
+  </tr>
+  <tr>
+   <td><code>setTransform()</code>{{experimental_inline}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile("33")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="関連項目">関連項目</h2>
+
+<ul>
+ <li>{{domxref("CanvasRenderingContext2D.createPattern()")}}</li>
+ <li>The {{HTMLElement("canvas")}} 要素と関連するインターフェースである {{domxref("HTMLCanvasElement")}}</li>
+</ul>

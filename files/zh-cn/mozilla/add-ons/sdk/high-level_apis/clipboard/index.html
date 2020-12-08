@@ -1,0 +1,101 @@
+---
+title: clipboard（剪贴板）
+slug: Mozilla/Add-ons/SDK/High-Level_APIs/clipboard
+translation_of: Archive/Add-ons/Add-on_SDK/High-Level_APIs/clipboard
+---
+<p>{{AddonSidebar}}</p>
+
+<div class="note">
+<p>稳定版</p>
+</div>
+
+<p><span class="seoSummary">操作系统剪贴板，设置或获取其内容</span></p>
+
+<h2 id="用法">用法</h2>
+
+<p>你可以选择性地设置将要获取或设置的内容的格式. 支持一下格式:</p>
+
+<ul>
+ <li><code>text</code> (纯文本)</li>
+ <li><code>html</code> (HTML标记语言)</li>
+ <li><code>image</code> (经过base-64编码过的png图片)</li>
+</ul>
+
+<p>如果没有提供格式参数的话，剪贴板模块会自动检测。</p>
+
+<p>现在在Windows操作系统下，"image"格式并不支持透明度。</p>
+
+<h3 id="示例">示例</h3>
+
+<p>设置和获取剪贴板内容。</p>
+
+<pre class="brush: js">var clipboard = require("sdk/clipboard");
+clipboard.set("Lorem ipsum dolor sit amet");
+var contents = clipboard.get();</pre>
+
+<p>将剪贴板内容设置为某些html。</p>
+
+<pre class="brush: js">var clipboard = require("sdk/clipboard");
+clipboard.set("&lt;blink&gt;Lorem ipsum dolor sit amet&lt;/blink&gt;", "html");</pre>
+
+<p>如果剪贴板内容中包含有html，则将其在新标签页中打开。</p>
+
+<pre class="brush: js">var clipboard = require("sdk/clipboard");
+if (clipboard.currentFlavors.indexOf("html") != -1)
+  require("sdk/tabs").open("data:text/html;charset=utf-8," + clipboard.get("html"));</pre>
+
+<p>将剪贴板内容设置为一幅图片。</p>
+
+<pre class="brush: js">var clipboard = require("sdk/clipboard");
+clipboard.set("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYA" +
+              "AABzenr0AAAASUlEQVRYhe3O0QkAIAwD0eyqe3Q993AQ3cBSUKpygfsNTy" +
+              "N5ugbQpK0BAADgP0BRDWXWlwEAAAAAgPsA3rzDaAAAAHgPcGrpgAnzQ2FG" +
+              "bWRR9AAAAABJRU5ErkJggg%3D%3D");</pre>
+
+<p>如果剪贴板内容中包含图片，则将其在新标签页中打开。</p>
+
+<pre class="brush: js">var clipboard = require("sdk/clipboard");
+if (clipboard.currentFlavors.indexOf("image") != -1)
+  require("sdk/tabs").open(clipboard.get());</pre>
+
+<p>如前所述，图片的参数类型很容易被忽略，例如在网页中选中复制一张图片，得到的格式会是html而不是所预期的image。如果你是想将剪贴板的内容设置成像data URL这样的文本字符串而不是图片的话，可以通过将格式设置为text实现。</p>
+
+<pre class="brush: js">var clipboard = require("sdk/clipboard");
+
+clipboard.set("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYA" +
+              "AABzenr0AAAASUlEQVRYhe3O0QkAIAwD0eyqe3Q993AQ3cBSUKpygfsNTy" +
+              "N5ugbQpK0BAADgP0BRDWXWlwEAAAAAgPsA3rzDaAAAAHgPcGrpgAnzQ2FG" +
+              "bWRR9AAAAABJRU5ErkJggg%3D%3D", "text");</pre>
+
+<h2 id="Globals">Globals</h2>
+
+<h3 id="函数">函数</h3>
+
+<h4 class="addon-sdk-api-name" id="set(data_datatype)"><code>set(data, datatype)</code></h4>
+
+<p>将用户剪贴板上的内容用data替换。</p>
+
+<h5 id="参数">参数</h5>
+
+<p><strong>data : string</strong><br>
+ 要放入剪贴板的内容。</p>
+
+<p><strong>datatype : string</strong><br>
+ 内容的格式 ，为"text"或"html" 或 "image"。可选参数.</p>
+
+<h4 class="addon-sdk-api-name" id="get(datatype)"><code>get(datatype)</code></h4>
+
+<p>获取用户当前剪贴板的内容。</p>
+
+<h5 id="参数_2">参数</h5>
+
+<p><strong>datatype : string</strong><br>
+ 只有当剪贴板中的内容格式为datatype指定的格式时才获取 (可选).。当剪贴板中的内容非所提供的datatype指定的格式时，函数回返回null。</p>
+
+<h3 id="属性">属性</h3>
+
+<h4 class="addon-sdk-api-name" id="currentFlavors"><code>currentFlavors</code></h4>
+
+<p>剪贴板上的内容有时会是多种格式。例如，HTML内容即能匹配HTML格式(html)，又能匹配纯文本格式(text)。这个属性为一个数组，数组中的元素是剪贴板内容所匹配的所有格式，如["text","html"]。</p>
+
+<div id="xunlei_com_thunder_helper_plugin_d462f475-c18e-46be-bd10-327458d045bd"> </div>

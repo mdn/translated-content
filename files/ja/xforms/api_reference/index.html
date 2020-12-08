@@ -1,0 +1,56 @@
+---
+title: XForms API Reference
+slug: XForms/API_Reference
+tags:
+  - XForms
+translation_of: Archive/Web/XForms/API_Reference
+---
+<div class="note">
+<p>This page is the beginning of the XForms API reference. Note the word <strong>beginning</strong> :-)</p>
+</div>
+
+
+
+<h3 id="Naming_Convention" name="Naming_Convention">Naming Convention</h3>
+
+<p>XForms インターフェースには次の命名規則があります:</p>
+
+<dl>
+ <dt>nsIXForms...Element </dt>
+ <dd>Interfaces implemented by the C++ part of a control</dd>
+ <dt>nsIXFormsNS...Element </dt>
+ <dd>Interfaces extending XForms Specification interfaces</dd>
+ <dt>nsIXForms...UIElement </dt>
+ <dd>Interfaces implemented by the JS part of a control</dd>
+ <dt>nsIXForms...Accessors </dt>
+ <dd>Interface exposing states about the bound instance node for a given control</dd>
+</dl>
+
+<h3 id=".E5.87.8D.E7.B5.90.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.BC.E3.83.95.E3.82.A7.E3.83.BC.E3.82.B9" name=".E5.87.8D.E7.B5.90.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.BC.E3.83.95.E3.82.A7.E3.83.BC.E3.82.B9">凍結インターフェース</h3>
+
+<dl>
+ <dt><a href="ja/NsIXFormsModelElement">nsIXFormsModelElement</a></dt>
+ <dd>The model interface</dd>
+</dl>
+
+<h3 id=".E8.A9.A6.E9.A8.93.E7.94.A8.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.BC.E3.83.95.E3.82.A7.E3.83.BC.E3.82.B9" name=".E8.A9.A6.E9.A8.93.E7.94.A8.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.BC.E3.83.95.E3.82.A7.E3.83.BC.E3.82.B9">試験用インターフェース</h3>
+
+<dl>
+ <dt><a href="ja/NsIXFormsDelegate">nsIXFormsDelegate</a></dt>
+ <dd>The Delegate interface for <a href="ja/XForms/Custom_Controls">XForms:Custom_Controls</a></dd>
+</dl>
+
+<dl>
+ <dt><a href="ja/NsIXFormsAccessors">nsIXFormsAccessors</a></dt>
+ <dd>The Accessors interface for <a href="ja/XForms/Custom_Controls">XForms:Custom_Controls</a></dd>
+</dl>
+
+<dl>
+ <dt><a href="ja/NsIXFormsNSModelElement">nsIXFormsNSModelElement</a></dt>
+ <dd>Custom extension(s) to the <a href="ja/NsIXFormsModelElement">nsIXFormsModelElement</a> interface</dd>
+</dl>
+
+<dl>
+ <dt><a href="ja/NsIXFormsNSInstanceElement">nsIXFormsNSInstanceElement</a></dt>
+ <dd>Custom extension(s) to the instance element</dd>
+</dl>

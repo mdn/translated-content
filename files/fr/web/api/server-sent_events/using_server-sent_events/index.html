@@ -1,0 +1,264 @@
+---
+title: Utiliser les évènements envoyés par le serveur
+slug: Web/API/Server-sent_events/Using_server-sent_events
+translation_of: Web/API/Server-sent_events/Using_server-sent_events
+---
+<p>Développer une application web qui utilise des <em><a href="/fr/docs/Server-sent_events" title="/fr/docs/Server-sent_events">server-sent events</a></em> (évènements envoyés par le serveur) est assez facile. Vous aurez besoin d’un bout de code côté serveur pour transmettre des évènements en flux continu à l’application web ; mais côté client, les choses fonctionnent de manière quasiment identique à la gestion de n’importe quel autre type d’évènement.</p>
+
+<h2 id="Recevoir_des_évènements_du_serveur">Recevoir des évènements du serveur</h2>
+
+<p>L’API <em>server-sent events</em> est exposée par l’interface <a href="/fr/docs/Web/API/EventSource" title="/fr/docs/Web/API/EventSource"><code>EventSource</code></a> ; pour ouvrir une connexion vers le serveur afin de commencer à recevoir des évènements de celui-ci, vous devez créer un nouvel objet <code>EventSource</code>, en spécifiant l’URL d’un script côté serveur qui va générer les évènements. Par exemple :</p>
+
+<pre class="brush: php">var evtSource = new EventSource("ssedemo.php");
+</pre>
+
+<p>Si le script qui génère les évènements est hébergé sur un domaine différent, le nouvel objet <code>EventSource</code> doit être créé en spécifiant à la fois l’URI et un dictionnaire d’options. Par exemple, en supposant que le script client est sur example.com :</p>
+
+<pre class="brush: js">var evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } );</pre>
+
+<div class="note">
+<p><strong>Note :</strong> l’utilisation d’<code>EventSource</code> n’est pas supportée par tous les navigateurs. Veuillez vérifier la section {{ anch("Compatibilité des navigateurs") }}.</p>
+</div>
+
+<p>Une fois que vous avez instancié votre source d’évènement, vous pouvez commencer à surveiller les messages du serveur, en écoutant l’évènement <a href="/fr/docs/Web/API/MessageEvent" title="/fr/docs/Web/API/MessageEvent"><code>message</code></a> :</p>
+
+<pre class="brush: js">evtSource.onmessage = function(e) {
+  var newElement = document.createElement("li");
+
+  newElement.innerHTML = "message: " + e.data;
+  eventList.appendChild(newElement);
+}
+</pre>
+
+<p>Ce code écoute les messages entrants (plus précisément, les notifications venant du serveur qui n’ont pas de champ <code>event</code> attaché) et ajoute le texte des messages à une liste dans le HTML du document.</p>
+
+<p>Vous pouvez aussi écouter les évènements avec <code>addEventListener()</code> :</p>
+
+<pre class="brush: js">evtSource.addEventListener("ping", function(e) {
+  var newElement = document.createElement("li");
+
+  var obj = JSON.parse(e.data);
+  newElement.innerHTML = "ping at " + obj.time;
+  eventList.appendChild(newElement);
+}, false);
+</pre>
+
+<p>Ce code est similaire, à part qu’il sera appelé automatiquement si le serveur envoie un message dont le champ <code>event</code> est <code>ping</code> ; il analysera alors le JSON dans le champ <code>data</code> et l’affichera.</p>
+
+<h2 id="Envoyer_un_évènement_depuis_le_serveur">Envoyer un évènement depuis le serveur</h2>
+
+<p>Le script côté serveur qui envoie les évènements doit répondre en utilisant le type MIME <code>text/event-stream</code>. Chaque notification est envoyée sous la forme d’un bloc de texte se terminant par une paire de caractères <em>saut de ligne</em> (<code>\n</code>). Pour plus de détails sur le format du flux d’évènements, voir {{ anch("Format du flux d'évènements") }}.</p>
+
+<p>Voici le code {{ Glossary("PHP") }} que nous utilisons pour notre exemple :</p>
+
+<pre class="brush: php">date_default_timezone_set("America/New_York");
+header("Content-Type: text/event-stream\n\n");
+
+$counter = rand(1, 10);
+while (1) {
+  // Chaque seconde, envoi d’un évènement "ping".
+
+  echo "event: ping\n";
+  $curDate = date(DATE_ISO8601);
+  echo 'data: {"time": "' . $curDate . '"}';
+  // Paire de sauts de ligne
+  echo "\n\n";
+
+  // Envoie un message simple à des intervalles aléatoires.
+
+  $counter--;
+
+  if (!$counter) {
+    echo 'data: This is a message at time ' . $curDate . "\n\n";
+    $counter = rand(1, 10);
+  }
+
+  ob_end_flush();
+  flush();
+  sleep(1);
+}
+</pre>
+
+<p>Ce code génère un évènement de type « ping » à chaque seconde. La donnée de chaque évènement est un objet JSON contenant un horodatage ISO 8601 qui correspond à l’heure à laquelle l’évènement a été généré. À des intervalles aléatoires, un message simple (sans type d’évènement) est envoyé.</p>
+
+<div class="note">
+<p><strong>Note :</strong> Vous pouvez trouver un exemple complet utilisant le code ci-dessus sur Github — voir <a href="https://github.com/mdn/dom-examples/tree/master/server-sent-events" lang="en-US">Simple SSE demo using PHP.</a></p>
+</div>
+
+<h2 id="Gestion_des_erreurs">Gestion des erreurs</h2>
+
+<p>Quand un problème survient (tel qu’un délai de réponse dépassé ou une erreur liée au <a href="/fr/docs/Web/HTTP/CORS">contrôle d’accès</a>), un évènement <code>error</code> est généré. Vous pouvez traiter ces cas d’erreur en implémentant la fonction de rappel <code>onerror</code> de l’objet <code>EventSource</code>.</p>
+
+<pre class="brush: js">evtSource.onerror = function(e) {
+  alert("EventSource failed.");
+};
+</pre>
+
+<p>À l’heure de Firefox 60, il ne semble pas exister de moyen de distinguer les différents types d’erreur.</p>
+
+<h2 id="Fermer_un_flux_d’évènements">Fermer un flux d’évènements</h2>
+
+<p>Par défaut, si la connexion entre le client et le serveur est rompue, elle sera relancée. Il est possible de la fermer explicitement à l’aide de la méthode <code>.close()</code>.</p>
+
+<pre>evtSource.close();</pre>
+
+<h2 id="Format_du_flux_d’évènements">Format du flux d’évènements</h2>
+
+<p>Le flux d’évènements est un simple flux de données de texte, qui doivent être encodées en UTF-8. Les messages dans le flux d’évènements sont séparés par une paire de sauts de ligne. Un caractère deux-points « : » en début de ligne est essentiellement un commentaire, et est ignoré.</p>
+
+<div class="note">
+<p><strong>Note :</strong> Une ligne de commentaire peut être utilisée pour empêcher les connexions d’expirer. Un serveur peut envoyer périodiquement des commentaires afin de garder la connexion ouverte.</p>
+</div>
+
+<p>Chaque message consiste en une ou plusieurs lignes de texte décrivant les champs de ce message. Chaque champ est représenté par le nom du champ, suivi d’un « : », suivi des données de texte pour la valeur de ce champ.</p>
+
+<h3 id="Champs">Champs</h3>
+
+<p>Chaque message reçu a une combinaison quelconque des champs suivants, un par ligne ·</p>
+
+<dl>
+ <dt><code>event</code></dt>
+ <dd>Une chaîne identifiant le type d’évènement décrit. S’il est spécifié, un évènement sera envoyé dans le navigateur à l’écouteur défini pour l’évènement spécifié. Le code source de l’application doit utiliser <code>addEventListener()</code> pour écouter des évènements nommés. Le gestionnaire <code>onmessage</code> est appelé si aucun nom d’évènement n’est spécifié dans un message.</dd>
+ <dt><code>data</code></dt>
+ <dd>Le champ de données du message. Lorsque l’<code>EventSource</code> reçoit plusieurs lignes de message consécutives commençant par <code>data:</code>, <a href="http://www.w3.org/TR/eventsource/#dispatchMessage">il les concatène</a>, en ajoutant un caractère saut de ligne entre chacune d’elles. Les sauts de ligne en fin de message sont supprimés.</dd>
+ <dt><code>id</code></dt>
+ <dd>L’ID d’évènement, qui sera mémorisé comme valeur d’ID du dernier évènement de l’objet <code>EventSource</code>.</dd>
+</dl>
+
+<dl>
+ <dt><code>retry</code></dt>
+ <dd>Le délai de reconnexion à utiliser lors de la tentative d’envoi de l’évènement. Il doit être un nombre entier, spécifiant le temps de reconnexion en millisecondes. Si une valeur non entière est spécifiée, le champ est ignoré.</dd>
+</dl>
+
+<p>Tous les autres noms de champs sont ignorés.</p>
+
+<div class="note">
+<p><strong>Note :</strong> Si une ligne ne contient aucun caractère deux-points, la ligne entière est considérée comme le nom du champ, avec un contenu vide.</p>
+</div>
+
+<h3 id="Exemples">Exemples</h3>
+
+<h4 id="Messages_de_données_seulement">Messages de données seulement</h4>
+
+<p>Dans l’exemple suivant, trois messages sont envoyés. Le premier est simplement un commentaire, car il débute par un caractère deux-points. Comme mentionné précédemment, cela peut être utile pour maintenir la connexion si des messages doivent être transmis de façon irrégulière.</p>
+
+<p>Le second message contient un champ <code>data</code> avec la valeur <code>"some text"</code>. Le troisième message contient un champ <code>data</code> avec la valeur <code>"another message\nwith two lines"</code>. Notez le caractère saut de ligne dans la valeur.</p>
+
+<pre>: this is a test stream
+
+data: some text
+
+data: another message
+data: with two lines
+</pre>
+
+<h4 id="Évènements_nommés">Évènements nommés</h4>
+
+<p>Cet exemple envoie une série d’évènements nommés. Chacun a un nom d’évènement spécifié par le champ <code>event</code>, et un champ <code>data</code> dont la valeur est une chaîne JSON appropriée avec les données nécéssaires au client pour réagir à l’évènement. Le champ <code>data</code> peut évidemment contenir n’importe quelles données de texte , il n’est pas obligatoirement au format JSON.</p>
+
+<pre>event: userconnect
+data: {"username": "bobby", "time": "02:33:48"}
+
+event: usermessage
+data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
+
+event: userdisconnect
+data: {"username": "bobby", "time": "02:34:23"}
+
+event: usermessage
+data: {"username": "sean", "time": "02:34:36", "text": "Bye, bobby."}
+</pre>
+
+<h4 id="Mélanger_les_messages">Mélanger les messages</h4>
+
+<p>Il n’est pas obligatoire d’utiliser uniquement des messages sans nom ou des évènements nommés. Vous pouvez mélanger les deux dans un même flux d’évènements.</p>
+
+<pre>event: userconnect
+data: {"username": "bobby", "time": "02:33:48"}
+
+data: Ici un message système quelconque qui sera utilisé
+data: pour accomplir une tâche.
+
+event: usermessage
+data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}</pre>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Fonctionnalité</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Support de EventSource</td>
+   <td>6</td>
+   <td>{{ CompatNo }}</td>
+   <td>{{ CompatGeckoDesktop("6.0") }}</td>
+   <td>{{ CompatNo }}</td>
+   <td>{{ CompatVersionUnknown }}</td>
+   <td>5</td>
+  </tr>
+  <tr>
+   <td>Disponible dans les workers partagés et dédiés<sup>[1]</sup></td>
+   <td>{{ CompatVersionUnknown }}</td>
+   <td>{{ CompatNo }}</td>
+   <td>{{ CompatGeckoDesktop("53.0") }}</td>
+   <td>{{ CompatNo }}</td>
+   <td>{{ CompatVersionUnknown }}</td>
+   <td>{{ CompatVersionUnknown }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Fonctionnalité</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Support de EventSource</td>
+   <td>4.4</td>
+   <td>45</td>
+   <td>{{ CompatNo }}</td>
+   <td>12</td>
+   <td>4.1</td>
+  </tr>
+  <tr>
+   <td>Disponible dans les workers partagés et dédiés<sup>[1]</sup></td>
+   <td>{{ CompatVersionUnknown }}</td>
+   <td>{{ CompatGeckoMobile("53.0") }}</td>
+   <td>{{ CompatNo }}</td>
+   <td>{{ CompatVersionUnknown }}</td>
+   <td>{{ CompatVersionUnknown }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Mais <a href="https://github.com/w3c/ServiceWorker/issues/947">pas dans les service workers pour le moment</a>.</p>
+
+<h2 id="Références">Références</h2>
+
+<h4 id="Communauté_WHATWG">Communauté WHATWG</h4>
+
+<p><a href="https://html.spec.whatwg.org/multipage/comms.html#server-sent-events">https://html.spec.whatwg.org/multipage/comms.html#server-sent-events</a></p>
+
+<p><a href="http://www.html5rocks.com/profiles/#ericbidelman">Eric Bidelman</a> sur le blog HTML5 ROCKS</p>
+
+<p><a href="http://www.html5rocks.com/en/tutorials/eventsource/basics/?redirect_from_locale=fr">http://www.html5rocks.com/en/tutorials/eventsource/basics/?redirect_from_locale=fr</a></p>

@@ -1,0 +1,46 @@
+---
+title: '-ms-hyphenate-limit-zone'
+slug: Web/CSS/-ms-hyphenate-limit-zone
+tags:
+  - CSS
+  - Non-standard
+  - Propriété
+  - Reference
+translation_of: Archive/Web/CSS/-ms-hyphenate-limit-zone
+---
+<div>{{CSSRef}}{{Non-standard_header}}</div>
+
+<p>La propriété CSS <code><strong>-ms-hyphenate-limit-zone</strong></code> est <a href="/fr/docs/Web/CSS/Extensions_CSS_Microsoft">une propriété spécifique à Microsoft</a> qui indique la largeur de la zone dans laquelle on peut appliquer une césure et un trait d'union sur les mots pour passer à la ligne.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<p>La propriété <strong><code>-ms-hyphenate-limit-zone</code></strong> est définie avec l'une des valeurs suivantes.</p>
+
+<h3 id="Valeurs">Valeurs</h3>
+
+<dl>
+ <dt>{{cssxref("percentage")}}</dt>
+ <dd>
+ <p>Un entier suivi du caractère % qui indique la taille de la zone proportionnellement à la taille de la boîte de la ligne. Les valeurs négatives ne sont pas autorisées.</p>
+ </dd>
+ <dt>{{cssxref("length")}}</dt>
+ <dd>
+ <p>Une valeur décimale suivie par une unité qui indique la largeur de la zone. Pour plus d'informations sur les valeurs possibles, voir <a href="/fr/docs/Web/CSS/Types_CSS">les types de donnée en CSS</a>. Les valeurs négatives ne sont pas autorisées.</p>
+ </dd>
+</dl>
+
+<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+
+<pre class="syntaxbox">{{csssyntax}}</pre>
+
+<h2 id="Specification" name="Specification">Spécifications</h2>
+
+<p>Cette propriété est une propriété spécifique et n'est décrite dans aucune spécification.</p>
+
+<p>{{cssinfo}}</p>
+
+<h2 id="Notes">Notes</h2>
+
+<p>La propriété <code><strong>-ms-hyphenate-limit-zone</strong></code> permet de contrôler le nombre de blancs autorisés pour le passage à la ligne. La zone concernée se situe toujours sur le côté logique droit de la boîte de <em>padding</em>..</p>
+
+<p>Un mot sera uniquement sujet à une césure s'il commence à l'extérieur ou à la limite gauche de la zone.</p>

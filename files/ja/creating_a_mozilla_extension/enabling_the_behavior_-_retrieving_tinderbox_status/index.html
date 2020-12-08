@@ -1,0 +1,32 @@
+---
+title: Enabling the behavior - retrieving tinderbox status
+slug: >-
+  Creating_a_Mozilla_Extension/Enabling_the_behavior_-_retrieving_tinderbox_status
+tags:
+  - Add-ons
+  - Extensions
+translation_of: >-
+  Archive/Mozilla/Creating_a_Mozilla_extension/Enabling_the_behavior_-_retrieving_tinderbox_status
+---
+<p>
+</p><p>これで我々の拡張機能ができましたが、このままではまだ動きません。動くようにするには、Tinderbox の状態に合わせて拡張機能のステータスを変更する JavaScript のコードが必要です。まず最初に、Tinderbox サーバから現在の Tinderbox の状態を取得する関数を書きます。
+</p>
+<pre class="eval">var gXMLHttpRequest;
+
+function loadTinderboxStatus() {
+  gXMLHttpRequest = new XMLHttpRequest();
+  gXMLHttpRequest.onload = updateTinderboxStatus;
+  gXMLHttpRequest.open("GET", "<span>http://tinderbox.mozilla.org/SeaMonkey/panel.html</span>");
+  gXMLHttpRequest.send(null);
+}
+</pre>
+<p><a href="ja/XMLHttpRequest">XMLHttpRequest</a> は HTTP を介してドキュメントを取得するための Mozilla のインターフェイスです。これは XML コンテンツを取得し、解析して DOM に変換するように設計されています。XML 以外のコンテンツも (解析はしませんが) ちゃんと取得できます。今回は、現在の Tinderbox の状態の概要を含む HTML ファイルを取得するのに使います。その HTML ファイルは Tinderbox サーバがビルドを終える度に更新されています。そのファイルには、アクティブな Tinderbox クライアントのリストと、最新のビルドの結果が示されています。
+</p><p>今回のようなシンプルな場合なら、XMLHttpRequest を使うのは簡単です。<code>new</code> で XMLHttpRequest のインスタンスを生成し、インスタンスの <code>onload</code> プロパティに <code>updateTinderboxStatus()</code> をセット (この関数はドキュメントの読み込みが終わった時に実行したい関数です) し、インスタンスの <code>open</code> メソッドを、発行したい HTTP リクエストのタイプと、取得するドキュメントの URL を引数に指定して呼び、最後に実際にリクエストを送る <code>send</code> メソッドを呼び出します。<span style="color: darkgreen; background: #ef9;">【訳注: updateTinderboxStatus() 関数は次の Step で作成します】</span>
+</p><p>XMLHttpRequest は与えられた URL にあるドキュメントを取得し、取得し終わると <code>updateTinderboxStatus()</code> を呼びます。
+</p><p>XMLHttpRequest のインスタンスをグローバル変数として定義したのに注意してください。これは <code>updateTinderboxStatus()</code> がこの関数と同様に このインスタンスを参照する必要があるけれど、この関数が直接に <code>updateTinderboxStatus()</code> を呼ぶのではないので、この関数から <code>updateTinderboxStatus()</code> へ XMLHttpRequest のインスタンスを渡すことができないためです。
+</p><p></p><div style="text-align: right;" class="prevnext">
+    <p><a style="float: left;" href="/ja/docs/Creating_a_Mozilla_Extension:Specifying_the_appearance">« 前のページ</a><a href="/ja/docs/Creating_a_Mozilla_Extension:Enabling_the_behavior_-_updating_the_status_bar_panel">次のページ  »</a></p>
+</div>
+<p></p>
+<div class="noinclude">
+</div>

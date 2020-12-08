@@ -1,0 +1,178 @@
+---
+title: ブロードキャスタとオブザーバ
+slug: Archive/Mozilla/XUL/Tutorial/Broadcasters_and_Observers
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Broadcasters_and_Observers
+---
+<p>
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Updating_Commands" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Document_Object_Model">次のページ  »</a></p>
+</div>
+<p>いくつもの要素に対して、同じようにイベントに反応させるようにしたり、一括して状態の変化を反映させたいことは、しばしばあると思います。
+このために、ブロードキャスタを利用することができます。
+</p><p><span id="Command_Attribute_Forwarding"></span>
+</p>
+<h3 id=".E3.82.B3.E3.83.9E.E3.83.B3.E3.83.89.E3.81.A8.E5.B1.9E.E6.80.A7.E3.81.AE.E8.87.AA.E5.8B.95.E8.BB.A2.E9.80.81" name=".E3.82.B3.E3.83.9E.E3.83.B3.E3.83.89.E3.81.A8.E5.B1.9E.E6.80.A7.E3.81.AE.E8.87.AA.E5.8B.95.E8.BB.A2.E9.80.81"> コマンドと属性の自動転送 </h3>
+<p>ここまでに説明したように、ボタンなどの要素は、コマンドと結びつけることが可能です。
+このとき、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/command" title="command">command</a></code></code> 要素に <code><code id="a-disabled"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code></code> 属性を付加すれば、そのコマンドに結びつけられた要素も自動的に無効化されます。
+これを利用して、作成する必要があるコードを単純化することができます。
+また、この技法は、それ以外の属性に対しても適用することが可能です。
+例えば、<code><code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> 属性を、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/command" title="command">command</a></code></code> 要素に付加した場合、コマンドに結びつけられたすべてのボタンは、同じラベルを共有することになります。
+</p><p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_broadob_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_broadob_1.xul">表示</a>
+</p>
+<pre>&lt;command id="my_command" label="Open"/&gt;
+
+&lt;button command="my_command"/&gt;
+&lt;checkbox label="Open in a new window" command="my_command"/&gt;
+</pre>
+<p>この例では、ボタンは <code><code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> 属性を持っていませんが、結びつけられたコマンドの方が持っています。
+このため、ボタンは、コマンドに設定されたラベルを共有することになります。
+また、チェックボックスは、最初からラベルを持っていますが、これもコマンドのラベルによって上書きされます。
+その結果、ボタンとチェックボックスは、両方とも同じラベル「Open」を持つことになります。
+</p><p>コマンドの <code><code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> 属性を変更した場合、ボタンとチェックボックスのラベルも、それに追随して変更されます。
+これは、以前のセクションで見た、<code><code id="a-disabled"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code></code> 属性の変更が、他の要素へ伝播する挙動と類似しています。
+</p><p>属性の<span style="border-bottom: 1px dashed green;" title="forwarding">自動転送</span>は、いろいろな目的のために利用できます。
+例えば、ブラウザの「戻る」動作を無効化したいと考えているとします。
+このとき、メニューの「戻る」コマンド、ツールバーの「戻る」ボタン、キーボードショートカット (例えば Alt + ←)、ポップアップメニューの「戻る」コマンドのすべてを無効化する必要があります。
+このために、スクリプトを作成することもできますが、退屈なコードを大量に記述することになります。
+加えて、「戻る」動作が導入されている箇所を、すべて押さえておく必要があるという欠点もあります。
+また、この方法では、ブラウザの<span style="border-bottom: 1px dashed green;" title="Extension">拡張機能</span>で、新たに「戻る」操作が追加されても、それについては無効化することができません。
+しかしながら、単純に「戻る」の動作自体を無効化すれば、「戻る」動作を実行するすべての要素が、自ら無効になるようになっていれば、この機能は簡単に実現できます。
+これは、コマンドが持つ属性の自動転送機能を利用することで実現することが可能です。
+</p><p><span id="Broadcasters"></span>
+</p>
+<h3 id=".E3.83.96.E3.83.AD.E3.83.BC.E3.83.89.E3.82.AD.E3.83.A3.E3.82.B9.E3.82.BF" name=".E3.83.96.E3.83.AD.E3.83.BC.E3.83.89.E3.82.AD.E3.83.A3.E3.82.B9.E3.82.BF"> ブロードキャスタ </h3>
+<p>コマンドが持っている属性の自動転送と類似の機能を持つ要素として、ブロードキャスタ (<code><code><a href="/ja/docs/Mozilla/Tech/XUL/broadcaster" title="broadcaster">broadcaster</a></code></code>) があります。
+ブロードキャスタは、コマンドと同様の方法で属性の自動転送をサポートします。
+ブロードキャスタは、コマンドと同じように機能しますが、
+コマンドが (複数の操作から起動される) 同一の動作をまとめるために利用されるのに対し、ブロードキャスタは (複数の要素に影響する) 状態に関する情報を保持するために利用される点が異なります。
+例えば、 <code><code><a href="/ja/docs/Mozilla/Tech/XUL/command" title="command">command</a></code></code> は、「戻る」「切り取り」「削除」といった動作のために利用しますが、
+<code><code><a href="/ja/docs/Mozilla/Tech/XUL/broadcaster" title="broadcaster">broadcaster</a></code></code> は、フラグの保持、具体的には「利用者がオンラインかどうか」といった情報を示すために利用します。
+前者の場合は、メニュー項目やツールバーボタンなどを、戻るべきページが無いときや、切り取りや削除の対象となるテキストが無いときなどに、一括して無効化する必要があり、
+後者の場合は、利用者がオフラインからオンラインにモードを切り替えたときに、種々の UI 要素の状態を更新する必要があることを想定しています。
+</p><p>ブロードキャスタの最も単純な記述例を以下に示します。
+他の要素から参照可能にするために、<code><code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> 属性は常に設定する必要があります。
+</p>
+<pre>&lt;broadcasterset&gt;
+  &lt;broadcaster id="isOffline" label="Offline"/&gt;
+&lt;/broadcasterset&gt;
+</pre>
+<p>このブロードキャスタを「観察」している任意の要素は、ブロードキャスタの <code><code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> 属性が変更されるのに応じて、自動的に変更されていきます。
+他の表示されない要素と同様に、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/broadcasterset" title="broadcasterset">broadcasterset</a></code></code> 要素が、ブロードキャスタの<span style="border-bottom: 1px dashed green;" title="placeholder">置き場所</span>として提供されています。
+すべてのブロードキャスタは、一箇所にまとめておくために、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/broadcasterset" title="broadcasterset">broadcasterset</a></code></code> 要素内に宣言しておくべきでしょう。
+</p><p><span id="Making_elements_observers"></span>
+</p>
+<h3 id=".E8.A6.81.E7.B4.A0.E3.82.92.E3.82.AA.E3.83.96.E3.82.B6.E3.83.BC.E3.83.90.E3.81.A8.E3.81.97.E3.81.A6.E8.A8.AD.E5.AE.9A.E3.81.99.E3.82.8B" name=".E8.A6.81.E7.B4.A0.E3.82.92.E3.82.AA.E3.83.96.E3.82.B6.E3.83.BC.E3.83.90.E3.81.A8.E3.81.97.E3.81.A6.E8.A8.AD.E5.AE.9A.E3.81.99.E3.82.8B"> 要素をオブザーバとして設定する </h3>
+<p>ブロードキャスタを「<span style="border-bottom: 1px dashed green;" title="observe">観察</span>」している要素のことを、オブザーバ (<span style="color: green;">observer</span>) と呼びます。
+要素をオブザーバにするためには、<code><code id="a-observes"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/observes">observes</a></code></code> 属性を追加します。
+これは、要素を <code><code><a href="/ja/docs/Mozilla/Tech/XUL/command" title="command">command</a></code></code> 要素に結びつけるときに、<code><code id="a-command"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/command">command</a></code></code> 属性を利用するのと類似しています。
+例えば、ボタンを上記のブロードキャスタのオブザーバにする場合は、以下のようになります。
+</p>
+<pre>&lt;button id="offline_button" observes="isOffline"/&gt;
+</pre>
+<p>このボタンには、<code><code id="a-observes"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/observes">observes</a></code></code> 属性が置かれており、値には観察対象となるブロードキャスタの <code><code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> が設定されています。
+この例では、ボタンは、前の例で定義した <code>isOffline</code> を id とするブロードキャスタを観察することになります。
+このため、ブロードキャスタの <code><code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> 属性の値が変更されると、オブザーバの <code><code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> 属性の値も更新されます。
+</p><p>さらに、他の要素をオブザーバとして追加していくことが可能です。
+1 つのブロードキャスタを観察する要素はいくつ設定してもかまいません。
+もちろん、観察する要素は 1 つだけでもよいのですが、それではあまり得られるものがありません。
+ブロードキャスタを使用する主な目的は、属性を複数の箇所へ転送することにあるからです。
+ブロードキャスタは、複数の要素が属性を観察する必要があるときにのみ利用するべきだと思います。
+以下に、いくつかのオブザーバを追加で定義した例を示します。
+</p>
+<pre>&lt;broadcaster id="offline_command" label="Offline" accesskey="f"/&gt;
+
+&lt;keyset&gt;
+  &lt;key id="goonline_key" observes="offline_command" modifiers="accel" key="O"/&gt;
+&lt;/keyset&gt;
+&lt;menuitem id="offline_menuitem" observes="offline_command"/&gt;
+&lt;toolbarbutton id="offline_toolbarbutton" observes="offline_command"/&gt;
+</pre>
+<p>この例では、<code><code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> と <code><code id="a-accesskey"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/accesskey">accesskey</a></code></code> が、ブロードキャスタから、キー要素、メニュー項目、ツールバーボタンへと転送されます。
+このとき、キー要素は、受け取った属性をどれも利用しませんが、ブロードキャスタが無効化されるとそれに応じて無効化されることになります。
+</p><p>ブロードキャスタは、任意の属性を観察するために利用できます。
+オブザーバは、ブロードキャスタから、任意に設定された属性の値を全部、値が変更されるたびに受け取ります。
+ブロードキャスタの、任意の属性のいずれかの値が変更されたときは、全てオブザーバに通知され、オブザーバは自分の属性値で該当するものを更新します。
+ブロードキャスタに設定されていない属性については、オブザーバの属性は変更されません。
+ただし、<code><code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> と <code><code id="a-persist"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/persist">persist</a></code></code> の 2 つの属性については、共有させることはありえないため、オブザーバ側が更新されることはありません。
+また、開発者が独自に定義した属性についても、必要なら利用することが可能です。
+</p><p>ほとんど場面でコマンドが使えるため、ブロードキャスタはそれほど頻繁には用いられません。
+属性の自動転送という点から見たとき、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/command" title="command">command</a></code></code> 要素と <code><code><a href="/ja/docs/Mozilla/Tech/XUL/broadcaster" title="broadcaster">broadcaster</a></code></code> 要素に実質的な違いはありません。
+この 2 つは、挙動としては同じですが、使用する場合の意味づけの部分が異なっています。
+コマンドは動作に、ブロードキャスタは状態のために使用するようにしてください。
+なお、意味づけを無視すれば、実際には、<code><code id="a-observes"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/observes">observes</a></code></code> 属性の値として、ブロードキャスタ以外の要素を設定してもかまわないため、
+任意の要素をブロードキャスタのように振舞わせることも可能です。
+</p><p><span id="The_Observes_Element"></span>
+</p>
+<h3 id="observes_.E8.A6.81.E7.B4.A0" name="observes_.E8.A6.81.E7.B4.A0"> observes 要素 </h3>
+<p>ブロードキャスタを観察するとき、特定の属性だけを観察するように限定する方法もあります。
+そのためには、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/observes" title="observes">observes</a></code></code> 要素を利用します。
+この要素を、観察したい属性と対になるように置くことで、要素をオブザーバとして定義することが可能です。
+<code><code><a href="/ja/docs/Mozilla/Tech/XUL/observes" title="observes">observes</a></code></code> 要素は、オブザーバとなる要素の子要素にする必要があります。
+以下に例を示します。
+</p><p><span id="%E4%BE%8B_2"><a id="%E4%BE%8B_2"></a><strong>例 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_broadob_2.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_broadob_2.xul">表示</a>
+</p>
+<pre>&lt;broadcasterset&gt;
+  &lt;broadcaster id="isOffline" label="Offline" accesskey="f"/&gt;
+&lt;/broadcasterset&gt;
+
+&lt;button id="offline_button"&gt;
+  &lt;observes element="isOffline" attribute="label"/&gt;
+&lt;/button&gt;
+</pre>
+<p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/observes" title="observes">observes</a></code></code> 要素には、2 つの属性が設定されています。
+最初の <code><code id="a-element"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/element">element</a></code></code> 属性には、観察するブロードキャスタの id を指定します。
+2 番目の <code><code id="a-attribute"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/attribute">attribute</a></code></code> 属性には、観察する属性を指定します。
+この例では、指定の結果、ボタンのラベルがブロードキャスタから転送されるようになるため、
+ブロードキャスタのラベルが変更されると、ボタンのラベルも更新されることになります。
+このとき、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/observes" title="observes">observes</a></code></code> 要素自身は変更されませんが、代わりに、この要素を中に含んでいる、ボタン (<code><code><a href="/ja/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code>) 要素が変更されることになります。
+なお、<code><code id="a-accesskey"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/accesskey">accesskey</a></code></code> 属性は、観察されていないので、ボタンには転送されないことに注意してください。
+もし <code><code id="a-accesskey"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/accesskey">accesskey</a></code></code> 属性も観察させたいのなら、もう 1 つ <code><code><a href="/ja/docs/Mozilla/Tech/XUL/observes" title="observes">observes</a></code></code> 要素を追加する必要があります。
+または、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/observes" title="observes">observes</a></code></code> 要素を利用する代わりに、 <code><code id="a-observes"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/observes">observes</a></code></code> 属性をボタンに直接設定することで、すべての属性を観察させることもできます。
+</p><p><span id="Broadcast_event"></span>
+</p>
+<h4 id="broadcast_.E3.82.A4.E3.83.99.E3.83.B3.E3.83.88" name="broadcast_.E3.82.A4.E3.83.99.E3.83.B3.E3.83.88"> broadcast イベント </h4>
+<p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/observes" title="observes">observes</a></code></code> 要素には、付加的なイベントハンドラ <code>onbroadcast</code> を設定することができます。
+このイベントは、ブロードキャスタの属性の変化が、観察しているオブザーバに通知されるときに発生します。
+以下に例を示します。
+</p><p><span id="%E4%BE%8B_3"><a id="%E4%BE%8B_3"></a><strong>例 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_broadob_3.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_broadob_3.xul">表示</a>
+</p>
+<pre>&lt;broadcasterset&gt;
+  &lt;broadcaster id="colorChanger" style="color: black"/&gt;
+&lt;/broadcasterset&gt;
+
+&lt;button label="Test"&gt;
+  &lt;observes element="colorChanger" attribute="style" onbroadcast="alert('Color changed');"/&gt;
+&lt;/button&gt;
+
+&lt;button label="Observer"
+  oncommand="document.getElementById('colorChanger').setAttribute('style','color: red');"
+/&gt;
+</pre>
+<p>この例では、2 つのボタンがあります。
+1 つは「Test」、もう 1 つは 「Observer」というラベルがつけられています。
+Test ボタンがクリックされても何も起きませんが、 Observer ボタンがクリックされると 2 つのことが発生します。
+まず、Test ボタンのテキストが赤色になり、次に、「Color changed」というメッセージのアラートが表示されます。
+</p><p>このとき発生した事象を順に見ていくと、
+まず、Observer ボタンがクリックされて、その <code><code id="a-oncommand"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/oncommand">oncommand</a></code></code> ハンドラが呼び出されます。
+そのスクリプトでは、ブロードキャスタへの参照を取得し、そのスタイルの <code>color</code> を、赤（red）に変更しています。
+このとき、ブロードキャスタ自体は画面に表示されないので、何の影響も与えませんが、Test ボタンにはスタイルの変化の通知を受けるオブザーバが存在します。
+<code><code><a href="/ja/docs/Mozilla/Tech/XUL/observes" title="observes">observes</a></code></code> 要素の <code><code id="a-element"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/element">element</a></code></code> と <code><code id="a-attribute"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/attribute">attribute</a></code></code> 属性によって、スタイルの変化が検知されます。
+スタイルの変更は、自動的に Test ボタンに適用されます。
+</p><p>次に、ブロードキャストによる転送が発生したため、イベントハンドラ <code>onbroadcast</code> が呼び出されます。
+この結果、アラートメッセージが表示されます。
+この broadcast イベントは、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/broadcaster" title="broadcaster">broadcaster</a></code></code> 要素の属性が変化した場合についてのみ発生することに注意して下さい。
+ボタンのスタイルを直接変更したとしても、broadcast イベントは発生しないため、アラートは表示されません。
+</p><p>最初の <code><code><a href="/ja/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code> (Test ボタン) のコードをいくつか複製した場合、複製したボタンに対して 1 つずつ、複製した個数分のアラートが表示されることになります。
+これは、それぞれのボタンがオブザーバであり、スタイルが変更されると、全てに通知が行われるためです。
+</p><p>次のセクションでは、 XUL 要素による文書オブジェクトモデルの利用について見ていきます。
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Updating_Commands" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Document_Object_Model">次のページ  »</a></p>
+</div>
+<p><br>
+</p>
+<div class="noinclude">
+</div>

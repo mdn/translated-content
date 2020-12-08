@@ -1,0 +1,129 @@
+---
+title: Plus sur les gestionnaires d'évènements
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Plus_sur_les_gestionnaires_d'évènements
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/More_Event_Handlers
+---
+<p> </p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Ajout_de_gestionnaires_d'évènements" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Raccourcis_clavier">Suivant  »</a></p>
+</div>
+<p>Dans cette section, l'objet événement sera examiné et des événements additionnels seront décrits.</p>
+<h3 id="L.27objet_.27event.27" name="L.27objet_.27event.27">L'objet 'event'</h3>
+<p>Chaque gestionnaire d'événement dispose d'un unique argument qui contient un objet <a href="/fr/DOM/event" title="fr/DOM/event">event</a>. Dans la forme avec attributs des scrutateurs d'événements, cet événement est un argument implicite auquel un script peut se référer en utilisant le nom 'event'. Sous la forme <a href="/fr/DOM/element.addEventListener" title="fr/DOM/element.addEventListener">addEventListener</a>, le premier argument de la fonction scrutatrice sera un objet événement. L'objet 'event' dispose d'un certain nombre de propriétés qui peuvent être examinées lors de l'émission d'un événement. La liste complète est disponible dans <a class="external" href="http://xulplanet.com/references/objref/Event.html">les références objets</a>.</p>
+<p>Nous avons déjà vu la propriété <code><a href="/fr/DOM/event.target" title="fr/DOM/event.target">target</a></code> d'un événement dans la section précédente. Elle contient une référence de l'élément ayant déclenché l'événement. Une propriété similaire <code><a href="/fr/DOM/event.currentTarget" title="fr/DOM/event.currentTarget">currentTarget</a></code> contient l'élément sur lequel est placé un scrutateur d'événement. Dans l'exemple ci-dessous, <code><a href="/fr/DOM/event.currentTarget" title="fr/DOM/event.currentTarget">currentTarget</a></code> pointe toujours la boîte <code><a href="/fr/docs/Mozilla/Tech/XUL/vbox" title="vbox">vbox</a></code>, alors que la cible peut être un élément spécifique, le bouton ou la case à cocher qui a été activé.</p>
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advevents_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advevents_1.xul">Voir</a></p>
+<pre>&lt;vbox oncommand="alert(event.currentTarget.tagName);"&gt;
+   &lt;button label="OK"/&gt;
+   &lt;checkbox label="Voir les images"/&gt;
+&lt;/vbox&gt;
+</pre>
+<h4 id="Stopper_la_propagation_d.27.C3.A9v.C3.A9nement" name="Stopper_la_propagation_d.27.C3.A9v.C3.A9nement">Stopper la propagation d'événement</h4>
+<p>Une fois qu'un événement est traité, indépendamment de l'étape de la propagation où se trouve l'événement, vous pouvez empêcher qu'il soit transmis aux éléments suivants, c'est-à-dire de stopper les phases de captures ou de diffusion. En fonction de la manière dont vous avez attaché le scrutateur d'événement sur un élément, il existe plusieurs méthodes pour le faire.</p>
+<p>Rappelez-vous que la phase de capture intervient avant la phase de diffusion, donc tous les scrutateurs de capture sont déclenchés avant les scrutateurs de diffusion. Si un événement capturé stoppe la propagation événementielle, aucun des scrutateurs de capture ou de diffusion suivants ne recevront de notification d'un quelconque événement. Pour interrompre la propagation événementielle, appelez la méthode <code><a href="/fr/DOM/event.stopPropagation" title="fr/DOM/event.stopPropagation">stopPropagation</a></code> de l'objet événement, comme dans l'exemple qui suit.</p>
+<p><span id="Exemple_2"><a id="Exemple_2"></a><strong>Exemple 2</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advevents_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advevents_2.xul">Voir</a></p>
+<pre>&lt;hbox id="outerbox"&gt;
+  &lt;button id="okbutton" label="OK"/&gt;
+&lt;/hbox&gt;
+
+&lt;script&gt;
+function buttonPressed(event){
+  alert('Le bouton a été pressé !');
+}
+
+function boxPressed(event){
+  alert('La boîte a été pressée !');
+  event.stopPropagation();
+}
+
+var button = document.getElementById("okbutton");
+button.addEventListener('command',buttonPressed,true);
+
+var outerbox = document.getElementById("outerbox");
+outerbox.addEventListener('command',boxPressed,true);
+&lt;/script&gt;
+</pre>
+<p>Ici, un scrutateur d'événement a été ajouté au bouton, et un autre à la boîte. La méthode <code><a href="/fr/DOM/event.stopPropagation" title="fr/DOM/event.stopPropagation">stopPropagation</a></code> est appelée dans le scrutateur de la boîte, donc le scrutateur du bouton ne sera jamais appelé. Si cet appel est enlevé, les deux scrutateurs seront appelés et les deux alertes apparaîtront.</p>
+<h4 id="Emp.C3.AAcher_l.27action_par_d.C3.A9faut" name="Emp.C3.AAcher_l.27action_par_d.C3.A9faut">Empêcher l'action par défaut</h4>
+<p>Si aucun gestionnaire d'événement n'a été enregistré pour un événement donné, alors après avoir accompli les phases de capture et de diffusion, l'élément traitera l'événement dans un mode par défaut. L'action par défaut dépendra de la nature de l'événement et du type d'élément. Par exemple, l'événement 'popupshowing' est envoyé par un menu surgissant juste avant son affichage. L'action par défaut est l'affichage du menu surgissant. Si l'action par défaut est bloquée, l'affichage ne se fera pas. L'action par défaut peut être empêchée avec la méthode <code><a href="/fr/DOM/event.preventDefault" title="fr/DOM/event.preventDefault">preventDefault</a></code> de l'objet événement, comme dans l'exemple ci-dessous.</p>
+<p><span id="Exemple_3"><a id="Exemple_3"></a><strong>Exemple 3</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advevents_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advevents_3.xul">Voir</a></p>
+<pre>&lt;button label="Types" type="menu"&gt;
+  &lt;menupopup onpopupshowing="event.preventDefault();"&gt;
+    &lt;menuitem label="Verre"/&gt;
+    &lt;menuitem label="Plastique"/&gt;
+  &lt;/menupopup&gt;
+&lt;/button&gt;
+</pre>
+<p>Alternativement, pour des scrutateurs d'événement par attributs, vous pouvez simplement faire renvoyer la valeur 'false' par le code. Notez que l'empêchement de l'action par défaut ne revient pas à interrompre la propagation événementielle avec la méthode <code><a href="/fr/DOM/event.stopPropagation" title="fr/DOM/event.stopPropagation">stopPropagation</a></code>. Même si l'action par défaut a été bloquée, l'événement continue à se propager. De même, l'appel de la méthode <code><a href="/fr/DOM/event.stopPropagation" title="fr/DOM/event.stopPropagation">stopPropagation</a></code> ne bloquera pas l'action par défaut. Vous devrez appeler ces deux méthodes pour interrompre les deux actions.</p>
+<p>Notez qu'une fois la propagation ou l'action par défaut bloquée, il n'est pas possible de les rendre actives de nouveau pour cet événement.</p>
+<p>Les sous-sections ci-dessous listent quelques-uns des événements pouvant être utilisés. Une liste complète est fournie dans <a class="external" href="http://www.xulplanet.com/references/elemref/ref_EventHandlers.html">la référence des événements</a>.</p>
+<h3 id=".C3.89v.C3.A9nements_de_la_souris" name=".C3.89v.C3.A9nements_de_la_souris">Événements de la souris</h3>
+<p>Il y a plusieurs événements pouvant être employés pour gérer les actions de la souris, listés dans le tableau suivant :</p>
+<dl>
+  <dt>
+    'click' </dt>
+  <dd>
+    appelé lorsque la souris est appuyée puis relâchée sur un élément.</dd>
+  <dt>
+    'dblclick' </dt>
+  <dd>
+    appelé lorsque la souris est double-cliquée.</dd>
+  <dt>
+    'mousedown' </dt>
+  <dd>
+    appelé lorsqu'un bouton de la souris est pressé. Le gestionnaire d'événement est appelé aussitôt que le bouton de la souris est appuyé, avant même qu'il ne soit relâché.</dd>
+  <dt>
+    'mouseup' </dt>
+  <dd>
+    appelé lorsque la souris est relâchée sur un élément.</dd>
+  <dt>
+    'mouseover' </dt>
+  <dd>
+    appelé lorsque le pointeur de la souris survole un élément. Vous pourriez utiliser cet événement pour mettre en valeur l'élément, toutefois CSS fournit une façon automatique de le faire, il est donc inutile de le faire avec un événement. Vous pouvez toutefois l'utiliser pour afficher une aide dans la barre d'état.</dd>
+  <dt>
+    'mousemove' </dt>
+  <dd>
+    appelé lorsque le pointeur de la souris se déplace au-dessus d'un élément. L'événement étant appelé à chaque déplacement de la souris, vous devriez éviter de faire appel à ce gestionnaire pour des tâches trop longues.</dd>
+  <dt>
+    'mouseout' </dt>
+  <dd>
+    appelé lorsque le pointeur de la souris quitte un élément. Vous pourriez annuler la mise en valeur de l'élément ou effacer le texte de la barre d'état.</dd>
+</dl>
+<p>Il existe également un jeu d'événements relatifs au glisser, qui intervient lorsque l'utilisateur maintient le bouton de la souris enfoncé et déplace la souris. Ces événements seront décrits dans <a href="/fr/Tutoriel_XUL/Glisser-Déposer" title="fr/Tutoriel_XUL/Glisser-Déposer">la section Glisser-Déposer</a>.</p>
+<h4 id="Propri.C3.A9t.C3.A9s_des_.C3.A9v.C3.A9nements_des_boutons_de_la_souris" name="Propri.C3.A9t.C3.A9s_des_.C3.A9v.C3.A9nements_des_boutons_de_la_souris">Propriétés des événements des boutons de la souris</h4>
+<p>Lorsqu'un événement sur un bouton de la souris se produit, vous disposez d'un certain nombre de propriétés supplémentaires pour déterminer quels boutons ont été pressés et la position du pointeur de la souris. La propriété <code><a href="/fr/DOM/event.button" title="fr/DOM/event.button">button</a></code> de 'event' peut être utilisée pour déterminer quel bouton a été pressé, avec les valeurs possibles de '0' pour le bouton de gauche, '1' pour le bouton de droite, et '2' pour le bouton du milieu. Si vous avez configuré votre souris différemment, ces valeurs peuvent être différentes.</p>
+<p>La propriété <code><a href="/fr/DOM/event.detail" title="fr/DOM/event.detail">detail</a></code> contient le nombre de fois que le bouton a été cliqué rapidement en séquence. Elle permet de tester des clics simples, doubles ou triples. Bien entendu, si vous ne souhaitez tester que les double-clics, vous pouvez plutôt utiliser l'événement 'dblclick'. L'événement 'click' sera lancé dès le premier clic, puis de nouveau pour le second clic, puis pour le troisième clic, tandis que l'événement 'dblclick' ne sera lancé que pour un double-clic.</p>
+<p>Les propriétés <code><a href="/fr/DOM/event.button" title="fr/DOM/event.button">button</a></code> et <code><a href="/fr/DOM/event.detail" title="fr/DOM/event.detail">detail</a></code> ne s'appliquent qu'aux événements se rapportant aux boutons de la souris, et non aux déplacements de la souris. Pour l'événement 'mousemove', par exemple, l'ensemble de ces propriétés aura une valeur de '0'.</p>
+<h4 id="Propri.C3.A9t.C3.A9s_des_.C3.A9v.C3.A9nements_de_position_de_la_souris" name="Propri.C3.A9t.C3.A9s_des_.C3.A9v.C3.A9nements_de_position_de_la_souris">Propriétés des événements de position de la souris</h4>
+<p>Toutefois, tous les événements de la souris disposent des propriétés contenant les coordonnées de la position de la souris lors du déclenchement de l'événement. Il y a deux jeux de coordonnées. Le premier jeu définit les propriétés <code><a href="/fr/DOM/event.screenX" title="fr/DOM/event.screenX">screenX</a></code> et <code><a href="/fr/DOM/event.screenY" title="fr/DOM/event.screenY">screenY</a></code> mesurées depuis le coin supérieur gauche de l'écran. Le second jeu, <code><a href="/fr/DOM/event.clientX" title="fr/DOM/event.clientX">clientX</a></code> et <code><a href="/fr/DOM/event.clientY" title="fr/DOM/event.clientY">clientY</a></code>, est calculé à partir du coin supérieur gauche du document. Voici un exemple qui affiche les coordonnées courantes de la souris :</p>
+<p><span id="Exemple_4"><a id="Exemple_4"></a><strong>Exemple 4</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advevents_4.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advevents_4.xul">Voir</a></p>
+<pre>&lt;script&gt;
+
+function updateMouseCoordinates(event){
+  var text = "X:" + event.clientX + " Y:" + event.clientY;
+  document.getElementById("xy").value = text;
+}
+&lt;/script&gt;
+
+&lt;label id="xy"/&gt;
+&lt;hbox width="400" height="400" onmousemove="updateMouseCoordinates(event);"/&gt;
+</pre>
+<p>Dans cet exemple, les dimensions de la boîte ont été fixées explicitement pour que l'effet soit plus visible. Le gestionnaire d'événement récupère les propriétés <code><a href="/fr/DOM/event.clientX" title="fr/DOM/event.clientX">clientX</a></code> et <code><a href="/fr/DOM/event.clientY" title="fr/DOM/event.clientY">clientY</a></code> et les convertit en une chaîne (string). Cette chaîne est affectée à la propriété <code id="a-value"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/value">value</a></code> du libellé. Notez que l'argument 'event' doit être passé à la fonction <code>updateMouseCoordinates</code>. Si vous déplacez rapidement la souris autour de la bordure, vous noterez que les coordonnées ne s'arrêtent généralement pas exactement sur '400'. Ceci s'explique car l'événement 'mousemove' se déclenche selon un intervalle dépendant de la vitesse de déplacement de la souris, et celle-ci s'est généralement déplacée au-delà de la bordure avant le lancement de l'événement suivant. Évidement, il ne serait pas judicieux d'envoyer un événement 'mousemove' sur chacun des pixels parcourus par la souris.</p>
+<h4 id="Coordonn.C3.A9es_relatives_.C3.A0_un_.C3.A9l.C3.A9ment" name="Coordonn.C3.A9es_relatives_.C3.A0_un_.C3.A9l.C3.A9ment">Coordonnées relatives à un élément</h4>
+<p>Souvent, ce sont les coordonnées relatives à l'élément qui a déclenché l'événement que vous voulez obtenir, pas celles relatives à la fenêtre entière. Pour y parvenir, il vous suffit de soustraire la position de l'élément à la position de l'événement, comme dans le code suivant.</p>
+<pre>var element = event.target;
+var elementX = event.clientX - element.boxObject.x;
+var elementY = event.clientY - element.boxObject.y;
+</pre>
+<p>Les éléments XUL ont un objet de boîte accessible en utilisant la propriété <code>boxObject</code>. Nous en apprendrons plus sur l'objet de boîte dans <a href="/fr/Tutoriel_XUL/Les_objets_boîtes" title="fr/Tutoriel_XUL/Les_objets_boîtes">une section ultérieure</a>, mais sachez qu'il contient des informations sur l'affichage de l'élément, incluant notamment ses coordonnées horizontales (x) et verticales (y). Dans cet exemple de code, ces coordonnées sont soustraites de celles de l'événement pour obtenir la position relative de l'élément XUL.</p>
+<h3 id=".C3.89v.C3.A9nements_de_chargement" name=".C3.89v.C3.A9nements_de_chargement">Événements de chargement</h3>
+<p>L'événement de chargement est envoyé au document (l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/window" title="window">window</a></code>) dès que le fichier XUL a fini son chargement et juste avant que son contenu ne soit affiché. Cet événement est couramment utilisé pour initialiser les champs et réaliser d'autres tâches qui doivent être exécutées avant que l'utilisateur ne dispose de la fenêtre. Vous devriez utiliser un événement de chargement pour faire ce genre de chose plutôt que d'ajouter un script de niveau supérieur extérieur à une fonction. Cette préconisation tient au fait que les éléments XUL peuvent ne pas être chargés ou ne pas être totalement initialisés, ce qui peut entraîner des dysfonctionnements. Pour utiliser un événement de chargement, placez l'attribut <code id="a-onload"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/onload">onload</a></code> sur l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/window" title="window">window</a></code>. Appelez du code à l'intérieur du gestionnaire de chargement afin d'initialiser l'interface si nécessaire.</p>
+<p>Il existe également un événement <code id="a-unload"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/unload">unload</a></code> qui est appelé dès que la fenêtre est fermée ou, dans un contexte de navigation, lorsque la page bascule vers une autre URL. Vous pouvez utiliser cet événement, par exemple, pour sauvegarder des informations modifiées.</p>
+<hr>
+<p>Nous verrons ensuite comment ajouter des raccourcis clavier.</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Ajout_de_gestionnaires_d'évènements" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Raccourcis_clavier">Suivant  »</a></p>
+</div>

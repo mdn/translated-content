@@ -1,0 +1,142 @@
+---
+title: XUL controls
+slug: Archive/Mozilla/XUL/XUL_controls
+tags:
+  - XUL
+translation_of: Archive/Mozilla/XUL/XUL_controls
+---
+<p>以下の表は <a href="/ja/XUL" title="ja/XUL">XUL</a> が提供するユーザインタフェースコントロールの一覧です。それらがどのように使われるのかの手順を追ったガイドは <a href="/ja/XUL_Tutorial" title="ja/XUL_Tutorial">XUL チュートリアル</a>を、リファレンス情報は <a href="/ja/XUL_Reference" title="ja/XUL_Reference">XUL リファレンス</a>を参照してください。</p>
+<table class="standard-table"> <tbody> <tr> <td><strong>&lt;button&gt;</strong> <p>ユーザが押すことのできるボタン。</p> <pre>
+&lt;button label="保存" accesskey="S"/&gt;
+</pre> <ul> <li><a href="/ja/XUL_Tutorial/Adding_Buttons" title="ja/XUL_Tutorial/Adding_Buttons">button 要素の詳細</a>。</li> <li><a href="/ja/XUL/button" title="ja/XUL/button">button のリファレンス</a></li> </ul> </td> <td><img alt="Image:Controlsguide-button.png" class=" internal" src="/@api/deki/files/1713/=Controlsguide-button.png"></td> </tr> <tr> <td><strong>&lt;button type="menu"&gt;</strong> <p>ドロップダウンメニューの付いたボタン。ボタンを押すとメニューが開きます。</p> <pre>
+&lt;button type="menu" label="View"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="List"/&gt;
+    &lt;menuitem label="Details"/&gt;
+  &lt;/menupopup&gt;
+&lt;/button&gt;
+</pre> <ul> <li><a href="/ja/XUL_Tutorial/More_Button_Features#Button_with_menupopup" title="ja/XUL_Tutorial/More_Button_Features#Button_with_menupopup">button 要素のこの種類のメニューの詳細</a>。</li> <li><a href="/ja/XUL/button" title="ja/XUL/button">button のリファレンス</a></li> <li>関する要素: <code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> <code><a href="/ja/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></li> </ul> </td> <td><img alt="Image:Controlsguide-button-menu.png" class=" internal" src="/@api/deki/files/1712/=Controlsguide-button-menu.png"></td> </tr> <tr> <td><strong>&lt;button type="menu-button"&gt;</strong> <p>メニューを表示する分離した矢印ボタンを持つボタン。'<code>menu</code>' タイプとは違い、ボタンのメイン部分が押された時に <span style="color: darkgreen; background: #ef9;">【訳注: メニューを表示するのではなく】</span> 別のアクションが実行されます。</p> <pre>
+&lt;button type="menu-button" label="New"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="New Document"/&gt;
+    &lt;menuitem label="New Image"/&gt;
+  &lt;/menupopup&gt;
+&lt;/button&gt;
+</pre> <ul> <li><a href="/ja/XUL_Tutorial/More_Button_Features#Button_with_menupopup" title="ja/XUL_Tutorial/More_Button_Features#Button_with_menupopup">button 要素のこの種類のメニューの詳細</a>。</li> <li><a href="/ja/XUL/button" title="ja/XUL/button">button のリファレンス</a></li> <li>関連する要素: <code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> <code><a href="/ja/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></li> </ul> </td> <td> </td> </tr> <tr> <td><strong>&lt;checkbox&gt;</strong> <p>オンにしたりオフにできるコントロール。特に有効か無効かを切り替えるオプションを作るのに使われます。</p> <pre>
+&lt;checkbox label="ツールバーのラベルを表示" checked="true"/&gt;
+</pre> <ul> <li><a href="/ja/XUL_Tutorial/Input_Controls#Checkboxes_and_Radio_Elements" title="ja/XUL_Tutorial/Input_Controls#Checkboxes_and_Radio_Elements">checkbox 要素の詳細</a>。</li> <li><a href="/ja/XUL/checkbox" title="ja/XUL/checkbox">checkbox のリファレンス</a></li> </ul> </td> <td><img alt="Image:Controlsguide-checkbox.png" class=" internal" src="/@api/deki/files/1714/=Controlsguide-checkbox.png"></td> </tr> <tr> <td><strong>&lt;colorpicker&gt;</strong> <p>色を選択するコントロール</p> <pre>
+&lt;colorpicker color="#FF0000"/&gt;
+</pre> <ul> <li><a href="/ja/XUL/colorpicker" title="ja/XUL/colorpicker">colorpicker のリファレンス</a></li> </ul> </td> <td><span class="comment"><br> </span></td> </tr> <tr> <td><strong>&lt;colorpicker type="button"&gt;</strong> <p>ボタンを押すと色を選択するポップが表示される、カラーピッカの特別な種類。</p> <pre>
+&lt;colorpicker type="button" color="#CC0080"/&gt;
+</pre> <ul> <li><a href="/ja/XUL/colorpicker" title="ja/XUL/colorpicker">colorpicker のリファレンス</a></li> </ul> </td> <td><img alt="Image:Controlsguide-colorpicker-button.png" class=" internal" src="/@api/deki/files/1715/=Controlsguide-colorpicker-button.png"></td> </tr> <tr> <td><strong>&lt;datepicker&gt;</strong>  <p>日付の入力に使われるテキストボックス群。</p> <pre>
+&lt;datepicker value="2007/03/26"/&gt;
+</pre> <ul> <li><a href="/ja/XUL/datepicker" title="ja/XUL/datepicker">datepicker のリファレンス</a></li> </ul> </td> <td><img alt="Image:Controlsguide-datepicker.png" class=" internal" src="/@api/deki/files/1717/=Controlsguide-datepicker.png"></td> </tr> <tr> <td><strong>&lt;datepicker type="grid"&gt;</strong>  <p>日付を選択するカレンダ枠を表示する日付ピッカ。</p> <pre>
+&lt;datepicker type="grid" value="2007/02/20"/&gt;
+</pre> <ul> <li><a href="/ja/XUL/datepicker" title="ja/XUL/datepicker">datepicker のリファレンス</a></li> </ul> </td> <td><img alt="Image:Controlsguide-datepicker-grid.png" class=" internal" src="/@api/deki/files/1716/=Controlsguide-datepicker-grid.png"></td> </tr> <tr> <td><strong>&lt;datepicker type="popup" &gt;</strong>  <p>日付入力のためのテキストボックスを表示しますが、カレンダ枠を表示するためのボタンもある日付ピッカ</p> <pre>
+&lt;datepicker type="popup" value="2008/08/24"/&gt;
+</pre> <ul> <li><a href="/ja/XUL/datepicker" title="ja/XUL/datepicker">datepicker のリファレンス</a></li> </ul> </td> <td> </td> </tr> <tr> <td><strong>&lt;description&gt;</strong> <p>description 要素は説明的なテキストに使われます。</p> <pre>
+&lt;description&gt;
+  イベントの始まる時間を選択してください
+&lt;/description&gt;
+</pre> <ul> <li><a href="/ja/XUL_Tutorial/Adding_Labels_and_Images#Description_Element" title="ja/XUL_Tutorial/Adding_Labels_and_Images#Description_Element">description 要素の詳細</a>。</li> <li><a href="/ja/XUL/description" title="ja/XUL/description">description のリファレンス</a></li> </ul> </td> <td><img alt="Image:Controlguide-description.png" class=" internal" src="/@api/deki/files/1689/=Controlguide-description.png"></td> </tr> <tr> <td><strong>&lt;groupbox&gt;</strong> <p>グループボックスは他のユーザインタフェースコントールを取り囲む、ラベルのついたボックスを表示します</p> <pre>
+&lt;groupbox&gt;
+  &lt;caption label="ネットワーク"/&gt;
+&lt;/groupbox&gt;
+</pre> <ul> <li><a href="/ja/XUL_Tutorial/Groupboxes" title="ja/XUL_Tutorial/Groupboxes">groupbox 要素の詳細</a>。</li> <li><a href="/ja/XUL/groupbox" title="ja/XUL/groupbox">groupbox のリファレンス</a></li> <li>関連する要素: <code><a href="/ja/docs/Mozilla/Tech/XUL/caption" title="caption">caption</a></code></li> </ul> </td> <td><img alt="Image:Controlguide-groupbox.png" class=" internal" src="/@api/deki/files/1690/=Controlguide-groupbox.png"></td> </tr> <tr> <td><strong>&lt;image&gt;</strong> <p>URL で指定された画像。</p> <pre>
+&lt;image src="start.png"/&gt;
+</pre> <ul> <li><a href="/ja/XUL_Tutorial/Adding_Labels_and_Images#Images" title="ja/XUL_Tutorial/Adding_Labels_and_Images#Images">image 要素の詳細</a>。</li> <li><a href="/ja/XUL/image" title="ja/XUL/image">image のリファレンス</a></li> </ul> </td> <td><img alt="Image:Controlguide-image.png" class=" internal" src="/@api/deki/files/1691/=Controlguide-image.png"></td> </tr> <tr> <td><strong>&lt;label&gt;</strong> <p>ラベルは近いコントロールに名前となるテキストを付けるのに使われます。</p> <pre>
+&lt;label control="volume" value="音量:"/&gt;
+</pre> <ul> <li><a href="/ja/XUL_Tutorial/Adding_Labels_and_Images#Label_Element" title="ja/XUL_Tutorial/Adding_Labels_and_Images#Label_Element">label 要素の詳細</a>。</li> <li><a href="/ja/XUL/label" title="ja/XUL/label">label のリファレンス</a></li> </ul> </td> <td><img alt="Image:Controlguide-label.png" class=" internal" src="/@api/deki/files/1694/=Controlguide-label.png"></td> </tr> <tr> <td><strong>&lt;listbox&gt;</strong> <p>リストボックスはラベル付けされた項目のリストから、ある項目を選ぶのに使われます。</p> <pre>
+&lt;listbox&gt;
+  &lt;listitem label="チョコレート"/&gt;
+  &lt;listitem label="ようかん"/&gt;
+&lt;/listbox&gt;
+</pre> <ul> <li><a href="/ja/XUL_Tutorial/List_Controls#List_Boxes" title="ja/XUL_Tutorial/List_Controls#List_Boxes">listbox 要素の詳細</a>。</li> <li><a href="/ja/XUL/listbox" title="ja/XUL/listbox">listbox のリファレンス</a></li> <li>関連する要素: <code><a href="/ja/docs/Mozilla/Tech/XUL/listcell" title="listcell">listcell</a></code> <code><a href="/ja/docs/Mozilla/Tech/XUL/listcols" title="listcols">listcols</a></code> <code><a href="/ja/docs/Mozilla/Tech/XUL/listcol" title="listcol">listcol</a></code> <code><a href="/ja/docs/Mozilla/Tech/XUL/listhead" title="listhead">listhead</a></code> <code><a href="/ja/docs/Mozilla/Tech/XUL/listheader" title="listheader">listheader</a></code> <code><a href="/ja/docs/Mozilla/Tech/XUL/listitem" title="listitem">listitem</a></code></li> </ul> </td> <td><img alt="Image:Controlguide-listbox.png" class=" internal" src="/@api/deki/files/1695/=Controlguide-listbox.png"></td> </tr> <tr> <td><strong>&lt;menulist&gt;</strong> <p>メニューリスト (あるいはコンボボックス) は、ある値を選択するためのドロップダウンを持つコントロールを作るのに使われます。</p> <pre>
+&lt;menulist&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="ライオン" value="l"/&gt;
+    &lt;menuitem label="トラ" value="t"/&gt;
+    &lt;menuitem label="クマ" value="b"/&gt;
+  &lt;/menupopup&gt;
+&lt;/menulist&gt;
+</pre> <ul> <li><a href="/ja/XUL_Tutorial/List_Controls#Drop-down_Lists" title="ja/XUL_Tutorial/List_Controls#Drop-down_Lists">menulist 要素の詳細</a>。</li> <li><a href="/ja/XUL/menulist" title="ja/XUL/menulist">Menulist リファレンス</a></li> <li>関連する要素: <code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> <code><a href="/ja/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></li> </ul> </td> <td><img alt="Image:Controlguide-menulist.png" class=" internal" src="/@api/deki/files/1697/=Controlguide-menulist.png"></td> </tr> <tr> <td><strong>&lt;menulist editable="true"&gt;</strong> <p>編集できるメニューリストは、選択された値がテキストボックスに表示されること以外、標準的なメニューリストそっくりです。テキストボックスでは値を直接変更したりポップアップリストに無い値へ変更されるかもしれません。</p> <pre>
+&lt;menulist editable="true"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="ゾウ" value="Elephants"/&gt;
+    &lt;menuitem label="カンガル" value="Kangaroos"/&gt;
+    &lt;menuitem label="コウモリ" value="Bats"/&gt;
+  &lt;/menupopup&gt;
+&lt;/menulist&gt;
+</pre> <ul> <li><a href="/ja/XUL_Tutorial/List_Controls#Editable_menulist" title="ja/XUL_Tutorial/List_Controls#Editable_menulist">編集できる menulist 要素の詳細</a>。</li> <li><a href="/ja/XUL/menulist" title="ja/XUL/menulist">menulist のリファレンス</a></li> <li>関連する要素: <code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> <code><a href="/ja/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></li> </ul> </td> <td><img alt="Image:Controlguide-menulist-editable.png" class=" internal" src="/@api/deki/files/1696/=Controlguide-menulist-editable.png"></td> </tr> <tr> <td><strong>&lt;progressmeter&gt;</strong> <p>プログレスメータは長くかかる作業の進捗状況を表示するのに使われます。</p> <pre>
+&lt;progressmeter value="40"/&gt;
+</pre> <ul> <li><a href="/ja/XUL_Tutorial/Progress_Meters" title="ja/XUL_Tutorial/Progress_Meters">progressmeter 要素の詳細</a>。</li> <li><a href="/ja/XUL/progressmeter" title="ja/XUL/progressmeter">progressmeter のリファレンス</a></li> </ul> </td> <td><img alt="Image:Controlguide-progressmeter.png" class=" internal" src="/@api/deki/files/1698/=Controlguide-progressmeter.png"></td> </tr> <tr> <td><strong>&lt;radio&gt;</strong> <p>ラジオボタンは 1 回に 1 つしか選択されないオプションを作るのに使われます。</p> <pre>
+&lt;radiogroup&gt;
+  &lt;radio label="軽い" value="light"/&gt;
+  &lt;radio label="重い" value="heavy"/&gt;
+&lt;/radiogroup&gt;
+</pre> <ul> <li><a href="/ja/XUL_Tutorial/Input_Controls#Checkboxes_and_Radio_Buttons" title="ja/XUL_Tutorial/Input_Controls#Checkboxes_and_Radio_Buttons">radio 要素の詳細</a>.</li> <li><a href="/ja/XUL/radio" title="ja/XUL/radio">radio のリファレンス</a></li> <li>関連する要素: <code><a href="/ja/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code></li> </ul> </td> <td><img alt="Image:Controlguide-radio.png" class=" internal" src="/@api/deki/files/1699/=Controlguide-radio.png"></td> </tr> <tr> <td><strong>&lt;richlistbox&gt;</strong> <p>リッチリストボックスは項目を 1 つ以上選択できるリストを表示します。テキストだけを表示するよう設計されたリストボックスとは異なり、リッチリストボックスはどんな種類の内容でも表示します。</p> <pre>
+&lt;richlistbox&gt;
+  &lt;richlistitem&gt;
+    &lt;image src="happy.png"/&gt;
+  &lt;/richlistitem&gt;
+  &lt;richlistitem&gt;
+    &lt;image src="sad.png"/&gt;
+  &lt;/richlistitem&gt;
+  &lt;richlistitem&gt;
+    &lt;image src="angry.png"/&gt;
+  &lt;/richlistitem&gt;
+&lt;/richlistbox&gt;
+</pre> <ul> <li><a href="/ja/XUL/richlistbox" title="ja/XUL/richlistbox">richlistbox のリファレンス</a></li> <li>関連する要素: <code><a href="/ja/docs/Mozilla/Tech/XUL/richlistitem" title="richlistitem">richlistitem</a></code></li> </ul> </td> <td><img alt="Image:Controlguide-richlistbox.png" class=" internal" src="/@api/deki/files/1700/=Controlguide-richlistbox.png"></td> </tr> <tr> <td><strong>&lt;scale&gt;</strong>  <p>スケールは、ある範囲内で値を選択するためにバーを滑る、つまみのついたバーを表示します。</p> <pre>
+&lt;scale min="1" max="10"/&gt;
+</pre> <ul> <li><a href="/ja/XUL/scale" title="ja/XUL/scale">scale のリファレンス</a></li> </ul> </td> <td><img alt="Image:Controlguide-scale.png" class=" internal" src="/@api/deki/files/1702/=Controlguide-scale.png"></td> </tr> <tr> <td><strong>&lt;textbox&gt;</strong> <p>テキストを 1 行入力できるテキストボックス</p> <pre>
+&lt;textbox value="firefox"/&gt;
+</pre> <ul> <li><a href="/ja/XUL_Tutorial/Input_Controls#Text_Entry_Fields" title="ja/XUL_Tutorial/Input_Controls#Text_Entry_Fields">textbox 要素の詳細</a>。</li> <li><a href="/ja/XUL/textbox" title="ja/XUL/textbox">textbox のリファレンス</a></li> </ul> </td> <td><img alt="Image:Controlguide-textbox.png" class=" internal" src="/@api/deki/files/1707/=Controlguide-textbox.png"></td> </tr> <tr> <td><strong>&lt;textbox multiline="true"&gt;</strong> <p>テキストを複数行入力できるテキストボックス</p> <pre>
+&lt;textbox multiline="true"/&gt;
+</pre> <ul> <li><a href="/ja/XUL_Tutorial/Input_Controls#Multiline_textbox" title="ja/XUL_Tutorial/Input_Controls#Multiline_textbox">複数行の textbox 要素の詳細</a>。</li> <li><a href="/ja/XUL/textbox" title="ja/XUL/textbox">textbox のリファレンス</a></li> </ul> </td> <td><img alt="Image:Controlguide-textbox-multiline.png" class=" internal" src="/@api/deki/files/1703/=Controlguide-textbox-multiline.png"></td> </tr> <tr> <td><strong>&lt;textbox type="autocomplete"&gt;</strong> <p>ユーザの入力を補完する候補のドロップダウンを提供するテキストボックス。ユーザはテキストボックスを埋めるために候補の 1 つを選択できます。</p> <pre>
+&lt;textbox type="autocomplete" autocompletesearch="history"/&gt;
+</pre> <ul> <li><a href="/ja/XUL/textbox" title="ja/XUL/textbox">textbox のリファレンス</a></li> </ul> </td> <td> </td> </tr> <tr> <td><strong>&lt;textbox type="number"&gt;</strong>  <p>数値を入力するためのテキストボックス。取りうる値全体を循環する、2 つの矢印ボタンが表示されます。</p> <pre>
+&lt;textbox type="number" min="1" max="20"/&gt;
+</pre> <ul> <li><a href="/ja/XUL/textbox" title="ja/XUL/textbox">Textbox のリファレンス</a></li> </ul> </td> <td><img alt="Image:Controlguide-textbox-number.png" class=" internal" src="/@api/deki/files/1705/=Controlguide-textbox-number.png"></td> </tr> <tr> <td><strong>&lt;textbox type="password"&gt;</strong> <p>パスワードの入力に使われる、タイプされた文字を隠すテキストボックス。</p> <pre>
+&lt;textbox type="password"/&gt;
+</pre> <ul> <li><a href="/ja/XUL/textbox" title="ja/XUL/textbox">textbox のリファレンス</a></li> </ul> </td> <td><img alt="Image:Controlguide-textbox-password.png" class=" internal" src="/@api/deki/files/1706/=Controlguide-textbox-password.png"></td> </tr> <tr> <td><strong>&lt;timepicker&gt;</strong>  <p>時間ピッカは時間を入力するためのテキストボックス群を表示します。</p> <pre>
+&lt;timepicker value="12:05"/&gt;
+</pre> <ul> <li><a href="/ja/XUL/timepicker" title="ja/XUL/timepicker">timepicker のリファレンス</a></li> </ul> </td> <td><img alt="Image:Controlguide-timepicker.png" class=" internal" src="/@api/deki/files/1709/=Controlguide-timepicker.png"></td> </tr> <tr> <td><strong>&lt;toolbarbutton&gt;</strong> <p>ツールバー上に表示されるボタン</p> <pre>
+&lt;toolbarbutton label="再読み込み"/&gt;
+</pre> <ul> <li><a href="/ja/XUL_Tutorial/Toolbars" title="ja/XUL_Tutorial/Toolbars">toolbarbutton 要素の詳細</a>。</li> <li><a href="/ja/XUL/toolbarbutton" title="ja/XUL/toolbarbutton">toolbarbutton のリファレンス</a></li> <li>関連する要素: <code><a href="/ja/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code></li> </ul> </td> <td><img alt="Image:Controlguide-toolbarbutton.png" class=" internal" src="/@api/deki/files/1710/=Controlguide-toolbarbutton.png"></td> </tr> <tr> <td><strong>&lt;toolbarbutton type="menu"&gt;</strong> <p>ドロップダウンメニューのついた、ツールバー上に表示されるボタン</p> <pre>
+&lt;toolbarbutton type="menu" label="Show"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="ツールバー"/&gt;
+    &lt;menuitem label="ステータスバー"/&gt;
+  &lt;/menupopup&gt;
+&lt;/toolbarbutton&gt;
+</pre> <ul> <li><a href="/ja/XUL_Tutorial/Toolbars" title="ja/XUL_Tutorial/Toolbars">この種類のメニューの toolbarbutton 要素</a>.</li> <li><a href="/ja/XUL/toolbarbutton" title="ja/XUL/toolbarbutton">toolbarbutton のリファレンス</a></li> <li>関連する要素: <code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> <code><a href="/ja/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code> <code><a href="/ja/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code></li> </ul> </td> <td> </td> </tr> <tr> <td><strong>&lt;toolbarbutton type="menu-button"&gt;</strong> <p>メニューを表示する分離した矢印ボタンを持つ、ツールバー上のボタン。'<code>menu</code>' タイプとは違い、ボタンのメイン部分が押された時に <span style="color: darkgreen; background: #ef9;">【訳注: メニューを表示するのではなく】</span> 別のアクションが実行されます。</p> <pre>
+&lt;toolbarbutton type="menu-button" label="Open"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="変更されたファイルを開く"/&gt;
+    &lt;menuitem label="全て開く"/&gt;
+  &lt;/menupopup&gt;
+&lt;/toolbarbutton&gt;
+</pre> <ul> <li><a href="/ja/XUL_Tutorial/Toolbars" title="ja/XUL_Tutorial/Toolbars">More information about this type of menu toolbarbutton element</a>.</li> <li><a href="/ja/XUL/toolbarbutton" title="ja/XUL/toolbarbutton">Toolbarbutton Reference</a></li> <li>関連する要素: <code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> <code><a href="/ja/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code> <code><a href="/ja/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code></li> </ul> </td> <td> </td> </tr> <tr> <td><strong>&lt;tree&gt;</strong> <p>複列の列に項目の階層構造を表示します。</p> <pre>
+&lt;tree&gt;
+  &lt;treecols&gt;
+    &lt;treecol label="名前" flex="1"/&gt;
+    &lt;treecol label="大きさ" flex="1"/&gt;
+  &lt;/treecols&gt;
+  &lt;treechildren&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="ポップコーン"/&gt;
+        &lt;treecell label="大"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="ルートビア"/&gt;
+        &lt;treecell label="小"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+  &lt;/treechildren&gt;
+&lt;/tree&gt;
+</pre> <ul> <li><a href="/ja/XUL_Tutorial/Trees" title="ja/XUL_Tutorial/Trees">tree 要素の詳細</a>。</li> <li><a href="/ja/XUL/tree" title="ja/XUL/tree">tree のリファレンス</a></li> <li>関連する要素: <code><a href="/ja/docs/Mozilla/Tech/XUL/treecell" title="treecell">treecell</a></code> <code><a href="/ja/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code> <code><a href="/ja/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code> <code><a href="/ja/docs/Mozilla/Tech/XUL/treecols" title="treecols">treecols</a></code> <code><a href="/ja/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code> <code><a href="/ja/docs/Mozilla/Tech/XUL/treerow" title="treerow">treerow</a></code></li> </ul> </td> <td><img alt="Image:Controlguide-tree.png" class=" internal" src="/@api/deki/files/1711/=Controlguide-tree.png"></td> </tr> </tbody>
+</table>
+<p> </p>

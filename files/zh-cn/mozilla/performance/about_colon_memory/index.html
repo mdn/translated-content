@@ -1,0 +1,144 @@
+---
+title: 'about:memory'
+slug: 'Mozilla/Performance/about:memory'
+translation_of: 'Mozilla/Performance/about:memory'
+---
+<p>about:memory 是一个 Firefox 内置的特殊页面，你可以在此查看、保存、载入和比较 Firefox 内存使用的详细测量数据。你还可以执行其他与内存有关的操作，例如执行 GC 和 CC、转储 GC 和 CC 日志记录，以及转储 DMD 报告。这个页面在所有版本当中都可以找到，并且无需任何准备工作就可以使用。</p>
+<h2 id="如何生成内存报告">如何生成内存报告</h2>
+<p>假设你要测量 Firefox 的内存使用情况（也许你是想自己研究，或者是他人要你用 about:memory 生成“内存报告”以便帮你分析问题），你都可以按照下列步骤进行操作。</p>
+<ul>
+ <li>在你需要的时候（例如 Firefox 内存占用量偏高时）新建一个标签页，在地址栏输入 "about:memory" 并按回车键。</li>
+ <li>如果你使用的是一个可以发送文件的通信方式，比如 Bugzilla 或电子邮件，请点击 "Measure and save..." 按钮，这会打开一个对话框让你将内存报告保存为本地文件，文件后缀名为 .json.gz。然后你就可以上传或发送它为附件，对方获取后可以在自己的 Firefox 中打开 about:memory 页面来查看该文件。</li>
+ <li>如果你使用的是只能发送文本的通信方式，比如一个网站的评论区，请点击 "Measure..." 按钮，这会生成并显示一系列类似树形结构的文字。你可以复制该结构中的任何文字并粘贴到任意文本框当中，这样就无需采取截图方式。相比内存报告文件，文本形式包含的数据虽然较少，但通常也足够用来诊断问题。</li>
+</ul>
+<p>请注意，上述方式生成的数据会包含一些与隐私有关的内容，例如你此时所打开网页的完整清单。如果你不想分享这些信息，可以在点击 "Measure and save..." 或 "Measure..." 按钮之前先勾上 “anonymize” 复选框。这样就会去除所有隐私相关的数据，虽然这有可能不太便于他人帮你分析内存占用情况。</p>
+<h2 id="从文件载入内存报告">从文件载入内存报告</h2>
+<p>从文件载入内存报告最简单的方式是点击 "Load..." 按钮，你也可以点击 "Load and diff..." 按钮来找出两个内存报告文件间的不同之处。</p>
+<p>单个内存报告文件也可以直接被自动载入，只需在 about:memory 后面加上一个文件查询字符串，例如：</p>
+<pre>about:memory?file=/home/username/reports.json.gz
+</pre>
+<p>这种方式在载入 Firefox OS 设备上已转储的内存报告文件时尤为实用。</p>
+<p>内存报告所保存的文件使用的是用 gzip 压缩的 JSON 格式。这些文件既可以直接载入，也可以解压后再载入。</p>
+<h2 id="分析内存报告">分析内存报告</h2>
+<p>你在 about:memory 页面中看到的几乎所有事物都有着相应的工具提示来解释。将鼠标悬停在任意按钮上就可以看到关于其作用的描述。将鼠标悬停在任意测量数据上就可以查看对它所指内容的描述。</p>
+<h3 id="测量数据基础介绍"><span class="mw-headline" id="Basics">测量数据基础介绍</span></h3>
+<p>大多数测量数据的单位都是字节，少部分使用的是计数值或百分比。</p>
+<p>测量数据大多以树形结构呈现，例如：</p>
+<pre> 585 (100.0%) -- preference-service
+ └──585 (100.0%) -- referent
+    ├──493 (84.27%) ── strong
+    └───92 (15.73%) -- weak
+        ├──92 (15.73%) ── alive
+        └───0 (00.00%) ── dead
+</pre>
+<p>叶节点代表实际的测量数据值，每个内部节点的值都是它子节点值的总和。</p>
+<p>使用树形结构是为了让测量数据可以根据需要进一步分成类、子类、子类的子类……，直至任意深度。单个树形下的所有测量数据都不会有任何重叠。</p>
+<p>树的路径可以使用 '/' 来分隔，例如，<code>preference/referent/weak/dead</code> 表示上述例子中直到最终叶节点的整个路径。</p>
+<p>单击每个子树都可以收起或展开它们。如果你发现某些树所占空间特别大，可以试试先收起所有隶属于它的子树，然后根据需要逐步展开。</p>
+<h3 id="区段"><span class="mw-headline" id="Sections">区段</span></h3>
+<p>内存报告是在每个进程的基础上显示，每个区段为一个进程。每个进程中的测量数据都包含以下一些子区段。</p>
+<h4 id="Explicit_Allocations">Explicit Allocations</h4>
+<p>这个区段包含单个叫做 "explicit" 的树，它测量的是通过显式调用堆积分配（heap allocations）函数和非堆积分配函数方式分配的所有内存，堆积分配函数像是 malloc 和 new，而非堆积分配函数可以是 mmap 和 VirtualAlloc。</p>
+<p>下面的例子是一个打开了 cnn.com、techcrunch.com 和 arstechnica.com 这几个标签页的浏览器会话。为了更好地呈现，我们将部分子树展开，其他部分全部收起。</p>
+<pre>191.89 MB (100.0%) -- explicit
+├───63.15 MB (32.91%) -- window-objects
+│   ├──24.57 MB (12.80%) -- top(http://edition.cnn.com/, id=8)
+│   │  ├──20.18 MB (10.52%) -- active
+│   │  │  ├──10.57 MB (05.51%) -- window(http://edition.cnn.com/)
+│   │  │  │  ├───4.55 MB (02.37%) ++ js-compartment(http://edition.cnn.com/)
+│   │  │  │  ├───2.60 MB (01.36%) ++ layout
+│   │  │  │  ├───1.94 MB (01.01%) ── style-sheets
+│   │  │  │  └───1.48 MB (00.77%) -- (2 tiny)
+│   │  │  │      ├──1.43 MB (00.75%) ++ dom
+│   │  │  │      └──0.05 MB (00.02%) ── property-tables
+│   │  │  └───9.61 MB (05.01%) ++ (18 tiny)
+│   │  └───4.39 MB (02.29%) -- js-zone(0x7f69425b5800)
+│   ├──15.75 MB (08.21%) ++ top(http://techcrunch.com/, id=20)
+│   ├──12.85 MB (06.69%) ++ top(http://arstechnica.com/, id=14)
+│   ├───6.40 MB (03.33%) ++ top(chrome://browser/content/browser.xul, id=3)
+│   └───3.59 MB (01.87%) ++ (4 tiny)
+├───45.74 MB (23.84%) ++ js-non-window
+├───33.73 MB (17.58%) ── heap-unclassified
+├───22.51 MB (11.73%) ++ heap-overhead
+├────6.62 MB (03.45%) ++ images
+├────5.82 MB (03.03%) ++ workers/workers(chrome)
+├────5.36 MB (02.80%) ++ (16 tiny)
+├────4.07 MB (02.12%) ++ storage
+├────2.74 MB (01.43%) ++ startup-cache
+└────2.16 MB (01.12%) ++ xpconnect</pre>
+<p>要弄懂这里的所有细节需要一些专业知识才行，不过还是有几点内容需要指出。</p>
+<ul>
+ <li>树形结构根节点处的 "explicit" 值表示所有通过显式调用分配函数所分配的内存。</li>
+ <li>"window-objects" 这个子树表示所有 JavaScript 窗口对象，包括浏览器标签页的窗口和用户界面窗口。举例来说，"top(http://edition.cnn.com/, id=8)" 这个子树表示打开了 cnn.com 的标签页，而 "top(chrome://browser/content/browser.xul, id=3)" 表示浏览器主界面窗口。</li>
+ <li>每个 window 的测量数据都包含 JavaScript ("js-compartment(...)" 和 "js-zone(...)")、layout、style-sheets、DOM 以及其他东西的子树。</li>
+ <li>显然 cnn.com 标签页所占用的内存比 techcrunch.com 标签页的多，后者又比 arstechnica.com 标签页的多。</li>
+ <li>带有 "(2 tiny)" 这样名字的子树是人为插入的节点，是为了默认收起一些不重要子树。如果你在测量前勾上 "verbose" 复选框，则会完整展开显示所有树层，并且不会插入任何人为节点。</li>
+ <li>"js-non-window" 这个子树表示来自浏览器内核而非窗口的 JavaScript 内存占用。</li>
+ <li>"heap-unclassified" 这个值表示不被任何内存报告工具所测量的堆积分配内存，通常占到 "explicit" 的 10% 到 20%。一旦超出这个比例就意味着需要增加额外的内存报告工具。<a href="/en-US/docs/Mozilla/Performance/DMD" title="Performance/MemShrink/DMD">DMD</a> 可以用来测定这些应该被增补的内存报告。</li>
+ <li>还有一些测量数据是用于其他一些内容，比如图片和 worker，以及 Startup cache 和 XPConnec 这样的浏览器子系统。</li>
+</ul>
+<p>部分附加组件的内存占用也会被识别出来，如下例所示。</p>
+<pre>├───40,214,384 B (04.17%) -- add-ons
+│   ├──21,184,320 B (02.20%) ++ {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}/js-non-window/zones/zone(0x100496800)/compartment([System Principal], jar:file:///Users/njn/Library/Application%20Support/Firefox/Profiles/puna0zr8.new/extensions/%7Bd10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d%7D.xpi!/bootstrap.js (from: resource://gre/modules/addons/XPIProvider.jsm:4307))
+│   ├──11,583,312 B (01.20%) ++ jid1-xUfzOsOFlzSOXg@jetpack/js-non-window/zones/zone(0x100496800)
+│   ├───5,574,608 B (00.58%) -- {59c81df5-4b7a-477b-912d-4e0fdf64e5f2}
+│   │   ├──5,529,280 B (00.57%) -- window-objects
+│   │   │  ├──4,175,584 B (00.43%) ++ top(chrome://chatzilla/content/chatzilla.xul, id=4293)
+│   │   │  └──1,353,696 B (00.14%) ++ top(chrome://chatzilla/content/output-window.html, id=4298)
+│   │   └─────45,328 B (00.00%) ++ js-non-window/zones/zone(0x100496800)/compartment([System Principal], file:///Users/njn/Library/Application%20Support/Firefox/Profiles/puna0zr8.new/extensions/%7B59c81df5-4b7a-477b-912d-4e0fdf64e5f2%7D/components/chatzilla-service.js)
+│   └───1,872,144 B (00.19%) ++ treestyletab@piro.sakura.ne.jp/js-non-window/zones/zone(0x100496800)</pre>
+<p>此外还有一些内容需要指出：</p>
+<ul>
+ <li>部分附加组件会被识别出它的名字，比如 Tree Style Tab，其他则仅仅被识别为一个十六进制标识符，你可以在 about:support 查看某个标识符属于哪个附加组件。例如 <code>59c81df5-4b7a-477b-912d-4e0fdf64e5f2</code> 就是 Chatzilla。</li>
+ <li>每个附加组件的所有 JavaScript 内存占用都是单独测量并显示在这个子树之中。</li>
+ <li>像 Chatzilla 这样使用单独窗口的附加组件，所有单独窗口所占用的内存都会显示在这个子树之中。</li>
+ <li>像 AdBlock Plus 这样使用 XUL overlay 的附加组件，所有 overlay 所占用的内存都不显示在这个子树中，而是显示在 add-on 以外的子树中，所以不会被识别为该附加组件所占用的内存。</li>
+</ul>
+<h4 id="Other_Measurements">Other Measurements</h4>
+<p>这个区段包含多个树，包括与 "explicit" 树中测量数据相交叉（cross-cut）的树。比如说，在 "explicit" 这个树中所有 DOM 和 layout 测量数据会被分解到每个窗口当中，而在 "Other Measurements" 区段中，这些测量数据又会被汇总成整个浏览器，如下例所示。</p>
+<pre>26.77 MB (100.0%) -- window-objects
+├──14.59 MB (54.52%) -- layout
+│  ├───6.22 MB (23.24%) ── style-sets
+│  ├───4.00 MB (14.95%) ── pres-shell
+│  ├───1.79 MB (06.68%) ── frames
+│  ├───0.89 MB (03.33%) ── style-contexts
+│  ├───0.62 MB (02.33%) ── rule-nodes
+│  ├───0.56 MB (02.10%) ── pres-contexts
+│  ├───0.47 MB (01.75%) ── line-boxes
+│  └───0.04 MB (00.14%) ── text-runs
+├───6.53 MB (24.39%) ── style-sheets
+├───5.59 MB (20.89%) -- dom
+│   ├──3.39 MB (12.66%) ── element-nodes
+│   ├──1.56 MB (05.84%) ── text-nodes
+│   ├──0.54 MB (02.03%) ── other
+│   └──0.10 MB (00.36%) ++ (4 tiny)
+└───0.06 MB (00.21%) ── property-tables</pre>
+<p>但是这个区段部分树的测量数据又不会与 "explicit" 树的相交叉，比如上面提到的 "preference-service" 这个例子当中的树。</p>
+<p>最后，在这个区段结尾处是其他单独的测量数据，如下例所示。</p>
+<pre>    0.00 MB ── canvas-2d-pixels
+    5.38 MB ── gfx-surface-xlib
+    0.00 MB ── gfx-textures
+    0.00 MB ── gfx-tiles-waste
+          0 ── ghost-windows
+  109.22 MB ── heap-allocated
+        164 ── heap-chunks
+    1.00 MB ── heap-chunksize
+  114.51 MB ── heap-committed
+  164.00 MB ── heap-mapped
+      4.84% ── heap-overhead-ratio
+          1 ── host-object-urls
+    0.00 MB ── imagelib-surface-cache
+    5.27 MB ── js-main-runtime-temporary-peak
+          0 ── page-faults-hard
+    203,349 ── page-faults-soft
+  274.99 MB ── resident
+  251.47 MB ── resident-unique
+1,103.64 MB ── vsize</pre>
+<p>这里有一些值得注意的测量数据：</p>
+<ul>
+ <li>"resident" 是物理内存占用。如果你想看到一个单独统计内存占用的测量数据，这应该是最符合的数据。</li>
+ <li>"vsize" 是虚拟内存占用。这个值往往会大大高于其他任何测量数据值（尤其在 Mac 平台），并且只在 Win32 这样的 32 位平台才显得很重要。还有一个 "vsize-max-contiguous"（有些平台没有测量，这里的例子也没有出现），它是指最大一个可用的虚拟地址空间数据块。如果这个数字过低，则意味着很快会因缺少虚拟地址空间而导致内存分配失败。</li>
+ <li>各种与图形有关的测量数据 ("gfx-*")。这个测量数据会因平台不同而有所变化。图形经常是引起高内存占用的一个原因，所以这些测量数据会有助于我们判断出这种情况。</li>
+</ul>
+<h4 id="System">System</h4>
+<p>这个区段只会在 Firefox OS 当中出现，它包含取自操作系统的对整个设备测量的数据。除此以外，该区段还有助于详细了解整个设备的内存是如何被使用的。</p>

@@ -1,0 +1,112 @@
+---
+title: '::-ms-fill'
+slug: 'Web/CSS/::-ms-fill'
+tags:
+  - CSS
+  - Microsoft 拡張
+  - Non-standard
+  - Reference
+  - 標準外
+  - 疑似要素
+translation_of: 'Archive/Web/CSS/::-ms-fill'
+---
+<div>{{CSSRef}}{{non-standard_header}}</div>
+
+<p><span class="seoSummary">CSS の <strong><code>::-ms-fill</code></strong> <a href="/ja/docs/Web/CSS/Pseudo-elements">疑似要素</a>は <a href="/ja/docs/Web/CSS/Microsoft_extensions">Microsoft 拡張</a>で、 {{HTMLElement("progress")}} で表示される進捗バーを表します。</span>この疑似要素は Internet Explorer 10, Internet Explorer 11, Microsoft Edge のみで利用できます。</p>
+
+<p>確定的な進捗バーには {{cssxref("animation-name")}} 以外の許容されているすべてのプロパティを適用します。 <code>animation-name</code> だけは不確定なものに適用されます。 (進捗バーは {{htmlattrxref("value","progress")}} 属性が設定されていれば確定的で、そうでなければ不確定です。不確定な進捗バーは {{cssxref(":indeterminate")}} 疑似クラスで選択することができます。)</p>
+
+<p>既定では、 Internet Explorer および Edge は不確定な進捗バーに点が動くアニメーションを表示します。 <code>::-ms-fill</code> に <code>animation-name</code> を設定することで、アニメーションをこの表にあるように変更することができます。</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>値</th>
+   <th>説明</th>
+  </tr>
+  <tr>
+   <td><code>none</code></td>
+   <td>アニメーションを無効にし、点は表示されません。</td>
+  </tr>
+  <tr>
+   <td><code>-ms-bar</code></td>
+   <td>バーのパターンを流れる動く点を表示します。</td>
+  </tr>
+  <tr>
+   <td><code>-ms-ring</code></td>
+   <td>環状のパターンを流れる動く点を表示します。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Allowable_Properties" name="Allowable_Properties">許容されているプロパティ</h2>
+
+<p>以下の CSS プロパティのみがセレクターに <code>::-ms-fill</code> を含む規則で使用することができます。その他のプロパティは無視されます。</p>
+
+<ul>
+ <li>{{cssxref("animation-name")}}</li>
+ <li>{{cssxref("background-clip")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-origin")}}, {{cssxref("background-repeat")}}, {{cssxref("background-size")}}</li>
+ <li>{{cssxref("border")}}</li>
+ <li>{{cssxref("border-radius")}}</li>
+ <li>{{cssxref("box-shadow")}}</li>
+ <li>{{cssxref("box-sizing")}}</li>
+ <li>{{cssxref("color")}}</li>
+ <li>{{cssxref("cursor")}}</li>
+ <li>{{cssxref("display")}} (<code>block</code>, <code>inline-block</code>, <code>none</code> の値)</li>
+ <li>{{cssxref("font")}}</li>
+ <li>{{cssxref("height")}}</li>
+ <li>{{cssxref("margin")}}</li>
+ <li><code>-ms-background-position-x</code></li>
+ <li><code>-ms-background-position-y</code></li>
+ <li>{{cssxref("-ms-high-contrast-adjust")}}</li>
+ <li>{{cssxref("opacity")}}</li>
+ <li>{{cssxref("outline-color")}}, {{cssxref("outline-style")}}, {{cssxref("outline-width")}}</li>
+ <li>{{cssxref("padding")}}</li>
+ <li>{{cssxref("transform")}} および {{cssxref("transform-origin")}}</li>
+ <li>{{cssxref("visibility")}}</li>
+</ul>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="syntaxbox">  {{csssyntax}}
+</pre>
+
+<h2 id="Example" name="Example">例</h2>
+
+<h3 id="HTML">HTML</h3>
+
+<pre class="brush: html">&lt;progress value="10" max="50"&gt;&lt;/progress&gt;
+</pre>
+
+<h3 id="CSS">CSS</h3>
+
+<pre class="brush: css">progress::-ms-fill {
+  background-color: orange;
+}</pre>
+
+<h3 id="Result" name="Result">結果</h3>
+
+<p>{{EmbedLiveSample("Example", 300, 50)}}</p>
+
+<p>このスタイルを使用した進捗バーは、次のように見えるかもしれません。</p>
+
+<p><img alt="A progress bar with its progress indicator colored orange." src="https://mdn.mozillademos.org/files/13484/progress_bar.png" style="height: 44px; width: 308px;"></p>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+
+<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
+
+<p>{{Compat("css.selectors.-ms-fill")}}</p>
+
+<h2 id="Specifications" name="Specifications">仕様書</h2>
+
+<p>何れの仕様書の一部でもありません。</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>{{ cssxref("::-moz-progress-bar") }}</li>
+ <li>{{ cssxref("::-webkit-progress-bar") }}</li>
+ <li>{{ cssxref("::-webkit-progress-value") }}</li>
+ <li>{{ cssxref("::-webkit-progress-inner-element") }}</li>
+</ul>

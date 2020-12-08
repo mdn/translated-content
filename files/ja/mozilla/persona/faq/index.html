@@ -1,0 +1,56 @@
+---
+title: FAQ
+slug: Mozilla/Persona/FAQ
+translation_of: Archive/Mozilla/Persona/FAQ
+---
+<h2 id="BrowserID_との違いは何ですか？">BrowserID との違いは何ですか？</h2>
+<p>Persona は Mozilla による新しい分散ログインシステムの完全な実装です。</p>
+<p>BrowserID は Persona がどのように動作するかを規定するオープンなプロトコルです。</p>
+<p>Persona は BrowserID の実装によって Web サイトにユーザーがログインできるようにするものです。それに類似する関係として、Firefox は HTTP の実装によって、ユーザーが Web を閲覧できるようにするものです。</p>
+<h2 id="OpenID_との違いは何ですか？">OpenID<span style="font-size: 2.14285714285714rem;"> との違いは何ですか？</span></h2>
+<p>Persona と OpenID の目的と構造は非常に似ています。どちらのシステムも、ユーザーが所持しなければならないパスワードを減らすことができます。また、どちらも非集中型のシステムとして設計されています。<span style="line-height: 1.5;">This means that any domain can present itself as an Identity Provider without relying on a central authority.</span></p>
+<p>Despite these similarities, Persona is easier to use and easier to add to websites. Persona also does a better job of protecting user privacy. Specifically:</p>
+<dl>
+ <dt>
+  Persona はユーザーに易しいシステムです</dt>
+ <dd>
+  Persona identifies users based on email addresses, which users already know, understand, and naturally associate with online identities. With OpenID, users are forced to learn a new username: an unintuitive URL.</dd>
+ <dd>
+  Logging in with Persona is also easier: it just takes 2 clicks after a one-time setup process.</dd>
+ <dt>
+  Persona <span style="line-height: 1.5;">は開発者に易しいシステムです</span></dt>
+ <dd>
+  Persona has a {{ domxref("navigator.id", "simple API") }} that only takes an afternoon to get started with.</dd>
+ <dd>
+  Persona identities <em>are</em> email addresses, so websites don't have to ask users for additional contact information during signup.</dd>
+ <dd>
+  Because users know and understand their email address, developers don't have to build complex pages with login buttons for all the popular OpenID providers.</dd>
+ <dt>
+  Persona はより適切にユーザーのプライバシーを保護します</dt>
+ <dd>
+  By design, OpenID allows Identity Providers to track their users around the web: whenever a user logs into a website, their browser gets redirected from that site to the user's Identity Provider, and then back to the site that the user requested. These redirects fully expose to the Identity Provider where the user is going.</dd>
+ <dd>
+  In contrast, the BrowserID protocol never leaks tracking information back to the Identity Provider. Rather, it behaves similarly to an ID card: users obtain signed credentials from their Identity Providers which can be presented to websites as a proof of identity. Websites can check the validity of these credentials without ever revealing a user's identity to their identity provider.</dd>
+</dl>
+<h2 id="なぜ_Persona_には_JavaScript_が必要なのですか？">なぜ <span style="font-size: 2.14285714285714rem;">Persona</span><span style="font-size: 2.14285714285714rem;"> </span><span style="font-size: 2.14285714285714rem;">には</span><span style="font-size: 2.14285714285714rem;"> JavaScript が必要なのですか？</span></h2>
+<p>Persona requires JavaScript, but some users choose to selectively block JavaScript by using browser add-ons like NoScript. Many of these users are concerned about the privacy implications of enabling JavaScript, since it is often used to track visitors across websites.</p>
+<p>However, in the case of Persona, JavaScript is actually used to enhance user privacy, as it allows the browser to perform cryptographic operations completely on the client side. By doing these operations on the client, Persona avoids the need to store secret keys anywhere other than in the user's own browser.</p>
+<h2 id="Persona_は登録されたメールアドレスが現在使用されているかどうかを確認しますか？">Persona は<span style="font-size: 2.14285714285714rem;">登録された</span><span style="font-size: 2.14285714285714rem;">メールアドレスが</span><span style="font-size: 2.14285714285714rem;">現在使用されているかどうかを確認しますか？</span></h2>
+<p>No, Persona only guarantees the user's association with an address. As with any email address in any login system, it's possible that the address no longer works or is not regularly checked by the user. For most users, the email address will be functional.</p>
+<h2 id="どのようにしてメールアドレスから所属団体を確かめるのですか？">どのようにしてメールアドレスから所属団体を確かめるのですか？</h2>
+<p>Persona asks the address's domain, which is free to verify its users in any way it chooses. If a domain is not a native Identity Provider, and thus can't verify its own users, the browser asks for verification from Persona's fallback Identity Provider at <a href="https://login.persona.org" title="https://login.persona.org">https://login.persona.org</a>. Before certifying a user's identity, the fallback Identity Provider does test the address by sending an email to it and asking the user to click a link contained within.</p>
+<h2 id="どのような方法で、ユーザーが管理できなくなったメールアドレスのアカウントを復旧させることができますか？">どのような方法で、ユーザーが管理できなくなったメールアドレスのアカウントを復旧させることができますか？</h2>
+<p>The best way to do this is to allow your users to add a secondary email address to their account. See <a href="/en-US/docs/Persona/The_implementor_s_guide/Adding_extra_email_addresses_with_Persona" title="/en-US/docs/Persona/The_implementor_s_guide/Adding_extra_email_addresses_with_Persona">"Adding extra email addresses with Persona"</a>.</p>
+<h2 id="include.js_を独自にホストすることはできますか？_あるいは、httpslogin.persona.org_にあるものを使用しなければなりませんか？">include.js を独自にホストすることはできますか？ あるいは、<a class="link-https" href="https://login.persona.org" rel="freelink">https://login.persona.org</a> にあるものを使用しなければなりませんか？</h2>
+<p>The code in <code>include.js</code> is still subject to change. It's not yet recommended that you host it yourself.</p>
+<h2 id="アサーションをローカルで確認することはできますか？_あるいは、リモートの確認サービスを使う必要がありますか？">アサーションをローカルで確認することはできますか？ あるいは、リモートの確認サービスを使う必要がありますか？</h2>
+<p>To ensure user privacy, it's important that identity assertions are verified locally rather than with the remote verification service. However, the format of assertions is still subject to change, so local verification is not yet recommended. Even with remote verification, Persona protects the user from tracking by their identity provider.</p>
+<p>Once the protocol has stabilized, libraries will be available to simplify local verification. Follow the <a class="external" href="http://identity.mozilla.com/" title="http://identity.mozilla.com/">Identity Blog</a> to find out when local verification is recommended.</p>
+<h2 id="ほかのサインイン手段を利用しているユーザーが移行するために何か良い方法はありますか？">ほかのサインイン手段を利用しているユーザーが移行するために何か良い方法はありますか？</h2>
+<p>Despite Persona's benefits, it's never easy to move all of your users to a new login system. Conveniently, Persona's focus on email addresses makes it easy to use alongside existing login systems, so you don't have to switch all at once.</p>
+<p>One particularly low-friction approach is to suggest Persona to users who forget their password. Instead of resetting passwords, users can simply log in with Persona.</p>
+<h2 id="新規アカウントを作成する際にも「サインイン」として扱われることを、どのようにして知らせるべきですか？">新規アカウントを作成する際にも<span style="font-size: 2.14285714285714rem;">「サインイン」として扱われることを</span><span style="font-size: 2.14285714285714rem;">、どのようにして知らせるべきですか？</span></h2>
+<h2 id="新しい_API_や非推奨の_API_など、BrowserID_との主な違いはどのようにして調べられますか？"><span style="font-size: 2.14285714285714rem;">新しい API や非推奨の API など、</span><span style="font-size: 2.14285714285714rem;">BrowserID との主な違いはどのようにして調べられますか？</span></h2>
+<p>All major, backwards incompatible changes and deprecations are announced on the low-volume <a href="https://mail.mozilla.org/listinfo/persona-notices" title="https://mail.mozilla.org/listinfo/persona-notices">persona-notices</a> mailing list. Please subscribe to it.</p>
+<p>To find out about new features and enhancements, follow the the <a href="http://identity.mozilla.com/" title="http://identity.mozilla.com/">Identity team blog</a>.</p>
+<p>For development discussion, subscribe to the <a class="link-https" href="https://lists.mozilla.org/listinfo/dev-identity" title="https://lists.mozilla.org/listinfo/dev-identity">dev-identity</a><span class="link-https"> mailing list</span>.</p>

@@ -1,0 +1,54 @@
+---
+title: Thunderbird 5 for developers
+slug: Mozilla/Thunderbird/Releases/5
+tags:
+  - Thunderbird 5
+translation_of: Mozilla/Thunderbird/Releases/5
+---
+<div class="blockIndicator draft">
+    <p><strong>草案</strong><br>
+    このページは完成していません。</p>
+
+</div><span><br>
+</span>
+<div class="blockIndicator standardNote">
+<p>この記事は <a href="https://developer.mozilla.org/ja/docs/Mozilla/Thunderbird/Releases/5">Thunderbird 5</a>  の新機能について述べています</p>
+</div>
+<p><span>このページは、Thunderbird 5 における開発者向けの変更点のリストです。エンドユーザ向けの変更点は、<a class=" external" href="http://support.mozillamessaging.com/kb/new-thunderbird-5/" title="http://support.mozillamessaging.com/kb/new-thunderbird-5/">Thunderbird サポートの記事</a>をご覧ください。<br>
+</span></p>
+<h2 id="Gecko_5.0">Gecko 5.0</h2>
+<p>Thunderbird 5 は、Gecko 5.0 をベースにしています。<a href="/ja/Firefox_4_for_developers" title="ja/Firefox 4 for developers">Firefox 4</a> および <a href="/ja/Firefox_5_for_developers" title="ja/Firefox 5 for developers">Firefox 5</a> のページに、Gecko に対する重要な変更の詳細があります。</p>
+<h2 id="Mozilla_とアドオン開発者向けの変更">Mozilla とアドオン開発者向けの変更</h2>
+<p>既存の拡張機能を Thunderbird 5 向けに更新するための役立つヒントについては、<a href="/ja/Extensions/Updating_extensions_for_Firefox_4" title="ja/Extensions/Updating extensions for Firefox 4">Updating extensions for Firefox 4</a> を参照してください。既存の拡張機能の互換性を損なういくつかの鍵となる変更点があるため、この記事を必ずお読みください。</p>
+<h2 id="STEEL">STEEL</h2>
+<ul> <li>Thunderbird 5 には新しいアドオンマネージャが搭載されています。その副作用として、グローバルな <a href="/ja/Toolkit_API/extIApplication" title="ja/Toolkit API/extIApplication">Application</a> オブジェクトは、もはや拡張機能のプロパティを持ちません。詳細は、<a class=" external" href="http://www.oxymoronical.com/blog/2010/03/How-were-breaking-some-extensions-in-the-near-future" title="http://www.oxymoronical.com/blog/2010/03/How-were-breaking-some-extensions-in-the-near-future">このブログ記事</a>を参照してください。</li>
+</ul>
+<h3 id="JavaScript_コードモジュール">JavaScript コードモジュール</h3>
+<dl> <dt><a href="/ja/JavaScript_code_modules/Services.jsm" title="ja/JavaScript code modules/Services.jsm">Services.jsm</a></dt> <dd><code>Services.jsm</code> コードモジュールは、preferences サービスや window mediator、その他多くの一般的に使用されるサービスへの参照を簡単に取得できる getter を提供します。</dd> <dt><a href="http://mxr.mozilla.org/comm-central/source/mailnews/base/util/mailServices.js">mailServices.js</a></dt> <dd>mailServices.js コードは Services.jsm と似ていますが、メール機能固有のサービスのためのものです。</dd> <dt><a href="/ja/JavaScript_code_modules/ctypes.jsm" title="ja/JavaScript code modules/ctypes.jsm">JS-ctypes API</a></dt> <dd>JS-ctypes API は、XPCOM を使用せずに C 互換の外部ライブラリ関数を呼び出すことを可能にします。</dd> <dt><a href="/ja/Addons/Add-on_Manager" title="ja/Addons/Add-on Manager">アドオンマネージャ</a></dt> <dd>新しいアドオンマネージャは、インストールされたアドオンについての情報、それらを管理するためのサポート、アドオンのインストールと削除を行う機能を提供します。</dd> <dt><a href="/ja/JavaScript_code_modules/Using#Locating_the_code_module" title="ja/JavaScript code modules/Using JavaScript code modules#Locating the code module">chrome: URL からのコードモジュールの読み込み</a></dt> <dd>JAR ファイル内であっても、<strong>chrome:</strong> URL を使用して JavaScript コードモジュールを読み込めるようになりました。</dd> <dt>DownloadLastDir.jsm</dt> <dd><a href="/ja/JavaScript_code_modules/DownloadLastDir.jsm" title="ja/JavaScript/Code modules/DownloadLastDir.jsm"><code>DownloadLastDir.jsm</code></a> コードモジュールは、<code>gDownloadLastDir</code> グローバル変数を提供します。これは、最後にダウンロードされたファイルの保存先ディレクトリのパスを取得できる文字列を含みます。このモジュールは、プライベートブラウジングに関連する問題を扱います。</dd>
+</dl>
+<h4 id="コードモジュールに対する変更">コードモジュールに対する変更</h4>
+<p><code>NetUtil.jsm</code> コードモジュールに <a href="/ja/JavaScript_code_modules/NetUtil.jsm#readInputStreamToString()" title="ja/JavaScript/Code modules/NetUtil.jsm#readInputStreamToString()"><code>readInputStreamToString()</code></a> メソッドが追加されました。これは、ストリームから任意のバイト数だけ文字列に読み込みます。ストリームに 0 (ゼロ) が含まれていても可能です。</p>
+<h3 id="MimeMessage_API">MimeMessage API</h3>
+<p><code>Cu.import("<a class=" external" rel="freelink">resource:///modules/gloda/mimemsg.js</a>");</code> からの <a class=" external" href="http://mxr.mozilla.org/comm-central/source/mailnews/db/gloda/modules/mimemsg.js#171" title="http://mxr.mozilla.org/comm-central/source/mailnews/db/gloda/modules/mimemsg.js#171"><code>MsgHdrToMimeMessage</code></a> 関数が、追加のプロパティを持つ <a class=" external" href="http://mxr.mozilla.org/comm-central/source/mailnews/db/gloda/modules/mimemsg.js#322" title="http://mxr.mozilla.org/comm-central/source/mailnews/db/gloda/modules/mimemsg.js#322"><code>MimeMessage</code></a> を返すようになりました。これは、メッセージを簡単に解析して構造的な MIME ツリーにし、検査するための推奨された方法です。API に制限が多いと思ったら、ぜひ<a class=" link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=MailNews%20Core&amp;component=Database" title="https://bugzilla.mozilla.org/enter_bug.cgi?product=MailNews Core&amp;component=Database">バグ報告してお知らせください</a>！</p>
+<ol> <li> <p><code>MimeMessageAttachment</code> インスタンスに、メッセージの添付ファイルのサイズへアクセスできるようにする <code>size</code> プロパティが追加されました。</p> </li> <li> <p><code>MimeMessage</code> インスタンスに、新機能の <code>allUserAttachments</code> プロパティが追加されました。これは、メッセージ画面に表示される添付ファイルの情報を提供します。このプロパティは、"添付ファイル" を扱う場合に覚えておくべきものです。<code>allAttachments</code> プロパティは、添付されたメールなどの MIME パートは含みません。</p> </li> <li> <p>動作を高速化するため、メッセージがリモートの IMAP サーバにだけある場合は、<code>MsgHdrToMimeMessage</code> へ渡す <code>options</code> オブジェクトに <code>partsOnDemand: true</code> メンバを追加してください。画像ファイルなどの添付ファイルがバックエンドでダウンロードされなくなります。</p> </li>
+</ol>
+<h3 id="Gloda_API">Gloda API</h3>
+<p>Gloda に索引が付けられたメッセージは、<code>attachmentInfos</code> と呼ばれる追加のプロパティが使用できるようになりました。これは、与えられたメッセージの添付ファイルを、<code>MsgHdrToMimeMessage</code> に再び流すことなく手軽に操作できるようにします。<code>attachmentInfos</code> は、オブジェクトのリストであり、各オブジェクトは <code>url, size, contentType, name</code> のプロパティを持っています。バージョン 5a1 の時点では、データベーススキーマを変更する計画はありません。これは、バージョン 5 がインストールされた後に索引が付けられたメッセージだけが、このプロパティを持つことを意味します。しかしながら、Gloda の索引を再作成することで、すべてのメッセージに <code>attachmentTypes</code> プロパティを持たせることができます。<code>Cu.import("<a class=" external" rel="freelink">resource:///modules/gloda/index_msg.js</a>")</code> の <code>GlodaMsgIndexer</code> が、この操作のために必要になるでしょう。</p>
+<h3 id="バックエンドの変更">バックエンドの変更</h3>
+<ul> <li><code>DisplayMessage</code> を通してメッセージをストリーミングする場合、<code>&amp;markRead=false</code> パラメータを URI に追加することにより、(IMAP 上の) メッセージを表示した時、バックエンドでメッセージが既読になることを防げるようになりました。</li> <li>Thunderbird のタブメールが、onbeforeunload イベントハンドラを尊重するようになりました。content または chrome タブ内の何かを開発する場合に、タブが閉じられることを防げるようになります。</li> <li>chrome タブが favicon を持てるようになりました。</li> <li>content タブを開いた時、追加の onload 引数で、タブが読み込み中であることを知ることができるようになりました。</li> <li>新しい "偽ヘッダ (fake header)" 機構が導入されました。偽ヘッダは、メッセージが送信された後に挿入され、autosync が実際のヘッダをリモート IMAP サーバから取得している間の placeholder として使用されます。これらのメッセージキーは、2**32 - 128 から 2**32 -1 の範囲内になります。偽ヘッダは、実際のヘッダの取得が完了すると破棄されます。一部のメッセージヘッダを操作するアドオンでは、不正なメッセージヘッダとして扱われる可能性があります。</li>
+</ul>
+<h2 id="XPCOM">XPCOM</h2>
+<p>さらに詳しい変更点は、以下のページを参照してください。もはや、どのインタフェースも凍結されない点に注意することが重要です。ドキュメントにどのように書いてあろうとも、すべてのインタフェースは凍結されなくなりました (unfrozen)。ドキュメントは随時更新されます。</p>
+<dl> <dt><a href="/ja/XPCOM/XPCOM_changes_in_Gecko_2.0" title="ja/XPCOM/XPCOM changes in Gecko 2.0">Gecko 2.0 における XPCOM の変更点</a></dt> <dd>Firefox 4 で互換性に影響を与える XPCOM の変更点の詳細。</dd> <dt><a href="/ja/Components.utils.getGlobalForObject" title="ja/Components.utils.getGlobalForObject">Components.utils.getGlobalForObject()</a></dt> <dd>この新しいメソッドは、オブジェクトが関連付けられたグローバルオブジェクトを返します。これは、破棄された <code>__parent__</code> の一般的な使用例を置き換えるものです。</dd>
+</dl>
+<h2 id="その他の変更点">その他の変更点</h2>
+<ul> <li>Thunderbird のビルドは、静的ビルドから libxul スタイルのビルドへ変更されました。</li> <li>Thunderbird が、Firefox がサポートするものと同じ out-of-process プラグインをサポートするようになりました。</li> <li>Thunderbird 内に含まれるリソースのほとんどが、単一の JAR アーカイブファイルである <code>omni.jar</code> にまとめられました。ファイルの I/O が減ったことにより、起動時間が短縮されました。詳しくは、<a href="/ja/About_omni.jar" rel="internal">omni.jar について</a>を参照してください。</li> <li>Content タブが Firefox と同じ方法で favicon をサポートするようになりました。</li> <li>Thunderbird のリリース番号が Gecko のリリース番号と一致するようになりました。詳しい情報は、<a class=" external" href="http://groups.google.com/group/tb-planning/browse_thread/thread/521988f37b611174" title="http://groups.google.com/group/tb-planning/browse_thread/thread/521988f37b611174">tb-planning list の議論</a>を参照してください。</li>
+</ul>
+<h2 id="他のリソース">他のリソース</h2>
+<p>Thunderbird 5 のコードネームは 'Miramar' です。</p>
+<ul> <li><a href="/ja/Firefox_5_for_developers" title="ja/Firefox 5 for developers">Firefox 5 for developers</a></li> <li><a href="/ja/Firefox_4_for_developers" title="ja/Firefox 4.0 for developers">Firefox 4 for developers</a></li> <li><a href="/ja/Thunderbird_3_for_developers" title="ja/Thunderbird 3 for
+    developers">Thunderbird 3.1 for developers</a></li> <li><a class="external" href="http://ccgi.standard8.plus.com/blog/archives/322" title="http://ccgi.standard8.plus.com/blog/archives/322">build details</a></li> <li><a class=" link-https" href="https://wiki.mozilla.org/Thunderbird:Testing" title="https://wiki.mozilla.org/Thunderbird:Testing">how to help with testing</a></li>
+</ul>
+<div class="noinclude">
+
+</div>

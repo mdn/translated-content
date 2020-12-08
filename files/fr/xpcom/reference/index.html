@@ -1,0 +1,19 @@
+---
+title: Référence XPCOM
+slug: XPCOM/Reference
+translation_of: Mozilla/Tech/XPCOM/Reference
+---
+<p>Cette référence décrit les interfaces et les fonctions fournies par la bibliothèque <a href="/fr/docs/Mozilla/Tech /XPCOM">XPCOM</a>. En outre, elle détaille les différentes classes et fonctions d'assistance, ainsi que les composants fournis par la bibliothèque <a href="/fr/docs/Mozilla/Tech/XPCOM/Glue">XPCOM glue</a>. Actuellement, les contenus sont orientés principalement vers le développement d'extensions et l'encapsulation d'XPCOM dans d'autres projets.</p>
+
+<div class="note">
+<p><strong>Note: </strong> Si vous travaillez sur un module de code Mozilla qui est compilé avec<code> MOZILLA_INTERNAL_API</code>, certaines de ces API -- les fonctions de chaîne et les classes en particulier -- ne sont pas ceux que vous devriez utiliser. Voir la <a href="/fr/docs/Mozilla/Tech/XPCOM/Guide/Internal_strings">XPCOM internal string guide</a> pour la documentation de l'internal string API utilisé dans le code de base de Mozilla.</p>
+</div>
+
+<p></p><div class="row topicpage-table">
+    <div class="section"><dl><dl><dt class="landingPageList"><a href="/fr/docs/XPCOM/Reference/Core_functions">Core XPCOM functions</a></dt><dd class="landingPageList">XPCOM fournit un certain nombre de fonctions globales qui sont utilisées pour initialiser et arrêter la bibliothèque XPCOM, allouer de la mémoire, avoir accès aux services, et instancier les interfaces.</dd><dt class="landingPageList"><a href="/fr/docs/XPCOM/Reference/Reference_by_grouping">Interfaces XPCOM par groupe</a></dt><dd class="landingPageList">Cette page présente l'actuel (à partir de 1 décembre 2010) liste des interfaces de Mozilla comme indiqué sur <a href="/fr/XPCOM_Interface_Reference" title="fr/XPCOM_Interface_Reference ">Page d'interface XPCOM de référence</a> qui répertorie les éléments par ordre alphabétique, cette page est une tentatives de les regrouper par fonction. Noms de Regroupement et de catégorie ont été faites par décision quelque peu arbitraire.</dd></dl></dl></div>
+    <div class="section"><dl><dt class="landingPageList"><a href="/fr/docs/XPCOM_Interface_Reference">Référence des interfaces XPCOM</a></dt><dd class="landingPageList">Cette page référence l'ensemble des interfaces XPCOM fournies par Mozilla.</dd><dt class="landingPageList"><a href="/fr/docs/XPCOM/Reference/Standard_XPCOM_components">Standard XPCOM components</a></dt><dd class="landingPageList">Il ya un certain nombre de composants fournis dans la mise en œuvre de la norme XPCOM; ceux-ci sont comme suit.</dd></dl></div>
+    </div><p></p>
+
+<p> </p>
+
+<p>Beaucoup de pages XPCOM renvoient un <code> <a href="/docs/fr/Mozilla/Tech/XPCOM/Reference/Core_functions/nsresult"> nsresult</a></code>. Avant Gecko 19 (Firefox 19 / Thunderbird 19 / SeaMonkey 2.16), le code d'erreur était un entier. Il est maintenant un type <code>enum</code> quand XPCOM est construit en utilisant un compilateur C++11. Cela provoque des erreurs de compilation lorsque des valeurs <code>nsresult</code> incorrectes sont retournés, ce qui rend plus facile le débogage.</p>

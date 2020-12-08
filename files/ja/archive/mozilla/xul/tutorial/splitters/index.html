@@ -1,0 +1,148 @@
+---
+title: スプリッター
+slug: Archive/Mozilla/XUL/Tutorial/Splitters
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Splitters
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Content_Panels" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Toolbars">次のページ  »</a></p>
+</div>
+
+<p>ここでは、ウィンドウにスプリッターを追加する方法を見ていきます。</p>
+
+<p><span id="Splitting_a_Box"></span></p>
+
+<h2 id=".E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9.E3.82.92.E5.88.86.E5.89.B2.E3.81.99.E3.82.8B" name=".E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9.E3.82.92.E5.88.86.E5.89.B2.E3.81.99.E3.82.8B">ボックスを分割する</h2>
+
+<p>1 つのウィンドウ内を 2 つのセクションに分割し、利用者がそれぞれのセクションに割り当てる大きさを変更できるようにしたい場合が、しばしばあると思います。 1 つの例として、Mozilla のブラウザウィンドウがあります。 サイドバーパネルのサイズは、2 つのフレーム間にあるバーをドラッグすることで変更可能です。 また、<span style="border-bottom: 1px dashed green;" title="notch">ノッチ</span>の部分をクリックすることで、サイドバーを隠すこともできます。</p>
+
+<p><span id="Splitter_element"></span></p>
+
+<h3 id=".E3.82.B9.E3.83.97.E3.83.AA.E3.83.83.E3.82.BF.E3.83.BC.E8.A6.81.E7.B4.A0" name=".E3.82.B9.E3.83.97.E3.83.AA.E3.83.83.E3.82.BF.E3.83.BC.E8.A6.81.E7.B4.A0">スプリッター要素</h3>
+
+<p>この機能は、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/splitter" title="splitter">splitter</a></code></code> と呼ばれる要素によって実現されています。 スプリッター要素は、2 つのセクション間に細いバーを作り、それぞれに割り当てる大きさを変更できるようにします。 スプリッターは、必要ならばどこにでも配置することができ、同じボックス内でそれより前の要素と、後の要素をリサイズすることが可能になります。</p>
+
+<p>スプリッターを水平ボックス内に置くと、水平方向でリサイズ可能になります。 また、垂直ボックス内に置くと、垂直方向でリサイズ可能になります。</p>
+
+<p>スプリッターの構文を以下に示します。</p>
+
+<pre class="brush: xml">&lt;splitter
+    id="identifier"
+    state="open"
+    collapse="before"
+    resizebefore="closest"
+    resizeafter="closest"&gt;
+</pre>
+
+<p>スプリッターの属性を以下に示します。</p>
+
+<dl>
+ <dt><code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></dt>
+ <dd>スプリッターの一意な識別子です。</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-state"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/state">state</a></code></dt>
+ <dd>スプリッターの状態を指示します。これをデフォルトの　<code>open</code> に設定すると、分割されたパネルは最初から開いた状態になります。<code>collapsed</code> (折り畳む) に設定すると、片方のパネルは縮小して折り畳まれ、もう一方のパネルがスペース全体を占有した状態になります。</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-collapse"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/collapse">collapse</a></code></dt>
+ <dd>グリッピー (<span style="color: green;">grippy</span>) と呼ばれる、スプリッターについているノッチがクリックされるか、または状態が <code>collapsed</code> に設定された場合に、パネルのどちら側を折り畳むかを指示します。<code>before</code> に設定するとスプリッターの前の要素が、<code>after</code> にするとスプリッターの後の要素が折り畳まれます。デフォルトの <code>none</code> にすると、スプリッターグリッピーがクリックされても、どちら側のパネルも折り畳まれません。</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-resizebefore"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/resizebefore">resizebefore</a></code></dt>
+ <dd>スプリッターのドラッグによって、要素のリサイズが発生します。この属性は、左側 (垂直配置では上側) に置かれた要素に対して、どの要素がリサイズされるべきかを指示します。これを <code>closest</code> に設定すると、スプリッターのすぐ左にある要素がリサイズされます。<code>farthest</code> に設定すると、スプリッターの左側で最も離れた要素 (ボックス内の最初の要素) がリサイズされます。デフォルトは <code>closest</code> になります。</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-resizeafter"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/resizeafter">resizeafter</a></code></dt>
+ <dd>スプリッターのドラッグによって、要素のリサイズが発生します。この属性は、右側 (垂直配置では下側) に置かれた要素に対して、どの要素がリサイズされるべきかを指示します。これを <code>closest</code> に設定すると、スプリッターのすぐ右にある要素がリサイズされます。<code>farthest</code> に設定すると、スプリッターの右側で最も離れた要素 (ボックス内の最後の要素) がリサイズされます。また、<code>grow</code> という値も設定可能です。この場合、スプリッターがドラッグされても、スプリッターの右側にある要素のサイズは変化せず、ボックス全体のサイズが変化します。デフォルトは <code>closest</code> になります。</dd>
+</dl>
+
+<p><code><code id="a-collapse"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/collapse">collapse</a></code></code> 属性を設定する場合は、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/splitter" title="splitter">splitter</a></code></code> 内に、利用者が要素を折り畳むために使用する、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/grippy" title="grippy">grippy</a></code></code> 要素を加える必要があります。</p>
+
+<p><span id="Splitter_example"></span></p>
+
+<h3 id=".E3.82.B9.E3.83.97.E3.83.AA.E3.83.83.E3.82.BF.E3.83.BC.E3.81.AE.E4.BE.8B" name=".E3.82.B9.E3.83.97.E3.83.AA.E3.83.83.E3.82.BF.E3.83.BC.E3.81.AE.E4.BE.8B">スプリッターの例</h3>
+
+<p>参考のために、例を示します。</p>
+
+<p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_splitter_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_splitter_1.xul">表示</a></p>
+
+<pre class="brush: xml">&lt;vbox flex="1"&gt;
+  &lt;iframe id="content-1" width="60" height="20" src="w1.html"/&gt;
+  &lt;splitter collapse="before" resizeafter="farthest"&gt;
+    &lt;grippy/&gt;
+  &lt;/splitter&gt;
+  &lt;iframe id="content-2" width="60" height="20" src="w2.html"/&gt;
+  &lt;iframe id="content-3" width="60" height="20" src="w3.html"/&gt;
+  &lt;iframe id="content-4" width="60" height="20" src="w4.html"/&gt;
+&lt;/vbox&gt;
+</pre>
+
+<div class="float-right"><img alt="画像:splitter-ex1.jpg"></div>
+
+<p>この例では、4 つの iframe が作られ、スプリッターが最初のフレームと 2 番目のフレームの間に置かれています。 スプリッターの <code><code id="a-collapse"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/collapse">collapse</a></code></code> 属性には <code>before</code> という値に設定されています。 このため、スプリッターグリッピーがクリックされると、最初のフレームが折り畳まれ、スプリッターと残りのフレームは左に移動します。 スプリッターグリッピーはスプリッターの中央に表示されます。</p>
+
+<p>スプリッターの <code><code id="a-resizeafter"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/resizeafter">resizeafter</a></code></code> 属性には <code>farthest</code> という値が与えられています。 このため、スプリッターがドラッグされると、スプリッターの後ろの最も離れた要素のサイズが変更されます。 この例の場合、4 番目のフレームのサイズが変更されることになります。</p>
+
+<p>スプリッターの <code><code id="a-resizebefore"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/resizebefore">resizebefore</a></code></code> 属性には、値が指定されていません。 そのため、デフォルト値である <code>closest</code> が適用されます。 この例では、スプリッターの前には一つしかフレームがないため、その最初のフレームのサイズが変更されることになります。</p>
+
+<p>2 番目と 3 番目のフレームは、スプリッターを 4 番目のフレームが最小サイズになる位置よりも右にドラッグした場合のみ、サイズが変わります。</p>
+
+<div class="float-right"><img alt="画像:splitter-ex2.jpg"></div>
+
+<p>この画像は、4 つのパネルの例で、スプリッターを折り畳んだ状態に変更したものです。</p>
+
+<div class="float-right"><img alt="画像:splitter-ex3.jpg"></div>
+
+<p>この画像は、 4 つのパネルの例で、スプリッターを右にリサイズしたものです。 中央の 2 つのパネルのサイズが変わっていないことに注目してください。 1 番目のパネルと 4 番目のパネルのサイズだけが変わっていることがわかると思います。 4 番目のパネルは、最小限の部分だけが見えています。 スプリッターを右にドラッグし続けた場合、残りの 2 つのパネルが小さくなります。 ボックスの最小または最大の幅や高さを指定するために、iframe に <a href="/ja/docs/Web/CSS/min-width" title="min-width は、要素の最小幅を指定する CSS プロパティです。width プロパティの 使用値 が、min-width で指定した値を下回らないようにします。"><code>min-width</code></a> や <a href="/ja/docs/Web/CSS/max-height" title="CSS の max-height プロパティは要素の最大の高さを設定するのに使われます。height プロパティの使用値は、max-height に設定した値よりも大きくなりません。"><code>max-height</code></a> などのスタイルプロパティを使うことが可能です。 これらの設定を行った場合、スプリッターによって設定が検出され、利用者が最小サイズや最大サイズを超えて、スプリッターをドラッグできないようになります。</p>
+
+<p>例えば、上の 4 番目のパネルに 30 ピクセルの最小幅を指定すると、パネルは、そのサイズよりも小さくなることはありません。 その分、他の 2 つのパネルのサイズが小さくなります。 1 番目のパネルの最小幅を 50 ピクセルに設定した場合、(60 ピクセル幅が初期値であるため) スプリッターは、左に 10 ピクセルしかドラッグできません。 ただし、この場合でも、スプリッターを折り畳むことは可能です。</p>
+
+<p>必要なら、1 つのボックスに複数のスプリッターを置くことも可能です。 この場合、ボックスの別々の場所を折り畳むことができます。 また、iframe だけが折り畳めるということはありません。 どんな要素でも折り畳むことが可能です。</p>
+
+<p><span id="Our_find_files_example"></span></p>
+
+<h2 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AB.E3.82.B9.E3.83.97.E3.83.AA.E3.83.83.E3.82.BF.E3.83.BC.E3.82.92.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AB.E3.82.B9.E3.83.97.E3.83.AA.E3.83.83.E3.82.BF.E3.83.BC.E3.82.92.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B">ファイル検索ダイアログにスプリッターを追加する</h2>
+
+<div class="highlight">
+<p>それでは、ファイル検索ダイアログにスプリッターを加えてみることにしましょう。 スプリッターを使用可能な箇所はいくつか考えられると思いますが、今回はダイアログ内に検索結果を追加するために使用してみることにします。 具体的には、検索条件と下部にあるボタンの間に検索結果のためのエリアを追加し、 スプリッターによって、このエリアを折り畳むか隠すことができるようにします。</p>
+
+<pre class="brush: xml">&lt;/tabbox&gt;
+
+
+ <span class="highlightred">&lt;iframe src="results.html"/&gt;
+ &lt;splitter resizeafter="grow"/&gt;</span>
+
+
+ &lt;hbox&gt;
+</pre>
+
+<p>この例では、スプリッターと iframe がダイアログに追加されています。 <code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code></code> の後の <code><code><a href="/ja/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code></code> は、もう必要ないため、削除してもかまいません。 フレームのコンテンツは、「&lt;tt&gt;results.html&lt;/tt&gt;」という名前のファイルから読み込まれます。 このファイルを作り、中身は何でもよいので適当に好きなものを入れておいてください。 iframe は、<a href="ja/XUL_Tutorial/Trees">後のセクション</a>で結果リストの作り方を学んだときに、その結果リストで置き換えることにしましょう。 今回は、スプリッターの例を示すのが目的であるため、とりあえず iframe を使うことにします。</p>
+
+<p>このスプリッターの <code><code id="a-collapse"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/collapse">collapse</a></code></code> 属性の値は、<code>before</code> に設定されています。 このため、スプリッターの直前の要素が折り畳まれることになります。 この例では、iframe がそれに当たります。 下の画像が示しているように、グリッピーがクリックされると、iframe が折り畳まれ、ボタンが上に移動します。</p>
+
+<p><code><code id="a-resizeafter"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/resizeafter">resizeafter</a></code></code> 属性の値は、<code>grow</code> に設定されています。 このため、スプリッターの後ろにある要素は、スプリッターが下方向にドラッグされた場合、スプリッターに押し下げられます。 その結果、フレームのコンテンツ部分を任意の大きさに広げることが可能です。 ただし、コンテンツ部分が大きくなっても、ウィンドウ自身は自動的にリサイズされない点は注意しておく必要があります。 また、垂直配置のボックスの中に置かれているため、スプリッターが水平になっていることにも注意して下さい。</p>
+
+<p>通常の状態:</p>
+
+<p><img alt="画像:splitter1.png"></p>
+
+<p>折り畳まれた状態:</p>
+
+<p><img alt="画像:splitter2.png"></p>
+</div>
+
+<p><span id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"><a id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"></a><strong>ここまでのファイル検索ダイアログの例</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-splitter.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-splitter.xul">表示</a></p>
+
+<p>次は、ツールバーの作り方を見ていきます。</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Content_Panels" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Toolbars">次のページ  »</a></p>
+</div>

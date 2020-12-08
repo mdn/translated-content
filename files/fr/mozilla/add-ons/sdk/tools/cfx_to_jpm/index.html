@@ -1,0 +1,192 @@
+---
+title: De cfx à jpm
+slug: Mozilla/Add-ons/SDK/Tools/cfx_to_jpm
+translation_of: Archive/Add-ons/Add-on_SDK/Tools/cfx_to_jpm
+---
+<div class="note">
+<p>L'Add-on SDK inclut un outil de ligne de commande que vous utilisez pour initialiser, exécuter, tester, et empaqueter des add-ons. L'outil actuel est appelé jpm, il est basé sur <a href="http://nodejs.org/" title="http://nodejs.org/"> Node.js </a>. Il remplace l'outil cfx.</p>
+
+<p>Vous pouvez utiliser jpm à partir de Firefox 38.</p>
+
+<p>Cet article met en évidence les principales différences entre cfx et jpm.</p>
+</div>
+
+<p><span class="seoSummary">Un guide pour travailler avec jpm si vous êtes déjà familier avec cfx.</span></p>
+
+<h2 id="Installation">Installation</h2>
+
+<p>cfx est basée sur Python et est distribué comme un fichier zip. jpm est baser sur Node.js qui est <a href="https://www.npmjs.org/package/jpm" title="https://www.npmjs.org/package/jpm"> distribué par npm </a>. Donc, pour jpm vous n'avez pas besoin de Python, mais vous avez besoin npm.</p>
+
+<p>Pour obtenir les mises de cfx vous deviez télécharger et extraire un fichier zip, tandis que pour obtenir la nouvelle version de jpm, utilisez <a href="https://docs.npmjs.com/cli/update" title="https://www.npmjs.org/doc/api/npm-update.html"> <code>npm update</code> </a>.</p>
+
+<p>Pour obtenir des instructions d'installation de jmp, consultez la section de l' <a href="/fr/docs/Mozilla/Add-ons/SDK/Tools/jpm#Installation" title="/fr/Add-ons/SDK/Tools/jpm#Installation">Installation</a> dans la référentiel de jmp.</p>
+
+<h2 id="Activation">Activation</h2>
+
+<p>Vous devez appeler <code>cfx activate</code> avant de pouvoir utiliser cfx, et cela ne fonctionne que dans le shell de commande de courant:. Si vous ouvrez un nouveau shell, vous devez appeler <code>activate</code> de nouveau</p>
+
+<p>Avec jpm, pas d'activation. Une fois qu'il est installé, vous pouvez simplement l'utiliser.</p>
+
+<h2 id="Incompatibilités">Incompatibilités</h2>
+
+<p>Dans la plupart cas, les add-ons créés avec cfx fonctionnent bien avec jpm. Cependant, il y a quelques différences que vous devez connaitre.</p>
+
+<h3 id="Add-on_ID">Add-on ID</h3>
+
+<p>L'ID de add-on est l'identifiant unique de votre add-on. Dans un xpi, c'est le<a href="https://developer.mozilla.org/fr/docs/Mozilla/Add-ons/Install_Manifests#id" title="https://developer.mozilla.org/en/install.rdf#id"> champ ID dans le fichier Manifest d'instalation de l'add-on</a> (install.rdf).</p>
+
+<p>L'identifiant est utilisé à des fins variées. Par exemple: <a href="http://addons.mozilla.org" title="http://addons.mozilla.org">addons.mozilla.org</a> l'utilise pour distinguer entre les nouvelles add-ons et les mises à jour d'add-ons existantes, et le module <a href="https://developer.mozilla.org/fr/docs/Mozilla/Add-ons/SDK/High-Level_APIs/simple-storage" title="https://developer.mozilla.org/fr/Add-ons/SDK/High-Level_APIs/simple-storage"><code>simple-storage</code></a> l'utilise pour déterminer lesquelles des données stockées appartiennent à tel add-on.</p>
+
+<h4 id="Manipulation_avec_l'ID_cfx">Manipulation avec l'ID cfx</h4>
+
+<p>Lorsque vous utilisez cfx, l'ID est tiré du <a href="/fr/docs/Mozilla/Add-ons/SDK/Tools/package_json#id" title="/fr/Add-ons/SDK/Tools/package_json#id">champ <code>id</code> dans le fichier de package.json de l'add-on</a>. Vous pouvez éditer ce fichier pour créer votre propre identité, mais si vous ne le faites pas, cfx va le générer pour vous, ce qui va ressembler à quelque chose comme "<code>jid1-F3BoogbjQJE67A</code>". <a href="https://developer.mozilla.org/fr/docs/Mozilla/Add-ons/Install_Manifests#id" title="https://developer.mozilla.org/fr/Add-ons/Install_Manifests#id">L'ID Add-on doit être l'un des deux types suivant </a>: un GUID ou une chaîne qui comprend un symbole <code>"@"</code>. Le SDK ne prévoit que le dernier format, et si l'ID dans package.json ne contient pas de "@", cfx xpi ajouter "<code>@jetpack</code>" dans le champ de package.json, ce qui transforme l'ID de l'add-on.</p>
+
+<p>Donc: si vous n'avez jamais manipulé l'ID lors de l'utilisation cfx, alors la valeur dans le package.json de votre add-on sera quelque chose comme "<code>jid1-F3BoogbjQJE67A</code>", et l'ID correspondant dans la install.rdf sera "<code>jid1-F3BoogbjQJE67A@jetpack</code>".</p>
+
+<h4 id="Manipulation_d'ID_avec_jpm">Manipulation d'ID avec jpm</h4>
+
+<p>Lorsque vous créez un xpi avec <code>jpm xpi</code>:</p>
+
+<ul>
+ <li>si le package.json ne comprend pas un champ <code>id</code>, alor l'ID dans l'install.rdf à la valeur de la <a href="/fr/docs/Mozilla/Add-ons/SDK/Tools/package_json#name" title="/fr/Add-ons/SDK/Tools/package_json#name"> champ <code>name</code></a> Préfixé par "@".</li>
+ <li>si le package.json inclut un champ <code>id</code>, et il contient «@», alors l'écriture est la même dans install.rdf.</li>
+ <li>si le package.json inclut un champ <code>id</code>, sans "@", jpm XPI soulève une erreur et le xpi ne sera pas construit.</li>
+</ul>
+
+<h4 id="Ce_que_vous_devez_faire">Ce que vous devez faire</h4>
+
+<p>Tout cela signifie que: <em> si votre package.json contient un champ id, et sa valeur ne contient pas «@», alors vous devez ajouter "@jetpack» lors du passage à jpm </em>.</p>
+
+<p>Si vous faites cela, l'ID de l'add-on sera la même que l'id utilisée avec cfx.</p>
+
+<h3 id="Point_d'entrée">Point d'entrée</h3>
+
+<p>Le point d'entrée de l'add-on est le fichier qui est exécutée lorsque l'add-on a besoin de s'initialiser: par exemple, au démarrage de Firefox, ou lorsque l'add-on est installé, activé, ou mis à niveau. Avec cfx, la valeur par défaut à "lib/main.js", même si elle peut être réglée sur un autre fichier en utilisant le <code>main</code> champ dans le package.json .</p>
+
+<p>Dans jpm, le point d'entrée par défaut est "index.js". Donc, lors de la commutation vers jpm:</p>
+
+<ul>
+ <li>renommez vos "main.js" en "index.js" et déplacez les de "lib" vers le plus haut niveau</li>
+ <li>ou ajouter un champ <code>main</code> dans package.json avec pour valeur "lib/main.js".</li>
+</ul>
+
+<h3 id="Chargement_des_modules">Chargement des modules</h3>
+
+<p>L'outil jpm utilise la même logique que <a href="http://nodejs.org/api/modules.html#modules_all_together" title="http://nodejs.org/api/modules.html#modules_all_together"> Node.js </a> pour déterminer comment résoudre l'argument <code>require()</code>. Dans la plupart des cas, c'est la même <a href="/fr/docs/Mozilla/Add-ons/SDK/Guides/Module_structure_of_the_SDK" title="/fr/Add-ons/SDK/Guides/Module_structure_of_the_SDK">logique que cfx</a>. Cependant, il existe quelques différences, parce certaines compatibilités ont été retirées.</p>
+
+<h4 id="Requérir_à_des_modules_locaux">Requérir à des modules locaux</h4>
+
+<p>Supposons que votre add-on est <a href="/fr/docs/Mozilla/Add-ons/SDK/Tutorials/Creating_Reusable_Modules" title="/fr/Add-ons/SDK/Tutorials/Creating_Reusable_Modules"> structuré en modules séparés </a>:</p>
+
+<ul class="directory-tree">
+ <li>my-addon
+  <ul>
+   <li>lib
+    <ul>
+     <li>main.js</li>
+     <li>utils.js</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+<p>Lorsque vous voulez utiliser un module "utils.js" dans "main.js", vous devez utiliser un chemin relatif à "main.js", et le préfixer avec "./" pour indiquer que c'est un chemin relatif:</p>
+
+<pre class="brush: js">var utils = require("./utils");</pre>
+
+<p>Cependant, avec cfx vous êtes également autorisé à omettre le "./":</p>
+
+<pre class="brush: js">var utils = require("utils"); // this will not work with jpm!</pre>
+
+<p>Cette seconde forme ne fonctionnera pas avec jpm.</p>
+
+<h4 id="Requérir_des_modules_de_code_de_test">Requérir des modules de code de test</h4>
+
+<p>Similarly, suppose you've written some tests for your add-on:</p>
+
+<ul class="directory-tree">
+ <li>my-addon
+  <ul>
+   <li>lib
+    <ul>
+     <li>my-addon.js</li>
+    </ul>
+   </li>
+   <li>test
+    <ul>
+     <li>test-my-addon-js</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+<p>Avec cfx, le code de "test-my-addon.js" peut importer "my-addon.js" en utilisant une déclaration de ce genre:</p>
+
+<pre class="brush: js">var my_addon = require("my-addon"); // ceci ne fonctionne pas avec jpm!</pre>
+
+<p>Avec jpm, vous devez spécifier le chemin vers «my-addon" explicitement, en utilisant un chemin relatif:</p>
+
+<pre class="brush: js">var my_addon = require("../lib/my-addon");
+</pre>
+
+<h3 id="Modules_tiers">Modules tiers</h3>
+
+<p>Le SDK a toujours soutenu les modules tiers: les développeurs peuvent écrire leurs propres modules qui étendent les API du SDK ou ajouter de nouvelles API, et d'autres add-on peuvent faire usage de ces modules de la même manière qu'ils utilisent les modules intégré au SDK.</p>
+
+<p>Dans jpm cette façon <a href="/fr/docs/Mozilla/Add-ons/SDK/Tutorials/Add_a_Menu_Item_to_Firefox" title="/fr/Add-ons/SDK/Tutorials/Add_a_Menu_Item_to_Firefox"> d'utiliser des modules tiers </a> ne fonctionne plus. Au lieu de cela, jpm n'accepte que les modules tiers hébergés sur la npm, vous pouvez les utiliser en les installant à partir de la npm dans l'arbre de répertoire de votre add-on. Voir le tutoriel<a href="/fr/docs/Mozilla/Add-ons/SDK/Tutorials/Using_third-party_modules_(jpm)" title="/fr/Add-ons/SDK/Tutorials/Using_third-party_modules_(jpm)"> utilisant des modules tiers avec jpm</a>.</p>
+
+<h2 id="Les_commandes_et_les_options_de_commande">Les commandes et les options de commande</h2>
+
+<h3 id="Commandes_définitivement_retiré">Commandes définitivement retiré</h3>
+
+<p>jpm ne soutient plus les <a href="/fr/docs/Mozilla/Add-ons/SDK/Tools/cfx#Internal_Commands" title="/fr/Add-ons/SDK/Tools/cfx#Internal_Commands">commandes cfx "interne"</a>.</p>
+
+<h3 id="Options_définitivement_retiré">Options définitivement retiré</h3>
+
+<p>jpm ne soutient plus :</p>
+
+<pre>--extra-packages
+--use-config
+--package-path
+--pkgdir
+--no-strip-xpi
+--harness-option
+--manifest-overload
+--output-file
+--templatedir
+--keydir
+--profiledir
+--overload-modules
+--static-args
+--app
+--no-run
+--addons
+--e10s
+--logfile
+--dependencies
+--test-runner-pkg</pre>
+
+<p>Au lieu de <code>--profiledir</code> et de <code>--overload-modules</code>, utilisez <code>--profile</code> et <code>--overload</code></p>
+
+<h2 id="Champs_Package.json">Champs Package.json</h2>
+
+<p>Beaucoup de champs package.json <a href="/fr/docs/Mozilla/Add-ons/SDK/Tools/package_json" title="/fr/Add-ons/SDK/Tools/package_json"> </a> sont des commandes implicites de cfx. Dans jpm, nous avons supprimé le soutien de certains de ces domaines, et travaillons toujours sur le soutien des autres.</p>
+
+<h3 id="Champs_définitivement_retiré">Champs définitivement retiré</h3>
+
+<ul>
+ <li><a href="/fr/docs/Mozilla/Add-ons/SDK/Tools/package_json#data">data</a></li>
+ <li><a href="/fr/docs/Mozilla/Add-ons/SDK/Tools/package_json#fullName">fullName</a> - use <a href="/fr/docs/Mozilla/Add-ons/SDK/Tools/package_json#title">title</a> instead</li>
+ <li><a href="/fr/docs/Mozilla/Add-ons/SDK/Tools/package_json#lib">lib</a></li>
+ <li><a href="/fr/docs/Mozilla/Add-ons/SDK/Tools/package_json#packages">packages</a></li>
+ <li><a href="/fr/docs/Mozilla/Add-ons/SDK/Tools/package_json#tests">tests</a></li>
+ <li><a href="/fr/docs/Mozilla/Add-ons/SDK/Tools/package_json#icon64">icon64</a></li>
+</ul>
+
+<h2 id="Echappement_dans_Package.json">Echappement dans Package.json</h2>
+
+<p>Où avec cfx vous auriez dû échapper avec 2 voir 3 barres obliques inverses (\), jpm n'en a besoin que d'une.</p>
+
+<p> </p>

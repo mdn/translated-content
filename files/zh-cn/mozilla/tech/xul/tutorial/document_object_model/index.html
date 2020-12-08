@@ -1,0 +1,220 @@
+---
+title: 文档对象模型
+slug: Mozilla/Tech/XUL/Tutorial/Document_Object_Model
+tags:
+  - DOM
+  - XUL_教程_cn
+translation_of: Archive/Mozilla/XUL/Tutorial/Document_Object_Model
+---
+<div id="page-top">
+ <div class="pageText" id="pageText">
+  <p> </p>
+  <p> </p>
+  <div class="prevnext">
+   <p><span style="float: left;">« <a href="../../../../en/XUL_Tutorial/Broadcasters_and_Observers" rel="internal">Previous</a></span> <span style="float: right;"><a href="../../../../en/XUL_Tutorial/Modifying_a_XUL_Interface" rel="internal">Next</a> »</span></p>
+  </div>
+  <p>  </p>
+  <p> </p>
+  <p>    XUL元素的文档对象模型 (DOM) 可以用于获取信息或修改他们。</p>
+  <div id="section_1">
+   <h3 class="editable" id="DOM_介绍"><span>DOM 介绍</span></h3>
+   <div class="editIcon">
+    <a href="/../../../../en/XUL_Tutorial/Document_Object_Model#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+   <p>    <a href="../../../../en/DOM" rel="internal">文档对象模型</a> (DOM) 用于储存XUL节点树。当一个XUL文件加载后，标记被解析并转换成节点的继承关系结构。每个节点包含标记及一个文本块。DOM 结构可以使用一系列方法检查并修改。特殊的XUL 元素也提供了附加的方法可供使用。</p>
+   <p>    每一个加载了的XUL 文件都有一个可以显示在窗口或框架内的文档。尽管在特定时间只有一个文档与窗口相关，也有一系列方法使你可以加载更多的文档。</p>
+   <p>    Mozilla中， <a href="../../../../en/DOM" rel="internal">DOM</a> 可以被<a href="../../../../en/JavaScript" rel="internal">JavaScript</a>访问并操作。大量的文件对象包含可以被脚本使用的函数。然而，需要了解的是 DOM 是一个可以被 JavaScript 访问的 API 。JavaScript 本身仅是一种脚本语言，它能够访问这些对象是因为 Mozilla 为他提供了这些。</p>
+   <p>    <a href="../../../../en/JavaScript" rel="internal">JavaScript</a> 中，由一个全局对象总可以被访问。你可以不使用对象就引用这个全局对象的属性及方法。比如，如果这个全局对象由一个 'name' 属性，你可以用这样的代码来改变它 'name = 7'，而不用指明你所使用的对象。在浏览器环境中，window 是这个全局对象，对于XUL同样。当然对于不同的窗口这个全局对象也有所不同。每一个框架都含有一个独立的窗口对象。</p>
+   <p>    窗口经常使用 <a href="../../../../en/DOM/window.window" rel="internal"><code>window</code> property</a> 引用，尽管这是可选的。有时这仅是为了澄清你所引用的方法的范围。举例来说，下面的两行等效的打开了一个新窗口。</p>
+   <pre>window.open("test.xul","_new");
+open("test.xul","_new");
+</pre>
+   <p>    当你在脚本的顶层定义一个函数或变量时，你实际上是为全局对象定义了一个属性。在 XUL中你定义的每一个函数都会被设为窗口对象的属性，比如下面的代码会在提示框中显示 'Message' 两次。</p>
+   <pre>function getText(){
+  return "Message";
+}
+
+alert(getText());
+alert(window.getText());
+</pre>
+   <p>    如果你希望访问在另一个窗口的脚本中定义的变量或函数，你值需要使用另一个窗口的 <code><a href="../../../../en/DOM/window" rel="internal">window</a></code> 对象。比如，把上面的两个例子做成一个我们希望在另一个窗口（比如test.xul窗口）中调用getText()函数，可以这样做：</p>
+   <pre>alert(window.opener.getText());
+</pre>
+   <p>    每一个窗口都有一个 <code><a href="../../../../en/DOM/window.opener" rel="internal">opener</a></code> 属性，它保存着这个窗口对象是由谁打开的。在这个例子中，我们得到窗口的打开者，并调用这个窗口的 getText() 函数。注意，我们使用窗口属性前缀 'window' 仅为了清晰。</p>
+   <p>    窗口的 <code><a href="../../../../en/DOM/window.open" rel="internal">open()</a></code> 方法也返回一个新窗口的引用，我们也可以从 <code><a href="../../../../en/DOM/window.opener" rel="internal">opener</a></code>调用新窗口的函数。提示： <code><a href="../../../../en/DOM/window.open" rel="internal">open()</a></code> 在窗口完全加载前返回函数可能不会有效。</p>
+   <p>    窗口对象并不是有由 DOM 标准定义的，但在 Mozilla中有时把这部分称作 <a href="../../../../Special:Tags?tag=DOM_0&amp;language=en" rel="internal">DOM Level 0</a>——一个一些开发者称呼那些还未加入标准的类 DOM 功能的名字。在春光看中显示的文档可以通过窗口的 <code><a href="../../../../en/DOM/window.document" rel="internal">document</a></code> 属性获得。由于它是窗口最常用的属性 <code><a href="../../../../en/DOM/window.document" rel="internal">document</a></code> 属性经常不使用 'window.' 前缀。</p>
+   <p>     Mozilla 为不同的文档提供了一系列文档对象。三个主要的是<a class="external" href="http://www.xulplanet.com/references/objref/HTMLDocument.html" rel="external nofollow" title="http://www.xulplanet.com/references/objref/HTMLDocument.html">HTMLDocument</a>, <a class="external" href="http://www.xulplanet.com/references/objref/XMLDocument.html" rel="external nofollow" title="http://www.xulplanet.com/references/objref/XMLDocument.html">XMLDocument</a>, a及 <a class="external" href="http://www.xulplanet.com/references/objref/XULDocument.html" rel="external nofollow" title="http://www.xulplanet.com/references/objref/XULDocument.html">XULDocument</a>, 分别支持 <a href="../../../../en/HTML" rel="internal">HTML</a>, <a href="../../../../en/XML" rel="internal">XML</a> 及 <a href="../../../../en/XUL" rel="internal">XUL</a> 文档。这三种文件类型十分相似，事实上他们共享基本实现。然而，一些函数在一种或几种文档类型是特殊的。</p>
+  </div>
+  <div id="section_2">
+   <h3 class="editable" id="检索元素"><span>检索元素</span></h3>
+   <div class="editIcon">
+    <a href="/../../../../en/XUL_Tutorial/Document_Object_Model#" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+   <p>    最常用的检索元素的方法是给出待检索元素的<code><a href="../../../../en/DOM/element.id" rel="internal">id</a></code> 属性利用<code><a href="../../../../en/DOM/document.getElementById" rel="internal">getElementById()</a></code> 方法检索。在 find file 对话框中我们为不少元素都添加了id属性，比如，我们可以使用这样的代码获得check box 的状态。</p>
+   <pre>var state = document.getElementById('casecheck').checked;
+</pre>
+   <p>     <code>casecheck</code> 代表待检索 <a href="../../../../en/XUL_Tutorial/Input_Controls#Checkboxes_and_Radio_Buttons" rel="internal">checkbox</a> 的id，如果我们需要检查是否它被选中，我们只需按上面的方法检查。我们可以对其他的单选框或其他有id的元素作相同的检查。比如获得输入框中的字符。；</p>
+   <div class="highlight">
+    <div id="section_3">
+     <h4 class="editable" id="find_files_的例子"><span>find files 的例子</span></h4>
+     <div class="editIcon">
+      <a href="/../../../../en/XUL_Tutorial/Document_Object_Model#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+     <p>    要让 <a href="../../../../en/XUL_Tutorial/Progress_Meters" rel="internal">progress bar</a> 及 <a href="../../../../en/XUL_Tutorial/Trees" rel="internal">tree data</a>在findfile对话框显示时就显示出来，这不是难题。只要加在XUL文件中就可以了。现在我们要先去掉它，然后在按下 Find 按钮后显示。 首先，应将他们初始化化为不可见。<code><span class="lang lang-en"><a href="../../../../en/XUL/Attribute/hidden" rel="internal">hidden</a> </span></code>属性用于确定元素是否显示。</p>
+     <p>    把进度条初始化为隐藏，同时为了能够用脚本引用添加一个 <code><span class="lang lang-en"><a href="../../../../en/XUL/Attribute/id" rel="internal">id</a> <span style="font-family: Verdana,Tahoma,sans-serif;">属性。同样的为了隐藏tree我们也将</span></span></code><a href="../../../../en/XUL_Tutorial/Splitters" rel="internal">splitter</a> 隐藏。</p>
+     <pre class="eval">&lt;tree <span class="highlightred">id="results" hidden="true"</span> flex="1"&gt;
+  .
+  .
+  .
+&lt;splitter <span class="highlightred">id="splitbar"</span> resizeafter="grow" <span class="highlightred">hidden="true"</span>/&gt;
+
+&lt;hbox&gt;
+
+  &lt;progressmeter <span class="highlightred">id="progmeter"</span> value="50%"
+    style="margin: 4px;" <span class="highlightred">hidden="true"</span>/&gt;
+</pre>
+     <p>    添加 <code><span class="lang lang-en"><a href="../../../../en/XUL/Attribute/hidden" rel="internal">hidden</a> </span></code>属性并设值为 <code>true</code>。这将导致窗口首次显示时该元素不可见。</p>
+     <p>    接下来，我们添加一个在Find按钮按下时调用的函数。我们把脚本写在findfile.js里，在上一章，我们已经在XUL文件中添加了脚本（ <code><span class="lang lang-en"><a href="../../../../en/XUL/script" rel="internal">script</a> ）<span style="font-family: Verdana,Tahoma,sans-serif;">元素，如果你还不知道如何添加，请看下面的例子。</span></span></code> <code><span class="lang lang-en"><a href="../../../../en/XUL/Attribute/oncommand" rel="internal">oncommand</a> </span></code> 控制器也被加到 Find 按钮上。</p>
+     <pre class="eval">&lt;script src="findfile.js"/&gt;
+  .
+  .
+  .
+&lt;button id="find-button" label="Find"
+   <span class="highlightred">oncommand="doFind();"</span>/&gt;
+</pre>
+     <p>    现在与findfile.xul相同的目录中创建一个叫 findfile.js 的文件，我们在文件中写一个 doFind() 函数。 script 标签允许直接编写脚本代码，但是出于包括格式在内的多种原因，脚本经常写在独立的文件里，除非它可以直接放到处理器中。</p>
+     <pre class="eval">function doFind(){
+  var meter = document.getElementById('progmeter');
+  meter.hidden = false;
+}
+</pre>
+     <p>    这个函数首先通过进度条的id引用它，然后改变的hidden属性。</p>
+     <p>    最后用一个提示框显示需要检索的文字。当然，这不是最后的版本，但现在我们需要让它发生些什么以使我们确认。</p>
+     <pre class="eval">function doFind(){
+  var meter=document.getElementById('progmeter');
+  meter.hidden = false;
+  <span class="highlightred">var searchtext=document.getElementById('find-text').value;
+  alert("Searching for \"" + searchtext + "\"");</span>
+}
+</pre>
+     <p>    现在，由于提示框的存在，我们知道当点击Find按钮时，会发生什么。同样，我们也需要为 drop-down boxes 添加代码以获得用用户选项。</p>
+    </div>
+   </div>
+  </div>
+  <div id="section_4">
+   <h3 class="editable" id="XUL_元素的_DOM"><span>XUL 元素的 DOM </span></h3>
+   <div class="editIcon">
+    <a href="/../../../../en/XUL_Tutorial/Document_Object_Model#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+   <p>    每一个 XUL 元素都还有一系列的属性，功能及子元素。</p>
+   <ul>
+    <li>属性是在源文件中定义的，如flex="1"将 <code><span class="lang lang-en"><a href="../../../../en/XUL/Attribute/flex" rel="internal">flex</a> </span></code>属性设为 <code>1</code>。</li>
+    <li>JavaScript 中属性使用点语法。例如：element.hidden 引用延伸的hidden 属性</li>
+    <li>子元素的是指嵌在源文件标签中的元素。</li>
+   </ul>
+   <p>    使用DOM方法可以动态的处理一个元素的属性，方法及子元素。</p>
+   <p>    注意属性及方法是不一样的东西。有一个属性并不意味着有一个同名的方法，当然通常会有这样一个方法。比如说获得元素的flex属性可以使用flex方法。这种情况下方法的代码就返回这属性。对于其他的方法 XUL 会进行更复杂的处理</p>
+   <p>    你可以用以下的方法处理元素的属性：</p>
+   <dl>
+    <dt>
+     <a href="../../../../en/DOM/element.getAttribute" rel="internal">getAttribute</a> ( name )</dt>
+    <dd>
+     返回给定元素的属性。</dd>
+    <dt>
+     <a href="../../../../en/DOM/element.hasAttribute" rel="internal">hasAttribute</a> ( name )</dt>
+    <dd>
+     如果元素有指定名字的属性返回真。</dd>
+    <dt>
+     <a href="../../../../en/DOM/element.setAttribute" rel="internal">setAttribute</a> ( name , value )</dt>
+    <dd>
+     将value 为给定名字为name 的属性赋值。</dd>
+    <dt>
+     <a href="../../../../en/DOM/element.removeAttribute" rel="internal">removeAttribute</a> ( name )</dt>
+    <dd>
+     删除给定名字的属性。</dd>
+   </dl>
+   <p>    这些方法可以让你在任何时候取得或改变属性的值。比如：</p>
+   <pre> var box = document.getElementById('somebox');
+ var flex = box.getAttribute("flex");
+
+ var box2 = document.getElementById('anotherbox');
+ box2.setAttribute("flex", "2");
+</pre>
+   <p>   当然 <code><span class="lang lang-en"><a href="../../../../en/XUL/Attribute/flex" rel="internal">flex</a> 属性有</span></code><a href="../../../../en/XUL/Property/flex" rel="internal">对应的脚本方法</a> 可以用以代替。它并不更为有效，当更为简洁。下面的例子与上面的效果相同。</p>
+   <pre> var box = document.getElementById('somebox');
+ var flex = box.flex;
+
+ var box2 = document.getElementById('anotherbox');
+ box2.flex = 2;
+</pre>
+   <p>    一旦你引用了元素你就可以引用它的方法。比如，为了获得一个元素的 <code><span class="lang lang-en"><a href="../../../../en/XUL/Property/hidden" rel="internal">hidden</a> 方法可以使用</span></code><code><em>element</em>.hidden</code> 。你可能已经注意到了在方法参考中，一项会同时出现在属性及方法中，这是不一样的。比如，对于隐藏的元素 <strong><font color="green">getAttribute("hidden") 返回字符串 'true'</font></strong> ，而 hidden <strong><font color="green">方法返回‘值true’ </font></strong> 。用方法会自动完成类型转换。</p>
+   <p>    像 <a href="../../../../en/HTML" rel="internal">HTML</a> 和 <a href="../../../../en/XML" rel="internal">XML</a> 元素一样，每一个 XUL 元素实现 <a class="external" href="http://www.xulplanet.com/references/objref/XULElement.html" rel="external nofollow" title="http://www.xulplanet.com/references/objref/XULElement.html">XULElement</a> 接口。一个 XUL 元素可以是任何定义在 XUL 名空间中的元素。所以XUL有非XUL 元素没有的属性及方法。XULElement 接口有一系列属性及方法来定义XUL 元素，其中有很多继承至 DOM 元素接口。</p>
+   <p>    一个名空间用一个URI 描述元素，下面是例子。</p>
+   <pre>&lt;button xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"/&gt;
+&lt;button xmlns="http://www.w3.org/1999/xhtml"/&gt;
+&lt;html:button xmlns:html="http://www.w3.org/1999/xhtml"/&gt;
+&lt;html:button xmlns:html="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"/&gt;</pre>
+   <p>    名空间使用 <code>xmlns</code> 属性</p>
+   <ul>
+    <li>第一个按钮是被置于XUL名空间在的 XUL 元素。</li>
+    <li>第二个按钮是被置于XHTML名空间在的 XHTML 元素。</li>
+    <li>第三个例子，前缀 'html' 关联到 '<a class="external" href="http://www.w3.org/1999/xhtml" rel="freelink">http://www.w3.org/1999/xhtml</a>'，当你的文档中需要多个名空间时，你也可以使用使用冒号语法来使用前缀名空间。本例创建一个 XHTML 按钮。</li>
+    <li>第四个按钮是XUL按钮，尽管使用的‘html’前缀，这要看前缀关联到哪个名空间。</li>
+   </ul>
+   <p>    这是一个很重要的区别，不过在真正的文档中会为不同的名空间使用不同的前缀。</p>
+   <p>    DOM 提供了与无名空间相似的名空间相关的方法。比如 <code><a href="../../../../en/DOM/element.getAttributeNS" rel="internal">getAttributeNS()</a></code> 和 <code><a href="../../../../en/DOM/element.getAttribute" rel="internal">getAttribute()</a></code> 相似除了需要一个指明名空间的参数。</p>
+   <p>    许多XUL元素有不同于其他元素的方法。参见 <a href="../../../../en/XUL_Reference" rel="internal">element reference</a> 。</p>
+  </div>
+  <div id="section_5">
+   <h3 class="editable" id="DOM遍历"><span>DOM遍历</span></h3>
+   <div class="editIcon">
+    <a href="/../../../../en/XUL_Tutorial/Document_Object_Model#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+   <p>    DOM是一个只有一个根的树。可以使用<code><a href="../../../../en/DOM/document.documentElement" rel="internal">documentElement</a></code> 方法获取根节点。根节点只要一个，但其他节点则不一定。一个元素对应与源文件中的标签，但也有文本节点、注释节点、及其他类型的节点。在XUL文档中根节点是源文件中的<code><span class="lang lang-en"><a href="../../../../en/XUL/window" rel="internal">window</a><span style="font-family: Verdana,Tahoma,sans-serif;">标签。</span></span></code> 树中的每一个节点都可能有其子节点，每个子节点又有它字节的子节点。由于DOM是树结构所以可以用一系列方法来遍历它。常用的几个列在下面：</p>
+   <dl>
+    <dt>
+     <a href="../../../../en/DOM/element.firstChild" rel="internal">firstChild</a></dt>
+    <dd>
+     引用元素的第一个子节点。</dd>
+    <dt>
+     <a href="../../../../en/DOM/element.lastChild" rel="internal">lastChild</a></dt>
+    <dd>
+     引用元素的最后一个子节点。</dd>
+    <dt>
+     <a href="../../../../en/DOM/element.childNodes" rel="internal">childNodes</a></dt>
+    <dd>
+     返回元素子节点的列表。</dd>
+    <dt>
+     <a href="../../../../en/DOM/element.parentNode" rel="internal">parentNode</a></dt>
+    <dd>
+     返回元素的亲节点。</dd>
+    <dt>
+     <a href="../../../../en/DOM/element.nextSibling" rel="internal">nextSibling</a></dt>
+    <dd>
+     引用下一个兄弟节点。</dd>
+    <dt>
+     <a href="../../../../en/DOM/element.previousSibling" rel="internal">previousSibling</a></dt>
+    <dd>
+     引用前一个兄弟节点。</dd>
+   </dl>
+   <p>    这些方法允许你以多种方法遍历文件，比如，使用 <code><a href="../../../../en/DOM/element.firstChild" rel="internal">firstChild</a></code> 方法获得第一个子节点并用 <code><a href="../../../../en/DOM/element.nextSibling" rel="internal">nextSibling</a></code> 方法遍历子节点，或者可以用<code><a href="../../../../en/DOM/element.childNodes" rel="internal">childNodes</a></code> 返回子节点列表。在Mozilla中后者更有效。</p>
+   <p>    这个例子展示如何遍历根节点的全部子节点：</p>
+   <pre>var childNodes = document.documentElement.childNodes;
+for (var i = 0; i &lt; childNodes.length; i++) {
+  var child = childNodes[i];
+  // do something with child
+}
+</pre>
+   <p>    变量 <code><a href="../../../../en/DOM/element.childNodes" rel="internal">childNodes</a></code> 保存着文档根节点的全部子节点。然后像处理数组一样用一个 for 循环枚举全部元素。</p>
+   <div class="highlight">
+    Find files example so far: <span class="lang lang-en"><a class="external" href="http://developer.mozilla.org/samples/xultu/examples//findfile/findfile-dom.xul.txt" rel="external nofollow" title="http://developer.mozilla.org/samples/xultu/examples//findfile/findfile-dom.xul.txt">Source</a> <a class="external" href="http://developer.mozilla.org/samples/xultu/examples//findfile/findfile-dom.xul" rel="external nofollow" title="http://developer.mozilla.org/samples/xultu/examples//findfile/findfile-dom.xul">View</a> </span></div>
+   <p><small>See also: <a href="../../../../en/A_re-introduction_to_JavaScript" rel="internal">A re-introduction to JavaScript</a> and the <a href="../../../../en/Core_JavaScript_1.5_Reference" rel="internal">JavaScript reference</a></small></p>
+   <p>    下一章学习修改DOM <a href="../../../../en/XUL_Tutorial/Modifying_a_XUL_Interface" rel="internal">modify the DOM</a>.</p>
+   <p> </p>
+   <div class="prevnext">
+    <p><span style="float: left;">« <a href="../../../../en/XUL_Tutorial/Broadcasters_and_Observers" rel="internal">Previous</a></span> <span style="float: right;"><a href="../../../../en/XUL_Tutorial/Modifying_a_XUL_Interface" rel="internal">Next</a> »</span></p>
+   </div>
+   <p>  </p>
+   <p> </p>
+  </div>
+ </div>
+</div>
+<div class="printfooter" id="printfooter">
+ <hr>
+</div>
+<p> </p>

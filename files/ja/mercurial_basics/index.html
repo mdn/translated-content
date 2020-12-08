@@ -1,0 +1,38 @@
+---
+title: Mercurial basics
+slug: Mercurial_basics
+tags:
+  - Developing Mozilla
+  - Mercurial
+translation_of: Mozilla/Mercurial/Basics
+---
+<p>I am about to tell you some stuff about <a href="/ja/Mercurial" title="ja/Mercurial">Mercurial</a> that will save you a lot of frustration. This page is cynical and survival-oriented. But I still claim Mercurial is a lot better than CVS. —<a href="/User:Jorend" title="User:Jorend">jorendorff</a> 16:06, 12 May 2008 (PDT)</p>
+<p>{{ 英語版章題("Expectations") }}</p>
+<h3 id=".E5.BF.83.E6.A7.8B.E3.81.88">心構え</h3>
+<p><strong>Mercurial は CVS ではありません。</strong> コマンドが違います。 コンセプトも違います。</p>
+<p><strong>この銃には弾丸が装填されています。</strong> あなた自身の足を撃つかもしれません。あなたの作業を無駄にするかもしれません。このツールはあなたを守ろうとしますが、それでもそれは起きてしまいます。よくある失敗が 2 つあります: (a) よく知らずにコマンドを実行する; (b) 作業ディレクトリの状態を正しく理解せずに <code>hg commit</code> または <code>hg qrefresh</code> を実行する。その結果、コミットしたくなかった変更や壊れたマージ等を誤ってコミットしてしまいます。大抵、これらは何かが間違っていても、すぐには明らかになりません。</p>
+<p>備えあれば憂い無し。それらを行ってはいけません。よく知らずにコマンドを実行してはいけません。<code>hg help</code> と仲良くなりましょう。差分を取ることや思慮なしにコミットしてはいけません。"遊び気分" になって、遊び相手があなた自身のコミット前の作業だという事実に注意を払わない、ということはやめましょう。</p>
+<p><strong>{{ 原語併記("Mercurial を使っても空は飛べません。", "Mercurial is not magic dust.") }}</strong> Mercurial は柔軟でパワフル、そして楽しいです。CVS では試せなかったことが試せます。しかし、もちろん、すべてが良いアイデアになることはありません。(例えば、私たちはパッチのキューを共有しようとしましたが、うまくいきませんでした。) {{ 英語版章題("Avoiding trouble") }}</p>
+<h3 id=".E3.83.88.E3.83.A9.E3.83.96.E3.83.AB.E3.82.92.E9.81.BF.E3.81.91.E3.82.8B.E3.81.AB.E3.81.AF">トラブルを避けるには</h3>
+<p><strong>Mercurial 1.1 以降を使用してください。</strong> (<code>hg version</code> で確認。)</p>
+<p><strong>自分がなすべきことを学んでください。</strong> リポジトリの状態を確認するには読み取り専用のコマンド (<code>hg status</code>, <code>hg head</code>, <code>hg parents</code>, <code>hg log</code>, <code>hg diff</code> など) を使用してください。これは欠かせないスキルです。</p>
+<p><strong><a class="external" href="http://www.selenic.com/mercurial/wiki/index.cgi/MergeProgram">マージプログラム</a>を設定し、それを扱えるようになってください。{{ 原語併記("今すぐに", "DO IT NOW") }}。</strong> そうしなければ、あなたのリポジトリはある時点で台なしになってしまうでしょう。</p>
+<p>時々、CVS はあなたのファイル内の衝突マーカーを取り除きます。Mercurial は取り除きません。代わりに、(<code>kdiff3</code> のような) マージプログラムを使用して、<em>今すぐ</em>衝突を修正することが望まれます。</p>
+<p>これはエラーになる傾向があります。デフォルトでは、Mercurial はあなたのシステムで見つかる最初のマージプログラムを使用します。ほとんどのマージプログラムは正しく使うのが少々難しいでしょう。Mercurial は壊れたマージを検知して拒否することを上手くやってはくれません。そのため、ウィンドウを閉じるだけで、意識せず自分自身を悪い状況に追いやってしまいます。経験のある人は、悪いマージによる不可解な hg の動作を理由に挙げて、多くの時間が費やされ価値ある作業を含んでいる hg ツリー全体を見放すことで知られています。</p>
+<p><strong>マージが失敗したら、Mercurial が失敗したことを知っているか確かめてください。</strong> 最初にコツをつかんだ時のマージはよく失敗します。このようなメッセージが表示されます:</p>
+<pre class="eval">0 files updated, 0 files merged, 0 files removed, 1 files unresolved
+There are unresolved merges, you can redo the full merge using:
+  hg update -C 2
+  hg merge 1
+</pre>
+<p>これはマージの最中に解決されなかった衝突があることを意味しています。これが何であり、どう修正すべきか分からないときは、<code>hg update -C</code> コマンドを使用して、あなたがマージを放棄したことを Mercurial に伝えてください。</p>
+<p>これを行わないと、Mercurial は知ることができないため、次のコミット時に変更セットをマージしてしまいます。これはまずいです。結果的に一連の作業を誤って破壊したようにしか見えません。しかし、実際には、損害を元に戻すことができます。</p>
+<p><code>hg parents</code> が 2 つの親を表示すれば、あなたはマージしています。</p>
+<p><strong>Mercurial Queues を使用する場合は作業のバックアップを保存してください。</strong> <code>hg qrefresh</code> は古いパッチを新しいもので破壊的に置き換えます! パッチのために別のバックアップレポジトリを作成するには <code>hg qinit -c</code> を使用し、定期的に <code>hg qcommit -m backup</code> を実行してください。</p>
+<p><strong>誰かが pull する可能性のあるレポジトリでは Mercurial Queues を使用してはいけません。</strong> {{ 英語版章題("Recovering") }}</p>
+<h3 id=".E5.BE.A9.E6.97.A7.E3.81.99.E3.82.8B">復旧する</h3>
+<p>なんてこった! Mercurial があなたの片腕を切り落としてしまった!</p>
+<p><strong>魔法のように修正されるかどうかを手当たり次第に試さないでください。</strong> 健康な片腕がまだあるうちに、失いそうなものを覚えておき、<em>チェーンソーを置いて</em>ください。</p>
+<p><strong>IRC で助けを求めてください。</strong> Mozilla IRC の<a class="link-irc" href="irc://irc.mozilla.org/developers">#developers</a> や <a class="link-irc" href="irc://irc.mozilla.org/hg">#hg</a>、または <a class="link-irc" href="irc://irc.freenode.net/mercurial">freenode の #mercurial</a> で訊ねてください。</p>
+<p> </p>
+<p>{{ languages( { "en": "en/Mercurial_basics", "es": "es/Lo_b\u00e1sico_de_Mercurial", "fr": "fr/Les_bases_de_Mercurial" } ) }}</p>

@@ -1,0 +1,116 @@
+---
+title: 高度なツリー機能
+slug: Archive/Mozilla/XUL/Tutorial/More_Tree_Features
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/More_Tree_Features
+---
+<div>
+  <div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/Tutorial/Trees" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/Tutorial/Tree_Selection">次のページ  »</a></p>
+</div></div>
+<p>このセクションでは、さらに高度なツリーの機能について見ていきます。</p>
+<h2 id="Hierarchical_trees" name="Hierarchical_trees">階層ツリー</h2>
+<p>ツリー要素は、ファイルマネージャやブラウザのブックマーク一覧に見られるような、階層を持ったリストの作成に利用することもできます。 このためにツリービューには、項目が位置しているツリー階層を指定するための関数がいくつかあります。 ツリーに置かれた各項目には、0 から始まる (階層の) レベルが設定されています。 ツリーの最上位にある項目のレベルは 0 で、その子項目のレベルが 1 、さらにその子項目のレベルは 2 といった具合に設定されることになります。 ツリーは、行部分の描画内容を確定するために、ビューに対して各項目のレベルを問い合わせます。</p>
+<p>ツリーでは、親項目の開閉状態を示すアイコンや、親子間を結ぶ線の描画を行うとともに、行の描画では階層レベルに応じたインデントも行ってくれます。 ただし、このために、ビュー側では必要な行のレベルを記録しておく必要があります。 この処理は、しばしば非常にややこしくなりますが、 幸い、組み込みのコンテントツリービューは、こういった難しい処理はすべて引き受けてくれます。</p>
+<p>入れ子の行を作成するために必要なことは、2 つめの <code><a href="/ja/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code> 要素を、親となる <code><a href="/ja/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code> 要素の中に加えることだけです。 あとは、加えた <code><a href="/ja/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code> の中に項目を加えるだけで、その項目の子となる行を加えていくことができます。 なお、内側の <code><a href="/ja/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code> 要素を <code><a href="/ja/docs/Mozilla/Tech/XUL/treerow" title="treerow">treerow</a></code> 要素の中に置くのは<u>正しい記述ではない</u>ため動作しません。 必ず <code><a href="/ja/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code> の中に置くようにしてください。</p>
+<p>この手順を繰り返せば、深く入れ子になったツリーを作成することができます。 つまり、<code><a href="/ja/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code> 要素には、 <code><a href="/ja/docs/Mozilla/Tech/XUL/treerow" title="treerow">treerow</a></code> 要素による (その項目自身の内容と対応する) 単一の行の宣言と、 <code><a href="/ja/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code> 要素による複数の子項目の宣言を含むことができるということです。</p>
+<p>また、これ以外に階層が正しく動作するために必要なことが 2 つあります。 まず、子を持つ <code><a href="/ja/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code> 要素に対して、コンテナであることを明示しておく必要があります。 これは、以下のように <code id="a-container"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/container">container</a></code> 属性を使用して設定します。</p>
+<pre class="brush:xml">&lt;treeitem container="true" /&gt;
+</pre>
+<p>これにより、利用者が <code><a href="/ja/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code> 要素に該当する列をクリックすることで、内部の行を開閉することができるようになります。 子の行を、最初から開いた状態にしておくには <code id="a-open"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/open">open</a></code> 属性を設定します。 利用者が、親項目を開閉する操作をしたとき、項目の開閉状態を切り替えるためにビューの <code>toggleOpenState()</code> 関数が呼び出されることになります。 コンテントツリービューでは、この関数の処理によって <code id="a-open"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/open">open</a></code> 属性への状態の反映が行われます。</p>
+<p>次に、最初の列 (<code><a href="/ja/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code>) に <code id="a-primary"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/primary">primary</a></code> 属性を設定することが必要です。 これによって、行が開閉可能かどうかを示す「+ 記号」や「小さな三角形」といったアイコンが最初の列にあるセルの先頭に付加され、 子の行はインデントされて表示されるようになります。 なお、<code id="a-primary"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/primary">primary</a></code> を設定した列は、利用者が列右端のドロップダウンリストで非表示にする操作ができないことに注意してください。</p>
+<h3 id="Example_hierarchical_tree" name="Example_hierarchical_tree">階層ツリーの例</h3>
+<p>階層ツリーの簡単な例を、以下に示します。</p>
+<div>
+  <span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advtrees_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advtrees_1.xul">表示</a></div>
+<pre class="brush:xml">&lt;tree rows="6"&gt;
+  &lt;treecols&gt;
+      &lt;treecol id="firstname" label="First Name" primary="true" flex="3" /&gt;
+      &lt;treecol id="lastname" label="Last Name" flex="7" /&gt;
+  &lt;/treecols&gt;
+
+  &lt;treechildren&gt;
+    &lt;treeitem container="true" open="true"&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Guys" /&gt;
+      &lt;/treerow&gt;
+
+      &lt;treechildren&gt;
+        &lt;treeitem&gt;
+          &lt;treerow&gt;
+            &lt;treecell label="Bob" /&gt;
+            &lt;treecell label="Carpenter" /&gt;
+          &lt;/treerow&gt;
+        &lt;/treeitem&gt;
+        &lt;treeitem&gt;
+          &lt;treerow&gt;
+            &lt;treecell label="Jerry" /&gt;
+            &lt;treecell label="Hodge" /&gt;
+          &lt;/treerow&gt;
+        &lt;/treeitem&gt;
+      &lt;/treechildren&gt;
+    &lt;/treeitem&gt;
+  &lt;/treechildren&gt;
+&lt;/tree&gt;
+</pre>
+<div class="float-right">
+  <img height="121" src="https://mdn.mozillademos.org/files/126/advtrees1.png" width="250"></div>
+<p>この例によって、階層ツリーが作成されています。 画像から、最初の行の先頭に小さな「+」または「-」記号が表示されているのがわかると思います。 これは子の行が存在することを示していて、しばしば 「<span style="border-bottom: 1px dashed green;" title="twisty">ツイスティ</span>」と呼ばれます。 利用者は、その行をクリックすることでリストを開閉することができます。 また、子の行はインデントされています。 なお、親の「Guys」の行は、単に子の行をまとめるためにのみ存在するので、列は 1 つしか必要としません。</p>
+<p>外側の <code><a href="/ja/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code> 要素は、<code><a href="/ja/docs/Mozilla/Tech/XUL/treerow" title="treerow">treerow</a></code> 要素と <code><a href="/ja/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code> 要素を 1 つずつ含んでいます。 前者は親の行のためのデータを作成し、後者は子の項目を含みます。</p>
+<p>同様にすることで、行の入れ子を深くすることもできます。 子を含む行には <code id="a-container"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/container">container</a></code> 属性を設定する必要があることを覚えておいてください。 単に子の行が存在するかどうかだけでは、コンテナとして扱うべきかを判断するのに十分ではないため、 子の行の存在の有無にかかわらず、コンテナとして扱うべき行に <code id="a-container"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/container">container</a></code> 属性を設定する仕様になっています。 例えば、ファイルが存在しない空のディレクトリは、ファイルではなくコンテナとして扱われるべきだろうということです。</p>
+<h2 id="More_about_Tree_Columns" name="More_about_Tree_Columns">ツリーの列の詳細</h2>
+<p>ツリー追加可能な属性に <code>enableColumnDrag</code> があります (注:名前に大文字が混じっています)。 この値を <code>true</code> に設定すると、利用者が列の見出しをドラッグすることで、列を並び替えることが可能になります。</p>
+<p>また、利用者が列の幅を変更したいと思うケースも多いはずです。 それを実現するには <code><a href="/ja/docs/Mozilla/Tech/XUL/splitter" title="splitter">splitter</a></code> 要素を、各 <code><a href="/ja/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code> 要素の間に加えます。 これにより、小さなノッチが各列の見出しの間に表示され、 利用者はこれをドラッグして列の幅を変えることができるようになります。 なお、スタイルクラス <code>tree-splitter</code> を指定することで、このノッチを隠した外観にすることも可能です。 この場合も機能に影響はないため、依然として列幅を変更することは可能です。</p>
+<p>列幅の下限と上限は、それぞれ <code id="a-minwidth"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/minwidth">minwidth</a></code> と <code id="a-maxwidth"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/maxwidth">maxwidth</a></code> 属性で設定することができます。</p>
+<p>列の <code id="a-hidden"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/hidden">hidden</a></code> 属性の値を <code>true</code> にすると、列は非表示がデフォルトになります。 このときも、利用者は見出し行の端にあるドロップダウンリストからその列を選択することで、その列を表示するように変更できます。</p>
+<h3 id="Remembering_State_of_Columns" name="Remembering_State_of_Columns">列の状態を保存する</h3>
+<div class="float-right">
+  <img height="112" src="https://mdn.mozillademos.org/files/922/XUL_rememberingStatofColumns.png" width="408"></div>
+<p>詳細は<a href="/ja/docs/XUL/Tutorial/Persistent_Data">後のセクション</a>で説明する予定ですが、 XUL の全ての要素は、 <code id="a-persist"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/persist">persist</a></code> 属性を設定することでセッション終了時に要素の状態を保存できるため、 これを利用することで、列の状態をセッション間で保存することが可能です。 つまり、利用者が列のレイアウトを自分の好みで変更したとき、その内容を自動的に保存して、次回の表示時に再現するように指定できます。 このためには、以下の例で示すように、いくつかの属性を保存する必要があります。</p>
+<div>
+  <span id="%E4%BE%8B_2"><a id="%E4%BE%8B_2"></a><strong>例 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advtrees_2.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advtrees_2.xul">表示</a></div>
+<pre class="brush:xml">&lt;tree enableColumnDrag="true" flex="1"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="runner" label="Runner" flex="2" persist="width ordinal hidden" /&gt;
+    &lt;splitter class="tree-splitter" /&gt;
+    &lt;treecol id="city" label="Home City" flex="2" persist="width ordinal hidden" /&gt;
+    &lt;splitter class="tree-splitter" /&gt;
+    &lt;treecol id="starttime" label="Start Time" flex="1" persist="width ordinal hidden" /&gt;
+    &lt;splitter class="tree-splitter" /&gt;
+    &lt;treecol id="endtime" label="End Time" flex="1" persist="width ordinal hidden" /&gt;
+  &lt;/treecols&gt;
+
+  &lt;treechildren&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Joshua Granville" /&gt;
+        &lt;treecell label="Vancouver" /&gt;
+        &lt;treecell label="7:06:00" /&gt;
+        &lt;treecell label="9:10:26" /&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Robert Valhalla" /&gt;
+        &lt;treecell label="Seattle" /&gt;
+        &lt;treecell label="7:08:00" /&gt;
+        &lt;treecell label="9:15:51" /&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+  &lt;/treechildren&gt;
+&lt;/tree&gt;
+</pre>
+<p>永続性 (persist) を持たせることで保存する必要があるのは、以下の 3 つの属性になります。</p>
+<ul>
+  <li>列の幅を保持する <code id="a-width"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/width">width</a></code> 属性</li>
+  <li>列の並び順を保持する <code id="a-ordinal"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/ordinal">ordinal</a></code> 属性</li>
+  <li>列が表示か非表示かを保持する <code id="a-hidden"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/hidden">hidden</a></code> 属性</li>
+</ul>
+<p>次のセクションでは、ツリーで選択されている項目の取得と設定について見ていきます。</p>
+<div>
+  <div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/Tutorial/Trees" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/Tutorial/Tree_Selection">次のページ  »</a></p>
+</div></div>

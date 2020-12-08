@@ -1,0 +1,108 @@
+---
+title: 'Partie 4 : Réutiliser des commandes pour configurer Firefox OS'
+slug: >-
+  Archive/B2G_OS/Automated_testing/gaia-ui-tests/Partie_4_Reutiliser_commandes_Firefox_OS_configuration
+tags:
+  - Automatisation
+  - B2G
+  - Firefox OS
+  - Gaia
+  - Marionette
+  - Python
+  - interface utilisateur
+  - test
+translation_of: >-
+  Archive/B2G_OS/Automated_testing/gaia-ui-tests/Part_4_Reusing_commands_Firefox_OS_setup
+---
+<p></p><div style="text-align: right;" class="prevnext">
+    <p><a style="float: left;" href="/fr/docs/Mozilla/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_3_Reusable_tests">« Précédent</a><a href="/fr/docs/Mozilla/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_5_Introducing_a_test_runner">Suivant  »</a></p>
+</div><p></p>
+
+<div class="summary">
+<p><span class="seoSummary">Dans les parties 2 et 3 nous avons écrit un test qui fonctionne, mais si nous voulions réinitialiser son état (par exemple en tuant les applications ouvertes) avant d'exécuter le test, nous devions le faire manuellement. Ceci est un peu fastidieux, nous devrions donc automatiser ce point ! Dans cette partie, nous allons voir comment faire cela en éclatant des bouts de code dans des méthodes Python distinctes que nous pourrons réutiliser.</span></p>
+</div>
+
+<h2 id="Réinitialisation_automatique">Réinitialisation automatique</h2>
+
+<p>Avant de réaliser une exécution de test typique, nous aurons probablement besoin de déverrouiller l'écran de verrouillage de Firefox OS et tuer toutes les applications en cours d'exécution. Regardons de plus près comment faire.</p>
+
+<h3 id="Déverrouiller_l'écran_de_verrouillage">Déverrouiller l'écran de verrouillage</h3>
+
+<p>Avant d'aller plus loin, activez l'écran de verrouillage de nouveau avec <em>Paramètres &gt; Écran de verrouillage &gt; Verrouiller l'écran</em>, si ce n'est pas déjà fait.</p>
+
+<p>Ajoutez la méthode Python suivante dans votre fichier <code>test_add_contact.py</code>, juste dans la classe :</p>
+
+<pre class="brush: python">def unlock_screen(self):
+    self.marionette.execute_script('window.wrappedJSObject.lockScreen.unlock();')</pre>
+
+<p>Cette méthode va désormais déverrouiller Firefox OS quand elle sera appelée. Maintenant, appelons-la dans notre test en ajoutant les lignes suivantes sous la ligne <code>self.marionette.start_session()</code> :</p>
+
+<pre class="brush: python"># Unlock the screen
+self.unlock_screen()</pre>
+
+<h3 id="Tuer_toute_application_ouverte">Tuer toute application ouverte</h3>
+
+<p>Maintenant nous allons ajouter une méthode dans notre code pour tuer toutes les applications ouvertes. Cela ressemble à ceci :</p>
+
+<pre class="brush: python">    def kill_all(self):
+        self.marionette.switch_to_frame()
+        self.marionette.execute_async_script("""
+             // Kills all running apps, except the homescreen.
+             function killAll() {
+               let manager = window.wrappedJSObject.appWindowManager;
+
+               let apps = manager.getApps();
+               for (let id in apps) {
+                 let origin = apps[id].origin;
+                 if (origin.indexOf('verticalhome') == -1) {
+                   manager.kill(origin);
+                 }
+               }
+             };
+             killAll();
+             // return true so execute_async_script knows the script is complete
+             marionetteScriptFinished(true);
+            """)</pre>
+
+<p>Ajoutez ceci juste après la méthode <code>unlock_screen</code> que nous avons ajoutée dans la section précédente.</p>
+
+<p>Puis, ajoutez les lignes suivantes pour exécuter ceci pour le reste du test ; ajoutez ceci juste après la ligne <code>self.unlock_screen()</code> :</p>
+
+<pre class="brush: python"># kill all open apps
+self.kill_all()</pre>
+
+<p>Maintenant, essayez de laisser l'application Contacts ouverte après la dernière exécution du test et retournez à l'écran de verrouillage avant d'exécuter le test de nouveau. En plus du déverrouillage de l'écran, l'application Contacts ouverte sera automatiquement tuée avant d'exécuter de nouveau le test, donc son état n'affectera pas le test que vous êtes en train d'exécuter. Ce point est important pour la fiabilité sur le long terme de notre exécution de test.</p>
+
+<p>Exécutez de nouveau le test plusieurs fois et visualisez si tout fonctionne et si Firefox OS est réinitialisé proprement.</p>
+
+<h2 id="Attentes_dynamiques">Attentes dynamiques</h2>
+
+<p>Dans la partie 3, nous avons mentionné l'importance des attentes dynamiques. Marionette possède des attentes comme WebDriver/Selenium2, avec une syntaxe particulière qui ressemble à celle-ci :</p>
+
+<pre class="brush: python">from marionette_driver import Wait
+
+# Wait until element is displayed
+Wait(self.marionette).until(lambda m: m.find_element('id', 'element_id').is_displayed())</pre>
+
+<p>Ce code attendra jusqu'à ce que l'élément spécifié soit affiché. À ce moment, nous savons que nous sommes prêts à interagir avec lui. Essayons d'utiliser cette construction de code dans notre test.</p>
+
+<p>Tout d'abord, incluez la ligne importée Wait, juste après les lignes d'import existantes :</p>
+
+<pre class="brush: python">from marionette_driver
+ import Wait</pre>
+
+<p>À présent, nous pouvons remplacer la deuxième fonction <code>time.sleep(2)</code> après avoir pressé l'icone Contacts (juste après la ligne <code>self.marionette.switch_to_frame()</code>) avec une méthode <code>Wait()</code> qui attendra jusqu'à ce que le cadre Contacts soit affiché :</p>
+
+<pre class="brush: python">Wait(self.marionette).until(lambda m: m.find_element('css selector', "iframe[data-url*='contacts']").is_displayed())</pre>
+
+<p>Quand nous appuyons sur le symbole + pour commencer la création d'un nouveau contact, nous voulons attendre que le formulaire d'ajout de contact soit complètement visible. Le bouton OK (sauvegarder) est la chose suivante que nous devons presser, nous allons donc attendre d'être mis en position avant de continuer. Remplacez la troisième fonction <code>time.sleep(2)</code> par la ligne suivante :</p>
+
+<pre class="brush: python">Wait(self.marionette).until(lambda m: m.find_element('id', 'save-button').location['y']== 0)</pre>
+
+<p>Dans cet exemple, nous attendons que le bouton OK soit déplacé en haut de l'écran ; cet élément sera visible en de nombreux points suite à l'animation, mais la postition d'arrêt finale est la position la plus sûre à attendre.</p>
+
+<p>Nous pouvons également attendre les éléments qui ne doivent pas être affichés. Après avoir appuyé sur OK, nous attendons que le bouton OK soit caché en utilisant une méthode <code>Wait()</code> similaire avec une négation, avant d'exécuter le reste du code. Remplacez la quatrième et dernière fonction <code>time.sleep(2)</code> avec ce qui suit :</p>
+
+<pre class="brush: python">Wait(self.marionette).until(lambda m: not m.find_element('id', 'save-button').is_displayed())</pre>
+
+<p>SI votre test est bon, alors c'est super ! Nous avons réalisé un test plus modulaire et fiable. Dans la partie 5, nous vous familiariserons à l'utilisation d'un exécuteur de tests.</p>

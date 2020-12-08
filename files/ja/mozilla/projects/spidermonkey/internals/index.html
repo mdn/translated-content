@@ -1,0 +1,290 @@
+---
+title: Internals
+slug: Mozilla/Projects/SpiderMonkey/Internals
+tags:
+  - JavaScript
+  - SpiderMonkey
+  - 要更新
+  - 要翻訳
+translation_of: Mozilla/Projects/SpiderMonkey/Internals
+---
+<div>{{SpiderMonkeySidebar("Internals")}}</div>
+
+<h2 id="Design_walk-through" name="Design_walk-through">設計</h2>
+
+<p>SpiderMonkey は型付けされていないバイトコードと JavaScript で扱いうる値を表す<code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_Reference/JS::Value" title="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_Reference/JS::Value"> JS::Value </a></code>型に対する演算を高速に行えるインタプリタです。Just-In-Time (JIT) コンパイラやガベージコレクションの機構を備え、JavaScript の値が持つ基本的な振る舞いと <a href="http://www.ecma-international.org/ecma-262/5.1/#sec-15">ECMA 262-5.1 §15</a> とその他の拡張で定義された標準ライブラリを実装し、いくつかのパブリックな API が提供されています。</p>
+
+<h3 id="インタプリタ">インタプリタ</h3>
+
+<p>多くの移植可能なインタプリタと同様、SpiderMonkey のインタプリタは主に単一の長大な関数として実装されています。バイトコードを 1 つずつ実行され、現在の命令に対応するコードへの分岐は <code>switch </code>文を利用して行われます（コンパイラによっては、より高速な手法が利用されます）。JS で記述された関数同士の呼び出し時にはJavaScript のスタックフレームが伸長し、C のスタックは消費されません。一方 JS で記述された関数から、C で定義された関数を呼び出し、また JS で記述された関数を呼ぶような場合は、コールスタックは通常通りに消費されるため、インタプリタは再突入可能となっています。</p>
+
+<p>SpiderMonkey バイトコードの処理には、引数の型による多くの特例が存在します。通常はインタプリタのループ内で処理されますが、邪魔な抽象化を無視する場合もあります。密な配列やプロパティキャッシュのような最適化は、<code>jsinterp.cpp</code> に定義されている <code>jsarray.*</code> や <code>jsobj.*</code>  によって隠蔽され、透過的に行われるわけでは「ありません」。</p>
+
+<p>インタプリタに関する状態は、インタプリタのエントリポイントに引数として渡されます。暗黙的な状態は <code><a href="/en-US/docs/SpiderMonkey/JSAPI_Reference/JSRuntime" title="SpiderMonkey/JSAPI_Reference/JSRuntime">JSContext</a></code> 型の値にまとめられており、API であろうがなかろうが、SpiderMonkey のすべての関数は第 1 引数に、JSContext 型のポインタをとります。</p>
+
+<h3 id="コンパイラ">コンパイラ</h3>
+
+<p>コンパイラは JavaScript のソースコードを処理し、<em>script</em> を生成します。script にはバイトコードとそのソースコード、ソースに対するアノテーション、文字列、数値、識別子のリテラルが含まれます。またソースコード中で定義されている関数も含む、オブジェクトも script には含まれます。それぞれの関数は入れ子になった script を保持します。</p>
+
+<p>The compiler consists of: a random-logic rather than table-driven lexical scanner, a recursive-descent parser that produces an AST, and a tree-walking code generator. Semantic and lexical feedback are used to disambiguate hard cases such as missing semicolons, assignable expressions ("lvalues" in C parlance), and whether <code>/</code> is the division symbol or the start of a regular expression. The compiler attempts no error recovery; it bails out on the first error. The emitter does some constant folding and a few codegen optimizations; about the fanciest thing it does is to attach source notes to the script for the decompiler's benefit.</p>
+
+<p>The decompiler implements <code>Function.toSource()</code>, which reconstructs a function's source code. It translates postfix bytecode into infix source by consulting a separate byte-sized code, called <em>source notes</em>, to disambiguate bytecodes that result from more than one grammatical production.</p>
+
+<h3 id="Garbage_collector">Garbage collector</h3>
+
+<p>The GC is a mark-and-sweep, non-conservative (exact) collector. It is used to hold JS objects and string descriptors (<a href="http://dxr.mozilla.org/mozilla-central/source/js/src/vm/String.h">JSString</a>), but not string bytes. It runs automatically only when maxbytes (as passed to <code><a href="/en-US/docs/SpiderMonkey/JSAPI_Reference/JS_NewRuntime" title="SpiderMonkey/JSAPI_Reference/JS_NewRuntime">JS_NewRuntime</a></code>) bytes of GC things have been allocated and another thing-allocation request is made. JS API users should call <code><a href="/en-US/docs/SpiderMonkey/JSAPI_Reference/JS_GC" title="SpiderMonkey/JSAPI_Reference/JS_GC">JS_GC</a></code> or <code><a href="/en-US/docs/SpiderMonkey/JSAPI_Reference/JS_MaybeGC" title="SpiderMonkey/JSAPI_Reference/JS_MaybeGC">JS_MaybeGC</a></code> between script executions or from the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_SetOperationCallback" title="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_SetOperationCallback">operation callback</a>, as often as necessary.</p>
+
+<p>Because the GC is exact, C/C++ applications must ensure that all live objects, strings, and numbers are GC-reachable.</p>
+
+<h3 id="JavaScript_values">JavaScript values</h3>
+
+<p>The type <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_Reference/JS::Value" title="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_Reference/JS::Value">JS::Value</a></code> represents a JavaScript value.</p>
+
+<p>The representation is 64 bits and uses NaN-boxing on all platforms, although the exact NaN-boxing format depends on the platform. NaN-boxing is a technique based on the fact that in IEEE-754 there are 2**47 different bit patterns that all represent NaN. Hence, we can encode any floating-point value as a C++ <code>double </code>(noting that JavaScript NaN must be represented as one canonical NaN format). Other values are encoded as a value and a type tag:</p>
+
+<ul>
+ <li>On x86, ARM, and similar 32-bit platforms, we use what we call "nunboxing", in which non-<code>double </code>values are a 32-bit type tag and a 32-bit payload, which is normally either a pointer or a signed 32-bit integer. There are a few special values: <code>NullValue()</code>, <code>UndefinedValue()</code>, <code>TrueValue()</code> and <code>FalseValue().</code></li>
+ <li>On x64 and similar 64-bit platforms, pointers are longer than 32 bits, so we can't use the nunboxing format. Instead, we use "punboxing", which has 17 bits of tag and 47 bits of payload.</li>
+</ul>
+
+<p>Only JIT code really depends on the layout--everything else in the engine interacts with values through functions like <code>val.isDouble()</code>. Most parts of the JIT also avoid depending directly on the layout: the files <code>PunboxAssembler.h</code> and <code>NunboxAssembler.h</code> are used to generate native code that depends on the value layout.</p>
+
+<p>Objects consist of a possibly shared structural description, called the map or scope; and unshared property values in a vector, called the slots. Each property has an <a href="/en-US/docs/SpiderMonkey/JSAPI_Reference/jsid" title="SpiderMonkey/JSAPI_Reference/jsid">id</a>, either a nonnegative integer or an atom (unique string), with the same tagged-pointer encoding as a <code>jsval</code>.</p>
+
+<p>The atom manager consists of a hash table associating strings uniquely with scanner/parser information such as keyword type, index in script or function literal pool, etc. Atoms play three roles: as literals referred to by unaligned 16-bit immediate bytecode operands, as unique string descriptors for efficient property name hashing, and as members of the root GC set for exact GC.</p>
+
+<h3 id="Standard_library">Standard library</h3>
+
+<p>The methods for arrays, booleans, dates, functions, numbers, and strings are implemented using the JS API. Most are <code><a href="/en-US/docs/SpiderMonkey/JSAPI_Reference/JSFastNative" title="SpiderMonkey/JSAPI_Reference/JSFastNative">JSFastNative</a></code>s. Most string methods are customized to accept a primitive string as the <code>this</code> argument. (Otherwise, SpiderMonkey converts primitive values to objects before invoking their methods, per <span class="pl-s1"><span class="pl-s">ECMA 262-3 §</span></span>11.2.1.)</p>
+
+<h3 id="Error_handling">Error handling</h3>
+
+<p>SpiderMonkey has two interdependent error-handling systems: JavaScript exceptions (which are <em>not</em> implemented with, or even compatible with, any kind of native C/C++ exception handling) and error reporting. In general, both functions inside SpiderMonkey and JSAPI callback functions signal errors by calling <code><a href="/en-US/docs/SpiderMonkey/JSAPI_Reference/JS_ReportError" title="SpiderMonkey/JSAPI_Reference/JS_ReportError">JS_ReportError</a></code> or one of its variants, or <code><a href="/en-US/docs/SpiderMonkey/JSAPI_Reference/JS_SetPendingException" title="SpiderMonkey/JSAPI_Reference/JS_SetPendingException">JS_SetPendingException</a></code>, and returning <code><a href="/en-US/docs/SpiderMonkey/JSAPI_Reference/JSBool" title="SpiderMonkey/JSAPI_Reference/JSBool">JS_FALSE</a></code> or <code>NULL</code>.</p>
+
+<h3 id="Public_APIs">Public APIs</h3>
+
+<p>The public C/C++ interface, called the JSAPI, is in most places a thin (but source-compatible across versions) layer over the implementation. See the <a href="/en-US/docs/SpiderMonkey/JSAPI_User_Guide" title="JSAPI_User_Guide">JSAPI User Guide</a>. There is an additional public API for JavaScript debuggers, <a href="/en-US/docs/JSDBGAPI_Reference" title="JSDBGAPI_Reference">JSDBGAPI</a>, but {{Source("js/jsd/jsdebug.h")}} might be a better API for debuggers. Another API, <a href="/en-US/docs/JSXDRAPI" title="JSXDRAPI">JSXDRAPI</a>, provides serialization for JavaScript scripts. (XUL Fastload uses this.)</p>
+
+<h3 id="Just-In-Time_compiler">Just-In-Time compiler</h3>
+
+<p>SpiderMonkey contains a <a href="https://blog.mozilla.org/javascript/2013/04/05/the-baseline-compiler-has-landed/">baseline compiler</a> as first tier. A second tier JIT, code-named <em>IonMonkey</em> was enabled in <a href="https://blog.mozilla.org/javascript/2012/09/12/ionmonkey-in-firefox-18/" title="https://blog.mozilla.org/javascript/2012/09/12/ionmonkey-in-firefox-18/">Firefox 18</a>. <a href="https://wiki.mozilla.org/IonMonkey">IonMonkey</a> is an optimizing compiler.</p>
+
+<h3 id="Self-hosting_of_built-in_functions_in_JS">Self-hosting of built-in functions in JS</h3>
+
+<p>Starting with Firefox 17, SpiderMonkey has the ability to implement built-in functions in self-hosted JS code. This code is compiled in a special compilation mode that gives it access to functionality that's not normally exposed to JS code, but that's required for safe and specification-conformant implementation of built-in functions.</p>
+
+<p>All self-hosted code lives in <code>.js</code> files under <code>builtin/</code>. For details on implementing self-hosted built-ins, see <a href="/en-US/docs/SpiderMonkey/Internals/self-hosting" title="SpiderMonkey/self-hosting">self-hosting</a>.</p>
+
+<h2 id="File_walkthrough" name="File_walkthrough">File walkthrough</h2>
+
+<h4 id="jsapi.cpp.2C_jsapi.h" name="jsapi.cpp.2C_jsapi.h">jsapi.cpp, jsapi.h</h4>
+
+<p>The public API to be used by almost all client code.</p>
+
+<h4 id="jspubtd.h.2C_jsprvtd.h" name="jspubtd.h.2C_jsprvtd.h">jspubtd.h, jsprvtd.h</h4>
+
+<p>These files exist to group struct and scalar typedefs so they can be used everywhere without dragging in struct definitions from N different files. The <code>jspubtd.h</code> file contains public typedefs, and is included automatically when needed. The <code>jsprvtd.h</code> file contains private typedefs and is included by various .h files that need type names, but not type sizes or declarations.</p>
+
+<h4 id="jsdbgapi.cpp.2C_jsdbgapi.h" name="jsdbgapi.cpp.2C_jsdbgapi.h">jsdbgapi.cpp, jsdbgapi.h</h4>
+
+<p>The debugging API. Provided so far:</p>
+
+<p><strong>Traps</strong>, with which breakpoints, single-stepping, step over, step out, and so on can be implemented. The debugger will have to consult jsopcode.def on its own to figure out where to plant trap instructions to implement functions like step out, but a future jsdbgapi.h will provide convenience interfaces to do these things. At most one trap per bytecode can be set. When a script (<code><a href="/en-US/docs/JSScript" title="JSScript">JSScript</a></code>) is destroyed, all traps set in its bytecode are cleared.</p>
+
+<p><strong>Watchpoints</strong>, for intercepting set operations on properties and running a debugger-supplied function that receives the old value and a pointer to the new one, which it can use to modify the new value being set.</p>
+
+<p><strong>Line number</strong> to PC and back mapping functions. The line-to-PC direction "rounds" toward the next bytecode generated from a line greater than or equal to the input line, and may return the PC of a for-loop update part, if given the line number of the loop body's closing brace. Any line after the last one in a script or function maps to a PC one byte beyond the last bytecode in the script. An example, from perfect.js:</p>
+
+<pre class="brush:js;first-line:14">function perfect(n) {
+  print("The perfect numbers up to " + n + " are:");
+  // We build sumOfDivisors[i] to hold a string expression for
+  // the sum of the divisors of i, excluding i itself.
+  var sumOfDivisors = new ExprArray(n + 1, 1);
+  for (var divisor = 2; divisor &lt;= n; divisor++) {
+    for (var j = divisor + divisor; j &lt;= n; j += divisor) {
+      sumOfDivisors[j] += " + " + divisor;
+    }
+    // At this point everything up to 'divisor' has its sumOfDivisors
+    // expression calculated, so we can determine whether it's perfect
+    // already by evaluating.
+    if (eval(sumOfDivisors[divisor]) == divisor) {
+      print("" + divisor + " = " + sumOfDivisors[divisor]);
+    }
+  }
+  delete sumOfDivisors;
+  print("That's all.");
+}</pre>
+
+<p>The line number to PC and back mappings can be tested using the js program with the following script:</p>
+
+<pre class="brush:js">load("perfect.js");
+print(perfect);
+dis(perfect);
+print();
+for (var ln = 0; ln &lt;= 40; ln++) {
+    var pc = line2pc(perfect, ln);
+    var ln2 = pc2line(perfect, pc);
+    print("\tline " + ln + " =&gt; pc " + pc + " =&gt; line " + ln2);
+}
+</pre>
+
+<p>The result of the for loop over lines 0 to 40 inclusive is:</p>
+
+<pre>line 0 =&gt; pc 0 =&gt; line 16
+line 1 =&gt; pc 0 =&gt; line 16
+line 2 =&gt; pc 0 =&gt; line 16
+line 3 =&gt; pc 0 =&gt; line 16
+line 4 =&gt; pc 0 =&gt; line 16
+line 5 =&gt; pc 0 =&gt; line 16
+line 6 =&gt; pc 0 =&gt; line 16
+line 7 =&gt; pc 0 =&gt; line 16
+line 8 =&gt; pc 0 =&gt; line 16
+line 9 =&gt; pc 0 =&gt; line 16
+line 10 =&gt; pc 0 =&gt; line 16
+line 11 =&gt; pc 0 =&gt; line 16
+line 12 =&gt; pc 0 =&gt; line 16
+line 13 =&gt; pc 0 =&gt; line 16
+line 14 =&gt; pc 0 =&gt; line 16
+line 15 =&gt; pc 0 =&gt; line 16
+line 16 =&gt; pc 0 =&gt; line 16
+line 17 =&gt; pc 19 =&gt; line 20
+line 18 =&gt; pc 19 =&gt; line 20
+line 19 =&gt; pc 19 =&gt; line 20
+line 20 =&gt; pc 19 =&gt; line 20
+line 21 =&gt; pc 36 =&gt; line 21
+line 22 =&gt; pc 53 =&gt; line 22
+line 23 =&gt; pc 74 =&gt; line 23
+line 24 =&gt; pc 92 =&gt; line 22
+line 25 =&gt; pc 106 =&gt; line 28
+line 26 =&gt; pc 106 =&gt; line 28
+line 27 =&gt; pc 106 =&gt; line 28
+line 28 =&gt; pc 106 =&gt; line 28
+line 29 =&gt; pc 127 =&gt; line 29
+line 30 =&gt; pc 154 =&gt; line 21
+line 31 =&gt; pc 154 =&gt; line 21
+line 32 =&gt; pc 161 =&gt; line 32
+line 33 =&gt; pc 172 =&gt; line 33
+line 34 =&gt; pc 172 =&gt; line 33
+line 35 =&gt; pc 172 =&gt; line 33
+line 36 =&gt; pc 172 =&gt; line 33
+line 37 =&gt; pc 172 =&gt; line 33
+line 38 =&gt; pc 172 =&gt; line 33
+line 39 =&gt; pc 172 =&gt; line 33
+line 40 =&gt; pc 172 =&gt; line 33
+</pre>
+
+<h4 id="jsconfig.h" name="jsconfig.h">jsconfig.h</h4>
+
+<p>Various configuration macros defined as 0 or 1 depending on how <code><a href="/en-US/docs/JS_VERSION" title="JS_VERSION">JS_VERSION</a></code> is defined (as 10 for JavaScript 1.0, 11 for JavaScript 1.1, etc.). Not all macros are tested around related code yet. In particular, JS 1.0 support is missing from SpiderMonkey.</p>
+
+<h4 id="js.cpp.2C_jsshell.msg" name="js.cpp.2C_jsshell.msg">js.cpp, jsshell.msg</h4>
+
+<p>The "JS shell", a simple interpreter program that uses the JS API and more than a few internal interfaces (some of these internal interfaces could be replaced by <code>jsapi.h</code> calls). The js program built from this source provides a test vehicle for evaluating scripts and calling functions, trying out new debugger primitives, etc.</p>
+
+<p>A look at the places where <code>jsshell.msg</code> is used in <code>js.cpp</code> shows how error messages can be handled in JSAPI applications. These messages can be localized at compile time by replacing the <code>.msg</code> file; or, with a little modification to the source, at run time.</p>
+
+<p><a href="/en-US/docs/SpiderMonkey/Introduction_to_the_JavaScript_shell" title="https://developer.mozilla.org/en/introduction_to_the_javascript_shell">More information on the JavaScript shell</a>.</p>
+
+<h4 id="js.msg" name="js.msg">js.msg</h4>
+
+<p>SpiderMonkey error messages.</p>
+
+<h4 id="jsarray..2A.2C_jsbool..2A.2C_jdsdate..2A.2C_jsfun..2A.2C_jsmath..2A.2C_jsnum..2A.2C_jsstr..2A" name="jsarray..2A.2C_jsbool..2A.2C_jdsdate..2A.2C_jsfun..2A.2C_jsmath..2A.2C_jsnum..2A.2C_jsstr..2A">jsarray.*, jsbool.*, jsdate.*, jsfun.*, jsmath.*, jsnum.*, jsstr.*</h4>
+
+<p>These file pairs implement the standard classes and (where they exist) their underlying primitive types. They have similar structure, generally starting with class definitions and continuing with internal constructors, finalizers, and helper functions.</p>
+
+<h4 id="jsobj..2A.2C_jsscope..2A" name="jsobj..2A.2C_jsscope..2A">jsobj.*, jsscope.*</h4>
+
+<p>These two pairs declare and implement the JS object system. All of the following happen here:</p>
+
+<ul>
+ <li>creating objects by class and prototype, and finalizing objects;</li>
+ <li>defining, looking up, getting, setting, and deleting properties;</li>
+ <li>creating and destroying properties and binding names to them.</li>
+</ul>
+
+<p>The details of a native object's map (scope) are mostly hidden in <code>jsscope.{{mediawiki.external('ch')}}</code>.</p>
+
+<h4 id="jsatom.cpp.2C_jsatom.h" name="jsatom.cpp.2C_jsatom.h">jsatom.cpp, jsatom.h</h4>
+
+<p>The atom manager. Contains well-known string constants, their atoms, the global atom hash table and related state, the js_Atomize() function that turns a counted string of bytes into an atom, and literal pool (<code>JSAtomMap</code>) methods.</p>
+
+<h4 id="jsarena.cpp.2C_jsarena.h" name="jsarena.cpp.2C_jsarena.h">jsarena.cpp, jsarena.h</h4>
+
+<p>Last-In-First-Out allocation macros that amortize malloc costs and allow for en-masse freeing. See the paper mentioned in <code>jsarena.h</code>'s major comment.</p>
+
+<h4 id="jsgc.cpp.2C_jsgc.h" name="jsgc.cpp.2C_jsgc.h">jsgc.cpp, jsgc.h</h4>
+
+<p>The garbage collector and tracing routines.</p>
+
+<h4 id="jsinterp..2A.2C_jscntxt..2A.2C_jsinvoke.cpp" name="jsinterp..2A.2C_jscntxt..2A.2C_jsinvoke.cpp">jsinterp.*, jscntxt.*, jsinvoke.cpp</h4>
+
+<p>The bytecode interpreter, and related functions such as Call and AllocStack, live in <em>jsinterp.cpp</em>. The JSContext constructor and destructor are factored out into <em>jscntxt.cpp</em> for minimal linking when the compiler part of JS is split from the interpreter part into a separate program.</p>
+
+<p><code>jsinvoke.cpp</code> is a build hack used on some platforms to build <code>js_Interpret</code> under different compiler options from the rest of <code>jsinterp.cpp</code>.</p>
+
+<h4 id="jstracer.*_nanojit*">jstracer.*, nanojit/*</h4>
+
+<p><a href="/en-US/docs/SpiderMonkey/Internals/Tracing_JIT" title="SpiderMonkey/Internals/Tracing JIT">The tracing JIT</a>. The interface between the JIT and the rest of SpiderMonkey is conceptually small—the interpreter calls into the trace recorder—but as with everything else, there are tendrils everywhere.</p>
+
+<h4 id="jsemit..2A.2C_jsopcode.tbl.2C_jsopcode..2A.2C_jsparse..2A.2C_jsscan..2A.2C_jsscript..2A" name="jsemit..2A.2C_jsopcode.tbl.2C_jsopcode..2A.2C_jsparse..2A.2C_jsscan..2A.2C_jsscript..2A">jsemit.*, jsopcode.tbl, jsopcode.*, jsparse.*, jsscan.*, jsscript.*</h4>
+
+<p>Compiler and decompiler modules. The <em>jsopcode.tbl</em> file is a C preprocessor source that defines almost everything there is to know about JS bytecodes. See its major comment for how to use it. For now, a debugger will use it and its dependents such as <em>jsopcode.h</em> directly, but over time we intend to extend <em>jsdbgapi.h</em> to hide uninteresting details and provide conveniences. The code generator is split across paragraphs of code in <em>jsparse.cpp</em>, and the utility methods called on <code>JSCodeGenerator</code> appear in <em>jsemit.cpp</em>. Source notes generated by <em>jsparse.cpp</em> and <em>jsemit.cpp</em> are used in <em>jsscript.cpp</em> to map line number to program counter and back.</p>
+
+<h4 id="jstypes.h" name="jstypes.h">jstypes.h</h4>
+
+<p>Fundamental representation types and utility macros. This file alone among all .h files in SpiderMonkey must be included first by .cpp files. It is not nested in .h files, as other prerequisite .h files generally are, since it is also a direct dependency of most .cpp files and would be over-included if nested in addition to being directly included.</p>
+
+<h4 id="jsbit.h.2C_jslog2.cpp" name="jsbit.h.2C_jslog2.cpp">jsbit.h, jslog2.cpp</h4>
+
+<p>Bit-twiddling routines. Most of the work here is selectively enabling compiler-specific intrinsics such as GCC's <code>__builtin_ctz</code>, which is useful in calculating base-2 logarithms of integers.</p>
+
+<h4 id="jsutil.cpp.2C_jsutil.h" name="jsutil.cpp.2C_jsutil.h">jsutil.cpp, jsutil.h</h4>
+
+<p>The <code>JS_ASSERT</code> macro is used throughout the source as a proof device to make invariants and preconditions clear to the reader, and to hold the line during maintenance and evolution against regressions or violations of assumptions that it would be too expensive to test unconditionally at run-time. Certain assertions are followed by run-time tests that cope with assertion failure, but only where I'm too smart or paranoid to believe the assertion will never fail...</p>
+
+<h4 id="jsclist.h" name="jsclist.h">jsclist.h</h4>
+
+<p>Doubly-linked circular list struct and macros.</p>
+
+<h4 id="jscpucfg.cpp" name="jscpucfg.cpp">jscpucfg.cpp</h4>
+
+<p>This standalone program generates <em>jscpucfg.h</em>, a header file containing bytes per word and other constants that depend on CPU architecture and C compiler type model. It tries to discover most of these constants by running its own experiments on the build host, so if you are cross-compiling, beware.</p>
+
+<h4 id="jsdtoa.cpp.2C_jsdtoa.h.2C_dtoa.c" name="jsdtoa.cpp.2C_jsdtoa.h.2C_dtoa.c">jsdtoa.cpp, jsdtoa.h, dtoa.c</h4>
+
+<p>dtoa.c contains David Gay's portable double-precision floating point to string conversion code, with Permission To Use notice included. jsdtoa.cpp <code>#include</code>s this file.</p>
+
+<h4 id="jshash.cpp.2C_jshash.h.2C_jsdhash.cpp.2C_jsdhash.h" name="jshash.cpp.2C_jshash.h.2C_jsdhash.cpp.2C_jsdhash.h">jshash.cpp, jshash.h, jsdhash.cpp, jsdhash.h</h4>
+
+<p>Portable, extensible hash tables. These use multiplicative hash for strength reduction over division hash, yet with very good key distribution over power of two table sizes. jshash resolves collisions via chaining, so each entry burns a malloc and can fragment the heap. jsdhash uses open addressing.</p>
+
+<h4 id="jslong.cpp.2C_jslong.h" name="jslong.cpp.2C_jslong.h">jslong.cpp, jslong.h</h4>
+
+<p>64-bit integer emulation, and compatible macros that use intrinsic C types, like <code>long long</code>, on platforms where they exist (most everywhere, these days).</p>
+
+<h4 id="jsprf..2A" name="jsprf..2A">jsprf.*</h4>
+
+<p>Portable, buffer-overrun-resistant sprintf and friends. For no good reason save lack of time, the %e, %f, and %g formats cause your system's native sprintf, rather than <code>JS_dtoa()</code>, to be used. This bug doesn't affect SpiderMonkey, because it uses its own <code>JS_dtoa()</code> call in <code>jsnum.cpp</code> to convert from double to string, but it's a bug that we'll fix later, and one you should be aware of if you intend to use a <code>JS_*printf()</code> function with your own floating type arguments - various vendor sprintf's mishandle NaN, +/-Inf, and some even print normal floating values inaccurately.</p>
+
+<h4 id="prmjtime.c.2C_prmjtime.h" name="prmjtime.c.2C_prmjtime.h">prmjtime.c, prmjtime.h</h4>
+
+<p>Time functions. These interfaces are named in a way that makes local vs. universal time confusion likely. Caveat emptor, and we're working on it. To make matters worse, Java (and therefore JavaScript) uses "local" time numbers (offsets from the epoch) in its Date class.</p>
+
+<h4 id="jsfile.cpp.2C_jsfile.h.2C_jsfile.msg" name="jsfile.cpp.2C_jsfile.h.2C_jsfile.msg">jsfile.cpp, jsfile.h, jsfile.msg</h4>
+
+<p>Obsolete. Do not use these files.</p>
+
+<h4 id="Makefile.in.2C_build.mk" name="Makefile.in.2C_build.mk">Makefile.in, build.mk</h4>
+
+<p>Mozilla makefiles. If you're building Gecko or Firefox, the larger build system will use these files. They are also used for current standalone builds.</p>
+
+<h4 id="Makefile.ref.2C_rules.mk.2C_config.mk.2C_config.2F.2A" name="Makefile.ref.2C_rules.mk.2C_config.mk.2C_config.2F.2A">Makefile.ref, rules.mk, config.mk, config/*</h4>
+
+<p>Obsolete SpiderMonkey standalone makefiles from 1.8 and earlier. See <a href="/en-US/docs/SpiderMonkey/Build_Documentation#Building_SpiderMonkey_1.8_or_earlier" title="SpiderMonkey/Build Documentation#Building SpiderMonkey 1.8 or earlier">SpiderMonkey Build Documentation</a>.</p>
+
+<h3 id="See_also">See also</h3>
+
+<ul>
+ <li><a href="/jsd" title="jsd">jsd</a></li>
+</ul>

@@ -1,0 +1,18 @@
+---
+title: SwapDocShells
+slug: Archive/Mozilla/XUL/Method/SwapDocShells
+tags:
+  - XUL Methods
+  - XUL Reference
+translation_of: Archive/Mozilla/XUL/Method/SwapDocShells
+---
+<div class="noinclude"><span class="breadcrumbs XULRefMeth_breadcrumbs">« <a href="/ja/docs/XUL_Reference" title="/ja/docs/XUL_Reference">XUL リファレンス HOME</a></span></div>
+
+<dl>
+  <dt><span id="m-swapDocShells"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/swapDocShells">swapDocShells( otherBrowser )</a></code></span></dt>
+  <dd>戻り値の型: <em>戻り値なし</em></dd>
+  <dd>この <a class="internal" href="/ja/docs/XUL/browser">browser</a> ともう一つの browser のコンテンツおよび履歴、状態を入れ替えます。入れ替える間、 <code>pagehide</code> イベントと <code>pageshow</code> イベントが両方の <code>browser</code> で発生します。このメソッドは <code>browser</code> をウィンドウ間で移動したり、新しいウィンドウに移すために使用します。</dd>
+</dl>
+
+
+<div class="blockIndicator note"><strong>註:</strong> 双方の <code>browser</code> はスタンドアローンまたは <a href="/ja/docs/XUL/tabbrowser"><code>tabbrowser</code></a> に埋め込まれた <code>browser</code> でなければなりません。これらを混在させることはできません。</div>

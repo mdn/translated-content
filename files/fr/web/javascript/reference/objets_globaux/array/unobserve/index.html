@@ -1,0 +1,89 @@
+---
+title: Array.unobserve()
+slug: Web/JavaScript/Reference/Objets_globaux/Array/unobserve
+tags:
+  - Array
+  - JavaScript
+  - Méthode
+  - Obsolete
+  - Reference
+translation_of: Archive/Web/JavaScript/Array.unobserve
+---
+<div>{{JSRef}} {{obsolete_header}}</div>
+
+<p>La méthode <code>Array<strong>.unobserve()</strong></code> est utilisée pour retirer les observateurs placés grâce à {{jsxref("Array.observe()")}}. Cette API a été dépréciée et retirée des navigateurs. À la place, il est préférable d'utiliser l'objet {{jsxref("Proxy")}}, plus générique.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox"><code>Array.unobserve(<var>arr</var>, <var>callback</var>)</code></pre>
+
+<h3 id="Paramètres">Paramètres</h3>
+
+<dl>
+ <dt><code>arr</code></dt>
+ <dd>Le tableau qu'on souhaite arrêter d'observer.</dd>
+ <dt><code>callback</code></dt>
+ <dd>La référence à l'observateur dont on souhaite qu'il arrête d'être appelé à chaque changement apporté au tableau <strong>arr</strong>.</dd>
+</dl>
+
+<h2 id="Description">Description</h2>
+
+<p><code>Array.unobserve()</code> doit être appelé après {{jsxref("Array.observe()")}} afin de retirer un observateur du tableau.</p>
+
+<p>La fonction de rappel (<em>callback</em>) utilisée doit être une référence à une fonction et non une fonction anonyme car c'est cette référence qui sera utilisée pour retrouver l'observateur. Ça ne sert à rien d'appeler <strong>Array.unobserve()</strong> avec une fonction anonyme comme paramètre de callback, cela ne retirera aucun observateur.</p>
+
+<h2 id="Exemples">Exemples</h2>
+
+<h3 id="Arrêter_d'observer_un_tableau">Arrêter d'observer un tableau</h3>
+
+<pre class="brush: js">var arr = [1, 2, 3];
+
+var observateur = function(changements) {
+  console.log(changements);
+}
+
+Array.observe(arr, observateur);
+​
+arr.push(4);
+// [{type: "splice", object: &lt;arr&gt;, index: 3, removed:[], addedCount: 1}]
+
+Array.unobserve(arr, observateur);
+
+arr.pop();
+// Le callback n'a pas été appelé</pre>
+
+<h3 id="Utiliser_une_fonction_anonyme">Utiliser une fonction anonyme</h3>
+
+<pre class="brush: js">var personnes = ['Khalid', 'Ahmed', 'Mohammed'];
+
+Array.observe(personnes, function (changements) {
+  console.log(changements);
+});
+
+personnes.shift();
+// [{type: "splice", object: &lt;arr&gt;, index: 0, removed: [ "Khalid" ], addedCount: 0 }]
+
+Array.unobserve(personnes, function (changements) {
+  console.log(changements);
+});
+
+personnes.push('Abdullah');
+// [{type: "splice", object: &lt;arr&gt;, index: 2, removed: [], addedCount: 1 }]
+// Le callback est toujours appelé
+</pre>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<div>
+<div class="hidden">Le tableau de compatibilité de cette page a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à consulter <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> et à nous envoyer une<em>pull request</em>.</div>
+
+<p>{{Compat("javascript.builtins.Array.unobserve")}}</p>
+</div>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>{{jsxref("Array.observe()")}} {{obsolete_inline}}</li>
+ <li>{{jsxref("Object.observe()")}} {{obsolete_inline}}</li>
+ <li>{{jsxref("Object.unobserve()")}} {{obsolete_inline}}</li>
+</ul>

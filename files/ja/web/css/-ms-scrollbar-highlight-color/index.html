@@ -1,0 +1,95 @@
+---
+title: '-ms-scrollbar-highlight-color'
+slug: Web/CSS/-ms-scrollbar-highlight-color
+tags:
+  - CSS
+  - CSS プロパティ
+  - Microsoft 拡張
+  - Non-standard
+  - Obsolete
+  - Reference
+  - 廃止
+  - 標準外
+translation_of: Archive/Web/CSS/-ms-scrollbar-highlight-color
+---
+<div>{{CSSRef}}{{Non-standard_Header}}{{Obsolete_Header}}</div>
+
+<p><a href="/ja/docs/Web/CSS">CSS</a> の <code><strong>-ms-scrollbar-highlight-color</strong></code> プロパティは <a href="/ja/docs/Web/CSS/Microsoft_extensions">Microsoft 拡張</a>で、スクロールバーのスライダートレイ、スクロールボックスの上辺と左辺、スクロール矢印の色を指定します。</p>
+
+<p>{{cssinfo}}</p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<h3 id="Values" name="Values">値</h3>
+
+<dl>
+ <dt>{{cssxref("&lt;color&gt;")}}</dt>
+ <dd>
+ <p>スクロールバーのスライダートレイ、スクロールボックスの上辺と左辺、スクロール矢印の色です。</p>
+ </dd>
+</dl>
+
+<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+
+<pre class="syntaxbox">{{csssyntax}}
+</pre>
+
+<h2 id="Examples" name="Examples">例</h2>
+
+<p>この例では、 <code>-ms-scrollbar-highlight-color</code>, {{CSSXref("-ms-scrollbar-face-color")}}, {{CSSXref("-ms-scrollbar-arrow-color")}} を使用して、異なる色のスクロールバーを持った二つの {{HTMLElement("div")}} オブジェクトを生成します。</p>
+
+<pre class="brush: css">div {
+  width: 150px;
+  height: 150px;
+  border-style: solid;
+  border-width: thin;
+  overflow-y: scroll;
+  font-family: sans-serif;
+  float: left;
+  margin-right: 10px;
+}
+
+.blueScroll {
+  -ms-scrollbar-highlight-color: aqua;
+  -ms-scrollbar-face-color: blue;
+  -ms-scrollbar-arrow-color: blue;
+  border-color: blue;
+}
+
+.redScroll {
+  -ms-scrollbar-highlight-color: bisque;
+  -ms-scrollbar-face-color: red;
+  -ms-scrollbar-arrow-color: red;
+  border-color: red;
+}</pre>
+
+<pre class="brush: html">&lt;body&gt;
+  &lt;div class="blueScroll"&gt;
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  &lt;/div&gt;
+  &lt;div class="redScroll"&gt;
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  &lt;/div&gt;
+&lt;/body&gt;</pre>
+
+<p>結果はこの画像の通りです。</p>
+
+<p><img alt="Image for -ms-scrollbar-highlight-color example" src="https://mdn.mozillademos.org/files/15827/Image%20for%20example.png" style="height: 166px; width: 328px;"></p>
+
+<h2 id="Specifications" name="Specifications">仕様書</h2>
+
+<p>どの仕様書でも定義されていません。</p>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+
+<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
+
+<p>{{Compat("css.properties.-ms-scrollbar-highlight-color")}}</p>
+
+<h2 id="Remarks" name="Remarks">注釈</h2>
+
+<p>Windows Internet Explorer 8+ 以降で対応しています。 <code>-ms-scrollbar-highlight-color</code> 属性は CSS への拡張で、 IE8 標準モードでは <code>scrollbar-highlight-color</code> の別名として使用することができます。</p>
+
+<p>スクロールボックスとは、スクロールバー内の矩形のボックスで、上下または左右に移動することで、画面上のコンテンツの位置を変更することができます。スクロール矢印とは、スクロールバーの端に位置し、矢印が描かれた矩形のボタンで、画面上のコンテンツを上下または左右に少しだけ動かすためのものです。</p>
+
+<p>このプロパティはスクロールバーを表示する要素に適用されます。 CSS は {{CSSXref("overflow")}} プロパティによってすべてのオブジェクトでスクロールが有効になります。</p>

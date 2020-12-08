@@ -1,0 +1,97 @@
+---
+title: Piles et Paquets
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Piles_et_Paquets
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Stacks_and_Decks
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Ajouter_plus_d'éléments" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Positionnement_dans_une_pile">Suivant  »</a></p>
+</div>
+
+<p>Il se peut qu'il soit nécessaire d'afficher des éléments comme un empilement superposé de cartes. Les éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code> et <code><a href="/fr/docs/Mozilla/Tech/XUL/deck" title="deck">deck</a></code> peuvent être utilisés à cet effet.</p>
+
+<h3 id="Containers" name="Containers">Containers</h3>
+
+<p>Chaque boîte XUL est un container qui peut contenir n'importe quel autre élément. Il y a un certain nombre d'éléments qui sont des types spécialisés de boîtes, tels que <a href="/fr/Tutoriel_XUL/Barre_d'outils" title="fr/Tutoriel_XUL/Barre_d'outils">les barres d'outils</a> et <a href="/fr/Tutoriel_XUL/Onglets" title="fr/Tutoriel_XUL/Onglets">les onglets</a>. La balise <code><a href="/fr/docs/Mozilla/Tech/XUL/box" title="box">box</a></code> crée la plus simple des boîtes sans propriétés spéciales. Toutefois, les types spécialisés de boîtes fonctionnent comme des boîtes normales dans le sens où elles orientent les éléments qu'elles contiennent, mais elles ont des fonctionnalités supplémentaires.</p>
+
+<p>En fait, beaucoup de composants peuvent contenir d'autres éléments. Nous avons déjà vu que les boutons peuvent contenir d'autres choses que leurs contenus par défaut. Une barre de défilement est juste un type spécial de boîte qui crée ses propres éléments si vous ne les fournissez pas. Ceux-ci contrôlent également le déplacement de l'ascenseur de la barre de défilement.</p>
+
+<p>Dans les prochaines sections, nous allons introduire quelques éléments qui sont prévus pour le contrôle d'autres éléments. Ce sont tous des types spéciaux de boîtes et permettent d'inclure tous les attributs des boîtes.</p>
+
+<h3 id="Piles" name="Piles">Piles</h3>
+
+<p>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code> est une simple boîte. Il fonctionne comme toute autre boîte mais a la propriété spéciale que ces enfants sont tous disposés les uns au dessus des autres. Le premier enfant de la pile est dessiné sur le dessous, le second enfant est dessiné ensuite, suivi du troisième et ainsi de suite. De nombreux éléments peuvent être empilés sur une pile.</p>
+
+<p>La propriété <code id="a-orient"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/orient">orient</a></code> n'a aucune signification particulière sur un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code>, car les enfants sont empilés les uns sur les autres au lieu d'être côte à côte. Les dimensions d'une pile sont déterminées par celle de son plus grand enfant, mais vous pouvez utilisez les propriétés CSS <code>width</code>, <code>height</code>, <code>min-width</code> ou d'autres propriétés similaires à la fois sur la pile et ses enfants.</p>
+
+<p>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code> pourrait être utilisé quand un indicateur d'état doit d'être ajouté au dessus d'un élément existant. Par exemple, un indicateur de progression pourrait être créé avec une barre et un libellé en surimpression.</p>
+
+<p><img alt="Image:xultu_stacks_progress.png" class="internal" src="/@api/deki/files/1554/=Xultu_stacks_progress.png"></p>
+
+<h4 id="Effet_d.27ombre_avec_des_piles" name="Effet_d.27ombre_avec_des_piles">Effet d'ombre avec des piles</h4>
+
+<p>Une utilisation pratique de l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code> est de pouvoir simuler un certain nombre de propriétés CSS avec. Par exemple, vous pouvez créer un effet similaire à la propriété <code>text-shadow</code> comme ceci :</p>
+
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_stacks_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_stacks_1.xul">Voir</a></p>
+
+<pre>&lt;stack&gt;
+   &lt;description value="Ombré" style="padding-left: 1px; padding-top: 1px; font-size: 15pt"/&gt;
+   &lt;description value="Ombré" style="color: red; font-size: 15pt;"/&gt;
+&lt;/stack&gt;
+</pre>
+
+<p><img alt="Image:xultu_stacks1.png" class="internal" src="/@api/deki/files/1553/=Xultu_stacks1.png"></p>
+
+<p>Les deux éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/description" title="description">description</a></code> créent chacun un texte avec une taille de 15 points. Le premier est toutefois décalé d'un pixel vers la droite et vers le bas grâce à l'ajout d'une marge de texte sur la gauche et sur le haut. Le résultat est le dessin répété du même texte 'Ombré' mais en léger décalage. Le second élément <code><a href="/fr/docs/Mozilla/Tech/XUL/description" title="description">description</a></code> est dessiné en rouge pour que l'effet soit encore plus visible.</p>
+
+<p>Cette méthode a des avantages sur l'emploi de <code>text-shadow</code> car vous pouvez complètement personnaliser les effets d'ombres de votre texte principal. Il peut avoir sa propre police de caractères, un soulignement ou une taille propre (vous pouvez même créer un texte ombré clignotant). C'est aussi utile car Mozilla ne supporte pas pour l'instant les textes ombrés en CSS. Un désavantage est que l'espace occupé par le texte ombré fait une pile plus grande. L'effet d'ombrage est très utile pour créer des boutons d'apparence désactivée :</p>
+
+<p><span id="Exemple_2"><a id="Exemple_2"></a><strong>Exemple 2</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_stacks_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_stacks_2.xul">Voir</a></p>
+
+<pre>&lt;stack style="background-color: #C0C0C0"&gt;
+   &lt;description value="Désactivé" style="color: white; padding-left: 1px; padding-top: 1px;"/&gt;
+   &lt;description value="Désactivé" style="color: grey;"/&gt;
+&lt;/stack&gt;
+</pre>
+
+<p>Cet arrangement de couleurs de texte et d'ombrage créent cet aspect désactivé que l'on retrouve sur certaines plates-formes.</p>
+
+<div class="note">Notez que les évènements tels que les clics de la souris et les touches du clavier sont transmis à l'élément sur le haut de la pile qui est le dernier élément de la pile. Cela signifie qu'un bouton ne fonctionnera correctement que s'il est le dernier élément de la pile.</div>
+
+<h3 id="Paquets" name="Paquets">Paquets</h3>
+
+<p>Un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/deck" title="deck">deck</a></code> place également ses enfants les uns au dessus des autres comme l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code>, toutefois les paquets n'affichent qu'un seul de leurs enfants à la fois. Ce comportement s'avère utile pour une interface d'assistant dans laquelle une série de panneaux similaires sont affichés en série. Au lieu de créer des fenêtres séparées et d'ajouter des boutons de navigation à chacune d'elles, vous n'avez qu'à créer une seule fenêtre et utiliser un paquet dans lequel le contenu changera.</p>
+
+<p>Comme pour les piles, les enfants directs d'un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/deck" title="deck">deck</a></code> forment les pages du paquet. S'il y a trois enfants dans l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/deck" title="deck">deck</a></code>, le paquet aura trois enfants. La page affichée du paquet peut être changée en définissant un attribut <code id="a-selectdIndex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/selectdIndex">selectdIndex</a></code> sur l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/deck" title="deck">deck</a></code>. L'index est un nombre qui identifie quelle page à afficher. Les pages sont numérotées à partir de zéro. Ainsi, le premier enfant du paquet est la page '0', le second est la page '1', etc.</p>
+
+<p>Ce qui suit est un exemple de paquet :</p>
+
+<p><span id="Exemple_3"><a id="Exemple_3"></a><strong>Exemple 3</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_stacks_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_stacks_3.xul">Voir</a></p>
+
+<pre>&lt;deck selectedIndex="2"&gt;
+   &lt;description value="Ceci est la première page "/&gt;
+   &lt;button label="Ceci est la seconde page "/&gt;
+   &lt;box&gt;
+     &lt;description value="Ceci est la troisième page "/&gt;
+     &lt;button label="Ceci est également la troisième page "/&gt;
+   &lt;/box&gt;
+&lt;/deck&gt;
+</pre>
+
+<p>Ici, il y a trois pages, celle affichée par défaut est la troisième. La troisième page est une boîte avec deux éléments qui y sont inclus. L'ensemble de cette boîte et de ses éléments forme une page. Le paquet sera aussi grand que le plus grand de ses enfants, qui dans le cas présent sera la troisième page.</p>
+
+<p>Vous pouvez changer de page en utilisant un script pour modifier l'attribut <code id="a-selectedIndex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/selectedIndex">selectedIndex</a></code>. Pour plus de renseignements là dessus, reportez vous aux sections sur les évènements et le DOM.</p>
+
+<hr>
+<p>La prochaine section décrit comment les piles peuvent être utilisées pour positionner les éléments.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Ajouter_plus_d'éléments" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Positionnement_dans_une_pile">Suivant  »</a></p>
+</div>
+
+<p><span class="comment">Interwiki</span></p>

@@ -1,0 +1,42 @@
+---
+title: 'SyntaxError: missing ) after argument list'
+slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
+tags:
+  - Errors
+  - JavaScript
+  - SynataxError
+translation_of: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
+---
+<div>{{jsSidebar("Errors")}}</div>
+
+<h2 id="Message" name="Message">メッセージ</h2>
+
+<pre class="syntaxbox">SyntaxError: missing ) after argument list
+</pre>
+
+<h2 id="Error_type" name="Error_type">エラータイプ</h2>
+
+<p>{{jsxref("SyntaxError")}}。</p>
+
+<h2 id="What_went_wrong" name="What_went_wrong">何がうまくいかなかったのか？</h2>
+
+<p>関数の呼び出し方にエラーがあります。たとえば、タイポや演算子の記述忘れ、文字列のエスケープミスの可能性が考えられます。</p>
+
+<h2 id="Examples" name="Examples">例</h2>
+
+<p>文字列を連結する "+" 演算子がないため、JavaScript は <code>log</code> 関数の引数として、<code>"PI: "</code> だけを想定します。この場合、閉じ括弧で終了する必要があります。</p>
+
+<pre class="brush: js example-bad">console.log('PI: ' Math.PI);
+// SyntaxError: missing ) after argument list
+</pre>
+
+<p>"<code>+</code>" 演算子を追加することで、<code>log</code> の呼び出しを修正できます：</p>
+
+<pre class="brush: js example-good">console.log('PI: ' + Math.PI);
+// "PI: 3.141592653589793"</pre>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/JavaScript/Guide/Functions">関数</a></li>
+</ul>

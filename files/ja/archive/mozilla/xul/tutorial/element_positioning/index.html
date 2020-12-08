@@ -1,0 +1,274 @@
+---
+title: ウィンドウ要素の配置
+slug: Archive/Mozilla/XUL/Tutorial/Element_Positioning
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Element_Positioning
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:The_Box_Model" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Box_Model_Details">次のページ  »</a></p>
+</div>
+
+<p>このセクションでは、要素の位置とサイズの制御について見ていきます。</p>
+
+<p><span id="Box_Element_Positioning"></span></p>
+
+<h2 id=".E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9.E8.A6.81.E7.B4.A0.E3.81.AE.E9.85.8D.E7.BD.AE" name=".E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9.E8.A6.81.E7.B4.A0.E3.81.AE.E9.85.8D.E7.BD.AE">ボックス要素の配置</h2>
+
+<p><a href="ja/XUL_Tutorial/The_Box_Model">前のセクション</a>では、ボックス内部の要素を水平方向と垂直方向に配置する方法について学びました。 実際には、ボックス内での要素の位置やサイズをさらに細かく制御する必要がある場面も多いはずです。 これらについて説明をはじめる前に、まずボックスがどのように動作するのかを確認しておきます。</p>
+
+<p>要素の位置は、その要素が置かれるボックスのレイアウトスタイルによって決定されます。 例えば、水平ボックス内のボタンの位置は、前にボタンがある場合その右側になります。 また、要素のサイズは、「その要素にとって必要なサイズ」と「明示的に指定されたサイズ」の 2 つの要因によって決まります。 まず「その要素にとって必要なサイズ」は、要素の中に何があるのかによって決まります。 例えば、ボタンの幅ならば、中のテキストの長さで決まることになります。</p>
+
+<p>一般的に、要素はその内容を収めるために最低限必要な大きさになります。 または、テキスト入力欄 (<code><code><a href="/ja/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code></code>) のように、要素によっては、使用される際のデフォルトサイズを持っているものもあります。 ボックスは、中に置かれた要素を収めるのに十分な大きさになります。 例えば、内部に 3 つのボタンがある水平ボックスの場合、3 つのボタンの大きさに若干の<span style="border-bottom: 1px dashed green;" title="padding">パディング</span>を加えた幅になります。</p>
+
+<div class="float-right"><img alt="画像:boxstyle1n.png"></div>
+
+<p>この画像で、最初の 2 つのボタンは、テキストを置くのに適切なサイズになっています。 3 番目のボタンは他より大きいですが、これはより多くの内容が含まれているためです。 ボタンが置かれているボックスの幅は、ボタンの幅の合計にボタン間のパディングを加えたものです。 ボタンの高さも、テキストを置くのに適切なサイズになっています。</p>
+
+<p><span id="Width_and_height_attributes"></span></p>
+
+<h3 id="width_.E5.B1.9E.E6.80.A7.E3.81.A8_height_.E5.B1.9E.E6.80.A7" name="width_.E5.B1.9E.E6.80.A7.E3.81.A8_height_.E5.B1.9E.E6.80.A7">width 属性と height 属性</h3>
+
+<p>ウィンドウ内の要素のサイズを詳細に制御したい場合もあると思います。 要素のサイズを制御するための機能は数多くありますが、 手っ取り早い方法は、HTML の <code>img</code> タグで行なうように、 要素に <code><code id="a-width"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/width">width</a></code></code> と <code><code id="a-height"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/height">height</a></code></code> 属性を追加することです。 以下に例を示します。</p>
+
+<p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_1.xul">表示</a></p>
+
+<pre>&lt;button label="OK" width="100" height="40"/&gt;
+</pre>
+
+<p>しかしながら、この方法は推奨しません。 移植や流用性が低くなりますし、XUL ファイル中で指定されたサイズが適さないテーマ (スキン) があるかもしれないからです。 もっとよい方法は、HTML のスタイルシートと同様の動作をする、スタイルプロパティを使うことです。 サイズの指定には、以下の CSS プロパティが使えます。</p>
+
+<dl>
+ <dt><a href="/ja/docs/Web/CSS/width" title="CSS の width プロパティは、要素の幅を設定します。既定では、このプロパティはコンテンツ領域の幅を設定しますが、 box-sizing を border-box に設定すると、境界領域の幅を設定します。"><code>width</code></a> </dt>
+ <dd>要素の幅を指定する。</dd>
+ <dt><a href="/ja/docs/Web/CSS/height" title="CSS の height プロパティは、要素の高さを指定します。既定では、このプロパティはコンテンツ領域の高さを定義します。しかし、 box-sizing が border-box に設定されていた場合は、 境界領域の高さを定義します。"><code>height</code></a> </dt>
+ <dd>要素の高さを指定する。</dd>
+</dl>
+
+<p>2 つのプロパティを両方指定した場合、設定された幅と高さの要素が作られます。 どちらか一方のサイズプロパティしか指定しなかった場合は、他方は必要に応じて計算されます。 これらのスタイルプロパティによるサイズ指定の場合、数値の後に単位をつけて指定する必要があります。(例: 80px)</p>
+
+<p><span id="Flexible_elements"></span></p>
+
+<h4 id=".E4.BC.B8.E7.B8.AE.E5.8F.AF.E8.83.BD.E3.81.AA.E8.A6.81.E7.B4.A0" name=".E4.BC.B8.E7.B8.AE.E5.8F.AF.E8.83.BD.E3.81.AA.E8.A6.81.E7.B4.A0">伸縮可能な要素</h4>
+
+<p><span style="border-bottom: 1px dashed green;" title="non-flexible">伸縮しない</span>要素の場合、実際のサイズを計算するのは非常に簡単です。 要素の大きさは、幅や高さが指定されている場合、単純に指定された値に従います。 サイズが指定されなかった場合、要素のデフォルトサイズとして、その内容が適切に収まる大きさになります。 <span style="border-bottom: 1px dashed green;" title="flexible">伸縮可能</span>な要素の場合、サイズの算出は少々トリッキーです。</p>
+
+<p>伸縮可能な要素とは、0 より大きな値に設定された <code><code id="a-flex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code> 属性をもつ要素のことです。 <a href="ja/XUL_Tutorial/Using_Spacers">以前のセクション</a>で説明したとおり、伸縮可能な要素は使用できるスペースに応じたサイズに伸縮します。 デフォルトサイズについては、伸縮しない要素の場合と同様に計算されます。 下の例は、このことを示しています。</p>
+
+<p><span id="%E4%BE%8B_2"><a id="%E4%BE%8B_2"></a><strong>例 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_2.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_2.xul">表示</a></p>
+
+<pre>&lt;window orient="horizontal"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;hbox&gt;
+  &lt;button label="Yes" flex="1"/&gt;
+  &lt;button label="No"/&gt;
+  &lt;button label="I really don't know one way or the other"/&gt;
+&lt;/hbox&gt;
+
+&lt;/window&gt;
+</pre>
+
+<p>ウィンドウは、最初は前出の画像の場合と同様に表示されます。 最初の 2 つのボタンは、適切なデフォルト幅で、3 番目のボタンはラベルが長いために、より大きなサイズになります。 最初のボタンは伸縮可能であるように指定されており、3 つの要素はすべて同じボックス内に置かれています。 ボックスの幅は、3 つのボタンすべての幅の合計 (画像では約 430 ピクセル) に初期設定されます。</p>
+
+<p>ウィンドウの幅を広げると、増えたスペースを割り振るために各要素が伸縮可能かどうかチェックされます。 この場合、最初のボタンだけが伸縮可能な要素ではありますが、このボタンが広がることはありません。 これは、ボタンが置かれているボックスが伸縮可能ではないことに起因しています。 つまり、伸縮しない要素は、利用できるスペースが増えてもサイズが変化することはないため、 結果として、その中に置かれたボタンも大きくなることができず、ウィンドウが広がってもボタンは広がらないことになります。</p>
+
+<p>これを解決するには、ボックスも伸縮可能にする必要があります。 そうすれば、ウィンドウを広げて新たなスペースが発生した場合、ボックスがそのスペースを利用して大きくなります。 ボックスが広がったことにより、ボックス内にも新たなスペースが作られることになり、中の伸縮可能なボタンも、増えたスペースに応じた大きさになります。 このプロセスは、入れ子になっているボックス分、必要に応じて繰り返されます。</p>
+
+<p><span id="Setting_Minimum_and_Maximum_Sizes"></span></p>
+
+<h3 id=".E6.9C.80.E5.B0.8F.E3.82.B5.E3.82.A4.E3.82.BA.E3.81.A8.E6.9C.80.E5.A4.A7.E3.82.B5.E3.82.A4.E3.82.BA.E3.82.92.E8.A8.AD.E5.AE.9A.E3.81.99.E3.82.8B" name=".E6.9C.80.E5.B0.8F.E3.82.B5.E3.82.A4.E3.82.BA.E3.81.A8.E6.9C.80.E5.A4.A7.E3.82.B5.E3.82.A4.E3.82.BA.E3.82.92.E8.A8.AD.E5.AE.9A.E3.81.99.E3.82.8B">最小サイズと最大サイズを設定する</h3>
+
+<p>要素を、「指定のサイズ以上に大きくならない」または「指定サイズ以下に小さくならない」といったように、一定の範囲内でのみ伸縮可能であるように制約したい場合があるかもしれません。このためには、以下の 4 つの属性が使用できます。</p>
+
+<dl>
+ <dt><code id="a-minwidth"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/minwidth">minwidth</a></code> </dt>
+ <dd>要素が取ることのできる最小の幅を指定します。</dd>
+ <dt><code id="a-minheight"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/minheight">minheight</a></code> </dt>
+ <dd>要素が取ることのできる最小の高さを指定します。</dd>
+ <dt><code id="a-maxwidth"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/maxwidth">maxwidth</a></code> </dt>
+ <dd>要素が取ることのできる最大の幅を指定します。</dd>
+ <dt><code id="a-maxheight"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/maxheight">maxheight</a></code> </dt>
+ <dd>要素が取ることのできる最大の高さを指定します。</dd>
+</dl>
+
+<p>上記の属性値は、常にピクセルで指定する必要があります。 同じ目的で、CSS の <a href="/ja/docs/Web/CSS/min-width" title="min-width は、要素の最小幅を指定する CSS プロパティです。width プロパティの 使用値 が、min-width で指定した値を下回らないようにします。"><code>min-width</code></a>、<a href="/ja/docs/Web/CSS/min-height" title="CSS の min-height プロパティは要素の最小の高さを設定するのに使われます。height プロパティの 使用値 は、min-height に指定した値よりも小さくなりません。"><code>min-height</code></a>、<a href="/ja/docs/Web/CSS/max-width" title="max-width は要素に与えられる幅の上限を指定する為に用いる CSS プロパティです。このプロパティは、 width プロパティの値が max-width で指定された値より大きくなることを防ぎます。"><code>max-width</code></a>、<a href="/ja/docs/Web/CSS/max-height" title="CSS の max-height プロパティは要素の最大の高さを設定するのに使われます。height プロパティの使用値は、max-height に設定した値よりも大きくなりません。"><code>max-height</code></a> の各プロパティも使用可能です。CSS のプロパティを使用する場合は、複数の単位が使用できるので、数値に単位をつけて指定します。</p>
+
+<p>これらのプロパティは、伸縮可能な要素に対して指定された場合のみ意味を持ちます。 例えば、最大の高さを設定すると、伸縮可能なボタンは、指定された最大の高さまでしか広がることはありません。 ボタンが最大の高さになる大きさを越えてウィンドウを大きくすることはできますが、ボタンは、それ以上は広がりません。 ボタンが置かれているボックスにも最大の高さを設定していなければ、ボックスの方は広がり続けます。</p>
+
+<p>2 つのボタンに設定された伸縮の割合が同じ場合、通常、2 つは増えたスペースを半分づつ分け合います。 一方のボタンに最大幅が設定されている場合、最大幅に達した以降は、もう一方のボタンのみが広がり続け、残りのスペースすべてを占めることになります。</p>
+
+<p>ボックスに最大幅か最大の高さが指定されている場合、子要素はその最大サイズを超えて広がることはできません。 ボックスに最小幅か最小の高さが指定されている場合、子要素はその最小サイズを下回って小さくすることはできません。</p>
+
+<p><span id="Examples_of_setting_widths_and_heights"></span></p>
+
+<h4 id=".E5.B9.85.E3.81.A8.E9.AB.98.E3.81.95.E3.82.92.E8.A8.AD.E5.AE.9A.E3.81.99.E3.82.8B.E4.BE.8B" name=".E5.B9.85.E3.81.A8.E9.AB.98.E3.81.95.E3.82.92.E8.A8.AD.E5.AE.9A.E3.81.99.E3.82.8B.E4.BE.8B">幅と高さを設定する例</h4>
+
+<p>以下に、幅と高さを設定する例をいくつか示します。</p>
+
+<pre>&lt;button label="1" style="width: 100px;"/&gt;
+&lt;button label="2" style="width: 100em; height: 10px;"/&gt;
+&lt;button label="3" flex="1" style="min-width: 50px;"/&gt;
+&lt;button label="4" flex="1" style="min-height: 2ex; max-width: 100px"/&gt;
+&lt;textbox flex="1" style="max-width: 10em;"/&gt;
+&lt;description style="max-width: 50px"&gt;This is some boring but simple
+wrapping text.&lt;/description&gt;
+</pre>
+
+<dl>
+ <dt>例 1 </dt>
+ <dd>最初のボタンは、100 ピクセル (px はピクセルの意味) の幅で表示されます。単位を付ける必要があります。つけないと width の指定は無視されます。</dd>
+ <dt>例 2 </dt>
+ <dd>2 番目のボタンは 10 ピクセルの高さ、100 em (em は現在のフォントで、文字「m」の幅) の幅で表示されます。</dd>
+ <dt>例 3 </dt>
+ <dd>3 番目のボタンは伸縮可能なので、ボタンが置かれているボックスのサイズに従って広がります。しかし、ボタンが 50 ピクセル以下に縮小することはありません。スペーサーなどその他の伸縮可能なコンポーネントが flex の割合を超えて残りのスペースを吸収します。</dd>
+ <dt>例 4 </dt>
+ <dd>4 番目のボタンは伸縮可能ですが 2 ex (ex は現在のフォントで文字「x」の高さ) 以下の高さになったり 100 ピクセル以上の高さになることはありません。</dd>
+ <dt>例 5 </dt>
+ <dd>テキスト入力欄は伸縮可能ですが、10 em 以上に広がることはありません。em は、内部にテキストをもつ要素のサイズを指定する場合には、しばしば使用されます。em でテキスト入力欄のサイズを指定しておくと、フォントが変更されたとき、自動的に新しいフォントで指定された文字数が表示可能な大きさに変更されるため便利です。これは特大のフォントに変更された場合でも動作します。</dd>
+ <dt>例 6 </dt>
+ <dd>　<code><code><a href="/ja/docs/Mozilla/Tech/XUL/description" title="description">description</a></code></code> 要素は、最大幅が 50 ピクセルに制約されています。内部のテキストは、50 ピクセルを超えると、次の行に折り返されます。</dd>
+</dl>
+
+<p><span id="Our_find_files_dialog"></span></p>
+
+<h3 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AE.E4.BE.8B" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AE.E4.BE.8B">ファイル検索ダイアログの例</h3>
+
+<div class="highlight">
+<p>それでは、こうしたスタイルをいくつか、ファイル検索ダイアログに追加してみましょう。 テキスト入力欄をウィンドウ全体に応じたサイズになるようにします。</p>
+
+<pre>&lt;textbox id="find-text" flex="1" style="min-width: 15em;"/&gt;
+</pre>
+
+<p>ここで、テキスト入力欄は伸縮可能に設定されています。 このため、利用者がダイアログのサイズを変更すると、あわせて伸縮します。 これは、利用者が長いテキスト文字列を入力したい場合に便利です。 また、テキスト入力欄に、少なくとも 15 文字は表示されるように、最小幅として 15 em が設定されています。 利用者がダイアログを非常に小さいサイズにしても、テキスト入力欄は、15 em 以下に縮小することはありません。 その場合、テキスト入力は、ウィンドウの端を超えて広がっているように描画されます。 以下の画像で、テキスト入力欄がウィンドウいっぱいに広がっている点に注意して下さい。 <img alt="画像:boxstyle1.png"></p>
+
+<p><span id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"><a id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"></a><strong>ここまでのファイル検索ダイアログの例</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxstyle.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxstyle.xul">表示</a></p>
+</div>
+
+<p><span id="Box_Packing"></span></p>
+
+<h2 id=".E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9.E5.86.85.E3.81.AE.E8.A6.81.E7.B4.A0.E3.81.AE.E3.81.BE.E3.81.A8.E3.82.81.E6.96.B9_.28Packing.29" name=".E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9.E5.86.85.E3.81.AE.E8.A6.81.E7.B4.A0.E3.81.AE.E3.81.BE.E3.81.A8.E3.82.81.E6.96.B9_.28Packing.29">ボックス内の要素のまとめ方 (Packing)</h2>
+
+<p>子要素 2 つが置かれているボックスがあり、子要素はいずれも伸縮可能ではなく、ボックスは伸縮可能であるとします。 具体的には以下のようなものです。</p>
+
+<p><span id="%E4%BE%8B_3"><a id="%E4%BE%8B_3"></a><strong>例 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_3.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_3.xul">表示</a></p>
+
+<pre>&lt;box flex="1"&gt;
+  &lt;button label="Happy"/&gt;
+  &lt;button label="Sad"/&gt;
+&lt;/box&gt;
+</pre>
+
+<p>ウィンドウのサイズを変更すると、ボックスはウィンドウのサイズに応じた大きさになります。 ボタンは伸縮可能ではないので、その幅は変わりません。 そのため、ボックス内部で増えたスペースが、ウィンドウの右の方に表示されます。 しかし、ここでは増えたスペースを左側に表示させて、ボタンをウィンドウ内で右寄せにしたかったとします。</p>
+
+<p>これはボックス内にスペーサーを置くことで可能ですが、たくさん指定する必要がある場合は煩雑になります。 ボックスの追加属性 <code><code id="a-pack"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/pack">pack</a></code></code> を使うことで、もっと簡単に指示することができます。 この属性は、ボックス内で子要素をまとめておく位置を指定します。 水平ボックスの場合、これは、子要素の水平方向の配置をコントロールします。 垂直ボックスの場合は、子要素の垂直方向の配置をコントロールします。 以下の値が指定可能です。</p>
+
+<dl>
+ <dt>start </dt>
+ <dd>子要素を、水平ボックスの場合左端に、垂直ボックスの場合上端に配置します。これがデフォルト値になります。</dd>
+ <dt>center </dt>
+ <dd>子要素をボックスの中央に配置します。</dd>
+ <dt>end </dt>
+ <dd>子要素を、水平ボックスの場合右端に、垂直ボックスの場合下端に配置します。</dd>
+</dl>
+
+<p><code><code id="a-pack"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/pack">pack</a></code></code> 属性はまとめたい要素を含むボックスに設定するもので、まとめたい要素自身に設定するものではありません。</p>
+
+<p>以前の例を変更して、次のように、要素を中央に置くことができます。</p>
+
+<p><span id="%E4%BE%8B_4"><a id="%E4%BE%8B_4"></a><strong>例 4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_4.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_4.xul">表示</a></p>
+
+<pre>&lt;box flex="1" pack="center"&gt;
+  &lt;button label="Happy"/&gt;
+  &lt;button label="Sad"/&gt;
+&lt;/box&gt;
+</pre>
+
+<p>今回の例は、ウィンドウのサイズが変更されると、ボタン自身で水平位置が中央になるように移動します。 この動きを前の例と比べてみてください。</p>
+
+<p><span id="Box_Alignment"></span></p>
+
+<h2 id=".E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9.E5.86.85.E3.81.AE.E8.A6.81.E7.B4.A0.E3.81.AE.E3.81.9D.E3.82.8D.E3.81.88.E6.96.B9_.28Alignment.29" name=".E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9.E5.86.85.E3.81.AE.E8.A6.81.E7.B4.A0.E3.81.AE.E3.81.9D.E3.82.8D.E3.81.88.E6.96.B9_.28Alignment.29">ボックス内の要素のそろえ方 (Alignment)</h2>
+
+<p>上の Happy-Sad の例で、ウィンドウを水平方向にリサイズすると、ボックスの幅が変わります。 さらに、ウィンドウを垂直方向にリサイズした場合、ボタンの高さがそれに応じて変わることを確認できるはずです。 これは、デフォルトで、垂直方向に伸縮可能であることが設定されているためです。</p>
+
+<p>この振る舞いは、<code><code id="a-align"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/align">align</a></code></code> 属性を使ってコントロールできます。 水平ボックスの場合、子要素の垂直方向の配置をコントロールします。 垂直ボックスの場合、子要素の水平方向の配置をコントロールします。 指定できる値は、<code><code id="a-pack"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/pack">pack</a></code></code> に似ています。</p>
+
+<dl>
+ <dt>start </dt>
+ <dd>子要素を、水平ボックスの場合は上端に沿って、垂直ボックスの場合は左端に沿って配置します。</dd>
+ <dt>center </dt>
+ <dd>子要素をボックスの中央に配置します。</dd>
+ <dt>end </dt>
+ <dd>子要素を、水平ボックスの場合は下端に沿って、垂直ボックスの場合は右端に沿って配置します。</dd>
+ <dt>baseline </dt>
+ <dd>子要素を、テキストの基準線にそって配置します。この値は水平ボックスのみ意味を持ちます。</dd>
+ <dt>stretch </dt>
+ <dd>子要素をボックスのサイズに応じて<span style="border-bottom: 1px dashed green;" title="stretch">伸張</span>させます。この値がデフォルトです。これは<span style="border-bottom: 1px dashed green;" title="flexible">伸縮可能</span>な要素と似ていますが、伸縮する方向が異なります。</dd>
+</dl>
+
+<p><code><code id="a-pack"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/pack">pack</a></code></code> 属性と同様に、<code><code id="a-align"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/align">align</a></code></code> 属性もそろえたい要素を含むボックスに設定するもので、そろえたい要素自身に設定するものではありません。</p>
+
+<p>例を示します。 下の最初のボックスは、デフォルトなので子要素を<span style="border-bottom: 1px dashed green;" title="stretch">伸張</span>させます。 2 番目のボックスは <code><code id="a-align"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/align">align</a></code></code> 属性が設定されているので、子要素は中央に置かれます。</p>
+
+<p><span id="%E4%BE%8B_5"><a id="%E4%BE%8B_5"></a><strong>例 5</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_5.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_5.xul">表示</a></p>
+
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;window id="yesno" title="Question" orient="horizontal"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+  &lt;hbox&gt;
+    &lt;button label="Yes"/&gt;
+    &lt;button label="No"/&gt;
+  &lt;/hbox&gt;
+  &lt;hbox align="center"&gt;
+    &lt;button label="Maybe"/&gt;
+    &lt;button label="Perhaps"/&gt;
+  &lt;/hbox&gt;
+
+&lt;/window&gt;
+</pre>
+
+<div class="float-right"><img alt="画像:boxstyle2-b.png"></div>
+
+<p>属性で指定する代わりに、スタイルプロパティ <a href="/ja/docs/Web/CSS/-moz-box-pack" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>-moz-box-pack</code></a> と <a href="/ja/docs/Web/CSS/-moz-box-align" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>-moz-box-align</code></a> を使うこともできます。</p>
+
+<div class="note"><a class="external" href="http://developer.mozilla.org/samples/xultu/examples/aligner.xul">Box Alignment Example</a> では、さまざまなボックスのプロパティを試してみることができて便利です。</div>
+
+<p><span id=""></span></p>
+
+<h2 id=".E3.83.86.E3.82.AD.E3.82.B9.E3.83.88.E3.81.AE.E5.88.87.E3.82.8A.E5.8F.96.E3.82.8A.E3.81.A8.E3.83.9C.E3.82.BF.E3.83.B3" name=".E3.83.86.E3.82.AD.E3.82.B9.E3.83.88.E3.81.AE.E5.88.87.E3.82.8A.E5.8F.96.E3.82.8A.E3.81.A8.E3.83.9C.E3.82.BF.E3.83.B3">テキストの切り取りとボタン</h2>
+
+<p>ボタンの最大幅以上の大きさのラベルをもつボタン要素を作ってしまう可能性があります。 通常は、その場合の動作としては、ボタンのサイズを大きくして解決します。 それ以外の方法として、ボタンなどのラベルを持った要素には、<code><code id="a-crop"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/crop">crop</a></code></code> と呼ばれる特別な属性があり、これを使うとテキストが大きくなりすぎた場合、その<span style="border-bottom: 1px dashed green;" title="crop">切り取り方</span>を指定できます。</p>
+
+<p>テキストが切り取られた場合、ボタンに、テキストが切り取られたことを示す<span style="border-bottom: 1px dashed green;" title="ellipsis">省略符号</span> (...) が表示されます。 以下の 4 つの値が有効です。</p>
+
+<dl>
+ <dt>left </dt>
+ <dd>テキストの左側が切り取られます。</dd>
+ <dt>right </dt>
+ <dd>テキストの右側が切り取られます。</dd>
+ <dt>center </dt>
+ <dd>テキストの両側が切り取られます。</dd>
+ <dt>none </dt>
+ <dd>テキストの切り取りは行われません。これがデフォルト値です。</dd>
+</dl>
+
+<p>この属性は、実際には、ダイアログが任意のサイズで使えるように設計されている場合にのみ役立ちます。 <code><code id="a-crop"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/crop">crop</a></code></code> 属性は <code><code><a href="/ja/docs/Mozilla/Tech/XUL/description" title="description">description</a></code></code> 要素や、<code><code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> 属性を伴う要素とともに使うことができます。 次の例は、この属性の使用例を示しています。</p>
+
+<p><span id="%E4%BE%8B_6"><a id="%E4%BE%8B_6"></a><strong>例 6</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_6.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_6.xul">表示</a></p>
+
+<pre>&lt;button label="Push Me Please!" crop="right" flex="1"/&gt;
+</pre>
+
+<div class="float-right"><img alt="画像:boxstyle2.png"></div>
+
+<p>ウィンドウが小さくなった後、どのようにボタン上のテキストがその右側を切り取られたかを確認してください。 次は、ボックスモデルの要約といくつか付加的な詳細について説明します。</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:The_Box_Model" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Box_Model_Details">次のページ  »</a></p>
+</div>

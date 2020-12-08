@@ -1,0 +1,114 @@
+---
+title: handler.enumerate()
+slug: Archive/Web/JavaScript/handler.enumerate
+translation_of: Archive/Web/JavaScript/handler.enumerate
+---
+<div>{{JSRef}} {{obsolete_header}}</div>
+
+<p>代理方法<strong><code>handler.enumerate()</code></strong>决定了被代理对象在{{jsxref("Statements/for...in", "for...in")}}中的行为。不过这个方法已经在ES2016标准中被移除了。</p>
+
+<h2 id="语法">语法</h2>
+
+<pre class="brush: js notranslate">var p = new Proxy(target, {
+  enumerate(target) {
+  }
+});
+</pre>
+
+<h3 id="参数">参数</h3>
+
+<p>下列参数将会被用以调用 <code>enumerate</code> 方法。this将会指向处理器对象。</p>
+
+<dl>
+ <dt><code>target</code></dt>
+ <dd>被代理的目标对象。</dd>
+</dl>
+
+<h3 id="Return_value">Return value</h3>
+
+<p>该方法应当返回一个<a href="/zh-CN/docs/Web/JavaScript/Guide/The_Iterator_protocol">迭代器</a>对象。</p>
+
+<h2 id="描述">描述</h2>
+
+<p><code><strong>handler.enumerate</strong></code> 方法决定了被代理对象在{{jsxref("Statements/for...in", "for...in")}}时的行为。</p>
+
+<h3 id="触发条件">触发条件</h3>
+
+<p>这些操作可以触发这个方法。</p>
+
+<ul>
+ <li>for...in: <code>for (var name in proxy) {...}</code></li>
+ <li>{{jsxref("Reflect.enumerate()")}}</li>
+</ul>
+
+<h3 id="Invariants">Invariants</h3>
+
+<p>If the following invariants are violated, the proxy will throw a {{jsxref("TypeError")}}:</p>
+
+<ul>
+ <li>The <code>enumerate</code> method must return an object.</li>
+</ul>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The following code traps {{jsxref("Statements/for...in", "for...in")}} statements.</p>
+
+<pre class="brush: js notranslate">var p = new Proxy({}, {
+  enumerate(target) {
+    console.log('called');
+    return ['a', 'b', 'c'][Symbol.iterator]();
+  }
+});
+
+for (var x in p) { // "called"
+  console.log(x);  // "a"
+}                  // "b"
+                   // "c"
+</pre>
+
+<p>The following code violates the invariant.</p>
+
+<pre class="brush: js notranslate">var p = new Proxy({}, {
+  enumerate(target) {
+    return 1;
+  }
+});
+
+for (var x in p) {} // TypeError is thrown
+</pre>
+
+<p>Note: Both examples make use of the shorthand syntax for <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">method definitions</a>.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-enumerate', '[[Enumerate]]')}}</td>
+   <td>{{Spec2('ES2015')}}</td>
+   <td>Initial definition. Removed in ECMAScript 2016.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div>
+
+
+<p>{{Compat("javascript.builtins.Proxy.handler.enumerate")}}</p>
+</div>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{jsxref("Proxy")}}</li>
+ <li>{{jsxref("Proxy.handler", "handler")}}</li>
+ <li>{{jsxref("Statements/for...in", "for...in")}} statements</li>
+ <li>{{jsxref("Reflect.enumerate()")}}</li>
+</ul>

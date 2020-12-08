@@ -1,0 +1,29 @@
+---
+title: Navigator (Firefox OS extensions)
+slug: Archive/B2G_OS/API/Navigator
+tags:
+  - API
+  - Firefox OS
+  - Interface
+  - Navigator
+  - NeedsTranslation
+  - Non-standard
+  - TopicStub
+translation_of: Archive/B2G_OS/API/Navigator
+---
+<p></p><section class="Quick_links" id="Quick_Links"><ol><li><strong><a href="/ja/docs/Mozilla/Firefox_OS/API/Archive"><code>Archive</code></a></strong></li></ol></section><p></p>
+
+<p>The <code><strong>Navigator</strong></code> interface represents the state and the identity of the user agent. It allows scripts to query it and to register themselves to carry on some activities. This page represents the list of properties and methods added to <code>Navigator</code> on Firefox OS devices. For the list of properties and methods available to any Web sites, consult <a href="/ja/docs/Web/API/Navigator" title="Navigator インターフェイスは、ユーザーエージェントの状態や身元情報を表します。スクリプトからその情報を問い合わる、および活動を続けるためにそれら自体を登録することができます。"><code>Navigator</code></a>.</p>
+
+<p>A <code>Navigator</code> object can be retrieved using the read-only <a href="/ja/docs/Web/API/Window/navigator" title="navigator オブジェクトへの参照を返します。 navigator オブジェクトを用いることで、スクリプトを実行しているアプリケーションについての情報を得ることができます。"><code>Window.navigator</code></a> property.</p>
+
+<h2 id="Properties">Properties</h2>
+
+<dl>
+ <dt><a href="/ja/docs/Web/API/Navigator/Bluetooth" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>Navigator.Bluetooth</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">読取専用 </span> <span title="この API は標準化されていません。"><i class="icon-warning-sign"> </i></span></dt>
+ <dd>Returns a <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Promise オブジェクトは非同期処理の最終的な完了処理(もしくは失敗)およびその結果の値を表現します。"><code>Promise</code></a> to a <a href="/ja/docs/Web/API/BluetoothDevice" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>BluetoothDevice</code></a> object with the specified options.</dd>
+ <dt><a href="/ja/docs/Web/API/Navigator/mozApps" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>Navigator.mozApps</code></a> <span title="この API は標準化されていません。"><i class="icon-warning-sign"> </i></span></dt>
+ <dd>Returns an <a href="/ja/docs/Web/API/Window/navigator/mozApps" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>Apps</code></a> object you can use to install, manage, and control <a href="/Open_Web_Apps" title="Open Web apps">Open Web apps</a>.</dd>
+ <dt><a href="/ja/docs/Web/API/Navigator/mozAudioChannelManager" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>Navigator.mozAudioChannelManager</code></a> <span title="この API は標準化されていません。"><i class="icon-warning-sign"> </i></span></dt>
+ <dd>The <code>navigator.mozAudioChannelManager</code> object provides access to the <a href="/ja/docs/Web/API/MozAudioChannelManager" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>mozAudioChannelManager</code></a> interface, which is used to manage your Firefox OS device's audio channels, including setting what channel's volume to affect when the volume buttons are pressed inside a particular app.</dd>
+</dl>

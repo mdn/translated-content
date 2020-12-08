@@ -1,0 +1,366 @@
+---
+title: tabbrowser
+slug: Archive/Mozilla/XUL/tabbrowser
+tags:
+  - XUL Elements
+  - XUL Reference
+translation_of: Archive/Mozilla/XUL/tabbrowser
+---
+<div class="noinclude"><span class="breadcrumbs XULRef_breadcrumbs">
+ « <a href="/ja/docs/XUL/XUL_Reference">XUL リファレンス HOME</a>    [
+ <a href="#Examples">例</a> |
+ <a href="#Attributes">属性</a> |
+ <a href="#Properties">プロパティ</a> |
+ <a href="#Methods">メソッド</a> |
+ <a href="#Related">関連項目</a> ]
+</span></div>
+<p>この要素は Web ドキュメントの読み込み専用表示の一式を保持するために使用されます。これは <code><a href="/ja/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code> 要素に似ていますが、複数のドキュメントをそれぞれ区切られたタブで表示できます。</p>
+<div class="blockIndicator note"><strong>註:</strong> Firefox 3 (XULRunner/Gecko 1.9) 以降、この要素は Firefox のメインウィンドウでのみ使用され、サードパティ製のアプリケーションや拡張機能による他の XUL ウィンドウで使用することはできません。</div>
+<dl> <dt>属性</dt> <dd><a href="#a-autocompleteenabled">autocompleteenabled</a>, <a href="#a-autocompletepopup">autocompletepopup</a>, <a href="#a-autoscroll">autoscroll</a>, <a href="#a-contentcontextmenu">contentcontextmenu</a>, <a href="#a-contenttooltip">contenttooltip</a>, <a href="#a-handleCtrlPageUpDown">handleCtrlPageUpDown</a>, <a href="#a-onbookmarkgroup">onbookmarkgroup</a>, <a href="#a-onnewtab">onnewtab</a>, <a href="#a-tabmodalPromptShowing">tabmodalPromptShowing</a></dd>
+</dl>
+<dl> <dt>プロパティ</dt> <dd><a href="#p-browsers">browsers</a>, <a href="#p-canGoBack">canGoBack</a>, <a href="#p-canGoForward">canGoForward</a>, <a href="#p-contentDocument">contentDocument</a>, <a href="#p-contentTitle">contentTitle</a>, <a href="#p-contentViewerEdit">contentViewerEdit</a>, <a href="#p-contentViewerFile">contentViewerFile</a>, <a href="#p-contentWindow">contentWindow</a>, <a href="#p-currentURI">currentURI</a>, <a href="#p-docShell">docShell</a>, <a href="#p-documentCharsetInfo">documentCharsetInfo</a>, <a href="#p-homePage">homePage</a>, <a href="#p-markupDocumentViewer">markupDocumentViewer</a>, <a href="#p-securityUI">securityUI</a>, <a href="#p-selectedBrowser">selectedBrowser</a>, <a href="#p-selectedTab">selectedTab</a>, <a href="#p-sessionHistory">sessionHistory</a>, <a href="#p-tabContainer">tabContainer</a>, <a href="#p-tabs">tabs</a>, <a href="#p-visibleTabs">visibleTabs</a>, <a href="#p-webBrowserFind">webBrowserFind</a>, <a href="#p-webNavigation">webNavigation</a>, <a href="#p-webProgress">webProgress</a></dd>
+</dl>
+<dl> <dt>メソッド</dt> <dd><a href="#m-addProgressListener">addProgressListener</a>, <a href="#m-addTab">addTab</a>, <a href="#m-addTabsProgressListener">addTabsProgressListener</a>,<a href="#m-appendGroup">appendGroup</a>, <a href="#m-getBrowserAtIndex">getBrowserAtIndex</a>, <a href="#m-getBrowserIndexForDocument">getBrowserIndexForDocument</a>, <a href="#m-getBrowserForDocument">getBrowserForDocument</a>, <a href="#m-getBrowserForTab">getBrowserForTab</a>, <a href="#m-getIcon">getIcon</a>, <a href="#m-getNotificationBox">getNotificationBox</a>, <a href="#m-getTabModalPromptBox">getTabModalPromptBox</a>, <a href="#m-goBack">goBack</a>, <a href="#m-goBackGroup">goBackGroup</a>, <a href="#m-goForward">goForward</a>, <a href="#m-goForwardGroup">goForwardGroup</a>, <a href="#m-goHome">goHome</a>, <a href="#m-gotoIndex">gotoIndex</a>, <a href="#m-loadGroup">loadGroup</a>, <a href="#m-loadOneTab">loadOneTab</a>, <a href="#m-loadTabs">loadTabs</a>, <a href="#m-loadURI">loadURI</a>, <a href="#m-loadURIWithFlags">loadURIWithFlags</a>, <a href="#m-moveTabTo">moveTabTo</a>, <a href="#m-pinTab">pinTab</a>, <a href="#m-reload">reload</a>, <a href="#m-reloadAllTabs">reloadAllTabs</a>, <a href="#m-reloadTab">reloadTab</a>, <a href="#m-reloadWithFlags">reloadWithFlags</a>, <a href="#m-removeAllTabsBut">removeAllTabsBut</a>, <a href="#m-removeCurrentTab">removeCurrentTab</a>, <a href="#m-removeProgressListener">removeProgressListener</a>, <a href="#m-removeTab">removeTab</a>, <a href="#m-removeTabsProgressListener">removeTabsProgressListener</a>,<a href="#m-replaceGroup">replaceGroup</a>, <a href="#m-selectTabAtIndex">selectTabAtIndex</a>, <a href="#m-setIcon">setIcon</a>, <a href="#m-showOnlyTheseTabs">showOnlyTheseTabs</a>, <a href="#m-stop">stop</a>, <a href="#m-unpinTab">unpinTab</a></dd>
+</dl>
+<h3 id="Attributes" name="Attributes">属性</h3>
+<p> </p><div id="a-autocompleteenabled">
+
+<dl><dt> <code id="a-autocompleteenabled"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/autocompleteenabled">autocompleteenabled</a></code> </dt><dd> 型: <em>論理型</em> </dd><dd> フィールドの自動補完を有効にするには <code>true</code> に設定してください。 </dd></dl>
+
+</div> <div id="a-autocompletepopup">
+
+<dl><dt> <code id="a-autocompletepopup"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/autocompletepopup">autocompletepopup</a></code> </dt><dd> 型: <em>popup 要素の id</em> </dd><dd> <code><a href="/ja/docs/Mozilla/Tech/XUL/popup" title="popup">popup</a></code> 要素の <code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code> は、要素のための自動補完の候補を保持します。 </dd></dl>
+
+</div> <div id="a-autoscroll">
+
+<dl><dt> <code id="a-autoscroll"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/autoscroll">autoscroll</a></code> </dt><dd> 型: <em>論理型</em> </dd><dd> この browser の自動スクロールを無効にするには <code>false</code> に設定します。この属性を <code>true</code> に設定するか省略した場合、自動スクロールが有効になるか、ユーザ設定の <code>general.autoScroll</code> に従います。 </dd></dl>
+
+</div> <div id="a-contentcontextmenu">
+
+<dl>
+  <dt>
+    <code id="a-contentcontextmenu"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/contentcontextmenu">contentcontextmenu</a></code></dt>
+  <dd>
+    型: <em><code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> 要素の id</em></dd>
+  <dd>
+    <code><a href="/ja/docs/Mozilla/Tech/XUL/tabbrowser" title="tabbrowser">tabbrowser</a></code> 内のコンテンツ領域のためのコンテキストメニューへの参照</dd>
+</dl>
+</div> <div id="a-contenttooltip">
+
+<dl>
+  <dt>
+    <code id="a-contenttooltip"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/contenttooltip">contenttooltip</a></code></dt>
+  <dd>
+    型: <em><code><a href="/ja/docs/Mozilla/Tech/XUL/tooltip" title="tooltip">tooltip</a></code> 要素の id</em></dd>
+  <dd>
+    <code><a href="/ja/docs/Mozilla/Tech/XUL/tabbrowser" title="tabbrowser">tabbrowser</a></code> 内のコンテンツ領域で使用される <code><a href="/ja/docs/Mozilla/Tech/XUL/tooltip" title="tooltip">tooltip</a></code> 要素への参照。</dd>
+</dl>
+</div> <div id="a-handleCtrlPageUpDown">
+
+<dl><dt> <code id="a-handleCtrlPageUpDown"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/handleCtrlPageUpDown">handleCtrlPageUpDown</a></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code>true</code> に設定するか省略した場合、Ctrl を押しながら Page Up または Page Down キーを押すと、次のタブや前のタブに切り替えられます。この属性を <code>false</code> に設定した場合、これらのキーはタブ操作を行いません。 </dd></dl>
+
+</div> <div id="a-onbookmarkgroup">
+
+<dl><dt> <code id="a-onbookmarkgroup"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/onbookmarkgroup">onbookmarkgroup</a></code> </dt><dd> <strong><span class="highlightred">Firefox では使用不可</span></strong> </dd><dd> 型: <em>スクリプトコード</em> </dd><dd> このコードは、ユーザが "すべてのタブをブックマーク" コマンドを選んだ時に実行されます。 </dd></dl>
+
+</div> <div id="a-onnewtab">
+
+<dl><dt> <code id="a-onnewtab"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/onnewtab">onnewtab</a></code> </dt><dd> <strong><span class="highlightred">Firefox では使用不可</span></strong> </dd><dd> 型: <em>スクリプトコード</em> </dd><dd> このスクリプトは new tab ボタンがクリックされた時に呼び出されます。 </dd></dl>
+
+</div> <div id="a-tabmodalPromptShowing">
+
+<dl> <dt><code id="a-tabmodalPromptShowing"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/tabmodalPromptShowing">tabmodalPromptShowing</a></code> </dt> <dd>Type: <em>integer</em></dd> <dd>The number of tab modal prompts currently attached to the current tab.</dd>
+</dl>
+</div>
+<h3 id="Properties" name="Properties">プロパティ</h3>
+<p> </p><div id="p-browsers">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/browsers">browsers</a></span></code> </dt><dd> 型: <em><code><a href="/ja/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code> 要素のノードリスト</em> </dd><dd> <code><a href="/ja/docs/Mozilla/Tech/XUL/tabbrowser" title="tabbrowser">tabbrowser</a></code> 内の <code><a href="/ja/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code> 要素のリストを保持します。 </dd></dl>
+</div> <div id="p-canGoBack">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/canGoBack">canGoBack</a></span></code> </dt><dd> 型: <em>論理型</em> </dd><dd> セッション履歴で前のページに移動できるとき、このプロパティは true になり、Back ボタンが有効になります。このプロパティは読み取り専用です。 </dd></dl>
+</div> <div id="p-canGoForward">
+<dl><dt> <code><span><a href="http://api/ja/docs/XUL/Property/canGoForward">canGoForward</a></span></code> </dt><dd> 型: <em>論理型</em> </dd><dd> セッション履歴で次のページに移動できるとき、このプロパティは <code>true</code> になり、Forward ボタンが有効になります。このプロパティは読み取り専用です。 </dd></dl>
+</div> <div id="p-contentDocument">
+<dl><dt> <code><span><a href="http://api/ja/docs/XUL/Property/contentDocument">contentDocument</a></span></code> </dt><dd> 型: <em>document</em> </dd><dd> この読み取り専用のプロパティは要素内の document オブジェクトを含みます。 </dd></dl>
+</div> <div id="p-contentTitle">
+<dl><dt> <code><span><a href="http://api/ja/docs/XUL/Property/contentTitle">contentTitle</a></span></code> </dt><dd> 型: <em>文字列型</em> </dd><dd> この読み取り専用のプロパティは browser 内の document オブジェクトの title を含みます。 </dd></dl>
+</div> <div id="p-contentViewerEdit">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/contentViewerEdit">contentViewerEdit</a></span></code> </dt><dd> 型: <em><a href="/ja/NsIContentViewerEdit" title="ja/NsIContentViewerEdit">nsIContentViewerEdit</a></em> </dd><dd> この読み取り専用のプロパティは、document 上のクリップボード操作を扱う <a href="/ja/NsIContentViewerEdit" title="ja/NsIContentViewerEdit">nsIContentViewerEdit</a> を含みます。 </dd></dl>
+</div> <div id="p-contentViewerFile">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/contentViewerFile">contentViewerFile</a></span></code> </dt><dd> 型: <em><a href="/ja/NsIContentViewerFile" title="ja/NsIContentViewerFile">nsIContentViewerFile</a></em> </dd><dd> document の <a href="/ja/NsIContentViewerFile" title="ja/NsIContentViewerFile">nsIContentViewerFile</a> インタフェースへの参照。 </dd></dl>
+</div> <div id="p-contentWindow">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/contentWindow">contentWindow</a></span></code></dt>
+ <dd>
+  型: <em>window</em></dd>
+ <dd>
+  この読み取り専用のプロパティは要素内の window オブジェクトを含みます。</dd>
+</dl>
+
+<p> </p></div> <div id="p-currentURI">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/currentURI">currentURI</a></span></code> </dt><dd> 型: <a href="/ja/NsIURI" title="ja/NsIURI">nsIURI</a> </dd><dd> この読み取り専用のプロパティは現在読み込まれている URL を含みます。URL を変更するには <span id="m-loadURI"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/loadURI">loadURI</a></code></span> メソッドを使用してください。 </dd></dl>
+</div> <div id="p-docShell">
+<dl><dt> <code><span><a href="http://api/ja/docs/XUL/Property/docShell">docShell</a></span></code> </dt><dd> 型: <em><a href="/ja/NsIDocShell" title="ja/NsIDocShell">nsIDocShell</a></em> </dd><dd> この読み取り専用のプロパティは document の <a href="/ja/NsIDocShell" title="ja/NsIDocShell">nsIDocShell</a> オブジェクトを含みます。 </dd></dl>
+</div> <div id="p-documentCharsetInfo">
+<dl><dt> <code><span><a href="http://api/ja/docs/XUL/Property/documentCharsetInfo">documentCharsetInfo</a></span></code> </dt><dd> 型: <em><a href="/ja/NsIDocumentCharsetInfo" title="ja/NsIDocumentCharsetInfo">nsIDocumentCharsetInfo</a></em> </dd><dd> この読み取り専用のプロパティは document の <a href="/ja/NsIDocumentCharsetInfo" title="ja/NsIDocumentCharsetInfo">nsIDocumentCharsetInfo</a> オブジェクトを含みます。このオブジェクトは document の表示に使用される文字セットを扱うために使用します。 </dd></dl>
+</div> <div id="p-homePage">
+<dl><dt> <code><span><a href="http://api/ja/docs/XUL/Property/homePage">homePage</a></span></code> </dt><dd> 型: <em>ホームページ URL の文字列</em> </dd><dd> このプロパティはユーザのホームページ設定の値を保持します。 </dd></dl>
+</div> <div id="p-markupDocumentViewer">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/markupDocumentViewer">markupDocumentViewer</a></span></code> </dt><dd> 型: <em><a href="/ja/NsIMarkupDocumentViewer" title="ja/NsIMarkupDocumentViewer">nsIMarkupDocumentViewer</a></em> </dd><dd> この読み取り専用のプロパティは、document を描画する <a href="/ja/NsIMarkupDocumentViewer" title="ja/NsIMarkupDocumentViewer">nsIMarkupDocumentViewer</a> を含みます。 </dd></dl>
+</div> <div id="p-securityUI">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/securityUI">securityUI</a></span></code> </dt><dd> 型: <em><a href="/ja/NsISecureBrowserUI" title="ja/NsISecureBrowserUI">nsISecureBrowserUI</a></em> </dd><dd> この読み取り専用のプロパティは、読み込まれた document のセキュリティレベルを決定するオブジェクトを含みます。 </dd></dl>
+</div> <div id="p-selectedBrowser">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/selectedBrowser">selectedBrowser</a></span></code> </dt><dd> 型: <em><code><a href="/ja/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code> 要素</em> </dd><dd> この読み取り専用のプロパティは、現在表示されている <code><a href="/ja/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code> 要素を返します。 </dd></dl>
+</div> <div id="p-selectedTab">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/selectedTab">selectedTab</a></span></code> </dt><dd> 型: <em>tab 要素</em> </dd><dd> 現在選択されたタブへの参照。これは常に <code><a href="/ja/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code> 要素内の <code><a href="/ja/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code> 要素の一つになります。現在選択されたタブを変更するには、このプロパティに値を割り当ててください。 </dd></dl>
+</div> <div id="p-sessionHistory">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/sessionHistory">sessionHistory</a></span></code> </dt><dd> 型: <em><a href="/ja/NsISHistory" title="ja/NsISHistory">nsISHistory</a></em> </dd><dd> この読み取り専用のプロパティは、セッション履歴を保持する <a href="/ja/NsISHistory" title="ja/NsISHistory">nsISHistory</a> オブジェクトを含みます。 </dd></dl>
+</div> <div id="p-tabContainer">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/tabContainer">tabContainer</a></span></code> </dt><dd> 型: <em><code><a href="/ja/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code> 要素</em> </dd><dd> tab を含む <code><a href="/ja/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code> 要素を返します。 </dd></dl>
+</div> <div id="p-tabbrowser.tabs">
+<dl> <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/tabbrowser.tabs">tabs</a></span></code> </dt> <dd>Type: <em>array</em></dd> <dd>A <a href="/En/DOM/NodeList" title="En/DOM/NodeList">NodeList</a> containing the <code><a href="/en-US/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code> objects for each tab in the <code><a href="/en-US/docs/Mozilla/Tech/XUL/tabbrowser" title="tabbrowser">tabbrowser</a></code>. This is a shortcut for looking at the tabs in the <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/tabContainer">tabContainer</a></span></code>.</dd>
+</dl></div> <div id="p-visibleTabs">
+<dl> <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/visibleTabs">visibleTabs</a></span></code> </dt> <dd>Type: <em>array</em></dd> <dd>An array containing <code><a href="/en-US/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code> objects for each visible tab in the <code><a href="/en-US/docs/Mozilla/Tech/XUL/tabbrowser" title="tabbrowser">tabbrowser</a></code>. This lets you determine which tabs are visible in the current tab set.</dd>
+</dl></div> <div id="p-webBrowserFind">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/webBrowserFind">webBrowserFind</a></span></code> </dt><dd> 型: <em><a href="/ja/NsIWebBrowserFind" title="ja/NsIWebBrowserFind">nsIWebBrowserFind</a></em> </dd><dd> この読み取り専用のプロパティは、document 内のテキストの検索に使用することができる <a href="/ja/NsIWebBrowserFind" title="ja/NsIWebBrowserFind">nsIWebBrowserFind</a> オブジェクトを含みます。 </dd></dl>
+</div> <div id="p-webNavigation">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/webNavigation">webNavigation</a></span></code> </dt><dd> 型: <em><a href="/ja/NsIWebNavigation" title="ja/NsIWebNavigation">nsIWebNavigation</a></em> </dd><dd> この読み取り専用のプロパティは document の <a href="/ja/NsIWebNavigation" title="ja/NsIWebNavigation">nsIWebNavigation</a> オブジェクトを含みます。このメソッドのほとんどは、<span id="m-goBack"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/goBack">goBack</a></code></span> や <span id="m-goForward"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/goForward">goForward</a></code></span> のように要素自身から直接呼び出せます。また、<span id="m-reloadWithFlags"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/reloadWithFlags">reloadWithFlags</a></code></span> および <span id="m-loadURIWithFlags"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/loadURIWithFlags">loadURIWithFlags</a></code></span> によって使用される読み込み定数を含みます。 </dd></dl>
+</div> <div id="p-webProgress">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/webProgress">webProgress</a></span></code> </dt><dd> 型: <em><a href="/ja/NsIWebProgress" title="ja/NsIWebProgress">nsIWebProgress</a></em> </dd><dd> この読み取り専用のプロパティは、document 読み込みの進捗を監視する <a href="/ja/NsIWebProgress" title="ja/NsIWebProgress">nsIWebProgress</a> オブジェクトを含みます。 </dd></dl>
+</div>
+<h3 id="Methods" name="Methods">メソッド</h3>
+<table style="border: 1px solid rgb(204, 204, 204); margin: 0 0 10px 10px; padding: 0 10px; background: rgb(238, 238, 238); float: right; width: 250px;">
+<tbody>
+<tr>
+<td>
+<p><strong>XUL 要素からの継承</strong><br>
+<small> <span id="m-blur"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/blur">blur</a></code></span>, <span id="m-click"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/click">click</a></code></span>, <span id="m-doCommand"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/doCommand">doCommand</a></code></span>, <span id="m-focus"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/focus">focus</a></code></span>, <span id="m-getElementsByAttribute"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getElementsByAttribute">getElementsByAttribute</a></code></span> <span id="m-getElementsByAttributeNS"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getElementsByAttributeNS">getElementsByAttributeNS</a></code></span></small></p> <p><strong>DOM 要素からの継承</strong><br>
+<small> <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.addEventListener">addEventListener()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.appendChild">appendChild()</a></code>, <a href="/ja/DOM/Node.compareDocumentPosition" title="ja/DOM/Node.compareDocumentPosition">compareDocumentPosition</a>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.dispatchEvent">dispatchEvent()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getAttribute">getAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getAttributeNode">getAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getAttributeNodeNS">getAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getAttributeNS">getAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getElementsByTagName">getElementsByTagName()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getElementsByTagNameNS">getElementsByTagNameNS()</a></code>, <a href="/ja/DOM/Node.getFeature" title="ja/DOM/Node.getFeature">getFeature</a>, <a href="/ja/DOM/Node.getUserData" title="ja/DOM/Node.getUserData">getUserData</a>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.hasAttribute">hasAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.hasAttributeNS">hasAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.hasAttributes">hasAttributes()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.hasChildNodes">hasChildNodes()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.insertBefore">insertBefore()</a></code>, <a href="/ja/DOM/Node.isEqualNode" title="ja/DOM/Node.isEqualNode">isEqualNode</a>, <a href="/ja/DOM/Node.isSameNode" title="ja/DOM/Node.isSameNode">isSameNode</a>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.isSupported">isSupported()</a></code>, <a href="/ja/DOM/Node.lookupNamespaceURI" title="ja/DOM/Node.lookupNamespaceURI">lookupNamespaceURI</a>, <a href="/ja/DOM/Node.lookupPrefix" title="ja/DOM/Node.lookupPrefix">lookupPrefix</a>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.normalize">normalize()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeAttribute">removeAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeAttributeNode">removeAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeAttributeNS">removeAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeChild">removeChild()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeEventListener">removeEventListener()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.replaceChild">replaceChild()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.setAttribute">setAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.setAttributeNode">setAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.setAttributeNodeNS">setAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.setAttributeNS">setAttributeNS()</a></code>, <a href="/ja/DOM/Node.setUserData" title="ja/DOM/Node.setUserData">setUserData</a></small></p>
+
+</td>
+</tr>
+</tbody>
+</table> <dl>
+  <dt><span id="m-addProgressListener"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/addProgressListener">addProgressListener( listener )</a></code></span></dt>
+  <dd>戻り値の型: <em>戻り値無し</em></dd>
+  <dd>読み込まれた document を監視する進捗リスナーを browser に追加します。進捗リスナーは <a href="/ja/docs/XPCOM_Interface_Reference/nsIWebProgressListener">nsIWebProgressListener</a> インタフェースを実装しなければなりません。</dd>
+</dl> <dl>
+  <dt><span id="m-addTab"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/addTab">addTab( URL, referrerURI, charset, postData, owner, allowThirdPartyFixup )</a></code></span></dt>
+  <dd>戻り値の型: <em><code><a href="/ja/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code> 要素</em></dd>
+  <dd>指定した URL のページを読み込む新しいタブを開きます。残りの引数は任意です。必要に応じてタブバーが表示されます。</dd>
+  <dd>例は <a href="/ja/docs/Code_snippets/Tabbed_browser">Code snippets:Tabbed browser</a> をご覧ください。</dd>
+  <dd>文字列から postData を準備するには <a href="/ja/docs/Code_snippets/Post_data_to_window#Preprocessing_POST_data">Preprocessing POST Data</a> をご覧ください。</dd>
+</dl> <dl>
+  <dt><span id="m-addTabsProgressListener"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/addTabsProgressListener">addTabsProgressListener( listener )</a></code></span></dt>
+  <dd>Return type: <em>no return value</em></dd>
+  <dd>Add a progress listener to the browser which will monitor loaded documents in all tabs in the tabbed browser. The progress listener should be based on the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebProgressListener" title="">nsIWebProgressListener</a></code> interface with an additional "browser" argument as the first argument of every method, which is the <code><a href="/en-US/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code> (not &lt;tabbrowser&gt; = gBrowser) where the event occurred. See <a href="/en-US/docs/Listening_to_events_on_all_tabs" title="Listening to events on all tabs">Listening to events on all tabs</a> for details.</dd>
+</dl> <div>
+  <span class="breadcrumbs XULRefMeth_breadcrumbs">« <a href="/ja/docs/XUL_Reference" title="/ja/docs/XUL_Reference">XUL リファレンス HOME</a></span></div>
+<dl>
+  <dt><span id="m-appendGroup"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/appendGroup">appendGroup( group )</a></code></span></dt>
+  <dd>戻り値の型: <em>戻り値無し</em></dd>
+  <dd><strong>※ Firefox では使用不可</strong></dd>
+  <dd>いくつかの新しいタブを既存のタブの次に追加します。引数は、タブに読み込む各ドキュメントオブジェクトの配列です。オブジェクトはスクリプトで定義され、読み込むページの URL の <code>URI</code> プロパティを含みます。 <code>referrerURI</code> プロパティは、リファラページを設定するために任意で使用されます。</dd>
+</dl> <dl>
+  <dt><span id="m-getBrowserAtIndex"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getBrowserAtIndex">getBrowserAtIndex( index )</a></code></span></dt>
+  <dd>型: <em><code><a href="/ja/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code> 要素</em></dd>
+  <dd>指定した tab index (<var>index</var>) の位置の <code><a href="/ja/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code> を返します。</dd>
+</dl> <dl>
+  <dt><span id="m-getBrowserIndexForDocument"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getBrowserIndexForDocument">getBrowserIndexForDocument( document )</a></code></span></dt>
+  <dd>戻り値の型: <em>整数型</em></dd>
+  <dd>指定した document の <code><a href="/ja/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code> の index を返します。</dd>
+</dl> <dl>
+  <dt><span id="m-getBrowserForDocument"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getBrowserForDocument">getBrowserForDocument( document )</a></code></span></dt>
+  <dd>型: <em><code><a href="/ja/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code> 要素</em></dd>
+  <dd>指定した document の <code><a href="/ja/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code> を返します。</dd>
+</dl> <dl>
+  <dt><span id="m-getBrowserForTab"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getBrowserForTab">getBrowserForTab( tab )</a></code></span></dt>
+  <dd>型: <em><code><a href="/ja/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code> 要素</em></dd>
+  <dd>指定した <code><a href="/ja/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code> 要素の <code><a href="/ja/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code> を返します。</dd>
+</dl> <dl>
+  <dt><span id="m-getIcon"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getIcon">getIcon( aTab )</a></code></span> </dt>
+  <dd>戻り値: <em>string</em></dd>
+  <dd>指定タブのファビコンの URL を返します。 <code>aTab</code>（第二引数）が null の場合は、現在のタブのアイコンが返されます。アイコンのセット方法については <span id="m-setIcon"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/setIcon">setIcon</a></code></span> のページを参照して下さい。</dd>
+</dl> <dl>
+  <dt><span id="m-getNotificationBox"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getNotificationBox">getNotificationBox( browser )</a></code></span></dt>
+  <dd>型: <em><code><a href="/ja/docs/Mozilla/Tech/XUL/notificationbox" title="notificationbox">notificationbox</a></code> 要素</em></dd>
+  <dd>指定した <code><a href="/ja/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code> 要素の <code><a href="/ja/docs/Mozilla/Tech/XUL/notificationbox" title="notificationbox">notificationbox</a></code> を返します。</dd>
+</dl> <dl> <dt><span id="m-getTabModalPromptBox"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/getTabModalPromptBox">getTabModalPromptBox( browser )</a></code></span> </dt> <dd>Return type: <em>object</em></dd> <dd>Returns an object that manages tab-modal prompts for the specified browser. Returns a <a href="/en/XUL/promptBox" title="en/XUL/promptBox"><code>promptBox</code></a> object representing the new prompt.</dd>
+</dl> <dl>
+  <dt><span id="m-goBack"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/goBack">goBack()</a></code></span></dt>
+  <dd>戻り値の型: <em>戻り値無し</em></dd>
+  <dd>履歴内のページを一つ戻ります。</dd>
+</dl> <dl>
+  <dt><span id="m-goBackGroup"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/goBackGroup">goBackGroup()</a></code></span></dt>
+  <dd><strong><span class="highlightred">Firefox では使用不可</span></strong></dd>
+  <dd>戻り値の型: <em>戻り値無し</em></dd>
+  <dd>前のタブグループへ戻ります。</dd>
+</dl> <dl>
+  <dt><span id="m-goForward"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/goForward">goForward()</a></code></span></dt>
+  <dd>戻り値の型: <em>戻り値無し</em></dd>
+  <dd>履歴内のページを一つ進みます。</dd>
+</dl> <dl>
+  <dt><span id="m-goForwardGroup"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/goForwardGroup">goForwardGroup()</a></code></span></dt>
+  <dd><strong>Firefox では使用不可</strong></dd>
+  <dd>戻り値の型: <em>戻り値無し</em></dd>
+  <dd>次のタブグループへ進みます。</dd>
+</dl> <dl>
+  <dt><span id="m-goHome"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/goHome">goHome()</a></code></span></dt>
+  <dd>戻り値の型: <em>戻り値無し</em></dd>
+  <dd>ユーザのホームページを browser に読み込みます。</dd>
+</dl> <dl>
+  <dt><span id="m-gotoIndex"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/gotoIndex">gotoIndex( index )</a></code></span></dt>
+  <dd>戻り値の型: <em>戻り値無し</em></dd>
+  <dd>与えられた <var>index</var> を持つ履歴内のページへ移動します。先へ進むには正の整数、前へ戻るには負の整数を使用します。</dd>
+</dl> <dl>
+  <dt><span id="m-loadGroup"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/loadGroup">loadGroup( group )</a></code></span></dt>
+  <dd><strong>Not in Firefox</strong></dd>
+  <dd>戻り値の型: <em>最初の tab</em></dd>
+  <dd>ページのグループを複数のタブに読み込みます。これらは <code>browser.tabs.loadGroup</code> 設定の状態によって、それぞれ追加、または置き換えられます。引数は、タブに読み込む各ドキュメントオブジェクトの配列です。オブジェクトはスクリプトで定義され、読み込むページの URL の <code>URI</code> プロパティを含みます。<code>referrerURI</code> プロパティは、リファラページを設定するために任意で使用されます。この関数は最初に読み込まれたタブへの参照を返します。</dd>
+</dl> <dl>
+  <dt>形式 1:
+    <span id="m-loadOneTab"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/loadOneTab">loadOneTab( URL, referrerURI, charset, postData, loadInBackground, allowThirdPartyFixup )</a></code></span></dt>
+  <dt>形式 2:
+    <span id="m-loadOneTab"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/loadOneTab">loadOneTab( URL, { referrerURI: ..., charset: ..., postData: ..., inBackground: ..., allowThirdPartyFixup: ..., relatedToCurrent: ... })</a></code></span></dt>
+  <dd>
+    戻り値の型: <em><code><a href="/ja/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code> 要素</em></dd>
+  <dd>
+    指定した <code>URL</code> のページを読み込む新しいタブを開きます。残りの引数は任意です。このメソッドは <a href="/ja/docs/XUL/Method/addTab"><code>addTab</code></a> と同じ動作をしますが、<code>loadInBackground</code> 引数で新しいタブを前面と背面のどちらに開くかを選ぶことができます。また、owner タブは自動的に指定されるため、<code>owner</code> 引数はありません。</dd>
+  <dd>
+    <dl>
+      <dt>
+        <var>inBackground</var></dt>
+      <dd>
+        <code>true</code> の場合、タブはバックグラウンドでロードされます。 <code>false</code> の場合はタブは新たに選択したタブになります。 引数が <code>null</code> かまたは無指定の場合、このパラメータは <code>browser.tabs.loadInBackground</code> の設定に追従します。</dd>
+    </dl>
+  </dd>
+  <dd>
+    <div class="blockIndicator standardNote standardNoteBlock">
+    <p><a href="https://developer.mozilla.org/ja/docs/Mozilla/Firefox/Releases/3.6">Firefox 3.6 における注記</a></p>
+    <p style="font-weight: 400;">このメソッドの 2 つ目の形式は Firefox 3.6 で追加されたものです。 <code>relatedToCurrent</code> パラメータが追加されており、パラメータは任意の順序で、名前によって指定することができます。</p>
+</div></dd>
+</dl> <dl>
+  <dt><span id="m-loadTabs"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/loadTabs">loadTabs( uris, loadInBackground, replace )</a></code></span></dt>
+  <dd>戻り値の型: <em>戻り値無し</em></dd>
+  <dd><code>uris</code> 配列で指定された URI のセットをタブに読み込みます。<code>loadInBackground</code> が <code>true</code> の場合、これらのタブは背面に読み込まれます。<code>replace</code> が <code>true</code> の場合、タブを追加する代わりに、現在表示されているタブが指定した URI に置き換えられます。</dd>
+</dl> <dl>
+  <dt><span id="m-loadURI"><code><a href="http://api/ja/docs/Mozilla/Tech/XUL/Method/loadURI">loadURI( uri, referrer, charset )</a></code></span></dt>
+  <dd>戻り値の型: <em>戻り値無し</em></dd>
+  <dd>指定された <var>referrer</var> と <var>charset</var> で URL を <code>document</code> に読み込みます。</dd>
+</dl> <dl>
+  <dt>
+    <span id="m-loadURIWithFlags"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/loadURIWithFlags">loadURIWithFlags( uri, flags, referrer, charset, postData )</a></code></span></dt>
+  <dd>
+    戻り値の型: <em>戻り値なし</em></dd>
+  <dd>
+    引数に指定した読み込みフラグ (flags) および与えられたリファラ (referrer) 、文字セット (charset) 、POST データで URL を <code>document</code> に読み込みます。<span id="m-reloadWithFlags"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/reloadWithFlags">reloadWithFlags</a></code></span> メソッドで許可されたフラグに加え、次のフラグも有効です。</dd>
+</dl>
+<ul>
+  <li><code>LOAD_FLAGS_IS_REFRESH</code>: このフラグは、<code>meta</code> タグの <code>refresh</code> や <code>redirect</code> によって URL が読み込まれたときに使用されます。</li>
+  <li><code>LOAD_FLAGS_IS_LINK</code>: このフラグは、ユーザがリンクをクリックして URL が読み込まれたときに使用されます。これに応じて HTTP Referer ヘッダが設定されます。</li>
+  <li><code>LOAD_FLAGS_BYPASS_HISTORY</code>: URL をセッション履歴に追加しません。</li>
+  <li><code>LOAD_FLAGS_REPLACE_HISTORY</code>: セッション履歴内の現在の URL を新しいものと置き換えます。このフラグはリダイレクトに使用されます。</li>
+</ul>
+<p>(<code>referrer</code> および <code>postData</code> 引数の詳細は <code><a href="/ja/docs/XPCOM_Interface_Reference/nsIWebNavigation#loadURI()">nsIWebNavigation.loadURI()</a></code> をご覧ください。)</p> <dl>
+  <dt>
+    <span id="m-moveTabTo"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/moveTabTo">moveTabTo(tab, index)</a></code></span></dt>
+  <dd>
+    Return type: <em><code><a href="/en-US/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code> element</em></dd>
+  <dd>
+    Tries to moves an existing tab to a given index.</dd>
+</dl> <dl>
+  <dt><span id="m-pinTab"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/pinTab">pinTab( tabElement )</a></code></span> </dt>
+  <dd>戻り値の型 : <em>戻り値無し</em></dd>
+  <dd>指定 <code><a href="/ja/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code> 要素を app タブにピン留めします。</dd>
+</dl> <dl>
+  <dt>
+    <span id="m-reload"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/reload">reload()</a></code></span></dt>
+  <dd>
+    戻り値の型: <em>戻り値無し</em></dd>
+  <dd>
+    browser 内の document を再読み込みします。</dd>
+</dl> <dl>
+  <dt>
+    <span id="m-reloadAllTabs"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/reloadAllTabs">reloadAllTabs()</a></code></span></dt>
+  <dd>
+    戻り値の型: <em>戻り値無し</em></dd>
+  <dd>
+    すべてのタブのコンテンツを再読み込みします。</dd>
+</dl> <dl>
+  <dt>
+    <span id="m-reloadTab"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/reloadTab">reloadTab( tab )</a></code></span></dt>
+  <dd>
+    戻り値の型: <em>戻り値無し</em></dd>
+  <dd>
+    指定タブのコンテンツを再読み込みします。</dd>
+</dl> <dl>
+  <dt><span id="m-reloadWithFlags"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/reloadWithFlags">reloadWithFlags( flags )</a></code></span></dt>
+  <dd>戻り値の型: <em>戻り値なし</em></dd>
+  <dd>browser 内の document を与えられた読み込みフラグ (flags) で再度読み込みます。下記のフラグが使用されます。これらはすべて <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/webNavigation">webNavigation</a></span></code> プロパティ (または <a href="/ja/docs/XPCOM_Interface_Reference/nsIWebNavigation">nsIWebNavigation</a> インタフェース) の定数です。記号 ( <code>|</code> ) を使用してフラグを組み合わせることができます。</dd>
+</dl>
+
+<ul>
+  <li><code>LOAD_FLAGS_NONE</code>: 特別なフラグなし。document は普通に読み込まれます。</li>
+  <li><code>LOAD_FLAGS_BYPASS_CACHE</code>: ページを再度読み込みます。ページがキャッシュ内にあっても無視されます。このフラグは reload ボタンが Shift キーを押しながら押下されたときに使用されます。</li>
+  <li><code>LOAD_FLAGS_BYPASS_PROXY</code>: プロクシサーバを無視してページを再度読み込みます。</li>
+  <li><code>LOAD_FLAGS_CHARSET_CHANGE</code>: このフラグは、文字セットが変更されたため document を再度読み込む必要がある場合に使用されます。</li>
+</ul> <dl>
+  <dt><span id="m-removeAllTabsBut"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/removeAllTabsBut">removeAllTabsBut( tabElement )</a></code></span></dt>
+  <dd>戻り値の型: <em>戻り値なし</em></dd>
+  <dd>指定したタブを除くすべてのタブパネルを削除します。タブページが 1 つしか表示されていない場合、このメソッドは何もしません。</dd>
+</dl> <dl>
+  <dt>
+    <span id="m-removeCurrentTab"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/removeCurrentTab">removeCurrentTab()</a></code></span></dt>
+  <dd>
+    戻り値の型: <em><code><a href="/ja/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code> 要素</em></dd>
+  <dd>
+    現在表示されているタブページを削除します。 タブが 1 つのみ表示されている場合、このメソッドは何もしません。</dd>
+</dl> <dl>
+  <dt><span id="m-removeProgressListener"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/removeProgressListener">removeProgressListener( listener )</a></code></span></dt>
+  <dd>戻り値の型: <em>戻り値なし</em></dd>
+  <dd>進捗リスナーを <code>browser</code> から削除します。</dd>
+</dl> <dl>
+  <dt>
+    <span id="m-removeTab"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/removeTab">removeTab( tabElement )</a></code></span></dt>
+  <dd>
+    戻り値の型: <em>戻り値なし</em></dd>
+  <dd>
+    与えられた <code><a href="/ja/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code> 要素に対応する特定のタブ化されたページを削除します。 If only one tab is displayed, this method does nothing (unless the preference <code><a href="/ja/Mozilla/Preferences/Preference_reference/browser.tabs.closeWindowWithLastTab">browser.tabs.closeWindowWithLastTab</a></code> is <code>true</code>, in which case the window containing the tab is closed). If <code><a href="/ja/Mozilla/Preferences/Preference_reference/browser.tabs.autoHide">browser.tabs.autoHide</a></code> is <code>true</code>, the row of tabs will collapse if only one tab remains.</dd>
+</dl> <dl>
+  <dt>
+    <span id="m-removeTabsProgressListener"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/removeTabsProgressListener">removeTabsProgressListener( listener )</a></code></span> </dt>
+  <dd>
+    Return type: <em>no return value</em></dd>
+  <dd>
+    Removes a progress listener to the browser which has been monitoring all tabs. The progress listener should implement the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebProgressListener" title="">nsIWebProgressListener</a></code> interface.</dd>
+</dl> <dl>
+  <dt><span id="m-replaceGroup"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/replaceGroup">replaceGroup( group )</a></code></span></dt>
+  <dd><strong>Firefox では使用不可</strong></dd>
+  <dd>戻り値の型: <em>セッション履歴オブジェクトの配列</em></dd>
+  <dd>既存のタブを新しいセットで置き換えます。置き換え前のタブの方が多い場合は、余りのタブは削除されません。先に既存のタブを削除して完全に置き換えるには <span id="m-removeTab"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/removeTab">removeTab</a></code></span> メソッドを使用してください。引数は読み込む各ドキュメントオブジェクトの配列です。オブジェクトはスクリプトで定義され、読み込むページの URL の <code>URI</code> プロパティを含みます。<code>referrerURI</code> プロパティは、リファラページを設定するために任意で使用されます。このメソッドは、削除されたタブのセッション履歴オブジェクトの配列を返します。</dd>
+</dl> <dl>
+  <dt><span id="m-selectTabAtIndex"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/selectTabAtIndex">selectTabAtIndex( index, event )</a></code></span></dt>
+  <dd>戻り値の型: <em>戻り値無し</em></dd>
+  <dd>引数 <var>index</var> で指定した位置のタブを選択します。<var>index</var> には負の値も指定可能です。引数 <var>event</var> が指定されている場合は、デフォルトのイベント処理は行われなくなり、イベントの伝播も発生しません。</dd>
+</dl> <dl>
+  <dt><span id="m-setIcon"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/setIcon">setIcon( aTab, aURI )</a></code></span></dt>
+  <dd>戻り値の型: <em>戻り値無し</em></dd>
+  <dd>第一引数 (<var>aTab</var>) に指定したタブのファビコンを、第二引数 (<var>aURI</var>) に指定した URI の画像に設定します。現在のアイコンの取得方法については <span id="m-getIcon"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getIcon">getIcon</a></code></span> のページを参照して下さい。</dd>
+</dl> <dl>
+  <dt>
+    <span id="m-showOnlyTheseTabs"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/showOnlyTheseTabs">showOnlyTheseTabs( aTabs )</a></code></span> </dt>
+  <dd>
+    戻り値の型 : <em>戻り値無し</em></dd>
+  <dd><code>aTabs</code> 配列内のすべてのタブを表示、他のすべてのタブを非表示にします。</dd>
+</dl> <dl>
+  <dt>
+    <span id="m-stop"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/stop">stop()</a></code></span></dt>
+  <dd>
+    戻り値の型: <em>戻り値無し</em></dd>
+  <dd>
+    中止ボタンの押下と同じです。現在の document の読み込みを中止します。</dd>
+</dl> <dl> <dt><span id="m-unpinTab"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/unpinTab">unpinTab( tabElement )</a></code></span> </dt> <dd>Return type: <em>no return value</em></dd> <dd>Unpins the specified <code><a href="/en-US/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code> element, making it no longer an app tab.</dd>
+</dl>
+<h3 id="Related" name="Related">関連項目</h3>
+<ul> <li><a href="/ja/Code_snippets/Tabbed_browser" title="ja/Code_snippets/Tabbed_browser">Code snippets:Tabbed browser</a></li>
+</ul>

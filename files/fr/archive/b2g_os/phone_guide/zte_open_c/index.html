@@ -1,0 +1,190 @@
+---
+title: ZTE OPEN C
+slug: Archive/B2G_OS/Phone_guide/ZTE_OPEN_C
+tags:
+  - Appareil
+  - Firefox OS
+  - Gaia
+  - Guide
+  - Open C
+  - Smartphone
+  - Téléphone
+  - zte
+translation_of: Archive/B2G_OS/Phone_guide/ZTE_OPEN_C
+---
+<div class="summary">
+<p>Le ZTE Open C est un smartphone de la marque ZTE fonctionnant sous Firefox OS. Il intègre un appareil photo de 2 Mpx et un écran 4 pouces de 480 x 800 pixels, offrant une densité de pixels de 233ppp. Il est fourni avec Firefox OS 1.3 préinstallé. Cet article fournit des informations concernant ce smartphone, ses mises à jour et les détails pour le dépannage. </p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: Cet article <strong>n'est</strong> <strong>pas</strong> applicable au téléphone ZTE Open. Vous devriez plutôt consulter notre page dédiée au <a href="/en-US/Firefox_OS/Developer_phone_guide/ZTE_OPEN">ZTE Open</a> si vous possédez ce modèle.</p>
+</div>
+
+<p><a href="https://commons.wikimedia.org/wiki/File:Open_C_night_blue_multiview01.jpg"><img alt="Open C blue nuit" src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Open_C_night_blue_multiview01.jpg" style="float: left; height: 720px; width: 1280px;"></a></p>
+
+<p> </p>
+
+<p>Le ZTE Open C est le premier téléphone grand public vendu avec Firefox OS 1.3, <a href="https://blog.mozilla.org/press-fr/2014/05/08/firefox-os-senrichit-pour-prendre-en-charge-le-dual-sim-optimiser-lexperience-musicale-et-ameliorer-la-qualite-des-jeux-video/">la dernière version de Firefox OS</a>. Celle-ci présente de nombreuses nouvelles caractéristiques comme le contrôle du lecteur de musique directement depuis l'écran de verrouillage ou la barre de notifications, mais aussi le partage Bluetooth avancé, permettant de transférer plusieurs fichiers simultanément. L'utilisateur peut à présent naviguer plus rapidement dans l'interface grâce aux "smart folders" (dossiers intelligents) qui classent automatiquement les applications et les sites de recherche en catégories. La fluidité de défilement et la vitesse de lancement des applications du système ont également été améliorées (ex. calendrier, contacts, appareil photo).</p>
+
+<h2 id="Acheter_l'appareil">Acheter l'appareil</h2>
+
+<p>Ce téléphone est actuellement proposé en France par <a href="http://www.auchan.fr/zte-smartphone-open-c-bleu/p-c860284">Auchan</a> (pour un achat en ligne uniquement) au prix soldé de 29,90€ (au lieu de 59,99€).<span class="diff_sub"> </span></p>
+
+<ul>
+ <li>Les sites commerciaux qui le vendaient en ligne sont <a href="https://www.mozilla.org/fr/firefox/os/devices/">répertoriés sur le site de Mozilla</a> pour la France.</li>
+</ul>
+
+<div class="note">
+<p><strong>Note</strong>: Les téléphones sont livrés sans aucune application ou service de connectivité d'opérateur téléphonique spécifique et sont déverrouillés pour tout opérateur en sortie de boîte.</p>
+</div>
+
+<h2 id="sect1"> </h2>
+
+<h2 id="Caractéristiques">Caractéristiques</h2>
+
+<p>Voir <a href="https://developer.mozilla.org/fr-fr/Firefox_OS/Developer_phone_guide/Phone_specs">Caractéristiques des téléphones et appareils</a>.</p>
+
+<p> </p>
+
+<h2 id="Mise_à_jour_officielle">Mise à jour officielle</h2>
+
+<p>Pour mettre à jour le système de l'Open C avec une version officielle, la façon la plus simple est de vous référer à la notice que vous trouverez sur le <a href="http://www.ztefrance.com/assistance/">site d'assistance de ZTE France</a>. Pour ce faire, sélectionnez <strong>Open C</strong> dans la section "1 - MON PRODUIT", ensuite choisissez <strong>Notices</strong> en "2 - JE CHERCHE" et enfin vous trouverez la notice de mise à jour en "3 - RÉPONSES".</p>
+
+<p> </p>
+
+<h2 id="Mise_à_jour_communautaire">Mise à jour communautaire</h2>
+
+<p>Il est également possible de mettre à jour l'Open C en passant par une version communautaire. La communauté Mozilla Francophone publie ses propres builds, mettant à jour Gecko et Gaia. Pour se les procurer, il faut aller à <a href="http://builds.firefoxos.mozfr.org/doc/fr/devices/zte-open-c">cette adresse</a>.</p>
+
+<div class="note">
+<p>Il faudra au préalable rooter le téléphone, afin de bénéficier des mises à jour communautaires.</p>
+</div>
+
+<h2 id="sect2"> </h2>
+
+<h2 id="Mise_à_jour_manuelle">Mise à jour "manuelle"</h2>
+
+<p>Si vous désirez mettre à jour Gecko et/ou Gaia vous-même, <span class="short_text" id="result_box" lang="fr"><span class="hps">le processus</span> <span class="hps">est</span> <span class="hps">un peu plus délicat</span></span>, car le téléphone est verrouillé par défaut (aucun privilège administrateur, "root" en anglais). Pour déverrouiller les privilèges d'administrateur sur votre téléphone (c'est à dire "rooter" l'appareil), vous devez suivre les instructions pour utiliser l'outil de mise à niveau que vous pouvez récupérer sur le <a href="http://www.ztefrance.com/assistance/">site d'assistance de ZTE France</a>.</p>
+
+<h3 id="Mettre_à_niveau_Gecko_et_Gaia">Mettre à niveau Gecko et Gaia</h3>
+
+<p>Une fois que votre téléphone permet le mode fastboot, vous allez pouvoir <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Building_and_installing_Firefox_OS">compiler et installer Firefox OS/B2G</a>, les composants Gecko et Gaia sur celui-ci.</p>
+
+<div class="warning">
+<p><strong>ATTENTION</strong> : Avant toute manipulation de votre système, réalisez une <strong>sauvegarde de votre téléphone</strong> comme indique la dernière section, "Backup the phone system partition" de la page "Prérequis pour construire Firefox OS", en lien ci-dessous.</p>
+</div>
+
+<ol>
+ <li>Commencez par les <a href="https://developer.mozilla.org/fr/Firefox_OS/Prerequis_pour_construire_Firefox_OS">prérequis pour construire Firefox OS</a>, et faites comme si votre Open C était un téléphone Flame pour les configurations du <span id="result_box">système de construction</span> B2G. Il faut procéder ainsi car le Open C et le Flame sont tous les deux sur la même base système, un Android <a href="http://fr.wikipedia.org/wiki/Android_Jelly_Bean">Jelly Bean</a>, mais qu'il n'existe pas encore de dépôt/branche pour le Open C.</li>
+ <li>Pendant les étapes de configuration, vous allez devoir pointer vers un fichier de manifeste personnalisé (custom manifest file) .XML dédié au Open C. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1016867">Lisez ce bug et/ou téléchargez la pièce jointe</a> et enregistrez-la sous le nom "openc.xml" dans un dossier facile à pointer (dans le dossier Téléchargements ou B2G par exemple).</li>
+ <li>Nettoyez le dossier B2G en supprimant les dossiers non désirés spécifiques au Flame :
+  <pre class="brush: bash" id="comment_text_2">rm -rf objdir-gecko/ out/ backup-flame/</pre>
+ </li>
+ <li><u>Facultatif :</u> Avant de poursuivre, vous pouvez, si vous le souhaitez, spécifier la version à compiler. Pour ce faire, éditez le fichier "openc.xml", et modifiez-y les révisions (revision) des projets <em>gecko.git, rilproxy, librecovery, fake-libdvm, gaia, gonk-misc</em>, et <em>moztt</em>. Par exemple, si vous souhaitez compiler la version 2.2, vous mettrez :
+  <pre class="brush: xml line-numbers  language-xml"><code class="language-xml"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>project</span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>gecko.git<span class="punctuation token">"</span></span> <span class="attr-name token">path</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>gecko<span class="punctuation token">"</span></span> <span class="attr-name token">remote</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>mozillaorg<span class="punctuation token">"</span></span> <span class="attr-name token">revision</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>v2.2<span class="punctuation token">"</span></span><span class="punctuation token">/&gt;</span></span>
+<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>project</span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>rilproxy<span class="punctuation token">"</span></span> <span class="attr-name token">path</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>rilproxy<span class="punctuation token">"</span></span> <span class="attr-name token">remote</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>b2g<span class="punctuation token">"</span></span> <span class="attr-name token">revision</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>v2.2<span class="punctuation token">"</span></span><span class="punctuation token">/&gt;</span></span>
+<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>project</span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>librecovery<span class="punctuation token">"</span></span> <span class="attr-name token">path</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>librecovery<span class="punctuation token">"</span></span> <span class="attr-name token">remote</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>b2g<span class="punctuation token">"</span></span> <span class="attr-name token">revision</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>v2.2<span class="punctuation token">"</span></span><span class="punctuation token">/&gt;</span></span>
+<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>project</span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>fake-libdvm<span class="punctuation token">"</span></span> <span class="attr-name token">path</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>dalvik<span class="punctuation token">"</span></span> <span class="attr-name token">remote</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>b2g<span class="punctuation token">"</span></span> <span class="attr-name token">revision</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>v2.2<span class="punctuation token">"</span></span><span class="punctuation token">/&gt;</span></span>
+<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>project</span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>gaia<span class="punctuation token">"</span></span> <span class="attr-name token">path</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>gaia<span class="punctuation token">"</span></span> <span class="attr-name token">remote</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>mozillaorg<span class="punctuation token">"</span></span> <span class="attr-name token">revision</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>v2.2<span class="punctuation token">"</span></span><span class="punctuation token">/&gt;</span></span>
+<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>project</span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>gonk-misc<span class="punctuation token">"</span></span> <span class="attr-name token">path</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>gonk-misc<span class="punctuation token">"</span></span> <span class="attr-name token">remote</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>b2g<span class="punctuation token">"</span></span> <span class="attr-name token">revision</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>v2.2<span class="punctuation token">"</span></span><span class="punctuation token">/&gt;</span></span>
+<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>project</span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>moztt<span class="punctuation token">"</span></span> <span class="attr-name token">path</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>external/moztt<span class="punctuation token">"</span></span> <span class="attr-name token">remote</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>b2g<span class="punctuation token">"</span></span> <span class="attr-name token">revision</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>v2.2<span class="punctuation token">"</span></span><span class="punctuation token">/&gt;</span></span></code></pre>
+
+  <div class="warning">
+  <p><strong>ATTENTION :</strong> Actuellement, le fait de compiler les versions 2.5 et supérieures <strong>empêche </strong>le fonctionnement du bluetooth.</p>
+  </div>
+ </li>
+ <li>Maintenant, configurez B2G en pointant vers le fichier "openc.xml" avec cette commande :
+  <pre class="brush: bash  language-html">./config.sh flame /MON/DOSSIER/VERS/openc.xml</pre>
+ </li>
+ <li>Sur votre téléphone, vérifiez que <a href="https://developer.mozilla.org/en-US/Firefox_OS/Debugging/Developer_settings#Debugging_via_USB">Remote Debugging</a> soit activé (choisissez ADB dans Firefox OS 1.3 ou ADB et Devtools dans les versions ultérieures).</li>
+ <li>Connectez votre téléphone par USB à votre ordinateur et vérifiez qu'il soit reconnu par ADB :
+  <pre class="brush: bash language-html">adb devices</pre>
+ </li>
+ <li>Une fois le téléphone reconnu, vous pouvez construire le composant Gecko et l'installer sur votre téléphone en exécutant les commandes suivantes :
+  <pre class="brush: bash  language-html">./build.sh gecko
+./flash.sh gecko</pre>
+ </li>
+ <li>Maintenant, vous devriez mettre à niveau Gaia<em> </em>pour que sa version corresponde à la version de Gecko que vous venez d'installer sur votre téléphone :
+  <pre class="brush: bash  language-html">cd gaia
+make reset-gaia</pre>
+ </li>
+ <li>Pour terminer, il vous faut <a href="/fr/Firefox_OS/Guide_Telephone_Developpeur/ZTE_OPEN_C#Probl.C3.A8me_de_polices_(font)">ajouter les polices (fonts) manquantes</a>, afin d'obtenir un affichage correct sur votre téléphone.</li>
+</ol>
+
+<div class="warning">
+<p><strong>ATTENTION :</strong> A partir de la version 2.2, un bug rend indisponible le stockage interne. Pour résoudre le problème, vous pouvez d'abord installer une <a href="http://builds.firefoxos.mozfr.org/doc/fr/devices/zte-open-c?redirect=1">version analogue des builds communautaires</a> ou vous référer à la démarche du <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1105200">rapport de bug</a>.</p>
+</div>
+
+<div class="warning">
+<p><strong>ATTENTION</strong> : Essayer d'installer une image système du Flame directement -sans suivre les dispositions précédentes-  sur votre téléphone Open C, bloquera votre téléphone. Si vous n’êtes pas sûr de ce que vous faites, abstenez-vous.</p>
+</div>
+
+<h3 id="Installer_votre_propre_version_de_Gaia">Installer votre propre version de Gaia</h3>
+
+<p>Pour mettre à niveau votre version modifiée de Gaia, en laissant de coté Gecko, vous aurez besoin de créer votre branche ("Fork") <em><span style="background-color: #ffffe0;">[ facultatif ? ]</span></em>, cloner le dépot Github de Gaia, pour ensuite le modifier et l'installer sur votre Open C.</p>
+
+<ol dir="ltr">
+ <li>Vérifiez que vous avez <a href="https://developer.mozilla.org/en-US/Firefox_OS/Debugging/Installing_ADB">ADB</a> d'installé sur votre machine.</li>
+ <li>Allez sur <a href="https://github.com/mozilla-b2g/gaia">https://github.com/mozilla-b2g/gaia</a> et cliquez sur le bouton "Fork" en haut à droite pour créer une branche dans votre propre dépôt.</li>
+ <li>Clonez le code de votre branche depuis votre dépôt sur votre machine avec cette commande :
+  <pre class="brush: bash  language-html">git clone https://github.com/VOTRE-PSEUDO-GITHUB/gaia.git</pre>
+ </li>
+ <li>Modifiez Gaia à votre convenance.</li>
+ <li>Ensuite, sur votre téléphone, vérifiez que <a href="https://developer.mozilla.org/en-US/Firefox_OS/Debugging/Developer_settings#Debugging_via_USB">Remote Debugging</a> soit activé (cochez ADB pour Firefox OS 1.3 ou choisissez ADB et Devtools sur les versions ultérieures).</li>
+ <li>Connectez votre téléphone par USB à votre ordinateur et vérifiez qu'il soit reconnu par ADB :
+  <pre class="brush: bash language-html">adb devices
+</pre>
+ </li>
+ <li>Enfin installez Gaia en lançant les commandes suivantes depuis le dossier B2G :
+  <pre class="brush: bash  language-html">cd gaia
+make reset-gaia</pre>
+ </li>
+</ol>
+
+<h3 id="Problème_de_polices_(font)">Problème de polices (font)</h3>
+
+<p>Après avoir mis à jour Gecko/Gaia, il se peut que vous constatiez une incohérence entre les polices attendues par Gecko et Gaia, et celles fournies lors du flash. Pour corriger cela, téléchargez notre <a href="https://people.mozilla.org/%7Emwu/fira-font-update.zip">archive de mise à jour des polices (font)</a>, extrayez-la, placez-vous dans le répertoire créé par l'extraction et exécutez le script <code>flash.sh</code>.<br>
+ <br>
+ Vous pouvez également utiliser le script <a href="https://github.com/Mozilla-TWQA/B2G-flash-tool/blob/master/update_system_fonts.sh"><code>update_system_fonts.sh</code></a>, qui se chargera de télécharger et d'envoyer automatiquement les polices sur le téléphone.</p>
+
+<p> </p>
+
+<h2 id="J'ai_brické_mon_téléphone">J'ai "brické" mon téléphone</h2>
+
+<p>Si votre téléphone ne réagit plus, qu’il démarre en boucle ("bootloop" en anglais), ou qu’il bloque sur le logo Firefox OS ou l'animation du renard, votre téléphone est brické. Vous devriez être en mesure de le "débricker" en utilisant une archive de mise à jour officielle (voir la partie "Mettre à jour Firefox OS" plus haut) en la flashant via une carte SD, sur le site web ZTE:</p>
+
+<ul>
+ <li><a href="http://www.ztedevices.com/support/smart_phone/65229ec9-3165-424e-a7dd-3759356325fd.html?type=software">ZTE Open C (Ebay) - Spain</a></li>
+ <li><a href="http://www.ztedevices.com/support/smart_phone/92f36c98-9cc0-42d6-8f23-8834b4a6849c.html?type=software">ZTE Open C (Ebay) - UK American Standard</a></li>
+ <li><a href="http://www.ztedevices.com/support/smart_phone/46d40c52-bed4-4cdc-9df9-01719cdf0a70.html?type=software">ZTE Open C (Ebay) - UK European Standard</a></li>
+ <li><a href="http://www.ztefrance.com/assistance/">ZTE French Website - French</a></li>
+</ul>
+
+<p>Vous pourrez aussi trouver des informations complémentaires en lisant <a href="https://support.mozilla.org/en-US/questions/1003136">ce sujet du site de support de Mozilla </a><a href="https://support.mozilla.org/en-US/questions/1003136">(en)</a>.</p>
+
+<p>Cependant, si votre partition système est défectueuse, il vous faudra réparer le téléphone en utilisant l'accès direct au fastboot. En supposant que vous utilisez Ubuntu GNU/Linux il vous faudra suivre les étapes suivantes :</p>
+
+<ol>
+ <li>Téléchargez <a href="http://download.ztedevice.com/UpLoadFiles/product/550/4443/soft/2014061214153128.zip">l'image de récupération système</a> à partir de la page support du site ZTE. Extrayez ensuite le fichier <code>update.zip</code> sur votre bureau (<code>~/Desktop/</code>).</li>
+ <li>Extrayez l'image de récupération <code>recovery.img</code> à partir de l'archive de mise à jour <code>update.zip</code> sur votre bureau.</li>
+ <li>Créez un dossier <code>small-system/ </code>sur le bureau et copiez-le dans le fichier <strong><code>build.prop</code></strong> ainsi que dans le répertoire <strong><code>bin/</code></strong>. Vous trouverez le dossier <code>system</code>. dans l'archive <code>update.zip</code>.</li>
+ <li>Installez le package <code>android-tools-fsutils</code> (ou installez <code><a href="http://forum.xda-developers.com/attachment.php?attachmentid=2431494&amp;d=1386115975">ext4_utils</a></code> à partir des sources en suivant ce lien <a href="http://forum.xda-developers.com/galaxy-s2/general/ref-unpacking-repacking-stock-rom-img-t1081239">XDAdevelopers page</a>).</li>
+ <li>Créez votre <code>small-system.img</code>:
+  <pre class="brush: bash  language-html"><code class="language-bash">./make_ext4fs -l 40M small-system.img ~/Desktop/small-system/</code></pre>
+ </li>
+ <li>Déplacez votre <code>small-system.img</code> sur le bureau et démarrez votre appareil en mode <em>fastboot</em> en pressant simultanément <em>bouton démarrer</em> + <em>bouton volume bas</em>.</li>
+ <li>Connectez l'appareil à votre ordinateur (<code>fastboot devices</code>  cette commande devrait afficher l'appareil) et flash <code>small-system.img</code>:
+  <pre class="brush: bash  language-html"><code class="language-bash">fastboot flash system small-system.img</code></pre>
+ </li>
+ <li>Démarrez ensuite en mode <em>récupération</em> en utilisant <code>recovery.img</code>:
+  <pre class="brush: bash  language-html"><code class="language-bash">fastboot boot recovery.img</code></pre>
+ </li>
+ <li>Dans le menu de démarrage, sélectionnez <em>appliquer la mise à jour à partir des entrées ADB</em> (utilisez les boutons de réglages du volume pour naviguer, ainsi que le bouton démarrer pour sélectionner <em>select</em>), ensuite faites:
+  <pre class="brush: bash  language-html"><code class="language-bash">adb sideload update.zip</code></pre>
+ </li>
+ <li>
+  <p class="brush: bash  language-html">Une fois cela fait, redémarrez votre téléphone.</p>
+ </li>
+</ol>
+
+<p class="brush: bash  language-html"><strong>Note</strong>: Vous pouvez <a href="https://support.mozilla.org/en-US/questions/1003136">cliquer ici </a>pour plus d'informations.</p>

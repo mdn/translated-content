@@ -1,0 +1,251 @@
+---
+title: Preferences
+slug: Code_snippets/Preferences
+tags:
+  - Add-ons
+  - Extensions
+  - 要更新
+translation_of: Archive/Add-ons/Code_snippets/Preferences
+---
+<p>この文書では、Mozilla 設定システムを利用しようとする拡張機能開発者向けのサンプルを示しています。ここにあるものは、Mozilla Suite、Firefox、Thunderbird、そしておそらくその他の Mozilla ベースのアプリケーションに適用可能です。Mozilla での設定システムについてのより詳細については、<a href="ja/Preferences_System">設定システム</a> を参照してください。</p>
+<p>もし、まだ理解していないなら、Mozilla 設定システムに関する XULPlanet や mozilla.org にある文書を読んでください。(<a href="#Resources">追加情報</a> にリンクがあります)</p>
+<div class="note">
+  <b>注:</b> この文書は設定を扱う既存の全てのメソッドを説明しているわけではありません。メソッドの完全なリストについては、<a href="#Resources">追加情報</a> にリストされている XULPlanet XPCOM リファレンスを参照してください。設定のインターフェースはよく文書化されていますので、ここで触れていないメソッドを利用するのも容易だろうと思われます。</div>
+<p>{{ 英語版章題("XPCOM interfaces for preferences system") }}</p>
+<h3 id=".E8.A8.AD.E5.AE.9A.E3.82.B7.E3.82.B9.E3.83.86.E3.83.A0.E3.81.AE_XPCOM_.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.BC.E3.83.95.E3.82.A7.E3.83.BC.E3.82.B9" name=".E8.A8.AD.E5.AE.9A.E3.82.B7.E3.82.B9.E3.83.86.E3.83.A0.E3.81.AE_XPCOM_.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.BC.E3.83.95.E3.82.A7.E3.83.BC.E3.82.B9">設定システムの XPCOM インターフェース</h3>
+<p>Mozilla はいくつかの XPCOM インターフェースを介して設定を公開します。<a href="#Resources">追加情報</a> の設定に関連したインターフェースのリストへのリンクを参照してください。</p>
+<p><code>nsIPrefService</code>、 <code>nsIPrefBranch</code> と <code>nsIPrefBranch2</code> が三つのよく利用されるインターフェースです。これらは凍結されており変更されることはありません。</p>
+<p>また、<code>nsIPref</code> インターフェースも存在はします。ある場所で利用されているかもしれませんが、<strong>廃止予定</strong> であり、利用すべきではありません。</p>
+<p>設定サービスは、あなたが他の XPCOM サービスのインスタンスを作成するときと同じように作成できます。これについての詳細は XULPlanet の <a class="external" href="http://xulplanet.com/references/xpcomref/creatingcomps.html">XPCOM コンポーネントの作成方法</a> を見てください。<code>nsIPrefBranch</code> を取得するには、<code>QueryInterface()</code> に設定サービスを入れる (この場合、ルートブランチが取得できます) か、<code>nsIPrefService.getBranch()</code> を呼んで sub-branch を取得してください。</p>
+<p>次の二つがサンプルです:</p>
+<pre>// ルートブランチを取得
+var prefs = Components.classes["@mozilla.org/preferences-service;1"].
+                    getService(Components.interfaces.nsIPrefBranch);
+</pre>
+<pre>// "extensions.myext" ブランチを取得
+var prefs = Components.classes["@mozilla.org/preferences-service;1"].
+                    getService(Components.interfaces.nsIPrefService);
+prefs = prefs.getBranch("extensions.myext.");
+</pre>
+<p>{{ 英語版章題("Simple types") }}</p>
+<h3 id=".E5.8D.98.E7.B4.94.E5.9E.8B" name=".E5.8D.98.E7.B4.94.E5.9E.8B">単純型</h3>
+<p>設定には三種類の型が存在します。<b>文字列</b>, <b>整数値</b> そして <b>真偽値</b> です。設定データベース (<code>prefs.js</code>) の中でそれぞれのエントリは、これらのうちのひとつの型を持ちます。<code>nsIPrefBranch</code> には設定の取得・設定のための 6 つのメソッドがあります。<code>getBoolPref()</code>, <code>setBoolPref()</code>, <code>getCharPref()</code>, <code>setCharPref()</code>, <code>getIntPref()</code> そして <code>setIntPref()</code> です。これらは次のように利用できます。</p>
+<pre>// nsIPrefBranch 経由の設定操作
+// branch を取得する方法は一つ上の章を読んでください
+var value = prefs.getBoolPref("accessibility.typeaheadfind"); // 取得
+prefs.setBoolPref("accessibility.typeaheadfind", !value); // 設定
+</pre>
+<p>{{ 英語版章題("Complex types") }}</p>
+<h3 id=".E8.A4.87.E5.90.88.E5.9E.8B" name=".E8.A4.87.E5.90.88.E5.9E.8B">複合型</h3>
+<p>前の章で説明したとおり、設定データベース中 (<code>prefs.js</code>) の各エントリは文字列、整数値、もしくは真偽値のどれかを持つ必要があります。ただし、<b>複合型</b> もあり、開発者にとって <code>nsILocalFile</code> や <code>nsISupportsString</code> オブジェクトを設定に保存しやすくなります。(文字列として — 設定システムの面からみると、複合型は <code>nsIPrefBranch.PREF_STRING</code> の型の値となります。)</p>
+<p>この型についての <code>nsIPrefBranch</code> の実装には二つのメソッドがあります — <code>setComplexValue()</code> と <code>getComplexValue()</code> です。これらの実装については、{{ Source("modules/libpref/src/nsPrefBranch.cpp#228", "nsPrefBranch.cpp") }} がソースとなり、IDL 定義は次のようになります。</p>
+<pre class="eval">void getComplexValue(in string aPrefName, in nsIIDRef aType,
+                     [iid_is(aType), retval] out nsQIResult aValue);
+void setComplexValue(in string aPrefName, in nsIIDRef aType, in nsISupports aValue);
+</pre>
+<p>見て分かるように、二つともパラメータをとり、<code>aType</code> は次の値のいずれかです <small>(正確には、定義されていない <code>nsIWhatever</code> ではなく、<code>Components.interfaces.nsIWhatever</code> を渡す必要があります。)</small></p>
+<dl>
+  <dt>
+    <code><a href="#nsISupportsString">nsISupportsString</a></code></dt>
+  <dd>
+    設定にある Unicode 文字列を処理するのに利用します。ユーザ名のように non-ASCII 文字列を含む設置値の場合にこれを利用してください。</dd>
+  <dt>
+    <code><a href="#nsIPrefLocalizedString">nsIPrefLocalizedString</a></code></dt>
+  <dd>
+    <code>nsISupportString</code> とほぼ同じですが、ユーザ設定値が無い場合に <code>getComplexValue()</code> で異なる動作を示します。詳細は下記を参照してください。</dd>
+  <dt>
+    <a href="ja/Code_snippets/File_I%2f%2fO"><code>nsILocalFile</code> と <code>nsIRelativeFilePref</code></a></dt>
+  <dt>
+    設定にパスを保存します。<code>nsILocalFile</code> は絶対パス、<code>nsIRelativeFilePref</code> はプロファイルフォルダーなどの特別なディレクトリからの相対パスを保存するために利用します。</dt>
+</dl>
+<p>{{ 英語版章題("nsISupportsString") }}</p>
+<h4 id="nsISupportsString" name="nsISupportsString">nsISupportsString</h4>
+<p>上記の通り、これは設定の Unicoide 文字列を処理するのに利用します。たとえば</p>
+<pre>// prefs is an nsIPrefBranch
+
+// サンプル 1: Unicode 値を得る
+var value = prefs.getComplexValue("preference.with.non.ascii.value",
+      Components.interfaces.nsISupportsString).data;
+
+// サンプル 2: Unicode 値を設定する
+var str = Components.classes["@mozilla.org/supports-string;1"]
+      .createInstance(Components.interfaces.nsISupportsString);
+str.data = "some non-ascii text";
+prefs.setComplexValue("preference.with.non.ascii.value",
+      Components.interfaces.nsISupportsString, str);
+</pre>
+<p>{{ 英語版章題("nsIPrefLocalizedString") }}</p>
+<h4 id="nsIPrefLocalizedString" name="nsIPrefLocalizedString">nsIPrefLocalizedString</h4>
+<p>Mozilla でサポートされている別の複合型として、<code>nsIPrefLocalizedString</code> があります。これは、ユーザ設定値が無い場合を除いて <code>nsISupportsString</code> に似ていますが、<code>getComplexValue()</code> はロケールファイル (既定値をローカライズできるようにするため) から既定値を取得します。</p>
+<p>サンプルを示す方が説明がしやすいですので、<code>extensions.myext.welcomemessage&lt;code&gt; 設定値の既定値をローカライズする時を例にとって説明します。まず、以下のようにする必要があります。 </code></p>
+<ol>
+  <li>(あなたのロケールの全ての) <code>.properties</code> ファイルに次の行を加えます。<code><a class="external" rel="freelink">chrome://myext/locale/defaults.properties</a></code> です。
+    <pre>extensions.myext.welcomemessage=ローカライズされた既定値</pre>
+  </li>
+  <li><code>extensions.myext.welcomemessage</code> に既定値を追加し、あなたの拡張に <em>既定の設定</em> を次のように書き加えることで、properties ファイルを示すようにします。
+    <pre>pref("extensions.myext.welcomemessage", "chrome://myext/locale/defaults.properties");</pre>
+  </li>
+  <li>設定を <code>aType</code> に <code>nsIPrefLocalizedString</code> を渡して <code>getComplexValue</code> で読みます。
+    <pre>var prefs = Components.classes["@mozilla.org/preferences-service;1"].
+      getService(Components.interfaces.nsIPrefService);
+var branch = prefs.getBranch("extensions.myext.");
+var value = branch.getComplexValue("welcomemessage",
+      Components.interfaces.nsIPrefLocalizedString).data;
+</pre>
+  </li>
+</ol>
+<p>ステップ 3 では、ユーザ設定値が無い場合 <code><a class="external" rel="freelink">chrome://myext/locale/defaults.properties</a></code> からの既定値が読み込まれているはずです。それ以外の場合は <code>nsISupportString</code> が <code>aType</code> に渡された場合と同じ動作をします。</p>
+<p>設定に <code>nsIPrefLocalizedString</code> を利用して設定する場合は、<code>nsISupportsString</code> と同じです。</p>
+<pre class="eval">var pls = Components.classes["@mozilla.org/pref-localizedstring;1"]
+                    .createInstance(Components.interfaces.nsIPrefLocalizedString);
+pls.data = val;
+prefs.setComplexValue("preference.with.non.ascii.value",
+                      Components.interfaces.nsIPrefLocalizedString, pls);
+</pre>
+<p>{{ 英語版章題("nsILocalFile and nsIRelativeFilePref") }}</p>
+<h4 id="nsILocalFile_.E3.81.A8_nsIRelativeFilePref" name="nsILocalFile_.E3.81.A8_nsIRelativeFilePref">nsILocalFile と nsIRelativeFilePref</h4>
+<p><span class="comment">Leave this section to have nice TOC</span> <code>nsILocalFile</code> と <code>nsIRelativeFilePref</code> についての詳細は <a href="/ja/Code_snippets/File_I//O" title="ja/Code_snippets/File_I//O">File IO についての文書</a> を参照してください。</p>
+<p>{{ 英語版章題("Default preferences") }}</p>
+<h3 id=".E6.97.A2.E5.AE.9A.E3.81.AE.E8.A8.AD.E5.AE.9A.E5.80.A4" name=".E6.97.A2.E5.AE.9A.E3.81.AE.E8.A8.AD.E5.AE.9A.E5.80.A4">既定の設定値</h3>
+<p><span class="comment">someone should reword this section</span> それぞれの設定値は最大二つの値をもちます。— <b>設定値</b> と <b>既定値</b> です。これは、現在と既定の二つの "設定木:" があることを意味し、それぞれが設定に対して値を持つ・持たないの両方が可能であるということです。</p>
+<p>設定値の一覧は <a class="external" href="http://kb.mozillazine.org/About:config">about:config</a> (存在すれば) でみることが可能です。ユーザ設定値がある場合は太字で、ユーザ設定値が無いものについては通常のフォントで表示されます。</p>
+<p><code>nsIPrefService.getBranch()</code> と <code>nsIPrefService.getDefaultBranch()</code> 関数により両方の木を取得できます。詳細は下記を参照してください。</p>
+<p>{{ 英語版章題("The effect of default preferences on <code>get</code> methods") }}</p>
+<h4 id="get_.E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.A7.E3.81.AE.E6.97.A2.E5.AE.9A.E3.81.AE.E8.A8.AD.E5.AE.9A.E5.80.A4.E3.81.AE.E5.BD.B1.E9.9F.BF" name="get_.E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.A7.E3.81.AE.E6.97.A2.E5.AE.9A.E3.81.AE.E8.A8.AD.E5.AE.9A.E5.80.A4.E3.81.AE.E5.BD.B1.E9.9F.BF"><code>get</code> メソッドでの既定の設定値の影響</h4>
+<p><code>nsIPrefBranch</code> の <code>get</code> メソッドの一つが呼ばれた (設定値の方の木を想定します) とき、以下のように動作します。</p>
+<ol>
+  <li><b>設定値</b> の木に値が存在するかと設定がロックされているかどうかを確認します。</li>
+  <li>要求に一致する型の値が存在するか (たとえば、<code>getBoolValue</code> は <code>nsIPrefBranch.PREF_BOOL</code> 型の値を想定します) を確認し、設定がロックされていなければ、その値を返します。</li>
+  <li>異なる型の値であり、かつ設定がロックされていなければ、<code>NS_ERROR_UNEXPECTED</code> 例外を投げます。</li>
+  <li>設定がロックされているか、<b>設定値</b> の木に設定値がなければ、<code>get</code> メソッドは既定値の木を確認します。</li>
+  <li><b>既定値</b> の木に求められる型の値がある場合、それを返します。(例外として、<code>aType</code> に <code>nsIPrefLocalizedString</code> が設定された <code>getComplexValue()</code> の呼び出しの場合があります。<a href="#nsIPrefLocalizedString">上記参照</a>)</li>
+  <li>上記のどれでもなければ <code>NS_ERROR_UNEXPECTED</code> 例外を投げます。</li>
+</ol>
+<p>木が <b>既定値</b> のものであれば、<code>get</code> メソッドは設定値を一切チェックしません。</p>
+<p><small>(<code>libpref</code> 内の実装を完全に説明してはいませんが、等価です。)</small></p>
+<p>{{ 英語版章題("Where the default values are read from") }}</p>
+<h4 id=".E6.97.A2.E5.AE.9A.E5.80.A4.E3.81.AF.E3.81.A9.E3.81.93.E3.81.8B.E3.82.89.E5.8F.96.E5.BE.97.E3.81.95.E3.82.8C.E3.82.8B.E3.81.8B" name=".E6.97.A2.E5.AE.9A.E5.80.A4.E3.81.AF.E3.81.A9.E3.81.93.E3.81.8B.E3.82.89.E5.8F.96.E5.BE.97.E3.81.95.E3.82.8C.E3.82.8B.E3.81.8B">既定値はどこから取得されるか</h4>
+<ul>
+  <li>すべての Mozilla ベースのアプリケーションは <code>(application directory)/defaults/pref/*.js</code> を読みます。 <span class="comment">(xxx are non-.js files read?)</span>.</li>
+  <li>付け加えて、Toolkit アプリケーションの最近のバージョン (Firefox 1.0, Thunderbird 1.0 などで、Mozilla Suite は <b>違います</b>) は拡張機能の既定を読みます。 -- <code>(profile folder)/extensions/(ID)/defaults/preferences/</code> に通常は置かれます。</li>
+</ul>
+<p>これらのファイルは、簡単な JavaScript に似た形式です。設定に既定値を加えるには、あなたの既定の設定ファイルに次の行を加えてください。</p>
+<pre class="eval">pref("extensions.extensionname.preferencename", false);
+</pre>
+<p>{{ 英語版章題("How to install an extension\'s defaults files") }}</p>
+<h4 id=".E6.8B.A1.E5.BC.B5.E6.A9.9F.E8.83.BD.E3.81.AE.E6.97.A2.E5.AE.9A.E5.80.A4.E3.81.AE.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.92.E3.82.A4.E3.83.B3.E3.82.B9.E3.83.88.E3.83.BC.E3.83.AB.E3.81.99.E3.82.8B.E3.81.AB.E3.81.AF" name=".E6.8B.A1.E5.BC.B5.E6.A9.9F.E8.83.BD.E3.81.AE.E6.97.A2.E5.AE.9A.E5.80.A4.E3.81.AE.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.92.E3.82.A4.E3.83.B3.E3.82.B9.E3.83.88.E3.83.BC.E3.83.AB.E3.81.99.E3.82.8B.E3.81.AB.E3.81.AF">拡張機能の既定値のファイルをインストールするには</h4>
+<p>Mozilla Suite については、<code>(appdir)/defaults/pref</code> に <a href="ja/Install.js">インストールスクリプト</a> でコピーしてください。</p>
+<p>Firefox や Thunderbird については、<code>myext.xpi/defaults/preferences/</code> に保存してください。設定システムで自動的にコピーされ登録されます。</p>
+<p>{{ 英語版章題("More about preferences \"branches\"") }}</p>
+<h3 id=".E8.A8.AD.E5.AE.9A_.22.E6.9C.A8.22_.E3.81.AB.E3.81.A4.E3.81.84.E3.81.A6.E3.81.AE.E8.A9.B3.E7.B4.B0" name=".E8.A8.AD.E5.AE.9A_.22.E6.9C.A8.22_.E3.81.AB.E3.81.A4.E3.81.84.E3.81.A6.E3.81.AE.E8.A9.B3.E7.B4.B0">設定 "木" についての詳細</h3>
+<p>設定名はドット区切りの文字列で構成され、関連する設定は通常は同じプレフィックスをもちます。たとえば、Mozilla のほとんどのアクセシビリティー関係の設定は、"accessibility" で始まります。</p>
+<p>これは、全ての存在する設定が木のようにイメージできることを示します。たとえば次のように。</p>
+<pre class="eval">+
+|
++-- accessibility
+|         |
+|         +-- typeaheadfind
+|         |         |
+|         |         +-- autostart (<i>accessibility.typeaheadfind.autostart</i>)
+|         |         |
+|         |         +-- enablesound (<i>accessibility.typeaheadfind.enablesound</i>)
+|         |
+|         +-- usebrailledisplay (<i>accessibility.usebrailledisplay</i>)
+|
++-- extensions
+          |
+          +-- lastAppVersion (<i>extensions.lastAppVersion</i>)
+</pre>
+<p>これは、<code>nsIPref<b>Branch</b></code> に隠されたメタファーです。ただ、Mozilla の設定システムはドットを特別なものとして扱わないという事実に注意してください。 たとえば、次のコードも設定の <code><i>accessibility.typeaheadfind.enablesound</i></code> 値を返します。</p>
+<pre class="eval">var prefs = Components.classes["@mozilla.org/preferences-service;1"].
+                    getService(Components.interfaces.nsIPrefService);
+var branch = prefs.getBranch("acce");
+var enablesound = branch.getBoolPref("ssibility.typeaheadfind.enablesound");
+</pre>
+<p>これは、ドットで終わる文字列を <code>getBranch()</code> に渡すべきであることを示す一つの理由です。つまり <code>prefs.getBranch("accessibility<b>.</b>")</code> のように。</p>
+<p>もう一つの注意として、<code>nsIPrefBranch.getChildList("",{})</code> が、設定木の <code>root</code> で始まる設定名の配列を返すことに注意してください。たとえば</p>
+<pre class="eval">var branch = prefs.getBranch("accessibility.");
+var children = branch.getChildList("", {});
+</pre>
+<p>は上の木を例に取ると、あなたの期待しているであろう直接の子供 (<code>"typeaheadfind"</code> and <code>"usebrailledisplay"</code>) ではなく、<code>"typeaheadfind.autostart", "typeaheadfind.enablesound", and "usebrailledisplay"</code> のアイテムを返します。</p>
+<p>{{ 英語版章題("Using preference observers") }}</p>
+<h3 id=".E8.A8.AD.E5.AE.9A.E3.82.AA.E3.83.96.E3.82.B6.E3.83.BC.E3.83.90.E3.82.92.E5.88.A9.E7.94.A8.E3.81.99.E3.82.8B" name=".E8.A8.AD.E5.AE.9A.E3.82.AA.E3.83.96.E3.82.B6.E3.83.BC.E3.83.90.E3.82.92.E5.88.A9.E7.94.A8.E3.81.99.E3.82.8B">設定オブザーバを利用する</h3>
+<p>ある木の設定への変更を監視するのに <code>nsIPrefBranchInternal</code> インターフェースを利用できます。</p>
+<div class="note">
+  <b>注</b> Gecko 1.8 の開発にて、<code>nsIPrefBranchInternal</code> は <code>nsIPrefBranch2</code> に変更 ({{ Bug(281414) }}) され、凍結されました。<code>nsIPrefBranchInternal</code> は Gecko 1.8 ではまだサポートされていますので、拡張を Gecko 1.7 と Gecko 1.8 (Firefox 1.0/1.5) の両方に対応させる場合はこちらを利用すべきです。新しい拡張では、<code>nsIPrefBranch2</code> を利用すべきです。</div>
+<p>サンプルは次のようになります。</p>
+<pre>var myPrefObserver =
+{
+  register: function()
+  {
+    var prefService = Components.classes["@mozilla.org/preferences-service;1"]
+                                .getService(Components.interfaces.nsIPrefService);
+    this._branch = prefService.getBranch("extensions.myextension.");
+    this._branch.QueryInterface(Components.interfaces.nsIPrefBranch2);
+    this._branch.addObserver("", this, false);
+  },
+
+  unregister: function()
+  {
+    if(!this._branch) return;
+    this._branch.removeObserver("", this);
+  },
+
+  observe: function(aSubject, aTopic, aData)
+  {
+    if(aTopic != "nsPref:changed") return;
+    // aSubject is the nsIPrefBranch we're observing (after appropriate QI)
+    // aData is the name of the pref that's been changed (relative to aSubject)
+    switch (aData) {
+      case "pref1":
+        // extensions.myextension.pref1 was changed
+        break;
+      case "pref2":
+        // extensions.myextension.pref2 was changed
+        break;
+    }
+  }
+}
+myPrefObserver.register();
+</pre>
+<p>{{ Source("modules/libpref/public/nsIPrefBranch2.idl", "nsIPrefBranch2.idl") }} により詳細があります。</p>
+<p>{{ 英語版章題("Using <code>prefHasUserValue()</code>") }}</p>
+<h3 id="prefHasUserValue.28.29_.E3.82.92.E5.88.A9.E7.94.A8.E3.81.99.E3.82.8B" name="prefHasUserValue.28.29_.E3.82.92.E5.88.A9.E7.94.A8.E3.81.99.E3.82.8B"><code>prefHasUserValue()</code> を利用する</h3>
+<p><code>nsIPrefBranch.prefHasUserValue(<i>preference</i>)</code> により、既定値から設定が変更されたかどうかを確認できます。変更されていれば <code>true</code> を、変更されていなければ <code>false</code> を返します。特に、既定値が設定されていない場合、<code>prefHasUserValue()</code> は設定が存在するかを確認する手段になります。</p>
+<p><code>get*Pref</code> メソッドで存在しない設定を読もうとしたとき例外が投げられます。読み込む前に、<code>prefHasUserValue()</code> を確認することで設定が存在するかどうかを確認できます。たとえば次のように。</p>
+<pre class="eval">if(prefs.prefHasUserValue("mypref")) {
+  alert(prefs.getCharPref("mypref");
+}
+</pre>
+<p>注: <code>getCharPref()</code> は設定が存在しても、型が違う場合に例外を投げます。</p>
+<p>{{ 英語版章題("Using preferences in extensions") }}</p>
+<h3 id=".E6.8B.A1.E5.BC.B5.E3.81.A7.E8.A8.AD.E5.AE.9A.E3.82.92.E5.88.A9.E7.94.A8.E3.81.99.E3.82.8B" name=".E6.8B.A1.E5.BC.B5.E3.81.A7.E8.A8.AD.E5.AE.9A.E3.82.92.E5.88.A9.E7.94.A8.E3.81.99.E3.82.8B">拡張で設定を利用する</h3>
+<p>Toolkit アプリケーション (Firefox, Thunderbird, Nvu など) 向けに拡張機能を書いている場合、拡張機能の設定に既定値を設定する方が望ましいです。(上記の詳細を参照してください。) これには次のような利点があります。</p>
+<ul>
+  <li>コードの中に既定値を入れる必要が無くなる</li>
+  <li>設定を読むコードが単純化され、<code>get</code> メソッドが例外を投げる可能性を考慮しなくてすむ</li>
+</ul>
+<p>{{ 英語版章題("JavaScript wrappers for preferences system") }}</p>
+<h3 id=".E8.A8.AD.E5.AE.9A.E3.82.B7.E3.82.B9.E3.83.86.E3.83.A0.E3.81.AE_JavaScript_.E3.81.A7.E3.81.AE.E3.83.A9.E3.83.83.E3.83.91" name=".E8.A8.AD.E5.AE.9A.E3.82.B7.E3.82.B9.E3.83.86.E3.83.A0.E3.81.AE_JavaScript_.E3.81.A7.E3.81.AE.E3.83.A9.E3.83.83.E3.83.91">設定システムの JavaScript でのラッパ</h3>
+<p>コードを単純化するためにいくつかの JavaScript でのラッパが存在します。<a class="external" href="http://mozilla.doslash.org/prefutils" rel="freelink">http://mozilla.doslash.org/prefutils</a> や Firefox と Thunderbird に含まれる <code>nsPreferences</code> ラッパです。(<code><a class="external" rel="freelink">chrome://global/content/nsUserSettings.js</a></code>)</p>
+<p>{{ 英語版章題("Resources") }}</p>
+<h3 id=".E8.BF.BD.E5.8A.A0.E6.83.85.E5.A0.B1" name=".E8.BF.BD.E5.8A.A0.E6.83.85.E5.A0.B1">追加情報</h3>
+<ul>
+  <li>設定に関するほかの文書
+    <ul>
+      <li><a href="ja/Preferences_API">Preferences API</a></li>
+      <li><a class="external" href="http://www.mozilla.org/catalog/end-user/customizing/briefprefs.html">Mozilla 設定システムの概要</a> — はユーザや管理者の視点からの設定システムの解説です</li>
+      <li><a class="external" href="http://www.xulplanet.com/tutorials/xulqa/q_prefs.html">XUL Planet の設定に関する文書</a> — は簡単なサンプルを含む設定システムの解説です。読むべきです。</li>
+    </ul>
+  </li>
+  <li>設定システムの Mozilla XPCOM インターフェース
+    <ul>
+      <li><a class="external" href="http://xulplanet.com/references/xpcomref/group_Preferences.html#Preferences">完全なリスト</a></li>
+      <li>よく利用されるインターフェース (凍結され変更の可能性が無いもの): <code><a class="external" href="http://xulplanet.com/references/xpcomref/ifaces/nsIPrefBranch.html">nsIPrefBranch</a></code> と <code><a class="external" href="http://xulplanet.com/references/xpcomref/ifaces/nsIPrefService.html">nsIPrefService</a></code></li>
+      <li><code><a class="external" href="http://xulplanet.com/references/xpcomref/ifaces/nsIPrefBranch2.html">nsIPrefBranch2</a></code> インターフェース (Gecko 1.8 以前では <code>nsIPrefBranchInternal</code> でした)</li>
+    </ul>
+  </li>
+  <li><a href="ja/Preferences_System">Preferences System</a> - は拡張機能やアプリケーションで XUL オプションウィンドウを作成する簡単な方法を説明します。</li>
+  <li>{{ Source("modules/libpref/", "LXR での libpref") }} で設定システムの実装をみることができます。</li>
+  <li>設定 API の JavaScript ラッパ : <a class="external" href="http://mozilla.doslash.org/prefutils" rel="freelink">http://mozilla.doslash.org/prefutils</a></li>
+</ul>

@@ -1,0 +1,66 @@
+---
+title: Chrome URL
+slug: Archive/Mozilla/XUL/Tutorial/The_Chrome_URL
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/The_Chrome_URL
+---
+<div><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial/XUL_Structure" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial/Manifest_Files">次のページ  »</a></p>
+</div></div>
+
+<p>このセクションでは、XUL ドキュメントをはじめとする chrome ファイルを参照する方法を説明します。</p>
+
+<h2 id="Chrome_URL" name="Chrome_URL">Chrome URL</h2>
+
+<p>HTML ファイルを参照する場合とまったく同様に、 XUL ファイルも標準的な HTTP の URL を用いて参照することができます。(それ以外の 任意の URLでもかまいません)。 しかし、それが Mozilla の chrome システムにインストールされたパッケージに含まれている場合は、特別な chrome URL によって参照することになります。 こういったパッケージとしては、Mozilla に同梱のものが最初からインストールされていますが、利用者が自分で登録することも可能です。</p>
+
+<p>インストールされているパッケージには、実行時にセキュリティ上の制限が加えられないという利点があります。 (このことは、多くのアプリケーションが必要としています)。 また、他の種類の URL を使ってアクセスする場合と比べて、 複数のテーマ (theme)やロケール (locale)を自動的に扱うことができるという利点もあります。 例えば、chrome URL を使うと、利用者がどのテーマを利用しているかを意識することなく、そのテーマに含まれている画像などのファイルを参照することができます。 各テーマで同じファイル名を使ってさえいれば、chrome URL を使うことで該当するファイルを参照することが可能になります。 このために、Mozilla はファイルが置かれている場所を特定して、正しいデータを返すような処理をしています。 また、これはパッケージをどこにインストールしたかによらずに、その内容にアクセスできることも意味しています。 つまり、chrome URL は、ファイルの物理的な位置には依存していないということです。 これにより、ファイルを置く場所の詳細について悩む必要がなくなるため、たくさんのファイルを持つアプリケーションの作成がさらに簡単になります。</p>
+
+<p>chrome URL の基本的な構文は、以下になります。</p>
+
+<pre><a rel="freelink">chrome://</a><em>&lt;package name&gt;</em>/<em>&lt;part&gt;</em>/<em>&lt;file.xul&gt;</em>
+</pre>
+
+<p>&lt;package name&gt; は、「messenger」や 「editor」といったパッケージ名を示すテキストになります。 また、&lt;part&gt; は、アクセスしたいパートによって 「<code>content</code>」、「<code>skin</code>」、「<code>locale</code>」からどれかを選択します。 最後の &lt;file.xul&gt; は単純にファイル名に対応します。</p>
+
+<p><strong>例</strong>: <code>chrome://messenger/content/messenger.xul</code></p>
+
+<p>この例は、メッセンジャーウィンドウを記述する XUL ファイルを参照します。 また、スキンを構成するファイルを示したいときは、 「<code>content</code>」を「<code>skin</code>」に置き換えた後、ファイル名を変更します。 同様に、ロケールを構成するファイルを示す場合は、「<code>content</code>」 ではなく 「<code>locale</code>」を用いることになります。</p>
+
+<p>chrome URL を開くために、 Mozilla は、インストールしたパッケージのリストを走査して、パッケージ名とパートにマッチする JAR ファイル、またはディレクトリの位置の特定をしようとします。 このとき chrome URL と JAR ファイルの対応付けは、 chrome ディレクトリに置かれているマニフェストファイル (manifest file)によって指定されます。 Thunderbird は、これを利用して特定のインストール位置に依存しないようにしているため、 <code>messenger.jar</code> ファイルを別の場所へ移動したとしても、 それに応じてマニフェストファイルを更新しておけば、問題なく動作するはずです。 このように、chrome URL を使うことで、詳細な環境の違いは Mozilla に任せてしまうことができます。 同様になりますが、利用者がテーマを変更した場合についても、chrome URL の「<code>skin</code>」パートが異なるファイル群を指すように変更されるだけで、 XUL ファイルやスクリプトを変更する必要はありません。</p>
+
+<p>以下にいくつかの例をあげます。 どの URL にも、特定のテーマやロケールに対する指定や、(インストール先などの) 特定のディレクトリの指定が含まれていないことを確認してください。</p>
+
+<pre>chrome://messenger/content/messenger.xul
+chrome://messenger/content/attach.js
+chrome://messenger/skin/icons/folder-inbox.gif
+chrome://messenger/locale/messenger.dtd
+</pre>
+
+<p>なお、サブディレクトリを参照したい場合は、単純に chrome URL の最後の部分に追加するだけでかまいません。 以下に ブックマークウィンドウを参照する URL を示します。 (Mozilla suite と Firefox ではパッケージ名が異なっているため両方を並べておきます)。</p>
+
+<pre>chrome://communicator/content/bookma...rksManager.xul (Mozilla)
+chrome://browser/content/bookmarks/b...rksManager.xul (Firefox)
+</pre>
+
+<p>chrome URL は、通常 URL が使用できる所ならば、どこからでも入力することが可能です。 極端な話、Mozilla のブラウザウィンドウの URL バーから直接入力してもかまいません。 上記の URL を、ブラウザのアドレスバーに入力した場合、ウィンドウはウェブページを開いたように (ブラウザの中に) 表示されますが、 ほとんどの部分は、独立したウィンドウであるかのように機能します。 ただし、ダイアログボックスの中には、 おそらくは開いたウィンドウから引数が渡されることを前提としているために、上記の方法では正しく動かないものもあります。</p>
+
+<p>また、以下のようにファイル名を指定しない chrome URL もあります。</p>
+
+<pre>chrome://browser/content/
+</pre>
+
+<p>この例では、パッケージ名とパートのみが指定されています。 このようにファイル名を省略した URL を使って参照した場合は、そのディレクトリの用途に応じて適切なファイルが自動的に選択されることになります。 具体的には、コンテントであれば、パッケージ名に <code>.xul</code> を拡張子として加えたファイルが選択されます。 上記の例では、<code>browser.xul</code> ファイルが選択されることになり、 <code>messenger</code> パッケージでは、 <code>messenger.xul</code> が選択されることになります。 おそらく、あなたも独自のアプリケーションを作成するときには、ファイル名を省略してメインウィンドウを参照できるように、 メインウィンドウのファイル名をパッケージと同じ名前にしたいと思うはずです。 また、この方法は、利用者にとってもパッケージ名を知ってさえいれば、アプリケーションを開くことができるため便利です。 (もちろん、拡張機能 (Extension)は、ブラウザのインタフェースを変更することで、UI の一部として拡張機能へのアクセス方法を提供するため、一般の利用者が URL を知る必要はありませんが)</p>
+
+<p>また、スキンのパートでファイル名を省略したときは、<em>&lt;package name&gt;</em>.css ファイルが選択され、ロケールの場合は<em>&lt;package name&gt;</em>.dtd ファイルが選択されることになります。</p>
+
+<p>chrome URL は、ディスク上の場所とは関係していないことを覚えておいてください。 chrome URL の最初の 2 つの部分は、パッケージ名とパート (「content」「skin」「locale」のどれか) になります。 通常は、「content」パートのファイルは「content」というディレクトリに置きますが、 これは、単に慣習であり、規定されているわけではないため、 全く異なるディレクトリ構造を作成してファイルを置いてもかまいません。</p>
+
+<p>次のセクションでは、マニフェストファイル (<code>.manifest</code> 拡張子がついたファイル) と、パッケージの作り方について見ていきます。</p>
+
+<div><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial/XUL_Structure" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial/Manifest_Files">次のページ  »</a></p>
+</div></div>

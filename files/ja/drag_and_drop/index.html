@@ -1,0 +1,145 @@
+---
+title: Drag and Drop
+slug: Drag_and_Drop
+tags:
+  - XUL
+translation_of: Archive/Mozilla/Drag_and_drop
+---
+<div class="warning">
+ <strong>Note:</strong> This page documents an <strong>old</strong> API. For the new drag and drop functionality supported in Gecko 1.9.1 (Firefox 3.5) and later, see the <a class="internal" href="/../../../../en/DragDrop/Drag_and_Drop" rel="internal" title="../../../../en/DragDrop/Drag and Drop">newer API documentation</a>. Unlike the new API, the old API that's documented on this page was only supported in chrome (such as extensions); you can't use this old API on web pages unless you have UniversalXPConnect privileges.</div>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/Drag_and_Drop_JavaScript_Wrapper">次のページ  »</a></p>
+</div> この記事では、ドラッグして他のオブジェクトにドロップできるオブジェクトを実装する方法を説明します。<p></p>
+<div class="note">
+ <strong>注：</strong>ドラッグ＆ドロップがサポートされているのはクローム (拡張機能など) のみです。UniversalXPConnect 特権を取得しない限り、これらの機能を Web ページ上で使うことはできません。Firefox 3.1、Mozilla 1.9.1またはそれ以降では、UniversalXPConnect 特権を必要としない新しいドラッグ＆ドロップのAPIがサポートされています。詳しくは<a class="internal" href="/../../../../ja/DragDrop/Drag_and_Drop" rel="internal" title="../../../../ja/DragDrop/Drag and Drop">新しいAPIの解説</a>を参照してください。</div>
+<h3 id=".E3.83.89.E3.83.A9.E3.83.83.E3.82.B0.EF.BC.86.E3.83.89.E3.83.AD.E3.83.83.E3.83.97.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.95.E3.82.A7.E3.83.BC.E3.82.B9" name=".E3.83.89.E3.83.A9.E3.83.83.E3.82.B0.EF.BC.86.E3.83.89.E3.83.AD.E3.83.83.E3.83.97.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.95.E3.82.A7.E3.83.BC.E3.82.B9">ドラッグ＆ドロップインタフェース</h3>
+<p>多くのユーザインタフェースは、特定のオブジェクトをインタフェース内部でドラッグできるようにしています。例えば、ファイルを他のディレクトリにドラッグしたり、アイコンを他のウィンドウにドラッグして、そのアイコンが参照しているドキュメントを開くと行ったことができます。Mozilla と <a href="/ja/XUL" title="ja/XUL">XUL</a> は、ユーザがオブジェクトをドラッグしようとしたときに何らかの処理を行えるよう、様々なイベントを提供しています。</p>
+<p>ユーザは、マウスのボタンを押下してマウスを移動させることでドラッグを開始できます。ドラッグはユーザがマウスボタンを放したときに停止します。イベントハンドラは、ユーザがドラッグを開始したときと終了したとき、さらにその間の様々な段階で呼び出されます。</p>
+<p>Mozilla はドラッグセッションを利用することでドラッグを実装しています。ユーザがドラッグ可能なオブジェクトをドラッグするリクエストを行ったとき、ドラッグセッションが開始されます。ドラッグセッションは、マウスカーソルの更新や、オブジェクトがドロップされる場所を処理します。そのオブジェクトがドラッグできないときは、ドラッグセッションは開始されません。ユーザが使っているマウスは通常ひとつなので、一度に作成できるラッグセッションはひとつのみです。</p>
+<p>ドラッグセッションは、Mozilla 自体から、あるいは他のアプリケーションから作成されることに注意してください。Mozilla は必要に応じてドラッグされたデータを変換処理します。</p>
+<p>以下のリストは、あらゆる要素に設定できる、呼び出し可能なイベントハンドラを説明したものです。値を設定する必要があるのは、イベントが発生したときに何らかの処理が必要なハンドラのみです。</p>
+<dl>
+ <dt>
+  ondrag </dt>
+ <dd>
+  ドラッグ＆ドロップ操作中、定期的に呼び出されます。</dd>
+ <dt>
+  ondraggesture </dt>
+ <dd>
+  ユーザが要素のドラッグを介したときに呼び出されます。通常、ユーザがマウスボタンを押下してマウスを移動したときに発生します。このハンドラ内のスクリプトがドラッグセッションを設定する必要があります。</dd>
+ <dt>
+  ondragstart  </dt>
+ <dd>
+  <code>ondraggesture</code> のエイリアスです。これは HTML 5 仕様書で定義されたイベントの名前で、HTML と XUL のいずれでも使うことができます。ただし、旧バージョンの Firefox との後方互換性のため、XUL では <code>ondraggesture</code> を使い続けた方が良いでしょう。</dd>
+ <dt>
+  ondragover </dt>
+ <dd>
+  要素の上に何かがドラッグされたときに呼び出されます。オブジェクトがその要素上でドロップ可能な場合は、ドラッグセッションに対して通知が行われます。</dd>
+ <dt>
+  ondragenter </dt>
+ <dd>
+  何かがドラッグされている間、マウスポインタが初めて要素の上に乗ったときに呼び出されます。これは、オブジェクトがその要素にドロップできることをユーザに示すために、要素の見た目を変える場合などに使われます。</dd>
+ <dt>
+  ondragexit </dt>
+ <dd>
+  何かがドラッグされている間、マウスポインタが要素から離れたときに呼び出されます。これは、ドロップが完了した後、その要素からハイライトやその他の表示を外す場合などに使われます。</dd>
+ <dt>
+  ondragdrop </dt>
+ <dd>
+  何かが要素の上にドロップされたときに呼び出されます。この時点では、ユーザは既にマウスボタンを放しています。その要素は、単純にイベントを無視するか、あるいは、ドラッグされたオブジェクトを要素自体に渡すなど、何らかの方法で処理できます。</dd>
+ <dt>
+  ondragend  </dt>
+ <dd>
+  ドラッグ操作が完了したときに呼び出されます。</dd>
+</dl>
+<p>ドラッグ＆ドロップイベントを処理するには 2 つの方法があります。ひとつは、ドラッグ＆ドロップのための <a href="/ja/XPCOM" title="ja/XPCOM">XPCOM</a> インタフェースを直接利用する方法です。もうひとつは、そのインタフェースの一部を代わりに処理する <a href="/ja/Drag_and_Drop_JavaScript_Wrapper" title="ja/Drag_and_Drop_JavaScript_Wrapper">JavaScript ラッパー</a> オブジェクトを用いる方法です。このラッパーのコードは、ウィジェットツールキット (つまりグローバル) パッケージに含まれる <code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/content/nsDragAndDrop.js nsDragAndDrop.js" rel="custom">toolkit/content/nsDragAndDrop.js nsDragAndDrop.js</a></code> と呼ばれるファイルで確認できます。</p>
+<h3 id="XPCOM_.E3.81.AE.E3.83.89.E3.83.A9.E3.83.83.E3.82.B0.EF.BC.86.E3.83.89.E3.83.AD.E3.83.83.E3.83.97.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.95.E3.82.A7.E3.83.BC.E3.82.B9" name="XPCOM_.E3.81.AE.E3.83.89.E3.83.A9.E3.83.83.E3.82.B0.EF.BC.86.E3.83.89.E3.83.AD.E3.83.83.E3.83.97.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.95.E3.82.A7.E3.83.BC.E3.82.B9">XPCOM のドラッグ＆ドロップインタフェース</h3>
+<p>2 つのインタフェースがドラッグ＆ドロップをサポートするために使われています。ひとつはドラッグサービス (<a href="/ja/XPCOM_Interface_Reference/nsIDragService" title="ja/nsIDragService">nsIDragService</a>) で、もうひとつはドラッグセッション (<a href="/ja/NsIDragSession" title="ja/NsIDragSession">nsIDragSession</a>) です。</p>
+<p><a href="/ja/XPCOM_Interface_Reference/nsIDragService" title="ja/nsIDragService">nsIDragService</a> は、ドラッグ開始時にドラッグセッションを作成し、ドラッグ完了時にドラッグセッションを削除する役割を果たします。<code>ondraggesture</code> イベントハンドラ内でドラッグを開始するには <code>invokeDragSession</code> 関数を呼び出します。この関数が呼び出されると、ドラッグが開始されます。</p>
+<p><code>invokeDragSession</code> 関数は、以下のように 4 つの引数を取ります。</p>
+<pre class="eval">invokeDragSession(element,transferableArray,region,actions)
+</pre>
+<dl>
+ <dt>
+  element </dt>
+ <dd>
+  ドラッグされる要素への参照。これは、イベントハンドラ内で <code>event.target</code> プロパティを得ることで取得可能です。</dd>
+ <dt>
+  transferableArray </dt>
+ <dd>
+  ドラッグされる各項目のための、<a href="/ja/NsITransferable" title="ja/NsITransferable">nsITransferable</a> オブジェクトの配列。一連のファイルなど、複数のオブジェクトを一度にドラッグ可能であることから、配列が利用されます。</dd>
+ <dt>
+  region </dt>
+ <dd>
+  フィードバックの表示に利用される範囲。これは通常 <code>null</code> に設定されます。</dd>
+ <dt>
+  actions </dt>
+ <dd>
+  ドラッグが使用するアクション。これは、以下の定数のいずれか、あるいはいくつかの組み合わせに設定されます。アクションは、ドラッグされているものに応じて、ドラッグ中に変更することが可能です。</dd>
+</dl>
+<dl>
+ <dt>
+  nsIDragSession.DRAGDROP_ACTION_NONE </dt>
+ <dd>
+  <dl>
+   <dt>
+    有効なドラッグが存在しないことを示すのに使われます。</dt>
+   <dt>
+    nsIDragSession.DRAGDROP_ACTION_COPY </dt>
+   <dd>
+    ドラッグされている項目はドロップされた場所へコピーする必要があります。</dd>
+   <dt>
+    nsIDragSession.DRAGDROP_ACTION_MOVE </dt>
+   <dd>
+    ドラッグされている項目はドロップされた場所へ移動する必要があります。</dd>
+   <dt>
+    nsIDragSession.DRAGDROP_ACTION_LINK </dt>
+   <dd>
+    ドラッグされているアイテムに対するリンク (あるいはショートカット、エイリアス) を、ドラッグされた場所に作成する必要があります。</dd>
+  </dl>
+ </dd>
+</dl>
+<p>また、<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/NsIDragService" title="">NsIDragService</a></code> インタフェースは、ドラッグイベントハンドラ内からドラッグの状況を取得、変更するために呼び出せる、<code>getCurrentSession</code> 関数を提供します。この関数は <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/NsIDragSession" title="">NsIDragSession</a></code> を実装したオブジェクトを返します。</p>
+<p><a href="/ja/NsIDragSession" title="ja/NsIDragSession">nsIDragSession</a> インタフェースは、発生中のドラッグの属性を取得、設定するために利用されます。以下の属性とメソッドが利用可能です。</p>
+<dl>
+ <dt>
+  canDrop </dt>
+ <dd>
+  マウスが乗っている要素が、ドラッグされているオブジェクトをその要素上でドロップするのを受け入れられる場合は、この値を <code>true</code> に設定します。そのオブジェクトをドロップすることができない場合は、この値を <code>false</code> に設定します。これは、<code>ondragover</code> や <code>ondragenter</code> イベントハンドラ内で変更されるべきです。</dd>
+ <dt>
+  dragAction </dt>
+ <dd>
+  実行される現在のアクションを設定します。これは上で説明した定数のいずれかあるいは複数になります。これを利用して、ユーザに追加のフィードバックを提供することができます。</dd>
+ <dt>
+  numDropItems </dt>
+ <dd>
+  ドラッグされている項目の数。例えば、5 つのブックマークがドラッグされている場合、この値は 5 になります。</dd>
+ <dt>
+  getData(transfer,index) </dt>
+ <dd>
+  ドラッグされているデータを取得します。最初の引数はデータを保持するための <a href="/ja/NsITransferable" title="ja/NsITransferable">nsITransferable</a> オブジェクトとします。2 番目の引数である <code>index</code> は、返される項目のインデックスです。</dd>
+ <dt>
+  sourceDocument </dt>
+ <dd>
+  ドラッグが開始されたドキュメント。</dd>
+ <dt>
+  sourceNode </dt>
+ <dd>
+  ドラッグが開始された <a href="/ja/DOM" title="ja/DOM">DOM</a> ノード。</dd>
+ <dt>
+  isDataFlavorSupported(flavor) </dt>
+ <dd>
+  ドラッグされているデータに、指定された特性のデータが含まれていた場合は <code>true</code> を返します。</dd>
+</dl>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/Drag_and_Drop_JavaScript_Wrapper">次のページ  »</a></p>
+</div><p></p>
+<div class="originaldocinfo">
+ <h2 id=".E5.8E.9F.E6.96.87.E6.9B.B8.E3.81.AE.E6.83.85.E5.A0.B1" name=".E5.8E.9F.E6.96.87.E6.9B.B8.E3.81.AE.E6.83.85.E5.A0.B1">原文書の情報</h2>
+ <ul>
+  <li>著者: <a class="link-mailto" href="mailto:enndeakin@sympatico.ca">Neil Deakin</a></li>
+  <li>原文書:</li>
+  <li>著作権: Copyright (C) <a class="link-mailto" href="mailto:enndeakin@sympatico.ca">Neil Deakin</a></li>
+ </ul>
+</div>
+<p> </p>

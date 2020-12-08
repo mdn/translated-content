@@ -1,0 +1,128 @@
+---
+title: TypedArray.prototype.keys()
+slug: Web/JavaScript/Reference/Global_Objects/TypedArray/keys
+translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/keys
+---
+<div>{{JSRef}}</div>
+
+<p><strong><code>keys()</code></strong>方法返回新的 <code>Array Iterator</code> 对象，包含数组中每个下标的键。</p>
+
+<h2 id="语法">语法</h2>
+
+<pre class="syntaxbox"><code><var>arr</var>.keys()</code></pre>
+
+<h3 id="返回值">返回值</h3>
+
+<p>新的<code><strong>Array Iterator</strong></code>对象</p>
+
+<h2 id="示例">示例</h2>
+
+<h3 id="使用for...of循环的迭代">使用<code>for...of</code>循环的迭代</h3>
+
+<pre class="brush: js">var arr = new Uint8Array([10, 20, 30, 40, 50]);
+var eArray = arr.keys();
+// 你的浏览器必须支持 for..of 循环
+// 以及 for 循环中的 let 区域变量
+for (let n of eArray) {
+  console.log(n);
+}
+</pre>
+
+<h3 id="备选的迭代">备选的迭代</h3>
+
+<pre class="brush: js">var arr = new Uint8Array([10, 20, 30, 40, 50]);
+var eArr = arr.keys();
+console.log(eArr.next().value); // 0
+console.log(eArr.next().value); // 1
+console.log(eArr.next().value); // 2
+console.log(eArr.next().value); // 3
+console.log(eArr.next().value); // 4
+</pre>
+
+<h2 id="规范">规范</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES2015', '#sec-%typedarray%.prototype.keys', '%TypedArray%.prototype.keys()')}}</td>
+   <td>{{Spec2('ES2015')}}</td>
+   <td>初始定义。</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.keys', '%TypedArray%.prototype.keys()')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop(37)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>10</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile(37)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>10</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="另见">另见</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript 类型化数组</a></li>
+ <li>{{jsxref("TypedArray")}}</li>
+ <li>{{jsxref("TypedArray.prototype.entries()")}}</li>
+ <li>{{jsxref("TypedArray.prototype.values()")}}</li>
+ <li>{{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">迭代协议</a></li>
+</ul>

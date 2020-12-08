@@ -1,0 +1,139 @@
+---
+title: ボックスモデルの詳細
+slug: Archive/Mozilla/XUL/Tutorial/Box_Model_Details
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Box_Model_Details
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Element_Positioning" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Groupboxes">次のページ  »</a></p>
+</div>
+
+<p>ここまでのセクションで、ボックスモデルについて多くの特徴を見てきました。 ここでは、いくつか例を示しながら、その挙動について、さらに詳細に見ていきます。</p>
+
+<h3 id=".E8.A9.B3.E7.B4.B0.E3.81.AA.E3.83.AC.E3.82.A4.E3.82.A2.E3.82.A6.E3.83.88.E3.81.AE.E8.AA.BF.E6.95.B4" name=".E8.A9.B3.E7.B4.B0.E3.81.AA.E3.83.AC.E3.82.A4.E3.82.A2.E3.82.A6.E3.83.88.E3.81.AE.E8.AA.BF.E6.95.B4">詳細なレイアウトの調整</h3>
+
+<p><a href="/ja/docs/Web/CSS/min-width" title="min-width は、要素の最小幅を指定する CSS プロパティです。width プロパティの 使用値 が、min-width で指定した値を下回らないようにします。"><code>min-width</code></a> や <a href="/ja/docs/Web/CSS/max-height" title="CSS の max-height プロパティは要素の最大の高さを設定するのに使われます。height プロパティの使用値は、max-height に設定した値よりも大きくなりません。"><code>max-height</code></a> などのスタイルプロパティは、どんな要素にも設定できます。 これまでは、例としてボタンやテキスト入力欄に設定していましたが、スペーサーやボックスに設定することも可能です。 また、<code><code id="a-flex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code> 属性も、あらゆる要素に設定することが可能です。</p>
+
+<p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxdet_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxdet_1.xul">表示</a></p>
+
+<pre>&lt;hbox flex="1"&gt;
+  &lt;button label="Left" style="min-width: 100px;" flex="1"/&gt;
+  &lt;spacer flex="1"/&gt;
+  &lt;button label="Right" style="min-width: 100px;" flex="1"/&gt;
+&lt;/hbox&gt;
+</pre>
+
+<div class="float-right"><img alt="画像:boxdet1.png"></div>
+
+<p>上の例の 3 つの要素はすべて伸縮可能であるため、リサイズすることが可能です。 2 つのボタンには、100 ピクセルで最小幅が指定されています。 このため、ボタンは最小幅よりも小さくなることはありませんが、大きくすることは可能です。 このため、ウィンドウ全体は、 2 つのボタンを置くために最低限必要なサイズである 200 ピクセル以上の大きさで表示されることになります。 また、伸縮可能に設定することにより追加のスペースが必要になることはないため、 3 つの要素がすべて伸縮可能であっても、それ以上の場所が必要となることはありません。</p>
+
+<p>上記の画像が示すように、2 つのボタンがコンテナとなる要素にあわせて垂直に広がってしまっています。 (コンテナは、この場合は <code><code><a href="/ja/docs/Mozilla/Tech/XUL/hbox" title="hbox">hbox</a></code></code> です)。 水平ボックスの <code><code id="a-align"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/align">align</a></code></code> 属性を使えば、この挙動は変更できます。 また、要素に最大の高さ設定することによっても、縦に広がることを抑止することが可能です。 さらに、ボックスに最大の高さが指定されている場合、内部の要素はその制約を受けることを利用して、 個々の要素ではなく、ボックス自身に最大の高さを設定することによって抑止することも可能です。 ただし、この方法をとる場合は「要素の大きさが事前にわかっている必要がある」という問題をクリアする必要があります。 以下の例では、<code><code id="a-align"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/align">align</a></code></code> 属性を設定しています。</p>
+
+<p><span id="%E4%BE%8B_2"><a id="%E4%BE%8B_2"></a><strong>例 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxdet_2.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxdet_2.xul">表示</a></p>
+
+<pre>&lt;hbox flex="1" align="top"&gt;
+  &lt;button label="Left" style="min-width: 100px;" flex="1"/&gt;
+  &lt;spacer flex="1"/&gt;
+  &lt;button label="Right" style="min-width: 100px;" flex="1"/&gt;
+&lt;/hbox&gt;
+</pre>
+
+<h4 id=".E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9.E3.83.A2.E3.83.87.E3.83.AB.E3.81.AE.E3.81.BE.E3.81.A8.E3.82.81" name=".E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9.E3.83.A2.E3.83.87.E3.83.AB.E3.81.AE.E3.81.BE.E3.81.A8.E3.82.81">ボックスモデルのまとめ</h4>
+
+<p>一般に、複雑なレイアウトを行なうためには、ネストしたボックスを追加していき、要素のいくつかには最小サイズと最大サイズを指定し、要素によっては伸縮可能を指定をする必要があるでしょう。 どんなサイズでも問題なく表示できるインターフェイスが理想です。 ボックスモデルは難しいので、自分自身でいろいろあれこれ試行錯誤しながら体得していってください。</p>
+
+<p>以下は、2 種類のボックスの概要です。</p>
+
+<p><strong>水平ボックス</strong></p>
+
+<ol>
+ <li>要素を水平方向に順に配置していきます。</li>
+ <li>伸縮可能性 (<code id="a-flex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code> 属性) は水平方向の伸縮を制御します。</li>
+ <li>まとめ方 (<code id="a-pack"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/pack">pack</a></code> 属性) は、水平方向に余白がある場合の子要素のまとめ位置を制御します。</li>
+ <li>そろえ方 (<code id="a-align"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/align">align</a></code> 属性) は、横一行に並んだ各要素の縦位置をどのようにそろえるかを制御します。</li>
+</ol>
+
+<p><strong>垂直ボックス</strong></p>
+
+<ol>
+ <li>要素を垂直方向に一列に配置します。</li>
+ <li>伸縮可能性 (<code id="a-flex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code> 属性) は垂直方向の伸縮を制御します。</li>
+ <li>まとめ方 (<code id="a-pack"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/pack">pack</a></code> 属性) は、垂直方向に余白がある場合の子要素のまとめ位置を制御します。</li>
+ <li>そろえ方 (<code id="a-align"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/align">align</a></code> 属性) は、縦一列に並んだ各要素の横位置をどのようにそろえるかを制御します。</li>
+</ol>
+
+<p>ボックスは、テーブルのような HTML 要素の内部を含めて、XUL ファイルのどこにでも置くことができます。 ただし、HTML 要素の内部に置いた場合は、その部分のレイアウトは HTML 要素が制御することになります。 このため、HTML 要素の内部に置かれたボックスでは <code><code id="a-flex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code> は期待した通りに正しく動作しなくなります。 伸縮可能性 (<code id="a-flex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code> 属性) は、ボックスかボックス型の要素の内部にある要素にとってだけ意味があるということを覚えておいてください。</p>
+
+<p><span id="Layout_Examples"></span></p>
+
+<h3 id=".E3.83.AC.E3.82.A4.E3.82.A2.E3.82.A6.E3.83.88.E3.81.AE.E4.BE.8B" name=".E3.83.AC.E3.82.A4.E3.82.A2.E3.82.A6.E3.83.88.E3.81.AE.E4.BE.8B">レイアウトの例</h3>
+
+<p><span id="Using_Spacers"></span></p>
+
+<h4 id=".E3.82.B9.E3.83.9A.E3.83.BC.E3.82.B5.E3.83.BC.E3.82.92.E4.BD.BF.E3.81.86" name=".E3.82.B9.E3.83.9A.E3.83.BC.E3.82.B5.E3.83.BC.E3.82.92.E4.BD.BF.E3.81.86">スペーサーを使う</h4>
+
+<p><span id="%E4%BE%8B_3"><a id="%E4%BE%8B_3"></a><strong>例 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxdet_3.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxdet_3.xul">表示</a></p>
+
+<pre>&lt;hbox&gt;
+  &lt;button label="One"/&gt;
+  &lt;spacer style="width: 5px"/&gt;
+  &lt;button label="Two"/&gt;
+&lt;/hbox&gt;
+</pre>
+
+<p>ここでは、スペーサーは、幅を明示的に 5 ピクセルに設定することによって、2 つのボタンの間のセパレータとして使用しています。 同様の効果は、CSS の <a href="/ja/docs/Web/CSS/margin" title="CSS の margin プロパティは、要素の全四辺のマージン領域を設定します。これはすべての個別のマージン (margin-top, margin-right, margin-bottom, margin-left) を一度に設定する一括指定です。"><code>margin</code></a> プロパティを使って、マージンを設定することでも可能です。</p>
+
+<h4 id=".E3.83.9C.E3.82.BF.E3.83.B3.E3.82.92.E4.B8.AD.E5.A4.AE.E3.81.AB.E7.BD.AE.E3.81.8F" name=".E3.83.9C.E3.82.BF.E3.83.B3.E3.82.92.E4.B8.AD.E5.A4.AE.E3.81.AB.E7.BD.AE.E3.81.8F">ボタンを中央に置く</h4>
+
+<p><span id="%E4%BE%8B_4"><a id="%E4%BE%8B_4"></a><strong>例 4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxdet_4.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxdet_4.xul">表示</a></p>
+
+<pre>&lt;hbox pack="center" align="center" flex="1"&gt;
+  &lt;button label="Look at Me!"/&gt;
+  &lt;button label="Push Me!"/&gt;
+&lt;/hbox&gt;
+</pre>
+
+<p>この例では、内部にボタンが 2 つ置かれている水平ボックスがあって、ボックスには <code><code id="a-flex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code> 属性が設定されています。 また、ボックスには、ボタンを水平方向で中央に置くために <code><code id="a-pack"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/pack">pack</a></code></code> 属性が設定されており、 さらに、ボタンを垂直方向で中央に置くための <code><code id="a-align"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/align">align</a></code></code> 属性も設定されています。 このため、ボタンは水平と垂直の両方向で中央に置かれることになります。 この例は、垂直ボックスに変更しても、2 番目のボタンが最初のボタンの隣りではなく下側に来ることを除けば、同様に動作します。</p>
+
+<h4 id=".E3.83.86.E3.82.AD.E3.82.B9.E3.83.88.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0" name=".E3.83.86.E3.82.AD.E3.82.B9.E3.83.88.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0">テキスト検索ダイアログ</h4>
+
+<p><span id="%E4%BE%8B_5"><a id="%E4%BE%8B_5"></a><strong>例 5</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxdet_5.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxdet_5.xul">表示</a></p>
+
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;window id="findtext" title="Find Text" orient="horizontal"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+  &lt;vbox flex="3"&gt;
+    &lt;label control="t1" value="Search Text:"/&gt;
+    &lt;textbox id="t1" style="min-width: 100px;" flex="1"/&gt;
+  &lt;/vbox&gt;
+
+  &lt;vbox style="min-width: 150px;" flex="1" align="start"&gt;
+    &lt;checkbox id="c1" label="Ignore Case"/&gt;
+    &lt;spacer flex="1" style="max-height: 30px;"/&gt;
+    &lt;button label="Find"/&gt;
+  &lt;/vbox&gt;
+
+&lt;/window&gt;
+</pre>
+
+<div class="float-right"><img alt="画像:boxdet-ex3.png"></div>
+
+<p>この例では、2 つの垂直ボックスが作られています。 1 つはテキスト入力欄、もう 1 つはチェックボックスとボタンのためのものです。 左のボックスは、右のボックスの 3 倍の伸縮性を持っています。 そのため、ウィンドウのサイズが増えた場合、左のボックスは、常に右の 3 倍の割合で増えたスペースを受け取ります。 また、右のボックスは、150 ピクセルの最小幅が設定されています。</p>
+
+<p>テキスト入力欄は伸縮可能です。 そのため、ウィンドウのサイズが変更されると、テキスト入力欄のサイズも変わります。 テキスト入力欄にも、100 ピクセルの最小幅が設定されています。 チェックボックスは、右のボックスにラベルとともに表示されます。 チェックボックスのすぐ下には、スペーサーがあります。 スペーサーは伸縮しますが、30 ピクセル以上になることはありません。 このため、チェックボックスと Find ボタンは、30 ピクセル以内で間隔をあけて配置されます。</p>
+
+<p>2 番目のボックスは、<code id="a-align"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/align">align</a></code> 属性により、開始位置 (<code>start</code>) で、そろえる指定になっています。 これによって、子要素は左端にそろえられます。 この指定をしなかった場合、デフォルト値である <code>stretch</code> が指定されたことになり、子要素は水平方向いっぱいに伸張 (<span style="color: green;">stretch</span>)することになります。 ここでは、Find ボタンのサイズは変更したくないため、<code id="a-align"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/align">align</a></code> 属性を設定する必要があります。</p>
+
+<p>次は、さらに特定用途向けのボックス型である、グループボックスについて学びます。</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Element_Positioning" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Groupboxes">次のページ  »</a></p>
+</div>

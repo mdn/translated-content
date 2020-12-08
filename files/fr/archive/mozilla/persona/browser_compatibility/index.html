@@ -1,0 +1,82 @@
+---
+title: Compatibilité des navigateurs
+slug: Archive/Mozilla/Persona/Browser_compatibility
+tags:
+  - Persona
+translation_of: Archive/Mozilla/Persona/Browser_compatibility
+---
+<h2 id="Navigateurs_supportés">Navigateurs supportés</h2>
+<p>Persona est développé, testé, et supporté avec les navigateurs suivants. Grâce à la bibliothèque JavaScript inter-plateformes de Persona, les utilisateurs n'ont pas besoin de greffons pour utiliser Persona.</p>
+<table>
+ <tbody>
+  <tr>
+   <th colspan="3" style="text-align: center; background-color: #d3d7cf;" scope="row"><strong>Navigateurs pour ordinateur de bureau</strong></th>
+  </tr>
+  <tr>
+   <th scope="row"><strong>Internet Explorer</strong></th>
+   <td colspan="2" style="background-color: #8ae234;" rowspan="1">8.0<sup>*</sup>, 9.0<sup>†</sup>, 10.0** (mais voir le <a href="#Mode_de_compatibilit.C3.A9_d'Internet_Explorer">mode de compatibilité</a> ci-dessous)</td>
+  </tr>
+  <tr>
+   <th scope="row"><strong>Firefox</strong></th>
+   <td colspan="2" style="background-color: #8ae234;">Versions courante, stable, Beta, Aurora, Nightly, et ESR.<br>
+    Précédente version stable</td>
+  </tr>
+  <tr>
+   <th scope="row"><strong>Chrome</strong></th>
+   <td colspan="2" style="background-color: #8ae234;">Dernière version stable</td>
+  </tr>
+  <tr>
+   <th scope="row"><strong>Safari</strong></th>
+   <td colspan="2" style="background-color: #8ae234;">Dernière version stable</td>
+  </tr>
+  <tr>
+   <th scope="row"><strong>Opera</strong></th>
+   <td colspan="2" style="background-color: #8ae234;">Dernière version stable<sup>‡</sup></td>
+  </tr>
+  <tr>
+   <th colspan="3" style="text-align: center; background-color: #d3d7cf;" scope="row"><strong>Navigateurs iOS</strong></th>
+  </tr>
+  <tr>
+   <th scope="row"><strong>Safari</strong> Mobile</th>
+   <td colspan="2" style="background-color: #8ae234;" rowspan="1">iOS 5.x — 6.x</td>
+  </tr>
+  <tr>
+   <th colspan="3" style="text-align: center; background-color: #d3d7cf;" scope="row"><strong>Navigateurs Android</strong></th>
+  </tr>
+  <tr>
+   <th scope="row"><strong>Navigateur par défaut</strong></th>
+   <td colspan="2" style="background-color: #8ae234;" rowspan="1">2.x — 4.x</td>
+  </tr>
+  <tr>
+   <th scope="row"><strong>Firefox</strong></th>
+   <td colspan="2" style="background-color: #8ae234;">Versions stable courante, Beta, Aurora, et Nightly<br>
+    Précédente version stable</td>
+  </tr>
+  <tr>
+   <th scope="row"><strong>Chrome</strong></th>
+   <td colspan="2" style="background-color: #8ae234;">Dernière version stable</td>
+  </tr>
+ </tbody>
+</table>
+<p><sup>*</sup> : pour Windows XP. <sup>†</sup> : pour Windows Vista et Windows 7. ** : Windows 8. <sup>‡</sup> : selon durée de vie.</p>
+<h2 id="Navigateurs_non_supportés">Navigateurs non supportés</h2>
+<ul>
+ <li>Internet Explorer versions 6.0 et 7.0 non supportés. Les utilisateurs seront incités à mettre à jour leur navigateur.</li>
+ <li>Google Chrome Frame non supporté et ne fonctionne pas.</li>
+ <li>Les navigateurs tierces sur iOS ne sont pas supportés et ne fonctionnent pas. Le support pourra être ajouté par la suite (<a href="https://github.com/mozilla/browserid/issues/2034" title="https://github.com/mozilla/browserid/issues/2034">Issue #2034</a>).</li>
+</ul>
+<h2 id="Mode_de_compatibilité_d'Internet_Explorer">Mode de compatibilité d'Internet Explorer</h2>
+<p>À partir de la version 8.0, Internet Explorer supporte une fonctionnalité appelée <em>Mode de compatibilité</em>, dans lequel le navigateur peut être amené à émuler une version antérieure à la 8.0, en affichant la page. Cette fonctionnalité peut être contrôlée de trois façons différentes :</p>
+<ul>
+ <li>À travers un paramètre dans le navigateur ;</li>
+ <li>En se basant sur la présence et la valeur de la déclaration DOCTYPE de la page ;</li>
+ <li>À travers une instruction envoyée depuis le site, utilisant l'en-tête <code>X-UA-Compatible</code>, par un en-tête HTTP ou une balise <code>&lt;meta&gt;</code> dans la page. Cette méthode peut supplanter les deux autres.</li>
+</ul>
+<p>Parce que les versions Internet Explorer avant la 8.0 ne sont pas supportées par Persona, toute version d'Internet Explorer qui est configurée pour émuler une version antérieure à la 8.0, ne fonctionnera pas avec Persona.</p>
+<h2 id="Autres_navigateurs">Autres navigateurs</h2>
+<p>Bien qu'ils ne soient pas explicitement supportés, un navigateur incluant aussi bien <a href="/fr/docs/Web/API/Window/postMessage" title="La méthode window.postMessage permet une communication inter-domaine en toute sécurité. Normalement, les scripts de différentes pages sont autorisés à accéder les uns aux autres si et seulement si les pages depuis lesquelles ils sont exécutés ont des URL de même origine, c'est-à-dire avec le même protocole (généralement http ou https), le même numéro de port (80 étant le port par défaut pour  http), et le même nom d'hôte (à condition que document.domain soit initialisé à la même valeur par les deux pages). window.postMessage fournit un mécanisme contrôlé pour contourner cette restriction d'une manière sécurisée si bien utilisée."><code>window.postMessage()</code></a> que <a href="/fr/docs/Web/API/Storage" title="L'interface Storage de l'API Web Storage donne accès au stockage de session (SessionStorage) ou au stockage local (LocalStorage) pour un domaine donné, vous permettant par exemple d'ajouter, de modifier ou de supprimer des éléments enregistrés."><code>localStorage</code></a> devrait fonctionner. Ces API ont été rendues disponibles dans les principaux navigateurs depuis mars 2010.</p>
+<h2 id="Problèmes_connus">Problèmes connus</h2>
+<ul>
+ <li>Les utilisateurs d'Android 2.x qui n'ont pas sélectionné de navigateur par défaut ne pourront pas se connecter (<a href="https://github.com/mozilla/browserid/issues/1854" title="https://github.com/mozilla/browserid/issues/1854">Issue #1854</a>) ;</li>
+ <li>Les navigateurs doivent accepter les cookies tiers pour bénéficier de toutes les fonctionnalités (<a href="https://github.com/mozilla/browserid/issues/1352" title="https://github.com/mozilla/browserid/issues/1352">Issue #1352</a>).</li>
+</ul>

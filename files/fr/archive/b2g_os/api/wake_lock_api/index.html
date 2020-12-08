@@ -1,0 +1,77 @@
+---
+title: Wake Lock API
+slug: Archive/B2G_OS/API/Wake_Lock_API
+tags:
+  - Firefox OS
+  - Non-standard
+  - Overview
+  - TopicStub
+  - Wake Lock API
+translation_of: Archive/B2G_OS/API/Wake_Lock_API
+---
+<section class="Quick_links" id="Quick_Links">
+<ol>
+ <li><strong><a href="/fr/docs/Web/API/Wake_Lock_API">Wake Lock API</a></strong></li>
+ <li class="toggle">
+  <details open><summary>Interfaces</summary>
+  <ol>
+   <li><a href="/fr/docs/Web/API/MozWakeLock"><code>MozWakeLock</code></a></li>
+  </ol>
+  </details>
+ </li>
+ <li class="toggle">
+  <details open><summary>Méthodes</summary>
+  <ol>
+   <li><a href="/fr/docs/Web/API/Navigator/requestWakeLock"><code>Navigator.requestWakeLock()</code></a></li>
+  </ol>
+  </details>
+ </li>
+</ol>
+</section>
+
+<div class="overheadIndicator nonStandard nonStandardHeader">
+<p><strong>Non standard</strong><br>
+ Cette fonctionnalité n'est pas en voie de standardisation au W3C, mais elle est supportée par la plateforme Firefox OS. Bien que son implémentation puisse changer dans le futur et qu'elle n'est pas largement supportée par les différents navigateurs, elle est utilisable pour du code dédié aux applications Firefox OS.</p>
+</div>
+
+
+
+<p>L' <strong>API Wake Lock</strong> permet de verrouiller n'importe quelle ressource de l'appareil. Cela signifie que vous pouvez empêcher cette ressource de devenir indisponible tant que votre application détient un verrou pour cette ressource. Par exemple, une application d'enregistrement vocal peut obtenir un verrouillage pour garder l'écran allumé pendant l'enregistrement afin de pouvoir donner à l'utilisateur un retour visuel prouveur indiquant que l'enregistrement est en cours.</p>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Platform/Gaia" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Gaia">Gaia</a> utilise trois noms de ressources de base qui peuvent être utilisés comme <code>sujet</code>: <code>écran</code>, <code>cpu</code>, et <code>wifi</code>, mais toute application certifié peut exposer de nouvelles ressources.</p>
+
+<h2 id="Références">Références</h2>
+
+<dl>
+ <dt><a href="/fr/docs/Web/API/Navigator/requestWakeLock" title="Cette méthode est utilisée pour faire une requête de blocage de mise en veille de n'importe quelle ressource de l'appareil. Elle renvoie un objet MozWakeLock utilisable pour garder une trace ou libérer le verrou de blocage."><code>Navigator.requestWakeLock()</code></a></dt>
+ <dd>Verrouillez une ressource.</dd>
+ <dt><a href="/fr/docs/Web/API/MozWakeLock" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>MozWakeLock</code></a></dt>
+ <dd>Interface représentant une serrure et permettant de les gérer, en en gardant une trace, et en donnant la possibilité de la libérer.</dd>
+</dl>
+
+<h2 id="Exemple">Exemple</h2>
+
+<h3 id="Specification" name="Specification">Garder l'écran allumé</h3>
+
+<p>Toute application peut choisir de garder l'écran allumé pendant son exécution. Pour ce faire, l'application doit obtenir un verrou pour la ressource écran lorsqu'elle est initialisée.</p>
+
+<pre class="brush: js notranslate">var lock = window.navigator.requestWakeLock('screen');
+</pre>
+
+<p>Les développeurs d'applications doivent être responsables et réfléchir soigneusement à la question de savoir s'ils doivent garder l'écran allumé. Le risque de réclamer le verrou est que les utilisateurs peuvent oublier de fermer l'application lorsqu'ils ont fini de l'utiliser, ce qui peut entraîner une augmentation significative de l'utilisation de la batterie. Si vous n'êtes pas certain que l'obtention du verrouillage de l'écran ait du sens dans tous les scénarios, il serait judicieux de fournir l'option d'activer ou de désactiver l'option de verrouillage d'écran dans les paramètres de l'application.</p>
+
+<p>Si vous ne relâchez pas du tout le verrouillage de l'écran, il sera à nouveau obtenu à partir de votre application lorsqu'il passe en arrière-plan ou lorsque l'application se termine. Cependant, il existe certains scénarios où vous devez libérer vous-même le verrouillage de l'écran, par exemple lorsque l'utilisateur désactive l'option dans les paramètres ou lorsque l'application n'exécute pas la tâche qui nécessitait que l'écran reste allumé. Dans ces scénarios, il vous suffit d'appeler la méthode unlock() pour libérer le verrou.</p>
+
+<pre class="brush: js notranslate">lock.unlock();</pre>
+
+<p>Le verrouillage de réveil de l'écran est actuellement disponible pour les applications hébergées et packagées exécutées sur la plate-forme Firefox OS.</p>
+
+<h2 id="Specification" name="Specification">Spécification</h2>
+
+<p>Ne fait partie d'aucune spécification</p>
+
+<h2 id="Voir_également">Voir également</h2>
+
+<ul>
+ <li><a href="/fr/docs/Web/API/Navigator/mozPower" title="Retourne un objet PowerManager que vous pouvez utiliser pour gérer la consommation energétique de l'appareil."><code>Navigator.mozPower</code></a></li>
+</ul>

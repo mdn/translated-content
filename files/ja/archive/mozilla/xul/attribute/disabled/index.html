@@ -1,0 +1,34 @@
+---
+title: disabled
+slug: Archive/Mozilla/XUL/Attribute/disabled
+tags:
+  - XUL Attributes
+  - XUL Reference
+translation_of: Archive/Mozilla/XUL/Attribute/disabled
+---
+<div class="noinclude">
+  <span class="breadcrumbs xulRefAttr_breadcrumbs">« <a href="/ja/docs/XUL/XUL_Reference">XUL リファレンス HOME</a></span></div>
+<dl>
+  <dt>
+    <code id="a-disabled"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code></dt>
+  <dd>
+    型: <em>論理型</em></dd>
+  <dd>
+    要素が無効化されているかどうかを示します。ある要素が <code>true</code> に設定されていたら、その要素は無効化されています。無効化された要素は通常グレイ表示のテキストで描画されます。要素が無効化されていると、ユーザのアクションには応答せず、フォーカスもあてられず、<code>command</code> イベントも発生しません。
+    <div class="noinclude">
+      しかし、要素はマウスのイベントには応答します。要素を有効化するには、値を <code>false</code> に設定するのとは対照的に、この属性を完全に取り去ってください。</div>
+  </dd>
+</dl>
+<div class="noinclude">
+  <img alt="Image:XUL_ref_attr_disabled.png" class="internal" src="/@api/deki/files/1807/=XUL_ref_attr_disabled.png">
+  <pre class="brush:xml">&lt;!-- Checkbox enables/disables the button --&gt;
+&lt;checkbox label="ボタンを有効にする"
+    onclick="document.getElementById('buttRemove').disabled = this.checked"/&gt;
+&lt;button id="buttRemove" label="すべて削除" disabled="true"/&gt;
+</pre>
+  <div class="blockIndicator standardNote">
+    <p><a href="https://developer.mozilla.org/ja/docs/Mozilla/Firefox/Releases/3.5">Firefox 3.5 における注記</a></p>
+    <p style="font-weight: 400;">For <a class="internal" href="/en/XUL/keyset" title="En/XUL/Keyset"><code>keyset</code></a> elements, support for this attribute was added in Firefox 3.5.</p>
+</div>
+</div>
+<p> </p>

@@ -1,0 +1,138 @@
+---
+title: Document Object Model
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Document_Object_Model
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Document_Object_Model
+---
+<p> </p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Broadcasters_et_Observateurs" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Modification_d'une_interface_XUL">Suivant  »</a></p>
+</div>
+<p>Le Document Object Model (DOM, modèle objet d'un document) peut être utilisé pour modifier les éléments XUL ou obtenir des informations à leur propos.</p>
+<h3 id="Introduction_au_DOM" name="Introduction_au_DOM">Introduction au DOM</h3>
+<p>Le <a href="/fr/DOM" title="fr/DOM">DOM</a> est utilisé pour stocker l'arbre des nœuds XUL. Quand un fichier XUL est chargé, les balises sont interprétées et converties dans une structure hiérarchique de nœuds du document, un pour chaque balise et bloc de texte. La structure DOM peut être examinée et modifiée en utilisant des méthodes dédiées. Des éléments XUL spécifiques fournissent également des fonctions additionnelles pouvant être utilisées.</p>
+<p>Chaque fichier XUL chargé aura son propre document affiché dans une fenêtre ou un cadre. Bien qu'il ne puisse y avoir qu'un seul document associé à une fenêtre à un moment donné, vous pouvez charger des documents supplémentaires en utilisant plusieurs méthodes.</p>
+<p>Dans Mozilla, on peut accéder au <a href="/fr/DOM" title="fr/DOM">DOM</a> et le manipuler en utilisant JavaScript. Les divers objets DOM possèdent des fonctions accessibles par script, pourtant, il est important de noter que le DOM est une <abbr title="Application programming interface">API</abbr> qui est accessible par JavaScript. JavaScript lui-même n'est jamais qu'un langage de script pouvant accéder à ces objets parce que Mozilla fournit ces objets à l'utilisation.</p>
+<p>Dans <a href="/fr/JavaScript" title="fr/JavaScript">JavaScript</a>, il existe un unique objet global toujours disponible. Vous pouvez vous reférer aux propriétés et méthodes de l'objet global sans avoir à les qualifier avec un objet. Par exemple, si l'objet global possède une propriété <code>name</code>, vous pouvez changer le nom avec le code <code>name=7</code> sans avoir à spécifier l'objet à utiliser. Dans un contexte de navigateur, la fenêtre est l'objet global. Il en va de même pour XUL. Naturellement, l'objet global sera différent pour chaque fenêtre. Chaque cadre aura également un objet <code>window</code> séparé.</p>
+<p>On se refère souvent à la fenêtre en utilisant <a href="/fr/DOM/window.window" title="fr/DOM/window.window">la propriété <code>window</code></a>, bien que ce soit optionnel. Quelquefois, cette pratique sert uniquement à clarifier la portée de la méthode à laquelle vous vous reférez. Par exemple, les deux lignes suivantes qui ouvrent une nouvelle fenêtre, sont fonctionnellement équivalentes :</p>
+<pre>window.open("test.xul","_new");
+open("test.xul","_new");
+</pre>
+<p>Lorsque vous déclarez une fonction ou une variable en tête de script, en dehors d'une fonction, vous êtes en train de déclarer une propriété de l'objet global. En XUL, chaque fonction que vous déclarez sera définie comme une propriété de l'objet <code>window</code>. Par exemple, le code suivant affichera deux fois le texte 'message' dans une <a href="/fr/DOM/window.alert" title="fr/DOM/window.alert">alerte</a>.</p>
+<pre>function getText(){
+  return "Message";
+}
+
+alert(getText());
+alert(window.getText());
+</pre>
+<p>De fait, si vous vouler accéder à des variables ou appeler une fonction déclarée dans un script utilisé par une autre fenêtre, vous pouvez y accéder juste en utilisant l'objet <code><a href="/fr/DOM/window" title="fr/DOM/window">window</a></code> de l'autre fenêtre. Par exemple, si nous avions combiné les deux derniers exemples dans un seul fichier, nous pourrions appeler la fonction <code>getText</code> au sein de l'autre fenêtre (par ex. la fenêtre test.xul). Pour cela, nous pouvons faire la chose suivante :</p>
+<pre>alert(window.opener.getText());</pre>
+<p>Chaque fenêtre possède une propriété <code><a href="/fr/DOM/window.opener" title="fr/DOM/window.opener">opener</a></code> contenant l'objet <code>window</code> l'ayant ouverte. Dans cet exemple, nous récupérons la fenêtre responsable de l'ouverture et appelons la fonction <code>getText</code> déclarée dans un script situé dans celle-ci. Notez que nous qualifions la propriété avec l'identifiant <code>window</code> uniquement pour plus de clarté.</p>
+<p>La méthode <code><a href="/fr/DOM/window.open" title="fr/DOM/window.open">open()</a></code> de la fenêtre retourne également une référence à la nouvelle fenêtre, donc vous pouvez appeler des fonctions de la nouvelle fenêtre à partir de l'ouvrante. Toutefois, il est important de noter que la méthode <code><a href="/fr/DOM/window.open" title="fr/DOM/window.open">open()</a></code> renvoie sa valeur de retour avant que la fenêtre soit complètement chargée, donc les fonctions ne seront pas forcément disponibles pour autant.</p>
+<p>L'objet <code>window</code> n'est défini par aucune spéficication DOM, mais est quelquefois considéré, dans Mozilla, comme faisant partie du DOM niveau 0, un nom utilisé par des développeurs pour se reférer aux fonctions assimilées DOM avant que celles-ci ne soient ajoutées aux spécifications. Le document actuel affiché dans une fenêtre peut être récupéré en utilisant la propriété <code><a href="/fr/DOM/window.document" title="fr/DOM/window.document">document</a></code> du document. Depuis qu'elle est devenue la propriété de la fenêtre la plus couramment utilisée, la propriété <code>document</code> est habituellement utilisée sans le qualifieur <code><a href="/fr/DOM/window.document" title="fr/DOM/window.document">document</a></code>.</p>
+<p>Mozilla founit divers objets de document en fonction de son type. Les trois documents principaux sont les <a class="external" href="http://www.xulplanet.com/references/objref/HTMLDocument.html">HTMLDocument</a>, <a class="external" href="http://www.xulplanet.com/references/objref/XMLDocument.html">XMLDocument</a> et <a class="external" href="http://www.xulplanet.com/references/objref/XULDocument.html">XULDocument</a>, respectivement pour les documents <a href="/fr/HTML" title="fr/HTML">HTML</a>, <a href="/fr/XML" title="fr/XML">XML</a> et <a href="/fr/XUL" title="fr/XUL">XUL</a>. Évidemment, c'est ce dernier type de document qui est utilisé pour le XUL. Les trois types de document sont très similaires. Concrètement, ils partagent tous la même implémentation de base. Mais il existe des fonctions spécifiques à chacun de ces documents.</p>
+<h3 id="R.C3.A9cup.C3.A9rer_des_.C3.A9l.C3.A9ments" name="R.C3.A9cup.C3.A9rer_des_.C3.A9l.C3.A9ments">Récupérer des éléments</h3>
+<p>La méthode la plus courante pour récupérer un élément dans un document est de lui affecter un attribut <code id="a-id"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/id">id</a></code> et d'utiliser la méthode <code><a href="/fr/DOM/document.getElementById" title="fr/DOM/document.getElementById">getElementById()</a></code> du document. Nous avons ajouté l'attribut <code id="a-id"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/id">id</a></code> à un certain nombre d'éléments dans la boîte de recherche de fichiers. Par exemple, nous pouvons obtenir l'état de la case à cocher en utilisant le code ci-dessous :</p>
+<pre>var state = document.getElementById('casecheck').checked;</pre>
+<p>La valeur 'casecheck' correspond à l'<code id="a-id"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/id">id</a></code> de la case à cocher définissant la sensibilité à la casse. Une fois que nous savons si elle est cochée ou non, nous pouvons utiliser cette indication pour effectuer la recherche. Nous pourrions procéder de façon similaire pour l'autre case à cocher, ou n'importe quel autre élément qui a un attribut <code id="a-id"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/id">id</a></code>. Nous aurons par exemple besoin de récupérer le texte dans le champ de saisie.</p>
+<div class="highlight">
+<h4 id="Notre_exemple_de_recherche_de_fichiers" name="Notre_exemple_de_recherche_de_fichiers">Notre exemple de recherche de fichiers</h4>
+<p>Il n'est pas nécessaire d'afficher la barre de progression et l'arbre de données vide quand la boîte de dialogue pour la recherche de fichiers est affichée pour la première fois. Ceux-ci ont été ajoutées de façon à ce que nous puissions les voir. Retirons-les maintenant, et affichons-les seulement lorsque le bouton « Rechercher » sera pressé. Au départ, nous devons les rendre invisible. L'attribut <code id="a-hidden"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/hidden">hidden</a></code> est utilisé pour contrôler la visibilité d'un élément.</p>
+<p>Nous allons modifier la barre de progression de façon à ce qu'elle soit cachée au départ. Nous allons aussi lui ajouter un attribut <code id="a-id"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/id">id</a></code> pour qu'un script puisse y faire référence pour pouvoir la cacher ou l'afficher. Profitons-en pour cacher aussi le séparateur et l'arbre des résultats, puisque nous n'en aurons besoin qu'après avoir effectué une recherche.</p>
+<pre class="eval">&lt;tree <span class="highlightred">id="results" hidden="true"</span> flex="1"&gt;
+  .
+  .
+  .
+&lt;splitter <span class="highlightred">id="splitbar"</span> resizeafter="grow" <span class="highlightred">hidden="true"</span>/&gt;
+
+&lt;hbox&gt;
+
+  &lt;progressmeter <span class="highlightred">id="progmeter"</span> value="50%"
+    style="margin: 4px;" <span class="highlightred">hidden="true"</span>/&gt;
+</pre>
+<p>Nous avons ajouté l'attribut <code id="a-hidden"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/hidden">hidden</a></code> et mis sa valeur à 'true'. L'élément est ainsi caché lors de sa première apparition.</p>
+<p>Ensuite, ajoutons une fonction qui sera appelée quand le bouton « Rechercher » sera pressé. Nous mettrons les scripts dans le fichier séparé 'findfile.js'. Dans une section précédente, nous avons ajouté l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/script" title="script">script</a></code> dans le fichier XUL. Si vous ne l'avez pas encore fait, faites-le maintenant, comme ci-dessous. Nous ajouterons aussi un gestionnaire <code id="a-oncommand"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/oncommand">oncommand</a></code> au bouton « Rechercher ».</p>
+<pre class="eval">&lt;script src="findfile.js"/&gt;
+  .
+  .
+  .
+&lt;button id="find-button" label="Rechercher"
+   <span class="highlightred">oncommand="doFind();"</span>/&gt;
+</pre>
+<p>À présent, créez un autre fichier nommé 'findfile.js' dans le même répertoire que 'findfile.xul'. Nous ajouterons la fonction <code>doFind()</code> dans ce fichier. La balise <code><a href="/fr/docs/Mozilla/Tech/XUL/script" title="script">script</a></code> de ce fichier XUL peut contenir du code. Cependant, pour diverses raisons, notamment pour de meilleures performances, vous devriez toujours mettre vos scripts dans des fichiers séparés, excepté pour les courts morceaux de code qui peuvent se trouver directement dans les gestionnaires d'événement.</p>
+<pre class="eval">function doFind(){
+  var meter = document.getElementById('progmeter');
+  meter.hidden = false;
+}
+</pre>
+<p>Cette fonction récupère d'abord une référence à la barre de progression en utilisant son <code id="a-id"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/id">id</a></code>, 'progmeter'. La seconde ligne du corps de la fonction change l'état de <code>hidden</code> pour rendre l'élément visible.</p>
+<p>Finalement, ajoutons une boîte de dialogue qui affiche ce que nous sommes en train de rechercher. Évidemment nous n'en voudrons pas dans la version finale, mais ajoutons la maintenant pour nous assurer que quelque chose se produise.</p>
+<pre class="eval">function doFind(){
+  var meter=document.getElementById('progmeter');
+  meter.hidden = false;
+  <span class="highlightred">var searchtext=document.getElementById('find-text').value;   alert("Recherche de \"" + searchtext + "\"");</span>
+}
+</pre>
+<p>Maintenant, avec cette boîte d'alerte placée ici, nous saurons ce qui se produit quand nous cliquons sur le bouton « Rechercher ». Nous pouvons ajouter du code pour obtenir aussi ce qui est sélectionné dans les listes déroulantes.</p>
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-dom.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-dom.xul">Voir</a></p>
+</div>
+<h3 id="Le_DOM_des_.C3.A9l.C3.A9ments_XUL" name="Le_DOM_des_.C3.A9l.C3.A9ments_XUL">Le DOM des éléments XUL</h3>
+<p>Chaque élément XUL possède un lot d'attributs, un lot de propriétés et un lot d'enfants.</p>
+<ul> <li>Les attributs sont déclarés dans la source, par exemple, <code>flex="1"</code> est un attribut <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code> déclaré avec la valeur '1'.</li> <li>Les propriétés sont disponibles en JavaScript en utilisant la syntaxe du point. Par exemple, element.hidden se réfère à la propriété <code>hidden</code> d'un élément.</li> <li>Les enfants sont les balises filles de l'élément et seront imbriqués à l'intérieur de l'élément dans la source.</li>
+</ul>
+<p>Il est possible de manipuler dynamiquement les attributs, propriétés et enfants d'un élément en utilisant les méthodes du DOM.</p>
+<p>Il est important de noter que les attributs et les propriétés sont deux choses différentes. Tout simplement car le fait qu'un attribut avec un nom donné existe ne signifie pas qu'il existe une propriété correspondante ayant le même nom. Pourtant, c'est souvent le cas. Par exemple, pour obtenir le <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code> d'un élément, vous pouvez utiliser la propriété <code>flex</code>. Dans ce cas, le code implicite retourne simplement la valeur de l'attribut. Pour d'autres propriétés, XUL accomplira des calculs plus complexes.</p>
+<p>Vous pouvez manipuler les attributs d'un élément en utilisant l'une des méthodes suivantes :</p>
+<dl> <dt><a href="/fr/DOM/element.getAttribute" title="fr/DOM/element.getAttribute">getAttribute</a> ( nomAttribut ) </dt> <dd>Renvoie la valeur de l'attribut 'nomAttribut'</dd> <dt><a href="/fr/DOM/element.hasAttribute" title="fr/DOM/element.hasAttribute">hasAttribute</a> ( nomAttribut ) </dt> <dd>Renvoie 'true' si l'attribut de nom 'nomAttribut' a une valeur</dd> <dt><a href="/fr/DOM/element.setAttribute" title="fr/DOM/element.setAttribute">setAttribute</a> ( nomAttribut , valeurAdonner ) </dt> <dd>Fixe la valeur de l'attribut 'nomAttribut' à la valeur 'valeurAdonner'</dd> <dt><a href="/fr/DOM/element.removeAttribute" title="fr/DOM/element.removeAttribute">removeAttribute</a> ( nomAttribut ) </dt> <dd>Supprime l'attribut 'nomAttribut'</dd>
+</dl>
+<p>Ces fonctions vous permettent d'obtenir ou de modifier la valeur d'un attribut à tout moment. Par exemple, pour utiliser la valeur de l'attribut <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code>, vous pourriez utiliser le code suivant :</p>
+<pre> var box = document.getElementById('uneboite');
+ var flex = box.getAttribute("flex");
+
+ var box2 = document.getElementById('uneautreboite');
+ box2.setAttribute("flex", "2");
+</pre>
+<p>Pourtant, l'attribut <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code> a une propriété de script correspondante pouvant être utilisée à la place. Ce n'est pas plus efficace, mais c'est légèrement plus court à écrire. L'exemple suivant fait la même chose qu'au-dessus, en utilisant la propriété <code>flex</code> à la place :</p>
+<pre> var box = document.getElementById('uneboite');
+ var flex = box.flex;
+
+ var box2 = document.getElementById('uneautreboite');
+ box2.flex = 2;
+</pre>
+<p>Une fois que vous avez une référence à un élément, vous pouvez appeler les propriétés de cet élément. Par exemple, pour obtenir la propriété <code>hidden</code> d'un élément, vous pouvez utiliser la syntaxe <code><em>element</em>.hidden</code> où "element" est une référence à l'élément. Notez que la plupart des propriétés listées dans la référence est en corrélation avec les attributs communs des éléments. Il y a des différences, bien sûr, par exemple, alors que <code>getAttribute("hidden")</code> retournera la chaîne '"true"' pour un élément caché, la propriété <code>hidden</code> retournera une valeur 'true' booléenne. Dans ce cas, la conversion de type est faite pour vous, donc la propriété est plus commode.</p>
+<p>Comme pour chaque document, l'objet "element" pour les éléments XUL n'est pas le même que pour des éléments <a href="/fr/HTML" title="fr/HTML">HTML</a> et <a href="/fr/XML" title="fr/XML">XML</a>. Chaque élément XUL implémente l'interface <a class="external" href="http://www.xulplanet.com/references/objref/XULElement.html">XULElement</a>. Un élément XUL est un élément déclaré avec l'espace de nommage (namespace) XUL. Ainsi, les éléments XUL auront cette interface même s'ils sont ajoutés à d'autres documents XML, et les éléments non-XUL ne l'auront pas. L'interface XULElement possède un certain nombre de propriétés et méthodes spécifiques aux éléments XUL, pour beaucoup héritées de l'interface générique des éléments DOM.</p>
+<p>Un espace de nommage est un URI qui spécifie le type d'élément. Voici quelques exemples :</p>
+<pre>&lt;button xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"/&gt;
+&lt;button xmlns="http://www.w3.org/1999/xhtml"/&gt;
+&lt;html:button xmlns:html="http://www.w3.org/1999/xhtml"/&gt;
+&lt;html:button xmlns:html="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"/&gt;
+</pre>
+<p>Les espaces de nommages sont spécifiés en utilisant l'attribut <code>xmlns</code>.</p>
+<ul> <li>Le premier bouton est un élément XUL qui a été placé dans l'espace de nommage XUL.</li> <li>Le second élément est un élément XHTML auquel on a donner l'espace de nommage XHTML.</li> <li>Dans le troisième exemple, le préfixe "html" est donné à l'espace de nommage <span class="nowiki">'http://www.w3.org/1999/xhtml'</span>. Vous pouvez également utiliser la syntaxe en préfixe avec une colonne pour utiliser un espace de nommage spécifique. On y a recours lorsqu'on utilise plusieurs espaces de nommage dans un document et que l'on désire préciser quel espace de nommage est actuellement utilisé. Dans le cas présent, un bouton XHTML est créé.</li> <li>Le quatrième bouton est un peu confus, mais il faut préciser que c'est l'URI qui est important et non le préfixe. C'est une distinction importante. Le quatrième exemple est un bouton XUL, pas un bouton HTML, en dépit du préfixe attribué.</li>
+</ul>
+<p>C'est une distinction importante. En fait, le texte utilisé pour le préfixe n'est pas significatif lorsqu'il détermine quel type d'élément est utilisé.</p>
+<p>Le DOM fournit un certain nombre de fonctions relatives aux espaces de nommage, similaires aux fonctions de base. Par exemple, la fonction <code><a href="/fr/DOM/element.getAttributeNS" title="fr/DOM/element.getAttributeNS">getAttributeNS()</a></code> est similaire à la fonction <code><a href="/fr/DOM/element.getAttribute" title="fr/DOM/element.getAttribute">getAttribute()</a></code>, excepté un argument supplémentaire pouvant être fourni pour spécifier un attribut dans un espace de nommage spécifique.</p>
+<p>Quelques éléments XUL disposent de leurs propres propriétés qui leurs sont spécifiques. Reportez-vous à la <a href="/fr/Référence_XUL" title="fr/Référence_XUL">référence</a> pour un guide complet des attributs et propriétés disponibles pour un élément.</p>
+<h3 id="Naviguer_dans_le_DOM" name="Naviguer_dans_le_DOM">Naviguer dans le DOM</h3>
+<p>Le DOM est une structure en arbre composé d'un unique nœud racine avec ses enfants. Vous pouvez obtenir une référence au nœud racine en utilisant la propriété <code><a href="/fr/DOM/document.documentElement" title="fr/DOM/document.documentElement">documentElement</a></code> du document. Le nœud racine est toujours un élément, mais ce n'est pas le cas pour tous les nœuds de l'arbre. Un élément correspond à une balise dans la source XUL, mais vous pouvez également trouver des nœuds de texte, des nœuds de commentaire et quelques autres types dans un arbre de document. Dans le cas de XUL, l'élément racine sera la balise <code><code><a href="/fr/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> dans le document XUL. Chaque nœud de l'arbre peut avoir des enfants et ces enfants peuvent avoir des nœuds fils à leur tour. Comme le DOM est une structure en arbre, vous pouvez naviguer au sein de cet arbre en utilisant une grande variété de propriétés. Quelques méthodes, parmi les plus communes, sont listées ci-après :</p>
+<dl> <dt><a href="/fr/DOM/element.firstChild" title="fr/DOM/element.firstChild">firstChild</a> </dt> <dd>Référence au premier nœud fils d'un élément</dd> <dt><a href="/fr/DOM/element.lastChild" title="fr/DOM/element.lastChild">lastChild</a> </dt> <dd>Référence au dernier nœud fils d'un élément</dd> <dt><a href="/fr/DOM/element.childNodes" title="fr/DOM/element.childNodes">childNodes</a> </dt> <dd>Contient la liste des enfants d'un élément</dd> <dt><a href="/fr/DOM/element.parentNode" title="fr/DOM/element.parentNode">parentNode</a> </dt> <dd>Référence au père d'un nœud</dd> <dt><a href="/fr/DOM/element.nextSibling" title="fr/DOM/element.nextSibling">nextSibling</a> </dt> <dd>Référence au prochain nœud de même niveau</dd> <dt><a href="/fr/DOM/element.previousSibling" title="fr/DOM/element.previousSibling">previousSibling</a> </dt> <dd>Référence au nœud précédent de même niveau</dd>
+</dl>
+<p>Ces propriétés vous permettent de naviguer de diverses manières au sein d'un document. Par exemple, vous pouvez obtenir un premier enfant d'un élément en utilisant la propriété <code><a href="/fr/DOM/element.firstChild" title="fr/DOM/element.firstChild">firstChild</a></code> et ensuite, naviguer au sein de tous ses enfants en utilisant la propriété <code><a href="/fr/DOM/element.nextSibling" title="fr/DOM/element.nextSibling">nextSibling</a></code>. Ou vous pourriez accomplir la même chose en parcourant les items du tableau childNodes listant tous les enfants. Dans Mozilla, la dernière façon est plus efficace.</p>
+<p>L'exemple suivant montre comment parcourir tous les enfants du n½ud racine :</p>
+<pre>var childNodes = document.documentElement.childNodes;
+for (var i = 0; i &lt; childNodes.length; i++) {
+  var child = childNodes[i];
+  // faire quelque chose avec child
+}
+</pre>
+<p>La variable '<a href="/fr/DOM/element.childNodes" title="fr/DOM/element.childNodes">childNodes</a>' contiendra les enfants de l'élément racine du document. Nous pouvons donc utiliser une boucle <code>for</code> pour parcourir les enfants, en accédant à chaque item comme pour un tableau.</p>
+<hr>
+<p>Dans la prochaine section, nous découvrirons comment modifier le DOM.</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Broadcasters_et_Observateurs" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Modification_d'une_interface_XUL">Suivant  »</a></p>
+</div>
+<p><span class="comment">Interwiki</span></p>

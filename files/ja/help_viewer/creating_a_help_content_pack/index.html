@@ -1,0 +1,213 @@
+---
+title: ヘルプコンテンツパックの作成
+slug: Help_Viewer/Creating_a_Help_Content_Pack
+translation_of: Archive/Mozilla/Help_viewer/Creating_a_Help_Content_Pack
+---
+<p>
+<span>Original doc: <a class=" external" href="http://www.mozilla.org/projects/help-viewer/content_packs">http://www.mozilla.org/projects/help.../content_packs</a> I hesitate to call it "original", tho, because I've basically rewritten the entire thing so that it's easier and faster to use to create Help content. The previous document had a lot of places where ideas were simply introduced without explanation, and I've tried to go through things a bit more slowly with better descriptions. This is still very much a work in progress, tho, and I need to complete the rest of it soon (where "complete" means "use what's there that's good, build on the stuff that's not as good, and add other useful information as necessary".</span> </p><p>この文書は、Mozilla ヘルプビューアを使用して HTML ヘルプ文書をあなたのアプリケーションに統合する方法について書かれています。ヘルプビューアに含まれた文書へは、任意の XUL アプリケーションや Mozilla に組み込まれたプログラムを使用してアクセスすることができます。
+</p>
+<h3 id="コンテンツパックとは？"> コンテンツパックとは？</h3>
+<p>コンテンツパックはヘルプコンテンツが記述されたファイルのパッケージ一式です。コンテンツパックは <a href="ja/XHTML">XHTML</a> で書かれたヘルプドキュメント、<a href="ja/RDF">RDF</a> で書かれたコンテンツパック記述子ファイル、および (RDFで書かれた) コンテンツの目次、索引、用語集を含みます。コンテンツパックを作成するには既存の Mozilla ヘルプコンテンツパックを受け継いでください。
+</p>
+<h3 id="コンテンツパックの内容"> コンテンツパックの内容 </h3>
+<p>コンテンツパックは全般の記述子ファイルおよび目次、索引、検索、用語集、ヘルプ文書で構成されています。ヘルプ文書は XHTML で書かれ、残りは RDF で書かれています。コンテンツパック記述子ファイルは、目次や索引、用語集の RDF ファイルを指し示すことによって、コンテンツパックの枠組みを記述するファイルです。目次ファイルと索引ファイルは、RDF で書かれた簡単なツリー構造でできています。用語集ファイルは、RDF で書かれ、対応する用語の定義への URL を含む簡単な一覧でできています。
+</p>
+<h3 id="コンテンツパックを作成する"> コンテンツパックを作成する </h3>
+<h4 id="コンテンツパック記述子ファイル"> コンテンツパック記述子ファイル </h4>
+<p>先述のとおり、コンテンツパック記述子ファイルは RDF を使用して書かれています。もし、あなたが RDF を知らなくても構いません。(我々の目的のために多くを学ぶ必要はありません。)HTML や (できることなら)XML の基本を理解していれば、構文のとても基本的な部分(要素および属性、要素の内容) を理解することができます。小さな構文エラーがファイル全体を正しく読み込めなくなる原因になるため、構文を理解することが重要です。しかしながら、これは短所であるように思えますが実際には長所です。もしエラーを起こしてしまったら、すぐにそれを知ることができ、Firefox で直接読み込むことによって問題の個所を簡単に特定することができます。後で実際に内容を書くときは XHTML を知る必要がありますが、今は構文の知識だけで十分です。
+</p><p>それではまず、あなたのお気に入りのテキストエディタを開いて、<code>content-pack.rdf</code> ファイルを作成してください。そこに次のテキストを挿入してください:
+</p>
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:nc="http://home.netscape.com/NC-rdf#"&gt;
+
+&lt;/rdf:RDF&gt;
+</pre>
+<p>HTML や XML に馴染みがある方は、これが文書全体のコンテナ要素であることが分かるはずです。これはファイルの内容全体を包むラッパーとして使用され、RDF としてマークアップします。
+</p><p>次に、今作成したファイルの <code>rdf:RDF</code> 要素内に <code>rdf:Description</code> 要素を挿入する必要があります:
+</p>
+<pre>    &lt;rdf:Description rdf:about="urn:root"
+                     nc:title=""
+                     nc:defaulttopic=""
+                     nc:base=""&gt;
+    &lt;/rdf:Description&gt;
+</pre>
+<p>属性値を次のように記入してください:
+</p>
+<ul><li><b>rdf:about</b> は <code>urn:root</code> でなければなりません。それ以外の値にすると動作しません。この属性はファイルに記述された RDF グラフの開始点を示します。ヘルプビューアは、解析されたコンテンツパックのさらに先の (子要素に格納された) 情報について問い合わせるために、この要素を検索します。
+</li><li><b>nc:title</b> は、ヘルプウィンドウのタイトル(例えば、"Mozilla Firefox Help") を指定するところです。この属性は<b>必須</b>です。
+</li><li><b>nc:defaulttopic</b> は、ビューアが最初に読み込むトピックが指定されていない場合に、最初に表示したいトピックの <code>rdf:ID</code> を保持します。この属性は、ビューアのホームボタンを押したときに読み込まれるトピックも指定します。この属性値の書き方は後で詳しく説明します。この属性は<b>任意</b>です。属性値が指定されていないときは <code>welcome</code> になります。
+</li><li><b>nc:base</b> は、記述子ファイル内で参照されたヘルプコンテンツの場所に関するベース URL を含みます。例えば、あなたの用語集および索引、目次の RDF ファイルがすべて <code><a class=" external">chrome://myapp/locale/help/*</a></code> にある場合、<code><a class=" external">chrome://myapp/locale/help/</a></code> をここに記入し、後でファイルを参照する必要があるときは、パスを除いた実際のファイル名のみを使用します。この属性はタイピング量を抑えるのに役立ちますが、そうしたくない場合は必要ありません。
+</li></ul>
+<p>次に、用語集および索引、目次のある場所を記述する必要があります。(私たちはまだ、実際のデータを記述したそれぞれの場所を示していないので、いくつかの記入できるデータを使用します。) 次のコードを、あなたの作成した <code>rdf:Description</code> 要素内に追加してください:
+</p>
+<pre>      &lt;nc:panellist&gt;
+        &lt;rdf:Seq&gt;
+
+        &lt;/rdf:Seq&gt;
+      &lt;/nc:panellist&gt;
+</pre>
+<p><code>rdf:Seq</code> 要素内に関連する情報を追加していきます。
+</p><p>用語集および索引、目次データソースのそれぞれの場所は、次のように、一つの <code>rdf:Description</code> 要素に含まれる、一つの <code>rdf:li</code> 要素に格納されます:
+</p>
+<pre>            &lt;rdf:Seq&gt;
+                &lt;rdf:li&gt;
+                    &lt;rdf:Description nc:panelid="glossary"
+                                     nc:datasources="chrome://foo/locale/help/glossary.rdf"/&gt;
+                &lt;/rdf:li&gt;
+                &lt;rdf:li&gt;
+                    &lt;rdf:Description nc:panelid="toc"
+                                     nc:datasources="chrome://foo/locale/help/glossary.rdf"/&gt;
+                &lt;/rdf:li&gt;
+                &lt;rdf:li&gt;
+                    &lt;rdf:Description nc:panelid="index"
+                                     nc:datasources="chrome://foo/locale/help/glossary.rdf"/&gt;
+                &lt;/rdf:li&gt;
+            &lt;/rdf:Seq&gt;
+</pre>
+<p>ヘルプビューア UI が、各データソースのためのパネルを提供するかもしれません。Firefox 1.0 では、各データソースのパネルがありました。Firefox 1.1 以降および Mozilla 1.8 プラットフォームでは、目次データソースのみが表示されます。用語集と索引データソースは<i>隠れて</i>います。これらの情報は、ユーザがヘルプコンテンツの検索をして、その結果が用語集や索引に見つからない限り表示されません。<span>XXX this sentence is ugly - a little rewording help here would be nice</span>
+</p><p>どの型を定義していても、データソースの記述はほとんど同じで構文は簡単です。各パネルは次の属性を持つ一つの <code>rdf:Description</code> 要素によって指定されます:
+</p>
+<ul><li><b>nc:panelid</b> には、<code>glossary</code> または <code>search</code>, <code>toc</code>, <code>index</code> のいずれかのパネル名を記入します。<code>toc</code> に指定されたデータソースは、読み込まれたコンテンツパックを検索して他のデータソースのみが利用可能な間も、常に表示されます。
+</li><li><b>nc:datasources</b> は、参照されたトピック構造の構築に使用される、スペースで区切られた RDF データソースの一覧です。一般的に、一覧内の各項目は RDF ファイルへの URI になりますが、もしあなたが RDF に詳しければ、RDF ファイルが使用する <code>rdf:ID</code> 属性の特定のノードを参照することもできます。
+</li><li><b>nc:platform</b> (Mozilla 1.8b2/Firefox 1.1 で追加) がある場合は、参照されたデータソースに格納された情報を適用するプラットフォームを記入します。この属性は、ヘルプコンテンツの一部を特定のプラットフォームのみに適用するときに役立ちます。この属性が省略された場合は、データソース内の情報は <i>すべて</i> のプラットフォームに適用されます。この属性値はスペースで区切られたプラットフォーム文字列の一覧です。1.8 以降で使用できる文字列は、<b>win</b> および <b>mac</b>, <b>os2</b>, <b>unix</b> です。(必要ならばさらに追加されます)使用不能な文字列は解析中に無視されます。この属性は次の例のように使用します:
+</li></ul>
+<pre>                &lt;!-- Assumptions:
+                     win-toc.rdf contains Windows- and OS/2-specific info,
+                     unix-toc.rdf contains Linux- and Mac-specific info. --&gt;
+                &lt;rdf:li&gt;
+                    &lt;rdf:Description nc:panelid="toc"
+                                     nc:platform="win os2"
+                                     nc:datasources="win-toc.rdf"/&gt;
+                &lt;/rdf:li&gt;
+                &lt;rdf:li&gt;
+                    &lt;rdf:Description nc:panelid="toc"
+                                     nc:platform="unix mac"
+                                     nc:datasources="unix-toc.rdf"/&gt;
+                &lt;/rdf:li&gt;
+</pre>
+<p>コンテンツパック記述子ファイルを完成させるために <code>rdf:Seq</code> 内に追加する最後の要素は、ヘルプビューアの検索機能を記述するための要素です。検索は、目次、索引、用語集内の要素すべてに対して自動的に行われますが、さらにデータソースを追加して検索したいかもしれません。一つの可能性としては、ソースがオンラインであなたのウェブサイト上に格納され、動的に生成されて追加されたコンテンツの一覧です。ヘルプビューアがこれらの追加のデータソースを通して検索するには、もう一つの <code>rdf:li</code> 要素を定義する必要があります:
+</p>
+<pre>                &lt;rdf:li&gt;
+                    &lt;rdf:Description nc:panelid="search"
+                                     nc:datasources=""
+                                     nc:emptysearchtext="[No matching items found.]"
+                                     nc:emptysearchlink="chrome://foo/locale/bar.html"/&gt;
+                &lt;/rdf:li&gt;
+</pre>
+<ul><li><b>nc:panelid</b> は <code>search</code> に設定してください。
+</li><li><b>nc:datasources</b> は目次および索引、用語集の定義と同じように設定してください。
+</li><li><b>nc:platform</b> は検索データソース上で、目次および索引、用語集の定義と同様に使用されます。(Mozilla 1.8b2/Firefox 1.1 で追加)
+</li><li><b>nc:emptysearchtext</b> は、ヘルプの検索結果が何も無いときに表示されるテキストを指定します。
+</li><li><b>nc:emptysearchlink</b> は、仮の検索結果である "一致する項目がありません" にアクセスしたときに表示される URI を指定します。この属性は<b>必須</b>です。例えば <code><a class=" external">chrome://help/locale/welcome.xhtml</a></code> には、検索時に、ここで使用するのに役立つセクションがあります。
+</li></ul>
+<p>ただし、他のコンテンツパックから内容を継承するときは <code>nc:datasources</code> 属性を使用するように注意してください。この場合の共通の使用例は、ビューアと共に提供された小さな Using the Help Window<span style="color: darkgreen; background: #ef9;">【訳注: ヘルプウィンドウを使用する】</span> の記事を継承するときです。例えば次のコードは、記事を目次に含むために、あなたの作成したコンテンツパックの外部にあるデータソースを使用します:
+</p>
+<pre>                &lt;rdf:li&gt;
+                    &lt;rdf:Description nc:panelid="toc"
+                                     nc:datasources="chrome://help/locale/help-toc.rdf chrome://foo/locale/help/glossary.rdf"/&gt;
+                &lt;/rdf:li&gt;
+
+</pre>
+<p>それぞれの異なるデータソースタイプ(<code>toc</code> および <code>index</code>, <code>glossary</code>, <code>search</code>) は何度も使用することができます。(プラットフォーム特有の情報がある場合は、複数回使用する必要があります。)しかしながら、その読み込みにはわずかに長い時間がかかるので、エントリを分ける代わりに、<code>nc:datasources</code> でスペースで区切られた URI の一覧を使用することが推奨されます。
+</p>
+<h4 id="用語集ファイル"> 用語集ファイル </h4>
+<p>用語集ファイルの書式は、内容の階層が一つしかないので、必要なデータソースの中で一番簡単です。(索引および目次、検索データソースは、ほとんど入れ子状になっており、その書式が複雑です。) 新しい RDF ファイル(今回は <code>glossary.rdf</code> と名付けましょう) を作成し、次の行を追加してください:
+</p>
+<pre>&lt;?xml version="1.0"?&gt;
+
+&lt;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:nc="http://home.netscape.com/NC-rdf#"&gt;
+
+  &lt;rdf:Description rdf:about="urn:root"&gt;
+    &lt;nc:subheadings&gt;
+      &lt;rdf:Seq&gt;
+
+
+      &lt;/rdf:Seq&gt;
+    &lt;nc:subheadings&gt;
+  &lt;/rdf:Description&gt;
+
+&lt;/rdf:RDF&gt;
+</pre>
+<p>これは用語集記述ファイルの外枠です。データを追加するには、上記の用語集の <code>rdf:Seq</code> 内に、次の内容をエントリ毎に一つずつ追加してください:
+</p>
+<pre>        &lt;rdf:li&gt;
+          &lt;rdf:Description nc:name=""
+                           nc:link=""/&gt;
+        &lt;/rdf:li&gt;
+</pre>
+<p><code>rdf:li</code> 要素は、単にそれぞれの分かれたエントリを取り扱います。<code>rdf:Description</code> 要素は、用語集のエントリを記述します。これには <code>nc:name</code> および <code>nc:link</code> の二つの属性が必要です。<code>nc:name</code> はエントリの名前(現在、用語集のどのエントリが表示されているかを表すエントリのタイトル) です。<code>nc:link</code> の内容は、エントリにアクセスしたときビューアに表示されるものを参照する URI です。
+</p>
+<h4 id="索引ファイル"> 索引ファイル </h4>
+<div class="side-note-right">
+<p>索引ファイルの重要な注意点は、最上層の文字一式(例えば、A は Accessibility や Automation、B は Book や Border) が自動的に生成<b>されない</b> ことです。ヘルプ文書は任意の言語で書かれるため、このように自動的に仕分けることが好ましくありません。自動的に仕分けたい場合は、あなたがその機能を実装する必要があります。
+</p>
+</div>
+<p>索引データソースの用語集との構造上の違いは、複数の階層を持っていることです。用語集ファイルと全く同じ方法で単層にしても索引ファイルは完成されますが、複数の階層にすることで、特定の情報へナビゲートしやすくなります。単層の簡単な RDF ファイルの例から始めましょう:
+</p>
+<pre>&lt;?xml version="1.0"?&gt;
+
+&lt;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:nc="http://home.netscape.com/NC-rdf#"&gt;
+
+  &lt;rdf:Description rdf:about="urn:root"&gt;
+    &lt;nc:subheadings&gt;
+      &lt;rdf:Seq&gt;
+        &lt;rdf:li&gt;&lt;rdf:Description nc:link="foo.html" nc:title="Foo"/&gt;&lt;/rdf:li&gt;
+        &lt;rdf:li&gt;&lt;rdf:Description nc:link="baz.html" nc:title="Baz"/&gt;&lt;/rdf:li&gt;
+      &lt;/rdf:Seq&gt;
+    &lt;nc:subheadings&gt;
+  &lt;/rdf:Description&gt;
+
+&lt;/rdf:RDF&gt;
+</pre>
+<p>ここには、単層で "Foo" と "Baz" の二つのエントリしかありません。では、"Foo" のすぐ下に "bar" エントリを追加したいとします。追加するにはどのようにしますか？はじめに、"Foo" エントリに属性を追加する必要があるので、これを正確に参照します。<code>rdf:ID</code> 属性がこの目的に適います。これは、参照先が明らかなことを保証するために、ファイル内とあなたのコンテンツパックのデータソース内でユニークであるべきです。
+</p><p><br>
+</p>
+<pre class="eval">        &lt;rdf:li&gt;&lt;rdf:Description <b>rdf:ID="foo"</b> nc:link="foo.html" nc:title="Foo"/&gt;&lt;/rdf:li&gt;
+</pre>
+<p>続いて、次の内容を <code>rdf:Description</code> 要素のすぐ後に追加してください:
+</p>
+<pre>  &lt;rdf:Description rdf:about="#foo"&gt;
+    &lt;nc:subheadings&gt;
+      &lt;rdf:Seq&gt;
+        &lt;rdf:li&gt;&lt;rdf:Description rdf:ID="bar" nc:link="bar.html" nc:title="bar"/&gt;&lt;/rdf:li&gt;
+      &lt;/rdf:Seq&gt;
+    &lt;/nc:subheadings&gt;
+  &lt;/rdf:Description&gt;
+</pre>
+<p><code>rdf:about</code> の値が異なることを除けば、これは最上層のエントリ定義とほぼ同じように見えます。違いは RDF の動作結果にあります。RDF 内のデータはデータを記述します。最上層のエントリは <code>urn:root</code> のようにroot ノードを記述し、入れ子状のエントリは他のエントリを記述します。エントリを参照するには、ユニークな <code>rdf:ID</code> 属性をもつエントリを渡します。そして、エントリを記述するには、<code>rdf:about</code> 属性に参照先のエントリの <code>rdf:ID</code> の値を <code>#</code> プレフィックス付きで設定します。
+</p><p>上記のような入れ子状の記述は、エントリの階層の深さに関係なく、全く同様に動作します。入れ子は、理論上いくつ階層があっても動作しますが、実用的な入れ子の制限はおよそ 20 階層です。もし、この制限に近くなってしまうような場合は、そこまで入れ子状にする必要があるのかよく考えてください。
+</p>
+<h4 id="目次ファイル"> 目次ファイル </h4>
+<p>目次ファイルは、作成するデータソースの中で最も重要です。ヘルプビューアは、ビューアを開いたときに目次を表示します。ビューアのバージョンによっては、データソースの中で直接表示されるものは"これだけ"です。これは、ユーザに提供するヘルプの構造を表示する主な方法です。
+</p><p>目次はまたトピックの一覧を提供し、ビューアのためのホームページをそこから選びます。ホームページは、コンテンツパック記述子ファイル内に含まれた <code>nc:defaulttopic</code> 属性から、既定値である "welcome" が呼び出されます。この属性値は、ビューアが読み込まれたときに表示したいトピックの <code>rdf:ID</code> です。
+</p><p>目次データソースは索引データソースと全く同様なので、もし索引データソースを作成してあれば、それをそのまま変更無しで目次データとして使用することができます。目次を作成する方法については、用語集や索引データソースを作成するときの説明をご覧ください。
+</p>
+<h4 id="追加の検索データベース"> 追加の検索データベース </h4>
+<p>Firefox 1.1 以降では、ヘルプビューアが検索するための追加のデータベース情報を定義することができます。これらのデータはユーザには表示されませんが、ヘルプを検索しようとするときに、このデータベースから検索結果を得ることができます。
+</p><p>検索データベースの定義は、目次ファイルの定義 (もちろん検索ファイルの作成とも) と全く同様なので、追加のデータソースを作成するための説明が必要であれば、それらを参考にしてください。
+</p>
+<h3 id="コンテンツパックをヘルプビューアで確認する"> コンテンツパックをヘルプビューアで確認する </h3>
+<p>あなたのコンテンツパックでヘルプビューアを起動するには、ヘルプビューアを開くUI を提供する XUL ファイルに、<code><a class=" external">chrome://help/content/contextHelp.js</a></code> を読み込んでおく必要があります:
+</p>
+<pre>  &lt;script type="application/x-javascript"
+          src="chrome://help/content/contextHelp.js"/&gt;
+</pre>
+<p>これにより、ビューアの機能のすべてにアクセスすることができます。ヘルプビューアを開くには <code>openHelp()</code> 関数を実行してください。これは JavaScript コマンドと全く同じように <code>command</code> 要素内や <code>oncommand</code> 属性、その他の場所に挿入することができます。引数を以下に記述します:
+</p>
+<pre>openHelp(aTopic, aContentPackSpec);
+</pre>
+<ul><li><b>aTopic</b>: ヘルプビューアのホームページとして読み込みたいトピックの <code>rdf:ID</code> です。
+</li><li><b>aContentPackSpec</b>: 読み込みたいコンテンツパックへのパスです。
+</li></ul>
+<p>これは Firefox がヘルプ文書を開く方法の例です:
+</p>
+<pre>openHelp('firefox-help', 'chrome://browser/locale/help/help.rdf');
+</pre>
+<h3 id="作業終了"> 作業終了 </h3>
+<div class="noinclude">
+<div class="noinclude">
+</div>
+</div>

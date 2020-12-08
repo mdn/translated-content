@@ -1,0 +1,147 @@
+---
+title: Introduction à RDF
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Introduction_à_RDF
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Introduction_to_RDF
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Les_objets_boîtes_des_arbres" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Gabarits">Suivant  »</a></p>
+</div>
+
+<p>Dans cette section, nous allons nous intéresser à RDF (Resource Description Framework).</p>
+
+<h3 id="Resource_Description_Framework" name="Resource_Description_Framework">Resource Description Framework</h3>
+
+<p>Nous pouvons utiliser l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code> pour afficher un ensemble de données, telles que des marque-pages ou des courriels. Cependant, il ne serait pas pratique de le faire en entrant les données directement dans le fichier <a href="/fr/XUL" title="fr/XUL">XUL</a>. Il serait très difficile de modifier les marque-pages s'ils étaient directement dans le fichier XUL. Le moyen de résoudre cette difficulté est d'utiliser des sources de données RDF.</p>
+
+<p><a href="/fr/RDF" title="fr/RDF">RDF</a> (Resource Description Framework) est un format qui peut être utilisé pour stocker des ressources telles que des marque-pages ou des courriels. Alternativement, on peut utiliser des données dans d'autres formats et écrire du code qui va lire le fichier et créer le fichier de données RDF. C'est de cette façon que Mozilla fonctionne quand il lit des données telles que les marque-pages, l'historique ou les messages de courriel. Mozilla fournit des sources de données pour ces données communes pour que vous puissiez facilement les utiliser.</p>
+
+<p>Vous pouvez utiliser n'importe quelles sources de données RDF fournies pour peupler les arbres <code><a href="/fr/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code> avec des données ou vous pouvez désigner un fichier RDF au format XML contenant les données. Elles sont très commodes pour afficher des arbres contenant beaucoup de lignes. RDF peut aussi peupler d'autres éléments XUL comme les <code><a href="/fr/docs/Mozilla/Tech/XUL/listbox" title="listbox">listbox</a></code> et les <code><a href="/fr/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code>. Nous verrons cela dans la prochaine section.</p>
+
+<p>Un très bref aperçu de RDF sera fourni ici. Pour un guide de RDF plus détaillé, lisez <a class="external" href="http://www.xulplanet.com/tutorials/mozsdk/rdfstart.php">Introduction to the RDF Model (en)</a>. Il est recommandé de lire ce guide si vous êtes débutant en RDF.</p>
+
+<p>Pour plus d'information sur le RDF, consultez <a class="external" href="http://www.w3.org/RDF/">les spécifications RDF (en)</a>.</p>
+
+<h4 id="RDF.2FXML" name="RDF.2FXML">RDF/XML</h4>
+
+<p>RDF consiste en un modèle, qui est une représentation des données sous forme de graphe. RDF/XML est un langage XML utilisé pour représenter des données RDF. Il contient un ensemble assez simple d'éléments. L'exemple ci-dessous montre un gabarit RDF minimal.</p>
+
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;RDF:RDF
+  xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"&gt;
+  ...
+&lt;/RDF:RDF&gt;
+</pre>
+
+<p>Il a quelques similitudes avec l'en-tête XUL. À la place de l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/window" title="window">window</a></code>, l'élément <code>RDF</code> est utilisé. Vous pouvez voir que l'espace de nommage pour RDF a été déclaré pour que les éléments RDF soient reconnus proprement. À l'intérieur de l'élément RDF, vous placerez les données. Pour voir quelques exemples de fichiers RDF/XML, regardez ceux présents avec Mozilla. Ils ont une extension .rdf.</p>
+
+<h4 id="Base_de_donn.C3.A9es_RDF" name="Base_de_donn.C3.A9es_RDF">Base de données RDF</h4>
+
+<p>Prenons l'exemple d'une liste de marque-pages générée à partir de RDF. Une liste de marque-pages contient un ensemble d'enregistrements, chacun avec un ensemble de données associées, telles que l'URL, le titre et une date de visite.</p>
+
+<p>Pensez aux marque-pages comme une base de données qui est stockée comme une grande table avec de nombreux champs. Dans le cas de RDF cependant, les listes peuvent être hiérarchisées. C'est nécessaire pour que nous puissions avoir des dossiers ou des catégories de marque-pages. Chacun des champs dans la base de données RDF est une ressource, avec un nom associé. Le nom est décrit par un URI.</p>
+
+<p>Par exemple, une selection de champs dans la liste de marque-pages de Mozilla est décrite par les URIs ci-dessous :</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td>Name</td>
+   <td><span class="nowiki">http://home.netscape.com/NC-rdf#Name</span></td>
+   <td>Nom du marque-page</td>
+  </tr>
+  <tr>
+   <td>URL</td>
+   <td><span class="nowiki">http://home.netscape.com/NC-rdf#URL</span></td>
+   <td>URL correspondante</td>
+  </tr>
+  <tr>
+   <td>Description</td>
+   <td><span class="nowiki">http://home.netscape.com/NC-rdf#Description</span></td>
+   <td>description du marque-page</td>
+  </tr>
+  <tr>
+   <td>Last Visited</td>
+   <td><span class="nowiki">http://home.netscape.com/WEB-rdf#LastVisitDate</span></td>
+   <td>Date de dernière visite</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Ils sont générés en prenant le nom de l'espace de nommage (<abbr title="Note du Traducteur">NdT</abbr> : exemple : '<span class="nowiki">http://home.netscape.com/NC-rdf</span>') et en ajoutant le nom du champ (<abbr title="Note du Traducteur">NdT</abbr> : exemple : '#Name'). Dans la prochaine section, nous verrons comment les utiliser pour remplir les valeurs des champs automatiquement. Notez que la dernière date de visite a un espace de nommage légèrement différent des trois autres.</p>
+
+<h4 id="Exemple_de_fichier_RDF.2FXML" name="Exemple_de_fichier_RDF.2FXML">Exemple de fichier RDF/XML</h4>
+
+<p>Voici maintenant un exemple de fichier RDF/XML listant une table avec trois enregistrements et trois champs.</p>
+
+<pre>&lt;RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:ANIMALS="http://www.some-fictitious-zoo.com/rdf#"&gt;
+
+  &lt;RDF:Seq about="http://www.some-fictitious-zoo.com/all-animals"&gt;
+    &lt;RDF:li&gt;
+       &lt;RDF:Description about="http://www.some-fictitious-zoo.com/mammals/lion"&gt;
+         &lt;ANIMALS:name&gt;Lion&lt;/ANIMALS:name&gt;
+         &lt;ANIMALS:species&gt;Panthera leo&lt;/ANIMALS:species&gt;
+         &lt;ANIMALS:class&gt;Mammifère&lt;/ANIMALS:class&gt;
+       &lt;/RDF:Description&gt;
+    &lt;/RDF:li&gt;
+    &lt;RDF:li&gt;
+       &lt;RDF:Description about="http://www.some-fictitious-zoo.com/arachnids/tarantula"&gt;
+         &lt;ANIMALS:name&gt;Tarantule&lt;/ANIMALS:name&gt;
+         &lt;ANIMALS:species&gt;Avicularia avicularia&lt;/ANIMALS:species&gt;
+         &lt;ANIMALS:class&gt;Arachnide&lt;/ANIMALS:class&gt;
+       &lt;/RDF:Description&gt;
+    &lt;/RDF:li&gt;
+    &lt;RDF:li&gt;
+       &lt;RDF:Description about="http://www.some-fictitious-zoo.com/mammals/hippopotamus"&gt;
+         &lt;ANIMALS:name&gt;Hippopotame&lt;/ANIMALS:name&gt;
+         &lt;ANIMALS:species&gt;Hippopotamus amphibius&lt;/ANIMALS:species&gt;
+         &lt;ANIMALS:class&gt;Mammifère&lt;/ANIMALS:class&gt;
+       &lt;/RDF:Description&gt;
+    &lt;/RDF:li&gt;
+  &lt;/RDF:Seq&gt;
+&lt;/RDF:RDF&gt;
+</pre>
+
+<div class="note"><abbr title="Note du Traducteur">NdT</abbr> : les spécifications du format RDF précisent qu'il faut toujours indiquer l'espace de nom RDF pour les attributs du langage RDF comme <code id="a-ID"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/ID">ID</a></code> <code id="a-about"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/about">about</a></code>, <code id="a-resource"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/resource">resource</a></code> etc. Pour être en conformité avec ces spécifications, vous devrez toujours déclarer un alias d'espace de nom (comme 'RDF' dans l'exemple précédent : <code><span class="nowiki">xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"</span></code>) et l'utiliser pour les attributs RDF (ex : <code><strong>RDF:</strong>about="..."</code>).</div>
+
+<p>Ici, trois enregistrements ont été décrits, un pour chaque animal. Chaque balise <code>RDF:Description</code> décrit un seul enregistrement. À l'intérieur de chaque enregistrement, trois champs sont décrits, 'name', 'species' et 'class'. Il n'est pas nécessaire que tous les enregistrements aient les mêmes champs mais cela donne plus de sens.</p>
+
+<p>À chacun des trois champs a été donné un espace de nommage appelé 'ANIMALS', dont l'URL a été déclarée dans la balise <code>RDF</code>. Ce nom a été choisi pour sa signification dans ce cas précis, mais nous aurions pu en choisir un autre. La fonctionnalité d'espace de nommage est utile car le champ 'class' peut entrer en conflit avec celui utilisé pour les styles.</p>
+
+<p>Les éléments <code>Seq</code> et <code>li</code> sont utilisés pour indiquer que les enregistrements sont dans une liste. C'est la même façon dont les listes HTML sont déclarées. L'élément <code>Seq</code> est utilisé pour indiquer que les éléments sont ordonnés. À la place de l'élément <code>Seq</code>, vous pouvez aussi utiliser l'élément <code>Bag</code> pour indiquer des données non ordonnées, et <code>Alt</code> pour indiquer des données où chaque enregistrement spécifie des valeurs alternatives (telles que des URLs mirroirs).</p>
+
+<p>À l'intérieur d'un fichier XUL, il est fait référence aux ressources en combinant l'URL de l'espace de nommage suivit du nom du champ. Dans l'exemple ci-dessus, les URIs suivants générés peuvent être utilisés pour référer aux champs spécifiques :</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td>Nom</td>
+   <td><span class="nowiki">http://www.www.some-fictitious-zoo.com/rdf#name</span></td>
+  </tr>
+  <tr>
+   <td>Espèce</td>
+   <td><span class="nowiki">http://www.www.some-fictitious-zoo.com/rdf#species</span></td>
+  </tr>
+  <tr>
+   <td>Classe</td>
+   <td><span class="nowiki">http://www.www.some-fictitious-zoo.com/rdf#class</span></td>
+  </tr>
+ </tbody>
+</table>
+
+<hr>
+<p>Dans la suite, nous allons voir comment utiliser RDF pour peupler des éléments XUL</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Les_objets_boîtes_des_arbres" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Gabarits">Suivant  »</a></p>
+</div>
+
+<p><span class="comment">Interwiki</span></p>
+
+<p> </p>

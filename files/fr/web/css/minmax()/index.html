@@ -1,0 +1,151 @@
+---
+title: minmax()
+slug: Web/CSS/minmax()
+tags:
+  - CSS
+  - Experimental
+  - Fonction
+  - Reference
+  - Web
+translation_of: Web/CSS/minmax()
+---
+<div>{{CSSRef}}{{SeeCompatTable}}</div>
+
+<p>La fonction CSS <code><strong>minmax</strong></code><strong><code>()</code></strong> définit un intervalle de taille compris (au sens large) entre <var>min</var> et <var>max</var>. Cette fonction est utilisée avec <a href="/fr/docs/Web/CSS/CSS_Grid_Layout">les grilles CSS</a>.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="brush: css no-line-numbers notranslate">/* Valeurs &lt;inflexible-breadth&gt;, &lt;track-breadth&gt; */
+minmax(200px, 1fr)
+minmax(400px, 50%)
+minmax(30%, 300px)
+minmax(100px, max-content)
+minmax(min-content, 400px)
+minmax(max-content, auto)
+minmax(auto, 300px)
+minmax(min-content, auto)
+
+/* Valeurs &lt;fixed-breadth&gt;, &lt;track-breadth&gt; */
+minmax(200px, 1fr)
+minmax(30%, 300px)
+minmax(400px, 50%)
+minmax(50%, min-content)
+minmax(300px, max-content)
+minmax(200px, auto)
+
+/* Valeurs &lt;inflexible-breadth&gt;, &lt;fixed-breadth&gt; */
+minmax(400px, 50%)
+minmax(30%, 300px)
+minmax(min-content, 200px)
+minmax(max-content, 200px)
+minmax(auto, 300px)
+</pre>
+
+<p>Une fonction qui prend en entrée deux arguments : <em>min</em> et <em>max</em>.</p>
+
+<p>Chaque paramètre peut être une longueur, un pourcentage, un facteur de flexibilité ou l'un des mots-clés parmi <code>max-content</code>, <code>min-content</code> ou <code>auto</code>.</p>
+
+<p>Si <var>max</var> &lt; <var>min</var>, <var>max</var> est ignoré et <code>minmax(min,max)</code> correspond à <var>min</var>. Utilisé comme maximum, une valeur {{cssxref("flex_value","&lt;flex&gt;")}} permet de définir le facteur de flexibilité d'une piste de la grille, elle est invalide comme minimum.</p>
+
+<h3 id="Valeurs">Valeurs</h3>
+
+<dl>
+ <dt><code>&lt;length&gt;</code></dt>
+ <dd>Une longueur positive (cf. le type {{cssxref("&lt;length&gt;")}}).</dd>
+ <dt><code>&lt;percentage&gt;</code></dt>
+ <dd>Un pourcentage ({{cssxref("&lt;percentage&gt;")}}) positif, relatif à la taille en ligne du conteneur pour les colonnes et à la taille en bloc pour les lignes du conteneur. Si la taille de la grille dépend de la taille de ses pistes, la valeur devra être traitée comme <code>auto</code>. L'agent utilisateur peut ajuster les contributions des tailles intrinsèques à la taille de la piste du conteneur de la grille et augmenter la taille finale de la piste par l'écart minimal nécessaire pour respecter ce pourcentage.</dd>
+ <dt><code>&lt;flex&gt;</code></dt>
+ <dd>Une dimension positive avec l'unité <code>fr</code> qui définit le facteur de flexibilité de la piste (cf. {{cssxref("&lt;flex&gt;")}}). Chaque piste avec un tel coefficient <code>&lt;flex&gt;</code> occupe une partie de l'espace disponible restant en fonction de son facteur de flexibilité.</dd>
+ <dt><code>max-content</code></dt>
+ <dd>Cette valeur représente la plus grande valeur <code>max-content</code> contribuant aux objets de la grille qui occupent la piste.</dd>
+ <dt><code>min-content</code></dt>
+ <dd>Cette valeur représente la plus grande valeur <code>min-content</code> contribuant aux objets de la grille qui occupent la piste</dd>
+ <dt><code>auto</code></dt>
+ <dd>Utilisé comme maximum, c'est un synonyme de <code>max-content</code>. Utilisé comme un minimum, il représente le plus grand des minima (selon  {{cssxref("min-width")}}/{{cssxref("min-height")}}) des objets de la grille qui occupent la piste.</dd>
+</dl>
+
+<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+
+<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+
+<h3 id="Propriétés_CSS_applicables">Propriétés CSS applicables</h3>
+
+<p>La fonction <code>minmax()</code> peut être utilisée avec les propriétés suivantes :</p>
+
+<ul>
+ <li>{{cssxref("grid-template-columns")}}</li>
+ <li>{{cssxref("grid-template-rows")}}</li>
+ <li>{{cssxref("grid-auto-columns")}}</li>
+ <li>{{cssxref("grid-auto-rows")}}</li>
+</ul>
+
+<h2 id="Exemples">Exemples</h2>
+
+<h3 id="CSS">CSS</h3>
+
+<pre class="brush: css; highlight[3] notranslate">#container {
+  display: grid;
+  grid-template-columns: minmax(min-content, 300px) minmax(200px, 1fr) 150px;
+  grid-gap: 5px;
+  box-sizing: border-box;
+  height: 200px;
+  width: 100%;
+  background-color: #8cffa0;
+  padding: 10px;
+}
+
+#container &gt; div {
+  background-color: #8ca0ff;
+  padding: 5px;
+}
+</pre>
+
+<h3 id="HTML">HTML</h3>
+
+<pre class="brush: html notranslate">&lt;div id="container"&gt;
+  &lt;div&gt;
+    Item aussi large que le contenu jusqu'à 300 pixels max.
+  &lt;/div&gt;
+  &lt;div&gt;
+    Item avec une largeur flexible minimale de 200 pixels.
+  &lt;/div&gt;
+  &lt;div&gt;
+    Item inflexible de 150 pixels de large.
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+<h3 id="Résultat">Résultat</h3>
+
+<p>{{EmbedLiveSample("Exemples", "100%", 200)}}</p>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th>Spécification</th>
+   <th>État</th>
+   <th>Commentaires</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("CSS Grid", "#valdef-grid-template-columns-minmax", "minmax()")}}</td>
+   <td>{{Spec2("CSS Grid")}}</td>
+   <td>Définition initiale.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<div class="hidden">Ce tableau de compatibilité a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à envoyer une <em>pull request</em> sur <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>.</div>
+
+<p>{{Compat("css.properties.grid-template-columns.minmax")}}</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="http://gridbyexample.com/video/series-minmax/">Un tutoriel vidéo : Introduction à <code>minmax()</code> (en anglais)</a></li>
+ <li><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_les_valeurs_logiques_les_modes_d_écriture">Les grilles CSS : les valeurs logiques et les modes d'écriture</a></li>
+</ul>

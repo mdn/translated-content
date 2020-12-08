@@ -1,0 +1,44 @@
+---
+title: 定制 b2g.sh 脚本
+slug: Archive/B2G_OS/Developing_Firefox_OS/Customizing_the_b2g.sh_script
+translation_of: Archive/B2G_OS/Developing_Firefox_OS/Customizing_the_b2g.sh_script
+---
+<div class="summary">
+ <p>在手机上，  <code><a href="/en-US/docs/Mozilla/Firefox_OS/Architecture#The_userspace_process_architecture" title="/en-US/docs/Mozilla/Firefox_OS/Architecture#The_userspace_process_architecture">b2g</a></code> 应用程序 (它提供了 Firefox OS API 以及其他的东西）是通过 <code>/system/bin/b2g.sh</code> 脚本启动的。你可以对这个脚本进行定制，以修改 Firefox OS 的行为，本文则是介绍了这些内容。</p>
+</div>
+<h2 id="设定环境变量">设定环境变量</h2>
+<p>如果你仅仅是想要对单个运行的 B2G 设定环境变量，可以执行下面命令：</p>
+<pre class="brush: bash">adb shell stop b2g
+adb shell "export ENV_VAR=value &amp;&amp; /system/bin/b2g.sh"
+</pre>
+<p>如果你想要在任何时候都使用相同的环境能够变量，可以向下节描述中对 <code>b2g.sh</code> 进行编辑。</p>
+<h2 id="编辑_b2g.sh">编辑 b2g.sh</h2>
+<p>For debugging, you may want to set environment variables to get logging information or to otherwise affect how the <code>b2g</code> program runs. You can do this by editing the <code>b2g.sh</code> script. There aren't any tools included on the phone to edit the file in place, so you'll need to copy it to your computer first.</p>
+<ol>
+ <li>Connect the phone to your computer, open a terminal window, and execute the following command to edit the script:
+  <pre>adb pull /system/bin/b2g.sh</pre>
+ </li>
+ <li>Edit the script to make the changes you want. For example, suppose you'd like to see some logging output (which requires a debug build), then you might add something like:
+  <pre>export NSPR_LOG_FILE=/data/local/tmp/mylog.txt
+export NSPR_LOG_MODULES=Layers:5
+</pre>
+ </li>
+ <li>Run the following commands to save your updated <code>b2g.sh</code> script to the phone and restart <code>b2g</code>:
+  <pre>adb shell stop b2g
+adb remount
+adb push b2g.sh /system/bin
+adb shell chmod 0755 /system/bin/b2g.sh
+adb shell start b2g
+</pre>
+ </li>
+</ol>
+<div class="note">
+ <p><strong>Note:</strong> <code>/data/local/tmp</code> is the only place on the filesystem which is writable by content processes.</p>
+</div>
+<h2 id="参考">参考</h2>
+<ul>
+ <li><a href="/en-US/docs/Mozilla/Boot_to_Gecko/Building_and_installing_Boot_to_Gecko" title="/en-US/docs/Mozilla/Boot_to_Gecko/Building_and_installing_Boot_to_Gecko">Building and installing Firefox OS</a></li>
+ <li><a href="/en-US/docs/Mozilla/Firefox_OS/Architecture" title="/en-US/docs/Mozilla/Firefox_OS/Architecture">Firefox OS architecture overview</a></li>
+ <li><a href="/en-US/docs/Mozilla/Boot_to_Gecko/Debugging_on_Boot_to_Gecko" title="/en-US/docs/Mozilla/Boot_to_Gecko/Debugging_on_Boot_to_Gecko">Debugging on Firefox OS</a></li>
+</ul>
+<p> </p>

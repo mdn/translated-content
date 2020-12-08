@@ -1,0 +1,140 @@
+---
+title: fuelIBrowserTab
+slug: Toolkit_API/FUEL/fuelIBrowserTab
+tags:
+  - FUEL
+  - Interfaces
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/Toolkit_API/FUEL/fuelIBrowserTab
+---
+<p></p>
+<p>FUEL の <code>BrowserTab</code> オブジェクトは、ブラウザ内のタブを記述します。</p>
+<h2 id="Method_overview" name="Method_overview">メソッドの概要</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="#load.28.29">load</a>(in nsIURI aURI)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#focus.28.29">focus</a>()</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#close.28.29">close</a>()</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#moveBefore.28.29">moveBefore</a>(in fuelIBrowserTab aBefore)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#moveToEnd.28.29">moveToEnd</a>()</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Attributes" name="Attributes">プロパティ</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">プロパティ</td>
+   <td class="header">型</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code>uri</code></td>
+   <td><code>readonly attribute <a href="/ja/XPCOM_Interface_Reference/nsIURI" title="ja/XPCOM Interface Reference/nsIURI">nsIURI</a></code></td>
+   <td>このタブの現在の URI。</td>
+  </tr>
+  <tr>
+   <td><code>index</code></td>
+   <td><code>readonly attribute PRInt32</code></td>
+   <td>ブラウザウィンドウ内のこのタブの現在のインデックス。</td>
+  </tr>
+  <tr>
+   <td><code>window</code></td>
+   <td><code>readonly attribute <a href="/ja/Toolkit_API/FUEL/fuelIWindow" title="ja/FUEL/Window">fuelIWindow</a></code></td>
+   <td>このタブを有するブラウザウィンドウ。</td>
+  </tr>
+  <tr>
+   <td><code>document</code></td>
+   <td><code>readonly attribute nsIDOMHTMLDocument</code></td>
+   <td>ブラウザタブの内容ドキュメント <span style="color: darkgreen; background: #ef9;">【訳注: 原文は "content document"】</span>。DOM リファレンスの <a href="/ja/DOM/document" title="ja/DOM/document">Document オブジェクト</a>を参照。</td>
+  </tr>
+  <tr>
+   <td><code>events</code></td>
+   <td><code>readonly attribute <a href="/ja/Toolkit_API/extIEvents" title="ja/FUEL/Events">fuelIEvents</a></code></td>
+   <td>ブラウザタブに対するイベントオブジェクト。 "load" をサポート。</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Methods" name="Methods">メソッド</h2>
+<h3 id="load.28.29" name="load.28.29">load()</h3>
+<p>このブラウザタブに新しい URI を読み込む。</p>
+<pre class="eval">void load(
+  in nsIURI aURI
+);
+</pre>
+<h6 id="Parameters" name="Parameters">引数</h6>
+<dl>
+ <dt>
+  <code>aURI</code></dt>
+ <dd>
+  ブラウザタブに読み込む URI。</dd>
+</dl>
+<h3 id="focus()">focus()</h3>
+<p>このブラウザタブにフォーカスを移し、前面に表示する。</p>
+<pre class="eval">void focus();
+</pre>
+<h6 id="Parameters_2" name="Parameters_2">引数</h6>
+<p>なし。</p>
+<h3 id="close.28.29" name="close.28.29">close()</h3>
+<p>ブラウザタブを閉じる。スクリプトによって閉じる操作が中止される場合、実際には閉じない。</p>
+<pre class="eval">void close()
+</pre>
+<h6 id="Parameters_3" name="Parameters_3">引数</h6>
+<p>None.</p>
+<h3 id="moveBefore.28.29" name="moveBefore.28.29">moveBefore()</h3>
+<p>このブラウザタブを同じウィンドウ内の別のブラウザタブの前の位置に移動する。</p>
+<pre class="eval">void moveBefore(
+  in fuelIBrowserTab aBefore
+);
+</pre>
+<h6 id="Parameters_4" name="Parameters_4">引数</h6>
+<dl>
+ <dt>
+  <code>aBefore</code></dt>
+ <dd>
+  移動するタブの前にある移動先のタブ。</dd>
+</dl>
+<h3 id="moveToEnd.28.29" name="moveToEnd.28.29">moveToEnd()</h3>
+<p>このブラウザタブを同じウィンドウの末尾へ移動する。</p>
+<pre class="eval">void moveToEnd();
+</pre>
+<h6 id="Parameters_5" name="Parameters_5">引数</h6>
+<p>なし。</p>
+<h2 id="Examples" name="Examples">例</h2>
+<h3 id="ウィンドウ内のタブに対して操作を繰り返す">ウィンドウ内のタブに対して操作を繰り返す</h3>
+<p>この例は、現在アクティブなブラウザウィンドウ内のすべてのタブに対する操作を行い、各タブに対してアラートを表示します。</p>
+<pre>var activeWin = Application.activeWindow;
+
+// アクティブなブラウザウィンドウ内に開かれた各タブを調べる
+activeWin.tabs.forEach( function(tab) {
+  alert(tab.uri.spec);
+});
+</pre>
+<h3 id="タブ内の_Web_コンテンツにアクセスする">タブ内の Web コンテンツにアクセスする</h3>
+<p>この例は、アクティブなタブから HTML コンテンツを取得します。</p>
+<pre>// アクティブなタブの内容ドキュメントへアクセスする
+alert(activeWin.activeTab.document.body.innerHTML);
+</pre>
+<h3 id="新しいタブを開いてコンテンツを挿入する">新しいタブを開いてコンテンツを挿入する</h3>
+<p>この例は、アクティブなウィンドウ内に新しいタブを作成し、そのタブに何らかの HTML コンテンツを挿入します。</p>
+<pre>// 文字列から nsURI を生成するヘルパー
+function url(spec) {
+  var ios = Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService);
+  return ios.newURI(spec, null, null);
+}
+
+// 新しいタブを開き、内容を変更する
+newTab = Application.activeWindow.open(url("about:blank"));
+newTab.events.addListener("load", function() { newTab.document.body.innerHTML = "&lt;H1&gt;HelloWorld&lt;/H1&gt;"; });
+</pre>
+<p> </p>

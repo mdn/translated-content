@@ -1,0 +1,90 @@
+---
+title: Array.observe()
+slug: Web/JavaScript/Reference/Objets_globaux/Array/observe
+tags:
+  - Array
+  - JavaScript
+  - Méthode
+  - Obsolete
+  - Reference
+translation_of: Archive/Web/JavaScript/Array.observe
+---
+<div>{{JSRef}} {{obsolete_header}}</div>
+
+<p>La méthode <strong><code>Array.observe()</code></strong> est utilisée afin d'observer les modifications apportées à un tableau de façon asynchrone. Elle fonctionne de la même façon que la méthode {{jsxref("Object.observe()")}} pour les objets. Cette méthode fournit un flux de changements, triés dans l'ordre dans lequel ils se sont produits. Utiliser cette méthode est équivalent à appeler {{jsxref("Object.observe()")}} avec la liste <code>["add", "update", "delete", "splice"]</code> comme troisième argument. Toutefois, cette API a été dépréciée et retirée des navigateurs. Il est préférable d'utiliser l'objet {{jsxref("Proxy")}}, plus générique, à la place.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox">Array.observe(<var>arr</var>, <var>callback</var>)</pre>
+
+<h3 id="Paramètres">Paramètres</h3>
+
+<dl>
+ <dt><code>arr</code></dt>
+ <dd>Le tableau qu'on souhaite observer.</dd>
+ <dt><code>callback</code></dt>
+ <dd>La fonction à appeler à chaque fois que des changements sont effectués. Cette fonction est appelée avec l'argument suivant :
+ <dl>
+  <dt><code>changes</code></dt>
+  <dd>Un tableau d'objets représentant chacun une modification. Les propriétés de ces objets sont :
+  <ul>
+   <li><strong><code>name</code></strong> : Le nom de la propriété qui a été modifiée.</li>
+   <li><strong><code>object</code></strong> : Le tableau modifié (une fois que la modification a été effectuée).</li>
+   <li><strong><code>type</code></strong> : Une chaîne de caractères indiquant le type de modification qui a eu lieu. Elle peut valoir <code>"add"</code> (pour ajout), <code>"update"</code> (pour modification), <code>"delete"</code>(pour suppression) ou <code>"splice"</code> (pour découpage).</li>
+   <li><strong><code>oldValue</code></strong> : Propriété présente uniquement lorsque le type vaut <code>"update"</code> ou <code>"delete"</code>. La valeur de la propriété est la valeur avant qu'elle ait été modifiée.</li>
+   <li><strong><code>index</code></strong> : Propriété présente uniquement lorsque le type vaut <code>"splice"</code>. L'index auquel la modification a eu lieu.</li>
+   <li><strong><code>removed </code></strong>: Propriété présente uniquement lorsque le type vaut <code>"splice"</code>. Le tableau des éléments supprimés.</li>
+   <li><strong><code>addedCount</code></strong> : Propriété uniquement présente lorsque le type vaut <code>"splice"</code>. Le nombre d'éléments ajoutés.</li>
+  </ul>
+  </dd>
+ </dl>
+ </dd>
+</dl>
+
+<h2 id="Description">Description</h2>
+
+<p>La fonction <code>callback</code> est appelée à chaque fois qu'un changement est apporté à <code>arr</code>, elle est appelée avec un argument qui est un tableau contenant tous les changements qui se sont produits, dans l'ordre dans lequel ils se sont produits. </p>
+
+<div class="note">
+<p>Les modifications apportées avec les méthodes d'Array, comme <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/pop"><code>Array.prototype.pop()</code></a>, seront enregistrées avec le type <code>"splice"</code>. Les modifications d'éléments qui ne modifient pas la longueur du tableau sont enregistrés en tant qu'<code>update"</code>.</p>
+</div>
+
+<h2 id="Exemples">Exemples</h2>
+
+<h3 id="Enregistrer_les_différents_types_de_modifications">Enregistrer les différents types de modifications</h3>
+
+<pre class="brush: js">var arr = ['a', 'b', 'c'];
+
+Array.observe(arr, function(changes) {
+  console.log(changes);
+});
+
+arr[1] = 'B';
+// [{type: 'update', object: &lt;arr&gt;, name: '1', oldValue: 'b'}]
+
+arr[3] = 'd';
+// [{type: 'splice', object: &lt;arr&gt;, index: 3, removed: [], addedCount: 1}]
+
+arr.splice(1, 2, 'beta', 'gamma', 'delta');
+// [{type: 'splice', object: &lt;arr&gt;, index: 1, removed: ['B', 'c'], addedCount: 3}]
+</pre>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<p><a href="https://github.com/arv/ecmascript-object-observe">Proposition de spécification (<em>Strawman proposal</em>)</a> (en anglais).</p>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<div>
+<div class="hidden">Le tableau de compatibilité de cette page a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à consulter <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> et à nous envoyer une<em>pull request</em>.</div>
+
+<p>{{Compat("javascript.builtins.Array.observe")}}</p>
+</div>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>{{jsxref("Array.unobserve()")}} {{obsolete_inline}}</li>
+ <li>{{jsxref("Object.observe()")}} {{obsolete_inline}}</li>
+ <li><a href="https://stackoverflow.com/q/29269057/778272">Sous quelles conditions, Array.observe déclenche un événement « add » ?</a></li>
+</ul>

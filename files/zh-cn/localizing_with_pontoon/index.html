@@ -1,0 +1,134 @@
+---
+title: 使用Pontoon进行本地化
+slug: Localizing_with_Pontoon
+tags:
+  - 本地化
+translation_of: Mozilla/Localization/Localizing_with_Pontoon
+---
+<p><a href="https://pontoon.mozilla.org/" title="http://pontoon-dev.mozillalabs.com">Pontoon</a>是一个基于web网页的、所见即所得（WYSIWYG）的本地化（l10n 即 localization）工具。在Mozilla基金会，我们使用Pontoon本地化Mozilla网站，包括 Firefox 和 Mozilla.org。Pontoon是一个非常简单和直观的，仅需要很少甚至没有技术背景，就能在l10n本 地化工作流程中，学会使用的工具。以下，我们将讨论如何在本地化项目中使用 Pontoon，从最初的注册登录到最终面对你的贡献者（参与该项目的志愿者或 工作人员）。在这个过程中，我们将挑出Pontoon的一些贴心特性，那将使你十分有效率，并将使你能更容易地进行本地化贡献。</p>
+
+<div class="note">
+<p><strong>你是开发者吗？</strong> 你可以阅读<a href="https://developer.mozilla.org/en-US/docs/Implementing_Pontoon_Mozilla">《在你的项目中实现 Pontoon》，</a>或了解如何在 <a href="https://github.com/mozilla/pontoon">GitHub</a> 上参与。</p>
+</div>
+
+<h2 id="起步">起步</h2>
+
+<p><a href="http://pontoon-dev.mozillalabs.com" title="http://pontoon-dev.mozillalabs.com">Pontoon的主页</a>十 分易于使用。简单的从下拉选单中，挑中你想要的工作项目和你的区域设定。Pontoon系统将自动为你打开所选的本地化项目，从而启动它。要开始一个本地 化项目，点击右下角的Persona图标并登录。注意因为这里我们的目标（是教学啦），我们将特意使用Gaia的浏览器应用来演示Pontoon的功能和 工作流程。说到Gaia，下面就是Gaia浏览器应用的样子！</p>
+
+<p style="margin-left: 80px;"><em><img alt="Browser app and workspace" src="/files/4351/Browser%20app%20and%20workspace.png" style="height: 558px; width: 982px;"></em></p>
+
+<p>好了，下面我们可以开始一些翻译工作了吗？</p>
+
+<h2 id="翻译字符">翻译字符</h2>
+
+<p>当使用Pontoon做本地化的时候，你可以有多种选择，来决定怎样翻译那些字符串。你可以选择在上下文中翻译，还是使用Pontoon工作间，或混合使用这两种都行。我们将以上下文翻译作开始。</p>
+
+<h4 id="sect1"><img alt="Edit string button" src="/files/4355/Edit%20string%20button.png" style="float: left; height: 389px; width: 230px;"></h4>
+
+
+
+<h4 id="在上下文环境中" style="margin-left: 280px;">在上下文环境中</h4>
+
+<p style="margin-left: 280px;">这就是Pontoon的上下文环境的样子。Pontoon打开一个网页（这里就是Gaia的网页浏览器应用本身），对该网页启用实时编辑模式。下面是你如何翻译你的第一个字符串：</p>
+
+<ol style="margin-left: 280px;">
+ <li>将鼠标移动到你想翻译的文本上。</li>
+ <li>文本上会出现一个编辑按钮。点击它启动编辑模式。</li>
+ <li>用你译好的语言替代其中的英语（en-US）文本。</li>
+ <li>点击保存图标来存储你的译文。</li>
+ <li>看看屏幕上随即的变化，这多简单！</li>
+</ol>
+
+<p style="margin-left: 120px;"></p>
+
+<h4 id="sect2"></h4>
+
+<h4 id="sect3"></h4>
+
+<div>
+<h4 id="sect4"></h4>
+
+<h4 id="sect5"></h4>
+
+<h4 id="sect6"><img alt="Workspace alone" src="/files/4357/Workspace%20alone.png" style="float: right; height: 365px; width: 480px;"></h4>
+
+<h4 id="在上下文环境之外">在上下文环境之外</h4>
+
+<p>右侧就是Pontoon的工作间，它基本上分为两列：左侧是原文本字符的空间，右侧是你输入的翻译。在你翻译的时候，它们将出现在浏览器应用的窗口。</p>
+
+<p>下面是如何做：</p>
+
+<ol>
+ <li>点击想翻译的原文右侧的文本编辑框。</li>
+ <li>输入你的翻译。</li>
+ <li>点击文本编辑框右边的保存按钮。</li>
+ <li>可以看一下，浏览器应用加上译文后现在是什么样子了。</li>
+ <li>看这多容易！</li>
+</ol>
+</div>
+
+<h4 id="sect7"></h4>
+
+<h4 id="sect8"></h4>
+
+
+
+<h4 id="翻译助手">翻译助手</h4>
+
+<p>你可能注意到了，当鼠标滑过工作间的段落行时，每个当前行会变绿，并有一些辅助图标出现在原文的左侧。更可能你还注意到了，在原文和翻译框之间的复制按钮。我们称这些为翻译帮手。下面是每个帮手在你翻译的时候，会怎么帮助你：</p>
+
+<p style="margin-left: 40px;"><img alt="String l10n features" src="/files/4359/String%20l10n%20features.png" style="height: 105px; width: 987px;"></p>
+
+<dl>
+ <dt><img alt="copy active" src="/files/4407/copy-active.png" style="height: 16px; width: 16px;">  直接将原文复制到翻译目标</dt>
+ <dd style="margin-left: 40px;"><span id="result_box" lang="zh-CN"><span>复制按钮在工作区中间的两列。</span> <span>此助手将源字符串复制到文本框中以供保存。</span> <span>复制按钮还会将源列中的任何建议复制并粘贴到目标文本框中。</span></span></dd>
+ <dt><img alt="original string active" src="/files/4411/original-string-active.png" style="height: 16px; width: 16px;">  原文字符</dt>
+ <dd style="margin-left: 40px;"><span class="short_text" id="result_box" lang="zh-CN"><span>原始字符串图标显示 en-US 中的源字符串，供您进行翻译。</span></span></dd>
+ <dt><img alt="other users active" src="/files/4415/other-users-active.png" style="height: 16px; width: 16px;">  其他人的建议</dt>
+ <dd style="margin-left: 40px;"><span class="short_text" id="result_box" lang="zh-CN"><span>此</span></span><span class="short_text" id="result_box" lang="zh-CN"><span>助手</span></span><span class="short_text" lang="zh-CN"><span>显示其他用户为此源字符串建议的翻译。</span><span>注意：此功能仍在开发中。</span></span></dd>
+ <dt><img alt="Other locales active" src="/files/4413/other-locales-active.png" style="height: 16px; width: 16px;">  其它项目的机器翻译建议</dt>
+ <dd style="margin-left: 40px;"><span class="short_text" id="result_box" lang="zh-CN"><span>此助手</span></span><span class="short_text" lang="zh-CN"><span>显示来自其他语言环境的匹配翻译。</span></span></dd>
+ <dt><img alt="translation memory active" src="/files/4417/translation-memory-active.png" style="height: 16px; width: 16px;">  翻译记事本的建议</dt>
+ <dd style="margin-left: 40px;"><span class="short_text" id="result_box" lang="zh-CN"><span>此助手显示您的翻译记忆库文件中的匹配项。</span></span></dd>
+ <dt><img alt="Machine translation active" src="/files/4419/machine-translation-active.png" style="height: 16px; width: 16px;">  机器翻译</dt>
+ <dd style="margin-left: 40px;"><span class="short_text" id="result_box" lang="zh-CN"><span>此助手提供从机器翻译引擎生成的翻译建议。</span></span></dd>
+</dl>
+
+
+
+<p>除了你在每个段落找到的翻译帮助工具，在 Pontoon 的黑色工作区还提供其他一些工具。</p>
+
+<p style="text-align: center;"><img alt="black bar" src="/files/4427/black%20bar.png" style="height: 35px; width: 532px;"></p>
+
+<dl>
+ <dt><img alt="Info" src="/files/4425/Info.png" style="height: 16px; width: 16px;">  信息</dt>
+ <dd style="margin-left: 40px;">The info helper gives you important, project-specific information. For example, it can profile the project's target audience or give you the anticipated project timeline.</dd>
+ <dt>     项目URL选择表</dt>
+ <dd style="margin-left: 40px;">This helper opens a menu with all of your Pontoon projects. It allows you to switch between project's to localize from within the workspace.</dd>
+ <dt>     本地化设定选择表</dt>
+ <dd style="margin-left: 40px;">The locale selector allows you to switch from locale to locale from within the workspace.</dd>
+ <dt>     页面选择表</dt>
+ <dd style="margin-left: 40px;">This helper opens a menu with all of the project's sub pages, allowing you to navigate through every page and localize them all.</dd>
+ <dt>     进度条</dt>
+ <dd style="margin-left: 40px;">This helper displays your progress on the page you're actively localizing. It is measured in number of strings translated.</dd>
+</dl>
+
+<h2 id="发布你的本地化项目">发布你的本地化项目</h2>
+
+<p>假设你想发布你的l10n本地化工作到一个项目账户。Pontoon已经给了你这么做的方便！下面是如何发表你的本地化项目的步骤：</p>
+
+<p style="margin-left: 40px;"><img alt="commit export" src="/files/4401/commit%20export.png" style="float: left; height: 160px; width: 153px;"></p>
+
+<ol style="margin-left: 240px;">
+ <li>Click on your Persona ID in the bottom right corner.</li>
+ <li>Based on the repository your project is connected to, select any of the options:
+  <ul>
+   <li>SVN: click "Commit to SVN" and enter your SVN credentials.</li>
+   <li>Transifex: click "Save to Transifex" and enter your Transifex credentials.</li>
+   <li>Other: select which file format you would like to export your work in and save it to a directory on your computer.</li>
+  </ul>
+ </li>
+ <li>Pat yourself on the back, do a little dance, go to sleep, do something to celebrate your work!</li>
+</ol>
+
+<p style="margin-left: 40px;"></p>

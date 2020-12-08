@@ -1,0 +1,80 @@
+---
+title: mozIJSSubScriptLoader
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/mozIJSSubScriptLoader
+tags:
+  - Interfaces
+  - 'Interfaces:Scriptable'
+  - XPCOM
+  - XPCOM API Reference
+  - XPCOM Interface Reference
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/mozIJSSubScriptLoader
+---
+<div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/js/src/xpconnect/idl/mozIJSSubScriptLoader.idl" rel="custom">js/src/xpconnect/idl/mozIJSSubScriptLoader.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+このインタフェースは、 実行時に与えられた URL の JavaScript コードを読み込み実行するために、特権を持つ JavaScript から使用されます。
+</span>
+
+  <div style="height: 42px; position: relative; padding: 2px; width: auto;">
+
+  <div style="top: 22px; font-size: 11px; position: absolute; left: 0px; text-align: right; float: right; width: 100%;">66</div>
+
+<div style="height: 8px; top: 16px; left: 0%; background: #00dd00; position: absolute; width: 100%;" title="Introduced in Gecko 1.0 "></div>
+
+<div style="top: 0px; font-size: 11px; position: absolute; left: 0%;">Introduced</div>
+<div style="top: 22px; font-size: 11px; position: absolute; left: 0%;">Gecko 1.0</div>
+
+    <div style="height: 8px; top: 16px; left: 10.928571428571429%; background: #eeee00; position: absolute; width: 1%; border-radius: 4px; -webkit-border-radius: 4px;" title="Last changed in Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)"></div>
+
+</div>
+
+<div style="background: #eee; padding: 2px;">
+継承元: <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
+<span style="text-align: right; float: right;">最終更新: Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)</span></div>
+</div>
+<p>実装元: <code>@mozilla.org/moz/jssubscript-loader;1</code>。このサービスを取得するには次のコードを使用します:</p>
+<pre class="eval">var mozIJSSubScriptLoader = Components.classes["@mozilla.org/moz/jssubscript-loader;1"]
+                            .getService(Components.interfaces.mozIJSSubScriptLoader);
+</pre>
+<div class="note"><strong>補足:</strong> もう一つの JavaScript コードをインポートする方法は、<a class="internal" href="/ja/Components.utils.import" title="ja/Components.utils.import"><code>Components.utils.import</code></a> を参照してください。</div>
+<h2 id="Method_overview" name="Method_overview">メソッドの概要</h2>
+<table class="standard-table"> <tbody> <tr> <td><code>void <a href="#loadSubScript()">loadSubScript</a>(in wstring url, in targetObj <span class="inlineIndicator optional optionalInline">Optional</span>, in charset </code><code><span class="inlineIndicator optional optionalInline">Optional</span></code><code>);</code></td> </tr> </tbody>
+</table>
+<h2 id="Methods" name="Methods">メソッド</h2>
+<h3 id="loadSubScript" name="loadSubScript()">loadSubScript()</h3>
+<p>スクリプトを指定された URL から同期的に読み込み、実行します。</p>
+<p>指定されたスクリプトはシステムの規則に従って実行されます。これは、スクリプトができることに、全く制限がないことを意味します。</p>
+<div class="blockIndicator note"><strong>註:</strong> このメソッドは JavaScript からのみ呼び出されます！</div>
+<pre class="eval">void loadSubScript(
+  in wstring url,
+  in targetObj <span class="inlineIndicator optional optionalInline">Optional</span>,
+  in charset   <span class="inlineIndicator optional optionalInline">Optional</span>,
+);
+</pre>
+<h6 id="Parameters" name="Parameters">引数</h6>
+<dl> <dt><code>url</code></dt> <dd>読み込むスクリプトを指す URL。これは、ローカルの <code>chrome: または resource:, file:</code> URL で<strong>あるべき</strong>です (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=307686" title="jssubscript-loader does not want to load script that are not local">バグ 307686</a> および <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=418356" title="FIXED: [FIX]It's unsafe to use mozIJSSubScriptLoader.loadSubScript() with non-chrome urls or chrome urls whose scheme/host part contain uppercase characters">バグ 418356</a> を参照)。 <div class="geckoVersionNote"> <div class="geckoVersionHeading">
+Gecko 1.9 note
+<div style="font-size: 9px; line-height: 1; font-style: italic;">(Firefox 3)</div>
+</div> <p>Firefox 3.0 より前のバージョンでは、<code>data:</code> URL が使用できましたが、セキュリティ上の問題から許可されなくなりました。</p> </div> </dd> <dt><code>targetObj</code></dt> <dd>スクリプトが実行されるためのスコープオブジェクトとして使用されるオブジェクト。デフォルトでは、呼び出し元のグローバルオブジェクトになります。</dd>
+</dl>
+<dl> <dt><code>charset</code> </dt> <dd>読み込むスクリプトファイルの文字エンコーディングを指定する任意の文字列。省略すると、ファイルは ASCII 文字列として処理されます。</dd>
+</dl>
+<h2 id="Example" name="Example">例</h2>
+<pre class="brush: js">var global = this;
+var obj = {};
+var loader = Components.classes["@mozilla.org/moz/jssubscript-loader;1"]
+                       .getService(Components.interfaces.mozIJSSubScriptLoader);
+loader.loadSubScript("data:text/plain,var a=1", obj)
+loader.loadSubScript("data:text/plain,this.b=1", obj)
+loader.loadSubScript("data:text/plain,c=1", obj)
+loader.loadSubScript("data:text/plain,function f(){}", obj)
+
+alert(obj.toSource()); // ({a:1, b:1, f:function f() {}})
+alert("a" in global); // false
+alert("b" in global); // false
+alert(global.c); // 1
+</pre>
+<div class="noinclude">
+
+</div>

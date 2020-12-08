@@ -1,0 +1,30 @@
+---
+title: 'Raison: CORS désactiver'
+slug: Web/HTTP/CORS/Errors/CORSDesactive
+tags:
+  - CORS
+  - Erreurs
+  - HTTP
+  - HTTPS
+translation_of: Web/HTTP/CORS/Errors/CORSDisabled
+---
+<div>{{HTTPSidebar}}</div>
+
+<h2 id="Raison">Raison</h2>
+
+<pre class="syntaxbox">Reason: CORS disabled
+(Raison : CORS désactivé)</pre>
+
+<h2 id="Quel_est_le_problème">Quel est le problème ?</h2>
+
+<p>Une requête HTTP nécessitant le {{Glossary("CORS")}} a été tentée, mais le CORS est désactivé sur le navigateur de l'utilisateur. Lorsque cela se produit, l'utilisateur doit réactiver CORS dans le navigateur.</p>
+
+<p>Pour Firefox, la préférence qui désactive le CORS est <code>content.cors.disable</code>. Définir cette préférence avec <code>true</code> désactive le CORS. Ainsi, dans ce cas, les demandes CORS échoueront toujours avec cette erreur.</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="/fr/docs/Web/HTTP/CORS/Errors">Les erreurs CORS</a></li>
+ <li>Le terme {{Glossary("CORS")}} sur le glossaire</li>
+ <li><a href="/fr/docs/Web/HTTP/CORS">Introduction au CORS</a></li>
+</ul>

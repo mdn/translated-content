@@ -1,0 +1,401 @@
+---
+title: 使用应用缓存
+slug: Web/HTML/Using_the_application_cache
+tags:
+  - App 缓存
+  - HTML
+  - HTML5
+  - Service Workers
+  - Web 缓存
+  - application cache
+  - 已弃用
+  - 应用缓存
+  - 指南
+translation_of: Web/HTML/Using_the_application_cache
+---
+<p>{{DefaultAPISidebar("App Cache")}}{{deprecated_header}}</p>
+
+<div class="warning">
+<p>在此刻使用这里描述的应用程序缓存功能高度不鼓励; 它正在处于从Web平台中被删除的过程。请改用<a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Service Workers</a> 代替。事实上，在Firefox 44中，当AppCache用于为页面提供离线支持时，控制台中现在显示一条警告消息，建议开发人员改用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Service workers</a> 代替 ({{bug(1204581)}})。</p>
+</div>
+
+<h2 id="简介">简介</h2>
+
+<div><a href="https://developer.mozilla.org/en-US/docs/HTML/HTML5" style="line-height: 21px;" title="HTML/HTML5">HTML5</a> <span style="line-height: inherit;">提供一种</span><span style="line-height: 21px;"> </span><em>应用程序缓存</em><em> </em><span style="line-height: inherit;">机制，使得基于web的应用程序可以离线运行。开发者可以使用 </span><strong style="line-height: 21px;">Application Cache </strong><span style="line-height: 21px;">(</span><em>AppCache</em><span style="line-height: 21px;">) </span><span style="line-height: inherit;">接口设定浏览器</span>应该<span style="line-height: inherit;">缓存的</span>资源<span style="line-height: inherit;">并使得离线</span>用户可用<span style="line-height: inherit;">。 在处于离线状态时，即使用户点击刷新按钮，应用也能正常加载与工作。</span></div>
+
+<div>
+<p>使用应用缓存可以得到以下益处：</p>
+
+<ul>
+ <li>离线浏览: 用户可以在离线状态下浏览网站内容。</li>
+ <li>更快的速度: 因为数据被存储在本地，所以速度会更快。</li>
+ <li>减轻服务器的负载: 浏览器只会下载在服务器上发生改变的资源。</li>
+</ul>
+
+<h2 id="应用缓存如何工作">应用缓存如何工作</h2>
+
+<h3 id="启用应用缓存">启用应用缓存</h3>
+<span style="line-height: 21px;">若想为应用</span>启用<span style="line-height: 21px;">应用缓存，你需要在应用页面中的 {{HTMLElement("html")}} 元素上增加 </span><span style="line-height: 21px;">{{htmlattrxref("manifest", "html")}} 特性，请看下面的例子：</span></div>
+
+<div>
+<div>
+<pre class="eval"><span class="nowiki">&lt;html manifest="example.appcache"&gt; </span>
+  ...
+&lt;/html&gt;
+</pre>
+</div>
+
+<p>manifest 特性与 <strong>缓存清单(cache manifest) </strong>文件关联，这个文件包含了浏览器需要为你的应用程序缓存的资源(文件)列表。</p>
+
+<p>你应当在每一个意图缓存的页面上添加 manifest 特性。浏览器不会缓存不带有manifest 特性的页面，除非这个页面已经被写在清单文件内的列表里了。你没有必要添加所有你意图缓存的页面的清单文件，浏览器会暗中将用户访问过的并带有 manifest 特性的所有页面添加进应用缓存中。</p>
+
+<p>有些浏览器，比如说firefox，当用户首次加载一个需要使用应用缓存的应用时，会显示一个提示栏。提示信息如下：</p>
+
+<p style="margin-left: 40px;">该站点 (<code>www.example.com</code>) 请求在你的电脑上存储数据以供离线使用。[允许] [对此站点永不允许] [暂时不允许]</p>
+
+<p>术语 「offline(-enabled) applications」 很多情况下指用户已经允许使用离线存储的程序。</p>
+
+<h3 id="加载文档">加载文档</h3>
+
+<div>
+<p>application cache的使用会修改文档的加载过程：</p>
+
+<ul>
+ <li>如果<span style="line-height: normal;">应用</span>缓存存在，浏览器直接从缓存中加载文档与相关资源，不会访问网络。这会提升文档加载速度。</li>
+ <li>浏览器检查清单文件列出的资源是否在服务器上被修改。</li>
+ <li>如果清单文件被更新了, 浏览器会下载新的清单文件和相关的资源。 这都是在后台执行的，基本不会影响到webapp的性能。</li>
+</ul>
+
+<p>下面详细描述了加载文档与更新应用缓存的流程：</p>
+</div>
+
+<ol>
+ <li>当浏览器访问一个包含 <code>manifest</code> 特性的文档时，如果应用缓存不存在，浏览器会加载文档，然后获取所有在清单文件中列出的文件，生成应用缓存的第一个版本。</li>
+ <li>对该文档的后续访问会使浏览器直接从应用缓存(而不是服务器)中加载文档与其他在清单文件中列出的资源。此外，浏览器还会向 <code style="font-size: 14px;"><a href="/en/DOM/window.applicationCache" title="en/DOM/window.applicationCache">window.applicationCache</a> 对象发送一个</code> <code>checking</code> 事件，在遵循合适的 HTTP 缓存规则前提下，获取清单文件。</li>
+ <li>如果当前缓存的清单副本是最新的，浏览器将向 <code style="font-size: 14px;">applicationCache 对象发送一个</code> <code>noupdate</code> 事件，到此，更新过程结束。注意，如果你在服务器修改了任何缓存资源，同时也应该修改清单文件，这样浏览器才能知道它需要重新获取资源。</li>
+ <li>如果清单文件<em>已经</em>改变，文件中列出的所有文件—也包括通过调用 <code><a href="/en/nsIDOMOfflineResourceList#add.28.29" title="en/nsIDOMOfflineResourceList#add.28.29">applicationCache.add()</a> 方法添加到缓存中的那些文件</code>—会被获取并放到一个临时缓存中，遵循适当的 HTTP 缓存规则。对于每个加入到临时缓存中的文件，浏览器会向 <code style="font-size: 14px;">applicationCache 对象发送一个</code> <code>progress</code> 事件。如果出现任何错误，浏览器会发送一个 <code>error</code> 事件，并暂停更新。</li>
+ <li>一旦所有文件都获取成功，它们会自动移送到真正的离线缓存中，并向  <code style="font-size: 14px;">applicationCache 对象发送一个<font face="Lucida Grande, Lucida Sans Unicode, DejaVu Sans, Lucida, Arial, Helvetica, sans-serif"><span style="line-height: 21px;"> </span></font></code><code>cached</code> 事件。鉴于文档早已经被从缓存加载到浏览器中，所以更新后的文档不会重新渲染，直到页面重新加载(可以手动或通过程序).</li>
+</ol>
+
+<h2 id="存储位置与清除离线缓存">存储位置与清除离线缓存</h2>
+
+<p>在 Chrome 中，你可以在设置中选择 「清除浏览器数据...」 或访问 <a class="external" title="chrome://appcache-internals/">chrome://appcache-internals/</a> 来清除缓存。Safari 在设置中有一个类似的"清空缓存" 选项，但是需要重启浏览器后才能生效。</p>
+
+<p>在 Firefox 中，离线缓存数据与 Firefox 配置文件是分开存储的—紧挨着硬盘缓存：</p>
+
+<ul>
+ <li>Windows Vista/7: <code>C:\Users\&lt;username&gt;\AppData\<strong>Local</strong>\Mozilla\Firefox\Profiles\&lt;salt&gt;.&lt;profile name&gt;\OfflineCache</code></li>
+ <li>Mac/Linux: <code>/Users/&lt;username&gt;/Library/Caches/Firefox/Profiles/&lt;salt&gt;.&lt;profile name&gt;/OfflineCache</code></li>
+</ul>
+
+<p>在 Firefox 中可以通过访问 <code>about:cache</code> 页面(在「离线缓存设置」标题下)来检查离线缓存的当前状况。 若想单独清除每个网站的离线缓存，可以使用 工具 -&gt; 选项 -&gt; 高级 -&gt; 网络 -&gt; 离线数据中的「删除」按钮。</p>
+
+<p>在 Firefox 11 之前，无论是 工具 -&gt; 清除近期历史 还是 工具 -&gt; 选项 -&gt; 高级 -&gt; 网络 -&gt; 离线数据 -&gt; 立即清除 都无法清除离线缓存。这个问题已经被修复。(点击 “立即清除” 只是将缓存文件清除掉，并没将缓存清单删除，所以下次载入页面是更新缓存，而非创建缓存，意味着cached和updateready事件触发机制不同，如果想要清除掉缓存清单，只能选中域，然后点击移除)</p>
+
+<p>另请参阅 <a href="/en/DOM/Storage#Storage_location_and_clearing_the_data" title="en/DOM/Storage#Storage location and clearing the data">清除 DOM 存储数据</a>。</p>
+
+<div>
+<p>应用缓存可以变成废弃的。如果从服务器上移除一个应用的清单文件，浏览器将会清除所有清单中列出的应用缓存，并向 <code>applicationCache</code> 对象发送一个「obsolete」事件。这将使得应用缓存的状态变为 <code>OBSOLETE。</code></p>
+</div>
+
+<h2 id="缓存清单文件">缓存清单文件</h2>
+
+<h3 id="引用一个缓存清单文件">引用一个缓存清单文件</h3>
+
+<p>web 应用中的 <code>manifest</code> 特性可以指定为缓存清单文件的相对路径或一个绝对 URL(绝对 URL 必须与应用同源)。缓存清单文件可以使用任意扩展名，但传输它的 MIME 类型必须为 <code>text/cache-manifest。</code></p>
+
+
+
+<div class="note"><strong>注意：</strong>在 Apache 服务器上，若要设置适用于清单(.appcache)文件的 MIME 类型，可以向根目录或应用的同级目录下的一个 .htaccess 文件中增加 <code style="font-size: 14px;">AddType text/cache-manifest .appcache</code> 。</div>
+
+
+
+<h3 id="缓存清单文件中的记录">缓存清单文件中的记录</h3>
+
+<p>缓存清单文件是一个纯文本文件，它列出了所有浏览器应该缓存起来的资源，以便能够离线访问。资源使用 URI 来标识。在缓存清单文件中列出的所有记录必须拥有相同的协议、主机名与端口号。</p>
+
+<h3 id="示例_1：一个简单的缓存清单文件">示例 1：一个简单的缓存清单文件</h3>
+
+<div>
+<p>下面是一个简单的缓存清单文件，<code>example.appcache，适用于一个虚拟的网站 </code><span class="nowiki">www.example.com。</span></p>
+
+<pre class="eval">CACHE MANIFEST
+# v1 - 2011-08-13
+# This is a comment.
+<span class="nowiki">http://www.example.com/index.html</span>
+<span class="nowiki">http://www.example.com/header.png</span>
+<span class="nowiki">http://www.example.com/blah/blah</span>
+</pre>
+
+<p>一个缓存清单文件可以包含三段内容 (<code>CACHE，</code> <code>NETWORK，</code> 和 <code>FALLBACK，</code> 下面详细讨论)。 在上面的例子中，没有段落标题，因此所有数据行都认为是属于显式 (<code>CACHE</code>) 段落，这意味着浏览器应该在应用缓存中缓存所有列出的资源。资源可以使用绝对或者相对 URL 来指定(例如 <code>index.html</code>)。</p>
+
+<p>上面例子中的注释 「v1」很有必要存在。只有当清单文件发生变化时，浏览器才会去更新应用缓存。如果你要更改缓存资源(比如说，你使用了一张新的 <code>header.png</code> 图片)，你必须同时修改清单文件中的内容，以便让浏览器知道它们需要更新缓存。你可以对清单文件做任何改动，但大家都认同的最佳实践则是修正版本号。</p>
+
+<div class="warning"><strong>重要：</strong>不要在清单文件中指定清单文件本身，否则将无法让浏览器得知清单文件有新版本出现。</div>
+
+<h3 id="缓存清单文件中的段落：_CACHE，_NETWORK，与_FALLBACK">缓存清单文件中的段落： <code>CACHE，</code> <code>NETWORK，与<font face="Georgia, Times, Times New Roman, serif"> </font></code><code>FALLBACK</code></h3>
+
+<p>清单文件可以分为三段： <code>CACHE，</code> <code>NETWORK，</code>与 <code>FALLBACK</code>.</p>
+
+<dl>
+ <dt><code>CACHE:</code></dt>
+ <dd>这是缓存文件中记录所属的默认段落。在 <code>CACHE</code><code style="font-size: 14px; line-height: inherit;">: </code><code style="font-size: 14px; line-height: inherit;">段落标题后</code><span style="line-height: inherit;">(或直接跟在 </span><code style="font-size: 14px; line-height: inherit;">CACHE MANIFEST</code><span style="line-height: inherit;"> 行后)列出的文件会在它们第一次下载完毕后缓存起来。</span></dd>
+ <dt><code>NETWORK:</code></dt>
+ <dd>在 <code>NETWORK:</code> 段落标题下列出的文件是需要与服务器连接的白名单资源。所有类似资源的请求都会绕过缓存，即使用户处于离线状态。可以使用通配符。</dd>
+ <dt><code>FALLBACK:</code></dt>
+ <dd><code>FALLBACK:</code> 段指定了一个后备页面，当资源无法访问时，浏览器会使用该页面。该段落的每条记录都列出两个 URI—第一个表示资源，第二个表示后备页面。两个 URI 都必须使用相对路径并且与清单文件同源。可以使用通配符。</dd>
+</dl>
+
+<p><code>CACHE，</code> <code>NETWORK，</code> 和 <code>FALLBACK 段落可以以任意顺序出现在缓存清单文件中，并且每个段落可以在同一清单文件中出现多次。</code></p>
+
+<h3 id="示例_2：_一个复杂且完整的缓存清单文件">示例 2： 一个复杂且完整的缓存清单文件</h3>
+
+<p>下面是一个更加完整的缓存清单文件，适用于一个虚拟的网站 <span class="nowiki">www.example.com：</span></p>
+
+<pre class="eval">CACHE MANIFEST
+# v1 2011-08-14
+# This is another comment
+index.html
+cache.html
+style.css
+image1.png
+
+# Use from network if available
+NETWORK:
+network.html
+
+# Fallback content
+FALLBACK:
+/ fallback.html
+</pre>
+
+<p>该例子使用了 <code>NETWORK</code> 与 <code>FALLBACK</code> 段落，指明了 <code>network.html</code> 页面必须始终从网络获取，<code>fallback.html</code> 页面应该作为后备资源来提供(例如，当无法与服务器建立连接时)。</p>
+
+<h3 id="缓存清单文件的结构">缓存清单文件的结构</h3>
+
+<p>缓存清单文件必须以 <code>text/cache-manifest</code> MIME 类型来传输。所有通过 MIME 类型传输的文件必须符合本节中定义的适用于应用缓存清单的语法。</p>
+
+<p>缓存清单是 UTF-8 格式的文本文件，有可能包含一个 BOM 字符。新行可能使用换行符(<code>U+000A</code>)，回车(<code>U+000D</code>)，或回车加换行符来表示。</p>
+
+<p>缓存清单文件的第一行必须包含字符串 <code>CACHE MANIFEST</code> (两个单词间使用一个 <code>U+0020</code> 空白)，紧接着是零或多个空白或制表符。本行的其他文本会被忽略。</p>
+
+<p>缓存清单文件的余下内容必须包含零或多个下面的行：</p>
+
+<dl>
+ <dt>空行</dt>
+ <dd>你可以使用包含零或多个空白与制表符的空行。</dd>
+ <dt>注释</dt>
+ <dd>注释包括零或多个制表符或空白字符，紧接着是一个 <code>#</code> 字符，再然后是零或多个注释文本字符。注释只能在所在行起作用，不能追加到其他行上。这意味着你无法使用片段标识符。</dd>
+ <dt>段落标题</dt>
+ <dd>段落标题指定了缓存文件即将操作的段落。有三个可选的标题：</dd>
+</dl>
+
+<blockquote>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>段落标题</th>
+   <th>解释</th>
+  </tr>
+  <tr>
+   <td><code>CACHE:</code></td>
+   <td>切换到缓存清单的显式段落(默认段落)。</td>
+  </tr>
+  <tr>
+   <td><code>NETWORK:</code></td>
+   <td>切换到缓存清单的在线白名单段落。</td>
+  </tr>
+  <tr>
+   <td><code>FALLBACK:</code></td>
+   <td>切换到缓存清单的后备资源段落。</td>
+  </tr>
+ </tbody>
+</table>
+</blockquote>
+
+<dl>
+ <dd>段落标题所在的行可以包含空白字符，段落名后的冒号 (<code>:</code>) 不可省略。</dd>
+ <dt>段落数据</dt>
+ <dd>不同段落的数据行格式有所不同。在默认 (<code>CACHE:</code>) 段落，每行都是一个合法的  URI 或 IRI ，与一个要缓存的资源相关联(本段落内不允许通配符)。每行的 URI 或 IRI 前后允许出现空白字符。在 Fallback 段落内，每行都是一个合法的 URI 或 IRI(与一个资源关联)，紧跟着一个后备资源，用于当无法与服务器建立连接时访问。在 Network 段落内，每行都是一个合法的 URI 或 IRI，关联一个需要通过网络获取的资源(本段落内可以使用通配符 *)。
+ <div class="note"><strong>注意：</strong>相对 URI 是指相对于缓存清单的 URI，而不是包含清单的文档的 URI。</div>
+ </dd>
+</dl>
+
+<p>缓存清单可以在段落内任意切换(每个段落标题可以使用多次)，而且段落允许为空。</p>
+
+<h2 id="一个应用缓存中的资源">一个应用缓存中的资源</h2>
+
+<p>一个应用缓存至少会包含一个资源，由 URI 指定。所有资源都属于下列类别之一：</p>
+
+<dl>
+ <dt>主记录</dt>
+ <dd>这些资源被加入缓存的原因是：用户浏览的一个上下文中包含一个文档，该文档用 <code>manifest</code> 特性明确指明了它属于该缓存。</dd>
+ <dt>显式记录</dt>
+ <dd>这些是在应用缓存清单文件中显式列出的资源。</dd>
+ <dt>网络记录</dt>
+ <dd>这些是在应用缓存清单文件中作为网络记录列出的资源。</dd>
+ <dt>后备记录</dt>
+ <dd>这些是在应用缓存清单文件中作为后备记录列出的资源。</dd>
+</dl>
+
+<div class="note"><strong>注意：</strong> 资源可以被标记为多个类别，因此可以作为多重记录来分类。例如，一条记录既可以是显式记录，也可以是一条后备记录。</div>
+
+<p>下面来详细介绍资源类别。</p>
+
+<h3 id="主记录">主记录</h3>
+任意在 {{ HTMLElement("html") }} 元素上包含<span style="line-height: inherit;">一个 {{ htmlattrxref("manifest","html") }} 特性的 HTML 文件都可以是主记录。例如，我们拥有 HTML 文件 </span><code style="font-size: 14px; line-height: inherit;"><a class="linkification-ext external" href="http://www.foo.bar/entry.html" title="Linkification: http://www.foo.bar/entry.html">http://www.example.com/entry.html</a>，它看起来是这样的：</code>
+
+<pre>&lt;html manifest="example.appcache"&gt;
+  &lt;h1&gt;Application Cache Example&lt;/h1&gt;
+&lt;/html&gt;
+</pre>
+
+<p>如果 <code>entry.html</code> 没有在 <code>example.appcache</code> 缓存清单文件中列出来，那么访问 <code>entry.html</code> 页面会使得 <code>entry.html</code> 作为一条主记录加入到应用缓存中。</p>
+
+<h3 id="显式记录">显式记录</h3>
+
+<p>显式记录就是在缓存清单文件的 <code>CACHE 段落显式列出的资源</code>。</p>
+
+<h3 id="网络记录">网络记录</h3>
+
+<p>缓存清单文件的 <code>NETWORK</code> 段落指定了 web 应用需要在线访问的资源。一个应用缓存中的网络记录本质上来说是一个「在线白名单」—在 <code>NETWORK</code> 段落指定的 URI 会从服务器而不是缓存加载。这使得浏览器的安全模型通过限制用户让其只访问经过验证的资源来避免潜在的安全漏洞。</p>
+
+<p>举例来说，你可以使用网络记录来从服务器而不是缓存中加载并执行脚本或其他代码：</p>
+
+<pre>CACHE MANIFEST
+NETWORK:
+/api
+</pre>
+
+<p>上面列出的缓存清单段落能够保证对 <code><a class="external" href="http://www.example.com/api/" rel="freelink">http://www.example.com/api/</a></code> 子目录中资源的请求始终通过网络加载，而不会去访问缓存。</p>
+
+<div class="note"><strong>注意：</strong> 简单的从清单文件中过滤主记录(在 <code style="font-size: 14px; line-height: inherit;">html 元素中拥有</code><span style="line-height: 1.5em;"> </span><code style="font-size: 14px;">manifest</code><span style="line-height: 1.5em;"> 特性的文件)</span><span style="line-height: 1.5em;">并不会产生同样的结果，因为主记录会被添加到—后续访问的获取也会从—应用缓存中。</span></div>
+
+<h3 id="后备记录">后备记录</h3>
+
+<p>当尝试请求资源失败时会使用后备记录。例如，缓存清单文件 <code><a class="external" href="http://www.example.com/example.appcache" rel="freelink">http://www.example.com/example.appcache</a></code> 包含如下内容：</p>
+
+<pre>CACHE MANIFEST
+FALLBACK:
+example/bar/ example.html
+</pre>
+
+<p>任何访问 <code><a class="external" href="http://www.example.com/example/bar/" rel="freelink">http://www.example.com/example/bar/</a></code> 或它的任意子目录及内容都会使浏览器发出请求，去尝试加载请求的资源。如果尝试失败(可能是由于网络连接失败或服务器问题)，浏览器将会加载 <code>example.html。</code></p>
+
+<h2 id="缓存状态">缓存状态</h2>
+
+<p>每个应用缓存都有一个<strong>状态</strong>，标示着缓存的当前状况。共享同一清单 URI 的缓存拥有相同的缓存状态，可能是其中之一：</p>
+
+<dl>
+ <dt><code>UNCACHED(未缓存)</code></dt>
+ <dd>一个特殊的值，用于表明一个应用缓存对象还没有完全初始化。</dd>
+ <dt><code>IDLE(空闲)</code></dt>
+ <dd>应用缓存此时未处于更新过程中。</dd>
+ <dt><code>CHECKING(检查)</code></dt>
+ <dd>清单已经获取完毕并检查更新。</dd>
+ <dt><code>DOWNLOADING(下载中)</code></dt>
+ <dd>下载资源并准备加入到缓存中，这是由于清单变化引起的。</dd>
+ <dt><code>UPDATEREADY(更新就绪)</code></dt>
+ <dd>一个新版本的应用缓存可以使用。有一个对应的事件 <code>updateready</code>，当下载完毕一个更新，并且还未使用 <code style="font-size: 14px; line-height: inherit;">swapCache() 方法激活更新时，该事件触发，而不会是</code><span style="line-height: inherit;"> </span><code style="font-size: 14px; line-height: inherit;">cached</code><span style="line-height: inherit;"> 事件。</span></dd>
+ <dt><code>OBSOLETE(废弃)</code></dt>
+ <dd>应用缓存现在被废弃。</dd>
+</dl>
+
+<h2 id="测试缓存清单的更新">测试缓存清单的更新</h2>
+
+<p>你可以使用 JavaScript 来写程序检测应用是否拥有一个可以更新的缓存清单文件。因为缓存清单文件可能会在脚本添加事件前完成更新，所以脚本应该始终检测 <code>window.applicationCache.status。</code></p>
+
+<pre class="brush: js">function onUpdateReady() {
+  alert('found new version!');
+}
+window.applicationCache.addEventListener('updateready', onUpdateReady);
+if(window.applicationCache.status === window.applicationCache.UPDATEREADY) {
+  onUpdateReady();
+}</pre>
+
+<p> 若要手动测试一个新的清单文件，你可以使用 <code>window.applicationCache.update()。</code></p>
+
+<h2 id="陷阱">陷阱</h2>
+
+<ul>
+ <li>永远不要使用传统 GET 参数(例如 <code>other-cached-page.html?parameterName=value</code>) 来访问缓存文件。这会使浏览器绕过缓存，直接从网络获取。若想链接一个参数需要在 JavaScript 中解析的资源，你可以将参数放到链接的 hash 部分，例如 <code>other-cached-page.html#whatever?parameterName=value。</code></li>
+ <li>当应用被缓存后，仅仅更新在 web 页面中使用的资源(文件)还不足以更新被缓存的文件。你需要在浏览器获取和使用更新的文件前，去更新缓存清单文件本身。你可以使用 <code>window.applicationCache.swapCache() 以编程的方式完成上述目的，虽然这无法影响到已经加载完毕的资源。为了保证资源从应用缓存的最新版本中加载，最理想的办法就是刷新页面</code>。</li>
+ <li>通过在 web 服务器上设置 expires header 来使 <code>*.appcache</code> 文件立即过期是个好主意。这避免了将清单文件缓存的风险。例如，在 Apache 中，你可以指定下面的配置项：<br>
+  <code>ExpiresByType text/cache-manifest "access plus 0 seconds"</code></li>
+</ul>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>4.0</td>
+   <td>3.5</td>
+   <td>10.0</td>
+   <td>10.6</td>
+   <td>4.0</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>2.1</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>11.0</td>
+   <td>3.2</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>注意：Firefox 3.5 之前的版本会忽略缓存清单文件中的 <code>NETWORK 和</code> <code>FALLBACK 段落。</code></p>
+
+<h2 id="另见">另见</h2>
+
+<ul>
+ <li><a href="http://manifest-validator.com/">Cache Manifest Validator</a></li>
+ <li><a href="https://www.onlinewebcheck.com/check.php?adv=1">OnlineWebCheck.com - Check cache manifest file syntax</a></li>
+ <li><a href="http://www.html5rocks.com/en/tutorials/appcache/beginner/">HTML5Rocks - A Beginner's Guide to Using the Application Cache</a></li>
+ <li><a href="http://appcache.offline.technology/">Appcache Facts</a> - detailed information on AppCache idiosyncrasies</li>
+ <li><a href="http://alistapart.com/article/application-cache-is-a-douchebag">A List Apart: Application Cache is a Douchebag</a>
+  <ul>
+   <li><a href="http://flailingmonkey.com/application-cache-not-a-douchebag">The Application Cache is no longer a Douchebag</a> - an overview of the app cache debugging tools added in Firefox 23.</li>
+  </ul>
+ </li>
+ <li><a href="http://hacks.mozilla.org/2010/01/offline-web-applications/">offline web applications</a> at hacks.mozilla.org - showcases an offline app demo and explains how it works.</li>
+ <li><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/offline.html#offline">HTML 5 working draft: Offline web applications</a></li>
+ <li><a href="http://www.w3.org/TR/offline-webapps/">W3C Working Group Note: Offline Web Applications</a></li>
+ <li><a href="http://developer.teradata.com/blog/js186040/2011/11/html5-cache-manifest-an-off-label-usage">HTML5 Cache Manifest: An Off-label Usage</a></li>
+ <li><a href="http://www.ibm.com/developerworks/web/library/wa-ffox3/">Get ready for Firefox 3.0 - A Web developer's guide to the many new features in this popular browser, especially the offline application features</a> (IBM developerWorks)</li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Application_cache_implementation_overview">Application cache implementation overview</a></li>
+</ul>
+
+
+</div>
+</div>

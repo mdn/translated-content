@@ -1,0 +1,55 @@
+---
+title: SettingsLock
+slug: Archive/B2G_OS/API/SettingsLock
+tags:
+  - API
+  - B2G
+  - Firefox OS
+  - NeedsTranslation
+  - Non-standard
+  - Settings
+  - TopicStub
+translation_of: Archive/B2G_OS/API/SettingsLock
+---
+<section class="Quick_links" id="Quick_Links"><ol><li><strong><a href="/en-US/docs/Mozilla/Firefox_OS/API/Settings_API">Settings API</a></strong></li><li><strong><a href="/en-US/docs/Mozilla/Firefox_OS/API/Archive"><code>Archive</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Events</strong></a><ol><li><a href="/en-US/docs/Web/Events/settingchange"><code>settingchange</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Related pages for Settings API</strong></a><ol><li><a href="/en-US/docs/Mozilla/Firefox_OS/API/MozSettingsEvent"><code>MozSettingsEvent</code></a></li><li><a href="/en-US/docs/Mozilla/Firefox_OS/API/SettingsLock"><code>SettingsLock</code></a></li><li><a href="/en-US/docs/Mozilla/Firefox_OS/API/SettingsManager"><code>SettingsManager</code></a></li></ol></li></ol></section>
+
+<div class="warning">
+    <p style="text-align: center;">This API is available on <a href="/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a> for <a href="/en-US/docs/Mozilla/Firefox_OS/Security/Application_security#App_Types">internal applications</a> only.</p>
+</div>
+
+<p>The <code><strong>SettingsLock</strong></code> interface represents a lock on settings. it allows a script to modify settings asynchronously, but in a safe way: ordering is guaranteed and the no other script will modify the settings until the modification are done (the next lock objects will start processing after it has been closed).</p>
+
+<p>Each call to <a href="/en-US/docs/Web/API/SettingsManager/createLock" title="The documentation about this has not yet been written; please consider contributing!"><code>SettingsManager.createLock()</code></a> create a new <code>SettingsLock</code> object.</p>
+
+<p>All <code>SettingsLock</code> objects are kept in a queue of active locks. When a <code>SettingsLock</code> object is created it's placed at the end of the queue. Calls to get/set places a request against the lock on which it's called. Requests run asynchronously and in the order they are placed against a lock. When the last request for a lock is run, and  the success/error event against it has been fired, the lock is removed from the queue and the next lock start to be processed.</p>
+
+<h2 id="Properties">Properties</h2>
+
+<dl>
+ <dt><a href="/en-US/docs/Web/API/SettingsLock/closed" title="The documentation about this has not yet been written; please consider contributing!"><code>SettingsLock.closed</code></a></dt>
+ <dd>Indicates if the lock is no longer the active lock (<code>true</code>) or if it's still the active lock (<code>false</code>)</dd>
+</dl>
+
+<h2 id="Methods">Methods</h2>
+
+<dl>
+ <dt><a href="/en-US/docs/Web/API/SettingsLock/set" title="The documentation about this has not yet been written; please consider contributing!"><code>SettingsLock.set()</code></a></dt>
+ <dd>Allows to change the values of a set of settings. This method is asychronous and return a <a href="/en-US/docs/Web/API/DOMRequest" title="The documentation about this has not yet been written; please consider contributing!"><code>DOMRequest</code></a> object.</dd>
+ <dt><a href="/en-US/docs/Web/API/SettingsLock/get" title="The documentation about this has not yet been written; please consider contributing!"><code>SettingsLock.get()</code></a></dt>
+ <dd>Allows to retrieve the value of a given setting. This method is asychronous and return a <a href="/en-US/docs/Web/API/DOMRequest" title="The documentation about this has not yet been written; please consider contributing!"><code>DOMRequest</code></a> object.</dd>
+ <dt><a href="/en-US/docs/Web/API/SettingsLock/clear" title="The documentation about this has not yet been written; please consider contributing!"><code>SettingsLock.clear()</code></a></dt>
+ <dd>Clears any action that have not been done yet (remember that <code>get</code> and <code>set</code> are asynchronous). This method is added for testing and it deletes the whole settings DB!</dd>
+</dl>
+
+<h2 id="Specification" name="Specification">Specification</h2>
+
+<p>Not part of any specification yet; however, this API will be discuss at W3C as part of the <a class="external" href="http://www.w3.org/2012/sysapps/" rel="external" title="http://www.w3.org/2012/sysapps/">System Applications Working Group</a>.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/SettingsManager" title="The documentation about this has not yet been written; please consider contributing!"><code>SettingsManager</code></a></li>
+ <li><a href="/en-US/docs/Web/API/SettingsManager/createLock" title="The documentation about this has not yet been written; please consider contributing!"><code>SettingsManager.createLock()</code></a></li>
+ <li><a href="/en-US/docs/Web/API/Window/navigator/mozSettings" title="The documentation about this has not yet been written; please consider contributing!"><code>navigator.mozSettings</code></a></li>
+ <li><a href="/en-US/docs/WebAPI/Settings" title="/en-US/docs/WebAPI/Settings">Settings API</a></li>
+</ul>

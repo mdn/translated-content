@@ -1,0 +1,164 @@
+---
+title: Astuces XULRunner
+slug: Archive/Mozilla/XULRunner/Astuces_XULRunner
+tags:
+  - XUL
+  - XULRunner
+translation_of: Archive/Mozilla/XULRunner/Tips
+---
+<p>XULRunner: Questions Fréquemment Posées. [WIP]
+</p>
+<h2 id="Gestionnaire_d.27Extensions" name="Gestionnaire_d.27Extensions">Gestionnaire d'Extensions</h2>
+<p>Pour pouvoir installer des extensions, vous devez d'abord activer le Gestionnaire d'Extensions] dans <a href="fr/Empaqueter_une_application_XUL#em">application.ini</a>. XULRunner 1.8.0 ne charge pas les extensions depuis le dossier de l'application; seul le dossier XULRunner et le dossier du profil de l'utilisateur sont vérifiés. Les préférences suivantes doivent être définies pour faire fonctionner le dialogue XPInstall, le gestionnaire d'extensions et le gestionnaire de thèmes:
+</p>
+<pre class="eval">pref("xpinstall.dialog.confirm", "<a class=" external" rel="freelink">chrome://mozapps/content/xpinstall/x...allConfirm.xul</a>");
+pref("xpinstall.dialog.progress.skin", "<a class=" external" rel="freelink">chrome://mozapps/content/extensions/...ul?type=themes</a>");
+pref("xpinstall.dialog.progress.chrome", "<a class=" external" rel="freelink">chrome://mozapps/content/extensions/...ype=extensions</a>");
+pref("xpinstall.dialog.progress.type.skin", "Extension:Manager-themes");
+pref("xpinstall.dialog.progress.type.chrome", "Extension:Manager-extensions");
+pref("extensions.update.enabled", true);
+pref("extensions.update.interval", 86400);
+pref("extensions.dss.enabled", false);
+pref("extensions.dss.switchPending", false);
+pref("extensions.ignoreMTimeChanges", false);
+pref("extensions.logging.enabled", false);
+pref("general.skins.selectedSkin", "classic/1.0");
+// NB these point at AMO
+pref("extensions.update.url", "<a class=" external" rel="freelink">chrome://mozapps/locale/extensions/e...ons.properties</a>");
+pref("extensions.getMoreExtensionsURL", "<a class=" external" rel="freelink">chrome://mozapps/locale/extensions/e...ons.properties</a>");
+pref("extensions.getMoreThemesURL", "<a class=" external" rel="freelink">chrome://mozapps/locale/extensions/e...ons.properties</a>");
+</pre>
+<h2 id="URLs_Chrome_Utiles" name="URLs_Chrome_Utiles">URLs Chrome Utiles</h2>
+<p>La plupart requièrent le "<a href="#Branding"> branding</a>"
+</p>
+<table class="standard-table">
+<tbody><tr><th>Fenêtre</th><th>URL</th><th>Type de fenêtre
+</th></tr><tr><td>Gestionnaire d'Extensions
+</td><td><a class=" external" rel="freelink">chrome://mozapps/content/extensions/...ype=extensions</a>
+</td><td>Extension:Manager-extensions
+</td></tr><tr><td>Gestionnaire de Thèmes
+</td><td><a class=" external" rel="freelink">chrome://mozapps/content/extensions/...ul?type=themes</a>
+</td><td>Extension:Manager-themes
+</td></tr><tr><td>Console JavaScript
+</td><td><a class=" external" rel="freelink">chrome://global/content/console.xul</a>
+</td><td>global:console
+</td></tr><tr><td>about:config
+</td><td><a class=" external" rel="freelink">chrome://global/content/config.xul</a>
+</td><td>
+</td></tr></tbody></table>
+<h2 id="Extensions_pour_le_D.C3.A9veloppeur" name="Extensions_pour_le_D.C3.A9veloppeur">Extensions pour le Développeur</h2>
+<h3 id="Venkman" name="Venkman"> <a href="fr/Venkman">Venkman</a> </h3>
+<ul><li>Requiert une version personnalisée ou une extension compatible
+</li><li>Besoin de modifier la compatibilité dans <i>install.rdf</i> par rapport à l'<i>id</i> et aux versions dans <i>application.ini</i>
+</li><li>Besoin d'une méthode pour démarrer Venkman (communément en faisant un overlaying du fichier XUL principal, similaire au code existant pour Firefox, Suite, etc.)
+</li><li>La fonction <i>toOpenWindowByType()</i> doit être définie. Une ébauche de fonction efficiente est <a class="external" href="http://tjlaurenzo.blogspot.com/2006/03/getting-dev-tools-working-with.html">sur ce blog</a>. <i>Une meilleure suggestion?</i>
+</li><li>Venkman utilise "<a class=" external" rel="freelink">chrome://communicator/skin/</a>" comme alias pour "<a class=" external" rel="freelink">chrome://global/skin/</a>" et cet alias fut maintenu dans le toolkit XULRunner jusqu'à XULRunner 1.9. Avec XULRunner 1.9 ou supérieur, vous pouvez créer votre propre alias"
+</li></ul>
+<pre>dans votre chrome manifest ajoutez une ligne "skin":
+
+skin communicator classic/1.0 skin/communicator/
+
+ajoutez un dossier de skin "communicator" et une simple CSS nommée "communicator.css" avec ce contenu:
+
+@import url("chrome://global/skin/");
+</pre>
+<h3 id="Inspecteur_DOM" name="Inspecteur_DOM"> <a href="fr/Inspecteur_DOM">Inspecteur DOM</a> </h3>
+<p>Idem que Venkman
+</p>
+<h3 id="L.27Extension_du_Developpeur_d.27Extensions" name="L.27Extension_du_Developpeur_d.27Extensions"> L'Extension du Developpeur d'Extensions </h3>
+<p><a class="external" href="http://ted.mielczarek.org/code/mozilla/extensiondev/">Extension Developer's Extension</a> est un outil utile, avec un Editeur XUL Live et un shell JavaScript.
+</p><p>Pour installer l'extension dans votre application, vous aurez besoin de modifier son <i>install.rdf</i> (voir ci-dessus). Vous voudrez aussi probablement créer des éléments de menu qui vous laisseront ouvrir le shell Js et les autres outils de cette extension.
+</p>
+<h3 id="Autre_m.C3.A9thode" name="Autre_m.C3.A9thode"> Autre méthode </h3>
+<p>Une autre méthode pour faire fonctionner Venkman et EDE [en]<a class="external" href="http://tjlaurenzo.blogspot.com/2006/03/getting-dev-tools-working-with.html">sur ce blog</a>
+</p>
+<h2 id="Branding" name="Branding"> Branding </h2>
+<p>Branding est un <a href="fr/Enregistrement_chrome">packetage chrome</a> qui contient des informations spécifiques au produit (ex: nom, créateur, logo).
+</p><p>Quelques composants XULRunner (en particulier le <a href="#Gestionnaire_d.27Extensions">Gestionnaire d'Extensions</a>) dépendent du branding car ils cherchent certaines chaines dans &lt;tt&gt;<a class=" external" rel="freelink">chrome://branding/locale/brand.dtd</a>&lt;/tt&gt; et &lt;tt&gt;<a class=" external" rel="freelink">chrome://branding/locale/brand.properties</a>&lt;/tt&gt;.
+</p><p>Pour satisfaire ces dépendances, vous pouvez copier depuis Firefox &lt;tt&gt;brand.dtd&lt;/tt&gt;/&lt;tt&gt;brand.properties&lt;/tt&gt; vers &lt;tt&gt;chrome/locale/branding&lt;/tt&gt;, les modifier en conséquence, et <a href="fr/Enregistrement_chrome#locale">enregistrer la localisation</a> pour &lt;tt&gt;branding&lt;/tt&gt; en ajoutant à votre manifest chrome:
+</p>
+<pre class="eval">locale branding fr-FR chrome/locale/branding/
+</pre>
+<p><i>La localisation que vous mettez dans les fichiers de branding n'importe pas du moment que c'est elle qui est présente dans le manifest.</i>
+</p><p>En addition, un <i>branding content package (traduction requise)</i> <a href="fr/Enregistrement_chrome#content">doit être enregistré</a> pour inclure le logo de l'application:
+</p>
+<pre class="eval">content branding chrome/branding
+</pre>
+<p>2 icônes doivent être fournies dans ce dossier: <i>icon48.png</i> and <i>icon64.png</i>. Voir <a class="external" href="http://mxr.mozilla.org/mozilla/source/other-licenses/branding/firefox/content/">Firefox</a> pour avoir un exemple.
+</p><p><span class="comment">commentaire copié de la version anglaise: In ''~.mozconfig'': ac_add_options --enable-branding=« branding location »</span>
+</p>
+<h3 id=".5BWindows.5D_Faire_apparaitre_correctement_le_nom_et_l.27ic.C3.B4ne" name=".5BWindows.5D_Faire_apparaitre_correctement_le_nom_et_l.27ic.C3.B4ne"> [Windows] Faire apparaitre correctement le nom et l'icône </h3>
+<p>Par défaut, la barre de tâches de Windows grouppe les fenêtres appartenant au même processus dans un seul bouton pour gagner de la place. ce bouton est souvent appelé "xulrunner.exe" et a l'icône de XULRunner. Il y a deux méthodes pour afficher la bonne dénomination ( = <i>branding</i>) de votre application à la place:
+</p>
+<ul>
+<li>
+Si vous compilez XULRunner vous-même: créez un fichier module.ver dans <i>mozilla/xulrunner/app</i> avec:
+<pre>WIN32_MODULE_DESCRIPTION=MonApplication</pre>
+<p>MonApplication doit être remplacé par le titre voulu sur le bouton. Vous pouvez aussi remplacer xulrunner.ico dans le même répertoire par l'icône de votre application.
+</p>
+</li>
+<li>
+Avec un XULRunner precompilé: utilisez xulrunner-stub.exe pour démarrer votre application mais renommez le en MonApplication.exe. Avec XULRunner 1.9, le nom choisi apparaitra dans la barre de tâches (pas avec XULRunner 1.8 cependant). Votre icône peut être ajoutée avec un logiciel comme <a class="external" href="http://www.angusj.com/resourcehacker/">Resource Hacker</a> (très simple à prendre en main).
+</li>
+</ul>
+<h2 id="Lire_les_arguments_en_ligne_de_commande" name="Lire_les_arguments_en_ligne_de_commande"> Lire les arguments en ligne de commande </h2>
+<p>Les arguments en ligne de commande sont gérés par <i>nsICommandLineHandler</i>.
+</p><p><span class="comment">commentaire copié depuis la version anglaise: = Can i have JavaScript errors / warnings directed to stdout instead of the jsconsole? = See <a class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=306263" title="https://bugzilla.mozilla.org/show_bug.cgi?id=306263">#306263</a> This doesn't do anything (1.8.0.1): xulrunner -app application.ini -console This neither (1.8.0.1) in ''defaults/preferences/«application name».js'': pref("javascript.options.strict", true); pref("javascript.options.showInConsole", true); pref("browser.dom.window.dump.enabled", true);</span>
+</p><p><br>
+</p>
+<h2 id="Pr.C3.A9f.C3.A9rences_requises_pour_les_dialogues_de_t.C3.A9l.C3.A9chargement" name="Pr.C3.A9f.C3.A9rences_requises_pour_les_dialogues_de_t.C3.A9l.C3.A9chargement"> Préférences requises pour les dialogues de téléchargement </h2>
+<p>Pour utiliser le <i>unknown-content-type</i> et le dialogue <i>file-downloads</i> depuis un élément <code>&lt;browser&gt;</code>, vous devez ajouter les préférences suivantes:
+</p>
+<pre class="eval">pref("browser.download.useDownloadDir", true);
+pref("browser.download.folderList", 0);
+pref("browser.download.manager.showAlertOnComplete", true);
+pref("browser.download.manager.showAlertInterval", 2000);
+pref("browser.download.manager.retention", 2);
+pref("browser.download.manager.showWhenStarting", true);
+pref("browser.download.manager.useWindow", true);
+pref("browser.download.manager.closeWhenDone", true);
+pref("browser.download.manager.openDelay", 0);
+pref("browser.download.manager.focusWhenStarting", false);
+pref("browser.download.manager.flashCount", 2);
+//
+pref("alerts.slideIncrement", 1);
+pref("alerts.slideIncrementTime", 10);
+pref("alerts.totalOpenTime", 4000);
+pref("alerts.height", 50);
+</pre>
+<p>Si vous en oubliez, vous aurez l'erreur suivante:
+</p>
+<pre class="eval">Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsIPrefBranch.getBoolPref]
+
+Error: dialog has no properties
+Source File: <a class=" external" rel="freelink">chrome://mozapps/content/downloads/u...ontentType.xul</a>
+Line: 1
+</pre>
+<h2 id="Activer_le_Gestionnaire_de_Mots_de_Passe" name="Activer_le_Gestionnaire_de_Mots_de_Passe"> Activer le Gestionnaire de Mots de Passe </h2>
+<p>Ces préférences sont par défaut dans Firefox mais pas dans XULRunner. Sans elles, le gestionnaire de mots de passe ne retiendra pas les détails d'identification.
+</p>
+<pre class="eval">pref("signon.rememberSignons", true);
+pref("signon.expireMasterPassword", false);
+pref("signon.SignonFileName", "signons.txt");
+</pre>
+<p>Vous avez aussi besoin d'obtenir une instance du service <i>login-manager</i>, qui initialise le système en interne:
+</p>
+<pre class="eval">Components.classes["@mozilla.org/login-manager;1"].getService(Components.interfaces.nsILoginManager);
+</pre>
+<h2 id="Utiliser_Firefox_3_pour_lancer_des_applications_XULRunner" name="Utiliser_Firefox_3_pour_lancer_des_applications_XULRunner"> Utiliser Firefox 3 pour lancer des applications XULRunner </h2>
+<p>Firefox 3 contient le runtime XULRunner avec l'option &lt;tt&gt;-app&lt;/tt&gt; en ligne de commandes pour lancer l'application XUL désirée au lieu de Firefox. Par exemple, sous Windows:
+</p>
+<pre class="eval">  firefox.exe -app <i>chemin\vers\</i>application.ini
+</pre>
+<p>Sous Mac:
+</p>
+<pre class="eval">  /Applications/Firefox.app/Contents/MacOS/firefox-bin -app <i>/chemin/vers/</i>application.ini
+</pre>
+<p>Notez que sous Mac, vous devez donner un chemin direct. Les chemins relatifs semblent ne pas marcher.
+</p>
+<h2 id="R.C3.A9solution_de_probl.C3.A8mes" name="R.C3.A9solution_de_probl.C3.A8mes"> Résolution de problèmes </h2>
+<h3 id="Titre_de_fen.C3.AAtre_manquant" name="Titre_de_fen.C3.AAtre_manquant"> Titre de fenêtre manquant </h3>
+<p>Si le titre de votre <code>&lt;<a href="fr/XUL/window">window</a>&gt;</code> XUL est vierge, même en spécifiant un attribut title vérifiez que votre fichier XUL est en &lt;tt&gt;.xul&lt;/tt&gt; et non pas &lt;tt&gt;.xml&lt;/tt&gt;.
+</p>
+<div class="noinclude">
+</div>

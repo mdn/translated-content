@@ -1,0 +1,84 @@
+---
+title: extIPreference
+slug: Toolkit_API/extIPreference
+tags:
+  - FUEL
+  - Interfaces
+  - SMILE
+  - STEEL
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/Toolkit_API/extIPreference
+---
+<p></p>
+<p></p><div class="blockIndicator standardNote">
+<p>この記事は <a href="https://developer.mozilla.org/ja/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a>  の新機能について述べています</p>
+</div><p></p>
+<p><code>extIPreference</code> インタフェースは、一つの設定へのアクセスを提供します。データはキャッシュされません。すべて、現在の設定値へアクセスして読み取ります。<code>extIPreference</code> は <code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/exthelper/extIApplication.idl" rel="custom">toolkit/components/exthelper/extIApplication.idl</a></code> で定義されています。</p>
+<p>XPCOM サービスを通して実装された <a class="internal" href="/ja/Toolkit_API/extIApplication" title="ja/Toolkit API/extIApplication"><code>extIApplication</code></a>: <a class="internal" href="/ja/Toolkit_API/FUEL" title="ja/Toolkit_API/FUEL">FUEL</a> (Firefox) または <a class="internal" href="/ja/Toolkit_API/STEEL" title="ja/Toolkit_API/STEEL">STEEL</a> (Thunderbird), <a class="internal" href="/ja/Toolkit_API/SMILE" title="ja/Toolkit_API/SMILE">SMILE</a> (SeaMonkey) のページの説明を参照してください。</p>
+<h2 id="Method_overview" name="Method_overview">メソッドの概要</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="#reset.28.29">reset</a>()</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Attributes" name="Attributes">プロパティ</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">プロパティ</td>
+   <td class="header">型</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code>name</code></td>
+   <td><code>readonly attribute AString</code></td>
+   <td>設定の名前。</td>
+  </tr>
+  <tr>
+   <td><code>type</code></td>
+   <td><code>readonly attribute AString</code></td>
+   <td>設定の型を表す文字列 (String, Boolean, Number のいずれか)。</td>
+  </tr>
+  <tr>
+   <td><code>value</code></td>
+   <td><code>attribute nsIVariant</code></td>
+   <td>設定の値を取得あるいは変更する。</td>
+  </tr>
+  <tr>
+   <td><code>locked</code></td>
+   <td><code>attribute boolean</code></td>
+   <td>設定のロック状態を取得する。真偽値をセットすることで設定をロックあるいはロック解除する。</td>
+  </tr>
+  <tr>
+   <td><code>modified</code></td>
+   <td><code>readonly attribute boolean</code></td>
+   <td>設定がユーザによって変更されたかどうかを調べる。</td>
+  </tr>
+  <tr>
+   <td><code>branch</code></td>
+   <td><code>readonly attribute <a href="/ja/Toolkit_API/extIPreferenceBranch" title="ja/FUEL/PreferenceBranch">extIPreferenceBranch</a></code></td>
+   <td>この設定を含む設定ブランチ。</td>
+  </tr>
+  <tr>
+   <td><code>events</code></td>
+   <td><code>readonly attribute <a href="/ja/Toolkit_API/extIEvents" title="ja/FUEL/Events">extIEvents</a></code></td>
+   <td>この設定のイベントオブジェクト。 "change" をサポート。</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Methods" name="Methods">メソッド</h2>
+<h3 id="reset.28.29" name="reset.28.29">reset()</h3>
+<p>設定をデフォルト値にリセットする。</p>
+<div class="note">
+ これは、設定が存在しないかすでにデフォルト値である場合は例外が発生します。このメソッドは、try/catch ブロック内で呼び出してください。</div>
+<pre class="eval">void reset()
+</pre>
+<h6 id="Parameters" name="Parameters">引数</h6>
+<h6 id="Return_value" name="Return_value">戻り値</h6>
+<p> </p>
+<h2 id="See_also" name="See_also">参照</h2>
+<p><a class="internal" href="/ja/Toolkit_API/FUEL" title="ja/Toolkit_API/FUEL">FUEL</a> (Firefox), <a class="internal" href="/ja/Toolkit_API/STEEL" title="ja/Toolkit_API/STEEL">STEEL</a> (Thunderbird), <a class="internal" href="/ja/Toolkit_API/SMILE" title="ja/Toolkit_API/SMILE">SMILE</a> (SeaMonkey)</p>
+<p></p>

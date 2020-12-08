@@ -1,0 +1,30 @@
+---
+title: isFile
+slug: >-
+  Archive/Mozilla/XPInstall/Référence_de_l_API_XPInstall/Objet_File/Méthodes/isFile
+translation_of: Archive/Mozilla/XPInstall/Reference/File_Object/Methods/isFile
+---
+<p> </p>
+<h3 id="isFile" name="isFile">isFile</h3>
+<p>Retourne une valeur booléenne indiquant si le <code>FileSpecObject</code> donné est un fichier ou non.</p>
+<h4 id="M.C3.A9thode_de" name="M.C3.A9thode_de">Méthode de</h4>
+<p>Objet <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_File">File</a></p>
+<h4 id="Syntaxe" name="Syntaxe">Syntaxe</h4>
+<pre class="eval">boolean isFile (FileSpecObject NativeFolderPath);
+</pre>
+<h4 id="Param.C3.A8tres" name="Param.C3.A8tres">Paramètres</h4>
+<p>La méthode <code>isFile</code> a le paramètre suivant :</p>
+<dl>
+ <dt>
+  <code>NativeFolderPath</code></dt>
+ <dd>
+  Un FileSpecObject représentant l'objet fichier demandé.</dd>
+</dl>
+<h4 id="Retours" name="Retours">Retours</h4>
+<p>Une valeur booléenne indiquant si <code>FileSpecObject</code> est un fichier ou pas.</p>
+<h4 id="Exemple" name="Exemple">Exemple</h4>
+<pre class="eval">f = getFolder( "Program", "sample.txt" );
+if ( File.isFile(f) ) // the object represents a file
+</pre>
+<p><span class="comment">Interwiki Languages Links</span></p>
+<p>{{ languages( { "en": "en/XPInstall_API_Reference/File_Object/Methods/isFile" } ) }}</p>

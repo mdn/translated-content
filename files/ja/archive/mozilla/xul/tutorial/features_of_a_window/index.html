@@ -1,0 +1,69 @@
+---
+title: ウィンドウの機能
+slug: Archive/Mozilla/XUL/Tutorial/Features_of_a_Window
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+  - 要更新
+translation_of: Archive/Mozilla/XUL/Tutorial/Features_of_a_Window
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:XBL_Example" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Creating_Dialogs">次のページ  »</a></p>
+</div>
+<p>これまでにも、ウィンドウの機能についてはいくつか見ていますが、 このセクションでは、さらにいくつかの機能について見ていきたいと思います。</p>
+<h3 id=".E5.88.A5.E3.81.AE.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.82.92.E4.BD.9C.E6.88.90.E3.81.99.E3.82.8B" name=".E5.88.A5.E3.81.AE.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.82.92.E4.BD.9C.E6.88.90.E3.81.99.E3.82.8B">別のウィンドウを作成する</h3>
+<p>XUL のアプリケーションでは、最初のウィンドウと同じ方法で 2 つ目のウィンドウを作成することが可能です。 このために必要なのは、そのウィンドウのコードを記述した 2 つ目の XUL ファイルを作成することだけです。 HTML の場合と同様に、2 つ目のウィンドウを開くためには <code><a href="/ja/docs/DOM/window.open">window.open()</a></code> 関数が使用できます。 この関数は、新しく開いたウィンドウへの参照を返します。 この参照を使うことで、新しく開いたウィンドウの関数を呼び出すことが可能になります。</p>
+<p><code>open</code> 関数は引数を 3 つ取ります。 最初の引数には開きたいファイルの URL、 2 番目にはウィンドウの内部名、 3 番目には表示に関するフラグのリストを指定します。 フラグ「<code>chrome</code>」は、ウィンドウを<a href="/ja/docs/DOM/window.open#Toolbar_and_chrome_features">クロムファイル</a>として開くために指定する必要があるので重要です。 「<code>chrome</code>」フラグを引数で指定しない場合には、ファイルはブラウザウィンドウのコンテンツとして開かれることになります。</p>
+<p>例を示します。</p>
+<pre>var myWin = window.open("chrome://findfile/content/findfile.xul","findfile","chrome");
+</pre>
+<h3 id=".E5.B9.85.E3.81.A8.E9.AB.98.E3.81.95.E3.82.92.E6.8C.87.E5.AE.9A.E3.81.99.E3.82.8B" name=".E5.B9.85.E3.81.A8.E9.AB.98.E3.81.95.E3.82.92.E6.8C.87.E5.AE.9A.E3.81.99.E3.82.8B">幅と高さを指定する</h3>
+<p>ウィンドウに要素を追加すると、いつもウィンドウの幅が新しい要素に応じて拡張されることに気付いていると思います。 ウィンドウは、実際には、<span style="border-bottom: 1px dashed green;" title="flexible">伸縮可能</span>で<span style="border-bottom: 1px dashed green;" title="orientation">配置方向</span>のデフォルトが<span style="border-bottom: 1px dashed green;" title="vertical">垂直</span>であるボックスにすぎません。 明示的に、直接 <code><code><a href="/ja/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> タグに、幅と高さを指定することも可能です。 もちろん、この場合のウィンドウは、指定のサイズで表示されます。 指定を取り除けば、サイズはウィンドウにある要素から決定されることになります。</p>
+<pre>&lt;window
+  id="findfile-window"
+  title="Find Files"
+  width="400"
+  height="450"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+</pre>
+<p>この例では、ウィンドウは 400 ピクセルの幅と 450 ピクセルの高さで開かれます。 このときには、このサイズのウィンドウを埋めるために必要な要素がない場合でも、 余った領域を空白で埋めて、このサイズでウィンドウが開かれることになります。 また逆に、要素が多すぎる場合でも、ウィンドウが要素を表示するために必要な大きさまで拡大されることはありません。 このために、利用者はダイアログをリサイズしなければならなくなります。 ウィンドウの幅と高さを指定するときは、ウィンドウが小さすぎたり大きすぎたりしないように注意する必要があります。 加えて、利用者が別のテーマやロケールを使用しているかもしれないということも考慮する必要があります。</p>
+<p>サイズを指定する場合、幅と高さの両方を指定しなければならないことに注意してください。 片方しか指定しない場合、もう片方には 0 が設定されます。 ウィンドウのサイズを自動的に設定するためには、幅と高さの両方を省略する必要があります。</p>
+<p>なお、幅と高さは、ウィンドウの初期サイズを指定しているにすぎません。 ウィンドウがリサイズ可能な場合、利用者はウィンドウをリサイズして、別のサイズに変更するかもしれません。</p>
+<h3 id=".E4.BB.96.E3.81.AE.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.81.AE.E6.A9.9F.E8.83.BD" name=".E4.BB.96.E3.81.AE.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.81.AE.E6.A9.9F.E8.83.BD">他のウィンドウの機能</h3>
+<p>以下に <code>window.open</code> 関数の 3 番目の引数で渡すことが可能なフラグの一部を示します。 ただし、オペレーティングシステムによっては、すべてがサポートされない可能性もあります。 ここには、JavaScript のリファレンスに記載されている HTML の場合に指定可能な任意のフラグを指定することも可能です。 また、「<code>dialog=no</code>」のような形式で、「<code>no</code>」を設定することで機能を無効にすることも可能です。</p>
+<dl>
+ <dt>
+  alwaysLowered</dt>
+ <dd>
+  ウィンドウは、常に他のウィンドウの背面に表示されます。</dd>
+ <dt>
+  alwaysRaised</dt>
+ <dd>
+  ウィンドウは、常に他のウィンドウの前面に表示されます。</dd>
+ <dt>
+  centerscreen</dt>
+ <dd>
+  ウィンドウが開かれたとき、画面の中央に表示されます。</dd>
+ <dt>
+  dependent</dt>
+ <dd>
+  ウィンドウは、開き元のウィンドウと、常に相対的な位置関係を維持して表示されます。つまり、開き元のウィンドウを移動した場合には、新しいウィンドウも相対的な位置関係を維持するために移動することになります。</dd>
+ <dt>
+  dialog</dt>
+ <dd>
+  ウィンドウは、ダイアログボックス用の外観で表示されます。</dd>
+ <dt>
+  modal</dt>
+ <dd>
+  ダイアログをモーダルにします。モーダルウィンドウが閉じられるまでは、開き元のウィンドウを操作することができなくなります。</dd>
+ <dt>
+  resizable</dt>
+ <dd>
+  利用者はウィンドウをリサイズできます。</dd>
+</dl>
+<p><small><span id="%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8"><a id="%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8"></a><strong>関連ページ</strong></span> : <a href="/ja/docs/DOM/window.open">DOM window.open() リファレンス</a></small></p>
+<p>次のセクションでは、<span style="border-bottom: 1px dashed green;" title="secondary">補助的な</span>ダイアログを開く方法について見ていきます。</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:XBL_Example" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Creating_Dialogs">次のページ  »</a></p>
+</div>

@@ -1,0 +1,65 @@
+---
+title: nsISyncMessageSender
+slug: Mozilla/Tech/XPCOM/Reference/Interface/nsISyncMessageSender
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsISyncMessageSender
+---
+<p></p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/content/base/public/nsIMessageManager.idl" rel="custom">content/base/public/nsIMessageManager.idl</a></code><span style="text-align: right; float: right;"><a href="/zh-CN/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">脚本化</a></span></div>
+<span style="padding: 4px 2px;">
+
+Handles sending messages synchronously to a destination frame.
+</span>
+
+  <div style="height: 42px; position: relative; padding: 2px; width: auto;">
+
+  <div style="top: 22px; font-size: 11px; position: absolute;">1.0</div>
+
+  <div style="top: 22px; font-size: 11px; position: absolute; left: 0px; text-align: right; float: right; width: 100%;">66</div>
+
+  <div style="height: 8px; top: 16px; background: #dd0000; left: 0px; position: absolute; width: 11.428571428571429%;"></div>
+
+<div style="height: 8px; top: 16px; left: 11.428571428571429%; background: #00dd00; position: absolute; width: 88.57142857142857%;" title="Introduced in Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)"></div>
+
+<div style="top: 0px; font-size: 11px; position: absolute; left: 11.428571428571429%;">Introduced</div>
+<div style="top: 22px; font-size: 11px; position: absolute; left: 11.428571428571429%;">Gecko 2.0</div>
+
+</div>
+
+<div style="background: #eee; padding: 2px;">
+继承于: <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFrameMessageManager" title="">nsIFrameMessageManager</a></code>
+<span style="text-align: right; float: right;">最后修改于Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)</span></div>
+</div><p></p>
+<h2 id="Method_overview" name="Method_overview">方法概述</h2>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <td><code>void sendSyncMessage(in messageName, in JSON, in [array] jsObjects);</code></td>
+    </tr>
+  </tbody>
+</table>
+<h3 id="sendSyncMessage()">sendSyncMessage()</h3>
+<p>同步发送一条短消息.</p>
+<pre>void sendSyncMessage(
+  in DOMString messageName,
+  in DOMString json,
+);
+</pre>
+<h6 id="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>messageName</code></dt>
+  <dd>
+    消息的名称.</dd>
+  <dt>
+    <code>json</code></dt>
+  <dd>
+    一个JSON格式的字符串,代表了要发送的数据.</dd>
+</dl>
+<h2 id="See_also" name="See_also">相关链接</h2>
+<ul>
+  <li><a href="/en/Content_process_event_handling" title="en/Content process event handling">Content process event handling</a></li>
+  <li><code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIChromeFrameMessageManager" title="">nsIChromeFrameMessageManager</a></code></li>
+  <li><code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentFrameMessageManager" title="">nsIContentFrameMessageManager</a></code></li>
+  <li><code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFrameLoader" title="">nsIFrameLoader</a></code></li>
+  <li><code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFrameMessageListener" title="">nsIFrameMessageListener</a></code></li>
+</ul>

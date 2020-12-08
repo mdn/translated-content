@@ -1,0 +1,105 @@
+---
+title: ADBをインストールして使用する
+slug: Archive/B2G_OS/Debugging/Installing_ADB
+tags:
+  - ADB
+  - B2G
+  - Firefox OS
+  - インストール
+translation_of: Archive/B2G_OS/Debugging/Installing_ADB
+---
+<div class="summary">
+<p><span class="seoSummary">Firefox OS 開発の色々な面で、<code>ADB</code>（Android Debug Bridge＝Androidデバッグブリッジの略）のインストールが必要となってきます。この記事ではインストール方法を説明し、便利なADBコマンドを共有します。</span></p>
+</div>
+
+<h2 id="ADBをインストールする">ADBをインストールする</h2>
+
+<p>MacやLinuxやWindows向けのAndroid SDKパッケージの一部として、adbをダウンロード・インストールできます。 <a href="http://developer.android.com/sdk/index.html">Get the Android SDK</a>のページを参照してください。</p>
+
+<p>または<a href="https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/">Firefoxアドオン</a>をインストールでき、これが最速の方法です。</p>
+
+<p>新しめのLinuxディストリビューションでは、すでに<code>リポジトリ内にadbがあります。</code>Ubuntu 12.10以降では下記のコマンドを実行します:</p>
+
+<pre>sudo apt-get install android-tools-adb</pre>
+
+<p>Fedora 19/20/21は次を:</p>
+
+<pre>sudo yum install android-tools</pre>
+
+<p>OSXで<a href="http://brew.sh/"> Homebrew</a> を使っている時はこちら:</p>
+
+<pre class="language-html"><code class="language-html">brew install android-platform-tools</code></pre>
+
+<p><code>adbがパッケージされていないディストリビューション</code> (つまりUbuntu 12.04 やFedora 17<span class="diff_add">/18</span>) では、<a class="external" href="http://developer.android.com/sdk/index.html" title="http://developer.android.com/sdk/index.html">Android SDK starter package</a>をインストールする必要があります (<em>SDKツールだけ</em>のオプションよりは、<em>ADTとのバンドル（セットになったもの）</em>が欲しくなるでしょう) 。<code>$SDK_HOME/tools/androidにあるパッケージマネージャを実行し、GUI を使用して</code> "Android SDK Platform-tools" をインストールします。</p>
+
+<p><code>adb</code> のインストール場所（通常は /usr/bin で、インストール方法によっては更に<code> $SDK_HOME/platform-tools </code>の中にもインストールされることもある）を探しておいてください。<code>忘れずにPATH</code> にこのディレクトリを追加してください。これを行うには、<code>~/.bashrc</code> やそれに相当するものに対して、次の行を付け加え、</p>
+
+<pre>PATH=$SDK_HOME:$PATH</pre>
+
+<p><code>$SDK_HOME</code> の値にAndroid SDK の場所を設定し直します。</p>
+
+<h2 id="トラブルシューティング">トラブルシューティング</h2>
+
+<p>64-bitのOSを使用していて、adbコマンドを使用する時にファイルが存在するにもかかわらず "File not found"（ファイルがありません） というエラーが出る時には、32-bitの互換ライブラリをインストールする必要があります。 aptでは以下のように実行します:</p>
+
+<pre class="language-html">sudo apt-get install ia32-libs</pre>
+
+<p id=".E3.82.88.E3.81.8F.E3.81.82.E3.82.8BADB.E3.82.B3.E3.83.9E.E3.83.B3.E3.83.89">'adb devices'を実行して端末が見つからない場合、<a href="https://gist.github.com/justinpotts/f0b0c3883d5947c219b5">ここ</a> をクリックして修正手順に従って下さい。</p>
+
+<h2 id="よくあるADBコマンド">よくあるADBコマンド</h2>
+
+<p><code>以下のセクションではよくある、便利なadbコマンドを説明します。</code></p>
+
+<h2 id="b2gプロセスを再起動する">b2gプロセスを再起動する</h2>
+
+<p>b2gはAndroidベースのカーネルの頂点にあってスマホ上で動作する <a href="/en-US/docs/XULRunner" title="/en-US/docs/XULRunner">XULRunner</a> アプリケーションと同等なものです。時にはこれを再起動したくなるかもしれません。これは端末全体を再起動することなしにアプリケーション環境をリセットする方法です。端末とコンピューターを接続した状態（またはデバッガを走らせた状態）で、ターミナル上で下記のように入力することで可能です:</p>
+
+<pre>adb shell killall b2g</pre>
+
+<h2 id="デバッグ用のポート転送を有効にする">デバッグ用のポート転送を有効にする</h2>
+
+<p>単なるポート転送をするには（例えばアプリマネージャで Firefox OS 端末上のアプリをデバッグしている時）、ターミナル上で下記のように入力します:</p>
+
+<pre class="language-html">adb forward tcp:6000 localfilesystem:/data/local/debugger-socket</pre>
+
+<p>電話を再起動したり、抜き差ししたりした時、毎回必ずこれを行う必要があります。必要に応じソケット番号を変更できます。</p>
+
+<h2 id="ローカルマシンへポート転送する">ローカルマシンへポート転送する</h2>
+
+<p>ローカルマシンへポート転送するには、<a href="http://people.mozilla.org/~jmuizelaar/forward/">netcat and ssh binaries</a>をダウンロードし、下記コマンドを実行する必要があります:</p>
+
+<pre class="brush: bash  language-html"><code class="language-html"># this is an awful hack but does in fact work...
+host$ adb forward tcp:7979 tcp:6969
+
+# make some named pipes so that we can make a bidirectional netcat
+phone$ mknod readback p
+host$ mknod readback p
+
+# this sets up a one time use connection to back to the host
+# listen on ports 6969 and 5959 and forward all the information between them
+phone$ ./netcat -l -p 6969 &lt; readback | ./netcat -l -p 5959 &gt; readback
+# connect to port 7979 (port 6969 on the device) and the local ssh server and forward all information between them
+host$ ./netcat localhost 7979 &lt; readback | ./netcat localhost 22 &gt; readback
+
+# now when we connect to port 5959 on the phone it will be like connecting to ssh server on the host
+
+# use the netcat reversal to set up an ssh connection back to the host and forward port 9999 on the device to 'localhost:8000' (this could be anything like 'google.com:80')
+phone$ ./ssh localhost -p 5959 -L 9999:localhost:8000</code></pre>
+
+<p>これは端末の9999番ポートをホストの8000番ポートに転送します。</p>
+
+<p>別の方法として、sshサーバー(<a href="http://people.mozilla.org/%7Ejmuizelaar/forward/dropbear">dropbear</a> と <a href="http://people.mozilla.org/%7Ejmuizelaar/forward/host_key">host_key</a>)を端末上で直接使う方法があります。それには下記コマンドを使用します:</p>
+
+<pre class="brush: bash  language-html"><code class="language-html">phone$ DROPBEAR_PASSWORD=root ./dropbear -p 9000 -F -v -a -r host_key ./dropbear
+host$ adb forward tcp:8888 tcp:9000
+# public key authentication has been hard coded to succeed (make sure you have a public key for ssh to use)
+host$ ssh -vvv root@localhost -p 8888 -R 9999:people.mozilla.org:80</code></pre>
+
+<p>詳細な情報:</p>
+
+<ul>
+ <li><a href="http://k.japko.eu/android-dropbear.html">dropbearをビルドするマニュアル(英語)</a></li>
+ <li>環境変数値の不足によるクラッシュを無効にし、認証成功をハードコードする<a href="http://people.mozilla.org/%7Ejmuizelaar/forward/dropbear-b2g.patch">dropbear パッチ</a></li>
+</ul>
+
+<div id="divLookup" style="background-color: transparent; color: #000000; position: absolute; top: 2686px; left: 83px; padding: 0px; border-radius: 2px;"><img></div>

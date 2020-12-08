@@ -1,0 +1,143 @@
+---
+title: Utilisation des spacers
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Utilisation_des_spacers
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Using_Spacers
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Ajout_d'éléments_HTML" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Plus_de_caractéristiques_sur_les_boutons">Suivant  »</a></p>
+</div>
+
+<p>Dans cette section, vous trouverez comment ajouter des espacements entre les différents éléments que vous avez créés.</p>
+
+<h3 id="Ajout_de_spacers" name="Ajout_de_spacers">Ajout de spacers</h3>
+
+<p>Un des problèmes avec le développement des interfaces utilisateur est que chaque utilisateur a son propre affichage. Certains utilisateurs peuvent avoir de grands écrans avec une haute résolution et d'autres de faibles résolutions. De plus, chaque plate-forme peut avoir des spécificités pour l'interface utilisateur. En ajoutant le support multi-langue, un texte dans une langue peut avoir besoin de plus de place que dans une autre.</p>
+
+<p>Les applications qui doivent être compatibles avec différentes plates-formes ou langages ont souvent des fenêtres créées avec beaucoup de place pour permettre leur exécution. Certaines plates-formes et outils de développement d'interfaces utilisateur proposent des composants qui sont suffisamment intelligents pour se redimensionner et se repositionner eux-mêmes selon les besoins de l'utilisateur (Java utilise des gestionnaires de mise en page par exemple).</p>
+
+<p>XUL fournit la possibilité aux éléments de se positionner et se redimensionner automatiquement. Comme nous l'avons vu, la fenêtre de "recherche de fichiers" est apparue avec une taille qui correspond aux éléments qui y sont inclus. Chaque fois que nous y ajoutons quelque chose, la fenêtre s'agrandit.</p>
+
+<p>XUL utilise un système de mise en page appelé le " Box Model ". Nous en parlerons dans <a href="/fr/Tutoriel_XUL/Les_boîtes_de_groupe" title="fr/Tutoriel_XUL/Les_boîtes_de_groupe">la prochaine section</a> mais il vous permet essentiellement de diviser une fenêtre en une série de boîtes contenant vos éléments. Ces boîtes se positionnent et se redimensionnent en fonction des spécifications que vous avez définies. Pour l'instant, sachez simplement que l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/window" title="window">window</a></code> est un type de boîte.</p>
+
+<p>Avant d'entrer plus dans le détail avec les boîtes, nous allons présenter un autre élément XUL qui se montre très utile pour la mise en page, le <code><a href="/fr/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code>. Un <code><a href="/fr/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code> est très simple et ne requiert qu'un seul attribut qui sera expliqué dans un moment. Le <code><a href="/fr/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code> le plus simple ressemble à ceci :</p>
+
+<pre class="eval">&lt;spacer flex="1" /&gt;
+</pre>
+
+<p>Un <code><a href="/fr/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code> est utilisé pour placer des espaces vides dans une fenêtre. Sa principale caractéristique est de pouvoir s'agrandir ou se rétrécir lorsque l'utilisateur redimensionne la fenêtre. Il permet à quelqu'un de placer des boutons à droite ou en bas d'une fenêtre et de vouloir les fixer sur le coté droit ou en bas, quelle que soit la taille de la fenêtre. Comme vous le verrez, vous pouvez utiliser des séries de <code><a href="/fr/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code> pour créer quelques effets de mise en page.</p>
+
+<p>Dans la syntaxe ci-dessus, <code>spacer</code> a un seul attribut appelé <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code>. Il est utilisé pour définir la " flexibilité " de l'espacement. Dans le cas ci-dessus, le <code>spacer</code> a un <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code> de '1'. Il en devient un élément d'espacement flexible. Si vous placez un <code>spacer</code> directement dans une fenêtre, il s'adaptera à la taille de la fenêtre lorsque celle-ci est modifiée.</p>
+
+<p>Nous allons bientôt ajouter un élément <code>spacer</code> dans notre boîte de dialogue "Recherche de Fichiers". Tout d'abord, voilà ce qu'il se passe si la fenêtre est agrandie :</p>
+
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-inputs.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-inputs.xul">Voir</a></p>
+
+<p><img alt="Image:xultu_springs1.png" class="internal" src="/@api/deki/files/1550/=Xultu_springs1.png"></p>
+
+<p>Si vous changez la taille de la fenêtre, vous pouvez voir que les éléments ont conservé leur position. Aucun d'eux n'a bougé ou s'est redimensionné bien que la fenêtre dispose de plus de place. Regardons maintenant ce qu'il se passe si un élément <code>spacer</code> est ajouté entre la boîte de texte et le bouton 'Rechercher' :</p>
+
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-spacer.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-spacer.xul">Voir</a></p>
+
+<p><img alt="Image:xultu_springs2.png" class="internal" src="/@api/deki/files/1551/=Xultu_springs2.png"></p>
+
+<p>En ajoutant un <code>spacer</code> et en agrandissant la fenêtre, vous voyez que le <code>spacer</code> s'est agrandi de façon à remplir l'espace libre. Les boutons ont été repoussés.</p>
+
+<div class="highlight">
+<h4 id="Notre_exemple_de_recherche_de_fichier" name="Notre_exemple_de_recherche_de_fichier">Notre exemple de recherche de fichier</h4>
+
+<p>Le code pour ajouter un <code>spacer</code> est indiqué juste après. Insérez le juste avant le bouton 'Rechercher' :</p>
+
+<pre class="eval"><span class="highlightred">&lt;spacer flex="1"/&gt;</span>
+
+&lt;button id="find-button" label="Rechercher"/&gt;
+</pre>
+</div>
+
+<h3 id="Plus_d.27informations_sur_la_flexibilit.C3.A9" name="Plus_d.27informations_sur_la_flexibilit.C3.A9">Plus d'informations sur la flexibilité</h3>
+
+<p>XUL place les éléments d'une fenêtre en calculant les largeurs et les hauteurs adéquates des éléments et ajoute ensuite des espacements là où ils sont flexibles. À moins que vous ne spécifiez la largeur et la hauteur d'un élément, la dimension par défaut de cet élément sera déterminée par son contenu. Vous noterez que le bouton 'Annuler' des boîtes de dialogue a toujours adapté sa largeur pour contenir son texte. Si vous créez un bouton avec un très long libellé, la taille par défaut de ce bouton sera assez large pour contenir le libellé en entier. Les autres éléments, tels que la boîte de texte, se sont adaptés de façon adéquate.</p>
+
+<p>L'attribut <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code> est utilisé pour spécifier si un élément peut changer sa dimension pour s'ajuster à sa boîte le contenant (dans notre cas, la fenêtre <code><a href="/fr/docs/Mozilla/Tech/XUL/window" title="window">window</a></code>). Nous avons montré l'application de l'attribut <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code> sur les <code><a href="/fr/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code>, mais il peut s'appliquer à n'importe quel élément. Par exemple, vous pouvez souhaiter avoir plutôt un redimensionnement du bouton 'Rechercher' :</p>
+
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-spacer2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-spacer2.xul">Voir</a></p>
+
+<p><img alt="Image:xultu_springs3.png" class="internal" src="/@api/deki/files/1552/=Xultu_springs3.png"></p>
+
+<p>Comme vous pouvez voir sur l'image, en plaçant un attribut <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code> sur le bouton 'Rechercher', celui-ci s'agrandit en même temps que la fenêtre. Un <code><a href="/fr/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code> n'a rien de spécial. Il peut être considéré comme un bouton invisible. Il fonctionne de la même manière qu'un bouton, excepté qu'il ne se dessine pas à l'écran.</p>
+
+<p>Vous aurez remarqué quelque chose sur l'image ci-dessus. Il n'y a pas que le bouton 'Rechercher' qui s'agrandit mais un espacement est également apparu entre le texte à gauche et le bouton. Bien entendu, il s'agit du <code><a href="/fr/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code> que nous avons placé tout à l'heure. Il s'est redimensionné de lui même également. Si vous regardez suffisamment de près, vous devriez remarquer que ce changement de taille a été partagé en part égale entre le <code>spacer</code> et le bouton. Le <code>spacer</code> a reçu la moitié de l'espace libre et le bouton a reçu l'autre moitié.</p>
+
+<p>La raison de ce comportement est que le <code><a href="/fr/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code> et le bouton ont chacun un attribut <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code>. Parce qu'ils sont flexibles, le <code>spacer</code> et le bouton se redimensionnent équitablement.</p>
+
+<p>Comment faire si vous voulez qu'un élément s'agrandisse deux fois plus qu'un autre ? Vous pouvez choisir un nombre plus grand pour la valeur de l'attribut <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code>. Les valeurs de l'attribut <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code> sont des ratios. Si un élément a un <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code> de '1' et un second un <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code> de '2', le second s'agrandira du du double par rapport au premier. En effet, un <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code> de '2' signifie que cet élément a une flexibilité de deux fois celle d'un élément de <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code> de '1'.</p>
+
+<p>L'attribut <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code> ne sert pas à définir une taille. Il spécifie au contraire comment se répartissent les espaces vides entre les différents éléments fils d'une boîte. Nous aborderons les boîtes dans le prochain chapitre. Dès lors que les dimensions par défaut des éléments fils d'une boîte sont déterminées, les valeurs de flexibilité sont appliquées pour diviser l'espace restant dans la boîte. Par exemple, si la boîte fait 200 pixels de large, qu'elle contient deux boutons flexibles respectivement de 50 pixels et 90 pixels, il restera un espacement de 60 pixels. Si ces deux boutons ont une valeur de <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code> de '1', cet espacement sera divisé en deux moitiés égales de 30 pixels affectées à chacun d'eux. Si le second bouton voit sa valeur de flexibilité augmentée à '2', le premier bouton recevra 20 pixels d'espacement supplémentaire et le second en recevra 40 pixels.</p>
+
+<p>L'attribut <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code> peut être placé sur n'importe quel élément, toutefois il n'a de sens que si cet élément est directement inclus dans une boîte. Donc, même si vous placez un attribut <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code> sur un élément HTML, il restera sans effet cet élément est situé dans un élément n'étant pas une boîte.</p>
+
+<h4 id="Exemples_d.27utilisation_de_flex" name="Exemples_d.27utilisation_de_flex">Exemples d'utilisation de <code>flex</code></h4>
+
+<pre class="eval">Exemple 1:
+  &lt;button label="Chercher" flex="1"/&gt;
+  &lt;button label="Annuler" flex="1"/&gt;
+
+Exemple 2:
+  &lt;button label="Chercher" flex="1"/&gt;
+  &lt;button label="Annuler" flex="10"/&gt;
+
+Exemple 3:
+  &lt;button label="Chercher" flex="2"/&gt;
+  &lt;button label="Remplacer"/&gt;
+  &lt;button label="Annuler" flex="4"/&gt;
+
+Exemple 4:
+  &lt;button label="Chercher" flex="2"/&gt;
+  &lt;button label="Remplacer" flex="2"/&gt;
+  &lt;button label="Annuler" flex="3"/&gt;
+
+Exemple 5:
+  &lt;html:div&gt;
+    &lt;button label="Chercher" flex="2"/&gt;
+    &lt;button label="Remplacer" flex="2"/&gt;
+  &lt;/html:div&gt;
+
+Exemple 6:
+  &lt;button label="Chercher" flex="145"/&gt;
+  &lt;button label="Remplacer" flex="145"/&gt;
+</pre>
+
+<dl>
+ <dt>Exemple 1 </dt>
+ <dd>dans ce cas, la flexibilité est divisée en part égale pour les deux boutons. Leurs tailles changeront en proportion égale.</dd>
+ <dt>Exemple 2 </dt>
+ <dd>ici, les deux boutons sont flexibles, mais le bouton Chercher sera dix fois plus petit que le bouton Annuler qui a une valeur <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code> dix fois plus importante que celle du bouton Chercher. L'espace restant est divisé en une part pour le bouton Chercher et 10 parts pour le bouton Annuler.</dd>
+ <dt>Exemple 3 </dt>
+ <dd>seuls deux boutons sont flexibles ici. Le bouton Remplacer ne changera jamais sa taille mais les deux autres le pourront. Le bouton Annuler aura toujours une taille du double du bouton Chercher parce qu'il a une valeur de <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code> du double.</dd>
+ <dt>Exemple 4 </dt>
+ <dd>dans ce cas, les trois boutons sont flexibles. Les boutons Chercher et Remplacer auront exactement la même taille mais le bouton Annuler sera un peu plus large (50% plus large pour être exact).</dd>
+ <dt>Exemple 5 </dt>
+ <dd>ici, les deux boutons sont placés dans une balise <code>div</code>. La flexibilité perd toute signification puisque les boutons ne sont pas directement dans une boîte. L'effet serait le même si les attributs <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code> étaient enlevés.</dd>
+ <dt>Exemple 6 </dt>
+ <dd>Comme les valeurs de <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code> sont identiques, les deux boutons auront la même taille. Cela fonctionne aussi bien que si vous aviez mis une valeur de '1' au lieu de '145'. Il est recommandé de mettre les valeurs les plus basses pour une meilleure lecture.</dd>
+</dl>
+
+<div class="note">Notez que d'autres facteurs tels que les libellés des boutons et les tailles minimales des boutons peuvent affecter les dimensions réelles des boutons. Par exemple, un bouton ne peut pas être réduit au delà d'une taille nécessaire pour y placer son libellé.</div>
+
+<p>Spécifier une valeur de '0' a le même effet que si vous enleviez l'attribut <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code> en entier. L'élément perd toute flexibilité. Vous verrez parfois des valeurs de <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code> avec un pourcentage. Il n'y a aucune signification spéciale et le signe pourcentage est traité comme s'il n'existait pas.</p>
+
+<p>Vous avez dû remarquer que si vous redimensionnez verticalement la boîte de dialogue « Recherche de fichiers », les boutons se redimensionnent également en hauteur pour s'ajuster à la hauteur de la fenêtre. Ceci s'explique par le fait que les boutons ont une valeur de <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code> verticale implicite donnée par la fenêtre. Dans une prochaine section, nous expliquerons comment changer ce comportement.</p>
+
+<hr>
+<p>Nous allons maintenant apprendre des nouvelles caractéristiques sur les boutons.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Ajout_d'éléments_HTML" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Plus_de_caractéristiques_sur_les_boutons">Suivant  »</a></p>
+</div>
+
+<p><span class="comment">Interwiki</span></p>

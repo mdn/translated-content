@@ -1,0 +1,15 @@
+---
+title: Finding the code to modify
+slug: Creating_a_Mozilla_Extension/Finding_the_code_to_modify
+tags:
+  - Add-ons
+  - Extensions
+translation_of: Archive/Mozilla/Creating_a_Mozilla_extension/Finding_the_code_to_modify
+---
+<p>書き換えるべきファイルが分かったので、次はそのファイルから書き換えるべきコードを見つけます。これも <a href="ja/DOM_Inspector">DOM Inspector</a> で簡単にできます。DOM Inspector の左側の「Document - DOM Nodes」ペインが、ブラウザウィンドウの XUL ファイルのツリー構造を表示しています。ツリーのノードを選択すると、ブラウザウィンドウの対応する部分の周りで、赤いボーダーが数秒間点滅します。</p>
+<p>下にスクロールして、ツリーの <code><a href="ja/XUL/statusbar">statusbar</a></code> ノードを選択します。ブラウザウィンドウの下のステータスバーの周りが赤く点滅するのに注目してください。DOM Inspector の <code>statusbar</code> ノードの隣のプラス記号をクリックし、出てきた <code><a href="ja/XUL/statusbarpanel">statusbarpanel</a></code> ノードをひとつずつ選択していきます。ステータスバーの別々の箇所が赤く点滅するのに注目してください。</p>
+<p><code>navigator.xul</code> ファイルをテキストエディタで開き、<code>statusbar</code> 要素を検索してください。我々が作る拡張機能の UI を追加するのはその中です。</p>
+
+<div><div style="text-align: right;" class="prevnext">
+    <p><a style="float: left;" href="/ja/docs/Creating_a_Mozilla_Extension:Finding_the_file_to_modify">« 前のページ</a><a href="/ja/docs/Creating_a_Mozilla_Extension:Adding_the_structure">次のページ  »</a></p>
+</div></div>

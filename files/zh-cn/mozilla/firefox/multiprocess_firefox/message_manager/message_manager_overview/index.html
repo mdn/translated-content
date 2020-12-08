@@ -1,0 +1,442 @@
+---
+title: 消息管理器概述
+slug: Mozilla/Firefox/Multiprocess_Firefox/Message_Manager/Message_manager_overview
+translation_of: Mozilla/Firefox/Multiprocess_Firefox/Message_Manager/Message_manager_overview
+---
+<div class="summary">
+<p>在多进程 Firefox 中有两个进程：</p>
+
+<ul>
+ <li>chrome 进程，也称父进程，运行着浏览器 UI 界面 (chrome) 的代码和扩展安装的代码。</li>
+ <li>内容进程，也称子进程，运行着所有网页内容。在未来的 Firefox 版本中，不同的标签页可能运行在不同的进程中，但截至目前，所有内容标签页共享使用同一个内容进程。</li>
+</ul>
+
+<p>消息管理器的设计目的是使运行在一个进程中的 chrome 特权的 JavaScript 代码能够与不同进程中的 chrome 特权的 JavaScript 代码通信。</p>
+
+<p>本文介绍了几种类型的消息管理器，如何访问它们，以及在一个较高层面你可以使用什么。</p>
+</div>
+
+<p>在顶层，有两种不同类型的消息管理器：</p>
+
+<ul>
+ <li><em>框架消息管理器</em>：这些使 chrome 进程的代码能够加载脚本到内容进程中的浏览器框架（基本上，就是指一个浏览器标签页）。这些脚本被称为框架脚本，顾名思义，它们限定在特定的浏览器框架中。如果 chrome 代码想要在内容进程中运行可以方便访问网页内容的代码，通常就是使用消息管理器的时候了。</li>
+ <li><em>进程消息管理器</em>：这些对应着进程边界，使运行在父 (chrome) 进程中的代码能够与子 (内容) 进程中的代码通信。从 Firefox 38 起，这也使运行在父进程中的代码能够加载进程脚本到子进程。这些类似框架脚本，除了它们是全局访问子进程。进程脚本最有用的时候是进程想要只在内容进程中运行某些代码，来访问某些全局服务：例如，注册一个 <a href="/en/docs/Observer_Notifications">observer </a>或者一个 <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentPolicy">内容策略</a>。</li>
+</ul>
+
+<h2 id="框架消息管理器">框架消息管理器</h2>
+
+<p>在多进程 Firefox 中，当 chrome 代码需要与网页内容交互时，它需要：</p>
+
+<ul>
+ <li>将需要直接访问内容的脚本代码放到一个单独的脚本，它被称为“框架脚本”。</li>
+ <li>使用框架消息管理器来加载这些框架脚本到内容进程</li>
+ <li>使用框架消息管理器 API 来与框架脚本通信</li>
+</ul>
+
+<div class="note">
+<p>Some older articles on multiprocess Firefox and the message manager might refer to "content scripts" instead of "frame scripts", but this usage is deprecated because the Add-on SDK uses "content script" to refer to a <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Guides/Content_Scripts">similar but different kind of script</a>.</p>
+</div>
+
+<p>因此从根本上，框架消息管理器使 chrome 代码能够：</p>
+
+<ul>
+ <li>加载一个脚本到一个内容进程中的框架（基本上，就是指一个浏览器标签页）。这些脚本被称为“框架脚本”。</li>
+ <li>使用消息传递 API 与框架脚本通信</li>
+</ul>
+
+<p>有多种类型的框架消息管理器，如图所示：</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10795/frame-message-managers.png" style="display: block; height: 596px; margin-left: auto; margin-right: auto; width: 737px;"></p>
+
+<p>This diagram shows the setup when there are 2 browser windows open, one with 2 tabs open and one with 1 tab open.</p>
+
+<h3 id="Chrome_进程">Chrome 进程</h3>
+
+<p>In the chrome process, there's a hierarchy of frame message managers: the global frame message manager, window message managers, and browser message managers.</p>
+
+<h4 id="全局框架消息管理器">全局框架消息管理器</h4>
+
+<table class="fullwidth-table standard-table">
+ <tbody>
+  <tr>
+   <td style="width: 20%;">Description</td>
+   <td>
+    <p>There's a single <em>global frame message manager</em> in the chrome process.</p>
+
+    <p>This operates on all frames, in all content tabs. If you load a frame script using the global frame message manager, the script gets loaded separately into every open tab: three times, in the diagram above. Similarly, if you send a message using the global frame message manager, it's received by all content tabs, and is then delivered to any frame scripts that are listening for it.</p>
+
+    <p>Its most important functions and attributes are:</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageBroadcaster#childCount">childCount</a></code> : contains the number of children (typically, browser windows)</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageBroadcaster#getChildAt()">getChildAt()</a></code> : get the child at the given index</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFrameScriptLoader#loadFrameScript()">loadFrameScript()</a></code> : load a frame script into every tab in the browser</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageBroadcaster#broadcastAsyncMessage()">broadcastAsyncMessage()</a></code> : send a message to frame scripts</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageListenerManager#addMessageListener()">addMessageListener()</a></code> : start listening to a specific message from all frame scripts</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageListenerManager#removeMessageListener()">removeMessageListener()</a></code> : stop listening to a specific message</p>
+   </td>
+  </tr>
+  <tr>
+   <td>Interfaces</td>
+   <td>
+    <p><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFrameScriptLoader" title="">nsIFrameScriptLoader</a></code></p>
+
+    <p><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageListenerManager" title="">nsIMessageListenerManager</a></code></p>
+
+    <p><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageBroadcaster" title="">nsIMessageBroadcaster</a></code></p>
+   </td>
+  </tr>
+  <tr>
+   <td>How to access</td>
+   <td>
+    <p>Access it using <code><a href="/en-US/docs/Components.classes">Components.classes</a></code>:</p>
+
+    <pre class="brush: js  language-js">
+// chrome script
+let globalMM = Cc["@mozilla.org/globalmessagemanager;1"]
+  .getService(Ci.nsIMessageListenerManager);</pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="窗口消息管理器">窗口消息管理器</h4>
+
+<table class="fullwidth-table standard-table">
+ <tbody>
+  <tr>
+   <td style="width: 20%;">Description</td>
+   <td>
+    <p>There's a <em>window message manager</em> for every browser window: two, in the diagram above.</p>
+
+    <p>It operates on all content tabs in a given window. If you load a frame script using the window message manager it gets loaded separately into each tab open in that particular window. If you send a message using the window message manager, it gets sent to all content tabs in that window.</p>
+
+    <p>Its most important functions and attributes are:</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageBroadcaster#childCount">childCount</a></code> : contains the number of children (typically, browser tabs)</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageBroadcaster#getChildAt()">getChildAt()</a></code> : get the child at the given index</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFrameScriptLoader#loadFrameScript()">loadFrameScript()</a></code> : load a frame script into every tab in this window</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageBroadcaster#broadcastAsyncMessage()">broadcastAsyncMessage()</a></code> : send a message to all frame scripts in this window</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageListenerManager#addMessageListener()">addMessageListener()</a></code> : start listening to a specific message from frame scripts</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageListenerManager#removeMessageListener()">removeMessageListener()</a></code> : stop listening to a specific message</p>
+   </td>
+  </tr>
+  <tr>
+   <td>Interfaces</td>
+   <td>
+    <p><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFrameScriptLoader" title="">nsIFrameScriptLoader</a></code></p>
+
+    <p><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageListenerManager" title="">nsIMessageListenerManager</a></code></p>
+
+    <p><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageBroadcaster" title="">nsIMessageBroadcaster</a></code></p>
+   </td>
+  </tr>
+  <tr>
+   <td>How to access</td>
+   <td>
+    <p>You can access it as a property of the browser window:</p>
+
+    <pre class="brush: js">
+// chrome script
+let windowMM = window.messageManager;</pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="浏览器消息管理器">浏览器消息管理器</h4>
+
+<div class="note">
+<p>Note that in this context, "browser" refers to the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/browser">XUL &lt;browser&gt; object</a>, which is a frame that hosts a single Web document. It does not refer to the more general sense of a Web browser.</p>
+</div>
+
+<table class="fullwidth-table standard-table">
+ <tbody>
+  <tr>
+   <td style="width: 20%;">Description</td>
+   <td>
+    <p>Finally, there's a <em>browser message manager</em> for every open content tab: three, in the diagram above.</p>
+
+    <p>This corresponds one-to-one with a content tab. Scripts you load using a browser message manager are loaded only into that content tab, and messages you send are delivered only to that content tab.</p>
+
+    <p>You can mix and match: so for example, you could load a script into every tab using the global message manager, but then send a message to the script instance loaded into a specific tab by using the browser message manager.</p>
+
+    <p>Its most important functions are:</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFrameScriptLoader#loadFrameScript()">loadFrameScript()</a></code> : load a frame script into this browser frame (tab)</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageSender#sendAsyncMessage()">sendAsyncMessage()</a></code> : send a message to all frame scripts in this browser frame</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageListenerManager#addMessageListener()">addMessageListener()</a></code> : start listening to a specific message from frame scripts</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageListenerManager#removeMessageListener()">removeMessageListener()</a></code> : stop listening to a specific message</p>
+   </td>
+  </tr>
+  <tr>
+   <td>Interfaces</td>
+   <td>
+    <p><code>nsIProcessChecker</code></p>
+
+    <p><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFrameScriptLoader">nsIFrameScriptLoader</a></code></p>
+
+    <p><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageListenerManager">nsIMessageListenerManager</a></code></p>
+
+    <p><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageSender">nsIMessageSender</a></code></p>
+   </td>
+  </tr>
+  <tr>
+   <td>How to access</td>
+   <td>
+    <p>The browser message manager can be accessed as a property of the XUL <code>&lt;browser&gt;</code> element:</p>
+
+    <pre class="brush: js">
+// chrome script
+let browserMM = gBrowser.selectedBrowser.messageManager;</pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="内容进程">内容进程</h3>
+
+<h4 id="内容框架消息管理器">内容框架消息管理器</h4>
+
+<table class="fullwidth-table standard-table">
+ <tbody>
+  <tr>
+   <td style="width: 20%;">Description</td>
+   <td>
+    <p>There's a <em>content frame message manager</em> for every open tab. It's the content-side end of frame message manager conversations.</p>
+
+    <p>Frame scripts are loaded into the content frame message manager scope, and messages from chrome message managers end up here.</p>
+
+    <p>The content frame message manager provides the <a href="/en-US/Firefox/Multiprocess_Firefox/Frame_script_environment">global object for frame scripts</a> (but note that there is trickery to ensure that top-level variables defined by frame scripts are not shared).</p>
+
+    <p>Frame scripts can use this object to send messages to the chrome process, and to receive messages from the chrome process.</p>
+
+    <p>Its most important attributes and functions are:</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentFrameMessageManager#content">content</a></code> : access the DOM window hosted by the tab</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentFrameMessageManager#docShell">docShell</a></code> : access the top-level docshell</p>
+
+    <p><code><a href="/en-US/docs/Components_object">Components</a></code> : access privileged objects and APIs</p>
+
+    <p><code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> : listen to DOM events</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageListenerManager#addMessageListener()">addMessageListener()</a></code> : receive messages from the chrome process</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageSender#sendAsyncMessage()">sendAsyncMessage()</a></code> : send asynchronous messages to the chrome process</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISyncMessageSender#sendSyncMessage()">sendSyncMessage()</a></code> : send synchronous messages to the chrome process</p>
+   </td>
+  </tr>
+  <tr>
+   <td>Interfaces</td>
+   <td>
+    <p><code><a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/nsIDOMEventTarget">nsIDOMEventTarget</a></code></p>
+
+    <p><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageListenerManager">nsIMessageListenerManager</a></code></p>
+
+    <p><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageSender">nsIMessageSender</a></code></p>
+
+    <p><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISyncMessageSender">nsISyncMessageSender</a></code></p>
+
+    <p><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentFrameMessageManager">nsIContentFrameMessageManager</a></code></p>
+   </td>
+  </tr>
+  <tr>
+   <td>How to access</td>
+   <td>The content frame message manager is the global object in frame scripts.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="进程消息管理器">进程消息管理器</h2>
+
+<p>Process message managers correspond to process boundaries, and enable code running in different processes to communicate. Multiprocess Firefox has the concept of:</p>
+
+<ul>
+ <li>a "parent process"</li>
+ <li>"child processes" which are processes spawned by the parent process.</li>
+</ul>
+
+<p>For practical purposes, in multiprocess Firefox the parent process is the chrome process, and child processes are content processes. </p>
+
+<p>In each child process, there's a single <em>child process message manager</em> (CPMM). There's also an additional <em>child-in-process message manager</em> (CIPMM) in the parent process.</p>
+
+<p>For each child process message manager, there's a <em>parent process message manager</em> (PPMM) in the parent process.</p>
+
+<p>There's also a single <em>global parent process message manager</em> (GPPMM) in the parent process, that provides access to all the parent process message managers. The diagram below shows the setup that would result from having two child processes:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10799/process-message-managers.png" style="display: block; height: 477px; margin-left: auto; margin-right: auto; width: 477px;"></p>
+
+<p>With the GPPMM, you can broadcast messages to the CIPMM and all CPMMs. With a PPMM, you can send a message to its corresponding CPMM. With a CPMM, you can send messages to the parent process: these messages are received first by the corresponding PPMM, then by the GPPMM.</p>
+
+<p>From Firefox 38 onwards, you can also use a parent process message manager to load a script into a child process. This is the recommended way to load a script that executes just once per child process, which is something you might want to do if you are interacting with some global service (for example, adding listeners to observer notifications or registering a content policy).</p>
+
+<h3 id="父消息管理器">父消息管理器</h3>
+
+<h4 id="全局父进程消息管理器">全局父进程消息管理器</h4>
+
+<table class="fullwidth-table standard-table">
+ <tbody>
+  <tr>
+   <td style="width: 20%;">Description</td>
+   <td>
+    <p>The global parent process message manager (GPPMM) is global to the parent process.</p>
+
+    <ul>
+     <li>Messages sent using the GPPMM get sent to all CPMMs in all child processes.</li>
+     <li>Process scripts loaded using the GPPMM get loaded in all child processes.</li>
+    </ul>
+
+    <p>Its most important functions and attributes are:</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageBroadcaster#childCount">childCount</a></code> : contains the number of children (child processes, plus the in-content child)</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageBroadcaster#getChildAt()">getChildAt()</a></code> : get the child at the given index</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIProcessScriptLoader#loadProcessScript()">loadProcessScript()</a></code> : load a process script into every content process</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageBroadcaster#broadcastAsyncMessage()">broadcastAsyncMessage()</a></code> : send a message to all process scripts</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageListenerManager#addMessageListener()">addMessageListener()</a></code> : start listening to a specific message from process scripts</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageListenerManager#removeMessageListener()">removeMessageListener()</a></code> : stop listening to a specific message</p>
+   </td>
+  </tr>
+  <tr>
+   <td>Interfaces</td>
+   <td>
+    <p><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIProcessScriptLoader">nsIProcessScriptLoader</a></code></p>
+
+    <p><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageListenerManager" title="">nsIMessageListenerManager</a></code></p>
+
+    <p><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageBroadcaster" title="">nsIMessageBroadcaster</a></code></p>
+   </td>
+  </tr>
+  <tr>
+   <td>How to access</td>
+   <td>
+    <p>You can access the GPPMM with code like this:</p>
+
+    <pre class="brush: js">
+// parent process
+let ppmm = Cc["@mozilla.org/parentprocessmessagemanager;1"]
+           .getService(Ci.nsIMessageBroadcaster);</pre>
+
+    <p>You can also access it as the <code>ppmm</code> property of <a href="/en-US/docs/Mozilla/JavaScript_code_modules/Services.jsm">Services.jsm</a>, if you are in the parent process.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="父进程消息管理器">父进程消息管理器</h4>
+
+<table class="fullwidth-table standard-table">
+ <tbody>
+  <tr>
+   <td style="width: 20%;">Description</td>
+   <td>
+    <p>There's one parent process message manager (PPMM) in the parent process for every child process, and its API is oriented to that one child process.</p>
+
+    <ul>
+     <li>Messages sent using the PPMM are received only by the corresponding CPMM</li>
+     <li>Scripts loaded using the PPMM are loaded only into the corresponding child process.</li>
+    </ul>
+
+    <p>Its most important functions are:</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIProcessScriptLoader#loadProcessScript()">loadProcessScript()</a></code> : load a process script into the content process</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageBroadcaster#broadcastAsyncMessage()">broadcastAsyncMessage()</a></code> : send a message to process scripts</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageListenerManager#addMessageListener()">addMessageListener()</a></code> : start listening to a specific message from process scripts</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageListenerManager#removeMessageListener()">removeMessageListener()</a></code> : stop listening to a specific message</p>
+   </td>
+  </tr>
+  <tr>
+   <td>Interfaces</td>
+   <td>
+    <p><code>nsIProcessChecker</code></p>
+
+    <p><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIProcessScriptLoader">nsIProcessScriptLoader</a></code></p>
+
+    <p><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageListenerManager">nsIMessageListenerManager</a></code></p>
+
+    <p><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageSender">nsIMessageSender</a></code></p>
+   </td>
+  </tr>
+  <tr>
+   <td>How to access</td>
+   <td>
+    <p>You can access a PPMM using the <code>getChildAt()</code> function in the GPPMM:</p>
+
+    <pre class="brush: js">
+// parent process
+let ppmm = Services.ppmm.getChildAt(1);</pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="子进程">子进程</h3>
+
+<h4 id="子进程消息管理器">子进程消息管理器</h4>
+
+<table class="fullwidth-table standard-table">
+ <tbody>
+  <tr>
+   <td style="width: 20%;">Description</td>
+   <td>
+    <p>There's one child process message manager (CPMM) in each child process. Messages sent using the CPMM are sent to the corresponding PPMM and are also relayed to the GPPMM.</p>
+
+    <p>Its most important attributes and functions are:</p>
+
+    <p><code><a href="/en-US/docs/Components_object">Components</a></code> : access privileged objects and APIs</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageListenerManager#addMessageListener()">addMessageListener()</a></code> : receive messages from the parent process</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageSender#sendAsyncMessage()">sendAsyncMessage()</a></code> : send asynchronous messages to the parent process</p>
+
+    <p><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISyncMessageSender#sendSyncMessage()">sendSyncMessage()</a></code> : send synchronous messages to the parent process</p>
+   </td>
+  </tr>
+  <tr>
+   <td>Interfaces</td>
+   <td>
+    <p><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageListenerManager">nsIMessageListenerManager</a></code></p>
+
+    <p><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageSender">nsIMessageSender</a></code></p>
+
+    <p><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISyncMessageSender">nsISyncMessageSender</a></code></p>
+
+    <p><code>nsIContentProcessMessageManager</code></p>
+   </td>
+  </tr>
+  <tr>
+   <td>How to access</td>
+   <td>
+    <p>Code running in a child process can access the CPMM with code like this:</p>
+
+    <pre class="brush: js">
+// child process script
+let cpmm = Cc["@mozilla.org/childprocessmessagemanager;1"]
+           .getService(Ci.nsISyncMessageSender);</pre>
+
+    <p>You can also access it as the <code>cpmm</code> property of <a href="/en-US/docs/Mozilla/JavaScript_code_modules/Services.jsm">Services.jsm</a>, if you are in the child process.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>

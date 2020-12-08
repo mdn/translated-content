@@ -1,0 +1,73 @@
+---
+title: Functions
+slug: Mozilla/Projects/SpiderMonkey/Internals/Functions
+translation_of: Mozilla/Projects/SpiderMonkey/Internals/Functions
+---
+<div>{{SpiderMonkeySidebar("Internals")}}</div>
+
+<p>There are several flavors of JavaScript function. All are <code>JSObject</code>s of the same class, <code>js_FunctionClass</code>.</p>
+
+<p>这里有些Javscript函数，它们属于JSObjects</p>
+
+<p>(But note that objects of other classes can be callable and can even have <code>typeof obj == "function"</code>.)</p>
+
+<p>（也存在其他可被Call的对象）</p>
+
+<h2 id="Script_functions">Script functions</h2>
+
+<p>Functions written in JavaScript and compiled to bytecode. There are four variations that affect how NameExpressions are evaluated. (NameExpressions are basic expressions like <code>String</code> and <code>x</code> that would eat up a huge amount of run time if the engine weren't smart enough to avoid symbol table lookups.)</p>
+
+<p><strong>General closures</strong> are the base case. When the function object is created, its parent is set to the first object on the scope chain. When a name is evaluated that doesn't refer to a local variable, the interpreter consults the scope chain to find the variable. When <code>with</code> or <code>eval</code> are used, we have to do this for correctness.</p>
+
+<p>This is slow, not only because walking the scope chain is a drag, but also because we'd rather avoid actually creating the scope chain at all, if possible. General closures force the interpreter to verify the whole scope chain. So we optimize this when we can.</p>
+
+<p>These optimizations depend on being <em>sure</em> that we will never have to walk the scope chain, so <code>with</code> and <code>eval</code> inhibit them all.</p>
+
+<p><strong>Null closures.</strong> If we can prove at compile time that a function does not refer to any locals or arguments of enclosing functions, it is a null closure. Since it will never need to walk the scope chain, its parent is the global object. This is the best case. Barring <code>with</code> and <code>eval</code>, all outermost functions are null closures.</p>
+
+<p><strong>Null closures with upvars.</strong> A nested function is <em>algol-like</em> if it is only ever defined and called, and it isn't accessed in any other way (and it is not a generator-function). Such a function is guaranteed never to be called again after the enclosing function exits. An algol-like function may read the local variables and arguments of its immediate enclosing function from the stack, as if by magic. (<code>JSContext::display</code> caches the enclosing function's stack frame.) If that function is also algol-like, its child can read locals and variables from the next enclosing function, and so on. The compiler detects these cases and makes such functions null closures too.</p>
+
+<p><strong>Flat closures.</strong> Suppose a function reads some variables from enclosing functions but is not algol-like. If the function does not assign to any closed-on vars/args, and it only reads closed-on local variables and arguments that never change value after the function is created, then the function can be implemented as a flat closure. When a flat closure is created, all the closed-on values are copied from the stack into reserved slots of the function object. To evaluate a name, instead of walking the scope chain, we just take the value from the reserved slot. The function object's parent is the global object.</p>
+
+<p><strong>Flat closures </strong><strong>and Null closures have been <span id="summary_alias_container"><span id="short_desc_nonedit_display">removed</span></span></strong>:</p>
+
+<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=730497">https://bugzilla.mozilla.org/show_bug.cgi?id=730497</a></p>
+
+<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=739808">https://bugzilla.mozilla.org/show_bug.cgi?id=739808</a></p>
+
+<h2 id="Name_lookups">Name lookups</h2>
+
+<p>In order of speed, fastest to slowest.</p>
+
+<ol>
+ <li>
+  <p><code><strong>ARG</strong></code><strong> and <code>LOCAL</code> instructions.</strong> If a name definitely refers to an argument or local variable of the immediately enclosing function, it can be accessed using <code>JSOP_{GET,SET,CALL}</code><code>{ARG,LOCAL}</code> instructions. Some of these can even be fused with other operations into combo instructions like <code>JSOP_GETARGPROP</code>, <code>JSOP_FORLOCAL</code>, and <code>JSOP_INCLOCAL</code>. Because arguments and locals can't be deleted, this optimization is available to all functions, and <code>eval</code> does not interfere with it. But a <code>with</code> block can:</p>
+
+  <pre>function f(s) {
+    eval(s);
+    print(s);  // s can be loaded with GETARG
+    with (obj) {
+        print(s);  // no GETARG here; s might refer to obj.s
+    }
+}
+</pre>
+ </li>
+ <li>
+  <p><code><strong>UPVAR</strong></code><strong> instructions.</strong> JSOP_{GET,CALL}UPVAR (in algol-like functions only, I think?) TODO</p>
+ </li>
+ <li>
+  <p><code><strong>DSLOT</strong></code><strong> instructions.</strong> JSOP_{GET,CALL}DSLOT (in flat closures only) TODO</p>
+ </li>
+ <li>
+  <p><code><strong>GVAR</strong></code><strong> instructions.</strong> Outside all functions, if a name definitely refers to a global for which we have seen a var, <code>const</code>, or <code>function</code> declaration, then we emit a JS_DEFVAR instruction in the script prelude and access the global using <code>JSOP_{GET,SET,CALL}GVAR</code>. This is fast if the global either doesn't exist before the script runs (the script creates it) or it's a non-configurable data property (which amounts to the same thing). Otherwise the <code>GVAR</code> instructions are as slow as <code>NAME</code> instructions.</p>
+
+  <p>There are also combo instructions <code>JSOP_{INC,DEC}GVAR</code> and <code>JSOP_GVAR{INC,DEC}</code>.</p>
+ </li>
+ <li>
+  <p><code><strong>NAME</strong></code><strong> instructions.</strong> In the worst case we emit <code>JSOP_{,SET,CALL}NAME</code>. These are totally general. They can still be optimized via the property cache; in the worst case we walk the scope chain.</p>
+
+  <p>In some cases, the JIT can optimize a <code>JSOP_NAME</code> instruction that refers to a variable in an enclosing scope to pull the value directly out of the <code>Call</code> object's <code>dslots</code>.</p>
+
+  <p>For the expression <code>delete name</code> we always emit <code>JSOP_DELNAME</code>. It's not worth optimizing.</p>
+ </li>
+</ol>

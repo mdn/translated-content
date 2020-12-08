@@ -1,0 +1,94 @@
+---
+title: Safely accessing content DOM from chrome
+slug: Safely_accessing_content_DOM_from_chrome
+tags:
+  - Add-ons
+  - DOM
+  - Extensions
+  - Security
+  - XPCNativeWrapper
+translation_of: Mozilla/Tech/Xray_vision
+---
+<p>
+</p><p>{{ 英語版章題("Introduction") }}
+</p>
+<h3 id=".E3.81.AF.E3.81.98.E3.82.81.E3.81.AB" name=".E3.81.AF.E3.81.98.E3.82.81.E3.81.AB"> はじめに </h3>
+<p>信頼できない (ウェブページの) コンテンツの DOM インターフェイスをスクリプトで扱うアプリケーションや拡張機能では、扱う情報が本当に DOM API の物なのか、悪意のあるページで定義された JavaScript のプロパティやゲッタ・セッタ関数ではないかという事に注意する必要があります。Firefox 1.0.3 と Mozilla 1.7.7 では、chrome 権限を持つ JavaScript がオブジェクトの DOM プロパティやメソッドにアクセスする時に、ウェブページによって上書きされた物を取得しないことが保証されており、ウェブページが XUL アプリケーションや拡張機能を欺くのをより難しくしています。<a href="ja/Firefox_1.5">Firefox 1.5</a> ではより一般的な問題解決法がデフォルトで有効になっており、拡張機能は明示的にそれを脱出しなければ危険な DOM アクセスを実行できません。
+</p><p>chrome コードがコンテンツの DOM にアクセスするには、直接のアクセスと、<a href="#About_XPCNativeWrapper">XPCNativeWrapper</a> の明示的な使用の二つしか「正しい」方法はありません。特に、よく使われる <code>__proto__</code> トリックはどのバージョンでも安全ではありません (下記の「やってはいけない事の例」を参照) 。
+</p><p>次の表は二つの｢正しい」方法のセキュリティ上の特性を要約したものです。
+</p>
+<table>
+<tbody><tr>
+<th>
+</th><th> 直接のアクセス
+</th><th> 明示的な <a href="#About_XPCNativeWrapper">XPCNativeWrapper</a>
+</th></tr>
+<tr>
+<th> Firefox 1.0.2 以前
+</th><td> 危険
+</td><td> 安全
+</td></tr>
+<tr>
+<th> Firefox 1.0.3 以降 (1.0.x)
+</th><td> プロパティの存在が保証されていれば安全
+</td><td> 安全
+</td></tr>
+<tr>
+<th> Firefox 1.5
+</th><td> <code>xpcnativewrappers=yes</code> (デフォルト) ならば安全
+</td><td> 安全
+</td></tr></tbody></table>
+<p>{{ 英語版章題("Direct access") }}
+</p>
+<h3 id=".E7.9B.B4.E6.8E.A5.E3.81.AE.E3.82.A2.E3.82.AF.E3.82.BB.E3.82.B9" name=".E7.9B.B4.E6.8E.A5.E3.81.AE.E3.82.A2.E3.82.AF.E3.82.BB.E3.82.B9"> 直接のアクセス </h3>
+<p>Firefox 1.0.3 以降の 1.0.x のバージョンでのみ動くように設計されたスクリプトや、Firefox 1.5 以降で <code>xpcnativewrappers=yes</code> が使われているスクリプトでは単純に次のように呼び出せます。
+</p>
+<pre class="eval">return contentWindow.document.title == contentWindow.getSelection();
+</pre>
+<p>直接のアクセスは、Firefox 1.0.3 (及びそれ以降のバージョン 1.0.x) では、オブジェクトがその IDL 宣言を通じてアクセスされるプロパティやメソッドを持っている事を保証されている限りは安全です。例えば、<code>foo.nodeType</code> は foo が <code>Node</code> であると確信できる限りは安全で、<code>foo.getSelection()</code> は foo が window であると確信できる限りは安全です。これを正確にやるのにはこつが要る場合があります。例えば、<code>nsIDOMNSHTMLDocument</code> は <code>open()</code> メソッドを持っていますが、<code>nsIDOMXULDocument</code> は持っていません。なので、Firefox 1.0.3 で <code>document.open()</code> を使うのは安全ではありません。<code>document</code> は XUL ドキュメントかもしれないからです。このような場合、オブジェクトが特定の IDL インターフェイス (この場合は <code>nsIDOMNSHTMLDocument</code>) をサポートしているかどうかを判断するのに <code>instanceof</code> 演算子が使えます。
+</p><p>Firefox 1.5 では、拡張機能が<a href="ja/Chrome_Registration">マニフェスト</a>で <code>xpcnativewrappers=no</code> フラグを使っていない限りは、直接のアクセスは常に安全です。このフラグがセットされていなければ、暗黙のうちに <a href="#About_XPCNativeWrapper">XPCNativeWrapper</a> が使用されます。
+</p><p>{{ 英語版章題("Explicit use of XPCNativeWrapper") }}
+</p>
+<h3 id="XPCNativeWrapper_.E3.81.AE.E6.98.8E.E7.A4.BA.E7.9A.84.E3.81.AA.E4.BD.BF.E7.94.A8" name="XPCNativeWrapper_.E3.81.AE.E6.98.8E.E7.A4.BA.E7.9A.84.E3.81.AA.E4.BD.BF.E7.94.A8"> <a href="#About_XPCNativeWrapper">XPCNativeWrapper</a> の明示的な使用 </h3>
+<pre class="eval">var winWrapper = new XPCNativeWrapper(contentWindow,
+                                      'document', 'getSelection()');
+var docWrapper = new XPCNativeWrapper(winWrapper.document, 'title');
+return docWrapper.title == winWrapper.getSelection();
+</pre>
+<p>この例では <code>window.document.title</code> を得るのに<em>二つの</em>ラッパを使用している事に注目してください。一つのラッパは <code>window</code> から <code>document</code> プロパティを取得するためのもので、もう一つのラッパは <code>document</code> から <code>title</code> プロパティを取得するためのものです。
+</p><p>XPCNativeWrapper を使えば Firefox の全てのバージョンで安全になりますが、コードが読みずらくなりますし、全ての DOM オブジェクトを注意深くラッピングしなければなりません。
+</p><p>この構文についての更なる情報は、<a class="external" href="http://kb.mozillazine.org/XPCNativeWrapper">MozillaZine ナレッジベースの <code>XPCNativeWrapper</code> の項</a>を参照して下さい。
+</p><p>{{ 英語版章題("About XPCNativeWrapper") }}
+</p>
+<h3 id="XPCNativeWrapper_.E3.81.AB.E3.81.A4.E3.81.84.E3.81.A6" name="XPCNativeWrapper_.E3.81.AB.E3.81.A4.E3.81.84.E3.81.A6"> XPCNativeWrapper について </h3>
+<p><code><a href="ja/XPCNativeWrapper">XPCNativeWrapper</a></code> は特権コードから安全にアクセスするためにオブジェクトをラッピングする手段です。
+</p><p><code>XPCNativeWrapper</code> の使用には二つの方法があります。古い方法はそれを明示的に使用する事です。新しい方法である xpcnativewrappers=yes は、<a href="ja/Firefox_1.5">Firefox 1.5</a> 及び Deer Park のアルファとベータプレリリースから利用できます。
+</p><p>{{ 英語版章題("Examples of what NOT to do") }}
+</p>
+<h3 id=".E3.82.84.E3.81.A3.E3.81.A6.E3.81.AF.E3.81.84.E3.81.91.E3.81.AA.E3.81.84.E4.BA.8B.E3.81.AE.E4.BE.8B" name=".E3.82.84.E3.81.A3.E3.81.A6.E3.81.AF.E3.81.84.E3.81.91.E3.81.AA.E3.81.84.E4.BA.8B.E3.81.AE.E4.BE.8B"> やってはいけない事の例 </h3>
+<p>Firefox 1.0.2 以下での悪い例です。スクリプトが <code>nodeType</code> ゲッタを上書きする事が出来るからです。
+</p>
+<pre class="eval">return targetNode.nodeType == 1;
+</pre>
+<p>Firefox 1.0.2 以下での悪い例です。スクリプトが <code>getSelection</code> を上書きする事が出来るからです。
+</p>
+<pre class="eval">return contentWindow.getSelection();
+</pre>
+<p><em>全ての</em>バージョンでの悪い例です。過去何人かの開発者がこの愚かなトリックを使っていました。古いバージョンではスクリプトが <code>getSelection</code> を上書きする事が出来ます。Firefox 1.0.3 と Mozilla 1.7.7 ではこれはまったく機能しません。
+</p>
+<pre class="eval">return contentWindow.__proto__.getSelection.call(contentWindow);
+</pre>
+<p>Firefox 1.0.2 以下での悪い例です。外側のゲッタは安全ですが、スクリプトが内側のゲッタを上書きできるからです。
+</p>
+<pre class="eval">var winWrapper = new XPCNativeWrapper(contentWindow, 'document');
+// contentWindow.document の取得は安全になったが、
+// 返ってきた document から .title を取得するのは依然として安全ではない
+return winWrapper.document.title;
+</pre>
+<p>Firefox 1.5 より前のバージョンでの悪い例です。スクリプトが DOM の <code>document.open</code> を持たない非 HTML ドキュメントに <code>document.open</code> をセットする事が出来るからです。
+</p>
+<pre class="eval">return contentWindow.document.open();
+</pre>
+<div class="noinclude">
+</div>
+{{ languages( { "en": "en/Safely_accessing_content_DOM_from_chrome", "fr": "fr/Acc\u00e8s_s\u00e9curis\u00e9_au_contenu_DOM_depuis_le_chrome", "pl": "pl/Bezpieczny_dost\u0119p_do_sk\u0142adnik\u00f3w_DOM_z_poziomu_chrome" } ) }}

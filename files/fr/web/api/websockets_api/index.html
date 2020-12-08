@@ -1,0 +1,318 @@
+---
+title: WebSockets
+slug: Web/API/WebSockets_API
+translation_of: Web/API/WebSockets_API
+---
+<p>{{DefaultAPISidebar("Websockets API")}}</p>
+
+<p><strong>WebSocket</strong> est une technologie évoluée qui permet d'ouvrir un canal de communication bidirectionnelle entre un navigateur (côté client) et un serveur. Avec cette API vous pouvez envoyer des messages à un serveur et recevoir ses réponses de manière événementielle sans avoir à aller consulter le serveur pour obtenir une réponse.</p>
+
+<div class="blockIndicator note">
+<p><strong>Note: </strong> Bien que les connexions WebSocket soient fonctionnellement similaires aux sockets standard de type Unix, elles ne sont pas liées.</p>
+</div>
+
+<h2 id="Interfaces">Interfaces  </h2>
+
+<dl>
+ <dt><a href="/fr/docs/WebSockets/Writing_WebSocket_client_applications" title="WebSockets/Writing WebSocket client applications">WebSocket</a></dt>
+ <dd>Interface principale pour se connecter à un serveur WebSocket. Il permet d'envoyer et de recevoir des données sur la connexion.</dd>
+ <dt><a href="/fr/docs/Web/API/CloseEvent">CloseEvent</a></dt>
+ <dd>Evénement envoyé par l'objet WebSocket lors de la fermeture de la connexion.</dd>
+ <dt><a href="/fr/docs/Web/API/MessageEvent">MessageEvent</a></dt>
+ <dd>Evénement envoyé par l'objet WebSocket lorsqu'un message est reçu par le serveur.</dd>
+</dl>
+
+
+
+<h2 id="Outils">Outils</h2>
+
+<div class="cleared row topicpage-table">
+<ul>
+ <li> <a href="https://humblenet.github.io/" style="">HumbleNet</a><span style=""> :Bibliothèque de réseau multiplateforme qui fonctionne dans un navigateur. Il s'agit bibliothèque écrite en C qui enveloppe WebSockets et WebRTC. Elle gomme toutes les différences qui existent entre les navigateurs et les logiciels, ce qui facilite la création d'une fonctionnalité de réseau multi-joueurs pour les jeux, par exemple,  et autres applications.</span></li>
+ <li><a href="https://github.com/uWebSockets/uWebSockets">µWebSockets</a>: Déclinaison plus légère et plus performante de WebSocket et écrite en <a href="https://isocpp.org/">C++11</a> et en <a href="https://nodejs.org/fr/">Node.js</a>.</li>
+ <li><a href="https://github.com/ClusterWS/ClusterWS">ClusteWS</a>: Framework léger, rapide et puissant qui permet de construire des application en <a href="https://nodejs.org/fr/">Node.js</a>.</li>
+ <li><a class="external" href="http://socket.io" title="http://socket.io/">Socket.IO</a>: API WebSocket puissante et multiplateformes en <a class="external" href="http://nodejs.org" title="http://nodejs.org/">Node.js</a>.</li>
+ <li><a href="https://socketcluster.io/#!/">SocketCluster</a>: Framework open source en temps réel en <a class="external" href="http://nodejs.org" title="http://nodejs.org/">Node.js</a>. Il prend en charge à la fois la communication directe client-serveur et la communication de groupe via les pub/sub canaux. Il est conçu pour s'adapter facilement à n'importe quel nombre de processus/hôtes et est idéal pour construire de chat de discution.</li>
+ <li><a class="link-https" href="https://github.com/Worlize/WebSocket-Node" title="https://github.com/Worlize/WebSocket-Node">WebSocket-Node</a>: API WebSocket coté serveur en <a class="external" href="http://nodejs.org" title="http://nodejs.org/">Node.js</a>.</li>
+ <li><a href="https://www.totaljs.com/">Total.js</a>: FrameWork pour web application en <a class="external" href="http://nodejs.org" title="http://nodejs.org/">Node.js</a>.</li>
+ <li><a href="https://www.npmjs.com/package/faye-websocket">Faye</a>: Combine WebSocket(bidirectionnelle) et EventSource(unidirectionnelle) , côté serveur et côté client en <a class="external" href="http://nodejs.org" title="http://nodejs.org/">Node.js</a>.</li>
+ <li><a href="http://signalr.net/">SignalR</a>: SignalR est une nouvelle bibliothèque pour les développeurs <a href="https://dotnet.microsoft.com/apps/aspnet">ASP.NET</a>. Elle simplifie l'ajout des WebSockets dans les applications. SignalR utilise les canaux  de WebSockets lorsqu'elles sont disponibles,  dans le cas contraire elle utilise d'autres technos, sans modifier votre application.</li>
+ <li><a href="https://caddyserver.com/docs/websocket">Caddy</a>: Serveur web capable de créer des WebSockets serveur/proxy(stdin/stdout, echo, cat, ...).</li>
+ <li><a href="https://github.com/websockets/ws">ws</a>: La plus populaire des WebSockets pour client &amp; serveur en <a class="external" href="http://nodejs.org" title="http://nodejs.org/">Node.js</a>.</li>
+ <li><a href="https://github.com/bigstepinc/jsonrpc-bidirectional">jsonrpc-bidirectional</a>: Asynchronous RPC which, on a single connection, may have functions exported on the server and, and the same time, on the client (client may call server, server may also call client).</li>
+ <li><a href="https://github.com/ninenines/cowboy">cowboy</a>: Cowboy est un petit serveur HTTP rapide et moderne pour Erlang/OTP basé sur WebSocket.</li>
+</ul>
+</div>
+
+<h2 id="Ressources_liées">Ressources liées</h2>
+
+<ul>
+ <li>
+  <p><a href="/en-US/docs/AJAX" title="AJAX">AJAX</a></p>
+ </li>
+ <li>
+  <p><a href="/en-US/docs/JavaScript" title="JavaScript">JavaScript</a></p>
+ </li>
+</ul>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>
+  <p><a class="external" href="http://tools.ietf.org/html/rfc6455">RFC 6455 - Le protocole WebSocket</a></p>
+ </li>
+ <li>
+  <p><a class="external" href="http://www.w3.org/TR/websockets/">Les spécifications de l'API WebSocket</a></p>
+ </li>
+ <li>
+  <p><a href="/en-US/docs/Server-sent_events" title="Server-sent_events">Server-Sent Events</a></p>
+ </li>
+</ul>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>
+    <p>Caractéristiques</p>
+   </th>
+   <th>
+    <p>Chrome</p>
+   </th>
+   <th>
+    <p>Firefox (Gecko)</p>
+   </th>
+   <th>
+    <p>Internet Explorer</p>
+   </th>
+   <th>
+    <p>Opera</p>
+   </th>
+   <th>
+    <p>Safari</p>
+   </th>
+  </tr>
+  <tr>
+   <td>
+    <p>Support de la version -76 {{obsolete_inline}}</p>
+   </td>
+   <td>
+    <p>6</p>
+   </td>
+   <td>
+    <p>{{CompatGeckoDesktop("2.0")}}</p>
+   </td>
+   <td>
+    <p>{{CompatNo}}</p>
+   </td>
+   <td>
+    <p>11.00 (désactivé)</p>
+   </td>
+   <td>
+    <p>5.0.1</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>Support de la version du protocole 7 {{obsolete_inline}}</p>
+   </td>
+   <td>
+    <p>{{CompatNo}}</p>
+   </td>
+   <td>
+    <p>{{CompatGeckoDesktop("6.0")}}<br>
+     {{property_prefix("Moz")}}</p>
+   </td>
+   <td>
+    <p>{{CompatNo}}</p>
+   </td>
+   <td>
+    <p>{{CompatNo}}</p>
+   </td>
+   <td>
+    <p>{{CompatNo}}</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>Support de la version du Protocole 10 {{obsolete_inline}}</p>
+   </td>
+   <td>
+    <p>14</p>
+   </td>
+   <td>
+    <p>{{CompatGeckoDesktop("7.0")}}<br>
+     {{property_prefix("Moz")}}</p>
+   </td>
+   <td>
+    <p>HTML5 Labs</p>
+   </td>
+   <td>
+    <p>{{CompatUnknown}}</p>
+   </td>
+   <td>
+    <p>{{CompatUnknown}}</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>Standard - RFC 6455 Support</p>
+   </td>
+   <td>
+    <p>16</p>
+   </td>
+   <td>
+    <p>{{CompatGeckoDesktop("11.0")}}</p>
+   </td>
+   <td>
+    <p>10</p>
+   </td>
+   <td>
+    <p>12.10</p>
+   </td>
+   <td>
+    <p>6.0</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>
+    <p>Caractéristiques</p>
+   </th>
+   <th>
+    <p>Android</p>
+   </th>
+   <th>
+    <p>Firefox Mobile (Gecko)</p>
+   </th>
+   <th>
+    <p>IE Mobile</p>
+   </th>
+   <th>
+    <p>Opera Mobile</p>
+   </th>
+   <th>
+    <p>Safari Mobile</p>
+   </th>
+  </tr>
+  <tr>
+   <td>
+    <p>Support de la version -76 {{obsolete_inline}}</p>
+   </td>
+   <td>
+    <p>{{CompatUnknown}}</p>
+   </td>
+   <td>
+    <p>{{CompatUnknown}}</p>
+   </td>
+   <td>
+    <p>{{CompatUnknown}}</p>
+   </td>
+   <td>
+    <p>{{CompatUnknown}}</p>
+   </td>
+   <td>
+    <p>{{CompatUnknown}}</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>Support de la version du protocole 7 {{obsolete_inline}}</p>
+   </td>
+   <td>
+    <p>{{CompatUnknown}}</p>
+   </td>
+   <td>
+    <p>{{CompatUnknown}}</p>
+   </td>
+   <td>
+    <p>{{CompatUnknown}}</p>
+   </td>
+   <td>
+    <p>{{CompatUnknown}}</p>
+   </td>
+   <td>
+    <p>{{CompatUnknown}}</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>Support de la version du protocole 8 (IETF draft 10) {{obsolete_inline}}</p>
+   </td>
+   <td>
+    <p>{{CompatUnknown}}</p>
+   </td>
+   <td>
+    <p>{{CompatGeckoMobile("7.0")}}</p>
+   </td>
+   <td>
+    <p>{{CompatUnknown}}</p>
+   </td>
+   <td>
+    <p>{{CompatUnknown}}</p>
+   </td>
+   <td>
+    <p>{{CompatUnknown}}</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>Support du Standard - RFC 6455</p>
+   </td>
+   <td>
+    <p>16 (Chrome)</p>
+   </td>
+   <td>
+    <p>{{CompatGeckoDesktop("11.0")}}</p>
+   </td>
+   <td>
+    <p>{{CompatUnknown}}</p>
+   </td>
+   <td>
+    <p>12.10</p>
+   </td>
+   <td>
+    <p>6.0</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h3 id="Notes_pour_Gecko">Notes pour Gecko</h3>
+
+<p>Le support des WebSockets dans Firefox suit les évolutions continuelles de la spécification WebSocket. Firefox 6 met en œuvre la version 7 du protocole sous-jacent, tandis que Firefox 7 mets en œuvre la version 8 (comme spécifié dans le draft 10 de l'IETF). Firefox mobile supporte WebSocket à partir de la version Firefox mobile 7.0.</p>
+
+<h4 id="Gecko_6.0">Gecko 6.0</h4>
+
+<p>Avant Gecko 6.0 {{geckoRelease("6.0")}}, il y avait un objet <code>WebSocket</code>, mal nommé, qui a fait supposer à certains sites que les services<code>WebSocket</code> services n'étaient pas prefixés ; cet objet a été renommé en <code>MozWebSocket</code>.</p>
+
+<h4 id="Gecko_7.0">Gecko 7.0</h4>
+
+<p>À partir de la version 7.0 de Gecko {{geckoRelease("7.0")}}, la préférence <code>network.websocket.max-connections</code> est utilisée pour déterminer le nombre maximum de connexions Websockets qui peuvent être ouvertes en même temps. La valeur par défaut est de 200.</p>
+
+<h4 id="Gecko_8.0">Gecko 8.0</h4>
+
+<p>À partir de la version 8.0 de Gecko {{geckoRelease("8.0")}}, l'extension "deflate-stream" du protocole WebSocket a été désactivée, car elle a été rendu obsolète dans les spécifications. Cela corrige des problèmes d'incompatibilité avec certains sites.</p>
+
+<h4 id="Gecko_11.0">Gecko 11.0</h4>
+
+<p>Avant la version 11.0 de Gecko, la taille maximum des messages entrants et sortants était limitée à 16 Mo. Elle peut maintenant atteindre une taille de 2 Go. Ce maximum est pourtant plus théorique que pratique à cause des limitations de mémoire de certains appareils (principalement avec les appareils mobiles). En pratique, des transferts de cette taille maximum vont échouer sur les appareils qui n'ont pas assez de mémoire.</p>
+
+<p>En outre, le support de l'envoi et la reception d'ArrayBuffer pour les données binaires à été réalisé.</p>
+
+<p>A partir de la veriosn 11.0 de Gecko 11.0, l'API WebSocket n'est plus préfixée.</p>
+
+<div class="warning"><strong>Attention:</strong> WebSocket a été désactivé dans les versions 4 et 5 de Firefox, principalement en raison de la découverte d'un <a class="external" href="http://www.ietf.org/mail-archive/web/hybi/current/msg04744.html" title="http://www.ietf.org/mail-archive/web/hybi/current/msg04744.html">problème de sécurité dans la conception du protocole</a>. Cela a été corrigé dans la version 6 de Firefox qui met en œuvre une nouvelle version du protocole.</div>
+
+<div></div>

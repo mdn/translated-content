@@ -1,0 +1,114 @@
+---
+title: JS CompileScript
+slug: Sandbox/JS_CompileScript
+tags:
+  - JSAPI Reference
+  - SpiderMonkey
+translation_of: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_CompileScript
+---
+<div class="breadcrumbs"><a href="/ja" title="ja">メインページ</a> » <a href="/ja/docs/SpiderMonkey" title="SpiderMonkey">SpiderMonkey</a> »
+ <a href="/ja/docs/SpiderMonkey/JSAPI_Reference" title="JSAPI_Reference">JSAPI リファレンス</a> »
+ <code>JS_CompileScript</code></div>
+
+
+
+<p>スクリプトを実行するためにコンパイルします。 </p>
+
+<h2 id=".E6.A7.8B.E6.96.87" name=".E6.A7.8B.E6.96.87">構文</h2>
+
+<pre class="eval"><a href="/ja/docs/JSScript" title="JSScript">JSScript</a> * <strong>JS_CompileScript</strong>(<a href="/ja/docs/JSRuntime" title="JSRuntime">JSContext</a> *cx, <a href="/ja/docs/JSObject" title="JSObject">JSObject</a> *obj,
+    const char *bytes, size_t length, const char *filename,
+    <a href="/ja/docs/UintN" title="UintN">uintN</a> lineno);
+
+<a href="/ja/docs/JSScript" title="JSScript">JSScript</a> * <strong>JS_CompileUCScript</strong>(<a href="/ja/docs/JSRuntime" title="JSRuntime">JSContext</a> *cx, <a href="/ja/docs/JSObject" title="JSObject">JSObject</a> *obj,
+    const <a href="/ja/docs/Jschar" title="Jschar">jschar</a> *chars, size_t length, const char *filename,
+    <a href="/ja/docs/UintN" title="UintN">uintN</a> lineno);
+</pre>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Name</th>
+   <th>Type</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td><code>cx</code></td>
+   <td><code><a href="/ja/docs/JSRuntime" title="JSRuntime">JSContext</a> *</code></td>
+   <td>ランタイムへのアクセスに用いるJavaScriptコンテキストへのポインタ<span class="comment">Pointer to a JS context from which to derive runtime information.</span> {{ Jsapi-requires-request() }}</td>
+  </tr>
+  <tr>
+   <td><code>obj</code></td>
+   <td><code><a href="/ja/docs/JSObject" title="JSObject">JSObject</a> *</code></td>
+   <td>スクリプトと関連付けるオブジェクト<span class="comment">Object with which the script is associated.</span></td>
+  </tr>
+  <tr>
+   <td><code>source</code></td>
+   <td><code>const char *</code> <em>or</em> <code>const <a href="/ja/docs/Jschar" title="Jschar">jschar</a> *</code></td>
+   <td>コンパイル対象のスクリプト文字列<span class="comment">String containing the script to compile.</span></td>
+  </tr>
+  <tr>
+   <td><code>length</code></td>
+   <td><code>size_t</code></td>
+   <td><code>source</code>の文字列長<span class="comment">The length, in characters, of &lt;code&gt;source&lt;/code&gt;.</span></td>
+  </tr>
+  <tr>
+   <td><code>filename</code></td>
+   <td><code>const char *</code></td>
+   <td>エラーメッセージ出力に利用されるスクリプトのファイル名またはそのURLを示す文字列<span class="comment">Name of file or URL containing the function. Used to report filename or URL in error messages.</span></td>
+  </tr>
+  <tr>
+   <td><code>lineno</code></td>
+   <td><code><a href="/ja/docs/UintN" title="UintN">uintN</a></code></td>
+   <td><code>source</code>の先頭行番号。エラーメッセージとして出力される行数に使われるもので、1以上の値を取ります。<span class="comment">Line number of the first line of &lt;code&gt;source&lt;/code&gt;. Must be greater than zero. Used to report the offending line in the file or URL if an error occurs.</span></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id=".E8.A7.A3.E8.AA.AC" name=".E8.A7.A3.E8.AA.AC">解説</h2>
+
+<p><code>JS_CompileScript</code> は、スクリプト文字列 <code>source</code> をコンパイルする関数です。<code>JS_CompileUCScript</code> はスクリプト文字列にUnicodeを引数に取る関数です。 <span class="comment">&lt;code&gt;JS_CompileScript&lt;/code&gt; compiles a script, &lt;code&gt;source&lt;/code&gt;, for execution. &lt;code&gt;JS_CompileUCScript&lt;/code&gt; is the Unicode version of the function.</span></p>
+
+<p>スクリプトは JavaScript オブジェクト<code>obj</code>と関連付けられます。引数 <code>bytes</code> はスクリプト文字列、<code>length</code> は文字列長をそれぞれ取ります。 <span class="comment">The script is associated with a JS object. &lt;code&gt;bytes&lt;/code&gt; is the string containing the text of the script. &lt;code&gt;length&lt;/code&gt; indicates the size of the text version of the script in bytes.</span></p>
+
+<p><code>filename</code> はスクリプトのファイル名あるいは URL を引数として取ります。ここで指定した情報は、コンパイルエラーが発生したときのエラーメッセージに利用されます。<code>lineno</code> も同様にエラーメッセージとして出力される行番号として利用されます。 スクリプトが巨大なファイルの一部でない場合は、<code>lineno</code> を <code>1</code> に設定すればよいでしょう(基本的にファイルの先頭行は <code>0</code> でなく<code>1</code>で示します)。 <span class="comment">&lt;code&gt;filename&lt;/code&gt; is the name of the file (or URL) containing the script. This information is included in error messages if an error occurs during compilation. Similarly, &lt;code&gt;lineno&lt;/code&gt; is used to report the line number of the script or file where an error occurred during compilation. If the script is not part of a larger document, &lt;code&gt;lineno&lt;/code&gt; should be &lt;code&gt;1&lt;/code&gt; (as the first line of a file is universally considered to be line &lt;code&gt;1&lt;/code&gt;, not line &lt;code&gt;0&lt;/code&gt;).</span></p>
+
+<p>コンパイルが成功したとき、<code>JS_CompileScript</code> および <code>JS_CompileUCScript</code> はコンパイルされたスクリプトへのポインタを返します。失敗したときはエラーメッセージを出力し、<code>NULL</code> を値として返します。 <span class="comment">On success, &lt;code&gt;JS_CompileScript&lt;/code&gt; and &lt;code&gt;JS_CompileUCScript&lt;/code&gt; return a pointer to the newly compiled script. Otherwise, they report an error and return &lt;code&gt;NULL&lt;/code&gt;.</span></p>
+
+<div>{{ Warning('コンパイルによってできた<code>JSScript</code> の中には、コンパイル中に生成された文字列などのオブジェクトが含まれます。これらのオブジェクトは、即座にガベージコレクションされ消去される危険があります。ガベージコレクションから <code>JSObject</code> を保護するために、呼び元は <a href="/ja/docs/JS_NewScriptObject"><code>JS_NewScriptObject</code></a> を使う必要があります。この操作は、<code>JS_Compile*</code>を実行したら、他のJSAPIを呼ぶ前に即座に行わねばなりません。')}}</div>
+
+<p>スクリプト文字列を引数として与えるのではなく、外部ファイルから読み込ませる場合には <a href="/ja/docs/JS_CompileFile" title="JS_CompileFile"><code>JS_CompileFile</code></a> を代わりに用いてください。 <span class="comment">To compile a script from an external file source rather than passing the actual script as an argument, use &lt;code&gt;<a href="/ja/docs/JS_CompileFile">JS_CompileFile</a>&lt;/code&gt; instead of &lt;code&gt;JS_CompileScript&lt;/code&gt;.</span></p>
+
+<h3 id=".E5.88.A9.E7.94.A8.E4.BE.8B" name=".E5.88.A9.E7.94.A8.E4.BE.8B">利用例</h3>
+
+<pre class="eval">/* Sample program - execute a script repeatedly until an error occurs. */
+JSScript *script;
+JSObject *srcobj;
+
+script = <a href="/ja/docs/JS_CompileFile" title="JS_CompileFile">JS_CompileFile</a>(cx, global, filename);
+if (script == NULL)
+    return JS_FALSE;
+
+scrobj = <a href="/ja/docs/JS_NewScriptObject" title="JS_NewScriptObject">JS_NewScriptObject</a>(cx, script);
+if (scrobj == NULL
+    || !<a href="/ja/docs/JS_AddNamedRoot" title="JS_AddNamedRoot">JS_AddNamedRoot</a>(cx, &amp;scrobj, "scrobj"))
+    return JS_FALSE;
+
+for (;;) {
+    jsval result;
+
+    if (!<a href="/ja/docs/JS_ExecuteScript" title="JS_ExecuteScript">JS_ExecuteScript</a>(cx, global, script, &amp;result))
+        break;
+    <a href="/ja/docs/JS_GC" title="JS_GC">JS_GC</a>(cx);
+}
+
+<a href="/ja/docs/JS_RemoveRoot" title="JS_RemoveRoot">JS_RemoveRoot</a>(cx, &amp;scrobj);
+</pre>
+
+<h2 id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE" name=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE">関連項目</h2>
+
+<ul>
+ <li>{{ LXRSearch("ident", "i", "JS_CompileScript") }}</li>
+ <li>{{ LXRSearch("ident", "i", "JS_CompileUCScript") }}</li>
+ <li><a href="/ja/docs/JS_CompileFile" title="JS_CompileFile">JS_CompileFile</a>, <a href="/ja/docs/JS_DecompileScript" title="JS_DecompileScript">JS_DecompileScript</a>, <a href="/ja/docs/JS_DestroyScript" title="JS_DestroyScript">JS_DestroyScript</a>, <a href="/ja/docs/JS_EvaluateScript" title="JS_EvaluateScript">JS_EvaluateScript</a>, <a href="/ja/docs/JS_ExecuteScript" title="JS_ExecuteScript">JS_ExecuteScript</a></li>
+</ul>

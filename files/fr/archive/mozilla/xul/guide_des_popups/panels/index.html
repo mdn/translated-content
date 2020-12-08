@@ -1,0 +1,128 @@
+---
+title: Panneaux (panels)
+slug: Archive/Mozilla/XUL/Guide_des_popups/Panels
+tags:
+  - Guide Popup XUL
+  - XUL
+translation_of: Archive/Mozilla/XUL/PopupGuide/Panels
+---
+<p>Un panneau est une fenêtre contextuelle pouvant gérer n'importe quel type de contenu. On l'utilise notamment comme support d'affichage temporaire pour la sélection ou la saisie de données.</p>
+
+<h2 id="L.27.C3.A9l.C3.A9ment_panel" name="L.27.C3.A9l.C3.A9ment_panel">L'élément panel</h2>
+
+<p>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/panel" title="panel">panel</a></code> sert à créer des panneaux permettant d'afficher une série d'éléments quelconques, placés comme enfants de l'élément "panel". Par exemple, le "panel" suivant affichera une boîte de texte pour entrer un nom. Notez que le panneau n'est pas placé dans un fichier distinct et est placé à l'intérieur d'une autre fenêtre.</p>
+
+<pre class="line-numbers  language-html"><code class="language-html"><span class="prolog token">&lt;?xml-stylesheet href="chrome://global/skin" type="text/css"?&gt;</span>
+<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>window</span> <span class="attr-name token">xmlns</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
+
+<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>button</span> <span class="attr-name token">label</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>Details<span class="punctuation token">"</span></span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>panel<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
+  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>panel</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>search-panel<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
+    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">control</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>name<span class="punctuation token">"</span></span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>Name:<span class="punctuation token">"</span></span><span class="punctuation token">/&gt;</span></span>
+    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>textbox</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>name<span class="punctuation token">"</span></span><span class="punctuation token">/&gt;</span></span>
+  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>panel</span><span class="punctuation token">&gt;</span></span>
+<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>button</span><span class="punctuation token">&gt;</span></span>
+
+<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>window</span><span class="punctuation token">&gt;</span></span></code></pre>
+
+<p>De nombreux panneaux seront associés à un bouton, comme dans cet exemple. Lorsque vous appuyez sur le bouton, le panneau est ouvert. En cliquant à l'extérieur du panneau ou en appuyant sur "Escape" (échappe), le panneau se ferme. Vous pouvez également placer un bouton de fermeture dans le panneau qui le fermera avec un script, si vous le souhaitez. Lorsque vous voulez associer un panneau à un bouton, placez l'élément &lt;panel&gt; directement à l'intérieur de l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/button" title="button">button</a></code> .  Vous devez aussi déterminer un attribut "type" avec la valeur "panel", ou le bouton se comportera comme un bouton régulier.</p>
+
+<p>Le panneau contextuel apparaît par défaut dans le coin en haut à gauche, juste sous le bord inférieur du bouton, comme le ferait un menu. Toutefois, la position peut être modifiée. Pour plus d'informations sur la position du panneau contextuel, voir <a href="https://developer.mozilla.org/en/XUL/PopupGuide/Positioning" title="en/XUL/PopupGuide/Positioning">Positioning Popups</a> (en).</p>
+
+<p>Seuls les boutons (et les boutons de la barre d'outils) ont ce comportement automatique d'ouverture de la fenêtre contextuelle lorsqu'ils sont pressés. Pour d'autres types d'éléments, vous devrez utiliser une technique différente comme dans l'exemple suivant :</p>
+
+<pre class="line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token">label</span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>Search<span class="punctuation token">"</span></span> <span class="attr-name token">popup</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>search-panel<span class="punctuation token">"</span></span><span class="punctuation token">/&gt;</span></span>
+
+<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>panel</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>search-panel<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
+  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">control</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>search<span class="punctuation token">"</span></span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>Terms:<span class="punctuation token">"</span></span><span class="punctuation token">/&gt;</span></span>
+  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>textbox</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>search<span class="punctuation token">"</span></span><span class="punctuation token">/&gt;</span></span>
+<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>panel</span><span class="punctuation token">&gt;</span></span></code></pre>
+
+<p><img alt="Image:Popupguide-panel.png" class="internal" src="https://developer.mozilla.org/@api/deki/files/304/=Popupguide-panel.png"></p>
+
+<p>Pour attacher un panneau à un élément qui n'est pas un bouton, par exemple pour qu'il s'ouvre lors de l'appui sur une étiquette, utilisez l'attribut <code id="a-popup"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/popup">popup</a></code>. Celui-ci doit être défini comme l'id d'un "panel" au sein du même document. Lors d'un clic gauche sur l'élément portant l'attribut <code id="a-popup"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/popup">popup</a></code>, le panneau correspondant s'affichera. Par exemple, pour attacher le panneau contextuel défini plus haut à une étiquette, utilisez le code qui suit :</p>
+
+<pre>&lt;label value="Rechercher" popup="search-panel"/&gt;
+</pre>
+
+<p>Le résultat est un bouton de recherche ouvrant un panneau permettant d'entrer des termes de recherche. Celui-ci apparaîtra avec son coin supérieur gauche à la position de la souris. Dans ce cas, il serait sans doute préférable qu'il apparaisse plutôt en dessous de l'étiquette. L'attribut <code id="a-position"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/position">position</a></code> peut être utilisé afin de contrôler le placement du panneau contextuel. Voici un exemple complet :</p>
+
+<pre>&lt;panel id="search-panel" position="after_start"&gt;
+  &lt;label control="search" value="Termes :"/&gt;
+  &lt;textbox id="search"/&gt;
+&lt;/panel&gt;
+
+&lt;label value="Recherche" popup="search-panel"/&gt;
+</pre>
+
+<p>L'attribut <code id="a-position"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/position">position</a></code> a été ajouté à l'élément "panel" avec la valeur « <code>after_start</code> ». Le résultat en est que le panel n'est plus affiché là où l'on a cliqué, mais le long du bord inférieur de l'étiquette. Pour plus d'informations concernant cet attribut et les autres valeurs possibles, consultez <a href="fr/XUL/Guide_des_popups/Positionnement">Positionnement des popups (en)</a>.</p>
+
+<p>Il est également possible d'ouvrir un panneau comme un menu contextuel à l'aide de l'attribut <code id="a-context"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/context">context</a></code> à la place de l'attribut "popup". Celui-ci fonctionne de la même manière qu'un menu contextuel, à part qu'on utilise un élément "panel" à la place d'un élément "menupopup". Consultez <a href="fr/XUL/Guide_des_popups/Menus_contextuels">Menus contextuels (en)</a> pour plus de détails à ce sujet.</p>
+
+<h2 id="Ouverture_d.27un_panel_par_script" name="Ouverture_d.27un_panel_par_script">Ouverture d'un panneau par script</h2>
+
+<p>Un panneau, comme toutes les fenêtres contextuelles, dispose d'une méthode <span id="m-openPopup"><code><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Méthodes/openPopup">openPopup</a></code></span> pouvant être utilisée pour son ouverture à partir d'un script. Par exemple, le code suivant ouvrirait un panneau sous un bouton :</p>
+
+<pre class="line-numbers  language-html"><code class="language-html">panel.openPopup(button, "after_start", 0, 0, false, false);</code></pre>
+
+<p>De manière similaire, la méthode <span id="m-openPopupAtScreen"><code><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Méthodes/openPopupAtScreen">openPopupAtScreen</a></code></span> ouvrira un panneau à une position précise de l'écran. Pour plus de détails concernant ces deux méthodes, consultez <a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Guide_des_popups/Ouverture_et_fermeture">Ouverture et fermeture de fenêtres contextuelles</a>.</p>
+
+<h2 id="Fermeture_d.27un_panel" name="Fermeture_d.27un_panel">Fermeture d'un panneau</h2>
+
+<p>Un panneau est fermé automatiquement lorsque l'utilisateur clique en dehors de celui-ci. Il est cependant courant d'avoir un élément comme un bouton de fermeture dans le panneau. Par exemple, dans le panneau de recherche présenté plus haut, nous pourrions ajouter un bouton fermant le panneau lorsqu'il est utilisé :</p>
+
+<pre class="line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span><span class="punctuation token">&gt;</span></span><span class="language-javascript script token">
+<span class="keyword token">function</span> <span class="function token">doSearch</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">"search-panel"</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">hidePopup</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span>
+</span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span>
+
+<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>toolbarbutton</span> <span class="attr-name token">label</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>Rechercher<span class="punctuation token">"</span></span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>panel<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
+  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>panel</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>search-panel<span class="punctuation token">"</span></span> <span class="attr-name token">position</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>after_start<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
+    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>textbox</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>search<span class="punctuation token">"</span></span><span class="punctuation token">/&gt;</span></span>
+    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>button</span> <span class="attr-name token">label</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>Rechercher<span class="punctuation token">"</span></span> <span class="attr-name token">oncommand</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>doSearch();<span class="punctuation token">"</span></span><span class="punctuation token">/&gt;</span></span>
+  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>panel</span><span class="punctuation token">&gt;</span></span>
+<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>toolbarbutton</span><span class="punctuation token">&gt;</span></span></code></pre>
+
+<p>Dans cet exemple, la fonction <code>doSearch</code> est appelée lors d'un clic sur le bouton "Rechercher". La fonction identifie le panneau contextuel et appelle sa méthode <span id="m-hidePopup"><code><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Méthodes/hidePopup">hidePopup</a></code></span>. Naturellement, cette fonction devrait également comprendre des instructions pour lancer l'opération de recherche proprement dite.</p>
+
+<h3 id="L.27attribut_noautohide" name="L.27attribut_noautohide">Interdiction de fermeture automatique des panneaux</h3>
+
+<p>Un panneau contextuel est fermé  par un clic de l'utilisateur en-dehors de celui-ci ou l'appui sur la touche Échap. C'est la manière habituelle, pour un utilisateur, d'annuler l'opération. Il peut également être utile de placer un bouton d'annulation ou de fermeture dans le panneau, en particulier si celui-ci est grand et contient un grand nombre de contrôles.</p>
+
+<p>Cependant parfois, vous voudrez peut-être que le panneau reste ouvert même si l'utilisateur clique en dehors de celui-ci. C'est notamment utile pour créer des panneaux d'outils flottants. Pour ce faire, positionnez son attribut <code id="a-noautohide"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/noautohide">noautohide</a></code> sur <code>"true" (vrai)</code>.</p>
+
+<pre>&lt;panel id="search-panel" noautohide="true"&gt;
+  &lt;textbox id="search"/&gt;
+  &lt;button label="Rechercher" oncommand="doSearch();"/&gt;
+  &lt;button label="Annuler" oncommand="this.parentNode.hidePopup();"/&gt;
+&lt;/panel&gt;
+</pre>
+
+<p>Comme le panneau ne peut plus être fermé en cliquant ailleurs, il doit toujours fournir un moyen de le faire. Dans cet exemple, on a ajouté un bouton Annuler.</p>
+
+<h2 id="Le_focus_dans_les_panels" name="Le_focus_dans_les_panels">Focus sur les panneaux</h2>
+
+<p>Les éléments se trouvant dans des panneaux peuvent recevoir le focus de la souris, et l'élément ayant le focus peut changer en appuyant sur la touche Tab. Lors de l'ouverture d'un panneau contextuel, si un élément de la fenêtre principale a le focus, il le perd et reçoit un évènement <code>blur</code>. Bien qu'aucun élément du panneau ne reçoive le focus par défaut, l'utilisateur peut le donner à son premier élément en appuyant sur la touche Tab. Si vous désirez qu'il se trouve sur un élément particulier par défaut, lors de l'ouverture de panneau, modifiez le focus dans le gestionnaire d'évènement <code>popupshown</code>. Par exemple, pour que la boîte de texte de l'exemple précédent reçoive le focus initial :</p>
+
+<pre>&lt;panel id="search-panel" onpopupshown="document.getElementById('search').focus()"&gt;
+</pre>
+
+<p>Pour désactiver l'ajustement du focus à l'ouverture d'un panneau, définissez l'attribut <code id="a-noautofocus"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/noautofocus">noautofocus</a></code> à <code>true</code> :</p>
+
+<pre>&lt;panel noautofocus="true"&gt;
+</pre>
+
+<p>Dans ce cas, le focus restera sur l'élément de la fenêtre principale qui avait le focus à l'ouverture du panneau. Notez que cela maintient également le focus à l'intérieur du panneau quand celui-ci est fermé.</p>
+
+<p>Lors de la fermeture d'un panneau, l'élément au sein de celui-ci, qui avait éventuellement le focus, le perd. L'élément qui avait le focus avant l'ouverture de la fenêtre contextuelle, quel qu'il soit, le récupère. Vous pouvez empêcher la suppression du focus avec l'attribut <code id="a-noautofocus"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/noautofocus">noautofocus</a></code>  défini à true. De plus, l'attribut XULAttr("norestorefocus") }}  positionné sur true empêche le retour du focus sur l'élément qui l'avait avant. Normalement, seul ce dernier sera défini si besoin.</p>
+
+<p>Ce processus de perte du focus à l'ouverture et à la fermeture d'un popup se déroule après le déclenchement des évènements <code>popupshowing</code> ou <code>popuphiding</code>, ce qui signifie que si ces évènements sont annulés, le focus ne sera pas perdu.</p>
+
+<div class="headingWithIndicator">
+    <h1 id="Letting_panels_be_dragged_by_grabbing_the_background">Letting panels be dragged by grabbing the background</h1>
+    <span class="indicatorInHeadline minVer geckoMinVerMethod">Requires Gecko 7.0(Firefox 7.0 / Thunderbird 7.0 / SeaMonkey 2.4)</span>
+</div> (faire glisser les panneaux sur l'arrière-plan)
+
+<p>À partir de Gecko 7.0 (Firefox 7.0 / Thunderbird 7.0 / SeaMonkey 2.4), vous pouvez utiliser l'attribut <code id="a-backdrag"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/backdrag">backdrag</a></code> pour créer des panneaux que l'utilisateur peut faire glisser (cliquer/glisser) n'importe où sur l'arrière-plan. C'est un simple attribut  booléen, avec lequel vous pouvez activer cette fonctionnalité comme ceci :</p>
+
+<pre class="line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token">panel</span> <span class="attr-name token">backdrag</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>true<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span></code></pre>

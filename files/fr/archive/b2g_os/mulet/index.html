@@ -1,0 +1,122 @@
+---
+title: Mulet
+slug: Archive/B2G_OS/Mulet
+tags:
+  - B2G Mulet
+  - B2G OS
+  - Essayez b2g os
+  - Mulet
+translation_of: Archive/B2G_OS/Mulet
+---
+<p class="summary">En suivant ce guide, vous pourrez exécuter Gaia dans une version spéciale de Firefox appelée Firefox Mulet. Cela apporte comme avantages le fait d'avoir un cycle de développement rapide, ainsi que des outils de développement web standards et des débogueurs pour travailler avec. Tout d'abord, vous devez avoir cloné le dépôt <a class="external external-icon" href="https://github.com/mozilla-b2g/gaia">Gaia</a> sur votre machine et construit votre propre profil. Ensuite, il vous faut installer mulet et le lancer, en lui précisant votre profil Gaia comme profil à utiliser.</p>
+
+<blockquote>
+<p>Le <strong>mulet</strong> et la <strong>mule</strong> sont des <a href="https://fr.wikipedia.org/wiki/Hybride" title="Hybride">hybrides</a> statistiquement stériles de la famille des <a class="mw-redirect" href="https://fr.wikipedia.org/wiki/%C3%89quid%C3%A9" title="Équidé">équidés</a>, engendrés par un <a href="https://fr.wikipedia.org/wiki/%C3%82ne_commun" title="Âne commun">âne</a> (<em>Equus asinus</em>) et une <a href="https://fr.wikipedia.org/wiki/Jument" title="Jument">jument</a> (<em>Equus caballus</em>) - Wikipedia</p>
+</blockquote>
+
+<div class="note">
+<p>D'après <a href="https://wiki.mozilla.org/Mulet">le wiki</a>, "Mulet" vient du mot français désignant une "mule" et s'écrit avec un seul l !</p>
+</div>
+
+<h2 id="Où_puis-je_l'obtenir">Où puis-je l'obtenir ?</h2>
+
+<p>Comme tout autre programme, Mulet peut être lancé à partir d'un paquet précompilé : il s'agit de la méthode la plus simple pour les nouveaux utilisateurs. Ceux plus expérimentés, évidemment, peuvent toujours compiler Mulet eux-mêmes pour tester de nouvelles fonctionnalités et corrections de bogues. Quelle que soit la méthode que vous allez suivre, <u><strong>souvenez-vous que vous ne pourrez pas lancer Mulet sans un profil Gaia</strong></u>.</p>
+
+<h2 id="Exécutable_seul">Exécutable seul</h2>
+
+<p>À l'origine, ce paquet était distribué via <a href="https://discourse.mozilla-community.org/t/mulet-gaia-for-linux/10375">Discourse</a>. C'est la façon la plus rapide de lancer Mulet pour les personnes qui ne le connaissent pas et/ou qui ne disposent pas d'un accès Internet haut débit pour cloner la totalité du dépôt Gaia. <strong>Le paquet contient Mulet et un profil Gaia précompilé</strong>, les utilisateurs n'ont pas besoin de compiler quoi que ce soit.</p>
+
+<ol>
+ <li>Téléchargez l'<a href="https://drive.google.com/file/d/0BwEhwFrol52LQmowQTR1V3gxWFk">Archive (94 Mb)</a></li>
+ <li>Décompressez l'archive</li>
+ <li><code>Cd</code> vers le dossier extrait</li>
+ <li>Attribuez des permissions au fichier <code>start.sh</code> dans un terminal avec <code>chmod +x</code> ou en faisant un clic droit sur le fichier &gt; permissions &gt; cochez Autoriser l'exécution du fichier comme un programme.</li>
+ <li>Lancez à présent le fichier avec <code>./start.sh</code> ou en double-cliquant dessus</li>
+</ol>
+
+<div class="note">
+<p><strong>Note :</strong> L'exécutable a été testé sur <strong>Ubuntu 16.04 64 bits</strong> et <strong>Arch Linux</strong> mais devrait sans doute tourner sur toutes les distributions linux.</p>
+</div>
+
+<ol>
+</ol>
+
+<div class="warning">
+<p>Si vous utilisez <strong>Gnome 3</strong>, le script ne voudra sans doute pas se lancer depuis Fichiers. Pour résoudre ce problème, ouvrez les Préférences. Sélectionnez l'onglet 'Comportement'. Sous "Fichiers texte exécutables", choisissez "Demander à chaque fois" ou "Lancer les fichiers textes exécutables lorsqu'ils sont ouverts". Fermez la fenêtre.</p>
+</div>
+
+<h2 id="Binaires_précompilés">Binaires précompilés</h2>
+
+<h3 id="Mulet">Mulet</h3>
+
+<p>Vous pouvez télécharger des binaires précompilés pour Linux depuis TaskCluster de Mozilla. Pour les récupérer,</p>
+
+<ol>
+ <li>Rendez-vous sur <a href="https://tools.taskcluster.net/index/artifacts/#gecko.v1.mozilla-central.latest.linux.mulet/gecko.v1.mozilla-central.latest.linux.mulet.opt">https://tools.taskcluster.net/index/artifacts/#gecko.v1.mozilla-central.latest.linux.mulet/gecko.v1.mozilla-central.latest.linux.mulet.opt</a></li>
+ <li>Recherchez <span><span>"<code>public/build/target.tar.bz2</code>" dans la liste d'artefacts sur la droite</span></span></li>
+ <li><span><span>Téléchargez puis décompressez l'archive quelque part</span></span></li>
+ <li>Le binaire "Firefox" qui se trouve dans ce dossier peut faire tourner mulet. Si vous le souhaitez, vous pouvez ajouter dans votre path un lien symbolique qui pointe dessus.</li>
+</ol>
+
+<h3 id="Gaia">Gaia</h3>
+
+<p>Pour exécuter Mulet il faut une copie de Gaia. Normalement, elle est récupérée à partir de <a href="https://github.com/mozilla-b2g/gaia/">Github</a> :</p>
+
+<pre>$ git clone https://github.com/mozilla-b2g/gaia.git</pre>
+
+<p>Ensuite, vous devez construire un profil Gaia :</p>
+
+<pre>$ cd ~/gaia
+$ make
+</pre>
+
+<h3 id="Exécution">Exécution</h3>
+
+<p>Enfin, vous pouvez lancer Mulet :</p>
+
+<pre>$ chemin/vers/mulet/firefox-bin --no-remote --devtools --profile ./profile
+</pre>
+
+<h2 id="sect1"> </h2>
+
+<h2 id="Windows_et_Mac_OS">Windows et Mac OS</h2>
+
+<h3 id="Mulet_2">Mulet</h3>
+
+<p>Les versions Windows et Mac sont disponibles sur <a class="external external-icon" href="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-central/">Mozilla Central</a>. Les builds Mulet sont les paquets dont les noms commencent par <strong><code>firefox-*</code></strong>, par exemple <code>firefox-36.0a1.en-US.mac64.dmg.</code></p>
+
+<p>Une fois téléchargé, installez le build de Mulet dans un endroit sûr afin de ne pas écraser votre version de Firefox Nightly normale. Par exemple, sur Mac OS X, créez un nouveau dossier dans Applications appelé "mulet" puis faîtes-le glisser dedans.</p>
+
+<p>À présent, lancez la version de Mulet en ligne de commande, en lui précisant votre profil Gaia comme profil à utiliser lors de l'ouverture (indiqué par l'option <code>-profile</code>.) Par exemple, il est possible de lancer quelque chose de ce genre depuis votre dossier Applications sur Mac OS X si vous l'avez installé à cet endroit :</p>
+
+<pre class="brush: bash line-numbers  language-bash"><code class="language-bash">./firefox/Contents/MacOS/firefox-bin -no-remote -profile /Users/my-home</code></pre>
+
+<h2 id="sect2"> </h2>
+
+<h2 id="Utilisation_de_Mulet"><strong>Utilisation de Mulet</strong></h2>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13767/Screenshot%20from%202016-08-19%2020-08-44.png" style="height: 569px; width: 1086px;"></p>
+
+<p>Sur l'affichage, vous obtenez la <a href="https://developer.mozilla.org/fr/docs/Outils/Outils_boite_à_outils">Boîte à outils</a> standard de Firefox pour le débogage de vos applications, plus un émulateur B2G OS tournant dans la partie gauche ainsi qu'un certain nombre d'autres outils utiles relatifs à Gaia. Les contrôles au-dessus de l'émulateur vous permettent de :</p>
+
+<ul>
+ <li>Choisir différentes tailles d'écran pour l'émulateur (à la base, il s'agit d'une <a href="https://developer.mozilla.org/fr/docs/Outils/Vue_adaptative">Vue adaptative</a>).</li>
+ <li>Faire pivoter l'écran de l'émulateur.</li>
+ <li>Activer ou désactiver la simulation des événements tactiles (si désactivée, vous ne pouvez pas utiliser la souris pour faire glisser l'interface et les applications ouvertes.)</li>
+ <li>Prendre des captures d'écran.</li>
+</ul>
+
+<h2 id="Références_supplémentaires">Références supplémentaires</h2>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/fr/docs/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia#Utiliser_Gaia_dans_Firefox_Mulet">Utilisation de Gaia dans Firefox Mulet</a></li>
+ <li><a href="https://wiki.mozilla.org/Mulet">Page Wiki</a></li>
+ <li>Sujets dédiés sur Discourse (en anglais) :
+  <ul>
+   <li><a href="https://discourse.mozilla-community.org/t/what-about-mulet/8384">What about Mulet</a></li>
+   <li><a href="https://discourse.mozilla-community.org/t/using-mulet-on-linux/9437/">Using Mulet on Linux</a></li>
+   <li><a href="https://discourse.mozilla-community.org/t/theres-no-win-version-for-mulet-49/9394">There's no Win version of Firefox Mulet</a></li>
+   <li><a href="https://discourse.mozilla-community.org/t/installation-instructions-for-a-working-development-environment-on-linux/10378/13">Installation instructions for a working development environment on linux</a></li>
+  </ul>
+ </li>
+</ul>

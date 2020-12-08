@@ -1,0 +1,64 @@
+---
+title: Error.description
+slug: Archive/Web/JavaScript/Extensions_Microsoft/Error.description
+tags:
+  - JavaScript
+  - Microsoft
+  - Non-standard
+  - Propriété
+  - Reference
+translation_of: Archive/Web/JavaScript/Microsoft_Extensions/Error.description
+---
+<div>{{JSRef}}{{Non-standard_header}}</div>
+
+<div class="warning"><strong>Attention ! </strong>Cet objet est spécifique à Microsoft et ne fonctionne qu'avec Internet Explorer. Utiliser {{jsxref("Error.message")}} à la place.</div>
+
+<p>La propriété <strong><code>Error.description</code></strong> permet d'obtenir ou de définir la chaîne de caractères qui décrit l'erreur courante.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="brush: js">erreur.description [= exprChaine]</pre>
+
+<h3 id="Paramètres">Paramètres</h3>
+
+<dl>
+ <dt><code>exprChaine</code> {{optional_inline}}</dt>
+ <dd>Une chaîne de caractères qui contient la description de l'erreur.</dd>
+</dl>
+
+<h3 id="Notes">Notes</h3>
+
+<p>La propriété <code>description</code> est spécifique à Microsoft et peut être utilisée à des fins de rétrocompatibilité pour les navigateurs de Microsoft. Elle fournit la même fonctionnalité que la propriété standard ECMAScript {{jsxref("Error.message")}} qui doit être utilisée en priorité.</p>
+
+<h2 id="Exemples">Exemples</h2>
+
+<pre class="brush: js">try {
+  // Cause an error:
+  x = y;
+} catch(e) {
+  // Affiche "[object Error]":
+  console.log(e);
+  console.log(" ");
+  // Affiche 5009:
+  console.log((e.number &amp; 0xFFFF));
+  console.log(" ");
+  // Affiche "'y' is undefined":
+  console.log(e.description);
+  console.log(" ");
+  // Affiche "'y' is undefined":
+  console.log(e.message);
+}
+</pre>
+
+<h2 id="Prérequis">Prérequis</h2>
+
+<p>Cette fonctionnalité est prise en charge avec les modes suivants : Quirks, Internet Explorer 6 en mode standard, Internet Explorer 7 en mode standard, Internet Explorer 8 en mode standard, Internet Explorer 9 en mode standard, Internet Explorer 10 en mode standard, Internet Explorer 11 en mode standard. Elle est également prise en charge pour les applications Store (Windows 8 et Windows Phone 8.1).</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="/fr/docs/Web/JavaScript/Extensions_JavaScript_Microsoft">Les extensions JavaScript spécifiques de Microsoft</a></li>
+ <li><code><a href="/fr/docs/Web/JavaScript/Extensions_JavaScript_Microsoft/Error.number">Error.number</a></code></li>
+ <li>{{jsxref("Error.message")}}</li>
+ <li>{{jsxref("Error.name")}}</li>
+</ul>

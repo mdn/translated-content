@@ -1,0 +1,419 @@
+---
+title: nsISessionStore
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsISessionStore
+tags:
+  - Interfaces
+  - 'Interfaces:Scriptable'
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsISessionStore
+---
+<p><code>nsISessionStore</code> インタフェースは、ブラウザのセッション、タブやウィンドウと関連付けてデータを保存する手段を拡張機能やコードへ提供します。 <a href="ja/Session_store_API">Session store API</a> も参照してください。</p>
+<p>この API は最上位の <code>browser.xul</code> ウィンドウに対して機能します。詳細については <a href="#Note_on_windows">#Note on windows</a> を参照してください。</p>
+<p>APIの呼び出しを成功させるためには、ユーザ設定値 <code><b>browser.sessionstore.enabled</b></code> は true でなければなりません。 <a class="external" href="http://kb.mozillazine.org/Browser.sessionstore.enabled"> を参照してください。 </a></p>
+<p><br>
+ <a class="external" href="http://kb.mozillazine.org/Browser.sessionstore.enabled"></a></p><div style="border: solid #ddd 2px; margin-bottom: 12px;"><a class="external" href="http://kb.mozillazine.org/Browser.sessionstore.enabled">
+</a><div style="background: #eee; padding: 2px;"><a class="external" href="http://kb.mozillazine.org/Browser.sessionstore.enabled"><code></code></a><code><a href="https://dxr.mozilla.org/mozilla-central/source/browser/components/sessionstore/nsISessionStore.idl" rel="custom">browser/components/sessionstore/nsISessionStore.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">最終更新: Gecko 1.8.1 (Firefox 2 / Thunderbird 2 / SeaMonkey 1.1)</span></div>
+</div>
+<p><a class="external" href="http://kb.mozillazine.org/Browser.sessionstore.enabled">継承元: </a><a href="ja/NsISupports">nsISupports</a></p>
+<h2 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E6.A6.82.E8.A6.81" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E6.A6.82.E8.A6.81">メソッドの概要</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="ja/NsISessionStore#deleteTabValue.28.29">deleteTabValue</a>(in nsIDOMNode aTab, in AString aKey);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="ja/NsISessionStore#deleteWindowValue.28.29">deleteWindowValue</a>(in nsIDOMWindow aWindow, in AString aKey);</code></td>
+  </tr>
+  <tr>
+   <td><code>nsIDOMNode <a href="ja/NsISessionStore#duplicateTab.28.29">duplicateTab</a>(in nsIDOMWindow aWindow, in nsIDOMNode aTab);</code> </td>
+  </tr>
+  <tr>
+   <td><code>AString <a href="ja/NsISessionStore#getBrowserState.28.29">getBrowserState</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>unsigned long <a href="ja/NsISessionStore#getClosedTabCount.28.29">getClosedTabCount</a>(in nsIDOMWindow aWindow);</code></td>
+  </tr>
+  <tr>
+   <td><code>AString <a href="ja/NsISessionStore#getClosedTabData.28.29">getClosedTabData</a>(in nsIDOMWindow aWindow);</code></td>
+  </tr>
+  <tr>
+   <td><code>AString <a href="ja/NsISessionStore#getTabState.28.29">getTabState</a>(in nsIDOMNode aTab);</code> </td>
+  </tr>
+  <tr>
+   <td><code>AString <a href="ja/NsISessionStore#getTabValue.28.29">getTabValue</a>(in nsIDOMNode aTab, in AString aKey);</code></td>
+  </tr>
+  <tr>
+   <td><code>AString <a href="ja/NsISessionStore#getWindowState.28.29">getWindowState</a>(in nsIDOMWindow aWindow);</code></td>
+  </tr>
+  <tr>
+   <td><code>AString <a href="ja/NsISessionStore#getWindowValue.28.29">getWindowValue</a>(in nsIDOMWindow aWindow, in AString aKey);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="ja/NsISessionStore#init.28.29">init</a>(in nsIDOMWindow aWindow);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="ja/NsISessionStore#persistTabAttribute.28.29">persistTabAttribute</a>(in AString aName);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="ja/NsISessionStore#setBrowserState.28.29">setBrowserState</a>(in AString aState);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="ja/NsISessionStore#setTabState.28.29">setTabState</a>(in nsIDOMNode aTab, in AString aState);</code> </td>
+  </tr>
+  <tr>
+   <td><code>void <a href="ja/NsISessionStore#setTabValue.28.29">setTabValue</a>(in nsIDOMNode aTab, in AString aKey, in AString aStringValue);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="ja/NsISessionStore#setWindowState.28.29">setWindowState</a>(in nsIDOMWindow aWindow, in AString aState, in boolean aOverwrite);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="ja/NsISessionStore#setWindowValue.28.29">setWindowValue</a>(in nsIDOMWindow aWindow, in AString aKey, in AString aStringValue);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="ja/NsISessionStore#undoCloseTab.28.29">undoCloseTab</a>(in nsIDOMWindow aWindow, in unsigned long aIndex);</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89">メソッド</h2>
+<h3 id="deleteTabValue.28.29" name="deleteTabValue.28.29">deleteTabValue()</h3>
+<p>指定されたウィンドウ<span style="color: darkgreen; background: #ef9;">【訳注: 「タブ」の誤り？】</span>から値を削除する。</p>
+<pre class="eval"> void deleteTabValue(
+   in nsIDOMNode aTab,
+   in AString aKey
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0" name=".E5.BC.95.E6.95.B0">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aTab&lt;/tt&gt;</dt>
+ <dd>
+  どのタブから値を削除するか。</dd>
+ <dt>
+  &lt;tt&gt;aKey&lt;/tt&gt;</dt>
+ <dd>
+  どのキーに対する値を削除するか。</dd>
+</dl>
+<h3 id="deleteWindowValue.28.29" name="deleteWindowValue.28.29">deleteWindowValue()</h3>
+<p>指定されたウィンドウから値を削除する。</p>
+<pre class="eval"> void deleteWindowValue(
+   in nsIDOMWindow aWindow,
+   in AString aKey
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_2" name=".E5.BC.95.E6.95.B0_2">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aWindow&lt;/tt&gt;</dt>
+ <dd>
+  どのウィンドウから値を削除するか。</dd>
+ <dt>
+  &lt;tt&gt;aKey&lt;/tt&gt;</dt>
+ <dd>
+  どのキーに対する値を削除するか。</dd>
+</dl>
+<h3 id="duplicateTab.28.29" name="duplicateTab.28.29">duplicateTab()</h3>
+<div class="blockIndicator standardNote">
+    <p><a href="https://developer.mozilla.org/ja/docs/Mozilla/Firefox/Releases/3">Firefox 3 における注記</a></p>
+    <p style="font-weight: 400;">このメソッドは Firefox 3 にて導入されました。</p>
+</div> 指定されたタブをできるだけ完全な形で複製する。
+<pre class="eval"> nsIDOMNode duplicateTab(
+   in nsIDOMWindow aWindow,
+   in nsIDOMNode aTab
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_3" name=".E5.BC.95.E6.95.B0_3">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aWindow&lt;/tt&gt;</dt>
+ <dd>
+  複製するタブが属するウィンドウ。</dd>
+ <dt>
+  &lt;tt&gt;aTab&lt;/tt&gt;</dt>
+ <dd>
+  複製するタブ。</dd>
+</dl>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4" name=".E6.88.BB.E3.82.8A.E5.80.A4">戻り値</h6>
+<p>新しいタブを表す <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMNode" title="">nsIDOMNode</a></code> で、その内容は &lt;tt&gt;aTab&lt;/tt&gt; の複製である。</p>
+<h3 id="getBrowserState.28.29" name="getBrowserState.28.29">getBrowserState()</h3>
+<p>すべてのウィンドウとそのすべてのタブを含む、ブラウザ全体の現在の状態を返す。</p>
+<pre class="eval"> AString getBrowserState();
+</pre>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4_2" name=".E6.88.BB.E3.82.8A.E5.80.A4_2">戻り値</h6>
+<p>ブラウザ上のすべてのウィンドウについて、現在の状態を表す <a href="ja/JSON">JSON</a> 文字列。</p>
+<h3 id="getClosedTabCount.28.29" name="getClosedTabCount.28.29">getClosedTabCount()</h3>
+<p>引数で渡されたウィンドウについて、何個のタブを復元できるかを返す。</p>
+<pre class="eval"> unsigned long getClosedTabCount(
+   in nsIDOMWindow aWindow
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_4" name=".E5.BC.95.E6.95.B0_4">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aWindow&lt;/tt&gt;</dt>
+ <dd>
+  どのウィンドウから復元可能なタブの個数を取得するか。</dd>
+</dl>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4_3" name=".E6.88.BB.E3.82.8A.E5.80.A4_3">戻り値</h6>
+<p>そのウィンドウの復元可能なタブの個数。</p>
+<h3 id="getClosedTabData.28.29" name="getClosedTabData.28.29">getClosedTabData()</h3>
+<p>指定されたウィンドウについて、閉じたタブのリストを返す。</p>
+<pre class="eval"> AString getClosedTabData(
+   in nsIDOMWindow aWindow
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_5" name=".E5.BC.95.E6.95.B0_5">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aWindow&lt;/tt&gt;</dt>
+ <dd>
+  どのウィンドウからタブのリストを取得するか。</dd>
+</dl>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4_4" name=".E6.88.BB.E3.82.8A.E5.80.A4_4">戻り値</h6>
+<p>&lt;tt&gt;aWindow&lt;/tt&gt; で指定したウィンドウについての閉じたタブのリストを表す JSON 文字列。リストは Last In / First Out (LIFO) の順序であり、リストの先頭のアイテムは最後に閉じられたタブである。</p>
+<h3 id="getTabState.28.29" name="getTabState.28.29">getTabState()</h3>
+<div class="blockIndicator standardNote">
+    <p><a href="https://developer.mozilla.org/ja/docs/Mozilla/Firefox/Releases/3">Firefox 3 における注記</a></p>
+    <p style="font-weight: 400;">このメソッドは Firefox 3 にて導入されました。</p>
+</div> 指定されたタブの状態を返す。
+<pre class="eval"> AString getTabState(
+   in nsIDOMNode aTab
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_6" name=".E5.BC.95.E6.95.B0_6">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aTab&lt;/tt&gt;</dt>
+ <dd>
+  どのタブの状態を返すか。</dd>
+</dl>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4_5" name=".E6.88.BB.E3.82.8A.E5.80.A4_5">戻り値</h6>
+<p>指定されたタブの状態を表す JSON 文字列。</p>
+<div class="blockIndicator note"><strong>註:</strong> 戻り値の文字列は Cookie を含みません。もし Cookie も取得したいのであれば、代わりに <code><a href='"#getWindowState.28.29"'>getWindowState()</a></code> を使う必要があります。</div>
+<h3 id="getTabValue.28.29" name="getTabValue.28.29">getTabValue()</h3>
+<p>引数で渡されたウィンドウについて、キーに対応する値を返す。</p>
+<pre class="eval"> AString getTabValue(
+   in nsIDOMNode aTab,
+   in AString aKey
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_7" name=".E5.BC.95.E6.95.B0_7">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aTab&lt;/tt&gt;</dt>
+ <dd>
+  どのタブから値を取得するか。</dd>
+ <dt>
+  &lt;tt&gt;aKey&lt;/tt&gt;</dt>
+ <dd>
+  どのキーに対応する値を取得するか。</dd>
+</dl>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4_6" name=".E6.88.BB.E3.82.8A.E5.80.A4_6">戻り値</h6>
+<p><code><a href="ja/NsISessionStore#setTabValue.28.29">setTabValue()</a></code> によって以前に &lt;tt&gt;aKey&lt;/tt&gt; に対して割り当てられた文字列の値。</p>
+<h3 id="getWindowState.28.29" name="getWindowState.28.29">getWindowState()</h3>
+<p>ブラウザ上の指定されたひとつのウィンドウについて、現在の状態を返す。</p>
+<pre class="eval"> AString getWindowState(
+   in nsIDOMWindow aWindow
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_8" name=".E5.BC.95.E6.95.B0_8">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aWindow&lt;/tt&gt;</dt>
+ <dd>
+  どのウィンドウの状態から状態を取得するか。 <a href="#Note_on_windows">#Note on windows</a> を参照。</dd>
+</dl>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4_7" name=".E6.88.BB.E3.82.8A.E5.80.A4_7">戻り値</h6>
+<p>&lt;tt&gt;aWindow&lt;/tt&gt; によって指定されたウィンドウのみを含む、セッション状態を表す <a href="ja/JSON">JSON</a> 文字列。</p>
+<p>browser.sessionstate.enabled が false の場合にこのメソッドを呼び出すと、 "aWindows[i] has no properties" というメッセージの例外が発生する。</p>
+<h3 id="getWindowValue.28.29" name="getWindowValue.28.29">getWindowValue()</h3>
+<p>あるウィンドウについて、引数で指定されたキーと関連付けられた値を返す。</p>
+<pre class="eval"> AString getWindowValue(
+   in nsIDOMWindow aWindow,
+   in AString aKey
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_9" name=".E5.BC.95.E6.95.B0_9">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aWindow&lt;/tt&gt;</dt>
+ <dd>
+  どのウィンドウから値を取得するか。</dd>
+ <dt>
+  &lt;tt&gt;aKey&lt;/tt&gt;</dt>
+ <dd>
+  どのキーに対応する値を取得するか。</dd>
+</dl>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4_8" name=".E6.88.BB.E3.82.8A.E5.80.A4_8">戻り値</h6>
+<p>指定されたキーに対して以前保存された文字列の値。もしキーに対する値がセットされていなければ、空の文字列を返す。</p>
+<h3 id="init.28.29" name="init.28.29">init()</h3>
+<p>セッションストアサービスを初期化する。</p>
+<div class="note">
+ <b>注意:</b> この関数はブラウザのみから利用されることを意図しており、拡張機能はこれを呼び出すべきではありません。</div>
+<pre class="eval"> void init(
+   in nsIDOMWindow aWindow
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_10" name=".E5.BC.95.E6.95.B0_10">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aWindow&lt;/tt&gt;</dt>
+ <dd>
+  どのウィンドウに対してサービスを初期化するか。</dd>
+</dl>
+<h3 id="setBrowserState.28.29" name="setBrowserState.28.29">setBrowserState()</h3>
+<p>現在のブラウザの状態をセットする。</p>
+<pre class="eval"> void setBrowserState(
+   in AString aState
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_11" name=".E5.BC.95.E6.95.B0_11">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aState&lt;/tt&gt;</dt>
+ <dd>
+  使用するセッション状態を表す JSON 文字列。</dd>
+</dl>
+<div class="note">
+ <b>注意:</b> <code>setBrowserState()</code> を呼び出すと、現在のセッションが直ちに置き換わり、引数 &lt;tt&gt;aState&lt;/tt&gt; で渡したアプリケーション全体の状態が復元されます。</div>
+<h3 id="persistTabAttribute.28.29" name="persistTabAttribute.28.29">persistTabAttribute()</h3>
+<p>すべての XUL のタブに対して、保存と復元を行う tab 要素の属性名をセットする。</p>
+<pre class="eval"> void persistTabAttribute(
+   in AString aName
+ );
+</pre>
+<div class="note">
+ <b>注意:</b> 今のところ、どのタブに対して永続化する属性をセットするかを選択する手段はありません。このメソッドはすべてのタブに対して区別無く影響します。</div>
+<h6 id=".E5.BC.95.E6.95.B0_12" name=".E5.BC.95.E6.95.B0_12">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aName&lt;/tt&gt;</dt>
+ <dd>
+  すべてのタブに対して、保存復元する属性の名前。</dd>
+</dl>
+<h3 id="setTabState.28.29" name="setTabState.28.29">setTabState()</h3>
+<div class="blockIndicator standardNote">
+    <p><a href="https://developer.mozilla.org/ja/docs/Mozilla/Firefox/Releases/3">Firefox 3 における注記</a></p>
+    <p style="font-weight: 400;">このメソッドは Firefox 3 にて導入されました。</p>
+</div> 指定されたタブに対して、状態をセットする。
+<pre class="eval"> void setTabState(
+   in nsIDOMNode aTab,
+   in AString aState
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_13" name=".E5.BC.95.E6.95.B0_13">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aTab&lt;/tt&gt;</dt>
+ <dd>
+  どのタブへ状態をセットするか。</dd>
+ <dt>
+  &lt;tt&gt;aState&lt;/tt&gt;</dt>
+ <dd>
+  タブへセットする、タブの状態を表す JSON 文字列。例えば <code><a href="#getTabState.28.29">getTabState()</a></code> によって取得したもの。</dd>
+</dl>
+<h3 id="setTabValue.28.29" name="setTabValue.28.29">setTabValue()</h3>
+<p>タブに対して指定されたキーに対する値をセットする。</p>
+<pre class="eval"> void setTabValue(
+   in nsIDOMNode aTab,
+   in AString aKey,
+   in AString aStringValue
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_14" name=".E5.BC.95.E6.95.B0_14">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aTab&lt;/tt&gt;</dt>
+ <dd>
+  どのタブに対して値をセットするか。</dd>
+ <dt>
+  &lt;tt&gt;aKey&lt;/tt&gt;</dt>
+ <dd>
+  どのキーに対する値をセットするか。</dd>
+ <dt>
+  &lt;tt&gt;aStringValue&lt;/tt&gt;</dt>
+ <dd>
+  キー &lt;tt&gt;aKey&lt;/tt&gt; に対する値としてセットする文字列。 JavaScript のオブジェクトについては <code><a href="ja/ToSource">toSource()</a></code> メソッドを利用することができる。また、 <code><a href="ja/Eval">eval()</a></code> 関数を使うことによって、より複雑なデータ（あるいはオブジェクト全体までも）が値として割り当てることができる。</dd>
+</dl>
+<h3 id="setWindowState.28.29" name="setWindowState.28.29">setWindowState()</h3>
+<p>保存された状態を引数として渡し、ひとつのウィンドウへ状態をセットする。</p>
+<pre class="eval"> void setWindowState(
+   in nsIDOMWindow aWindow,
+   in AString aState,
+   in boolean aOverwrite
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_15" name=".E5.BC.95.E6.95.B0_15">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aWindow&lt;/tt&gt;</dt>
+ <dd>
+  &lt;tt&gt;aState&lt;/tt&gt; で示した状態をどの <a href="ja/NsIDOMWindow">ブラウザウィンドウ</a> に対してセットするか。</dd>
+ <dt>
+  &lt;tt&gt;aState&lt;/tt&gt;</dt>
+ <dd>
+  指定したウィンドウに対して適用する、保存された状態。</dd>
+ <dt>
+  &lt;tt&gt;aOverwrite&lt;/tt&gt;</dt>
+ <dd>
+  もしこの引数が <code>true</code> であるなら、現在開かれているすべてのタブは削除され、状態 &lt;tt&gt;aState&lt;/tt&gt; のタブへと置き換わります。もし <code>false</code> であれば、ウィンドウにすでにあるタブに &lt;tt&gt;aState&lt;/tt&gt; のタブが追加されます。</dd>
+</dl>
+<h3 id="setWindowValue.28.29" name="setWindowValue.28.29">setWindowValue()</h3>
+<p>指定したウィンドウに対し、引数で渡したキーに対応する値をセットする。</p>
+<pre class="eval"> void setWindowValue(
+   in nsIDOMWindow aWindow,
+   in AString aKey,
+   in AString aStringValue
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_16" name=".E5.BC.95.E6.95.B0_16">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aWindow&lt;/tt&gt;</dt>
+ <dd>
+  どのウィンドウに対して値をセットするか。</dd>
+ <dt>
+  &lt;tt&gt;aKey&lt;/tt&gt;</dt>
+ <dd>
+  どのキーに対する値をセットするか。</dd>
+ <dt>
+  &lt;tt&gt;aStringValue&lt;/tt&gt;</dt>
+ <dd>
+  キー &lt;tt&gt;aKey&lt;/tt&gt; に対する値としてセットする文字列。 JavaScript のオブジェクトについては <code><a href="ja/ToSource">toSource()</a></code> メソッドを利用することができる。また、 <code><a href="ja/Eval">eval()</a></code> 関数を使うことによって、より複雑なデータ（あるいはオブジェクト全体までも）が値として割り当てることができる。</dd>
+</dl>
+<h3 id="undoCloseTab.28.29" name="undoCloseTab.28.29">undoCloseTab()</h3>
+<p>指定したウィンドウにて、閉じたタブを開きなおす。</p>
+<pre class="eval"> void undoCloseTab(
+   in nsIDOMWindow aWindow,
+   in unsigned long aIndex
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_17" name=".E5.BC.95.E6.95.B0_17">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aWindow&lt;/tt&gt;</dt>
+ <dd>
+  どのウィンドウで閉じたタブを開きなおすか。</dd>
+ <dt>
+  &lt;tt&gt;aIndex&lt;/tt&gt;</dt>
+ <dd>
+  閉じたタブのうち、どのインデックス番号のタブを復元するか。この値は、0よりも大きく、 <code><a href="ja/NsISessionStore#getClosedTabCount.28.29">getClosedTabCount()</a></code> で返される値よりも小さくなければならない。閉じたタブのリストは Last In / First Out (LIFO) の順序で保存されており、インデックス番号が0のタブは最後に閉じたタブである。</dd>
+</dl>
+<h2 id="Note_on_windows" name="Note_on_windows">Note on windows</h2>
+<p>The <code>nsISessionStore</code> API stores state information for certain windows inside the web brower. These windows are nsIDOMWindow objects that contain the <code>tabbrowser</code> that users see as tabs; the document in these windows is <code>browser.xul</code>.</p>
+<p>For many extensions, those that overlay <code>browser.xul</code>, the appropriate window object for <code>nsISessionStore</code> is the global object <code>'window'</code>.</p>
+<p>For Javascript running in windows other than the one you want to use in <code>nsISessionStore</code>, you need a <code>nsIDOMWindow</code> object containing <code>browser.xul</code>. This will be the outermost or root <code>nsIDOMWindow</code> in a <code>nsIXULWindow</code> (the window seen by users as a moveable frame on the display). This kind of DOMWindow object can be obtained from other <code>nsIDOMWindow</code> objects (like the sidebar window object) by applying the 'mainWindow' statement from <a href="ja/Working_with_windows_in_chrome_code">Working_with_windows_in_chrome_code</a>. This outermost or root window can also be obtained from the list returned by <code>nsIWindowMediator</code>; see example #3 in <a href="ja/Working_with_windows_in_chrome_code">Working_with_windows_in_chrome_code</a>. It can also be obtained from an <code>nsIXULWindow</code> using</p>
+<pre class="eval">if (xul_win.docShell instanceof nsIInterfaceRequestor)  {
+   var win = xul_win.docShell.getInterface(nsIDOMWindow);
+   ...
+</pre>
+<h2 id=".E5.8F.82.E8.80.83" name=".E5.8F.82.E8.80.83">参考</h2>
+<p><a href="ja/NsISupports">nsISupports</a></p>

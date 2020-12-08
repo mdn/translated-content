@@ -1,0 +1,80 @@
+---
+title: >-
+  Utiliser la balise meta viewport pour contrôler la mise en page sur les
+  navigateurs mobiles
+slug: Mozilla/Mobile/Balise_meta_viewport
+translation_of: Mozilla/Mobile/Viewport_meta_tag
+---
+<p>Les nouvelles fonctionnalités de la version à venir de <a class="link-https" href="https://wiki.mozilla.org/Mobile/Fennec">Firefox Mobile (Fennec)</a>, 1.1, ont amélioré le support pour la balise <code>&lt;meta name="viewport"&gt;</code>. Les versions précédentes supportaient les propriétés <code>width</code>, <code>height</code>, et <code>initial-scale</code> de la balise <em>viewport</em>, mais étaient <a class="external" href="http://starkravingfinkle.org/blog/2010/01/perils-of-the-viewport-meta-tag/">problématiques</a> avec certains sites prévus pour les navigateurs iPhone et Android. Nous supportons désormais les mêmes propriétés que Safari Mobile, et nous avons également amélioré Fennec pour permettre au rendu d'être plus cohérent entre les différentes tailles et résolutions d'écrans.</p>
+
+<p class="caption">touch.facebook.com avant :</p>
+
+<p class="figure"><img alt="05-11-fennec-meta-viewport-2.png" class="default internal" src="/@api/deki/files/4371/=05-11-fennec-meta-viewport-2.png"></p>
+
+<p class="caption">touch.facebook.com après :</p>
+
+<p class="figure"><img alt="05-11-fennec-meta-viewport-1.png" class="default internal" src="/@api/deki/files/4372/=05-11-fennec-meta-viewport-1.png"></p>
+
+<p>Vous pouvez tester les changements par vous-même dans la dernière version de <a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/mobile/nightly/latest-mobile-1.9.2/">Fennec (1.1)</a> et les dernières <a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/mobile/nightly/latest-mobile-trunk/">principales</a> <em>nightly builds</em> pour Maemo, Windows, Mac, et Linux.</p>
+
+<h2 id="Trame">Trame</h2>
+
+<p>Les navigateurs mobiles tels que Fennec affichent les pages dans une « fenêtre » virtuelle (le <em>viewport</em>), souvent plus large que l'écran, afin d'éviter de devoir rétrécir chaque configuration de page dans une petite fenêtre (ce qui provoquerait un mauvais affichage de beaucoup de sites non-optimisés pour les mobiles). Les utilisateurs peuvent ensuite se déplacer et zoomer pour visualiser les différentes parties de la page.</p>
+
+<p>Safari Mobile a créé la « balise meta <em>viewport</em> » pour permettre aux développeurs web de contrôler la taille et l'échelle du <em>viewport</em>. Beaucoup d'autres navigateurs mobiles supportent désormais cette balise, bien qu'elle ne soit pas standardisée. La <a class="external" href="http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html#//apple_ref/doc/uid/TP40006509-SW29" style="line-height: 1.5;">documentation</a><span style="line-height: 1.5;"> de Apple explique plutôt bien comment les développeurs peuvent utiliser ce tag, mais nous avons du effectuer des recherches plus approfondies pour trouver la bonne implémentation pour Fennec. Par exemple, la documentation de Safari dit que le contenu de la balise est une « liste de valeurs séparées par des virgules », mais les navigateurs existants utilisent en fait n'importe quel mélange de virgules, points-virgules et d'espaces en tant que séparateurs.</span></p>
+
+<p>Apprenez-en plus sur les <em>viewports</em> dans les différents navigateurs mobiles dans l'article <a class="external" href="http://www.quirksmode.org/mobile/viewports2.html" title="http://www.quirksmode.org/mobile/viewports2.html">A Tale of Two Viewports (en)</a> sur quirksmode.org.</p>
+
+<h2 id="Les_bases_du_viewport">Les bases du <em>viewport</em></h2>
+
+<p>La plupart des sites optimisés pour les mobiles utilisent une balise comme la suivante :</p>
+
+<pre class="notranslate">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</pre>
+
+<p>La propriété <code>width</code> contrôle la taille du <em>viewport</em>. Elle peut être réglée à une valeur précise de pixels, comme <code>width=600</code>, ou bien à la valeur spéciale <code>device-width</code> qui correspond à la largeur de l'écran en pixels CSS à l'échelle 100%. (Il existe les propriétés et valeurs <code>height</code> et <code>device-height</code> correspondantes, qui peuvent être utiles pour les pages contenant des éléments qui changent de taille ou de position en fonction de la hauteur du <em>viewport</em>.)</p>
+
+<p>La propriété <code>initial-scale</code> contrôle le niveau de zoom lorsque la page est chargée pour la première fois. Les propriétés <code>maximum-scale</code>, <code>minimum-scale</code>, et <code>user-scalable</code> contrôlent la manière dont les utilisateurs sont autorisés à zoomer ou dézoomer une page.</p>
+
+<div class="blockIndicator warning">
+<p>Empêcher le zoom peut poser des problèmes d'accessibilité aux usagers avec une déficience visuelle.</p>
+</div>
+
+<h2 id="Un_pixel_nest_pas_un_pixel">Un pixel n'est pas un pixel</h2>
+
+<p>L'iPhone et beaucoup de téléphones Android possèdent des écrans 3 à 4 pouces (7 à 10 cm) avec 320 à 480 pixels (environ 160 dpi). Firefox pour Maemo s'exécute sur le Nokia N900, qui a la même taille mais entre 480 et 800 pixels (environ 240 dpi). À cause de cela, la précédente version de Fennec affichait beaucoup de pages un tiers plus petit (en taille réelle) que l'iPhone ou les systèmes Android. Cela causait des problèmes de lecture et d'utilisation sur beaucoup de sites optimisés pour le tactile. Peter-Paul Koch a écrit sur ce sujet dans son article <a class="external" href="http://www.quirksmode.org/blog/archives/2010/04/a_pixel_is_not.html" style="line-height: 1.5;">A pixel is not a pixel is not a pixel (en)</a><span style="line-height: 1.5;">.</span></p>
+
+<p>Fennec 1.1 pour Maemo utilisera 1,5 pixels matériels pour chaque « pixel » CSS, suivant ainsi le comportement des navigateurs pour Android basés sur WebKit. Cela signifie qu'une page à<span style="line-height: 1.5;"> </span><code style="font-size: 14px;">initial-scale=1</code><span style="line-height: 1.5;"> sera affichée pratiquement à la même taille réelle sur Fennec pour Maemo, Safari Mobile pour iPhone et le navigateur Android sur les téléphones </span><a class="external" href="http://developer.android.com/guide/practices/screens_support.html#range" style="line-height: 1.5;">HDPI et MDPI (en)</a>, ce qui coïncide avec la<span style="line-height: 1.5;"> </span><a class="external" href="http://www.w3.org/TR/CSS2/syndata.html#length-units" style="line-height: 1.5;">spécification CSS 2.1</a>,<span style="line-height: 1.5;"> qui dit :</span></p>
+
+<blockquote>
+<p>Si la résolution du périphérique d'affichage est vraiment différente de celle moyenne des ordinateurs, le navigateur doit remettre à l'échelle les valeurs des pixels. Il est recommandé que l'unité des pixels renvoie à l'unité la plus proche du celle référence correspondant au nombre total des pixels de l'appareil. Il est également recommandé que l'unité de référence soit de l'envergure visuelle d'un pixel sur un périphérique avec une résolution de 96 dpi à une distance d'un bras du lecteur.</p>
+</blockquote>
+
+<p>Pour les développeurs, cela signifie que 320 pixels doivent être en pleine largeur en mode portrait à une échelle 1 sur tous les périphériques de poche mentionnés ci-dessus, et qu'ils peuvent, en sachant cela, redimensionner leurs mises en page et images. Mais rappelez-vous que tous les périphériques mobiles ne sont pas de la même largeur ; vous devriez également vous assurer que vos pages fonctionnent correctement en mode paysage, et sur tous les appareils plus larges tels que l'iPad et les tablettes Android.</p>
+
+<p>Sur des écrans à 240 dpi, les pages à<span style="line-height: 1.5;"> </span><code style="font-size: 14px;">initial-scale=1</code><span style="line-height: 1.5;"> seront mis à échelle 1,5 par Fennec et Android WebKit. Leur texte sera lissé et mis à l'échelle en conséquence, mais leurs images pourraient ne pas tirer profit de la résolution plein-écran. Pour obtenir des images plus nettes sur ces écrans, les développeurs web peuvent prévoir les images - ou les mises en pages complètes - à une échelle 150% (ou 200% pour supporter les périphériques à 320 dpi comme les iPhone à écrans retina) puis réduire leur échelle par la suite à l'aide de propriétés du <em>viewport</em> ou de CSS.</span></p>
+
+<p>Le ratio par défaut dépend de la résolution. Lorsqu'elle est inférieure à 200 dpi, le ratio sera de 1,0. Entre 200 et 300 dpi, il s'élèvera à 1,5. Au delà, il vaut <code>floor(densité / 150 dpi)</code>. Notez que le ratio par défaut est avéré uniquement lorsque l'échelle du <em>viewport</em> vaut 1. Sinon, la relation entre pixels CSS et pixels matériels dépend du niveau de zoom actuel.</p>
+
+<h2 id="Largeur_du_viewport_et_largeur_de_lécran">Largeur du <em>viewport</em> et largeur de l'écran</h2>
+
+<p>Beaucoup de sites configurent leur <em>viewport</em> à <code style="font-size: 14px;">"width=320, initial-scale=1"</code><span style="line-height: 1.5;"> pour correspondre précisément à la configuration d'un iPhone en mode portrait. Comme mentionné ci-dessus, cela a provoqué des</span><span style="line-height: 1.5;"> </span><a class="external" href="http://starkravingfinkle.org/blog/2010/01/perils-of-the-viewport-meta-tag/" style="line-height: 1.5;">problèmes</a><span style="line-height: 1.5;"> lors du rendu de ces sites sous Fennec 1.0, tout particulièrement en mode paysage. Pour empêcher cela, Fennec 1.1 étendra la largeur du <em>viewport</em> si nécessaire pour remplir l'écran à l'échelle définie. Cela suit le comportement d'Android et de Safari Mobile, et est surtout utile sur les périphériques à écrans larges comme l'iPad. (Allen Pike en fournit une bonne éxplication pour les développeurs dans son article </span><a class="external" href="http://www.antipode.ca/2010/choosing-a-viewport-for-ipad-sites/" style="line-height: 1.5;">Choosing a viewport for iPad sites</a>.)</p>
+
+<p>Pour les pages qui définissent une largeur initiale ou maximale, cela signifie que la propriété <code>width</code> est en réalité interprétée en tant qu'une largeur <strong>minimale<em> </em></strong>du <em>viewport</em>. Par exemple, si votre mise en page nécessite au moins 500 pixels de largeur, vous pouvez utiliser le code suivant. Lorsque l'écran est plus grand que 500 pixels, le navigateur étendra le <em>viewport</em> (au lieu de zoomer) jusqu'à la largeur de l'écran :</p>
+
+<pre class="notranslate">&lt;meta name="viewport" content="width=500, initial-scale=1"&gt;</pre>
+
+<p>Fennec 1.1 supporte également <code>minimum-scale</code>, <code>maximum-scale</code>, and <code>user-scalable</code>, avec les défauts et les limites de <a class="external" href="http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html">Safari</a>. Ces propriétés affectent l'échelle et la largeur initiales, en plus de limiter les changements dans le niveau de zoom.</p>
+
+<p>Les navigateurs mobiles gèrent les changements d'orientation différemment. Par exemple, Safari Mobile zoome souvent simplement sur la page lors du changement portrait vers paysage, au lieu d'afficher la page telle qu'elle aurait du l'être si elle avait été chargée à la base en paysage. Si les développeurs web souhaitent garder une certaine logique dans leurs paramètres de mise à l'échelle lors du changement d'orientation sur iPhone, ils doivent ajouter une valeur <code>maximum-scale</code> pour empêcher ce zoom, ce qui empêche parfois les utilisateurs de zoomer :</p>
+
+<pre class="notranslate">&lt;meta name="viewport" content="initial-scale=1, maximum-scale=1"&gt;</pre>
+
+<p>Cela n'est pas nécessaire sur Fennec : lorsque le périphérique change d'orientation, Fennec rafraîchit la taille du <em>viewport</em>, la mise en page, et les propriétés JavaScript/CSS telles que <code>device-width</code>, en fonction des nouvelles dimensions de la fenêtre.</p>
+
+<h2 id="Tailles_communes_de_viewport_pour_les_périphériques_mobiles_et_tablettes">Tailles communes de <em>viewport</em> pour les périphériques mobiles et tablettes</h2>
+
+<p>Si vous souhaitez connaître les largeurs de <em>viewport</em> des périphériques mobiles et tablettes les plus communs, il existe une liste complète des<span style="line-height: 1.5;"> </span><a href="https://docs.adobe.com/content/help/fr-FR/target/using/experiences/vec/mobile-viewports.translate.html" style="line-height: 1.5;" title="http://i-skool.co.uk/mobile-development/web-design-for-mobiles-and-tablets-viewport-sizes/">tailles de <em>viewport</em> sur mobiles et tablettes ici</a><span style="line-height: 1.5;">. Elle vous donnera des informations telles que la largeur du <em>viewport</em> en orientation portrait et paysage, ainsi que la taille physique de l'écran, le système d'exploitation et la résolution du périphérique.</span></p>
+
+<h2 id="Standardisation">Standardisation</h2>
+
+<p>Il y a une claire demande à propos de la balise meta <em>viewport</em>, puisqu'elle est supportée par la plupart des navigateurs mobiles populaires et utilisée par des milliers de sites web. Il serait bien d'avoir un standard réel pour le contrôle des propriétés du <em>viewport</em> sur les pages. D'après la spécification HTML5, les extensions à la balise <font face="Courier New, Andale Mono, monospace"><span style="line-height: normal;">meta</span></font> doivent d'abord être enregistrées sur le <a class="external" href="http://wiki.whatwg.org/wiki/MetaExtensions" style="line-height: 1.5;">wiki WHATWG</a><span style="line-height: 1.5;"> avant d'entrer dans le processus de standardisation W3C. Si cela arrive, Mozilla s'assurera d'implémenter tout changement fait pendant la standardisation.</span></p>

@@ -1,0 +1,145 @@
+---
+title: Creating OpenSearch plugins for Firefox
+slug: Creating_OpenSearch_plugins_for_Firefox
+tags:
+  - Add-ons
+  - Search plugins
+translation_of: Web/OpenSearch
+---
+<h2 id="OpenSearch" name="OpenSearch">OpenSearch</h2>
+<p><a href="/ja/Firefox_2_for_developers" title="ja/Firefox_2_for_developers">Firefox 2</a> は検索プラグインとして <a class="external" href="http://opensearch.org/">OpenSearch</a> 記述フォーマットをサポートしています。<a class="external" href="http://www.opensearch.org/Specifications/OpenSearch/1.1#OpenSearch_description_document">OpenSearch 記述シンタックス</a>を使ったプラグインは IE 7 と Firefox で互換性があります。このため、ウェブでの利用で推奨されたフォーマットです。</p>
+<p>Firefox は{{ 訳語("検索サジェスト", "search suggestions") }}と <code>SearchForm</code> 要素のような <a class="external" href="http://www.opensearch.org/Specifications/OpenSearch/1.1#OpenSearch_description_document">OpenSearch 記述シンタックス</a>に含まれていない追加の検索機能もサポートします。この記事では Firefox 特有の機能をサポートした OpenSearch 互換の検索プラグインの作成にフォーカスをあてていきます。</p>
+<p>OpenSearch 記述ファイルは<a href="#.E6.A4.9C.E7.B4.A2.E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.AE.E8.87.AA.E5.8B.95.E6.A4.9C.E5.87.BA">検索プラグインの自動検出</a>に書かれているように通知でき、<a href="/ja/Adding_search_engines_from_web_pages" title="ja/Adding_search_engines_from_web_pages">Web ページから検索エンジンを追加する</a>に書かれているようにプログラム的にインストールできます。</p>
+<h2 id="OpenSearch_.E8.A8.98.E8.BF.B0.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB" name="OpenSearch_.E8.A8.98.E8.BF.B0.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB">OpenSearch 記述ファイル</h2>
+<p>検索エンジンを記述した XML ファイルはとてもシンプルで、以下の基本的なテンプレートに従います。あなたが書いている検索エンジンに応じて、斜体になっている箇所をカスタマイズする必要があります。</p>
+<pre class="eval">&lt;OpenSearchDescription xmlns="<span class="nowiki">http://a9.com/-/spec/opensearch/1.1/</span>"
+                       xmlns:moz="<span class="nowiki">http://www.mozilla.org/2006/browser/search/</span>"&gt;
+&lt;ShortName&gt;<em>engineName</em>&lt;/ShortName&gt;
+&lt;Description&gt;<em>engineDescription</em>&lt;/Description&gt;
+&lt;InputEncoding&gt;<em>inputEncoding</em>&lt;/InputEncoding&gt;
+&lt;Image width="16" height="16"&gt;data:image/x-icon;base64,<em>imageData</em>&lt;/Image&gt;
+&lt;Url type="text/html" method="<em>method</em>" template="<em>searchURL</em>"&gt;
+  &lt;Param name="<em>paramName1</em>" value="<em>paramValue1</em>"/&gt;
+  ...
+  &lt;Param name="<em>paramNameN</em>" value="<em>paramValueN</em>"/&gt;
+&lt;/Url&gt;
+&lt;Url type="application/x-suggestions+json" template="<em>suggestionURL</em>"/&gt;
+&lt;moz:SearchForm&gt;<em>searchFormURL</em>&lt;/moz:SearchForm&gt;
+&lt;/OpenSearchDescription&gt;
+</pre>
+<dl>
+  <dt>
+    <strong>ShortName</strong></dt>
+  <dd>
+    検索エンジンの短い名前。</dd>
+</dl>
+<dl>
+  <dt>
+    <strong>Description</strong></dt>
+  <dd>
+    検索エンジンの簡単な説明。</dd>
+</dl>
+<dl>
+  <dt>
+    <strong>InputEncoding</strong></dt>
+  <dd>
+    検索エンジンがデータの入力に使っているエンコーディング。</dd>
+</dl>
+<dl>
+  <dt>
+    <strong>Image</strong></dt>
+  <dd>
+    検索エンジンを表す Base-64 でエンコードされた 16x16 のアイコン。ここに置くためのデータを作成するのに使える便利なツールの一つはここで見付かります: <a class="external" href="http://software.hixie.ch/utilities/cgi/data/data">The data: URI kitchen</a>。</dd>
+</dl>
+<dl>
+  <dt>
+    <strong>Url</strong></dt>
+  <dd>
+    検索に使う 1 つまたは複数の URL を記述します。<code>method</code> 属性は結果を得るために <code>GET</code> と <code>POST</code> リクエストのどちらを使うか指定します。<code>template</code> 属性は検索クエリのベースとなる URL を指定します。</dd>
+  <dd>
+    <div class="note">
+      <strong>注意:</strong> Internet Explorer 7 は <code>POST</code> リクエストをサポートしていません。</div>
+  </dd>
+</dl>
+<dl>
+  <dd>
+    Firefox がサポートしている URL タイプは 2 つです:</dd>
+</dl>
+<ul>
+  <li><code>type="text/html"</code> は実際の検索結果そのものの URL を設定するために使われます。</li>
+  <li><code>type="application/x-suggestions+json"</code> は検索サジェストを得るために使われる URL を設定するために使われます。</li>
+</ul>
+<dl>
+  <dd>
+    どちらの URL のタイプでも、ユーザが検索バーに入力した検索語句に置き換えられる <code>{searchTerms}</code> を使うことができます。サポートしている他の動的な検索パラメータは <a class="external" href="http://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_3#OpenSearch_1.1_parameters">OpenSearch 1.1 パラメータ</a>に記述されています。</dd>
+</dl>
+<dl>
+  <dd>
+    検索サジェストのクエリに指定された URL のテンプレートは JavaScript Object Notation (JSON) フォーマットで補完リストを取得するために使われます。サーバ上で検索サジェストのサポートを実装する方法の詳細は <a href="/ja/Supporting_search_suggestions_in_search_plugins" title="ja/Supporting_search_suggestions_in_search_plugins">検索プラグインでの検索サジェストのサポート</a>を見てください。</dd>
+</dl>
+<p><img alt="Image:SearchSuggestionSample.png" class="internal" src="/@api/deki/files/1794/=SearchSuggestionSample.png"></p>
+<dl>
+  <dt>
+    <strong>Param</strong></dt>
+  <dd>
+    検索クエリともに通過させるために必要なキー/値のペアのパラメータです。この値を指定する際にはユーザが検索バーに入力した検索語句を挿入するための <code>{searchTerms}</code> を使うことができます。</dd>
+  <dd>
+    <div class="note">
+      <strong>注意:</strong> Internet Explorer 7 はこの要素をサポートしていません。</div>
+  </dd>
+</dl>
+<dl>
+  <dt>
+    <strong>SearchForm</strong></dt>
+  <dd>
+    プラグインのサイトの検索ページを開くための URL。これは Firefox にユーザが直接 Web サイトを訪れる方法を提供します。</dd>
+  <dd>
+    <div class="note">
+      <strong>注意:</strong> この要素は Firefox 特有で OpenSearch 仕様の一部ではないため、この要素をサポートしていない他のユーザエージェントが安全に無視できるようにするために、上の例では "<code>moz:</code>" XML 名前空間接頭辞を使っています。</div>
+  </dd>
+</dl>
+<h2 id=".E6.A4.9C.E7.B4.A2.E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.AE.E8.A8.B3.E8.AA.9E.E8.87.AA.E5.8B.95.E6.A4.9C.E5.87.BAAutodiscovery" name=".E6.A4.9C.E7.B4.A2.E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.AE.E8.A8.B3.E8.AA.9E.E8.87.AA.E5.8B.95.E6.A4.9C.E5.87.BAAutodiscovery">検索プラグインの{{ 訳語("自動検出", "Autodiscovery") }}</h2>
+<p>検索プラグインを提供しているウェブサイトは Firefox ユーザがプラグインを簡単にダウンロードしてインストールできるように通知することができます。</p>
+<p>自動検出をサポートするには、ウェブページの <code>&lt;HEAD&gt;</code> セクションに単に一行追加するだけです。</p>
+<pre class="eval">&lt;link rel="search" type="application/opensearchdescription+xml" title="<em>searchTitle</em>" href="<em>pluginURL</em>"&gt;
+</pre>
+<p>斜体の項目を以下で説明されているように置き換えてください。</p>
+<dl>
+  <dt>
+    <strong>searchTitle</strong></dt>
+  <dd>
+    "MDC を検索" や 'Yahoo! 検索" のような実行する検索の名前です。この値は、プラグインファイルの ShortName と一致させる必要があります。</dd>
+</dl>
+<dl>
+  <dt>
+    <strong>pluginURL</strong></dt>
+  <dd>
+    ブラウザがダウンロードできる XML 検索プラグインの URL です。</dd>
+</dl>
+<p>もしあなたのサイトが複数の検索プラグインを提供しているなら、それら全ての自動検出をサポートすることができます。例:</p>
+<pre class="eval">&lt;link rel="search" type="application/opensearchdescription+xml" title="MySite: 著者" href="<a class="external" href="http://www.mysite.com/mysiteauthor.xml" rel="freelink">http://www.mysite.com/mysiteauthor.xml</a>"&gt;
+&lt;link rel="search" type="application/opensearchdescription+xml" title="MySite: タイトル" href="<a class="external" href="http://www.mysite.com/mysitetitle.xml" rel="freelink">http://www.mysite.com/mysitetitle.xml</a>"&gt;
+</pre>
+<p>この方法であなたのサイトは著者による検索とタイトルによる検索を行うプラグインを別々のものとしてを提供することができます。</p>
+<h2 id=".E3.83.88.E3.83.A9.E3.83.96.E3.83.AB.E3.82.B7.E3.83.A5.E3.83.BC.E3.83.86.E3.82.A3.E3.83.B3.E3.82.B0.E3.81.AE.E3.83.92.E3.83.B3.E3.83.88" name=".E3.83.88.E3.83.A9.E3.83.96.E3.83.AB.E3.82.B7.E3.83.A5.E3.83.BC.E3.83.86.E3.82.A3.E3.83.B3.E3.82.B0.E3.81.AE.E3.83.92.E3.83.B3.E3.83.88">トラブルシューティングのヒント</h2>
+<p>検索プラグインの XML に問題があると、検出されたプラグインを Firefox 2 に追加する際にエラーが発生するでしょう。エラーメッセージは完全な参考になるわけではありません、しかし、以下のヒントが問題を探す手助けになるでしょう。</p>
+<ul>
+  <li>検索プラグインが{{ 原語併記("整形式", "well formed") }}か確認してください。</li>
+</ul>
+<p>ファイルを Firefox に直接読みこませることによって確認できます。テンプレート URL の中のアンパサンド(&amp;)は &amp;amp; でエスケープされている必要があり、タグは最後のスラッシュか一致する終了タグで閉じられている必要があります。</p>
+<ul>
+  <li><code>xmlns</code> 属性が重要です。<code>xmlns</code> 属性無しでは "Firefox は次の場所から検索エンジンをダウンロードできませんでした:(URL)" というエラーメッセージを受け取るでしょう。</li>
+  <li><code>text/html</code> URL を含めなくては<strong>ならない</strong> ことに注意してください — Atom や <a href="/ja/RSS" title="ja/RSS">RSS</a> URL タイプしか含まない検索エンジン(それは妥当なのですが、Firefox はサポートしていません) は "検索エンジンをダウンロードできませんでした"というエラーを引き起こします。</li>
+</ul>
+<p><br>
+  さらに、検索プラグインサービスはプラグイン開発者が使うであろうログの仕組みを提供します。<em>about:config</em> を使い '<code>browser.search.log</code>' を <code>true</code> にしてください。検索プラグインが追加されるとログ情報が Firefox の<a href="/ja/JavaScript_Console" title="ja/JavaScript_Console">エラーコンソール</a>(ツール -&gt; エラーコンソール)に表示されます。</p>
+<h2 id=".E5.8F.82.E8.80.83.E8.B3.87.E6.96.99" name=".E5.8F.82.E8.80.83.E8.B3.87.E6.96.99">参考資料</h2>
+<ul>
+  <li><a class="external" href="http://opensearch.a9.com/">OpenSearch ドキュメント</a></li>
+  <li>Technorati.com には <a class="external" href="http://technorati.com/osd.xml">動作する osd.xml</a> があります。</li>
+  <li>自動検出の更なる問題は bugzilla {{ Bug(340208) }}</li>
+  <li><a class="external" href="http://en.wikipedia.org/wiki/Data:_URI_scheme"><code>data:&lt;code&gt; URI スキーマ</code></a></li>
+  <li><a class="external" href="http://searchy.protecus.de/">Searchy</a> - あなた自身のを<a class="external" href="http://searchy.protecus.de/en/add2.php">作成</a>、あるいは<a class="external" href="http://searchy.protecus.de/en/searchbox-add-ons.php">検索プラグインのリスト</a>を利用する</li>
+  <li><a class="external" href="http://www.searchplugins.net">searchplugins.net</a> - OpenSearch プラグインの作成(日本語不可, POSTメソッド可) <a class="external" href="http://www.searchplugins.net/pluginlist.aspx">作成された検索プラグインのリスト</a></li>
+  <li><a class="external" href="http://ready.to/search/jp/">Ready2Search</a> - OpenSearch プラグインの作成(日本語可, GETメソッドのみ) <a class="external" href="http://ready.to/search/make/">Ready2Searchでの検索プラグイン作成</a>,<a class="external" href="http://ready.to/search/list/#setind">カテゴリー別の検索設定インデックス</a></li>
+</ul>

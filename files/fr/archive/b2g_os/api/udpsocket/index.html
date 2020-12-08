@@ -1,0 +1,66 @@
+---
+title: UDPSocket
+slug: Archive/B2G_OS/API/UDPSocket
+translation_of: Archive/B2G_OS/API/UDPSocket
+---
+<p></p><section class="Quick_links" id="Quick_Links"><ol><li><strong><a href="/fr/docs/Web/API/Archive"><code>Archive</code></a></strong></li><li class="toggle"><details open><summary>Pages liées à Firefox OS</summary><ol><li><a href="/fr/docs/Web/API/MozAlarmsManager"><code>MozAlarmsManager</code></a></li><li><a href="/fr/docs/Web/API/MozMobileNetworkInfo"><code>MozMobileNetworkInfo</code></a></li><li><a href="/fr/docs/Web/API/MozWifiP2pGroupOwner"><code>MozWifiP2pGroupOwner</code></a></li></ol></details></li></ol></section><p></p>
+
+<p></p><div class="overheadIndicator nonStandard nonStandardHeader">
+      <p><strong><span title="Cette API n'a pas été standardisée."><i class="icon-warning-sign"> </i></span> Non standard</strong><br>
+      Cette fonctionnalité n'est ni standard, ni en voie de standardisation. Ne l'utilisez pas pour des sites accessibles sur le Web : elle ne fonctionnera pas pour tout utilisateur. Il peut également y avoir d'importantes incompatibilités entre les implémentations et son comportement peut être modifié dans le futur.</p>
+      </div><p></p>
+
+<p></p><div class="warning">
+    <p style="text-align: center;">Cette API est disponible sur <a href="/fr/docs/Mozilla/Firefox_OS">Firefox OS</a> pour <a href="/fr/docs/Mozilla/Firefox_OS/Security/Application_security#App_Types">des applications privilégiées ou certifiées</a> seulement.</p>
+</div><p></p>
+
+<h2 id="Exemple_d'appel_de_l'API">Exemple d'appel de l'API</h2>
+
+<pre class="brush: js">var SSDP_PORT = 1900;
+var SSDP_ADDRESS = "239.255.255.250";
+var SSDP_DISCOVER_MX = 2;
+var SEARCH_TARGET = "urn:schemas-upnp-org:service:ContentDirectory:1";
+
+var SSDP_DISCOVER_PACKET =
+    "M-SEARCH * HTTP/1.1\r\n" +
+    "HOST: " + SSDP_ADDRESS + ":" + SSDP_PORT + "\r\n" +
+    "MAN: \"ssdp:discover\"\r\n" +
+    "MX: " + SSDP_DISCOVER_MX + "\r\n" +
+    "ST: " + SEARCH_TARGET + "\r\n" +
+    "\r\n";
+
+var searchSocket = new UDPSocket({
+    loopback: true
+});
+
+searchSocket.joinMulticastGroup(SSDP_ADDRESS);
+
+searchSocket.onmessage = function (e) {
+
+    var msg = String.fromCharCode.apply(null, new Uint8Array(e.data));
+
+    console.log(msg);
+};
+
+searchSocket.opened.then(function() {
+
+    searchSocket.send(SSDP_DISCOVER_PACKET, SSDP_ADDRESS, SSDP_PORT);
+
+    setTimeout(function () { searchSocket.close(); }, SSDP_DISCOVER_MX * 1000);
+});</pre>
+
+<h2 id="Exemple_de_manifeste">Exemple de manifeste</h2>
+
+<pre class="brush: json">{
+  "name": "My App",
+  "launch_path": "/index.html",
+  "icons": {
+  },
+  "developer": {
+  },
+  "type": "privileged",
+  "permissions": {
+    "udp-socket": { "description": "Required to do any UDP" }
+  },
+  "default_locale": "en"
+}</pre>

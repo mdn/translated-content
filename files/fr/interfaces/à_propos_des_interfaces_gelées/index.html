@@ -1,0 +1,27 @@
+---
+title: À propos des interfaces gelées
+slug: Interfaces/À_propos_des_interfaces_gelées
+tags:
+  - 'Interfaces:Gelées'
+translation_of: Interfaces/About_Frozen_Interfaces
+---
+<p> </p>
+<p> </p>
+<h3 id="Statut_de_ce_document">Statut de ce document</h3>
+<p>Ce document est un brouillon, et ne doit pas être considéré comme complet.</p>
+<h3 id="Interfaces_et_composants_XPCOM_:_Pr.C3.A9sentation">Interfaces et composants XPCOM : Présentation</h3>
+<p>Les applications Mozilla sont écrites comme un ensemble de composants XPCOM qui fournissent les fonctionnalités des applications, et un assortiment de <a href="/fr/XUL" title="fr/XUL">XUL</a>, de DTD et de <a href="/fr/JavaScript" title="fr/JavaScript">JavaScript</a> qui fournit l'interface utilisateur (UI).</p>
+<p>Les <a href="/fr/Création_de_composants_XPCOM" title="fr/Création_de_composants_XPCOM">composants XPCOM</a> sont dévoilés au monde par l'intermédiaire des interfaces. <small>(À traduire de <a href="/en/Creating_XPCOM_Components">en:Creating XPCOM Components</a>)</small></p>
+<p>Les <a href="/fr/Création_de_composants_XPCOM/Présentation_de_XPCOM#Interfaces" title="fr/Création_de_composants_XPCOM/Présentation_de_XPCOM#Interfaces">Interfaces</a> décrivent des portions de fonctionnalités fournies par les composants XPCOM, et sont écrites à l'aide d'un <a href="/fr/XPIDL" title="fr/XPIDL">Langage de description d'interface</a> (IDL : Interface Description Language, en anglais). <small>(À traduire de <a href="/en/Creating_XPCOM_Components:An_Overview_of_XPCOM#Interfaces">en:Creating XPCOM Components:An Overview of XPCOM#Interfaces</a>)</small></p>
+<h3 id="Interface_gel.C3.A9es">Interface gelées</h3>
+<p>Certaines interface (leurs IDL) ont évoluées en même temps que Mozilla. Cependant cela a provoqué des effets de bords :</p>
+<ol> <li>Vous devez modifier l'implémentation du composant pour être en mesure de rester compatible avec les changements des interfaces.</li> <li>Les clients utilisant ces composants doivent être modifiés en conséquence.</li>
+</ol>
+<p>Cela ne semble pas être un gros problème, mais avec l'apparition de nouvelles extensions (ou d'autres contributions), les développeurs doivent pouvoir compter sur la stabilité des interfaces qu'ils utilisent dans leurs extensions. Aussi avons nous un mécanisme qui fournit une telle confiance.</p>
+<p>L'équipe de développement de Mozilla fournit ce mécanisme en déclarant <strong>gelée</strong> une interface qui n'est plus susceptible d'évoluer. Cela signifie que chacun peut être sûr qu'un interface gelée ne changera plus, ainsi elle peut être utilisée comme on le désire : soit en implémentant un composant fournissant une fonctionnalité, soi en utilisant un composant à l'aide de cette interface.</p>
+<p>Les interfaces en développement (appelées également interfaces non gelées) sont susceptibles d'êtres modifiées et les développeurs les utilisant, de quelques manières que ce soit, doivent surveiller les changements pour adapter leurs travaux. Heureusement, les interfaces en développement peuvent être gelées sans autres modifications.</p>
+<p>Mozilla garde une trace de la <a href="/fr/Interfaces" title="fr/Interfaces">liste actuelle des interfaces</a> et leur statut.</p>
+<h3 id="Voir_.C3.A9galement">Voir également</h3>
+<p><a class="external" href="http://www.mozilla.org/projects/embedding/EmbedInterfaceFreeze.html">Interface Freeze Status (en)</a></p>
+<p><span class="comment">Interwiki Languages Links</span></p>
+<p>{{ languages( { "en": "en/Interfaces/About_Frozen_Interfaces", "ja": "ja/Interfaces/About_Frozen_Interfaces", "pl": "pl/Interfejsy/O_zamro\u017conych_interfejsach" } ) }}</p>

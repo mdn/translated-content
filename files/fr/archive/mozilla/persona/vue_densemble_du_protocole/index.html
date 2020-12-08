@@ -1,0 +1,61 @@
+---
+title: Vue d'ensemble du protocole
+slug: Archive/Mozilla/Persona/vue_densemble_du_protocole
+translation_of: Archive/Mozilla/Persona/Protocol_Overview
+---
+<p>Persona est construit sur le protocole BrowserID. Cette page décrit le fonctionnement haut niveau de BrowserID.</p>
+<h2 id="Acteurs">Acteurs</h2>
+<p>Le protocole implique trois acteurs:</p>
+<ul>
+  <li><strong>Les utilisateurs :</strong> Les personnes voulant se connecter a des sites web en utilisant Persona.</li>
+  <li><strong>Relying Parties (RPs): </strong>Les sites web autorisant la connexion avec Persona.</li>
+  <li><strong>Fournisseur d</strong>'<strong>identite (IdPs): </strong>Domains that can issue Persona-compatible identity certificates to their users.</li>
+</ul>
+<p>Persona et le protocole BrowserID utilisent les adresses e-mail comme identifiant, il est donc naturel que les fournisseurs d'e-mail deviennent des IdPs.</p>
+<p>Mozilla intervient en tant qu'IdP par défaut pour que les utilisateurs puissent utiliser n'importe quelle adresse e-mail, même si son fournisseur n'est pas un IdP.</p>
+<h2 id="Étapes_du_protocole">Étapes du protocole</h2>
+<p>Il y a trois étapes distinctes dans le protocole :</p>
+<ol>
+  <li>Fourniture du certificat de l'utilisateur</li>
+  <li>Génération de l'assertion</li>
+  <li>Vérification de l'assertion</li>
+</ol>
+<p>Comme prérequis, l'utilisateur doit avoir une adresse e-mail active qu'il souhaite utiliser pour se connecter. Le protocole ne requière pas que le fournisseur d'identité soit un routeur SMTP, mais il requière que l'identité soit au format <code>utilisateur@domaine</code>.</p>
+<h3 id="Fourniture_du_certificat_de_l'utilisateur">Fourniture du certificat de l'utilisateur</h3>
+<p>Pour se connecter à un site, un utilisateur doit prouver qu'il est le propriétaire de l'e-mail. La base de cette preuve est un certificat signé et chiffré fourni par l'IdP attestant le lien entre le navigateur d'un utilisateur et une identité donnée par l'IdP.</p>
+<p>Comme Persona utilise les techniques standard de <a href="https://fr.wikipedia.org/wiki/Cryptographie_asym%C3%A9trique" title="https://fr.wikipedia.org/wiki/Cryptographie_asym%C3%A9trique">cryptographie par clef publique</a>, le certificat de l'utilisateur est signé avec la clef privée de l'IdP et contient :</p>
+<ul>
+  <li>L'adresse e-mail de l'utilisateur.</li>
+  <li>La clef publique de l'utilisateur pour cette adresse sur ce navigateur.</li>
+  <li>La date où le certificat a été publié.</li>
+  <li>La date où le certificat expire.</li>
+  <li>Le nom de domaine de l'IdP.</li>
+</ul>
+<p>Le navigateur de l'utilisateur génére une paire de clef différente pour chaque adresse de l'utilisateur, et ces paires ne sont pas partagées entre les navigateurs. En conséquence, un utilisateur doit obtenir un nouveau certificat à chaque fois qu'un expire, ou à chaque fois qu'il utilise un nouveau navigateur ou ordinateur. Les certificats doivent expirer dans les 24h après leur emission.</p>
+<p>Quand un utilisateur séléctionne une identité à utiliser quand il se connécte a un site, le navigateur vérifie s'il a un certificat valide pour cette identité. Si c'est le cas, l'étape est terminée et la navigation continue avec l'étape d'après : la génération de l'assertion.  Si le navigateur n'a pas de certificat valide, il essaye d'en obtenir un du domaine associé avec l'identité choisie.</p>
+<ol>
+  <li>Le navigateur va chercher le document de support <a href="/en-US/docs/Persona/.well-known-browserid" title="/en-US/docs/Persona/.well-known-browserid">/.well-known/browserid</a> par SSL depuis le domaine de l'identité.</li>
+  <li>Avec les informations du document, le navigateur transmet l'adresse e-mail de l'utilisateur et la clef publique associée au fournisseur d'identité et demande un certificat signé.</li>
+  <li>Si nécessaire, l'utilisateur est invité à se connecter chez le fournisseur avant la fourniture du certificat.</li>
+  <li>Le fournissseur crée, signe et donne le certificat de l'utilisateur au navigateur de l'utilisateur.</li>
+</ol>
+<p>Le certificat en main, le navigateur peut continuer avec la génération de l'assertion et la connexion au site.</p>
+<p><img alt="user-certificate-provisioning.png" class="internal default" src="/@api/deki/files/6043/=user-certificate-provisioning.png"></p>
+<h3 id="Génération_de_l'assertion">Génération de l'assertion</h3>
+<p>Le certificat de l'utilisateur établie un lien vérifiable entre une adresse e-mail et une clef publique. Cependant, seul, ce n'est pas suffisant pour se connecter à un site web : l'utilisateur doit encore monter son lien avec le certificat en prouvant sa possession de la clef privée.</p>
+<p>Pour cela, le navigateur de l'utilisateur crée et signe un nouveau document appelé "assertion de l'identité". Il contient :</p>
+<ul>
+  <li>Le domaine du site où l'utilisateur veut se connecter.</li>
+  <li>Une date d'expiration de l'assertion, généralement moins de 5 minutes après sa création.</li>
+</ul>
+<p>Le navigateur présente alors à la fois le certificat de l'utilisateur et l'assertion de l'identité au site web pour la vérification.</p>
+<h3 id="Vérification_de_l'assertion">Vérification de l'assertion</h3>
+<p>La combinaison du certificat et de l'assertion est suffisante pour confirmer l'identité d'un utilisateur.</p>
+<p>D'abord, le site vérifie le domaine et la date d'expiration dans l'assertion. Si l'assertion est expirée ou destinée a un domaine different, elle est rejetée. Cela évite la réutilisation malicieuse de l'assertion</p>
+<p>Ensuite, le site valide la signature de l'assertion avec la clef publique de l'utilisateur contenu dans le certificat. Si la clef et la signature correspondent, le site est assuré que l'utilisateur posséde vraiment la clef associée au certificat.</p>
+<p>En dernier, le site va chercher la clef publique du fournisseur depuis son document <a href="/en-US/docs/Persona/.well-known-browserid" title="/en-US/docs/Persona/.well-known-browserid">/.well-known/browserid</a> et verifie qu'il correspond a la signature du certificat de l'utilisateur. Si c'est le cas, le site peut etre certain que le certificat a vraiment ete issue du domaine en question.</p>
+<p>Une fois cela vérifié, this is a current login attempt for the proper RP, that the user certificate matches the current user, and that the user certificate is legitimate, the RP is done and can authenticate the user as the identity contained in the certificate.</p>
+<p><img alt="assertion-generation-and-verify.png" class="internal default" src="/@api/deki/files/6042/=assertion-generation-and-verify.png"></p>
+<h2 id="The_Persona_Fallback_IdP">The Persona Fallback IdP</h2>
+<p>What if a user's email provider doesn't support Persona? In that case, the provisioning step would fail. By convention, the user's browser handles this by asking a trusted third party, <a href="https://login.persona.org/" title="https://login.persona.org/">https://login.persona.org/</a>, to certify the user's identity on behalf of the unsupported domain. After demonstrating ownership of the address, the user would then receive a certificate issued by the fallback IdP, <code>login.persona.org</code>, rather than the identity's domain.</p>
+<p>RPs follow a similar process when validating the assertion: the RP would ultimately request the fallback IdP's public key in order to verify the certificate.</p>

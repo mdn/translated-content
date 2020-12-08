@@ -1,0 +1,70 @@
+---
+title: Object.prototype.unwatch()
+slug: Web/JavaScript/Reference/Objets_globaux/Object/unwatch
+tags:
+  - JavaScript
+  - Méthode
+  - Non-standard
+  - Object
+  - Prototype
+  - Reference
+translation_of: Archive/Web/JavaScript/Object.unwatch
+---
+<div>{{JSRef}}{{Non-standard_header}}</div>
+
+<div class="warning">
+<p><strong>Méthode dépréciée !</strong> Ne pas utiliser <code>unwatch()</code> et {{jsxref("Object.prototype.watch", "watch()")}}. En effet, ces deux méthodes n'étaient implémentées qu'avec Gecko <strong>et ont été retirées à partir de Firefox 58.</strong> De plus, l'ajout de points d'arrêts conditionnels a de graves impacts sur les performances, notamment sur les objets globaux comme <code>window</code>. Il est conseillé d'utiliser les <a href="/fr/docs/Web/JavaScript/Guide/Utiliser_les_objets#D.C3.A9finir_des_getters_et_setters">accesseurs et mutateurs</a> ou les proxies.</p>
+</div>
+
+<p>La méthode <code><strong>unwatch()</strong></code> permet de retirer un point d'arrêt conditionnel créé par la méthode {{jsxref("Object.prototype.watch", "watch()")}}.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox"><var>obj</var>.unwatch(<var>prop</var>)</pre>
+
+<h3 id="Paramètres">Paramètres</h3>
+
+<dl>
+ <dt><code>prop</code></dt>
+ <dd>Le nom de la propriété dont on ne veut plus suivre l'état.</dd>
+</dl>
+
+<h3 id="Valeur_de_retour">Valeur de retour</h3>
+
+<p>{{jsxref("undefined")}}.</p>
+
+<h2 id="Description">Description</h2>
+
+<p>Le débogueur JavaScript possède plusieurs fonctionnalités, y compris celles offertes par cette fonction. Pour plus d'informations sur cet outil, voir <a href="/fr/docs/Outils/Debugger">le débogueur JavaScript</a>.</p>
+
+<p>Par défaut, tous les objets qui descendent de {{jsxref("Object")}} héritent de cette méthode.</p>
+
+<div class="note">
+<p><strong>Note :</strong> <code>unwatch()</code> utilise le nom d'une seule propriété comme paramètre. Ce comportement est expliqué avec la méthode {{jsxref("Object.watch", "watch()")}}.</p>
+</div>
+
+<h2 id="Exemples">Exemples</h2>
+
+<p>Voir {{jsxref("Object.watch", "watch()")}}.</p>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<p>Cette méthode ne fait partie d'aucune spécification. Implémentée avec JavaScript 1.2.</p>
+
+<h2 id="Compatibilité_des_navigateurs"><a id="compat" name="compat">Compatibilité des navigateurs</a></h2>
+
+<div>
+
+
+<p>{{Compat("javascript.builtins.Object.unwatch")}}</p>
+</div>
+
+<h2 id="Notes_de_compatibilté">Notes de compatibilté</h2>
+
+<p>Si on appelle <code>unwatch()</code> sur un objet {{domxref("Document")}}, on aura une exception {{jsxref("TypeError")}} à partir de Firefox 23 ({{bug(903332)}}). Cette régression a été corrigée avec Firefox 27.</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>{{jsxref("Object.watch()")}}</li>
+</ul>

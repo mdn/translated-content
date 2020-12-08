@@ -1,0 +1,66 @@
+---
+title: SettingsManager
+slug: Archive/B2G_OS/API/SettingsManager
+tags:
+  - API
+  - B2G
+  - Firefox OS
+  - Settings
+translation_of: Archive/B2G_OS/API/SettingsManager
+---
+<div>
+<section class="Quick_links" id="Quick_Links">
+<ol>
+ <li><strong><a href="/en-US/docs/Mozilla/Firefox_OS/API/Settings_API">Settings API</a></strong></li>
+ <li><strong><a href="/en-US/docs/Mozilla/Firefox_OS/API/Archive"><code>Archive</code></a></strong></li>
+ <li data-default-state="open"><a href="#"><strong>Events</strong></a>
+  <ol>
+   <li><a href="/en-US/docs/Web/Events/settingchange"><code>settingchange</code></a></li>
+  </ol>
+ </li>
+ <li data-default-state="open"><a href="#"><strong>Related pages for Settings API</strong></a>
+  <ol>
+   <li><a href="/en-US/docs/Mozilla/Firefox_OS/API/MozSettingsEvent"><code>MozSettingsEvent</code></a></li>
+   <li><a href="/en-US/docs/Mozilla/Firefox_OS/API/SettingsLock"><code>SettingsLock</code></a></li>
+   <li><a href="/en-US/docs/Mozilla/Firefox_OS/API/SettingsManager"><code>SettingsManager</code></a></li>
+  </ol>
+ </li>
+</ol>
+</section>
+
+<div class="warning">
+<p style="text-align: center;">此API在 <a href="/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a> 上仅适用于 <a href="/en-US/docs/Mozilla/Firefox_OS/Security/Application_security#App_Types">内部程序 </a>。</p>
+</div>
+</div>
+
+<p>提供对设备设置的访问。</p>
+
+<h2 id="属性">属性</h2>
+
+<dl>
+ <dt><a href="/en-US/docs/Web/API/SettingsManager/onsettingchange" title="The documentation about this has not yet been written; please consider contributing!"><code>SettingsManager.onsettingchange</code></a></dt>
+ <dd>引用处理程序来管理设置的更改状态。</dd>
+</dl>
+
+<h2 id="Methods" name="Methods">方法</h2>
+
+<dl>
+ <dt><a href="/en-US/docs/Web/API/SettingsManager/createLock" title="The documentation about this has not yet been written; please consider contributing!"><code>SettingsManager.createLock()</code></a></dt>
+ <dd>返回一个异步的安全访问设置的 <a href="/en-US/docs/Web/API/SettingsLock" title="The documentation about this has not yet been written; please consider contributing!"><code>SettingsLock</code></a> 对象。</dd>
+ <dt><a href="/en-US/docs/Web/API/SettingsManager/addObserver" title="The documentation about this has not yet been written; please consider contributing!"><code>SettingsManager.addObserver()</code></a></dt>
+ <dd>允许绑定一个函数来对给定的设置进行任意的更改。</dd>
+ <dt><a href="/en-US/docs/Web/API/SettingsManager/removeObserver" title="The documentation about this has not yet been written; please consider contributing!"><code>SettingsManager.removeObserver()</code></a></dt>
+ <dd>允许取消绑定之前使用 <code>addObserver</code> 绑定的处理程序。</dd>
+</dl>
+
+<h2 id="Specification" name="Specification">标准</h2>
+
+<p>目前还没有成为任何标准的一部分，然而，此API将会作为 <a href="http://www.w3.org/2012/sysapps/" rel="external">System Applications Working Group</a> 的一部分参与W3C的讨论。</p>
+
+<h2 id="See_also" name="See_also">其他</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/SettingsLock" title="The documentation about this has not yet been written; please consider contributing!"><code>SettingsLock</code></a></li>
+ <li><a href="/en-US/docs/Web/API/Window/navigator/mozSettings" title="The documentation about this has not yet been written; please consider contributing!"><code>navigator.mozSettings</code></a></li>
+ <li><a href="/en-US/docs/WebAPI/Settings">Settings API</a></li>
+</ul>

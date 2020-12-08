@@ -1,0 +1,119 @@
+---
+title: nsIThread
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsIThread
+tags:
+  - Firefox 3
+  - Interfaces
+  - Threads
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIThread
+---
+<p> <code>nsIThread</code> インタフェースは、オペレーティングシステム (OS) のスレッドに対する高レベルの抽象化を提供します。スレッドには組み込みのキューが含まれており、スレッドは、そのスレッド上で処理される <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIRunnable" title="">nsIRunnable</a></code> オブジェクト (イベント) を取得できるイベントターゲットと言えます。</p>
+<p>スレッドを作成するには、<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThreadManager" title="">nsIThreadManager</a></code> インタフェースを使います。</p>
+<p>継承元: <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIEventTarget" title="">nsIEventTarget</a></code></p>
+<p><br>
+ </p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/xpcom/threads/nsIThread.idl" rel="custom">xpcom/threads/nsIThread.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">最終更新: Gecko 1.9 (Firefox 3)</span></div>
+</div>
+<h2 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E6.A6.82.E8.A6.81" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E6.A6.82.E8.A6.81">メソッドの概要</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void shutdown()</code></td>
+  </tr>
+  <tr>
+   <td><code>boolean hasPendingEvents()</code></td>
+  </tr>
+  <tr>
+   <td><code>boolean processNextEvent(in boolean mayWait)</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id=".E5.B1.9E.E6.80.A7" name=".E5.B1.9E.E6.80.A7">属性</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">属性</td>
+   <td class="header">型</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code>PRThread</code></td>
+   <td><code><a href="/ja/PRThread" title="ja/PRThread">PRThread</a></code></td>
+   <td><code>nsIThread</code> に相当する NSPR スレッドオブジェクト。<em>読み取り専用。</em></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89">メソッド</h2>
+<h3 id="shutdown.28.29" name="shutdown.28.29">shutdown()</h3>
+<p>スレッドを停止します。これは、そのスレッドに割り当てられているイベントを中止し、スレッドが現在のスレッドに加わる前に、待機中のイベントがある場合はそれらを実行して完了させます (詳しくは <code><a href="/ja/PR_JoinThread" title="ja/PR_JoinThread">PR_JoinThread()</a></code> を参照してください)。このメソッド呼び出しの実行中、現在のスレッドに割り当てられたイベントは処理が継続されます。</p>
+<div class="warning">
+ <strong>警告:</strong> このメソッドは、スレッド自体から呼び出すことができません。その代わり、他のスレッド (通常、呼び出したいスレッドの作成元であるスレッド、もしくはメインのアプリケーションスレッド) から呼び出す必要があります。この関数が返されると、スレッドは停止され、以後イベントを受け付けることはできなくなります。</div>
+<pre class="eval">void shutdown()
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0" name=".E5.BC.95.E6.95.B0">引数</h6>
+<p>なし。</p>
+<h6 id=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96" name=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96">投げられる例外</h6>
+<dl>
+ <dt>
+  <code>NS_ERROR_UNEXPECTED</code></dt>
+ <dd>
+  <code>shutdown()</code> が、スレッド自体から誤って呼び出された場合。そのスレッドがスレッドマネージャの <code><a href="/ja/nsIThreadManager#newThread.28.29" title="ja/nsIThreadManager#newThread.28.29">newThread()</a></code> メソッドを使って作成されたものではない場合。あるいはスレッドがすでに停止処理中である場合。</dd>
+</dl>
+<h3 id="hasPendingEvents.28.29" name="hasPendingEvents.28.29">hasPendingEvents()</h3>
+<p>処理待機中のイベントがそのスレッドに存在するかどうかを判別します。</p>
+<div class="blockIndicator note"><strong>註:</strong> このメソッドは、他のスレッドからではなく、スレッド自体から呼び出す必要があります。</div>
+<pre class="eval">boolean hasPendingEvents()
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_2" name=".E5.BC.95.E6.95.B0_2">引数</h6>
+<p>なし。</p>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4" name=".E6.88.BB.E3.82.8A.E5.80.A4">戻り値</h6>
+<p>関数が呼び出された時点で待機中のイベントが存在する場合は <code>true</code>。なお、<code>false</code> が返ってきた場合でも、現在のスレッドに他のスレッドがイベントを追加できるため、このメソッドが返るまでにイベントキューが空ではなくなる可能性があります。</p>
+<h6 id=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96_2" name=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96_2">投げられる例外</h6>
+<dl>
+ <dt>
+  <code>NS_ERROR_UNEXPECTED</code></dt>
+ <dd>
+  このスレッドが現在のスレッドではないときにこのメソッドが呼び出された場合。</dd>
+</dl>
+<h3 id="processNextEvent.28.29" name="processNextEvent.28.29">processNextEvent()</h3>
+<p>次に待機中のイベントを処理します。待機中のイベントが存在しない場合、<code>mayWait</code> 引数の値によっては、新しいイベントがスレッドに割り当てられるまで待機状態となります。</p>
+<p>このメソッドは再入可能ですが、このスレッドが現在のスレッドである場合のみ呼び出されます。</p>
+<pre class="eval">boolean processNextEvent(
+  in boolean mayWait
+)
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_3" name=".E5.BC.95.E6.95.B0_3">引数</h6>
+<dl>
+ <dt>
+  <code>mayWait</code></dt>
+ <dd>
+  <code>true</code> の場合、イベントキューが空であるときは、新しいイベントが処理可能になるまで待機します。<code>false</code> の場合、イベントキューが空であるときは即座に返ります。</dd>
+</dl>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4_2" name=".E6.88.BB.E3.82.8A.E5.80.A4_2">戻り値</h6>
+<p>イベントが処理中であった場合は <code>true</code>、待機中のイベントが存在しない場合は <code>false</code>。</p>
+<h6 id=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96_3" name=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96_3">投げられる例外</h6>
+<dl>
+ <dt>
+  <code>NS_ERROR_UNEXPECTED</code></dt>
+ <dd>
+  このスレッドが現在のスレッドではないときにこのメソッドが呼び出された場合。</dd>
+</dl>
+<h2 id=".E9.96.A2.E9.80.A3.E8.A8.98.E4.BA.8B" name=".E9.96.A2.E9.80.A3.E8.A8.98.E4.BA.8B">関連記事</h2>
+<ul>
+ <li><a href="/ja/The_Thread_Manager" title="ja/The_Thread_Manager">The Thread Manager</a></li>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThreadManager" title="">nsIThreadManager</a></code></li>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThreadPool" title="">nsIThreadPool</a></code></li>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThreadInternal" title="">nsIThreadInternal</a></code></li>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThreadObserver" title="">nsIThreadObserver</a></code></li>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThreadEventFilter" title="">nsIThreadEventFilter</a></code></li>
+</ul>

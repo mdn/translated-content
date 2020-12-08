@@ -1,0 +1,107 @@
+---
+title: Worker.terminate()
+slug: Web/API/Worker/terminate
+translation_of: Web/API/Worker/terminate
+---
+<p>{{APIRef("Web Workers API")}}</p>
+
+<p>{{domxref("Worker")}}インターフェイスの<code><strong>terminate()</strong></code>メソッドは{{domxref("Worker")}}を即座に停止します。これはworkerに対してその動作を終了する機会を提供するものではありません。単純に即時停止をします。</p>
+
+<h2 id="構文">構文</h2>
+
+<pre class="brush: js">myWorker.terminate();</pre>
+
+<h3 id="引数">引数</h3>
+
+<p>無し。</p>
+
+<h3 id="返り値">返り値</h3>
+
+<p>Void.</p>
+
+<h2 id="例">例</h2>
+
+<p>次のコードでは{{domxref("Worker")}}オブジェクトを{{domxref("Worker.Worker", "Worker()")}} コンストラクタで作成したあと、すぐに停止しています。</p>
+
+<pre class="brush: js">var myWorker = new Worker("worker.js");
+
+myWorker.terminate();
+</pre>
+
+<h2 id="仕様">仕様</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "#dom-worker-terminate", "Worker.postMessage()")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>No change from {{SpecName("Web Workers")}}.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Workers', "#dom-worker-terminate", "Worker.postMessage()")}}</td>
+   <td>{{Spec2('Web Workers')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>4</td>
+   <td>3.5</td>
+   <td>10.0</td>
+   <td>10.6</td>
+   <td>4</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>4.4</td>
+   <td>3.5</td>
+   <td>1.0.1</td>
+   <td>10.0</td>
+   <td>11.5</td>
+   <td>5.1</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="関連項目">関連項目</h2>
+
+<p>The {{domxref("Worker")}} interface it belongs to.</p>

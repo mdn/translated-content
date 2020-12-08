@@ -1,0 +1,357 @@
+---
+title: Développer des modules pour B2G OS
+slug: Archive/B2G_OS/Add-ons/Développer_des_add-ons_pour_Firefox_OS
+tags:
+  - Apps
+  - CSS
+  - Extensions
+  - Firefox OS
+  - JavaScript
+  - Manifeste
+  - Modules
+  - personnalisations
+translation_of: Archive/B2G_OS/Add-ons/Developing_B2G_OS_add-ons
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/fr/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/fr/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<p class="summary">Les modules sont un concept bien connu dans le monde des navigateurs web, et ce concept a été ajouté à Firefox OS. Un module Firefox OS unique peut étendre les fonctionalités d'une ou plusieurs applications, voire toutes les applications, en incluant les applications système. Cet article est un guide pour la création de votre propre module Firefox OS, avec des conseils, des astuces, et des informations à prendre en compte.</p>
+
+<div class="note">
+<p><strong>Note: </strong>Les modules Firefox OS utilisent le système d'extensions WebExtensionns, qui est largement basé sur les extensions de Chrome/Blink, donnant de nombreux avantages sur la façon dont les modules sont créés en terme d'interopérabilité et de fonctionalités. Pour en savoir plus, gardez un œil sur notre documentation grandissante sur <a href="/fr/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a>.</p>
+</div>
+
+<div class="warning">
+<p><strong>Important :</strong> Les modules ne sont disponibles que sur Firefox OS 2.5+, et vous aurez besoin d'un nouveau build installé sur votre téléphone pour être sûr que vous avez un support pour le débogage d'extensions dans WebIDE, etc. Soyez sûr d'avoir mis à jour avec le dernier build (2015-27-08 ou plus) sur votre téléphone développeur avant de commencer à développer des modules Firefox OS.</p>
+</div>
+
+<h2 id="Développer_des_modules">Développer des modules</h2>
+
+<p>Les modules sont des paquets composés de Javascipt, CSS, et d'autres assets. Cependant, ils ne sont pas autonomes. À la place, le manifeste du module inclut des fonctionnalités spéciales qui définissent les applications auxquelles appliquer le module. Quand les applications sont lancées sur un appareil Firefox OS qui a un module installé, le module est injecté dans l'application qui concorde avec le modèle spécifié dans le champ du fichier <a href="#manifest.json">manifest.json</a>.</p>
+
+<p>Les modules Firefox OS utilisent les mêmes syntaxe et structure dans leur code que la nouvelle école de modules Firefox utilisant l'<a href="https://wiki.mozilla.org/WebExtensions">API WebExtensions</a>, qui est basée sur le modèle d'<a href="https://developer.chrome.com/extensions">extensions de Chrome</a>.</p>
+
+<h3 id="Un_exemple_simple">Un exemple simple</h3>
+
+<p>Pour comprendre les bases des modules Firefox OS, nous allons présenter un simple exemple qui ajoute une bannière a l'application système, sur laquelle on peut cliquer pour la cacher.</p>
+
+<p><img alt="firefox os screenshot showing add-on banner" src="https://mdn.mozillademos.org/files/11445/add-on-screenshot.png" style="display: block; height: 445px; margin: 0px auto; width: 250px;"></p>
+
+<p>C'est vraiment basique et trivial, mais cela vous donnera ce qu'il faut pour commencer. Vous pouvez regarder le <a href="https://github.com/mdn/simple-addon">code de l'exemple sur Github</a>, et installer le module sur votre appareil Firefox OS en clonant le dépôt localement, puis en utilisant WebIDE (voir la section <a href="#Testing_your_add-on_using_WebIDE">Testing your add-on using WebIDE</a>.) Vous pouvez <a href="/en-US/docs/Mozilla/Marketplace/Add-on_submission">distribuer le module en utilisant le Marketplace Firefox.</a></p>
+
+<p>Sachez qu'un module Firefox OS peut faire bien plus que ce qui est listé ici. La documentation de <a href="/fr/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a> comportera plus d'informations au fil du temps.</p>
+
+<h2 id="L'anatomie_d'un_module_Firefox_OS">L'anatomie d'un module Firefox OS</h2>
+
+<p>Dans cette partie, nous allons parcourir le contenu du dépôt du module d'exemple, en expliquant chaque élément. La structure des dossiers ressemble à ça :</p>
+
+<ul class="directory-tree">
+ <li>simple-addon/
+  <ul>
+   <li>manifest.json</li>
+   <li>update.webapp</li>
+   <li>css/
+    <ul>
+     <li>style.css</li>
+    </ul>
+   </li>
+   <li>js/
+    <ul>
+     <li>index.js</li>
+    </ul>
+   </li>
+   <li>icons/
+    <ul>
+     <li>128.png</li>
+    </ul>
+   </li>
+   <li>extension.zip</li>
+  </ul>
+ </li>
+</ul>
+
+<h3 id="manifest.json">manifest.json</h3>
+
+<p>Remarquez qu'il y a deux fichiers de manifeste dans notre dossier d'exemple de module. Le premier, manifest.json, suit la structure de manifeste Chrome, et est placé dans l'archive <a href="#extensions.zip">extensions.zip</a> avec le CSS, le Javascript et l'icône compris dans le module. Il peut contenir une large palette d'instructions (voir <a href="https://developer.chrome.com/extensions/manifest">Chrome Manifest File Format</a>), mais pour le moment nous allons nous concentrer sur une petite partie :</p>
+
+<pre class="brush: json">{
+  "manifest_version": 1,
+  "name": "Add-on banner",
+  "description": "Firefox OS add-on example",
+  "version": "1.0",
+  "author": "Chris Mills",
+  "content_scripts": [{
+    "matches": ["app://system.gaiamobile.org/index.html"],
+    "css": ["css/style.css"],
+    "js": ["js/index.js"]
+  }],
+  "icons": {
+    "128": "/icons/128.png"
+  }
+}</pre>
+
+<p>La plupart de ces champs sont assez explicites, mais nous allons voir les derniers.</p>
+
+<p>Tout d'abord, le champ <code>content_scripts</code> désigne le code qui sera injecté dans les applications sur lesquelles le module est appliqué, en fournissant le chemin des fichiers CSS et Javascript dans les champs <code>css</code> et <code>js</code>. Le champ <code>matches</code> contient un modèle qui spécifie dans quelles applications le code sera injecté. Ce modèle peut prendre différentes formes (voir <a href="https://developer.chrome.com/extensions/match_patterns">Chrome Match Patterns</a>), mais pour l'instant nous spécifions simplement <code>app://system.gaiamobile.org/index.html</code>, ce qui affecte uniquement l'application système. Vous pourriez l'appliquer à toutes les applications en utilisant <code>app://*/*</code>.</p>
+
+<div class="note">
+<p><strong>Note </strong>: Vous pouvez désigner plusieurs scripts et feuilles de styles en incluant simplement plusieurs éléments dans les tableaux, par exemple <code>"css": ["css/style.css", "css/more.css"]</code>.</p>
+</div>
+
+<div class="note">
+<p><strong>Note </strong>: Firefox OS ne supporte pas le mot-clé de Chrome &lt;all_urls&gt;.</p>
+</div>
+
+<p>En bas du manifeste nous avons inclus le champ <code>icons</code>, voir la section suivante pour plus d'infos à ce sujet.</p>
+
+<h3 id="update.webapp">update.webapp</h3>
+
+<div class="note">
+<p><strong>Note</strong> : Vous n'avez pas besoin du manifeste .webapp si vous voulez <a href="/en-US/docs/Mozilla/Marketplace/Add-on_submission">soumettre un module au Marketplace Firefox</a>, simplement du fichier .zip</p>
+</div>
+
+<p>Le manifeste <code>update.webapp</code> est un <a href="https://developer.mozilla.org/fr/Apps/Manifeste">manifeste de style Firefox OS</a>, ce qui est sensiblement équivalent à un mini manifeste d'application empaquetée (voir <a href="/fr/Marketplace/Options/Self_publishing#Auto-publication_d'applications_empaquet.C3.A9es">Auto-publication d'applications empaquetées</a>.)</p>
+
+<p>Notre <code>update.webapp</code> ressemblera à ça :</p>
+
+<pre class="brush: json">{
+  "name" : "Add-on banner",
+  "description": "Firefox OS add-on example",
+  "developer": { "name": "Chris Mills" },
+  "package_path": "extension.zip",
+  "icons": {
+    "128": "/icons/128.png"
+  }
+}</pre>
+
+<p>Encore une fois, ceci est assez explicite.</p>
+
+<p>Le champ le plus important ici est probablement <code>package_path</code>, qui référence l'archive qui contient l'extension.</p>
+
+<p>Vous remarquerez que le champ <code>icons</code> est inclus ici de la même façon que dans <a href="#manifest.json">manifest.json</a>, <code>update.webapp</code> est le seul endroit où vous <em>avez</em> besoin des informations d'icônes pour le moment, mais nous vous recommendons de les inclure dans les deux au cas où cela deviendrait nécessaire. Le champ icons dirige vers l'<code>icône</code> du module pour être utilisé dans l'application Paramètres de Gaia.</p>
+
+<h3 id="Inclure_une_icône">Inclure une icône</h3>
+
+<p>Vous devez inclure au moins une icône et la référencer dans votre manifeste, autrement le manifeste ne sera pas validé. Voir la <a href="/fr/Apps/Manifeste#icons">section de référence des icônes de Manifeste</a> pour plus d'informations. </p>
+
+<h3 id="CSS">CSS</h3>
+
+<div class="warning">
+<p><strong>Important : </strong>A cause du <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1179536">bug 1179536</a>, injecter des feuilles de styles ailleurs que dans l'application système est impossible, cela fonctionnera tout de même pour ce tutoriel car le module n'affecte que l'application système, mais pour ajouter des règles de style à une autre application ou page web vous aurez besoin de modifier le style en utilisant JavaScript.</p>
+</div>
+
+<p>Il n'y a rien de spécial à propos du CSS dans cet exemple. La seule chose à garder à l'esprit est de faire attention aux noms de classe et sélecteurs de votre module pour ne pas entrer en conflit avec le CSS de/des application(s).</p>
+
+<p>Par exemple, nous avons enveloppé notre bannière d'exemple dans une <a href="/fr/docs/Web/HTML/Element/div" title="L'élément HTML &lt;div> (qui signifie division du document) est un conteneur générique qui permet d'organiser le contenu sans représenter rien de particulier. Il peut être utilisé afin de grouper d'autres éléments pour leur appliquer un style (en utilisant les attributs class ou id) ou parce qu'ils partagent des attributs aux valeurs communes, tel que lang. Il doit uniquement être utilisé lorsqu'aucun autre élément sémantique (par exemple &lt;article> ou &lt;nav>) n'est approprié."><code>&lt;div&gt;</code></a> avec la classe <code>fxos-banner</code>. Mais vous pourriez tout aussi bien utiliser votre propre code pour votre nom de classe.</p>
+
+<h3 id="JavaScript">JavaScript</h3>
+
+<p>Encore une fois, le ficher JavaScript qui fait fonctionner le module ne contient aucune fonctionnalité spéciale (voir le code source JavaScript sur Github). Il est injecté dans l'applicaction avec le CSS spécifié dans le fichier <a href="#manifest.json">manifest.json</a>.</p>
+
+<div class="note">
+<p><strong>Note :</strong> Le code du module est injecté à chaque fois qu'une application qui est référencée par le modèle du manifest.json est lancé. Il est aussi injecté quand les modules sont activés. Quand le module est injecté par le lancement de l'application, tous les fichiers du module sont injectés dans l'application avant que quoi que ce soit dans l'app ne soit initialisé, en incluant le DOM. C'est au développeur du module de gérer les différents cas de lancement (injection immédiate contre injection au lancement), il y a plus d'informations plus bas.</p>
+</div>
+
+<p>Plusieurs autres points sont abordés plus bas.</p>
+
+<h4 id="L'objet_window">L'objet window</h4>
+
+<p>Les modules ne partagent qu'une représentation du contenu de <code>window</code>. En conséquence, tout ce qui est enregistré dans l'objet <a href="/fr/docs/Web/API/Window">window</a> par un module est indisponible dans le code de l'application. Cependant, tout ce qui est dans l'objet <code>window</code> par le code de l'application est disponible aux modules. Le DOM est accessible comme d'habitude.</p>
+
+<h4 id="Injection_DOM">Injection DOM</h4>
+
+<p>Vous pouvez utiliser les APIs JavaScript pour manipuler le DOM de l'application.</p>
+
+<h4 id="Injecter_du_code_au_bon_moment">Injecter du code au bon moment</h4>
+
+<p>Vous devez être prudent pour gérer correctement les cas où un module est injecté dans une application après qu'elle ait été chargée. Un tel scénario peut se produire quand une application est déjà lancée et qu'un module qui la concerne est activé. Dans ce cas, un gestionnaire <a href="/fr/docs/Web/API/GlobalEventHandlers/onload">window.onload</a> ne fonctionnera pas parce que l'événement <a href="/fr/docs/Web/Events/DOMContentLoaded">DOMContentLoaded</a> s'est déjà produit.</p>
+
+<p>Pour l'instant, il n'existe pas de bonne solution à ce problème. En attendant, nous conseillons de vérifier si le DOM a été chargé ou non avant de définir un callback <code>DOMContentLoaded</code>. Ce modèle est utilisé dans la démo :</p>
+
+<pre class="brush: js">// En cas d'injection dans une appli déjà lancée au moment où
+// l'appli a été activée, l'initialiser simplement.
+if (document.documentElement) {
+  initialize();
+}
+
+// Sinon, nous devons attendre que le DOM soit prêt avant de
+// lancer l'initialisation car les modules sont en général (toujours ?)
+// injectés *avant* que `document.documentElement` ne soit défini.
+else {
+  window.addEventListener('DOMContentLoaded', initialize);
+}
+
+function initialize() {
+  // ...
+}
+</pre>
+
+<h4 id="Empêcher_les_injections_multiples">Empêcher les injections multiples</h4>
+
+<p>Enfin, pour empêcher un module d'être injecté à plusieurs reprises dans une instance unique d'application, nous devons vérifier si votre module est déjà présent ou non, de cette manière :</p>
+
+<pre class="brush: js">function initialize() {
+  if (document.querySelector('.fxos-banner')) {
+    // Déjà injectée, annulation.
+    return;
+  } else {
+    var body = document.querySelector('body');
+    var fxosBanner = document.createElement('div');
+    fxosBanner.classList.add('fxos-banner');
+    var bannerText = document.createElement('p');
+    var closeBtn = document.createElement('button');
+
+    fxosBanner.appendChild(bannerText);
+    fxosBanner.appendChild(closeBtn);
+    body.appendChild(fxosBanner);
+
+    closeBtn.textContent = 'X';
+    bannerText.textContent = 'Waouh, vous avez une extension installée !';
+
+    closeBtn.onclick = function() {
+      fxosBanner.parentNode.removeChild(fxosBanner);
+    }
+  }
+}
+</pre>
+
+<p>Ici donc, nous faisons usage de <code>if (document.querySelector('.fxos-banner'))</code> pour vérifier si la bannière d'exemple existe déjà. Dans l'affirmative, nous quittons la fonction. Si ce n'est pas le cas, la méthode <code>querySelector()</code> renvoie alors <code>null</code>, et nous exécutons le bloc de code qui crée la bannière.</p>
+
+<h4 id="Fonctions_de_gestion_des_applis_dans_les_modules">Fonctions de gestion des applis dans les modules</h4>
+
+<p>Toutes les fonctions <code><a href="/fr/docs/Web/API/DOMApplicationsRegistry">Apps</a></code> et <code><a href="/en-US/docs/Web/API/DOMApplicationsRegistry/mgmt">Mgmt</a></code> se comportent avec les modules de la même façon qu'avec les applications. Notez cependant qu'elles ne sont disponibles pour les modules que lorsque ces derniers sont injectés dans une application certifiée possédant la permission <code>webapps-manager</code> spécifiée dans le manifeste.</p>
+
+<p>En plus de ces fonctions, un callback <code><a href="http://mxr.mozilla.org/mozilla-central/source/dom/webidl/Apps.webidl#141">onenabledstatechange</a></code> est exposé aux modules qui sont activés et désactivés. Comme cet événement est déclenché pour tous les modules, il vous faut vérifier lequel d'entre-eux a été activé/désactivé avant de procéder à toute initialisation ou nettoyage.</p>
+
+<pre class="brush: js"><span>navigator.mozApps.mgmt</span>.<span>addEventListener('enabledstatechange</span>', <span>function</span>(<span>event</span>) {
+  var app = event.application;
+  if (app.manifestURL === 'https://origin.of.manifest/manifest.webapp') {
+    var wasEnabled = app.enabled;
+    // faire quelque chose de cette information
+  }
+});
+</pre>
+
+<div class="warning">
+<p><strong>Important </strong>:  En raison du <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1214155">bogue 1214155</a>, il n'est pas possible d'ajouter le gestionnaire d'événement enabled state via <code>navigator.mozApps.mgmt.</code><span id="summary_alias_container"><span id="short_desc_nonedit_display"><code>onenabledstatechange = function() {...}</code> : vous devez utiliser la méthode <code>addEventListener</code> comme mentionné ci-dessus.</span></span></p>
+</div>
+
+<h3 id="extension.zip">extension.zip</h3>
+
+<div class="note">
+<p><strong>Note</strong> : Le fichier <code>extension.zip</code> a été laissé dans le dépôt de démo principalement dans un but d'illustration ; la façon dont fonctionne le système est ainsi claire. En réalité, vous n'avez pas besoin d'inclure le zip dans votre répertoire car WebIDE va le générer à votre place lorsque vous installerez le module.</p>
+</div>
+
+<p>L'archive <code>extension.zip</code> contient le code de l'extension et est référencée dans le champ <a href="#update.webapp">update.webapp</a> <code>package_path</code> — C'est ainsi que Gecko trouve le code à installer. Archivés à l'intérieur, vous trouverez :</p>
+
+<ul class="directory-tree">
+ <li>css/
+  <ul>
+   <li>style.css</li>
+  </ul>
+ </li>
+ <li>js/
+  <ul>
+   <li>index.js</li>
+  </ul>
+ </li>
+ <li>icons/
+  <ul>
+   <li>128.png</li>
+  </ul>
+ </li>
+ <li>manifest.json</li>
+</ul>
+
+<p>Le fichier <code>manifest.json</code> se trouve donc à l'intérieur de l'archive et sert à faire référence aux fichiers à injecter et à spécifier quelles sont les applications à affecter.</p>
+
+<h3 id="Tester_votre_module_avec_WebIDE">Tester votre module avec WebIDE</h3>
+
+<p>L'outil WebIDE de Mozilla est disponible par défaut dans Firefox pour ordinateur. Pour s'en servir afin d'installer des modules sur votre téléphone, suivez les étapes énumérées ci-dessous :</p>
+
+<ol>
+ <li>Assurez-vous d'avoir installé Firefox 43 ou plus récent (il s'agissait de <a href="https://nightly.mozilla.org/">Nightly</a> au moment de la rédaction de cet article). Les modules ne sont pas pris en charge par WebIDE avant cette version.</li>
+ <li>Ouvrez votre navigateur puis l'outil WebIDE (cliquez sur le bouton WebIDE ou allez dans le menu <em>Outils &gt; Développement web &gt; WebIDE</em>.)</li>
+ <li>Vérifiez que le débogage distant est activé sur votre téléphone (<em>Paramètres &gt; Développeur &gt; Définissez "Débogage via USB " sur "ADB et outils de développement".</em>)</li>
+ <li>Branchez votre téléphone sur votre ordinateur avec un câble USB. Vérifiez que vous n'avez pas branché d'autres téléphones en même temps.</li>
+ <li>Dans l'interface de WebIDE, choisissez l'option <em>Sélectionner l'environnement</em> puis sélectionnez votre téléphone, celui-ci devant être listé dans la catégorie <em>Périphériques USB</em>.</li>
+ <li>À ce stade, votre téléphone devrait afficher une demande <em>Autoriser la connexion de débogage USB ?</em>. Choisissez <em>Autoriser</em>.</li>
+ <li>Sélectionnez l'option <em>Ouvrir une application</em> puis choisissez <em>Ouvrir une application empaquetée...</em></li>
+ <li>Dans le sélecteur de fichiers qui apparaît, naviguez jusqu'au répertoire qui contient votre fichier de manifeste <code>update.webapp</code> et cliquez sur <em>Ouvrir</em>.</li>
+ <li>En supposant qu'il n'y ait aucun avertissement ni erreur, vous pouvez installer votre module sur votre appareil en cliquant sur le bouton "Lecture" situé au centre (<em>Installer et lancer</em>.)</li>
+ <li>Pour voir le module en action, activez-le en choisissant <em>Paramètres &gt; Modules &gt; Module exemple &gt; basculez la case à cocher en haut</em>.</li>
+</ol>
+
+<h2 id="Déboguer_les_modules">Déboguer les modules</h2>
+
+<p>Il faut noter qu'à cause du <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1185464" title="The new extension API should come with debuggability">bug 1185464</a> il n'est pas possible pour l'instant de déboguer les modules avec WebIDE.</p>
+
+<h2 id="Paramètres_du_module">Paramètres du module</h2>
+
+<p>Vous pouvez contrôler les modules de votre téléphone en allant dans <em>Paramètres &gt; Modules </em>; vous trouverez à cet endroit une liste de vos modules installés et vous pourrez voir plus d'informations sur chacun d'eux en tapant sur l'entrée correspondante.</p>
+
+<p style="width: 520px; margin: 0 auto;"><img alt="firefox os screenshot showing a list of installed add-ons in the settings app" src="https://mdn.mozillademos.org/files/11447/add-on-settings-screen.png" style="height: 445px; margin-right: 20px; width: 250px;"><img alt="information screen for an individual addon, with a list of apps this add-on affects, and controls to disable and delete the add-on" src="https://mdn.mozillademos.org/files/11449/individual-add-on-settings-page.png" style="height: 445px; width: 250px;"></p>
+
+<h3 id="Activerdésactiver_et_supprimer_des_modules">Activer/désactiver et supprimer des modules</h3>
+
+<p>Par défaut, les modules sont activés après leur installation s'ils sont installés depuis le Marketplace Firefox. Par contre, lorsqu'ils sont installés via WebIDE, ils sont désactivés par défaut.</p>
+
+<p>Vous avez la possibilité d'activer/désactiver des modules manuellement par l'intermédiaire de la case à cocher qui se trouve en haut de la page individuelle du module (accessible dans <em>Paramètres &gt; Modules</em>), ou par programmation en utilisant la fonction <a href="/en-US/docs/Web/API/DOMApplicationsManager/setEnabled">navigator.mozApps.mgmt.setEnabled()</a> (voir cet <a href="https://github.com/fxos/directory/blob/master/app/js/controller/list_controller.js#L220-L223">exemple d'utilisation de setEnabled()</a> sur Github.)</p>
+
+<p>Vous pouvez supprimer totalement un module en tapant le bouton <em>Supprimer</em> qui se trouve sur les pages individuelles des applications.</p>
+
+<h2 id="Permissions">Permissions</h2>
+
+<p>Les modules héritent toutes leurs permissions depuis leur application hôte. Demander des permissions dans le manifeste du module (voir <a href="#update.webapp">update.webapp</a>) n'aura aucun effet et n'exposera au module aucune API qui n'est pas disponible dans l'application hôte.</p>

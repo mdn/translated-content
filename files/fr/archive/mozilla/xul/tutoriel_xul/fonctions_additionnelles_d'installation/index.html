@@ -1,0 +1,72 @@
+---
+title: Fonctions additionnelles d'installation
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Fonctions_additionnelles_d'installation
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Additional_Install_Features
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL/Les_scripts_d'installation" style="float: left;">« Précédent</a><br></p>
+</div>
+
+<div class="note">NdT : Attention, cette section décrit le mécanisme XPInstall propre à la suite Mozilla et à des versions anciennes de Mozilla Firefox. Pour les versions récentes de Mozilla Firefox, ce mode d'installation n'est plus le même, mais il n'est pas encore décrit dans ce tutoriel. Voir <a class="external" href="http://xulfr.org/wiki/ExtensionsFirefox">comment faire des extensions pour firefox</a> sur xulfr.org.</div>
+
+<p>Cette section décrit quelques spécificités supplémentaires des programmes d'installation.</p>
+
+<h3 id="Manipulation_de_fichiers_lors_de_l.27installation" name="Manipulation_de_fichiers_lors_de_l.27installation">Manipulation de fichiers lors de l'installation</h3>
+
+<p>La <a href="/fr/Tutoriel_XUL/Les_scripts_d'installation" title="fr/Tutoriel_XUL/Les_scripts_d'installation">section précédente</a> décrivait un programme d'installation simple. Vous pouvez souhaiter réaliser quelques opérations plus élaborées pendant l'installation. Par exemple, vous voulez installer un paquetage seulement si certaines conditions sont réunies, comme d'avoir une librairie particulière installée.</p>
+
+<p>En complément de l'objet <code>Install</code>, l'objet <code>File</code> est également disponible pendant le script d'installation. Il fournit quelques fonctions qui peuvent être employées pour examiner et modifier des fichiers sur le disque. Vous pouvez les utiliser pour déplacer, copier ou effacer des fichiers avant ou après que les fichiers du paquetage soient installés. Par exemple, vous voulez peut être faire une sauvegarde de quelques fichiers d'abord.</p>
+
+<p>Le code ci dessous fera une copie du fichier "/bin/grep" dans le répertoire "/main".</p>
+
+<pre>var binFolder=getFolder("file:///","bin");
+var grep=getFolder(binFolder,"grep");
+
+var mainFolder=getFolder("file:///","main");
+
+File.copy(grep,mainFolder);
+</pre>
+
+<ul>
+ <li>La première ligne va renseigner un pointeur sur le répertoire '/bin'. Le texte 'file:///' est une chaîne de caractères spéciale qui correspond à la racine du système de fichiers.</li>
+ <li>À partir de ce pointeur, nous récupérons le fichier 'grep' qui se trouve dans le répertoire 'bin'. Si ce fichier n'existe pas, une erreur sera signalée au processus d'installation.</li>
+ <li>Ensuite, nous pointons sur le répertoire 'main', toujours à partir de la racine du système de fichiers.</li>
+ <li>Finalement, nous appelons la fonction 'File.copy' qui copie le fichier source vers sa destination.</li>
+</ul>
+
+<p><a class="external" href="http://www.xulplanet.com/references/elemref/ref_File.html">Des fonctions</a> existent également pour déplacer (<code>move()</code>), renommer (<code>rename()</code>) et exécuter (<code>execute()</code>) des fichiers. Ainsi, vous pouvez déplacer des fichiers qui peuvent se trouver en conflit avec votre paquetage.</p>
+
+<h3 id="Interception_des_erreurs" name="Interception_des_erreurs">Interception des erreurs</h3>
+
+<p>Vous voulez certainement intercepter d'éventuelles erreurs proprement. Elles peuvent se produire si un fichier ou un répertoire ne peut pas être trouvé, si la capacité du disque n'est pas suffisant ou pour toutes autres raisons.</p>
+
+<p>Il vous suffit d'appeler la fonction <code>getLastError()</code> pour déterminer si une erreur a été rencontrée. Si elle renvoie 'SUCCESS', aucune erreur ne s'est produite. Autrement, elle renvoie un nombre qui indique le code d'erreur. Vous pouvez appeler cette fonction en tout point de votre script d'installation pour déterminer si une erreur est survenue lors de la dernière opération effectuée.</p>
+
+<p>Si une erreur se produit, vous voulez sûrement interrompre l'installation. Vous pouvez également vouloir afficher un message d'erreur pour l'utilisateur. Par exemple, vous pourriez mettre le script suivant à la fin de votre script d'installation :</p>
+
+<pre>if (getLastError() == SUCCESS){
+  performInstall();
+}
+else {
+  cancelInstall();
+}
+</pre>
+
+<p>Les codes d'erreurs susceptibles d'être renvoyés par la fonction <code>getLastError()</code> sont listés dans le fichier source de Mozilla <a class="external" href="http://lxr.mozilla.org/mozilla/source/xpinstall/src/nsInstall.h">nsInstall.h</a>. Pendant l'installation, un suivi d'événements contenant les opérations réalisées est créé. Il contiendra également toutes les erreurs qui se sont produites. Ces événements peuvent être trouvés dans le fichier 'install.log' dans le répertoire d'installation de Mozilla. Un bloc de texte sera ajouté à ce fichier à chaque installation effectuée.</p>
+
+<p>La fonction <code>logComment()</code> peut être utilisée pour écrire un texte dans ce fichier d'événements. Elle nécessite un seul argument qui est le contenu du texte.</p>
+
+<hr>
+<p>Le Tutoriel XUL est terminé.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL/Les_scripts_d'installation" style="float: left;">« Précédent</a><br></p>
+</div>
+
+<p><span class="comment">Interwiki</span></p>

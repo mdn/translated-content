@@ -1,0 +1,51 @@
+---
+title: '-ms-block-progression'
+slug: Web/CSS/-ms-block-progression
+tags:
+  - CSS
+  - CSS プロパティ
+  - Microsoft 拡張
+  - Non-standard
+  - Reference
+  - block-progression
+translation_of: Archive/Web/CSS/-ms-block-progression
+---
+<div>{{CSSRef}}</div>
+
+<div>{{non-standard_header}}</div>
+
+<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>-ms-block-progression</code></strong> プロパティは、ブロックの進行とレイアウト方向を指定するための <a href="/ja/docs/Web/CSS/Microsoft_CSS_extensions">Microsoft 拡張</a>です。</p>
+
+<p>{{cssinfo}}</p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<h3 id="Values" name="Values">値</h3>
+
+<dl>
+ <dt><code>tb</code></dt>
+ <dd>既定値。上から下へのブロックの流れです。レイアウトは水平です。</dd>
+ <dt><code>rl</code></dt>
+ <dd>右から左へのブロックの流れです。レイアウトは垂直です。</dd>
+ <dt><code>bt</code></dt>
+ <dd>下から上へのブロックの流れです。レイアウトは水平です。</dd>
+ <dt><code>rl</code></dt>
+ <dd>左から右へのブロックの流れです。レイアウトは垂直です。</dd>
+</dl>
+
+<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+
+<pre class="syntaxbox">  {{csssyntax}}
+</pre>
+
+<h2 id="Specifications" name="Specifications">仕様書</h2>
+
+<p>どの仕様書でも定義されていません。</p>
+
+<h2 id="Remarks" name="Remarks">注釈</h2>
+
+<p>垂直のレイアウトでは、文字の行が時計方向に90°回転します。画像は回転しませんが、表は回転します。垂直方向のボックスレイアウトは反対の水平方向のレイアウトになります。 width, height, top, bottom, right, left はテキストと一緒に回転しません。</p>
+
+<p>一度に同時に一つのブロックの進行のみが有効です。これらの値は組み合わせることができません。</p>
+
+<p>このプロパティは CSS3 テキストレイアウトモジュールの <code>block-progression</code> プロパティに基づいています。</p>

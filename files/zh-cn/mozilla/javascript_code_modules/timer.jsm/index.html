@@ -1,0 +1,33 @@
+---
+title: Timer.jsm
+slug: Mozilla/JavaScript_code_modules/Timer.jsm
+tags:
+  - JavaScript
+  - JavaScript计时器
+  - 插件
+  - 模块
+translation_of: Mozilla/JavaScript_code_modules/Timer.jsm
+---
+<p>{{ gecko_minversion_header("22") }}</p>
+
+<p>Timer.jsm JavaScript模块包含纯JavaScript对<a href="/en-US/docs/DOM/window.setTimeout" title="/en-US/docs/DOM/window.setTimeout"><code>setTimeout</code></a>、<code><a href="/en-US/docs/DOM/window.clearTimeout" title="/en-US/docs/DOM/window.clearTimeout">clearTimeout</a><font face="Open Sans, Arial, sans-serif">、</font></code><code><a href="/en-US/docs/Web/API/WindowTimers/setInterval">setInterval</a></code>和<a href="/en-US/docs/Web/API/WindowTimers/clearInterval"><code>clearInterval</code></a>功能的实现且适用于DOM窗口函数，但它还可以被那些无法访问DOM窗口的代码(如<a href="/en-US/docs/Mozilla/JavaScript_code_modules" title="/en-US/docs/Mozilla/JavaScript_code_modules">JavaScript模块</a>或<a href="/en-US/docs/The_message_manager" title="/en-US/docs/The_message_manager">框架里的脚本</a>)使用。</p>
+
+<p> </p>
+
+<p><code><font face="Open Sans, Arial, sans-serif">要使用</font>Timer.jsm，首先导入它：</code></p>
+
+<pre class="brush: js">Components.utils.import("resource://gre/modules/Timer.jsm");
+</pre>
+
+<p>然后如同在DOM窗口中一样使用setTimeout和clearTimeout，例如：</p>
+
+<pre class="brush: js">let timeoutID = setTimeout(function() { console.log("Hello!"); }, 500);
+
+clearTimeout(timeoutID);
+</pre>
+
+<p>类似地，你可以使用<code>setInterval和</code><code>clearInterval，比如：</code></p>
+
+<pre class="brush: js">let intervalID = setInterval(function() { console.log("Happening every 500ms!"); }, 500);
+
+clearInterval(intervalID);</pre>

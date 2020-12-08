@@ -1,0 +1,45 @@
+---
+title: Using the Places tagging service
+slug: Using_the_Places_tagging_service
+translation_of: Mozilla/Tech/Places/Using_the_Places_tagging_service
+---
+<div></div>
+
+<p>タギングサービスは、<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITaggingService" title="">nsITaggingService</a></code> インタフェースによって提供され、タグ付け及びタグの取り外しや与えられたタグの URI の取得や URI のタグを取得するメソッドを提供します。</p>
+<p><span id="Initiating_the_Tagging_Service"></span></p>
+<h2 id=".E3.82.BF.E3.82.AE.E3.83.B3.E3.82.B0.E3.82.B5.E3.83.BC.E3.83.93.E3.82.B9.E3.81.AE.E5.88.9D.E6.9C.9F.E5.8C.96" name=".E3.82.BF.E3.82.AE.E3.83.B3.E3.82.B0.E3.82.B5.E3.83.BC.E3.83.93.E3.82.B9.E3.81.AE.E5.88.9D.E6.9C.9F.E5.8C.96">タギングサービスの初期化</h2>
+<p>タギングサービスを使用する前に、それのインスタンスへの参照を保持する必要があります。</p>
+<pre>var taggingSvc = Components.classes["@mozilla.org/browser/tagging-service;1"]
+                           .getService(Components.interfaces.nsITaggingService);
+</pre>
+<p><br>
+  <span id="Tagging_a_URI"></span></p>
+<h2 id="URI_.E3.82.92.E3.82.BF.E3.82.B0.E4.BB.98.E3.81.91.E3.81.99.E3.82.8B" name="URI_.E3.82.92.E3.82.BF.E3.82.B0.E4.BB.98.E3.81.91.E3.81.99.E3.82.8B">URI をタグ付けする</h2>
+<p><code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsITaggingService#tagURI()">nsITaggingService.tagURI()</a></code> メソッドは URL を与えられたタグの集合でタグ付けします。現在のタグはセットは URI で永続します。既に与えられた URL に設定されていたタグは無視されます。</p>
+<pre>taggingSvc.tagURI(uri("http://example.com/"), ["tag 1"], 1); // 最初の引数 = URI
+                                                             // 2 番目の引数は = タグの配列
+</pre>
+<p><span id="Untagging_a_URI"></span></p>
+<h2 id="URI_.E3.81.8B.E3.82.89.E3.82.BF.E3.82.B0.E3.82.92.E5.8F.96.E3.82.8A.E5.A4.96.E3.81.99" name="URI_.E3.81.8B.E3.82.89.E3.82.BF.E3.82.B0.E3.82.92.E5.8F.96.E3.82.8A.E5.A4.96.E3.81.99">URI からタグを取り外す</h2>
+<p><code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsITaggingService#untagURI()">nsITaggingService.untagURI()</a></code> は URL からタグを取り除きます。与えられたタグの集合の内、与えられた URL に設定されていないタグは無視されます。</p>
+<pre>tagginSvc.untagURI(uri("http://example.com/"), ["tag 1"], 1); // 最初の引数 = URI
+                                                              // 2 番目の引数は = タグの配列
+</pre>
+<p><span id="Finding_all_URLs_with_a_given_tag"></span></p>
+<h2 id=".E4.B8.8E.E3.81.88.E3.82.89.E3.82.8C.E3.81.9F.E3.82.BF.E3.82.B0.E3.82.92.E6.8C.81.E3.81.A3.E3.81.9F_URL_.E3.82.92.E5.85.A8.E3.81.A6.E6.8E.A2.E3.81.99" name=".E4.B8.8E.E3.81.88.E3.82.89.E3.82.8C.E3.81.9F.E3.82.BF.E3.82.B0.E3.82.92.E6.8C.81.E3.81.A3.E3.81.9F_URL_.E3.82.92.E5.85.A8.E3.81.A6.E6.8E.A2.E3.81.99">与えられたタグを持った URL を全て探す</h2>
+<p><code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsITaggingService#getURIsForTag()">nsITaggingService.getURIsForTag()</a></code> 与えられたタグでタグ付けされた URL 全ての配列を返します。</p>
+<pre>var tag1uris = taggingSvc.getURIsForTag("tag 1"); //"tag 1" = 与えられたタグ
+</pre>
+<p><span id="Getting_all_tags_associated_with_a_URL"></span></p>
+<h2 id="URL_.E3.81.AB.E9.96.A2.E9.80.A3.E4.BB.98.E3.81.91.E3.82.89.E3.82.8C.E3.81.9F.E3.82.BF.E3.82.B0.E3.82.92.E5.85.A8.E3.81.A6.E5.8F.96.E5.BE.97.E3.81.99.E3.82.8B" name="URL_.E3.81.AB.E9.96.A2.E9.80.A3.E4.BB.98.E3.81.91.E3.82.89.E3.82.8C.E3.81.9F.E3.82.BF.E3.82.B0.E3.82.92.E5.85.A8.E3.81.A6.E5.8F.96.E5.BE.97.E3.81.99.E3.82.8B">URL に関連付けられたタグを全て取得する</h2>
+<p><code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsITaggingService#getTagsForURI()">nsITaggingService.getTagsForURI()</a></code> メソッドは与えられたタグのタグ集合全ての配列を返します。</p>
+<pre>var tags = taggingSvc.getTagsForURI(uri("http://example.com/", {}));
+  //tags = http://example.com/ に保存されたタグの集合
+</pre>
+
+
+<h2 id="See_also" name="See_also">参照</h2>
+<ul>
+  <li><a href="ja/Places">Places</a></li>
+  <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITaggingService" title="">nsITaggingService</a></code></li>
+</ul>

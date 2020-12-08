@@ -1,0 +1,296 @@
+---
+title: 编写适合多进程 Firefox 的扩展
+slug: Mozilla/Add-ons/Working_with_multiprocess_Firefox
+translation_of: Archive/Add-ons/Working_with_multiprocess_Firefox
+---
+<div class="summary">
+<p>致 Firefox 开发者：本文描述如何使你开发的扩展能在多进程 Firefox 中运行。</p>
+</div>
+
+<p>目前，在桌面版 Firefox 中，Chrome 代码（Chrome Code）和内容（Content）运行在同一个进程里。因此扩展可以直接访问网页内容：</p>
+
+<pre class="brush: js">gBrowser.selectedBrowser.contentDocument.body.innerHTML = "replaced by chrome code";</pre>
+
+<p>不过呢，在多进程 Firefox（又称 Electrolysis 或 E10S）中，扩展代码（Add-on Code）和内容则在不同的进程中运行，所以上述直接访问就不一定可行了。</p>
+
+<p>在多进程 Firefox 中，扩展需要将触及内容的代码分解成单独分离的脚本，也就是所谓的框架脚本（Frame Scripts）。框架脚本在内容进程中运行，可以直接访问内容。框架脚本通过消息传递接口（Message-passing API）与扩展的剩余部分进行通讯。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8437/e10s-overview.png" style="display: block; margin-left: auto; margin-right: auto;">运行在 Chrome 进程中的扩展代码必须向框架脚本发送异步消息。这样做可以确保 Firefox 的用户界面不会被内容进程卡死。</p>
+
+<p>内容进程则可以向 Chrome 进程发送同步或异步消息，不过使用异步消息是再好不过了。</p>
+
+<p>关于使用消息管理器的更多细节，请参阅：<a href="/zh-CN/docs/The_message_manager">消息管理器指南</a>。接下来，本文将告诉你如何判断你开发的扩展是否会受到这方面的影响，同时简要说明需要如何进行修改。最后，通过对一些简单的样板扩展进行修改，让它们能在多进程 Firefox 中运行。</p>
+
+<h2 id="检查你的扩展是否受到影响">检查你的扩展是否受到影响</h2>
+
+<p>总体规则如下：</p>
+
+<ul>
+ <li>如果你只是使用附加组件开发工具包的<a href="https://developer.mozilla.org/zh-CN/Add-ons/SDK/High-Level_APIs">高级接口</a>，你的扩展不会受到影响（附加组件开发工具包尚未完全兼容多进程Firefox，但很快就会完全兼容）。</li>
+ <li>如果你的扩展完全不访问网络内容，它们也不会受到影响。</li>
+ <li>如果你通过直接使用<a href="https://developer.mozilla.org/zh-CN/Add-ons/Overlay_Extensions">表层扩展</a>、<a href="https://developer.mozilla.org/zh-CN/Add-ons/Bootstrapped_extensions">启动扩展</a>或<a href="https://developer.mozilla.org/zh-CN/Add-ons/SDK/Low-Level_APIs">底层开发工具包接口</a>（例如<a href="https://developer.mozilla.org/zh-CN/Add-ons/SDK/Low-Level_APIs/window_utils">窗口/工具</a>或<a href="https://developer.mozilla.org/zh-CN/Add-ons/SDK/Low-Level_APIs/tabs_utils">标签页/工具</a>）来访问网络内容，那么你的扩展有可能受到影响。</li>
+ <li>如果你在标签页中加载可扩展用户界面语言（xul），你的扩展会受到影响。</li>
+</ul>
+
+<p>为了证实是否受到影响，你还需要进一步测试，这个测试过程由两步过程构成：</p>
+
+<ul>
+ <li><strong>开启 Firefox 的多进程支持</strong>：<a href="https://nightly.mozilla.org/">Firefox 每夜版</a>（Nightly Build）支持多进程，但是默认是关闭的，而且并没有出现在选项窗口中。启用多进程的方法是访问 about:config 页面，找到名为 browser.tabs.remote.autostart 的项目，将其值设置为true，重启火狐浏览器。启用多进程功能后，标签页的标题会出现下划线以提示用户。</li>
+ <li><strong>声明你的扩展兼容多进程模式</strong>：为了便于迁移至多进程 Firefox，我们提供<a href="https://developer.mozilla.org/zh-CN/Firefox/Multiprocess_Firefox/Compatibility_shims">兼容性管理工具</a>帮助不兼容多进程的扩展工作。故此，你需要禁用兼容性管理工具以检测你的扩展是否真正兼容。禁用兼容性管理工具的方法是向你的扩展的 install.rdf 文件添加一个名为 multiprocessCompatible 的属性，值为 true。</li>
+</ul>
+
+<p>现在，你可以在多进程 Firefox 中禁用兼容性管理工具来测试你的扩展的兼容性了。可惜你还不能在开启多进程功能的时候安装新扩展，因此你必须先安装好扩展再开启多进程功能。关于这个问题，详见 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1055808">bug 1055808</a>。</p>
+
+<h2 id="更新你的代码">更新你的代码</h2>
+
+<p>更新代码的一般方法是：</p>
+
+<ul>
+ <li>将你的扩展中需要访问网络内容的部分分解为一个或数个单独的脚本。在多进程Firefox中，这被称为框架脚本。</li>
+ <li>为你的框架脚本注册 chrome:// 地址。</li>
+ <li>用<a href="https://developer.mozilla.org/zh-CN/docs/The_message_manager">消息管理器</a>来将脚本加载进 <a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/browser"><code>browser </code></a>对象。</li>
+ <li>如果你的扩展需要在主扩展代码和框架脚本之间通信，可以使用消息管理器接口来实现。</li>
+ <li>如果你需要在标签页中加载可扩展用户界面语言，可以将它们注册为 about: 地址，然后通过 about: 地址加载它们。</li>
+</ul>
+
+<p>更多细节，请参见<a href="/zh-CN/docs/The_message_manager"> message manager</a> 文档。</p>
+
+<h3 id="新应用程序接口的向前兼容能力">新应用程序接口的向前兼容能力</h3>
+
+<p>新的多进程 Firefox 的消息接口在多进程模式没有开启的情况下仍然可用。实际上它们从 Firefox 4开始就在某种程度上可用了。不过呢，最初的应用程序接口和现在的并不相同。一些已知的差异如下：</p>
+
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=776825">Firefox 17 的界面发生了变化</a>。</li>
+ <li>在Firefox 19 之前的版本中，类似<code>new content.document.defaultView.XMLHttpRequest()</code>的代码会得到<code>NS_ERROR_FAILURE: Failure</code>的错误值。</li>
+</ul>
+
+<p>你不仅应该在开启了多进程支持的每夜版Firefox上测试你的扩展的变化，而且应该在你打算支持的没有开启多进程支持的发行版（Release Build）中测试。</p>
+
+<h2 id="举几个例子">举几个例子</h2>
+
+<p>这部分将演示修改几种不同的扩展的过程。这些扩展都是很简易的，意在展示基础的扩展模式在多进程Firefox中需要的不同处理方式。</p>
+
+<p>你可以在 <a href="https://github.com/mdn/e10s-example-addons">e10s-example-addons GitHub repository</a> 中找到这些例子的所有源代码。</p>
+
+<h3 id="在所有页面运行一个脚本">在所有页面运行一个脚本</h3>
+
+<div class="note">
+<p><a href="https://github.com/mdn/e10s-example-addons/tree/master/run-script-in-all-pages">查看这个例子的源代码</a></p>
+</div>
+
+<p>第一个扩展在每一个页面加载的时候运行一些代码。这些代码不和扩展的其他部分交互，它们只是对页面进行一些预设的修改。在这个例子中，扩展向文档的主体（<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/body"><code>body</code></a>）添加了一个边界。</p>
+
+<p>这个扩展通过将一种“页面加载中”代码碎片（<a href="https://developer.mozilla.org/zh-CN/docs/Code_snippets/On_page_load#Basic_onPageLoad_for_a_browser_window">"On page load" code snippet</a>）附加于可扩展用户界面语言层来实现此修改。</p>
+
+<pre class="brush: js">var myExtension = {
+    init: function() {
+        // The event can be DOMContentLoaded, pageshow, pagehide, load or unload.
+        if(gBrowser) gBrowser.addEventListener("DOMContentLoaded", this.onPageLoad, false);
+    },
+    onPageLoad: function(aEvent) {
+        var doc = aEvent.originalTarget; // doc is document that triggered the event
+        if (doc.nodeName != "#document") return; // only documents
+        // make whatever modifications you want to doc
+        doc.body.style.border = "5px solid blue";
+    }
+}
+
+window.addEventListener("load", function load(event){
+    window.removeEventListener("load", load, false); //remove listener, no longer needed
+    myExtension.init();
+},false);</pre>
+
+<p>因为这段代码直接访问网络内容，所以它不能在多进程 Firefox 中运行。<br>
+ <img alt="" src="https://mdn.mozillademos.org/files/8431/all-pages-original.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+
+<h4 id="移植到消息管理器">移植到消息管理器</h4>
+
+<p>为了使用消息管理器移植这个例子，我们可将这个扩展全部的主体部分放入一个框架脚本：</p>
+
+<pre class="brush: js">// frame-script.js
+// will run in the content process
+
+addEventListener("DOMContentLoaded", function(event) {
+  var doc = event.originalTarget;
+  if (doc.nodeName != "#document") return; // only documents
+  doc.body.style.border = "5px solid red";
+});
+</pre>
+
+<p>我们将为这个框架脚本注册一个 chrome:// URL ：</p>
+
+<pre>// chrome.manifest
+
+content    modify-all-pages    chrome/content/
+</pre>
+
+<p>我们附加到XUL overlay的主体脚本，只是一个使用全局消息管理器来在每个标签页中加载框架脚本的 stub。</p>
+
+<pre class="brush: js">// chrome script
+// will run in the chrome process
+
+var globalMM = Cc["@mozilla.org/globalmessagemanager;1"]
+  .getService(Ci.nsIMessageListenerManager);
+
+globalMM.loadFrameScript("chrome://modify-all-pages/content/frame-script.js", true);</pre>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8415/all-pages-ported.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+
+<h4 id="移植到_Add-on_SDK">移植到 Add-on SDK</h4>
+
+<p>一个好的替代这样的一个扩展的思路是将其移植到 Add-on SDK。Add-on SDK 包括一个名为 <a href="/zh-CN/Add-ons/SDK/High-Level_APIs/page-mod">page-mod</a> 的设计为在网页中加载脚本的模块。Add-on SDK 称这些脚本为内容脚本。</p>
+
+<p>这种情况下扩展的主要代码创建一个 page-mod 来加载内容脚本到用户载入的每个页面：</p>
+
+<pre class="brush: js">// main.js
+
+var pageMod = require("sdk/page-mod");
+var self = require("sdk/self");
+
+pageMod.PageMod({
+  include: "*",
+  contentScriptFile: self.data.url("modify-all-pages.js")
+});</pre>
+
+<p>内容脚本可以直接修改页面：</p>
+
+<pre class="brush: js">// modify-all-pages.js - content script
+
+document.body.style.border = "5px solid green";</pre>
+
+<h3 id="在活动标签中运行一个脚本">在活动标签中运行一个脚本</h3>
+
+<div class="note">
+<p><a href="https://github.com/mdn/e10s-example-addons/tree/master/run-script-in-active-page">查看这个例子的代码。</a></p>
+</div>
+
+<p>这个例子说明了一个扩展如何：</p>
+
+<ul>
+ <li><a href="/zh-CN/docs/The_message_manager#Types_of_message_manager">向一个特定的XUL &lt;browser&gt; 元素中加载框架脚本</a></li>
+ <li><a href="/zh-CN/docs/The_message_manager#Synchronous_messaging">从框架脚本向扩展主体发出一个同步的请求</a></li>
+</ul>
+
+<p>这个例子是一个无需重启的扩展，它使用 CustomizableUI 模块添加了一个按钮。当用户点击这个按钮，这个扩展运行一些代码来改变当前标签。其基础构造取自 <a href="https://github.com/jvillalobos/Australis-Hello-World">Jorge Villalobos 的 Australis "Hello World" 扩展</a> .<br>
+ <br>
+ 代码实际做的事是：找到任意 <code><a href="/zh-CN/docs/Web/HTML/Element/Img">&lt;img&gt;</a></code> 元素并将其 <code>src</code> 替换为从硬编码于扩展中的列表中随机抽取的无意义的 GIF 图像。 无意义的 gifs 从<a href="https://github.com/bwinton/whimsy">Whimsy extension </a>获取。</p>
+
+<p>第一个版本直接访问页面，因此其不是多进程兼容的：</p>
+
+<pre class="brush: js">// bootstrap.js
+
+let Gifinate = {
+  init : function() {
+    let io =
+      Cc["@mozilla.org/network/io-service;1"].
+        getService(Ci.nsIIOService);
+
+    // the 'style' directive isn't supported in chrome.manifest for bootstrapped
+    // extensions, so this is the manual way of doing the same.
+    this._ss =
+      Cc["@mozilla.org/content/style-sheet-service;1"].
+        getService(Ci.nsIStyleSheetService);
+    this._uri = io.newURI("chrome://gifinate/skin/toolbar.css", null, null);
+    this._ss.loadAndRegisterSheet(this._uri, this._ss.USER_SHEET);
+
+    // create widget and add it to the main toolbar.
+    CustomizableUI.createWidget(
+      { id : "gifinate-button",
+        defaultArea : CustomizableUI.AREA_NAVBAR,
+        label : "Gifinate",
+        tooltiptext : "Gifinate!",
+        onCommand : function(aEvent) {
+          Gifinate.replaceImages(aEvent.target.ownerDocument.defaultView.content.document);
+        }
+      });
+  },
+
+  replaceImages : function(contentDocument) {
+      let images = contentDocument.getElementsByTagName("img");
+      for (var i = 0; i &lt; images.length; ++i) {
+        let gif = this.gifs[Math.floor(Math.random() * this.gifs.length)];
+        images[i].src = gif;
+      }
+    },</pre>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8433/gifinate-original.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+
+<h4 id="移植到消息管理器_2">移植到消息管理器</h4>
+
+<p>为了移植这个例子到消息管理器，我们将使 <code>onCommand</code> 加载一个框架脚本到当前的 <code>&lt;browser&gt;</code>，然后监听来自框架脚本的 "request-gifs" 信息。这些 "request-gifs" 信息应当包含我们在此页面上需要的 GIFs ：信息监听器取回并返回这个数量的 GIFs。</p>
+
+<pre class="brush: js">// bootstrap.js
+// will run in the chrome process
+
+let Gifinate = {
+  init : function() {
+    let io =
+      Cc["@mozilla.org/network/io-service;1"].
+        getService(Ci.nsIIOService);
+
+    // the 'style' directive isn't supported in chrome.manifest for bootstrapped
+    // extensions, so this is the manual way of doing the same.
+    this._ss =
+      Cc["@mozilla.org/content/style-sheet-service;1"].
+        getService(Ci.nsIStyleSheetService);
+    this._uri = io.newURI("chrome://gifinate/skin/toolbar.css", null, null);
+    this._ss.loadAndRegisterSheet(this._uri, this._ss.USER_SHEET);
+
+    // create widget and add it to the main toolbar.
+    CustomizableUI.createWidget(
+      { id : "gifinate-button",
+        defaultArea : CustomizableUI.AREA_NAVBAR,
+        label : "Gifinate Button",
+        tooltiptext : "Gifinate!",
+        onCommand : function(aEvent) {
+          Gifinate.replaceImages(aEvent.target.ownerDocument);
+        }
+      });
+  },
+
+  replaceImages : function(xulDocument) {
+    var browserMM = xulDocument.defaultView.gBrowser.selectedBrowser.messageManager;
+    browserMM.loadFrameScript("chrome://gifinate/content/frame-script.js", false);
+    browserMM.addMessageListener("request-gifs", Gifinate.getGifs);
+  },
+
+  getGifs : function(message) {
+    var gifsToReturn = new Array(message.data);
+    for (var i = 0; i &lt; gifsToReturn.length; i++) {
+      let gif = this.gifs[Math.floor(Math.random() * this.gifs.length)];
+      gifsToReturn[i] = gif;
+    }
+    return gifsToReturn;
+  },
+</pre>
+
+<p>再次地，我们需要为这个框架脚本注册一个 chrome:// URL：</p>
+
+<pre>// chrome.manifest
+
+content gifinate frame-script.js</pre>
+
+<p>在框架脚本中，我们获取所有的 <code>&lt;img&gt;</code> 元素并发送 "request-gifs" 信息给扩展主体代码。 由于这是框架脚本我们可以将其变为一个同步信息，并使用其返回值更新 <code>src</code> 属性：</p>
+
+<pre class="brush: js">// frame-script.js
+// will run in the content process
+
+var images = content.document.getElementsByTagName("img");
+var response = sendSyncMessage("request-gifs", images.length);
+var gifs = response[0];
+
+for (var i = 0; i &lt; images.length; ++i) {
+  images[i].src = gifs[i];
+}</pre>
+
+<p>整个扩展的流程现在像这样：<br>
+ <img alt="" src="https://mdn.mozillademos.org/files/8411/gifinate-ported.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+
+<h2 id="已知问题">已知问题</h2>
+
+<p>这里是可能影响扩展开发者移植到多进程firefox的开放的bug列表：</p>
+
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1051238"><strong>Bug 1051238</strong></a> -<span id="summary_alias_container"> 框架脚本被永久缓存，因此扩展不能在不重启浏览器的情况下正确更新</span></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1017320"><strong>Bug 1017320</strong></a> -<span id="summary_alias_container"> 实施兼容shims的跟踪<span id="short_desc_nonedit_display"> bug</span></span></li>
+</ul>

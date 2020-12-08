@@ -1,0 +1,736 @@
+---
+title: Rôles Gecko
+slug: Web/Accessibility/AT-APIs/Gecko/Roles
+tags:
+  - AT_APIs
+  - Accessibilité
+  - NeedsTranslation
+  - Reference
+translation_of: Mozilla/Tech/Accessibility/AT-APIs/Gecko/Roles
+---
+<p><a href="/fr/docs/Accessibility:AT-APIs#Supported_Roles">« AT APIs Support Page</a></p>
+<p><span class="seoSummary">This page offers a list of accessible roles used in Gecko. Role constants are defined in the <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAccessibleRole" title="">nsIAccessibleRole</a></code> interface.</span></p>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_NOTHING">ROLE_NOTHING</a></code></dt>
+ <dd>
+  Used when the accessible item doesn't have a strongly defined role.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_TITLEBAR">ROLE_TITLEBAR</a></code></dt>
+ <dd>
+  Represents a title or caption bar for a window. Used by MSAA only, this is supported automatically by Microsoft Windows.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_MENUBAR">ROLE_MENUBAR</a></code></dt>
+ <dd>
+  Represents the menu bar (positioned beneath the title bar of a window on most platforms or at the top of the screen on Mac OS X) from which menus are selected by the user.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_SCROLLBAR">ROLE_SCROLLBAR</a></code></dt>
+ <dd>
+  Represents a vertical or horizontal scroll bar, which is part of the client area or used in a control.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_GRIP">ROLE_GRIP</a></code></dt>
+ <dd>
+  Represents a special mouse pointer, which allows a user to manipulate user interface elements such as windows. For example, a user clicks and drags a sizing grip in the lower-right corner of a window to resize it</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_SOUND">ROLE_SOUND</a></code></dt>
+ <dd>
+  Represents a system sound, which is associated with various system events.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_CURSOR">ROLE_CURSOR</a></code></dt>
+ <dd>
+  Represents the system mouse pointer.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_CARET">ROLE_CARET</a></code></dt>
+ <dd>
+  Represents the system caret.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_ALERT">ROLE_ALERT</a></code></dt>
+ <dd>
+  Represents an alert or a condition that a user should be notified about. Assistive Technologies typically respond to the role by reading the entire onscreen contents of containers advertising this role. Should be used for warning dialogs, etc.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_WINDOW">ROLE_WINDOW</a></code></dt>
+ <dd>
+  Represents the window frame, which contains child objects such as a title bar, client, and other objects contained in a window. The role is supported automatically by Microsoft Windows.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_INTERNAL_FRAME">ROLE_INTERNAL_FRAME</a></code></dt>
+ <dd>
+  A sub-document.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_MENUPOPUP">ROLE_MENUPOPUP</a></code></dt>
+ <dd>
+  Represents a menu, which presents a list of options from which the user can make a selection to perform an action.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_MENUITEM">ROLE_MENUITEM</a></code></dt>
+ <dd>
+  Represents a menu item, which is an entry in a menu that a user can choose to carry out a command, select an option.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_TOOLTIP">ROLE_TOOLTIP</a></code></dt>
+ <dd>
+  Represents a tooltip that provides helpful hints; this is generally displayed at the mouse cursor position.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_APPLICATION">ROLE_APPLICATION</a></code></dt>
+ <dd>
+  Represents a main window for an application.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_DOCUMENT">ROLE_DOCUMENT</a></code></dt>
+ <dd>
+  Represents a document window. A document window is always contained within an application window.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_PANE">ROLE_PANE</a></code></dt>
+ <dd>
+  Represents a pane within a frame or document window. Users can navigate between panes and within the contents of the current pane, but cannot navigate between items in different panes. Thus, panes represent a level of grouping lower than frame windows or documents, but above individual controls.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_CHART">ROLE_CHART</a></code></dt>
+ <dd>
+  Represents a graphical image used to represent data.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_DIALOG">ROLE_DIALOG</a></code></dt>
+ <dd>
+  Represents a dialog box or message box.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_BORDER">ROLE_BORDER</a></code></dt>
+ <dd>
+  Represents a window border.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_GROUPING">ROLE_GROUPING</a></code></dt>
+ <dd>
+  Logically groups other objects.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_SEPARATOR">ROLE_SEPARATOR</a></code></dt>
+ <dd>
+  Used to visually divide a space into two regions, such as a separator menu item or a bar that divides split panes within a window.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_TOOLBAR">ROLE_TOOLBAR</a></code></dt>
+ <dd>
+  Represents a toolbar, which is a grouping of controls (push buttons or toggle buttons) that provides easy access to frequently used features.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_STATUSBAR">ROLE_STATUSBAR</a></code></dt>
+ <dd>
+  Represents a status bar, which is an area at the bottom of a window that displays information about the current operation, state of the application, or selected object. The status bar has multiple fields, which display different kinds of information.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_TABLE">ROLE_TABLE</a></code></dt>
+ <dd>
+  Represents a table that contains rows and columns of cells, and optionally, row headers and column headers.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_COLUMNHEADER">ROLE_COLUMNHEADER</a></code></dt>
+ <dd>
+  Represents a column header, providing a visual label for a column in a table.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_ROWHEADER">ROLE_ROWHEADER</a></code></dt>
+ <dd>
+  Represents a row header, which provides a visual label for a table row.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_COLUMN">ROLE_COLUMN</a></code></dt>
+ <dd>
+  Represents a column of cells within a table.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_ROW">ROLE_ROW</a></code></dt>
+ <dd>
+  Represents a row of cells within a table.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_CELL">ROLE_CELL</a></code></dt>
+ <dd>
+  Represents a cell within a table.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_LINK">ROLE_LINK</a></code></dt>
+ <dd>
+  Represents a link to something else. This object might look like text or a graphic, but it acts like a button.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_HELPBALLOON">ROLE_HELPBALLOON</a></code></dt>
+ <dd>
+  Displays a Help topic in the form of a ToolTip or Help balloon.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_CHARACTER">ROLE_CHARACTER</a></code></dt>
+ <dd>
+  Represents a cartoon-like graphic object, such as Microsoft Office Assistant, which is displayed to provide help to users of an application.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_LIST">ROLE_LIST</a></code></dt>
+ <dd>
+  Represents a list box, allowing the user to select one or more items.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_LISTITEM">ROLE_LISTITEM</a></code></dt>
+ <dd>
+  Represents an item in a list.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_OUTLINE">ROLE_OUTLINE</a></code></dt>
+ <dd>
+  Represents an outline or tree structure, such as a tree view control, that displays a hierarchical list and allows the user to expand and collapse branches.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_OUTLINEITEM">ROLE_OUTLINEITEM</a></code></dt>
+ <dd>
+  Represents an item in an outline or tree structure.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_PAGETAB">ROLE_PAGETAB</a></code></dt>
+ <dd>
+  Represents a page tab, it is a child of a page tab list.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_PROPERTYPAGE">ROLE_PROPERTYPAGE</a></code></dt>
+ <dd>
+  Represents a property sheet.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_INDICATOR">ROLE_INDICATOR</a></code></dt>
+ <dd>
+  Represents an indicator, such as a pointer graphic, that points to the current item.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_GRAPHIC">ROLE_GRAPHIC</a></code></dt>
+ <dd>
+  Represents a picture.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_STATICTEXT">ROLE_STATICTEXT</a></code></dt>
+ <dd>
+  Represents read-only text, such as labels for other controls or instructions in a dialog box. Static text cannot be modified or selected.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_TEXT_LEAF">ROLE_TEXT_LEAF</a></code></dt>
+ <dd>
+  Represents selectable text that allows edits or is designated read-only.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_PUSHBUTTON">ROLE_PUSHBUTTON</a></code></dt>
+ <dd>
+  Represents a push button control.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_CHECKBUTTON">ROLE_CHECKBUTTON</a></code></dt>
+ <dd>
+  Represents a check box control.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_RADIOBUTTON">ROLE_RADIOBUTTON</a></code></dt>
+ <dd>
+  Represents an option button, also called a radio button. It is one of a group of mutually exclusive options. All objects sharing a single parent that have this attribute are assumed to be part of single mutually exclusive group.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_COMBOBOX">ROLE_COMBOBOX</a></code></dt>
+ <dd>
+  Represents a combo box; an edit control with an associated list box that provides a set of predefined choices.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_DROPLIST">ROLE_DROPLIST</a></code></dt>
+ <dd>
+  Represents the calendar control.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_PROGRESSBAR">ROLE_PROGRESSBAR</a></code></dt>
+ <dd>
+  Represents a progress bar, dynamically showing the user the percent complete of an operation in progress.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_DIAL">ROLE_DIAL</a></code></dt>
+ <dd>
+  Represents a dial or knob whose purpose is to allow a user to set a value.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_HOTKEYFIELD">ROLE_HOTKEYFIELD</a></code></dt>
+ <dd>
+  Represents a hot-key field that allows the user to enter a combination or sequence of keystrokes.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_SLIDER">ROLE_SLIDER</a></code></dt>
+ <dd>
+  Represents a slider, which allows the user to adjust a setting in given increments between minimum and maximum values.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_SPINBUTTON">ROLE_SPINBUTTON</a></code></dt>
+ <dd>
+  Represents a spin box, which is a control that allows the user to increment or decrement the value displayed in a separate "buddy" control associated with the spin box.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_DIAGRAM">ROLE_DIAGRAM</a></code></dt>
+ <dd>
+  Represents a graphical image used to diagram data.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_ANIMATION">ROLE_ANIMATION</a></code></dt>
+ <dd>
+  Represents an animation control, which contains content that changes over time, such as a control that displays a series of bitmap frames.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_EQUATION">ROLE_EQUATION</a></code></dt>
+ <dd>
+  Represents a mathematical equation. It is used by MATHML.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_BUTTONDROPDOWN">ROLE_BUTTONDROPDOWN</a></code></dt>
+ <dd>
+  Represents a button that drops down a list of items.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_BUTTONMENU">ROLE_BUTTONMENU</a></code></dt>
+ <dd>
+  Represents a button that drops down a menu.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_BUTTONDROPDOWNGRID">ROLE_BUTTONDROPDOWNGRID</a></code></dt>
+ <dd>
+  Represents a button that drops down a grid.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_WHITESPACE">ROLE_WHITESPACE</a></code></dt>
+ <dd>
+  Represents blank space between other objects.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_PAGETABLIST">ROLE_PAGETABLIST</a></code></dt>
+ <dd>
+  Represents a container of page tab controls.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_CLOCK">ROLE_CLOCK</a></code></dt>
+ <dd>
+  Represents a control that displays time.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_SPLITBUTTON">ROLE_SPLITBUTTON</a></code></dt>
+ <dd>
+  Represents a button on a toolbar that has a drop-down list icon directly adjacent to the button.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_IPADDRESS">ROLE_IPADDRESS</a></code></dt>
+ <dd>
+  Represents an edit control designed for an Internet Protocol (IP) address. The edit control is divided into sections for the different parts of the IP address.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_ACCEL_LABEL">ROLE_ACCEL_LABEL</a></code></dt>
+ <dd>
+  Represents a label control that has an accelerator.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_ARROW">ROLE_ARROW</a></code></dt>
+ <dd>
+  Represents an arrow in one of the four cardinal directions.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_CANVAS">ROLE_CANVAS</a></code></dt>
+ <dd>
+  Represents a control that can be drawn into and is used to trap events.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_CHECK_MENU_ITEM">ROLE_CHECK_MENU_ITEM</a></code></dt>
+ <dd>
+  Represents a menu item with a check box.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_COLOR_CHOOSER">ROLE_COLOR_CHOOSER</a></code></dt>
+ <dd>
+  Represents a specialized dialog that lets the user choose a color.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_DATE_EDITOR">ROLE_DATE_EDITOR</a></code></dt>
+ <dd>
+  Represents control whose purpose is to allow a user to edit a date.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_DESKTOP_ICON">ROLE_DESKTOP_ICON</a></code></dt>
+ <dd>
+  An iconified internal frame in an ROLE_DESKTOP_PANE.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_DESKTOP_FRAME">ROLE_DESKTOP_FRAME</a></code></dt>
+ <dd>
+  A desktop pane. A pane that supports internal frames and iconified versions of those internal frames.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_DIRECTORY_PANE">ROLE_DIRECTORY_PANE</a></code></dt>
+ <dd>
+  A directory pane. A pane that allows the user to navigate through and select the contents of a directory. May be used by a file chooser.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_FILE_CHOOSER">ROLE_FILE_CHOOSER</a></code></dt>
+ <dd>
+  A file chooser. A specialized dialog that displays the files in the directory and lets the user select a file, browse a different directory, or specify a filename. May use the directory pane to show the contents of a directory.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_FONT_CHOOSER">ROLE_FONT_CHOOSER</a></code></dt>
+ <dd>
+  A font chooser. A font chooser is a component that lets the user pick various attributes for fonts.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_CHROME_WINDOW">ROLE_CHROME_WINDOW</a></code></dt>
+ <dd>
+  Frame role. A top level window with a title bar, border, menu bar, etc. It is often used as the primary window for an application.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_GLASS_PANE">ROLE_GLASS_PANE</a></code></dt>
+ <dd>
+  A glass pane. A pane that is guaranteed to be painted on top of all panes beneath it.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_HTML_CONTAINER">ROLE_HTML_CONTAINER</a></code></dt>
+ <dd>
+  A document container for HTML, whose children represent the document content.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_ICON">ROLE_ICON</a></code></dt>
+ <dd>
+  A small fixed size picture, typically used to decorate components.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_LABEL">ROLE_LABEL</a></code></dt>
+ <dd>
+  Presents an icon or short string in an interface.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_LAYERED_PANE">ROLE_LAYERED_PANE</a></code></dt>
+ <dd>
+  A layered pane. A specialized pane that allows its children to be drawn in layers, providing a form of stacking order. This is usually the pane that holds the menu bar as well as the pane that contains most of the visual components in a window.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_OPTION_PANE">ROLE_OPTION_PANE</a></code></dt>
+ <dd>
+  A specialized pane whose primary use is inside a dialog.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_PASSWORD_TEXT">ROLE_PASSWORD_TEXT</a></code></dt>
+ <dd>
+  A text object uses for passwords, or other places where the text content is not shown visibly to the user.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_POPUP_MENU">ROLE_POPUP_MENU</a></code></dt>
+ <dd>
+  A temporary window that is usually used to offer the user a list of choices, and then hides when the user selects one of those choices.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_RADIO_MENU_ITEM">ROLE_RADIO_MENU_ITEM</a></code></dt>
+ <dd>
+  A radio button that is a menu item.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_ROOT_PANE">ROLE_ROOT_PANE</a></code></dt>
+ <dd>
+  A root pane. A specialized pane that has a glass pane and a layered pane as its children. Its children can include scroll bars and a viewport.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_SCROLL_PANE">ROLE_SCROLL_PANE</a></code></dt>
+ <dd>
+  A scroll pane. An object that allows a user to incrementally view a large amount of information.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_SPLIT_PANE">ROLE_SPLIT_PANE</a></code></dt>
+ <dd>
+  A split pane. A specialized panel that presents two other panels at the same time. Between the two panels is a divider the user can manipulate to make one panel larger and the other panel smaller.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_TABLE_COLUMN_HEADER">ROLE_TABLE_COLUMN_HEADER</a></code></dt>
+ <dd>
+  The header for a column of a table.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_TABLE_ROW_HEADER">ROLE_TABLE_ROW_HEADER</a></code></dt>
+ <dd>
+  The header for a row of a table.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_TEAR_OFF_MENU_ITEM">ROLE_TEAR_OFF_MENU_ITEM</a></code></dt>
+ <dd>
+  A menu item used to tear off and reattach its menu.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_TERMINAL">ROLE_TERMINAL</a></code></dt>
+ <dd>
+  Represents an accessible terminal.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_TEXT_CONTAINER">ROLE_TEXT_CONTAINER</a></code></dt>
+ <dd>
+  Collection of objects that constitute a logical text entity.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_TOGGLE_BUTTON">ROLE_TOGGLE_BUTTON</a></code></dt>
+ <dd>
+  A toggle button. A specialized push button that can be checked or unchecked, but does not provide a separate indicator for the current state.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_TREE_TABLE">ROLE_TREE_TABLE</a></code></dt>
+ <dd>
+  Representas a control that is capable of expanding and collapsing rows as well as showing multiple columns of data.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_VIEWPORT">ROLE_VIEWPORT</a></code></dt>
+ <dd>
+  A viewport. An object usually used in a scroll pane. It represents the portion of the entire data that the user can see. As the user manipulates the scroll bars, the contents of the viewport can change.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_HEADER">ROLE_HEADER</a></code></dt>
+ <dd>
+  Header of a document page.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_FOOTER">ROLE_FOOTER</a></code></dt>
+ <dd>
+  Footer of a document page.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_PARAGRAPH">ROLE_PARAGRAPH</a></code></dt>
+ <dd>
+  A paragraph of text.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_RULER">ROLE_RULER</a></code></dt>
+ <dd>
+  A ruler such as those used in word processors.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_AUTOCOMPLETE">ROLE_AUTOCOMPLETE</a></code></dt>
+ <dd>
+  A text entry having dialog or list containing items for insertion into an entry widget, for instance a list of words for completion of a text entry.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_EDITBAR">ROLE_EDITBAR</a></code></dt>
+ <dd>
+  An editable text object in a toolbar.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_ENTRY">ROLE_ENTRY</a></code></dt>
+ <dd>
+  An control whose textual content may be entered or modified by the user.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_CAPTION">ROLE_CAPTION</a></code></dt>
+ <dd>
+  A caption describing another object.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_DOCUMENT_FRAME">ROLE_DOCUMENT_FRAME</a></code></dt>
+ <dd>
+  A visual frame or container which contains a view of document content. Document frames may occur within another Document instance, in which case the second document may be said to be embedded in the containing instance. HTML frames are often ROLE_DOCUMENT_FRAME. Either this object, or a singleton descendant, should implement the Document interface.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_HEADING">ROLE_HEADING</a></code></dt>
+ <dd>
+  Heading.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_PAGE">ROLE_PAGE</a></code></dt>
+ <dd>
+  An object representing a page of document content. It is used in documents which are accessed by the user on a page by page basis.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_SECTION">ROLE_SECTION</a></code></dt>
+ <dd>
+  A container of document content.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_REDUNDANT_OBJECT">ROLE_REDUNDANT_OBJECT</a></code></dt>
+ <dd>
+  An object which is redundant with another object in the accessible hierarchy. ATs typically ignore objects with this role.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_FORM">ROLE_FORM</a></code></dt>
+ <dd>
+  A container of form controls.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_IME">ROLE_IME</a></code></dt>
+ <dd>
+  An object which is used to allow input of characters not found on a keyboard, such as the input of Chinese characters on a Western keyboard.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_APP_ROOT">ROLE_APP_ROOT</a></code></dt>
+ <dd>
+   ???</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_PARENT_MENUITEM">ROLE_PARENT_MENUITEM</a></code></dt>
+ <dd>
+  Represents a menu item, which is an entry in a menu that a user can choose to display another menu.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_CALENDAR">ROLE_CALENDAR</a></code></dt>
+ <dd>
+  A calendar that allows the user to select a date.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_COMBOBOX_LIST">ROLE_COMBOBOX_LIST</a></code></dt>
+ <dd>
+  A list of items that is shown by combobox.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_COMBOBOX_OPTION">ROLE_COMBOBOX_OPTION</a></code></dt>
+ <dd>
+  A item of list that is shown by combobox</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_IMAGE_MAP">ROLE_IMAGE_MAP</a></code></dt>
+ <dd>
+  An image map -- has child links representing the areas</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_OPTION">ROLE_OPTION</a></code></dt>
+ <dd>
+  An option in a listbox</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_RICH_OPTION">ROLE_RICH_OPTION</a></code></dt>
+ <dd>
+  A rich option in a listbox, it can have other widgets as children</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_LISTBOX">ROLE_LISTBOX</a></code></dt>
+ <dd>
+  A list of options</dd>
+</dl>
+<div class="note">
+ <p><strong>Editor's note:</strong> Use template <span class="nowiki"><code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_">ROLE_</a></code></span> to get reference on accessible role. It looks like <code><a href="/fr/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_MENUITEM">ROLE_MENUITEM</a></code>.</p>
+</div>
+<p> </p>

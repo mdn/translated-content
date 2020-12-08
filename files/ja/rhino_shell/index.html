@@ -1,0 +1,178 @@
+---
+title: Rhino Shell
+slug: Rhino_Shell
+tags:
+  - Rhino
+translation_of: Mozilla/Projects/Rhino/Shell
+---
+<p>JavaScript shell はバッチモードでスクリプトを走らせるシンプルな方法、または調査的なプログラミングのための対話環境を提供します。</p>
+<h3 id=".E3.82.B7.E3.82.A7.E3.83.AB.E3.81.AE.E5.91.BC.E3.81.B3.E5.87.BA.E3.81.97" name=".E3.82.B7.E3.82.A7.E3.83.AB.E3.81.AE.E5.91.BC.E3.81.B3.E5.87.BA.E3.81.97">シェルの呼び出し</h3>
+<pre>java org.mozilla.javascript.tools.shell.Main [&lt;var&gt;オプション&lt;/var&gt;] &lt;var&gt;ファイル名-or-url&lt;/var&gt; [&lt;var&gt;スクリプト引数&lt;/var&gt;]
+</pre>
+<p><code><var>options</var></code> については...</p>
+<h4 id="-e_script-source" name="-e_script-source"><code>-e <var>script-source</var></code></h4>
+<p><var>script-source</var> を JavaScript スクリプトとして実行する。</p>
+<h4 id="-f_script-filename-or-url" name="-f_script-filename-or-url"><code>-f <var>script-filename-or-url</var></code></h4>
+<p><var>script-filename-or-url</var> (ファイル名あるいは URL) の内容を読み込んで、JavaScript スクリプトとして実行する。</p>
+<h4 id="-opt_optLevel_.2F_-O_optLevel" name="-opt_optLevel_.2F_-O_optLevel"><code>-opt <var>optLevel</var></code> / <code>-O <var>optLevel</var></code></h4>
+<p><var>optLevel</var> のレベルで最適化を行う。それは <code>-1</code> か <code>0</code> から <code>9</code> の間の整数でなければならない。詳しくは、<a href="ja/Rhino_Optimization">最適化</a> を参照のこと。</p>
+<h4 id="-version_versionNumber" name="-version_versionNumber"><code>-version <var>versionNumber</var></code></h4>
+<p>指定の言語バージョンとしてコンパイルする。 <var>versionNumber</var> の値は、<code>100</code>、<code>110</code>、<code>120</code>、<code>130</code>、<code>140</code>、<code>150</code> 、160あるいは 170 のいずれかでなければならない。言語バージョンについて、詳しくは <a href="ja/Rhino_Overview#JavaScript_Language_Versions">JavaScript 言語バージョン</a> を参照のこと。</p>
+<h4 id="-strict" name="-strict"><code>-strict</code></h4>
+<p>厳密 (strict) モードを有効にする。</p>
+<h4 id="-continuations" name="-continuations"><code>-continuations</code></h4>
+<p>継続 (continuation) の実験的なサポートを有効にして、インタープリターモードを強制するため最適化レベルを -1 にします。{{ 訳注("現在はこのオプションは無効のはず。continuation を使用するには -opt -1 を指定する") }}</p>
+<h4 id=".E6.B3.A8.E8.A8.98" name=".E6.B3.A8.E8.A8.98">注記</h4>
+<p>システム・プロパティ <code>rhino.use_java_policy_security</code> を <code>true</code> にセットした状態で、導入されたセキュリティマネージャのもとで、シェルが起動される場合、シェルは Java ポリシー設定に従い、それらの URL に基づいたスクリプトのパーミッションを制限します。これは、JVM が Java2 セキュリティモデルを実装する場合のみ、利用可能です。</p>
+<h3 id=".E5.AE.9A.E7.BE.A9.E6.B8.88.E3.81.BF.E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3" name=".E5.AE.9A.E7.BE.A9.E6.B8.88.E3.81.BF.E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3">定義済みプロパティ</h3>
+<p>シェルで実行するスクリプトは、いくつかの追加されたトップレベル・オブジェクトのプロパティーへアクセスできます。</p>
+<h4 id="arguments" name="arguments"><code>arguments</code></h4>
+<p><code>arguments</code> オブジェクトは、シェル起動時にコマンドラインで与えられた、すべての引数の文字列で構成された配列です。</p>
+<h4 id="help.28.29" name="help.28.29"><code>help()</code></h4>
+<p>help 関数を実行すれば、使用方法とヘルプメッセージを表示するはずです。</p>
+<h4 id="defineClass.28className.29" name="defineClass.28className.29"><code>defineClass(<var>className</var>)</code></h4>
+<p>文字列引数 <var>className</var> で指名された Java クラスを使って、拡張機能を定義します。拡張機能を定義するために、<code>ScriptableObject.defineClass()</code> を使用します。</p>
+<h4 id="deserialize.28filename.29" name="deserialize.28filename.29"><code>deserialize(<var>filename</var>)</code></h4>
+<p>指定のファイルから、前もって <code>serialize</code> を呼んで書き込んでいたオブジェクトを、復元します。</p>
+<h4 id="load.28.5Bfilename.2C_....5D.29" name="load.28.5Bfilename.2C_....5D.29"><code>load([<var>filename</var>, ...])</code></h4>
+<p>文字列引数で指名された JavaScript ソースファイルをロードします。複数の指定があると、それぞれのファイルを順番に読み込んで実行します。</p>
+<h4 id="loadClass.28className.29" name="loadClass.28className.29"><code>loadClass(<var>className</var>)</code></h4>
+<p>文字列引数 <var>className</var> で指名されたクラスを、ロードし実行します。そのクラスは、スクリプトのインターフェースを実装したクラスでなければならず、それは多分 <a href="ja/Rhino_JavaScript_Compiler">Rhino JavaScript Compiler</a> によってコンパイルされたスクリプトのはずです。</p>
+<h4 id="print.28.5Bexpr_....5D.29" name="print.28.5Bexpr_....5D.29"><code>print([<var>expr</var> ...])</code></h4>
+<p>式を評価してプリントします。それぞれの式を評価し、結果をストリングへ変換、そしてそれをプリントします。</p>
+<h4 id="readFile.28path_.5B.2C_characterCoding.29" name="readFile.28path_.5B.2C_characterCoding.29"><code>readFile(<var>path</var> [, <var>characterCoding</var>)</code></h4>
+<p>与えられたファイルを読み込み、指定の文字コード、あるいは明示的な指定がなければデフォルト文字コードを使って、そのバイト列をストリングへ変換します。</p>
+<h4 id="readUrl.28url_.5B.2C_characterCoding.29" name="readUrl.28url_.5B.2C_characterCoding.29"><code>readUrl(<var>url</var> [, <var>characterCoding</var>)</code></h4>
+<p>与えられた url で接続を開始し、接続からの入力のバイト列をすべて読み込んで、指定の文字コード、あるいは 明示的な指定がなければデフォルト文字コードを使って、ストリングへ変換します。</p>
+<h4 id="runCommand.28commandName.2C_.5Barg.2C_....5D_.5Boptions.5D.29" name="runCommand.28commandName.2C_.5Barg.2C_....5D_.5Boptions.5D.29"><code>runCommand(<var>commandName</var>, [<var>arg</var>, ...] [<var>options</var>])</code></h4>
+<p>与えられた引数とオプションで、指定のコマンドを 切り離された (孤立した) プロセスとして実行し、そして、プロセスの exit status を返します。</p>
+<p>Usage:</p>
+<pre>runCommand(command)
+runCommand(command, arg1, ..., argN)
+runCommand(command, arg1, ..., argN, options)
+</pre>
+<p>All except the last arguments to <code>runCommand</code> are converted to strings and denote command name and its arguments. If the last argument is a JavaScript object, it is an option object. Otherwise it is converted to string denoting the last argument and options objects assumed to be empty.</p>
+<p>The following properties of the option object are processed:</p>
+<ul>
+  <li><code>args</code> - provides an array of additional command arguments</li>
+  <li><code>env</code> - explicit environment object. All its enumeratable properties define the corresponding environment variable names.</li>
+  <li><code>input</code> - the process input. If it is not <code>java.io.InputStream</code>, it is converted to string and sent to the process as its input. If not specified, no input is provided to the process.</li>
+  <li><code>output</code> - the process output instead of <code>java.lang.System.out</code>. If it is not instance of <code>java.io.OutputStream</code>, the process output is read, converted to a string, appended to the output property value converted to string and put as the new value of the output property.</li>
+  <li><code>err</code> - the process error output instead of <code>java.lang.System.err</code>. If it is not instance of <code>java.io.OutputStream</code>, the process error output is read, converted to a string, appended to the err property value converted to string and put as the new value of the err property.</li>
+</ul>
+<h4 id="seal.28object.29" name="seal.28object.29"><code>seal(<var>object</var>)</code></h4>
+<p>指定のオブジェクトを封印します。プロパティーを追加・削除・変更するどんな試みも、例外をスロー (throw) するでしょう。</p>
+<h4 id="serialize.28object.2C_filename.29" name="serialize.28object.2C_filename.29"><code>serialize(<var>object</var>, <var>filename</var>)</code></h4>
+<p>オブジェクトを与えて、指定のファイルへ シリアライズ (直列化) します。</p>
+<h4 id="spawn.28functionOrScript.29" name="spawn.28functionOrScript.29"><code>spawn(<var>functionOrScript</var>)</code></h4>
+<p>関数かあるいはスクリプトを与えて、別スレッドとして実行します。</p>
+<h4 id="sync.28function.29" name="sync.28function.29"><code>sync(<var>function</var>)</code></h4>
+<p>既存の関数をもとに、同期化された関数 (Java の <code>synchronized</code> メソッドのような感じ) を作成します。新しい関数は、その呼び出しのオブジェクトの <code>this</code> について、同期化します。</p>
+<h4 id="quit.28.29" name="quit.28.29"><code>quit()</code></h4>
+<p>シェルを終了します。プロンプトで EOF 文字をタイプ (入力) すれば、インタラクティブ (対話式) モード中であるシェルは終了するはずです。</p>
+<h4 id="version.28.5Bnumber.5D.29" name="version.28.5Bnumber.5D.29"><code>version([<var>number</var>])</code></h4>
+<p>JavaScript バージョン番号を取得 / 設定します。引数がなければカレント・バージョン番号を返します。引数があれば、<code>100</code>、<code>110</code>、<code>120</code>、<code>130</code>、<code>140</code>、<code>150</code>、あるいは <code>160</code> のいずれかを期待され、それぞれ JavaScript バージョンの 1.0、1.1、1.2、1.3、1.4 を表しています。</p>
+<h3 id=".E5.AE.9F.E4.BE.8B" name=".E5.AE.9F.E4.BE.8B">実例</h3>
+<h4 id=".E8.B5.B7.E5.8B.95" name=".E8.B5.B7.E5.8B.95">起動</h4>
+<p>ここでは、シェルはコマンドラインから 3 回起動されます (システムコマンドプロンプトは <code>$</code> で示される)。最初の起動は、コマンドライン自体に指定されたスクリプトの実行です。次の起動は引数がないので、シェルはインタラクティブ (対話式) モードに入り、タイプインそのままに、おのおのの行を読み込んで評価します。最後の起動例は、ファイルのスクリプトを実行し、スクリプト自体の引数にアクセスします。</p>
+<pre>$ java org.mozilla.javascript.tools.shell.Main -e print('hi')
+hi
+$ java org.mozilla.javascript.tools.shell.Main
+js&gt; print('hi')
+hi
+js&gt; 6*7
+42
+js&gt; function f() {
+  return a;
+}
+js&gt; var a = 34;
+js&gt; f()
+34
+js&gt; quit()
+$ cat echo.js
+for (i in arguments) {
+  print(arguments[i])
+}
+$ java org.mozilla.javascript.tools.shell.Main echo.js foo bar
+foo
+bar
+$
+</pre>
+<h4 id="spawn_and_sync" name="spawn_and_sync"><code>spawn</code> and <code>sync</code></h4>
+<p>次の例は、<code>spawn</code> で 2 つのスレッドを生成するとともに、<code>sync</code> を使って <code>test</code> 関数の同期化バージョンを作成します。</p>
+<pre>js&gt; function test(x) {
+  print("entry");
+  java.lang.Thread.sleep(x*1000);
+  print("exit");
+}
+js&gt; var o = { f : sync(test) };
+js&gt; spawn(function() {o.f(5);});
+Thread[Thread-0,5,main]
+entry
+js&gt; spawn(function() {o.f(5);});
+Thread[Thread-1,5,main]
+js&gt;
+exit
+entry
+exit
+</pre>
+<h4 id="runCommand" name="runCommand"><code>runCommand</code></h4>
+<p>Linux 環境下での、<code>runCommand</code> 呼び出しの例です。</p>
+<pre>js&gt; runCommand('date')
+Thu Jan 23 16:49:36 CET 2003
+0
+// input オプションを使用して、プロセスに入力を提供する
+js&gt; runCommand("sort", {input: "c\na\nb"})
+a
+b
+c
+0
+js&gt; // output と err オプションのデモ
+js&gt; var opt={input: "c\na\nb", output: 'Sort Output:\n'}
+js&gt; runCommand("sort", opt)
+0
+js&gt; print(opt.output)
+Sort Output:
+a
+b
+c
+js&gt; var opt={input: "c\na\nb", output: 'Sort Output:\n', err: ''}
+js&gt; runCommand("sort", "--bad-arg", opt)
+2
+js&gt; print(opt.err)
+/bin/sort: unrecognized option `--bad-arg'
+Try `/bin/sort --help' for more information.
+
+js&gt; runCommand("bad_command", "--bad-arg", opt)
+js: "&lt;stdin&gt;", line 18: uncaught JavaScript exception: java.io.IOException: bad_command: not found
+js&gt; // システムシェルに、明示的に環境 (environment) を渡す
+js&gt; runCommand("sh", "-c", "echo $env1 $env2", { env: {env1: 100, env2: 200}})
+100 200
+0
+js&gt; // args オプションを使い、さらなるコマンド引数を提供する
+js&gt; var arg_array = [1, 2, 3, 4];
+js&gt; runCommand("echo", { args: arg_array})
+1 2 3 4
+0
+</pre>
+<p>Windows の例も同様に、</p>
+<pre>js&gt; // シェルコマンドの呼び出し
+js&gt; runCommand("cmd", "/C", "date /T")
+27.08.2005
+0
+js&gt; // sort を実行し、結果の出力を収集
+js&gt; var opt={input: "c\na\nb", output: 'Sort Output:\n'}
+js&gt; runCommand("sort", opt)
+0
+js&gt; print(opt.output)
+Sort Output:
+a
+b
+c
+js&gt; // メモ帳の呼び出し。それが終了するまで待ちます。
+js&gt; runCommand("notepad")
+0
+</pre>
+<div class="noinclude">
+   </div>
+<p>{{ languages( { "en": "en/Rhino_Shell" } ) }}</p>

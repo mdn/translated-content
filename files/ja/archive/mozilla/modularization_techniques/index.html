@@ -1,0 +1,802 @@
+---
+title: Modularization Techniques
+slug: Archive/Mozilla/Modularization_Techniques
+tags:
+  - Outdated_articles
+  - XPCOM
+translation_of: Archive/Mozilla/Modularization_Techniques
+---
+<p>
+</p><p></p><div class="warning warningHeader">
+    <p><strong>警告:</strong> <strong>この記事の内容は古くなっている可能性があります。</strong> このドキュメントの最終更新は 2004 年です。</p>
+</div> <div class="overheadIndicator draft">
+    <p><strong>草案</strong><br>
+    このページは完成していません。</p>
+
+</div>
+<p></p>
+<h3 id=".E3.81.AF.E3.81.98.E3.82.81.E3.81.AB" name=".E3.81.AF.E3.81.98.E3.82.81.E3.81.AB"> はじめに </h3>
+<p>この文書は、新しい Mozilla のモジュールの作成、または既存のコードをモジュールへ分割するのに必要な情報の提供を目的としています。我々が使った仕組みは、COM により築かれた原則に基づいているため、COM についての多くの知識が適用できます。また COM に関するリファレンスには、ここに挙げたものより、もっと興味深く、複雑な例があります。
+</p>
+<h3 id=".E5.9F.BA.E6.9C.AC" name=".E5.9F.BA.E6.9C.AC"> 基本 </h3>
+<h4 id=".E3.82.A4.E3.83.B3.E3.82.BF.E3.83.95.E3.82.A7.E3.83.BC.E3.82.B9" name=".E3.82.A4.E3.83.B3.E3.82.BF.E3.83.95.E3.82.A7.E3.83.BC.E3.82.B9"> インタフェース </h4>
+<p>ジュールの基本的な要素は、C++ の純粋仮想インタフェースです。純粋仮想インタフェースは、単にすべてのメソッドが純粋仮想として定義されたクラスです。例えばこうです。
+</p>
+<pre>virtual int foo(int bar) = 0;
+</pre>
+<p>純粋仮想インタフェースは、(おそらく動的にローディングした) 別々のライブラリに存在する可能性があるモジュール間で関数テーブルを渡すための簡単な仕組みを提供します。それぞれのインタフェースには、一意なインタフェース識別子 (<a href="#nsIID_.E3.81.A8_nsCID_.E3.81.AB.E3.81.A4.E3.81.84.E3.81.A6">IID</a>) が割り当てられます。
+</p>
+<h4 id="nsISupports" name="nsISupports"> <code>nsISupports</code> </h4>
+<p>我々のモデルにおいてキーとなるインタフェースは、<code>nsISupports</code> インタフェースです。これは、COM における <code>IUnknown</code> インタフェースと同等のものです。<code>nsISupports</code> はインタフェース問い合わせと参照カウントという二つの主要な特徴を持ちます。インタフェース問い合わせは、オブジェクトがどのインタフェースをサポートしているかを決定するための単純で画一的な仕組みです。また、オブジェクトがどのように実装されているかを隠すための仕組みです。
+</p><p>インタフェース問い合わせは、<code>QueryInteface()</code> メソッドを使うことで実行されます。呼び出し側は、ID と結果のインタフェースを格納するアドレスへのポインタを渡します。もし問い合わせが成功したら、<code>QueryInteface()</code> は、<code>NS_OK</code> を返します。もしオブジェクトが与えられたインタフェースをサポートしていない場合は、<code>NS_NOINTERFACE</code> を返します。
+</p><p>参照のカウントは、<code>AddRef()</code> と <code>Release()</code> メソッドを使って実行されます。オブジェクトの参照カウントは、通常 0 から始まります。<code>AddRef()</code> は、参照カウントを増加させ、<code>Release()</code> は、それを減少させます。もし <code>Release()</code> への呼び出しにより参照カウントが 0 になったら、オブジェクトは通常自分自身を削除します。 成功した <code>QueryInterface()</code> は、復帰する前に、要求したインタフェースに対して <code>AddRef()</code> を呼び出します。<code>AddRef()</code> と <code>Release()</code> の両方とも、呼び出し後の参照カウントを返します。
+</p><p>便利な <code>NS_ADDREF()</code> マクロと <code>NS_RELEASE()</code> マクロの方が、<code>AddRef</code> と <code>Relase</code> を直接呼び出すよりもお勧めです。デバッグビルドでは、これらのマクロは有用な参照カウントログを提供します。(これらのマクロを) 可能な限り使うようにしてください。
+</p>
+<pre>/*
+ * nsISupports インタフェース
+ */
+
+class nsISupports {
+public:
+    NS_IMETHOD QueryInterface(const nsIID &amp;aIID,
+                              void **aResult) = 0;
+    NS_IMETHOD_(nsrefcnt) AddRef(void) = 0;
+    NS_IMETHOD_(nsrefcnt) Release(void) = 0;
+};
+</pre>
+<p><code>NS_IMETHOD</code> と <code>NS_IMETHOD_(<i>type</i>)</code> マクロは、基本的に <code>virtual nsresult</code> と <code>virtual <i>type</i></code> の短縮形です。Windows では、COM との互換性のために、それらは <code>virtual nsresult __stdcall</code> と <code>virtual <i>type</i> __stdcall</code> に展開されます。もし COM の互換性に関心があるのでない限り、それらをインタフェースの中で使う必要はありません。
+</p><p>すべての Mozilla インタフェースは、<code>nsISupports</code> を継承しています。<code>nsISupports</code> を継承しているため、どのインタフェースに対してもそのインスタンスがサポートしている他のインタフェースについて問い合わせることができます。また、参照カウントの仕組みを常に使用できることが保証されます。<code>nsISupports</code> の IID は、<code>NS_ISUPPORTS_IID</code> として定義されています。
+</p><p><code>QueryInterface()</code> には、守られるべき、いくつかの重要な特徴があります。もし <code>QueryInterface()</code> をインタフェース A に対して実行し、インタフェース B を得たならば、<code>QueryInteface()</code> をインタフェース B に対して実行した場合にインタフェース A を得ることができなければなりません。もしインタフェース A と B がどちらも同じインスタンスによって実装されている場合は、<code>nsISupports</code> に対して、<code>QueryInterface()</code> を実行した結果は、どちらも同じインタフェースを返さなければなりません。これは、つまりインタフェース B が nsISupports を継承していても、QueryInteface() の実行によって、同じインタフェースを返さないかもしれないことを意味します。この重要な振舞いは、インタフェース A と B が同じオブジェクトにより実装されているかどうかを決定するための唯一の信頼できる仕組みです。単純なオブジェクトにとって、それらの振舞いを維持するのは簡単です。後に見る集約では、複雑になりえます。
+</p><p>一方、オブジェクトは、<code>AddRef()</code> と <code>Release()</code> の実装を、ある程度自由にできます。全体のオブジェクトに対し、一つの参照カウントを維持することができますし、また個々のインタフェースごとの参照カウントを維持することもできます。静的なオブジェクトは、完全に参照カウントを無視することもできます。しかしながら、それらの関数の実装の質が悪ければ、メモリリークや解放済のオブジェクトに対する不慮のアクセスなど否定的な結果になることもありえます。
+</p>
+<h4 id=".E3.83.95.E3.82.A1.E3.82.AF.E3.83.88.E3.83.AA" name=".E3.83.95.E3.82.A1.E3.82.AF.E3.83.88.E3.83.AA"> ファクトリ </h4>
+<p>ファクトリは、クラスのインスタンスを作るためだけの特別なクラスです。たいてい、Foo クラスはそれと関連する FooFactory を持ちます。<code>nsIFactory</code> インタフェースは、COM の <code>IClassFactory</code> と同等のものです。
+</p>
+<pre>/*
+ * nsIFactory インタフェース
+ */
+
+class nsIFactory: public nsISupports {
+public:
+    NS_IMETHOD CreateInstance(nsISupports *aOuter,
+                              const nsIID &amp;aIID,
+                              void **aResult) = 0;
+    NS_IMETHOD LockFactory(PRBool aLock) = 0;
+</pre>
+<p>ファクトリを使う理由は、それがオブジェクトのためのクラス宣言にアクセスせずに、オブジェクトを作る仕組みを提供しているからです。new Foo() の呼び出しは、コンパイル時に Foo() のクラス宣言にアクセスすることを要求します。ファクトリは、実装者に対して、クラス宣言とオブジェクトの作成の詳細を隠します。特に重要なステップとして、クラスの実装における最大限の自由度を許し、コンパイル時の依存関係を減らします。さらには、クラスとファクトリのリンク時の依存関係を全体的に減らすのにも使われます。
+</p>
+<h4 id=".E3.82.B3.E3.83.B3.E3.83.9D.E3.83.BC.E3.83.8D.E3.83.B3.E3.83.88.E3.83.9E.E3.83.8D.E3.83.BC.E3.82.B8.E3.83.A3" name=".E3.82.B3.E3.83.B3.E3.83.9D.E3.83.BC.E3.83.8D.E3.83.B3.E3.83.88.E3.83.9E.E3.83.8D.E3.83.BC.E3.82.B8.E3.83.A3"> コンポーネントマネージャ </h4>
+<p>我々のモジュール化の主な目的の一つは、リンク時の依存関係を取り除くことです。では、リンクされないモジュールをどのように見つければよいでしょうか？ そのために、<code>nsComponentManager</code> と呼ばれるものを作りました。これは、単純にクラス ID とファクトリ、そしてそれを含むライブラリをマッピングします。
+</p>
+<pre>class nsComponentManager {
+public:
+  // 指定されたクラス ID に対応するファクトリを探す
+  static nsresult FindFactory(const nsCID &amp;aClass,
+                              nsIFactory **aFactory);
+  // 指定されたクラス ID に対応するクラス・インスタンスを作成する
+  static nsresult CreateInstance(const nsCID &amp;aClass,
+                                 const nsIID &amp;aIID,
+                                 nsISupports *aDelegate,
+                                 void **aResult);
+  // クラスに対応するファクトリを手動で登録する
+  static nsresult RegisterFactory(const nsCID &amp;aClass,
+                                  nsIFactory *aFactory,
+                                  PRBool aReplace);
+  // クラスに対応し、動的にロードしたファクトリを手動で登録する
+  static nsresult RegisterFactory(const nsCID &amp;aClass,
+                                  const char *aLibrary,
+                                  PRBool aReplace,
+                                  PRBool aPersist);
+  // クラスに対応するファクトリを手動で登録抹消する
+  static nsresult UnregisterFactory(const nsCID &amp;aClass,
+                                    nsIFactory *aFactory);
+  // クラスに対応し、動的にロードしたファクトリを手動で登録抹消する
+  static nsresult UnregisterFactory(const nsCID &amp;aClass,
+                                    const char *aLibrary);
+  // 使っていない動的ロードしたファクトリをアンロードする
+  static nsresult FreeLibraries();
+};
+</pre>
+<p>ファクトリをリポジトリーに入れる方法はいくつかあります。最も直接的な方法は、<code>RegisterFactory()</code> を使って行うものです。<code>RegisterFactory()</code> は、2 つの異なる登録の仕組みをサポートしています。最初の方法は、クラス ID とファクトリへのポインタを指定します。この仕組みは、実行可能プログラムにリンクされたファクトリに対して使うことができます。2 番目の方法は、クラス ID と動的にロード可能なライブラリへのパスを指定します。この仕組みは、ファクトリが実行時の実行可能プログラム中にある場合でも使えますし、あるいはその外にあって <code>aPersisit</code> フラグを用いてリポジトリに対し、クラスIDとライブラリの関係を永続的な記憶装置へ格納するように指示することもできます。
+</p>
+<h4 id="nsIID_.E3.81.A8_nsCID_.E3.81.AB.E3.81.A4.E3.81.84.E3.81.A6" name="nsIID_.E3.81.A8_nsCID_.E3.81.AB.E3.81.A4.E3.81.84.E3.81.A6"> nsIID と nsCID について </h4>
+<p>動的にインタフェースを発見し、ローディングし、結合するプロセスを単純にするために、すべてのクラスとインタフェースにはユニークな ID が割り当てられます。この ID は、UUID に基づくユニークな 128 ビットの数です。詳細を知りたい人のために、構造をここに挙げます:
+</p>
+<pre>struct nsID {
+  PRUint32 m0;
+  PRUint16 m1, m2;
+  PRUint8 m3[8];
+};
+</pre>
+<p>これらは、しばしば以下のように文字列として表現されます:
+</p>
+<pre>{221ffe10-ae3c-11d1-b66c-00805f8a2676}
+</pre>
+<p>ID 構造体を初期化するためには、以下のように宣言します:
+</p>
+<pre>ID = {0x221ffe10, 0xae3c, 0x11d1,
+       {0xb6, 0x6c, 0x00, 0x80, 0x5f, 0x8a, 0x26, 0x76}};
+</pre>
+<p>なぜ 2 バイトの <code>b66c</code> が分割され、また後ろのバイト列といっしょにされているのかは、おそらくどこかの脚注にあります。Windows では、ID を生成するために、Visual C++ についてくる <code>uuidgen</code> と <code>guidgen</code> が使えます。
+</p>
+<h3 id=".E5.8D.98.E7.B4.94.E3.81.AA.E4.BE.8B" name=".E5.8D.98.E7.B4.94.E3.81.AA.E4.BE.8B"> 単純な例 </h3>
+<div class="note">
+<p>インタフェースを定義するためには、<a href="ja/XPIDL">XPIDL</a> を使うことをお勧めします。このサンプルコードはこれを反映するように更新すべきなのですが、これにより C++ の観点から COM の有用で基本的な理解を得ることができます。
+</p>
+</div>
+<h4 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB_nsISample.h" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB_nsISample.h"> ファイル <code>nsISample.h</code> </h4>
+<p><code>nsISample.h</code> は、とても単純なインタフェースとそのインタフェース ID (IID) を定義しています。重要なことは、インタフェースは nsISupports から継承し、すべてのメンバ関数は、純粋仮想メソッドであるということです。
+</p>
+<pre>#include "nsISupports.h"
+
+// {57ecad90-ae1a-11d1-b66c-00805f8a2676}
+#define NS_ISAMPLE_IID \
+{0x57ecad90, 0xae1a, 0x11d1, \
+  {0xb6, 0x6c, 0x00, 0x80, 0x5f, 0x8a, 0x26, 0x76}}
+
+/*
+ * nsISample インタフェース宣言
+ */
+
+class nsISample: public nsISupports {
+public:
+  NS_IMETHOD Hello() = 0;
+};
+</pre>
+<h4 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB_nsSample.h" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB_nsSample.h"> ファイル <code>nsSample.h</code> </h4>
+<p><code>nsSample.h</code> は、サンプルクラスのためのクラス ID (CID) を定義します。一つのインタフェースに対し、複数のクラスがそれを実装しても良いため、IID から CID への 1 対 1 マッピングは必要ないことに注意してください。さらに、クラスファクトリを取得するための関数も定義しています。これがクラス宣言を含まないことに注意してください。
+</p>
+<pre>#include "nsIFactory.h"
+
+// {d3944dd0-ae1a-11d1-b66c-00805f8a2676}
+#define NS_SAMPLE_CID \
+ {0xd3944dd0, 0xae1a, 0x11d1, \
+   {0xb6, 0x6c, 0x00, 0x80, 0x5f, 0x8a, 0x26, 0x76}}
+
+extern nsresult GetSampleFactory(nsIFactory **aResult);
+</pre>
+<h4 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB_nsSample.cpp" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB_nsSample.cpp"> ファイル <code>nsSample.cpp</code> </h4>
+<p><code>nsSample.cpp</code> は、サンプルクラスの宣言と実装の両方を含みます。またクラスファクトリの宣言と実装も含みます。
+</p>
+<pre>#include "nsISample.h"
+#include "nsSample.h"
+
+static NS_DEFINE_IID(kISupportsIID, NS_ISUPPORTS_IID);
+static NS_DEFINE_IID(kIFactoryIID, NS_IFACTORY_IID);
+static NS_DEFINE_IID(kISampleIID, NS_ISAMPLE_IID);
+static NS_DEFINE_CID(kISampleCID, NS_ISAMPLE_CID);
+
+/*
+ * nsSampleClass 宣言
+ */
+
+class nsSample: public nsISample {
+private:
+  nsrefcnt mRefCnt;
+
+public:
+// コンストラクタとデストラクタ
+  nsSample();
+  ~nsSample();
+
+// nsISupports メソッド
+  NS_IMETHOD QueryInterface(const nsIID &amp;aIID,
+                            void **aResult);
+  NS_IMETHOD_(nsrefcnt) AddRef(void);
+  NS_IMETHOD_(nsrefcnt) Release(void);
+
+// nsISample メソッド
+  NS_IMETHOD Hello();
+};
+
+/*
+ * nsSampleFactory 宣言
+ */
+
+class nsSampleFactory: public nsIFactory {
+private:
+  nsrefcnt mRefCnt;
+
+public:
+  nsSampleFactory();
+  ~nsSampleFactory();
+
+// nsISupports メソッド
+  NS_IMETHOD QueryInterface(const nsIID &amp;aIID,
+                            void **aResult);
+  NS_IMETHOD_(nsrefcnt) AddRef(void);
+  NS_IMETHOD_(nsrefcnt) Release(void);
+
+// nsIFactory メソッド
+  NS_IMETHOD CreateInstance(nsISupports *aOuter,
+                            const nsIID &amp;aIID,
+                            void **aResult);
+
+  NS_IMETHOD_(void) LockFactory(PRBool aLock);
+};
+
+/*
+ * nsSample 実装
+ */
+
+nsSample::nsSample()
+{
+  mRefCnt = 0;
+}
+
+nsSample::~nsSample()
+{
+  assert(mRefCnt == 0);
+}
+
+NS_IMETHOD nsSample::QueryInterface(const nsIID &amp;aIID,
+                                  void **aResult)
+{
+  if (aResult == NULL) {
+    return NS_ERROR_NULL_POINTER;
+  }
+
+  // 失敗時は、常に結果は NULL
+  *aResult = NULL;
+
+  if (aIID.Equals(kISupportsIID)) {
+    *aResult = (void *) this;
+  } else if (aIID.Equals(kISampleIID)) {
+    *aResult = (void *) this;
+  }
+
+  if (aResult != NULL) {
+    return NS_ERROR_NO_INTERFACE;
+  }
+
+  AddRef();
+  return NS_OK;
+}
+
+nsRefCount nsSample::AddRef()
+{
+  return ++mRefCnt;
+}
+
+nsRefCount nsSample::Release()
+{
+  if (--mRefCnt == 0) {
+    delete this;
+    return 0; // 削除した後、mRefCnt にアクセスしてはいけない！
+  }
+  return mRefCnt;
+}
+
+/*
+ * nsSampleFactory 実装
+ */
+
+nsSampleFactory::nsSampleFactory()
+{
+  mRefCnt = 0;
+}
+
+nsSampleFactory::~nsSampleFactory()
+{
+  assert(mRefCnt == 0);
+}
+
+NS_IMETHODIMP nsSampleFactory::QueryInterface(const nsIID &amp;aIID,
+                                         void **aResult)
+{
+  if (aResult == NULL) {
+    return NS_ERROR_NULL_POINTER;
+  }
+
+  // 失敗時は、常に結果は NULL
+  *aResult = NULL;
+
+  if (aIID.Equals(kISupportsIID)) {
+    *aResult = (void *) this;
+  } else if (aIID.Equals(kIFactoryIID)) {
+    *aResult = (void *) this;
+  }
+
+  if (*aResult == NULL) {
+    return NS_ERROR_NO_INTERFACE;
+  }
+
+  AddRef(); // 呼び出し側のために参照カウントを増やす
+  return NS_OK;
+}
+
+NS_IMETHODIMP(nsRefCount) nsSampleFactory::AddRef()
+{
+  return ++mRefCnt;
+}
+
+NS_IMETHODIMP(nsRefCount) nsSampleFactory::Release()
+{
+  if (--mRefCnt == 0) {
+    delete this;
+    return 0; // 削除した後、mRefCnt にアクセスしてはいけない！
+  }
+  return mRefCnt;
+}
+
+NS_IMETHODIMP nsSampleFactory::CreateInstance(nsISupports *aOuter,
+                                         const nsIID &amp;aIID,
+                                         void **aResult)
+{
+  if (aResult == NULL) {
+    return NS_ERROR_NULL_POINTER;
+  }
+
+  *aResult = NULL;
+
+  nsISupports inst = new nsSample();
+
+  if (inst == NULL) {
+    return NS_ERROR_OUT_OF_MEMORY;
+  }
+
+  nsresult res = inst-&gt;QueryInterface(aIID, aResult);
+
+  if (res != NS_OK) {
+    // 正しいインタフェースを取得できなかったので、片付ける
+    delete inst;
+  }
+
+  return res;
+}
+
+void nsSampleFactory::LockFactory(PRBool aLock)
+{
+  // 最も単純な場合では、実装しない
+}
+
+nsresult GetSampleFactory(nsIFactory **aResult)
+{
+  if (aResult == NULL) {
+    return NS_ERROR_NULL_POINTER;
+  }
+
+  *aResult = NULL;
+
+  nsISupports inst = new nsSampleFactory();
+
+  if (inst == NULL) {
+    return NS_ERROR_OUT_OF_MEMORY;
+  }
+
+  nsresult res = inst-&gt;QueryInterface(kIFactoryIID, aResult);
+
+  if (res != NS_OK) {
+    // 正しいインタフェースを取得できなかったので、片付ける
+    delete inst;
+  }
+
+  return res;
+}
+</pre>
+<h4 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB_main.cpp" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB_main.cpp"> ファイル <code>main.cpp</code> </h4>
+<p><code>main.cpp</code> は、サンプルクラスのインスタンスを作成し、それを処分する単純なプログラムです。クラスファクトリを直接含むので、クラスのための CID を使いません。
+</p>
+<pre>#include "nsISample.h"
+#include "nsSample.h"
+
+static NS_DEFINE_IID(kISampleIID, NS_ISAMPLE_IID);
+
+int main(int argc, char *argv[])
+{
+  nsIFactory *factory;
+  GetSampleFactory(&amp;factory);
+
+  nsISample *sample;
+
+  nsresult res = factory-&gt;CreateInstance(NULL, kISampleIID,
+                                         (void **) &amp;sample);
+
+  if (res == NS_OK) {
+    sample-&gt;Hello();
+    NS_RELEASE(sample);
+  }
+
+  return 0;
+}
+</pre>
+<h3 id="DLL_.E3.81.B8.E3.81.AE.E7.A7.BB.E8.A1.8C" name="DLL_.E3.81.B8.E3.81.AE.E7.A7.BB.E8.A1.8C"> DLL への移行 </h3>
+<h4 id="DLL_.E3.81.AE.E5.AE.9F.E8.A3.85" name="DLL_.E3.81.AE.E5.AE.9F.E8.A3.85"> DLL の実装 </h4>
+<p>一度ファクトリを設定したならば、DLL へ移行するのは比較的小さなことです。ファクトリを含む DLL は、一つまたは二つの関数をエクスポートする必要があります:
+</p>
+<pre>// 与えられたクラス ID と関連したファクトリを返す
+extern "C" NS_EXPORT nsresult NSGetFactory(const nsCID &amp;aCID,
+                                           nsIFactory **aFactory);
+
+// DLL が今アンロード可能かどうかを返す
+extern "C" NS_EXPORT PRBool NSCanUnload();
+</pre>
+<p><code>NSGetFactory()</code> の最も単純な実装は、前の例における <code>GetSampleFactory()</code> とほとんど同じです。渡されてきたクラス ID が、実装したファクトリに対して正しい ID であることを確認するだけです。DLL が複数のファクトリを含む場合は、どれを返すか決めるための条件コードを付加する必要があります。
+</p><p><code>NSCanUnload()</code> は、オプションですが、有用な関数です。これが実装されていた場合は、NSRepository は <code>FreeLibraries()</code> が呼ばれた時点では、もはや使われていない DLL をアンロードすることで、メモリーを解放することができます。DLL がアンロード可能かどうかを判断する時に、実装する上では二つのことを考慮します: そのファクトリのどれかが現在使われているか、そして誰かがサーバをロックしているか。もし <code>NSCanUnload()</code> が実装されていない場合、DLL はアンロードされません。
+</p><p>以下の例は、<code>nsSample.cpp</code> を DLL にコンパイルされるファイルに変更したものです。違いは、<strong>強調</strong> で示します。 実際にはあまり違いはないです。
+</p>
+<h4 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB_nsSample3.cpp" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB_nsSample3.cpp"> ファイル <code>nsSample3.cpp</code> </h4>
+<pre>#include &lt;iostream.h&gt;
+#include "pratom.h"
+#include "nsRepository.h"
+#include "nsISample.h"
+#include "nsSample.h"
+
+static NS_DEFINE_IID(kISupportsIID, NS_ISUPPORTS_IID);
+static NS_DEFINE_IID(kIFactoryIID, NS_IFACTORY_IID);
+static NS_DEFINE_IID(kISampleIID, NS_ISAMPLE_IID);
+static NS_DEFINE_CID(kSampleCID, NS_SAMPLE_CID);
+
+&lt;strong&gt;/*
+ * グローバル
+ */
+
+static PRInt32 gLockCnt = 0;
+static PRInt32 gInstanceCnt = 0;&lt;/strong&gt;
+
+/*
+ * nsSampleClass 宣言
+ */
+
+class nsSample: public nsISample {
+private:
+  nsrefcnt mRefCnt;
+
+public:
+// コンストラクタとデストラクタ
+  nsSample();
+  ~nsSample();
+
+// nsISupports メソッド
+  NS_IMETHOD QueryInterface(const nsIID &amp;aIID,
+                            void **aResult);
+  NS_IMETHOD_(nsrefcnt) AddRef(void);
+  NS_IMETHOD_(nsrefcnt) Release(void);
+
+// nsISample メソッド
+  NS_IMETHOD Hello();
+};
+
+/*
+ * nsSampleFactory 宣言
+ */
+
+class nsSampleFactory: public nsIFactory {
+private:
+  nsrefcnt mRefCnt;
+
+public:
+  nsSampleFactory();
+  ~nsSampleFactory();
+
+// nsISupports メソッド
+  NS_IMETHOD QueryInterface(const nsIID &amp;aIID,
+                            void **aResult);
+  NS_IMETHOD_(nsrefcnt) AddRef(void);
+  NS_IMETHOD_(nsrefcnt) Release(void);
+
+// nsIFactory メソッド
+  NS_IMETHOD CreateInstance(nsISupports *aOuter,
+                                  const nsIID &amp;aIID,
+                                  void **aResult);
+
+  NS_IMETHOD_(void) LockFactory(PRBool aLock);
+};
+
+/*
+ * nsSample Implemtation
+ */
+
+nsSample::nsSample()
+{
+  mRefCnt = 0;
+  &lt;strong&gt;PR_AtomicIncrement(&amp;gInstanceCnt);&lt;/strong&gt;
+}
+
+nsSample::~nsSample()
+{
+// assert(mRefCnt == 0);
+  &lt;strong&gt;PR_AtomicDecrement(&amp;gInstanceCnt);&lt;/strong&gt;
+}
+
+NS_IMETHODIMP nsSample::Hello() {
+  cout &lt;&lt; "Hello, world\n";
+
+  return NS_OK;
+}
+
+NS_IMETHODIMP nsSample::QueryInterface(const nsIID &amp;aIID,
+                                  void **aResult)
+{
+  if (aResult == NULL) {
+    return NS_ERROR_NULL_POINTER;
+  }
+
+  // 失敗時は、常に結果は NULL
+  *aResult = NULL;
+
+  if (aIID.Equals(kISupportsIID)) {
+    *aResult = (void *) this;
+  } else if (aIID.Equals(kISampleIID)) {
+    *aResult = (void *) this;
+  }
+
+  if (aResult != NULL) {
+    return NS_NOINTERFACE;
+  }
+
+  AddRef();
+  return NS_OK;
+}
+
+NS_IMETHODIMP nsSample::AddRef()
+{
+  return ++mRefCnt;
+}
+
+NS_IMETHODIMP nsSample::Release()
+{
+  if (--mRefCnt == 0) {
+    delete this;
+    return 0; // 削除した後、mRefCnt にアクセスしてはいけない！
+  }
+  return mRefCnt;
+}
+
+/*
+ * nsSampleFactory 実装
+ */
+
+nsSampleFactory::nsSampleFactory()
+{
+  mRefCnt = 0;
+  &lt;strong&gt;PR_AtomicIncrement(&amp;gInstanceCnt);&lt;/strong&gt;
+}
+
+nsSampleFactory::~nsSampleFactory()
+{
+// assert(mRefCnt == 0);
+  &lt;strong&gt;PR_AtomicDecrement(&amp;gInstanceCnt);&lt;/strong&gt;
+}
+
+NS_IMETHODIMP nsSampleFactory::QueryInterface(const nsIID &amp;aIID,
+                                         void **aResult)
+{
+  if (aResult == NULL) {
+    return NS_ERROR_NULL_POINTER;
+  }
+
+  // 失敗時は、常に結果は NULL
+  *aResult = NULL;
+
+  if (aIID.Equals(kISupportsIID)) {
+    *aResult = (void *) this;
+  } else if (aIID.Equals(kIFactoryIID)) {
+    *aResult = (void *) this;
+  }
+
+  if (*aResult == NULL) {
+    return NS_NOINTERFACE;
+  }
+
+  AddRef(); // 呼び出し元のために参照カウントを増やす
+  return NS_OK;
+}
+
+NS_IMETHODIMP_(nsrefcnt) nsSampleFactory::AddRef()
+{
+  return ++mRefCnt;
+}
+
+NS_IMETHODIMP_(nsrefcnt) nsSampleFactory::Release()
+{
+  if (--mRefCnt == 0) {
+    delete this;
+    return 0; // 削除した後、mRefCnt にアクセスしてはいけない！
+  }
+  return mRefCnt;
+}
+
+NS_IMETHODIMP nsSampleFactory::CreateInstance(nsISupports *aOuter,
+                                         const nsIID &amp;aIID,
+                                         void **aResult)
+{
+  if (aResult == NULL) {
+    return NS_ERROR_NULL_POINTER;
+  }
+
+  *aResult = NULL;
+
+  nsISupports *inst = new nsSample();
+
+  if (inst == NULL) {
+    return NS_ERROR_OUT_OF_MEMORY;
+  }
+
+  nsresult res = inst-&gt;QueryInterface(aIID, aResult);
+
+  if (res != NS_OK) {
+    // 正しいインタフェースを取得できなかったので、片付ける
+    delete inst;
+  }
+
+  return res;
+}
+
+&lt;strong&gt;/*
+ * エクスポートされた関数
+ */
+
+void nsSampleFactory::LockFactory(PRBool aLock)
+{
+  if (aLock) {
+    PR_AtomicIncrement(&amp;gLockCnt);
+  } else {
+    PR_AtomicDecrement(&amp;gLockCnt);
+  }
+}
+
+extern "C" NS_EXPORT nsresult NSGetFactory(const nsCID &amp;aCID,
+                                           nsIFactory **aResult)&lt;/strong&gt;
+{
+  if (aResult == NULL) {
+    return NS_ERROR_NULL_POINTER;
+  }
+
+  *aResult = NULL;
+
+  nsISupports *inst;
+
+  &lt;strong&gt;if (aCID.Equals(kSampleCID)) {
+    inst = new nsSampleFactory();
+  } else {
+    return NS_ERROR_ILLEGAL_VALUE;
+  }
+
+  if (inst == NULL) {
+    return NS_ERROR_OUT_OF_MEMORY;
+  }&lt;/strong&gt;
+
+  nsresult res = inst-&gt;QueryInterface(kIFactoryIID, (void **) aResult);
+
+  if (res != NS_OK) {
+    // 正しいインタフェースを取得できなかったので、片付ける
+    delete inst;
+  }
+
+  return res;
+}
+
+&lt;strong&gt;extern "C" NS_EXPORT PRBool NSCanUnload()
+{
+  return PRBool(gInstanceCnt == 0 &amp;&amp; gLockCnt == 0);
+}&lt;/strong&gt;
+</pre>
+<p>これで、ファクトリを直接呼び出す代わりに、<code>NSRepository::CreateInstance()</code> を呼び出すことができます。私たちはどういうわけかファクトリ登録そのものに依存しているのです。
+</p>
+<h4 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB_main2.cpp" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB_main2.cpp"> ファイル <code>main2.cpp</code> </h4>
+<pre>#include "nsRepository.h"
+#include "nsISample.h"
+#include "nsSample.h"
+
+static NS_DEFINE_IID(kISampleIID, NS_ISAMPLE_IID);
+static NS_DEFINE_CID(kSampleCID, NS_SAMPLE_CID);
+
+int main(int argc, char *argv[])
+{
+  nsISample *sample;
+
+  nsresult res = NSRepository::CreateInstance(kSampleCID,
+                                              NULL,
+                                              kISampleIID,
+                                              (void **) &amp;sample);
+
+  if (res == NS_OK) {
+    sample-&gt;Hello();
+    NS_RELEASE(sample);
+  }
+
+  return 0;
+}
+</pre>
+<h4 id="DLL_.E3.81.AE.E7.99.BB.E9.8C.B2" name="DLL_.E3.81.AE.E7.99.BB.E9.8C.B2"> DLL の登録 </h4>
+<p>これは、現在論じあっている部分です。現在のところ、NSRepository の <code>RegisterFactory()</code> メソッド (この例については <code>nsSample2.cpp</code> を見てください) を使って DLL を手動で登録できます。
+</p><p>DLL は自分の登録と登録抹消のために二つの付加的な関数をエクスポートすることができます。
+</p>
+<pre>extern "C" NS_EXPORT nsresult NSRegisterSelf(const char *path);
+extern "C" NS_EXPORT nsresult NSUnregisterSelf(const char *path);
+</pre>
+<p>これにより、DLL のすべてのファクトリを登録および登録抹消することができます。RegFactory.exe (Windows 用) または regfactory (Unix 用) という単純なプログラムを使うことで自己登録する DLL を登録することができます。
+</p>
+<h3 id=".E5.8F.82.E7.85.A7.E3.82.AB.E3.82.A6.E3.83.B3.E3.83.88.E3.81.AE.E5.9F.BA.E6.9C.AC" name=".E5.8F.82.E7.85.A7.E3.82.AB.E3.82.A6.E3.83.B3.E3.83.88.E3.81.AE.E5.9F.BA.E6.9C.AC"> 参照カウントの基本 </h3>
+<p>参照カウントは、モジュール方式の図式の重要な部分です。参照カウントについて、覚えるべき多くの基本的なルールがあります。これは、簡単なサマリです。
+</p>
+<h4 id=".E5.87.BA.E5.8A.9B.E3.83.91.E3.83.A9.E3.83.A1.E3.82.BF" name=".E5.87.BA.E5.8A.9B.E3.83.91.E3.83.A9.E3.83.A1.E3.82.BF"> 出力パラメタ </h4>
+<p>新しいインタフェースを返す関数は、それを返す前にそれ (返すインタフェース) に対して AddRef() を呼ぶ必要があります。
+</p>
+<pre>nsresult GetFoo(IFoo **aFooRes)
+{
+  if (aFooRes == NULL) {
+    return NS_ERROR_NULL_POINTER;
+  }
+  *aFooRes = mFoo;
+  NS_ADDREF(*aFooRes);
+
+  return NS_OK;
+}
+</pre>
+<p>これは、<code>QueryInteface()</code>、<code>CreateInstance()</code> と <code>NS_New<i>x</i>()</code> により返されるインタフェースに適用されることを覚えておきましょう。そして、メモリーリークを防ぐために、使い終ったら、<code>Release()</code> を呼ぶ必要があります。
+</p>
+<h4 id=".E5.85.A5.E5.8A.9B.E3.83.91.E3.83.A9.E3.83.A1.E3.82.BF.E3.81.A8.E3.83.AD.E3.83.BC.E3.82.AB.E3.83.AB.E3.83.9D.E3.82.A4.E3.83.B3.E3.82.BF" name=".E5.85.A5.E5.8A.9B.E3.83.91.E3.83.A9.E3.83.A1.E3.82.BF.E3.81.A8.E3.83.AD.E3.83.BC.E3.82.AB.E3.83.AB.E3.83.9D.E3.82.A4.E3.83.B3.E3.82.BF"> 入力パラメタとローカルポインタ </h4>
+<p>渡されたインタフェースとそのインタフェースポインタのローカルコピーは、呼び出している関数の生存期間に含まれると見なされます。<code>AddRef()</code> を呼び出す必要はありません。
+</p>
+<pre>nsresult TweekFoo(IFoo *aFoo1, IFoo *aFoo2) {
+  IFoo local = aFoo;
+
+  if (aFoo-&gt;Bar() == NS_OK) {
+    local = aFoo2;
+  }
+
+  return local-&gt;Boff();
+}
+</pre>
+<h4 id=".E5.85.A5.E5.87.BA.E5.8A.9B.E3.83.91.E3.83.A9.E3.83.A1.E3.82.BF" name=".E5.85.A5.E5.87.BA.E5.8A.9B.E3.83.91.E3.83.A9.E3.83.A1.E3.82.BF"> 入出力パラメタ </h4>
+<p>入出力パラメタは、入力パラメタとしても出力パラメタとしても使われます。もし、関数がインタフェースの入出力パラメタの値を変えた場合、入力のインタフェースに対しては、<code>Release()</code> を呼び出し、出力のインタフェースに対しては、<code>AddRef()</code> を呼び出す必要があります。
+</p>
+<pre>nsresult RefreshFoo(IFoo **aFoo)
+{
+  if (aFoo == NULL || *aFoo == NULL) {
+    return NS_ERROR_NULL_PARAMETER;
+  }
+  if ((*aFoo)-&gt;Stale()) {
+    NS_RELEASE(*aFoo);
+    *aFoo = mFoo;
+    NS_ADDREF(*aFoo);
+  }
+  return NS_OK;
+}
+</pre>
+<h4 id=".E3.82.B0.E3.83.AD.E3.83.BC.E3.83.90.E3.83.AB.E5.A4.89.E6.95.B0.E3.81.A8.E3.83.A1.E3.83.B3.E3.83.90.E3.83.BC.E5.A4.89.E6.95.B0" name=".E3.82.B0.E3.83.AD.E3.83.BC.E3.83.90.E3.83.AB.E5.A4.89.E6.95.B0.E3.81.A8.E3.83.A1.E3.83.B3.E3.83.90.E3.83.BC.E5.A4.89.E6.95.B0"> グローバル変数とメンバー変数 </h4>
+<p>グローバル変数とメンバ変数は、生存期間がどの関数によっても変えられる可能性があります。そのため、関数に渡されて来たグローバル変数とメンバ変数に対して <code>AddRef()</code> を呼び出し、使い終ったら <code>Release()</code> を呼び出す必要があります。
+</p>
+<pre>NS_ADDREF(mFoo);
+TweekFoo(mFoo);
+NS_RELEASE(mFoo);
+</pre>
+<h3 id=".28.E3.82.82.E3.81.86.E3.81.99.E3.81.90.29_.E3.82.88.E3.81.8F.E8.81.9E.E3.81.8B.E3.82.8C.E3.82.8B.E8.B3.AA.E5.95.8F" name=".28.E3.82.82.E3.81.86.E3.81.99.E3.81.90.29_.E3.82.88.E3.81.8F.E8.81.9E.E3.81.8B.E3.82.8C.E3.82.8B.E8.B3.AA.E5.95.8F"> (もうすぐ) よく聞かれる質問 </h3>
+<h4 id=".E3.81.AA.E3.81.9C_COM_.E3.82.92.E7.9C.9F.E4.BC.BC.E3.82.8B.E5.BF.85.E8.A6.81.E3.81.8C.E3.81.82.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F_COM_.E3.81.AF.E6.9C.80.E4.BD.8E.E3.81.A7.E3.81.AF.E3.81.AA.E3.81.84.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F" name=".E3.81.AA.E3.81.9C_COM_.E3.82.92.E7.9C.9F.E4.BC.BC.E3.82.8B.E5.BF.85.E8.A6.81.E3.81.8C.E3.81.82.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F_COM_.E3.81.AF.E6.9C.80.E4.BD.8E.E3.81.A7.E3.81.AF.E3.81.AA.E3.81.84.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> なぜ COM を真似る必要があるのですか？ COM は最低ではないですか？ </h4>
+<p>この意見は、おそらく OLE に対する経験もしくは伝聞を元にしているのではないでしょうか。重要なことは、COM は OLE ではないということです。OLE は COM の上に作られていますが、COM の輝かしい例ではありません。COM は単純にインタフェースの配置と使用、またここで多くの説明をした重要なコンポーネントのための仕組みです。OLE (実際には OLE2) は COM を使用する最初の試みでした。
+</p>
+<h4 id=".E3.81.AA.E3.81.9C_C.2B.2B_.E3.81.AA.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F" name=".E3.81.AA.E3.81.9C_C.2B.2B_.E3.81.AA.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> なぜ C++ なのですか？ </h4>
+<p>C++ は、インタフェースを実装する間単な仕組みを持っています。手動で関数テーブルとマクロを使ってインタフェースを組み立てることもできますが、C++ コンパイラが自動的にやってくれることに対しては、単にそれを使うべきでしょう。
+</p>
+<h4 id="C.E3.82.92.E4.BD.BF.E3.81.86.E3.81.93.E3.81.A8.E3.81.AF.E3.81.A7.E3.81.8D.E3.81.BE.E3.81.99.E3.81.8B.EF.BC.9F" name="C.E3.82.92.E4.BD.BF.E3.81.86.E3.81.93.E3.81.A8.E3.81.AF.E3.81.A7.E3.81.8D.E3.81.BE.E3.81.99.E3.81.8B.EF.BC.9F"> Cを使うことはできますか？ </h4>
+<p>インタフェース以外の部分では、どこでも C を使うことができます。C でインタフェースを宣言する仕組みもありますが、とても大変ですし、コンパイラに依存してしまいます。我々は、これをできるだけ軽くしようとしています。
+</p>
+<h4 id=".E3.81.AA.E3.81.9C_COM_.E3.81.A7.E3.81.AF.E3.81.AA.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F" name=".E3.81.AA.E3.81.9C_COM_.E3.81.A7.E3.81.AF.E3.81.AA.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> なぜ COM ではないのですか？ </h4>
+<p>広範な COM のサポートがあるプラットフォームは、現在のところ Windows だけです。Microsoft は、Macintosh 用の COM 拡張を出荷していますが、一般的に Internet Explorer か Microsoft Office といっしょにしかインストールされません。COM の UNIX サポートは、不十分です。
+</p>
+<h4 id="Windows_.E4.B8.8A.E3.81.AE_COM_.E3.81.A7.E3.81.AF.E3.81.A0.E3.82.81.E3.81.AA.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F" name="Windows_.E4.B8.8A.E3.81.AE_COM_.E3.81.A7.E3.81.AF.E3.81.A0.E3.82.81.E3.81.AA.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> Windows 上の COM ではだめなのですか？ </h4>
+<p>それは、我々が必要としているクロスプラットフォームな解決策ではないからです。我々は、サポートしているプラットフォーム上での COM と我々のインタフェースが互換性を持つように努力しています。そのため、(COM ではないということが) 問題とならないかもしれません。ただ、まだ約束はできません。
+</p>
+<h4 id=".E5.A4.A7.E3.81.8D.E3.81.AA.E9.81.95.E3.81.84.E3.81.AF.E3.81.AA.E3.82.93.E3.81.A7.E3.81.97.E3.82.87.E3.81.86.E3.81.8B.EF.BC.9F" name=".E5.A4.A7.E3.81.8D.E3.81.AA.E9.81.95.E3.81.84.E3.81.AF.E3.81.AA.E3.82.93.E3.81.A7.E3.81.97.E3.82.87.E3.81.86.E3.81.8B.EF.BC.9F"> 大きな違いはなんでしょうか？ </h4>
+<p>Microsoft の MIDL コンパイラではなく、CORBA 準拠の IDL コンパイラの <a href="ja/XPIDL">XPIDL</a> を使っていることです。それは、C++ ヘッダを生成するときに NSPR の型を出力します。Microsoft の .TLB フォーマットとは互換性がない <a class="external" href="http://www.mozilla.org/scriptable/typelib_file.html">タイプライブラリ</a> も出力します。XPCOM は、<a href="ja/XPJS_Components_Proposal">JavaScript のような</a> 他の言語が実装し、また XPCOM オブジェクトの呼び出しを使えるようにするため、これらのタイプライブラリを使います。タイプライブラリと NSPR のイベントキューを使ったスレッド間の代理呼び出しも行います。
+</p><p>Microsoft は、COM の広範なサポート基盤を提供しています。この技術は、Windows に組み込まれていますが、他の多くのプラットフォームではそうではありません。この技術は、Microsoft からライセンス取得可能ですが、明らかな理由から我々はそうしません。この技術の重要な要素と同等のものを、自分たちで必要に応じて開発するつもりです。
+</p>
+<h3 id=".E3.83.AA.E3.83.B3.E3.82.AF" name=".E3.83.AA.E3.83.B3.E3.82.AF"> リンク </h3>
+<ul><li> <a class="external" href="http://msdn.microsoft.com/library/specs/s1d139.htm">コンポーネント・オブジェクト・モデル仕様</a>
+</li></ul>
+<h3 id=".E4.BF.AE.E6.AD.A3.E5.B1.A5.E6.AD.B4" name=".E4.BF.AE.E6.AD.A3.E5.B1.A5.E6.AD.B4"> 修正履歴 </h3>
+<ul><li> 1998 年 2 月 25 日 作成
+</li><li> 1998 年 10 月 19 日 ちょっと修正
+</li><li> 1999 年 10 月 10 日 XPIDL、言語無依存についてのコメントを追加
+</li></ul>
+<div class="originaldocinfo">
+<h2 id=".E5.8E.9F.E6.96.87.E6.9B.B8.E3.81.AE.E6.83.85.E5.A0.B1" name=".E5.8E.9F.E6.96.87.E6.9B.B8.E3.81.AE.E6.83.85.E5.A0.B1"> 原文書の情報 </h2>
+<ul><li> 著者: Will Scullin
+</li><li> 最終更新日: September 13, 2004
+</li><li> 著作権: Portions of this content are © 1998–2007 by individual mozilla.org contributors; content available under a Creative Commons license | <a class="external" href="http://www.mozilla.org/foundation/licensing/website-content.html">詳細</a>
+</li></ul>
+</div>
+<div class="noinclude">
+</div>

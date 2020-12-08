@@ -1,0 +1,88 @@
+---
+title: nsIFeedResult
+slug: nsIFeedResult
+tags:
+  - Interfaces
+  - Référence_de_l'API_XPCOM
+  - 'XPCOM:Références'
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIFeedResult
+---
+<p>
+</p><p>L'interface <code>nsIFeedResult</code> fournit un accès aux métadonnées d'analyse et HTTP d'un flux ou d'une entrée de flux.
+</p><p><br>
+</p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/feeds/public/nsIFeedResult.idl" rel="custom">toolkit/components/feeds/public/nsIFeedResult.idl</a></code><span style="text-align: right; float: right;"><a href="/fr/docs/Interfaces/À_propos_des_interfaces_scriptables" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">Last changed in Gecko 1.8.1 (Firefox 2 / Thunderbird 2 / SeaMonkey 1.1)</span></div>
+</div>
+<p></p><p>Hérité de : <code><a href="fr/NsISupports">nsISupports</a></code>
+</p>
+<h2 id="Synoptique">Synoptique</h2>
+<table class="standard-table"> <tbody><tr>
+<td> <code>void <a href="fr/NsIFeedResult#registerExtensionPrefix.28.29">registerExtensionPrefix</a>(in AString namespace, in AString prefix);</code>
+</td></tr>
+</tbody></table>
+<h2 id="Attributs">Attributs</h2>
+<table class="standard-table"> <tbody><tr>
+<td class="header">Attribut
+</td><td class="header">Type
+</td><td class="header">Description
+</td></tr> <tr>
+<td> <code>bozo</code>
+</td><td> <code>boolean</code>
+</td><td> L'analyseur de flux positionne le bit <code>bozo</code> lorsqu'un flux cause une erreur fatale pendant l'analyse XML. Il peut toujours y avoir des métadonnées ou des entrées analysées avant que l'erreur ne se produise.
+</td></tr>
+<tr>
+<td> <code>doc</code>
+</td><td> <code><a href="fr/NsIFeedContainer">nsIFeedContainer</a></code>
+</td><td> Le flux ou l'entrée qui a été analysé. <code>null</code> si l'objet analysé n'est pas un flux.
+</td></tr>
+<tr>
+<td> <code>headers</code>
+</td><td> <code><a href="fr/NsIProperties">nsIProperties</a></code>
+</td><td> Les en-têtes de réponse HTTP qui accompagnent le flux.
+</td></tr>
+<tr>
+<td> <code>stylesheet</code>
+</td><td> <code><a href="fr/NsIURI">nsIURI</a></code>
+</td><td> Une feuille de style <a href="fr/XSLT">XSLT</a> disponible pour transformer la source en flux. Certains flux peuvent glisser cette information dans une instruction d'analyse. Il est généralement destiné à être utilisé par des clients conçus pour lire des flux spécifiques.
+</td></tr>
+<tr>
+<td> <code>uri</code>
+</td><td> <code><a href="fr/NsIURI">nsIURI</a></code>
+</td><td> L'adresse depuis laquelle le flux a été extrait.
+</td></tr>
+<tr>
+<td> <code>version</code>
+</td><td> <code><a href="fr/AString">AString</a></code>
+</td><td> La version du flux ; <code>null</code> si l'objet analysé n'est pas un flux. Cette valeur peut être l'une des suivantes :
+<blockquote>atom, rss2, rss09, rss091, rss091userland, rss092, rss1, atom03, atomEntry, rssItem</blockquote>
+</td></tr>
+</tbody></table>
+<h2 id="Méthodes">Méthodes</h2>
+<h3 id="registerExtensionPrefix()">registerExtensionPrefix()</h3>
+<p>Déclare un préfixe pour un espace de nommage utilisé pour accéder à une extension dans le flux ou l'entrée de flux.
+</p>
+<div class="warning"><b>Attention:</b> Cette méthode n'est pas implémentée à ce jour.</div>
+<pre class="eval"> void registerExtensionPrefix(
+   in AString namespace,
+   in AString prefix
+ );
+</pre>
+<h6 id="Paramètres">Paramètres</h6>
+<dl><dt>&lt;tt&gt;namespace&lt;/tt&gt;
+</dt><dd> L'espace de nommage pour l'extension.
+</dd><dt>&lt;tt&gt;prefix&lt;/tt&gt;
+</dt><dd> Le préfixe utilisé pour accèder à l'extension.
+</dd></dl>
+<h2 id="Voir_également">Voir également</h2>
+<p><a href="fr/NsISupports">nsISupports</a>, <a href="fr/NsIFeedContainer">nsIFeedContainer</a>, <a href="fr/NsIURI">nsIURI</a>, <a href="fr/NsIProperties">nsIProperties</a>
+</p><p><br>
+<span>Lien interwiki</span>
+</p>

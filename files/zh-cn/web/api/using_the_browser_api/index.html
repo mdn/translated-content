@@ -1,0 +1,214 @@
+---
+title: Using the browser API
+slug: Web/API/Using_the_Browser_API
+tags:
+  - API
+  - B2G
+  - Firefox OS
+  - WebAPI
+  - 指南
+  - 浏览器
+  - 非标准
+translation_of: Mozilla/Gecko/Chrome/API/Browser_API/Using
+---
+<p>{{ non-standard_header() }}</p>
+
+<p>{{ B2GOnlyHeader2('privileged') }}</p>
+
+<h2 id="概述">概述</h2>
+
+<p>HTML Browser API 是对 HTML {{HTMLElement("iframe")}} 元素的扩展，允许 web app 用来实现浏览器或浏览器类似的应用。主要涉及到两个方面：</p>
+
+<ul>
+ <li>使 <code>iframe</code> 看起来像嵌入内容的顶层浏览器窗口。这就意味着 <span id="summary_alias_container"><span id="short_desc_nonedit_display"><a href="/en-US/docs/DOM/window.top" title="/en-US/docs/DOM/window.top"><code>window.top</code></a>, <a href="/en-US/docs/DOM/window.parent" title="/en-US/docs/DOM/window.parent"><code>window.parent</code></a>, <a href="/en-US/docs/DOM/window.frameElement" title="/en-US/docs/DOM/window.frameElement"><code>window.frameElement</code></a>, 等不应该反映 frame 的继承关系。</span></span>Optionally, the notion that the embedded is an Open Web App can be expressed as well.</li>
+ <li>用来操作和监听嵌入内容状态的变化的 API。</li>
+</ul>
+
+<p>除此之外，也可以表示成嵌入的内容就是一个 <a href="/en-US/docs/Apps" title="/en-US/docs/Apps">Open Web App</a>。在那种情况下，页面内容就会在适当的 app 上下文（如权限）中被装载。</p>
+
+<h2 id="用法">用法</h2>
+
+<p>{{HTMLElement("iframe")}} 可以通过设置 {{htmlattrxref("mozbrowser","iframe")}} 属性而转化为浏览器框架</p>
+
+<pre class="brush: html">&lt;iframe src="http://hostname.tld" mozbrowser&gt;</pre>
+
+<p>要想嵌入一个 Open Web App,  必须要提供 {{htmlattrxref("mozapp","iframe")}} 以及 app manifest 路径。</p>
+
+<pre>&lt;iframe src="http://hostname.tld" mozapp='http://path/to/manifest.webapp' mozbrowser&gt;</pre>
+
+<p>最后， {{HTMLElement("iframe")}} 的内容可以在它单独的子进程中装载，通过使用{{htmlattrxref("remote","iframe")}}  属性可以单独嵌入到此页面的框架中。</p>
+
+<pre>&lt;iframe src="http://hostname.tld" mozbrowser remote&gt;</pre>
+
+<div class="warning">
+<p><strong>警告:</strong> That last attribute is necessary for security reasons if you plan to load content from an untrusted/unknown origin. If you don't use it, you take the risk of your application being compromised by a malicious web site.</p>
+</div>
+
+<h2 id="权限">权限</h2>
+
+<p>想要嵌入到 browser frame 中的任何应用必须要在其中的 <a href="/en-US/docs/Web/Apps/Manifest" title="/en-US/docs/Web/Apps/Manifest">app manifest</a> 拥有 <code>browser </code>权限。</p>
+
+<pre class="brush: json">{
+  "permissions": {
+    "browser": {}
+  }
+}</pre>
+
+<p>此外，要嵌入一个  Open Web App, app 必须具有 <code>embed-apps</code> 权限。</p>
+
+<pre class="brush: json">{
+  "permissions": {
+    "browser": {},
+    "embed-apps": {}
+  }
+}</pre>
+
+<h2 id="额外方法">额外方法</h2>
+
+<p>Firefox OS 扩展了 {{domxref("HTMLIFrameElement")}} DOM 接口以支持 browser {{HTMLElement("iframe")}} 所产生的需求。这些新的方法赋予  {{HTMLElement("iframe")}} 了一些强大的功能：</p>
+
+<h3 id="Navigation_方法">Navigation 方法</h3>
+
+<p>这些方法能够使 {{HTMLElement("iframe")}} 根据历史记录进行导航。此处也有必要来实现 back, forward, stop, and reload 按钮。</p>
+
+<ul>
+ <li>{{domxref("HTMLIFrameElement.reload","reload()")}}: 重载 {{HTMLElement("iframe")}}.</li>
+ <li>{{domxref("HTMLIFrameElement.stop","stop()")}}: 停止装载{{HTMLElement("iframe")}}'s content.</li>
+ <li>{{domxref("HTMLIFrameElement.getCanGoBack","getCanGoBack()")}}: 判断是否可以回到前一页面.</li>
+ <li>{{domxref("HTMLIFrameElement.goBack","goBack()")}}:回到{{HTMLElement("iframe")}}历史记录的前一个位置</li>
+ <li>{{domxref("HTMLIFrameElement.getCanGoForward","getCanGoForward()")}}: 得知是否可以到达历史记录的后一个页面。</li>
+ <li>{{domxref("HTMLIFrameElement.goForward","goForward()")}}: Changes the location of the {{HTMLElement("iframe")}} for the next location in its browsing history.</li>
+</ul>
+
+<h3 id="性能方法">性能方法</h3>
+
+<p>Those methods are used to manage the resources used by a browser {{HTMLElement("iframe")}}. This is especially useful for implementing tabbed browser application.</p>
+
+<ul>
+ <li>{{domxref("HTMLIFrameElement.setVisible","setVisible()")}}: Changes the visibility state of a browser {{HTMLElement("iframe")}}. This can influence resources allocation and some function usage such as {{domxref("window.requestAnimationFrame","requestAnimationFrame")}}.</li>
+ <li>{{domxref("HTMLIFrameElement.getVisible","getVisible()")}}: Allows knowing the current visibility state of the browser {{HTMLElement("iframe")}}.</li>
+ <li>{{domxref("HTMLIFrameElement.purgeHistory","purgeHistory()")}}: Allows clearing all the resources (cookies, localStorage, cache, etc.) associated with the browser {{HTMLElement("iframe")}}.</li>
+</ul>
+
+<h3 id="Event_方法">Event 方法</h3>
+
+<p>In order to manage the browser {{HTMLElement("iframe")}}'s content, many new events were added (see below). The following methods are used to deal with those events:</p>
+
+<ul>
+ <li>The {{HTMLElement("iframe")}} gains support for the methods of the {{domxref("EventTarget")}} interface: {{domxref("EventTarget.addEventListener","addEventListener()")}}, {{domxref("EventTarget.removeEventListener","removeEventListener()")}}, and {{domxref("EventTarget.dispatchEvent","dispatchEvent()")}}.</li>
+ <li>{{domxref("HTMLIFrameElement.sendMouseEvent","sendMouseEvent()")}}: Allows sending a {{domxref("MouseEvent")}} to the {{HTMLElement("iframe")}}'s content.</li>
+ <li>{{domxref("HTMLIFrameElement.sendTouchEvent","sendTouchEvent()")}}: Allows sending a {{domxref("TouchEvent")}} to the {{HTMLElement("iframe")}}'s content. Note that this method is available for touch enabled devices only.</li>
+ <li>{{domxref("HTMLIFrameElement.addNextPaintListener","addNextPaintListener()")}}: Allows defining a handler to listen for the next {{event("MozAfterPaint")}} event in the browser {{HTMLElement("iframe")}}.</li>
+ <li>{{domxref("HTMLIFrameElement.removeNextPaintListener","removeNextPaintListener()")}}: Allows removing a handler previously set with {{domxref("HTMLIFrameElement.addNextPaintListener","addNextPaintListener()")}}.</li>
+</ul>
+
+<h3 id="其他方法">其他方法</h3>
+
+<p>Those methods are utilities, useful for apps that host a browser {{HTMLElement("iframe")}}.</p>
+
+<ul>
+ <li>{{domxref("HTMLIFrameElement.getScreenshot","getScreenshot()")}}: Allows taking a screenshot of the browser {{HTMLElement("iframe")}}'s content. This is particularly useful to get thumbnails of tabs in a tabbed browser app.</li>
+</ul>
+
+<h2 id="Events">Events</h2>
+
+<p>In order to allow an application to manage the browser {{HTMLElement("iframe")}}, the application can listen for new events about what's happening within the browser {{HTMLElement("iframe")}}. The following new events can be listened for:</p>
+
+<ul>
+ <li>{{event("mozbrowserasyncscroll")}}: Sent when the scroll position within a browser {{HTMLElement("iframe")}} changes.</li>
+ <li>{{event("mozbrowserclose")}}: Sent when {{domxref("window.close()")}} is called within a browser {{HTMLElement("iframe")}}.</li>
+ <li>{{event("mozbrowsercontextmenu")}}: Sent when a browser {{HTMLElement("iframe")}} tries to open a context menu. This allows  handling {{HTMLElement("menuitem")}} element available within the browser {{HTMLElement("iframe")}}'s content.</li>
+ <li>{{event("mozbrowsererror")}}: Sent when an error occurred while trying to load content within a browser {{HTMLElement("iframe")}}.</li>
+ <li>{{event("mozbrowsericonchange")}}: Sent when the favicon of a browser {{HTMLElement("iframe")}} changes.</li>
+ <li>{{event("mozbrowserloadend")}}: Sent when the browser {{HTMLElement("iframe")}} has finished loading all its assets.</li>
+ <li>{{event("mozbrowserloadstart")}}: Sent when the browser {{HTMLElement("iframe")}} starts to load a new page.</li>
+ <li>{{event("mozbrowserlocationchange")}}: Sent when a browser {{HTMLElement("iframe")}}'s location changes.</li>
+ <li>{{event("mozbrowseropenwindow")}}: Sent when {{domxref("window.open()")}} is called within a browser {{HTMLElement("iframe")}}.</li>
+ <li>{{event("mozbrowsersecuritychange")}}: Sent when the SSL state changes within a browser {{HTMLElement("iframe")}}.</li>
+ <li>{{event("mozbrowsershowmodalprompt")}}: Sent when {{domxref("window.alert","alert()")}}, {{domxref("window.confirm","confirm()")}}, or {{domxref("window.prompt","prompt()")}} is called within a browser {{HTMLElement("iframe")}}.</li>
+ <li>{{event("mozbrowsertitlechange")}}: Sent when the document.title changes within a browser {{HTMLElement("iframe")}}.</li>
+ <li>{{event("mozbrowserusernameandpasswordrequired")}}: Sent when an HTTP authentification is requested.</li>
+ <li>{{event("mozbrowseropensearch")}}: Sent when a link to a search engine is found.</li>
+</ul>
+
+<h2 id="示例">示例</h2>
+
+<p>In this example we'll see how to implement a very basic browser app.</p>
+
+<h3 id="HTML">HTML</h3>
+
+<p>In the HTML we just add a URL bar, a "Go" and "Stop" button, and a browser {{HTMLElement("iframe")}}.</p>
+
+<pre class="brush: html">&lt;header&gt;
+  &lt;input id="url"&gt;
+  &lt;button id="go"&gt;Go&lt;/button&gt;
+  &lt;button id="stop"&gt;Stop&lt;/button&gt;
+&lt;/header&gt;
+
+&lt;iframe src="about:blank" mozbrowser remote&gt;&lt;/iframe&gt;
+</pre>
+
+<h3 id="CSS">CSS</h3>
+
+<p>We switch between the go and stop button with a little css trick.</p>
+
+<pre class="brush: css">button:disabled {
+  display: none;
+}</pre>
+
+<h3 id="JavaScript">JavaScript</h3>
+
+<p>Now we can add the required functionalities:</p>
+
+<pre class="brush: js">document.addEventListener("DOMContentLoaded", function () {
+  var url  = document.getElementById("url");
+  var go   = document.getElementById("go");
+  var stop = document.getElementById("stop");
+
+  var browser = document.getElementsByTagName("iframe")[0];
+
+  // This function is used to switch the Go and Stop button
+  // If the browser is loading content, "Go" is disabled and "Stop" is enabled
+  // Otherwise, "Go" is enabled and "Stop" is disabled
+  function uiLoading(isLoading) {
+      go.disabled =  isLoading;
+    stop.disabled = !isLoading;
+  }
+
+  go.addEventListener("touchend", function () {
+    browser.setAttribute("src", url.value);
+  });
+
+  stop.addEventListener("touchend", function () {
+    browser.stop();
+  });
+
+  // When the browser starts loading content, we switch the "Go" and "Stop" buttons
+  browser.addEventListener('mozbrowserloadstart', function () {
+    uiLoading(true);
+  });
+
+  // When the browser finishes loading content, we switch back the "Go" and "Stop" buttons
+  browser.addEventListener('mozbrowserloadend', function () {
+    uiLoading(false);
+  });
+
+  // In case of error, we also switch back the "Go" and "Stop" buttons
+  browser.addEventListener('mozbrowsererror', function (event) {
+    uiLoading(false);
+    alert("Loading error: " + event.detail);
+  });
+
+  // When a user follows a link, we make sure the new location is displayed in the address bar
+  browser.addEventListener('mozbrowserlocationchange', function (event) {
+    url.value = event.detail;
+  });
+});</pre>
+
+<h2 id="参考">参考</h2>
+
+<ul>
+ <li>{{HTMLElement("iframe")}}</li>
+ <li>{{domxref("HTMLIFrameElement")}}</li>
+ <li>Stat of <a href="https://wiki.mozilla.org/WebAPI/BrowserAPI" title="https://wiki.mozilla.org/WebAPI/BrowserAPI">implementation on WikiMo</a></li>
+</ul>

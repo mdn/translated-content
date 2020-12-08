@@ -1,0 +1,62 @@
+---
+title: Navigator.addIdleObserver()
+slug: Archive/B2G_OS/API/Navigator/addIdleObserver
+translation_of: Archive/B2G_OS/API/Navigator/addIdleObserver
+---
+<p>{{ non-standard_header() }}</p>
+<p>{{ B2GOnlyHeader2('certified') }}</p>
+<h2 id="Résumé"><span id="Dst[0][0:6:0:5]">Résumé</span></h2>
+<div class="mttextarea" dir="ltr" id="TranslationOutput">
+ <div>
+  <span id="Dst[0][0:3:0:4]">Cette</span><span> </span><span id="Dst[0][5:10:6:12]">méthode</span><span> </span><span id="Dst[0][12:13:14:16]">est</span><span> </span><span id="Dst[0][15:18:18:25]">utilisée</span><span> </span><span id="Dst[0][20:21:27:30]">pour</span><span> </span><span id="Dst[0][23:25:32:38]">ajouter</span><span> </span><span id="Dst[0][27:28:40:41]">un</span><span> </span><span id="Dst[0][30:37:43:53]">observateur</span><span> </span><span id="Dst[0][39:42:55:57]">qui</span><span> </span><span id="Dst[0][44:47:59:60]">va</span><span> </span><span id="Dst[0][49:53:62:69]">vérifier</span><span> </span><span id="Dst[0][55:56:71:72]">si</span><span> </span><span id="Dst[0][62:65:74:86]">l'utilisateur</span><span> </span><span id="Dst[0][67:68:88:90]">est</span><span> </span><span id="Dst[0][70:73:92:98]">inactif</span><span> </span><span id="Dst[0][75:77:100:101]">et</span><span> </span><span id="Dst[0][79:86:103:107]">agira</span><span> </span><span id="Dst[0][88:98:109:122]">en conséquence</span>. Une fois l'observateur ajouté, il est possible de le retirer avec {{domxref("window.navigator.removeIdleObserver","navigator.removeIdleObserver")}}.</div>
+ <div>
+   </div>
+</div>
+<h2 id="Syntaxe">Syntaxe</h2>
+<pre>navigator.addIdleObserver(IdleObserver);</pre>
+<h3 id="Paramètres"><span id="Dst[0][0:9:0:9]">Paramètres</span></h3>
+<dl>
+ <dt>
+  <code>IdleObserver</code></dt>
+ <dd>
+  <div class="mttextarea" dir="ltr" id="TranslationOutput">
+   <div>
+    Un objet avec des propriétés spécifiques à gérer si l'utilisateur est inactif ou non ; cf {{anch("IdleObserver")}} ci-dessous.</div>
+  </div>
+ </dd>
+</dl>
+<h3 id="IdleObserver">IdleObserver</h3>
+<p><code>IdleObserver</code> est un objet contenant les trois propriétés suivantes :</p>
+<dl>
+ <dt>
+  <code>time</code></dt>
+ <dd>
+  Le temps (exprimé en secondes) avant que l'utilisateur soit considéré comme inactif.</dd>
+ <dt>
+  <code>onidle</code></dt>
+ <dd>
+  Une fonction appelée lorsque l'utilisateur est considéré comme inactif.</dd>
+ <dt>
+  <code>onactive</code></dt>
+ <dd>
+  Une fonction appelée lorsque l'utilisateur redevient actif.</dd>
+</dl>
+<h2 id="Exemple">Exemple</h2>
+<pre class="brush: js">var myObserver = {
+  time: 10,
+  onidle: function () {
+    console.log("L'utilisateur est inactif depuis 10 secondes");
+  },
+  onactive: function () {
+    console.log("L'utilisateur est actif de nouveau");
+  }
+}
+
+navigator.addIdleObserver(myObserver);
+</pre>
+<h2 id="Specification" name="Specification">Spécification</h2>
+<p>Ne fait encore partie d'aucune spécification ; Toutefois, cette API sera discutée au W3C dans le cadre de la <a href="http://www.w3.org/2012/sysapps/" rel="external" title="http://www.w3.org/2012/sysapps/">System Applications Working Group</a>.</p>
+<h2 id="Voir_aussi">Voir aussi</h2>
+<ul>
+ <li>{{domxref("window.navigator.removeIdleObserver","navigator.removeIdleObserver")}}</li>
+</ul>

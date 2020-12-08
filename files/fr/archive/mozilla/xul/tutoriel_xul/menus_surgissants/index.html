@@ -1,0 +1,214 @@
+---
+title: Menus surgissants
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Menus_surgissants
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Popup_Menus
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Plus_de_fonctionnalités_de_menu" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Menus_défilants">Suivant  »</a></p>
+</div>
+
+<p>Dans la section précédente, nous avons vu comment créer un menu sur une barre de menu. XUL a aussi la capacité de créer des menus surgissants. Les menus surgissants sont habituellement affichés lorsque l'utilisateur presse le bouton droit de la souris.</p>
+
+<h3 id="Cr.C3.A9er_un_menu_surgissant" name="Cr.C3.A9er_un_menu_surgissant">Créer un menu surgissant</h3>
+
+<p>XUL a trois différentes types de boîtes surgissantes, décrites ci-dessous. La différence majeure est leurs façons d'apparaître.</p>
+
+<dl>
+ <dt>Boîte surgissante simple </dt>
+ <dd>La boîte surgissante simple est une fenêtre surgissante qui apparaît quand l'utilisateur presse le bouton gauche de la souris sur un élément. Elles sont assez semblables aux menus sur les barres de menu, excepté qu'elles peuvent être placées n'importe où et peuvent contenir n'importe quel contenu. Un bon exemple est le menu déroulant qui apparaît quand vous maintenez le bouton de la souris enfoncé sur les boutons "précédent" et "suivant" dans la fenêtre d'un navigateur.</dd>
+</dl>
+
+<dl>
+ <dt>Boîte contextuelle </dt>
+ <dd>La boîte contextuelle est une fenêtre surgissante qui apparaît quand l'utilisateur presse le bouton de menu contextuel, qui est habituellement le bouton droit de la souris. Sur certaines plates-formes, Il peut s'agir d'un bouton différent - mais c'est toujours le bouton ou une combinaison de touches et de bouton de souris qui invoque un menu spécifique au contexte. Sur le Macintosh par exemple, l'utilisateur doit soit presser la touche Control et le bouton de la souris, soit maintenir le bouton de la souris enfoncé un certain temps.</dd>
+</dl>
+
+<dl>
+ <dt>Bulle d'aide </dt>
+ <dd>Une fenêtre surgissante « bulle d'aide » va apparaître quand l'utilisateur survolera un élément avec la souris. Ce type de boîte surgissante est habituellement utilisé pour fournir la description d'un bouton de façon plus détaillée que le bouton le permet lui-même.</dd>
+</dl>
+
+<p>Ces trois types de boîtes surgissantes diffèrent dans la façon dont l'utilisateur les invoque. <span class="comment">Elles peuvent contenir n'importe quel contenu, bien que des menus soient courants pour les boîtes simples et contextuelles, et qu'une simple chaîne de caractères soit courante pour une bulle d'aide.</span> Le type de boîte surgissante est déterminé par l'élément qui invoque la boîte.</p>
+
+<h4 id="D.C3.A9claration_d.27un_menu_surgissant" name="D.C3.A9claration_d.27un_menu_surgissant">Déclaration d'un menu surgissant</h4>
+
+<p>Une boîte sugissante est décrite en utilisant l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code>. C'est un type de boîte sans attributs spéciaux. Quand elle est invoquée, une fenêtre contenant tout ce que vous avez pu mettre dans le <code><a href="/fr/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> va s'afficher. Cependant, vous devez toujours insérer un attribut <code id="a-id"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/id">id</a></code> sur le <code><a href="/fr/docs/Mozilla/Tech/XUL/popup" title="popup">popup</a></code> car il doit être associé à un élément. Nous verrons bientôt sa signification. D'abord, un exemple :</p>
+
+<pre>&lt;popupset&gt;
+   &lt;menupopup id="clipmenu"&gt;
+     &lt;menuitem label="Couper"/&gt;
+     &lt;menuitem label="Copier"/&gt;
+     &lt;menuitem label="Coller"/&gt;
+   &lt;/menupopup&gt;
+&lt;/popupset&gt;
+</pre>
+
+<p>Comme vous pouvez le voir ici, un simple menu surgissant contenant trois commandes a été créé. L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> entoure les trois items de menu. Vous remarquerez également que l'<code id="a-id"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/id">id</a></code> a été mis sur l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> lui-même.</p>
+
+<p>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/popupset" title="popupset">popupset</a></code> entoure l'entière déclaration de menu surgissant. Il s'agit d'un container générique pour les boîtes surgissantes, et il est optionnel. Il ne s'affiche pas à l'écran mais il est utilisé comme une section dans laquelle vous pouvez déclarer tous vos menus surgissants. Comme le nom <code><a href="/fr/docs/Mozilla/Tech/XUL/popupset" title="popupset">popupset</a></code> sous-entend, vous pouvez placer plusieurs déclarations de menus surgissants à l'intérieur. Ajoutez en simplement d'autres après le premier élément <code><a href="/fr/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code>. Vous pouvez avoir plus d'un <code><a href="/fr/docs/Mozilla/Tech/XUL/popupset" title="popupset">popupset</a></code> dans un fichier, mais habituellement vous n'en aurez qu'un.</p>
+
+<h4 id="Association_d.27un_menu_surgissant_.C3.A0_un_.C3.A9l.C3.A9ment" name="Association_d.27un_menu_surgissant_.C3.A0_un_.C3.A9l.C3.A9ment">Association d'un menu surgissant à un élément</h4>
+
+<p>Maintenant que nous avons créé le menu surgissant, il est temps de le faire apparaître. Pour cela, nous avons besoin d'associer le menu à un élément d'où il devra apparaître. Nous faisons cela car nous voulons seulement que le menu apparaisse quand l'utilisateur clique à un certain endroit de la fenêtre. Habituellement, il s'agira d'un bouton spécifique ou d'une boîte.</p>
+
+<p>Pour associer le menu surgissant à un élément, ajoutez un de ces trois attributs à l'élément. L'attribut que vous ajoutez dépend du type de menu surgissant vous voulez créer. Pour les menus surgissants simples, ajoutez l'attribut <code id="a-popup"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/popup">popup</a></code> à l'élément. Pour les menus contextuels, ajoutez l'attribut <code id="a-context"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/context">context</a></code>. Enfin, pour les bulles d'aide, ajoutez l'attribut <code id="a-tooltip"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/tooltip">tooltip</a></code>.</p>
+
+<p>La valeur de l'attribut doit être celle de l'<code id="a-id"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/id">id</a></code> du <code><a href="/fr/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> que vous voulez faire apparaître. C'est pour cela que vous devez mettre un <code id="a-id"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/id">id</a></code> sur le <code><a href="/fr/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code>. Par ce moyen, il est facile d'avoir plusieurs menus surgissants dans un seul fichier.</p>
+
+<p>Dans l'exemple ci-dessus, nous voulons faire un menu surgissant contextuel. Nous devons donc utiliser l'attribut <code id="a-context"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/context">context</a></code> et l'ajouter à l'élément sur lequel nous voulons associer le menu surgissant. L'exemple ci-dessous montre comment procéder :</p>
+
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_popups_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_popups_1.xul">Voir</a></p>
+
+<div class="float-right"><img alt="Image:xultu_popups1.png" class="internal" src="/@api/deki/files/1538/=Xultu_popups1.png"></div>
+
+<pre>&lt;popupset&gt;
+  &lt;menupopup id="clipmenu"&gt;
+    &lt;menuitem label="Couper"/&gt;
+    &lt;menuitem label="Copier"/&gt;
+    &lt;menuitem label="Coller"/&gt;
+  &lt;/menupopup&gt;
+&lt;/popupset&gt;
+
+&lt;box context="clipmenu"&gt;
+  &lt;label value="Faites un clic contextuel pour afficher le menu"/&gt;
+&lt;/box&gt;
+</pre>
+
+<p>Ici, le menu contextuel a été associé à une boîte. À chaque fois que vous faîtes un clic contextuel (clic droit) n'importe où dans la boîte, le menu surgissant apparaîtra. Le menu apparaîtra aussi même si vous cliquez sur un enfant de la boîte, donc il apparaîtra aussi si vous cliquez sur l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/label" title="label">label</a></code>. L'attribut <code id="a-context"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/context">context</a></code> a été utilisé pour associer la boîte au menu contextuel de même <code id="a-id"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/id">id</a></code>. Dans ce cas, le menu 'clipmenu' va apparaître. De cette façon, vous pouvez disposer de plusieurs menus surgissants et les associer avec différents éléments.</p>
+
+<p>Vous pouvez associer plusieurs menus surgissants avec le même élément en mettant plusieurs d'attributs de différents types sur un élément. Vous pouvez aussi associer le même menu surgissant à plusieurs éléments, ce qui est un avantage de l'utilisation de la syntaxe popup. Les menus surgissants ne peuvent être associés qu'avec des éléments XUL. Ils ne peuvent pas être associés à des éléments HTML.</p>
+
+<h3 id="Bulles_d.27aide" name="Bulles_d.27aide">Bulles d'aide</h3>
+
+<p>Nous allons voir un moyen simple de créer des bulles d'aide. Il y a deux façons de créer des bulles d'aide. La méthode la plus simple, qui est la plus commune, est d'ajouter un attribut <code id="a-tooltiptext"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/tooltiptext">tooltiptext</a></code> à un élément sur lequel vous voulez assigner une bulle d'aide.</p>
+
+<p>La deuxième méthode consiste à utiliser un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tooltip" title="tooltip">tooltip</a></code> contenant le contenu d'une bulle d'aide. Il nécessite que vous ayez un bloc séparé de contenu pour chaque bulle d'aide ou que vous ayez un script contenant le contenu, bien que certains contenus hormis du texte dans une bulle d'aide ne sont pas permis.</p>
+
+<p><span id="Exemple_2"><a id="Exemple_2"></a><strong>Exemple 2</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_popups_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_popups_2.xul">Voir</a></p>
+
+<pre>&lt;button label="Sauvegarder" tooltiptext="Cliquez ici pour enregistrer vos trucs"/&gt;
+
+&lt;popupset&gt;
+  &lt;tooltip id="moretip" orient="vertical" style="background-color: #33DD00;"&gt;
+    &lt;description value="Cliquez ici pour voir plus d'information"/&gt;
+    &lt;description value="Vraiment!" style="color: red;"/&gt;
+  &lt;/tooltip&gt;
+&lt;/popupset&gt;
+
+&lt;button label="Plus" tooltip="moretip"/&gt;
+</pre>
+
+<p>Ces deux boutons ont chacun une bulle d'aide. Le premier utilise le style par défaut de bulle d'aide. Le second utilise une bulle d'aide modifiée qui a une couleur d'arrière-plan différente et un texte stylisé. La bulle d'aide est associée au bouton 'Plus' en utilisant l'attribut <code id="a-tooltip"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/tooltip">tooltip</a></code>, correspondant à l'<code id="a-id"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/id">id</a></code> de l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tooltip" title="tooltip">tooltip</a></code>. Notez que l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tooltip" title="tooltip">tooltip</a></code> est également placé à l'intérieur d'un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/popset" title="popset">popset</a></code> comme pour les autres types de menus surgissants.</p>
+
+<h3 id="Alignement_des_menus_surgissants" name="Alignement_des_menus_surgissants">Alignement des menus surgissants</h3>
+
+<p>Par défaut, les menus surgissants et contextuels vont apparaître là où le pointeur de la souris se trouve. Les bulles d'aides seront placées légèrement sous l'élément pour que le pointeur de la souris ne les cache pas. Il y a des cas toutefois, où vous voudrez préciser l'emplacement du menu surgissant. Par exemple, le menu surgissant qui apparaît quand vous cliquez sur le bouton Précédent dans un navigateur doit apparaître sous le bouton Précédent, non pas là ou se situe le pointeur de la souris.</p>
+
+<p>Pour changer la position du menu, vous pouvez utiliser un attribut additionnel, <code id="a-position"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/position">position</a></code>, sur le <code><a href="/fr/docs/Mozilla/Tech/XUL/popup" title="popup">popup</a></code>. Vous pouvez aussi l'ajouter à l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code>. Cet attribut est utilisé pour indiquer l'emplacement du menu relativement à l'élément invoquant la boîte. Ses différentes valeurs applicables sont décrites brièvement ci-dessous :</p>
+
+<dl>
+ <dt>'after_start' </dt>
+ <dd>Le menu surgissant apparaît sous l'élément avec les bords gauche de l'élément et du menu alignés. Si le menu surgissant est plus large que l'élément, il s'étend à droite. C'est cette valeur qui est utilisée pour les menus déroulants associés avec les boutons Précédent et Suivant du navigateur.</dd>
+</dl>
+
+<dl>
+ <dt>'after_end' </dt>
+ <dd>Le menu surgissant apparaît sous l'élément avec les bords droit de l'élément et du menu alignés.</dd>
+</dl>
+
+<dl>
+ <dt>'before_start' </dt>
+ <dd>Le menu surgissant apparaît au-dessus de l'élément avec les bords gauche de l'élément et du menu alignés.</dd>
+</dl>
+
+<dl>
+ <dt>'before_end' </dt>
+ <dd>Le menu surgissant apparaît au-dessus de l'élément avec les bords droit de l'élément et du menu alignés.</dd>
+</dl>
+
+<dl>
+ <dt>'end_after' </dt>
+ <dd>Le menu surgissant apparaît à droite de l'élément avec les bords inférieurs de l'élément et du menu alignés.</dd>
+</dl>
+
+<dl>
+ <dt>'end_before' </dt>
+ <dd>Le menu surgissant apparaît à droite de l'élément avec les bords supérieurs de l'élément et du menu alignés.</dd>
+</dl>
+
+<dl>
+ <dt>'start_after' </dt>
+ <dd>Le menu surgissant apparaît à gauche de l'élément avec les bords inférieurs de l'élément et du menu alignés.</dd>
+</dl>
+
+<dl>
+ <dt>'start_before' </dt>
+ <dd>Le menu surgissant apparaît à gauche de l'élément avec les bords supérieurs de l'élément et du menu alignés.</dd>
+</dl>
+
+<dl>
+ <dt>'overlap' </dt>
+ <dd>Le menu surgissant apparaît par dessus l'élément.</dd>
+</dl>
+
+<dl>
+ <dt>'at_pointer' </dt>
+ <dd>Le menu surgissant apparaît à la position du pointeur de la souris.</dd>
+</dl>
+
+<dl>
+ <dt>'after_pointer' </dt>
+ <dd>Le menu surgissant apparaît à la même position horizontale que le pointeur de la souris mais apparaît sous l'élément. C'est ainsi que les bulles d'aide apparaissent.</dd>
+</dl>
+
+<p>En ajoutant l'attribut <code id="a-position"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/position">position</a></code> à un élément popup, vous pouvez spécifier précisément où le menu surgissant doit apparaître. Vous ne pouvez pas spécifier une position exacte en pixels. L'attribut <code id="a-position"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/position">position</a></code> peut être utilisé pour les trois types de menus surgissants, bien que vous ne changerez probablement pas la valeur pour les bulles d'aide.</p>
+
+<p>L'exemple ci-dessous montre la création d'un bouton Précédent avec un menu surgissant :</p>
+
+<p><span id="Exemple_3"><a id="Exemple_3"></a><strong>Exemple 3</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_popups_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_popups_3.xul">Voir</a></p>
+
+<pre>&lt;popupset&gt;
+  &lt;menupopup id="backpopup" position="after_start"&gt;
+    &lt;menuitem label="Page 1"/&gt;
+    &lt;menuitem label="Page 2"/&gt;
+  &lt;/menupopup&gt;
+&lt;/popupset&gt;
+
+&lt;button label="Affiche moi" popup="backpopup"/&gt;
+</pre>
+
+<div class="highlight">
+<h3 id="Notre_exemple_de_recherche_de_fichiers" name="Notre_exemple_de_recherche_de_fichiers">Notre exemple de recherche de fichiers</h3>
+
+<p>Ajoutons un simple menu surgissant à la boîte de dialogue de recherche de fichiers. Pour plus de simplicité, nous allons juste recopier le contenu du menu 'Edition'. Le menu apparaîtra quand l'on clique sur le premier onglet :</p>
+
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-popups.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-popups.xul">Voir</a></p>
+
+<pre class="eval"><span class="highlightred">&lt;popupset&gt;   &lt;menupopup id="editpopup"&gt;     &lt;menuitem label="Couper" accesskey="c"/&gt;     &lt;menuitem label="Copier" accesskey="p"/&gt;     &lt;menuitem label="Coller" accesskey="l" disabled="true"/&gt;   &lt;/menupopup&gt; &lt;/popupset&gt;</span>
+
+&lt;vbox flex="1"&gt;
+.
+.
+.
+
+<span class="highlightred">&lt;tabpanel id="searchpanel" orient="vertical" context="editpopup"&gt;</span>
+</pre>
+Ici un simple menu surgissant, similaire au menu Edition, a été ajouté au premier onglet. Si vous faîtes un clic droit (Control-clic sur Macintosh) n'importe où sur la page de ce premier onglet, le menu surgissant va apparaître. Cependant, le menu n'apparaîtra pas si vous cliquez autre part.
+
+<div class="note">Notez que le champs de saisie a son propre menu surgissant qui supplantera celui que nous avons spécifié.</div>
+</div>
+
+<hr>
+<p>Par la suite, nous allons voir comment créer des menus défilants.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Plus_de_fonctionnalités_de_menu" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Menus_défilants">Suivant  »</a></p>
+</div>
+
+<p><span class="comment">Interwiki</span></p>

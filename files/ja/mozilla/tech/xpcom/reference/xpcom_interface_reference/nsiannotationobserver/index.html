@@ -1,0 +1,128 @@
+---
+title: nsIAnnotationObserver
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsIAnnotationObserver
+tags:
+  - Developing Mozilla
+  - Extensions
+  - Interfaces
+  - Places
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIAnnotationObserver
+---
+<div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/places/public/nsIAnnotationService.idl" rel="custom">toolkit/components/places/public/nsIAnnotationService.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+  <div style="height: 42px; position: relative; padding: 2px; width: auto;">
+
+  <div style="top: 22px; font-size: 11px; position: absolute;">1.0</div>
+
+  <div style="top: 22px; font-size: 11px; position: absolute; left: 0px; text-align: right; float: right; width: 100%;">66</div>
+
+  <div style="height: 8px; top: 16px; background: #dd0000; left: 0px; position: absolute; width: 5.714285714285714%;"></div>
+
+<div style="height: 8px; top: 16px; left: 5.714285714285714%; background: #00dd00; position: absolute; width: 94.28571428571429%;" title="Introduced in Gecko 1.8 (Firefox 1.5 / Thunderbird 1.5 / SeaMonkey 1.0)"></div>
+
+<div style="top: 0px; font-size: 11px; position: absolute; left: 5.714285714285714%;">Introduced</div>
+<div style="top: 22px; font-size: 11px; position: absolute; left: 5.714285714285714%;">Gecko 1.8</div>
+
+    <div style="height: 8px; top: 16px; left: 8.071428571428571%; background: #eeee00; position: absolute; width: 1%; border-radius: 4px; -webkit-border-radius: 4px;" title="Last changed in Gecko 1.9 (Firefox 3)"></div>
+
+</div>
+
+<div style="background: #eee; padding: 2px;">
+継承元: <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
+<span style="text-align: right; float: right;">最終更新: Gecko 1.9 (Firefox 3)</span></div>
+</div>
+
+<h2 id="Method_overview" name="Method_overview">メソッドの概要</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="#onItemAnnotationRemoved()">onItemAnnotationRemoved</a>(in long long aItemId, in AUTF8String aName);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#onItemAnnotationSet()">onItemAnnotationSet</a>(in long long aItemId, in AUTF8String aName);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#onPageAnnotationRemoved()">onPageAnnotationRemoved</a>(in nsIURI aURI, in AUTF8String aName);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#onPageAnnotationSet()">onPageAnnotationSet</a>(in nsIURI aPage, in AUTF8String aName);</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Methods" name="Methods">メソッド</h2>
+
+<h3 id="onItemAnnotationRemoved" name="onItemAnnotationRemoved">onItemAnnotationRemoved()</h3>
+<p>あるアイテムに対するアノテーションが削除された場合に呼ばれます。もし <code>aName</code> が空であれば、与えられた URI に対する全ての削除されたアノテーションを意味します。アノテーションの期限が切れている (expired) 場合はこのメソッドは呼び出されません。(通常アプリケーションが終了する場合などにこれが起こります)</p>
+<pre>void onItemAnnotationRemoved(
+  in long long aItemId,
+  in aUTF8String aName
+);
+</pre>
+<h6 id="引数">引数</h6>
+<dl>
+ <dt>aItemId</dt>
+ <dd>アノテーションが削除されるアイテムの ID</dd>
+ <dt>aName</dt>
+ <dd>アノテーションの名前</dd>
+</dl>
+
+<h3 id="onItemAnnotationSet" name="onItemAnnotationSet">onItemAnnotationSet()</h3>
+<p>アノテーションの値があるアイテムにセットされたときに呼ばれます。アノテーションは新しいアノテーションであっても、既に存在するアノテーションに対する新しい値のセットであっても構いません。</p>
+<pre>void onItemAnnotationSet(
+  in long long aItemId,
+  in AUTF8String aName
+);
+</pre>
+<h6 id="引数_2">引数</h6>
+<dl>
+ <dt>aItemId</dt>
+ <dd>アノテーションがセットされるアイテムの ID</dd>
+ <dt>aName</dt>
+ <dd>アノテーションの名前</dd>
+</dl>
+
+<h3 id="onPageAnnotationRemoved" name="onPageAnnotationRemoved">onPageAnnotationRemoved()</h3>
+<p>URIに対するアノテーションが削除されたときに呼ばれます。もし <code>aName</code> が空であれば、与えられたURIに対する全ての削除されたアノテーションを意味します。アノテーションの期限が切れている (expired) 場合はこのメソッドは呼び出されません。(通常アプリケーションが終了する場合などにこれが起こります)</p>
+<pre>void onPageAnnotationRemoved(
+  in nsIURI aPage,
+  in AUTF8String aName
+);
+</pre>
+<h6 id="引数_3">引数</h6>
+<dl>
+ <dt>aURI</dt>
+ <dd>アノテーションが削除される URI</dd>
+ <dt>aName</dt>
+ <dd>アノテーションの名前</dd>
+</dl>
+
+<h3 id="onPageAnnotationSet" name="onPageAnnotationSet">onPageAnnotationSet()</h3>
+<p>アノテーションが URI に対してセットされたときに呼ばれます。アノテーションは新しいアノテーションであっても、既に存在するアノテーションに対する新しい値のセットであっても構いません。</p>
+<pre>void onPageAnnotationSet(
+  in nsIURI aPage,
+  in AUTF8String aName
+);
+</pre>
+<h6 id="引数_4">引数</h6>
+<dl>
+ <dt>aURI</dt>
+ <dd>アノテーションがセットされる URI</dd>
+ <dt>aName</dt>
+ <dd>アノテーションの名前</dd>
+</dl>
+
+<h2 id="See_also" name="See_also">参照</h2>
+<ul>
+ <li><a href="/docs/Mozilla/Tech/Places" title="/Places">Places</a></li>
+ <li><a href="/docs/Mozilla/Tech/Places/Using_the_Places_annotation_service" title="/Using the Places annotation service">Using the Places annotation service</a></li>
+ <li><a href="/docs/Mozilla/Tech/Places/Using_the_Places_favicon_service" title="/Using the Places favicon service">Using the Places favicon service</a></li>
+ <li><a href="/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAnnotationService" title="/nsIAnnotationService">nsIAnnotationService</a></li>
+</ul>

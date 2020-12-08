@@ -1,0 +1,72 @@
+---
+title: Split object
+slug: Mozilla/Projects/SpiderMonkey/Split_object
+translation_of: Mozilla/Projects/SpiderMonkey/Split_object
+---
+<p>In <a href="/en/SpiderMonkey" title="en/SpiderMonkey">SpiderMonkey</a>, a <strong>split object</strong> is made up of two <code><a href="/en/SpiderMonkey/JSAPI_Reference/JSObject" title="en/SpiderMonkey/JSAPI_Reference/JSObject">JSObject</a></code>s: an <strong>inner object</strong> and an <strong>outer object</strong>.</p>
+
+<p>Each half of a split object always has a pointer to the other half. Inner objects implement the <code><a href="/En/SpiderMonkey/JSAPI_Reference/JSExtendedClass.outerObject" title="En/SpiderMonkey/JSAPI_Reference/JSExtendedClass.outerObject">JSExtendedClass.outerObject</a></code> hook, which returns a pointer to the corresponding outer object. Outer objects implement the <code><a href="/En/SpiderMonkey/JSAPI_Reference/JSExtendedClass.outerObject" title="En/SpiderMonkey/JSAPI_Reference/JSExtendedClass.outerObject">JSExtendedClass.innerObject</a></code> hook. But the association is not fixed. An outer object may be associated with different inner objects at different times.</p>
+
+<p>This feature is complicated. Programs other than Mozilla that embed SpiderMonkey should avoid using split objects.</p>
+
+<h2 id="The_window_object" name="The_window_object">The <code>window</code> object</h2>
+
+<p>Split objects were introduced to resolve a problem posed by the <code><a href="/en/DOM/window" title="en/DOM/window">window</a></code> object. Three interrelated requirements on the <code>window</code> object seemed to conflict.</p>
+
+<ul>
+ <li>
+  <p>The <code>window</code> object is the global object for scripts in Web pages. Firefox has to maintain this for Web compatibility. For performance, access to global properties must be fast.</p>
+ </li>
+</ul>
+
+<ul>
+ <li>
+  <p>There is a glaring difference in the lifetime of the <code>window</code> object as seen from two different angles. Suppose a script in page A, in tab TA, has a reference to the <code>window</code> object of page B in another tab TB. The <code>window</code> object for tab TB must persist as the user navigates from page to page in that tab. To the script in page A, the <code>window</code> must appear to be a single object that moves from page to page. But each web page must load with fresh globals.</p>
+
+  <p>(The problem is even a bit subtler than this, since the reference may be direct or indirect. The script in A might have opened TB by calling <code><a href="/en/DOM/window.open" title="en/DOM/window.open">window.open</a></code>, which returns a direct reference to TB's <code>window</code>. More indirectly, suppose there's a JavaScript function defined in page B that refers to global variables in page B. If page A gets a reference to that function, then by calling it, it is indirectly accessing tab TB's <code>window</code>. The <code>Function</code> object carries a reference to the <code>window</code>, via the scope chain. To further complicate matters, A and B are in the same security domain, so security checks between them automatically succeed. This makes the problem resistant to a wrapper-based approach.)</p>
+
+  <p>Older versions of Firefox accomplished this by blowing away all <code>window</code> properties every time a user navigated to another page, then reusing the <code>window</code>. Each page, even on Back, had to load from scratch. This was slow. Circa Firefox 1.5, the decision was made to cache layout information and JavaScript state across navigation. A new approach for <code>window</code> was needed.</p>
+ </li>
+</ul>
+
+<ul>
+ <li>
+  <p>Security privileges are granted to JS code on the basis of the scope chain of the executing code. SpiderMonkey walks up the scope chain to the nearest object that has <code><a href="/en/SpiderMonkey/JSAPI_Reference/JSPrincipals" title="en/SpiderMonkey/JSAPI_Reference/JSPrincipals">JSPrincipals</a></code> attached. The end of the scope chain is the global object for the script. But what <code>JSPrincipals</code> should be attached to a <code>window</code> object? The principals of the page the window is <em>currently</em> displaying? But then the page that called <code>window.open</code> could use a <code>with</code> statement to inject that <code>window</code> into its scope chain, gaining access to that window's privileges. <em>(Note: <code>with</code> does add an object to the scope chain, but it's a special <code>With</code> wrapper object that is skipped, or something, during the search described here. This security feature is not peculiar to split objects. ...And yet, there is special code in jsobj.h with a comment about fixing some kind of interaction between <code>with</code> an split objects. Write that down, it'll be on the test.)</em></p>
+ </li>
+</ul>
+
+<p>Split objects were the solution. The inner <code>window</code> object is different for each page a browser window visits. It serves as the "globals" object and provides the <code>JSPrincipals</code> for scripts on that page. Access to inner <code>window</code> properties is fast. The outer <code>window</code> object is the object returned by <code>window.open</code>. It represents the window or tab itself and survives as the user navigates in that window or tab. The <code>window</code> object's <code><a href="/en/SpiderMonkey/JSAPI_Reference/JSClass" title="en/SpiderMonkey/JSAPI_Reference/JSClass">JSClass</a>.resolve</code> hook ensures that properties of the inner object are visible via the outer object, if the running code has the right principals to access them. This privilege check may be slow.</p>
+
+<p>See {{ interwiki('wikimo', 'Gecko:SplitWindow', 'wikimo:Gecko:SplitWindow') }} and {{ Bug(296639) }} for more discussion.</p>
+
+<p>See also <a class="external" href="http://groups.google.com/group/mozilla.dev.tech.js-engine/msg/df81825b338fb84f" rel="freelink">http://groups.google.com/group/mozil...81825b338fb84f</a></p>
+
+<h2 id="Details" name="Details">Details</h2>
+
+<p>This section describes split objects as a feature of the JSAPI. It catalogues (and tries to explain) the subtle ways in which split objects affect SpiderMonkey's behavior.</p>
+
+<p>Split objects are only useful for implementing objects that will be on the scope chain of functions. SpiderMonkey assumes that inner and outer objects are dangerous in two different and complementary ways.</p>
+
+<p>Inner objects are dangerous because they have fast property accessors that do not perform security checks. Therefore, no function may be allowed to see an inner object that has different <code>JSPrincipals</code>. Apart from the security issue, if one page directly or indirectly gets a reference to another page's <code>window</code> object, that <code>window</code> object must appear to behave like the outer window and navigate from page to page. SpiderMonkey arranges this by not allowing JS code to see inner objects at all. To enforce this rule:</p>
+
+<ul>
+ <li>If <code>this</code> would evaluate to an inner object, it evaluates to the corresponding outer object instead.</li>
+</ul>
+
+<p>Outer objects are dangerous because their <code>JSPrincipals</code> may change over time. Because a <code>Function</code> inherits the <code>JSPrincipals</code> of its lexical scope (specifically, the nearest principals-aware object in its scope chain), untrusted code must <em>never</em> be able to make an outer object appear in a <code>Function</code>'s scope chain. Again, SpiderMonkey enforces a slightly stronger rule: outer objects may never appear in a scope chain at all, except when put there by an explicit C-level JSAPI call (to <code><a href="/en/SpiderMonkey/JSAPI_Reference/JS_SetParent" title="en/SpiderMonkey/JSAPI_Reference/JS_SetParent">JS_SetParent</a></code> or equivalent). (Several objects, such as <code><a href="/en/DOM/window.location" title="en/DOM/window.location">window.location</a></code> and <code><a href="/en/DOM/window.navigator" title="en/DOM/window.navigator">window.navigator</a></code>, are intentionally parented to the outer window object using such APIs.) To enforce this rule:</p>
+
+<ul>
+ <li>APIs that allow the caller to pass a scope object always check that object first and fail if any outer objects are on its scope chain.</li>
+</ul>
+
+<ul>
+ <li>In the spirit of this rule, <code><a href="/en/SpiderMonkey/JSAPI_Reference/JS_GetScopeChain" title="en/SpiderMonkey/JSAPI_Reference/JS_GetScopeChain">JS_GetScopeChain</a></code> should always return an inner object. But there is a special case when <code>JS_GetScopeChain</code> is called on a <code>JSContext</code> in which no code is currently running. By convention, the context's global object is returned in this case. For consistency with the rule, if that global object is an outer object, SpiderMonkey returns the inner object instead.</li>
+</ul>
+
+<p>Inner and outer objects are in certain other respects the same object:</p>
+
+<ul>
+ <li>If <code><a href="/en/JavaScript/Reference/Global_Objects/Object/hasOwnProperty" title="en/Core_JavaScript_1.5_Reference/Global_Objects/Object/hasOwnProperty">Object.hasOwnProperty</a></code> is called on an inner object, and the named property is found on an outer object, that's considered close enough and <code>hasOwnProperty</code> returns <code>true</code>.</li>
+</ul>
+
+<p>Note that none of the rules listed here affects ordinary property accesses. SpiderMonkey's split object support, by itself, does not cause inner object properties to appear on the outer object or vice versa. Split objects that need this behavior must implement it in custom <code><a href="/en/SpiderMonkey/JSAPI_Reference/JSClass" title="en/SpiderMonkey/JSAPI_Reference/JSClass">JSClass</a></code> hooks. In the case of <code>window</code>, each half has custom hooks.</p>

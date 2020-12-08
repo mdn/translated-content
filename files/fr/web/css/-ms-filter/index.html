@@ -1,0 +1,218 @@
+---
+title: '-ms-filter'
+slug: Web/CSS/-ms-filter
+tags:
+  - CSS
+  - Non-standard
+  - Propriété
+  - Reference
+translation_of: Archive/Web/CSS/-ms-filter
+---
+<div>{{CSSRef}}{{Non-standard_Header}}{{Obsolete_Header}}</div>
+
+<p>La propriété <strong><code style="white-space: nowrap;">-ms-filter</code></strong> est <a href="/fr/docs/Web/CSS/Extensions_CSS_Microsoft">une propriété spécifique à Microsoft</a> qui permet de définir des filtres à appliquer à un objet.</p>
+
+<div class="warning">
+<p><strong>Attention !</strong> Ne pas confondre cette propriété et la propriété standard {{CSSxRef("filter")}}  car les deux sont pleinement incompatibles.</p>
+</div>
+
+<div class="warning">
+<p><strong>Attention !</strong> Cette fonctionnalité a été dépréciée avec Internet Explorer 9. Dans Internet Explorer 10, cette fonctionnalité a été supprimée et ne devrait plus être utilisée.</p>
+</div>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<p>La propriété <code>-ms-filter</code> est définie avec une chaîne de caractères contenant une liste d'un ou plusieurs éléments, séparés par des espaces. Chacun de ces éléments peut avoir l'un des types suivants :</p>
+
+<ul>
+ <li><a href="https://msdn.microsoft.com/en-us/library/ms673539(v=vs.85).aspx">filtre</a></li>
+ <li><a href="https://msdn.microsoft.com/en-us/library/ms673540(v=vs.85).aspx">transition</a></li>
+ <li><a href="https://msdn.microsoft.com/en-us/library/ms673538(v=vs.85).aspx">surface procédurale</a></li>
+</ul>
+
+<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+
+<pre class="syntaxbox">filter: <a href="#-ms-filter-function">&lt;-ms-filter-function&gt;</a><a href="/en-US/docs/Web/CSS/Value_definition_syntax#Plus_()">+</a> {{Deprecated_Inline}}
+-ms-filter: <a href="/en-US/docs/CSS/Value_definition_syntax#Brackets">[</a> "'" <a href="#-ms-filter-function">&lt;-ms-filter-function&gt;</a><a href="/en-US/docs/Web/CSS/Value_definition_syntax#Hash_mark_()">#</a> "'" <a href="/en-US/docs/CSS/Value_definition_syntax#Brackets">]</a> <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar">|</a> <a href="/en-US/docs/CSS/Value_definition_syntax#Brackets">[</a> '"' <a href="#-ms-filter-function">&lt;-ms-filter-function&gt;</a><a href="/en-US/docs/Web/CSS/Value_definition_syntax#Hash_mark_()">#</a> '"' <a href="/en-US/docs/CSS/Value_definition_syntax#Brackets">]</a>
+
+où
+<a id="-ms-filter-function">&lt;-ms-filter-function&gt;</a> = <a href="#-ms-filter-function-progid">&lt;-ms-filter-function-progid&gt;</a> <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar">|</a> <a href="#-ms-filter-function-legacy">&lt;-ms-filter-function-legacy&gt;</a>
+
+où
+<a id="-ms-filter-function-progid">&lt;-ms-filter-function-progid&gt;</a> = 'progid:' <a href="/en-US/docs/CSS/Value_definition_syntax#Brackets">[</a> &lt;ident-token&gt; '.' <a href="/en-US/docs/CSS/Value_definition_syntax#Brackets">]</a><a href="/en-US/docs/CSS/Value_definition_syntax#Asterisk_(*)">*</a> <a href="/en-US/docs/CSS/Value_definition_syntax#Brackets">[</a> &lt;ident-token&gt; <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar">|</a> &lt;function-token&gt; &lt;any-value&gt; ')' <a href="/en-US/docs/CSS/Value_definition_syntax#Brackets">]</a>
+<a id="-ms-filter-function-legacy">&lt;-ms-filter-function-legacy&gt;</a> = &lt;ident-token&gt; <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar">|</a> &lt;function-token&gt; &lt;any-value&gt; ')'</pre>
+
+<p>La chaîne de caractères ({{CSSxRef("string")}}) contient la liste des filtres, transitions et surfaces procédurales. Voir <a href="https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms532853(v=vs.85)">la référence relative aux filtres et transitions</a> pour plus de détails.</p>
+
+<h2 id="Exemples">Exemples</h2>
+
+<p>L'exemple suivant illustre comment utiliser la propriété <code>-ms-filter</code> dans Internet Explorer 8.</p>
+
+<pre class="brush: css">-ms-filter: 'progid:DXImageTransform.Microsoft.MotionBlur(strength=50), progid:DXImageTransform.Microsoft.BasicImage(mirror=1)';
+</pre>
+
+<p>L'exemple suivant illustre comment utiliser un style en incise pour appliquer un filtre sur une image.</p>
+
+<pre class="brush: html">&lt;img style="filter:progid:DXImageTransform.Microsoft.MotionBlur(strength=50)
+    progid:DXImageTransform.Microsoft.BasicImage(mirror=1)"
+    src="/workshop/samples/author/dhtml/graphics/cone.jpg"
+    height="80px" width="80px" alt="cone"&gt;
+</pre>
+
+<p>Dans l'exemple suivant, on voit comment utiliser les API scriptées pour définir un filtre sur une image.</p>
+
+<pre class="brush: html">&lt;body&gt;
+  &lt;p&gt;Click the image to start the filter.&lt;/p&gt;
+  // Call the function.
+  &lt;div id="filterFrom"
+      style="position: absolute;
+            width: 200px;
+            height: 250px;
+            background-color: white;
+            filter: revealTrans()"&gt;
+    &lt;img id="imageFrom"
+         style="position: absolute;
+                top: 20px;
+                left: 20px;"
+                src="sphere.jpg"
+                alt="sphere"&gt;
+    &lt;div id="filterTo"
+         style="position: absolute;
+                width: 200px;
+                height: 250px;
+                top: 20px;
+                left: 20px;
+                background: white;
+                visibility: hidden;"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;script type="text/javascript"&gt;
+  let filterImg = document.querySelector('#filterFrom');
+  filterImg.addEventListener('click', doFilter);
+
+  function doFilter () {
+    filterFrom.filters.item(0).Apply(); // 12 is the dissolve filter.
+    filterFrom.filters.item(0).Transition=12;
+    imageFrom.style.visibility = "hidden";
+    filterTo.style.visibility = "";
+    filterFrom.filters.item(0).play(14);
+  }
+  &lt;/script&gt;
+&lt;/body&gt;
+</pre>
+
+<h3 id="Dégradé">Dégradé</h3>
+
+<pre class="syntaxbox">progid:DXImageTransform.Microsoft.Gradient( <a href="#Gradient-Properties">&lt;properties&gt;</a> )
+
+où
+&lt;properties&gt; = <a href="/en-US/docs/CSS/Value_definition_syntax#Brackets">[</a> <a href="#Gradient-Enabled">&lt;Enabled&gt;</a> <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar">|</a> <a href="#Gradient-EndColor">&lt;EndColor&gt;</a> <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar">|</a> <a href="#Gradient-EndColorStr">&lt;EndColorStr&gt;</a> <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar">|</a> <a href="#Gradient-GradientType">&lt;GradientType&gt;</a> <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar">|</a> <a href="#Gradient-StartColor">&lt;StartColor&gt;</a> <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar">|</a> <a href="#Gradient-StartColorStr">&lt;StartColorStr&gt;</a> <a href="/en-US/docs/CSS/Value_definition_syntax#Brackets">]</a><a href="/en-US/docs/Web/CSS/Value_definition_syntax#Hash_mark_()">#</a>
+
+où
+&lt;Enabled&gt; = 'Enabled=' <a href="/en-US/docs/CSS/Value_definition_syntax#Brackets">[</a> true <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar">|</a> false <a href="/en-US/docs/CSS/Value_definition_syntax#Brackets">]</a>
+&lt;EndColor&gt; = 'StartColor=' {{CSSxRef("&lt;color&gt;")}}
+&lt;EndColorStr&gt; = 'StartColorStr=' {{CSSxRef("&lt;color&gt;")}}
+&lt;GradientType&gt; = 'GradientType=' {{CSSxRef("&lt;integer&gt;")}}
+&lt;StartColor&gt; = 'StartColor=' {{CSSxRef("&lt;color&gt;")}}
+&lt;StartColorStr&gt; = 'StartColorStr=' {{CSSxRef("&lt;color&gt;")}}
+</pre>
+
+<dl>
+ <dt><code>Enabled</code></dt>
+ <dd><strong>Valeur par défaut :</strong> <code>true</code><br>
+ Utiliser <code>false</code> pour désactiver le dégradé.</dd>
+ <dt><code>EndColor</code></dt>
+ <dd>La couleur pour la fin du dégradé, seules les couleurs opaques (utilisant la notation <code>#RRGGBB</code>) sont prises en charge.</dd>
+ <dt><code>EndColorStr</code></dt>
+ <dd>La couleur pour la fin du dégradé avec une prise en charge des couleurs opaques avec la notation <code>#RRGGBB</code> et une prise en charge des couleurs avec la notation <code>#AARRGGBB</code>.</dd>
+ <dt><code>GradientType</code></dt>
+ <dd><strong>Valeur par défaut :</strong> <code>0</code> (ce qui est équivalent à {{CSSxRef("linear-gradient",'linear-gradient(to bottom, …)')}})<br>
+ Toute valeur non nulle rendra le dégradé horizontal (équivalent à {{CSSxRef("linear-gradient",'linear-gradient(to right, …)')}})</dd>
+ <dt><code>StartColor</code></dt>
+ <dd>La couleur pour le début du dégradé, seules les couleurs opaques (utilisant la notation <code>#RRGGBB</code>) sont prises en charge.</dd>
+ <dt><code>StartColorStr</code></dt>
+ <dd>La couleur pour le début du dégradé avec une prise en charge des couleurs opaques avec la notation <code>#RRGGBB</code> et une prise en charge des couleurs avec la notation <code>#AARRGGBB</code>.</dd>
+</dl>
+
+<h4 id="HTML">HTML</h4>
+
+<pre class="brush: html">&lt;div class="gradient horizontal"&gt;&lt;/div&gt;
+&lt;div class="gradient vertical"&gt;&lt;/div&gt;
+</pre>
+
+<h4 id="CSS">CSS</h4>
+
+<div class="hidden">
+<pre class="brush: css">html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+.gradient {
+  width: 100vw;
+  height: 60px;
+  height: 50vh;
+}</pre>
+</div>
+
+<pre class="brush: css">.gradient.horizontal {
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Gradient(startColorStr="#ffffff", endColorStr="#000000", GradientType=1)';
+  background-image: linear-gradient(to right, #ffffff 0%, #000000 100%);
+}
+
+.gradient.vertical {
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Gradient(startColorStr="#ffffff", endColorStr="#000000", GradientType=0)';
+  background-image: linear-gradient(to bottom, #ffffff 0%, #000000 100%);
+}
+</pre>
+
+<h4 id="Résultat">Résultat</h4>
+
+<p>{{EmbedLiveSample("Dégradé","100%","120")}}</p>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<p>Cette propriété est une propriété spécifique à Microsoft, ne doit pas être utilisée sur le Web et ne fait partie d'aucune spécification.</p>
+
+<p>{{CSSInfo("-ms-filter")}}</p>
+
+<h2 id="Notes">Notes</h2>
+
+<p>Le tableau suivant énumère les différents filtres DX spécifiques qui étaient fréquemment utilisés, avec leur équivalent en CSS standard :</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Nom du filtre DX</th>
+   <th scope="col">Alternative standard</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>Alpha</code></td>
+   <td>{{CSSxRef("opacity")}}</td>
+  </tr>
+  <tr>
+   <td><code>AlphaImageLoader</code></td>
+   <td>{{HTMLElement("img")}} ou {{CSSxRef("background-image")}} et les propriétés associées</td>
+  </tr>
+  <tr>
+   <td><code><a href="https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms532997(v=vs.85)">Gradient</a></code></td>
+   <td><code>{{CSSxRef("background-image")}}: {{CSSxRef("linear-gradient")}}</code></td>
+  </tr>
+  <tr>
+   <td><code>DropShadow</code></td>
+   <td>{{CSSxRef("text-shadow")}} ou {{CSSxRef("box-shadow")}}</td>
+  </tr>
+  <tr>
+   <td><code>Matrix</code></td>
+   <td>{{CSSxRef("transform")}}, {{CSSxRef("transform-origin")}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Pour Windows Internet Explorer 8, la propriété <code style="white-space: nowrap;">-ms-filter</code> est une extension à CSS et peut être utilisée comme synonyme de {{CSSxRef("filter")}} en mode standard IE8.</p>
+
+<p>Un objet doit avoir une disposition où afficher le filtre. Pour cela, on pourra fournir une hauteur et une largeur à l'élément grâce aux propriétés {{CSSxRef("height")}} et {{CSSxRef("width")}}.</p>
+
+<p>Le filtre d'ombre peut être appliqué à un objet {{HTMLElement("img")}} en paramétrant le filtre sur le conteneur de l'image.</p>

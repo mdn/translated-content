@@ -1,0 +1,148 @@
+---
+title: copy
+slug: Web/Events/copy
+translation_of: Web/API/Element/copy_event
+---
+<p>L'événement <strong>copy</strong> est déclenché lorsque l'utilisateur initie une copie par le biais de l'interface du navigateur (par exemple, Ctrl/Cmd+C ou "copier" du menu contextuel) et en réponse d'un appel de {{domxref("Document.execCommand", "document.execCommand('copy')")}} autorisé.</p>
+
+<h2 id="Informations_générales">Informations générales</h2>
+
+<dl>
+ <dt style="float: left; text-align: right; width: 120px;">Spécification</dt>
+ <dd style="margin: 0 0 0 120px;"><a class="external" href="https://www.w3.org/TR/clipboard-apis/#the-copy-action">Clipboard</a></dd>
+ <dt style="float: left; text-align: right; width: 120px;">Interface</dt>
+ <dd style="margin: 0 0 0 120px;">{{domxref("ClipboardEvent")}}</dd>
+ <dt style="float: left; text-align: right; width: 120px;">Propagation</dt>
+ <dd style="margin: 0 0 0 120px;">Oui</dd>
+ <dt style="float: left; text-align: right; width: 120px;">Annulable</dt>
+ <dd style="margin: 0 0 0 120px;">Oui</dd>
+ <dt style="float: left; text-align: right; width: 120px;">Cible</dt>
+ <dd style="margin: 0 0 0 120px;">{{domxref("Element")}}: L'élément ayant le focus (pour les éléments {{domxref("HTMLElement.contentEditable", "contentEditable")}} - l'élément contenant le début de la sélection), ou l'élément {{HTMLElement("body")}}</dd>
+ <dt style="float: left; text-align: right; width: 120px;">Action par défaut</dt>
+ <dd style="margin: 0 0 0 120px;">Voir ce-dessous</dd>
+</dl>
+
+<p>Un gestionnaire de cet événement peut modifier l'objet {{domxref("ClipboardEvent.clipboardData")}} en appellant {{domxref("DataTransfer.setData", "setData(format, data)")}}:</p>
+
+<pre class="javascript">document.addEventListener('copy', function(e){
+    e.clipboardData.setData('text/plain', 'Hello, world!');
+    e.clipboardData.setData('text/html', '&lt;b&gt;Hello, world!&lt;/b&gt;');
+    e.preventDefault(); // We want our data, not data from any selection, to be written to the clipboard
+});</pre>
+
+<p>Un gestionnaire de cet événement ne peut pas lire les données du presse-papiers en utilisant {{domxref("DataTransfer.getData", "clipboardData.getData()")}}.</p>
+
+<p>L'action par défaut de l'événement dépend de la source de celui-ci et du comportement du gestionnaire:</p>
+
+<ul>
+ <li>Un événement de copie <a href="/fr/docs/Web/Guide/Events/Creating_and_triggering_events">synthétique</a> n'a pas d'action par défaut;</li>
+ <li>Si l'événement n'a pas été annulé: Copie de la sélection (s'il y a) dans le presse-papiers;</li>
+ <li>Si le gestionnaire a annulé l'événement et appelé setData(): Copie le contenu de <em>clipboardData</em> de {{domxref("ClipboardEvent")}};</li>
+ <li>Si le gestionnaire a annulé l'événement sans appelé setData(): Aucune action.</li>
+</ul>
+
+<h2 id="Propriétés">Propriétés</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Property</th>
+   <th scope="col">Type</th>
+   <th scope="col">Description</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>target</code> {{readonlyInline}}</td>
+   <td>{{domxref("EventTarget")}}</td>
+   <td>The event target (the topmost target in the DOM tree).</td>
+  </tr>
+  <tr>
+   <td><code>type</code> {{readonlyInline}}</td>
+   <td>{{domxref("DOMString")}}</td>
+   <td>The type of event.</td>
+  </tr>
+  <tr>
+   <td><code>bubbles</code> {{readonlyInline}}</td>
+   <td>{{jsxref("Boolean")}}</td>
+   <td>Whether the event normally bubbles or not.</td>
+  </tr>
+  <tr>
+   <td><code>cancelable</code> {{readonlyInline}}</td>
+   <td>{{jsxref("Boolean")}}</td>
+   <td>Whether the event is cancellable or not.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilités_navigateur">Compatibilités navigateur</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Navigateur</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Support basique</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+  <tr>
+   <td><code>clipboardData</code></td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatGeckoDesktop(22) }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Navigateur</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Support basique</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+  <tr>
+   <td><code>clipboardData</code></td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatGeckoMobile(22) }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Evénements_liés">Evénements liés</h2>
+
+<ul>
+ <li>{{event("copy")}}, {{event("cut")}}, {{event("paste")}}</li>
+</ul>

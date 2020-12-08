@@ -1,0 +1,111 @@
+---
+title: Mozilla的SVG项目
+slug: Mozilla_SVG_Project
+tags:
+  - SVG
+  - 矢量图
+translation_of: Mozilla/Mozilla_SVG_Project
+---
+<h3 id="Introduction" name="Introduction">引言</h3>
+
+<p>如果你已经了解了一些基础知识，你可能知道SVG代表Scalable Vector Graphics（可缩放的矢量图形），是用XML语言表示二维图像的一种格式。与之相关的SVG面向图形、XHTML面向文本、MathML面向数学方程式、CML面向化学分子式。</p>
+
+<p>SVG与Adobe拥有专利的Flash技术有相似的范围：除此之外它还提供反锯齿的渲染、图案和渐变填充、复杂的滤镜效果、剪切到任意路径、文本和动画。如何区分SVG和Flash呢？SVG是W3C推荐标准（亦即，它是一个用于所有目的的标准），而且它是基于XML的语言，与封闭的二进制格式截然相反。它明确设计用来与别的W3C标准比如说CSS、DOM和SMIL一起作用。</p>
+
+<p>Firefox自从Firefox 1.5版本以来，原生支持SVG文件。</p>
+
+<h4 id="A_simple_example" name="A_simple_example">一个简单的示例</h4>
+
+<p>此时你好奇SVG看起来是如何，这里有一个示例：</p>
+
+<pre>&lt;svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     version="1.1"
+     baseProfile="full"&gt;
+  &lt;g fill-opacity="0.7" stroke="black" stroke-width="0.1cm"&gt;
+    &lt;circle cx="6cm" cy="2cm" r="100" fill="red"
+                    transform="translate(0,50)" /&gt;
+    &lt;circle cx="6cm" cy="2cm" r="100" fill="blue"
+                    transform="translate(70,150)" /&gt;
+    &lt;circle cx="6cm" cy="2cm" r="100" fill="green"
+                    transform="translate(-70,150)" /&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;
+</pre>
+
+<p><a class="internal" href="/@api/deki/files/3540/=simple.svg" title="/@api/deki/files/3540/=simple.svg">查看这个示例</a></p>
+
+<p>这个示例应该看起来如下所示（这是在Mozilla Forefox 1.5中呈现的）：</p>
+
+<p><img alt="Mozilla Firefox 1.5 rendering of SVG example" class="internal" src="/@api/deki/files/607/=Circles.png"></p>
+
+<h4 id="Native_SVG_vs._plug-in_SVG" name="Native_SVG_vs._plug-in_SVG">原生SVG 对比 插件SVG</h4>
+
+<p>Mozilla SVG编译器是一个<strong>原生的</strong>SVG编译器。它与插件SVG浏览器比如说<a href="http://www.adobe.com/svg/">Adobe viewer</a>截然相反。</p>
+
+<p>这两者有这些影响：</p>
+
+<ul>
+ <li>Mozilla 可以处理包含了SVG、MathML、XHTML、XUL等等内容的文档，混合在一起，在一个“复合”文档内。利用<a href="/en/SVG/Namespaces_Crash_Course">XML命名空间</a>就能做到它。</li>
+ <li>Mozilla可以“感知”SVG的内容。可以利用<a href="http://www.w3.org/TR/SVG/svgdom.html">SVG DOM</a>（它与XML DOM兼容）访问它们，还可以利用Mozilla的脚本引擎操纵它们。</li>
+ <li>别的Mozilla技术可以与SVG合用。<a href="/en/XBL">XBL</a>再加上SVG是珠联璧合。它可以用来创建图形化的小部件（我想什么时候我们可以看到第一个基于SVG的Chrome！）或者把Mozilla扩展到识别别的专用语言比如说CML（化学标记语言）。<a class="external" href="http://www.croczilla.com/svg/">croczilla.com/svg/</a>上有一些高级用法的示例。</li>
+</ul>
+
+<h3 id="Status" name="Status">状态</h3>
+
+<p><a href="/en/Gecko" title="En/Gecko">Gecko</a> 1.8 添加了SVG支持，从此它包含在<a class="external" href="http://www.mozilla.com/firefox/">Mozilla Firefox</a> V1.5以及后的版本中。</p>
+
+<p>The goal we're working towards with Mozilla's SVG implementation is <a class="external" href="http://www.w3.org/TR/SVG11/">SVG 1.1 Full</a>. What exists now in the tree should be treated as a technology preview. As we implement more of the specification, content written against Mozilla's SVG implementation might break if it unintentionally relies on bugs that are fixed. We realize this is not ideal, but ask you be patient as we continue implementing an extremely large specification that lacks a comprehensive test suite.</p>
+
+<p>Our goal is specification conformance. Where the specification and other implementations of SVG differ, we will conform to the specification. Where the specification is ambiguous, we will make an informed decision, consulting the SVG working group and other experts as appropriate.</p>
+
+<p>While we are still a long way away from full SVG support, the subset currently implemented is already pretty usable. We have support for all basic shapes including beziers, stroking and filling with opacity, gradients, scripting, events, and much of the DOM.</p>
+
+<p>Big areas of the SVG specification where we're still lacking include filters, svg defined fonts, and declarative animations. A page listing the current implementation status of svg elements and the rendering backends can be found at <a href="/en/Mozilla_SVG_Status" title="en/Mozilla_SVG_Status">Mozilla SVG Status</a>.</p>
+
+<h3 id="Getting_Involved" name="Getting_Involved">Getting Involved</h3>
+
+<p>SVG 1.1 is a big specification and we still have a lot of work to do to fully implement it. If you think you can help us by e.g. tracking down bugs, writing some test-cases or implementing some outstanding features, please get in touch.</p>
+
+<p>We have an IRC chat channel, #svg, on <a class="link-irc" href="irc://irc.mozilla.org/%23svg">irc.mozilla.org</a>.</p>
+
+<p>There is also newsgroup/mailing list dedicated to SVG in Mozilla. It's called <a class="external" href="nntp://news.mozilla.org/mozilla.dev.tech.svg">mozilla.dev.tech.svg</a>.</p>
+
+<p>If reporting bugs, the best place for them is in <a class="link-https" href="https://bugzilla.mozilla.org/">bugzilla</a> so that we can track them and you can monitor the progress. File them in the <a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Core&amp;component=SVG">"Core" product with the "SVG" component</a>. If you have a testcase (which we love to have), please use the attachment feature of bugzilla to include it rather than pasting it in the bug.</p>
+
+<h3 id="Frequently_Asked_Questions" name="Frequently_Asked_Questions">常见问题</h3>
+
+<p>Before asking us questions directly, please take a look at the <a class="internal" href="/En/SVG/FAQ" title="En/SVG/FAQ">Frequently Asked Questions</a> page to see if your question has already been answered. If your question hasn't been answered there, try asking in our <a class="external" href="nntp://news.mozilla.org/mozilla.dev.tech.svg">newsgroup</a> or <a class="link-irc" href="irc://irc.mozilla.org/%23svg">IRC channel</a>.</p>
+
+<h3 id="Links" name="Links">链接</h3>
+
+<h4 id="Mozilla-specific_SVG_sites" name="Mozilla-specific_SVG_sites">Mozilla专有的SVG网站</h4>
+
+<ul>
+ <li><a class="external" href="http://www.croczilla.com/svg/">Mozilla SVG 源</a>码</li>
+ <li><a class="external" href="http://www.croczilla.com/svg/samples/">Mozilla SVG 示</a>例</li>
+</ul>
+
+<h4 id="General_resources" name="General_resources">General resources</h4>
+
+<ul>
+ <li>The W3C's <a class="external" href="http://www.w3.org/Graphics/SVG/">SVG site</a>.</li>
+ <li>Jonathan Watt's <a class="external" href="http://jwatt.org/svg/authoring/">SVG authoring guidelines</a>. Give your SVG a much better chance of working in all SVG implementations by following these guidelines.</li>
+ <li>The <a class="external" href="http://svg-whiz.com/wiki/">SVG wiki</a>.</li>
+ <li>The <a href="/en/SVG" title="en/SVG">SVG section of the Mozilla Developer Center</a>.</li>
+ <li>For general SVG questions there is a mailing list at <strong><a class="link-mailto" href="mailto:www-svg@w3.org" rel="freelink">www-svg@w3.org</a></strong> (<a class="external" href="http://lists.w3.org/Archives/Public/www-svg/">archived here</a>).</li>
+ <li>Another useful and very busy newsgroup/mailing list is <strong><a class="link-mailto" href="mailto:svg-developers@yahoo.com" rel="freelink">svg-developers@yahoo.com</a></strong> (<a class="external" href="http://news.gmane.org/gmane.text.xml.svg.devel/">archived here</a>).</li>
+</ul>
+
+<div class="originaldocinfo">
+<h2 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h2>
+
+<ul>
+ <li>Author(s): Dean Jackson</li>
+ <li>Other Contributors: Alex Fritze, Robert Mohr, Tim Rowley, Jonathan Watt, Steffen Wilberg</li>
+ <li>Last Updated Date: February 1, 2006</li>
+ <li>Copyright Information: Portions of this content are © 1998–2007 by individual mozilla.org contributors; content available under a Creative Commons license | <a class="external" href="http://www.mozilla.org/foundation/licensing/website-content.html">Details</a>.</li>
+</ul>
+</div>
+
+<p>{{ languages( { "ja": "ja/Mozilla_SVG_Project" } ) }}</p>

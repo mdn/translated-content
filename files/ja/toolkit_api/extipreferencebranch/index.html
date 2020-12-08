@@ -1,0 +1,146 @@
+---
+title: extIPreferenceBranch
+slug: Toolkit_API/extIPreferenceBranch
+tags:
+  - FUEL
+  - Interfaces
+  - SMILE
+  - STEEL
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/Toolkit_API/extIPreferenceBranch
+---
+<p></p>
+<p></p><div class="blockIndicator standardNote">
+<p>この記事は <a href="https://developer.mozilla.org/ja/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a>  の新機能について述べています</p>
+</div><p></p>
+<p><code>extIPreferenceBranch</code> インタフェースは、設定への簡単なアクセスを提供します。このインタフェースは予め定義されたルート設定ブランチを持っています。ルートブランチは、オーナーのコンテキストを基にセットされます。例えば、アプリケーションレベルの設定はルートが空であるため、拡張機能は設定のルートとして "<code>extensions.<em>extensionid</em>.</code>" を持ちます。このインタフェースで使用されるすべての設定の "<code>aName</code>" 引数は、ルートブランチからの相対的な名前になります。<code>extIPreferenceBranch</code> は <code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/exthelper/extIApplication.idl" rel="custom">toolkit/components/exthelper/extIApplication.idl</a></code> で定義されています。</p>
+<p>XPCOM サービスを通して実装された <a class="internal" href="/ja/Toolkit_API/extIApplication" title="ja/Toolkit API/extIApplication"><code>extIApplication</code></a>: <a class="internal" href="/ja/Toolkit_API/FUEL" title="ja/Toolkit_API/FUEL">FUEL</a> (Firefox) または <a class="internal" href="/ja/Toolkit_API/STEEL" title="ja/Toolkit_API/STEEL">STEEL</a> (Thunderbird), <a class="internal" href="/ja/Toolkit_API/SMILE" title="ja/Toolkit_API/SMILE">SMILE</a> (SeaMonkey) のページの説明を参照してください。</p>
+<h2 id="Method_overview" name="Method_overview">メソッドの概要</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>boolean <a href="#has.28.29">has</a>(in AString aName)</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/ja/Toolkit_API/extIPreference" title="ja/FUEL/Preference">extIPreference</a> <a href="#get.28.29">get</a>(in AString aName)</code></td>
+  </tr>
+  <tr>
+   <td><code>nsIVariant <a href="#getValue.28.29">getValue</a>(in AString aName, in nsIVariant aDefaultValue)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#setValue.28.29">setValue</a>(in AString aName, in nsIVariant aValue)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#reset.28.29">reset</a>()</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Attributes" name="Attributes">プロパティ</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">プロパティ</td>
+   <td class="header">型</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code>root</code></td>
+   <td><code>readonly attribute AString</code></td>
+   <td>ブランチのルートの名前。</td>
+  </tr>
+  <tr>
+   <td><code>all</code></td>
+   <td><code>readonly attribute nsIVariant</code></td>
+   <td>このブランチ内のすべての設定を列挙した <code>extIPreference</code> の配列。</td>
+  </tr>
+  <tr>
+   <td><code>events</code></td>
+   <td><code>readonly attribute extIEvents</code></td>
+   <td>(<span style="color: darkgreen; background: #ef9;">【訳注: ブランチ内のすべての】</span>) 設定のイベントオブジェクト。"change" をサポート。</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Methods" name="Methods">メソッド</h2>
+<h3 id="has.28.29" name="has.28.29">has()</h3>
+<p>ある設定が存在するかどうかを調べる。</p>
+<pre class="eval">boolean has(in AString aName)
+</pre>
+<h6 id="Parameters" name="Parameters">引数</h6>
+<dl>
+ <dt>
+  <code>aName</code></dt>
+ <dd>
+  設定の名前。</dd>
+</dl>
+<h6 id="Return_value" name="Return_value">戻り値</h6>
+<p>設定が存在する場合は <code>true</code>、存在しない場合は <code>false</code>。</p>
+<h3 id="get.28.29" name="get.28.29">get()</h3>
+<p>ある設定を表すオブジェクトを取得する。</p>
+<pre class="eval">extIPreference get(in AString aName)
+</pre>
+<h6 id="Parameters_2" name="Parameters_2">引数</h6>
+<dl>
+ <dt>
+  <code>aName</code></dt>
+ <dd>
+  設定の名前。</dd>
+</dl>
+<h6 id="Return_value_2" name="Return_value_2">戻り値</h6>
+<p>設定オブジェクト、または設定が存在しなければ <code>null</code>。</p>
+<h3 id="getValue.28.29" name="getValue.28.29">getValue()</h3>
+<p>ある設定の値を取得する。設定が存在しない場合はデフォルト値を返す。</p>
+<pre class="eval">nsIVariant getValue(in AString aName, in nsIVariant aDefaultValue)
+</pre>
+<h6 id="Parameters_3" name="Parameters_3">引数</h6>
+<dl>
+ <dt>
+  <code>aName</code></dt>
+ <dd>
+  設定の名前。</dd>
+ <dt>
+  <code>aDefaultValue</code></dt>
+ <dd>
+  設定のデフォルト値。これは、何の処理もされずに渡され、値の型は設定として正しくない型にもなります。例えば、null/undefined/object になります。</dd>
+</dl>
+<h6 id="Return_value_3" name="Return_value_3">戻り値</h6>
+<p>設定の値。設定が存在しない場合はデフォルト値。異なる型の戻り値を使用することは、JavaScript コードに設定ファイルで使用されたものと同じ型の値を使用させることを意味するため、型の強制は起こらないでしょう。設定ファイル内の引用符で囲まれた文字列は、値が "true" や "false" の文字列であっても文字列型として扱われます。整数型の設定は JavaScript の Number 型として扱われます。真偽値は JavaScript の Boolean 型として扱われます。設定サブシステムでは、これ以外の型はサポートされていません。</p>
+<h3 id="setValue.28.29" name="setValue.28.29">setValue()</h3>
+<p>設定の値を指定した値に変更する。</p>
+<pre class="eval">void setValue(in AString aName, in nsIVariant aValue)
+</pre>
+<h6 id="Parameters_4" name="Parameters_4">引数</h6>
+<dl>
+ <dt>
+  <code>aName</code></dt>
+ <dd>
+  設定の名前。</dd>
+ <dt>
+  <code>aValue</code></dt>
+ <dd>
+  設定の値。</dd>
+</dl>
+<h6 id="Return_value_4" name="Return_value_4">戻り値</h6>
+<p> </p>
+<h3 id="reset.28.29" name="reset.28.29">reset()</h3>
+<p>ブランチ内のすべての設定をデフォルト値にリセットする。</p>
+<div class="note">
+ <strong>注記:</strong> この関数は未実装であるため例外が発生します。<a class="__firefox_bugidhelper external" href="http://bugzilla.mozilla.org/show_bug.cgi?id=481044" title="Bug 481044 -- FUEL fuelIPreferenceBranch.reset doesn't work">bug 481044</a> を参照してください。</div>
+<pre class="eval">void reset()
+</pre>
+<h6 id="Parameters_5" name="Parameters_5">引数</h6>
+<h6 id="Return_value_5" name="Return_value_5">戻り値</h6>
+<h2 id="Examples" name="Examples">例</h2>
+<pre>var myExt = Application.extensions.get('myapplicationid');
+
+function myFunc (event) {
+  Application.console.log('change!');
+};
+
+myExt.prefs.get("myprefname").events.addListener("change", myFunc);
+</pre>
+<h2 id="See_also" name="See_also">参照</h2>
+<p><a class="internal" href="/ja/Toolkit_API/FUEL" title="ja/Toolkit_API/FUEL">FUEL</a> (Firefox), <a class="internal" href="/ja/Toolkit_API/STEEL" title="ja/Toolkit_API/STEEL">STEEL</a> (Thunderbird), <a class="internal" href="/ja/Toolkit_API/SMILE" title="ja/Toolkit_API/SMILE">SMILE</a> (SeaMonkey)</p>
+<h2 id="Known_issues" name="Known_issues">既知の問題</h2>
+<p><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=488587" title="https://bugzilla.mozilla.org/show_bug.cgi?id=488587">Bug 488587</a> - Function registered as FUEL preference listener not always called</p>
+<p></p>

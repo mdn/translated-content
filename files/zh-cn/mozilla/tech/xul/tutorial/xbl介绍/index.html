@@ -1,0 +1,104 @@
+---
+title: XUL 教程
+slug: Mozilla/Tech/XUL/Tutorial/XBL介绍
+tags:
+  - XBL
+translation_of: Archive/Mozilla/XUL/Tutorial/Introduction_to_XBL
+---
+<p> </p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Property_Files" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:Anonymous_Content">下一页  »</a></p>
+</div><p></p>
+
+<p> </p>
+
+<p><a href="/en/XUL" title="en/XUL">XUL</a>有一个姐妹语言，<a href="/en/XBL" title="en/XBL">XBL</a>（可扩展绑定语言）。这种语言被用于声明 XUL 窗口控件的行为。</p>
+
+<h3 id="Bindings" name="Bindings">Bindings</h3>
+
+<p>你可以用 XUL 来为应用程序定义用户界面的外观。你可以通过 <a href="/zh-CN/XUL_Tutorial/Adding_Style_Sheets" title="zh-CN/XUL_Tutorial/Adding_Style_Sheets"> 应用样式</a>自定义元素的外观。你也可以通过改变样式以 <a href="/zh-CN/XUL_Tutorial/Creating_a_Skin" title="zh-CN/XUL_Tutorial/Creating_a_Skin">创建新皮肤</a>。所有元素的基础外观，比如 <a href="/zh-CN/XUL_Tutorial/Scroll_Bars" title="zh-CN/XUL_Tutorial/Scroll_Bars">滚动条</a> 和 <a href="/zh-CN/XUL_Tutorial/Input_Controls#Checkboxes_and_Radio_Buttons" title="zh-CN/XUL_Tutorial/Input_Controls#Checkboxes_and_Radio_Buttons">复选框</a>，都可以通过调整样式或设置元素参数来进行修改。然而，XUL 没有提供改变元素的工作方式（或添加一个可重用的新元素）的方法。例如，您可能想改变滚动条的运行方式，就需要用到 <a href="/en/XBL" title="en/XBL">XBL</a>。</p>
+
+<p>一个 XBL 文件包含一组绑定（binding）。每个绑定描述一个 XUL 控件的行为。例如，一个绑定可以和一个滚动条相关联。这个行为除却描述滚动条的属性于方法之外，还描述了组成滚动条的 XUL 元素。</p>
+
+<p>类似 XUL，XBL 是一种 XML 语言，所以它有与之相似的语法规范。下述例子展示了 XBL 文件的基础结构：</p>
+
+<pre class="brush: xml">&lt;?xml version="1.0"?&gt;
+&lt;bindings xmlns="http://www.mozilla.org/xbl"&gt;
+  &lt;binding id="binding1"&gt;
+    &lt;!-- content, property, method and event descriptions go here --&gt;
+  &lt;/binding&gt;
+  &lt;binding id="binding2"&gt;
+    &lt;!-- content, property, method and event descriptions go here --&gt;
+  &lt;/binding&gt;
+&lt;/bindings&gt;
+</pre>
+
+<p><code><code><a href="/zh-CN/docs/XBL/XBL_1.0_Reference/Elements#bindings">bindings</a></code></code> 元素是 XBL 文件的根元素，包含了一个或多个 <code><code><a href="/zh-CN/docs/XBL/XBL_1.0_Reference/Elements#bindings">bindings</a></code></code> 元素。每个 <code><code><a href="/zh-CN/docs/XBL/XBL_1.0_Reference/Elements#bindings">bindings</a></code></code> 元素都声明一个单独的 binding，<code>id</code> 属性可以用来确定 binding，就像上述的例子一样。模板有两个 binding，分别叫做 <code>binding1</code> 和 <code>binding2</code>。一个可与滚动条关联，另一个则与菜单关联。一个 binding 可以和任意 XUL 元素相关联。如果你使用 CSS 类，就能按需使用各种不同的 binding。注意上面模板中的 <code><code><a href="/zh-CN/docs/XBL/XBL_1.0_Reference/Elements#bindings">bindings</a></code></code> 元素的命名空间。它声明了我们所使用的 XBL 语法。</p>
+
+<p>将绑定文件的链接正确设为 CSS 中 <code><a href="/en/CSS/-moz-binding" title="en/CSS/-moz-binding">-moz-binding</a></code> 的值，就可以把一个 binding 绑定到元素上。例如：</p>
+
+<pre class="brush: css">scrollbar {
+    -moz-binding: url('chrome://findfile/content/findfile.xml#binding1');
+}
+</pre>
+
+<p>URL 指向了 “<a class="external" rel="freelink">chrome://findfile/content/findfile.xml</a>” 文件中的 ID“binding1”。“#binding1”语法用于指向特定的 binding，很像指向 HTML 文件中的 anchor 标签的语法。通常你会（借助此语法）把所有的 binding 放进一个单独的文件里。例中结果是“binding1”将会描述所有的滚动条元素。如果您没用-moz-binding URL中的标签，就会用到XBL文件中的第一个binding。</p>
+
+<p>binding 声明了五种类型：</p>
+
+<ol>
+ <li>内容：添加到 binding 绑定到的元素的子元素</li>
+ <li>属性：添加到 binding 绑定到的元素的属性。它们能通过脚本存取。</li>
+ <li>方法：添加到 binding 绑定到的元素的方法。它们能从脚本调用。</li>
+ <li>事件：元素将响应的例如鼠标单击和按键这类事件。 binding能添加脚本，来提供默认操作。另外，能够定义新事件。</li>
+ <li>样式：被 XBL 定义的 binding 绑定到的元素所拥有的自定义样式的属性</li>
+</ol>
+
+<h3 id="Binding_Example" name="Binding_Example">Binding 示例</h3>
+
+<p><code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/box" title="box">box</a></code></code> 很通用，您能用它来创建自定义的窗口控件（虽然您能用任何元素，甚至自己构造的）。给一个 <code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/box" title="box">box</a></code></code> 标签分配一个 <code>class</code> 属性，您就可以将 binding 连接到只属于该类的 box。比如下面的例子：</p>
+
+<p><strong>XUL (example.xul):</strong></p>
+
+<pre class="brush: xml">&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+&lt;?xml-stylesheet href="chrome://example/skin/example.css" type="text/css"?&gt;
+
+&lt;window
+     xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+  &lt;box class="okcancelbuttons"/&gt;
+&lt;/window&gt;</pre>
+
+<p><strong>CSS (example.css):</strong></p>
+
+<pre class="brush: css">box.okcancelbuttons {
+    -moz-binding: url('chrome://example/skin/example.xml#okcancel');
+}</pre>
+
+<p><strong>XBL (example.xml):</strong></p>
+
+<pre class="brush: xml">&lt;?xml version="1.0"?&gt;
+&lt;bindings xmlns="http://www.mozilla.org/xbl"
+         xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+  &lt;binding id="okcancel"&gt;
+    &lt;content&gt;
+      &lt;xul:button label="OK"/&gt;
+      &lt;xul:button label="Cancel"/&gt;
+    &lt;/content&gt;
+  &lt;/binding&gt;
+&lt;/bindings&gt;</pre>
+
+<p>这个例子创建了一个有单个 box 的窗口，这个 box 已经声明过含有一个 <code>okcancelbuttons</code> 类。与文件相关的样式表阐述了含类 <code>okcancelbuttons</code> 的box有在XBL文件中定义的特定的binding。除 <code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/box" title="box">box</a></code></code> 之外，可用其它元素，甚至自定义的标签。</p>
+
+<p>部分 XBL 的细节将在下一章描述。不过呢，总结来说，它使得在box里自动增加了两个按钮。一个 OK 按钮，一个 Cancel 按钮。</p>
+
+<p>在下一节中，我们将看看该如何 <a href="/en/XUL_Tutorial/Anonymous_Content" title="en/XUL_Tutorial/Anonymous_Content">使用 XBL 创建内容</a>。</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Property_Files" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:Anonymous_Content">下一页  »</a></p>
+</div><p></p>
+
+<p>/*以下疑似是历史残余链接…*/ </p>
+
+<p> </p>

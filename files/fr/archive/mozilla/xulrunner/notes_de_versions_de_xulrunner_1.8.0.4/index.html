@@ -1,0 +1,90 @@
+---
+title: Notes de versions de XULRunner 1.8.0.4
+slug: Archive/Mozilla/XULRunner/Notes_de_versions_de_XULRunner_1.8.0.4
+tags:
+  - XUL
+  - XULRunner
+translation_of: Archive/Mozilla/XULRunner/1.8.0.4
+---
+<p>XULRunner 1.8.0.4 est une <i>version stable pour les développeurs</i> de l'environnement d'éxécution Mozilla <a href="fr/XULRunner">XULRunner</a>. Il remplace <a href="fr/Notes_de_versions_de_XULRunner_1.8.0.1">la version 1.8.0.1</a> ; tous les utilisateurs devraient mettre à jour leur version. Il permet de lancer des applications XUL autonomes, et d'embarquer des API qui permettent d'avoir un rendu de pages Web dans des applications natives ou Java.
+</p>
+<h3 id="Configuration_syst.C3.A8me_minimum" name="Configuration_syst.C3.A8me_minimum"> Configuration système minimum </h3>
+<p>Avant installation, vérifiez que votre ordinateur répond <a class="external" href="http://www.mozilla.com/firefox/system-requirements.html">aux exigences système minimales</a> (en). Ces exigences sont les mêmes pour XULRunner et pour Firefox.
+</p>
+<h3 id="Installation_de_XULRunner" name="Installation_de_XULRunner"> Installation de XULRunner </h3>
+<p>Mozilla propose XULRunner pour Windows, Mac OS X et Linux, uniquement en anglais :
+</p>
+<ul><li> <a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/1.8.0.4/win32/en-US/xulrunner-1.8.0.4.en-US.win32.zip">Télécharger XULRunner pour Windows</a>
+</li><li> <a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/1.8.0.4/mac/en-US/xulrunner-1.8.0.4.en-US.mac.dmg">Télécharger XULRunner pour Mac OS X</a>
+</li><li> <a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/1.8.0.4/linux-i686/en-US/xulrunner-1.8.0.4.en-US.linux-i686.tar.gz">Télécharger XULRunner pour Linux</a>
+</li></ul>
+<p>Frenchmozilla propose sur son site une <a class="external" href="http://frenchmozilla.sourceforge.net/xulrunner/">version française</a> de XULRunner 1.8.0.4 pour ces trois plateformes.
+</p>
+<h4 id="Windows" name="Windows"> Windows </h4>
+<ul><li> Décompressez le fichier ZIP dans un nouveau répertoire en utilisant un outil d'archivage (<a class="external" href="http://www.7-zip.org/fr/">7zip</a> est préconisé). Le répertoire suivant est recommandé : &lt;tt&gt;C:\Program Files\Mozilla XULRunner\1.8.0.4&lt;/tt&gt;.
+</li><li> Pour enregistrer XULRunner auprès du système d'exploitation, ouvrez une invite de commande et exécutez &lt;tt&gt;xulrunner.exe --register-global&lt;/tt&gt; (pour un enregistrement global) ou &lt;tt&gt;xulrunner.exe --register-user&lt;/tt&gt; (pour n'enregistrer que pour un utilisateur).
+</li></ul>
+<h4 id="Mac_OS_X" name="Mac_OS_X"> Mac OS X </h4>
+<ul><li> Ouvrez le fichier .pkg dans l'installeur, et suivez les indications.
+</li></ul>
+<h4 id="Linux" name="Linux"> Linux </h4>
+<ul><li> Décompressez le tarball dans un nouveau répertoire en utilisant la commande &lt;tt&gt;tar -xzf xulrunner-1.8.0.4.en-US.linux-i686.tar.gz&lt;/tt&gt;. Le répertoire suivant est recommandé : &lt;tt&gt;/opt/xulrunner/1.8.0.4&lt;/tt&gt;.
+</li><li> Enregistrez XULRunner auprès du système d'exploitation en exécutant &lt;tt&gt;xulrunner --register-global&lt;/tt&gt; (pour une installation globale, doit être faite par root) ou &lt;tt&gt;xulrunner --register-user&lt;/tt&gt; (pour n'enregistrer que pour un utilisateur).
+</li></ul>
+<h3 id="D.C3.A9sinstallation_de_XULRunner" name="D.C3.A9sinstallation_de_XULRunner"> Désinstallation de XULRunner </h3>
+<h4 id="Windows.2FLinux" name="Windows.2FLinux"> Windows/Linux </h4>
+<ul><li> Depuis une invite de commande, lancez &lt;tt&gt;xulrunner --unregister-global&lt;/tt&gt; ou &lt;tt&gt;xulrunner --unregister-user&lt;/tt&gt; pour désenregistrer XULRunner de la même manière que vous l'avez enregistré à l'installation.
+</li><li> Supprimez le répertoire XULRunner.
+</li></ul>
+<h4 id="Mac_OS_X_2" name="Mac_OS_X_2"> Mac OS X </h4>
+<p>Si vous disposez de plusieurs versions installées de XULRunner sous Mac OS X, il n'est pas possible d'en désinstaller une seule.
+</p>
+<ul><li> Pour enlever <b>toutes</b> les versions installées de XULRunner, supprimez le répertoire &lt;tt&gt;/Library/Frameworks/XUL.framework&lt;/tt&gt;.
+</li></ul>
+<h3 id="Installation_d.27applications_XUL" name="Installation_d.27applications_XUL"> Installation d'applications XUL </h3>
+<p>Les applications XUL peuvent être obtenues de différentes sources, et sont habituellement livrées sous forme d'archive ZIP portant une extension &lt;tt&gt;.xulapp&lt;/tt&gt; ou &lt;tt&gt;.xpi&lt;/tt&gt;. <a>Quelques applications</a> sont disponibles depuis le <a href="fr">Mozilla Developer Center</a>.
+</p>
+<ul><li> Sauvegardez l'archive de l'application sur votre bureau ou à un endroit de votre choix.
+</li></ul>
+<h4 id="Windows_2" name="Windows_2"> Windows </h4>
+<p>Lancez la commande suivantes depuis Menu &gt; Exécutez ou depuis une invite de commande :
+</p>
+<pre class="eval">"C:\Program Files\Mozilla XULRunner\1.8.0.4\xulrunner\xulrunner.exe" --install-app "C:\Documents and Settings\<var>nomUtilisateur</var>\Bureau\<var>monApplication</var>.xpi"
+</pre>
+<p>L'application sera installée dans &lt;tt&gt;C:\Program Files\<var>NomVendeur</var>\<var>NomApplication</var>&lt;/tt&gt;
+</p>
+<h4 id="Mac_OS_X_3" name="Mac_OS_X_3"> Mac OS X </h4>
+<p>Lancez la commande suivante dans une invite de commande :
+</p>
+<pre class="eval">/Library/Frameworks/XUL.framework/xulrunner-bin --install-app ~/Bureau/<var>monApplication</var>.xpi
+</pre>
+<p>L'application sera installée dans &lt;tt&gt;/Applications/<var>nomVendeur</var>/<var>nomApplication</var>&lt;/tt&gt;
+</p>
+<h4 id="Linux_2" name="Linux_2"> Linux </h4>
+<p>Lancez la commande suivante dans une invite de commande :
+</p>
+<pre class="eval">/opt/xulrunner/1.8.0.4/xulrunner/xulrunner --install-app ~/Desktop/<var>monApplication</var>.xpi
+</pre>
+<p>L'application sera installée dans &lt;tt&gt;/usr/lib/<var>nomVendeur</var>/<var>nomApplication</var>&lt;/tt&gt;
+</p>
+<h3 id="Probl.C3.A8mes_connus" name="Probl.C3.A8mes_connus"> Problèmes connus </h3>
+<ul><li> Les logiciels pare-feu peuvent identifier les applications XUL comme étant une seule et unique application.
+</li><li> Sous Microsoft Windows XP, toutes les applications XUL peuvent être regroupées ensemble dans la barre de tâche.
+</li></ul>
+<h3 id="Foires_aux_questions" name="Foires_aux_questions"> Foires aux questions </h3>
+<p></p><dl>
+<dt>Pourquoi l'installation de XULRunner est-il aussi pénible ? Pourquoi n'y a-t-il pas un joli installeur ?
+</dt><dd>Parce que personne n'en a encore écrit le code ! Il s'agit d'une version préalable pour les développeurs : des fonctionnalités supplémentaires pour l'installation et le déploiement de XULRunner et des applications basées sur XULRunner seront disponibles dans les futures versions.
+<p></p></dd><dt>J'ai écrit une application XUL, comment puis-je la déployer chez mes utilisateurs ?
+</dt><dd>Pour l'instant, Mozilla recommande que XULRunner soit déployé individuellement avec chaque application. Consultez <a href="fr/XULRunner/D%c3%a9ploiement_de_XULRunner_1.8">Déploiement de XULRunner 1.8</a> pour plus d'information.
+<p></p></dd><dt>Où est le code source ?
+</dt><dd><a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/1.8.0.4/source/xulrunner-1.8.0.4-source.tar.bz2">Ici.</a>
+<p></p></dd><dt>Je pense avoir trouvé un bogue, comment puis-je le signaler ?
+</dt><dd><a class="link-https" href="https://bugzilla.mozilla.org/">bugzilla.mozilla.org</a> sert à traquer les bogues de tous les produits Mozilla. Assurez-vous s'il vous plait que votre bogue n'est pas déjà connu avant de le poster, en utilisant la fonction de recherche.
+<p></p></dd><dt>Comment puis-je aider ?
+</dt><dd>Si vous souhaitez participer à XULRunner sans savoir par où débuter, visitez la page <a href="fr/XULRunner/Communaut%c3%a9">XULRunner:Communauté</a> et posez vos questions sur les newsgroups ou sur le canal IRC.
+</dd></dl>
+<p><span class="comment">Interwiki Language Links</span>
+</p>
+<div class="noinclude">
+</div>

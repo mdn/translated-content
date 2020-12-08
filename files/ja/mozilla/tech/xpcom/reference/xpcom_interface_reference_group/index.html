@@ -1,0 +1,976 @@
+---
+title: XPCOM Interface Reference group
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference_group
+translation_of: Mozilla/Tech/XPCOM/Reference/Reference_by_grouping
+---
+<h2 id="Using_this_guide">Using this guide</h2>
+
+<p>このページには2010年12月1日現在の Mozilla インターフェースが一覧となっています。<a href="/ja/XPCOM_Interface_Reference" title="ja/XPCOM_Interface_Reference">the XPCOM interface Reference</a> の一覧はアルファベット順に並べられていますが、このページではそれらを機能ごとにグループ化するという試みがなされています。グループ化とカテゴリの名称は著者<span style="color: darkgreen; background: #ef9;">【訳注: 英語版のこのページの著者】</span>による独断が多少入り混じっています。（これについては涙を流す結末になりうる重大な論点であるとは認識しています。ですが、どうやら私がこの編集を行った最初の人物であるようなので、最初の編集者としての権利を得たものとします。）</p>
+<p>主要セクションの定義：</p>
+<ul>
+ <li><strong>Browser</strong>
+  <p>このセクションはビューペインまたは"browser window" 固有のコンテンツに関連する要素を含んでいます。<strong>System</strong> によってラップされていますが、便利に表示されます。</p>
+ </li>
+ <li><strong>Data</strong>
+  <p>このセクションはデータラッパーとコアオブジェクトの定義が含まれています。</p>
+ </li>
+ <li><strong>Security</strong>
+  <p>このセクションは安全なチャンネルコミュニケーションのための API 群を含んでいます。</p>
+ </li>
+ <li><strong>System</strong>
+  <p>このセクションは、（デバイスコールのような）外部のサポートしている要素の呼び出しを含む、アプリケーションレベルのインターフェースを含んでいます。これはルート要素であり、他のグループで定義されている幾つかの機能を含むものです。</p>
+ </li>
+ <li><strong>User</strong>
+  <p>このセクションは与えられたユーザーデータのストレージ固有の要素を含んでいます。</p>
+ </li>
+</ul>
+<div class="columns" style="">
+ <div class="primary Browser" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+  <h1 id="Browser">Browser</h1>
+  <ul>
+   <li class="secondary Autocomplete" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Autocomplete">Autocomplete</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIAutoCompleteController" title="ja/XPCOM_Interface_Reference/nsIAutoCompleteController">nsIAutoCompleteController</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIAutoCompleteInput" title="ja/XPCOM_Interface_Reference/nsIAutoCompleteInput">nsIAutoCompleteInput</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIAutoCompleteSearch" title="ja/XPCOM_Interface_Reference/nsIAutoCompleteSearch">nsIAutoCompleteSearch</a></li>
+    </ul>
+   </li>
+   <li class="secondary Console" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Console">Console</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIConsoleListener" title="ja/XPCOM_Interface_Reference/nsIConsoleListener">nsIConsoleListener</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIConsoleMessage" title="ja/XPCOM_Interface_Reference/nsIConsoleMessage">nsIConsoleMessage</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIConsoleService" title="ja/XPCOM_Interface_Reference/nsIConsoleService">nsIConsoleService</a></li>
+    </ul>
+   </li>
+   <li class="secondary Document" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Document">Document</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIDocShell" title="ja/XPCOM_Interface_Reference/nsIDocShell">nsIDocShell</a></li>
+    </ul>
+   </li>
+   <li class="secondary DOM" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="DOM">DOM</h2>
+    <ul>
+     <li class="tercerary Device" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="Device">Device</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/NsIDOMGeoGeolocation" title="ja/XPCOM_Interface_Reference/NsIDOMGeoGeolocation">nsIDOMGeoGeolocation</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/NsIDOMGeoPosition" title="ja/XPCOM_Interface_Reference/NsIDOMGeoPosition">nsIDOMGeoPosition</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDOMGeoPositionAddress" title="ja/XPCOM_Interface_Reference/nsIDOMGeoPositionAddress">nsIDOMGeoPositionAddress</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/NsIDOMGeoPositionCallback" title="ja/XPCOM_Interface_Reference/NsIDOMGeoPositionCallback">nsIDOMGeoPositionCallback</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/NsIDOMGeoPositionCoords" title="ja/XPCOM_Interface_Reference/NsIDOMGeoPositionCoords">nsIDOMGeoPositionCoords</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/NsIDOMGeoPositionError" title="ja/XPCOM_Interface_Reference/NsIDOMGeoPositionError">nsIDOMGeoPositionError</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/NsIDOMGeoPositionErrorCallback" title="ja/XPCOM_Interface_Reference/NsIDOMGeoPositionErrorCallback">nsIDOMGeoPositionErrorCallback</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/NsIDOMGeoPositionOptions" title="ja/XPCOM_Interface_Reference/NsIDOMGeoPositionOptions">nsIDOMGeoPositionOptions</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDOMGlobalPropertyInitializer" title="ja/XPCOM_Interface_Reference/nsIDOMGlobalPropertyInitializer">nsIDOMGlobalPropertyInitializer</a></li>
+      </ul>
+     </li>
+     <li class="tercerary Element" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="Element">Element</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDOMChromeWindow" title="ja/XPCOM_Interface_Reference/nsIDOMChromeWindow">nsIDOMChromeWindow</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDOMClientRect" title="ja/XPCOM_Interface_Reference/nsIDOMClientRect">nsIDOMClientRect</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDOMElement" title="ja/XPCOM_Interface_Reference/nsIDOMElement">nsIDOMElement</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDOMHTMLAudioElement" title="ja/XPCOM_Interface_Reference/nsIDOMHTMLAudioElement">nsIDOMHTMLAudioElement</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDOMHTMLFormElement" title="ja/XPCOM_Interface_Reference/nsIDOMHTMLFormElement">nsIDOMHTMLFormElement</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement" title="ja/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement">nsIDOMHTMLMediaElement</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDOMHTMLSourceElement" title="ja/XPCOM_Interface_Reference/nsIDOMHTMLSourceElement">nsIDOMHTMLSourceElement</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDOMHTMLTimeRanges" title="ja/XPCOM_Interface_Reference/nsIDOMHTMLTimeRanges">nsIDOMHTMLTimeRanges</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDOMJSWindow" title="ja/XPCOM_Interface_Reference/nsIDOMJSWindow">nsIDOMJSWindow</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDOMNode" title="ja/XPCOM_Interface_Reference/nsIDOMNode">nsIDOMNode</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDOMNSHTMLDocument" title="ja/XPCOM_Interface_Reference/nsIDOMNSHTMLDocument">nsIDOMNSHTMLDocument</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/NsIDOMStorageItem" title="ja/XPCOM_Interface_Reference/NsIDOMStorageItem">nsIDOMStorageItem</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/NsIDOMStorageManager" title="ja/XPCOM_Interface_Reference/NsIDOMStorageManager">nsIDOMStorageManager</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDOMWindow" title="ja/XPCOM_Interface_Reference/nsIDOMWindow">nsIDOMWindow</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDOMWindow2" title="ja/XPCOM_Interface_Reference/nsIDOMWindow2">nsIDOMWindow2</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDOMWindowInternal" title="ja/XPCOM_Interface_Reference/nsIDOMWindowInternal">nsIDOMWindowInternal</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDOMWindowUtils" title="ja/XPCOM_Interface_Reference/nsIDOMWindowUtils">nsIDOMWindowUtils</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDynamicContainer" title="ja/XPCOM_Interface_Reference/nsIDynamicContainer">nsIDynamicContainer</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/NsIEditor" title="ja/XPCOM_Interface_Reference/NsIEditor">nsIEditor</a></li>
+      </ul>
+     </li>
+     <li class="tercerary Event" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="Event">Event</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDOMEvent" title="ja/XPCOM_Interface_Reference/nsIDOMEvent">nsIDOMEvent</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDOMEventGroup" title="ja/XPCOM_Interface_Reference/nsIDOMEventGroup">nsIDOMEventGroup</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDOMEventListener" title="ja/XPCOM_Interface_Reference/nsIDOMEventListener">nsIDOMEventListener</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDOMEventTarget" title="ja/XPCOM_Interface_Reference/nsIDOMEventTarget">nsIDOMEventTarget</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDOMMouseScrollEvent" title="ja/XPCOM_Interface_Reference/nsIDOMMouseScrollEvent">nsIDOMMouseScrollEvent</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDOMMozTouchEvent" title="ja/XPCOM_Interface_Reference/nsIDOMMozTouchEvent">nsIDOMMozTouchEvent</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDOMOrientationEvent" title="ja/XPCOM_Interface_Reference/nsIDOMOrientationEvent">nsIDOMOrientationEvent</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/NsIDOMProgressEvent" title="ja/XPCOM_Interface_Reference/NsIDOMProgressEvent">nsIDOMProgressEvent</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/NsIDOMSimpleGestureEvent" title="ja/XPCOM_Interface_Reference/NsIDOMSimpleGestureEvent">nsIDOMSimpleGestureEvent</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDragDropHandler" title="ja/XPCOM_Interface_Reference/nsIDragDropHandler">nsIDragDropHandler</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDragService" title="ja/XPCOM_Interface_Reference/nsIDragService">nsIDragService</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDragSession" title="ja/XPCOM_Interface_Reference/nsIDragSession">nsIDragSession</a></li>
+      </ul>
+     </li>
+     <li class="tercerary HTML" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="HTML">HTML</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIAccessibilityService" title="ja/XPCOM_Interface_Reference/nsIAccessibilityService">nsIAccessibilityService</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIAccessibleCoordinateType" title="ja/XPCOM_Interface_Reference/nsIAccessibleCoordinateType">nsIAccessibleCoordinateType</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIAccessibleDocument" title="ja/XPCOM_Interface_Reference/nsIAccessibleDocument">nsIAccessibleDocument</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIAccessibleEditableText" title="ja/XPCOM_Interface_Reference/nsIAccessibleEditableText">nsIAccessibleEditableText</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIAccessibleEvent" title="ja/XPCOM_Interface_Reference/nsIAccessibleEvent">nsIAccessibleEvent</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIAccessibleHyperLink" title="ja/XPCOM_Interface_Reference/nsIAccessibleHyperLink">nsIAccessibleHyperLink</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIAccessibleHyperText" title="ja/XPCOM_Interface_Reference/nsIAccessibleHyperText">nsIAccessibleHyperText</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/NsIAccessibleImage" title="ja/XPCOM_Interface_Reference/NsIAccessibleImage">nsIAccessibleImage</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIAccessibleProvider" title="ja/XPCOM_Interface_Reference/nsIAccessibleProvider">nsIAccessibleProvider </a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIAccessibleRetrieval" title="ja/XPCOM_Interface_Reference/nsIAccessibleRetrieval">nsIAccessibleRetrieval</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIAccessibleRole" title="ja/XPCOM_Interface_Reference/nsIAccessibleRole">nsIAccessibleRole</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIAccessibleScrollType" title="ja/XPCOM_Interface_Reference/nsIAccessibleScrollType">nsIAccessibleScrollType</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIAccessibleSelectable" title="ja/XPCOM_Interface_Reference/nsIAccessibleSelectable">nsIAccessibleSelectable</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIAccessibleStates" title="ja/XPCOM_Interface_Reference/nsIAccessibleStates">nsIAccessibleStates</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIAccessibleTable" title="ja/XPCOM_Interface_Reference/nsIAccessibleTable">nsIAccessibleTable</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIAccessibleText" title="ja/XPCOM_Interface_Reference/nsIAccessibleText">nsIAccessibleText</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIAccessibleTreeCache" title="ja/XPCOM_Interface_Reference/nsIAccessibleTreeCache">nsIAccessibleTreeCache</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIAccessibleValue" title="ja/XPCOM_Interface_Reference/nsIAccessibleValue">nsIAccessibleValue</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/NsIAccessNode" title="ja/XPCOM_Interface_Reference/NsIAccessNode">nsIAccessNode</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsISyncMessageSender" title="ja/XPCOM_Interface_Reference/nsISyncMessageSender">nsISyncMessageSender</a></li>
+      </ul>
+     </li>
+     <li class="tercerary Script" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="Script">Script</h3>
+      <ul>
+       <li><a>nsIScriptableUnescapeHTML</a></li>
+       <li><a>nsIScriptableUnicodeConverter</a></li>
+       <li><a>nsIScriptError</a></li>
+       <li><a>nsIScriptError2</a></li>
+      </ul>
+     </li>
+     <li class="tercerary StyleSheet" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="StyleSheet">StyleSheet</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIStyleSheetService" title="ja/XPCOM_Interface_Reference/nsIStyleSheetService">nsIStyleSheetService</a></li>
+      </ul>
+     </li>
+     <li class="tercerary URL" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="URL">URL</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIURI" title="ja/XPCOM_Interface_Reference/nsIURI">nsIURI</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIURL" title="ja/XPCOM_Interface_Reference/nsIURL">nsIURL</a></li>
+      </ul>
+     </li>
+     <li class="tercerary Util" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="Util">Util</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDOMSerializer" title="ja/XPCOM_Interface_Reference/nsIDOMSerializer">nsIDOMSerializer</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDOMXPathEvaluator" title="ja/XPCOM_Interface_Reference/nsIDOMXPathEvaluator">nsIDOMXPathEvaluator</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDOMXPathException" title="ja/XPCOM_Interface_Reference/nsIDOMXPathException">nsIDOMXPathException</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDOMXPathExpression" title="ja/XPCOM_Interface_Reference/nsIDOMXPathExpression">nsIDOMXPathExpression</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDOMXPathResult" title="ja/XPCOM_Interface_Reference/nsIDOMXPathResult">nsIDOMXPathResult</a></li>
+      </ul>
+     </li>
+     <li class="tercerary XSLT" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="XSLT">XSLT</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIXSLTException" title="ja/XPCOM_Interface_Reference/nsIXSLTException">nsIXSLTException</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIXSLTProcessor" title="ja/XPCOM_Interface_Reference/nsIXSLTProcessor">nsIXSLTProcessor</a></li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="secondary Download" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Download">Download</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIDownload" title="ja/XPCOM_Interface_Reference/nsIDownload">nsIDownload</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIDownloadManager" title="ja/XPCOM_Interface_Reference/nsIDownloadManager">nsIDownloadManager</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIDownloadProgressListener" title="ja/XPCOM_Interface_Reference/nsIDownloadProgressListener">nsIDownloadProgressListener</a></li>
+    </ul>
+   </li>
+   <li class="secondary Element" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Element_2">Element</h2>
+    <ul>
+     <li class="tercerary Internal" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="Internal">Internal</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/NsIWorker" title="ja/XPCOM_Interface_Reference/NsIWorker">nsIWorker</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/NsIWorkerGlobalScope" title="ja/XPCOM_Interface_Reference/NsIWorkerGlobalScope">nsIWorkerGlobalScope</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/NsIWorkerMessageEvent" title="ja/XPCOM_Interface_Reference/NsIWorkerMessageEvent">nsIWorkerMessageEvent</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/NsIWorkerMessagePort" title="ja/XPCOM_Interface_Reference/NsIWorkerMessagePort">nsIWorkerMessagePort</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/NsIWorkerScope" title="ja/XPCOM_Interface_Reference/NsIWorkerScope">nsIWorkerScope</a></li>
+      </ul>
+     </li>
+     <li class="tercerary Tree" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="Tree">Tree</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsITreeBoxObject" title="ja/XPCOM_Interface_Reference/nsITreeBoxObject">nsITreeBoxObject</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsITreeColumn" title="ja/XPCOM_Interface_Reference/nsITreeColumn">nsITreeColumn</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/NsITreeColumns" title="ja/XPCOM_Interface_Reference/NsITreeColumns">nsITreeColumns</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/NsITreeContentView" title="ja/XPCOM_Interface_Reference/NsITreeContentView">nsITreeContentView</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsITreeSelection" title="ja/XPCOM_Interface_Reference/nsITreeSelection">nsITreeSelection</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsITreeView" title="ja/XPCOM_Interface_Reference/nsITreeView">nsITreeView</a></li>
+      </ul>
+     </li>
+     <li class="tercerary Xform" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="Xform">Xform</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIXFormsModelElement" title="ja/XPCOM_Interface_Reference/nsIXFormsModelElement">nsIXFormsModelElement</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIXFormsNSInstanceElement" title="ja/XPCOM_Interface_Reference/nsIXFormsNSInstanceElement">nsIXFormsNSInstanceElement</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIXFormsNSModelElement" title="ja/XPCOM_Interface_Reference/nsIXFormsNSModelElement">nsIXFormsNSModelElement</a></li>
+      </ul>
+     </li>
+     <li class="tercerary XMLHttpRequest" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="XMLHttpRequest">XMLHttpRequest</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/NsIXMLHttpRequestEventTarget" title="ja/XPCOM_Interface_Reference/NsIXMLHttpRequestEventTarget">nsIXMLHttpRequestEventTarget</a></li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="secondary FavIcon" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="FavIcon">FavIcon</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIFaviconDataCallback" title="ja/XPCOM_Interface_Reference/nsIFaviconDataCallback">nsIFaviconDataCallback</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIFaviconService" title="ja/XPCOM_Interface_Reference/nsIFaviconService">nsIFaviconService</a></li>
+    </ul>
+   </li>
+   <li class="secondary Frame" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Frame">Frame</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIChromeFrameMessageManager" title="ja/XPCOM_Interface_Reference/nsIChromeFrameMessageManager">nsIChromeFrameMessageManager</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIFrameLoader" title="ja/XPCOM_Interface_Reference/nsIFrameLoader">nsIFrameLoader</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIFrameLoaderOwner" title="ja/XPCOM_Interface_Reference/nsIFrameLoaderOwner">nsIFrameLoaderOwner</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIFrameMessageListener" title="ja/XPCOM_Interface_Reference/nsIFrameMessageListener">nsIFrameMessageListener</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIFrameMessageManager" title="ja/XPCOM_Interface_Reference/nsIFrameMessageManager">nsIFrameMessageManager</a></li>
+    </ul>
+   </li>
+   <li class="secondary Interface" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Interface">Interface</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIJSXMLHttpRequest" title="ja/XPCOM_Interface_Reference/nsIJSXMLHttpRequest">nsIJSXMLHttpRequest</a></li>
+    </ul>
+   </li>
+   <li class="secondary Jetpack" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Jetpack">Jetpack</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIJetpack" title="ja/XPCOM_Interface_Reference/nsIJetpack">nsIJetpack</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIJetpackService" title="ja/XPCOM_Interface_Reference/nsIJetpackService">nsIJetpackService</a></li>
+    </ul>
+   </li>
+   <li class="secondary offlineStorage" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="offlineStorage">offlineStorage</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/NsIApplicationCache" title="ja/XPCOM_Interface_Reference/NsIApplicationCache">nsIApplicationCache</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/NsIApplicationCacheChannel" title="ja/XPCOM_Interface_Reference/NsIApplicationCacheChannel">nsIApplicationCacheChannel</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/NsIApplicationCacheContainer" title="ja/XPCOM_Interface_Reference/NsIApplicationCacheContainer">nsIApplicationCacheContainer</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/NsIApplicationCacheNamespace" title="ja/XPCOM_Interface_Reference/NsIApplicationCacheNamespace">nsIApplicationCacheNamespace</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/NsIApplicationCacheService" title="ja/XPCOM_Interface_Reference/NsIApplicationCacheService">nsIApplicationCacheService</a></li>
+    </ul>
+   </li>
+   <li class="secondary Places" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Places">Places</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIAnnotationObserver" title="ja/XPCOM_Interface_Reference/nsIAnnotationObserver">nsIAnnotationObserver</a></li>
+    </ul>
+   </li>
+   <li class="secondary RSS Feed" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="RSS_Feed">RSS Feed</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIFeed" title="ja/XPCOM_Interface_Reference/nsIFeed">nsIFeed</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIFeedContainer" title="ja/XPCOM_Interface_Reference/nsIFeedContainer">nsIFeedContainer</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIFeedElementBase" title="ja/XPCOM_Interface_Reference/nsIFeedElementBase">nsIFeedElementBase</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIFeedEntry" title="ja/XPCOM_Interface_Reference/nsIFeedEntry">nsIFeedEntry</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIFeedGenerator" title="ja/XPCOM_Interface_Reference/nsIFeedGenerator">nsIFeedGenerator</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIFeedPerson" title="ja/XPCOM_Interface_Reference/nsIFeedPerson">nsIFeedPerson</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIFeedProcessor" title="ja/XPCOM_Interface_Reference/nsIFeedProcessor">nsIFeedProcessor</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIFeedProgressListener" title="ja/XPCOM_Interface_Reference/nsIFeedProgressListener">nsIFeedProgressListener</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIFeedResult" title="ja/XPCOM_Interface_Reference/nsIFeedResult">nsIFeedResult</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIFeedResultListener" title="ja/XPCOM_Interface_Reference/nsIFeedResultListener">nsIFeedResultListener</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIFeedTextConstruct" title="ja/XPCOM_Interface_Reference/nsIFeedTextConstruct">nsIFeedTextConstruct</a></li>
+    </ul>
+   </li>
+   <li class="secondary script" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="script">script</h2>
+    <ul>
+     <li><a>mozIJSSubScriptLoader</a></li>
+    </ul>
+   </li>
+   <li class="secondary storage" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="storage">storage</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/mozIStorageVacuumParticipant" title="ja/XPCOM_Interface_Reference/mozIStorageVacuumParticipant">mozIStorageVacuumParticipant</a></li>
+    </ul>
+   </li>
+   <li class="secondary Util" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Util_2">Util</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIEffectiveTLDService" title="ja/XPCOM_Interface_Reference/nsIEffectiveTLDService">nsIEffectiveTLDService</a></li>
+    </ul>
+   </li>
+   <li class="secondary Worker" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Worker">Worker</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/NsIAbstractWorker" title="ja/XPCOM_Interface_Reference/NsIAbstractWorker">nsIAbstractWorker</a></li>
+    </ul>
+   </li>
+  </ul>
+ </div>
+ <div class="primary Data" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+  <h1 id="Data">Data</h1>
+  <ul>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsIArray" title="ja/XPCOM_Interface_Reference/nsIArray">nsIArray</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsICategoryManager" title="ja/XPCOM_Interface_Reference/nsICategoryManager">nsICategoryManager</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsICollection" title="ja/XPCOM_Interface_Reference/nsICollection">nsICollection</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsIDictionary" title="ja/XPCOM_Interface_Reference/nsIDictionary">nsIDictionary</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsIMutableArray" title="ja/XPCOM_Interface_Reference/nsIMutableArray">nsIMutableArray</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsISimpleEnumerator" title="ja/XPCOM_Interface_Reference/nsISimpleEnumerator">nsISimpleEnumerator</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsISupportsChar" title="ja/XPCOM_Interface_Reference/nsISupportsChar">nsISupportsChar</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsISupportsDouble" title="ja/XPCOM_Interface_Reference/nsISupportsDouble">nsISupportsDouble</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsISupportsFloat" title="ja/XPCOM_Interface_Reference/nsISupportsFloat">nsISupportsFloat</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsISupportsID" title="ja/XPCOM_Interface_Reference/nsISupportsID">nsISupportsID</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsISupportsInterfacePointer" title="ja/XPCOM_Interface_Reference/nsISupportsInterfacePointer">nsISupportsInterfacePointer</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsISupportsPRBool" title="ja/XPCOM_Interface_Reference/nsISupportsPRBool">nsISupportsPRBool</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsISupportsPrimitive" title="ja/XPCOM_Interface_Reference/nsISupportsPrimitive">nsISupportsPrimitive</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsISupportsPRInt16" title="ja/XPCOM_Interface_Reference/nsISupportsPRInt16">nsISupportsPRInt16</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsISupportsPRInt32" title="ja/XPCOM_Interface_Reference/nsISupportsPRInt32">nsISupportsPRInt32</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsISupportsPRInt64" title="ja/XPCOM_Interface_Reference/nsISupportsPRInt64">nsISupportsPRInt64</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsISupportsPriority" title="ja/XPCOM_Interface_Reference/nsISupportsPriority">nsISupportsPriority</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsISupportsPRTime" title="ja/XPCOM_Interface_Reference/nsISupportsPRTime">nsISupportsPRTime</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsISupportsPRUint16" title="ja/XPCOM_Interface_Reference/nsISupportsPRUint16">nsISupportsPRUint16</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsISupportsPRUint32" title="ja/XPCOM_Interface_Reference/nsISupportsPRUint32">nsISupportsPRUint32</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsISupportsPRUint64" title="ja/XPCOM_Interface_Reference/nsISupportsPRUint64">nsISupportsPRUint64</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsISupportsPRUint8" title="ja/XPCOM_Interface_Reference/nsISupportsPRUint8">nsISupportsPRUint8</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsISupportsString" title="ja/XPCOM_Interface_Reference/nsISupportsString">nsISupportsString</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsISupportsVoid" title="ja/XPCOM_Interface_Reference/nsISupportsVoid">nsISupportsVoid</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsISupportsWeakReference" title="ja/XPCOM_Interface_Reference/nsISupportsWeakReference">nsISupportsWeakReference</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/NsIVariant" title="ja/XPCOM_Interface_Reference/NsIVariant">nsIVariant</a></li>
+  </ul>
+ </div>
+ <div class="primary ignore" style="background-color: #F6F6F1; color: #DDD; border: 1px solid #DDD;">
+  <h1 id="DO_NOT_USE">DO NOT USE</h1>
+  <ul>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsIEnumerator" title="ja/XPCOM_Interface_Reference/nsIEnumerator">nsIEnumerator</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsIInProcessContentFrameMessageManager" title="ja/XPCOM_Interface_Reference/nsIInProcessContentFrameMessageManager">nsIInProcessContentFrameMessageManager</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsIScriptableIO" title="ja/XPCOM_Interface_Reference/nsIScriptableIO">nsIScriptableIO</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsIXPCScriptable" title="ja/XPCOM_Interface_Reference/nsIXPCScriptable">nsIXPCScriptable</a></li>
+  </ul>
+ </div>
+ <div class="primary ignore" style="background-color: #F6F6F1; color: #DDD; border: 1px solid #DDD;">
+  <h1 id="Future">Future</h1>
+  <ul>
+   <li><a href="/ja/XPCOM_Interface_Reference/NsIXMLHttpRequestUpload" title="ja/XPCOM_Interface_Reference/NsIXMLHttpRequestUpload">nsIXMLHttpRequestUpload</a></li>
+  </ul>
+ </div>
+ <div class="primary ignore" style="background-color: #F6F6F1; color: #DDD; border: 1px solid #DDD;">
+  <h1 id="Obsolete">Obsolete</h1>
+  <ul>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsIXmlRpcClient" title="ja/XPCOM_Interface_Reference/nsIXmlRpcClient">nsIXmlRpcClient</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsIXmlRpcFault" title="ja/XPCOM_Interface_Reference/nsIXmlRpcFault">nsIXmlRpcFault</a></li>
+  </ul>
+ </div>
+ <div class="primary Security" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+  <h1 id="Security">Security</h1>
+  <ul>
+   <li class="secondary Auth" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Auth">Auth</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIAuthModule" title="ja/XPCOM_Interface_Reference/nsIAuthModule">nsIAuthModule</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIAuthPrompt" title="ja/XPCOM_Interface_Reference/nsIAuthPrompt">nsIAuthPrompt</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIAuthPromptProvider" title="ja/XPCOM_Interface_Reference/nsIAuthPromptProvider">nsIAuthPromptProvider</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIAuthPromptWrapper" title="ja/XPCOM_Interface_Reference/nsIAuthPromptWrapper">nsIAuthPromptWrapper</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIAsyncVerifyRedirectCallback" title="ja/XPCOM_Interface_Reference/nsIAsyncVerifyRedirectCallback">nsIAsyncVerifyRedirectCallback</a></li>
+    </ul>
+   </li>
+   <li class="secondary Content" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Content">Content</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIContentPolicy" title="ja/XPCOM_Interface_Reference/nsIContentPolicy">nsIContentPolicy</a></li>
+    </ul>
+   </li>
+   <li class="secondary Credentials" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Credentials">Credentials</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsILoginInfo" title="ja/XPCOM_Interface_Reference/nsILoginInfo">nsILoginInfo</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsILoginManager" title="ja/XPCOM_Interface_Reference/nsILoginManager">nsILoginManager</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsILoginManager/Using_nsILoginManager" title="ja/XPCOM_Interface_Reference/nsILoginManager/Using_nsILoginManager">Using nsILoginManager</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsILoginManagerStorage" title="ja/XPCOM_Interface_Reference/nsILoginManagerStorage">nsILoginManagerStorage</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/NsILoginMetaInfo" title="ja/XPCOM_Interface_Reference/NsILoginMetaInfo">nsILoginMetaInfo</a></li>
+    </ul>
+   </li>
+   <li class="secondary History" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="History">History</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIGlobalHistory2" title="ja/XPCOM_Interface_Reference/nsIGlobalHistory2">nsIGlobalHistory2</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIGlobalHistory3" title="ja/XPCOM_Interface_Reference/nsIGlobalHistory3">nsIGlobalHistory3</a></li>
+    </ul>
+   </li>
+   <li class="secondary SSL" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="SSL">SSL</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIBadCertListener2" title="ja/XPCOM_Interface_Reference/nsIBadCertListener2">nsIBadCertListener2</a></li>
+    </ul>
+   </li>
+  </ul>
+ </div>
+ <div class="primary System" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+  <h1 id="System">System</h1>
+  <ul>
+   <li class="secondary Action" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Action">Action</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsICancelable" title="ja/XPCOM_Interface_Reference/nsICancelable">nsICancelable</a></li>
+    </ul>
+   </li>
+   <li class="secondary Application" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Application">Application</h2>
+    <ul>
+     <li class="tercerary Application" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="Application_2">Application</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIApplicationUpdateService" title="ja/XPCOM_Interface_Reference/nsIApplicationUpdateService">nsIApplicationUpdateService</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIAppShell" title="ja/XPCOM_Interface_Reference/nsIAppShell">nsIAppShell</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIAppShellService" title="ja/XPCOM_Interface_Reference/nsIAppShellService">nsIAppShellService</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIAppStartup" title="ja/XPCOM_Interface_Reference/nsIAppStartup">nsIAppStartup</a></li>
+      </ul>
+     </li>
+     <li class="tercerary XUL" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="XUL">XUL</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIXULAppInfo" title="ja/XPCOM_Interface_Reference/nsIXULAppInfo">nsIXULAppInfo</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIXULRuntime" title="ja/XPCOM_Interface_Reference/nsIXULRuntime">nsIXULRuntime</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIXULTemplateBuilder" title="ja/XPCOM_Interface_Reference/nsIXULTemplateBuilder">nsIXULTemplateBuilder</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIXULTemplateQueryProcessor" title="ja/XPCOM_Interface_Reference/nsIXULTemplateQueryProcessor">nsIXULTemplateQueryProcessor</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIXULTemplateResult" title="ja/XPCOM_Interface_Reference/nsIXULTemplateResult">nsIXULTemplateResult</a></li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="secondary Bookmark" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Bookmark">Bookmark</h2>
+    <ul>
+     <li class="tercerary LiveMark" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="LiveMark">LiveMark</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsILivemarkService" title="ja/XPCOM_Interface_Reference/nsILivemarkService">nsILivemarkService</a></li>
+      </ul>
+     </li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsINavBookmarkObserver" title="ja/XPCOM_Interface_Reference/nsINavBookmarkObserver">nsINavBookmarkObserver</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsINavBookmarksService" title="ja/XPCOM_Interface_Reference/nsINavBookmarksService">nsINavBookmarksService</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsINavHistoryService" title="ja/XPCOM_Interface_Reference/nsINavHistoryService">nsINavHistoryService</a></li>
+    </ul>
+   </li>
+   <li class="secondary Browser" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Browser_2">Browser</h2>
+    <ul>
+     <li class="tercerary DOM" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="DOM_2">DOM</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIWebBrowser" title="ja/XPCOM_Interface_Reference/nsIWebBrowser">nsIWebBrowser</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIWebBrowserPersist" title="ja/XPCOM_Interface_Reference/nsIWebBrowserPersist">nsIWebBrowserPersist</a></li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="secondary Cache" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Cache">Cache</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsICache" title="ja/XPCOM_Interface_Reference/nsICache">nsICache</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsICacheDeviceInfo" title="ja/XPCOM_Interface_Reference/nsICacheDeviceInfo">nsICacheDeviceInfo</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsICacheEntryDescriptor" title="ja/XPCOM_Interface_Reference/nsICacheEntryDescriptor">nsICacheEntryDescriptor</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsICacheEntryInfo" title="ja/XPCOM_Interface_Reference/nsICacheEntryInfo">nsICacheEntryInfo</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsICacheListener" title="ja/XPCOM_Interface_Reference/nsICacheListener">nsICacheListener</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsICacheMetaDataVisitor" title="ja/XPCOM_Interface_Reference/nsICacheMetaDataVisitor">nsICacheMetaDataVisitor</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsICacheService" title="ja/XPCOM_Interface_Reference/nsICacheService">nsICacheService</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsICacheSession" title="ja/XPCOM_Interface_Reference/nsICacheSession">nsICacheSession</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsICacheVisitor" title="ja/XPCOM_Interface_Reference/nsICacheVisitor">nsICacheVisitor</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsICachingChannel" title="ja/XPCOM_Interface_Reference/nsICachingChannel">nsICachingChannel</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsISelectionImageService" title="ja/XPCOM_Interface_Reference/nsISelectionImageService">nsISelectionImageService</a></li>
+    </ul>
+   </li>
+   <li class="secondary Chrome" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Chrome">Chrome</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsISearchEngine" title="ja/XPCOM_Interface_Reference/nsISearchEngine">nsISearchEngine</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsISearchSubmission" title="ja/XPCOM_Interface_Reference/nsISearchSubmission">nsISearchSubmission</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIWebBrowserChrome" title="ja/XPCOM_Interface_Reference/nsIWebBrowserChrome">nsIWebBrowserChrome</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIWindowCreator" title="ja/XPCOM_Interface_Reference/nsIWindowCreator">nsIWindowCreator</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIWindowMediator" title="ja/XPCOM_Interface_Reference/nsIWindowMediator">nsIWindowMediator</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIWindowWatcher" title="ja/XPCOM_Interface_Reference/nsIWindowWatcher">nsIWindowWatcher</a></li>
+    </ul>
+   </li>
+   <li class="secondary Clipboard" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Clipboard">Clipboard</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIClipboard" title="ja/XPCOM_Interface_Reference/nsIClipboard">nsIClipboard</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIClipboardCommands" title="ja/XPCOM_Interface_Reference/nsIClipboardCommands">nsIClipboardCommands</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIClipboardDragDropHookList" title="ja/XPCOM_Interface_Reference/nsIClipboardDragDropHookList">nsIClipboardDragDropHookList</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIClipboardDragDropHooks" title="ja/XPCOM_Interface_Reference/nsIClipboardDragDropHooks">nsIClipboardDragDropHooks</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIClipboardHelper" title="ja/XPCOM_Interface_Reference/nsIClipboardHelper">nsIClipboardHelper</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIClipboardOwner" title="ja/XPCOM_Interface_Reference/nsIClipboardOwner">nsIClipboardOwner</a></li>
+    </ul>
+   </li>
+   <li class="secondary Core" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Core">Core</h2>
+    <ul>
+     <li class="tercerary Action" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="Action_2">Action</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsITransactionManager" title="ja/XPCOM_Interface_Reference/nsITransactionManager">nsITransactionManager</a></li>
+      </ul>
+     </li>
+     <li class="tercerary Process" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h2 id="Process">Process</h2>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIProcess" title="ja/XPCOM_Interface_Reference/nsIProcess">nsIProcess</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/NsIProcess2" title="ja/XPCOM_Interface_Reference/NsIProcess2">nsIProcess2</a></li>
+      </ul>
+     </li>
+     <li class="tercerary Thread" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="Thread">Thread</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIThread" title="ja/XPCOM_Interface_Reference/nsIThread">nsIThread</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIThreadEventFilter" title="ja/XPCOM_Interface_Reference/nsIThreadEventFilter">nsIThreadEventFilter</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIThreadInternal" title="ja/XPCOM_Interface_Reference/nsIThreadInternal">nsIThreadInternal</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIThreadManager" title="ja/XPCOM_Interface_Reference/nsIThreadManager">nsIThreadManager</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIThreadObserver" title="ja/XPCOM_Interface_Reference/nsIThreadObserver">nsIThreadObserver</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIThreadPool" title="ja/XPCOM_Interface_Reference/nsIThreadPool">nsIThreadPool</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/NsIThreadPoolListener" title="ja/XPCOM_Interface_Reference/NsIThreadPoolListener">nsIThreadPoolListener</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIToolkit" title="ja/XPCOM_Interface_Reference/nsIToolkit">nsIToolkit</a></li>
+      </ul>
+     </li>
+     <li class="tercerary Util" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="Util_3">Util</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIVersionComparator" title="ja/XPCOM_Interface_Reference/nsIVersionComparator">nsIVersionComparator</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIWeakReference" title="ja/XPCOM_Interface_Reference/nsIWeakReference">nsIWeakReference</a></li>
+      </ul>
+     </li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIFactory" title="ja/XPCOM_Interface_Reference/nsIFactory">nsIFactory</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIInterfaceRequestor" title="ja/XPCOM_Interface_Reference/nsIInterfaceRequestor">nsIInterfaceRequestor</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIJSCID" title="ja/XPCOM_Interface_Reference/nsIJSCID">nsIJSCID</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIJSID" title="ja/XPCOM_Interface_Reference/nsIJSID">nsIJSID</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIJSIID" title="ja/XPCOM_Interface_Reference/nsIJSIID">nsIJSIID</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIModule" title="ja/XPCOM_Interface_Reference/nsIModule">nsIModule</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIObserver" title="ja/XPCOM_Interface_Reference/nsIObserver">nsIObserver</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIObserverService" title="ja/XPCOM_Interface_Reference/nsIObserverService">nsIObserverService</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIProperties" title="ja/XPCOM_Interface_Reference/nsIProperties">nsIProperties</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIProperty" title="ja/XPCOM_Interface_Reference/nsIProperty">nsIProperty</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/NsIPropertyBag" title="ja/XPCOM_Interface_Reference/NsIPropertyBag">nsIPropertyBag</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIPropertyBag2" title="ja/XPCOM_Interface_Reference/nsIPropertyBag2">nsIPropertyBag2</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIPropertyElement" title="ja/XPCOM_Interface_Reference/nsIPropertyElement">nsIPropertyElement</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIServerSocket" title="ja/XPCOM_Interface_Reference/nsIServerSocket">nsIServerSocket</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIServerSocketListener" title="ja/XPCOM_Interface_Reference/nsIServerSocketListener">nsIServerSocketListener</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIServiceManager" title="ja/XPCOM_Interface_Reference/nsIServiceManager">nsIServiceManager</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsISocketProvider" title="ja/XPCOM_Interface_Reference/nsISocketProvider">nsISocketProvider</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsISocketProviderService" title="ja/XPCOM_Interface_Reference/nsISocketProviderService">nsISocketProviderService</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsISocketTransport" title="ja/XPCOM_Interface_Reference/nsISocketTransport">nsISocketTransport</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsISocketTransportService" title="ja/XPCOM_Interface_Reference/nsISocketTransportService">nsISocketTransportService</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsISupports" title="ja/XPCOM_Interface_Reference/nsISupports">nsISupports</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIUUIDGenerator" title="ja/XPCOM_Interface_Reference/nsIUUIDGenerator">nsIUUIDGenerator</a></li>
+    </ul>
+   </li>
+   <li class="secondary Debug" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Debug">Debug</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIStackFrame" title="ja/XPCOM_Interface_Reference/nsIStackFrame">nsIStackFrame</a></li>
+    </ul>
+   </li>
+   <li class="secondary Device" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Device_2">Device</h2>
+    <ul>
+     <li class="tercerary Display" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="Display">Display</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIScreen" title="ja/XPCOM_Interface_Reference/nsIScreen">nsIScreen</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIScreenManager" title="ja/XPCOM_Interface_Reference/nsIScreenManager">nsIScreenManager</a></li>
+      </ul>
+     </li>
+     <li class="tercerary Geolocation" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="Geolocation">Geolocation</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/NsIGeolocationProvider" title="ja/XPCOM_Interface_Reference/NsIGeolocationProvider">nsIGeolocationProvider</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/NsIGeolocationUpdate" title="ja/XPCOM_Interface_Reference/NsIGeolocationUpdate">nsIGeolocationUpdate</a></li>
+      </ul>
+     </li>
+     <li class="tercerary orientation" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="orientation">orientation</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDeviceMotionData" title="ja/XPCOM_Interface_Reference/nsIAcceleration">nsIAcceleration</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDeviceMotionListener" title="ja/XPCOM_Interface_Reference/nsIAccelerationListener">nsIAccelerationListener</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDeviceMotion" title="ja/XPCOM_Interface_Reference/nsIAccelerometer">nsIAccelerometer</a></li>
+      </ul>
+     </li>
+     <li class="tercerary Misc" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h2 id="Misc">Misc</h2>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsISound" title="ja/XPCOM_Interface_Reference/nsISound">nsISound</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIWifiMonitor" title="ja/XPCOM_Interface_Reference/nsIWifiMonitor">nsIWifiMonitor</a></li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="secondary Document" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Document_2">Document</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIWebNavigation" title="ja/XPCOM_Interface_Reference/nsIWebNavigation">nsIWebNavigation</a></li>
+    </ul>
+   </li>
+   <li class="secondary Environment" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Environment">Environment</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIEnvironment" title="ja/XPCOM_Interface_Reference/nsIEnvironment">nsIEnvironment</a></li>
+    </ul>
+   </li>
+   <li class="secondary Event" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Event_2">Event</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIEventListenerInfo" title="ja/XPCOM_Interface_Reference/nsIEventListenerInfo">nsIEventListenerInfo</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIEventListenerService" title="ja/XPCOM_Interface_Reference/nsIEventListenerService">nsIEventListenerService</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIEventTarget" title="ja/XPCOM_Interface_Reference/nsIEventTarget">nsIEventTarget</a></li>
+    </ul>
+   </li>
+   <li class="secondary Exception" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Exception">Exception</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIException" title="ja/XPCOM_Interface_Reference/nsIException">nsIException</a></li>
+    </ul>
+   </li>
+   <li class="secondary Extention" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Extention">Extention</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIExtensionManager" title="ja/XPCOM_Interface_Reference/nsIExtensionManager">nsIExtensionManager</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIInstallLocation" title="ja/XPCOM_Interface_Reference/nsIInstallLocation">nsIInstallLocation</a></li>
+    </ul>
+   </li>
+   <li class="secondary External" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="External">External</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIExternalProtocolService" title="ja/XPCOM_Interface_Reference/nsIExternalProtocolService">nsIExternalProtocolService</a></li>
+    </ul>
+   </li>
+   <li class="secondary Frame" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Frame_2">Frame</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIContentFrameMessageManager" title="ja/XPCOM_Interface_Reference/nsIContentFrameMessageManager">nsIContentFrameMessageManager</a></li>
+    </ul>
+   </li>
+   <li class="secondary History" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="History_2">History</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsISHEntry" title="ja/XPCOM_Interface_Reference/nsISHEntry">nsISHEntry</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsISHistory" title="ja/XPCOM_Interface_Reference/nsISHistory">nsISHistory</a></li>
+    </ul>
+   </li>
+   <li class="secondary Idle" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Idle">Idle</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIIdleService" title="ja/XPCOM_Interface_Reference/nsIIdleService">nsIIdleService</a></li>
+    </ul>
+   </li>
+   <li class="secondary Internal" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Internal_2">Internal</h2>
+    <ul>
+     <li class="tercerary Command" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="Command">Command</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsICommandLine" title="ja/XPCOM_Interface_Reference/nsICommandLine">nsICommandLine</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsICommandLineHandler" title="ja/XPCOM_Interface_Reference/nsICommandLineHandler">nsICommandLineHandler</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsICommandLineRunner" title="ja/XPCOM_Interface_Reference/nsICommandLineRunner">nsICommandLineRunner</a></li>
+      </ul>
+     </li>
+     <li class="tercerary Component" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="Component">Component</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIComponentManager" title="ja/XPCOM_Interface_Reference/nsIComponentManager">nsIComponentManager</a></li>
+      </ul>
+     </li>
+     <li class="tercerary Preferences" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="Preferences">Preferences</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIContentPrefObserver" title="ja/XPCOM_Interface_Reference/nsIContentPrefObserver">nsIContentPrefObserver</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIContentPrefService" title="ja/XPCOM_Interface_Reference/nsIContentPrefService">nsIContentPrefService</a></li>
+      </ul>
+     </li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIComponentRegistrar" title="ja/XPCOM_Interface_Reference/nsIComponentRegistrar">nsIComponentRegistrar</a></li>
+    </ul>
+   </li>
+   <li class="secondary Internationalization" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Internationalization">Internationalization</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIBidiKeyboard" title="ja/XPCOM_Interface_Reference/nsIBidiKeyboard">nsIBidiKeyboard</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsILocale" title="ja/XPCOM_Interface_Reference/nsILocale">nsILocale</a></li>
+    </ul>
+   </li>
+   <li class="secondary IO" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="IO">IO</h2>
+    <ul>
+     <li class="tercerary FileSystem" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="FileSystem">FileSystem</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDirectoryEnumerator" title="ja/XPCOM_Interface_Reference/nsIDirectoryEnumerator">nsIDirectoryEnumerator</a>li&gt;</li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDirectoryIterator" title="ja/XPCOM_Interface_Reference/nsIDirectoryIterator">nsIDirectoryIterator</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDirectoryService" title="ja/XPCOM_Interface_Reference/nsIDirectoryService">nsIDirectoryService</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDirectoryServiceProvider" title="ja/XPCOM_Interface_Reference/nsIDirectoryServiceProvider">nsIDirectoryServiceProvider</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDirectoryServiceProvider2" title="ja/XPCOM_Interface_Reference/nsIDirectoryServiceProvider2">nsIDirectoryServiceProvider2</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDirIndex" title="ja/XPCOM_Interface_Reference/nsIDirIndex">nsIDirIndex</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDirIndexListener" title="ja/XPCOM_Interface_Reference/nsIDirIndexListener">nsIDirIndexListener</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIDirIndexParser" title="ja/XPCOM_Interface_Reference/nsIDirIndexParser">nsIDirIndexParser</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIFile" title="ja/XPCOM_Interface_Reference/nsIFile">nsIFile</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsILocalFile" title="ja/XPCOM_Interface_Reference/nsILocalFile">nsILocalFile</a></li>
+      </ul>
+     </li>
+     <li class="tercerary Stream" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="Stream">Stream</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIAsyncInputStream" title="ja/XPCOM_Interface_Reference/nsIAsyncInputStream">nsIAsyncInputStream</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIAsyncOutputStream" title="ja/XPCOM_Interface_Reference/nsIAsyncOutputStream">nsIAsyncOutputStream</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIAsyncStreamCopier" title="ja/XPCOM_Interface_Reference/nsIAsyncStreamCopier">nsIAsyncStreamCopier</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIBinaryInputStream" title="ja/XPCOM_Interface_Reference/nsIBinaryInputStream">nsIBinaryInputStream</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIBinaryOutputStream" title="ja/XPCOM_Interface_Reference/nsIBinaryOutputStream">nsIBinaryOutputStream</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIContentSniffer" title="ja/XPCOM_Interface_Reference/nsIContentSniffer">nsIContentSniffer</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIConverterInputStream" title="ja/XPCOM_Interface_Reference/nsIConverterInputStream">nsIConverterInputStream</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIFileInputStream" title="ja/XPCOM_Interface_Reference/nsIFileInputStream">nsIFileInputStream</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIFileOutputStream" title="ja/XPCOM_Interface_Reference/nsIFileOutputStream">nsIFileOutputStream</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIInputStream" title="ja/XPCOM_Interface_Reference/nsIInputStream">nsIInputStream</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIInputStreamCallback" title="ja/XPCOM_Interface_Reference/nsIInputStreamCallback">nsIInputStreamCallback</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIOutputStream" title="ja/XPCOM_Interface_Reference/nsIOutputStream">nsIOutputStream</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIOutputStreamCallback" title="ja/XPCOM_Interface_Reference/nsIOutputStreamCallback">nsIOutputStreamCallback</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIScriptableInputStream" title="ja/XPCOM_Interface_Reference/nsIScriptableInputStream">nsIScriptableInputStream</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/NsIStreamListener" title="ja/XPCOM_Interface_Reference/NsIStreamListener">nsIStreamListener</a></li>
+      </ul>
+     </li>
+     <li class="tercerary URL" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="URL_2">URL</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIIOService" title="ja/XPCOM_Interface_Reference/nsIIOService">nsIIOService</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIStandardURL" title="ja/XPCOM_Interface_Reference/nsIStandardURL">nsIStandardURL</a></li>
+      </ul>
+     </li>
+     <li class="tercerary User" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="User">User</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIPrompt" title="ja/XPCOM_Interface_Reference/nsIPrompt">nsIPrompt</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIPromptService" title="ja/XPCOM_Interface_Reference/nsIPromptService">nsIPromptService</a></li>
+      </ul>
+     </li>
+     <li class="tercerary Zipfile" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="Zipfile">Zipfile</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIZipEntry" title="ja/XPCOM_Interface_Reference/nsIZipEntry">nsIZipEntry</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIZipReader" title="ja/XPCOM_Interface_Reference/nsIZipReader">nsIZipReader</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIZipReaderCache" title="ja/XPCOM_Interface_Reference/nsIZipReaderCache">nsIZipReaderCache</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIZipWriter" title="ja/XPCOM_Interface_Reference/nsIZipWriter">nsIZipWriter</a></li>
+      </ul>
+     </li>
+     <li class="tercerary File" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="File">File</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIFilePicker" title="ja/XPCOM_Interface_Reference/nsIFilePicker">nsIFilePicker</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIFileProtocolHandler" title="ja/XPCOM_Interface_Reference/nsIFileProtocolHandler">nsIFileProtocolHandler</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIFileSpec" title="ja/XPCOM_Interface_Reference/nsIFileSpec">nsIFileSpec</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIFileStreams" title="ja/XPCOM_Interface_Reference/nsIFileStreams">nsIFileStreams</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIFileUtilities" title="ja/XPCOM_Interface_Reference/nsIFileUtilities">nsIFileUtilities</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIFileView" title="ja/XPCOM_Interface_Reference/nsIFileView">nsIFileView</a></li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="secondary Memory" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Memory">Memory</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIMemory" title="ja/XPCOM_Interface_Reference/nsIMemory">nsIMemory</a></li>
+    </ul>
+   </li>
+   <li class="secondary Network" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Network">Network</h2>
+    <ul>
+     <li class="tercerary Channel" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="Channel">Channel</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIChannel" title="ja/XPCOM_Interface_Reference/nsIChannel">nsIChannel</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIChannelEventSink" title="ja/XPCOM_Interface_Reference/nsIChannelEventSink">nsIChannelEventSink</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/NsIRequest" title="ja/XPCOM_Interface_Reference/NsIRequest">nsIRequest</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/NsIRequestObserver" title="ja/XPCOM_Interface_Reference/NsIRequestObserver">nsIRequestObserver</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIResumableChannel" title="ja/XPCOM_Interface_Reference/nsIResumableChannel">nsIResumableChannel</a></li>
+      </ul>
+     </li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIDNSService" title="ja/XPCOM_Interface_Reference/nsIDNSService">nsIDNSService</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIFTPChannel" title="ja/XPCOM_Interface_Reference/nsIFTPChannel">nsIFTPChannel</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIFTPEventSink" title="ja/XPCOM_Interface_Reference/nsIFTPEventSink">nsIFTPEventSink</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIHttpChannel" title="ja/XPCOM_Interface_Reference/nsIHttpChannel">nsIHttpChannel</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIHttpChannelInternal" title="ja/XPCOM_Interface_Reference/nsIHttpChannelInternal">nsIHttpChannelInternal</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIHttpHeaderVisitor" title="ja/XPCOM_Interface_Reference/nsIHttpHeaderVisitor">nsIHttpHeaderVisitor</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIIDNService" title="ja/XPCOM_Interface_Reference/nsIIDNService">nsIIDNService</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIProtocolHandler" title="ja/XPCOM_Interface_Reference/nsIProtocolHandler">nsIProtocolHandler</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIProtocolProxyCallback" title="ja/XPCOM_Interface_Reference/nsIProtocolProxyCallback">nsIProtocolProxyCallback</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIProtocolProxyFilter" title="ja/XPCOM_Interface_Reference/nsIProtocolProxyFilter">nsIProtocolProxyFilter</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIProtocolProxyService" title="ja/XPCOM_Interface_Reference/nsIProtocolProxyService">nsIProtocolProxyService</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIProxyInfo" title="ja/XPCOM_Interface_Reference/nsIProxyInfo">nsIProxyInfo</a></li>
+    </ul>
+   </li>
+   <li class="secondary Preferences" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Preferences_2">Preferences</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIINIParser" title="ja/XPCOM_Interface_Reference/nsIINIParser">nsIINIParser</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIINIParserFactory" title="ja/XPCOM_Interface_Reference/nsIINIParserFactory">nsIINIParserFactory</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIPrefBranch" title="ja/XPCOM_Interface_Reference/nsIPrefBranch">nsIPrefBranch</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIPrefBranch2" title="ja/XPCOM_Interface_Reference/nsIPrefBranch2">nsIPrefBranch2</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIPrefLocalizedString" title="ja/XPCOM_Interface_Reference/nsIPrefLocalizedString">nsIPrefLocalizedString</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIPrefService" title="ja/XPCOM_Interface_Reference/nsIPrefService">nsIPrefService</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIStringBundle" title="ja/XPCOM_Interface_Reference/nsIStringBundle">nsIStringBundle</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIStringBundleService" title="ja/XPCOM_Interface_Reference/nsIStringBundleService">nsIStringBundleService</a></li>
+    </ul>
+   </li>
+   <li class="secondary Security" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Security_2">Security</h2>
+    <ul>
+     <li class="tercerary Cookies" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="Cookies">Cookies</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsICookie" title="ja/XPCOM_Interface_Reference/nsICookie">nsICookie</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsICookie2" title="ja/XPCOM_Interface_Reference/nsICookie2">nsICookie2</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsICookieAcceptDialog" title="ja/XPCOM_Interface_Reference/nsICookieAcceptDialog">nsICookieAcceptDialog</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsICookieConsent" title="ja/XPCOM_Interface_Reference/nsICookieConsent">nsICookieConsent</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsICookieManager" title="ja/XPCOM_Interface_Reference/nsICookieManager">nsICookieManager</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsICookieManager2" title="ja/XPCOM_Interface_Reference/nsICookieManager2">nsICookieManager2</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsICookiePermission" title="ja/XPCOM_Interface_Reference/nsICookiePermission">nsICookiePermission</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsICookiePromptService" title="ja/XPCOM_Interface_Reference/nsICookiePromptService">nsICookiePromptService</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsICookieService" title="ja/XPCOM_Interface_Reference/nsICookieService">nsICookieService</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsICookieStorage" title="ja/XPCOM_Interface_Reference/nsICookieStorage">nsICookieStorage</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsISessionStore" title="ja/XPCOM_Interface_Reference/nsISessionStore">nsISessionStore</a></li>
+      </ul>
+     </li>
+     <li class="tercerary Crypto" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="Crypto">Crypto</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsICryptoHash" title="ja/XPCOM_Interface_Reference/nsICryptoHash">nsICryptoHash</a></li>
+      </ul>
+     </li>
+     <li class="tercerary Filter" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="Filter">Filter</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIParentalControlsService" title="ja/XPCOM_Interface_Reference/nsIParentalControlsService">nsIParentalControlsService</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIPermission" title="ja/XPCOM_Interface_Reference/nsIPermission">nsIPermission</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIPermissionManager" title="ja/XPCOM_Interface_Reference/nsIPermissionManager">nsIPermissionManager</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsISecurityCheckedComponent" title="ja/XPCOM_Interface_Reference/nsISecurityCheckedComponent">nsISecurityCheckedComponent</a></li>
+      </ul>
+     </li>
+     <li class="tercerary SSL" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="SSL_2">SSL</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsISSLErrorListener" title="ja/XPCOM_Interface_Reference/nsISSLErrorListener">nsISSLErrorListener</a></li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="secondary Stream" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Stream_2">Stream</h2>
+    <ul>
+     <li class="tercerary Stream" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="Stream_3">Stream</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIPipe" title="ja/XPCOM_Interface_Reference/nsIPipe">nsIPipe</a></li>
+      </ul>
+     </li>
+     <li><a href="/ja/XPCOM_Interface_Reference/NsITraceableChannel" title="ja/XPCOM_Interface_Reference/NsITraceableChannel">nsITraceableChannel</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsITransport" title="ja/XPCOM_Interface_Reference/nsITransport">nsITransport</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsITransportEventSink" title="ja/XPCOM_Interface_Reference/nsITransportEventSink">nsITransportEventSink</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/NsITransportSecurityInfo" title="ja/XPCOM_Interface_Reference/NsITransportSecurityInfo">nsITransportSecurityInfo</a></li>
+    </ul>
+   </li>
+   <li class="secondary Timer" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Timer">Timer</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsITimer" title="ja/XPCOM_Interface_Reference/nsITimer">nsITimer</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsITimerCallback" title="ja/XPCOM_Interface_Reference/nsITimerCallback">nsITimerCallback</a></li>
+    </ul>
+   </li>
+   <li class="secondary UI" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="UI">UI</h2>
+    <ul>
+     <li class="tercerary Windows" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+      <h3 id="Windows">Windows</h3>
+      <ul>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsITaskbarPreview" title="ja/XPCOM_Interface_Reference/nsITaskbarPreview">nsITaskbarPreview</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsITaskbarPreviewButton" title="ja/XPCOM_Interface_Reference/nsITaskbarPreviewButton">nsITaskbarPreviewButton</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsITaskbarPreviewController" title="ja/XPCOM_Interface_Reference/nsITaskbarPreviewController">nsITaskbarPreviewController</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsITaskbarProgress" title="ja/XPCOM_Interface_Reference/nsITaskbarProgress">nsITaskbarProgress</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsITaskbarTabPreview" title="ja/XPCOM_Interface_Reference/nsITaskbarTabPreview">nsITaskbarTabPreview</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsITaskbarWindowPreview" title="ja/XPCOM_Interface_Reference/nsITaskbarWindowPreview">nsITaskbarWindowPreview</a></li>
+       <li><a href="/ja/XPCOM_Interface_Reference/nsIWinTaskbar" title="ja/XPCOM_Interface_Reference/nsIWinTaskbar">nsIWinTaskbar</a></li>
+      </ul>
+     </li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIAlertsService" title="ja/XPCOM_Interface_Reference/nsIAlertsService">nsIAlertsService</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIWebProgress" title="ja/XPCOM_Interface_Reference/nsIWebProgress">nsIWebProgress</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIWebProgressListener" title="ja/XPCOM_Interface_Reference/nsIWebProgressListener">nsIWebProgressListener</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/NsIWebProgressListener2" title="ja/XPCOM_Interface_Reference/NsIWebProgressListener2">nsIWebProgressListener2</a></li>
+    </ul>
+   </li>
+   <li class="secondary Update" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Update">Update</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIUpdate" title="ja/XPCOM_Interface_Reference/nsIUpdate">nsIUpdate</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIUpdateChecker" title="ja/XPCOM_Interface_Reference/nsIUpdateChecker">nsIUpdateChecker</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIUpdateCheckListener" title="ja/XPCOM_Interface_Reference/nsIUpdateCheckListener">nsIUpdateCheckListener</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIUpdateItem" title="ja/XPCOM_Interface_Reference/nsIUpdateItem">nsIUpdateItem</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIUpdateManager" title="ja/XPCOM_Interface_Reference/nsIUpdateManager">nsIUpdateManager</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIUpdatePatch" title="ja/XPCOM_Interface_Reference/nsIUpdatePatch">nsIUpdatePatch</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIUpdatePrompt" title="ja/XPCOM_Interface_Reference/nsIUpdatePrompt">nsIUpdatePrompt</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIUpdateTimerManager" title="ja/XPCOM_Interface_Reference/nsIUpdateTimerManager">nsIUpdateTimerManager</a></li>
+    </ul>
+   </li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsIProgrammingLanguage" title="ja/XPCOM_Interface_Reference/nsIProgrammingLanguage">nsIProgrammingLanguage</a></li>
+  </ul>
+ </div>
+ <div class="primary Thunderbird" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+  <h1 id="Thunderbird">Thunderbird</h1>
+  <ul>
+   <li class="secondary Credentials" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Credentials_2">Credentials</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/NsIMsgAccountManagerExtension" title="ja/XPCOM_Interface_Reference/NsIMsgAccountManagerExtension">nsIMsgAccountManagerExtension</a></li>
+    </ul>
+   </li>
+   <li class="secondary Element" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Element_3">Element</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIEditorMailSupport" title="ja/XPCOM_Interface_Reference/nsIEditorMailSupport">nsIEditorMailSupport</a></li>
+    </ul>
+   </li>
+   <li class="secondary Message" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #F6F6F1;">
+    <h2 id="Message">Message</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/NsIDBChangeAnnouncer" title="ja/XPCOM_Interface_Reference/NsIDBChangeAnnouncer">nsIDBChangeAnnouncer</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIDBChangeListener" title="ja/XPCOM_Interface_Reference/nsIDBChangeListener">nsIDBChangeListener</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIMessenger" title="ja/XPCOM_Interface_Reference/nsIMessenger">nsIMessenger</a></li>
+    </ul>
+   </li>
+   <li><a href="/ja/XPCOM_Interface_Reference/NsIMsgCompFields" title="ja/XPCOM_Interface_Reference/NsIMsgCompFields">nsIMsgCompFields</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsIMsgCustomColumnHandler" title="ja/XPCOM_Interface_Reference/nsIMsgCustomColumnHandler">nsIMsgCustomColumnHandler</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsIMsgDatabase" title="ja/XPCOM_Interface_Reference/nsIMsgDatabase">nsIMsgDatabase</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsIMsgDBHdr" title="ja/XPCOM_Interface_Reference/nsIMsgDBHdr">nsIMsgDBHdr</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsIMsgDBView" title="ja/XPCOM_Interface_Reference/nsIMsgDBView">nsIMsgDBView</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsIMsgDBViewCommandUpdater" title="ja/XPCOM_Interface_Reference/nsIMsgDBViewCommandUpdater">nsIMsgDBViewCommandUpdater</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsIMsgFolder" title="ja/XPCOM_Interface_Reference/nsIMsgFolder">nsIMsgFolder</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsIMsgIdentity" title="ja/XPCOM_Interface_Reference/nsIMsgIdentity">nsIMsgIdentity</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsIMsgMessageService" title="ja/XPCOM_Interface_Reference/nsIMsgMessageService">nsIMsgMessageService</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/NsIMsgSendLater" title="ja/XPCOM_Interface_Reference/NsIMsgSendLater">nsIMsgSendLater</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsIMsgThread" title="ja/XPCOM_Interface_Reference/nsIMsgThread">nsIMsgThread</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsIMsgWindow" title="ja/XPCOM_Interface_Reference/nsIMsgWindow">nsIMsgWindow</a></li>
+   <li><a href="/ja/XPCOM_Interface_Reference/nsIMsgWindowCommands" title="ja/XPCOM_Interface_Reference/nsIMsgWindowCommands">nsIMsgWindowCommands</a></li>
+  </ul>
+ </div>
+ <div class="primary User" style="margin: 5px; padding: 0 5px; border: 1px solid black; border-radius: 10px; background-color: #E0E0DC;">
+  <h1 id="User_2">User</h1>
+  <ul>
+   <li class="secondary History" style="background-color: #F6F6F1;">
+    <h2 id="History_3">History</h2>
+    <ul>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIBrowserHistory" title="ja/XPCOM_Interface_Reference/nsIBrowserHistory">nsIBrowserHistory</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIBrowserSearchService" title="ja/XPCOM_Interface_Reference/nsIBrowserSearchService">nsIBrowserSearchService</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIMicrosummary" title="ja/XPCOM_Interface_Reference/nsIMicrosummary">nsIMicrosummary</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIMicrosummaryGenerator" title="ja/XPCOM_Interface_Reference/nsIMicrosummaryGenerator">nsIMicrosummaryGenerator</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIMicrosummaryObserver" title="ja/XPCOM_Interface_Reference/nsIMicrosummaryObserver">nsIMicrosummaryObserver</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIMicrosummaryService" title="ja/XPCOM_Interface_Reference/nsIMicrosummaryService">nsIMicrosummaryService</a></li>
+     <li><a href="/ja/XPCOM_Interface_Reference/nsIMicrosummarySet" title="ja/XPCOM_Interface_Reference/nsIMicrosummarySet">nsIMicrosummarySet</a></li>
+    </ul>
+   </li>
+  </ul>
+ </div>
+</div>
+<p>XPC</p>

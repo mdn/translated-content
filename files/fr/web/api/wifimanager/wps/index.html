@@ -1,0 +1,112 @@
+---
+title: WifiManager.wps()
+slug: Web/API/WifiManager/wps
+tags:
+  - API
+  - B2G
+  - Method
+  - Non Standard
+  - WebAPI
+translation_of: Archive/B2G_OS/API/WifiManager/wps
+---
+<div>{{APIRef("Firefox OS")}}{{non-standard_header}}</div>
+
+<div>{{ B2GOnlyHeader2('certified') }}</div>
+
+<p>La méthode <code>wps</code> est utilisée pour traiter un handle de connexion<a class="external external-icon" href="http://fr.wikipedia.org/wiki/Wi-Fi_Protected_Setup" title="http://en.wikipedia.org/wiki/Wi-Fi_Protected_Setup">WPS</a> avec les réseaux qui soutiennent cette fonctionnalité.</p>
+
+<p>Un réseau suportant une connexion WPS à la chaîne <code>WPS</code> disponible dans le tableau {{domxref("WifiManager.capabilities")}}.</p>
+
+<p>Une <a class="external external-icon" href="http://fr.wikipedia.org/wiki/Wi-Fi_Protected_Setup" title="http://en.wikipedia.org/wiki/Wi-Fi_Protected_Setup">connexion WPS</a> est un moyen simple de connecter un périphérique à un réseau. Il nécessite moins de connaissances de l'utilisateur et rend les choses plus faciles pour lui.Fondamentalement, quand un utilisateur a un routeur WiFi compatible WPS, il peut choisir cette méthode pour connecter son appareil sur le réseau au lieu de saisir son mot de passe.</p>
+
+<p>Il existe deux façons de lancer une connexion WPS:</p>
+
+<ul>
+ <li>La plus simple est d'appuyer sur un bouton dédié du routeur WiFi.</li>
+ <li>Une alternative est d'indiquer un code PIN fourni par le routeur WiFi. Il y a alors deux cas d'utilisation :
+  <ol>
+   <li>Le routeur WiFi enverra un code PIN à l'appareil que l'utilisateur doit saisir sur l'interface de routeur WiFi.</li>
+   <li>Le routeur WiFi attend que l'utilisateur saisisse un code PIN sur son périphérique (généralement, un tel code PIN est affiché sur le routeur WiFi lui-même).</li>
+  </ol>
+ </li>
+</ul>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre>var request = navigator.mozWifiManager.wps(param);</pre>
+
+<h3 id="Paramètres">Paramètres</h3>
+
+<dl>
+ <dt>param</dt>
+ <dd>Un objet de configuration avec les propriétés suivantes :
+ <ul>
+  <li><code>method</code> : l'une des chaînes suivantes :
+   <ul>
+    <li><code>cancel</code> pour annuler une tentative de connexion WPS.</li>
+    <li><code>pbs</code> pour tenter une connexion en appuyant sur ​​le bouton physique du routeur WiFi.</li>
+    <li><code>pin</code> pour tenter une connexion avec un code pin.</li>
+   </ul>
+  </li>
+  <li><code>bssid</code> : une chaîne représentant le bssid du réseau pour se connecter. Il est obligatoire si la propriété <code>method</code> est définie à <code>pin</code> .</li>
+  <li><code>pin </code>: une chaîne représentant le code pin saisi par l'utilisateur. Il est obligatoire si la propriété <code>method</code> est définie à <code>pin</code>.</li>
+ </ul>
+ </dd>
+</dl>
+
+<h3 id="Résultats">Résultats</h3>
+
+<p>Elle renvoie un handle <a href="https://developer.mozilla.org/fr/docs/Web/API/DOMRequest"><code>DOMRequest</code></a>qui indique le succès ou l'échec de l'opération.</p>
+
+<p>Lorsque la propriété <code>method</code> est définie à <code>pin</code>, si l'opération est réussie et si l'utilisateur doit saisir un numéro d'identification sur son interface de routeur WiFi, le résultat de la requête est une chaîne représentant le code PIN.</p>
+
+<h2 id="Exemple">Exemple</h2>
+
+<pre class="brush: js">var wifi = navigator.mozWifiManager;
+
+var request = wifi.getNetworks();
+
+request.onsuccess = function () {
+  // <code>Utilisons</code><code class="language-js"><span class="comment token"> du premier réseau.</span></code>
+  var network = this.result[0];
+  var isWPSEnabled = network.capabilities.indexOf('WPS') &gt; -1;
+  var wpsRequest;
+
+  if (isWPSEnabled) {
+    if (comfirm(<code>'</code><code class="language-js"><span class="string token">Voulez-vous utiliser le bouton poussoir pour connecter votre appareil ?</span></code>')) {
+      wpsRequest = wifi.wps({
+        method : 'pbs'
+      });
+    }
+
+    else if (confirm('<code class="language-js"><span class="string token">Voulez-vous saisir un numéro de code PIN sur votre interface de routeur wifi ?</span></code>')){
+      wpsRequest = wifi.wps({
+        method : 'pin',
+        bssid: network.bssid
+      })
+
+      wpsRequest.onsuccess = function () {
+        alert('<code class="language-js"><span class="string token">Veuillez saisir ce numéro sur votre interface de routeur WiFi:</span></code>' + this.result)
+      }
+    }
+
+    else {
+      wpsRequest = wifi.wps({
+        method : 'pin',
+        bssid: network.bssid
+        pin: prompt('<code class="language-js"><span class="string token">Veuillez indiquer le code PIN de votre routeur WiFi.</span></code>')
+      })
+    }
+  }
+}</pre>
+
+<h2 id="Specification" name="Specification">Spécification</h2>
+
+<p>Ne fait partie d'aucune spécification.</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>{{domxref("WifiManager")}}</li>
+ <li><a href="/fr/docs/WebAPI/WiFi_Information" title="/en-US/docs/WebAPI/WiFi_Information">WifI Information API</a></li>
+</ul>

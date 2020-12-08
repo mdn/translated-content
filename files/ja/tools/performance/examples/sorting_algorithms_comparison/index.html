@@ -1,0 +1,73 @@
+---
+title: ソートアルゴリズムの比較
+slug: Tools/Performance/Examples/Sorting_algorithms_comparison
+translation_of: Tools/Performance/Examples/Sorting_algorithms_comparison
+---
+<div>{{ToolsSidebar}}</div>
+
+<p>この記事では、2つのパフォーマンスガイドで使用する簡単なサンプルプログラムについて説明します。<a href="/ja/docs/Tools/Performance/Call_Tree">コールツリー</a>のガイドと<a href="/ja/docs/Tools/Performance/Flame_Chart">フレームチャート</a>のガイドです。</p>
+
+<p>このプログラムは、3つの異なるソートアルゴリズムのパフォーマンスを比較します。</p>
+
+<ul>
+ <li>バブルソート</li>
+ <li>選択ソート</li>
+ <li>クイックソート</li>
+</ul>
+
+<p>これは以下の機能で構成されています。</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><strong><code>sortAll()</code></strong></td>
+   <td>トップレベルの関数。 （200回）反復的に配列を生成し、<code>sort()</code>を呼び出します。</td>
+  </tr>
+  <tr>
+   <td><strong><code>sort()</code></strong></td>
+   <td><code>bubbleSort()</code>、<code>selectionSort()</code>、<code>quickSort()</code>を順に選択し、結果を記録します。</td>
+  </tr>
+  <tr>
+   <td><strong><code>bubbleSort()</code></strong></td>
+   <td>バブルソートを実装し、ソートされた配列を返します。</td>
+  </tr>
+  <tr>
+   <td><strong><code>selectionSort()</code></strong></td>
+   <td>選択ソートを実装し、ソートされた配列を返します。</td>
+  </tr>
+  <tr>
+   <td><strong><code>quickSort()</code></strong></td>
+   <td>クイックソートを実装し、ソートされた配列を返します。</td>
+  </tr>
+  <tr>
+   <td><code><strong>swap()</strong></code></td>
+   <td><code>bubbleSort()</code>と<code>selectionSort()</code>のヘルパー関数。</td>
+  </tr>
+  <tr>
+   <td><code><strong>partition()</strong></code></td>
+   <td><code>quickSort()</code>のヘルパー関数。</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>コールグラフは次のようになります。</p>
+
+<pre>sortAll()                     // (generate random array, then call sort) x 200
+
+    -&gt; sort()                 // sort with each algorithm, log the result
+
+        -&gt; bubbleSort()
+
+            -&gt; swap()
+
+        -&gt; selectionSort()
+
+            -&gt; swap()
+
+        -&gt; quickSort()
+
+            -&gt; partition()</pre>
+
+<p>プログラムのソートアルゴリズムの実装は、<a href="https://github.com/nzakas/computer-science-in-javascript/">https://github.com/nzakas/computer-science-in-javascript/</a>から取得され、MITライセンスで使用されます。</p>
+
+<p><a href="https://mdn.github.io/performance-scenarios/js-call-tree-1/index.html">ここ</a>でサンプルプログラムを試してみて、<a href="https://github.com/mdn/performance-scenarios">ここ</a>でコードをクローンすることができます（gh-pagesブランチを確認してください）。 <a href="https://github.com/mdn/performance-scenarios/tree/gh-pages/js-call-tree-1/profile">私たちが議論した特定のプロフィールをダウンロードする</a>こともできます。あなたがフォローしたい場合は、パフォーマンスツールにインポートするだけです。 もちろん、独自のプロファイルを生成することもできますが、数字は少し異なります。</p>

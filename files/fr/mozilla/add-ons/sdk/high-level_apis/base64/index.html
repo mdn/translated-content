@@ -1,0 +1,111 @@
+---
+title: base64
+slug: Mozilla/Add-ons/SDK/High-Level_APIs/base64
+translation_of: Archive/Add-ons/Add-on_SDK/High-Level_APIs/base64
+---
+<p> <span id="result_box" lang="fr"><span class="hps">Le codage des données</span> <span class="hps">et le décodage</span> <span class="hps">en utilisant des algorithmes</span> <span class="hps">Base64</span><span>.</span><br>
+ <br>
+ <span class="hps">var</span> <span class="hps">base64</span> <span class="hps">=</span> <span class="atn hps">require (</span><span class="atn hps">"</span><span>sdk</span> <span class="hps">/</span> <span class="hps">base64</span><span>"</span><span>)</span><span>;</span><br>
+  <br>
+ <span class="hps">var</span> <span class="hps">encodedData</span> <span class="hps">=</span> <span class="hps">base64.encode</span> <span class="atn hps">(</span><span class="atn hps">"</span><span>Bonjour,</span> <span class="hps">monde»</span><span>)</span><span>;</span><br>
+ <span class="hps">var</span> <span class="hps">decodedData</span> <span class="hps">=</span> <span class="hps">base64.decode</span> <span class="atn hps">(</span><span>encodedData</span><span>)</span><span>;</span></span></p>
+
+<div class="almost_half_cell" id="gt-res-content">
+<div dir="ltr" style="zoom: 1;"><span id="result_box" lang="fr"><span class="hps">Les fonctions</span><br>
+<span class="atn hps">encode (</span><span>données</span><span>,</span> <span class="hps">charset)</span><br>
+<br>
+<span class="hps">Crée une</span> <span class="hps">chaîne de caractères ASCII</span> <span class="hps">de base</span> <span class="hps">64</span> <span class="hps">codé</span> <span class="hps">à partir d'une</span> <span class="hps">chaîne de données</span> <span class="hps">binaires</span><span>.</span><br>
+<span class="hps">Paramètres</span><br>
+<br>
+<span class="hps">données</span><span>: string</span><br>
+<span class="hps">Les données</span> <span class="hps">pour coder</span><br>
+<br>
+<span class="hps">charset</span><span>: string</span><br>
+<span class="hps">Le</span> <span class="hps">charset</span> <span class="hps">de la chaîne à</span> <span class="hps">coder</span> <span class="hps">(en option</span><span>)</span><span>.</span> <span class="hps">La seule valeur</span> <span class="hps">acceptée est</span> <span class="atn hps">"</span><span>utf-8"</span><span>.</span> <span class="hps">Pour</span> <span class="hps">coder et décoder</span> <span class="hps">les chaînes Unicode</span><span>,</span> <span class="hps">le paramètre charset</span> <span class="hps">doit être réglé</span><span>:</span><br>
+<br>
+<span class="hps">var</span> <span class="hps">base64</span> <span class="hps">=</span> <span class="atn hps">require (</span><span class="atn hps">"</span><span>sdk</span> <span class="hps">/</span> <span class="hps">base64</span><span>"</span><span>)</span><span>;</span><br>
+<br>
+<span class="hps">var</span> <span class="hps">encodedData</span> <span class="hps">=</span> <span class="hps">base64.encode</span> <span class="atn hps">(</span><span>UnicodeString</span><span>,</span> <span class="atn hps">"</span><span>utf-8"</span><span>)</span><span>;</span><br>
+<br>
+<span class="hps">résultats</span><br>
+<br>
+<span class="hps">string:</span> <span class="hps">La chaîne</span> <span class="hps">codée</span><br>
+<span class="atn hps">decode (</span><span>données</span><span>,</span> <span class="hps">charset)</span><br>
+<br>
+<span class="hps">Décode</span> <span class="hps">une chaîne de données</span> <span class="hps">qui a été codé</span> <span class="hps">en utilisant la base</span> <span class="hps">64</span> <span class="hps">codage.</span><br>
+<span class="hps">Paramètres</span><br>
+<br>
+<span class="hps">données</span><span>: string</span><br>
+<span class="hps">Les données codées</span><br>
+<br>
+<span class="hps">charset</span><span>: string</span><br>
+<span class="hps">Le</span> <span class="hps">charset</span> <span class="hps">de la chaîne à</span> <span class="hps">coder</span> <span class="hps">(en option</span><span>)</span><span>.</span> <span class="hps">La seule valeur</span> <span class="hps">acceptée est</span> <span class="atn hps">"</span><span>utf-8"</span><span>.</span> <span class="hps">Pour</span> <span class="hps">coder et décoder</span> <span class="hps">les chaînes Unicode</span><span>,</span> <span class="hps">le paramètre charset</span> <span class="hps">doit être réglé</span><span>:</span><br>
+<br>
+<span class="hps">var</span> <span class="hps">base64</span> <span class="hps">=</span> <span class="atn hps">require (</span><span class="atn hps">"</span><span>sdk</span> <span class="hps">/</span> <span class="hps">base64</span><span>"</span><span>)</span><span>;</span><br>
+<br>
+<span class="hps">var</span> <span class="hps">decodedData</span> <span class="hps">=</span> <span class="hps">base64.decode</span> <span class="atn hps">(</span><span>encodedData</span><span>,</span> <span class="atn hps">"</span><span>utf-8"</span><span>)</span><span>;</span><br>
+<br>
+<span class="hps">résultats</span><br>
+<br>
+<span class="hps">string:</span> <span class="hps">La chaîne</span> <span class="hps">décodée</span> <span class="atn hps">(</span><span>encodedData</span><span>)</span><span>;</span></span></div>
+</div>
+
+<div class="note">
+<p>{{AddonSidebar}}</p>
+</div>
+
+<div class="note">
+<p>Unstable</p>
+</div>
+
+<p>Data encoding and decoding using Base64 algorithms.</p>
+
+<pre class="brush: js">var base64 = require("sdk/base64");
+
+var encodedData = base64.encode("Hello, World");
+var decodedData = base64.decode(encodedData);</pre>
+
+<h2 id="Globals">Globals</h2>
+
+<h3 id="Functions">Functions</h3>
+
+<h4 class="addon-sdk-api-name" id="encode(data_charset)"><code>encode(data, charset)</code></h4>
+
+<p>Creates a base-64 encoded ASCII string from a string of binary data.</p>
+
+<h5 id="Parameters">Parameters</h5>
+
+<p><strong>data : string</strong><br>
+ The data to encode</p>
+
+<p><strong>charset : string</strong><br>
+ The charset of the string to encode (optional). The only accepted value is <code>"utf-8"</code>. In order to encode and decode Unicode strings, the charset parameter needs to be set:</p>
+
+<pre class="brush: js">var base64 = require("sdk/base64");
+
+var encodedData = base64.encode(unicodeString, "utf-8");
+</pre>
+
+<h5 id="Returns">Returns</h5>
+
+<p><strong>string</strong> : The encoded string</p>
+
+<h4 class="addon-sdk-api-name" id="decode(data_charset)"><code>decode(data, charset)</code></h4>
+
+<p>Decodes a string of data which has been encoded using base-64 encoding.</p>
+
+<h5 id="Parameters_2">Parameters</h5>
+
+<p><strong>data : string</strong><br>
+ The encoded data</p>
+
+<p><strong>charset : string</strong><br>
+ The charset of the string to encode (optional). The only accepted value is <code>"utf-8"</code>. In order to encode and decode Unicode strings, the charset parameter needs to be set:</p>
+
+<pre class="brush: js">var base64 = require("sdk/base64");
+
+var decodedData = base64.decode(encodedData, "utf-8");</pre>
+
+<h5 id="Returns_2">Returns</h5>
+
+<p><strong>string</strong> : The decoded string</p>

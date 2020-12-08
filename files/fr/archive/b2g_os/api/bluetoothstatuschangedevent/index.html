@@ -1,0 +1,59 @@
+---
+title: BluetoothStatusChangedEvent
+slug: Archive/B2G_OS/API/BluetoothStatusChangedEvent
+translation_of: Archive/B2G_OS/API/BluetoothStatusChangedEvent
+---
+<p>{{ apiref("Bluetooth API") }}</p>
+
+<p>{{ non-standard_header() }}</p>
+
+<p>{{ B2GOnlyHeader2('certified') }}</p>
+
+<h2 id="Sommaire">Sommaire</h2>
+
+<p>L'API <code>BluetoothStatusChangedEvent</code> donne accès aux informations de modification du statut de l'équipement Bluetooth.</p>
+
+<p>Une modification du statut a lieu lorsqu'un des évènements suivants est détecté :</p>
+
+<ul>
+ <li>{{Event("a2dpstatuschange")}} : It occurs when an <a class="external" href="http://en.wikipedia.org/wiki/Bluetooth_profile#Advanced_Audio_Distribution_Profile_.28A2DP.29" rel="external"><abbr title="Advanced Audio Distribution Profile">A2DP</abbr></a> connection status changes. See {{domxref("BluetoothAdapter.ona2dpstatuschanged")}} for more information.</li>
+ <li>{{Event("hfpstatuschange")}} : It occurs when an <a class="external" href="http://en.wikipedia.org/wiki/Bluetooth_profile#Hands-Free_Profile_.28HFP.29" rel="external"><abbr title="Hands-Free Profile">HFP</abbr></a> connection status changes. See {{domxref("BluetoothAdapter.onhfpstatuschanged")}} for more information.</li>
+ <li>{{Event("pairedstatuschange")}} : It occurs when the pairing status of the device changes. See {{domxref("BluetoothAdapter.onpairedstatuschanged")}} for more information.</li>
+ <li>{{Event("scostatuschange")}} : It occurs when an <abbr title="Synchronous connection-oriented"><a class="external" href="http://en.wikipedia.org/wiki/Bluetooth_protocols#Synchronous_connection-oriented_.28SCO.29_link" rel="external">SCO</a></abbr> connection status changes. See {{domxref("BluetoothAdapter.onscostatuschanged")}} for more information.</li>
+</ul>
+
+<h2 id="Interface_overview">Interface overview</h2>
+
+<pre>interface BluetoothStatusChangedEvent: Event
+{
+  readonly attribute DOMString address;
+  readonly attribute boolean status;
+};</pre>
+
+<h2 id="Properties">Properties</h2>
+
+<dl>
+ <dt>{{domxref("BluetoothStatusChangedEvent.address")}} {{readonlyinline}}</dt>
+ <dd>A string representing the address of the device for which the status has changed in the Bluetooth micro-network.</dd>
+ <dt>{{domxref("BluetoothStatusChangedEvent.status")}} {{readonlyinline}}</dt>
+ <dd>A boolean representing the current status of the connection. It can be enabled (<code>true</code>) or disabled (<code>false</code>).</dd>
+</dl>
+
+<h2 id="Methods">Methods</h2>
+
+<p>None.</p>
+
+<h2 id="Specification">Specification</h2>
+
+<p>Not part of any specification yet. It should be discussed as part of the <a href="http://www.w3.org/2012/sysapps/">W3C's System Applications Working Group</a>.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{domxref("BluetoothAdapter")}}</li>
+ <li>{{domxref("BluetoothAdapter.ona2dpstatuschanged")}}</li>
+ <li>{{domxref("BluetoothAdapter.onhfpstatuschanged")}}</li>
+ <li>{{domxref("BluetoothAdapter.onpairedstatuschanged")}}</li>
+ <li>{{domxref("BluetoothAdapter.onscostatuschanged")}}</li>
+ <li><a href="/en-US/docs/WebAPI/WebBluetooth">Web Bluetooth</a></li>
+</ul>

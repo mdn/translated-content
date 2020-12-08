@@ -1,0 +1,175 @@
+---
+title: 为 Firefox 创建 OpenSearch 插件
+slug: Mozilla/Add-ons/Creating_OpenSearch_plugins_for_Firefox_clone
+tags:
+  - 定制
+  - 搜索
+---
+<p>{{ fx_minversion_header("2") }}</p>
+
+<p><a href="/en/Firefox_2_for_developers" title="en/Firefox_2_for_developers">Firefox 2</a> 支持使用 <a class="external" href="http://opensearch.org/">OpenSearch</a> 格式开发搜索引擎插件. 使用 <a class="external" href="http://www.opensearch.org/Specifications/OpenSearch/1.1#OpenSearch_description_document">OpenSearch 格式</a>开发能够在IE 7 以及 Firefox上实现兼容. 这是这种语法被推荐使用的原因.</p>
+
+<p>Firefox 也支持不被包括在 <a class="external" href="http://www.opensearch.org/Specifications/OpenSearch/1.1#OpenSearch_description_document">OpenSearch格式</a>  中的其它的搜索功能,例如搜索建议（search suggestion）以及 <code>SearchForm</code> 元素. 这篇文章主要关注创建与OpenSearch格式兼容的支持额外的firefox特殊特征的搜索插件.</p>
+
+<p>OpenSearch 描述文件也能被如在 <a href="#Autodiscovery_of_search_plugins">Autodiscovery of search plugins</a>  中描述的一样被advertised(道歉这里不知如何翻译) ,并且能够如在 <a href="/en/Adding_search_engines_from_web_pages" title="en/Adding_search_engines_from_web_pages">Adding search engines from web pages</a>中所说的进行编程安装.</p>
+
+<h2 id="OpenSearch_描述文件">OpenSearch 描述文件</h2>
+
+<p>遵循以下的模板，你就会发现通过 XML 文件写一个搜索引擎实际上是如此的简单。 粗体字部分需要根据具体你所写的搜索引擎需要来进行定制 。</p>
+
+<pre class="brush: xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/"&gt;
+  &lt;ShortName&gt;<strong>engineName</strong>&lt;/ShortName&gt;
+  &lt;Description&gt;<strong>engineDescription</strong>&lt;/Description&gt;
+  &lt;InputEncoding&gt;<strong>inputEncoding</strong>&lt;/InputEncoding&gt;
+  &lt;Image width="16" height="16" type="image/x-icon"&gt;data:image/x-icon;base64,<strong>imageData</strong>&lt;/Image&gt;
+  &lt;Url type="text/html" method="<strong>method</strong>" template="<strong>searchURL</strong>"&gt;
+    &lt;Param name="<strong>paramName1</strong>" value="<strong>paramValue1</strong>"/&gt;
+    ...
+    &lt;Param name="<strong>paramNameN</strong>" value="<strong>paramValueN</strong>"/&gt;
+  &lt;/Url&gt;
+  &lt;Url type="application/x-suggestions+json" template="<strong>suggestionURL</strong>"/&gt;
+  &lt;moz:SearchForm&gt;<strong>searchFormURL</strong>&lt;/moz:SearchForm&gt;
+&lt;/OpenSearchDescription&gt;</pre>
+
+<dl>
+ <dt><strong>ShortName</strong></dt>
+ <dd>对搜索引擎的简称</dd>
+ <dd><strong>限制:</strong> 名称仅能包含16个字符以下的纯文本. 名称不能包含HTML标志或其他标志.</dd>
+</dl>
+
+<dl>
+ <dt><strong>Description</strong></dt>
+ <dd>对于搜索引擎的简单描述</dd>
+ <dd><strong>限制:</strong> 描述仅能包含少于1024个字符的纯文本.  名称不能包含HTML标志或其他标志.</dd>
+</dl>
+
+<dl>
+ <dt><strong>InputEncoding</strong></dt>
+ <dd>向搜索引擎所输内容的字符编码.例如: <code>&lt;InputEncoding&gt;UTF-8&lt;/InputEncoding&gt;</code>.</dd>
+</dl>
+
+<dl>
+ <dt><strong>Image</strong></dt>
+ <dd>使用指向一个图标的URL来代表这个搜索引擎. 可能的话, 应提供16x16大小的"image/x-icon"类型的图像以及一个64x64大小的 "image/jpeg" 或 "image/png"类型的图像. 链接也可以使用 <a class="external" href="http://en.wikipedia.org/wiki/Data:_URI_scheme">data: URI scheme</a>.  <a class="external" href="http://software.hixie.ch/utilities/cgi/data/data">The data: URI kitchen</a>在这能找到一个能有效地帮助你构建写在此处的数据的工具.
+ <pre class="eval">&lt;Image height="16" width="16" type="image/x-icon"&gt;<a class="external" href="http://example.com/favicon.ico" rel="freelink">http://example.com/favicon.ico</a>&lt;/Image&gt;
+  OR
+&lt;Image height="16" width="16"&gt;data:image/x-icon;base64,AAABAAEAEBAAA ... DAAA=&lt;/Image&gt;
+</pre>
+ Firefox以base64编码的data: URI (搜索插件被保存在 profile中的 "searchplugins" 文件夹) 缓存此图标. 当这完成时， http: URIs 被改变为 data: URIs.</dd>
+</dl>
+
+<dl>
+ <dt><strong>Url</strong></dt>
+ <dd>描述用来实现搜索请求的一个或多个URL.  <code>method</code> 属性决定使用 <code>GET</code> 还是 <code>POST</code>请求来获取返回的数据. <code>template</code> 属性指定实现搜索请求的 URL.</dd>
+ <dd>
+ <div class="note"><strong>注意:</strong> IE7 不支持 <code>POST</code> 请求.</div>
+ </dd>
+</dl>
+
+<dl>
+ <dd>这是两种firefox支持的URL类型:</dd>
+</dl>
+
+<ul>
+ <li><code>type="text/html"</code> 用来指定进行搜索查询的URL.</li>
+ <li><code>type="application/x-suggestions+json"</code> 用来指定获取搜索建议（search suggestions）的URL.</li>
+</ul>
+
+<dl>
+ <dd>这两种URL任何一种你都能使用 <code>{searchTerms}</code>来替换用户在搜索栏中输入的搜索内容. 其他支持的动态搜索参数可见 <a class="external" href="http://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_3#OpenSearch_1.1_parameters">OpenSearch 1.1 parameters</a>.</dd>
+</dl>
+
+<dl>
+ <dd>对使用搜索建议查询来说,  URL template用来获取JSON格式的建议列表. 若需要知道关于如何在服务器上实现搜索建议支持, 请见 <a href="/en/Supporting_search_suggestions_in_search_plugins" title="en/Supporting_search_suggestions_in_search_plugins">Supporting search suggestions in search plugins</a>.</dd>
+</dl>
+
+<p><img alt="Image:SearchSuggestionSample.png" class="internal" src="/@api/deki/files/358/=SearchSuggestionSample.png"></p>
+
+<dl>
+ <dt><strong>Param</strong></dt>
+ <dd>这个参数用来包括那些需要和搜索查询一起被传递的作为键值对的参数.<code> 你能使用{searchTerms}</code>来指代用户输入的搜索条目.</dd>
+ <dd>
+ <div class="note"><strong>注意:</strong> IE7不支持此元素.</div>
+ </dd>
+</dl>
+
+<dl>
+ <dt><strong>SearchForm</strong></dt>
+ <dd>跳往搜索页的 URL. 这使得Firefox能让用户直接浏览目的网站.</dd>
+ <dd>
+ <div class="note"><strong>注意:</strong> 这个元素是firefox限定的, 并不是 OpenSearch 的一部分, 我们在例子中使用 "<code>moz:</code>" XML命名前缀来确保其它的不支持此元素的用户代理能安全地忽略此元素.</div>
+ </dd>
+</dl>
+
+<h2 id="自动搜寻搜索插件">自动搜寻搜索插件</h2>
+
+<p>提供搜索插件的网站能宣传自己以使firefox使用者能容易地下载并安装此插件.</p>
+
+<p>要支持自动搜寻 你仅需在 你网页的<code>&lt;head&gt;</code> 中加上一条:</p>
+
+<pre class="eval">&lt;link rel="search" type="application/opensearchdescription+xml" title="<em>searchTitle</em>" href="<em>pluginURL</em>"&gt;
+</pre>
+
+<p>斜体字部分解释如下:</p>
+
+<dl>
+ <dt><strong>searchTitle</strong></dt>
+ <dd>搜索的名称, 如 "Search MDC" or "Yahoo! Search". 这个值应该与你在插件文件中的ShortName相一致.</dd>
+</dl>
+
+<dl>
+ <dt><strong>pluginURL</strong></dt>
+ <dd>指向 XML搜索插件的URL, 能让浏览者下载插件.</dd>
+</dl>
+
+<p>如果你的网站提供多个插件, 你能为他们每一个都支持自动搜寻功能. 例如:</p>
+
+<pre class="eval">&lt;link rel="search" type="application/opensearchdescription+xml" title="MySite: By Author" href="<a class="external" href="http://www.mysite.com/mysiteauthor.xml" rel="freelink">http://www.mysite.com/mysiteauthor.xml</a>"&gt;
+&lt;link rel="search" type="application/opensearchdescription+xml" title="MySite: By Title" href="<a class="external" href="http://www.mysite.com/mysitetitle.xml" rel="freelink">http://www.mysite.com/mysitetitle.xml</a>"&gt;
+</pre>
+
+<p>这样，你的网站提供的插件就能同时以作者和名称分别作为搜索条目而被搜索.</p>
+
+<h2 id="为_OpenSearch_插件支持自动更新">为 OpenSearch 插件支持自动更新</h2>
+
+<p>{{ fx_minversion_note("3.5", "This section covers a feature introduced in Firefox 3.5.") }}</p>
+
+<p>从Firefox 3.5开始, OpenSearch 插件能够自动更新.  要支持这个, 需要包括一个额外的 "<code>application/opensearchdescription+xml</code>"类型<code>Url</code> 元素.  <code>rel</code>属性需要设为 "<code>self</code>" ， template 属性需要是指向能自动更新的OpenSearch文档的 URL.</p>
+
+<p>例如:</p>
+
+<pre>&lt;Url type="application/opensearchdescription+xml"
+     rel="self"
+     template="http://www.foo.com/mysearchdescription.xml" /&gt;
+</pre>
+
+<div class="note"><strong>注意:</strong>  <a class="external" href="http://addons.mozilla.org" title="http://addons.mozilla.org/">addons.mozilla.org</a> (AMO) 不支持 OpenSearch 插件的自动更新. 如果你想将你的插件发布在 AMO上, 你不应该使用自动更新.</div>
+
+<h2 id="排错指南">排错指南</h2>
+
+<p>如果你的搜索插件有错误, 当在firefox2中添加插件时会出错. 然而，错误信息可能并不是完全有所帮助的, 因此接下来的建议能帮你发现问题.</p>
+
+<ul>
+ <li>你的服务器应当运行使用MIME类型为<code>application/opensearchdescription+xml的</code> OpenSearch 插件.</li>
+ <li>确保你的搜索插件正确地格式化了. 你能通过直接将插件加载入firefox来检查.  template URL 中的&amp;符号需要使用 &amp;amp代替;标签需要以斜杠或是相匹配的结束标志结束。</li>
+ <li><code>xmlns</code>属性是很重要的, 没有了他你会得到 "Firefox could not download the search plugin from: (URL)"错误信息.</li>
+ <li>注意你必须包含一个 <code>text/html</code> URL — 仅包含 Atom 或 <a href="/en/RSS" title="en/RSS">RSS</a> URL 类型 (有效但firefox不支持)的插件将产生  "could not download the search plugin"错误.</li>
+ <li>远程获取的收藏夹图标大小不能超过10KB (见 {{ Bug(361923) }}).</li>
+</ul>
+
+<p>另外, 搜索插件服务提供了日志机制，这对于插件开发者来说可能能起到一定作用 . 使用 <em>about:config</em> 设定 '<code>browser.search.log</code>' 为 <code>true</code>. 插件被加载后日志信息将显示在火狐的 <a href="/en/Error_Console" title="en/Error_Console">Error Console</a> 中(Tools-&gt;Error Console).</p>
+
+<h2 id="参考资料">参考资料</h2>
+
+<ul>
+ <li><a class="external" href="http://opensearch.org/">OpenSearch Documentation</a>, <a class="external" href="http://www.opensearch.org/Specifications/OpenSearch/Extensions/Parameter/1.0">OpenSearch Documentation about the Url and Param element</a></li>
+ <li>Technorati.com has a <a class="external" href="http://technorati.com/osd.xml">working osd.xml</a></li>
+ <li>More on Autodiscovery difficulties at bugzilla {{ Bug(340208) }}</li>
+ <li><a class="external" href="http://en.wikipedia.org/wiki/Data:_URI_scheme"><code>data:</code> URI scheme</a></li>
+ <li><a class="external" href="http://www.searchplugins.net">searchplugins.net</a> - create OpenSearch plugins for use with Firefox 2. <a class="external" href="http://www.searchplugins.net/pluginlist.aspx">List of generated search plugins</a></li>
+ <li><a class="external" href="http://keijisaito.info/ready2search/e/">Ready2Search</a> - create OpenSearch plugins. <a class="external" href="http://keijisaito.info/arc/search/en_make_plugin.htm">Customized Search through Ready2Search</a></li>
+</ul>
+
+<p>{{ languages( { "es": "es/Creación_de_plugins_OpenSearch_para_Firefox", "de": "de/OpenSearch_Plugin_für_Firefox_erstellen", "ca": "ca/Creació_de_connectors_OpenSearch_per_al_Firefox", "fr": "fr/Création_de_plugins_OpenSearch_pour_Firefox", "ja": "ja/Creating_OpenSearch_plugins_for_Firefox", "pl": "pl/Tworzenie_wtyczek_OpenSearch_dla_Firefoksa", "pt": "pt/Criando_plugins_OpenSearch_para_o_Firefox" } ) }}</p>

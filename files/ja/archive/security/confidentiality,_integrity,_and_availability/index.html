@@ -1,0 +1,41 @@
+---
+title: 機密性・完全性・可用性
+slug: 'Archive/Security/Confidentiality,_Integrity,_and_Availability'
+tags:
+  - セキュリティ
+  - チュートリアル
+  - 初心者
+translation_of: 'Archive/Security/Confidentiality,_Integrity,_and_Availability'
+---
+<div class="summary" style="margin: 0px 0px 20px; padding: 20px; border: 0px; font-weight: 700; color: rgb(77, 78, 83); font-family: 'Open Sans', sans-serif; font-size: 14px; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: 21px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background: rgb(244, 247, 248);">
+<p style="margin: 0px; padding: 0px; border: 0px;">この記事では情報セキュリティの三大要素である機密性・完全性・可用性について説明します。</p>
+</div>
+
+<p>情報セキュリティの古典的なモデルとして機密性・完全性・可用性の3つの要素を維持することが定義されています。それぞれは異なる面の情報を守ることを目的として定められています。</p>
+
+<h2 id="Confidentiality" name="Confidentiality">機密性</h2>
+
+<p><ruby><em>機密性</em><rp> (</rp><rt>Confidentiality</rt><rp>) </rp></ruby>は、権限の無い人物が情報にアクセスすることを防止することを指します。つまりは権限のある人物にのみが機密情報にアクセスできるようにするということです。例えばあなたの銀行の記録なら、あなたはもちろんその記録にアクセスできるべきですし、あなたの手続きを助けてくれる銀行員もアクセスできるべきでしょう。しかしそれ以外の人物はアクセスできないようにすべきです。機密性を損なうということは、権限の無い誰かが故意または過失によって情報にアクセスできてしまうということです。機密性の欠如は一般には"守秘義務違反"として知られていて、基本的には被害者を救済できません。一旦秘密が漏洩してしまえば、再び秘匿することはできないのです。もしあなたの銀行の記録が公開ウェブサイトに投稿されれば、閲覧した全員にあなたの銀行アカウントや残高等を知られてしまいます。そしてその情報は全員の頭の中やコンピュータ等から完全に抹消することはできません。今日のメディアの報道するほぼすべての主なセキュリティインシデントが機密性の欠如に関わるものです。</p>
+
+<p>要約すると、機密性の侵害は権限の無い誰かが情報にアクセスできてしまうことを意味します。</p>
+
+<h2 id="Integrity" name="Integrity">完全性</h2>
+
+<p><ruby><em>完全性</em><rp> (</rp><rt>Integrity</rt><rp>) </rp></ruby>は情報の信憑性を確認できることを指します。つまりは情報が改ざんされておらず、情報の入手元も本物であるということです。例えばあなたがウェブサイトを立ち上げ、商品を販売しているとしましょう。攻撃者が悪意を持って商品の値段を書き換えられるとすれば、攻撃者の好きな値段で商品を買うことができてしまいます。このように書き換えを許可していないあなたの情報(この場合は値段)が改ざんされることが、完全性の欠如にあたります。もう1つの例はあなたがあるウェブサイトに接続しようとしているときに、攻撃者があなたの通信に割り込んで異なるウェブサイトへ誘導するというのも完全性の欠如です。この場合はあなたが誘導されたサイトが本物でない、ということがそれに当たります。</p>
+
+<h2 id="Availability" name="Availability">可用性</h2>
+
+<p><ruby><em>可用性</em><rp> (</rp><rt>Availability</rt><rp>) </rp></ruby>は、認証されたユーザが情報にアクセス可能であるということを指します。</p>
+
+<div class="originaldocinfo">
+<h3 id="Original_Document_Information" name="Original_Document_Information">原典情報</h3>
+
+<ul>
+ <li>著者: Karen Scarfone, Wayne Jansen, and Miles Tracy</li>
+ <li>題名: NIST Special Publication 800-123, Guide to General Server Security</li>
+ <li>最終更新: July 2008</li>
+ <li>著作権情報: This document is not subject to copyright.</li>
+</ul>
+</div>
+
+<p>{{QuickLinksWithSubpages("/ja/docs/Web/Security")}}</p>

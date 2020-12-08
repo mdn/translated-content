@@ -1,0 +1,49 @@
+---
+title: NP_Initialize
+slug: NP_Initialize
+tags:
+  - NPAPI
+  - Plugins
+translation_of: Archive/Plugins/Reference/NP_Initialize
+---
+<p> « <a href="https://developer.mozilla.org/ja/docs/Gecko_Plugin_API_Reference">Gecko Plugin API Reference</a> « <a href="https://developer.mozilla.org/ja/docs/Gecko_Plugin_API_Reference/Plug-in_Side_Plug-in_API">Plug-in Side Plug-in API</a>
+
+
+</p><h3 id=".E6.A6.82.E8.A6.81" name=".E6.A6.82.E8.A6.81">概要</h3>
+
+<p>プラグインに対する全体的な初期化を提供します。</p>
+
+<h3 id=".E6.96.87.E6.B3.95" name=".E6.96.87.E6.B3.95">文法</h3>
+
+<h4 id="Windows" name="Windows">Windows</h4>
+
+<pre>#include &lt;npapi.h&gt;
+
+NPError WINAPI NP_Initialize(NPNetscapeFuncs *aNPNFuncs)
+</pre>
+
+<h4 id="Unix" name="Unix">Unix</h4>
+
+<pre>#include &lt;npapi.h&gt;
+
+NPError NP_Initialize(NPNetscapeFuncs *aNPNFuncs, NPPluginFuncs *aNPPFuncs)
+</pre>
+
+<h3 id=".E6.88.BB.E3.82.8A.E5.80.A4" name=".E6.88.BB.E3.82.8A.E5.80.A4">戻り値</h3>
+
+<ul>
+ <li>成功ならば、この関数は NPERR_NO_ERROR を返します。</li>
+ <li>失敗ならば、プラグインは読みこまれず、関数はエラーコードを返します。返しうる値については、<a href="ja/NPAPI/Constants#Error_Codes">エラーコード</a>を参照してください。</li>
+</ul>
+
+<h3 id=".E8.AA.AC.E6.98.8E" name=".E8.AA.AC.E6.98.8E">説明</h3>
+
+<p>ブラウザは一度だけこの関数を呼びます: 最初のインスタンスが生成される前に、プラグインが読みこまれたときです。これはブラウザが呼ぶ最初の関数です。<code>NP_Initialize</code> はブラウザがプラグインを読み込み全体的な初期化を提供することをプラグインに告知します。このときにプラグインのすべてのインタンスで共有するあらゆるメモリやリソースを割り当ててください。</p>
+
+<p>プラグインの最後インスタンスが削除された後に、ブラウザは <a href="ja/NP_Shutdown">NP_Shutdown</a> を呼び、そこで割り当てたメモリやリソースを開放できます。</p>
+
+<h3 id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE" name=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE">関連項目</h3>
+
+<p><a href="ja/NP_Shutdown">NP_Shutdown</a>, <a href="ja/NPP_New">NPP_New</a></p>
+
+<p>{{ languages( { "en": "en/NP_Initialize" } ) }}</p>

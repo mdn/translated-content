@@ -1,0 +1,210 @@
+---
+title: 使用 js-ctypes
+slug: Mozilla/js-ctypes/Using_js-ctypes
+translation_of: Mozilla/js-ctypes/Using_js-ctypes
+---
+<p>{{ gecko_minversion_header("2.0") }}</p>
+
+<p>{{ draft() }}</p>
+
+<p>在使用 js-ctypes 前，你需要导入 ctypes.jsm 代码模块（Javascript Code Module）。这非常简单，只需要在所需的 Javascript scope 内包含下面这行代码 :</p>
+
+<pre class="eval"><span class="nowiki">Components.utils.import("resource://gre/modules/ctypes.jsm")</span></pre>
+
+<h2 id="加载本地库">加载本地库</h2>
+
+<p>在引入上述的代码模块后，你可以调用 <a href="/en/js-ctypes/js-ctypes_reference/ctypes#open()" title="en/js-ctypes/js-ctypes reference/ctypes#open()"><code>ctypes.open()</code></a> 来加载你想使用的本地库。例如：在Windows下，你可以这样引入系统的user32库:</p>
+
+<pre>var lib = ctypes.open("user32.dll");</pre>
+
+<p>On Mac OS X, you can load the Core Foundation library from the Core Foundation framework like this:</p>
+
+<pre>var coreFoundation = ctypes.open("/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation");</pre>
+
+<p>返回值是一个库对象，你可以用这个库对象去声明方法和数据类型，以供使用。</p>
+
+<div class="note"><strong>Note:</strong> js-ctypes only works with C libraries; you can't use C++ methods directly. Instead, you'll need to create a shim library that uses C functions that then call into the C++ library for you.</div>
+
+<h3 id="库搜索路径">库搜索路径</h3>
+
+<p>如果你指定了库的完整路径，那么就可以直接加载该库. 否则，系统会以一套标准的流程来搜索该库。</p>
+
+<h4 id="Windows">Windows</h4>
+
+<p>在Window下，搜索库的顺序如下：</p>
+
+<ol>
+ <li>The application's directory.</li>
+ <li>The system directory.</li>
+ <li>The 16-bit system directory.</li>
+ <li>The Windows directory.</li>
+ <li>The current working directory</li>
+ <li>The directories listed in the <code>PATH</code> environment variable.</li>
+</ol>
+
+<div class="note"><strong>Note:</strong> 该内容来至于 <a class="external" href="http://msdn.microsoft.com/en-us/library/ms682586(VS.85).aspx" title="http://msdn.microsoft.com/en-us/library/ms682586(VS.85).aspx">this article on MSDN</a>.</div>
+
+<h2 id="用完了">用完了</h2>
+
+<p>当你使用完库之后，你应该通过调用库对象的<code><a href="/en/js-ctypes/js-ctypes_reference/Library#close()" title="en/js-ctypes/js-ctypes reference/Library#close()">close()</a>方法来</code>关闭它。</p>
+
+<pre>lib.close();</pre>
+
+<p>如果关闭库失败，库会在垃圾回收时，自动关闭。</p>
+
+<h2 id="使用库">使用库</h2>
+
+<p>你可能需要声明一些新类型。这些类型可能是简单的，也可能是像结构体这样较复杂的类型，欲知详情请查看 <a href="/en/js-ctypes/Using_js-ctypes/Declaring_types" title="en/js-ctypes/Using js-ctypes/Declaring types">Declaring types</a>。大多数情况下，你会需要 声明一个或多个函数(<a href="/en/js-ctypes/Using_js-ctypes/Declaring_and_calling_functions" title="en/js-ctypes/Using js-ctypes/Declaring and calling functions">declare one or more functions</a>)，以供调用。 </p>
+
+<p>只要你声明了类型和方法，你就可以使用他们。 实例化C 类型的数据对象和引用他们可以参考 <a href="/en/js-ctypes/Using_js-ctypes/Working_with_data" title="en/js-ctypes/Using js-ctypes/Working with data">Working with data</a>。</p>
+
+<h2 id="内存管理">内存管理</h2>
+
+<p>If JS code creates a structure or array, that memory will be valid as long as the JS object stays alive. Pointers to that memory must be carefully managed to make sure the underlying memory is still referenced.</p>
+
+<p>When binary code hands back a pointer/handle to allocated memory, the JS code must make sure to free that memory with the correct allocator. It is usually best to expose a freeing function from the binary.</p>
+
+<h3 id="保持活着的对象">保持活着的对象</h3>
+
+<p>The following js-ctypes objects will hold references to objects, keeping them alive. This is not an exhaustive list, but will help you understand memory management and how it affects your use of js-ctypes:</p>
+
+<ul>
+ <li>A function or static data declared using the <a href="/en/js-ctypes/js-ctypes_reference/Library#declare()" title="en/js-ctypes/js-ctypes reference/Library#declare()"><code>declare()</code></a> method will hold that library alive.</li>
+ <li>A <a href="/en/js-ctypes/js-ctypes_reference/CType" title="en/js-ctypes/js-ctypes reference/CType"><code>CType</code></a> will hold referent <a href="/en/js-ctypes/js-ctypes_reference/CType" title="en/js-ctypes/js-ctypes reference/CType"><code>CType</code></a> objects alive.</li>
+ <li>A <code><a href="/en/js-ctypes/js-ctypes_reference/CData" title="en/js-ctypes/js-ctypes reference/CData">CData</a></code> will hold referent <code><a href="/en/js-ctypes/js-ctypes_reference/CData" title="en/js-ctypes/js-ctypes reference/CData">CData</a></code> objects alive, in specific circumstances. For example, a <code><a href="/en/js-ctypes/js-ctypes_reference/CData" title="en/js-ctypes/js-ctypes reference/CData">CData</a></code> object produced by accessing a field of a structure or the internals of an array will hold the referent objects alive.</li>
+</ul>
+
+<h3 id="究竟会不会保持活着的对象">究竟会不会保持活着的对象</h3>
+
+<p>It's important to note that getting direct access to the contents of a <code><a href="/en/js-ctypes/js-ctypes_reference/CData" title="en/js-ctypes/js-ctypes reference/CData">CData</a></code> object using <a href="/en/js-ctypes/js-ctypes_reference/CData#address()" title="en/js-ctypes/js-ctypes reference/CData#address()"><code>address()</code></a>, <a href="/en/js-ctypes/js-ctypes_reference/CData#addressOfElement()" title="en/js-ctypes/js-ctypes reference/CData#addressOfElement()"><code>addressOfElement()</code></a>, or <a href="/en/js-ctypes/js-ctypes_reference/CData#contents" title="en/js-ctypes/js-ctypes reference/CData#contents"><code>contents</code></a>, will result in a <code><a href="/en/js-ctypes/js-ctypes_reference/CData" title="en/js-ctypes/js-ctypes reference/CData">CData</a></code> object that <strong>does not</strong> hold its referent alive. Be sure to hold an explicit reference to be sure the referent object doesn't get garbage collected before you're done using it.</p>
+
+<h3 id="闭包">闭包</h3>
+
+<p>You also need to be sure to retain references to any JavaScript code that native code may call back into. This should be obvious, but is important enough to be worth stating explicitly.</p>
+
+<h3 id="当有疑问时_malloc()">当有疑问时, malloc()</h3>
+
+<p>When you absolutely, positively need to keep data around, you can use <code>malloc()</code> to allocate it directly. This bypasses JavaScript's memory management and lets you handle memory management yourself.</p>
+
+<h2 id="示例">示例</h2>
+
+<p>这些例子提供对js-ctypes使用的快速浏览。 要看更复杂的例子，请翻阅<a href="/en/js-ctypes/Examples" title="en/js-ctypes/Examples">js-ctypes examples</a>。</p>
+
+<h3 id="调用_Windows_例程">调用 Windows 例程</h3>
+
+<p>这个例子演示了怎么使用ctypes来调用Win32 API。</p>
+
+<pre class="brush: js">Components.utils.import("resource://gre/modules/ctypes.jsm");
+
+var lib = ctypes.open("C:\\WINDOWS\\system32\\user32.dll");
+
+/* Declare the signature of the function we are going to call */
+var msgBox = lib.declare("MessageBoxW"/* 函数名称*/,
+                         ctypes.winapi_abi,/*ABI类型，有3种，这里指调用系统的接口*/
+                         ctypes.int32_t,/*返回值*/
+                         ctypes.int32_t,/*告警类型*/
+                         ctypes.jschar.ptr,/*告警内容*/
+                         ctypes.jschar.ptr,/*标题*/
+                         ctypes.int32_t);/*按钮类型*/
+var MB_OK = 0;
+
+var ret = msgBox(0, "Hello world", "title", MB_OK);
+
+lib.close();</pre>
+
+<p>第三行， 就是 <code>user32.dll</code> 系统库被加载的地方。第六行声明了 <code>msgBox()</code> 函数是一个调用系统函数<code><a class="external" href="http://msdn.microsoft.com/en-us/library/ms645505%28VS.85%29.aspx" title="http://msdn.microsoft.com/en-us/library/ms645505(VS.85).aspx">MessageBoxW</a>的方法</code>. 第十五行调用了<code>msgBox()</code> ，会显示出一个告警框哦~。</p>
+
+<p>最后当我们完成使用之后，千万记得用close来关闭它。</p>
+
+<p>相较于给定完整的路径，通常只是给一个文件名。</p>
+
+<p><strong>关于声明函数</strong></p>
+
+<p>我们已经知道可以通过MSDN来获取MessageBox (MessageBoxW is just a unicode version of same function) 的相关信息，用以声明函数。也学习了关于lib.declare怎么使用：<a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/Library#declare%28%29" title="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/Library#declare%28%29">lib.declare</a>. 学习了数据类型的使用： <a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/ctypes?redirectlocale=en-US&amp;redirectslug=js-ctypes%2Fjs-ctypes_reference%2Fctypes#Predefined_data_types" title="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/ctypes?redirectlocale=en-US&amp;redirectslug=js-ctypes%2Fjs-ctypes_reference%2Fctypes#Predefined_data_types">Data Types</a>. 我们知道了它可以这样来声明：</p>
+
+<pre><span style="color: Blue;">int</span> WINAPI MessageBox(
+  _In_opt_  HWND hWnd,
+  _In_opt_  LPCTSTR lpText,
+  _In_opt_  LPCTSTR lpCaption,
+  _In_      UINT uType
+);</pre>
+
+<p>所以我们阅读这个文章关于类型定义和使用: <a href="/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/Declaring_types" title="/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/Declaring_types">Declaring Types</a></p>
+
+<pre>var lib = ctypes.open("user32.dll");
+</pre>
+
+<p>甚至不用后缀：</p>
+
+<pre>var lib = ctypes.open("user32");
+</pre>
+
+<h3 id="在_Mac_OS_X_上调用_Carbon_例程">在 Mac OS X 上调用 Carbon 例程</h3>
+
+<p>This example demonstrates how to use ctypes to call a Carbon function on Mac OS X.</p>
+
+<div class="note"><strong>Note:</strong>This example will not work on 64bit OS X, you will likely need to change to the Cocoa API.</div>
+
+<pre class="brush: js">/* build a Str255 ("Pascal style") string from the passed-in string */
+
+function makeStr(str) {
+  return String.fromCharCode(str.length) + str;
+}
+
+Components.utils.import("resource://gre/modules/ctypes.jsm");
+
+var carbon = ctypes.open("/System/Library/Frameworks/Carbon.framework/Carbon");
+
+stdAlert = carbon.declare("StandardAlert",       /* function name */
+                          ctypes.default_abi,    /* ABI type */
+                          ctypes.int16_t,        /* return type */
+                          ctypes.int16_t,        /* alert type */
+                          ctypes.char.ptr,       /* primary text */
+                          ctypes.char.ptr,       /* secondary text */
+                          ctypes.uint32_t,       /* alert param */
+                          ctypes.int16_t);       /* item hit */
+
+var hit = 0;
+var msgErr = makeStr("Carbon Says...");
+var msgExp = makeStr("We just called the StandardAlert Carbon function from JavaScript!");
+
+var err = stdAlert(1, msgErr, msgExp, 0, hit);
+
+carbon.close();</pre>
+
+<p>The <code>makeStr()</code> function is a utility routine that takes as input a standard JavaScript string and returns a Carbon-style "Pascal" string, which is a length byte followed by the characters of the string itself. Note that this only works correctly if the string is in fact under 256 characters; if it's longer, this will fail spectacularly.</p>
+
+<p>In line 9, the Carbon library is loaded from the system's Carbon framework.</p>
+
+<p>Line 11 declares the <code>stdAlert()</code> function, which will call the Carbon <code>StandardAlert</code> routine. It uses the default ABI, returns a 16-bit integer (which is a Carbon <code>OSErr</code> value), and accepts an integer (the alert type), two strings, a pointer to a parameter block, which we aren't using, and another integer, which is used to return the hit item. See Apple's documentation for <a class="external" href="http://developer.apple.com/legacy/mac/library/documentation/Carbon/Reference/Dialog_Manager/Reference/reference.html#//apple_ref/c/func/StandardAlert" title="http://developer.apple.com/legacy/mac/library/documentation/Carbon/Reference/Dialog_Manager/Reference/reference.html#//apple_ref/c/func/StandardAlert"><code>StandardAlert</code></a> for details.</p>
+
+<p>After that, we simply set up our parameters by using <code>makeStr()</code> to generate the two <code>Str255</code> strings we need, then call <code>stdAlert()</code>, which produces the following alert window:</p>
+
+<p><img alt="ctype-mac-dialog.png" class="default internal" src="/@api/deki/files/4559/=ctype-mac-dialog.png"></p>
+
+<p>The last thing we do is call <code>carbon.close()</code> to close the library when we're done using it.</p>
+
+<h3 id="在_LinuxPOSIX_上调用_LibC_例程">在 Linux/POSIX 上调用 LibC 例程</h3>
+
+<p>This example demonstrates how to use ctypes to call a libc function on Linux.</p>
+
+<pre class="brush: js">/* import js-ctypes */
+Components.utils.import("resource://gre/modules/ctypes.jsm");
+
+/* Open the library */
+try {
+    /* Linux */
+    var libc = ctypes.open("libc.so.6");
+} catch (e) {
+    /* Most other Unixes */
+    libc = ctypes.open("libc.so");
+}
+
+/* Import a function */
+var puts = libc.declare("puts",             /* function name */
+                        ctypes.default_abi, /* call ABI */
+                        ctypes.int,       /* return type */
+                        ctypes.char.ptr);   /* argument type */
+
+var ret = puts("Hello World from js-ctypes!");
+wge</pre>

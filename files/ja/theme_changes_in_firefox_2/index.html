@@ -1,0 +1,804 @@
+---
+title: Firefox 2 におけるテーマの変更点
+slug: Theme_changes_in_Firefox_2
+tags:
+  - Add-ons
+  - Themes
+translation_of: Archive/Themes/Theme_changes_in_Firefox_2
+---
+<p> </p><p>この記事は Firefox のテーマを <a href="ja/Firefox_2">Firefox 2</a> で動作するように更新する必要のある変更箇所を網羅しています。
+</p>
+<div class="note"><b>補足:</b> テーマの更新の仕方については <a href="ja/Updating_themes_for_Firefox_2">Updating themes for Firefox 2</a> の記事に書かれています。もし、テーマについて書きたい方があれば、ぜひその経験を記事にしてください！</div>
+<h2 id=".E3.83.86.E3.83.BC.E3.83.9E.E3.81.AE.E6.9B.B4.E6.96.B0.E3.81.AB.E5.BF.85.E8.A6.81.E3.81.AA.E3.83.96.E3.83.A9.E3.82.A6.E3.82.B6.E3.81.AE.E5.A4.89.E6.9B.B4.E7.82.B9" name=".E3.83.86.E3.83.BC.E3.83.9E.E3.81.AE.E6.9B.B4.E6.96.B0.E3.81.AB.E5.BF.85.E8.A6.81.E3.81.AA.E3.83.96.E3.83.A9.E3.82.A6.E3.82.B6.E3.81.AE.E5.A4.89.E6.9B.B4.E7.82.B9">テーマの更新に必要なブラウザの変更点</h2>
+<p>テーマの更新に必要な数多くのブラウザ内のファイルが変更、削除されています。以下の一覧表には、更新に必要な XUL ファイルとテーマに関係する CSS ファイルの両方を記載しています。
+</p>
+<table class="standard-table"> <tbody><tr>
+<td class="header"> ファイル名
+</td><td class="header"> CSS ファイル
+</td><td class="header"> 詳細
+</td></tr> <tr>
+<td> &lt;tt&gt;browser/base/searchDialog.xul&lt;/tt&gt;
+</td><td> &lt;tt&gt;browser/base/content/searchDialog.css&lt;/tt&gt;
+</td><td> Firefox 2 から削除
+</td></tr>
+<tr>
+<td> &lt;tt&gt;feeds/addFeedReader.xul&lt;/tt&gt;
+</td><td> &lt;tt&gt; feeds/addFeedReader.css &lt;/tt&gt;
+</td><td> 新しいファイル。フィードリーダを追加するための UI を提供。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;feeds/subscribe.xhtml&lt;/tt&gt;
+</td><td> &lt;tt&gt;feeds/subscribe.css&lt;/tt&gt;
+</td><td> 新しいファイル。RSS フィードを購読するための UI を提供。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;preferences/downloads.xul&lt;/tt&gt;
+</td><td> -
+</td><td> Firefox 2 から削除
+</td></tr>
+<tr>
+<td> &lt;tt&gt;preferences/general.xul&lt;/tt&gt;
+</td><td> -
+</td><td> Firefox 2 から削除
+</td></tr>
+<tr>
+<td> &lt;tt&gt;safebrowsing/warning-overlay.xul&lt;/tt&gt;
+</td><td> &lt;tt&gt;safebrowsing/browser-protection.css&lt;/tt&gt;
+</td><td> 新しいファイル。疑わしいフィッシングサイトを開いたとき、ブラウザ上に描画されるオーバーレイ。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;search/engineManager.xul&lt;/tt&gt;
+</td><td> &lt;tt&gt;engineManager.css&lt;/tt&gt;
+</td><td> 新しいファイル。検索エンジンマネージャの UI。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;toolkit/mozapps/preferences/fontscaling.xul&lt;/tt&gt;
+</td><td> -
+</td><td> Firefox 2 から削除
+</td></tr>
+</tbody></table>
+<h2 id=".E3.83.87.E3.83.95.E3.82.A9.E3.83.AB.E3.83.88.E3.83.86.E3.83.BC.E3.83.9E.E3.81.AE.E5.A4.89.E6.9B.B4.E7.82.B9" name=".E3.83.87.E3.83.95.E3.82.A9.E3.83.AB.E3.83.88.E3.83.86.E3.83.BC.E3.83.9E.E3.81.AE.E5.A4.89.E6.9B.B4.E7.82.B9">デフォルトテーマの変更点</h2>
+<p>以下の一覧表は、Firefox 2 のデフォルトテーマになされたすべての変更箇所です。この情報をあなたのテーマに必要な変更を見つけるための開始点にしてください。
+</p>
+<table class="standard-table"> <tbody><tr>
+<td class="header">ファイル
+</td><td class="header">変更点
+</td></tr> <tr>
+<td> &lt;tt&gt;browser/bookmarks/addBookmark.css&lt;/tt&gt;
+</td><td> 更新。Microsummary 関連の CSS を変更。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;browser/bookmarks/bookmarksProperties.css&lt;/tt&gt;
+</td><td> 新しいファイル。Microsummary 関連の CSS。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;browser/browser.css&lt;/tt&gt;
+</td><td> 更新の必要あり。新しい Microsummary のための CSS、検索フィールド、ブックマークメニュー項目のアイコン、その他を追加。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;browser/dropmark-nav-small.png&lt;/tt&gt;
+</td><td> 新しいファイル。ナビゲーション(戻る、進む) ボタンのドロップダウンメニューの矢印(小さいアイコン使用時)。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;browser/dropmark-nav.png&lt;/tt&gt;
+</td><td> 新しいファイル。ナビゲーションボタンのドロップダウンメニューの矢印。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;browser/engineManager.css&lt;/tt&gt;
+</td><td> 新しいファイル。検索エンジンマネージャに使用される CSS。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;browser/feeds/addFeedReader.css&lt;/tt&gt;
+</td><td> 新しいファイル。新しいフィードリーダを追加するウィンドウに使用される CSS。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;browser/feeds/feedIcon.png&lt;/tt&gt;
+</td><td> 新しいファイル。RSS フィードアイコン。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;browser/feeds/feedIcon16.png&lt;/tt&gt;
+</td><td> 新しいファイル。RSS フィードアイコンの 16×16 ピクセル版
+</td></tr>
+<tr>
+<td> &lt;tt&gt;browser/feeds/subscribe.css&lt;/tt&gt;
+</td><td> 新しいファイル。ニュースフィードを購読するウィンドウに使用される CSS。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;browser/Go-rtl.png&lt;/tt&gt;
+</td><td> 新しいファイル。URL フィールドの左側に位置する場合の移動アイコン。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;browser/preferences/preferences.css&lt;/tt&gt;
+</td><td> オプションウィンドウの CSS ファイル。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;browser/safebrowsing/browser-protection.css&lt;/tt&gt;
+</td><td> 新しいファイル。ユーザに詐欺サイトであることを示す警告ウィンドウと URL バーのアイコンのための CSS。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;browser/safebrowsing/close16x16.png&lt;/tt&gt;
+</td><td> 新しいファイル。安全なブラウズの警告ウィンドウに閉じるためのボタンとして表示されるアイコン。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;browser/safebrowsing/dim.png&lt;/tt&gt;
+</td><td> 新しいファイル。安全なブラウズの警告ウィンドウが表示されるときにウィンドウ内のコンテンツを "薄暗くする" ためのグラフィックオーバーレイ。これにはウィンドウ内のコンテンツを透かして見えるように透過色を使用するべきです。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;browser/safebrowsing/tail.png&lt;/tt&gt;
+</td><td> 新しいファイル。サイトが詐欺かもしれないことを示すときに使用する、吹き出しスタイルウィンドウの "しっぽ"。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;browser/safebrowsing/warning16x16.png&lt;/tt&gt;
+</td><td> 新しいファイル。安全なブラウズの警告ウィンドウが表示されるときに、URL バーに表示される警告アイコンの 16×16 ピクセル版。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;browser/safebrowsing/warning24x24.png&lt;/tt&gt;
+</td><td> 新しいファイル。安全なブラウズの警告ウィンドウ内に表示される警告アイコン。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;browser/search-bar-background-mid.png&lt;/tt&gt;
+</td><td> 新しいファイル。検索バーの中央部分の背景。バーの終端は分割されています。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;browser/search-bar-background.png&lt;/tt&gt;
+</td><td> 削除されたファイル。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;browser/Search-bar.png&lt;/tt&gt;
+</td><td> 削除されたファイル。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;browser/Search-go-rtl.png&lt;/tt&gt;
+</td><td> 新しいファイル。検索バーの左端に位置するときに表示される移動ボタン。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;browser/Search-go.png&lt;/tt&gt;
+</td><td> 新しいファイル。検索バーの右端に位置するときに表示される移動ボタン。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;browser/Search-provider-bkgnd-rtl.png&lt;/tt&gt;
+</td><td> 新しいファイル。検索プロバイダアイコンが検索バーの左端に位置するときに、その陰に描画される背景。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;browser/Search-provider-bkgnd.png&lt;/tt&gt;
+</td><td> 新しいファイル。検索プロバイダアイコンが検索バーの右端に位置するときに、その陰に描画される背景。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;global/about.css&lt;/tt&gt;
+</td><td> 新しいファイル。アプリケーションの About ダイアログに使用される CSS。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;global/alltabs-box-bkgnd.png&lt;/tt&gt;
+</td><td> 新しいファイル。タブバーの右端に位置する "すべてのタブ" ドロップダウンメニューの背景。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;global/alltabs-box-overflow-bkgnd.png&lt;/tt&gt;
+</td><td> 新しいファイル。タブが多すぎてタブバーをスクロールするときの、"すべてのタブ" ドロップダウンメニューの背景。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;global/browser.css&lt;/tt&gt;
+</td><td> 改訂。メインブラウザウィンドウの新しいスタイルに対応。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;global/globalBindings.xml&lt;/tt&gt;
+</td><td> 更新。タブごとの閉じるボタンを含むタブバーの変更に対応。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;global/icons/alltabs.png&lt;/tt&gt;
+</td><td> 現在は未使用。最近のテーマの草案からは削除。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;global/inactivetab-left.png&lt;/tt&gt;
+</td><td> 削除されたファイル。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;global/inactivetab-right.png&lt;/tt&gt;
+</td><td> 削除されたファイル。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;global/menu.css&lt;/tt&gt;
+</td><td> 更新。新しいスタイルを追加。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;global/notification.css&lt;/tt&gt;
+</td><td> 新しいファイル。ブラウザウィンドウの上部に表示される通知バーのスタイルを定義。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;global/scrollbox/autorepeat-arrow-dn-dis.gif&lt;/tt&gt;
+</td><td> 新しいファイル。スクロールボックスの a disabled autorepeat down arrow に表示されるアイコン。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;global/scrollbox/autorepeat-arrow-dn.gif&lt;/tt&gt;
+</td><td> 新しいファイル。スクロールボックスの an autorepeat down arrow に表示されるアイコン。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;global/scrollbox/autorepeat-arrow-up-dis.gif&lt;/tt&gt;
+</td><td> 新しいファイル。スクロールボックスの a disabled autorepeat up arrow に表示されるアイコン。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;global/scrollbox/autorepeat-arrow-up.gif&lt;/tt&gt;
+</td><td> 新しいファイル。スクロールボックスの an autorepeat up arrow に表示されるアイコン。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;global/scrollbox.css&lt;/tt&gt;
+</td><td> 更新の必要あり。新しいスタイルを追加。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;global/tab-arrow-end-bkgnd.png&lt;/tt&gt;
+</td><td> 新しいファイル。タブバーの右端に位置する、タブバーをスクロールする矢印の背景。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;global/tab-arrow-end.png&lt;/tt&gt;
+</td><td> 新しいファイル。タブバーの右端に位置する、タブバーをスクロールボタンの矢印。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;global/tab-arrow-start-bkgnd.png&lt;/tt&gt;
+</td><td> 新しいファイル。タブバーの左端に位置する、タブバーをスクロールする矢印の背景。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;global/tab-arrow-start.png&lt;/tt&gt;
+</td><td> 新しいファイル。タブバーの左端に位置する、タブバーをスクロールボタンの矢印。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;global/tab-left.png&lt;/tt&gt;
+</td><td> 新しいファイル。タブの左端。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;global/tab-middle.png&lt;/tt&gt;
+</td><td> 新しいファイル。タブの中央部分。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;global/tab-right.png&lt;/tt&gt;
+</td><td> 新しいファイル。タブの右端。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;global/tabbrowser-tabs-bkgnd.png&lt;/tt&gt;
+</td><td> 新しいファイル。すべてのタブの陰に表示される、タブバーの背景。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;global/toolbar.css&lt;/tt&gt;
+</td><td> 更新の必要あり。新しいスタイルを追加。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;mozapps/extensions/about.css&lt;/tt&gt;
+</td><td> 更新。いくつかの全く同じスタイルがあるため、スタイル名を単一化。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;mozapps/extensions/extensions.css&lt;/tt&gt;
+</td><td> 更新。アドオンマネージャウィンドウの CSS。Firefox 2 のアドオンマネージャの新しい機能に対応。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;mozapps/extensions/itemDisabledFader.png&lt;/tt&gt;
+</td><td> 新しいファイル。アドオンマネージャで無効化されたアイテムのオーバーレイとして使用する半透明の PNG。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;mozapps/extensions/itemEnabledFader.png&lt;/tt&gt;
+</td><td> 新しいファイル。アドオンマネージャで有効なアイテムのオーバーレイとして使用する半透明の PNG。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;mozapps/extensions/notifyBadges.png&lt;/tt&gt;
+</td><td> 新しいファイル。アドオンマネージャウィンドウ内でアドオンの状態を示すためのアイコン。デフォルトテーマでは次のようになります:
+<p><img alt="Image:notifyBadges.png"><br>
+</p>
+<ul><li> はじめのアイコン(緑色) は、アドオンが更新可能であることを示す。
+</li><li> 2番目のアイコン(黄色) は、"不許可リストの項目に含まれているため、確認が必要"。
+</li><li> 3番目のアイコン(赤色) は、アドオンがユーザによって、またはアプリケーションと互換性が無いために無効化されていることを示す。
+</li><li> 4番目のアイコン(青色) は、"(これが何を意味するのか分かりません)"。{{ 訳注("未使用？") }}
+</li></ul>
+</td></tr>
+<tr>
+<td> &lt;tt&gt;mozapps/extensions/question.png&lt;/tt&gt;
+</td><td> 新しいファイル。アドオンマネージャで更新を確認するときに使用されるアイコン。更新が見つからない場合は、ウィンドウ上部に表れるメッセージ帯の左側に表示されます。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;mozapps/extensions/update.css&lt;/tt&gt;
+</td><td> Firefox の更新ウィザードの CSS。更新ウィザードのデザインが変更されたため、スタイルは少ない。
+</td></tr>
+<tr>
+<td> &lt;tt&gt;mozapps/extensions/viewButtons.png&lt;/tt&gt;
+</td><td> 新しいファイル。アドオンマネージャで利用可能なときに表示される各ビューのアイコン。デフォルトテーマでは次のようになります:
+<p><img alt="Image:viewButtons.png"><br>
+上段のアイコンは以下のものが利用できないときの淡色表示版です。はじめのアイコンは拡張機能ビュー用。2番目のアイコンはテーマビュー用。3番目はロケール用、4番目はプラグイン用、5番目は更新用。6番目はインストール用です。
+</p>
+</td></tr>
+<tr>
+<td> &lt;tt&gt;mozapps/pref&lt;/tt&gt;
+</td><td> このディレクトリ全体は、すでに Firefox 2 で使用されていないため、削除するべきです。
+</td></tr> </tbody></table>
+<h3 id="browser_.E3.81.AE.E5.A4.89.E6.9B.B4.E7.82.B9" name="browser_.E3.81.AE.E5.A4.89.E6.9B.B4.E7.82.B9">&lt;tt&gt;browser&lt;/tt&gt; の変更点</h3>
+<h4 id="bookmarks.2FaddBookmark.css" name="bookmarks.2FaddBookmark.css">&lt;tt&gt;bookmarks/addBookmark.css&lt;/tt&gt;</h4>
+<p>&lt;tt&gt;addBookmarks.css&lt;/tt&gt; ファイルの最初に、必ず次の行を追加してください:
+</p>
+<pre>@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
+</pre>
+<p>また、Microsummary ピッカーの体裁を提供するため、いくつかの Microsummary 関連の CSS も追加する必要があります。これらは、Microsammary が利用可能でないときに、ピッカーが編集可能なメニューリストではなく、通常のテキストボックスに見えるようするために使用されます。
+</p>
+<ul><li> <code>menulist#name{{ mediawiki.external('droppable=\"false\"') }}</code>
+</li><li> <code>menulist#name{{ mediawiki.external('droppable=\"false\"') }} &gt; .menulist-editable-box</code>
+</li><li> <code>menulist#name{{ mediawiki.external('droppable=\"false\"') }} &gt; .menulist-editable-box &gt; html|*.textbox-input</code>
+</li><li> <code>menulist#name{{ mediawiki.external('droppable=\"false\"') }} &gt; .menulist-dropmarker</code>
+</li><li> <code>menulist#name{{ mediawiki.external('droppable=\"false\"') }} &gt; menupopup</code>
+</li></ul>
+<p>このファイルは &lt;tt&gt; addBookmark2.xul&lt;/tt&gt; をスタイル付けします。
+</p>
+<h4 id="bookmarks.2FbookmarksProperties.css" name="bookmarks.2FbookmarksProperties.css">&lt;tt&gt;bookmarks/bookmarksProperties.css&lt;/tt&gt;</h4>
+<p>Firefox 2 で追加された新しいファイルです。&lt;tt&gt;addBookmark.css&lt;/tt&gt; に追加したものと同じ内容の CSS コードです。このファイルは &lt;tt&gt;bookmarksProperties.xul&lt;/tt&gt; をスタイル付けします。
+</p>
+<div class="note"><b>補足:</b> この CSS は将来的に別々のファイルに移動され、両方から参照されます。</div>
+<h4 id="browser.css" name="browser.css">&lt;tt&gt;browser.css&lt;/tt&gt;</h4>
+<p>以下のスタイルは Firefox 1.5 で使用され、Firefox 2 では使用されていないものなので削除してください:
+</p>
+<ul><li> <code>#bookmarks-button:active</code>
+</li><li> <code>#copy-button:active</code>
+</li><li> <code>#cut-button:active</code>
+</li><li> <code>#downloads-button:active</code>
+</li><li> <code>#forward-button{{ mediawiki.external('buttondown=\"true\"') }}</code>
+</li><li> <code>#history-button:active</code>
+</li><li> <code>#home-button:active</code>
+</li><li> <code>#mail-button</code>
+</li><li> <code>#mail-button:active</code>
+</li><li> <code>#mail-button{{ mediawiki.external('disabled=\"true\"') }}</code>
+</li><li> <code>#mail-button{{ mediawiki.external('open=\"true\"') }}</code>
+</li><li> <code>#new-tab-button:active</code>
+</li><li> <code>#new-tab-button{{ mediawiki.external('checked=\"true\"') }}</code>
+</li><li> <code>#new-window-button:active</code>
+</li><li> <code>#new-window-button{{ mediawiki.external('checked=\"true\"') }}</code>
+</li><li> <code>#paste-button:active</code>
+</li><li> <code>#print-button:active</code>
+</li><li> <code>#reload-button:active</code>
+</li><li> <code>#stop-button:active</code>
+</li><li> <code>.messageButton</code>
+</li><li> <code>.messageImage</code>
+</li><li> <code>.messageText</code>
+</li><li> <code>browsermessage</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #bookmarks-button:active</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #copy-button:active</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #cut-button:active</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #downloads-button:active</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #history-button:active</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #home-button:active</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #mail-button</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #mail-button:active</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #mail-button{{ mediawiki.external('disabled=\"true\"') }}</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #mail-button{{ mediawiki.external('open=\"true\"') }}</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #new-tab-button:active</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #new-window-button:active</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #paste-button:active</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #print-button:active</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #reload-button:active</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #stop-button:active</code>
+</li><li> <code>toolbar{{ mediawiki.external('mode=\"icons\"') }} .toolbarbutton-text</code>
+</li><li> <code>toolbar{{ mediawiki.external('mode=\"text\"') }} .toolbarbutton-1 &gt; .toolbarbutton-text</code>
+</li><li> <code>toolbar{{ mediawiki.external('mode=\"text\"') }} .toolbarbutton-1 &gt; stack &gt; toolbarbutton &gt; .toolbarbutton-text</code>
+</li><li> <code>toolbar{{ mediawiki.external('mode=\"text\"') }} .toolbarbutton-icon</code>
+</li></ul>
+<p>以下のスタイルは、Firefox 2 とあなたのテーマの互換性を保つために追加する必要のあるものです:
+</p>
+<ul><li> <code>#back-button .toolbarbutton-menubutton-dropmarker</code>
+</li><li> <code>#back-button:hover</code>
+</li><li> <code>#back-button:hover .toolbarbutton-menubutton-dropmarker</code>
+</li><li> <code>#back-button:hover:active</code>
+</li><li> <code>#back-button:hover:active .toolbarbutton-menubutton-dropmarker</code>
+</li><li> <code>#back-button{{ mediawiki.external('buttondown=\"true\"') }} &gt; .toolbarbutton-menubutton-dropmarker</code>
+</li><li> <code>#back-button{{ mediawiki.external('buttonover=\"true\"') }}</code>
+</li><li> <code>#back-button{{ mediawiki.external('buttonover=\"true\"') }} &gt; .toolbarbutton-menubutton-dropmarker</code>
+</li><li> <code>#back-button{{ mediawiki.external('disabled=\"true\"') }} .toolbarbutton-menubutton-dropmarker</code>
+</li><li> <code>#back-button{{ mediawiki.external('open=\"true\"') }}</code>
+</li><li> <code>#bookmarks-button:hover</code>
+</li><li> <code>#bookmarks-button:hover:active</code>
+</li><li> <code>#bookmarks-button{{ mediawiki.external('checked=\"true\"') }}</code>
+</li><li> <code>#copy-button:hover</code>
+</li><li> <code>#copy-button:hover:active</code>
+</li><li> <code>#cut-button:hover</code>
+</li><li> <code>#cut-button:hover:active</code>
+</li><li> <code>#downloads-button:hover</code>
+</li><li> <code>#downloads-button:hover:active</code>
+</li><li> <code>#feed-button{{ mediawiki.external('chromedir=\"rtl\"') }}{{ mediawiki.external('feeds') }}:active</code>
+</li><li> <code>#feed-button{{ mediawiki.external('chromedir=\"rtl\"') }}{{ mediawiki.external('feeds') }}:hover</code>
+</li><li> <code>#feed-button{{ mediawiki.external('feeds') }}:active</code>
+</li><li> <code>#feed-button{{ mediawiki.external('feeds') }}:hover</code>
+</li><li> <code>#forward-button .toolbarbutton-menubutton-dropmarker</code>
+</li><li> <code>#forward-button:hover</code>
+</li><li> <code>#forward-button:hover .toolbarbutton-menubutton-dropmarker</code>
+</li><li> <code>#forward-button:hover:active</code>
+</li><li> <code>#forward-button:hover:active .toolbarbutton-menubutton-dropmarker</code>
+</li><li> <code>#forward-button{{ mediawiki.external('buttondown=\"true\"') }} &gt; .toolbarbutton-menubutton-dropmarker</code>
+</li><li> <code>#forward-button{{ mediawiki.external('buttonover=\"true\"') }}</code>
+</li><li> <code>#forward-button{{ mediawiki.external('buttonover=\"true\"') }} &gt; .toolbarbutton-menubutton-dropmarker</code>
+</li><li> <code>#forward-button{{ mediawiki.external('disabled=\"true\"') }} .toolbarbutton-menubutton-dropmarker</code>
+</li><li> <code>#go-button:hover</code>
+</li><li> <code>#go-button{{ mediawiki.external('chromedir=\"rtl\"') }}</code>
+</li><li> <code>#history-button:hover:active</code>
+</li><li> <code>#history-button:hover:active</code>
+</li><li> <code>#history-button{{ mediawiki.external('checked=\"true\"') }}</code>
+</li><li> <code>#home-button:hover</code>
+</li><li> <code>#home-button:hover:active</code>
+</li><li> <code>#new-tab-button:hover</code>
+</li><li> <code>#new-tab-button:hover:active</code>
+</li><li> <code>#new-window-button:hover</code>
+</li><li> <code>#new-window-button:hover:active</code>
+</li><li> <code>#paste-button:hover</code>
+</li><li> <code>#paste-button:hover:active</code>
+</li><li> <code>#print-button:hover</code>
+</li><li> <code>#print-button:hover:active</code>
+</li><li> <code>#reload-button:hover</code>
+</li><li> <code>#reload-button:hover:active</code>
+</li><li> <code>#searchbar{{ mediawiki.external('empty=\"true\"') }} .searchbar-textbox</code>
+</li><li> <code>#stop-button:hover</code>
+</li><li> <code>#stop-button:hover:active</code>
+</li><li> <code>#urlbar-icons-spacer</code>
+</li><li> <code>#urlbar-spacer</code>
+</li><li> <code>#urlbar{{ mediawiki.external('level=\"high\"') }} #lock-icon:active</code>
+</li><li> <code>#urlbar{{ mediawiki.external('level=\"high\"') }} #lock-icon:hover</code>
+</li><li> <code>#urlbar{{ mediawiki.external('level=\"low\"') }} #lock-icon:active</code>
+</li><li> <code>#urlbar{{ mediawiki.external('level=\"low\"') }} #lock-icon:hover</code>
+</li><li> <code>.autocomplete-treebody::-moz-tree-cell(suggesthint)</code>
+</li><li> <code>.autocomplete-treebody::-moz-tree-cell-text(suggestfirst, treecolAutoCompleteComment)</code>
+</li><li> <code>.autocomplete-treebody::-moz-tree-cell-text(suggesthint, treecolAutoCompleteComment)</code>
+</li><li> <code>.bookmark-item{{ mediawiki.external('livemark') }}</code>
+</li><li> <code>.openintabs-menuitem</code>
+</li><li> <code>.toolbarbutton-icon</code>
+</li><li> <code>.toolbarbutton-menubutton-dropmarker</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #back-button .toolbarbutton-menubutton-dropmarker</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #back-button:hover</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #back-button:hover .toolbarbutton-menubutton-dropmarker</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #back-button:hover:active</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #back-button:hover:active .toolbarbutton-menubutton-dropmarker</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #back-button{{ mediawiki.external('buttondown=\"true\"') }} &gt; .toolbarbutton-menubutton-dropmarker</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #back-button{{ mediawiki.external('buttonover=\"true\"') }} &gt; .toolbarbutton-menubutton-dropmarker</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #back-button{{ mediawiki.external('disabled=\"true\"') }} .toolbarbutton-menubutton-dropmarker</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #bookmarks-button:hover</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #bookmarks-button:hover:active</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #copy-button:hover</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #copy-button:hover:active</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #cut-button:hover</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #cut-button:hover:active</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #downloads-button:hover</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #downloads-button:hover:active</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #forward-button .toolbarbutton-menubutton-dropmarker</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #forward-button:hover</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #forward-button:hover .toolbarbutton-menubutton-dropmarker</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #forward-button:hover:active</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #forward-button:hover:active .toolbarbutton-menubutton-dropmarker</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #forward-button{{ mediawiki.external('buttondown=\"true\"') }} &gt; .toolbarbutton-menubutton-dropmarker</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #forward-button{{ mediawiki.external('buttonover=\"true\"') }} &gt; .toolbarbutton-menubutton-dropmarker</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #forward-button{{ mediawiki.external('disabled=\"true\"') }} .toolbarbutton-menubutton-dropmarker</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #history-button:hover</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #history-button:hover:active</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #home-button:hover</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #home-button:hover:active</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #home-button{{ mediawiki.external('disabled=\"true\"') }}</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #new-tab-button:hover</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #new-tab-button:hover:active</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #new-window-button:hover</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #new-window-button:hover:active</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #paste-button:hover</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #paste-button:hover:active</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #print-button:hover</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #print-button:hover:active</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #reload-button:hover</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #reload-button:hover:active</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #stop-button:hover</code>
+</li><li> <code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #stop-button:hover:active</code>
+</li><li> <code>toolbarbutton.bookmark-item-microsummarized</code>
+</li></ul>
+<p>また、他のスタイルも変更する必要があります。
+</p>
+<h4 id="searchbar.css" name="searchbar.css">&lt;tt&gt;searchbar.css&lt;/tt&gt;</h4>
+<p>以下のスタイルは、Firefox 2 では使用されていないので削除してください:
+</p>
+<ul><li> <code>.searchbar-dropmarker</code>
+</li></ul>
+<p>以下のスタイルは、Firefox 2 とあなたのテーマの互換性を保つために追加する必要のあるものです:
+</p>
+<ul><li> <code>#search-container{{ mediawiki.external('chromedir=\"rtl\"') }} .search-go-button</code>
+</li><li> <code>#search-container{{ mediawiki.external('chromedir=\"rtl\"') }} .searchbar-engine-button</code>
+</li><li> <code>.search-go-button</code>
+</li><li> <code>.search-go-button:hover</code>
+</li><li> <code>.search-go-button:hover:active</code>
+</li><li> <code>.search-go-button{{ mediawiki.external('disabled=\"true\"') }}</code>
+</li><li> <code>.searchbar-engine-button</code>
+</li><li> <code>.searchbar-engine-button:hover</code>
+</li><li> <code>.searchbar-engine-button{{ mediawiki.external('addengines=\"true\"') }}</code>
+</li><li> <code>.searchbar-engine-button{{ mediawiki.external('open=\"true\"') }}</code>
+</li><li> <code>.searchbar-engine-menuitem{{ mediawiki.external('selected=\"true\"') }} &gt; .menu-iconic-text</code>
+</li><li> <code>.searchbar-left</code>
+</li></ul>
+<p>もちろん、他のスタイルへ変更することもできます。
+</p>
+<h4 id="preferences.2Fpreferences.css" name="preferences.2Fpreferences.css">&lt;tt&gt;preferences/preferences.css&lt;/tt&gt;</h4>
+<p>以下のスタイルは、Firefox 2 では使用されていないので削除してください:
+</p>
+<ul><li> <code>#browserStartupHomepage</code>
+</li><li> <code>#browserStartupHomepage</code>
+</li><li> <code>#paneDownloads description</code>
+</li><li> <code>#paneGeneral description</code>
+</li><li> <code>radio{{ mediawiki.external('pane=paneDownloads') }}</code>
+</li><li> <code>radio{{ mediawiki.external('pane=paneDownloads') }}:active</code>
+</li></ul>
+<p>以下のスタイルは、Firefox 2 とあなたのテーマの互換性を保つために追加する必要のあるものです:
+</p>
+<ul><li> <code>#paneContent description</code>
+</li><li> <code>#paneMain description</code>
+</li><li> <code>#paneSecurity description</code>
+</li><li> <code>radio{{ mediawiki.external('pane=paneAdvanced') }}:hover</code>
+</li><li> <code>radio{{ mediawiki.external('pane=paneAdvanced') }}{{ mediawiki.external('selected=\"true\"') }}</code>
+</li><li> <code>radio{{ mediawiki.external('pane=paneContent') }}:hover</code>
+</li><li> <code>radio{{ mediawiki.external('pane=paneContent') }}{{ mediawiki.external('selected=\"true\"') }}</code>
+</li><li> <code>radio{{ mediawiki.external('pane=paneFeeds') }}</code>
+</li><li> <code>radio{{ mediawiki.external('pane=paneFeeds') }}:active</code>
+</li><li> <code>radio{{ mediawiki.external('pane=paneFeeds') }}:hover</code>
+</li><li> <code>radio{{ mediawiki.external('pane=paneFeeds') }}{{ mediawiki.external('selected=\"true\"') }}</code>
+</li><li> <code>radio{{ mediawiki.external('pane=paneGeneral') }}:hover</code>
+</li><li> <code>radio{{ mediawiki.external('pane=paneGeneral') }}{{ mediawiki.external('selected=\"true\"') }}</code>
+</li><li> <code>radio{{ mediawiki.external('pane=paneMain') }}</code>
+</li><li> <code>radio{{ mediawiki.external('pane=paneMain') }}:active</code>
+</li><li> <code>radio{{ mediawiki.external('pane=paneMain') }}:hover</code>
+</li><li> <code>radio{{ mediawiki.external('pane=paneMain') }}{{ mediawiki.external('selected=\"true\"') }}</code>
+</li><li> <code>radio{{ mediawiki.external('pane=panePrivacy') }}:hover</code>
+</li><li> <code>radio{{ mediawiki.external('pane=panePrivacy') }}{{ mediawiki.external('selected=\"true\"') }}</code>
+</li><li> <code>radio{{ mediawiki.external('pane=paneSecurity') }}</code>
+</li><li> <code>radio{{ mediawiki.external('pane=paneSecurity') }}:active</code>
+</li><li> <code>radio{{ mediawiki.external('pane=paneSecurity') }}:hover</code>
+</li><li> <code>radio{{ mediawiki.external('pane=paneSecurity') }}{{ mediawiki.external('selected=\"true\"') }}</code>
+</li><li> <code>radio{{ mediawiki.external('pane=paneTabs') }}:hover</code>
+</li><li> <code>radio{{ mediawiki.external('pane=paneTabs') }}{{ mediawiki.external('selected=\"true\"') }}</code>
+</li></ul>
+<p>もちろん、他のスタイルへ変更することもできます。
+</p>
+<h4 id="feeds.2FaddFeedReader.css" name="feeds.2FaddFeedReader.css">&lt;tt&gt;feeds/addFeedReader.css&lt;/tt&gt;</h4>
+<p>Firefox 2 で追加された新しいファイルです。これは、&lt;tt&gt;browser/feeds/addFeedReader.xul&lt;/tt&gt; で定義された、新しいフィードリーダを追加するウィンドウのテーマです。
+</p>
+<ul><li> <code>#imageBox</code>
+<ul><li>フィードアイコンを表示する枠。
+</li></ul>
+</li><li> <code>#content</code>
+<ul><li> ウィンドウのコンテンツエリアのためのスタイル。
+</li></ul>
+</li><li> <code>#siteLabel</code>
+<ul><li> サイトラベルのためのスタイル。
+</li></ul>
+</li></ul>
+<h4 id="feeds.2Fsubscribe.css" name="feeds.2Fsubscribe.css">&lt;tt&gt;feeds/subscribe.css&lt;/tt&gt;</h4>
+<p>Firefox 2 で追加された新しいファイルです。これは、&lt;tt&gt;browser/feeds/subscribe.xhtml&lt;/tt&gt; で使用される、RSS フィードを購読するウィンドウのテーマです。
+</p>
+<ul><li> <code>#application</code>
+</li><li> <code>#feedBody</code>
+</li><li> <code>#feedChangeSubscribeOptions</code>
+</li><li> <code>#feedError</code>
+</li><li> <code>#feedHeader</code>
+</li><li> <code>#feedHeader{{ mediawiki.external('firstrun=\"true\"') }}</code>
+</li><li> <code>#feedHeader{{ mediawiki.external('firstrun=\"true\"') }} #feedIntroText</code>
+</li><li> <code>#feedHeader{{ mediawiki.external('firstrun=\"true\"') }} #feedSubscribeLine</code>
+</li><li> <code>#feedIntroText</code>
+</li><li> <code>#feedSubscribeDoneChangingOptions</code>
+</li><li> <code>#feedSubscribeHandleText</code>
+</li><li> <code>#feedSubscribeHandler</code>
+</li><li> <code>#feedSubscribeLine</code>
+</li><li> <code>#feedSubscribeOptions</code>
+</li><li> <code>#feedSubscribeOptionsGroup</code>
+</li><li> <code>#feedSubscribeOptionsGroupTitle</code>
+</li><li> <code>#feedTitleContainer</code>
+</li><li> <code>#feedTitleImage</code>
+</li><li> <code>#feedTitleLink</code>
+</li><li> <code>#readerContainer</code>
+</li><li> <code>#readerGroup</code>
+</li><li> <code>#readers</code>
+</li><li> <code>#readers &gt; listitem</code>
+</li><li> <code>.feedEntryContent</code>
+</li><li> <code>.feedSubscribeButton</code>
+</li><li> <code>.feedSubscribeButton .button-icon</code>
+</li><li> <code>.feedSubscribeLink</code>
+</li><li> <code>.feedSubscribeLinkBox</code>
+</li><li> <code>.field</code>
+</li><li> <code>.link</code>
+</li><li> <code>.link:hover:active</code>
+</li><li> <code>.plain</code>
+</li><li> <code>.plain &gt; .button-box</code>
+</li><li> <code>.plain:focus &gt; .button-box</code>
+</li><li> <code>.styleLessBorderLess</code>
+</li></ul>
+<p>デフォルトテーマには、<code>a{{ mediawiki.external('href') }} img</code> および <code>body</code>, <code>h1</code>, <code>h2</code>, <code>html</code> のためのスタイルも含まれます。
+</p>
+<h4 id="safebrowser.2Fbrowser-protection.css" name="safebrowser.2Fbrowser-protection.css">&lt;tt&gt;safebrowser/browser-protection.css&lt;/tt&gt;</h4>
+<p>Firefox 2 で追加された新しいファイルです。ブラウザ防御機能のテーマです。以下のスタイルは、ユーザが疑わしいフィッシングサイトを開いたときに表れるウィンドウに対応するために、テーマに含まれている必要があります:
+</p>
+<ul><li> <code>#safebrowsing-dim-area-canvas</code>
+</li><li> <code>#safebrowsing-page-canvas</code>
+</li><li> <code>#safebrowsing-palm-close</code>
+</li><li> <code>#safebrowsing-palm-close-container</code>
+</li><li> <code>#safebrowsing-palm-google-logo</code>
+</li><li> <code>#safebrowsing-palm-message</code>
+</li><li> <code>#safebrowsing-palm-message-actionbox</code>
+</li><li> <code>#safebrowsing-palm-message-content</code>
+</li><li> <code>#safebrowsing-palm-message-tail</code>
+</li><li> <code>#safebrowsing-palm-message-tail-container</code>
+</li><li> <code>#safebrowsing-palm-message-titlebox</code>
+</li><li> <code>.safebrowsing-palm-bigtext</code>
+</li><li> <code>.safebrowsing-palm-fixed-width</code>
+</li><li> <code>.safebrowsing-palm-paragraph</code>
+</li><li> <code>.safebrowsing-palm-smalltext</code>
+</li></ul>
+<p>以下のスタイルは、URL バー内の、サイトが安全かどうか示すアイコンの表示に使用されます:
+</p>
+<ul><li> <code>#safebrowsing-urlbar-icon</code>
+</li><li> <code>#safebrowsing-urlbar-icon{{ mediawiki.external('level=\"safe\"') }}</code>
+</li><li> <code>#safebrowsing-urlbar-icon{{ mediawiki.external('level=\"warn\"') }}</code>
+</li></ul>
+<h4 id="engineManager.css" name="engineManager.css">&lt;tt&gt;engineManager.css&lt;/tt&gt;</h4>
+<p>以下のスタイルは、テーマに含まれている必要があります。Firefox 2 で追加された新しいファイルです。
+</p>
+<ul><li> <code>#engineList treechildren::-moz-tree-image(engineName)</code>
+</li></ul>
+<h3 id="global.E3.81.AE.E5.A4.89.E6.9B.B4.E7.82.B9" name="global.E3.81.AE.E5.A4.89.E6.9B.B4.E7.82.B9">&lt;tt&gt;global&lt;/tt&gt;の変更点</h3>
+<h4 id="about.css" name="about.css">&lt;tt&gt;about.css&lt;/tt&gt;</h4>
+<p>Firefox 2 のための新しいファイルです。これは Firefox の about ダイアログのテーマです。少なくとも以下のスタイルを提供する必要があります:
+</p>
+<ul><li> <code>#aboutLogoContainer</code>
+</li><li> <code>#aboutPageContainer</code>
+</li><li> <code>#version</code>
+</li></ul>
+<p>デフォルトテーマには、<code>body</code> および <code>html</code>, <code>img</code>, <code>ul</code>, <code>ul &gt; li</code> のためのスタイルも含まれます。
+</p>
+<h4 id="browser.css_2" name="browser.css_2">&lt;tt&gt;browser.css&lt;/tt&gt;</h4>
+<p>以下のスタイルは Firefox 1.5 で使用され、Firefox 2 では削除されています:
+</p>
+<ul><li> <code>tab:focus</code>
+</li><li> <code>tab{{ mediawiki.external('beforeselected=\"true\"') }} &gt; .tab-image-right</code>
+</li><li> <code>tab{{ mediawiki.external('selected=\"true\"') }} &gt; .tab-image-left</code>
+</li><li> <code>tab{{ mediawiki.external('selected=\"true\"') }} &gt; .tab-image-middle</code>
+</li><li> <code>tab{{ mediawiki.external('selected=\"true\"') }} &gt; .tab-image-right</code>
+</li></ul>
+<p>以下は、Firefox 2 で追加された新しいスタイルです:
+</p>
+<ul><li> <code>.alltabs-item &gt; .menu-iconic-left &gt; .menu-iconic-icon</code>
+</li><li> <code>.alltabs-item{{ mediawiki.external('busy') }} &gt; .menu-iconic-left &gt; .menu-iconic-icon</code>
+</li><li> <code>.alltabs-item{{ mediawiki.external('selected=\"true\"') }}</code>
+</li><li> <code>.tab-close-button</code>
+</li><li> <code>.tab-close-button &gt; .toolbarbutton-icon</code>
+</li><li> <code>.tab-close-button-placeholder</code>
+</li><li> <code>.tab-close-button:hover</code>
+</li><li> <code>.tab-close-button:hover:active</code>
+</li><li> <code>.tabbrowser-arrowscrollbox &gt; .scrollbutton-down</code>
+</li><li> <code>.tabbrowser-arrowscrollbox &gt; .scrollbutton-down:hover</code>
+</li><li> <code>.tabbrowser-arrowscrollbox &gt; .scrollbutton-up</code>
+</li><li> <code>.tabbrowser-arrowscrollbox &gt; .scrollbutton-up:hover</code>
+</li><li> <code>.tabbrowser-tab &gt; .tab-close-button</code>
+</li><li> <code>.tabbrowser-tab:not({{ mediawiki.external('selected=\"true\"') }}) &gt; .tab-close-button</code>
+</li><li> <code>.tabbrowser-tab:not({{ mediawiki.external('selected=\"true\"') }}):hover &gt; .tab-close-button</code>
+</li><li> <code>.tabbrowser-tab{{ mediawiki.external('selected=\"true\"') }} &gt; .tab-close-button</code>
+</li><li> <code>.tabbrowser-tab{{ mediawiki.external('selected=\"true\"') }} &gt; .tab-close-button:hover</code>
+</li><li> <code>.tabbrowser-tab{{ mediawiki.external('selected=\"true\"') }} &gt; .tab-close-button:hover:active</code>
+</li><li> <code>.tabbrowser-tabs{{ mediawiki.external('overflow=\"true\"') }} .tabs-alltabs-box</code>
+</li><li> <code>.tabs-alltabs-box</code>
+</li><li> <code>.tabs-alltabs-box:hover</code>
+</li><li> <code>.tabs-alltabs-box{{ mediawiki.external('flash=\"true\"') }}</code>
+</li><li> <code>tab &gt; .tab-image-left</code>
+</li><li> <code>tab &gt; .tab-image-middle</code>
+</li><li> <code>tab &gt; .tab-image-middle &gt; .tab-text</code>
+</li><li> <code>tab &gt; .tab-image-right</code>
+</li><li> <code>tab:focus &gt; .tab-image-middle &gt; .tab-text</code>
+</li><li> <code>tab:hover:not({{ mediawiki.external('selected=\"true\"') }}) &gt; .tab-image-left</code>
+</li><li> <code>tab:hover:not({{ mediawiki.external('selected=\"true\"') }}) &gt; .tab-image-middle</code>
+</li><li> <code>tab:hover:not({{ mediawiki.external('selected=\"true\"') }}) &gt; .tab-image-right</code>
+</li><li> <code>tab:not({{ mediawiki.external('selected=\"true\"') }}) &gt; .tab-image-left</code>
+</li><li> <code>tab:not({{ mediawiki.external('selected=\"true\"') }}) &gt; .tab-image-middle</code>
+</li><li> <code>tab{{ mediawiki.external('selected=\"true\"') }} .tab-image-middle &gt; .tab-text</code>
+</li></ul>
+<p>もちろん、他のスタイルへ変更することもできます。
+</p>
+<h4 id="menu.css" name="menu.css">&lt;tt&gt;menu.css&lt;/tt&gt;</h4>
+<p>以下のスタイルは、Firefox 2 では使用されておらず、削除されています:
+</p>
+<ul><li> <code>menulist &gt; menupopup &gt; menuitem{{ mediawiki.external('_moz-menuactive=\"true\"') }}</code>
+</li></ul>
+<p>また、Firefox 2 のテーマでは以下のスタイルが追加されています:
+</p>
+<ul><li> <code>.menu-iconic-icon</code>
+</li><li> <code>menubar &gt; menu</code>
+</li><li> <code>menubar &gt; menu{{ mediawiki.external('_moz-menuactive=\"true\"') }}{{ mediawiki.external('open=\"true\"') }}</code>
+</li><li> <code>menuitem{{ mediawiki.external('type=\"checkbox\"') }} &gt; .menu-iconic-left</code>
+</li><li> <code>menuitem{{ mediawiki.external('type=\"radio\"') }} &gt; .menu-iconic-left</code>
+</li></ul>
+<p>他のスタイルの定義へ変更することもできます。
+</p>
+<h4 id="notification.css" name="notification.css">&lt;tt&gt;notification.css&lt;/tt&gt;</h4>
+<p>Firefox 2 で追加された新しいファイルです。これは、ポップアップのブロックやプラグインが必要なことなどをユーザに知らせる、ブラウザ最上部にある通知バーに使用されます。通知バーのメッセージは厳格に、情報、警告、危険の 3 段階があります。以下のスタイルを必ず定義してください:
+</p>
+<ul><li> <code>.messageButton</code>
+</li><li> <code>.messageCloseButton</code>
+</li><li> <code>.messageImage</code>
+</li><li> <code>.messageText</code>
+</li><li> <code>.notification-inner</code>
+</li><li> <code>notification</code>
+</li><li> <code>notification{{ mediawiki.external('type=\"info\"') }}</code>
+</li><li> <code>notification{{ mediawiki.external('type=\"warning\"') }}</code>
+</li><li> <code>notification{{ mediawiki.external('type=\"critical\"') }}</code>
+</li></ul>
+<h4 id="scrollbox.css" name="scrollbox.css">&lt;tt&gt;scrollbox.css&lt;/tt&gt;</h4>
+<p>以下の新しいスタイルは、Firefox 2 でこのファイルに追加されました:
+</p>
+<ul><li> <code>.autorepeatbutton-down{{ mediawiki.external('disabled=\"true\"') }}</code>
+</li><li> <code>.autorepeatbutton-down{{ mediawiki.external('orient=\"horizontal\"') }}</code>
+</li><li> <code>.autorepeatbutton-down{{ mediawiki.external('orient=\"horizontal\"') }}{{ mediawiki.external('disabled=\"true\"') }}</code>
+</li><li> <code>.autorepeatbutton-up{{ mediawiki.external('disabled=\"true\"') }}</code>
+</li><li> <code>.autorepeatbutton-up{{ mediawiki.external('orient=\"horizontal\"') }}</code>
+</li><li> <code>.autorepeatbutton-up{{ mediawiki.external('orient=\"horizontal\"') }}{{ mediawiki.external('disabled=\"true\"') }}</code>
+</li><li> <code>.scrollbutton-down</code>
+</li><li> <code>.scrollbutton-down &gt; .toolbarbutton-text</code>
+</li><li> <code>.scrollbutton-down{{ mediawiki.external('disabled=\"true\"') }}</code>
+</li><li> <code>.scrollbutton-down{{ mediawiki.external('orient=\"horizontal\"') }}</code>
+</li><li> <code>.scrollbutton-down{{ mediawiki.external('orient=\"horizontal\"') }}{{ mediawiki.external('disabled=\"true\"') }}</code>
+</li><li> <code>.scrollbutton-up</code>
+</li><li> <code>.scrollbutton-up &gt; .toolbarbutton-text</code>
+</li><li> <code>.scrollbutton-up{{ mediawiki.external('disabled=\"true\"') }}</code>
+</li><li> <code>.scrollbutton-up{{ mediawiki.external('orient=\"horizontal\"') }}</code>
+</li><li> <code>.scrollbutton-up{{ mediawiki.external('orient=\"horizontal\"') }}{{ mediawiki.external('disabled=\"true\"') }}</code>
+</li></ul>
+<ul><li> <code>toolbar{{ mediawiki.external('mode=\"icons\"') }} .toolbarbutton-text</code>
+</li><li> <code>toolbar{{ mediawiki.external('mode=\"text\"') }} .toolbarbutton-1 &gt; .toolbarbutton-text</code>
+</li><li> <code>toolbar{{ mediawiki.external('mode=\"text\"') }} .toolbarbutton-1 &gt; stack &gt; toolbarbutton &gt; .toolbarbutton-text</code>
+</li><li> <code>toolbar{{ mediawiki.external('mode=\"text\"') }} .toolbarbutton-icon</code>
+</li></ul>
+<p>他のスタイルへ変更することもできます。
+</p>
+<h3 id="mozapps.E3.81.AE.E5.A4.89.E6.9B.B4.E7.82.B9" name="mozapps.E3.81.AE.E5.A4.89.E6.9B.B4.E7.82.B9">&lt;tt&gt;mozapps&lt;/tt&gt;の変更点</h3>
+<h4 id="extensions.2Fabout.css" name="extensions.2Fabout.css">&lt;tt&gt;extensions/about.css&lt;/tt&gt;</h4>
+<p>以下の Firefox 1.5 からのスタイルは、Firefox 2 では使用されていないので削除してください:
+</p>
+<ul><li> <code>#contributorsBox</code>
+</li><li> <code>#creatorBox</code>
+</li><li> <code>#extensionContributors</code>
+</li><li> <code>#extensionContributors</code>
+</li><li> <code>#extensionCreatorLabel</code>
+</li></ul>
+<p>以下のスタイルが追加されました:
+</p>
+<ul><li> <code>.indent</code>
+</li><li> <code>.sectionTitle</code>
+</li></ul>
+<p>他のスタイルへ変更することもできます。
+</p>
+<h4 id="extensions.2Fupdate.css" name="extensions.2Fupdate.css">&lt;tt&gt;extensions/update.css&lt;/tt&gt;</h4>
+<p>以下のスタイルは、Firefox 2 では使用されていないので削除してください:
+</p>
+<ul><li> <code>#foundList</code>
+</li><li> <code>#statusbar-updates</code>
+</li><li> <code>.updateCategoryBox</code>
+</li><li> <code>.updateCategoryContent</code>
+</li><li> <code>.updateCategoryIcon</code>
+</li><li> <code>.updateCategoryLabel{{ mediawiki.external('selected=\"true\"') }}</code>
+</li><li> <code>.updateIcon</code>
+</li><li> <code>.updateIcon{{ mediawiki.external('severity=\"0\"') }}</code>
+</li><li> <code>.updateIcon{{ mediawiki.external('severity=\"1\"') }}</code>
+</li><li> <code>.updateIcon{{ mediawiki.external('severity=\"2\"') }}</code>
+</li><li> <code>.updateIndicator &gt; label</code>
+</li><li> <code>.updateIndicator{{ mediawiki.external('updateCount=\"0\"') }}</code>
+</li><li> <code>.updateItemChecked</code>
+</li><li> <code>.updateItemChecked .checkbox-label-box</code>
+</li><li> <code>.updateItemFromLabel</code>
+</li><li> <code>.updateItemIcon</code>
+</li><li> <code>.updateItemIcon</code>
+</li><li> <code>.updateItemName</code>
+</li><li> <code>.updateItemNameRow</code>
+</li><li> <code>.updateItemURL</code>
+</li><li> <code>.warning</code>
+</li><li> <code>radio{{ mediawiki.external('type=\"update-type\"') }}</code>
+</li><li> <code>radiogroup{{ mediawiki.external('type=\"update-types\"') }}</code>
+</li><li> <code>toolbarbutton{{ mediawiki.external('type=\"updates\"') }}</code>
+</li><li> <code>toolbarbutton{{ mediawiki.external('type=\"updates\"') }} &gt; .toolbarbutton-icon</code>
+</li><li> <code>toolbarbutton{{ mediawiki.external('type=\"updates\"') }}{{ mediawiki.external('severity=\"0\"') }} &gt; .toolbarbutton-icon</code>
+</li><li> <code>toolbarbutton{{ mediawiki.external('type=\"updates\"') }}{{ mediawiki.external('severity=\"1\"') }} &gt; .toolbarbutton-icon</code>
+</li><li> <code>toolbarbutton{{ mediawiki.external('type=\"updates\"') }}{{ mediawiki.external('severity=\"2\"') }} &gt; .toolbarbutton-icon</code>
+</li><li> <code>toolbarbutton{{ mediawiki.external('type=\"updates\"') }}{{ mediawiki.external('updateCount=\"0\"') }}</code>
+</li><li> <code>updateitem</code>
+</li></ul>
+<p>また、以下のスタイルが追加されました:
+</p>
+<ul><li> <code>.alertBox</code>
+</li><li> <code>.throbber</code>
+</li></ul>
+<div class="noinclude">
+</div>
+{{ languages( { "en": "en/Theme_changes_in_Firefox_2", "fr": "fr/Changements_dans_les_th\u00e8mes_graphiques_pour_Firefox_2", "pl": "pl/Zmiany_w_motywie_graficznym_w_Firefoksie_2", "zh-tw": "zh_tw/Firefox_2_\u4f48\u666f\u4e3b\u984c\u4e4b\u66f4\u52d5" } ) }}

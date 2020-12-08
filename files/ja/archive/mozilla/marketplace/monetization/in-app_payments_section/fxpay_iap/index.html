@@ -1,0 +1,241 @@
+---
+title: fxPay を使用したアプリ内課金
+slug: Archive/Mozilla/Marketplace/Monetization/In-app_payments_section/fxPay_iap
+tags:
+  - Apps
+  - Biginner
+  - Firefox OS
+  - Guide
+  - Marketplace
+translation_of: Archive/Marketplace/Monetization/In-app_payments_section/fxPay_iap
+---
+<p class="language-html">{{draft}}</p>
+<div class="summary">
+ <p><code>fxPay</code> は、Open Web Apps に対して、アプリ内課金の設定、アプリ内課金製品の管理、購入レシートからの製品の復元を行うための JavaScript ライブラリです。<a class="external external-icon" href="http://firefox-marketplace-api.readthedocs.org/">Firefox Marketplace API</a> よって提供されるアプリ内課金サービスのラッパーであり、<a href="/ja/Marketplace/Monetization/In-app_payments">mozPay</a> とどちらを使用するかを選択することができます。mozPay と異なり、fxPay はアプリ内課金製品をユーザに提供するための完全なソリューションです。暗号化された署名を検証するためにアプリが独自のサーバをホストする必要はありま せん。また、mozPay と比べて、作成する独自のコードが少しで済みます。<span class="seoSummary">この記事では、fxPay API のステータス、使用の前提条件、およびライブラリの各機能の使用方法について説明します。 </span></p>
+</div>
+<div class="warning">
+ <h2 id="ステータス">ステータス</h2>
+ <p>このライブラリは、アプリの決済処理のための推奨されるツールですが、<strong>まだ実験的に提供されている状態です。</strong>ぜひこのライブラリを使用し、バグの解決にご協力ください。ただし、この API を使用した場合、最終版が提供されるまで、その変更によって影響を受ける可能性があります。この API が実験段階にあることに抵抗がある場合は、<a href="/ja/Marketplace/Monetization/In-app_payments_section/mozPay_iap">mozPay</a> を使用してください。</p>
+</div>
+<h2 id="前提条件">前提条件</h2>
+<p><code>fxpay</code> を使用してアプリ内課金を処理するには、次の要件を満たす必要があります。</p>
+<ul>
+ <li>アプリが <a href="/ja/Firefox_OS">Firefox OS</a> 1.1 以上で動作する必要があります。</li>
+ <li>マニフェストのレシート検証をするには <a href="/ja/docs/Glossary/Origin">オリジン</a>が宣言されている必要があります。</li>
+ <li>Marketplace API とやり取りするためマニフェストで次の許可が宣言されている必要があります。
+  <pre class="brush: js  language-js"><code class="language-js"><span class="token string">"permissions"</span><span class="token punctuation">:</span><span class="token punctuation">{</span>
+  <span class="token string">"systemXHR"</span><span class="token punctuation">:</span><span class="token punctuation">{</span>
+    <span class="token string">"description"</span><span class="token punctuation">:</span><span class="token string">"Required to access payment API"</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+ </li>
+ <li>アプリケーションが、<a href="/ja/Marketplace/Options/Packaged_apps#Privileged_app">権限付き</a>のパッケージ型アプリである必要があります。これにより、署名し、適切な許可を付与することができます。</li>
+</ul>
+<p>次で説明するサンプルアプリでは、これらの設定方法がすべて示されています。</p>
+<h2 id="サンプルアプリ">サンプルアプリ</h2>
+<p><code>fxpay</code> を使用した実際の例については、<a class="external external-icon" href="https://github.com/mozilla/fxpay/tree/master/example">こちら</a>を参照してください。サンプルアプリを <a href="https://developer.mozilla.org/ja/Firefox_OS">Firefox OS</a> デバイスにインストールする手順については、アプリのページの README を参照してください。このアプリを使用して、<code>fxpay</code> とその関連の API をテストすることもできます。</p>
+<h2 id="API_ガイド">API ガイド</h2>
+<p>次のガイドでは、<code>fxpay</code> JavaScript ライブラリを使用して決済と製品を処理する方法について説明します。</p>
+<h3 id="インストール">インストール</h3>
+<p><code>fxpay</code> を使用するには、Web アプリケーション内に、JavaScript ライブラリを組み込む必要があります。<a class="external external-icon" href="http://bower.io/">Bower</a> パッケージマネージャーで、次のコマンドを使用してアプリ内にライブラリをインストールします。</p>
+<pre class="brush: bash language-html"><code class="language-bash">bower install fxpay</code></pre>
+<p>これで、アプリの HTML で次のスクリプトタグを使用して、ライブラリにリンクできるようになります。</p>
+<pre class="brush: html  language-html"><code class="language-html"><span class="token script"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bower_components/fxpay/lib/fxpay.js<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></span></code></pre>
+<p>あるいは、<a class="external external-icon" href="http://bower.io/docs/tools/">Bower ツール</a>を使用して管理対象スクリプトの読み込みや圧縮を行うこともできます。Bower を使用しない場合は、<a class="external external-icon" href="https://github.com/mozilla/fxpay/releases">fxpay の Git リポジトリ</a>経由で最新の安定したソースをダウンロードしてください。</p>
+<h3 id="アプリのセットアップ">アプリのセットアップ</h3>
+<p><a class="external external-icon" href="https://marketplace.firefox.com/developers/">Firefox Marketplace Developer Hub</a> にログインし、次の標準プロセスに従って、アプリをアップロードします。<b>[</b><strong>Compatability &amp; Payments]</strong> ページの <b>[</b><strong>Prices &amp; Countries]</strong> の下でアプリ内課金を <b>[</b><strong>Yes]</strong> に設定し、変更を保存します。次に <b>[</b><strong>In-App Payments]</strong> ページを開き、<b>[</b><strong>Configure In-App Products]</strong> をクリックします。<b>[</b><strong>In-App Products]</strong> ページが開き、アプリ内課金製品の作成と編集が行えるようになります。このページの使用方法の詳細については、<a href="/ja/Marketplace/Publishing/Pricing/In-app_products">アプリ内課金製品</a> を参照してください。</p>
+<h3 id="初期化">初期化</h3>
+<p>アプリの起動時に、アプリが既存の製品レシートを確認できるように、<code>fxpay</code> を初期化する必要があります。またこのときに、一般的な<a href="/ja/Marketplace/Monetization/In-app_payments_section/fxPay_iap#errors">エラー</a>処理などのイベントのコールバックを登録することもできます。</p>
+<pre class="brush: js  language-js"><code class="language-js">fxpay<span class="token punctuation">.</span><span class="token function">init<span class="token punctuation">(</span></span><span class="token punctuation">{</span>
+  onerror<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">error<span class="token punctuation">(</span></span><span class="token string">'An error occurred:'</span><span class="token punctuation">,</span> error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  oninit<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log<span class="token punctuation">(</span></span><span class="token string">'fxpay initialized without errors'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  onrestore<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span>error<span class="token punctuation">,</span> product<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token comment"> // If error is null, product.productId has been
+</span>   <span class="token comment"> // restored from receipt.
+</span>  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h3 id="製品の取得">製品の取得</h3>
+<p>アプリのすべての製品を取得するには、初期化の後に <code>fxpay.getProducts()</code> を呼び出します。</p>
+<pre class="brush: js  language-js"><code class="language-js"><code class="language-js">fxpay<span class="token punctuation">.</span><span class="token function">init<span class="token punctuation">(</span></span><span class="token punctuation">{</span>
+  oninit<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    fxpay<span class="token punctuation">.</span><span class="token function">getProducts<span class="token punctuation">(</span></span><span class="token keyword">function</span><span class="token punctuation">(</span>error<span class="token punctuation">,</span> products<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> console<span class="token punctuation">.</span><span class="token function">error<span class="token punctuation">(</span></span><span class="token string">'Error getting products:'</span><span class="token punctuation">,</span> error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+
+      console<span class="token punctuation">.</span><span class="token function">log<span class="token punctuation">(</span></span><span class="token string">'first product ID:'</span><span class="token punctuation">,</span> products<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>productId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      console<span class="token punctuation">.</span><span class="token function">log<span class="token punctuation">(</span></span><span class="token string">'first product name:'</span><span class="token punctuation">,</span> products<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></code></pre>
+<p>エラーが発生しなければ、コールバックによって一連の <a href="/ja/Marketplace/Monetization/In-app_payments_section/fxPay_iap#product-info">製品情報</a> オブジェクトが起動されます。このメソッドは、ユーザが製品の購入に使用するインターフェイスを構築するのに役立ちます。</p>
+<h3 id="フェイク製品の使用"><a name="fake-products">フェイク製品の使用</a></h3>
+<p>先に <a class="external external-icon" href="https://marketplace.firefox.com/developers/">Firefox Marketplace Developer Hub</a> で製品を設定するのではなく、まず決済に対応するアプリを作成する場合、フェイク製品を使用することができます。これにはアプリの初期化の任意の場所に、次のように設定します。</p>
+<pre class="brush: js  language-js"><code class="language-js">fxpay<span class="token punctuation">.</span><span class="token function">configure<span class="token punctuation">(</span></span><span class="token punctuation">{</span>fakeProducts<span class="token punctuation">:</span> <span class="token keyword">true</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>これにより、<code>fxpay.getProducts(...)</code> が変更され、<a href="/ja/Marketplace/Monetization/In-app_payments_section/mozPay_iap#Simulating_payments">シミュレーション</a>モードで購入できる 2 つの事前設定の製品が返されるようになります。これらの製品では、ID 文字列、名前、および価格帯が固定されていますが、このことは、購入とアプリ提供のコールバックの統合に役立ちます。</p>
+<p>完成したアプリおよび設定が完了した製品を登録した後、<code>fakeProducts</code> を false に設定すると、<code>fxpay.getProducts(...)</code> への同じ呼び出しによって、アプリの実際の製品が取得されます。</p>
+<h3 id="レシートからの製品の復元">レシートからの製品の復元</h3>
+<p><code>fxpay.init()</code> は、ユーザのデバイス上にあるすべての<a class="external external-icon" href="https://wiki.mozilla.org/Apps/WebApplicationReceipt">レシート</a>を検出して検証します。レシートが有効な場合は、ユーザがその製品を購入済みであることを意味するため、その製品を使用できるようにする必要があります。</p>
+<p>復元された各製品に対し、<code>onrestore</code> コールバックが起動されます。最初の引数は、<a href="/ja/Marketplace/Monetization/In-app_payments_section/fxPay_iap#errors">エラー</a>文字列です。これは null の場合もあります。2番目の引数は、<a href="/ja/Marketplace/Monetization/In-app_payments_section/fxPay_iap#product-info">製品情報</a> オブジェクトです。これも、エラーによっては null の場合があります。</p>
+<p>コールバックは、次のように初期化します。</p>
+<pre class="brush: js  language-js"><code class="language-js">fxpay<span class="token punctuation">.</span><span class="token function">init<span class="token punctuation">(
+</span></span><code class="language-js">  onrestore<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span>error<span class="token punctuation">,</span> product<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">error<span class="token punctuation">(</span></span><span class="token string">'Error'</span><span class="token punctuation">,</span> error<span class="token punctuation">,</span> <span class="token string">'while restoring'</span><span class="token punctuation">,</span>
+                    product<span class="token punctuation">.</span>productId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log<span class="token punctuation">(</span></span>product<span class="token punctuation">.</span>productId<span class="token punctuation">,</span> <span class="token string">'restored from receipt'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></code></pre>
+<h3 id="外部レシートの拒否">外部レシートの拒否</h3>
+<p><code>fxpay.init()</code> は無効なレシートを拒否するだけでなく、外部アプリに属しているために、製品の URL がアプリの提供元に一致しないすべてのレシートを拒否します。このようなレシートは、ユーザが別のアプリから製品を購入し、それを目的のアプリの記憶領域 にコピーして無料で利用しようとする場合に処理が必要になります。この検証を無効にし、<em>あらゆる</em> アプリに属する有効なレシートを使用可能にするには、<a href="/ja/Marketplace/Monetization/In-app_payments_section/fxPay_iap#configuration">設定</a>を使用して <code>allowAnyAppReceipt = true</code> に設定します。</p>
+<h3 id="購入情報の取得">購入情報の取得</h3>
+<p>アイテムの購入フローを開始するには、<code>fxpay.purchase()</code> を呼び出します。通常はまず、<code>fxpay.getProducts()</code> によって得た結果に基づき、購入できる製品をアプリ内に表示する画面を作成します。.次のように、購入ボタンを作成します。このボタンは、タップすると <code>fxpay.purchase()</code> が呼び出されます。</p>
+<pre class="brush: js  language-js"><code class="language-js"><span class="token keyword"><code class="language-js"><span class="token keyword">var</span> productId <span class="token operator">=</span> <span class="token string">'a1bcdeffe3'</span><span class="token punctuation">;</span> <span class="token comment"> // from getProducts().
+</span>
+fxpay<span class="token punctuation">.</span><span class="token function">purchase<span class="token punctuation">(</span></span>productId<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>error<span class="token punctuation">,</span> product<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> console<span class="token punctuation">.</span><span class="token function">error<span class="token punctuation">(</span></span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  console<span class="token punctuation">.</span><span class="token function">log<span class="token punctuation">(</span></span>product<span class="token punctuation">.</span>productId<span class="token punctuation">,</span> <span class="token string">'purchased and verified!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token comment"> // ***************************************************
+</span> <span class="token comment"> // It is now safe to deliver the product to your user.
+</span> <span class="token comment"> // ***************************************************
+</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></span></code></pre>
+<p><code>purchase</code> コールバックによって、<a href="/ja/Marketplace/Monetization/In-app_payments_section/fxPay_iap#errors">エラー</a>文字列 (null の場合を含む) と<a href="/ja/Marketplace/Monetization/In-app_payments_section/fxPay_iap#product-info">製品情報</a>オブジェクトが取得されます。コールバックは、ユーザが購入フローを完了し、Marketplace サーバがレシートを検証し終わって、製品をユーザに提供しても安全な状態になった時点で起動されます。</p>
+<p>これはどのような仕組みでしょうか。<code>fxpay.purchase()</code> 関数は、<a href="/ja/docs/Web/API/Navigator.mozPay">mozPay()</a> を呼び出し、着信 JWT の署名を受け取って検証するプロセスを自動的に実行します。詳細については、<a href="/ja/Marketplace/Monetization/In-app_payments">アプリ内課金ガイド</a>を参照してください。ただし、<code>fxpay</code> ライブラリを使う場合には詳細を理解する必要はありません。</p>
+<h3 id="製品情報オブジェクト"><a name="product-info">製品情報オブジェクト</a></h3>
+<p><code>purchase</code> および <code>onrestore</code> コールバックは、製品情報オブジェクトを受信します。エラーが発生した場合、エラー状態に応じて、不足しているプロパティを持つオブジェクトを受け取ることができます。製品情報オブジェクトには、次のプロパティが含まれています。</p>
+<dl>
+ <dt>
+  <em>product.productId</em></dt>
+ <dd>
+  製品を識別するための固有の文字列。製品を管理する際に <a class="external external-icon" href="https://marketplace.firefox.com/developers/">Firefox Marketplace Developer Hub</a> に表示される識別子に対応します。</dd>
+ <dt>
+  <em>product.name</em></dt>
+ <dd>
+  標準ロケールでの製品名。</dd>
+ <dt>
+  <em>product.productUrl</em></dt>
+ <dd>
+  レシートで宣言されている製品の URL。通常はアプリの URL で、<code>https://your-hosted-app</code> や <code>app://your-packaged-app</code> という形式で表されます。</dd>
+ <dt>
+  <em>product.smallImageUrl</em></dt>
+ <dd>
+  64 ピクセル四方の製品の画像。</dd>
+</dl>
+<h3 id="エラー"><a name="errors">エラー</a></h3>
+<p>エラーは通常、コールバックへの最初の引数として返されます。エラーは文字列であって、コンソールに出力される判読可能なコードか、またはユーザに エラーを表示するためのローカライズしたテキストへのマップと同様に処理する必要があります。エラーの詳細な説明は自動的にログに記録されます。詳細につ いては、この後のログ記録の説明を参照してください。</p>
+<p>以下に、主なエラー文字列とその意味を示します。</p>
+<dl>
+ <dt>
+  <strong>API_REQUEST_ABORTED</strong></dt>
+ <dd>
+  API への HTTP リクエストが中止されました。</dd>
+ <dt>
+  <strong>API_REQUEST_ERROR</strong></dt>
+ <dd>
+  API への HTTP リクエストでエラーが発生しました。</dd>
+ <dt>
+  <strong>API_REQUEST_TIMEOUT</strong></dt>
+ <dd>
+  API がリクエストに応答しなかったため、タイムアウトが発生しました。</dd>
+ <dt>
+  <strong>BAD_API_RESPONSE</strong></dt>
+ <dd>
+  API が失敗を示す状態コードの応答を返しました。</dd>
+ <dt>
+  <strong>BAD_JSON_RESPONSE</strong></dt>
+ <dd>
+  API が、予期しない解析不能な JSON の応答を返しました。</dd>
+ <dt>
+  <strong>DIALOG_CLOSED_BY_USER</strong></dt>
+ <dd>
+  ユーザが、購入を完了する前に決済ウィンドウを閉じました。通常、このエラーは無視できます。または取り消しを示すメッセージを表示することも可能です。このエラーは、<a href="/ja/docs/Web/API/Navigator.mozPay">mozPay()</a> によって表示されます。</dd>
+ <dt>
+  <strong>INCORRECT_USAGE</strong></dt>
+ <dd>
+  <code>fxpay</code> 関数の使い方が誤っています。詳細については、コンソールを参照してください。</dd>
+ <dt>
+  <strong>INVALID_TRANSACTION_STATE</strong></dt>
+ <dd>
+  トランザクションが無効な状態にあるため、処理できません。</dd>
+ <dt>
+  MISSING_XHR_PERMISSION</dt>
+ <dd>
+  Web アプリに、<code>systemXHR</code> <a href="/ja/Apps/Build/App_permissions">アプリ許可</a>がありません。API リクエストを実行するには、このアプリ許可が必要です。</dd>
+ <dt>
+  <strong>NOT_INITIALIZED</strong></dt>
+ <dd>
+  ライブラリが正しく初期化されていません。アクションが実行できません。<code>init()</code> を呼び出していないか、未修正の例外が存在する可能性があります。詳細については、コンソールを参照してください。</dd>
+ <dt>
+  <strong>NOT_INSTALLED_AS_APP</strong></dt>
+ <dd>
+  このプラットフォームはアプリをサポートしていますが、アプリがデバイスにインストールされていません。ブラウザから直接アクセスされている可能性があります。</dd>
+ <dt>
+  <strong>PAY_PLATFORM_UNAVAILABLE</strong></dt>
+ <dd>
+  このプラットフォームは、決済をサポートしていません。<a href="/ja/docs/Web/API/Apps">navigator.mozApps</a> 名前空間または、<a href="/ja/docs/Web/API/Navigator.mozPay">mozPay()</a> 関数が使用不可であるか、<code>Apps.addReceipt</code> メソッドが存在しない可能性があります。</dd>
+ <dt>
+  <strong>TEST_RECEIPT_NOT_ALLOWED</strong></dt>
+ <dd>
+  ユーザがテストレシートを使用して製品の復元を試みましたが、<a href="/ja/Marketplace/Monetization/In-app_payments_section/fxPay_iap#fake-products">フェイク製品</a>が設定されていませんでした。</dd>
+ <dt>
+  <strong>TRANSACTION_TIMEOUT</strong></dt>
+ <dd>
+  トランザクション状態を確認する HTTP リクエストがタイムアウトしました。</dd>
+ <dt>
+  <strong>USER_CANCELLED</strong></dt>
+ <dd>
+  ユーザが購入をキャンセルしました。通常、このエラーは無視できます。または取り消しを示すメッセージを表示することも可能です。このエラーは、<a href="/ja/docs/Web/API/Navigator.mozPay">mozPay()</a> によって表示されます。</dd>
+</dl>
+<p>また、コールバックが、<a href="/ja/Apps/Build/JavaScript_API/Error_object">アプリのエラー文字列</a>のいずれか (<code>INVALID_MANIFEST</code> など) を受信することがあります。</p>
+<h3 id="ログ記録">ログ記録</h3>
+<p>標準設定では、<code>fxpay</code> は <a href="/ja/docs/Web/API/console">window.console</a> を使用してすべてのログを記録します。<code>console</code> を別のロガーに変更する場合は、同じ <a href="/ja/docs/Web/API/console">window.console</a> メソッドを実装する <code>log</code> としてオブジェクトを渡します。</p>
+<pre class="brush: js  language-js"><code class="language-js">fxpay<span class="token punctuation">.</span><span class="token function">configure<span class="token punctuation">(</span></span><span class="token punctuation">{</span>log<span class="token punctuation">:</span> myConsole<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h3 id="設定"><a name="configuration">設定</a></h3>
+<p>一部の内部変数は、<code>fxpay.configure(overrides)</code> を呼び出して設定できます。これを繰り返し呼び出した場合、上書きしない限り、古いキーが保持されます。</p>
+<p>例:</p>
+<pre class="brush: js  language-js"><code class="language-js">fxpay<span class="token punctuation">.</span><span class="token function">configure<span class="token punctuation">(</span></span><span class="token punctuation">{</span>apiTimeoutMs<span class="token punctuation">:</span><span class="token number">3000</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>上書きする場合は、以下を使用できます。</p>
+<dl>
+ <dt>
+  <em>allowAnyAppReceipt</em></dt>
+ <dd>
+  <code>true</code> に設定すると、他の開発者のアプリに対するレシートが無効としてマークされます。標準設定は、<code>false</code> です。</dd>
+ <dt>
+  <em>apiUrlBase</em></dt>
+ <dd>
+  内部 <code>fxpay</code> API のベース URL。標準設定は、<code><a class="external external-icon" href="https://marketplace.firefox.com">https://marketplace.firefox.com</a></code> です。</dd>
+ <dt>
+  <em>apiTimeoutMs</em></dt>
+ <dd>
+  API リクエストがタイムアウトするまでの時間の長さ (秒)。標準設定は、10000 です。</dd>
+ <dt>
+  <em>apiVersionPrefix</em></dt>
+ <dd>
+  <code>apiUrlBase</code> の末尾に追加され、正しい API バージョンにアクセスするパス。標準設定は、<code>/api/v1</code> です。</dd>
+ <dt>
+  <em>fakeProducts</em></dt>
+ <dd>
+  true の場合、<code>fxpay.getProducts()</code> を呼び出すと、テストに使用できるフェイク製品が返されます。詳細については、<a href="/ja/Marketplace/Monetization/In-app_payments_section/fxPay_iap#fake-products">フェイク製品</a>を参照してください。標準設定は、<code>false</code> です。</dd>
+ <dt>
+  <em>log</em></dt>
+ <dd>
+  内部的に使用する <a href="/ja/docs/Web/API/console">window.console</a> と互換性のあるログオブジェクト標準設定は、<code>window.console</code> です。</dd>
+ <dt>
+  <em>receiptCheckSites</em></dt>
+ <dd>
+  購入レシートの検証を許可された一連のサイト。この値は、検証サービスの最上位レベルの URL です。URL パスを含める必要はありません。本番バージョンの Firefox Marketplace 以外を使用する場合のみ調整が必要です。標準設定は、<code>['https://receiptcheck.marketplace.firefox.com']</code> です。</dd>
+</dl>
+<h2 id="追加情報">追加情報</h2>
+<p><a class="external external-icon" href="https://github.com/mozilla/fxpay">fxPay is hosted GitHub</a> の開発プロジェクト。プロジェクトには、ソースコードに加えて、サンプルアプリケーションが含まれています。</p>
+<p> </p>
+<p> </p>

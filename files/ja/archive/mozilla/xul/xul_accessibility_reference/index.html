@@ -1,0 +1,427 @@
+---
+title: アクセシビリティ/XUL アクセシビリティリファレンス
+slug: Archive/Mozilla/XUL/XUL_accessibility_reference
+tags:
+  - Accessibility
+  - XUL
+translation_of: Archive/Mozilla/XUL/XUL_accessibility_reference
+---
+<p>この表は、さまざまな XUL 要素型のテキストを適切に露呈する方法を示しています。太字の部分は、視覚レイアウトで見過ごされがちな部分に注意を促します。下線付きのテキストは、スクリーンリーダーで読み取ることができます。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>要素</th>
+   <th>有効な使用例</th>
+   <th>コメント</th>
+  </tr>
+  <tr>
+   <td id="description">description</td>
+   <td>
+    <pre class="brush: xml">
+&lt;description value="&lt;!--Text--&gt;" /&gt;
+&lt;description&gt;&lt;!--Label Text--&gt;&lt;/description&gt;</pre>
+   </td>
+   <td>ラベル無しのテキストに使います。チュートリアルでは、label とdescription は、同じの基本実装ですが、description 要素は、label とは対照的に、コントロールと正しく関連付けられていないように見えます。</td>
+  </tr>
+  <tr>
+   <td id="label">label</td>
+   <td>
+    <pre class="brush: xml">
+&lt;label control="controlID" value="&lt;!--Label Text--&gt;" /&gt;
+&lt;label control="controlID"&gt;&lt;!--Label Text--&gt;&lt;/label&gt;</pre>
+   </td>
+   <td>どちらの書式でも問題ありません。</td>
+  </tr>
+  <tr>
+   <td id="button">button</td>
+   <td>
+    <pre class="brush: xml">
+&lt;button label="&lt;!--Button Text--&gt;" /&gt;</pre>
+
+    <pre class="brush: xml">
+&lt;button id='butwrap1'&gt;
+  &lt;label control='butwrap1'&gt;
+    &lt;!--Wrapped Label--&gt;
+  &lt;/label&gt;
+&lt;/button&gt;</pre>
+
+    <pre class="brush: xml">
+&lt;button id='butwrap2'&gt;
+  &lt;label control='butwrap2' value="&lt;!--This--&gt;" /&gt;
+  &lt;label control='butwrap2' value="is" /&gt;
+  &lt;label control='butwrap2' value="a" /&gt;
+  &lt;label control='butwrap2' value="button" /&gt;
+&lt;/button&gt;</pre>
+
+    <pre class="brush: xml">
+&lt;button image="images/img.xbm" tooltiptext="&lt;!--Button Text--&gt;"/&gt;</pre>
+   </td>
+   <td>3 つ目の例では、最初のラベルだけが読み上げられます。</td>
+  </tr>
+  <tr>
+   <td id="browser">browser</td>
+   <td>JAWS 7.10 の問題</td>
+   <td>
+    <p>HTMLで browser 要素を使用するには、type="content" 属性を指定する必要があります。ただし、この属性は、ブラウザーに読み込まれた XUL で JAWS 7.10 の問題が発生する原因となります。JAWS は、window クラスを使ってダイアログではなくコンテンツであると判断しているようですが、XUL のコンテンツモードはサポートしていません。したがって、JAWS 7.10 を使用する場合、ブラウザー内で XUL を使用するための type 属性は使用できません。</p>
+   </td>
+  </tr>
+  <tr>
+   <td id="caption">caption</td>
+   <td> </td>
+   <td><a href="#groupbox" title="groupbox">groupbox</a> 参照</td>
+  </tr>
+  <tr>
+   <td id="checkbox">checkbox</td>
+   <td>
+    <pre class="brush: xml">
+&lt;checkbox label='&lt;!--Label Text--&gt;' /&gt;</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td id="colorpicker">colorpicker</td>
+   <td>
+    <pre class="brush: xml">
+&lt;colorpicker type="button" palettename="standard" /&gt;</pre>
+   </td>
+   <td>colorpicker が現れ、最初の場所で colorpicker がフォーカスを取得した場合、カラー値が読み上げられます。</td>
+  </tr>
+  <tr>
+   <td id="column">column</td>
+   <td> </td>
+   <td><a href="#grid" title="grid">grid</a> 参照</td>
+  </tr>
+  <tr>
+   <td id="columns">columns</td>
+   <td> </td>
+   <td><a href="#grid" title="grid">grid</a> 参照</td>
+  </tr>
+  <tr>
+   <td id="command">command</td>
+   <td> </td>
+   <td><a class="external" href="/XUL_Tutorial/Keyboard_Shortcuts" title="XUL Keyboard shortcuts">キーボードショートカットのチュートリアル</a> 参照</td>
+  </tr>
+  <tr>
+   <td id="commandset">commandset</td>
+   <td> </td>
+   <td><a class="external" href="/XUL_Tutorial/Keyboard_Shortcuts" title="XUL Keyboard shortcuts">キーボードショートカットのチュートリアル</a> 参照</td>
+  </tr>
+  <tr>
+   <td id="deck">deck</td>
+   <td> </td>
+   <td>現在選択されている deck レイヤーだけがフォーカスされます。</td>
+  </tr>
+  <tr>
+   <td id="grid">grid</td>
+   <td> </td>
+   <td>grid 内のテキストが読み上げられますが、JAWS は grid をテーブル読み上げモード用の表として認識しません。</td>
+  </tr>
+  <tr>
+   <td id="groupbox">groupbox</td>
+   <td>
+    <pre class="brush: xml">
+&lt;groupbox&gt;
+  &lt;caption label="&lt;!--Group label--&gt;" /&gt;
+  &lt;hbox&gt;
+    &lt;button label="&lt;!--Button Text--&gt;" /&gt;
+  &lt;/hbox&gt;
+&lt;/groupbox&gt;</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td id="iframe">iframe</td>
+   <td>JAWS 7.10 の問題</td>
+   <td>JAWS 7.10 でテストする際、iframe 要素を使用すると、iframe 内部の XUL で予期できない多くの問題が発生します。iframe 内部で HTML を使用することはできます。 詳しい情報は browser 要素を参照してください。</td>
+  </tr>
+  <tr>
+   <td id="image">image</td>
+   <td>
+    <pre class="brush: xml">
+&lt;image src="images/img.xbm" tooltiptext='&lt;!--Image Label--&gt;'/&gt;</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td id="key">key</td>
+   <td> </td>
+   <td><a class="external" href="/XUL_Tutorial/Keyboard_Shortcuts" title="XUL Keyboard shortcuts">キーボードショートカットのチュートリアル</a> 参照</td>
+  </tr>
+  <tr>
+   <td id="keyset">keyset</td>
+   <td> </td>
+   <td><a class="external" href="/XUL_Tutorial/Keyboard_Shortcuts" title="XUL Keyboard shortcuts">キーボードショートカットのチュートリアル</a> 参照</td>
+  </tr>
+  <tr>
+   <td id="listbox">listbox</td>
+   <td>
+    <pre class="brush: xml">
+&lt;label control='listId'&gt;&lt;!--Label Text--&gt;&lt;/label&gt;
+&lt;listbox id="listId"&gt;
+  &lt;listitem value="val" label="&lt;!--Item Text--&gt;"/&gt;
+&lt;/listbox&gt;</pre>
+
+    <pre class="brush: xml">
+&lt;label control='listId2' value='&lt;!--List label--&gt;' /&gt;
+&lt;listbox rows="5" id='listId2'&gt;
+  &lt;listcols&gt;
+    &lt;listcol/&gt;
+    &lt;listcol/&gt;
+    &lt;listcol/&gt;
+  &lt;/listcols&gt;
+  &lt;listhead&gt;
+    &lt;listheader label="Name" /&gt;
+    &lt;listheader label="Sex" /&gt;
+    &lt;listheader label="Color" /&gt;
+  &lt;/listhead&gt;
+  &lt;listitem&gt;
+    &lt;label value="&lt;!--Pearl--&gt;" /&gt;
+    &lt;label value="&lt;!--Female--&gt;" /&gt;
+    &lt;label value="&lt;!--Gray--&gt;" /&gt;
+  &lt;/listitem&gt;
+&lt;/listbox&gt;</pre>
+   </td>
+   <td>JAWS で見出しラベルを読み上げるための簡単な方法を見つけることができないようです。項目は "Pearl Female Gray" のように一行ごとに読み上げられます。</td>
+  </tr>
+  <tr>
+   <td id="listitem">listitem</td>
+   <td> </td>
+   <td><a href="#listbox" title="listbox">listbox</a> 参照</td>
+  </tr>
+  <tr>
+   <td id="menuitem">menuitem</td>
+   <td> </td>
+   <td><a href="#menulist" title="menulist">menulist</a> と <a href="#menubar" title="menubar">menubar</a> 参照</td>
+  </tr>
+  <tr>
+   <td id="menubar">menubar</td>
+   <td>
+    <pre class="brush: xml">
+&lt;menubar hidden="false"&gt;
+  &lt;menu label="File" accesskey="F"&gt;
+    &lt;menupopup&gt;
+      &lt;menuitem label="New" accesskey="N" key="file-new-key"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menu&gt;
+&lt;/menubar&gt;</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td id="menulist">menulist</td>
+   <td>
+    <pre class="brush: xml">
+&lt;label value="&lt;!--Label Text--&gt;" control="comboId" /&gt;
+&lt;menulist id="comboId"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="&lt;!--Option1--&gt;" /&gt;
+    &lt;menuitem label="&lt;!--Option2--&gt;" selected="true" /&gt;
+    &lt;menuitem label="&lt;!--Option3--&gt;" /&gt;
+  &lt;/menupopup&gt;
+&lt;/menulist&gt;</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td id="menupopup">menupopup</td>
+   <td> </td>
+   <td><a href="#menulist" title="menulist">menulist</a> と <a href="#menubar" title="menubar">menubar</a> 参照</td>
+  </tr>
+  <tr>
+   <td id="popup">popup</td>
+   <td> </td>
+   <td><a href="#popupset" title="popupset">popupset</a> 参照</td>
+  </tr>
+  <tr>
+   <td id="popupset">popupset</td>
+   <td> </td>
+   <td>ポップアップへのキーボードアクセスには注意してください。 popup 属性を介してポップアップにアクセスする方法は見当たりません。 context="popupId" を指定することにより、Windows および Linux で Shift + F10 を使用してアクセスできます。</td>
+  </tr>
+  <tr>
+   <td id="progressmeter">progressmeter</td>
+   <td>
+    <pre class="brush: xml">
+&lt;progressmeter mode="determined" value="10" /&gt;</pre>
+   </td>
+   <td>進捗が進つれて、JAWS はユーザーにパーセント値を示します。</td>
+  </tr>
+  <tr>
+   <td id="radio">radio</td>
+   <td> </td>
+   <td><a href="#radiogroup" title="radiogroup">radiogroup</a> 参照</td>
+  </tr>
+  <tr>
+   <td id="radiogroup">radiogroup</td>
+   <td>
+    <pre class="brush: xml">
+&lt;label value='&lt;!--Radio Group--&gt;' control='radioId' /&gt;
+&lt;radiogroup id='radioId'&gt;
+  &lt;radio selected="true" label='&lt;!--Option1--&gt;' /&gt;
+  &lt;radio label='&lt;!--Option2--&gt;' /&gt;
+&lt;/radiogroup&gt;</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td id="row">row</td>
+   <td> </td>
+   <td><a href="#grid" title="grid">grid</a> 参照</td>
+  </tr>
+  <tr>
+   <td id="rows">rows</td>
+   <td> </td>
+   <td><a href="#grid" title="grid">grid</a> 参照</td>
+  </tr>
+  <tr>
+   <td id="stack">stack</td>
+   <td> </td>
+   <td>他の何かの下に隠れて見えなくても、すべての要素にフォーカスすることができます。</td>
+  </tr>
+  <tr>
+   <td id="statusbar">statusbar</td>
+   <td>
+    <pre class="brush: xml">
+&lt;statusbar&gt;
+  &lt;statusbarpanel label="&lt;!--Status Bar--&gt;" flex="1"/&gt;
+&lt;/statusbar&gt;</pre>
+   </td>
+   <td>JAWS では、insert + page down キーで読み上げます。</td>
+  </tr>
+  <tr>
+   <td id="statusbarpanel">statusbarpanel</td>
+   <td> </td>
+   <td><a href="#statusbar" title="statusbar">statusbar</a> 参照</td>
+  </tr>
+  <tr>
+   <td id="tab">tab</td>
+   <td> </td>
+   <td><a href="#tabbox" title="tabbox">tabbox</a> 参照</td>
+  </tr>
+  <tr>
+   <td id="tabbox">tabbox</td>
+   <td>
+    <pre class="brush: xml">
+&lt;tabbox&gt;
+  &lt;tabs&gt;
+    &lt;tab label="&lt;!--Tab Text--&gt;" /&gt;
+  &lt;/tabs&gt;
+&lt;tabpanels&gt;
+  &lt;tabpanel orient="vertical"&gt;
+    ...
+  &lt;/tabpanel&gt;
+&lt;/tabpanels&gt;</pre>
+   </td>
+   <td>tabbox にフォーカスすると、選択したタブに視覚的なフォーカスが設定され、左右の矢印キーを使用して別のタブを選択できます。</td>
+  </tr>
+  <tr>
+   <td id="tabbrowser">tabbrowser</td>
+   <td>JAWS 7.10 の問題</td>
+   <td>JAWS 7.10 でテストする際、tabbrowser 要素を使用すると、iframe 内部の XUL で予期できない多くの問題が発生します。tabbrowser 内部で HTML を使用することはできます。詳しい情報は、browser 要素を参照してください。</td>
+  </tr>
+  <tr>
+   <td id="tabpanel">tabpanel</td>
+   <td> </td>
+   <td><a href="#tabbox" title="tabbox">tabbox</a> 参照</td>
+  </tr>
+  <tr>
+   <td id="tabpanels">tabpanels</td>
+   <td> </td>
+   <td><a href="#tabbox" title="tabbox">tabbox</a> 参照</td>
+  </tr>
+  <tr>
+   <td id="tabs">tabs</td>
+   <td> </td>
+   <td><a href="#tabbox" title="tabbox">tabbox</a> 参照</td>
+  </tr>
+  <tr>
+   <td id="textbox">textbox</td>
+   <td>
+    <pre class="brush: xml">
+&lt;label control="inputId"&gt;
+  &lt;!--First name:--&gt;
+&lt;/label&gt;
+&lt;textbox id='inputId'&gt;</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td id="tree">tree</td>
+   <td>
+    <pre class="brush: xml">
+&lt;tree hidecolumnpicker="true" &gt;
+  &lt;treecols&gt;
+    &lt;treecol label="Cats" primary="true"/&gt;
+  &lt;/treecols&gt;
+  &lt;treechildren&gt;
+    &lt;treeitem container="true" open="true"&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="&lt;!--Male--&gt;" /&gt;
+      &lt;/treerow&gt;
+      &lt;treechildren&gt;
+        &lt;treeitem&gt;
+          &lt;treerow&gt;
+            &lt;treecell label="&lt;!--Aramis--&gt;" /&gt;
+          &lt;/treerow&gt;
+        &lt;/treeitem&gt;
+        &lt;treeitem&gt;
+          &lt;treerow&gt;
+            &lt;treecell label="&lt;!--Fergus--&gt;" /&gt;
+          &lt;/treerow&gt;
+        &lt;/treeitem&gt;
+      &lt;/treechildren&gt;
+    &lt;/treeitem&gt;
+  &lt;/treechildren&gt;
+&lt;/tree&gt;</pre>
+   </td>
+   <td>
+    <ul>
+     <li>column picker (列ヘッダーの右端に表示されるウィジェット) または column headers 自体 (列の並べ替えに使用) へのキーボードアクセス手段はありません。これらの機能は、メインメニュー内で (Firefox のブックマークの管理ウィンドウなど) 、別の場所からアクセスできる必要があります。</li>
+     <li>JAWS 7.10 は column header を読み上げることができません。</li>
+     <li>main tree は、通常の tree コントロールのようにアクセスできます。</li>
+     <li>Firefox は、アクセシブル記述 [TODO exact format?] によって、各 tree 項目の位置、基数、および深度を露呈します。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <td id="treecell">treecell</td>
+   <td> </td>
+   <td><a href="#tree" title="tree">tree</a> 参照</td>
+  </tr>
+  <tr>
+   <td id="treechildren">treechildren</td>
+   <td> </td>
+   <td><a href="#tree" title="tree">tree</a> 参照</td>
+  </tr>
+  <tr>
+   <td id="treecol">treecol</td>
+   <td> </td>
+   <td><a href="#tree" title="tree">tree</a> 参照</td>
+  </tr>
+  <tr>
+   <td id="treecols">treecols</td>
+   <td> </td>
+   <td><a href="#tree" title="tree">tree</a> 参照</td>
+  </tr>
+  <tr>
+   <td id="treeitem">treeitem</td>
+   <td> </td>
+   <td><a href="#tree" title="tree">tree</a> 参照</td>
+  </tr>
+  <tr>
+   <td id="treerow">treerow</td>
+   <td> </td>
+   <td><a href="#tree" title="tree">tree</a> 参照</td>
+  </tr>
+ </tbody>
+</table>
+
+<p> </p>
+
+<p>スクリーンリーダーに何も露呈しない要素、またはまだアクセシビリティの問題が発見されていない要素:<br>
+ arrowscrollbox, bbox, box, grippy, hbox, menuseparator, overlay, page, script, spacer, splitter, stringbundle, stringbundleset, vbox, window</p>
+
+<p>まだ処理されていない要素:<br>
+ action, binding, bindings, broadcaster, broadcasterset, conditions, content, dialog, dialogheader, editor, listcell, member, observes, preference, preferences, prefpane, prefwindow, resizer, richlistbox, richlistitem, resizer, rule, scrollbar, scrollbox, scrollcorner, separator, template, textnode, titlebar, toolbar, toolbarbutton, toolbargrippy, toolbaritem, toolbarpalette, toolbarseparator, toolbarset, toolbarspacer, toolbarspring, toolbox, tooltip, treeseparator, triple, wizard, wizardpage</p>
+
+<p>Cases to revisit:</p>

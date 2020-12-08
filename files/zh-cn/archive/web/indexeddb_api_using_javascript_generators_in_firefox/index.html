@@ -1,0 +1,60 @@
+---
+title: 在 Firefox 中使用 JavaScript Generators
+slug: Archive/Web/IndexedDB_API_Using_JavaScript_Generators_in_Firefox
+translation_of: Archive/Web/IndexedDB_API_Using_JavaScript_Generators_in_Firefox
+---
+<div class="warning"><strong>警告：</strong> 此项技术仅对 Firefox 浏览器生效，而对 IE、 Chrome、 Safari 等浏览器无效。</div>
+
+<p>生成器（generators）可用于简化 Firefox 浏览器中的异步代码，需使用 JavaScript 1.7 或更高版本。 您可以按下列方式引入 HTML：</p>
+
+<pre class="brush: js">&lt;script type="text/javascript;version=1.7" src="myScript.js"&gt;&lt;/script&gt;</pre>
+
+<p>一个 <code>myScript.js</code> 文件可能是像这样的：</p>
+
+<pre class="brush: js">// 需要将生成器（generator）存储在全局变量中。
+var generator;
+
+// 通过简单的事件侦听器将接收到的事件传递给生成器。
+function grabEvent(event) {
+  generator.send(event);
+}
+
+// 关闭生成器，但必须在生成器外部进行，所以我们使用 setTimeout 函数
+function closeGenerator() {
+  setTimeout(function() {
+    generator.close();
+  }, 0);
+}
+
+// 主函数
+function databaseOperation() {
+  mozIndexedDB.open("MyTestDatabase").onsuccess = grabEvent;
+  var event = yield;
+
+  var db = event.target.result;
+
+  if (db.version != "1.0") {
+    db.setVersion("1.0").onsuccess = grabEvent;
+    event = yield;
+
+    var transaction = event.transaction;
+    db.createObjectStore("stuff");
+
+    transaction.oncomplete = grabEvent;
+    yield;
+  }
+
+  db.transaction(["stuff"]).objectStore("stuff").get("foo").onsuccess = grabEvent;
+  event = yield;
+
+  alert("Got result: " + event.target.result);
+
+  // 完成。
+  closeGenerator();
+
+  // 始终在末尾额外使用一次 yield ，否则您将看到 StopIteration 异常。
+  yield;
+}
+
+generator = databaseOperation();
+generator.next();</pre>

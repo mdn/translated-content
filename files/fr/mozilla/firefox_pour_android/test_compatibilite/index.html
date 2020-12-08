@@ -1,0 +1,105 @@
+---
+title: Tester la compatibilité des sites avec Firefox pour Android
+slug: Mozilla/Firefox_pour_Android/Test_Compatibilite
+tags:
+  - AQ
+  - Compatibilité
+  - Firefox
+  - Guide
+  - Mobile
+translation_of: Mozilla/Firefox_for_Android/Compatibility_Testing
+---
+<h2 id="Résumé">Résumé</h2>
+<p>Notre objectif est d'<strong>ouvrir le Web mobile à tous les navigateurs mobiles à travers la promotion des standards et des bonnes pratiques. </strong></p>
+<p>Cependant, de nombreux sites servent à Firefox pour Android un contenu qui ne fonctionne pas bien ou qui est différent de celui pour les autres navigateurs mobiles. Ce contenu peut être :</p>
+<ul>
+  <li>Un site mobile basique</li>
+  <li>Un site traditionnel pour ordinateur de bureau</li>
+  <li>Un site WAP (Wireless Application Protocol) conçu pour les téléphones non smart-phones</li>
+  <li>Un site mobile optimisé pour le tactile qui est cassé dans son apparence ou ses fonctionnalités.</li>
+</ul>
+<p>Nous désignons cette catégorie de problèmes, comme des <strong>problèmes de compatibilité Web</strong>. Les problèmes de compatibilité Web sont principalement issus d'une ou plusieurs des causes suivantes :</p>
+<dl>
+  <dt>
+    Détection de l'agent utilisateur (UA-sniffing)</dt>
+  <dd>
+    Identifier le navigateur par sa chaîne d'agent utilisateur (user-agent) et envoyer un contenu différent.</dd>
+  <dt>
+    Utiliser des propriétés CSS non standards (principalement Webkit)</dt>
+  <dd>
+    Utiliser des propriétés CSS non standard que le navigateur ne reconnaît pas, causant des problèmes de mise en page et de style</dd>
+  <dt>
+    Utiliser des propriétés DOM non standard (principalement Webkit)</dt>
+  <dd>
+    Utiliser des propriétés DOM non standards en JavaScript que le navigateur ne reconnaît pas, causant des problèmes fonctionnels</dd>
+  <dt>
+    Limitation navigateur</dt>
+  <dd>
+    Utiliser des propriétés standards CSS et DOM que le navigateur ne reconnaît pas actuellement, ou qui posent des problèmes fonctionnels ou de performance.</dd>
+</dl>
+<p>Pour <strong>Firefox</strong> en particulier, nous avons besoin de votre aide pour identifier les sites qui ne fonctionnent pas bien, en signalant les problèmes spécifiques que vous avez trouvés lors de votre enquête. D'autres fabricants de navigateurs ont leurs propres systèmes d'alertes, dans lesquels vous pouvez signaler tout problème survenant aussi avec leur navigateur.</p>
+<p>Ci-dessous sont détaillées les étapes que vous pouvez suivre pour identifier et signaler les sites problématiques.</p>
+<h2 id="Préparation">Préparation</h2>
+<p>Pour démarrer, préparons notre matériel et nos logiciels pour des tests de compatibilité.</p>
+<ol>
+  <li>Un téléphone Android est un pré-requis pour tester Firefox pour Android. Assurez-vous que votre téléphone est supporté en consultant la <a href="http://www.mozilla.org/en-US/firefox/mobile/platforms/" title="http://www.mozilla.org/en-US/firefox/mobile/platforms/">liste des appareils supportés par Firefox pour Android</a>.</li>
+  <li>Installer <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox" title="https://play.google.com/store/apps/details?id=org.mozilla.firefox">Firefox pour Android depuis Google Play</a>.</li>
+  <li>Installer l'add-on <a href="https://addons.mozilla.org/fr/android/addon/phony/" title="https://addons.mozilla.org/fr/android/addon/phony/">Phony</a> pour Firefox pour Android. Cet add-on permet de faire passer Firefox pour Android pour un autre navigateur en remplaçant sa chaîne <a href="/en-US/docs/Browser_detection_using_the_user_agent" title="/en-US/docs/Browser_detection_using_the_user_agent">agent utilisateur</a> par celle d'un autre navigateur pour chaque requête HTTP.</li>
+  <li><a href="https://bugzilla.mozilla.org/createaccount.cgi" title="https://bugzilla.mozilla.org/createaccount.cgi">Créer un compte sur Bugzilla</a> pour que vous puissiez signaler les problèmes rencontrés.</li>
+</ol>
+<p><strong>Étapes facultatives :</strong></p>
+<ul>
+  <li>Installer Firefox pour Android pour un autre canal de distribution : <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox_beta" title="https://play.google.com/store/apps/details?id=org.mozilla.firefox_beta">Beta</a>, <a href="http://www.mozilla.org/en-US/mobile/aurora/" title="http://www.mozilla.org/en-US/mobile/aurora/">Aurora</a> et <a href="http://nightly.mozilla.org/" title="http://nightly.mozilla.org/">Nightly</a>.</li>
+  <li>Vous pouvez essayer de reproduire et débuguer les problèmes que vous avez découverts, dans Firefox pour ordinateur de bureau. Installer Firefox sur Windows, Linux ou Mac OS X et un <a href="https://addons.mozilla.org/en-US/firefox/addon/user-agent-switcher/?src=search" title="https://addons.mozilla.org/en-US/firefox/addon/user-agent-switcher/? data-cke-saved-src=search src=search">module comme Phony pour ordinateur</a>.</li>
+</ul>
+<div class="note">
+  <p><strong>Note :</strong> Voir l'article <a href="/en-US/docs/Browser_detection_using_the_user_agent" title="/en-US/docs/Browser_detection_using_the_user_agent">Détection du navigateur par l'agent-utilisateur</a> pour une explication détaillée sur les agents-utilisateurs des navigateurs.</p>
+</div>
+<h2 id="Tester_la_compatibilité">Tester la compatibilité</h2>
+<p>Les étapes suivantes vous guideront selon la méthodologie utilisée par Mozilla AQ (Assurance Qualité) lors des tests de compatibilité :</p>
+<ol>
+  <li>Choisissez un site à tester.
+    <ul>
+      <li>Il peut s'agir d'un site que vous avez déjà visité et sur lequel vous avez constaté un problème lors de vos navigations quotidiennes.</li>
+      <li>Sinon, vous pouvez choisir un des principaux sites listés dans le <a href="http://people.mozilla.org/~lmandel/arewecompatibleyet/" title="http://people.mozilla.org/~lmandel/arewecompatibleyet/">rapport Are We Compatible Yet</a>. Les sites qui n'ont pas été analysés sont affichés en blanc.</li>
+    </ul>
+  </li>
+  <li>Ouvrez le site que vous avez choisi avec Firefox pour Android. Testez son fonctionnement en explorant les différentes parties du site. Par exemple, si le site affiche des articles, des photos, et des vidéos, vous pouvez explorer ces trois parties du site. Cliquez sur les liens, utilisez les formulaires, créez des comptes, identifiez-vous, et posez les questions :
+    <ol>
+      <li>Est-ce que ce site est pour ordinateur de bureau ? Si oui, sautez directement au point 3 ou 4 pour déterminer si Safari sur iPhone et le navigateur d'Android reçoivent le même contenu.</li>
+      <li>Est-ce que le site a de flagrants problèmes de mise en page ? Est-ce que les éléments sont positionnées les uns sur les autres ? Est-ce qu'il manque du contenu ? Est-ce que les menus sont correctement affichés ? Est-ce que les couleurs de fonds de l'en-tête sont correctes ? Est-ce que certaines zones de la page sont affichées correctement ? Est-ce que le site apparaît tout simplement cassé, ou mal ?<span style="display: none;"> </span></li>
+    </ol>
+  </li>
+  <li>Visitez le même site web en utilisant le navigateur de votre appareil Android, et en utilisant la même méthode d'exploration que pour le point 2, et posez les questions :
+    <ol>
+      <li>Est ce que ce site est pour ordinateur de bureau ? Est-ce que le contenu change fortement avec ce que vous avez vu sur Firefox pour Android ? Si oui, comment était-ce différent ? S'agit'il d'un site optimisé pour mobile ?</li>
+      <li>Y-a t'il les mêmes problèmes de mise en page que ceux constatés sur Firefox pour Android ? Si oui, quels problèmes avez-vous vu sous Firefox pour Android qui ne sont plus là avec le navigateur d'Android ?</li>
+    </ol>
+  </li>
+  <li>Faîtes apparaître Firefox pour Android aux yeux du site, comme s'il s'agissait de Safari sur iPhone, en cliquant sur Menu -&gt; Phony et en choisissant iPhone. Après avoir sélectionné iPhone, cliquez sur Menu -&gt; Recharger. Visitez le même site une nouvelle fois et continuez la même méthode d'exploration que pour le point 2, et posez les questions :
+    <ol>
+      <li>Est ce que ce site est pour ordinateur de bureau ? Est-ce que le contenu change fortement avec ce que vous avez vu sur Firefox pour Android ? Si oui, s'agit'il d'un site optimisé pour mobile ?</li>
+      <li>Y a-t'il des problèmes de mise en page ? Si oui, quels sont ces problèmes ?</li>
+    </ol>
+  </li>
+</ol>
+<h2 id="Signaler_les_résultats">Signaler les résultats</h2>
+<p>Pour tout site qui apparaît ou fonctionne différement dans Firefox pour Android, le navigateur d'Android, ou Safari sur iPhone, vous devez signaler le problème sur Bugzilla. Pour signaler un problème, soumettez un bug dans le module <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox%20for%20Android&amp;component=Evangelism&amp;rep_platform=ARM&amp;op_sys=Android" title="https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox%20for%20Android&amp;component=Evangelism&amp;rep_platform=ARM&amp;op_sys=Android">Firefox for Android Evangelism</a> et fournissez autant d'informations sur le problème que vous pouvez. Voici certaines informations souvent utiles, à renseigner dans votre signalement :</p>
+<dl>
+  <dt>
+    Résumé</dt>
+  <dd>
+    Résumez le problème que vous avez identifié avec le site. Il est utile d'inclure le nom de domaine, par exemple mozilla.org, dans le résumé.</dd>
+  <dt>
+    Description</dt>
+  <dd>
+    Décrivez le problème du mieux que vous pouvez. Mettez des détails sur la façon dont le contenu diffère entre Firefox pour Android, le navigateur Android et Safari sur iPhone, les endroits précis (titres, liste d'articles, menus) où le site ne s'affiche pas correctement, et quelles parties du site (articles illisibles, vidéos injouables, impossible de cliquer sur les liens) qui ne fonctionnent pas comme elles le devraient.<br>
+    <br>
+    Si vous avez quelques connaissances en HTML, CSS et JavaScript, il est très utile d'indiquer les lignes de code qui sont à l'origine du problème.</dd>
+  <dt>
+    Pièces jointes</dt>
+  <dd>
+    Il est aussi utile d'attacher une capture d'écran montrant le problème dans Firefox pour Android. La méthode pour prendre une capture d'écran sur Android diffère selon la version du système d'exploitation.</dd>
+</dl>
+<h2 id="Information_de_contact">Information de contact</h2>
+<p>Si vous avez des questions sur les tests de compatibilité ou si vous voulez vous impliquer dans l'effort de compatibilité Web mobile de Mozilla, s'il vous plaît, inscrivez-vous sur la liste de diffusion <a href="https://lists.mozilla.org/listinfo/compatibility">compatibility@lists.mozilla.org</a>.</p>

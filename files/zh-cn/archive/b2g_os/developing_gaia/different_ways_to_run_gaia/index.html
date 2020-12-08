@@ -1,0 +1,72 @@
+---
+title: 运行 Gaia 的不同方式
+slug: Archive/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia
+translation_of: Archive/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia
+---
+<div class="summary">
+ <p><span class="seoSummary">您可以通过 App Manager中，在 Desktop Firefox 中直接运行，作为专用桌面版本(Desktop B2G), 在仿真器中, 或在可兼容的移动设备中</span><span class="seoSummary">运行 Gaia</span><span class="seoSummary">。本文则对上述每个方式如何实现的进行总结，以及链接到更深的内容。</span></p>
+</div>
+<h2 id="它与真实的东西有多接近？">它与真实的东西有多接近？</h2>
+<p dir="ltr" id="docs-internal-guid-46d8bd5f-ac65-2c23-a6c9-cc3bc3dc3cd5">Some of the solutions for running Gaia detailed in this article are closer to the experience on a real device than others. The order of ease for running is as follows:</p>
+<ol dir="ltr">
+ <li>Gaia in simulator</li>
+ <li>Gaia in Desktop Firefox</li>
+ <li>Gaia in B2G Desktop</li>
+ <li>Gaia in Emulator</li>
+ <li>Gaia flashed on phone</li>
+ <li>Gaia+Gecko flashed on phone</li>
+</ol>
+<p>The order of “how close it is to the shipped product” is exactly the opposite of this. Depending on the feature you’re working on, you’ll have to find the environment that suits the problem.</p>
+<h2 id="在_App_ManagerFirefox_OS_simulator_中使用_Gaia">在 App Manager/Firefox OS simulator 中使用 Gaia</h2>
+<p>The quickest way to try Gaia is via the <a href="/en-US/Firefox_OS/Using_the_App_Manager">Firefox App Manager</a>.<br>
+ <br>
+ App Manager is a developer tool available in Firefox for Desktop. It provides a number of useful tools to help you test, deploy and debug HTML5 web apps on Firefox OS phones and the Firefox OS Simulator, directly from your browser.<br>
+ <br>
+ In desktop Firefox Browser 26+, open the App Manager using <em>Tools &gt; Web Developer &gt; App Manager</em>. Tap Start Simulator (once you've installed it) and you are ready to experience Firefox OS.</p>
+<h2 id="B2G_Desktop">B2G Desktop</h2>
+<p>B2G Desktop is a desktop build of the app runtime used on Firefox OS devices which you can use to run Gaia on your desktop computer.</p>
+<p>You can download a <a href="http://nightly.mozilla.org/#Desktop%20Boot2Gecko">nightly build of B2G desktop</a> from the <a href="http://nightly.mozilla.org/">Firefox Nightly site</a>. Depending on what version you are targeting, you may want a specific version of latest-mozilla-b2g18. There are builds for Linux (32 bit and 64 bit), Mac OS X and Windows.</p>
+<p>Nightly builds come packaged with a recent version of gaia. Once you've downloaded the archive, all you need to do is extract it to a folder and run the b2g binary from the extracted folder.</p>
+<pre class="brush: bash">$ cd b2g
+$ ./b2g</pre>
+<p>To run B2G with your own version of Gaia for development purposes you first need to build a profile from your clone:</p>
+<pre class="brush: bash">$ cd /path/to/gaia
+$ DEBUG=1 DESKTOP=0 make</pre>
+<p>This will generate a directory in your <code>gaia</code> directory called <code>profile</code>. The <code>DEBUG</code> part runs Gaia as hosted apps on a built-in web server, rather than the default packaged apps which have to be re-packaged after every change. You can find the path to the profile directory by taking a look at last line of output after running the above command, which should look like:</p>
+<pre class="brush: bash">Profile Ready: please run [b2g|firefox] -profile /path/to/gaia/profile</pre>
+<p>You can then run B2G Desktop with your generated profile like so:</p>
+<pre class="brush: bash">$ ./b2g /path/to/gaia/profile</pre>
+<p>If you want to you can build your own B2G desktop from source.</p>
+<div class="note">
+ <p><strong>Note:</strong> On Mac OS X, the <code>b2g</code> binary will be inside B2G.app. To run B2G Desktop on this platform you will need the following command:<br>
+  <code>./B2G.app/Contents/MacOS/b2g /path/to/gaia/profile</code></p>
+</div>
+<h2 id="在_Desktop_Firefox_中使用_Gaia">在 Desktop Firefox 中使用 Gaia</h2>
+<p>It's also possible to run Gaia inside of Firefox. This gives you the advantages of having a rapid development cycle, as well as standard web development tools and debuggers. See <a href="/en-US/Firefox_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a> for details on how to do this.</p>
+<div class="note">
+ <p><strong>Note</strong>: FoxBox is a Firefox OS build environment contained in a VM (Virtual Machine), powered by Vagrant and VirtualBox. This has many advantages, but the main one is that it does a lot of configuration for you, leaving you to get on with development work. For full instructions, read the <a class="external external-icon" href="https://github.com/gasolin/foxbox">FoxBox GitHub repo README</a>.</p>
+</div>
+<h2 id="在真实设备中烧写_Gaia">在真实设备中烧写 Gaia</h2>
+<p dir="ltr" id="docs-internal-guid-46d8bd5f-ac6a-0884-5265-76e0fe740fa6">要在真实设备上烧写新版本的 Gaia 需要下列步骤：</p>
+<ol dir="ltr">
+ <li>首先请确认您本地的电脑上有 Gaia 仓库，并且 <a href="/en-US/Firefox_OS/Debugging/Installing_ADB">ADB</a> 已安装。</li>
+ <li>确认您已经使能  <a href="/en-US/Firefox_OS/Debugging/Developer_settings#Debugging_via_USB">Debugging via USB</a> 选项。</li>
+ <li>通过 USB 将您的设备连接到电脑上。</li>
+ <li>如果您有一个连接的设备，可以继续下面的命令。或者您（ Windows 或 Linux 系统的用户）可能需要检查下 OEM USB 驱动页面来对您电脑中的 USB 驱动进行正确配置。</li>
+ <li>在 Gaia 仓库中运行下面命令以对手机进行复位以及更新您的 Gaia 源码：
+  <pre class="brush: bash">$ make reset-gaia</pre>
+ </li>
+ <li>要测试非 System app， 您可以在不重启设备情况下运行下面命令来安装：
+  <pre class="brush: bash" dir="ltr">$ make install-gaia</pre>
+ </li>
+ <li>如果您只是想安装一个指定的 app， 可以通过 APP 变量来完成， 就如下面的命令：
+  <pre class="brush: bash">$ make install-gaia APP=browser</pre>
+ </li>
+</ol>
+<p dir="ltr">要检查您的设备是否已正确的通过 USB 连接， 可以键入下面命令：</p>
+<pre class="brush: bash" dir="ltr">$ adb devices</pre>
+<p dir="ltr">您应该获取到如下类似的结果：</p>
+<pre class="brush: bash" dir="ltr">List of devices attached
+emulator-5554  device</pre>
+<h2 id="编译_Gecko_和_Gaia_并在仿真器或真实设备中使用">编译 Gecko 和 Gaia 并在仿真器或真实设备中使用</h2>
+<p>如果您有一个可兼容的移动设备，则可以 <a href="/en-US/docs/Mozilla/Firefox_OS/Building_and_installing_Firefox_OS" title="Mozilla/Firefox_OS/Building_and_installing_Firefox_OS">编译和安装您自己的 Firefox OS 版本</a> 并且将其运行在仿真器或推送到实际设备上。</p>

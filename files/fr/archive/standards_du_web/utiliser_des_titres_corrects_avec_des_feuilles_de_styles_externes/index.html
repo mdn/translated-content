@@ -1,0 +1,35 @@
+---
+title: Utiliser des titres corrects avec des feuilles de styles externes
+slug: >-
+  Archive/Standards_du_Web/Utiliser_des_titres_corrects_avec_des_feuilles_de_styles_externes
+tags:
+  - CSS
+translation_of: Archive/Web_Standards/Correctly_Using_Titles_With_External_Stylesheets
+---
+<p>
+Les feuilles de style externes sont souvent associées aux documents HTML en utilisant l'élément <code>link</code>, mais il est important d'en employer correctement les attributs. En effet, il y a trois sortes de feuilles de style, et l'attribut <code>title</code> est la clé de deux d'entre elles. Sa présence dans un élément <code>link</code> qui référence une feuille de style externe transforme celle-ci en feuille de style par défaut. Dans la plupart des cas, ceci conduira la feuille de style externe à être ignorée, ce qui n'est généralement pas l'intention de l'auteur.
+</p>
+<h3 id="Pourquoi_les_titres_sont-ils_importants" name="Pourquoi_les_titres_sont-ils_importants"> Pourquoi les titres sont-ils importants </h3>
+<p>L'attribut <code>title</code> détermine la façon dont votre feuille de style externe s'applique à votre document. En fait, l'utilisation de l'attribut <code>title</code> est tellement significative que le HTML 4.01 classe les feuilles de style par catégorie selon sa présence ou son absence. En spécifiant un attribut <code>title</code>, vous pouvez décider si une feuille particulière affecte le document en permanence ou si elle est employée seulement dans certaines circonstances. </p><p>Il y a trois sortes de feuilles de style possibles : <i>permanente</i>, <i>par défaut</i> et <i>alternative</i>. Les auteurs sont surtout familiarisés avec les feuilles de style <i>permanentes</i>, qui peuvent s'appliquer simultanément en n'importe quel nombre à un document. Une feuille de style permanente n'a pas d'attribut <code>title</code> et son attribut <code>rel</code> a la valeur <code>stylesheet</code>. Un document peut se référer à une ou plusieurs feuilles de style permanentes, qui seront toutes utilisées pour sa présentation. </p><p>Une feuille de style <i>par défaut</i>, quant à elle, a un attribut <code>rel</code> doté de la valeur <code>stylesheet</code> et un attribut <code>title</code> de n'importe quelle valeur. En voici deux exemples : </p>
+<pre>&lt;link type="text/css" rel="stylesheet" title="Basic styles" href="basic.css" /&gt;
+&lt;link type="text/css" rel="stylesheet" title="Fish and boats" href="ocean.css" /&gt;
+</pre>
+<p>Selon la spécification HTML 4.01, seulement <b>une et une seule</b> feuille de style par défaut peut être utilisée à la fois. Dès lors, dans l'exemple ci-dessus, une seule des deux feuilles de style par défaut sera appliquée au document. La spécification ne fournit pas de procédure pour décider laquelle doit être utilisée ; les agents utilisateur sont donc libres de choisir. </p><p>Par conséquent, aucun <code>link</code> vers une feuille de style incluant un attribut <code>title</code> ne sera permanent. Il risque au contraire d'être ignoré par le navigateur. N'importe quel élément <code>link</code> se rapportant à une feuille de style avec un attribut <code>title</code> doit être <i>par défaut</i> ou <i>alternatif</i>, selon la valeur de l'attribut <code>rel</code>. </p><p>Dans un document qui propose des styles alternatifs, la feuille de style par défaut sera employée à condition qu'aucun des styles alternatifs ne soit choisi par l'utilisateur. Ainsi, quand le document est chargé, le navigateur emploiera tous les styles permanents et une des feuilles de style par défaut (mais attention, il ne peut y avoir qu'un seul style par défaut). Lorsque l'utilisateur choisit un des styles alternatifs, le style par défaut ne sera plus employé, bien que l'utilisateur puisse toujours le sélectionner à nouveau. </p><p>Le rôle essentiel des styles par défaut est d'indiquer le style de préférence pour l'affichage du document ; c'est-à-dire que c'est sa « présentation » par défaut. Si l'une ou l'autre des feuilles de style alternatives est choisie, alors le style par défaut est ignoré en faveur du style alternatif choisi par l'utilisateur. Ceci diffère donc des styles permanents qui sont toujours appliqués au document, qu'un style alternatif ait été choisi ou pas.
+</p>
+<h3 id="Recommandations" name="Recommandations"> Recommandations </h3>
+<p>Les auteurs doivent s'assurer que chaque feuille de style qui doit toujours s'appliquer est permanente et non alternative. Pour citer la <a class="external" href="http://web.archive.org/web/20040405164311/http://www.w3.org/TR/HTML401/present/styles.html#h-14.3.1">Spécification HTML 4.01, section 14.3.1</a> : </p>
+<blockquote>
+<ul><li> Pour rendre une feuille de style permanente, il faut spécifier la valeur « stylesheet » pour l'attribut <code>rel</code> et ne pas spécifier d'attribut <code>title</code>.
+</li><li> Pour rendre une feuille de style par défaut, il faut spécifier la valeur « stylesheet » pour l'attribut <code>rel</code> et spécifier un attribut <code>title</code>.
+</li></ul>
+</blockquote>
+<h3 id="Liens" name="Liens"> Liens </h3>
+<ul><li> <a class="external" href="http://www.w3.org/TR/html401/present/styles.html#h-14.3">HTML 4.01 Specification, section 14.3: External style sheets</a>
+</li></ul>
+<div class="originaldocinfo">
+<h3 id="Document_original" name="Document_original"> Document original </h3>
+<ul><li> Auteur : Eric A. Meyer, <i>Netscape Communications</i>
+</li><li> Publié le 30 déc. 2002
+</li><li> Copyright © 2001-2003 Netscape.
+</li></ul>
+</div>

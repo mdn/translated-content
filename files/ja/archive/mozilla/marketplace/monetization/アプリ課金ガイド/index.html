@@ -1,0 +1,47 @@
+---
+title: アプリ課金ガイド
+slug: Archive/Mozilla/Marketplace/Monetization/アプリ課金ガイド
+tags:
+  - Web Payment
+translation_of: Archive/Marketplace/Monetization/App_payments_guide
+---
+<div class="summary">
+ <p style="margin: 0px 0px 1.286em; padding: 0px; line-height: 1.5em;"><span class="seoSummary">Firefox Marketplace でアプリのエンドユーザが支払いを行う方法には、アプリを購入するための支払い (有料アプリ) と、アプリのインストール後にアイテムを購入するための支払い (アプリ内課金) の 2 種類があります。このページでは、有料アプリを作成するためのコードとワークフローを説明します。<a href="/ja/Marketplace/Monetization/In-app_payments">アプリ内課金</a>については、別のページで説明します。</span></p>
+</div>
+<h2 id="パッケージモデルの決定_パッケージ型とホスト型">パッケージモデルの決定 (パッケージ型とホスト型)</h2>
+<p>決済方法について検討する前に、開発するアプリのパッケージモデルが、パッケージ型とホスト型のどちらかを決定すると作業が円滑になります。パッケージ型 アプリが必要な場合は、Content Security Policy (CSP) に従う必要があります。詳細については、次の参考資料を参照してください。</p>
+<ul>
+ <li><a href="/en-US/Marketplace/Publishing/Packaged_apps">パッケージ型アプリ</a>: パッケージ型アプリケーションとホスト型アプリの違いを説明します。パッケージ型アプリを使用する場合に必要なCSPについて簡単に説明します。</li>
+ <li><a href="https://wiki.mozilla.org/Apps/Security#Default_CSP_policy">Content Security Policy</a>: CSP に従った場合の影響について説明します。</li>
+</ul>
+<h2 id="有料アプリケーションの作成">有料アプリケーションの作成</h2>
+<div>
+ <p>どのようなアプリでも有料アプリにすることができます。ホスト型アプリとパッケージ型アプリのどちらでも構いません。特別な許可も不要です。 Firefox Marketplace への登録時に、有料アプリとして登録すれば、そのアプリは有料アプリとなります。ただし、アプリが販売レシートを検証し、支払が実際に行われたことを確認 できるようにアプリを変更する必要があります。以下では、有料アプリの作成に必要な作業について説明します。</p>
+ <h3 id="manifest.webapp_への_installs_allowed_from_の追加">manifest.webapp への installs_allowed_from の追加</h3>
+ <p>まず、<a href="/ja/Apps/Developing/Manifest">app manifest</a> に <code>installs_allowed_from</code> フィールドを追加する必要があります。次のように、Firefox Marketplace の URL を指定します。</p>
+ <pre class="brush: js">"installs_allowed_from": [ "https://marketplace.firefox.com" ]</pre>
+ <p>これはレシート検証の一部として必要な指定で、開発者のアプリが、購入者が支払を行ったストアで提供されていることを証明します。</p>
+</div>
+<h3 id="レシートの検証">レシートの検証</h3>
+<p>Marketplace でアプリが販売されると、販売のデジタルレシートが作成されます。アプリでコーディングを行って、アプリの実行時にこの販売レシートを検証する必要があり ます。この検証機能がなくてもアプリを販売することは可能ですが、装備することを強くお勧めします。この機能を備えることで、料金を支払わずにアプリがイ ンストールされるのを防止できるからです。</p>
+<p>Mozilla が提供する <a class="external external-icon" href="https://github.com/mozilla/receiptverifier" style="line-height: 1.572;" title="https://github.com/mozilla/receiptverifier">receiptverifier</a> という JavaScript ヘルパーライブラリを使用すると、開発者は若干のコードを追加するだけでレシートを検証できます。アプリに次の <code>receiptverifier</code> ライブラリを追加してください。</p>
+<ul>
+ <li><a href="https://github.com/mozilla/receiptverifier/blob/master/receiptverifier.js" style="line-height: 1.572;">receiptverifier.js</a></li>
+ <li><a href="https://github.com/mozilla/receiptverifier/blob/master/receiptverifier-ui.js">receiptverifier-ui.js</a></li>
+</ul>
+<p>その後、次のコード (アプリに合わせてテキストを変更) をアプリに追加して、レシートを検証します。</p>
+<pre class="brush: js" style="font-size: 14px;">mozmarket.receipts.Prompter({
+  storeURL: "https://marketplace.firefox.com/app/your-app",
+  supportHTML: '&lt;a href="mailto:you@yourapp.com"&gt;email you@yourapp.com&lt;/a&gt;',
+  verify: true
+});</pre>
+<p>レシートの検証は、通常、アプリの起動時に実行されます。レシートが有効な場合、アプリのリソースをユーザに解放します。レシートが無効な場合は、アプリを実行不可にすることができます。</p>
+<div class="note">
+ <p><strong>Note</strong>: 詳細については、<a href="/ja/Marketplace/Monetization/Validating_a_receipt">レシートの検証</a>を参照してください。</p>
+</div>
+<h2 id="See_also">See also</h2>
+<ul>
+ <li><a class="external external-icon" href="https://hacks.mozilla.org/2013/02/building-a-paid-app-for-firefox-os" title="https://hacks.mozilla.org/2013/02/building-a-paid-app-for-firefox-os">Firefox OS 対応の有料アプリの作成</a>:有料アプリの概要を説明し、役に立つ詳細情報のリンクを示します。</li>
+ <li><a class="external external-icon" href="https://github.com/mozilla/receiptverifier" title="https://github.com/mozilla/receiptverifier">receiptverifier</a> ライブラリ: 上で述べたライブラリを使用するためのドキュメントと使用例を示します。</li>
+ <li><a class="external external-icon" href="https://wiki.mozilla.org/Apps/WebApplicationReceipt" title="https://wiki.mozilla.org/Apps/WebApplicationReceipt">Web アプリケーションのレシート</a>:実際のデジタルレシートについて詳細に説明します。</li>
+</ul>

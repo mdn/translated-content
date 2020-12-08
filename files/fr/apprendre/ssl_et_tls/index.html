@@ -1,0 +1,84 @@
+---
+title: SSL et TLS
+slug: Apprendre/SSL_et_TLS
+tags:
+  - Security
+  - Tutorial
+translation_of: Archive/Security/SSL_and_TLS
+---
+<p>{{draft}}</p>
+
+<p>Les protocoles <em>Secure Sockets Layer</em> (SSL) (ou Couche de sockets sécurisée) et <em>Transport Layer Security</em> (TLS) (ou Couche de transport sécurisée) sont des protocoles universellement acceptés pour l'établissement de communications authentifiées et chiffrées entre des clients d'une part et des serveurs d'autre part. L'authentification liée au serveur et celle liée au client utilisent toutes les deux SSL/TLS.</p>
+
+<p>SSL/TLS utilise un système de combinaison entre une clé publique et un chiffrement à clé symétrique. Le chiffrement par clé symétrique est beaucoup plus rapide qu'un chiffrement par clé publique mais le chiffrement par clé publique permet d'utiliser de meilleures techniques d'authentification Une « session » SSL/TLS commence donc toujours par un échange de message qu'on appellera l'établissement de liaison (<em>handshake</em> est le terme communément employé en anglais). Cet établissement de liaison permet au serveur de s'authentifier envers le client en utilisant des techniques basées sur des algorithmes à clé publique, cela permet ensuite au client et au serveur de coopérer pour créer des clés symétriques afin de chiffrer/déchiffrer rapidement les messages échangées pendant la session.</p>
+
+<p>Ces deux protocoles supportent différents algorithmes de chiffrement pour différentes opérations : l'authentification entre le serveur et le client, la transmission de certificats, l'établissement de clés de sessions. Les clients et serveurs peuvent supporter différents algorithmes de chiffrement. Une des fonctionnalités de l'établissement de liaison est la détermination du meilleur algorithme de chiffrement, supporté par le serveur et par le  client. C'est cet algorithme qui sera ensuite utilisé pour les opérations listées juste avant.</p>
+
+<p>Les algorithmes utilisés pour échanger des clés, comme RSA ou la cryptographie sur courbes elliptiques (ECC pour <em>Elliptic Curve Cryptography</em> en anglais) déterminent la façon dont le client et le serveur calculent les clés symétriques à utiliser pendant la session SSL/TLS. Le protocole SSL repose principalement sur des ensembles d'algorithmes qui incluent RSA alors que TLS, plus moderne supporte à la fois RSA et des algorithmes d'ECC.</p>
+
+<div class="note">
+<p><strong>Note :</strong> La sécurité de clés RSA dépend de sa longueur et de la capacité de calcul des ordinateurs. À l'heure actuelle, il est recommandé d'utiliser un clé RSA longue de 2048 bits. Bien que de nombreux serveurs web continuent d'utiliser des clés de 1024 bits, il serait préférable de passer à 2048 bits. Pour les ordinateurs 64 bits, des clés encore plus fortes devraient être utilisées (3072 ou 4096 bits par exemple).</p>
+</div>
+
+<p>Étant donné que certaines infrastructures de clés publiques utilisent encore RSA avant de migrer vers d'autres systèmes cryptographiques comme ECC, les serveurs devraient, dans la mesure du possible, continuer à supporter RSA.</p>
+
+<h3 id="Les_suites_de_chiffrement_supportées_par_RSA">Les suites de chiffrement supportées par RSA</h3>
+
+<p>Les suites de chiffrement communément supportées et qui utilisent un échange de clés basé sur RSA comportent généralement :</p>
+
+<ul>
+ <li>AES et une authentification des messages basée sur SHA. Les algorithmes de chiffrement <em>Advanced Encryption Standard</em> (AES) utilisent une taille de bloc de 128 bits et des clés de 128 ou 256 bits. Il existe 3.4 x 10<sup>38</sup> clés différentes sur 128 bits et 1.1 x 10<sup>77</sup> clés différentes sur 256 bits. AES possède le plus grand nombre de clés parmi les différents algorithmes supportés par SSL, ce qui en fait donc le plus « fort ». Ces suites de chiffrement sont conformes à FIPS.</li>
+ <li>Triple DES et authentification des messages basée sur SHA. Le triple DES (pour <em>Data Encryption Standard</em>) est le deuxième algorithme le plus fort supporté par SSL bien qu'il ne soit pas aussi rapide que RC4. Le triple DES utilise une clé trois fois plus grande qu'une clé utilisée pour un DES standard. La taille de clé est donc importante, ce qui permet d'avoir 3.7 * 10<sup>50</sup> clés possibles. Cette suite de chiffrement est conforme à FIPS.</li>
+ <li>RC4, RC2 et une authentification des messages basée sur MD5. Les algorithmes RC4 et RC2 chiffrent sur 128 bits, ce qui permet d'avoir (environ) 3.4 * 10<sup>38</sup> clés différentes. Les algorithmes basés sur RC4 sont plus rapides que ceux basés sur RC2. RC4 peut utiliser une authentification des messages basée sur SHA ou MD5.</li>
+ <li>DES et une authentification des messages basées sur SHA. DES, utilisé sur 56 bits permet de disposer d'environ 7.2 x 10<sup>16</sup> clés différentes. Étant devenue trop faible cryptographiquement parlant, cette suite de chiffrement n'est plus conforme à FIPS.</li>
+</ul>
+
+<h3 id="Utiliser_les_courbes_elliptiques_pour_la_cryptographie">Utiliser les courbes elliptiques pour la cryptographie</h3>
+
+<p>La cryptographie sur courbes elliptiques (ou <em>Elliptic Curve Cryptography</em>, ECC en anglais) est un système qui utilise les courbes elliptiques afin de créer des clés pour chiffrer des données. ECC permet d'avoir des clés de chiffrement plus fortes et également plus courtes que celles utilisées avec RSA. Cela fait qu'ECC est plus rapide et plus efficace, en termes d'implémentation, par rapport à RSA.</p>
+
+<p>ECC dispose donc de plusieurs avantages par rapport à RSA. Un des désavantages d'ECC est qu'il est, pour l'instant, moins largement supporté que RSA.</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Bits de sécurité</th>
+   <th scope="col">Longueur de clé RSA</th>
+   <th scope="col">Longueur de clé ECC</th>
+  </tr>
+ </thead>
+ <caption>Comparaison de la force des algorithmes RSA et ECC</caption>
+ <tbody>
+  <tr>
+   <td>80</td>
+   <td>1024</td>
+   <td>160-223</td>
+  </tr>
+  <tr>
+   <td>112</td>
+   <td>2048</td>
+   <td>224-255</td>
+  </tr>
+  <tr>
+   <td>128</td>
+   <td>3072</td>
+   <td>256-383</td>
+  </tr>
+  <tr>
+   <td>192</td>
+   <td>7860</td>
+   <td>384-511</td>
+  </tr>
+  <tr>
+   <td>256</td>
+   <td>15360</td>
+   <td>512+</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Les informations de ce tableau proviennent du <em>National Institute of Standards and Technology</em> (NIST). Pour plus d'informations, se référer à <a href="http://csrc.nist.gov/publications/nistpubs/800-57/SP800-57-Part1.pdf">http://csrc.nist.gov/publications/nistpubs/800-57/SP800-57-Part1.pdf</a>.</p>
+
+<p>Pour plus d'informations sur ECC, voir également la <a href="https://tools.ietf.org/html/rfc4492">RFC 4492</a> (et notamment la section 5.6.1 et le tableau 2).</p>
+
+<p>Une excellente ressource, disponible en français, pour comprendre SSL/TLS est <a href="http://www.iletaitunefoisinternet.fr/ssltls-benjamin-sonntag/">la conférence de Benjamin Sonntag réalisée dans le cadre d'Il était une fois Internet (CC BY-SA)</a>.</p>

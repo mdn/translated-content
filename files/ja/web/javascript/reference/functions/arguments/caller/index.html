@@ -1,0 +1,56 @@
+---
+title: caller
+slug: Web/JavaScript/Reference/Functions/arguments/caller
+translation_of: Archive/Web/JavaScript/arguments.caller
+---
+<p> </p>
+
+<p>{{ Obsolete_header() }}</p>
+
+<p>{{ 英語版章題("Summary") }}</p>
+
+<h3 id=".E6.A6.82.E8.A6.81" name=".E6.A6.82.E8.A6.81">概要</h3>
+
+<p>現在実行している関数を呼び出した関数を示します。</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td class="header" colspan="2"><a href="/Ja/Core_JavaScript_1.5_Reference/Functions/arguments" title="Ja/Core_JavaScript_1.5_Reference/Functions/arguments">arguments</a> のプロパティ</td>
+  </tr>
+  <tr>
+   <td>実装されたバージョン:</td>
+   <td>JavaScript 1.1, NES 2.0
+    <p>JavaScript 1.3: 非推奨とする。<span class="comment">JavaScript ??: Removed</span></p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>{{ 英語版章題("Description") }}</p>
+
+<h3 id=".E8.AA.AC.E6.98.8E" name=".E8.AA.AC.E6.98.8E">説明</h3>
+
+<p><strong><code>arguments.caller</code> はもはや使用されていません。</strong> 代わりに関数オブジェクトの非標準の {{jsxref("Function.caller")}} プロパティが使えます。詳細はその説明を参照してください。</p>
+
+<p><code>arguments.caller</code> プロパティは関数本体の中でのみ利用可能です。</p>
+
+<p>{{ 英語版章題("Examples") }}</p>
+
+<h3 id=".E4.BE.8B" name=".E4.BE.8B">例</h3>
+
+<p>次のコードは、関数の中で <code>arguments.caller</code> の値をチェックします。</p>
+
+<pre class="eval">function myFunc() {
+   if (arguments.caller == null) {
+      return ("The function was called from the top!");
+   } else
+      return ("This function's caller was " + arguments.caller);
+}
+</pre>
+
+<p> </p>
+
+<p> </p>
+
+<p>{{ languages( { "en": "en/JavaScript/Reference/Functions_and_function_scope/arguments/caller", "fr": "fr/R\u00e9f\u00e9rence_de_JavaScript_1.5_Core/Fonctions/arguments/caller", "pl": "pl/Dokumentacja_j\u0119zyka_JavaScript_1.5/Funkcje/arguments/caller" } ) }}</p>

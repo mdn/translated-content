@@ -1,0 +1,225 @@
+---
+title: FOTA コミュニティビルドのビルドとインストール
+slug: Archive/B2G_OS/Building_Boot_to_Gecko/FOTA_community_builds
+translation_of: Archive/B2G_OS/Building/FOTA_community_builds
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/ja/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<p class="summary">この記事では、あなたの電話機に　B2G OS のコミュニティビルドをビルドするのに役立ちます。こうしたビルドには、このOS向けにアクティベートされたの"firmware over the air" (FOTA) 更新があります。</p>
+
+<h2 id="前提条件">前提条件</h2>
+
+<p>In order to build and install this build, you should have <em>a machine to build on</em> and <em>a host machine</em>. These machines may be the same machine.</p>
+
+<p>On the building machine, you should have all the software needed to make a build for your target phone (<a href="https://developer.mozilla.org/en-US/Firefox_OS/Firefox_OS_build_prerequisites">B2G OS build prerequisites</a> for more information).</p>
+
+<p>First, you need to check the device:</p>
+
+<ul>
+ <li>It must be a rooted device.</li>
+ <li>Recovery keys: We need to verify the keys that are used during recovery; these keys correspond to the AOSP keys. They are located in: /res/keys/. They should be the same.</li>
+ <li>Phone with already a recovery (librecovery)</li>
+</ul>
+
+<p>It is possible to build nightly, aurora, and beta versions; to do so, just create 3 different folders: nightly aurora beta (if you only want to build one branch, you can go with one directory only). Nightly is updated every night, aurora corresponds to the latest stable version, and beta corresponds to the version that came before aurora.</p>
+
+<p>Depending on your needs, you can choose to build every branch or only one or two. For every branch you need, follow the steps described on this page. Once you have reached the "Build" paragraph, the instructions will be branch-specific again.</p>
+
+<p>Prepare your first B2G build with the correct BRANCH, as if you were making a build for the target phone. Follow the instructions on this page (<a href="https://developer.mozilla.org/en-US/Firefox_OS/Preparing_for_your_first_B2G_build">Preparing for your first B2G build</a>) until the end of the section "Configuring B2G for your device".</p>
+
+<div class="note">
+<p>Note: if you have a specific manifest (xml) for <code>config.sh</code>, open this file and replace "<em>master</em>" with the the name of the branch you want in "B2G specific things".</p>
+</div>
+
+<p>Now, your working directory should be <code>[BRANCH]/B2G/</code></p>
+
+<p>DO NOT COMPILE YET! </p>
+
+<p>There are still a lot of changes to be done.</p>
+
+<p><strong>Signatures (only for B2G OS devices by default):</strong></p>
+
+<p>All ROMs for B2G OS devices must be signed; for Android devices, however, this is not mandatory.</p>
+
+<p>We can only provide gecko and gaia; the update will be signed to avoid its installation on the wrong phone.</p>
+
+<p>To do so you will need to have the signature of the root build; just keep build.prop on the phone:</p>
+
+<pre class="brush: bash">adb pull /system/build.prop</pre>
+
+<p>Now, find the value of <code>ro.build.fingerprint</code>; this is the fingerprint.</p>
+
+<p><strong>Localization:</strong></p>
+
+<p>You can build a version containing all the locales by adding this script (<code>langs.sh</code>) on <code>gaia/locales </code>or you can choose to clone only some languages. In this case, modify <code>gaia/locales/languages_all.json</code> to only fetch the languages you cloned <code>#TOVERIF</code> =&gt; <a href="https://developer.mozilla.org/en-US/Firefox_OS/Building#Building_multilocale">Building multilocale</a></p>
+
+<p>If you build for aurora or beta, modify <code>git checkoutmozillaorg/master</code> by using <code>git checkout v2.1</code> for aurora and <code>git checkout v2.0</code> for beta in<code> langs.sh</code></p>
+
+<p>Don't forget to update your repositories before creating a new build.</p>
+
+<p>langs.sh :</p>
+
+<pre class="brush: bash"> #!/bin/sh
+
+ set -e
+ GIT_ROOT="<a href="https://git.mozilla.org/releases/l10n/">https://git.mozilla.org/releases/l10n/</a>"
+ GIT_PROJ="/gaia.git"
+ LANGS=$(json_pp &lt; languages_all.json | grep ':' | cut -d':' -f1 | cut -d'"' -f2)
+ for lang in ${LANGS}; do
+     echo "Syncing $lang"
+     if [ ! -d ${lang}/.git/ ]; then
+         echo "No repo for ${lang}, cloning new one"
+         git clone ${GIT_ROOT}${lang}${GIT_PROJ} $lang || true
+     else
+         echo "Updating close for ${lang}"
+     cd ${lang} &amp;&amp; (git fetch origin &amp;&amp; git checkout origin/master) || true &amp;&amp; cd ..
+     fi;
+ done;
+</pre>
+
+<h2 id="ビルドの構成">ビルドの構成</h2>
+
+<p>You also need a <code>.userconfig</code> file for your build:</p>
+
+<p>Create a file at the root of <code>[BRANCH]/B2G/</code> named <code>.userconfig</code> and paste these lines :</p>
+
+<pre class="brush: bash"> export SYSTEM_PARTITION=/dev/block/platform/msm_sdcc.1/by-name/system # to specify the system partition, find info with adb shell cat /proc/mounts
+ export DATA_PARTITION=/dev/block/platform/msm_sdcc.1/by-name/userdata # to specify the data partition, find info with adb shell cat /proc/mounts
+ export VARIANT=userdebug #to include gaia
+ export PRODUCTION=1 #to have a user build
+ export B2G_UPDATER=1
+ export B2G_UPDATE_CHANNEL=aurora  #to modify [BRANCH]
+ export ENABLE_DEFAULT_BOOTANIMATION=true #to have B2G boot animation
+ export GAIA_DEV_PIXELS_PER_PX=1.5
+ export LOCALE_BASEDIR=locales/ #Languages folder
+ export LOCALES_FILE=locales/languages_all.json #all languages for the build
+ export GAIA_KEYBOARD_LAYOUTS="$((find gaia/apps/keyboard/js/layouts/*.js | sed -e 's|gaia/apps/keyboard/js/layouts/||g' -e 's/\.js$//g') | tr -s '\r\n' ',' | sed -e 's/,$//g')" #All keyboard, you can change this with keyboard you want
+ export GAIA_DEFAULT_LOCALE=fr #languages by default, fr (french) for example
+ export B2G_FOTA_DIRS="system/fonts system/b2g" #fira font bug
+ export FOTA_FINGERPRINTS="[your fingerprint]"
+</pre>
+
+<p>You will need to edit the following variables:</p>
+
+<ul>
+ <li><code>SYSTEM_PARTITION</code> (use <code>adb shell cat /proc/mounts</code> to know the partition)</li>
+ <li><code>DATA_PARTITION</code> (here again, you can use <code>adb shell cat /proc/mounts </code>)</li>
+ <li><code>B2G_UPDATE_CHANNEL</code> depending on your channel (aurora, beta, nightly)</li>
+ <li><code>GAIA_DEFAULT_LOCALE</code> depending on the locale you want</li>
+ <li>(not needed but perhaps useful: <code>GAIA_KEYBOARD_LAYOUTS</code> (see the comment))</li>
+ <li><code>FOTA_FINGERPRINTS</code>: add value of ro.build.fingerprint</li>
+ <li>
+  <p class="brush: bash">GAIA_DEV_PIXELS_PER_PX: to know the correct settings for your device, please, visit <a href="http://devicepixelratio.com/">this web-site </a>with this device.</p>
+ </li>
+</ul>
+
+<p>You can remove the parts following the pound sign (<code>#</code>) (including the sign itself). These are comments, and their only purpose is to explain what the line is doing.</p>
+
+<p>After that, you will need to setup information about update url:</p>
+
+<pre class="brush: bash"> cd gecko/
+ git checkout -b [VERSION NUMBER or master for nightly]-local --track mozillaorg/[VERSION NUMBER or master for nightly]
+ edit app.update.url in b2g/app/b2g.js you can keep %target% etc.. or you can just have something like
+ pref("app.update.url", "http://[DOMAIN]/[PHONE NAME]/[BRANCH]/update.xml");
+ </pre>
+
+<p>After that, in order to keep your modification, make a commit:</p>
+
+<pre class="brush: bash"> git commit -a
+ Repeat all these steps with the different branches to have a beta/aurora/nightly build.</pre>
+
+<p>Now the build configuration is done. All future steps must be repeated at each build in each branch folder.</p>
+
+<h2 id="ビルド">ビルド</h2>
+
+<p>Setup for building a (new) update is: </p>
+
+<pre class="brush: bash"> cd [BRANCH]/B2G/ #to be in the good folder
+ git pull # to update the repo code
+ ./repo sync #to update repo code for android and B2G do not use the -d option, doing this will remove your modification
+ cd gaia/locales/ &amp;&amp; ./langs.sh &amp;&amp; cd ../../ #to update languages
+
+ ./build.sh # to building b2g
+ ./build.sh gecko-update-fota # to build b2g and gaia in a .zip and .mar
+
+ BUILDID=$(grep 'BuildID=' objdir-gecko/dist/bin/application.ini | cut -d'=' -f2) # setup buildid variable
+ VERSION=$(grep '\nVersion=' objdir-gecko/dist/bin/application.ini | cut -d'=' -f2) # setup version of gecko variable
+ python tools/update-tools/build-update-xml.py -c out/target/product/[PHONE NAME]/fota-[PHONE NAME]-update.mar -O -u http://[DOMAIN]/[PHONE NAME]/[BRANCH]/fota-[PHONE NAME]-update.mar -i $BUILDID -v $VERSION -V $VERSION | tee /var/www/[BRANCH]/update.xml # Modify this command with your information: good path to .mar, good path to .mar in url of update.xml, the command output should be into a file update.xml; this update.xml will go on your host machine, this corresponds to the file call by the system to find new update.
+ cp out/target/product/[PHONE NAME]/fota-[PHONE NAME]-update.mar /var/www/[BRANCH]/fota-[PHONE NAME]-update.mar #to move .mar in the server
+ cp out/target/product/[PHONE NAME]/fota/partial/update.zip /var/www/[BRANCH]/update.zip #to move .zip in the server
+ pushd /var/www/[BRANCH]/ # to go in the server file
+ sha1sum $(ls) | tee sha1.checksum #to have a signature file
+ popd
+</pre>
+
+<p>If you want an IRC bot you can use ii or a build bot. I have made a script of this <a href="https://github.com/dattaz/build-firefoxos/blob/master/scriptauto.sh">HERE</a> (for more information on what a build bot is, see <a href="http://buildbot.net/">http://buildbot.net/</a> )</p>
+
+<p><strong>Flash the phone and try your build:</strong></p>
+
+<p>To install a build on a phone, just follow these steps:</p>
+
+<pre class="brush: bash"> adb reboot recovery</pre>
+
+<p>On the recovery go down using the down volume button to select the "apply update from adb" line, then touch the power button:</p>
+
+<pre class="brush: bash"> adb sideload out/target/product/[PHONE NAME]/fota/partial/update.zip</pre>
+
+<h2 id="コミュニティによる既存のビルド">コミュニティによる既存のビルド</h2>
+
+<ul>
+ <li>ZTE OPEN C: <a href="http://builds.firefoxos.mozfr.org">frenchmoz</a></li>
+ <li>ZTE OPEN &amp; Alcatel One Touch Fire : <a href="http://firefoxosbuilds.org">hispano community</a></li>
+</ul>

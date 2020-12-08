@@ -1,0 +1,688 @@
+---
+title: IPDLのチュートリアル
+slug: IPDL/Tutorial
+translation_of: Mozilla/IPDL/Tutorial
+---
+<p>"Inter-process-communication Protocol Definition Language"の略であり、IPDLはMozilla特有の言語で、C++コードから整理されたセキュアな方法でプロセスあるいはスレッド間でメッセージを送ることを可能にします。Firefox内のすべてのタブやマルチプロセスプラグインはIPDL言語で宣言されています。</p>
+
+<div class="note">この新しい IPDLプロトコルの追加は実験的です。<a href="/en-US/docs/IPDL/Creating_a_New_Protocol" title="en-US/docs/IPDL/Creating a New Protocol"><span>Creating a New Protocol</span></a><span>を参照してください。</span></div>
+
+<p>全てのIPDLメッセージは、<strong>parent</strong>エンドポイントや<strong>child</strong>エンドポイントに送信され、 アクターと呼ばれます。IPDL <strong>protocol</strong> はどのようにアクターが通信するかを規定します:これは両方のアクターに送信が可能なメッセージの宣言や、同様にメッセージが送信された時の<strong>state machine</strong>も記述します<strong>。</strong></p>
+
+<p>一般的には親のアクターは通信したあと変化しない側のことを言います:</p>
+
+<table style="">
+ <caption>親/子アクター</caption>
+ <thead>
+  <tr>
+   <th scope="col"> </th>
+   <th scope="col">親</th>
+   <th scope="col">子</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">IPC タブ</th>
+   <td>Chrome process</td>
+   <td>Content process</td>
+  </tr>
+  <tr>
+   <th scope="row">IPC プラグイン</th>
+   <td>Content process</td>
+   <td>Plugin Process</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>それぞれのプロトコルは別のファイルで宣言されています。IPDL コンパイラはいくつかのC++ヘッダーをそれぞれのIPDLプロトコルから作成します。この生成されたコードは低級で対話的なレイヤー (ソケットやパイプなど) の詳細や、メッセージの送信や構築、全てのアクターの各仕様の確実な実行の保障、そして たくさんのエラーの条件をハンドリングします。次の IPDL コードはブラウザとプラグインアクターの基本的な定義を表しています:</p>
+
+<pre><strong>async protocol</strong> PPlugin
+{
+<strong>child:</strong>
+  Init(nsCString pluginPath);
+  Shutdown();
+
+<strong>parent:</strong>
+  Ready();
+};
+</pre>
+
+<p>このコードでは<code>PPlugin</code> プロトコルを宣言しています。<code>Init()とShutdown()の</code>２つのメッセージを親から子に送信できます。Ready()メソッドを使って一つのメッセージを子供から親に送信できます。</p>
+
+<div class="note">IPDLプロトコルは文字Pから始まります。宣言されているファイルとプロトコルの名前はPPlugin.ipdlといったように一致している必要があります。</div>
+
+<h3 id="Cコードの作成"><span class="mw-headline">C++コードの作成</span></h3>
+
+<p>PPlugin.ipdlがコンパイルされるとビルドツリーの ipc/ipdl/_ipdlheaders/ ディレクトリ内に <code>PPluginParent.h</code> と <code>PPluginChild.h</code> が生成されます。PPluginParent と PPluginChild は抽象クラスでありサブクラス化されなければなりません。各々の発信メッセージはC++関数であり呼び出すことができます。各々の受信メッセージはC++の純粋仮想関数であり実装する必要があります:</p>
+
+<pre>class PPluginParent
+{
+public:
+  bool SendInit(const nsCString&amp; pluginPath) {
+    // generated code to send an Init() message
+  }
+
+  bool SendShutdown() {
+    // generated code to send a Shutdown() message
+  }
+
+protected:
+  /**
+   * A subclass of PPluginParent must implement this method to handle the Ready() message.
+   */
+  bool RecvReady() = 0;
+};
+
+class PPluginChild
+{
+protected:
+  bool RecvInit(const nsCString&amp; pluginPath) = 0;
+  bool RecvShutdown() = 0;
+
+public:
+  bool SendReady() {
+    // generated code to send a Ready() message
+  }
+};
+</pre>
+
+<p>These Parent and Child abstract classes take care of all the "protocol layer" concerns: serializing data, sending and receiving messages, and checking protocol safety. It is the responsibility of the implementor to create subclasses to perform the actual work involved in each message. Here is a dirt-simple example of how a browser implementor might use PPluginParent.</p>
+
+<pre>class PluginParent : public PPluginParent
+{
+public:
+  PluginParent(const nsCString&amp; pluginPath) {
+    // launch child plugin process
+    SendInit(pluginPath);
+  }
+
+  ~PluginParent() {
+    SendShutdown();
+  }
+
+protected:
+  bool RecvReady() {
+    mObservers.Notify("ready for action");
+  }
+};
+</pre>
+
+<p>Here's how the PPluginChild might be used by a C++ implementor in the plugin process:</p>
+
+<pre>class PluginChild : public PPluginChild
+{
+protected:
+  void RecvInit(const nsCString&amp; pluginPath) {
+    mPluginLibrary = PR_LoadLibrary(pluginPath.get());
+    SendReady();
+  }
+  void RecvShutdown() {
+    PR_UnloadLibrary(mPluginLibrary);
+  }
+
+private:
+  PRLibrary* mPluginLibrary;
+};
+</pre>
+
+<p>Launching the subprocess and hooking these protocol actors into our IPC "transport layer" is beyond the scope of this document. See <a href="/en-US/docs/IPDL/Processes_and_Threads" title="en-US/docs/IPDL/Processes and Threads">IPDL Processes and Threads</a> for more details.</p>
+
+<p>Because protocol messages are represented as C++ methods, it's easy to forget that they are in fact asynchronous messages: by default the C++ method will return immediately, before the message has been delivered.</p>
+
+<p>Recv*メソッドのパラメータ (<em>サンプルではconst nsCString&amp; pluginPath</em>) は一時的なオブジェクトを参照します。このデータを維持したいのであればコピーしなければなりません。</p>
+
+<h3 id="方向">方向</h3>
+
+<p>それぞれのメッセージは方向を持ちます。メッセージの方向は親から子、子から親、両方向にメッセージが送信できることを示します。三つのキーワードは方向の指定方法を提供します。childラベルに続いて記述されたメッセージは親プロセスから子プロセスへ、parentラベルに続いて記述されたメッセージは子プロセスから親プロセスへのメッセージを送信できます。bothラベルに続いて記述されたメッセージは双方向に送信可能なメッセージです。The following artificial example shows how these specifiers are used and how these specifiers change the generated abstract actor classes.</p>
+
+<pre>// PDirection.ipdl
+<strong>async protocol</strong> PDirection
+{
+<strong>child:</strong>
+  Foo();  // can be sent from-parent-to-child
+<strong>parent:</strong>
+  Bar();  // can be sent from-child-to-parent
+<strong>both:</strong>
+  Baz();  // can be sent both ways
+};
+</pre>
+
+<pre>// PDirectionParent.h
+class PDirectionParent
+{
+protected:
+  virtual void RecvBar() = 0;
+  virtual void RecvBaz() = 0;
+
+public:
+  void SendFoo() { /* 決まり文句*/ }
+  void SendBaz() { /* 決まり文句 */ }
+};
+</pre>
+
+<pre>// PDirectionChild.h
+class PDirectionChild
+{
+protected:
+  virtual void RecvFoo() = 0;
+  virtual void RecvBaz() = 0;
+
+public:
+  void SendBar() { /* boilerplate */ }
+  void SendBaz() { /* boilerplate */ }
+};
+</pre>
+
+<p>child、parent、bothのラベルはプロトコルの定義において何度も宣言できます。C++のpublicやprivate、protectedラベルのようにふるまいます。</p>
+
+<h3 id="パラメータ"><span class="mw-headline">パラメータ </span></h3>
+
+<p>メッセージの宣言は任意の数のパラメータを含むことができます。パラメータは送信時にシリアライズされ、受信時にデシリアライズされます。IPDLでは組み込みのプリミティブ型とカスタムプリミティブ型、共用体型、配列をサポートしています。</p>
+
+<div>
+<div>
+<div class="f">
+<p>組み込みのプリミティブ型はC++のような数値型と論理型 (bool/char/int/double)、XPCOMの文字列型 (nsString/nsCString) が使用できます。これらの型は標準で読み込まれます。これらはありふれた型であること、ベースとしているIPCライブラリがこれらの型のシリアライズ方法を知っているからです。最新の組み込み型リストを知るには ipc/ipdl/ipdl/builtin.py を参照してください。</p>
+
+<p>Actors may be passed as parameters. The C++ signature will accept a PProtocolParent* on one side and convert it to a PProtocolChild* on the other.</p>
+
+<p>IPDL定義にusing宣言を追加することで他のIPDLでビルドした型を送信できます。これをカスタムプリミティブ型と呼びます。<br>
+ カスタムプリミティブ型ではC++の実装で<a href="/docs/IPDL/Type_Serialization" title="en-US/docs/IPDL/Type Serialization">カスタムシリアライザとデシリアライザ</a>が提供されている必要があります。<br>
+  </p>
+
+<pre><strong>using</strong> mozilla::plugins::NPRemoteEvent;
+
+<strong>sync protocol</strong> PPluginInstance
+{
+<strong>child:</strong>
+  HandleEvent(NPRemoteEvent);
+};
+</pre>
+
+<h4 id="共用体">共用体</h4>
+
+<p>IPDL has built-in support for declaring discriminated unions.</p>
+
+<pre><strong>using</strong> struct mozilla::void_t from "ipc/IPCMessageUtils.h";
+
+<strong>union</strong> Variant
+{
+  void_t;
+  bool;
+  int;
+  double;
+  nsCString;
+  PPluginScriptableObject;
+};</pre>
+
+<p>共用体型は上記のように定義されます。この共用体型がコンパイルされると以下のC++ソースになります:</p>
+
+<pre><strong style="font-weight: bold;">struct</strong> Variant
+{
+  enum Type {
+    Tvoid_t, Tbool, Tint, Tdouble, TnsCString, TPPlugionScriptableObject
+  };
+  Type type();
+  void_t&amp; get_void_t();
+  bool&amp; get_bool();
+  int&amp; get_int();
+  double&amp; get_double();
+  nsCString&amp; get_nsCString();
+  PPluginScriptableObject* get_PPluginScriptableObject();
+};
+</pre>
+
+<p>aUnion.type() can be used to determine the type of a union received in an IPDL message handler, with the remaining functions granting access to its contents.  To initialize a union, simply assign a valid value to it, as follows:</p>
+
+<pre>aVariant = false;
+</pre>
+
+<h4 id="構造体">構造体</h4>
+
+<p>IPDL はシリアライズ可能なデータタイプの任意のコレクションをビルトインでサポートしています。</p>
+
+<pre><strong>struct</strong> NameValuePair
+{
+  nsCString name;
+  nsCString value;
+};</pre>
+
+<p>In implementation code, these structs can be created and used like so:</p>
+
+<pre>NameValuePair entry(aString, anotherString);
+foo(entry.name(), entry.value()); // Named accessor functions return references to the members
+</pre>
+
+<h4 id="Arrays">Arrays</h4>
+
+<p>IPDL has simple syntax for arrays:</p>
+
+<pre>InvokeMethod(nsCString[] args);</pre>
+
+<p> In C++ this is translated into a <a href="/en-US/docs/XPCOM_array_guide#nsTArray.3cT.3e" title="en-US/docs/XPCOM array guide#nsTArray.3cT.3e">nsTArray</a> reference:</p>
+
+<pre>virtual bool RecvInvokeMethod(nsTArray&lt;nsCString&gt;&amp; args);
+</pre>
+</div>
+</div>
+</div>
+
+<p><em>.ipdlh</em> に分割定義し、IPDL が生成したデータ構造は、複数のプロトコルで利用可能です<em>。</em>これらのファイルは <em>通常.ipdl</em> ファイルのような <em>ipdl.mk</em> メイクファイルに追加する必要があり、またその構文に従う必要があります。 <em>Foo.ipdlh</em> に定義された構造体を利用するために以下の様にインクルードします。</p>
+
+<pre>// in a .ipdl file
+<strong>include</strong> Foo;
+</pre>
+
+<h3 id="同期メッセージとRPCメッセージ">同期メッセージとRPCメッセージ</h3>
+
+<p>ここまではすべて非同期でのメッセージ配信について述べました。ここまでで述べたメッセージでは、メッセージを送信するとすぐに処理を返却します。しかしメッセージがハンドルされるまで、あるいは値を返すまで待ちたいこともあります。</p>
+
+<p>IPDLには以下の異なるセマンティクスが三つ存在します:</p>
+
+<ol>
+ <li>非同期セマンティクス (送信側はブロックされない)</li>
+ <li>受信側が応答を返すまで待つメッセージ。受信側がメッセージを受信し返事を返すまで送信側をブロックすることを同期セマンティクスと呼ぶ。メッセージは値を返してもよい。</li>
+ <li>RPCセマンティクス (同期セマンティクスの亜種。後述する)</li>
+</ol>
+
+<p>親プロセス子プロセスの概念は送信側受信側の概念と直行的です。つまり親プロセスも子プロセスも上記三つのケースにおいて送信側受信側どちらにもなれることに注意してください。メッセージングのセマンティクスはどちらの向きにも同じように適用されます。例えば、同期セマンティクスで子プロセスから親プロセスの場合、子プロセスは親プロセスがメッセージを受信し応答するまでブロックされます。非同期セマンティクスで親プロセスから子プロセスの場合、親プロセスはブロックされません。</p>
+
+<p>When creating a plugin instance, the browser should block until instance creation is finished, and needs some information returned from the plugin:</p>
+
+<pre><strong>protocol</strong> PPluginInstance
+{
+<strong>child:</strong>
+    <strong>sync</strong> Init() <strong>returns</strong> (bool windowless, bool ok);
+};
+</pre>
+
+<p>この例では新しいキーワードが二つ出てきました。<strong>sync</strong>と<strong>returns</strong>です。<strong>sync</strong>キーワードはメッセージが同期的に送信されることを表します (asyncはセマンティクス指定がなかった場合のデフォルトです)。<strong>returns</strong>キーワードは値のリストの前に書かれ、後に続くリストがメッセージの応答時に返却されることを表します。<strong>returns</strong>キーワードは非同期メッセージに書くとエラーになります。</p>
+
+<p>To make the blocking nature more noticeable to programmers, the C++ method names for synchronous and RPC messages are different:</p>
+
+<table style="">
+ <thead>
+  <tr>
+   <th scope="col"> </th>
+   <th scope="col">sender</th>
+   <th scope="col">receiver</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">async/sync</th>
+   <td>Send<em>MessageName</em></td>
+   <td>Recv<em>MessageName</em></td>
+  </tr>
+  <tr>
+   <th scope="row">rpc</th>
+   <td>Call<em>MessageName</em></td>
+   <td>Answer<em>MessageName</em></td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="メッセージセマンティクスの強さ"><span class="mw-headline">メッセージセマンティクスの強さ </span></h4>
+
+<p>The above protocol will fail the IPDL type checker. IPDL protocols also have "semantics specifiers", just like messages. A protocol must be declared to have semantics at least as "strong" as its strongest message semantics. Synchronous semantics is called "stronger than" asynchronous. Like message declarations, the default protocol semantics is asynchronous; however, since the Plugin protocol declares a synchronous message, this type rule is violated. The fixed up Plugin protocol is shown below.</p>
+
+<pre><strong>sync protocol</strong> PPluginInstance
+{
+<strong>child:
+    </strong><strong>sync</strong> Init() <strong>returns</strong> (bool windowless, bool ok);
+};</pre>
+
+<p>The generated C++ code for this method uses outparam pointers for the returned values:</p>
+
+<pre>class PPluginInstanceParent
+{
+  ...
+  bool SendInit(bool* windowless, bool* ok) { ... };
+};
+
+class PPluginInstanceChild
+{
+  ...
+  virtual bool RecvInit(bool* windowless, bool* ok) = 0;
+}</pre>
+
+<h4 id="RPC_semantics"><span class="mw-headline">RPC semantics </span></h4>
+
+<p>"RPC" stands for "remote procedure call," and this third semantics models procedure call semantics. A quick summary of the difference between RPC and sync semantics is that RPC allows "re-entrant" message handlers: while an actor is blocked waiting for an "answer" to an RPC "call", it can be <em>unblocked</em> to handle a new, incoming RPC <em>call</em>.</p>
+
+<p>In the example protocol below, the child actor offers a "CallMeCallYou()" RPC interface, and the parent offers a "CallYou()" RPC interface. The <code><strong>rpc</strong></code> qualifiers mean that if the parent calls "CallMeCallYou()" on the child actor, then the child actor, while servicing this call, is allowed to call back into the parent actor's "CallYou()" message.</p>
+
+<pre><strong>rpc</strong> <strong>protocol</strong> Example {
+<strong>child</strong>:
+    <strong>rpc</strong> CallMeCallYou() <strong>returns</strong> (int rv);
+
+<strong>parent</strong>:
+    <strong>rpc</strong> CallYou() <strong>returns</strong> (int rv);
+};
+</pre>
+
+<p>If this were instead a sync protocol, the child actor would not be allowed to call the parent actor's "CallYou()" method while servicing the "CallMeCallYou()" message. (The child actor would be terminated with extreme prejudice.)</p>
+
+<h4 id="Preferred_semantics"><span class="mw-headline">Preferred semantics </span></h4>
+
+<p>Use <strong>async</strong> semantics whenever possible.</p>
+
+<p>Blocking on replies to messages is discouraged. If you absolutely need to block on a reply, use <strong>sync</strong> semantics <em>very carefully</em>. It is possible to get into trouble with careless uses of synchronous messages; while IPDL can check and/or guarantee that your code does not deadlock, it is easy to cause nasty performance problems by blocking.</p>
+
+<p>Please don't use RPC semantics. RPC semantics exists mainly to support remoting plugins (NPAPI), where we have no choice.</p>
+
+<div class="note">Chrome to content calls (for IPC tabs) must only use async semantics. In order to preserve responsiveness, the chrome process may never block on a content process which may be busy or hung.</div>
+
+<h3 id="Message_Delivery_Order">Message Delivery Order</h3>
+
+<p>Delivery is "in-order", that is, messages are delivered to the receiver in the order that they are sent, regardless of the messages' semantics.  If an actor A sends messages M1 then M2 to actor B, B will be awoken to process M1 <em>then</em> M2.</p>
+
+<h2 id="Subprotocols_and_Protocol_Management"><span class="mw-headline">Subprotocols and Protocol Management </span></h2>
+
+<p>So far we've seen a single protocol, but no real-world situation would have a single protocol in isolation. Instead, protocols are arranged in a managed hierarchy of <strong>subprotocols</strong>. A sub-protocol is bound to a "manager" which tracks its lifetime and acts as a factory. A protocol hierarchy begins with a single top-level protocol from which all subprotocol actors are eventually created. In Mozilla there are two main top-level protocols: <a class="external" href="http://mxr.mozilla.org/mozilla-central/source/dom/plugins/ipc/PPluginModule.ipdl" title="http://mxr.mozilla.org/projects-central/source/electrolysis/dom/plugins/PPluginModule.ipdl">PPluginModule</a> for remote plugins, and <a class="external" href="http://mxr.mozilla.org/mozilla-central/source/dom/ipc/PContent.ipdl" title="http://mxr.mozilla.org/mozilla-central/source/dom/ipc/PContent.ipdl">PContent</a> for remote tabs.</p>
+
+<p>The following example extends the toplevel plugin protocol to manage plugin instances.</p>
+
+<pre><code>// ----- file PPlugin.ipdl
+
+<strong>include protocol</strong> PPluginInstance;</code>
+
+<code><strong>rpc protocol</strong> PPlugin
+{
+<strong>    manages</strong> PPluginInstance;
+<strong>child:</strong>
+    <strong>rpc</strong> Init(nsCString pluginPath) <strong>returns</strong> (bool ok);
+    <strong style="font-weight: bold;">rpc </strong>PPluginInstance(nsCString type, nsCString[] args) <strong>returns</strong> (int rv);
+</code><code>};</code>
+</pre>
+
+<pre><code>// ----- file PPluginInstance.ipdl
+
+<strong>include protocol</strong> PPlugin;
+
+<strong>rpc protocol</strong> PPluginInstance
+{
+<strong>    manager</strong> PPlugin;
+<strong>child:</strong>
+    <strong>rpc</strong> __delete__();
+    SetSize(int width, int height);
+};</code></pre>
+
+<p>This example has several new elements: `include protocol` imports another protocol declaration into this file. Note that this is not a preprocessor directive, but a part of the IPDL language. The generated C++ code will have proper #include preprocessor directives for the imported protocols.</p>
+
+<p>The `manages` statement declares that this protocol manages PPluginInstance. The PPlugin protocol must declare constructor and destructor messages for PPluginInstance actors. The `manages` statement also means that PPluginInstance actors are tied to the lifetime of the Plugin actor that creates them: if this PPlugin instance is destroyed, all the PPluginInstances associated with it become invalid or are destroyed as well.</p>
+
+<p>The mandatory constructor and destructor messages (PPluginInstance and __delete__ respectively) exist, confusingly, in separate locations.  The constructor must be located in the managing protocol, while the destructor belongs to the managed subprotocol.  These messages have syntax similar to C++ constructors, but the behavior is different. Constructors and destructors have parameters, direction, semantics, and return values like other IPDL messages. A constructor and destructor message must be declared for each managed protocol.</p>
+
+<p>Each subprotocol must include a `manager` statement.</p>
+
+<p>At the C++ layer, the subclasses in both the child and the parent must implement methods for allocating and deallocating the subprotocol actor. The constructor and destructor are translated into standard C++ methods for messages.</p>
+
+<p>Note: __delete__ is a built-in construct, and is the only IPDL message which does not require an overridden implementation (ie. Recv/Answer__delete__).  However, overridden implementations are encouraged when some action should happen on protocol destruction in lieu of using the DeallocPProtocol function.</p>
+
+<pre>class PPluginParent
+{
+  /* Allocate a PPluginInstanceParent when the first form of CallPluginInstanceConstructor is called */
+  virtual PPluginInstanceParent* AllocPPluginInstance(const nsCString&amp; type, const nsTArray&lt;nsCString&gt;&amp; args, int* rv) = 0;
+
+  /* Deallocate the PPluginInstanceParent after PPluginInstanceDestructor is done with it */
+  virtual bool DeallocPPluginInstance(PPluginInstanceParent* actor) = 0;
+
+  /* constructor message */
+  virtual CallPPluginInstanceConstructor(const nsCString&amp; type, const nsTArray&lt;nsCString&gt;&amp; args, int* rv) { /* generated code */ }
+
+  /* alternate form of constructor message: supply your own PPluginInstanceParent* to bypass AllocPPluginInstance */
+  virtual bool CallPPluginInstanceConstructor(PPluginInstanceParent* actor, const nsCString&amp; type, const nsTArray&lt;nsCString&gt;&amp; args, int* rv)
+  { /* generated code */ }
+
+  /* destructor message */
+  virtual bool Call__delete__(PPluginInstanceParent* actor) { /* generated code */ }
+
+  /* Notification that actor deallocation is imminent, IPDL mechanisms are now unusable */
+  virtual void ActorDestroy(ActorDestroyReason why);
+
+  ...
+};
+
+class PPluginChild
+{
+  /* Allocate a PPluginInstanceChild when we receive the PPluginInstance constructor */
+  virtual PPluginInstanceChild* AllocPPluginInstance(const nsCString&amp; type, const nsTArray&lt;nsCString&gt;&amp; args, int* rv) = 0;
+
+  /* Deallocate a PPluginInstanceChild after we handle the PPluginInstance destructor */
+  virtual bool DeallocPPluginInstance(PPluginInstanceChild* actor) = 0;
+
+  /* Answer the constructor message. Implementing this method is optional: it may be possible to answer the message directly in AllocPPluginInstance. */
+  virtual bool AnswerPPluginInstanceConstructor(PPluginInstanceChild* actor, const nsCString&amp; type, const nsTArray&lt;nsCString&gt;&amp; args, int* rv) { }
+
+  /* Answer the desctructor message. */
+  virtual bool Answer__delete__(PPluginInstanceChild* actor) = 0;
+
+  /* Notification that actor deallocation is imminent, IPDL mechanisms are now unusable */
+  virtual void ActorDestroy(ActorDestroyReason why);
+
+  ...
+};</pre>
+
+<h4 id="Subprotocol_Actor_Lifetime">Subprotocol Actor Lifetime</h4>
+
+<p>AllocPProtocol and DeallocPProtocol are a matched pair of functions. The typical implementation of these functions uses `new` and `delete`:</p>
+
+<pre>class PluginChild : PPluginChild
+{
+ virtual PPluginInstanceChild* AllocPPluginInstance(const nsCString&amp; type, const nsTArray&lt;nsCString&gt;&amp; args, int* rv)
+  {
+    return new PluginInstanceChild(type, args, rv);
+  }
+
+  virtual bool DeallocPPluginInstanceChild(PPluginInstanceChild* actor)
+  {
+    delete actor; // actor destructors are always virtual, so it's safe to call delete on them!
+    return true;
+  }
+
+  ...
+};</pre>
+
+<p>In some cases, however, external code may hold references to actor implementations which require refcounting or other lifetime strategies. In this case, the alloc/dealloc pairs can perform different actions. Here is an example of refcounting:</p>
+
+<pre>class ExampleChild : public nsIObserver, public PExampleChild { ... };
+
+virtual PExampleChild* TopLevelChild::AllocPExample()
+{
+  nsRefPtr&lt;ExampleChild*&gt; actor = new ExampleChild();
+  return actor.forget();
+}
+
+virtual bool TopLevelChild::DeallocPExample(PExampleChild* actor)
+{
+  NS_RELEASE(static_cast&lt;ExampleChild*&gt;(actor));
+  return true;
+}
+</pre>
+
+<p>If an object that implements a protocol can't be constructed inside AllocPFoo, or has been previously constructed and doesn't require an IPDL connection throughout its lifetime, there is a second form of SendPFooConstructor which can be used:</p>
+
+<pre>class ExampleChild
+{
+public:
+    void DoSomething() {
+        aManagerChild-&gt;SendPExampleConstructor(this, ...);
+    }
+};
+</pre>
+
+<p>Internally, the first constructor form simply calls</p>
+
+<pre>PExample(Parent|Child)* actor = AllocPExample(...);
+SendPExampleConstructor(actor, ...);
+return actor;
+</pre>
+
+<p>with the same effect.</p>
+
+<h4 id="Subprotocol_Deletion">Subprotocol Deletion</h4>
+
+<p>It is worth understanding the protocol deletion process.  Given the simple protocols:</p>
+
+<pre>// --- PExample.ipdl
+<strong>include protocol</strong> PSubExample;
+
+<strong>async protocol</strong> PExample
+{
+    <strong>manages</strong> PSubExample;
+
+<strong>p</strong><strong>arent:
+    </strong>PChild();
+};
+
+// --- PSubExample.ipdl
+<strong>include protocol</strong> PExample;
+
+<strong>async protocol</strong> PSubExample
+{
+    <strong>manager </strong>PExample;
+
+<strong>child:
+</strong>    __delete__();
+};
+</pre>
+
+<p>We assume that there is a PSubExampleParent/Child pair in existence, such that some element now wishes to trigger the protocol's deletion from the parent side.</p>
+
+<pre><code><code>aPSubExampleParent-&gt;Send__delete__();</code></code></pre>
+
+<p>will trigger the following ordered function calls:</p>
+
+<pre>PSubExampleParent::ActorDestroy(Deletion)
+/* Deletion is an enumerated value indicating
+   that the destruction was intentional */
+PExampleParent::DeallocPSubExample()</pre>
+
+<pre>PSubExampleChild::Recv__delete__()
+PSubExampleChild::ActorDestroy(Deletion)
+PExampleChild::DeallocPSubExample()</pre>
+
+<p>ActorDestroy is a generated function that allows code to run with the knowledge that actor deallocation is imminent.  This is useful for actors with lifetimes outside of IPDL - for instance, a flag could be set indicating that IPDL-related functions are no longer safe to use.</p>
+
+<h4 id="Accessing_the_protocol_tree_from_C">Accessing the protocol tree from C++</h4>
+
+<p>The IPDL compiler generates methods that allow actors to access their manager (if the actor isn't top-level) and their managees (if any) from C++.  For a protocol PFoo managed by PManager, that manages PManagee, the methods are</p>
+
+<pre>PManager* PFoo::Manager()
+const InfallibleTArray&lt;PManagee*&gt; PFoo::ManagedPManagee();
+void PFoo::ManagedPManagee(InfallibleTArray&lt;PManagee*&gt;&amp;);
+</pre>
+
+<h2 id="Shutdown_and_Error_Handling">Shutdown and Error Handling</h2>
+
+<p>The C++ methods which implement IPDL messages return <code>bool</code>: true for success, and false for catastrophic failure. Message implementations should return false from a message implementation if the data is corrupted or otherwise malformed. Any time a message implementation returns false, IPDL will immediately begin catastrophic error handling: the communication channels for the child process (tab or plugin) will be disconnected, and the process will be terminated. Do not return false from message handlers for "normal" error conditions such as inability to load a network request! Normal errors should be signaled with a message or return value.</p>
+
+<p><em>Note: the following paragraphs are not yet implemented.</em> IPDL tracks all active protocols between two endpoints. If if the child side crashes or becomes hung:</p>
+
+<ul>
+ <li>any synchronous or RPC messages currently active will return false</li>
+ <li>no further messages will be accepted (C++ methods will return false)</li>
+ <li>each IPDL actor will receive an OnError message</li>
+ <li>DeallocPSubprotocol will be called on each manager protocol to deallocate any active subprotocols.</li>
+</ul>
+
+<p>When a manager protocol is destroyed, any subprotocols will be notified:</p>
+
+<ul>
+ <li>no further messages will be accepted</li>
+ <li>DeallocPSubprotocol will be called on the manager protocol to deallocate any active subprotocols</li>
+</ul>
+
+<p>When the toplevel protocol is destroyed, this is equivalent to shutting down the entire IPDL machinery for that connection, because no more messages can be sent and all subprotocols are destroyed.</p>
+
+<h2 id="Protocol_state_machines"><span class="mw-headline">Protocol state machines </span></h2>
+
+<p>The astute reader might question why IPDL includes the word "protocol" when all that has been introduced so far are unstructured grab-bags of messages. IPDL allows protocol authors to define the order and structure of how messages may be sent/received by defining protocol <em>state machines</em> (finite state machines).</p>
+
+<p>[Note that the state machine portion of the IPDL compiler is not complete as of this writing, 22 October 2009. IPDL code for state machines is accepted by the compiler, but it does not affect the generated C++, yet.]</p>
+
+<p>IPDL parent and child actors communicating via a protocol are paired. Each actor in the pair follows the same state machine. The pair attempts to keep their single collective state synchronized. Though, it is possible that the parent and child actors may be momentarily out of sync while messages are transmitted.</p>
+
+<p>IPDL (arbitrarily) requires state machines to be defined from the perspective of the <strong>parent</strong> side of the protocol. For example, when you see the <code><strong>send</strong> Msg</code> syntax, it means "when the parent actor sends Msg".</p>
+
+<p>The following example shows one such state machine for the Plugin protocol.</p>
+
+<div class="warning">Note: The following example uses the old ~Destructor syntax, and needs significant reworking to make use of the new __delete__ syntax instead.  This is no longer a good example.</div>
+
+<pre><strong>include</strong> <strong>protocol</strong> PPluginInstance;
+
+<strong>sync</strong> <strong>protocol</strong> PPlugin {
+  <strong>manages</strong> PPluginInstance;
+
+<strong>child</strong>:
+  <strong>sync</strong> Init() <strong>returns</strong> (int rv);
+  Deinit();
+
+  <strong>sync</strong> PPluginInstance(String type, StringArray args) <strong>returns</strong> (int rv);
+
+// NOTE: state machine follows
+<strong>state</strong> START:
+  <strong>send</strong> Init <strong>goto</strong> IDLE;
+
+<strong>state</strong> IDLE:
+  <strong>send</strong> PPluginInstance <strong>goto</strong> ACTIVE;
+
+<strong>state</strong> ACTIVE:
+  <strong>send</strong> PPluginInstance <strong>goto</strong> ACTIVE;
+  <strong>send</strong> ~PPluginInstance <strong>goto</strong> ACTIVE;
+  <strong>send</strong> Deinit <strong>goto</strong> DYING;
+
+<strong>state</strong> DYING:
+  <strong>send</strong> ~PPluginInstance <strong>goto</strong> DYING;
+};
+</pre>
+
+<p>There are three new syntactic elements, above. First are "state declarations": the code <code><strong>state</strong> FOO:</code> declares a state "FOO". (States are capitalized by convention, not because of syntactic rules.) The first state to be declared is the protocol's "start state"; when an actor is created, its initial state is the "start state."</p>
+
+<p>The second new syntactic element is the <em>trigger</em>. The syntax <code><strong>send</strong> MsgDecl</code> defines a trigger for a state <em>transition</em>; in this case, the trigger is <code><strong>send</strong></code>ing the async or sync message "MsgDecl." The triggers are:</p>
+
+<ol>
+ <li><code><strong>send</strong></code>ing an async or sync message</li>
+ <li><code><strong>recv</strong></code>ing an async or sync message</li>
+ <li><code><strong>call</strong></code>ing an RPC</li>
+ <li><code><strong>answer</strong></code>ing an RPC</li>
+</ol>
+
+<p><strong>Aside</strong>: this is why actor ctors/dtors act like normal messages, with directions etc.: this allows them to be checked against the protocol state machine like any other message.</p>
+
+<p>The third new syntactic element is a state <em>transition</em>. The syntax is: <code><strong>goto</strong> NEXT_STATE</code>. When the trigger preceding this transition occurs, the protocol actor's internal state is changed to, in this case, "NEXT_STATE."</p>
+
+<p>Another example state machine, for PluginInstance, follows.</p>
+
+<pre><strong>sync</strong> <strong>protocol</strong> PluginInstance {
+  <strong>manager</strong> Plugin;
+
+<strong>child</strong>:
+  SetWindow(PluginWindow window);
+  Paint();
+
+<strong>parent</strong>:
+  <strong>sync</strong> GetBrowserValue(String key) <strong>returns</strong> (String value);
+
+<strong>state</strong> START:
+  <strong>send</strong> SetWindow <strong>goto</strong> SENT_WINDOW;
+  <strong>recv</strong> GetBrowserValue <strong>goto</strong> START;
+
+<strong>state</strong> SENT_WINDOW:
+  <strong>send</strong> SetWindow <strong>goto</strong> SENT_WINDOW;
+  <strong>send</strong> Paint <strong>goto</strong> SENT_WINDOW;
+  <strong>recv</strong> GetBrowserValue <strong>goto</strong> SENT_WINDOW;
+};
+</pre>
+
+<p><br>
+ Note:</p>
+
+<ul>
+ <li>The following points will apply when the IPDL compiler fully supports states. It is incomplete as of this writing, on 22 October 2009.</li>
+ <li>Protocol state machines are optional, but strongly encouraged. Even simple state machines are useful.</li>
+ <li>All actor states, trigger matching, and transitions are managed by IPDL-generated code. Your C++ code need not manage these things.</li>
+ <li>All messages sent and received are checked against the protocol's state machine. <em>If a message violates the state machine semantics defined in the IPDL code, the child process containing the child actor will be terminated with extreme prejudice, and all parent actors will be made invalid!</em> It is up to the developer to make sure that this never happens.</li>
+ <li>Lots of syntactic sugar is possible for state machine definitions. Ping the Electrolysis team if you have a good proposal</li>
+</ul>

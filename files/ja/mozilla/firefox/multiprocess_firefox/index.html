@@ -1,0 +1,75 @@
+---
+title: マルチプロセス Firefox
+slug: Mozilla/Firefox/Multiprocess_Firefox
+translation_of: Mozilla/Firefox/Multiprocess_Firefox
+---
+<p>現バージョンのデスクトップ版 Firefox は、オペレーティングシステムにおけるプロセス 1 つでブラウザ全体を実行しています。特に、ブラウザ UI (別名 "chrome code") の JavaScript を実行するプロセスと Web ページ (別名 "content" または "web content") のコードを実行するプロセスが同じです。<br>
+ <br>
+ 将来のバージョンの Firefox は、ブラウザ UI のプロセスと web content のプロセスを分離します。このアーキテクチャの第 1 段階では、すべてのブラウザタブを同一のプロセスで実行して、ブラウザ UI を別のプロセスで実行する予定です。また将来の段階で、複数の content プロセスを持つようにする予定です。マルチプロセス Firefox を提供するプロジェクトは Electrolysis と呼ばれ、e10s と略されることがあります。</p>
+
+<p>一般的な Web ページは、マルチプロセス Firefox の影響を受けません。Firefox そのものや Firefox アドオンの開発に携わる人々は、web content に直接アクセスできる機能に依存するコードを使用している場合に影響を受けます。</p>
+
+<p>content へ直接アクセスせずに、chrome JavaScript では <a href="/ja/Firefox/Multiprocess_Firefox/Message_manager">メッセージマネージャ</a> を使用して content にアクセスしなければなりません。容易に移行できるようにするため、<a href="/ja/Firefox/Multiprocess_Firefox/Cross_Process_Object_Wrappers">クロスプロセスオブジェクトラッパー</a>や<a href="/ja/Firefox/Multiprocess_Firefox/Limitations_of_chrome_scripts#Compatibility_shims">アドオン開発者向けの互換性 shim</a> を実装しました。あなたがアドオン開発者で影響を受けるかがわからない場合は、<a href="/ja/Add-ons/Working_with_multiprocess_Firefox">マルチプロセス Firefox を扱うためのガイド</a>をご覧ください。</p>
+
+<p>現在マルチプロセス Firefox は <a class="external external-icon" href="https://www.mozilla.org/firefox/developer/">Firefox Developer Edition</a> で、既定で有効です。</p>
+
+<hr>
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="/ja/Firefox/Multiprocess_Firefox/Technical_overview">技術概要</a></dt>
+ <dd>マルチプロセス Firefox がどのように実装されているかを、高レベルから概観します。</dd>
+ <dt><a href="/ja/Firefox/Multiprocess_Firefox/Glossary">用語</a></dt>
+ <dd>マルチプロセス Firefox で使用する用語のリファレンスです。</dd>
+ <dt><a href="/ja/Firefox/Multiprocess_Firefox/Message_Manager">メッセージマネージャ</a></dt>
+ <dd>chrome と content の間の通信に使用するオブジェクトのガイドです。</dd>
+ <dt><a href="/ja/Mozilla/Add-ons/SDK/Guides/Multiprocess_Firefox_and_the_SDK">SDK ベースのアドオン</a></dt>
+ <dd>Add-on SDK を使用して開発したアドオンのマイグレーション方法です。</dd>
+ <dt><a href="/ja/Firefox/Multiprocess_Firefox/Which_URIs_load_where">URI ごとの読み込み先</a></dt>
+ <dd>どの URI (chrome:、about:、file:、resource:) がどのプロセスに読み込まれるかのクイックガイドです。</dd>
+</dl>
+</div>
+
+<div class="column-half">
+<dl>
+ <dt><a href="/ja/Firefox/Multiprocess_Firefox/Motivation">マルチプロセス化を行う理由</a></dt>
+ <dd>なぜマルチプロセス Firefox を実装するか? その答えはパフォーマンス、セキュリティ、安定性です。</dd>
+ <dt><a href="/ja/Add-ons/Working_with_multiprocess_Firefox">アドオンのマイグレーションガイド</a></dt>
+ <dd>あなたがアドオン開発者でしたら、アドオンが影響を受けるかを突き止めてコードの更新方法を確認してください。</dd>
+ <dt><a href="/ja/Firefox/Multiprocess_Firefox/Cross_Process_Object_Wrappers">クロスプロセスオブジェクトラッパー</a></dt>
+ <dd>クロスプロセスオブジェクトラッパーは、chrome code が同期的に content にアクセスする機能を提供する、マイグレーション支援措置です。</dd>
+ <dt><a href="/ja/Firefox/Multiprocess_Firefox/Debugging_frame_scripts">content プロセスのデバッグ</a></dt>
+ <dd>frame やプロセスのスクリプトを含む、content プロセスで実行しているコードをデバッグする方法です。</dd>
+ <dt><a href="https://developer.mozilla.org/docs/Mozilla/Firefox/Multiprocess_Firefox/Tab_selection_in_multiprocess_Firefox">マルチプロセス化された Firefox におけるタブの選択方法</a></dt>
+ <dd>マルチプロセス化された Firefox ではタブの選択方法が異なります。</dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="/ja/Firefox/Multiprocess_Firefox/Limitations_of_chrome_scripts">chrome スクリプトの制限</a></dt>
+ <dd>chrome code で実施できなくなることと、その修正方法の実例です。</dd>
+</dl>
+</div>
+
+<div class="column-half">
+<dl>
+ <dt><a href="/ja/Firefox/Multiprocess_Firefox/Limitations_of_frame_scripts">frame スクリプトの制限</a></dt>
+ <dd>frame スクリプトで実施できなくなることと、その代替手段の実例です。</dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h2 id="Contact_us" name="Contact_us">問い合わせ先</h2>
+
+<p>プロジェクトについて詳しく知り、参加するか疑問点を尋ねてください。</p>
+
+<ul>
+ <li><strong>Electrolysis プロジェクトのページ</strong>: <a href="https://wiki.mozilla.org/Electrolysis">https://wiki.mozilla.org/Electrolysis</a></li>
+ <li><strong>IRC</strong>: <a href="https://wiki.mozilla.org/IRC">irc.mozilla.org</a> の #e10s</li>
+ <li><strong>メーリングリスト</strong>: <a href="https://groups.google.com/forum/#!forum/mozilla.dev.tech.electrolysis">dev.tech.electrolysis</a></li>
+</ul>

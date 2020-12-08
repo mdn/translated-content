@@ -1,0 +1,92 @@
+---
+title: Array.observe()
+slug: Web/JavaScript/Reference/Global_Objects/Array/observe
+tags:
+  - JavaScript
+  - 实验性
+  - 数组
+  - 方法
+  - 过时的
+translation_of: Archive/Web/JavaScript/Array.observe
+---
+<div>{{JSRef}}{{obsolete_header}}</div>
+
+<p><strong>Array.observe()</strong> 方法用于异步监视数组发生的变化，类似于针对对象的 {{jsxref("Object.observe()")}} 。当数组的值发生变化时，它按发生顺序提供了一个变化流。与 <code>Object.observe()</code> 类似，它由如下可接受的变化类型列表<code>["add"、"update"、"delete"、"splice"]</code>触发。</p>
+
+<h2 id="语法">语法</h2>
+
+<pre class="syntaxbox"><code>Array.observe(<var>arr</var>, <var>callback</var>)</code></pre>
+
+<h3 id="参数">参数</h3>
+
+<dl>
+ <dt><code>arr</code></dt>
+ <dd>用于被监视的数组</dd>
+ <dt><code>callback</code></dt>
+ <dd>每当数组发生变化时，使用如下参数调用该函数：
+ <dl>
+  <dt><code>changes</code></dt>
+  <dd>用于表示变化的对象数组。每个变化对象的属性如下：
+  <ul>
+   <li><strong><code>name</code></strong>: 变化的属性名。</li>
+   <li><strong><code>object</code></strong>: 变化后的数组。</li>
+   <li><strong><code>type</code></strong>: 用于表示变化类型的字符串。<code>其取值为"add"、</code><code>"update"、</code><code>"delete"</code>或 <code>"splice"</code>之一。</li>
+   <li><strong><code>oldValue</code></strong>: 仅用于<code>"update"</code>和<code>"delete"类型。变化</code>之前的取值。</li>
+   <li><strong><code>index</code></strong>: <code>仅用于"splice"类型。</code>变化发生所在索引。</li>
+   <li><strong><code>removed</code></strong>: 仅用于<code>"splice"类型。</code>被删除元素组成的数组。</li>
+   <li><strong><code>addedCount</code></strong>: 仅用于<code>"splice"</code>类型。被添加的元素数量。</li>
+  </ul>
+  </dd>
+ </dl>
+ </dd>
+</dl>
+
+<h2 id="描述">描述</h2>
+
+<p>每次 arr 发生任何变化时，回调函数将被调用，调用参数为所有变化按发生顺序组成的数组。</p>
+
+<div class="note">
+<p>通过Array方法如<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/pop"> Array.prototype.pop( )</a> 触发的变化将被报告成"<em>splice</em>"变化，长度不变但索引赋值发生变化的将被报告成"update"变化。</p>
+</div>
+
+<h2 id="示例">示例</h2>
+
+<h3 id="Example_Logging_different_change_types">Example: Logging different change types</h3>
+
+<pre class="brush: js">var arr = ['a', 'b', 'c'];
+
+Array.observe(arr, function(changes) {
+  console.log(changes);
+});
+
+arr[1] = 'B';
+// [{type: 'update', object: &lt;arr&gt;, name: '1', oldValue: 'b'}]
+
+arr[3] = 'd';
+// [{type: 'splice', object: &lt;arr&gt;, index: 3, removed: [], addedCount: 1}]
+
+arr.splice(1, 2, 'beta', 'gamma', 'delta');
+// [{type: 'splice', object: &lt;arr&gt;, index: 1, removed: ['B', 'c'], addedCount: 3}]
+</pre>
+
+<h2 id="Specifications" name="Specifications">标准规范</h2>
+
+<p><a href="https://github.com/arv/ecmascript-object-observe">Strawman proposal specification</a>.</p>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器支持</h2>
+
+<div>
+<div>
+
+
+<p>{{Compat("javascript.builtins.Array.observe")}}</p>
+</div>
+</div>
+
+<h2 id="See_also" name="See_also">相关内容</h2>
+
+<ul>
+ <li>{{jsxref("Array.unobserve()")}} {{experimental_inline}}</li>
+ <li>{{jsxref("Object.observe()")}} {{experimental_inline}}</li>
+ <li><a href="https://stackoverflow.com/q/29269057/778272">Under what condition would Array.observe's “add” event trigger?</a></li>
+</ul>

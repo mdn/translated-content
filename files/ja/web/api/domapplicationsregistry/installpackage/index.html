@@ -1,0 +1,46 @@
+---
+title: Apps.installPackage
+slug: Web/API/DOMApplicationsRegistry/installPackage
+tags:
+  - API
+  - Apps
+  - Firefox OS
+  - Method
+  - NeedsContent
+translation_of: Archive/Marketplace/API/DOMApplicationsRegistry/installPackage
+---
+<p>{{ ApiRef() }} {{non-standard_header}}</p>
+<h2 id="Summary" name="Summary">概要</h2>
+<p><a href="/ja/docs/Web/Apps/Packaged_apps">パッケージ型アプリ</a> をインストールします。</p>
+<h2 id="Syntax" name="Syntax">構文</h2>
+<pre class="syntaxbox">installPackage: function(aURL[, aParams])</pre>
+<h3 id="Parameters" name="Parameters">引数</h3>
+<div>
+  </div>
+<div>
+ <dl>
+  <dt>
+   <code>aURL</code></dt>
+  <dd>
+   インストールしようとするアプリパッケージに関連付けられたミニマニフェストの URL。完全な絶対 URL でなければいけません。</dd>
+  <dt>
+   <code>aParams</code></dt>
+  <dd>
+   (オプション) 以下の追加の情報を含むオブジェクト。</dd>
+ </dl>
+</div>
+<ul>
+ <li><code>receipts</code>: このインストールの支払レシートを指定するのに使用されます。</li>
+ <li><code>categories</code>: Web アプリのカテゴリを指定するのに使用されます。</li>
+</ul>
+<h2 id="Returns" name="Returns">戻り値</h2>
+<dl>
+ <dt>
+  <code>DOMRequest</code></dt>
+</dl>
+<h2 id="See_also" name="See_also">関連情報</h2>
+<ul>
+ <li><a href="/ja/Marketplace/Options/Self_publishing#Self-publishing_packaged_apps">パッケージ型アプリの自主配布</a></li>
+ <li>{{domxref("Apps.install()")}}</li>
+ <li><a href="/ja/docs/Web/Apps/JavaScript_API">Apps JavaScript API</a></li>
+</ul>

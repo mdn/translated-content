@@ -1,0 +1,110 @@
+---
+title: JS_DumpHeap
+slug: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_DumpHeap
+translation_of: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_DumpHeap
+---
+<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+
+<p>{{ obsolete_header("jsapi38") }}</p>
+
+<p>{{ Jsapi_minversion_header("1.8") }}</p>
+
+<div class="summary"><code>DEBUG</code> のみ。ヒープに割り当てられたもののオブジェクトグラフをダンプします。</div>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="brush: cpp">bool
+JS_DumpHeap(JSRuntime *rt, FILE *fp, void* startThing, JSGCTraceKind kind,
+            void *thingToFind, size_t maxDepth, void *thingToIgnore);
+</pre>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Name</th>
+   <th>Type</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td><code>cx</code></td>
+   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
+   <td>Pointer to a JS context. Every <code>JSContext</code> is permanently associated with a <code>JSRuntime</code>; each <code>JSRuntime</code> contains a GC heap.</td>
+  </tr>
+  <tr>
+   <td><code>fp</code></td>
+   <td><code>FILE *</code></td>
+   <td>File for the dump output.</td>
+  </tr>
+  <tr>
+   <td><code>startThing</code></td>
+   <td><code>void *</code></td>
+   <td><code>NULL</code> or a pointer to a GC thing (use {{jsapixref("JS::Value", "JS::Value::toGCThing()")}} to obtain a pointer to pass here). When null, dump all things reachable from the runtime roots. When non-null, dump only things reachable from the object indicated.</td>
+  </tr>
+  <tr>
+   <td><code>startKind</code></td>
+   <td><code>JSGCTraceKind</code></td>
+   <td>Trace kind of <code>startThing</code>, if <code>startThing</code> is not null. Must be <code>JSTRACE_OBJECT</code> when <code>startThing</code> is null.</td>
+  </tr>
+  <tr>
+   <td><code>thingToFind</code></td>
+   <td><code>void *</code></td>
+   <td><code>NULL</code> or a pointer to a GC thing. If this is non-null, JS_DumpHeap only dumps paths in the object graph leading to the specified thing.</td>
+  </tr>
+  <tr>
+   <td><code>maxDepth</code></td>
+   <td><code>size_t</code></td>
+   <td>The upper bound on the number of edges to descend from the graph roots.</td>
+  </tr>
+  <tr>
+   <td><code>thingToIgnore</code></td>
+   <td><code>void *</code></td>
+   <td><code>NULL</code> or a pointer to a GC thing that will be ignored during graph traversal.</td>
+  </tr>
+ </tbody>
+</table>
+
+<pre class="brush: cpp">enum JSGCTraceKind
+{
+    // These trace kinds have a publicly exposed, although opaque, C++ type.
+    // Note: The order here is determined by our Value packing. Other users
+    //       should sort alphabetically, for consistency.
+    JSTRACE_OBJECT = 0x00,
+    JSTRACE_STRING = 0x01,
+    JSTRACE_SYMBOL = 0x02,
+    JSTRACE_SCRIPT = 0x03,
+
+    // Shape details are exposed through JS_TraceShapeCycleCollectorChildren.
+    JSTRACE_SHAPE = 0x04,
+
+    // The kind associated with a nullptr.
+    JSTRACE_NULL = 0x06,
+
+    // A kind that indicates the real kind should be looked up in the arena.
+    JSTRACE_OUTOFLINE = 0x07,
+
+    // The following kinds do not have an exposed C++ idiom.
+    JSTRACE_BASE_SHAPE = 0x0F,
+    JSTRACE_JITCODE = 0x1F,
+    JSTRACE_LAZY_SCRIPT = 0x2F,
+    JSTRACE_TYPE_OBJECT = 0x3F,
+
+    JSTRACE_LAST = JSTRACE_TYPE_OBJECT
+};
+</pre>
+
+<h2 id="Description" name="Description">Description</h2>
+
+<p>See {{ Bug(378261) }} for detail.</p>
+
+<p>When tracing a thing, the GC needs to know about the layout of the object it is looking at. There are a fixed number of different layouts that the GC knows about. The "trace kind" is a static map which tells which layout a GC thing has.</p>
+
+<p>Although this map is public, the details are completely hidden. Not all of the matching C++ types are exposed, and those that are, are opaque.</p>
+
+<p>See {{jsapixref("JS::Value", "JS::Value::gcKind()")}} and {{jsapixref("JSTraceCallback")}} in &lt;codde&gt;Tracer.h&lt;/codde&gt; for more details.</p>
+
+<h2 id="See_Also" name="See_Also">See Also</h2>
+
+<ul>
+ <li>{{bug(378261)}}</li>
+ <li>{{bug(1122842)}}</li>
+</ul>

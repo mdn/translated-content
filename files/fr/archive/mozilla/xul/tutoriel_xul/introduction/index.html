@@ -1,0 +1,52 @@
+---
+title: Introduction
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Introduction
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Introduction
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL/La_structure_XUL">Suivant  »</a></p>
+</div>
+<p>Ce tutoriel est destiné à vous guider dans l'apprentissage de<abbr title="XML User-interface Language"> XUL</abbr> (XML User-interface Language) qui est un langage multi plates-formes permettant de décrire les interfaces utilisateurs des applications.</p>
+<p>Ce tutoriel vous montrera la création d'une simple interface utilisateur de recherche de fichiers, comme celle fournie par l'interface Sherlock du Macintosh, ou la boîte de dialogue de recherche de fichier de Windows.</p>
+<p>Notez que seule l'interface utilisateur sera créée avec quelques fonctionnalités limitées. La recherche de fichiers proprement dite ne sera pas implémentée. Une ligne bleue apparaîtra sur la gauche des paragraphes où la boîte de dialogue de recherche de fichier sera modifiée. Vous pourrez suivre cela à travers les sections.</p>
+<h3 id="Qu.27est_ce_que_XUL_et_pourquoi_a-t-il_.C3.A9t.C3.A9_cr.C3.A9.C3.A9.C2.A0.3F" name="Qu.27est_ce_que_XUL_et_pourquoi_a-t-il_.C3.A9t.C3.A9_cr.C3.A9.C3.A9.C2.A0.3F">Qu'est ce que XUL et pourquoi a-t-il été créé ?</h3>
+<p><abbr title="XML User-Interface Language">XUL</abbr> (prononcez <em>zool</em>, cela rime avec cool) a été créé pour avoir un développement du navigateur Mozilla plus facile et plus rapide. C'est un langage <abbr title="eXtensible Markup Language">XML</abbr> donc toutes les caractéristiques disponibles dans XML le sont également dans XUL.</p>
+<p>La plupart des applications ont besoin d'être développées en utilisant les caractéristiques d'une plate-forme spécifique, rendant l'adaptation multi plate-forme consommatrice en temps et coûteuse. Un certain nombre de solutions multi plates-formes ont été développées dans le passé. Java, par exemple, a comme principal argument de vente la portabilité. XUL est l'un de ces langages conçus spécialement pour créer des interfaces utilisateurs portables. Cela prend beaucoup de temps pour bâtir une application, même pour une seule plate-forme. Le temps requis pour compiler et débugger peut être long. Avec XUL, une interface peut être implémentée et modifiée rapidement et facilement.</p>
+<p>XUL a tous les avantages des autres langages XML. Par exemple, XHTML ou d'autres langages XML comme <abbr title="Math Markup Langage">Math-ML</abbr> ou <abbr title="Scalable Vector Graphics">SVG</abbr> peuvent y être insérés. De plus, les textes affichés avec XUL sont aisément localisables, ce qui signifie qu'ils peuvent être traduits dans d'autres langues avec peu d'effort.</p>
+<h3 id="Quels_types_d.27interface_utilisateurs_peuvent_.C3.AAtre_r.C3.A9alis.C3.A9s_avec_XUL.C2.A0.3F" name="Quels_types_d.27interface_utilisateurs_peuvent_.C3.AAtre_r.C3.A9alis.C3.A9s_avec_XUL.C2.A0.3F">Quels types d'interface utilisateurs peuvent être réalisés avec XUL ?</h3>
+<p>XUL offre la possibilité de créer la plupart des éléments habituels que l'on rencontre dans des interfaces graphiques modernes. Voici quelques éléments pouvant être créés :</p>
+<ul>
+  <li>Champs de saisie tels que des boîtes de textes et des cases à cocher</li>
+  <li>Barres d'outils avec boutons et autres contenus</li>
+  <li>Menus dans des barres de menus ou des menus surgissants (contextuels)</li>
+  <li>Boîtes de dialogues à onglets</li>
+  <li>Arbres de données hiérarchiques ou tabulaires</li>
+  <li>Raccourcis claviers</li>
+</ul>
+<p>Le contenu affiché peut être créé à partir du contenu d'un fichier XUL ou à partir d'une source de données. Dans Mozilla, de telles sources de données sont utilisées pour les messages des boîtes aux lettres, les marque-pages, et les résultats de recherche. Les contenus des menus, arbres, et autres éléments peuvent être remplis avec ces données, ou avec vos propres données fournies dans des fichiers <abbr title="Resource Description Framework">RDF</abbr>.</p>
+<p>Il existe plusieurs cas où des applications XUL sont créées :</p>
+<ul>
+  <li>Extension Firefox - une extension ajoute des fonctionnalités au navigateur lui-même, souvent sous la forme d'une barre d'outils supplémentaire, des menus contextuels, ou une interface pour personnaliser le navigateur. Pour obtenir ce résultat, une fonctionnalité du XUL appelé <em>overlay</em> est employée. Elle permet de faire fusionner une interface existante telle que le navigateur Firefox avec une interface utilisateur de l'extension. Des extensions peuvent également être appliquées à d'autres produits Mozilla tels que Thunderbird.</li>
+  <li>Application XULRunner autonome - XULRunner est une version empaquetée d'une plate-forme Mozilla permettant de créer des applications XUL autonomes. Aucun navigateur n'est requis pour lancer ces applications car elles contiennent leur propres fichiers exécutables.</li>
+  <li>Paquetage XUL - à mi chemin entre les deux autres se situent les applications créées de la même manière qu'une extension, mais fonctionnant comme une application indépendante dans une fenêtre séparée. Ces paquetages sont employés lorsque vous ne souhaitez pas d'une imposante application complète XULRunner sans pour autant imposer l'installation d'un navigateur Mozilla.</li>
+  <li>Application XUL distante - vous pouvez également simplement placer du code XUL sur un serveur Web et l'ouvrir dans un navigateur comme pour n'importe quelle page Web. Cette méthode a toutefois ses limites pour des questions de sécurité sur les actions que vous pouvez réaliser, telle que l'ouverture d'autres fenêtres.</li>
+</ul>
+<p>Les trois premiers types nécessitent chacun une installation sur la machine de l'utilisateur. De ce fait, ces types d'applications n'ont aucune restriction de sécurité et peuvent accéder au système de fichiers local, ou lire et écrire des préférences par exemple. Pour des extensions, les fichiers XUL et leurs scripts et images associés seront empaquetés dans un unique fichier qui sera téléchargé et installé par l'utilisateur. Des applications Mozilla telle que Firefox fournissent un gestionnaire d'extensions permettant l'installation de paquetages sans avoir à écrire beaucoup de code complexe.</p>
+<p>Il est possible d'ouvrir des fichiers XUL directement depuis le système de fichiers ou à partir d'un site Web distant. Cependant, ils seront restreints dans les types d'opérations qu'ils peuvent effectués, et certains aspects de XUL ne fonctionneront pas. Toutefois, si vous voulez charger du contenu XUL à partir d'un site distant, le serveur Web doit être configuré pour envoyer les fichiers XUL avec le type de contenu <var>'application/vnd.mozilla.xul+xml'</var>. XUL est habituellement stocké dans des fichiers avec l'extension <code>.xul</code>. Vous pouvez ouvrir un fichier XUL avec Mozilla comme vous le feriez avec d'autres fichiers, en utilisant la commande 'Ouvrir un fichier…' du menu 'Fichier', ou en tapant l'URL dans la barre d'adresse.</p>
+<h3 id="Que_dois-je_savoir_pour_comprendre_le_tutoriel.C2.A0.3F" name="Que_dois-je_savoir_pour_comprendre_le_tutoriel.C2.A0.3F">Que dois-je savoir pour comprendre le tutoriel ?</h3>
+<p>Vous devez connaître <abbr title="HyperText Markup Language">HTML</abbr> et avoir au moins des connaissances de base sur XML et <abbr title="Cascading Style Sheets">CSS</abbr>. Voici quelques indications à garder à l'esprit :</p>
+<ul>
+  <li>Les éléments XUL et attributs doivent être en minuscule car XML est sensible à la casse (contrairement à HTML).</li>
+  <li>Les valeurs d'attributs doivent être placés entre guillemets, même si ce sont des nombres.</li>
+  <li>Les fichiers XUL sont habituellement divisés en quatre fichiers : un pour la mise en page et les éléments, un pour les styles, un pour les déclarations d'entités (utilisées pour la localisation) et un pour les scripts. De plus, vous pouvez avoir des fichiers supplémentaires pour les images ou les données spécifiques à la plate-forme.</li>
+</ul>
+<p>XUL est supporté dans Mozilla et les navigateurs basés sur le moteur Gecko, comme Netscape 6 ou plus, et Mozilla Firefox. À cause des différents changements dans la syntaxe XUL au fil du temps, vous devriez avoir la dernière version pour que les exemples fonctionnent correctement. La plupart des exemples devraient fonctionner dans Mozilla 1.0 et plus. XUL est pratiquement similaire dans Firefox que dans les autres navigateurs, bien qu'il y ait des différences spécifiques, comme le support des barres de boutons personnalisables.</p>
+<p>Ce tutoriel tente de couvrir la plupart des fonctionnalités de XUL. Cependant, toutes les spécificités ne seront pas examinées. Une fois que vous vous serez familiarisés avec XUL, vous pourrez utiliser <a href="/fr/Référence_XUL" title="fr/Référence_XUL">la référence des éléments XUL</a> pour trouver les autres fonctionnalités supportées par d'autres éléments spécifiques.</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL/La_structure_XUL">Suivant  »</a></p>
+</div>
+<p><span class="comment">Interwiki</span></p>

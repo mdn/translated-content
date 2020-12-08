@@ -1,0 +1,117 @@
+---
+title: XBL 1.0 Reference
+slug: Archive/Mozilla/XBL/XBL_1.0_Reference
+tags:
+  - NeedsTranslation
+  - TopicStub
+  - XBL
+translation_of: Archive/Mozilla/XBL/XBL_1.0_Reference
+---
+<p> </p>
+<h2 id="Abstract" name="Abstract">Abstract</h2>
+<p>This document describes Extensible Binding Language (<a href="/en/XBL" title="en/XBL">XBL</a>) 1.0 as implemented in <a href="/en/Gecko" title="en/Gecko">Gecko</a> browsers.</p>
+<p>Extensible Binding Language is a <a href="/en/XML" title="en/XML">XML</a>-based markup language to implement reusable components (<em>bindings</em>) that can be bound to elements in other documents. The element with a binding specified, called the <em>bound element</em>, acquires the new behavior specified by the binding. Bindings can be bound to elements using Cascading Style Sheets (<a href="/en/CSS" title="en/CSS">CSS</a>) or <a href="/en/DOM" title="en/DOM">DOM</a>. One element can be bound to several bindings at once.</p>
+<p>Functionally bindings should be correlated with <a class="external" href="http://msdn.microsoft.com/workshop/components/htc/reference/htcref.asp">Behaviors</a> and <a class="external" href="http://msdn.microsoft.com/workshop/author/behaviors/overview/viewlink_ovw.asp">Viewlink</a> but being implemented as one integrated XML solution.</p>
+<p>Bindings can contain event handlers that are registered on the bound element, an implementation of new methods and properties that become accessible from the bound element, and anonymous content that is inserted around the bound element.</p>
+<div class="note">
+  <p>There are numerous adjustments in the current implementation in comparison of <a class="external" href="http://www.w3.org/TR/xbl/">earlier XBL proposals</a>, and not all of them are reflected yet in this document. The documentation process is still in progress: please keep it in your mind while using the provided information.</p>
+</div>
+<h2 id="XBL_Elements" name="XBL_Elements"><a href="/en/XBL/XBL_1.0_Reference/Elements">XBL Elements</a></h2>
+<p>XBL 1.0 elements are in the <code><span class="nowiki">http://www.mozilla.org/xbl</span></code> namespace.</p>
+<ul>
+  <li><code><a href="/en/XBL/XBL_1.0_Reference/Elements#bindings">bindings</a></code></li>
+  <li><code><a href="/en/XBL/XBL_1.0_Reference/Elements#binding">binding</a></code></li>
+  <li><code><a href="/en/XBL/XBL_1.0_Reference/Elements#_content">content</a></code></li>
+  <li><code><a href="/en/XBL/XBL_1.0_Reference/Elements#children">children</a></code></li>
+  <li><code><a href="/en/XBL/XBL_1.0_Reference/Elements#implementation">implementation</a></code></li>
+  <li><code><a href="/en/XBL/XBL_1.0_Reference/Elements#constructor">constructor</a></code></li>
+  <li><code><a href="/en/XBL/XBL_1.0_Reference/Elements#destructor">destructor</a></code></li>
+  <li><code><a href="/en/XBL/XBL_1.0_Reference/Elements#field">field</a></code></li>
+  <li><code><a href="/en/XBL/XBL_1.0_Reference/Elements#property">property</a></code></li>
+  <li><code><a href="/en/XBL/XBL_1.0_Reference/Elements#getter">getter</a></code></li>
+  <li><code><a href="/en/XBL/XBL_1.0_Reference/Elements#setter">setter</a></code></li>
+  <li><code><a href="/en/XBL/XBL_1.0_Reference/Elements#method">method</a></code></li>
+  <li><code><a href="/en/XBL/XBL_1.0_Reference/Elements#parameter">parameter</a></code></li>
+  <li><code><a href="/en/XBL/XBL_1.0_Reference/Elements#body">body</a></code></li>
+  <li><code><a href="/en/XBL/XBL_1.0_Reference/Elements#handlers">handlers</a></code></li>
+  <li><code><a href="/en/XBL/XBL_1.0_Reference/Elements#handler">handler</a></code></li>
+  <li><code><a href="/en/XBL/XBL_1.0_Reference/Elements#resources">resources</a></code></li>
+  <li><code><a href="/en/XBL/XBL_1.0_Reference/Elements#stylesheet">stylesheet</a></code></li>
+  <li><code><a href="/en/XBL/XBL_1.0_Reference/Elements#image">image</a></code></li>
+</ul>
+<h2 id="Binding_Attachment_and_Detachment" name="Binding_Attachment_and_Detachment"><a href="/en/XBL/XBL_1.0_Reference/Binding_Attachment_and_Detachment">Binding Attachment and Detachment</a></h2>
+<ul>
+  <li><a href="/en/XBL/XBL_1.0_Reference/Binding_Attachment_and_Detachment#Attachment_using_CSS">Attachment using CSS</a></li>
+  <li><a href="/en/XBL/XBL_1.0_Reference/Binding_Attachment_and_Detachment#Attachment_using_element.style_property">Attachment using element.style property</a></li>
+  <li><a href="/en/XBL/XBL_1.0_Reference/Binding_Attachment_and_Detachment#.3Cconstructor.3E_call">&lt;constructor&gt; call</a></li>
+  <li><a href="/en/XBL/XBL_1.0_Reference/Binding_Attachment_and_Detachment#.3Cdestructor.3E_call">&lt;destructor&gt; call</a></li>
+  <li><a href="/en/XBL/XBL_1.0_Reference/Binding_Attachment_and_Detachment#Binding_Documents">Binding Documents</a></li>
+</ul>
+<h2 id="DOM_Interfaces" name="DOM_Interfaces"><a href="/en/XBL/XBL_1.0_Reference/DOM_Interfaces" title="en/XBL/XBL_1.0_Reference/DOM_Interfaces">DOM Interfaces</a></h2>
+<ul>
+  <li><a href="/en/XBL/XBL_1.0_Reference/DOM_Interfaces#The_nsIDOMDocumentXBL_Interface" title="en/XBL/XBL 1.0 Reference/DOM Interfaces#The nsIDOMDocumentXBL Interface">The nsIDOMDocumentXBL Interface</a></li>
+</ul>
+<h2 id="Anonymous_Content" name="Anonymous_Content"><a href="/en/XBL/XBL_1.0_Reference/Anonymous_Content">Anonymous Content</a></h2>
+<ul>
+  <li><a href="/en/XBL/XBL_1.0_Reference/Anonymous_Content#Introduction">Introduction</a></li>
+  <li><a href="/en/XBL/XBL_1.0_Reference/Anonymous_Content#Scoping_and_Access_Using_the_DOM">Scoping and Access Using the DOM</a></li>
+  <li><a href="/en/XBL/XBL_1.0_Reference/Anonymous_Content#Content_Generation">Content Generation</a>
+    <ul>
+      <li><a href="/en/XBL/XBL_1.0_Reference/Anonymous_Content#Rules_for_Generation">Rules for Generation</a></li>
+      <li><a href="/en/XBL/XBL_1.0_Reference/Anonymous_Content#The_contentgenerated_Event">The contentgenerated Event</a></li>
+      <li><a href="/en/XBL/XBL_1.0_Reference/Anonymous_Content#The_contentdestroyed_Event">The contentdestroyed Event</a></li>
+    </ul>
+  </li>
+  <li><a href="/en/XBL/XBL_1.0_Reference/Anonymous_Content#Attribute_Forwarding">Attribute Forwarding</a></li>
+  <li><a href="/en/XBL/XBL_1.0_Reference/Anonymous_Content#Insertion_Points">Insertion Points</a>
+    <ul>
+      <li><a href="/en/XBL/XBL_1.0_Reference/Anonymous_Content#.3Cchildren.3E_and_.3Celement.3E">&lt;children&gt; and &lt;element&gt;</a></li>
+      <li><a href="/en/XBL/XBL_1.0_Reference/Anonymous_Content#Handling_DOM_Changes">Handling DOM Changes</a></li>
+    </ul>
+  </li>
+  <li><a href="/en/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting">Event Flow and Targeting</a>
+    <ul>
+      <li><a href="/en/XBL/XBL_1.0_Reference/Anonymous_Content#Flow_and_Targeting_Across_Scopes">Flow and Targeting Across Scopes</a></li>
+      <li><a href="/en/XBL/XBL_1.0_Reference/Anonymous_Content#Focus_and_Blur_Events">Focus and Blur Events</a></li>
+      <li><a href="/en/XBL/XBL_1.0_Reference/Anonymous_Content#Mouseover_and_Mouseout_Events">Mouseover and Mouseout Events</a></li>
+    </ul>
+  </li>
+  <li><a href="/en/XBL/XBL_1.0_Reference/Anonymous_Content#Anonymous_Content_and_CSS">Anonymous Content and CSS</a>
+    <ul>
+      <li><a href="/en/XBL/XBL_1.0_Reference/Anonymous_Content#Selectors_and_Scopes">Selectors and Scopes</a></li>
+      <li><a href="/en/XBL/XBL_1.0_Reference/Anonymous_Content#Binding_Stylesheets">Binding Stylesheets</a></li>
+    </ul>
+  </li>
+</ul>
+<h2 id="Binding_Implementations" name="Binding_Implementations"><a href="/en/XBL/XBL_1.0_Reference/Binding_Implementations">Binding Implementations</a></h2>
+<ul>
+  <li><a href="/en/XBL/XBL_1.0_Reference/Binding_Implementations#Introduction">Introduction</a></li>
+  <li><a href="/en/XBL/XBL_1.0_Reference/Binding_Implementations#Methods">Methods</a></li>
+  <li><a href="/en/XBL/XBL_1.0_Reference/Binding_Implementations#Properties">Properties</a></li>
+  <li><a href="/en/XBL/XBL_1.0_Reference/Binding_Implementations#Inheritance_of_Implementations">Inheritance of Implementations</a></li>
+</ul>
+<h2 id="Event_Handlers" name="Event_Handlers"><a href="/en/XBL/XBL_1.0_Reference/Event_Handlers">Event Handlers</a></h2>
+<h2 id="Example_-_Sticky_Notes" name="Example_-_Sticky_Notes"><a href="/en/XBL/XBL_1.0_Reference/Example_Sticky_Notes">Example - Sticky Notes</a></h2>
+<p>Updated and adjusted for the current Firefox implementation.</p>
+<div class="note">
+  <p>This example is targeted to demonstrate the XBL usage rather than to be a practically useful application. For this reason it contains many comments and some blocks could be avoided in a more compact solution yet used here for demonstration purposes.</p>
+</div>
+<ul>
+  <li><a href="/en/XBL/XBL_1.0_Reference/Example_Sticky_Notes#notes.html">notes.html</a></li>
+  <li><a href="/en/XBL/XBL_1.0_Reference/Example_Sticky_Notes#notes.xml">notes.xml</a></li>
+  <li><a href="/en/XBL/XBL_1.0_Reference/Example_Sticky_Notes#notes.css">notes.css</a></li>
+</ul>
+<p><a class="external" href="http://www.cogjam.com/external/xbl/notes.html">View this example</a></p>
+<p><br>
+  <span class="comment"><a class="external" href="http://www.nskom.com/external/xbl/notes.zip" title="http://www.nskom.com/external/xbl/notes.zip">Download all files (.zip archive)</a> need to ask to adjust the server - it gives "Access denied" for zip files (?)</span></p>
+<h2 id="References" name="References">References</h2>
+<ul>
+  <li><a class="external" href="http://www.w3.org/TR/xbl/">Initial XBL 1.0 proposal submitted as a Note to W3C</a> (does not reflect Mozilla implementation, nor future plans)</li>
+  <li><a class="external" href="http://www.mozilla.org/projects/xbl/xbl2.html">XBL 2.0 Project</a></li>
+</ul>
+<div class="originaldocinfo">
+  <h2 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h2>
+  <ul>
+    <li>Last Updated Date: April 24, 2006</li>
+  </ul>
+</div>

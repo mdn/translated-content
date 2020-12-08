@@ -1,0 +1,172 @@
+---
+title: 快速入门
+slug: Mozilla/Add-ons/SDK/Tutorials/Getting_started
+tags:
+  - add-on sdk开发
+  - cfx工具基础使用教程
+  - 火狐扩展程序
+translation_of: Mozilla/Add-ons/SDK/Tutorials/Getting_Started_%28jpm%29
+---
+<p>{{AddonSidebar}}</p>
+
+<div class="note">
+<p>Add-on SDK 里包含了一个命令行工具，你可以用此工具来初始化、运行、测试以及打包 add on。 这个工具称为 jpm，基于 <a href="http://nodejs.org/">Node.js</a> 。它替代了以前的cfx工具。</p>
+
+<p>你可以在 Firefox 38或之后的版本中使用。</p>
+
+<p>本文阐述如何使用 jpm 开发。</p>
+</div>
+
+<p>本教程会过一遍使用 SDK 创建一个简单 add-on 的过程。</p>
+
+<h2 id="准备">准备</h2>
+
+<p>要使用 SDK 创建 add-on，你需要：</p>
+
+<ul>
+ <li>Firefox 38或以后版本。如果你需要在早期版本的 Firefox 上开发，你就要使用老的 cfx 工具。参看 <a href="/en-US/Add-ons/SDK/Tutorials/Getting_started_(cfx)">cfx 快速入门</a>的说明。</li>
+ <li>命令行 jpm 工具。参看 <a href="/en-US/Add-ons/SDK/Tools/jpm#Installation">jpm 安装</a>的说明。一旦你已经完成这些工作，你就会在一个命令行提示符下。</li>
+</ul>
+
+<h2 id="初始化空的_add-on">初始化空的 add-on</h2>
+
+<p>在命令行提示符下，创建一个新目录。进入新文件夹，键入 <code>jpm init</code>，然后敲回车</p>
+
+<pre>mkdir my-addon
+cd my-addon
+jpm init
+</pre>
+
+<p>接着你会被要求提供一些关于你的 add-on 的信息：这会用来创建 <a href="/en-US/Add-ons/SDK/Tools/package_json">package.json</a> 文件。如果光按回车的话，就表示接受属性的默认值。关于 <code>jpm init</code> 的更多信息，参看 <a href="/en-US/Add-ons/SDK/Tools/jpm#Command_reference">jpm command reference</a>.</p>
+
+<p>一旦你设置了这些属性的值或者接受默认值，你会看到 "package.json" 的完整内容并被询问是否接受这些设置。</p>
+
+<h2 id="实现_add-on">实现 add-on</h2>
+
+<p>现在你可以写 add-on 的代码了。除非你修改了"entry point"的值（package.json 中的 "<a href="/en-US/Add-ons/SDK/Tools/package_json#main">main</a>"），一般情况将从你的 add-on 的根目录下的"index.js"文件开始。这个文件就是在之前步骤中创建的。打开这个文件并且添加以下代码：</p>
+
+<pre class="brush: js">var buttons = require('sdk/ui/button/action');
+var tabs = require("sdk/tabs");
+
+var button = buttons.ActionButton({
+  id: "mozilla-link",
+  label: "Visit Mozilla",
+  icon: {
+    "16": "./icon-16.png",
+    "32": "./icon-32.png",
+    "64": "./icon-64.png"
+  },
+  onClick: handleClick
+});
+
+function handleClick(state) {
+  tabs.open("http://www.mozilla.org/");
+}
+</pre>
+
+<div class="note">
+<p>注意在jpm中"entry point"的默认值为"index.js"，意思是你的主文件是"index.js"，且在你的 add-on的根目录下。</p>
+
+<p>cfx中，入口默认是"main.js"，并且在"lib"目录下</p>
+</div>
+
+<p>保存文件</p>
+
+<p>接下来，在根目录下创建目录<strong>"data"</strong>。</p>
+
+<pre>mkdir data
+</pre>
+
+<p>并保存这三个图标文件到<strong>"data"</strong>目录：</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/7635/icon-16.png" style="height: 16px; width: 16px;"></td>
+   <td>icon-16.png</td>
+  </tr>
+  <tr>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/7637/icon-32.png" style="height: 32px; width: 32px;"></td>
+   <td>icon-32.png</td>
+  </tr>
+  <tr>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/7639/icon-64.png" style="height: 64px; width: 64px;"></td>
+   <td>icon-64.png</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>返回命令行，键入：</p>
+
+<pre>jpm run</pre>
+
+<p>这个 jpm 命令会运行一个带有你的 add-on 的 Firefox 的新实例。</p>
+
+<p>如果找不到 Firefox，你可能要为它提供一个路径（如在Ubuntu中）：</p>
+
+
+<pre>jpm run -b /usr/bin/firefox</pre>
+
+<p>Firefox 启动以后，在浏览器右上角你能看到一个 Firefox logo 的图标。点击该图标，就会打开一个新标签页 <a href="http://www.mozilla.org/" rel="noreferrer">http://www.mozilla.org/</a>。</p>
+
+<p>这就是这个 add-on 的全部功能了。它用到了 SDK 的两个模块：<a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action">action button</a> 模块，使你能加个按钮到浏览器上，以及 <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs" rel="noreferrer">tabs</a> 模块，使你能完成对标签页的基本操作。本例中，我们以及创建了一个图标是Firefox图标的按钮，并添加一个点击处理程序，可以在新标签页中打开 Mozilla 页面。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7643/mozilla-button.png" style="display: block; height: 221px; margin-left: auto; margin-right: auto; width: 382px;">试着编辑这个文件。例如，我们可以改变加载的页面：</p>
+
+<pre class="brush: js">var buttons = require('sdk/ui/button/action');
+var tabs = require("sdk/tabs");
+
+var button = buttons.ActionButton({
+  id: "mozilla-link",
+  label: "Visit Mozilla",
+  icon: {
+    "16": "./icon-16.png",
+    "32": "./icon-32.png",
+    "64": "./icon-64.png"
+  },
+  onClick: handleClick
+});
+
+function handleClick(state) {
+  tabs.open("https://developer.mozilla.org/");
+}</pre>
+
+<p>在命令行提示符下，再次执行 <code>jpm run</code>。这次点击按钮，它会带你到 <a href="https://developer.mozilla.org/">https://developer.mozilla.org/</a> 页面。</p>
+
+<h2 id="打包_add-on">打包 add-on</h2>
+
+<p>当你完成了 add-on 并准备发布它，你会需要把它打包为 XPI 文件。你能自己分发 XPI 文件，也可以把它们发布到 <a href="https://addons.mozilla.org" rel="noreferrer">https://addons.mozilla.org</a>，这样其他用户就能下载并按照它们。</p>
+
+<p>要构建 XPI，只要在 add-on 的根目录下运行命令 <code>jpm xpi</code>：</p>
+
+<pre>jpm xpi
+</pre>
+
+<p>你应该看到像这样的信息：</p>
+
+<pre>JPM info Successfully created xpi at /path/to/my-addon/@my-addon-0.0.1.xpi
+</pre>
+
+<p>要测试附加组件是否能正常运行，可以尝试在你自己的火狐中安装 XPI 文件。你可以在 Firefox 中按 Ctrl+O 组合键（Mac 中是 Cmd+O），或者选择"文件"菜单里的“打开”。这样会弹出一个文件选择对话框：转到"@my-addon.xpi"文件，打开并按照提示安装 add-on。</p>
+
+<p>注意 Firefox 默认需要 add-on 有签名，即使是本地开发的 add-on。安装完后他们会在已安装的 add-on 列表中出现，只因没有签名而被禁用。开发的时候，又或者你不准备发布，你可以打开 <a>about:config</a> 设置 <em>xpinstall.signatures.required</em> 为 <em>false</em> 来运行未经签名的组件。这个设置会应用到所有的 add-on，所以要十分小心，不要一不当心从别的地方安装了恶意组件。</p>
+
+<p>要发布你的 add-on，请<a href="https://addons.mozilla.org/en-US/developers/addon/submit/2">提交 XPI 文件到 addons.mozilla.org</a> 或者如果你想在你自己的服务器上发布，运行 <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm#jpm_sign">jpm sign</a>。</p>
+
+<h2 id="总结">总结</h2>
+
+<p>本教程中我们使用了下面三个命令来构建和打包 add-on ：</p>
+
+<ul>
+ <li><code>jpm init</code> 初始化一个空的 add-on 模板</li>
+ <li><code>jpm run</code> 运行一个装有 add-on 的新 Firefox 实例，所以我们可以试用它</li>
+ <li><code>jpm xpi</code> 打包 add-on 为 XPI 文件，用来发布</li>
+</ul>
+
+<p>这是你在开发SDK add-on会用到的三个主要命令。完全的<a href="/en-US/Add-ons/SDK/Tools/jpm" rel="noreferrer">参考文档</a>包含了所以你能使用的命令，以及这些命令的可选项。</p>
+
+<p>这次开发的add-on 的代码用到了两个 SDK 模块，<a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action">action button</a> 和 <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs" rel="noreferrer">tabs</a>。这儿有参考文档，描述 SDK 中所有<a href="/en-US/Add-ons/SDK/High-Level_APIs" rel="noreferrer">高层次</a>和<a href="/en-US/Add-ons/SDK/Low-Level_APIs" rel="noreferrer">低层次</a>的 API。</p>
+
+<h2 id="下一步">下一步?</h2>
+
+<p>要了解你能用 SDK API 做些什么，试着继续阅读<a href="/en-US/Add-ons/SDK/Tutorials" rel="noreferrer">教程</a>。</p>

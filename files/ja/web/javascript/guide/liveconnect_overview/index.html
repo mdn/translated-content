@@ -1,0 +1,799 @@
+---
+title: LiveConnect の概要
+slug: Web/JavaScript/Guide/LiveConnect_Overview
+tags:
+  - Java
+  - JavaScript
+  - LiveConnect
+translation_of: Archive/Web/LiveConnect/LiveConnect_Overview
+---
+<p>この章では、Java のコードと JavaScript のコードが相互通信を可能にする技術である <a href="/ja/docs/LiveConnect" title="ja/docs/LiveConnect">LiveConnect</a> の使用方法を解説します。この章の読者は、Java プログラミングの経験があるものとします。</p>
+
+<h2 id="Working_with_Wrappers" name="Working_with_Wrappers">ラッパの使用</h2>
+
+<p>JavaScript において、<em>ラッパ</em>とは元の言語のオブジェクトをくるんだ、ターゲットとする言語のデータ型のオブジェクトです。JavaScript でプログラミングをするときは、ラッパオブジェクトを用いることで Java のメソッドやフィールドにアクセスすることができます。つまり、ラッパのメソッドを呼び出したりプロパティにアクセスすることで、Java のオブジェクトにおいて呼び出すことになります。Java 側では JavaScript のオブジェクトがクラス <code>netscape.javascript.JSObject</code> のインスタンスでラップされ、Java に渡されます。</p>
+
+<p>JavaScript のオブジェクトが Java に送られる際、ランタイムエンジンは <code>JSObject</code> 型の Java ラッパを生成します。一方 <code>JSObject</code> が Java から JavaScript に送られるときは、ランタイムエンジンはそのラップを解き、元の JavaScript オブジェクトの種類に戻します。<code>JSObject</code> クラスには、JavaScript のメソッドを呼び出したり JavaScript のプロパティを調べるためのインタフェースが備わっています。</p>
+
+<h2 id="JavaScript_to_Java_Communication" name="JavaScript_to_Java_Communication">JavaScript から Java への通信</h2>
+
+<p>Java のパッケージやクラスを参照したり、Java のオブジェクトや配列を扱ったりするときは、特別な LiveConnect オブジェクトを使用します。JavaScript から Java へのアクセスはすべて、これらのオブジェクトを用いて行います。それらのオブジェクトについて、以下の表で簡単にまとめます。</p>
+
+<table class="standard-table">
+ <caption>表 9.1 LiveConnect オブジェクト</caption>
+ <thead>
+  <tr>
+   <th scope="col">オブジェクト</th>
+   <th scope="col">説明</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>JavaArray</code></td>
+   <td>ラップされた Java の配列です。JavaScript コード内からアクセスされます。</td>
+  </tr>
+  <tr>
+   <td><code>JavaClass</code></td>
+   <td>Java のクラスへの JavaScript からの参照です。</td>
+  </tr>
+  <tr>
+   <td><code>JavaObject</code></td>
+   <td>ラップされた Java のオブジェクトです。JavaScript コード内からアクセスされます。</td>
+  </tr>
+  <tr>
+   <td><code>JavaPackage</code></td>
+   <td>Java のパッケージへの JavaScript からの参照です。</td>
+  </tr>
+ </tbody>
+</table>
+
+<p><strong>注意:</strong> Java は強く型付けされた言語であり、JavaScript は弱く型付けされた言語であるため、LiveConnect を使用する際はもう一方の言語のために JavaScript ランタイムエンジンが引数の値を適当なデータ型に変換します。詳細は<a href="/ja/docs/JavaScript/Guide/Values,_Variables,_and_Literals#Data_type_conversion" title="ja/docs/JavaScript/Guide/Values, Variables, and Literals#Data Type Conversion">データ型の変換</a>をご覧ください。</p>
+
+<p>かなり直感的に Java とやりとりできることから、ある意味で LiveConnect オブジェクトの存在は透過的です。例えば、次のように Java の <code>String</code> オブジェクトを作成し、<code>new</code> 演算子を Java のコンストラクタとともに用いて、そのオブジェクトを JavaScript の変数 <code>myString</code> に代入することができます:</p>
+
+<pre class="brush: js">var myString = new java.lang.String("Hello world");
+</pre>
+
+<p>この例では、変数 <code>myString</code> は <code>JavaObject</code> になります。これは、Java の <code>String</code> オブジェクトのインスタンスを保持しているためです。<code>JavaObject</code> であるので、<code>myString</code> は <code>java.lang.String</code> およびそのスーパークラスである <code>java.lang.Object</code> のパブリックなインスタンスメソッドにアクセスできます。これらの Java のメソッドは JavaScript から、<code>JavaObject</code> のメソッドとして使用できます:</p>
+
+<pre class="brush: js">myString.length(); // 11 を返す
+</pre>
+
+<p>JavaClass オブジェクトの静的メンバは直接呼び出すことができます。</p>
+
+<pre class="brush: js">alert(java.lang.Integer.MAX_VALUE); // 2147483647 というアラート
+</pre>
+
+<h3 id="The_Packages_Object" name="The_Packages_Object">Packages オブジェクト</h3>
+
+<p>Java のクラスが <code>java</code>、<code>sun</code> あるいは <code>netscape</code> パッケージのいずれの一部でもない場合は、<code>Packages</code> オブジェクトを用いてそれにアクセスします。例えば Redwood 社が、実装したさまざまな Java のクラスを格納するための、<code>redwood</code> という名前の Java パッケージを使用することを想定します。<code>redwood</code> の <code>HelloWorld</code> クラスのインスタンスを作成するには、次のようにそのクラスのコンストラクタにアクセスします:</p>
+
+<pre class="brush: js">var red = new Packages.redwood.HelloWorld();
+</pre>
+
+<p>デフォルトパッケージのクラス (すなわち、明示的にはパッケージに名前をつけていないクラス) にアクセスすることもできます。例えば、HelloWorld クラスが直接 <code>CLASSPATH</code> に入っており、またパッケージには入っていない場合は、次のようにしてそれにアクセスできます:</p>
+
+<pre class="brush: js">var red = new Packages.HelloWorld();
+</pre>
+
+<p>LiveConnect の <code>java</code>、<code>sun</code> および <code>netscape</code> オブジェクトはよく使用される Java のパッケージであるために、短縮記法が備わっています。例えば、次のように使用できます:</p>
+
+<pre class="brush: js">var myString = new java.lang.String("Hello world");
+</pre>
+
+<p>これは次のものを省略したものです:</p>
+
+<pre class="brush: js">var myString = new Packages.java.lang.String("Hello world");
+</pre>
+
+<h3 id="Working_with_Java_Arrays" name="Working_with_Java_Arrays">Java の配列の使用</h3>
+
+<p>Java のメソッドが配列を作成し、JavaScript からその配列を参照するときは、<code>JavaArray</code> を使用します。例えば、次のコードは int 型の要素を 10 個持つ <code>JavaArray x</code> を作成します:</p>
+
+<pre class="brush: js">var x = java.lang.reflect.Array.newInstance(java.lang.Integer, 10);
+</pre>
+
+<p>JavaScript の <code>Array</code> オブジェクトのように、<code>JavaArray</code> にはその配列の要素数を返す <code>length</code> プロパティがあります。<code>Array.length</code> とは異なり、<code>JavaArray.length</code> は読み取り専用のプロパティです。これは、Java の配列は作成時に要素総数が固定されるためです。</p>
+
+<h3 id="Package_and_Class_References" name="Package_and_Class_References">パッケージおよびクラスの参照</h3>
+
+<p>JavaScript から Java のパッケージやクラスへの簡単な参照では、<code>JavaPackage</code> や <code>JavaClass</code> オブジェクトが作成されます。先の Redwood 社についての例では、例えば Packages.redwood という参照が JavaPackage オブジェクトです。同様に、<code>java.lang.String</code> のような参照は <code>JavaClass</code> オブジェクトです。</p>
+
+<p>ほとんどの場合は <code>JavaPackage</code> や <code>JavaClass</code> オブジェクトについて気にする必要はありません。ただ Java のパッケージを使うだけのことであり、LiveConnect がこれらのオブジェクトを透過的に生成するからです。LiveConnect がクラスの読み込みに失敗する場合があり、そのときは以下のようにして手動で読み込みを行う必要があります:</p>
+
+<pre class="brush: js">var Widgetry = java.lang.Thread.currentThread().getContextClassLoader().loadClass("org.mywidgets.Widgetry");
+</pre>
+
+<p>JavaScript 1.3 以前では <code>JavaClass</code> オブジェクトをパラメータとして Java のメソッドとして渡す際に、自動的には <code>java.lang.Class</code> のインスタンスに変換されません。そのため、<code>java.lang.Class</code> のインスタンスのラッパを作成しなければなりません。次の例では、<code>forName</code> メソッドがラッパオブジェクトである <code>theClass</code> を生成します。そしてそれを <code>newInstance</code> メソッドに渡し、配列を生成します。</p>
+
+<pre class="brush: js">// JavaScript 1.3
+var theClass = java.lang.Class.forName("java.lang.String");
+var theArray = java.lang.reflect.Array.newInstance(theClass, 5);
+</pre>
+
+<p>JavaScript 1.4 以降では次の例のように、<code>JavaClass</code> オブジェクトをメソッドに直接渡すことができます:</p>
+
+<pre class="brush: js">// JavaScript 1.4
+var theArray = java.lang.reflect.Array.newInstance(java.lang.String, 5);
+</pre>
+
+<h3 id="Arguments_of_Type_char" name="Arguments_of_Type_char">char 型の引数</h3>
+
+<p>JavaScript 1.4 以降では <code>char</code> 型の引数を必要とする Java のメソッドに、1 文字の文字列を渡すことができます。例えば、次のようにして文字列 "H" を <code>Character</code> コンストラクタに渡すことができます:</p>
+
+<pre class="brush: js">var c = new java.lang.Character("H");
+</pre>
+
+<p>JavaScript 1.3 以前では、このようなメソッドにはその文字の Unicode 値に対応する整数値を渡さなければなりません。例えば、次のコードも "H" という文字列を変数 <code>c</code> に代入するものです:</p>
+
+<pre class="brush: js">var c = new java.lang.Character(72);
+</pre>
+
+<h3 id="Handling_Java_Exceptions_in_JavaScript" name="Handling_Java_Exceptions_in_JavaScript">JavaScript での Java 例外の処理</h3>
+
+<p>Java のコードは実行時に失敗すると、例外を投げます。JavaScript のコードが Java のデータメンバまたはメソッドにアクセスし、失敗すると、Java の例外が JavaScript に渡されます。これは、例外を処理できるようにするためです。JavaScript 1.4 からは <code>try...catch</code> 文でこの例外を受け取ることができます。(Mozilla 固有の LiveConnect コードが Mozilla 内でメンテナンスされていなかったため、この機能は (他の一部機能もあわせて) Gecko 1.9 で壊れています (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=391642" title="Try-catch sometimes does not catch Java LiveConnect exceptions but instead fails">バグ 391642</a> をご覧ください)。しかし Java 6 アップデート 11 および 12 での、Mozilla の汎用 (かつクロスブラウザの) <a href="/ja/docs/Plugins" title="ja/docs/Plugins">NPAPI</a> プラグインコードに依存する構築のサポートにより修復されました。)</p>
+
+<p>例えば、Java の <code>forName</code> メソッドを使用して Java のクラス名を <code>theClass</code> という変数に代入するとします。<code>forName</code> メソッドに渡す値が Java のクラス名に評価できなければ、そのメソッドは例外を投げます。次のようにして、例外を処理できるように <code>forName</code> 代入文を <code>try</code> ブロック内に置きます:</p>
+
+<pre class="brush: js">function getClass(javaClassName) {
+   try {
+      var theClass = java.lang.Class.forName(javaClassName);
+   } catch (e) {
+      return ("The Java exception is " + e);
+   }
+   return theClass;
+}
+</pre>
+
+<p>この例では、<code>javaClassName</code> が "java.lang.String" のような正当なクラス名に評価されると代入が成功します。<code>javaClassName</code> が "String" のような不正なクラス名に評価されると、<code>getClass</code> 関数が例外を受け取り、次のようなものを返します:</p>
+
+<pre>The Java exception is java.lang.ClassNotFoundException: String
+</pre>
+
+<p>例外の型に基づいて特別な処理をするには <code>instanceof</code> 演算子を使用します:</p>
+
+<pre class="brush: js">try {
+  // ...
+} catch (e) {
+  if (e instanceof java.io.FileNotFound) {
+     // FileNotFound についての処理
+  } else {
+    throw e;
+  }
+}
+</pre>
+
+<p>JavaScript の例外についての詳細情報は<a href="/ja/docs/JavaScript/Guide/Statements#Exception_Handling_Statements" title="ja/docs/JavaScript/Guide/Statements#Exception Handling Statements">例外処理文</a>を参照してください。</p>
+
+<h2 id="Java_to_JavaScript_Communication" name="Java_to_JavaScript_Communication">Java から JavaScript への通信</h2>
+
+<p>Java で JavaScript のオブジェクトを使用したい場合は、その Java ファイルに <code>netscape.javascript</code> パッケージをインポートしなければなりません。このパッケージは次のクラスを定義しています:</p>
+
+<ul>
+ <li><code><a href="/ja/docs/JavaScript/Reference/LiveConnect/JSObject" title="ja/docs/JavaScript/Reference/LiveConnect/JSObject">netscape.javascript.JSObject</a></code> : Java のコードから JavaScript のメソッドやプロパティにアクセスできるようにします。</li>
+ <li><code><a href="/ja/docs/JavaScript/Reference/LiveConnect/JSException" title="ja/docs/JavaScript/Reference/LiveConnect/JSException">netscape.javascript.JSException</a></code> : Java のコードで JavaScript のエラーを処理できるようにします。</li>
+</ul>
+
+<p>これらのクラスの詳細は <a href="/ja/docs/JavaScript/Reference" title="ja/docs/JavaScript/Reference">JavaScript リファレンス</a>をご覧ください。</p>
+
+<h3 id="Locating_the_LiveConnect_classes" name="Locating_the_LiveConnect_classes">LiveConnect クラスの場所の特定</h3>
+
+<p>古いバージョンの Netscape ブラウザでは、これらのクラスがブラウザに同梱されていました。JavaScript 1.2 からは、これらのクラスは .jar ファイルに格納されています。それより古いバージョンの JavaScript では、これらのクラスは .zip ファイルに格納されています。例えば Windows NT 向けの Netscape Navigator 4 では、クラスは Navigator のディレクトリ直下の <code>Program\Java\Classes</code> ディレクトリ内の <code>java40.jar</code> ファイルに格納されています。</p>
+
+<p>より最近では、クラスは Sun の Java ランタイムに同梱されています。はじめはランタイムディストリビューションの "jre/lib" ディレクトリ内の "jaws.jar" ファイルに入っていましたが (JRE 1.3)、その後同じ場所の "plugin.jar" に移っています (JRE 1.4 以降)。</p>
+
+<h3 id="Using_the_LiveConnect_classes_with_the_JDK" name="Using_the_LiveConnect_classes_with_the_JDK">JDK での LiveConnect クラスの使用</h3>
+
+<p>LiveConnect クラスにアクセスするには、次のどちらかの方法で JDK コンパイラの <code>CLASSPATH</code> に .jar または .zip ファイルを配置します:</p>
+
+<ul>
+ <li><code>CLASSPATH</code> 環境変数を作成し、.jar または .zip ファイルのパスと名前を指定します。</li>
+ <li>コンパイル時に <code>-classpath</code> コマンドラインパラメータを用いて .jar または .zip ファイルの場所を指定する。</li>
+</ul>
+
+<p>Windows NT では、コントロールパネルのシステムアイコンをダブルクリックし、<code>CLASSPATH</code> という名前のユーザ環境変数を作成し、それに次のような値を設定することで環境変数を作成できます:</p>
+
+<pre class="eval">C:\Program Files\Java\jre1.4.1\lib\plugin.jar
+</pre>
+
+<p><code>CLASSPATH</code> についての詳細は Sun の JDK に関する資料をご覧ください。</p>
+
+<p><strong>注意:</strong> Java は強く型付けされた言語であり、JavaScript は弱く型付けされた言語であるため、LiveConnect を使用する際はもう一方の言語のために JavaScript ランタイムエンジンが引数の値を適当なデータ型に変換します。詳細は  をご覧ください。</p>
+
+<h3 id="Using_the_LiveConnect_Classes" name="Using_the_LiveConnect_Classes">LiveConnect クラスの使用</h3>
+
+<p>すべての JavaScript オブジェクトは、Java コード内では <code>netscape.javascript.JSObject</code> のインスタンスとして現れます。Java コード内でメソッドを呼び出すときに、その引数として JavaScriptのオブジェクトを渡すことができます。そうするためには、そのメソッドの対応する仮パラメータを <code>JSObject</code> 型で定義しなければなりません。</p>
+
+<p>さらに、Java コード内で JavaScript のオブジェクトを使用するたびに、<code>netscape.javascript.JSException</code> 型の例外を処理する <code>try...catch</code> 文の内側で、その JavaScript オブジェクトを呼び出すようにしてください。こうすることで <code>JSException</code> 型の例外として Java で現れる、JavaScript コードの実行におけるエラーを Java コードで処理できるようになります。</p>
+
+<h4 id="Accessing_JavaScript_with_JSObject" name="Accessing_JavaScript_with_JSObject">JSObject を用いた JavaScript へのアクセス</h4>
+
+<p>例えば、<code>JavaDog</code> という Java のクラスを使用するとします。次のコードで示すように、<code>JavaDog</code> コンストラクタは JavaScript のオブジェクトである <code>jsDog</code> を引数としてとります。このオブジェクトは <code>JSObject</code> 型として定義されています:</p>
+
+<pre class="brush: java">import netscape.javascript.*;
+
+public class JavaDog{
+    public String dogBreed;
+    public String dogColor;
+    public String dogSex;
+
+    // クラスコンストラクタの定義
+    public JavaDog(JSObject jsDog){
+        // ここで try...catch を使用して JSExceptions を処理できるようにする
+        this.dogBreed = (String)jsDog.getMember("breed");
+        this.dogColor = (String)jsDog.getMember("color");
+        this.dogSex = (String)jsDog.getMember("sex");
+    }
+}
+</pre>
+
+<p><code>JSObject</code> の <code>getMember</code> メソッドは、JavaScript のオブジェクトのプロパティにアクセスするために使用するものです。この例では JavaScript のプロパティである <code>jsDog.breed</code> の値を Java のデータメンバである <code>JavaDog.dogBreed</code> に代入するために、<code>getMember</code> を使用しています。</p>
+
+<p><strong>注意:</strong> より現実的な例では <code>try...catch</code> 文の内側で <code>getMember</code> を呼び出し、<code>JSException</code> 型のエラーを処理できるようにします。詳細は、Java での JavaScript の例外処理を参照してください。</p>
+
+<p><code>getMember</code> の動作をさらに知るために、JavaScript の <code>Dog</code> オブジェクトを作成し、その定義を見てみます:</p>
+
+<pre class="brush: js">function Dog(breed,color,sex){
+   this.breed = breed;
+   this.color = color;
+   this.sex = sex;
+}
+</pre>
+
+<p><code>Dog</code> の JavaScript のインスタンスである <code>gabby</code> は、次のようにして作ることができます:</p>
+
+<pre class="brush: js">var gabby = new Dog("lab", "chocolate", "female");
+</pre>
+
+<p><code>gabby.color</code> を評価すると、それが "chocolate" という値を持っていることがわかります。ここで次のように <code>gabby</code> オブジェクトをコンストラクタに渡し、JavaScript コードで <code>JavaDog</code> のインスタンスを作成することにします:</p>
+
+<pre class="brush: js">var javaDog = new Packages.JavaDog(gabby);
+</pre>
+
+<p><code>javaDog.dogColor</code> を評価すると、それも "chocolate" という値を持っていることがわかります。これは Java のコンストラクタ内の <code>getMember</code> メソッドが、<code>gabby.color</code> の値を <code>dogColor</code> に代入するからです。</p>
+
+<h4 id="Handling_JavaScript_Exceptions_in_Java" name="Handling_JavaScript_Exceptions_in_Java">Java での JavaScript の例外処理</h4>
+
+<p>実行時に Java からの JavaScript コードの呼び出しに失敗すると、例外が投げられます。Java から JavaScript コードを呼び出すときに、<code>try...catch</code> 文でこの例外を受け取ることができます。JavaScript の例外は、<code>netscape.javascript.JSException</code> のインスタンスとして Java コードから扱えます。</p>
+
+<p><code>JSException</code> は JavaScript が投げるあらゆる種類の例外に対応する、Java のラッパです。<code>JSObject</code> のインスタンスが JavaScript のオブジェクトのラッパであるのと同じようなものです。Java で JavaScript コードを評価するときは <code>JSException</code> を使用してください。</p>
+
+<p>Java で JavaScript コードを評価する際、次の状況でランタイムエラーが発生します:</p>
+
+<ul>
+ <li>JavaScript コンパイルエラーまたは 実行時に生じた 他のエラーにより、JavaScript コードが評価されません。JavaScript インタプリタは、<code>JSException</code> のインスタンスに変換されるエラーメッセージを生成します。</li>
+ <li>Java は正常に JavaScript のコードを評価しましたが、処理方法が定かでない <code>throw</code> 文をJavaScript コードが実行します。JavaScript は、<code>JSException</code> のインスタンスとしてラップされる例外を投げます。Java でこの例外のラップを解くには、<code>JSException</code> の <code>getWrappedException</code> メソッドを使用します。</li>
+</ul>
+
+<p>例えば、Java のオブジェクトである <code>jsCode</code> が自身に渡される文字列 <code>eTest</code> を評価するとします。次のようなエラー処理を実行することで、評価が原因で発生するどちらの種類のランタイムエラーにも対応できます:</p>
+
+<pre class="brush: java">import netscape.javascript.JSObject;
+import netscape.javascript.JSException;
+
+public class eTest {
+    public static Object doit(JSObject obj, String jsCode) {
+        try {
+            obj.eval(jsCode);
+        } catch (JSException e) {
+            if (e.getWrappedException() == null)
+                return e;
+            return e.getWrappedException();
+        }
+        return null;
+    }
+}
+</pre>
+
+<p>この例では、渡された文字列 <code>jsCode</code> を <code>try</code> ブロック内のコードが評価しようとします。文字列 "<code>myFunction()</code>" を <code>jsCode</code> の値として渡すとします。<code>myFunction</code> が JavaScript の関数として定義されていない場合、JavaScript インタプリタは <code>jsCode</code> を評価できません。インタプリタはエラーメッセージを生成し、Java のハンドラがそのメッセージを受け取り、<code>doit</code> メソッドは <code>netscape.javascript.JSException</code> のインスタンスを返します。</p>
+
+<p>しかし、次のように <code>myFunction</code> が JavaScript で定義されているとします:</p>
+
+<pre class="brush: js">function myFunction() {
+   try {
+      if (theCondition == true) {
+         return "Everything's ok";
+      } else {
+         throw "JavaScript error occurred";
+      }
+   } catch (e) {
+      if (canHandle == true) {
+         handleIt();
+      } else {
+         throw e;
+      }
+   }
+}
+</pre>
+
+<p><code>theCondition</code> が false であれば、関数は例外を投げます。その例外は JavaScript コードで受け取られ、さらに <code>canHandle</code> が true の場合に JavaScript はそれを処理します。<code>canHandle</code> false がならばその例外が再び投げられ、Java のハンドラがそれを受け取り、 <code>doit</code> メソッドが次の Java の文字列を返します:</p>
+
+<pre>JavaScript error occurred
+</pre>
+
+<p>JavaScript の例外についての詳細情報は<a href="/ja/docs/JavaScript/Guide/Statements#Exception_Handling_Statements" title="ja/docs/JavaScript/Guide/Statements#Exception Handling Statements">例外処理文</a>を参照してください。</p>
+
+<h4 id="Backward_Compatibility" name="Backward_Compatibility">後方互換性</h4>
+
+<p>JavaScript 1.3 以前のバージョンでは、<code>JSException</code> クラスには省略可能な文字列引数をとる 3 つの public タイプのコンストラクタがありました。この文字列引数は、詳細なメッセージやその例外に対する他の情報を指定するものです。<code>getWrappedException</code> メソッドは使用できませんでした。</p>
+
+<p>次のような <code>try...catch</code> 文を使用することで、JavaScript 1.3 以前のバージョンで LiveConnect の例外を処理できます:</p>
+
+<pre class="brush: js">try {
+   global.eval("foo.bar = 999;");
+} catch (Exception e) {
+   if (e instanceof JSException) {
+      jsCodeFailed();
+   } else {
+      otherCodeFailed();
+   }
+}
+</pre>
+
+<p>この例では <code>foo</code> が定義されていないと <code>eval</code> 文が失敗します。<code>try</code> ブロックの <code>eval</code> 文が <code>JSException</code> を投げると、<code>catch</code> ブロックが <code>jsCodeFailed</code> メソッドを実行します。<code>try</code> ブロックがそれ以外のエラーを投げると、<code>otherCodeFailed</code> メソッドが実行されます。</p>
+
+<h2 id="Data_Type_Conversions" name="Data_Type_Conversions">データ型変換</h2>
+
+<p>Java は強く型付けされた言語であり、JavaScript は弱く型付けされた言語であるため、LiveConnect を使用する際はもう一方の言語のために、JavaScript ランタイムエンジンが引数の値を適切なデータ型に変換します。この変換について以下のセクションで説明します:</p>
+
+<ul>
+ <li>JavaScript から Java への変換</li>
+ <li>Java からJavaScript への変換</li>
+</ul>
+
+<h3 id="JavaScript_to_Java_Conversions" name="JavaScript_to_Java_Conversions">JavaScript から Java への変換</h3>
+
+<p>JavaScript から Java のメソッドを呼び出してパラメータを渡す際、渡すパラメータのデータ型は以下のセクションで説明するルールによって変換されます:</p>
+
+<ul>
+ <li>数値</li>
+ <li>真偽値</li>
+ <li>文字列値</li>
+ <li>undefined 値</li>
+ <li>null 値</li>
+ <li>JavaArray および JavaObject オブジェクト</li>
+ <li>JavaClass オブジェクト</li>
+ <li>その他の JavaScript オブジェクト</li>
+</ul>
+
+<p><code>netscape.javascript.JSObject</code> メソッドの戻り値は常に <code>java.lang.Object</code> のインスタンスに変換されます。このような戻り値の変換ルールもここで説明します。</p>
+
+<p>例えば <code>JSObject.eval</code> が JavaScript の数値を返すのであれば、この数値を <code>java.lang.Object</code> のインスタンスに変換するルールは数値に記載されています。</p>
+
+<h4 id="Number_Values" name="Number_Values">数値</h4>
+
+<p>Java のメソッドに JavaScript の数値型をパラメータとして渡すと、Java は次の表で示すルールに従ってその値を変換します:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Java のパラメータ型</th>
+   <th scope="col">変換ルール</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>double</td>
+   <td>
+    <ul>
+     <li>そのままの値が、丸められたり絶対値や符号が損なわれることなく Java に渡されます。</li>
+     <li><code>NaN</code> は <code>NaN</code> に変換されます。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <td>java.lang.Double<br>
+    java.lang.Object</td>
+   <td><code>java.lang.Double</code> の新しいインスタンスが作成され、そのままの値が、丸められたり絶対値や符号が損なわれることなく Java に渡されます。</td>
+  </tr>
+  <tr>
+   <td>float</td>
+   <td>
+    <ul>
+     <li>値は float 精度に丸められます。</li>
+     <li>大きすぎまたは小さすぎて表現できない値は、正の無限大または負の無限大に丸められます。</li>
+     <li><code>NaN</code> は <code>NaN</code> に変換されます。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <td>byte<br>
+    char<br>
+    int<br>
+    long<br>
+    short</td>
+   <td>
+    <ul>
+     <li>値は負の無限大方向に丸められます。</li>
+     <li>大きすぎまたは小さすぎて表現できない値は、ランタイムエラーになります。</li>
+     <li><code>NaN</code> は変換されずにランタイムエラーになります。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <td><code>java.lang.String</code></td>
+   <td>値は文字列に変換されます。例えば:
+    <ul>
+     <li>237 は "237" になります。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <td>boolean</td>
+   <td>
+    <ul>
+     <li>0 および <code>NaN</code> は false に変換されます。</li>
+     <li>その他の値は true に変換されます。</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p><code>java.lang.String</code> のインスタンスをパラメータに想定した Java のメソッドに JavaScript の数値をパラメータとして渡すと、その数値は文字列に変換されます。<code>equals()</code> メソッドを使用すると、この変換結果と他の文字列を比較できます。</p>
+
+<h4 id="Boolean_Values" name="Boolean_Values">真偽値</h4>
+
+<p>Java のメソッドに JavaScript の真偽値型をパラメータとして渡すと、Java は次の表で示すルールに従ってその値を変換します:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Java のパラメータ型</th>
+   <th scope="col">変換ルール</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>boolean</td>
+   <td>すべての値は、Java で対応するものに直接変換されます。</td>
+  </tr>
+  <tr>
+   <td><code>java.lang.Boolean</code><br>
+    <code>java.lang.Object</code></td>
+   <td><code>java.lang.Boolean</code> の新しいインスタンスが作成されます。同一のプリミティブ値に対して 1 つのインスタンスではなく、各パラメータについて新しいインスタンスが作成されます。</td>
+  </tr>
+  <tr>
+   <td><code>java.lang.String</code></td>
+   <td>値は文字列に変換されます。例えば:
+    <ul>
+     <li>true は "true" になります。</li>
+     <li>false は "false" になります。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <td>byte<br>
+    char<br>
+    double<br>
+    float<br>
+    int<br>
+    long<br>
+    short</td>
+   <td>
+    <ul>
+     <li>true は 1 になります。</li>
+     <li>false は 0 になります。</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p><code>java.lang.String</code> のインスタンスをパラメータに想定した Java のメソッドに JavaScript の真偽値をパラメータとして渡すと、その真偽値は文字列に変換されます。== 演算子を使用すると、この変換結果と他の文字列を比較できます。</p>
+
+<h4 id="String_Values" name="String_Values">文字列値</h4>
+
+<p>Java のメソッドに JavaScript の文字列型をパラメータとして渡すと、Java は次の表で示すルールに従ってその値を変換します:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Java のパラメータ型</th>
+   <th scope="col">変換ルール</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>java.lang.String</code><br>
+    <code>java.lang.Object</code></td>
+   <td>JavaScript 1.4:
+    <ul>
+     <li>JavaScript の文字列は、Unicode 値で <code>java.lang.String</code> のインスタンスに変換されます。</li>
+    </ul>
+
+    <p>JavaScript 1.3 以前:</p>
+
+    <ul>
+     <li>JavaScript の文字列は、ASCII 値で <code>java.lang.String</code> のインスタンスに変換されます。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <td>byte<br>
+    double<br>
+    float<br>
+    int<br>
+    long<br>
+    short</td>
+   <td>すべての値は、ECMA-262 に記載に従って数値に変換されます。JavaScript の文字列値は ECMA-262 に記載されたルールに従って数値に変換されます。</td>
+  </tr>
+  <tr>
+   <td>char</td>
+   <td>JavaScript 1.4:
+    <ul>
+     <li>1 文字の文字列は、Unicode 文字に変換されます。</li>
+     <li>他のすべての値は数値に変換されます。</li>
+    </ul>
+
+    <p>JavaScript 1.3 以前:</p>
+
+    <ul>
+     <li>すべての値が数値に変換されます。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <td>boolean</td>
+   <td>
+    <ul>
+     <li>空文字列は false になります。</li>
+     <li>他のすべての値は true になります。</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Undefined_Values" name="Undefined_Values">undefined 値</h4>
+
+<p>Java のメソッドに JavaScript の undefined 値をパラメータとして渡すと、Java は次の表で示すルールに従ってその値を変換します:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Java のパラメータ型</th>
+   <th scope="col">変換ルール</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>java.lang.String</code><br>
+    <code>java.lang.Object</code></td>
+   <td>値は java.lang.String のインスタンスに変換され、インスタンスの値は文字列 "undefined" になります。</td>
+  </tr>
+  <tr>
+   <td>boolean</td>
+   <td>値は false になります。</td>
+  </tr>
+  <tr>
+   <td>double<br>
+    float</td>
+   <td>値は <code>NaN</code> になります。</td>
+  </tr>
+  <tr>
+   <td>byte<br>
+    char<br>
+    int<br>
+    long<br>
+    short</td>
+   <td>値は 0 になります。</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>undefined 値の変換は JavaScript 1.3 以降でのみ可能です。それより古いバージョンでは、undefined 値がサポートされていません。</p>
+
+<p><code>java.lang.String</code> のインスタンスをパラメータに想定した Java のメソッドに JavaScript の undefined 値をパラメータとして渡すと、その undefined 値は文字列に変換されます。== 演算子を使用すると、この変換結果と他の文字列を比較できます。</p>
+
+<h4 id="Null_Values" name="Null_Values">null 値</h4>
+
+<p>Java のメソッドに JavaScript の null 値をパラメータとして渡すと、Java は次の表で示すルールに従ってその値を変換します:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Java のパラメータ型</th>
+   <th scope="col">変換ルール</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>あらゆるクラス<br>
+    あらゆるインタフェースの種類</td>
+   <td>値は null になります。</td>
+  </tr>
+  <tr>
+   <td>byte<br>
+    char<br>
+    double<br>
+    float<br>
+    int<br>
+    long<br>
+    short</td>
+   <td>値は 0 になります。</td>
+  </tr>
+  <tr>
+   <td>boolean</td>
+   <td>値は false になります。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="JavaArray_and_JavaObject_objects" name="JavaArray_and_JavaObject_objects">JavaArray および JavaObject オブジェクト</h4>
+
+<p>ほとんどの場合、Java のメソッドに JavaScript の <code>JavaArray</code> または <code>JavaObject</code> オブジェクトをパラメータとして渡すと、Java は単にそのオブジェクトのラップを解きます。そうでない場合は、Java は次の表で示すルールに従ってそのオブジェクトを別のデータ型に変換します:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Java のパラメータ型</th>
+   <th scope="col">変換ルール</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>ラップが解かれたオブジェクトと代入互換性のある、あらゆるインタフェースまたはクラス</td>
+   <td>オブジェクトのラップが解かれます。</td>
+  </tr>
+  <tr>
+   <td><code>java.lang.String</code></td>
+   <td>オブジェクトのラップが解かれ、ラップが解かれた Java オブジェクトの <code>toString</code> メソッドが呼び出され、その結果が <code>java.lang.String</code> の新しいインスタンスとして返されます。</td>
+  </tr>
+  <tr>
+   <td>byte<br>
+    char<br>
+    double<br>
+    float<br>
+    int<br>
+    long<br>
+    short</td>
+   <td>オブジェクトのラップが解かれ、次の状況のどちらかが起こります:
+    <ul>
+     <li>ラップが解かれた Java のオブジェクトに <code>doubleValue</code> メソッドがあれば、<code>JavaArray</code> または <code>JavaObject</code> はこのメソッドが返す値に変換されます。</li>
+     <li>ラップが解かれた Java オブジェクトに <code>doubleValue</code> メソッドがなければ、エラーが発生します。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <td>boolean</td>
+   <td>JavaScript 1.3 以降ではオブジェクトのラップが解かれ、次の状況のどちらかが起こります:
+    <ul>
+     <li>オブジェクトが null ならば、false に変換されます。</li>
+     <li>オブジェクトがそれ以外の値ならば、true に変換されます。</li>
+    </ul>
+
+    <p>JavaScript 1.2 以前ではオブジェクトのラップが解かれ、次の状況のどちらかが起こります:</p>
+
+    <ul>
+     <li>ラップが解かれたオブジェクトに <code>booleanValue</code> メソッドがあれば、ソースオブジェクトは戻り値のために変換されます。</li>
+     <li>オブジェクトに <code>booleanValue</code> がなければ、変換に失敗します。</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>ラップが解かれたオブジェクトが Java のパラメータ型のインスタンスであれば、インタフェースまたはクラスが、ラップが解かれたオブジェクトと代入互換性があるということです。つまり、次の文は必ず true を返します:</p>
+
+<pre class="brush: js">unwrappedObject instanceof parameterType;
+</pre>
+
+<h4 id="JavaClass_objects" name="JavaClass_objects">JavaClass オブジェクト</h4>
+
+<p>Java のメソッドに JavaScript の <code>JavaClass</code> オブジェクトをパラメータとして渡すと、Java は次の表で示すルールに従ってその値を変換します:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Java のパラメータ型</th>
+   <th scope="col">変換ルール</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>java.lang.Class</code></td>
+   <td>オブジェクトのラップが解かれます。</td>
+  </tr>
+  <tr>
+   <td><code>netscape.javascript.JSObject</code><br>
+    <code>java.lang.Object</code></td>
+   <td><code>JavaClass</code> オブジェクトが <code>netscape.javascript.JSObject</code> の新しいインスタンス内にラップされます。</td>
+  </tr>
+  <tr>
+   <td><code>java.lang.String</code></td>
+   <td>オブジェクトのラップが解かれ、ラップが解かれた Java オブジェクトの <code>toString</code> メソッドが呼び出され、その結果が <code>java.lang.String</code> の新しいインスタンスとして返されます。</td>
+  </tr>
+  <tr>
+   <td>boolean</td>
+   <td>JavaScript 1.3 以降ではオブジェクトのラップが解かれ、次の状況のどちらかが起こります:
+    <ul>
+     <li>オブジェクトが null ならば、false に変換されます。</li>
+     <li>オブジェクトがそれ以外の値ならば、true に変換されます。</li>
+    </ul>
+
+    <p>JavaScript 1.2 以前ではオブジェクトのラップが解かれ、次の状況のどちらかが起こります:</p>
+
+    <ul>
+     <li>ラップが解かれたオブジェクトに <code>booleanValue</code> メソッドがあれば、ソースオブジェクトは戻り値のために変換されます。</li>
+     <li>オブジェクトに <code>booleanValue</code> がなければ、変換に失敗します。</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Other_JavaScript_objects" name="Other_JavaScript_objects">その他の JavaScript のオブジェクト</h4>
+
+<p>Java のメソッドに JavaScript のその他のオブジェクトをパラメータとして渡すと、Java は次の表で示すルールに従ってその値を変換します:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Java のパラメータ型</th>
+   <th scope="col">変換ルール</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>netscape.javascript.JSObject</code><br>
+    <code>java.lang.Object</code></td>
+   <td>オブジェクトは <code>netscape.javascript.JSObject</code> の新しいインスタンス内にラップされます。</td>
+  </tr>
+  <tr>
+   <td><code>java.lang.String</code></td>
+   <td>オブジェクトのラップが解かれ、ラップが解かれたオブジェクトの <code>toString</code> メソッドが呼び出され、その結果が <code>java.lang.String</code> の新しいインスタンスとして返されます。</td>
+  </tr>
+  <tr>
+   <td>byte<br>
+    char<br>
+    double<br>
+    float<br>
+    int<br>
+    long<br>
+    short</td>
+   <td>オブジェクトは、ECMA-262 に記載された <code>ToPrimitive</code> 演算子のロジックを使用して値に変換されます。この演算子で使用される <em>PreferredType</em> ヒントは Number です。</td>
+  </tr>
+  <tr>
+   <td>boolean</td>
+   <td>JavaScript 1.3 以降ではオブジェクトのラップが解かれ、次の状況のどちらかが起こります:
+    <ul>
+     <li>オブジェクトが null ならば、false に変換されます。</li>
+     <li>オブジェクトがそれ以外の値ならば、true に変換されます。</li>
+    </ul>
+
+    <p>JavaScript 1.2 以前ではオブジェクトのラップが解かれ、次の状況のどちらかが起こります:</p>
+
+    <ul>
+     <li>ラップが解かれたオブジェクトに <code>booleanValue</code> メソッドがあれば、ソースオブジェクトは戻り値のために変換されます。</li>
+     <li>オブジェクトに <code>booleanValue</code> がなければ、変換に失敗します。</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Java_to_JavaScript_Conversions" name="Java_to_JavaScript_Conversions">Java から JavaScript への変換</h3>
+
+<p>Java から JavaScript に渡された値は、次のように変換されます:</p>
+
+<ul>
+ <li>Java の byte、char、short、int、long、float および double は、JavaScript の数値に変換されます。</li>
+ <li>Java の boolean は、JavaScript の真偽値に変換されます。</li>
+ <li>クラス <code>netscape.javascript.JSObject</code> のオブジェクトは、元の JavaScript のオブジェクトに変換されます。</li>
+ <li>Java の配列は JavaScript の擬似的な Array オブジェクトに変換されます。このオブジェクトは JavaScript の <code>Array</code> オブジェクトと全く同じような挙動をとります。つまり、<code>arrayName[index]</code> (<code>index</code> は整数) という構文でそれにアクセスでき、その長さを <code>arrayName.length</code> で判断できます。</li>
+ <li>Java のそれ以外オブジェクトは、JavaScript のラッパに変換されます。このラッパを通じて Java のオブジェクトのメソッドやフィールドにアクセスできます:
+  <ul>
+   <li>このラッパから文字列への変換では、元のオブジェクトで <code>toString</code> メソッドが呼び出されます。</li>
+   <li>数値への変換では、可能であれば <code>doubleValue</code> メソッドが呼び出され、そうでなければ失敗します。</li>
+   <li>JavaScript 1.3 以降の真偽値への変換では、そのオブジェクトが null であれば false が、そうでなければ true を返します。</li>
+   <li>JavaScript 1.2 以前の真偽値への変換では、可能であれば <code>booleanValue</code> メソッドが呼び出され、そうでなければ失敗します。</li>
+  </ul>
+ </li>
+</ul>
+
+<p>java.lang.Double および java.lang.Integer のインスタンスは、JavaScript の数値ではなく JavaScript のオブジェクトに変換されることに注意してください。同様に java.lang.String のインスタンスも、JavaScript の文字列ではなく JavaScript のオブジェクトに変換されます。</p>
+
+<p>Java の <code>String</code> オブジェクトも、JavaScript のラッパに相当します。JavaScript の文字列を必要とする JavaScript のメソッドを、このラッパを渡して呼び出すとエラーになります。そうではなく、次のようにラッパに空文字列を付加することで、ラッパを JavaScript の文字列に変換してください:</p>
+
+<pre class="brush: js">var JavaString = JavaObj.methodThatReturnsAString();
+var JavaScriptString = JavaString + "";</pre>

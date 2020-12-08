@@ -1,0 +1,97 @@
+---
+title: NPClass
+slug: NPClass
+translation_of: Archive/Plugins/Reference/NPClass
+---
+<p><span class="breadcrumbs np-plugin-scripting_breadcrumbs">« <a href="https://developer.mozilla.org/en-US/docs/Gecko_Plugin_API_Reference">Gecko Plugin API Reference</a> « <a href="https://developer.mozilla.org/en-US/docs/Gecko_Plugin_API_Reference/Scripting_plugins">Scripting plugins</a> </span></p>
+
+<h3 id="Summary" name="Summary">Summary</h3>
+
+<p><code>NPClass 是一个包含着一组函数指针的结构体。这些函数指针所指向的函数是组成NPClass某个实例（例如一个</code><a href="en/NPObject" style="text-decoration: underline; font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;">NPObject</a><code style="font-size: 14px;">）的所有行为</code><span style="line-height: 1.5;"> 。</span></p>
+
+<h3 id="Syntax" name="Syntax">Syntax</h3>
+
+<pre>struct NPClass
+{
+  uint32_t structVersion;
+  NPAllocateFunctionPtr allocate;
+  NPDeallocateFunctionPtr deallocate;
+  NPInvalidateFunctionPtr invalidate;
+  NPHasMethodFunctionPtr hasMethod;
+  NPInvokeFunctionPtr invoke;
+  NPInvokeDefaultFunctionPtr invokeDefault;
+  NPHasPropertyFunctionPtr hasProperty;
+  NPGetPropertyFunctionPtr getProperty;
+  NPSetPropertyFunctionPtr setProperty;
+  NPRemovePropertyFunctionPtr removeProperty;
+  NPEnumerationFunctionPtr enumerate;
+  NPConstructFunctionPtr construct;
+};
+</pre>
+
+<div class="warning"><strong><font color="#f0ffff">警告</font><span style="color: #f0ffff;">：不要直接调用这些函数，你应该使用这些 </span></strong><a href="en/NPObject#Functions">API functions</a>.</div>
+
+<h3 id="Fields" name="Fields">Fields</h3>
+
+<dl>
+ <dt><code>structVersion</code></dt>
+ <dd>结构体的版本号。它的值是NP_STRUCT_VERSION。在Mozilla 1.8.*中，NP_STRUCT_VERSION的值是1， 从Mozilla 1.9a1开始变成2， 从Firefox 3.0b1开始是3。</dd>
+ <dt><code>allocate</code></dt>
+ <dd>返回一个新分配的 <code><a href="en/NPObject">NPObject</a>对象的指针。</code> 如果该指针不为空，则将会被<code><a href="en/NPN_CreateObject">NPN_CreateObject()</a>函数调用</code>, 否则浏览器会调用 <code>malloc()。</code> 这个函数应该分配并且返回能保存创建出来的NPObject对象的存储区域。</dd>
+ <dt><code>deallocate</code></dt>
+ <dd>当一个对象的引用计数为零的时候被<code><a href="en/NPN_ReleaseObject">NPN_ReleaseObject()</a>调用。如果这个指针为空，那浏览器</code><span style="font-family: courier new,andale mono,monospace; font-weight: inherit; line-height: normal;">就直接调free()函数。</span></dd>
+ <dt><code>invalidate</code></dt>
+ <dd>当属于一个插件实例的活跃对象（live objects）被销毁时被调用。这个函数通常在 <code>deallocate</code> 函数或者<code>free()之前被调用。</code> 任何对失效对象(invalidated object)的操作都会导致未定义的行为。</dd>
+ <dt><code>hasMethod</code></dt>
+ <dd><code><font face="Open Sans, sans-serif"><span style="line-height: 21px;">被</span></font><a href="en/NPN_HasMethod">NPN_HasMethod()</a>调用，用来</code><span style="line-height: 1.5;">判断在给定的NPObject中是否存在某个特定的方法。返回</span><code style="font-size: 14px;">true</code><span style="line-height: 1.5;"> 如果该方法存在，否则返回</span><code style="font-size: 14px;">false</code><span style="line-height: 1.5;">.</span></dd>
+ <dt><code>invoke</code></dt>
+ <dd>被<code><a href="en/NPN_Invoke">NPN_Invoke()</a>调用，来调用给定NPObject对象中的指定方法。<font face="Open Sans, sans-serif"><span style="line-height: 21px;">如果调用成功，返回</span></font></code><code>true，如果任何错误产生则返回</code><code>false。</code></dd>
+ <dt><code>invokeDefault</code></dt>
+ <dd><code><font face="Open Sans, sans-serif"><span style="line-height: 21px;">被</span></font><a href="en/NPN_InvokeDefault">NPN_InvokeDefault()</a></code>调用，来调用给定NPObject对象中的默认方法(该对象有默认方法的话)。<code style="font-size: 14px;"><font face="Open Sans, sans-serif"><span style="line-height: 21px;">如果调用成功，返回</span></font></code><code style="font-size: 14px;">true，如果任何错误产生则返回</code><code style="font-size: 14px;">false。</code></dd>
+ <dt><code>hasProperty</code></dt>
+ <dd>被<code><a href="en/NPN_HasProperty">NPN_HasProperty()</a>调用，来检查给定NPObject对象中是否存在某个属性。返回</code><code>true如果存在该属性，否则返回</code><code>false。</code></dd>
+ <dt><code>getProperty</code></dt>
+ <dd>被<code><a href="en/NPN_GetProperty">NPN_GetProperty()</a>调用，来获取</code><span style="font-family: courier new,andale mono,monospace; line-height: normal;">给定NPObject对象中的某个属性。</span>返回<code>true如果属性获取成功，否则返回</code><code>false。</code></dd>
+ <dt><code>setProperty</code></dt>
+ <dd><span style="line-height: 1.5;">被</span><code style="font-size: 14px;"><a href="en/NPN_GetProperty">NPN_SetProperty()</a>调用，来设置</code><span style="font-family: courier new,andale mono,monospace; line-height: normal;">给定NPObject对象中的某个属性。</span><span style="line-height: 1.5;">返回</span><code style="font-size: 14px;">true如果属性设置成功，否则返回</code><code style="font-size: 14px;">false。</code></dd>
+ <dt><code>removeProperty</code></dt>
+ <dd><span style="line-height: 1.5;">被</span><code style="font-size: 14px;"><a href="en/NPN_GetProperty">NPN_RemoveProperty()</a>调用，来删除</code><span style="font-family: courier new,andale mono,monospace; line-height: normal;">给定NPObject对象中的某个属性。</span><span style="line-height: 1.5;">返回</span><code style="font-size: 14px;">true如果属性删除成功，否则返回</code><code style="font-size: 14px;">false。</code></dd>
+ <dt><code>enumerate</code></dt>
+ <dd>被<code><a href="/zh-CN/docs/NPN_Enumerate">NPN_Enumerate</a></code>调用。只有当<code>structVersion<font face="Open Sans, sans-serif"><span style="line-height: 21px;">的值大于等于</span></font></code><code>NP_CLASS_STRUCT_VERSION_ENUM</code> (2)时，该指针才有效。</dd>
+ <dt><code>construct</code></dt>
+ <dd>被<code><a href="/zh-CN/docs/NPN_Construct">NPN_Construct</a></code>调用。只有当<code style="font-size: 14px;">structVersion<font face="Open Sans, sans-serif"><span style="line-height: 21px;">的值大于等于</span></font></code><code>NP_CLASS_STRUCT_VERSION_CTOR</code> (3)<span style="line-height: 1.5;">，该指针才有效。</span></dd>
+</dl>
+
+<h3 id="Function_pointer_syntax" name="Function_pointer_syntax">Function pointer syntax</h3>
+
+<pre>typedef NPObject *(*NPAllocateFunctionPtr)(NPP npp, NPClass *aClass);
+typedef void (*NPDeallocateFunctionPtr)(NPObject *npobj);
+typedef void (*NPInvalidateFunctionPtr)(NPObject *npobj);
+typedef bool (*NPHasMethodFunctionPtr)(NPObject *npobj, NPIdentifier name);
+typedef bool (*NPInvokeFunctionPtr)(NPObject *npobj, NPIdentifier name,
+                                    const NPVariant *args, uint32_t argCount,
+                                    NPVariant *result);
+typedef bool (*NPInvokeDefaultFunctionPtr)(NPObject *npobj,
+                                           const NPVariant *args,
+                                           uint32_t argCount,
+                                           NPVariant *result);
+typedef bool (*NPHasPropertyFunctionPtr)(NPObject *npobj, NPIdentifier name);
+typedef bool (*NPGetPropertyFunctionPtr)(NPObject *npobj, NPIdentifier name,
+                                         NPVariant *result);
+typedef bool (*NPSetPropertyFunctionPtr)(NPObject *npobj, NPIdentifier name,
+                                         const NPVariant *value);
+typedef bool (*NPRemovePropertyFunctionPtr)(NPObject *npobj,
+                                            NPIdentifier name);
+typedef bool (*NPEnumerationFunctionPtr)(NPObject *npobj, NPIdentifier **value,
+                                         uint32_t *count);
+typedef bool (*NPConstructFunctionPtr)(NPObject *npobj,
+                                       const NPVariant *args,
+                                       uint32_t argCount,
+                                       NPVariant *result);
+</pre>
+
+<h3 id="See_also" name="See_also">See also</h3>
+
+<ul>
+ <li><code><a href="en/NPObject">NPObject</a></code></li>
+</ul>

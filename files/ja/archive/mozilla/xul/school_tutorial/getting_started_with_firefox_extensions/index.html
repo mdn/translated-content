@@ -1,0 +1,101 @@
+---
+title: Getting Started with Firefox Extensions
+slug: Archive/Mozilla/XUL/School_tutorial/Getting_Started_with_Firefox_Extensions
+tags:
+  - Extension
+translation_of: >-
+  Archive/Add-ons/Overlay_Extensions/XUL_School/Getting_Started_with_Firefox_Extensions
+---
+<div><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/School_tutorial/Introduction" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/School_tutorial/The_Essentials_of_an_Extension">次のページ  »</a></p>
+</div></div>
+
+<h2 id="What's_a_Firefox_Extension.3F" name="What's_a_Firefox_Extension.3F">拡張機能とは何か？</h2>
+
+<blockquote>
+<p>拡張機能 (Extensions) は、Firefox や Thunderbird, SeaMonkey などの Mozilla アプリケーションに新しい機能を付け加える小さなアドオンです。ツールバーボタンから全く新しい機能まで何でも付け加えることができます。ダウンロードのサイズが小さく、追加の機能を必要としているユーザに対して、その個々の必要性にあった機能を提供できます。</p>
+</blockquote>
+
+<p>これは、<a href="/ja/docs/Extensions" title="Extensions">拡張機能のページ</a>からの引用です。</p>
+
+<p>引用した文にも書かれているように、拡張機能は、Mozilla アプリケーションに新しい何かを追加する小さなアプリケーションです。このチュートリアルは Firefox 用の拡張機能に焦点を当てていますが、同じ (またはよく似た) 原理を Thunderbird や Seamonkey など他のアプリケーションの拡張機能を作成するときにも適用できます。</p>
+
+<p><em>拡張機能</em>と<em>アドオン</em>の定義の違いにも注意する必要があるでしょう。すべての拡張機能はアドオンですが、アドオンにはテーマやプラグイン、言語パックも含まれます。このチュートリアルは拡張機能開発について書かれていますが、テーマや言語パックもよく似た方法で開発されています。プラグインについては、これらと完全に異なるため、このチュートリアルでは扱いません。プラグインとその開発については、<a href="/ja/docs/Plugins" title="Plugins">プラグインのページ</a>をお読みください。</p>
+
+<p>Firefox は、とてもリッチで柔軟性に富んだアーキテクチャを提供しています。拡張機能開発者が機能を追加したりユーザエクスペリエンスを改善したり、ブラウザの機能を完全に置き換えたり削除したりできます。<a class="link-https" href="https://addons.mozilla.org" title="https://addons.mozilla.org/">Mozilla Add-ons</a> リポジトリ (AMO) には、莫大な数の様々な機能を持った拡張機能があります: コンテンツフィルタリング (<a class="link-https" href="https://addons.mozilla.org/ja/firefox/addon/1865" title="https://addons.mozilla.org/ja/firefox/addon/1865">AdBlock Plus</a>, <a class="link-https" href="https://addons.mozilla.org/ja/firefox/addon/722" title="https://addons.mozilla.org/ja/firefox/addon/722">NoScript</a>)、ウェブアプリケーションとの相互連携 (<a class="link-https" href="https://addons.mozilla.org/ja/firefox/addon/3615" title="https://addons.mozilla.org/ja/firefox/addon/3615">Delicious Bookmarks</a>, <a class="link-https" href="https://addons.mozilla.org/ja/firefox/addon/5202" title="https://addons.mozilla.org/ja/firefox/addon/5202">eBay Sidebar</a>)、ウェブ開発 (<a class="link-https" href="https://addons.mozilla.org/ja/firefox/addon/6622" title="https://addons.mozilla.org/ja/firefox/addon/6622">DOM Inspector</a>, <a class="link-https" href="https://addons.mozilla.org/ja/firefox/addon/1843" title="https://addons.mozilla.org/ja/firefox/addon/1843">Firebug</a>)、子供を保護するもの (<a class="link-https" href="https://addons.mozilla.org/ja/firefox/addon/5881" title="https://addons.mozilla.org/ja/firefox/addon/5881">Glubble For Families</a>) まであります。これらは上級者向けの複雑な拡張機能です。ここでは、このような拡張機能の開発に必要なことの大部分を学びます (Glaxstar は実際に、上記のいくつかの拡張機能の開発に携わっています)。</p>
+
+<p>拡張機能には現在3種類の形態があります。<a class="link-https" href="https://addons.mozilla.org/en-US/developers/builder" title="https://addons.mozilla.org/en-US/developers/builder">Add-ons SDK extensions</a>(Jetpacksとも呼ばれます)・<a href="/en/Extensions/Bootstrapped_extensions" title="https://developer.mozilla.org/en/Extensions/Bootstrapped_extensions">bootstrapped extensions</a>、そして従来の拡張機能です。もしあなたがアドオン開発を始めたいだけなら、Add-ons SDKを用いる事が素早くシンプルに作って実行できる良い手段です。このチュートリアルは従来の拡張機能に焦点を当てており、少し異なっています。中でもBootstrapped extensionsは一段と難しいため、試す前にこのチュートリアルに目を通すべきです。</p>
+
+<p>まずは、非常に簡単な拡張機能から見ていきましょう。</p>
+
+<h2 id="The_Hello_World_Extension" name="The_Hello_World_Extension">Hello World 拡張</h2>
+
+<p>私たちの拡張機能のサンプルとチュートリアルは、Firefox バージョン 3 以降を対象にしていますが、ほとんどのものは以前のバージョンの Firefox でも動作します。特定のバージョンでしか動作しない機能については、そのことを明確にしていくつもりです。</p>
+
+<p>初めに、基本的な "Hello World" の拡張機能から始めます。以下のリンクをクリックして拡張機能をインストールしてください。</p>
+
+<p><a href="/@api/deki/files/5139/=xulschoolhello1.xpi" title="https://developer.mozilla.org/@api/deki/files/4225/=xulschoolhello1.xpi">Hello World をインストール</a></p>
+
+<p>このリンクは、ウェブサーバが指定したファイルの種類 (Content-type) によって、拡張機能がインストールされるかファイルがダウンロードされます。インストールされるための適切なファイルの種類は、<strong>application/x-<strong>xpinstall</strong></strong> です。このサイトでは、ファイルがダウンロードされます。</p>
+
+<p>ファイルの種類が正しく設定されていれば、このサイトは Firefox へのアドオンのインストールが許可されていないことが通知されるでしょう。これは、ユーザの承諾なしでサイトから拡張機能がインストールされることを防ぐための安全対策であり、悪意のある拡張機能がデータの盗難やファイルの消去、置き換えなど望まれない動作を起こし、他のマルウェアと同様の損害を受けることを防ぐために必要です。AMO は、予めインストールが許可された唯一のサイトです。AMO で公開されたアドオンは、セキュリティチェックを含むレビュープロセスを経ています。</p>
+
+<p>ダウンロードしたファイルを Firefox のコンテンツエリアにドラッグ＆ドロップしてください。拡張機能のインストールが開始されます。</p>
+
+<p>拡張機能のインストールを知らせるウィンドウが表示されます。ウィンドウには拡張機能の作者名などの情報が含まれ、作者情報が未検証であると表示されるでしょう。デジタル証明書で署名された拡張機能だけが、その真正性を証明できます。署名された拡張機能はごく少数しかありませんが、後で署名する方法についても扱います。</p>
+
+<p>[今すぐインストール] ボタンをクリックしてください。拡張機能がインストールされた後、Firefox の再起動を求められます。アドオン (プラグインを除く) のインストールとアンインストール、有効化、無効化を完了するには、Firefox を再起動する必要があります。これを回避する簡単な方法はありません。これは、他の拡張機能やテーマを操作する拡張機能を作成するときに覚えておくべき重要なポイントです。この問題について扱っていた<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=256509" title="https://bugzilla.mozilla.org/show_bug.cgi?id=256509">バグ</a>を参照してください。</p>
+
+<p>ブラウザを再起動すると、アドオンマネージャが表示されます。アドオンマネージャには、拡張機能の名前とバージョン、簡単な説明が表示されます。</p>
+
+<p>アドオンマネージャを閉じてください。メインの Firefox ウィンドウにいつもと違うところがないか探してください。</p>
+
+<p>見つけられましたか？ メニューバーに "Hello World!" と書かれた新しいメニューが追加されています。このメニューを開き、その下のメニュー項目を選択すると、挨拶のメッセージが書かれたダイアログが現れます。[OK] ボタンをクリックして閉じてください。</p>
+
+<p><img src="/@api/deki/files/4138/=helloworldalert.png" style="height: 126px; width: 326px;"></p>
+
+<p>この拡張機能がすることはこれだけです。それでは、その内容を探っていきましょう。</p>
+
+<h2 id="Extension_Contents" name="Extension_Contents">拡張機能の内容</h2>
+
+<p>インストールした拡張機能ファイルの名前が xulschoolhello1.xpi であることに気が付きましたか？ <a href="/ja/docs/XPI" title="XPI">XPI</a> ("ジッピー" と読みます) は、クロス・プラットフォーム・インストーラ (Cross-Platform Installer) から来ています。この形式のインストーラファイルは、すべてのメジャーなプラットフォームで動作し、ほとんどの拡張機能の XPI がこれに当てはまります。XPI は単に ZIP 形式で圧縮されたファイルですが、XPI ファイルのリンクをクリックして Firefox が xpi 拡張子を持つファイルを読み込むと、インストール処理が開始されます。</p>
+
+<p>XPI ファイルの中身を調べるには、インストールではなく、ファイルをダウンロードする必要があります。リンクボタンをクリックするとサーバがインストールを開始してしまうときは、<a href="/@api/deki/files/4225/=xulschoolhello1.xpi" title="https://developer.mozilla.org/@api/deki/files/4225/=xulschoolhello1.xpi">インストールリンク</a>を右クリックしてファイルを保存してください。</p>
+
+<p>次に、XPI ファイルを展開します。ファイルを展開するにはいくつかの方法がありますが、一つは、ファイル名の拡張子を <em>zip</em> から <em>xpi</em> に変更して開く方法があります。もう一つは、ZIP ツールでファイルを開く方法があります。多くのオペレーティングシステムには ZIP 圧縮ユーティリティが付属していますが、インターネット上にはさらに便利なツールがあります。適当な方法でファイルを分かりやすい場所に展開してください。拡張機能のファイルは、次のようなディレクトリ構造で展開されます:</p>
+
+<ul>
+ <li>xulschoolhello1
+  <ul>
+   <li>chrome.manifest</li>
+   <li>install.rdf</li>
+   <li>content
+    <ul>
+     <li>browserOverlay.xul</li>
+     <li>browserOverlay.js</li>
+    </ul>
+   </li>
+   <li>skin
+    <ul>
+     <li>browserOverlay.css</li>
+    </ul>
+   </li>
+   <li>locale
+    <ul>
+     <li>en-US
+      <ul>
+       <li>browserOverlay.dtd</li>
+       <li>browserOverlay.properties</li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+<p>簡単だと思っていたら沢山のファイルが出てきました！ でも、心配しないでください。すべてのファイルの目的について知れば、とても<em>簡単</em>であることが分かるでしょう。次のセクションでは、これらのファイルについて調べ、何をするものであるかを見ていきます。</p>
+
+<div><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/School_tutorial/Introduction" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/School_tutorial/The_Essentials_of_an_Extension">次のページ  »</a></p>
+</div></div>

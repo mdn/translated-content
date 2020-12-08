@@ -1,0 +1,166 @@
+---
+title: Nouveau modèle de sécurité des services Web
+slug: Archive/Mozilla/Nouveau_modèle_de_sécurité_des_services_Web
+tags:
+  - SOAP
+translation_of: Archive/Mozilla/New_Security_Model_for_Web_Services
+---
+<h2 id="Securing_Resources_From_Untrusted_Scripts_Behind_Firewalls" name="Securing_Resources_From_Untrusted_Scripts_Behind_Firewalls">Securing Resources From Untrusted Scripts Behind Firewalls</h2>
+
+<h3 id="Introduction" name="Introduction">Introduction</h3>
+
+<p>This page describes an alternative mechanism which can be used to protect all internal resources against requests from sandboxed scripts. This should especially be implemented for SOAP calls by untrusted scripts. When an attempt is made to access a resource at a previously-unknown URI, the sandbox reads a file at that domain with declarations to determine whether access is permitted to the script. If the file is not there, access is denied.</p>
+
+<h3 id="The_Problem" name="The_Problem">The Problem</h3>
+
+<p>External untrusted scripts loaded behind a firewall are executed in a sandbox. These scripts may legitimately require access to external resources, but permitting them to access internal resources permits the compromise of these resources that would normally not be available to applications outside of the firewall. The sandbox must distinguish and protect internal resources.</p>
+
+<h3 id="Client-controlled_Solutions" name="Client-controlled_Solutions">Client-controlled Solutions</h3>
+
+<p>Several client-controlled solutions have been designed to prevent sandboxed applications loaded behind a firewall from compromising other resources protected behind the firewall.</p>
+
+<h4 id="Same_Source_Restriction" name="Same_Source_Restriction">Same Source Restriction</h4>
+
+<p>By restricting sandboxed scripts to access only resources in the domain from which they were loaded, any script loaded from one domain into another is prevented from accessing resources in the domain into which it has been loaded. This policy has generally been successful in sandboxing Javascript and Java applets across the web.</p>
+
+<p>If the sandbox is unable to distinguish the common URI substring of the domain to be trusted from similar URIs of untrusted domains, then it could allow a script loaded from an indistinguishable domain to exploit firewall-protected resources.</p>
+
+<p>Also, this technique prevents the script from accessing many legitimate external resources not provided in the same domain as the script. This prevents a script from accessing web services and data published from any domain besides its own.</p>
+
+<h4 id="White-listing" name="White-listing">White-listing</h4>
+
+<p>By creating a white list of trusted URIs from which scripts are trusted to not compromise internal resources, it is possible to release domains from the stricter same-source sandbox. A white list is a good tool for including always-trusted domains, but on the web, it is often a script from a relatively-untrusted domain that must be granted access to other untrusted domains, without compromising internal domains.</p>
+
+<p>More-complex access lists could be created to try to establish, with finer granularity, which domains are to be accessible or permitted from which other domains, but this requires extensive management which at best is quite error-prone for the end user and easily opens holes in a firewall that do not directly hurt the user who reconfigured his browser to try to access some external service but hurts the owners of other services behind the firewall.</p>
+
+<h4 id="Signed_Scripts" name="Signed_Scripts">Signed Scripts</h4>
+
+<p>A certain degree of additional trust may be lent to a script by having the author digitally sign it. But signed scripts have not really caught on as they require certificates do not change the basic problem that some completely-unknown party has written a script that might now have access to internal resources.</p>
+
+<h4 id="Asking_the_User" name="Asking_the_User">Asking the User</h4>
+
+<p>Where the sandbox cannot otherwise determine whether the executing script should be permitted access to the resource, a dialog box may be raised to ask the user to grant special privileges. This is currently permitted for locally-saved scripts and signed scripts. This could be combined with the other options above such as whitelisting, signed scripts, etc. But the big problem with this is that the typical browser user really does not either understand or pay the consequences if he inadvertently opens a hole in his company's firewall. Quite complex settings may be required to permit the user to allow access to desired external services without risking other resources.</p>
+
+<h3 id="Controlling_Resource_Access_on_the_Server" name="Controlling_Resource_Access_on_the_Server">Controlling Resource Access on the Server</h3>
+
+<p>Access by untrusted scripts really needs to be under the control of the stake holder, which is the resource and server owner -- not the user -- to determine whether a resource should be insulated from web applications loaded from outside of the firewall.</p>
+
+<h4 id="Using_a_SOAP_Header_for_Verification" name="Using_a_SOAP_Header_for_Verification">Using a SOAP Header for Verification</h4>
+
+<p>SOAP messages have a distinct processing model allowing a header to be added that the recipient is required to understand and accept, which identifies the untrusted source of a script making a request. SOAP services which have not been cleared for access by untrusted scripts will reject the requests. This is offered in the Mozilla implementation of SOAP today.</p>
+
+<p>Unfortunately, this does not prevent SOAP messages from being sent to non-SOAP addresses, which is a big enough problem that the verification cannot stand alone to guarantee that untrusted service requests are always properly rejected by services that should be firewall-protected.</p>
+
+<p>It may also be inconvenient to modify a SOAP service to ignore the specific verification header.</p>
+
+<h4 id="Using_a_Declarations_File" name="Using_a_Declarations_File">Using a Declarations File</h4>
+
+<p>A more robust solution is to rely on getting a file named "web-scripts-access.xml" in the root directory of the server that the sandboxed script requests to communicate with. It should be fairly easy for most providers of public resources to create.</p>
+
+<h3 id="Web_Scripts_Access_Statements" name="Web_Scripts_Access_Statements">Web Scripts Access Statements</h3>
+
+<p>The syntax of statements of the access file are as follows.</p>
+
+<pre>&lt;!ELEMENT webScriptAccess (delegate?|allow*)&gt;
+&lt;!ELEMENT delegate EMPTY&gt;
+&lt;!ELEMENT allow EMPTY&gt;
+&lt;!ATTLIST allow type|from CDATA #IMPLIED&gt;.
+</pre>
+
+<h4 id="L.27.C3.A9l.C3.A9ment_racine" name="L.27.C3.A9l.C3.A9ment_racine">L'élément racine</h4>
+
+<p>Le premier élément du fichier doit être le suivant :</p>
+
+<pre>&lt;wsa:webScriptAccess xmlns:wsa="http://www.mozilla.org/2002/soap/security"&gt;
+</pre>
+
+<h4 id="Delegation" name="Delegation">Delegation</h4>
+
+<p>If the <code>&lt;delegate/&gt;</code> element is present then <code>"web-scripts-access.xml"</code> is required in the subdirectory for URIs which are in a subdirectory. For example, if the script in question is <code><span class="nowiki">"http://www.example.com/foo/bar.xml"</span></code>, then the declarations file <code><span class="nowiki">http://www.example.com/web-scripts-access.xml</span></code> which contains the "delegate" keyword delegates to <code><span class="nowiki">http://www.example.com/foo/web-scripts-access.xml</span></code>. If the URI is in a subdirectory, and the root directory's access file delegated but no access file exists in the subdirectory, then no access is granted. If the root's access file did not delegate, then that access file also handles all resources in subdirectories.</p>
+
+<p>Any syntax error in the document will result in the rest of the file to be ignored. Since the commands only allow access, the order of processing the "allow" commands that were successfully parsed is never significant.</p>
+
+<h4 id="Autoriser_l.27acc.C3.A8s_de_script_Web" name="Autoriser_l.27acc.C3.A8s_de_script_Web">Autoriser l'accès de script Web</h4>
+
+<p>Pour permettre aux scripts d'accéder aux ressources de ce serveur, utiliser la commande suivante:</p>
+
+<pre>&lt;wsa:allow type="&lt;request-type&gt;" from ="&lt;uri-prefix&gt;"/&gt;
+</pre>
+
+<p>Le type de requête, s'il est spécifié, sera vérifié par rapport au type de requête demandé par le script, comme "soap", "soapv", ou "load". Les types ne doivent pas contenir d'espace. Le type "any" permet à n'importe quel type de requête d'accéder aux ressources.</p>
+
+<p>Le principe URI du script sera vérifié par le préfixe URI spécifié.</p>
+
+<p>Si "from" n'est pas spécifié, tous les scripts seront autorisés.</p>
+
+<p>Note : On peut également utiliser n'importe quel(s) caractère(s) pour renseigner la valeur de "from".</p>
+
+<p>Par exemple:</p>
+
+<pre>&lt;wsa:allow type="soapv" from="http://www.mozilla.org"/&gt;
+</pre>
+
+<p>Cette commande autorise les reqêtes SOAP avec une vérification des en-têtes des scripts chargé depuis le domaine www.mozilla.org.</p>
+
+<pre>&lt;wsa:allow type="soapv" from="http://*.mozilla.org"/&gt;
+</pre>
+
+<p>Cette commande autorise les requêtes SOAP avec une vérification des en-têtes des scripts chargé depuis le domaine avec un nom d'hôte contenant mozilla.org.</p>
+
+<p>C'est à dire, <span class="nowiki">http://www.mozilla.org/</span>, <span class="nowiki">http://lxr.mozilla.org</span>, <span class="nowiki">http://komodo.mozilla.org</span>, etc. auront un droit d'accès.</p>
+
+<h3 id="Implementation" name="Implementation">Implementation</h3>
+
+<h4 id="nsIWebScriptsAccessService" name="nsIWebScriptsAccessService"><a href="fr/NsIWebScriptsAccessService">nsIWebScriptsAccessService</a></h4>
+
+<p>This interface provides a way to check whether the running script has access to the server that the script wishes to communicate.</p>
+
+<ul>
+ <li>boolean canAccess(in nsIURI aTransportURI, in AString aType);
+  <ul>
+   <li>aTransportURI - The service URI</li>
+   <li>aType - Type requested by the script ( ex. soapv, soap, load, etc. )</li>
+   <li>return PR_TRUE if access granted else PR_FALSE</li>
+  </ul>
+ </li>
+ <li>void invalidateCache(in string aTransportURI);
+  <ul>
+   <li>Invalidate cached entry for the given transport uri.</li>
+   <li>Empty the cache by passing in a empty string</li>
+  </ul>
+ </li>
+</ul>
+
+<h4 id="nsWebScriptsAccess_.28Implements_nsIWebScriptsAccessService.29" name="nsWebScriptsAccess_.28Implements_nsIWebScriptsAccessService.29"><a href="fr/NsWebScriptsAccess">nsWebScriptsAccess</a><em>(Implements <a href="fr/NsIWebScriptsAccessService">nsIWebScriptsAccessService</a>)</em></h4>
+
+<p>Maintains access information, for servers, in an access-info-cache ( hashtable ). If an entry was not found in the cache creates one by loading the declaration file (web-scripts-access.xml) and extracting information from it (declaration file); requested type and subject princple's prefix are compared to the allowed type and prefix in order to determine access. An entry is created if and only if the declaration file is considered valid (validation based on the syntax described above); an invalid document will result in access denial. Denies script access in the event of an xml-wellformedness error, or validation error, or if the declaration file does not grant access. Reports errors (validation, wellformedness, file not found, etc.) to the console via <a href="fr/NsIConsoleService">nsIConsoleService</a>.</p>
+
+<div class="note">
+<p>Note: Script access is checked via declaration file only if the script security manager denies access.</p>
+</div>
+
+<h3 id="Summary" name="Summary">Summary</h3>
+
+<h4 id="Advantages" name="Advantages">Advantages</h4>
+
+<p>The proposed declaration file places the server operator, not the client in control of access to his server by untrusted scripts. The access hole is no bigger than the service in question. The access is disabled by default, and there is nothing the user needs to do to open access, and nothing that can go wrong to make a hole in his firewall. It seems fairly easy to drop an access file into the root directory of the web server to allow access.</p>
+
+<h4 id="Delegation_with_Mixed_Ownership" name="Delegation_with_Mixed_Ownership">Delegation with Mixed Ownership</h4>
+
+<p>Independent owners of subdirectories cannot grant web script access to these subdirectories without getting the owner of the root directory to post a delegating access file. Normally a server will be either inside or outside of a firewall, so this is not a problem. Where a server spans multiple owners, the alternative would be to scan all directories in the path looking for a web scripts access file, which seems undesirable. On the other hand, perhaps it is not so bad, since it permits independent management in domains where the top level owner may not care about providing access to web services.</p>
+
+<h4 id="Adjustments" name="Adjustments">Adjustments</h4>
+
+<p>As this new model is applied to SOAP, and potentially document.load or xml-request, it may be desirable to eliminate the same source security bypass, because it is not clear that this is always secure. Other security adjustments may be desired as well.</p>
+
+<h3 id="Feedback.3F" name="Feedback.3F">Feedback?</h3>
+
+<p>Please send me some feedback on this proposal.</p>
+
+<h2 id="See_Also" name="See_Also">See Also</h2>
+
+<ul>
+ <li><a href="fr/Mozilla_Web_Services_Security_Model">Mozilla Web Services Security Model</a> - documentation of what is currently implemented</li>
+</ul>
+
+<p><span class="comment">Interwiki Language Links</span></p>

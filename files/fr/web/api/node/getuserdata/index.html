@@ -1,0 +1,118 @@
+---
+title: Node.getUserData()
+slug: Web/API/Node/getUserData
+tags:
+  - API
+  - DOM
+  - Méthodes
+  - Noeuds
+translation_of: Web/API/Node/getUserData
+---
+<div>{{APIRef("DOM")}}{{obsolete_header}}</div>
+
+<p>La méthode <code><strong>Node.getUserData()</strong></code>renvoie tout {{domxref("DOMUserData")}} d'utilisateur défini précédemment sur le noeud donné par {{domxref("Node.setUserData()")}}.</p>
+
+<div class="note">
+<p>Les méthodes <code>Node.setUserData</code> et {{domxref("Node.getUserData")}} ne sont plus disponibles pour le contenu à partir du web. {{domxref("Element.dataset")}} ou <a href="/en-US/docs/JavaScript/Reference/Global_Objects/WeakMap"><code>WeakMap</code></a> peuvent être utilisés à la place.</p>
+</div>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox"><em>userData</em> = <em>someNode</em>.getUserData(<em>userKey</em>);</pre>
+
+<h3 id="Paramètres">Paramètres</h3>
+
+<ul>
+ <li><code>userKey</code> est la clé pour choisir les données spécifiques recherchées pour le nœud donné. Plus d'une clé peuvent avoir été assignées sur un nœud donné, contenant leurs propres valeurs.</li>
+</ul>
+
+<h2 id="Exemple">Exemple</h2>
+
+<pre class="brush: js">var d = document.setUserData('key', 15, null);
+console.log(document.getUserData('key')); // 15</pre>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Spécification</th>
+   <th scope="col">Statut</th>
+   <th scope="col">Commentaire</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('DOM WHATWG', '#interface-node', 'Node')}}</td>
+   <td>{{Spec2('DOM WHATWG')}}</td>
+   <td>Supprimée de la spécification.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM3 Core', 'core.html#Node3-getUserData', 'Node.getUserData()')}}</td>
+   <td>{{Spec2('DOM3 Core')}}</td>
+   <td>Définition initiale.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Fonctionnalité</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoMobile(1)}}<br>
+    {{CompatNo}} 22.0[1]</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Fonctionnalité</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoDesktop(1)}}<br>
+    {{CompatNo}} 22.0[1]</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] La méthode est toujours disponible à partir de scripts chrome.</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>{{domxref("Node.setUserData()")}}</li>
+ <li>{{domxref("UserDataHandler")}}</li>
+ <li>{{domxref("DOMUserData")}}</li>
+</ul>

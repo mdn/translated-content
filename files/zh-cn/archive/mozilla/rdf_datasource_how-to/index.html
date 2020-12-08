@@ -1,0 +1,231 @@
+---
+title: RDF 数据源 How-To
+slug: Archive/Mozilla/RDF_Datasource_How-To
+tags:
+  - RDF
+translation_of: Archive/Mozilla/RDF_Datasource_How-To
+---
+<p> </p>
+<div class="warning">
+ <p>This article is at least partially outdated. Help bring it up to date, if you can. <span class="comment">The XPCOM registration parts and the "As of this writing, it is not currently possible to implement JavaScript XPCOM components" comment seem outdated didn't check the whole article.</span></p>
+</div>
+<p>This document is a cookbook that describes how to create a
+ <i>
+  native, client-side datasource</i>
+ that works with Mozilla's <a href="cn/RDF">RDF</a> implementation. It supercedes (and borrows from) the <a class="external" href="http://www.mozilla.org/rdf/doc/rdfdatasources.html">original document</a> put together by <a class="link-mailto" href="mailto:rjc@netscape.com">Robert Churchill</a>.</p>
+<h3 id="What_is_a_datasource.3F" name="What_is_a_datasource.3F">What is a datasource?</h3>
+<p>The "RDF universe" consists of a set of
+ <i>
+  statements</i>
+ about Internet
+ <i>
+  resources</i>
+ ; for example, "my home page was last modified April 2nd", or "that news article was sent by Bob". In the most abstract sense, a
+ <i>
+  datasource</i>
+ is a collection of such statements.</p>
+<p>More concretely, a datasource is a
+ <i>
+  translator</i>
+ that can present information as a collection of RDF statements. For example, a "file system datasource" would translate the file system into statements like "/tmp is a directory" and "/tmp/foo is contained within /tmp". An "IMAP datasource" would use the IMAP protocol to translate your mail server's inbox as a collection of statements like "message number 126's subject is 'make money fast on the Internet'" and "message number 126 was sent by <a class="link-mailto" href="mailto:'spammer128@hotmail.com" rel="freelink">'spammer128@hotmail.com</a>'". An "address book" datasource could translate a database file into statements like "<a class="link-mailto" href="mailto:spammer128@hotmail.com's" rel="freelink">spammer128@hotmail.com's</a> real name is 'Billy Dumple'" and "<a class="link-mailto" href="mailto:spammer128@hotmail.com" rel="freelink">spammer128@hotmail.com</a> is considered an 'important friend'."</p>
+<p>Statements from one datasource can be combined with statements from another datasource using a
+ <i>
+  composite datasource</i>
+ . By combining statements from the IMAP datasource and address book datasource, above, we'd be able to identify the sender of "message 126" as an "important friend".</p>
+<h3 id="Deciding_on_a_vocabulary" name="Deciding_on_a_vocabulary">Deciding on a vocabulary</h3>
+<p>The
+ <i>
+  vocabulary</i>
+ is the set of properties that you will use to express relationships between elements (resources and literals) in your data model. The first question that you must answer is "should I use an existing vocabulary, or invent my own?" A reasonable answer is, "use an existing vocabulary unless you
+ <i>
+  absolutely must</i>
+ invent your own." This will allow your datasource to be integrated with other datasources with a minimum of effort.</p>
+<p>There are several existing vocabularies of note, including:</p>
+<ul>
+ <li><a class="external" href="http://www.w3.org/TR/PR-rdf-schema/">The RDF Schema Specification</a>. This vocabulary is a "meta vocabulary" that is used to specify other vocabularies.</li>
+ <li><a class="external" href="http://purl.oclc.org/dc/">The Dublin Core</a>. This vocabulary is useful for describing electronic resources. It contains elements for authorship, subject, publication date, etc.</li>
+</ul>
+<h3 id="Mapping_your_data_to_nodes_and_arcs" name="Mapping_your_data_to_nodes_and_arcs">Mapping your data to nodes and arcs</h3>
+<p><b>[write me!]</b></p>
+<h3 id="Implementing_the_nsIRDFDataSource_interface" name="Implementing_the_nsIRDFDataSource_interface">Implementing the &lt;tt&gt;nsIRDFDataSource&lt;/tt&gt; interface</h3>
+<p>Your first chore will be to implement the &lt;tt&gt;<a class="external" href="http://lxr.mozilla.org/seamonkey/source/rdf/base/idl/nsIRDFDataSource.idl">nsIRDFDataSource</a>&lt;/tt&gt; interface. There are basically two approaches that you can take in this endeavor:</p>
+<ol>
+ <li>
+  <p>
+   <i>
+    Delegate to an inner proxy</i>
+   . For example, you may choose to delegate to the
+   <i>
+    in-memory datasource</i>
+   , which is a generic datasource that implements &lt;tt&gt;nsIRDFDataSource&lt;/tt&gt;.</p>
+  <p>Typically, you provide a parser for reading in some sort of static storage (e.g., a data file); the parser translates the datafile into a series of calls to &lt;tt&gt;Assert()&lt;/tt&gt; to set up the in-memory datasource. When &lt;tt&gt;Flush()&lt;/tt&gt; is called, or the last reference to the datasource is released, a routine walks the in-memory datasource and re-serializes the graph back to the original file format. For examples of an implementation like this, look at the <a class="external" href="http://lxr.mozilla.org/seamonkey/source/rdf/base/src/nsRDFXMLDataSource.cpp">RDF/XML datasource</a> or the <a class="external" href="http://lxr.mozilla.org/seamonkey/source/xpfe/components/bookmarks/src/nsBookmarksService.cpp">bookmarks datasource</a>.</p>
+  <p>You may want to choose this implementation if your primary goal is to "wrap" a legacy data store. This implementation may cause problems if your data store can be modified "on the fly" by other agents.</p>
+ </li>
+ <li>
+  <p>
+   <i>
+    Aggregate the in-memory datasource</i>
+   . This is an extreme case of delegation, where you use XPCOM
+   <i>
+    aggregation</i>
+   to implement the &lt;tt&gt;nsIRDFDataSource&lt;/tt&gt; interface. See <a href="cn/Aggregating_the_In-Memory_Datasource">Aggregating the In-Memory Datasource</a> for technical details.</p>
+  <p>If you take this approach, you won't be able to selectively implement methods of the &lt;tt&gt;nsIRDFDataSource&lt;/tt&gt; interface; instead,
+   <i>
+    all</i>
+   of the methods will be "forwarded" to the in-memory datasource. This can be useful if your datasource is "read-only", and you aren't worried about modification using &lt;tt&gt;Assert()&lt;/tt&gt;, etc.</p>
+ </li>
+ <li>
+  <p>
+   <i>
+    Implement the interface yourself</i>
+   . If you choose this route, you'll need to implement each of the &lt;tt&gt;nsIRDFDataStore&lt;/tt&gt; methods "by hand". Although this is more work, it is really the only way to create a "live" datasource that may be changed by some outside agent.</p>
+  <p>The <a class="external" href="http://lxr.mozilla.org/seamonkey/source/rdf/datasource/src/nsFileSystemDataSource.cpp">file system datasource</a> and <a class="external" href="http://lxr.mozilla.org/seamonkey/source/mailnews/base/src/nsMsgFolderDataSource.cpp">local mail datasource</a> are good examples of datasources that have been implemented this way.</p>
+  <p>You'll probably need to choose this implementation if your datasource is "live", and may be modified or altered by some outside agent (e.g., new mail arriving). You may also need to choose this implementation if the data set which your datasource is modeling is too large to fit in to memory (e.g., the entire file system structure).</p>
+ </li>
+</ol>
+<p><b>[More info on what each method needs to do
+ <i>
+  here</i>
+ ]</b></p>
+<h4 id="RDF_Commands" name="RDF_Commands">RDF Commands</h4>
+<p><b>[Describe what commands are, and why you'd implement them.]</b></p>
+<h3 id="Registering_the_datasource_component" name="Registering_the_datasource_component">Registering the datasource component</h3>
+<p>A datasource is an <a href="cn/XPCOM">XPCOM</a> component. As such, it must (currently, see <a href="#footnote1">[1]</a>) have:</p>
+<ol>
+ <li>An XPCOM
+  <i>
+   CLSID</i>
+  to identify the data source implementation</li>
+ <li>An implementation class (that corresponds to the CLSID) whose code lives in a DLL. The DLL must be located in the XPCOM &lt;tt&gt;components&lt;/tt&gt; directory</li>
+ <li>A
+  <i>
+   factory</i>
+  that is
+  <i>
+   registered</i>
+  to an XPCOM
+  <i>
+   ProgID</i>
+  in order to be instantiated from the repository.</li>
+</ol>
+<p>Constructing a DLL for a component is beyond the scope of this document; the reader is referred to <a class="external" href="http://lxr.mozilla.org/seamonkey/source/rdf/build/nsRDFFactory.cpp">the RDF factory</a> as a guideline.</p>
+<p>Registering an RDF datasource is fairly simple: in the DLL's &lt;tt&gt;NSRegisterSelf()&lt;/tt&gt; method, you simply call the
+ <i>
+  component manager'</i>
+ s &lt;tt&gt;RegisterComponent()&lt;/tt&gt; method:</p>
+<pre class="eval">extern "C" PR_IMPLEMENT(nsresult)
+NSRegisterSelf(nsISupports* aServiceManager, const char* aPath)
+{
+   nsresult rv;
+   ...
+   // Assume compMgr refers to the component manager
+   rv = compMgr-&gt;RegisterComponent(kMyDataSourceCID,
+            "My Data Source",
+            NS_RDF_DATASOURCE_PROGID_PREFIX "my-datasource",
+            aPath, PR_TRUE, PR_TRUE);
+   ...
+}
+</pre>
+<p>Replace &lt;tt&gt;kMyDataSourceCID&lt;/tt&gt; with your datasource's CLSID. Replace &lt;tt&gt;"My Data Source"&lt;/tt&gt; with a descriptive string that should appear in the registry. Finally, replace &lt;tt&gt;"my-datasource"&lt;/tt&gt; with a value appropriate for your datasource. This value, when prefixed with &lt;tt&gt;"rdf:"&lt;/tt&gt;, is a
+ <i>
+  datasource identifier</i>
+ , and may be used with &lt;tt&gt;<a class="external" href="http://lxr.mozilla.org/seamonkey/source/rdf/base/idl/nsRDFInterfaces.idl#384">nsIRDFService::GetDataSource()</a>&lt;/tt&gt; to retrieve your datasource from the RDF service. For example, the above datasource would be accessable as follows:</p>
+<pre class="eval">nsIRDFService* rdf;
+rv = nsServiceManager::GetService(kRDFServiceCID,
+          kIRDFServiceIID,
+          (nsISupports**) &amp;rdf);
+
+if (NS_SUCCEEDED(rv)) {
+    nsIRDFDataSource* myDataSource;
+    rv = rdf-&gt;GetDataSource("rdf:my-datasource",
+                 &amp;myDataSource);
+
+    if (NS_SUCCEEDED(rv)) {
+        // ...do something to myDataSource here...
+        NS_RELEASE(myDataSource);
+    }
+    nsServiceManager::ReleaseService(kRDFServiceCID, rdf);
+}
+</pre>
+<h3 id="Displaying_RDF_as_content" name="Displaying_RDF_as_content">Displaying RDF as content</h3>
+<p>Now that you've gone through all this pain to expose your information as a datasource, you probably want to
+ <i>
+  see</i>
+ it. Using <a class="external" href="http://www.mozilla.org/xpfe/languageSpec.html">XUL</a>, you can display the contents of your datasource in a
+ <i>
+  tree</i>
+ control
+ <i>
+  , a</i>
+ menu
+ <i>
+  , or a</i>
+ toolbar
+ <i>
+  . In fact, you can</i>
+ convert RDF to an
+ <i>
+  arbitrary</i>
+ content model using <a href="cn/XUL/Template_Guide">XUL Templates</a>.</p>
+<p>The following XUL fragment illustrates how to instantiate a tree control whose body is "rooted" to a resource (&lt;tt&gt;<a class="external" href="http://foo.bar.com/" rel="freelink">http://foo.bar.com/</a>&lt;/tt&gt;) that your datasource describes:</p>
+<pre class="eval">&lt;window
+  xmlns:html="<a class="external" href="http://www.w3.org/1999/xhtml" rel="freelink">http://www.w3.org/1999/xhtml</a>"
+  xmlns:rdf="<a class="external" href="http://www.w3.org/TR/WD-rdf-syntax#" rel="freelink">http://www.w3.org/TR/WD-rdf-syntax#</a>"
+  xmlns="<a class="external" href="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" rel="freelink">http://www.mozilla.org/keymaster/gat...re.is.only.xul</a>"&gt;
+
+  &lt;tree <b>datasources="rdf:my-datasource" ref="<a class="external" href="http://foo.bar.com/" rel="freelink">http://foo.bar.com/</a>"</b>&gt;
+    <b>&lt;template&gt;</b>
+      <b>&lt;treechildren&gt;</b>
+        <b>&lt;treeitem uri="..."&gt;</b>
+          <b>&lt;treerow&gt;</b>
+            <b>&lt;treecell&gt;</b>
+              <b>&lt;text value="rdf:<a class="external" href="http://home.netscape.com/NC-rdf#Name" rel="freelink">http://home.netscape.com/NC-rdf#Name</a>" /&gt;</b>
+            <b>&lt;/treecell&gt;</b>
+            <b>&lt;treecell&gt;</b>
+              <b>&lt;text value="rdf:<a class="external" href="http://home.netscape.com/NC-rdf#URL" rel="freelink">http://home.netscape.com/NC-rdf#URL</a>" /&gt;</b>
+            <b>&lt;/treecell&gt;</b>
+          <b>&lt;/treerow&gt;</b>
+        <b>&lt;/treeitem&gt;</b>
+      <b>&lt;/treechildren&gt;</b>
+    <b>&lt;/template&gt;</b>
+
+    &lt;treehead&gt;
+      &lt;treeitem&gt;
+        &lt;treecell&gt;Name&lt;/treecell&gt;
+        &lt;treecell&gt;URL&lt;/treecell&gt;
+      &lt;/treeitem&gt;
+    &lt;/treehead&gt;
+
+    &lt;!-- treechildren built _here_ --&gt;
+  &lt;/tree&gt;
+
+&lt;/window&gt;
+</pre>
+<p>The important "magic attributes" have been called out in bold, above:</p>
+<ul>
+ <li>
+  <p>&lt;tt&gt;datasources="rdf:my-datasource"&lt;/tt&gt;. This is a space-separated list that may include internal XPCOM datasource "identifiers" (as described above) and URIs for local or remote RDF/XML documents. Each datasource that is listed will be loaded, and the assertions contained in the datasource will be made available to the tree control for display.</p>
+ </li>
+ <li>
+  <p>&lt;tt&gt;ref="<a class="external" href="http://foo.bar.com/" rel="freelink">http://foo.bar.com/</a>"&lt;/tt&gt;. This roots the graph in your content model. The &lt;tt&gt;tree&lt;/tt&gt; tag will be treated as if it has the &lt;tt&gt;ID&lt;/tt&gt; attribute with a value &lt;tt&gt;<a class="external" href="http://foo.bar.com/" rel="freelink">http://foo.bar.com/</a>&lt;/tt&gt;.</p>
+ </li>
+ <li>
+  <p>&lt;tt&gt;&lt;template&gt;...&lt;/template&gt;&lt;/tt&gt;. The XUL
+   <i>
+    template</i>
+   that is used to build content from the graph. Starting with the resource that corresponds to the &lt;tt&gt;tree&lt;/tt&gt; element, &lt;tt&gt;<a class="external" href="http://foo.bar.com/" rel="freelink">http://foo.bar.com/</a>&lt;/tt&gt;, the graph will be traversed and content will be constructed using the pattern specified within the &lt;tt&gt;template&lt;/tt&gt; tags.</p>
+ </li>
+</ul>
+<p>For a complete description of how content is built from RDF, see the <a href="cn/XUL/Template_Guide">XUL:Template Guide</a>.</p>
+<hr>
+<p><small><sup>1</sup> As of this writing, it is not currently possible to implement JavaScript XPCOM components; however, it may soon be possible to do so via <a href="cn/XPConnect">XPConnect</a>. <strong>Update:</strong> JavaScript XPCOM should now be possible. </small></p>
+<p>Contact: <a class="link-mailto" href="mailto:waterson@netscape.com">Chris Waterson</a> <a class="link-mailto" href="mailto:(waterson@netscape.com)" rel="freelink">(waterson@netscape.com)</a></p>
+<div class="originaldocinfo">
+ <h2 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h2>
+ <ul>
+  <li>Author(s): <a class="link-mailto" href="mailto:waterson@netscape.com">Chris Waterson</a></li>
+  <li>Last Updated Date: June 19, 2000</li>
+  <li>Copyright Information: Copyright (C) <a class="link-mailto" href="mailto:waterson@netscape.com">Chris Waterson</a></li>
+ </ul>
+</div>
+<p> </p>

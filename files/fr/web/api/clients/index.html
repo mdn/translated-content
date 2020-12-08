@@ -1,0 +1,120 @@
+---
+title: Clients
+slug: Web/API/Clients
+tags:
+  - API
+  - Clients
+  - Experimental
+  - Interface
+  - Reference
+  - ServiceWorker
+translation_of: Web/API/Clients
+---
+<p>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</p>
+
+<p>L'interface <code>Clients</code> de l'<a href="/en-US/docs/Web/API/ServiceWorker_API">API de Service Workers</a> repésente un conteneur de liste d'objets {{domxref("Client")}}.</p>
+
+<h2 id="Méthodes">Méthodes</h2>
+
+<dl>
+ <dt>{{domxref("Clients.get()")}}</dt>
+ <dd>Récupère un service worker client correspondant à un id et le retourne dans une {{jsxref("Promise")}}.</dd>
+ <dt>{{domxref("Clients.matchAll()")}}</dt>
+ <dd>Récupèere une liste de service worker clients et les retourne dans une {{jsxref("Promise")}}. On inclut un paramètre <code>option</code> pour retourner tous les services worker clients dont l'origine est la même que le service worker d'origine. Si <code>option</code> n'est pas inclut, la méthode retourne seulement les service worker clients controllés par le service worker.</dd>
+ <dt>{{domxref("Clients.openWindow()")}}</dt>
+ <dd>Ouvre un service worker {{domxref("Client")}} dans une nouvelle fenêtre de navigation.</dd>
+ <dt>{{domxref("Clients.claim()")}}</dt>
+ <dd>Permet à un service worker actif de se définir comme étant le worker actif de la page quand le worker et la page sont dans la même portée.</dd>
+</dl>
+
+<h2 id="Exemples">Exemples</h2>
+
+<pre class="brush: js">clients.matchAll(options).then(function(clients) {
+  for(i = 0 ; i &lt; clients.length ; i++) {
+    if(clients[i] === 'index.html') {
+      clients.openWindow(clients[i]);
+      // ou faire quelque chose qui inclut le client concerné
+    }
+  }
+});</pre>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Spécification</th>
+   <th scope="col">Statut</th>
+   <th scope="col">Commentaire</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Service Workers', '#clients', 'Clients')}}</td>
+   <td>{{Spec2('Service Workers')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatChrome(40.0)}}</td>
+   <td>{{ CompatGeckoDesktop("44.0") }}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{ CompatGeckoMobile("44.0") }}</td>
+   <td>{{ CompatVersionUnknown }}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="À_voir_aussi">À voir aussi :</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Utiliser les Service Workers</a></li>
+ <li><a href="https://github.com/mdn/sw-test">Example simple de service workers</a></li>
+ <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Est-ce que les ServiceWorker sont prêt?</a></li>
+ <li>{{jsxref("Promise")}}</li>
+ <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Utilisation optimisée des web workers</a></li>
+</ul>

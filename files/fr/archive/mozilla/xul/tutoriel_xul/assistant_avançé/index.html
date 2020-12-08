@@ -1,0 +1,66 @@
+---
+title: Assistant avançé
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Assistant_avançé
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/More_Wizards
+---
+<p> </p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Création_d'un_assistant" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Overlays">Suivant  »</a></p>
+</div>
+<p>Cette section décrit quelques fonctionnalités supplémentaires sur les assistants.</p>
+<h3 id="Une_navigation_plus_complexe" name="Une_navigation_plus_complexe">Une navigation plus complexe</h3>
+<p>Normalement, un assistant affiche chaque page dans l'ordre où vous les placez dans le fichier XUL. Dans certains cas cependant, vous pouvez vouloir que les pages de l'assistant apparaissent en fonction des choix effectués par l'utilisateur sur les pages précédentes.</p>
+<p>Dans ce cas, placez un attribut <code>pageid</code> sur chacune des pages. Un identifiant devra être placé sur chaque page. Ensuite, pour naviguer d'une page à l'autre, utilisez une des deux méthodes suivantes :</p>
+<ol> <li>Affectez à l'attribut <code>next</code> de chaque page la valeur de l'identifiant de la page qui doit la suivre. Vous pouvez changer ces attributs comme vous le souhaitez pour naviguer vers d'autres pages.</li> <li>Appelez la méthode <code>goTo()</code> de l'assistant. Elle prend comme unique argument l'identifiant de la page suivante. Vous pouvez appeler cette méthode dans les gestionnaires <code>onpageadvanced</code> ou <code>onwizardnext</code>. Dans ce cas, n'oubliez pas de retourner la valeur 'false', car vous avez déjà changé la page par vous-même. Notez que la méthode <code>goTo()</code> charge une nouvelle page, par conséquent les événements liés sont lancés. Vous devez donc vous assurer d'avoir prévu ce cas.</li>
+</ol>
+<p>Par exemple, nous avons ici un ensemble de pages d'assistant (le contenu interne a été omis) :</p>
+<pre>&lt;wizardpage pageid="type" next="font"&gt;
+&lt;wizardpage pageid="font" next="done"&gt;
+&lt;wizardpage pageid="color" next="done"&gt;
+&lt;wizardpage pageid="done"&gt;
+</pre>
+<ul> <li>L'assistant commence toujours à la première page, qui dans ce cas a l'identifiant de page 'type'. La page suivante ayant l'identifiant de page 'font', l'assistant affichera cette page juste après.</li> <li>Sur la page qui a l'identifiant 'font', nous voyons que la page suivante est celle identifiée 'done', cette page sera alors affichée ensuite.</li> <li>La page identifiée 'done' n'a pas d'attribut <code>next</code>, elle sera donc la dernière page.</li>
+</ul>
+<p>Un script ajustera la valeur de l'attribut <code>next</code> dès qu'il sera nécessaire d'aller sur la page identifiée 'color'.</p>
+<h3 id="Fonctions_d.27assistant" name="Fonctions_d.27assistant">Fonctions d'assistant</h3>
+<p>L'assistant fonctionne presque comme <a href="/fr/Tutoriel_XUL/Onglets" title="fr/Tutoriel_XUL/Onglets">un panneau d'onglets</a>, sauf que les onglets ne sont pas affichés et que l'utilisateur navigue entre les pages en utilisant les boutons de bas de page. Comme toutes les pages font parties d'un même fichier, toutes les valeurs des champs sur toutes les pages sont conservées. Par conséquent, il est inutile de sauvegarder ou charger ces informations entre les pages.</p>
+<p>Cependant, vous pourriez vouloir faire quelques validations sur chaque champ de chaque page. Pour ce faire, utilisez les gestionnaires décrits dans la section précédente. Si un champ est invalide, vous pouvez afficher un message d'alerte. Dans certains cas, il serait plus judicieux de désactiver le bouton 'Suivant' jusqu'à ce qu'une valeur valide soit saisie.</p>
+<p>L'assistant possède une propriété <code>canAdvance</code> qui, quand elle est mise a 'true', indique que le bouton 'Suivant' doit être actif. Si elle a la valeur 'false', le bouton 'Suivant' est désactivé. Vous pouvez changer cette propriété en fonction de la validité des données saisies.</p>
+<p>Dans l'exemple suivant, l'utilisateur doit entrer un code secret dans le champ de saisie sur la première page de l'assistant. La fonction <code>checkCode()</code> est appelée dés que la première page est affichée comme indiqué par l'attribut <code>onpageshow</code>. Elle est aussi appelée dès qu'une touche est pressée dans le champ <code><a href="/fr/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code>, pour déterminer si le bouton 'Suivant' doit être à nouveau actif.</p>
+<h4 id="Exemple_d.27assistant" name="Exemple_d.27assistant">Exemple d'assistant</h4>
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advwiz_1.xul.txt">Source</a></p>
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;wizard id="theWizard" title="Code secret de l'assistant"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;script&gt;
+function checkCode(){
+  document.getElementById('theWizard').canAdvance = (document.getElementById('secretCode').value == "cabbage");
+}
+&lt;/script&gt;
+
+  &lt;wizardpage onpageshow="checkCode(); return true;"&gt;
+       &lt;label value="Saisir le code secret:"/&gt;
+       &lt;textbox id="secretCode" onkeyup="checkCode();"/&gt;
+  &lt;/wizardpage&gt;
+
+  &lt;wizardpage&gt;
+       &lt;label value="Le code est correct."/&gt;
+  &lt;/wizardpage&gt;
+
+&lt;/wizard&gt;
+</pre>
+<p>Il existe aussi une propriété correspondante <code>canRewind</code> que vous pouvez utiliser pour activer ou désactiver le bouton 'Précédent'. Les deux propriétés sont ajustées automatiquement dès que vous changez de page. Par conséquent, le bouton 'Précédent' sera désactivé sur la première page, vous n'avez pas à le faire.</p>
+<p>Une autre propriété utile de l'assistant est <code>currentPage</code> qui donne une référence à la page <code>wizardpage</code> actuellement affichée. Vous pouvez aussi changer la page courante en modifiant cette propriété. Si vous modifiez sa valeur, les différents événements de changement de page seront invoqués.</p>
+<hr>
+<p>Ensuite, nous allons voir comment utiliser les overlays pour gérer du contenu.</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Création_d'un_assistant" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Overlays">Suivant  »</a></p>
+</div>
+<p><span class="comment">Interwiki</span></p>

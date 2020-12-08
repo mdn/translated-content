@@ -1,0 +1,350 @@
+---
+title: アプリケーションキャッシュの使用
+slug: Web/HTML/Using_the_application_cache
+tags:
+  - Advanced
+  - App
+  - Cache
+  - Guide
+  - HTML
+  - appcache
+  - application cache
+  - web cache
+translation_of: Web/HTML/Using_the_application_cache
+---
+<div class="blockIndicator warning">
+<p><strong>この<em>アプリケーションキャッシュ</em>機能を使用しないでください！</strong>これは<a href="https://html.spec.whatwg.org/multipage/browsers.html#offline">ウェブプラットフォームから削除する手続中のものです</a>。</p>
+
+<ul>
+ <li>Firefox 84 以降、この機能は削除されました ({{bug("1619673")}})。 Chomium 90 でも削除が予定されており、 Safari でも非推奨になっています。</li>
+ <li>Firefox 60 以降、および<a href="/ja/docs/Web/HTML/Using_the_application_cache#Browser_compatibility">対応しているブラウザー</a>の一部またはすべてにおいて、<a href="/ja/docs/Web/Security/Secure_Contexts">安全なコンテキスト</a> (HTTPS) でしか利用できません。</li>
+ <li>Firefox 44 以降ではオフライン対応のために<a href="/ja/docs/Web/HTML/Using_the_application_cache">アプリケーションキャッシュ</a>を使用すると、代わりに<a href="/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers">サービスワーカー</a>を使用するよう開発者に案内する警告メッセージをコンソールに表示します ({{bug("1204581")}})。</li>
+</ul>
+</div>
+
+<div>{{DefaultAPISidebar("App Cache")}}{{Deprecated_Header}}{{SecureContext_Header}}</div>
+
+<h2 id="Introduction" name="Introduction">はじめに</h2>
+
+<p><a href="/ja/docs/HTML/HTML5">HTML5</a> は、ウェブアプリケーションをオフラインで実行できるようにするための<em>アプリケーションキャッシュ</em>の仕組みを提供しています。この <strong>Application Cache</strong> (<em>AppCache</em>) インターフェイスは、ブラウザーがオフラインで利用できるようにキャッシュするべきリソースを列挙します。キャッシュされたアプリケーションは、ユーザーが更新ボタンを押しても、オフラインで読み込まれて正常に動作します。</p>
+
+<p>アプリケーションキャッシュは以下のような利益をもたらします。</p>
+
+<dl>
+ <dt>オフラインブラウジング</dt>
+ <dd>オフライン状態であってもユーザーがサイトを閲覧できます。</dd>
+ <dt>速度</dt>
+ <dd>キャッシュされたリソースはローカルに置かれることになり、その結果、より速く読み込まれます。</dd>
+ <dt>サーバー不の削減</dt>
+ <dd>ブラウザーはサーバーから変更されたリソースのみをダウンロードします。</dd>
+</dl>
+
+<h2 id="How_the_application_cache_works" name="How_the_application_cache_works">アプリケーションキャッシュの動作</h2>
+
+<h3 id="Enabling_the_application_cache" name="Enabling_the_application_cache">アプリケーションキャッシュの有効化</h3>
+
+<p>アプリケーションでアプリケーションキャッシュを有効にするには、 {{HTMLAttrxRef("manifest", "html")}} 属性をアプリケーションページ内の {{HTMLElement("html")}} 要素に設定してください。</p>
+
+<pre class="brush: html notranslate">&lt;html manifest="/example.appcache"&gt;
+  …
+&lt;/html&gt;
+</pre>
+
+<p><code>manifest</code> 属性の値は <strong>キャッシュマニフェスト</strong> ファイルの URL を参照します。これはアプリケーションのためにブラウザーがキャッシュするべき URL を列挙したテキストファイルです。</p>
+
+<p>キャッシュしてほしいサイトのすべてのページに <code>manifest</code> 属性を含めてください。ブラウザーは <code>manifest</code> 属性のないページは、マニフェストファイルで列挙されていない限りキャッシュしません。マニフェストファイルにキャッシュしてほしいページをすべて列挙する必要はありません。なぜなら、ブラウザーは、ユーザーが訪問したページに <code>manifest</code> 属性があると、暗黙的にアプリケーションキャッシュに追加するからです。</p>
+
+<p>ブラウザーによっては (例: Firefox) は、ユーザーがアプリケーションキャッシュを利用するアプリケーションを読み込む初回時に通知バーを表示します。通知バーは以下のようなメッセージを表示します。</p>
+
+<p style="margin-left: 40px;">このサイト (<code>example.com</code>) はオフライン作業用データの保存を求めています。 [許可] [このサイトでは保存しない] [今回は保存しない]</p>
+
+<p>「オフライン(利用可能) アプリケーション」という表現は、ときに、ユーザーがオフライン機能を利用することを許可したアプリケーションを具体的に指すこともあります。</p>
+
+<h3 id="Loading_documents" name="Loading_documents">文書の読み込み</h3>
+
+<p>アプリケーションキャッシュの利用は文書を読み込む通常のプロセスを変更します:</p>
+
+<ul>
+ <li>アプリケーションキャッシュが存在する場合、ブラウザーは文書を読み込んで、それに関連付けられたリソースをネットワークにアクセスせずにキャッシュから直接取得します。これは文書の読み込み時間をスピードアップさせます。</li>
+ <li>ブラウザーはキャッシュマニフェストがサーバー上で更新されているかどうかをチェックします。</li>
+ <li>キャッシュマニフェストが更新されていた場合、ブラウザーはマニフェストの新しいバージョンとそのマニフェスト内に列挙されたリソースをダウンロードします。これはバックグランドで行われ、パフォーマンスに大きな影響を与えません。</li>
+</ul>
+
+<p>文書を読み込み、アプリケーションキャッシュを更新するプロセスの詳細は以下のようになります。</p>
+
+<ol>
+ <li>ブラウザーは <code>manifest</code> 属性を含む文書を訪れたとき、アプリケーションキャッシュが存在しなければ、文書を読み込んでから、マニフェストファイルに列挙されたすべてのエントリーを取得して、アプリケーションキャッシュの最初のバージョンを作成します。</li>
+ <li>その文書へのその後の訪問では、ブラウザーは文書とマニフェストファイルで指定されたその他のリソースを (サーバーからではなく) アプリケーションキャッシュから読み込みます。さらに、ブラウザーは <code><a href="/ja//docs/DOM/window.applicationCache">window.applicationCache</a></code> オブジェクトに <code>checking</code> イベントを送り、適切な HTTP キャッシュ規則に従い、マニフェストファイルを取得します。</li>
+ <li>マニフェストファイルの現在のキャッシュされたコピーが最新であった場合、ブラウザーは <code>applicationCache</code> オブジェクトに <code>noupdate</code> イベントを送り、更新プロセスは完了します。サーバー上のキャッシュされたリソースを変更する場合、マニフェストファイル自身も変更する必要があることに注意してください。そうすることで、ブラウザーはすべてのリソースを再び取得する必要があることを知ります。</li>
+ <li>マニフェストファイルが変更<em>されていた</em>場合、マニフェストに列挙されたファイルのすべて、および、 <code><a href="/ja/docs/nsIDOMOfflineResourceList#add.28.29">applicationCache.add()</a></code> が呼ばれたことによってキャッシュに追加されたファイルが、適切な HTTP キャッシュ規則に従い、一時キャッシュに取得されます。この一時キャッシュに取得された各ファイル毎に、ブラウザーは <code>applicationCache</code> オブジェクトに <code>progress</code> イベントを送ります。エラーが起こった場合、ブラウザーは <code>error</code> イベントを送り、更新は中止されます。</li>
+ <li>すべてのファイルが正常に取得されれば、それらは本当のオフラインキャッシュに動的に移動され、<code>applicationCache</code> オブジェクトに <code>cached</code> イベントを送ります。文書は既にキャッシュからブラウザーに読み込まれているので、更新された文書は文書が（手動かプログラムで）再読込されるまで描画されません。</li>
+</ol>
+
+<h2 id="Storage_location_and_clearing_the_offline_cache" name="Storage_location_and_clearing_the_offline_cache">ストレージの場所とオフラインキャッシュをクリアする</h2>
+
+<p>Chrome では、設定の "閲覧履歴データの消去..." を選択することか、<a class="external">chrome://appcache-internals/</a> を開くことで、オフラインキャッシュをクリアできます。Safari では、設定に、似たような "キャッシュを空にする" がありますが、ブラウザーの再起動も必要になるかもしれません。</p>
+
+<p>Firefox では、オフラインキャッシュデータは Firefox プロファイルに分割して保存されています。以下が通常のディスクキャッシュです:</p>
+
+<ul>
+ <li>Windows Vista/7: <code>C:\Users\&lt;username&gt;\AppData\<strong>Local</strong>\Mozilla\Firefox\Profiles\&lt;salt&gt;.&lt;profile name&gt;\OfflineCache</code></li>
+ <li>Mac/Linux: <code>/Users/&lt;username&gt;/Library/Caches/Firefox/Profiles/&lt;salt&gt;.&lt;profile name&gt;/OfflineCache</code></li>
+</ul>
+
+<p>Firefox では、現在のステータスを <code>about:cache</code> ページ ("Offline cache device" の見出しがある箇所) で調査できます。オフラインキャッシュは ツール -&gt; オプション -&gt; 詳細 -&gt; ネットワーク -&gt; オフラインデータ の "削除..." ボタンを利用して各サイト毎に別々にクリアできます。</p>
+
+<p>Firefox 11 以前から Firefox 11 まで、ツール -&gt; 最近の履歴を消去、あるいは、ツール -&gt; オプション -&gt; 詳細 -&gt; ネットワーク -&gt; オフラインデータ -&gt; 今すぐ消去 のどちらでもオフラインキャッシュを消せませんでしたが、このバグは修正されました。</p>
+
+<p>Linux では、設定は Edit &gt; Preferences &gt; Advanced &gt; Network &gt; Offline Web Content and User Data にあります。</p>
+
+<p><a href="/ja/DOM/Storage#Storage_location_and_clearing_the_data">DOM Storage データをクリアする</a>も参照してください。</p>
+
+<p>アプリケーションキャッシュはもう利用されない状態にもなり得ます。アプリケーションマニフェストファイルがサーバーーから削除されたとき、ブラウザーはそのマニフェストを利用しているアプリケーションキャッシュをすべて削除し、<code>applicationCache</code> オブジェクトに "obsoleted" イベントを送信します。これはアプリケーションキャッシュの状態を <code>OBSOLETE</code> に設定します。</p>
+
+<h2 id="The_cache_manifest_file" name="The_cache_manifest_file">キャッシュマニフェストファイル</h2>
+
+<h3 id="Referencing_a_cache_manifest_file" name="Referencing_a_cache_manifest_file">キャッシュマニフェストファイルを参照する</h3>
+
+<p>ウェブアプリケーションでの <code>manifest</code> 属性は、キャッシュマニフェストファイルからの相対パスか絶対 URL のどちらかを指定できます。 (絶対 URL はアプリケーションと同一生成元経由でなければなりません)。キャッシュマニフェストファイルはどんなファイル拡張子でもかまいませんが、<code>text/cache-manifest</code> MIME タイプで提供されなければなりません。</p>
+
+<div class="note"><strong>注: </strong>Apache サーバーでは、マニフェストファイル (.appcache) ファイルを設定するために、ルートディレクトリ又はアプリケーションと同じディレクトリの .htaccess ファイルに <code>AddType text/cache-manifest .appcache</code> を追加します。</div>
+
+<h3 id="Entries_in_a_cache_manifest_file" name="Entries_in_a_cache_manifest_file">キャッシュマニフェストファイルのエントリー</h3>
+
+<p>キャッシュマニフェストファイルはブラウザーがオフラインアクセスのためにキャッシュすべきリソースを列挙した単純なテキストファイルです。リソースは URI によって区別されます。キャッシュマニフェストに列挙されたエントリーはマニフェストと同じスキーマ、ホスト、およびポートでなければなりません。</p>
+
+<h3 id="Example_1_a_simple_cache_manifest_file" name="Example_1_a_simple_cache_manifest_file">例 1: 単純なキャッシュマニフェストファイル</h3>
+
+<p>以下は、<span class="nowiki">www.example.com</span> にある想像上のウェブサイトのための単純なキャッシュマニフェストファイルである <code>example.appcache です。</code></p>
+
+<pre class="eval notranslate">CACHE MANIFEST
+# v1 - 2011-08-13
+# これはコメントです。
+<span class="nowiki">http://www.example.com/index.html</span>
+<span class="nowiki">http://www.example.com/header.png</span>
+<span class="nowiki">http://www.example.com/blah/blah</span>
+</pre>
+
+<p>キャッシュマニフェストファイルは3つのセクション (後述する <code>CACHE</code>, <code>NETWORK</code>, <code>FALLBACK</code>) を含んでいます。上記の例では、セクションヘッダーがありません。そのため、すべてのデータ行は明示的 (<code>CACHE</code>) セクションであるとみなされます。これは、ブラウザーは列挙されたリソースのすべてをアプリケーションキャッシュにキャッシュすべきということを意味します。リソースは絶対、もしくは、相対 URL (例：<code>index.html</code>) のどちらかを用いて指定できます。</p>
+
+<p>上記例での "v1" コメントがあるのには正当な理由があります。ブラウザーがアプリケーションキャッシュを更新するのは、マニフェストファイルがバイト単位で更新されたときだからです。キャッシュされたリソースを変更したとき (例えば、 <code>header.png</code> 画像を新しい画像に差し替えた場合)、ブラウザーにキャッシュの更新が必要であることを知らせるためにマニフェストファイルの内容も変更する必要があります。どんな変更でもマニフェストファイルに対して行うことができますが、バージョン番号を修正することが、おすすめできるベストプラクティスです。</p>
+
+<div class="warning"><strong>重要:</strong> マニフェストファイル自身をキャッシュマニフェストファイルに指定しないようにしてください。さもなければ、ブラウザーは新しいマニフェストが利用可能であることを知ることがほぼ不可能になるでしょう。</div>
+
+<h3 id="Sections_in_a_cache_manifest_file_CACHE_NETWORK_and_FALLBACK" name="Sections_in_a_cache_manifest_file_CACHE_NETWORK_and_FALLBACK">キャッシュマニフェストファイルのセクション: <code>CACHE</code>, <code>NETWORK</code>, <code>FALLBACK</code></h3>
+
+<p>マニフェストには3つの性質が異なるセクション、 <code>CACHE</code>、<code>NETWORK</code>、<code>FALLBACK</code> があります。</p>
+
+<dl>
+ <dt><code>CACHE:</code></dt>
+ <dd>これはキャッシュマニフェストファイルにおけるエントリーの既定のセクションです。<code>CACHE:</code> セクションヘッダー下 (もしくは <code>CACHE MANIFEST</code> の行の直後) に列挙されたファイルは、それらが初回時にダウンロードされた後に明示的にキャッシュされます。</dd>
+ <dt><code>NETWORK:</code></dt>
+ <dd><code>キャッシュマニフェストファイルにおける NETWORK</code> セクションヘッダー下に列挙されたファイルは、サーバーーに接続する必要があるホワイトリスト化されたリソースです。ユーザーがオフライン状態であっても、これらのリソースへのリクエストはすべてキャッシュを無視します。ワイルドカードが利用できます。</dd>
+ <dt><code>FALLBACK:</code></dt>
+ <dd><code>FALLBACK:</code> セクションは、リソースにアクセス不可能な場合にブラウザーが利用すべき代替ページを指定します。このセクションにおける各エントリーには 2 つの URI を列挙します。具体的には、最初はリソースであり、2 番目は代替リソースです。両方の URL は相対で、マニフェストファイルと同一生成元経由でなければなりません。ワイルドカードが利用できます。</dd>
+</dl>
+
+<p><code>CACHE</code>,　<code>NETWORK</code>, <code>FALLBACK</code> の各セクションは、キャッシュマニフェストファイル内でどんな順番でも列挙でき、各セクションは単一のマニフェストにおいて、複数回定義することができます。</p>
+
+<h3 id="Example_2_a_more_complete_cache_manifest_file" name="Example_2_a_more_complete_cache_manifest_file">例 2: より完全なキャッシュマニフェストファイル</h3>
+
+<p>以下は、 <span class="nowiki">www.example.com</span> にある想像上のウェブサイト向けのより完全なキャッシュマニフェストファイルです:</p>
+
+<pre class="eval notranslate">CACHE MANIFEST
+# v1 2011-08-14
+# これは別のコメントです
+index.html
+cache.html
+style.css
+image1.png
+
+# 利用可能ならネットワーク経由で利用する
+NETWORK:
+network.html
+
+# 代替コンテンツ
+FALLBACK:
+. fallback.html
+</pre>
+
+<p>この例は <code>NETWORK</code> と <code>FALLBACK</code> セクションを用いて、 <code>network.html</code> ページは常にネットワーク経由で取得し、 <code>fallback.html</code> ページは代替リソース (例えば、サーバーへの接続ができない場合) として提供されるべきであることを指定しています。</p>
+
+<h3 id="Structure_of_a_cache_manifest_file" name="Structure_of_a_cache_manifest_file">キャッシュマニフェストファイルの構造</h3>
+
+<p>キャッシュマニフェストファイルは <code>text/cache-manifest</code> という MIME タイプで提供される必要があります。この MIME タイプを使って提供されるすべてのリソースは、このセクションで定義されている、アプリケーションキャッシュマニフェストのための構文に従う必要があります。</p>
+
+<p>キャッシュマニフェストは UTF-8 形式のテキストファイルで、任意で BOM 文字を含むこともできます。改行文字は、ラインフィード (<code>U+000A</code>)、キャリッジリターン (<code>U+000D</code>)、あるいはその両方で表すことができます。</p>
+
+<p>キャッシュマニフェストの1行目は、ゼロあるいはそれ以上のスペースまたはタブ文字に続けて「CACHE MANIFEST」という文字列で構成される必要があります。2 つの単語の間にはひとつのスペース (<code>U+0020</code>) が含まれます。1行目に書かれたそれ以外の文字列は無視されます。</p>
+
+<p>キャッシュマニフェストの残りの部分は、ゼロあるいはそれ以上の、以下の行によって構成されます:</p>
+
+<dl>
+ <dt>空白行</dt>
+ <dd>ゼロあるいはそれ以上のスペースまたはタブ文字から成る空白行を用いることができます。</dd>
+ <dt>コメント</dt>
+ <dd>コメントは、ひとつの <code>#</code> 文字に続くゼロあるいはそれ以上のスペースまたはタブ文字と、それに続くゼロあるいはそれ以上のコメント文字列によって構成されます。コメントは (最初の <code>CACHE MANIFEST</code> 行の後の) 単独の行のみで用いることができ、他の行に付加することはできません。これは、フラグメント識別子を指定できないことを意味します。</dd>
+ <dt>セクションヘッダー</dt>
+ <dd>セクションヘッダーは、キャッシュマニフェストのどのセクションが操作されるかを示すものです。3種類のセクションヘッダーを用いることができます:</dd>
+</dl>
+
+<blockquote>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>セクションヘッダー</th>
+   <th>説明</th>
+  </tr>
+  <tr>
+   <td><code>CACHE:</code></td>
+   <td>キャッシュマニフェストの明示的セクションに切り替えます。これは既定のセクションです。</td>
+  </tr>
+  <tr>
+   <td><code>NETWORK:</code></td>
+   <td>キャッシュマニフェストのオンラインホワイトリストセクションに切り替えます。</td>
+  </tr>
+  <tr>
+   <td><code>FALLBACK:</code></td>
+   <td>キャッシュマニフェストの代替セクションに切り替えます。</td>
+  </tr>
+ </tbody>
+</table>
+</blockquote>
+
+<dl>
+ <dd>セクションヘッダ行には空白を含めることも可能ですが、セクション名には必ずコロンを含める必要があります。</dd>
+ <dt>セクションデータ</dt>
+ <dd>データ行の形式はセクションとごとに異なります。明示的 (<code>CACHE:</code>) セクションでは、各行は、キャッシュのリソースを参照する妥当な URI または IRI です（このセクションではワイルドカード文字は一切利用できません）。各行の URI または IRI の前後には空白を含めることも可能です。 Fallback セクションでは、各行は、リソースと、それに続いて、サーバーとの接続ができないときに提供される代替リソースを参照する妥当な URI または IRI です。ネットワークセクションでは、各行は、ネットワークから取得できるリソースを参照する 妥当な URI または IRI です（このセクションではワイルドカード文字である <code>*</code> が利用できます）。
+ <div class="note"><strong>注意: </strong>相対 URI は、マニフェストを参照する文書の URI ではなく、キャッシュマニフェストの URI からの相対となります。</div>
+ </dd>
+</dl>
+
+<p>キャッシュマニフェストは、それぞれのセクションを任意で行き来することができます (つまり、各セクションヘッダを複数回用いることができます)。また、セクションを空白にしておくことも許容されています。</p>
+
+<h2 id="Resources_in_an_application_cache" name="Resources_in_an_application_cache">アプリケーションキャッシュ内のリソース</h2>
+
+<p>アプリケーションキャッシュには、少なくとも 1 つの URI で識別されるリソースが常に含まれています。すべてのリソースは以下のカテゴリのいずれかに当てはまります。</p>
+
+<dl>
+ <dt>マスターエントリ</dt>
+ <dd>これらは、ユーザーが訪問した閲覧コンテキストに、 <code>manifest</code> 属性を使用してこのキャッシュにあることを示す文書が含まれていたためにキャッシュに追加されたリソースです。</dd>
+ <dt>明示的なエントリ</dt>
+ <dd>これらはアプリケーションのキャッシュマニフェストファイルに明示的に掲載されているリソースです。</dd>
+ <dt>ネットワークエントリ</dt>
+ <dd>これらはアプリケーションのキャッシュマニフェストファイルにネットワークエントリとして掲載されているリソースです。</dd>
+ <dt>フォールバックエントリ</dt>
+ <dd>これらはアプリケーションのキャッシュマニフェストファイルにフォールバックエントリとして掲載されているリソースです。</dd>
+</dl>
+
+<div class="note"><strong>注:</strong> リソースは複数のカテゴリでタグ付けすることができるので、複数のエントリに分類することができます。例えば、エントリは明示的なエントリと予備のエントリの両方を持つことができます。</div>
+
+<p>リソースのカテゴリについては、以下で詳しく説明します。</p>
+
+<h3 id="Master_entries" name="Master_entries">マスターエントリ</h3>
+
+<p>マスターエントリとは、 {{HTMLAttrxRef("manifest", "html")}} 属性を {{HTMLElement("html")}} 要素に含む HTML ファイルのことです。例えば、<a href="http://www.example.com/entry.html">http://www.example.com/entry.html</a> という HTML ファイルがあるとします。</p>
+
+<pre class="brush: html notranslate">&lt;html manifest="example.appcache"&gt;
+  &lt;h1&gt;アプリケーションキャッシュの例&lt;/h1&gt;
+&lt;/html&gt;
+</pre>
+
+<p><code>entry.html</code> が <code>example.appcache</code> キャッシュマニフェストファイルに掲載されていない場合、 <code>entry.html</code> ページにアクセスすると、　<code>entry.html</code> がマスターエントリとしてアプリケーションキャッシュに追加されます。</p>
+
+<h3 id="Explicit_entries" name="Explicit_entries">明示的なエントリ</h3>
+
+<p>明示的なエントリは、キャッシュマニフェストファイルの <code>CACHE</code> セクションに明示的にリストされたリソースです。</p>
+
+<h3 id="Network_entries" name="Network_entries">ネットワークエントリ</h3>
+
+<p>キャッシュマニフェストファイルの <code>NETWORK</code> セクションは、ウェブアプリケーションがオンラインアクセスを必要とするリソースを指定します。アプリケーションキャッシュ内のネットワークエントリは本質的に「オンラインホワイトリスト」であり、 <code>NETWORK</code> セクションで指定された URI はキャッシュの代わりにサーバーから読み込まれます。これにより、ブラウザーのセキュリティモデルは、承認されたリソースへのアクセスを制限することで、潜在的なセキュリティ侵害からユーザーを保護することができます。</p>
+
+<p>例として、ネットワークエントリを使用して、キャッシュの代わりにサーバーからスクリプトなどのコードをロードして実行することができます。</p>
+
+<pre class="eval notranslate">CACHE MANIFEST
+NETWORK:
+/api
+</pre>
+
+<p>上記のキャッシュマニフェストセクションは、 <code><a href="http://www.example.com/api/" rel="freelink">http://www.example.com/api/</a></code> サブツリーに含まれるリソースをロードするリクエストが、キャッシュにアクセスしようとせずに常にネットワークに移動することを保証します。</p>
+
+<div class="note"><strong>注</strong>: マスターエントリ (<code>html</code> 要素に設定された <code>manifest</code> 属性を持つファイル) をマニフェストファイルから単に省略しても、マスターエントリはアプリケーションキャッシュに追加され、その後アプリケーションキャッシュから提供されるため、同じ結果にはなりません。</div>
+
+<h3 id="Fallback_entries" name="Fallback_entries">フォールバックエントリ</h3>
+
+<p>フォールバックエントリは、リソースの読み込みに失敗したときに使用されます。例えば、キャッシュマニフェストファイル <code><a href="http://www.example.com/example.appcache" rel="freelink">http://www.example.com/example.appcache</a></code> に以下の内容が含まれているとします。</p>
+
+<pre class="eval notranslate">CACHE MANIFEST
+FALLBACK:
+example/bar/ example.html
+</pre>
+
+<p><code><a href="http://www.example.com/example/bar/" rel="freelink">http://www.example.com/example/bar/</a></code> またはそのサブディレクトリとそのコンテンツへのリクエストにより、ブラウザーはリクエストされたリソースの読み込みを試みるためのネットワークリクエストを発行します。この試みがネットワーク障害や何らかのサーバーエラーのために失敗した場合、ブラウザーは代わりに <code>example.html</code> というファイルをロードします。</p>
+
+<h2 id="Cache_states" name="Cache_states">キャッシュ状態</h2>
+
+<p>各アプリケーションキャッシュは、キャッシュの現在の状態を示す<strong>状態</strong>を持っています。同じマニフェスト URI を共有するキャッシュは同じキャッシュの状態を共有します。</p>
+
+<dl>
+ <dt><code>UNCACHED</code></dt>
+ <dd>アプリケーションキャッシュオブジェクトが完全に初期化されていないことを示す特別な値です。</dd>
+ <dt><code>IDLE</code></dt>
+ <dd>アプリケーションキャッシュは現在更新中ではありません。</dd>
+ <dt><code>CHECKING</code></dt>
+ <dd>マニフェストを取得し、更新をチェックしています。</dd>
+ <dt><code>DOWNLOADING</code></dt>
+ <dd>リソースのマニフェストが変更されたため、キャッシュに追加するためにリソースをダウンロードしています。</dd>
+ <dt><code>UPDATEREADY</code></dt>
+ <dd>新しいバージョンのアプリケーションキャッシュが利用可能です。対応する <code>updateready</code> イベントがあり、新しい更新プログラムがダウンロードされたが <code>swapCache()</code> メソッドを使用してまだ有効化されていない場合に <code>cached</code> イベントの代わりに発生します。</dd>
+ <dt><code>OBSOLETE</code></dt>
+ <dd>アプリケーションキャッシュグループは廃止されました。</dd>
+</dl>
+
+<h2 id="Testing_for_updates_to_the_cache_manifest" name="Testing_for_updates_to_the_cache_manifest">キャッシュマニフェストの更新の確認</h2>
+
+<p>JavaScript を使用して、アプリケーションが更新されたキャッシュマニフェストファイルを持っているかどうかをプログラムでテストすることができます。スクリプトが更新をテストするためにイベントリスナーをアタッチする前にキャッシュマニフェストファイルが更新されている可能性があるので、スクリプトは常に <code>window.applicationCache.status</code> をテストする必要があります。</p>
+
+<pre class="brush: js notranslate">function onUpdateReady() {
+  console.log('found new version!');
+}
+window.applicationCache.addEventListener('updateready', onUpdateReady);
+if(window.applicationCache.status === window.applicationCache.UPDATEREADY) {
+  onUpdateReady();
+}</pre>
+
+<p>新しいマニフェスト ファイルのテストを手動で開始するには、 <code>window.applicationCache.update()</code> を使用してください。</p>
+
+<h2 id="Gotchas">Gotchas</h2>
+
+<ul>
+ <li>従来の GET 引数 (<code>other-cached-page.html?parameterName=value</code>) を使用してキャッシュされたファイルにアクセスしないでください。これは、ブラウザーがキャッシュをバイパスしてネットワークから取得しようとすることになります。 JavaScript で解析されたパラメータを持つキャッシュされたリソースにリンクするには、リンクのハッシュ部分に <code>other-cached-page.html#whatever?parameterName=value</code> のような引数を使用します。</li>
+ <li>アプリケーションがキャッシュされている場合、ウェブページで使用されるリソース (ファイル) を更新するだけでは、キャッシュされたファイルを更新することはできません。ブラウザーが更新されたファイルを取得して使用する前に、キャッシュマニフェストファイル自体を更新する必要があります。これは <code>window.applicationCache.swapCache()</code> を使用してプログラムで行うことができますが、すでに読み込まれているリソースは影響を受けません。リソースが新しいバージョンのアプリケーションキャッシュから読み込まれるようにするには、ページをリフレッシュするのが理想的です。</li>
+ <li>ウェブサーバー上で <code>*.appcache</code> ファイルの expires ヘッダを設定して、すぐに期限切れになるようにすることをお勧めします。これにより、マニフェストファイルをキャッシュするリスクを回避することができます。例えば、 Apache ではこのような設定を次のように指定することができます。<br>
+  <code>ExpiresByType text/cache-manifest "access plus 0 seconds"</code></li>
+</ul>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+
+<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
+
+<p>{{Compat("html.elements.html.manifest")}}</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><a href="https://web.dev/appcache-removal/">Preparing for AppCache Removal</a> - web.dev blog with useful timeline information</li>
+ <li><a href="http://www.html5rocks.com/en/tutorials/appcache/beginner/">HTML5Rocks - A Beginner's Guide to Using the Application Cache</a></li>
+ <li><a href="http://appcache.offline.technology/">Appcache Facts</a> - detailed information on AppCache idiosyncrasies</li>
+ <li><a href="https://alistapart.com/article/application-cache-is-a-douchebag">A List Apart: Application Cache is a Douchebag</a>
+  <ul>
+   <li><a href="https://flailingmonkey.com/application-cache-not-a-douchebag">The Application Cache is no longer a Douchebag</a> - an overview of the app cache debugging tools added in Firefox 23.</li>
+  </ul>
+ </li>
+ <li><a href="https://hacks.mozilla.org/2010/01/offline-web-applications/">offline web applications</a> at hacks.mozilla.org - showcases an offline app demo and explains how it works.</li>
+ <li><a href="https://html.spec.whatwg.org/multipage/offline.html#offline">HTML 5 working draft: Offline web applications</a></li>
+ <li><a href="https://www.w3.org/TR/offline-webapps/">W3C Working Group Note: Offline Web Applications</a></li>
+ <li><a href="http://developer.teradata.com/blog/js186040/2011/11/html5-cache-manifest-an-off-label-usage">HTML5 Cache Manifest: An Off-label Usage</a></li>
+ <li><a href="http://www.ibm.com/developerworks/web/library/wa-ffox3/">Get ready for Firefox 3.0 - A Web developer's guide to the many new features in this popular browser, especially the offline application features</a> (IBM developerWorks)</li>
+ <li><a href="/ja/docs/Application_cache_implementation_overview">アプリケーションキャッシュ実装の概要</a></li>
+ <li><a href="//www.onlinewebcheck.com/check.php?adv=1">OnlineWebCheck.com - Check cache manifest file syntax</a> (Desktop app for Windows)</li>
+</ul>

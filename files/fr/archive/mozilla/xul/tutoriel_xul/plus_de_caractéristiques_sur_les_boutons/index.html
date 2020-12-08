@@ -1,0 +1,107 @@
+---
+title: Plus de caractéristiques sur les boutons
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Plus_de_caractéristiques_sur_les_boutons
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/More_Button_Features
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Utilisation_des_spacers" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Le_modèle_de_boîte">Suivant  »</a></p>
+</div>
+
+<p>Dans ce chapitre, nous allons voir quelques fonctionnalités supplémentaires des boutons.</p>
+
+<h3 id="Ajouter_une_image" name="Ajouter_une_image">Ajouter une image</h3>
+
+<p>Vous pouvez ajouter une image dans un bouton en spécifiant une adresse <abbr title="Uniform Resource Locator">URL</abbr> dans l'attribut <code id="a-image"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/image">image</a></code>. L'image chargée à partir de l'URL, qui peut être relative ou absolue, sera affichée sur le bouton.</p>
+
+<p>Le bouton sur l'exemple ci-dessous aura en même temps un libellé et une image 'happy.png'. L'image apparaîtra à gauche du libellé. Vous pouvez changer cette position en utilisant deux autres attributs. Ils seront expliqués dans un moment.</p>
+
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_1.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_1">Voir</a></p>
+
+<pre>&lt;button label="Aide" image="happy.png"/&gt;</pre>
+
+<h4 id="Bouton_avec_une_image_CSS" name="Bouton_avec_une_image_CSS">Bouton avec une image CSS</h4>
+
+<p>Une autre façon de procéder consiste à spécifier une image en utilisant la propriété de <code id="a-style"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/style">style</a></code> CSS <a href="/fr/docs/Web/CSS/list-style-image" title="La propriété list-style-image définit l'image utilisée comme puce devant les éléments de listes. On peut également utiliser la propriété raccourcie list-style."><code>list-style-image</code></a> appliquée au bouton. Cette méthode permet de changer l'apparence (dans ce cas, l'apparence de l'image) sans modifier le fichier XUL. Un exemple vous est montré ci-dessous.</p>
+
+<p><span id="Exemple_2"><a id="Exemple_2"></a><strong>Exemple 2</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_2.xul">Voir</a></p>
+
+<pre>&lt;button id="find-button"
+   label="Chercher" style="list-style-image: url('happy.png')"/&gt;
+</pre>
+
+<p>Dans ce cas, l'image 'happy.png' est affichée sur le bouton. L'attribut <code id="a-style"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/style">style</a></code> fonctionne de façon similaire à son homologue HTML. En général, il peut être utilisé sur tous les éléments XUL. Notez qu'il serait plus judicieux de placer toutes les déclarations de styles dans une feuille de style séparée.</p>
+
+<h3 id="Le_positionnement_des_images" name="Le_positionnement_des_images">Le positionnement des images</h3>
+
+<p>Par défaut, l'image sur le bouton apparaît à gauche du libellé. Il y a deux attributs permettant de contrôler sa position.</p>
+
+<p>L'attribut <code id="a-dir"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/dir">dir</a></code> contrôle la direction de l'image et du texte. En définissant cet attribut avec la valeur 'reverse', l'image sera placée à droite du texte. En utilisant la valeur 'normal', ou en omettant cet attribut, l'image sera placée à gauche du texte.</p>
+
+<div class="note"><abbr title="Note du Traducteur">NdT</abbr> : Sur de vieilles versions de Mozilla, les valeurs à utiliser sont respectivement 'rtl' (right-to-left) et 'ltr' (left-to-right).</div>
+
+<p>L'attribut <code id="a-orient"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/orient">orient</a></code> peut être utilisé pour placer l'image au-dessus ou en dessous du texte. Sa valeur par défaut est 'horizontal' et sert à placer l'image à gauche ou à droite. Vous pouvez aussi utiliser la valeur 'vertical' pour placer l'image au-dessus ou en dessous. Dans ce cas, l'attribut <code id="a-dir"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/dir">dir</a></code> contrôle le placement vertical. Les mêmes valeurs sont utilisées, où 'normal' provoque le placement de l'image au-dessus du texte, et 'reverse' provoque le placement de l'image en dessous du texte.</p>
+
+<p><span id="Exemple_3"><a id="Exemple_3"></a><strong>Exemple 3</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_3.xul">Voir</a></p>
+
+<div class="float-right"><img alt="Image:xultu_advbtns1.png" class="internal" src="/@api/deki/files/1492/=Xultu_advbtns1.png"></div>
+
+<pre>&lt;button label="Gauche" image="happy.png"/&gt;
+&lt;button label="Droite" image="happy.png" dir="reverse"/&gt;
+&lt;button label="Dessus" image="happy.png" orient="vertical"/&gt;
+&lt;button label="Dessous" image="happy.png" orient="vertical" dir="reverse"/&gt;
+</pre>
+
+<p>Cet exemple vous montre les quatre types d'alignement des boutons. Notez que les deux attributs ne sont pas spécifiés lorsque leur valeur par défaut est utilisée.</p>
+
+<h3 id="Des_boutons_avec_des_contenus_sp.C3.A9ciaux" name="Des_boutons_avec_des_contenus_sp.C3.A9ciaux">Des boutons avec des contenus spéciaux</h3>
+
+<p>Les boutons peuvent contenir un balisage arbitraire, qui sera représenté dans le bouton. Vous ne l'utiliserez probablement pas très souvent, mais vous pourrez l'utiliser pour créer des éléments personnalisés.</p>
+
+<p>Cet exemple va créer un bouton dans lequel deux mots seront en magenta :</p>
+
+<p><span id="Exemple_4"><a id="Exemple_4"></a><strong>Exemple 4</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_4.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_4.xul">Voir</a></p>
+
+<pre>&lt;button&gt;
+   &lt;description value="Ceci est"/&gt;
+   &lt;description value="un étrange" style="color: purple;"/&gt;
+   &lt;description value="bouton"/&gt;
+&lt;/button&gt;
+</pre>
+
+<p>N'importe quel élément XUL peut être placé à l'intérieur d'un bouton. Les éléments HTML seront ignorés, donc vous devez les intégrer à l'intérieur d'un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/description" title="description">description</a></code>. Si vous spécifiez un attribut <code id="a-label"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/label">label</a></code> sur un bouton, il supplantera n'importe quel autre contenu placé dans la définition du bouton.</p>
+
+<h4 id="Bouton_avec_un_menu_surgissant" name="Bouton_avec_un_menu_surgissant">Bouton avec un menu surgissant</h4>
+
+<p>Vous pouvez mettre un <code><a href="/fr/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> dans un bouton pour générer une liste déroulante lorsque le bouton est enfoncé, à l'instar de l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code>. Toutefois, dans ce cas, vous devez indiquer l'attribut <code id="a-type"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/type">type</a></code> avec la valeur 'menu'.</p>
+
+<p><span id="Exemple_5"><a id="Exemple_5"></a><strong>Exemple 5</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_5.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_5.xul">Voir</a></p>
+
+<div class="float-right"><img alt="Image:xultu_advbtns2.png" class="internal" src="/@api/deki/files/1493/=Xultu_advbtns2.png"></div>
+
+<pre>&lt;button type="menu" label="Périphérique"&gt;
+   &lt;menupopup&gt;
+     &lt;menuitem label="Imprimante"/&gt;
+     &lt;menuitem label="Souris"/&gt;
+     &lt;menuitem label="Clavier"/&gt;
+   &lt;/menupopup&gt;
+&lt;/button&gt;
+</pre>
+
+<p>Dans cet exemple, l'utilisateur doit cliquer sur le bouton pour faire apparaître un menu contenant trois items de menu. Notez que la sélection d'un des items ne change pas le libellé du bouton, contrairement à l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code>. Ce type de bouton est destiné à être utilisé comme un menu, avec des scripts associés à chaque item, exécutant une tâche précise. Nous en verrons plus sur les menus plus tard.</p>
+
+<p>Vous pouvez également affecter la valeur 'menu-button' à l'attribut <code id="a-type"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/type">type</a></code> (<abbr title="Note du Traducteur">NdT</abbr> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_5bis.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_5bis.xul">Voir</a>). Cette valeur crée aussi un bouton avec un menu, mais son apparence est différente. L'image ci-contre montre cette différence. Le bouton de gauche est un 'menu' et celui de droite est un 'menu-button'. Ils ont chacun une flèche pour indiquer la présence d'un menu déroulant. Pour le 'menu', l'utilisateur doit cliquer n'importe où sur le bouton pour ouvrir le menu. Pour le 'menu-button', l'utilisateur doit cliquer sur la flèche pour faire apparaître le menu.</p>
+
+<hr>
+<p>Dans la prochaine section, nous en apprendrons plus sur le positionnement des éléments XUL dans une fenêtre.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Utilisation_des_spacers" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Le_modèle_de_boîte">Suivant  »</a></p>
+</div>
+
+<p><span class="comment">Interwiki</span></p>

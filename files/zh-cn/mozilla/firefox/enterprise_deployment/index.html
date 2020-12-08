@@ -1,0 +1,138 @@
+---
+title: 将火狐部署到企业环境下
+slug: Mozilla/Firefox/Enterprise_deployment
+tags:
+  - 发布 企业环境 火狐 管理员手册
+translation_of: Mozilla/Firefox/Enterprise_deployment_before_60
+---
+<div>{{FirefoxSidebar}}</div><p>本页将为您介绍在企业配置环境下针对Mac OS X、Windows系统中火狐管理的整个流程。如您遇有不清楚的地方，请发送邮件至<a href="mailto:enterprise@mozilla.org?subject=Question%3A">enterprise@mozilla.org</a>。</p>
+
+<h2 id="选择一个火狐的版本">选择一个火狐的版本</h2>
+
+<p> </p>
+
+<h3 id="快速发布版(RR)">快速发布版(RR)</h3>
+
+<p>火狐发布的每一个更新都会将主版本号增加，每6周便会发布新功能、Bug修复信息，如有必要，更新中也会加入额外的安全更新信息。当主版本更新后，Mozilla将不再提供上一版本的Bug修复。</p>
+
+<p>具体更新发布计划请关注Mozilla wiki的<a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates">版本更新日程表</a>中的”发布日程”。</p>
+
+<h3 id="稳定版_(ESR)">稳定版 (ESR)</h3>
+
+<p>火狐每隔7个主版本都会释出一个稳定版的发布内容。这些稳定发布的版本会将54周（9个“六周”一次的更新周期）以来一系列的bug进行修复。这两个版本中都会共同包含第12周（两个发布版本周期）的ESR更新内容。</p>
+
+<p>到目前为止，扩展支持发布版本的版本号有10、17、24和31。</p>
+
+<p>绝大多数企业以及组织机构更倾向与选择ESR版本，主要是因为稳定版发布间隔较长，以让各企业用户有充裕的时间对兼容性进行考核（ESR为42周，而RR则仅为6周），一旦在测试期间发现问题，用户也将拥有12周时间建立解决方案（每12周ESR版本会有重复发布）。</p>
+
+<p>需要注意的是，如果您先使用RR后转为ESR较旧的版本时，将可能受到一些不利因素的影响。即便假设您此前使用的26RR版本火狐，和现改用24.2ESR版本发布于统一天，不同版本差异也会产生不利的因素。这是因为新功能仅会在RR版本发布前加入快速发布版进行评测，但由于一些原因Mozilla决定待功能到某一特定版本后才触发使用，在这之前都会在用户配置文件重将对应功能关闭。一旦您选择了旧版本火狐，用户文档保存的将是最后一次保存的文件，其中即可能设定新功能为启用的状态，进而导致在ESR版中功能失效。如果您执意要从RR过度到ESR版本，您需要等到最新的ESR发布版本释出后再这样做。</p>
+
+<h2 id="安装">安装</h2>
+
+<ol>
+ <li>从<a href="http://www.mozilla.org/firefox/all/">http://www.mozilla.org/firefox/all/</a> (RR)或 <a href="https://www.mozilla.org/firefox/organizations/all.html">https://www.mozilla.org/firefox/organizations/all.html</a> (ESR)处获取发布版本安装包，单击“下载”按钮获取软件包或下载器；</li>
+ <li>根据您选择的安装模式进行安装，命令行下静默安装的参数为 -ms；</li>
+ <li>您也可以额外指定一个INI文件用以指定建立快捷方式等维护服务；具体请参照<a href="https://wiki.mozilla.org/Installer:Command_Line_Arguments">命令行安装参数</a>章节中的相关内容.</li>
+</ol>
+
+<h2 id="设置">设置</h2>
+
+<ol>
+ <li>找到火狐的<strong>程序主文件夹，</strong>（Win7 64位操作系统默认安装位置是 <code>C:\Program Files (x86)\Mozilla Firefox</code>; OSX 10.8 则是默认安装在 <code>/Applications/Firefox.app/Contents/MacOS</code>。下文提到的这些子文件夹都在此程序主文件夹下；</li>
+ <li>在defaults/pref子文件夹中新建一个Javascript文件 <code>autoconfig.js</code> 或者别的名字，但是建议您还是选用英文字母组合命名文件。该文件将告诉火狐查询对应的配置信息（具体请参考 <a href="http://mike.kaply.com/2012/03/15/customizing-firefox-default-preference-files/">自定义火狐的默认选项文件</a>章节重的相关内容），您需要至少写入以下两行：</li>
+ <li>
+  <pre class="brush: js">pref("general.config.filename", "mozilla.cfg");
+pref("general.config.obscure_value", 0);</pre>
+ </li>
+ <li>新建.cfg文件，一般命名为<code>mozilla.cfg</code>，同样的它的文件名也可以用其它名字。它用于匹配识别general.config.filename的内容。将第一个语句跳过或注释掉后便可设置您的选项。具体都有哪些选项，您可参考about:config中的内容写入、或者您也可以参考后面的示例配置选项内容。任何about:config选项都可以通过以下函数之一进行设置：
+  <dl>
+   <dt> </dt>
+   <dt><strong>pref </strong></dt>
+   <dd>此选项可设置每次打开浏览器都按照此配置内容指定用户使用习惯。因此，即便用户在使用过程中可以随意更改偏好，但每次重新启动浏览器，用户之前的配置都将被抹消。如果您需要此方面的相关设置，请在about:config中查找“user set”。</dd>
+   <dt><strong>defaultPref</strong></dt>
+   <dd>此选项可用于修改默认值，但用户通常可以将其更改并将修改内容保存到用户会话中。如果用户偏好被重置，重置的内容将变为此设定值。此项目在about:config的“default”中。</dd>
+   <dt><strong>lockPref</strong></dt>
+   <dd>此选项可用于锁定指定项目，以防止用户在使用过程中通过界面或about:config对指定的配置选项进行修改。 通常锁定项的表现方式是变灰或移除选项内容。在about:config中则显示为“locked”。有一些选项必须通过<span class="author-g-fer323ku83ypu55t"><strong>lockPref</strong>设置比如<strong>app.update.enabled</strong>。如果只用pref设置该内容，该设置无效。</span></dd>
+   <dt><span class="author-g-fer323ku83ypu55t">clearPref</span></dt>
+   <dd><span class="author-g-fer323ku83ypu55t">此选项可以将某些指定的内容“放空”。此选项可以便于跳过某些网站的浏览器版本号检查功能。</span></dd>
+  </dl>
+ </li>
+</ol>
+
+<p>相关内容请您参考<a href="http://mike.kaply.com/2012/03/16/customizing-firefox-autoconfig-files/">自定义火狐的自动配置文件</a>以及<a href="http://mike.kaply.com/2012/03/20/customizing-firefox-autoconfig-files-continued/">继续自定义火狐的自动配置文件</a>中的内容。如果您是倾向于零UI操作的狂热者，您可能需要用到<a href="http://mike.kaply.com/cck2/">CCK2</a>这个扩展。</p>
+
+<h3 id="配置文件示例">配置文件示例</h3>
+
+<p>如果您倾向于配置“极为复杂的用户偏好”，就请跳过这里。自火狐31版发布起，以下示例为您展示了常用的设置选项示例。如果您有某些指定的配置需求，请自行查询<a href="http://kb.mozillazine.org/Knowledge_Base">知识库中</a>的信息。</p>
+
+<pre class="brush: js"><span class="brush: js">//关闭更新器
+lockPref("app.update.enabled", false);
+//确认更新起已经绝对关闭
+lockPref("app.update.auto", false);
+lockPref("app.update.mode", 0);
+lockPref("app.update.service.enabled", false);
+
+//取消插件兼容性检查
+clearPref("extensions.lastAppVersion");
+
+//第一次运行火狐时不再提示“了解您的权益”
+pref("browser.rights.3.shown", true);
+
+//每次更新后不再显示更新发布注记
+pref("browser.startup.homepage_override.mstone","ignore");
+
+//修改主页地址（用户可改）
+defaultPref("browser.startup.homepage", "http://home.example.com");
+
+//关闭浏览器内默认的PDF阅读器
+pref("pdfjs.disabled", true);
+
+//关闭flash、js转换
+pref("shumway.disabled", true);
+
+//不再提示安装flash插件
+pref("plugins.notifyMissingFlash", false);
+
+//关闭插件提示
+lockPref("plugins.hide_infobar_for_outdated_plugin", true);
+clearPref("plugins.update.url");
+
+//关闭健康诊断报告
+lockPref("datareporting.healthreport.service.enabled", false);
+
+</span>// Disable all data upload (Telemetry and FHR)
+lockPref("datareporting.policy.dataSubmissionEnabled", false);
+<span class="brush: js">
+//关闭崩溃报告
+lockPref("toolkit.crashreporter.enabled", false);
+Components.classes["@mozilla.org/toolkit/crash-reporter;1"].getService(Components.interfaces.nsICrashReporter).submitReports = false;</span><em> </em>
+</pre>
+
+<h2 id="扩展包">扩展包</h2>
+
+<ol>
+ <li>安装扩展，通过about:support找到该拓展对应的GUID；</li>
+ <li>找到<a href="https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data">用户配置文件目录</a> (如win7的是：<code>%APPDATA%\Mozilla\Firefox\Profiles</code> ， 在about:support中单击<strong>显示文件夹</strong>，然后在“扩展”下找到你需要的插件。插件文件可能是单独的xpi文件，或者是一个包含多个文件的目录。</li>
+ <li>确定如何发布此扩展。最简单的方式是将xpi直接拽到<strong>程序主文件夹<code>/</code></strong><code>distribution/extensions目录下，但是这仅限于用户配置文件已记录该插件的安装情况。您另外还可以手动打开火狐重新安装。具体请参考</code><a href="http://mike.kaply.com/2012/02/09/integrating-add-ons-into-firefox/">让插件与火狐合二为一</a>的相关章节。</li>
+</ol>
+
+<p>Also keep in mind: <a href="http://mike.kaply.com/2013/05/03/add-on-scopes-redux/">Add-on scopes redux/</a></p>
+
+<h2 id="随时变化">随时变化</h2>
+
+<h3 id="目录结构的变化">目录结构的变化</h3>
+
+<p>到目前为止，火狐的目录结构已经变更过两次。如果您需要使用21版本以前的火狐，请注意以下的变化：</p>
+
+<ul>
+ <li>在14版中，当所有pref设置都写在一个/defaults/pref中的某文件时，设置将可能失效。解决办法是新建文件夹<code>defaults/preferences</code>并将配置文件放在这里；</li>
+ <li>在21版中新加入了browser文件夹。该文件夹将替换之前的.ini文件，<code>defaults/preferences</code>、<code>defaults/profile、</code><code>extensions</code>、<code>plugins以及searchplugins都将放在这里。plugins下的</code>Plug-ins可以通过修改.plugins.load_appdir_plugins 为 <strong>true</strong> 来重新激活。</li>
+</ul>
+
+<p>自动配置<code>general.config.filename</code>和<code>general.config.obscure_value可以在defaults/pref</code>中完成，但文件名应该以英文字母‘a’开头，比如“autoconfig.js”</p>
+
+<p>如果您的版本defaults/pref与插件设置相悖，您可以尝试将目录结构改为和新版一样。</p>
+
+<h3 id="ESR_24.x的变化（有Adobe_PDF支持）">ESR 24.x的变化（有Adobe PDF支持）</h3>
+
+<p>火狐RR19.x起将PDF查看器嵌入到自己内部来， 即便您已经将火狐配置了其它PDF视图软件，但嵌入支持直到24.x版本以后才开始启用。而内容类型描述也与Adobe文档的PDF文件不同，若要取消此功能，请您将前面示例中的pdfjs.disabled改为true即可。</p>

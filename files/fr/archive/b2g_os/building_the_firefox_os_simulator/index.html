@@ -1,0 +1,264 @@
+---
+title: Compilation du Simulateur Firefox OS
+slug: Archive/B2G_OS/Building_the_Firefox_OS_simulator
+tags:
+  - Appareil
+  - Firefox OS
+  - Gaia
+  - Mobile
+  - simulateur
+translation_of: Archive/B2G_OS/Building_the_B2G_OS_simulator
+---
+<div class="summary">
+<p>Le simulateur Firefox OS permet d'exécuter Gaia et des applications Web dans un environnement basé sur Gecko, un peu comme sur un véritable appareil. Il n'émule pas la couche matérielle et n'est donc pas adapté aux tests des APIs des appareils, et ce n'est pas une alternative pour faire des tests sur du vrai matériel. Cependant, il comporte plusieurs APIs qui ne sont pas disponibles sur Firefox comme les APIs <a href="/en-US/docs/WebAPI/Contacts">Contacts</a> et <a href="/en-US/docs/WebAPI/Settings">Settings</a>. Il peut par conséquent être utile pendant le développement de votre application, ou lors du travail sur l'interface utilisateur Gaia elle-même. Cet article aborde le téléchargement et la compilation du simulateur Firefox OS ainsi que son utilisation.</p>
+</div>
+
+<div class="note">
+<p><strong>Note :</strong> La méthode la plus simple pour utiliser le client Firefox OS pour bureau consiste à installer le <a href="/fr/docs/Outils/Simulateur_Firefox_OS">module Simulateur Firefox OS</a> via <a href="/fr/docs/Outils/WebIDE">WebIDE</a>. La compilation du simulateur par vous-même n'est pas nécessaire.</p>
+</div>
+
+<h2 id="Téléchargement_de_la_version_nocturne">Téléchargement de la version nocturne</h2>
+
+<p>Tout comme les <a href="http://nightly.mozilla.org" title="http://nightly.mozilla.org">Nocturnes de Firefox</a>, le simulateur Firefox OS (identifié par <em>b2g-</em>) est automatiquement reconstruit chaque jour à partir du code source le plus récent. La dernière version compilée est <a href="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-central/" title="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-central/">disponible sur le serveur FTP de Mozilla</a>. Assurez-vous de prendre la dernière version et la bonne archive en fonction de votre système d'exploitation. Cela vous évitera de devoir le compiler vous-même. De plus, vous n'aurez pas à télécharger Gaia non plus.</p>
+
+<p>L'application doit être installée dans un endroit accessible en écriture ; elle a besoin de pouvoir mettre à jour le profil Gaia inclus.</p>
+
+<p>Vous pouvez maintenant vous rendre directement à <a href="#Running_the_simulator" title="#Running_the_simulator">Exécution du simulateur</a>, sauf si vous souhaitez réellement le compiler vous-même. Vous devrez le faire dans le cas où vous voulez apporter des modifications au code et tester ces modifications.</p>
+
+<h2 id="Compilation_du_simulateur">Compilation du simulateur</h2>
+
+<p>La première chose nécessaire est la mise en place un <a href="/En/Developer_Guide/Build_Instructions#Build_prerequisites" title="En/Developer_Guide/Build_Instructions#Build_prerequisites">environnement de construction Mozilla standard</a>. Une fois fait, vous pouvez récupérer le code dont vous avez besoin et le configurer pour compiler le client Firefox OS pour ordinateur.</p>
+
+<h3 id="Téléchargement_du_code_pour_la_première_fois">Téléchargement du code pour la première fois</h3>
+
+<p>Dans le répertoire où vous voulez placer le code source, clonez le dépôt <code>mozilla-central</code> qui contient l'ensemble de Gecko :</p>
+
+<pre class="brush: bash"> hg clone http://hg.mozilla.org/mozilla-central</pre>
+
+<p><span style="line-height: 21px;">Sinon, vous pouvez télécharger le même code depuis Github :</span></p>
+
+<pre class="brush: bash"> git clone https://github.com/mozilla/gecko-dev</pre>
+
+<h3 id="Mise_à_jour_du_code">Mise à jour du code</h3>
+
+<p>Pour les compilations ultérieures, il faut être sûr d'avoir récupéré les dernières modifications :</p>
+
+<pre class="brush: bash">cd mozilla-central
+hg pull -u
+</pre>
+
+<p>ou</p>
+
+<pre class="brush: bash">cd gecko-dev
+git pull
+</pre>
+
+<h3 id="Création_de_mozconfig">Création de mozconfig</h3>
+
+<p>Ensuite, vous devez créer un fichier appelé <code>.mozconfig</code> dans le répertoire <code>mozilla-central</code> pour que le système de construction soit configuré pour compiler le client Boot to Gecko au lieu de Firefox. Ce fichier doit avoir le contenu suivant :</p>
+
+<pre class="brush: bash">. "$topsrcdir/b2g/config/mozconfigs/common"
+
+mk_add_options MOZ_OBJDIR=../build # This line should be commented if you use gecko-dev or <code>mozilla-central</code>
+mk_add_options MOZ_MAKE_FLAGS="-j9 -s"
+
+ac_add_options --enable-application=b2g
+ac_add_options --disable-libjpeg-turbo
+
+# This option is required if you want to be able to run Gaia's tests
+ac_add_options --enable-tests
+
+# turn on mozTelephony/mozSms interfaces
+# Only turn this line on if you actually have a dev phone
+# you want to forward to. If you get crashes at startup,
+# make sure this line is commented.
+#ac_add_options --enable-b2g-ril</pre>
+
+<p>Vous devez également inclure la ligne <code>ENABLE_MARIONETTE=1</code> dans le fichier si vous souhaitez exécuter <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Mochitests">Mochitests</a> dans le client B2G pour ordinateur (soit <code>mochitest-b2g-desktop</code>, soit <code>mochitest-plain</code>) ou si vous voulez lancer les <a href="/en-US/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Gaia_UI_Tests_Run_Tests">tests unitaires Gaia</a>.</p>
+
+<h3 id="Compilation">Compilation</h3>
+
+<p>Vous pouvez à présent construire le client pour ordinateur avec la commande suivante (exécutez-la à l'intérieur du répertoire <code>mozilla-central</code>) :</p>
+
+<pre class="brush: bash">./mach build
+</pre>
+
+<p>Le client compilé sera placé dans le répertoire <code>objdir/dist/bin</code> (en fonction de la valeur de <code>MOZ_OBJDIR</code> spécifiée dans le fichier <code>mozconfig</code>).</p>
+
+<div class="note">
+<p><strong>Note :</strong> Si vous avez le moindre problème, commencez par <a href="/fr/docs/Documentation_sur_la_compilation#Pr.C3.A9alables_.C3.A0_la_compilation">vérifier les dépendances</a>.</p>
+</div>
+
+<h2 id="Téléchargement_de_Gaia">Téléchargement de Gaia</h2>
+
+<p>Par défaut, le simulateur affichera un écran vide car il ne sait pas quelle application web il doit charger au démarrage comme application système. L'ensemble des applications système et celles par défaut qui sont fournies avec Firefox OS — Gaia — doivent être téléchargés.</p>
+
+<p>Pour télécharger Gaia pour la première fois, clonez le dépôt contenant le code source sur GitHub :</p>
+
+<pre class="brush: bash">git clone https://github.com/mozilla-b2g/gaia
+cd gaia</pre>
+
+<p>Pour actualiser une copie de Gaia déjà existante, vous pouvez récupérer les dernières modifications depuis GitHub :</p>
+
+<pre class="brush: bash">cd gaia
+git pull
+</pre>
+
+<h2 id="Création_de_custom-settings.json">Création de custom-settings.json</h2>
+
+<p>Si vous savez ce que vous faîtes et que vous souhaitez définir des options de configuration, vous pouvez créer le fichier <code>gaia/build/config/custom-settings.json</code> pour les y ajouter, par exemple :</p>
+
+<pre><span class="brush: js">{
+  "lockscreen.enabled": false,
+  "lockscreen.locked": false,
+  "devtools.debugger.remote-enabled": true
+}</span></pre>
+
+<p>Cet exemple est utile pour outrepasser l'écran de verrouillage, ce dernier étant autrement impossible à passer sur ordinateur car il ne peut pas être déverrouillé avec une souris ou un pavé tactile.</p>
+
+<h2 id="Génération_d'un_profil">Génération d'un profil</h2>
+
+<p>Ensuite, nous devons préparer les applications de Gaia pour le simulateur. Cela comprend le fait d'empaqueter les applications Gaia de la même façon que si elles étaient installées sur l'appareil, ainsi que la mise en place des permissions pour les applications systèmes privilégiées. Cela est réalisé par la génération d'un profil. La commande suivante (à lancer dans le dossier de téléchargement de <code>gaia</code>) effectuera  cette tâche :</p>
+
+<pre class="brush: bash">make DESKTOP_SHIMS=1 NOFTU=1 DEBUG=1
+</pre>
+
+<p>Un dossier <code>profile-debug</code> sera créé sous le répertoire <code>gaia</code>. Le nouveau profil contient une extension personnalisée et d'autres éléments de configuration nécessaires au bon fonctionnement de B2G.</p>
+
+<div class="note">
+<p><strong>Note</strong> : Il existe actuellement un bogue (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1180103" title="B2G desktop client get an empty homescreen when run w/ debug profile (gaia/profile-debug)">bug 1180103</a>) qui fait qu'avec les profils de débogage de Gaia l'écran d'accueil est vide lors de l'exécution avec le Simulateur Firefox OS (depuis WebIDE, ou autre.) Il peut être contourné en compilant avec <code>DEBUG=1 DESKTOP=0 make au lieu de</code> <code>DEBUG=1</code>.</p>
+</div>
+
+<h2 id="Exécution_du_simulateur">Exécution du simulateur</h2>
+
+<p>Une fois que vous avez construit le client (ou téléchargé et installé la version nocturne de l'application de bureau) et téléchargé Gaia , vous êtes prêt à lancer le simulateur.</p>
+
+<h3 id="Exécution_sous_Linux">Exécution sous Linux</h3>
+
+<p>Pour lancer le simulateur sur Linux en utilisant le profil Gaia qu'il contient, exécutez simplement l'exécutable <code>b2g</code>.  Le binaire se trouve dans l'archive téléchargée plus tôt ou dans le répertoire <code>objdir/dist/bin</code> si vous avez compilé le client vous-même.</p>
+
+<pre class="brush: bash">b2g -profile gaia/profile-debug
+</pre>
+
+<p>Vous pouvez rencontrer des problèmes gênants de rendu. Pour les éviter, ajoutez la ligne suivante dans votre fichier <code>gaia/profile/user.js</code> :</p>
+
+<pre>user_pref("layers.acceleration.disabled", true);
+</pre>
+
+<h3 id="Exécution_sur_Mac">Exécution sur Mac</h3>
+
+<p>Si vous avez téléchargé la version Nocturne, vous pouvez l'exécuter simplement à partir du Finder de manière classique. Les sorties de la console sont visibles en lançant l'utilitaire Console standard fourni avec votre Mac.</p>
+
+<p>Si vous souhaitez spécifier un profil Gaia différent (tel que votre téléchargement Gaia fait plus haut), vous devez ignorer le wrapper <code>b2g</code> et exécuter le binaire <code>b2g</code>. La ligne de commandes est légèrement plus compliquée en raison de l'emplacement du binaire <code>b2g</code> et de l'obligation d'utiliser des chemins absolus pour indiquer le répertoire du profil :</p>
+
+<pre>.../B2G.app/Contents/MacOS/b2g-bin -profile /chemin/complet/vers/profile-debug/gaia
+</pre>
+
+<h3 id="Exécution_sous_Windows">Exécution sous Windows</h3>
+
+<p>Exécuter la version Nocturne sous Windows se résume à lancer <code>b2g.exe</code>. Si vous voulez personnaliser l'exécution, vous pouvez le faire en lançant l'exécutable <code>b2g.exe</code> à la place ; cela contourne le wrapper qu'utilise automatiquement Gaia.</p>
+
+<h2 id="Options_de_la_ligne_de_commandes">Options de la ligne de commandes</h2>
+
+<p>Il y a un certain nombre d'options de ligne de commandes qu'il est possible de préciser afin d'ajuster l'expérience lors de l'utilisation du simulateur. Vous pouvez en obtenir une liste avec l'option <code>-help</code>. Cette section en décrit certaines particulièrement intéressantes.</p>
+
+<h3 id="option-screen" name="option-screen">Configuration de la taille de l'écran</h3>
+
+<p>Vous pouvez spécifier la taille de l'écran de l'appareil à simuler avec l'option <code>-screen</code> :</p>
+
+<pre class="brush: bash">b2g -screen<em> &lt;largeur&gt;</em>x<em>&lt;hauteur&gt;</em>@<em>&lt;ppp&gt;</em></pre>
+
+<p>Où <em>&lt;largeur&gt;</em>, <em>&lt;hauteur&gt;</em>, et <em>&lt;ppp&gt;</em> sont des paramètres aux noms explicites : la largeur et la hauteur de l'écran en pixels et la résolution en PPP. Voici des exemples concrets :</p>
+
+<pre class="brush: bash">b2g -screen 320x480
+b2g -screen 320x480@160
+</pre>
+
+<p>De manière facultative, il est possible d'indiquer par leur nom des appareils spécifiques pour simuler leurs tailles d'écran et résolutions :</p>
+
+<ul>
+ <li><code>iphone</code></li>
+ <li><code>ipad</code></li>
+ <li><code>nexus_s</code></li>
+ <li><code>galaxy_nexus</code></li>
+ <li><code>galaxy_tab</code></li>
+ <li><code>wildfire</code></li>
+ <li><code>tattoo</code></li>
+ <li><code>salsa</code></li>
+ <li><code>chacha</code></li>
+</ul>
+
+<p>Ces appareils préréglés sont définis dans <a href="https://github.com/mozilla/gecko-dev/blob/master/b2g/chrome/content/screen.js">screen.js</a>.</p>
+
+<p>Afin de sélectionner des écrans différents, le chemin du profil doit être spécifié comme ceci :</p>
+
+<div class="geckoVersionNote">
+<p>./b2g-bin --profile ./gaia/profile/ --screen=galaxy_tab</p>
+</div>
+
+<h3 id="option-console" name="option-console">Ouverture de la console JavaScript</h3>
+
+<p>La console JavaScript peut être ouverte lors du lancement du simulateur en l'exécutant à partir de la ligne de commandes avec l'option <code>-jsconsole</code>. Après la compilation, tapez :</p>
+
+<pre class="brush: bash">.../b2g -jsconsole -profile <em>/chemin/vers/votre/profil</em></pre>
+
+<p>Si vous avez installé la version Nocturne sur un Mac, vous pouvez utiliser ce qui suit :</p>
+
+<pre class="brush: bash">/Applications/B2G.app/Contents/MacOS/b2g -jsconsole -profile <em>/chemin/vers/votre/profil-debug</em></pre>
+
+<div class="note">
+<p><strong>Note :</strong> Sur les versions de production de Firefox OS, la journalisation vers la console (par exemple <a href="/fr/docs/Web/API/Console/log" title="Affiche un message dans la Console Web."><code>console.log()</code></a>) est désactivée par défaut. Pour l'activer, ouvrez les <a href="/fr/Firefox_OS/Déboguer/Les_paramètres_développeurs">paramètres Développeurs</a> et activez le paramètre <em>Activer la console</em>.</p>
+</div>
+
+<h3 id="option-runapp" name="option-runapp">Exécution d'une application spécifique au démarrage</h3>
+
+<p>Vous pouvez spécifier une application à lancer automatiquement lorsque le simulateur démarre b2g. Son lancement se fera dès que le chargement du reste du système sera terminé. Dans ce but, utilisez simplement l'option <code>-runapp</code>, elle prend comme paramètre le nom de l'application à exécuter. Par exemple :</p>
+
+<pre class="brush: bash"> .../b2g -profile <em>/chemin/vers/votre/profil-debug/gaia</em> -runapp email</pre>
+
+<div class="note">
+<p><strong>Note</strong> : Le nom spécifié est normalisé en le convertissant tout en minuscules et en supprimant tous les tirets et espaces. Ce nom normalisé est ensuite comparé aux noms normalisés similaires extraits des manifestes des applications disponibles. Par exemple, le nom de l'application de courriel est actuellement "E-mail", mais <code>-runapp email</code> fonctionnera grâce à cette normalisation.</p>
+</div>
+
+<p>Si vous spécifiez l'option <code>-runapp</code> sans argument, ou avec un argument vide, le simulateur affichera sur votre terminal une liste des applications connues ainsi qu'un bref message informatif.</p>
+
+<div class="note">
+<p><strong>Note :</strong> L'utilisation de l'option <code>-runapp</code> a pour effet de bord la désactivation de l'écran de verrouillage et sa non-réactivation. Cela implique de ne pas utiliser cette commande avec un profil sur lequel vous voulez tester l'écran de verrouillage, ou le réactiver manuellement en utilisant <em>Paramètres &gt; Écran de verrouillage</em>. N'hésitez pas à contribuer avec un patch pour modifier ce comportement si c'est un problème.</p>
+</div>
+
+<h2 id="Astuces_pratiques">Astuces pratiques</h2>
+
+<p>Cette section offre quelques trucs utiles pour utiliser le client de bureau B2G.</p>
+
+<ul>
+ <li>La touche Échap a la même fonction que le bouton "retour".</li>
+ <li>La touche Début a la même fonction que le bouton "home" ; si vous êtes sur Mac, la touche Début est disponible avec Fn + ← (Fn + Flèche Gauche).</li>
+ <li>La touche Fin a la même fonction que le bouton "power" ; si vous êtes sur Mac, la touche Fin est accessible avec Fn + → (Fn + Flèche Droite).</li>
+ <li>Les touches Page Haut et Page Bas ont respectivement les mêmes fonctions que les boutons "Volume Haut" et "Volume Bas" ; si vous êtes sur Mac, la touche Page Haut est disponible via Fn + ↑ (Fn + Flèche Haut) et Page Bas avec Fn + ↓ (Fn + Flèche Bas).</li>
+ <li>Un appui long sur la touche Home ouvre la "Vue Miniatures" ; sur Mac, Cmd + Fn + ← (Cmd + Fn + Flèche Gauche) ouvre la "Vue Miniatures".</li>
+</ul>
+
+<h2 id="Dépannage_Écran_vide_lors_du_démarrage_du_simulateur">Dépannage : Écran vide lors du démarrage du simulateur</h2>
+
+<p>Lorsque vous démarrez b2g avec <code>b2g -profile gaia/chemin/vers/profil/gaia</code>, un écran vide peut apparaître avec une erreur "Cannot reach app://system.gaiamobile.org". Pour résoudre ce problème, il y a plusieurs choses à vérifier :</p>
+
+<ul>
+ <li>Reconstruire le profil gaia en utilisant le profil <code>DEBUG=1 make</code> du répertoire gaia.</li>
+ <li>Relancer b2g.</li>
+ <li>Si cela ne corrige pas le problème, vérifiez s'il y a d'autres processus en écoute sur le port 8080. Le profil par défaut de Gaia démarre <code>httpd.js</code> qui utilise ce port. Quand un profil de débogage est utilisé, B2G se connecte à localhost:8080. Si un autre processus fonctionne sur ce même port, b2g ne réussira pas à afficher la page d'accueil de gaia.
+  <ol>
+   <li>Pour déterminer si c'est le cas, vous pouvez activer les journaux de <code>httpd.js</code>. Le <code>httpd.js</code> du profil se trouve à l'emplacement <code>gaia/profile/extensions/httpd/content/httpd.js</code>. Ouvrez ce fichier pour édition.</li>
+   <li>Remplacez la ligne <code>var DEBUG=false;</code> par <code>var DEBUG=true;</code></li>
+   <li>Enregistrez le fichier et redémarrez B2G. Vous devriez maintenant voir les journaux d'httpd sur la console.</li>
+  </ol>
+ </li>
+</ul>
+
+<h2 id="Étapes_suivantes">Étapes suivantes</h2>
+
+<p>Maintenant que vous disposez d'une version simulée de Boot to Gecko fonctionnelle, vous pouvez faire des tests, du développement, ou tout autre chose avec :</p>
+
+<ul>
+ <li><a href="/fr/Firefox_OS/Déboguer" title="en/Mozilla/Boot_to_Gecko/Debugging_on_Boot_to_Gecko">Débogage de Boot to Gecko</a></li>
+ <li><a href="/fr/Firefox_OS/Automated_testing" title="en/Mozilla/Boot_to_Gecko/Testing_Boot_to_Gecko">Tester Boot to Gecko</a></li>
+</ul>

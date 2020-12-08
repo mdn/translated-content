@@ -1,0 +1,145 @@
+---
+title: JSDBGAPI 参考
+slug: JSDBGAPI_Reference
+translation_of: Mozilla/Projects/SpiderMonkey/JSDBGAPI
+---
+<p> </p>
+<p><br>
+ Obviously this stuff is almost entirely undocumented.</p>
+<p>See the implementation of the <code>trap, untrap, watch, unwatch, line2pc</code>, and <code>pc2line</code> functions in {{ Source("js/src/shell/js.cpp") }}. Also the (scant) comments in {{ Source("js/src/jsdbgapi.h") }}.</p>
+<h3 id="Breakpoints" name="Breakpoints">Breakpoints</h3>
+<ul>
+ <li><code><a href="/zh-CN/JS_SetTrap" title="zh-CN/JS_SetTrap">JS_SetTrap</a></code></li>
+ <li><code><a href="/zh-CN/JS_GetTrapOpcode" title="zh-CN/JS_GetTrapOpcode">JS_GetTrapOpcode</a></code></li>
+ <li><code><a href="/zh-CN/JS_ClearTrap" title="zh-CN/JS_ClearTrap">JS_ClearTrap</a></code></li>
+ <li><code><a href="/zh-CN/JS_ClearScriptTraps" title="zh-CN/JS_ClearScriptTraps">JS_ClearScriptTraps</a></code></li>
+ <li><code><a href="/zh-CN/JS_ClearAllTraps" title="zh-CN/JS_ClearAllTraps">JS_ClearAllTraps</a></code></li>
+ <li><code><a href="/zh-CN/JS_HandleTrap" title="zh-CN/JS_HandleTrap">JS_HandleTrap</a></code></li>
+ <li><code><a href="/zh-CN/JS_SetInterrupt" title="zh-CN/JS_SetInterrupt">JS_SetInterrupt</a></code></li>
+ <li><code><a href="/zh-CN/JS_ClearInterrupt" title="zh-CN/JS_ClearInterrupt">JS_ClearInterrupt</a></code></li>
+</ul>
+<h3 id="Watchpoints" name="Watchpoints">Watchpoints</h3>
+<ul>
+ <li><code><a href="/zh-CN/JS_SetWatchPoint" title="zh-CN/JS_SetWatchPoint">JS_SetWatchPoint</a></code></li>
+ <li><code><a href="/zh-CN/JS_ClearWatchPoint" title="zh-CN/JS_ClearWatchPoint">JS_ClearWatchPoint</a></code></li>
+ <li><code><a href="/zh-CN/JS_ClearWatchPointsForObject" title="zh-CN/JS_ClearWatchPointsForObject">JS_ClearWatchPointsForObject</a></code></li>
+ <li><code><a href="/zh-CN/JS_ClearAllWatchPoints" title="zh-CN/JS_ClearAllWatchPoints">JS_ClearAllWatchPoints</a></code></li>
+</ul>
+<h3 id="Inspecting_the_stack" name="Inspecting_the_stack">Inspecting the stack</h3>
+<ul>
+ <li><code><a href="/zh-CN/JS_PCToLineNumber" title="zh-CN/JS_PCToLineNumber">JS_PCToLineNumber</a></code></li>
+ <li><code><a href="/zh-CN/JS_LineNumberToPC" title="zh-CN/JS_LineNumberToPC">JS_LineNumberToPC</a></code></li>
+ <li><code><a href="/zh-CN/JS_GetFunctionScript" title="zh-CN/JS_GetFunctionScript">JS_GetFunctionScript</a></code></li>
+ <li><code><a href="/zh-CN/JS_GetFunctionNative" title="zh-CN/JS_GetFunctionNative">JS_GetFunctionNative</a></code></li>
+ <li><code><a href="/zh-CN/JS_GetFunctionFastNative" title="zh-CN/JS_GetFunctionFastNative">JS_GetFunctionFastNative</a></code></li>
+ <li><code><a href="/zh-CN/JS_GetScriptPrincipals" title="zh-CN/JS_GetScriptPrincipals">JS_GetScriptPrincipals</a></code></li>
+</ul>
+<ul>
+ <li>typedef <code><a href="/zh-CN/JSStackFrame" title="zh-CN/JSStackFrame">JSStackFrame</a></code></li>
+ <li><code><a href="/zh-CN/JS_FrameIterator" title="zh-CN/JS_FrameIterator">JS_FrameIterator</a></code></li>
+ <li><code><a href="/zh-CN/JS_GetFrameScript" title="zh-CN/JS_GetFrameScript">JS_GetFrameScript</a></code></li>
+ <li><code><a href="/zh-CN/JS_GetFramePC" title="zh-CN/JS_GetFramePC">JS_GetFramePC</a></code></li>
+ <li><code><a href="/zh-CN/JS_GetScriptedCaller" title="zh-CN/JS_GetScriptedCaller">JS_GetScriptedCaller</a></code></li>
+ <li><code><a href="/zh-CN/JS_StackFramePrincipals" title="zh-CN/JS_StackFramePrincipals">JS_StackFramePrincipals</a></code></li>
+ <li><code><a href="/zh-CN/JS_EvalFramePrincipals" title="zh-CN/JS_EvalFramePrincipals">JS_EvalFramePrincipals</a></code></li>
+ <li><code><a href="/zh-CN/JS_GetFrameAnnotation" title="zh-CN/JS_GetFrameAnnotation">JS_GetFrameAnnotation</a></code></li>
+ <li><code><a href="/zh-CN/JS_SetFrameAnnotation" title="zh-CN/JS_SetFrameAnnotation">JS_SetFrameAnnotation</a></code></li>
+ <li><code><a href="/zh-CN/JS_GetFramePrincipalArray" title="zh-CN/JS_GetFramePrincipalArray">JS_GetFramePrincipalArray</a></code></li>
+ <li><code><a href="/zh-CN/JS_IsNativeFrame" title="zh-CN/JS_IsNativeFrame">JS_IsNativeFrame</a></code></li>
+ <li><code><a href="/zh-CN/JS_GetFrameObject" title="zh-CN/JS_GetFrameObject">JS_GetFrameObject</a></code> {{ Deprecated_inline() }}</li>
+ <li><code><a href="/zh-CN/JS_GetFrameScopeChain" title="zh-CN/JS_GetFrameScopeChain">JS_GetFrameScopeChain</a></code></li>
+ <li><code><a href="/zh-CN/JS_GetFrameCallObject" title="zh-CN/JS_GetFrameCallObject">JS_GetFrameCallObject</a></code></li>
+ <li><code><a href="/zh-CN/JS_GetFrameThis" title="zh-CN/JS_GetFrameThis">JS_GetFrameThis</a></code></li>
+ <li><code><a href="/zh-CN/JS_GetFrameFunction" title="zh-CN/JS_GetFrameFunction">JS_GetFrameFunction</a></code></li>
+ <li><code><a href="/zh-CN/JS_GetFrameFunctionObject" title="zh-CN/JS_GetFrameFunctionObject">JS_GetFrameFunctionObject</a></code></li>
+ <li><code><a href="/zh-CN/JS_IsConstructorFrame" title="zh-CN/JS_IsConstructorFrame">JS_IsConstructorFrame</a></code></li>
+ <li><code><a href="/zh-CN/JS_IsDebuggerFrame" title="zh-CN/JS_IsDebuggerFrame">JS_IsDebuggerFrame</a></code></li>
+ <li><code><a href="/zh-CN/JS_GetFrameReturnValue" title="zh-CN/JS_GetFrameReturnValue">JS_GetFrameReturnValue</a></code></li>
+ <li><code><a href="/zh-CN/JS_SetFrameReturnValue" title="zh-CN/JS_SetFrameReturnValue">JS_SetFrameReturnValue</a></code></li>
+ <li><code><a href="/zh-CN/JS_GetFrameCalleeObject" title="zh-CN/JS_GetFrameCalleeObject">JS_GetFrameCalleeObject</a></code></li>
+</ul>
+<ul>
+ <li><code><a href="/zh-CN/JS_GetScriptFilename" title="zh-CN/JS_GetScriptFilename">JS_GetScriptFilename</a></code></li>
+ <li><code><a href="/zh-CN/JS_GetScriptBaseLineNumber" title="zh-CN/JS_GetScriptBaseLineNumber">JS_GetScriptBaseLineNumber</a></code></li>
+ <li><code><a href="/zh-CN/JS_GetScriptLineExtent" title="zh-CN/JS_GetScriptLineExtent">JS_GetScriptLineExtent</a></code></li>
+ <li><code><a href="/zh-CN/JS_GetScriptVersion" title="zh-CN/JS_GetScriptVersion">JS_GetScriptVersion</a></code></li>
+</ul>
+<ul>
+ <li><code><a href="/zh-CN/JS_GetTopScriptFilenameFlags" title="zh-CN/JS_GetTopScriptFilenameFlags">JS_GetTopScriptFilenameFlags</a></code></li>
+ <li><code><a href="/zh-CN/JS_GetScriptFilenameFlags" title="zh-CN/JS_GetScriptFilenameFlags">JS_GetScriptFilenameFlags</a></code></li>
+ <li><code><a href="/zh-CN/JS_FlagScriptFilenamePrefix" title="zh-CN/JS_FlagScriptFilenamePrefix">JS_FlagScriptFilenamePrefix</a></code></li>
+</ul>
+<ul>
+ <li><code><a href="/zh-CN/JSFILENAME_NULL" title="zh-CN/JSFILENAME_NULL">JSFILENAME_NULL</a></code></li>
+ <li><code><a href="/zh-CN/JSFILENAME_SYSTEM" title="zh-CN/JSFILENAME_SYSTEM">JSFILENAME_SYSTEM</a></code></li>
+ <li><code><a href="/zh-CN/JSFILENAME_PROTECTED" title="zh-CN/JSFILENAME_PROTECTED">JSFILENAME_PROTECTED</a></code></li>
+</ul>
+<h3 id="Evaluating_debug_code" name="Evaluating_debug_code">Evaluating debug code</h3>
+<ul>
+ <li><code><a href="/zh-CN/JS_EvaluateInStackFrame" title="zh-CN/JS_EvaluateInStackFrame">JS_EvaluateInStackFrame</a></code></li>
+</ul>
+<h3 id="Examining_object_properties" name="Examining_object_properties">Examining object properties</h3>
+<ul>
+ <li>typedef <code><a href="/zh-CN/JSPropertyDesc" title="zh-CN/JSPropertyDesc">JSPropertyDesc</a></code></li>
+</ul>
+<ul>
+ <li><code><a href="/zh-CN/JSPD_ENUMERATE" title="zh-CN/JSPD_ENUMERATE">JSPD_ENUMERATE</a></code></li>
+ <li><code><a href="/zh-CN/JSPD_READONLY" title="zh-CN/JSPD_READONLY">JSPD_READONLY</a></code></li>
+ <li><code><a href="/zh-CN/JSPD_PERMANENT" title="zh-CN/JSPD_PERMANENT">JSPD_PERMANENT</a></code></li>
+ <li><code><a href="/zh-CN/JSPD_ALIAS" title="zh-CN/JSPD_ALIAS">JSPD_ALIAS</a></code></li>
+ <li><code><a href="/zh-CN/JSPD_ARGUMENT" title="zh-CN/JSPD_ARGUMENT">JSPD_ARGUMENT</a></code></li>
+ <li><code><a href="/zh-CN/JSPD_VARIABLE" title="zh-CN/JSPD_VARIABLE">JSPD_VARIABLE</a></code></li>
+ <li><code><a href="/zh-CN/JSPD_EXCEPTION" title="zh-CN/JSPD_EXCEPTION">JSPD_EXCEPTION</a></code></li>
+ <li><code><a href="/zh-CN/JSPD_ERROR" title="zh-CN/JSPD_ERROR">JSPD_ERROR</a></code></li>
+</ul>
+<ul>
+ <li>typedef <code><a href="/zh-CN/JSPropertyDescArray" title="zh-CN/JSPropertyDescArray">JSPropertyDescArray</a></code></li>
+</ul>
+<ul>
+ <li><code><a href="/zh-CN/JS_PropertyIterator" title="zh-CN/JS_PropertyIterator">JS_PropertyIterator</a></code></li>
+ <li><code><a href="/zh-CN/JS_GetPropertyDesc" title="zh-CN/JS_GetPropertyDesc">JS_GetPropertyDesc</a></code></li>
+ <li><code><a href="/zh-CN/JS_GetPropertyDescArray" title="zh-CN/JS_GetPropertyDescArray">JS_GetPropertyDescArray</a></code></li>
+ <li><code><a href="/zh-CN/JS_PutPropertyDescArray" title="zh-CN/JS_PutPropertyDescArray">JS_PutPropertyDescArray</a></code></li>
+</ul>
+<h3 id="Hooks" name="Hooks">Hooks</h3>
+<ul>
+ <li><code><a href="/zh-CN/JS_SetDebuggerHandler" title="zh-CN/JS_SetDebuggerHandler">JS_SetDebuggerHandler</a></code></li>
+ <li><code><a href="/zh-CN/JS_SetSourceHandler" title="zh-CN/JS_SetSourceHandler">JS_SetSourceHandler</a></code></li>
+ <li><code><a href="/zh-CN/JS_SetExecuteHook" title="zh-CN/JS_SetExecuteHook">JS_SetExecuteHook</a></code></li>
+ <li><code><a href="/zh-CN/JS_SetCallHook" title="zh-CN/JS_SetCallHook">JS_SetCallHook</a></code></li>
+ <li><code><a href="/zh-CN/JS_SetObjectHook" title="zh-CN/JS_SetObjectHook">JS_SetObjectHook</a></code></li>
+ <li><code><a href="/zh-CN/JS_SetThrowHook" title="zh-CN/JS_SetThrowHook">JS_SetThrowHook</a></code></li>
+ <li><code><a href="/zh-CN/JS_SetDebugErrorHook" title="zh-CN/JS_SetDebugErrorHook">JS_SetDebugErrorHook</a></code></li>
+ <li><code><a href="/zh-CN/JS_SetNewScriptHook" title="zh-CN/JS_SetNewScriptHook">JS_SetNewScriptHook</a></code></li>
+ <li><code><a href="/zh-CN/JS_SetDestroyScriptHook" title="zh-CN/JS_SetDestroyScriptHook">JS_SetDestroyScriptHook</a></code></li>
+</ul>
+<ul>
+ <li><code><a href="/zh-CN/JS_GetGlobalDebugHooks" title="zh-CN/JS_GetGlobalDebugHooks">JS_GetGlobalDebugHooks</a></code></li>
+ <li><code><a href="/zh-CN/JS_SetContextDebugHooks" title="zh-CN/JS_SetContextDebugHooks">JS_SetContextDebugHooks</a></code></li>
+</ul>
+<h3 id="Memory_usage" name="Memory_usage">Memory usage</h3>
+<ul>
+ <li><code><a href="/zh-CN/JS_GetObjectTotalSize" title="zh-CN/JS_GetObjectTotalSize">JS_GetObjectTotalSize</a></code></li>
+ <li><code><a href="/zh-CN/JS_GetFunctionTotalSize" title="zh-CN/JS_GetFunctionTotalSize">JS_GetFunctionTotalSize</a></code></li>
+ <li><code><a href="/zh-CN/JS_GetScriptTotalSize" title="zh-CN/JS_GetScriptTotalSize">JS_GetScriptTotalSize</a></code></li>
+</ul>
+<h3 id="System_objects" name="System_objects">System objects</h3>
+<ul>
+ <li><code><a href="/zh-CN/JS_IsSystemObject" title="zh-CN/JS_IsSystemObject">JS_IsSystemObject</a></code></li>
+ <li><code><a href="/zh-CN/JS_NewSystemObject" title="zh-CN/JS_NewSystemObject">JS_NewSystemObject</a></code></li>
+</ul>
+<h3 id="Profiling" name="Profiling">Profiling</h3>
+<p>These functions can be used to profile a SpiderMonkey application using the Mac profiler, Shark. See <a href="/zh-CN/Profiling_JavaScript_with_Shark" title="zh-CN/Profiling_JavaScript_with_Shark">Profiling JavaScript with Shark</a>.</p>
+<ul>
+ <li><code><a href="/zh-CN/JS_ConnectShark" title="zh-CN/JS_ConnectShark">JS_ConnectShark</a></code></li>
+ <li><code><a href="/zh-CN/JS_DisconnectShark" title="zh-CN/JS_DisconnectShark">JS_DisconnectShark</a></code></li>
+ <li><code><a href="/zh-CN/JS_StartChudRemote" title="zh-CN/JS_StartChudRemote">JS_StartChudRemote</a></code></li>
+ <li><code><a href="/zh-CN/JS_StopChudRemote" title="zh-CN/JS_StopChudRemote">JS_StopChudRemote</a></code></li>
+</ul>
+<p>The following <code><a href="/zh-CN/SpiderMonkey/JSAPI_Reference/JSNative" title="zh-CN/SpiderMonkey/JSAPI_Reference/JSNative">JSNative</a></code> functions can be used to expose the above four APIs to scripts.</p>
+<ul>
+ <li><code><a href="/zh-CN/Js_ConnectShark" title="zh-CN/Js_ConnectShark">js_ConnectShark</a></code></li>
+ <li><code><a href="/zh-CN/Js_DisconnectShark" title="zh-CN/Js_DisconnectShark">js_DisconnectShark</a></code></li>
+ <li><code><a href="/zh-CN/Js_StartShark" title="zh-CN/Js_StartShark">js_StartShark</a></code></li>
+ <li><code><a href="/zh-CN/Js_StopShark" title="zh-CN/Js_StopShark">js_StopShark</a></code></li>
+</ul>

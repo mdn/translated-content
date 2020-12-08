@@ -1,0 +1,131 @@
+---
+title: 'Partie 3 : Améliorer notre code pour en faire un test réutilisable'
+slug: Archive/B2G_OS/Automated_testing/gaia-ui-tests/Partie_3_Tests_reutilisables
+tags:
+  - Firefox OS
+  - Marionette
+  - Python
+  - test
+translation_of: Archive/B2G_OS/Automated_testing/gaia-ui-tests/Part_3_Reusable_tests
+---
+<p></p><div style="text-align: right;" class="prevnext">
+    <p><a style="float: left;" href="/fr/docs/Mozilla/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_2_Marionette_Firefox_OS_interactions">« Précédent</a><a href="/fr/docs/Mozilla/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_4_Reusing_commands_Firefox_OS_setup">Suivant  »</a></p>
+</div><p></p>
+
+<div class="summary">
+<p><span class="seoSummary">Nous avons appris dans la partie 2 que nous pouvions contrôler de manière simple Firefox OS en utilisant les commandes du client Marionette. Néanmoins, les saisir dans une console Python est aussi lent que fastidieux. L'avantage clé de l'automatisation de tests est son exécution autonome. Nous allons apprendre comment faire cela dans cette partie, en mettant toutes nos commandes dans un fichier Python qui pourra s'exécuter d'un seul coup.</span></p>
+</div>
+
+<h2 id="Résumé_d'un_cas_de_test">Résumé d'un cas de test</h2>
+
+<p>Dans la partie 2, nous avons passé les étapes pour exécuter un cas de test typique — ouvrir l'application Contacts et ajouter un nouveau contact :</p>
+
+<ol>
+ <li>Déverrouiller Firefox OS (facultatif ; dans la partie 2 nous avons désactivé l'écran de verrouillage manuellement, en conséquence nous ne l'incluerons pas dans le code ci-dessous)</li>
+ <li>Aller dans l'application Contacts</li>
+ <li>Appuyer sur l'icône d'ajout d'un nouveau contact</li>
+ <li>Saisir le nom du contact</li>
+ <li>Appuyer sur OK</li>
+ <li>Attendre et vérifier que le contact est présent</li>
+</ol>
+
+<h2 id="Mettre_notre_test_dans_un_fichier_Python">Mettre notre test dans un fichier Python</h2>
+
+<p>Si nous mettons toutes ces étapes dans un fichier Python, nous pouvons le réutiliser et l'exécuter bien plus rapidement. Créez un nouveau fichier texte nommé <code>test_add_contact.py</code> dans un dossier convenable de votre choix.</p>
+
+<p>Dans ce fichier, entrez les commandes que nous avons vues dans la partie 2, comme listé ci-dessous. Nous utiliserons une structure de classes Python, puisque c'est une bonne pratique et qui plus est elle constitue une bonne base pour construire les étapes à venir de ce tutoriel.</p>
+
+<pre class="brush: python">import time
+from marionette import Marionette
+
+class TestContacts:
+
+    def __init__(self):
+        self.test_add_contacts()
+
+    def test_add_contacts(self):
+        # Create the client for this session. Assuming you're using the default port on a Marionette instance running locally
+        self.marionette = Marionette()
+        self.marionette.start_session()
+
+        # Switch context to the homescreen iframe and tap on the contacts icon
+        time.sleep(2)
+        home_frame = self.marionette.find_element('css selector', 'div.homescreen iframe')
+        self.marionette.switch_to_frame(home_frame)
+        contacts_icon = self.marionette.find_element('xpath', "//div[@class='icon']//span[contains(text(),'Contacts')]")
+        contacts_icon.tap()
+
+        # Switch context back to the base frame
+        self.marionette.switch_to_frame()
+        time.sleep(2)
+
+        # Switch context to the contacts app
+        contacts_frame = self.marionette.find_element('css selector', "iframe[data-url*='contacts']")
+        self.marionette.switch_to_frame(contacts_frame)
+
+        # Tap [+] to add a new Contact
+        self.marionette.find_element('id', 'add-contact-button').tap()
+        time.sleep(2)
+
+        # Type name into the fields
+        self.marionette.find_element('id', 'givenName').send_keys('John')
+        self.marionette.find_element('id', 'familyName').send_keys('Doe')
+
+        # Tap done
+        self.marionette.find_element('id', 'save-button').tap()
+        time.sleep(2)
+
+        # Close the Marionette session now that the test is finished
+        self.marionette.delete_session()
+
+if __name__ == '__main__':
+    TestContacts()
+</pre>
+
+<div class="note">
+<p><strong>Note </strong>: il y a une chose que vous allez remarquer dans le code que nous n'avons pas couverte dans la partie 2 : la fonction Python <code>time.sleep()</code> — cela met le script en pause pour une certaine durée (définie en secondes) avant qu'il ne continue jusqu'à la ligne suivante. Nous avons ajouté ces lignes dans le test automatisé car nous devons simuler l'utilisateur qui, manuellement, appuie sur les boutons, etc. et attendre que Firefox OS effectue les actions qui en résultent. Si nous exécutons le script sans pause, Python effectuera toutes les actions de manière instantanée, mettant probablement le test en échec, puisque Firefox OS n'aurait pas été capable de s'adapter.</p>
+</div>
+
+<p>À présent, nous pouvons lancer le test en allant dans le fichier où le test est enregistré via le terminal et en exécutant la commande suivante :</p>
+
+<pre class="brush: bash">python test_add_contact.py</pre>
+
+<div class="note">
+<p><strong>Note</strong> : soyez vigilant par rapport aux règles d'identation de Python. Après avoir copié et collé le code vous devrez probablement tout identer correctement pour qu'il s'exécute. Si vous obtenez une erreur liée à ce point, assurez-vous que tous les niveaux d'indentation sont séparés par une tabulation.</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong> : vous remarquerez également que le nom inséré dans le code ci-dessus est "John Doe", à la différence du nom "Foo Bar" de la partie 2. Nous avons fait ce changement dans le code pour qu'il puisse ajouter avec succès un autre contact. Si vous essayez d'ajouter un contact avec le même nom, Firefox OS vous alertera sur le doublon de contacts. Pour l'instant, la meilleure façon de répéter l'exécution du test est d'aller dans l'interface de Firefox OS et de supprimer manuellement le contact avant chaque exécution.</p>
+</div>
+
+<h2 id="Ajouter_une_assertion">Ajouter une assertion</h2>
+
+<p>L'élément qui manque toujours dans notre test, qui est important dans les tests automatisés, est une assertion — un rapport ou mesure pour déterminer si Firefox OS a atteint l'état que nous voulions qu'il atteigne ou si le test est un succès. Nous allons régler ce problème en ajoutant du code pour vérifier si le nouveau contact est présent dans l'application.<br>
+  <br>
+ Juste avant la ligne <code># Close the Marionette session…</code> ajoutez dans ce code, en s'assurant qu'il est indenté au même niveau que les autres lignes de la classe :</p>
+
+<pre class="brush: python"># Now let's find the contact item and get its text
+contact_name = self.marionette.find_element('css selector', 'li.contact-item:not([data-group$="ice"]) p').text
+assert contact_name == 'John Doe'</pre>
+
+<p>Supprimez l'ancien contact et essayer d'exécuter de nouveau le test, avec la commande suivante :</p>
+
+<pre class="brush: bash">python test_add_contact.py</pre>
+
+<p>Si cela s'exécute correctement, alors nous avons un test qui fonctionne !</p>
+
+<div class="note">
+<p><strong>Note </strong>: si l'assertion échoue, assurez-vous que le précédent contact 'Foo Bar' n'existe plus. Le sélecteur CSS avant l'assertion prend en compte le premier contact de la liste (cela pourrait être visible en appelant <code>print "Contact name: %s" % contact_name</code> avant l'appel de l'assertion).</p>
+</div>
+
+<div class="note">
+<p><strong>Note </strong>: l'assertion n'apparaîtra pas pour faire quelque chose, mais les assertions sont très importantes quand nous commençons à utiliser des exécuteurs de tests, comme présenté dans la <a href="/en-US/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_5_Introducing_a_test_runner">Partie 5: Présentation d'un exécuteur de tests</a>. Les exécuteurs de test comme unittest utilisent les assertions pour vérifier si les tests ont été réalisés avec succès ou non, et ensuite retournent les résultats de ces tests (OK ou FAIL.)</p>
+</div>
+
+<h2 id="Note_sur_le_timing">Note sur le timing</h2>
+
+<p>Une des choses les plus difficiles à gérer en écrivant un test automatisé est le timing. Si le test passe à l'étape suivant avant que Firefox OS n'effectue la précédente, alors nous allons probablement avoir un échec du test.<br>
+  <br>
+ Comme mentionné ci-dessus, dans l'exemple de code que nous avons ajouté, la commande <code>time.sleep(x)</code> résout ce problème. Pourtant, utiliser <code>time.sleep(x)</code> n'est pas une bonne pratique. Utiliser une temporisation codée en dur peut faire que le test va s'exécuter trop longtemps ou pas assez. Le dernier cas est le pire ; il donnera des résultats de tests faux négatifs — ce qui signifie un test qui remonte un échec quand en réalité l'application fonctionne parfaitement mais se comporte de manière plus lente que ce que le test espérait.</p>
+
+<p>Dans la partie suivante, nous aborderons l'abstraction de certains points du test vers des fonctions Pythons distinctes,  et remplacerons les fonctions <code>sleep()</code> par les temporisations dynamiques appropriées.</p>

@@ -1,0 +1,407 @@
+---
+title: nsIURI
+slug: Mozilla/Tech/XPCOM/Reference/Interface/nsIURI
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIURI
+---
+<p></p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/netwerk/base/public/nsIURI.idl" rel="custom">netwerk/base/public/nsIURI.idl</a></code><span style="text-align: right; float: right;"><a href="/zh-CN/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">脚本化</a></span></div>
+<span style="padding: 4px 2px;">
+
+这是具有国际化支持的统一资源标识符的接口，提供允许设置和查询URI基本组件的属性以及用于在URI上执行基本操作的方法。
+</span>
+
+<div style="background: #eee; padding: 2px;">
+继承于: <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
+<span style="text-align: right; float: right;">最后修改于Gecko 6.0 (Firefox 6.0 / Thunderbird 6.0 / SeaMonkey 2.3)</span></div>
+</div><p></p>
+
+<p>细节请查看下列 RFCs:</p>
+
+<ul>
+ <li><a class="external" href="http://www.ietf.org/rfc/rfc3490.txt" title="http://www.ietf.org/rfc/rfc3490.txt">RFC3490</a>: 在应用程序中的国际域名 (IDNA)</li>
+ <li><a class="external" href="http://tools.ietf.org/rfc/rfc3986.txt" title="http://tools.ietf.org/rfc/rfc3986.txt">RFC3986</a>: 统一资源标识符 (URI): 通用词法</li>
+ <li><a class="external" href="http://tools.ietf.org/rfc/rfc3987.txt" title="http://tools.ietf.org/rfc/rfc3987.txt">RFC3987</a>: 国际化的内容标识</li>
+</ul>
+
+<p><code>nsIURI</code>的子类,  例如 <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURL" title="">nsIURL</a></code>, 加强了URI未来的结构化.</p>
+
+<p>为了创建一个 <code>nsIURI</code> 对象, 你应该如此使用 <code><a href="https://developer.mozilla.org/zh-CN/docs/XPCOM_Interface_Reference/nsIIOService#newURI()">nsIIOService.newURI()</a></code>:</p>
+
+<pre class="brush: js">function makeURI(aURL, aOriginCharset, aBaseURI) {
+  var ioService = Components.classes["@mozilla.org/network/io-service;1"]
+                  .getService(Components.interfaces.nsIIOService);
+  return ioService.newURI(aURL, aOriginCharset, aBaseURI);
+}
+</pre>
+
+<h2 id="Components_of_a_URI" name="Components_of_a_URI">一个 URI 的组件</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th colspan="7" scope="col" style="text-align: center;">prePath</th>
+   <th colspan="2" scope="col" style="text-align: center;">path</th>
+  </tr>
+  <tr>
+   <th scope="col" style="text-align: center;">scheme</th>
+   <th scope="col" style="text-align: center;"> </th>
+   <th scope="col" style="text-align: center;">userPass</th>
+   <th scope="col" style="text-align: center;"> </th>
+   <th scope="col" style="text-align: center;">host</th>
+   <th scope="col" style="text-align: center;"> </th>
+   <th scope="col" style="text-align: center;">port</th>
+   <th scope="col" style="text-align: center;"> </th>
+   <th scope="col" style="text-align: center;">ref</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td style="text-align: right;">ftp</td>
+   <td>://</td>
+   <td>username@password</td>
+   <td>@</td>
+   <td>hostname</td>
+   <td>:</td>
+   <td>portnumber</td>
+   <td>/pathname?query=value</td>
+   <td>#ref</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Method_overview" name="Method_overview">函数预览</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>nsIURI <a href="#clone()">clone</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>nsIURI <a href="#cloneIgnoringRef()">cloneIgnoringRef</a>();</code> </td>
+  </tr>
+  <tr>
+   <td><code>boolean <a href="#equals()">equals</a>(in nsIURI other);</code></td>
+  </tr>
+  <tr>
+   <td><code>boolean <a href="#equalsExceptRef()">equalsExceptRef</a>(in nsIURI other);</code> </td>
+  </tr>
+  <tr>
+   <td><code>AUTF8String <a href="#resolve()">resolve</a>(in AUTF8String relativePath);</code></td>
+  </tr>
+  <tr>
+   <td><code>boolean <a href="#schemeIs()">schemeIs</a>(in string scheme);</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Attributes" name="Attributes">属性</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">属性</td>
+   <td class="header">类别</td>
+   <td class="header">描述</td>
+  </tr>
+  <tr>
+   <td><code>asciiHost</code></td>
+   <td><code><a href="/en/ACString" title="en/ACString">ACString</a></code></td>
+   <td>
+    <p>The URI <code>host</code> with an ASCII compatible encoding. Follows the IDNA draft specification for converting internationalized domain names (UTF-8) to ASCII for compatibility with existing Internet infrastructure. <strong>Read only.</strong></p>
+
+    <div class="note">
+    <p><strong>Note:</strong> IPv6 addresses are not enclosed in square brackets.</p>
+    </div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>asciiSpec</code></td>
+   <td><code><a href="/en/ACString" title="en/ACString">ACString</a> (US-ASCII)</code></td>
+   <td>The URI spec with an ASCII compatible encoding. The host portion follows the IDNA draft spec. Other parts are URL-escaped per the rules of <a class="external" href="http://tools.ietf.org/rfc/rfc3986.txt" title="http://tools.ietf.org/rfc/rfc3986.txt">RFC3986</a>. The result is strictly ASCII. <strong>Read only.</strong></td>
+  </tr>
+  <tr>
+   <td><code>hasRef</code></td>
+   <td><code>boolean</code></td>
+   <td>Returns if there is a reference portion (the part after the "#") of the URI.<br>
+    <br>
+    </td>
+  </tr>
+  <tr>
+   <td><code>host</code></td>
+   <td><code><a href="/en/AUTF8String" title="en/AUTF8String">AUTF8String</a></code></td>
+   <td>
+    <p>The host is the Internet domain name to which this URI refers. It could be an IPv4 (or IPv6) address literal. If supported, it could be a non-ASCII internationalized domain name.</p>
+
+    <h6 id="Exceptions_thrown">Exceptions thrown</h6>
+
+    <dl>
+     <dt><code>NS_ERROR_FAILURE</code></dt>
+     <dd>If host is not applicable to the URI scheme (e.g. about:blank)</dd>
+    </dl>
+
+    <div class="note"><strong>Note:</strong> Characters are <strong>not</strong> escaped. IPv6 addresses are not enclosed in square brackets.</div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>hostPort</code></td>
+   <td><code><a href="/en/AUTF8String" title="en/AUTF8String">AUTF8String</a></code></td>
+   <td>
+    <p>The "host:port" part of the URI (or simply the host, if port is -1).</p>
+
+    <h6 id="Exceptions_thrown_2">Exceptions thrown</h6>
+
+    <dl>
+     <dt><code>NS_ERROR_FAILURE</code></dt>
+     <dd>If hostPort is not applicable to the URI scheme (e.g. about:blank)</dd>
+    </dl>
+
+    <div class="note"><strong>Note:</strong> Characters are <strong>not</strong> escaped.</div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>originCharset</code></td>
+   <td><code><a href="/en/ACString" title="en/ACString">ACString</a></code></td>
+   <td>
+    <p>The charset of the document from which this URI originated. An empty value implies UTF-8.</p>
+    If this value is something other than UTF-8 then the URI components (for example <code>spec</code>, <code>prePath</code>, <code>username</code>, and so on) are all fully URL-escaped. Otherwise, the URI components may contain unescaped multibyte UTF-8 characters. <strong>Read only.</strong></td>
+  </tr>
+  <tr>
+   <td><code>password</code></td>
+   <td><code><a href="/en/AUTF8String" title="en/AUTF8String">AUTF8String</a></code></td>
+   <td>
+    <p>The optional password, assuming the <code>preHost</code> consists of "username:password".</p>
+
+    <h6 id="Exceptions_thrown_3">Exceptions thrown</h6>
+
+    <dl>
+     <dt><code>NS_ERROR_FAILURE</code></dt>
+     <dd>If password is not applicable to the URI scheme (e.g. about:blank)</dd>
+    </dl>
+
+    <p></p><div class="blockIndicator note"><strong>Note:</strong> Some characters may be escaped.</div><p></p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>path</code></td>
+   <td><code><a href="/en/AUTF8String" title="en/AUTF8String">AUTF8String</a></code></td>
+   <td>
+    <p>The path, typically including at least a leading '/' (but may also be empty, depending on the protocol).</p>
+    <div class="blockIndicator note"><strong>Note:</strong> Some characters may be escaped.</div></td>
+  </tr>
+  <tr>
+   <td><code>port</code></td>
+   <td><code><a href="/en/long" title="en/long">long</a></code></td>
+   <td>
+    <p>The URI's port. A port value of -1 corresponds to the protocol's default port (for example -1 implies port 80 for HTTP URIs).</p>
+
+    <h6 id="Exceptions_thrown_4">Exceptions thrown</h6>
+
+    <dl>
+     <dt><code>NS_ERROR_FAILURE</code></dt>
+     <dd>If port is not applicable to the URI scheme (e.g. about:blank)</dd>
+    </dl>
+   </td>
+  </tr>
+  <tr>
+   <td><code>prePath</code></td>
+   <td><code><a href="/en/AUTF8String" title="en/AUTF8String">AUTF8String</a></code></td>
+   <td>
+    <p>The <code>prePath</code> returns the string before the path (such as "<a class="external" rel="freelink">scheme://user:password@host</a>:port").</p>
+
+    <p>This is related to the <a class="external" href="http://tools.ietf.org/html/rfc6454" title="http://tools.ietf.org/html/rfc6454">Web Origin Concept of RFC6454</a>.</p>
+
+    <p>This is useful for authentication, managing sessions, or for checking the <code>origin</code> of an URI to prevent cross-site scripting attacks while using methods such as <a href="/zh-CN/docs/Web/API/Window/postMessage" title="window.postMessage() 方法可以安全地实现跨源通信。通常，对于两个不同页面的脚本，只有当执行它们的页面位于具有相同的协议（通常为https），端口号（443为https的默认值），以及主机  (两个页面的模数 Document.domain设置为相同的值) 时，这两个脚本才能相互通信。window.postMessage() 方法提供了一种受控机制来规避此限制，只要正确的使用，这种方法就很安全。"><code>window.postMessage()</code></a>.</p>
+    <div class="blockIndicator note"><strong>Note:</strong> Some characters may be escaped.</div> <strong>Read only.</strong></td>
+  </tr>
+  <tr>
+   <td><code>ref</code></td>
+   <td><code><a href="/en/AUTF8String" title="en/AUTF8String">AUTF8String</a></code></td>
+   <td>
+    <p>Returns the reference portion (the part after the "#") of the URI. If there is not one, an empty string is returned.</p>
+    <div class="blockIndicator note"><strong>Note:</strong> Some characters may be escaped.</div> </td>
+  </tr>
+  <tr>
+   <td><code>scheme</code></td>
+   <td><code><a href="/en/ACString" title="en/ACString">ACString</a> (US-ASCII)</code></td>
+   <td>
+    <p>The <code>scheme</code> is the protocol to which this URI refers. The scheme is restricted to the US-ASCII charset per <a class="external" href="http://tools.ietf.org/rfc/rfc3986.txt" title="http://tools.ietf.org/rfc/rfc3986.txt">RFC3986</a>.</p>
+
+    <div class="warning"><strong>Warning:</strong> Setting this is highly discouraged outside of a protocol handler implementation, since doing so will generally lead to unpredictable results.</div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>spec</code></td>
+   <td><code><a href="/en/AUTF8String" title="en/AUTF8String">AUTF8String</a></code></td>
+   <td>
+    <p>Returns a string representation of the URI. Setting the <code>spec</code> causes the new spec to be parsed using the rules for the scheme the URI currently has. If the string cannot be parsed as a URI, <code>NS_ERROR_MALFORMED_URI</code> thrown.</p>
+
+    <div class="warning"><strong>Warning:</strong> Because parsing the string is done using the current URI's scheme, setting the spec to a URI with a different scheme will produce incorrect results. Therefore, only protocol handler implementations should do this.</div>
+
+    <p>If the URI stores information from the <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIIOService" title="">nsIIOService</a></code> interface's <code><a href="https://developer.mozilla.org/zh-CN/docs/XPCOM_Interface_Reference/nsIIOService#newURI()">nsIIOService.newURI()</a></code> call that created it, other than just the parsed string, the behavior of this information when setting the <code>spec</code> attribute is undefined.</p>
+    <div class="blockIndicator note"><strong>Note:</strong> Some characters may be escaped.</div></td>
+  </tr>
+  <tr>
+   <td><code>specIgnoringRef</code></td>
+   <td><code><a href="/en/AUTF8String" title="en/AUTF8String">AUTF8String</a></code></td>
+   <td>Returns a string representation of the URI without the <code>ref</code> (part after the #) portion.<br>
+    <br>
+    <div class="blockIndicator note"><strong>Note:</strong> Some characters may be escaped.</div> </td>
+  </tr>
+  <tr>
+   <td><code>username</code></td>
+   <td><code><a href="/en/AUTF8String" title="en/AUTF8String">AUTF8String</a></code></td>
+   <td>
+    <p>The optional username, assuming the <code>preHost</code> consists of "username:password".</p>
+
+    <h6 id="Exceptions_thrown_5">Exceptions thrown</h6>
+
+    <dl>
+     <dt><code>NS_ERROR_FAILURE</code></dt>
+     <dd>If username is not applicable to the URI scheme (e.g. about:blank)</dd>
+    </dl>
+    <div class="blockIndicator note"><strong>Note:</strong> Some characters may be escaped.</div></td>
+  </tr>
+  <tr>
+   <td><code>userPass</code></td>
+   <td><code><a href="/en/AUTF8String" title="en/AUTF8String">AUTF8String</a></code></td>
+   <td>
+    <p>The "username:password" (or username only if the value doesn't contain a ':').</p>
+
+    <h6 id="Exceptions_thrown_6">Exceptions thrown</h6>
+
+    <dl>
+     <dt><code>NS_ERROR_FAILURE</code></dt>
+     <dd>If userPass is not applicable to the URI scheme (e.g. about:blank)</dd>
+    </dl>
+    <div class="blockIndicator note"><strong>Note:</strong> Some characters may be escaped.</div></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Methods" name="Methods">Methods</h2>
+
+<h3 id="clone()" name="clone()">clone()</h3>
+
+<p>Clones the URI, returning a new <code>nsIURI</code> object.</p>
+
+<div class="note"><strong>Note:</strong> For some protocols, this is more than just an optimization. For example, under Mac OS X, the spec of a file URI doesn't necessarily uniquely identify a file, since two volumes can have the same name.</div>
+
+<pre class="eval">nsIURI clone();
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<p>None.</p>
+
+<h6 id="Return_value" name="Return_value">Return value</h6>
+
+<p>An <code>nsIURI</code> object that represents the same URI as the current <code>nsIURI</code>.</p>
+
+<p></p><h3 id="cloneIgnoringRef()">cloneIgnoringRef()</h3><p></p>
+
+<p>Clones the current URI, clearing the <code>'ref'</code> attribute in the clone.</p>
+
+<pre class="eval">nsIURI cloneIgnoringRef();
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<p>None.</p>
+
+<h6 id="Return_value" name="Return_value">Return value</h6>
+
+<p>An <code>nsIURI</code> object that represents the same URI as the current <code>nsIURI</code> without the <code>'ref'</code> attribute.</p>
+
+<h3 id="equals()" name="equals()">equals()</h3>
+
+<p>Compares the current URI with another URI.</p>
+
+<div class="note"><strong>Note:</strong> This is more than a string comparison, as two different URI strings can represent the same location. For example, comparing "<a class="external" href="http://foo.com:80/" rel="freelink">http://foo.com:80/</a>" and "<a class="external" href="http://foo.com/" rel="freelink">http://foo.com/</a>" will return <code>true</code>.</div>
+
+<pre class="eval">boolean equals(
+  in nsIURI other
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>other</code></dt>
+ <dd>Another <code>nsIURI</code> to compare to.</dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value">Return value</h6>
+
+<p><code>true</code> if the two URIs represent the same location; otherwise <code>false</code>.</p>
+
+<p></p><h3 id="equalsExceptRef()">equalsExceptRef()</h3><p></p>
+
+<p>Compares the current URI with another URI, ignoring the value of the <code>.ref</code> member.</p>
+
+<div class="note"><strong>Note:</strong> This is more than a string comparison, as two different URI strings can represent the same location. For example, comparing "<a class="external" href="http://foo.com/#" rel="freelink">http://foo.com/#</a>" and "<a class="external" href="http://foo.com/" rel="freelink">http://foo.com/</a>" or "<a class="external" href="http://foo.com/#aaa" rel="freelink">http://foo.com/#aaa</a>" and "<a class="external" href="http://foo.com/#bbb" rel="freelink">http://foo.com/#bbb</a>" will return <code>true</code>.</div>
+
+<pre class="eval">boolean equalsExceptRef(
+  in nsIURI other
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>other</code></dt>
+ <dd>Another <code>nsIURI</code> to compare to.</dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value">Return value</h6>
+
+<p><code>true</code> if the two URIs represent the same location; otherwise <code>false</code>.</p>
+
+<h3 id="resolve()" name="resolve()">resolve()</h3>
+
+<p>Resolves a relative URI string, using this URI as the base.</p>
+
+<p></p><div class="blockIndicator note"><strong>Note:</strong> Some implementations may have no concept of a relative URI.</div><p></p>
+
+<pre class="eval">AUTF8String resolve(
+  in AUTF8String relativePath
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>relativePath</code></dt>
+ <dd>The relative path to resolve.</dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value">Return value</h6>
+
+<p>The resolved absolute URI string.</p>
+
+<h3 id="schemeIs()" name="schemeIs()">schemeIs()</h3>
+
+<p>Quickly reports whether the <code>nsIURI</code> represents a URI with the specified scheme. This comparison is case-insensitive.</p>
+
+<p></p><div class="blockIndicator note"><strong>Note:</strong> This is an optimization, allowing you to check the scheme of the URI without having to get the scheme and do the comparison yourself; this saves memory allocations.</div><p></p>
+
+<pre class="eval">boolean schemeIs(
+  in string scheme
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>scheme</code></dt>
+ <dd>A string representing the scheme to compare to.</dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value">Return value</h6>
+
+<p><code>true</code> if the URI is for the specified scheme; otherwise <code>false</code>.</p>
+
+<h2 id="See_also" name="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en/Code_snippets/URI_parsing" title="en/Code_snippets/URI_parsing">Code snippets:URI parsing</a></li>
+</ul>

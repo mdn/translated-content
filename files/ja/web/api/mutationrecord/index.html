@@ -1,0 +1,118 @@
+---
+title: MutationRecord
+slug: Web/API/MutationRecord
+tags:
+  - API
+  - Advanced
+  - DOM
+  - DOM Reference
+  - NeedsContent
+  - Reference
+translation_of: Web/API/MutationRecord
+---
+<p><strong><code>MutationRecord</code></strong> とは、DOM に生じた個々の変更を表すオブジェクトです。このオブジェクトは {{domxref("MutationObserver")}} のコールバック関数に渡されます。</p>
+
+<p>{{英語版章題("Properties")}}</p>
+
+<h2 id="プロパティ">プロパティ</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">プロパティ</td>
+   <td class="header">型</td>
+   <td class="header">意味</td>
+  </tr>
+  <tr>
+   <td>{{domxref("MutationRecord.type")}}</td>
+   <td><code>String</code></td>
+   <td>属性値の変更の場合は <code>"attributes"</code>、<code>CharacterData</code> ノードに対する変更の場合は <code>"characterData"</code>、ノードのツリーに対する変更の場合は <code>"childList"</code> を返します。</td>
+  </tr>
+  <tr>
+   <td>{{domxref("MutationRecord.target")}}</td>
+   <td><code>{{domxref("Node")}}</code></td>
+   <td>
+    <p>変更の影響を受けたノードを返します。戻り値は {{domxref("MutationRecord.type")}} に応じて以下のように変わります。</p>
+
+    <p><code>attributes</code> の場合、属性が変更された要素となります。</p>
+
+    <p><code>characterData</code> の場合、<code>CharacterData</code> ノードとなります。</p>
+
+    <p><code>childList</code> の場合、子ノードが変更されたノードとなります。</p>
+   </td>
+  </tr>
+  <tr>
+   <td>{{domxref("MutationRecord.addedNodes")}}</td>
+   <td><code>{{domxref("NodeList")}}</code></td>
+   <td>
+    <p>追加されたノードを返します。何もノードが追加されていなかった場合は、空の {{domxref("NodeList")}} が返されます。</p>
+   </td>
+  </tr>
+  <tr>
+   <td>{{domxref("MutationRecord.removedNodes")}}</td>
+   <td><code>{{domxref("NodeList")}}</code></td>
+   <td>削除されたノードを返します。何もノードが削除されていなかった場合は、空の {{domxref("NodeList")}} が返されます。</td>
+  </tr>
+  <tr>
+   <td>{{domxref("MutationRecord.previousSibling")}}</td>
+   <td><code>{{domxref("Node")}}</code></td>
+   <td>
+    <p>追加あるいは削除されたノードの直前にあるノード、もしくは <code>null</code> を返します。</p>
+   </td>
+  </tr>
+  <tr>
+   <td>{{domxref("MutationRecord.nextSibling")}}</td>
+   <td><code>{{domxref("Node")}}</code></td>
+   <td>追加あるいは削除されたノードの直後にあるノード、もしくは <code>null</code> を返します。</td>
+  </tr>
+  <tr>
+   <td>{{domxref("MutationRecord.attributeName")}}</td>
+   <td><code>String</code></td>
+   <td>変更された属性のローカル名、もしくは <code>null</code> を返します。</td>
+  </tr>
+  <tr>
+   <td>{{domxref("MutationRecord.attributeNamespace")}}</td>
+   <td><code>String</code></td>
+   <td>変更された属性の名前空間、もしくは <code>null</code> を返します。</td>
+  </tr>
+  <tr>
+   <td>{{domxref("MutationRecord.oldValue")}}</td>
+   <td><code>String</code></td>
+   <td>
+    <p>戻り値は {{domxref("MutationRecord.type")}} に応じて以下のように変わります。</p>
+
+    <p><code>attributes</code> の場合、変更された属性の変更前の属性値となります。</p>
+
+    <p><code>characterData</code> の場合、変更されたノードの変更前のデータとなります。</p>
+
+    <p><code>childList</code> の場合、<code>null</code> となります。</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>{{英語版章題("Specifications")}}</p>
+
+<h2 id="Specifications" name="Specifications">仕様</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">策定状況</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('DOM WHATWG', '#mutationrecord', 'MutationRecord')}}</td>
+   <td>{{ Spec2('DOM WHATWG') }}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM4', '#mutationrecord', 'MutationRecord')}}</td>
+   <td>{{ Spec2('DOM4') }}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>

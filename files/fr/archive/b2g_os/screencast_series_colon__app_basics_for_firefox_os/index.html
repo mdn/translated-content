@@ -1,0 +1,226 @@
+---
+title: 'Screencast series: App Basics for Firefox OS'
+slug: 'Archive/B2G_OS/Screencast_series:_App_Basics_for_Firefox_OS'
+tags:
+  - API
+  - Apps
+  - B2G
+  - Firefox OS
+  - Marketplace
+  - Videos
+translation_of: 'Archive/B2G_OS/Firefox_OS_apps/Screencast_series:_App_Basics_for_Firefox_OS'
+---
+<div class="summary">
+<p><span class="seoSummary"><a href="http://www.mozilla.org/en-US/firefox/os/">Firefox OS</a> est un système d'exploitation qui apporte les technologies du Web aux smartphones. Au lieu d'être un nouvel OS avec de nouvelles technologies et des environnements de développements, il est construit sur des technologies web standardisées utilisées depuis des années. Si vous êtes un développeur web et que vous voulez coder une application mobile, Firefox OS vous donne les outils pour le faire, sans devoir changer votre workflow ou apprendre à utiliser un nouvel environnement de développement. Dans cette collection de petites vidéos, les développeurs de Mozilla et de Telenor se sont rencontrés à Oslo, en Norvège pour expliquer en quelques étapes comment vous pouvez commencer à coder des applications pour Firefox OS.</span></p>
+</div>
+
+<p>Dans cette série vous apprendrez:</p>
+
+<ul>
+ <li>Comment coder votre première application pour Firefox OS.</li>
+ <li>Comment débuger et tester votre application sur votre ordinateur et sur un appareil physique.</li>
+ <li>Comment la publier sur le <a href="https://developer.mozilla.org/fr-FR/Marketplace">Marketplace Firefox</a> .</li>
+ <li>Comment utiliser les APIs et les interfaces spéciales : Firefox OS offre un support du JavaScript pour tirer profit du hardware embarqué sur les smartphones.</li>
+</ul>
+
+<div class="note">
+<p><strong>Note</strong>: Chacune des vidéos est assez courte pour être regardée durant une courte pause; la série entière se regarde en moins d'une heure.</p>
+</div>
+
+<h2 id="Code_et_environnement_de_développement">Code et environnement de développement<br>
+  </h2>
+
+<p>En plus des vidéos, vous pouvez télécharger les <a href="https://github.com/comoyo/fxos-video-script/">exemples de codes depuis GitHub</a>. Si vous voulez essayer les exemples vous-même, vous devrez mettre en place un environnement de développement simplifié. Vous aurez besoin de:</p>
+
+<ul>
+ <li>Une version à jour de <a href="https://www.mozilla.org/fr-FR/firefox/">Firefox</a>, qui est livrée avec les outils de développement dont vous aurez besoin — nous recommandons l'utilisation de <a href="https://www.mozilla.org/fr/firefox/channel/#aurora">Firefox Aurora</a> ou <a href="https://www.mozilla.org/fr/firefox/channel/#nightly">Bêta</a> si vous souhaitez vraiment "jouer" avec le must de la technologie.</li>
+ <li>Un éditeur de texte — dans les vidéos, nous utilisons <a href="http://www.sublimetext.com/">Sublime Text</a>, mais n'importe quel logiciel d'édition fera l'affaire. Si vous souhaitez développer nativement pour le web, vous pouvez essayer <a href="http://brackets.io/">Adobe Brackets</a>.</li>
+ <li>Un serveur local ou un serveur distant pour y envoyer les fichiers de démonstration.<em> Certaines applications de démonstration nécessitent une connexion HTTP au lieu d'une connexion locale.</em></li>
+</ul>
+
+<h2 id="Introduction">Introduction</h2>
+
+<p>Interviennent dans cette série <a href="http://twitter.com/janjongboom">Jan Jongboom (@janjongboom)</a> et <a href="http://twitter.com/sergimansilla">Sergi Mansilla (@sergimansilla)</a> de Telenor Digital, de <a href="http://twitter.com/codepo8">Chris Heilmann (@codepo8)</a> de Mozilla; cette série a été tournée en trois jours à Oslo, en Norvège au siège social de Telenor, en février 2014.</p>
+
+<p>Voici les trois d'entre nous qui vous parleront de cette série et ce à quoi vous attendre:</p>
+
+<p></p><div class="intrinsic-wrapper"><div class="intrinsic-container "><iframe src="https://www.youtube.com/embed/bp87xaLI0h4?rel=0&amp;html5=1"></iframe></div></div><p></p>
+
+<h2 id="Section_1_Construire_sa_première_application_Firefox_OS_et_la_publier">Section 1: Construire sa première application Firefox OS et la publier</h2>
+
+<p>Dans les cinq captures vidéos de la Section 1 nous vous montrons comment construire une application Firefox OS, comment la déboguer et la tester sur votre ordinateur — ainsi que sur un vrai appareil, et comment la mettre sur le <a href="/fr/Marketplace">Marketplace Firefox</a>. Cela peut sembler être une charge de travail fastidieuse mais vous découvrirez bien assez vite que si vous savez déjà comment construire un site web, vous avez déjà accompli 90% du travail.</p>
+
+<h3 id="Plus_qu'un_site_web">Plus qu'un site web</h3>
+
+<p>Les applications Firefox OS sont des applications HTML5. Par définition, elles utilisent les même technologies que les sites web. Vous pouvez commencer à écrire un site web et le transformer en application simplement en lui rajoutant un fichier manifeste (voir <a href="https://developer.mozilla.org/fr/Firefox_OS/Screencast_series:_App_Basics_for_Firefox_OS#Le_manifeste_d%27application">manifeste d'application</a> pour plus de détails). Ce dernier dit à Firefox OS que vous écrivez une application et vous permet de:</p>
+
+<ul>
+ <li>Intégrer l'application dans la liste du Marketplace</li>
+ <li>Avoir accès au matériel de l'appareil sur lequel il tourne, pour récupérer des informations comme <a href="/fr/docs/Using_geolocation">Utiliser la Géolocalisation</a> ou <a href="/fr/docs/WebAPI/Detecting_device_orientation">Détecter l'orientation de l'appareil</a>.</li>
+ <li>Et bien plus!</li>
+</ul>
+
+<p>Par essence, les applications HTML5 sont des sites web suralimentées et devraient suivre les mêmes règles, comme:</p>
+
+<ul>
+ <li>Une amélioration progresssive: Vérifiez que ce que vous voulez utiliser est vraiment disponible avant d'essayer d'y avoir accès.</li>
+ <li>Adaptation à leur environnement: Par exemple en utilisant les <a href="/fr/docs/Web/CSS/Media_queries">Media queries</a> et des images <a href="https://developer.mozilla.org/en-US/Apps/Design/UI_layout_basics/responsive_design_building_blocks#Responsive_images.2Fvideo">Responsive</a> pour optimiser les applications sur différents écrans, résolutions et vitesse de connexion disponible.</li>
+ <li>Une utilisation de l'<a href="/fr/docs/Web/HTML">HTML</a>, du <a href="/fr/docs/CSS">CSS</a> et du <a href="/fr/docs/Web/JavaScript">JavaScript</a> comme technlogies centrale.</li>
+</ul>
+
+<p>La principale différence est que pour qu'un site web devienne une bonne application, vous devriez vraiment prendre en compte les utilisateurs mobile. Cela signifie tout d'abord que votre application devrait:</p>
+
+<ul dir="ltr">
+ <li><a href="/fr/Apps/Build/Hors-ligne">Fonctionner hors-ligne</a>.</li>
+ <li>Permettre à vos utilisateurs de faire une chose et d'avoir une interface qui permette de le faire facilement.</li>
+ <li>Soit peu consommatrice de batterie, et de ressources processeur.</li>
+</ul>
+
+<p>Dans beaucoup de cas, cela signifie que vous devriez faire amincir votre page web et simplifier l'interface. La bonne nouvelle est que tous les utilisateurs en bénéficieront.</p>
+
+<p></p><div class="intrinsic-wrapper"><div class="intrinsic-container "><iframe src="https://www.youtube.com/embed/fBJmUreevRU?rel=0&amp;html5=1"></iframe></div></div><p></p>
+
+<div class="note">
+<p><strong>Note</strong>: Pour en apprendre plus sur le design d'une bonne application HTML5, regardez du coté de la page <a href="/fr/Apps">Applications [fr]</a>.</p>
+</div>
+
+<h3 id="Le_manifeste_d'application">Le manifeste d'application</h3>
+
+<p>Le manifeste d'application dans Firefox OS est un simple fichier JSON qui donne des informations au système d'exploitation sur votre application. C'est lui qui transforme une page web en application web ouverte. Dans celui-ci, vous allez définir le nom et demander au système d'exploitation d'avoir accès à plusieurs services et au matériel. Vous pouvez aussi définir l'orientation apropriée pour votre application et si besoin, la verrouiller.</p>
+
+<p></p><div class="intrinsic-wrapper"><div class="intrinsic-container "><iframe src="https://www.youtube.com/embed/txyux8RZrxY?rel=0&amp;html5=1"></iframe></div></div><p></p>
+
+<p>Plus d'informations sur le manifeste et les outils qui peuvent vous aider:</p>
+
+<ul>
+ <li>Le <a href="https://marketplace.firefox.com/developers/validator">Testeur de validité d'application</a>, aussi disponible en tant qu'<a href="http://firefox-marketplace-api.readthedocs.org/en/latest/">API</a>.</li>
+ <li>La documentation du <a href="/fr/Apps/Manifeste">MDN sur les manifestes d'application</a>. Incluant les informations sur comment servir un manifeste depuis votre propre serveur.</li>
+</ul>
+
+<h3 id="Le_Gestionnaire_d'application">Le Gestionnaire d'application</h3>
+
+<p>La façon la plus simple de commencer avec Firefox OS est <a href="/fr/Firefox_OS/Using_the_App_Manager">d'utiliser le gestionnaire d'applications</a>. Cet outil fait parti des <a href="https://developer.mozilla.org/fr/docs/Outils">outils de développement de Firefox pour pc</a> et vous permet de vous connecter à un émulateur de Firefox OS tournant sur votre ordinateur, ou sur un véritable appareil Firefox OS si vous en possédez un. De là, vous pouvez jouer avec Firefox OS, installer des applications directement sur l'émulateur ou sur un vrai appareil, et les déboguer pendant qu'elle tournent sur Firefox OS. Ceci permettra de voir immédiatement les changements sans réinstaller ou mettre à jour les applications.</p>
+
+<p>La vidéo suivante montre les premiers pas avec le Gestionnaire d'application dans l'émulateur:</p>
+
+<p></p><div class="intrinsic-wrapper"><div class="intrinsic-container "><iframe src="https://www.youtube.com/embed/wiROpnExj-A?rel=0&amp;html5=1"></iframe></div></div><p></p>
+
+<div class="note">
+<p><strong>Note</strong>: Le Gestionnaire d'application vous permet de déboguer sans problème vos applications même si vous êtes hors-ligne</p>
+</div>
+
+<p>Pour plus d'informations sur le Gestionnaire d'application:</p>
+
+<ul>
+ <li>La documentation pour <a href="/fr/Firefox_OS/Using_the_App_Manager">utiliser le gestionnaire d'applications.</a></li>
+ <li>Une introduction dans un <a href="https://hacks.mozilla.org/2013/10/introducing-the-firefox-os-app-manager/">article de blog de Mozilla Hacks</a>.</li>
+</ul>
+
+<h3 id="L'essayer_sur_votre_appareil">L'essayer sur votre appareil</h3>
+
+<p>Tester vos applications sur l'émulateur c'est bien, mais vous ne pourrez pas dépasser les limites de l'environnement d'émulation. Si vous voulez tester les performances d'interaction de votre appareil, ou le faire réagir à l'orientation, vous aurez besoin d'un vrai appareil. Avec le Gestionnaire d'application et les outils de développements, vous pouvez regarder en détail ce qu'il se passe dans votre application sur votre appareil pendant son utilisation.</p>
+
+<p></p><div class="intrinsic-wrapper"><div class="intrinsic-container "><iframe src="https://www.youtube.com/embed/OIUQwqQMVZM?rel=0&amp;html5=1"></iframe></div></div><p></p>
+
+<h3 id="Publier_sur_le_Marketplace">Publier sur le Marketplace</h3>
+
+<p>Le <a href="http://marketplace.firefox.com/">Marketplace de Firefox OS</a> est l'endroit qui convient le mieux pour ajouter votre application dans la liste et la rendre accessible aux autres personnes et à leur appareil ainsi que sur le Web. Le Marketplace vous permet aussi de mettre à disposition votre application sur d'autres plateformes comme Firefox Desktop et Firefox pour Android. Vous pouvez aussi permettre aux utilisateurs de noter votre application, vous donner des retours d'utilisation, et acheter votre application en utilisant un simple processus de vérification. Rajouter votre application est très simple:</p>
+
+<ul>
+ <li>Envoyez au marketplace l'URL de votre fichier manifeste.</li>
+ <li>Ajoutez une descirption de votre application (qui permettra aussi aux gens de la trouver parmis plusieurs autres.)</li>
+ <li>Mettre des captures d'écrans ou des vidéos pour faire des démonstrations des fonctionnalités de votre appareil.</li>
+ <li>Choisir une catégorie pour votre application.</li>
+ <li>Fournissez-nous une adresse email pour vous contacter.</li>
+ <li>Donnez à vos utilisateurs finaux un lien vers votre politique de confidentialité et un site de support web.</li>
+</ul>
+
+<p></p><div class="intrinsic-wrapper"><div class="intrinsic-container "><iframe src="https://www.youtube.com/embed/gipaEJTM3TU?rel=0&amp;html5=1"></iframe></div></div><p></p>
+
+<p>Les applications soumises au Marketplace sont verifiées par l'équipe de vérification d'applications de Mozilla et vous serez notifié de l'état de votre soumission d'application dans les jours qui suivent. S'il y a des problèmes avec votre application vous recevrez un message durant la période de validation mais il se peut aussi que vous receviez des explications humaines de ce qui ne va pas et comment les réparer.</p>
+
+<div class="note">
+<p><strong>Note</strong>: Lisez <a href="/fr/docs/Apps/Publishing/Proposer_une_application">Proposer une application sur le Firefox Marketplace</a> pour plus d'informations sur le processus de soumission d'application.</p>
+</div>
+
+<h2 id="Section_2_Sujets_avancés_du_Firefox_OS">Section 2: Sujets avancés du Firefox OS</h2>
+
+<p>Dans les première vidéos nous vous avons présenté Firefox OS et comment construire votre première application. Nous avons aussi expliqué comment déboguer votre application sur le pc, sur un vrai appareil et comment le proposer sur le Marketplace Firefox. Dans les cinq vidéos restantes nous allons aller plus loin dans l'explication des technologies qui permettent aux applications Firefox OS de gagner en puissance et vous donner accès aux fonctionnalités qui rendent le développement sur un smartphone ou une tablette intéressant pour les développeurs. Bien que certaines de ces technologies soient en cours de travaux sur le Firefox OS, elles sont toutes open-source et soumises aux standards. Travailler avec ces APIs aujourd'hui signifie que vous êtes prêt pour les prochains appareils et plateformes à venir.</p>
+
+<h3 id="APIs_Web">APIs Web</h3>
+
+<p>Les smartphones contiennent de puissantes technologies: cameras, accéléromètre et un GPS pour ne nommer qu'eux. Le problème est que celles-ci n'étaient pas accessible par les technologies web, mais en créant des applications natives. Pour réparer cela, Mozilla et ses partenaires ont définit des APIs pour permettre aux développeurs de contrôler le matériel des appareils mobiles en utilisant le JavaScript de manière sécurisée. Elles sont appelées les <a href="https://wiki.mozilla.org/WebAPI">Web APIs</a>, elles sont libres et peuvent être implémentées. Firefox OS est la première plateforme qui les utilisent, la vidéo suivante vous en dira plus:</p>
+
+<p></p><div class="intrinsic-wrapper"><div class="intrinsic-container "><iframe src="https://www.youtube.com/embed/p0DWpWNTd7w?rel=0&amp;html5=1"></iframe></div></div><p></p>
+
+<p>Plus d'informations sur les Web APIs:</p>
+
+<ul>
+ <li>La page de <a href="https://wiki.mozilla.org/WebAPI">Wiki de description</a> sur l'état de l'implémentation, qui comprend aussi des liens vers les standards auxquels elles sont rattachées.</li>
+ <li>Les articles sur <a href="https://hacks.mozilla.org/category/webapi/">Mozilla Hacks</a> traitant des Web APIs.</li>
+</ul>
+
+<h3 id="Web_Activities">Web Activities</h3>
+
+<p><a href="https://wiki.mozilla.org/WebAPI/WebActivities">Web Activities</a> sont une alternative pour accéder au matériel d'un appareil. Au lieu d'utiliser une API pour communiquer directement avec l'appareil, les Web Activities vous permettent de créer un écosystème d'applications sur votre appareil qui communiqueront et partageront leur fonctionnalités. Par exemple, au lieu d'essayer d'accéder à la caméra directement, votre application peut utiliser une Web Activity pour demander une image et l'utilisateur utilisera son application favorite pour prendre une photo, qui sera ensuite envoyée à l'application correspondante.</p>
+
+<p>Au lieu de demander aux utilisateurs l'accès à leur matériel (ce qui, en terme de sécurité est important) vous leur permettrez d'utiliser les applications auxquelles ils font déjà confiance pour s'occuper de ces fonctionnalités. Mieux encore, vous pouvez enregistrer votre application pour accomplir certaines tâches dans le système d'exploitation. Vous pouvez comparer les Web Activities à un Clic droit sur un fichier sur votre ordinateur et choisir quelle application utiliser pour ouvrir le fichier. Vous avez accès à plusieurs choix dont une pour demander au système d'exploitation de toujours utiliser cette application pour ouvrir ce type de fichier.</p>
+
+<p>Les Web Activities permettent aux application de communiquer entre-elles, sur l'appareil, sans nécessiter de serveur entre. Tout ce qu'elles transmettent d'une application à l'autre sont les données finales.</p>
+
+<p></p><div class="intrinsic-wrapper"><div class="intrinsic-container "><iframe src="https://www.youtube.com/embed/CQODL9AGKv0?rel=0&amp;html5=1"></iframe></div></div><p></p>
+
+<p>Plus d'informations sur les Web Activities:</p>
+
+<ul>
+ <li>La page de <a href="https://wiki.mozilla.org/WebAPI/WebActivities">Wiki sur les Web Activities.</a></li>
+ <li><a href="/en-US/docs/WebAPI/Web_Activities">La page de référence MDN sur les Web Activities</a></li>
+ <li>Une <a href="https://hacks.mozilla.org/2013/01/introducing-web-activities/">Introduction aux Web Activities</a> sur Mozilla Hacks. </li>
+</ul>
+
+<h3 id="Push_Notifications">Push Notifications</h3>
+
+<p>Les Push Notifications, appelées en utilisant l'<a href="https://wiki.mozilla.org/WebAPI/SimplePush">API Web SimplePush</a>, sont un moyen de réveiller les applications quand un appareil reçoit un certain message. Cela vous permet de créer des applications qui peuvent rester éteintes, et donc qui économisent de la batterie, jusqu'à ce que vous en ayez besoin. Utiliser les notifications ainsi a aussi l'avantage de ne pas transporter de données. Ainsi Mozilla n'obtiendra jamais d'informations sur votre application et des attaquants potentiels ne pourront pas observer l'application.</p>
+
+<p></p><div class="intrinsic-wrapper"><div class="intrinsic-container "><iframe src="https://www.youtube.com/embed/qpgNIsJ2pg4?rel=0&amp;html5=1"></iframe></div></div><p></p>
+
+<p>Plus d'information sur les Push Notifications utilisant SimplePush:</p>
+
+<ul>
+ <li>La page de Wiki <a href="https://wiki.mozilla.org/WebAPI/SimplePush">SimplePush</a></li>
+ <li><a href="/en-US/docs/WebAPI/Simple_Push">Le guide SimplePush sur MDN</a></li>
+ <li>Une <a href="https://hacks.mozilla.org/2013/07/dont-miss-out-on-the-real-time-fun-use-firefox-os-push-notifications/">introduction à SimplePush</a> sur Mozilla Hacks</li>
+</ul>
+
+<h3 id="Fonctionnalités_hors-ligne">Fonctionnalités hors-ligne</h3>
+
+<p>Les applications ne sont que peu utilisées si elles ne fonctionnent pas hors-ligne. C'est pourquoi la plupart des utilisateurs préfèrent les appliations installées plutôt que d'ouvrir un navigateur et regarder du contenu sur leur navigateur web mobile. Le nom "application web" sous-entend même qu'il faut avoir une connexion pour pouvoir l'utiliser. Nos utilisateurs <strong>seront</strong> hors-ligne parfois (dans un avion, dans un métro, là où il n'y a pas de connexion vers leur carte SIM) et nous devons nous assurer que nos applications resteront utilisable quand ça arrivera. HTML5 propose plusieurs technologies qui proposent des fonctionnalités hors-ligne, principalement <a href="https://developer.mozilla.org/en-US/docs/HTML/Using_the_application_cache">AppCache</a> et <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Storage">DOMStorage</a>.</p>
+
+<p></p><div class="intrinsic-wrapper"><div class="intrinsic-container "><iframe src="https://www.youtube.com/embed/dnuoUM_bIQM?rel=0&amp;html5=1"></iframe></div></div><p></p>
+
+<p>Plus d'informations sur les fonctionnalités hors-ligne:</p>
+
+<ul>
+ <li>La page de Wiki <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Storage">DOMStorage</a>.</li>
+ <li>La page de Wiki <a href="https://developer.mozilla.org/en-US/docs/HTML/Using_the_application_cache">AppCache.</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/IndexedDB/Using_IndexedDB">Utiliser IndexedDB</a> pour un stockage avancé chez le client.</li>
+ <li>LocalForage est une surcouche utilisée dans Firefox OS pour fournir la simplicité de DOMStorage avec la puissance de IndexedDB (expliqué en détail dans cet article de <a href="https://hacks.mozilla.org/2014/02/localforage-offline-storage-improved/">Mozilla Hacks</a></li>
+</ul>
+
+<h2 id="Où_en_trouver_plus">Où en trouver plus</h2>
+
+<p>Nous espèrons que cette série de vidéos vous aura donné une introduction claire pour construire vos premières applications web ouvertes. Si vous voulez en savoir plus, il existe quelques sources supplémentaires que vous pouvez regarder:</p>
+
+<p></p><div class="intrinsic-wrapper"><div class="intrinsic-container "><iframe src="https://www.youtube.com/embed/Z2yVFXEYnnc?rel=0&amp;html5=1"></iframe></div></div><p></p>
+
+<ul>
+ <li>Le <a href="https://developer.mozilla.org/en-US/docs/Apps/">MDN App Center</a> explique comment faire un design et construire une bonne application web ouverte</li>
+ <li>Le <a href="/en-US/Marketplace">MDN Marketplace</a> contient des instructions détaillées pour voir votre application listée dans le Firefox Marketplace, les différentes options de publications ainsi que la gestion des paiements.</li>
+ <li>Le <a href="https://hacks.mozilla.org">Hacks Blog</a> écrit de façon hebdomadaire sur les applications Firefox OS (provenant de l'équipe Mozilla et des développeurs tiers comme vous) et les technologies de pointe. C'est le meilleur endroit pour savoir ce qu'il y aura dans les prochaines versions de Firefox OS)</li>
+ <li>La partie <a href="/en-US/Firefox_OS">Firefox OS du </a><a href="/en-US/Firefox_OS">MDN</a> et le wiki <a href="https://wiki.mozilla.org/B2G">B2G</a> proposent plus d'informations sur le système d'exploitation Firefox OS</li>
+ <li>Nous sommes souvent sur IRC, il suffit d'aller sur <a href="http://irc.mozilla.org">irc.mozilla.org</a> et de nous trouver aux canaux comme #devrel, #b2g, #openwebapps ou #marketplace.</li>
+</ul>
+
+<p>En espérant vous voir par ici,</p>
+
+<p>Chris, Sergi et Jan</p>

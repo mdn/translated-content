@@ -1,0 +1,83 @@
+---
+title: Plug-n-Hack Etape1
+slug: Plug-n-Hack/Plug-n-Hack_Phase1
+translation_of: Archive/Mozilla/Plug-n-Hack/Plug-n-Hack_Phase1
+---
+<p>L'étape 1 de Plug-n-Hack (PnH) permet une intégration facile et définit comment les outils de sécurité peuvent avertir leurs capacités pour les navigateurs.</p>
+
+<h2 id="Outil_de_sécurité_manifest">Outil de sécurité manifest</h2>
+
+<p>Pour supporter PnH-1 les outils de sécurité fournissent un manifeste sur HTTP (S), qui définit les capacités que le navigateur peut utiliser.<br>
+ Il appartient aux auteurs de l'outil de décider comment l'URL du manifeste est publié.</p>
+
+<p>L'outil de configuration servant un document HTML (que nous appellerons dans la configuration du document de configuration) dans le navigateur. Cela peut entraîner le navigateur d'inspecter le manifeste et d'enregistrer l'outil par un tir de CustomEvent avec le type de ConfigureSecTool et une des propriété d'objet qui spécifie l'URL du manifeste de l'outil. Par exemple:</p>
+
+<pre>var manifest = {"detail":{"url":"http://localhost:8080/manifest"}};
+var evt = new CustomEvent('ConfigureSecTool', manifest);</pre>
+
+<p>Il est suggéré que les navigateurs souhaitant soutenir PnH limiter la manipulation des CustomEvents tels qu'ils sont ignorés lorsque l'événement se produit en dehors des actions initiées par l'utilisateur.<br>
+ <br>
+ Le document de configuration doit alors écouter un certain nombre d'autres événements:</p>
+
+<ul>
+ <li><strong>ConfigureSecToolStarted</strong> - cette notification dans le document que le navigateur traite de la configuration; si cet événement n'est pas reçu dans un délai raisonnable après l'événement ConfigureSecTool a été tiré, vous voudrez peut-être pour avertir l'utilisateur que PnH ne semble pas être pris en charge par ce navigateur (peut-être les incitant à installer l'addon appropriée).</li>
+ <li><strong>ConfigureSecToolFailed</strong> - cette notification dans le document de configuration est déclanché lorsque la configuration a échouée pour une raison quelconque. L'utilisateur doit être informé que la configuration a échoué.</li>
+ <li><strong>ConfigureSecToolSucceeded</strong> - cette notification dans le document que la configuration a réussi. L'utilisateur peut recevoir un message à cet effet.</li>
+ <li><strong>ConfigureSecToolActivated</strong> - cette notification dans le document du support PnH (peut-être pas disponibles auparavant, par exemple en raison d'un addon manquant) a été activé.</li>
+</ul>
+
+<p>Vous pouvez voir un <a href="https://code.google.com/p/zap-extensions/source/browse/branches/beta/src/org/zaproxy/zap/extension/plugnhack/resource/welcome.html">exemple d'un document de configuration</a> dans le ZAP PnH addon. Il y a un autre (peut-être à jour) par exemple <a href="https://www.google.com/url?q=https%3A%2F%2Fgithub.com%2Fmozmark%2Fringleader%2Fblob%2Fmaster%2Fdoc%2Fprovider_sample.html&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNEXjMFmiRdOMbldkgLUab3PJUdL4w">ici</a>.</p>
+
+<p>Un exemple de manifest (pour OWASP ZAP) est :</p>
+
+<pre>{
+  "toolName":"OWASP ZAP",
+  "protocolVersion":"0.2",
+  "features":{
+    "proxy":{
+      "PAC":"http://localhost:8080/proxy.pac",
+      "CACert":"http://localhost:8080/OTHER/core/other/rootcert/"
+    },
+    "commands":{
+      "prefix":"zap",
+      "manifest":"http://localhost:8080/OTHER/mitm/other/service/"
+    }
+  }
+}</pre>
+
+<p>Le top du niveau du manifeste comprend des liens facultatifs à une PAC proxy et un certificat de CA racine.</p>
+
+<p>Seul l'option lié à un autre manifest qui décrit les commandes du navigateur peut invoquer.</p>
+
+<h2 id="Le_service_des_manifestes_pour_vos_outils_externes">Le service des manifestes pour vos outils externes</h2>
+
+<p>Vous voudrez peut-être utiliser le manifeste à partir d'un serveur web distant (exemple pour tester);</p>
+
+<p>Plug-n-hack nécessite des outils et des services du manifeste soient servis à partir de la même source que les points d'extrémité de l'API mais, à des fins de test, Ringleader (l'implémentation de l'addon Firefox du composant navigateur) vous permet de définir une préférence pour relâcher ou désactiver les contrôles d'origine. La préférence est</p>
+
+<pre><code>ringleader.check.origin</code></pre>
+
+<p>Ceci peut être réglé sur 'off' pour désactiver complètement les vérifications d'origine, ou 'noport' pour désactiver uniquement les vérifications de port.</p>
+
+<h2 id="L'outil_de_sécurité_des_commandes_du_manifest">L'outil de sécurité des commandes du manifest</h2>
+
+<p>Un exemple des commandes du manifest (de OWASP ZAP) est: <a href="https://code.google.com/p/zap-extensions/source/browse/branches/beta/src/org/zaproxy/zap/extension/plugnhack/resource/service.json" title="https://code.google.com/p/zap-extensions/source/browse/branches/beta/src/org/zaproxy/zap/extension/plugnhack/resource/service.json">https://code.google.com/p/zap-extensions/source/browse/branches/beta/src/org/zaproxy/zap/extension/plugnhack/resource/service.json</a></p>
+
+<h2 id="Firefox_UI">Firefox UI</h2>
+
+<p>Dans Firefox, les outils des commandes seront disponibles via la barre d'outils de développement (GCLI) <a href="https://developer.mozilla.org/en-US/docs/Tools/GCLI" rel="nofollow">https://developer.mozilla.org/en-US/docs/Tools/GCLI</a></p>
+
+<p>Un exemple de comment les commandes ZAP sont actuellement affichées sont :</p>
+
+<p><img alt="" src="https://lh6.googleusercontent.com/Zfp0TAfswgxVDrm2Ex5i0tXmD3aPJW38WGZR-ViYHNd-UVmQ8no-hQlaSTSNXagMjQk_YFN0tEbPLf4tu2QS1KFrld89DiSjIRu7E9Y_3BTImlp05x-jVYPfgA"></p>
+
+<p>Notez que les paramètres spécifiés par l'utilisateur peuvent être spécifiés pour les commandes, qui peuvent être du texte libre, une liste déroulante statique d'options ou une liste dynamique d'options obtenues à partir de l'outil sur demande.</p>
+
+<p>Donc, si vous sélectionnez la commande "zap scan", vous serez invité à sélectionner un site dans la liste des sites connus par ZAP.</p>
+
+<p>PnH ne spécifie pas comment les commandes d'outils doivent être affichées, afin que les autres navigateurs puissent les afficher de différentes façons.</p>
+
+<dl>
+ <dt>Liens</dt>
+ <dd><a href="https://developer.mozilla.org/en-US/docs/Plug-n-Hack" title="/en-US/docs/Zest">Plug-n-Hack Overview</a></dd>
+</dl>

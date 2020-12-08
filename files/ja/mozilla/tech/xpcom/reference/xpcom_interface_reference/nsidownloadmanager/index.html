@@ -1,0 +1,424 @@
+---
+title: nsIDownloadManager
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsIDownloadManager
+tags:
+  - Firefox 3
+  - Interfaces
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadManager
+---
+<p> <code>nsIDownloadManager</code> インタフェースは、アプリケーションや拡張機能がダウンロードマネージャとやりとりできるようにします。例えば、ダウンロードするファイルの追加や削除、ダウンロードに関する情報の取得、ダウンロード完了時の通知取得、といった機能を備えています。</p>
+<p><br>
+ </p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/downloads/public/nsIDownloadManager.idl" rel="custom">toolkit/components/downloads/public/nsIDownloadManager.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">最終更新: Gecko 1.9 (Firefox 3)</span></div>
+</div>
+<p>継承元: <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code></p>
+<p>実装: <code>@mozilla.org/download-manager;1</code>。インスタンスを作成するには、以下のように記述します。</p>
+<pre class="eval">var dm = Components.classes["@mozilla.org/download-manager;1"]
+                   .createInstance(Components.interfaces.nsIDownloadManager);
+</pre>
+<h2 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E6.A6.82.E8.A6.81" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E6.A6.82.E8.A6.81">メソッドの概要</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>nsIDownload <a href="#addDownload.28.29">addDownload</a>(in short aDownloadType, in <a href="ja/NsIURI">nsIURI</a> aSource, in nsIURI aTarget, in <a href="ja/AString">AString</a> aDisplayName, in <a href="ja/NsIMIMEInfo">nsIMIMEInfo</a> aMIMEInfo, in <a href="ja/PRTime">PRTime</a> aStartTime, in <a href="ja/NsILocalFile">nsILocalFile</a> aTempFile, in <a href="ja/NsICancelable">nsICancelable</a> aCancelable)</code></td>
+  </tr>
+  <tr>
+   <td><code>nsIDownload <a href="#getDownload.28.29">getDownload</a>(in unsigned long aID)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#cancelDownload.28.29">cancelDownload</a>(in unsigned long aID)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#removeDownload.28.29">removeDownload</a>(in unsigned long aID)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#pauseDownload.28.29">pauseDownload</a>(in unsigned long aID)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#resumeDownload.28.29">resumeDownload</a>(in unsigned long aID)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#retryDownload.28.29">retryDownload</a>(in unsigned long aID)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#cleanUp.28.29">cleanUp</a>()</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#addListener.28.29">addListener</a>(in <a href="ja/NsIDownloadProgressListener">nsIDownloadProgressListener</a> aListener)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#removeListener.28.29">removeListener</a>(in <a href="ja/NsIDownloadProgressListener">nsIDownloadProgressListener</a> aListener)</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id=".E5.B1.9E.E6.80.A7" name=".E5.B1.9E.E6.80.A7">属性</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">属性</td>
+   <td class="header">型</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code>DBConnection</code></td>
+   <td><code><a href="ja/MozIStorageConnection">mozIStorageConnection</a></code></td>
+   <td>ダウンロードデータベースへのデータベース接続。
+    <i>
+     読み取り専用。</i>
+   </td>
+  </tr>
+  <tr>
+   <td><code>canCleanUp</code></td>
+   <td><code>boolean</code></td>
+   <td>ダウンロードが、完了時、失敗時、キャンセル時に削除可能かどうかを示します。
+    <i>
+     読み取り専用。</i>
+   </td>
+  </tr>
+  <tr>
+   <td><code>activeDownloadCount</code></td>
+   <td><code>long</code></td>
+   <td>現在ダウンロード中のファイル数。
+    <i>
+     読み取り専用。</i>
+   </td>
+  </tr>
+  <tr>
+   <td><code>activeDownloads</code></td>
+   <td><code><a href="ja/NsISimpleEnumerator">nsISimpleEnumerator</a></code></td>
+   <td>アクティブな nsIDownloads の列挙。
+    <i>
+     読み取り専用。</i>
+   </td>
+  </tr>
+  <tr>
+   <td><code>defaultDownloadsDirectory</code></td>
+   <td><code><a href="ja/NsILocalFile">nsILocalFile</a></code></td>
+   <td>プラットフォーム標準のダウンロードディレクトリを返します。
+    <i>
+     読み取り専用。</i>
+   </td>
+  </tr>
+  <tr>
+   <td><code>userDownloadsDirectory</code></td>
+   <td><code><a href="ja/NsILocalFile">nsILocalFile</a></code></td>
+   <td>ユーザが設定したダウンロードディレクトリを返します。
+    <i>
+     読み取り専用。</i>
+    <p>上記のパスは、ユーザが編集可能な 2 つの設定項目に依存します。</p>
+    <p><code>browser.download.folderList</code> は、標準のダウンロード場所を定義します。</p>
+    <ul>
+     <li>0: ファイルは初期設定ではデスクトップにダウンロードされます。</li>
+     <li>1: ファイルは初期設定ではシステム標準のダウンロードフォルダにダウンロードされます。</li>
+     <li>2: ファイルは <code>browser.download.dir</code> で設定されたローカルパスにダウンロードされます。この設定値が不正な場合、ダウンロードディレクトリは初期設定値にフォールバックされます。</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2 id=".E5.AE.9A.E6.95.B0" name=".E5.AE.9A.E6.95.B0">定数</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">定数</td>
+   <td class="header">値</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code>DOWNLOAD_NOTSTARTED</code></td>
+   <td>-1</td>
+   <td>ダウンロードはまだ開始されていません。</td>
+  </tr>
+  <tr>
+   <td><code>DOWNLOAD_DOWNLOADING</code></td>
+   <td>0</td>
+   <td>ダウンロードは現在進行中です。</td>
+  </tr>
+  <tr>
+   <td><code>DOWNLOAD_FINISHED</code></td>
+   <td>1</td>
+   <td>ダウンロードは完了しました。</td>
+  </tr>
+  <tr>
+   <td><code>DOWNLOAD_FAILED</code></td>
+   <td>2</td>
+   <td>ダウンロードは失敗しました。</td>
+  </tr>
+  <tr>
+   <td><code>DOWNLOAD_CANCELED</code></td>
+   <td>3</td>
+   <td>ユーザがダウンロードをキャンセルしました。</td>
+  </tr>
+  <tr>
+   <td><code>DOWNLOAD_PAUSED</code></td>
+   <td>4</td>
+   <td>ダウンロードは中止されています。</td>
+  </tr>
+  <tr>
+   <td><code>DOWNLOAD_QUEUED</code></td>
+   <td>5</td>
+   <td>ダウンロードは待ち状態で、まだダウンロードは開始されていません。</td>
+  </tr>
+  <tr>
+   <td><code>DOWNLOAD_BLOCKED</code></td>
+   <td>6</td>
+   <td>保護者による制限 (ペアレンタルコントロール) が働いたために、あるいは、そのファイルがウイルスに感染していて駆除できないとウイルス対策ソフトによって判断されたために、ダウンロードはブロックされました。</td>
+  </tr>
+  <tr>
+   <td><code>DOWNLOAD_SCANNING</code></td>
+   <td>7</td>
+   <td>ダウンロードはウイルス対策ソフトによってスキャンが行われています。</td>
+  </tr>
+  <tr>
+   <td><code>DOWNLOAD_TYPE_DOWNLOAD</code></td>
+   <td>0</td>
+   <td>
+    <i>
+     不明</i>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89">メソッド</h2>
+<h3 id="addDownload.28.29" name="addDownload.28.29">addDownload()</h3>
+<p>nsIDownload を作成し、ダウンロードマネージャが管理できるように追加します。</p>
+<pre class="eval">nsIDownload addDownload(
+  in short aDownloadType,
+  in nsIURI aSource,
+  in nsIURI aTarget,
+  in AString aDisplayName,
+  in nsIMIMEInfo aMIMEInfo,
+  in PRTime aStartTime,
+  in nsILocalFile aTempFile,
+  in nsICancelable aCancelable
+)
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0" name=".E5.BC.95.E6.95.B0">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aDownloadType&lt;/tt&gt;</dt>
+ <dd>
+  転送するダウンロードの種類。
+  <i>
+   詳細不明</i>
+ </dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aSource&lt;/tt&gt;</dt>
+ <dd>
+  ファイルの取得元 URI。<code>null</code> にはなりません。</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aTarget&lt;/tt&gt;</dt>
+ <dd>
+  転送されたファイルが保存される場所を示した URI。<code>null</code> にはなりません。</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aDisplayName&lt;/tt&gt;</dt>
+ <dd>
+  ユーザが読める形での転送の説明。空白文字になる可能性があります。</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aMIMEInfo&lt;/tt&gt;</dt>
+ <dd>
+  ターゲットファイルに関連付けられた MIME 情報。これには、MIME タイプや、適切な場合にはヘルパーアプリケーションが含まれます。このパラメータはオプションです。</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;startTime&lt;/tt&gt;</dt>
+ <dd>
+  ダウンロードの開始時刻。</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aTempFile&lt;/tt&gt;</dt>
+ <dd>
+  一時ファイル (受信したデータが保存されるファイルで、ターゲットファイルとは異なります) の場所。ダウンロードが完了すると、ファイルは &lt;tt&gt;aTarget&lt;/tt&gt; によって示される場所に移動されます。これは <code>null</code> になる可能性があります。</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aCancelable&lt;/tt&gt;</dt>
+ <dd>
+  ダウンロードをキャンセルするために使用できるオブジェクト。<code>null</code> にはなりません。</dd>
+</dl>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4" name=".E6.88.BB.E3.82.8A.E5.80.A4">戻り値</h6>
+<p>新たに作成された、渡されたプロパティを伴ったダウンロード項目。</p>
+<div class="note">
+ <b>注:</b> ダウンロードを追加しても、即座に転送が開始されるわけではありません。追加した後ダウンロードを開始したい場合は、<code><a href="ja/NsIWebBrowserPersist">nsIWebBrowserPersist</a></code> オブジェクトを作成し、このメソッドを呼び出し、戻り値となるダウンロードオブジェクトのための <code>progressListener</code> を設定し、その後で <code>saveURI()</code> メソッドを呼び出す必要があります。</div>
+<h3 id="getDownload.28.29" name="getDownload.28.29">getDownload()</h3>
+<p>ダウロードマネージャによって管理されているダウンロードを取得します。これは、進行中、あるいは完了したダウンロードで、データベースに保存されている項目になります。</p>
+<pre class="eval">nsIDownload getDownload(
+  in unsigned long aID
+)
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_2" name=".E5.BC.95.E6.95.B0_2">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aID&lt;/tt&gt;</dt>
+ <dd>
+  ダウンロードの固有 ID。</dd>
+</dl>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4_2" name=".E6.88.BB.E3.82.8A.E5.80.A4_2">戻り値</h6>
+<p>指定された ID のダウンロード。</p>
+<h6 id=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96" name=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96">投げられる例外</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;NS_ERROR_NOT_AVAILABLE&lt;/tt&gt;</dt>
+ <dd>
+  指定されたダウンロードはデータベース内にありません。</dd>
+</dl>
+<h3 id="cancelDownload.28.29" name="cancelDownload.28.29">cancelDownload()</h3>
+<p>指定された ID のダウンロードが進行中であった場合、そのダウンロードをキャンセルします。これは、そのダウンロードによって提供された <code><a href="ja/NsICancelable">nsICancelable</a></code> の <code>cancel(NS_BINDING_ABORTED)</code> を呼び出します。</p>
+<pre class="eval"> void cancelDownload(
+   in unsigned long aID
+ )
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_3" name=".E5.BC.95.E6.95.B0_3">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aID&lt;/tt&gt;</dt>
+ <dd>
+  ダウンロードの固有 ID。</dd>
+</dl>
+<h6 id=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96_2" name=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96_2">投げられる例外</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;NS_ERROR_FAILURE&lt;/tt&gt;</dt>
+ <dd>
+  ダウンロードが進行中ではありません。</dd>
+</dl>
+<h3 id="removeDownload.28.29" name="removeDownload.28.29">removeDownload()</h3>
+<p>指定された ID のダウンロードが進行中でなかった場合、そのダウンロードを削除します。<code>cancelDownload()</code> が単純に転送をキャンセルしつつ関連情報を残すのに対して、<code>removeDownload()</code> は関連情報もすべて削除します。</p>
+<pre class="eval"> void removeDownload(
+   in unsigned long aID
+ )
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_4" name=".E5.BC.95.E6.95.B0_4">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aID&lt;/tt&gt;</dt>
+ <dd>
+  ダウンロードの固有 ID。</dd>
+</dl>
+<h6 id=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96_3" name=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96_3">投げられる例外</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;NS_ERROR_FAILURE&lt;/tt&gt;</dt>
+ <dd>
+  ダウンロードはアクティブです。</dd>
+</dl>
+<h3 id="pauseDownload.28.29" name="pauseDownload.28.29">pauseDownload()</h3>
+<p>指定されたダウンロードを中止します。</p>
+<pre class="eval"> void pauseDownload(
+   in unsigned long aID
+ )
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_5" name=".E5.BC.95.E6.95.B0_5">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aID&lt;/tt&gt;</dt>
+ <dd>
+  中止するダウンロードの固有 ID。</dd>
+</dl>
+<h6 id=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96_4" name=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96_4">投げられる例外</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;NS_ERROR_FAILURE&lt;/tt&gt;</dt>
+ <dd>
+  ダウンロードが進行中ではありません。</dd>
+</dl>
+<h3 id="resumeDownload.28.29" name="resumeDownload.28.29">resumeDownload()</h3>
+<p>指定されたダウンロードを再開します。</p>
+<pre class="eval"> void resumeDownload(
+   in unsigned long aID
+ )
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_6" name=".E5.BC.95.E6.95.B0_6">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aID&lt;/tt&gt;</dt>
+ <dd>
+  再開するダウンロードの固有 ID。</dd>
+</dl>
+<h6 id=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96_5" name=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96_5">投げられる例外</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;NS_ERROR_FAILURE&lt;/tt&gt;</dt>
+ <dd>
+  ダウンロードが進行中ではありません。</dd>
+</dl>
+<h3 id="retryDownload.28.29" name="retryDownload.28.29">retryDownload()</h3>
+<p>失敗したダウンロードを再試行します。</p>
+<pre class="eval"> void retryDownload(
+   in unsigned long aID
+ )
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_7" name=".E5.BC.95.E6.95.B0_7">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aID&lt;/tt&gt;</dt>
+ <dd>
+  ダウンロードの固有 ID。</dd>
+</dl>
+<h6 id=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96_6" name=".E6.8A.95.E3.81.92.E3.82.89.E3.82.8C.E3.82.8B.E4.BE.8B.E5.A4.96_6">投げられる例外</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;NS_ERROR_NOT_AVAILALE&lt;/tt&gt;</dt>
+ <dd>
+  ダウンロードが不明です。</dd>
+</dl>
+<h3 id="cleanUp.28.29" name="cleanUp.28.29">cleanUp()</h3>
+<p>完了、失敗、キャンセルされたダウンロードをリストから削除します。</p>
+<pre class="eval"> void cleanUp()
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_8" name=".E5.BC.95.E6.95.B0_8">引数</h6>
+<p>ありません。</p>
+<h3 id="addListener.28.29" name="addListener.28.29">addListener()</h3>
+<p>ダウンロードマネージャにリスナーを追加します。</p>
+<pre class="eval"> void addListener(
+   in nsIDownloadProgressListener aListener
+ )
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_9" name=".E5.BC.95.E6.95.B0_9">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aListener&lt;/tt&gt;</dt>
+ <dd>
+  ダウンロードマネージャからステータス情報を受け取る <code><a href="ja/NsIDownloadProgressListener">nsIDownloadProgressListener</a></code> オブジェクト。</dd>
+</dl>
+<h3 id="removeListener.28.29" name="removeListener.28.29">removeListener()</h3>
+<p>ダウンロードマネージャからリスナーを削除します。</p>
+<pre class="eval"> void removeListener(
+   in nsIDownloadProgressListener aListener
+ )
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_10" name=".E5.BC.95.E6.95.B0_10">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aListener&lt;/tt&gt;</dt>
+ <dd>
+  ダウンロードマネージャのリスニングを中止する <code><a href="ja/NsIDownloadProgressListener">nsIDownloadProgressListener</a></code> オブジェクト。</dd>
+</dl>
+<h2 id=".E9.96.A2.E9.80.A3.E8.A8.98.E4.BA.8B" name=".E9.96.A2.E9.80.A3.E8.A8.98.E4.BA.8B">関連記事</h2>
+<ul>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownload" title="">nsIDownload</a></code></li>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadManagerUI" title="">nsIDownloadManagerUI</a></code></li>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadProgressListener" title="">nsIDownloadProgressListener</a></code></li>
+ <li><a href="ja/The_Download_Manager_schema">The Download Manager schema</a></li>
+</ul>
+<div class="noinclude">
+  </div>

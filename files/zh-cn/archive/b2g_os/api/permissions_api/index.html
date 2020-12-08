@@ -1,0 +1,100 @@
+---
+title: Permissions API (Firefox OS)
+slug: Archive/B2G_OS/API/Permissions_API
+translation_of: Archive/B2G_OS/API/Permissions_API
+---
+<p></p><section class="Quick_links" id="Quick_Links"><ol><li><strong><a href="/zh-CN/docs/Web/API/Permissions_API">Permissions API</a></strong></li><li><strong><a href="/zh-CN/docs/Web/API/Archive"><code>Archive</code></a></strong></li><li class="toggle"><details open><summary>Related pages for Permissions API</summary><ol><li><a href="/zh-CN/docs/Web/API/Navigator/permissions"><code>Navigator.permissions</code></a></li><li><a href="/zh-CN/docs/Web/API/PermissionStatus"><code>PermissionStatus</code></a></li><li><a href="/zh-CN/docs/Web/API/Permissions"><code>Permissions</code></a></li></ol></details></li></ol></section><div class="overheadIndicator nonStandard nonStandardHeader">
+      <p><strong><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span> 非标准</strong><br>
+      该特性是非标准的，请尽量不要在生产环境中使用它！</p>
+      </div><p></p>
+
+<p></p><div class="warning">
+    <p style="text-align: center;">此 API 仅在 <a href="/zh-CN/docs/Mozilla/Firefox_OS">Firefox OS</a> 的<a href="/zh-CN/docs/Mozilla/Firefox_OS/Security/Application_security#App_Types">内部应用程序</a>中可用。</p>
+</div><p></p>
+
+<h2 id="sect1"> </h2>
+
+<p class="summary"><strong>Permissions API </strong>用于显示应用权限以及让用户管理所有app的使用权限。有了这个API，一个应用可以读取到另一个应用的权限，并且还可以管理其权限范围。 </p>
+
+<p>权限管理器可以通过<a href="/zh-CN/docs/Web/API/Navigator/mozPermissionSettings" title="此页面仍未被本地化, 期待您的翻译!"><code>navigator.mozPermissionSettings</code></a>属性访问，该属性是 <a href="/zh-CN/docs/Web/API/PermissionSettings" title="此页面仍未被本地化, 期待您的翻译!"><code>PermissionSettings</code></a> 的实例.</p>
+
+<h2 id="已安装的应用程序权限">已安装的应用程序权限</h2>
+
+<p><br>
+ 每个应用程序通过其应用清单请求一些权限。 每次应用程序尝试使用需要显式权限的API时，系统都会提示用户授予或拒绝该权限。 如果他选择不再提示，则用户无法改变主意。 使用此API，可以为用户提供一个界面来管理他为任何应用程序提供的所有权限。</p>
+
+<p>可以通过使用 <a href="/zh-CN/docs/Web/API/PermissionSettings/get" title="此页面仍未被本地化, 期待您的翻译!"><code>PermissionSettings.get()</code></a>, <a href="/zh-CN/docs/Web/API/PermissionSettings/set" title="此页面仍未被本地化, 期待您的翻译!"><code>set()</code></a>, 和<a href="/zh-CN/docs/Web/API/PermissionSettings/isExplicit" title="此页面仍未被本地化, 期待您的翻译!"><code>isExplicit()</code></a> 等方法。</p>
+
+<h3 id="读取权限">读取权限</h3>
+
+<p>要了解给定权限的当前状态，可以使用<a href="/zh-CN/docs/Web/API/PermissionSettings/get" title="此页面仍未被本地化, 期待您的翻译!"><code>PermissionSettings.get()</code></a> 方法.  方法返回一个字符串，给出特定应用程序权限的当前状态。 可能的值是：</p>
+
+<dl>
+ <dt><code>允许</code></dt>
+ <dd>该权限已被授予，不需要任何进一步的用户交互。</dd>
+ <dt><code>拒绝</code></dt>
+ <dd>无论是系统还是用户，权限都被拒绝。</dd>
+ <dt><code>提示</code></dt>
+ <dd>在需要时，将通过提示明确询问用户。</dd>
+ <dt><code>未知</code></dt>
+ <dd>应用程序没有要求此权限，甚至无法提示用户获取此权限。</dd>
+</dl>
+
+<pre class="brush: js">// 检查所有已安装的应用
+var apps = navigator.mozApps.mgmt.getAll();
+
+apps.onsuccess = function () {
+  var permission = navigator.mozPermissionSettings;
+
+  // 检查每个应用的权限
+  apps.result.forEach(function (app) {
+    var request, appName = app.manifest.name;
+
+    for (request in app.manifest.permissions) {
+      // 获取应用程序的每个权限请求的当前权限
+      var p = permission.get(request, app.manifestURL, app.origin, false);
+
+      console.log(appName + ' asked for "' + request + '" permission, which is "' + p + '"')
+    }
+  });
+}
+</pre>
+
+<h3 id="设置权限">设置权限</h3>
+
+<p>要设置权限，只需使用<a href="/zh-CN/docs/Web/API/PermissionSettings/set" title="此页面仍未被本地化, 期待您的翻译!"><code>PermissionSettings.set()</code></a> 方法。它的值可能与通过<a href="/zh-CN/docs/Web/API/PermissionSettings/get" title="此页面仍未被本地化, 期待您的翻译!"><code>get</code></a>方法检索的值相同。</p>
+
+<div class="note">
+<p><strong>注意:</strong> 根据应用程序的privileges，某些权限是隐式的。 如果由于某种原因应用程序尝试更改隐式的权限，则会引发错误。 为了避免此类错误，可以使用<a href="/zh-CN/docs/Web/API/PermissionSettings/isExplicit" title="此页面仍未被本地化, 期待您的翻译!"><code>PermissionSettings.isExplicit()</code></a> 方法.</p>
+</div>
+
+<pre class="brush: js">// 检查所有已安装的应用
+var apps = navigator.mozApps.mgmt.getAll();
+
+apps.onsuccess = function () {
+  var permission = navigator.mozPermissionSettings;
+
+  // 检查每个应用的权限
+  apps.result.forEach(function (app) {
+    var request, appName = app.manifest.name;
+
+    for (request in app.manifest.permissions) {
+      // 如果权限不明确
+      if (!permission.isExplicit(request, app.manifestURL, app.origin, false) {
+        // 询问用户应用程序请求的所有权限
+        permission.set(request, 'prompt', app.manifestURL, app.origin, false);
+      }
+    }
+  });
+}</pre>
+
+<h2 id="规范">规范</h2>
+
+<p>暂无</p>
+
+<h2 id="再看看">再看看</h2>
+
+<ul>
+ <li><a href="/zh-CN/docs/Web/API/Navigator/mozPermissionSettings" title="此页面仍未被本地化, 期待您的翻译!"><code>Navigator.mozPermissionSettings</code></a></li>
+ <li><a href="/zh-CN/docs/Web/API/PermissionSettings" title="此页面仍未被本地化, 期待您的翻译!"><code>PermissionSettings</code></a></li>
+</ul>

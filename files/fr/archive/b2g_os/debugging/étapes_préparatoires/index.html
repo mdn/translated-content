@@ -1,0 +1,59 @@
+---
+title: >-
+  Préparations pour déboguer sur Firefox OS avec les outils pour Développeur Web
+  de Firefox
+slug: Archive/B2G_OS/Debugging/Étapes_préparatoires
+tags:
+  - B2G
+  - Déboguer
+  - Firefox OS
+translation_of: Archive/B2G_OS/Debugging/Setting_up
+---
+<p class="summary">Firefox OS supporte le même protocole de débogage à distance que Firefox pour Android. Ceci veut dire que vous pouvez utiliser les outils de développement web de Firefox pour déboguer les applications Gaia lancées sur un appareil ou un émulateur Firefox OS. Afin de déboguer Firefox OS, sur votre appareil ou dans le simulateur, vous devez utiliser Firefox 18 ou plus récent. De plus, vous devrez modifier des paramètres du navigateur Firefox de votre ordinateur, ainsi que sur Firefox OS.</p>
+
+<div class="note">
+<p><strong>Note</strong>: Pour déboguer des applications sur un appareil Firefox OS, si c'est sur la version Firefox OS 1.2 ou postérieur, le meilleur choix est d'utiliser <a href="https://developer.mozilla.org/fr/docs/Tools/WebIDE">WebIDE</a>.</p>
+</div>
+
+<h2 id="Firefox_pour_ordinateur">Firefox pour ordinateur</h2>
+
+<p>Vous devez être sûr d'utiliser Firefox 18 ou plus récent afin d'avoir le support du débogage distant. Si vous n'avez pas déjà une copie récente de Firefox, <a href="https://www.mozilla.org/fr/firefox/fx/#desktop" title="https://www.mozilla.org/fr/firefox/fx/#desktop">téléchargez la dernière version stable</a>, ou récupérez la version <a href="http://nightly.mozilla.org/" title="http://nightly.mozilla.org/">Nightly</a> encore plus récente.</p>
+
+<p>Une fois que vous avez la bonne version de Firefox sur votre ordinateur, tapez <code>about:config</code> dans la barre d'URL et changez la valeur de <code>devtools.debugger.remote-enabled </code>à <code>true</code>. Vous devrez redémarrer Firefox pour que le débogage distant soit activé. Vous aurez alors une nouvelle option dans le menu <em>Développement &gt; Se connecter...</em></p>
+
+<h2 id="Activer_le_débogage">Activer le débogage</h2>
+
+<p>Si vous utilisez le <a href="/fr/docs/Tools/Firefox_OS_Simulator" title="/en-US/docs/Tools/Firefox_OS_Simulator">simulateur Firefox OS</a>, l'activation du débogage est plutôt facile. Vous n'avez pas besoin de faire de redirection de port comme avec un appareil physique. Ouvrez simplement les <a href="https://developer.mozilla.org/fr/Firefox_OS/D%C3%A9boguer/Les_param%C3%A8tres_d%C3%A9veloppeurs">paramètres pour développeurs</a> et activez l'option <em>Débogage USB</em>.</p>
+
+<div class="warning">
+<p><strong>Note :</strong> Ceci ne fonctionne plus à la date du 10 janvier 2013, car les builds pour appareils de Firefox OS ont le débogage désactivé. Il y aura éventuellement un moyen de compiler votre propre build avec le débogage réactivé, mais cela n'existe pas encore. Ce document sera mis à jour une fois que ce sera possible. De plus, le paramètre pour désactiver le support out-of-process a été supprimé. Pour l'instant, vous devrez utiliser le simulateur Firefox OS pour déboguer.</p>
+</div>
+
+<p>Sur votre appareil Firefox OS physique, ouvrez les <a href="https://developer.mozilla.org/fr/Firefox_OS/D%C3%A9boguer/Les_param%C3%A8tres_d%C3%A9veloppeurs">paramètres pour développeurs</a>, et :</p>
+
+<ul>
+ <li>Activez <em>Débogage distant</em>.</li>
+ <li>Désactivez le support out-of-process, jusqu'à ce que <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=797627" title="Remote Debugging Protocol needs a way to contact B2G subprocesses">bug 797627</a> soit corrigé. Sans ça, seuls les scripts systèmes pourront être débogués.</li>
+</ul>
+
+<div class="note">
+<p><strong>Rappel :</strong> Si vous flashez votre appareil, vous devrez reproduire ces modifications.</p>
+</div>
+
+<p>Vous pouvez maintenant <a href="/fr/docs/Tools/Debugger" title="/en-US/docs/Tools/Debugger">utiliser le débogueur</a> !</p>
+
+<h2 id="Activer_la_console_sur_un_appareil_Firefox_OS">Activer la console sur un appareil Firefox OS</h2>
+
+<p>Les builds de production de Firefox ont la journalisation dans la console (tel que <a href="/fr/docs/Web/API/Console/log" title="Affiche un message dans la Console Web."><code>console.log()</code></a>) désactivée par défaut. Pour la rétablir, ouvrez les <a href="https://developer.mozilla.org/fr/Firefox_OS/D%C3%A9boguer/Les_param%C3%A8tres_d%C3%A9veloppeurs">paramètres pour développeurs</a> et sélectionnez <em>Console activée</em>.</p>
+
+<div class="note">
+<p>Note: Voir <a href="https://developer.mozilla.org/fr/docs/Mozilla/Firefox_OS/Debugging/On-device_console_logging">Journalisation console sur appareil</a> pour obtenir plus de détails concernant l'utilisation de la journalisation console sur Firefox OS.</p>
+</div>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="/fr/docs/Mozilla/Firefox_OS/deboguer" title="/en-US/docs/Mozilla/Firefox_OS/Debugging">Débogueur sur Firefox OS</a></li>
+ <li><a href="/en-US/docs/Tools/Debugger" title="/en-US/docs/Tools/Debugger">Débogueur</a></li>
+ <li><a href="/en-US/docs/Mozilla/Firefox_OS/Debugging/Developer_settings" title="/en-US/docs/Mozilla/Firefox_OS/Debugging/Developer_settings">Paramètres pour développeur sur Firefox OS</a></li>
+</ul>

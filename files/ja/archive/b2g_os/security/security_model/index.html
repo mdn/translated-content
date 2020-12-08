@@ -1,0 +1,284 @@
+---
+title: Firefox OS セキュリティ概論
+slug: Archive/B2G_OS/Security/Security_model
+tags:
+  - B2G
+  - Firefox OS
+  - IPC
+  - IPDL
+  - Mobile
+  - Security
+translation_of: Archive/B2G_OS/Security/Security_model
+---
+<div class="summary">
+ <p><span class="seoSummary">このドキュメントでは、Mozilla の Firefox OS のセキュリティフレームワークの概要を説明します。これは、モバイルデバイスをプラットフォーム、アプリ、データに対する脅威から防御するためのフレームワークです。Firefox OS で Mozilla は、携帯電話のセキュリティリスクに対する最高品質の保護を提供する、包括的・集中的・多層的なセキュリティモデルを実装しました。</span></p>
+</div>
+<h2 id="Platform_Security" name="Platform_Security">プラットフォームセキュリティ</h2>
+<p>Firefox OS プラットフォームは、あらゆるレベルで攻撃のリスクを軽減するように設計された多層型のセキュリティモデルを使用します。前線の対抗策は、脅威に対する包括的な保護を提供する多重防護策と組み合わせられます。</p>
+<h3 id="Secure_Architecture" name="Secure_Architecture">セキュアアーキテクチャ</h3>
+<p>Firefox OS は、Web ベースのアプリケーションと下層のハードウェアを結びつけます。これは以下のような階層で構成される、統合された技術スタックです:</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5023/platform.png" style="width: 678px; height: 478px;"></p>
+<ul>
+ <li>Gaia: ユーザエクスペリエンスを作り上げる Web アプリ一式です (アプリは HTML5、CSS、JavaScript、画像、メディアなどで構成されます)。</li>
+ <li>Gecko: アプリ実行のためのフレームワークを提供したり、モバイルデバイスの機能へアクセスするために使用する Web API を実装したりするアプリケーションランタイム層です。</li>
+ <li>Gonk: 下層の Linux カーネル、システムライブラリ、ファームウェア、デバイスドライバであり、他のコンポーネントはすべて Gonk の上で実行します。</li>
+ <li>モバイルデバイス: Firefox OS を実行する携帯電話機器です。</li>
+</ul>
+<p>Gecko は、モバイルデバイスを悪用から保護するためのセキュリティポリシーを適用するゲートキーパーです。Gecko 層は、(Gaia 層の) Web アプリと電話機の間を仲介するように振る舞います。Gonk は下層の携帯電話機の機能を、Gecko 層に直接提供します。Web アプリは Web API を通してのみ、かつ Gecko がアクセス要求を許可した場合にのみ、携帯電話機の機能にアクセスできます。直接アクセスする手段はなく、また電話機への "バックドア" もありません。Gecko は許可設定を強制して、認可されていないアクセス要求は防止します。</p>
+<h3 id="Secure_System_Deployment" name="Secure_System_Deployment">セキュアなシステム展開</h3>
+<p>Firefox OS はスマートフォンにインストールされて提供されます。オリジナルのシステムイメージは、ディストリビューションパッケージの組み立て、構築、テスト、デジタル署名の実施について責任を持つ、既知の信頼された提供元によって作成されます。</p>
+<p>セキュリティ対策は、技術スタックの全体にわたって使用されます。ファイルシステムの権限は、Linux のアクセスコントロールリスト (ACL) によって適用されます。システムアプリは、読み取り専用 (アップデート中は、一時的に読み書き可能になるため除きます) のボリュームにインストールされます。通常、ユーザのコンテンツを置く領域だけが読み書き可能です。デバイスハードウェア内のさまざまなコンポーネントは、標準的な業界の慣習としてデフォルトで実装されている、ビルトインの保護機能を備えています。例えばチップセットのベンダーは、脆弱性を低減するための強化技術を採用しています。コアプラットフォーム (Gecko および Gonk) は潜在的な脅威に対する保護を高めるために強化されており、またコンパイラの強化策を、適用可能な場所で採用しています。詳しくは <a href="/ja/Firefox_OS/Security/System_security" title="/ja/Firefox_OS/Security/System_security">システムセキュリティ</a> をご覧ください。</p>
+<h3 id="Secure_System_Updates" name="Secure_System_Updates">セキュアなシステムアップデート</h3>
+<p>Firefox OS プラットフォームのアップグレードやパッチ適用は、携帯電話機内のシステムイメージの継続的な整合性を保証する、セキュアな Mozilla のプロセスを使用して展開されます。更新パッケージは、その組み立て、構築、テスト、デジタル署名の実施について責任を持つ、既知の信頼された提供元 (通常はデバイスの OEM) によって作成されます。</p>
+<p>システム更新は、Firefox OS スタックの全体あるいは一部に関与する場合があります。アップデートに Gonk の変更が含まれている場合は、インストールプロセスとして FOTA (Firmware Over the Air) を使用します。FOTA アップデートには、デバイス管理 (FOTA、ファームウェア、ドライバ)、設定管理 (Firefox OS の設定)、セキュリティ更新、Gaia、Gecko、あるいは他のパッチといった、Firefox OS スタックの他の部分に対するものが含まれることもあります。</p>
+<p>Gonk に関与しないアップデートは、Mozilla System Update Utility を使用して実施できます。Firefox OS では、Firefox のデスクトップ製品と同じ更新フレームワーク、プロセス、Mozilla ARchive (MAR) 形式 (更新パッケージで使用) を使用します。</p>
+<p>携帯電話機内蔵の更新サービス (OEM が提供するでしょう) が、定期的にシステム更新の確認を行います。更新パッケージが入手可能になって更新サービスにより検出されると、インストール実施の確認をユーザに促します。更新パッケージをモバイルデバイスへインストールする前に、デバイスのストレージで更新の適用に十分な領域があるかを確認します。またディストリビューションの検証が行われます:</p>
+<ul>
+ <li>更新の提供元 (システム更新やマニフェストの出所のプロトコル:ドメイン:ポートの検証)</li>
+ <li>ファイルの整合性 (SHA-256 ハッシュの確認)</li>
+ <li>コード署名 (信頼されたルート証明書に対する証明書の確認)</li>
+</ul>
+<p>更新プロセスの間に、以下のセキュリティ対策を使用します:</p>
+<ul>
+ <li>Mozilla は、アップデートを SSL 接続で取得することを推奨および期待します。</li>
+ <li>ファームウェアパッケージをインストールする前に、強力な暗号による検証を要求します。</li>
+ <li>更新プロセスを始める前に、完全な更新を特定の安全な場所にダウンロードしなければなりません。</li>
+ <li>システムはアップデートプロセスを始めるときに、Web アプリを実行しない安全な状態でなければなりません。</li>
+ <li>鍵情報は、デバイス内の安全な場所に保管しなければなりません。</li>
+</ul>
+<p>携帯電話機に更新が適切に適用されたことを保証するための、厳密なチェックがあります。</p>
+<div class="note">
+ <p><strong>注記</strong>: 更新処理がどのように動作するか、あるいはどのように更新を作成および頒布するかについて、詳しくは <a href="/ja/Firefox_OS/Building_and_installing_Firefox_OS/Firefox_OS_update_packages">Firefox OS の更新パッケージを作成、適用する</a> をご覧ください。</p>
+</div>
+<h2 id="App_Security" name="App_Security">アプリのセキュリティ</h2>
+<p>Firefox OS は侵害するアプリや悪意のあるアプリから携帯電話機を守るために、多層的なセキュリティ防御策を使用しています。この方策では、アプリの信頼モデルに基づく絶対的な許可レベル、ランタイムのサンドボックス実行、下層の携帯電話ハードウェアへのアクセスを API に限定、強固な許可設定モデル、セキュアなインストールおよびアップデートのプロセスといった、さまざまな仕組みを採用しています。技術的な詳細については <a href="/ja/docs/Mozilla/Firefox_OS/Security/Application_security" title="Mozilla/Firefox_OS/Security/Application_security">アプリケーションセキュリティ</a> をご覧ください。</p>
+<p>Firefox OS では、すべてのアプリケーションが Web アプリ (HTML5、JavaScript、CSS、メディアおよび他のオープンな Web 技術を使用して作成したプログラム。ここでは、ブラウザ内で実行しているページは Web アプリに該当しません) です。ユーザによってインストールされるバイナリ ("ネイティブ") アプリケーションは存在しないため、システムへのアクセスはすべて Web API が厳格に仲介します。ファイルシステムへのアクセスでさえ、Web API やバックエンドの SQLite データベースを通してのみ行います。アプリが SD カードに保存されているファイルへ直接アクセスする方法はありません。</p>
+<p>Firefox OS はアプリがアクセスおよび使用できるリソースの範囲を制限および強制する一方で、さまざまな許可レベルをもつ広範なアプリをサポートします。Mozilla は、どの種類のアプリケーションがどの API にアクセスできるかの厳密な制御を実装しました。例えば、認定アプリ (電話機内蔵) のみが Telephony API にアクセスできます。ダイヤラーアプリは電話をかけるために Telephony API にアクセスする特権を持ちますが、すべての認定アプリがこの API にアクセスできるわけではありません。</p>
+<p>これは、例えば任意のサードパーティー製アプリがインストールされてペイパーユースの電話番号 (アメリカにおける 900 および 910) にダイヤルされ、高額な電話料金が発生するようなシナリオを防ぎます。</p>
+<p>他の OEM 製アプリが選択的に Telephony API へアクセスできる場合があります。例えば、事業者の請求あるいはサポートの窓口へ直接電話をかけられるなどのアカウント管理を顧客ができるようにする、システム管理アプリケーションを事業者が提供する場合があります。</p>
+<h3 id="Trusted_and_Untrusted_Apps" name="Trusted_and_Untrusted_Apps">信頼済みアプリと未信頼アプリ</h3>
+<p>Firefox OS では、以下のタイプに従ってアプリを分類します:</p>
+<table>
+ <thead>
+  <tr>
+   <th style="width: 82px;">
+    <p>タイプ</p>
+   </th>
+   <th style="width: 102px;">
+    <p>信頼レベル</p>
+   </th>
+   <th style="width: 447px;">
+    <p>説明</p>
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td style="width: 82px;">
+    <p>認定</p>
+   </td>
+   <td style="width: 102px;">
+    <p>高度に信頼済み</p>
+   </td>
+   <td style="width: 447px;">
+    <p>事業者や OEM によって認定されたシステムアプリ (デバイス損傷の危険性や重要な機能に対するリスクのため)。システムアプリやサービスに限ります。サードパーティーのアプリケーションは想定しません。<br>
+     この指定は、少数の重要なアプリケーションのためだけに確保されています。例: SMS、Bluetooth、カメラ、システムクロック、テレフォニー、既定のダイヤラー (重要なサービスへ常にアクセスできるようにするため)。</p>
+   </td>
+  </tr>
+  <tr>
+   <td style="width: 82px;">
+    <p>特権</p>
+   </td>
+   <td style="width: 102px;">
+    <p>信頼済み</p>
+   </td>
+   <td style="width: 447px;">
+    <p>レビューを受けて認可され、認定済みの Marketplace によってデジタル署名を付与されたサードパーティーのアプリ。</p>
+   </td>
+  </tr>
+  <tr>
+   <td style="width: 82px;">
+    <p>Web (上記以外すべて)</p>
+   </td>
+   <td style="width: 102px;">
+    <p>未信頼</p>
+   </td>
+   <td style="width: 447px;">
+    <p>通常の Web コンテンツ。インストール型アプリ (携帯電話機に保存) およびホスト型アプリ (リモートにあり、アプリのマニフェストだけが携帯電話機に保存) の両方を含みます。ホスト型アプリのマニフェストは、Marketplace で入手できます。</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>アプリケーションの信頼レベルは、携帯電話機の機能にアクセスできる能力の一部を決定します。</p>
+<ul>
+ <li>認定アプリは、ほとんどの Web API の操作が許可されます。</li>
+ <li>特権アプリは、認定アプリがアクセスできる Web API 操作のサブセットが許可されます。</li>
+ <li>未信頼アプリは、特権アプリがアクセスできる Web API 操作のサブセットが許可されます。これは、未信頼の Web コンテンツへ開放するのに十分なセキュリティ対策を備えている Web API に限られます。</li>
+</ul>
+<p>ネットワークアクセスなど一部の操作は、すべてのアプリへ暗黙的に許可されると想定されます。一般に、より注意が必要な操作 (例えば電話番号のダイヤルや連絡先リストへのアクセス) を実行するには、アプリで高い信頼レベルが必要です。</p>
+<div class="note">
+ <p><strong>注記</strong>: 利用可能な API や許可レベルについて、詳しくは <a href="/ja/Apps/App_permissions">アプリの許可設定</a> をご覧ください。</p>
+</div>
+<h4 id="Principle_of_Least_Permissions" name="Principle_of_Least_Permissions">最小許可の原則</h4>
+<p>Web アプリに対して、Firefox OS のセキュリティフレームワークは<em>最小許可の原則</em>に従います: 最小限の許可設定から始めて、必要かつ適切なときに追加の権限を選択的に承諾します。デフォルトで、アプリはとても低い許可設定で開始します。これは未信頼の Web コンテンツに似ています。アプリが追加の許可を必要とする Web API を呼び出す場合は、それら追加の許可を<em>マニフェスト</em>に列挙しなければなりません (後述)。Gecko は、マニフェストで適切な特権を明確に要求している場合にのみ、アプリケーションに Web API へのアクセスの承諾を検討します。また Gecko は、Web アプリの<em>タイプ</em> (認定、特権、Web) がアクセスに十分な資格を与えられている場合にのみ、要求された許可を承諾します。</p>
+<h4 id="Review_Process_for_Privileged_Apps_in_the_Marketplace" name="Review_Process_for_Privileged_Apps_in_the_Marketplace">Marketplace での特権アプリのレビュープロセス</h4>
+<p>アプリを特権アプリにするため、アプリの提供者は認定済みの Marketplace に、判断のためアプリを提出しなければなりません。Marketplace はアプリに、厳格なコードレビュープロセスを受けさせます: アプリの信頼性や整合性の検証、要求された許可が (許可設定の理論的根拠で) 明言された用途で使用されていることの保証、暗黙的な許可設定の使用が適切であることの検証、特権アプリのコンテンツと特権がない外部のコンテンツとの間のインターフェイスに特権昇格攻撃を防ぐための適切な対策があることの確認。Marketplace には、承諾された許可設定によって Web アプリが悪意のある動作をしないようにする責任があります。</p>
+<p>アプリがレビューに合格すると使用が認められて、アプリのマニフェストが Marketplace によってデジタル署名され、モバイルユーザがダウンロードできるようになります。デジタル署名は、Web ストアがなんらかの攻撃を受けた場合に、攻撃者が独自のコンテンツや悪意のあるコードをユーザの携帯電話機にインストールできないようにします。この診断プロセスにより Firefox OS は Marketplace から入手した特権アプリを、ありふれた (未信頼の) Web コンテンツより高く信頼します。</p>
+<div class="note">
+ <p><strong>注記</strong>: <a href="https://marketplace.firefox.com/">Firefox Marketplace</a> を含む Marketplace について、詳しくは <a href="/ja/Marketplace">Marketplace のポータル</a> をご覧ください。</p>
+</div>
+<h3 id="Packaged_and_Hosted_Apps" name="Packaged_and_Hosted_Apps">パッケージ型アプリとホスト型アプリ</h3>
+<p>Firefox OS 向けのアプリは、<em>パッケージ型</em> (携帯電話機に保存) または<em>ホスト型</em> (リモートの Web サーバにあり、マニフェストだけが携帯電話機に保存) になります。これらは、それぞれどのようなセキュリティが管理されるかに違いがあります。それでも、パッケージ型アプリもホスト型アプリもアプリケーションのサンドボックス化を前提としています。これについては後ほど説明します。</p>
+<div class="note">
+ <p><strong>注記</strong>: ホスト型アプリとパッケージ型アプリについて、詳しくは <a href="/ja/Marketplace/Options/Self_publishing">アプリの自主配布</a> をご覧ください。</p>
+</div>
+<h4 id="Packaged_Apps" name="Packaged_Apps">パッケージ型アプリ</h4>
+<p>パッケージ型アプリは、アプリケーションのリソース (HTML5、CSS、JavaScript、画像、メディア) だけでなく、構成物やそれに対応するハッシュの明示的なリストを提供するマニフェストも含む ZIP ファイルで構成されます。認定アプリや特権アプリは、マニフェストにデジタル署名が必要であるためパッケージ型アプリであることが必要です。ユーザがパッケージ型アプリを入手するときは ZIP ファイルが携帯電話機にダウンロードされて、マニフェストを ZIP ファイル内の既知の場所から読み込みます。インストール作業の間に、アプリの構成物が検証されてパッケージ内に引き続き保管されます。すべての明示的な許可設定は実行時に要求され、ユーザにアプリのデータ使用目的を表示して、デフォルトで持続します。</p>
+<p>パッケージ型アプリ内のリソースを参照するため、URL は app: から始まる以下の形式です:</p>
+<p><code>app://<em>identifier</em>/<em>path_within_zipfile</em>/file.html</code></p>
+<p>ここで app:// は ZIP ファイルのマウントポイントを表します。また <em>identifier</em> は、アプリが携帯電話機にインストールされるときに生成される UUID です。この仕組みは、app: URL で示されるリソースが ZIP ファイルに含まれていることを確実にします。app: 内のパスは相対的であり、ZIP ファイル内のリソースへの相対リンクは許可されます。</p>
+<p>パッケージ型アプリは主に認定アプリや特権アプリでの使用を意図していますが、通常の Web アプリもパッケージ型にできます。ただし、単にパッケージ型だからといって信頼度やアクセス許可が向上することはありません。</p>
+<h4 id="Hosted_Apps" name="Hosted_Apps">ホスト型アプリ</h4>
+<p>ホスト型アプリは Web サーバに置かれており、HTTP で読み込まれます。アプリのマニフェストだけが携帯電話機に保存されます。その他すべてはリモートに保管されます。一部の API は特権アプリや認定アプリのみ使用でき、それらのアプリは署名が必要であるためパッケージ型であることが必要です。従って、ホスト型アプリは認定アプリや特権アプリであることを要求する Web API 操作にアクセスできません。</p>
+<p>セキュリティの視点では、ホスト型アプリの動作は通常の Web サイトにとても似ています。ホスト型アプリは、Web サーバ上にあるアプリのルートディレクトリ内のスタートページを指す、ハードコーディングされた完全修飾の URL の呼び出しによって読み込まれます。ホスト型アプリが読み込まれると、携帯電話機は Web サイトを閲覧する際に使用するものと同じ URL へリンクします。</p>
+<h3 id="App_Manifest" name="App_Manifest">アプリマニフェスト</h3>
+<p>Open Web App のマニフェストは、アプリと対話するために Web ブラウザが必要とする情報が含まれています。マニフェストは (少なくとも) アプリの名前と説明を持つ JSON ファイルです。詳しくは<a href="/ja/docs/Apps/FAQs/About_app_manifests" title="Apps/FAQs/About_app_manifests">アプリマニフェストに関する FAQ</a> をご覧ください。</p>
+<h4 id="Example_Manifest" name="Example_Manifest">マニフェストの例</h4>
+<p>以下のコードは、基本的な設定を含んでいるマニフェストのサンプルです:</p>
+<pre class="brush:text">{
+  "name": "My App",
+  "description": "My elevator pitch goes here",
+  "launch_path": "/",
+  "icons": {
+    "128": "/img/icon-128.png"
+  },
+  "developer": {
+    "name": "Your name or organization",
+    "url": "http://your-homepage-here.org"
+  },
+  "default_locale": "en"
+}</pre>
+<h3 id="Security_Settings_in_the_App_Manifest" name="Security_Settings_in_the_App_Manifest">アプリマニフェストでのセキュリティ設定</h3>
+<p>マニフェストには、以下のセキュリティ設定などの設定を含めることもできます:</p>
+<table>
+ <thead>
+  <tr>
+   <th style="width: 152px;">
+    <p>フィールド</p>
+   </th>
+   <th style="width: 479px;">
+    <p>説明</p>
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td style="width: 152px;">
+    <p>permissions</p>
+   </td>
+   <td style="width: 479px;">
+    <p>アプリが要求する許可設定です。アプリは使用するつもりである、ユーザの許可が必要な Web API をすべて列挙しなければなりません。ほとんどの許可設定は特権アプリや認定アプリにとって有意義であり、ホスト型アプリ向けではありません。API ごとのプロパティ:</p>
+    <ul>
+     <li><strong>description</strong>: この API の使用を要求する意図を明記した文字列。このプロパティは必須です。</li>
+     <li><strong>access</strong>: 許可に必要なアクセスの種類を指定する文字列。暗黙的な許可設定は、インストール時に許可されます。このプロパティは一部の API のみ必要です。使用できる値: <strong>read</strong>、<strong>readwrite</strong>、<strong>readcreate</strong>、<strong>createonly</strong>。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <td style="width: 152px;">
+    <p>installs_allowed_from</p>
+   </td>
+   <td style="width: 479px;">
+    <p>アプリの提供元です。このアプリのインストールの起動を許可する生成元 (スキーマ + ユニークなホスト名) を 1 組または配列で指定できます。アプリの提供者が、インストール元を認定済みの Marketplace (<a href="https://marketplace.firefox.com/">https://marketplace.firefox.com/</a> など) だけに制限できます。</p>
+   </td>
+  </tr>
+  <tr>
+   <td style="width: 152px;">
+    <p>csp</p>
+   </td>
+   <td style="width: 479px;">
+    <p>Content Security Policy (CSP) です。アプリで読み込むすべてのページに適用します。攻撃者がアプリへコードを注入することを可能にするバグに対して、アプリを強固にするために使用します。明示しない場合、特権アプリや認定アプリはシステムで定義されたデフォルト設定になります。構文:<br>
+     <a href="/ja/docs/Apps/Manifest#csp">https://developer.mozilla.org/ja/docs/Apps/Manifest#csp</a></p>
+    <p><em>このディレクティブは、適用される CSP を強化するのみです。例えば、特権アプリに適用される CSP を緩和するためには使用できません。</em></p>
+   </td>
+  </tr>
+  <tr>
+   <td style="width: 152px;">
+    <p>type</p>
+   </td>
+   <td style="width: 479px;">
+    <p>アプリケーションの種類です (web、privileged、certified)。</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>Firefox OS はマニフェストが特定の MIME タイプ (<code>application/x-web-app-manifest+json</code>) で、またアプリの提供元と同一の完全修飾ホスト名 (生成元) から提供されることを要求します。この制限は、マニフェストアプリ (従ってアプリマニフェスト) の生成元とインストールされたアプリが要求するページが同一であるときに緩和されます。この仕組みは、Web サイトをだましてアプリマニフェストをホスティングさせることができないようにするために使用します。</p>
+<h3 id="Sandboxed_Execution" name="Sandboxed_Execution">サンドボックス実行</h3>
+<p>本章では、アプリケーションと実行サンドボックスについて説明します。</p>
+<h4 id="Application_Sandbox" name="Application_Sandbox">アプリケーションサンドボックス</h4>
+<p>Firefox OS のセキュリティフレームワークでは、リスクを軽減して携帯電話機、プラットフォーム、データを保護するための多重防護策としてサンドボックス化を使用します。サンドボックス化はアプリを実行している間、アプリの周囲に境界線や制約を設ける手法です。それぞれのアプリは自身のワークスペースで実行され、アクセスが許可された Web API およびデータ、さらにワークスペースに割り当てられたリソース (IndexedDB データベース、Cookie、オフラインストレージなど) にのみアクセスします。</p>
+<p>以下の図は、このセキュリティモデルの概要を示したものです。</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5025/sandbox.png"></p>
+<p>各アプリを分離することで、影響範囲がそれぞれのワークスペース内になります。ワークスペースの外部 (他のアプリや他アプリのデータなど) に干渉することはできません。</p>
+<h4 id="Execution_Sandbox" name="Execution_Sandbox">実行サンドボックス</h4>
+<p>B2G (Gecko) は携帯電話機のハードウェア機能にアクセスできる、高い特権のシステムプロセスで動作します。各アプリは実行時に、B2G システムプロセスの子プロセスである実行環境内で動作します。それぞれの子プロセスは、制限された OS の特権セットを持ちます。例えば、子プロセスはファイルシステムにあるファイルを勝手に直接読み書きすることができません。特権的なアクセスは Web API を通して提供され、それは親の B2G プロセスによって管理されています。親プロセスは子プロセスが特権的な API を要求したときに、そのプロセスがアクションの実行に必要な許可設定があることを保証します。</p>
+<p>アプリは他のプロセスやアプリとコミュニケーションをとることはできず、B2G コアプロセスとのみコミュニケーションをとれます。またアプリは B2G から独立して実行できず、互いにアプリを開くこともできません。アプリ間は間接的 (例えばあるアプリがシステムアラームを発して、別のアプリがその結果としてシステム通知を発生させる場合) にのみ “コミュニケーション” をとることができ、またそれは B2G プロセスが仲介します。</p>
+<h4 id="Hardware_Access_Only_via_the_Web_API" name="Hardware_Access_Only_via_the_Web_API">Web API のみを通したハードウェアアクセス</h4>
+<p>Web アプリは、携帯電話機の機能へアクセスするための入口をひとつだけ持ちます。それは Firefox OS の Web API であり、Gecko に実装されています。Gecko は、モバイルデバイスや下層のサービスへ向かう唯一のゲートウェイを提供します。デバイスのハードウェア機能にアクセスする唯一の手段が、Web API を呼び出すことです。この仕組みを迂回してハードウェアと直接対話したり低レベルのソフトウェア層に入り込んだりするための、“ネイティブな” API や他の経路 (“バックドア”) はありません。</p>
+<h2 id="Security_Infrastructure" name="Security_Infrastructure">セキュリティインフラストラクチャ</h2>
+<p>以下の図は、Firefox OS のセキュリティフレームワークの構成要素を示したものです:</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5027/securityframework.png" style="width: 979px; height: 591px;"></p>
+<ul>
+ <li><strong>Permission Manager</strong>: Web API の機能にアクセスするためのゲートウェイであり、下層のハードウェアへの唯一の入口です。</li>
+ <li><strong>Access Control List</strong>: Web API の機能へアクセスするために必要な役割や許可設定のマトリックスです。</li>
+ <li><strong>Credential Validation</strong>: アプリやユーザの認証です。</li>
+ <li><strong>Permissions Store</strong>: Web API の機能へアクセスするために必要な特権のセットです。</li>
+</ul>
+<h3 id="Permissions_Management_and_Enforcement" name="Permissions_Management_and_Enforcement">許可設定の管理と適用</h3>
+<p>Firefox OS のセキュリティは、Web アプリに与えた許可設定を検証および適用するように設計されています。</p>
+<p>システムは個々の許可設定を、コンテンツが要求した場合、かつアプリのマニフェストで適切な許可設定の要求がある場合にのみアプリへ与えます。一部の許可設定はユーザによる追加の認証が要求され、ユーザは許可設定を認めるかを促されます (アプリがユーザの現在位置へのアクセスを要求した場合と同様)。このアプリ中心のフレームワークは従来の役割中心の手法 (個々の役割が許可設定のセットにそれぞれ割り当てられる) より、細かく許可設定を制御します。</p>
+<p>Web API はアクセションとリスナのセットを持ちます。各々の Web API は許可設定のレベルを要求します。Web API を呼ぶときに毎回、Gecko は以下に基づいて許可設定の要件を確認 (役割を探索) します:</p>
+<ul>
+ <li>呼び出したアプリに割り当てられている許可設定 (マニフェストで指定されているものやアプリの種類に基づくものによる)</li>
+ <li>要求された操作 (Web API の呼び出し) を実行するために必要な許可設定</li>
+</ul>
+<p>要求内容が許可設定の基準に合わない場合、Gecko は要求を拒否します。例えば未信頼のアプリは、信頼済みアプリ向けに用意された Web API を実行できません。</p>
+<h3 id="Prompting_Users_for_Permission" name="Prompting_Users_for_Permission">ユーザへの許可の問い合わせ</h3>
+<p>Web アプリへ暗黙的に割り当てられた許可設定に加えて、特定の操作は実行可能にする前に、ユーザによる明示的な許可が必要です (例えば、"Web アプリがカメラにアクセスしてよいか?")。これらの操作のために、Web アプリは許可が必要である根拠をマニフェストで明示することが求められます。この<em>データの使用目的</em>はユーザに対して、許可設定が認められた場合にそのデータで何を行おうとしているかや関連するリスクを告知します。これにより、ユーザは情報に基づく判断やデータ管理の制御が可能になります。</p>
+<h3 id="Secure_App_Update_Process" name="Secure_App_Update_Process">セキュアなアプリの更新プロセス</h3>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5029/updateprocess.png" style="width: 979px; height: 102px;"></p>
+<p><em>特権</em>アプリのアップグレードやパッチ適用のため、アプリの提供者は更新されたパッケージを認定済みの Marketplace に提出します。このパッケージはレビューを受けて、署名した上でユーザが利用可能になります。Firefox OS デバイスでは、アプリ更新ユーティリティが定期的にアプリの更新を確認します。アップデートが利用可能になると、ユーザにそれらを適用したいかを問い合わせます。アップデートを携帯電話機へインストールする前に、パッケージは以下の点について検証されます:</p>
+<ul>
+ <li>アップデートの提供元 (アップデートやマニフェストの出所のプロトコル:ドメイン:ポートの検証)</li>
+ <li>ファイルの整合性 (SHA-256 ハッシュの確認)</li>
+ <li>コード署名 (信頼されたルート証明書に対する証明書の確認)</li>
+</ul>
+<p>携帯電話機に更新が適切に適用されたことを保証するための、厳密なチェックがあります。アップデートプロセスを始める前に、完全なアップデートを特定の安全な場所にダウンロードしなければなりません。インストールしてもユーザのデータは上書きされません。</p>
+<div class="note">
+ <p><strong>注記</strong>: アプリの更新について詳しくは、<a href="/ja/Apps/Updating_apps">アプリの更新</a> をご覧ください。</p>
+</div>
+<h2 id="Device_Security_(Hardware)" name="Device_Security_(Hardware)">デバイスのセキュリティ (ハードウェア)</h2>
+<p>モバイルデバイスハードウェアのセキュリティの仕組みは、一般的に OEM によって制御されます。例えば OEM は、誤った PIN 入力によりロックされた (Subscriber Identity Module) カードのロックを解除するための PUK (PIN Unlock Key) コードとともに、SIM カードのロック機能を提供するかもしれません。詳しくは OEM に問い合わせてください。Firefox OS はパスコードやタイムアウトスクリーンの設定を可能にしています。これについては次の章で説明します。</p>
+<h2 id="Data_Security" name="Data_Security">データのセキュリティ</h2>
+<p>ユーザは個人用にしておきたい自身の携帯電話機に、連絡先、金融情報 (銀行やクレジットカードの情報)、パスワード、カレンダーなどの個人情報を保管できます。Firefox OS は機密情報を、窃取、悪用、破壊する可能性がある悪意のアプリから保護するようになっています。</p>
+<h3 id="Passcode_and_Timeout_Screens" name="Passcode_and_Timeout_Screens">パスコードとタイムアウトスクリーン</h3>
+<p>Firefox OS は、パスコードを入力したものだけが電話機を使用できるようにするために、ユーザが電話機にパスコードを設定できるようにしています。また Firefox OS は、電話機で何もしていない時間 (設定変更可能) が経過した後に表示されるタイムアウトスクリーンを提供しており、電話機の使用を再開する前にパスコード認証を求めます。</p>
+<h3 id="Sandboxed_Data" name="Sandboxed_Data">サンドボックス化されたデータ</h3>
+<p>前に説明したように、アプリは実行時にサンドボックス化されます。これは明示的に共有されておりアプリがアクセスするのに十分な許可を受けているデータを<em>除き</em>、アプリが他のアプリに属するデータにアクセスすることを防ぎます。</p>
+<h3 id="Serialized_Data" name="Serialized_Data">シリアライズ化されたデータ</h3>
+<p>Web アプリは、ファイルシステムへ直接読み書きする方法がありません。代わりに、ストレージへのアクセスはすべて Web API を通して行われます。Web API によるストレージの読み書きは、中間の SQLite データベースを通して行います。直接 I/O を行う手段はありません。それそれのアプリは自身のデータストアを持ち、それはデータベースによりディスクへシリアライズされます。</p>
+<h3 id="Data_Destruction" name="Data_Destruction">データの廃棄</h3>
+<p>ユーザがアプリをアンインストールするときは、アプリケーションに関連づけられたすべてのデータ (Cookie、localStorage、IndexedDB など) が削除されます。</p>
+<h3 id="Privacy" name="Privacy">プライバシー</h3>
+<p>Mozilla は自身のプライバシーの原則 (<a href="https://www.mozilla.org/privacy/">https://www.mozilla.org/privacy/</a>) に従って、ユーザのプライバシーやデータの保護を約束しており、それは Mozilla Manifesto (<a href="https://www.mozilla.org/about/manifesto.html">https://www.mozilla.org/about/manifesto.html</a>) に由来します。Mozilla Firefox のプライバシーポリシーでは、Mozilla Firefox Web ブラウザのユーザに関する情報を Mozilla がどのように収集および使用するかについて、Firefox が何を Web サイトに送信するか、データを守るために Mozilla は何をするか、Mozilla の Data Practices などを説明しています。詳しくは以下をご覧ください:</p>
+<ul>
+ <li><a href="http://www.mozilla.org/en-US/legal/privacy/firefox.html">http://www.mozilla.org/en-US/legal/privacy/firefox.html</a> (<a href="http://www.mozilla.jp/legal/privacy/firefox/">参考訳</a>)</li>
+ <li><a href="https://blog.mozilla.org/privacy/">https://blog.mozilla.org/privacy/</a></li>
+ <li><a href="http://support.mozilla.org/ja/kb/privacy-and-security-settings-firefox-os-phones">http://support.mozilla.org/ja/kb/privacy-and-security-settings-firefox-os-phones</a></li>
+</ul>
+<p>Firefox OS はユーザの手によるユーザデータの制御手段を投入することでこれらの原則を実践しており、ユーザはこの個人情報がどこへ行くかを決定できます。Firefox OS は以下の機能を提供します:</p>
+<ul>
+ <li>Do Not Track 設定</li>
+ <li>Firefox ブラウザの Cookie を無効化できる機能</li>
+ <li>Firefox OS の閲覧履歴を削除できる機能</li>
+</ul>

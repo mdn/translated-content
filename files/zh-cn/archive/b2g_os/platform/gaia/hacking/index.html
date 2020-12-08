@@ -1,0 +1,542 @@
+---
+title: Hacking Gaia
+slug: Archive/B2G_OS/Platform/Gaia/Hacking
+translation_of: Firefox_OS/Developing_Gaia
+---
+<div class="warning">
+<p>该页面是为Gaia开发者写的。如果您在寻找关于如何编译和运行Firefox OS 的信息，可以参考 <a href="/zh-CN/docs/Mozilla/Firefox_OS/Building_and_installing_Firefox_OS" title="/zh-CN/docs/Mozilla/Firefox_OS/Building_and_installing_Firefox_OS">Building and installing Firefox OS page</a> .</p>
+</div>
+
+<div class="summary">
+<p><span class="seoSummary">Gaia 是<a href="https://developer.mozilla.org/apps" rel="nofollow">web apps</a> 的集合，并且由它组合成  <a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Firefox_OS">Firefox OS</a>的前端. 在Firefox OS 屏幕上看到的都是由Web技术构建的。其中包括主屏幕和所有的原生app。本文则提供了修改Gaia代码的详细说明。</span></p>
+</div>
+
+<h2 id="获取源码">获取源码</h2>
+
+<p>要获取Gaia的源码, <a href="https://github.com/mozilla-b2g/gaia" title="https://github.com/mozilla-b2g/gaia">fork us on GitHub</a> 并且使用 <a href="http://git-scm.com/" title="http://git-scm.com/">git</a> 将您fork的代码clone到本地。</p>
+
+<pre>$ git clone https://github.com/mozilla-b2g/gaia.git</pre>
+
+<h2 id="运行Gaia">运行Gaia</h2>
+
+<p>有三种方式可以运行Gaia，分别是在桌面，火狐浏览器或者兼容的移动设备。</p>
+
+<h3 id="B2G_桌面">B2G 桌面</h3>
+
+<p>B2G 桌面是在Firefox OS设备上运行应用程序的桌面版本，您可以使用它在电脑桌面上运行Gaia。</p>
+
+<p>您可以从<a href="http://nightly.mozilla.org/">Firefox Nightly站点</a>上下载<a href="http://nightly.mozilla.org/#Desktop%20Boot2Gecko">B2G桌面的nightly版本</a>。其中有关于Linux (32位 and 64 位), Mac OS X 以及 Windows的版本.</p>
+
+<p>Nightly 版本都会对近期的gaia版本打包。一旦您下载完成压缩包，只需要解压到文件夹中，并从解压到的文件夹中运行b2g二进制文件就可以了。 </p>
+
+<pre>$ cd b2g
+$ ./b2g</pre>
+
+<p>如果您出于开发的目的来运行带有指定版本Gaia的B2G， 则需要从您clone的代码位置构建一个配置文件：</p>
+
+<pre>$ cd /path/to/gaia
+$ DEBUG=1 DESKTOP=0 make</pre>
+
+<p>上面的命令会在<code>gaia</code> 生成一个名称为<code>profile</code>的文件夹。 <code>DEBUG选项会将</code> Gaia 作为托管的应用在内置的Web服务器上运行，而不是在每次更改后都需要重新打包的原生应用。在运行上面的命令后，您可以在最后的输出行中找到配置文件夹的路径，大体是 </p>
+
+<pre>Profile Ready: please run [b2g|firefox] -profile /path/to/gaia/profile</pre>
+
+<p>之后则可以指定配置文件来运行B2G。</p>
+
+<pre>$ ./b2g /path/to/gaia/profile</pre>
+
+<p>您用可以从源码中编译出自身的B2G桌面。</p>
+
+<div class="note">
+<p><strong>注意 :</strong> 在 Mac OS X,  <code>b2g</code> 二进制文件会存在于 B2G.app.您需要运行下面命令:</p>
+
+<p><code>./B2G.app/Contents/MacOS/b2g /path/to/gaia/profile</code></p>
+</div>
+
+<h3 id="在Firefox中运行Gaia">在Firefox中运行Gaia</h3>
+
+<p>也可以在Firefox内部运行Gaia。这种方式会让您的开发周期大大缩短，同时也可以使用标准的web开发工具和调试器。 可以参考<a href="/zh-CN/docs/Mozilla/Firefox_OS/Developing_Firefox_OS/Quickstart_guide_to_Gaia_development">Gaia开发快速指南</a> 获取更多的信息.</p>
+
+<h3 id="在设备上运行Gaia">在设备上运行Gaia</h3>
+
+<p>如果您有一个兼容的移动设备，也可以使用Firefox OS 烧机来运行Gaia。您可以参考<a href="/zh-CN/docs/Mozilla/Firefox_OS/Building_and_installing_Firefox_OS">编译和安装Firefox OS </a>获取更多信息. 我们也有关于<a href="/zh-CN/docs/Mozilla/Firefox_OS/Platform/Testing">如何测试Firefox OS</a>的文章。</p>
+
+<h2 id="单元测试">单元测试</h2>
+
+<p>参考<a href="/zh-CN/docs/Mozilla/Firefox_OS/Platform/Testing/Gaia_unit_tests">Gaia单元测试</a>  来获取如何创建和在Gaia层运行单元测试的文章。</p>
+
+<h2 id="提交bug">提交bug</h2>
+
+<p>在Bugzilla的 <a href="https://bugzilla.mozilla.org/buglist.cgi?product=Firefox OS&amp;component=Gaia&amp;resolution=---" rel="nofollow">Firefox OS &gt; Gaia</a> 中提交bug。在<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox_OS">Gaia组件</a>  (或者是子组件)中提交bug.</p>
+
+<h2 id="为_Gaia做贡献">为 Gaia做贡献</h2>
+
+<p>Mozilla依赖开源社区的贡献，以帮助开发Gaia应用，我们也希望您能参与进来。</p>
+
+<p>我们可以从一些非常好的网址来发现一些bug：</p>
+
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/buglist.cgi?quicksearch=component:gaia%20sw:polish%20@nobody;list_id=4566236" rel="nofollow">Unowned Gaia polish bugs on Bugzilla</a></li>
+ <li><a href="http://www.joshmatthews.net/bugsahoy/?b2g=1" rel="nofollow">Mentored bugs</a></li>
+</ul>
+
+<h3 id="编码风格基本知识">编码风格基本知识</h3>
+
+<ul>
+ <li>背景：
+  <ul>
+   <li><a href="/zh-CN/docs/Developer_Guide/Coding_Style#General_practices" title="Developer_Guide/Coding_Style#General_practices">Coding Style: General practices</a></li>
+   <li><a href="/zh-CN/docs/Developer_Guide/Coding_Style#JavaScript_practices" title="Developer_Guide/Coding_Style#JavaScript_practices">Coding Style: JavaScript practices</a></li>
+   <li><a href="/zh-CN/docs/Developer_Guide/Coding_Style#Naming_and_formatting_guide" title="Developer_Guide/Coding_Style#Naming_and_formatting_guide">Coding Style: Naming and formatting guide</a></li>
+  </ul>
+ </li>
+ <li>Make sure HTML files are declared <code>&lt;!DOCTYPE html&gt;</code> (that is, as HTML5 documents). If you don't, Internet Explorer 9 and later will load them in compatibility mode.</li>
+ <li>Include the <code>"use strict";</code> statement (just like that, including the quotes) to the top of your JavaScript files to put them into strict mode.</li>
+ <li>Always use two spaces for indentation, rather than tabs.</li>
+ <li>Please use line breaks to separate logical bits of code!</li>
+ <li>Multi-word file names should use the "underscore" character to separate words, <code>like_this.js</code>.</li>
+ <li>Use single quotes instead of double quotes for strings.</li>
+</ul>
+
+<h4 id="Additional_rules">Additional rules</h4>
+
+<p>Bad:</p>
+
+<pre>if (expression) doSomething();
+</pre>
+
+<p>Correct:</p>
+
+<pre>if (expression) {
+  doSomething();
+}
+</pre>
+
+<p>If you're working on the system app, check out the guidance listed <a href="https://groups.google.com/d/msg/mozilla.dev.gaia/rEhSrw6XmT4/UNvE7qW9pgYJ" title="See_here_for_some_rules._https://groups.google.com/d/msg/mozilla.dev.gaia/rEhSrw6XmT4/UNvE7qW9pgYJ">here</a>.</p>
+
+<p>Before submitting a patch we recommend you run <a href="https://developers.google.com/closure/utilities/docs/linter_howto" title="http://closure-linter.googlecode.com/svn/trunk/closure_linter/gjslint.py">gjslint</a> on it to check for any style errors:</p>
+
+<pre>gjslint --nojsdoc my_file.js</pre>
+
+<h3 id="提交一个_patch">提交一个 patch</h3>
+
+<p>First file or assign a bug to yourself on <a href="https://bugzilla.mozilla.org/buglist.cgi?product=Firefox OS&amp;component=Gaia&amp;resolution=---" title="https://bugzilla.mozilla.org/buglist.cgi?product=Firefox OS&amp;component=Gaia&amp;resolution=---">Bugzilla</a>, you'll need a Bugzilla account.</p>
+
+<p>Then create a branch on your fork of Gaia:</p>
+
+<pre>$ git branch branchname
+$ git checkout branchname</pre>
+
+<p>Commit your changes:</p>
+
+<pre>$ git add /file/to/add
+$ git commit -m "Bug XXXXX - Fix the broken Gaia and save the world"</pre>
+
+<p>Push your branch:</p>
+
+<pre>$ git push origin branchname</pre>
+
+<p>Send a pull request by navigating to the branch in your fork on GitHub and finding the pull request button.</p>
+
+<div class="note">
+<p><strong>Note</strong>: Except under unusual circumstances, patches should be landing first on the master branch, not a release branch like v1-train, v1.3, etc. If they need to land on a release branch, they must go through the usual approval process as outlined on the <a href="https://wiki.mozilla.org/Release_Management/B2G_Landing">B2G Landing wiki page</a>.</p>
+</div>
+
+<p>To request a review of your patch, <a href="http://globau.wordpress.com/2013/10/21/github-pull-requests-and-bugzilla/">attach the pull request</a> to the bug in Bugzilla by referencing the URL of the pull request, and set the review ("r") flag to "?" and enter the bugzilla ID of one of the <a href="https://wiki.mozilla.org/Modules/FirefoxOS" title="https://wiki.mozilla.org/Modules/FirefoxOS">module owners and peers</a> (very important - otherwise your bug will not likely be seen by anyone). The <a href="https://addons.mozilla.org/zh-CN/firefox/addon/github-tweaks-for-bugzilla/" title="https://addons.mozilla.org/zh-CN/firefox/addon/github-tweaks-for-bugzilla/">Github tweaks for bugzilla extension on AMO</a> can help automate this process by automatically creating the attachment and adding it to the bug; you will still need to set the review flag on Bugzilla.</p>
+
+<p>The reviewer may ask you to make some changes; you may need to amend the original commit and force push it to the original branch/pull request. Once they're happy with your patch, they will merge it into the master branch for you. Before they do this they would prefer it if you could squash all your changes into a single commit, so your contribution can be tracked easily.</p>
+
+<p>The person who merges the commit (usually the reviewer) would add a <code>r=</code> flag in the comment of the merge commit.</p>
+
+<h2 id="Make_选项">Make 选项</h2>
+
+<p>you use the <code>make</code> command inside the Gaia repo to create a Gaia profile that can be loaded onto your device or run in a <a href="/zh-CN/Firefox_OS/Using_the_B2G_desktop_client">B2G Desktop</a> build. This section looks in detail at the different make options available.</p>
+
+<p>There are many environment variables present in the Makefile. Do not depend on them as they may be removed in the future.</p>
+
+<p>Created profiles are stored in <code>/gaia/profile</code>, and contain the following items:</p>
+
+<ul>
+ <li>defaults: Directory containing default settings to be reloaded after you reset the phone.</li>
+ <li>extensions: Directory containing extensions.</li>
+ <li>settings.json: Settings file.</li>
+ <li>user.js: Another file containing more settings/preferences.</li>
+ <li>webapps: Directory containing all the web apps that are to be installed on the phone.</li>
+</ul>
+
+<div class="note">
+<p><strong>Note</strong>: When you've already made a profile and you want to build a new one, you must delete the existing profile directory before trying to generate a new one.</p>
+</div>
+
+<h3 id="Default">Default</h3>
+
+<pre class="brush: bash">make</pre>
+
+<p>This simply gives you an unbranded, non-debug build. For a branded build build you need to use <a href="#Official_Mozilla_branding_make">Official Mozilla branding make</a>; for a debug build you need <a href="#Debug_make">Debug make</a>.</p>
+
+<h3 id="推送到设备端">推送到设备端</h3>
+
+<pre class="brush: bash">make install-gaia
+
+make reset-gaia
+</pre>
+
+<p>With <a href="/zh-CN/Firefox_OS/Debugging/Installing_ADB">ADB</a> (Android Debug Bridge) setup, these make targets will push Gaia to the device. <code>install-gaia</code> will just push updates of Gaia from your working directory to your device. <code>reset-gaia</code> will purge all existing configuration, profiles, web apps and database entries (a new settings database will be initialized) before pushing Gaia.</p>
+
+<h3 id="编译特定的应用">编译特定的应用</h3>
+
+<pre class="brush: bash">APP=system make
+
+APP=system make install-gaia</pre>
+
+<p>When a profile already exists, <code>APP</code> allows you to specify which app to re-package, instead of re-packing and re-pushing all the Gaia apps.</p>
+
+<h3 id="指定自定义的配置文件夹">指定自定义的配置文件夹</h3>
+
+<p>You can specify a custom directory to build your profile in, using <code>PROFILE_FOLDER</code>, for example:</p>
+
+<pre class="brush: bash">PROFILE_FOLDER=profile-b2g-desktop make</pre>
+
+<h3 id="不同设备的编译">不同设备的编译</h3>
+
+<p>There are a few make options that create builds for different devices, with different purposes.</p>
+
+<h4 id="Create_a_phone_build_of_Gaia">Create a phone build of Gaia</h4>
+
+<pre class="brush: bash">GAIA_DEVICE_TYPE=phone make</pre>
+
+<p>This build gets apps from <code>/gaia/build/config/phone/apps-engineering.list</code>.</p>
+
+<h4 id="Create_a_tablet_build_of_Gaia">Create a tablet build of Gaia</h4>
+
+<pre class="brush: bash">GAIA_DEVICE_TYPE=tablet make</pre>
+
+<p>This build gets apps from <code>/gaia/build/config/phone/apps-engineering.list</code>.</p>
+
+<h3 id="不同类型的编译">不同类型的编译</h3>
+
+<p>There are a few make options that create different types of build, with different purposes.</p>
+
+<h4 id="Production_make">Production make</h4>
+
+<pre class="brush: bash">PRODUCTION=1 make</pre>
+
+<p>This creates a production build of Gaia:</p>
+
+<ul>
+ <li>Gaia is run as packaged apps, which are harder to debug, but are the best available state for apps in terms of available API permissions, etc.</li>
+ <li>Test apps are not included in the build</li>
+ <li>Remote debugging is turned off by default</li>
+ <li>Lock screen is turned on (which in turn will cut USB connections)</li>
+ <li>Marionette is turned off</li>
+ <li>First time user experience is turned on</li>
+ <li>Offline cache is used.</li>
+</ul>
+
+<div class="note">
+<p><strong>Note</strong>: You can also use the alias <code>make production</code>.</p>
+</div>
+
+<h4 id="Debug_make">Debug make</h4>
+
+<pre class="brush: bash">DEBUG=1 make</pre>
+
+<p>The <code>DEBUG</code> variable runs Gaia as hosted apps on a built-in web server on a specific <code>GAIA_PORT</code>, rather than the default of packaged apps which have to be re-packaged after every change; this makes things easier to test. Launching the profile with the latest Firefox Nightly will also give you nice B2G specific panels on the Firefox Developer Tools.</p>
+
+<p>In addition:</p>
+
+<ul>
+ <li>Test apps are included in the build.</li>
+ <li>Remote debugging is turned on by default.</li>
+ <li>Lock screen is turned off (USB connections won't be interrupted.)</li>
+ <li><a href="/zh-CN/docs/Mozilla/QA/Marionette">Marionette</a> is turned on, which is needed when running Gaia <a href="/zh-CN/docs/Mozilla/Firefox_OS/Platform/Testing/Gaia_unit_tests" title="/zh-CN/docs/Mozilla/Firefox_OS/Platform/Testing/Gaia_unit_tests">unit tests</a>.</li>
+ <li>First time user experience is turned off.</li>
+ <li>Offline cache is not used, even if it is generated.</li>
+</ul>
+
+<h4 id="Device_debug_make">Device debug make</h4>
+
+<pre class="brush: bash">DEVICE_DEBUG=1 make</pre>
+
+<p>This disables screen lock on the device, and enables debugging with the ADB tool, so is useful for device debugging.</p>
+
+<p>In Firefox OS version &gt; 1.2, specify this param when you want to debug Firefox OS webapps with the <a href="/zh-CN/Firefox_OS/Using_the_App_Manager">App Manager</a>.</p>
+
+<h4 id="Debug_desktop_make">Debug desktop make</h4>
+
+<pre class="brush: bash">DEBUG=1 DESKTOP=0 make</pre>
+
+<p>This option creates a desktop debug version, for running inside <a href="/zh-CN/Firefox_OS/Using_the_B2G_desktop_client">B2G desktop</a>.</p>
+
+<h4 id="Official_Mozilla_branding_make">Official Mozilla branding make</h4>
+
+<pre class="brush: bash">MOZILLA_OFFICIAL=1 make</pre>
+
+<p>Use this to make an official Mozilla-branded build.</p>
+
+<h4 id="Dogfood_make">Dogfood make</h4>
+
+<pre class="brush: bash">DOGFOOD=1 make</pre>
+
+<p>Dogfooding options and utilities are turned on, for example the Feedback app, which allows doog fooders to easily submit feedback on the OS.</p>
+
+<h4 id="System_apps_make">System apps make</h4>
+
+<pre class="brush: bash">B2G_SYSTEM_APPS=1 make</pre>
+
+<p>This environment variable lets you push an app to <code>/system/b2g</code> instead of <code>/data/local</code>. You should use this when you work with a user build. This variable is automatically set when running <code>make production</code>. This can be used for <code>install-gaia</code> or <code>reset-gaia</code> too.</p>
+
+<h4 id="Distribution_and_market_customization_build">Distribution and market customization build</h4>
+
+<pre class="brush: bash">GAIA_DISTRIBUTION_DIR=./dir</pre>
+
+<div class="note">
+<p><strong>Note</strong>: Read <a href="/zh-CN/Firefox_OS/Hacking_Firefox_OS/Market_customizations_guide">Market Customizations</a> for more details.</p>
+</div>
+
+<h3 id="开发调试选项">开发/调试选项</h3>
+
+<p>There are also make options for adding/removing features or changing settings, for debugging purposes.</p>
+
+<h4 id="Enable_remote_debugging">Enable remote debugging</h4>
+
+<pre class="brush: bash">REMOTE_DEBUGGER=1</pre>
+
+<p>This enables remote debugging on the device, the same as using the option in the <a href="/zh-CN/Firefox_OS/Debugging/Developer_settings#Remote_debugging">developer settings</a>.</p>
+
+<h4 id="JavaScript_optimization_make">JavaScript optimization make</h4>
+
+<pre class="brush: bash">GAIA_OPTIMIZE=1 make</pre>
+
+<p>This triggers an optimization pass on Gaia's JavaScript, concatenating/compressing the files. This is automatically set when running <code>make production</code>. This can be used for <code>install-gaia</code> or <code>reset-gaia</code> too.</p>
+
+<h4 id="High_resolution_image_assets">High resolution image assets</h4>
+
+<pre class="brush: bash">GAIA_DEV_PIXELS_PER_PX=1.5 make</pre>
+
+<p>When packaging the app, this option replaces images with their <code>*@1.5x.(gif|jpg|png)</code> equivalents if such images exist. You need to use the above option as part of a standard <code>make</code> command, for example:</p>
+
+<pre class="brush: bash">GAIA_DEV_PIXELS_PER_PX=1.5 make reset-gaia
+
+GAIA_DEV_PIXELS_PER_PX=1.5 make install-gaia</pre>
+
+<p>Gaia is currently targetting the following screen resolutions:</p>
+
+<ul>
+ <li>qHD: ~540×960; device pixel ratio = 1.6875</li>
+ <li>WVGA: ~480×800; device pixel ratio = 1.5</li>
+ <li>HBGA (320x240); device pixel ratio = 1</li>
+</ul>
+
+<p>use <code>GAIA_DEV_PIXELS_PER_PX</code> to make sure the images looks sharp on qHD and WVGA devices. see <a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Mobile/Viewport_meta_tag#A_pixel_is_not_a_pixel" title="https://developer.mozilla.org/zh-CN/docs/Mozilla/Mobile/Viewport_meta_tag#A_pixel_is_not_a_pixel">A pixel is not a pixel</a> for more information about device pixels per css pixels.</p>
+
+<h4 id="Haida_features">Haida features</h4>
+
+<pre class="brush: bash">HAIDA=1 make reset-gaia</pre>
+
+<p>This build enables the Haida feature set, which is currently limited to <a href="https://wiki.mozilla.org/FirefoxOS/systemsfe/epm#Rocketbar_Results">rocketbar</a> and <a href="https://wiki.mozilla.org/FirefoxOS/Haida#Edge_Gestures_Between_Open_Content">edge</a> gestures, but will likely include other features in the near future.</p>
+
+<h4 id="Disable_first_time_use_experience_(FTU)">Disable first time use experience (FTU)</h4>
+
+<pre class="brush: bash">NOFTU=1
+</pre>
+
+<p>Disable the FTU with this environment variable.</p>
+
+<h4 id="Disable_lockscreen">Disable lockscreen</h4>
+
+<p>You can disable the Firefox OS lockscreen using the NO_LOCK_SCREEN option, for example:</p>
+
+<pre class="brush: bash">NO_LOCK_SCREEN=1 make</pre>
+
+<h4 id="Reference_Workloads">Reference Workloads</h4>
+
+<p>Reference workloads allow developers/testers to quickly install a large amount of data in several applications, typically on a newly-flashed phone.</p>
+
+<p>The commands are (from the gaia directory):</p>
+
+<pre class="brush: bash">make reference-workload-light</pre>
+
+<ul>
+ <li>200 contacts</li>
+ <li>200 sms messages</li>
+ <li>50 dialer history entries</li>
+ <li>20 gallery images</li>
+ <li>20 songs</li>
+ <li>5 videos</li>
+</ul>
+
+<pre class="brush: bash">make reference-workload-medium</pre>
+
+<ul>
+ <li>500 contacts</li>
+ <li>500 sms messages</li>
+ <li>100 dialer history entries</li>
+ <li>50 gallery images</li>
+ <li>50 songs</li>
+ <li>10 videos</li>
+</ul>
+
+<pre class="brush: bash">make reference-workload-heavy</pre>
+
+<ul>
+ <li>1000 contacts</li>
+ <li>1000 sms messages</li>
+ <li>200 dialer history entries</li>
+ <li>100 gallery images</li>
+ <li>100 songs</li>
+ <li>20 videos</li>
+</ul>
+
+<pre class="brush: bash">make reference-workload-x-heavy</pre>
+
+<ul>
+ <li>2000 contacts</li>
+ <li>2000 sms messages</li>
+ <li>500 dialer history entries</li>
+ <li>250 gallery images</li>
+ <li>250 songs</li>
+ <li>50 videos</li>
+</ul>
+
+<p>These targets accept the <code>APP</code> environment variable, or an <code>APPS</code> environment variable that should contain the app names separated by a space, e.g.:</p>
+
+<pre class="brush: bash">APP=sms make reference-workload-light
+APPS="sms communications/contacts" make reference-workload-heavy
+</pre>
+
+<p>The apps available are:</p>
+
+<pre class="brush: bash">APPS="gallery music video communications/contacts sms communications/dialer"</pre>
+
+<p>In order to install music (songs) with reference workloads, the utility mid3v2 must be installed. This utility can be installed with:</p>
+
+<pre class="brush: bash">sudo apt-get install python-mutagen</pre>
+
+<p>If you run Fedora or RHEL instead, use:</p>
+
+<pre class="brush: bash">sudo yum install python-mutagen</pre>
+
+<h4 id="Documentation_make">Documentation make</h4>
+
+<p>Gaia docs can be built, via jsdoc3. To generate these, you can use the following command:</p>
+
+<pre class="brush: bash">make docs</pre>
+
+<h4 id="Enabling_IME_layout_and_dictionaries">Enabling IME layout and dictionaries</h4>
+
+<p>To enable keyboard IME layout and dictionaries enabled, use following command structure:</p>
+
+<pre class="brush: bash">GAIA_KEYBOARD_LAYOUTS=en,zh-Hant-Zhuyin,el,de,fr,zh-Hans-Pinyin make</pre>
+
+<h2 id="自定义_build-time_应用">自定义 build-time 应用</h2>
+
+<p>The apps that run on Firefox OS are all contained within the Gaia source tree, in one of two locations:</p>
+
+<ul>
+ <li><code>gaia/apps</code>: This is where the system default apps are found, such as <code>calendar</code>, <code>email</code>, <code>settings</code>, etc.</li>
+ <li><code>gaia/external-apps</code>: This is where the Firefox Marketplace app is found (<code>marketplace.firefox.com</code>), and where apps subsequently installed by the user are stored.</li>
+ <li><code>gaia/showcase-apps</code>: This is a container for multiple showcase apps, for example a 3D Crystal Skull to show off WebGL performance on the device.</li>
+ <li><code>gaia/test-apps</code>: This directory is a repository for simple tests, designed to test simple B2G features.</li>
+ <li><code>gaia/external-apps</code>: This directory contains more tests.</li>
+ <li>There may be oters too, depending on the version of Gaia you have cloned.</li>
+</ul>
+
+<div class="note">
+<p><strong>Note</strong>: If you are building B2G rather than Gaia, the paths will of course have <code>B2G/</code> on the front, e.g. <code>B2G/gaia/apps</code> and <code>B2G/gaia/external-apps</code>.</p>
+</div>
+
+<p>If you want to omit some of these apps from your build of Gaia/B2G, you can do this in a few different ways:</p>
+
+<ol>
+ <li>
+  <p>The "brute force" method is to simply delete the apps you don't want to be present at build time, before building.</p>
+ </li>
+ <li>
+  <p>The more refined method is to edit the <code>gaia/build/config/apps-*.list</code> files to include the paths to the apps you want to include at build time. For example, <code>gaia/build/config/apps-production.list </code>looks something like this:</p>
+
+  <pre class="brush: bash">apps/*
+external-apps/*
+outoftree_apps/*</pre>
+
+  <p>But you could also include specific apps rather than just picking them all, for example:</p>
+
+  <pre class="brush: bash">apps/clock</pre>
+
+  <p>The mechanism for choosing which <code>apps-*.list</code> file is used during the build to determine the available apps is contained inside <code>gaia/Makefile</code>:</p>
+
+  <pre class="brush: cpp">GAIA_APP_TARGET?=engineering
+...
+ifeq ($(MAKECMDGOALS), demo)
+GAIA_DOMAIN=thisdomaindoesnotexist.org
+GAIA_APP_TARGET=demo
+else ifeq ($(MAKECMDGOALS), dogfood)
+DOGFOOD=1
+else ifeq ($(MAKECMDGOALS), production)
+PRODUCTION=1
+endif
+...
+ifeq ($(PRODUCTION), 1)
+GAIA_OPTIMIZE=1
+GAIA_APP_TARGET=production
+endif
+
+ifeq ($(DOGFOOD), 1)
+GAIA_APP_TARGET=dogfood
+endif
+...
+ifndef GAIA_APP_CONFIG
+GAIA_APP_CONFIG=build$(SEP)config$(SEP)apps-$(GAIA_APP_TARGET).list
+endif</pre>
+
+  <p>Initially, the <code>GAIA_APP_TARGET</code> variable is set to <code>engineering</code>, so by default building gaia from source will use <code>app-engineering.list</code> (which includes all the tests, demos, etc.):</p>
+
+  <pre class="brush: bash">make
+</pre>
+
+  <p>To specify usage of a different apps list you specify different options when running the make command. To build with <code>apps-production.list</code>, for example, you'd use</p>
+
+  <pre class="brush: bash">PRODUCTION=1 make</pre>
+
+  <ul>
+   <li>If you specifically build with <code>DEMO=1</code> specified, then it will use <code>apps-demo.list</code>.</li>
+   <li>If you specifically build with <code>DOGFOOD=1</code> specified, then it will use <code>apps-dogfood.list</code>.</li>
+   <li>You can completely override the decision by using <code>GAIA_APP_CONFIG</code> and providing your own <code>apps-*.list</code> file.</li>
+  </ul>
+
+  <p><code>gaia/Android.mk</code> contains these lines:</p>
+
+  <pre class="brush: cpp">ifneq ($(filter user userdebug, $(TARGET_BUILD_VARIANT)),)
+GAIA_MAKE_FLAGS += PRODUCTION=1
+B2G_SYSTEM_APPS := 1
+endif</pre>
+
+  <p>When you build, if <code>VARIANT=user</code> or <code>VARIANT=userdebug</code> are set (these wind up getting reflected in the <code>TARGET_BUILD_VARIANT</code> variable), <code>PRODUCTION=1</code> is automatically set when building gaia.</p>
+ </li>
+ <li>
+  <p>The third, and most refined (but most complex) method is to use customizations. These allow you to specify build-time customization instructions in separate difrectories, without modifying the core Gaia repo. You can include your own customizations in distinct directories, or use the preexisting directories that come with the source.</p>
+
+  <p>For example, the basic Firefox tablet customized app list is defined in <code>apps.list</code> under the <a href="https://github.com/mozilla-b2g/gaia/tree/master/distribution_tablet"><code>distribution_tablet</code></a> folder (<code>gaia/distribution_tablet</code>). These customizations can be applied at build time using options like this:</p>
+
+  <pre class="brush: bash">GAIA_DISTRIBUTION_DIR=distribution_tablet make</pre>
+
+  <div class="note">
+  <p><strong>Note</strong>: Customizations is its own separate topic entirely. To learn more about it, read <a href="/zh-CN/Firefox_OS/Hacking_Firefox_OS/Market_customizations_guide">Market Customizations</a>.</p>
+  </div>
+
+  <div class="note">
+  <p><strong>Note</strong>: If you want to include custom external apps as part of your Gaia build, you need to build them in a specific way, and then place them into the <code>gaia/external-apps/</code> folder. Read <a href="/zh-CN/Firefox_OS/Hacking_Firefox_OS/Market_customizations_guide#Building_Prebundled_web_apps">Building Prebundled web apps</a> to find out how.</p>
+  </div>
+ </li>
+</ol>
+
+<div class="warning">
+<p><strong>Important</strong>: If you are a device vendor creating a custom B2G/Gaia build for distribution, you need to satisfy certain criteria before you are allowed to include the Firefox Marketplace app on your phones/tablets/etc. Contact Mozilla for more details.</p>
+</div>
+
+<h2 id="联系小组">联系小组</h2>
+
+<ul>
+ <li><a href="https://lists.mozilla.org/listinfo/dev-gaia" rel="nofollow">Gaia Mailing List</a></li>
+ <li>#gaia IRC channel on irc.mozilla.org</li>
+</ul>

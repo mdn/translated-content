@@ -1,0 +1,65 @@
+---
+title: nsIClipboardHelper
+slug: Mozilla/Tech/XPCOM/Reference/Interface/nsIClipboardHelper
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIClipboardHelper
+---
+<div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/widget/public/nsIClipboardHelper.idl" rel="custom">widget/public/nsIClipboardHelper.idl</a></code><span style="text-align: right; float: right;"><a href="/zh-CN/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">脚本化</a></span></div>
+<span style="padding: 4px 2px;">
+
+<code>nsIClipboardHelper接口是能够快速方便的使用</code> nsIClipboard 接口中常用方法的辅助接口.
+</span>
+
+<div style="background: #eee; padding: 2px;">
+继承于: <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
+<span style="text-align: right; float: right;">最后修改于Gecko 1.7 </span></div>
+</div>
+<h2 id="Method_overview" name="Method_overview">方法概述</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="#copyString()">copyString</a>(in AString aString);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#copyStringToClipboard()">copyStringToClipboard</a>(in AString aString, in long aClipboardID);</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Methods" name="Methods">方法</h2>
+<h3 id="copyString()" name="copyString()">copyString()</h3>
+<p>该方法将字符串复制到默认剪切板.</p>
+<pre class="eval">void copyString(
+  in AString aString
+);
+</pre>
+<h6 id="Parameters" name="Parameters">参数</h6>
+<dl>
+ <dt>
+  <code>aString</code></dt>
+ <dd>
+  将要复制到剪切板的字符串.</dd>
+</dl>
+<h3 id="copyStringToClipboard()" name="copyStringToClipboard()">copyStringToClipboard()</h3>
+<p>该方法将字符串复制到指定剪切板.</p>
+<pre class="eval">void copyStringToClipboard(
+  in AString aString,
+  in long aClipboardID
+);
+</pre>
+<h6 id="Parameters" name="Parameters">参数</h6>
+<dl>
+ <dt>
+  <code>aString</code></dt>
+ <dd>
+  将要复制到指定剪切板的字符串.</dd>
+ <dt>
+  <code>aClipboardID</code></dt>
+ <dd>
+  指定剪切板的ID(例如<code>kSelectionClipboard</code>).</dd>
+</dl>
+<h2 id="See_also" name="See_also">相关连接</h2>
+<ul>
+ <li><code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIClipboard" title="">nsIClipboard</a></code></li>
+ <li><a href="/zh-cn/Using_the_Clipboard" title="zh-cn/Using the Clipboard">Using the Clipboard</a></li>
+</ul>
+<p></p>

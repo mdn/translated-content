@@ -1,0 +1,328 @@
+---
+title: Miscellaneous
+slug: Code_snippets/Miscellaneous
+tags:
+  - Add-ons
+  - Code
+  - Code snippets
+  - Extensions
+  - Snippets
+translation_of: Archive/Add-ons/Code_snippets/Miscellaneous
+---
+<p>このページは、小さく、見ればすぐわかるようなコード片を載せています。</p>
+
+<h3 id="ウェブページをローカルファイルに保存する">ウェブページをローカルファイルに保存する</h3>
+<p>次のコードはユーザにファイル名を入力するように聞いてきませんが、それは <a href="/ja/docs/Code_snippets/File_I//O#User_input_via_nsIFilePicker" title="Code_snippets/File_I//O#User_input_via_nsIFilePicker">ファイルピッカーコンポーネント</a> を使用することで可能です。</p>
+
+<pre class="brush:js">var file = Components.classes["@mozilla.org/file/local;1"].createInstance(Components.interfaces.nsILocalFile);
+
+file.initWithPath("C:\\filename.html");
+
+var wbp = Components.classes['@mozilla.org/embedding/browser/nsWebBrowserPersist;1']
+  .createInstance(Components.interfaces.nsIWebBrowserPersist);
+wbp.saveDocument(content.document, file, null, null, null, null);
+</pre>
+
+<p><a href="/ja/docs/Code_snippets/Downloading_Files" title="Code_snippets/Downloading_Files">Downloading Files</a> も見てください。</p>
+<h3 id="任意のURLをローカルファイルに保存する">任意のURLをローカルファイルに保存する</h3>
+
+<pre class="brush:js">var file = Components.classes["@mozilla.org/file/local;1"]
+                     .createInstance(Components.interfaces.nsILocalFile);
+
+file.initWithPath("C:\\filename.html");
+
+var wbp = Components.classes[<a class="link-mailto" href="mailto:'@mozilla.org" rel="freelink">'@mozilla.org</a>/embedding/browser/nsWebBrowserPersist;1']
+                    .createInstance(Components.interfaces.nsIWebBrowserPersist);
+var ios = Components.classes[<a class="link-mailto" href="mailto:'@mozilla.org" rel="freelink">'@mozilla.org</a>/network/io-service;1']
+                    .getService(Components.interfaces.nsIIOService);
+var uri = ios.newURI("<a href="http://www.google.com/" rel="freelink">http://www.google.com/</a>", null, null);
+
+wbp.saveURI(uri, null, null, null, null, file);
+</pre>
+
+
+<p><a href="/ja/docs/Code_snippets/Downloading_Files" title="Code_snippets/Downloading_Files">Downloading Files</a> も見てください。</p>
+<h3 id="オペレーティングシステムを検出する">オペレーティングシステムを検出する</h3>
+
+<pre class="brush:js">// Windows Vista, XP, 2000, NT では "WINNT" が返る。
+// GNU/Linux では "Linux" 。Mac OS X では "Darwin" が返る。
+var osString = Components.classes["@mozilla.org/xre/app-info;1"]
+                         .getService(Components.interfaces.nsIXULRuntime).OS;
+</pre>
+
+
+<p><a href="/ja/docs/nsIXULRuntime" title="nsIXULRuntime">nsIXULRuntime</a> が手に入らないケース (古い SeaMonkey のバージョン) では、 <code><a href="/ja/docs/NsIHttpProtocolHandler" title="NsIHttpProtocolHandler">nsIHttpProtocolHandler</a>.oscpu</code> か {{domxref("window.navigator.oscpu","navigator.oscpu")}} を使うことができます:</p>
+
+<pre class="brush:js">Components.classes["@mozilla.org/network/protocol;1?name=http"]
+          .getService(Components.interfaces.nsIHttpProtocolHandler).oscpu;</pre>
+
+
+<h3 id="ホストアプリケーションとそのバージョンを検出する">ホストアプリケーションとそのバージョンを検出する</h3>
+
+<pre class="brush:js">var info = Components.classes["@mozilla.org/xre/app-info;1"].getService(Components.interfaces.nsIXULAppInfo);
+// このコードを実行しているアプリケーションの名前を取得する
+info.name; // Firefox では "Firefox" が返る
+info.version; // Firefox バージョン 2.0.0.1 では "2.0.0.1" が返る
+</pre>
+
+
+<h3 id="拡張機能の_install.rdf_に記載されたその拡張機能のバージョンを読み出す">拡張機能の install.rdf に記載されたその拡張機能のバージョンを読み出す</h3>
+
+<pre class="brush:js">var em = Components.classes["@mozilla.org/extensions/manager;1"]
+                   .getService(Components.interfaces.nsIExtensionManager);
+
+// extension-guid@example.org をバージョンを読み出したい拡張機能の GUID に変更すること
+// 例えば FoxyProxy なら foxyproxy@eric.h.jung
+var addon = em.getItemForID("extension-guid@example.org");
+var version = addon.version;
+</pre>
+
+<h3 id="入力ストリームから出力ストリームにコピーする">入力ストリームから出力ストリームにコピーする</h3>
+
+<pre class="brush:js">// istream は nsIInputStream、ostream は nsIOutputStream
+
+// 出力ストリームを機能させるにはバッファリングする必要がある
+var bostream = Components.classes["@mozilla.org/network/buffered-output-stream;1"]
+                    .createInstance(Components.interfaces.nsIBufferedOutputStream);
+bostream.init(ostream, 0x8000);
+
+// 入力ストリームから読み込むためにストリームポンプとストリームリスナを用意する
+var pump = Components.classes["@mozilla.org/network/input-stream-pump;1"]
+                     .createInstance(Components.interfaces.nsIInputStreamPump);
+pump.init(istream, -1, -1, 0, 0, true);
+
+/* ファイルを閉じるべきタイミングを知るために独自のオブザーバが必要 */
+var observer = {
+  onStartRequest: function(aRequest, aContext) {},
+  onStopRequest: function(aRequest, aContext, aStatusCode) {
+    bostream.close();
+  }
+};
+
+// 出力ストリームに書き出すためにシンプルストリームリスナを用意する
+var listener = Components.classes["@mozilla.org/network/simple-stream-listener;1"]
+                         .createInstance(Components.interfaces.nsISimpleStreamListener);
+listener.init(bostream, observer);
+
+// コピー開始
+pump.asyncRead(listener, null);
+</pre>
+<h3 id="FirefoxThunderbird_を再起動する">Firefox/Thunderbird を再起動する</h3>
+<ul>
+  <li>Firefox 3 では <a href="http://mxr.mozilla.org/seamonkey/source/toolkit/mozapps/update/content/updates.js#1639" rel="freelink">http://mxr.mozilla.org/seamonkey/sou...pdates.js#1639</a> の辺りの onWizardFinish のコードを見てください。</li>
+  <li>Firefox 2 では <a href="http://mxr.mozilla.org/mozilla1.8/source/toolkit/mozapps/update/content/updates.js#1631" rel="freelink">http://mxr.mozilla.org/mozilla1.8/so...pdates.js#1631</a> の辺りを見てください。</li>
+</ul>
+<p>アプリケーションを再起動する単純な方法を提供することで、 {{Bug(338039)}}は改善しています。</p>
+<h3 id="マウス、キーイベントをシミュレートする">マウス、キーイベントをシミュレートする</h3>
+<p><a href="/ja/docs/NsIDOMWindowUtils" title="NsIDOMWindowUtils">nsIDOMWindowUtils</a> インタフェースにはマウスイベントやキーイベントをシミュレートするための有用なメソッドがあります。</p>
+<p><a href="/ja/docs/Firefox_3_for_developers" title="Firefox_3_for_developers">Firefox 3</a> / Gecko 1.9 の新機能</p>
+
+
+<pre class="brush:js">var req = window.QueryInterface(Components.interfaces.nsIInterfaceRequestor);
+var utils = req.getInterface(Components.interfaces.nsIDOMWindowUtils);
+
+utils.sendMouseEvent("mousedown", 10, 10, 0, 1, 0);
+utils.sendMouseEvent("mouseup", 10, 10, 0, 1, 0);
+</pre>
+
+<h3 id="貧弱な難読化">貧弱な難読化</h3>
+<p>このコードは幾分敏感なデータ（例えば拡張機能のパスワード）をぱっと見では発見できないようにするための小細工です。一見ちんぷんかんぷんですが、これは簡単に破られてしまいます。パスワードの保存については、 <a href="/ja/docs/Using_nsIPasswordManager" title="Using_nsIPasswordManager">このドキュメント</a> が <a href="/ja/docs/nsIPasswordManager" title="nsIPasswordManager">nsIPasswordManager</a> の使用について説明しています。</p>
+<pre class="brush:js">function encrypt(val) {
+	num_out = "";
+	if(val == "") {
+		return "";
+	}else {
+		str_in = escape(val);
+		for(i = 0; i &lt; str_in.length; i++) {
+			num_out += str_in.charCodeAt(i) - 23;
+		}
+		return unescape(num_out);
+	}
+}
+
+function decrypt(val) {
+	str_out = "";
+	if(val == "") {
+		return "";
+	} else {
+		num_out = val;
+		for(i = 0; i &lt; num_out.length; i += 2) {
+			num_in = parseInt(num_out.substr(i,[2])) + 23;
+			num_in = unescape('%' + num_in.toString(16));
+			str_out += num_in;
+		}
+		return str_out;
+	}
+}
+</pre>
+<div id="section_10">
+  <h3 id="マウスホイールイベントの検出">マウスホイールイベントの検出</h3>
+  <p>エレメント上でマウスホイールを回転させたとき、 <a href="/ja/docs/DOMMouseScroll" title="DOMMouseScroll">DOMMouseScroll</a> イベントが起こります。 <code>event.detail</code> はスクロールした行の数を含みます。このイベントは Mozilla オンリーです。他のブラウザでは window.onmousewheel をサポートしているかもしれません。</p>
+  <pre class="brush:js">&lt;div id="scrollArea" style="overflow: scroll; height: 6em; width: 10em;"&gt;
+	This is the scrolling area.
+	This is the scrolling area.
+	This is the scrolling area.
+	This is the scrolling area.
+	This is the scrolling area.
+	This is the scrolling area.
+	This is the scrolling area.
+	This is the scrolling area.
+	This is the scrolling area.
+	This is the scrolling area.
+	This is the scrolling area.
+	This is the scrolling area.
+&lt;/div&gt;
+
+&lt;script type="text/javascript"&gt;
+	var elm = document.getElementById("scrollArea");
+	elm.addEventListener("DOMMouseScroll", function scroll(event){
+		//event.detail は下へスクロールしたとき正、上へスクロールしたとき負です。
+		alert("scrolling " + event.detail + " lines");
+	}, false);
+&lt;/script&gt;</pre>
+  <p>もし何か修飾キー(Ctrl,Shift,Alt,Meta)を押しているときは DOMMouseScroll イベントを受け取れないなら、<code> </code><code>mousewheel.withcontrolkey.action</code> と関連するプリファレンスをチェックするべきです。 action のプリファレンスの意味は下のテーブルに書かれています。</p>
+  <table class="standard-table">
+    <tbody>
+      <tr>
+        <td class="header">mousewheel.withXXXkey.action</td>
+        <td class="header">Result</td>
+      </tr>
+      <tr>
+        <td><strong>0</strong></td>
+        <td>行ごとにスクロール。これにセットされているとき、 DOMMouseScroll イベントを受け取る。</td>
+      </tr>
+      <tr>
+        <td><strong>1</strong></td>
+        <td>ページごとにスクロール。</td>
+      </tr>
+      <tr>
+        <td><strong>2</strong></td>
+        <td>履歴の中を動く。これにセットされているとき、 DOMMouseScroll イベントを受け取らない。</td>
+      </tr>
+      <tr>
+        <td><strong>3</strong></td>
+        <td>テキストサイズを変更する。これにセットされているとき、 DOMMouseScroll イベントを受け取らない。</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>ふつうのクリックイベントと同じように、マウスホイールクリックイベントをリスンすることができます。マウスホイールがクリックされたとき、 <a href="/ja/docs/DOM/event.button" title="DOM/event.button">event.button</a> は 2 と等しくなります。</p>
+</div>
+<div id="section_11">
+  <h3 id="カーソルの位置にテキストを挿入する">カーソルの位置にテキストを挿入する</h3>
+  <pre class="brush:js">function insertText(element, snippet) {
+  var selectionEnd = element.selectionStart + snippet.length;
+  var currentValue = element.value;
+
+  var beforeText = currentValue.substring(0, element.selectionStart);
+  var afterText = currentValue.substring(element.selectionEnd, currentValue.length);
+
+  element.value = beforeText + snippet + afterText;
+  element.focus();
+
+  //挿入したテキストの後にカーソルを置く
+  element.setSelectionRange(selectionEnd, selectionEnd);
+}
+
+insertText(window.content.document.getElementById("example"), "the text to be inserted");
+</pre>
+</div>
+<div id="section_12">
+  <p>上記コードは、フォーム内の&lt;input type="text" id="example"&gt;内に記載されたテキストに文字を追記するコードです。</p>
+  <p>何も無い&lt;div id="example"&gt;テキスト&lt;/div&gt;等に追加されるわけではありません。</p>
+  <h3 id="現在選択されているテキストを取得">現在選択されているテキストを取得</h3>
+  <p>browser.xul にオーバーレイしている状況で、</p>
+  <pre>var selectedText = document.commandDispatcher.focusedWindow.getSelection().toString();</pre>
+  <p>も見てください。</p>
+</div>
+<div id="section_13">
+  <h3 id="プログラムから_JavaScript_を無効化する">プログラムから JavaScript を無効化する</h3>
+  <pre>// browser.xul から現在のアクティブなタブでJSを無効化する
+getBrowser().docShell.allowJavascript = false;
+</pre>
+  <p>もしこれがあなたのブラウザでないなら、値を保存し、終了したとき復元するべきです。もしそのURI上の選択されているスクリプトをブロックしたいなら、 <a href="http://www.xulplanet.com/references/xpcomref/ifaces/nsIContentPolicy.html">nsIContentPolicy</a> を実行します。</p>
+</div>
+<div id="section_14">
+  <h3 id="ロードされたドキュメントでどの要素がフォーカスを持っているのか見つける">ロードされたドキュメントでどの要素がフォーカスを持っているのか見つける</h3>
+  <pre class="brush:js">// focussedControl はフォーカスされている領域を記憶し、何もないときは null になります。
+// 単純のためテキストエリアは除外していますが、 onPageLoad() はテキストエリアも同様に調べるように
+// 簡単に修正できます。さらなる強化では、動的にページに加えられた（例えばページのjavascriptによって）
+// フィールドの取り扱いを含めることができます。
+
+var focussedControl;
+
+window.addEventListener("load", function(e) { onWindowLoad(e); }, false);
+
+function onWindowLoad() {
+  addEventListener("load", onPageLoad, true);
+}
+
+function onPageLoad() {
+  var pageDoc = document.commandDispatcher.focusedWindow.document;
+  var inputList = pageDoc.getElementsByTagName('input');
+
+  for (var i = 1; i &lt; inputList.length; i++) {
+    inputList.item(i).
+      addEventListener("focus", function(e) {onFocusInput(e);}, false);
+    inputList.item(i).
+      addEventListener("blur", function(e) {onBlurInput(e);}, false);
+  }
+}
+
+function onFocusInput(focusEvent) {
+  focussedControl = focusEvent.originalTarget;
+}
+
+function onBlurInput(blurEvent) {
+  focussedControl = null;
+}
+</pre>
+</div>
+<div id="section_15">
+  <h3 id="拡張機能が無効化アンインストールされる前に通知を受け取る">拡張機能が無効化/アンインストールされる前に通知を受け取る</h3>
+  <p><a href="http://www.xulplanet.com/tutorials/mozsdk/observerserv.php">xulplanet entry on global notifications</a></p>
+  <ul>
+    <li>notification: "em-action-requested"</li>
+    <li>aData: "item-disabled"</li>
+    <li>aSubject は nsIUpdateItem インスタンス。</li>
+  </ul>
+  <p>この通知は拡張機能が無効化されるとき、ただし実際に無効化される前に伝わります。ユーザは再起動の前にその動作を取りやめることができます。その場合、拡張機能は無効化されません。この通知を受け取ったとき、フラグをセットし（そしてユーザが動作をキャンセルしたときは外し）、終了の時に掃除することができます。欠点はFirefoxが不適切に終了したときコードが実行されないということです。</p>
+  <p>アイテムIDを読み取ってあなたの拡張機能に対してだけコードを実行するようにすべきです。</p>
+</div>
+<h3 id="JavaScript_から文字列バンドルを使う">JavaScript から文字列バンドルを使う</h3>
+<p>拡張機能が次のような設定名/値のペアを持った myext.properties を持っているとします:</p>
+<pre> invalid.url=The speficied URL, %S, is invalid. That was attempt number %S.</pre>
+<p>これらのプロパティは JavaScript から次のようにアクセスできます:</p>
+
+<pre class="brush:js">var common = {
+
+  _bundle: Components.classes["@mozilla.org/intl/stringbundle;1"]
+    .getService(Components.interfaces.nsIStringBundleService)
+    .createBundle("chrome://myext/locale/myext.properties"),
+
+  getLocalizedMessage: function(msg) {
+    return this._bundle.GetStringFromName(msg);
+  }
+};
+
+alert(common.getLocalizedMessage("invalid.url"));
+
+</pre>
+<p>もう一つの似た代替方法 (GetStringFromName と formatStringFromName の両方を使う)は:</p>
+
+<pre class="brush:js">var fcBundle = Components.classes["@mozilla.org/intl/stringbundle;1"]
+						.getService(Components.interfaces.nsIStringBundleService)
+						.createBundle("chrome://myext/locale/myext.properties");
+
+function getStr(msg, args){ //get localised message
+	if (args) {
+       args = Array.prototype.slice.call(arguments, 1);
+       return fcBundle.formatStringFromName(msg,args,args.length);
+	} else {
+		return fcBundle.GetStringFromName(msg);
+	}
+}
+
+/* Usage */
+alert(getStr("invalid.url", "http://bad/url/", "3")); //パラメータ付きのメッセージ
+alert(getStr("invalid.url")); //パラメータ無しのメッセージ
+</pre>

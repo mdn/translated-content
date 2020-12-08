@@ -1,0 +1,28 @@
+---
+title: À propos des interfaces scriptables
+slug: Interfaces/À_propos_des_interfaces_scriptables
+tags:
+  - Interfaces
+  - 'Interfaces:Scriptable'
+  - XPCOM
+translation_of: Interfaces/About_Scriptable_Interfaces
+---
+<p> </p>
+
+<h3 id="Statut_de_ce_document" name="Statut_de_ce_document">Statut de ce document</h3>
+
+<p>Il s'agit juste d'un début de document, il ne doit pas être considéré comme complet. La plupart des informations qui y figurent sont basées sur <a class="external" href="http://www.mozilla.org/scriptable/" rel="freelink">http://www.mozilla.org/scriptable/</a> et <a href="fr/Cr%c3%a9ation_de_composants_XPCOM">Création de composants XPCOM</a></p>
+
+<h3 id="Interfaces_scriptables" name="Interfaces_scriptables">Interfaces scriptables</h3>
+
+<p>Les <a href="fr/Cr%c3%a9ation_de_composants_XPCOM/Un_aper%c3%a7u_d'XPCOM#Interfaces">interfaces</a> permettent aux composants XPCOM d'exposer leurs fonctionnalités au monde extérieur tout en masquant les détails internes de leur implémentation. Celles-ci sont écrites dans un <a href="fr/XPIDL">langage de description d'interfaces</a>.</p>
+
+<p>Lorsqu'une interface est indiquée comme scriptable, cela signifie que les composants exportant cette interface peuvent être référencés au travers de celle-ci depuis des scripts (par exemple <a href="fr/JavaScript">JavaScript</a>), et qu'il est possible d'écrire de nouveaux composants implémentant cette interface à l'aide de langages de script.</p>
+
+<h3 id="XPConnect" name="XPConnect">XPConnect</h3>
+
+<p><a href="fr/XPConnect">XPConnect</a> est une technologie permettant aux interfaces scriptables d'être utilisées/implémentées depuis/dans des scripts <a href="fr/JavaScript">JavaScript</a>. <a href="fr/XPConnect">XPConnect</a> ne gère actuellement pas d'autres langages.</p>
+
+<h3 id="Python" name="Python">Python</h3>
+
+<p>Il existe une extension {{ Source("extensions/python") }} qui fait le pont entre <a href="fr/XPCOM">XPCOM</a> et Python<a class="external" href="http://python.org/">, permettant aux interfaces scriptables d'être utilisées/implémentées depuis/dans des scripts Python. </a></p>

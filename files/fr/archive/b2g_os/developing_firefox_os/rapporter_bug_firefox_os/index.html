@@ -1,0 +1,199 @@
+---
+title: Rapporter des bugs à propos de Firefox OS
+slug: Archive/B2G_OS/Developing_Firefox_OS/Rapporter_Bug_Firefox_OS
+tags:
+  - Bugs
+  - Bugzilla
+  - Firefox OS
+  - Guide
+  - QA
+  - filing
+  - test
+translation_of: Archive/B2G_OS/Developing_Firefox_OS/Filing_bugs_against_Firefox_OS
+---
+<div class="summary">
+<p>Cet article est un guide pour aider à rapporter des bugs à propos du projet Firefox OS, incluant Gaia et B2G.</p>
+</div>
+
+<h2 id="Bugzilla">Bugzilla</h2>
+
+<p>Comme pour la plupart des projets Mozilla, nous utilisons <a href="/fr/docs/Mozilla/Bugzilla">Bugzilla</a> pour le suivi des bugs et des problèmes. Vous pouvez remplir un bug sur <a href="https://bugzilla.mozilla.org/">Bugzilla</a> quand vous en trouvez un — nous avons un <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox%20OS">produit distinct pour Firefox OS</a>, qui contient les composants pour tout ce qui concerne <a href="https://developer.mozilla.org/fr/Firefox_OS/Platform/Gaia">Gaia</a>, <a href="https://developer.mozilla.org/fr/Firefox_OS/Platform/Gonk">Gonk</a> et <a href="https://developer.mozilla.org/fr/docs/Gecko">Gecko</a>. Utilisez ce composant pour remplir les bugs concernant Firefox OS, Gaia, etc.</p>
+
+<div class="note">
+<p><strong>Note </strong>: La page <a href="https://wiki.mozilla.org/B2G/QA">B2G QA Wiki</a> (ressource anglophone) contient également quelques ressources utiles pour la gestion des bugs Firefox OS ; les pages les plus utiles sont <a href="https://wiki.mozilla.org/B2G/QA/Bugzilla">Bugzilla Usage</a> (EN) et <a href="https://wiki.mozilla.org/Bugmasters/Projects/FirefoxOS">Incoming bug triage for Firefox OS</a> (EN).</p>
+</div>
+
+<h3 id="Remplir_des_bugs">Remplir des bugs</h3>
+
+<p>Pour remplir un bug valide, vous pouvez suivre les <a href="/fr/docs/Recommandations_pour_l%27%C3%A9criture_d%27un_bug">recommandations pour l'écriture d'un bug</a>  (voir aussi <a href="http://tech.mozfr.org/post/2013/04/23/Rapporter-un-bogue-sur-Bugzilla">Rapporter un bug</a> sur le blog technique mozfr).<br>
+ Vous pouvez également utiliser ce <a href="http://mzl.la/1KL4ktp">modèle sur Bugzilla</a> et vous référer aux instructions ci-dessous pour compléter le bug.</p>
+
+<h3 id="Champs_obligatoires_et_optionnels">Champs obligatoires et optionnels</h3>
+
+<p>Quand vous remplissez un nouveau bug, certains champs sont obligatoires :</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col"><strong>Champ</strong></th>
+   <th scope="col"><strong>Description</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Component</td>
+   <td>Choisissez la catégorie à laquelle le bug devrait être rattaché. Si vous n'avez aucune idée de la catégorie dans laquelle devrait se trouver le problème, vous pouvez mettre "General".</td>
+  </tr>
+  <tr>
+   <td>Summary</td>
+   <td>Indiquez une brève description du bug.</td>
+  </tr>
+  <tr>
+   <td>Description</td>
+   <td>Décrivez clairement la situation. Un bon bug doit contenir les étapes de reproduction (STR — Steps to reproduce), le résultat attendu (Expected Result), et le résultat actuel (Actual Result). Mentionnez également la fréquence de reproduction (Reproduction Frequency), c'est-à-dire le nombre de fois que le bug se manifeste si vous répétez les étapes indéfiniment.</td>
+  </tr>
+  <tr>
+   <td>Build Information</td>
+   <td>Rendez vous dans Paramètres &gt; Informations &gt; Plus d'informations et rajouter les informations suivantes au bug: Version du système, Numéro de compilation, Version de la plate-forme, Identifiant de version, Canal de mise à jour et Informations Git. (Si vous êtes sur un ordinateur de type Mac/Linux, avec adb et git installés, vous pouvez lancer <a href="https://github.com/Mozilla-TWQA/B2G-flash-tool/blob/master/check_versions.py">ce script</a> et coller la sortie écran du script dans le bug.)</td>
+  </tr>
+  <tr>
+   <td>Screenshots</td>
+   <td>Veuillez attacher une capture d'écran qui pourra aider à analyser le bug. (Sur le téléphone de développement Flame, maintenir appuyés les boutons d'Allumage et de Volume bas simultanément à peu près 2 secondes jusqu’à ce que le téléphone affiche une notification de capture d'écran. Ensuite transférez l'image sur votre ordinateur en utilisant l'USB.)</td>
+  </tr>
+  <tr>
+   <td>Video</td>
+   <td>Si votre bug contient des changements à l'écran, difficilement captables via une capture d'écran, veuillez filmer une vidéo. Vous pouvez transférer le fichier en attachement du bug. Vous pouvez aussi transférer la vidéo sur YouTube et copier/coller le lien dans le bug.</td>
+  </tr>
+  <tr>
+   <td>ADB logs</td>
+   <td>Si adb est installé sur votre ordinateur, veuillez le connecter au téléphone et lancer la commande :
+    <pre class="brush: bash">
+adb logcat</pre>
+    Veuillez joindre la sortie d'écran de cette commande dans un fichier de type texte et le joindre au bug.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Les champs suivants sont optionnels :</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col"><strong>Champ</strong></th>
+   <th scope="col"><strong>Description</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Depends/Block</td>
+   <td>Montre la dépendance entre les bugs.</td>
+  </tr>
+  <tr>
+   <td>Keywords</td>
+   <td>Mots-clés pour bugzilla. Les groupes spécifiques vont l'utiliser pour le suivi.</td>
+  </tr>
+  <tr>
+   <td>Whiteboard</td>
+   <td>Contient les tags. Ajoutez n'importe quel tag pour le suivi. Vous ne devriez pas supprimer les tags dans autres sans autorisation.</td>
+  </tr>
+  <tr>
+   <td>See Also</td>
+   <td>De temps en temps, deux problèmes sont liés et vous pouvez le spécifier ici.</td>
+  </tr>
+  <tr>
+   <td>Flags</td>
+   <td>Flags pour tracker les statuts ; le flag le plus utilisé dans les bugs Firefox OS est blocking-b2g. Si un bug est flaggé en tant que "blocking-b2g", cela signifie que nous devrions y consacrer plus d'attention car celui-ci menace de bloquer la sortie.</td>
+  </tr>
+  <tr>
+   <td>Security</td>
+   <td>Si un bug est relatif à la sécurité des données personnelles, à des pertes de profits et d'autres problèmes de ce genre, vous devriez cocher la case. Ainsi, cela ne sera visible que par les employés concernés.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Pour trouver plus d'informations sur les champs de bugzilla, vous pouvez regarder la page <a href="https://bugzilla.mozilla.org/page.cgi?id=fields.html">Bugzilla Fields</a> (EN) sur Bugzilla.</p>
+
+<h3 id="Ouvrir_des_bugs_de_traduction">Ouvrir des bugs de traduction</h3>
+
+<p>Lorsque vous rencontrez une phrase non traduite, cela peut vouloir dire deux choses :</p>
+
+<ul>
+ <li>Le traducteur n'a pas traduit la phrase. N'ouvrez pas de bug dans ce cas !</li>
+ <li>Le traducteur ne peut pas traduire la phrase suite à un problème de traduction automatique (l12y). Veuillez ouvrir un bug dans ce cas.</li>
+</ul>
+
+<h4 id="Comment_déterminer_les_bugs_de_traduction_automatique_(l12y)">Comment déterminer les bugs de traduction automatique (l12y)</h4>
+
+<ol>
+ <li>Dans Firefox OS, allez dans Paramètres &gt; Informations &gt; Plus d'informations et activez le Menu développeurs.</li>
+ <li>Allez dans Paramètres &gt; Développeurs et cochez Pseudo-localization.</li>
+ <li>Allez dans Paramètres &gt; Langue et défilez vers le bas pour choisir anglais accentué.</li>
+ <li>Regardez de nouveau la phrase non traduite. Si celle-ci apparaît en anglais normal et non en anglais accentué, il paraît plus probable que cela soit causé par un problème de traduction automatique (l12y).</li>
+ <li>Dans Bugzilla, ouvrez un bug pour le produit (<em>product</em>) 'Firefox OS'. Choisissez le composant (<em>Component</em>) pour lequel la phrase non traduite apparaît. Ajoutez 'l12y' dans le champ Mots-clés (<em>Keyword</em>).</li>
+ <li>Veuillez remplir tous les champs obligatoires.</li>
+</ol>
+
+<h3 id="Mots-clés_fréquemment_utilisés">Mots-clés fréquemment utilisés</h3>
+
+<p>Le tableau qui suit décrit les différents mot-clés que vous pourrez trouver pour les bugs Firefox OS.</p>
+
+<p>Vous devez toujours indiquer, les Versions/Systèmes/Plate-forme(s) utilisés pour vérifier le bug, dans les commentaires du bug, avant de changer le <em>Status</em> à <em>Verified</em>. Si les bug est ouvert pour plusieurs plate-formes, et que vous n'avez qu'une plate-forme pour le tester, faites le test, nottez dans le bug, mais ne changez surtout pas le <em>Status</em> à <em>Verified</em>. Toutes les plate-formes doivent être testées avant de changer le <em>Status</em> à <em>Verified</em>.</p>
+
+<p>Enfin, si d'autres bugs sont marqués comme doublon (<em>duplicate</em>) du bug que vous vérifiez, assurez vous de les tester et de le mentionner aussi. Souvent des développeurs signalent comme doublon, des bugs qui sont similaires mais pas identiques, et ceux-ci peuvent être oubliés si non testés.</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col"><strong>Mot-clé</strong></th>
+   <th scope="col"><strong>Description</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>meta</td>
+   <td>Indique que ce bug est un bug de suivi. Mozilla utilise cette étiquette pour suivre plusieurs bugs ou les différentes implémentations nécessaires à un scénario d'utilisation. Les développeurs ne sont pas censés apporter de correctifs pour ce type de bug (mais pour les bugs qui le composent). Il faut garder à l'esprit que ces meta-bugs sont utilisés par les chefs de projets et les équipes de qualité pour le suivi.</td>
+  </tr>
+  <tr>
+   <td>qablocker</td>
+   <td>Utilisé pour des bugs qui bloquent la possibilité de faire des tests (manuels ou automatiques) et qui doivent être corrigés pour la prochaine Beta ou version.</td>
+  </tr>
+  <tr>
+   <td>qawanted</td>
+   <td>Utilisé pour des bugs pour lesquels on souhaite avoir plus d'informations, pouvoir les reproduire, identifier le scénario, ou indiquer qu'ils sont dupliqués (au cas où on n'a pas trouvé le bug original). Le champ whiteboard contient une étiquette pour le progrès de l'équipe qualité sur ce point. Le mot-clé qawanted doit être retiré une fois ce travail terminé.</td>
+  </tr>
+  <tr>
+   <td>regression</td>
+   <td>Indique que le problème avait été réglé précédemment mais est survenu à nouveau (une régression logicielle). Le bug en question étant un nouveau bug permettant d'indiquer qu'il y a eu une régresion. Ce type de bug peut également faire référence aux problèmes non-identifiés dans les vérifications et dans les <a href="http://en.wikipedia.org/wiki/Smoke_testing_%28software%29"><em>smoke tests</em></a>, qui se produisent dans les versions compilées actuelles mais qui ne se produisaient pas avant. Suivre ces bugs permet d'identifier les points qui sont fragiles et dont les tests devraient être améliorés/augmentés.</td>
+  </tr>
+  <tr>
+   <td>regressionwindow-wanted</td>
+   <td>Indique que le bug est une régression et qu'il serait utile de connaître à partir de quand (et éventuellement jusqu'à quand) le bug s'est produit. Cela permet d'aider à identifier le code qui a pu introduire la régression.</td>
+  </tr>
+  <tr>
+   <td>steps-wanted</td>
+   <td>Indique un bug pour lequel les étapes de reproduction n'ont pas été suffisamment détaillées ou expliquées. On souhaite que quelqu'un identifie précisément les étapes pour reproduire le bug.</td>
+  </tr>
+  <tr>
+   <td>verifyme</td>
+   <td>Signifie que ce bug peut être vérifié avec la dernière version de B2G par quelqu'un d'autre que la personne de l'équipe qualité indiquée. Ce bug nécessite une configuration matérielle spécifique, indiquée pour vérifier la correction. Il faut alors tenter de reproduire le bug, si la résolution est effective (<em>Fixed</em> est correct), il faut marquer le <em>Status</em> à <em>Verified</em>.<br>
+    <br>
+    Dans les commentaires du bug et avant de changer le statut à <em>Verified</em>, veillez à toujours indiquer la version (build), le système d'exploitation et la plate-forme utilisés pour vérifier le bug. Si le bug est indiqué sur trois plates-formes et qu'il en reste une à vérifier, vous pouvez ajouter un commentaire dans le bug avec ces informations mais pas le marquer comme vérifié. Toutes les plates-formes doivent être testées avant de passer le statut d'un bug à <em>Verified</em>.<br>
+    <br>
+    Enfin, si d'autres bugs ont été identifiés comme des duplicata du bug que vous vérifiez, assurez vous également de vérifier ces bugs et de les commenter. Souvent, des développeurs indiquent des bugs liés (mais pas identiques) comme duplicatas, ce qui fait que ces derniers sont parfois sous-estimés pour la vérification.</td>
+  </tr>
+  <tr>
+   <td>crash</td>
+   <td>Ajouté ce mot-clé si vous rencontrez un crash dans Firefox OS.</td>
+  </tr>
+ </tbody>
+</table>
+
+<div class="note">
+<p><strong>Note </strong>: Pour plus d'informations sur la gestion des bugs lors du développement de Gaia, lire la page <a href="/fr/Firefox_OS/Developing_Gaia/Submitting_a_Gaia_patch">soumettre un correctif (patch) pour Gaia</a>.</p>
+</div>
+
+<h3 id="Voir_aussi">Voir aussi</h3>
+
+<ul>
+ <li><a href="http://tech.mozfr.org/post/2013/04/23/Rapporter-un-bogue-sur-Bugzilla">Rapporter un bogue sur Bugzilla</a> (traduction d'un article de Liz Henry)</li>
+</ul>

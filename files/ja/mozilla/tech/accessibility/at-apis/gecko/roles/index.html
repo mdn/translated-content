@@ -1,0 +1,496 @@
+---
+title: Gecko Roles
+slug: Mozilla/Tech/Accessibility/AT-APIs/Gecko/Roles
+tags:
+  - AT_APIs
+  - Accessibility
+  - Reference
+translation_of: Mozilla/Tech/Accessibility/AT-APIs/Gecko/Roles
+---
+<p><a href="/ja/docs/Accessibility:AT-APIs#Supported_Roles">« AT APIs Support ページ</a></p>
+<p><span class="seoSummary">以下のリストは Gecko で使用されるアクセシブル role です。Role 定数 は <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAccessibleRole" title="">nsIAccessibleRole</a></code> インタフェースで定義されています。</span></p>
+<dl>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_NOTHING">ROLE_NOTHING</a></code></dt>
+ <dd>
+  accessible アイテムが、明確に定義された role を持っていない場合に使用されます。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_TITLEBAR">ROLE_TITLEBAR</a></code></dt>
+ <dd>
+  ウィンドウのタイトルバーまたはキャプションバーを表します。これは MSAA のみで使用されるため、MS Windows によって自動的にサポートされます。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_MENUBAR">ROLE_MENUBAR</a></code></dt>
+ <dd>
+  ユーザによって選択された (ウィンドウのタイトルバーのすぐ下に位置するか、Mac OS X では画面最上部) メニューバーを表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_SCROLLBAR">ROLE_SCROLLBAR</a></code></dt>
+ <dd>
+  垂直または水平スクロールバーを表します。クライアント領域の一部か、コントロール内で使用されます。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_GRIP">ROLE_GRIP</a></code></dt>
+ <dd>
+  特別なマウスポインタを表します。ウィンドウなどのユーザインタフェース要素をユーザに操作させます。例えば、ユーザがウィンドウ右下隅のサイズ変更グリップをクリックし、そのサイズを変更するためにドラッグします。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_SOUND">ROLE_SOUND</a></code></dt>
+ <dd>
+  システムサウンドを表します。様々なシステムイベントに関連付けられます。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_CURSOR">ROLE_CURSOR</a></code></dt>
+ <dd>
+  システムのマウスポインタを表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_CARET">ROLE_CARET</a></code></dt>
+ <dd>
+  システムのキャレットを表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_ALERT">ROLE_ALERT</a></code></dt>
+ <dd>
+  ユーザに注意を促す alert または condition を表します。<span style="border-bottom: 1px dashed green;" title="Assistive Technologies">支援技術</span>は一般的に、この role を広告するコンテナの全スクリーン上のコンテンツを読むことによって、role に反応します。警告ダイアログなどで使用してください。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_WINDOW">ROLE_WINDOW</a></code></dt>
+ <dd>
+  ウィンドウ枠を表します。タイトルバーやクライアント、ウィンドウに含まれる他のオブジェクトなどの子オブジェクトを含みます。この role は MS Windows によって自動的にサポートされます。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_INTERNAL_FRAME">ROLE_INTERNAL_FRAME</a></code></dt>
+ <dd>
+  サブドキュメントです。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_MENUPOPUP">ROLE_MENUPOPUP</a></code></dt>
+ <dd>
+  メニューを表します。実行する操作をユーザに選択させるための、オプションの一覧を提供します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_MENUITEM">ROLE_MENUITEM</a></code></dt>
+ <dd>
+  メニュー項目を表します。実行するコマンドやオプションをユーザに選択させるための、メニュー内のエントリです。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_TOOLTIP">ROLE_TOOLTIP</a></code></dt>
+ <dd>
+  役立つヒントを提供するツールチップを表します。一般的にマウスカーソルの位置に表示されます。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_APPLICATION">ROLE_APPLICATION</a></code></dt>
+ <dd>
+  アプリケーションのメインウィンドウを表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_DOCUMENT">ROLE_DOCUMENT</a></code></dt>
+ <dd>
+  ドキュメントウィンドウを表します。ドキュメントウィンドウは常にアプリケーションウィンドウ内に含まれます。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_PANE">ROLE_PANE</a></code></dt>
+ <dd>
+  フレームウィンドウやドキュメントウィンドウ内のペインを表します。ユーザは他のペインと現在のペインのコンテンツ内の間を移動できますが、異なるペイン内の項目間は移動できません。このように、ペインはフレームウィンドウやドキュメントより下位、個々のコントロールよりも上位のグループレベルを表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_CHART">ROLE_CHART</a></code></dt>
+ <dd>
+  データの提供に使用されるグラフィカルな画像を表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_DIALOG">ROLE_DIALOG</a></code></dt>
+ <dd>
+  ダイアログボックスまたはメッセージボックスを表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_BORDER">ROLE_BORDER</a></code></dt>
+ <dd>
+  ウィンドウの境界線を表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_GROUPING">ROLE_GROUPING</a></code></dt>
+ <dd>
+  その他のオブジェクトを論理的にグループ化します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_SEPARATOR">ROLE_SEPARATOR</a></code></dt>
+ <dd>
+  separator メニュー項目やウィンドウ内のペインを分割するバーなど、空間を二つの領域に視覚的に分割するために使用されます。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_TOOLBAR">ROLE_TOOLBAR</a></code></dt>
+ <dd>
+  ツールバーを表します。よく使用される機能への簡単なアクセスを提供するコントロール (プッシュボタンやトグルボタン) のグループです。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_STATUSBAR">ROLE_STATUSBAR</a></code></dt>
+ <dd>
+  ステータスバーを表します。現在の操作やアプリケーションの状態、選択したオブジェクトについての情報を表示する、ウィンドウ下部の領域です。ステータスバーには異なる種類の情報を表示する複数のフィールドがあります。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_TABLE">ROLE_TABLE</a></code></dt>
+ <dd>
+  セルの行と列を含むテーブルを表します。また、任意で行ヘッダと列ヘッダが含まれます。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_COLUMNHEADER">ROLE_COLUMNHEADER</a></code></dt>
+ <dd>
+  列ヘッダを表します。テーブルの列のための視覚的なラベルを提供します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_ROWHEADER">ROLE_ROWHEADER</a></code></dt>
+ <dd>
+  行ヘッダを表します。テーブルの行のための視覚的なラベルを提供します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_COLUMN">ROLE_COLUMN</a></code></dt>
+ <dd>
+  テーブル内のセルの列を表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_ROW">ROLE_ROW</a></code></dt>
+ <dd>
+  テーブル内のセルの行を表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_CELL">ROLE_CELL</a></code></dt>
+ <dd>
+  テーブル内のセルを表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_LINK">ROLE_LINK</a></code></dt>
+ <dd>
+  何かへのリンクを表します。このオブジェクトはテキストやグラフィックで表現されますが、ボタンのように動作します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_HELPBALLOON">ROLE_HELPBALLOON</a></code></dt>
+ <dd>
+  ツールチップやヘルプバルーンのフォーム内のヘルプトピックを表示します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_CHARACTER">ROLE_CHARACTER</a></code></dt>
+ <dd>
+  Microsoft Office アシスタントなどのアニメのようなグラフィックオブジェクトを表します。アプリケーションのヘルプをユーザに提供するために表示されます。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_LIST">ROLE_LIST</a></code></dt>
+ <dd>
+  リストボックスを表します。ユーザは一個以上の項目を選択できます。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_LISTITEM">ROLE_LISTITEM</a></code></dt>
+ <dd>
+  リスト内の項目を表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_OUTLINE">ROLE_OUTLINE</a></code></dt>
+ <dd>
+  ツリービューコントロールなどのアウトライン構造またはツリー構造を表します。階層的なリストを表示し、ユーザは下層の展開と折り畳みができます。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_OUTLINEITEM">ROLE_OUTLINEITEM</a></code></dt>
+ <dd>
+  アウトライン構造やツリー構造内の項目を表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_PAGETAB">ROLE_PAGETAB</a></code></dt>
+ <dd>
+  ページタブを表します。これはページタブリストの子要素です。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_PROPERTYPAGE">ROLE_PROPERTYPAGE</a></code></dt>
+ <dd>
+  プロパティシートを表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_INDICATOR">ROLE_INDICATOR</a></code></dt>
+ <dd>
+  現在の項目を指し示すポインタ画像などのインジケータを表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_GRAPHIC">ROLE_GRAPHIC</a></code></dt>
+ <dd>
+  画像を表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_STATICTEXT">ROLE_STATICTEXT</a></code></dt>
+ <dd>
+  他のコントロールのためのラベルやダイアログボックス内の説明など、読み取り専用テキストを表します。<span style="border-bottom: 1px dashed green;" title="Static text">静的テキスト</span>は変更や選択ができません。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_TEXT_LEAF">ROLE_TEXT_LEAF</a></code></dt>
+ <dd>
+  選択可能なテキストを表します。編集したり読み取り専用にできます。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_PUSHBUTTON">ROLE_PUSHBUTTON</a></code></dt>
+ <dd>
+  プッシュボタンコントロールを表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_CHECKBUTTON">ROLE_CHECKBUTTON</a></code></dt>
+ <dd>
+  チェックボックスコントロールを表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_RADIOBUTTON">ROLE_RADIOBUTTON</a></code></dt>
+ <dd>
+  オプションボタンを表します。ラジオボタンとも呼ばれています。これは排他的なグループの一つです。すべてのオブジェクトは、この属性を持つ一つの親要素を共有しており、一つの排他的なグループの一部と仮定されます。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_COMBOBOX">ROLE_COMBOBOX</a></code></dt>
+ <dd>
+  コンボボックスを表します。予め選択されたセットを提供するリストボックスに関連付けられた編集コントロールです。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_DROPLIST">ROLE_DROPLIST</a></code></dt>
+ <dd>
+  カレンダーコントロールを表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_PROGRESSBAR">ROLE_PROGRESSBAR</a></code></dt>
+ <dd>
+  進捗バーを表します。ユーザに作業中の操作の現在の達成度を表示します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_DIAL">ROLE_DIAL</a></code></dt>
+ <dd>
+  ユーザに値を設定させるダイアルまたはノブを表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_HOTKEYFIELD">ROLE_HOTKEYFIELD</a></code></dt>
+ <dd>
+  ホットキーフィールドを表します。ユーザに連続したキーストロークや、その組み合わせを入力させます。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_SLIDER">ROLE_SLIDER</a></code></dt>
+ <dd>
+  スライダを表します。ユーザに最小値と最大値の間に与えられた値を設定させます。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_SPINBUTTON">ROLE_SPINBUTTON</a></code></dt>
+ <dd>
+  スピンボックスを表します。ユーザに表示された値を増減させるコントロールです。これはスピンボックスに関連付けられた別の "仲間" コントロール内に表示されます。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_DIAGRAM">ROLE_DIAGRAM</a></code></dt>
+ <dd>
+  ダイアグラムデータに使用される、グラフィカルな画像を表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_ANIMATION">ROLE_ANIMATION</a></code></dt>
+ <dd>
+  アニメーションコントロールを表します。連続したビットマップフレームを表示するコントロールなど、時間毎に変わるコンテンツを含みます。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_EQUATION">ROLE_EQUATION</a></code></dt>
+ <dd>
+  数式を表します。これは MATHML によって使用されます。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_BUTTONDROPDOWN">ROLE_BUTTONDROPDOWN</a></code></dt>
+ <dd>
+  項目のリストをドロップダウン表示するボタンを表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_BUTTONMENU">ROLE_BUTTONMENU</a></code></dt>
+ <dd>
+  メニューをドロップダウン表示するボタンを表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_BUTTONDROPDOWNGRID">ROLE_BUTTONDROPDOWNGRID</a></code></dt>
+ <dd>
+  グリッドをドロップダウン表示するボタンを表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_WHITESPACE">ROLE_WHITESPACE</a></code></dt>
+ <dd>
+  オブジェクト間の空白を表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_PAGETABLIST">ROLE_PAGETABLIST</a></code></dt>
+ <dd>
+  ページタブコントロールのコンテナを表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_CLOCK">ROLE_CLOCK</a></code></dt>
+ <dd>
+  時刻を表示するコントロールを表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_SPLITBUTTON">ROLE_SPLITBUTTON</a></code></dt>
+ <dd>
+  ツールバー上のボタンを表します。ドロップダウンリストアイコンがボタンのすぐ隣にあります。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_IPADDRESS">ROLE_IPADDRESS</a></code></dt>
+ <dd>
+  IP (Internet Protocol) アドレスを入力するための編集コントロールを表します。編集コントロールは入力部分が IP アドレスの数値ごとに区切られています。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_ACCEL_LABEL">ROLE_ACCEL_LABEL</a></code></dt>
+ <dd>
+  アクセラレータを持つラベルコントロールを表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_ARROW">ROLE_ARROW</a></code></dt>
+ <dd>
+  主要な 4 方向の矢印のうちの一つを表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_CANVAS">ROLE_CANVAS</a></code></dt>
+ <dd>
+  イベントの発生とトラップに使用されるコントロールを表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_CHECK_MENU_ITEM">ROLE_CHECK_MENU_ITEM</a></code></dt>
+ <dd>
+  チェックボックス付きのメニュー項目を表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_COLOR_CHOOSER">ROLE_COLOR_CHOOSER</a></code></dt>
+ <dd>
+  ユーザに色を選択させる特別なダイアログを表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_DATE_EDITOR">ROLE_DATE_EDITOR</a></code></dt>
+ <dd>
+  ユーザに日付を編集させるためのコントロールを表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_DESKTOP_ICON">ROLE_DESKTOP_ICON</a></code></dt>
+ <dd>
+  ROLE_DESKTOP_PANE 内のアイコン化された内部フレーム。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_DESKTOP_FRAME">ROLE_DESKTOP_FRAME</a></code></dt>
+ <dd>
+  デスクトップペイン。内部フレームと、そのアイコン化されたバージョンをサポートするペイン。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_DIRECTORY_PANE">ROLE_DIRECTORY_PANE</a></code></dt>
+ <dd>
+  ディレクトリペイン。ユーザがディレクトリの内容を選択したり操作するためのペイン。ファイルの選択に使用されます。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_FILE_CHOOSER">ROLE_FILE_CHOOSER</a></code></dt>
+ <dd>
+  ファイル選択ダイアログ。ディレクトリ内のファイルを表示してユーザにファイルを選択させたり、異なるディレクトリや特定のファイル名を閲覧させるための特別なダイアログ。ディレクトリの内容を表示するためにディレクトリペインを使用します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_FONT_CHOOSER">ROLE_FONT_CHOOSER</a></code></dt>
+ <dd>
+  フォント選択ダイアログ。フォント選択ダイアログは、ユーザに様々な属性のフォントを選択させるコンポーネントです。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_CHROME_WINDOW">ROLE_CHROME_WINDOW</a></code></dt>
+ <dd>
+  フレーム role です。タイトルバー、境界線、メニューバーなどを持つトップレベルのウィンドウ。アプリケーションの最初のウィンドウとしてよく使用されます。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_GLASS_PANE">ROLE_GLASS_PANE</a></code></dt>
+ <dd>
+  ガラスペイン。すべてのペインより前面に描かれることが保証されたペイン。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_HTML_CONTAINER">ROLE_HTML_CONTAINER</a></code></dt>
+ <dd>
+  HTML のためのドキュメントコンテナ。このコンテナの子要素は document の内容を提供します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_ICON">ROLE_ICON</a></code></dt>
+ <dd>
+  小さな固定サイズの画像。一般的にはコンポーネントの飾りに使用されます。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_LABEL">ROLE_LABEL</a></code></dt>
+ <dd>
+  インターフェースのアイコンまたは短い文字列を提供します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_LAYERED_PANE">ROLE_LAYERED_PANE</a></code></dt>
+ <dd>
+  <span style="border-bottom: 1px dashed green;" title="layered">階層化</span>ペイン。子要素をスタック順の外観を提供しているレイヤー内に描画する特別なペイン。通常は、ウィンドウ内のほとんどの視覚的なコンポ―テントとメニューバーを保持するペインです。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_OPTION_PANE">ROLE_OPTION_PANE</a></code></dt>
+ <dd>
+  ダイアログの内側で最初に使用される特別なペイン。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_PASSWORD_TEXT">ROLE_PASSWORD_TEXT</a></code></dt>
+ <dd>
+  パスワードなど、テキストの内容がユーザに分からないように表示されるテキストオブジェクトです。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_POPUP_MENU">ROLE_POPUP_MENU</a></code></dt>
+ <dd>
+  ユーザに選択肢の一覧を提供する一時的なウィンドウ。ユーザが一覧から一つを選択すると隠されます。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_RADIO_MENU_ITEM">ROLE_RADIO_MENU_ITEM</a></code></dt>
+ <dd>
+  メニュー項目のラジオボタンです。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_ROOT_PANE">ROLE_ROOT_PANE</a></code></dt>
+ <dd>
+  ルートペインです。ガラスペインや階層化ペインを子要素に持つ特別なペイン。この子要素にはスクロールバーやビューポートを含むことができます。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_SCROLL_PANE">ROLE_SCROLL_PANE</a></code></dt>
+ <dd>
+  スクロールペインです。大量の情報をユーザが順次表示できるオブジェクト。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_SPLIT_PANE">ROLE_SPLIT_PANE</a></code></dt>
+ <dd>
+  <span style="border-bottom: 1px dashed green;" title="split">分割</span>ペインです。同時に 2 つのパネルを提供する特別なパネル。2 つのパネルの間は、ユーザがその大きさを変更することができる仕切りになっています。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_TABLE_COLUMN_HEADER">ROLE_TABLE_COLUMN_HEADER</a></code></dt>
+ <dd>
+  テーブルの列のためのヘッダです。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_TABLE_ROW_HEADER">ROLE_TABLE_ROW_HEADER</a></code></dt>
+ <dd>
+  テーブルの行のためのヘッダです。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_TEAR_OFF_MENU_ITEM">ROLE_TEAR_OFF_MENU_ITEM</a></code></dt>
+ <dd>
+  着脱可能なメニュー項目です。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_TERMINAL">ROLE_TERMINAL</a></code></dt>
+ <dd>
+  アクセシブルターミナルを表します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_TEXT_CONTAINER">ROLE_TEXT_CONTAINER</a></code></dt>
+ <dd>
+  論理的なテキスト実体を構成するオブジェクトのコレクションです。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_TOGGLE_BUTTON">ROLE_TOGGLE_BUTTON</a></code></dt>
+ <dd>
+  切り替えボタンです。チェックを入れたり外したりできる特別な押しボタン。現在の状態を示すインジケータは提供しません。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_TREE_TABLE">ROLE_TREE_TABLE</a></code></dt>
+ <dd>
+  複数行のデータ表示を展開したり折り畳んだりできるコントロールを表します。複数列のデータも表示できます。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_VIEWPORT">ROLE_VIEWPORT</a></code></dt>
+ <dd>
+  ビューポートです。通常はスクロールペイン内で使用されるオブジェクト。ユーザが見ることができるデータ全体の一部分を提供します。ユーザがスクロールバーを操作してビューポートに表示する部分を変更できます。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_HEADER">ROLE_HEADER</a></code></dt>
+ <dd>
+  ドキュメントページのヘッダです。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_FOOTER">ROLE_FOOTER</a></code></dt>
+ <dd>
+  ドキュメントページのフッタです。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_PARAGRAPH">ROLE_PARAGRAPH</a></code></dt>
+ <dd>
+  テキストの段落です。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_RULER">ROLE_RULER</a></code></dt>
+ <dd>
+  ワープロなどで使用される定規です。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_AUTOCOMPLETE">ROLE_AUTOCOMPLETE</a></code></dt>
+ <dd>
+  エントリウィジェットに挿入する項目を含むダイアログあるいはリストを持つテキストエントリ。つまり、テキストエントリを補完する語のリストです。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_EDITBAR">ROLE_EDITBAR</a></code></dt>
+ <dd>
+  ツールバー内の編集可能なテキストオブジェクト。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_ENTRY">ROLE_ENTRY</a></code></dt>
+ <dd>
+  ユーザによって入力または変更されるテキスト内容のコントロール。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_CAPTION">ROLE_CAPTION</a></code></dt>
+ <dd>
+  他のオブジェクトを説明するキャプションです。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_DOCUMENT_FRAME">ROLE_DOCUMENT_FRAME</a></code></dt>
+ <dd>
+  ドキュメント内容の表示領域を含む視覚的なフレームまたはコンテナです。ドキュメントフレームは他のドキュメント実体内に発生します。この場合、2 番目のドキュメントは包含する実体内に埋め込まれます。大抵の HTML フレームは ROLE_DOCUMENT_FRAME です。このオブジェクトや単体の子孫は Document インタフェースを実装します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_HEADING">ROLE_HEADING</a></code></dt>
+ <dd>
+  見出しです。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_PAGE">ROLE_PAGE</a></code></dt>
+ <dd>
+  ドキュメント内容のページを表すオブジェクト。ユーザがページを基準にしてアクセスするドキュメント内で使用されます。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_SECTION">ROLE_SECTION</a></code></dt>
+ <dd>
+  ドキュメント内容のコンテナです。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_REDUNDANT_OBJECT">ROLE_REDUNDANT_OBJECT</a></code></dt>
+ <dd>
+  アクセシブルな階層内の他のオブジェクトと重複するオブジェクト。支援技術 (<span style="color: green;">AT</span>)は、この role を持つオブジェクトを無視します。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_FORM">ROLE_FORM</a></code></dt>
+ <dd>
+  フォームコントロールのコンテナです。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_IME">ROLE_IME</a></code></dt>
+ <dd>
+  キーボード上に無い文字を入力するために使用されるオブジェクト。例えば、英語キーボードで中国語を入力する場合など。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_APP_ROOT">ROLE_APP_ROOT</a></code></dt>
+ <dd>
+   ???</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_PARENT_MENUITEM">ROLE_PARENT_MENUITEM</a></code></dt>
+ <dd>
+  メニュー項目を表します。これはユーザが選択して別のメニューを表示できるメニュー内のエントリです。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_CALENDAR">ROLE_CALENDAR</a></code></dt>
+ <dd>
+  ユーザに日付を選択させるカレンダーです。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_COMBOBOX_LIST">ROLE_COMBOBOX_LIST</a></code></dt>
+ <dd>
+  コンボボックスによって表示される項目のリストです。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_COMBOBOX_OPTION">ROLE_COMBOBOX_OPTION</a></code></dt>
+ <dd>
+  コンボボックスによって表示されるリストの項目です。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_IMAGE_MAP">ROLE_IMAGE_MAP</a></code></dt>
+ <dd>
+  イメージマップです。子リンクを表す領域を持ちます。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_OPTION">ROLE_OPTION</a></code></dt>
+ <dd>
+  リストボックス内のオプションです。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_RICH_OPTION">ROLE_RICH_OPTION</a></code></dt>
+ <dd>
+  リストボックス内のリッチオプションです。他のウィジェットを子要素として持つことができます。</dd>
+ <dt>
+  <code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_LISTBOX">ROLE_LISTBOX</a></code></dt>
+ <dd>
+  オプションのリストです。</dd>
+</dl>
+<div class="note">
+ <p><strong>編注:</strong> <span class="nowiki"><code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_">ROLE_</a></code></span> のテンプレートを使用してアクセシブル role への参照を取得してください。<code><a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Roles/ROLE_MENUITEM">ROLE_MENUITEM</a></code> のように表示されます。</p>
+</div>

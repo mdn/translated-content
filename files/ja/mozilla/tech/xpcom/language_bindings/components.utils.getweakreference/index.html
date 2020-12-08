@@ -1,0 +1,45 @@
+---
+title: Components.utils.getWeakReference
+slug: Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.getWeakReference
+tags:
+  - XPCOM
+  - 'XPCOM:Language Bindings'
+  - XPConnect
+translation_of: Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.getWeakReference
+---
+<p>このメソッドは <a href="ja/Firefox_3">Firefox 3</a> で導入され、オブジェクトの弱い参照 (<span style="color: green;">weak reference</span>)を得るために使います。オブジェクトの参照を得るには、結果のオブジェクトに対して <code>get()</code> を実行する必要があります。</p>
+
+<p>加えて、 <code>get()</code> が成功しても、オブジェクトが有効であるとは限りません。単にまだガベージコレクトされていないからかもしれないからです。オブジェクトが本当に欲しいものであるかを確認するには、 (DOM ノードの <a href="/ja/docs/Web/API/Node/parentNode" title="指定されたノードの DOM ツリー内の親ノードを返します。"><code>Node.parentNode()</code></a> のように) 他の角度からチェックする必要があります。</p>
+
+<h3 id="文法">文法</h3>
+
+<pre>weakRef = Components.utils.getWeakReference(<em>obj</em>);
+</pre>
+
+<h4 id="引数">引数</h4>
+
+<dl>
+ <dt><code>obj</code></dt>
+ <dd>弱い参照を得ようとするオブジェクト。</dd>
+</dl>
+
+<div class="note">
+<p><strong>注:</strong> <span title="(Firefox 11.0 / Thunderbird 11.0 / SeaMonkey 2.8)">Gecko 11.0</span> では、 このメソッドは <code>obj</code> が <code>null</code> の場合に例外を投げるように変更されました。 <span title="(Firefox 12.0 / Thunderbird 12.0 / SeaMonkey 2.9)">Gecko 12.0</span> で、暗黙に失敗するという以前の動作に戻されました。</p>
+</div>
+
+<h3 id="例">例</h3>
+
+<p>こちらの例では、ウィンドウへの弱い参照を把握します。そして後から、配列の中から一致するものを探して使用します。</p>
+
+<pre>var arr = [];
+
+arr.push(Cu.getWeakReference(window));
+
+// この部分は他のブロックで実行されます。
+for (var i=0; i&lt;arr.length; i++) {
+  if (arr[i].get() == window) {
+    // ウィンドウが見つかった
+    break;
+  }
+}
+</pre>

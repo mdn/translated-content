@@ -1,0 +1,82 @@
+---
+title: fuelIWindow
+slug: Toolkit_API/FUEL/fuelIWindow
+tags:
+  - FUEL
+  - Interfaces
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/Toolkit_API/FUEL/fuelIWindow
+---
+<div>
+ </div>
+<p><a href="/ja/docs/Toolkit_API/FUEL" title="Toolkit API/FUEL">FUEL</a> の <code>Window</code> オブジェクトは、ブラウザウィンドウを記述します。</p>
+<h2 id="Method_overview" name="Method_overview">メソッドの概要</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>fuelIBrowserTab <a href="#open.28.29">open</a>(in nsIURI aURI)</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Attributes" name="Attributes">プロパティ</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">プロパティ</td>
+   <td class="header">型</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code>tabs</code></td>
+   <td><code>readonly attribute nsIVariant</code></td>
+   <td>ブラウザウィンドウ内のブラウザタブ (<a href="/ja/docs/Toolkit_API/FUEL/fuelIBrowserTab" title="FUEL/BrowserTab">fuelIBrowserTab</a>) の配列。この配列は、開いているタブのスナップショットです。配列の値を変更してもブラウザ内のタブには影響しません。タブを操作するには、このページに書かれた fuelIWindow.open() メソッドを使用するか、<a href="/ja/docs/Toolkit_API/FUEL/fuelIBrowserTab" title="FUEL/BrowserTab">fuelIBrowserTab</a> のメソッドを使用してください。</td>
+  </tr>
+  <tr>
+   <td><code>activeTab</code></td>
+   <td><code>readonly attribute <a href="/ja/docs/Toolkit_API/FUEL/fuelIBrowserTab" title="FUEL/BrowserTab">fuelIBrowserTab</a></code></td>
+   <td>ブラウザウィンドウ内の現在アクティブなタブ。</td>
+  </tr>
+  <tr>
+   <td><code>events</code></td>
+   <td><code>readonly attribute <a href="/ja/docs/Toolkit_API/extIEvents" title="FUEL/Events">fuelIEvents</a></code></td>
+   <td>ブラウザウィンドウに対するイベントオブジェクト。 "TabOpen", "TabClose", "TabMove", "TabSelect" をサポート。</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Methods" name="Methods">メソッド</h2>
+<h3 id="open.28.29" name="open.28.29">open()</h3>
+<p>指定した URI を新しいブラウザタブに開く。</p>
+<pre>fuelIBrowserTab open(
+  in nsIURI aURI
+);
+</pre>
+<h4 id="open-Parameters" name="open-Parameters">引数</h4>
+<dl>
+ <dt>
+  <code>aURI</code></dt>
+ <dd>
+  新しいブラウザタブに読み込む URI。</dd>
+</dl>
+<h2 id="Example" name="Example">例</h2>
+<p>この例は、"TabOpen" イベントを監視するイベントリスナーをセットアップします。このイベントは、新しいタブが作成された時に送信され、次に新しいウィンドウが開き、Mozilla の Web サイトが読み込まれます。Mozilla のサイトが読み込まれるタブが作成された時、コード例の <code>onTabOpen()</code> メソッドが呼び出されます。</p>
+<p>この例は、いくつかの役立つテクニックをデモします。ウィンドウに新しいタブを作成する方法と新しく開かれたタブへの参照を取得する方法です。</p>
+<pre>// 文字列から nsIURI オブジェクトを生成するヘルパー関数
+function url(spec) {
+  var ios = Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService);
+  return ios.newURI(spec, null, null);
+}
+
+function onTabOpen(event) {
+  // タブが読み込まれる前にイベントが呼び出されるため、alert は動作しないことに注意してください。
+  var theTab = event.data.tab;    // タブの FUEL BrowserTab オブジェクトを取得
+  Application.console.log("It opened");
+}
+
+var activeWin = Application.activeWindow;
+activeWin.events.addListener("TabOpen", onTabOpen);
+
+var browserTab = activeWin.open(url("http://mozilla.org"));
+</pre>
+<h2 id="See_also" name="See_also">関連情報</h2>
+<p>---</p>

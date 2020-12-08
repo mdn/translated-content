@@ -1,0 +1,83 @@
+---
+title: NPP SetWindow
+slug: NPP_SetWindow
+tags:
+  - Fenêtre
+  - Plugin
+  - Plugins
+  - Window
+translation_of: Archive/Plugins/Reference/NPP_SetWindow
+---
+<p>« <a class="new" href="https://developer.mozilla.org/fr/docs/Gecko_Plugin_API_Reference" rel="nofollow">Gecko Plugin API Reference</a> « <a class="new" href="https://developer.mozilla.org/fr/docs/Gecko_Plugin_API_Reference/Plug-in_Side_Plug-in_API" rel="nofollow">Plug-in Side Plug-in API</a></p>
+
+<h3 id="Summary" name="Summary">Résumé</h3>
+
+<p>Indique au greffon (plugin) qu'une fenêtre est créée, déplacée, redimensionnée ou détruite.</p>
+
+<h3 id="Syntax" name="Syntax">Syntaxe</h3>
+
+<pre>#include &lt;npapi.h&gt;
+
+NPError NPP_SetWindow(NPP instance, NPWindow *window);
+</pre>
+
+<h3 id="Parameters" name="Parameters">Paramètres</h3>
+
+<p>La fonction a les paramètres suivants :</p>
+
+<dl>
+ <dt>instance</dt>
+ <dd>Pointeur vers l'instance du greffon courant (Doit être embarqué ou en plein-écran).</dd>
+</dl>
+
+<dl>
+ <dt>window</dt>
+ <dd>Pointeur vers la fenêtre où l'instance s'affiche. La structure de la fenêtre contient un "gestionnaire de fenêtre"  (trad incertaine de "a window handle") et les valeurs suivantes :<br>
+ Coordonnées (coin haut-gauche), largeur, hauteur et "rectangle de coupure" (trad incertaine de "clipping rectangle") (voir les notes concernant Unix ci-dessous).</dd>
+</dl>
+
+<h3 id="Returns" name="Returns">Valeurs retournées</h3>
+
+<ul>
+ <li>En cas de succès : NPERR_NO_ERROR.</li>
+ <li>En cas d'erreur : Le greffon n'est pas chargé et un code d'erreur est retourné (<a href="/fr/NPAPI/Constantes#Codes_Erreurs" title="fr/NPAPI/Constantes#Codes Erreurs">Codes Erreurs</a> [<a href="/en/NPAPI/Constants#Error_Codes" title="en/NPAPI/Constants#Error Codes">en</a>-<a href="/ja/NPAPI/Constants#Error_Codes" title="ja/NPAPI/Constants#Error Codes">ja</a>]). </li>
+</ul>
+
+<h3 id="Description" name="Description">Description</h3>
+
+<p>Le navigateur appelle <code>NPP_SetWindow</code> après avoir créé l'instance pour permettre le début de l'affichage. Les appels suivants à <code>NPP_SetWindow</code> indiquent des changements de taille ou de position. Ces appels transmettent le même objet <a href="/fr/NPWindow" title="fr/NPWindow">NPWindow</a> [<a href="/en/NPWindow" title="en/NPWindow">en</a>-<a href="/ja/NPWindow" title="ja/NPWindow">ja</a>]  à chaque fois mais avec des valeurs différentes. Si les gestionnaire de fenêtre est défini à <code>null</code>, la fenêtre est supprimée. Dans ce cas le greffon ne doit provoquer aucune opération graphique supplémentaire sur la fenêtre et doit libérer toute ressource associée.</p>
+
+<p>La structure de données fournie à <code>NPP_SetWindow</code>est un objet <a href="/fr/NPWindow" title="fr/NPWindow">NPWindow</a> [<a href="/en/NPWindow" title="en/NPWindow">en</a>-<a href="/ja/NPWindow" title="ja/NPWindow">ja</a>] contenant les coordonnées de la zone de l'instance (et différentes données spécifiques à la plateforme). Cette fenêtre est valide tant que l'instance existe ou jusqu'à ce que <code>NPP_SetWindow</code> soit de nouveau appelé avec d'autres valeurs.</p>
+
+<p>Pour des greffons fenêtrés sous Unix et Windows, le paramètre window contient un gestionnaire de sous-fenêtre de la hiérarchie des fenêtres du navigateur. Sur Mac OS, ce champs pointe sur une structure <a href="/fr/NP_Port" title="fr/NP Port">NP_Port</a> [<a href="/en/NP_Port" title="en/NP Port">en</a>-<a href="/ja/NP_Port" title="ja/NP Port">ja</a>]. Pour des greffons sans fenêtre, c'est un gestionnaire d'affichage (handle to drawable) spécifique à la plateforme.</p>
+
+<p>Avant de faire pointer le paramètre window sur une nouvelle fenêtre, il est conseillé de comparer les informations cette dernière et l'ancienne (si elle existe) pour relever tout changement.</p>
+
+<div class="note">NOTE: NPP_SetWindow est utile uniquement pour les greffons embarqués (NP_EMBED) ou plein-écran (NP_FULL), qui sont affichés dans une fenêtre. NPP_SetWindow est hors de propos pour les greffons cachés.</div>
+
+<h3 id="See_Also" name="See_Also">Voir aussi</h3>
+
+<p><a href="/fr/NPP" title="fr/NPP">NPP</a> [<a href="/en/NPP" title="en/NPP">en</a>-<a href="/ja/NPP" title="ja/NPP">ja</a>] -&gt; <a href="/fr/NPP_New" title="fr/NPP
+New">NPP_New</a> [<a href="/en/NPP_New" title="en/NPP_New">en</a>-<a href="/ja/NPP_New" title="ja/NPP New">ja</a>], <a href="/fr/NPP_Destroy" title="fr/NPP
+Destroy">NPP_Destroy</a> [<a href="/en/NPP_Destroy" title="en/NPP_Destroy">en</a>-<a href="/ja/NPP_Destroy" title="ja/NPP
+Destroy">ja</a>], <a href="/fr/NPP_HandleEvent" title="fr/NPP
+HandleEvent">NPP_HandleEvent</a> [<a href="/en/NPP_HandleEvent" title="en/NPP_HandleEvent">en</a>-<a href="/ja/NPP_HandleEvent" title="ja/NPP HandleEvent">ja</a>], <a href="/fr/NPP_SetWindow" title="fr/NPP SetWindow">NPP_SetWindow</a> [<a href="/en/NPP_SetWindow" title="en/NPP SetWindow">en</a>-<a href="/ja/NPP_SetWindow" title="ja/NPP
+SetWindow">ja</a>]<br>
+ <a href="/fr/NP_Shutdown" title="fr/NP Shutdown">NP_Shutdown</a> [<a href="/en/NP_Shutdown" title="en/NP_Shutdown">en</a>-<a href="/ja/NP_Shutdown" title="ja/NP
+Shutdown">ja</a>], <a href="/fr/NP_Initialize" title="fr/NP
+Initialize">NP_Initialize</a> [<a href="/en/NP_Initialize" title="en/NP_Initialize">en</a>-<a href="/ja/NP_Initialize" title="ja/NP
+Initialize">ja</a>]<br>
+ <a href="/fr/NPWindow" title="fr/NPWindow">NPWindow</a> [<a href="/en/NPWindow" title="en/NPWindow">en</a>-<a href="/ja/NPWindow" title="ja/NPWindow">ja</a>]<br>
+ <a href="/fr/NPSavedData" title="fr/NPSavedData">NPSavedData</a> [<a href="/en/NPSavedData" title="en/NPSavedData">en</a>-<a href="/ja/NPSavedData" title="ja/NPSavedData">ja</a>]<br>
+ <a href="/fr/NP_Port" title="fr/NP
+Port">NP_Port</a> [<a href="/en/NP_Port" title="en/NP
+Port">en</a>-<a href="/ja/NP_Port" title="ja/NP Port">ja</a>]<br>
+ <a href="/fr/NPAPI/Constantes#Codes_Erreurs" title="fr/NPAPI/Constantes#Codes Erreurs">Codes Erreurs</a> [<a href="/en/NPAPI/Constants#Error_Codes" title="en/NPAPI/Constants#Error Codes">en</a>-<a href="/ja/NPAPI/Constants#Error_Codes" title="ja/NPAPI/Constants#Error Codes">ja</a>]</p>
+
+<h3 id="Notes_de_traduction">Notes de traduction</h3>
+
+<ul>
+ <li>Cette traduction est faite à partir de la version anglaise datant du 3 Avril 2010. Il se peut qu'elle ait été enrichie depuis (ou que d'autres langues aient été ajoutées).</li>
+ <li>Le liens vers d'autres ressources sont indiqués dans chaque langue pour contourner les problèmes de liens morts.</li>
+ <li>Cette traduction est un brouillon à corriger/valider.</li>
+</ul>

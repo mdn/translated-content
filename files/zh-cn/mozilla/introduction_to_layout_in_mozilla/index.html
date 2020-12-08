@@ -1,0 +1,360 @@
+---
+title: Mozilla 中对布局的介绍
+slug: Mozilla/Introduction_to_Layout_in_Mozilla
+tags:
+  - cn
+translation_of: Mozilla/Introduction_to_Layout_in_Mozilla
+---
+<h2 id="Overview" name="Overview"><font><font>概要</font></font></h2>
+
+<ul>
+ <li><font><font>基本数据流</font></font></li>
+ <li><font><font>关键数据结构</font></font></li>
+ <li><font><font>详细执行步骤</font></font></li>
+ <li><font><font>渐进模式</font></font></li>
+ <li><font><font>未来高科技会谈</font></font></li>
+ <li><font><font>总结起来，Q＆A</font></font></li>
+</ul>
+
+<h2 id="Basic_Data_Flow" name="Basic_Data_Flow"><font><font>基本数据流</font></font></h2>
+
+<ul>
+ <li><font><font>通过网络APIs获取源文档</font></font></li>
+ <li><font><font>在单线程布局引擎中依次执行下面步骤：</font></font>
+  <ul>
+   <li><font><font>解析，计算样式，渲染；重复</font></font></li>
+   <li><font><font>CSS 用于渲染所有的内容</font></font></li>
+  </ul>
+ </li>
+ <li><font><font>理论上，内容与“展示”是相分离的</font></font></li>
+</ul>
+
+<p><img src="/files/464/Gecko_Overview_9.png" style="height: 316px; width: 688px;"></p>
+
+<h2 id="Key_Data_Structures" name="Key_Data_Structures"><font><font>关键数据结构</font></font></h2>
+
+<p><img src="/files/454/Gecko_Overview_10.png" style="height: 122px; width: 638px;"></p>
+
+<ul>
+ <li><font><font>内容节点</font></font>
+
+  <ul>
+   <li><font><font>元素，属性，叶(leaves)</font></font></li>
+   <li><font><font>DOM</font></font></li>
+  </ul>
+ </li>
+ <li><font><font>帧(Frame)</font></font>
+  <ul>
+   <li><font><font>矩形格式</font></font></li>
+   <li><font><font>几何信息</font></font></li>
+   <li><font><font>{{mediawiki.external('0..n')}} 每个内容节点</font></font></li>
+   <li><font><font>从第2个到第n个是“连续到”</font></font></li>
+  </ul>
+ </li>
+ <li><font><font>样式上下文(Style context)</font></font>
+  <ul>
+   <li><font><font>非几何信息</font></font></li>
+   <li><font><font>可由相邻帧共享</font></font></li>
+   <li><font><font>引用计数，从属于帧(frame)</font></font></li>
+  </ul>
+ </li>
+ <li><font><font>视图(View)</font></font>
+  <ul>
+   <li><font><font>裁剪，z顺序，透明度</font></font></li>
+   <li><font><font>{{mediawiki.external('0..1')}} 仅与一个帧(frame)对应, 从属于帧(frame)</font></font></li>
+  </ul>
+ </li>
+ <li><font><font>小工具</font></font>
+  <ul>
+   <li><font><font>本地窗口</font></font></li>
+   <li><font><font>{{mediawiki.external('0..1')}} 仅与一个视图(view)对应，从属于视图(view)</font></font></li>
+  </ul>
+ </li>
+</ul>
+
+<p><img src="/files/455/Gecko_Overview_15.png" style="height: 397px; width: 680px;"></p>
+
+<h2 id="Key_Data_Structures_2" name="Key_Data_Structures_2"><font><font>关键数据结构</font></font></h2>
+
+<ul>
+ <li><em><font><font> document</font></font></em><font><font>对象中包含内容模型，以及一个或多个</font></font><em><font><font>presentations</font></font></em>
+
+  <ul>
+   <li><font><font>通过DOM API 以编程方式暴露在外</font></font></li>
+  </ul>
+ </li>
+ <li><em><font><font>presentation</font></font></em><font><font>包含框架层级关系</font></font>
+  <ul>
+   <li><font><font>帧包含样式上下文，视图，控件</font></font></li>
+   <li><font><font>演示包含的媒体类型，尺寸等</font></font></li>
+   <li><font><font>可能不会直接操控</font></font></li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Detailed_Walk-Through" name="Detailed_Walk-Through"><font><font>详细执行步骤</font></font></h2>
+
+<ul>
+ <li><font><font>设置</font></font></li>
+ <li><font><font>内容模型的构建</font></font></li>
+ <li><font><font>框架Frame 的构建</font></font></li>
+ <li><font><font>样式Style 的決議</font></font></li>
+ <li><font><font>回流</font></font></li>
+ <li><font><font>繪畫</font></font></li>
+</ul>
+
+<h2 id="Setting_Up" name="Setting_Up"><font><font>设置</font></font></h2>
+
+<ul>
+ <li><font><font>假設此處您已經熟悉嵌入和network API (doc shell, stream) 的基本知識。</font></font></li>
+ <li><font><font>Content DLL自動註冊一个文档裝載工厂</font></font><em><font><font>(DLF)</font></font></em>
+  <ul>
+   <li><code><font><font>@ mozilla.org /内容查看器工厂/视图; 1类型= text / html的</font></font></code></li>
+   <li><font><font>所有MIME types 都与同一个類nsContentDLF 相对应</font></font></li>
+  </ul>
+ </li>
+ <li><code><font><font>nsDocShell</font></font></code>
+  <ul>
+   <li><font><font>通过  </font></font><code><font><font>nsDSURIContentListener</font></font></code><font><font>接收获取的内容（原始数据）</font></font></li>
+   <li><font><font>调用</font></font><code><font><font>nsIDLF::CreateInstance</font></font></code><font><font>方法，傳遞MIME type给DLF</font></font></li>
+  </ul>
+ </li>
+ <li><font><font>nsContentDLF</font></font>
+  <ul>
+   <li><font><font>创建一个</font></font><code><font><font>nsHTMLDocument</font></font></code><font><font>对象，调用</font></font><code><font><font>StartDocumentLoad</font></font></code>
+    <ul>
+     <li><font><font>创建一个解析器parser，将</font></font><code><font><font>nsIStreamListener</font></font></code><font><font>对象返回给docshell</font></font></li>
+     <li><font><font>创建一个content sink (它会将解析器parser 与文档doucment 相連接）</font></font></li>
+    </ul>
+   </li>
+   <li><font><font>创建一个</font></font><code><font><font>DocumentViewerImpl</font></font></code><font><font>对象，将</font></font><code><font><font>nsIContentViewer</font></font></code><font><font>对象返回给docshell</font></font></li>
+  </ul>
+ </li>
+ <li><code><font><font>DocumentViewerImpl</font></font></code><font><font>创建pres context和pres shell</font></font></li>
+</ul>
+
+<p><img src="/files/456/Gecko_Overview_19.png" style="height: 350px; width: 663px;"></p>
+
+<h2 id="Content_Model_Construction" name="Content_Model_Construction"><font><font>内容模型的构建</font></font></h2>
+
+<ul>
+ <li><font><font>從網絡上通过</font></font><code><font><font>nsIStreamListener::OnDataAvailable</font></font></code><font><font>获取内容</font></font></li>
+ <li><font><font>解析器对内容進行標記&amp;處理；使用  </font></font><em><font><font>parser node</font></font></em><font><font>对象在</font></font><code><font><font>nsIContentSink</font></font></code><font><font>上调用方法</font></font>
+  <ul>
+   <li><font><font>一些緩衝和修正发生在这里</font></font></li>
+   <li><font><code><font>OpenContainer，CloseContainer，AddLeaf</font></code></font></li>
+  </ul>
+ </li>
+ <li><font><font>内容水槽创建並使用附加内容節點</font></font><code><font><font>nsIContent</font></font></code><font><font>接口</font></font>
+  <ul>
+   <li><font><font>内容水槽保持棧的“活”元素</font></font></li>
+   <li><font><font>更多緩衝和修正发生在这里</font></font></li>
+   <li><font><code><font>InsertChildAt，AppendChildTo，RemoveChildAt</font></code></font></li>
+  </ul>
+ </li>
+</ul>
+
+<p><img src="/files/457/Gecko_Overview_21.png" style="height: 179px; width: 662px;"></p>
+
+<h2 id="Frame_Construction" name="Frame_Construction"><font><font>框架Frame 的构建</font></font></h2>
+
+<ul>
+ <li><font><font>内容接收器使用</font></font><code><font><font>nsIDocument</font></font></code><font><font>接口，在内容模型通知ΔS的</font></font>
+
+  <ul>
+   <li><font><code><font>ContentAppended，ContentInserted，ContentRemoved</font></code></font></li>
+  </ul>
+ </li>
+ <li><code><font><font>PresShell</font></font></code><font><font>被註冊作为文件觀察者</font></font>
+  <ul>
+   <li><font><font>接收</font></font><code><font><font>ContentAppended</font></font></code><font><font>等通知</font></font></li>
+   <li><font><font>它傳遞给样式集的对象，誰又将傳遞给帧构造</font></font></li>
+  </ul>
+ </li>
+ <li><font><font>框架构造函數创建帧</font></font>
+  <ul>
+   <li><code><font><font>ConstructFrameInternal</font></font></code><font><font>遞歸散步内容樹，解決作風和创建帧</font></font></li>
+   <li><font><font>或者通过標籤创建</font></font><code><font><font>（&lt; </font><font>選擇</font></font></code><font><font>&gt;）</font><font>或顯示类型</font><font>（&lt;P&gt;）</font></font></li>
+  </ul>
+ </li>
+ <li><font><font>帧管理者保持映射從内容到框架</font></font></li>
+</ul>
+
+<p><img src="/files/458/Gecko_Overview_23.png" style="height: 359px; width: 697px;"></p>
+
+<h2 id="Style_Resolution" name="Style_Resolution"><font><font>Style 選定</font></font></h2>
+
+<ul>
+ <li><font><font>计算依據適用於框架的内容節點样式規則文體信息</font></font></li>
+ <li><font><font>分成不同的结构样式数据</font></font>
+  <ul>
+   <li><font><font>顯示，能見度，字體，顏色，背景，...</font></font></li>
+   <li><font><font>繼承与復位</font></font></li>
+  </ul>
+ </li>
+ <li><font><font>样式上下文对象是一个占位符部分计算文體数据</font></font>
+  <ul>
+   <li><font><font>样式数据懶洋洋地计算，因为它要求</font></font></li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Reflow" name="Reflow"><font><font>回流</font></font></h2>
+
+<ul>
+ <li><font><font>遞歸计算幾何</font><em><font>（x，Ÿ，W¯¯，^</font></em><font> </font><em><font>h）为框架，视图和小部件</font></em></font>
+
+  <ul>
+   <li><font><font>鑑於“根帧”计算（W＆H約束</font><em><font>x，ÿ，W¯¯，^</font></em><font> </font><em><font>h）为所有兒童</font></em></font></li>
+   <li><font><font>通过約束傳播“向下</font></font><code><font><font>”nsHTMLReflowState</font></font></code></li>
+   <li><font><font>所需的大小返回“向上”通过</font></font><code><font><font>nsHTMLReflowMetrics</font></font></code></li>
+  </ul>
+ </li>
+ <li><font><font>基本模式</font></font>
+  <ul>
+   <li><font><font>父框架初始化子回流狀態（可</font><em><font>W¯¯，^ </font></em><font>h）; </font><font>地方子帧</font><font>（x，ÿ）; </font><font>调用孩子的</font><code><font>回流</font></code><font>方法</font></font></li>
+   <li><font><font>子帧计算所需的</font><em><font>（W¯¯，^</font></em><font> </font><em><font>h），通过回流焊指標回報</font></em></font></li>
+   <li><font><font>家長外形尺寸为子框架和观点的基礎上孩子的指標</font></font></li>
+  </ul>
+ </li>
+ <li><font><font>注：很多</font></font><em><font><font>並不</font></font></em><font><font>這樣工作！</font><font>（表，塊，XUL盒）</font></font></li>
+</ul>
+
+<h2 id="Reflow_2" name="Reflow_2"><font><font>回流</font></font></h2>
+
+<ul>
+ <li><font><font>“環球”回流</font></font>
+
+  <ul>
+   <li><em><font><font>最初，調整大小，风格變化</font></font></em></li>
+   <li><font><font>通过立即處理</font></font><code><font><font>PresShell</font></font></code><font><font>方法</font></font></li>
+  </ul>
+ </li>
+ <li><font><font>增量回流</font></font>
+  <ul>
+   <li><font><font>針对特定的帧</font></font></li>
+   <li><em><font><font>臟</font></font></em><font><font>，</font></font><em><font><font>内容改變</font></font></em><font><font>，</font></font><em><font><font>风格改變了</font></font></em><font><font>，</font></font><em><font><font>用戶自定義</font></font></em></li>
+   <li><code><font><font>nsHTMLReflowCommand</font></font></code><font><font>对象封裝信息</font></font></li>
+   <li><font><font>排隊和異步處理</font></font><code><font><font>，nsIPressShell </font><font>:: </font></font></code><code><font><font>AppendReflowCommand，ProcessReflowCommands</font></font></code></li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Incremental_Reflow" name="Incremental_Reflow"><font><font>增量回流</font></font></h2>
+
+<p><img src="/files/459/Gecko_Overview_28.png" style="height: 331px; width: 319px;"></p>
+
+<ul>
+ <li><font><font>遞歸下降到目標</font></font><em><font><font>恢復回流狀態</font></font></em>
+
+  <ul>
+   <li><font><font>兒童rs.reason设置为</font></font><em><font><font>增量</font></font></em></li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Incremental_Reflow_2" name="Incremental_Reflow_2"><font><font>增量回流</font></font></h2>
+
+<p><img src="/files/460/Gecko_Overview_29.png" style="height: 331px; width: 319px;"></p>
+
+<ul>
+ <li><font><font>流程回流“正常”的目標框架</font></font>
+
+  <ul>
+   <li><font><font>兒童rs.reason一套基於RC的</font></font><em><font><font>类型</font></font></em></li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Incremental_Reflow_3" name="Incremental_Reflow_3"><font><font>增量回流</font></font></h2>
+
+<p><img src="/files/461/Gecko_Overview_30.png" style="height: 332px; width: 319px;"></p>
+
+<ul>
+ <li><em><font><font>傳播損害</font></font></em><font><font>到“在流動”帧之后</font></font></li>
+</ul>
+
+<h2 id="Incremental_Reflow_4" name="Incremental_Reflow_4"><font><font>增量回流</font></font></h2>
+
+<p><img src="/files/462/Gecko_Overview_31.png" style="height: 331px; width: 319px;"></p>
+
+<ul>
+ <li><font><font>多次回流焊命令批處理</font></font>
+
+  <ul>
+   <li><code><font><font>nsReflowPath</font></font></code><font><font>維持目標帧的一棵樹</font></font></li>
+   <li><font><font>攤銷狀態的恢復和損傷擴展成本</font></font></li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Painting" name="Painting"><font><font>繪畫</font></font></h2>
+
+<ul>
+ <li><font><font>當回流繼續通过帧層次结构，區域</font></font><em><font><font>無效</font></font></em><font><font>通过</font></font><code><font><font>nsIViewManager ::更新视图</font></font></code></li>
+ <li><font><font>除非</font></font><em><font><font>直接</font></font></em><font><font>的，無效的區域合併，並通过操作系統的異步處理</font></font><em><font><font>揭露</font></font></em><font><font>事件</font></font></li>
+ <li><font><font>本機暴露事件分派到小部件; </font><font>小部件委託给视图管理器</font></font></li>
+ <li><font><font>查看經理描繪的意見后到前，调用</font></font><code><font><font>PresShell</font></font></code><font><font>的</font></font><code><font><font>畫圖</font></font></code><font><font>方法</font></font></li>
+ <li><code><font><font>PresShell ::油漆</font></font></code><font><font>遍歷從视图帧; </font><font>将调用</font></font><code><font><font>nsIFrame ::油漆</font></font></code><font><font>每個</font></font><em><font><font>層</font></font></em></li>
+</ul>
+
+<h2 id="Incrementalism" name="Incrementalism"><font><font>漸進</font></font></h2>
+
+<ul>
+ <li><font><font>單線程</font></font>
+
+  <ul>
+   <li><font><font>簡單（無鎖）</font></font></li>
+   <li><font><font>不能離開事件隊列無人值守</font></font></li>
+  </ul>
+ </li>
+ <li><font><font>内容建設開卷“隨意”</font></font>
+  <ul>
+   <li><font><font>解析器和内容接收器做一些緩衝</font></font></li>
+   <li><font><font>内容散熱器具有“通知限制”</font></font></li>
+   <li><font><font>效率与響應速度的權衡</font></font></li>
+  </ul>
+ </li>
+ <li><font><font>框架结构運行完成</font></font></li>
+ <li><font><font>CSS解析運行完成</font></font></li>
+ <li><font><font>回流焊運行完成（主要）</font></font></li>
+ <li><font><font>繪畫運行完成</font></font></li>
+</ul>
+
+<p><img src="/files/463/Gecko_Overview_34.png" style="height: 380px; width: 694px;"></p>
+
+<h2 id="Future_.28.3F.29_Tech_Talks" name="Future_.28.3F.29_Tech_Talks"><font><font>未来（？）技术讲座</font></font></h2>
+
+<ul>
+ <li><font><font>内容模型和DOM - </font><em><font>jst，jkeiser</font></em></font></li>
+ <li><font><font>解析器和内容接收器（ESP無效的内容） - </font></font><em><font><font>harishd</font></font></em></li>
+ <li><font><font>事件- </font></font><em><font><font>薩里</font></font></em><font><font>，</font></font><em><font><font>條既納</font></font></em></li>
+ <li><font><font>塊和行回流焊- </font><em><font>沃特森，dbaron</font></em></font></li>
+ <li><font><font>表回流焊- </font></font><em><font><font>karnaze</font></font></em></li>
+ <li><font><font>窗體控件- </font><em><font>棒，礪石</font></em></font></li>
+ <li><font><font>风格解析和規則樹- </font></font><em><font><font>dbaron</font></font></em></li>
+ <li><font><font>视图，窗口小部件，和繪畫- </font></font><em><font><font>大鵬</font></font></em><font><font> </font></font><em><font><font>，kmcclusk</font></font></em></li>
+ <li><font><font>編輯器- </font><em><font>健，Jfrancis</font></em></font></li>
+ <li><font><font>XUL和箱的佈局- </font></font><em><font><font>休伊特</font></font></em><font><font>，</font></font><em><font><font>本</font></font></em></li>
+ <li><font><font>XBL - </font></font><em><font><font>休伊特</font></font></em><font><font>，</font></font><em><font><font>本</font></font></em></li>
+</ul>
+
+<h2 id="Conclusion" name="Conclusion"><font><font>最后</font></font></h2>
+
+<ul>
+ <li><font><font>数据流</font></font></li>
+ <li><font><font>关键数据结构</font></font></li>
+ <li><font><font>详细演练</font></font></li>
+ <li><font><font>渐进</font></font></li>
+ <li><font><font>Q＆A？</font></font></li>
+</ul>
+
+<div class="originaldocinfo">
+<h2 id="Original_Document_Information" name="Original_Document_Information"><font><font>原始文档信息</font></font></h2>
+
+<ul>
+ <li><a class="link-mailto" href="mailto:waterson@netscape.com"><font><font>作者：克里斯·沃特森</font></font></a></li>
+ <li><font><font>最后更新日期：2002年6月10日，</font></font></li>
+ <li><font><font>版权信息：部分内容由mozilla贡献者制作：1998-2007；</font><font>内容受《知识共享许可协议》保护。|</font><a href="http://www.mozilla.org/foundation/licensing/website-content.html"><font>详细信息</font></a></font></li>
+</ul>
+</div>

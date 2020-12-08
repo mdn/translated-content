@@ -1,0 +1,95 @@
+---
+title: 登録前チェックリスト
+slug: Archive/Mozilla/Marketplace/Publishing/Submission_checklist
+tags:
+  - Apps
+  - Beginner
+  - Firefox OS
+  - Guide
+  - Marketplace
+translation_of: Archive/Mozilla/Marketplace/Publishing/Submission_checklist
+---
+<div class="summary">
+<p><span class="seoSummary">Firefox Marketplace へアプリの登録を始める前に、処理を完了するための全てのリソースを持っているか確認しておくことは有益です。このページには、必要な項目のリストと、関連情報へのリンクがあります。</span></p>
+</div>
+
+<h2 id="登録チェックリスト">登録チェックリスト</h2>
+
+<p>Firefox Marketplace へアプリ登録を完了するには、下記が必要です:</p>
+
+<h3 id="パッケージ型アプリ用"><a href="/ja/Marketplace/Options/Packaged_apps">パッケージ型アプリ</a>用</h3>
+
+<ul>
+ <li><a href="/ja/Apps/Build/Manifest">マニフェスト</a> をルートに置き、1つのzipファイル内にパッケージされたアプリ</li>
+ <li><a href="/ja/Apps/Build/Manifest">マニフェスト</a>で指定された <code><a href="https://developer.mozilla.org/ja/docs/Web/Apps/Manifest#launch_path">launch_path</a></code></li>
+</ul>
+
+<h3 id="ホスト型アプリ用"><a href="/ja/Marketplace/Options/Hosted_apps">ホスト型アプリ</a>用</h3>
+
+<ul>
+ <li><span style="line-height: 1.5em;">アプリ用のWeb ホスティング。</span>より詳しくは、<span style="line-height: 1.5em;"><a href="/ja/Marketplace/Options/Hosted_apps#Options_for_hosting_your_app">アプリのホスト用のオプション</a></span>を見よ。</li>
+ <li>アプリ用のマニフェストファイルのURL。より詳しくは、<a href="/ja/docs/Web/Apps/Manifest">アプリのマニフェスト</a>を見よ。</li>
+</ul>
+
+<div class="note">
+<p>Firefox Marketplace に登録する前に、アプリのマニフェストを<a href="https://marketplace.mozilla.org/developers/validator">Test App Validation</a> ツールを使って検証できます。</p>
+</div>
+
+<h3 id="全アプリ用_必須">全アプリ用 (必須)</h3>
+
+<p>ホスト型アプリとパッケージ型アプリの両方に必要なものは:</p>
+
+<ul>
+ <li>アプリのマニフェストファイル内の、アプリ<a href="/ja/Apps/Developing/Manifest#name">名称</a>: マニフェストには最大128文字が入り、これがアプリをアップロードするプロセスの <a href="/ja/Marketplace/Submission/Submitting_an_app#Step_3.3A_Details">Step 3</a> にて、Marketplace の名称フィールドに事前入力されます。</li>
+ <li>アプリのマニフェストファイル内の、アプリ<a href="/en-US/Apps/Developing/Manifest#description">説明</a>: マニフェストには最大1024文字が入り、これがアプリをアップロードするプロセスの<a href="/en-US/Marketplace/Submission/Submitting_an_app#Step_3.3A_Details">Step 3</a> にて、Marketplace の説明フィールドに事前入力され、そこで更に編集できます。(Marketplace 版では文字数についての制限はありません)</li>
+ <li>marketplaceで表示するための 128 x 128px のアイコン; これは唯一の強制的なアイコンサイズです。アプリにアイコンを同梱するための情報は、<a href="/ja/Apps/Developing/Manifest#icons">manifest icons</a> を見て下さい。</li>
+ <li>アプリのスクリーンショット、最小で 320 x 480px のサイズ(より詳細なガイドラインは <a href="/ja/Apps/Publishing/Marketplace_screenshot_criteria">Marketplace スクリーンショット条件</a> を見て下さい。なおスクリーンショットは、追加・変更する必要がある場合、<a href="/ja/Marketplace/Submission/Submitting_an_app#Step_4.3A_Next_Steps">ステップ 4</a> にて変更できます)。</li>
+ <li>アプリのプライバシー条件、あるいはアプリそれを記述したページのURL。より詳細な情報は <a href="/ja/Marketplace/Publishing/Privacy_policies">プライバシーポリシーガイドライン</a> を見て下さい(これは <a href="/ja/Marketplace/Submission/Submitting_an_app#Step_3.3A_Details">ステップ 3</a> のアプリのアップロードで入力されます)。</li>
+ <li>アプリのサポート用emailアドレス (<a href="/ja/Marketplace/Submission/Submitting_an_app#Step_3.3A_Details">ステップ 3</a> で入力されます)。</li>
+</ul>
+
+<h3 id="有料アプリ、またはアプリ内課金を使うアプリ">有料アプリ、またはアプリ内課金を使うアプリ</h3>
+
+<ul>
+ <li>未作成の場合、課金事業者、口座番号を含む銀行口座の詳細、SWIFT コード、そして住所の詳細と会社の詳細、例えばVAT 登録や、会社の登録番号と、ビジネス開始日付。</li>
+ <li>アプリがアプリ内課金を行う場合、確実にマニフェストファイル内にオリジンを記入していること。</li>
+</ul>
+
+<h3 id="全アプリ用_オプション">全アプリ用 (オプション)</h3>
+
+<p>ホスト型アプリとパッケージ型アプリいずれも、次のものを持つことが推奨されます:</p>
+
+<ul>
+ <li>アプリのメインスクリーンを表示する、その他のスクリーンショット。登録ごとに、最大6つまでのスクリーンショットを置けます。理想的には、あなたのアプリが固有のレイアウトを持つフォームファクタごとに持つべきです。例えば:
+  <ul>
+   <li>電話: 推奨サイズ 320 x 480px, またはその倍数</li>
+   <li>タブレット: 推奨サイズ 1024 x 768px や 1280 x 800px</li>
+   <li>デスクトップ: 推奨サイズ 1280 x 800px や 1440 x 900px</li>
+  </ul>
+ </li>
+ <li>その他のプラットフォームやコンテキストに最適化するために、その他のサイズのアイコンと、マニフェストファイルでの指定 :
+  <ul>
+   <li>端末のディスプレイ上の 60 x 60px アイコン</li>
+   <li>様々な他のプラットフォーム、例えばWindows 7 や Android のディスプレイに最適化するための、32 x 32px や 90 x 90px や 120 x 120px や 256 x 256px のアイコン</li>
+  </ul>
+ </li>
+ <li>アプリのホームページや、アプリのサポートサイトの URL。これは設定次第(<a href="/ja/Marketplace/Submission/Submitting_an_app#Step_3.3A_Details">Step 3</a> のアプリをアップロードする、に入力されます)では、同一だったり、異なっていたりすることがあります。</li>
+ <li><a href="/ja/Apps/Developing/Manifest">アプリマニフェスト</a>内のその他のオプション項目。<a href="/ja/Apps/Developing/Manifest#name">名前</a>、<a href="/ja/Apps/Developing/Manifest#description">説明</a>、<a href="/ja/Apps/Developing/Manifest#icons">アイコン</a> の項目だけが必須項目であり、その他多数のオプションがあります、例えば:
+  <ul>
+   <li>アプリが複数言語対応している場合、<a href="/ja/Apps/Developing/Manifest#locales">ロケール</a> 情報を入れたくなるでしょう。</li>
+   <li>ロケールを入れた場合、<a href="/ja/Apps/Developing/Manifest#default_locale">default_locale</a> 項目は必須です。</li>
+   <li>アプリ内で、特定の限定された端末API や Web アクティビティを使いたい場合、マニフェスト内でそれぞれの <a href="/ja/Apps/Developing/App_permissions">アプリパーミッション</a> や <a href="/ja/docs/WebAPI/Web_Activities">アクティビティ</a> を入れておきます。</li>
+  </ul>
+ </li>
+</ul>
+
+<h3 id="その他">その他</h3>
+
+<p>... こちらも必要でしょう:</p>
+
+<ul>
+ <li>あなたのアプリが承認後すぐに Marketplace に送られるかを決定します。デフォルトではアプリはすぐに送られます。これを望まない場合は、アプリ登録時に<strong>Publish my app in the Firefox Marketplace as soon as it's reviewed</strong>(レビュー完了後すぐに<strong>Firefox Marketplace</strong>にアプリを発行する)のチェックを外します(<a href="/ja/Marketplace/Submission/Submitting_an_app#Step_2.3A_Submit">Step 2</a>のアプリのアップロードで選択されます)。 </li>
+ <li><a href="/ja/docs/Web/Apps/Publishing/Marketplace_review_criteria">Marketplace レビュー条件</a> (<a href="/ja/Marketplace/Submission/Submitting_an_app#Step_1.3A_Agreement">Step 1</a>)を読んで、理解しておきます。</li>
+</ul>
+
+<div id="divLookup" style="background-color: transparent; color: #000000; position: absolute; top: 1247px; left: 97px; padding: 0px; border-radius: 2px;"><img></div>

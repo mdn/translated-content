@@ -1,0 +1,78 @@
+---
+title: 系统设置 (Settings)
+slug: Archive/B2G_OS/Platform/Gaia/Gaia_apps/Settings
+translation_of: Archive/B2G_OS/Platform/Gaia/Gaia_apps/Settings
+---
+<div class="summary">
+ <p><span class="seoSummary">Settings app 允许用户来配置设备的系统设置信息，同时会对传入的 activities作出响应，即允许app开发者在app中显示特定的settings 视图（例如， 如果没有有效的数据链接，显示 wifi设置面板）。本文主要讲述了它是如何工作的。</span></p>
+</div>
+<h2 id="mozSettings_API_和_Data_绑定">mozSettings API 和 Data 绑定</h2>
+<p>从技术上讲， Settings app 是一个向用户提供对认证<a href="/en-US/docs/Web/API/Navigator.mozSettings"> window.navigator.mozSettings API</a> 访问的UI界面。</p>
+<p> Settings app 会自动的处理基本的系统设置操作，如绑定数据字段和  mozSettings 值 — 所有基本操作，如勾选一项设置或改变输入值将会使相关的 mozSettings 值也会改变。</p>
+<p><code>window.navigator.mozSettings</code> API 会从Gecko 中获取系统设置的数据。 使用方式如下所示：</p>
+<pre class="brush: js">navigator.mozSettings.createLock().set(values);</pre>
+<p>上面是设置数据信息。</p>
+<div class="note">
+ <p><strong>注意</strong>: 在读或写任何 <code>mozSettings</code>， 我们需要使用 <code>createLock()</code> 方法来锁定settings。</p>
+</div>
+<p>要检索数据，我们可以使用获取或设置一个回调函数的方式启动对数据的操作：</p>
+<pre class="brush: js">var reqTimerGoBack =
+window.navigator.mozSettings.createLock().get('icc.goBackTimeout');
+reqTimerGoBack.onsuccess = function icc_getTimerGoBackSuccess() {
+  goBackTimer.timeout = reqTimerGoBack.result['icc.goBackTimeout'];
+    ...
+};</pre>
+<p>数据会存储在一个名为 <code>instance.result</code> 词典下。</p>
+<p>Firefox OS 2.0 开始, <code>mozSettings</code> 实例可以通过 <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/settings/js/modules/settings_cache.js">js/modules/settings_cache.js</a> 实例被重复使用：</p>
+<pre class="brush: js">var SettingsCache = require('modules/settings_cache');
+
+SettingsCache.getSettings(function(result){
+  var onlineSupportTitle = result['support.onlinesupport.title'];
+    ...
+});</pre>
+<h2 id="导航">导航</h2>
+<p>当用户打开  Settings app， 在概览页面会显示多个面板，这个页面则是一个功能性的独立页面。<code>SettingsService.navigate</code> (<a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/settings/js/modules/settings_service.js">js/module/settings_service.js</a>) 则会控制这些页面间的导航。</p>
+<div class="note">
+ <p><strong>注意</strong>: For legacy panels (which are not yet ported to the new structure), settings.currentPanel is used instead of SettingsService.navigate to navigate<br>
+  between panels.</p>
+</div>
+<p>Since Firefox OS will support tablet devices as well as mobiles, the Settings app has two different types of navigation model implemented:</p>
+<ul>
+ <li>一列(手机端)</li>
+ <li>两列 (平板端)</li>
+</ul>
+<p>While called, <code>SettingsService.navigate</code> determines what navigation model to use via the following code:</p>
+<pre class="brush: js">if (_isTabletAndLandscape()) {
+  PageTransitions.twoColumn(oldPanel, newPanel, callback);
+} else {
+  PageTransitions.oneColumn(oldPanel, newPanel, callback);
+}</pre>
+<h2 id="面板">面板</h2>
+<p>From Firefox OS 2.0 onwards, the basic panel structure is defined in <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/settings/js/modules/panel.js">js/modules/panel.js</a>. It defines six lifecycle stats:</p>
+<ul>
+ <li><code>init</code></li>
+ <li><code>beforeShow</code></li>
+ <li><code>show</code></li>
+ <li><code>hide</code></li>
+ <li><code>beforeHide</code></li>
+ <li><code>uninit</code></li>
+</ul>
+<p>All new settings panels are inherited from <code>SettingsPanel</code>, which extends <code>Panel</code>’s functionalities. The code is contained in <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/settings/js/modules/settings_panel.js">js/modules/settings_panel.js</a>:</p>
+<pre class="brush: js">onInit: function(panel, initOptions) {
+  ...
+
+  PanelUtils.activate(panel);
+},
+
+onBeforeShow: function(panel, beforeShowOptions) {
+  // Preset the panel every time when it is presented.
+  PanelUtils.preset(panel);
+  _addListeners(panel);
+  ...
+},</pre>
+<p><code>PanelUtils.activate</code> — defined in <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/settings/js/modules/panel_utils.js">js/modules/panel_utils.js</a> — is used to parse all links in the panel and adds corresponding handlers in <code>onInit</code> stat, and <code>PanelUtils.preset</code> is used to preset elements with the settings values in the <code>onBeforeShow</code> stat.</p>
+<p>All new settings panels are defined in the <a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/settings/js/panels">js/panels</a> folder.</p>
+<h2 id="AMD_模块和编译时间优化">AMD 模块和编译时间优化</h2>
+<p>From Firefox OS 2.0 onwards, the Settings app uses the <a href="http://en.wikipedia.org/wiki/Asynchronous_module_definition">AMD modules pattern</a> to implement each panel. The AMD modules are loaded via <a href="https://github.com/requirejs/alameda">Alemeda</a> (a lighter version of <a href="http://requirejs.org/">RequireJS</a>) and built/optimized using <code>r.js</code> (the RequireJS optimizer). The Settings app still had dependencies on files (<a href="https://github.com/mozilla-b2g/gaia/tree/master/shared/js">shared/js</a>) which aren’t AMD modules. For those it uses the <code>shim</code> options defined in <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/settings/js/config/require.js">settings/js/config/require.js</a>.</p>
+<h2 id="参考">参考</h2>
+<p> <a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/settings">Settings app has a build-in README</a> ，这个文件可以用来获取 Settings （大部分内容是由  Arthur Chen and Fred Lin 完成的）。</p>

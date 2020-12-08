@@ -1,0 +1,76 @@
+---
+title: 在 Mozilla 项目中使用 Pontoon
+slug: Mozilla/Implementing_Pontoon_in_a_Mozilla_website
+tags:
+  - 本地化
+translation_of: Mozilla/Implementing_Pontoon_in_a_Mozilla_website
+---
+<p><a class="external external-icon" href="https://pontoon.mozilla.org">Pontoon</a> 是一个基于 web 的所见即所得（WYSIWYG）的本地化（l10n）工具。在 Mozilla ，我们都是使用 Pontoon 去本地化众多的 Mozilla 项目和被称为 Gaia 的 Firefox OS app 接口。Pontoon 是一个非常简单、直接的工具，本地化人员只需要很少甚至没有技术能力就可以使用它，这将减少项目本地化版本的发布时间。下面我们来谈谈怎么将 Pontoon 加入到你的 Mozilla 项目里。</p>
+
+<div class="note">
+<p><strong>你想帮忙改进 Pontoon 吗?</strong>了解如何在 <a href="https://github.com/mozilla/pontoon">GitHub</a> 上参与。</p>
+</div>
+
+<div class="note">
+<p><strong>只是开始你项目的 l10n?</strong> 查看 <a href="https://wiki.mozilla.org/L10n:NewProjects">本地化你的项目</a> 上的 wiki。</p>
+</div>
+
+<h2 id="A._本地化你的项目">A. 本地化你的项目</h2>
+
+<p>我们意识到这些已经被认为是 Mozilla 本地化项目的标准<a class="external external-icon" href="https://mozweb.readthedocs.org/en/latest/reference/l10n.html">最佳实践</a> ，但我们觉得还是应该在这里做个小小的提醒。</p>
+
+<ol>
+ <li>确保你的项目支持下列任一种 l10n 框架（<font face="Arial,x-locale-body,sans-serif"><a class="external external-icon" href="https://www.gnu.org/software/gettext/" style="margin: 0px; padding: 0px; border: 0px; text-align: left; color: rgb(61, 126, 154); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; white-space: normal;">gettext</a><font color="#b01600">、</font><a class="external external-icon" href="https://docs.oasis-open.org/xliff/xliff-core/v2.0/xliff-core-v2.0.html" style="margin: 0px; padding: 0px; border: 0px; text-align: left; color: rgb(61, 126, 154); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; white-space: normal;">XLIFF</a><font color="#b01600">、</font><a class="external external-icon" href="https://projectfluent.org/" style="margin: 0px; padding: 0px; border: 0px; text-align: left; color: rgb(61, 126, 154); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; white-space: normal;">L20n</a><font color="#b01600">、</font><a class="external external-icon" href="https://github.com/mozilla-l10n/langchecker/wiki/.lang-files-format" style="margin: 0px; padding: 0px; border: 0px; text-align: left; color: rgb(61, 126, 154); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; white-space: normal;">lang</a><font color="#b01600">、</font><a class="external external-icon" href="https://wikipedia.org/wiki/.properties" style="margin: 0px; padding: 0px; border: 0px; text-align: left; color: rgb(61, 126, 154); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; white-space: normal;">properties</a><span style="background-color: #ffffff; color: #333333; display: inline !important; float: none; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; white-space: normal;">等等</span></font>）.</li>
+ <li>将可本地化的字符串提取到资源文件中。</li>
+ <li>推送源文件到存储库中（<span style="background-color: #ffffff; color: #333333; display: inline !important; float: none; font-family: Arial,x-locale-body,sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; white-space: normal;">SVN、HG、Git</span>）。
+  <ul>
+   <li>各个区域的本地化文件夹必须位于<span style="background-color: #ffffff; color: #000000; display: inline !important; float: none; font-family: Times New Roman; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; white-space: normal;">同一级</span>目录下。区域的本地化需要起名为 <code>templates</code>、<code>en-US</code>、<code>en-us</code> 或者 <code>en</code>。如果存储库中存在同名的多个本地化文件夹，并且文件夹内的文件都是受支持的格式，则只会使用第一个文件夹。这样的话，你可能需要把所有的本地化文件夹都放在一个专用的 <code>locales</code> 目录下。 文件名中请务必不要包含本地化代码。</li>
+   <li>正确的模式：
+    <pre>/locales/{本地化代码}/path/to/file.extension</pre>
+   </li>
+   <li>错误模式：
+    <pre>/locales/{本地化代码}/path/to/file.{本地化代码}.extension</pre>
+   </li>
+  </ul>
+ </li>
+ <li>确保 Pontoon 有存储库的写入权限。
+  <ul>
+   <li>如果用的是 GitHub，在你的项目中添加 <a class="external external-icon" href="https://github.com/mozilla-pontoon">mozilla-pontoon</a> 或者 <a href="https://github.com/orgs/mozilla/teams/pontoon-l10n-robots">pontoon-l10n-robots</a> 作为项目的 collaborator。</li>
+  </ul>
+ </li>
+</ol>
+
+<h2 id="B._optional_Enable_in-page_localization_of_your_web_project">B. (optional) Enable in-page localization of your web project</h2>
+
+<ol>
+ <li>Link a script from your HTML <code>&lt;body&gt;</code> element, so Pontoon can talk to your site, detect content and make it localizable in place. You only need to do this in the environment that will be used for in-page localization, e.g. staging server:
+
+  <ul>
+   <li>
+    <pre id="line1"><span>  </span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">src</span>="<a class="attribute-value">https://pontoon.mozilla.org/pontoon.js</a>"</span><span>&gt;&lt;/<span class="end-tag">script</span>&gt;</span></pre>
+   </li>
+  </ul>
+ </li>
+ <li>If your site uses <a class="external external-icon" href="/zh-CN/docs/Web/HTTP/CSP">CSP</a>,  please make sure that the following is permitted for domain <code>pontoon.mozilla.org</code>:
+  <ol>
+   <li>loading inside iframe</li>
+   <li>loading remote CSS</li>
+   <li>loading remote images</li>
+  </ol>
+ </li>
+ <li>If your site uses the <a class="external external-icon" href="/zh-CN/docs/Web/HTTP/X-Frame-Options">X-Frame-Options</a> header, please make sure loading inside iframe is permitted for domain <code>pontoon.mozilla.org</code>.</li>
+ <li>Make sure your site supports HTTPS. It's free, automated and open. <a href="https://letsencrypt.org/">Let's encrypt</a>!</li>
+</ol>
+
+<h2 id="C._Add_your_project_to_Pontoon">C. Add your project to Pontoon</h2>
+
+<p>Your project is now ready to be set up in Pontoon. Please file a bug in <a class="external external-icon" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Localization%20Infrastructure%20and%20Tools&amp;component=Administration%20%2F%20Setup">Localization Infrastructure and Tools :: Administration / Setup</a> and provide the following information:</p>
+
+<ul>
+ <li>Project name</li>
+ <li>Repository URL</li>
+ <li>List of requested locales</li>
+ <li>Website URL, including all subpage URLs (only if using in-page localization)</li>
+</ul>
+
+<p>For more details, please get in touch with the <a class="external external-icon" href="mailto:pontoon-team@mozilla.com">Project Management Team</a>.</p>

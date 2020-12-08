@@ -1,0 +1,61 @@
+---
+title: Rédaction de contenu
+slug: MDN/User_guide/Rédaction
+tags:
+  - MDN
+  - Projet MDC
+translation_of: Archive/Meta_docs/Writing_content
+---
+<div>{{MDNSidebar}}</div><p>Il y a toujours des choses qui peuvent être ajoutées ou mises à jour sur le MDN. Que ce soit une toute nouvelle documentation pour une nouvelle API brillante ou la révision d'une ancienne API qui a changé subtilement, vous trouverez beaucoup de possibilités pour aider.</p>
+
+<h2 id="Modifier_une_page_existante">Modifier une page existante</h2>
+
+<p>Si vous avez trouvé une page que vous souhaitez réviser, cliquez simplement sur le bouton « Modifier » dans le coin supérieur droit. Cela ouvrira l'éditeur WYSIWYG pour travailler sur le contenu de la page. Consultez le <a href="/en-US/docs/Project:MDN/Contributing/Editor_guide">guide de l'éditeur MDN</a> pour plus de détails sur la façon de travailler avec l'éditeur, ainsi que la façon de travailler avec le système macro que nous utilisons pour aider à automatiser la construction et la mise en forme du contenu.</p>
+
+<p>Il y a de nombreuses raisons qui peuvent vous pousser à modifier une page existante :</p>
+
+<ul>
+ <li>Vous avez repéré une erreur ou une faute de frappe.</li>
+ <li>Vous voulez reformuler quelque chose pour rendre le texte plus compréhensible.</li>
+ <li>La mise en page ou le formatage de la page est en désordre.</li>
+ <li>L'API documentée a changé et la documentation doit être actualisée pour correspondre aux changements.</li>
+ <li>Vous souhaitez ajouter des informations sur une différence de comportement entre plusieurs navigateurs pour une API.</li>
+ <li>Vous voulez ajouter ou améliorer un exemple de code. Voir {{anch ("Add a code sample")}} ci-dessous pour plus de détails.</li>
+ <li>L'article est une ébauche, ou bien il manque des détails importants.</li>
+</ul>
+
+<h2 id="Ajouter_une_nouvelle_page">Ajouter une nouvelle page</h2>
+
+<p>Voici le grand défi ! Ajouter une nouvelle page de MDN permet de construire le Web que vous aimez tant et que vous voulez étreindre. Il existe plusieurs raisons évidentes pour créer une nouvelle page, comme documenter une API qui n'est pas encore documentée ou pour ajouter un nouveau tutoriel ou un guide sur un sujet.</p>
+
+<p>Il y a plusieurs manières d'aller sur la création d'une nouvelle page sur MDN, une fois que vous êtes <a href="/en-US/docs/Project:MDN/Contributing/Getting_started#Logging_into_MDN">connecté</a>:</p>
+
+<dl>
+ <dt>Cliquez sur le lien "page manquante"</dt>
+ <dd>Lorsque vous naviguez sur MDN, vous aurez l'occasion de trouver des liens vers des pages qui n'existent pas encore. Souvent, lorsque nous créons des articles, nous incluons des liens vers des pages qui doivent être créées, même si elles ne sont pas encore réalisées. Cela nous aide à garder une trace des choses qui doivent éventuellement être faites, bien que parfois il faille un certain temps pour revenir à elles. Vous devriez vous sentir libre de le faire! Il suffit de cliquer sur ces liens et vous serez redirigé directement dans l'éditeur de la nouvelle page.</dd>
+ <dt>Créer une sous-page</dt>
+ <dd>
+ <p>Près du coin supérieur droit de chaque article, il y a un menu déroulant <strong>"Avancé"</strong>. Dans ce menu, il y a une option <strong>"Nouvelle sous-page"</strong>. En cliquant sur cette option, elle ouvre l'éditeur de page pour la création d'une nouvelle page dont la page parente dans la hiérarchie du site est la page sur laquelle vous avez choisi <strong>"Nouvelle sous-page"</strong>. Il suffit de définir le titre et de commencer à écrire le contenu de l'article.</p>
+ </dd>
+ <dt>Créer un clone</dt>
+ <dd>Vous pouvez également cloner une page existante en utilisant l'option <strong>"Cloner cette page"</strong> dans le menu déroulant "Cette page". En cliquant sur cette option, elle crée une copie de la page en cours, dont la page parent est identique à la page en cours, et ouvre l'éditeur sur cette page, où vous pouvez définir le titre de la page, ainsi que modifier le contenu de la page. Ceci est généralement un bon moyen d'ajouter une nouvelle page à une zone de référence existante du site, par exemple, parce qu'il vous procure une mise en page de l'échantillon pour le contenu.</dd>
+ <dt>Créer un lien vers une page qui n'existe pas, puis cliquer dessus</dt>
+ <dd>Ceci est un peu une méthode hybride. Etant donné que chaque page doit être liée à partir d'une source, vous pourriez commencer par créer un lien vers le nouvel article en l'ajoutant à une page existante, puis, après avoir sauvé cette page, vous pouvez cliquer sur le lien que vous venez d'insérer pour ouvrir un éditeur pour le nouvel article.</dd>
+</dl>
+
+<div class="note">
+<p><strong>Note :</strong> si vous n'êtes pas connecté, vous obtiendrez une erreur 404 lorsque vous essayez de visiter un article qui n'existe pas, au lieu d'un éditeur pour créer une nouvelle page.</p>
+</div>
+
+<h2 id="Trouver_l'information">Trouver l'information</h2>
+
+<p>Il y a beaucoup d'informations un peu partout, et il peut être difficile de trouver l'aide dont vous avez besoin. Voici quelques conseils pour vous aider à démarrer.</p>
+
+<dl>
+ <dt><a href="https://wiki.mozilla.org/Modules">Liste des propriétaire des Modules</a></dt>
+ <dd>Les projets Mozilla travaillent sur une base "de propriétaire de module"; chaque composant majeur a un propriétaire ou des propriétaires qui sont responsables de ce qui se passe là-bas. Ces propriétaires sont souvent la meilleure source d'informations - ou au moins un excellent moyen de trouver la bonne personne à qui parler.</dd>
+ <dt><a href="http://mxr.mozilla.org/">Mozilla source cross-reference</a></dt>
+ <dd>MXR, le Mozilla cross-reference, vous permet d'accéder à tout le code source pour le projet Mozilla (à l'exception de certaines choses, comme le projet Firefox OS, qui est situé sur GitHub). Le code et ses commentaires sont souvent une excellente source d'informations.</dd>
+ <dt><a href="http://wiki.mozilla.org/">Mozilla wiki</a></dt>
+ <dd>Le wiki de Mozilla - souvent désigné comme "wikimo" - est un référentiel de processus et de conception de notes, projets, plans et devis préliminaires. En dépit d'être souvent un désordre encombré, il est un trésor de renseignements précieux.</dd>
+</dl>

@@ -1,0 +1,85 @@
+---
+title: ZTE OPEN C
+slug: Archive/B2G_OS/Phone_guide/ZTE_OPEN_C
+translation_of: Archive/B2G_OS/Phone_guide/ZTE_OPEN_C
+---
+<div class="summary">
+ <p><span class="seoSummary">ZTE Open C はよりハイエンドなハードウェアを用いた Firefox OS 端末です。300 万画素のカメラや、4 インチの WVGA ディスプレイを採用し、Firefox OS 1.3 がインストールされています。この文書では端末の情報と、アップデート方法、トラブルシュートについて解説します。</span></p>
+</div>
+<div class="note">
+ <p><strong>Note</strong>: The instructions are <strong>not</strong> valid for the ZTE Open device. If you have a ZTE Open device you should go to our <a href="/en-US/Firefox_OS/Developer_phone_guide/ZTE_OPEN">ZTE Open</a> page instead.</p>
+</div>
+<div class="note">
+ <p><strong>Note</strong>: The upgrade tool that you need to unlock the phone (see below) is only available for Windows at this time. Don't purchase this phone if you don't have a Windows system and want to manually install your own builds of Firefox OS.</p>
+</div>
+<p>The ZTE Open C is the first phone with <a href="http://blog.mozilla.org/futurereleases/2014/05/08/firefox-os-update-adds-new-features-including-dual-sim-support-and-enhancements-for-music-lovers-and-gamers">the latest update to Firefox OS</a>, offering many new features including direct music player access from the lock screen or notifications bar and advanced Bluetooth sharing, allowing multiple files to be transferred simultaneously. Users can now navigate the phone quicker with smart folders which automatically arrange apps or app searches into categories, enhanced scrolling performance and faster system app (e.g. calendar, address book, camera) startup times.</p>
+<h2 id="購入方法">購入方法</h2>
+<p>eBay にて 米ドル $99.99 で販売中。</p>
+<ul>
+ <li><a href="http://item.ebay.com/291125433026">ZTE eBay US store</a> (日本のキャリアが使用している周波数帯には対応していません)</li>
+ <li><a href="http://item.ebay.co.uk/171301269724">ZTE eBay UK store</a> (フランスや、近隣のヨーロッパ諸国にお住まいの方はこちらをご利用ください)</li>
+ <li><a href="http://cgi.ebay.de/ws/eBayISAPI.dll?ViewItem&amp;item=131151681046&amp;ssPageName=STRK:MESE:IT">ZTE eBay DE store</a></li>
+ <li><a href="http://www.ebay.com/itm/111326263156">ZTE eBay RU and EU stores</a></li>
+</ul>
+<div class="note">
+ <p><strong>注意</strong>: 販売される ZTE Open C は各ストアで同一ではありません。特に日本国内で使用する場合は対応する 3G (WCDMA) の対応周波数帯の違いが重要で、WCDMA 2100 に対応するものでなければ国内のキャリアネットワークに接続することは出来ません。2014/07 現在 eBay US store のものは対応していませんのでご注意ください。また、この端末は技適など国内の認証は通過していないため、日本国内で使用には制限があります。</p>
+</div>
+<div class="note">
+ <p><strong>注意</strong>: The phones won’t come preinstalled with any network specific apps or services and are unlocked global variants targeted at early adopters.</p>
+</div>
+<h2 id="機能と仕様">機能と仕様</h2>
+<p><a href="/en-US/Firefox_OS/Developer_phone_guide/Phone_specs">端末の機能と仕様のページ</a>を参照してください。</p>
+<h2 id="Firefox_OS_のアップグレード">Firefox OS のアップグレード</h2>
+<p>ZTE のウエブサイトに公開されているイメージの利用してアップグレードするのが最も簡単です。 <a href="http://www.ztedevices.com/support/selectproduct.html?type=software">ZTE's Software support page</a> へ行き、左の列から地域を選択し、中央の列で  <em>Smart Phones</em> を選びます。右の列から購入した地域にあわせて Open C(European Standard) もしくは Open C(American Standard) のどちらかを選びます。最後に <em>Selected</em> ボタンを押すと、ダウンロードページへ遷移します。</p>
+<p>ご自身のビルドをお持ちの場合は、ZIP ファイル中の PDF ファイルにインストールする方法が解説されています。</p>
+<h2 id="マニュアルアップデート">マニュアルアップデート</h2>
+<p>Gecko や Gaia を手動でアップデートされる場合は、端末をアンロックし、root アクセスできるように変更する必要があります。<a href="http://en.comebuy.com/developer-firefox-os-open-c.html">comebuy.com で公開されている </a><a href="http://en.comebuy.com/developer-firefox-os-open-c.html">Open_C_upgrade_Tool</a> を使うと端末はアンロックされ、fastboot が有効になり、ご自身でビルドしたコンポーネントを端末に送ることができます。</p>
+<div class="note">
+ <p><strong>注意</strong>: 現在のところ、このツールは Windows でのみ動作します。</p>
+</div>
+<h3 id="Gecko_と_Gaia_のアップグレード">Gecko と Gaia のアップグレード</h3>
+<p>いったん fastboot が有効にれば、 ビルドした Gecko や Gaia の載った <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Building_and_installing_Firefox_OS">新しく Firefox OS/B2G</a> をインストールできます。</p>
+<ol>
+ <li>Start at the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites">build prerequisite</a> instructions, and treat the Open C like it is a Flame device for the purposes of configuration: this is because the Flame and Open C are both based on the Android Jellybean basesystem.</li>
+ <li>During the configuration step, you need to reference a custom manifest file for the Open C. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1016867">Download the attachment on this bug</a> and save it somewhere easily referenceable on your local drive, as openc.xml.</li>
+ <li>Clean up the B2G directory, removing the unneeded directories:<br>
+  <pre class="brush: bash" id="comment_text_2">rm -rf objdir-gecko/ out/ backup-flame/</pre>
+ </li>
+ <li>Now configure Firefox OS with the following command:
+  <pre class="brush: bash  language-html">./config.sh flame /PATH/TO/openc.xml</pre>
+ </li>
+ <li>You can then build the Gecko component and Flash it to your phone using the following:
+  <pre class="brush: bash  language-html">./build.sh gecko
+./flash.sh gecko</pre>
+ </li>
+ <li>You should now upgrade Gaia as well, so the upgraded version of Gecko works with the version of Gaia on the device:
+  <pre class="brush: bash  language-html">cd gaia
+make reset-gaia</pre>
+ </li>
+</ol>
+<div class="warning">
+ <p><strong>Warning</strong>: Trying to flash a full Flame image onto the device would brick the phone, so is not recommended.</p>
+</div>
+<h3 id="Gaia_のアップグレード">Gaia のアップグレード</h3>
+<p>To update Gaia only, leaving Gecko alone, you need to fork and clone the Gaia repo from Github, then Flash it onto your device.</p>
+<ol dir="ltr">
+ <li>Make sure you have <a href="https://developer.mozilla.org/en-US/Firefox_OS/Debugging/Installing_ADB">ADB</a> installed.</li>
+ <li>Go to <a href="https://github.com/mozilla-b2g/gaia">https://github.com/mozilla-b2g/gaia</a>, then click the "fork" button in top right corner to fork to your own repository.</li>
+ <li>Clone the code from your forked repository on your dekstop/laptop by executing the following on your Terminal:
+  <pre class="brush: bash  language-html">git clone https://github.com/your-github-username/gaia.git</pre>
+ </li>
+ <li><code>cd</code> into the resulting directory.</li>
+ <li>On your phone, <a href="https://developer.mozilla.org/en-US/Firefox_OS/Debugging/Developer_settings#Debugging_via_USB">enable remote debugging</a> (choose the ADB and Devtools option).</li>
+ <li>Now connect your phone to your computer via USB; check that it is recognised by entering <code>adb devices</code> into your terminal.</li>
+ <li>Run the following command to reboot your phone and update it with the new Gaia source code:
+  <pre class="brush: bash  language-html">make reset-gaia</pre>
+ </li>
+</ol>
+<h2 id="起動しなくなった場合">起動しなくなった場合</h2>
+<p>スマートフォンが起動しなくなった場合、ZTE の Web サイトで公開されているオフィシャルビルドを手順に従って SD Card 経由で端末の書き換えを行うことで復旧できます:</p>
+<ul>
+ <li><a href="http://www.ztedevices.com/support/smart_phone/65229ec9-3165-424e-a7dd-3759356325fd.html?type=software">ZTE Open C (Ebay) - Spain</a></li>
+ <li><a href="http://www.ztedevices.com/support/smart_phone/92f36c98-9cc0-42d6-8f23-8834b4a6849c.html?type=software">ZTE Open C (Ebay) - UK American Standard</a></li>
+ <li><a href="http://www.ztedevices.com/support/smart_phone/46d40c52-bed4-4cdc-9df9-01719cdf0a70.html?type=software">ZTE Open C (Ebay) - UK European Standard</a></li>
+</ul>
+<p>Also <a href="https://support.mozilla.org/en-US/questions/1003136">reference this support entry</a> for more information.</p>

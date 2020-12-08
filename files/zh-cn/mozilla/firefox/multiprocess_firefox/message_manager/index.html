@@ -1,0 +1,68 @@
+---
+title: 消息管理器
+slug: Mozilla/Firefox/Multiprocess_Firefox/Message_Manager
+translation_of: Mozilla/Firefox/Multiprocess_Firefox/Message_Manager
+---
+<div>{{FirefoxSidebar}}</div><p>消息管理器为 chrome 特权的 JavaScript 代码提供了跨进程边界的通信方式。它非常有用，可以允许 chrome 代码（包括浏览器自身的代码和外部代码）访问在单独的进程中运行的网页内容。</p>
+
+<p>这些指南介绍了如何在多进程 Firefox 中使用消息管理器。</p>
+
+<p>请注意，多进程 Firefox 的环境并非是必须的：这里描述的一切对单进程 Firefox 也同样有效，所以相同的代码在两个环境下都可以正常工作。</p>
+
+<hr>
+<h2 id="指南">指南</h2>
+
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="/Firefox/Multiprocess_Firefox/Message_Manager/Message_manager_overview">消息管理器概述</a></dt>
+ <dd> </dd>
+ <dt><a href="/Firefox/Multiprocess_Firefox/Message_Manager/Frame_script_loading_and_lifetime">框架脚本的加载与寿命</a></dt>
+ <dd> </dd>
+ <dt><a href="/Firefox/Multiprocess_Firefox/Message_Manager/Communicating_with_frame_scripts">与框架脚本通信</a></dt>
+ <dd> </dd>
+ <dt><a href="/Firefox/Multiprocess_Firefox/Message_Manager/Performance">性能的最佳实践</a></dt>
+ <dd> </dd>
+</dl>
+</div>
+
+<div class="column-half">
+<dl>
+ <dt><a href="/Firefox/Multiprocess_Firefox/Message_Manager/Frame_script_environment">框架脚本环境</a></dt>
+ <dd> </dd>
+ <dt><a href="/Firefox/Multiprocess_Firefox/Message_Manager/_Limitations_of_frame_scripts">框架脚本的限制</a></dt>
+ <dd> </dd>
+ <dt><a href="/Firefox/Multiprocess_Firefox/Message_Manager/Process_scripts">进程脚本</a></dt>
+ <dd> </dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h2 id="API_参考资料">API 参考资料</h2>
+
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFrameScriptLoader">nsIFrameScriptLoader</a></dt>
+ <dd> </dd>
+ <dt><a href="/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageListenerManager">nsIMessageListenerManager</a></dt>
+ <dd> </dd>
+ <dt><a href="/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageBroadcaster">nsIMessageBroadcaster</a></dt>
+ <dd> </dd>
+ <dt><a href="/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageSender">nsIMessageSender</a></dt>
+ <dd> </dd>
+</dl>
+</div>
+
+<div class="column-half">
+<dl>
+ <dt><a href="/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISyncMessageSender">nsISyncMessageSender</a></dt>
+ <dd> </dd>
+ <dt><a href="/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentFrameMessageManager">nsIContentFrameMessageManager</a></dt>
+ <dd> </dd>
+ <dt><a href="/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIProcessScriptLoader">nsIProcessScriptLoader</a></dt>
+ <dd> </dd>
+</dl>
+</div>
+</div>

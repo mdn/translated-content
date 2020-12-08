@@ -1,0 +1,119 @@
+---
+title: Soumettre un correctif pour Gaia
+slug: Archive/B2G_OS/Developing_Gaia/Soumettre_correctif_pour_Gaia
+tags:
+  - Bugzilla
+  - Firefox OS
+  - Gaia
+  - GitHub
+  - contribution
+  - patch
+  - submitting
+translation_of: Archive/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch
+---
+<div class="summary">
+<p><span class="seoSummary">À cette étape, vous devriez avoir apporté une modification au code de Gaia et avoir testé que cette modification n'impacte pas Gaia. La prochaine étape consiste à soumettre votre correctif sur le dépôt central. Cet article explique ces étapes.</span></p>
+</div>
+
+<p>Soumettre des correctifs pour Gaia peut paraitre un peu déroutant, jusqu'à ce que vous en ayez pris l'habitude. Cela implique d'utiliser Bugzilla <strong>et</strong> Github, ainsi que l'utilisation de drapeaux spéciaux dans Bugzilla pour que tout se déroule correctement. Vous pouvez aussi voir à quoi ressemble le processus complet, dans la section <a href="#Envoi_manuel_d'un_correctif">Envoi_manuel_d'un_correctif</a>; cependant, nous vous conseillons d'utiliser l'outil Autolander au quotidien, sauf si vous avez une bonne raison de ne pas le faire, voir la section suivante.</p>
+
+<h2 id="Envoi_de_correctif_de_manière_aisée_avec_Autolander">Envoi de correctif de manière aisée avec Autolander</h2>
+
+<p><a href="https://github.com/mozilla/autolander">Autolander</a> est un outil qui prend en charge automatiquement, beaucoup d'étapes nécessaires à l'envoi d'un correctif pour Gaia (et d'autres projets qui l'utilisent), réduisant le temps, et les erreurs possibles, tout au long de la procédure. Autolander réalise l'automatisation des processus entre Bugzilla et Github en attachant les pull requests (de Github) aux bugs (de Bugzilla), et en les intégrants une fois que l'attachement à reçu un drapeau r+, et que le mot-clé <code>autoland</code> est ajouté au bug. Pour utiliser Autolander :</p>
+
+<ol>
+ <li>Tout d'abord, si le bug correspondant n'existe pas, créez-en un pour le produit <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox%20OS">Firefox OS</a>, et donnez-lui un titre explicite détaillant le but de votre correctif.</li>
+ <li>Vous pouvez alors <a href="https://help.github.com/articles/creating-a-pull-request">créer une <em>pull request</em></a> pour votre correctif. Si vous avez suivi ce guide depuis le début, vos changements devraient être présents dans une branche spécifique, unique, de votre fork en local. Pour ajouter vos modifications, faites <code>git add .</code> puis <code>git commit -m 'mon message de commit'</code>.</li>
+ <li><code>'mon message de commit'</code> devra être modifié afin de contenir le numéro de bug de Bugzilla et le titre du bug afin de donner plus d'informations sur ce que fait le correctif et qui doit l'examiner. Par exemple :
+  <pre class="brush: bash">Bug 9999999 - Corrige ce bug Toto R=jeanbiche</pre>
+ </li>
+ <li>Poussez votre code sur le fork de Gaia présent sur Github puis créez une <em>pull request</em> pour mettre à disposition le code de ce correctif.</li>
+ <li>Une fois que le <em>pull request</em> est ouvert, celui-ci est automatiquement attaché, au bug trouvé dans le titre du <em>PR</em>.</li>
+ <li>Prochainement, une fois que cet attachement aura reçu le drapeau r+ par un validateur, vous pourez ajouter le mot-clé <code>autoland</code>, dans le champ mots-clés "keywords" de bugzilla pour intégrer le code dans la branche master de Gaia. Autolander intègrera donc le code au master, mettra votre commit dans le bug, et marquera le bug comme résolu et corrigé "resolved fixed". Cependant, pour l'instant, cette fonctionnalité est toujours en cours de développement, donc pour le moment, vous devez ajouter le mot-clé "keyword" <code>checkin-needed</code>, et attendre qu'une personne intègre le code pour vous.</li>
+</ol>
+
+<div class="note">
+<p><strong>A noter</strong> : Autolander lance des tests d'intégration avant d'intégrer un correctif au master. Si les tests d'intégration échouent, Autolander refusera d'intégrer le code. D'autres validations basiques sont effectuées, comme s'assurer que votre pull request et votre message de commit contiennent bien un numéro de bug.</p>
+</div>
+
+<div class="note">
+<p><strong>A noter</strong> : Les pull request sont intégrés par ordre d'arrivé. Les pull request sont fusionnés à une branche d'intégration, et les tests d'intégration sont lancés en parallèle dans cette branche. Si un PR échoue les tests d'intégration, il est rejeté de la branche d'intégration, et nous reconstruisons la branche d'intégration avec les commits restants. Quand un commit passe, le master progresse de ce commit.</p>
+</div>
+
+<h2 id="Envoi_manuel_d'un_correctif">Envoi manuel d'un correctif</h2>
+
+<p>Pour soumettre manuellement votre correctif à Gaia, suivez ces étapes :</p>
+
+<ol>
+ <li>Tout d'abord, si le bug correspondant n'existe pas, créez-en un pour le produit <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox%20OS">Firefox OS</a>, et donnez-lui un titre explicite détaillant le but de votre correctif.</li>
+ <li>Vous pouvez alors <a href="https://help.github.com/articles/creating-a-pull-request">créer une <em>pull request</em></a> pour votre correctif. Si vous avez suivi ce guide depuis le début, vos changements devraient être présents dans une branche spécifique, unique, de votre fork en local. Pour ajouter vos modifications, faites <code>git add .</code> puis <code>git commit -m 'mon message de commit'</code>.</li>
+ <li><code>'mon message de commit'</code> devra être modifié par une phrase contenant le titre du bug, ainsi que des informations supplémentaire sur ce que fait le correctif et qui doit l'examiner. Par exemple :
+  <pre class="brush: bash">Corrige ce bug Toto R=jeanbiche</pre>
+  Il est vraiment préférable d'indiquer un numéro de bug dans le message du commit, mais ne pas le faire est le seul moyen de contourner Autolander. Inutile de vous dire que ce n'est pas recommandé, vous devriez vraiment utiliser Autolander.</li>
+ <li>Poussez votre code sur le fork de Gaia présent sur Github puis créez une <em>pull request</em> pour mettre à disposition le code de ce correctif.</li>
+ <li>Ajoutez l'URL de cette <em>pull request</em> comme pièce jointe du bug sur Bugzilla (utilisez le lien « <em>Add an attachment</em> link », choisissez le mode texte pour la pièce jointe puis saisissez l'URL de la <em>pull request</em> comme contenu de la pièce jointe, vous pouvez ensuite saisir une description)</li>
+ <li>Pour cette pièce jointe sur la fiche Bugzilla, demandez à ce que votre correctif soit passé en revue. Pour le faire, ajoutez l'étiquette (<em>flag</em>) <code>review: ?</code> à la pièce jointe en incluant le nom du responsable du module concerné par votre code (voir la page <a href="https://wiki.mozilla.org/Modules/FirefoxOS">des responsables de module</a> pour plus d'informations (en anglais).)</li>
+ <li>Attendez qu'une personne soit affectée pour passer en revue votre correctif. À cette étape, généralement, cette personne demandera d'ajouter ou non des modifications à la <em>pull request </em>(PR) sur Github et de lier ces changements sur Bugzilla.</li>
+ <li>Effectuez les modifications demandées sur la même PR que précédemment puis reliez une pièce jointe avec le <em>flag</em> <code>review: ?</code>.</li>
+ <li>Une fois que vous avez effectué les modifications demandées et que vous avez obtenu le <em>flag</em> <code>r+</code> (qui signifie que le correctif a été revu/approuvé), vous devriez <a href="https://github.com/ginatrapani/todo.txt-android/wiki/Squash-All-Commits-Related-to-a-Single-Issue-into-a-Single-Commit">aplatir (squash) vos commits en un seul</a> (voir le paragraphe <a href="#Tips_on_Gaia_Rebasing">Tips_on_Gaia_Rebasing</a> ci-après).</li>
+ <li>Ajoutez un mot-clé <code>checkin-needed</code> dans le champ adéquat (<em>keywords</em>). Pour cette étape, vous devez désormais attendre que quelqu'un intègre (<em>land</em> en anglais) votre correctif au code source de Gaia.</li>
+ <li>Félicitations, votre code fait maintenant partie de Gaia et vous avez contribué à Firefox OS !</li>
+</ol>
+
+<div class="note">
+<p><strong>Note</strong> : Il est recommandé de n'avoir qu'un seul commit par revue.</p>
+</div>
+
+<div class="note">
+<p><strong>Note </strong>: Pour plus d'informations sur la soumission de correctifs, lire le fichier <a href="https://github.com/mozilla-b2g/gaia/blob/master/CONTRIBUTING.md">contributing.md</a> sur le dépôt principal.</p>
+</div>
+
+<h2 id="Conseils_pour_refonder_son_code_de_Gaia">Conseils pour refonder son code de Gaia</h2>
+
+<p>La branche <code>master</code> de Gaia évolue constamment (plusieurs fois par jour). Si vous avez passé deux heures à construire un correctif, il se peut que la branche ait été modifiée.<br>
+ <br>
+ Sur votre branche liée à votre correctif (ex : <code>mon-correctif</code>), vous pourrez refonder (<em>rebase</em> en anglais et pour git) grâce aux commandes suivantes :</p>
+
+<pre class="brush: bash">git checkout -b mon-correctif-r1
+git pull --rebase upstream master</pre>
+
+<p>S'il n'y a pas de conflits, vous pouvez continuer avec :</p>
+
+<pre class="brush: bash">git checkout mon-correctif
+git pull --rebase upstream master
+git branch -D mon-correctif-r1</pre>
+
+<p>Si vous avez des conflits, discutez-en avec le développeur qui a apporté les changements conflictuels puis répétez cette procédure une fois les conflits résolus.</p>
+
+<h2 id="Bugs_de_statut_et_bugs_techniques">Bugs de statut et bugs techniques</h2>
+
+<p>Certaines personnes chez Mozilla sont des <a href="/fr/docs/Mozilla/Developer_guide/Committing_Rules_and_Responsibilities">sheriffs</a>. Les sheriffs sont responsables de la fusion du code et de la maintenance des statuts des branches. Étant donné qu'il y a un nombre limité de sheriffs pour surveiller les échecs des tests sur Firefox OS, il est relativement difficile pour eux de détecter tous les correctifs défectueux.</p>
+
+<p>C'est pourquoi, pour Firefox OS, nous préférons ouvrir un nouveau bug pour livrer de nouveaux correctifs sur un problème s'il y a des échecs lorsqu'un correctif est passé en revue. Cela entraîne quelques complications pour le suivi des statuts pour les équipes qualité et gestion de projet.</p>
+
+<p>Pour cela, les bugs sont séparés entre bugs de statut et bugs techniques :</p>
+
+<ul>
+ <li>Les bugs de suivi de statut sont identifiés par le mot-clé "meta". Un bug de statut peut être réouvert s'il ne remplit pas les critères d'acceptation ou s'il a échoué au cours des étapes de reproduction.</li>
+ <li>Un bug technique ne devrait être réouvert que s'il échoue lors des tests automatisés ou que le correctif ne fonctionne pas entièrement. Si un correctif corrige partiellement le bug technique, vous devriez clôner le bug et utiliser le champ « <em>see also</em> » pour pointer vers le bug initial et décrire l'endroit où le premier correctif échoue.</li>
+</ul>
+
+<div class="note">
+<p><strong>Note</strong> : Si ce bug correspond à un scénario d'utilisation (<em>user story</em> en anglais), le chef de projet en charge devrait compléter le champ correspondant (user story) ainsi que les critères d'acceptation.</p>
+</div>
+
+<h3 id="Réparer_la_situation_si_vous_avez_intégré_un_correctif_sur_un_bug_de_suivi_de_statut">Réparer la situation si vous avez intégré un correctif sur un bug de suivi de statut</h3>
+
+<p>Si vous avez accidentellement livré un correctif sur un bug de suivi, qui ait été revu et intégré au code commun, voici ce que vous devez faire :</p>
+
+<ol>
+ <li>Utilisez le bouton « <em>Clone this bug</em> » situé en bas à droite de Bugzilla pour créer un nouveau bug et reproduire la plupart des champs du bug initial. Vérifiez ques les champs whiteboard, keyword, et STR/user story ont bien été copiés-collés dans le nouveau bug.</li>
+ <li>Mettez ce nouveau bug comme étant bloqué par l'ancien. Ce nouveau bug sera le nouveau bug de suivi de statut.</li>
+ <li>Utilisez le <em>flag</em> <em>« needinfo</em> » pour alerte le chef de projet concerné que le bug de statut à changé. Voici la liste <a href="https://wiki.mozilla.org/FirefoxOS/Teams">des adresses e-mail des différents chefs de projets pour Firefox OS</a> sur le wiki (en anglais).</li>
+ <li>Créez un nouveau bug technique décrivant les étapes pour reproduire et/ou les critères d'acceptations. Utilisez ce bug pour bloquer le nouveau bug de suivi de statut.</li>
+ <li>Essayez d'apporter un correctif pour ce nouveau bug. Bidouillez-bien :) !!!</li>
+</ol>
+
+<h2 id="Livrer_des_correctifs_sur_d'anciennes_branches">Livrer des correctifs sur d'anciennes branches</h2>
+
+<p>Sur les bugs, vous pouvez voir les étiquettes concernant les différents versions. Si vous souhaitez soumettre un correctif pour une ancienne version de Firefox OS, vous devez vérifier que celui-ci respecte les règles d'acceptation expliquées sur la page d'<a href="https://wiki.mozilla.org/Release_Management/B2G_Landing">intégration à B2G  (en anglais)</a>.</p>

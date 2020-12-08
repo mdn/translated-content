@@ -1,0 +1,96 @@
+---
+title: Overlays inter-paquetage
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Overlays_inter-paquetage
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Cross_Package_Overlays
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Overlays" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Création_d'un_programme_d'installation">Suivant  »</a></p>
+</div>
+
+<p>Cette section décrit comment appliquer des overlays à des fichiers qui ne les importent pas.</p>
+
+<h3 id="Application_d.27overlays_.C3.A0_d.27autres_paquetages" name="Application_d.27overlays_.C3.A0_d.27autres_paquetages">Application d'overlays à d'autres paquetages</h3>
+
+<div class="note">Note : Cette section traite de contents.rdf qui a été remplacé par <a href="/fr/Tutoriel_XUL/Les_fichiers_manifest" title="fr/Tutoriel_XUL/Les_fichiers_manifest">des fichiers manifest</a> depuis <a href="/fr/Gecko" title="fr/Gecko">Gecko</a> 1.8.</div>
+
+<p>Les overlays ont d'autres fonctionnalités très utiles. Dans les exemples de <a href="/fr/Tutoriel_XUL/Overlays" title="fr/Tutoriel_XUL/Overlays">la section précédente</a>, les overlays étaient importés par la fenêtre. Vous pouvez aussi utiliser une autre méthode en indiquant aux overlays pour quelles fenêtres ils seront appliqués. Il vous suffit de modifier le fichier 'contents.rdf' de votre paquetage. Cette méthode est très utile car elle permet à un overlay de modifier l'interface utilisateur d'un autre paquetage sans pour cela modifier celui-ci. Par exemple, vous pouvez ajouter des <a href="/fr/Tutoriel_XUL/Barres_de_menus_simples" title="fr/Tutoriel_XUL/Barres_de_menus_simples">items de menu</a> ou des <a href="/fr/Tutoriel_XUL/Barre_d'outils" title="fr/Tutoriel_XUL/Barre_d'outils">barres d'outils</a> à la fenêtre du navigateur Mozilla.</p>
+
+<p>Nous utiliserons cette fonctionnalité pour ajouter une barre d'outils dans le fenêtre du navigateur Mozilla. Le client courrier de Mozilla utilise les overlays pour ajouter du contenu à la fenêtre du navigateur. Par exemple, si le client n'est pas installé, il n'y a pas de commande pour de nouveaux messages. Toutefois, si le client est installé, un overlay sera appliqué au menu pour ajouter une commande de nouveaux messages. Ci-dessous, nous ajouterons une barre d'outils de recherche de fichiers au navigateur. Cette fonctionnalité n'a aucune utilité, mais nous l'intégreront quand même.</p>
+
+<p>Mozilla vous permet d'ajouter une liste d'overlays dans le fichier 'contents.rdf' utilisé pour spécifier les paquetages chrome, les thèmes graphiques et les localisations. Dès que vous avez créé un overlay, vous pouvez l'ajouter au fichier 'contents.rdf'. Il vous suffit d'ajouter les informations pour chacune des fenêtres où vous voulez appliquer l'overlay.</p>
+
+<div class="highlight">
+<h4 id="Notre_exemple_de_recherche_de_fichiers" name="Notre_exemple_de_recherche_de_fichiers">Notre exemple de recherche de fichiers</h4>
+
+<p>Tout d'abord, créons un simple overlay. Il contiendra quelques champs de saisie pour la recherche d'un nom de fichier et d'un répertoire. Chargez le fichier 'foverlay.xul' et ajoutez-le au répertoire de notre exemple de recherche de fichiers à côté de 'findfile.xul'.</p>
+
+<h4 id="Notre_exemple_foverlay.xul" name="Notre_exemple_foverlay.xul">Notre exemple foverlay.xul</h4>
+
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_crosspov_1.xul.txt">Source</a></p>
+
+<pre>&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;
+
+&lt;overlay
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;toolbox id="navigator-toolbox"&gt;
+  &lt;toolbar id="findfile_toolbar"&gt;
+    &lt;label control="findfile_filename" value="Recherche des fichiers nommés :"/&gt;
+    &lt;textbox id="findfile_filename"/&gt;
+    &lt;label control="findfile_dir" value="Répertoire :"/&gt;
+    &lt;textbox id="findfile_dir"/&gt;
+    &lt;button label="Parcourir..."/&gt;
+  &lt;/toolbar&gt;
+&lt;/toolbox&gt;
+
+&lt;/overlay&gt;
+</pre>
+
+<p>Vous pouvez visualiser cet exemple en changeant l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/overlay" title="overlay">overlay</a></code> par <code><a href="/fr/docs/Mozilla/Tech/XUL/window" title="window">window</a></code>. La seule chose un peu spécifique est l'attribut <code id="a-id"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/id">id</a></code> utilisé sur l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/toolbox" title="toolbox">toolbox</a></code>. Cette valeur ('navigator-toolbox') est la même que l'identifiant de la boîte d'outils de la fenêtre du navigateur ('navigator.xul'). Elle signifie que cet overlay sera appliqué à la boîte d'outils du navigateur et que son contenu sera ajouté comme une barre d'outils supplémentaire.</p>
+
+<p>Pour ajouter cet overlay au fichier manifest, vous devons ajouter deux ressources. Premièrement, nous en ajoutons une pour chaque fenêtre où l'overlay sera appliqué. Le code suivant doit être placé dans le fichier 'contents.rdf' juste avant la balise fermante de RDF.</p>
+
+<pre>&lt;RDF:Seq about="urn:mozilla:overlays"&gt;
+  &lt;RDF:li resource="chrome://navigator/content/navigator.xul"/&gt;
+&lt;/RDF:Seq&gt;
+</pre>
+
+<p>Cette déclaration précise l'ajout d'une fenêtre overlay au système de gestion des overlays (urn:mozilla:overlays). Vous pouvez ajouter des nœuds supplémentaires pour chaque fenêtre à modifier en ajoutant des balises <code>li</code> supplémentaires.</p>
+
+<p>Ensuite, nous ajoutons un nœud pour chaque overlay s'appliquant à la fenêtre. Dans ce cas, vous n'en avez qu'un, mais d'autres peuvent être appliqués. Ajoutez ces lignes à la suite des précédentes :</p>
+
+<pre>&lt;RDF:Seq about="chrome://navigator/content/navigator.xul"&gt;
+  &lt;RDF:li&gt;chrome://findfile/content/foverlay.xul&lt;/RDF:li&gt;
+&lt;/RDF:Seq&gt;
+</pre>
+</div>
+
+<div class="float-right"><img alt="Image:xultu_crosspov.png" class="internal" src="/@api/deki/files/1511/=Xultu_crosspov.png"></div>
+
+<p>Mozilla lit cette information et construit une liste d'overlays appliqués à d'autres fenêtres. Il enregistre cette information dans un répertoire chrome/overlayinfo. Il n'est pas nécessaire que vous modifiez manuellement les fichiers de ce répertoire. Ils sont générés automatiquement et modifiés au premier lancement de Mozilla ou lorque de nouveaux paquetages sont installés. Toutefois, vous pouvez forcer la reconstruction de leurs données en effaçant ce répertoire et le fichier 'chrome.rdf.'</p>
+
+<p>Note complémentaire : vous pouvez utiliser cette même technique pour appliquer des feuilles de styles supplémentaires. L'exemple suivant vous montre comment :</p>
+
+<pre>&lt;RDF:Seq about="urn:mozilla:stylesheets"&gt;
+  &lt;RDF:li resource="chrome://messenger/content/messenger.xul"/&gt;
+&lt;/RDF:Seq&gt;
+
+&lt;RDF:Seq about="chrome://messenger/content/messenger.xul"&gt;
+  &lt;RDF:li&gt;chrome://blueswayedshoes/skin/myskinfile.css&lt;/RDF:li&gt;
+&lt;/RDF:Seq&gt;
+</pre>
+
+<hr>
+<p>Nous verrons ensuite comment créer un installeur pour une application XUL.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Overlays" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Création_d'un_programme_d'installation">Suivant  »</a></p>
+</div>
+
+<p><span class="comment">Interwiki</span></p>

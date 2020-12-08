@@ -1,0 +1,92 @@
+---
+title: nsIDOMClientRect
+slug: Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMClientRect
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMClientRect
+---
+<p></p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/dom/interfaces/base/nsIDOMClientRect.idl" rel="custom">dom/interfaces/base/nsIDOMClientRect.idl</a></code><span style="text-align: right; float: right;"><a href="/zh-CN/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">脚本化</a></span></div>
+<span style="padding: 4px 2px;">代表一个矩形盒子。盒子类型由返回这种盒子对象的方法指定的。它是由像<a href="/zh-CN/docs/Web/API/Element/getBoundingClientRect" title="Element.getBoundingClientRect()方法返回元素的大小及其相对于视口的位置。"><code>element.getBoundingClientRect</code></a>的函数返回的。.</span>
+
+  <div style="height: 42px; position: relative; padding: 2px; width: auto;">
+
+  <div style="top: 22px; font-size: 11px; position: absolute;">1.0</div>
+
+  <div style="top: 22px; font-size: 11px; position: absolute; left: 0px; text-align: right; float: right; width: 100%;">66</div>
+
+  <div style="height: 8px; top: 16px; background: #dd0000; left: 0px; position: absolute; width: 8.571428571428571%;"></div>
+
+<div style="height: 8px; top: 16px; left: 8.571428571428571%; background: #00dd00; position: absolute; width: 91.42857142857143%;" title="Introduced in Gecko 1.9 (Firefox 3)"></div>
+
+<div style="top: 0px; font-size: 11px; position: absolute; left: 8.571428571428571%;">Introduced</div>
+<div style="top: 22px; font-size: 11px; position: absolute; left: 8.571428571428571%;">Gecko 1.9</div>
+
+    <div style="height: 8px; top: 16px; left: 9.023809428571429%; background: #eeee00; position: absolute; width: 1%; border-radius: 4px; -webkit-border-radius: 4px;" title="Last changed in Gecko 1.9.1 (Firefox 3.5 / Thunderbird 3.0 / SeaMonkey 2.0)"></div>
+
+</div>
+
+<div style="background: #eee; padding: 2px;">
+继承于: <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
+<span style="text-align: right; float: right;">最后修改于Gecko 1.9.1 (Firefox 3.5 / Thunderbird 3.0 / SeaMonkey 2.0)</span></div>
+</div><p></p>
+
+<h2 id="Attributes" name="Attributes">属性</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Attribute</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>bottom</code></td>
+   <td><code><a href="/en/float" title="en/float">float</a></code></td>
+   <td>Y 轴，相对于视口原点（viewport origin）矩形盒子的底部。<strong>只读。 </strong></td>
+  </tr>
+  <tr>
+   <td><code>height</code></td>
+   <td><code><a href="/en/float" title="en/float">float</a></code></td>
+   <td>矩形盒子的高度（等同于 bottom 减 top）。<strong>只读。</strong></td>
+  </tr>
+  <tr>
+   <td><code>left</code></td>
+   <td><code><a href="/en/float" title="en/float">float</a></code></td>
+   <td>X 轴，相对于视口原点（viewport origin）矩形盒子的左侧。<strong>只读。 </strong></td>
+  </tr>
+  <tr>
+   <td><code>right</code></td>
+   <td><code><a href="/en/float" title="en/float">float</a></code></td>
+   <td>X 轴，相对于视口原点（viewport origin）矩形盒子的右侧。<strong>只读。 </strong></td>
+  </tr>
+  <tr>
+   <td><code>top</code></td>
+   <td><code><a href="/en/float" title="en/float">float</a></code></td>
+   <td>Y 轴，相对于视口原点（viewport origin）矩形盒子的顶部。<strong>只读。</strong></td>
+  </tr>
+  <tr>
+   <td><code>width</code></td>
+   <td><code><a href="/en/float" title="en/float">float</a></code></td>
+   <td>矩形盒子的宽度（等同于 right 减 left）。<strong>只读。</strong> </td>
+  </tr>
+  <tr>
+   <td><code>x</code></td>
+   <td><code><a href="/en/float" title="en/float">float</a></code></td>
+   <td>X 轴，相对于视口原点（viewport origin）矩形盒子的左侧。<strong>只读。</strong> </td>
+  </tr>
+  <tr>
+   <td><code>y</code></td>
+   <td><code><a href="/en/float" title="en/float">float</a></code></td>
+   <td>Y 轴，相对于视口原点（viewport origin）矩形盒子的顶部。<strong>只读。</strong></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="See_also" name="See_also">参考资料</h2>
+
+<ul>
+ <li><a href="http://www.w3.org/TR/cssom-view/#the-clientrect-interface">CSSOM View Module : The ClientRect Interface</a><span style="color: #fff; background: #e66e33; display: inline-block; font-size: x-small; margin-left: 6px; white-space: nowrap; padding: 2px 5px;" title="工作草案">WD</span></li>
+</ul>
+
+<p><span style="line-height: 1.5;">这个对象几次易名：最初叫做 TextRectangle，</span><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=916520" style="line-height: 1.5;">然后</a><span style="line-height: 1.5;">叫做 ClientRect，</span><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=916520" style="line-height: 1.5;">后来</a><span style="line-height: 1.5;">叫做 DOMRect。</span></p>
+
+<p><span style="line-height: 1.5;">该对象最初只有 top、left、right、bottom 属性，后来添加了 width、height、x、y 属性。</span></p>

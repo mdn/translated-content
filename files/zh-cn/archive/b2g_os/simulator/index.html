@@ -1,0 +1,240 @@
+---
+title: Firefox OS 模拟器
+slug: Archive/B2G_OS/Simulator
+translation_of: Archive/B2G_OS/Simulator
+---
+<div class="note">
+ <p>Firefox OS 模拟器目前还处于开发早期，还没有那么我们想的那么稳定和功能齐备。</p>
+ <p>如果你发现了bug，请 <a href="https://github.com/mozilla/r2d2b2g/issues?state=open">在 GitHub 上面提交</a>，如果你有任何问题，可以在<a href="https://lists.mozilla.org/listinfo/dev-developer-tools"> dev-developer-tools 邮件列表</a> 或者 <a href="irc://irc.mozilla.org/#devtools">irc.mozilla.org 上的 </a><a href="irc://irc.mozilla.org/#devtools">#devtools on </a>提问。</p>
+ <p>你还可阅读“<a href="#Unsupported-APIs" title="#Unsupported-APIs">获取帮助</a>”章节中的 <a href="#Simulator-verbose-logging" title="#Simulator-verbose-logging">how to enable verbose logging</a> 与 <a href="#Simulator-latest-preview-build" title="#Simulator-latest-preview-build">get the latest preview build</a>。</p>
+</div>
+<p>Firefox OS 模拟器（<strong style="line-height: 1.5; color: rgb(77, 78, 83);">Simulator）</strong><span style="line-height: 1.5;">给你提供一个在桌面系统下测试和调试 </span><a href="/en-US/docs/Apps" style="line-height: 1.5;" title="/en-US/docs/Apps">Firefox OS 应用</a><span style="line-height: 1.5;">的环境，使得 code-test-debug（编码-测试-调试）的流程比使用实体设备更加快捷。当然你并不需要一个实体设备来运行这个模拟器。</span></p>
+<p>本质上来讲，模拟器是由下面两个部分组成的：</p>
+<ul>
+ <li><b>模拟器</b>: 模拟器包括 比运行在桌面环境的<a href="/en-US/docs/Mozilla/Firefox_OS" title="/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a>更高层的<a href="/en-US/docs/Mozilla/Firefox_OS/Using_the_B2G_desktop_client" title="/en-US/docs/Mozilla/Firefox_OS/Using_the_B2G_desktop_client">Firefox OS 桌面系统客户端</a>。还包含一些标准版Firefox OS桌面版本中没有的<a href="#Simulator-toolbar" title="#Simulator-toolbar">额外的仿真特性</a>。</li>
+ <li><strong>信息中心（</strong><strong style="color: rgb(77, 78, 83);">the Dashboard）</strong>: 这里你可以开始和停止运行模拟器，在模拟器里面安装，卸载以及调试你的应用。通过信息中心，你也可以把应用推送到实体设备中。信息中心也会manifests文件中一些常见问题进行检测.</li>
+</ul>
+<p>下面的这个截图展示了一个使用模拟器调试应用的过程。</p>
+<p>右上的那个截图是信息中心，它运行在一个Firefox 标签页中。 我们已经添加了一个名为“where am I?" 的打包应用。左上截图显示的是该应用正运行在模拟器中。而且我们也连接了调试工具，也就是底部的那个面板。可以看到控制台面板显示了有关该应用的一些信息。</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5513/Simulator-overview-4.0.png"></p>
+<p>该指南包含了下面的内容:</p>
+<ul>
+ <li><a href="#Installing" title="#Installing">如何安装模拟器</a></li>
+ <li><a href="#Adding-updating-removing" title="#Adding-updating-removing">如何添加，移除以及刷新应用</a></li>
+ <li><a href="#Manifest-validation" title="#Manifest-validation">manifest 文件的验证</a></li>
+ <li><a href="#Running-the-Simulator" title="#Running-the-Simulator">如何运行模拟器</a></li>
+ <li><a href="#Attaching-developer-tools" title="#Attaching-developer-tools">如何把开发者工具（如 Js 调试工具）和在模拟器中运行的应用连接起来</a></li>
+ <li><a href="#Simulator-receipts" title="#Simulator-receipts">如何为付费应用找到测试收据</a></li>
+ <li><a href="#Push-to-device" title="#Push-to-device">如何把应用推送到已连接的设备上</a></li>
+ <li><a href="#Limitations" title="#Limitations">与运行 Firefox OS 的实体设备相比，模拟器的局限性。</a></li>
+</ul>
+<div class="note">
+ 想从头到尾了解如何使用模拟器调试Web应用，请参见 <a href="/en-US/docs/Tools/Firefox_OS_Simulator/Simulator_Walkthrough" title="/en-US/docs/Tools/Firefox_OS_Simulator/Simulator_Walkthrough">Firefox OS 简易攻略</a> 一文。</div>
+<h2 id="安装模拟器"><a name="Installing_the_Simulator">安装模拟器</a></h2>
+<p>模拟器是以Firefox 附加组件的形式打包和分发的。安装步骤:</p>
+<ol>
+ <li>使用Firefox访问 <a href="https://addons.mozilla.org/en-US/firefox/addon/firefox-os-simulator/" title="https://addons.mozilla.org/en-US/firefox/addon/firefox-os-simulator/">the Simulator's page on addons.mozilla.org</a>。</li>
+ <li>点击 "添加到Firefox（Add to Firefox）"。</li>
+ <li>下载完成后会提示你是否需要安装，点击:  "现在安装（Install Now）".</li>
+</ol>
+<p>鉴于该组件的体积，在安装过程中，Firefox可能会出现假死的情况。可能会出现一个对话框"警告：script无响应（Warning: Unresponsive script）"。加入你看到该对话框，点击"继续"以完成安装。这种情况不会在Firefox27以上版本中出现。</p>
+<p>安装完成后，Firefox会检查是否有该组件的更新版本，如果有的话，会自动更新至最新版本。</p>
+<p><span style="line-height: 1.5;">安装完成后，信息中心会自动打开。当然你也可以从"Firefox" 菜单(或者“工具“菜单)-Web开发者-Firefox OS 模拟器打开。</span></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5141/simulator-open-on-windows-7.png" style="margin-right: auto; margin-left: auto; display: block;"></p>
+<p>通过信息中心，你可以把你的应用添加到模拟器并且运行该应用。下面的截图就是信息中心的样子：<img alt="" src="https://mdn.mozillademos.org/files/5491/dashboard-4.0.png"></p>
+<h2 id="添加，移除和刷新应用"><a name="Adding-updating-removing">添加，移除和刷新应用</a></h2>
+<h3 id="添加应用">添加应用</h3>
+<p>怎样把<a href="/en-US/docs/Apps/Packaged_apps" title="/en-US/docs/Apps/Packaged_apps">打包应用</a>添加到模拟器？打开信息中心，点击 "添加文件夹（Add Directory）" ，然后选择 <a href="/en-US/docs/Apps/Manifest" title="/en-US/docs/Apps/Manifest">manifest 文件</a>。<br>
+ <br>
+ 如果要添加基于服务器端的 Web 应用（hosted app)，在有”<span style="line-height: 1.5;">URL for page or manifest.webapp"提示的</span><span style="line-height: 1.5;">输入框中输入，然后点击“添加 URL”(</span><span style="line-height: 1.5;">Add URL)</span><span style="line-height: 1.5;">. 如果链接指向的是manifest文件，那么就会使用这个manifest文件。如果链接指向的不是manifest文件，信息中心就会为该URL生成一个manifest文件: 所以通过输入网站的URL，你就可以把该网站以应用的形式添加进来。</span></p>
+<p>在你添加应用之后，信息中心对你的manifest文件进行一系列的测试，查找一些常见的问题。具体会进行那些测试，参阅<a href="#Manifest-validation" title="#Manifest-validation"> Manifest Validation</a>（Manifest 验证）。</p>
+<p>如果在Manifest验证阶段没有发现任何错误，信息中心则会在模拟器中自动运行你的应用。</p>
+<h3 id="管理应用">管理应用</h3>
+<p>在你添加应用之后，该应用会出现在已安装应用的管理列表中：<br>
+ <img alt="" src="https://mdn.mozillademos.org/files/5493/dashboard-list-apps-4.0.png"><br>
+ 每条记录都告诉我们关于应用的一些信息:</p>
+<ul>
+ <li>应用名称，从manifest文件获取</li>
+ <li>类型，"Packaged", "Hosted" 或者 "Generated"中的一种。</li>
+ <li>到manifest文件的链接</li>
+ <li>manifest文件的验证结果</li>
+</ul>
+<p>同时我们也可以看到4个命令:</p>
+<ul>
+ <li><strong>"Refresh"（刷新）:</strong> 在你改变应用内容后，通过该命令可以用来在模拟器中刷新以及重新加载应用。而且，信息中心会重新验证一次manifest文件。如果你对应用做的改变没有自动更新到已安装的应用，这个时候你就需要通过刷新来应用这些改变。</li>
+ <li><strong>"Connect"（连接）:</strong>借助该命令，你可以把开发者工具跟选定的应用连接起来。如果模拟器和应用还没有运行，在你使用连接命令的时候，信息中心会启动模拟器并打开应用。</li>
+ <li><strong>"Remove" ("X")（移除）:</strong> 借助该命令，你可以从模拟器和信息中心中移除应用。只要信息中心的标签页是打开的，你就可以撤销该动作恢复应用。</li>
+ <li><strong>"Receipt"（收据）:</strong> 该命令是用来验证付费应用的收据（Receipt,你已经购买该应用的凭据）。在你选择一种收据进行测试时，信息中心会在重新安装该应用的同时安装收据文件。</li>
+</ul>
+<div class="note">
+ <p><strong>在模拟器窗口中刷新应用</strong>: 在应用运行的状态下，通过模拟器窗口的 <a href="#Simulator-menubar" title="#Simulator-menubar">菜单或者是与之绑定的快捷方式</a> 更新和重新加载该应用。</p>
+</div>
+<h3 id="Manifest_验证"><a name="Manifest-validation">Manifest 验证</a></h3>
+<p>加入你提供了 manifest 文件，管理器会对该文件进行一些验证并且会针对下列3类问题给出报告：</p>
+<ul>
+ <li>manifest 错误: 这类问题会阻止app安装或运行</li>
+ <li>manifest 警告: 这类问题可能会导致应用无法正常工作</li>
+ <li>针对模拟器的警告: 模拟器目前还不支持你的应用使用的某些特性</li>
+</ul>
+<p>这些问题会列出来，点击错误提示你会看到这些问题的详细信息。</p>
+<h4 id="Manifest_错误">Manifest 错误</h4>
+<p>信息中心会把下列情形当成错误，意味着如果不修复他们就无法运行你的的应用：</p>
+<ul>
+ <li>manifest没有必填属性“name"</li>
+ <li>manifest不是有效的JSON文件</li>
+ <li>服务器端的应用，<a href="/en-US/docs/Apps/Manifest#type" title="/en-US/docs/Apps/Manifest#type">type</a>一项对应的值为<a href="/en-US/docs/Apps/Packaged_apps#Types_of_packaged_apps" title="/en-US/docs/Apps/Packaged_apps#Types_of_packaged_apps">"privileged" 或者 "certified"</a>。这两个值仅对打包的应用有效。</li>
+ <li>应用缓存错误（common appCache errors） （打包的应用不能使用appCache, 或者对manifest URL的请求返回一个HTTP的跳转或者是HTTP错误状态）</li>
+</ul>
+<p>这里是尝试添加一个没有”name"属性的manifest文件的结果：<br>
+ <img alt="" src="https://mdn.mozillademos.org/files/5495/dashboard-missing-name-4.0.png"></p>
+<h4 id="Manifest_警告">Manifest 警告</h4>
+<p>信息中心会把下列情形当成警告:</p>
+<ul>
+ <li>没有图标</li>
+ <li>图标尺寸小于128 pixels:所有提交给应用市场的应用都必须包含至少一个图标，并且图标尺寸不得小于128px*128px。</li>
+ <li>无法识别<a href="/en-US/docs/Apps/Manifest#type" title="/en-US/docs/Apps/Manifest#type">type</a> 项</li>
+ <li>manifest请求一项无法识别的<a href="/en-US/docs/Apps/Manifest#permissions" style="text-decoration: underline;" title="/en-US/docs/Apps/Manifest#permissions">权限</a></li>
+ <li>manifest请求一项会被拒绝的<a href="/en-US/docs/Apps/Manifest#permissions" title="/en-US/docs/Apps/Manifest#permissions">权限</a></li>
+ <li>manifest请求一项无法决定的<a href="/en-US/docs/Apps/Manifest#permissions" title="/en-US/docs/Apps/Manifest#permissions">权限</a></li>
+</ul>
+<h4 id="针对模拟器的警告">针对模拟器的警告</h4>
+<p>最后，如果应用使用了还没有被Firefox OS完全支持的特性，管理器会对此弹出警告：</p>
+<ul>
+ <li><a href="/en-US/docs/Apps/Manifest#type" title="/en-US/docs/Apps/Manifest#type">type</a>的值为"certified"（认证的）, 但是模拟器目前尚未完全支持认证应用（certified apps）</li>
+ <li>manifest请求使用某个<u><a href="#Unsupported-APIs">尚未</a><a href="#Unsupported-APIs" style="text-decoration: underline;" title="#Unsupported-APIs">被模拟器支持的API</a></u>的<a href="/en-US/docs/Apps/Manifest#permissions" style="text-decoration: underline;" title="/en-US/docs/Apps/Manifest#permissions">权限</a></li>
+</ul>
+<h2 id="运行模拟器"><a name="Running-the-Simulator">运行模拟器</a></h2>
+<p>可以通过两种不同的方法启动模拟器：</p>
+<ul>
+ <li>在添加应用之后，点击“refresh"（刷新）或者是“connect"（连接）按钮之后，信息中心会在模拟器中自动运行你的应用</li>
+ <li>假如你点击了位于信息中心左手边的”stopped"按钮，模拟器会启动主屏（Home Screen)，然后你就可以导航到你的应用。</li>
+</ul>
+<p>不管是哪种方法，只要模拟器一开始运行，标签为“Stopped"按钮就会变成绿色，同时标签也会变成”Running"（运行中）。要停止模拟器的运行，只需要再次点击这个按钮。</p>
+<p>模拟器会在独立的窗口中运行，屏幕区域为320*480pixels, 在<a href="#Simulator-toolbar" title="#Simulator-toolbar">底部的工具栏(toolbar)</a>和<a href="#Simulator-menubar" title="#Simulator-menubar">顶部的菜单栏(menubar)</a> 还包括一些额外的功能：</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5505/simulator-bars.png" style="margin-right: auto; margin-left: auto; display: block;"></p>
+<p>你可以通过点击鼠标和按下鼠标键之后的拖拽来模拟触屏事件。所以通过在主屏的点击和从右到左的拖拽，你就会看到内置的应用和你自己添加的应用：</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5517/simulator-homescreen.png"></p>
+<h3 id="模拟器工具栏（Simulator_toolbar）"><a name="Simulator-toolbar">模拟器工具栏（Simulator toolbar）</a></h3>
+<p>在底部的工具栏中，从左到右，分别是主屏（Home)按钮, 屏幕旋转(screen Rotation)按钮和地理位置（Geolocation）按钮.</p>
+<ul>
+ <li>主屏按钮会把你带到主屏（长按几秒的话会打开任务列表）</li>
+ <li>屏幕旋转按钮会使设备在横屏和竖屏之间切换。这种切换会生成一个 <a href="https://developer.mozilla.org/en-US/docs/WebAPI/Managing_screen_orientation#Listening_orientation_change" title="/en-US/docs/WebAPI/Detecting_device_orientation">orientationchange</a>事件。</li>
+ <li>点击地理位置按钮会触发一个对话框，询问你是否要分享你当前的地理位置或者是你自定义的坐标：通过<a href="/en-US/docs/WebAPI/Using_geolocation" title="/en-US/docs/WebAPI/Using_geolocation">Geolocation API</a>，你也可以在你的应用中实现该功能。</li>
+</ul>
+<p><a href="https://mdn.mozillademos.org/files/5511/simulator-geolocation.png"><img alt="" src="https://mdn.mozillademos.org/files/5511/simulator-geolocation.png" style="width: 520px; height: 309px;"></a><a href="https://mdn.mozillademos.org/files/5519/simulator-screen-orientation.png"><img alt="" src="https://mdn.mozillademos.org/files/5519/simulator-screen-orientation.png" style="width: 500px; height: 297px;"></a></p>
+<h3 id="模拟器菜单栏"><a name="Simulator-menubar"></a>模拟器菜单栏</h3>
+<p>通过顶部的菜单栏，你可以更方便快捷的运行一些有用的命令。这会使你的开发工作更有效率。</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5525/simulator-menubar.png"></p>
+<ul>
+ <li><strong>File -&gt; Quit</strong> (<em>Ctrl/Cmd - Q</em>):关闭模拟器</li>
+ <li><strong>App -&gt; Refresh</strong> (<em>Ctrl/Cmd - R</em>): 刷新当前运行的应用</li>
+</ul>
+<p>键盘上 <strong>"App Refresh"</strong> 的快捷方式使得从表面上来看开发一个应用就像是开发一个网页（浏览器中刷新一个页面的快捷方式也是<em>Ctrl/Cmd-R</em>):</p>
+<ul>
+ <li>更改你的代码后 (如果需要的话，重新运行你的工具，如volo / yeoman / grunt）</li>
+ <li>使用键盘的快捷方式刷新正在运行的应用</li>
+</ul>
+<div class="note">
+ <p><strong>"刷新应用并清除数据（强制刷新）" 隐藏的快捷方式：</strong>有些时候清除掉模拟器存储的应用数据会非常有用。所以模拟器实际上有一个隐藏的快捷方式 <em>Shift - Ctrl/Cmd - R</em>, 该快捷方式在刷新应用的同时，也会清除下列数据：</p>
+ <ul>
+  <li>
+   <p>本地存储/会话存储 (localStorage / sessionStorage)</p>
+  </li>
+  <li>
+   <p>cookies</p>
+  </li>
+  <li>
+   <p>indexedDB</p>
+  </li>
+  <li>
+   <p>appCache</p>
+  </li>
+ </ul>
+</div>
+<h2 id="调用开发者工具"><a name="Attaching-developer-tools">调用开发者工具</a></h2>
+<p>在模拟器中你可以调用开发者工具，以帮助你调试应用。目前你可以调用 <a href="/en-US/docs/Tools/Debugger" title="/en-US/docs/Tools/Debugger">JavaScript调试器</a>, <a href="/en-US/docs/Tools/Web_Console" title="/en-US/docs/Tools/Web_Console">Web控制台</a>, <a href="/en-US/docs/Tools/Style_Editor" title="/en-US/docs/Tools/Style_Editor">样式编辑器</a>, <a href="/en-US/docs/Tools/Profiler" title="/en-US/docs/Tools/Profiler">分析器</a> 以及<a href="/en-US/docs/Tools/Network_Monitor" title="/en-US/docs/Tools/Network_Monitor">网络</a>，但是我们会努力支持更多的 <a href="https://developer.mozilla.org/en-US/docs/Tools/DevTools_Window" title="https://developer.mozilla.org/en-US/docs/Tools/DevTools_Window">开发者工具</a>。</p>
+<div class="geckoVersionNote">
+ <p>某些工具只适用于Firefox的Beta, Aurora或者是Nightly版本。</p>
+</div>
+<p>点击应用的 <strong>"Connect"</strong>（连接）按钮来调用开发者工具</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5497/connect-to-app-button.png" style="margin-right: auto; margin-left: auto; display: block;"></p>
+<p>接着信息中心会在标签页底部打开开发者工具面板，并且连接到该应用:</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5501/simulator-devtools-connected.png" style="margin-right: auto; margin-left: auto; display: block;"></p>
+<h3 id="Web控制台">Web控制台</h3>
+<p>The app can log to this console using the global <a href="/en-US/docs/DOM/console" title="/en-US/docs/DOM/console">console</a> object, and it displays various other messages generated by the app: network requests, CSS and JS warnings/errors, and security errors. (<a href="/en-US/docs/Tools/Web_Console" title="/en-US/docs/Tools/Web_Console">Learn more about the Web Console.</a>)</p>
+<h3 id="调试器">调试器</h3>
+<p>Using the Debugger, you can step through JavaScript code that is running in the connected app, manage breakpoints, and watch expressions to track down errors and problems faster. (<a href="/en-US/docs/Tools/Debugger" title="/en-US/docs/Tools/Web_Console">Learn more about the Debugger.</a>)</p>
+<h3 id="样式编辑器">样式编辑器</h3>
+<p>You can view and edit CSS files referenced in the app using the connected Style Editor. Your changes will be applied to the app in real time, without needing to refresh the app. (<a href="/en-US/docs/Tools/Style_Editor" title="/en-US/docs/Tools/Web_Console">Learn more about the Style Editor.</a>)</p>
+<h3 id="分析器">分析器</h3>
+<p>Using the Profiler tool connected to the app, you can to find out where your JavaScript code is spending too much time. The Profiler periodically samples the current JavaScript call stack and compiles statistics about the samples. (<a href="/en-US/docs/Tools/Profiler" title="/en-US/docs/Tools/Web_Console">Learn more about the Profiler.</a>)</p>
+<h3 id="网络监控">网络监控</h3>
+<p>Thanks to the new Network Monitor, you can analyze the status, headers, content and timing of all the network requests initiated by the app through a friendly interface. (<a href="https://hacks.mozilla.org/2013/06/network-monitor-now-in-firefox-beta/" title="https://hacks.mozilla.org/2013/06/network-monitor-now-in-firefox-beta/">Learn more about the Network Monitor.</a>)</p>
+<h2 id="收据（Receipts）"><a name="Simulator-receipts"></a>收据（Receipts）</h2>
+<p>如果你正在开发付费应用，那么你也应该使用有效（加密签名）的收据测试一下你的收据确认码（receipt validation code) （收据确认码是用来确认一个用户是否已经购买该应用或者用户已申请退款，然后根据这两种情况来锁定或者解锁应用）。</p>
+<p>通过信息中心的<strong>"Receipts"</strong> 菜单，你可以安装<strong>"Valid"（有效的）</strong>, <strong>"Invalid"（无效的）</strong>, 或者 <strong>"Refunded"（退款）</strong> 的测试收据。选择你希望测试的收据类型，信息中心会从市场（Marketplace)的收据服务中心获取该类型的收据，然后在模拟器中重新安装该应用，同时也会安装该收据。:</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5523/simulator-receipts-selector-4.0.png"></p>
+<h2 id="推送到设备"><a name="Push-to-device">推送到设备</a></h2>
+<p>如果你有安装Firefox OS系统的实体设备，你可以把该设备连接到模拟器，然后可以把应用从信息中心推送到设备上。</p>
+<h3 id="连接设备">连接设备</h3>
+<p>关于如何把设备连接到信息中心，请参阅 <a href="/en-US/docs/Mozilla/Firefox_OS/Debugging/Connecting_a_Firefox_OS_device_to_the_desktop" title="/en-US/docs/Mozilla/Firefox_OS/Debugging/Connecting_a_Firefox_OS_device_to_the_desktop">connecting a Firefox OS device to the desktop</a>. 请注意你并不需要安装ADB（Android Debug Bridge）, 因为模拟器的附加组件中已经包含了它。</p>
+<h3 id="把应用推送到设备">把应用推送到设备</h3>
+<p>在你设置后设备和桌面后，通过USB把设备连接到桌面系统，你会看到<strong>"Device connected"</strong>（设备已连接）的提示 ，同时你也会看到一个标签为“Push"（推送）的按钮:</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5521/simulator-push2device.png"></p>
+<p>点击 <strong>"Push"</strong>, 应用就会安装到你的Firefox OS 设备上。</p>
+<div class="note">
+ <p><strong>手动操作步骤:</strong></p>
+ <ul>
+  <li>
+   <p>在你把应用推送到设备后，你需要手动关闭和重启设备以获得更新后的内容。</p>
+  </li>
+  <li>
+   <p>如果你更改了manifest文件中的任何内容（比如， app name, orientation, type, permissions), 那么你需要重启操作系统来使这些改变生效</p>
+  </li>
+ </ul>
+</div>
+<h3 id="Firefox_OS_设备连接确认">Firefox OS 设备连接确认</h3>
+<p>每次重启设备后的第一次”推送“需要你在设备上确认一下:</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5527/device-push-confirmation.png" style="width: 320px; height: 480px;"></p>
+<h3 id="Linux系统下的问题">Linux系统下的问题</h3>
+<p>在创建udev规则后，如果你不能连接设备，请参见<a href="https://github.com/mozilla/r2d2b2g/issues/515" title="https://github.com/mozilla/r2d2b2g/issues/515">bug</a>。</p>
+<h2 id="模拟器的局限"><a name="Limitations">模拟器的局限</a></h2>
+<p>请注意Firefox OS 模拟器目前并不完美。</p>
+<h3 id="硬件的局限">硬件的局限</h3>
+<p>除了屏幕尺寸外，模拟器无法模拟Firefox OS设备的硬件换件，比如内存，CPU。</p>
+<h3 id="Audiovideo_解码">Audio/video 解码</h3>
+<p>下面列出的编码依赖于硬件加速的解码，所以目前还没被支持:</p>
+<ul>
+ <li>MP3</li>
+ <li>AAC</li>
+ <li>H.264 (MP4)</li>
+ <li>WebM</li>
+</ul>
+<p>这意味目前还无法测试依赖于这些编码的应用以及像Youtube这类网站<span style="line-height: 1.5;">的视频回放功能</span><span style="line-height: 1.5;">。</span></p>
+<h3 id="不支持的APIs"><a name="Unsupported-APIs">不支持的APIs</a></h3>
+<p>在实体设备上被支持的某些API在模拟器中并没有被支持。通常是因为桌面环境中并没有支持这些API的硬件。我们模拟出了想地理位置的一些API，希望在以后的版本中可以支持更多的API。不管怎么说，目前模拟器尚未支持下面列出的这些API。如果你使用他们，可能会弹出错误或者返回不正确的结果：</p>
+<ul>
+ <li><a href="/en-US/WebAPI/WebTelephony" title="/en-US/WebAPI/WebTelephony">Telephony</a></li>
+ <li><a href="/en-US/docs/WebAPI/WebSMS" title="/en-US/docs/WebAPI/WebSMS">WebSMS</a></li>
+ <li><a href="/en-US/docs/WebAPI/WebBluetooth" title="/en-US/docs/WebAPI/WebBluetooth">WebBluetooth</a></li>
+ <li><a href="/en-US/docs/WebAPI/Using_Light_Events" title="/en-US/docs/WebAPI/Using_Light_Events">Ambient Light</a></li>
+ <li><a href="/en-US/docs/WebAPI/Proximity" title="/en-US/docs/WebAPI/Proximity">Proximity</a></li>
+ <li><a href="/en-US/docs/WebAPI/Network_Information" title="/en-US/docs/WebAPI/Network_Information">Network Information</a></li>
+ <li><a href="/en-US/docs/Online_and_offline_events" title="/en-US/docs/Online_and_offline_events">navigator.onLine and offline events</a></li>
+ <li><a href="/en-US/docs/WebAPI/Vibration" title="/en-US/docs/WebAPI/Vibration">Vibration</a></li>
+</ul>
+<h2 id="帮助"><a name="Simulator-help"></a>帮助</h2>
+<p>Firefox OS模拟器目前还处于开发的早期阶段，所以在稳定性和功能完整性方面还不尽人意。</p>
+<p>如果你发现任何bug，请 <a href="https://github.com/mozilla/r2d2b2g/issues?state=open">在GitHub上面提交</a>. 如果你有任何问题，也可以在 <a href="https://lists.mozilla.org/listinfo/dev-developer-tools">dev-developer-tools mailing list</a> 或者 <a href="irc://irc.mozilla.org/#devtools">#devtools on irc.mozilla.org</a> 提问。</p>
+<h3 id="如何启用详细记录"><a name="Simulator-verbose-logging"></a>如何启用详细记录</h3>
+<p>使用 about:config 打开偏好设置。<br>
+ <a href="mailto:extensions.r2d2b2g@mozilla.org.sdk.console.logLevel" style="line-height: 1.5;">extensions.r2d2b2g@mozilla.org.sdk.console.logLevel</a><span style="line-height: 1.5;">, 把值设为0，然后 禁用/开启 这个插件。然后关于模拟器运行操作的详细信息就会现在在错误控制台（Error Console） (较新版本的Firefox里面叫浏览器控制台（Browser Console） ).</span></p>
+<h3 id="如何获得最新的预览版本"><a name="Simulator-latest-preview-build"></a>如何获得最新的预览版本</h3>
+<p>正如在 <a href="/en-US/docs/Tools/Firefox_OS_Simulator#Installing_the_Simulator_add-on">section on installing the Simulator</a> 所解释, 你可以从 <a href="https://addons.mozilla.org/en-US/firefox/addon/firefox-os-simulator/">addons.mozilla.org</a>获得模拟器的最新版本。.</p>
+<p>你可能想在我们正式发布前体验最新的特性，那么你可以从下面的链接中获取预览版本：</p>
+<ul>
+ <li>Windows: <a href="https://ftp.mozilla.org/pub/mozilla.org/labs/r2d2b2g/r2d2b2g-windows.xpi">https://ftp.mozilla.org/pub/mozilla.org/labs/r2d2b2g/r2d2b2g-windows.xpi</a></li>
+ <li>Mac: <a href="https://ftp.mozilla.org/pub/mozilla.org/labs/r2d2b2g/r2d2b2g-mac.xpi">https://ftp.mozilla.org/pub/mozilla.org/labs/r2d2b2g/r2d2b2g-mac.xpi</a></li>
+ <li>Linux: <a href="https://ftp.mozilla.org/pub/mozilla.org/labs/r2d2b2g/r2d2b2g-linux.xpi">https://ftp.mozilla.org/pub/mozilla.org/labs/r2d2b2g/r2d2b2g-linux.xpi</a></li>
+</ul>
+<p>但是请注意，相比正式版，预览版并没有被完全测试，在稳定性方面也稍差一些。</p>

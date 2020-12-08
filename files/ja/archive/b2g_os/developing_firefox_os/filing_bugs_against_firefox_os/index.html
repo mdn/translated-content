@@ -1,0 +1,199 @@
+---
+title: Firefox OSのバグを登録する
+slug: Archive/B2G_OS/Developing_Firefox_OS/Filing_bugs_against_Firefox_OS
+tags:
+  - Bugzilla
+  - Firefox
+  - Firefox OS
+  - QA
+translation_of: Archive/B2G_OS/Developing_Firefox_OS/Filing_bugs_against_Firefox_OS
+---
+<div class="summary">
+<p><span class="seoSummary">この記事ではFirefox OSプロジェクト（GaiaとB2Gを含む）のバグを登録するためのガイドを提供します。</span></p>
+</div>
+
+<h2 id="Bugzilla">Bugzilla</h2>
+
+<p>Mozillaでは、ほとんどのプロジェクトでバグおよび課題の状況のトラッキングのために<a href="/docs/Mozilla/Bugzilla">Bugzilla</a>を使っています。バグを見つけた時は誰でも<a href="https://bugzilla.mozilla.org/">bugzilla</a>に登録できます。Bugzillaの中に、<a style="line-height: 1.5;" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox%20OS">Firefox OS 向けに独立したプロダクトカテゴリ</a>があって、<a style="line-height: 1.5;" href="/Firefox_OS/Platform/Gaia">Gaia</a><span style="line-height: 1.5;">、</span><a style="line-height: 1.5;" href="/Firefox_OS/Platform/Gonk">Gonk、</a><a style="line-height: 1.5;" href="/docs/Mozilla/Gecko">Gecko</a>などのトピック用のコンポーネントを含んでいます。Firefox OS、Gaia、その他のバグはこのコンポーネントに登録してください。</p>
+
+<h3 id="バグを登録する">バグを登録する</h3>
+
+<p>効果的にバグを登録するために、<a href="http://mzl.la/1KL4ktp">Bugzilla template</a>を使い、下記の手順にしたがってテンプレートを埋めてください。</p>
+
+<h3 id="必須のフィールドと任意のフィールド">必須のフィールドと任意のフィールド</h3>
+
+<p>新しいバグを登録する時、下記を含むいくつかのフィールドは必須項目です。</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col"><strong>フィールド</strong></th>
+   <th scope="col"><strong>内容</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Component</td>
+   <td>バグの所属するカテゴリを選択します。もし、バグがどのカテゴリに所属するかわからない時には、"General"（一般）を選択してください。</td>
+  </tr>
+  <tr>
+   <td>Summary</td>
+   <td>バグの内容を簡潔に記述します。</td>
+  </tr>
+  <tr>
+   <td>Description</td>
+   <td>
+    <p>できるだけ明確に状況を記述します。良いバグレポートをするには、再現手順（STR）、あるべき結果と実際の結果を含めてください。また、可能であれば発生頻度 (つまり、何度も再現手順を繰り返した場合、バグが何度発生するか) を含めてください。</p>
+   </td>
+  </tr>
+  <tr>
+   <td>Build Information</td>
+   <td>
+    <p>Firefox OS端末の画面で、「環境設定 &gt; 端末情報 &gt; その他の情報」の順に操作し、下記の項目をバグレポートに含めてください。​</p>
+
+    <ul>
+     <li>OS のバージョン</li>
+     <li>ビルドナンバー</li>
+     <li>プラットフォームのバージョン</li>
+     <li>ビルド ID</li>
+     <li>更新チャンネル</li>
+     <li>Git コミット情報</li>
+    </ul>
+
+    <p>もし、MacやLinuxなどで adb や git をインストールして使っているのであれば、<a href="https://github.com/Mozilla-TWQA/B2G-flash-tool/blob/master/check_versions.py">このスクリプト</a>を実行して、その結果をテキストでコピー&amp;ペーストしてください。</p>
+   </td>
+  </tr>
+  <tr>
+   <td>Screenshots</td>
+   <td>バグを解析するのに役立つスクリーンショットを添付します。（Flameでは、電源ボタンと音量下げボタンを2秒以上同時に押し続けると、音や画面のフラッシュがしてスクリーンショットが撮れます。それをUSBを経由してコンピュータに転送してください。）</td>
+  </tr>
+  <tr>
+   <td>Video</td>
+   <td>バグが画面遷移をする中で発生し、スクリーンショットで説明するのが難しい場合は、動画を撮影してください。その動画を添付ファイルとしてアップロードできます。また、YouTubeにアップロードしてそのURLをバグレポートにコピー&amp;ペーストすることもできます。</td>
+  </tr>
+  <tr>
+   <td>ADB logs</td>
+   <td>コンピューターに adb がインストールされている場合、電話機に接続しておいて | adb logcat | を実行して表示される結果をプレーンテキストに保存し、バグレポートに添付してください。</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>下記のフィールドは任意です:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col"><strong>フィールド</strong></th>
+   <th scope="col"><strong>内容</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Depends/Block</td>
+   <td>バグ同士の依存関係を表します。</td>
+  </tr>
+  <tr>
+   <td>Keywords</td>
+   <td>bugzilla用のキーワードです。特定のグループがバグをトラッキングするのに使われます。</td>
+  </tr>
+  <tr>
+   <td>Whiteboard</td>
+   <td>タグを含みます。トラッキング用にあらゆるタグを追加して下さい。他人のタグを許可なく削除してはいけません。</td>
+  </tr>
+  <tr>
+   <td>See Also</td>
+   <td>異なるバグが関連している際に、このフィールドで指定できます。</td>
+  </tr>
+  <tr>
+   <td>Flags</td>
+   <td>ステータストラッキング用のフラグです。Firefox OSでは、 blocking-b2g というフラグが最もよく使われます。バグが blocking-b2g にセットされた場合、そのバグはリリースをブロックするため、そのバグにより注意を払う必要があります。</td>
+  </tr>
+  <tr>
+   <td>Security</td>
+   <td>バグが個人情報のセキュリティや、資産の損失や、そのような問題に関連している場合、このチェックボックスをチェックしてください。このチェックによって、そのバグは専任の従業員のみが見ることができるようになります。</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>bugzillaのフィールドの詳細な説明については、Bugzilla内にある<a href="https://bugzilla.mozilla.org/page.cgi?id=fields.html">Bugzilla Fields</a>ページを参照してください。</p>
+
+<h3 id="ローカライゼーションのバグを登録する">ローカライゼーションのバグを登録する</h3>
+
+<p>翻訳されていない文字列がある場合、以下の2通りの可能性があります。</p>
+
+<ul>
+ <li>翻訳者がまだ文字列を翻訳していない場合。この場合はバグを登録しないでください。</li>
+ <li>ローカライザビリティ（localizability - l12y）の問題で翻訳者が文字列を翻訳できなかった場合。この場合はバグを登録してください。</li>
+</ul>
+
+<h4 id="ローカライザビリティ（l12y）バグを登録するには">ローカライザビリティ（l12y）バグを登録するには</h4>
+
+<ol>
+ <li>Firefox OSで「環境設定 &gt; 端末情報 &gt; その他の情報」を開き、「開発者メニュー」をオンにしてください。</li>
+ <li>「環境設定 &gt; 開発者」で「Pseudo-Localization」をオンにしてください。</li>
+ <li>「環境設定 &gt; 言語」で「Accented English」（奇妙な文字列で表示されています）を選択してください。</li>
+ <li>文字列が翻訳されていなかった画面に戻ります。もし、文字列が通常の英語で表示されていれば（Accented Englishの奇妙な文字列で表示されていなければ）、多くの場合それは l12y の問題です。</li>
+ <li>Bugzillaで、 product に「Firefox OS」を指定し、さらに翻訳されていない文字列があるコンポーネントを指定してください。キーワードには「l12y」を指定してください。</li>
+ <li>必須事項を記入し、バグを登録してください。</li>
+</ol>
+
+<h3 id="よくあるキーワード">よくあるキーワード</h3>
+
+<p>Firefox OS のバグでよく使われるキーワードを下記の表に示します。</p>
+
+<p>バグを検証したり、バグにコメントをしたり、バグの <em>Status</em> を <em>Verified</em> に設定するときには、必ず ビルド/OS/プラットフォーム を明示する必要があります。もし、バグが3つのプラットフォームで報告されて、あなたが確認や修正したのがそのうち1つである場合、それをバグのノートに明示し、バグを <em>Verified</em> に変更しないでください。 <em>Status</em> が <em>Verified</em> に変更されるときには、全てのプラットフォームでチェックが行われる必要があります。</p>
+
+<p>最終的に、その他のバグがあなたの検証しているバグの複製であるとマークされた場合、それらにチェック、言及する事を確実にしてください。しばしば開発者は関連した(だが同一でない)バグを複製としてマークし、これらがチェックされていないと見過ごされる事があります。</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col"><strong>キーワード</strong></th>
+   <th scope="col"><strong>内容</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>meta</td>
+   <td>バグがステータストラッキングバグであることを示します。Mozillaは複数のバグや、ユーザーストーリーの実装状況を追跡するのにこのタグを使います。一旦このマークがなされると、開発者はこうしたバグの上部にパッチを置くべきではありません。プロジェクトマネージャーやQAスタッフが追跡のためにmetaバグを使うのを覚えておいて下さい。</td>
+  </tr>
+  <tr>
+   <td>qablocker</td>
+   <td>テスト (手動や自動の機能テスト)をブロックするバグにこのキーワードを使用します。このバグは、次の Beta や RC のマイルストーンまでには修正する必要があります。</td>
+  </tr>
+  <tr>
+   <td>qawanted</td>
+   <td>もっと情報が必要な時や、再現法やテストケースが必要であったり、複製だったり (だが複製元のオリジナルバグが見つからない)する時に、このキーワードを使います。必要なQA作業の進捗はホワイトボードに記録されます;つまり必要なQA作業が完了した 時は、このキーワードを削除すべきです。</td>
+  </tr>
+  <tr>
+   <td>regression</td>
+   <td>
+    <p>このキーワードは、問題が修正され、また戻ってきて(退行して)いて、新規バグとは疑わしいという意味であり、退行を追跡するために記録します。またpre-check inテストやスモークテストでは特定できず、以前のビルドで動作していたが現在のビルドで見つかった問題を参照することもあります。こうしたバグの追跡は、ぜい弱な場所や、故障の傾向や、スモークテストやpre-check inテストの追加の良い候補の見極めに役立ちます。</p>
+   </td>
+  </tr>
+  <tr>
+   <td>regressionwindow-wanted</td>
+   <td>バグがregression(退行)であり、バグがどの期間に、理想的にはどのチェックインで起きたのかが特定できると大変有益であることを示します。</td>
+  </tr>
+  <tr>
+   <td>steps-wanted</td>
+   <td>再現手順を特定すると大変有益なバグを強調します。</td>
+  </tr>
+  <tr>
+   <td>verifyme</td>
+   <td>このバグはQA連絡先が指示した以外の人が、最新のB2Gビルドで検証するのがokという意味です。このバグは、修正を検証するのに詳しく指定された特定マシンの設定があります。失敗の再現を試みて、<em>Fixed</em> の解決法が正しいと思う場合に、ステータスを <em>Verified</em> とマークすべきです。</td>
+  </tr>
+  <tr>
+   <td>crash</td>
+   <td>FX OSがクラッシュするときにこのキーワードを追加してください。</td>
+  </tr>
+ </tbody>
+</table>
+
+<div class="note">
+<p><strong>記</strong>: 追加の資料として、 <a href="https://developer.mozilla.org/docs/Mozilla/QA/Bug_writing_guidelines">Bug writing guideline</a> を参照してください。Mozillaの <a href="https://wiki.mozilla.org/B2G/QA">B2G QA Wiki</a> ページ（英語）もFirefox OSのバグを扱うのに役立ちます。中でも、 <a href="https://wiki.mozilla.org/B2G/QA/Bugzilla">Bugzilla Usage</a> （英語）や <a href="https://wiki.mozilla.org/Bugmasters/Projects/FirefoxOS">Incoming bug triage for Firefox OS</a> （英語）は特に役立ちます。</p>
+</div>
+
+<div class="note">
+<p><strong>記</strong>: Gaia開発中のバグの扱いについての詳細情報は、<a href="/Firefox_OS/Developing_Gaia/Submitting_a_Gaia_patch">Gaiaのパッチを提出する</a>を読んで下さい。</p>
+</div>

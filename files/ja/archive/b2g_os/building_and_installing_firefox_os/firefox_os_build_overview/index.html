@@ -1,0 +1,149 @@
+---
+title: B2G OSのビルド過程の概要
+slug: Archive/B2G_OS/Building_and_installing_Firefox_OS/Firefox_OS_build_overview
+tags:
+  - B2G OS
+  - Firefox OS
+  - build
+  - build b2g os
+  - install
+  - インストール
+  - ビルド
+translation_of: Archive/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary
+---
+<div class="summary">
+<p>B2G OSをビルド、インストールすることは特にたくさんの時間、ネットワーク帯域、演算能力が必要になります。その上、不幸なことに、失敗してしまう傾向もあります。このページはビルド過程の目標を概説した後、個々の過程の中のステップを概説し、ユーザがやり方に添って行えることを意図します。それぞれのステップの詳細はリンク先のページで議論します。</p>
+</div>
+
+<div class="note">
+<p><strong style="font-weight: bold;">記:</strong> B2G OSのビルド過程は'B2G'または'Boot2Gecko'の全リファレンスです。'Boot2Gecko'は元々B2G OSプロジェクトのコードネームでした。</p>
+</div>
+
+<h2 id="ビルドの目標_3つの'image'ファイル">ビルドの目標: 3つの'image'ファイル</h2>
+
+<p>ビルド過程の最上位の目標は、B2G OS互換の端末にインストールできる3つのファイルを作ることです。</p>
+
+<table style="margin: 4px auto; vertical-align: top; width: 90%;">
+ <tbody>
+  <tr>
+   <td><strong>boot.img</strong></td>
+   <td>Linuxカーネルとルートファイルシステムのイメージで、後者は基本的なUnixツールの使用可能なセットを提供します。</td>
+  </tr>
+  <tr>
+   <td><strong>system.img</strong></td>
+   <td>Gonkの一部、移植されたGecko、そしてb2g実行環境を含むB2G OSのコア（中心）です。</td>
+  </tr>
+  <tr>
+   <td><strong>recovery.img</strong></td>
+   <td>Linuxカーネルとルートファイルシステムのイメージの他、ユーザが間違ったインストールを修復できるような簡易ツールです。</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>3つのイメージが出来次第、端末にインストールできます。</p>
+
+<p>B2G OS は Android Open Source Project (AOSP) の上に構築されています。AOSP のツールである <code>adb</code> と <code>fastboot</code> は端末にアクセスするための強力な手段を提供します。とりわけ <code>adb reboot-bootloader</code> のコマンドは接続された端末をリブートさせブートローダの初期段階で一時停止させることができます。そして <code>fastboot flash $partition $image</code> でイメージを端末へコピーすることができます。</p>
+
+<h3 id="ブートイメージ">ブートイメージ</h3>
+
+<p>ブートイメージ(<code>boot.img</code>) は Linuxカーネルと、初期化スクリプト・コアユーティリティソフトウエアを提供するルートパーティションの組み合わせです。後者は端末によって効率的に使用するため "ramdisk" と呼ばれる端末メモリへコピーされます。ブートイメージは端末上の 'boot' パーティションにコピーされ、<code>adb shell</code> 等の実行によって端末のファイルシステムがアクセスされる時、ramdisk の内容がルートディレクトリに反映されはじめます。</p>
+
+<p>ブートイメージは、ルートディレクトリ上の <code>default.prop</code> ファイル内のルートユーザのパーミッションを設定します。</p>
+
+<p>ブートイメージは kernel と ramdiskイメージに分割してramdiskイメージの内容を抽出し、修正することが可能です。修正後、ramdiskイメージを再組み立てして boot.img を再構築することで既存のブートイメージを変更することができます。たとえば <a href="http://k.japko.eu/alcatel-otf-hackers-guide-1.html">Alcatel One Touch Fire Hacking (Mini) Guide</a> が参考になります。</p>
+
+<p>ブートイメージは 'サイドローディング' によってインストール前にテストできます。端末が起動してブートローダで一時停止させた後、<code>fastboot</code>で次のようなコマンドを用いて、インストールすることなくブートイメージを使用することができます。<br>
+ <code>fastboot boot /some/path/to/boot.img</code></p>
+
+<h3 id="システムイメージ">システムイメージ</h3>
+
+<p>システムイメージ(<code>system.img</code>)は、B2G OSのコア部分を提供します:</p>
+
+<ul>
+ <li><strong>Gonk</strong>: OSの低レベルコンポーネント</li>
+ <li><strong>Gecko</strong>: B2GのHTML表示とJavaScriptエンジンの移植</li>
+ <li><strong>B2G</strong>: OSのコアとなる実行プロセス</li>
+ <li><strong>Gaia</strong>: ユーザが利用できる web アプリケーション</li>
+</ul>
+
+<div class="note">
+<p>プラットフォームアーキテクチャについては<a href="/ja/Firefox_OS/Platform">B2G OS プラットフォーム</a>に詳しい情報があります。</p>
+</div>
+
+<p>システムイメージは<code>端末上のsystem</code>パーティションへコピーされ、端末のファイルシステムが実行時にアクセスされる時には<code>/system/</code>ディレクトリとして可視化されます。</p>
+
+<div class="note">
+<p><strong>記</strong>: システムイメージは端末によって使用されるバイナリーブロブを提供します。特にRIL (Radio Interface Layer) ブロブは端末のセルラー電波を制御します。</p>
+</div>
+
+<h3 id="リカバリイメージ">リカバリイメージ</h3>
+
+<p>リカバリイメージ (<code>recovery.img</code>) にはブートイメージパーティションに存在するのと同じカーネルとramdiskが含まれます。しかしながらリカバリイメージは異なる初期化スクリプトを使用し、それによって、ユーザは端末のハードウェアボタンを用いてリカバリコマンドにアクセスできます。</p>
+
+<p>リカバリイメージは端末の<code>recovery</code>パーティションへコピーされ、通常実行時にはマウントされません。</p>
+
+<h2 id="ビルドの過程_セットアップ・構成・ビルド・インストール">ビルドの過程: セットアップ・構成・ビルド・インストール</h2>
+
+<p>B2G OSをビルド、インストールする最上位プロセスは、4つのステップを含みます:</p>
+
+<table style="margin: 4px auto; vertical-align: top; width: 90%;">
+ <tbody>
+  <tr>
+   <td><strong>セットアップ</strong></td>
+   <td>ビルドプロセスで使われる全プログラム、例えば適切なコンパイラやライブラリ、のコピーを取得します。</td>
+  </tr>
+  <tr>
+   <td><strong>構成</strong></td>
+   <td>ビルドされるソースコードをダウンロードし、ビルド時に使われるパスや他の値を指定する環境変数を定義する <code>.configure</code> ファイルを作成します。</td>
+  </tr>
+  <tr>
+   <td><strong>ビルド</strong></td>
+   <td>ユーザのGeckoプロファイルや、端末用のGaia webアプリケーション をビルドします。</td>
+  </tr>
+  <tr>
+   <td><strong>インストール</strong></td>
+   <td>端末にファイルをインストールします。</td>
+  </tr>
+ </tbody>
+</table>
+
+
+<p> </p>
+
+<h3 id="セットアップ">セットアップ</h3>
+
+<p>ビルドの最中に必要となる全部のソフトウェアが実行されているということをコンパイラに保証するために、最初のセットアップは必ず完了させます。</p>
+
+<p>このステップは手動でもスクリプトでも行うことができます。詳細は <a href="/ja/docs/Mozilla/Boot_to_Gecko/B2G_build_prerequisites" title="Firefox OS build prerequisites">B2G OSビルドの必要条件</a> ページで議論されています。</p>
+
+<div class="note">
+<p>記: UNIXやUNIXライクなマシンでは、unixコマンドの <code>which</code> にプログラム名をパラメータに付けることで必要なソフトウェアをチェックできます。</p>
+</div>
+
+<h3 id="構成">構成</h3>
+
+<p>実際のビルドプロセスは、B2G OS (またはB2G)ソフトウェアを取得することから始まります。通常それは<code>B2GプロジェクトのGitクローン</code>を作成することです。ビルド構成では、ビルドする全てのソースコード取得と、<code>ビルド用の変数を指定する.config</code>ファイル作成との両方を行います。</p>
+
+<p>これは<code>config.sh</code>スクリプトで実行されます。詳細は <a href="/ja/docs/Mozilla/Boot_to_Gecko/Preparing_for_your_first_B2G_build" title="Preparing for your first B2G build">初回 B2G ビルドの準備</a> ページで議論されています。</p>
+
+<p>構成スクリプトは、ビルドする端末タイプを指定するパラメータが必要です。ビルド名は特定端末よりは、CPUアーキテクチャに関連したコード名です。現状はどの物理端末にどのビルドが動作するかを確立する方法はありません。利用できるコード名一覧は<a href="/ja/Firefox_OS/Phones">こちら</a>にあります。</p>
+
+<p>構成ステップでは ASOP の<code> repo</code> ツールもまた、ビルドで使う全コードのコピーをダウンロード(または更新)するために使われます。こうしたコピーは <code>.repo/projects</code> ディレクトリに保管されます。この動作のため、構成ステップでは多くの時間と、大量のデータダウンロードが発生することがあります。</p>
+
+<h3 id="ビルド">ビルド</h3>
+
+<p>ビルドステップでは実際にソースコードをコンパイルして出力イメージを作成します。</p>
+
+<p><code>これはbuild.sh</code>スクリプトで実行されます。詳細は<a href="/ja/Firefox_OS/Building" title="Building">B2G OSのビルド</a>ページで議論されています。</p>
+
+<p>デフォルトでは、ビルドステップはモノリシックで、ASOPツールからLinux kernelやGaia webアプリケーションをまで一度にビルドしようとします。ビルドが失敗すると、どのステップが失敗したのか不明なことが時々あります。</p>
+
+<p>全B2Gスタックの一部をビルドすることが可能です。例えば<code>gecko</code>パラメータをつけてビルドすることで、<code>Gecko</code>システムのみをビルドできます。同様に、<code>Gaia</code>だけビルドするのに<code>gaia</code>パラメータを使用します。次に説明するように、これらの部品は端末に別々にインストールされます。</p>
+
+<p>このページの最初で述べたようなイメージをビルドすることも可能です。例えば<code>./build.sh out/platform/$target/system.img </code>でシステムイメージをビルドでき、ここで <code>$target</code> パラメータは構成ステップと同様になります。</p>
+
+<h3 id="インストール">インストール</h3>
+
+<p>インストールステップでは新しくコンパイルされたコードを端末に配置します。これは<code>flash.sh</code><code>スクリプトで実行されます。</code></p>
+
+<p>flash スクリプトにパラメータをつけることで個々のビルド部品をインストールできます。例えばGaia webアプリケーションは<code>./flash.sh gaia</code>と指定することで単独でインストールできます。</p>

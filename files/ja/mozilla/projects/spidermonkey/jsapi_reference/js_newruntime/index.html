@@ -1,0 +1,52 @@
+---
+title: JS NewRuntime
+slug: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_NewRuntime
+tags:
+  - JSAPI Reference
+  - SpiderMonkey
+translation_of: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_NewRuntime
+---
+<p></p><div class="breadcrumbs"><a href="/ja" title="ja">メインページ</a> » <a href="/ja/docs/SpiderMonkey" title="SpiderMonkey">SpiderMonkey</a> »
+ <a href="/ja/docs/SpiderMonkey/JSAPI_Reference" title="JSAPI_Reference">JSAPI リファレンス</a> »
+ <code>JS_NewRuntime</code></div>
+<p></p>
+
+<p>JavaScript ランタイムの初期化を行います。 {{ 英語版章題("Syntax") }}</p>
+
+<h2 id=".E6.A7.8B.E6.96.87" name=".E6.A7.8B.E6.96.87">構文</h2>
+
+<pre class="eval"><a href="/ja/JSRuntime" title="ja/JSRuntime">JSRuntime</a> * <strong>JS_NewRuntime</strong>(uint32 maxbytes);
+</pre>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Name</th>
+   <th>Type</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td><code>maxbytes</code></td>
+   <td><code>uint32</code></td>
+   <td>ガベージコレクション動作後の最大メモリ使用量<span class="comment">Maximum number of allocated bytes after which garbage collection is run.</span></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>{{ 英語版章題("Description") }}</p>
+
+<h2 id=".E8.AA.AC.E6.98.8E" name=".E8.AA.AC.E6.98.8E">説明</h2>
+
+<p><code>JS_NewRuntime</code>は、JavaScriptランタイム環境の初期化を行う関数です。他のJSAPI関数を使うには前もって必ず<code>JS_NewRuntime</code>を呼ぶことになります。<code>JS_NewRuntime</code>は、<code>JSRuntime</code>に用いるメモリ領域を確保し、ランタイム内の初期化を行います。引数<code>maxbytes</code>で、ガベージコレクションが動作した後の最大メモリ使用量を指定します。 <span class="comment">&lt;code&gt;JS_NewRuntime&lt;/code&gt; initializes the JavaScript runtime environment. Call &lt;code&gt;JS_NewRuntime&lt;/code&gt; before making any other API calls. &lt;code&gt;JS_NewRuntime&lt;/code&gt; allocates memory for the &lt;code&gt;JSRuntime&lt;/code&gt; and initializes certain internal runtime structures. &lt;code&gt;maxbytes&lt;/code&gt; specifies the number of allocated bytes after which garbage collection is run.</span></p>
+
+<p>一般的に、ほとんどのアプリケーションで必要とされる<code><a href="/ja/JSRuntime" title="ja/JSRuntime">JSRuntime</a></code>は一つのみです。<code><a href="/ja/JS_THREADSAFE" title="ja/JS_THREADSAFE">JS_THREADSAFE</a></code>を有効にしたビルドでは、<code>JSRuntime</code>を共有する<code><a href="/ja/JSRuntime" title="ja/JSRuntime">JSContext</a></code>を各スレッドごとに一つ用意することで、複数スレッドからランタイムにアクセスすることが可能です。複数のランタイムが必要になるのは、JavaScriptの値やオブジェクト、関数をスレッド間で完全に分離させたいときだけです。 <span class="comment">Generally speaking, most applications need only one &lt;code&gt;<a href="/ja/JSRuntime">JSRuntime</a>&lt;/code&gt;. In a &lt;code&gt;<a href="/ja/JS_THREADSAFE">JS_THREADSAFE</a>&lt;/code&gt; build, each runtime is capable of handling multiple execution threads, using one &lt;code&gt;<a href="/ja/JSContext">JSContext</a>&lt;/code&gt; per thread, sharing the same &lt;code&gt;JSRuntime&lt;/code&gt;. You only need multiple runtimes if your application requires completely separate JS engines that cannot share values, objects, and functions.</span></p>
+
+<p><code>JS_NewRuntime</code>が成功したときは、新たに生成されたランタイムへのポインタがその返り値となり、失敗した時は<code>NULL</code>を返します。<code>JS_NewRuntime</code>の呼び出し元は、後で必ずそのランタイムを<code><a href="/ja/JS_DestroyRuntime" title="ja/JS_DestroyRuntime">JS_DestroyRuntime</a></code>を用いて破棄しなければなりません。 <span class="comment">On success, &lt;code&gt;JS_NewRuntime&lt;/code&gt; returns a pointer to the newly created runtime, which the caller must later destroy using &lt;code&gt;<a href="/ja/JS_DestroyRuntime">JS_DestroyRuntime</a>&lt;/code&gt;. Otherwise it returns &lt;code&gt;NULL&lt;/code&gt;.</span> {{ 英語版章題("Notes") }}</p>
+
+<h3 id=".E6.B3.A8.E8.A8.98" name=".E6.B3.A8.E8.A8.98">注記</h3>
+
+<p>一般的には、<code>JS_NewRuntime</code>はアプリケーション内でまず最初に実行し、<code><a href="/ja/JS_DestroyRuntime" title="ja/JS_DestroyRuntime">JS_DestroyRuntime</a></code>や<code><a href="/ja/JS_ShutDown" title="ja/JS_ShutDown">JS_ShutDown</a></code>を終了時に呼ぶことになります。 <span class="comment">Ordinarily, &lt;code&gt;JS_NewRuntime&lt;/code&gt; should be the first JSAPI call in an application, and &lt;code&gt;<a href="/ja/JS_DestroyRuntime">JS_DestroyRuntime</a>&lt;/code&gt; and &lt;code&gt;<a href="/ja/JS_ShutDown">JS_ShutDown</a>&lt;/code&gt; should be the last ones.</span></p>
+
+<p>{{ LXRSearch("ident", "i", "JS_NewRuntime") }}</p>
+
+<p>{{ languages( { "en": "en/JS_NewRuntime" } ) }}</p>

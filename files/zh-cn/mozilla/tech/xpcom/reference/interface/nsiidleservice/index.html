@@ -1,0 +1,119 @@
+---
+title: nsIIdleService
+slug: Mozilla/Tech/XPCOM/Reference/Interface/nsIIdleService
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIIdleService
+---
+<p><span class="lang lang-en"><code>nsIIdleService </code>的定义文档是：<span class="lang lang-en"><a class="external" href="http://mxr.mozilla.org/mozilla-central/source/widget/public/nsIIdleService.idl" rel="external nofollow" title="http://mxr.mozilla.org/mozilla-central/source/widget/public/nsIIdleService.idl"><code>widget/public/nsIIdleService.idl</code></a> </span>。 It is <span class="lang lang-en"><a href="../../../../en/Interfaces/About_Scriptable_Interfaces" rel="internal">scriptable</a> </span> and <span class="lang lang-en"> <a href="../../../../en/Interfaces/About_Frozen_Interfaces" rel="internal">unfrozen</a> (hasn't changed since Mozilla 1.9a) </span>. </span></p>
+<h2 id="Summary" name="Summary">概要</h2>
+<p>该服务可使您监测到空闲时间，例如，用户没有进行鼠标或者键盘等操作。您可直接捕获到空闲的时间，但一般，需要注册一个监听。</p>
+<p>目前<code> nsIIdleService</code> 服务在 Windows, Mac OS X, and Linux (via XScreenSaver) 等系统上都已实现。</p>
+<p>实现： <code>@mozilla.org/widget/idleservice;1</code>。创建实例如：</p>
+<pre class="eval">var idleService = Components.classes["@mozilla.org/widget/idleservice;1"]
+                            .getService(Components.interfaces.nsIIdleService)
+</pre>
+<h2 id="Method_overview" name="Method_overview">方法预览</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="#addIdleObserver.28.29">addIdleObserver</a>(in <a href="/en/nsIObserver" title="en/nsIObserver">nsIObserver</a> observer, in unsigned long time)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#removeIdleObserver.28.29">removeIdleObserver</a>(in <a href="/en/nsIObserver" title="en/nsIObserver">nsIObserver</a> observer, in unsigned long time)</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Attributes" name="Attributes">属性</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">属性</td>
+   <td class="header">类型</td>
+   <td class="header">描述</td>
+  </tr>
+  <tr>
+   <td><code>idleTime</code></td>
+   <td><code>long</code></td>
+   <td>The amount of time in milliseconds that has passed since the last user activity. <em>Read only.</em></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Methods" name="Methods">方法</h2>
+<h3 id="addIdleObserver.28.29" name="addIdleObserver.28.29">addIdleObserver()</h3>
+<p>添加一个observer，用于侦听使用者何时离开，及何时归来。</p>
+<pre class="eval">void addIdleObserver(
+  in nsIObserver observer,
+  in unsigned long time
+)
+</pre>
+<h6 id="Parameters" name="Parameters">参数 </h6>
+<dl>
+ <dt>
+  <code>observer</code></dt>
+ <dd>
+  The <a href="/en/nsIObserver" title="en/nsIObserver">observer</a> to be notified.</dd>
+</dl>
+<dl>
+ <dt>
+  <code>time</code></dt>
+ <dd>
+     使用者离开多少秒钟后，开始侦听。</dd>
+</dl>
+<h6 id="Remarks" name="Remarks">备注</h6>
+<ul>
+ <li>observer 侦听的 subject 一直是 nsIIdleSerivce 。当空闲时， observer 的 topic 是 'idle' ， 当他回来时，将为 'back' 。侦听的参数中包含当前使用空闲的时间。</li>
+</ul>
+<ul>
+ <li>相同的 observer 可以添加两次。</li>
+</ul>
+<ul>
+ <li>大多数实现需要自己在 OS 中查询 idle 信息，侦听可能会出现延迟，这取决于在实现中查询的间隔时间的长度。当前实现中使用的是 5 秒钟的延迟时间。</li>
+</ul>
+<p></p><div class="blockIndicator geckoMinVer standardNote">
+  <div style="text-align: center; font-weight: bold; padding-bottom: 0.5em;">Gecko 1.9.2 note</div>
+  <div>从版本 Gecko 1.9.2 开始，增加一个新的侦听消息：‘idle-daily’ 。</div>
+</div><p></p>
+<h3 id="removeIdleObserver.28.29" name="removeIdleObserver.28.29">removeIdleObserver()</h3>
+<p>删除observer。</p>
+<pre class="eval">void removeIdleObserver(
+  in nsIObserver observer,
+  in unsigned long time
+)
+</pre>
+<h6 id="Parameters_2" name="Parameters_2">参数</h6>
+<dl>
+ <dt>
+  <code>observer</code></dt>
+ <dd>
+  the <a href="/en/nsIObserver" title="en/nsIObserver">observer</a> to be removed</dd>
+</dl>
+<dl>
+ <dt>
+  <code>time</code></dt>
+ <dd>
+  消息侦听的时间（一段时间）。</dd>
+</dl>
+<p>备注</p>
+<p>删除 observer 时，根据指定的 idle 时间来删除。如果已经添加了多个 observer ，则需要删除多次。</p>
+<h2 id="Example_Code" name="Example_Code">示例：</h2>
+<p>例一：</p>
+<pre class="eval">var idleService = Components.classes["@mozilla.org/widget/idleservice;1"]
+                            .getService(Components.interfaces.nsIIdleService)
+setTimeout(function() { alert(idleService.idleTime) }, 1000)
+// if you don't use the mouse or the keyboard after running this snippet,
+// you'll see a number around 1000 alerted.
+</pre>
+<p>例二：</p>
+<pre class="eval">var idleService = Components.classes["@mozilla.org/widget/idleservice;1"]
+                            .getService(Components.interfaces.nsIIdleService)
+var idleObserver = {
+  observe: function(subject, topic, data) {
+    alert("topic: " + topic + "\ndata: " + data);
+  }
+};
+idleService.addIdleObserver(idleObserver, 60); // one minute
+// ...
+// Don't forget to remove the observer using removeIdleObserver!
+idleService.removeIdleObserver(idleObserver, 60);
+</pre>
+<p><span class="comment">Interwiki Language Links</span></p>
+<p></p>

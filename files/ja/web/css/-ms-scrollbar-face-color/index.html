@@ -1,0 +1,93 @@
+---
+title: '-ms-scrollbar-face-color'
+slug: Web/CSS/-ms-scrollbar-face-color
+tags:
+  - CSS
+  - CSS プロパティ
+  - 'CSS:Microsoft 拡張'
+  - Deprecated
+  - Microsoft 拡張
+  - Non-standard
+  - Reference
+  - 標準外
+  - 非推奨
+translation_of: Archive/Web/CSS/-ms-scrollbar-face-color
+---
+<div>{{CSSRef}}{{Non-standard_Header}}{{Deprecated_Header}}</div>
+
+<p><a href="/ja/docs/Web/CSS">CSS</a> の <code><strong>-ms-scrollbar-face-color</strong></code> プロパティは <a href="/ja/docs/Web/CSS/Microsoft_extensions">Microsoft 拡張</a>で、スクロールバーのスクロールボックスおよびスクロール矢印の色を指定します。</p>
+
+<p>{{CSSInfo}}</p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<h3 id="Values" name="Values">値</h3>
+
+<dl>
+ <dt>{{CSSxRef("&lt;color&gt;")}}</dt>
+ <dd>
+ <p>スクロールボックスおよびスクロール矢印の色です。</p>
+ </dd>
+</dl>
+
+<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+
+<pre class="syntaxbox notranslate">{{CSSSyntax}}</pre>
+
+<h2 id="Examples" name="Examples">例</h2>
+
+<p>この例では、 <code>-ms-scrollbar-face-color</code> および {{cssxref("-ms-scrollbar-arrow-color")}} を使用して、青いスクロールボックスと矢印を持ったスクロールバー、および緑のスクロールボックスおよび矢印を持ったスクロールバーを表示します。</p>
+
+<pre class="brush: css; notranslate">div {
+  width: 150px;
+  height: 150px;
+  overflow-y: scroll;
+  border-style: solid;
+  border-width: thin;
+  font-family: sans-serif;
+  float: left;
+  margin-right: 10px;
+}
+.blueScrollBox {
+  scrollbar-face-color: blue;
+  scrollbar-arrow-color: blue;
+}
+.greenScrollBox {
+  scrollbar-face-color: green;
+  scrollbar-arrow-color: green;
+}
+</pre>
+
+<pre class="brush: html; notranslate">&lt;body&gt;
+  &lt;div class="blueScrollBox"&gt;
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  &lt;/div&gt;
+  &lt;div class="greenScrollBox"&gt;
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  &lt;/div&gt;
+&lt;/body&gt;
+</pre>
+
+<p>{{EmbedLiveSample("Examples")}}</p>
+
+<p>結果はこの画像の通りです。</p>
+
+<p><img alt="Image for -ms-scrollbar-face-color example" src="https://mdn.mozillademos.org/files/15826/image002.png" style="height: 168px; width: 330px;"></p>
+
+<h2 id="Specifications" name="Specifications">仕様書</h2>
+
+<p>どの仕様書でも定義されていません。</p>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+
+<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
+
+<p>{{Compat("css.properties.-ms-scrollbar-face-color")}}</p>
+
+<h2 id="Remarks" name="Remarks">注釈</h2>
+
+<p>Windows Internet Explorer 8+ 以降で対応しています。 <code>-ms-scrollbar-face-color</code> 属性は CSS への拡張で、 IE8 標準モードでは <code>scrollbar-face-color</code> の別名として使用することができます。</p>
+
+<p>スクロールボックスとは、スクロールバー内の矩形のボックスで、上下または左右に移動することで、画面上のコンテンツの位置を変更することができます。スクロール矢印とは、スクロールバーの端に位置し、矢印が描かれた矩形のボタンで、画面上のコンテンツを上下または左右に少しだけ動かすためのものです。</p>
+
+<p>このプロパティはスクロールバーを表示する要素に適用されます。 CSS は {{CSSxRef("overflow")}} プロパティによってすべてのオブジェクトでスクロールが有効になります。</p>

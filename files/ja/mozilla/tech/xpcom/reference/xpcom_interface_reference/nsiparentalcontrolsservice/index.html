@@ -1,0 +1,172 @@
+---
+title: nsIParentalControlsService
+slug: >-
+  Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsIParentalControlsService
+tags:
+  - Firefox 3
+  - Gecko 1.9
+  - Interfaces
+  - Parental Controls
+  - XPCOM
+  - XPCOM API Reference
+  - XPCOM Interface Reference
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIParentalControlsService
+---
+<p>nsIParentalControlsServiceインターフェースはOSの保護者による制限（以下、ペアレンタルコントロールと記述）へのアクセスを提供します。これにより、ペアレンタルコントロール機能が使えるかどうかの検出、制限を迂回しての上書き要求がコード上から行えます。</p>
+<div class="blockIndicator note"><strong>註:</strong> 現在、このインターフェイスはMicrosoft Windows Vista.のみでサポートされています。</div>
+<p><br>
+ </p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/parentalcontrols/public/nsIParentalControlsService.idl" rel="custom">toolkit/components/parentalcontrols/public/nsIParentalControlsService.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">最終更新: Gecko 1.9 (Firefox 3)</span></div>
+</div>
+<p>継承元: <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code></p>
+<p>実装: <code>@mozilla.org/parental-controls-service;1</code>. インスタンスを作成する場合には次のように記述します。</p>
+<pre class="eval">var parentalControls = Components.classes["@mozilla.org/parental-controls-service;1"]
+                                 .createInstance(Components.interfaces.nsIParentalControlsService);
+</pre>
+<h2 id="Method_overview" name="Method_overview">メソッド概要</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="#log.28.29">log</a>(in short aEntryType, in boolean aFlag, in <a href="/en/XPCOM_Interface_Reference/nsIURI" title="en/XPCOM_Interface_Reference/nsIURI">nsIURI</a> aSource, [optional] in <a href="/en/XPCOM_Interface_Reference/nsIFile" title="en/XPCOM_Interface_Reference/nsIFile">nsIFile</a> aTarget);</code></td>
+  </tr>
+  <tr>
+   <td><code>boolean <a href="#requestURIOverride.28.29">requestURIOverride</a>(in <a href="/en/XPCOM_Interface_Reference/nsIURI" title="en/XPCOM_Interface_Reference/nsIURI">nsIURI</a> aTarget, [optional] in <a href="/en/XPCOM_Interface_Reference/nsIInterfaceRequestor" title="en/XPCOM_Interface_Reference/nsIInterfaceRequestor">nsIInterfaceRequestor</a> aWindowContext);</code></td>
+  </tr>
+  <tr>
+   <td><code>boolean <a href="#requestURIOverrides.28.29">requestURIOverrides</a>(in nsIArray aTargets, [optional] in nsIInterfaceRequestor aWindowContext);</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Attributes" name="Attributes">属性</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">属性</td>
+   <td class="header">型</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code>blockFileDownloadsEnabled</code></td>
+   <td><code>boolean</code></td>
+   <td>
+    <p>現在のユーザアカウントのペアレンタルコントロールの現在の設定が全てのファイルダウンロードの禁止を含む場合にはtrue。<em>リードオンリー</em></p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>loggingEnabled</code></td>
+   <td><code>boolean</code></td>
+   <td>
+    <p>現在のユーザアカウントがペアレンタルコントロールのログ機能をオンにしている場合には<code>true</code>。<br>
+     <code>true</code>の場合、アプリケーションは<code><a href="#log.28.29">log()</a></code>メソッドを使い、関係するイベントを記録する必要がある。</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>parentalControlsEnabled</code></td>
+   <td><code>boolean</code></td>
+   <td>
+    <p>現在のユーザアカウントがペアレンタルコントロール機能をオンにしている場合には<code>true</code>。<em>リードオンリー</em>。</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Constants" name="Constants">定数</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">定数</td>
+   <td class="header">値</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code>ePCLog_URIVisit</code></td>
+   <td>1</td>
+   <td>Webコンテンツへのアクセス</td>
+  </tr>
+  <tr>
+   <td><code>ePCLog_FileDownload</code></td>
+   <td>2</td>
+   <td>ファイルのダウンロード</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Methods" name="Methods">メソッド</h2>
+<h3 id="log.28.29" name="log.28.29">log()</h3>
+<p>アプリケーション固有のペアレンタルコントロールイベントを記録します。</p>
+<pre class="eval"> void log(
+   in short aEntryType,
+   in boolean aFlag,
+   in nsIURI aSource,
+   [optional] in nsIFile aTarget
+ );
+</pre>
+<h6 id="Parameters" name="Parameters">引数</h6>
+<dl>
+ <dt>
+  <code>aEntryType</code></dt>
+ <dd>
+  記録するイベントの型。ページ上方の<a href="/ja/nsIParentalControlsService#Constants" title="ja/nsIParentalControlsService#Constants">定数</a>の項目を参照。</dd>
+ <dt>
+  <code>aFlag</code></dt>
+ <dd>
+  イベントをブロックする場合には<code>true</code>、許可する場合には<code>false</code>を設定します。</dd>
+ <dt>
+  <code>aSource</code></dt>
+ <dd>
+  subject context の URI</dd>
+ <dt>
+  <code>aTarget</code></dt>
+ <dd>
+  コンテンツをブロックしない場合のコンテンツの保存場所。</dd>
+</dl>
+<h3 id="requestURIOverride.28.29" name="requestURIOverride.28.29">requestURIOverride()</h3>
+<p>ペアレンタルコントロールでブロックされているURIを許可状態にするよう要求します。</p>
+<pre class="eval"> boolean requestURIOverride(
+   in nsIURI aTarget,
+   [optional] in nsIInterfaceRequestor aWindowContext
+ );
+</pre>
+<h6 id="Parameters_2" name="Parameters_2">引数</h6>
+<dl>
+ <dt>
+  <code>aTarget</code></dt>
+ <dd>
+  上書きされるURI</dd>
+ <dt>
+  <code>aWindowContext</code></dt>
+ <dd>
+  イベントを発生させるウィンドウ</dd>
+</dl>
+<h6 id="戻り値">戻り値</h6>
+<p>ブロックが正常に上書きされれば<code>true</code>が、そうでなければ<code>false</code>が返ります。</p>
+<h6 id="Return_value_2" name="Return_value_2">注意書き</h6>
+<p>ブロックに対する上書き要求を操作するためのユーザインターフェース（「管理者パスワードを入力してください」と表示されるダイアログボックスなど）をOSが表示している間は、このメソッドはペアレンタルコントロールによるブロックを継続します。</p>
+<h3 id="requestURIOverrides.28.29" name="requestURIOverrides.28.29">requestURIOverrides()</h3>
+<p>一連のURIをペアレンタルコントロールで許可されるよう要求します。</p>
+<pre class="eval"> boolean requestURIOverrides(
+   in nsIArray aTargets,
+   [optional] in nsIInterfaceRequestor aWindowContext
+ );
+</pre>
+<p>引数</p>
+<dl>
+ <dt>
+  <code>aTargets</code></dt>
+ <dd>
+  上書きを希望するURIを表す<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI" title="">nsIURI</a></code>オブジェクトの配列</dd>
+ <dt>
+  <code>aWindowContext</code></dt>
+ <dd>
+  イベントを発生させるウィンドウ</dd>
+</dl>
+<h6 id="Return_value_2" name="Return_value_2">戻り値</h6>
+<p>ブロックが正常に上書きされればtrueが、そうでなければfalseが返る。</p>
+<h6 id="Remarks_2" name="Remarks_2">注意書き</h6>
+<p>ブロックに対する上書き要求を操作するためのユーザインターフェース（「管理者パスワードを入力してください」と表示されるダイアログボックスなど）をOSが表示している間は、このメソッドはペアレンタルコントロールによるブロックを継続します。</p>

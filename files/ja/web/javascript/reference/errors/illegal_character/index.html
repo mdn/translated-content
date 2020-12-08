@@ -1,0 +1,75 @@
+---
+title: 'SyntaxError: illegal character'
+slug: Web/JavaScript/Reference/Errors/Illegal_character
+tags:
+  - Error
+  - Errors
+  - JavaScript
+  - SyntaxError
+translation_of: Web/JavaScript/Reference/Errors/Illegal_character
+---
+<div>{{jsSidebar("Errors")}}</div>
+
+<h2 id="メッセージ">メッセージ</h2>
+
+<pre class="syntaxbox">SyntaxError: illegal character (Firefox)
+SyntaxError: Invalid or unexpected token (Chrome)
+</pre>
+
+<h2 id="エラータイプ">エラータイプ</h2>
+
+<p>{{jsxref("SyntaxError")}}</p>
+
+<h2 id="何がうまくいかなかったのか？">何がうまくいかなかったのか？</h2>
+
+<p>コードのこの位置に属していない無効なトークンまたは予期しないトークンがあります。シンタックスハイライトをサポートしているエディターを使用して、マイナス記号 (<code> - </code>) とダッシュ (<code> – </code>) や、クオート (<code> " </code>) と非標準のクオーテーション記号 (<code> “ </code>) のようなミスがないか、コードを注意深くチェックしてください。</p>
+
+<h2 id="例">例</h2>
+
+<h3 id="文字のミスマッチ">文字のミスマッチ</h3>
+
+<p>いくつかの文字は似たように見えますが、パーサーがコードを解釈できなくなります。</p>
+
+<pre class="brush: js example-bad">“This looks like a string”;
+// SyntaxError: illegal character
+
+42 – 13;
+// SyntaxError: illegal character
+</pre>
+
+<p>これは動作します:</p>
+
+<pre class="brush: js example-good">"This is actually a string";
+
+42 - 13;
+</pre>
+
+<h3 id="文字の付け忘れ">文字の付け忘れ</h3>
+
+<p>さまざまな個所で、文字を付け忘れやすいです。</p>
+
+<pre class="brush: js example-bad">var colors = ['#000', #333', '#666'];
+// SyntaxError: illegal character
+</pre>
+
+<p><code><strong>'</strong>#333'</code> に付け忘れたクオートを追加します。</p>
+
+<pre class="brush: js example-good">var colors = ['#000', '#333', '#666'];</pre>
+
+<h3 id="隠れた文字">隠れた文字</h3>
+
+<p>外部のソースをコピー &amp; ペーストすると、不正な文字が含まれていることがあります。気を付けて!</p>
+
+<pre class="brush: js example-bad">var foo = 'bar';​
+// SyntaxError: illegal character
+</pre>
+
+<p>Vim のようなエディターでこのコードを調査すると、実際には <a href="https://en.wikipedia.org/wiki/Zero-width_space">zero-width space (ZWSP) (U+200B)</a> 文字があることが分かります。</p>
+
+<pre class="brush: js">var foo = 'bar';​&lt;200b&gt;</pre>
+
+<h2 id="関連項目">関連項目</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/JavaScript/Reference/Lexical_grammar">字句文法</a></li>
+</ul>

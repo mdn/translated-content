@@ -1,0 +1,102 @@
+---
+title: TCPSocket
+slug: Web/API/TCPSocket
+translation_of: Archive/B2G_OS/API/TCPSocket
+---
+<p>{{APIRef("Firefox OS")}}</p>
+
+<p>{{ non-standard_header() }}</p>
+
+<p>{{ B2GOnlyHeader2('privileged') }}</p>
+
+<h2 id="Résumé">Résumé</h2>
+
+<p>L'interface <strong> <code>TCPSocket</code> </strong> permet d'accéder à un socket TCP brut.</p>
+
+<p>Le principal point de cette API d'entrée est la propriété{{domxref("navigator.mozTCPSocket")}} qui est un object <code>TCPSocket</code>.</p>
+
+<div class="note">
+<p><strong>Note: </strong> Seulement applications certifiées peuvent accepter des connexions entrantes sur un port en dessous de 1024.</p>
+</div>
+
+<h2 id="Aperçu_de_l'API">Aperçu de l'API</h2>
+
+<pre>interface TCPSocket{
+  readonly attribute DOMString host;
+  readonly attribute unsigned short port;
+  readonly attribute boolean ssl;
+  readonly attribute unsigned long bufferedAmount;
+  readonly attribute DOMString binaryType;
+  readonly attribute DOMString readyState;
+
+  TCPSocket open(DOMString host, unsigned short port, [object options]);
+  TCPServerSocket listen(unsigned short port, [object options, [unsigned short backlog]]);
+  void upgradeToSecure();
+  void suspend();
+  void resume();
+  void close();
+  boolean send(in jsval data);
+
+  attribute onopen;
+  attribute ondrain;
+  attribute ondata;
+  attribute onerror;
+  attribute onclose;
+};</pre>
+
+<h2 id="Propriétés">Propriétés</h2>
+
+<dl>
+ <dt>{{domxref("TCPSocket.host")}} {{readonlyinline}}</dt>
+ <dd>Une chaîne représentant le nom du serveur sur le quel le socket est connecté.</dd>
+ <dt>{{domxref("TCPSocket.port")}} {{readonlyinline}}</dt>
+ <dd>Un nombre représentant le port de connexion.</dd>
+ <dt>{{domxref("TCPSocket.ssl")}} {{readonlyinline}}</dt>
+ <dd>Une valeur booléenne indiquant si le socket est cryptée avec SSL (<code>true</code>) ou non (<code>false</code>).</dd>
+ <dt>{{domxref("TCPSocket.bufferedAmount")}} {{readonlyinline}}</dt>
+ <dd>Le nombre d'octets de données dans le tampon qui ne sont pas encore envoyés.</dd>
+ <dt>{{domxref("TCPSocket.binaryType")}} {{readonlyinline}}</dt>
+ <dd>Le type de données utilisé. Valeurs possibles : <code>arraybuffer</code> ou <code>string</code>.</dd>
+ <dt>{{domxref("TCPSocket.readyState")}} {{readonlyinline}}</dt>
+ <dd>L'état de socket. Valeurs possibles : <code>connecting</code>, <code>open</code>, <code>closing</code>, ou <code>closed</code>.</dd>
+</dl>
+
+<h3 id="Gestionnaires_d'Evénements">Gestionnaires d'Evénements</h3>
+
+<dl>
+ <dt>{{domxref("TCPSocket.onopen")}}</dt>
+ <dd>Gestionnaire d'événement {{event("open")}}. Après cet événement, le socket est prêt à envoyer et recevoir des données.</dd>
+ <dt>{{domxref("TCPSocket.ondrain")}}</dt>
+ <dd>Gestionnaire pour l'événement {{event("drain")}}. Cet événement est déclenché chaque fois que le tampon de données est vidé.</dd>
+ <dt>{{domxref("TCPSocket.onerror")}}</dt>
+ <dd>Gestionnaire pour l'événement {{event("error")}}.</dd>
+ <dt>{{domxref("TCPSocket.ondata")}}</dt>
+ <dd>Gestionnaire pour l'événement {{event("data")}}. Cet événement est déclenché chaque fois que les données ont été reçues.</dd>
+ <dt>{{domxref("TCPSocket.onclose")}}</dt>
+ <dd>Gestionnaire pour l'événement {{event("close")}}.</dd>
+</dl>
+
+<h2 id="Méthodes">Méthodes</h2>
+
+<dl>
+ <dt>{{domxref("TCPSocket.close()")}}</dt>
+ <dd>Ferme la connexion.</dd>
+ <dt>{{domxref("TCPSocket.open()","TCPSocket.open(host, port [, options])")}}</dt>
+ <dd>Renvoie un nouvel objet connecté <code>TCPSocket</code> aux <code>host</code> donnée et au <code>port</code> donné.</dd>
+ <dt>{{domxref("TCPSocket.resume()")}}</dt>
+ <dd>Information sur l'événement <code>data</code>.</dd>
+ <dt>{{domxref("TCPSocket.send()","TCPSocket.send(data)")}}</dt>
+ <dd>Données tampons à envoyer sur le réseau.</dd>
+ <dt>{{domxref("TCPSocket.suspend()")}}</dt>
+ <dd>Suspend l'événement <code>data</code>.</dd>
+</dl>
+
+<h2 id="Spécification">Spécification</h2>
+
+<p>Ne fait partie d'aucune spécification; Toutefois, cette API est discuté au sein du W3C dans le cadre du <a href="http://www.w3.org/2012/sysapps/" title="http://www.w3.org/2012/sysapps/">groupe de travail des applications  système</a> sous la dénomination <a href="http://www.w3.org/2012/sysapps/tcp-udp-sockets/" title="http://www.w3.org/2012/sysapps/tcp-udp-sockets/">API Socket TCP et UDP (anciennement connu sous le nom Raw Sockets API) </a>.</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="/fr/docs/Web/API/TCP_Socket_API" title="/fr/docs/WebAPI/TCP_Socket_API">TCP Socket</a></li>
+</ul>

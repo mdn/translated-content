@@ -1,0 +1,111 @@
+---
+title: XUL_教程/使用定位格
+slug: Mozilla/Tech/XUL/Tutorial/Using_Spacers
+tags:
+  - XUL_教程
+translation_of: Archive/Mozilla/XUL/Tutorial/Using_Spacers
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Adding_HTML_Elements" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:More_Button_Features">下一页  »</a></p>
+</div><p></p>
+<p> </p>
+<h3 id=".E6.B7.BB.E5.8A.A0.E5.AE.9A.E4.BD.8D.E6.A0.BC" name=".E6.B7.BB.E5.8A.A0.E5.AE.9A.E4.BD.8D.E6.A0.BC">添加定位格</h3>
+<p>开发用户界面的问题之一是每个用户都有不同的显示器。一些用户使用较高分辨率的较大显示器而另外一些用户使用的是较低分辨率的。另外，不同的平台对用户界面的也不同。如果加上多语言支持，每种语言之间用到的文字的需要的显示空间也不一样。</p>
+<p>应用程序的窗口通常需要考虑支持多平台和多语言。某些平台和用户接口工具提供组件让用户可以轻易地去调整适合他们自己的大小和位置。(例如Java平台使用布局管理器。)</p>
+<p>XUL为元素提供能力自动调整位置和大小。 就像我们看到的文件查找窗口的尺寸是刚好能将元素放在它里面。每次我们增中一些东西，窗口就会变得更大。</p>
+<p>XUL使用一个叫做“箱状模型”(Box Model)的布局系统。我们将在<a href="/cn/XUL_教程/箱状模型" title="cn/XUL_教程/箱状模型">下一节</a>中讲到。它允许你将一个窗口划分成连续的盒子存放元素。盒子可以基于你定义的规格调整位置和大小。到现在，可以知道 <code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> 元素是属于盒子的类型。</p>
+<p>在了解什么是盒子之前，我们将引入其他用于布局的XUL元素，<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code></code>。定位格很简单，它只需要一个属性，稍后将会说明。一个简单的定位格看起来就像下面:</p>
+<pre class="eval">&lt;spacer flex="1"/&gt;
+</pre>
+<p><code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code></code>用于在窗口中放置一片空白。它多数用于用户调整窗口大小时它可以拉伸或者收缩。 这将决定是将按钮放置在一个窗口的左边或底边还是放在右边或底边 。将要看到，你可以使用一连串的空格去创建许多布局效果。</p>
+<p>上面这个语法中，定位格有一个属性，叫做<code><code id="a-flex"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code>。这用于定义定位格的弹性。在上面的例子中，定位格为1的弹性。这会创建一个有<em>弹力</em>的定位格。如果你直接将它放在窗口里，这个定位格会在窗口的大小被改变时自动伸缩。</p>
+<p>马上我们将会把一个定位格添加到我们的文件查找例子中。首先，让我们看一下当调整当前对话框时会发生什么。</p>
+<p><img alt="Image:springs1.jpg" class="internal" src="/@api/deki/files/2683/=Springs1.jpg"></p>
+<p>如果你改变文件查找窗口的尺寸，你会看到所有的元素都保持着它们原来的位置。它们中没有一个移动或调整了大小虽然窗口里有更多的空间。让我们再看一下当增加了一个定位格后在文本输入框和查找按钮之间发生了什么。</p>
+<p><img alt="Image:springs2.jpg" class="internal" src="/@api/deki/files/2684/=Springs2.jpg"></p>
+<p>在添加了定位格后再调整窗口的大小时，你可以看到定位格填充了空白。按钮被推到了最后面。</p>
+<div class="highlight">
+ <h5 id=".E6.88.91.E4.BB.AC.E6.96.87.E4.BB.B6.E6.9F.A5.E6.89.BE.E7.9A.84.E4.BE.8B.E5.AD.90" name=".E6.88.91.E4.BB.AC.E6.96.87.E4.BB.B6.E6.9F.A5.E6.89.BE.E7.9A.84.E4.BE.8B.E5.AD.90">我们文件查找的例子</h5>
+ <p>下面的代码增加一个定位格。把它插入到查找按钮的前面。</p>
+ <pre class="eval"><span class="highlightred">&lt;spacer flex="1"/&gt;</span>
+
+&lt;button id="find-button" label="Find"/&gt;
+</pre>
+</div>
+<h3 id=".E5.85.B3.E4.BA.8E.E5.BC.B9.E6.80.A7.E7.9A.84.E6.9B.B4.E5.A4.9A.E4.BF.A1.E6.81.AF" name=".E5.85.B3.E4.BA.8E.E5.BC.B9.E6.80.A7.E7.9A.84.E6.9B.B4.E5.A4.9A.E4.BF.A1.E6.81.AF">关于弹性的更多信息</h3>
+<p>XUL在窗口中放置有弹性元素是通过计算元素合适的宽度和高度然后再添加空间。除非你指定元素的宽度和高度信息，元素的内容就决定了它的默认大小。你需要注意在对话框中的取消按钮总是设置了宽度因此它能在它里面放文字。如果你创建一个具有非常长的标签的按钮，按钮的默认大小将会很大使得有足够的空间可以放下标签。其它的元素，像是文本输入框会选择一个合适的默认大小。</p>
+<p><code>flex</code>属性用于指定元素可以改变自身的尺寸去填充它所在的盒子 (在这个例子中的窗口)。我们已经看到了应用于定位格的弹性属性，但它是可以应用于所有的元素的。例如，你可以改成能自动调整大小的查找按钮。</p>
+<p><img alt="Image:springs3.jpg" class="internal" src="/@api/deki/files/2685/=Springs3.jpg"></p>
+<p>如图所示，在查找按钮上增中了弹性属性，在窗口进行大小调整时它也会跟着调整。定位格实际上是没有指定任何东西。它实际上就是一个隐藏的按钮。它除了不会在屏幕上显示外大部分的使用方法就是和按钮一样的。</p>
+<p>你可以从上面的图片得到更多的提示。不仅是在查找按钮的尺寸增大了，而且在主标签和按钮之间显示了更多的空间。当然，这是我们之前放进去的定位格。它也调整了自己的尺寸。如果你更深入地观察，你会注意到在定位格和按钮之间分到的尺寸改变值是相等的。定位格拿到了一半的空余空间，按钮拿到了另外一半。</p>
+<p>我们看到这个效果是因为定位格和查找按钮都使用了 <code>flex</code> 属性。因为都是可伸缩的，按钮和定位格的尺寸调整是相等的。</p>
+<p>如果你想设置一个元素是另一个的两倍大小要怎么做呢？你可以给<code>flex</code>属性设一个更高的值。弹性元素的值是一个概率。如果一个元素的弹性值为1而另一个的弹性值是2，第二个比第一个大多少倍。在效果上，一个弹性为2说的是这个元素有一个弹性是二次的元素弹性增长。</p>
+<p><code>flex</code>属性不能用来指定一个真实的尺寸。作为替换，它说明在一个盒容器的子容器中填入多少的空白空间。我们将在下节看到盒子。一旦子盒的默认尺寸被指定，弹性值就被用于在对盒子中剩余的空白空间进行分割。例如，如果一个盒子有200像素宽并且包括2个可伸缩的按钮，第一个是50像素和另外一个是90像素，在它们的外面将还会有60像素的空白空间。如果两个按钮都有弹性的值为1，空白空间将会被分配给每个按钮伸缩长度为30像素。如果第二个按钮的弹性增加到2，第一个按钮将得到20像素的扩展空间，而第二个按钮将得到40像素的扩展空间。</p>
+<p><code>flex</code>属性可以被放在任何元素，但是当它直接放在XUL元素里面时就只有一个意思。意思是说即使你可以把<code>flex</code>放在HTML元素中，如果元素不是一个非盒元素它就得不到效果。</p>
+<h5 id=".E5.BC.B9.E6.80.A7.E4.BE.8B.E5.AD.90" name=".E5.BC.B9.E6.80.A7.E4.BE.8B.E5.AD.90">弹性例子</h5>
+<pre class="eval">例1:
+  &lt;button label="Find" flex="1"/&gt;
+  &lt;button label="Cancel" flex="1"/&gt;
+
+例2:
+  &lt;button label="Find" flex="1"/&gt;
+  &lt;button label="Cancel" flex="10"/&gt;
+
+例3:
+  &lt;button label="Find" flex="2"/&gt;
+  &lt;button label="Replace"/&gt;
+  &lt;button label="Cancel" flex="4"/&gt;
+
+例4:
+  &lt;button label="Find" flex="2"/&gt;
+  &lt;button label="Replace" flex="2"/&gt;
+  &lt;button label="Cancel" flex="3"/&gt;
+
+例5:
+  &lt;html:div&gt;
+    &lt;button label="Find" flex="2"/&gt;
+    &lt;button label="Replace" flex="2"/&gt;
+  &lt;/html:div&gt;
+
+例6:
+  &lt;button label="Find" flex="145"/&gt;
+  &lt;button label="Replace" flex="145"/&gt;
+</pre>
+<dl>
+ <dt>
+  例1 </dt>
+ <dd>
+  在这个例子中两个按钮平均分配弹性值。两个按钮的将会被平均地改变大小。</dd>
+ <dt>
+  例2 </dt>
+ <dd>
+  这，两个按钮都是可伸缩的，但查找按钮的伸展率是取消按钮的十分之一，因为取消按钮的弹性值为10，可用的空间被分割成查找按钮的一份和取消按钮的十分。</dd>
+ <dt>
+  例3 </dt>
+ <dd>
+  这里只有其中的两个按钮设置为可弹性。替换按钮将不会改变它的尺寸而另外两个会。 取消按钮将会比查找按钮大一倍因为它的弹性值是查找按钮的弹性值的二倍。</dd>
+ <dt>
+  例4 </dt>
+ <dd>
+  在这个例子，三个按钮都具有可弹性。查找和替换按钮的尺寸将是相同的，但取消按钮会更大一些(多50%的扩展)。</dd>
+ <dt>
+  例5 </dt>
+ <dd>
+  这里，两个按钮都放在<code>div</code>元素里面。按钮不是放在盒子里所以可申缩性在这里是无意义的。效果和没有使用<code>flex</code>属性是相同的。</dd>
+ <dt>
+  例6 </dt>
+ <dd>
+  因为两个按钮的弹性值是一样的，他们将得到相同的弹性。这样还不如用1来代替145。在这个例子中没有什么不同。建议你使用可读性更好的低数值。</dd>
+</dl>
+<p>注意像按钮的标签和按钮的最小尺寸等其他的因素会影响到按钮的尺寸。事实上，按钮不会收缩到比它的标签还小。</p>
+<p>将弹性值设为0与没有设置<code>flex</code>属性的效果是一样的。它的意思是元素不使用弹性。你有时可以看到弹性值会指定为一个百分率。这没有特殊的意义，这已经是处理过的就算没有百分号在那里。</p>
+<p>你也许注意到在你垂直改变查找对话框的尺寸时，按钮也会调整它自己的尺寸去适应窗口的高度。这是因为所有在窗口中的按钮都有隐含的垂直弹性。在下一节我们将会学习如何去改变这个值。</p>
+<div class="highlight">
+ <h5 id=".E5.88.B0.E7.9B.AE.E5.89.8D.E4.B8.BA.E6.AD.A2.E7.9A.84.E6.96.87.E4.BB.B6.E6.9F.A5.E6.89.BE.E4.BE.8B.E5.AD.90" name=".E5.88.B0.E7.9B.AE.E5.89.8D.E4.B8.BA.E6.AD.A2.E7.9A.84.E6.96.87.E4.BB.B6.E6.9F.A5.E6.89.BE.E4.BE.8B.E5.AD.90">到目前为止的文件查找例子</h5>
+ <p><a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-springs.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-springs.xul">View</a></p>
+</div>
+<p>接下来，我们将要学习 <a href="/cn/XUL_教程/更多按钮特性" title="cn/XUL_教程/更多按钮特性">按钮的更多特性</a>。</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Adding_HTML_Elements" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:More_Button_Features">下一页  »</a></p>
+</div><p></p>
+<p></p>

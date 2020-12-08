@@ -1,0 +1,68 @@
+---
+title: 构建系统入门
+slug: Archive/B2G_OS/Platform/Gaia/Build_System_Primer
+translation_of: Archive/B2G_OS/Developing_Gaia/Build_System_Primer
+---
+<p><span style="font-weight: bold; background-color: rgb(244, 247, 248);">本文介绍了Gaia构建系统是如何工作的，包括</span><span style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; font-weight: bold; background-color: rgb(244, 247, 248);" class="seoSummary"> makefile, 构建过程，环境变量及潜在定制。 </span></p>
+<p>在构建步骤中绝大多数有意义的工作都是由存放在Gaia子文件夹 <code>build/</code> 下的脚本执行的，它们主要是使用make, node.js ， <a href="https://developer.mozilla.org/en-US/docs/XPConnect/xpcshell" title="https://developer.mozilla.org/en-US/docs/XPConnect/xpcshell">XPCShell</a> (也称作JS Shell)以及 <a href="/zh-CN/docs/XULRunner">XULRunner [zh-CN]</a>执行的。Gaia构建系统中包含许多帮助工具，可以将webapp安装，测试，定位和打包到实际设备上。它同样允许开发者通过诸如更改默认壁纸，铃声，应用和设置的方式来对Gaia自定义。</p>
+<h2 id="Makefile文件">Makefile文件</h2>
+<p> Makefile文件中包含许多有用的命令，本节会对最有用的一些命令进行解释： </p>
+<h4 id="install-gaia">install-gaia</h4>
+<p>该命令会将Gaia层所有的应用推送到设备端。如果想要推送特定的应用，可以使用APP 标志位：</p>
+<pre class="brush: bash">APP=calendar make install-gaia</pre>
+<p>运行上面命令时所在的位置必须是Gaia  apps 下的文件夹（例如  <code>apps</code>).</p>
+<h4 id="reset-gaia">reset-gaia</h4>
+<p>该命令会对设备中的应用进行清理并且在安装完成应用后会设置权限的默认值，除此之外与 <code>install-gaia 命令作用是相同的</code>. 在构建工程时，应用会存放在 <code>/data/local类似的目录</code>. 它同样也会将测试和调试的应用推送到手机中。</p>
+<div class="warning">
+ <p>注意: 如果在使用 <code>reset-gaia</code> 时加入 <code>APP</code> 环境变量，会使您的手机不可用（此时可以通过再次执行不带 <code>APP</code> 变量的命令恢复）. 因此请不要这样做.</p>
+</div>
+<h4 id="production">production</h4>
+<p>该命令会将web应用安装在<span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;">/system/b2g 下，而不是</span><span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;">/data/local，除此之外与</span> <code>reset-gaia </code>作用是相同的。这个命令能够使您对user版本进行仿真，这个命令同样会将一系列的应用安装在user版本上<code>。</code></p>
+<h4 id="sect1"> </h4>
+<h3 style="line-height: 24px; letter-spacing: normal;" id="参考工作负载">参考工作负载</h3>
+<p>These goals push variously sized workloads to the device, helping us with debugging and fixing the performance and scalability issues we might have. These goals accept the APP environment variable, or an APPS environment variable that should contain the app names separated by a space, e.g.,</p>
+<pre style="padding-top: 1em; padding-right: 0px; padding-bottom: 1em; padding-left: 30px; border-left-width: 6px; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; background-color: rgba(234, 239, 242, 0.246094); text-shadow: none; direction: ltr; text-align: left; white-space: normal;" class="brush: bash  language-html"><code style="font-family: Consolas, Monaco, 'Andale Mono', monospace; color: inherit; text-shadow: none; direction: ltr; white-space: pre;" class="language-html">APP=sms make reference-workload-light
+APPS="sms communications/contacts" make reference-workload-heavy</code></pre>
+<div style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 0px;" class="line-number">
+  </div>
+<div style="margin-top: 1em; position: absolute; left: 0px; right: 0px; background-clip: initial; background-color: transparent; line-height: inherit; top: 19px;" class="line-number">
+  </div>
+<div class="note">
+ <p><strong>注意：</strong> For more information, read <a href="https://developer.mozilla.org/en-US/Firefox_OS/Platform/Gaia/Hacking#Reference_Workloads">Hacking Gaia: Reference workloads</a>.</p>
+</div>
+<h3 id="环境变量">环境变量</h3>
+<p>一些环境变量能够让你控制在设备上的构建与安装的一些方面：</p>
+<h4 id="B2G_SYSTEM_APPS1">B2G_SYSTEM_APPS=1</h4>
+<p>这个环境变量能够让你把应用推送到 <code>/system/b2g 而不是 /data/local</code>。 You should use that when you work with a user build. This variable is automatically set when running <code>make production</code>. This can be used for <code>install-gaia</code> or <code>reset-gaia</code> too.</p>
+<h4 id="GAIA_OPTIMIZE1">GAIA_OPTIMIZE=1</h4>
+<p>This triggers an optimization pass on the JavaScript files. This is automatically set when running <code>make production</code>. This can be used for <code>install-gaia</code> or <code>reset-gaia</code> too.</p>
+<h4 id="PRODUCTION1">PRODUCTION=1</h4>
+<p>This is basically an alias for <code>make production</code> (or is it the other way around ?).</p>
+<h4 id="DEBUG1">DEBUG=1</h4>
+<p>This lets you generate a debug profile to use with the <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Gaia_unit_tests" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Gaia_unit_tests">unit tests</a> or to develop your Firefox OS app in Firefox. You must delete the existing profile directory before trying to generate a new one.</p>
+<h4 id="GAIA_DEV_PIXELS_PER_PX1.5">GAIA_DEV_PIXELS_PER_PX=1.5</h4>
+<p>This generates a profile suitable for running on WVGA devices.</p>
+<h2 id="Customizing_the_preferences">Customizing the preferences</h2>
+<p>If you find that you have a set of custom preferences you need to set each time you flash your device, create a file called <code>custom-prefs.js</code> inside the <code>build</code> directory and store them in there. This keeps them from being overwritten and out of source control.</p>
+<p>Here are some useful preferences:</p>
+<pre class="brush: js">// this enables marionette which lets you run performance tests
+// see https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Gaia_performance_tests
+user_pref("marionette.defaultPrefs.enabled", true);
+
+// this sets the port for remote debugging your application on the device
+user_pref("devtools.debugger.remote-port", 60000);
+
+// this enables the remote debugger
+user_pref("devtools.debugger.remote-enabled", true);
+
+// this outputs debug information about the Radio Interface Layer in logcat
+user_pref("ril.debugging.enabled", true);
+</pre>
+<p>This file is read each time you generate a profile. The safest way to be sure that everything is generated is to delete your profile first:</p>
+<pre class="brush: bash">rm -rf profile &amp;&amp; make profile</pre>
+<p>Then you can safely use the <code>install-gaia</code> goal.</p>
+<h2 id="FAQ">FAQ</h2>
+<h3 id="1)_The_device_remains_black_after_a_flash">1) The device remains black after a flash</h3>
+<p>This can sometimes happen if you flash the device while it is idle. To remedy this just restart B2G by issuing the following command from the command line:</p>
+<p>adb shell stop b2g &amp;&amp; adb shell start b2g</p>
+<p> </p>

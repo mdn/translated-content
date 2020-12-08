@@ -1,0 +1,255 @@
+---
+title: .userconfig ファイルでビルドをカスタマイズする
+slug: Archive/B2G_OS/Customization_with_the_.userconfig_file
+tags:
+  - Firefox OS
+  - build
+  - userconfig
+  - ビルド
+translation_of: Archive/B2G_OS/Customization_with_the_.userconfig_file
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/ja/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p><div class="summary">
+<p>B2G ソースの <code>.userconfig</code> ファイルに bash コードを記入することで、ビルドプロセスのある面をカスタマイズできます。この記事では、変更により達成できることと、その方法について見ていきます。</p>
+</div>
+
+<p><code>.userconfig</code> ファイルは、ソースコード管理下に入らないので、ソースツリーを更新しても上書きされることはありません。これは、<a href="https://github.com/mozilla-b2g/B2G">B2G ツリーのルート</a> に作成する必要があります。つまり、<code>flash.sh</code>、<code>build.sh</code> などと同一のディレクトリに置きます。このファイルは、config やビルドを始める前に追加しておく必要があります。</p>
+
+<p><code>.userconfig</code> ファイルは、(存在する場合) <code>load-config.sh</code> スクリプトから実行され、このスクリプトは以下のスクリプトから実行されます: <code>setup.sh</code> から呼び出される <code>flash.sh</code> と <code>build.sh</code>、<code>run-gdb.sh</code>、<code>run-emulator.sh</code>、<code>tools/mach_b2g_bootstrap.py</code>。<code>run-<em>*</em>.sh</code> スクリプトは、ビルドする Gecko の場所を決めるのに <code>.userconfig </code> を使います。<code>mach_b2g_boostrap.py</code> スクリプトは、すべての B2G に関連する <a href="https://developer.mozilla.org/docs/Developer_Guide/mach">mach</a> コマンドによって使われます。</p>
+
+<div class="warning">
+<p><strong>重要</strong>: <code>.userconfig</code> ファイルは、ホームディレクトリではなく、B2G ソースディレクトリのルートに置いてください。</p>
+</div>
+
+<h2 id="Gecko_のソースツリーを変更する">Gecko のソースツリーを変更する</h2>
+
+<p>デフォルトでは、github のツリーからクローンされた gecko ツリーがビルドに使用されます。<a href="/docs/Developer_Guide/Source_Code/Mercurial#mozilla-inbound_%28used_for_landing_your_patches%29" title="/docs/Developer_Guide/Source_Code/Mercurial#mozilla-inbound_%28used_for_landing_your_patches%29">mozilla-inbound</a>、または <a href="/docs/Developer_Guide/Source_Code/Mercurial#mozilla-central_%28main_development_tree%29" title="/docs/Developer_Guide/Source_Code/Mercurial#mozilla-central_%28main_development_tree%29">mozilla-central</a> を使用したい人もいるでしょう。これを行うにはソースの複製を好きな場所に作っておいてから、<code>.userconfig</code> ファイルに <code>GECKO_PATH</code> を設定する行を追加します。例えば:</p>
+
+<pre>export B2G_DIR=${B2G_DIR:-$(cd $(dirname $0); pwd)}
+echo "B2G_DIR = ${B2G_DIR}"
+
+export GECKO_PATH=${B2G_DIR}/mozilla-inbound
+echo "GECKO_PATH = ${GECKO_PATH}"
+</pre>
+
+<div class="note">
+<p><strong>注記</strong>: カスタムされた Gecko を Mac OS X でビルドする場合、<code>mozilla-central</code> のディレクトリは大文字小文字を区別するファイルシステムである必要があります。そうでないと <code>GECKO_PATH</code> が無視されます。ファイルシステムが大文字小文字を区別するかどうかをチェックするには、ターミナルウィンドウで次のコマンドを実行します:</p>
+
+<pre>echo -n This file system is case-&gt;tmp; echo -n in&gt;&gt;TMP; echo sensitive&gt;&gt;tmp; cat tmp</pre>
+
+<p><code>B2G_DIR</code> を上記のように取得しておくと、<code>.userconfig</code> でハードコードされたパスを扱わなくて済みます。</p>
+</div>
+
+<h2 id="Gaia_の設定を変更する">Gaia の設定を変更する</h2>
+
+<p>時には、Gaia の設定を変更できるようにしたいことがあるでしょう。例えば、ユーザビルドで adb を有効にするなど。gaia の Makefile は、<code>build/settings.py</code> の呼び出し時に <code>--override build/custom-settings.json</code> のパラメータを渡すので、<code>custom-settings.json</code> ファイルに <code>{"devtools.debugger.remote-enabled": true}</code> を書き込む bash を書くことができます。ここでは、<code>custom-settings.json</code> の変更は、必要でない限り避けるようにします。実際は <code>custom-settings.json.new</code> に書いておき、内容が <code>custom-settings.json</code>と異なる場合に置き換えます。</p>
+
+<pre>export GAIA_PATH=${GAIA_PATH:-$(cd gaia; pwd)}
+export CUSTOM_SETTINGS="${GAIA_PATH}/build/config/custom-settings.json"
+cat &gt; "${CUSTOM_SETTINGS}.new" &lt;&lt;eof {"devtools.debugger.remote-enabled":="" true}="" eof="" if="" [[="" -f="" ${custom_settings}="" ]]="" &amp;&amp;="" cmp="" "${custom_settings}"="" "${custom_settings}.new"=""&gt;&amp; /dev/null; then
+  rm "${CUSTOM_SETTINGS}.new"
+else
+  mv "${CUSTOM_SETTINGS}.new" "${CUSTOM_SETTINGS}"
+fi
+</pre>
+
+<p>もう一つの簡単な方法は、Gaia 作業ディレクトリ内の <code>build/config/custom-prefs.js</code> ファイルを設定することです。これは、B2G ディレクトリ内にいる場合、<code>gaia/build/config/custom-prefs.js</code> となります。<a href="/docs/Mozilla/Firefox_OS/Platform/Gaia/Build_System_Primer#Customizing_the_preferences" title="/docs/Mozilla/Firefox_OS/Platform/Gaia/Build_System_Primer#Customizing_the_preferences">Gaia Build System Primer, Customizing the preferences</a> を参照してください。</p>
+
+<div class="note">
+<p><strong>注記</strong>: 現在のビルドは <code>GAIA_PATH</code> を起点とする異なるディレクトリを見るほどスマートではありません。<code>GECKO_PATH</code> の動作とは異なります。Gaia の別々のクローンを使用したいときは、そのフォルダから <a href="/docs/Mozilla/Firefox_OS/Platform/Gaia/Build_System_Primer" title="/docs/Mozilla/Firefox_OS/Platform/Gaia/Build_System_Primer">手動で make を実行</a> してください。</p>
+</div>
+
+<h2 id="異なる種類のビルドを作成する">異なる種類のビルドを作成する</h2>
+
+<p><code>.userconfig</code> に様々なオプションをセットすることで、makeコマンドを実行しながら、自動的に異なる種類のGaiaビルドを作成できます ―― この章ではいくつかの異なるオプションを扱います。</p>
+
+<div class="note">
+<p><strong>注記</strong>: ビルド時の make コマンドに異なるオプションを付けることで、ビルド中に動的に多数の異なるビルドオプションをセットできます。完全なリファレンスは、<a href="/Firefox_OS/Developing_Gaia/make_options_reference">make オプションのリファレンス</a> のを参照してください。</p>
+</div>
+
+<h3 id="製品ビルドや開発ビルドを作成する">製品ビルドや開発ビルドを作成する</h3>
+
+<p>別の製品ビルド (ユーザに届ける最終のアプリのビルド) や、開発ビルド (付加的なテストアプリやその他のエンジニアリング機能を含むビルド) を作成するには、次の行を <code>.userconfig</code>に追加してください:</p>
+
+<pre class="brush: bash">PRODUCTION=1</pre>
+
+<p>これで勝手に製品ビルドが作成されます。これは、<code>production</code> make オプションをセットすることで、オンザフライに実現することもできます。</p>
+
+<p>あるいは、エンジニアリング機能の様々なレベルを設定するヴァリアントもあります。</p>
+
+<pre>VARIANT=user
+
+VARIANT=userdebug
+
+VARIANT=eng</pre>
+
+<p>これらのヴァリアントの違いは次の通りです:</p>
+
+<ul>
+ <li><strong>eng</strong> の variant は、デフォルトアプリを  <code>/data</code> に置きます。その他多数のテスト目的のアプリを user/userdebug に含めます。また、デフォルトで Marionette が有効になるため、テストが実行できます。これは、variant が指定されない場合の既定値です。</li>
+ <li><strong>userdebug</strong> の variant は、アプリを <code>/system</code> に置きます。デフォルトで Marionette が有効になるため、テストが実行できます。アップデータが有効になるため、over-the-air (OTA/FOTA) 更新が入手できます。</li>
+ <li><strong>user</strong> の variant は、デフォルトアプリを <code>/system</code> に置きます。アップデータが有効になるため、over-the-air (OTA/FOTA) 更新が入手できます。</li>
+</ul>
+
+<div class="note">
+<p><strong>注記</strong>: user と userdebug は両方とも、ローカルで実機/エミュレータ用にビルドする場合、暗黙的に <code>PRODUCTION=1</code> が設定されます。</p>
+</div>
+
+<div class="note">
+<p><strong>補足</strong>: <code>make production</code> は、ユーザ版の Gaia をビルドして端末に焼く確かな方法です。<code>VARIANT</code> は、Gaia の Nightly や B2G デスクトップ用にビルドする時に指定します。</p>
+</div>
+
+<h3 id="デバッグビルドを作成する">デバッグビルドを作成する</h3>
+
+<p>デバッグビルドを作るには、<code>.userconfig</code> ファイルに次の行を追加します:</p>
+
+<pre>export B2G_DEBUG=1</pre>
+
+<p>これは、ビルド時に <code>DEBUG=1</code> make オプションを含めることでも、オンザフライに実現できます。</p>
+
+<h3 id="プロファイリング用ビルドを作成する">プロファイリング用ビルドを作成する</h3>
+
+<p>プロファイリングを有効にする (組み込みの (SPS) プラットフォームプロファイラで最良の結果を得るため) には、<code>.userconfig</code> ファイルに次の行を追加して再ビルドします:</p>
+
+<pre>export B2G_PROFILING=1</pre>
+
+<div class="warning">
+<p><strong>重要</strong>: B2G_NOOPT と同時に設定してはいけません。これは意味のない結果になります！</p>
+</div>
+
+<h3 id="最適化を無効にする">最適化を無効にする</h3>
+
+<p>オプティマイザ (デバッグを容易にするビルドの作成) を無効にするには、<code>.userconfig</code> ファイルに次の行を追加して再ビルドします:</p>
+
+<pre>export B2G_NOOPT=1</pre>
+
+<h3 id="はじめてガイド_(FTU)_を無効にする">はじめてガイド (FTU) を無効にする</h3>
+
+<p>ビルドとリフレッシュを何度も行う場合、FTU アプリが毎回起動する鬱陶しいかもしれません。<code>.userconfig</code> ファイルに次の行を追加することで、これを無効にできます:</p>
+
+<pre>export NOFTU=1</pre>
+
+<p>これは、ビルド時に <code>NOFTU=1</code> make オプションを含めることで、オンザフライに実現できます。</p>
+
+<h3 id="アップデータと更新ツールをビルドする">アップデータと更新ツールをビルドする</h3>
+
+<p>デフォルトでは、アップデータと更新ツールは <strong>userdebug</strong> と <strong>user</strong> ビルドでのみビルドされます。</p>
+
+<p>アップデータと関連ツールを強制的にビルドするには、<code>.userconfig</code> ファイルに次の行を追加してください:</p>
+
+<pre>export B2G_UPDATER=1</pre>
+
+<h2 id="Gaia_開発者モードを有効にする">Gaia 開発者モードを有効にする</h2>
+
+<p>アプリの開発や gaia をハックする計画がある場合、様々な役立つ設定を自動的にセットして、端末で用意に作業できます。例えば、自動的にリモートデバッグ機能を有効にし、デバッグ接続開始時にプロンプトを無効にすることができます。</p>
+
+<p>必要な設定は、<code>.userconfig</code> ファイルに次の export 文を追加するだけです:</p>
+
+<pre>export DEVICE_DEBUG=1</pre>
+
+<h2 id="Valgrind_を有効にする">Valgrind を有効にする</h2>
+
+<p>Valgrind は、アプリのメモリやスレッドの問題をデバッグするのに役立つデバッグツールです。Valgrind を実行するための詳細情報は、<a href="/Firefox_OS/Debugging/Debugging_B2G_using_valgrind">Debugging B2G using valgrind</a> を参照してください。</p>
+
+<p>B2G 下で Valgrind を使用するには、<code>.userconfig</code> に次の export 文を追加します:</p>
+
+<pre>export B2G_VALGRIND=1</pre>
+
+<h2 id="既定のホストコンパイラの変更方法">既定のホストコンパイラの変更方法</h2>
+
+<p> GCC 4.7 以降を既定のコンパイラとして使用する最近のディストリビューションでは、ビルド可能にするため、選んだプラットフォームに応じて古いバージョンを指定する必要があります。そうするには <code>.userconfig</code> ファイルに次の 2 行を追加します。<code>CC</code> と <code>CXX</code> 変数を、別の C と C++ コンパイラを使うように設定します。例えば Ubuntu 12.10 で GCC 4.6 を使うには次のようにします:</p>
+
+<pre>export CC=gcc-4.6
+export CXX=g++-4.6
+</pre>
+
+<p>または、ソースからビルドしたバージョンを使っている場合、実行ファイルへのフルパスを記述します:</p>
+
+<pre>export CC=/opt/gcc-4.6.4/bin/gcc
+export CXX=/opt/gcc-4.6.4/bin/g++
+</pre>
+
+<h2 id="独自の_Gecko_オブジェクトツリーの場所を指定する">独自の Gecko オブジェクトツリーの場所を指定する</h2>
+
+<p>gecko ソースツリーとその他のビルドオプションを一旦変更した場合、オブジェクトが格納される場所も変更したくなるでしょう (つまり、例えば全てのデバッグ用オブジェクトを非デバッグ用オブジェクトのツリーと別にするなど)。次のようにします:</p>
+
+<pre>export GECKO_OBJDIR=${GECKO_PATH}/objdir-gonk-debug
+</pre>
+
+<p><code>${GECKO_PATH}</code> を使うと、異なる gecko ツリー (例: central, beta, aurora など) を切り替えるのが楽になります。</p>
+
+<h2 id="デバッグオブジェクトと非デバッグオブジェクトの両方を保持する">デバッグオブジェクトと非デバッグオブジェクトの両方を保持する</h2>
+
+<p><code>.userconfig</code> ファイルを使用して、デバッグビルドとリリースビルドを、毎回全部ビルドすることなく切り替えることができます。</p>
+
+<pre class="brush:bash;">export B2G_DIR=${B2G_DIR:-$(cd $(dirname $0); pwd)}
+echo "B2G_DIR = ${B2G_DIR}"
+
+export GECKO_PATH=${B2G_DIR}/mozilla-inbound
+echo "GECKO_PATH = ${GECKO_PATH}"
+
+export B2G_DEBUG=1
+echo "B2G_DEBUG = ${B2G_DEBUG}"
+
+export GECKO_OBJDIR=${GECKO_PATH}/objdir-gonk
+if [[ "${B2G_DEBUG}" != "0" ]]; then
+  export GECKO_OBJDIR=${GECKO_OBJDIR}-debug
+fi
+if [[ "${GECKO_PATH/*mozilla-inbound*/mozilla-inbound}" == "mozilla-inbound" ]]; then
+  export GECKO_OBJDIR=${GECKO_OBJDIR}-m-i
+fi
+echo "GECKO_OBJDIR = ${GECKO_OBJDIR}"</pre>
+
+<p><code>echo</code> コマンドは、現在の設定を表示します。デバッグビルドとリリースビルドを切り替えるには、7 行目の <code>B2G_DEBUG</code> の値を変更するだけです。</p>

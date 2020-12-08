@@ -1,0 +1,207 @@
+---
+title: サイドバーの追加
+slug: Archive/Mozilla/XUL/School_tutorial/Adding_sidebars
+tags:
+  - XUL
+translation_of: Archive/Add-ons/Overlay_Extensions/XUL_School/Adding_sidebars
+---
+<div><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/School_tutorial/Adding_Windows_and_Dialogs" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/School_tutorial/JavaScript_Object_Management">次のページ  »</a></p>
+</div></div>
+
+
+
+<p>Firefox のサイドバーは、新しいウィンドウや複雑なオーバーレイを必要とせずにリッチインタフェースを追加するための、比較的広く、サイズ変更可能なスペースです。サイドバーは、ユーザが望む広さで表示され、あなたの作りこんだデータとコントロールを追加できるフレームを提供します。ブックマークや履歴のサイドバーに馴染みがあるでしょう。開いたことが無ければ、メニューの [表示] &gt; [サイドバー] からどちらかを開いてください。これらはキーボードショートカットで開いたり閉じたりすることもできます。</p>
+
+
+<p>サイドバーを追加するために必要なコードはとても簡単です。『<a href="/ja/docs/Creating_a_Firefox_sidebar">Firefox サイドバーの作成</a>』 に説明があります。 この説明よりもさらに簡単です。必要なことは、サイドバーの表示メニューにオーバーレイを適用するだけです。</p>
+
+
+<pre class="brush:xml">&lt;menupopup id="viewSidebarMenu"&gt;
+  &lt;menuitem id="xulschoolhello-sidebar"
+    label="&amp;xulschoolhello.sidebar.title;"
+    accesskey="&amp;xulschoolhello.sidebar.accesskey;"
+    type="checkbox" autoCheck="false" group="sidebar"
+    sidebarurl="chrome://xulschoolhello/content/sidebar.xul"
+
+    sidebartitle="&amp;xulschoolhello.sidebar.title;"
+    oncommand="toggleSidebar('xulschoolhello-sidebar');" /&gt;
+&lt;/menupopup&gt;</pre>
+
+
+
+<p>MDC ページの例には、新しいサイドバーを開くショートカットキーの組み合わせが含まれています。<a href="/ja/docs/XUL_Tutorial/Keyboard_Shortcuts" title="XUL Tutorial/Keyboard Shortcuts">キーボードショートカット</a>は、Firefox の基本的な機能であり、すばらしいことに、あなたの拡張機能にも独自のショートカットキーを追加できます。問題は、正しいキーボードショートカットを選ぶことがとても難しいことです。<a href="http://adblockplus.org/blog/shortcut-keys-are-hard">AdBlock Plus の作者による解説</a>と <a href="http://www.mozilla.org/access/keyboard/">Mozilla キーボードリファレンス</a> を参照してください。まとめると、<kbd><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd><var>(任意の文字)</var></kbd></kbd> のような Firefox と競合しないキーの組み合わせが使用できますが、他の拡張機能が同じ組み合わせを使用しているかどうかを知る方法はありません。ショートカットキーは使い慣れたユーザにはとても価値のあるものですが、決してこれに頼ってはいけません。</p>
+
+
+<p>サイドバーの XUL ページには、他の XUL ウィンドウやオーバーレイと同様に、どのようなコンテンツでも表示できます。僅かな違いの一つは、XUL サイドバーは、<em>window</em> 要素や <em>dialog</em> 要素の代わりに、<a href="/ja/docs/XUL/page" title="XUL/page">page</a> ルート要素を使用して定義されることです。また、サイドバーが開かれた時に load イベント、閉じられた時に unload イベントが毎回発生するため、これらをサイドバーの初期化や後始末に利用できます。</p>
+
+
+<p>もう一つの考慮すべき重要な違いは、ユーザがサイドバーのサイズを自由に変更できるため、表示幅が狭くなってしまう場合があることです。サイドバー内のコンテンツの幅に注意して、その幅に関係なく使いやすくなるように設計してください。サイドバーの幅を CSS で制限する方法やサイズ変更を無効化する方法もありますが、これらは良い方法とは言えません。サイドバーの幅を固定サイズにすると、アクセシビリティやユーザビリティの問題が起こる原因になります。</p>
+
+
+<p>広いスペースを必要としない方法で管理すれば、サイドバーで多くのコンテンツが利用できます。以下のセクションでは、このための役立つ XUL 要素を見ていきます。これらを使用すれば、コンテンツを上に積み上げたり異なるセクションを簡単に切り替えたりできます。</p>
+
+
+
+
+<h2 id="The_tabbox_Element" name="The_tabbox_Element">tabbox 要素</h2>
+
+<p><a href="/ja/docs/XUL/tabbox" title="XUL/tabbox">tabbox</a> 要素は、タブ化された <a href="/ja/docs/XUL/tabpanels" title="XUL/tabpanels">tabpanel</a> 要素のビューを作成します。Firefox の設定ウィンドウの詳細パネルを開くと <em>tabbox</em> 要素の例が見られます。タブのスタイルは使用しているオペレーティングシステムに合わせられるため、タブボックスの CSS を変更することは避けてください。一方で、見かけの異なる <em>tabbox</em> のような振る舞いをする UI が必要な場合は、<em>tabbox</em> を使用して CSS で外観を変更するとよいでしょう。カスタムで作成された要素を使用すると、アクセシビリティや機能に問題を起こす原因になることがあります。</p>
+
+<p>タブ付きビューの作成は非常に簡単です。以下に例を示します。</p>
+
+<pre class="brush:xml">&lt;tabbox id="xulschoolhello-tabbox"&gt;
+  &lt;tabs&gt;
+    &lt;tab label="&amp;xulschoolhello.mainTab.label;" /&gt;
+    &lt;tab label="&amp;xulschoolhello.advancedTab.label;" /&gt;
+  &lt;/tabs&gt;
+  &lt;tabpanels&gt;
+    &lt;tabpanel&gt;
+      &lt;!-- メインパネル用のコンテンツ --&gt;
+    &lt;/tabpanel&gt;
+    &lt;tabpanel&gt;
+      &lt;!-- 詳細パネル用のコンテンツ --&gt;
+    &lt;/tabpanel&gt;
+  &lt;/tabpanels&gt;
+&lt;/tabbox&gt;</pre>
+
+<p>デフォルトでは最初のタブが選択されます。<a href="/ja/docs/XUL/tab" title="XUL/tab">tab</a> 要素で <a href="/ja/docs/XUL/Attribute/selected" title="XUL/Attribute/selected">selected</a> 属性を true に設定すると、そのタブをデフォルトで選択されるタブにできます。</p>
+
+<p><em>tabpanel</em> は、どのようなコンテンツでも保持できます。ただし、すべてのタブボックスは、上部のタブストリップや最も大きなパネルのコンテンツと同じだけ大きくなることを考慮しなければなりません。タブパネル内のコンテンツのバランスを取り、不揃いのパネルやほとんど空のパネルが無いようにしてください。</p>
+
+
+<h2 id="Decks_and_stacks" name="Decks_and_stacks">デッキとスタック</h2>
+
+<p>時々、一つの <em>tabbox</em> で提供されるよりもきめの細かいコントロールを必要とすることがあるでしょう。このような場合は、<a href="/ja/docs/XUL/deck" title="XUL/deck">deck</a> 要素と <a href="/ja/docs/XUL/stack" title="XUL/stack">stack</a> 要素を使用してください。これらは、サイドバーと並んで多くの状況で使用でき、とても役立ちます。</p>
+
+<p><em>deck</em> は、タブの無い <em>tabbbox</em> のようなものです。これは、<a href="/ja/docs/XUL/Attribute/selectedIndex" title="XUL/Attribute/selectedIndex">selectedIndex</a> 属性の値に従って、一度に一つの子ノードだけを表示します。次の例では、1 番目の子ノードではなく、2 番目の子ノードがデフォルトで表示されます。</p>
+
+
+<pre class="brush:xml">&lt;deck selectedIndex="2"&gt;
+  &lt;hbox&gt;
+    &lt;!-- 1 番目の子ノードのコンテンツ --&gt;
+  &lt;/hbox&gt;
+  &lt;hbox&gt;
+    &lt;!-- 2 番目の子ノードのコンテンツ --&gt;
+  &lt;/hbox&gt;
+&lt;/deck&gt;</pre>
+
+<div class="note">
+<p>この例は、要素の属性名にすべて小文字が使用される代わりにキャメルケースが使用されている数少ない例の一つです。</p>
+</div>
+
+
+<p>deck のサイズは、<em>tabbox</em> と同様に、子ノードの中で最も大きなものに依存します。</p>
+
+<div class="note">
+<p><em>deck</em> や <em>stack</em> の子ノードには、<em>hbox</em> 要素や <em>vbox</em> 要素を使用することをお勧めします。コードが読みやすくなり、管理しやすくなります。</p>
+</div>
+
+
+
+<p><em>deck</em> は、異なる状況によって僅かに変化するだけの大きな XUL コードでとても役立つ場合があります。例えば、2 つの異なる目的で使用されるウィンドウがあり、それらの違いが、ある場合は値を持ち、もう一つの場合は他の何かになるような、ラベルに違いがあるだけの場合です。この場合は、<em>.properties</em> ファイルと <em>stringbundle</em> 要素を使用する方法がありますが、特に、動的なテキストを必要とする場合だけは、単純なことのために多くのコードを書かなければなりません。代わりに、2 つのラベルを持つ deck を使用し、ウィンドウの目的に応じて selectedIndex を変更する方法があります。この方法なら DTD が使用でき、コードを簡単なままにできます。</p>
+
+<p><a href="/ja/docs/XUL/stack" title="XUL/stack">stack</a> 要素は <em>deck</em> に似ていますが、常にすべての子ノードが重なって表示されます。これは、複雑な UI を個別のレイヤーに分けることができ、レイアウトの可能性が広がります。stack の一般的な使用方法の一つとして、前面のオブジェクトのサイズに応じて上下左右に引き延ばせる背景画像を置くことができます:</p>
+
+
+<pre class="brush:xml">&lt;stack&gt;
+  &lt;hbox flex="1"&gt;
+    &lt;image src="chrome://xulschoolhello/skin/stack-bg.png" flex="1" /&gt;
+  &lt;/hbox&gt;
+  &lt;hbox&gt;
+    &lt;!-- コンテンツ --&gt;
+  &lt;/hbox&gt;
+&lt;/stack&gt;</pre>
+
+
+
+<p>背景画像は CSS で引き伸ばすことができないため、この回避策が必要になります。
+<br>(※ Firefox 3.6 以降は CSS プロパティの -moz-background-size で可能)</p>
+
+
+<p><em>stack</em> 要素のそれほど一般的でない使用方法として、<em>left</em> 属性と <em>top</em> 属性を子ノードに使用して、レイヤー上のコンテンツの絶対位置を指定できます。このような配置の仕方は、様々な芸術的な効果のために役立ちます。また、デスクトップやダッシュボードのようなインタフェースで、ユーザの指定した位置にアイテムを配置したり各アイテムを重ねたりできます。とはいえ、これはとても容易に複雑なコードになってしまいます。</p>
+
+
+<div class="note">
+<p>要素を伸縮自在にすることと絶対位置に配置することは同時に行えません。</p>
+</div>
+
+
+
+<h2 id="Trees" name="Trees">ツリー</h2>
+
+<p>Firefox のブックマークサイドバーと履歴サイドバーは、コンテンツの表示に <a href="/ja/docs/XUL/tree" title="XUL/tree">tree</a> 要素を使用しています。tree は、大量の情報をコンパクトにまとめて表示する必要がある場合に、もう一つの強力な選択肢となります。ツリーには少数のルートノードだけが表示され、ユーザがその中から必要なものを広げられます。ツリーをデータのテンプレートと結びつけると特に力を発揮しますが、このトピックは後で取り上げます。ツリーについての詳細は、<a href="/ja/docs/XUL_Tutorial/Trees" title="XUL Tutorial/Trees">XUL チュートリアル</a>のページをお読みください。</p>
+
+<p><em>tree</em> 要素は、XUL の中で最も複雑な要素かもしれません。用途がとても広く順応性が高いため、特定の用途に合わせるためにある程度の作業が必要になります。ツリーを実際に階層構造を持つテーブルとして表示する場合は、ツリーのコンテンツを行と列に置き換えて定義します。以下は、簡単なツリーの例です:</p>
+
+
+<pre class="brush:xml">&lt;tree flex="1"&gt;
+  &lt;treecols&gt;
+    &lt;treecol label="&amp;xulschoolhello.nameColumn.label;" flex="1" /&gt;
+    &lt;treecol label="&amp;xulschoolhello.greetingColumn.label;" flex="3" /&gt;
+  &lt;/treecols&gt;
+  &lt;treechildren&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Peter" /&gt;
+        &lt;treecell label="Hey, what's up?" /&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="John"/&gt;
+        &lt;treecell label="Good evening, how are you doing?" /&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+  &lt;/treechildren&gt;
+&lt;/tree&gt;</pre>
+
+
+<p>tree の行のテキストは、locale ファイルからのテキストを使用していないため、コードに直接書かれています。実際の拡張機能では、データベースやリモート API などのデータソースからのデータを使用します。この tree は、一階層の深さしかないため、たいしたツリーではありません。さらに念入りに作られたツリーは次のようになります:</p>
+
+
+<pre class="brush:xml">&lt;tree flex="1"&gt;
+  &lt;treecols&gt;
+    &lt;treecol label="&amp;xulschoolhello.nameColumn.label;" flex="1" /&gt;
+    &lt;treecol label="&amp;xulschoolhello.greetingColumn.label;" flex="3" /&gt;
+  &lt;/treecols&gt;
+  &lt;treechildren&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Peter" /&gt;
+        &lt;treecell label="Hey, what's up?" /&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+    &lt;!-- container 属性を指定する必要があるので注意してください --&gt;
+    &lt;treeitem container="true" open="true"&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="John"/&gt;
+        &lt;treecell label="Good evening, how are you doing?" /&gt;
+      &lt;/treerow&gt;
+      &lt;treechildren&gt;
+        &lt;treeitem&gt;
+          &lt;treerow&gt;
+            &lt;treecell label="John Jr." /&gt;
+            &lt;treecell label="Bah, bah!" /&gt;
+          &lt;/treerow&gt;
+        &lt;/treeitem&gt;
+      &lt;/treechildren&gt;
+    &lt;/treeitem&gt;
+  &lt;/treechildren&gt;
+&lt;/tree&gt;</pre>
+
+
+
+<p>この例では、"John" の行の子ノードに "John Jr." の行があります。<a href="/ja/docs/XUL/treechildren" title="XUL/treechildren">treechildren</a> 要素は、John の <a href="/ja/docs/XUL/treeitem" title="XUL/treeitem">treeitem</a> 要素の子ノードとして置かれており、treeitem には <a href="/ja/docs/XUL/Attribute/container" title="XUL/Attribute/container">container</a> 属性が設定されている必要があります。</p>
+
+<p>ツリーのコードを手書きにすることはとても時間がかかるため、多くの XML コードを続けて書くのが大変なことは明らかです。これが、<em>tree</em> 要素を使用する時は外部のデータソースからのデータを表示する大きな理由です。また、JavaScript や DOM 関数を使用してツリーを構築しても、とても複雑になります。そうするよりも、テンプレートを使用して構築したほうがよいでしょう。このトピックについては、後で別の種類のデータソースとテンプレートを見ていく時に取り上げます。</p>
+
+<p>ツリーにスタイルを追加することも興味をそそられます。MDC のガイドに、このことだけを扱った<a href="/ja/docs/XUL_Tutorial/Styling_a_Tree" title="XUL Tutorial/Styling a Tree">ツリーにスタイル付けする方法</a>のページがあります。ブックマークサイドバーや履歴サイドバーを見れば、ツリーのほとんどの部分が CSS でカスタマイズ可能なことが分かるでしょう。</p>
+
+<div><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/School_tutorial/Adding_Windows_and_Dialogs" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/School_tutorial/JavaScript_Object_Management">次のページ  »</a></p>
+</div></div>
+
+
+
+<p><small>This tutorial was kindly donated to Mozilla by Appcoast.</small></p>

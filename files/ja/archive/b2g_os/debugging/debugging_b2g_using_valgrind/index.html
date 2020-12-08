@@ -1,0 +1,132 @@
+---
+title: Valgrindを使用してデバッグする
+slug: Archive/B2G_OS/Debugging/Debugging_B2G_using_valgrind
+tags:
+  - B2G
+  - Firefox OS
+  - valgrind
+translation_of: Archive/B2G_OS/Debugging/Debugging_B2G_using_valgrind
+---
+<p><span style="position: fixed ! important; top: 0px ! important; left: 0px ! important; font-size: xx-small ! important; line-height: 130% ! important; border-color: black ! important; border-width: 1px ! important; border-style: solid ! important; padding: 0px 2px ! important; background-color: rgb(214, 227, 254) ! important; display: none;">S</span></p>
+
+<div class="summary">
+<p><a href="http://valgrind.org">Valgrind<span style="font-family: arial,sans-serif; font-size: xx-small ! important; line-height: 130% ! important; border-width: 1px ! important; border-style: solid ! important; padding: 0px 2px ! important; margin-left: 2px; max-width: 20px; overflow: visible ! important; float: none ! important; display: none;">DSS</span></a> により開発者はメモリアロケーションや、スレッド/プロセスや、その他プログラムのパフォーマンスについての情報にアクセスできます。これはFirefox OS ツリーに含まれていて、適切なリソースのある特定の電話機で実行できます。この記事では使用方法を説明します。</p>
+</div>
+
+<h2 id="必要条件">必要条件</h2>
+
+<p>Firefox OSでValgrindを実行する前に、開発者は<a href="/ja/docs/Debugging_Mozilla_with_Valgrind">Debugging Mozilla with Valgrind<span style="font-family: arial,sans-serif; font-size: xx-small ! important; line-height: 130% ! important; border-width: 1px ! important; border-style: solid ! important; padding: 0px 2px ! important; margin-left: 2px; max-width: 20px; overflow: visible ! important; float: none ! important; display: none;">DSD</span><span style="font-family: arial,sans-serif; font-size: xx-small ! important; line-height: 130% ! important; border-width: 1px ! important; border-style: solid ! important; padding: 0px 2px ! important; margin-left: 2px; max-width: 20px; overflow: visible ! important; float: none ! important; display: none;">DSD</span><span style="font-family: arial,sans-serif; font-size: xx-small ! important; line-height: 130% ! important; border-width: 1px ! important; border-style: solid ! important; padding: 0px 2px ! important; margin-left: 2px; max-width: 20px; overflow: visible ! important; float: none ! important; display: none;">DSG</span></a>の記事を読んで慣れておく事が推奨されます。ビルドとコマンドラインのステップの多くがFirefox OSのビルド、実行スクリプトで考慮されていますが、その中の情報の大半はFirefox OSで実行する事に関連しています。</p>
+
+<p>電話機の Firefox OS で Valgrind を実行するには、通常スペックよりも高めの電話機が必要です。Valgrindはリソースに敏感で、RAMが1GB未満の電話機では、一般に低メモリエラーを起こします。これを書いている時点 (2013-12-04) で、Valgrind は2GBのRAMのNexus 4で Firefox OS の動作テストをされています、しかしGeeksphone Keonや同様スペックの電話機で動作するでしょう。利用できる電話機の詳細については <a href="/ja/Firefox_OS/Phones">Phone and device data</a> を見て下さい。</p>
+
+<h2 id="FxOS電話機でValgrindを実行する">FxOS電話機でValgrindを実行する</h2>
+
+<p>Valgrindを実行する処理を見ていきましょう。</p>
+
+<h3 id="コンパイルする">コンパイルする</h3>
+
+<p>Valgrind を有効にして Firefox OS をビルドするには、下記を<a href="/ja/Firefox_OS/Customization_with_the_.userconfig_file"><code>.userconfig</code> ファイル</a>に追加します。</p>
+
+<pre>export B2G_VALGRIND=1 </pre>
+
+<p>デバッグビルド (<code>B2G_DEBUG</code>) も推奨です。最適化なしビルド (<code>B2G_NOOPT</code>) は使用できないくらい遅く実行し、最適化がエラーを分かりにくくしていると考えられる場合を除き推奨されません。</p>
+
+<h3 id="実行する">実行する</h3>
+
+<div class="note">
+<p>記: Firefox OS電話機でValgrindを実行する事は、ホストOSではなく、電話機のコンテキストで行われます。これが意味する所は、開発者は<a href="/en-US/Firefox_OS/Debugging/Installing_ADB">adb</a>が利用できるあらゆるプラットフォームを使用できて、電話機でValgrindを実行するには <code>run-valgrind.sh</code> スクリプトを使用します。</p>
+</div>
+
+<p>Valgrindの元に Firefox OS を実行するには、<a href="https://github.com/mozilla-b2g/B2G/blob/master/run-valgrind.sh">B2Gディレクトリから <code>run-valgrind.sh</code> スクリプト</a>を実行します。このスクリプトは下記を行います:</p>
+
+<ol>
+ <li>電話機のファイルシステムを r/w として再マウントします。</li>
+ <li>現在のデバッグ <code>libxul.so</code> を全シンボル付きで電話機にコピーします。このファイルは数百MBあるため、このステップ完了まで多数の時間がかかることがあります。新しくビルドされるごとに毎回再実行される必要があります。valgrind を <code>libxul</code> コピーせずに実行するには、このコマンドを実行します:
+  <pre class="brush: bash">run-valgrind.sh nocopy</pre>
+ </li>
+ <li>電話機を再起動します。</li>
+ <li>電話が起動する時に開始する b2g プロセスを停止します。</li>
+ <li>valgrindの元に、自身の b2g プロセスを実行します。</li>
+</ol>
+
+<p><code>run-valgrind.sh</code> スクリプトを実行している時の全 valgrind 出力は、ターミナルの標準出力へ書き出されます。これはターミナルかファイルへのパイプいずれでも読み込みできます。</p>
+
+<div class="note">
+<p><strong>記</strong>: <code>run-valgrind.sh</code> スクリプトはb2g プロセスを実行する、自身のadbプロセスを保有するため、このスクリプトを停止すると電話機のb2gとvalgrindも停止します。おかしな状態になることがあるため、valgrindセッション実行後に電話機を再起動することが推奨されます。</p>
+</div>
+
+<h2 id="デスクトップ版Firefox_OSでValgrindを実行する">デスクトップ版Firefox OSでValgrindを実行する</h2>
+
+<p>Running valgrind against デスクトップ版Firefox OSに対してvalgrindを実行するのは、デスクトップ版Firefoxに対して実行するのと同じ方法動作します。詳細情報は<a href="/ja/docs/Debugging_Mozilla_with_Valgrind">Valgrindを使ってMozillaをデバッグする<span style="font-family: arial,sans-serif; font-size: xx-small ! important; line-height: 130% ! important; border-width: 1px ! important; border-style: solid ! important; padding: 0px 2px ! important; margin-left: 2px; max-width: 20px; overflow: visible ! important; float: none ! important; display: none;">DDS</span></a>のページを調べて下さい。関連したビルドフラグが <code>mozconfig</code>に追加され、このページにあるプラットフォーム特有の問題が適用できるでしょう。</p>
+
+<p>注意する点として、デスクトップで Valgrind を OOP/process-per-tab モードで実行するには、確実に子プロセスもトレースできるように、下記のオプション追加が必要です:</p>
+
+<pre class="brush: bash">--trace-children=yes</pre>
+
+<h2 id="Firefox_OS_Valgrindをメンテ、更新する">Firefox OS Valgrindをメンテ、更新する</h2>
+
+<p>適用できるパッチが上げられた時、Firefox OS 用のValgrindはフォークされたリポジトリでメンテされて、Firefox OSのビルドツリーやバージョンの奇抜さへの対処もしつつ、なるべく最新状態を保ちます。</p>
+
+<h3 id="Valgrindリポジトリの更新">Valgrindリポジトリの更新</h3>
+
+<div class="warning">
+<p><strong>警告:</strong> GITの経験が必要です。複雑なGit操作に慣れていない場合は、valgrindリポジトリを更新しないでください。githubリポジトリへのあらゆる更新は<code>git.mozilla.org に</code>反映され、次に開発者がマニフェストリポジトリのHEADを使って取得してしまうでしょう。Valgrindを壊してもValgrindを有効にしていないビルド(例 ビルドボット自動化)は壊れず、これを使ってみようとする開発者の邪魔になります。</p>
+</div>
+
+<p>Firefox OS valgrind と VEX の主なリポジトリはここです</p>
+
+<ul>
+ <li><a href="http://github.com/mozilla-b2g/valgrind">http://github.com/mozilla-b2g/valgrind</a></li>
+ <li><a href="http://github.com/mozilla-b2g/vex">http://github.com/mozilla-b2g/vex</a></li>
+</ul>
+
+<p>マスターブランチはこれらのリポジトリの各SVN トランクの初期バージョンで、一方 Firefox OS ブランチはトランクの最上位にrebaseされたFirefox OS固有のパッチを含んでいます。</p>
+
+<div class="note">
+<p><strong>記: 必ず両方のリポジトリを同時に更新して下さい</strong>。これらは2つの別のリポジトリですが、VEX は通常 Valgrind のサブモジュールで、valgrind のHEADは通常 VEX のHEAD を指しています。</p>
+</div>
+
+<p>これらはB2Gマニフェストで使うために、the <code>git.mozilla.org</code> ドメイン上に複製されます:</p>
+
+<ul>
+ <li><a href="http://git.mozilla.org/?p=b2g/valgrind.git;a=summary">http://git.mozilla.org/?p=b2g/valgrind.git;a=summary</a></li>
+ <li><a href="http://git.mozilla.org/?p=b2g/valgrind.git;a=summary">http://git.mozilla.org/?p=b2g/vex.git;a=summary</a></li>
+</ul>
+
+<ol>
+ <li>主なリポジトリはgit svnを使ってvalgrind SVNと同期されます。リポジトリの更新を取得するには、github から valgrind と vex のリポジトリを複製してから、次を実行します:
+  <pre class="brush: bash">git svn init -s [subversion repo url]
+</pre>
+ </li>
+ <li>SVN情報の取得は時間がかかりますが、完了した時、あなたのツリーは主な Valgrind SVN と同期されているはずです。</li>
+ <li>更なる更新を取得するには、次の一連コマンドを使います:
+  <pre class="brush: bash">git checkout master
+git svn fetch
+git svn rebase
+git push [github-remote-name] master
+git checkout fxos
+git rebase master
+</pre>
+ </li>
+ <li>Firefox OSのブランチを rebase するステップでパッチの衝突がある可能性があります。 問題に対処できない場合、衝突したコミットの作者にeメールして下さい。</li>
+ <li>rebase の後に、<code>B2G_VALGRIND</code> フラグ付きでFirefox OS のフルビルドを行い、穏やかなビルドであることを確かめます。最もよく必要になる修正は、下記のスクリプト節にリスト化しています。</li>
+ <li>いったんFirefox OSツリーのビルドの rebase <strong>とテスト</strong> が完了したら、headの変更により、Firefox OS ブランチを強制的にプッシュしないといけなくなるでしょう。
+  <pre>git push -f [github-remote-name] fxos</pre>
+ </li>
+</ol>
+
+<h3 id="スクリプトをビルド、インストール、実行する">スクリプトをビルド、インストール、実行する</h3>
+
+<p>Valgrind Firefox OS ブランチや、リポジトリ取得後に更新が必要なB2Gリポジトリの一部である複数のスクリプトがあります。</p>
+
+<h4 id="externalvalgrindandroid.mk">external/valgrind/android.mk</h4>
+
+<p>これは Android のビルドシステムスクリプトです。しばしば、Valgrind ツリーにファイル追加/削除されることにより、ここに変更が必要となります。<code>-j1</code> ビルドを使ってどのターゲットがビルドに失敗するかを見て、もしファイルを見つけられなかったり存在しないファイルを参照している場合、プロジェクトのファイルリストを更新します。</p>
+
+<h4 id="externalvalgrindvalgrind.mk">external/valgrind/valgrind.mk</h4>
+
+<p>これはビルドされて FxOS のシステムイメージに追加される必要のあるパッケージリストを含んでいて、このリストは <code>gonk-misc/b2g.mk</code> に参照されます。Valgrind が新規パッケージを追加するのはまれなため、これは通常更新の必要ありますせん、しかし必要な場合、ここに置きます。</p>
+
+<h4 id="run-valgrind.sh">run-valgrind.sh</h4>
+
+<p>電話機で Valgrind を実行するためのスクリプト。電話機で Valgrind を実行するのに必要な新規のコマンドライン引数がある場合、ここに置きます。これはデバッグシンボル付きのライブラリをコピーする場所で、よってそのプロセスのあらゆる調整・変更はここで起こるべきです。</p>

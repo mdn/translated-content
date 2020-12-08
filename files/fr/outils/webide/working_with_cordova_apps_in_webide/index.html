@@ -1,0 +1,46 @@
+---
+title: Travailler avec des applications Cordova dans WebIDE
+slug: Outils/WebIDE/Working_with_Cordova_apps_in_WebIDE
+translation_of: Archive/WebIDE/Working_with_Cordova_apps_in_WebIDE
+---
+<div>{{ToolsSidebar}}</div><div class="geckoVersionNote">
+<p>Nouveau dans Firefox 39.</p>
+</div>
+
+<p><a href="http://cordova.apache.org/">Apache Cordova</a> permet d'écrire des application en utilisant HTML, JavaScript, et CSS, et ensuite de générer des applications natives pour les plate-formes mobiles tels que iOS ou Android. Avec Cordova, <a href="/fr/Apps/Tools_and_frameworks/Cordova_support_for_Firefox_OS">vous pouvez également générer une version de votre application pour Firefox OS.</a></p>
+
+<p>Depuis Firefox 39, WebIDE supporte directement les applications Cordova : Cela signifie que vous pouvez éditer des applications Cordova dans WebIDE, et WebIDE s'occupe de générer la version Firefox OS tout seul.</p>
+
+<p>Pour commencer, il faut créer une application Cordova de façon classique :</p>
+
+<ul>
+ <li>Installer Cordova :
+  <pre class="brush: bash"><code>npm install -g cordova</code></pre>
+ </li>
+</ul>
+
+<ul>
+ <li>Créer une application Cordova :
+  <pre class="brush: bash"><code>cordova create my-app</code></pre>
+ </li>
+</ul>
+
+<ul>
+ <li>Ajouter Firefox OS comme plate-forme cible pour votre application :
+  <pre class="brush: bash">cd my-app
+cordova platform add firefoxos</pre>
+ </li>
+</ul>
+
+<div class="note">
+<p>Sur Windows, il est possible d'ouvrir une invite de commande directement dans un dossier en faisant <kbd>Maj</kbd> + <kbd>clic droit</kbd> sur le dossier voulu puis sélectionner "Ouvrir une fenêtre commandes ici"</p>
+</div>
+
+<p>Il faut ensuite :</p>
+
+<ul>
+ <li><a href="/fr/docs/Tools/WebIDE/Opening_WebIDE">Ouvrir WebIDE.</a></li>
+ <li>Sélectionner <a href="/fr/docs/Tools/WebIDE/Creating_and_editing_apps#Open_a_packaged_app">"Ouvrir une application empaquetée"</a>, puis sélectionner le dossier contenant le fichier <code>config.xml</code> de l'application.</li>
+</ul>
+
+<p>Il est maintenant possible d'éditer l'application en tant qu'application Cordova, et lorsque <a href="/fr/docs/Tools/WebIDE/Running_and_debugging_apps#Running_apps">l'application est lancée</a>, WebIDE se charge tout seul de générer la version Firefox OS. WebIDE régénère également l’application lorsque des changements qui affectent le <a href="/fr/Apps/Build/Manifest">manifeste</a> de l'application, afin de pouvoir effecteur la <a href="/fr/docs/Tools/WebIDE/Creating_and_editing_apps#Manifest_validation">validation de manifeste</a>.</p>

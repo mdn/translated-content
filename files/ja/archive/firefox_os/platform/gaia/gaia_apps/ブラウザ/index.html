@@ -1,0 +1,137 @@
+---
+title: ブラウザ
+slug: Archive/Firefox_OS/Platform/Gaia/Gaia_apps/ブラウザ
+tags:
+  - Apps
+  - B2G
+  - B2G OS
+  - Browser
+  - Gaia
+  - Guide
+translation_of: Archive/B2G_OS/Platform/Gaia/Gaia_apps/Browser
+---
+<div class="summary">
+<p><span class="seoSummary"><a href="https://github.com/mozilla-b2g/gaia/tree/v1.4/apps/browser">ブラウザアプリ</a> (現在は System の一部です) は、ページナビゲーション・検索・ブックマークなどを含むブラウザとして必要な機能を持っています。この記事では ブラウザアプリの基本的な機能の動作と、巨大なシステムの一部として動作していることについて説明します。</span></p>
+</div>
+
+<p>Gaia は Gecko 上で動作しています。これは、Gekco インスタンスとして一般的な Web ページをナビゲートするブラウザアプリや System ブラウザ を設計可能にしています。これは、<a href="https://developer.mozilla.org/en-US/docs/DOM/Using_the_Browser_API">mozBrowser API</a> を操作することにより可能になっています。</p>
+
+<div class="note">
+<p><strong>注意</strong>: B2G OS 2.1 以上から、ブラウザアプリは System アプリの一部となっています。これは、ブラウザアイコンをクリックして開いたり、ユニバーサルサーチからアクセスしたり、ナビゲーションケイパビリティからアクセスできることを意味しています。このアプリとブラウジングタブは今後 <a href="https://wiki.mozilla.org/FirefoxOS/Haida">Haida ユーザーエクスペリエンス</a>として共通のエクスペリエンスとして統合され、タスクマネージャーに表示・シートとして表示(エッジジェスチャー)されます。</p>
+</div>
+
+<h2 id="システムブラウザ_(Browser_Chromeブラウザ_クローム)">システムブラウザ (Browser Chromeブラウザ　クローム)</h2>
+
+<p>B2G OS ユーザーがホームスクリーンに表示されるように Web ページをブックマークした際、ブラウザアプリの代わりにシステムブラウザを開くサブシーケンスが動作します。これは画面下に戻る・進む・更新機能を含むツールバーを持っています。Gaia では、この機能を Browser Chrome または wrapper と呼んでいます。以下の図のように右下の矢印を押したときに表示されます。</p>
+
+<p><img alt="A diagram showing that when a web page is opened in the system browser, it is given a toolbar." src="https://mdn.mozillademos.org/files/7869/browser-app.png" style="display: block; height: 500px; margin: 0px auto; width: 738px;"></p>
+
+<p>もし Web ページで戻る・進む・更新機能を利用したい場合、アプリマニフェストに以下のように Browser Chrome を有効にすることで実現できます。</p>
+
+<pre class="brush: json">declare { chrome: { navigation: true } }</pre>
+
+<div class="note">
+<p><strong>注意</strong>: Browser Chrome のツールバーはコンテンツの高さに影響します。そのため、Web ページレイアウトに考慮する必要があります。</p>
+</div>
+
+<h3 id="処理順番">処理順番</h3>
+
+<p>B2G OS 上で新しい Web ページを開いた際、以下の処理順番になります。</p>
+
+<pre>Gecko &gt; WrapperFactory &gt; Window Manager &gt; AppWindow &gt; BrowserFrame</pre>
+
+<p><a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/system/js/wrapper_factory.js">system/js/wrapper_factory</a> から継承している Wrapper は <code>mozbrowseropenwindow</code> イベントをブックマークページから受信します。</p>
+
+<p><a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/system/js/wrapper_factory.js#L15">handleEvent</a> 部分で、ハンドラーは Web ページをブラウザアプリ・Browser Chrome どちらで開くかを定義したイベントをチェックします。</p>
+
+<p>最後に、一致するウィンドウ上で起動するために <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/system/js/wrapper_factory.js#L115">launchWrapper</a> が実行されます。</p>
+
+<h2 id="ユニバーサルサーチとナビゲーション">ユニバーサルサーチとナビゲーション</h2>
+
+<p>新しい検索とナビゲーションバーでは、B2G OS 上からユーザーはお気に入りページや、入力した URL 、新しいアプリを入手することができます。</p>
+
+<p>B2G OS は web アプリを利用しており、欲しいアプリがインストールされていない新しいアプリだとしてもすぐに開くことができます。そのため、この機能はブラウザからの<a href="https://support.mozilla.org/ja/kb/awesome-bar-find-your-bookmarks-history-and-tabs">スマートロケーションバー</a>やホームスクリーンからの<a href="https://support.mozilla.org/ja/kb/search-and-discover-content?redirectlocale=en-US&amp;redirectslug=use-adaptive-search-discover-personalized-apps"> adaptive app search </a>の組み合わせとみなせます。全ては web ライクですぐに使えるため、何もインストールする必要はありません。</p>
+
+<h2 id="ブラウザアプリ">ブラウザアプリ</h2>
+
+<p>ブラウザアプリは一般的なブラウザ体験を提供するための認定 web アプリです。メイン機能は <a href="https://github.com/mozilla-b2g/gaia/tree/v1.4/apps/browser/js/browser.js">apps/browser/js/browser.js</a> にあります。</p>
+
+<pre class="brush: js">var Browser = {
+  init: function browser_init() {
+    this.getAllElements();
+      ...
+    BrowserDB.init((function() {
+      ...
+    }
+  }
+};
+
+window.addEventListener('load', function browserOnLoad(evt) {
+  window.removeEventListener('load', browserOnLoad);
+  Browser.init();
+});</pre>
+
+<p>ブラウザは DOM がロードされた時に init() 関数を実行します。</p>
+
+<pre class="brush: js">getAllElements: function browser_getAllElements() {
+  var elementIDs = [
+    'toolbar—start', ... 'danger—dialog'];
+
+  // Loop and add element with camel style name to Modal Dialog attribute.
+  elementIDs.forEach(function createElementRef(name) {
+    this[this.toCamelCase(name)] = document.getElementById(name);
+  }, this);
+},</pre>
+
+<p>getAllElements 関数は全てのキャメルケース要素のハンドラーを取得した後に、 <a href="https://github.com/mozilla-b2g/gaia/tree/v1.4/apps/browser/js/browser_db.js">apps/browser/js/browser_db.js</a> を実行しデフォルトのサーチエンジンやブックマークの追加の準備をするために利用します。</p>
+
+<h2 id="ブックマーク">ブックマーク</h2>
+
+<p>B2G OS 2.0 から <a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/bookmark">apps/bookmark</a> はブックマークの保存 / 削除アクティビティのハンドラーとして利用しています。</p>
+
+<p>最も興味深い実装として、以下のような <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/bookmark/manifest.webapp">apps/bookmark/webapp.manifest</a> の部分です。</p>
+
+<pre class="brush: json">"activities": {
+  "save—bookmark": {
+    "filters": {
+      "type": "url",
+      "url": { "required":true, "pattern":"https?:.{1,16384}" }
+    },
+    "disposition": "inline",
+    "href": "/save.html",
+    "returnValue": true
+  },
+  "remove—bookmark": {
+    "filters": {
+      "type": "url",
+      "url": { "required":true, "pattern":"https?:.{1,16384}" }
+    },
+    "disposition": "inline",
+    "href": "/remove.html",
+    "returnValue": true
+  }
+},</pre>
+
+<p>上述しているように、アクティビティは save.html や remove.html によってハンドリングされています。この操作は <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/bookmark/js/activity_handler.js">apps/bookmark/js/activity_handler.js</a> によってデリゲートされています。</p>
+
+<pre class="brush: js">var ActivityHandler = {
+  'save—bookmark': function ah_save(activity) {
+  },
+
+  'remove—bookmark': function ah_remove(activity) {
+  }
+};
+
+navigator.mozSetMessageHandler('activity', function onActivity(activity) {
+  var name = activity.source.name;
+  switch (name) {
+    case 'save—bookmark':
+    case 'remove—bookmark':
+      if (activity.source.data.type === 'url') {
+        ActivityHandler[name](activity);
+      }
+    ...
+  }
+}</pre>
+
+<p>メッセージハンドラのリスナーである <code>navigator.mozSetMessageHandler('activity')</code> が save-bookmark または remove-bookmark アクティビティのメッセージを受信したときに、<code>ActivityHandler </code>関数は対応する操作のハンドラーを呼び出します。</p>

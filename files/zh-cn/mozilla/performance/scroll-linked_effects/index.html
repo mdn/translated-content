@@ -1,0 +1,121 @@
+---
+title: Scroll-linked effects
+slug: Mozilla/Performance/Scroll-linked_effects
+tags:
+  - CSS
+  - JavaScript
+  - Web动画
+  - 性能
+  - 滚动
+translation_of: Mozilla/Performance/Scroll-linked_effects
+---
+<p class="summary">scroll-linked<span lang="zh-CN"><span> 效果指的是某种因滚动条位置变化的而产生的效果，例如，为了产生视差滚动效果而更新 position 属性。</span> <span>本文讨论 </span></span>scroll-linked<span lang="zh-CN"><span> 效果、这些效果对性能的影响、相关工具以及可以缓解问题的技术。</span></span></p>
+
+<h2 id="滚动效果解释">滚动效果解释</h2>
+
+<p>滚动效果一般是指通过监听 {{event("scroll")}} 事件，并以某种方式修改页面上的元素（通常是 CSS 的 {{cssxref("position")}} 或 {{cssxref("transform")}} 属性）你可以在 <a href="https://github.com/RByers/css-houdini-drafts/blob/master/css-scroll-api/UseCases.md">CSS Scroll API: Use Cases</a> 找到这样的效果。</p>
+
+<p><span id="result_box" lang="zh-CN"><span>当滚动在浏览器主线程上完成时，这些效果运行良好。但是，大多数浏览器现在支持一种异步滚动，以便为用户提供恒定每秒60帧的体验。在异步滚动模型中，视觉滚动位置（译者注：即用户看到的滚动位置）在合成器线程中更新，并在 DOM 更新</span></span> {{event("scroll")}}<span lang="zh-CN"><span> 事件、主线程触发</span></span> {{event("scroll")}}<span lang="zh-CN"><span> 事件之前对用户可见。</span></span><span id="result_box" lang="zh-CN"><span>这意味着实际显示的效果将会落后于用户看到的滚动位置一点点。</span> <span>这可能会导致效果变得迟缓，总之，我们想要避免这种情况。</span></span></p>
+
+<p><span class="short_text" id="result_box" lang="zh-CN"><span>下面是一些在异步滚动中不能良好运行的例子，以及可以很好地运行的等效版本：</span></span></p>
+
+<div class="sy_shorturl_main" id="sy_shorturl_main"></div>
+
+<div class="sy_shorturl_main" id="sy_shorturl_main"></div>
+
+<h3 id="示例1：粘性定位"><span class="short_text" id="result_box" lang="zh-CN"><span>示例</span></span>1：粘性定位</h3>
+
+<p><span class="short_text" id="result_box" lang="zh-CN"><span>这是一个粘性定位效果的实现，其中“</span></span>toolbar<span class="short_text" lang="zh-CN"><span>”的 div 将在您向下滚动时“粘”在屏幕顶部</span></span></p>
+
+<div class="sy_shorturl_main" id="sy_shorturl_main"></div>
+
+<pre class="brush: html">&lt;body style="height: 5000px" onscroll="document.getElementById('toolbar').style.top = Math.max(100, window.scrollY) + 'px'"&gt;
+ &lt;div id="toolbar" style="position: absolute; top: 100px; width: 100px; height: 20px; background-color: green"&gt;&lt;/div&gt;
+&lt;/body&gt;</pre>
+
+<p><span id="result_box" lang="zh-CN"><span>这种粘性定位的实现依赖于监听</span></span><span lang="zh-CN"><span>滚动事件，来重新定位</span></span><span class="short_text" id="result_box" lang="zh-CN"><span>“</span></span>toolbar<span class="short_text" lang="zh-CN"><span>”的 div</span></span><span lang="zh-CN"><span>。由于滚动事件监听器运行于浏览器主线程的 JavaScript 中，它与用户可见的滚动是异步的。</span><span>所以，因为有异步滚动，事件处理程序将相对于用户可见的滚动来说是有延迟的，这个 div 不会像预期那样保持视觉上的固定。</span><span>相反，它将随用户的滚动移动，然后在滚动事件处理器运行时突然回到应有的位置。</span><span>这种恒定的移动和捕捉将会导致视觉效果的抖动。其中一种解决方法是使用为此设计的 CSS 属性，而不是用</span><span>滚动事件监听器：</span></span></p>
+
+<div class="sy_shorturl_main" id="sy_shorturl_main"></div>
+
+<pre class="brush: html">&lt;body style="height: 5000px"&gt;
+ &lt;div id="toolbar" style="position: sticky; top: 0px; margin-top: 100px; width: 100px; height: 20px; background-color: green"&gt;&lt;/div&gt;
+&lt;/body&gt;</pre>
+
+<p><span class="short_text" id="result_box" lang="zh-CN"><span>此版本适用于异步滚动，当用户滚动时，浏览器会更新“toolbar”的 div 的位置。</span></span></p>
+
+<h3 id="示例2：滚动捕捉"><span class="short_text" id="result_box" lang="zh-CN"><span>示例2：滚动捕捉</span></span></h3>
+
+<p class="summary"><span id="result_box" lang="zh-CN"><span>此特性已从 Web 标准中删除。</span> <span>虽然一些浏览器可能仍然支持它，但它正在被放弃。尽量不要</span><span>使用它，并尽可能更新现有代码。</span></span><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-coordinate#Browser_compatibility">https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-coordinate#Browser_compatibility</a></p>
+
+<div class="sy_shorturl_main" id="sy_shorturl_main"></div>
+
+<p><span class="short_text" lang="zh-CN"><span>以下是滚动捕捉的实现，当用户的滚动停止在 </span></span>snaptarget<span class="short_text" lang="zh-CN"><span> 附近时，滚动位置捕捉到特定目的地（</span></span>snaptarget<span class="short_text" lang="zh-CN"><span>）。</span></span></p>
+
+<div class="sy_shorturl_main" id="sy_shorturl_main"></div>
+
+<pre class="brush: html">&lt;body style="height: 5000px"&gt;
+ &lt;script&gt;
+    function snap(destination) {
+        if (Math.abs(destination - window.scrollY) &lt; 3) {
+            scrollTo(window.scrollX, destination);
+        } else if (Math.abs(destination - window.scrollY) &lt; 200) {
+            scrollTo(window.scrollX, window.scrollY + ((destination - window.scrollY) / 2));
+            setTimeout(snap, 20, destination);
+        }
+    }
+    var timeoutId = null;
+    addEventListener("scroll", function() {
+        if (timeoutId) clearTimeout(timeoutId);
+        timeoutId = setTimeout(snap, 200, parseInt(document.getElementById('snaptarget').style.top));
+    }, true);
+ &lt;/script&gt;
+ &lt;div id="snaptarget" style="position: relative; top: 200px; width: 100%; height: 200px; background-color: green"&gt;&lt;/div&gt;
+&lt;/body&gt;</pre>
+
+<p><span id="result_box" lang="zh-CN"><span>在该示例中，有滚动事件监听器，其检测滚动位置是否在“snaptarget”的 div 顶部的 200 像素内。</span> <span>如果是，则触发动画，将 div 的顶部</span></span><span lang="zh-CN"><span>“卡”到滚动位置。</span> <span>由于此动画由浏览器主线程上的 JavaScript 驱动，所以可以被其他选项卡或其他窗口中运行的 JavaScript 中断。</span> <span>因此，动画可能最终看起来很漂亮，但并不像预期那样平滑。</span> <span>相反，使用 CSS 的 snap-points 属性将允许浏览器异步运行动画，为用户提供平滑的视觉效果。</span></span></p>
+
+<div class="sy_shorturl_main" id="sy_shorturl_main"></div>
+
+<pre class="brush: html">&lt;body style="height: 5000px"&gt;
+ &lt;style&gt;
+    body {
+        scroll-snap-type: proximity;
+        scroll-snap-destination: 0 0;
+    }
+    #snaptarget {
+        scroll-snap-coordinate: 0 -8px;
+    }
+ &lt;/style&gt;
+ &lt;div id="snaptarget" style="position: relative; top: 200px; width: 100%; height: 200px; background-color: green"&gt;&lt;/div&gt;
+&lt;/body&gt;</pre>
+
+<p><span class="short_text" id="result_box" lang="zh-CN"><span>即使浏览器的主线程中运行的 JavaScript 速度较慢，该版本也能在浏览器中顺利运行。</span></span></p>
+
+<h3 id="其他效果">其他效果</h3>
+
+<p>在不少情况下，scroll-linked 效果能够通过 CSS 和在排序线程运行来重新实现。 然而， 有时浏览器提供的 API 不允许这么做。但是不管怎样, 如果 Firefox（从版本 46 之后）检测到页面上的 scroll-linked 效果， 将在控制台向开发人员显示警告 。 需要说明的是，使用滚动效果的页面如果在 JavaScript 中不监听滚动事件将无法获得此警告。你可以参考此博客文章（ <a href="https://staktrace.com/spout/entry.php?id=834">Asynchronous scrolling in Firefox</a> ）来了解更多通过 CSS 来实现避免页面延迟的例子。</p>
+
+<h2 id="未来改进">未来改进</h2>
+
+<p>未来我们将在 compositor 中支持更多的效果。为了完成这个目标，我们需要你（没错，就是你！）来告诉我们更多的你努力实现的 scroll-linked 效果，以便我们可以找到好的方式来支持它们。目前有几个对于 API 的提案可以实现这种效果，它们也都有各自的优缺点。目前正在审议的提案是：</p>
+
+<ul>
+ <li><a href="https://w3c.github.io/web-animations/">Web Animations</a>: A new API for precisely controlling web animations in JavaScript, with an <a href="https://wiki.mozilla.org/Platform/Layout/Extended_Timelines">additional proposal</a> to map scroll position to time and use that as a timeline for the animation.</li>
+ <li><a href="https://w3c.github.io/web-animations/">Web Animations</a>：在 JavaScript 中新增一个 API，用于精确控制 Web 动画，还有一个额外提议——将滚动位置映射到时间，并将其用作动画的时间轴。</li>
+ <li><a href="https://docs.google.com/document/d/18GGuTRGnafai17PDWjCHHAvFRsCfYUDYsi720sVPkws/edit?pli=1#heading=h.iy9r1phg1ux4">CompositorWorker</a>: Allows JavaScript to be run on the compositor thread in small chunks, provided it doesn't cause the framerate to drop.</li>
+ <li><a href="https://docs.google.com/document/d/18GGuTRGnafai17PDWjCHHAvFRsCfYUDYsi720sVPkws/edit?pli=1#heading=h.iy9r1phg1ux4">CompositorWorker</a>：允许 JavaScript 在小块中的合成器线程上运行，前提是不会导致帧率下降。</li>
+ <li><a href="https://docs.google.com/document/d/1VnvAqeWFG9JFZfgG5evBqrLGDZYRE5w6G5jEDORekPY/edit?pli=1">Scroll Customization</a>: Introduces a new API for content to dictate how a scroll delta is applied and consumed. As of this writing, Mozilla does not plan to support this proposal, but it is included for completeness.</li>
+ <li><a href="https://docs.google.com/document/d/1VnvAqeWFG9JFZfgG5evBqrLGDZYRE5w6G5jEDORekPY/edit?pli=1">Scroll Customization</a>：引入一个新的内容 API 来决定如何应用和消费滚动增量。在撰写本文时，Mozilla 并不打算支持这个提议，但是为了完整性，它被包括在内。</li>
+</ul>
+
+<h3 id="Call_to_action">Call to action</h3>
+
+<p>如果你对下列内容有想法或意见:</p>
+
+<ul>
+ <li>上面关于 scroll-linked 的内容中的任何提案</li>
+ <li>你想要实现的 scroll-linked 效果</li>
+ <li>任何相关的问题或想法</li>
+</ul>
+
+<p>请与我们联系，您可以通过 <a href="https://lists.w3.org/Archives/Public/public-houdini/">public-houdini</a> 邮件列表来加入讨论。</p>

@@ -1,0 +1,82 @@
+---
+title: nsIThreadInternal
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsIThreadInternal
+tags:
+  - Firefox 3
+  - Interfaces
+  - Threads
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIThreadInternal
+---
+<p> <code>nsIThreadInternal</code> インタフェースは、スレッド上に割り当てられたアクティビティを監視するために、XPCOM スレッドオブジェクトによって実装されています。</p>
+<p>継承元: <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThread" title="">nsIThread</a></code></p>
+<p><br>
+ </p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/xpcom/threads/nsIThreadInternal.idl" rel="custom">xpcom/threads/nsIThreadInternal.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">最終更新: Gecko 1.9 (Firefox 3)</span></div>
+</div>
+<h2 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E6.A6.82.E8.A6.81" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E6.A6.82.E8.A6.81">メソッドの概要</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void pushEventQueue(in <a href="ja/NsIThreadEventFilter">nsIThreadEventFilter</a> filter);</code></td>
+  </tr>
+  <tr>
+   <td><code>void popEventQueue();</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id=".E5.B1.9E.E6.80.A7" name=".E5.B1.9E.E6.80.A7">属性</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">属性</td>
+   <td class="header">型</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code>observer</code></td>
+   <td><code><a href="ja/NsIThreadObserver">nsIThreadObserver</a></code></td>
+   <td>現在のスレッドオブザーバを取得、設定します。監視を無効化する場合は <code>null</code> を設定します。この属性はどのスレッドからも読み取り可能ですが、設定は、このスレッドオブジェクトに対応したスレッド上で行わなくてはなりません。</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89">メソッド</h2>
+<h3 id="pushEventQueue.28.29" name="pushEventQueue.28.29">pushEventQueue()</h3>
+<p>現在スレッド上で待機しているすべてのイベントを、<a href="#popEventQueue.28.29">popEventQueue()</a> が呼び出されるまで中止します。さらに、新たにスレッドに割り当てられたイベントは、指定されたフィルタによって許可された場合のみ処理されます。</p>
+<p>フィルタが <code>null</code> の場合、新しいイベントはすべて許可されます。</p>
+<p><code>pushEventQueue()</code> の呼び出しは入れ子にすることができますが、スレッドを元の状態に戻すには、対応する <a href="#popEventQueue.28.29">popEventQueue()</a> の呼び出しとそれぞれ対にする必要があります。</p>
+<pre class="eval">void pushEventQueue(
+  in nsIThreadEventFilter filter
+)
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0" name=".E5.BC.95.E6.95.B0">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;filter&lt;/tt&gt;</dt>
+ <dd>
+  割り当てられたイベントに適用する <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThreadEventFilter" title="">nsIThreadEventFilter</a></code>。割り当てられているイベントをすべて許可する場合は <code>null</code>。</dd>
+</dl>
+<h3 id="popEventQueue.28.29" name="popEventQueue.28.29">popEventQueue()</h3>
+<p><a href="#pushEventQueue.28.29">pushEventQueue()</a> の呼び出しを取り消します。イベントキューが再開されると、キューに残っているイベントはすべて、より上のキューに追加されます。</p>
+<pre class="eval">void popEventQueue()
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_2" name=".E5.BC.95.E6.95.B0_2">引数</h6>
+<p>なし。</p>
+<h2 id=".E9.96.A2.E9.80.A3.E8.A8.98.E4.BA.8B" name=".E9.96.A2.E9.80.A3.E8.A8.98.E4.BA.8B">関連記事</h2>
+<ul>
+ <li><a href="ja/The_Thread_Manager">The Thread Manager</a></li>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThreadManager" title="">nsIThreadManager</a></code></li>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThread" title="">nsIThread</a></code></li>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThreadPool" title="">nsIThreadPool</a></code></li>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThreadObserver" title="">nsIThreadObserver</a></code></li>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThreadEventFilter" title="">nsIThreadEventFilter</a></code></li>
+</ul>

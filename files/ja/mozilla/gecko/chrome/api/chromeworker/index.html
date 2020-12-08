@@ -1,0 +1,54 @@
+---
+title: ChromeWorker
+slug: Mozilla/Gecko/Chrome/API/ChromeWorker
+translation_of: Mozilla/Gecko/Chrome/API/ChromeWorker
+---
+<div>
+<section class="Quick_links" id="Quick_Links">
+<ol>
+ <li><strong><a href="/en-US/docs/Web/API/Mozilla"><code>Mozilla</code></a></strong></li>
+</ol>
+</section>
+
+<div class="blockIndicator nonStandard nonStandardHeader">
+<p><strong><span class="gt-baf-term-text"><span class="gt-baf-cell gt-baf-word-clickable">非標準</span></span></strong><br>
+ この機能は標準的ではなく、標準化もされていません。 Web に公開している本番サイトでは使用しないでください。すべてのユーザに対して機能するわけではありません。実装間には大きな非互換性があり、その振る舞いは将来変更されるかもしれません。</p>
+</div>
+</div>
+
+<h2 id="要約">要約</h2>
+
+<p>特権コードを開発していて、ネイティブコードへの呼び出しを実行するために <a href="/en/js-ctypes" title="en/js-ctypes">js-ctypes</a> を使用できる worker を作成したい場合は、標準の <a href="/ja/docs/Web/API/Worker" title="The Worker interface of the Web Workers API represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker() constructor and specifying a script to be run in the worker thread."><code>Worker</code></a> オブジェクトの代わりに <code>ChromeWorker</code> を使用してください。worker のグローバルスコープで利用可能なグローバル <code>ctypes</code> オブジェクトを介して <a href="/en/js-ctypes" title="en/js-ctypes">js-ctypes</a> にアクセスできることを除けば、標準の <a href="/ja/docs/Web/API/Worker" title="The Worker interface of the Web Workers API represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker() constructor and specifying a script to be run in the worker thread."><code>Worker</code></a> とまったく同じように機能します。ChromeWorker による js-ctypes の使用例は Github で入手でき、<a href="#seealso">下記の関連項目セクション</a>からリンクされています。Promise を特徴とするコールバックバージョンの ChromeWorker で postMessage を使用するには、<a href="/ja/docs/Web/API/PromiseWorker">PromiseWorker</a> を参照してください。</p>
+
+<p>アドオンは worker をロードするために絶対 URL を使用しなければならず、それらの URL は <code>chrome://</code> または <code>resource://</code> プロトコル (<code>file://</code> は受け入れられません) を使用する必要があります。 <code>file://</code> URL を使用したいアドオンは、まず次のようなコードを使用してリソース置換パスを登録する必要があります。</p>
+
+<pre class="brush: js">var fileuri = Services.io.newFileURI(file);
+Services.io.getProtocolHandler('resource').
+              QueryInterface(Ci.nsIResProtocolHandler).
+              setSubstitution('my-cool-addon', fileuri);
+  var worker = new Worker('resource://my-cool-addon/worker.js');</pre>
+
+<p>More references:</p>
+
+<ul>
+ <li>You can use <code>ChromeWorker</code> from <a href="/en/JavaScript_code_modules" title="en/JavaScript code modules">JavaScript code modules</a>. See <a href="/en/JavaScript_code_modules/Using_workers_in_JavaScript_code_modules" title="en/JavaScript code modules/Using workers in JavaScript code modules">Using workers in JavaScript code modules</a> for details.</li>
+ <li>You can use <a href="https://developer.mozilla.org/en-US/docs/Mozilla/ChromeWorkers/Chrome_Worker_Modules">ChromeWorker modules</a> in ChromeWorkers.</li>
+ <li>See <a class="internal" href="/En/Using_web_workers" title="en/Using DOM workers">Using web workers</a> for examples and details.</li>
+</ul>
+
+<h2 id="あわせて参照">あわせて参照<a id="seealso" name="seealso"></a></h2>
+
+<ul>
+ <li><a class="internal" href="/en/Using_web_workers" title="en/Using DOM workers">Using web workers</a></li>
+ <li><a href="/en/JavaScript_code_modules/Using_workers_in_JavaScript_code_modules" title="en/JavaScript code modules/Using workers in JavaScript code modules">Using workers in JavaScript code modules</a></li>
+ <li><a href="/en-US/docs/Web/API/Worker" title="The Worker interface of the Web Workers API represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker() constructor and specifying a script to be run in the worker thread."><code>Worker</code></a></li>
+ <li><code><a class="internal" href="/en/DOM/SharedWorker" title="en/DOM/SharedWorker">SharedWorker</a></code></li>
+ <li><a class="external" href="http://www.whatwg.org/specs/web-workers/current-work/" title="http://www.whatwg.org/specs/web-workers/current-work/">Web Workers specification</a></li>
+ <li><a href="/en-US/docs/Web/API/WorkerGlobalScope" title="The WorkerGlobalScope interface of the Web Workers API is an interface representing the scope of any worker. Workers have no browsing context; this scope contains the information usually conveyed by Window objects — in this case event handlers, the console or the associated WorkerNavigator object. Each WorkerGlobalScope has its own event loop."><code>WorkerGlobalScope</code></a></li>
+ <li><a href="https://github.com/Noitidart/ChromeWorker">GitHub :: ChromeWorker</a> - A fully working demo addon using js-ctypes from a chrome worker. Uses WinAPI example.</li>
+ <li><a href="/en-US/docs/Web/API/PromiseWorker">PromiseWorker</a>
+  <ul>
+   <li><a href="https://github.com/Noitidart/PromiseWorker">GitHub :: PromiseWorker</a> - Shows how to uses promises as an twist on postMessage feature of ChromeWorker</li>
+  </ul>
+ </li>
+</ul>

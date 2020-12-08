@@ -1,0 +1,93 @@
+---
+title: Download Manager preferences
+slug: Download_Manager_preferences
+translation_of: Archive/Mozilla/Download_Manager_preferences
+---
+<p>ダウンロードマネージャではいくつかの設定項目が使用されています。この記事ではそれらの項目の一覧を提供します。
+</p>
+<table class="standard-table"> <tbody><tr>
+<th>設定名
+</th><th>説明
+</th></tr>
+<tr>
+<td><code>browser.download.manager.showAlertOnComplete</code>
+</td><td>ダウンロード完了時に通知を表示するかどうかを示す真偽値。<br><i>規定値は <code>true</code></i>。
+</td></tr>
+<tr>
+<td><code>browser.download.manager.showAlertInterval</code>
+</td><td>ダウンロードの通知を表示してから次に表示するまでの最小時間 (ミリ秒)。2 つのダウンロードがこの時間内に完了した場合、通知は 1 つだけ表示されます。<br><i>規定値は 2000 (2 秒)</i>。
+</td></tr>
+<tr>
+<td><code>browser.download.manager.retention</code>
+</td><td>ダウンロードが正常に完了してから、どれだけの期間ダウンロードマネージャのキューに履歴を残すかを示します。0 の場合、ダウンロード履歴は完了と同時に削除されます。1 の場合、完了したダウンロードとキャンセルされたダウンロードの履歴はアプリケーション終了時に削除されます。2 の場合、ダウンロードの履歴は自動的に消去されません。<br><i><b>Firefox</b> では規定値は 2</i>。<br><i><b>Thunderbird</b> では規定値は 1</i>。<br><i><b>設定値が存在しない場合</b>、0 が使用されます</i>。
+</td></tr>
+<tr>
+<td><code>browser.download.manager.quitBehavior</code>
+</td><td>アプリケーション終了時に進行中のダウンロードが存在した場合の挙動を示します。0 の場合、ダウンロードは中止され、次回アプリケーション起動時に自動的に再開されます。1 の場合、ダウンロードは中止されますが、次回アプリケーション起動時に自動的に再開されません。2 の場合、ダウンロードは終了時キャンセルされます。<br><i>規定値は 0 (次回起動時に再開)</i>。
+</td></tr>
+<tr>
+<td><code>browser.download.manager.closeWhenDone</code>
+</td><td>ダウンロード完了時にダウンロードマネージャウィンドウを自動的に閉じるかどうかを示す真偽値。<br><i><b>Thunderbird</b> では規定値は <code>true</code></i>。<br><i><b>他のアプリケーション</b> では規定値は <code>false</code></i>。
+</td></tr>
+<tr>
+<td><code>browser.download.manager.addToRecentDocs</code>
+</td><td>新しいダウンロードを最近開いたドキュメントの一覧に追加するかどうかを示す真偽値。<br><i>規定値は <code>true</code></i>。
+</td></tr>
+<tr>
+<td><code>browser.download.manager.scanWhenDone</code>
+</td><td>ダウンロード完了時にウイルススキャンを実行するかどうかを示す真偽値。Windows XP SP2 と Windows Vista では、この値は、ダウンロードされたファイルを開く際にセキュリティの警告を表示するかどうかも示します。<br><i>規定値は <code>true</code></i>。
+</td></tr>
+<tr>
+<td><code>browser.helperApps.deleteTempFileOnExit</code>
+</td><td>ダウンロード完了時にダウンロードマネージャによって使用された一時ファイルを削除するかどうかを示す真偽値。<br><i><b>Mac</b> では規定値は <code>false</code></i>。<br><i><b>他の OS</b> では規定値は <code>true</code></i>。
+</td></tr>
+<tr>
+<td><code>browser.download.manager.flashCount</code>
+</td><td>ダウンロード完了時にユーザの注意を引くため、適切なユーザインタフェース要素を「点滅」させる回数を示します。<br><i>規定値は 2</i>。
+</td></tr>
+<tr>
+<td><code>browser.download.manager.focusWhenStarting</code>
+</td><td>ダウンロード開始時にダウンロードマネージャウィンドウにフォーカスを移すかどうかを示す真偽値。<br><i><b>Firefox</b> と <b>Thunderbird</b> では規定値は <code>false</code></i>。<br><i><b>他のアプリケーション</b> では規定値は <code>true</code></i>。
+</td></tr>
+<tr>
+<td><code>browser.download.manager.showWhenStarting</code>
+</td><td>ダウンロード完了時にダウンロードマネージャウィンドウを表示するかどうかを示す真偽値。<br><i>規定値は <code>true</code></i>。
+</td></tr>
+<tr>
+<td><code>browser.download.manager.useWindow</code>
+</td><td>ダウンロードマネージャウィンドウを使用するか (<code>true</code>)、それともブラウザウィンドウのステータスバーにダウンロードの進捗状況を表示するか (<code>false</code>) を示す真偽値。<br><i>規定値は <code>true</code></i>。
+</td></tr>
+<tr>
+<td><code>browser.download.useDownloadDir</code>
+</td><td>ファイルを自動的にダウンロードディレクトリに保存するかどうかを示す真偽値。この値が <code>false</code> の場合、ユーザは処理方法を尋ねられます。<br><i><b>Thunderbird</b> では規定値は <code>false</code></i>。<br><i><b>他のアプリケーション</b> では規定値は <code>true</code></i>。
+</td></tr>
+<tr>
+<td><code>browser.download.antivirus.dontclean</code>
+</td><td>ダウンロードされたファイルからウイルスが検出された場合、ウイルス対策ソフトが駆除を試みるかどうかを示す真偽値。<br><i>規定値は <code>false</code></i>。
+</td></tr>
+<tr>
+<td><code>browser.download.manager.alertOnEXEOpen</code>
+</td><td>実行可能ファイルを開こうと (実行しようと) した場合に、危険性について警告を表示するかどうかを示す真偽値。ユーザはダイアログ上の「今後表示しない」にチェックを入れることでこの設定を切り替えることができます。<br><i>規定値は <code>true</code></i>。
+</td></tr></tbody></table>
+<p>ダウンロードマネージャがある設定項目を探して、その値が設定されていなかった場合、ダウンロードマネージャは規定値が設定されていると見なしますが、必ずしも存在しない設定項目を追加するわけではありません。ただし、以下の表には、ダウンロードマネージャを正しく動作させるために、どの製品でも設定しておかなければならない設定項目が含まれています。
+</p>
+<table class="standard-table"> <tbody><tr>
+<th>設定名
+</th><th>説明
+</th></tr>
+<tr>
+<td><code>browser.download.folderList</code>
+</td><td>ファイルをダウンロードする既定のフォルダを示します。0 の場合はデスクトップ、1 の場合はシステムの既定ダウンロードフォルダ、2 の場合はユーザ定義フォルダ (<code>browser.download.dir</code> を参照)。<br><i><b>Firefox</b> と <b>Thunderbird</b> では規定値は <code>0</code></i>*。<br>* - <small>Firefox は、<b>Windows Vista</b> では初回起動時にこの値を <code>1</code> に変更します。</small>
+</td></tr>
+<tr>
+<td><code>browser.download.dir</code>
+</td><td>ダウンロードされたファイルの保存先としてユーザが選択したローカルフォルダ。他のブラウザから個人設定を移行すると、このパスが設定される場合があります。このフォルダは <code>browser.download.folderList</code> の値が 2 になっている場合のみ有効です。
+</td></tr>
+</tbody></table>
+<h3 id="関連記事">関連記事</h3>
+<ul><li> <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadManager" title="">nsIDownloadManager</a></code>
+</li><li> <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownload" title="">nsIDownload</a></code>
+</li><li> <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadManagerUI" title="">nsIDownloadManagerUI</a></code>
+</li></ul>
+<div class="noinclude">
+</div>

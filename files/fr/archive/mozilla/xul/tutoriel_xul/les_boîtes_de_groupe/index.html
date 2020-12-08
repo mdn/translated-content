@@ -1,0 +1,101 @@
+---
+title: Les boîtes de groupe
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Les_boîtes_de_groupe
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Groupboxes
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Détails_sur_le_modèle_de_boîte" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Ajouter_plus_d'éléments">Suivant  »</a></p>
+</div>
+
+<p>Cette section décrit la façon d'inclure des éléments dans des groupes.</p>
+
+<h3 id="Les_bo.C3.AEtes_de_groupes" name="Les_bo.C3.AEtes_de_groupes">Les boîtes de groupes</h3>
+
+<p>HTML fournit un élément, <code>fieldset</code>, qui peut être utilisé pour regrouper plusieurs éléments. Une bordure est affichée autour des éléments pour montrer qu'ils sont en relation. Un exemple pourrait être un groupe de cases à cocher. XUL fournit un élément équivalent, <code><a href="/fr/docs/Mozilla/Tech/XUL/groupbox" title="groupbox">groupbox</a></code>, qui peut être utilisé pour un usage similaire.</p>
+
+<p>Comme son nom l'indique, <code><a href="/fr/docs/Mozilla/Tech/XUL/groupbox" title="groupbox">groupbox</a></code> est un type de boîte. Ce qui signifie que les éléments à l'intérieur sont alignés selon l'application des règles des boîtes. Il y a deux différences entre les boîtes de groupes et les boîtes normales :</p>
+
+<ul>
+ <li>Une bordure incrustée est affichée par défaut autour de la boîte. Vous pouvez changer ce comportement en changeant le style CSS.</li>
+ <li>Les boîtes de groupe ont une légende qui est placée sur la partie haute de la bordure.</li>
+</ul>
+
+<p>Puisque les boîtes de groupe sont des types de boîtes, vous pouvez utiliser les mêmes attributs tels que <code id="a-orient"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/orient">orient</a></code> et <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code>. Vous pouvez mettre tous les éléments que vous voulez à l'intérieur de la boîte, mais il devra typiquement y avoir un rapport entre eux.</p>
+
+<p>Le libellé en haut de la boîte de groupe peut être créé en utilisant l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/caption" title="caption">caption</a></code>. Il fonctionne comme l'élément HTML <code>legend</code>. Un simple élément <code><a href="/fr/docs/Mozilla/Tech/XUL/caption" title="caption">caption</a></code> placé en tant que première balise fille est suffisant.</p>
+
+<h4 id="Un_simple_exemple_groupbox" name="Un_simple_exemple_groupbox">Un simple exemple groupbox</h4>
+
+<p>L'exemple ci-dessous montre un <code><a href="/fr/docs/Mozilla/Tech/XUL/groupbox" title="groupbox">groupbox</a></code> simple :</p>
+
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_titledbox_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_titledbox_1.xul">Voir</a></p>
+
+<div class="float-right"><img alt="Image:xultu_titledbox1.png" class="internal" src="/@api/deki/files/1560/=Xultu_titledbox1.png"></div>
+
+<pre>&lt;groupbox&gt;
+   &lt;caption label="Réponse"/&gt;
+   &lt;description value="Banane"/&gt;
+   &lt;description value="Mandarine"/&gt;
+   &lt;description value="Cabine téléphonique"/&gt;
+   &lt;description value="Kiwi"/&gt;
+&lt;/groupbox&gt;
+</pre>
+
+<p>Cet exemple affiche quatre bouts de texte entourés par la boîte avec le libellé <em>Réponse</em>. Notez que la boîte de groupe a une orientation verticale par défaut nécessaire pour avoir les éléments texte empilés en une seule colonne.</p>
+
+<h4 id="L.C3.A9gendes_plus_complexes" name="L.C3.A9gendes_plus_complexes">Légendes plus complexes</h4>
+
+<p>Vous pouvez aussi ajouter des éléments fils à l'interieur de l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/caption" title="caption">caption</a></code> pour créer une légende plus complexe. Par exemple, le panneau de préférence des polices de caractères de mozilla utilise un liste déroulante comme légende. Bien que vous puissiez utiliser n'importe quel contenu, vous utiliserez la plupart du temps une case à cocher ou une liste déroulante.</p>
+
+<p><span id="Exemple_2"><a id="Exemple_2"></a><strong>Exemple 2</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_titledbox_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_titledbox_2.xul">Voir</a></p>
+
+<div class="float-right"><img alt="Image:xultu_groupbox2.png" class="internal" src="/@api/deki/files/1522/=Xultu_groupbox2.png"></div>
+
+<pre>&lt;groupbox flex="1"&gt;
+   &lt;caption&gt;
+     &lt;checkbox label="Activer la sauvegarde"/&gt;
+   &lt;/caption&gt;
+   &lt;hbox&gt;
+     &lt;label control="dir" value="Répertoire :"/&gt;
+     &lt;textbox id="dir" flex="1"/&gt;
+   &lt;/hbox&gt;
+   &lt;checkbox label="Compresser les fichiers archivés"/&gt;
+&lt;/groupbox&gt;
+</pre>
+
+<p>Dans cet exemple, <a href="/fr/Tutoriel_XUL/Les_champs_de_saisie#Les_cases_.C3.A0_cocher_et_les_boutons_radio" title="fr/Tutoriel_XUL/Les_champs_de_saisie#Les_cases_.C3.A0_cocher_et_les_boutons_radio">une case à cocher</a> a été utilisée comme légende. Nous devons utiliser un script pour activer et désactiver le contenu de la boîte de groupe, quand la case est cochée ou décochée. La boîte de groupe contient une boîte horizontale avec un libellé et un champ de saisie. Ces deux éléments sont flexibles donc le champ de saisie s'agrandit quand la fenêtre s'agrandit. La case à cocher supplémentaire apparait en dessous du champ de saisie à cause de l'orientation verticale de la boîte de groupe. Nous ajouterons une boîte de groupe à notre exemple de recherche de fichiers dans la prochaine section.</p>
+
+<h3 id="Les_groupes_de_boutons_radio" name="Les_groupes_de_boutons_radio">Les groupes de boutons radio</h3>
+
+<p>Vous pouvez utiliser l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code> pour regrouper des éléments boutons radios. <code><a href="/fr/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code> est un type de boîte. Vous pouvez y mettre n'importe quel élément, et à part le comportement spécial sur les boutons radios, il fonctionne comme n'importe quelle autre boîte.</p>
+
+<p>Tous les boutons radios placés à l'intérieur d'un <code><a href="/fr/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code> seront groupés ensemble, même s'ils sont à l'intérieur de boîtes imbriquées. Ce fonctionnement est utilisé pour ajouter des éléments supplémentaires à l'intérieur de la structure, comme dans l'exemple suivant :</p>
+
+<p><span id="Exemple_3"><a id="Exemple_3"></a><strong>Exemple 3</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_titledbox_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_titledbox_3.xul">Voir</a></p>
+
+<pre>&lt;radiogroup&gt;
+   &lt;radio id="no" value="no" label="Pas de nombre"/&gt;
+   &lt;radio id="random" value="random" label="Nombre aléatoire"/&gt;
+   &lt;hbox&gt;
+     &lt;radio id="specify" value="specify" label="Nombre spécifique :"/&gt;
+     &lt;textbox id="specificnumber"/&gt;
+   &lt;/hbox&gt;
+&lt;/radiogroup&gt;
+</pre>
+
+<div class="note">Notez que l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code> n'a pas de bordure. Vous devez placer un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/groupbox" title="groupbox">groupbox</a></code> autour si vous voulez une bordure et une légende.</div>
+
+<hr>
+<p>Maintenant, nous allons utiliser tout ce que nous avons appris pour ajouter des éléments supplémentaires dans la boîte de dialogue de recherche de fichiers.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Détails_sur_le_modèle_de_boîte" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Ajouter_plus_d'éléments">Suivant  »</a></p>
+</div>
+
+<p><span class="comment">Interwiki</span></p>

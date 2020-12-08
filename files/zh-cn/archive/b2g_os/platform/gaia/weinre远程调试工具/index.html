@@ -1,0 +1,105 @@
+---
+title: Weinre 远程调试工具
+slug: Archive/B2G_OS/Platform/Gaia/Weinre远程调试工具
+tags:
+  - weinre
+translation_of: Tools/Remote_Debugging
+---
+<p>Weinre 是Apache基础工程之一，是 WEb INspector REmote 的缩写。正如其名，它是和 Firebug 或浏览器调试工具类似，但是能够在远程运行调试web页面。所以如果你使用过火狐开发者工具或Chrome的调试工具，那么上手Weinre就会非常容易，非常自然。</p>
+
+<h2 id="安装_Weinre">安装 Weinre</h2>
+
+<p>因为 Weinre 运行在 Node.js 的基础上, your first port of call would be to <a href="http://nodejs.org/">安装 Node.js</a>. Node.js comes with NPM (Node Package Manager) bundled nowadays and this is what we are going to use to install Weinre. From a terminal run the following:</p>
+
+<pre style="font-family: monospace;" class="bash">npm <span style="color: #660033;">-g</span> <strong style="color: #c20cb9; font-weight: bold;">install</strong> weinre</pre>
+
+<blockquote>
+<p>NOTE: The <code>-g</code> flag is used to install Weinre as a <a href="https://npmjs.org/doc/global.html">global Node.js module</a> for command line goodness but, on Linux and Mac, this means you most likely are going to need to run the above by prepending <code>sudo</code> to the above command.</p>
+</blockquote>
+
+<p>Once the installation process is complete, we are ready to use Weinre to debug.</p>
+
+<h2 id="启动_Weinre_服务">启动 Weinre 服务</h2>
+
+<p>On the terminal enter the following line to start up the Weinre server:</p>
+
+<pre style="font-family: monospace;" class="bash">$ weinre <span style="color: #660033;">--boundHost</span> 127.0.0.1 <span style="color: #660033;">--httpPort</span> <span style="color: #000000;">9090</span></pre>
+
+<p><span style="color: #000000;">The two parameters passed here are the host to bind to and the port the server should listen on. Once the server has started the terminal should display a line similar to the following:</span></p>
+
+<pre style="font-family: monospace;" class="bash"><span style="color: #000000;">2013</span>-01-28T10:<span style="color: #000000;">42</span>:40.498Z weinre: starting server at http:<strong style="color: #000000; font-weight: bold;">//</strong>127.0.0.1:<span style="color: #000000;">9090</span></pre>
+
+<p>With that, fire up a browser (<em>NOTE: The UI for Weinre is built specifically for Webkit based browsers so, while it might work to some degree in other browsers, I would suggest you use Chrome</em>) and point it to <a href="http://127.0.0.1:9090">http://127.0.0.1:9090</a>. Once the landing page loads, click on the link to the debug client user interface. From this portion of the UI you can see connected clients, initially one which is the current instance of the web inspector, some general properties of our server, and your targets.</p>
+
+<h2 id="设置_Weinre_目标页面">设置 Weinre 目标页面</h2>
+
+<p>In Weinre targets are the web pages or apps that you want to debug, and in order for the target to be able to connect, you need to add a one liner to the relevant file of your app. For example, if you wanted to use Weinre to debug the Calendar app in Gaia you would open gaia -&gt; apps -&gt; calendar -&gt; index.html and right before the clong body tag, add the following:</p>
+
+<pre style="font-family: monospace;" class="xml"><span style="color: #009900;"><strong style="color: #000000; font-weight: bold;">&lt;script</strong> <span style="color: #000066;">src</span>=<span style="color: #ff0000;">"http://127.0.0.1:9090/target/target-script-min.js#anonymous"</span><strong style="color: #000000; font-weight: bold;">&gt;</strong><strong style="color: #000000; font-weight: bold;">&lt;/script<strong style="color: #000000; font-weight: bold;">&gt;</strong></strong></span></pre>
+
+<p>Normally that would be all you need to do to set up your target, but for FirefoxOS there is one more step. Gaia uses a <a href="http://www.w3.org/TR/CSP/#introduction">Content Security Policy</a> and as part of that, scripts are said to only be allowed to load if from the same origin as the application. So, if we were to try and load the Calendar now, the script from above would be blocked as it is not being loaded from the specified origin.</p>
+
+<p>To overcome this, we need to temporarily disable CSP. To do this, open up gaia -&gt; build -&gt; preferences.js and add the following line, around line 24:</p>
+
+<pre style="font-family: monospace;" class="javascript">prefs.<span style="color: #660066;">push</span><span style="color: #009900;">(</span><span style="color: #009900;">[</span><span style="color: #3366CC;">"security.csp.enable"</span><span style="color: #339933;">,</span> <strong style="color: #003366; font-weight: bold;">false</strong><span style="color: #009900;">]</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span></pre>
+
+<h2 id="使用_Weinre_和_B2G_Desktop_进行调试">使用 Weinre 和 B2G Desktop 进行调试</h2>
+
+<p>The first step we need before launching the desktop is to build our Gaia profile:</p>
+
+<pre style="font-family: monospace;" class="bash"><span style="color: #007800;">DEBUG</span>=<span style="color: #000000;">1</span> <strong style="color: #c20cb9; font-weight: bold;">make</strong></pre>
+
+<p>Once the profile is built, launch B2G desktop:</p>
+
+<div class="wp_syntax">
+<pre style="font-family: monospace;" class="bash"><strong style="color: #000000; font-weight: bold;">/</strong>Applications<strong style="color: #000000; font-weight: bold;">/</strong>B2G.app<strong style="color: #000000; font-weight: bold;">/</strong>Contents<strong style="color: #000000; font-weight: bold;">/</strong>MacOS<strong style="color: #000000; font-weight: bold;">/</strong>b2g-bin <span style="color: #660033;">-profile</span> <strong style="color: #000000; font-weight: bold;">/</strong>Users<strong style="color: #000000; font-weight: bold;">/</strong>username<strong style="color: #000000; font-weight: bold;">/</strong>mozilla<strong style="color: #000000; font-weight: bold;">/</strong>projects<strong style="color: #000000; font-weight: bold;">/</strong>gaia<strong style="color: #000000; font-weight: bold;">/</strong>profile</pre>
+</div>
+
+<p>Once B2G launches, unlock the screen and navigate to the Calendar app. Tap the app icon and keep an eye on the Weinre debug client UI. Once the app has launched you should see a target being added. Next we want to start inspecting our code, so click on the 'Elements' tab to open up the HTML and CSS inspector. You can go right ahead and edit either the HTML or the CSS as you normally would and see the changes reflected live. Note that even though the CSS looks grayed out and disabled, it is fully editable. You can also add completely new styles to the current element using the empty element.style block or amending existing rules. You will also notice you have access to the computed styles as well as metrics of the current element.</p>
+
+<h2 id="使用控制台工作">使用控制台工作</h2>
+
+<p>The next tab of interest to us is the Console tab. Here you can code away and run any JavaScript you want directly against the current app or execute code exposed by the app. In order to demonstrate the console, we will target the Call Log portion of the dialer and interact with the records stored there. First step then is to move your script src to the Dialer which is located at gaia -&gt; apps – &gt; communication -&gt; dialer -&gt; index.html.</p>
+
+<p>After it is added, build your profile, launch B2G, and then launch the Dialer. With the Dialer open, click on the call log icon, bottom left. Currently the call log is already populated with some dummy data, but let’s create our own. Click over to the Console tab in Weinre, type the following, and press enter.</p>
+
+<pre style="font-family: monospace;" class="javascript">RecentsDBManager.<span style="color: #660066;">deleteAll</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span></pre>
+
+<p>To see that our code was executed and worked, we need to refresh the call log:</p>
+
+<pre style="font-family: monospace;" class="javascript">Recents.<span style="color: #660066;">refresh</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span></pre>
+
+<p>As you can see, our call log is empty. Next step then is to add an entry back. To do this, we will create a dummy call entry Object and then pass this to the add function of the RecentsDBManager to store it:</p>
+
+<pre style="font-family: monospace;" class="javascript"><em>// Dummy entry</em>
+<strong style="color: #000066; font-weight: bold;">var</strong> recentCall <span style="color: #339933;">=</span> <span style="color: #009900;">{</span>
+    type<span style="color: #339933;">:</span> <span style="color: #3366CC;">'incoming-refused'</span><span style="color: #339933;">,</span>
+    number<span style="color: #339933;">:</span> <span style="color: #3366CC;">'555-6677'</span><span style="color: #339933;">,</span>
+    date<span style="color: #339933;">:</span> <strong style="color: #000066; font-weight: bold;">new</strong> <span>Date</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span>
+<span style="color: #009900;">}</span><span style="color: #339933;">;</span>
+RecentsDBManager.<span style="color: #660066;">add</span><span style="color: #009900;">(</span>recentCall<span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+Recents.<span style="color: #660066;">refresh</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span></pre>
+
+<p>And as you can see now, the entry we just created has been added to storage, <a href="https://developer.mozilla.org/en-US/docs/IndexedDB/Using_IndexedDB">IndexedDB</a> to be exact, and is visible in the call log view. As you might very well have noticed, another of the great features that comes with the console is auto-complete which will further speed up development.</p>
+
+<h2 id="在移动设备上调试">在移动设备上调试</h2>
+
+<p>The above has focused on using Weinre and B2G desktop, but the process to use Weinre to inspect and debug your code running on a device is exactly the same except for the IP address you will be using. When you want to debug on the device you first need to know the IP address of your host computer. Then you need to start up Weinre using this IP as the boundHost and also as the IP when including the script into your target documents.</p>
+
+<blockquote>
+<p>On Mac and Linux you can get this address using <code>ifconfig</code> and on Windows it is <code>ipconfig</code>.</p>
+</blockquote>
+
+<p>Once you have the new IP, just stop the current instance of Weinre and then do the following:</p>
+
+<pre style="font-family: monospace;" class="bash">weinre <span style="color: #660033;">--boundHost</span> 192.168.1.1 <span style="color: #660033;">--httpPort</span> <span style="color: #000000;">9090</span></pre>
+
+<p>Then inside your target document add:</p>
+
+<pre style="font-family: monospace;" class="bash"><strong style="color: #000000; font-weight: bold;">&lt;</strong>script <span style="color: #007800;">src</span>=<span style="color: #ff0000;">"http://192.168.1.1:9090/target/target-script-min.js#anonymous"</span><strong style="color: #000000; font-weight: bold;">&gt;&lt;/</strong>script<strong style="color: #000000; font-weight: bold;">&gt;</strong></pre>
+
+<p>Make and push your Gaia profile to the device using:</p>
+
+<pre style="font-family: monospace;" class="bash"><strong style="color: #c20cb9; font-weight: bold;">make</strong> install-gaia</pre>
+
+<p>Launch your target app and you are in business!</p>

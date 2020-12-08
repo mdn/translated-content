@@ -1,0 +1,46 @@
+---
+title: Personnaliser le script b2g.sh
+slug: Archive/B2G_OS/Debugging/Personnaliser_b2g.sh
+tags:
+  - B2G
+  - Déboguer
+  - Firefox OS
+translation_of: Archive/B2G_OS/Developing_Firefox_OS/Customizing_the_b2g.sh_script
+---
+<p></p><div class="overheadIndicator draft">
+    <p><strong>Brouillon</strong><br>
+    Cette page n'est pas terminée.</p>
+
+</div><p></p>
+<p>Sur téléphone, l'application <code><a href="/en-US/docs/Mozilla/Firefox_OS/Architecture#The_userspace_process_architecture" title="/en-US/docs/Mozilla/Firefox_OS/Architecture#The_userspace_process_architecture">b2g</a></code> (qui fournit entre autres les APIs Firefox OS) est démarré à travers le script <code>/system/bin/b2g.sh</code> script. Vous pouvez personnaliser ce script pour changer le comportement de Firefox OS.</p>
+<h2 id="Définir_les_variables_d'environnement">Définir les variables d'environnement</h2>
+<p>Si vous voulez juste définir une variable d'environnement pour un seul lancement de B2G, vous pouvez faire ceci :</p>
+<pre>adb shell stop b2g
+abd shell "export ENV_VAR=value &amp;&amp; /system/bin/b2g.sh"
+</pre>
+<p>Si vous voulez utiliser la même variable d'environnement tout le temps, il vous faut éditer le script <code>b2g.sh</code>, tel que décrit dans la section suivante.</p>
+<h2 id="Éditer_b2g.sh">Éditer <code>b2g.sh</code></h2>
+<p>Pour déboguer, vous voudrez peut-être définir des variables d'environnement pour journaliser des informations ou modifier la façon dont le programme <code>b2g</code> tourne. Vous pouvez le faire en éditant le script <code>b2g.sh</code>. Il n'y a aucun outil d'inclus sur le téléphone pour modifier ce fichier, il vous faudra d'abord le copier sur votre ordinateur.</p>
+<p>Connectez le téléphone à votre ordinateur, ouvrez le Terminal, et éxecutez la commande suivante pour modifier le script :</p>
+<pre>adb pull /system/bin/b2g.sh</pre>
+<p>Modifier le script pour appliquer les changements souhaités. Par exemple, supposons que vous souhaitez voir la sortie de journalisation (ce qui nécessite une compilation de déboguage), vous pourriez rajouter quelque chose comme ceci :</p>
+<pre>export NSPR_LOG_FILE=/data/local/tmp/mylog.txt
+export NSPR_LOG_MODULES=Layers:5
+</pre>
+<p>Et maintenant pour déposer votre script <code>b2g.sh</code> modifié sur votre téléphone :</p>
+<pre>adb shell stop b2g
+adb remount
+adb push b2g.sh /system/bin
+adb shell chmod 0755 /system/bin/b2g.sh
+adb shell start b2g
+</pre>
+<div class="note">
+  <p><strong>Note :</strong> <code>/data/local/tmp</code> est le seul endroit dans le système de fichier accessible en écriture aux processus de contenu.</p>
+</div>
+<h2 id="Voir_aussi">Voir aussi</h2>
+<ul>
+  <li><a href="/fr/docs/Mozilla/Boot_to_Gecko/Building_and_installing_Boot_to_Gecko" title="/en-US/docs/Mozilla/Boot_to_Gecko/Building_and_installing_Boot_to_Gecko">Compiler et installer Firefox OS</a></li>
+  <li><a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Architecture" title="/en-US/docs/Mozilla/Firefox_OS/Architecture">Vue d'ensemble de l'architecture de Firefox OS</a></li>
+  <li><a href="/fr/docs/Mozilla/Firefox_OS/deboguer" title="/en-US/docs/Mozilla/Boot_to_Gecko/Debugging_on_Boot_to_Gecko">Déboguer sur Firefox OS</a></li>
+</ul>
+<p> </p>

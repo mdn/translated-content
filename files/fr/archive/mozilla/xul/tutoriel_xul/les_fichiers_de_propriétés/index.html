@@ -1,0 +1,81 @@
+---
+title: Les fichiers de propriétés
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Les_fichiers_de_propriétés
+tags:
+  - Localisation
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Property_Files
+---
+<p> </p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Localisation" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Introduction_à_XBL">Suivant  »</a></p>
+</div>
+<p> </p>
+<p>Dans un script, les entités ne peuvent être utilisées. On utilise alors plutôt les fichiers de propriétés.</p>
+<h3 id="Propri.C3.A9t.C3.A9s" name="Propri.C3.A9t.C3.A9s">Propriétés</h3>
+<p>Les fichiers DTD sont adaptés à des chaînes issues d'un fichier XUL. Néanmoins, dans un script, les entités ne sont pas analysées pour être remplacées. De plus, vous pourriez souhaiter afficher un message généré par un script, sans par exemple connaître à l'avance son contenu. Les fichiers de propriétés peuvent être utilisés dans ce but.</p>
+<p>Un fichier de propriétés contient une suite de chaînes de caractères. Vous trouverez les fichiers de propriétés aux côtés des fichiers DTD avec l'extension <code>.properties</code>. Les propriétés dans un de ces fichiers sont déclarées selon une structure <code>nom=valeur</code>. Un exemple est décrit ci-dessous :</p>
+<pre>notFoundAlert=Aucun fichier trouvé correspondant aux critères.
+deleteAlert=Cliquez sur OK pour effacer tous vos fichiers.
+resultMessage=%2$S fichiers trouvés dans le répertoire %1$S.
+</pre>
+<p>Ici, le fichier de propriétés contient deux propriétés. Elles pourront être lues par un script et affichées.</p>
+<h3 id="Stringbundles" name="Stringbundles">Stringbundles</h3>
+<p>Vous pouvez écrire le code de lecture des propriétés vous-mêmes, néanmoins XUL fournit l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/stringbundle" title="stringbundle">stringbundle</a></code> qui le fait pour vous. Cet élément dispose de plusieurs fonctions pouvant être utilisées pour récupérer les chaînes de caractères des fichiers de propriétés et d'autres informations de localisation. Cet élément lit le contenu des fichiers de propriétés et construit une liste de ces propriétés pour vous. Vous pouvez donc ensuite y accéder par leur nom.</p>
+<pre>&lt;stringbundleset id="strbundles"&gt;
+&lt;stringbundle id="strings" src="strings.properties"/&gt;
+&lt;/stringbundleset&gt;
+</pre>
+<p>L'inclusion de cet élément permettra de lire les propriétés via le fichier 'strings.properties' dans le même répertoire que le fichier XUL. Utilisez une URL chrome pour lire un fichier de localisation. Comme pour d'autres éléments non affichables, vous devriez déclarer tous les stringbundles à l'intérieur d'un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/stringbundleset" title="stringbundleset">stringbundleset</a></code> pour les regrouper.</p>
+<h4 id="Obtention_d.27une_cha.C3.AEne_d.27une_collection" name="Obtention_d.27une_cha.C3.AEne_d.27une_collection">Obtention d'une chaîne d'une collection</h4>
+<p>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/stringbundle" title="stringbundle">stringbundle</a></code> a plusieurs propriétés. La première est <code id="a-getString"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/getString">getString</a></code> pouvant être utilisée dans un script pour lire une chaîne de caractères de la collection.</p>
+<pre>var strbundle = document.getElementById("strings");
+var nofilesfound=strbundle.getString("notFoundAlert");
+
+alert(nofilesfound);
+</pre>
+<ul> <li>Cet exemple récupère tout d'abord une référence sur la collection en utilisant son id.</li> <li>Puis il recherche la chaîne de caractères 'notFoundAlert' dans le fichier de propriétés. La fonction <code>getString()</code> retourne la valeur de la chaîne ou 'null' si la chaîne n'existe pas.</li> <li>Enfin, la chaîne de caractères est affichée dans une boîte d'alerte.</li>
+</ul>
+<h5 id=".C3.80_propos_de_l.27obtention_d.27une_cha.C3.AEne_d.27une_collection" name=".C3.80_propos_de_l.27obtention_d.27une_cha.C3.AEne_d.27une_collection">À propos de l'obtention d'une chaîne d'une collection</h5>
+<p>Si vous souhaitez utiliser l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/stringbundle" title="stringbundle">stringbundle</a></code> au sein d'un &lt;overlay&gt;, merci de faire attention. Vous devrez placer votre <code><a href="/fr/docs/Mozilla/Tech/XUL/stringbundle" title="stringbundle">stringbundle</a></code> dans un élément &lt;window&gt;, d'identifiant 'main-window'. Sinon, vous ne serez pas à même de récupérer les chaînes depuis votre code JavaScript, sans comprendre pourquoi. Ainsi, le code que vous auriez écrit aurait pu être :</p>
+<pre>&lt;overlay id="OverLayId"&gt;
+    &lt;stringbundleset id="strbundles"&gt;
+        &lt;stringbundle id="strings" src="strings.properties"/&gt;
+    &lt;/stringbundleset&gt;
+&lt;/overlay&gt;
+</pre>
+<p>Il sera donc :</p>
+<pre>&lt;overlay id="OverLayId"&gt;
+    &lt;window id="main-window"&gt;
+        &lt;stringbundleset id="strbundles"&gt;
+            &lt;stringbundle id="strings" src="strings.properties"/&gt;
+        &lt;/stringbundleset&gt;
+    &lt;/window&gt;
+&lt;/overlay&gt;
+</pre>
+<h4 id="Formatage_de_texte" name="Formatage_de_texte">Formatage de texte</h4>
+<p>La méthode suivante est <code>getFormattedString()</code>. Elle permet également d'obtenir avec une clef donnée une chaîne de la collection. Mais en plus, chaque occurrence de code de formatage (par ex. %S) est remplacée par chaque élément successif dans le tableau transmis.</p>
+<pre>var dir = "/usr/local/document";
+var count = 10;
+
+var strbundle = document.getElementById("strings");
+var result = strbundle.getFormattedString("resultMessage", [ dir, count ]);
+
+alert(result);
+</pre>
+<p>Cet exemple affichera le message suivant dans une boîte d'alerte.</p>
+<pre>10 fichiers trouvés dans le répertoire /usr/local/document.</pre>
+<p>Vous noterez que les codes de formatage <code>%1$S</code> et <code>%2$S</code> sont utilisés, et sont remplacés par les différents membres dans le tableau. Un code de formatage %<em>n</em>$S spécifie directement la position du paramètre correspondant. Bien que l'ordre des mots soit différent dans tous les langages, l'utilisation de <code>getFormattedString()</code> permet de préciser l'ordre dans les fichiers de propriétés.</p><h3 id=".C3.89chappement_de_caract.C3.A8res_non-ASCII" name=".C3.89chappement_de_caract.C3.A8res_non-ASCII">Échappement de caractères non-ASCII</h3>
+<p> </p>
+<p><strong>Avant Gecko 1.8</strong></p>
+<p>Bien que la plupart des langages nécessitent des caractères non-ASCII, les fichiers de propriétés doivent être écrits en n'utilisant que des caractères ASCII. Cependant, les fichiers de propriétés supportent d'autres caractères grâce à des séquences échappées de la forme : <code>\uXXXX</code> où XXXX est le code du caractère. Ainsi, si votre fichier de propriété contient des caractères non-ASCII, vous devrez le convertir au format 'échappement-unicode'. Pour faire cela, vous pouvez utiliser l'utilitaire en ligne de commande native2ascii fourni avec le kit de développement Java de Sun (JDK).</p>
+<p><strong>À partir de Gecko 1.8.x (et versions ultérieures) </strong></p>
+<p>Les fichiers .properties encodés en UTF-8 sont pris en charge. Vous pouvez donc utiliser des caractères non-ASCII sans avoir à les "échapper".</p>
+<hr>
+<p>Dans la prochaine section, nous découvrirons XBL qui peut être utilisé pour définir le comportement d'un élément.</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Localisation" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Introduction_à_XBL">Suivant  »</a></p>
+</div>
+<p><span class="comment">Interwiki</span></p>

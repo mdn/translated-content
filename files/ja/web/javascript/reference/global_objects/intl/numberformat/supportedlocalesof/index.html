@@ -1,0 +1,84 @@
+---
+title: Intl.NumberFormat.supportedLocalesOf()
+slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/supportedLocalesOf
+tags:
+  - Internationalization
+  - JavaScript
+  - Method
+  - NumberFormat
+translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/supportedLocalesOf
+---
+<div>{{JSRef("Global_Objects", "NumberFormat", "Intl,Collator,DateTimeFormat")}}</div>
+
+<h2 id="概要">概要</h2>
+
+<p>ランタイムのデフォルトローケルに戻る必要なしで数値変換でサポートされる提供されたローケルを含んでいる配列を返します。</p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="syntaxbox"><code>Intl.NumberFormat.supportedLocalesOf(<var>locales</var>[, <var>options</var>])</code></pre>
+
+<h3 id="Parameters" name="Parameters">引数</h3>
+
+<dl>
+ <dt><code>locales</code></dt>
+ <dd>BCP47言語タグをもった文字列、そのような文字列の配列。<code>locales</code>引数の一般的な形式に対して、{{jsxref("Global_Objects/Intl", "Intl page", "#Locale_identification_and_negotiation", 1)}}を確認して下さい。</dd>
+ <dt><code>options</code></dt>
+ <dd>
+ <p>任意。次のプロパティを持つオブジェクト:</p>
+
+ <dl>
+  <dt><code>localeMatcher</code></dt>
+  <dd>使用するローケルマッチングアルゴリズム。利用可能な値は<code>"lookup"</code> や <code>"best fit"</code>です。デフォルトは<code>"best fit"</code>です。このオプションについての情報のために、{{jsxref("Global_Objects/Intl", "Intl page", "#Locale_negotiation", 1)}}を確認して下さい。</dd>
+ </dl>
+ </dd>
+</dl>
+
+<h2 id="説明">説明</h2>
+
+<p><code>locales</code>で提供された言語パックのサブセットをもった配列を返します。返される言語タグでは、ランタイムが使われているローケルマッチングアルゴリズムが考慮して数値変換でローケルをサポートしているので、デフォルトローケルに戻る必要はありません。</p>
+
+<h2 id="例">例</h2>
+
+<h3 id="例_supportedLocalesOfを使う">例: <code>supportedLocalesOf</code>を使う</h3>
+
+<p>数値フォーマットで、バリ語ではなく、インドネシア語とドイツ語をサポートしているランタイムを仮定すると、<code>supportedLocalesOf</code> はインドネシア語とドイツ語の言語タグを返します。<code>pinyin</code> は数値フォーマットには適切ではなくインドネシア語では使われていません。インドネシアの特定のドイツ語はサポートされそうにもありません。<code>"lookup"</code>アルゴリズムの指定に注意して下さい。<code>"best fit"</code> はインドネシア語はバリ語に対して、十分にふさわしいと決定するかもしれません。というのも、 ほとんどのバリの人はインドネシア語も理解するからです。それゆえバリ言語タグも同様に返します。</p>
+
+<pre class="brush: js">var locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
+var options = { localeMatcher: 'lookup' };
+console.log(Intl.NumberFormat.supportedLocalesOf(locales, options).join(', '));
+// → "id-u-co-pinyin, de-ID"
+</pre>
+
+<h2 id="仕様">仕様</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状況</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES Int 1.0', '#sec-11.2.2', 'Intl.NumberFormat.supportedLocalesOf')}}</td>
+   <td>{{Spec2('ES Int 1.0')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+
+<div>
+<div>
+
+
+<p>{{Compat("javascript.builtins.Intl.NumberFormat.supportedLocalesOf")}}</p>
+</div>
+</div>
+
+<h2 id="関連情報">関連情報</h2>
+
+<ul>
+ <li>{{jsxref("NumberFormat", "Intl.NumberFormat")}}</li>
+</ul>

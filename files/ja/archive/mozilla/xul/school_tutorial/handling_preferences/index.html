@@ -1,0 +1,164 @@
+---
+title: Handling Preferences
+slug: Archive/Mozilla/XUL/School_tutorial/Handling_Preferences
+tags:
+  - XUL
+  - 要更新
+translation_of: Archive/Add-ons/Overlay_Extensions/XUL_School/Handling_Preferences
+---
+<div>
+ <div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_School/Observer_Notifications" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_School/Local_Storage">次のページ  »</a></p>
+</div></div>
+<h2 id="Preferences_in_Firefox" name="Preferences_in_Firefox">Firefox の環境設定</h2>
+<p>Mozilla アプリケーションは、高度なカスタマイズが可能です。環境設定は、設定とデフォルト動作から変更した情報を格納するために使用されます。Firefox の環境設定ウィンドウを開くには、メインメニューから次の項目を選択します:</p>
+<ul>
+ <li>Windows の場合、[ツール] &gt; [オプション]</li>
+ <li>Mac の場合、[Firefox] &gt; [環境設定]</li>
+ <li>Linux の場合、[編集] &gt; [設定]</li>
+</ul>
+<div class="note">
+ 「環境設定」と「オプション」の用語はプラットフォームごとに異なります。あなたのローカルファイル内で「環境設定」という用語を使用する必要があるときは、オペレーティングシステムごとに文字列を変更しなければなりません。ヒント: chrome コード内で <a href="/ja/docs/DOM/window.navigator.platform" title="DOM/window.navigator.platform">window.navigator.platform</a> を使用して Firefox を実行しているオペレーティングシステムを特定することができます。非 chrome のコード内では、<a href="/ja/docs/XPCOM_Interface_Reference/nsIAppShellService#Attributes" title="XPCOM Interface Reference/nsIAppShellService#Attributes">Hidden DOM Window</a> が使用できます。</div>
+<p>Firefox は、ユーザ設定をいくつものソースから読み込みます。各ソースは、通常のコードでは利用できない特別な関数を含む JavaScript ファイルです。環境設定には次のファイルが使用されます:</p>
+<ul>
+ <li>デフォルト設定: これは、Firefox をインストールしたディレクトリの <em>defaults/pref</em> ディレクトリ内に格納されています。</li>
+ <li>現在の設定: これは、プロファイルディレクトリ内の <em>prefs.js</em> ファイルに格納されています。プロファイルディレクトリには、ユーザ設定も格納されています。このファイルは、ユーザが設定を変更した時に更新されます。</li>
+ <li>ユーザ設定: ユーザのプロファイルディレクトリ内の <em>user.js</em> ファイルは、ユーザが設定した追加の環境設定を保持します。このファイルは Firefox によって書き込まれることはありません。ユーザがこのファイルに書き込んだ設定は、他の設定に上書きされます。</li>
+ <li><a href="/ja/docs/Automatic_Mozilla_Configurator/Locked_config_settings" title="Automatic Mozilla Configurator/Locked config settings">Lockfile 設定</a> : この設定は通常、<em>mozilla.cfg</em> あるいは <em>netscape.cfg</em> ファイルに格納されます。このファイルは、ネットワーク上に置かれ、ネットワーク管理者や ISP が中央で設定するために使用されます。さらに、ユーザがいくつかの設定を変更できないようにロックできます。ロックされた設定は、環境設定ウィンドウで無効化されます。</li>
+</ul>
+<p>Firefox は、高レベルの設定を環境設定ウィンドウなどから設定できるように露出しています。実際、Firefox はユーザに見せていない何千もの設定を扱っています。これらは、とても細かく、通常のユーザは管理できないため隠されています。また、環境設定ウィンドウをできるだけ簡単にしておくためにも隠されています。他のすべての設定へアクセスするには、ロケーションバーに "about:config" と入力します。この XUL ページには Firefox に定義されたすべての設定のリストが表示され、ユーザがそれらの設定を変更できます。このページを開く前に表示される警告メッセージのとおり、設定を変更する時は特に注意しなければなりません。正しくない値を設定すると、Firefox の動作がおかしくなったり壊れたりすることがあります。</p>
+<p>"フィルタ" テキストボックスに入力して特定の設定を検索することができます。"homepage" という単語を入力すると、すべての設定から絞り込まれ、設定名や値に "homepage" が含まれる設定だけが表示されます。設定上で右クリックすると、設定値の変更や新しい設定の追加ができるオプションが表示されます。設定値がデフォルトでないものは太字で強調されます。about:config で行ったすべての変更は、<em>prefs.js</em> ファイルに保存されます。</p>
+<p>about:config のリストには設定がすべて表示されません。一部の Firefox はデフォルト値でないため、手動で追加しない限り除かれています。Firefox 設定の広範囲な仕様は、<a class="external" href="http://kb.mozillazine.org/Category:Preferences">MozillaZine Knowledge Base のページ</a>で見られます。これらを覚えておく必要はありません。タスク X の実行にいくつかの設定が必要なときは、設定リストから探すよりも、X を行う方法を探し、必要な設定を理解したほうがよいでしょう。MDC の記事や他のガイドでは、たいてい必要な設定が指定されています。</p>
+<h2 id="Adding_preferences_to_an_extension" name="Adding_preferences_to_an_extension">拡張機能に環境設定を追加する</h2>
+<p>拡張機能は、Firefox 設定の読み書きができます。また、最も重要なこととして、これらの作成と管理もできます。<a href="/ja/docs/Code_snippets/Preferences" title="Code snippets/Preferences">環境設定システム</a>は、簡単で統一された、設定の名前と値を持つストレージを提供しています。ストレージにこれよりも複雑な格納方式が必要な場合は、後のセクションで取り上げる、さらに詳細な API が必要になります。</p>
+<p>拡張機能に環境設定を追加するには、はじめに、設定とそのデフォルト値が記述された JavaScript 設定ファイルを作成しなければなりません (デフォルト値は必須ではありません)。前にも述べたように、デフォルト値を持たない設定は後で設定できます。</p>
+<div class="note">
+ 拡張機能のすべての設定を JavaScript デフォルトファイルに含めておくことをお勧めします。これにより、拡張機能が扱う設定のリストを簡単に構成し、記録しておくことができます。</div>
+<p>作成する必要のある設定ファイルは、拡張機能のルートディレクトリの下の <em>defaults/preferences/yourextensionname.js</em> でなければなりません。この JavaScript ファイルの名前は強制されていませんが、拡張機能の名前することが慣習になっています。</p>
+<div class="note">
+ <em>defaults</em> ディレクトリの目的は、コード以外の拡張機能が必要とするファイルを保持することです。私たちは過去に、このディレクトリに XML 変換のための XSLT ファイルやローカルストレージのテンプレートファイル (後述します) を格納するために使用したことがあります。このディレクトリは、あなたの拡張機能が必要とするその他のファイルを置くのに最も良い場所です。</div>
+<p>この<a href="/@api/deki/files/4264/=HelloWorld5.zip" title="/@api/deki/files/4264/=HelloWorld5.zip">環境設定を使用する Hello World のサンプル</a>をダウンロードしてください。<em>xulschoolhello.js</em> 設定ファイルを含めるため、Makefiles に 2 カ所の変更を加えています。設定ファイルの内容は簡単です:</p>
+<pre class="brush: js">// ユーザにメッセージを表示した回数
+pref("extensions.xulschoolhello.message.count", 0);</pre>
+<p>これは、挨拶メッセージをユーザに表示した回数を追跡するために使用する設定を定義しています。設定のデフォルト値は 0 です。この設定は、拡張機能をインストールした後に about:config で見られます。この新しい設定を見るには、フィルタボックスに "xulschool" と入力するだけです。</p>
+<div class="note">
+ 設定名は、常に <em>extensions</em> で始め、続いて名前空間、実際の設定名の順に付けてください。各部分はドット記号 (.) で区切ります。</div>
+<p>それでは、環境設定の値を実際に管理する方法を見ていきましょう。</p>
+<h2 id="環境設定を_FUEL_で管理する">環境設定を FUEL で管理する</h2>
+<p><a href="/ja/docs/Toolkit_API/FUEL" title="FUEL">FUEL</a> は、拡張機能開発を容易にするために Firefox に統合された JavaScript ライブラリです。その目標には届きませんが、環境設定を扱うために使用できます。Firefox ベースのアプリケーションにも FUEL が含まれています。SeaMonkey には、バージョン 2 から FUEL に相当する <a href="/ja/docs/Toolkit_API/SMILE" title="Toolkit API/SMILE">SMILE</a> と呼ばれるものが含まれています。</p>
+<p>JSM のサンプル拡張を、内部変数の代わりに環境設定を使用するように変更しました。機能の主な違いは、Firefox を一旦閉じて開き直した後、挨拶メッセージが以前に表示された回数を記憶するようになったことです。元の拡張機能は、ブラウザのセッション内の表示回数しか追跡しませんでした。この新しいバージョンは、セッションを超えて表示回数を維持します。</p>
+<p>JSM のサンプル拡張内で非 chrome のコードを使用していたのは、メッセージの表示回数を 1 カ所に格納するためでした。新しいバージョンでは、chrome コードを排他的に使用するように簡単に変更できます。もはや、JavaScript のコードモジュールや XPCOM は必要ありません。chrome コードから FUEL ライブラリを使用する場合と非 chrome コードから使用する場合にはわずかに異なる点があります。違いは、"ルート" <a href="/ja/docs/Toolkit_API/extIApplication" title="FUEL/Application">Application オブジェクト</a>の取得の仕方にあります:</p>
+<pre class="brush: js">// chrome コード
+Application.something
+
+// 非 chrome コード
+let application =
+  Cc["@mozilla.org/fuel/application;1"].getService(Ci.fuelIApplication);
+application.something</pre>
+<p>chrome コードでは、グローバル Application オブジェクトが使用前に準備してありますが、非 chrome コードでは、これを XPCOM サービスとして取得する必要があります。これは、XPCOM サービスであり、chrome コードからはアクセスしやすくなることだけが違います。</p>
+<div class="note">
+ FUEL は、Firefox 3 以降でのみ動作します。</div>
+<p>Application オブジェクトは、<a href="/ja/docs/Toolkit_API/extIPreferenceBranch" title="FUEL/PreferenceBranch">PreferenceBranch</a> 型の <em>prefs</em> プロパティを持っています。これを環境設定の管理を容易にするために使用できます。</p>
+<p>はじめに、設定を提供するオブジェクトを取得します:</p>
+<pre class="brush: js">this._countPref =
+  application.prefs.get("extensions.xulschoolhello.message.count");</pre>
+<p>その後、<em>value</em> プロパティを使用して、その値の取得や設定ができます。</p>
+<pre class="brush: js">/**
+ * 現在のメッセージ表示回数を返す
+ * @return the current message count.
+ */
+get count() { return this._countPref.value; },
+
+/**
+ * メッセージ表示回数を 1 回増やす
+ */
+increment : function() {
+  this._countPref.value++;
+}</pre>
+<p><em>prefs</em> オブジェクトには設定値を直接取得したり設定したりできるメソッドもありますが、上記の方法の方が好ましいでしょう。</p>
+<h4 id="環境設定リスナー_(FUEL)">環境設定リスナー (FUEL)</h4>
+<p>時々、設定値が変更された時にそれを通知してほしいでしょう。例えば、browser 内のどこかにメッセージの表示回数を表示したいときは、環境設定リスナーを使用して表示回数を更新できます。この方法なら、ユーザが about:config で手動で値を変更しても正しく動作します。</p>
+<p>これを FUEL で行うには、"change" イベントのイベントリスナーを追加します:</p>
+<pre class="brush: js">this._countPref.events.addListener("change", this);</pre>
+<p>リスナーオブジェクトは、<a href="/ja/docs/Toolkit_API/extIEventListener" title="FUEL/EventListener">EventListener</a> インターフェースを実装しています。オブザーバに似て、必要なことは、JavaScript オブジェクト内で <em>handleEvent</em> メソッドを持つことです。または、<a href="/ja/docs/Toolkit_API/extIEventItem" title="FUEL/EventItem">EventItem</a> オブジェクトを取得する匿名関数を使用できます。</p>
+<pre class="brush: js">this._countPref.events.addListener("change", function(aEvent) { /* do stuff. */ });</pre>
+<p>いつでも、リスナーが必要なくなった時は削除することを忘れないでください。</p>
+<h2 id="Managing_preferences_with_XPCOM" name="Managing_preferences_with_XPCOM">環境設定を XPCOM で管理する</h2>
+<p>環境設定システムは、XPCOM で実装されています。FUEL は、XPCOM サービスを使いやすくするための表面的なラッパーにしかすぎないため、どちらを使用しても同じです。XPCOM を使用すると、いつもどおりの冗長な書き方になります。</p>
+<p>私たちは、設定値を取得、設定するために <a href="/ja/docs/nsIPrefBranch" title="NsIPrefBranch">Preferences サービス</a> を使用します:</p>
+<pre class="brush: js">this._prefService =
+  Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefBranch);
+// ...
+get count() {
+  return this._prefService.getIntPref("extensions.xulschoolhello.message.count");
+},
+increment : function() {
+  let currentCount =
+    this._prefService.getIntPref("extensions.xulschoolhello.message.count");
+
+  this._prefService.setIntPref("extensions.xulschoolhello.message.count", currentCount + 1);
+}</pre>
+<p>ここで覚えておくべき重要なことは、設定が見つからない場合、サービスの "get" メソッドが例外を投げることです。XPCOM を使用しようとするときは、常に設定のデフォルト値を設定しておくか、try / catch ブロックを使用して扱えないエラーが発生することを防がなくてはなりません。</p>
+<h4 id="環境設定リスナー_(XPCOM)">環境設定リスナー (XPCOM)</h4>
+<p>XPCOM でリスナーを追加する方法は、XPCOM セクションで <em>QueryInterface</em> メソッドを説明した時に言及しました:</p>
+<pre class="brush: js">this._prefService.QueryInterface(Ci.nsIPrefBranch2);
+this._prefService.addObserver(prefName, this, false);
+this._prefService.QueryInterface(Ci.nsIPrefBranch);</pre>
+<p><a href="/ja/docs/XPCOM_Interface_Reference/nsIPrefBranch2#addObserver()" title="NsIPrefBranch2#addObserver()">addObserver</a> メソッドが異なるインターフェースに定義されているため、上記のすべての QueryInterface が必要です。また、オブザーバの追加や削除のほか、nsIPrefBranch インターフェースをすべての環境設定にかんするメソッドのために使用します。</p>
+<p>次に、オブザーバメソッドを作成します:</p>
+<pre class="brush: js">observe : function(aSubject, aTopic, aData) {
+  if ("nsPref:changed" == aTopic) {
+    let newValue = aSubject.getIntPref(aData);
+    // do something.
+  }
+},</pre>
+<p>いつでも、オブザーバが必要なくなった時は削除することを忘れないでください:</p>
+<pre class="brush: js">this._prefService.QueryInterface(Ci.nsIPrefBranch2);
+this._prefService.removeObserver(prefName, this);</pre>
+<h2 id="環境設定ウィンドウ">環境設定ウィンドウ</h2>
+<p>ユーザが必要に応じて拡張機能の設定を変更できるようにすることは、とても一般的です。環境設定の管理に関連して難解な部分があるため、XUL と Firefox に、これへの対処を容易にするいくつかの方法が提供されています。</p>
+<p>環境設定ウィンドウを開く標準の方法は、アドオンマネージャを開き、アドオンを選択して設定ボタンをクリックすることです。あなたの拡張機能でこのボタンを有効にするには、次の 1 行を <em>install.rdf</em> に追加する必要があります:</p>
+<pre class="code-java">&lt;em:optionsURL&gt;chrome:<span class="code-comment">//xulschoolhello/content/preferencesWindow.xul&lt;/em:optionsURL&gt;</span></pre>
+<p>メニューやツールバーボタンなど別の UI からこのウィンドウを開きたいときは、オペレーティングシステムごとに環境設定を開く動作が異なることに注意する必要があります。私たちは、次のようにします:</p>
+<pre class="brush: js">openPreferences : function() {
+  if (null == this._preferencesWindow || this._preferencesWindow.closed) {
+    let instantApply =
+      Application.prefs.get("browser.preferences.instantApply");
+    let features =
+      "chrome,titlebar,toolbar,centerscreen" +
+      (instantApply.value ? ",dialog=no" : ",modal");
+
+    this._preferencesWindow =
+      window.openDialog(
+        "<a class="external" rel="freelink">chrome://xulschoolhello/content/preferencesWindow.xul</a>",
+        "xulschoolhello-preferences-window", features);
+  }
+
+  this._preferencesWindow.focus();
+},</pre>
+<p>このコードは、アドオンマネージャから環境設定ウィンドウを開くコードを基にしています。ここでは、次の 2 つのことを行っています:</p>
+<ol>
+ <li>設定ウィンドウが開いているか確認し、開いている場合はフォーカスを与える。</li>
+ <li>設定ウィンドウ内の変更がすぐに適用されない (instantApply 設定の値が false の) システムでは、ウィンドウをモーダルにする。この設定はユーザが切り替えられるため、オペレーティングシステムを確認するだけでは不十分なので注意してください。</li>
+</ol>
+<div class="note">
+ Windows 以外のシステムにおける一般的な原理として、設定ウィンドウ内の変更はすぐに適用されません。設定ウィンドウにはボタンが無いか、OK ボタンと閉じるボタンのどちらかがあるだけです。Windows では、ユーザが OK ボタンをクリックするまで変更した設定は適用されません。また、ユーザがキャンセルボタンをクリックすると設定ウィンドウ内の変更が破棄されます。これが、Windows における設定ウィンドウがモーダルである理由です。この方式では、ユーザは設定ウィンドウを無視することができず、変更を適用するか破棄することを求められます。</div>
+<p>XUL ファイルで設定ウィンドウを作成する時は、<a href="/ja/docs/XUL/window" title="XUL/window">window</a> 要素の代わりに、常に <a href="/ja/docs/XUL/prefwindow" title="XUL/prefwindow">prefwindow</a> 要素を使用してください。Firefox がこのウィンドウに OK ボタンやキャンセルボタンが必要かどうかを判断します。</p>
+<p>多くの場合、あなたの設定ウィンドウに一度に表示できるオプションの数は少ないでしょう。多くの設定がある場合は、<a href="/ja/docs/XUL/prefpane" title="XUL/prefpane">prefpane</a> 要素を使用して設定を管理してください。これは、Firefox の設定ウィンドウのように、視覚的にアピールするタブビューを作成します。<em>prefpane</em> 要素は、いくつでも置くことができるコンテナです。ウィンドウ上部のタブにはアイコンが必要です。これらのアイコンは、オペレーティングシステムごとにわずかに異なるツールバーボタンと同様です。</p>
+<p><em>prefwindow</em> 内では、設定の扱いを容易にする <a href="/ja/docs/XUL/preferences" title="XUL/preferences">preferences</a> 要素と <a href="/ja/docs/XUL/preference" title="XUL/preference">preference</a> 要素が使用できます。<em>preferences</em> 要素はコンテナです。ウィンドウごとに 1 個、または <em>prefpane</em> ごとに 1 個置いてください。この要素とその子要素は完全に隠れています。これらの目的は、ウィンドウやペイン内で使用される設定を列挙することです。</p>
+<pre class="code-java">&lt;preferences&gt;
+  &lt;preference id=<span class="code-quote">"xulschoolhello-message-count-pref"</span>
+    name=<span class="code-quote">"extensions.xulschoolhello.message.count"</span> type=<span class="code-quote">"<span class="code-object">int</span>"</span> /&gt;
+  &lt;!-- その他の設定要素 --&gt;
+
+&lt;/preferences&gt;</pre>
+<p>必要な設定を定義した後、ウィンドウやペイン内で <a href="/ja/docs/XUL/Attribute/preference" title="XUL/Attribute/preference">preference 属性</a>を使用してこれらをフォーム要素と関連付けてください:</p>
+<pre class="code-java">&lt;textbox preference=<span class="code-quote">"xulschoolhello-message-count-pref"</span> type=<span class="code-quote">"number"</span>
+  min=<span class="code-quote">"0"</span> max=<span class="code-quote">"100"</span> /&gt;</pre>
+<p>この例では、メッセージのカウント設定を設定する数値フィールドを使用しています。コントロール内の値を変更すると設定が変更され (instantApply 設定に依存します)、逆に、設定が変更されるとコントロール内の値も変更されます。<em>preference</em> 要素のおかげで、JavaScript コードを一行も書かずに設定ウィンドウを作成することができるでしょう。</p>
+<p>最後に、ウィンドウや設定ペインのコンテンツを管理するためにグループボックスを使用するとよいでしょう。これらは Firefox 設定ウィンドウ内で厳密にスタイル化されているため、Firefox のものと同じ CSS ファイル (<a class="external" rel="freelink">chrome://browser/skin/preferences/preferences.css</a>) を XUL ファイルに含めておくべきです。この方法なら、Firefox に定義されたすべての CSS 規則を書き直す必要はありません。また、XUL ファイル内の要素に設定された <em>class</em> の値を見てください。あなたの設定ウィンドウが Firefox の設定ウィンドウのようになり、あなたの拡張機能がアプリケーションに統合され、OS 本来の外観になるようにしてください。</p>
+<div>
+ <div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_School/Observer_Notifications" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_School/Local_Storage">次のページ  »</a></p>
+</div></div>
+<p><span style="font-size: small;">This tutorial was kindly donated to Mozilla by Appcoast.</span></p>

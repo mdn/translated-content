@@ -1,0 +1,839 @@
+---
+title: widget
+slug: Mozilla/Add-ons/SDK/High-Level_APIs/widget
+tags:
+  - ZH
+translation_of: Archive/Add-ons/Add-on_SDK/High-Level_APIs/widget
+---
+<p>{{LegacyAddonsNotice}}{{AddonSidebar}}</p>
+
+<div class="warning">
+<p>Deprecated in Firefox 29 and removed in Firefox 38.</p>
+
+<p>The widget API is deprecated from Firefox 29 onwards. Please see the <a href="/en-US/Add-ons/SDK/High-Level_APIs/ui">ui module</a> for replacements. In particular, for a simple button, try the <a href="/en-US/Add-ons/SDK/High-Level_APIs/ui#ActionButton">action button</a> or <a href="/en-US/Add-ons/SDK/High-Level_APIs/ui#ToggleButton">toggle button</a> APIs, and for a more complex widget try the <a href="/en-US/Add-ons/SDK/High-Level_APIs/ui#Toolbar">toolbar</a> or <a href="/en-US/Add-ons/SDK/High-Level_APIs/ui#Sidebar">sidebar</a> APIs.</p>
+</div>
+
+<p><span class="seoSummary">Create a simple user interface for an add-on in Firefox's add-on bar.</span></p>
+
+<h2 id="Usage">Usage</h2>
+
+<p>"Widgets" are small pieces of content that live in the Firefox 4 <a href="https://developer.mozilla.org/en/The_add-on_bar">add-on bar</a>. They can be simple icons or complex web pages. You can attach <a href="/en-US/Add-ons/SDK/High-Level_APIs/panel">panels</a> to them that open when they're clicked, or you can define a custom click handler to perform some other action, like opening a web page in a tab.</p>
+
+<p>There are a few advantages to using widgets over an ad hoc user interface. First, your users will be accustomed to interacting with add-ons via widgets and the add-on bar. Second, it allows Firefox to treat your interface as a first-class citizen. For example, in the future Firefox may allow the user to drag widgets from the add-on bar to other toolbars. By exposing your interface as a widget, your add-on would automatically inherit such functionality.</p>
+
+<h3 id="Creation_and_content">Creation and content</h3>
+
+<p>Widgets can contain images or arbitrary web content. You can include this content inline as a string by using the <code>content</code> property, or point to content using a URL with the <code>contentURL</code> property.</p>
+
+<p>Upon creation, the widget is automatically added to the add-on bar. You can set the width of a widget, but the height is fixed so as to fit in the add-on bar. If the content is an image, it is automatically scaled to be 16x16 pixels.</p>
+
+<p>For example, this widget contains an image, so it looks like a simple icon:</p>
+
+<pre class="brush: js">require("sdk/widget").Widget({
+  id: "mozilla-icon",
+  label: "My Mozilla Widget",
+  contentURL: "http://www.mozilla.org/favicon.ico"
+});</pre>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6695/widget-mozilla.png" style="display: block; height: 184px; margin-left: auto; margin-right: auto; width: 464px;">You can make <code>contentURL</code> point to an HTML or icon file which you have packaged inside your add-on. Just save the file in your add-on's <code>data</code> directory, and reference it using the <code>data.url()</code> method of the <a href="/en-US/Add-ons/SDK/High-Level_APIs/self"><code>self</code></a> module:</p>
+
+<pre class="brush: js">var data = require("sdk/self").data;
+
+require("sdk/widget").Widget({
+  id: "my-widget",
+  label: "My Widget",
+  contentURL: data.url("my-content.html")
+});</pre>
+
+<p>This widget contains an entire web page:</p>
+
+<pre class="brush: js">require("sdk/widget").Widget({
+  id: "hello-display",
+  label: "My Hello Widget",
+  content: "Hello!",
+  width: 50
+});</pre>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6605/widget-hello-text.png" style="display: block; height: 132px; margin-left: auto; margin-right: auto; width: 282px;">Widgets are quite small by default, so this example used the <code>width</code> property to grow it in order to show all the text.</p>
+
+<h3 id="Scripting_widget_content">Scripting widget content</h3>
+
+<p>To interact with the widget's content you need to load a separate script into the panel. In the SDK these scripts are called "content scripts" because they're explicitly used for interacting with web content.</p>
+
+<p>While content scripts can access the content they're attached to, they can't use the SDK's APIs. So implementing a complete solution usually means you have to send messages between the content script and the main add-on code.</p>
+
+<ul>
+ <li>
+  <p>You can specify one or more content scripts to load into the widget using the <code>contentScript</code> or <code>contentScriptFile</code> options to the <a href="/en-US/Add-ons/SDK/High-Level_APIs/widget#Widget(options)"><code>Widget()</code> constructor</a>.</p>
+ </li>
+ <li>
+  <p>You can communicate with the script using either the <a href="/en-US/Add-ons/SDK/Guides/using_postMessage"><code>postMessage()</code></a> API or (preferably, usually) the <a href="/en-US/Add-ons/SDK/Guides/using_port"><code>port</code></a> API.</p>
+ </li>
+</ul>
+
+<div class="warning">
+<p>Unless your content script is extremely simple and consists only of a static string, don't use <code>contentScript</code>: if you do, you may have problems getting your add-on approved on AMO.</p>
+
+<p>Instead, keep the script in a separate file and load it using <code>contentScriptFile</code>. This makes your code easier to maintain, secure, debug and review.</p>
+</div>
+
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6607/widget-player-buttons.png" style="float: right; height: 132px; width: 282px;">For example, suppose we want to implement a media player as an add-on. We could implement the main user interface as a widget hosting an array of buttons to control play/pause/stop functions.</p>
+
+<p>We can then use a content script to listen for clicks on those buttons. But because content scripts can't use the SDK's APIs, we'll want the content script to send messages to the main add-on code, which can then implement the media player functions using the SDK.</p>
+
+<p>The widget's content is specified using HTML like this:</p>
+
+<pre class="brush: html"><code class="brush: js">&lt;html&gt;
+  &lt;body&gt;
+    &lt;img src="play.png" id="play-button"&gt;
+    &lt;img src="pause.png" id="pause-button"&gt;
+    &lt;img src="stop.png" id="stop-button"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p>We just include three icons, and assign an ID to each one. This HTML file, and the icon files it references, are saved in the add-on's <code>data</code> directory.</p>
+
+<p>Next, we write a content script that listens for click events on each icon and sends the corresponding message to the main add-on code:</p>
+
+<pre class="brush: js">var play_button = document.getElementById("play-button");
+play_button.onclick = function() {
+  self.port.emit("play");
+}
+
+var pause_button = document.getElementById("pause-button");
+pause_button.onclick = function() {
+  self.port.emit("pause");
+}
+
+var stop_button = document.getElementById("stop-button");
+stop_button.onclick = function() {
+  self.port.emit("stop");
+}</pre>
+
+<p>We save this file in the add-on's <code>data</code> directory as "button-script.js". Finally. in the add-on's "main.js" file, we create the widget, assign it the HTML file and the content script, and listen for events from the content script:</p>
+
+<pre class="brush: js">const widgets = require("sdk/widget");
+const data = require("sdk/self").data;
+
+var player = widgets.Widget({
+  id: "player",
+  width: 72,
+  label: "Player",
+  contentURL: data.url("buttons.html"),
+  contentScriptFile: data.url("button-script.js")
+});
+
+player.port.on("play", function() {
+  console.log("playing");
+});
+
+player.port.on("pause", function() {
+  console.log("pausing");
+});
+
+player.port.on("stop", function() {
+  console.log("stopping");
+});</pre>
+
+<p>To learn much more about content scripts, see the <a href="/en-US/Add-ons/SDK/Guides/Content_Scripts">Working with Content Scripts</a> guide.</p>
+
+<h3 id="Scripting_trusted_widget_content">Scripting trusted widget content</h3>
+
+<p>We've already seen that you can package HTML files in your add-on's <code>data</code> directory and use them to define the widget's content. We can call this "trusted" content, because unlike content loaded from a source outside the add-on, the add-on author knows exactly what it's doing. To interact with trusted content you don't need to use content scripts: you can just include a script from the HTML file in the normal way, using <code>script</code> tags.</p>
+
+<p>Like a content script, these scripts can communicate with the add-on code using the <a href="/en-US/Add-ons/SDK/Guides/using_postMessage"><code>postMessage()</code></a> API or the <a href="/en-US/Add-ons/SDK/Guides/using_port"><code>port</code></a> API. The crucial difference is that these scripts access the <code>postMessage</code> and <code>port</code> objects through the <code>addon</code> object, whereas content scripts access them through the <code>self</code> object.</p>
+
+<p>To show the difference, convert the <code>player</code> add-on above to use normal page scripts instead of content scripts.</p>
+
+<p>First, in the content script, change <code>self</code> to <code>addon</code>, and wrap it in a function:</p>
+
+<pre class="brush: js">function init() {
+  var play_button = document.getElementById("play-button");
+  play_button.onclick = function() {
+    addon.port.emit("play");
+  }
+
+  var pause_button = document.getElementById("pause-button");
+  pause_button.onclick = function() {
+    addon.port.emit("pause");
+  }
+
+  var stop_button = document.getElementById("stop-button");
+  stop_button.onclick = function() {
+    addon.port.emit("stop");
+  }
+}</pre>
+
+<p>Next, add a <code>script</code> tag to reference "button-script.js", and call its <code>init()</code> function on load:</p>
+
+<pre class="brush: html">&lt;html&gt;
+  &lt;head&gt;
+    &lt;script src="button-script.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body onLoad="init()"&gt;
+    &lt;img src="play.png" id="play-button"&gt;
+    &lt;img src="pause.png" id="pause-button"&gt;
+    &lt;img src="stop.png" id="stop-button"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>Finally, remove the line attaching the content script from "main.js":</p>
+
+<pre class="brush: js">const widgets = require("sdk/widget");
+const data = require("sdk/self").data;
+
+var player = widgets.Widget({
+  id: "player",
+  width: 72,
+  label: "Player",
+  contentURL: data.url("buttons.html")
+});
+
+player.port.emit("init");
+
+player.port.on("play", function() {
+  console.log("playing");
+});
+
+player.port.on("pause", function() {
+  console.log("pausing");
+});
+
+player.port.on("stop", function() {
+  console.log("stopping");
+});</pre>
+
+<h3 id="Attaching_panels_to_widgets">Attaching panels to widgets</h3>
+
+<p>You can supply a <a href="/en-US/Add-ons/SDK/High-Level_APIs/panel">panel</a> to the widget's constructor: if you do this, the panel is automatically displayed when the user clicks the widget.</p>
+
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6609/widget-panel-clock.png" style="float: right; height: 222px; width: 214px;"></p>
+
+<pre class="brush: js">data = require("sdk/self").data
+
+var clockPanel = require("sdk/panel").Panel({
+  width:215,
+  height:160,
+  contentURL: data.url("clock.html")
+});
+
+require("sdk/widget").Widget({
+  id: "open-clock-btn",
+  label: "Clock",
+  contentURL: data.url("History.png"),
+  panel: clockPanel
+});</pre>
+
+<p>Note that this is, at the moment, the only way you can attach a panel to a widget.</p>
+
+<p>You must supply the panel in the widget's constructor for it to work. If you assign the panel to the widget after construction, the panel can still be shown but will not be anchored to the widget:</p>
+
+<pre class="brush: js">data = require("sdk/self").data
+
+var clockPanel = require("sdk/panel").Panel({
+  width:215,
+  height:160,
+  contentURL: data.url("clock.html")
+});
+
+widget = require("sdk/widget").Widget({
+  id: "open-clock-btn",
+  label: "Clock",
+  contentURL: data.url("History.png")
+});
+
+widget.panel = clockPanel;
+
+// Will not be anchored
+widget.panel.show();</pre>
+
+<p>Also, if you try to call <code>panel.show()</code> inside your widget's <code>click</code> event listener, the panel will not be anchored:</p>
+
+<pre class="brush: js">data = require("sdk/self").data
+
+var clockPanel = require("sdk/panel").Panel({
+  width:215,
+  height:160,
+  contentURL: data.url("clock.html")
+});
+
+require("sdk/widget").Widget({
+  id: "open-clock-btn",
+  label: "Clock",
+  contentURL: data.url("History.png"),
+  panel: clockPanel,
+  onClick: function() {
+    // Will not be anchored
+    this.panel.show();
+  }
+});</pre>
+
+<p>See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=638142">bug 638142</a>.</p>
+
+<h3 id="Private_windows">Private windows</h3>
+
+<p>If your add-on has not opted into private browsing, then your widget will not appear in any private browser windows.</p>
+
+<p>To learn more about private windows, how to opt into private browsing, and how to support private browsing, refer to the <a href="/en-US/Add-ons/SDK/High-Level_APIs/private-browsing">documentation for the <code>private-browsing</code> module</a>.</p>
+
+<h3 id="Examples">Examples</h3>
+
+<p>For conciseness, these examples create their content scripts as strings and use the <code>contentScript</code> property. In your own add-ons, you will probably want to create your content scripts in separate files and pass their URLs using the <code>contentScriptFile</code> property. See <a href="/en-US/Add-ons/SDK/Guides/Content_Scripts">Working with Content Scripts</a> for more information.</p>
+
+<pre class="brush: js">var widgets = require("sdk/widget");
+
+// A basic click-able image widget.
+widgets.Widget({
+  id: "google-link",
+  label: "Widget with an image and a click handler",
+  contentURL: "http://www.google.com/favicon.ico",
+  onClick: function() {
+    require("sdk/tabs").activeTab.url = "http://www.google.com/";
+  }
+});</pre>
+
+<pre class="brush: js">// A widget that changes display on mouseover.
+widgets.Widget({
+  id: "mouseover-effect",
+  label: "Widget with changing image on mouseover",
+  contentURL: "http://www.yahoo.com/favicon.ico",
+  onMouseover: function() {
+    this.contentURL = "http://www.bing.com/favicon.ico";
+  },
+  onMouseout: function() {
+    this.contentURL = "http://www.yahoo.com/favicon.ico";
+  }
+});</pre>
+
+<pre class="brush: js">// A widget that updates content on a timer.
+widgets.Widget({
+  id: "auto-update-widget",
+  label: "Widget that updates content on a timer",
+  content: "0",
+  contentScript: 'setTimeout(function() {' +
+                 '  document.body.innerHTML++;' +
+                 '}, 2000)',
+  contentScriptWhen: "ready"
+});</pre>
+
+<pre class="brush: js">// A widget created with a specified width, that grows.
+var myWidget = widgets.Widget({
+  id: "widget-effect",
+  label: "Wide widget that grows wider on a timer",
+  content: "I'm getting longer.",
+  width: 50,
+});
+require("sdk/timers").setInterval(function() {
+  myWidget.width += 10;
+}, 1000);</pre>
+
+<pre class="brush: js">// A widget communicating bi-directionally with a content script.
+var widget = widgets.Widget({
+  id: "message-test",
+  label: "Bi-directional communication!",
+  content: "&lt;foo&gt;bar&lt;/foo&gt;",
+  contentScriptWhen: "ready",
+  contentScript: 'self.on("message", function(message) {' +
+                 '  alert("Got message: " + message);' +
+                 '});' +
+                 'self.postMessage("ready");',
+  onMessage: function(message) {
+    if (message == "ready")
+      widget.postMessage("me too");
+  }
+});</pre>
+
+<h2 id="Globals">Globals</h2>
+
+<h3 id="Constructors">Constructors</h3>
+
+<h4 class="addon-sdk-api-name" id="Widget(options)"><code>Widget(options)</code></h4>
+
+<p>Creates a new widget. The widget is immediately added to the add-on bar.</p>
+
+<h5 id="Parameters">Parameters</h5>
+
+<p><strong>options : object</strong><br>
+ Required options:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Name</th>
+   <th scope="col">Type</th>
+   <th scope="col"> </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>label</td>
+   <td>string</td>
+   <td>
+    <p>A string description of the widget used for accessibility, title bars, and error reporting.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>id</td>
+   <td>string</td>
+   <td>
+    <p>A string used to identify your widget in order to save its location when the user moves it in the browser. This string has to be unique and must not be changed over time.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Optional options:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Name</th>
+   <th scope="col">Type</th>
+   <th scope="col"> </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>content</td>
+   <td>string</td>
+   <td>
+    <p>An optional string value containing the displayed content of the widget. It may contain HTML. Widgets must have either the <code>content</code> property or the <code>contentURL</code> property set.</p>
+
+    <p>If the content is an image, it is automatically scaled to be 16x16 pixels.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>contentURL</td>
+   <td>string</td>
+   <td>
+    <p>An optional string URL to content to load into the widget. This can be local content or remote content, an image or web content. Widgets must have either the <code>content</code> property or the <code>contentURL</code> property set.</p>
+
+    <p>If the content is an image, it is automatically scaled to be 16x16 pixels.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>panel</td>
+   <td>Panel</td>
+   <td>
+    <p>An optional <a href="/en-US/Add-ons/SDK/High-Level_APIs/panel">panel</a> to open when the user clicks on the widget. Note: If you also register a "click" listener, it will be called instead of the panel being opened. However, you can show the panel from the listener by calling <code>this.panel.show()</code>.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>width</td>
+   <td>integer</td>
+   <td>
+    <p>Optional width in pixels of the widget. If not given, a default width is used.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>onClick</td>
+   <td>function</td>
+   <td>
+    <p>Include this to listen to the widget's <code>click</code> event.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>onMessage</td>
+   <td>function</td>
+   <td>
+    <p>Include this to listen to the widget's <code>message</code> event.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>onMouseover</td>
+   <td>function</td>
+   <td>
+    <p>Include this to listen to the widget's <code>mouseover</code> event.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>onMouseout</td>
+   <td>function</td>
+   <td>
+    <p>Include this to listen to the widget's <code>mouseout</code> event.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>onAttach</td>
+   <td>function</td>
+   <td>
+    <p>Include this to listen to the widget's <code>attach</code> event.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>tooltip</td>
+   <td>string</td>
+   <td>
+    <p>Optional text to show when the user's mouse hovers over the widget. If not given, the <code>label</code> is used.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>allow</td>
+   <td>object</td>
+   <td>
+    <p>An optional object describing permissions for the content. It should contain a single key named <code>script</code> whose value is a boolean that indicates whether or not to execute script in the content. <code>script</code> defaults to true.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>contentScriptFile</td>
+   <td>string,array</td>
+   <td>
+    <p>A local file URL or an array of local file URLs of content scripts to load. Content scripts specified by this property are loaded <em>before</em> those specified by the <code>contentScript</code> property.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>contentScript</td>
+   <td>string,array</td>
+   <td>
+    <p>A string or an array of strings containing the texts of content scripts to load. Content scripts specified by this property are loaded <em>after</em> those specified by the <code>contentScriptFile</code> property.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>contentScriptWhen</td>
+   <td>string</td>
+   <td>
+    <p>When to load the content scripts. This may take one of the following values:</p>
+
+    <ul>
+     <li>"start": load content scripts immediately after the document element for the widget is inserted into the DOM, but before the DOM content itself has been loaded</li>
+     <li>"ready": load content scripts once DOM content has been loaded, corresponding to the <a href="https://developer.mozilla.org/en/Gecko-Specific_DOM_Events">DOMContentLoaded</a> event</li>
+     <li>"end": load content scripts once all the content (DOM, JS, CSS, images) for the widget has been loaded, at the time the <a href="https://developer.mozilla.org/en/DOM/window.onload">window.onload event</a> fires</li>
+    </ul>
+
+    <p>This property is optional and defaults to "end".</p>
+   </td>
+  </tr>
+  <tr>
+   <td>contentScriptOptions</td>
+   <td>object</td>
+   <td>
+    <p>Read-only value exposed to content scripts under <code>self.options</code> property.</p>
+
+    <p>Any kind of jsonable value (object, array, string, etc.) can be used here. Optional.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Widget">Widget</h2>
+
+<p>Represents a widget object.</p>
+
+<h3 id="Methods">Methods</h3>
+
+<h4 class="addon-sdk-api-name" id="destroy()"><code>destroy()</code></h4>
+
+<p>Removes the widget from the add-on bar.</p>
+
+<h4 class="addon-sdk-api-name" id="postMessage(data)"><code>postMessage(data)</code></h4>
+
+<p>Sends a message to the widget's content scripts.</p>
+
+<h5 id="Parameters_2">Parameters</h5>
+
+<p><strong>data : value</strong><br>
+ The message to send. The message can be any <a href="/en-US/Add-ons/SDK/Guides/Content_Scripts/using_port#JSON-Serializable_Values">JSON-serializable value</a>.</p>
+
+<h4 class="addon-sdk-api-name" id="on(type_listener)"><code>on(type, listener)</code></h4>
+
+<p>Registers an event listener with the widget.</p>
+
+<h5 id="Parameters_3">Parameters</h5>
+
+<p><strong>type : string</strong><br>
+ The type of event to listen for.</p>
+
+<p><strong>listener : function</strong><br>
+ The listener function that handles the event.</p>
+
+<h4 class="addon-sdk-api-name" id="removeListener(type_listener)"><code>removeListener(type, listener)</code></h4>
+
+<p>Unregisters an event listener from the widget.</p>
+
+<h5 id="Parameters_4">Parameters</h5>
+
+<p><strong>type : string</strong><br>
+ The type of event for which <code>listener</code> was registered.</p>
+
+<p><strong>listener : function</strong><br>
+ The listener function that was registered.</p>
+
+<h4 class="addon-sdk-api-name" id="getView(window)"><code>getView(window)</code></h4>
+
+<p>Retrieve a <code>WidgetView</code> instance of this widget relative to a browser window.</p>
+
+<h5 id="Parameters_5">Parameters</h5>
+
+<p><strong>window : BrowserWindow</strong><br>
+ The <a href="/en-US/Add-ons/SDK/High-Level_APIs/windows#BrowserWindow">BrowserWindow</a> instance to match.</p>
+
+<h5 id="Returns">Returns</h5>
+
+<p><strong>WidgetView</strong> : A <code>WidgetView</code> instance associated with the browser window. Any changes subsequently applied to this object will only be applied to the widget attached to that window.</p>
+
+<h3 id="Properties">Properties</h3>
+
+<h4 class="addon-sdk-api-name" id="label"><code>label</code></h4>
+
+<p>The widget's label. Read-only.</p>
+
+<h4 class="addon-sdk-api-name" id="content"><code>content</code></h4>
+
+<p>A string containing the widget's content. It can contain HTML. Setting it updates the widget's appearance immediately. However, if the widget was created using <code>contentURL</code>, then this property is meaningless, and setting it has no effect.</p>
+
+<h4 class="addon-sdk-api-name" id="contentURL"><code>contentURL</code></h4>
+
+<p>The URL of content to load into the widget. This can point to local content loaded from your add-on's "data" directory or remote content, an image or web content. Setting it updates the widget's appearance immediately. However, if the widget was created using <code>content</code>, then this property is meaningless, and setting it has no effect.</p>
+
+<p>Setting the <code>contentURL</code> property will break the channel of communication between this widget and any content scripts it contains. Messages sent from the content script will no longer be received by the main add-on code, and vice versa. This issue is currently tracked as <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=825434">bug 825434</a>.</p>
+
+<h4 class="addon-sdk-api-name" id="panel"><code>panel</code></h4>
+
+<p>A <a href="/en-US/Add-ons/SDK/High-Level_APIs/panel">panel</a> to open when the user clicks on the widget.</p>
+
+<h4 class="addon-sdk-api-name" id="width"><code>width</code></h4>
+
+<p>The widget's width in pixels. Setting it updates the widget's appearance immediately.</p>
+
+<h4 class="addon-sdk-api-name" id="tooltip"><code>tooltip</code></h4>
+
+<p>The text of the tooltip that appears when the user hovers over the widget.</p>
+
+<h4 class="addon-sdk-api-name" id="allow"><code>allow</code></h4>
+
+<p>A object describing permissions for the content. It contains a single key named <code>script</code> whose value is a boolean that indicates whether or not to execute script in the content.</p>
+
+<h4 class="addon-sdk-api-name" id="contentScriptFile"><code>contentScriptFile</code></h4>
+
+<p>A local file URL or an array of local file URLs of content scripts to load.</p>
+
+<h4 class="addon-sdk-api-name" id="contentScript"><code>contentScript</code></h4>
+
+<p>A string or an array of strings containing the texts of content scripts to load.</p>
+
+<h4 class="addon-sdk-api-name" id="contentScriptWhen"><code>contentScriptWhen</code></h4>
+
+<p>When to load the content scripts. This may have one of the following values:</p>
+
+<ul>
+ <li>"start": load content scripts immediately after the document element for the widget is inserted into the DOM, but before the DOM content itself has been loaded</li>
+ <li>"ready": load content scripts once DOM content has been loaded, corresponding to the <a href="https://developer.mozilla.org/en/Gecko-Specific_DOM_Events">DOMContentLoaded</a> event</li>
+ <li>"end": load content scripts once all the content (DOM, JS, CSS, images) for the widget has been loaded, at the time the <a href="https://developer.mozilla.org/en/DOM/window.onload">window.onload event</a> fires</li>
+</ul>
+
+<h4 class="addon-sdk-api-name" id="contentScriptOptions"><code>contentScriptOptions</code></h4>
+
+<p>Read-only value exposed to content scripts under <code>self.options</code> property.</p>
+
+<p>Any kind of jsonable value (object, array, string, etc.) can be used here. Optional.</p>
+
+<h4 class="addon-sdk-api-name" id="port"><code>port</code></h4>
+
+<p>Object that allows you to:</p>
+
+<ul>
+ <li>send events to the content script using the <code>port.emit</code> function</li>
+ <li>receive events from the content script using the <code>port.on</code> function</li>
+</ul>
+
+<p>See the guide to <a href="/en-US/Add-ons/SDK/Guides/using_port"> communicating using <code>port</code></a> for details.</p>
+
+<h3 id="Events">Events</h3>
+
+<h4 class="addon-sdk-api-name" id="attach"><code>attach</code></h4>
+
+<p>This event is emitted when a browser window is opened and a new <code>WidgetView</code> object is created. If the widget has a content script, this event is fired only when the content script is applied according to the <code>contentScriptWhen</code> attribute.</p>
+
+<h5 id="Arguments">Arguments</h5>
+
+<p><strong>WidgetView</strong> : The related <code>WidgetView</code> object.</p>
+
+<h4 class="addon-sdk-api-name" id="click"><code>click</code></h4>
+
+<p>This event is emitted when the widget is clicked.</p>
+
+<h5 id="Arguments_2">Arguments</h5>
+
+<p><strong>WidgetView</strong> : Listeners are passed a single argument which is the <code>WidgetView</code> that triggered the click event.</p>
+
+<h4 class="addon-sdk-api-name" id="message"><code>message</code></h4>
+
+<p>If you listen to this event you can receive message events from content scripts associated with this widget. When a content script posts a message using <code>self.postMessage()</code>, the message is delivered to the add-on code in the widget's <code>message</code> event.</p>
+
+<h5 id="Arguments_3">Arguments</h5>
+
+<p><strong>value</strong> : Listeners are passed a single argument which is the message posted from the content script. The message can be any <a href="/en-US/Add-ons/SDK/Guides/Content_Scripts/using_port#JSON-Serializable_Values">JSON-serializable value</a>.</p>
+
+<h4 class="addon-sdk-api-name" id="mouseover"><code>mouseover</code></h4>
+
+<p>This event is emitted when the user moves the mouse over the widget.</p>
+
+<h4 class="addon-sdk-api-name" id="mouseout"><code>mouseout</code></h4>
+
+<p>This event is emitted when the user moves the mouse away from the widget.</p>
+
+<h2 id="WidgetView">WidgetView</h2>
+
+<p>Represents a widget instance specific to one browser window.</p>
+
+<p>Anything you do to an instance of this object will only be applied to the instance attached to its browser window: widget instances attached to other browser windows will be unaffected.</p>
+
+<p>By contrast, any changes you make to an instance of the normal <code>Widget</code> class will be applied across all browser windows.</p>
+
+<p>This class has all the same methods, attributes and events as the <code>Widget</code> class except for the <code>getView</code> method and the <code>attach</code> event.</p>
+
+<p>In this example <code>WidgetView</code> is used to display different content for <code>http</code> and <code>https</code> schemes:</p>
+
+<pre class="brush: js">// A widget that update its content specifically to each window.
+var tabs = require("sdk/tabs");
+var windows = require("sdk/windows").browserWindows;
+var widget = require("sdk/widget").Widget({
+  id: "window-specific-test",
+  label: "Widget with content specific to each window",
+  content: " ",
+  width: 50
+});
+// Observe tab switch or document changes in each existing tab:
+function updateWidgetState(tab) {
+  var view = widget.getView(tab.window);
+  if (!view) return;
+  // Update widget displayed text:
+  view.content = tab.url.match(/^https/) ? "Secured" : "Unsafe";
+}
+tabs.on('ready', updateWidgetState);
+tabs.on('activate', updateWidgetState);</pre>
+
+<h3 id="Methods_2">Methods</h3>
+
+<h4 class="addon-sdk-api-name" id="destroy()_2"><code>destroy()</code></h4>
+
+<p>Removes the widget view from the add-on bar.</p>
+
+<h4 class="addon-sdk-api-name" id="postMessage(data)_2"><code>postMessage(data)</code></h4>
+
+<p>Sends a message to the widget view's content scripts.</p>
+
+<h5 id="Parameters_6">Parameters</h5>
+
+<p><strong>data : value</strong><br>
+ The message to send. The message can be any <a href="/en-US/Add-ons/SDK/Guides/Content_Scripts/using_port#JSON-Serializable_Values">JSON-serializable value</a>.</p>
+
+<h4 class="addon-sdk-api-name" id="on(type_listener)_2"><code>on(type, listener)</code></h4>
+
+<p>Registers an event listener with the widget view.</p>
+
+<h5 id="Parameters_7">Parameters</h5>
+
+<p><strong>type : string</strong><br>
+ The type of event to listen for.</p>
+
+<p><strong>listener : function</strong><br>
+ The listener function that handles the event.</p>
+
+<h4 class="addon-sdk-api-name" id="removeListener(type_listener)_2"><code>removeListener(type, listener)</code></h4>
+
+<p>Unregisters an event listener from the widget view.</p>
+
+<h5 id="Parameters_8">Parameters</h5>
+
+<p><strong>type : string</strong><br>
+ The type of event for which <code>listener</code> was registered.</p>
+
+<p><strong>listener : function</strong><br>
+ The listener function that was registered.</p>
+
+<h3 id="Properties_2">Properties</h3>
+
+<h4 class="addon-sdk-api-name" id="label_2"><code>label</code></h4>
+
+<p>The widget view's label. Read-only.</p>
+
+<h4 class="addon-sdk-api-name" id="content_2"><code>content</code></h4>
+
+<p>A string containing the widget view's content. It can contain HTML. Setting it updates the widget view's appearance immediately. However, if the widget view was created using <code>contentURL</code>, then this property is meaningless, and setting it has no effect.</p>
+
+<h4 class="addon-sdk-api-name" id="contentURL_2"><code>contentURL</code></h4>
+
+<p>The URL of content to load into the widget. This can point to local content loaded from your add-on's "data" directory or remote content, an image or web content. Setting it updates the widget's appearance immediately. However, if the widget was created using <code>content</code>, then this property is meaningless, and setting it has no effect.</p>
+
+<p>Setting the <code>contentURL</code> property will break the channel of communication between this widget and any content scripts it contains. Messages sent from the content script will no longer be received by the main add-on code, and vice versa. This issue is currently tracked as <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=825434">bug 825434</a>.</p>
+
+<h4 class="addon-sdk-api-name" id="panel_2"><code>panel</code></h4>
+
+<p>A <a href="/en-US/Add-ons/SDK/High-Level_APIs/panel">panel</a> to open when the user clicks on the widget view.</p>
+
+<h4 class="addon-sdk-api-name" id="width_2"><code>width</code></h4>
+
+<p>The widget view's width in pixels. Setting it updates the widget view's appearance immediately.</p>
+
+<h4 class="addon-sdk-api-name" id="tooltip_2"><code>tooltip</code></h4>
+
+<p>The text of the tooltip that appears when the user hovers over the widget view.</p>
+
+<h4 class="addon-sdk-api-name" id="allow_2"><code>allow</code></h4>
+
+<p>A object describing permissions for the content. It contains a single key named <code>script</code> whose value is a boolean that indicates whether or not to execute script in the content.</p>
+
+<h4 class="addon-sdk-api-name" id="contentScriptFile_2"><code>contentScriptFile</code></h4>
+
+<p>A local file URL or an array of local file URLs of content scripts to load.</p>
+
+<h4 class="addon-sdk-api-name" id="contentScript_2"><code>contentScript</code></h4>
+
+<p>A string or an array of strings containing the texts of content scripts to load.</p>
+
+<h4 class="addon-sdk-api-name" id="contentScriptWhen_2"><code>contentScriptWhen</code></h4>
+
+<p>When to load the content scripts. This may have one of the following values:</p>
+
+<ul>
+ <li>"start": load content scripts immediately after the document element for the widget view is inserted into the DOM, but before the DOM content itself has been loaded</li>
+ <li>"ready": load content scripts once DOM content has been loaded, corresponding to the <a href="https://developer.mozilla.org/en/Gecko-Specific_DOM_Events">DOMContentLoaded</a> event</li>
+ <li>"end": load content scripts once all the content (DOM, JS, CSS, images) for the widget view has been loaded, at the time the <a href="https://developer.mozilla.org/en/DOM/window.onload">window.onload event</a> fires</li>
+</ul>
+
+<h4 class="addon-sdk-api-name" id="contentScriptOptions_2"><code>contentScriptOptions</code></h4>
+
+<p>Read-only value exposed to content scripts under <code>self.options</code> property.</p>
+
+<p>Any kind of jsonable value (object, array, string, etc.) can be used here. Optional.</p>
+
+<h4 class="addon-sdk-api-name" id="port_2"><code>port</code></h4>
+
+<p>Object that allows you to:</p>
+
+<ul>
+ <li>send events to the content script using the <code>port.emit</code> function</li>
+ <li>receive events from the content script using the <code>port.on</code></li>
+</ul>
+
+<p>See the guide to <a href="/en-US/Add-ons/SDK/Guides/using_port"> communicating using <code>port</code></a> for details.</p>
+
+<h3 id="Events_2">Events</h3>
+
+<h4 class="addon-sdk-api-name" id="detach"><code>detach</code></h4>
+
+<p>The <code>detach</code> event is fired when the widget view is removed from its related window. This can occur if the window is closed, Firefox exits, or the add-on is disabled.</p>
+
+<h4 class="addon-sdk-api-name" id="click_2"><code>click</code></h4>
+
+<p>This event is emitted when the widget view is clicked.</p>
+
+<h4 class="addon-sdk-api-name" id="message_2"><code>message</code></h4>
+
+<p>If you listen to this event you can receive message events from content scripts associated with this widget view. When a content script posts a message using <code>self.postMessage()</code>, the message is delivered to the add-on code in the widget view's <code>message</code> event.</p>
+
+<h5 id="Arguments_4">Arguments</h5>
+
+<p><strong>value</strong> : Listeners are passed a single argument which is the message posted from the content script. The message can be any <a href="/en-US/Add-ons/SDK/Guides/Content_Scripts/using_port#JSON-Serializable_Values">JSON-serializable value</a>.</p>
+
+<h4 class="addon-sdk-api-name" id="mouseover_2"><code>mouseover</code></h4>
+
+<p>This event is emitted when the user moves the mouse over the widget view.</p>
+
+<h4 class="addon-sdk-api-name" id="mouseout_2"><code>mouseout</code></h4>
+
+<p>This event is emitted when the user moves the mouse away from the widget view.</p>

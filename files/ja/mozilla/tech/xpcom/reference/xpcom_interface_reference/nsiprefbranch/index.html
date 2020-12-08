@@ -1,0 +1,494 @@
+---
+title: nsIPrefBranch
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsIPrefBranch
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIPrefBranch
+---
+<div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/modules/libpref/public/nsIPrefBranch.idl" rel="custom">modules/libpref/public/nsIPrefBranch.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+このインターフェースは preferences dataを操作するために使われます。対応するオブジェクトはpreferences service (nsIPrefService) から取得することができ、デフォルト値やアプリケーションのuser preferencesを参照したり変更したりするために使うことができます。
+</span>
+
+<div style="background: #eee; padding: 2px;">
+継承元: <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
+<span style="text-align: right; float: right;">最終更新: Gecko 13 (Firefox 13 / Thunderbird 13 / SeaMonkey 2.10)</span></div>
+</div>
+<p>このオブジェクトは自身が指し示す"branch"の起点となるpreference木の"root"値を伴って生成されます。各preferencesにはこのrootに続く最後の部分のみを使ってアクセスすることができます。 例えばオブジェクトが"browser.startup."をrootとして生成された場合、"browser.startup.page"、"browser.startup.homepage"、"browser.startup.homepage_override"などに対してGet/Setを行う際には"page"、"homepage"、"homepage_override"と指定することができます。</p>
+<h2 id="Method_overview" name="Method_overview">Method overview</h2>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <td><code>void <a href="#addObserver()">addObserver</a>(in string aDomain, in nsIObserver aObserver, in boolean aHoldWeak);</code> </td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#clearUserPref()">clearUserPref</a>(in string aPrefName);</code></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#deleteBranch()">deleteBranch</a>(in string aStartingAt);</code></td>
+    </tr>
+    <tr>
+      <td><code>boolean <a href="#getBoolPref()">getBoolPref</a>(in string aPrefName);</code></td>
+    </tr>
+    <tr>
+      <td><code>string <a href="#getCharPref()">getCharPref</a>(in string aPrefName);</code></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#getChildList()">getChildList</a>(in string aStartingAt, [optional] out unsigned long aCount, [array, size_is(aCount), retval] out string aChildArray);</code></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#getComplexValue()">getComplexValue</a>(in string aPrefName, in nsIIDRef aType, [iid_is(aType), retval] out nsQIResult aValue);</code></td>
+    </tr>
+    <tr>
+      <td><code>long <a href="#getIntPref()">getIntPref</a>(in string aPrefName);</code></td>
+    </tr>
+    <tr>
+      <td><code>long <a href="#getPrefType()">getPrefType</a>(in string aPrefName);</code></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#lockPref()">lockPref</a>(in string aPrefName);</code></td>
+    </tr>
+    <tr>
+      <td><code>boolean <a href="#prefHasUserValue()">prefHasUserValue</a>(in string aPrefName);</code></td>
+    </tr>
+    <tr>
+      <td><code>boolean <a href="#prefIsLocked()">prefIsLocked</a>(in string aPrefName);</code></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#removeObserver()">removeObserver</a>(in string aDomain, in nsIObserver aObserver);</code> </td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#resetBranch()">resetBranch</a>(in string aStartingAt);</code></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#setBoolPref()">setBoolPref</a>(in string aPrefName, in long aValue);</code></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#setCharPref()">setCharPref</a>(in string aPrefName, in string aValue);</code></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#setComplexValue()">setComplexValue</a>(in string aPrefName, in nsIIDRef aType, in nsISupports aValue);</code></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#setIntPref()">setIntPref</a>(in string aPrefName, in long aValue);</code></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#unlockPref()">unlockPref</a>(in string aPrefName);</code></td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="Attributes" name="Attributes">Attributes</h2>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <td class="header">Attribute</td>
+      <td class="header">Type</td>
+      <td class="header">Description</td>
+    </tr>
+    <tr>
+      <td><code>root</code></td>
+      <td><code><a href="/en-US/docs/string" title="en/string">string</a></code></td>
+      <td>Called to get the root on which this branch is based, such as "browser.startup." <strong>Read only.</strong></td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="Constants" name="Constants">Constants</h2>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <td class="header">Constant</td>
+      <td class="header">Value</td>
+      <td class="header">Description</td>
+    </tr>
+    <tr>
+      <td><code>PREF_INVALID</code></td>
+      <td><code>0</code></td>
+      <td><code>long</code></td>
+    </tr>
+    <tr>
+      <td><code>PREF_STRING</code></td>
+      <td><code>32</code></td>
+      <td><code>long</code> data type.</td>
+    </tr>
+    <tr>
+      <td><code>PREF_INT</code></td>
+      <td><code>64</code></td>
+      <td><code>long</code> data type.</td>
+    </tr>
+    <tr>
+      <td><code>PREF_BOOL</code></td>
+      <td><code>128</code></td>
+      <td><code>long</code> data type.</td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="Methods" name="Methods">Methods</h2>
+<h3 id="addObserver">addObserver()</h3>
+<p>preference change observerを追加します。preferenceに変化があると以下の引数が<code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIObserver#observe()">nsIObserver.observe()</a></code>に渡されます：</p>
+<p><code>aSubject</code> - <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPrefBranch" title="">nsIPrefBranch</a></code> オブジェクト (this)。</p>
+<p><code>aTopic</code> - <code>NS_PREFBRANCH_PREFCHANGE_TOPIC_ID で定義される文字列。</code></p>
+<p><code>aData</code> - 変更があったpreferenceの名前（<code>aSubject</code>の"root"に対する相対値）</p>
+<p><code>aSubject.get*Pref(aData)</code> で変更後の新しい値を得ることができます。例えば observer が<code>addObserver("bar.", ...)で</code><code>"foo."を起点とするbranchに対して登録を行った場合、</code><code>"foo.bar.baz"に対する変更がその</code>observerを起こします。その時の<code>aDataは</code><code>"bar.baz"</code>になります。</p>
+<pre class="eval">void addObserver(
+  in string aDomain,
+  in nsIObserver aObserver,
+  in boolean aHoldWeak
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>aDomain</code></dt>
+  <dd>
+    変更を監視したい preference 。完全なbranchを指定することもできます。 例えば "root" <code>prefbranch</code> から <code>addObserver("foo.bar.", ...)</code> を呼ぶと <code>foo.bar.baz</code> と <code>foo.bar.bzipを監視できます</code>。</dd>
+  <dt>
+    <code>aObserver</code></dt>
+  <dd>
+    preference の変更通知を受け取るオブジェクト。</dd>
+  <dt>
+    <code>aHoldWeak</code></dt>
+  <dd>
+    <code>true</code> を指定すると <code>aObserver の weak reference を保持します。この場合オブジェクトは</code> <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupportsWeakReference" title="">nsISupportsWeakReference</a></code> インターフェースを実装する必要があり、実装されていない場合は失敗します。<code>false</code> を指定すると strong reference を保持します。</dd>
+</dl>
+<h3 id="clearUserPref" name="clearUserPref()">clearUserPref()</h3>
+<p>Called to clear a user set value from a specific preference. This will, in effect, reset the value to the default value. If no default value exists the preference will cease to exist.</p>
+<div class="blockIndicator note"><strong>註:</strong> This method does nothing if the prefbranch it is called on is a default branch.</div>
+<pre class="eval">void clearUserPref(
+  in string aPrefName
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>aPrefName</code></dt>
+  <dd>
+    The preference to be cleared.</dd>
+</dl>
+<h6 id="Remarks_2">Remarks</h6>
+<div class="geckoVersionNote">
+  <div class="geckoVersionHeading">
+Gecko 6.0 note
+<div style="font-size: 9px; line-height: 1; font-style: italic;">(Firefox 6.0 / Thunderbird 6.0 / SeaMonkey 2.3)</div>
+</div>
+  <p>Prior to Gecko 6.0 (Firefox 6.0 / Thunderbird 6.0 / SeaMonkey 2.3), this method would throw an exception if there was no user value set for the specified preference. Now, this method never throws. Instead, it simply does nothing.</p>
+</div>
+<h3 id="deleteBranch" name="deleteBranch()">deleteBranch()</h3>
+<p>Called to remove all of the preferences referenced by this branch.</p>
+<div class="blockIndicator note"><strong>註:</strong> This method can be called on either a default or user branch but, in effect, always operates on both.</div>
+<pre class="eval">void deleteBranch(
+  in string aStartingAt
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>aStartingAt</code></dt>
+  <dd>
+    The point on the branch at which to start the deleting preferences. Pass in "" to remove all preferences referenced by this branch.</dd>
+</dl>
+<h3 id="getBoolPref" name="getBoolPref()">getBoolPref()</h3>
+<p>Called to get the state of an individual boolean preference.</p>
+<pre class="eval">boolean getBoolPref(
+  in string aPrefName
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>aPrefName</code></dt>
+  <dd>
+    The boolean preference to get the state of.</dd>
+</dl>
+<h6 id="Return_value" name="Return_value">Return value</h6>
+<p>The value of the requested boolean preference.</p>
+<h3 id="getCharPref" name="getCharPref()">getCharPref()</h3>
+<p>Called to get the state of an individual string preference.</p>
+<pre class="eval">string getCharPref(
+  in string aPrefName
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>aPrefName</code></dt>
+  <dd>
+    The string preference to retrieve.</dd>
+</dl>
+<h6 id="Return_value" name="Return_value">Return value</h6>
+<p>Returns <code>string</code> - The value of the requested string preference.</p>
+<h3 id="getChildList" name="getChildList()">getChildList()</h3>
+<p>Returns an array of strings representing the child preferences of the <code>root</code> of this branch.</p>
+<div class="blockIndicator note"><strong>註:</strong> This method can be called on either a default or user branch but, in effect, always operates on both.</div>
+<p>(To call from javascript use <code>children = nsIPrefBranch.getChildList("",obj)</code>, which will fill in obj.value with the count and <em>return</em> an array of keys! (It is <em>not</em> void in javascript)</p>
+<pre class="eval">void getChildList(
+  in string aStartingAt,
+  out unsigned long aCount,
+  [array, size_is(aCount), retval] out string aChildArray
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>aStartingAt</code></dt>
+  <dd>
+    The point on the branch at which to start enumerating the child preferences. Pass in "" to enumerate all preferences referenced by this branch.</dd>
+  <dt>
+    <code>aCount</code> <span class="inlineIndicator optional optionalInline">Optional from Gecko 2.0</span></dt>
+  <dd>
+    Receives the number of elements in the array.</dd>
+  <dt>
+    <code>aChildArray</code></dt>
+  <dd>
+    Receives the array of child preferences.</dd>
+</dl>
+<h3 id="getComplexValue" name="getComplexValue()">getComplexValue()</h3>
+<p>Called to get the state of an individual complex preference. A complex preference is a preference which represents an XPCOM object that can not be easily represented using a standard boolean, integer or string value.</p>
+<pre class="eval">void getComplexValue(
+  in string aPrefName,
+  in nsIIDRef aType,
+  [iid_is(aType), retval] out nsQIResult aValue
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>aPrefName</code></dt>
+  <dd>
+    The complex preference to get the value of.</dd>
+  <dt>
+    <code>aType</code></dt>
+  <dd>
+    The XPCOM interface that this complex preference represents. Interfaces currently supported are:
+    <ul>
+      <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/NsILocalFile" title="">NsILocalFile</a></code></li>
+      <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/NsISupportsString" title="">NsISupportsString</a></code> (UniChar)</li>
+      <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/NsIPrefLocalizedString" title="">NsIPrefLocalizedString</a></code> (Localized UniChar)</li>
+      <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/NsIFileSpec" title="">NsIFileSpec</a></code> (deprecated - to be removed eventually)</li>
+    </ul>
+  </dd>
+  <dt>
+    <code>aValue</code></dt>
+  <dd>
+    The XPCOM object into which to the complex preference value should be retrieved.</dd>
+</dl>
+<h3 id="getIntPref" name="getIntPref()">getIntPref()</h3>
+<p>Called to get the state of an individual integer preference.</p>
+<pre class="eval">long getIntPref(
+  in string aPrefName
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>aPrefName</code></dt>
+  <dd>
+    The integer preference to get the value of.</dd>
+</dl>
+<h6 id="Return_value" name="Return_value">Return value</h6>
+<p>Returns <code>long</code> - The value of the requested integer preference.</p>
+<h3 id="getPrefType" name="getPrefType()">getPrefType()</h3>
+<p>Called to determine the type of a specific preference.</p>
+<pre class="eval">long getPrefType(
+  in string aPrefName
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>aPrefName</code></dt>
+  <dd>
+    The preference to get the type of.</dd>
+</dl>
+<h6 id="Return_value" name="Return_value">Return value</h6>
+<p>Returns <code>long</code> - A value representing the type of the preference. This value will be <code>PREF_STRING</code>, <code>PREF_INT, PREF_BOOL,</code> or <code>PREF_INVALID</code>.</p>
+<h3 id="lockPref" name="lockPref()">lockPref()</h3>
+<p>Called to lock a specific preference. Locking a preference will cause the preference service to always return the default value regardless of whether there is a user set value or not.</p>
+<div class="blockIndicator note"><strong>註:</strong> This method can be called on either a default or user branch but, in effect, always operates on the default branch.</div>
+<pre class="eval">void lockPref(
+  in string aPrefName
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>aPrefName</code></dt>
+  <dd>
+    The preference to be locked.</dd>
+</dl>
+<h3 id="prefHasUserValue" name="prefHasUserValue()">prefHasUserValue()</h3>
+<p>Called to check if a specific preference has a user value associated to it.</p>
+<div class="blockIndicator note"><strong>註:</strong> This method can be called on either a default or user branch but, in effect, always operates on the user branch.</div>
+<div class="blockIndicator note"><strong>註:</strong> If a preference was manually set to a value that equals the default value, then the preference no longer has a user set value, i.e. it is considered reset to its default value. In particular, this method will return <code>false</code> for such a preference and the preference will not be saved to a file by <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIPrefService#savePrefFile()">nsIPrefService.savePrefFile()</a></code>.</div>
+<pre class="eval">boolean prefHasUserValue(
+  in string aPrefName
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>aPrefName</code></dt>
+  <dd>
+    The preference to be tested.</dd>
+</dl>
+<h6 id="Return_value" name="Return_value">Return value</h6>
+<p>Returns <code>boolean</code> - <code>true</code> The preference has a user set value. <code>false</code> The preference only has a default value.</p>
+<h3 id="prefIsLocked" name="prefIsLocked()">prefIsLocked()</h3>
+<p>Called to check if a specific preference is locked. If a preference is locked calling its Get method will always return the default value.</p>
+<div class="blockIndicator note"><strong>註:</strong> This method can be called on either a default or user branch but, in effect, always operates on the default branch.</div>
+<pre class="eval">boolean prefIsLocked(
+  in string aPrefName
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>aPrefName</code></dt>
+  <dd>
+    The preference to be tested.</dd>
+</dl>
+<h6 id="Return_value" name="Return_value">Return value</h6>
+<p>Returns <code>boolean</code> - <code>true</code> The preference is locked. <code>false</code> The preference is not locked.</p>
+<h3 id="removeObserver">removeObserver()</h3>
+<p>Remove a preference change observer.</p>
+<div class="blockIndicator note"><strong>註:</strong> You must call <code>removeObserver</code> method on the same nsIPrefBranch instance on which you called <a href="#addObserver()">addObserver</a> method in order to remove <code>aObserver</code>; otherwise, the observer will not be removed.</div>
+<pre class="eval">  void removeObserver(
+     in string aDomain,
+     in nsIObserver aObserver
+  );
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>aDomain</code></dt>
+  <dd>
+    The preference which is being observed for changes.</dd>
+  <dt>
+    <code>aObserver</code></dt>
+  <dd>
+    An observer previously registered with <a href="#addObserver()">addObserver</a>.</dd>
+</dl>
+<h3 id="resetBranch" name="resetBranch()">resetBranch()</h3>
+<p>Called to reset all of the preferences referenced by this branch to their default values.</p>
+<div class="blockIndicator note"><strong>註:</strong> This method can be called on either a default or user branch but, in effect, always operates on the user branch.</div>
+<div class="blockIndicator note"><strong>註:</strong> As of Firefox 3.0, this function has not yet been implemented.</div>
+<pre class="eval">void resetBranch(
+  in string aStartingAt
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>aStartingAt</code></dt>
+  <dd>
+    The point on the branch at which to start the resetting preferences to their default values. Pass in "" to reset all preferences referenced by this branch.</dd>
+</dl>
+<h3 id="setBoolPref" name="setBoolPref()">setBoolPref()</h3>
+<p>Called to set the state of an individual boolean preference.</p>
+<pre class="eval">void setBoolPref(
+  in string aPrefName,
+  in long aValue
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>aPrefName</code></dt>
+  <dd>
+    The boolean preference to set the state of.</dd>
+  <dt>
+    <code>aValue</code></dt>
+  <dd>
+    The boolean value to set the preference to.</dd>
+</dl>
+<h3 id="setCharPref" name="setCharPref()">setCharPref()</h3>
+<p>Called to set the state of an individual string preference.</p>
+<div class="note">
+  <strong>Note:</strong> preferences システムは大量のデータを保持するようには設計されていません。全ての preferences は単一のファイルに保存されアプリケーションが立ち上がる際に読み込まれます。文字列のpreferenceが最大どれだけのデータが保存できるだろうかと疑問に思った場合は、<a href="/en-US/docs/Code_snippets/File_I_O" title="en/Code snippets/File I//O">flat file</a> や <a href="/en-US/docs/Storage" title="en/Storage">sqlite database</a> など別の方法で保存することを検討してください。</div>
+<pre class="eval">void setCharPref(
+  in string aPrefName,
+  in string aValue
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>aPrefName</code></dt>
+  <dd>
+    The string preference to set.</dd>
+  <dt>
+    <code>aValue</code></dt>
+  <dd>
+    The string value to set the preference to.</dd>
+</dl>
+<h3 id="setComplexValue" name="setComplexValue()">setComplexValue()</h3>
+<p>Called to set the state of an individual complex preference. A complex preference is a preference which represents an XPCOM object that can not be easily represented using a standard boolean, integer or string value.</p>
+<pre class="eval">void setComplexValue(
+  in string aPrefName,
+  in nsIIDRef aType,
+  in nsISupports aValue
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>aPrefName</code></dt>
+  <dd>
+    The complex preference to set the value of.</dd>
+  <dt>
+    <code>aType</code></dt>
+  <dd>
+    The XPCOM interface that this complex preference represents. Interfaces currently supported are:
+    <ul>
+      <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/NsILocalFile" title="">NsILocalFile</a></code></li>
+      <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/NsISupportsString" title="">NsISupportsString</a></code> (UniChar)</li>
+      <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/NsIPrefLocalizedString" title="">NsIPrefLocalizedString</a></code> (Localized UniChar)</li>
+      <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/NsIFileSpec" title="">NsIFileSpec</a></code> (deprecated - to be removed eventually)</li>
+    </ul>
+  </dd>
+  <dt>
+    <code>aValue</code></dt>
+  <dd>
+    The XPCOM object from which to set the complex preference value.</dd>
+</dl>
+<h3 id="setIntPref" name="setIntPref()">setIntPref()</h3>
+<p>Called to set the state of an individual integer preference.</p>
+<pre class="eval">void setIntPref(
+  in string aPrefName,
+  in long aValue
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>aPrefName</code></dt>
+  <dd>
+    The integer preference to set the value of.</dd>
+  <dt>
+    <code>aValue</code></dt>
+  <dd>
+    The integer value to set the preference to.</dd>
+</dl>
+<h3 id="unlockPref" name="unlockPref()">unlockPref()</h3>
+<p>Called to unlock a specific preference. Unlocking a previously locked preference allows the preference service to once again return the user set value of the preference.</p>
+<div class="blockIndicator note"><strong>註:</strong> This method can be called on either a default or user branch but, in effect, always operates on the default branch.</div>
+<pre class="eval">void unlockPref(
+  in string aPrefName
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>aPrefName</code></dt>
+  <dd>
+    The preference to be unlocked.</dd>
+</dl>
+<h2 id="Remarks" name="Remarks">Remarks</h2>
+<p>Registering as a preference observer can open an object to potential cyclical references which will cause memory leaks. These cycles generally occur because an object both registers itself as an observer (causing the branch to hold a reference to the observer) and holds a reference to the branch object for the purpose of getting/setting preference values. There are 3 approaches which have been implemented in an attempt to avoid these situations:</p>
+<ol>
+  <li>The nsPrefBranch object supports <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupportsWeakReference" title="">nsISupportsWeakReference</a></code>. Any consumer may hold a weak reference to it instead of a strong one.</li>
+  <li>The nsPrefBranch object listens for xpcom-shutdown and frees all of the objects currently in its observer list. This ensures that long lived objects (services for example) will be freed correctly.</li>
+  <li>The observer can request to be held as a weak reference when it is registered. This insures that shorter lived objects (say one tied to an open window) will not fall into the cyclical reference trap.</li>
+</ol>
+<p>The list of registered observers may be changed during the dispatch of nsPref:changed notification. However, the observers are not guaranteed to be notified in any particular order, so you can't be sure whether the added/removed observer will be called during the notification when it is added/removed. </p>
+<p>It is possible to change preferences during the notification.</p>
+<p>It is not safe to change observers during this callback in releases before <span title="(Firefox 3)">Gecko 1.9</span>. If you want a safe way to remove a preference observer, please use an <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITimer" title="">nsITimer</a></code>.</p>

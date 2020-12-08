@@ -1,0 +1,292 @@
+---
+title: Querying Places
+slug: Querying_Places
+tags:
+  - Developing Mozilla
+  - Extensions
+  - Places
+  - 翻訳中
+translation_of: Mozilla/Tech/Places/Querying
+---
+<div></div>
+
+<p>Firefox の履歴とブックマークのデータには、 "<a href="/ja/docs/Places" title="Places">Places</a>" query API を通じてアクセスする事ができます。これらの API は履歴やブックマーク、またはそれらを組み合わせた複雑な検索を実行する能力を提供します (※ Firefox Alpha 6 を対象としています)。検索結果はマッチしたデータのフラットなリスト、もしくはツリー構造を含んだオブジェクトとなります。クエリ API の定義及び結果のデータ構造は <code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/places/nsINavHistoryService.idl" rel="custom">toolkit/components/places/nsINavHistoryService.idl</a></code> にあります。このページでは、コア API を使ったいくつかの共通の操作や例を紹介します。</p>
+
+<h2 id="Executing_a_query" name="Executing_a_query">クエリの実行</h2>
+
+<p>Places のクエリーはいくつかの基本的なパーツを持っています。</p>
+
+<ul>
+ <li>クエリオブジェクト <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryQuery" title="">nsINavHistoryQuery</a></code> : 検索時のパラメータを保持</li>
+ <li>クエリオプション <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryQueryOptions" title="">nsINavHistoryQueryOptions</a></code> : 検索結果の設定が可能</li>
+ <li>ヒストリサービス <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryService" title="">nsINavHistoryService</a></code> : クエリの実行</li>
+</ul>
+
+<p>最初のステップではクエリーとオプションを作り、必要なパラメータを埋めていきます。<code>nsINavHistoryService.getNewQuery</code> と <code>nsINavHistoryService.getNewQueryOptions</code> を使って空のオブジェクトを取り出します。標準ではそれらのオブジェクトはフラットなリストにあなたのブラウザの全履歴が入ったクエリーの結果となるでしょう。</p>
+
+<pre class="brush:js">var historyService = Components.classes["@mozilla.org/browser/nav-history-service;1"]
+                               .getService(Components.interfaces.nsINavHistoryService);
+
+// No query options set will get all history, sorted in database order,
+// which is nsINavHistoryQueryOptions.SORT_BY_NONE.
+var options = historyService.getNewQueryOptions();
+
+// No query parameters will return everything
+var query = historyService.getNewQuery();
+
+// execute the query
+var result = historyService.executeQuery(query, options);</pre>
+
+<h3 id="Result_types" name="Result_types">Result types</h3>
+
+<p><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryQueryOptions" title="">nsINavHistoryQueryOptions</a></code> は <code>resultType</code> プロパティを持ち、それは検索結果においてグルーピングや返ってくる詳細のレベルを設定する事を許可します。このプロパティの違う値は下からリスト化されます。これらの値は <code>nsINavHistoryQueryOptions</code> のプロパティとなり、このようにアクセスされます:<code>Components.interfaces.nsINavHistoryQueryOptions.RESULTS_AS_VISIT</code>.</p>
+
+<ul>
+ <li><strong>RESULTS_AS_URI</strong>: これはデフォルトで、クエリーにマッチしたそれぞれの URI ごとに <code>RESULT_TYPE_URI</code> タイプの一つのノードとして返されます。それぞれのノードの訪問日は些最後にその URL に訪問した日付となるでしょう。</li>
+ <li><strong>RESULTS_AS_VISIT</strong>: このオプションは与えたクエリーにマッチしたそれぞれページに訪問した時間ごとに一つのエントリーとして結果を返します。この結果は重複した URL のエントリーを含み、それぞれ違う時間となるでしょう。このノードは <code>RESULT_TYPE_VISIT</code> タイプで、それぞれ訪問したときのセッションIDを提供します。このセッションIDはリンクをクリックしてたどった全てのページで同じ値になります。新しいセッションはユーザが新しい URL を入力するかブックマークをたどることで開始します(XXX リンクの詳細についてはセッションの性質によります)。</li>
+ <li><strong>RESULTS_AS_FULL_VISIT</strong>: これは <code>RESULT_TYPE_VISIT</code> の拡張されたバージョンです。結果は <code>RESULT_TYPE_FULL_VISIT</code> タイプで、訪問前の場所やどのようにトランザクションが発生したのか(入力か、リダイレクトか、リンクか、など)といった訪問先の詳細な情報を持ちます。※未実装（<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=320831" title="Expose visit ID in result nodes.">バグ 320831</a>）</li>
+</ul>
+
+<h3 id="Basic_Query_Search_Parameters" name="Basic_Query_Search_Parameters">基本のクエリ検索パラメータ</h3>
+
+<ul>
+ <li>const unsigned long TIME_RELATIVE_EPOCH = 0</li>
+ <li>const unsigned long TIME_RELATIVE_TODAY = 1</li>
+ <li>const unsigned long TIME_RELATIVE_NOW = 2</li>
+ <li>attribute PRTime beginTime</li>
+ <li>attribute unsigned long beginTimeReference</li>
+ <li>readonly attribute boolean hasBeginTime</li>
+ <li>readonly attribute PRTime absoluteBeginTime</li>
+ <li>attribute PRTime endTime</li>
+ <li>attribute unsigned long endTimeReference</li>
+ <li>readonly attribute boolean hasEndTime</li>
+ <li>readonly attribute PRTime absoluteEndTime</li>
+ <li>attribute AString searchTerms readonly</li>
+ <li>attribute boolean hasSearchTerms</li>
+ <li>attribute long minVisits</li>
+ <li>attribute long maxVisits</li>
+ <li>attribute boolean onlyBookmarked</li>
+ <li>attribute boolean domainIsHost</li>
+ <li>attribute AUTF8String domain</li>
+ <li>readonly attribute boolean hasDomain</li>
+ <li>attribute boolean uriIsPrefix</li>
+ <li>attribute nsIURI uri</li>
+ <li>readonly attribute boolean hasUri</li>
+ <li>attribute boolean annotationIsNot</li>
+ <li>attribute AUTF8String annotation</li>
+ <li>readonly attribute boolean hasAnnotation</li>
+ <li>readonly attribute unsigned long folderCount</li>
+</ul>
+
+<h3 id="Basic_Query_Configuration_Options" name="Basic_Query_Configuration_Options">Basic Query Configuration Options</h3>
+
+<ul>
+ <li>const unsigned short GROUP_BY_DAY = 0</li>
+ <li>const unsigned short GROUP_BY_HOST = 1</li>
+ <li>const unsigned short GROUP_BY_DOMAIN = 2</li>
+ <li>const unsigned short GROUP_BY_FOLDER = 3</li>
+ <li>const unsigned short SORT_BY_NONE = 0</li>
+ <li>const unsigned short SORT_BY_TITLE_ASCENDING = 1</li>
+ <li>const unsigned short SORT_BY_TITLE_DESCENDING = 2</li>
+ <li>const unsigned short SORT_BY_DATE_ASCENDING = 3</li>
+ <li>const unsigned short SORT_BY_DATE_DESCENDING = 4</li>
+ <li>const unsigned short SORT_BY_URI_ASCENDING = 5</li>
+ <li>const unsigned short SORT_BY_URI_DESCENDING = 6</li>
+ <li>const unsigned short SORT_BY_VISITCOUNT_ASCENDING = 7</li>
+ <li>const unsigned short SORT_BY_VISITCOUNT_DESCENDING = 8</li>
+ <li>const unsigned short SORT_BY_KEYWORD_ASCENDING = 9</li>
+ <li>const unsigned short SORT_BY_KEYWORD_DESCENDING = 10</li>
+ <li>const unsigned short SORT_BY_DATEADDED_ASCENDING = 11</li>
+ <li>const unsigned short SORT_BY_DATEADDED_DESCENDING = 12</li>
+ <li>const unsigned short SORT_BY_LASTMODIFIED_ASCENDING = 13</li>
+ <li>const unsigned short SORT_BY_LASTMODIFIED_DESCENDING = 14</li>
+ <li>const unsigned short SORT_BY_ANNOTATION_ASCENDING = 15</li>
+ <li>const unsigned short SORT_BY_ANNOTATION_DESCENDING = 16</li>
+ <li>const unsigned short RESULTS_AS_URI = 0</li>
+ <li>const unsigned short RESULTS_AS_VISIT = 1</li>
+ <li>const unsigned short RESULTS_AS_FULL_VISIT = 2 (<strong>Not yet implemented</strong> -- see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=320831" title="Expose visit ID in result nodes.">バグ 320831</a>)</li>
+ <li>attribute unsigned short sortingMode</li>
+ <li>attribute AUTF8String sortingAnnotation</li>
+ <li>attribute unsigned short resultType</li>
+ <li>attribute boolean excludeItems</li>
+ <li>attribute boolean excludeQueries</li>
+ <li>attribute boolean excludeReadOnlyFolders</li>
+ <li>attribute boolean expandQueries</li>
+ <li>attribute boolean includeHidden</li>
+ <li>attribute boolean showSessions</li>
+ <li>attribute unsigned long maxResults</li>
+ <li>const unsigned short QUERY_TYPE_HISTORY = 0</li>
+ <li>const unsigned short QUERY_TYPE_BOOKMARKS = 1</li>
+ <li>const unsigned short QUERY_TYPE_UNIFIED = 2 (<strong>Not yet implemented</strong> -- see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=378798" title="Unified (history &amp; bookmarks) search support in the library">バグ 378798</a>)</li>
+ <li>attribute unsigned short queryType</li>
+</ul>
+
+<h3 id="Complex_Queries" name="Complex_Queries">Complex Queries</h3>
+
+<p>ひとつ以上の <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryQuery" title="">nsINavHistoryQuery</a></code> オブジェクトを <code>executeQueries</code> へ渡すことができます。ひとつのクエリオブジェクトに対して、全てのパラメータは<em>AND</em> として扱われます。異なるクエリオブジェクトがある状態では、<em>OR</em> として扱われます。これは条件に基づいた完全に論理的な操作を入れ子の節 (nested clauses)よりもよりシンプルな実装とインターフェイスを可能にしています。</p>
+
+<p>Example of querying for any pages I've visited that contain the word "firefox" in the title/URL or that I've visited today from mozilla.org.</p>
+
+<pre class="brush:js">// first query object searches for "firefox" in title/URL
+var query1 = historyService.getNewQuery();
+query1.searchTerms = "firefox";
+
+// second query object searches for visited in past 24 hours AND from mozilla.org
+var query2 = historyService.getNewQuery();
+query2.beginTimeReference = query2.TIME_RELATIVE_NOW;
+query2.beginTime = -24 * 60 * 60 * 1000000; // 24 hours ago in microseconds
+query2.endTimeReference = query2.TIME_RELATIVE_NOW;
+query2.endTime = 0; // now
+query2.domain = "mozilla.org";
+
+var result = historyService.executeQueries([query1, query2], 2, options);
+</pre>
+
+<div class="note"><strong>Note</strong>: Keyword searching doesn't work correctly across <em>OR</em> queries. The current behavior does the normal query and then selects keywords from the first query and filters all the results. (In other words, the keywords from the first query are <em>AND</em>ed with all queries.) Keywords from subsequent query objects are ignored. This is <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=320332" title="Fix query filtering and keyword searching - does not work for multiple OR'ed queries">バグ 320332</a>.</div>
+
+<h3 id="Bookmark_queries" name="Bookmark_queries">Bookmark queries</h3>
+
+<p>There is a quick-start for doing simple bookmark queries in <a href="/ja/docs/Retrieving_part_of_the_bookmarks_tree" title="Retrieving_part_of_the_bookmarks_tree">Retrieving part of the bookmarks tree</a>.</p>
+
+<p>The contents of bookmark folders can be retrieved by setting the "folders" member in the query object. This item is an array of folder IDs from the bookmark service. Typically, you will only have one folder ID in this list, which will given you the contents of that folder. You can set multiple folders and the result will be the intersection of all the folders.</p>
+
+<p>For sorting, you will generally want to use <code>SORT_BY_NONE</code> (the default) since this will return items in their "natural" order as specified by the user in the bookmarks manager. Other sortings will work, however.</p>
+
+<p>For bookmark queries you will generally want no query parameters to retrieve all items from the requested folder(s). When you specify exactly one folder and no query parameters, the system will be more efficient querying and keeping the results up-to-date since this maps to exactly one bookmark folder.</p>
+
+<pre class="brush:js">var bookmarkService = Components.classes["@mozilla.org/browser/nav-bookmarks-service;1"]
+                                .getService(Components.interfaces.nsINavBookmarksService);
+// |query| and |options| are objects created in the previous section
+query.setFolders([bookmarkService.toolbarFolder], 1);
+var result = historyService.executeQuery(query, options);
+</pre>
+
+<h2 id="Serializing_queries" name="Serializing_queries">Serializing queries</h2>
+
+<p>Query and options objects can be serialized into a string starting with "place:" using <code>queriesToQueryString</code>. The resulting string can be stored or bookmarked. When a "place:" URI is bookmarked, it will expand to the results of the query when it is opened by the user. The original objects can be deserialized from the string using <code>queryStringToQueries</code>.</p>
+
+<p>Be careful, <code>queryStringToQueries</code> may not return any query objects if the string was empty. Your code should handle this case. There will always be an options structure returned. If no options were specified, it will have the default values. If there were no query parameters specified but the input string was not empty (there were options) you may get one query object returned, containing the default query values.</p>
+
+<p>Example of serializing and deserializing two queries and an options object:</p>
+
+<pre class="brush:js">var queryString = historyService.queriesToQueryString([query1, query2], 2, options);
+
+var queriesRef = { };
+var queryCountRef = { };
+var optionsRef = { };
+historyService.queryStringToQueries(queryString, queriesRef, queryCountRef, optionsRef);
+// now use queriesRef.value, optionsRef.value
+</pre>
+
+<p>See <a href="/ja/docs/Places_query_URIs" title="Places_query_URIs">Places query URIs</a> for more information about the terms available for "place:" URIs.</p>
+
+<h2 id="Using_the_results" name="Using_the_results">Using the results</h2>
+
+<p>The most common way to use results is to implement a view. There is a built-in view that will put results in tree controls, and you can also implement your own. See <a href="/ja/docs/Displaying_Places_information_using_views" title="Displaying_Places_information_using_views">Displaying Places information using views</a> for more on this. This section discusses how to access the result directly, for example, if you are creating your own view or are processing the results instead of displaying them.</p>
+
+<p></p><div class="blockIndicator note"><strong>註:</strong> Be careful when accessing nodes and do not keep references to them around. Notifications sent to the result from the history and bookmarks system, as well as commands executed by the programmer such as sorting may cause the structure to change and nodes may be inserted, removed, or replaced.</div><p></p>
+
+<p>The <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryResult" title="">nsINavHistoryResult</a></code> object returned by <code>executeQuery()</code>/<code>executeQueries()</code> contains the list of matches to the given history or bookmarks query. These results are contained in a tree structure made up of nodes. A node's type can be retrieved using its <code>type</code> attribute. This type tells you what interface you can <code>QueryInterface</code> the node to in order to get at more detailed information:</p>
+
+<ul>
+ <li><strong>nsINavHistoryResultNode</strong>: Base class for all nodes. Contains URI, title, and other general info.</li>
+ <li><strong>nsINavHistoryVisitResultNode</strong>: Derived from <code>nsINavHistoryResultNode</code>, contains session information.</li>
+ <li><strong>nsINavHistoryFullVisitResultNode</strong>: Derived from <code>nsINavHistoryVisitResultNode</code>, contains information about how the user navigated to this page. <em>Note: currently unimplemented, see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=320831" title="Expose visit ID in result nodes.">バグ 320831</a>.</em></li>
+ <li><strong>nsINavHistoryContainerResultNode</strong>: General container node giving access to its children. Derived from <code>nsINavHistoryResultNode</code>. Bookmark folders are of this type.</li>
+ <li><strong>nsINavHistoryQueryResultNode</strong>: A type of container representing a query of the history system. It allows you to get the query options and parameters.</li>
+</ul>
+
+<p>Example of detecting the type of a node</p>
+
+<pre class="brush:js">var Ci = Components.interfaces;
+
+switch(node.type) {
+  case node.RESULT_TYPE_URI:
+    dump("URI result " + node.uri + "\n");
+    break;
+  case node.RESULT_TYPE_VISIT:
+    var visit = node.QueryInterface(Ci.nsINavHistoryVisitResultNode);
+    dump("Visit result " + node.uri + " session = " + visit.sessionId + "\n");
+    break;
+  case node.RESULT_TYPE_FULL_VISIT:
+    var fullVisit = node.QueryInterface(Ci.nsINavHistoryFullVisitResultNode);
+    dump("Full visit result " + node.uri + " session = " + fullVisit.sessionId + " transitionType = " +
+         fullVisit.transitionType + "\n");
+    break;
+  case node.RESULT_TYPE_HOST:
+    var container = node.QueryInterface(Ci.nsINavHistoryContainerResultNode);
+    dump("Host " + container.title + "\n");
+    break;
+  case node.RESULT_TYPE_REMOTE_CONTAINER:
+    var container = node.QueryInterface(Ci.nsINavHistoryContainerResultNode);
+    dump("Remote container " + container.title + " type = " + container.remoteContainerType + "\n");
+    break;
+  case node.RESULT_TYPE_QUERY:
+    var query = node.QueryInterface(Ci.nsINavHistoryQueryResultNode);
+    dump("Query, place URI = " + query.uri + "\n");
+    break;
+  case node.RESULT_TYPE_FOLDER:
+    // Note that folder nodes are of type nsINavHistoryContainerResultNode by default, but
+    // can be QI'd to nsINavHistoryQueryResultNode to access the query and options that
+    // created it.
+    dump("Folder " + node.title + " id = " + node.itemId + "\n");
+    break;
+  case node.RESULT_TYPE_SEPARATOR:
+    dump("-----------\n");
+    break;
+}</pre>
+
+<h3 id="The_result_view_interface" name="The_result_view_interface">The result view interface</h3>
+
+<p>If you are mapping a result into UI, you can implement the <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryResultViewer" title="">nsINavHistoryResultViewer</a></code> interface and attach it to the result with the <code>nsINavHistoryResult.viewer</code> attribute. This viewer will be called when the result tree changes, either as a result of user action or as a result of notifications from the bookmarks and history systems. Your implementation would then reflect these changes in the UI.</p>
+
+<p>A prepackaged view interface for a <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeBoxObject" title="">nsITreeBoxObject</a></code> is provided that manages the complex view requirements of a tree. This object's interface is <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryResultTreeViewer" title="">nsINavHistoryResultTreeViewer</a></code> (a descendent of <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryResultViewer" title="">nsINavHistoryResultViewer</a></code>). See <a href="/ja/docs/Displaying_Places_information_using_views" title="Displaying_Places_information_using_views">Displaying Places information using views</a> for more information and examples.</p>
+
+<h3 id="Containers" name="Containers">Containers</h3>
+
+<p>Containers hold lists of other containers and result nodes. Each result has a container representing the root of the query. It can be retrieved using the <code>root</code> attribute of the result. For general queries, this root container is a <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryQueryResultNode" title="">nsINavHistoryQueryResultNode</a></code> with the query parameters and options that you supplied in the original query. For queries mapping to one bookmark folder, this will be a <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryContainerResultNode" title="">nsINavHistoryContainerResultNode</a></code>.</p>
+
+<p>Containers can be open or closed. This corresponds to the open and closed state in a tree view, and can also be mapped to showing and hiding menus. To get at a container's contents, you must first open the container. Most container types populate themselves lazily, so opening a container actually corresponds to executing the given query. While a container is open, it will listen to the history and bookmarks systems' notifications and modify their contents to keep themselves up-to-date. For this reason, it is best to close a container as soon as you are done with it, since it will give better performance. If you close a container and re-open it before any history or bookmark change notifications come, the results will generally still be there and this operation will be fast.</p>
+
+<p>This example uses the Places history service to display all the titles of the history pages.</p>
+
+<pre class="brush:js">var historyService = Components.classes["@mozilla.org/browser/nav-history-service;1"]
+        .getService(Components.interfaces.nsINavHistoryService);
+
+// queries parameters (e.g. domain name matching, text terms matching, time range...)
+// see : https://developer.mozilla.org/en/nsINavHistoryQuery
+var query = historyService.getNewQuery();
+
+// options parameters (e.g. ordering mode and sorting mode...)
+// see : https://developer.mozilla.org/en/nsINavHistoryQueryOptions
+var options = historyService.getNewQueryOptions();
+
+// execute the query
+// see : https://developer.mozilla.org/en/nsINavHistoryService#executeQuery()
+var result = historyService.executeQuery(query, options);
+
+// Using the results by traversing a container
+// see : https://developer.mozilla.org/en/nsINavHistoryContainerResultNode
+var cont = result.root;
+    cont.containerOpen = true;
+
+for (var i = 0; i &lt; cont.childCount; i ++) {
+
+    var node = cont.getChild(i);
+
+    // "node" attributes contains the information (e.g. URI, title, time, icon...)
+    // see : https://developer.mozilla.org/en/nsINavHistoryResultNode
+    dump(node.title+ "\n");
+
+}
+    // Close container when done
+    // see : https://developer.mozilla.org/en/nsINavHistoryContainerResultNode
+    cont.containerOpen = false;
+</pre>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><a href="/ja/docs/Places_query_URIs" title="Places_query_URIs">Places query URIs</a></li>
+ <li><a href="/ja/docs/Displaying_Places_information_using_views" title="Displaying_Places_information_using_views">Displaying Places information using views</a></li>
+</ul>

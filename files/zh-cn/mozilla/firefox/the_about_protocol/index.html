@@ -1,0 +1,163 @@
+---
+title: Firefox 与 "about" 协议
+slug: Mozilla/Firefox/The_about_protocol
+translation_of: Mozilla/Firefox/The_about_protocol
+---
+<div>{{FirefoxSidebar}}</div><p>Firefox 在 <code>about:</code> URL 协议中藏有很多隐藏的功能和有用的信息。最常用的 URL 就是 <code>about:config</code>，它提供首选项的显示和修改功能。以下是 <code>about: </code>伪协议的完整列表：</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col"><code>about:</code> 页面</th>
+   <th scope="col">描述</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>about:</code></td>
+   <td>显示版本和构建信息，以及查阅贡献者、许可信息和构建配置的链接。</td>
+  </tr>
+  <tr>
+   <td><code>about:about</code></td>
+   <td>提供 about: 页面的完整列表</td>
+  </tr>
+  <tr>
+   <td><code>about:accounts</code></td>
+   <td><a href="https://www.mozilla.org/en-US/firefox/sync/">同步</a> 功能使用的页面</td>
+  </tr>
+  <tr>
+   <td><code>about:addons</code></td>
+   <td>附加组件管理器</td>
+  </tr>
+  <tr>
+   <td><code>about:app-manager</code></td>
+   <td>应用管理器</td>
+  </tr>
+  <tr>
+   <td><code>about:buildconfig</code></td>
+   <td>显示构建此 Firefox 所用的配置和平台</td>
+  </tr>
+  <tr>
+   <td><code>about:cache</code></td>
+   <td>显示有关内存、磁盘和应用缓存的信息</td>
+  </tr>
+  <tr>
+   <td><code>about:compartments</code></td>
+   <td>显示有关 <a href="/en-US/docs/SpiderMonkey/SpiderMonkey_compartments">compartments</a> 的信息。从 Firefox 26 开始，此信息可在 about:memory 的 "Other Measurements"  部分找到</td>
+  </tr>
+  <tr>
+   <td><code>about:config</code></td>
+   <td>允许查看和更改 Firefox 内部的首选项（偏好和设置）</td>
+  </tr>
+  <tr>
+   <td><code>about:crashes</code></td>
+   <td>列出所有崩溃报告</td>
+  </tr>
+  <tr>
+   <td><code>about:credits</code></td>
+   <td>列出所有参与 Firefox 产品的贡献者姓名</td>
+  </tr>
+  <tr>
+   <td><code>about:customizing</code></td>
+   <td>切换到“定制”模式，允许用户定制 Firefox 的用户界面</td>
+  </tr>
+  <tr>
+   <td><code>about:downloads</code></td>
+   <td>显示用 Firefox 进行的下载</td>
+  </tr>
+  <tr>
+   <td><code>about:healthreport</code></td>
+   <td>显示 Firefox 的性能信息（如果用户已启用“健康报告”功能）</td>
+  </tr>
+  <tr>
+   <td><code>about:home</code></td>
+   <td>Firefox 原生的开始页（新窗口的第一个页面）</td>
+  </tr>
+  <tr>
+   <td><code>about:license</code></td>
+   <td>显示许可信息</td>
+  </tr>
+  <tr>
+   <td><code>about:logo</code></td>
+   <td>Firefox 标志</td>
+  </tr>
+  <tr>
+   <td><code>about:memory</code></td>
+   <td>提供一种方法探查内存使用情况，以及保存为报告，还有运行 GC 和 CC</td>
+  </tr>
+  <tr>
+   <td><code>about:mozilla</code></td>
+   <td>一个特殊页面，显示“Mozilla 之书”摘录</td>
+  </tr>
+  <tr>
+   <td><code>about:networking</code></td>
+   <td>显示网络相关的信息</td>
+  </tr>
+  <tr>
+   <td><code>about:newtab</code></td>
+   <td>新建一个标签页时显示的页面</td>
+  </tr>
+  <tr>
+   <td><code>about:permissions</code></td>
+   <td>提供一种方法来显示和管理网站权限。在 Firefox 45 中已去除({{bug(933917)}})</td>
+  </tr>
+  <tr>
+   <td><code>about:plugins</code></td>
+   <td>显示已安装插件的信息</td>
+  </tr>
+  <tr>
+   <td><code>about:preferences</code></td>
+   <td>Firefox 设置（也可通过 Firefox &gt; 选项 来打开）</td>
+  </tr>
+  <tr>
+   <td><code>about:privatebrowsing</code></td>
+   <td>打开新的隐私浏览窗口时显示的页面</td>
+  </tr>
+  <tr>
+   <td><code>about:reader</code></td>
+   <td>指示在一个页面上开启了阅读视图。 参见<a href="https://support.mozilla.org/en-US/kb/firefox-reader-view-clutter-free-web-pages">Firefox 排除干扰的阅读视图</a></td>
+  </tr>
+  <tr>
+   <td><code>about:rights</code></td>
+   <td>显示权利信息</td>
+  </tr>
+  <tr>
+   <td><code>about:robots</code></td>
+   <td>显示有关机器人的信息，一个特殊的页面</td>
+  </tr>
+  <tr>
+   <td><code>about:sessionrestore</code></td>
+   <td>会话恢复（Firefox 从崩溃恢复时显示）</td>
+  </tr>
+  <tr>
+   <td><code>about:support</code></td>
+   <td>故障排除信息（也称“疑难解答”信息）。也可通过 Firefox 菜单 &gt; <em>? (问号)</em> &gt;<em> 故障排除信息 </em>打开</td>
+  </tr>
+  <tr>
+   <td><code>about:sync-log</code></td>
+   <td>显示 <a href="https://www.mozilla.org/en-US/firefox/sync/">同步</a> 功能所用的同步协议的日志</td>
+  </tr>
+  <tr>
+   <td><code>about:sync-progress</code></td>
+   <td>这是 <a href="https://www.mozilla.org/en-US/firefox/sync/">同步</a> 功能设置完成后显示的页面</td>
+  </tr>
+  <tr>
+   <td><code>about:sync-tabs</code></td>
+   <td>列出 <a href="https://www.mozilla.org/en-US/firefox/sync/">同步</a> 功能同步的标签页</td>
+  </tr>
+  <tr>
+   <td><code>about:telemetry</code></td>
+   <td>显示在 Firefox 运行时已收集和将发送到 Mozilla 的遥测数据（如果用户已启用“遥测”功能）</td>
+  </tr>
+  <tr>
+   <td><code>about:webrtc</code></td>
+   <td>有关 WebRTC 的使用情况</td>
+  </tr>
+  <tr>
+   <td><code>about:welcomeback</code></td>
+   <td>在 Firefox 被重置后显示的信息页面</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>这些 URL 在 {{source("docshell/base/nsAboutRedirector.cpp")}} 中的 <code>kRedirMap</code> 数组定义。该数组映射大部分 URL，比如 <code>config</code> 指向 <code>chrome:</code> 伪协议，例如 <code>chrome://global/content/config.xul</code>。about 的位置信息在 {{source("docshell/build/nsDocShellModule.cpp")}} 也存有副本。</p>

@@ -1,0 +1,39 @@
+---
+title: Barres de défilement
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Barres_de_défilement
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Scroll_Bars
+---
+<p> </p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Séparateurs" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Barre_d'outils">Suivant  »</a></p>
+</div>
+<p>Maintenant, voyons comment ajouter des barres de défilement à une fenêtre.</p>
+<h3 id="Ajout_de_barres_de_d.C3.A9filement" name="Ajout_de_barres_de_d.C3.A9filement">Ajout de barres de défilement</h3>
+<p>Une barre de défilement est typiquement employée pour permettre à un utilisateur de parcourir un grand document. Vous pouvez aussi l'utiliser quand vous avez besoin de demander une valeur comprise entre un certain intervalle. Les barres de défilement peuvent être créées de différentes manières. Sous XUL, l'une d'entre elle nécessite l'emploi de la balise <code><a href="/fr/docs/Mozilla/Tech/XUL/scrollbar" title="scrollbar">scrollbar</a></code>. Certains éléments, comme des champs de saisie, vont également ajouter des barres de défilement si nécessaire lorsque leur contenu devient trop grand.</p>
+<p>Dans cette section, nous verrons la création d'une barre de défilement seule. L'utilisateur choisira une valeur en déplaçant la barre de défilement. Vous n'utiliserez probablement pas très souvent cette méthode. Une barre de défilement est constituée de plusieurs partie, l'ascenseur, qui est la partie centrale de la barre, et les deux flèches boutons à chaque extrémités. Une barre de défilement crée tous ces éléments automatiquement.</p>
+<p><img alt="Image:xultu_scroll1.jpg" class=" internal" src="/@api/deki/files/1543/=Xultu_scroll1.jpg"></p>
+<p>La syntaxe d'une barre de défilement est la suivante :</p>
+<pre>&lt;scrollbar
+   id="identifier"
+   orient="horizontal"
+   curpos="20"
+   maxpos="100"
+   increment="1"
+   pageincrement="10"/&gt;
+</pre>
+<p>Les attributs sont les suivants :</p>
+<dl> <dt><code id="a-id"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/id">id</a></code> </dt> <dd>L'identifiant unique de la barre de défilement.</dd> <dt><code id="a-orient"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/orient">orient</a></code> </dt> <dd>Il spécifie l'orientation de la barre de défilement. Sa valeur par défaut 'horizontal' crée une barre qui s'étend de gauche vers la droite. Vous pouvez également spécifier 'vertical' qui crée une barre s'étendant du haut vers le bas.</dd> <dt><code id="a-curpos"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/curpos">curpos</a></code> </dt> <dd>Il indique la position actuelle de l'ascenseur (le rectangle que vous pouvez déplacer). La valeur s'étend de '0' à la valeur de <code id="a-maxpos"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/maxpos">maxpos</a></code>. Cette valeur n'a pas besoin d'unité. La valeur par défaut est de '0'.</dd> <dt><code id="a-maxpos"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/maxpos">maxpos</a></code> </dt> <dd>Il indique la valeur de la position maximale de l'ascenseur. Il s'agit d'une valeur numérique qui n'a pas d'unité. La valeur par défaut est de '100'.</dd> <dt><code id="a-increment"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/increment">increment</a></code> </dt> <dd>Ici, le nombre spécifie de combien la valeur de <code id="a-curpos"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/curpos">curpos</a></code> doit être changée quand l'utilisateur clique sur une des flèches de la barre de défilement. La valeur par défaut est de '1'.</dd> <dt><code id="a-pageincrement"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/pageincrement">pageincrement</a></code> </dt> <dd>Ici, le nombre spécifie de combien la valeur de <code id="a-curpos"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/curpos">curpos</a></code> doit être changée quand l'utilisateur clique sur la page à travers la barre de défilement, c'est à dire dans la zone entre l'ascenseur et les flèches. La valeur par défaut est de '10'.</dd>
+</dl>
+<p>L'exemple donné ci-dessus crée une barre de défilement qui s'étend des valeurs de '0' à '100'. La valeur de '100' peut être considérée comme le nombre de ligne d'une liste, mais elle peut représenter n'importe quoi d'autre. La valeur initiale de cet exemple est de '20'. Quand l'une des flèches de la barre de défilement est cliquée, la valeur incrémente ou décrémente de '1'. En cliquant à travers la barre de défilement, la valeur change de '10'.</p>
+<p>Lorsque l'utilisateur clique sur l'une des flèches de la barre de défilement, l'ascenseur se déplace d'autant qu'indiqué par la valeur <code id="a-increment"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/increment">increment</a></code>. Augmenter la valeur de cet attribut fera que la barre défilera plus vite à chaque clic. Les positions la plus à gauche et la plus élevée de l'ascenseur ont une valeur de '0', et celles la plus à droite et la plus basse ont une valeur donnée par <code id="a-maxpos"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/maxpos">maxpos</a></code>.</p>
+<p>En ajustant les valeurs de la barre de défilement, vous pouvez positionner et contrôler le déplacement de l'ascenseur comme vous le souhaitez.</p>
+<hr>
+<p>Ensuite, nous verrons comment créer des barres d'outils.</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Séparateurs" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Barre_d'outils">Suivant  »</a></p>
+</div>
+<p><span class="comment">Interwiki</span></p>

@@ -1,0 +1,609 @@
+---
+title: nsIScriptableUnicodeConverter
+slug: Mozilla/Tech/XPCOM/Reference/Interface/nsIScriptableUnicodeConverter
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIScriptableUnicodeConverter
+---
+<p></p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/intl/uconv/idl/nsIScriptableUConv.idl" rel="custom">intl/uconv/idl/nsIScriptableUConv.idl</a></code><span style="text-align: right; float: right;"><a href="/zh-CN/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">脚本化</a></span></div>
+<span style="padding: 4px 2px;">
+
+This interface is a Unicode encoder for use by scripts.
+</span>
+
+<div style="background: #eee; padding: 2px;">
+继承于: <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
+<span style="text-align: right; float: right;">最后修改于Gecko 1.8 (Firefox 1.5 / Thunderbird 1.5 / SeaMonkey 1.0)</span></div>
+</div><p></p>
+<p>Implemented by: <code>@mozilla.org/intl/scriptableunicodeconverter</code>. To create an instance, use:</p>
+<pre class="eval">var converter = Components.classes["@mozilla.org/intl/scriptableunicodeconverter"]
+                .createInstance(Components.interfaces.nsIScriptableUnicodeConverter);
+</pre>
+<h2 id="Method_overview" name="Method_overview">Method overview</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>ACString <a href="/zh-cn/XPCOM_Interface_Reference/nsIScriptableUnicodeConverter#ConvertFromUnicode()" title="zh-cn/nsIScriptableUnicodeConverter#ConvertFromUnicode()">ConvertFromUnicode</a>(in AString aSrc);</code></td>
+  </tr>
+  <tr>
+   <td><code>ACString <a href="/zh-cn/XPCOM_Interface_Reference/nsIScriptableUnicodeConverter#Finish()" title="zh-cn/nsIScriptableUnicodeConverter#Finish()">Finish</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>AString <a href="/zh-cn/XPCOM_Interface_Reference/nsIScriptableUnicodeConverter#ConvertToUnicode()" title="zh-cn/nsIScriptableUnicodeConverter#ConvertToUnicode()">ConvertToUnicode</a>(in ACString aSrc);</code></td>
+  </tr>
+  <tr>
+   <td><code>AString <a href="/zh-cn/XPCOM_Interface_Reference/nsIScriptableUnicodeConverter#convertFromByteArray()" title="zh-cn/nsIScriptableUnicodeConverter#convertFromByteArray()">convertFromByteArray</a>([const,array,size_is(aCount)] in octet aData, in unsigned long aCount);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="/zh-cn/XPCOM_Interface_Reference/nsIScriptableUnicodeConverter#convertToByteArray()" title="zh-cn/nsIScriptableUnicodeConverter#convertToByteArray()">convertToByteArray</a>(in AString aString,[optional] out unsigned long aLen,[array, size_is(aLen),retval] out octet aData);</code></td>
+  </tr>
+  <tr>
+   <td><code><code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIInputStream" title="">nsIInputStream</a></code> <a href="/zh-cn/XPCOM_Interface_Reference/nsIScriptableUnicodeConverter#convertToInputStream()" title="zh-cn/nsIScriptableUnicodeConverter#convertToInputStream()">convertToInputStream</a>(in AString aString);</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Attributes">Attributes</h2>
+<table class="standard-table" style="width: auto;">
+ <tbody>
+  <tr>
+   <td class="header">Attribute</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>charset</code></td>
+   <td><code>string</code></td>
+   <td>Current character set. Throws <code>NS_ERROR_UCONV_NOCONV</code> if the requested charset is not supported.</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Methods" name="Methods">Methods</h2>
+<h3 id="ConvertFromUnicode()" name="ConvertFromUnicode()">ConvertFromUnicode()</h3>
+<p>Converts the data from Unicode to one Charset. Returns the converted string. After converting, Finish should be called and its return value appended to this return value.</p>
+<pre class="eval">ACString ConvertFromUnicode(
+  in AString aSrc
+);
+</pre>
+<h3 id="Finish()">Finish()</h3>
+<p>Returns the terminator string. Should be called after ConvertFromUnicode() and appended to that function's return value.</p>
+<pre>ACString Finish();
+</pre>
+<h3 id="ConvertToUnicode()">ConvertToUnicode()</h3>
+<p>Converts the data from one Charset to Unicode.</p>
+<pre>AString ConvertToUnicode(
+  in ACString aSrc
+);
+</pre>
+<h3 id="convertFromByteArray()">convertFromByteArray()</h3>
+<p>Converts an array of bytes to a unicode string.</p>
+<pre>AString convertFromByteArray(
+  [const,array,size_is(aCount)] in octet aData,
+  in unsigned long aCount
+);
+</pre>
+<h3 id="convertToByteArray()">convertToByteArray()</h3>
+<p>Convert a unicode string to an array of bytes. Finish does not need to be called.</p>
+<pre>void convertToByteArray(in AString aString,
+  out unsigned long aLen, <span class="inlineIndicator optional optionalInline">可选</span>
+  [array, size_is(aLen),retval] out octet aData
+);
+</pre>
+<h3 id="convertToInputStream()">convertToInputStream()</h3>
+<p>Converts a Unicode string to an input stream. The bytes in the stream are encoded according to the <code>charset</code> attribute. The returned stream is non-blocking.</p>
+<pre>nsIInputStream convertToInputStream(
+  in AString aString
+ );
+</pre>
+<h6 id="Parameters">Parameters</h6>
+<h6 id="Return_value">Return value</h6>
+<p>An <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIInputStream" title="">nsIInputStream</a></code> that will present the text specified in <code>aString</code> as its data.</p>
+<ul>
+ <li>
+  <ul>
+   <li>
+    <ul>
+     <li>
+      <ul>
+       <li>
+        <ul>
+         <li>
+          <ul>
+           <li>
+            <dl>
+             <dt>
+              <code>aString</code></dt>
+             <dd>
+              The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+            </dl>
+           </li>
+          </ul>
+         </li>
+         <li>
+          <ul>
+           <li>
+            <dl>
+             <dt>
+              <code>aString</code></dt>
+             <dd>
+              The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+            </dl>
+           </li>
+          </ul>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <ul>
+         <li>
+          <ul>
+           <li>
+            <dl>
+             <dt>
+              <code>aString</code></dt>
+             <dd>
+              The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+            </dl>
+           </li>
+          </ul>
+         </li>
+         <li>
+          <ul>
+           <li>
+            <dl>
+             <dt>
+              <code>aString</code></dt>
+             <dd>
+              The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+            </dl>
+           </li>
+          </ul>
+         </li>
+        </ul>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <ul>
+       <li>
+        <ul>
+         <li>
+          <ul>
+           <li>
+            <dl>
+             <dt>
+              <code>aString</code></dt>
+             <dd>
+              The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+            </dl>
+           </li>
+          </ul>
+         </li>
+         <li>
+          <ul>
+           <li>
+            <dl>
+             <dt>
+              <code>aString</code></dt>
+             <dd>
+              The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+            </dl>
+           </li>
+          </ul>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <ul>
+         <li>
+          <ul>
+           <li>
+            <dl>
+             <dt>
+              <code>aString</code></dt>
+             <dd>
+              The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+            </dl>
+           </li>
+          </ul>
+         </li>
+         <li>
+          <ul>
+           <li>
+            <dl>
+             <dt>
+              <code>aString</code></dt>
+             <dd>
+              The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+            </dl>
+           </li>
+          </ul>
+         </li>
+        </ul>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li>
+    <ul>
+     <li>
+      <ul>
+       <li>
+        <ul>
+         <li>
+          <ul>
+           <li>
+            <dl>
+             <dt>
+              <code>aString</code></dt>
+             <dd>
+              The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+            </dl>
+           </li>
+          </ul>
+         </li>
+         <li>
+          <ul>
+           <li>
+            <dl>
+             <dt>
+              <code>aString</code></dt>
+             <dd>
+              The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+            </dl>
+           </li>
+          </ul>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <ul>
+         <li>
+          <ul>
+           <li>
+            <dl>
+             <dt>
+              <code>aString</code></dt>
+             <dd>
+              The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+            </dl>
+           </li>
+          </ul>
+         </li>
+         <li>
+          <ul>
+           <li>
+            <dl>
+             <dt>
+              <code>aString</code></dt>
+             <dd>
+              The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+            </dl>
+           </li>
+          </ul>
+         </li>
+        </ul>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <ul>
+       <li>
+        <ul>
+         <li>
+          <ul>
+           <li>
+            <dl>
+             <dt>
+              <code>aString</code></dt>
+             <dd>
+              The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+            </dl>
+           </li>
+          </ul>
+         </li>
+         <li>
+          <ul>
+           <li>
+            <dl>
+             <dt>
+              <code>aString</code></dt>
+             <dd>
+              The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+            </dl>
+           </li>
+          </ul>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <ul>
+         <li>
+          <ul>
+           <li>
+            <dl>
+             <dt>
+              <code>aString</code></dt>
+             <dd>
+              The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+            </dl>
+           </li>
+          </ul>
+         </li>
+         <li>
+          <ul>
+           <li>
+            <dl>
+             <dt>
+              <code>aString</code></dt>
+             <dd>
+              The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+            </dl>
+           </li>
+          </ul>
+         </li>
+        </ul>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li>
+  <ul>
+   <li>
+    <ul>
+     <li>
+      <ul>
+       <li>
+        <ul>
+         <li>
+          <ul>
+           <li>
+            <dl>
+             <dt>
+              <code>aString</code></dt>
+             <dd>
+              The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+            </dl>
+           </li>
+          </ul>
+         </li>
+         <li>
+          <ul>
+           <li>
+            <dl>
+             <dt>
+              <code>aString</code></dt>
+             <dd>
+              The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+            </dl>
+           </li>
+          </ul>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <ul>
+         <li>
+          <ul>
+           <li>
+            <dl>
+             <dt>
+              <code>aString</code></dt>
+             <dd>
+              The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+            </dl>
+           </li>
+          </ul>
+         </li>
+         <li>
+          <ul>
+           <li>
+            <dl>
+             <dt>
+              <code>aString</code></dt>
+             <dd>
+              The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+            </dl>
+           </li>
+          </ul>
+         </li>
+        </ul>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <ul>
+       <li>
+        <ul>
+         <li>
+          <ul>
+           <li>
+            <dl>
+             <dt>
+              <code>aString</code></dt>
+             <dd>
+              The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+            </dl>
+           </li>
+          </ul>
+         </li>
+         <li>
+          <ul>
+           <li>
+            <dl>
+             <dt>
+              <code>aString</code></dt>
+             <dd>
+              The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+            </dl>
+           </li>
+          </ul>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <ul>
+         <li>
+          <ul>
+           <li>
+            <dl>
+             <dt>
+              <code>aString</code></dt>
+             <dd>
+              The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+            </dl>
+           </li>
+          </ul>
+         </li>
+         <li>
+          <ul>
+           <li>
+            <dl>
+             <dt>
+              <code>aString</code></dt>
+             <dd>
+              The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+            </dl>
+           </li>
+          </ul>
+         </li>
+        </ul>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li>
+    <ul>
+     <li>
+      <ul>
+       <li>
+        <ul>
+         <li>
+          <ul>
+           <li>
+            <dl>
+             <dt>
+              <code>aString</code></dt>
+             <dd>
+              The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+            </dl>
+           </li>
+          </ul>
+         </li>
+         <li>
+          <ul>
+           <li>
+            <dl>
+             <dt>
+              <code>aString</code></dt>
+             <dd>
+              The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+            </dl>
+           </li>
+          </ul>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <ul>
+         <li>
+          <ul>
+           <li>
+            <dl>
+             <dt>
+              <code>aString</code></dt>
+             <dd>
+              The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+            </dl>
+           </li>
+          </ul>
+         </li>
+         <li>
+          <ul>
+           <li>
+            <dl>
+             <dt>
+              <code>aString</code></dt>
+             <dd>
+              The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+            </dl>
+           </li>
+          </ul>
+         </li>
+        </ul>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <ul>
+       <li>
+        <ul>
+         <li>
+          <ul>
+           <li>
+            <dl>
+             <dt>
+              <code>aString</code></dt>
+             <dd>
+              The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+            </dl>
+           </li>
+          </ul>
+         </li>
+         <li>
+          <ul>
+           <li>
+            <dl>
+             <dt>
+              <code>aString</code></dt>
+             <dd>
+              The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+            </dl>
+           </li>
+          </ul>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <ul>
+         <li>
+          <ul>
+           <li>
+            <dl>
+             <dt>
+              <code>aString</code></dt>
+             <dd>
+              The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+            </dl>
+           </li>
+          </ul>
+         </li>
+         <li>
+          <ul>
+           <li>
+            <dl>
+             <dt>
+              <code>aString</code></dt>
+             <dd>
+              The text to encode to the stream. The text is encoded into the character set specified by the <code>charset</code> attribute.</dd>
+            </dl>
+           </li>
+          </ul>
+         </li>
+        </ul>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<dl>
+</dl>
+<h2 id="Examples" name="Examples">Examples</h2>
+<p>See <a href="/zh-cn/Reading_textual_data" title="zh-cn/Reading_textual_data">Reading textual data</a> and <a href="/zh-cn/Writing_textual_data" title="zh-cn/Writing_textual_data">Writing textual data</a> for examples.</p>
+<p></p>

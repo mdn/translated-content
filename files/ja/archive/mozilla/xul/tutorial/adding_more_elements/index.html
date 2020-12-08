@@ -1,0 +1,87 @@
+---
+title: さらに要素を追加する
+slug: Archive/Mozilla/XUL/Tutorial/Adding_More_Elements
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_More_Elements
+---
+<p> </p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Groupboxes" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Stacks_and_Decks">次のページ  »</a></p>
+</div>
+<p>ボックスの説明の最後として、ファイル検索ダイアログにいくつかボックスを追加していきます。</p>
+<p><span id="Adding_Elements_to_our_find_files_example"></span></p>
+<h3 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AB.E8.A6.81.E7.B4.A0.E3.82.92.E8.BF.BD.E5.8A.A0" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AB.E8.A6.81.E7.B4.A0.E3.82.92.E8.BF.BD.E5.8A.A0">ファイル検索ダイアログに要素を追加</h3>
+<div class="highlight">
+ <p>それでは、ファイル検索ダイアログに要素を追加していきましょう。 最初に、ファイルのサイズや日付といった名前以外の情報でも検索できるようにしてみます。</p>
+ <pre class="eval">&lt;hbox&gt;
+  <span class="highlightred">&lt;menulist id="searchtype"&gt;
+    &lt;menupopup&gt;
+      &lt;menuitem label="Name"/&gt;
+      &lt;menuitem label="Size"/&gt;
+      &lt;menuitem label="Date Modified"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menulist&gt;
+  &lt;spacer style="width: 10px;"/&gt;
+  &lt;menulist id="searchmode"&gt;
+    &lt;menupopup&gt;
+      &lt;menuitem label="Is"/&gt;
+      &lt;menuitem label="Is Not"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menulist&gt;
+  &lt;spacer style="width: 10px;"/&gt;</span>
+  &lt;textbox id="find-text" flex="1" style="min-width: 15em;"/&gt;
+&lt;/hbox&gt;
+</pre>
+ <div class="float-right">
+  <img alt="画像:boxfinal1.png"></div>
+ <p><a href="ja/XUL_Tutorial/List_Controls#Drop-down_Lists">ドロップダウンボックス</a>を 2 つ、ダイアログに追加し、 それらの間隔をあけるために、要素の間に<a href="ja/XUL_Tutorial/Using_Spacers">スペーサー</a>を加えています。 これらのスペーサーには、明示的に 10 ピクセルの幅を設定しています。 この例のウィンドウをリサイズした場合には、テキスト入力欄は大きくなりますが、それ以外の構成要素は大きくならないことが確認できると思います。 また、ラベルが削除されたことにも気づいているかもしれません。</p>
+ <p>ウィンドウを垂直方向にリサイズしても、要素のサイズは変わりません。 これは、それらの要素が水平ボックス内にあるためです。 欲を言えば、Find ボタンと Cancel ボタンは、常にウィンドウの下辺に置かれるようにした方がいいかもしれません。 これは、2 つの水平ボックスの間にスペーサーを加えれば、簡単に実現できます。</p>
+ <pre class="eval"><span class="highlightred">&lt;spacer style="height: 10px"/&gt;</span>
+&lt;hbox&gt;
+  &lt;menulist id="searchtype"&gt;
+    &lt;menupopup&gt;
+      &lt;menuitem label="Name"/&gt;
+      &lt;menuitem label="Size"/&gt;
+      &lt;menuitem label="Date Modified"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menulist&gt;
+  &lt;spacer style="width: 10px;"/&gt;
+  &lt;menulist id="searchmode"&gt;
+    &lt;menupopup&gt;
+      &lt;menuitem label="Is"/&gt;
+      &lt;menuitem label="Is Not"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menulist&gt;
+  &lt;spacer style="width: 10px;"/&gt;
+  &lt;textbox id="find-text" flex="1" style="min-width: 15em;"/&gt;
+&lt;/hbox&gt;
+
+<span class="highlightred">&lt;spacer style="height: 10px" flex="1"/&gt;</span>
+
+&lt;hbox&gt;
+</pre>
+ <p>これで、ダイアログがリサイズされると、2 つのボタンはダイアログの下辺に沿うように移動するようになります。 最初の <code><code><a href="/ja/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code></code> は、タイトルラベルと検索条件を入力するための要素の間に間隔を置きます。</p>
+ <p>また、検索条件を入力する部分の周囲に境界線があると、さらに格好よくなるかもしれません。 これを実現するには、 CSS の <a href="/ja/docs/Web/CSS/border" title="CSS の border プロパティは、要素の境界を設定します。これは border-width, border-style, border-color の一括指定です。"><code>border</code></a> プロパティを使うか、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/groupbox" title="groupbox">groupbox</a></code></code> 要素を使うかの 2 つの方法が利用できます。 最初の方法の場合、ボックス自身にスタイルを設定することが必要になります。 とりあえず、今回は 2 番目の方法を使うことにします。 <a href="ja/XUL_Tutorial/Groupboxes">グループボックス</a>には、格好いい溝状スタイルの境界線を描画するという利点があるので、今回のテーマにふさわしいと思います。</p>
+ <p>ボックスを <code><code><a href="/ja/docs/Mozilla/Tech/XUL/groupbox" title="groupbox">groupbox</a></code></code> に変更しましょう。</p>
+ <pre class="eval"><span class="highlightred">&lt;groupbox orient="horizontal"&gt;</span>
+  <span class="highlightred"><span class="nowiki">&lt;caption label="Search Criteria"/&gt;</span></span>
+  &lt;menulist id="searchtype"&gt;
+  .
+  .
+  .
+  &lt;spacer style="width: 10px;"/&gt;
+  &lt;textbox id="find-text" flex="1" style="min-width: 15em;"/&gt;
+<span class="highlightred">&lt;/groupbox&gt;</span>
+</pre>
+ <p><img alt="画像:boxfinal2.png"></p>
+ <p>これ以外にも、外見上の問題はまだあります。 ウィンドウを垂直方向に広げると、グループボックスが下部の方に広がってしまいます。 また、要素の配置を改善するために、余白の取り方を調整してもいいかもしれません。</p>
+ <p>このチュートリアルを通して、要素の追加は続いていきますので、 これ以降もさらなるボックスモデルとその特徴を示す例を見ることができるはずです。</p>
+ <p><span id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"><a id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"></a><strong>ここまでのファイル検索ダイアログの例</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxfinal.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxfinal.xul">表示</a></p>
+</div>
+<p>次のセクションでは、スタックの作り方を見てみます。</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Groupboxes" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Stacks_and_Decks">次のページ  »</a></p>
+</div>

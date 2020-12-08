@@ -1,0 +1,187 @@
+---
+title: 'ARIA: switch ロール'
+slug: Web/Accessibility/ARIA/Roles/Switch_role
+tags:
+  - ARIA
+  - ARIA Role
+  - Accessibility
+translation_of: Web/Accessibility/ARIA/Roles/Switch_role
+---
+<p>\{{ariaref}}</p>
+
+<p><span class="seoSummary">ARIA の <code>switch</code> ロールは、<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role">checkbox</a></code> ロールと機能的に同じですが、"checked" と "unchecked" の状態を表す代わりに、その意味ではかなり一般的なもので、<code>switch</code> ロールは、「オン」と「オフ」の状態を表します。</span></p>
+
+<p>この例では、ウィジェットを作成し、ARIA の <code>switch</code> ロールを割り当てます。</p>
+
+<pre>&lt;button role="switch" aria-checked="true"
+       id="speakerPower" class="switch"&gt;
+   &lt;span&gt;オフ&lt;/span&gt;
+   &lt;span&gt;オン&lt;/span&gt;
+ &lt;/button&gt;
+ &lt;label for="speakerPower" class="switch"&gt;スピーカー電源&lt;/label&gt;</pre>
+
+<h2 id="Description" name="Description">説明</h2>
+
+<p>ARIA の <code>switch</code> ロールは、<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role">checkbox</a></code> ロールと同じですが、"checked" や "unchecked" ではなく、「オン」と「オフ」のどちらかです。 <code>checkbox</code> ロールと同様に、<code>aria-checked</code> 属性が必要です。 可能な2つの値は <code>true</code> と <code>false</code> です。 <code>&lt;checkbox&gt;</code> や <code>role="checkbox"</code> とは異なり、不確定な状態（<code>indeterminate</code>）や混在した状態（<code>mixed</code>）はありません。 <code>switch</code> ロールは、<code>aria-checked</code> 属性に <code>mixed</code> の値をサポートしていません。 <code>switch</code> に <code>mixed</code> の値を割り当てると、代わりに値を <code>false</code> に設定します。</p>
+
+<p>支援技術は、オン/オフスイッチの概念を反映するために、スイッチウィジェットを専門化したプレゼンテーションで表現することを選択することができます。</p>
+
+<p>スイッチはインタラクティブなコントロールなので、フォーカス可能でキーボードによりアクセス可能でなければなりません。 ロールがフォーカス可能でない要素に適用されている場合は、<code>tabindex</code> 属性を使用してこれを変更します。 スイッチの値を切り替えるために必要なキーボードショートカットは<kbd>スペース</kbd>キーです。 開発者は、スイッチがトグルされたときに、<code>aria-checked</code> 属性の値を動的に変更する必要があります。</p>
+
+<h3 id="Associated_ARIA_roles_states_and_properties" name="Associated_ARIA_roles_states_and_properties">関連する ARIA のロール、ステート、プロパティ</h3>
+
+<dl>
+ <dt><code>aria-checked</code> 属性</dt>
+ <dd><code>aria-checked</code> 属性は、<code>switch</code> ロールを使用する場合に<strong>必要</strong>です。 これは、<code>switch</code> ロールが適用されているウィジェットの現在の状態を表すためです。 <code>true</code> の値は「オン」状態を表します。 <code>false</code> の値は「オフ」状態を表します。 <code>mixed</code> の値は <code>switch</code> ロールでサポートされておらず、<code>false</code> として扱われます。 デフォルト値は <code>false</code> です。</dd>
+ <dt><code>aria-readonly</code> 属性</dt>
+ <dd><code>aria-readonly</code> 属性は、<code>switch</code> ロールでサポートされています。 ウィジェットの状態がユーザーによって編集可能かどうかを示します。 <code>false</code> の値は、ユーザーがウィジェットの状態を変更できることを意味します。 <code>true</code> の値は、ユーザーがウィジェットの状態を変更できないことを意味します。 デフォルト値は <code>false</code> です。</dd>
+</dl>
+
+<h3 id="Required_JavaScript_features" name="Required_JavaScript_features">必要な JavaScript 機能</h3>
+
+<dl>
+ <dt><code>click</code> イベントのハンドラ</dt>
+ <dd>ユーザーがスイッチウィジェットをクリックすると、<a href="/ja/docs/Web/Reference/Events/click"><code>click</code> イベント</a>が発生します。 これは、ウィジェットの状態を変更するために処理する必要があります。</dd>
+ <dt><code>aria-checked</code> 属性の変更</dt>
+ <dd>スイッチウィジェットで <code>click</code> イベントが発生した場合、ハンドラは <code>aria-checked</code> 属性の値を <code>true</code> から <code>false</code> やその逆に変更する必要があります。</dd>
+</dl>
+
+<h2 id="Possible_effects_on_user_agents_and_assistive_technology" name="Possible_effects_on_user_agents_and_assistive_technology">ユーザーエージェントと支援技術への影響</h2>
+
+<p><code>switch</code> ロールが要素に追加されると、{{Glossary("user agent","ユーザーエージェント")}}は次のようにそれを処理します。</p>
+
+<ul>
+ <li>要素は、<code>switch</code> ロールを持つものとしてシステムのアクセシビリティインフラストラクチャに公開されます。</li>
+ <li><code>aria-checked</code> 属性の値が変更されると、アクセス可能なイベントが使用可能で、<code>switch</code> ロールをサポートしている場合、アクセス可能なイベントがシステムのアクセシビリティ API を使用して起動されます。</li>
+ <li>switch ロールが適用された要素の子孫であるすべての要素には、ロールのプレゼンテーションが自動的に割り当てられます。 これにより、スイッチを構築するために使用する要素が、支援技術によって個別に相互作用するのを防ぎます。 これらの要素のテキストは、{{cssxref("display", "display: none")}} または aria-hidden="true" を使用して明示的に隠されていない限り、ユーザーエージェントに表示されたままになり、ユーザーが読んだり、別の方法で届けられる可能性があります。</li>
+</ul>
+
+<p>支援技術は、<code>switch</code> ロールをサポートしている場合は、次のように応えます。</p>
+
+<ul>
+ <li>スクリーンリーダーは、要素をスイッチとしてアナウンスする必要があります。 オプションでスイッチをアクティブにする方法についての指示を提供します。</li>
+</ul>
+
+<div class="note">
+<p>支援技術がこのロールをどのように処理すべきかについて、さまざまな意見があります。 上記は推奨される方法であり、他の情報源とは異なる場合があります。</p>
+</div>
+
+<h2 id="Examples" name="Examples">例</h2>
+
+<p>次の例は、<code>switch</code> ロールを適用して使用する方法を理解するのに役立ちます。</p>
+
+<h3 id="Adding_the_switch_role_in_ARIA" name="Adding_the_switch_role_in_ARIA">ARIA で switch ロールを追加する</h3>
+
+<p>この単純な例では、ウィジェットを作成して ARIA の <code>switch</code> ロールを割り当てます。 このボタンは、オン/オフの電源スイッチを連想させるような外観になっています。</p>
+
+<h4 id="HTML" name="HTML">HTML</h4>
+
+<p>HTML はここではかなり簡単です。 スイッチは {{HTMLElement("button")}} 要素として実装され、最初に <code>aria-checked</code> 属性が <code>"true"</code> に設定されているかどうかチェックされます。 スイッチには、"off" と "on" のラベルを含む2つの子要素があり、スイッチを識別する {{HTMLElement("label")}} が続きます。</p>
+
+<pre class="brush: html">&lt;button role="switch" aria-checked="true"
+      id="speakerPower" class="switch"&gt;
+  &lt;span&gt;off&lt;/span&gt;
+  &lt;span&gt;on&lt;/span&gt;
+&lt;/button&gt;
+&lt;label for="speakerPower" class="switch"&gt;Speaker power&lt;/label&gt;
+</pre>
+
+<h4 id="JavaScript" name="JavaScript">JavaScript</h4>
+
+<p>この JavaScript コードは、スイッチウィジェットの <code>click</code> イベントを処理する関数を定義して適用します。 この関数は、<code>aria-checked</code> 属性を <code>true</code> から <code>false</code> やその逆に変更します。</p>
+
+<pre class="brush: js">document.querySelectorAll(".switch").forEach(function(theSwitch) {
+  theSwitch.addEventListener("click", handleClickEvent, false);
+});
+
+function handleClickEvent(evt) {
+  let el = evt.target;
+
+  if (el.getAttribute("aria-checked") == "true") {
+      el.setAttribute("aria-checked", "false");
+  } else {
+      el.setAttribute("aria-checked", "true");
+  }
+}</pre>
+
+<h4 id="CSS" name="CSS">CSS</h4>
+
+<p>CSS の目的は、電源スイッチのパラダイムを思い起こさせるスイッチのルックアンドフィールを確立することです。</p>
+
+<pre class="brush: css">button.switch {
+  margin: 0;
+  padding: 0;
+  width: 60px;
+  height: 26px;
+  border: 2px solid black;
+  display: inline-block;
+  margin-right: 0.25em;
+  line-height: 20px;
+  vertical-align: middle;
+  text-align: center;
+  font: 12px "Open Sans", "Arial", serif;
+}
+
+button.switch span {
+  padding: 0 4px;}
+
+[role="switch"][aria-checked="false"] :first-child,
+[role="switch"][aria-checked="true"] :last-child {
+  background: #262;
+  color: #eef;
+}
+
+[role="switch"][aria-checked="false"] :last-child,
+[role="switch"][aria-checked="true"] :first-child {
+  color: #bbd;
+}
+
+label.switch {
+  font: 16px "Open Sans", "Arial", sans-serif;
+  line-height: 20px;
+  user-select: none;
+  vertical-align: middle;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}</pre>
+
+<p>最も興味深いのは、おそらく属性セレクタと {{cssxref(":first-child")}} と {{cssxref(":last-child")}} の擬似クラスを使用して、スイッチのオン/オフに応じてスイッチの外観を変えるということです。</p>
+
+<h4 id="Result" name="Result">結果</h4>
+
+<p>結果は次のようになります。</p>
+
+<p>{{EmbedLiveSample("Adding_the_switch_role_in_ARIA", 600, 40)}}</p>
+
+<h2 id="Specifications" name="Specifications">仕様</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ARIA', '#switch')}}</td>
+   <td>{{Spec2('ARIA')}}</td>
+   <td>一般的に ARIA をすべてのロール、プロパティなどとともに定義します。</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ARIA in HTML', '#index-aria-switch')}}</td>
+   <td>{{Spec2('ARIA in HTML')}}</td>
+   <td>ARIA の機能を HTML に統合する方法について説明します。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_checkbox_role">ARIA: checkbox ロール</a></li>
+ <li><code><a href="/ja/docs/Web/HTML/Element/input/checkbox">&lt;input type="checkbox"&gt;</a></code></li>
+</ul>

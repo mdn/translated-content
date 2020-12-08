@@ -1,0 +1,135 @@
+---
+title: Thunderbird extensions
+slug: Mozilla/Add-ons/Thunderbird
+tags:
+  - Add-ons
+  - Extensions
+  - NeedsTranslation
+  - TopicStub
+  - thunderbird
+translation_of: Mozilla/Thunderbird/Thunderbird_extensions
+---
+<div class="callout-box"><strong><a href="/en/Extensions/Thunderbird/Building_a_Thunderbird_extension" title="en/Building_a_Thunderbird_extension">Building a Thunderbird extension</a></strong><br>
+Step-by-step explanation on how to build an extension for Thunderbird.</div>
+
+<div>
+<p>{{AddonSidebar}}</p>
+The following documentation provides help for creating extensions for Mozilla's <a class="internal" href="/en/Thunderbird" title="En/Thunderbird">Thunderbird</a> email client. Although there are many similarities with <a href="/en/Extensions" title="en/Extensions">Firefox extensions</a> there are also some differences that may confound the starting developer.</div>
+
+<div><br>
+<strong>Please help!</strong> You can <a class="internal" href="/en/Extensions/Thunderbird/HowTos" title="en/Extensions/Thunderbird/HowTos">add a how-to</a> (a question or an answer or a code snippet), <a class="internal" href="/en/Extensions/Thunderbird/Useful_newsgroups_discussions" title="En/Extensions/Thunderbird/Useful newsgroups discussions">summarize and link to a relevant newsgroup discussion</a>, or create a tutorial. Need help? Contact <a class="internal" href="/User:jenzed" title="User:jenzed">jenzed</a>.</div>
+
+<table class="topicpage-table">
+ <tbody>
+  <tr>
+   <td>
+    <h2 id="Documentation" name="Documentation"><a href="/Special:Tags?tag=Extensions&amp;language=en" title="Special:Tags?tag=Extensions&amp;language=en">Documentation</a></h2>
+
+    <h3 id="Getting_started_with_Thunderbird">Getting started with Thunderbird</h3>
+
+    <p>A brave, young developer wants to develop an add-on for Thunderbird. Here's a few links to help them through this journey.</p>
+
+    <ul>
+     <li>Start by reading the tutorial and learn how to<a class="internal" href="/en/Extensions/Thunderbird/Building_a_Thunderbird_extension" title="En/Building a Thunderbird extension"> build a Thunderbird extension</a> (Outdated, still talks about overlays and the add-on builder is no longer available but the tutorial has not been updated.)</li>
+     <li>Read about the <a href="/en/Thunderbird/Main_Windows" title="Main Windows">main windows</a> so that you know what one means when they say « thread pane », « preview pane », and « folder pane ».</li>
+
+     <li>Want to do some real stuff? See <a class="external" href="http://blog.xulforum.org/index.php?post/2011/03/14/Basic-MimeMessage-demo" title="http://blog.xulforum.org/index.php?post/2011/03/14/Basic-MimeMessage-demo">how to inspect a message</a> (demo add-on included!)</li>
+     <li>Play with our other <a href="/en/Extensions/Thunderbird/Demo_Addon" title="Demo Addon">demo add-on</a> that exercises some more advanced Thunderbird-specific features</li>
+     <li>Want to do even more stuff? Don't reinvent the wheel: steal functions from the <a class="link-https" href="https://github.com/protz/thunderbird-stdlib" title="https://github.com/protz/thunderbird-stdlib">thunderbird-stdlib</a> project (doc <a class="external" href="http://protz.github.com/thunderbird-stdlib/doc/symbols/_global_.html" title="http://protz.github.com/thunderbird-stdlib/doc/symbols/_global_.html">here</a>). Functions for dealing with messages (delete them, archive them, change their tags, etc.) are included.</li>
+     <li>Haven't found what you're looking for? Read the <a class="internal" href="/en/Extensions/Thunderbird/HowTos" rel="internal" title="en/Extensions/Thunderbird/HowTos">Thunderbird how-tos</a>; they contain a lot of recipes for things extensions want to do.</li>
+     <li>Still haven't managed to do what you wanted? See the list of all <a class="external" href="http://wiki.mozilla.org/Thunderbird/CommunicationChannels" title="http://wiki.mozilla.org/Thunderbird/CommunicationChannels">Thunderbird communication channels </a>so that you know where to ask when you get stuck :-).</li>
+     <li>Feeling really brave? Read the source using a <a class="external" href="http://doxygen.db48x.net/comm-central/html/" title="http://doxygen.db48x.net/comm-central/html/">fancy interface</a>; you can often find tests that demonstrate how to do what you're trying to achieve.</li>
+    </ul>
+
+    <h3 id="The_Gloda_database">The Gloda database</h3>
+
+    <p>Thunderbird has a subsystem called Gloda. Gloda stands for « Global Database », and creates Thunderbird-wide relations between objects. Gloda provides concepts such as Conversations, Messages, Identities, Contacts. All these concepts are related together: a Conversation contains Messages which are linked to Identities (<strong>from</strong> field, <strong>to</strong> field) which are themselves part of a Contact: indeed, a contact has multiple identities.</p>
+
+    <p>Typical use cases for Gloda: find all messages whose subject matches [search term], find all messages from [person], find all messages in the same thread as [a given message], find all messages involving [person], etc. etc.</p>
+
+    <p>Gloda is extremely powerful and is used heavily by add-ons such as <a class="link-https" href="https://addons.mozilla.org/en-US/thunderbird/addon/gmail-conversation-view/" title="https://addons.mozilla.org/en-US/thunderbird/addon/gmail-conversation-view/">Thunderbird Conversations</a>. Learn more about Gloda:</p>
+
+    <ul>
+     <li>an overview of <a href="/en/Thunderbird/gloda" title="Gloda">Gloda</a></li>
+     <li>learn how to create <a href="/en/Thunderbird/Creating_a_Gloda_message_query" title="Creating a gloda message query">your first message query</a> and read the <a href="/en/Thunderbird/Gloda_examples" title="Gloda examples">gloda examples</a></li>
+     <li>learn about the Gloda internals: <a href="/en/Thunderbird/Gloda_debugging" title="Gloda debugging">Gloda debugging</a>, <a href="/en/Thunderbird/Gloda_indexing" title="Gloda indexing">Gloda indexing</a></li>
+    </ul>
+
+    <h3 id="More_Thunderbird-specific_links">More Thunderbird-specific links</h3>
+
+    <p>Some of these links may be wildly out of date, but they still provide valuable information on the codebase.</p>
+
+    <ul>
+     <li><a class="internal" href="/en/Extensions/Thunderbird/An_overview_of_the_Thunderbird_interface" title="En/Extensions/Thunderbird/An overview of the Thunderbird interface">An overview of Thunderbird components</a></li>
+     <li><a class="internal" href="/en/Extensions/Thunderbird/Thunderbird_developer_reference_docs" title="en/Extensions/Thunderbird/Thunderbird developer reference docs">Developer reference docs</a>:
+      <ul>
+       <li><a class="internal" href="/en/Folders" title="En/Folders">Folder classes</a></li>
+       <li><a class="internal" href="/en/DB_Views_(message_lists)" title="En/DB Views (message lists)">DB views (message list)</a></li>
+       <li><a class="internal" href="/en/Message_Summary_Database" title="En/Message Summary Database">Message summary database</a></li>
+       <li><a class="internal" href="/en/MailNews_Protocols" title="En/MailNews Protocols">MailNews protocols</a></li>
+       <li><a class="internal" href="/En/MailNews_Filters" rel="internal" title="En/MailNews Filters">MailNews filters</a></li>
+       <li><a class="internal" href="/en/Extensions/Thunderbird/Error_reporting_tools" title="en/Extension Library/Extensions/Thunderbird/Error reporting tools">Error reporting tools</a></li>
+       <li><a href="/en/Toolkit_API/STEEL" title="en/Toolkit API/STEEL">STEEL library</a> (obsolete as of Thunderbird 52, use <a class="link-https" href="https://github.com/protz/thunderbird-stdlib" title="https://github.com/protz/thunderbird-stdlib">https://github.com/protz/thunderbird-stdlib</a>)</li>
+       <li><a class="external" href="http://quetzalcoatal.blogspot.com/2010/01/developing-new-account-types-part-0.html" title="http://quetzalcoatal.blogspot.com/2010/01/developing-new-account-types-part-0.html">Developing new account types</a> <strong>NEW!</strong></li>
+      </ul>
+     </li>
+     <li><a class="internal" href="/en/Extensions/Thunderbird/Useful_newsgroups_discussions" title="En/Extensions/Thunderbird/Useful newsgroups discussions">Useful newsgroup discussions</a> (watch out, anything that's too old should be regarded suspiciously; there's been significant API rewrite over the past years, and most of these techniques are considerably easier now) </li>
+     <li><a href="/en/Thunderbird/Thunderbird_API_documentation" title="en/Thunderbird/Thunderbird API documentation">Thunderbird API docs</a> (mostly a collection of out-of-date pages, relevance is rather dubious) </li>
+     <li><a href="/en/Mozilla/Thunderbird/Releases" title="Thunderbird developer release notes">Thunderbird developer release notes</a> - changes in the recent Thunderbird updates affecting add-on developers. <a href="/Thunderbird_5_for_developers" title="Thunderbird 5 for developers">Thunderbird 5 for developers</a> has important information on MsgHdrToMimeMessage which is a central piece of code.</li>
+    </ul>
+
+    <h3 id="General_links">General links</h3>
+
+    <ul>
+     <li><a href="/en/Extensions/Thunderbird/Finding_the_code_for_a_feature" title="en/Extensions/Thunderbird/Finding the code for a feature">Finding the code for a feature</a></li>
+     <li><a class="external" href="http://kb.mozillazine.org/Category:Thunderbird" title="http://kb.mozillazine.org/Category:Thunderbird">Mozillazine articles on Thunderbird</a></li>
+     <li><a href="/Special:Tags?tag=Thunderbird" title="https://developer.mozilla.org/Special:Tags?tag=Thunderbird">All pages tagged with Thunderbird</a></li>
+     <li><a href="/Special:Tags?tag=MailNews" title="https://developer.mozilla.org/Special:Tags?tag=MailNews">All pages tagged with MailNews</a></li>
+    </ul>
+   </td>
+   <td>
+    <h2 id="Community" name="Community">Community</h2>
+
+    <ul>
+     <li>See the list of all <a class="external" href="http://wiki.mozilla.org/Thunderbird/CommunicationChannels" title="http://wiki.mozilla.org/Thunderbird/CommunicationChannels">Thunderbird communication channels </a>first</li>
+     <li>Among these are:</li>
+    </ul>
+
+    <p>{{ DiscussionList("dev-extensions", "mozilla.dev.extensions") }}</p>
+
+    <ul>
+     <li><a class="link-irc" href="irc://moznet/#extdev">#extdev IRC channel</a> / <a class="link-irc" href="irc://moznet/#maildev">#maildev IRC channel</a></li>
+     <li><a class="external" href="http://forums.mozillazine.org/viewforum.php?f=19">MozillaZine forum</a></li>
+     <li><a class="external" href="http://mozdev.org/mailman/listinfo/project_owners">mozdev project owners</a></li>
+     <li><a href="/en/Extensions/Community" title="en/Extensions/Community">Other community links...</a></li>
+    </ul>
+
+    <h2 id="Tools" name="Tools">Tools</h2>
+
+    <ul>
+     <li><a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/6622" rel="external nofollow" title="https://addons.mozilla.org/en-US/firefox/addon/6622">DOM Inspector</a> edit the live DOM (Firefox and Thunderbird)</li>
+     <li><a class="link-https" href="https://addons.mozilla.org/thunderbird/addon/workspace-for-thunderbird/" title="https://addons.mozilla.org/thunderbird/addon/workspace-for-thunderbird/">Workspace for Thunderbird</a>, allows running code snippets in Thunderbird and inspecting variable structure and content</li>
+     <li><a class="external" href="http://www.hacksrus.com/~ginda/venkman/" rel="external nofollow" title="http://www.hacksrus.com/~ginda/venkman/">Venkman</a>, a JavaScript debugger (<a class="external" href="http://addons.mozilla.org/en-US/firefox/addon/216" rel="external nofollow" title="http://addons.mozilla.org/en-US/firefox/addon/216">Firefox</a>, <a class="external" href="http://addons.mozilla.org/en-US/thunderbird/addon/216" rel="external nofollow" title="http://addons.mozilla.org/en-US/thunderbird/addon/216">Thunderbird</a>)</li>
+     <li><a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/7434/" rel="external nofollow" title="https://addons.mozilla.org/en-US/firefox/addon/7434/">Extension Developer's Extension</a> a suite of development tools</li>
+     <li><a class="external" href="http://www.gijsk.com/" rel="external nofollow" title="http://www.gijsk.com/">Chrome List</a> view files in chrome:// (<a class="external" href="http://addons.mozilla.org/en-US/firefox/addon/4453" rel="external nofollow" title="http://addons.mozilla.org/en-US/firefox/addon/4453">Firefox</a>, <a class="external" href="http://addons.mozilla.org/en-US/thunderbird/addon/4453" rel="external nofollow" title="http://addons.mozilla.org/en-US/thunderbird/addon/4453">Thunderbird</a>)</li>
+     <li><a href="/en/Mozmill" title="en/Mozmill">Mozmill</a> test tool and framework</li>
+     <li><a class="external" href="http://xpcomviewer.mozdev.org/" rel="external nofollow" title="http://xpcomviewer.mozdev.org">XPCOMViewer</a> an XPCOM inspector (Firefox and Thunderbird)</li>
+    </ul>
+
+    <p>... <a class="internal" href="/en/Setting_up_extension_development_environment#Development_extensions" title="en/Setting up extension development environment#Development extensions">more tools</a> ...</p>
+
+    <p><span class="alllinks"><a href="/Special:Tags?tag=Extensions:Tools&amp;language=en" title="Special:Tags?tag=Extensions:Tools&amp;language=en">View All...</a></span></p>
+
+    <h2 id="Related_Topics" name="Related_Topics">Related Topics</h2>
+
+    <dl>
+     <dd><a href="/en/XUL" title="en/XUL">XUL</a>, <a href="/en/JavaScript" title="en/JavaScript">JavaScript</a>, <a href="/en/XPCOM" title="en/XPCOM">XPCOM</a>, <a href="/en/Themes" title="en/Themes">Themes</a>, <a href="/En/Developer_Guide" title="en/Developing_Mozilla">Developing Mozilla</a></dd>
+    </dl>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p><span class="comment">Categories</span></p>
+
+<p>{{ languages( { "ja": "ja/Extensions/Thunderbird" } ) }}</p>

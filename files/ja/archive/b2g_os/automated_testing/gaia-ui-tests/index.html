@@ -1,0 +1,73 @@
+---
+title: Gaia UI テストの導入
+slug: Archive/B2G_OS/Automated_testing/gaia-ui-tests
+tags:
+  - Build documentation
+  - Firefox OS
+  - Gaia
+  - Guide
+  - Mobile
+  - Testing
+  - TopicStub
+  - gaia-ui-test
+  - gaiatest
+translation_of: Archive/B2G_OS/Automated_testing/gaia-ui-tests
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/Mozilla/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_1_Marionette_Firefox_OS_start">次のページ  »</a></p>
+</div><p></p>
+
+<div class="summary">
+<p>Gaia-ui-tests は、Gaia (Firefox OSのUI) を隅から隅までUIテスト実行するMozillaのテストスイートです。全てのテストはPythonで書かれ、Firefox OSのAPI操作に使う JavaScript もいくらか混じっています。このチュートリアル記事では、テストを書いて実行する環境のセットアップ方法を説明します。</p>
+</div>
+
+<p>Gaia-ui-tests は <strong>Gaiatest</strong>という、<a href="/docs/Mozilla/QA/Marionette" title="https://developer.mozilla.org/en-US/docs/Marionette">Marionette</a> あたりを元にしたPythonパッケージを使っています。 Gaiatest はHTML ロケータや、Marionette 呼び出しや、(相互コミュニケーションと機能用の)API呼び出しを一緒にラップすろように設計されています。Marionette は、<a href="http://docs.seleniumhq.org/projects/webdriver/" title="http://docs.seleniumhq.org/projects/webdriver/">Selenium WebDriver</a> (ブラウザ自動化のプログラミングインターフェイス) 用に開発されたW3C標準に基いています。WebDriver と page/app オブジェクトを以前使った事がある場合、Marionette と gaiatest を使うのは楽に感じるでしょう。</p>
+
+<h2 id="Gaia_UI_を開始する">Gaia UI を開始する</h2>
+
+<p>Gaia/Firefox OS の自動テストを開始するのに熱心な人のために、何もない所から自身のテストを書き始めるのを助けるチュートリアル集を用意しています。このチュートリアルをいったん終えてしまうと、Mozillaのテスト貢献者を始めるための、テストや、Firefox OS や、Marionette に対する充分な知識が得られるでしょう。<strong>貢献者になりたい場合は、このチュートリアルを完了しておくことを強く推奨します。</strong></p>
+
+<dl>
+ <dt><a href="/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_1_Marionette_Firefox_OS_start">パート 1: Marionette と Firefox OS をはじめよう</a></dt>
+ <dd>この記事には、テスト実行を開始するためにインストールが必要となるツール、たとえば B2G デスクトップ、Python、Marionette が載っています。</dd>
+ <dt><a href="/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_2_Marionette_Firefox_OS_interactions">パート 2: Marionette を使って Firefox OS と基本的なやりとりをする</a></dt>
+ <dd>Marionette 経由で Firefox OS を操作するために使う基本コマンドをざっと見ます。</dd>
+ <dt><a href="/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_3_Reusable_tests">パート 3: コードを再利用可能テストに更新する</a></dt>
+ <dd>まだまだ行こう、この記事では基本的なコマンドをPythonファイル内のシンプルなテストに組み上げて、単一エントリーから全てを実行できるようにします。</dd>
+ <dt><a href="/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_4_Reusing_commands_Firefox_OS_setup">パート 4: Firefox OS をセットアップする再利用コマンド</a></dt>
+ <dd>ここではコマンドをPythonメソッドに変えて再利用しやすくするのを見て行きます。</dd>
+ <dt><a href="/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_5_Introducing_a_test_runner">パート 5: テストランナーを導入する</a></dt>
+ <dd>テストランナーは優秀なテストスイートの中心的機能で、これにより複数のテストの実行やレポートや結果の集約ができます。この記事ではPythonのユニットテストランナーの基本を探検します。</dd>
+ <dt><a href="/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_6_Marionette_By_class">パート 6: クラスによって、タプルと Marionette を使う</a></dt>
+ <dd>ここでは、更にコードの重複を削減する方法を説明します、それにはタプル内の繰り返しのロケーターを保管して Marionetteの <code>By</code> クラスの文法でシンプルにします。</dd>
+ <dt><a href="/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_7_Writing_your_own_tests">パート 7: 自分自身のテストを書く</a></dt>
+ <dd>いま基本は備わっています、そして自分自身のテストを書く時です! ここでは作業を簡単にする推奨ツールの予定や、手で書いてみるいくつかのテストをお勧めします。</dd>
+ <dt><a href="/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_8_Using_a_base_class">パート 8: ベースクラスを使用する</a></dt>
+ <dd>この状態では、テストファイルは全てのテストランナーコードを含んでいます。当面は問題ないですが、テストファイルの実行を始めるとすぐに、多くの複製ができるでしょう。テストランナーコードを別々のPythonクラスに分けて抽象化する事で、この問題を解決してみます。</dd>
+ <dt><a href="/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_9_app_objects">パート 9: アプリオブジェクトの複製を抑える</a></dt>
+ <dd>コードのメンテナンス性についての最終改良として、この記事では特定のFirefox OSアプリとのインタラクションをPythonアプリオブジェクトに抽象化するという抽象化を探検します。</dd>
+</dl>
+
+<h2 id="上級トピック">上級トピック</h2>
+
+<p>テストの実行と記述をものにしたら、もっと複雑・先進的な作業に移りたくなるでしょう、例えば gaia-ui-tests 全体のテストスイートを実行したり、テスト結果としてpower drawをログ出力したり。</p>
+
+<dl>
+ <dt><a href="/docs/Mozilla/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Gaia_UI_Tests_Run_Tests" title="Gaia UI Tests Run Tests">gaia-ui-tests を実行する</a></dt>
+ <dd>Firefox OS の実端末や<a href="/en-US/Firefox_OS/Using_the_B2G_desktop_client">B2G Desktop</a> に対して、いろいろな設定にて、gaia-ui-tests を一通り実行するガイド。</dd>
+</dl>
+
+<h2 id="こちらも見よ">こちらも見よ</h2>
+
+<p><a href="https://github.com/mozilla-b2g/gaia/tree/master/tests/python/gaia-ui-tests">Gaia-ui-tests main repository</a></p>
+
+<h2 id="質問コメント関心事"><span class="mw-headline" id="Questions.2FComments.2FConcerns">質問/コメント/関心事</span></h2>
+
+<p>このプロジェクトははるかに初期の段階なので、あなたのフィールドバックはとても感謝されます:</p>
+
+<ul>
+ <li><a href="http://mailto:_gaia-ui-automation@mozilla.org">gaia-ui-automation@mozilla.org</a> のMLにメールを送って下さい。</li>
+ <li>あるいは、<a href="https://wiki.mozilla.org/IRC">Mozilla IRC</a> の #fxosqa、#fxos-automation、#moztpeqa といったチャンネルで我々を見つけて下さい。</li>
+</ul>
+
+<div id="divLookup" style="background-color: transparent; color: #000000; position: absolute; top: 308px; left: 98px; padding: 0px; border-radius: 2px;"><img></div>

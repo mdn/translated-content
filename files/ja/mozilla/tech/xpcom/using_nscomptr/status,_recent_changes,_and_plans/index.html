@@ -1,0 +1,36 @@
+---
+title: 'Status, Recent Changes, and Plans'
+slug: 'Mozilla/Tech/XPCOM/Using_nsCOMPtr/Status,_Recent_Changes,_and_Plans'
+tags:
+  - XPCOM
+translation_of: 'Mozilla/Tech/XPCOM/Using_nsCOMPtr/Status,_Recent_Changes,_and_Plans'
+---
+<p>
+</p><p>このセクションが、初めて読む人に邪魔になって申し訳ありません。 目次にとばしたり、直接 <a href="ja/Using_nsCOMPtr/Getting_Started_Guide">スタートガイド</a> や <a href="ja/Using_nsCOMPtr/Reference_Manual">リファレンスマニュアル</a>、 <a href="ja/Using_nsCOMPtr/Frequently_Asked_Questions">FAQ</a> に行きたいかもしれません。 このセクションは、最近の更新をチェックするのが簡単になるようにトップに設けています。
+</p><p><br>
+</p>
+<h3 id="nsCOMPtr_.E3.81.AB.E5.AF.BE.E3.81.99.E3.82.8B.E6.9C.80.E8.BF.91.E3.81.AE.E6.9B.B4.E6.96.B0" name="nsCOMPtr_.E3.81.AB.E5.AF.BE.E3.81.99.E3.82.8B.E6.9C.80.E8.BF.91.E3.81.AE.E6.9B.B4.E6.96.B0"> <code>nsCOMPtr</code> に対する最近の更新 </h3>
+<p>新しいものから順に
+</p>
+<ul><li> <code>nsCOMPtr</code> と生のポインタ（もしくはリテラル 0 や nsnull）の間の <code>==</code> と <code>!=</code> がすべてのコンパイラで正しく働くようにしました。<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=65664" title="FIXED: nsCOMPtr:  make operator== always work with gcc">バグ 65664</a> を参照してください
+</li><li> <a href="ja/Using_nsCOMPtr/Reference_Manual#.60.E5.87.BA.E5.8A.9B.27.E3.83.91.E3.83.A9.E3.83.A1.E3.82.BF:_getter_AddRefs"><code>getter_AddRefs( nsCOMPtr&amp; )</code></a> に対して、簡単な代入式が行うのと同じ [[Using_nsCOMPtr:Reference_Manual#型の保護手段|type-safety check] を適用します。
+</li><li> <code>do_CreateInstance</code> を追加しました。
+</li><li> <code>do_GetService</code> を追加しました。
+</li><li> <code>nsISupports**</code> が必要な時に <code>getter_AddRefs</code> をキャストする必要性がなくなりました。
+</li><li> <code>nsCOMPtr&lt;nsISupports&gt;</code> の不変性を緩和したので、 任意の [XP]COMインタフェースへのポインタを使うことができるようなりました。
+</li><li> <a href="ja/Weak_reference"><code>nsIWeakReference</code></a> を簡単に使えるように、<a href="ja/Using_nsCOMPtr/Reference_Manual#nsCOMPtr.3CT.3E_.3D_do_QueryReferent.28_nsIWeakReference.2A_.29.2CnsCOMPtr.3CT.3E_.3D_do_QueryReferent.28_nsIWeakReference.2A.2C_nsresult.2A_.29"><code>do_QueryReferent</code></a> を追加しました。
+</li></ul>
+<h4 id="nsCOMPtr_.E3.81.AE.E8.A8.88.E7.94.BB" name="nsCOMPtr_.E3.81.AE.E8.A8.88.E7.94.BB"> <code>nsCOMPtr</code> の計画 </h4>
+<ul><li> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=59212" title="FIXED: leaks with nsCOMPtr&lt;nsIAtom> foo = NS_NewAtom(...)">バグ 59212</a>: 私たちがより多くのコンパイラでテストできるようになり次第、 <code>already_AddRefed</code> を関数の戻り値として推奨する事を始めます。
+</li><li> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=59414" title="FIXED: misuse of nsCOMPtr::operator&amp;">バグ 59414</a>: <code>operator&amp;</code> を <code>private</code> とすることで、<a href="ja/Using_nsCOMPtr/Reference_Manual#.E3.82.AD.E3.83.A3.E3.82.B9.E3.83.88">キャストによるリーク</a> のいくつかを防ぐのを助けるでしょう
+</li><li> nsCOMPtr&lt;/code&gt;を複数のルーチンに分解してライブラリに入れます。それにより、<code>nsCOMPtr</code>のクライアントの XPCOM ライブラリへの依存性を減らします。
+</li></ul>
+<h4 id=".E6.9C.80.E8.BF.91.E3.81.AE.E3.83.89.E3.82.AD.E3.83.A5.E3.83.A1.E3.83.B3.E3.83.88.E3.81.AE.E6.9B.B4.E6.96.B0" name=".E6.9C.80.E8.BF.91.E3.81.AE.E3.83.89.E3.82.AD.E3.83.A5.E3.83.A1.E3.83.B3.E3.83.88.E3.81.AE.E6.9B.B4.E6.96.B0"> 最近のドキュメントの更新 </h4>
+<ul><li> <code>nsCOMPtr</code> と生のポインタ、リテラル <code>0</code> との間にある <code><span class="nowiki">==</span></code> と <code><span class="nowiki">!=</span></code> が一部のコンパイラで正しく働かないという記述は、既に問題が解決されたので削除しました。
+</li><li> スタートガイドに <a href="ja/Using_nsCOMPtr/Getting_Started_Guide#.E9.96.A2.E6.95.B0.E8.AD.98.E5.88.A5.E5.AD.90.E5.86.85.E3.81.AE_nsCOMPtr">関数識別子内の <code>nsCOMPtr</code></a> セクション全体を追加しました。
+</li><li> <code>nsCOMPtr</code> 機構を使うことに影響を及ぼす現在のバグへの言及を加えました。<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=59212" title="FIXED: leaks with nsCOMPtr&lt;nsIAtom> foo = NS_NewAtom(...)">バグ 59212</a> と <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=59414" title="FIXED: misuse of nsCOMPtr::operator&amp;">バグ 59414</a>
+</li><li> Morten Welinder のコメントのように、<a href="ja/Using_nsCOMPtr/Getting_Started_Guide#Comparison1">1</a> と<a href="ja/Using_nsCOMPtr/Getting_Started_Guide#Comparison3">3</a> の比較を修正しました。
+</li><li> コピー初期化よりも直接の初期化の方が好ましい例を更新しました。
+</li></ul>
+<div class="noinclude">
+</div>

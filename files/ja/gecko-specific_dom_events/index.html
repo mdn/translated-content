@@ -1,0 +1,140 @@
+---
+title: Gecko 固有の DOM Event
+slug: Gecko-Specific_DOM_Events
+tags:
+  - DOM
+  - MDC Project
+  - NeedsTechnicalReview
+translation_of: Web/Events
+---
+<p>{{ 英語版章題("DOMContentLoaded") }}</p>
+<h3 id="DOMContentLoaded" name="DOMContentLoaded">DOMContentLoaded</h3>
+<p>文書の DOM コンテンツが読み終わったとき window オブジェクト上で発生します。しかし、"load" とは異なり画像が読み込まれるのを待ちません。例えば、GraeseMonkey でページが表示される前に変更をこっそり行うために使われます。</p>
+<p>このイベントは、このページの他の多くのイベントのように、"信頼された" 対象のみに通達されます。例えば、Firefox におけるメインブラウザオブジェクトのコンテンツには、たとえ、chrome:/ URI からのものであっても、通達されません。</p>
+<p>{{ 英語版章題("DOMFrameContentLoaded") }}</p>
+<h3 id="DOMFrameContentLoaded" name="DOMFrameContentLoaded">DOMFrameContentLoaded</h3>
+<p>上記と同じですが、フレーム内のコンテンツが読み込まれた時に発生します。</p>
+<p>{{ 英語版章題("DOMWindowClose") }}</p>
+<h3 id="DOMWindowClose" name="DOMWindowClose">DOMWindowClose</h3>
+<p>window.close() によって、ウィンドウを閉じようとしている時に発生します。詳しくは {{ Bug(103452) }} をご覧ください。</p>
+<h3 id="MozAfterPaint">MozAfterPaint</h3>
+<p>{{ fx_minversion_note(3.5, "The <code>MozAfterPaint</code> イベントは Firefox 3.5 (Gecko 1.9.1) で追加されました。") }}</p>
+<p><code>MozAfterPaint</code> イベントはコンテントが再描画されたときに発生します。このイベントは document に送られ window レベルまで bubble します。</p>
+<p>MozAfterPaint は 2 つの属性を持ちます:</p>
+<ul>
+  <li><code>clientRects</code></li>
+  <li><code>boundingClientRect</code></li>
+</ul>
+<p>これらは再描画された領域について教えてくれます。<a class="internal" href="/ja/DOM/element.getClientRects" title="Ja/DOM/Element.getClientRects"><code>getClientRects()</code></a> と <a class="internal" href="/ja/DOM/element.getBoundingClientRect" title="Ja/DOM/Element.getBoundingClientRect"><code>getBoundingClientRect()</code></a> メソッドと同じオブジェクトと座標系が使われます。</p>
+<h4 id="重要な注意">重要な注意</h4>
+<ul>
+  <li><code>MozAfterPaint</code> は Gecko 独自のイベントです。互換性 (とパフォーマンス) の面から、このイベントは拡張機能のような chrome のコードでのみ使うべきです。</li>
+  <li>セキュリティ上の理由から、通常の Web コンテントは自分自身の document で発生した再描画のみが通知されます。iframe によって発生した再描画は、信用されていないリスナには報告されません。拡張機能やその他の chrome のコードのような信用されたコンテントには全ての再描画が通知されます。</li>
+  <li>もしイベントハンドラが、要素のスタイルを変更するなどして、再描画を発生させるとおそらく無限ループが発生します。そのようなことはやめましょう。</li>
+  <li>ビューポートの外にスクロールした領域の再描画は報告されますが、<code>overflow:auto</code> であるような要素の外にスクロールした再描画は報告されません。</li>
+  <li>windowed プラグイン (Windows と GTK における大半のプラグイン) の再描画は報告されません。</li>
+</ul>
+<h4 id="想定される利用">想定される利用</h4>
+<p>MozAfterPaint が有用である状況はいくつかあります。例えば、<a class="internal" href="/ja/Drawing_Graphics_with_Canvas#Rendering_Web_Content_Into_A_Canvas" title="ja/Drawing Graphics with Canvas#Rendering Web Content Into A Canvas"><code>canvas.drawWindow()</code></a> を使って、ウィンドウの内容をキャプチャする拡張機能の中で使うことができます。 Web コンテンツをテストする間、Firefox によって何がいつ描画されたか計る JavaScript 計測コードを書くのに使うこともできます。</p>
+<h4 id="例">例</h4>
+<p>この例は描画された要素の背景を、更新されるたびに徐々に暗い赤に調整していきます。</p>
+<pre class="brush: js">(function(){
+  var store = [];
+
+  window.addEventListener("MozAfterPaint", log, false);
+
+  if ( document.body )
+    bind();
+  else
+    window.addEventListener("load", bind, false);
+
+  function log(e){
+    store.push( [(new Date).getTime(), e.clientRects] );
+  }
+
+  function bind(){
+    document.body.addEventListener("click", function(){
+      window.removeEventListener("MozAfterPaint", log, false);
+
+      for ( var pos = 0; pos &lt; store.length; pos++ ) {
+        var rects = store[pos][1];
+
+        for ( var i = 0; i &lt; rects.length; i++ ) {
+          var rect = rects[i];
+          var div = document.createElement("div");
+
+          with (div.style) {
+            background = "red";
+            opacity = "0.1";
+            position = "absolute";
+            top = rect.top + "px";
+            left = rect.left + "px";
+            width = (rect.right - rect.left) + "px";
+            height = (rect.bottom - rect.top) + "px";
+          }
+
+          document.body.appendChild( div );
+        }
+      }
+
+      document.body.removeEventListener("click", arguments.callee, false);
+    }, false);
+  }
+})();
+</pre>
+<p>この例の最も興味深いところは:</p>
+<ul>
+  <li>4 行目は <code>MozAfterPaint</code> イベントを監視するイベントリスナをインストールしています。イベントが発生すると <code>log()</code> 関数が呼びだされます。</li>
+  <li>11 から 13行目は <code>log()</code> 関数を含んでいます。これは更新ごとに (再描画領域の) 矩形リストを後で参照するためにスタックに積んでいます。DOM に対する実際の変更はロギングが完了してから行います。これはロギングによる再描画が引きおこす無限ループを避けるためです。</li>
+  <li>16 行目は click イベントリスナをインストールしています。マウスが様々な要素の上に重なると再描画が発生します。ウィンドウ中をマウスで動きまわるのをやめたいときは、マウスをクリックすると実際に結果が表示されます。</li>
+  <li>17 行目は click イベンントリスナの最初の行で、<code>MozAfterPaint</code> イベントハンドラを削除しています。先ほど言及した無限ループの問題を避けるために、これはドキュメントに変更を加える前に行います。</li>
+  <li>19 から 37 行目は、描画された矩形について <a class="internal" href="/Ja/HTML/Element/Div" title="Ja/HTML/Element/Div"><code>div</code></a> 要素を DOM に追加しています。それらは薄い透明な赤い背景を持っており、描画されているコンテントの上に重ねられます。</li>
+</ul>
+<p>この例を使うために以下のコードを含んだブックマークレットを作ることができます:</p>
+<pre>javascript:(function(s){s.src='http://developer.mozilla.org/@api/deki/files/2937/=track.js';document.body.appendChild(s);})(document.createElement('script'));
+</pre>
+<h3 id="DOMMouseScroll">DOMMouseScroll</h3>
+<p><code>DOMMouseScroll</code> イベントはマウスホイールが動いたときに送られます。このイベントのターゲットは、click イベントと同じように、マウスホイールがスクロールされたときマウスポインタの下にいた要素です。</p>
+<p><code>DOMMouseScroll</code> イベントの最も重要な属性は<code>detail</code> と <code>axis</code> です:</p>
+<ul>
+  <li><code>detail</code> はマウスホイールの移動した「目盛」の数を特定します。正の値は「下」/「右」を意味し、負の値は「上」/「左」を意味します。</li>
+  <li><code>axis</code> はスクロール動作の軸を特定します (水平または垂直)。この属性は Firefox 3.5 で追加されました ({{ Bug(378028) }})。</li>
+</ul>
+<p>これらの属性に加えて、<code>DOMMouseScroll</code> イベントは通常のマウスイベントの属性も全て持っています。</p>
+<h4 id="スクロール方向の特定">スクロール方向の特定</h4>
+<p><code>e</code> を DOMMouseScroll イベントとすると、<code>e.axis</code> は以下のいずれかと等しくなります:</p>
+<ul>
+  <li><code>undefined</code> - Firefox 3.5 未満</li>
+  <li><code>e.HORIZONTAL_AXIS</code> - 水平方向のスクロール移動</li>
+  <li><code>e.VERTICAL_AXIS</code> - 垂直方向のスクロール移動</li>
+</ul>
+<h3 id="MozMousePixelScroll">MozMousePixelScroll</h3>
+<p>{{ fx_minversion_note(3.5, "<code>MozMousePixelScroll</code> イベントは Firefox 3.5 (Gecko 1.9.1) で追加されました。") }}</p>
+<p>通常のマウスホイールは行単位でしかスクロールできません。しかし、特に Apple MacBook トラックパッドのような、ピクセル精度のスクロールをサポートしたデバイスも存在します。</p>
+<p>{{ Bug(350471) }} でピクセルスクロールのサポートを始めたとき、我々は <code>MozMousePixelScroll</code> イベントを追加しました。これは基本的に <code>DOMMouseScroll</code> と同じですが、<code>detail</code> 属性が (行単位ではなく) ピクセル単位であることが違っています。</p>
+<p>後方互換性のためにピクセルスクロールが使われたとしても <code>DOMMouseScroll</code> イベントも送られます。全ての <code>DOMMouseScroll</code> イベントはいくつかの関連づけられた <code>MozMousePixelScroll</code> を持つことができます。もし <code>DOMMouseScroll</code> に対して <code>preventDefault()</code> が呼ばれたら、続く関連づけられた <code>MozMousePixelScroll</code> イベントはスクロールを発生させません。</p>
+<p><code>MozMousePixelScroll</code> イベントを listen する時は <code>DOMMouseScroll</code> を処理すべきではありません。そうしないと同じスクロール動作を 2 度処理する羽目になるでしょう。<code>MozMousePixelScroll</code> イベントだけを listen できるように Gecko は通常のマウスホイールによるスクロールに対しても <code>MozMousePixelScroll</code> を送ります。それらのイベントは意味あるピクセル変化量を提供します。</p>
+<p>イベントの流れの詳細は <a class="external" href="http://hg.mozilla.org/mozilla-central/rev/93f23e3efbb4#l13.15" title="Event flow comment in the changeset">コードのコメント</a> を参照してください。</p>
+<p>{{ 英語版章題("Others") }}</p>
+<h3 id=".E3.81.9D.E3.81.AE.E4.BB.96" name=".E3.81.9D.E3.81.AE.E4.BB.96">その他</h3>
+<p>その他にも使用できるイベントがあります。詳しくは {{ Bug(286013) }} をご覧ください:</p>
+<ul>
+  <li>DOMLinkAdded</li>
+  <li>DOMLinkRemoved</li>
+  <li>DOMWillOpenModalDialog</li>
+  <li>DOMModalDialogClosed</li>
+  <li>fullscreen</li>
+  <li>PopupWindow</li>
+  <li>DOMTitleChanged</li>
+  <li>PluginNotFound</li>
+  <li>ValueChange</li>
+  <li>DOMMenuItemActive</li>
+  <li>windowZLevel</li>
+</ul>
+<p>{{ 英語版章題("Example") }}</p>
+<h3 id=".E4.BE.8B" name=".E4.BE.8B">例</h3>
+<pre class="eval">window.addEventListener("DOMFrameContentLoaded", myeventhandler, true);
+</pre>
+<p>{{ 英語版章題("See also") }}</p>
+<h3 id=".E5.8F.82.E7.85.A7" name=".E5.8F.82.E7.85.A7">参照</h3>
+<p><a href="/ja/DOM/element#Event_Handlers" title="ja/DOM/element#Event_Handlers">Event Handlers</a>、<a href="/ja/DOM_Events" title="ja/DOM_Events">DOM Events</a></p>

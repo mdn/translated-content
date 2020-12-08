@@ -1,0 +1,20 @@
+---
+title: Components.utils.forceGC
+slug: Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.forceGC
+tags:
+  - NeedsContent
+  - 'XPCOM:Language Bindings'
+  - XPConnect
+translation_of: Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.forceGC
+---
+<p>このメソッドはスクリプトにガベージコレクションサイクルを強制します。 JavaScript ヒープがある大きさを超えると Mozilla JavaScript エンジンは自動的にガベージコレクションを実行するでしょう。もっとも、この機構は JS オブジェクトにぶら下がる ネイティブ (C++) XPCOM オブジェクトを把握してはいません。多くの場合、 JavaScript アプリケーションは巨大な XPCOM (のツリー) を参照している JavaScript オブジェクトについての内部情報を持っており、いつ参照しなくなるかを知っています。この場合 JavaScript からガベージコレクションサイクルを強制できることが重要になることがあります。</p>
+
+<p>ガベージコレクションを強制することは、他にも<a href="ja/Components.utils.getWeakReference">弱い JavaScript 参照</a>のハッシュからの死んだ参照 (<span style="color: green;">dead reference</span>)をクリーニングする前です。</p>
+
+<p>このメソッドを使う人はガベージコレクションが非常に負担の大きい (<span style="color: green;">expensive</span>)操作で、絶対必要だと<strong>知っている</strong> 時のみ使用すべきだとことに注意してください。</p>
+
+<div class="note"><strong>注</strong>: <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils#garbageCollect()">nsIDOMWindowUtils.garbageCollect()</a></code> は同様の機能を提供しますが、 JavaScript エンジンのガベージコレクターに加えてサイクルコレクターも起動します。これにより、ガベージコレクターに依存するテストケースなど、 JavaScript オブジェクトのサイクルを構築する XPCOM コンポーネントも回収されることが重要になるかもしれないと分かるでしょう。</div>
+
+<p><code>UniversalXPConnect</code> 特権が必要です。</p>
+
+<p>もし、実行されている JavaScript コードがない状態で、将来的にガベージコレクションを起こすことをスケジューリングしたい場合は、代わりに <a href="/en/Components.utils.schedulePreciseGC" title="en/Components.utils.schedulePreciseGC"><code>Components.utils.schedulePreciseGC()</code></a> を使用することができます。</p>

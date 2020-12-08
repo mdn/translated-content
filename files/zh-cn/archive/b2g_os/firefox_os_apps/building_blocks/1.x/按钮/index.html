@@ -1,0 +1,256 @@
+---
+title: 按钮
+slug: Archive/B2G_OS/Firefox_OS_apps/Building_blocks/1.x/按钮
+translation_of: Archive/B2G_OS/Firefox_OS_apps/Building_blocks/1.x/Button
+---
+<p>当用户点击时执行操作。这些是高度灵活的用户界面对象，具有多种样式。有关如何实现类似于此处描述的按钮的信息，请参见<a href="https://wiki.developer.mozilla.org/en-US/docs/Archive/B2G_OS/Firefox_OS_apps/Building_blocks/1.x/Button/Coding">编码指南</a>。</p>
+
+<h2 id="特点">特点</h2>
+
+<ul>
+ <li>按钮具有两个组成部分：视觉目标和命中目标。命中目标始终较大，以通过使按钮更易于点按来减少定位错误。</li>
+ <li>按钮有两种状态：正常和按下状态。</li>
+ <li>还可以<strong>禁用</strong>按钮，这意味着它们不能被用户激活，并且显示为灰色以指示它们已被禁用。</li>
+</ul>
+
+<p>有几种类型的按钮：</p>
+
+<dl>
+ <dt>动作按钮</dt>
+ <dd>仅在执行少量操作且不需要列表时使用。主操作按钮使用特殊的突出显示颜色来指示它是主要选项。</dd>
+ <dt>列表按钮</dt>
+ <dd>在显示操作列表或触发值选择器显示时使用。</dd>
+ <dt>输入栏按钮</dt>
+ <dd>用于对输入字段执行操作。</dd>
+ <dt>特殊/自定义按钮</dt>
+ <dd>这些用于提供特定的操作，包括记录、拨号等。</dd>
+</dl>
+
+<h2 id="Visuals">Visuals</h2>
+
+<p>Here are some visual examples of what buttons should look like. Don't forget that you can use the style sheet and image resources provided in the <a href="/en-US/docs/Mozilla/Firefox_OS/UX/Building_blocks/Button/Coding" title="/en-US/docs/Mozilla/Firefox_OS/UX/Building_blocks/Button/Coding">Coding guide</a> to implement these.</p>
+
+<h3 id="Action_buttons">Action buttons</h3>
+
+<p>Action buttons are used when there are only a few actions and you don't need a full list. The main action button uses a special highlight color to indicate that it's the primary action.</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="row"></th>
+   <th scope="col">Primary action</th>
+   <th scope="col">Secondary action</th>
+   <th scope="col">Delete</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">Normal</th>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/4693/btn-main-normal.jpg" style="height: 40px; width: 140px;"></td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/4699/btn-secondary-normal.jpg" style="height: 40px; width: 140px;"></td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/4687/btn-delete-normal.jpg" style="height: 40px; width: 140px;"></td>
+  </tr>
+  <tr>
+   <th scope="row">Pressed</th>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/4691/btn-main-lit.jpg" style="height: 40px; width: 140px;"></td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/4697/btn-secondary-lit.jpg" style="height: 40px; width: 140px;"></td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/4685/btn-delete-lit.jpg" style="height: 40px; width: 140px;"></td>
+  </tr>
+  <tr>
+   <th scope="row">Disabled</th>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/4689/btn-main-disabled.jpg" style="height: 40px; width: 140px;"></td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/4695/btn-secondary-disabled.jpg" style="height: 40px; width: 140px;"></td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/4683/btn-delete-disabled.jpg" style="height: 40px; width: 140px;"></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>On a dark background, disabled buttons have a special appearance, as seen below.</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="row"></th>
+   <th scope="col">Primary action</th>
+   <th scope="col">Secondary action</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">Disabled</th>
+   <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4701/btn-primary-disabled-dark.jpg" style="height: 40px; width: 140px;"></td>
+   <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4703/btn-secondary-disabled-dark.jpg" style="height: 40px; width: 140px;"></td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="List_buttons">List buttons</h3>
+
+<p>List buttons are used to display a list of actions, to trigger the display of a value selector.</p>
+
+<h4 id="Triggering_actions">Triggering actions</h4>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="row"></th>
+   <th scope="col">Trigger an action in the current view</th>
+   <th scope="col">Trigger an action in a new view</th>
+   <th scope="col">Display a value selector</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">Normal</th>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/4725/btn-trigger-current-normal.png" style="height: 40px; width: 291px;"></td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/4731/btn-trigger-new-normal.png" style="height: 40px; width: 290px;"></td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/4743/btn-trigger-selector-normal.png" style="height: 40px; width: 291px;"></td>
+  </tr>
+  <tr>
+   <th scope="row">Pressed</th>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/4727/btn-trigger-current-pressed.png" style="height: 40px; width: 291px;"></td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/4733/btn-trigger-new-pressed.png" style="height: 39px; width: 289px;"></td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/4745/btn-trigger-selector-pressed.png" style="height: 40px; width: 291px;"></td>
+  </tr>
+  <tr>
+   <th scope="row">Disabled</th>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/4723/btn-trigger-current-disabled.png" style="height: 40px; width: 290px;"></td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/4729/btn-trigger-new-disabled.png" style="height: 40px; width: 290px;"></td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/4741/btn-trigger-selector-disabled.png" style="height: 40px; width: 291px;"></td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Value_selectors">Value selectors</h4>
+
+<p>Once a value selector has been opened, you will need at least one button on the value selector panel to dismiss the value selector. These buttons should look like the following:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Normal</th>
+   <th scope="col">Pressed</th>
+   <th scope="col">Disabled</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4755/btn-selector-normal.png" style="height: 39px; width: 269px;"></td>
+   <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4757/btn-selector-pressed.png" style="height: 39px; width: 269px;"></td>
+   <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4753/btn-selector-disabled.png" style="height: 39px; width: 269px;"></td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Input_field_buttons">Input field buttons</h3>
+
+<p>Input field buttons are buttons associated with an input field, which when pressed perform an action related to that input field.</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Normal</th>
+   <th scope="col">Pressed</th>
+   <th scope="col">Disabled</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/4761/input-field-normal.png" style="height: 40px; width: 320px;"></td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/4763/input-field-pressed.png" style="height: 40px; width: 320px;"></td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/4759/input-field-disabled.png" style="height: 40px; width: 320px;"></td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Special_buttons">Special buttons</h3>
+
+<p>The special buttons are visual icon-style buttons used for special purposes, such as operating the device's camera, answering and hanging up the phone, and activating the keypad dialer. You may of course find other uses for this style of button.</p>
+
+<h4 id="Camera_buttons">Camera buttons</h4>
+
+<p>These buttons don't have a disabled state; you simply don't display them if the ability to take photos isn't available.</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="row"></th>
+   <th scope="col">Record video</th>
+   <th scope="col">Stop recording video</th>
+   <th scope="col">Capture photo</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">Normal</th>
+   <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4771/video-record-normal.png" style="height: 45px; width: 100px;"></td>
+   <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4775/video-stop-normal.png" style="height: 45px; width: 100px;"></td>
+   <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4767/camera-normal.png" style="height: 45px; width: 100px;"></td>
+  </tr>
+  <tr>
+   <th scope="row">Pressed</th>
+   <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4773/video-record-pressed.png" style="height: 45px; width: 100px;"></td>
+   <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4777/video-stop-pressed.png" style="height: 45px; width: 100px;"></td>
+   <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4769/camera-pressed.png" style="height: 45px; width: 100px;"></td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Phone_buttons">Phone buttons</h4>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="row"></th>
+   <th scope="col">Pick up</th>
+   <th scope="col">Hang up</th>
+   <th scope="col">Hide keypad</th>
+  </tr>
+  <tr>
+   <th scope="row">Normal</th>
+   <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4781/phone-answer-normal.png" style="height: 40px; width: 130px;"></td>
+   <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4787/phone-hangup-normal.png" style="height: 40px; width: 130px;"></td>
+   <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4793/hide-dialer-normal.png" style="height: 40px; width: 130px;"></td>
+  </tr>
+  <tr>
+   <th scope="row">Pressed</th>
+   <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4783/phone-answer-pressed.png" style="height: 40px; width: 130px;"></td>
+   <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4789/phone-hangup-pressed.png" style="height: 40px; width: 130px;"></td>
+   <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4795/hide-dialer-pressed.png" style="height: 40px; width: 130px;"></td>
+  </tr>
+  <tr>
+   <th scope="row">Disabled</th>
+   <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4779/phone-answer-disabled.png" style="height: 40px; width: 130px;"></td>
+   <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4785/phone-hangup-disabled.png" style="height: 40px; width: 130px;"></td>
+   <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4791/hide-dialer-disabled.png" style="height: 40px; width: 130px;"></td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Custom_buttons">Custom buttons</h4>
+
+<p>These are examples of custom buttons; in this case, for adding a contact.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Normal</th>
+   <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4799/generic-normal.png" style="height: 40px; width: 90px;"></td>
+  </tr>
+  <tr>
+   <th scope="row">Pressed</th>
+   <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4801/generic-pressed.png" style="height: 40px; width: 90px;"></td>
+  </tr>
+  <tr>
+   <th scope="row">Disabled</th>
+   <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4797/generic-disabled.png" style="height: 40px; width: 90px;"></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Mozilla/Firefox_OS/UX" title="/en-US/docs/Mozilla/Firefox_OS/UX">Firefox OS user experience</a></li>
+ <li><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Button/Coding" title="/en-US/docs/Mozilla/Firefox_OS/UX/Building_blocks/Button/Coding">Button coding guide</a></li>
+</ul>

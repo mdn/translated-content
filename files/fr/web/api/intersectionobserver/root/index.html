@@ -1,0 +1,48 @@
+---
+title: IntersectionObserver.root
+slug: Web/API/IntersectionObserver/root
+tags:
+  - API
+  - Intersection Observer
+  - IntersectionObserver
+  - Property
+  - root
+translation_of: Web/API/IntersectionObserver/root
+---
+<div>{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}</div>
+
+<p>La propriété en lecture seule <strong><code>root</code></strong> de l'interface {{domxref("IntersectionObserver")}} identifie l'{{domxref("Element")}} dont les bornes sont considérés comme le {{Glossary("bounding box")}} de la {{Glossary("viewport")}} pour l'élément qui est la cible de l'observateur. Si le <code>root</code> vaut <code>null</code>, alors les bornes de la fenêtre du document courant sont celles utilisées.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox"><var><code>var <em>root</em> = </code>IntersectionObserver</var>.root;
+</pre>
+
+<h3 id="Valeur">Valeur</h3>
+
+<p>Un objet {{domxref("Element")}} dont la bordure du modèle de boîte est utilisée pour définir les limites de sa zone de visibilité afin de déterminer quelle proportion de l'élément cible est visible. L'intersection de ce rectangle délimiteur, décalé par toute marge spécifiée au moyen des options passées au constructeur de l'{{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}}, les limites de la zone recouverte par l'élément cible, moins les limites de la zone recouverte par chaque élément ou autre objet chevauchant l'élément cible, est considéré comme la partie visible de l'élément.</p>
+
+<p>Si <code>root</code> vaut <code>null</code>, alors les bornes de la fenêtre du document courant (c'est-à-dire la zone visible, permettant donc de visionner le document) sont celles utilisées.</p>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Spécification</th>
+   <th scope="col">Statut</th>
+   <th scope="col">Commentaire</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('IntersectionObserver', '#dom-intersectionobserver-root', 'IntersectionObserver')}}</td>
+   <td>{{Spec2('IntersectionObserver')}}</td>
+   <td>Définition initiale</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p>{{Compat("api.IntersectionObserver.root")}}</p>

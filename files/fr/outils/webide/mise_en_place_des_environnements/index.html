@@ -1,0 +1,131 @@
+---
+title: Mise en place des environnements
+slug: Outils/WebIDE/Mise_en_place_des_environnements
+translation_of: Archive/WebIDE/Setting_up_runtimes
+---
+<div>{{ToolsSidebar}}</div><p>Un environnement vous permet d'exécuter et de déboguer des applications. Un environnement peut être :</p>
+
+<ul>
+ <li>Une autre instance de Firefox (Bureau ou Android).</li>
+ <li>Un appareil ou un simulateur Firefox OS.</li>
+ <li>Un autre navigateur (Google Chrome ou Safari par exemple), sur ordinateur ou téléphone.</li>
+</ul>
+
+<p>Dans WebIDE, le panneau latéral permet de gérer les environnements :</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/12149/webide-right-sidebar.png" style="display: block; height: 712px; margin-left: auto; margin-right: auto; width: 811px;"></p>
+
+<p>Dans ce panneau, les environnements sont groupés en quatre types :</p>
+
+<dl>
+ <dt><a href="#usb">PÉRIPHÉRIQUES USB</a></dt>
+ <dd>Les périphériques Firefox OS connectés via USB. À partir de Firefox 36, cela permet aussi de se connecter à <a href="/fr/docs/Outils/Débogage_distant/Debugging_Firefox_for_Android_with_WebIDE">Firefox pour Android via USB</a>.</dd>
+ <dt><a href="#wifi">PÉRIPHÉRIQUES WI-FI</a></dt>
+ <dd>Les périphériques Firefox OS connectés en Wi-Fi. <em>À partir de Firefox 39.</em></dd>
+ <dt><a href="#simu">SIMULATEURS</a></dt>
+ <dd>Les instances de simulateur Firefox OS que vous avez installé.</dd>
+ <dt><a href="#autres">AUTRES</a></dt>
+ <dd>Des environnements distants qui peuvent se connecter à WebIDE à partir d'un hôte et port arbitraire. Si vous avez l'extension <a href="/fr/docs/Outils/Firefox_Tools_Adapter">Valence</a> installée, cette section listera aussi les <a href="#valence">environnements additionnels activés.</a></dd>
+</dl>
+
+<p>Le reste de cette section décrit comment ajouter des environnements.</p>
+
+<h2 id="Connecter_un_périphérique_Firefox_OS">Connecter un périphérique Firefox OS</h2>
+
+<p>Si vous possédez une version assez récente de Firefox et de Firefox OS, vous pouvez <a href="#wifi">connecter le périphérique Firefox OS en Wi-Fi</a>. Sinon, vous pouvez vous connecter en USB.</p>
+
+<ul>
+ <li id="Connecting_over_USB"><a href="/fr/docs/Tools/Remote_Debugging/Debugging_Firefox_OS_over_USB">Comment se connecter via USB</a></li>
+ <li><a href="/fr/docs/Tools/Remote_Debugging/Debugging_Firefox_OS_over_Wifi">Comment se connecter via WiFi</a></li>
+</ul>
+
+<h2 id="Se_connecter_à_Firefox_pour_Android">Se connecter à Firefox pour Android</h2>
+
+<p>Les appareils Android, connectés par USB et qui utilisent Firefox pour Android apparaissent comme environnements sous « Périphériques USB ».  Depuis Firefox 42, il est possible de connecter Firefox Android via WiFi.</p>
+
+<ul>
+ <li id="Connecting_over_USB"><a href="/fr/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE">Comment se connecter via USB</a></li>
+ <li><a href="/fr/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_over_Wifi">Comment se connecter via WiFi</a></li>
+</ul>
+
+<h2 id="Ajouter_un_simulateur"><a id="simu" name="simu">Ajouter un simulateur</a></h2>
+
+<p>Le <a href="/fr/docs/Outils/Simulateur_Firefox_OS">simulateur Firefox OS</a> est une version des couches supérieures de Firefox OS qui simule un appareil Firefox OS mais qui fonctionne sur un ordinateur de bureau. Il est lancé dans une fenêtre de la même taille qu'un appareil Firefox OS et contient les éléments d'interface utilisateur et les applications natives. Il permet également de simuler certaines API utilisées par les appareils Firefox OS.</p>
+
+<p>Cela signifie que, dans la plupart des cas, il n'est pas nécessaire d'avoir un appareil physique pour déboguer une application.</p>
+
+<p>Le simulateur ne fait pas partie intégrante de Firefox mais peut être téléchargé comme <a href="/fr/Modules_complémentaires">module complémentaire</a>. Si vous cliquez sur « Installer le simulateur » dans la liste déroulante pour les environnements, vous serez envoyés vers une page qui vous permet d'installer les simulateurs correspondants aux différentes versions de Firefox OS.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/12151/webide-extra-components.png" style="display: block; height: 712px; margin-left: auto; margin-right: auto; width: 811px;"></p>
+
+<p>Vous pouvez installer autant de simulateurs que vous le souhaitez. Cependant, il faudra parfois être armé de patience car le téléchargement peut durer quelques minutes.</p>
+
+<div class="note">
+<p>Attention, pour lancer un simulateur Firefox OS 2.6 ou plus, il faut avoir Firefox 45 ou plus.</p>
+</div>
+
+<p>Une fois que le(s) simulateur(s) est installé, vous pouvez fermer cette fenêtre et les simulateurs apparaîtront dans la liste des environnements disponibles :</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/12153/webide-installed-simulators.png" style="display: block; height: 712px; margin-left: auto; margin-right: auto; width: 811px;"></p>
+
+<p> </p>
+
+<p>Pour plus d'informations sur le simulateur, voir <a href="/fr/docs/Outils/Simulateur_Firefox_OS">l'article détaillé sur cet outil</a>.</p>
+
+<h3 id="Configurer_les_simulateurs">Configurer les simulateurs</h3>
+
+<div class="note">
+<p>Nouveau dans Firefox 42</p>
+</div>
+
+<p>Depuis Firefox 42, à côté de chaque simulateur listé dans el panneau latéral, il y a une icône en forme d'engrenage :</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/11321/webide-settings.png" style="display: block; height: 50px; margin-left: auto; margin-right: auto; width: 364px;"></p>
+
+<p>Cliquer dessus ouvrir un écran permettant de configurer le simulateur :</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/12155/webide-simulator-options.png" style="display: block; height: 712px; margin-left: auto; margin-right: auto; width: 811px;">Il est possible de :</p>
+
+<ul>
+ <li>Le renommer</li>
+ <li>Pointer vers un <a href="https://developer.mozilla.org/en-US/Firefox_OS/Building_the_Firefox_OS_simulator">build Desktop B2G custom</a></li>
+ <li>Pointer vers un profil Gaia custom</li>
+ <li>Simuler un appareil spécifique avec une taille d'écran spécifique.</li>
+</ul>
+
+<h2 id="Autres_environnements"><a id="autres" name="autres">Autres environnements</a></h2>
+
+<h3 id="Environnement_distant"><a id="remote run" name="remote run">Environnement distant</a></h3>
+
+<p>Avec un environnement distant, il est possible d'utiliser un nom d'hôte et un port arbitraires pour se connecter à l'appareil.</p>
+
+<p>En réalité, les appareils Firefox OS et Android se connectent à l'ordinateur grâce à un programme appelé Android Debug Bridge (<a href="http://developer.android.com/tools/help/adb.html">ADB</a>). Par défaut, WebIDE utilise un module complémentaire appelé ADB Helper, cela simplifie le processus d'installation et de redirection des ports pour que l'appareil puisse dialoguer avec l'ordinateur..</p>
+
+<p>Dans la plupart des cas, cette solution est la plus pratique. Cependant, on peut parfois vouloir utiliser ADB en dehors de WebIDE. Par exemple, on peut vouloir utiliser ADB directement depuis la ligne de commandes. Dans ce cas, on connectera l'appareil en définissant un nom et un port et en utilisant la commande <a href="http://developer.android.com/tools/help/adb.html#forwardports"><code>adb forward</code></a> (par exemple <code>adb forward tcp:6000 localfilesystem:/data/local/debugger-socket</code>).<br>
+ <br>
+ Si, ensuite, vous souhaitez connecter WebIDE avec cet appareil, il faut : <a href="https://support.mozilla.org/en-US/kb/disable-or-remove-add-ons#w_how-to-disable-extensions-and-themes">désactiver le module complémentaire ADB Helper</a> et effectuer la connexion WebIDE en utilisant l'option « Environnement distant » puis en saisissant l'hôte et le port utilisés avant avec <code>adb forward</code> (par exemple : <code>localhost:6000</code>).</p>
+
+<p>Avant Firefox 36, ADB Helper ne permettait pas de connecter Firefox pour Android, aussi, si vous souhaitez utiliser WebIDE pour vous connecter à Firefox pour Android, vous aurez besoin de paramétrer une redirection de port et d'utiliser un environnement sur mesure. <a href="/fr/docs/Outils/Débogage_distant/Firefox_for_Android">En savoir plus sur la connexion de Firefox pour Android via ADB avec une version antérieure à Firefox 36</a>.</p>
+
+<h3 id="Environnements_disponibles_avec_Valence"><a id="valence" name="valence">Environnements disponibles avec Valence</a></h3>
+
+<p>Si vous avez installé le module complémentaire <a href="/fr/docs/Outils/Firefox_Tools_Adapter">Valence</a>, vous verrez trois environnements supplémentaires :</p>
+
+<ul>
+ <li>Chrome sur Android</li>
+ <li>Safari sur iOS</li>
+ <li>Chrome Desktop</li>
+</ul>
+
+<p>Pour les instructions relatives à ses environnements, voir les éléments respectifs sur la page sur <a href="/fr/docs/Outils/Débogage_distant">le débogage à distance</a>.</p>
+
+<h2 id="Sélectionner_un_environnement">Sélectionner un environnement</h2>
+
+<p>Une fois que vous avez paramétré un environnement, vous pouvez le sélectionner grâce au menu « Sélectionner l'environnement ».</p>
+
+<ul>
+ <li>Si vous sélectionnez un simulateur, WebIDE démarrera le simulateur</li>
+ <li>Si vous sélectionnez un appareil Firefox OS, WebIDE se connectera à l'appareil. Sur l'appareil, vous aurez une boîte de dialogues pour demander confirmation, validez pour accepter la connexion avec « OK ».</li>
+</ul>
+
+<p>Cliquez sur le bouton « Lancer » au milieu de la barre d'outils de WebIDE, cela permettra d'<a href="/fr/docs/Tools/WebIDE/Running_and_debugging_apps">installer de lancer l'application</a> dans l'environnement sélectionné.</p>

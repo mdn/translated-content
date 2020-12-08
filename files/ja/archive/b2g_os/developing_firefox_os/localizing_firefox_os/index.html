@@ -1,0 +1,185 @@
+---
+title: Firefox OSをローカライズする
+slug: Archive/B2G_OS/Developing_Firefox_OS/Localizing_Firefox_OS
+tags:
+  - Firefox OS
+  - ローカライズ
+translation_of: Archive/B2G_OS/Developing_Gaia/Localizing_B2G_OS
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/ja/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<div class="summary">
+<p><span class="seoSummary">このガイドでは、Firefox OS、特にGaiaインターフェイスやアプリのローカライズがいかに簡単かを示します。コンピュータのセットアップに始まり、Gaiaの文字列をローカライズする方法や、最後にはl10nをテストする方法まで付き添います。</span></p>
+</div>
+
+<div class="note">
+<p><strong>記</strong>: これはFirefox OSのローカライズを希望するローカライザー向けのガイドです。ローカライズ可能なアプリを書きたい開発者は <a href="https://developer.mozilla.org/ja/Apps/Build/Localization/Localizing_Firefox_OS_Apps">Firefox OS アプリをローカライズする</a>から始めて、 その次に <a href="https://developer.mozilla.org/ja/Firefox_OS/Developing_Gaia/localization_code_best_practices">L10n ベストプラクティス</a> を確認します。</p>
+</div>
+
+<h2 id="初期セットアップ">初期セットアップ</h2>
+
+<p>Gaiaのソースファイルを入手し、お使いのデスクトップマシンにてローカライゼーションのテストを行うにはまず、これらの基本プログラムおよび言語がインストールされていることを確認してください。 </p>
+
+<dl>
+ <dt>GNU make</dt>
+ <dd>ソースコードからビルドを生成するのに役立つ細かなツールです。デスクトップ L10n のテスト準備ができれば、大変重宝するでしょう。 ダウンロードとインストール作業は容易で、<a href="http://www.gnu.org/software/make/">GNUのウエブサイト</a>から直接行えます。OS Xユーザであれば XCode および XCode コマンドラインツールを<a href="https://itunes.apple.com/us/app/xcode/id497799835?mt=12">アップルストア</a>からインストールする必要があります。</dd>
+ <dt>git</dt>
+ <dd>git は Gaiaソースコードを保存するために使用されるバージョンコントロールシステムです。git のダウンロードおよびインストールは容易で <a href="http://git-scm.com/">ウエブサイト</a>から直接行うことができます。</dd>
+ <dt>Python</dt>
+ <dd>Python はプログラミング言語であり<span style="line-height: inherit;">L10nテスト用のFirefox OSビルド生成に貢献します。ダウンロードおよびインストールは容易で<a href="http://www.python.org/getit/">Pythonウェブサイト</a></span><span style="line-height: inherit;">から直接行うことができます。</span></dd>
+ <dt>Mercurial (hg)</dt>
+ <dd>Mercurial (hg) はもうひとつのバージョン管理システムです。 l10nの利用に際し、<span style="line-height: inherit;">ロケールリポジトリをはじめとする</span><span style="line-height: inherit;">Gaiaの安定したバージョンを管理します。ダウンロードおよびインストールは容易で<a href="http://mercurial.selenic.com/downloads/">このウエブサイト</a></span><span style="line-height: inherit;">から直接行うことができます。</span></dd>
+ <dt>compare-locales</dt>
+ <dd>compare-locales は Pythonのスクリプトのひとつで、ローカル化にあたっての作業評価や、diffと呼ばれる、すでにローカル化済のマテリアルからローカル化のための新しい内容を切り離すのに使用します。 <span style="line-height: inherit;">ダウンロードおよびインストールは容易で<a href="https://developer.mozilla.org/en-US/docs/Compare-locales">compare-locales ウィキページ</a></span><span style="line-height: inherit;">から直接行うことができます。</span><span style="line-height: inherit;">なお、これはGaiaのローカライズにあたってコマンドラインもしくはテキストエディタを使用する場合のみ</span><span style="line-height: inherit;">必要となります。Pootle, Transifex やPontoonなどのツールを使用する場合、インストール不要です。</span></dd>
+</dl>
+
+<h2 id="ローカルリポジトリをセットアップする">ローカルリポジトリをセットアップする</h2>
+
+<p>上記ソフトウエアのダウンロードとインストール作業が完了したら、いよいよマシンにソースとローカライズされた文字列を入手します。</p>
+
+<ol>
+ <li>コマンドラインユーティリティにおいて, Gaiaのソースと翻訳文字列の保存先を指定します。 </li>
+ <li>hgで 以下のコマンドを使ってen-US リポジトリのコピーを作ります。
+  <pre>hg clone https://hg.mozilla.org/gaia-l10n/en-US</pre>
+ </li>
+ <li><span style="font-size: 14px; line-height: 21px;">以下のコマンドを使ってロケールリポジトリのコピーを作ります。</span>例として、2行目は伝統的な中国語のリポジトリを適切なディレクトリにコピーしています。
+  <pre><code class="language-html">hg clone https://hg.mozilla.org/gaia-l10n/your-locale-code
+hg clone https://hg.mozilla.org/gaia-l10n/zh-TW/ B2G/gaia/locales/zh-TW</code></pre>
+ </li>
+ <li>最後に このコマンドを入力します。
+  <pre>LOCALE_BASEDIR<span class="operator token">=</span>locales<span class="operator token">/</span> LOCALES_FILE<span class="operator token">=</span>locales<span class="operator token">/</span>languages_mine<span class="punctuation token">.</span>json make</pre>
+ </li>
+</ol>
+
+<p>ロケールファイルは <code>languages_mine.json</code> に記載するべきで、それはこういう構造になります:</p>
+
+<pre class="brush: json  language-json"><span class="punctuation token">{</span>
+  <span class="key token">"en-US" :</span> <span class="string token">"English (US)"</span><span class="punctuation token">,</span>
+  <span class="key token">"fr" :</span> <span class="string token">"Français (fr)"</span>
+<span class="punctuation token">}</span></pre>
+
+<p>このファイルでは、ずてに翻訳準備ができている文字列を一覧にすべきです!　Firefox OSの新規ローカライゼーションを開始している場合、全部の文字列が翻訳すべき文字列であるようなdiffを作る必要はない事を気に留めて下さい。</p>
+
+<div class="note">
+<p><strong>記</strong>: ロケールビルドの自動化スクリプトは、<a href="https://gist.github.com/timdream/7716684">このgist</a> を参照して下さい。</p>
+</div>
+
+<p> </p>
+
+<h2 id="Gaiaの文字列を翻訳する">Gaiaの文字列を翻訳する</h2>
+
+<p>Gaiaの文字列を翻訳するワークフローは、翻訳に使用しているツールに大きく依存しています。この処理パートは他の Mozilla 製品の通常の翻訳フェーズと同様です。<a href="https://developer.mozilla.org/en-US/docs/Localization_Quick_Start_Guide/Translation_phase" title="https://developer.mozilla.org/en-US/docs/Localization_Quick_Start_Guide/Translation_phase">ローカライゼーションの翻訳フェーズのクイックスタートガイド(英語)</a> には、Mozilla製品内の文字列を翻訳するのに使うツール一覧のほか、これらのツールでどうやって翻訳するかのチュートリアルがあります。l10nチームの一員でGaia文字列を翻訳するツールを決める時も、あるいはあなたのチームが使っているツールのチュートリアルを探している時も、このページは役立ちます。</p>
+
+<h2 id="Firefox_OS向けの_l10n_をテストする">Firefox OS向けの l10n をテストする</h2>
+
+<p>Firefox OSのl10nをテストするために、主要な方法が2つあります: デスクトップビルドとモバイルビルドです。現在、デスクトップの方法がl10n のテストに最も広く使われている方法です。</p>
+
+<h3 id="デスクトップ版_l10n_をテストする">デスクトップ版 l10n をテストする</h3>
+
+<ol>
+ <li><a href="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-central/">最新のboot2gecko nightly デスクトップビルド</a> をダウンロード、インストールします— 使用するOSに相当するパッケージをダウンロードします。<em>localizer</em> という言葉が含まれるパッケージを探します。これは <a href="https://github.com/mozilla-b2g/gaia/blob/master/locales/languages_all.json" title="https://github.com/mozilla-b2g/gaia/blob/master/locales/languages_all.json"><code>languages-all.json</code></a> に載っている全てのロケールが有効であることを示します。</li>
+ <li>最新バージョンのGaiaをクローンするのに、デスクトップ上のダウンロードしたいディレクトリに移動して、コマンドラインユーティリティ上でこのコマンドを入力します: <code>git clone git://github.com/mozilla-b2g/gaia.git</code></li>
+ <li>チームにとってFirefox OSのローカライズが初めての場合、あなたのロケールを有効にする必要があります。そうでない場合、他の誰かがロケールを有効にするまで飲み物を取ります。
+  <ol>
+   <li>コマンドラインで、あなたのgaiaクローン内を移動し、下記コマンドを実行してあなたのロケールリポジトリをクローンします: <code>hg clone ssh://hg.mozilla.org/gaia-l10n/your-locale-code</code></li>
+   <li>クローンしたばかりのgaiaリポジトリ内の<code>shared/resources</code> ディレクトリにある<code>languages.jsonファイルを開きます。</code></li>
+   <li>このフォーマットでロケール情報を追加します: "en-US" : "English (US)"、そしてファイルを保存します。</li>
+   <li>最後に、次ののコマンドを実行します: <code>make multilocale</code> これでデスクトップビルドであなたのロケールが有効になります。</li>
+  </ol>
+ </li>
+ <li>Gaiaプロファイルを作成するのに、このコマンドを実行します: <code>DEBUG=1 make -C gaia profile</code></li>
+ <li>ついに、あなたのロケールプロファイルでFirefox OSを実行してテストを開始でできます。それにはこのコマンドを入力します: <code>b2g/b2g -profile gaia/profile</code> OS Xを使っている場合は、このコマンドを実行します: <code>/Applications/B2G.app/Contents/MacOS/b2g -profile gaia/profile</code></li>
+ <li>デスクトップビルドを更新するため、単にあなたのGaiaリポジトリクローンを移動してこのコマンドを入力します: <code>git pull</code></li>
+</ol>
+
+<h3 id="モバイル版l10n_をテストする">モバイル版l10n をテストする</h3>
+
+<p><em>もっと多くのFirefox OSサポート端末がローカライザーの手に届くにつれ、<em>この節は成長します。</em></em></p>
+
+<h3 id="l10n_をテストする時に何を探すのか">l10n をテストする時に何を探すのか</h3>
+
+<p>モバイルOS向けのローカライゼーションをテストするのは、デスクトップアプリのローカライゼーションをテストするのと同様な点があります。あなたの作業のローカライゼーションテストを実施する時に探すべきガイドラインがここにあります:</p>
+
+<ol>
+ <li>UIテキスト要素内から翻訳がはみ出していないかを見ます。</li>
+ <li>文調、スタイル、専門用語がプロタクト全体で一貫しているかを確認します。</li>
+ <li>翻訳されない英語文字列がUIの中にないか探します。これらはGaia内でハードコードされたり、要素IDのエラーにより起きている可能性があります。</li>
+ <li>時間と日付表示が地域の標準に一致しているかを確認します。</li>
+</ol>
+
+<h2 id="ローカライゼーション特有のバグを探す">ローカライゼーション特有のバグを探す</h2>
+
+<p>電話機を使用している時に起こったバグ例を与えるようなbugzillaリンクがこちらです。このような種類のバグ登録にあたり、ある例と同様なバグをどこで探すかのアイデアをもたらすでしょう。</p>
+
+<ul>
+ <li><a class="moz-txt-link-freetext" href="http://bit.ly/100bcsC">http://bit.ly/100bcsC</a> - これはB2G 翻訳バグの一般的なリストです</li>
+ <li><a class="moz-txt-link-freetext" href="https://bugzilla.mozilla.org/show_bug.cgi?id=846060">https://bugzilla.mozilla.org/show_bug.cgi?id=846060</a></li>
+ <li><a class="moz-txt-link-freetext" href="https://bugzilla.mozilla.org/show_bug.cgi?id=852739">https://bugzilla.mozilla.org/show_bug.cgi?id=852739</a></li>
+</ul>
+
+<p>ローカライゼーションバグを見つける一般ルールは:</p>
+
+<ul>
+ <li>バグが言語固有である場合、(他の製品の下の) Mozilla Localizationの下に登録し、翻訳者に cc します。忘れずにバグに適切なトラッキングフラグを立てます。</li>
+ <li>言語固有でない場合、FirefoxOS 製品の下に登録し、ローカライザーに cc します。忘れずにバグに適切なトラッキングフラグを立てます。</li>
+ <li>疑わしい場合、FirefoxOS 製品の下に登録し、ローカライザーに cc します。忘れずにバグに適切なトラッキングフラグを立てます。</li>
+</ul>
+
+<p><a href="http://moztrap.mozilla.org/" title="http://moztrap.mozilla.org/">Moztrap</a> を使う人用に、FirefoxOS "localization" タグの下の既存のテストケースを見たり、端末上でテストがパスするかを見てみることも、Firefox OSのローカライゼーションをテストする良い方法です。</p>
+
+<h2 id="次には">次には</h2>
+
+<p>今やローカライゼーションを始める準備完了です! なので好みの l10n ツールを開いて進みましょう!  通常どおり、この文書に載っていない疑問は、<a href="http://www.mozilla.org/about/forums/#dev-l10n" title="http://mailto:_dev-l10n@lists.mozilla.org">mozilla.dev.l10n newsgroup</a> へ送って下さい。</p>

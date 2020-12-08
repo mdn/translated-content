@@ -1,0 +1,145 @@
+---
+title: ウィザードの作成
+slug: Archive/Mozilla/XUL/Tutorial/Creating_a_Wizard
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Creating_a_Wizard
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Open_and_Save_Dialogs" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:More_Wizards">次のページ  »</a></p>
+</div>
+
+<p>多くのアプリケーションでは, 利用者が複雑な作業を行っていく場合の補助のためにウィザードを利用しています。 XUL では、ウィザードを簡単に作る方法を提供しています。</p>
+
+<h3 id=".E3.82.A6.E3.82.A3.E3.82.B6.E3.83.BC.E3.83.89" name=".E3.82.A6.E3.82.A3.E3.82.B6.E3.83.BC.E3.83.89">ウィザード</h3>
+
+<p>ウィザード (<span style="color: green;">wizard</span>) は、いくつかのページを含む、特殊な種類のダイアログで、 その下辺には、ページを切り替えるためのナビゲーションボタンが配置されています。 通常、ウィザードは、利用者が複雑な作業を行うのを補助するために使用され、 各ページには、1 つ、または相関するいくつかの質問が含まれています。 また、最後のページが終わったあと、その操作が実行されることになります。</p>
+
+<p>XUL では、ウィザードの作成に使用可能な <code><code><a href="/ja/docs/Mozilla/Tech/XUL/wizard" title="wizard">wizard</a></code></code> 要素を提供しています。 この <code><code><a href="/ja/docs/Mozilla/Tech/XUL/wizard" title="wizard">wizard</a></code></code> 要素の中には、ウィザードの各ページに置くコンテンツが全て含まれることになります。 また、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/wizard" title="wizard">wizard</a></code></code> に置かれる属性によって、ウィザードのナビゲーションを制御することが可能です。 ウィザードを作成する場合には、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/wizard" title="wizard">wizard</a></code></code> タグを <code><code><a href="/ja/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> タグに代えて使用します。</p>
+
+<div class="note">現状では、ウィザードは chrome URL からの場合のみ正しく動作することに注意してください。</div>
+
+<p>ウィザードはいくつかの部分から構成されていますが、 その厳密なレイアウトはプラットフォームごとに異なっています。 通常は利用者のプラットフォームのものと同じように表示されることになりますが、 典型的なレイアウトは、上辺に沿ってタイトルが、下辺に沿っていくつかのナビゲーションボタンが置かれ、その間にページのコンテンツが置かれる形になります。</p>
+
+<p>上辺に置かれるタイトルは、通常のウィンドウと同じように <code><code><a href="/ja/docs/Mozilla/Tech/XUL/title" title="title">title</a></code></code> 属性によって作成されます。 また、ナビゲーションボタンは自動的に生成され、 ウィザードの各ページは <code><code><a href="/ja/docs/Mozilla/Tech/XUL/wizardpage" title="wizardpage">wizardpage</a></code></code> 要素によって作成されます。 各 <code><code><a href="/ja/docs/Mozilla/Tech/XUL/wizardpage" title="wizardpage">wizardpage</a></code></code> には、必要ならばどんなコンテンツを置いても構いません。</p>
+
+<h4 id=".E3.82.A6.E3.82.A3.E3.82.B6.E3.83.BC.E3.83.89.E3.81.AE.E4.BE.8B" name=".E3.82.A6.E3.82.A3.E3.82.B6.E3.83.BC.E3.83.89.E3.81.AE.E4.BE.8B">ウィザードの例</h4>
+
+<p>以下にウィザードの例を示します。</p>
+
+<p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_wizard_1.xul.txt">ソース</a></p>
+
+<pre>&lt;?xml version="1.0"?&gt;
+
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;wizard id="example-window" title="Select a Dog Wizard"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+  &lt;wizardpage&gt;
+    &lt;description&gt;
+      This wizard will help you select the type of dog that is best for you."
+    &lt;/description&gt;
+    &lt;label value="Why do you want a dog?"/&gt;
+    &lt;menulist&gt;
+      &lt;menupopup&gt;
+        &lt;menuitem label="To scare people away"/&gt;
+        &lt;menuitem label="To get rid of a cat"/&gt;
+        &lt;menuitem label="I need a best friend"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menulist&gt;
+  &lt;/wizardpage&gt;
+
+  &lt;wizardpage description="Dog Details"&gt;
+    &lt;label value="Provide additional details about the dog you would like:"/&gt;
+    &lt;radiogroup&gt;
+      &lt;caption label="Size"/&gt;
+      &lt;radio value="small" label="Small"/&gt;
+      &lt;radio value="large" label="Large"/&gt;
+    &lt;/radiogroup&gt;
+    &lt;radiogroup&gt;
+      &lt;caption label="Gender"/&gt;
+      &lt;radio value="male" label="Male"/&gt;
+      &lt;radio value="female" label="Female"/&gt;
+    &lt;/radiogroup&gt;
+  &lt;/wizardpage&gt;
+
+&lt;/wizard&gt;
+</pre>
+
+<div class="float-right"><img alt="画像:wizard1.jpg"></div>
+
+<p>このウィザードには 2 つのページがあり、1 つはドロップダウンメニューが、もう 1 つはラジオボタンが含まれています。 ウィザードは、上辺にはタイトル、下辺にはボタンが並ぶように自動的にレイアウトされます。 利用者は「戻る (<span style="color: green;">Back</span>)」ボタンと「次へ (<span style="color: green;">Next</span>)」ボタンでウィザードのページ間を移動できます。 これらの 2 つのボタンは必要に応じて、<span style="border-bottom: 1px dashed green;" title="enable">有効化</span>または<span style="border-bottom: 1px dashed green;" title="disable">無効化</span>されます。 加えて最後のページには、「完了 (<span style="color: green;">Finish</span>)」ボタンが表示されます。 これらの処理は全て自動的に行われるため、開発者はページの操作に関して何も記述する必要はありません。</p>
+
+<p>また、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/wizardpage" title="wizardpage">wizardpage</a></code></code> 要素にページに、オプションの <code><code id="a-description"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/description">description</a></code></code> 属性を置くことで、そのページに <span style="border-bottom: 1px dashed green;" title="sub-caption">小見出し</span>を設定することが可能です。 上記の例で、小見出しは、1 ページ目にはなく、2 ページ目のみに置かれています。 <span style="color: darkgreen; background: #ef9;">【訳注: ただし画像では小見出しが追加されているようです】</span></p>
+
+<h3 id=".E3.83.9A.E3.83.BC.E3.82.B8.E3.81.AE.E5.88.87.E3.82.8A.E6.9B.BF.E3.81.88.E5.87.A6.E7.90.86" name=".E3.83.9A.E3.83.BC.E3.82.B8.E3.81.AE.E5.88.87.E3.82.8A.E6.9B.BF.E3.81.88.E5.87.A6.E7.90.86">ページの切り替え処理</h3>
+
+<p>通常、ウィザードで「完了」ボタンが押された場合には、何か処理を行う必要があるはずです。 このために、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/wizard" title="wizard">wizard</a></code></code> 要素には <code>onwizardfinish</code> 属性を置いて、 スクリプトが設定できるようになっています。 このスクリプトでは、実行する必要がある処理を全て行って、true を返すようにします。 例えば、以下のようにして、利用者がウィザードで入力した情報を保存するために使用することが可能です。</p>
+
+<pre>&lt;wizard id="example-window" title="Select a Dog Wizard"
+  onwizardfinish="return saveDogInfo();"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+</pre>
+
+<p>利用者が完了ボタンを押したときには、<code>saveDogInfo()</code> 関数が呼ばれることになります。 この関数は、スクリプトファイルで定義されており、入力された情報の保存を実行します。 この関数が true を返した場合は、ウィザードは閉じますが、 false を返した場合は、ウィザードは閉じません。 これは、例えば <code>saveDogInfo()</code> 関数が不正な入力を検出したような場合に行われることになります。</p>
+
+<p>また、関連する属性としては、<code><code id="a-onwizardback"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/onwizardback">onwizardback</a></code></code>、<code><code id="a-onwizardnext"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/onwizardnext">onwizardnext</a></code></code>、<code><code id="a-onwizardcancel"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/onwizardcancel">onwizardcancel</a></code></code> があり、 これらに設定したスクリプトは、それぞれ「戻る」「次へ」「キャンセル」ボタンが押されたときに呼ばれることになります。 なお、これらのスクリプトは、そのときどのページが表示されているかとは関係なく呼び出されます。</p>
+
+<p>そのとき表示されているページによって異なるコードが呼び出されるようにしたい場合には、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/wizardpage" title="wizardpage">wizardpage</a></code></code> 要素に対して、 ページが戻された (<span style="color: green;">rewound</span>) 場合のために、<code><code id="a-onpagerewound"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/onpagerewound">onpagerewound</a></code></code> 属性を、 ページが進められた (<span style="color: green;">advanced</span>) 場合のために、<code><code id="a-onpageadvanced"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/onpageadvanced">onpageadvanced</a></code></code> 属性を設定します。 これらは、各ページに異なるコードを使用できることを除いて、他の関数と同じように動作します。 これらを使用すれば、利用者が次の操作に移る前に、各ページに入力された値を検証することが可能になります。</p>
+
+<p>また、第 3 の方法として、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/wizardpage" title="wizardpage">wizardpage</a></code></code> 要素に対して、 ページが表示された (<span style="color: green;">show</span>) 場合のために、<code><code id="a-onpageshow"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/onpageshow">onpageshow</a></code></code> 属性を、 ページが非表示になった (<span style="color: green;">hide</span>) 場合のために、<code><code id="a-onpagehide"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/onpagehide">onpagehide</a></code></code> 属性を設定することも可能です。 これらは、どのボタンによってページが変更されたかには関係なく呼び出されることになります。 (ただし、キャンセルボタンが押された場合は例外で、この場合は <code><code id="a-onwizardcancel"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/onwizardcancel">onwizardcancel</a></code></code> を使う必要があります)</p>
+
+<p>これらの 3 種類の方法によって、必要となるナビゲーションの処理は、十分柔軟に記述することが可能になっています。</p>
+
+<p>以下の表は、「次へ」ボタンが押された場合に、呼び出される属性関数をまとめたものです。 これらの属性は、表に記載された順番でチェックされることになります。 これらのどれかで false が返された場合、その時点でナビゲーションはキャンセルされます。</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>属性</th>
+   <th>設定するタグ</th>
+   <th>呼び出される契機</th>
+  </tr>
+  <tr>
+   <td>pagehide</td>
+   <td>wizardpage</td>
+   <td>利用者がそのページから去るとき</td>
+  </tr>
+  <tr>
+   <td>pageadvanced</td>
+   <td>wizardpage</td>
+   <td>利用者が次へボタンを押したとき (ページ単位)</td>
+  </tr>
+  <tr>
+   <td>wizardnext</td>
+   <td>wizard</td>
+   <td>利用者が次へボタンを押したとき (ウィザード共通)</td>
+  </tr>
+  <tr>
+   <td>pageshow</td>
+   <td>wizardpage</td>
+   <td>利用者がそのページに入るとき</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>また、「戻る」ボタンの場合も、同様の処理が発生することになります。</p>
+
+<div class="note">上記の pageadvanced のようなイベント処理に関数を使用する場合には、単に <code>funcName()</code> のように呼び出すのではなく、常に <code>return funcName()</code> のように記述する必要があります。
+
+<p>つまり、下記のようにしないと期待した通りには動作しません。</p>
+
+<pre class="eval"> &lt;wizardpage pageadvanced='return funcName()'&gt;&lt;/wizardpage&gt;&lt;/code&gt;
+</pre>
+</div>
+
+<p>次のセクションでは、いくつかのウィザードの付加的な機能について見ていきます。</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Open_and_Save_Dialogs" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:More_Wizards">次のページ  »</a></p>
+</div>

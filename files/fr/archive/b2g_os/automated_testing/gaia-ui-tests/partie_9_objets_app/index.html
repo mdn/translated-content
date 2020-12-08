@@ -1,0 +1,80 @@
+---
+title: 'Partie 9 : Réduire le code dupliqué avec des objets app'
+slug: Archive/B2G_OS/Automated_testing/gaia-ui-tests/Partie_9_objets_app
+tags:
+  - Automatisation
+translation_of: Archive/B2G_OS/Automated_testing/gaia-ui-tests/Part_9_app_objects
+---
+<p></p><div style="text-align: right;" class="prevnext">
+    <p><a style="float: left;" href="/fr/docs/Mozilla/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_8_Using_a_base_class">« Précédent</a><br></p>
+</div><p></p>
+
+<div class="summary">
+<p><span class="seoSummary">Dans l'automatisation de tests nous utilisons souvent les objets app pour abstraire le code. Cela réduit la duplication de code et de repères. Si nous avons besoin de changer une section de code commune, nous pouvons la changer juste dans un seul objet <code>app</code>, plutôt que d'avoir à la modifier dans 10 ou 20 fichiers de test. Cet article donne les bases de l'utilisation des objets <code>app</code>.</span></p>
+</div>
+
+<h2 id="Objets_app_bien_démarrer">Objets app : bien démarrer</h2>
+
+<p>L'objet <code>app</code> est une classe Python qui contient des méthodes et des propriétés qui représentent les actions sur une page. Regardons comment nous pouvons utiliser ceci dans un exemple théorique.</p>
+
+<h3 id="homepage.py">homepage.py</h3>
+
+<p>Voici un cadre que nous pouvons utiliser pour l'app Homepage avec un peu de pseudo-code.</p>
+
+<pre class="brush: python">class Homepage:
+        __init__(self, marionette):
+                # Marionette is passed in so that the object can use it
+                self.marionette = marionette
+
+        def switch_to_homepage_frame(self):
+                # Code for switching to System then to Homepage frame
+
+        def tap_contacts_icon(self):
+                # Code to tap the icon
+                # Switch to Contacts frame
+                # Now we return the Contacts app object as it has focus
+                from contacts import Contacts
+                return Contacts(self.marionette)</pre>
+
+<h3 id="contacts.py">contacts.py</h3>
+
+<p>Et voici ce que nous pouvons utiliser pour l'app Contacts, avec encore du pseudo-code.</p>
+
+<pre class="brush: python">class Contacts:
+        _new_contact_button = (By.ID, ‘id’)
+
+        def tap_new_contact(self):
+                # Tap new contact icon
+                # Wait for event
+
+        def type_given_name(self, name_string):
+                # element.send_keys(name_string)</pre>
+
+<h3 id="test_contacts.py"><strong>test_contacts.py</strong></h3>
+
+<p>Pour comprendre comment cela fonctionne dans le contexte d'un test, voici un exemple rapide qui utilise la classe <code>Homepage</code> :</p>
+
+<pre class="brush: python">from homepage import Homepage
+
+def test_add_contact(self):
+        homepage = Homepage(self.marionette)
+        homepage.switch_to_homepage_frame()
+
+contacts = homepage.tap_contacts_icon()
+contacts.tap_new_contact()</pre>
+
+<h2 id="Mettre_à_jour_vos_tests">Mettre à jour vos tests</h2>
+
+<p>À partir de cela, nous voudrions vous pousser à mettre à jour tous vos fichiers de test pour utiliser le nouveau système d'objets app.</p>
+
+<p>C'est une tâche difficile si vous n'êtes pas familier avec les structures de classes Python, vous aurez peut-être besoin de consulter quelques livres pour avoir des références et des exemples de code.</p>
+
+<p>Quand vous aurez fini, idéalement vous aurez une séparation claire entre les fichiers de test :</p>
+
+<ol>
+ <li><code>TestBase</code> contiendra les méthodes <code>setUp()</code> et <code>tearDown()</code></li>
+ <li>Les objets <code>app</code> contiendront les interactions et repères des pages</li>
+ <li>Vos fichiers de test contiendront uniquement les étapes de test.</li>
+</ol>
+
+<p>Bonne chance !</p>

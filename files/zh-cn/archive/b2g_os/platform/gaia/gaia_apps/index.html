@@ -1,0 +1,90 @@
+---
+title: Gaia应用
+slug: Archive/B2G_OS/Platform/Gaia/Gaia_apps
+tags:
+  - Apps
+  - B2G
+  - Firefox OS
+  - Gaia
+  - 架构
+translation_of: Archive/B2G_OS/Platform/Gaia/Gaia_apps
+---
+<div class="summary">
+ <p><span class="seoSummary">Gaia是Firefox OS 的前端， 它包括系统管理的功能以及附带在Firefox OS上的一些内置应用。所有的Gaia源代码(包括system和键盘IMEs)都完全由HTML5 ( HTML + CSS + JavaScript )  &amp; 开放Web API实现的。 本文介绍了在Gaia家族工作的每一个可获得的应用的信息。</span></p>
+</div>
+<h2 id="Gaia_功能性分类">Gaia 功能性分类</h2>
+<p>Gaia中的应用大致可分成下面几类。</p>
+<div class="note">
+ <p><b>注意：</b> 许多关于解释单个应用如何工作的页面都是链接自 <a href="https://github.com/mozilla-b2g/gaia/">Gaia Github repo</a> 中的README文件。这是因为许多app都处在快速开发周期内，会迅速的变化（通常是每天），因此如果使MDN页面根据这些变化快速的更新是没有什么意义的。工程师维护的README页面则是当前信息最准确的来源。</p>
+</div>
+<h3 id="平台">平台</h3>
+<p>包括系统（System），设置（Settings）,锁屏（Lockscreen）,编译脚本(build scripts) 以及蓝牙(Bluetooth) 应用。</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/7503/platform_team.png" style="width: 355px; height: 269px; margin: 0px auto; display: block;"></p>
+<h4 id="平台应用：进一步讲解">平台应用：进一步讲解</h4>
+<dl>
+ <dt>
+  <a href="/zh-CN/Firefox_OS/Platform/Gaia/Gaia_apps/System">System</a></dt>
+ <dd>
+  System app是在<a href="/en-US/Firefox_OS/Platform/Architecture#Firefox_OS_bootup_procedure">Firefox OS启动过程</a>中由Gecko装载的第一个web应用。它会担负许多责任，一般都是系统运行所需要的，因此不会局限于对某一个web应用。</dd>
+ <dt>
+  <a href="/zh-CN/Firefox_OS/Platform/Gaia/Gaia_apps/Browser">Browser</a></dt>
+ <dd>
+  Browser app（当前是System 的一部分）会提供一些浏览器类似的功能—包括页面导航，搜索和书签等。</dd>
+ <dt>
+  <a href="/zh-CN/Firefox_OS/Platform/Gaia/Gaia_apps/Window_Management">Window Management</a></dt>
+ <dd>
+  Firefox OS的窗口管理功能 — 包括应用的生命周期和交互、通知、动画以及其他 — 是由System app的特定部分所处理的。本文会着眼于Firefox OS 窗口管理的细节问题。</dd>
+ <dt>
+  <a href="/zh-CN/Firefox_OS/Platform/Gaia/Gaia_apps/Settings">Settings</a></dt>
+ <dd>
+  Firefox OS 用户可以通过 Settings 应用来配置设备的设置信息，响应传入的活动（带有config名称的<a href="/en-US/docs/WebAPI/Web_Activities">Web activities</a>)，这种传入的活动可以使其他应用跳转到Settings应用的不同的界面来处理需要的配置（例如，当没有数据链接时，会显示wifi设置界面）。</dd>
+</dl>
+<dl>
+ <dt>
+   </dt>
+</dl>
+<h3 id="通信">通信</h3>
+<p>包括 Dialer, Contact, SMS 以及 FTU应用.</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/7499/comms_team.png" style="width: 317px; height: 246px; margin: 0px auto; display: block;"></p>
+<h4 id="通信应用：进一步讲解">通信应用：进一步讲解</h4>
+<p>TBD(有待讨论）</p>
+<h3 id="生产力应用">生产力应用</h3>
+<p>包括 Email, Calendar, 以及 Clock 应用。</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/7505/productivity_team.png" style="width: 303px; height: 178px; margin: 0px auto; display: block;"></p>
+<h4 id="生产力应用：进一步讲解">生产力应用：进一步讲解</h4>
+<dl>
+ <dt>
+  <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/calendar/README.md">Calendar</a></dt>
+ <dd>
+  Firefox OS内置的日历应用。</dd>
+ <dt>
+  <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/clock/README.md">Clock</a></dt>
+ <dd>
+  Firefox OS原生的始终应用，包括闹钟，定时器，跑表功能。</dd>
+ <dt>
+  <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/email/README.md">Email</a></dt>
+ <dd>
+  Gaia e-mail 应用。</dd>
+</dl>
+<h3 id="多媒体">多媒体</h3>
+<p>包括相机(Camera),  图库(Gallery), 音乐播放器(Music), 视频播放器(Video)应用以及一些多媒体相关的功能比如DRM和壁纸(wallpapers)。</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/7501/media_team.png" style="width: 386px; height: 250px; margin: 0px auto; display: block;"></p>
+<h4 id="多媒体：进一步讲解">多媒体：进一步讲解</h4>
+<dl>
+ <dt>
+  <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Gaia/Gaia_apps/Video">Video</a></dt>
+ <dd>
+  Video 是视频播放应用，它能够播放在您Firefox OS 设备中存储的多媒体</dd>
+ <dt>
+  <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/camera/README.md">Camera</a></dt>
+ <dd>
+  用户可以使用Camera来从设备摄像头中捕捉和管理视频和图片，而且还能够响应其他应用想要使用摄像头功能来获取多媒体时发出的<code>pick</code>类型的 <a href="/en-US/docs/WebAPI/Web_Activities">Web activitie</a>。</dd>
+</dl>
+<h3 id="其他的Gaia_功能">其他的Gaia 功能</h3>
+<p>除了这些功能，还有其他一些主要的功能例如 browser, homescreen, marketplace, test framework, PDF viewer,以及 app manager，这些都是和Gaia一起紧密开发的。</p>
+<dl>
+ <dt>
+  <a href="https://github.com/mozilla/pdf.js/blob/master/README.md">pdf.js</a></dt>
+ <dd>
+  pdf.js 是基于HTML5的PDF阅读器，用于在Gaia内阅读PDF文件。注意 pdf.js是在Gaia外一个独立的仓库维护的。</dd>
+</dl>

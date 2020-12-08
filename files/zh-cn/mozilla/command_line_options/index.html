@@ -1,0 +1,407 @@
+---
+title: 命令行选项
+slug: Mozilla/Command_Line_Options
+translation_of: Mozilla/Command_Line_Options
+---
+<p>命令行选项用于为 Mozilla 应用程序指定各种启动选项。例如，您可以使用命令行配置选项来绕过配置档管理器并打开一个特定的配置档(如果您有多个配置档)。您也可以控制 Mozilla 应用程序如何打开，初始打开哪个组件以及当组件打开时要做什么。这个页面描述常用的选项和如何使用它们。</p>
+
+<h3 id="Syntax_Rules" name="Syntax_Rules">语法规则</h3>
+
+<p>首先，让我们描述一下适用于所有选项的语法规则。</p>
+
+<ul>
+ <li>包含空格的命令参数必须以引号括起；例如 "Joel User"。</li>
+ <li>命令操作是不区分大小写的。</li>
+ <li>命令参数，除了配置档名称外都是不区分大小写的。</li>
+ <li>空格( )用于间隔多个命令和参数。</li>
+ <li>每条消息选项都遵循语法 <code><var>字段</var>=<var>值</var></code>，例如:
+  <ul>
+   <li><code>to=</code><span class="nowiki"><code>foo@nowhere.net</code></span></li>
+   <li><code>subject=cool page</code></li>
+   <li><code>attachment=www.mozilla.org</code></li>
+   <li><code>attachment='<span class="nowiki">file:///c:/test.txt</span>'</code></li>
+   <li><code>body=check this page</code></li>
+  </ul>
+ </li>
+ <li>多个消息选项用逗号(,)间隔，例如: <code>"<span class="nowiki">to=foo@nowhere.net,subject=cool page</span>"。逗号分隔符一定不能尾随或前缀空格</code>( )。要指派多个值给一个字段，使用单引号(')闭合值，例如: <code>"<span class="nowiki">to='foo@nowhere.net,foo@foo.de',subject=cool page</span>"</code> 。</li>
+</ul>
+
+<h3 id="How_to_use_command_options" name="How_to_use_command_options">使用命令行选项</h3>
+
+<p>命令行选项在启动应用程序的命令后输入。某些选项选项有参数。它们在命令行选项后输入。某些选项有缩写替代。例如，命令行选项 "-editor" 可以缩写为 "-edit"。(其中可用的缩写将会在下面的文本中阐述) 在某些情况下，选项参数必须用引号括起。(这会在以下的选项描述中注明。) 可以指定多个命令行选项。通常，语法如下:</p>
+
+<pre>应用程序 -选项 -选项 "参数" -选项 参数
+</pre>
+
+<h4 id="示例">示例</h4>
+
+<p>下列示例显示 "-ProfileManager" 命令的使用，它将会在启动 Firefox 或 Thunderbird 前打开配置档管理器:</p>
+
+<h5 id="Windows">Windows</h5>
+
+<p>从 Windows 开始菜单中选择运行，输入:</p>
+
+<pre class="eval">firefox -ProfileManager
+</pre>
+
+<h5 id="Mac_OS_X">Mac OS X</h5>
+
+<p>转到 Applications &gt; Utilities，打开终端并输入:</p>
+
+<pre class="eval">cd /Applications/Firefox.app/Contents/MacOS
+./firefox -ProfileManager
+</pre>
+
+<h5 id="Linux">Linux</h5>
+
+<p>打开终端并输入:</p>
+
+<pre class="eval">cd <em>Thunderbird</em><var> 安装目录</var>
+./thunderbird -ProfileManager
+</pre>
+
+<p>以上示例调用 "-ProfileManager" 命令行选项用于 Mozilla 的 Thunderbird 邮件客户端。</p>
+
+<h3 id="User_Profile" name="User_Profile">用户配置档</h3>
+
+<h4 id="-CreateProfile_profile_name" name="-CreateProfile_profile_name"><code>-CreateProfile <var>profile_name</var></code></h4>
+
+<p>创建一个名为<var>profile_name</var> 的配置档，而不启动程序。<var>profile_name</var> 一定不能包含空格( )。</p>
+
+<pre class="eval">firefox -CreateProfile JoelUser
+</pre>
+
+<h4 id="-CreateProfile_.22profile_name_profile_dir.22" name="-CreateProfile_.22profile_name_profile_dir.22"><code>-CreateProfile "<var>profile_name</var> <var>profile_dir</var>"</code></h4>
+
+<p>在目录 <var>profile_dir</var> 中创建一个名为 <var>profile_name</var> 的配置档而不启动应用程序。注意 <var>profile_name</var> 和 <var>profile_dir</var> 必须括在一起。(在 <strong>SeaMonkey1.x</strong> 中未有)</p>
+
+<p>注: <var>profile_dir</var> 必须存在而且您必须还未有称为 <var>profile_name</var> 的配置档。</p>
+
+<pre class="eval">firefox -CreateProfile "JoelUser c:\internet\moz-profile"
+</pre>
+
+<h4 id="-ProfileManager_or_-P" name="-ProfileManager_or_-P"><code>-ProfileManager</code></h4>
+
+<p>使用配置档管理器启动。</p>
+
+<h4 id="-SelectProfile" name="-SelectProfile"><code>-SelectProfile</code></h4>
+
+<p>使用配置档选择对话框启动。仅用于 <strong>SeaMonkey1.x</strong>。</p>
+
+<h4 id="-ProfileWizard" name="-ProfileWizard"><code>-ProfileWizard</code></h4>
+
+<p>使用配置档向导启动。仅用于 <strong>SeaMonkey1.x</strong>。</p>
+
+<h4 id="-P_.22profile_name.22" name="-P_.22profile_name.22"><code>-P "<var>profile_name</var>"</code></h4>
+
+<p>绕过配置档管理器并使用名为<var>profile_name</var> 的配置档启动。对于处理多个配置档很有用。注意<var>profile_name</var> 是区分大小写的。如果您未指定一个配置档名称，那么就会打开配置档管理器。在 L:inux 上，您必须使用大写字母 P，因为小写调用 Purify 模式(内存和泄露探测)。其它平台大小写都接受。</p>
+
+<pre class="eval">firefox -P "Joel User"
+</pre>
+
+<h4 id="-profile_.22.2Fpath.2Fto.2Fprofile.22" name="-profile_.22.2Fpath.2Fto.2Fprofile.22"><code>-profile "<var>profile_path</var>"</code></h4>
+
+<p>使用给出路径的配置档启动。仅用于 <strong>Firefox</strong>、<strong>Thunderbird</strong> 和 <strong>SeaMonkey2.x</strong>。</p>
+
+<p><code>"profile_path"</code> 可以是一个绝对路径(<code>"<var>/path/to/profile</var>"</code>) 或一个相对路径<code>("<var>path/to/profile</var>"</code>).</p>
+
+<div class="note">在 Mac OS X 上，从 Firefox 4.0 和以上，由于 regression 的原因，不在支持给出相对路径，查看{{ bug(673955) }}.</div>
+
+<h4 id="-no-remote" name="-no-remote"><code>-no-remote</code></h4>
+
+<p>允许同一事件打开多个应用程序副本。(在 <strong>SeaMonkey1.x</strong> 中无效，它仅支持 <code>MOZ_NO_REMOTE=1</code>)。</p>
+
+<pre class="eval">firefox -no-remote -P "另一个配置档"
+</pre>
+
+<h4 id="-migration" name="-migration"><code>-migration</code></h4>
+
+<p>使用导入向导启动。(<strong>SeaMonkey1.x</strong> 中无效)</p>
+
+<h4 id="-installer" name="-installer"><code>-installer</code></h4>
+
+<p>使用 Netscape 4.x 迁移窗口启动。仅用于 <strong>SeaMonkey1.x</strong>。</p>
+
+<h4 id="-resetPref_preference" name="-resetPref_preference"><code>-resetPref <var>preference</var></code></h4>
+
+<p>重置指定的<var>首选项</var>(逗号间隔)为默认值。仅用于 <strong>SeaMonkey1.x</strong>。</p>
+
+<pre class="eval">seamonkey -resetPref browser.startup.homepage
+</pre>
+
+<h4 id="-override_.2Fpath.2Fto.2Foverride.ini" name="-override_.2Fpath.2Fto.2Foverride.ini"><code>-override <em>/path/to/</em>override.ini</code></h4>
+
+<p>加载指定的 <code>override.ini</code> 文件以覆盖 <code>application.ini</code> ({{ Source("browser/app/application.ini") }})中的配置。通过加载下列 <code>override.ini</code> 可以抑制在启动时的迁移向导。仅用于 <strong>Firefox</strong>。</p>
+
+<pre class="eval">[XRE]
+EnableProfileMigrator=0
+</pre>
+
+<h3 id="Browser" name="Browser">浏览器</h3>
+
+<h4 id="-browser" name="-browser"><code>-browser</code></h4>
+
+<p>使用 browser(浏览器)组件启动。仅用于 <strong>Firefox</strong> 和 <strong>SeaMonkey</strong>。</p>
+
+<h4 id="-url_URL" name="-url_URL"><code>-url <var>URL</var></code></h4>
+
+<p>根据浏览器选项，在新标签页或窗口中打开 <var>URL</var>。<code>-url</code> 可以省略。仅用于 <strong>Firefox</strong> 和 <strong>SeaMonkey</strong>。注: 当打开多个 URLs 时，Firefox 总是把它们打开为一个新窗口中的选项页。</p>
+
+<pre class="eval">firefox www.mozilla.com
+</pre>
+
+<h4 id="-private" name="-private"><code>-private</code></h4>
+
+<p>以私密浏览模式打开 Firefox，而不考虑当前的用户首选项。仅用于 <strong>Firefox 3.6</strong> 和以后版本。</p>
+
+<h4 id="-new-tab_URL" name="-new-tab_URL"><code>-new-tab <var>URL</var></code></h4>
+
+<p>在新标签页中打开 <var>URL</var>。仅用于 <strong>Firefox</strong> 和 <strong>SeaMonkey2.x</strong>。</p>
+
+<h4 id="-new-window_URL" name="-new-window_URL"><code>-new-window <var>URL</var></code></h4>
+
+<p>在新窗口中打开 <var>URL</var>。仅用于 <strong>Firefox</strong> 和 <strong>SeaMonkey2.x</strong>。</p>
+
+<h4 id="-search_term" name="-search_term"><code>-search <var>term</var></code></h4>
+
+<p>使用您的默认搜索引擎搜索 <var>term</var>。仅用于 <strong>Firefox</strong> 和 <strong>SeaMonkey2.x</strong> 及以后的版本。</p>
+
+<h4 id="-preferences" name="-preferences"><code>-preferences</code></h4>
+
+<p>打开选项/首选项窗口。仅用于 <strong>Firefox</strong> 和 <strong>SeaMonkey2.x</strong>。</p>
+
+<h4 id="-setDefaultBrowser" name="-setDefaultBrowser"><code>-setDefaultBrowser</code></h4>
+
+<p>设置应用程序为默认的浏览器。仅用于 <strong>Firefox</strong>。</p>
+
+<h3 id="Mail.2FNews" name="Mail.2FNews">邮件/新闻</h3>
+
+<h4 id="-mail" name="-mail"><code>-mail</code></h4>
+
+<p>使用邮件客户端启动。仅用于 <strong>Thunderbird</strong> 和 <strong>SeaMonkey</strong>。</p>
+
+<h4 id="-mail_mailto_URL" name="-mail_mailto_URL"><code>-mail <var>mailto_URL</var></code></h4>
+
+<p>为给出的 <var>mailto_URL </var>启动撰写消息的窗口。仅用于 <strong>Thunderbird</strong>。</p>
+
+<pre class="eval">thunderbird -mail <span class="nowiki">mailto:me@isp.net?subject=hi</span>
+</pre>
+
+<h4 id="-news_news_URL" name="-news_news_URL"><code>-news</code> <var>news_URL</var></h4>
+
+<p>使用新客户端启动。如果给出了 <var>news_URL</var> (可选)，则打开指定的新闻组。仅用于 <strong>Thunderbird</strong> 和 <strong>SeaMonkey</strong>。</p>
+
+<pre class="eval">thunderbird -news <span class="nowiki">news://server/group</span>
+</pre>
+
+<h4 id="-compose_message_options" name="-compose_message_options"><code>-compose <var>message_options</var></code></h4>
+
+<p>使用邮件撰写器启动。查看<a href="#Syntax_Rules">语法规则</a>。仅用于 <strong>Thunderbird</strong> 和 <strong>SeaMonkey</strong>。</p>
+
+<pre class="eval">thunderbird -compose "<span class="nowiki">to=foo@nowhere.net</span>"
+</pre>
+
+<h4 id="-addressbook" name="-addressbook"><code>-addressbook</code></h4>
+
+<p>使用地址簿启动。仅用于 <strong>Thunderbird</strong> 和 <strong>SeaMonkey</strong>。</p>
+
+<h4 id="-options" name="-options"><code>-options</code></h4>
+
+<p>打开选项/首选项窗口。仅用于 <strong>Thunderbird</strong>。</p>
+
+<h4 id="-offline" name="-offline"><code>-offline</code></h4>
+
+<p>以离线模式启动。仅用于 <strong>Thunderbird</strong> 和 <strong>SeaMonkey</strong>。</p>
+
+<h4 id="-setDefaultMail" name="-setDefaultMail"><code>-setDefaultMail</code></h4>
+
+<p>设置应用程序为默认的邮件客户端。仅用于 <strong>Thunderbird</strong>。</p>
+
+<h3 id="Calendar" name="Calendar">日历</h3>
+
+<h4 id="-calendar" name="-calendar"><code>-calendar</code></h4>
+
+<p>使用日历客户端启动。仅用于 <strong>Sunbird</strong>。</p>
+
+<h4 id="-subscribe_URL_or_-url_URL" name="-subscribe_URL_or_-url_URL"><code>-subscribe <var>URL</var></code> 或 <code>-url <var>URL</var></code></h4>
+
+<p>订阅到给出的 <var>URL</var>。仅用于 <strong>Sunbird</strong>。</p>
+
+<h4 id="-showdate_date" name="-showdate_date"><code>-showdate <var>日期</var></code></h4>
+
+<p>显示给出的<var>日期</var>的您的计划安排。仅用于 <strong>Sunbird</strong>。</p>
+
+<pre class="eval">sunbird -showdate 08/04/2008
+</pre>
+
+<h3 id="Other_Components" name="Other_Components">其它组件</h3>
+
+<h4 id="-editor_URL_or_-edit_URL" name="-editor_URL_or_-edit_URL"><code>-editor <var>URL</var></code> 或 <code>-edit <var>URL</var></code></h4>
+
+<p>为给出的 <em>URL</em> 使用编辑器(撰写器)启动(<em>其中 </em><var>URL</var> 是可选的)。仅用于 <strong>SeaMonkey</strong>。</p>
+
+<pre class="eval">seamonkey -edit www.mozilla.org
+</pre>
+
+<h4 id="-jsconsole" name="-jsconsole"><code>-jsconsole</code></h4>
+
+<p>使用<a href="/en/Error_Console" title="en/Error_Console">错误控制台</a>启动应用程序.</p>
+
+<h4 id="-inspector_URL" name="-inspector_URL"><code>-inspector <var>URL</var></code></h4>
+
+<p>使用 <a href="/en/DOM_Inspector" title="en/DOM_Inspector">DOM Inspector</a> 启动(如果已安装的话)，并观察给出的 <var>URL</var> (其中 <var>URL</var> 是可选的)。</p>
+
+<h4 id="-venkman" name="-venkman"><code>-venkman</code></h4>
+
+<p>使用 JavaScript 调试器 <a href="/en/Venkman" title="en/Venkman">Venkman</a> 启动(如果已安装的话)。</p>
+
+<h4 id="-chat" name="-chat"><code>-chat</code></h4>
+
+<p>使用 IRC 客户端 <a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/16">ChatZilla</a> 启动(如果已安装的话)。</p>
+
+<h3 id="XULRunner" name="XULRunner">XULRunner</h3>
+
+<h4 id="-app_.2Fpath.2Fto.2Fapplication.ini" name="-app_.2Fpath.2Fto.2Fapplication.ini"><code>-app <em>/path/to/</em>application.ini</code></h4>
+
+<p>启动一个新进程运行在指定路径 <em>path/to </em>处的 <a href="/en/XULRunner" title="en/XULRunner">XULRunner</a> 应用程序。仅用于 <strong>Firefox</strong> 版本 3 和以上。</p>
+
+<h3 id="Chrome" name="Chrome">Chrome</h3>
+
+<h4 id="-chrome_chrome_URL" name="-chrome_chrome_URL"><code>-chrome <var>chrome_URL</var></code></h4>
+
+<p>加载指定的 chrome。</p>
+
+<pre class="eval">firefox -chrome <a class="external" rel="freelink">chrome://inspector/content</a>
+</pre>
+
+<h4 id="-register_chrome_URL" name="-register_chrome_URL"><code>-register <var>chrome_URL</var></code></h4>
+
+<p>注册指定的 chrome，而不启动应用程序。</p>
+
+<h3 id="Add-ons" name="Add-ons">扩展附件</h3>
+
+<p>{{ gecko_minversion_note("1.9.2", "-install-global-extension 和 -install-global-theme 已经从 Gecko 1.9.2 和以上的版本移除。") }}</p>
+
+<h4 id="-install-global-extension_.2Fpath.2Fto.2Fextension" name="-install-global-extension_.2Fpath.2Fto.2Fextension"><code>-install-global-extension <var>/path/to/extension</var></code></h4>
+
+<p>安装扩展到应用程序目录。参数是扩展的路径。您必须有管理权限。(在 <strong>SeaMonkey1.x</strong> 中无效，但是某些扩展已经把这个作为一个安装时的选项)。</p>
+
+<h4 id="-install-global-theme_.2Fpath.2Fto.2Ftheme" name="-install-global-theme_.2Fpath.2Fto.2Ftheme"><code>-install-global-theme <var>/path/to/theme</var></code></h4>
+
+<p>和上面类似，但是只用于主题。您必须有管理权限。(在 <strong>SeaMonkey1.x</strong> 中无效，但是某些扩展已经把这个作为一个安装时的选项)。</p>
+
+<div class="note">
+<p>从 Firefox 2.0.0.7 开始，<code>-install-global-extension</code> 和 <code>-install-global-theme</code> 命令行参数选项的使用被限制为只允许安装在本地磁盘或映射的驱动器上的附加组件。从网络共享直接安装将不再成功。</p>
+</div>
+
+<h4 id="-safe-mode" name="-safe-mode"><code>-safe-mode</code></h4>
+
+<p>禁用所有的扩展启动应用程序，仅用于启动。(扩展不会加载，但是不会在扩展管理器数据源中永久禁用)。(在 <strong>SeaMonkey1.x</strong> 中无效)</p>
+
+<h3 id="Locale" name="Locale">语种</h3>
+
+<h4 id="-UILocale_locale" name="-UILocale_locale"><code>-UILocale <var>locale</var></code></h4>
+
+<p>以 <var>locale</var> 资源作为用户界面的语种。</p>
+
+<pre class="eval">firefox -UILocale en-US
+</pre>
+
+<h3 id="Startup" name="Startup">启动</h3>
+
+<h4 id="-turbo" name="-turbo"><code>-turbo</code></h4>
+
+<p>Launch application in Quick Launch mode. <strong>SeaMonkey1.x</strong> only.</p>
+
+<h4 id="-nosplash_or_-quiet" name="-nosplash_or_-quiet"><code>-nosplash</code> or <code>-quiet</code></h4>
+
+<p>Suppresses display of the splash screen. To show splash screen, use the <code>-splash</code> command. Note the splash screen is disabled by default on some systems. <strong>SeaMonkey1.x</strong> only.</p>
+
+<h3 id="Remote_Control" name="Remote_Control">远程控制</h3>
+
+<h4 id="-remote_remote_command" name="-remote_remote_command"><code>-remote <var>远程命令</var></code></h4>
+
+<p>在一个已经运行的应用程序进程中执行<var>远程命令</var>(查看<a class="external" href="http://www.mozilla.org/unix/remote.html">远程控制</a>)。注: Unix/Linux 仅适用于 <strong>SeaMonkey1.x</strong></p>
+
+<pre class="eval">firefox -remote "openURL(www.mozilla.org, new-tab)"
+</pre>
+
+<h3 id="Miscellaneous" name="Miscellaneous">其它</h3>
+
+<h4 id="-console" name="-console"><code>-silent</code></h4>
+
+<p>不打开默认窗口。对于那些打开它们自己窗口但是未防止默认窗口打开的那些命令行参数很有用。仅适用于 <strong>Firefox</strong>、<strong>Thunderbird3.x</strong> 和 <strong>SeaMonkey2.x</strong>。</p>
+
+<h4 id="-console" name="-console"><code>-console</code></h4>
+
+<p>使用一个调试控制台启动应用程序。注:仅适用于 Windows。</p>
+
+<h4 id="-h_or_-help_or_-.3F" name="-h_or_-help_or_-.3F"><code>-h</code> 或 <code>-help</code> 或 <code>-?</code></h4>
+
+<p>显示所有可用的命令行参数的列表。注意，在 Windows 上仅对调试构建版本({{ Bug(355889) }})有效。这个选项仅在命令行控制台中可用。</p>
+
+<h4 id="-v_or_-version" name="-v_or_-version"><code>-v</code> 或 <code>-version</code></h4>
+
+<p>打印应用程序版本。注意，在 Windows 上仅对调试构建版本({{ Bug(355889) }})有效。</p>
+
+<h4 id="-osint" name="-osint"><code>-osint</code></h4>
+
+<p>告诉应用程序它是被 OS SHell 启动的。这个不应该指定，除非调用者在启动应用程序时，提供了 OS  Shell 的所有功能。({{ Bug(384384) }}).</p>
+
+<h4 id="-requestPending" name="-requestPending"><code>-requestPending</code></h4>
+
+<p>Tells the application that there will be a Windows DDE request to open the same url specified on the command line. This should not be specified unless the caller provides all of the functionality provided by the OS shell when launching the application ({{ Bug(354005) }}).</p>
+
+<h4 id="X11_options">X11 options</h4>
+
+<p>These options are only available for an application build for and running atop the X11/X.org display and window system to be found on Linux and other Unices.</p>
+
+<h5 id="--displayDISPLAY">--display=DISPLAY</h5>
+
+<p>设置要使用的 X display</p>
+
+<h5 id="--sync">--sync</h5>
+
+<p>使 X 调用同步</p>
+
+<h5 id="--g-fatal-warnings">--g-fatal-warnings</h5>
+
+<p>使所有警告视为严重</p>
+
+<h3 id="Other_options_need_to_be_documented" name="Other_options_need_to_be_documented">其它需要编写文档的选项</h3>
+
+<ul>
+ <li><code>-print-xpcom-dir</code></li>
+ <li><code>-print-xpcom-dirlist</code></li>
+ <li><code>-kill</code></li>
+ <li><code>-killAll</code></li>
+ <li><code>-f</code></li>
+ <li><code>-ftimeout</code></li>
+ <li><code>-fwait</code></li>
+ <li><code>-unsetDefaultMail</code></li>
+ <li><code>-foreground</code></li>
+ <li>GTK options</li>
+</ul>
+
+<h3 id="References" name="References">参考</h3>
+
+<ul>
+ <li><a href="/en/Chrome/Command_Line" title="en/Chrome/Command_Line">Chrome: Command Line</a></li>
+ <li><a class="external" href="http://www-archive.mozilla.org/quality/browser/front-end/testcases/cmd-line/">Test Documentation for Command-line Features</a> (mozilla.org)</li>
+ <li>{{ Source("toolkit/xre/nsAppRunner.cpp") }}</li>
+ <li>{{ Source("browser/components/nsBrowserContentHandler.js") }}</li>
+ <li>{{ Source("suite/browser/nsBrowserContentHandler.js") }}</li>
+ <li>{{ Source("mail/components/nsMailDefaultHandler.js") }}</li>
+ <li><a class="link-https" href="https://wiki.mozilla.org/Installer:Command_Line_Arguments">Installer command line options</a></li>
+</ul>
+
+<div class="originaldocinfo">
+<h2 id="Original_Document_Information" name="Original_Document_Information">原始文档信息</h2>
+
+<ul>
+ <li>Author(s): Ben Goodger, Steffen Wilberg, Seth Spitzer, Daniel Wang</li>
+ <li>Copyright Information: Portions of this content are © 1998–2007 by individual mozilla.org contributors; content available under a Creative Commons license | <a class="external" href="http://www.mozilla.org/foundation/licensing/website-content.html">Details</a>.</li>
+</ul>
+</div>
+
+<p>{{ languages( { "ja": "ja/Command_Line_Options" } ) }}</p>

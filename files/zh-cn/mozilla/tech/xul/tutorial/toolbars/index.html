@@ -1,0 +1,101 @@
+---
+title: XUL_教程/工具栏
+slug: Mozilla/Tech/XUL/Tutorial/Toolbars
+tags:
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Toolbars
+---
+<p> </p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Splitters" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:Simple_Menu_Bars">下一页  »</a></p>
+</div><p></p>
+<p>工具栏通常沿着窗口顶部放置，并包含许多完成普通功能的按钮。XUL有一个创建工具栏的方法。</p>
+<p>A toolbar is usually placed along the top of a window and contains a number of buttons that perform common functions. XUL has a method to create toolbars.</p>
+<p><br>
+ 工具栏</p>
+<p>Like a number of elements, XUL toolbars are a type of box.像许多的界面要素， XUL工具栏也是一种界面框。 Usually, a row of buttons would appear in the toolbar, but any element can be placed in a toolbar.通常，工具栏里会出现一排按钮，但任何界面要素都可以放到工具栏里。 For example, the Mozilla browser window contains a textbox that displays the page URL.举例来说， mozilla浏览器窗口包含一个文本框 ，显示了该网页的url 。</p>
+<p>Toolbars may be placed on any side of the window, either horizontally or vertically.工具栏可被水平或垂直地放置在窗口的任一边。 Of course you wouldn't normally put a textbox in a vertical toolbar.当然，通常你不会把文本框放在一个垂直工具栏里。 Actually, because toolbars are just boxes they can actually go anywhere you want, even in the middle of a window.事实上，因为工具栏只是个界面框，它们能去你想要它们去的任何地方，即使是窗口的中间。 Typically however, a set of toolbars would appear along the top of a window.通常，一组工具栏会出现在窗口的顶部。 When more than one toolbar is placed next to each other, they are typically grouped together in something called a 'toolbox'.当多个工具栏一个接一个放置时，他们通常被一个叫做'工具箱'的东西集合在一起。 [ edit ] A simple toolbar inside a toolbox [编辑] 一个简单的工具栏里面一个工具箱</p>
+<p>Source View 来源 查看 形象： toolbar1.jpg</p>
+<pre class="eval">&lt;toolbox&gt;   &lt;toolbar id="nav-toolbar"&gt;     &lt;toolbarbutton label="Back"/&gt;     &lt;toolbarbutton label="Forward"/&gt;   &lt;/toolbar&gt; &lt;/toolbox&gt; &lt;工具箱&gt; &lt;toolbar id="nav-toolbar"&gt; &lt;toolbarbutton label="back"/&gt; &lt;toolbarbutton label="forward"/&gt; &lt; /工具栏&gt; &lt; /工具箱&gt;
+</pre>
+<p>This has created a toolbar containing two buttons, a Back button and a Forward button.这就造成了一种工具列载有两个按钮，有一个备份(后退)按钮和前进按钮。 The one toolbar has been placed inside the toolbox.在一个工具栏已被置于内工具箱。 This has involved four new tags, which are described here.这涉及到4个新的标签，这是形容这里。</p>
+<p>toolbox 工具箱</p>
+<pre class="eval">   A box that contains toolbars.一个方框，其中包含工具栏。
+</pre>
+<p>toolbar 工具栏</p>
+<pre class="eval">   A single toolbar that contains toolbar items such as buttons.一个单一的工具栏包含了工具栏的项目，如按钮。
+</pre>
+<p>toolbarbutton toolbarbutton</p>
+<pre class="eval">   A button on a toolbar, which has all the same features of a regular button but is usually drawn differently.一个按钮，一个工具条，其中已全部一样的特点，定期按钮，但通常是取用不同。
+</pre>
+<p>The toolbar is the main element that creates the actual toolbar. 该工具是主要因素，造成了实际的工具栏。 Inside it are placed the individual toolbar items, usually buttons, but they can be other elements.它里面放置了个人工具栏的项目，通常是按钮，但是它们可以被其他元素。</p>
+<p>In the example above, only one toolbar was created.在上面的例子中，只有一个工具栏被创建。 Multiple toolbars can be created just as easily by adding more toolbar elements after the first one.更多工具栏的创建就想在第一个工具栏中添加元素一样容易。</p>
+<p>The toolbox is a container for toolbars. 工具箱是一个容器工具栏。 In some applications, you will have several toolbars along the top of the window.在某些应用中，你将有几个工具栏沿顶部的窗口。 You can put them all inside a toolbox .你可以把它们都内一个工具箱。</p>
+<p>You do not have to put toolbar elements inside a toolbox .你不须要把工具栏的内容里面一个工具箱。 [ edit ] Our find files example [编辑] 我们找到档案为例</p>
+<p>Let's add a toolbar to the find files dialog.让我们添加一个工具栏，向找到的文件对话框。 We don't really need one but we'll add one anyway to demonstrate its use.我们并不真的需要一个，但我们将增加一个无论如何，以证明其使用。 Two buttons will be added, an Open button and a Save button.两个按钮将被增加，一个打开按钮和一个储存按钮。 Presumably, they would allow the user to save search results and re-open them later.据推测，它们将使用户能够保存搜寻结果，或重新打开。</p>
+<pre class="eval">&lt;vbox flex="1"&gt; &lt;toolbox&gt;     &lt;toolbar id="findfiles-toolbar"&gt;       &lt;toolbarbutton id="opensearch" label="Open"/&gt;       &lt;toolbarbutton id="savesearch" label="Save"/&gt;     &lt;/toolbar&gt;   &lt;/toolbox&gt; &lt;tabbox&gt; &lt; vbox挠性= " 1 " &gt; &lt;toolbox&gt; &lt;toolbar id="findfiles-toolbar"&gt; &lt;toolbarbutton id="opensearch" label="open"/&gt; &lt;toolbarbutton id="savesearch" label="save"/&gt; &lt; /工具栏&gt; &lt; /工具箱&gt; &lt;tabbox&gt;
+</pre>
+<p>形象： toolbar5.png</p>
+<p>A toolbar with two buttons has been added here.工具栏上有两个按钮已被添加在这里。 In the image, you can see them appear horizontally along the top.在图像，你可以看到他们出现横向沿顶部。 Notice that the toolbar has been placed inside the vertical box just above the tabbox.公告说，该工具已被置于内垂直票房略高于tabbox 。 This is because we need the vertical orientation so that the toolbar will appear above everything else.这是因为，我们需要的垂直方向，使该工具栏将出现高于一切。</p>
+<p>The find files example so far: Source View这一发现的档案为例，目前为止：源观</p>
+<p>Next, we'll find out how to add a menu bar to a window .明年，我们将看看如何添加一个菜单栏，以一个窗口 。</p>
+<p> </p>
+<h3 id="Adding_a_Toolbar" name="Adding_a_Toolbar">Adding a Toolbar</h3>
+<p>Like a number of elements, XUL toolbars are a type of box. Usually, a row of <a href="cn/XUL_Tutorial/Adding_Buttons">buttons</a> would appear in the toolbar, but any element can be placed in a toolbar. For example, the Mozilla browser window contains a <a href="cn/XUL_Tutorial/Input_Controls#Text_Entry_Fields">textbox</a> that displays the page URL.</p>
+<p>Toolbars may be placed on any side of the window, either horizontally or vertically. Of course you wouldn't normally put a textbox in a vertical toolbar. Actually, because toolbars are just boxes they can actually go anywhere you want, even in the middle of a window. Typically however, a set of toolbars would appear along the top of a window. When more than one toolbar is placed next to each other, they are typically grouped together in something called a 'toolbox'.</p>
+<h5 id="A_simple_toolbar_inside_a_toolbox" name="A_simple_toolbar_inside_a_toolbox">A simple <code>toolbar</code> inside a <code>toolbox</code></h5>
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_toolbar_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_toolbar_1.xul">View</a></p>
+<div class="float-right">
+ <img alt="Image:toolbar1.jpg"></div>
+<pre>&lt;toolbox&gt;
+  &lt;toolbar id="nav-toolbar"&gt;
+    &lt;toolbarbutton label="Back"/&gt;
+    &lt;toolbarbutton label="Forward"/&gt;
+  &lt;/toolbar&gt;
+&lt;/toolbox&gt;
+</pre>
+<p>This has created a toolbar containing two buttons, a Back button and a Forward button. The one toolbar has been placed inside the toolbox. This has involved four new tags, which are described here.</p>
+<dl>
+ <dt>
+  <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/toolbox" title="toolbox">toolbox</a></code></dt>
+ <dd>
+  A box that contains toolbars.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code></dt>
+ <dd>
+  A single toolbar that contains toolbar items such as buttons.</dd>
+</dl>
+<dl>
+ <dt>
+  <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/toolbarbutton" title="toolbarbutton">toolbarbutton</a></code></dt>
+ <dd>
+  A button on a toolbar, which has all the same features of a regular button but is usually drawn differently.</dd>
+</dl>
+<p>The <code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code></code> is the main element that creates the actual toolbar. Inside it are placed the individual <code>toolbar</code> items, usually buttons, but they can be other elements.</p>
+<p>In the example above, only one toolbar was created. Multiple toolbars can be created just as easily by adding more <code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code></code> elements after the first one.</p>
+<p>The <code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/toolbox" title="toolbox">toolbox</a></code></code> is a container for toolbars. In some applications, you will have several toolbars along the top of the window. You can put them all inside a <code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/toolbox" title="toolbox">toolbox</a></code></code>.</p>
+<p>You do not have to put <code>toolbar</code> elements inside a <code>toolbox</code>.</p>
+<div class="highlight">
+ <h4 id="Our_find_files_example" name="Our_find_files_example">Our find files example</h4>
+ <p>Let's add a toolbar to the find files dialog. We don't really need one but we'll add one anyway to demonstrate its use. Two buttons will be added, an Open button and a Save button. Presumably, they would allow the user to save search results and re-open them later. <code> </code></p>
+ <pre class="eval">&lt;vbox flex="1"&gt;
+  <span class="highlightblue">&lt;toolbox&gt;
+    &lt;toolbar id="findfiles-toolbar"&gt;
+      &lt;toolbarbutton id="opensearch" label="Open"/&gt;
+      &lt;toolbarbutton id="savesearch" label="Save"/&gt;
+    &lt;/toolbar&gt;
+  &lt;/toolbox&gt;</span>
+  &lt;tabbox&gt;
+</pre>
+ <p> </p>
+ <div>
+  <img alt="Image:toolbar5.png"></div>
+ <p>A toolbar with two buttons has been added here. In the image, you can see them appear horizontally along the top. Notice that the toolbar has been placed inside the vertical box just above the tabbox. This is because we need the vertical orientation so that the toolbar will appear above everything else.</p>
+ <p>The find files example so far: <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-toolbar.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-toolbar.xul">View</a></p>
+</div>
+<p>Next, we'll find out how to add a <a href="cn/XUL_Tutorial/Simple_Menu_Bars">menu bar to a window</a>.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Splitters" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:Simple_Menu_Bars">下一页  »</a></p>
+</div><p></p>

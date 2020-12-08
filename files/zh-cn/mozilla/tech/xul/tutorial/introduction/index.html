@@ -1,0 +1,70 @@
+---
+title: XUL_教程/引言
+slug: Mozilla/Tech/XUL/Tutorial/Introduction
+tags:
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Introduction
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_教程:XUL的结构">下一页  »</a></p>
+</div><p></p>
+
+<p>这份教程可以帮助你如何用 XUL (XML用户界面语言) 来创建跨平台的可描述界面的应用程序.</p>
+
+<p>这份教程将设计出一个"查找文件"的应用程序界面, 类似于Macintosh的Sherlock或是Windows的文件查找的窗口. 只会提供基本的界面以及一些简单的功能函数. 真正的文件查找功能并没有实现,.</p>
+
+<h2 id=".E4.BB.80.E4.B9.88.E6.98.AFXUL.EF.BC.8C.E5.8F.8A.E4.B8.BA.E4.BB.80.E4.B9.88.E8.A6.81.E5.88.9B.E5.BB.BA.E5.AE.83.EF.BC.9F" name=".E4.BB.80.E4.B9.88.E6.98.AFXUL.EF.BC.8C.E5.8F.8A.E4.B8.BA.E4.BB.80.E4.B9.88.E8.A6.81.E5.88.9B.E5.BB.BA.E5.AE.83.EF.BC.9F">什么是XUL，及为什么要创建它？</h2>
+
+<p>XUL (发音是 zool,有点像cool) 是为开发更快更简单的Mozilla浏览器而开发的. 这是一个基于 XML 可扩展描述语言 的语言 ,所以XML的所有特性都适用于XUL.</p>
+
+<p>大多数应用程序在开发的时候都需要应用某个特定平台的特性，这就使得创建一个跨平台的软件变得费时费力。而这对于某些用户或许并非重要，但是对那些想在其它设备上，比如手持设备或机顶盒上，运行一个应用程序的用户来说却，跨平台确是至关重要的。</p>
+
+<p>在过去诸多跨平台的解决方案都已被开发出来。比如Java的可移植性就是其主要卖点。XUL则是一个那样的语言，它被设计出用于创建可移植的用户界面。</p>
+
+<p>创建一个应用程序是要花费好多时间的，哪怕它只工作在某个平台下。编译和排错需要的时间可能会很多。而使用XUL，一个界面可以被快速方便地制作和修改。</p>
+
+<p>XUL具备所有其它XML语言的所有优点。举例来说，XHTML或者其它XML语言，比如MathML 数学标记语言 或 SVG 可伸缩矢量图，可以被插入到XUL当中。同样，XUL中的文本也可以很容易地被本地化，那意味着它可以稍加努力就可以被翻译成其它国家的语言。样式表可以被提供用于修改用户界面的外观（就像WinAmp的主题和皮肤或者某些窗口管理器）。</p>
+
+<h2 id=".E7.94.A8XUL.E5.8F.AF.E4.BB.A5.E5.81.9A.E4.BA.9B.E4.BB.80.E4.B9.88.E7.B1.BB.E5.9E.8B.E7.9A.84.E7.94.A8.E6.88.B7.E7.95.8C.E9.9D.A2.EF.BC.9F" name=".E7.94.A8XUL.E5.8F.AF.E4.BB.A5.E5.81.9A.E4.BA.9B.E4.BB.80.E4.B9.88.E7.B1.BB.E5.9E.8B.E7.9A.84.E7.94.A8.E6.88.B7.E7.95.8C.E9.9D.A2.EF.BC.9F">用XUL可以做些什么类型的用户界面？</h2>
+
+<p>XUL有能力创建现代图形界面中的大多数元件。它的应用广泛到可以满足特定设备特殊要求，而它的强大足以使开发者创建出复杂的界面。</p>
+
+<p>下列组件可以被创建：</p>
+
+<ul>
+ <li>输入组件，如文本框和复选框</li>
+ <li>带按钮和其它组件的工具条</li>
+ <li>带菜单和弹出菜单的菜单条</li>
+ <li>选项卡对话框</li>
+ <li>树形控件或栅格控件</li>
+ <li>快捷键</li>
+</ul>
+
+<p>显示的内容创建自XUL文件及数据源的数据，在Mozilla中，数据源包含用户邮件箱、书签、搜索结果等等，菜单、树状列表和其它元素都能从那添加，也可以从RDF文件添加自定义的数据。</p>
+
+<p>创建XUL应用程序的方法有几种：</p>
+
+<ul>
+ <li>Firefox扩展：扩展可以增强浏览器的功能，一般出现在工具栏、菜单，或自定义的界面里面。这里使用一种在XUL里称为overlay的东西完成，可以被主界面所引用，在实际使用中，Firefox将从扩展里面引入相关界面。扩展也可以被其它基于Mozilla平台的产品所使用，例如Thunderbird。</li>
+ <li>基于XULRunner的程序：XULRunner是创建基于Mozilla平台XUL程序的一个独立程序，它有自己的可执行文件，因而不需要浏览器。</li>
+ <li>XUL包：有别与前面基于Firefox扩展及XULRunner，它更像是有独立运行窗口的独立程序，一般用于不想携带大体积的XULRunner程序，但仍然需要Mozilla浏览器来允许该包。</li>
+ <li>远程XUL程序：你可以把XUL代码放在Web服务器，然后在浏览器打开访问，但基于安全方面的原因，该方法有局限性。</li>
+</ul>
+
+<p>前三种类型需要在用户电脑做安装操作，但是这样程序就没有安全限制了，可以访问本地文件和读写属性。例如扩展，所包含的XUL文件、脚本和图像将被打包成单一文件，用户下载后安装到本地。基于Mozilla的程序比如Firefox，提供了扩展管理器来对包进行安装管理，而不需要很多代码操作。 XUL也可以从远程WEB站点打开，然而这样很多类型操作会有限制，以及一些XUL外观效果会失效。如果你需要从远程站点载入XUL内容，WEB服务器必须设置XUL文件头格式为'application/vnd.mozilla.xul+xml'。通常XUL文件使用.xul为扩展名，你可以从Mozilla浏览器打开它，跟打开其它文件一样，点击菜单【打开文件】或者直接在地址栏输入URL地址。</p>
+
+<h2 id=".E5.AD.A6.E4.B9.A0.E8.BF.99.E4.BB.BD.E6.95.99.E7.A8.8B.E4.B9.8B.E5.89.8D.EF.BC.8C.E6.88.91.E9.9C.80.E8.A6.81.E5.81.9A.E4.BA.9B.E4.BB.80.E4.B9.88.E7.9F.A5.E8.AF.86.E5.87.86.E5.A4.87.EF.BC.9F" name=".E5.AD.A6.E4.B9.A0.E8.BF.99.E4.BB.BD.E6.95.99.E7.A8.8B.E4.B9.8B.E5.89.8D.EF.BC.8C.E6.88.91.E9.9C.80.E8.A6.81.E5.81.9A.E4.BA.9B.E4.BB.80.E4.B9.88.E7.9F.A5.E8.AF.86.E5.87.86.E5.A4.87.EF.BC.9F">学习这份教程之前，我需要做些什么知识准备？</h2>
+
+<p>你需要理解HTML，以及了解XML和CSS一些基础知识，下面几点建议需要注意：</p>
+
+<ul>
+ <li>XUL标签和属性全部用小写，XML是区分大小写的(不像HTML)</li>
+ <li>XUL属性值都要写在引号内，即使是数字</li>
+ <li>XUL文件一般分割为四部分，一是布局和元素，二是样式描述，三是脚本，四是语言包，另外通常还会包括一些图片和数据文件</li>
+</ul>
+
+<p>基于Mozilla和Gecko平台的程序都支持XUL，例如Mozilla Firefox和Netscape6。随着时间推移XUL在语法有些不同，你可能需要使用适当的版本来进行工作。在大多例子里使用的是Mozilla 1.0或更高版本。XUL在Firefox和其它基于Mozilla浏览器中是相似的，虽然也存在一些细微的差别，例如工具栏。 该指南将最大限度介绍XUL方方面面，然而还是无法讲述所有的特征。一旦你熟悉XUL，可以使用<a class="external" href="http://www.xulplanet.com/references/elemref/">XUL Element Reference</a>来查找其它标签的属性特征。</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_教程:XUL的结构">下一页  »</a></p>
+</div><p></p>

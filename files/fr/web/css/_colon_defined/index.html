@@ -1,0 +1,124 @@
+---
+title: ':defined'
+slug: 'Web/CSS/:defined'
+tags:
+  - CSS
+  - Pseudo-classe
+  - Reference
+  - Web
+translation_of: 'Web/CSS/:defined'
+---
+<div>{{CSSRef}}</div>
+
+<p>La <a href="/fr/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <strong><code>:defined</code></strong> représente n'importe quel élément ayant été défini. Cela inclut les éléments standards provenant du navigateur et également les éléments personnalisés (<em>custom elements</em>) ayant correctement été définis (c'est-à-dire grâce à la méthode {{domxref("CustomElementRegistry.define()")}}).</p>
+
+<pre class="brush: css no-line-numbers">/* Cette règle cible tout élément défini */
+:defined {
+  font-style: italic;
+}
+
+/* Cette règle cible n'importe quelle instance */
+/* d'un élément personnalisé donné */
+simple-custom:defined {
+  display: block;
+}
+</pre>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox">{{csssyntax}}</pre>
+
+<h2 id="Exemples">Exemples</h2>
+
+<p>Les fragments de code qui suivent sont tirés <a href="https://github.com/mdn/web-components-examples/tree/master/defined-pseudo-class">du dépôt <code>defined-pseudo-class</code></a> (<a href="https://mdn.github.io/web-components-examples/defined-pseudo-class/">voir le résultat en <em>live</em></a>).</p>
+
+<p>Pour cette démonstration on définit un élément personnalisé trivial :</p>
+
+<pre class="brush: js">customElements.define('simple-custom',
+  class extends HTMLElement {
+    constructor() {
+      super();
+
+      let divElem = document.createElement('div');
+      divElem.textContent = this.getAttribute('text');
+
+      let shadowRoot = this.attachShadow({mode: 'open'})
+        .appendChild(divElem);
+  }
+})</pre>
+
+<p>On insère une copie de cet élément dans le document, à côté d'un paragraphe classique {{HTMLElement("p")}}  :</p>
+
+<pre class="brush: html">&lt;simple-custom text="Le texte de l'élément personnalisé"&gt;&lt;/simple-custom&gt;
+
+&lt;p&gt;Un paragraphe normal.&lt;/p&gt;</pre>
+
+<p>Dans la feuille CSS, on inclut les règles suivantes :</p>
+
+<pre class="brush: css">// On utilise deux arrières-plans distincts
+// pour ces deux éléments
+p {
+  background: yellow;
+}
+
+simple-custom {
+  display: block;
+  background: cyan;
+}
+
+// On met en italique le texte de ces
+// deux éléments
+:defined {
+  font-style: italic;
+}</pre>
+
+<p>Ensuite, on fournit les deux règles suivantes afin de masquer les instances de l'élément personnalisé qui ne sont pas définies et, pour celles qui sont définies, on indique que ce sont des éléments de bloc :</p>
+
+<pre class="brush: css">simple-custom:not(:defined) {
+  opacity: 0;
+}
+
+simple-custom:defined {
+  opacity: 0.75;
+  text-decoration: underline;
+}</pre>
+
+<p>Ces dernières règles sont utiles lorsqu'on a un élément personnalisé complexe qui met du temps à charger : pour ceux-là, on peut vouloir les masquer jusqu'à ce que la définition soit complète afin de ne pas avoir de scintillement d'éléments non mis en formes sur la page.</p>
+
+<h3 id="Résultat">Résultat</h3>
+
+<p>{{EmbedLiveSample("Exemples")}}</p>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Spécification</th>
+   <th scope="col">État</th>
+   <th scope="col">Commentaires</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'semantics-other.html#selector-defined', ':defined')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilité des navigateurs</h2>
+
+<div class="hidden">Le tableau de compatibilité de cette page a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à consulter <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> et à nous envoyer une<em>pull request</em>.</div>
+
+<p>{{Compat("css.selectors.defined")}}</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="/fr/docs/Web/Web_Components">Les composants web</a></li>
+ <li>{{cssxref(":host")}}</li>
+ <li>{{cssxref(":host()")}}</li>
+ <li>{{cssxref(":host-context()")}}</li>
+</ul>

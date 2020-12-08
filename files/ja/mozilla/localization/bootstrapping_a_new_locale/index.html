@@ -1,0 +1,225 @@
+---
+title: 新しいロケールのブートストラップ
+slug: Mozilla/Localization/Bootstrapping_a_new_locale
+translation_of: Mozilla/Localization/Bootstrapping_a_new_locale
+---
+<p>(see also https://developer.mozilla.org/en/Create_a_new_localization)</p>
+
+<div class="warning">
+<p>ここの文書はもはや維持されておらず、不正確です。 L10nのドキュメントは、<a class="external external-icon" href="https://mozilla-l10n.github.io/localizer-documentation/" rel="noopener">https://mozilla-l10n.github.io/localizer-documentation/</a> に移動しました。Mozilla プロジェクトの新しいロケールをブートストラップする方法については、それらのドキュメントを参照してください。</p>
+</div>
+
+<p>In Mozilla, we use the the <a href="/en/Mercurial_basics" title="en/Mercurial basics">Mercurial</a> version control system (Hg) to help manage our localizations. When a <a class="link-https" href="https://wiki.mozilla.org/L10n:Starting_a_localization#Team_building" title="https://wiki.mozilla.org/L10n:Starting_a_localization#Team_building">localization team is registered</a> and your Hg repository is set up for a locale, you can then clone the existing Mozilla release branch (i.e. where active development of the upcoming release of Firefox occurs) and then begin the necessary work for translation.  Hg allows localizers to work locally on their machines and then "push" changes to their official Mozilla repository.</p>
+
+<h2 id="Mercurial_のインストール">Mercurial のインストール</h2>
+
+<p>Depending on your operating system, you will need to install the correct version of Hg on your machine.  <a href="/en/Installing_Mercurial" title="https://developer.mozilla.org/en/Installing_Mercurial">This document</a> will give you the basic information on how to do that.</p>
+
+<h2 id="compare-locales_ユーティリティをインストールする">compare-locales ユーティリティをインストールする</h2>
+
+<p>The next step is to install <code>compare-locales</code>.</p>
+
+<pre>$ sudo easy_install compare-locales
+</pre>
+
+<p>This will download and install the utility.</p>
+
+<h2 id="ソースコードをクローン">ソースコードをクローン</h2>
+
+<p>The next step is to <a class="internal" href="/en/Developer_Guide/Source_Code/Mercurial" rel="internal" title="en/Developer Guide/Source Code/Mercurial">download a copy of the source code</a> to your local system, using Mercurial.  You will need to "hg clone" the existing release branch for Mozilla<br>
+ so you have all the files locally for you to begin localization.  Make sure to have the directory where you intend to work as the current path on your terminal.  (You should "cd" to the directory before beginning.) </p>
+
+<p>In the terminal, type the following command:</p>
+
+<pre>$ hg clone http://hg.mozilla.org/releases/mozilla-x.x.x/</pre>
+
+<p>Where "x.x.x" is the existing release branch version.  For instance, for Firefox 3.6, we use <code>mozilla-1.9.2</code>. Refer to <a class="external" href="http://wiki.mozilla.org/L10n:Branches" title="http://wiki.mozilla.org/L10n:Branches">L10n:Branches</a> for the list of all branches.</p>
+
+<p>If you are interested in localizing Thunderbird 3, SeaMonkey 2 or other Mozilla projects based on Gecko 1.9.1 you'll need to follow the instructions on <a href="../../../../En/Developer_Guide/Source_Code/Getting_comm-central" rel="internal">getting the source-code of the comm-central repository</a>.</p>
+
+<h2 id="Create_a_bare-bones_localization">Create a bare-bones localization</h2>
+
+<p>Next, create a base localization.  This is done by cloning the en-US (United States English) files into your localization.  First, you should specify your locale's language identifier in ab-CD format, where "ab" is the <a class="external" href="http://www.w3.org/WAI/ER/IG/ert/iso639.htm" title="http://www.w3.org/WAI/ER/IG/ert/iso639.htm">ISO 639 language code</a>, and CD is the <a class="external" href="http://www.iso.org/iso/country_codes/iso_3166_code_lists/english_country_names_and_code_elements.htm" title="http://www.iso.org/iso/country_codes/iso_3166_code_lists/english_country_names_and_code_elements.htm">ISO 3166 country code</a>.  The "-CD" part is only necessary to differentiate between versions of a language that are subtly different from country to country, such as in "en-US" and "en-GB" for United States English and British English.</p>
+
+<p>Before you run the copy commands, you need to make the locale directory at the same level as the <code>mozilla-1.9.x/</code> you just cloned from above.  Navigate to that level making sure you are *not* inside <code>mozilla-1.9.x/</code> and then run the following commands.</p>
+
+<div class="warning"><strong>警告:</strong> これらのコマンドをコピー＆ペーストしないでください。"ab-CD" を最初に言語識別子に、1.9.x を最新のリリースブランチに置き換える必要があります。 例えば、Firefox 3.6 は1.9.2ブランチからリリースされています。</div>
+
+<pre><span style="color: #ff0000;">from now on may be needs some corrections, (see expected structure below $cd ab-CD/browser/chrome/browser)
+may be needs $</span>cp -R mozilla-1.9.x/browser/locales/en-US/ ab-CD <span style="color: #ff0000;">and then </span><span>$mv ab-CD/en-US  ab-CD/browser</span><span style="color: #ff0000;"> and the same for the others
+the commands seems symbolic and not real ... see also structure expected more below.
+/editor/ is in 1.9.2 ?  netwerk not error ?
+</span>
+mkdir -p ab-CD/browser/installer ab-CD/browser/profile/chrome ab-CD/browser/searchplugins ab-CD/browser/updater ab-CD/toolkit
+cp -R mozilla-1.9.x/browser/locales/en-US/ ab-CD/browser
+cp -R mozilla-1.9.x/dom/locales/en-US/ ab-CD/dom
+cp -R mozilla-1.9.x/editor/locales/en-US/ ab-CD/editor
+cp -R mozilla-1.9.x/extensions/reporter/locales/en-US/chrome ab-CD/extensions
+cp -R mozilla-1.9.x/netwerk/locales/en-US/ ab-CD/netwerk
+cp -R mozilla-1.9.x/other-licenses/branding/firefox/locales/en-US/ ab-CD/other-licenses
+cp -R mozilla-1.9.x/security/manager/locales/en-US/ ab-CD/security
+cp -R mozilla-1.9.x/toolkit/locales/en-US/ ab-CD/toolkit
+</pre>
+
+<h2 id="Getting_started">Getting started</h2>
+
+<p>Change your directory to the new working directory so you are in the <code>~/[your working directory]/[ab-CD]/</code> path and can start localizing. We'll first navigate to the directory called "browser" by running the following commands one after the other from your command line:</p>
+
+<pre>$ cd [ab-CD]/browser/chrome/browser</pre>
+
+<p>To see what is contained in "browser" type</p>
+
+<pre>$ ls</pre>
+
+<p>And, you should see the following output from your terminal:</p>
+
+<pre>aboutCertError.dtd         pageInfo.dtd aboutDialog.dtd                   pageInfo.properties aboutPrivateBrowsing.dtd    pageReportFirstTime.dtd
+aboutRobots.dtd            places aboutSessionRestore.dtd                 preferences aboutSupport.dtd                    quitDialog.properties
+baseMenuOverlay.dtd        safeMode.dtd browser.dtd                       safebrowsing browser.properties                 sanitize.dtd
+credits.dtd                search.properties engineManager.dtd            searchbar.dtd engineManager.properties          setDesktopBackground.dtd
+feeds                      shellservice.properties history                sidebar migration                               tabbrowser.dtd
+openLocation.dtd           tabbrowser.properties openLocation.properties</pre>
+
+<p>As a localizer, you are responsible for localizing each of the ".dtd" and ".properties" in *all* of the sub-directories found in your ab-CD directory.</p>
+
+<h2 id="Directories_to_localize">Directories to localize</h2>
+
+<p>If you're starting from scratch, you should have just downloaded:</p>
+
+<pre>mozilla-1.9.x/browser/locales/en-US/
+mozilla-1.9.x/dom/locales/en-US/
+mozilla-1.9.x/netwerk/locales/en-US/
+mozilla-1.9.x/other-licenses/branding/firefox/locales/en-US
+mozilla-1.9.x/security/manager/locales/en-US/
+mozilla-1.9.x/toolkit/locales/en-US/</pre>
+
+<p>And then copied them so that the files for localization end up in the following directories:</p>
+
+<pre>ab-CD/browser/
+ab-CD/dom/
+ab-CD/netwerk/
+ab-CD/other-licenses/branding/firefox/
+ab-CD/security/manager/
+ab-CD/toolkit/ </pre>
+
+<h2 id="Translating">Translating</h2>
+
+<p>To start editing, you will need a text editing application. You can choose to use:</p>
+
+<ul>
+ <li><a class="external" href="http://notepad-plus.sourceforge.net/uk/site.htm" title="http://notepad-plus.sourceforge.net/uk/site.htm">Notepad++</a> or <a class="external" href="http://www.flos-freeware.ch/notepad2.html" title="http://www.flos-freeware.ch/notepad2.html">Notepad2</a> on Windows,</li>
+ <li><a class="external" href="http://en.wikipedia.org/wiki/Vim_%28text_editor%29" title="http://en.wikipedia.org/wiki/Vim_(text_editor)">vim</a>, <a class="external" href="http://projects.gnome.org/gedit/" title="http://projects.gnome.org/gedit/">gedit</a> or <a class="external" href="http://www.kate-editor.org/kate" title="http://www.kate-editor.org/kate">Kate</a> on GNU/Linux,</li>
+ <li><a class="external" href="http://www.barebones.com/products/TextWrangler/" title="http://www.barebones.com/products/TextWrangler/">TextWrangler</a> on Mac OS X.</li>
+</ul>
+
+<p><span style="font-size: x-small;">(Read more about tools at </span><a class="link-https" href="https://wiki.mozilla.org/L10n:Tools" title="https://wiki.mozilla.org/L10n:Tools"><span style="font-size: x-small;">L10n:Tools</span></a><span style="font-size: x-small;">.)</span></p>
+
+<p>After you have downloaded your editor of choice, type the following command in the same path from above (~/ab-CD/browser/chrome/browser)</p>
+
+<pre>$ edit ab-CD/browser/chrome/browser/aboutCertError.dtd</pre>
+
+<p>Read the top of the file to get any context on how to translate contained in the notes written by the developers or l10n-drivers.  Localization notes will look like this:</p>
+
+<pre>&lt;!-- LOCALIZATION NOTES... --&gt;</pre>
+
+<p>After the localization notes, you will see a list of <code>&lt;!ENTITY&gt;</code> strings like the following:</p>
+
+<pre>&lt;!ENTITY certerror.pagetitle  "Untrusted Connection"&gt;</pre>
+
+<p>You should go through each entity, translating  the value in the parameters (e.g. <code>Untrusted Connection</code> in the example above), like so (example for Polish):</p>
+
+<pre>&lt;!ENTITY certerror.pagetitle  "Niezaufane połączenie"&gt;</pre>
+
+<p>Once you have translated all the <code>&lt;!ENTITY&gt;</code> strings in this file, you should save your work and open the next .dtd or .property file.  You will need to go through each and every file to in every directory in ab-CD.</p>
+
+<h2 id="Recommended_order_of_localization">Recommended order of localization</h2>
+
+<p>For recommended order of localization, refer to the localization "phase list" which provides a very rough guide on where to start and in what order to proceed through translation.</p>
+
+<ul>
+ <li><a class="external" href="http://zaf.svn.sourceforge.net/viewvc/zaf/trunk/po/fftb/" title="http://zaf.svn.sourceforge.net/viewvc/zaf/trunk/po/fftb/">The localization phase lists</a> (Firefox 3.5: <a class="external" href="http://zaf.svn.sourceforge.net/viewvc/zaf/trunk/po/fftb/ff35.phaselist?view=markup" title="http://zaf.svn.sourceforge.net/viewvc/zaf/trunk/po/fftb/ff35.phaselist?view=markup">ff35.phaselist</a>, Firefox 3.6: <a class="external" href="http://zaf.svn.sourceforge.net/viewvc/zaf/trunk/po/fftb/ff36.phaselist?view=markup" title="http://zaf.svn.sourceforge.net/viewvc/zaf/trunk/po/fftb/ff36.phaselist?view=markup">ff36.phaselist</a>).</li>
+ <li><a class="external" href="http://zaf.svn.sourceforge.net/viewvc/zaf/trunk/po/fftb/phases?view=markup" title="http://zaf.svn.sourceforge.net/viewvc/zaf/trunk/po/fftb/phases?view=markup">Description of phases.</a></li>
+</ul>
+
+<p>Land your translated files one by one, making sure it follows the *mozilla-1.9.2* structure.  This will familiarize you with our "Hg"<br>
+ commands and will get us something that we can import easily when you are done.</p>
+
+<h2 id="Working_with_Bit_Bucket">Working with Bit Bucket</h2>
+
+<p>Before a team becomes official, we like to get the localizers comfortable with the Hg commands that allow for cloning, pulling, committing, and pushing work to an experimental repository.  We use a web service called <a class="external" href="http://www.bitbucket.org" title="http://www.bitbucket.org/">Bit Bucket</a> to start the learning process.</p>
+
+<p>To begin, contact the l10n-drivers to let them know that you are interested in starting a localization.  The l10n-drivers will help set up an experimental Hg repository in Bit Bucket. You will need to create an account so you can access the service.  Once you have that account, send the l10n-drivers the details to be added as a "writer".  With that level of authority, you will be able to push and pull and manage the repository remotely.  It will be just like working on Hg with Mozilla, yet you will use the Bit Bucket platform to start.</p>
+
+<p>After your new Bit Bucket repository is created by the l10n-drivers, please visit the URL for your repo.  You can do this by entering the following URL into your browser:</p>
+
+<pre>$  https://bitbucket.org/mozillal10n/ab-CD/overview/</pre>
+
+<p>(where ab-CD will be replaced by your locale code)</p>
+
+<p>At that main page of your newly created Bit Bucket repo, you'll see the Hg commands,</p>
+
+<pre style="margin-left: 40px;">$ hg clone http://bitbucket.org/mozillal10n/ab-CD/ ...
+$ hg pull -u # to pull changes and update
+$ hg push # to push changes to this repo
+</pre>
+
+<p style="margin-left: 40px;"><em>Import existing data?</em></p>
+
+<pre style="margin-left: 40px;">$ cd /path/to/existing/hg/repo/
+$ hg push http://bitbucket.org/mozillal10n/ab-CD/</pre>
+
+<p style="margin-left: 40px;"><em>Prefer SSH?</em></p>
+
+<pre style="margin-left: 40px;">$ hg clone ssh://hg@bitbucket.org/mozillal10n/ab-CD/
+$ hg push ssh://hg@bitbucket.org/mozillal10n/ab-CD/</pre>
+
+<p>As you begin to move through your translations, you should "commit" the changes locally and "push" your work to this experimental respository.  For instance, if you have finished translating all the .dtd and .property files in your ~/ab-CD/browser/ directory, then you should</p>
+
+<pre style="margin-left: 40px;">$ cd ~/ab-CD/
+$ hg status
+$ hg commit -m "Translated browser/"
+$ hg push http://bitbucket.org/mozillal10n/ab-CD/
+</pre>
+
+<p>Note that due to the distributed nature of Hg, <code>hg commit</code> saves the changes locally, i.e. in the Hg repository on your computer. You can see the history of commits with <code>hg log</code>. After doing <code>hg commit</code>, you still need to send the changes to BitBucket. This is why you need to do <code>hg push</code>, which sends the already made commits to the remote repository (<code><a class="external" href="http://bitbucket.org/mozillal10n/ab-CD/" rel="freelink">http://bitbucket.org/mozillal10n/ab-CD/</a></code> in the example above).</p>
+
+<p>After you have committed and pushed your initial translation, email the l10n-drivers team to let us know it's ready.</p>
+
+<h2 id="Set_up_for_building">Set up for building</h2>
+
+<p>The next step is to create a <code>.mozconfig</code> file with the compile options for the localized build of Firefox, and to set up the object directory for the localized build.</p>
+
+<pre>cd mozilla-1.9.1
+echo "mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/../fx-ab-DC" &gt; .mozconfig
+echo "ac_add_options --with-l10n-base=../" &gt;&gt; .mozconfig
+echo "ac_add_options --disable-compile-environment" &gt;&gt; .mozconfig
+echo "ac_add_options --enable-application=browser" &gt;&gt; .mozconfig
+make -f client.mk configure
+</pre>
+
+<h3 id="Create_a_language_pack" name="Create_a_language_pack">Create a language pack</h3>
+
+<p>First, we'll create a build directory. This sounds worse than it is, you won't need to actually build, but we'll need to setup something that looks like it. You're still in the <code>l10n</code> directory, right? We'll create <code>build</code> right next to it. The name of that directory doesn't really matter, so no reason to change it.</p>
+
+<pre class="eval">mkdir ../build
+cd ../build
+</pre>
+
+<p>Now we'll set up a not-so-compile environment by calling configure. If you just checked out the localizable parts of en-US above, it will create a plethora of warnings <code>No such file or directory</code>, but no errors.</p>
+
+<pre class="eval">../mozilla/configure --disable-compile-environment --enable-application=browser
+</pre>
+
+<p>Whenever you need a build directory, these are the steps that you need to do to initialize it. If you're downloading a new release of Firefox from CVS, you might want to run configure again, too.</p>
+
+<p>Now we can actually create the language pack,</p>
+
+<pre class="eval">make -C browser/locales langpack-en-X-dude
+</pre>
+
+<p>You should find your newly created language pack in <code>dist/install</code>.</p>
+
+<pre class="eval">ls dist/install
+</pre>
+
+<p>You can open that file in Firefox and check it out. You have to set your selected language still. You can either use the <a class="link-https" href="https://addons.mozilla.org/de/firefox/addon/356">Locale Switcher</a> extension, or set it in <code>about:config</code>. Set the <code>general.useragent.locale</code> to your language code, in this case, <code>en-X-dude</code>, and restart Firefox once more.</p>

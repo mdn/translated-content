@@ -1,0 +1,80 @@
+---
+title: SettingsLock.set()
+slug: Archive/B2G_OS/API/SettingsLock/set
+translation_of: Archive/B2G_OS/API/SettingsLock/set
+---
+<section class="Quick_links" id="Quick_Links">
+<ol>
+ <li><strong><a href="/en-US/docs/Mozilla/Firefox_OS/API/Settings_API">Settings API</a></strong></li>
+ <li><strong><a href="/en-US/docs/Mozilla/Firefox_OS/API/Archive"><code>Archive</code></a></strong></li>
+ <li data-default-state="open"><a href="#"><strong>Events</strong></a>
+  <ol>
+   <li><a href="/en-US/docs/Web/Events/settingchange"><code>settingchange</code></a></li>
+  </ol>
+ </li>
+ <li data-default-state="open"><a href="#"><strong>Related pages for Settings API</strong></a>
+  <ol>
+   <li><a href="/en-US/docs/Mozilla/Firefox_OS/API/MozSettingsEvent"><code>MozSettingsEvent</code></a></li>
+   <li><a href="/en-US/docs/Mozilla/Firefox_OS/API/SettingsLock"><code>SettingsLock</code></a></li>
+   <li><a href="/en-US/docs/Mozilla/Firefox_OS/API/SettingsManager"><code>SettingsManager</code></a></li>
+  </ol>
+ </li>
+</ol>
+</section>
+
+
+
+
+
+<div class="warning">
+<p style="text-align: center;">此API在 <a href="/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a> 上仅可供 <a href="/en-US/docs/Mozilla/Firefox_OS/Security/Application_security#App_Types">内部程序 </a> 使用.</p>
+</div>
+
+
+
+<h2 id="摘要">摘要</h2>
+
+<p>这个方法用来更改一或多个已提供的设置的值。</p>
+
+<p>此方法是异步的，返回一个 <a href="/en-US/docs/Web/API/DOMRequest" title="The documentation about this has not yet been written; please consider contributing!"><code>DOMRequest</code></a> 对象，用于检测更改何时完成（或是否发生错误），并在更改完成后根据需要执行操作。</p>
+
+<h2 id="语法">语法</h2>
+
+<pre>SettingsLock.set(settings);</pre>
+
+<h3 id="参数">参数</h3>
+
+<dl>
+ <dt><code>settings</code></dt>
+ <dd>一个包含了一组键值对的对象，其中每个键表示给定的设置的字符串名称。可能的字符串的确切列表取决于设备。每个Gaia构建可以有自己的设置列表，有关这些字符串的最新列表，请查看 <a class="external" href="https://github.com/mozilla-b2g/gaia/blob/master/build/settings.py" rel="external" title="https://github.com/mozilla-b2g/gaia/blob/master/build/settings.py">the Gaia source code</a>.</dd>
+</dl>
+
+<h2 id="示例">示例</h2>
+
+<p>这个示例用来打开设备的WIFI。</p>
+
+<pre class="brush: js">var lock = navigator.mozSettings.createLock();
+var result = lock.set({
+  'wifi.enabled': true
+});
+
+result.onsuccess = function () {
+  console.log("The setting has been changed");
+}
+
+result.onerror = function () {
+  console.log("An error occure, the setting remain unchanged");
+}
+</pre>
+
+<h2 id="Specification" name="Specification">规范</h2>
+
+<p>这目前还不是任何规范的一部分; 然而, 此 API 将会作为 <a class="external" href="http://www.w3.org/2012/sysapps/" rel="external" title="http://www.w3.org/2012/sysapps/">System Applications Working Group</a> 的一部分参与W3C的讨论。</p>
+
+<h2 id="其他">其他</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/SettingsManager" title="The documentation about this has not yet been written; please consider contributing!"><code>SettingsManager</code></a></li>
+ <li><a href="/en-US/docs/Web/API/SettingsLock" title="The documentation about this has not yet been written; please consider contributing!"><code>SettingsLock</code></a></li>
+ <li><a href="/en-US/docs/WebAPI/Settings" title="/en-US/docs/WebAPI/Settings">Settings API</a></li>
+</ul>

@@ -1,0 +1,231 @@
+---
+title: datepicker
+slug: Archive/Mozilla/XUL/datepicker
+tags:
+  - Éléments_XUL
+translation_of: Archive/Mozilla/XUL/datepicker
+---
+<div class="noinclude"><span class="breadcrumbs XULRef_breadcrumbs">
+ « <a href="/fr/docs/Référence_XUL">Accueil de la référence XUL</a>    [
+ <a href="#Exemples">Exemples</a> |
+ <a href="#Attributs">Attributs</a> |
+ <a href="#Propri.C3.A9t.C3.A9s">Propriétés</a> |
+ <a href="#M.C3.A9thodes">Méthodes</a> |
+ <a href="#Sujets_li.C3.A9s">Sujets liés</a> ]
+</span></div> <p>Un élément <code>datepicker</code> permet à l'utilisateur d'entrer une date. Trois types sont disponibles, ce qui peut être spécifié à l'aide de l'attribut <code>type</code>.
+</p>
+<ul><li> normal — un sélecteur de date avec trois champs pour entrée l'année, le mois et le jour.
+</li><li> grid — un sélecteur de date avec une grille de calendrier pour choisir une date.
+</li><li> popup — un sélecteur de date normal avec trois champs, mais avec un bouton déroulant supplémentaire pour afficher une grille dans un popup.
+</li></ul>
+<p>Plusieurs manières de définir le jour sélectionné existent. En XUL, l'attribut <code>value</code> peut être défini à une valeur de la forme AAAA/MM/JJ pour initialiser le sélecteur de date à une certaine date. S'il n'est pas spécifié, il affichera par défaut le jour actuel.
+</p><p>Pour changer la date sélectionnée, la propriété <code>value</code> peut être utilisée pour définir une nouvelle valeur de la forme AAAA/MM/JJ. La propriété <code>dateValue</code> peut être utilisée pour obtenir et définir la date à l'aide d'un objet <a href="fr/R%c3%a9f%c3%a9rence_de_JavaScript_1.5_Core/Objets_globaux/Date"><code>Date</code></a>. En outre, les propriétés <code>date</code>, <code>month</code> et <code>year</code> peuvent être utilisées pour obtenir et modifier chaque composant de la date séparément.
+</p>
+<dl><dt> Attributs
+</dt><dd> <a href="#a-disabled">disabled</a>, <a href="#a-firstdayofweek">firstdayofweek</a>, <a href="#a-readonly">readonly</a>, <a href="#a-type">type</a>, <a href="#a-tabindex">tabindex</a>, <a href="#a-value">value</a>
+</dd></dl>
+<dl><dt> Propriétés
+</dt><dd> <a href="#p-date">date</a>, <a href="#p-dateLeadingZero">dateLeadingZero</a>, <a href="#p-dateValue">dateValue</a>, <a href="#p-disabled">disabled</a>, <a href="#p-month">month</a>, <a href="#p-monthLeadingZero">monthLeadingZero</a>, <a href="#p-open">open</a>, <a href="#p-readOnly">readOnly</a>, <a href="#p-tabIndex">tabIndex</a>, <a href="#p-value">value</a>, <a href="#p-year">year</a>, <a href="#p-yearLeadingZero">yearLeadingZero</a>
+</dd></dl>
+<h3 id="Exemples" name="Exemples"> Exemples </h3>
+<p><img alt="Image:Controlsguide-datepicker-grid.png">
+</p>
+<pre>&lt;datepicker type="grid" value="2007/03/26"/&gt;
+</pre>
+<h3 id="Attributs" name="Attributs"> Attributs </h3>
+<p>
+</p><div id="a-disabled">
+
+<dl><dt> <code id="a-disabled"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/disabled">disabled</a></code>
+</dt><dd> Type : <i>booléen</i>
+</dd><dd> Indique si l'élément est ou non désactivé. Si cette valeur est définie à <code>true</code>, l'élément est désactivé. Les éléments désactivés sont habituellement affichés avec leur texte grisé. Si l'élément est désactivé, il ne répond pas aux actions de l'utilisateur, il ne peut pas recevoir le focus, et l'évènement <code>command</code> ne se déclenchera pas. </dd></dl>
+<p><br>
+</p>
+<div class="float-right"><img alt="Image:XUL_ref_attr_disabled.png"></div>
+<pre>&lt;!-- La case à cocher active/désactive le bouton --&gt;
+&lt;checkbox label="Enable button"
+    onclick="document.getElementById('buttRemove').disabled = this.checked"/&gt;
+&lt;button id="buttRemove" label="Remove All" disabled="true"/&gt;
+</pre>
+</div>
+<div id="a-firstdayofweek">
+
+<dl><dt> <code id="a-firstdayofweek"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/firstdayofweek">firstdayofweek</a></code>
+</dt><dd> Type : <i>entier</i>
+</dd><dd> Indique le jour de la semaine à afficher comme premier jour dans la grille. Les valeurs vont de 0 à 6, où 0 est dimanche et 6 est samedi. La valeur par défaut est déterminée par la locale, n'utilisez donc cet attribut que si vous désirez l'écraser.
+</dd></dl>
+<p><br>
+</p>
+
+
+</div>
+<div id="a-readonly">
+
+<dl><dt> <code id="a-readonly"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/readonly">readonly</a></code>
+</dt><dd> Type : <i>booléen</i>
+</dd><dd> Si défini à <code>true</code>, l'utilisateur ne peut pas modifier la valeur de l'élément. Cependant, celle-ci peut toujours être modifiée par un script.
+</dd></dl>
+
+
+</div>
+<div id="a-tabindex">
+
+<dl><dt> <code id="a-tabindex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/tabindex">tabindex</a></code>
+</dt><dd> Type : <i>entier</i>
+</dd><dd> L'ordre de tabulation de l'élément. L'ordre de tabulation est l'ordre dans lequel le focus se déplace lorsque l'utilisateur appuie sur la touche « tab ». Les éléments dont le <code>tabindex</code> est plus haut se trouvent plus tard dans la séquence de tabulation.
+</dd></dl>
+
+
+</div>
+<div id="a-datepicker.type">
+
+<dl>
+  <dt>
+    <a href="fr/XUL/Attributs/datepicker.type">type</a></dt>
+  <dd>
+    Type : <i>une des valeurs suivantes</i></dd>
+  <dd>
+    L'attribut <code>type</code> peut avoir l'une des valeurs ci-dessous afin de spécifier le type de sélecteur de date à utiliser :</dd>
+</dl>
+<ul>
+  <li><code>normal</code> : Un sélecteur de date avec trois champs pour entrer l'année, le mois et le jour. C'est la valeur par défaut, il ne faut donc pas spécifier l'attribut <code>type</code> si c'est le genre désiré.</li>
+  <li><code>grid</code> : Un sélecteur de date qui affiche une grille de calendrier où un mois est affiché à la fois.</li>
+  <li><code>popup</code> : Un sélecteur de date avec trois champs d'entrée mais un bouton déroulant supplémentaire qui, lorsqu'on clique dessus, affichera une grille de calendrier.</li>
+</ul>
+
+<p> </p>
+</div>
+<div id="a-datepicker.value">
+
+<dl>
+  <dt>
+    <code id="a-value"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/value">value</a></code></dt>
+  <dd>
+    Type : <i>chaîne</i></dd>
+  <dd>
+    La valeur initiale du sélecteur de date sous la forme <var>AAAA/MM/JJ</var>.</dd>
+</dl>
+</div>
+
+<h3 id="Propri.C3.A9t.C3.A9s" name="Propri.C3.A9t.C3.A9s"> Propriétés </h3>
+<p>
+</p><div id="p-date">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propri%C3%A9t%C3%A9s/date">date</a></span></code></dt>
+  <dd>
+    Type : <i>entier</i></dd>
+  <dd>
+    Le jour du mois actuellement sélectionné, entre 1 et 31. Modifiez cette propriété pour changer la date sélectionnée.</dd>
+</dl></div>
+<div id="p-dateLeadingZero">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propri%C3%A9t%C3%A9s/dateLeadingZero">dateLeadingZero</a></span></code></dt>
+  <dd>
+    Type : <i>booléen</i></dd>
+  <dd>
+    Une valeur en lecture seule indiquant si un zéro doit être affiché avant la date lorsqu'elle est inférieure à 10.</dd>
+</dl></div>
+<div id="p-dateValue">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propri%C3%A9t%C3%A9s/dateValue">dateValue</a></span></code></dt>
+  <dd>
+    Type : <i>Date</i></dd>
+  <dd>
+    La date actuellement entrée ou sélectionnée dans le sélecteur de date sous la forme d'un objet <code>Date</code>.</dd>
+</dl></div>
+<div id="p-disabled">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propri%C3%A9t%C3%A9s/disabled">disabled</a></span></code>
+</dt><dd> Type : <i>booléen</i>
+</dd><dd> Obtient et définit la valeur de l'attribut <code id="a-disabled"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/disabled">disabled</a></code>.
+</dd></dl>
+
+</div>
+<div id="p-month">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propri%C3%A9t%C3%A9s/month">month</a></span></code></dt>
+  <dd>
+    Type : <i>entier</i></dd>
+  <dd>
+    Le mois actuellement sélectionné entre 0 (janvier) et 11 (décembre). Définissez cette propriété pour changer le mois sélectionné.</dd>
+</dl></div>
+<div id="p-monthLeadingZero">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propri%C3%A9t%C3%A9s/monthLeadingZero">monthLeadingZero</a></span></code></dt>
+  <dd>
+    Type : <i>booléen</i></dd>
+  <dd>
+    Une valeur en lecture seule indiquant si un zéro doit être affiché devant le mois s'il est inférieur à 10.</dd>
+</dl></div>
+<div id="p-datepicker.open">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propri%C3%A9t%C3%A9s/open">open</a></span></code></dt>
+  <dd>
+    Type : <i>booléen</i></dd>
+  <dd>
+    Pour les sélecteurs de date de type popup, spécifie si celui-ci est ouvert. Définissez cette propriété pour ouvrir ou fermer le popup. Pour les autres types de sélecteurs de date, cette propriété est toujours à <code>false</code>.</dd>
+</dl></div>
+<div id="p-readOnly">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propri%C3%A9t%C3%A9s/readonly">readonly</a></span></code></dt>
+  <dd>
+    Type : <i>booléen</i></dd>
+  <dd>
+    Si définie à <code>true</code>, l'utilisateur ne peut pas modifier la valeur de l'élément.</dd>
+  <dd>
+    <div class="note">
+      Cette propriété toute en minuscules n'est utilisée qu'avec l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/preference" title="preference">preference</a></code> et sera peut-être renommée en <code>readOnly</code> dans des versions ultérieures. D'autres éléments utilisent la propriété <code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propri%C3%A9t%C3%A9s/readOnly">readOnly</a></span></code>. L'attribut correspondant est cependant <code id="a-readonly"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/readonly">readonly</a></code> en minuscules.</div>
+  </dd>
+</dl></div>
+<div id="p-tabIndex">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propri%C3%A9t%C3%A9s/tabIndex">tabIndex</a></span></code>
+</dt><dd> Type : <i>entier</i>
+</dd><dd> Obtient et définit la valeur de l'attribut <code id="a-tabindex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/tabindex">tabindex</a></code>.
+</dd></dl>
+
+</div>
+<div id="p-datepicker.value">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propri%C3%A9t%C3%A9s/value">value</a></span></code></dt>
+  <dd>
+    Type : <i>chaîne</i></dd>
+  <dd>
+    La date actuellement sélectionnée au format AAAA/MM/JJ. Contrairement à la propriété <code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propri%C3%A9t%C3%A9s/month">month</a></span></code>, les mois varient ici dans l'intervalle 01 à 12. Définissez cette propriété pour changer la date sélectionnée.</dd>
+</dl></div>
+<div id="p-year">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propri%C3%A9t%C3%A9s/year">year</a></span></code></dt>
+  <dd>
+    Type : <i>entier</i></dd>
+  <dd>
+    L'année actuellement sélectionnée entre 1 et 9999. Définissez cette propriété pour changer la date sélectionnée.</dd>
+</dl></div>
+<div id="p-yearLeadingZero">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propri%C3%A9t%C3%A9s/yearLeadingZero">yearLeadingZero</a></span></code></dt>
+  <dd>
+    Type : <i>booléen</i></dd>
+  <dd>
+    Une valeur en lecture seule indiquant si un zéro doit être affiché devant l'année si elle est inférieure à 1000.</dd>
+</dl></div>
+
+<h3 id="M.C3.A9thodes" name="M.C3.A9thodes"> Méthodes </h3>
+<p><span class="lang lang-fr" lang="fr">
+</span></p><table style="border: 1px solid rgb(204, 204, 204); margin: 0px 0px 10px 10px; padding: 0px 10px; background: rgb(238, 238, 238) none repeat scroll 0% 50%;"> <tbody> <tr> <td> <p><strong>Héritées de XUL element</strong><br> <small> <span id="m-blur"><code><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Méthodes/blur">blur</a></code></span>, <span id="m-click"><code><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Méthodes/click">click</a></code></span>, <span id="m-doCommand"><code><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Méthodes/doCommand">doCommand</a></code></span>, <span id="m-focus"><code><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Méthodes/focus">focus</a></code></span>, <span id="m-getElementsByAttribute"><code><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Méthodes/getElementsByAttribute">getElementsByAttribute</a></code></span></small></p> <p><strong>Héritées de DOM element</strong><br> <small> <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.addEventListener">addEventListener()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.appendChild">appendChild()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.dispatchEvent">dispatchEvent()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.getAttribute">getAttribute()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.getAttributeNode">getAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.getAttributeNodeNS">getAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.getAttributeNS">getAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.getElementsByTagName">getElementsByTagName()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.getElementsByTagNameNS">getElementsByTagNameNS()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.hasAttribute">hasAttribute()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.hasAttributeNS">hasAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.hasAttributes">hasAttributes()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.hasChildNodes">hasChildNodes()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.insertBefore">insertBefore()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.isSupported">isSupported()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.normalize">normalize()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.removeAttribute">removeAttribute()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.removeAttributeNode">removeAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.removeAttributeNS">removeAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.removeChild">removeChild()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.removeEventListener">removeEventListener()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.replaceChild">replaceChild()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.setAttribute">setAttribute()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.setAttributeNode">setAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.setAttributeNodeNS">setAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.setAttributeNS">setAttributeNS()</a></code></small></p> </td> </tr> </tbody>
+</table>
+
+<h3 id="Sujets_li.C3.A9s" name="Sujets_li.C3.A9s"> Sujets liés </h3>
+<dl><dt> Interfaces
+</dt><dd> <a href="fr/NsIDOMXULControlElement">nsIDOMXULControlElement</a>
+</dd></dl>
+<div class="noinclude">
+</div>

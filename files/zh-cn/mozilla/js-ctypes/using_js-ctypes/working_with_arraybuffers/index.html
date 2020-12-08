@@ -1,0 +1,212 @@
+---
+title: Working with ArrayBuffers
+slug: Mozilla/js-ctypes/Using_js-ctypes/Working_with_ArrayBuffers
+translation_of: Mozilla/js-ctypes/Using_js-ctypes/Working_with_ArrayBuffers
+---
+<section class="Quick_links" id="Quick_Links">
+<ol>
+ <li><a href="/en-US/docs/Mozilla/js-ctypes"><strong><em>js-ctypes</em></strong></a></li>
+ <li class="toggle">
+  <details open><summary>Introduction</summary>
+  <ol>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/Debugging_Tips" title="Editorial review completed.">Debugging Tips</a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/Declaring_and_calling_functions" title="Functions are declared using the Library object's declare() method. Once declared, functions can be called using standard function syntax.">Declaring and Calling Functions</a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/Declaring_and_Using_Callbacks" title="C functions occasionally take function pointers as arguments, which are generally used as callbacks. In these cases, js-ctypes allows you to pass a regular JavaScript function as the callback. This is very powerful, since it allows native code to transparently call into JavaScript.">Declaring and Using Callbacks</a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/Declaring_types" title="The ctypes object offers a number of constructor methods that let you declare types. Every type is represented by a CType object, which, in turn, provides a constructor method you can call to define values of those types. Each type you declare using js-ctypes corresponds to a compatible C declaration.">Declaring types</a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/Memory_Management" title="If JS code creates a structure or an array, that memory will be valid as long as the JS object stays alive. Pointers to that memory must be carefully managed to make sure the underlying memory is still referenced.">Memory Management</a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/Standard_OS_Libraries" title="This article gives the names of standard libraries that can be accessed with js-ctypes. These libraries are what enable js-ctypes to work. The alternative to standard libraries is creating your own DLL (for Windows) or SO (for Linux) file with C functions that can be called from your add-on with js-ctypes. The DLL/SO/etc file you make must be shipped with your add-on. Standard libraries offer the advantage of not having to ship anything. They are already available on the operating system for you. You just need to supply the path to appropriate files and set up the proper types of values/arguments in the js-ctypes code. This article allows you to find out what types to give to values/arguments by supplying links to the documentation of the OS libraries.">Standard OS Libraries</a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/Type_conversion" title="In js-ctypes, data could be converted implicitly when passing to or returning from a FunctionType call, or setting pointer content, an array element or a struct field.">Type conversion</a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/Working_with_ArrayBuffers" title="An ArrayBuffer is a simply byte array. The js-ctypes equivalent is a ctypes.uint8_t.array(###) (ctypes.unsigned_char are also ctypes.uint8_t).">Working with ArrayBuffers</a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/Working_with_data" title="Data types for use with js-ctypes are represented by CType objects. These are JavaScript constructors; as such, they're callable functions that you can use to create new CData objects of that type. There are several ways you can go about creating new CData objects.">Working with data</a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/ctypes.open" title="At the heart of js-ctypes is the ctypes.open() function. This must be called before any work can commence. There are two options:">ctypes.open</a></li>
+  </ol>
+  </details>
+ </li>
+ <li class="toggle">
+  <details><summary>References</summary>
+  <ol>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/ABI" title="This article describes the calling conventions with respect to js-ctypes while programming x86 and x86-64/x64/AMD64 architectures. A calling convention is an implementation-level (low-level) scheme regarding how subroutines receive parameters from their caller and how they revert."><code>ABI</code></a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/ArrayType" title="ArrayType represents C arrays"><code>ArrayType</code></a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/CData" title="A CData object represents a C value or function located in memory."><code>CData</code></a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/CType" title="All data types declared using the js-ctypes API are represented by CType objects. These objects have assorted methods and properties that let you create objects of these types, find out information about them, and so forth. The specific properties and methods on each object vary depending on the data type represented."><code>CType</code></a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/FunctionType" title=""><code>FunctionType</code></a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/Int64" title="Because JavaScript doesn't currently include standard support for 64-bit integer values, js-ctypes offers the Int64 and UInt64 objects to let you work with C functions and data that need (or may need) values represented using a 64-bit data type."><code>Int64</code></a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/Library" title="The Library object represents a native library loaded by the ctypes open() method. Its methods let you declare symbols exported by the library, and to manage the library."><code>Library</code></a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/PointerType" title="Returns a new CType object describing a new pointer data type."><code>PointerType</code></a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/StructType" title="Returns a CType object describing a new structure data type. This data type provides the ability to define and manipulate values of the C struct type."><code>StructType</code></a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/UInt64" title="As JavaScript doesn't currently include standard support for 64-bit integer values, js-ctypes offers the Int64 and UInt64 objects to let you work with C functions and data that need (or may need) to use data represented using a 64-bit data type."><code>UInt64</code></a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/js-ctypes_reference/ctypes" title="The ctypes object contains methods and predefined data types used to create and manage a library."><code>ctypes</code></a></li>
+  </ol>
+  </details>
+ </li>
+ <li class="toggle">
+  <details><summary>Examples</summary>
+  <ol>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/Examples/Add_to_iPhoto" title="This extension for Mac OS X serves as a demonstration of how to use js-ctypes to call Mac OS X Carbon, Core Foundation, and other system frameworks from an extension written entirely in JavaScript.">Add to iPhoto</a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/Examples/Using_C_structs_and_pointers" title="In this example, we show how to use C structs and pointers with js-ctypes.">Using C struct and pointers</a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/Examples/Using_COM_from_js-ctypes" title="The Windows API mostly concerns itself with the interaction between the operating system and an application. For communication between the different Windows applications among themselves, Microsoft has developed a series of technologies alongside the main Windows API. This started out with Dynamic Data Exchange (DDE), which was superseded by Object Linking and Embedding (OLE) and later by the Component Object Model (COM), Automation Objects, ActiveX controls, and the .NET Framework.">Using COM from js-ctypes</a></li>
+   <li><a href="/en-US/docs/Mozilla/js-ctypes/Examples/Using_Objective-C_from_js-ctypes" title="Objective-C has its own syntax, it cannot be written directly with js-ctypes. This guide explains how to convert Objective-C code into js-ctypes code.">Using Objective-C from js-ctypes</a></li>
+  </ol>
+  </details>
+ </li>
+</ol>
+</section>
+
+<h2 id="导读">导读</h2>
+
+<p>类型转换页的指针类型部分解释了此操作的基本原理。第二个代码示例提供了操作的具体说明。</p>
+
+<p class="summary"><span class="seoSummary"><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer" title="The ArrayBuffer object is used to represent a generic, fixed-length raw binary data buffer. You cannot directly manipulate the contents of an ArrayBuffer; instead, you create one of the typed array objects or a DataView object which represents the buffer in a specific format, and use that to read and write the contents of the buffer."><code>ArrayBuffer</code></a> 是简单的字节数组 ，这种js 类型 等同于 <code>ctypes.uint8_t.array(###)</code> (<code>ctypes.unsigned_char</code> are also <code>ctypes.uint8_t</code>).</span></p>
+
+<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=732936" title="FIXED: Feeding ArrayBuffer to js-ctypes">bug 732936</a> 包括使用ArrayBuffer的讨论.</p>
+
+<p>This feature is based on the following work:</p>
+
+<p><a href="https://dxr.mozilla.org/mozilla-central/source/js/src/ctypes/CTypes.cpp#3080" title="https://dxr.mozilla.org/mozilla-central/source/js/src/ctypes/CTypes.cpp#3080 (new window)">https://dxr.mozilla.org/mozilla-central/source/js/src/ctypes/CTypes.cpp#3080</a></p>
+
+<p><a href="https://dxr.mozilla.org/mozilla-central/source/js/src/vm/ArrayBufferObject.cpp#1301" title="https://dxr.mozilla.org/mozilla-central/source/js/src/vm/ArrayBufferObject.cpp#1301 (new window)">https://dxr.mozilla.org/mozilla-central/source/js/src/vm/ArrayBufferObject.cpp#1301</a></p>
+
+<h3 id="Example_1_-_Image_Data">Example 1 - Image Data</h3>
+
+<p>The following example illustrates how to transfer a byte array pointed by <code>ctypes.uint8_t.ptr</code> to <a href="/en-US/docs/Web/API/ImageData" title="The ImageData interface represents the underlying pixel data of an area of a &lt;canvas> element. It is created using the ImageData() constructor or creator methods on the CanvasRenderingContext2D object associated with a canvas: createImageData() and getImageData(). It can also be used to set a part of the canvas by using putImageData()."><code>ImageData</code></a> of canvas. This example is based on the fact that the ImageData returned from <a href="/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData" title="The CanvasRenderingContext2D method getImageData() of the Canvas 2D API returns an ImageData object representing the underlying pixel data for a specified portion of the canvas."><code>CanvasRenderingContext2D.getImageData</code></a> is a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray" title="The Uint8ClampedArray typed array represents an array of 8-bit unsigned integers clamped to 0-255; if you specified a value that is out of the range of [0,255], 0 or 255 will be set instead; if you specify a non-integer, the nearest integer will be set. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation)."><code>Uint8ClampedArray</code></a> view for an <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer" title="The ArrayBuffer object is used to represent a generic, fixed-length raw binary data buffer. You cannot directly manipulate the contents of an ArrayBuffer; instead, you create one of the typed array objects or a DataView object which represents the buffer in a specific format, and use that to read and write the contents of the buffer."><code>ArrayBuffer</code></a>.</p>
+
+<p>The following codeblock provides a basic example of getting and setting <code>Uint8ClampedArray</code> and <code>ArrayBuffer</code> of <code>ImageData:</code></p>
+
+<pre>// context is a CanvasRenderingContext2D of some canvas
+var imageData = context.getImageData(x, y, w, h);
+var array = imageData.data; // array is a Uint8ClampedArray
+var buffer = imageData.data.buffer; // buffer is a ArrayBuffer
+
+// incomingBuffer is a TypedArray
+var imageData2 = context.createImageData(w, h);
+imageData2.data.set(incomingBuffer);
+</pre>
+
+<p>Further, if you have a byte array <code>pixelBuffer</code>, and you need to create <code>ImageData</code> from it. The <code>data</code> property holds an array of bytes.</p>
+
+<p>We start with the following:</p>
+
+<pre>// pixelBuffer is a pointer to a RGBA pixel buffer of 400x400 image.
+pixelBuffer.toString(); // "ctypes.uint8_t.ptr(ctypes.UInt64("0x352e0000"))"
+
+var imgWidth = 400;
+var imgHeight = 400;
+var myImgDat = new ImageData(imgWidth, imgHeight);
+</pre>
+
+<h4 id="Method_1_Passing_ArrayType_CData_to_Uint8ClampedArray.prototype.set">Method 1: Passing ArrayType CData to Uint8ClampedArray.prototype.set</h4>
+
+<p>One method is to get into a js-ctypes array, and then set it into the <code>ImageData</code>, as illustrated by the following code example.</p>
+
+<pre class="brush: js">// Cast pointer to array, to pass to Uint8ClampedArray.prototype.set.
+var casted = ctypes.cast(pixelBuffer.address(), ctypes.uint8_t.array(myImgData.data.length).ptr).contents; // myImgDat.data.length is imgWidth * imgHeight * 4 because per pixel there is r, g, b, a numbers
+casted.toString(); // "ctypes.uint8_t.array(640000)([45, 66, 135, 255, 99, 86, 55, 255, .......... ])"
+myImgDat.data.set(casted);
+</pre>
+
+<p>The <code>ctypes.cast</code> takes a couple of milliseconds, however, the <code>myImgDat.data.set</code> takes up to 800ms for a size of 52,428,800 (which is image size of 1280 x 1024 pixels). So, for the size of 640,000 it takes about 98ms.</p>
+
+<h4 id="Method_2_Manually_Handled">Method 2: Manually Handled</h4>
+
+<p>Another strategy is to handle it manually, as illustrated by the following code example:</p>
+
+<pre class="brush: js">var casted = ctypes.cast(pixelBuffer.address(), ctypes.uint8_t.array(myImgData.data.length).ptr).contents; // myImgDat.data.length is imgWidth * imgHeight *4 because per pixel there is r, g, b, a numbers
+
+/** METHOD A **/
+for (var nIndex = 0; nIndex &lt; casted.length; nIndex = nIndex + 4) { // casted.length is same as myImgDat.data.length
+    var r = casted[nIndex];
+    var g = casted[nIndex + 1];
+    var b = casted[nIndex + 2];
+    var a = casted[nIndex + 3];
+
+    myImgDat.data[nIndex] = r;
+    myImgDat.data[nIndex + 1] = g;
+    myImgDat.data[nIndex + 2] = b;
+    myImgDat.data[nIndex + 3] = a;
+}
+
+
+/***** OR DO THE BELOW WHICH USES THE .set METHOD *****/
+
+/** METHOD B **/
+var normalArr = [];
+for (var nIndex = 0; nIndex &lt; cast.length; nIndex = nIndex + 4) { // casted.length is same as myImgDat.data.length
+    var r = casted[nIndex];
+    var g = casted[nIndex + 1];
+    var b = casted[nIndex + 2];
+    var a = casted[nIndex + 3];
+
+    normalArr.push(r);
+    normalArr.push(g);
+    normalArr.push(b);
+    normalArr.push(a);
+}
+myImgDat.data.set(normalArr);
+</pre>
+
+<p>The preceding example, however, does not take advantage of Method 1, but instead manually goes through the array and sets the <code>ImageData</code> array. The cast takes a couple of milliseconds, roughly the same as Method 1. However, the manual Method A, in the preceding example, takes ~1300 ms. Method B takes ~1400 ms, for an array length of 52,428,800 (which is image size of 1280 x 1024 pixels).</p>
+
+<h4 id="Method_3_Transfer_byte_array_by_calling_memcpy">Method 3: Transfer byte array by calling memcpy</h4>
+
+<p>This is the recommended method, as it only takes a couple of milliseconds, even for large arrays. Notice that the following example does not cast the <code>pixelBuffer</code>. Passing an <code>ArrayBuffer</code> object to pointer type will pass the pointer to buffer (Based on <a href="https://dxr.mozilla.org/mozilla-central/source/js/src/ctypes/CTypes.cpp#3080">https://dxr.mozilla.org/mozilla-central/source/js/src/ctypes/CTypes.cpp#3080</a>). Further, it returns <code>dataPointer</code>, and there is no extra allocation (Based on <a href="https://dxr.mozilla.org/mozilla-central/source/js/src/vm/ArrayBufferObject.cpp#1301">https://dxr.mozilla.org/mozilla-central/source/js/src/vm/ArrayBufferObject.cpp#1301</a>).</p>
+
+<pre class="brush: js">var lib;
+switch (OS.Constants.Sys.Name.toLowerCase()) {
+    case 'winnt':
+    case 'winmo':
+    case 'winnt': //windows
+        lib = ctypes.open('msvcrt');
+        break;
+    case 'darwin': // mac
+        lib = ctypes.open('libc.dylib');
+        break;
+    case 'freebsd':
+        lib = ctypes.open('libc.so.7');
+        break;
+    case 'openbsd':
+        lib = ctypes.open('libc.so.61.0');
+        break;
+    case 'android':
+    case 'sunos':
+    case 'netbsd':
+    case 'dragonfly':
+        lib = ctypes.open('libc.so');
+        break;
+    case 'linux':
+        lib = ctypes.open('libc.so.6');
+        break;
+    case 'gnu/kfreebsd':
+        lib = ctypes.open('libc.so.0.1');
+        break;
+    default:
+        //assume unix
+        try {
+            lib = ctypes.open(ctypes.libraryName('c'));
+        } catch (ex) {
+            throw new Error('I dont know where to memcpy is defined on your operating system, "' + OS.Constants.Sys.Name + '"');
+            lib.close();
+        }
+}
+
+try {
+    var memcpy = lib.declare('memcpy', OS.Constants.Sys.Name.toLowerCase().indexOf('win') == 0 ? ctypes.winapi_abi : ctypes.default_abi,
+        ctypes.void_t, // return
+        ctypes.void_t.ptr, // *dest
+        ctypes.void_t.ptr, // *src
+        ctypes.size_t // count
+    );
+} catch (ex) {
+    throw new Error('I dont know where to memcpy is defined on your operating system, "' + OS.Constants.Sys.Name + '"');
+    lib.close()
+}
+
+memcpy(myImgDat.data, pixelBuffer, myImgDat.data.length); // myImgDat.data.length is imgWidth * imgHeight *4 because per pixel there is r, g, b, a numbers
+
+lib.close();
+</pre>
+
+<h2 id="See_Also">See Also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/Type_conversion">Type Conversion</a></li>
+</ul>

@@ -1,0 +1,48 @@
+---
+title: Firefox OS の開発
+slug: Archive/B2G_OS/Developing_Firefox_OS
+tags:
+  - B2G
+  - Developing
+  - Firefox OS
+translation_of: Archive/B2G_OS/Developing_Firefox_OS
+---
+<div class="summary">
+ <p><span class="seoSummary">このセクションでは、次の役に立つドキュメンテーションを提供します。 Firefox OS（コードネーム Boot2Gecko、あるいは、B2G）でのビルドプロセス中で修正・変更可能な様々な方法、そして、 <a href="/Mozilla/Gecko">Gecko</a> や <a href="/Firefox_OS/Platform/Gonk">Gonk</a> のような低レベルプラットフォームの開発を支援するための方法。</span></p>
+</div>
+<div class="note">
+ <p><strong>注</strong>: 特に Gaia (FirefoxOS のユーザインタフェース)の開発の支援に興味があるのなら、<a href="/Firefox_OS/Developing_Gaia">Gaia の開発</a> のページも参照してください。</p>
+</div>
+<h2 id="一般的な貢献についてのノート">一般的な貢献についてのノート</h2>
+<p>Gecko は Firefox ブラウザになくてはならない部分であり、Gecko の Firefox OS に関連する部分に貢献することは、一般的な Gecko に対するものと非常に似ています。つまり、Gonk に貢献する場合もほぼ同様です。基本として知るべきことは、コミュニティについて、コードベースの仕組み、そして、バグをどのように見つけるかということです。貢献の方法について学び始めるのに良いところは、<a href="/Introduction">Mozilla コードベースへの貢献</a>です。</p>
+<p>まず、Gecko、それがどのように動作し、構造化されているかについて学ぶべきです。 <a href="/Mozilla/Gecko">MDN  の Gecko ホームページ</a> には、このことについての有用なノートがいくつかあります。Mozilla Wiki の <a href="https://wiki.mozilla.org/Gecko:Overview">Gecko:Overview</a> も同様です。（Firefox OS 固有の）API についての情報は、動作の概要を知るには、Mozilla Wiki の <a href="https://wiki.mozilla.org/WebAPI">WebAPI</a> ページを、ドキュメント化された API の すべての索引を見るには、<a href="/WebAPI">MDN の WebAPI</a> ページを参照してください。</p>
+<p>次に、上部でFirefox OS が動作しているカーネルである <a href="/Firefox_OS/Platform/Gonk">Gonk</a> を見てみましょう。Gonk は基本的に デスクトップ版 Firefox のケースのように、Mac OS X、Windows、そして  Linux のように、Gecko のもうひとつの移植の対象です。Gonk 自身は Android Open Source Project のものを基にして作られただけのものです。私たちはGonk 自身の大部分を変更しようとは考えていません。なぜなら、ソースコードの大部分は私たちの管理下ではないからです。また、私たちと一緒に Firefox OS デバイスを作っているデバイスパートナーは、たいてい、デバイスと Gecko・Gonk の間のインターフェースに対するデバイス固有のコードを提供しています。</p>
+<p>しかし、API がまだ残っています。多くの Gonk 固有の Gecko コードは <code>#ifdef MOZ_WIDGET_GONK を用いて、</code>Firefox OS や <code>gecko-dev/hal/gonk のような<code> gonk</code> サブディレクトリ内</code>でだけ有効になっています。<a href="https://github.com/mozilla/gecko-dev">gecko-dev</a> レポジトリをローカルにクローンして、中身を見てみてください。<a href="/Mozilla_Source_Code_Directory_Structure">Mozilla Source Code Directory Structure</a> の記事も役立ちます。</p>
+<p>次に、<a href="/Firefox_OS/Platform/Architecture">Firefox OS のアーキテクチャ</a> について、<a href="/Firefox_OS/Building">Firefox OS のビルド</a>（<a href="/Firefox_OS/Building_and_installing_Firefox_OS/Firefox_OS_build_process_summary">Firefox OS のビルドの概要</a>から始めてください）方法、そして、他のデバイスへの <a href="/Firefox_OS/Developing_Firefox_OS/Porting">Firefox OS の移植</a>方法について学ぶべきです。</p>
+<p>Firefox OS は一連の分割されたモジュールとして開発されています。<a href="https://wiki.mozilla.org/Modules/FirefoxOS">Firefox OS Modules</a> ページを参照し、コードベースがどのようにグループ化されているかを知り、助けが必要な場合に話すべきメインモジュールオーナーが誰かを知ってください。</p>
+<div class="note">
+ <p><strong>注</strong>: 助けを得るために最初に訪ねるべき場所は、<a href="https://lists.mozilla.org/listinfo/dev-b2g">dev-b2g メーリングリスト</a> と <a href="https://wiki.mozilla.org/IRC">Mozilla IRC</a> の #b2g チャットルームです。</p>
+</div>
+<h2 id="固有の_Firefox_OS_開発トピック">固有の Firefox OS 開発トピック</h2>
+<dl>
+ <dt>
+  <a href="/Firefox_OS/Developing_Firefox_OS/Filing_bugs_against_Firefox_OS">Firefox OS のバグを登録する</a></dt>
+ <dd>
+  この記事は Firefox OS でのあらゆる面に関するバグを登録するためのガイドを提供します。</dd>
+ <dt>
+  <a href="/Firefox_OS/Developing_Firefox_OS/modifying_hosts_file" title="/en-US/docs/Mozilla/Firefox_OS/Tips_and_tricks/modifying_hosts_file">hosts ファイルを編集する</a></dt>
+ <dd>
+  Firefox OS の hosts ファイルを編集することによって何ができるかのガイドです。</dd>
+ <dt>
+  <a href="/Firefox_OS/Customization_with_the_.userconfig_file" title="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Customization_with_the_.userconfig_file">.userconfig ファイルをカスタマイズする</a></dt>
+ <dd>
+  <code>.userconfig</code> ファイルを変更することで Firefox OS のビルドと実行を変更する方法です。</dd>
+ <dt>
+  <a href="/Firefox_OS/Developing_Firefox_OS/Customizing_the_b2g.sh_script">b2g.sh スクリプトをカスタマイズする</a></dt>
+ <dd>
+  b2g アプリケーションで実行されてシステムの様々な面をコントロールする、b2g.sh スクリプトを変更することによって何ができるかの説明です。</dd>
+ <dt>
+  <a href="/Firefox_OS/Porting" title="/en-US/docs/Mozilla/Firefox_OS/Porting">Firefox OS を移植する</a></dt>
+ <dd>
+  Firefox OS を新しいデバイスに移植する方法についての情報です。</dd>
+</dl>

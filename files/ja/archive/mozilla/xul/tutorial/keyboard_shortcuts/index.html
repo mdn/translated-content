@@ -1,0 +1,403 @@
+---
+title: キーボードショートカット
+slug: Archive/Mozilla/XUL/Tutorial/Keyboard_Shortcuts
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Keyboard_Shortcuts
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:More_Event_Handlers" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Focus_and_Selection">次のページ  »</a></p>
+</div>
+
+<p>キーボードからの入力に反応できるようにするためには、キーボードイベントハンドラを使用することで可能ではあります。 しかしながら、全てのボタンとメニュー項目に、ひとつひとつ設定を行っていくのは退屈な作業だと思います。</p>
+
+<p><span id="Creating_a_Keyboard_Shortcut"></span></p>
+
+<h3 id=".E3.82.AD.E3.83.BC.E3.83.9C.E3.83.BC.E3.83.89.E3.82.B7.E3.83.A7.E3.83.BC.E3.83.88.E3.82.AB.E3.83.83.E3.83.88.E3.82.92.E4.BD.9C.E6.88.90.E3.81.99.E3.82.8B" name=".E3.82.AD.E3.83.BC.E3.83.9C.E3.83.BC.E3.83.89.E3.82.B7.E3.83.A7.E3.83.BC.E3.83.88.E3.82.AB.E3.83.83.E3.83.88.E3.82.92.E4.BD.9C.E6.88.90.E3.81.99.E3.82.8B">キーボードショートカットを作成する</h3>
+
+<p>XUL では、キーボードショートカットを定義する方法を用意しています。 既に、<a href="ja/XUL_Tutorial/Simple_Menu_Bars">メニューを扱ったセクション</a>で、 <code><code id="a-accesskey"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/accesskey">accesskey</a></code></code> 属性を使用することにより、メニューやメニュー項目を、特定のキーを押すことで<span style="border-bottom: 1px dashed green;" title="activate">活性化</span>できるように定義可能であることを確認しています。 下の例では、 Alt キーを押して F (あるいは、そのプラットフォームで該当するキーの組み合わせ) を押すことにより、File メニューが選択されます。 また、File メニューが開かれたときに、C を押すことによって、Close のメニュー項目を選択することが可能です。</p>
+
+<p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_keyshort_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_keyshort_1.xul">表示</a></p>
+
+<pre>&lt;menubar id="sample-menubar"&gt;
+  &lt;menu id="file-menu" label="File" accesskey="f"&gt;
+    &lt;menupopup id="file-popup"&gt;
+      &lt;menuitem id="close-command" label="Close" accesskey="c"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menu&gt;
+&lt;/menubar&gt;
+</pre>
+
+<p><code><code id="a-accesskey"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/accesskey">accesskey</a></code></code> 属性は、ボタンにも使用できます。 この場合、キーが押されることによってボタンが選択されます。</p>
+
+<p>しかしながら、もっと一般的なキーボードショートカットを設定したいこともあると思います。 例えば、Contol+C を押すことで、クリップボードにテキストをコピーするといったものです。 通常は、このようなショートカットは、ウィンドウが開かれている間であればいつでも動作しますが、その機能がいつ呼び出されても有効であるとは限りません。 通常、キーボードショートカットはいつでも利用できるようになっているため、スクリプトの方で、そのとき実際に動作を実行するべきかどうかをチェックする必要があります。 例えば、テキストをクリップボードにコピーする場合は、テキストが選択されているときだけ機能するべきです。</p>
+
+<p><span id="Key_element"></span></p>
+
+<h4 id="key_.E8.A6.81.E7.B4.A0" name="key_.E8.A6.81.E7.B4.A0">key 要素</h4>
+
+<p>XUL では <code><code><a href="/ja/docs/Mozilla/Tech/XUL/key" title="key">key</a></code></code> という要素が用意されており、この要素を使って、そのウィンドウでのキーボードショートカットを定義することができます。 この要素には、対応するキーと必要な修飾 (<span style="color: green;">modifier</span>) キー (Shift や Control など) を指定するための属性があります。 以下に例を示します。</p>
+
+<pre>&lt;keyset&gt;
+  &lt;key id="sample-key" modifiers="shift" key="R"/&gt;
+&lt;/keyset&gt;
+</pre>
+
+<p>この例では、利用者が Shift キーと R を押したときに活性化されるキーボードショートカットが定義されています。 <code><code id="a-key"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/key">key</a></code></code> 属性を使用して、どのキーが押されるべきであるのかを指示します。 この例では「R」です。(補足: <code>key</code> は、属性と要素自身の両方の名前になります) この属性には、どのキーが押されるべきかを要求するために、キーと対応する任意の文字を設定することができます。 <code><code id="a-modifiers"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/modifiers">modifiers</a></code></code> 属性を使用して、押さなければならない修飾キーを指定します。 ここには、以下に一覧で示す修飾キーを、空白区切りのリスト形式で指定します。</p>
+
+<dl>
+ <dt>alt </dt>
+ <dd>利用者が Alt キーを押す必要があります。Macintosh では Option キーになります。</dd>
+ <dt>control </dt>
+ <dd>利用者が Control キーを押す必要があります。</dd>
+ <dt>meta </dt>
+ <dd>利用者が Meta キーを押す必要があります。Macintosh では Command キーになります。</dd>
+ <dt>shift </dt>
+ <dd>利用者が Shift キーを押す必要があります。</dd>
+ <dt>accel </dt>
+ <dd>利用者が アクセラレータ用のキーを押す必要があります。このキーは、実際には利用者のプラットフォームに応じたキーボードショートカット用のキーになります。通常は、これが使用する値になると思います。</dd>
+</dl>
+
+<p>なお、利用者が使っているキーボードに、全てのキーが存在する必要はありません。 キーがない場合は、実際にそのキーボードにある修飾キーが代わりに割り当てられています。</p>
+
+<p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/key" title="key">key</a></code></code> 要素は <code><code><a href="/ja/docs/Mozilla/Tech/XUL/keyset" title="keyset">keyset</a></code></code> 要素内に置く必要があります。 この要素は、複数の <code><code><a href="/ja/docs/Mozilla/Tech/XUL/key" title="key">key</a></code></code> 要素を保持するように設計されており、全てのキー定義をファイル中の 1 つの場所にまとめて置く機能を提供しています。 なお、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/key" title="key">key</a></code></code> 要素を <code><code><a href="/ja/docs/Mozilla/Tech/XUL/keyset" title="keyset">keyset</a></code></code> 要素の外に置いた場合、その定義は機能しません。</p>
+
+<p>一般的に、キーボードショートカットに使用するキーは、各プラットフォームで異なっています。 例えば、Windows では Controlキーを使い、Machintosh では Command キーを使用しています。 プラットフォームごとに、別々の <code><code><a href="/ja/docs/Mozilla/Tech/XUL/key" title="key">key</a></code></code> 要素を定義しなければならないとすれば面倒ですが、幸運なことに、それを解決する方法は存在します。 修飾キー <code>accel</code> は、そのプラットフォームで特にショートカット用として規定されているキーを指しています。 これは、他の修飾キーと全く同じように機能しますが、全てのプラットフォームで同一のキーではありません。</p>
+
+<p>いくつか例を追加します。</p>
+
+<pre>&lt;keyset&gt;
+  &lt;key id="copy-key" modifiers="control" key="C"/&gt;
+  &lt;key id="explore-key" modifiers="control alt" key="E"/&gt;
+  &lt;key id="paste-key" modifiers="accel" key="V"/&gt;
+&lt;/keyset&gt;
+</pre>
+
+<p><span id="Keycode_attribute"></span></p>
+
+<h4 id="keycode_.E5.B1.9E.E6.80.A7" name="keycode_.E5.B1.9E.E6.80.A7">keycode 属性</h4>
+
+<p><code><code id="a-key"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/key">key</a></code></code> 属性は、押さなければならないキーを指定するのに使用されますが、表示可能な文字のみしか使用することができません。 しかしながら、文字として指定できない (Enter キーや機能キーのような) キーを参照したい場合もあると思います。 このためには、<code><code id="a-keycode"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/keycode">keycode</a></code></code> という別の属性を使用することになります。</p>
+
+<p><code><code id="a-keycode"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/keycode">keycode</a></code></code> 属性には、指定したいキーを表す、専用のコードを設定しなければなりません。 設定可能なキーのコードを以下の表に示します。 なお、全てのキーが、全てのキーボードで利用できるわけではありません。</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td>VK_CANCEL</td>
+   <td>VK_BACK</td>
+   <td>VK_TAB</td>
+   <td>VK_CLEAR</td>
+  </tr>
+  <tr>
+   <td>VK_RETURN</td>
+   <td>VK_ENTER</td>
+   <td>VK_SHIFT</td>
+   <td>VK_CONTROL</td>
+  </tr>
+  <tr>
+   <td>VK_ALT</td>
+   <td>VK_PAUSE</td>
+   <td>VK_CAPS_LOCK</td>
+   <td>VK_ESCAPE</td>
+  </tr>
+  <tr>
+   <td>VK_SPACE</td>
+   <td>VK_PAGE_UP</td>
+   <td>VK_PAGE_DOWN</td>
+   <td>VK_END</td>
+  </tr>
+  <tr>
+   <td>VK_HOME</td>
+   <td>VK_LEFT</td>
+   <td>VK_UP</td>
+   <td>VK_RIGHT</td>
+  </tr>
+  <tr>
+   <td>VK_DOWN</td>
+   <td>VK_PRINTSCREEN</td>
+   <td>VK_INSERT</td>
+   <td>VK_DELETE</td>
+  </tr>
+  <tr>
+   <td>VK_0</td>
+   <td>VK_1</td>
+   <td>VK_2</td>
+   <td>VK_3</td>
+  </tr>
+  <tr>
+   <td>VK_4</td>
+   <td>VK_5</td>
+   <td>VK_6</td>
+   <td>VK_7</td>
+  </tr>
+  <tr>
+   <td>VK_8</td>
+   <td>VK_9</td>
+   <td>VK_SEMICOLON</td>
+   <td>VK_EQUALS</td>
+  </tr>
+  <tr>
+   <td>VK_A</td>
+   <td>VK_B</td>
+   <td>VK_C</td>
+   <td>VK_D</td>
+  </tr>
+  <tr>
+   <td>VK_E</td>
+   <td>VK_F</td>
+   <td>VK_G</td>
+   <td>VK_H</td>
+  </tr>
+  <tr>
+   <td>VK_I</td>
+   <td>VK_J</td>
+   <td>VK_K</td>
+   <td>VK_L</td>
+  </tr>
+  <tr>
+   <td>VK_M</td>
+   <td>VK_N</td>
+   <td>VK_O</td>
+   <td>VK_P</td>
+  </tr>
+  <tr>
+   <td>VK_Q</td>
+   <td>VK_R</td>
+   <td>VK_S</td>
+   <td>VK_T</td>
+  </tr>
+  <tr>
+   <td>VK_U</td>
+   <td>VK_V</td>
+   <td>VK_W</td>
+   <td>VK_X</td>
+  </tr>
+  <tr>
+   <td>VK_Y</td>
+   <td>VK_Z</td>
+   <td>VK_NUMPAD0</td>
+   <td>VK_NUMPAD1</td>
+  </tr>
+  <tr>
+   <td>VK_NUMPAD2</td>
+   <td>VK_NUMPAD3</td>
+   <td>VK_NUMPAD4</td>
+   <td>VK_NUMPAD5</td>
+  </tr>
+  <tr>
+   <td>VK_NUMPAD6</td>
+   <td>VK_NUMPAD7</td>
+   <td>VK_NUMPAD8</td>
+   <td>VK_NUMPAD9</td>
+  </tr>
+  <tr>
+   <td>VK_MULTIPLY</td>
+   <td>VK_ADD</td>
+   <td>VK_SEPARATOR</td>
+   <td>VK_SUBTRACT</td>
+  </tr>
+  <tr>
+   <td>VK_DECIMAL</td>
+   <td>VK_DIVIDE</td>
+   <td>VK_F1</td>
+   <td>VK_F2</td>
+  </tr>
+  <tr>
+   <td>VK_F3</td>
+   <td>VK_F4</td>
+   <td>VK_F5</td>
+   <td>VK_F6</td>
+  </tr>
+  <tr>
+   <td>VK_F7</td>
+   <td>VK_F8</td>
+   <td>VK_F9</td>
+   <td>VK_F10</td>
+  </tr>
+  <tr>
+   <td>VK_F11</td>
+   <td>VK_F12</td>
+   <td>VK_F13</td>
+   <td>VK_F14</td>
+  </tr>
+  <tr>
+   <td>VK_F15</td>
+   <td>VK_F16</td>
+   <td>VK_F17</td>
+   <td>VK_F18</td>
+  </tr>
+  <tr>
+   <td>VK_F19</td>
+   <td>VK_F20</td>
+   <td>VK_F21</td>
+   <td>VK_F22</td>
+  </tr>
+  <tr>
+   <td>VK_F23</td>
+   <td>VK_F24</td>
+   <td>VK_NUM_LOCK</td>
+   <td>VK_SCROLL_LOCK</td>
+  </tr>
+  <tr>
+   <td>VK_COMMA</td>
+   <td>VK_PERIOD</td>
+   <td>VK_SLASH</td>
+   <td>VK_BACK_QUOTE</td>
+  </tr>
+  <tr>
+   <td>VK_OPEN_BRACKET</td>
+   <td>VK_BACK_SLASH</td>
+   <td>VK_CLOSE_BRACKET</td>
+   <td>VK_QUOTE</td>
+  </tr>
+  <tr>
+   <td>VK_HELP</td>
+   <td> </td>
+   <td> </td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>例えば、利用者が Alt と F5 を押したときに活性化されるショートカットを作るには、次のようにします。</p>
+
+<pre>&lt;keyset&gt;
+  &lt;key id="test-key" modifiers="alt" keycode="VK_F5"/&gt;
+&lt;/keyset&gt;
+</pre>
+
+<p>さらに、いくつかのキーボードショートカットの例を以下に示します。</p>
+
+<pre>&lt;keyset&gt;
+  &lt;key id="copy-key" modifiers="accel" key="C"/&gt;
+  &lt;key id="find-key" keycode="VK_F3"/&gt;
+  &lt;key id="switch-key" modifiers="control alt" key="1"/&gt;
+&lt;/keyset&gt;
+</pre>
+
+<p>最初のキー定義は、利用者がそのプラットフォーム固有のショートカットキーと C を押した時に呼び出されます。 2 つ目は、利用者が F3 キーを押した時に呼び出されます。 3 つ目は、Control キー、Alt キーと 1 を押した時に呼び出されます。 もし、キーボードのメイン部分とテンキーの数字キーを区別したいのであれば、VK_NUMPAD 系のキーコード (例えば VK_NUMPAD1) を使用できます。</p>
+
+<div class="note">
+<p>アプリケーションでキーボードショートカットとして使用するキーを選択するときの注意事項や詳細情報のために、 <a class="external" href="http://www.mozilla-japan.org/access/keyboard/">Mozilla キーボード・プラン FAQ とクロスリファレンス</a>を参照してください。</p>
+</div>
+
+<p><span id="Using_the_Keyboard_Shortcuts"></span></p>
+
+<h3 id=".E3.82.AD.E3.83.BC.E3.83.9C.E3.83.BC.E3.83.89.E3.82.B7.E3.83.A7.E3.83.BC.E3.83.88.E3.82.AB.E3.83.83.E3.83.88.E3.82.92.E4.BD.BF.E7.94.A8.E3.81.99.E3.82.8B" name=".E3.82.AD.E3.83.BC.E3.83.9C.E3.83.BC.E3.83.89.E3.82.B7.E3.83.A7.E3.83.BC.E3.83.88.E3.82.AB.E3.83.83.E3.83.88.E3.82.92.E4.BD.BF.E7.94.A8.E3.81.99.E3.82.8B">キーボードショートカットを使用する</h3>
+
+<p>キーボードショートカットを定義する方法は分かったので、次はそれをどのように使えばいいのかを見ていくことにします。 このための方法としては 2つあります。 1 つ目は、最も単純な方法で、keypress イベントのハンドラを <code><code><a href="/ja/docs/Mozilla/Tech/XUL/key" title="key">key</a></code></code> 要素に追加するだけです。 利用者がそのキーを押したとき、スクリプトが呼び出されます。 以下に例を示します。</p>
+
+<pre>&lt;keyset&gt;
+  &lt;key id="copy-key" modifiers="accel" key="C" onkeypress="DoCopy();"/&gt;
+&lt;/keyset&gt;
+</pre>
+
+<p>利用者が、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/key" title="key">key</a></code></code> 要素で指定されたキーを押すと、関数 DoCopy が呼び出されます。 この例では、クリップボードにコピーするキーになります (Windows の場合は Control+C です)。 これは、ウィンドウが開かれている間、ずっと動作することになります。 <code>DoCopy</code> 関数は、テキストが選択されているか確認してから、テキストをクリップボードへとコピーする必要があります。 なお、テキスト入力欄には、クリップボードショートカットが組み込まれているため、各自で実装する必要がないことを補足しておきます。</p>
+
+<p><span id="Assigning_a_keyboard_shortcut_on_a_menu"></span></p>
+
+<h4 id=".E3.83.A1.E3.83.8B.E3.83.A5.E3.83.BC.E3.81.AB.E3.82.AD.E3.83.BC.E3.83.9C.E3.83.BC.E3.83.89.E3.82.B7.E3.83.A7.E3.83.BC.E3.83.88.E3.82.AB.E3.83.83.E3.83.88.E3.82.92.E9.96.A2.E9.80.A3.E3.81.A5.E3.81.91.E3.82.8B" name=".E3.83.A1.E3.83.8B.E3.83.A5.E3.83.BC.E3.81.AB.E3.82.AD.E3.83.BC.E3.83.9C.E3.83.BC.E3.83.89.E3.82.B7.E3.83.A7.E3.83.BC.E3.83.88.E3.82.AB.E3.83.83.E3.83.88.E3.82.92.E9.96.A2.E9.80.A3.E3.81.A5.E3.81.91.E3.82.8B">メニューにキーボードショートカットを関連づける</h4>
+
+<p>メニューにも存在するコマンドを実行するキーボードショートカットを割り当てたい場合は、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/key" title="key">key</a></code></code> 要素を、直接メニューコマンドと関連づける事ができます。 このためには、<code><code id="a-key"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/key">key</a></code></code> 属性を、関連づける <code><code><a href="/ja/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></code> に追加してください。 値には、使用したい <code><code><a href="/ja/docs/Mozilla/Tech/XUL/key" title="key">key</a></code></code> 要素の <code><code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> を設定します。 以下に、記述例を示します。</p>
+
+<p><span id="%E4%BE%8B_2"><a id="%E4%BE%8B_2"></a><strong>例 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_keyshort_2.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_keyshort_2.xul">表示</a></p>
+
+<pre>&lt;keyset&gt;
+  &lt;key id="paste-key" modifiers="accel" key="V"
+          oncommand="alert('Paste invoked')"/&gt;
+&lt;/keyset&gt;
+
+&lt;menubar id="sample-menubar"&gt;
+  &lt;menu id="edit-menu" label="Edit" accesskey="e"&gt;
+    &lt;menupopup id="edit-popup"&gt;
+      &lt;menuitem id="paste-command"
+         accesskey="p" key="paste-key"
+         label="Paste" oncommand="alert('Paste invoked')"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menu&gt;
+&lt;/menubar&gt;
+</pre>
+
+<div class="float-right"><img alt="画像:keyshort1.jpg"></div>
+
+<p>この例では、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></code> の <code><code id="a-key"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/key">key</a></code></code> 属性は、この例では <code>paste-key</code> に設定されています。これは、対応するキー定義の <code><code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> と同じです。 この方法によって、付加的なキーについても同様に、キーボードショートカットを定義して、任意の数のメニュー項目に対応させることが可能です。</p>
+
+<p>画像から、Paste メニューコマンドを呼び出すのに、Control と V キーを押せばよいことを示すテキストが、そのメニューコマンドの横に置かれていることが分かると思います。 これは、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/key" title="key">key</a></code></code> 要素の <code><code id="a-modifiers"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/modifiers">modifiers</a></code></code> を元に追加されます。 メニューと結びつけたキーボードショートカットは、メニューが開いていないときでも機能します。</p>
+
+<p>キー定義の付加的な特徴の 1 つとして、簡単に無効状態にできるということがあります。 そのためには、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/key" title="key">key</a></code></code> 要素に <code><code id="a-disabled"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code></code> 属性を追加して、その値を true に設定します。 これでキーボードショートカットは無効になり、呼び出されなくなります。 スクリプトから、状況に応じて動的に <code><code id="a-disabled"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code></code> 属性を変更すると便利です。</p>
+
+<div class="highlight">
+<p><span id="Our_find_files_example"></span></p>
+
+<h4 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AE.E4.BE.8B" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AE.E4.BE.8B">ファイル検索ダイアログの例</h4>
+
+<p>それでは、ファイル検索ダイアログにキーボードショートカットを追加してみましょう。 4 つのキーボードショートカットを追加します。 Cut、Copy、Paste コマンドのそれぞれに 1 つと、ユーザが Escape キーを押したときにウィンドウを閉じるためのコマンドにも 1つです。</p>
+
+<pre class="eval"><span class="highlightred">&lt;keyset&gt;
+  &lt;key id="cut_cmd" modifiers="accel" key="X"/&gt;
+  &lt;key id="copy_cmd" modifiers="accel" key="C"/&gt;
+  &lt;key id="paste_cmd" modifiers="accel" key="V"/&gt;
+  &lt;key id="close_cmd" keycode="VK_ESCAPE" oncommand="window.close();"/&gt;
+&lt;/keyset&gt;</span>
+
+&lt;vbox flex="1"&gt;
+ &lt;toolbox&gt;
+  &lt;menubar id="findfiles-menubar"&gt;
+   &lt;menu id="file-menu" label="File" accesskey="f"&gt;
+     &lt;menupopup id="file-popup"&gt;
+       &lt;menuitem label="Open Search..." accesskey="o"/&gt;
+       &lt;menuitem label="Save Search..." accesskey="s"/&gt;
+       &lt;menuseparator/&gt;
+       &lt;menuitem label="Close" accesskey="c" <span class="highlightred">key="close_cmd"</span>
+         oncommand="window.close();"/&gt;
+     &lt;/menupopup&gt;
+   &lt;/menu&gt;
+   &lt;menu id="edit-menu" label="Edit" accesskey="e"&gt;
+     &lt;menupopup id="edit-popup"&gt;
+       &lt;menuitem label="Cut" accesskey="t" <span class="highlightred">key="cut_cmd"</span>/&gt;
+       &lt;menuitem label="Copy" accesskey="c" <span class="highlightred">key="copy_cmd"</span>/&gt;
+       &lt;menuitem label="Paste" accesskey="p" <span class="highlightred">key="paste_cmd"</span> disabled="true"/&gt;
+     &lt;/menupopup&gt;
+   &lt;/menu&gt;
+</pre>
+
+<p>これでコマンドを活性化するのにこれらのショートカットを使うことができます。 といっても、まだスクリプトは書いていないため、クリップボード系のコマンドは、実行されたとしても何もしません。</p>
+
+<p><span id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"><a id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"></a><strong>ここまでのファイル検索ダイアログの例</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-keyshort.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-keyshort.xul">表示</a></p>
+</div>
+
+<p><span id="Key_Events"></span></p>
+
+<h3 id=".E3.82.AD.E3.83.BC.E3.82.A4.E3.83.99.E3.83.B3.E3.83.88" name=".E3.82.AD.E3.83.BC.E3.82.A4.E3.83.99.E3.83.B3.E3.83.88">キーイベント</h3>
+
+<p>キーボード入力関連のイベントは 3 つあります。 これらは、キーと機能を関連づけるために、上で説明した方法が適用できない場合に用いられることになります。 これらのイベントについて以下に記述します。</p>
+
+<dl>
+ <dt>keypress </dt>
+ <dd>要素がフォーカスを持っていて、キーが押されて離されたときに呼び出されます。フィールドに入力された文字が、許可されたものかどうかをチェックするために使用することができます。</dd>
+ <dt>keydown </dt>
+ <dd>要素がフォーカスを持っていて、キーが押されたときに呼び出されます。このイベントは、キーが押された直後に、まだ離されていない状態でも呼び出されることに注意してください。</dd>
+ <dt>keyup </dt>
+ <dd>要素がフォーカスを持っていて、キーが離されたときに呼び出されます。</dd>
+</dl>
+
+<p><span style="color: darkgreen; background: #ef9;">【訳注: 日本語入力が ON のときは、いろいろ簡単ではないようです】</span></p>
+
+<p>キーイベントは、フォーカスを持つ要素へのみ送信されます。 通常、テキスト入力欄、ボタン、チェックボックスなどが該当します。 フォーカスを持つ要素がない場合には、キーイベントは、代わりに XUL 文書自身に対して送信されます。 この場合、イベントリスナーを <code><code><a href="/ja/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> タグに追加することができます。 といっても、通常は、広くキーに応答したいのであれば、先に述べたようにキーボードショートカットを使います。</p>
+
+<p>キー<a href="ja/DOM/event">イベントオブジェクト</a>は、押されたキーを保持する 2 つのプロパティを持っています。 <code><a href="ja/DOM/event.keyCode">keyCode</a></code> プロパティは、キーコードを保持します。 目的のキーが押されたかを調べるためには、このセクションで既出のキーコード表で示されている定数のいずれかと比較することになります。 <code><a href="ja/DOM/event.charCode">charCode</a></code> は表示可能な文字の場合に用いられて、押されたキーの文字コードを保持します。</p>
+
+<p>次のセクションでは、フォーカスや選択の扱い方について学びます。</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:More_Event_Handlers" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Focus_and_Selection">次のページ  »</a></p>
+</div>
+
+<p> </p>
+
+<div class="noinclude"> </div>

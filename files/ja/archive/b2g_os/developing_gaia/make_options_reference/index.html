@@ -1,0 +1,383 @@
+---
+title: make オプションのリファレンス
+slug: Archive/B2G_OS/Developing_Gaia/make_options_reference
+tags:
+  - Apps
+  - Firefox OS
+  - Gaia
+  - Make
+  - Options
+  - Reference
+translation_of: Archive/B2G_OS/Developing_Gaia/make_options_reference
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details open>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/ja/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<div class="summary">
+<p><span class="seoSummary"><code>make</code> コマンドは、Gaia リポジトリ内で Gaia プロファイルを作成するのに使われます。このプロファイルは、端末に読み込んだり <a href="/ja/Firefox_OS/Using_the_B2G_desktop_client">B2G デスクトップ</a> ビルド内で実行されます。この記事では、利用できる様々な make オプションを詳しく見ていきます。</span></p>
+</div>
+
+<div class="note">
+<p><strong>注記</strong>: Makefile には多くの環境変数があります。将来削除される可能性があるので、これらに依存しないでください。</p>
+</div>
+
+<p>作成したプロファイルは、一般的に gaia ディレクトリのルート、例えば <code>/gaia/profile</code> に作成され、次の項目を含みます:</p>
+
+<ul>
+ <li><code>defaults/</code>: 電話機の再起動後にリロードされるデフォルト設定を含むディレクトリ。</li>
+ <li><code>extensions/</code>: 拡張機能を含むディレクトリ。</li>
+ <li><code>settings.json</code>: 設定ファイル。</li>
+ <li><code>user.js</code>: その他の設定を含む、もう一つのファイル。</li>
+ <li><code>webapps/</code>: 電話機にインストールされる、全 Web アプリを含むディレクトリ。</li>
+</ul>
+
+<div class="note">
+<p><strong>注記</strong>: プロファイルを作成済みで新しいものを作成したい場合は、新規に生成する前に、既存のプロファイルディレクトリを消さなければなりません。</p>
+</div>
+
+<h2 id="デフォルト">デフォルト</h2>
+
+<pre class="brush: bash">make</pre>
+
+<p>これは単にノーブランドの、非デバッグのビルドを与えます。ブランドのビルドには、<a href="#Official_Mozilla_branding_make">Mozilla 公式ブランドの make</a> を使う必要があります。デバッグビルドは <a href="#Debug_make">デバッグ make</a> をする必要があります。</p>
+
+<h2 id="端末へプッシュする">端末へプッシュする</h2>
+
+<pre class="brush: bash">make install-gaia
+
+make reset-gaia
+</pre>
+
+<p><a href="/ja/Firefox_OS/Debugging/Installing_ADB">ADB</a> (Android デバッグブリッジ) のセットアップでは、これらの make ターゲットは Gaia を端末にプッシュするでしょう。<code>install-gaia</code> では作業ディレクトリ内の Gaia の更新を端末にプッシュします。 <code>reset-gaia</code> では、Gaia のプッシュ前に、既存の設定やプロファイル、Webアプリ、データベース内容 (新設定のデータベースが初期化されます) が掃除されます。</p>
+
+<div class="note">
+<p><strong>注記</strong>: <code>make install-gaia</code> または <code>make reset-gaia</code> を用いて端末に Gaia をプッシュすると、デフォルトで 1 倍の解像度のアセットで Gaia をビルドします。さらに高い解像度を指定するには、<code>GAIA_DEV_PIXELS_PER_PX</code> または <code>GAIA_DPPX</code> の make オプションを指定します (このオプションの詳細は、<a href="/ja/Firefox_OS/Developing_Gaia/make_options_reference#High_resolution_image_assets">High resolution image assets</a> を参照)。この方法で端末に Gaia をプッシュする場合は、関連する make オプションを端末のスケールファクタに合わせて指定するべきです。例えば、Flame 端末には <code>make install-gaia GAIA_DEV_PIXELS_PER_PX=1.5</code> (または 2 や 2.5 など。スケールファクタ値は <a href="/ja/Apps/Build/Icon_implementation_for_apps#512_icon_for_device_display">512 icon for device display</a> の中の表を見てください。)</p>
+</div>
+
+<h2 id="特定アプリのビルド">特定アプリのビルド</h2>
+
+<pre class="brush: bash">APP=system make
+
+APP=system make install-gaia</pre>
+
+<p>既にプロファイルがある場合、すべてのアプリを再パッケージ化して再プッシュする代わりに、再パッケージするアプリを <code>APP</code> で指定できます。このコマンドは、新しいアプリパッケージとマニフェストをプッシュします。マニフェストの変更 (例えば、新しいパーミッションやキーボードレイアウトや宣言) は Gecko によって選択されません。</p>
+
+<h2 id="カスタムプロファイルフォルダを指定する">カスタムプロファイルフォルダを指定する</h2>
+
+<p>ビルドしたプロファイルを保存するディレクトリを指定できます。次のように、<code>PROFILE_FOLDER</code> で指定します:</p>
+
+<pre class="brush: bash">PROFILE_FOLDER=profile-b2g-desktop make</pre>
+
+<h2 id="異なる端末のビルド">異なる端末のビルド</h2>
+
+<p>異なる目的で、異なる端末のビルドを作成する make オプションがいくつかあります。</p>
+
+<h3 id="Gaia_の電話機ビルドの生成">Gaia の電話機ビルドの生成</h3>
+
+<pre class="brush: bash">GAIA_DEVICE_TYPE=phone make</pre>
+
+<p>このビルドは、アプリを <code>/gaia/build/config/phone/apps-engineering.list</code> から取得します。</p>
+
+<h3 id="Gaia_のタブレットビルドの生成">Gaia のタブレットビルドの生成</h3>
+
+<pre class="brush: bash">GAIA_DEVICE_TYPE=tablet make</pre>
+
+<p>このビルドは、アプリを <code>/gaia/build/config/tablet/apps-engineering.list</code> から取得します。</p>
+
+<h3 id="spark_ビルドの生成">spark ビルドの生成</h3>
+
+<pre class="brush: bash">GAIA_DISTRIBUTION_DIR=distros/spark make reset-gaia</pre>
+
+<p>端末に spark をインストールします。同等な B2G build.sh オプションは次のようになります:</p>
+
+<pre class="brush: bash">GAIA_DISTRIBUTION_DIR=distros/spark ./build.sh</pre>
+
+<h2 id="異なるビルドタイプ">異なるビルドタイプ</h2>
+
+<p>異なる目的で、異なるタイプのビルドを作成する make オプションがいくつかあります。</p>
+
+<h3 id="プロダクション_make">プロダクション make</h3>
+
+<pre class="brush: bash">PRODUCTION=1 make</pre>
+
+<p>これは Gaia のプロダクション (製品版) ビルドを生成します:</p>
+
+<ul>
+ <li>Gaia はパッケージ型アプリとして実行され、デバッグは難しくなりますが、アプリにとっての API パーミッションなどの利用性は最も良いです。</li>
+ <li>テストアプリはビルドに含まれません。</li>
+ <li>デフォルトでリモートデバッグがオフになります。</li>
+ <li>画面ロックはオンになります (その代わり USB 接続は切断されます)。</li>
+ <li>Marionette はオフになります。</li>
+ <li>はじめてガイドアプリはオンになります。</li>
+ <li>オフラインキャッシュが使用されます。</li>
+</ul>
+
+<div class="note">
+<p><strong>注記</strong>: 別名のコマンド <code>make production</code> でも生成できます。</p>
+</div>
+
+<h3 id="デバッグmake">デバッグmake</h3>
+
+<pre class="brush: bash">DEBUG=1 make</pre>
+
+<p><code>DEBUG</code> 変数は、Gaia をデフォルトを変更するごとに再パッケージが必要なパッケージ型アプリでなく、特定の <code>GAIA_PORT</code> でのビルトイン Web サーバ上でホスト型アプリとして実行します。これでテストが簡単になります。最新の Firefox Nightly のプロファイルで起動すると、素晴らしい B2G 固有の Firefox 開発ツールのパネルがあります。</p>
+
+<p>それに加え:</p>
+
+<ul>
+ <li>テストアプリがビルドに含まれます。</li>
+ <li>デフォルトでリモートデバッグがオンになります。</li>
+ <li>画面ロックはオンになります (その代わり USB 接続は切断されません)。</li>
+ <li><a href="/ja/docs/Mozilla/QA/Marionette">Marionette</a> がオンになります。これは Gaia <a href="/ja/docs/Mozilla/Firefox_OS/Platform/Testing/Gaia_unit_tests" title="/docs/Mozilla/Firefox_OS/Platform/Testing/Gaia_unit_tests">ユニットテスト</a> 時に必要になります。</li>
+ <li>はじめてガイドアプリはオフになります。</li>
+ <li>オフラインキャッシュは、たとえ生成されても使用されません。</li>
+</ul>
+
+<div class="note">
+<p><strong>注記</strong>: 現在、バグ (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1180103" title="B2G desktop client get an empty homescreen when run w/ debug profile (gaia/profile-debug)">バグ 1180103</a>) があり、Gaia のデバッグプロファイルでFirefox OS シミュレータ (WebIDE でも何経由でも) を実行した時、空のホーム画面が描画されます。これを回避するには、代わりに <code>DEBUG=1 DESKTOP=0 make</code> とします ( <a href="#Device_debug_make">端末デバッグ make</a> を参照)。</p>
+</div>
+
+<h3 id="端末デバッグ_make">端末デバッグ make</h3>
+
+<pre class="brush: bash">DEVICE_DEBUG=1 make</pre>
+
+<p>これは端末の画面ロックをオンにし、ADB ツールのデバッグを有効にするので、端末のデバッグに便利です。</p>
+
+<p>このパラメータは、Firefox OS 1.2 以降のバージョンで、Firefox OS Webアプリを <a href="/docs/Tools/WebIDE">WebIDE</a> でデバッグする時に指定します</p>
+
+<h3 id="デスクトップデバッグ_make">デスクトップデバッグ make</h3>
+
+<pre class="brush: bash">DEBUG=1 DESKTOP=0 make</pre>
+
+<p>このオプションは、<a href="/ja/Firefox_OS/Using_the_B2G_desktop_client">B2G デスクトップ</a> 内で実行する、デスクトップデバッグ版を作成します。</p>
+
+<h3 id="公式_Mozilla_ブランド_make">公式 Mozilla ブランド make</h3>
+
+<pre class="brush: bash">MOZILLA_OFFICIAL=1 make</pre>
+
+<p>公式の Mozilla ブランドのビルドを make するのに使います。</p>
+
+<h3 id="ドッグフード_make">ドッグフード make</h3>
+
+<pre class="brush: bash">DOGFOOD=1 make</pre>
+
+<p>ドッグフードオプションとユーティリティがオンになります、例えば、Feedback アプリで、簡単に OS のフィードバック投稿ができます。</p>
+
+<h3 id="システムアプリ_make">システムアプリ make</h3>
+
+<pre class="brush: bash">B2G_SYSTEM_APPS=1 make</pre>
+
+<p>この環境変数は、アプリを <code>/data/local</code> ではなく、<code>/system/b2g</code> に配置します。ユーザビルドの作業をする時に使うべきです。この変数は、<code>make production</code> を実行した時に自動セットされます。また <code>install-gaia</code> や <code>reset-gaia</code> にも使われます。</p>
+
+<h3 id="ディストリビューションおよびマーケット向けのカスタマイズビルド">ディストリビューションおよびマーケット向けのカスタマイズビルド</h3>
+
+<pre class="brush: bash">GAIA_DISTRIBUTION_DIR=./dir</pre>
+
+<div class="note">
+<p><strong>注記</strong>: 詳細は <a href="/ja/Firefox_OS/Hacking_Firefox_OS/Market_customizations_guide">Market カスタマイズ</a> をお読みください。</p>
+</div>
+
+<h2 id="開発者デバッグ_オプション">開発者/デバッグ オプション</h2>
+
+<p>デバッグ用途で、機能を追加・削除したり、設定を変更する make オプションもあります。</p>
+
+<h3 id="リモートデバッグを有効化">リモートデバッグを有効化</h3>
+
+<pre class="brush: bash">REMOTE_DEBUGGER=1</pre>
+
+<p>これは、<a href="/ja/Firefox_OS/Debugging/Developer_settings#Remote_debugging">開発者設定</a> のオプション設定と同じ、端末上のリモートデバッグを有効にします。</p>
+
+<h3 id="JavaScript_最適化_make">JavaScript 最適化 make</h3>
+
+<pre class="brush: bash">GAIA_OPTIMIZE=1 make</pre>
+
+<p>これは、Gaia の JavaScript 最適化の起点となり、ファイルを連結・圧縮します。これは、<code>make production</code> を実行した時に自動でセットされます。また、<code>install-gaia</code> や <code>reset-gaia</code> にも使われます。</p>
+
+<h3 id="高解像度のイメージアセット">高解像度のイメージアセット</h3>
+
+<pre class="brush: bash">GAIA_DEV_PIXELS_PER_PX=1.5 make</pre>
+
+<p>あるいは、別名で:</p>
+
+<pre class="brush: bash">GAIA_DPPX=1.5 make</pre>
+
+<p>アプリのパッケージ時に、このオプションは、画像を <code>*@1.5x.(gif|jpg|png)</code> の同等品が存在する場合に、その画像に置き換えます。上記オプションを標準の <code>make</code> コマンドの部分的なオプションとして使う必要があります。例えば:</p>
+
+<pre class="brush: bash">GAIA_DEV_PIXELS_PER_PX=1.5 make reset-gaia
+
+GAIA_DEV_PIXELS_PER_PX=1.5 make install-gaia</pre>
+
+<p>Gaia は現在、次の画面解像度をターゲットとしています:</p>
+
+<ul>
+ <li>qHD: ~540×960; 端末のピクセル比 = 1.6875</li>
+ <li>WVGA: ~480×800; 端末のピクセル比 = 1.5</li>
+ <li>HBGA (320x240); 端末のピクセル比 = 1</li>
+</ul>
+
+<p>qHD と WVGA 端末で画像が確実にシャープに見えるために、<code>GAIA_DEV_PIXELS_PER_PX</code> を使います。CSS ピクセル単位あたりの端末ピクセルについて、詳しい情報は、<a href="https://developer.mozilla.org/ja/docs/Mozilla/Mobile/Viewport_meta_tag#A_pixel_is_not_a_pixel" title="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag#A_pixel_is_not_a_pixel">A pixel is not a pixel</a> 参照してください</p>
+
+<h3 id="統合テストの実行">統合テストの実行</h3>
+
+<p>make を使って Gaia の統合テストを実行できます。詳細は<a href="/ja/Firefox_OS/Platform/Automated_testing/Gaia_integration_tests">Gaia 統合テスト</a> を参照してください。</p>
+
+<h3 id="Raptor_パフォーマンステストの実行">Raptor パフォーマンステストの実行</h3>
+
+<p>Raptor テストを実行するためには、テストを実際に行う前に、端末を構成する必要があります。詳しくは、<a href="/Firefox_OS/Automated_testing/Raptor">Raptor</a> を参照してください。</p>
+
+<pre class="brush: bash">make raptor</pre>
+
+<h3 id="低メモリプロファイルのビルド">低メモリプロファイルのビルド</h3>
+
+<pre class="brush: bash">GAIA_MEMORY_PROFILE=low make</pre>
+
+<p>この変数は、Gaia の低メモリプロファイルを生成します。これは、Tarako のような低メモリ端末を想定しています。</p>
+
+<h3 id="はじめてガイド_(FTU)_の無効化">はじめてガイド (FTU) の無効化</h3>
+
+<pre class="brush: bash">NOFTU=1
+</pre>
+
+<p>この環境変数で FTU が無効になります。</p>
+
+<h3 id="ロック画面の無効化">ロック画面の無効化</h3>
+
+<p>Firefox OS のロック画面を <code>NO_LOCK_SCREEN</code> オプションを使って無効化できます、例えば:</p>
+
+<pre class="brush: bash">NO_LOCK_SCREEN=1 make</pre>
+
+<h3 id="リファレンス負荷データ">リファレンス負荷データ</h3>
+
+<p>リファレンス負荷データを使うと、開発者やテスト担当者は、新たにフラッシュされた電話機に対して、いくつかのアプリに大量のデータを素早くインストールできます。</p>
+
+<p>そのコマンドは次の通り (gaia ディレクトリから):</p>
+
+<pre class="brush: bash">make reference-workload-light</pre>
+
+<ul>
+ <li>200 件の連絡先</li>
+ <li>200 件の SMS メッセージ</li>
+ <li>50 件の通話履歴エントリ</li>
+ <li>20 枚のギャラリー画像</li>
+ <li>20 曲の歌</li>
+ <li>5 本の動画</li>
+</ul>
+
+<pre class="brush: bash">make reference-workload-medium</pre>
+
+<ul>
+ <li>500 件の連絡先</li>
+ <li>500 件の SMS メッセージ</li>
+ <li>100 件の通話履歴エントリ</li>
+ <li>50 枚のギャラリー画像</li>
+ <li>50 曲の歌</li>
+ <li>10 本の動画</li>
+</ul>
+
+<pre class="brush: bash">make reference-workload-heavy</pre>
+
+<ul>
+ <li>1000 件の連絡先</li>
+ <li>1000 件の SMS メッセージ</li>
+ <li>200 件の通話履歴エントリ</li>
+ <li>100 枚のギャラリー画像</li>
+ <li>100 曲の歌</li>
+ <li>20 本の動画</li>
+</ul>
+
+<pre class="brush: bash">make reference-workload-x-heavy</pre>
+
+<ul>
+ <li>2000 件の連絡先</li>
+ <li>2000 件の SMS メッセージ</li>
+ <li>500 件の通話履歴エントリ</li>
+ <li>250 枚のギャラリー画像</li>
+ <li>250 曲の歌</li>
+ <li>50 本の動画</li>
+</ul>
+
+<p>これらのターゲットには、アプリ名をスペースで区切った <code>APP</code> 環境変数か、<code>APPS</code> 環境変数が指定できます。例えば:</p>
+
+<pre class="brush: bash">APP=sms make reference-workload-light
+APPS="sms communications/contacts" make reference-workload-heavy
+</pre>
+
+<p>利用可能なアプリは次の通り:</p>
+
+<pre class="brush: bash">APPS="gallery music video communications/contacts sms communications/dialer"</pre>
+
+<p>リファレンス負荷データに音楽 (歌) を入れるには、mid3v2 ユーティリティがインストールされていなければなりません。このユーティリティは次のコマンドでインストールします:</p>
+
+<pre class="brush: bash">sudo apt-get install python-mutagen</pre>
+
+<p>代わりに、Fedora や RHEL を実行している場合、これを使います:</p>
+
+<pre class="brush: bash">sudo yum install python-mutagen</pre>
+
+<h3 id="ドキュメント_make">ドキュメント make</h3>
+
+<p>Gaia のドキュメントは、jsdoc3 を通じてビルドされます。これを生成するには、次のコマンドを使います:</p>
+
+<pre class="brush: bash">make docs</pre>
+
+<h3 id="IME_レイアウトと辞書の有効化">IME レイアウトと辞書の有効化</h3>
+
+<p>キーボード IME レイアウトと辞書を有効化するには、次のコマンド構成を使用します:</p>
+
+<pre class="brush: bash">GAIA_KEYBOARD_LAYOUTS=en,de,fr,jp-kanji make</pre>
+
+<p>現在デフォルトでは、ディスク容量のために、全てのレイアウトを積んでいません。レイアウトと辞書を切り離すために <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1029951">Bug 1029951</a> が作業中です (ユーザ辞書をダウンロード提供します)。</p>
+
+<p>すべての利用可能なレイアウトを知るには <a href="https://github.com/mozilla-b2g/gaia/blob/26fb1315c57b029eb66cc1421d5df7bbd0d9acb3/shared/js/keyboard_helper.js#L96">shared/js/keyboard_helper.js</a> のファイルを見てください。</p>

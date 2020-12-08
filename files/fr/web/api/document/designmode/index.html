@@ -1,0 +1,102 @@
+---
+title: Document.designMode
+slug: Web/API/Document/designMode
+translation_of: Web/API/Document/designMode
+---
+<div>{{ ApiRef() }}</div>
+
+<div> </div>
+
+<h2 id="Summary" name="Summary">Résumé</h2>
+
+<p><span id="result_box" lang="fr"><span class="hps">document.designMode</span> <span class="hps">contrôle si</span> <span class="hps">l'ensemble du document</span> <span class="hps">est modifiable.</span> <span class="hps">Les valeurs valides sont</span> <span class="hps">"on"</span> <span class="hps">et "off"</span><span>.</span> <span class="hps">Conformément à la spécification</span><span>,</span> <span class="hps">cette propriété</span> <span class="hps">est par</span> <span class="hps">défaut</span> <span class="hps">sur "off"</span><span>.</span> <span class="hps">Firefox</span> <span class="hps">suit</span> <span class="hps">cette norme</span><span>.</span> <span class="hps">Les</span> <span class="hps">versions antérieures de</span> <span class="hps">Chrome</span> <span class="hps">et IE</span> <span class="hps">ont par défaut la valeur</span><span class="atn hps"> "</span></span><code>inherit</code><span lang="fr"><span>"</span><span>.</span> Pour les versions entre <span class="hps">IE6-10</span><span>,</span> <span class="hps">la valeur</span> <span class="hps">est en majuscule</span><span>.</span></span></p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="brush: js">var mode = document.designMode;
+document.designMode = "on";
+document.designMode = "off";</pre>
+
+<h2 id="Example" name="Example">Exemple</h2>
+
+<p>Rendre un document {{HTMLElement("iframe")}} éditable</p>
+
+<pre>iframe_node.contentDocument.designMode = "on";
+</pre>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#making-entire-documents-editable:-the-designmode-idl-attribute', 'designMode')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilité_des_navigateurs" style="font-size: 2.14285714285714rem;">Compatibilité des navigateurs</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th style="line-height: 16px;">Feature</th>
+   <th style="line-height: 16px;">Chrome</th>
+   <th style="line-height: 16px;">Firefox (Gecko)</th>
+   <th style="line-height: 16px;">Internet Explorer</th>
+   <th style="line-height: 16px;">Opera</th>
+   <th style="line-height: 16px;">Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th style="line-height: 16px;">Feature</th>
+   <th style="line-height: 16px;">Android</th>
+   <th style="line-height: 16px;">Chrome for Android</th>
+   <th style="line-height: 16px;">Firefox Mobile (Gecko)</th>
+   <th style="line-height: 16px;">IE Mobile</th>
+   <th style="line-height: 16px;">Opera Mobile</th>
+   <th style="line-height: 16px;">Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="See_also" name="See_also">Voir aussi</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Rich-Text_Editing_in_Mozilla">Rich-Text Editing in Mozilla</a></li>
+ <li>{{domxref("HTMLElement.contentEditable")}}</li>
+ <li><a href="https://msdn.microsoft.com/en-us/library/ms533720(v=vs.85).aspx">designMode property</a> on MSDN</li>
+</ul>

@@ -1,0 +1,62 @@
+---
+title: 响应式 Web 设计
+slug: Web_Development/响应式_Web_设计
+tags:
+  - Web开发
+  - 响应式设计
+translation_of: Web/Progressive_web_apps
+---
+<p>随着越来越多的用户使用移动设备来浏览网站和应用，Web设计人员和开发人员需要确保他们的作品在移动设备上同样能正常运作，并且看上去和在传统台式电脑上一样好。 著名设计师 Luke Wroblewski 主张 "<a class="external" href="http://www.lukew.com/ff/entry.asp?933" title="http://www.lukew.com/ff/entry.asp?933">移动优先</a>" 设计而不是为桌面端设计完之后再考虑移动端。 无论您将移动设备作为主要目标来设计或作为额外目标，您都可以借助强大的CSS来保证同样的内容从手机到宽屏高分辨率显示器上，实现跨全部硬件平台访问和适应。</p>
+
+<p>这种方法被称为“响应式 Web 设计”。它的一些策略包括：:</p>
+
+<ul>
+ <li><strong>流式布局：</strong> 按照浏览器视窗的百分比来设定所有容器的宽度，从而使容器在浏览器窗口大小变化时自动缩放。</li>
+ <li><strong>媒体查询：</strong> 基于显示设备的物理特性（例如：尺寸、分辨率、宽高比、颜色位深等）来调用不同的样式表。</li>
+ <li><strong>流式图片：</strong> 设置图像所占宽度至多为设备的最大宽度。</li>
+</ul>
+
+<h3 id="Firefox_Marketplace_的最低需求">Firefox Marketplace 的最低需求</h3>
+
+<p>如果您提交一个应用到 Firefox OS 或 Firefox for Android 上的Firefox Marketplace，那么这个应用必须响应不同的手机屏幕尺寸和屏幕像素密度。请记住屏幕最小尺寸为 320 * 480 像素。另一个常见的错误是未识别屏幕像素密度，以至于没有相应地调整字体大小和触摸目标。欲了解更多信息， 请参阅 <a href="/en-US/docs/Web/Apps/Publishing/Marketplace_review_criteria" title="/en-US/docs/Web/Apps/Publishing/Marketplace_review_criteria">Marketplace 审查准则</a>。</p>
+
+<h2 id="相关资源">相关资源</h2>
+
+<h3 id="概述">概述</h3>
+
+<ul>
+ <li><a class="external" href="http://www.alistapart.com/articles/responsive-web-design/" title="http://www.alistapart.com/articles/responsive-web-design/">响应式 Web 设计</a>, by Ethan Marcotte</li>
+ <li><a class="external" href="http://thinkvitamin.com/design/beginners-guide-to-responsive-web-design/" title="http://thinkvitamin.com/design/beginners-guide-to-responsive-web-design/">响应式 Web 设计：初学者入门教程</a>, by Rick Petit</li>
+ <li><a class="external" href="http://coding.smashingmagazine.com/2011/01/12/guidelines-for-responsive-web-design/" title="http://coding.smashingmagazine.com/2011/01/12/guidelines-for-responsive-web-design/">响应式 Web 设计介绍与应用</a>, by Kayla Knight</li>
+ <li><a class="external" href="http://www.lukew.com/ff/entry.asp?1436" title="http://www.lukew.com/ff/entry.asp?1436">多设备 Web 设计：一种进化</a>, by Luke Wroblewski</li>
+ <li><em>响应式设计工作流</em> by Stephen Hay (book)</li>
+ <li>响应式 Web 设计 - 介绍 </li>
+</ul>
+
+<h3 id="技术文档">技术文档</h3>
+
+<ul>
+ <li><a href="/en/CSS/Media_queries" title="CSS media queries">CSS 媒体查询</a> 参考文档</li>
+ <li><a class="external" href="http://davidwalsh.name/pointer-media-query" title="pointer Media Query">指针媒体查询</a>, by David Walsh</li>
+ <li><a class="external" href="http://css-tricks.com/6731-css-media-queries/" title="http://css-tricks.com/6731-css-media-queries/">使用 CSS 媒体查询响应不同可用空间</a>, by Chris Coyier</li>
+ <li><a class="external" href="http://www.maxdesign.com.au/articles/liquid/" title="http://www.maxdesign.com.au/articles/liquid/">简单流式布局</a>, by Russ Weakley</li>
+ <li><a class="external" href="http://unstoppablerobotninja.com/entry/fluid-images/" title="http://unstoppablerobotninja.com/entry/fluid-images/">流式图像</a>, by Ethan Marcotte</li>
+ <li><a class="external" href="http://www.whatcreative.co.uk/blog/tips/designing-for-touch-screen/" title="http://www.whatcreative.co.uk/blog/tips/designing-for-touch-screen/">为触摸屏而设计</a>, by Chris Kemm</li>
+ <li><a class="external" href="http://www.smashingmagazine.com/2011/07/22/responsive-web-design-techniques-tools-and-design-strategies/" title="http://www.smashingmagazine.com/2011/07/22/responsive-web-design-techniques-tools-and-design-strategies/">响应式 Web 设计技术、工具以及设计方案</a>, by Smashing Editorial Team</li>
+</ul>
+
+<h3 id="工具">工具</h3>
+
+<ul>
+ <li><a href="/en-US/docs/Tools/Responsive_Design_View" title="/en-US/docs/Tools/Responsive_Design_View">Responsive Design View</a> in Firefox</li>
+</ul>
+
+<h3 id="样例">样例</h3>
+
+<ul>
+ <li><a href="/en-US/demos/devderby/2011/october" title="https://developer.mozilla.org/en-US/demos/devderby/2011/october/">DevDerby demos of CSS 媒体查询</a></li>
+ <li><a class="external" href="http://designshack.net/articles/css/20-amazing-examples-of-using-media-queries-for-responsive-web-design" title="http://designshack.net/articles/css/20-amazing-examples-of-using-media-queries-for-responsive-web-design">20个使用媒体查询完成的响应式 Web 设计的震撼样例</a>, by Joshua Johnson</li>
+ <li><a class="external" href="http://designmodo.com/responsive-design-examples/" title="http://designmodo.com/responsive-design-examples/">响应式设计：50个样例和最佳实践</a></li>
+</ul>
+
+<h3 id="sect1"></h3>

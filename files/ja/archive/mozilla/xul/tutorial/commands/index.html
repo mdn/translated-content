@@ -1,0 +1,211 @@
+---
+title: コマンド
+slug: Archive/Mozilla/XUL/Tutorial/Commands
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Commands
+---
+<p>
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Focus_and_Selection" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Updating_Commands">次のページ  »</a></p>
+</div>
+<p>コマンドは、<span style="border-bottom: 1px dashed green;" title="operation">操作</span>に応じて呼び出され、必要な処理を行います。
+</p><p><span id="Command_Elements"></span>
+</p>
+<h3 id="command_.E8.A6.81.E7.B4.A0" name="command_.E8.A6.81.E7.B4.A0"> command 要素 </h3>
+<p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/command" title="command">command</a></code></code> 要素は、操作に対する処理を実行していくために使用可能な、コマンドの作成に利用されます。
+操作に関する処理を行うためには、単にスクリプトを呼び出すだけでもよいので、コマンドは「利用しなければならない」ものではありません。
+しかしながら、コマンドには、必要に応じて自動的に無効にできたり、実装の詳細について知らなくても外部から呼び出せるといった利点があります。
+また、コマンドは、操作をコードから切り離して抽象化するのに適しており、アプリケーションが大きくなるほど有用になります。
+</p><p>例えば、クリップボード系のメニューコマンドである、「切り取り」や、「コピー」、「貼り付け」を実装するために、コマンドを利用することができます。
+これらを、コマンドを利用せずに実装しようとした場合、どのフィールドがフォーカスを得ているかを調べ、その要素に対して適切な操作であるかを確認する必要があります。
+加えて、切り取りやコピー操作では、フォーカスを得ている要素が、選択状態のテキストを含んでいるかどうかに応じて、メニューコマンドの有効化や無効化を行ったり、
+貼り付け操作では、クリップボードの内容が、貼り付けるのに適しているかを調べる必要があります。
+こういった具合に、これらを独自に実装する場合は複雑な記述が必要になりますが、
+コマンドを利用すれば、上記の処理のほとんどをコマンドが実施してくれます。
+</p><p>コマンドは、任意の操作に対して利用できます。
+Mozilla では、ほぼすべてのメニューコマンドで利用されています。
+加えて、テキストフィールドなどのウィジェットには、最初からサポートされているコマンドが多数あり、アプリケーションからも呼び出すことが可能になっています。
+どの要素がフォーカスを得ているかに依存するような操作については、これらのコマンドを利用すべきでしょう。
+</p><p>コマンドは、その id 属性によって識別されます。
+Mozilla では、コマンドの id は、「&lt;tt&gt;cmd_&lt;/tt&gt;」で始めるのが慣例になっています。
+もし、既に使用されているコマンドで利用できそうなものがある場合、おそらくは、そのコマンドを利用するために、その id を指定したいと考えるはずですが、
+独自のコマンドを作成する場合は、id は好きなように決められます。
+このときは、id の衝突を避けるために、id にアプリケーション名を含めておくのも良いでしょう。
+</p><p><span id="Example:_Simple_command"></span>
+</p>
+<h4 id=".E5.8D.98.E7.B4.94.E3.81.AA_command_.E3.81.AE.E4.BE.8B" name=".E5.8D.98.E7.B4.94.E3.81.AA_command_.E3.81.AE.E4.BE.8B"> 単純な command の例 </h4>
+<p>以下に、単純なコマンドの利用方法を示します。
+</p><p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_commands_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_commands_1.xul">表示</a>
+</p>
+<pre>&lt;command id="cmd_openhelp" oncommand="alert('Help!');"/&gt;
+&lt;button label="Help" command="cmd_openhelp"/&gt;
+</pre>
+<p>この例では、<code><code id="a-oncommand"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/oncommand">oncommand</a></code></code> 属性を、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code> 要素ではなく、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/command" title="command">command</a></code></code> 要素に設定しています。
+また、この 2 つの要素は、コマンドの <code><code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> を値とする <code><code id="a-command"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/command">command</a></code></code> 属性によって結びつけられています。
+この結果、ボタンが押されたときに、「&lt;tt&gt;cmd_openhelp&lt;/tt&gt;」コマンドが呼び出されるようになります。
+</p><p>この方法には、2 つの利点があります。
+</p>
+<ul><li> まず、全ての操作をコマンドにすることで、 XUL ファイルの 1 カ所にまとめることができます。コードをまとめることで、ハンドラが <abbr title="ユーザーインターフェイス">UI</abbr> のコード中に散在することを防げます。
+</li><li> もう 1 つの利点は、複数のボタンなどの UI 要素を、同じコマンドに結びつけられるようになることです。例えば、同じ操作を行う、<a href="ja/XUL_Tutorial/Simple_Menu_Bars">メニュー項目</a>、<a href="ja/XUL_Tutorial/Toolbars">ツールバーボタン</a>、<a href="ja/XUL_Tutorial/Keyboard_Shortcuts">キーボードショートカット</a>のそれぞれに対して、同じコマンドを設定できます。つまり、同じコードを 3 回繰り返して記述するのではなく、3 つの全てに対して同じコマンドを割り当てるだけで済みます。通常、コマンドは、コマンドイベントを送出するものに対してのみ割り当てます。
+</li></ul>
+<p>さらに、以下のような利点もあります。
+</p>
+<ul><li> コマンドに対して <code><code id="a-disabled"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code></code> 属性を設定することで、コマンドは無効化され、起動されなくなます。
+</li><li> コマンドが割り当てられたボタンやメニュー項目も、自動的に無効化されます。
+</li><li> コマンドを再び有効にすると、ボタンも有効になります。
+</li></ul>
+<p><span id="Example:_Toggling_command_disabled"></span>
+</p>
+<h4 id=".E3.82.B3.E3.83.9E.E3.83.B3.E3.83.89.E7.84.A1.E5.8A.B9.E5.8C.96.E3.81.AE.E4.BE.8B" name=".E3.82.B3.E3.83.9E.E3.83.B3.E3.83.89.E7.84.A1.E5.8A.B9.E5.8C.96.E3.81.AE.E4.BE.8B"> コマンド無効化の例 </h4>
+<p><span id="%E4%BE%8B_2"><a id="%E4%BE%8B_2"></a><strong>例 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_commands_2.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_commands_2.xul">表示</a>
+</p>
+<pre>&lt;command id="cmd_openhelp" oncommand="alert('Help');"/&gt;
+&lt;button label="Help" command="cmd_openhelp"/&gt;
+&lt;button label="More Help" command="cmd_openhelp"/&gt;
+
+&lt;button label="Disable"
+        oncommand="document.getElementById('cmd_openhelp').setAttribute('disabled','true');"/&gt;
+&lt;button label="Enable"
+        oncommand="document.getElementById('cmd_openhelp').removeAttribute('disabled');"/&gt;
+</pre>
+<p>この例では、2 つのボタンに同じコマンドが割り当てられています。
+Disable ボタンが押されると、コマンドの <code><code id="a-disabled"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code></code> 属性が設定され、ボタンは、両方とも無効化されます。
+</p><p>通常、コマンドは XUL ファイルの先頭の方に <code><code><a href="/ja/docs/Mozilla/Tech/XUL/commandset" title="commandset">commandset</a></code></code> 要素を使って、以下のようにまとめて置きます。
+</p>
+<pre>&lt;commandset&gt;
+  &lt;command id="cmd_open" oncommand="alert('Open!');"/&gt;
+  &lt;command id="cmd_help" oncommand="alert('Help!');"/&gt;
+&lt;/commandset&gt;
+</pre>
+<p>コマンドは、コマンドが割り当てられている、ボタンなどの要素が活性化されると起動されますが、
+<code><code><a href="/ja/docs/Mozilla/Tech/XUL/command" title="command">command</a></code></code> 要素や、ボタンなどのコマンドが割り当てられている要素に対して、<code><span id="m-doCommand"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/doCommand">doCommand</a></code></span></code> メソッドを呼び出すことによっても起動することが可能です。
+</p><p><span id="Command_Dispatching"></span>
+</p>
+<h3 id=".E3.82.B3.E3.83.9E.E3.83.B3.E3.83.89.E3.81.AE.E3.83.87.E3.82.A3.E3.82.B9.E3.83.91.E3.83.83.E3.83.81" name=".E3.82.B3.E3.83.9E.E3.83.B3.E3.83.89.E3.81.AE.E3.83.87.E3.82.A3.E3.82.B9.E3.83.91.E3.83.83.E3.83.81"> コマンドのディスパッチ </h3>
+<p>コマンドを、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/command" title="command">command</a></code></code> 要素を使わずに作成したり、あるいは、少なくともコマンドに <code><code id="a-oncommand"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/oncommand">oncommand</a></code></code> 属性を設定せずに利用することが可能です。
+この場合、コマンドがスクリプトを直接起動することはありませんが、代わりにコマンドを処理するための要素や関数が検索されることになります。
+これらの関数の多くは、XUL そのものとは分けられており、一部は、ウィジェットで内部的に処理されます。
+コマンドの処理を振り分けるために、XUL ではコマンドディスパッチャと呼ばれるオブジェクトを利用します。
+このオブジェクトは、コントローラと呼ばれる、コマンドを処理するためのハンドラを特定します。
+つまり、コマンドが起動されると、コマンドディスパッチャはそのコマンドを処理可能なコントローラを特定することになります。
+また、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/command" title="command">command</a></code></code> 要素は、コマンドのためのコントローラの一種だと考えることができます。
+</p><p>コマンドディスパッチャは、現在フォーカスを得ている要素に対し、そのコマンドを処理可能なコントローラを持っているかどうかをチェックします。
+このために、XUL の要素は、<code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/controllers">controllers</a></span></code></code> プロパティを持っています。
+この、<code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/controllers">controllers</a></span></code></code> プロパティを使用して、独自のコマンドを追加することも可能です。
+例えば、これによって、リストボックスに「切り取り」、「コピー」、「貼り付け」処理の追加を行うことができます。
+(実際の例は、後で示します)。
+デフォルトでは、テキスト入力欄のみがコントローラを持っており、
+「クリップボード操作」、「<span style="border-bottom: 1px dashed green;" title="selection">選択</span>」、「<span style="border-bottom: 1px dashed green;" title="undo">元に戻す</span>」、「<span style="border-bottom: 1px dashed green;" title="redo">やり直し</span>」などの編集操作を行います。
+要素は、複数のコントローラを持っているかもしれず、その場合、全てがチェック対象であることに注意して下さい。
+</p><p>現在フォーカスを得ている要素が、適合するコントローラを持っていない場合、次にウインドウがチェックされます。
+ウインドウにも、<code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/controllers">controllers</a></span></code></code> プロパティがあり、必要ならば変更することも可能です。
+フレーム利用時に、フォーカスをフレームの内側の要素が得ていた場合、トップレベルウインドウに達するまで、入れ子になっている各フレームについて、同様のチェックがされていきます。
+これによって、フォーカスがフレームの内側にある場合であっても、コマンドは問題なく機能します。
+また、Mozilla ブラウザのメインメニューからの編集系コマンドの呼び出しが、コンテンツ領域に対して有効であることから、
+コマンドは、ブラウザ要素に対しても、問題なく機能することがいえます。
+HTML でも、コマンドとコントローラのシステムが利用できることを補足しておきます。
+といっても、特権の無いウェブページからは利用できませんが、例えばブラウザの<span style="border-bottom: 1px dashed green;" title="Extension">拡張機能</span>などから利用することは可能です。
+最終的に、ウインドウにもコマンドを処理可能なコントローラが存在しない場合は、何も起きません。
+</p><p>コマンドディスパッチャは、<span style="border-bottom: 1px dashed green;" title="document">文書</span>オブジェクトの <code>commandDispatcher</code> プロパティ、あるいは、要素かウインドウにあるコントローラのリストから取得することが可能です。
+コマンドディスパッチャは、コマンドのためのコントローラを取得したり、フォーカスを得ている要素の取得や変更を行うメソッドを持っています。
+</p><p><span id="Adding_Controllers"></span>
+</p>
+<h4 id=".E3.82.B3.E3.83.B3.E3.83.88.E3.83.AD.E3.83.BC.E3.83.A9.E3.82.92.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B" name=".E3.82.B3.E3.83.B3.E3.83.88.E3.83.AD.E3.83.BC.E3.83.A9.E3.82.92.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B"> コントローラを追加する </h4>
+<p>コマンドに反応するために、独自のコントローラを実装することも可能です。
+コントローラは、慎重に配置すれば、デフォルトのコマンド処理を置き換えることさえ可能になります。
+コントローラには、以下の 4 つのメソッドを実装することが求められています。
+</p>
+<dl><dt> supportsCommand (command) </dt><dd> このメソッドは、コントローラがコマンドをサポートする場合に true を返す必要があります。 false が返された場合、コマンドはハンドルされず、コマンドディスパッチャは他のコントローラの検索を続けます。 1 つのコントローラが、複数のコマンドをサポートすることも可能です。
+</dd><dt> isCommandEnabled (command) </dt><dd> このメソッドは、コマンドが有効な場合に true を返し、無効な場合に false を返す必要があります。対応するボタンは自動的に有効化、または無効化されます。
+</dd><dt> doCommand (command) </dt><dd> コマンドを実行します。ここにコマンドを処理するコードを記述して下さい。
+</dd><dt> onEvent (event) </dt><dd> このメソッドはイベントを処理します。
+</dd></dl>
+<p><span id="Example:_Controller_implementation"></span>
+</p>
+<h5 id=".E3.82.B3.E3.83.B3.E3.83.88.E3.83.AD.E3.83.BC.E3.83.A9.E3.81.AE.E5.AE.9F.E8.A3.85.E4.BE.8B" name=".E3.82.B3.E3.83.B3.E3.83.88.E3.83.AD.E3.83.BC.E3.83.A9.E3.81.AE.E5.AE.9F.E8.A3.85.E4.BE.8B"> コントローラの実装例 </h5>
+<p>それでは、削除コマンドを処理可能なリストボックスの実装を行ってみましょう。
+これは、利用者がメニューから削除を選択したときに、リストボックスの選択されている行を削除します。
+このためには、コントローラを作成して <code>doCommand</code> メソッドの動作としてこの動作を行うように実装し、単純にこのリストボックスに結びつけるようにします。
+</p><p>ブラウザウインドウで以下の例 (<a href="https://developer.mozilla.org/samples/xultu/examples/commands.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/commands.xul">表示</a>) を開いて、リストの項目を選択してみてください。
+ブラウザの編集メニューの削除コマンドが有効になっていて、それを選択すると選択行が削除されることが確認できるはずです。<span style="color: darkgreen; background: #ef9;">【訳注: この例は リモートではなく、chrome URL からアクセスして特権を与えないと (少なくとも訳者の Firefox 1.5 では) うまく動作しないようです】</span>
+以下の例は、完璧に仕上げられたものではありません。
+実際には、削除後に選択域とフォーカスを正しく調整する必要があります。
+</p>
+<pre>&lt;window id="controller-example" title="Controller Example" onload="init();"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;script&gt;
+function init()
+{
+  var list = document.getElementById("theList");
+
+  var listController = {
+    supportsCommand : function(cmd){ return (cmd == "cmd_delete"); },
+    isCommandEnabled : function(cmd){
+      if (cmd == "cmd_delete") return (list.selectedItem != null);
+      return false;
+    },
+    doCommand : function(cmd){
+      list.removeItemAt(list.selectedIndex);
+    },
+    onEvent : function(evt){ }
+  };
+
+  list.controllers.appendController(listController);
+}
+&lt;/script&gt;
+
+&lt;listbox id="theList"&gt;
+  &lt;listitem label="Ocean"/&gt;
+  &lt;listitem label="Desert"/&gt;
+  &lt;listitem label="Jungle"/&gt;
+  &lt;listitem label="Swamp"/&gt;
+&lt;/listbox&gt;
+
+&lt;/window&gt;
+</pre>
+<p>このコントローラ (<code>listController</code>) は、上記の 4 つのメソッドを実装しています。
+まず、<code>supportsCommand</code> メソッドは、「&lt;tt&gt;cmd_delete&lt;/tt&gt;」コマンドの場合に true を返します。
+「&lt;tt&gt;cmd_delete&lt;/tt&gt;」は、削除メニュー項目が起動されたときに使用されるコマンド名になります。
+また、このコントローラは、それ以外のコマンドには対応していないため、その場合は false を返さなければなりません。
+対応するコマンドを追加したい場合は、このチェックが、対応する全てのコマンド対して true を返すように変更する必要があります。
+1 つのコントローラを、関連する複数のコマンド処理に使用するような場面は、しばしばあると思います。
+</p><p>次に、<code>isCommandEnabled</code> メソッドは、コマンドが有効になっているべきである場合に true を返します。
+この例では、リストボックス内に選択された項目があるかどうかを調べて、あれば true 、無ければ false を返しています。
+このため、すべての行が削除されると、削除コマンドは無効化されますが、
+この例は単純なため、反映させるにはリストボックスを明示的にクリックしてメニューを更新する必要があります。
+3 つめの、<code>doCommand</code> メソッドは、メニュー項目の削除が選択されたときに呼び出され、その結果、リストボックス内で選択されている行は削除されます。
+最後の、<code>onEvent</code> メソッドは、何もする必要がないため、何のコードも付与されていません。
+</p><p><span id="Override_Default_Controller"></span>
+</p>
+<h4 id=".E3.83.87.E3.83.95.E3.82.A9.E3.83.AB.E3.83.88.E3.81.AE.E3.82.B3.E3.83.B3.E3.83.88.E3.83.AD.E3.83.BC.E3.83.A9.E3.82.92.E7.BD.AE.E3.81.8D.E6.8F.9B.E3.81.88.E3.82.8B" name=".E3.83.87.E3.83.95.E3.82.A9.E3.83.AB.E3.83.88.E3.81.AE.E3.82.B3.E3.83.B3.E3.83.88.E3.83.AD.E3.83.BC.E3.83.A9.E3.82.92.E7.BD.AE.E3.81.8D.E6.8F.9B.E3.81.88.E3.82.8B"> デフォルトのコントローラを置き換える </h4>
+<p>前の例では、コントローラをリストボックスに付加するために、リストボックスの <code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/controllers">controllers</a></span></code></code> プロパティの <code>appendController</code> メソッドを呼び出しています。
+この <a class="external" href="http://www.xulplanet.com/references/xpcomref/ifaces/nsIControllers.html">controller オブジェクト</a>には、コントローラのリストを操作するメソッドがいくつかあります。
+例えば、<code>insertControllerAt</code> メソッドは、その要素の他のコントローラの前にコントローラを挿入します。
+これによって、既存のコマンドを置き換えることが可能です。
+例えば、以下の例で示す方法で、テキスト入力欄への<span style="border-bottom: 1px dashed green;" title="paste">貼り付け</span>を無効化することができます。
+</p>
+<pre>var tboxController = {
+  supportsCommand : function(cmd){ return (cmd == "cmd_paste"); },
+  isCommandEnabled : function(cmd){ return false; },
+  doCommand : function(cmd){ },
+  onEvent : function(evt){ }
+};
+
+document.getElementById("tbox").controllers.insertControllerAt(0,tboxController);
+</pre>
+<p>この例では、新しいコントローラは、「&lt;tt&gt;cmd_paste&lt;/tt&gt;」コマンドをサポートしますが、常に無効であると応答します。
+このコントローラをインデックス 0 の位置、すなわち他の全てのコントローラの前に挿入します。
+これによって、コマンドディスパッチャは、「&lt;tt&gt;cmd_paste&lt;/tt&gt;」コマンドを処理するためのコントローラを検索するとき、新しいコントローラの方を先に見つけることになり、
+デフォルトのテキスト入力欄のコントローラは、一切呼び出されなくなります。
+</p><p>次のセクションでは、コマンドの状態を自動更新する方法を見ていきます。
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Focus_and_Selection" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Updating_Commands">次のページ  »</a></p>
+</div>
+<p><br>
+</p>
+<div class="noinclude">
+</div>

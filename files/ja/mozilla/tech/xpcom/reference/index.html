@@ -1,0 +1,21 @@
+---
+title: XPCOM reference
+slug: Mozilla/Tech/XPCOM/Reference
+tags:
+  - Landing
+  - Mozilla
+  - NeedsTranslation
+  - Reference
+  - TopicStub
+  - XPCOM
+translation_of: Mozilla/Tech/XPCOM/Reference
+---
+<p>This reference describes the interfaces and functions provided by the <a href="/en-US/docs/Mozilla/Tech/XPCOM">XPCOM</a> library. In addition, it details the various helper classes and functions, as well as the components, provided by the <a href="/en-US/docs/Mozilla/Tech/XPCOM/Glue">XPCOM glue</a> library. The contents herein are oriented primarily toward extension developers and people embedding XPCOM in other projects.</p>
+<div class="note">
+ <p><strong>Note:</strong> If you're working on a module in the Mozilla codebase that's compiled with the <code>MOZILLA_INTERNAL_API</code> flag set, some of these APIs -- the string functions and classes in particular -- are not the ones you should be using. See the <a href="/en-US/docs/Mozilla/Tech/XPCOM/Guide/Internal_strings">XPCOM internal string guide</a> for documentation of the internal string API used within the Mozilla codebase.</p>
+</div>
+<div class="row topicpage-table">
+    <div class="section"><dl><dl><dt class="landingPageList"><a href="/ja/docs/NS_ENSURE_TRUE">NS ENSURE TRUE</a></dt><dd class="landingPageList"><strong>マクロ</strong></dd><dt class="landingPageList"><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Components">Standard XPCOM components</a></dt><dd class="landingPageList">There are a number of components provided in the standard implementation of XPCOM; these are as follows.</dd><dt class="landingPageList"><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Glue_classes">XPCOM glue classes</a></dt><dd class="landingPageList">These "glue" classes are provided to make it easier to use XPCOM from C++ code.</dd><dt class="landingPageList"><a href="/ja/docs/XPCOM_Interface_Reference_group">XPCOM Interface Reference group</a></dt><dd class="landingPageList">このページには2010年12月1日現在の Mozilla インターフェースが一覧となっています。<a href="/ja/XPCOM_Interface_Reference" title="ja/XPCOM_Interface_Reference">the XPCOM interface Reference</a> の一覧はアルファベット順に並べられていますが、このページではそれらを機能ごとにグループ化するという試みがなされています。グループ化とカテゴリの名称は著者<span style="color: darkgreen; background: #ef9;">【訳注: 英語版のこのページの著者】</span>による独断が多少入り混じっています。（これについては涙を流す結末になりうる重大な論点であるとは認識しています。ですが、どうやら私がこの編集を行った最初の人物であるようなので、最初の編集者としての権利を得たものとします。）</dd></dl></dl></div>
+    <div class="section"><dl><dt class="landingPageList"><a href="/ja/docs/XPCOM_Interface_Reference">XPCOM インタフェースリファレンス</a></dt><dd class="landingPageList">これは Mozilla プラットフォームにおいて提供されている XPCOM インタフェースのリファレンスです。</dd></dl></div>
+    </div>
+<p>Many XPCOM pages return an <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Core_functions/nsresult">nsresult</a></code>. Prior to Gecko 19 (Firefox 19 / Thunderbird 19 / SeaMonkey 2.16), this was an integer that simply returned an error code. It is now a strongly typed <code>enum</code> when XPCOM is built using a C++11 compiler. This causes compile-time errors to occur when improper values are returned as nsresult values, thereby making it easier to catch many bugs.</p>

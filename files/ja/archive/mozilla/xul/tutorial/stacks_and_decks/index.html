@@ -1,0 +1,113 @@
+---
+title: スタックとデッキ
+slug: Archive/Mozilla/XUL/Tutorial/Stacks_and_Decks
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Stacks_and_Decks
+---
+<p>
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Adding_More_Elements" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Stack_Positioning">次のページ  »</a></p>
+</div>
+<p>要素を重なった一組のカードのように扱えると便利なときがあります。
+スタック (<span style="color: green;">stack</span>) 要素と、デッキ (<span style="color: green;">deck</span>) 要素がこのために用意されています。
+</p><p><span id="Containers"></span>
+</p>
+<h3 id=".E3.82.B3.E3.83.B3.E3.83.86.E3.83.8A" name=".E3.82.B3.E3.83.B3.E3.83.86.E3.83.8A"> コンテナ </h3>
+<p>XUL のボックスは、それぞれが任意の要素を含むことのできるコンテナとして位置づけられます。
+<a href="ja/XUL_Tutorial/Toolbars">ツールバー</a>や<a href="ja/XUL_Tutorial/Tabboxes">タブ付きパネル</a>のようないくつかの要素も、特定の用途のために特化したボックスの一種という位置づけになります。
+<code><code><a href="/ja/docs/Mozilla/Tech/XUL/box" title="box">box</a></code></code> タグは、特別な性質のない最も単純なボックスを作ります。
+特化型のボックスは、内部に要素を配置するという点においては、通常のボックスと同じように動作しますが、それ以外の機能も追加されています。
+</p><p>実際のところ、多くのコンポーネントが、他の要素を含むことができます。
+これは「ボタンにラベル以外の要素も含めることができる」といった、
+ここまでのセクションで説明した例の中でも既に見ています。
+極端な話、スクロールバーも、明示的に子要素を作成しない限り、自動で子要素を作成する機能を持った、特化型のボックスの 1 つにすぎません。
+スクロールバーのもう 1 つの特殊な機能は、子要素の<span style="border-bottom: 1px dashed green;" title="thumb">サム</span>の移動を自動で処理することです。
+</p><p>ここからの数セクションにわたって、他の要素を保持するために設計された要素をいくつか紹介することにします。
+これらは特化型のボックスで、ボックスの属性をすべて使うことができます。
+</p><p><span id="Stacks"></span>
+</p>
+<h3 id=".E3.82.B9.E3.82.BF.E3.83.83.E3.82.AF" name=".E3.82.B9.E3.82.BF.E3.83.83.E3.82.AF"> スタック </h3>
+<p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code></code> 要素は、単純なボックスです。
+この要素は他のボックスと同じように動作しますが、子要素を重なり合うようにレイアウトできるという特質を持っています。
+スタック上の最初の子要素が一番下に描かれ、次に 2 番目の子要素がその上に描かれます。
+3 番目以降についても同様に続いていきます。
+スタックに積み重ねることができる子要素の数に制限はありません。
+</p><p>スタック要素では、<code><code id="a-orient"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code></code> プロパティはあまり意味がありません。
+スタックでは、子要素は並んでレイアウトされるのではなく、重なり合ってレイアウトされるからです。
+スタック要素のサイズは、最も大きな子要素によって決められます。
+または、スタック要素とその子要素のどちらに対しても、CSS プロパティの <a href="/ja/docs/Web/CSS/width" title="CSS の width プロパティは、要素の幅を設定します。既定では、このプロパティはコンテンツ領域の幅を設定しますが、 box-sizing を border-box に設定すると、境界領域の幅を設定します。"><code>width</code></a>、<a href="/ja/docs/Web/CSS/height" title="CSS の height プロパティは、要素の高さを指定します。既定では、このプロパティはコンテンツ領域の高さを定義します。しかし、 box-sizing が border-box に設定されていた場合は、 境界領域の高さを定義します。"><code>height</code></a>、<a href="/ja/docs/Web/CSS/min-width" title="min-width は、要素の最小幅を指定する CSS プロパティです。width プロパティの 使用値 が、min-width で指定した値を下回らないようにします。"><code>min-width</code></a> 及びその他の関連するプロパティを使って明示的にサイズを指定することも可能です。
+</p><p>スタック要素は、既にある要素に重ねてステータス表示を追加する必要があるといった場合に使うことができます。
+例えば、プログレスバーで、バーの上にラベルを表示さたいといった場合です。
+</p><p><span id="Shadowing_with_stacks"></span>
+</p>
+<h4 id=".E3.82.B9.E3.82.BF.E3.83.83.E3.82.AF.E3.81.A7.E5.BD.B1.E3.81.A4.E3.81.8D.E6.96.87.E5.AD.97.E3.82.92.E8.A1.A8.E7.8F.BE.E3.81.99.E3.82.8B" name=".E3.82.B9.E3.82.BF.E3.83.83.E3.82.AF.E3.81.A7.E5.BD.B1.E3.81.A4.E3.81.8D.E6.96.87.E5.AD.97.E3.82.92.E8.A1.A8.E7.8F.BE.E3.81.99.E3.82.8B"> スタックで影つき文字を表現する </h4>
+<p>また、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code></code> 要素の便利な用法のひとつとして、 CSS プロパティの多くをエミュレートできるというものがあります。
+例えば、以下のようにして、<a href="/ja/docs/Web/CSS/text-shadow" title="CSS の text-shadow プロパティはテキストに影を追加します。文字列及びその装飾に適用される影のコンマで区切られたリストを受け付けます。"><code>text-shadow</code></a> プロパティに似た効果を作ることができます。
+</p><p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_stacks_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_stacks_1.xul">表示</a>
+</p>
+<pre>&lt;stack&gt;
+  &lt;description value="Shadowed" style="padding-left: 1px; padding-top: 1px; font-size: 15pt"/&gt;
+  &lt;description value="Shadowed" style="color: red; font-size: 15pt;"/&gt;
+&lt;/stack&gt;
+</pre>
+<div class="float-right"><img alt="画像:stacks1.png"></div>
+<p>2 つの <code><code><a href="/ja/docs/Mozilla/Tech/XUL/description" title="description">description</a></code></code> 要素は、両方とも 15 ポイントのサイズのテキストを作ります。
+ただし、最初の要素は、その左端と上端にパディングを加えることによって、右下に 1 ピクセルずらされています。
+この結果、2 番目めの要素も、同じ「Shadowed」というテキストを描画しますが、最初のものから少しずれた位置になっています。2 番目の <code><code><a href="/ja/docs/Mozilla/Tech/XUL/description" title="description">description</a></code></code> 要素は、効果がよくわかるように、赤で描画されています。
+</p><p>この方法は、影の部分のスタイルを、本体とは完全に独立して設定できるため、
+<a href="/ja/docs/Web/CSS/text-shadow" title="CSS の text-shadow プロパティはテキストに影を追加します。文字列及びその装飾に適用される影のコンマで区切られたリストを受け付けます。"><code>text-shadow</code></a> にはない利点を持っています。
+具体的には、影に、独自のフォント、下線、サイズを持つことができます (影を点滅させることさえ可能です)。
+また、現バージョンの Mozilla では、CSS のテキストの影付きスタイルをサポートしていないのため、この方法のみが使用できます。
+この方法の欠点としては、影のために取られた領域がスタックサイズを大きくしてしまうことがあります。
+影付けは、無効状態のボタンの外観を作る場合に、非常に役立ちます。
+</p><p><span id="%E4%BE%8B_2"><a id="%E4%BE%8B_2"></a><strong>例 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_stacks_2.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_stacks_2.xul">表示</a>
+</p>
+<pre>&lt;stack style="background-color: #C0C0C0"&gt;
+  &lt;description value="Disabled" style="color: white; padding-left: 1px; padding-top: 1px;"/&gt;
+  &lt;description value="Disabled" style="color: grey;"/&gt;
+&lt;/stack&gt;
+</pre>
+<p>いくつかのプラットフォームでは、このテキスト配置と影の配色によって、無効の外観が作り出されています。
+</p><p>マウスクリックやキー入力といったイベントは、スタックの一番上にある要素、つまり、スタックに最後に入れられた要素に渡されるということに注意して下さい。
+これは、ボタンをスタックに入れる場合、最後に置かれた場合のみ、正しく動作するということを意味しています。
+</p><p><span id="Decks"></span>
+</p>
+<h3 id=".E3.83.87.E3.83.83.E3.82.AD" name=".E3.83.87.E3.83.83.E3.82.AD"> デッキ </h3>
+<p>デッキ (<code><code><a href="/ja/docs/Mozilla/Tech/XUL/deck" title="deck">deck</a></code></code>) 要素も、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code></code> 要素と同様に、子要素を順に重ねてレイアウトしますが、デッキでは一度に 1 つの子要素しか表示されない点が異なります。
+これは、一連の類似したパネルを順番に表示していく、ウィザード型のインターフェイスに使うことができます。
+パネルごとに別々のウィンドウを作成し、それぞれにナビゲーションボタンを加えたりする代わりに、
+内容が変わる部分にデッキを使用することによって、ウィンドウを 1 つ作るだけで済ますことができます。
+</p><p>スタックと同様に、デッキ内のページは <code><code><a href="/ja/docs/Mozilla/Tech/XUL/deck" title="deck">deck</a></code></code> 要素の直接の子要素から構成されます。
+<code><code><a href="/ja/docs/Mozilla/Tech/XUL/deck" title="deck">deck</a></code></code> 要素の中に子要素が 3 つあるとすると、デッキは 3 つの ページをもつことになります。
+表示するデッキのページは、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/deck" title="deck">deck</a></code></code> 要素の <code><code id="a-selectedIndex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/selectedIndex">selectedIndex</a></code></code> 属性を設定することによって、変更することができます。
+このインデックスは、どのページを表示するかを指定する数値で、
+ページの番号は、0 から始まります。
+そのため、デッキの最初の子要素はページ 0 で、 2 番目はページ 1 といった具合に続いていきます。
+</p><p>以下は、デッキの例です。
+</p><p><span id="%E4%BE%8B_3"><a id="%E4%BE%8B_3"></a><strong>例 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_stacks_3.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_stacks_3.xul">表示</a>
+</p>
+<pre>&lt;deck selectedIndex="2"&gt;
+  &lt;description value="This is the first page"/&gt;
+  &lt;button label="This is the second page"/&gt;
+  &lt;box&gt;
+    &lt;description value="This is the third page"/&gt;
+    &lt;button label="This is also the third page"/&gt;
+  &lt;/box&gt;
+&lt;/deck&gt;
+</pre>
+<p>この例では、ページが 3 つあり、デフォルトは、3 番目のページです。
+3 番目のページは、内部に 2 つの要素をもつボックスです。
+そのボックスと内部の要素がページを構成しています。
+デッキは最大の子要素と同じ大きさになりますので、ここでは、3 番目のページと同じ大きさになるはずです。
+</p><p>スクリプトを使って <code><code id="a-selectedIndex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/selectedIndex">selectedIndex</a></code></code> 属性を変更することにより、ページを切り替えることができます。
+これについては、イベントと DOM に関するセクションでもっと詳しく説明します。
+</p><p>次のセクションでは、スタックを使用する場合の子要素の配置方法について説明します。
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Adding_More_Elements" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Stack_Positioning">次のページ  »</a></p>
+</div>
+
+<div class="noinclude">
+</div>

@@ -1,0 +1,71 @@
+---
+title: extIConsole
+slug: Toolkit_API/extIConsole
+tags:
+  - FUEL
+  - Interfaces
+  - SMILE
+  - STEEL
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/Toolkit_API/extIConsole
+---
+<div>
+  <div class="blockIndicator standardNote">
+<p>この記事は <a href="https://developer.mozilla.org/ja/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a>  の新機能について述べています</p>
+</div></div>
+<p><code>extIConsole</code> インタフェースは、コンソールへの簡単なアクセスを提供します。<code>extIConsole</code> は <code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/exthelper/extIApplication.idl" rel="custom">toolkit/components/exthelper/extIApplication.idl</a></code> で定義されています。</p>
+<p>XPCOM サービスを通して実装された <a href="/ja/docs/Toolkit_API/extIApplication" title="Toolkit API/extIApplication"><code>extIApplication</code></a>: <a href="/ja/docs/Toolkit_API/FUEL" title="Toolkit_API/FUEL">FUEL</a> (Firefox) または <a href="/ja/docs/Toolkit_API/STEEL" title="Toolkit_API/STEEL">STEEL</a> (Thunderbird), <a href="/ja/docs/Toolkit_API/SMILE" title="Toolkit_API/SMILE">SMILE</a> (SeaMonkey) のページの説明を参照してください。</p>
+<h2 id="Method_overview" name="Method_overview">メソッドの概要</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="#log.28.29">log</a>(in AString aMsg)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#open.28.29">open</a>()</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Attributes" name="Attributes">プロパティ</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">プロパティ</td>
+   <td class="header">型</td>
+   <td class="header">説明</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Methods" name="Methods">メソッド</h2>
+<h3 id="log.28.29" name="log.28.29">log()</h3>
+<p>指定した文字列をコンソールへ送る。</p>
+<pre>void log(in AString aMsg)
+</pre>
+<h6 id="Parameters" name="Parameters">引数</h6>
+<dl>
+ <dt>
+  <code>aMsg</code></dt>
+ <dd>
+  コンソールへ送る文字列</dd>
+</dl>
+<h6 id="Return_value" name="Return_value">戻り値</h6>
+<h3 id="open.28.29" name="open.28.29">open()</h3>
+<p>エラーコンソールのウィンドウを開く。ウィンドウがすでに開かれている場合は前面に表示する。</p>
+<pre>void open()
+</pre>
+<h6 id="Parameters_2" name="Parameters_2">引数</h6>
+<p><span class="inlineIndicator todo todoInline"><strong>FIXME:</strong> <em></em></span></p>
+<h6 id="Return_value_2" name="Return_value_2">戻り値</h6>
+<p><span class="inlineIndicator todo todoInline"><strong>FIXME:</strong> <em></em></span></p>
+<h2 id="Examples" name="Examples">例</h2>
+<pre>// コンソールにメッセージを送る
+Application.console.log("Hello from my JS code");
+
+// コンソールウィンドウを開く (すでに開いている場合は前面に表示)
+Application.console.open();
+</pre>
+<h2 id="See_also" name="See_also">関連情報</h2>
+<ul>
+ <li><a href="/ja/docs/Toolkit_API/FUEL" title="Toolkit_API/FUEL">FUEL</a> (Firefox), <a href="/ja/docs/Toolkit_API/STEEL" title="Toolkit_API/STEEL">STEEL</a> (Thunderbird), <a href="/ja/docs/Toolkit_API/SMILE" title="Toolkit_API/SMILE">SMILE</a> (SeaMonkey)</li>
+</ul>

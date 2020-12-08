@@ -1,0 +1,267 @@
+---
+title: RDF Datasources
+slug: Mozilla/Tech/XUL/Tutorial/RDF_Datasources
+translation_of: Archive/Mozilla/XUL/Tutorial/RDF_Datasources
+---
+<p> </p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Trees_and_Templates" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:Advanced_Rules">下一页  »</a></p>
+</div><p></p>
+<p>Here, we'll look at additional datasources and how to use your own RDF files as datasources.</p>
+<h3 id="Other_Mozilla_Datasources" name="Other_Mozilla_Datasources">Other Mozilla Datasources</h3>
+<p>Mozilla provides a number of other built-in datasources. Some of them are listed here with a few examples. They work very similarly to the bookmarks, although the fields will be different in each case.</p>
+<h3 id="The_History_List" name="The_History_List">The History List</h3>
+<p>The history datasource provides access to the user's history list which is the list of URLs the user has visited recently. The resource can be referred to using <code>rdf:history</code> as the datasource. The table below shows the resources (or fields) that you can retrieve from the history datasource. Put the URL values below where you want the value of the resource to be used.</p>
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td>Date</td>
+   <td><span class="nowiki">http://home.netscape.com/NC-rdf#Date</span></td>
+   <td>Date of last visit</td>
+  </tr>
+  <tr>
+   <td>Name</td>
+   <td><span class="nowiki">http://home.netscape.com/NC-rdf#Name</span></td>
+   <td>Title of the page</td>
+  </tr>
+  <tr>
+   <td>Page</td>
+   <td><span class="nowiki">http://home.netscape.com/NC-rdf#Page</span></td>
+   <td>Page name</td>
+  </tr>
+  <tr>
+   <td>Referrer</td>
+   <td><span class="nowiki">http://home.netscape.com/NC-rdf#Referrer</span></td>
+   <td>Referrer of the page</td>
+  </tr>
+  <tr>
+   <td>URL</td>
+   <td><span class="nowiki">http://home.netscape.com/NC-rdf#URL</span></td>
+   <td>URL of the page</td>
+  </tr>
+  <tr>
+   <td>Visit Count</td>
+   <td><span class="nowiki">http://home.netscape.com/NC-rdf#VisitCount</span></td>
+   <td>Number of page visits</td>
+  </tr>
+ </tbody>
+</table>
+<p>A typical history list will display a tree with a selection of these fields. To use them, just put the URL values above in the <code>label</code> attributes of the buttons or treecells. You can use <code>NC:HistoryRoot</code> as the value of the <code>ref</code> attribute. You can also use the value <code>NC:HistoryByDate</code> to get the history sorted into days.</p>
+<h4 id="Using_The_History_List_Example" name="Using_The_History_List_Example">Using The History List Example</h4>
+<p>Let's see an example of displaying the history list. We'll display the history in a tree with three columns, the Name, the URL and the Date.</p>
+<p><span id="Example_1"><a id="Example_1"></a><strong>Example 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_datasrc_1.xul.txt">Source</a></p>
+<pre>&lt;tree flex="1" datasources="rdf:history" ref="NC:HistoryRoot"&gt;
+
+  &lt;treecols&gt;
+    &lt;treecol id="name" label="Name" flex="1"/&gt;
+    &lt;treecol id="url" label="URL" flex="1"/&gt;
+    &lt;treecol id="date" label="Date" flex="1"/&gt;
+  &lt;/treecols&gt;
+
+  &lt;template&gt;
+
+    &lt;rule&gt;
+      &lt;treechildren&gt;
+       &lt;treeitem uri="rdf:*"&gt;
+         &lt;treerow&gt;
+           &lt;treecell label="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+           &lt;treecell label="rdf:http://home.netscape.com/NC-rdf#URL"/&gt;
+           &lt;treecell label="rdf:http://home.netscape.com/NC-rdf#Date"/&gt;
+         &lt;/treerow&gt;
+       &lt;/treeitem&gt;
+      &lt;/treechildren&gt;
+    &lt;/rule&gt;
+
+  &lt;/template&gt;
+&lt;/tree&gt;
+</pre>
+<h3 id="Other_Datasources" name="Other_Datasources">Other Datasources</h3>
+<p>The tables below list some of the other datasources available with Mozilla. You can use any of the resources that you want.</p>
+<dl>
+ <dt>
+  Bookmarks (<span class="nowiki">rdf:bookmarks</span>)</dt>
+ <dd>
+  The bookmarks are generated from the user's bookmark list.</dd>
+</dl>
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th colspan="3">Resources</th>
+  </tr>
+  <tr>
+   <td>Added Date</td>
+   <td><span class="nowiki">http://home.netscape.com/NC-rdf#BookmarkAddDate</span></td>
+   <td>Date the bookmark was added</td>
+  </tr>
+  <tr>
+   <td>Description</td>
+   <td><span class="nowiki">http://home.netscape.com/NC-rdf#Description</span></td>
+   <td>Bookmark description</td>
+  </tr>
+  <tr>
+   <td>Last Modified</td>
+   <td><span class="nowiki">http://home.netscape.com/WEB-rdf#LastModifiedDate</span></td>
+   <td>Date of last modification</td>
+  </tr>
+  <tr>
+   <td>Last Visited</td>
+   <td><span class="nowiki">http://home.netscape.com/WEB-rdf#LastVisitDate</span></td>
+   <td>Date of last visit</td>
+  </tr>
+  <tr>
+   <td>Name</td>
+   <td><span class="nowiki">http://home.netscape.com/NC-rdf#Name</span></td>
+   <td>Bookmark name</td>
+  </tr>
+  <tr>
+   <td>Shortcut URL</td>
+   <td><span class="nowiki">http://home.netscape.com/NC-rdf#ShortcutURL</span></td>
+   <td>Custom keywords field</td>
+  </tr>
+  <tr>
+   <td>URL</td>
+   <td><span class="nowiki">http://home.netscape.com/NC-rdf#URL</span></td>
+   <td>The URL to link to</td>
+  </tr>
+ </tbody>
+</table>
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th colspan="2">Possible Bookmarks Roots</th>
+  </tr>
+  <tr>
+   <td>NC:BookmarksRoot</td>
+   <td>The top level of the bookmarks hierarchy</td>
+  </tr>
+  <tr>
+   <td>NC:IEFavoritesRoot</td>
+   <td>The bookmark folder that corresponds to the user's IE favorites.</td>
+  </tr>
+  <tr>
+   <td>NC:PersonalToolbarFolder</td>
+   <td>The bookmark folder that corresponds to the personal toolbar folder.</td>
+  </tr>
+ </tbody>
+</table>
+<dl>
+ <dt>
+  Files (<span class="nowiki">rdf:files</span>)</dt>
+ <dd>
+  A view of the user's files.</dd>
+</dl>
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th colspan="3">Resources</th>
+  </tr>
+  <tr>
+   <td>Name</td>
+   <td><span class="nowiki">http://home.netscape.com/NC-rdf#Name</span></td>
+   <td>Name of the file</td>
+  </tr>
+  <tr>
+   <td>URL</td>
+   <td><span class="nowiki">http://home.netscape.com/NC-rdf#URL</span></td>
+   <td>URL of the file</td>
+  </tr>
+  <tr>
+   <td>Content-Length</td>
+   <td><span class="nowiki">http://home.netscape.com/NC-rdf#Content-Length</span></td>
+   <td>The length of the file.</td>
+  </tr>
+  <tr>
+   <td>LastModifiedDate</td>
+   <td><span class="nowiki">http://home.netscape.com/NC-rdf#LastModifiedDate</span></td>
+   <td>The date that URL was last modified.</td>
+  </tr>
+  <tr>
+   <td>extension</td>
+   <td><span class="nowiki">http://home.netscape.com/NC-rdf#extension</span></td>
+   <td>The extension of the file, including the period. This property is only available on platforms that use file extensions.</td>
+  </tr>
+ </tbody>
+</table>
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th colspan="2">Possible Files Roots</th>
+  </tr>
+  <tr>
+   <td>NC:FilesRoot</td>
+   <td>Top level of the filesystem (usually the list of drives)</td>
+  </tr>
+  <tr>
+   <td>A file URL</td>
+   <td>By using a file URL for the ref attribute, you can select a specific directory to be returned. For example, you might use <a class="external" rel="freelink">file:///windows</a> or <a class="external" rel="freelink">files:///usr/local</a>.</td>
+  </tr>
+ </tbody>
+</table>
+<p>The files datasource is an example of a datasource that determines its resources only when necessary. We don't want every file in the filesystem to be determined before the data is displayed. Instead, only the files and directories that the tree element (or other elements) will need to display at a given time will be determined.</p>
+<h3 id="Composite_Datasources" name="Composite_Datasources">Composite Datasources</h3>
+<p>You can specify multiple datasources in the <code>datasources</code> attribute by separating them with whitespace as in the example below. This has the effect of reading the data from all the datasources mentioned.</p>
+<pre>&lt;tree datasources="rdf:bookmarks rdf:history animals.rdf" ref="NC:BookmarksRoot"&gt;
+</pre>
+<p>This example reads the resources from the bookmarks, history and the animals.rdf file. They are combined into a single composite datasource and can be used as if they were one.</p>
+<p>The special datasource <code>rdf:null</code> corresponds to nothing. You can use this datasource if you want to dynamically set the datasource using a script, but don't want one initially or don't know its exact URL.</p>
+<h3 id="Custom_RDF_Datasources" name="Custom_RDF_Datasources">Custom RDF Datasources</h3>
+<p>You can use any of the above internal datasources if you wish. There are several others for mail, address books and searching and so on. However, you might want to use your own RDF datasource stored in an RDF file. The file can be either a local file or a remote file. Just put the URL of the RDF file in the <code><code id="a-datasources"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/datasources">datasources</a></code></code> attribute.</p>
+<p>Using RDF files provides just as much functionality as any of the internal datasources. You can use rules to match specific types of content. The attributes on the <code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/rule" title="rule">rule</a></code></code> element will match if they match the attributes on an RDF <code>Description</code> element. You can also create RDF files that are hierarchical.</p>
+<h4 id="Using_RDF_file_Example" name="Using_RDF_file_Example">Using RDF file Example</h4>
+<p>The following is an example of how an RDF file can be used as a datasource. The RDF file is fairly large and can be viewed separately: <a href="https://developer.mozilla.org/samples/xultu/examples/animals.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/animals.rdf">RDF</a></p>
+<p><span id="Example_2"><a id="Example_2"></a><strong>Example 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_datasrc_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_datasrc_2.xul">View</a></p>
+<pre>&lt;tree flex="1" width="200" height="200"
+      datasources="animals.rdf" ref="http://www.some-fictitious-zoo.com/all-animals"&gt;
+
+  &lt;treecols&gt;
+    &lt;treecol id="name" label="Name" primary="true" flex="1"/&gt;
+    &lt;treecol id="species" label="Species" flex="1"/&gt;
+  &lt;/treecols&gt;
+
+  &lt;template&gt;
+    &lt;rule&gt;
+      &lt;treechildren&gt;
+       &lt;treeitem uri="rdf:*"&gt;
+         &lt;treerow&gt;
+           &lt;treecell label="rdf:http://www.some-fictitious-zoo.com/rdf#name"/&gt;
+           &lt;treecell label="rdf:http://www.some-fictitious-zoo.com/rdf#species"/&gt;
+         &lt;/treerow&gt;
+       &lt;/treeitem&gt;
+      &lt;/treechildren&gt;
+    &lt;/rule&gt;
+
+  &lt;/template&gt;
+&lt;/tree&gt;
+</pre>
+<p><img alt="Image:datasrc1.jpg"></p>
+<p>Here, the data has been generated from the file. The <code><code id="a-ref"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/ref">ref</a></code></code> attribute has been set to the root element in the RDF file, which is the top-level <code>Seq</code>. This will give us a complete list of animals. If we wanted to, we could set the <code><code id="a-ref"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/ref">ref</a></code></code> attribute to any of the other <code>about</code> attribute values to limit the set of data that is returned. For example, to display only the reptiles, use a value of <code><span class="nowiki">http://www.some-fictitious-zoo.com/reptiles</span></code>.</p>
+<h4 id="Setting_the_ref_Attribute_Example" name="Setting_the_ref_Attribute_Example">Setting the <code>ref</code> Attribute Example</h4>
+<p>The example below shows how to display a particular piece of an RDF datasource by setting the <code><code id="a-ref"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/ref">ref</a></code></code> attribute.</p>
+<p><span id="Example_3"><a id="Example_3"></a><strong>Example 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_datasrc_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_datasrc_3.xul">View</a></p>
+<pre>&lt;window
+  id="example-window"
+  title="History List"
+  xmlns:ANIMALS="http://www.some-fictitious-zoo.com/rdf#"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;button label="Click here to see the mammals the zoo has" type="menu"
+        datasources="animals.rdf" ref="http://www.some-fictitious-zoo.com/mammals"&gt;
+  &lt;template&gt;
+    &lt;rule ANIMALS:specimens="0"&gt;&lt;/rule&gt;
+    &lt;rule&gt;
+      &lt;menupopup&gt;
+        &lt;menuitem uri="rdf:*" label="rdf:http://www.some-fictitious-zoo.com/rdf#name"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/rule&gt;
+  &lt;/template&gt;
+&lt;/button&gt;
+
+&lt;/window&gt;
+</pre>
+<p>In this case only the mammals are desired, so we select the URI of the mammals list. You will notice that the value of the <code><code id="a-ref"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/ref">ref</a></code></code> attribute in the example is <code><span class="nowiki">http://www.some-fictitious-zoo.com/mammals</span></code> which corresponds to one of the <code>Seq</code> elements in the RDF file. This causes only the descendants of this list to be returned.</p>
+<p>Two rules have been used here. The first rule catches all the resources that have their <code>ANIMALS:specimens</code> attribute set to <code>0</code>. You can see this attribute in the RDF file on each of the <code>Description</code> elements. Some of them have a value of 0. So in these cases, rule one will match. Because rule one has no content, nothing will be displayed for these ones. This is an effective way to hide data that we don't want to display.</p>
+<p>The second rule applies to all other resources and creates a row in a popup menu. The end effect is that we get a popup menu containing all the mammals which have a specimen that is not 0.</p>
+<p>Next, we'll look at the full rule syntax.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Trees_and_Templates" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:Advanced_Rules">下一页  »</a></p>
+</div><p></p>

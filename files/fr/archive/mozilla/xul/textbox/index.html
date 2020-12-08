@@ -1,0 +1,348 @@
+---
+title: textbox
+slug: Archive/Mozilla/XUL/textbox
+tags:
+  - Méthodes_XUL
+  - Éléments_XUL
+translation_of: Archive/Mozilla/XUL/textbox
+---
+<div class="noinclude"><span class="breadcrumbs XULRef_breadcrumbs">
+ « <a href="/fr/docs/Référence_XUL">Accueil de la référence XUL</a>    [
+ <a href="#Exemples">Exemples</a> |
+ <a href="#Attributs">Attributs</a> |
+ <a href="#Propri.C3.A9t.C3.A9s">Propriétés</a> |
+ <a href="#M.C3.A9thodes">Méthodes</a> |
+ <a href="#Sujets_li.C3.A9s">Sujets liés</a> ]
+</span></div> <p>Un champ dans lequel l'utilisateur peut entrer du texte. Il est similaire à l'élément HTML <code>input</code>. Par défaut, une seule ligne de texte est affichée. L'attribut <code id="a-multiline"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/multiline">multiline</a></code> peut être spécifié pour afficher un champ multiligne.
+</p><p>Vous trouverez plus d'informations dans le <a href="fr/Tutoriel_XUL/Les_champs_de_saisie">Tutoriel XUL</a>.
+</p>
+<dl><dt> Attributs
+</dt><dd> <a href="#a-cols">cols</a>, <a href="#a-decimalplaces">decimalplaces</a>, <a href="#a-disabled">disabled</a>, <a href="#a-textbox.empty">empty</a>, <a href="#a-emptytext">emptytext</a>, <a href="#a-hidespinbuttons">hidespinbuttons</a>, <a href="#a-increment">increment</a>, <a href="#a-textbox.label">label</a>, <a href="#a-max">max</a>, <a href="#a-maxlength">maxlength</a>, <a href="#a-min">min</a>, <a href="#a-multiline">multiline</a>, <a href="#a-newlines">newlines</a>, <a href="#a-textbox.onchange">onchange</a>, <a href="#a-oninput">oninput</a>, <a href="#a-preference">preference</a>, <a href="#a-readonly">readonly</a>, <a href="#a-rows">rows</a>, <a href="#a-size">size</a>, <a href="#a-spellcheck">spellcheck</a>, <a href="#a-tabindex">tabindex</a>, <a href="#a-timeout">timeout</a>, <a href="#a-textbox.type">type</a>, <a href="#a-textbox.value">value</a>, <a href="#a-wrap">wrap</a>, <a href="#a-wraparound">wraparound</a>
+</dd></dl>
+<dl><dt> Propriétés
+</dt><dd> <a href="#p-accessibleType">accessibleType</a>, <a href="#p-clickSelectsAll">clickSelectsAll</a>, <a href="#p-decimalPlaces">decimalPlaces</a>, <a href="#p-decimalSymbol">decimalSymbol</a>, <a href="#p-defaultValue">defaultValue</a>, <a href="#p-disabled">disabled</a>, <a href="#p-editor">editor</a>, <a href="#p-emptyText">emptyText</a>, <a href="#p-increment">increment</a>, <a href="#p-inputField">inputField</a>, <a href="#p-textbox.label">label</a>, <a href="#p-max">max</a>, <a href="#p-maxLength">maxLength</a>, <a href="#p-min">min</a>, <a href="#p-readOnly">readOnly</a>, <a href="#p-selectionEnd">selectionEnd</a>, <a href="#p-selectionStart">selectionStart</a>, <a href="#p-size">size</a>, <a href="#p-spinButtons">spinButtons</a>, <a href="#p-tabIndex">tabIndex</a>, <a href="#p-textLength">textLength</a>, <a href="#p-timeout">timeout</a>, <a href="#p-type">type</a>, <a href="#p-textbox.value">value</a>, <a href="#p-valueNumber">valueNumber</a>, <a href="#p-wrapAround">wrapAround</a>
+</dd></dl>
+<dl><dt> Méthodes
+</dt><dd> <a href="#m-decrease">decrease</a>, <a href="#m-increase">increase</a>, <a href="#m-reset">reset</a>, <a href="#m-select">select</a>, <a href="#m-setSelectionRange">setSelectionRange</a>
+</dd></dl>
+<dl><dt> Classes de style
+</dt><dd> <a href="#s-plain">plain</a>
+</dd></dl>
+<h3 id="Exemples" name="Exemples"> Exemples </h3>
+<div class="float-right"><img alt="Image:XUL_ref_textbox.png"></div>
+<pre>&lt;vbox&gt;
+&lt;label control="your-name" value="Enter your name:"/&gt;
+&lt;textbox id="your-name" value="John"/&gt;
+&lt;/vbox&gt;
+</pre>
+<h3 id="Attributs" name="Attributs"> Attributs </h3>
+<p>
+</p><div id="a-cols">
+
+</div>
+<div id="a-decimalplaces">
+
+</div>
+<div id="a-disabled">
+
+<dl><dt> <code id="a-disabled"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/disabled">disabled</a></code>
+</dt><dd> Type : <i>booléen</i>
+</dd><dd> Indique si l'élément est ou non désactivé. Si cette valeur est définie à <code>true</code>, l'élément est désactivé. Les éléments désactivés sont habituellement affichés avec leur texte grisé. Si l'élément est désactivé, il ne répond pas aux actions de l'utilisateur, il ne peut pas recevoir le focus, et l'évènement <code>command</code> ne se déclenchera pas. </dd></dl>
+<p><br>
+</p>
+<div class="float-right"><img alt="Image:XUL_ref_attr_disabled.png"></div>
+<pre>&lt;!-- La case à cocher active/désactive le bouton --&gt;
+&lt;checkbox label="Enable button"
+    onclick="document.getElementById('buttRemove').disabled = this.checked"/&gt;
+&lt;button id="buttRemove" label="Remove All" disabled="true"/&gt;
+</pre>
+</div>
+<div id="a-textbox.empty">
+
+</div>
+<div id="a-emptytext">
+
+</div>
+<div id="a-hidespinbuttons">
+
+</div>
+<div id="a-increment">
+
+<dl>
+ <dt>
+  <code id="a-increment"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/increment">increment</a></code></dt>
+ <dd>
+  Type :
+  <i>
+   entier</i>
+ </dd>
+ <dd>
+  La quantité dont l'attribut <code id="a-value"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/value">value</a></code> (pour les boîtes numériques et les échelles) or <code id="a-curpos"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/curpos">curpos</a></code>&lt;magic name="\"PAGENAME\"/"&gt; (pour les barres de défilement) &lt;/magic&gt; change lorsque l'on clique sur les flèches. La valeur par défaut est 1.</dd>
+</dl>
+</div>
+<div id="a-textbox.label">
+
+</div>
+<div id="a-max">
+
+<dl>
+ <dt>
+  <code id="a-max"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/max">max</a></code></dt>
+ <dd>
+  Type :
+  <i>
+   entier</i>
+ </dd>
+ <dd>
+  La valeur maximum que peut prendre l'élément scale ou number box. La valeur par défaut est <code>100</code> pour les éléments scale et <code>Infinity</code> pour les boîtes numériques</dd>
+</dl>
+</div>
+<div id="a-maxlength">
+
+</div>
+<div id="a-min">
+
+<dl>
+ <dt>
+  <code id="a-min"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/min">min</a></code></dt>
+ <dd>
+  Type :
+  <i>
+   entier</i>
+ </dd>
+ <dd>
+  La valeur minimum que peut prendre l'élément. La valeur par défaut est 0.</dd>
+</dl>
+</div>
+<div id="a-multiline">
+
+</div>
+<div id="a-newlines">
+
+</div>
+<div id="a-textbox.onchange">
+
+</div>
+<div id="a-oninput">
+
+</div>
+<div id="a-preference">
+
+<dl><dt> <code id="a-preference"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/preference">preference</a></code>
+</dt><dd> Type : <i>id d'élément</i>
+</dd><dd> Connecte l'élément à une préférence (élément <code><a href="/fr/docs/Mozilla/Tech/XUL/preference" title="preference">preference</a></code>) correspondante. Cet attribut n'a d'effet qu'utilisé au sein d'un <code><a href="/fr/docs/Mozilla/Tech/XUL/prefwindow" title="prefwindow">prefwindow</a></code>. La valeur de la préférence sera mise à jour pour correspondre à la propriété <code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propri%C3%A9t%C3%A9s/value">value</a></span></code> de l'élément.
+</dd></dl>
+
+
+</div>
+<div id="a-readonly">
+
+<dl><dt> <code id="a-readonly"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/readonly">readonly</a></code>
+</dt><dd> Type : <i>booléen</i>
+</dd><dd> Si défini à <code>true</code>, l'utilisateur ne peut pas modifier la valeur de l'élément. Cependant, celle-ci peut toujours être modifiée par un script.
+</dd></dl>
+
+
+</div>
+<div id="a-rows">
+
+<dl><dt> <code id="a-rows"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/rows">rows</a></code>
+</dt><dd> Type : <i>entier</i>
+</dd><dd> Le nombre de lignes à afficher dans l'élément. Si l'élément contient plus que ce nombre de lignes, une barre de défilement apparaitra afin que l'utilisateur puisse consulter les autres lignes. Pour obtenir le nombre réel de lignes dans l'élément, utilisez la méthode <span id="m-getRowCount"><code><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/M%C3%A9thodes/getRowCount">getRowCount</a></code></span>.
+</dd></dl>
+
+
+</div>
+<div id="a-size">
+
+</div>
+<div id="a-spellcheck">
+
+</div>
+<div id="a-tabindex">
+
+<dl><dt> <code id="a-tabindex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/tabindex">tabindex</a></code>
+</dt><dd> Type : <i>entier</i>
+</dd><dd> L'ordre de tabulation de l'élément. L'ordre de tabulation est l'ordre dans lequel le focus se déplace lorsque l'utilisateur appuie sur la touche « tab ». Les éléments dont le <code>tabindex</code> est plus haut se trouvent plus tard dans la séquence de tabulation.
+</dd></dl>
+
+
+</div>
+<div id="a-timeout">
+
+</div>
+<div id="a-textbox.type">
+
+</div>
+<div id="a-textbox.value">
+
+</div>
+<div id="a-wrap">
+
+</div>
+<div id="a-wraparound">
+
+</div>
+
+<h3 id="Propri.C3.A9t.C3.A9s" name="Propri.C3.A9t.C3.A9s"> Propriétés </h3>
+<p>
+</p><div id="p-accessibleType">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propri%C3%A9t%C3%A9s/accessibleType">accessibleType</a></span></code>
+</dt><dd> Type : <i>entier</i>
+</dd><dd> Une valeur indiquant le type d'objet d'accessibilité pour l'élément.
+</dd></dl>
+</div>
+<div id="p-clickSelectsAll"></div>
+<div id="p-decimalPlaces"></div>
+<div id="p-decimalSymbol"></div>
+<div id="p-defaultValue">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propri%C3%A9t%C3%A9s/defaultValue">defaultValue</a></span></code>
+</dt><dd> Type : <i>chaîne de caractères</i>
+</dd><dd> Définit et obtient la valeur par défaut d'une boîte de texte.
+</dd></dl>
+<p><br>
+</p>
+
+</div>
+<div id="p-disabled">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propri%C3%A9t%C3%A9s/disabled">disabled</a></span></code>
+</dt><dd> Type : <i>booléen</i>
+</dd><dd> Obtient et définit la valeur de l'attribut <code id="a-disabled"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/disabled">disabled</a></code>.
+</dd></dl>
+
+</div>
+<div id="p-editor"></div>
+<div id="p-emptyText"></div>
+<div id="p-increment">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propri%C3%A9t%C3%A9s/increment">increment</a></span></code></dt>
+  <dd>
+    Type : <i>entier</i></dd>
+  <dd>
+    Obtient et définit la valeur de l'attribut <code id="a-increment"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/increment">increment</a></code>.</dd>
+</dl></div>
+<div id="p-inputField"></div>
+<div id="p-textbox.label"></div>
+<div id="p-max">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propri%C3%A9t%C3%A9s/max">max</a></span></code>
+</dt><dd> Type : <i>entier</i>
+</dd><dd> Obtient et définit la valeur de l'attribut <code id="a-max"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/max">max</a></code>.
+</dd></dl>
+<p><br>
+</p>
+
+</div>
+<div id="p-maxLength"></div>
+<div id="p-min">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propri%C3%A9t%C3%A9s/min">min</a></span></code>
+</dt><dd> Type : <i>entier</i>
+</dd><dd> Obtient et définit la valeur de l'attribut <code id="a-min"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/min">min</a></code>.
+</dd></dl>
+<p><br>
+</p>
+
+</div>
+<div id="p-readOnly">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propri%C3%A9t%C3%A9s/readonly">readonly</a></span></code></dt>
+  <dd>
+    Type : <i>booléen</i></dd>
+  <dd>
+    Si définie à <code>true</code>, l'utilisateur ne peut pas modifier la valeur de l'élément.</dd>
+  <dd>
+    <div class="note">
+      Cette propriété toute en minuscules n'est utilisée qu'avec l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/preference" title="preference">preference</a></code> et sera peut-être renommée en <code>readOnly</code> dans des versions ultérieures. D'autres éléments utilisent la propriété <code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propri%C3%A9t%C3%A9s/readOnly">readOnly</a></span></code>. L'attribut correspondant est cependant <code id="a-readonly"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/readonly">readonly</a></code> en minuscules.</div>
+  </dd>
+</dl></div>
+<div id="p-selectionEnd"></div>
+<div id="p-selectionStart"></div>
+<div id="p-size"></div>
+<div id="p-spinButtons"></div>
+<div id="p-tabIndex">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propri%C3%A9t%C3%A9s/tabIndex">tabIndex</a></span></code>
+</dt><dd> Type : <i>entier</i>
+</dd><dd> Obtient et définit la valeur de l'attribut <code id="a-tabindex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/tabindex">tabindex</a></code>.
+</dd></dl>
+
+</div>
+<div id="p-textLength"></div>
+<div id="p-timeout"></div>
+<div id="p-type">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propri%C3%A9t%C3%A9s/type">type</a></span></code>
+</dt><dd> Type : <i>chaîne de caractères</i>
+</dd><dd> Obtient et définit la valeur de l'attribut <code id="a-type"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/type">type</a></code>.
+</dd></dl>
+
+</div>
+<div id="p-textbox.value"></div>
+<div id="p-valueNumber"></div>
+<div id="p-wrapAround"></div>
+
+<h3 id="M.C3.A9thodes" name="M.C3.A9thodes"> Méthodes </h3>
+<dl>
+ <dt>
+  <span id="m-decrease"><code><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/M%C3%A9thodes/decrease">decrease()</a></code></span></dt>
+ <dd>
+  Type de retour :
+  <i>
+   aucune valeur de retour</i>
+ </dd>
+ <dd>
+  Diminue la valeur de&lt;magic name="\"PAGENAME\"/"&gt; la boîte numérique l'échelle, l'échelle ou la boîte numérique&lt;/magic&gt; de la valeur de l'incrément.</dd>
+</dl>
+<dl>
+ <dt>
+  <span id="m-increase"><code><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/M%C3%A9thodes/increase">increase()</a></code></span></dt>
+ <dd>
+  Type de retour :
+  <i>
+   aucune valeur de retour</i>
+ </dd>
+ <dd>
+  Augmente la valeur de &lt;magic name="\"PAGENAME\"/"&gt;la boîte numérique, XUL:scale = l'échelle, l'échelle ou la boîte numérique&lt;/magic&gt; de la valeur de l'incrément.</dd>
+</dl>
+<p> </p>
+
+
+<dl><dt> <span id="m-reset"><code><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/M%C3%A9thodes/reset">reset()</a></code></span>
+</dt><dd> Type de retour : <i>aucune valeur renvoyée</i>
+</dd><dd> Réinitialise la préférence à sa valeur par défaut.
+</dd><dd> Pour un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code>, la liste de transactions d'annulation est également vidée (Gecko 1.9).
+</dd></dl>
+<p><br>
+</p>
+<dl><dt> <span id="m-select"><code><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/M%C3%A9thodes/select">select()</a></code></span>
+</dt><dd> Type retourné : <i>aucune valeur retournée</i>
+</dd><dd> Sélectionne l'intégralité du texte d'une boîte texte.
+</dd></dl>
+<p><br>
+</p>
+<p><span class="breadcrumbs XULRefMeth_breadcrumbs">« <a href="/fr/docs/R%C3%A9f%C3%A9rence_XUL" title="/fr/docs/Référence_XUL">Accueil de la référence XUL</a></span>
+</p>
+<dl><dt> <span id="m-setSelectionRange"><code><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/M%C3%A9thodes/setSelectionRange">setSelectionRange( début, fin )</a></code></span>
+</dt><dd> Type retourné : <i>aucune valeur retournée</i>
+</dd><dd> Cette méthode sélectionne une portion de texte dans une zone de texte (<i>textbox</i> ou <i>textarea</i>) où l'argument <var>début</var> est le premier caractère de la sélection et l'argument <var>fin</var> le dernier caractère de la sélection. </dd><dd> Renseigner les deux arguments avec la même valeur équivaut à déplacer le curseur d'écriture sans rien sélectionner.
+</dd></dl>
+<p><br>
+<span class="comment">Interwiki Language Links</span>
+</p>
+<span class="lang lang-fr" lang="fr">
+<table style="border: 1px solid rgb(204, 204, 204); margin: 0px 0px 10px 10px; padding: 0px 10px; background: rgb(238, 238, 238) none repeat scroll 0% 50%;"> <tbody> <tr> <td> <p><strong>Héritées de XUL element</strong><br> <small> <span id="m-blur"><code><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Méthodes/blur">blur</a></code></span>, <span id="m-click"><code><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Méthodes/click">click</a></code></span>, <span id="m-doCommand"><code><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Méthodes/doCommand">doCommand</a></code></span>, <span id="m-focus"><code><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Méthodes/focus">focus</a></code></span>, <span id="m-getElementsByAttribute"><code><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Méthodes/getElementsByAttribute">getElementsByAttribute</a></code></span></small></p> <p><strong>Héritées de DOM element</strong><br> <small> <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.addEventListener">addEventListener()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.appendChild">appendChild()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.dispatchEvent">dispatchEvent()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.getAttribute">getAttribute()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.getAttributeNode">getAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.getAttributeNodeNS">getAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.getAttributeNS">getAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.getElementsByTagName">getElementsByTagName()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.getElementsByTagNameNS">getElementsByTagNameNS()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.hasAttribute">hasAttribute()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.hasAttributeNS">hasAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.hasAttributes">hasAttributes()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.hasChildNodes">hasChildNodes()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.insertBefore">insertBefore()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.isSupported">isSupported()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.normalize">normalize()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.removeAttribute">removeAttribute()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.removeAttributeNode">removeAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.removeAttributeNS">removeAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.removeChild">removeChild()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.removeEventListener">removeEventListener()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.replaceChild">replaceChild()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.setAttribute">setAttribute()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.setAttributeNode">setAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.setAttributeNodeNS">setAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/fr/docs/DOM/element.setAttributeNS">setAttributeNS()</a></code></small></p> </td> </tr> </tbody>
+</table>
+
+<h3 id="Classes_de_style" name="Classes_de_style"> Classes de style </h3>
+<p>Les classes suivantes peuvent être utilisées pour styler l'élément. Ces classes devraient être utilisées au lieu de changer le style de l'élément directement, car elles s'accorderont plus naturellement avec le thème sélectionné par l'utilisateur.
+</p><dl>
+ <dt><code><a href="https://developer.mozilla.org/en-US/docs/XUL/Style/plain">plain</a></code></dt>
+ <dd>This class causes the element to be displayed with no border or margin.</dd>
+</dl>
+
+<h3 id="Sujets_li.C3.A9s" name="Sujets_li.C3.A9s"> Sujets liés </h3>
+<dl><dt> Interfaces
+</dt><dd> <a href="fr/NsIAccessibleProvider">nsIAccessibleProvider</a>, <a href="fr/NsIDOMXULTextboxElement">nsIDOMXULTextboxElement</a>
+</dd></dl>
+<div class="noinclude">
+</div>
+</span>

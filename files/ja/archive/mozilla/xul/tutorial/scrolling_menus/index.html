@@ -1,0 +1,69 @@
+---
+title: メニューのスクロール表示
+slug: Archive/Mozilla/XUL/Tutorial/Scrolling_Menus
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Scrolling_Menus
+---
+<p>
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Popup_Menus" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Adding_Event_Handlers">次のページ  »</a></p>
+</div>
+<p>このセクションでは、メニューのスクロール表示についての説明と、その仕組みを他の要素に対しても使う方法を見ていきます。
+</p><p><span id="Creating_a_Large_Menu"></span>
+</p>
+<h3 id=".E5.A4.A7.E3.81.8D.E3.81.AA.E3.83.A1.E3.83.8B.E3.83.A5.E3.83.BC.E3.82.92.E4.BD.9C.E3.82.8B" name=".E5.A4.A7.E3.81.8D.E3.81.AA.E3.83.A1.E3.83.8B.E3.83.A5.E3.83.BC.E3.82.92.E4.BD.9C.E3.82.8B"> 大きなメニューを作る </h3>
+<p>全ての項目が、1 回で画面に入りきらないぐらい多くの操作項目を持つようなメニューを作った場合、どのように処理されるのかを疑問に思ったことがあるかと思います。
+Mozilla では、全ての項目をスクロールさせながら見ることができるように、スクロール表示機能を提供しています。
+</p>
+<div class="float-right"><img alt="画像:menuscroll1.png"></div>
+<p>利用可能なスペースが、メニュー表示に必要な大きさより小さい場合、メニューの両端に矢印が現れます。
+この矢印の上にマウスを置くことによって、メニューは上下にスクロールします。
+利用できるスペースが十分にあれば、矢印は表示されません。
+なお、正確には、スクロール表示の動作は、現在のテーマに依存する事に注意してください。
+</p><p>この動作は自動的に発動します。
+メニューをスクロール表示にするために、何もする必要はありません。
+スクロールの自動表示は、ポップアップ (<code><code><a href="/ja/docs/Mozilla/Tech/XUL/popup" title="popup">popup</a></code></code>)、メニューリスト (<code><code><a href="/ja/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code></code>)、メニューバー (<code><code><a href="/ja/docs/Mozilla/Tech/XUL/menubar" title="menubar">menubar</a></code></code>) 上のメニュー (<code><code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code>) に対して適用されます。
+この機能は、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/arrowscrollbox" title="arrowscrollbox">arrowscrollbox</a></code></code> 要素を使って実装されています。
+この要素は、矢印付きのスクロール表示ボックスを作るために使うことが可能です。
+</p><p>また、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/arrowscrollbox" title="arrowscrollbox">arrowscrollbox</a></code></code> は、通常のボックスを使うことができる場所なら、どこでも使用可能です。
+なお、メニューの中で明示的に使う必要はありません。
+このボックスは、常に垂直配置で、内部にどんな要素でも含むことができます。
+これは、リストをドロップダウンではない方法で実装するときに使うことができると思います。
+</p><p><span id="Example_-_scrolling_list_of_buttons"></span>
+</p>
+<h4 id=".E3.82.B9.E3.82.AF.E3.83.AD.E3.83.BC.E3.83.AB.E8.A1.A8.E7.A4.BA.E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9.E3.81.AE.E4.BE.8B" name=".E3.82.B9.E3.82.AF.E3.83.AD.E3.83.BC.E3.83.AB.E8.A1.A8.E7.A4.BA.E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9.E3.81.AE.E4.BE.8B"> スクロール表示ボックスの例 </h4>
+<p>以下の例は、スクロール表示されるボタンのリストの作り方です (矢印ボタンを見るにはウィンドウをリサイズする必要があります)
+</p><p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_menuscroll_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_menuscroll_1.xul">表示</a>
+</p>
+<pre>&lt;arrowscrollbox orient="vertical" flex="1"&gt;
+  &lt;button label="Red"/&gt;
+  &lt;button label="Blue"/&gt;
+  &lt;button label="Green"/&gt;
+  &lt;button label="Yellow"/&gt;
+  &lt;button label="Orange"/&gt;
+  &lt;button label="Silver"/&gt;
+  &lt;button label="Lavender"/&gt;
+  &lt;button label="Gold"/&gt;
+  &lt;button label="Turquoise"/&gt;
+  &lt;button label="Peach"/&gt;
+  &lt;button label="Maroon"/&gt;
+  &lt;button label="Black"/&gt;
+&lt;/arrowscrollbox&gt;
+</pre>
+<p>この例を表示させた場合、まずフルサイズで開かれると思います。
+その場合も、ウィンドウの高さを縮めていけば、スクロールの矢印が現れます。
+また、ウィンドウを再度大きくしていくと矢印は消えるはずです。
+</p><p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/arrowscrollbox" title="arrowscrollbox">arrowscrollbox</a></code></code> に対して CSS の <a href="/ja/docs/Web/CSS/max-height" title="CSS の max-height プロパティは要素の最大の高さを設定するのに使われます。height プロパティの使用値は、max-height に設定した値よりも大きくなりません。"><code>max-height</code></a> プロパティを設定する事で、スクロール表示ボックスの大きさを制限することができます。
+これを利用して、常に矢印を表示させておくことが可能です。
+</p><p>とはいっても、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/arrowscrollbox" title="arrowscrollbox">arrowscrollbox</a></code></code> が主に使われるのは、やはり、メニューとポップアップの中になります。
+</p><p>次のセクションでは、XUL 要素にイベントハンドラを追加する方法を見ていきます。
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Popup_Menus" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Adding_Event_Handlers">次のページ  »</a></p>
+</div>
+<p><br>
+</p>
+<div class="noinclude">
+</div>

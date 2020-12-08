@@ -1,0 +1,126 @@
+---
+title: Simuler Firefox OS pour TV sur votre ordinateur
+slug: Archive/B2G_OS/Firefox_OS_Connected-Devices_Guide/Simuler_Firefox_OS_pour_TV
+translation_of: Mozilla/Firefox_OS_for_TV/Simulating_Firefox_OS_for_TV
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/fr/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/fr/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<p class="summary" id="Developing_TV_apps">Dans cet article, vous apprendrez comment mettre en place un simulateur pour TV sous Firefox OS sur votre ordinateur afin de lancer et tester vos propres applications TV.</p>
+
+<h2 id="Utiliser_le_simulateur_via_le_WebIDE">Utiliser le simulateur via le WebIDE</h2>
+
+<p>Les outils du <a href="/en-US/docs/Tools/WebIDE">WebIDE</a> de Mozilla procurent un moyen simple de créer un simulateur personnalisé pour différentes configurations de téléviseurs.</p>
+
+<ol>
+ <li>
+  <p>Ouvrez le WebIDE dans Firefox Desktop en sélectionnant <em>Outils &gt; Développement Web &gt; WebIDE</em> dans le menu principal.  La zone de droite de la fenêtre du WebIDE liste les simulateurs déjà installés ainsi qu'un menu <em>Installer un simulateur</em> pour créer un nouveau simulateur dans le WebIDE.</p>
+ </li>
+ <li>
+  <p>Si vous n'avez pas encore installé de simulateur, faites-le en cliquant sur <em>Installer un Simulateur</em> et installé la version TV de Firefox OS de votre choix.</p>
+
+  <p><img alt="" src="https://mdn.mozillademos.org/files/12095/basic-web-ide.png" style="display: block; height: 1424px; margin: 0px auto; width: 1824px;"></p>
+ </li>
+ <li>
+  <p>Une fois que votre simulateur a été créé et listé sous <em>Simulators</em>, cliquez sur l'îcone de configuration à droite du nom du simulateur. Un écran vous permettant de configurer l'appareil que vous shouaitez simuler apparaitra.</p>
+
+  <p><img alt="" src="https://mdn.mozillademos.org/files/12097/tv-web-ide.png" style="display: block; height: 1424px; margin: 0px auto; width: 1824px;"></p>
+ </li>
+ <li>
+  <p>Un groupe <em>TVs</em> est disponible dans la liste déroulante <em>Appareil</em>, et il contient tous les modèles de TV actuellement supportés:</p>
+
+  <p><img alt="" src="https://mdn.mozillademos.org/files/12099/tv-options.png" style="display: block; height: 612px; margin: 0px auto; width: 442px;"></p>
+ </li>
+ <li>
+  <p>Une fois que vous avez configuré votre TV avec vos spécifications, cliquez sur le nom du simulateur et le simulateur va se lancé!  L'écran d'accueil ressemblera à celui-ci dessous:</p>
+
+  <p><img alt="" src="https://mdn.mozillademos.org/files/12101/tv-home-screen.png" style="display: block; height: 484px; margin: 0px auto; width: 800px;"></p>
+ </li>
+</ol>
+
+<h2 id="Utiliser_Mulet_pour_simuler_Firefox_OS_pour_TV">Utiliser Mulet pour simuler Firefox OS pour TV</h2>
+
+<p>Si vous préférez compiler votre propre profil TV, peut être pour tester les changements dans Gaia qui n'ont pas encore été intégrés dans le simulateur officiel Firefox OS, vous pouvez lancer votre profil dans un build spécial de Firefox appelé Firefox Mulet. Regardez <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Developing_Gaia/Different_ways_to_run_Gaia#Using_Gaia_in_Firefox_Mulet">Utiliser Gaia dans Firefox Mulet </a>pour apprendre comment mettre en place un environnement.</p>
+
+<ol>
+ <li>
+  <p>Pour créer un profil spécial de Gaia pour TV, lancer la commande make dans votre dossier du dépôt gaia avec les options suivantes:</p>
+
+  <pre class="brush: bash"><code>GAIA_DEVICE_TYPE=tv DEVICE_DEBUG=1 make</code></pre>
+
+  <p>Cela créé un profil TV dans le dossier <code>profile </code>qui est initialisé pour debugger de façon optimale.</p>
+ </li>
+ <li>
+  <p>Lancez Mulet depuis votre ligne de commande, en passant votre profil Gaia comme profil à utiliser pour l'ouverture (défini par l'option <code>-profile</code>), et la configuration de la taille de l'écran (définie par l'option <code>-screen</code>):</p>
+
+  <pre><code>./mulet/FirefoxNightly.app/Contents/MacOS/firefox-bin -no-remote </code><code>-screen 1600x900</code><code> -profile </code><code>/path/to/gaia/profile</code></pre>
+
+  <div class="note">
+  <p><strong>Note</strong>: Si l'option <code>-screen</code> spécifie une résolution plus grandeque celle de la taille d'écran de votre PC, l'application système ne va pas fonctionner correctement et vous pourriez avoir une interface cassée. Réduisez la taille d'écran autant que nécessaire pour correspondre à votre système.</p>
+  </div>
+
+  <div class="note">
+  <p><strong>Note</strong>: Le chemin exact passé dans l'option <code>-profile /path/to/gaia/profile</code> dont vous avez besoin, vous est donné quand vous créez votre profil. (en lançant la commande <code>make</code>, comme montrez ci-dessus.)</p>
+  </div>
+ </li>
+ <li>
+  <p>Si tout va bien, vous verrez s'afficher l'application de l'écran d'accueil — éventuellement affichée incorrectement avec une rotation. C'est un bug connu (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1228899">Bug 1228899</a>):<img alt="TV build runs on Mulet" src="https://mdn.mozillademos.org/files/12131/Screen%20Shot%202015-12-09%20at%2010.23.46.png" style="display: block; height: 486px; margin: 0px auto; width: 800px;"></p>
+ </li>
+ <li>
+  <p>Vous pouvez corriger ce problème en cliquant sur le bouton de rotation la barre d'outil de Mulet et en ajustant la taille de l'écran si nécessaire:</p>
+ </li>
+</ol>
+
+<p><img alt="TV build runs on Mulet" src="https://mdn.mozillademos.org/files/12135/Screen%20Shot%202015-12-16%20at%203.56.37%20PM.png" style="display: block; height: 486px; margin: 0px auto; width: 800px;"></p>

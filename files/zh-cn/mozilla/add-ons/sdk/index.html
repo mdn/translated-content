@@ -1,0 +1,104 @@
+---
+title: 附加组件 SDK
+slug: Mozilla/Add-ons/SDK
+tags:
+  - More Example
+  - Need Tanslate
+  - TopicStub
+translation_of: Archive/Add-ons/Add-on_SDK
+---
+<div class="warning">
+<p>Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 57, released November 2017. As there is no supported version of Firefox enabling these technologies, this page will be removed by December 2020.</p>
+
+<p>Add-ons using the techniques described in this document are considered a legacy technology in Firefox. Don't use these techniques to develop new add-ons. Use <a href="/en-US/Add-ons/WebExtensions">WebExtensions</a> instead. If you maintain an add-on which uses the techniques described here, consider migrating it to use WebExtensions.</p>
+
+<p><strong>Starting from <a href="https://wiki.mozilla.org/RapidRelease/Calendar">Firefox 53</a>, no new legacy add-ons will be accepted on addons.mozilla.org (AMO) for desktop Firefox and Firefox for Android.</strong></p>
+
+<p><strong>Starting from <a href="https://wiki.mozilla.org/RapidRelease/Calendar">Firefox 57</a>, only extensions developed using WebExtensions APIs will be supported on Desktop Firefox and Firefox for Android. </strong></p>
+
+<p>Even before Firefox 57, changes coming up in the Firefox platform will break many legacy extensions. These changes include multiprocess Firefox (e10s), sandboxing, and multiple content processes. Legacy extensions that are affected by these changes should migrate to use WebExtensions APIs if they can. See the <a href="https://blog.mozilla.org/addons/2017/02/16/the-road-to-firefox-57-compatibility-milestones/">"Compatibility Milestones" document</a> for more information.</p>
+
+<p>A wiki page containing <a href="https://wiki.mozilla.org/Add-ons/developer/communication">resources, migration paths, office hours, and more</a>, is available to help developers transition to the new technologies.</p>
+</div>
+
+<p>你可以使用Add-on SDK来开发Firefox的附加组件。你可以使用各种各样的标准Web技术：JavaScript, HTML和CSS。该SDK不仅包括一些用来创建附加组件的 JavaScript API，还提供了开发、运行、测试、打包附加组件的一些工具。</p>
+
+<hr>
+<h3 id="教程">教程</h3>
+
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><code><a href="/zh-CN/docs/Mozilla/Add-ons/SDK/Tutorials#getting-started">快速入门</a></code></dt>
+ <dd>如何<a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/SDK/Tools/jpm">安装SDK</a>并<a href="/zh-CN/docs/Mozilla/Add-ons/SDK/Tutorials/Getting_started">使用jpm工具</a>开发、测试、打包附加组件</dd>
+ <dt><a href="/zh-CN/docs/Mozilla/Add-ons/SDK/Tutorials#interact-with-the-browser">与浏览器交互</a></dt>
+ <dd><a href="/zh-CN/docs/Mozilla/Add-ons/SDK/Tutorials/Open_a_Web_Page">打开网页</a>，<a href="/zh-CN/docs/Mozilla/Add-ons/SDK/Tutorials/Listen_for_Page_Load">监听页面加载</a>，<a href="/zh-CN/docs/Mozilla/Add-ons/SDK/Tutorials/List_Open_Tabs">列出打开的标签页</a>。</dd>
+ <dt><a href="/zh-CN/Add-ons/SDK/Tutorials#development-techniques">开发技术</a></dt>
+ <dd>学习常用开发技术，如<a href="/zh-CN/Add-ons/SDK/Tutorials/Unit_testing">单元测试</a>，<a href="/zh-CN/Add-ons/SDK/Tutorials/Logging">日志</a>，<a href="/zh-CN/Add-ons/SDK/Tutorials/Creating_Reusable_Modules">创建可复用模块</a>，<a href="/zh-CN/Add-ons/SDK/Tutorials/l10n">本地化</a>，<a href="/zh-CN/Add-ons/SDK/Tutorials/Mobile_development">移动开发</a></dd>
+</dl>
+</div>
+
+<div class="column-half">
+<dl>
+ <dt><a href="/zh-CN/Add-ons/SDK/Tutorials#create-user-interfaces">创建用户界面组件</a></dt>
+ <dd>创建用户界面组件如<a href="/zh-CN/Add-ons/SDK/Tutorials/Adding_a_Button_to_the_Toolbar">工具条按钮</a>, <a href="/zh-CN/Add-ons/SDK/Tutorials/Add_a_Context_Menu_Item">上下文菜单</a>，<a href="/zh-CN/Add-ons/SDK/Tutorials/Add_a_Menu_Item_to_Firefox">菜单项</a>，<a href="/zh-CN/Add-ons/SDK/Tutorials/Display_a_Popup">对话框</a>。</dd>
+ <dt><a href="/zh-CN/Add-ons/SDK/Tutorials#modify-web-pages">修改网页</a></dt>
+ <dd>
+ <p>通过<a href="/zh-CN/docs//zh-CN/Add-ons/SDK/Tutorials/Modifying_Web_Pages_Based_on_URL">URL匹配</a>修改页面或者动态<a href="/zh-CN/docs//zh-CN/Add-ons/SDK/Tutorials/Modifying_the_Page_Hosted_by_a_Tab">修改某个tab选项卡</a>。</p>
+ </dd>
+ <dt><a href="/zh-CN/docs/Mozilla/Add-ons/SDK/Tutorials/Annotator">将其组合在一起</a></dt>
+ <dd>关于注释器的附加组件的例子演示.</dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h3 id="指南">指南</h3>
+
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="/zh-CN/Add-ons/SDK/Guides#contributors-guide"><span class="short_text" id="result_box" lang="zh-CN"><span class="op_dict_text2">贡献者</span><span>指南</span></span></a></dt>
+ <dd>学习<a href="/zh-CN/Add-ons/SDK/Guides/Getting_Started">如何开始构建</a> SDK和关于SDK最重要的术语, 如 <a href="/zh-CN/Add-ons/SDK/Guides/Modules">模块</a>, <a href="/zh-CN/Add-ons/SDK/Guides/Classes_and_Inheritance"> 类和继承</a>, <a href="/zh-CN/Add-ons/SDK/Guides/Private_Properties">私有属性</a>, <a href="/zh-CN/Add-ons/SDK/Guides/Content_Processes">内容处理</a>.</dd>
+ <dt><a href="/zh-CN/Add-ons/SDK/Guides#sdk-infrastructure">SDK的基础构建</a></dt>
+ <dd>SDK的底层技术方面: <a href="/zh-CN/Add-ons/SDK/Guides/Module_structure_of_the_SDK">模块</a>,<a href="/zh-CN/Add-ons/SDK/Guides/Program_ID">程序ID</a>, <a href="/zh-CN/Add-ons/SDK/Guides/Firefox_Compatibility">Firefox 兼容</a>的规则定义.</dd>
+ <dt><a href="/zh-CN/Add-ons/SDK/Guides/Content_Scripts"><span class="short_text" id="result_box" lang="zh-CN"><span>内容</span><span>脚本</span></span></a></dt>
+ <dd>
+ <div class="output-bd" dir="ltr">
+ <p class="ordinary-output target-output"><span>一个详细的</span><span>指南</span><span>内容脚本</span></p>
+ </div>
+ </dd>
+</dl>
+</div>
+
+<div class="column-half">
+<dl>
+ <dt><a href="/zh-CN/Add-ons/SDK/Guides#sdk-idioms">SDK语法</a></dt>
+ <dd>SDK的事件框架和插件的脚本和内容脚本之间的区别。</dd>
+ <dd>SDK的 <a href="/zh-CN/Add-ons/SDK/Guides/Working_with_Events">事件框架</a> 和 <a href="/zh-CN/Add-ons/SDK/Guides/Two_Types_of_Scripts">add-on scripts 和 content scripts 的</a>区别.</dd>
+ <dt><a href="/zh-CN/Add-ons/SDK/Guides/XUL_Migration_Guide">XUL 迁移</a></dt>
+ <dd>指导  <a href="/zh-CN/Add-ons/SDK/Guides/XUL_Migration_Guide">移植 XUL add-ons 到 SDK</a>. 本指南包括 <a href="/zh-CN/Add-ons/SDK/Guides/XUL_vs_SDK">两工具</a> 和 一个 <a href="/zh-CN/Add-ons/SDK/Guides/Porting_the_Library_Detector">工作实例</a> 比较 XUL 和 add-on.</dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h3 id="参考"><span class="short_text" id="result_box" lang="zh-CN"><span>参考</span></span></h3>
+
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="/zh-CN/Add-ons/SDK/High-Level_APIs">高级API</a></dt>
+ <dd>高级SDK API的参考文档.</dd>
+ <dt><a href="/zh-CN/Add-ons/SDK/Tools">工具参考</a></dt>
+ <dd>用于 <a href="/zh-CN/docs/Mozilla/Add-ons/SDK/Tools/jpm">jpm工具</a> 开发的参考文档, 测试, 打包add-ons, 全局 <a href="/zh-CN/Add-ons/SDK/Tools/console">控制台</a>记录, 和<a href="/zh-CN/Add-ons/SDK/Tools/package_json">package.json</a> 文件.</dd>
+</dl>
+</div>
+
+<div class="column-half">
+<dl>
+ <dt><a href="/zh-CN/Add-ons/SDK/Low-Level_APIs">低级API</a></dt>
+ <dd>低级SDK API的参考文档.</dd>
+</dl>
+</div>
+</div>

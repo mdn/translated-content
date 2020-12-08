@@ -1,0 +1,161 @@
+---
+title: 添加事件处理函数
+slug: Mozilla/Tech/XUL/Tutorial/Adding_Event_Handlers
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_Event_Handlers
+---
+<p><span style="float: left;">« <a href="../../../../en/XUL_Tutorial/Scrolling_Menus" rel="internal">Previous</a></span> <span style="float: right;"><a href="../../../../en/XUL_Tutorial/More_Event_Handlers" rel="internal">Next</a> »</span></p>
+
+<p> </p>
+
+<p>  </p>
+
+<p> </p>
+
+<p>    到此为止我们的 findfile 看起来很棒。我们还没有搞定它，因为到此为止我们仅只是建立了一个简单的用户界面。接下来我们将给他添加脚本。</p>
+
+<div id="section_1">
+<h3 class="editable" id="使用脚本"><span>使用脚本</span></h3>
+
+<div class="editIcon"><a href="/../../../../en/XUL_Tutorial/Adding_Event_Handlers#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+
+<p>    为了使 find files 对话框工作，我们需要添加一些脚本来完成与用户的交互。我们想要为查找按钮、取消按钮以及各级菜单项添加脚本。我们会像在 <a href="../../../../en/HTML" rel="internal">HTML</a> 中一样使用 <a href="../../../../en/JavaScript" rel="internal">JavaScript</a> 来写一些函数。</p>
+
+<p>    你可以使用 <code><span class="lang lang-en"><a href="../../../../en/XUL/script" rel="internal">script</a> <span style="font-family: verdana,tahoma,sans-serif;">元素为</span></span></code> XUL 文件引入脚本。你可以直接在<code> &lt;script&gt;</code>  <code>&lt;/</code><code>script&gt;</code>标签之间嵌入脚本，但是最好是使用独立的文件来包含脚本，这样 XUL 窗口加载会快一些。 <code><span class="lang lang-en"><a href="../../../../en/XUL/Attribute/src" rel="internal">src</a> <span style="font-family: verdana,tahoma,sans-serif;">属性用于引入外部脚本文件。</span></span></code></p>
+
+<div class="highlight">
+<div id="section_2">
+<h5 class="editable" id="find_files_的例子"><span> find files 的例子</span></h5>
+
+<div class="editIcon"><a href="/../../../../en/XUL_Tutorial/Adding_Event_Handlers#" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+
+<p>    让我们为 find file 对话框添加脚本。尽管脚本文件的文件名无关紧要，但通常的它采用与 XUL 文件相同的文件名并以 .js 作为后缀。我们建立一个 findfile.js 文件。把下面的一行加到 <code><span class="lang lang-en"><a href="../../../../en/XUL/window" rel="internal">window</a> 开标记之后，所有元素<strong>之前</strong>。</span></code></p>
+
+<pre class="eval"><span class="highlightred">&lt;script src="findfile.js"/&gt;</span>
+</pre>
+
+<p>    当我们知道改在脚本文件里添加什么之后，我们再建立这个文件。我们会在这个文件中定义一些函数，并且我们把这些函数称为事件处理函数。</p>
+</div>
+</div>
+
+<p>    你可以通过使用多个 <code>script</code> 标记向 XUL 文件添加多个脚本文件，此时你可以使用相对或绝对 URLs。比如下面的例子：</p>
+
+<pre class="eval">&lt;script src="findfile.js"/&gt;
+&lt;script src="<a class="external" rel="freelink">chrome://findfiles/content/help.js</a>"/&gt;
+&lt;script src="<a class="external" href="http://www.example.com/js/items.js" rel="freelink">http://www.example.com/js/items.js</a>"/&gt;
+</pre>
+
+<p>    本教程不涉及与事件处理无关的 JavaScript 的使用。因为这实在有太多的内容需要讲述，而且也可以从很多其他其他的资料获得所需的知识。</p>
+
+<div class="note">默认的 JavaScript 仅在页面上显示错误。为了显示在 chrome JavaScript 中的错误，有必要更改以下设置： <code>javascript.options.showInConsole = true</code><br>
+如果设置<code> javascript.options.strict = true</code> 那么任何不标准的，写法不良的，有语法上导致逻辑错误的，都将会写到日志中。</div>
+</div>
+
+<div id="section_3">
+<h3 class="editable" id="响应事件"><span>响应事件</span></h3>
+
+<div class="editIcon"><a href="/../../../../en/XUL_Tutorial/Adding_Event_Handlers#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+
+<p>    脚本需要响应一系列的事件包括用户触发的或是其他状态引起的。起码有三种不同的事件需要用不同的方法来处理。一种是用户按下鼠标键或是按下一个键盘按键。每一个 XUL 元素都有能力在不同的状态触发特定事件。一些事件仅由特定元素触发。</p>
+
+<p>    每一个事件都有一个名字，如 'mousemove' 是用户在一个 UI 元素上移动鼠标所触发的事件。XUL 与 <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events/" rel="external nofollow" title="http://www.w3.org/TR/DOM-Level-2-Events/">DOM Events</a>使用同样的机制来处理事件。当一个动作发生就会触发一个事件，比如用户移动鼠标，就会由一个相应类型的事件对象产生。 事件对象中包含一系列的属性包括：鼠标位置，哪个键被按下等。</p>
+
+<p>    事件按阶段被发送到 XUL。</p>
+
+<ul>
+ <li>路由阶段，事件先发送到窗口，然后是文件，沿着继承关系向下传递直到到达触发元素。</li>
+ <li>目标阶段，事件被发送的目标元素。</li>
+ <li>返回阶段，事件被逐级上传直到回到窗口。</li>
+</ul>
+
+<p>    可以在路由及返回阶段响应事件。一旦事件完成以上传播过程而为得以处理将使用默认的动作来处理该事件。</p>
+
+<p>    比如，当鼠标在一个包含在 box 中的按钮上移动时，产生一个 'mousemove' 事件，这个事件先被发送到窗口，紧接着是文件，然后是这个 box ，这样就完成了路由过程。然后事件被发送给按钮。最后，返回阶段，事件被发给 box、文件及窗口。返回阶段本质上是路由过程的逆过程。需要说明的是，有些事件没有返回阶段。</p>
+
+<p>    在事件传播的每一个阶段你都可以在任何元素上监听。由于事件会传递给所有祖先你可以在继承关系的更高层来添加监听器。当然，一个高层收到事件会通知它的全部子元素，而对于按钮的事件仅属于这个按钮。这一点对与你希望使用同样的代码控制一些元素是有用的。</p>
+
+<p>    大多数公共事件使用 'command' 事件。 当使用者启动一个元素 command 事件会被触发，例如按按钮，选择菜单项等。对与不同的触发元素 command 会自动的按照不同的方式进行处理，比如，无论用户是使用鼠标点击按钮还是通过快捷键都会触发 command 事件。</p>
+
+<p>    有两种办法来为一个元素添加事件监听器。其一，把脚本本身作为其属性；其二，使用元素的 <code>addEventListener</code> 方法。 前者只处理返回事件但写起来更方便。后者可以控制事件的任何阶段，并且对同一个元素、事件可以使用多个监听器。对大多数元素来说，更多的使用属性的方式。</p>
+</div>
+
+<div id="section_4">
+<h3 class="editable" id="事件监听器属性"><span>事件监听器属性</span></h3>
+
+<div class="editIcon"><a href="/../../../../en/XUL_Tutorial/Adding_Event_Handlers#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+
+<p>    使用属性形式，在你希望监听的元素上加一个属性，名字是待监听的事件名前加'on'。如，为了响应事件  'command' 属性名为 'oncommand'。属性值是处理此事件的一段脚本。通常代码短小，或者就是调用独立脚本文件中的函数。下面的例子响应按钮按下。</p>
+
+<p><span class="lang lang-en"><span id="Example_1"><strong>Example 1</strong></span> </span> : <span class="lang lang-en"><a class="external" href="http://developer.mozilla.org/samples/xultu/examples/ex_events_1.xul.txt" rel="external nofollow" title="http://developer.mozilla.org/samples/xultu/examples/ex_events_1.xul.txt">Source</a> <a class="external" href="http://developer.mozilla.org/samples/xultu/examples/ex_events_1.xul" rel="external nofollow" title="http://developer.mozilla.org/samples/xultu/examples/ex_events_1.xul">View</a> </span></p>
+
+<pre class="eval">&lt;button label="OK" oncommand="alert('Button was pressed!');"/&gt;
+</pre>
+
+<p>    由于 'command' 事件会返回，也可以把事件监听器添加到封装元素中。下面的例子监听器会响应全部两元素。</p>
+
+<p><span class="lang lang-en"><span id="Example_2"><strong>Example 2</strong></span> </span> : <span class="lang lang-en"><a class="external" href="http://developer.mozilla.org/samples/xultu/examples/ex_events_2.xul.txt" rel="external nofollow" title="http://developer.mozilla.org/samples/xultu/examples/ex_events_2.xul.txt">Source</a> <a class="external" href="http://developer.mozilla.org/samples/xultu/examples/ex_events_2.xul" rel="external nofollow" title="http://developer.mozilla.org/samples/xultu/examples/ex_events_2.xul">View</a> </span></p>
+
+<pre class="eval">&lt;vbox oncommand="alert(event.target.tagName);"&gt;
+  &lt;button label="OK"/&gt;
+  &lt;checkbox label="Show images"/&gt;
+&lt;/vbox&gt;
+</pre>
+
+<p>    在这个例子中，command 事件会有 button 或 checkbox 返回到设置了事件处理的 vbox 上。如果在按钮上在加一个监听器 (<code>oncommand</code> 属性) ，按钮上的代码会先调用，然后是 vbox 的。事件处理函数会传递一个隐含参数 'event'，这参数可以获得事件的额外信息。一个常用的属性是 'target' ，它保存着事件是由谁产生的。这个例子里，显示事件产生者的标签名。target 很有用，因为你可以在一段代码里为一系列按钮作响应。</p>
+
+<p>    你可能注意到这里使用的语法与 HTML 中的一样。事实上， HTML 和 XUL 共用统计的事件机制。一个重要的不同是 'click' 事件 (或  <code>onclick</code> 属性) 在 HTML 中它仅用于响应按钮，而在 XUL 中 command 事件被用于替代它。XUL 有一个 click 事件，但是仅响应鼠标点击，不响应键盘。因此点击事件在XUL中应避免使用，除非你希望一个元素仅可以通过鼠标触发。补充一下，如果元素的 disable 属性为 true 时 command 事件不会被发送，而 click 事件则不然。</p>
+
+<div class="highlight">
+<div id="section_5">
+<h5 class="editable" id="find_files_的例子_2"><span>find files 的例子</span></h5>
+
+<div class="editIcon"><a href="/../../../../en/XUL_Tutorial/Adding_Event_Handlers#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+
+<p>     command 处理器可以用于响应查找和取消按钮，按查找按钮开始查找，当然由于我们没有实现这部分，我们现在还不能，这部分我们以后再完成，按取消按钮关闭窗口,下面的代码显示怎么做。并且我们也为关闭菜单也写了相同的代码。</p>
+
+<pre class="eval">&lt;menuitem label="Close" accesskey="c" <span class="highlightred">oncommand="window.close();"</span>/&gt;
+...
+
+&lt;button id="cancel-button" label="Cancel"
+     <span class="highlightred">oncommand="window.close();</span>"/&gt;
+</pre>
+
+<p>      这里加了两个处理器。<code>oncommand</code> 被加到关闭菜单项中了。通过使用这个处理器，用户可以使用鼠标点击菜单或使用键盘来选择此菜单来关闭窗口。<code>oncommand</code> 处理器也加到了取消按钮上。</p>
+</div>
+</div>
+</div>
+
+<h3 class="editable" id="DOM_事件监听器"><span>DOM 事件监听器</span></h3>
+
+<div class="editIcon"><a href="/../../../../en/XUL_Tutorial/Adding_Event_Handlers#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+
+<p>    为一个元素添加事件处理的另一种方法是使用元素的 addEventListener 方法，这允许你动态的监听事件或在路由阶段处理事件。语法如下。</p>
+
+<p><span class="lang lang-en"><span id="Example_3"><strong>Example 3</strong></span> </span> : <span class="lang lang-en"><a class="external" href="http://developer.mozilla.org/samples/xultu/examples/ex_events_3.xul.txt" rel="external nofollow" title="http://developer.mozilla.org/samples/xultu/examples/ex_events_3.xul.txt">Source</a> <a class="external" href="http://developer.mozilla.org/samples/xultu/examples/ex_events_3.xul" rel="external nofollow" title="http://developer.mozilla.org/samples/xultu/examples/ex_events_3.xul">View</a> </span></p>
+
+<pre>&lt;button id="okbutton" label="OK"/&gt;
+
+&lt;script&gt;
+function buttonPressed(event){
+  alert('Button was pressed!');
+}
+
+var button = document.getElementById("okbutton");
+button.addEventListener('command', buttonPressed, true);
+&lt;/script&gt;
+</pre>
+
+<p>     <code><a href="../../../../en/DOM/document.getElementById" rel="internal">getElementById()</a></code> 函数返回给定 id 的元素，这里返回这个按钮。<code><a href="../../../../en/DOM/element.addEventListener" rel="internal">addEventListener()</a></code> 函数新建一个路由阶段的事件监听器。第一个参数是待监听的事件名，第而个参数是事件发生时要调用的函数名，最后一个参数如是 <code>true</code> 表示这是一个路由阶段的监听器，设为 false 则监听返回阶段。作为事件处理函数的第二个参数需要带一个参数（这个事件对象），就像上面定义的 <code>buttonPressed</code> 函数一样。</p>
+
+<div class="highlight"><span class="lang lang-en"><span id="Find_files_example_so_far"><strong>Find files example so far</strong></span> </span> : <span class="lang lang-en"><a class="external" href="http://developer.mozilla.org/samples/xultu/examples//findfile/findfile-events.xul.txt" rel="external nofollow" title="http://developer.mozilla.org/samples/xultu/examples//findfile/findfile-events.xul.txt">Source</a> <a class="external" href="http://developer.mozilla.org/samples/xultu/examples//findfile/findfile-events.xul" rel="external nofollow" title="http://developer.mozilla.org/samples/xultu/examples//findfile/findfile-events.xul">View</a> </span></div>
+
+<p> </p>
+
+<p>    接下来，我们详细的看看 <a href="../../../../en/XUL_Tutorial/More_Event_Handlers" rel="internal">事件对象</a>（<a href="../../../../en/XUL_Tutorial/More_Event_Handlers" rel="internal">event object</a>）。</p>
+
+<p> </p>
+
+<div class="prevnext">
+<p><span style="float: left;">« <a href="../../../../en/XUL_Tutorial/Scrolling_Menus" rel="internal">Previous</a></span> <span style="float: right;"><a href="../../../../en/XUL_Tutorial/More_Event_Handlers" rel="internal">Next</a> »</span></p>
+</div>
+
+<p> </p>

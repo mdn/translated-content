@@ -1,0 +1,125 @@
+---
+title: カスタムツリービュー
+slug: Archive/Mozilla/XUL/Tutorial/Custom_Tree_Views
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Custom_Tree_Views
+---
+<p> </p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Tree_Selection" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Tree_View_Details">次のページ  »</a></p>
+</div>
+<p>ツリービューは、ツリーに表示するデータを保持するために使用します。</p>
+<p><span id="Creating_a_Custom_View"></span></p>
+<h3 id=".E3.82.AB.E3.82.B9.E3.82.BF.E3.83.A0.E3.83.93.E3.83.A5.E3.83.BC.E3.81.AE.E4.BD.9C.E6.88.90" name=".E3.82.AB.E3.82.B9.E3.82.BF.E3.83.A0.E3.83.93.E3.83.A5.E3.83.BC.E3.81.AE.E4.BD.9C.E6.88.90">カスタムビューの作成</h3>
+<p>これまでのセクションでは、組み込みのコンテントツリービューだけを使用してきました。 このセクションでは、新たに開発者が独自に作成可能なカスタムビューの作り方について説明します。 これは扱うデータ量が大きいときや、その並び方が複雑な場合に必要になります。 例えば、数千の行を持つツリーで <code>treeitem</code> 要素を使用した場合、パフォーマンス的に実用にならないと思います。 また、表示するデータを計算処理によって作成するような場合にも、カスタムビューによる実装は適しています。 カスタムビューを作成すると、使用するデータの種類に最も適した方法で、データの取得と保存を行うことができます。 このため、たとえ表示対象の行が数十万行あるような場合も、ツリーを利用することが可能になります。</p>
+<div class="note">
+ 注意: ツリー関連のインターフェイスは、 <a href="ja/Gecko">Gecko</a> 1.8. (<a href="ja/Firefox_1.5">Firefox 1.5</a>) で変更されました。詳細は <a href="ja/Tree_Widget_Changes">Tree Widget Changes</a> を参照してください。</div>
+<p>カスタムビューを作成するには、<a class="external" href="http://xulplanet.com/references/xpcomref/ifaces/nsITreeView.html">nsITreeView</a> インターフェイスを実装したオブジェクトを作成する必要があります。 このオブジェクトは <a href="ja/JavaScript">JavaScript</a> で作成することも可能ですが、ツリーごとに別々のオブジェクトを作成する必要があります。 カスタムツリービューを利用する場合、コンテントツリービューは利用しないので、当然 <code><code><a href="/ja/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></code>、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/treerow" title="treerow">treerow</a></code></code>、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/treecell" title="treecell">treecell</a></code></code> の各要素も使用しません。 カスタムビューは、データを別の所から取得することになるため、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code></code> 要素は空にしておきます。 以下に例を示します。</p>
+<pre>&lt;tree id="my-tree" flex="1"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="namecol" label="Name" flex="1"/&gt;
+    &lt;treecol id="datecol" label="Date" flex="1"/&gt;
+  &lt;/treecols&gt;
+  &lt;treechildren/&gt;
+&lt;/tree&gt;
+</pre>
+<p>このツリーに表示するデータを設定するためには、ビューオブジェクトを作成する必要があります。 ビューは、ツリーの各セルの値や行の総数といった情報や、それ以外で付加的に必要な情報をツリーに示すために使用されます。 このため、ツリーは表示に必要な情報の取得のために、ビューのメソッドを呼び出すことになります。</p>
+<p>一般的に、ツリービューで実装可能な関数は 30 以上ありますが、必須で実装しなければならないものは、ツリーから呼び出されるものだけになります。 必ず実装する必要がある 3 つのメソッドを、以下に示します。</p>
+<dl>
+ <dt>
+  rowCount</dt>
+ <dd>
+  このプロパティは、ツリーに含まれる行の総数が設定されている必要があります。</dd>
+ <dt>
+  getCellText( row , column )</dt>
+ <dd>
+  このメソッドは、指定された行と列に対応するテキストを返す必要があります。このメソッドは、各セルにデータを表示するために呼び出され、このとき、行を表す引数 row には 0 から始まる数が渡されます。また、列を表す引数 column には、対応する <code>TreeColumn</code> オブジェクトが渡されます。ただし、(<a href="ja/Firefox_1.5">Firefox 1.5</a>/Mozilla 1.8) より古いバージョンでは、列の id 属性の値が渡されます。なお、以前のように id が必要な場合は、<code>TreeColumn</code> の <code>id</code> プロパティを利用することができます。</dd>
+ <dt>
+  setTree( tree )</dt>
+ <dd>
+  このメソッドは、一度だけ呼び出され、そのビューに対応する tree 要素を設定します。</dd>
+</dl>
+<p>以下にツリービューオブジェクトの定義例を示します。 なお、オブジェクトの名前は、好みのもので構いません。</p>
+<pre>//Moz 1.8
+var treeView = {
+    rowCount : 10000,
+    getCellText : function(row,column){
+      if (column.id == "namecol") return "Row "+row;
+      else return "February 18";
+    },
+    setTree: function(treebox){ this.treebox = treebox; },
+    isContainer: function(row){ return false; },
+    isSeparator: function(row){ return false; },
+    isSorted: function(){ return false; },
+    getLevel: function(row){ return 0; },
+    getImageSrc: function(row,col){ return null; },
+    getRowProperties: function(row,props){},
+    getCellProperties: function(row,col,props){},
+    getColumnProperties: function(colid,col,props){}
+};
+</pre>
+<p>この例には、最低限ツリーを動作させるためには必須ではないため、上の説明には含まれていない関数がいくつか定義されています。 これらについても、ツリーが付加的な情報の取得のために呼び出すので、上記のように最低限の実装はしておく必要があります。</p>
+<p>この例は 10,000 の行を持つツリーの例としても使用することができるもので、 最初の列のセルの内容は、テキスト「Row X」(X は行の番号) になります。 また、2 番目の列のセルの内容は、固定で「February 18」になります。 関数 <code>getCellText()</code> にある if 文では、引数 column の <code>id</code> プロパティと、テキスト「<code>namecol</code>」の比較をしています。 このテキスト「<code>namecol</code>」は、前の例における最初の <code><code><a href="/ja/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code></code> 要素の <code>id</code> に対応しています。 言うまでもなく、この例はごく単純なもので、実際のアプリケーションでは各セルのデータの扱いはもっと複雑なものになるはずです。</p>
+<p>最後にビューオブジェクトとツリーを関連付ける必要があります。 ツリーには <code>view</code> プロパティがあり、ここに上で作成したビューオブジェクトを設定します。 このプロパティは、いつでもビューの設定のために値を代入したり変更したりすることが可能です。</p>
+<pre>function setView(){
+    document.getElementById('my-tree').view = treeView;
+}
+</pre>
+<p><span id="Example_custom_tree"></span></p>
+<h4 id=".E3.82.AB.E3.82.B9.E3.82.BF.E3.83.A0.E3.83.84.E3.83.AA.E3.83.BC.E3.81.AE.E4.BE.8B" name=".E3.82.AB.E3.82.B9.E3.82.BF.E3.83.A0.E3.83.84.E3.83.AA.E3.83.BC.E3.81.AE.E4.BE.8B">カスタムツリーの例</h4>
+<p>以下に、これまでの例をまとめたものを示します。 なお、ここでは例を単純にするためにスクリプトをインラインに記述していますが、 通常は外部スクリプトファイルに記述するようにしてください。</p>
+<p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_treeview_1.xul.txt">ソース</a></p>
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;window title="Tree Example" id="tree-window"
+   xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+   onload="setView();"&gt;
+
+&lt;script&gt;
+//Moz 1.8
+var treeView = {
+    rowCount : 10000,
+    getCellText : function(row,column){
+      if (column.id == "namecol") return "Row "+row;
+      else return "February 18";
+    },
+    setTree: function(treebox){ this.treebox = treebox; },
+    isContainer: function(row){ return false; },
+    isSeparator: function(row){ return false; },
+    isSorted: function(){ return false; },
+    getLevel: function(row){ return 0; },
+    getImageSrc: function(row,col){ return null; },
+    getRowProperties: function(row,props){},
+    getCellProperties: function(row,col,props){},
+    getColumnProperties: function(colid,col,props){}
+};
+
+function setView(){
+    document.getElementById('my-tree').view = treeView;
+}
+&lt;/script&gt;
+
+&lt;tree id="my-tree" flex="1"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="namecol" label="Name" flex="1"/&gt;
+    &lt;treecol id="datecol" label="Date" flex="1"/&gt;
+  &lt;/treecols&gt;
+  &lt;treechildren/&gt;
+&lt;/tree&gt;
+
+&lt;/window&gt;
+</pre>
+<div class="float-right">
+ <img alt="画像:treeview1.png"></div>
+<p>画像から、2 つの列に、それぞれ <code>getCellText()</code> 関数から取得されたデータが表示されていることが確認できます。 また、この例ではビューを設定する <code>setView()</code> 関数を、ウインドウの <code>onload()</code> ハンドラから呼び出すようにしていますが、 必要ならばもっと遅いタイミングで行ってもかまいません。 なお、ビューはいつでも変更できます。</p>
+<p><code>getCellText()</code> 関数が、実際に内容を表示する必要があるときにのみ呼び出されていることを補足しておきます。 上の 10,000 行の例の場合も、<code>getCellText()</code> は、そのとき表示中のセルに対してのみ呼び出されています。 この画像では、最後に一部だけ表示されている行も含めて、7 行が表示されているだけなので、 <code>getCellText()</code> は、7 行 × 2 列で、計 14 回しか呼び出されません。 それ以外の行については、利用者がスクロールを行って、実際に表示されるようになったときに呼び出されます。 この挙動が、ツリーを非常に効率的なものにしています。</p>
+<p>ビューオブジェクトは、組み込みのコンテントツリービューを利用するツリーでも利用できることを注記しておきます。 このビューを、セルのラベルなどの情報を取得するために利用することができます。</p>
+<p>ツリービューに実装することができる、全てのプロパティと一覧は <a class="external" href="http://www.xulplanet.com/references/xpcomref/ifaces/nsITreeView.html">nsITreeView インターフェイス</a> を参照してください。 このうちのいくつかは、次のセクションで見ていく予定です。</p>
+<p>次のセクションでは、ツリービューのさらに高度な使い方について見ていきます。</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Tree_Selection" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Tree_View_Details">次のページ  »</a></p>
+</div>

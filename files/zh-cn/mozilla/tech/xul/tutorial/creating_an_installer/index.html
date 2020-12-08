@@ -1,0 +1,98 @@
+---
+title: 创建安装程序
+slug: Mozilla/Tech/XUL/Tutorial/Creating_an_Installer
+translation_of: Archive/Mozilla/XUL/Tutorial/Creating_an_Installer
+---
+<p> <span class="lang lang-en"> </span></p>
+<div class="warning">
+ <p>Parts of this page show the use of the <a href="../../../../en/XPInstall_API_Reference" rel="internal">XPInstall API</a>. The majority of this API is now deprecated and as of Gecko 1.9 no longer available. <a href="../../../../en/Extensions" rel="internal">Extension</a>, <a href="../../../../en/Themes" rel="internal">theme</a>, and <a href="../../../../en/Plugins" rel="internal">plug-in</a> developers must switch away from <code>install.js</code> based packages to the new <a href="../../../../en/Bundles" rel="internal">packaging scheme</a> with an <code><a href="../../../../en/Install.rdf" rel="internal">install.rdf</a></code> manifest. In particular plugin developers should see <a href="../../../../en/Shipping_a_plugin_as_an_extension" rel="internal">how to package a plugin as an extension</a>.</p>
+</div>
+<p> </p>
+<p> </p>
+<div class="prevnext">
+ <p><span style="float: left;">« <a href="../../../../en/XUL_Tutorial/Cross_Package_Overlays" rel="internal">Previous</a></span> <span style="float: right;"><a href="../../../../en/XUL_Tutorial/Install_Scripts" rel="internal">Next</a> »</span></p>
+</div>
+<p>  </p>
+<p> </p>
+<p>This section will describe packaging a XUL application into an installer.</p>
+<div id="section_1">
+ <h3 class="editable" id="XPInstall_Packages"><span>XPInstall Packages </span></h3>
+ <div class="editIcon">
+  <a href="../../../../en/XUL_Tutorial/Creating_an_Installer#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+ <p>Mozilla provides a mechanism which can be used to package XUL windows, scripts, skins and other files into single file installers. You can place this installer file somewhere for users to download. A simple script can be used to have the package downloaded and installed. This mechanism is called <a href="../../../../en/XPInstall" rel="internal">XPInstall</a> (Cross platform Install).</p>
+ <p>XPInstall installers are packaged into JAR files. Inside the JAR file, you can add all the various files that you want to have installed. In addition, installers should contain an install script (a file named install.js) which can be used to script the installation process. This script has access to various install functions which can be used to install files and components.</p>
+ <p>The JAR file installers typically have the extension .xpi (pronounced zippy) to distinguish them from other archives. The installers will be usually used to install Mozilla components such as new skins, plugins and packages.</p>
+ <p>There are several steps involved in launching an installer and installing components. These are described step by step below.</p>
+ <ol>
+  <li>Create a Web page from which the user can download the software to be installed. This page will contain an install trigger which is a small piece of script which launches the install.</li>
+  <li>The user is presented with a dialog which indicates the package being installed. It is possible for the install trigger to launch multiple installers. In this case, they will be presented in a list. The user may choose to continue or cancel.</li>
+  <li>If the user chooses to continue, the installer XPI file is downloaded. A progress bar is displayed to the user during this process.</li>
+  <li>The file install.js is extracted from the install archive and executed. This script will call install functions which will indicate which files from the archive should be installed.</li>
+  <li>Once the script is complete, the new package has been installed. If multiple packages are being installed, their scripts will run in sequence.</li>
+ </ol>
+</div>
+<div id="section_2">
+ <h3 class="editable" id="Install_Triggers"><span>Install Triggers </span></h3>
+ <div class="editIcon">
+  <a href="../../../../en/XUL_Tutorial/Creating_an_Installer#" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+ <p>As indicated above, the install process is started by an install trigger. This involves the use of the special global object InstallTrigger. It contains a number of methods which can be used to start an installation. You can use this object in local or remote content, meaning that it is suitable for a download from a Web site.</p>
+ <p>Let's create an example install trigger. This involves the use of the function <code>InstallTrigger.install()</code>. This function takes two arguments, the first is a list of packages to install, and the second is a callback function which will be called when the installation is complete. Here is an example:</p>
+ <pre>function doneFn ( name , result ){
+  alert("The package " + name + " was installed with a result of " + result);
+}
+
+var xpi = new Object();
+xpi["Calendar"] = "calendar.xpi";
+InstallTrigger.install(xpi,doneFn);
+</pre>
+ <p>First, we define a callback function doneFn() which will be called when the install is complete. You can name the function whatever you like of course. This function has two arguments. The first is the name of the package that was just installed. This is important if you are installing multiple components. The second argument is a result code. If the result is 0, the installation completed successfully. If the result is non-zero, an error occured and the value is an error code. The function doneFn() here just displays an alert box to the user.</p>
+ <p>Next, we create an array xpi which will hold the name (Calendar) and URL (calendar.xpi) of the installer. You can add an additional similar such line for each package you wish to have installed. Finally, we call the install function.</p>
+ <p>When this section of script is executed, the file calendar.xpi will be installed.</p>
+ <div class="highlight">
+  <div id="section_3">
+   <h4 class="editable" id="Our_find_files_example"><span>Our find files example </span></h4>
+   <div class="editIcon">
+    <a href="../../../../en/XUL_Tutorial/Creating_an_Installer#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+   <p>Let's try this with the find files dialog.</p>
+   <pre>function doneFn ( name , result ){
+  if (result) alert("An error occured: " + result);
+}
+
+var xpi = new Object();
+xpi["Find Files"] = "findfile.xpi";
+InstallTrigger.install(xpi,doneFn);
+</pre>
+  </div>
+ </div>
+</div>
+<h3 class="editable" id="The_XPI_Archive"><span>The XPI Archive </span></h3>
+<div class="editIcon">
+ <a href="../../../../en/XUL_Tutorial/Creating_an_Installer#" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+<div class="note">
+ <strong>Note</strong>: If you want to create a new <a href="../../../../en/XULRunner" rel="internal">XULRunner application</a>, <a href="../../../../en/Extensions" rel="internal">extension</a>, or <a href="../../../../en/Themes" rel="internal">theme</a>, see <a href="../../../../en/Bundles" rel="internal">Bundles</a>.</div>
+<p>The installer XPI file is required to contain one file called install.js which is a <a href="../../../../en/JavaScript" rel="internal">JavaScript</a> file which is executed during the installation. The remaining files are the files to be installed. These files will typically be placed inside a directory in the archive but they do not have to be. For chrome files, they might be structured like the chrome directory.</p>
+<p>Often, the only files placed in an XPI archive will be the install script (install.js) and a JAR file. This JAR file contains all of the files used by your application. The components provided with Mozilla are stored in this manner.</p>
+<p>Because the XPI file is just a special ZIP file, you can create it and add files to it using a zip utility.</p>
+<div class="highlight">
+ <div id="section_5">
+  <h4 class="editable" id="Our_find_files_example_2"><span>Our find files example </span></h4>
+  <div class="editIcon">
+   <a href="../../../../en/XUL_Tutorial/Creating_an_Installer#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+  <p>For the find files dialog, we'll create a structure in the archive much like the following:</p>
+  <pre>install.js
+findfile
+  content
+    contents.rdf
+    findfile.xul
+    findfile.js
+  skin
+    contents.rdf
+    findfile.css
+  locale
+    contents.rdf
+    findfile.dtd
+</pre>
+ </div>
+</div>
+<p>A directory has been added for each part of the package, the content, the skin and the locale. The contents.rdf files have also been added because they will be needed to register the chrome files.</p>
+<p>Next, we'll look further at the <a href="../../../../en/XUL_Tutorial/Install_Scripts" rel="internal">install script</a>.</p>

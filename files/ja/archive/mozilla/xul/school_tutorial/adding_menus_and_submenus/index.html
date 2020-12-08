@@ -1,0 +1,163 @@
+---
+title: メニューとサブメニューの追加
+slug: Archive/Mozilla/XUL/School_tutorial/Adding_menus_and_submenus
+tags:
+  - XUL
+translation_of: Archive/Add-ons/Overlay_Extensions/XUL_School/Adding_menus_and_submenus
+---
+<div><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/School_tutorial/Setting_Up_a_Development_Environment" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/School_tutorial/Adding_Toolbars_and_Toolbar_Buttons">次のページ  »</a></p>
+</div></div>
+
+
+<p>前回のセクションの Hello World の例では、最も一般的なツールメニューへの追加 (推奨) とメインメニューバーへの追加 (非推奨) の 2 通りの方法でメニューを追加しました。このセクションでは、さらに専門的なメニューとその扱い方を見ていきます。</p>
+
+
+<h2 id="Adding_a_New_Menu" name="Adding_a_New_Menu">新しいメニューの追加</h2>
+
+
+<p>私たちはすでにオーバーレイでメニューを追加する方法を説明しているので、サブメニューを入れ子にする方法のイメージが掴めるでしょう。しかし、ユーザを混乱させないように、すべてのオプションをメニューに含めるようなことは避けなければなりません。</p>
+
+
+<p>あなたの拡張機能が新しい XUL ウィンドウを必要とする場合は、<a href="/ja/docs/XUL/menubar" title="XUL/menubar">menubar</a> 要素で、それらのウィンドウにメニューを追加できます。<em>menubar</em> 要素は、Mac OS X 以外のシステム上ではもう一つのツールバーとして扱われるため、<a href="/ja/docs/XUL/toolbox" title="XUL/toolbox">toolbox</a> 要素の子要素にしなければなりません。これらのシステムでは、ツールバーをカスタマイズして、ツールバーコントロールをメニューバー上に移動することができます。</p>
+
+
+<div class="note">
+  <p>Mac OS X は、他のシステムとかなり異なる方法でメニューを扱います。あなたの拡張機能がメニューを別の方法で追加する場合は、Mac OS X 上でテストし、すべて適切に動作することを確認してください。</p>
+</div>
+
+
+<p>toolbox は、XUL ドキュメントの先頭に記述されなければなりません。コードは次のようになります:</p>
+
+
+<pre class="brush:xml">&lt;toolbox&gt;
+  &lt;menubar id="xulschoolhello-menubar"&gt;
+    &lt;menu id="xulschoolhello-greeting-menu" label="&amp;xulschoolhello.greeting.label;"&gt;
+      &lt;menupopup&gt;
+        &lt;menuitem label="&amp;xulschoolhello.greet.short.label;"
+          oncommand="XULSchoolChrome.GreetingDialog.greetingShort(event);" /&gt;
+        &lt;menuitem label="&amp;xulschoolhello.greet.medium.label;"
+          oncommand="XULSchoolChrome.GreetingDialog.greetingMedium(event);" /&gt;
+        &lt;menuitem label="&amp;xulschoolhello.greet.long.label;"
+          oncommand="XULSchoolChrome.GreetingDialog.greetingLong(event);" /&gt;
+        &lt;menuseparator /&gt;
+        &lt;menuitem label="&amp;xulschoolhello<code>.greet.custom.label;"
+          oncommand="XULSchoolChrome.GreetingDialog.greetingCustom(event);" /&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+  &lt;/menubar&gt;
+&lt;/toolbox&gt;</code></pre><code>
+
+
+<p>このコードは、簡単な <a href="/ja/docs/XUL/menu" title="XUL/menu">menu</a> を表示し、3 種類の異なる挨拶のオプションと <a href="/ja/docs/XUL/menuseparator" title="XUL/menuseparator">menuseparator</a> を持ち、最後にカスタムの挨拶のオプションがあります。セパレータは、異なる種類の <a href="/ja/docs/XUL/menuitem" title="XUL/menuitem">menuitem</a> 要素を分ける水平線として表示され、メニューアイテムを整えるために使用されます。</p>
+
+
+<p><em>menubar</em> は、一つ以上の <em>menu</em> 要素を保持できます。メニューは、<a href="/ja/docs/XUL/menupopup" title="XUL/menupopup">menupopup</a> 要素をコンテナにする必要があり、その子要素に <em>menuitem</em> 要素や <em>menuseparator</em> 要素だけでなく、メニューを入れ子にするための <em>menu</em> 要素を持つことができます:</p>
+
+
+<pre class="brush:xml"><code>&lt;toolbox&gt;
+  &lt;menubar id="xulschoolhello-menubar"&gt;
+    &lt;menu id="xulschoolhello-greeting-menu" label="&amp;xulschoolhello.greeting.label;"&gt;
+      &lt;menupopup&gt;
+        &lt;menu id="xulschoolhello-greeting-sizes-menu" label="&amp;xulschoolhello.greetingSizes.label;"&gt;
+          &lt;menupopup&gt;
+            &lt;menuitem label="&amp;xulschoolhello.greet.short.label;"
+              oncommand="XULSchoolChrome.GreetingDialog.greetingShort(event);" /&gt;
+            &lt;menuitem label="&amp;xulschoolhello.greet.medium.label;"
+              oncommand="XULSchoolChrome.GreetingDialog.greetingMedium(event);" /&gt;
+            &lt;menuitem label="&amp;xulschoolhello.greet.long.label;"
+              oncommand="XULSchoolChrome.GreetingDialog.greetingLong(event);" /&gt;
+          &lt;/menupopup&gt;
+        &lt;/menu&gt;
+        &lt;menuitem label="&amp;xulschoolhello.greet.custom.label;"
+          oncommand="XULSchoolChrome<code>.GreetingDialog.greetingCustom(event);" /&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+  &lt;/menubar&gt;
+&lt;/toolbox&gt;</code></code></pre><code><code>
+
+
+<p>上記の例では、3 個の挨拶アイテムをサブメニューにグループ化しました。分かりづらいかもしれませんが、メニューを 2 個だけに減らし、そのうちの片方は 3 個のアイテムをサブメニューにしています。</p>
+
+
+<p>メニューを動的に生成することもできます。menupopup 要素を XUL ドキュメントに直接置く代わりに、popup が表示される時に発生する <a href="/ja/docs/XUL/Attribute/onpopupshowing" title="XUL/Attribute/onpopupshowing">onpopupshowing</a> イベントを利用して子要素を生成してください。</p>
+
+<div class="note">
+  <p>メニューに表示するアイテムが無いときは、Firefox の標準に従ってください。無効化された "(空)" ラベルのアイテムを表示します。</p>
+  <p>メニューの生成に時間がかかるときは、何かを表示するまで Firefox (またはユーザ) を待たせてはいけません。非同期でコンテンツを生成していることをユーザに知らせるため、読み込み中のインジケータ画像 (<a rel="freelink">chrome://global/skin/icons/loading_16.png</a> を参照) を表示するとよいでしょう。このチュートリアルでは、いくつかの非同期のテクニックを扱います。</p>
+</div>
+
+<h2 id="Adding_Elements_to_Existing_Menus" name="Adding_Elements_to_Existing_Menus">既存のメニューへの要素の追加</h2>
+
+
+<p>前回のセクションで説明したとおり、拡張機能のメニューのオーバーレイを適用する場所は <em>ツール</em> メニュー内が最適です。ここは、あなたの拡張機能のメニューを置く分かりやすい場所が、他に無い場合に使用するとよいでしょう。ツールメニューにオーバーレイを適用する場合のコードは、次のようになります。</p>
+
+</code><pre class="brush:xml"><code>&lt;menupopup id="menu_ToolsPopup"&gt;
+  &lt;menu id="</code>xulschoolhello-hello-menu" label="&amp;xulschoolhello.hello.label;"
+    accesskey="&amp;xulschoolhello.helloMenu.accesskey;"
+    insertafter="javascriptConsole,devToolsSeparator"&gt;
+    &lt;menupopup&gt;
+      &lt;!-- ここにメニュー項目を --&gt;
+    &lt;/menupopup&gt;
+  &lt;/menu&gt;
+&lt;/menupopup&gt;</pre>
+
+
+<p>次は、いくつかの特殊なメニューアイテムを見ていきましょう。</p>
+
+<h2 id="Menu_types" name="Menu_types">メニューの種類</h2>
+
+
+
+<h3 id="Checkbox_Menu_Items" name="Checkbox_Menu_Items">チェックボックスメニュー</h3>
+
+<p>ユーザがメニューでオプションの有効化と無効化を切り替えられるようにするため、<em>menuitem</em> 要素を "チェック可能" にし、メニューアイテムに直接チェックを入れたり外したりできます。このために、<a href="/ja/docs/XUL/menuitem#a-menuitem.type" title="XUL/menuitem#a-menuitem.type">type</a> と <a href="/ja/docs/XUL/menuitem#a-checked" title="XUL/menuitem#a-checked">checked</a> の 2 個の属性が用意されています。<em>type</em> 属性の値は "checkbox" に設定してください。デフォルトでチェックが入った状態にするには、<em>checked</em> 属性の値を "true" に設定してください。</p>
+
+<p>アイテムのチェック状態は、ユーザがメニューアイテムをクリックすると切り替わります。チェックボックスメニューの例は、Firefox のメインメニューの [表示] &gt; [ステータスバー] を見てください。</p>
+
+
+
+<h3 id="Radio_Menu_Items" name="Radio_Menu_Items">ラジオメニュー</h3>
+
+<p><em>menuitem</em> 要素の集合の中で一度に一つのアイテムにチェックを入れたいときは、<em>type</em> 属性の値を "radio" に設定します。また、ラジオグループの中でアイテムを特定できるようにするために、<em>name</em> 属性を使用します。</p>
+
+
+
+<pre class="brush:xml">&lt;menupopup oncommand="XULSchoolChrome.HW.GreetingDialog.greeting(event);"&gt;
+  &lt;menuitem type="radio" name="xulschoolhello-greeting-radio"
+    label="&amp;xulschoolhello.greet.short.label;" checked="true" /&gt;
+  &lt;menuitem type="radio" name="xulschoolhello-greeting-radio"
+    label="&amp;xulschoolhello.greet.medium.label;" /&gt;
+  &lt;menuitem type="radio" name="xulschoolhello-greeting-radio"
+    label="&amp;xulschoolhello.greet.long.label;" /&gt;
+&lt;/menupopup&gt;</pre>
+
+
+<p>これは、挨拶メニューの変更バージョンです。3 つの選択肢からラジオメニューで選べるようになりました。最初のアイテムにはデフォルトでチェックが入ります。また、<em>menupopup</em> にセットされた <em>oncommand</em> 属性によってコードの重複を避け、3 個のアイテムから同じ関数を呼ぶように変更しています。</p>
+
+
+<p>ラジオメニューのもう一つの例は、[表示] &gt; [サイドバー] メニューです。サイドバーをいくつかの選択肢の中から選ぶと、一度に一つだけ表示されます。</p>
+
+
+
+<h3 id="Menus_with_Images" name="Menus_with_Images">画像付きメニュー</h3>
+
+
+<p><em>menu</em> や <em>menuitem</em> にアイコンを追加するには、その class 属性に "menu-iconic" または "menuitem-iconic" を設定し、<a href="/ja/docs/XUL/Attribute/image" title="XUL/Attribute/image">image</a> 属性または <a href="/ja/docs/CSS/list-style-image" title="CSS/list-style-image">list-style-image</a> CSS プロパティを設定します。メニューアイコンの大きさは、一般的に 16px × 16px です。</p>
+
+
+
+<h2 id="Menus_on_Mac_OS_X" name="Menus_on_Mac_OS_X">Mac OS X 上のメニュー</h2>
+
+<p>先にも述べたように、Mac OS X 上のメニューは他のシステムと異なります。Mac のメニューは、オペレーティングシステムによってコントロールされる単一のメニューバーに統合されているため、他のシステムのように Firefox から全体をコントロールできるメニューとは対称的です。また、Mac OS X のメニューには標準が定められており、他のシステムでは使用されないアイテムが配置されています。以下は、Mac 上のメニューを扱うときに陥りがちな既知の問題のリストです。</p>
+
+<ul>
+  <li>[Firefox について]、[環境設定]、[終了] の各メニューアイテムは、"Firefox" メニュー下に配置され、他のシステムと異なる場所になります。これらのアイテムは DOM を通してアクセスできますが、その親メニューへは簡単にアクセスできません。</li>
+  <li>特にルートメニュー (ファイル、編集、表示、他) のアイテムに対してアイテムの追加、削除、有効化、無効化を動的に行うとバグに陥ります。このような動作は、あなたの拡張機能で正しく動作するように、慎重にテストしてください。</li>
+  <li>メニューアイテムの画像は正しく表示されません。代わりに、画像の一部分のみが表示されます。これは、リモート画像を使用すると起こるようです。</li>
+  <li>メニューアイテムは、メニューを開いている間は動的に更新されません。例えば、現在時刻を表示し、毎秒更新される <em>menuitem</em> を作成した場合、他のシステムではメニューを開いたままでも表示が更新されますが、Mac OS 上では更新されません。</li>
+</ul>
+
+<div><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/School_tutorial/Setting_Up_a_Development_Environment" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/School_tutorial/Adding_Toolbars_and_Toolbar_Buttons">次のページ  »</a></p>
+</div></div></code></code>

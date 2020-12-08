@@ -1,0 +1,108 @@
+---
+title: Monitoring plugins
+slug: Monitoring_plugins
+tags:
+  - Add-ons
+  - Firefox 3
+  - Plugins
+translation_of: Archive/Plugins/Monitoring_plugins
+---
+<p>{{ Fx_minversion_header(3) }}
+</p>
+<h3 id=".E6.A6.82.E8.A6.81" name=".E6.A6.82.E8.A6.81">概要</h3>
+<p>プラグインシステムで、プラグイン (Adobe Flash など) が呼び出しの実行にどれだけ時間を要したかを測定できる、新しいコンポーネントが利用可能になりました。このコンポーネントは、<a href="ja/NsIObserverService">オブザーバサービス</a> を利用して、通知を受け取るよう登録されたすべてのオブザーバにプラグインの実行時間を報告します。この記事では、開発者がこの新機能をどのように活用できるかを説明します。
+</p>
+<h3 id=".E5.AE.9F.E8.A1.8C.E6.99.82.E9.96.93.E3.83.87.E3.83.BC.E3.82.BF" name=".E5.AE.9F.E8.A1.8C.E6.99.82.E9.96.93.E3.83.87.E3.83.BC.E3.82.BF">実行時間データ</h3>
+<p>報告される実行時間の情報は常に、ほんのわずかな時間となります。このコンポーネントはプラグインの実行呼び出しをブロックするのに掛かった実時間を測るものであるため、その値には、CPU 時間と待ち時間 (CPU 時間の割り当て、処理の実行、ディスク出入力に要した時間を含む) の両方が含まれます。このため、その実行時間が CPU の使用量であると言うのは技術的には不正確ですが、プラグインによって消費されたリソース全体を良く表したデータとなっています。
+</p>
+<h3 id=".E4.BD.BF.E3.81.84.E6.96.B9" name=".E4.BD.BF.E3.81.84.E6.96.B9">使い方</h3>
+<p>この新しいコンポーネントを利用するには、<a href="ja/NsIObserverService">オブザーバサービス</a> を使って、実行時間の通知を受け取るよう登録を行う必要があります。通知のトピックは <code>experimental-notify-plugin-call</code> です。もしあなたが Mozilla のオブザーバサービスについて詳しくないなら、このコンポーネントについて詳しく学ぶ前に、まずオブザーバサービスをよく理解しておいた方が良いでしょう。オブザーバサービスに関する詳しい情報は、<a href="ja/NsIObserverService">ここ</a> と <a href="ja/NsIObserver">ここ</a> で参照することができます。
+</p><p>以下は、開発者がこの機能を試す際に便利な、いくつかの JavaScript コードサンプル です。
+</p>
+<h4 id=".E7.99.BB.E9.8C.B2" name=".E7.99.BB.E9.8C.B2">登録</h4>
+<p>オブザーバサービスを使って実行時間の通知を登録するには、3 つの引数 (<code>subject</code>、<code>topic</code>、<code>data</code>) を取る <code>observe</code> メソッドと、以下のコードを含む <code>register</code> メソッドで、クラスを作成する必要があります。
+</p><p><code>
+</code></p>
+<pre class="eval">var observerService = Components.classes["@mozilla.org/observer-service;1"]
+                        .getService (Components.interfaces.nsIObserverService);
+observerService.addObserver(this, "experimental-notify-plugin-call", false);
+</pre>
+<p>
+</p>
+<h4 id=".E7.9B.A3.E8.A6.96" name=".E7.9B.A3.E8.A6.96">監視</h4>
+<p>上で説明したように、通知を受け取った際の処理を指定するには、クラスに 3 つの引数 (<code>subject</code>、<code>topic</code>、<code>data</code>) を取る <code>observe</code> メソッドを持たせる必要があります。<code>topic</code> には通知のトピック (この場合は <code>experimental-notify-plugin-call</code>) が含まれ、<code>data</code> は実行時間 (ミリ秒単位)、<code>subject</code> は常に <code>null</code> で使われません。
+</p><p>以下は、実行時間が 0.5 秒を越えた場合に、警告ダイアログで実行時間を表示する例です。
+</p><p><code>
+</code></p>
+<pre class="eval"> observe: function(subject, topic, data) {
+   if (topic == "experimental-notify-plugin-call" ) {
+     if (data &gt; 0.500) {
+       alert("Runtime is: " + data);
+     }
+   }
+ }
+</pre>
+<p>
+</p><p><b>注意: これは単純化した例に過ぎません。実際には、コンポーネントが次々に大量の通知を送り、過度の警告ダイアログが表示されてブラウザがクラッシュする可能性があるため、<code>alert()</code> の使用は推奨されません。</b>
+</p><p>また、上記の例では、受け取った通知のトピックが正しいものかどうか、命令文が最初に確認を行っていることに注意してください。これは、オブザーバサービスで複数のトピックの通知を受け取るようにクラスに登録した場合に便利です。
+</p>
+<h4 id=".E4.BB.95.E4.B8.8A.E3.81.92" name=".E4.BB.95.E4.B8.8A.E3.81.92">仕上げ</h4>
+<p>オブザーバサービスでクラスの登録を取り消して、実行時間の通知を受け取らないようにするには、以下のコードを含む <code>unregister</code> メソッドをクラスに追加する必要があります。
+</p><p><code>
+</code></p>
+<pre class="eval">var observerService = Components.classes["@mozilla.org/observer-service;1"]
+                       .getService(Components.interfaces.nsIObserverService);
+observerService.removeObserver(this, "experimental-notify-plugin-call");
+</pre>
+<p>
+</p>
+<h4 id=".E3.82.AA.E3.83.96.E3.82.B6.E3.83.BC.E3.83.90.E3.82.AF.E3.83.A9.E3.82.B9.E3.81.AE.E9.AA.A8.E6.A0.BC" name=".E3.82.AA.E3.83.96.E3.82.B6.E3.83.BC.E3.83.90.E3.82.AF.E3.83.A9.E3.82.B9.E3.81.AE.E9.AA.A8.E6.A0.BC">オブザーバクラスの骨格</h4>
+<p>以下は、実行時間の通知を受け取るのに利用できるクラスの骨格を示したコードです。
+</p><p><code>
+</code></p>
+<pre class="eval"> function PluginObserver() {
+   this.registered = false;
+   this.register(); // オブザーバサービスを利用して、プラグイン実行時間通知のオブザーバとしてこのクラスを登録する処理を行います
+ }
+
+ PluginWatcherObserver.prototype = {
+   observe: function(subject, topic, data) {
+
+     if (topic == "experimental-notify-plugin-call") // 他のトピックの通知も受けるよう登録されている場合に備えて
+       // この部分は実行時間の通知が行われれるたびに実行されます
+       // --必要な処理をここに書きます--
+     }
+
+
+   },
+   // オブザーバサービスを "experimental-notify-plugin-call" トピックに登録する処理を行います
+   register: function() {
+     if (this.registered == false) { // 二重登録を防ぐために確認を行います
+       var observerService = Components.classes["@mozilla.org/observer-service;1"]
+                                       .getService(Components.interfaces.nsIObserverService);
+       observerService.addObserver(this, "experimental-notify-plugin-call", false);
+       this.registered = true;
+     }
+   },
+   // オブザーバサービスから登録を取り消します
+   unregister: function() {
+     if (this.registered == true) {
+       var observerService = Components.classes["@mozilla.org/observer-service;1"]
+                                       .getService(Components.interfaces.nsIObserverService);
+       observerService.removeObserver(this, "experimental-notify-plugin-call");
+       this.registered = false;
+     }
+   }
+ }
+</pre>
+<p>
+</p>
+<h3 id=".E9.96.A2.E9.80.A3.E8.A8.98.E4.BA.8B" name=".E9.96.A2.E9.80.A3.E8.A8.98.E4.BA.8B">関連記事</h3>
+<p>オブザーバサービスに関する詳細:
+</p>
+<ul><li> <a href="ja/NsIObserverService">nsIObserverService</a>
+</li><li> <a href="ja/NsIObserver">nsIObserver</a>
+</li></ul>
+<div class="noinclude">
+</div>
+{{ languages( { "en": "en/Monitoring_plugins", "es": "es/Vigilancia_de_plugins" } ) }}

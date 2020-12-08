@@ -1,0 +1,114 @@
+---
+title: PushMessageData.json()
+slug: Web/API/PushMessageData/json
+tags:
+  - PushMessageData.json()
+translation_of: Web/API/PushMessageData/json
+---
+<p>{{APIRef("Push API")}}{{SeeCompatTable()}}</p>
+
+<p>{{domxref("PushMessageData")}} 接口的 <code><strong>json()</strong></code>方法将推送消息数据提取为 一个 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</a> 对象。</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">let massage_Json = PushEvent.data.json();</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<p>None.</p>
+
+<h3 id="Returns">Returns</h3>
+
+<p>A <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</a> object.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush: js">self.addEventListener('push', function(event) {
+  var jsonObj = event.data.json();
+
+  // do something with your JSON
+});</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Push API', '#widl-PushMessageData-json-JSON', 'json()')}}</td>
+   <td>{{Spec2('Push API')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_Compatibility">Browser Compatibility</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatChrome(50.0)}}</td>
+   <td>{{CompatGeckoDesktop(44.0)}}<sup>[1]</sup></td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Android Webview</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoMobile(48)}}<sup>[2]</sup></td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatChrome(50.0)}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<ul>
+ <li>[1] Push (and <a href="/en-US/docs/Web/API/Service_Worker_API">Service Workers</a>) have been disabled in the <a href="https://www.mozilla.org/en-US/firefox/organizations/">Firefox 45 and 52 Extended Support Releases</a> (ESR.)</li>
+ <li>[2] Push has been enabled by default on Firefox for Android version 48.</li>
+</ul>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/Push_API/Using_the_Push_API">Using the Push API</a></li>
+</ul>

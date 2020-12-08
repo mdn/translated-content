@@ -1,0 +1,134 @@
+---
+title: Les contrôles de listes
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Les_contrôles_de_listes
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/List_Controls
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL/Les_contrôles_numériques" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL/Indicateurs_de_progression">Suivant  »</a></p>
+</div>
+<p>XUL dispose de nombreux types d'éléments pour créer des boîtes de listes.</p>
+<h3 id="Zones_de_listes" name="Zones_de_listes">Zones de listes</h3>
+<p>Une zone de liste est utilisée pour afficher un nombre d'items dans une liste. L'utilisateur doit pouvoir choisir un des item de la liste.</p>
+<p>XUL propose deux types d'éléments pour créer des listes, un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/listbox" title="listbox">listbox</a></code> pour créer des zones de liste multi-lignes, et un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code> pour créer des zones de listes déroulantes. Ils fonctionnent de la même manière que l'élément <code>select</code> du langage HTML qui réalise ces deux fonctions, mais les élements XUL ont plus de fonctionnalités.</p>
+<p>La zone de liste la plus simple utilise l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/listbox" title="listbox">listbox</a></code> pour créer la boîte, et l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/listitem" title="listitem">listitem</a></code> pour chacun des items. Par exemple, cette zone de liste a quatre lignes, une pour chaque item.</p>
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_1.xul">Voir</a></p>
+<pre>&lt;listbox&gt;
+  &lt;listitem label="Beurre de cacahuète"/&gt;
+  &lt;listitem label="Chocolat à tartiner"/&gt;
+  &lt;listitem label="Confiture de fraise"/&gt;
+  &lt;listitem label="Crême chantilly"/&gt;
+&lt;/listbox&gt;
+</pre>
+<div class="float-right">
+  <img alt="Image:xultu_list1.png" class="internal" src="/@api/deki/files/1527/=Xultu_list1.png"></div>
+<p>À l'instar de la balise <code>option</code> du langage HTML, vous pouvez assigner une valeur à chaque item en utilisant l'attribut <code id="a-value"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/value">value</a></code>. Vous pouvez ensuite utiliser cette valeur dans un script. Par défaut, la zone de liste ajustera sa taille à son contenu, mais vous pouvez contrôler sa taille avec l'attribut <code id="a-rows"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/rows">rows</a></code>. Affectez lui le nombre de lignes que vous souhaitez voir apparaître dans la zone de liste. Un ascenseur apparaîtra pour permettre à l'utilisateur d'afficher les lignes supplémentaires.</p>
+<p>L'exemple suivant montre ces fonctionnalités supplémentaires :</p>
+<p><span id="Exemple_2"><a id="Exemple_2"></a><strong>Exemple 2</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_2.xul">Voir</a></p>
+<pre>&lt;listbox rows="3"&gt;
+  &lt;listitem label="Beurre de cacahuète" value="becacah"/&gt;
+  &lt;listitem label="Chocolat à tartiner" value="chotart"/&gt;
+  &lt;listitem label="Confiture de fraise" value="confraise"/&gt;
+  &lt;listitem label="Creme chantilly" value="crchant"/&gt;
+&lt;/listbox&gt;
+</pre>
+<p>L'exemple a été modifié pour n'afficher que 3 lignes à la fois. Des valeurs ont également été ajoutées à chaque item de la liste. Les zones de liste ont beaucoup d'autres fonctionnalités qui seront décrites plus tard.</p>
+<h3 id="Bo.C3.AEte_de_liste_multi-colonnes" name="Bo.C3.AEte_de_liste_multi-colonnes">Boîte de liste multi-colonnes</h3>
+<p>Les boîtes de liste supportent également les colonnes multiples. Chaque cellule peut avoir un contenu arbitraire bien qu'il s'agisse souvent seulement de texte. Quand un utilisateur sélectionne un item dans la liste, la ligne entière est sélectionnée. Il n'est pas possible de sélectionner une seule cellule.</p>
+<p>Deux balises sont utilisées pour spécifier les colonnes dans une boîte de liste. L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/listcols" title="listcols">listcols</a></code> est utilisé pour contenir l'information sur les colonnes, chacune d'elles est spécifiée en utilisant un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/listcol" title="listcol">listcol</a></code> Vous aurez besoin d'un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/listcol" title="listcol">listcol</a></code> pour chaque colonne de la liste.</p>
+<p>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/listcell" title="listcell">listcell</a></code> doit être utilisé pour chaque cellule dans une ligne. Si vous voulez avoir trois colonnes, vous aurez besoin d'ajouter trois éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/listcell" title="listcell">listcell</a></code> à l'intérieur de chaque <code><a href="/fr/docs/Mozilla/Tech/XUL/listitem" title="listitem">listitem</a></code>. Pour spécifier le contenu d'un texte de la cellule, placez un attribut <code id="a-label"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/label">label</a></code> sur cet élément <code><a href="/fr/docs/Mozilla/Tech/XUL/listcell" title="listcell">listcell</a></code>. Dans le cas simple où il n'y a qu'une seule colonne, vous pouvez aussi placer l'attribut <code id="a-label"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/label">label</a></code> directement sur l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/listitem" title="listitem">listitem</a></code> et omettre complètement les éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/listcell" title="listcell">listcell</a></code>, comme cela a été montré dans les exemples de listes précédents.</p>
+<p>L'exemple suivant est une boîte de liste de deux colonnes et trois lignes.</p>
+<p><span id="Exemple_3"><a id="Exemple_3"></a><strong>Exemple 3</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_3.xul">Voir</a></p>
+<pre>&lt;listbox&gt;
+  &lt;listcols&gt;
+    &lt;listcol/&gt;
+    &lt;listcol/&gt;
+  &lt;/listcols&gt;
+  &lt;listitem&gt;
+    &lt;listcell label="George"/&gt;
+    &lt;listcell label="Peintre en bâtiment"/&gt;
+  &lt;/listitem&gt;
+  &lt;listitem&gt;
+    &lt;listcell label="Mary Ellen"/&gt;
+    &lt;listcell label="Fabriquant de bougies"/&gt;
+  &lt;/listitem&gt;
+  &lt;listitem&gt;
+    &lt;listcell label="Roger"/&gt;
+    &lt;listcell label="Bravache"/&gt;
+  &lt;/listitem&gt;
+&lt;/listbox&gt;
+</pre>
+<h3 id="Lignes_d.27en-t.C3.AAte" name="Lignes_d.27en-t.C3.AAte">Lignes d'en-tête</h3>
+<p>Les boîtes de liste permettent également l'utilisation d'une ligne d'en-tête spéciale. Elle n'est rien d'autre qu'une ligne normale, sauf qu'elle est affichée différemment. Elle servira à créer des en-têtes de colonnes grâce à deux nouveaux éléments.</p>
+<p>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/listhead" title="listhead">listhead</a></code> est utilisé pour définir la ligne d'en-tête, comme l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/listitem" title="listitem">listitem</a></code> est utilisé pour définir une ligne normale. La ligne d'en-tête n'est toutefois pas une ligne normale, ainsi un script permettant de lire la première ligne d'une boîte de liste ne tiendra pas compte de cette ligne d'en-tête.</p>
+<p>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/listheader" title="listheader">listheader</a></code> est utilisé pour chaque cellule de l'en-tête. Utilisez l'attribut <code id="a-label"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/label">label</a></code> pour définir le libellé de la cellule d'en-tête.</p>
+<p>Voici l'exemple précédent avec une ligne d'en-tête :</p>
+<p><span id="Exemple_4"><a id="Exemple_4"></a><strong>Exemple 4</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_4.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_4.xul">Voir</a></p>
+<pre>&lt;listbox&gt;
+
+  &lt;listhead&gt;
+    &lt;listheader label="Nom"/&gt;
+    &lt;listheader label="Activité"/&gt;
+  &lt;/listhead&gt;
+
+  &lt;listcols&gt;
+    &lt;listcol/&gt;
+    &lt;listcol flex="1"/&gt;
+  &lt;/listcols&gt;
+
+  &lt;listitem&gt;
+    &lt;listcell label="George"/&gt;
+    &lt;listcell label="Peintre en bâtiment"/&gt;
+  &lt;/listitem&gt;
+  &lt;listitem&gt;
+    &lt;listcell label="Mary Ellen"/&gt;
+    &lt;listcell label="Fabriquant de bougies"/&gt;
+  &lt;/listitem&gt;
+  &lt;listitem&gt;
+    &lt;listcell label="Roger"/&gt;
+    &lt;listcell label="Bravache"/&gt;
+  &lt;/listitem&gt;
+
+&lt;/listbox&gt;
+</pre>
+<div class="float-right">
+  <img alt="Image:xultu_lists_3.png" class="internal" src="/@api/deki/files/1529/=Xultu_lists_3.png"></div>
+<p>Dans cet exemple, l'attribut <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code> est utilisé pour rendre la colonne flexible. Cet attribut sera décrit dans une section ultérieure, mais ici, il permet à la colonne de remplir tout l'espace disponible horizontalement. Vous pouvez retailler la fenêtre pour voir que la colonne s'adapte en même temps que la fenêtre. Si vous diminuez la taille horizontalement, les libellés sur les cellules seront raccourcis automatiquement, en affichant des points de suite. Vous pouvez utiliser l'attribut <code id="a-crop"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/crop">crop</a></code> sur les cellules ou sur les items, avec une valeur 'none' pour désactiver cette coupure.</p>
+<h3 id="Zones_de_listes_d.C3.A9roulantes" name="Zones_de_listes_d.C3.A9roulantes">Zones de listes déroulantes</h3>
+<p>Des listes déroulantes peuvent être créées en HTML avec la balise <code>select</code>. L'utilisateur ne voit qu'un unique choix dans une boîte de texte et doit cliquer sur une flèche ou un bouton similaire à côté de la boîte de texte pour changer la sélection. Les autres choix apparaitront alors dans une fenêtre surgissante. XUL dispose de l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code> qui peut servir à cet usage. Il est formé d'une boîte de texte avec un bouton à son côté. Son nom a été choisi parce qu'il propose un menu surgissant pour le choix.</p>
+<p>Trois éléments sont nécessaires pour former une liste déroulante. Le premier est l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code> qui crée la boîte de texte avec son bouton à côté. Le second, <code><a href="/fr/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code>, crée la fenêtre surgissante qui apparaît lorsque le bouton est cliqué. Le troisième, <code><a href="/fr/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code>, crée les choix individuels.</p>
+<p>Cette syntaxe est mieux décrite dans l'exemple ci-dessous :</p>
+<p><span id="Exemple_5"><a id="Exemple_5"></a><strong>Exemple 5</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_5.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_5.xul">Voir</a></p>
+<pre>&lt;menulist label="Bus"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="Voiture"/&gt;
+    &lt;menuitem label="Taxi"/&gt;
+    &lt;menuitem label="Bus" selected="true"/&gt;
+    &lt;menuitem label="Train"/&gt;
+  &lt;/menupopup&gt;
+&lt;/menulist&gt;
+</pre>
+<div class="float-right">
+  <img alt="Image:xultu_list2.png" class="internal" src="/@api/deki/files/1528/=Xultu_list2.png"></div>
+<p>Ce menu contient quatre choix, un pour chaque élément <code><a href="/fr/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code>. Pour voir les choix possibles, cliquez sur le bouton flèche du menu. Lorsqu'un item est sélectionné, il apparaît comme le choix fait dans le texte du menu. L'attribut <code id="a-selected"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/selected">selected</a></code> est utilisé pour définir la valeur sélectionnée par défaut.</p>
+<h4 id="menulist_.C3.A9ditable" name="menulist_.C3.A9ditable">menulist éditable</h4>
+<p>Par défaut, vous ne pouvez sélectionner que des choix proposés dans la liste. Vous ne pouvez pas entrer votre propre sélection en la tapant au clavier. Une variante de <code><a href="/fr/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code> le permet. Par exemple, le champ URL du navigateur dispose d'une liste déroulante pour afficher les adresses précédemment utilisées, mais vous pouvez aussi la saisir vous même.</p>
+<p>Pour créer une liste déroulante éditable, ajoutez l'attribut <code id="a-editable"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/editable">editable</a></code> comme ceci :</p>
+<p><span id="Exemple_6"><a id="Exemple_6"></a><strong>Exemple 6</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_6.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_6.xul">Voir</a></p>
+<pre>&lt;menulist '''editable="true"'''&gt;
+  &lt;menupopup&gt;
+   &lt;menuitem label="www.mozilla.org"/&gt;
+   &lt;menuitem label="www.xulplanet.com"/&gt;
+   &lt;menuitem label="www.dmoz.org"/&gt;
+  &lt;/menupopup&gt;
+&lt;/menulist&gt;
+</pre>
+<p>Le champ URL créé ici a trois adresses pré-saisies que l'utilisateur peut sélectionner ou alors il peut taper la sienne dans le champ. Le texte entré par l'utilisateur ne sera pas ajouté comme un futur choix à cette liste. Comme l'attribut <code id="a-label"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/label">label</a></code> n'a pas été utilisé dans cet exemple, sa valeur par défaut sera vide.</p>
+<hr>
+<p>Dans la section suivante, nous apprendrons comment ajouter des indicateurs de progression.</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL/Les_contrôles_numériques" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL/Indicateurs_de_progression">Suivant  »</a></p>
+</div>

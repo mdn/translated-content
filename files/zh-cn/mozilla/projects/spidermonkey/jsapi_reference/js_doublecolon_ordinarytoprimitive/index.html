@@ -1,0 +1,66 @@
+---
+title: 'JS::OrdinaryToPrimitive'
+slug: 'Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS::OrdinaryToPrimitive'
+translation_of: 'Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS::OrdinaryToPrimitive'
+---
+<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+
+<p>{{ jsapi_minversion_header("38") }}</p>
+
+<div class="summary">
+<p>将普通对象转换为原始值</p>
+</div>
+
+<h2 id="语法说明">语法说明</h2>
+
+<pre class="brush: cpp">bool
+JS::OrdinaryToPrimitive(JSContext *cx, JS::HandleObject obj, JSType type,
+                        JS::MutableHandleValue vp);</pre>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>名称</th>
+   <th>类型</th>
+   <th>描述</th>
+  </tr>
+  <tr>
+   <td><code>cx</code></td>
+   <td>{{jsapixref("JSRuntime", "JSContext *")}}</td>
+   <td>执行转换的上下文. {{ Jsapi-requires-request() }}</td>
+  </tr>
+  <tr>
+   <td><code>obj</code></td>
+   <td>{{jsapixref("JSObject", "JS::HandleObject")}}</td>
+   <td>要转换的对象。</td>
+  </tr>
+  <tr>
+   <td><code>type</code></td>
+   <td>{{jsapixref("JSType")}}</td>
+   <td>转换后值的类型。</td>
+  </tr>
+  <tr>
+   <td><code>vp</code></td>
+   <td>{{jsapixref("JS::Value", "JS::MutableHandleValue")}}</td>
+   <td>输出参数. 成功, <code>*vp 收到转换后的值</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="描述">描述</h2>
+
+<p><code>JS::OrdinaryToPrimitive</code> 通过ES6 draft rev 28（2014年10月14日）7.1.1第二算法中指定的算法将JavaScript对象转换为指定的类型值。</p>
+
+<p>Most users should not call this -- use {{jsapixref("JS::ToNumber")}}, {{jsapixref("JS::ToBoolean")}}, or {{jsapixref("JS::ToString")}} instead. This should only be called from custom convert hooks. It implements the default conversion behavior shared by most objects in JS, so it's useful as a fallback.</p>
+
+<p>On success, <code>JS::OrdinaryToPrimitive</code> stores the converted value in <code>*vp</code> and returns <code>true</code>. On error or exception, it returns <code>false</code>, and the value left in <code>*vp</code> is undefined.</p>
+
+<h2 id="See_Also" name="See_Also">了解其他</h2>
+
+<ul>
+ <li>{{ LXRSearch("ident", "i", "JS::OrdinaryToPrimitive") }}</li>
+ <li>{{jsapixref("JS::ToNumber")}}</li>
+ <li>{{jsapixref("JS::ToBoolean")}}</li>
+ <li>{{jsapixref("JS::ToString")}}</li>
+ <li>{{bug(1103152)}}</li>
+</ul>

@@ -1,0 +1,180 @@
+---
+title: 設定
+slug: Tools/Settings
+translation_of: Tools/Settings
+---
+<div>{{ToolsSidebar}}</div>
+
+<h2 id="Opening_Settings" name="Opening_Settings">オプションを開く</h2>
+
+<p>Firefox 62 から、開発者ツールの設定を開くためのアイコンがタブの右側にある ...(エリプシス) をクリックもしくはタッチすることでアクセスするメニューに移動しました。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/16085/DevTools_LayoutMenu.png" style="height: 290px; width: 225px;"></p>
+
+<p>メニューには、開発者ツールの場所を制御する設定が含まれています。 ウィンドウの下部にある既定の設定を選択するか、ツールを画面の左側または右側に移動することができます。これらの設定はワイドスクリーンモニターを使用している場合に特に便利です。別のウィンドウでツールを開くこともできます。</p>
+
+<p><strong>Show split console</strong> は、コンソールを示すツールの一番下にセクションを追加します。コマンドラインとコンソール出力の1行または2行を表示します。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/16086/split_console.png" style="height: 352px; width: 902px;"></p>
+
+<p>その他の設定は、開発者ツール設定ウィンドウにあります。設定を表示するには、開発者ツールを開き、次の操作を行います。</p>
+
+<ul>
+ <li>メニューの [設定] コマンドをクリックします。<img alt="" src="https://mdn.mozillademos.org/files/16082/DevTools_Menu.png" style="border: 1px solid #cccccc; display: block; height: 430px; margin-left: auto; margin-right: auto; width: 1920px;"></li>
+ <li>もしくは <kbd>F1</kbd> を押してアクティブなツールと設定ペインを切り替えます</li>
+</ul>
+
+<p>設定ペインは次のようになります。</p>
+
+<p><img alt="Depicts the Toolbox options" src="https://mdn.mozillademos.org/files/16081/dev_tools_settings.png"></p>
+
+<h2 id="Categories" name="Categories">カテゴリー</h2>
+
+<h3 id="Default_Firefox_Developer_Tools" name="Default_Firefox_Developer_Tools">デフォルトの Firefox 開発ツール</h3>
+
+<p>このチェックボックスのグループでは、ツールボックスで有効にするツールを決定します。新しいツールは、Firefox に搭載されていてもデフォルトで無効になっていることがあります。</p>
+
+<h3 id="Available_Toolbox_Buttons" name="Available_Toolbox_Buttons">利用可能なツールボックスのボタン</h3>
+
+<p>このチェックボックスのグループでは、どのツールを <a href="/ja/docs/Tools/Tools_Toolbox#Extra_tools">ツールボックスのツールバーアイコンとして表示するか</a> を決定します。</p>
+
+<p>Firefox 62 以降、「現在の対象ドキュメントとしてiframeを選択」オプションがチェックされている場合、現在のページに iframe が含まれていなくても、設定タブが表示されている間、ツールバーにアイコンが表示されます。</p>
+
+<p>Firefox 52 では、<a href="/ja/docs/Tools/Page_Inspector/UI_Tour#Select_element_button">"要素を選択" ボタン</a> を切り替えるチェックボックスを削除しました。"要素を選択" ボタンは常に表示します。</p>
+
+<h3 id="Themes" name="Themes">テーマ</h3>
+
+<p> </p>
+
+<p>これにより、2つのテーマのいずれかを選択できます。</p>
+
+<ul>
+ <li>
+  <p>デフォルトは明るいテーマです：</p>
+
+  <p><img alt="Light theme for DevTools" src="https://mdn.mozillademos.org/files/16083/theme-light.png" style="border: 1px solid #cccccc; display: block; height: 430px; margin-left: auto; margin-right: auto; width: 1920px;"></p>
+ </li>
+ <li>
+  <p>暗いテーマ (<a href="/ja/docs/Mozilla/Firefox/Developer_Edition">Firefox Developer Edition</a> のデフォルト)：</p>
+
+  <p><img alt="Dark theme for DevTools" src="https://mdn.mozillademos.org/files/16084/theme-dark.png" style="border: 1px solid #cccccc; display: block; height: 430px; margin-left: auto; margin-right: auto; width: 1920px;"></p>
+ </li>
+</ul>
+
+<p> </p>
+
+<h3 id="Common_preferences" name="Common_preferences">共通設定</h3>
+
+<p>複数のツールに適用する設定です。ひとつだけあります:</p>
+
+<dl>
+ <dt><em>ログ出力を残す</em></dt>
+ <dd>ウェブコンソールおよびネットワークモニターで、別のページへ移動するときに出力内容を消去するかを設定します。</dd>
+</dl>
+
+<div class="note">
+<p>共通設定が設定に含まれていない場合、ブラウザのアドレスバーにある 'about:config'  URLを使用して、'devtools.webconsole.persistlog' を検索してこの値を true に切り替えることで、Web コンソールログを永続化できます</p>
+</div>
+
+<h3 id="Inspector" name="Inspector">調査</h3>
+
+<dl>
+ <dt><em>ブラウザー CSS を表示</em></dt>
+ <dd>ブラウザーが適用するスタイル (<a href="/ja/docs/Web/CSS/Cascade">ユーザーエージェントスタイル</a>) をインスペクターの <a href="/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Examine_CSS_rules">ルールビュー</a> に表示するかを設定します。この設定はインスペクターの <a href="/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Examine_computed_CSS">計算済みビュー</a> にある "ブラウザー CSS" チェックボックスとは無関係であることに注意してください。</dd>
+ <dt><em>DOM 属性値を省略</em></dt>
+ <dd>デフォルトでは、インスペクターは 120 文字を超える DOM 属性を切り詰めて表示します。チェックボックスのチェックを外すと、この動作を行いません。この設定は、about:config の "devtools.markup.collapseAttributes" を切り替えます。属性を切り詰める文字数のしきい値を変更するには、about:config で "devtools.markup.collapseAttributeLength" を編集してください。</dd>
+ <dt><em>既定の色単位</em></dt>
+ <dd>調査時に色をどのように表現するかの設定です:
+ <ul>
+  <li>16 進数</li>
+  <li>HSL(A)</li>
+  <li>RGB(A)</li>
+  <li>色の名前</li>
+  <li>記述通りの単位</li>
+ </ul>
+ </dd>
+ <dt><em>レイアウトパネルを有効化</em></dt>
+ <dd>実験的なレイアウトパネルを有効化します。この設定は Firefox Nightly にのみ存在します。</dd>
+</dl>
+
+<h3 id="Web_Console" name="Web_Console">ウェブコンソール</h3>
+
+<dl>
+ <dt><em>タイムスタンプを表示</em></dt>
+ <dd>ウェブコンソールでタイムスタンプを表示するかの設定です。デフォルトでウェブコンソールはタイムスタンプを表示しません。</dd>
+ <dt><em>新しいコンソールフロントエンドを有効化</em></dt>
+ <dd>実験的な新しいコンソールに切り替えます。この設定は Firefox Nightly にのみ存在します。</dd>
+</dl>
+
+<h3 id="Debugger" name="Debugger">デバッガー</h3>
+
+<dl>
+ <dt><em>ソースマップを有効化</em></dt>
+ <dd>デバッガーで <a href="/ja/docs/Tools/Debugger/How_to/Use_a_source_map">ソースマップのサポート</a> を有効化します。</dd>
+ <dt><em>新しいデバッガーフロントエンドを有効化</em></dt>
+ <dd>新しいデバッガーを有効化します。この設定は Firefox Nightly にのみ存在します。</dd>
+</dl>
+
+<h3 id="Style_Editor" name="Style_Editor">スタイルエディター</h3>
+
+<dl>
+ <dt><em>元のソースを表示</em></dt>
+ <dd>この設定を有効にすると、ソースマップをサポートする CSS プリプロセッサーを使用している場合にスタイルエディターが、生成された CSS ではなく元のプリプロセッサーのソースを表示できます。<a href="/ja/docs/Tools/Style_Editor#Source_map_support">スタイルエディターの CSS ソースマップのサポートについて確認してください</a>。この設定を有効にすると、<a href="/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Link_to_CSS_file">ページインスペクターのルールビューでも元のソースへリンクするようになります</a>。</dd>
+ <dt><em>CSS 自動補完</em></dt>
+ <dd>スタイルエディターで候補の自動補完が可能になります。</dd>
+</dl>
+
+<h3 id="Screenshot_Behavior" name="Screenshot_Behavior">スクリーンショットの動作</h3>
+
+<dl>
+ <dt><em>スクリーンショットをクリップボードへコピー</em></dt>
+ <dd><a href="/ja/docs/Tools/Screenshot_tool">スクリーンショットツール</a> のアイコンをクリックすると、スクリーンショットの画像をクリップボードにコピーします (ダウンロードディレクトリーへの保存も行います)。Firefox 53 の新機能です。</dd>
+ <dt><em>カメラのシャッター音を再生</em></dt>
+ <dd><a href="/ja/docs/Tools/Screenshot_tool">スクリーンショットツール</a> のアイコンをクリックしたとき、シャッターの音を鳴らします。Firefox 53 の新機能です。</dd>
+</dl>
+
+<h3 id="Editor_Preferences" name="Editor_Preferences">エディター設定</h3>
+
+<p>これは <a href="http://codemirror.net/">CodeMirror</a> ソースエディターの設定です。このエディターは Firefox に内蔵されており、<a href="/ja/docs/Tools/Scratchpad">スクラッチパッド</a> や <a href="/ja/docs/Tools/Style_Editor">スタイルエディター</a> など、いくつかの開発ツールで使用しています。</p>
+
+<dl>
+ <dt><em>インデントを検知</em></dt>
+ <dd>カーソルがある行のインデント状態に基づいて、新しい行を自動的にインデントします。</dd>
+ <dt><em>閉じ括弧自動入力</em></dt>
+ <dt> </dt>
+ <dt><em>インデントにスペース文字を使う</em></dt>
+ <dt> </dt>
+ <dt><em>タブ幅</em></dt>
+ <dt> </dt>
+ <dt><em>キー割り当て</em></dt>
+ <dd>既定の CodeMirror のキー割り当て、またはいくつかの著名なエディターのキー割り当てから選択します:
+ <ul>
+  <li>Vim</li>
+  <li>Emacs</li>
+  <li>Sublime Text</li>
+ </ul>
+ </dd>
+</dl>
+
+<h3 id="Advanced_settings" name="Advanced_settings">詳細設定</h3>
+
+<dl>
+ <dt><em>Gecko プラットフォームのデータを表示</em></dt>
+ <dd>プロファイルに Gecko プラットフォームのシンボルを含めるかを設定します。</dd>
+ <dt><em>HTTP キャッシュを無効化 (ツールボックスを開いているとき)</em></dt>
+ <dd>ツールボックスを開いているすべてのタブで、最初に読み込む場合のパフォーマンスをシミュレーションするため、ブラウザーの HTTP キャッシュを無効にします。この設定は持続的ですので、設定を行った後にツールボックスを開き直しても、キャッシュは無効化されたままになります。開発ツールを閉じた状態では、キャッシュが有効になります。なお、Service Workers はこの設定の影響を受けません。
+ <div class="note">バージョン 49 より前の Firefox ではこのオプションの名称が [キャッシュを無効] でしたが、HTTP キャッシュに影響があって <a href="/ja/docs/Web/API/Service_Worker_API">Service Workers</a> や <a href="/ja/docs/Web/API/Cache">Cache API</a> には影響がないことを明確にするため改名しました。</div>
+ </dd>
+ <dt><em>JavaScript を無効化</em></dt>
+ <dd>JavaScript が無効な状態でタブをリロードします。</dd>
+ <dt><em>HTTP による Service Workers を有効化 (ツールボックスを開いたとき)</em></dt>
+ <dd>安全ではないウェブサイトから Service Worker を登録可能にします</dd>
+ <dt><em>ブラウザーとアドオンのデバッガーを有効化</em></dt>
+ <dd>ウェブコンテンツだけではなく、ブラウザー自体のコンテキストで開発ツールを使用できます。</dd>
+ <dt><em>リモートデバッガーを有効化</em></dt>
+ <dd>開発ツールで <a href="/ja/docs/Tools/Remote_Debugging">リモートの Firefox インスタンスのデバッグ</a> を可能にします。</dd>
+ <dt><em>Worker のデバッグを有効化 (開発ツール)</em></dt>
+ <dd>デバッガーで、Worker をデバッグするためのパネルを有効化します。
+ <p class="note">注記: Firefox 56 から <a href="/ja/docs/Tools/Debugger">新しいデバッガーのUI</a> を搭載したため、このオプションを UI から削除しました。ただし、設定項目 <code>devtools.debugger.workers</code> を <code>true</code> に設定すると、古い UI を有効化できます。</p>
+ </dd>
+</dl>

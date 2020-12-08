@@ -1,0 +1,14 @@
+---
+title: XPCOM reference
+slug: Mozilla/Tech/XPCOM/Reference
+translation_of: Mozilla/Tech/XPCOM/Reference
+---
+<p>This reference describes the interfaces and functions provided by the <a href="/en-US/docs/Mozilla/Tech/XPCOM">XPCOM</a> library. In addition, it details the various helper classes and functions, as well as the components, provided by the <a href="/en-US/docs/Mozilla/Tech/XPCOM/Glue">XPCOM glue</a> library. The contents herein are oriented primarily toward extension developers and people embedding XPCOM in other projects.</p>
+<div class="note">
+ <p><strong>Note:</strong> If you're working on a module in the Mozilla codebase that's compiled with the <code>MOZILLA_INTERNAL_API</code> flag set, some of these APIs -- the string functions and classes in particular -- are not the ones you should be using. See the <a href="/en-US/docs/Mozilla/Tech/XPCOM/Guide/Internal_strings">XPCOM internal string guide</a> for documentation of the internal string API used within the Mozilla codebase.</p>
+</div>
+<p></p><div class="row topicpage-table">
+    <div class="section"><dl><dl><dt class="landingPageList"><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Glue_classes">XPCOM glue classes</a></dt><dd class="landingPageList">These "glue" classes are provided to make it easier to use XPCOM from C++ code.</dd><dt class="landingPageList"><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface">XPCOM Interface Reference</a></dt><dd class="landingPageList"><span class="long_text short_text" id="result_box" lang="zh-CN"><span>这是一个</span><span>由</span><span>Mozilla平台</span><span>提供</span><span>的</span><span>XPCOM接口</span><span>的</span><span>参考</span></span>.</dd></dl></dl></div>
+    <div class="section"><dl><dt></dt></dl></div>
+    </div><p></p>
+<p>Many XPCOM pages return an <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Core_functions/nsresult">nsresult</a></code>. Prior to Gecko 19 (Firefox 19 / Thunderbird 19 / SeaMonkey 2.16), this was an integer that simply returned an error code. It is now a strongly typed <code>enum</code> when XPCOM is built using a C++11 compiler. This causes compile-time errors to occur when improper values are returned as nsresult values, thereby making it easier to catch many bugs.</p>

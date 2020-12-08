@@ -1,0 +1,83 @@
+---
+title: 前言
+slug: Mozilla/Tech/XPCOM/Guide/Creating_components/Preface
+tags:
+  - XPCOM
+  - 所有分类
+translation_of: Mozilla/Tech/XPCOM/Guide/Creating_components/Preface
+---
+<p> </p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/创建_XPCOM_组件:XPCOM_简介">下一页  »</a></p>
+</div>这本书是关于 Gecko, 以及如何创建基于 Gecko 的 <a href="/cn/XPCOM" title="cn/XPCOM">XPCOM</a> 组件. 尽管本书的重点是放在把你的 C++ 代码制作成一个使用 Gecko 的组件的步骤之上, 我们还希望这个过程能够讨论到所有构建 XPCOM 的相关工具, 技巧和技术. 因此本书的安排上是作为一个参考书, 使读者能够自己创建组件, 学习不同的 XPCOM 内容. 比如说, 导言中包含了什么是组件的讨论; 第一章中你可以编译基本的源码并注册到 Mozilla 中, 由此讨论了组件于模块之间的关系, 以及一般的注册过程.<p></p>
+
+<p>每章的开始会给出这一章的主要内容. Sidebar sections are included to highlight technical details. 在本书的结尾, 如果能够达到本书的目的的话, 读者应该学会如何创建一个组件, Gecko 中的 XPCOM 组件框架.</p>
+
+<h3 id=".E8.B0.81.E8.AF.A5.E8.AF.BB.E8.BF.99.E6.9C.AC.E4.B9.A6" name=".E8.B0.81.E8.AF.A5.E8.AF.BB.E8.BF.99.E6.9C.AC.E4.B9.A6">谁该读这本书</h3>
+
+<p><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6" title="cn/创建_XPCOM_组件">创建 XPCOM 组件</a> 是为 C++ 开发人员而写. 尽管你可能会使用 <a href="/cn/JavaScript" title="cn/JavaScript">JavaScript</a>, <a href="/cn/C" title="cn/C">C</a> 或其他的语言来创建 XPCOM 组件, 组件管理的实现是采用 C++, 许多关于如何创建 XPCOM 组件的讨论也是从 C++ 语言开始的. 然而并不要求读者是一个 C++ 语言的专家, 你需要了解的是基本的 C++ 继承和封装的思想, 我们在书中将尽可能的解释这些 C++ 语言的特性的使用. 由于 Mozilla 使用 JavaScript 脚本语言来访问 XPCOM 组件, 所以熟悉 JavaScript 会很有帮助.</p>
+
+<p>XPCOM 是 Cross Platform Component Object Model (跨平台组件模型)的缩写. 就象它的名字暗示的, XPCOM 类似于 Microsoft 的 COM. 开发 MS COM 的经验大多都可以被应用到 XPCOM. 然而本书假设读者对 COM 一无所知, 本书将包含关于 COM 基本思想的介绍.</p>
+
+<p>本书将描述一个控制浏览动作的 XPCOM 组件的制作过程. 尽管 XPCOM 的多数应用环境与 web 浏览并没有关系, 但是 XPCOM 现在的主要客户应用是 Gecko, 一个开源的, 遵循标准的嵌入式 web 浏览器, 所以它是最简单的, 而且是最实用的展示 XPCOM 功能的例子. 本教程中关于组件的详细描述在这里 <a href="/cn/Creating_XPCOM_Components/Creating_the_Component_Code#What_We.27ll_Be_Working_On" title="cn/Creating_XPCOM_Components/Creating_the_Component_Code#What_We.27ll_Be_Working_On">What We'll Be Working On</a>.</p>
+
+<h3 id=".E6.9C.AC.E6.95.99.E7.A8.8B.E7.9A.84.E7.BB.84.E7.BB.87" name=".E6.9C.AC.E6.95.99.E7.A8.8B.E7.9A.84.E7.BB.84.E7.BB.87">本教程的组织</h3>
+
+<p>下面的列表给出了编制一个称为 <strong>WebLock</strong> 的 XPCOM 组件的整体步骤, 这个组件向基于 Gecko 的浏览器提供了阻止网站访问的功能. 每个步骤都有各自的章节, 在各个章节中会讨论相关的内容.</p>
+
+<ul>
+ <li>创建组件的通用模块.</li>
+ <li>使用 C++ 宏, 特殊的字符串类以及智能指针来优化代码.</li>
+ <li>为组件定义功能; 为这个功能创建一个 <a href="/cn/XPIDL" title="cn/XPIDL">XPIDL</a> 接口; 生成实现代码, 规格定制的 <strong>WebLock</strong> 接口.</li>
+ <li>完整实现 <strong>WebLock</strong> 组件: <code>nsIContentPolicy</code>, 文件 I/O, 加锁等.</li>
+ <li>创建 WebLock 组件用户接口.</li>
+ <li>为发布和安装 <strong>WebLock</strong> 打包.</li>
+</ul>
+
+<h3 id=".E6.8C.89.E7.85.A7.E4.BE.8B.E5.AD.90.E6.9D.A5.E5.AD.A6.E4.B9.A0" name=".E6.8C.89.E7.85.A7.E4.BE.8B.E5.AD.90.E6.9D.A5.E5.AD.A6.E4.B9.A0">按照例子来学习</h3>
+
+<p>安装 XPCOM 到本地机器上的方法有很多, 如果你已经编译了 Mozilla 1.2 或更高的版本源码, 你就已经有了 XPCOM 框架. 如果你还没有下载 Mozilla 源码, 更简单的方法是下载 Gecko SDK, 它包含了 XPCOM 组件框架的库和工具.</p>
+
+<p>如果有了上面的工具, 你就可以编译自己的组件, 并把这个组件添加到 Gecko 库中. 我们这里讨论的 <strong>WebLock</strong> 组件是一个实用的浏览器扩展, 编译它需要 1.2 或更高版本的 Gecko SDK / Mozilla 源码.</p>
+
+<p>本书假设你使用的是 SDK, 下载 SDK, 编译, 和获取可用于编成的 Gecko 组件的方法在本书的附录, <a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BB%BA%E7%AB%8B_Gecko_SDK" title="cn/创建_XPCOM_组件/建立_Gecko_SDK">建立 Gecko SDK</a>.</p>
+
+<h3 id=".E6.9C.AC.E4.B9.A6.E7.9A.84.E4.BD.93.E4.BE.8B" name=".E6.9C.AC.E4.B9.A6.E7.9A.84.E4.BD.93.E4.BE.8B">本书的体例</h3>
+
+<p>下面列出的是格式化文档的习惯，他们用于本书中特定的信息类型并且让信息检索变得简单。目标是使用尽量少的格式类型，同时能辨别不同的信息类型。</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Format</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><strong>bold</strong></td>
+   <td><strong>component names</strong> 显示为粗题文字</td>
+  </tr>
+  <tr>
+   <td><code>monospace</code></td>
+   <td><code>code listings</code>, <code>interface names</code> 和 <code>members</code> of interfaces (e.g., <code>createInstance()</code>) 用monospaced 字体表达. 代码行放在不同的box内. 此外, <code>filenames</code> 和 <code>directories</code> 也用 monospaced 字体.</td>
+  </tr>
+  <tr>
+   <td><em>italic</em></td>
+   <td><em>variables</em> appear in italic. 重要的条目和新的概念第一次在文本中出现的时候也应该是斜体字。这些条目通常会立刻有进一步的解释，或者读者可以在本书的某个地方找到详细的解释。</td>
+  </tr>
+  <tr>
+   <td>link</td>
+   <td>References to other sections and to figures and tables are links to those sections.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id=".E8.87.B4.E8.B0.A2" name=".E8.87.B4.E8.B0.A2">致谢</h3>
+
+<p>Thanks to Peter Lubczynski, John Gaunt, Ellen Evans, and Alec Flett for technical reviews. A special thanks goes to Darin Fisher for his very acute observations, close reading, and attention to detail. </p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/创建_XPCOM_组件:XPCOM_简介">下一页  »</a></p>
+</div><p></p><div class="licenseblock">
+<p>Copyright (c) 2003 by Doug Turner and Ian Oeschger. This material may be distributed only subject to the terms and conditions set forth in the <a class="external" href="http://www.opencontent.org/openpub/" rel="noopener">Open Publication License</a>, v1.02 or later. Distribution of substantively modified versions of this document is prohibited without the explicit permission of the copyright holder. Distribution of the work or derivative of the work in any standard (paper) book form is prohibited unless prior permission is obtained from the copyright holder.</p>
+</div><p></p>
+
+<p></p>

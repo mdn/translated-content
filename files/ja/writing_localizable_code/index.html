@@ -1,0 +1,51 @@
+---
+title: ローカライズ可能なコードを記述する
+slug: Writing_localizable_code
+tags:
+  - Internationalization
+  - Localization
+translation_of: Mozilla/Localization/Writing_localizable_code
+---
+<p>{{ Draft() }}</p>
+
+<p>このページでは、ローカライズを意識した UI コードを扱う際の最善の実践とガイドラインを提供します。Mozilla と拡張機能の開発者を対象としています。</p>
+
+<p>技術的な詳細は <a href="/en/XUL_Tutorial/Localization" title="en/XUL_Tutorial/Localization">XUL_Tutorial:Localization</a> もご覧ください。</p>
+
+<h3 id="About_Localizers" name="About_Localizers">ローカライザーについて</h3>
+
+<p>ローカライザーと滅多に接しない開発者に向けた、いくつかの注意点:</p>
+
+<ul>
+ <li>ローカライザーはツールが好きで、エディタは嫌いであり、</li>
+ <li>ローカライゼーションツールは、しばしばキー・バリュー・ペアに基づいていて、</li>
+ <li>少なくとも、ローカライザーは言語のスキルに才能が集中していて、プログラミングや、アプリ作成でさえも精通していない。</li>
+</ul>
+
+<h3 id="Guidelines" name="Guidelines">ガイドライン</h3>
+
+<p>あなたのコードをより簡単にローカライズするには、従うべきガイドラインがいくつかあります:</p>
+
+<dl>
+ <dt>適切なキー名を選択する</dt>
+ <dd>キーに選んだ名前は (それが DTD だろうが、属性ファイルだろうが) 説明的でなければなりません。長い変数名と考えましょう。ローカライズした文字列の意味を変える場合、キーも変えます。これは適切なキー名になる可能性が高いでしょうし、変更点が単なるスペル訂正と異なることを、ツールが拾い上げ安くなるでしょう。</dd>
+ <dt>複合文字列では文法を前提とするのをやめる</dt>
+ <dd>文をいくつかのキーに分けると、うっかりと文法や文の構造を前提とすることがよくあります。こんな複合文字列はしばしば、翻訳が困難です。複合文字列が必要な時は、翻訳者に "移動する余地" を残してあげてください。適切に複合文字列を使う例は、"Firefox's setting for visited pages"です: 翻訳者は (暗示的に) ぴったりとしたテキストフィールドを配置できるでしょう。</dd>
+ <dt>プリプロセッサ マクロを使用しない </dt>
+ <dd><code>#if #else #endif</code> <code>#expand</code> を使用しないことを強く推奨します。このルールにはいくつか例外がありますが、一般にローカライズされたファイルは標準に従うべきで、整形にビルド ツールが不要であるべきです。ローカライズされたファイルにビルドする処理を追加したい場合は、<a href="/User:AxelHecht" title="User:AxelHecht">l10n@</a> からフィードバックをリクエストすることを検討してください。多くの場合は、同様に処理をコンテントコードに移動して、<code>l10n</code> 内の別のキー・バリュー・ペアを参照できます。</dd>
+ <dt>適切なソース ディレクトリ構造を使用 </dt>
+ <dd>ローカライズできるファイルを正しい場所に置いているかを確認します。最上位階層にディレクトリを追加することは、<code>cvsroot</code> リポジトリ内のモジュール所有権と、ローカライゼーションの簡単さとの間の妥協点です。</dd>
+ <dt>適切な chrome ディレクトリ構造を使用 </dt>
+ <dd>あるモジュール <code>mod 用に、ターゲットパスを</code> <code>jar:ab-CD.jar!/locale/ab-CD/mod/foo.dtd</code> とすることは広くテストされていて、は <code><a class="external" rel="freelink">chrome://mod/locale/foo.dtd</a></code> としてファイルを参照するのに適切な場所です。このようなディレクトリ構造を使うことは、ソースコードのないローカライゼーション処理が簡単になり、特に拡張の作者にとって推奨します。 <a href="/en/JAR_Manifests" title="en/JAR_Manifests">JAR Manifests</a> を使うと簡単になります。</dd>
+</dl>
+
+<h3 id="l10n_impact" name="l10n_impact">l10n impact</h3>
+
+<p>凍結したツリーでは、<em>l10n-impact</em> の変更はチェックインしないというルールがあります。これはどういう意味でしょう？ <em>l10n-impact</em> とは</p>
+
+<ul>
+ <li><code>mozilla/@mod@/locales へのあらゆる変更点。つまり</code>ローカライザーは、他のみんながそうしているように、bonsai クエリを実行して、変更点に追いつかないといけないことを発見します。変更がないことは、クエリ結果が空となります。</li>
+ <li>既存のローカライズ文字列の対する、変更点や新しい利用。つまり40以上のローカライゼーションについて、QAサイクルを起動するあらゆるものが <em>l10n-impact</em> です。</li>
+</ul>
+
+<p>{{ languages( { "de": "de/Lokalisierbaren_Code_schreiben", "en": "en/Writing_localizable_code", "es": "es/Escribir_c\u00f3digo_localizable", "fr": "fr/\u00c9criture_de_code_localisable" } ) }}</p>

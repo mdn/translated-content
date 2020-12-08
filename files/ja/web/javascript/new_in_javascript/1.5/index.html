@@ -1,0 +1,42 @@
+---
+title: JavaScript 1.5 の新機能
+slug: Web/JavaScript/New_in_JavaScript/1.5
+tags:
+  - JavaScript
+  - JavaScript_version_overviews
+translation_of: Archive/Web/JavaScript/New_in_JavaScript/1.5
+---
+<p>{{jsSidebar("New_in_JS")}}</p>
+
+<p>JavaScript バージョン 1.5 では以下の新機能や改良点が盛り込まれています。</p>
+
+<p><strong>ランタイムエラー</strong><br>
+ ランタイムエラーが例外として報告されるようになっています。</p>
+
+<p><strong>数値の書式の強化</strong><br>
+ Number.prototype.toExponential、Number.prototype.toFixed および Number.prototype.toPrecision メソッドの導入により、数値の書式が強化されています。<a href="/ja/Core_JavaScript_1.5_Guide/Predefined_Core_Objects/Number_Object" title="ja/Core_JavaScript_1.5_Guide/Predefined_Core_Objects/Number_Object">Number オブジェクト</a> のページを参照してください。</p>
+
+<p><strong>正規表現の強化</strong><br>
+ 以下のように正規表現が強化されています。</p>
+
+<ul>
+ <li>量指定子 (+、*、?、{}) は ? を続けることでスキップ優先を指定することができるようになっています。<a href="/ja/Core_JavaScript_1.5_Guide/Writing_a_Regular_Expression_Pattern#.E7.89.B9.E6.AE.8A.E6.96.87.E5.AD.97.E3.81.AE.E4.BD.BF.E7.94.A8" title="ja/Core_JavaScript_1.5_Guide/Writing_a_Regular_Expression_Pattern#.E7.89.B9.E6.AE.8A.E6.96.87.E5.AD.97.E3.81.AE.E4.BD.BF.E7.94.A8">正規表現パターンの記述</a> のページの ? の項目を参照してください。</li>
+ <li>キャプチャする括弧 (x) の代わりにキャプチャしない括弧 (?:x) を使用することができます。キャプチャしない括弧を使用すると、マッチした部分式に対して後方参照ができなくなります。<a href="/ja/Core_JavaScript_1.5_Guide/Writing_a_Regular_Expression_Pattern#.E7.89.B9.E6.AE.8A.E6.96.87.E5.AD.97.E3.81.AE.E4.BD.BF.E7.94.A8" title="ja/Core_JavaScript_1.5_Guide/Writing_a_Regular_Expression_Pattern#.E7.89.B9.E6.AE.8A.E6.96.87.E5.AD.97.E3.81.AE.E4.BD.BF.E7.94.A8">正規表現パターンの記述</a> のページの (?:x) の項目を参照してください。</li>
+ <li>肯定的および否定的な先読み表現がサポートされています。どちらもマッチさせた文字列に続くものに依存したマッチの表現です。<a href="/ja/Core_JavaScript_1.5_Guide/Writing_a_Regular_Expression_Pattern#.E7.89.B9.E6.AE.8A.E6.96.87.E5.AD.97.E3.81.AE.E4.BD.BF.E7.94.A8" title="ja/Core_JavaScript_1.5_Guide/Writing_a_Regular_Expression_Pattern#.E7.89.B9.E6.AE.8A.E6.96.87.E5.AD.97.E3.81.AE.E4.BD.BF.E7.94.A8">正規表現パターンの記述</a> のページの x(?=y) および x(?!y) の項目を参照してください。</li>
+ <li>m フラグが追加され、複数行に対してもマッチする正規表現を指定できるようになりました。<a href="/ja/Core_JavaScript_1.5_Guide/Working_with_Regular_Expressions/Advanced_Searching_With_Flags" title="ja/Core_JavaScript_1.5_Guide/Working_with_Regular_Expressions/Advanced_Searching_With_Flags">フラグを用いた高度な検索</a> のページを参照してください。</li>
+</ul>
+
+<p><strong>ある条件下での関数の宣言</strong><br>
+ if 節の中で関数を宣言できるようになっています。<a href="/ja/Core_JavaScript_1.5_Guide/Defining_Functions" title="ja/Core_JavaScript_1.5_Guide/Defining_Functions">関数の定義</a> のページを参照してください。</p>
+
+<p><strong>関数式</strong><br>
+ 式の中で関数を宣言できるようになっています。<a href="/ja/Core_JavaScript_1.5_Guide/Defining_Functions" title="ja/Core_JavaScript_1.5_Guide/Defining_Functions">関数の定義</a> のページを参照してください。</p>
+
+<p><strong>複数の catch 節</strong><br>
+ try...catch 文における複数の catch 節をサポートしています。<a href="/ja/Core_JavaScript_1.5_Guide/Exception_Handling_Statements/try...catch_Statement#catch_.E3.83.96.E3.83.AD.E3.83.83.E3.82.AF" title="ja/Core_JavaScript_1.5_Guide/Exception_Handling_Statements/try...catch_Statement#catch_.E3.83.96.E3.83.AD.E3.83.83.E3.82.AF">catch ブロック</a> のページを参照してください。</p>
+
+<p><strong>ゲッタとセッタ</strong><br>
+ オブジェクトにゲッタとセッタを追加できるようになっています。この機能は JavaScript の C での実装でのみ利用可能です。<a href="/ja/Core_JavaScript_1.5_Guide/Creating_New_Objects/Defining_Getters_and_Setters" title="ja/Core_JavaScript_1.5_Guide/Creating_New_Objects/Defining_Getters_and_Setters">ゲッタとセッタの定義</a> のページを参照してください。</p>
+
+<p><strong>定数</strong><br>
+ 読み取り専用の名前付き定数がサポートされています。この機能は JavaScript の C での実装でのみ利用可能です。<a href="/ja/Core_JavaScript_1.5_Guide/Constants" title="ja/Core_JavaScript_1.5_Guide/Constants">定数</a> のページを参照してください。</p>

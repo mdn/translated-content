@@ -1,0 +1,92 @@
+---
+title: ActiveXObject
+slug: Archive/Web/JavaScript/Microsoft_Extensions/ActiveXObject
+translation_of: Archive/Web/JavaScript/Microsoft_Extensions/ActiveXObject
+---
+<div>{{JSRef}}</div>
+
+<div class="warning"><strong>警告</strong>: 该对象是微软的私有拓展名, 只在微软的IE浏览器上支持, 在win8的应用商店下载的其他浏览器应用也不被支持.</div>
+
+<p><strong><code>ActiveXObject</code> </strong>启用会返回一个自动化对象的引用</p>
+
+<p>这个对象只能用于实例化自动化对象，它没有任何成员对象.</p>
+
+<h2 id="语法">语法 </h2>
+
+<pre><code>let newObj = new ActiveXObject(<em>servername, </em><em>typename</em>[, <em>location</em>])
+</code></pre>
+
+<h3 id="参数">参数</h3>
+
+<dl>
+ <dt><code>servername</code></dt>
+ <dd>提供对象的应用程序的名称。</dd>
+ <dt><code>typename</code></dt>
+ <dd>要创建的对象的类型或类。</dd>
+ <dt><code>location</code> {{optional_inline}}</dt>
+ <dd>要创建对象的网络服务器的名称。</dd>
+</dl>
+
+<h2 id="备注">备注</h2>
+
+<p>自动化服务器提供至少一种类型的对象。例如，文字处理应用程序可以提供应用程序对象、文档对象和工具栏对象。</p>
+
+<p>您可以在<code>HKEY_CLASSES_ROOT</code>注册注册表项中识别主机PC上的<code>servername.typename的</code>值。下面是您可以找到的一些示例，它们要取决于你的电脑安装了哪些程序:</p>
+
+<ul>
+ <li>
+  <p>Excel.Application</p>
+ </li>
+ <li>
+  <p>Excel.Chart</p>
+ </li>
+ <li>
+  <p>Scripting.FileSystemObject</p>
+ </li>
+ <li>
+  <p>WScript.Shell</p>
+ </li>
+ <li>
+  <p>Word.Document</p>
+ </li>
+</ul>
+
+<div class="warning">
+<p><strong>注意:</strong> ActiveX 对象可能会出现安全问题。要使用<code>ActiveXObject</code>, 你可能需要调整IE浏览器的相关安全区域的安全设置。比如说，对于本地局域网，你通常需要将自定义设置更改为"对未标记为可安全执行脚本ActiveX控件执行初始化并执行脚本"。</p>
+</div>
+
+<p>To identify members of an automation object that you can use in your code, you may need to use a COM object browser, such as the <a href="http://msdn.microsoft.com/library/d0kh9f4c.aspx">OLE/COM Object Viewer</a>, if no reference documentation is available for the Automation object.</p>
+
+<p>To create an Automation object, assign the new <code>ActiveXObject</code> to an object variable:</p>
+
+<pre class="brush: js">var ExcelApp = new ActiveXObject("Excel.Application");
+var ExcelSheet = new ActiveXObject("Excel.Sheet");
+</pre>
+
+<p>This code starts the application creating the object (in this case, a Microsoft Excel worksheet). Once an object is created, you refer to it in code using the object variable you defined. In the following example, you access properties and methods of the new object using the object variable <code>ExcelSheet</code> and other Excel objects, including the application object and the <code>ActiveSheet.Cells</code> collection.</p>
+
+<pre class="brush: js">// Make Excel visible through the Application object.
+ExcelSheet.Application.Visible = true;
+// Place some text in the first cell of the sheet.
+ExcelSheet.ActiveSheet.Cells(1,1).Value = "This is column A, row 1";
+// Save the sheet.
+ExcelSheet.SaveAs("C:\\TEST.XLS");
+// Close Excel with the Quit method on the Application object.
+ExcelSheet.Application.Quit();
+</pre>
+
+<h2 id="Requirements">Requirements</h2>
+
+<p>Supported in the following document modes: Quirks, Internet Explorer 6 standards, Internet Explorer 7 standards, Internet Explorer 8 standards, Internet Explorer 9 standards, Internet Explorer 10 standards, Internet Explorer 11 standards. Not supported in Windows 8.x Store apps.</p>
+
+<div class="note">
+<p><strong>Note:</strong> Creating an <code>ActiveXObject</code> on a remote server is not supported in Internet Explorer 9 standards mode, Internet Explorer 10 standards mode, Internet Explorer 11 standards mode, and Windows Store apps or later.</p>
+</div>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/JavaScript/Microsoft_JavaScript_extensions">Microsoft JavaScript extensions</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Microsoft_JavaScript_extensions/GetObject">GetObject Function</a></li>
+ <li><a href="http://code.msdn.microsoft.com/Unique-Authentication-f32d2da0">Unique authentication using Magic of HTML5/WCF sample app</a></li>
+</ul>

@@ -1,0 +1,63 @@
+---
+title: Chromeテスト
+slug: Mozilla/QA/Chrome_tests
+translation_of: Mozilla/QA/Chrome_tests
+---
+<h3 id="Introduction" name="Introduction">導入</h3>
+<p>Chromeテストは基本的には、Chrome特権付きで動作する<a href="/ja/Mochitest" title="ja/Mochitest">Mochitest</a>です。</p>
+<p>Chromeテストスイートは、JavaScriptを用いてアプリケーションのChromeウィンドウをテストできるように設計された、自動テストフレームワークです。現在の所、JavaScriptのコードをFirefoxのメインのブラウザウィンドウと同じスコープで実行し、結果を<a href="/ja/Mochitest" title="ja/Mochitest">Mochitestテストフレームワーク</a>と同じ関数を使って報告することができます。ChromeテストスイートはMochitest frameworkからのruntests.pyに依存しています。</p>
+<h3 id="Running_the_chrome_tests" name="Running_the_chrome_tests">Chromeテストを実行する</h3>
+<p>Mochitestを実行するには、あなたが行った変更を含めて<a href="/ja/Build_Documentation" title="ja/Build_Documentation">Mozillaをビルドする</a>必要があります。カレントディレクトリを <code>$(OBJDIR)/_tests/testing/mochitest</code> に移動して、以下のコマンドを実行してください：</p>
+<pre class="eval">python runtests.py --chrome
+</pre>
+<p>このコマンドは、あなたがビルドしたMozillaを起動した上で、「chrome tests」というウィンドウを開きます。「run all tests」リンクをクリックするとテストの実行が開始され、実行結果はそのウィンドウ内で報告されます。結果をファイルに出力するためのオプ ションも利用可能です。その場合は上記のコマンドに加えて、Mochitestで使用されるのと同じパラメータ（--log-file=/path/to /file）を指定してください。 <em>（ログ出力はまだ動作しません。{{ Bug(423497) }}を参照してください。）</em></p>
+<p>テストハーネス{{ 訳注("テスト実行用プログラム") }}に対して、ユーザの手動操作無しで起動時にテストを自動実行するよう指示するには、パラメータとして --autorun オプションを指定します。テストを完全に自動化するために、このオプションと同時に --close-when-done オプションを指定する事もできます。</p>
+<p>パスを --test-path パラメータで渡すことで、テストを一つだけ実行することもできます。例：</p>
+<pre class="eval">python runtests.py --chrome --test-path=toolkit/content/tests/chrome/test_largemenu.xul
+</pre>
+<p>この例はtest_largemenu.xulだけを実行します。</p>
+<h3 id="Writing_chrome_tests" name="Writing_chrome_tests">Chromeテストを書く</h3>
+<p>Chromeテストは基本的には、Chrome特権付きで動作する、すなわち、コードとUIが <code><a class=" external" rel="freelink">chrome://</a></code> URIで参照される<a href="/ja/Mochitest" title="ja/Mochitest">Mochitest</a>です。基本的なXULのテストファイルはこのようなものです：</p>
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="<a class=" external" rel="freelink">chrome://global/skin</a>" type="text/css"?&gt;
+&lt;?xml-stylesheet href="<a class=" external" rel="freelink">chrome://mochikit/content/tests/SimpleTest/test.css</a>" type="text/css"?&gt;
+
+&lt;window title="テストのデモ"
+        xmlns="<a class=" external" href="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" rel="freelink">http://www.mozilla.org/keymaster/gat...re.is.only.xul</a>"
+        onload="RunTest();"&gt;
+  &lt;title&gt;テストのデモ&lt;/title&gt;
+
+  &lt;script type="application/javascript"
+          src="<a class=" external" rel="freelink">chrome://mochikit/content/MochiKit/packed.js</a>"/&gt;
+  &lt;script type="application/javascript"
+          src="<a class=" external" rel="freelink">chrome://mochikit/content/tests/Simp.../SimpleTest.js</a>"/&gt;
+
+  &lt;script type="application/javascript"&gt;
+  &lt;![CDATA[
+    SimpleTest.waitForExplicitFinish();
+
+    function RunTest()
+    {
+      ok  (true ==  1, "this passes");
+      todo(true === 1, "this fails");
+      SimpleTest.finish();
+    }
+  ]]&gt;
+  &lt;/script&gt;
+
+  &lt;body xmlns="<a class=" external" href="http://www.w3.org/1999/xhtml" rel="freelink">http://www.w3.org/1999/xhtml</a>"&gt;
+    &lt;p id="display"&gt;&lt;/p&gt;
+    &lt;div id="content" style="display: none"&gt;&lt;/div&gt;
+    &lt;pre id="test"&gt;&lt;/pre&gt;
+  &lt;/body&gt;
+&lt;/window&gt;
+</pre>
+<p>「RunTest」関数はテストハーネスではなく、テストの<code>onload</code>イベントハンドラにより実行されます。</p>
+<p>比較関数はMochitestsでサポートされているものと全く同じ物を使えます。詳細を知りたい場合は、Mochitestのドキュメントの<a href="/ja/Mochitest#How_do_the_comparison_functions_work.3F" title="ja/Mochitest#How_do_the_comparison_functions_work.3F">比較関数がどのように動作するか</a>を参照してください。 グローバルのスコープに定義された「EventUtils」オブジェクトから、<a class="external" href="http://lxr.mozilla.org/mozilla/source/testing/mochitest/tests/SimpleTest/EventUtils.js">EventUtilsヘルパ関数</a> を利用する事もできます。</p>
+<p>テストスイートでは、Mochitestで用意されている関数と同じ名前の関数を使う事で、非同期のテストも実行することができます。RunTest()の実行が終わるまで待ってから実行結果の報告を受け取りたい場合、SimpleTest.waitForExplicitFinish()を呼んでください。テストが完了した後にはSimpleTest.finish()を呼びます。テストが完了するまであまりに長い時間がかかった場合、テストハーネスはそのテストをFAILED（失敗） と見なす事に留意してください（現在の所、タイムアウトまでの時間は15秒です）。</p>
+<p>テスト内で投げられたあらゆる例外は、捕捉され、テストにおいて失敗として報告されます。テストの実行コンテキストの外で投げられた例外（タイムアウトした場合、イベントハンドラ内での例外など）は捕捉されませんが、タイムアウトしたテストについては、それらがfinish()の実行を妨げた場合は実行結果に おいて報告されます。</p>
+<p>テストファイルの名前は「test_」で始まり、拡張子は「.xul」でなければなりません。このパターンに一致しないファイルはテスト実行環境によって無視されますが、それ以外の名前のXULファイルを置くこともできます。例えば、test_demo.xulからopenDialogによって開かれるXULウィンドウのファイルはwindow_demo.xulと名付けるとよいでしょう。「test_bug123456.xul」のように、バグの番号をファイル名に書く事が推奨されます。</p>
+<h3 id="Adding_a_new_chrome_test_to_the_tree" name="Adding_a_new_chrome_test_to_the_tree">新しいChromeテストをツリーに追加する</h3>
+<p>新しいChromeテストをツリーに追加するには、Browser chromeテストが _tests/testing/mochitest/mochitest ではなく _tests/testing /mochitest/chrome にコピーされるようにするということに留意しながら、<a href="/ja/Mochitest#Adding_new_Mochitest_tests_to_the_tree" title="ja/Mochitest#Adding_new_Mochitest_tests_to_the_tree">Mochitestの説明</a>に従ってください。</p>
+<p> </p>
+<p>{{ languages( { "en": "en/Chrome_tests" } ) }}</p>

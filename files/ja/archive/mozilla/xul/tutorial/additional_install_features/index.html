@@ -1,0 +1,47 @@
+---
+title: その他のインストール機能
+slug: Archive/Mozilla/XUL/Tutorial/Additional_Install_Features
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Additional_Install_Features
+---
+<div>
+  <div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/Tutorial/Install_Scripts" style="float: left;">« 前のページ</a><br></p>
+</div></div>
+<p>このセクションでは、インストーラのその他の機能をとりあげます。</p>
+<h2 id="Installer_File_Manipulation" name="Installer_File_Manipulation">インストーラによるファイル操作</h2>
+<p>前のセクションでは、基本的なインストーラについて述べました。 インストール中にもう少し凝ったことをしたくなるかもしれません。 例えば、特定のライブラリが存在しているときのように、ある条件を満たしたときにだけ、パッケージをインストールするような場合です。</p>
+<p>Install オブジェクトの他に、インストールスクリプトは File オブジェクトも備えています。 これは、ディスクのファイルを調べたり変更したりすることができる関数を備えています。 インストールの前後でファイルを移動したりコピーしたり削除したりすることができるのです。 例えば、事前にあるファイルのバックアップを取っておきたいこともあるでしょう。</p>
+<p>次のコードは、 "<code>/bin/grep</code>" ファイルのコピーを作成して、それを "<code>/main</code>" ディレクトリに置きます。</p>
+<pre class="brush:text">var binFolder = getFolder("file:///", "bin");
+var grep = getFolder(binFolder, "grep");
+
+var mainFolder = getFolder("file:///", "main");
+
+File.copy(grep, mainFolder);
+</pre>
+<ul>
+  <li>最初の行で、<code>/bin</code> ディレクトリへの参照を取得します。'<code>file:///</code>' は、ファイルシステムのルートを表わす特別な文字列です。</li>
+  <li>ここから、'<code>bin</code>' ディレクトリの中にある '<code>grep</code>' ファイルを探します。ファイルが存在していない場合、インストール中にエラーが生じます。</li>
+  <li>次に、ふたたびファイルシステムのルートから '<code>main</code>' フォルダを参照します。</li>
+  <li>最後に、<code>File.copy</code> 関数を呼び出して、ソースファイルを目的の場所にコピーします。</li>
+</ul>
+<p>ファイルを移動したり、ファイル名を変更したり、ファイルを実行する<a class="external" href="http://www.xulplanet.com/references/elemref/ref_File.html">関数</a>もあります。 このようにして、パッケージと競合するファイルを取り除くことができるのです。</p>
+<h2 id="Handling_Errors" name="Handling_Errors">エラーの取り扱い</h2>
+<p>エラーは手際よく扱いたいものです。 エラーが生じる原因は、ファイルやディレクトリが存在しない、ディスクの空きスペースが充分でない、など様々です。</p>
+<p>エラーが生じたかどうかは、<code>getLastError</code> 関数で知ることができます。戻り値が SUCCESS であればエラーは生じていません。 その他の場合、生じたエラーの種類を示すエラーコードの数字が返されます。 この関数はインストールスクリプトのどこでも呼び出すことができ、直前の操作までにエラーが生じたかを知ることができます。</p>
+<p>エラーが生じたら、インストールを中止したいと思うでしょうし、ユーザに対してエラーメッセージを表示したいかもしれません。 例えば、次のコードをスクリプトの最後の部分に追加します。</p>
+<pre class="brush:text">if ( getLastError() == SUCCESS ) {
+  performInstall();
+} else {
+  cancelInstall();
+}</pre>
+<p><code>getLastError</code> が返すエラーコードは、Mozilla ソースファイルの <code><a class="external" href="http://lxr.mozilla.org/mozilla/source/xpinstall/src/nsInstall.h">nsInstall.h</a></code> にリストアップされています。 インストール中に、実行された手順を記したログファイルが作成され、エラーが生じた場合もこれに記録されます。 ログファイルは、Mozilla をインストールしたディレクトリの '<code>install.log</code>' ファイルです。 インストールが行われるたびに、記録のテキストが追加されていきます。</p>
+<p><code>logComment</code> 関数で、ログファイルに任意のテキストを書き込むことができます。引数は一つだけで、書き込むテキストです。</p>
+<div>
+  <div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/Tutorial/Install_Scripts" style="float: left;">« 前のページ</a><br></p>
+</div></div>

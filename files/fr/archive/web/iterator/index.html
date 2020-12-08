@@ -1,0 +1,190 @@
+---
+title: Iterator
+slug: Archive/Web/Iterator
+tags:
+  - JavaScript
+  - Legacy Iterator
+  - Reference
+translation_of: Archive/Web/Iterator
+---
+<div>{{jsSidebar("Objects")}}</div>
+
+<div class="warning"><strong>Non-standard.</strong> La fonction <code><strong>Iterator</strong></code> est une fonctionnalité propre à ECMAScript et sera retiré dans le futur. Pour utiliser des fonctions pérennes, préférer les boucles {{jsxref("Instructions/for...of")}} et le <a href="/fr/docs/Web/JavaScript/Guide/Le_protocole_iterator">protocole itérateur</a>.</div>
+
+<p>La fonction <code><strong>Iterator</strong></code> renvoie un objet implémentant le protocole itérateur historique qui permet d'itérer sur les propriétés énumérables d'un objet.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox">Iterator(<var>objet</var>, [keyOnly])</pre>
+
+<h3 id="Paramètres">Paramètres</h3>
+
+<dl>
+ <dt><code>objet</code></dt>
+ <dd>L'objet dont on souhaite itérer sur les propriétés.</dd>
+ <dt><code>keyOnly</code></dt>
+ <dd>Si <code>keyOnly</code> est une valeur équivalente à <code>true</code>, <code>Iterator.prototype.next</code> renverra uniquement <code>nom_propriété</code>.</dd>
+</dl>
+
+<h2 id="Description">Description</h2>
+
+<p>Cette fonction renvoie une instance d'<code>Iterator</code> qui permet d'itérer sur un objet. Pour chaque itération, l'instance renverra un tableau <code>[nom_propriété, valeur_propriété]</code> si <code>keyOnly</code> est équivalente à <code>false</code>. Sinon, chaque itération renverra uniquement <code>nom_propriété</code>. Si <code>objet</code> est une instance d'<code>Iterator</code> ou de <code>Generator</code>, la fonction renverra <code>objet</code>.</p>
+
+<h2 id="Propriétés">Propriétés</h2>
+
+<dl>
+ <dt><code>Iterator.prototype[@@iterator]</code></dt>
+ <dd>Renvoie une fonction qui renvoie l'objet itérateur afin de respecter {{jsxref("Les_protocoles_iteration", "les protocoles d'itération", "", 1)}}.</dd>
+</dl>
+
+<h2 id="Méthodes">Méthodes</h2>
+
+<dl>
+ <dt><code><strong>Iterator.prototype.next</strong></code></dt>
+ <dd>Renvoie le prochain item élément au format <code>[nom_propriété, valeur_propriété]</code>. S'il n'y a plus d'éléments, l'exception {{jsxref("StopIteration")}} est levée.</dd>
+</dl>
+
+<h2 id="Exemples">Exemples</h2>
+
+<h3 id="Itérer_sur_les_propriétés_d'un_objet">Itérer sur les propriétés d'un objet</h3>
+
+<pre class="brush: js">var a = {
+  x: 10,
+  y: 20,
+};
+var iter = Iterator(a);
+console.log(iter.next()); // ["x", 10]
+console.log(iter.next()); // ["y", 20]
+console.log(iter.next()); // renvoie StopIteration
+</pre>
+
+<h3 id="Itérer_sur_les_propriétés_d'un_objet_avec_l'instruction_historique_for...in">Itérer sur les propriétés d'un objet avec l'instruction historique <code>for...in</code></h3>
+
+<pre class="brush: js">var a = {
+  x: 10,
+  y: 20,
+};
+
+for (var [nom, valeur] in Iterator(a)) {
+  console.log(nom, valeur);   // x 10
+                              // y 20
+}
+</pre>
+
+<h3 id="Itérer_grâce_à_for-of">Itérer grâce à <code>for-of</code></h3>
+
+<pre class="brush: js">var a = {
+  x: 10,
+  y: 20,
+};
+
+for (var [nom, valeur] of Iterator(a)) {
+  // @@iterator est utilisé
+  console.log(nom, valeur);   // x 10
+                              // y 20
+}
+</pre>
+
+<h3 id="Itérer_sur_les_noms_des_propriétés">Itérer sur les noms des propriétés</h3>
+
+<pre class="brush: js">var a = {
+  x: 10,
+  y: 20,
+};
+
+for (var nom in Iterator(a, true)) {
+  console.log(nom);    // x
+                       // y
+}
+</pre>
+
+<h3 id="Utiliser_une_instance_de_Generator">Utiliser une instance de <code>Generator</code></h3>
+
+<pre class="brush: js">function* f() {
+  yield "a";
+  yield "b";
+}
+var g = f();
+
+console.log(g == Iterator(g)); // true
+
+for (var v in Iterator(g)) {
+  console.log(v);   // a
+                    // b
+}
+</pre>
+
+<h3 id="Utiliser_une_instance_d'Iterator">Utiliser une instance d'<code>Iterator</code></h3>
+
+<pre class="brush: js">var a = {
+  x: 10,
+  y: 20,
+};
+
+var i = Iterator(a);
+
+console.log(i == Iterator(i)); // true
+</pre>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<p>Non-standard. Ne fait partie d'aucun standard.</p>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Fonctionnalité</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Support simple</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Fonctionnalité</th>
+   <th>Android</th>
+   <th>Chrome pour Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Support simple</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs">Les itérateurs et générateurs</a></li>
+ <li><code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/StopIteration">StopIteration</a></code></li>
+</ul>

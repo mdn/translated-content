@@ -1,0 +1,44 @@
+---
+title: appendItem
+slug: Archive/Mozilla/XUL/Method/appendItem
+tags:
+  - XUL Methods
+  - XUL Reference
+translation_of: Archive/Mozilla/XUL/Method/appendItem
+---
+<div>
+  <span class="breadcrumbs XULRefMeth_breadcrumbs">« <a href="/ja/docs/XUL_Reference" title="/ja/docs/XUL_Reference">XUL リファレンス HOME</a></span></div>
+<dl>
+  <dt>
+    <span id="m-appendItem"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/appendItem">appendItem(label,value )</a></code></span></dt>
+  <dd>
+    戻り値の型: <em>要素</em></dd>
+  <dd>
+    新しい項目を生成し、既存の項目リストの末尾に追加します。値の設定は任意です。この関数は新しく生成された要素を返します。</dd>
+</dl>
+<h2 id="Example" name="Example">例</h2>
+<pre class="brush:html">&lt;script&gt;
+function addItemsToList() {
+  var list = document.getElementById('myMenuList');
+
+  // add item with just the label
+  list.appendItem('One');
+
+  // add item with label and value
+  list.appendItem('Two', 999);
+
+  // Select the first item
+  list.selectedIndex = 0;
+}
+&lt;/script&gt;
+
+&lt;button label="Add items" oncommand="addItemsToList()" /&gt;
+
+&lt;menulist id="myMenuList"&gt;
+  &lt;menupopup /&gt;
+&lt;/menulist&gt;</pre>
+<h2 id="See_also" name="See_also">関連情報</h2>
+<ul>
+  <li><a href="/ja/docs/XUL/Method/insertItemAt" title="XUL/Method/insertItemAt">insertItemAt()</a></li>
+  <li><a href="/ja/docs/XUL/Method/removeItemAt" title="XUL/Method/removeItemAt">removeItemAt()</a></li>
+</ul>

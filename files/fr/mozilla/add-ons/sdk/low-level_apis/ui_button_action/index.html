@@ -1,0 +1,659 @@
+---
+title: ui/button/action
+slug: Mozilla/Add-ons/SDK/Low-Level_APIs/ui_button_action
+translation_of: Archive/Add-ons/Add-on_SDK/Low-Level_APIs/ui_button_action
+---
+<p>{{AddonSidebar}}</p>
+
+<div class="note">Experimental</div>
+
+<p><span class="seoSummary">Ajouter un boutton dans l'interface utilisateur de Firefox. Avec ce module vous pourrez créer des bouttons contenant des icônes et répondant aux clic de la sourie.</span></p>
+
+<h2 id="Usage">Usage</h2>
+
+<h3 id="Créer_des_bouttons"><br>
+ Créer des  bouttons</h3>
+
+<p>Pour créer un boutton, vous devez lui donné un identifiant (id), une icône et un libellé:</p>
+
+<pre class="brush: js">var { ActionButton } = require("sdk/ui/button/action");
+
+var button = ActionButton({
+    id: "my-button",
+    label: "my button",
+    icon: {
+      "16": "./firefox-16.png",
+      "32": "./firefox-32.png"
+    },
+    onClick: function(state) {
+        console.log("button '" + state.label + "' was clicked");
+    }
+  });</pre>
+
+<p>By default, the button appears in the Firefox toolbar:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6803/action-button-toolbar.png" style="display: block; height: 201px; margin-left: auto; margin-right: auto; width: 381px;">However, users can move it to the Firefox menu panel using the <a href="https://support.mozilla.org/en-US/kb/customize-firefox-controls-buttons-and-toolbars">toolbar customization feature</a>:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6809/action-button-menu.png" style="display: block; height: 573px; margin-left: auto; margin-right: auto; width: 381px;"></p>
+
+<h3 id="Badged_buttons">Badged buttons</h3>
+
+<div class="geckoVersionNote">
+<p>New in Firefox 36.</p>
+</div>
+
+<p>You can add a "badge" to a button using its <code>badge</code> property. This can be a number or a string, and you can update it at any time. By default the badge's color is red, but you can set your own color using the <code>badgeColor</code> property, specified as a CSS <a href="/en-US/docs/Web/CSS/color_value"><code>&lt;color&gt;</code></a> value:</p>
+
+<pre class="brush: js">var { ToggleButton } = require("sdk/ui/button/toggle");
+
+var button = ToggleButton({
+    id: "my-button1",
+    label: "my button1",
+    icon: "./icon-16.png",
+    onChange: changed,
+    badge: 0,
+    badgeColor: "#00AAAA"
+  });
+
+function changed(state) {
+  button.badge = state.badge + 1;
+  if (state.checked) {
+    button.badgeColor = "#AA00AA";
+  }
+  else {
+    button.badgeColor = "#00AAAA";
+  }
+}</pre>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/9803/badge.png" style="display: block; height: 168px; margin-left: auto; margin-right: auto; width: 384px;"></p>
+
+<h3 id="Specifying_multiple_icons">Specifying multiple icons</h3>
+
+<p>You can specify just one icon, or multiple icons in different sizes.</p>
+
+<p>If you specify multiple icons, Firefox will select the best-fitting icon based on the device screen resolution and the place the icon appears. For example, in the screenshots above, Firefox uses the small icon when the button is in the toolbar and the large icon when the button is in the menu panel. Read more about specifying icons in the reference documentation for the <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action#ActionButton(options)"><code>ActionButton</code> constructor</a>.</p>
+
+<h3 id="Responding_to_click_events">Responding to click events</h3>
+
+<p>You can respond to click events by assigning a listener to the button's <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action#click"><code>click</code></a> event. You can do this in the button's constructor, by assigning the listener to the <code>onClick</code> option. You can also add, or change, the listener afterwards:</p>
+
+<pre class="brush: js">var { ActionButton } = require("sdk/ui/button/action");
+
+var button = ActionButton({
+    id: "my-button",
+    label: "my button",
+    icon: {
+      "16": "./firefox-16.png",
+      "32": "./firefox-32.png"
+    },
+    onClick: firstClick
+  });
+
+function firstClick(state) {
+  console.log("You clicked '" + state.label + "'");
+  button.removeListener("click", firstClick);
+  button.on("click", subsequentClicks);
+}
+
+function subsequentClicks(state) {
+  console.log("You clicked '" +  state.label + "' again");
+}</pre>
+
+<p>The listener is passed a <code>state</code> object that contains all the button's <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action#Properties">properties</a>.</p>
+
+<p>You can generate click events programmatically with the button's <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action#click()"><code>click()</code></a> method.</p>
+
+<h3 id="Disabling_buttons">Disabling buttons</h3>
+
+<p>You can disable a button by setting its <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action#disabled"><code>disabled</code></a> property to <code>true</code>. A disabled button will not generate click events and its icon will appear disabled:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6805/action-button-toolbar-disabled.png" style="display: block; height: 201px; margin-left: auto; margin-right: auto; width: 381px;"></p>
+
+<h3 id="Updating_state">Updating state</h3>
+
+<p>You can update all the button's <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action#Properties">properties</a> except for its <code>id</code>.</p>
+
+<p>By default, the button has global state: that is, its properties are the same across all open windows and tabs, and updating them updates the button's state across all open windows and tabs.</p>
+
+<p>You can set state to be specific to a window or tab using the button's <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action#state()"><code>state()</code></a> method. To set state like this, call <code>state()</code> with 2 parameters:</p>
+
+<ul>
+ <li>the first parameter is a <a href="/en-US/Add-ons/SDK/High-Level_APIs/windows"><code>window</code></a> or <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs#Tab"><code>tab</code></a> object or as a shorthand, the string "window" for the currently active window, or the string "tab" for the currently active tab</li>
+ <li>the second parameter is an object containing the state properties you wish to update.</li>
+</ul>
+
+<p>Here's an add-on with a button that disables itself when you click it, but only for the currently active window:</p>
+
+<pre class="brush: js">var { ActionButton } = require("sdk/ui/button/action");
+
+var button = ActionButton({
+    id: "my-button",
+    label: "my button",
+    icon: {
+      "16": "./firefox-16.png",
+      "32": "./firefox-32.png"
+    },
+    onClick: disableForThisWindow
+  });
+
+function disableForThisWindow(state) {
+  button.state("window", {
+    disabled: true
+  });
+}</pre>
+
+<p>To fetch the state for a specific window or tab, call <code>state()</code>, passing in the window or tab you are interested in, and it will return the state:</p>
+
+<pre class="brush: js">var labelForActiveTab = button.state("tab").label;</pre>
+
+<p>To learn more about this, see the API documentation for <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action#state()"><code>state()</code></a>.</p>
+
+<h3 id="Destroying_buttons">Destroying buttons</h3>
+
+<p>When you've finished with a button, destroy it by calling its <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action#destroy()"><code>destroy()</code></a> method. After that, any attempts to access any of its properties or to call any of its methods will throw exceptions.</p>
+
+<h2 id="Globals">Globals</h2>
+
+<h3 id="Constructors">Constructors</h3>
+
+<h4 class="addon-sdk-api-name" id="ActionButton(options)"><code>ActionButton(options)</code></h4>
+
+<p>Creates an action button.</p>
+
+<h5 id="Parameters">Parameters</h5>
+
+<p><strong>options : object</strong><br>
+ Required options:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Name</th>
+   <th scope="col">Type</th>
+   <th scope="col"> </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>id</td>
+   <td>string</td>
+   <td>
+    <p>The button's ID. This is used internally to keep track of this button. The ID must be unique within your add-on.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>label</td>
+   <td>string</td>
+   <td>
+    <p>The button's human-readable label. When the button is in the toolbar, this appears in a tooltip, and when the button is in the menu, it appears underneath the button as a legend.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>icon</td>
+   <td>url, string, object</td>
+   <td>
+    <p>One or more icons for the button. You can specify this in one of three ways: </p>
+
+    <ul>
+     <li><strong>as a resource:// URL</strong> pointing at an icon file in your add-on's "data" directory, typically constructed using <em><code>self.data.url(iconfile)</code></em></li>
+     <li><strong>as a relative path</strong>: a string in the form "./iconfile", where "iconfile" is a relative path to the icon file beginning in your add-on's "data" directory</li>
+     <li><strong>as an object, or dictionary of key-value pairs</strong>. Here you can specify a range of sizes for your button's icon. Each key-value pair specifies an icon:
+      <ul>
+       <li>each value specifies an image file as a resource:// URL or relative path.</li>
+       <li>each key must be a numeric string such as "16", or "32", which represents the size in pixels of the corresponding image.</li>
+      </ul>
+     </li>
+    </ul>
+
+    <pre class="brush: js">
+var { ActionButton } = require('sdk/ui/button/action');
+var self = require("sdk/self");
+
+var button1 = ActionButton({
+    id: "my-button1",
+    label: "my button1",
+    icon: self.data.url("firefox-16.png")
+  });
+
+var button2 = ActionButton({
+    id: "my-button2",
+    label: "my button2",
+    icon: "./firefox-16.png"
+  });
+
+var button3 = ActionButton({
+    id: "my-button3",
+    label: "my button3",
+    icon: {
+      "16" : "./firefox-16.png",
+      "32" : "./firefox-32.png",
+      "64" : "./firefox-64.png"
+    }
+  });</pre>
+
+    <p>If you use the final form, Firefox will automatically choose the best-fit icon for your button, depending on the device screen resolution and where the button is in the UI. On a device with a "normal" screen resolution, the toolbar has space for 18 x 18 pixels and the menu panel has space for 32 x 32 pixels. On a high resolution screen (such as a <a href="https://en.wikipedia.org/wiki/Retina_Display">HiDPI</a> display), these are doubled to 36 x 36 and 64 x 64 pixels, respectively. So you can supply three icon files:</p>
+
+    <pre class="brush: js">
+icon: {
+  "16": "./addon16.png",
+  "32": "./addon32.png",
+  "64": "./addon64.png"
+}</pre>
+
+    <p>This will look fine in both toolbar and menu panel, and for both screen resolutions. However, the icons in the toolbar will not quite fill the space available, so you can instead supply four icons:</p>
+
+    <pre class="brush: js">
+icon: {
+  "18": "./addon18.png", // toolbar icon non HiDPI
+  "32": "./addon32.png", // menu panel icon non HiDPI
+  "36": "./addon36.png", // toolbar icon HiDPI
+  "64": "./addon64.png"  // menu panel icon HiDPI
+}
+</pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Optional options:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Name</th>
+   <th scope="col">Type</th>
+   <th scope="col"> </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>disabled</td>
+   <td>boolean</td>
+   <td>
+    <p>Determines whether the button is disabled. Disabled buttons appear disabled in the UI, and do not respond to clicks. Defaults to false.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>onClick</td>
+   <td>function</td>
+   <td>
+    <p>Click handler for the button.</p>
+    </td>
+  </tr>
+  <tr>
+   <td>badge</td>
+   <td>Number or String</td>
+   <td>
+    <div class="geckoVersionNote">
+    <p>New in Firefox 36.</p>
+    </div>
+
+    <p><a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action#Badged_buttons">Badge</a> to attach to the button.</p>
+
+    <p>The badge can contain as many characters (or digits) as you like, but only the first four will be displayed.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>badgeColor</td>
+   <td>CSS <a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a> value</td>
+   <td>
+    <div class="geckoVersionNote">
+    <p>New in Firefox 36.</p>
+    </div>
+
+    <p>Color for the <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action#Badged_buttons">badge</a>. If <code>badgeColor</code> is omitted and <code>badge</code> is specified, then the badge is red.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="ActionButton">ActionButton</h2>
+
+<h3 id="Methods">Methods</h3>
+
+<h4 class="addon-sdk-api-name" id="click()"><code>click()</code></h4>
+
+<p>Click the button. This will cause the button to generate the <code>click</code> event:</p>
+
+<pre class="brush: js">var { ActionButton } = require('sdk/ui/button/action');
+
+var button = ActionButton({
+  id: "my-button",
+  label: "my button",
+  icon: {
+    "16": "./firefox-16.png",
+    "32": "./firefox-32.png"
+  },
+  onClick: function(state) {
+      console.log("You clicked '" + state.label + "'");
+  }
+});
+
+button.click();
+</pre>
+
+<h4 class="addon-sdk-api-name" id="state()"><code>state()</code></h4>
+
+<p>Get or set the button's state for a specific window or tab.</p>
+
+<p>By default, a button's properties are global, meaning that they are the same across all open windows and tabs, and that if you update these properties, then they are updated across all windows and tabs. But sometimes you want a button attached to one window (or tab) to have a different state to a button attached to a different window (or tab). That's what <code>state()</code> is for.</p>
+
+<p>To set a button's properties for a specific window or tab, call <code>state()</code>, passing it the <a href="/en-US/Add-ons/SDK/High-Level_APIs/windows"><code>window</code></a> or <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs"><code>tab</code></a> you want the property to apply to, and the property value to set. A special shortcut allows you to pass the string "window" or "tab" to select the currently active window or tab.</p>
+
+<p>For example, if you have a button like this:</p>
+
+<pre class="brush: js">var { ActionButton } = require('sdk/ui/button/action');
+
+var button = ActionButton({
+  id: "my-button",
+  label: "default",
+  icon: "./firefox-16.png"
+});</pre>
+
+<p>You can change its label for only the currently active window like this:</p>
+
+<pre class="brush: js">button.state("window", {
+  "label" : "window-specific label"
+});</pre>
+
+<p>You can change its label for only the currently active tab like this:</p>
+
+<pre class="brush: js">button.state("tab", {
+  "label" : "tab-specific label"
+});
+</pre>
+
+<p>To fetch the button state for a specific window or tab, call <code>state()</code>, passing it the window or tab you're interested in, and it will return a state object containing all the <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action#Properties">properties</a> for the button associated with that window or tab. Again. you can use the strings "window" or "tab" as shortcuts. For example, this add-on:</p>
+
+<ul>
+ <li>creates a button with a default label</li>
+ <li>opens a new tab</li>
+ <li>sets a new label only for the new tab</li>
+ <li>logs the result of accessing the global label, the window-specific label, and each of the 2 tab-specific labels</li>
+</ul>
+
+<pre class="brush: js">var { ActionButton } = require('sdk/ui/button/action');
+var tabs = require("sdk/tabs");
+
+var button = ActionButton({
+  id: "my-button",
+  label: "default label",
+  icon: "./firefox-16.png"
+});
+
+tabs.open({
+  url: "https://mozilla.org/",
+  onOpen: onNewTab
+});
+
+function onNewTab(tab) {
+  // Modify the label only for the new tab
+  button.state(tab, {
+    "label" : "tab-specific label"
+  });
+
+  // access the global label -&gt; "default label"
+  console.log(button.label);
+
+  // access the window's label -&gt; "default label"
+  console.log(button.state("window").label);
+
+  // access the first tab's label -&gt; "default label"
+  console.log(button.state(tabs[0]).label);
+
+  // access the second tab's label -&gt; "tab-specific label"
+  console.log(button.state(tabs[1]).label);
+}</pre>
+
+<p>Setting a property won't affect a more-specific property setting. For example, if you have a window with two tabs, and you set a tab-specific label, then set the window-specific label, this will not overwrite the tab-specific label:</p>
+
+<pre class="brush: js">var { ActionButton } = require('sdk/ui/button/action');
+var tabs = require("sdk/tabs");
+
+var button = ActionButton({
+  id: "my-button",
+  label: "default label",
+  icon: "./firefox-16.png"
+});
+
+tabs.open({
+  url: "https://mozilla.org/",
+  onOpen: onNewTab
+});
+
+function onNewTab(tab) {
+  // Modify the label only for the new tab
+  button.state(tab, {
+    "label" : "tab-specific label"
+  });
+
+  // Modify the label for the window
+  button.state("window", {
+    "label" : "window-specific label"
+  });
+
+  // access the global label -&gt; "default label"
+  console.log(button.label);
+
+  // access the window's label -&gt; "window-specific label"
+  console.log(button.state("window").label);
+
+  // access the first tab's label -&gt; "window-specific label"
+  console.log(button.state(tabs[0]).label);
+
+  // access the second tab's label -&gt; "tab-specific label"
+  console.log(button.state(tabs[1]).label);
+}</pre>
+
+<p>The best way to think of this is as a tree: the global state is the root, followed by the state for each window, followed by the state for each tab in a window. If a property value for a node in the tree has not been set explicitly using <code>state()</code>, then it inherits its value from the next level up. So if you have one window containing two tabs, and have set the button's <code>label</code> only for tab A, then tab B will inherit <code>label</code>'s value from the window, and changing the value for the window will implicitly change the value for tab B.</p>
+
+<p>To delete a tab- or window-specific state, assign <code>null</code> to the property. After that, the property will inherit its value from the less-specific state as before:</p>
+
+<pre class="brush: js">var { ActionButton } = require('sdk/ui/button/action');
+var tabs = require("sdk/tabs");
+
+var button = ActionButton({
+  id: "my-button",
+  label: "default label",
+  icon: "./firefox-16.png"
+});
+
+tabs.open({
+  url: "https://mozilla.org/",
+  onOpen: onNewTab
+});
+
+function onNewTab(tab) {
+  // Modify the label only for the new tab
+  button.state(tab, {
+    "label" : "tab-specific label"
+  });
+
+  // Modify the label for the window
+  button.state("window", {
+    "label" : "window-specific label"
+  });
+
+  // access the global label -&gt; "default label"
+  console.log(button.label);
+
+  // access the window's label -&gt; "window-specific label"
+  console.log(button.state("window").label);
+
+  // access the first tab's label -&gt; "window-specific label"
+  console.log(button.state(tabs[0]).label);
+
+  // access the second tab's label -&gt; "tab-specific label"
+  console.log(button.state(tabs[1]).label);
+
+  // Reset the tab-specific state
+  button.state(tab, null);
+
+  // access the second tab's label -&gt; "window-specific label"
+  console.log(button.state(tabs[1]).label);
+}</pre>
+
+<p>Finally, you can pass the button itself into <code>state()</code>. This is an alternative way to set or get the global state. The reason for using this, rather than setting properties individually, is that you can define an object with the properties to set in one place, then apply it to the global state with a single line:</p>
+
+<pre class="brush: js">const defaultState = {
+  "label": "default label",
+  "icon": "./default.png",
+}
+
+const differentState = {
+  "label": "different label",
+  "icon": "./different.png",
+}
+
+var { ActionButton } = require("sdk/ui/button/action");
+
+var button = ActionButton({
+    id: "default-label",
+    label: "default label",
+    icon: "./default.png",
+    onClick: function(state) {
+      if (button.label == "default label") {
+        button.state(button, differentState);
+      }
+      else {
+        button.state(button, defaultState);
+      }
+      console.log(button.state(button).label);
+      console.log(button.state(button).icon);
+    }
+  });
+</pre>
+
+<h5 id="Parameters_2">Parameters</h5>
+
+<p><strong>target : button, tab, window, string</strong></p>
+
+<ul>
+ <li>To set or get the global state, this needs to be the <code>button</code> instance.</li>
+ <li>To get or set window-specific state, this needs to be the <a href="/en-US/Add-ons/SDK/High-Level_APIs/windows"><code>window</code></a> object for which you wish to set a specific state, or the string "window" to select the currently active window.</li>
+ <li>To get or set tab-specific state this needs to be the <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs"><code>tab</code></a> object for which you wish to set a specific state, or the string "tab" to select the currently active tab.</li>
+</ul>
+
+<p><strong>state : object, null</strong><br>
+ Include this parameter only if you are setting state. It is an object containing all the properties you wish to set. For example:</p>
+
+<pre class="brush: js">button.state("tab", {
+  "label" : "tab-specific label",
+  "icon": "./tab-specific-icon.ico"
+});</pre>
+
+<p>To reset state, pass null:</p>
+
+<pre class="brush: js">button.state("tab", null);</pre>
+
+<h5 id="Returns">Returns</h5>
+
+<p><strong>state</strong> : if you have passed the second <code>state</code> argument to make this function a setter, it returns <code>undefined</code>. Otherwise, it functions as a getter and returns the button's state for the specified object. This logs the state for the button associated with the currently active tab:</p>
+
+<pre class="brush: js">console.log(button.state("tab"));</pre>
+
+<p>This object represents a snapshot of the state at the time <code>state()</code> is called. It is not kept up to date with changes made to the button:</p>
+
+<pre class="brush: js">button.label = "foo";
+var state = button.state(button);
+button.label = "bar";
+console.log(state.label) // foo</pre>
+
+<h4 class="addon-sdk-api-name" id="on()"><code>on()</code></h4>
+
+<p>Add a listener to an event emitted by the button. The button only emits one type of event, <code><a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action#click">click</a></code>:</p>
+
+<pre class="brush: js">button.on("click", handleClick)
+
+function handleClick(state) {
+  console.log("button '" + state.label + "' was clicked");
+}</pre>
+
+<h5 id="Parameters_3">Parameters</h5>
+
+<p><strong>event : string</strong><br>
+ The event to listen for. Action buttons only emit one type of event, "<a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action#click"><code>click</code></a>".</p>
+
+<p><strong>listener : function</strong><br>
+ Function that will be called on click.</p>
+
+<h4 class="addon-sdk-api-name" id="once()"><code>once()</code></h4>
+
+<p>Assign a listener to the first occurrence only of an event emitted by the button. The button only emits one type of event, <code><a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action#click">click</a></code>. The listener is automatically removed after the first time the event is emitted.</p>
+
+<h5 id="Parameters_4">Parameters</h5>
+
+<p><strong>event : string</strong><br>
+ The event to listen for. Action buttons only emit one type of event, "<a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action#click"><code>click</code></a>".</p>
+
+<p><strong>listener : function</strong><br>
+ Function that will be called on click.</p>
+
+<h4 class="addon-sdk-api-name" id="removeListener()"><code>removeListener()</code></h4>
+
+<p>Removes an event listener. For example, this code is equivalent to <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action#once()"><code>once()</code></a>:</p>
+
+<pre class="brush: js">button.on("click", handleClick)
+
+function handleClick(state) {
+  console.log("button '" + state.label + "' was clicked");
+  button.removeListener("click", handleClick);
+} </pre>
+
+<h5 id="Parameters_5">Parameters</h5>
+
+<p><strong>event : string</strong><br>
+ The event to listener is listening for. Action buttons only emit one type of event, "<a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action#click"><code>click</code></a>".</p>
+
+<p><strong>listener : function</strong><br>
+ The listener to remove.</p>
+
+<h4 class="addon-sdk-api-name" id="destroy()"><code>destroy()</code></h4>
+
+<p>Destroy the button. After calling this function, the button will no longer appear in the UI, and accessing any of its properties or methods will throw an error.</p>
+
+<h3 id="Properties">Properties</h3>
+
+<h4 class="addon-sdk-api-name" id="id"><code>id</code></h4>
+
+<p>The button's unique ID. This is read-only.</p>
+
+<h4 class="addon-sdk-api-name" id="label"><code>label</code></h4>
+
+<p>The button's label.</p>
+
+<h4 class="addon-sdk-api-name" id="icon"><code>icon</code></h4>
+
+<p>The button's icon or icons, as a URL, relative path, or object containing a set of key-value pairs.</p>
+
+<h4 class="addon-sdk-api-name" id="disabled"><code>disabled</code></h4>
+
+<p>Boolean property indicating whether or not the button is disabled.</p>
+
+<h4 class="addon-sdk-api-name" id="badge"><code>badge</code></h4>
+
+<div class="geckoVersionNote">
+<p>New in Firefox 36.</p>
+</div>
+
+<p>Value to attach to the button as a <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action#Badged_buttons">badge</a>. May be a number or a string.</p>
+
+<p>The badge can contain as many characters (or digits) as you like, but only the first four will be displayed.</p>
+
+<h4 class="addon-sdk-api-name" id="badgeColor"><code>badgeColor</code></h4>
+
+<div class="geckoVersionNote">
+<p>New in Firefox 36.</p>
+</div>
+
+<p>Color for the <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action#Badged_buttons">badge</a>, specified as a CSS <a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a> value.</p>
+
+<h3 id="Events">Events</h3>
+
+<h4 class="addon-sdk-api-name" id="click"><code>click</code></h4>
+
+<p>This event is emitted when a user clicks the button or your add-on calls the button's <code>click()</code> method.</p>
+
+<h5 id="Arguments">Arguments</h5>
+
+<p><strong>state</strong> : The button's state. This contains all the button's <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action#Properties">properties</a>.</p>

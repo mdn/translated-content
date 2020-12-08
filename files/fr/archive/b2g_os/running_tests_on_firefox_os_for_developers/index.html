@@ -1,0 +1,90 @@
+---
+title: 'Running tests on Firefox OS: A guide for developers'
+slug: Archive/B2G_OS/Running_Tests_on_Firefox_OS_for_Developers
+translation_of: Archive/B2G_OS/Running_Tests_on_Firefox_OS_for_Developers
+---
+<div class="summary">
+<p>Les équipes behind our automation harnesses have been working hard to expand our automated testing infrastructure to accomodate Firefox OS as well as writing new harnesses to specifically target testing a phone OS rather than a browser (which our old harnesses were specialized for). Due to the architecture of Firefox OS all these test harnesses will work and will apply, but that also makes things rather complicated and you are a developer and just want to run some tests to see if your patch worked or not. This article aims to make sense of all the available testing resources at Mozilla.</p>
+</div>
+
+<h2 id="Getting_started">Getting started</h2>
+
+<p>If you are a Gecko developer, then you should review the Firefox OS-specific documentation for the test automation you are already familar with: <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Mochitests">mochitest</a>, <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Reftests">reftest</a>, and <a href="https://developer.mozilla.org/en-US/Firefox_OS/Platform/Automated_testing/XPCShell">xpcshell</a>.</p>
+
+<p>If you are a Gaia or App developer, or if you're a Gecko developer interested in doing a deeper "end user" style test where you actually exercise the OS, then you'll need to look into the Gaia test suites. There are two primary test suites:</p>
+
+<ul>
+ <li><a href="/en-US/Firefox_OS/Platform/Automated_testing/gaia-ui-tests">Gaia UI Tests</a>:  These tests are Python-based, and can be run on both desktop and devices. These tests test various aspect of the Gaia UI such as endurance tests (adding lots of contacts to the Contacts app, unlocking the lock screen repeatedly, setting many alarms in the Alarms app, etc.), functional tests (e.g. finding stations on the FM radio app, capturing a photo using the Camera app) and accessibility tests (e.g. enabling and disabiling the screenreader.)</li>
+ <li><a href="https://github.com/mozilla-b2g/gaia/#integration-tests">Gaia Integration tests</a>: These tests are JavaScript-based, using <a href="https://github.com/mozilla-b2g/marionette-js-runner">marionette-js-runner</a>, and can only be run on B2G desktop builds at the time of this writing (real device support is coming very soon.) These test various aspects of how Gaia interacts with other apps and services, so for example, if the Calendar app can successfully add a CalDAV server, or if the Browser app can successfully handle interactions with search engines.</li>
+</ul>
+
+<p>Which one you choose really depends on your preferred toolchain, and what things you want to test.</p>
+
+<p>Let's now move and look at running these tests.</p>
+
+<h2 id="Running_the_Gaia_UI_Tests">Running the Gaia UI Tests</h2>
+
+<p>The <a href="https://github.com/mozilla-b2g/gaia/tree/master/tests/python/gaia-ui-tests">Gaia UI Test</a> suite can be run on real devices and B2G Desktop builds, but in this section we'll concentrate on running them on a real device, as real devices are always best where possible.</p>
+
+<p>Note that this test is <em><strong>destructive</strong></em> and as such, you should back up anything you care about on the phone before running these tests. Depending on which tests you run, they can also make phone calls. So be aware that you want to be very careful about what you run and how you back up the phone, remove the SIM card, etc.  That said, if you've already created an engineering build they are really easy to get running. Here's how.</p>
+
+<h3 id="One_Time_Set_up">One Time Set up</h3>
+
+<p>You only need to perform the following steps once, assuming you do not change the location of your Gaia directory. Create a python virtualenv (<a href="https://pypi.python.org/pypi/virtualenv">install the virtualenv tool</a> first if you haven't already), activate it, and install the gaia UI test tool into your virtualenv. By creating the virtual environment using the steps below, you ensure that you are running the gaia UI test harness code that lives in your Gaia repo (that's useful in case you need to debug anything).</p>
+
+<pre><code class="brush: bash">$ virtualenv gaia_ui_venv # This will create a gaia_ui_venv directory where the virtual environment lives. It can be anywhere on your system.
+$ source gaia_ui_venv/bin/activate # This activates our virtualenv
+(gaia_ui_venv)$ cd &lt;b2groot&gt;/gaia/tests/python/gaia-ui-tests;python setup.py develop # This installs the gaia ui harness into your virtual environment. </code></pre>
+
+<p>If you have already created a virtual environment for gaia ui tests, you can simply do the following:</p>
+
+<pre><code class="brush: bash">$ source gaia_ui_venv/bin/activate</code></pre>
+
+<h3 id="To_Run_the_Tests">To Run the Tests</h3>
+
+<p>First you need to create the testvars file. To do this, copy the standard one over, and add in the attributes to turn off the warnings that this test will <strong>destroy all content on your phone</strong>. These are good tests, they leave no state around and as such, you will need to make sure your phone is backed up before running them. Instructions from here on will assume you've activated the virtual environment and are working in the <code>gaia/tests/python/gaia-ui-tests</code> directory.</p>
+
+<pre><code class="brush: bash">(gaia_ui_venv)$ cp gaiatest/testvars_template.json testvars.json
+# Now edit your copy of testvars.json and add in the following attributes into the json:
+"acknowledged_risks": true,
+"skip_warning": true,</code></pre>
+
+<p>Now you just need to connect our phone via USB, forward the marionette port so your test runner can access it and run our tests. The tests are in <code>gaiatest/tests</code> and you can pick whichever one you want to run. For example, if you wanted to run contacts tests you would do the following:</p>
+
+<pre><code>(gaia_ui_venv)$ adb forward tcp:2828 tcp:2828
+(gaia_ui_venv)$ gaiatest --testvars=testvars.json --address=localhost:2828 gaiatest/tests/functional/contacts/</code></pre>
+
+<div class="note">
+<p><strong>Note</strong>: To find out what UI tests are available, browse through the <a href="https://github.com/mozilla-b2g/gaia/tree/master/tests/python/gaia-ui-tests/gaiatest/tests">gaiatest directories inside the Gaia repo</a>.</p>
+</div>
+
+<p>To get out of the python virtualenv, just use the special virtualenv command <code>deactivate</code>:</p>
+
+<pre><code>(gaia_ui_venv)$ deactivate
+$</code></pre>
+
+<div class="note">
+<p><strong>Note</strong>: To learn more about the Gaia UI Tests and find more detailed information, move on to the <a href="/en-US/Firefox_OS/Platform/Automated_testing/gaia-ui-tests">Gaia UI Tests</a> pages.</p>
+</div>
+
+<h2 id="Running_the_Gaia_Integration_tests">Running the Gaia Integration tests</h2>
+
+<p>To run the <a href="https://github.com/mozilla-b2g/gaia/#integration-tests">Gaia Integration tests</a> tests you currently have to use a B2G Desktop build (note that these are also going to be available for devices soon as well). Let's look at how this is done.</p>
+
+<p>These just require a Gaia tree and NodeJS to be installed on your computer; the following command will do the rest:</p>
+
+<pre><code>$ cd gaia $ make test-integration </code></pre>
+
+<p>That's it — this instruction will download a B2G desktop build, and start running the tests in that build.</p>
+
+<div class="note">
+<p><strong>Note</strong>: To learn more about Gaia Integration Tests, read the <a href="https://github.com/mozilla-b2g/gaia/#integration-tests">Gaia Integration Tests</a> Github repo.</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: To find out what integration tests are available, look in the <a href="https://github.com/mozilla-b2g/gaia/tree/master/apps">apps directory in the Gaia repo</a>; integration tests can be found in <code>test/marionette/</code> subfolders.</p>
+</div>
+
+<h2 id="Wrapping_Up">Wrapping Up</h2>
+
+<p>As always, work is underway to make all our tests easier to run both locally for developers as well as in our automation systems. Feel free to drop into the #ateam channel any time you have questions about test automation for Firefox OS or any of the Mozilla automation tools.</p>

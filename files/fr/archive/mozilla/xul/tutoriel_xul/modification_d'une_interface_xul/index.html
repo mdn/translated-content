@@ -1,0 +1,167 @@
+---
+title: Modification d'une interface XUL
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Modification_d'une_interface_XUL
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Modifying_a_XUL_Interface
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Document_Object_Model" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Manipulation_de_listes">Suivant  »</a></p>
+</div>
+
+<p>Le <abbr title="Document Object Model">DOM</abbr> fournit de nombreuses fonctions pour modifier un document.</p>
+
+<h3 id="Cr.C3.A9ation_de_nouveaux_.C3.A9l.C3.A9ments" name="Cr.C3.A9ation_de_nouveaux_.C3.A9l.C3.A9ments">Création de nouveaux éléments</h3>
+
+<p>Vous pouvez créer de nouveaux éléments en utilisant la fonction <code><a href="/fr/DOM/document.createElement" title="fr/DOM/document.createElement">createElement()</a></code> du document. Elle ne prend qu'un argument, le nom de la balise de l'élément à créer. Vous pouvez ensuite lui affecter des attributs en utilisant la fonction <code><a href="/fr/DOM/element.setAttribute" title="fr/DOM/element.setAttribute">setAttribute()</a></code> et ajouter cet élément au document XUL grâce à la fonction <code><a href="/fr/DOM/element.appendChild" title="fr/DOM/element.appendChild">appendChild()</a></code>. L'exemple suivant ajoute un bouton à une fenêtre XUL :</p>
+
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_1.xul">Voir</a></p>
+
+<pre>&lt;script&gt;
+function addButton(){
+  var aBox = document.getElementById("aBox");
+  var button = document.createElement("button");
+  button.setAttribute("label","Un bouton");
+  aBox.appendChild(button);
+}
+&lt;/script&gt;
+
+&lt;box id="aBox" width="200"&gt;
+  &lt;button label="Ajouter" oncommand="addButton();"/&gt;
+&lt;/box&gt;
+</pre>
+
+<ul>
+ <li>Le script récupère d'abord avec <code><a href="/fr/DOM/document.getElementById" title="fr/DOM/document.getElementById">getElementById()</a></code> une référence à la boîte qui est le container dans lequel le nouveau bouton sera ajouté.</li>
+ <li>La fonction <code><a href="/fr/DOM/document.createElement" title="fr/DOM/document.createElement">createElement()</a></code> crée un nouveau bouton.</li>
+ <li>Nous assignons un libellé 'Un bouton' à ce bouton avec la fonction <code><a href="/fr/DOM/element.setAttribute" title="fr/DOM/element.setAttribute">setAttribute()</a></code>.</li>
+ <li>La fonction <code><a href="/fr/DOM/element.appendChild" title="fr/DOM/element.appendChild">appendChild()</a></code> de la boîte est appelée pour lui ajouter le bouton.</li>
+</ul>
+
+<p>La fonction <code><a href="/fr/DOM/document.createElement" title="fr/DOM/document.createElement">createElement()</a></code> va créer l'élément type par défaut du document. Pour des documents XUL, il sera généralement question de création d'éléments XUL. Pour un document HTML, un élément HTML sera créé, et donc, il aura les fonctionnalités et les fonctions d'un élément HTML. La fonction <code><a href="/fr/DOM/document.createElementNS" title="fr/DOM/document.createElementNS">createElementNS()</a></code> peut être utilisée pour créer des éléments dans un espace de nommage différent.</p>
+
+<p>La fonction <code><a href="/fr/DOM/element.appendChild" title="fr/DOM/element.appendChild">appendChild()</a></code> est utilisée pour ajouter un élément en tant qu'enfant d'un autre élément. Il existe trois fonctions associées qui sont les fonctions <code><a href="/fr/DOM/element.insertBefore" title="fr/DOM/element.insertBefore">insertBefore()</a></code>, <code><a href="/fr/DOM/element.replaceChild" title="fr/DOM/element.replaceChild">replaceChild()</a></code> et <code><a href="/fr/DOM/element.removeChild" title="fr/DOM/element.removeChild">removeChild</a></code>. Leur syntaxe est la suivante :</p>
+
+<pre>parent.appendChild(child);
+parent.insertBefore(child, referenceChild);
+parent.replaceChild(newChild, oldChild);
+parent.removeChild(child);
+</pre>
+
+<p>Le nom de ces fonctions suffit à comprendre ce qu'elles font.</p>
+
+<ul>
+ <li>La fonction <code><a href="/fr/DOM/element.insertBefore" title="fr/DOM/element.insertBefore">insertBefore()</a></code> insère un nouveau n½ud enfant avant un autre existant. Elle est utilisée pour réaliser une insertion à l'intérieur d'une série d'enfants plutôt qu'à la fin comme le fait la fonction <code><a href="/fr/DOM/element.appendChild" title="fr/DOM/element.appendChild">appendChild()</a></code>.</li>
+ <li>La fonction <code><a href="/fr/DOM/element.replaceChild" title="fr/DOM/element.replaceChild">replaceChild()</a></code> efface un enfant existant et en ajoute un nouveau à sa place, à la même position.</li>
+ <li>Pour finir, la fonction <code><a href="/fr/DOM/element.removeChild" title="fr/DOM/element.removeChild">removeChild()</a></code> supprime un nœud.</li>
+</ul>
+
+<div class="note">Notez que pour toutes ces fonctions, l'enfant de référence ou l'enfant à supprimer doit exister sinon une erreur sera générée.</div>
+
+<p>Il est fréquent que vous vouliez effacer un élément existant et l'ajouter autre part. Dans ce cas, vous pouvez simplement ajouter l'élément sans l'effacer préalablement. Puisqu'un nœud ne peut exister qu'à un seul emplacement à la fois, le mécanisme d'insertion se chargera toujours d'effacer d'abord le nœud de son emplacement initial. C'est une méthode pratique pour déplacer un nœud dans un document.</p>
+
+<h4 id="Copie_de_n.C5.93uds" name="Copie_de_n.C5.93uds">Copie de nœuds</h4>
+
+<p>Toutefois, pour copier un nœud, vous devrez appeler la fonction <code><a href="/fr/DOM/element.cloneNode" title="fr/DOM/element.cloneNode">cloneNode()</a></code>. Cette fonction réalise une copie d'un nœud existant, ce qui vous permet ensuite de l'ajouter autre part. Le nœud original restera à sa place. Elle prend un argument booléen indiquant si elle doit copier tous les nœuds enfants ou non. Si la valeur est 'false', seul le n½ud est copié, comme s'il n'avait jamais eu aucun enfant. Si la valeur est 'true', tous les enfants sont également copiés. La copie est faite récursivement, donc pour de larges structures d'arbres, assurez-vous de vouloir réellement passer cette valeur 'true' à la fonction <code><a href="/fr/DOM/element.cloneNode" title="fr/DOM/element.cloneNode">cloneNode()</a></code>. Voici un exemple :</p>
+
+<p><span id="Exemple_2"><a id="Exemple_2"></a><strong>Exemple 2</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_2.xul">Voir</a></p>
+
+<pre>&lt;hbox height="400"&gt;
+  &lt;button label="Copier"
+          oncommand="this.parentNode.appendChild(this.nextSibling.cloneNode(true));"/&gt;
+
+  &lt;vbox&gt;
+    &lt;button label="Premier"/&gt;
+    &lt;button label="Deuxième"/&gt;
+  &lt;/vbox&gt;
+&lt;/hbox&gt;
+</pre>
+
+<p>Lorsque le bouton 'Copier' est appuyé :</p>
+
+<ul>
+ <li>nous récupérons l'élément voisin suivant de même niveau que le bouton, qui est dans ce cas l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/vbox" title="vbox">vbox</a></code>.</li>
+ <li>une copie de cet élément est effectuée en utilisant la fonction <code><a href="/fr/DOM/element.cloneNode" title="fr/DOM/element.cloneNode">cloneNode()</a></code></li>
+ <li>et la copie est ajoutée à la fin grâce à <code><a href="/fr/DOM/element.appendChild" title="fr/DOM/element.appendChild">appendChild()</a></code>.</li>
+</ul>
+
+<div class="note">Vous noterez que certains éléments, tels que <code><a href="/fr/docs/Mozilla/Tech/XUL/listbox" title="listbox">listbox</a></code> et <code><a href="/fr/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code> disposent de fonctions de modification spécialisées supplémentaires que vous devriez utiliser dès que vous le pouvez. Elles seront décrites dans <a href="/fr/Tutoriel_XUL/Manipulation_de_listes" title="fr/Tutoriel_XUL/Manipulation_de_listes">une prochaine section</a>.</div>
+
+<h3 id="Manipulation_d.27.C3.A9l.C3.A9ments_basiques" name="Manipulation_d.27.C3.A9l.C3.A9ments_basiques">Manipulation d'éléments basiques</h3>
+
+<p>Les éléments principaux de XUL, tels que les boutons, les cases à cocher et les boutons radios, peuvent être manipulés grâce à de nombreuses propriétés de script. Les propriétés disponibles sont listées sur la page <a href="/fr/Référence_XUL" title="fr/Référence_XUL">référence des éléments</a> car celles disponibles varient selon les éléments. Les propriétés communes que vous pouvez manipuler sont <code><code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propriétés/label">label</a></span></code></code>, <code><code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propriétés/value">value</a></span></code></code>, <code><code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propriétés/checked">checked</a></span></code></code> et <code><code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propriétés/disabled">disabled</a></span></code></code>. Elles affectent ou effacent les attributs correspondants si nécessaire.</p>
+
+<h4 id="Exemples_de_propri.C3.A9t.C3.A9s_XULAttrlabel_et_XULAttrvalue" name="Exemples_de_propri.C3.A9t.C3.A9s_XULAttrlabel_et_XULAttrvalue">Exemples de propriétés <code id="a-label"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/label">label</a></code> et <code id="a-value"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/value">value</a></code></h4>
+
+<p>Voici un exemple simple de changement d'un libellé de bouton :</p>
+
+<p><span id="Exemple_3"><a id="Exemple_3"></a><strong>Exemple 3</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_3.xul">Voir</a></p>
+
+<pre>&lt;button label="Bonjour" oncommand="this.label = 'Aurevoir';"/&gt;</pre>
+
+<p>Lorsque le bouton est pressé, son libellé est modifié. Cette technique fonctionne pour une large majorité d'éléments ayant des libellés (label). Pour les champs de saisie, vous pouvez faire quelque chose de similaire pour sa propriété <code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propriétés/value">value</a></span></code>.</p>
+
+<p><span id="Exemple_4"><a id="Exemple_4"></a><strong>Exemple 4</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_4.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_4.xul">Voir</a></p>
+
+<pre>&lt;button label="Ajouter" oncommand="this.nextSibling.value += '1';"/&gt;
+&lt;textbox/&gt;
+</pre>
+
+<p>Cet exemple ajoute un '1' dans le champ de saisie chaque fois que le bouton est pressé. La propriété <code><a href="/fr/DOM/element.nextSibling" title="fr/DOM/element.nextSibling">nextSibling</a></code> permet d'atteindre l'élément suivant le bouton (this), le champ de saisie <code><a href="/fr/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code>. L'opérateur <code>+=</code> sert à ajouter un '1' à la fin du texte de la valeur courante. Notez que vous pouvez encore ajouter du texte dans ce champ de saisie. Vous pouvez récupérer le libellé courant ou la valeur en utilisant ses propriétés, comme dans l'exemple suivant :</p>
+
+<p><span id="Exemple_5"><a id="Exemple_5"></a><strong>Exemple 5</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_5.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_5.xul">Voir</a></p>
+
+<pre>&lt;button label="Bonjour" oncommand="alert(this.label);"/&gt;</pre>
+
+<h4 id="Changement_d.27.C3.A9tat_d.27une_case_.C3.A0_cocher" name="Changement_d.27.C3.A9tat_d.27une_case_.C3.A0_cocher">Changement d'état d'une case à cocher</h4>
+
+<p>Les cases à cocher disposent d'une propriété <code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propriétés/checked">checked</a></span></code> qui sert à les cocher ou à les décocher. Il est facile de comprendre son usage. Dans l'exemple à suivre, nous inversons l'état de la propriété <code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propriétés/checked">checked</a></span></code> chaque fois que le bouton est pressé. Tandis que les libellés et les valeurs sont des chaînes de caractères, vous noterez que la propriété <code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propriétés/checked">checked</a></span></code> est un booléen qui prend une valeur 'true' ou 'false'.</p>
+
+<p><span id="Exemple_6"><a id="Exemple_6"></a><strong>Exemple 6</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_6.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_6.xul">Voir</a></p>
+
+<pre>&lt;button label="Changer" oncommand="this.nextSibling.checked =
+  !this.nextSibling.checked;"/&gt;
+&lt;checkbox label="Cochez pour les messages"/&gt;
+</pre>
+
+<p>Les boutons radios peuvent également être sélectionnés en utilisant des propriétés, toutefois, un seul est sélectionné à la fois dans un groupe, tous les autres étant décochés. Vous n'avez pas à réaliser cette gestion manuellement. La propriété <code><code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propriétés/selectedIndex">selectedIndex</a></span></code></code> du <code><a href="/fr/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code> peut être utilisée pour cela. La propriété <code><code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propriétés/selectedIndex">selectedIndex</a></span></code></code> sert à récupérer l'index du bouton radio sélectionné dans le groupe. Il sert également à le modifier.</p>
+
+<h4 id="Modification_de_l.27.C3.A9tat_activ.C3.A9_ou_d.C3.A9sactiv.C3.A9_d.27un_.C3.A9l.C3.A9ment" name="Modification_de_l.27.C3.A9tat_activ.C3.A9_ou_d.C3.A9sactiv.C3.A9_d.27un_.C3.A9l.C3.A9ment">Modification de l'état activé ou désactivé d'un élément</h4>
+
+<p>Il est habituel de désactiver des champs particuliers qui ne servent pas dans une situation donnée. Par exemple, dans la boîte de dialogue des préférences, vous avez le choix entre plusieurs possibilités, mais seul un choix permet un paramétrage supplémentaire. Voici un exemple de création de ce type d'interface :</p>
+
+<p><span id="Exemple_7"><a id="Exemple_7"></a><strong>Exemple 7</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_7.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_7.xul">Voir</a></p>
+
+<pre>&lt;script&gt;
+function updateState(){
+  var name = document.getElementById("name");
+  var sindex = document.getElementById("group").selectedIndex;
+  name.disabled = sindex == 0;
+}
+&lt;/script&gt;
+
+&lt;radiogroup id="group" onselect="updateState();"&gt;
+  &lt;radio label="Nom aléatoire" selected="true"/&gt;
+  &lt;hbox&gt;
+    &lt;radio label="Spécifiez un nom :"/&gt;
+    &lt;textbox id="name" value="Alain" disabled="true"/&gt;
+  &lt;/hbox&gt;
+&lt;/radiogroup&gt;
+</pre>
+
+<p>Dans cet exemple, une fonction <code>updateState()</code> est appelée chaque fois qu'un événement de sélection est déclenché depuis le groupe de boutons radios. Elle est exécutée lorsque qu'un bouton radio est sélectionné. La fonction retournera l'indice de l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/radio" title="radio">radio</a></code> actuellement sélectionné en utilisant la propriété <code><code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propriétés/selectedIndex">selectedIndex</a></span></code></code>. Vous noterez que bien qu'un bouton radio se trouve à l'intérieur d'une boîte <code><a href="/fr/docs/Mozilla/Tech/XUL/hbox" title="hbox">hbox</a></code>, il reste attaché au groupe radio. Si le premier bouton radio est sélectionné (index de '0'), le champ de saisie est désactivé en définissant sa propriété <code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propriétés/disabled">disabled</a></span></code> à 'true'. Si le second bouton radio est sélectionné, le champ de saisie est activé.</p>
+
+<hr>
+<p>La section suivante fournira plus de détails sur la manipulation des groupes de boutons radios et la manipulation des listes.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Document_Object_Model" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Manipulation_de_listes">Suivant  »</a></p>
+</div>
+
+<p><span class="comment">Interwiki</span></p>
+
+<p> </p>

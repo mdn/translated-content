@@ -1,0 +1,172 @@
+---
+title: XBL の例
+slug: Archive/Mozilla/XUL/Tutorial/XBL_Example
+tags:
+  - Tutorials
+  - XBL
+  - XUL
+  - XUL_Tutorial
+  - 要更新
+translation_of: Archive/Mozilla/XUL/Tutorial/XBL_Example
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:XBL_Inheritance" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Features_of_a_Window">次のページ  »</a></p>
+</div>
+<p>このセクションでは、XBL 要素について例を用いて説明します。</p>
+<h3 id=".E3.82.B9.E3.83.A9.E3.82.A4.E3.83.89.E3.82.B7.E3.83.A7.E3.83.BC.E8.A6.81.E7.B4.A0" name=".E3.82.B9.E3.83.A9.E3.82.A4.E3.83.89.E3.82.B7.E3.83.A7.E3.83.BC.E8.A6.81.E7.B4.A0">スライドショー要素</h3>
+<p>それでは、XBL 要素の完全な例を作ってみることにしましょう。 作成するのは、オブジェクトを<a href="/ja/docs/XUL_Tutorial/Stacks_and_Decks#.E3.83.87.E3.83.83.E3.82.AD" title="XUL_Tutorial/Stacks_and_Decks#.E3.83.87.E3.83.83.E3.82.AD">デッキ</a>で保持して 1 つずつ表示していくウィジェットです。 下辺付近にナビゲーションボタンを置いて、利用者がオブジェクトを巡回できるようにするとともに、 ボタンの間にあるテキストウィジェットで現在のページ番号を表示するようにします。 この要素の中には、ページとしてどんな要素でも置くことが可能ですが、一連の画像を順に表示させるために使用するのがよいと思います。 ここでは、この要素を スライドショー (<span style="color: green;">slideshow</span>) 要素と呼ぶことにします。</p>
+<h4 id=".E3.82.B9.E3.83.A9.E3.82.A4.E3.83.89.E3.82.B7.E3.83.A7.E3.83.BC.E3.81.AE.E3.82.B3.E3.83.B3.E3.83.86.E3.83.B3.E3.83.88" name=".E3.82.B9.E3.83.A9.E3.82.A4.E3.83.89.E3.82.B7.E3.83.A7.E3.83.BC.E3.81.AE.E3.82.B3.E3.83.B3.E3.83.86.E3.83.B3.E3.83.88">スライドショーのコンテント</h4>
+<p>まず、XBL のコンテントとして必要な要素を決めることにしましょう。 ページの切り替えを行う必要があるので、ページのコンテンツを保持するために、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/deck" title="deck">deck</a></code></code> 要素を利用するのが最適だと思います。 また、ページのコンテンツは XBL ではなく XUL ファイルの側に置く必要がありますが、 それらは<span style="border-bottom: 1px dashed green;" title="deck">デッキ</span>の中に追加する必要があるため、<code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#children">children</a></code></code> タグを使う必要がありそうです。 さらに、下辺付近には、前のページに戻るためのボタン、現在のページ番号を表示するテキストウィジェット、次のページに進むボタンを置くことにします。</p>
+<p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_xblex_1.xml.txt">ソース</a></p>
+<pre>&lt;binding id="slideshow"&gt;
+  &lt;content&gt;
+    &lt;xul:vbox flex="1"&gt;
+      &lt;xul:deck xbl:inherits="selectedIndex" selectedIndex="0" flex="1"&gt;
+        &lt;children/&gt;
+      &lt;/xul:deck&gt;
+      &lt;xul:hbox&gt;
+        &lt;xul:button xbl:inherits="label=previoustext"/&gt;
+        &lt;xul:label flex="1"/&gt;
+        &lt;xul:button xbl:inherits="label=nexttext"/&gt;
+      &lt;/xul:hbox&gt;
+    &lt;/xul:vbox&gt;
+  &lt;/content&gt;
+&lt;/binding&gt;
+</pre>
+<p>このバインディングによって、スライドショーのために必要な構造が作成されます。 いくつかの要素には、適切に伸縮が行われるように <code><code id="a-flex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code> 属性が追加されています。 また、2 つのボタンの <code><code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> 属性には、 バインドされた要素に設定される 2 つのカスタム属性、<code>previoustext</code> と <code>nexttext</code> が継承されます。 これによって、ボタンのラベルの変更が簡単になります。 また、XBL がバインドされた要素の子要素は、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/deck" title="deck">deck</a></code></code> の中に配置されることになります。 さらに、<code><code id="a-selectedIndex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/selectedIndex">selectedIndex</a></code></code> が <code><code><a href="/ja/docs/Mozilla/Tech/XUL/deck" title="deck">deck</a></code></code> に継承されているため、 XUL 側で最初のページを設定することが可能です。</p>
+<p>以下の XUL ファイルの表示結果を、その下の画像で示します。</p>
+<pre>&lt;box class="slideshow" previoustext="Previous" nexttext="Next" flex="1"&gt;
+  &lt;button label="Button 1"/&gt;
+  &lt;checkbox label="Checkbox 2"/&gt;
+  &lt;textbox/&gt;
+&lt;/box&gt;
+</pre>
+<p>使用するスタイルシート:</p>
+<pre>.slideshow {
+  -moz-binding: url("slideshow.xml#slideshow");
+}
+</pre>
+<div class="float-right">
+  <img alt="画像:xblex1.jpg" src="/@api/deki/files/2045/=Xblex1.jpg"></div>
+<p>最初の「Button 1」ボタンは、デッキの最初のページとして使われているものです。 また、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/label" title="label">label</a></code></code> ウィジェットは <code>value</code> が指定されていないため表示されていません。 この値は、後で自動計算されるようにするため、設定せずに置いてあります。</p>
+<h4 id="page_.E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3" name="page_.E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3">page プロパティ</h4>
+<p>次は、現在のページを保持するためのプロパティを追加します。 このカスタムプロパティの値を取得する場合、 デッキから現在表示されているページの番号を保持している <code><code id="a-selectedIndex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/selectedIndex">selectedIndex</a></code></code> 属性の値を取得する必要があります。 同様に、このプロパティを設定する場合は、デッキの <code><code id="a-selectedIndex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/selectedIndex">selectedIndex</a></code></code> 属性を変更する必要があり、 加えて現在のページ番号を表示しているテキストウィジェットについても更新する必要があります。</p>
+<pre>&lt;property name="page"
+    onget="return parseInt(document.getAnonymousNodes(this)[0].childNodes[0].getAttribute('selectedIndex'));"
+    onset="this.setPage(val);"/&gt;
+</pre>
+<p><code>page</code> プロパティの値を取得する場合、 まず匿名コンテント配列の最初の要素を参照します。 得られる要素は垂直ボックスなので、デッキを取得するためには、このボックスの最初の子ノードを取得する必要があります。 なお、ボックスから見れば、デッキは匿名ではないため、匿名コンテント配列は使用しません。 最後に、デッキの <code><code id="a-selectedIndex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/selectedIndex">selectedIndex</a></code></code> 属性を取得して返します。 また、<code>page</code> を設定するためには、後で定義する <code>setPage()</code> メソッドを呼び出します。</p>
+<p>また、Previous ボタンと Next ボタンには、ボタンが押されたときにページを変更するための、<code><code id="a-oncommand"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/oncommand">oncommand</a></code></code> ハンドラを追加する必要があります。 都合よく、たった今追加したカスタムプロパティの <code>page</code> を使えば、ページを変更することが可能です。</p>
+<pre>&lt;xul:button xbl:inherits="label=previoustext"
+               oncommand="parentNode.parentNode.parentNode.page--;"/&gt;
+&lt;xul:description flex="1"/&gt;
+&lt;xul:button xbl:inherits="label=nexttext"
+               oncommand="parentNode.parentNode.parentNode.page++;"/&gt;
+</pre>
+<p><code>page</code> プロパティは、<span style="border-bottom: 1px dashed green;" title="outer">外枠</span>の XUL 要素だけに存在するため、取得するためには <code><a href="/ja/docs/DOM/element.parentNode" title="DOM/element.parentNode">parentNode</a></code> プロパティを使う必要があります。 最初の <code><a href="/ja/docs/DOM/element.parentNode" title="DOM/element.parentNode">parentNode</a></code> は、ボタンの親である水平ボックスを返し、2 つめはその親である垂直ボックスを返します。 そして、最後の <code><a href="/ja/docs/DOM/element.parentNode" title="DOM/element.parentNode">parentNode</a></code> が、その親の外枠のボックスを返します。 返された <code>page</code> プロパティは、インクリメント (++ 演算)、またはデクリメント (-- 演算) されます。 これにより、値を取得するために <code>onget</code> スクリプトが呼び出され、 その値に 1 の加算または減算を行った後、値を設定するために <code>onset</code> ハンドラが呼び出されることになります。</p>
+<h4 id="setPage_.E3.83.A1.E3.82.BD.E3.83.83.E3.83.89" name="setPage_.E3.83.A1.E3.82.BD.E3.83.83.E3.83.89">setPage メソッド</h4>
+<p>続いては、<code>setPage</code> メソッドの定義にかかります。 このメソッドは、パラメータを 1 つ取り、そこに設定するページ番号を渡します。 また、このメソッドでは、ページが範囲外ではないことの確認と、デッキの <code><code id="a-selectedIndex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/selectedIndex">selectedIndex</a></code></code> 属性の設定、及びテキストウィジェットの <code><code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> 属性の変更を行う必要があります。</p>
+<pre>&lt;method name="setPage"&gt;
+  &lt;parameter name="newidx"/&gt;
+  &lt;body&gt;
+    &lt;![CDATA[
+      var thedeck=document.getAnonymousNodes(this)[0].childNodes[0];
+      var totalpages=this.childNodes.length;
+
+      if (newidx&lt;0) return 0;
+      if (newidx&gt;=totalpages) return totalpages;
+      thedeck.setAttribute("selectedIndex",newidx);
+      document.getAnonymousNodes(this)[0].childNodes[1].childNodes[1]
+              .setAttribute("value",(newidx+1)+" of "+totalpages);
+      return newidx;
+    ]]&gt;
+  &lt;/body&gt;
+&lt;/method&gt;
+</pre>
+<p>この関数の名前は、<code>setPage</code> で、<code>newidx</code> というパラメータを 1 つ取ります。 メソッドの本体は「<code>&lt;![CDATA[</code> ～ <code>]]&gt;</code>」の内側に置かれています。 これは、XML ファイルで一般的に使用可能なメカニズムで、 この中に置かれたテキストは、すべてエスケープされることになります。 これによって、テキストに含まれる小なり記号 ('&lt;')と 大なり記号 ('&gt;') を、その都度エスケープする必要がなくなります。</p>
+<p>次に、コードを細分化して詳細に見ていくことにしましょう。</p>
+<ul>
+  <li><pre>var thedeck=document.getAnonymousNodes(this)[0].childNodes[0];
+</pre>
+    匿名コンテント配列から、垂直ボックスに該当する最初の要素を取得し、次に、デッキ要素に該当する最初の子要素を取得します。</li>
+  <li><pre>var totalpages=this.childNodes.length;
+</pre>
+    バインドされたボックスが持っている子要素の数を取得します。これは存在するページの総数を示すことになります。</li>
+  <li><pre>if (newidx&lt;0) return 0;
+</pre>
+    ページが、最初のページより前に変更されないように、新しいインデックスが、最初のページよりも前を指定している場合は、ページの変更は行わずに 0 を返します。</li>
+  <li><pre>if (newidx&gt;=totalpages) return totalpages;
+</pre>
+    ページが、最後のページより後に変更されないように、新しいインデックスが最後のページよりも後の場合は、ページの変更は行わずに、最後の ページのインデックスを返します。</li>
+  <li><pre>thedeck.setAttribute("selectedIndex",newidx);
+</pre>
+    デッキの <code>selectedIndex</code> 属性を変更します。これによって、リクエストされたページが表示されます。</li>
+  <li><pre>document.getAnonymousNodes(this)[0].childNodes[1].childNodes[1].setAttribute("value",(newidx+1)+" of "+totalpages);
+</pre>
+    この行では、現在のページインデックスを表示するラベル要素の変更を行います。ラベル要素を取得するために、匿名コンテントから最初の要素 (垂直ボックス) を取得し、その 2 番目の子要素 (水平ボックス) の、2 番目の子要素を取得しています。そして、取得した要素の <code>value</code> 属性を、「1 of 3」のような形式のテキストに変更します。インデックスは 0 から始まるため、ページ番号として表示する場合は 1 を加えていることに注意してください。</li>
+</ul>
+<h4 id=".E3.82.B3.E3.83.B3.E3.82.B9.E3.83.88.E3.83.A9.E3.82.AF.E3.82.BF" name=".E3.82.B3.E3.83.B3.E3.82.B9.E3.83.88.E3.83.A9.E3.82.AF.E3.82.BF">コンストラクタ</h4>
+<p>スライドショーを最初に表示したときから、ページ番号が正しく表示されるようにするためには、 コンストラクタを作成して、ラベル要素を初期化しておく必要があります。 ページ番号を設定するためには、先述のメソッドと類似のコードを使用します。 下記の <code>this.page</code> による参照は <code>page</code> プロパティの <code>onget</code> スクリプトを呼び出し、 メソッドのときとは逆に、<code><code id="a-selectedIndex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/selectedIndex">selectedIndex</a></code></code> 属性を初期ページを取得するために使用します。</p>
+<pre>&lt;constructor&gt;
+  var totalpages=this.childNodes.length;
+  document.getAnonymousNodes(this)[0].childNodes[1].childNodes[1]
+          .setAttribute("value",(this.page+1)+" of "+totalpages);
+&lt;/constructor&gt;
+</pre>
+<h4 id=".E8.BF.BD.E5.8A.A0.E5.8F.AF.E8.83.BD.E3.81.AA.E6.A9.9F.E8.83.BD" name=".E8.BF.BD.E5.8A.A0.E5.8F.AF.E8.83.BD.E3.81.AA.E6.A9.9F.E8.83.BD">追加可能な機能</h4>
+<p>これ以外にもいくつかの機能を加えることが可能です。 Previous ボタンと Next ボタンにキーボードショートカット (例えば、バックスペースと Enter キー) を設定したり、 最初のページと最後のページに行くための First ボタンと Last ボタンの追加することが考えられます。 さらに、ラベル要素を入力欄に変更して、ユーザが行きたいページを入力できるようにしたり、 ポップアップを追加して、メニューからページの選択ができるようにすることも可能でしょう。 また、CSS を使ってデッキの周囲に境界を付ければ、見栄えが若干よくなるはずです。</p>
+<h4 id=".E6.9C.80.E7.B5.82.E7.9A.84.E3.81.AA.E3.82.B3.E3.83.BC.E3.83.89" name=".E6.9C.80.E7.B5.82.E7.9A.84.E3.81.AA.E3.82.B3.E3.83.BC.E3.83.89">最終的なコード</h4>
+<p>最終的なコードは以下のようになります。</p>
+<p><span id="Example_2"><a id="Example_2"></a><strong>Example 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_xblex_2.xml.txt">ソース</a></p>
+<pre>&lt;binding id="slideshow"&gt;
+  &lt;content&gt;
+    &lt;xul:vbox flex="1"&gt;
+      &lt;xul:deck xbl:inherits="selectedIndex" selectedIndex="0" flex="1"&gt;
+        &lt;children/&gt;
+      &lt;/xul:deck&gt;
+      &lt;xul:hbox&gt;
+        &lt;xul:button xbl:inherits="label=previoustext"
+                    oncommand="parentNode.parentNode.parentNode.page--;"/&gt;
+        &lt;xul:description flex="1"/&gt;
+        &lt;xul:button xbl:inherits="label=nexttext"
+                    oncommand="parentNode.parentNode.parentNode.page++;"/&gt;
+      &lt;/xul:hbox&gt;
+    &lt;/xul:vbox&gt;
+  &lt;/content&gt;
+
+  &lt;implementation&gt;
+
+    &lt;constructor&gt;
+      var totalpages=this.childNodes.length;
+      document.getAnonymousNodes(this)[0].childNodes[1].childNodes[1]
+              .setAttribute("value",(this.page+1)+" of "+totalpages);
+    &lt;/constructor&gt;
+
+    &lt;property name="page"
+          onget="return parseInt(document.getAnonymousNodes(this)[0].childNodes[0].getAttribute('selectedIndex'));"
+          onset="this.setPage(val);"/&gt;
+
+    &lt;method name="setPage"&gt;
+      &lt;parameter name="newidx"/&gt;
+      &lt;body&gt;
+        &lt;![CDATA[
+          var thedeck=document.getAnonymousNodes(this)[0].childNodes[0];
+          var totalpages=this.childNodes.length;
+
+          if (newidx&lt;0) return 0;
+          if (newidx&gt;=totalpages) return totalpages;
+          thedeck.setAttribute("selectedIndex",newidx);
+          document.getAnonymousNodes(this)[0].childNodes[1].childNodes[1]
+                  .setAttribute("value",(newidx+1)+" of "+totalpages);
+          return newidx;
+        ]]&gt;
+      &lt;/body&gt;
+    &lt;/method&gt;
+  &lt;/implementation&gt;
+
+&lt;/binding&gt;
+</pre>
+<p>次のセクションでは、ウィンドウの付加的な機能についていくつか見ていきます。</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:XBL_Inheritance" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Features_of_a_Window">次のページ  »</a></p>
+</div>

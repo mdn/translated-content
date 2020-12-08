@@ -1,0 +1,68 @@
+---
+title: インストール可能なBundleの構造
+slug: Bundles
+tags:
+  - Toolkit API
+translation_of: Archive/Mozilla/Bundles
+---
+<p> </p>
+<p><a href="ja/XUL_Application_Packaging">XULRunner アプリケーション</a>, <a href="ja/Extensions">拡張機能</a>, および <a href="ja/Themes">テーマ</a> のすべてが共通のディレクトリ構造を共有しており、いくつかのケースでは同じ bundle をインストールできるアプリケーション拡張だけではなく単体のXULRunner アプリケーションにも使っています。bundleの基本構造は、次のファイルを含むことができます:</p>
+<pre class="eval">/<a href="ja/Install.rdf">install.rdf</a><i>拡張機能/テーマの Install Manifest</i>
+/<a href="ja/XUL_Application_Packaging">application.ini</a><i>アプリケーション起動 Manifest</i>
+/components/*<i>Component and XPT Files</i>      (&gt;=1.7)
+<a href="ja/Building_an_Extension#Defaults_Files">/defaults/preferences/*.js</a><i>Default Preferences</i>          (&gt;=1.7)
+/plugins/*<i>NPAPI Plugins</i>                (&gt;=1.8)
+/<a href="ja/Chrome.manifest">chrome.manifest</a><i>Chrome Registration Manifest</i> (&gt;=1.8)
+/<a href="ja/Window_icons">chrome/icons/default/*</a><i>Window Icons</i>                 (&gt;=1.8)
+</pre>
+<p>もちろん、拡張機能はこれらのすべてのディレクトリを持っている必要はありません。(普通は持っていません) テーマにはセキュリティ上の制限があり、通常テーマおよびJARファイルを登録するための<a href="ja/Chrome.manifest">chrome.manifest</a>だけが備えられます。</p>
+<p> </p>
+<h3 id=".E3.83.97.E3.83.A9.E3.83.83.E3.83.88.E3.83.95.E3.82.A9.E3.83.BC.E3.83.A0.E7.89.B9.E5.AE.9A.E3.81.AE.E3.82.B5.E3.83.96.E3.83.87.E3.82.A3.E3.83.AC.E3.82.AF.E3.83.88.E3.83.AA" name=".E3.83.97.E3.83.A9.E3.83.83.E3.83.88.E3.83.95.E3.82.A9.E3.83.BC.E3.83.A0.E7.89.B9.E5.AE.9A.E3.81.AE.E3.82.B5.E3.83.96.E3.83.87.E3.82.A3.E3.83.AC.E3.82.AF.E3.83.88.E3.83.AA">プラットフォーム特定のサブディレクトリ</h3>
+<p>いくつかの場合、単一の拡張またはアプリケーションに複数プラットフォームのバイナリコンポーネントやプラグインを含めたいことや、テーマ作者が複数プラットフォームに別のJARファイルを含めたいことがあるかもしれません。最初のケースを促進するために、拡張/アプリのローダはプラットフォーム特有のファイルのための特別のサブディレクトリを持っています (Toolkit/Gecko 1.8、Firefox/Thunderbird 1.5 から)。platform string は toolkit のビルドの過程において決定され、OS・プロセッサーアーキテクチャ・コンパイラの組み合わせからなるユニークな値になります。platform string のフォーマットは以下のとおり:</p>
+<pre class="eval"><i>{OS_TARGET}</i>_<i>{<a href="ja/XPCOM_ABI">TARGET_XPCOM_ABI</a>}</i>
+</pre>
+<p>もし以下のようなサブディレクトリが存在した場合、mainな拡張のディレクトリからロードされる全てのファイルはそこからロードされます。</p>
+<pre class="eval">/platform/<i>{platform string}</i>
+</pre>
+<p>たとえば、プラグイン作者がそのプラグインを Linux, Macintosh, Windows のいずれが走っているコンピュータでも使えるようにしたいとき、以下のようなファイルを提供することになります。</p>
+<pre class="eval">/platform/Linux_x86-gcc3/plugins/libMyPlugin.so
+/platform/WINNT_x86-msvc/plugins/MyPlugin.dll
+/platform/Darwin_ppc-gcc3/plugins/libMyPlugin.dylib
+</pre>
+<p>XPT ファイルはプラットフォーム依存ではないため、関連付けられた全ての XPT ファイルは汎用のディレクトリに配置されます。</p>
+<pre class="eval">/components/MyPlugin.xpt
+</pre>
+<p>もし拡張がバイナリではないプラットフォーム特有のコード (たとえば、Windows のレジストリをスクリプトから利用するようなコード) を含む場合も、OS名のみを冠したプラットフォーム・サブディレクトリを使用することができます。</p>
+<pre class="eval">/platform/WINNT/components/registerDoctype.js
+</pre>
+<p>プラットフォーム依存の JAR ファイルが使用されるとき、それぞれのプラットフォームディレトクリは個別に <code>chrome.manifest</code> ファイルを持つ必要があります。</p>
+<pre class="eval">chrome.manifest
+chrome/mytheme-base.jar
+platform/Darwin/chrome.manifest
+platform/Darwin/chrome/mytheme-mac.jar
+platform/WINNT/chrome.manifest
+platform/WINNT/chrome/mytheme-win.jar
+</pre>
+<p>アプリケーションローダ/拡張ローダはまず基底ディレクトリを処理し、次に利用可能なプラットフォームディレクトリ(まず /{OS_TARGET}/、それから /{OS_TARGET}_{<a href="ja/XPCOM_ABI">TARGET_XPCOM_ABI</a>}/)を処理します。もしデフォルトの設定が複数のディレクトリで定義されていた場合、ローダは後に読み込んだもので先に読み込んだものを上書きします。</p>
+<h3 id="Application-specific_Extension_Files" name="Application-specific_Extension_Files">Application-specific Extension Files</h3>
+<p>上で述べた拡張ファイルに加えて、アプリケーションは拡張からさらに別のファイルを読み込むことができます。たとえば、<a href="ja/Firefox_1.5">Firefox 1.5</a>以降は、Sherlock search plugins を以下のファイルから読み込みます。</p>
+<pre class="eval">/searchplugins/*.src
+</pre>
+<p><a href="ja/Firefox_2">Firefox 2</a>以降は、それに加えて<a href="ja/Creating_MozSearch_plugins">MozSearch and OpenSearch plugins</a> を以下のファイルから読み込み、</p>
+<pre class="eval">/searchplugins/*.xml
+</pre>
+<p>Myspell辞書を以下のファイルから読み込みます。</p>
+<pre class="eval">/dictionaries/*.{aff|dic}
+</pre>
+<h3 id="Official_References_for_Toolkit_API" name="Official_References_for_Toolkit_API">Official References for <a href="ja/Toolkit_API">Toolkit API</a></h3>
+<p></p><p>
+  </p><ul>
+    <li><a href="/en/Bundles" title="en/Bundles">Structure of an Installable Bundle</a>: describes the common structure of installable bundles, including extensions, themes, and XULRunner applications</li>
+    <li><a href="/en/Extension_Packaging" title="en/Extension_Packaging">Extension Packaging</a>: specific information about how to package extensions</li>
+    <li><a href="/en/Theme_Packaging" title="en/Theme_Packaging">Theme Packaging</a>: specific information about how to package themes</li>
+    <li><a href="/en/Multiple_Item_Packaging" title="en/Multiple_Item_Packaging">Multiple-item Extension Packaging</a>: specific information about multiple-item extension XPIs</li>
+    <li><a href="/en/XUL_Application_Packaging" title="en/XUL_Application_Packaging">XUL Application Packaging</a>: specific information about how to package XULRunner applications</li>
+    <li><a href="/en/Chrome_Registration" title="en/Chrome_Registration">Chrome Registration</a></li>
+    <li><a href="/en-US/docs/Mozilla/Tech/XUL/Printing">Printing in XUL Apps</a></li>
+  </ul>
+<p></p><p></p>

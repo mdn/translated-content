@@ -1,0 +1,114 @@
+---
+title: 跨进程对象包装器
+slug: Mozilla/Firefox/Multiprocess_Firefox/Cross_Process_Object_Wrappers
+translation_of: Mozilla/Firefox/Multiprocess_Firefox/Cross_Process_Object_Wrappers
+---
+<div>{{FirefoxSidebar}}</div><div class="summary">
+<p>本文档介绍了 Cross Process Object Wrappers (CPOWs)，这使 chrome 代码能够同步访问多进程 Firefox 中的内容。</p>
+</div>
+
+<p>在多进程 Firefox 中，chrome 代码运行在与 Web 内容不同的另一个进程中。因此 chrome 代码不能直接与 Web 内容交互；相反，它必须考虑将与 Web 内容交互的脚本放在单独的脚本中，这被称为框架脚本（frame scripts），也称帧脚本。</p>
+
+<p>Chrome 代码可以使用消息管理器加载框架脚本到内容进程，然后可以使用消息传递 API 与它们通信。有关于此的更多信息，详见 <a href="/en-US/docs/The_message_manager">消息管理器</a> 的使用文档。</p>
+
+<p>Chrome 到内容的通信必须是异步的。这是因为 chrome 进程运行着 Firefox UI，因此如果被内容进程所影响，缓慢的内容进程可能致使 Firefox 对用户无响应。<br>
+ <br>
+ 将同步代码转换成异步可能是困难并且耗时的。作为一个迁移的辅助，消息框架使框架脚本变成了内容对象，通过一个被称为 Cross Process Object Wrapper（简称 CPOW）的包装器，使其在 chrome 中可用。但是，尽管 CPOWs 很方便，它们存在<a href="/en-US/docs/Cross_Process_Object_Wrappers#Limitations_of_CPOWs">严重的局限性并且可能导致响应性问题</a>，因此只应在必要时使用，并仅作为迁移的辅助。</p>
+
+<h2 id="从框架脚本传递_CPOWs">从框架脚本传递 CPOWs</h2>
+
+<p>框架脚本可以发送消息到 chrome，使用两个全局函数之一：<a href="/en-US/docs/The_message_manager#Content_to_chrome"><code>sendAsyncMessage()</code> 或者 <code>sendSyncMessage()</code></a>。这些函数的第三个可选参数是被包装的属性对象。举例来说，框架脚本在用户点击它时发送一个 DOM 节点到 chrome，并将 <code>clicked</code> 属性作为第三个参数：</p>
+
+<pre class="brush: js">// frame script
+addEventListener("click", function (event) {
+  sendAsyncMessage("my-e10s-extension-message", {}, { clicked : event.target });
+}, false);</pre>
+
+<p>在 chrome 脚本中，DOM 节点现在是通过 Cross Process Object Wrapper 访问，作为该消息的 <code>objects</code>  属性的个属性。chrome 脚本可以获得和设置包装的对象属性，以及调用它的函数：</p>
+
+<pre class="brush: js">// chrome script
+windowMM.addMessageListener("my-e10s-extension-message", handleMessage);
+
+function handleMessage(message) {
+  let wrapper = message.objects.clicked;
+  console.log(wrapper.innerHTML);
+  wrapper.innerHTML = "&lt;h2&gt;已被 chrome 修改!&lt;/h2&gt;"
+  wrapper.setAttribute("align", "center");
+}</pre>
+
+<h2 id="自动生成的_CPOWs">自动生成的 CPOWs</h2>
+
+<p>没有自我声明多进程兼容的附加组件会加载一些<a href="/en-US/Firefox/Multiprocess_Firefox/Limitations_of_chrome_scripts#Compatibility_shims">兼容性垫片</a>。其中一个垫片提供了以下行为：每当 chrome 代码尝试直接访问内容（例如通过 <a href="/en/docs/Working_with_windows_in_chrome_code#The_content_shortcut"><code>window.content</code></a> 或者 <a href="/en-US/docs/Mozilla/Tech/XUL/browser#p-contentDocument"><code>browser.contentDocument</code></a>），提供一个包装了内容的 CPOW。这意味着下面这样的例子在多进程 Firefox 中也能正常工作。</p>
+
+<pre class="brush: js">gBrowser.selectedBrowser.contentDocument.body.innerHTML = "被 chrome 代码替换";</pre>
+
+<p>但仍然要记住，这是通过 CPOW 访问，并不是直接访问内容。</p>
+
+<h2 id="双向_CPOWs">双向 CPOWs</h2>
+
+<p>一个常见的模式是 chrome 代码访问内容对象并添加事件监听器到那里。为了解决这个问题，CPOWs 是双向的。这意味着如果内容传递了一个 CPOW 到 chrome 进程，chrome 进程可以同步传递对象（如事件监听器函数）到 CPOW 中定义的函数。</p>
+
+<p>这意味着你可以写这样的代码：</p>
+
+<pre class="brush: js">// frame script
+
+/*
+在 mouseover，发送 button 到 chrome 脚本，以一个CPOW形式。
+*/
+
+var button = content.document.getElementById("click-me");
+
+button.addEventListener("mouseover", function (event) {
+  sendAsyncMessage("my-addon-message", {}, { element : event.target });
+}, false);</pre>
+
+<pre class="brush: js">// chrome script
+
+/*
+载入框架脚本，然后监听消息。
+在我们得到消息时，提取 CPOW 并添加一个函数作为监听器到按钮的 "click" 事件。
+*/
+
+  browserMM.loadFrameScript("chrome://my-addon/content/frame-script.js", false);
+  browserMM.addMessageListener("my-addon-message", function(message) {
+    let wrapper = message.objects.element;
+    wrapper.addEventListener("click", function() {
+      console.log("被点击了");
+    });
+  });
+</pre>
+
+<h2 id="映射内容文档到_XUL_浏览器">映射内容文档到 XUL 浏览器</h2>
+
+<p>一个常见的模式是获取 XUL <a href="/en-US/docs/XUL/browser"><code>&lt;browser&gt;</code></a>，它对应一个内容文档。要做到这点， <code>gBrowser.getBrowserForDocument</code>  <code>和 gBrowser.getBrowserForContentWindow</code> 分别可以传递一个内容文档和内容窗口的 CPOW，并且返回这些文档 / 窗口所属的 XUL  <code>&lt;browser&gt;。</code>如果没有找到这样的浏览器，两者都是返回 null。</p>
+
+<h2 id="CPOWs_的限制">CPOWs 的限制</h2>
+
+<p>尽管 CPOWs 可以方便的使用，但它有几个主要的局限性，在下面列出。</p>
+
+<h3 id="CPOWs_与平台_API">CPOWs 与平台 API</h3>
+
+<p>你不能传递 CPOWs 到预期会收到 DOM 对象的平台 API。举例来说，你不能传递一个 CPOW  <code>到 </code><a href="http://dxr.mozilla.org/mozilla-central/source/dom/interfaces/base/nsIFocusManager.idl"><code>nsIFocusManager.setFocus()</code></a>。</p>
+
+<h3 id="Chrome_响应性">Chrome 响应性</h3>
+
+<p>在 chrome 这边缺少同步 API 是有意的：因为 chrome 进程运行着 Firefox UI，任何响应性问题都将影响整个浏览器。在制成 chrome 进程与内容进程的过程中，CPOWs 打破了这个原则，并且致使内容进程可能使整个浏览器陷入无响应状态。</p>
+
+<h3 id="性能">性能</h3>
+
+<p>尽管包装器看起来像是一个完全在 chrome 脚本范围下管控的对象，但它实际上只是一个到内容进程中一个对象的引用。在你访问一个包装器的属性时，它发送一个同步消息到内容进程及返回结果。这意味着它比使用一个对象慢很多倍。</p>
+
+<h3 id="消息顺序">消息顺序</h3>
+
+<p>CPOWs 可能违反你做出的有关消息排序的假设。考虑以下代码：</p>
+
+<pre class="brush: js">mm.addMessageListener("GotLoadEvent", function (msg) {
+  mm.sendAsyncMessage("ChangeDocumentURI", {newURI: "hello.com"});
+  let uri = msg.objects.document.documentURI;
+  dump("收到加载事件: " + uri + "\n");
+});
+</pre>
+
+<p>这发送了一个消息，要求框架脚本更改当前文档的 URI，然后通过一个 CPOW 访问当前的文档 URI。你可能预期 <code>uri</code> 的值得到设置的 "hello.com"。但这不一定：为了避免死锁，CPOW 消息可以绕过正常的消息并且被优先处理。对 documentURI 属性的请求有可能在 "ChangeDocumentURI" 的消息之前被处理，并因而 <code>uri</code> 持有它在更改之前的值。<br>
+ <br>
+ 出于这个原因，最好不要混用 CPOWs 和正常的消息管理器消息。还有一个坏主意是将 CPOWs 用于任何安全相关，因为你可能获得不一致的结果，与使用消息管理器的相关代码。</p>

@@ -1,0 +1,44 @@
+---
+title: Creating a Mozilla Extension
+slug: Creating_a_Mozilla_Extension
+tags:
+  - Add-ons
+  - Extensions
+translation_of: Archive/Mozilla/Creating_a_Mozilla_extension
+---
+<div><div class="warning warningHeader">
+    <p><strong>警告:</strong> <strong>この記事の内容は古くなっている可能性があります。</strong> This tutorial describes how to create an extension for the old versions of Mozilla Suite (currently SeaMonkey). See <a href="/ja/docs/Building_an_Extension">Building an Extension</a> for an up-to-date tutorial (it focuses on Firefox, but is also applicable to other new applications).</p>
+</div></div>
+
+<div class="note">
+  <p>このチュートリアルは Mozilla Suite (現在は SeaMonkey) 向け拡張機能の作り方を解説したものです。どなたか内容を更新して Firefox に対応させてください。</p>
+</div>
+<p>Mozilla の拡張機能とは、Mozilla ブラウザにインストールできる、追加の機能を提供するものです。(例えば <a class="external" href="http://linky.mozdev.org/">Linky</a> は、ドキュメント中・選択範囲中の複数のリンクを一度に開く項目をコンテキストメニューに追加します)。このチュートリアルでは、現在の Mozilla のソースコードの状態 (最新のコードがコンパイルに成功し、テストを通ったかどうか) を示すアイコンをステータスバーに表示する拡張機能を作る過程を見ていきます。この拡張機能は、コードの状態を取得するために、ソースコードの状態を追跡する mozilla.org の Web ツールである <a class="external" href="http://tinderbox.mozilla.org/">Tinderbox</a> にアクセスします。</p>
+<p>このチュートリアルを修了すれば、どのように Mozilla のユーザインターフェイス (UI) が構築されているのか、どうやって拡張したい UI のソースコードを見つけるか、インストールされている Mozilla に変更を加える前の準備、Web ページを読み込み解析する Mozilla のネットワークライブラリを JavaScript から使う方法、他のユーザが使えるように Mozilla の拡張機能をパッケージ化するための動的オーバーレイの使い方に関する基礎知識が得られるでしょう。</p>
+<h3 id=".E7.9B.AE.E6.AC.A1" name=".E7.9B.AE.E6.AC.A1">目次</h3>
+<ol>
+  <li><a href="/ja/docs/Creating_a_Mozilla_Extension/Prerequisites">必要条件</a></li>
+  <li><a href="/ja/docs/Creating_a_Mozilla_Extension/Tinderbox">Tinderbox</a></li>
+  <li><a href="/ja/docs/Creating_a_Mozilla_Extension/Making_a_Mozilla_installation_modifiable">修正可能な Mozilla を作成</a></li>
+  <li><a href="/ja/docs/Creating_a_Mozilla_Extension/Finding_the_file_to_modify">修正対象のファイルを探す</a></li>
+  <li><a href="/ja/docs/Creating_a_Mozilla_Extension/Finding_the_code_to_modify">修正するコードを見つける</a></li>
+  <li><a href="/ja/docs/Creating_a_Mozilla_Extension/Adding_the_structure">構造を加える</a></li>
+  <li><a href="/ja/docs/Creating_a_Mozilla_Extension/Specifying_the_appearance">外見を指定する</a></li>
+  <li><a href="/ja/docs/Creating_a_Mozilla_Extension/Enabling_the_behavior_-_retrieving_tinderbox_status">機能を有効にする - Tinderbox のステータスを取得する</a></li>
+  <li><a href="/ja/docs/Creating_a_Mozilla_Extension/Enabling_the_behavior_-_updating_the_status_bar_panel">機能を有効にする - ステータスバーパネルを更新する</a></li>
+  <li><a href="/ja/docs/Creating_a_Mozilla_Extension/Enabling_the_behavior_-_updating_the_status_periodically">機能を有効にする - 定期的にステータスを更新する</a></li>
+  <li><a href="/ja/docs/Creating_a_Mozilla_Extension/Making_it_into_a_static_overlay">静的オーバーレイに作り直す</a></li>
+  <li><a href="/ja/docs/Creating_a_Mozilla_Extension/Making_it_into_a_dynamic_overlay_and_packaging_it_up_for_distribution">動的オーバーレイに作り直し、配布用にパッケージングする</a></li>
+  <li><a href="/ja/docs/Creating_a_Mozilla_Extension/Conclusion">終わりに</a></li>
+</ol>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/Creating_a_Mozilla_Extension:Prerequisites">次のページ  »</a></p>
+</div><p></p>
+<div class="originaldocinfo">
+  <h2 id=".E5.8E.9F.E6.96.87.E6.9B.B8.E3.81.AE.E6.83.85.E5.A0.B1" name=".E5.8E.9F.E6.96.87.E6.9B.B8.E3.81.AE.E6.83.85.E5.A0.B1">原文書の情報</h2>
+  <ul>
+    <li>著者: Myk Melez</li>
+    <li>最終更新日: September 19, 2006</li>
+    <li>著作権: Portions of this content are © 1998–2007 by individual mozilla.org contributors; content available under a Creative Commons license | <a class="external" href="http://www.mozilla.org/foundation/licensing/website-content.html">詳細</a></li>
+  </ul>
+</div>

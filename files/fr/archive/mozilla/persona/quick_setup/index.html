@@ -1,0 +1,241 @@
+---
+title: Configuration rapide
+slug: Archive/Mozilla/Persona/Quick_Setup
+tags:
+  - Persona
+translation_of: Archive/Mozilla/Persona/Quick_Setup
+---
+<p>Seules cinq étapes sont nécessaires pour installer un système d'authentification Persona sur votre site :</p>
+
+<ol>
+ <li>Inclure la bibliothèque JavaScript Persona sur vos pages.</li>
+ <li>Ajouter les boutons “connexion” et “déconnexion”.</li>
+ <li>Observer les actions connexion et déconnexion.</li>
+ <li>Vérifier l'identification de l'utilisateur.</li>
+ <li>Consulter les meilleures pratiques.</li>
+</ol>
+
+<p>Vous devriez être en mesure de le faire fonctionner en un simple après-midi, mais chaque chose en son temps : si vous comptez utiliser Persona sur votre site, s'il vous plaît, prenez un moment pour vous inscrire sur la liste de diffusion <a href="https://mail.mozilla.org/listinfo/persona-notices">Persona notices</a>. Elle est à faible trafic, étant uniquement utilisée pour annoncer les changements et les problème de sécurité qui pourraient affecter votre site.</p>
+
+<h2 id="Étape_1_Inclure_la_bibliothèque_Persona">Étape 1 : Inclure la bibliothèque Persona</h2>
+
+<p>Persona est conçu pour ne pas être lié à un navigateur en particulier et fonctionne bien dans <a href="/fr/docs/persona/Browser_compatibility">les principaux navigateurs de bureau et mobile</a>.</p>
+
+<p><span style="line-height: inherit;">Dans le futur nous espérons que les navigateurs fourniront un support natif de Persona, mais en attendant nous fournissons une bibliothèque JavaScript qui implémente pleinement l'interface et l'API client du protocole. En incluant cette <span style="line-height: inherit;">bibliothèque</span>, vos utilisateurs seront en mesure de se connecter avec Persona, que leur navigateur en ait un support natif ou non.</span></p>
+
+<p>Une fois la bibliothèque chargée sur la page, les fonctions Persona dont vous avez besoin (<a href="/fr/docs/Web/API/Navigator/id/watch" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>watch()</code></a>, <a href="/fr/docs/Web/API/Navigator/id/request" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>request()</code></a>, et <a href="/fr/docs/Web/API/Navigator/id/logout" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>logout()</code></a>), seront accessible depuis l'objet global <code>navigator.id</code>.</p>
+
+<p>Pour inclure la <span style="line-height: inherit;"><span style="line-height: inherit;">bibliothèque</span></span> JavaScript Persona, vous pouvez placer cette balise  <a href="/fr/docs/Web/HTML/Element/script" title="L'élément HTML &lt;script> est utilisé pour intégrer ou faire référence à un script exécutable."><code>&lt;script&gt;</code></a> tout en bas de de votre code HTML, avant la fermeture de la balise <a href="/fr/docs/Web/HTML/Element/body" title="L'élément &lt;body> représente le contenu principal du document HTML. Il ne peux y avoir qu'un élément &lt;body> par document."><code>&lt;body&gt;</code></a> :</p>
+
+<pre class="brush: html;">&lt;script src="https://login.persona.org/include.js"&gt;&lt;/script&gt;
+</pre>
+
+<p>Vous <strong>devez</strong> inclure ceci dans toutes les pages qui utilisent les fonctions de <a href="/fr/docs/Web/API/Navigator/id" title="Le protocole BrowserID définit une nouvelle propriété id dans l'objet window.navigator, dans laquelle l'API BrowserID est rendue disponible. Cette API a subi plusieurs importantes modifications. Chaque modification est listée séparément ci-dessous."><code>navigator.id</code></a>. Persona étant toujours en développement, il est déconseillé d'héberger vous-même une copie du fichier <code>include.js</code>.</p>
+
+<h3 id="Supprimer_le_Mode_de_Compatibilité">Supprimer le Mode de Compatibilité</h3>
+
+<p>Vous devez vous assurer que les utilisateurs d'Internet Explorer n'utilisent pas le Mode de Compatibilité, car il cassera Persona.</p>
+
+<p>Vous pouvez soit inclure cette balise <a href="/fr/docs/Web/HTML/Element/meta" title="L'élément HTML &lt;meta> représente toute information de métadonnées qui ne peut pas être représentée par un des éléments (&lt;base>, &lt;link>, &lt;script>, &lt;style> ou &lt;title>)"><code>&lt;meta&gt;</code></a>, dans votre page, avant tout élément <code>script</code> :</p>
+
+<pre class="brush: html"><code>&lt;meta http-equiv="X-UA-Compatible" content="IE=Edge"&gt;</code></pre>
+
+<p>Ou vous pouvez définir un entête HTTP sur votre page : <code>X-UA-Compatible: IE=Edge</code>.</p>
+
+<h2 id="Étape_2_Ajoutez_des_boutons_de_connexion_et_de_déconnexion">Étape 2 : Ajoutez des boutons de connexion et de déconnexion</h2>
+
+<p>Persona étant conçu comme une API DOM, vous devez appeler des fonctions quand un utilisateur clique sur un bouton de connexion ou de déconnexion sur votre site. Pour ouvrir la boîte de dialogue Persona et demander à l'utilisateur de se connecter, vous devez appeler <a href="/fr/docs/Web/API/Navigator/id/request" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>navigator.id.request()</code></a>. Pour la déconnexion, appelez <a href="/fr/docs/Web/API/Navigator/id/logout" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>navigator.id.logout()</code></a>. Notez que l'appel à <a href="/fr/docs/Web/API/Navigator/id/logout" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>logout()</code></a> <em>doit</em> être fait depuis la fonction attachée à l'évènement.</p>
+
+<p>Par exemple :</p>
+
+<pre class="brush: js;">var signinLink = document.getElementById('signin');
+if (signinLink) {
+  signinLink.onclick = function() { navigator.id.request(); };
+};
+
+var signoutLink = document.getElementById('signout');
+if (signoutLink) {
+  signoutLink.onclick = function() { navigator.id.logout(); };
+};
+</pre>
+
+<p>À quoi devraient ressembler ces boutons ? Consultez notres page de <a href="/fr/docs/persona/branding">ressources graphiques</a> pour des exemple complets basés sur du CSS !</p>
+
+<h2 id="Étape_3_Gérez_les_actions_de_connexion_et_de_déconnexion">Étape 3 : Gérez les actions de connexion et de déconnexion</h2>
+
+<p>Afin que Persona puisse fonctionner, vous devez lui dire quoi faire lorsqu'un utilisateur se connecte ou se déconnecte. Pour cela, appelez la fonction <a href="/fr/docs/Web/API/Navigator/id/watch" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>navigator.id.watch()</code></a> et passez lui trois paramètres :</p>
+
+<ol>
+ <li>L'adresse email de l'utilisateur actuellement connecté à votre site depuis cet ordinateur, ou <code>null</code> si aucun utilisateur n'est connecté. Par exemple, vous pouvez consulter un cookie du navigateur pour déterminer qui est connecté.</li>
+ <li>Une fonction à appeler lorsqu'une action <code>onlogin</code> est déclenchée. Cette fonction reçoit un seul paramètre, une "assertion d'identité" qui doit être vérifiée.</li>
+ <li>Une fonction à appeler lorsqu'une action <code>onlogout</code> est déclenchée. Cette fonction ne reçoit aucun paramètre.</li>
+</ol>
+
+<div class="note style-wrap">
+<p><strong>Note:</strong> Vous devez toujours inclure à la fois <code>onlogin</code> et <code>onlogout</code> lorsque vous appelez <a href="/fr/docs/Web/API/Navigator/id/watch" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>navigator.id.watch()</code></a>.</p>
+</div>
+
+<p>Par exemple, si vous pensez que Bob est connecté à votre site, vous pourriez faire ceci :</p>
+
+<pre class="brush: js;">var currentUser = 'bob@example.com';
+
+navigator.id.watch({
+  <code class="language-js">loggedInUser</code>: currentUser,
+  onlogin: function(assertion) {
+    // Un utilisateur est connecté ! Voici ce qu'il faut faire :
+    // 1. Envoyer l'assertion à votre backend pour vérification et pour créer la session.
+    // 2. Mettre à jour l'interface utilisateur.
+    <code class="language-js">$<span class="punctuation token">.</span><span class="function token">ajax<span class="punctuation token">(</span></span><span class="punctuation token">{</span>
+      type<span class="punctuation token">:</span> <span class="string token">'POST'</span><span class="punctuation token">,</span>
+      url<span class="punctuation token">:</span> <span class="string token">'/auth/login'</span><span class="punctuation token">,</span><span class="comment token"> // Ceci est une URL sur votre site web.
+</span>      data<span class="punctuation token">:</span> <span class="punctuation token">{</span>assertion<span class="punctuation token">:</span> assertion<span class="punctuation token">}</span><span class="punctuation token">,</span>
+      success<span class="punctuation token">:</span> <span class="keyword token">function</span><span class="punctuation token">(</span>res<span class="punctuation token">,</span> status<span class="punctuation token">,</span> xhr<span class="punctuation token">)</span> <span class="punctuation token">{</span> window<span class="punctuation token">.</span>location<span class="punctuation token">.</span><span class="function token">reload<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="punctuation token">}</span><span class="punctuation token">,</span>
+      error<span class="punctuation token">:</span> <span class="keyword token">function</span><span class="punctuation token">(</span>xhr<span class="punctuation token">,</span> status<span class="punctuation token">,</span> err<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+        navigator<span class="punctuation token">.</span>id<span class="punctuation token">.</span><span class="function token">logout<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+        <span class="function token">alert<span class="punctuation token">(</span></span><span class="string token">"Login failure: "</span> <span class="operator token">+</span> err<span class="punctuation token">)</span><span class="punctuation token">;</span>
+      <span class="punctuation token">}</span>
+    <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code>
+  },
+  onlogout: function() {
+    // Un utilisateur s'est déconnecté ! Voici ce qu'il faut faire :
+    // Détruire la session de l'utilisateur en redirigeant l'utilisateur ou en appelant votre backend.
+    // Assurez vous aussi de réinitialiser loggedInUser à null sur la prochain fois où la page sera chargée
+    // (Pas false, ni 0 ou undefined. null)
+    <code class="language-js">$<span class="punctuation token">.</span><span class="function token">ajax<span class="punctuation token">(</span></span><span class="punctuation token">{</span>
+      type<span class="punctuation token">:</span> <span class="string token">'POST'</span><span class="punctuation token">,</span>
+      url<span class="punctuation token">:</span> <span class="string token">'/auth/logout'</span><span class="punctuation token">,</span><span class="comment token"> // Ceci est une URL sur votre site web.
+</span>      success<span class="punctuation token">:</span> <span class="keyword token">function</span><span class="punctuation token">(</span>res<span class="punctuation token">,</span> status<span class="punctuation token">,</span> xhr<span class="punctuation token">)</span> <span class="punctuation token">{</span> window<span class="punctuation token">.</span>location<span class="punctuation token">.</span><span class="function token">reload<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="punctuation token">}</span><span class="punctuation token">,</span>
+      error<span class="punctuation token">:</span> <span class="keyword token">function</span><span class="punctuation token">(</span>xhr<span class="punctuation token">,</span> status<span class="punctuation token">,</span> err<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="function token">alert<span class="punctuation token">(</span></span><span class="string token">"Logout failure: "</span> <span class="operator token">+</span> err<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="punctuation token">}</span>
+    <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code>
+  }
+});
+</pre>
+
+<p>Dans cet exemple, <code>onlogin</code> et <code>onlogout</code> sont tous deux implémentés en effectuant des requêtes <code>POST</code> asynchrones vers le backend de votre site. Le backend effectue ensuite la connexion ou la déconnexion de l'utilisateur, généralement en créant ou en effaçant des informations dans un cookie de session. Ensuite, si tout fonctionne bien, la page se recharge afin de prendre en compte le nouvel état de connexion.</p>
+
+<p>Notez que si l'assertion ne peut être vérifiée, vous devez appeler <a href="/fr/docs/Web/API/Navigator/id/logout" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>navigator.id.logout()</code></a>, qui indique à Persona qu'aucun utilisateur n'est actuellement connecté. Si vous ne le faîtes pas, alors Persona peut appeler <code>onlogin</code> immédiatement à nouveau, avec la même assertion, et entrainer une <a href="/en-US/Persona/The_implementor_s_guide/Call_logout()_after_a_failed_login">boucle infinie d'échecs de connexion</a>.</p>
+
+<p>Bien entendu vous pouvez utiliser des requêtes AJAX pour implémenter cela sans recharger la page ni rediriger l'utilisateur, mais cela ne fait pas partie du périmètre de ce tutoriel.</p>
+
+<p>Voici un autre exemple, cette fois-ci sans utiliser jQuery.</p>
+
+<pre class="brush: js;">function simpleXhrSentinel(xhr) {
+  return function() {
+    if (xhr.readyState == 4) {
+      if (xhr.status == 200) {
+        // recherche la page pour prendre en compte le nouveau statut de connexion
+        window.location.reload();
+      } else {
+        navigator.id.logout();
+        alert("XMLHttpRequest error: " + xhr.status);
+      }
+    }
+  };
+}
+
+function verifyAssertion(assertion) {
+  // Votre backend doit retourner un status code HTTP 200 pour indiquer la bonne
+  // vérification de l'adresse e-mail de l'utilisateur et il doit s'arranger pour que
+  // currentUser soit bien associer à cette adresse quand la page est rechargée
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "/xhr/sign-in", true);
+  // voir http://www.openjs.com/articles/ajax_xmlhttp_using_post.php
+  var param = "assertion="+assertion;
+  xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhr.setRequestHeader("Content-length", param.length);
+  xhr.setRequestHeader("Connection", "close");
+  xhr.send(param); // pour la vérification par votre backend
+  xhr.onreadystatechange = simpleXhrSentinel(xhr);
+}
+
+function signoutUser() {
+  // Votre backend doit retourner un code statut HTTP 200 pour indique la bonne déconnexion
+  // (habituellement après la réinitialisation de plusieurs variables de session)
+  // et s'arranger pour que l'association à currentUser soit 'null' quand la page est rechargée
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "/xhr/sign-out", true);
+  xhr.send(null);
+  xhr.onreadystatechange = simpleXhrSentinel(xhr);
+}
+
+// C'est parti !
+navigator.id.watch({
+  loggedInUser: currentUser,
+       onlogin: verifyAssertion,
+      onlogout: signoutUser
+}};
+</pre>
+
+<p>Vous <strong>devez</strong> appeler <code>navigator.id.watch()</code> sur toutes les pages comprenant un bouton de connexion ou de déconnexion. Pour gérer les améliorations de Persona comme la connexion automatique et la déconnexion globale de vos utilisateurs, <strong>il est conseillé</strong> d'appeler cette fonction sur toutes les pages de votre site.</p>
+
+<p>Persona comparera l'adresse e-mail que vous passez dans <code>loggedInUser</code> avec celle qu'il connaît pour l'utilisateur actuellement connecté. Si elles ne correspondent pas, il peut déclencher automatiquement <code>onlogin</code> ou <code>onlogout</code> au chargement de la page.</p>
+
+<h2 id="Étape_4_Vérifiez_les_identifiants_de_l'utilisateur">Étape 4 : Vérifiez les identifiants de l'utilisateur</h2>
+
+<p>Plutôt qu'un mot de passe, Persona utilise des "assertions d'identité" qui sont une sorte de mot de passe à usage unique, lié à un seul site et combiné à l'adresse e-mail de l'utilisateur. Lorsqu'un utilisateur désire se connecter, votre fonction de callback <code>onlogin</code> sera appelée et recevra en paramètre une assertion de cet utilisateur. Avant d'autoriser la connexion, vous devez vérifier la validité de cette assertion.</p>
+
+<p>Il est <em>extrêmement important</em> que vous vérifiiez cette assertion sur votre serveur et non en JavaScript (qui s'exécute dans le navigateur de votre utilisateur) car cela serait trop facile à contourner. L'exemple ci-dessous confie l'assertion au backend du site en utilisant le helper jQuery <code>$.ajax()</code> pour effectuer un <code>POST</code> de celle-ci vers <code>/api/login</code>.</p>
+
+<p>Une fois que le serveur dispose d'une assertion, comment la vérifier ? Le moyen le plus simple est d'utiliser un helper fourni par Mozilla. Effectuez un simple <code>POST</code> de l'assertion vers <code>https://verifier.login.persona.org/verify</code> avec deux paramètres :</p>
+
+<ol>
+ <li><code>assertion</code>: L'assertion d'identité fournie par l'utilisateur.</li>
+ <li><code>audience</code>: Le nom de domaine et le port de votre site web. Vous devez coder cette valeur en dur dans votre backend ; ne la composez pas en fonction d'une quelconque donnée fournie par l'utilisateur.</li>
+</ol>
+
+<p>Par exemple, si vous êtes <code>example.com</code>, vous pouvez utiliser la ligne de commande pour tester une assertion avec :</p>
+
+<pre class="brush: bash;">$ curl -d "assertion=&lt;ASSERTION&gt;&amp;audience=https://example.com:443" "https://verifier.login.persona.org/verify"
+</pre>
+
+<p>Si elle est valide, vous recevrez une réponse en JSON comme celle-ci :</p>
+
+<pre class="brush: js;">{
+  "status": "okay",
+  "email": "bob@eyedee.me",
+  "audience": "https://example.com:443",
+  "expires": 1308859352261,
+  "issuer": "eyedee.me"
+}
+</pre>
+
+<p>Pour en apprendre plus à propos du service de vérification, lisez l'<a href="/fr/Persona/API_de_verification">API de vérification à distance</a>. Un exemple d'implémentation de <code>/api/login</code> utilisant <a href="http://python.org/">Python</a>, le framework web <a href="http://flask.pocoo.org/">Flask</a>, et la librairie HTTP <a href="http://python-requests.org">Requests</a> ressemblerait à ça :</p>
+
+<pre class="brush: python;">@app.route('/api/login', methods=['POST'])
+def login():
+    # La requête doit avoir une assertion à vérifier
+    if 'assertion' not in request.form:
+        abort(400)
+
+    # Envoyer l'assertion au service de vérification de Mozilla.
+    data = {'assertion': request.form['assertion'], 'audience': 'https://example.com:443'}
+    resp = requests.post('https://verifier.login.persona.org/verify', data=data)
+
+    # Le vérificateur a-t-il répondu ?
+    if resp.ok:
+        # Décoder la réponse
+        verification_data = json.loads(resp.content)
+
+        # Si l'assertion est valide
+        if verification_data['status'] == 'okay':
+            # Connecter l'utilisateur en lui envoyant un cookie de session sécurisé
+            session.update({'email': verification_data['email']})
+            return resp.content
+
+    # Oups, quelque chose a échoué. Abandon.
+    abort(500)
+</pre>
+
+<p>La gestion de session est probablement très similaire à votre système de connexion existant. Le premier grand changement est de vérifier l'identité de l'utilisateur en vérifiant une assertion plutôt que son mot de passe. L'autre grand changement est de s'assurer que l'adresse email de l'utilisateur est disponible pour la passer dans le paramètre <code>loggedInEmail</code> de <a href="/fr/docs/Web/API/Navigator/id/watch" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>navigator.id.watch()</code></a>.</p>
+
+<p>La déconnexion est simple : vous n'avez qu'à effacer le cookie de session de l'utilisateur.</p>
+
+<h2 id="Étape_5_Consultez_les_bonnes_pratiques">Étape 5 : Consultez les bonnes pratiques</h2>
+
+<p>Une fois que tout fonctionne et que vous vous êtez connecté et déconnecté avec succès de votre site, vous devriez prendre un moment pour consulter les <a href="/fr/Persona/Considerations_de_securite">bonnes pratiques</a> pour utiliser Persona de manière sûre et sécurisée.</p>
+
+<p>Si vous construisez un site de production, consulter le <a href="/fr/Persona/The_implementor_s_guide">guide de l'implémenteur</a>, où nous collections les astuces pour intégrer les fonctionnalités souvent requises dans les systèmes de connexion.</p>
+
+<p>Enfin, n'oubliez pas de vous inscrire à la<span style="line-height: inherit;"> liste de difussion </span><a style="line-height: inherit;" href="https://mail.mozilla.org/listinfo/persona-notices">Persona notices</a><span style="line-height: inherit;"> afin d'être informé des failles de sécurité ou de changements incompatibles avec de précédentes versions de l'API Persona. Cette liste a un taffic extrêmement faible : elle est uniquement utilisée pour annoncer des changements qui pourraient avoir un impact négatif sur votre site.</span></p>
+
+<p> </p>

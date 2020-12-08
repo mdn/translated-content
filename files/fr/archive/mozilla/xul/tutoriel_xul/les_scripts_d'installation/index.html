@@ -1,0 +1,147 @@
+---
+title: Les scripts d'installation
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Les_scripts_d'installation
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Install_Scripts
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Création_d'un_programme_d'installation" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Fonctions_additionnelles_d'installation">Suivant  »</a></p>
+</div>
+
+<div class="note">NdT : Attention, cette section décrit le mécanisme XPInstall propre à la suite Mozilla et à des versions anciennes de Mozilla Firefox. Pour les versions récentes de Mozilla Firefox, ce mode d'installation n'est plus le même, mais il n'est pas encore décrit dans ce tutoriel. Voir <a class="external" href="http://xulfr.org/wiki/ExtensionsFirefox">comment faire des extensions pour firefox</a> sur xulfr.org.</div>
+
+<p>Cette section décrit le script d'installation.</p>
+
+<h3 id="Cr.C3.A9ation_d.27un_script_d.27installation" name="Cr.C3.A9ation_d.27un_script_d.27installation">Création d'un script d'installation</h3>
+
+<div class="note"><strong>Note :</strong> Pour des extensions Firefox, <code>install.js</code> n'est plus utilisé. Vous devez utiliser <a href="/fr/Tutoriel_XUL/Les_fichiers_manifest" title="fr/Tutoriel_XUL/Les_fichiers_manifest">install.rdf</a> à la place.</div>
+
+<p>Vous voulez généralement avoir une forme de contrôle sur vos processus d'installation. Par exemple, vous pouvez souhaiter vérifier les versions des fichiers existants et n'installer que des mises à jour, ou peut être souhaiteriez-vous simplement appliquer des corrections. Le script d'installation est même assez souple pour vous permettre de désinstaller des fichiers. Pour ces raisons, les programmes d'installation incluent un script propre à cette tâche.</p>
+
+<p>Le script d'installation doit s'appeler 'install.js' et doit être placé à la racine de l'archive de l'installeur. Ce script contient du code JavaScript qui appelle un certain nombre de fonctions d'installation.</p>
+
+<p>Dans un document HTML ou un document XUL, l'objet window est l'objet global racine. Il signifie que vous pouvez appeler les méthodes de l'objet window sans les faire précéder de leur qualificateur, ainsi <code>window.open()</code> peut simplement être écrit <code>open()</code>. Dans un script d'installation, il n'y a pas de fenêtre associée, toutefois l'objet global sera l'objet <code>Install</code> qui contient un certain nombre de fonctions pour personnaliser le processus d'installation. Certaines fonctions de l'objet global <code>Install</code> seront décrites ci dessous.</p>
+
+<p>Le script d'installation doit suivre les étapes suivantes :</p>
+
+<ol>
+ <li>Initialiser l'installation en précisant le paquetage et sa version.</li>
+ <li>Utiliser les fonctions d'installation pour spécifier les fichiers et les répertoires qui doivent être installés. Vous pouvez aussi spécifier les fichiers à déplacer ou à effacer.</li>
+ <li>Démarrer le processus qui installe les fichiers nécessaires.</li>
+</ol>
+
+<p>Il est important de signaler que pendant l'étape numéro deux, vous n'indiquez seulement quels sont les fichiers qui seront installés et quelles autres opérations vous souhaitez réaliser. Aucun fichier ne sera copié avant l'étape trois. En procédant de la sorte, vous pouvez facilement définir plusieurs fichiers à installer, et en cas d'erreurs, vous pouvez annuler tout le processus d'installation sans modifier le système de l'utilisateur.</p>
+
+<h3 id="Le_registre_d.27extensions" name="Le_registre_d.27extensions">Le registre d'extensions</h3>
+
+<p>Mozilla tient à jour un fichier qui est un registre de toutes les extensions actuellement installées. Les extensions incluent les nouveaux paquetages chrome, les thèmes graphiques et les plugins. Lorsqu'une nouvelle extension est installée, le registre est mis à jour. Le registre stocke aussi l'ensemble des informations des fichiers et de leurs versions sur les extensions installées. De cette manière, il est aisé de vérifier si une version de votre extension est déjà présente et de la mettre à jour seulement si nécessaire.</p>
+
+<p>Le registre d'extensions fonctionne presque comme la base de registre de Windows. Il consiste en une série hiérarchisée de clefs et de valeurs. Vous n'avez pas besoin d'en savoir plus à son sujet pour créer des applications XUL à moins que vous ne créiez vos propres composants <a href="/fr/Tutoriel_XUL/Interfaces_XPCOM" title="fr/Tutoriel_XUL/Interfaces_XPCOM">XPCOM</a>.</p>
+
+<p>Ce que vous devez savoir pour une installation est que le registre stocke une série d'informations sur votre application, tels que la liste des fichiers et leurs versions. Toutes ces informations sont stockées dans une clef (et à l'intérieur, des sous clefs) que vous fournissez dans le script d'installation (dans l'étape 1 mentionnée ci dessus).</p>
+
+<p>Cette clef est structurée comme une arborescence de répertoire comme ceci :</p>
+
+<pre>/Auteur/Nom du Paquetage</pre>
+
+<p>Remplacez le mot 'Auteur' par votre nom et remplacez le 'Nom du Paquetage' avec le nom de votre paquetage que vous installez. Par exemple :</p>
+
+<pre>/Xulplanet/Find Files
+
+/Netscape/Personal Security Manager</pre>
+
+<p>Le premier exemple est celui utilisé pour notre exemple de boite de dialogue de recherche de fichiers. Le second est la clef utilisée pour le gestionnaire de données privées.</p>
+
+<h3 id="Initialisation_de_l.27installation" name="Initialisation_de_l.27installation">Initialisation de l'installation</h3>
+
+<p>L'objet <code>Install</code> a une fonction, <code>initInstall()</code>, servant à initialiser l'installation. Elle doit être appelée au lancement de votre script d'installation. La syntaxe de cette fonction est la suivante :</p>
+
+<pre>initInstall( packageName , regPackage , version );
+
+'''Exemple:'''
+
+initInstall("Find Files","/Xulplanet/Find Files","0.5.0.0");</pre>
+
+<ul>
+ <li>Le premier argument est le nom du paquetage sous une forme lisible pour l'utilisateur.</li>
+ <li>Le second argument est la clef du registre utilisée pour mémoriser l'information du paquetage comme décrit ci avant.</li>
+ <li>Le troisième argument est la version du paquetage à installer.</li>
+</ul>
+
+<p>Ensuite, nous devons indiquer le répertoire où seront installés les fichiers. Il y a deux façons de le faire.</p>
+
+<ul>
+ <li>La méthode simple est d'assigner un répertoire d'installation et d'y copier tous les fichiers.</li>
+ <li>La seconde méthode vous permet d'assigner une destination à chaque fichier (ou répertoire). La première méthode est décrite ci dessous.</li>
+</ul>
+
+<p>La fonction <code>setPackageFolder()</code> assigne un répertoire d'installation. Pour l'exemple de recherche de fichiers, vous installerons les fichiers dans le répertoire chrome (nous pourrions aussi bien les mettre autre part). Cette fonction <code>setPackageFolder()</code> ne requiert qu'un argument, le répertoire d'installation. Pour une compatibilité maximale, vous ne devez pas spécifier un répertoire absolu. Au lieu de cela, vous utiliserez un identifiant d'un répertoire connu et pointerez sur un de ses sous répertoires. Ainsi, si votre application a besoin d'installer quelques librairies systèmes, vous n'avez pas besoin de connaître le nom de ces répertoires.</p>
+
+<p>Les identifiants de sélection de répertoires sont expliqués sur la page de <a class="external" href="http://www.xulplanet.com/references/elemref/ref_Install.html#prop_getFolder">XULPlanet référence</a>. Pour le répertoire chrome, l'identifiant est 'Chrome'. La fonction <code>getFolder()</code> peut être utilisée pour récupérer un de ces répertoires spéciaux. Cette fonction prend deux arguments, le premier étant l'identifiant et le second étant un sous répertoire. Par exemple :</p>
+
+<pre>findDir = getFolder("Chrome","findfile"); setPackageFolder(findDir);</pre>
+
+<p>Ici, nous récupérons l'emplacement du sous répertoire 'findfile' dans répertoire Chrome et nous le passons directement à la fonction <code>setPackageFolder()</code>. Le second argument de la fonction <code>getFolder()</code> est le sous répertoire qui servira à l'installation de l'exemple et qui n'a pas besoin d'avoir été créé d'abord. Vous pouvez ignorer cet argument si vous n'en avez pas besoin.</p>
+
+<h3 id="Marquage_des_fichiers_d.27installation" name="Marquage_des_fichiers_d.27installation">Marquage des fichiers d'installation</h3>
+
+<p>Ensuite, vous devez indiquer quels seront les fichiers à installer. Deux fonctions doivent être employées pour cela, <code>addDirectory()</code> et <code>addFile()</code>. La fonction <code>addDirectory()</code> précise à l'installeur un répertoire de l'archive XPI (et tout son contenu) qui devra être installé à un emplacement particulier. La fonction <code>addFile()</code> est similaire mais seulement pour un fichier.</p>
+
+<p>Les deux fonctions <code>addDirectory()</code> et <code>addFile()</code> ont plusieurs paramétrages. Le plus simple ne prend qu'un seul argument qui est le répertoire servant à l'installation.</p>
+
+<pre class="eval">addDirectory ( <em>dir</em> );
+addFile ( <em>dir</em> );
+
+<strong>Exemple:</strong>
+
+addDirectory("findfile");
+</pre>
+
+<p>L'exemple ci dessus spécifie que le répertoire 'findfile' de l'archive d'installation est à installer. Nous pouvons appeler ces fonctions autant de fois que nécessaire pour les autres fichiers.</p>
+
+<p>Ensuite, nous voulons enregistrer les fichiers de notre exemple dans le registre chrome afin de pouvoir les appeler par une URL chrome. La fonction <code>registerChrome()</code> est utilisée pour cela. Elle prend deux arguments, le premier étant le type d'enregistrement chrome ('content' pour du contenu, 'skin' pour du thème graphique, ou 'locale' pour la localisation), le second pointant vers l'emplacement du fichier manifest 'contents.rdf' à enregistrer. Comme notre exemple de recherche de fichiers contient les trois types, la fonction <code>registerChrome()</code> devra être appelée trois fois.</p>
+
+<pre>registerChrome(Install.CONTENT | Install.DELAYED_CHROME, getFolder(findDir, "content"));
+registerChrome(Install.SKIN | Install.DELAYED_CHROME, getFolder(findDir, "skin"));
+registerChrome(Install.LOCALE | Install.DELAYED_CHROME, getFolder(findDir, "locale"));
+</pre>
+
+<p>L'indicateur DELAYED_CHROME sert à indiquer que le chrome devra être installé au prochain lancement de Mozilla.</p>
+
+<h3 id="Finalisation_de_l.27installation" name="Finalisation_de_l.27installation">Finalisation de l'installation</h3>
+
+<p>Les fonctions <code>addDirectory()</code> et <code>addFile()</code> ne copient aucun fichier. Elles ne servent qu'à pointer quels fichiers devront être installés. De la même manière, la fonction <code>registerChrome()</code> ne fait que pointer quel chrome devra être enregistré. Pour achever le processus et commencer la copie des fichiers, appelez la fonction <code>performInstall()</code> sans argument.</p>
+
+<div class="highlight">
+<p>Le script final pour installer notre exemple de recherche de fichiers est le suivant :</p>
+
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_xpiscript_1.js.txt">Source</a></p>
+
+<pre>initInstall("Find Files","/Xulplanet/Find Files","0.5.0.0");
+
+findDir = getFolder("Chrome","findfile");
+setPackageFolder(findDir);
+
+addDirectory("findfile");
+
+registerChrome(Install.CONTENT | Install.DELAYED_CHROME, getFolder(findDir, "content"));
+registerChrome(Install.SKIN | Install.DELAYED_CHROME, getFolder(findDir, "skin"));
+registerChrome(Install.LOCALE | Install.DELAYED_CHROME, getFolder(findDir, "locale"));
+
+performInstall();
+</pre>
+</div>
+
+<hr>
+<p>Dans la section suivantes, nous verrons quelques fonctions supplémentaires pour l'installation.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Création_d'un_programme_d'installation" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Fonctions_additionnelles_d'installation">Suivant  »</a></p>
+</div>
+
+<p><span class="comment">Interwiki</span></p>

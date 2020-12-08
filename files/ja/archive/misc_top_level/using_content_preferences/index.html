@@ -1,0 +1,107 @@
+---
+title: Using content preferences
+slug: Archive/Misc_top_level/Using_content_preferences
+tags:
+  - Firefox 3
+translation_of: Archive/Misc_top_level/Using_content_preferences
+---
+<div></div>
+
+<p>Firefox 3 は、コンテンツの設定を保存する事ができます。この機能はサイトごとの設定をコンピューターに保存するため chrome 権限が与えられたコードでしか利用できません。言い換えるなら、拡張機能とブラウザ自体(Web サイトを除く)からのみ利用できると言う事です。この機能を使用することで特定の Web サイトをカスタマイズする(例えば文字が小さく読み難いサイトで、文字を大きくする)拡張機能を作成する事ができます。</p>
+
+<p>コンテンツ設定サービスは <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentPrefService" title="">nsIContentPrefService</a></code> によってインプリメントされています。この機能を使用して特定の Web サイトに設定したりブラウザの既定設定を割り当てる事ができます。もし特定の Web サイトから設定を取得できない場合はブラウザの既定設定が使用されます。</p>
+
+<h2 id="Example:_Setting_and_retrieving_preferences" name="Example:_Setting_and_retrieving_preferences">例: 設定の保存と読み込み</h2>
+
+<p>このサンプルは設定を保存した後、保存された設定を読み込んでいます。</p>
+
+<pre class="brush:js;">var ioSvc = Components.classes["@mozilla.org/network/io-service;1"]
+            .getService(Components.interfaces.nsIIOService);
+var prefService = Components.classes["@mozilla.org/content-pref/service;1"]
+                  .getService(Components.interfaces.nsIContentPrefService);
+
+// Create a URI object referencing the site to save a preference for
+var uri = ioSvc.newURI("http://developer.mozilla.org/", null, null);
+
+// Set the value of the "devmo.somesetting" preference to "foo".
+
+prefService.setPref(uri, "devmo.somesetting", "foo");
+
+...
+
+// Retrieve the value of the "devmo.somesetting" preference.
+
+var value = prefService.getPref(uri, "devmo.somesetting");</pre>
+
+<h2 id="Built-in_site-specific_preferences" name="Built-in_site-specific_preferences">Built-in site-specific preferences</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Preference Name</td>
+   <td class="header">Menu Equivalent</td>
+   <td class="header">Values</td>
+   <td class="header">Notes</td>
+  </tr>
+  <tr>
+   <td>
+    <p><code>browser.content.full-zoom</code><br>
+     </p>
+   </td>
+   <td>View / Zoom</td>
+   <td><em>Example:</em> "1.10000002384186"<br>
+    (Rounding variant of "1.1")</td>
+   <td>Related about:config preferences:
+    <ul>
+     <li><code>browser.zoom.full</code><br>
+      Boolean, set by the menu item<br>
+      View / Zoom / Zoom Text Only.<br>
+      Despite the confusion in names, this preference is not site-specific.</li>
+     <li><code>browser.zoom.siteSpecific</code></li>
+     <li><code>toolkit.zoomManager.zoomValues</code></li>
+     <li>
+      <p><code>zoom.maxPercent and </code><code>zoom.minPercent</code></p>
+     </li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><code>browser.download.lastDir</code><br>
+     </p>
+   </td>
+   <td> </td>
+   <td>Path of a filesystem directory</td>
+   <td>Related about:config preferences:
+    <ul>
+     <li><code>browser.download.lastDir</code><br>
+      The last directory for any site</li>
+    </ul>
+
+    <p>Use <a href="/en-US/docs/JavaScript_code_modules/DownloadLastDir.jsm" title="JavaScript/Code_modules/DownloadLastDir.jsm">DownloadLastDir.jsm</a> for access to these preferences.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>browser.upload.lastDir</code><br>
+    </td>
+   <td> </td>
+   <td>Path of a filesystem directory</td>
+   <td>This preference is stored and retrieved automatically by file upload controls.</td>
+  </tr>
+ </tbody>
+</table>
+
+<div id="private-browsing"><div class="headingWithIndicator">
+    <h2 id="Private_browsing">Private browsing</h2>
+    <span class="indicatorInHeadline minVer geckoMinVerMethod">Gecko 9.0 が必要(Firefox 9.0 / Thunderbird 9.0 / SeaMonkey 2.6)</span>
+</div></div>
+
+<p>Prior to Gecko 9.0 (Firefox 9.0 / Thunderbird 9.0 / SeaMonkey 2.6), the content preference service always stores preferences on disk. Because of this, in private browsing mode, use of the content preference service needed to be avoided while in private browsing mode; instead, information needed to be stored in memory or preferences had to be avoided. Starting in Gecko 9.0, when in private browsing mode, the content preference service stores preferences in memory instead of on disk, and automatically forgets them when leaving private browsing mode.</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentPrefService" title="">nsIContentPrefService</a></code></li>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentPrefObserver" title="">nsIContentPrefObserver</a></code></li>
+ <li><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/toSource" title="JavaScript/Reference/Global_Objects/Object/toSource">toSource()</a> (potentially useful for serializing objects for later use with <a href="/en-US/docs/JavaScript/Reference/Functions/eval" title="JavaScript/Reference/Functions/eval">eval()</a>)</li>
+</ul>

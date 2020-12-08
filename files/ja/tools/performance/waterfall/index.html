@@ -1,0 +1,478 @@
+---
+title: タイムライン
+slug: Tools/Performance/Waterfall
+translation_of: Tools/Performance/Waterfall
+---
+<div>{{ToolsSidebar}}</div><div class="summary">
+<p>タイムラインは、サイトやアプリの実行でブラウザが行ったさまざまなことについて知見を得るものです。これは、サイトを実行するときにブラウザが行ったことはさまざまな種類 (JavaScript を実行、レイアウトを更新など) に分類でき、またある時点でブラウザはそれらのいずれかを行っているという考え方に基づいています。</p>
+
+<p>よって、例えばフレームレートが落ち込むなどパフォーマンスの問題の兆候があるときはタイムラインを開いて、記録中のある時点でブラウザが何を行っていたかを知ることができます。</p>
+</div>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10951/perf-waterfall.png" style="display: block; height: 568px; margin-left: auto; margin-right: auto; width: 972px;"></p>
+
+<p>X 軸に沿って時間を表します。記録した操作はマーカーと呼び、ブラウザが実行した操作の連続性を反映する滝のような配置で、水平方向のバーとして表示します。</p>
+
+<p>マーカーを選択すると、詳細情報を右側のサイドバーで表示します。そこではマーカーの長さや、<a href="/ja/docs/Tools/Performance/Waterfall#Markers">マーカーの種類</a>に特有の詳細情報を表示します。</p>
+
+<h2 id="Markers" name="Markers"><a id="timeline-color-coding" name="timeline-color-coding"></a>マーカー</h2>
+
+<p>操作を示すマーカーは、色分けおよび名前付けされています。以下の操作を記録します:</p>
+
+<table class="fullwidth-table standard-table">
+ <thead>
+  <tr>
+   <th scope="col" style="width: 20%;">名称および説明</th>
+   <th scope="col">色</th>
+   <th scope="col">詳細情報</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td style="width: 40%;">
+    <p><a id="DOM_Event_Marker" name="DOM_Event_Marker"><strong>DOM イベント</strong></a></p>
+
+    <p>DOM イベントへの応答として実行する JavaScript コード。</p>
+   </td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/10703/orange.png" style="height: 21px; width: 60px;"></td>
+   <td style="width: 45%;">
+    <dl>
+     <dt>イベント種別</dt>
+     <dd>例えば "click" や "message" など。</dd>
+    </dl>
+
+    <dl>
+     <dt>フェーズ</dt>
+     <dd>例えば "ターゲット" や "キャプチャ" など。</dd>
+    </dl>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>ページ内で実行される JavaScript 関数は、関数が呼び出された理由に応じて名前付けします:</p>
+
+    <p><strong>Script Tag<br>
+     setInterval<br>
+     setTimeout<br>
+     requestAnimationFrame<br>
+     Promise Callback<br>
+     Promise Init<br>
+     Worker<br>
+     JavaScript URI<br>
+     Event Handler</strong></p>
+   </td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/10703/orange.png" style="height: 21px; width: 60px;"></td>
+   <td>
+    <dl>
+     <dt>スタック</dt>
+     <dd>関数につながるコールスタック。</dd>
+    </dl>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><strong>HTML パース</strong></p>
+
+    <p>ページの HTML をパースするために費やした時間。</p>
+   </td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/10703/orange.png" style="height: 21px; width: 60px;"></td>
+   <td>
+    <dl>
+     <dt>スタック</dt>
+     <dd>関数につながるコールスタック。</dd>
+    </dl>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><strong>XML パース</strong></p>
+
+    <p>ページの XML をパースするために費やした時間。</p>
+   </td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/10703/orange.png" style="height: 21px; width: 60px;"></td>
+   <td>
+    <dl>
+     <dt>スタック</dt>
+     <dd>関数につながるコールスタック。</dd>
+    </dl>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><strong>CSS 再計算</strong></p>
+
+    <p>ページの要素に適用する算出スタイルを算出する。</p>
+   </td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/10707/purple.png" style="height: 21px; width: 60px;"></td>
+   <td>
+    <dl>
+     <dt>CSS 再計算のヒント</dt>
+     <dd>どのようなスタイル再適用が必要かを示す文字列。以下のいずれかを手がかりとして提示します:<br>
+     Self<br>
+     Subtree<br>
+     LaterSiblings<br>
+     CSSTransitions<br>
+     CSSAnimations<br>
+     SVGAttrAnimations<br>
+     StyleAttribute<br>
+     StyleAttribute_Animations<br>
+     Force<br>
+     ForceDescendants</dd>
+    </dl>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><strong>レイアウト</strong></p>
+
+    <p>ページの要素の位置やサイズを計算する。この操作は、"リフロー" と呼ばれることがあります。</p>
+   </td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/10707/purple.png" style="height: 21px; width: 60px;"></td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>
+    <p><strong>描画</strong></p>
+
+    <p>スクリーンにピクセルを描画する。</p>
+   </td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/10705/green.png" style="height: 21px; width: 60px;"></td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>
+    <p><strong>ガベージコレクション</strong></p>
+
+    <p><a href="/ja/docs/Tools/Performance/Waterfall#Garbage_collection">ガベージコレクションイベント</a>。ノンインクリメンタル GC イベントには "(非インクリメンタル)" を付加する。</p>
+   </td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/10709/red.png" style="height: 21px; width: 60px;"></td>
+   <td>
+    <dl>
+     <dt>発生源</dt>
+     <dd>GC を実行した理由を示す文字列。</dd>
+     <dt>非インクリメンタル GC の発生源</dt>
+     <dd>GC がインクリメンタルではない場合に、ノンインクリメンタル GC を実行した理由を示す文字列を表示。</dd>
+    </dl>
+
+    <div class="geckoVersionNote">
+    <p>Firefox 46 の新機能: GC イベントがメモリ割り当ての圧力によって発生した場合は、"Show Allocation Triggers" というリンクを表示します。このリンクをクリックすると、GC イベントの原因になったメモリ割り当てのプロファイルを表示します。</p>
+
+    <p>詳しくは<a href="/ja/docs/Tools/Performance/Allocations#Allocations_and_garbage_collection">メモリ割り当てとガベージコレクション</a>をご覧ください。</p>
+    </div>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><strong>サイクルコレクション</strong></p>
+
+    <p>C++ の参照カウントを持つデータ構造を回収します。</p>
+
+    <p>ガベージコレクションに似ていますが、こちらは C++ のオブジェクト向けです。<a href="http://blog.kylehuey.com/post/27564411715/cycle-collection">Kyle Huey のサイクルコレクションに関するブログ記事</a>をご覧ください。</p>
+   </td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/10709/red.png" style="height: 21px; width: 60px;"></td>
+   <td>
+    <dl>
+     <dt>種別</dt>
+     <dd>常に "Collect" になります。</dd>
+    </dl>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><strong>CC グラフ削減</strong></p>
+
+    <p>サイクルコレクションの準備や事前の最適化です。</p>
+   </td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/10709/red.png" style="height: 21px; width: 60px;"></td>
+   <td>
+    <dl>
+     <dt>種別</dt>
+     <dd>常に "ForgetSkippable" になります。</dd>
+    </dl>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><strong>コンソール</strong></p>
+
+    <p><code>console.time()</code> および <code>console.timeEnd()</code> を呼び出した間の時間に合致する。</p>
+   </td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/10955/gray.png" style="height: 54px; width: 60px;"></td>
+   <td>
+    <dl>
+     <dt>タイマー名</dt>
+     <dd><code>console</code> に渡した引数。</dd>
+     <dt>スタック開始</dt>
+     <dd>関数につながるコールスタック <code>console.time()</code>。</dd>
+     <dt>スタック終了</dt>
+     <dd>(Firefox 41 の新機能) <code>console.timeEnd()</code> 時点のコールスタック。<code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> 由来のコールバック内にある場合は、<a href="/ja/docs/Tools/Performance/Waterfall#Async_stack">"Async stack"</a> とも表示します。</dd>
+    </dl>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><strong>タイムスタンプ</strong></p>
+
+    <p><code><a href="/ja/docs/Web/API/Console/timeStamp">console.timeStamp()</a></code> を 1 回呼び出す。</p>
+   </td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/10953/blue.png" style="height: 54px; width: 60px;"></td>
+   <td>
+    <dl>
+     <dt>Label</dt>
+     <dd><code>timeStamp()</code> に渡した引数。</dd>
+    </dl>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><strong>DOMContentLoaded</strong></p>
+
+    <p>ドキュメントの <code><a href="/ja/docs/Web/Events/DOMContentLoaded">DOMContentLoaded</a></code> イベント。</p>
+   </td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/12191/red.png" style="height: 21px; width: 60px;"></td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>
+    <p><strong>Load</strong></p>
+
+    <p>ドキュメントの <code><a href="/ja/docs/Web/Events/load">load</a></code> イベント。</p>
+   </td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/12193/blue.png" style="height: 21px; width: 60px;"></td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>
+    <p><strong>メインスレッドの Worker イベント</strong></p>
+
+    <p>メインスレッドが Worker にメッセージを送信したとき、または Worker からメッセージを受け取ったときに表示します。</p>
+   </td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/12195/orange2.png" style="height: 21px; width: 60px;"></td>
+   <td>
+    <p>以下のいずれか:</p>
+
+    <dl>
+     <dt>メインスレッドでデータをシリアライズ</dt>
+     <dd>メインスレッドは、Worker に送信するメッセージをシリアライズします。</dd>
+     <dt>メインスレッドでデータをデシリアライズ</dt>
+     <dd>メインスレッドは、Worker から受け取ったメッセージをデシリアライズします。</dd>
+    </dl>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><strong>Worker スレッドの Worker イベント</strong></p>
+
+    <p>Worker がメインスレッドからメッセージを受け取ったとき、またはメインスレッドにメッセージを送信したときに表示します。</p>
+   </td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/12197/orange2-hollow.png" style="height: 21px; width: 60px;"></td>
+   <td>
+    <p>以下のいずれか:</p>
+
+    <dl>
+     <dt>Worker でデータをシリアライズ</dt>
+     <dd>Worker は、メインスレッドに送信するメッセージをシリアライズします。</dd>
+     <dt>Worker でデータをデシリアライズ</dt>
+     <dd>Worker は、メインスレッドから受け取ったメッセージをデシリアライズします。</dd>
+    </dl>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>マーカーとその色はタイムラインツールと<a href="/ja/docs/Tools/Performance/UI_Tour#Waterfall_overview">タイムラインの概要</a>で同じであり、双方を関連づけることが容易になります。</p>
+
+<h3 id="Filtering_markers" name="Filtering_markers">マーカーのフィルタリング</h3>
+
+<p><a href="/ja/docs/Tools/Performance/UI_Tour#Toolbar">ツールバー</a>のボタンを使用して、表示するマーカーを制御できます:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13238/perf-markers.png" style="display: block; height: 694px; margin-left: auto; margin-right: auto; width: 799px;"></p>
+
+<h2 id="Waterfall_patterns" name="Waterfall_patterns">タイムラインのパターン</h2>
+
+<p>タイムラインがどう見えるかは、サイトで行っていることの種類に強く依存します。JavaScript を多く使用するサイトでは橙色が多く表示され、視覚的に動的なサイトでは紫色や緑色が多くなるでしょう。それでもパフォーマンスの問題がある可能性を警告する、一般的なパターンがあります。</p>
+
+<h3 id="Rendering_waterfall" name="Rendering_waterfall">タイムラインの描画</h3>
+
+<p>タイムラインビューでよく見るパターンは、以下のようなものです:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10711/perf-timeline-waterfall.png" style="display: block; height: 286px; margin-left: auto; margin-right: auto; width: 727px;"></p>
+
+<p>これは、ブラウザがイベントへの応答としてページの更新を行うときの基本的なアルゴリズムを視覚しています:</p>
+
+<ol>
+ <li><strong>JavaScript 関数呼び出し</strong>: DOM イベントなどのイベントが、ページ内の JavaScript を実行します。JavaScript は、ページの DOM や CSSOM を変更します。</li>
+ <li><strong>スタイルを再計算</strong>: ページの要素の算出スタイルが変化したとブラウザが判断した場合は、それらを再計算しなければなりません。</li>
+ <li><strong>レイアウト</strong>: 続いて、要素の位置や形状を計算するために算出スタイルを使用します。この操作は "レイアウト" と名付けられていますが、"リフロー" とも呼ばれます。</li>
+ <li><strong>描画</strong>: そして、ブラウザはスクリーンに要素を再描画しなければなりません。最後のステップはこの流れで示していません。ページは複数のレイヤーに分割され、それぞれを独立して描画した後に、"コンポジション" と呼ばれるプロセスで合成されます。</li>
+</ol>
+
+<p>この流れが完了しなければスクリーンを更新できませんので、ひとつのフレーム内に一連の操作を収めなければなりません。毎秒 60 フレームが、アニメーションがスムーズに見えるレートとして広く受け入れられています。毎秒 60 フレームのレートのために、ブラウザが一連の操作を実行する時間として 16.7 ミリ秒が与えられます。</p>
+
+<p>応答性のために重要なこととして、ブラウザは必ずしもすべてのステップを通らなければならないわけではありません:</p>
+
+<ul>
+ <li><a href="/ja/docs/Web/Guide/CSS/Using_CSS_animations">CSS アニメーション</a>は JavaScript を実行する必要なくページを更新します。</li>
+ <li>変更してもリフローを発生させない CSS プロパティがあります。オブジェクトの形状や位置を変更できるプロパティ、例えば <code><a href="/ja/docs/Web/CSS/width">width</a></code>、<code><a href="/ja/docs/Web/CSS/display">display</a></code>、<code><a href="/ja/docs/Web/CSS/font-size">font-size</a></code>、<code><a href="/ja/docs/Web/CSS/top">top</a></code> などを変更すると、リフローが発生します。一方、形状や位置を変更しないプロパティ、例えば <code><a href="/ja/docs/Web/CSS/color">color</a></code> や <code><a href="/ja/docs/Web/CSS/opacity">opacity</a></code> などを変更してもリフローは発生しません。</li>
+ <li>変更しても再描画を発生させない CSS プロパティがあります。特に <code><a href="/ja/docs/Web/CSS/transform">transform</a></code> プロパティを使用して要素をアニメーションさせる場合、ブラウザはトランスフォームを行う要素を別のレイヤーに分離して、要素が移動しても再描画を行う必要がなくなります。要素の新しい位置は、コンポジションで制御されます。</li>
+</ul>
+
+<p><a href="/ja/docs/Tools/Performance/Scenarios/Animating_CSS_properties">CSS プロパティのアニメーション</a>の記事では、さまざまな CSS プロパティのアニメーションによるパフォーマンスの違いを示すとともに、タイムラインがそれらをどのように知らせるかを説明します。</p>
+
+<h3 id="Blocking_JavaScript" name="Blocking_JavaScript">妨害する JavaScript</h3>
+
+<p>デフォルトで JavaScript を実行するスレッドは、ブラウザがレイアウトの更新、再描画、DOM イベントなどに使用するスレッドと同じです。これは、長い間実行する JavaScript 関数が不応答性 (jank) を引き起こす可能性があるということです。アニメーションがぎこちない、あるいはサイトがフリーズするでしょう。</p>
+
+<p>フレームレートツールとタイムラインを組み合わせると、長い間実行する JavaScript が応答性の問題を引き起こしていることが簡単にわかります。以下のスクリーンショットでは、フレームレートの落ち込みを引き起こしている JS 関数を拡大表示しています:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10973/perf-js-blocking-waterfall.png" style="display: block; height: 432px; margin-left: auto; margin-right: auto; width: 1128px;"></p>
+
+<p><a href="/ja/docs/Tools/Performance/Scenarios/Intensive_JavaScript">集約的な JavaScript</a> の記事では、長大な JavaScript 関数によって引き起こされる応答性の問題をタイムラインがどのように目立たせるか、またメインスレッドの応答性を維持するために非同期メソッドをどのように使用できるかを説明します。</p>
+
+<h3 id="Expensive_paints" name="Expensive_paints">高コストな描画</h3>
+
+<p><code><a href="/ja/docs/Web/CSS/box-shadow">box-shadow</a></code> など負担が大きい描画効果があり、特に毎フレーム計算が必要なトランジションに適用した場合に顕著です。特に、グラフィックを集中的に扱う操作でフレームレートの落ち込みがみられる場合は、タイムラインで緑色のマーカーがないか確認してください。</p>
+
+<h3 id="Garbage_collection" name="Garbage_collection">ガベージコレクション</h3>
+
+<p>タイムラインで赤色のマーカーはガベージコレクション (GC) のイベントを表しており、このとき <a href="/ja/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a> (Firefox の JavaScript エンジン) は到達不能なメモリを探すためにヒープを確認して、そのようなメモリを解放します。GC を実行している間は JavaScript エンジンを一時停止しなければならないので、プログラムが休止して完全に応答しない状態になるため、GC はパフォーマンスと関係性があります。</p>
+
+<p>一時停止する時間を短縮するため、SpiderMonkey は<em>インクリメンタル GC</em> を実装しています。これはガベージコレクションを少しずつ実行でき、合間にプログラムを実行することが可能になります。それでも時にはノンインクリメンタルガベージコレクションが必要であり、この場合プログラムは完了するまで待たなければなりません。</p>
+
+<ul>
+</ul>
+
+<p>GC イベント、特にノンインクリメンタル GC イベントを避けようとして、特定の JavaScript エンジンの実装に最適化しようとすることは賢くありません。SpiderMonkey は GC がいつ必要か、および特にノンインクリメンタル GC がいつ必要かを検出するために、複雑に組み合わせた発見方法を使用しています。ただし、一般に以下のことが言えます:</p>
+
+<ul>
+ <li>GC は多くのメモリが割り当てられているときに必要です。</li>
+ <li>ノンインクリメンタル GC は通常、SpiderMonkey がインクリメンタル GC の実行中にメモリ不足になる可能性があるほどメモリ使用量が高いときに発生します。</li>
+</ul>
+
+<p>タイムラインで GC マーカーを記録するときは、以下の情報を示します:</p>
+
+<ul>
+ <li>GC がインクリメンタルか否か</li>
+ <li>GC を実行した理由</li>
+ <li>ノンインクリメンタル GC である場合は、インクリメンタルではない理由</li>
+ <li>Firefox 46 より、GC イベントがメモリ割り当ての圧力によって発生した場合は、"Show Allocation Triggers" というリンクを表示します。このリンクをクリックすると、GC イベントの原因になったメモリ割り当てのプロファイルを表示します。詳しくは<a href="/ja/docs/Tools/Performance/Allocations#Allocations_and_garbage_collection">メモリ割り当てとガベージコレクション</a>をご覧ください。</li>
+</ul>
+
+<h2 id="Adding_markers_with_the_console_API" name="Adding_markers_with_the_console_API">console API でマーカーを追加する</h2>
+
+<p><a href="/ja/docs/Web/API/Console">console API</a> を呼び出すことで直接制御できるマーカーが 2 つあります。"コンソール" と "Timestamp" です。</p>
+
+<h3 id="Console_markers" name="Console_markers">コンソールマーカー</h3>
+
+<p>これは、記録内の特定のセクションにマークをつけるものです。</p>
+
+<p>コンソールマーカーを作成するにはセクションの始めで <code>console.time()</code> を、セクションの終わりで <code>console.timeEnd()</code> を呼び出します。これらの関数は、セクションの名前として使用される引数を取ります。</p>
+
+<p>例えば、以下のようなコードで考えてみましょう:</p>
+
+<pre class="brush: js">var iterations = 70;
+var multiplier = 1000000000;
+
+function calculatePrimes() {
+
+  console.time("calculating...");
+
+  var primes = [];
+  for (var i = 0; i &lt; iterations; i++) {
+    var candidate = i * (multiplier * Math.random());
+    var isPrime = true;
+    for (var c = 2; c &lt;= Math.sqrt(candidate); ++c) {
+      if (candidate % c === 0) {
+          // not prime
+          isPrime = false;
+          break;
+       }
+    }
+    if (isPrime) {
+      primes.push(candidate);
+    }
+  }
+
+  console.timeEnd("calculating...");
+
+  return primes;
+}</pre>
+
+<p>タイムラインの出力は、以下のようになります:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10967/perf-console-time.png" style="display: block; height: 430px; margin-left: auto; margin-right: auto; width: 1192px;"></p>
+
+<p>マーカーは <code>console.time()</code> に渡した引数で名付けられており、マーカーを選択すると右側のサイドバーでプログラムスタックを確認できます。</p>
+
+<h4 id="Async_stack" name="Async_stack">Async stack</h4>
+
+<p class="geckoVersionNote">Firefox 41 の新機能</p>
+
+<p>Firefox 41 より、右側のサイドバーに終了時点、すなわち <code>console.timeEnd()</code> を呼び出した時点のスタックも表示します。<code>console.timeEnd()</code> が <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> の成功によって呼び出された場合は、"(非同期: Promise)" と表示します。これは "async stack" を表すものであり、その時点のコールスタックで promise が生成されています。</p>
+
+<p>例えば、以下のコードで考えてみましょう:</p>
+
+<pre class="brush: js">var timerButton = document.getElementById("timer");
+timerButton.addEventListener("click", handleClick, false);
+
+function handleClick() {
+  console.time("timer");
+  runTimer(1000).then(timerFinished);
+}
+
+function timerFinished() {
+  console.timeEnd("timer");
+  console.log("ready!");
+}
+
+function runTimer(t) {
+  return new Promise(function(resolve) {
+    setTimeout(resolve, t);
+  });
+}</pre>
+
+<p>タイムラインでは <code>time()</code> と <code>timeEnd()</code> の間をマーカーで表示します。このマーカーを選択すると、サイドバーに async stack が表示されるでしょう:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/11179/async-stack.png" style="display: block; height: 378px; margin-left: auto; margin-right: auto; width: 352px;"></p>
+
+<h3 id="Timestamp_markers" name="Timestamp_markers">Timestamp マーカー</h3>
+
+<p>タイムスタンプで、記録中にその場でマークすることができます。</p>
+
+<p>タイムスタンプマーカーを作成するには、<code><a href="/ja/docs/Web/API/Console/timeStamp">console.timeStamp()</a></code> を呼び出します。タイムスタンプのラベルを引数として渡すことができます。</p>
+
+<p>例えば前出のコードで繰り返し 10 回ごとにタイムスタンプを生成して、繰り返し回数を名前として付加します:</p>
+
+<pre class="brush: js">var iterations = 70;
+var multiplier = 1000000000;
+
+function calculatePrimes() {
+  console.time("calculating...");
+
+  var primes = [];
+  for (var i = 0; i &lt; iterations; i++) {
+
+    if (i % 10 == 0) {
+      console.timeStamp(i.toString());
+    }
+
+    var candidate = i * (multiplier * Math.random());
+    var isPrime = true;
+    for (var c = 2; c &lt;= Math.sqrt(candidate); ++c) {
+      if (candidate % c === 0) {
+          // not prime
+          isPrime = false;
+          break;
+       }
+    }
+    if (isPrime) {
+      primes.push(candidate);
+    }
+  }
+  console.timeEnd("calculating...");
+  return primes;
+}</pre>
+
+<p>タイムラインは以下のようになります:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10971/perf-timestamp.png" style="display: block; height: 530px; margin-left: auto; margin-right: auto; width: 1192px;"></p>

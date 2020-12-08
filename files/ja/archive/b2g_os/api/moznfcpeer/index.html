@@ -1,0 +1,113 @@
+---
+title: MozNFCPeer
+slug: Archive/B2G_OS/API/MozNFCPeer
+translation_of: Archive/B2G_OS/API/MozNFCPeer
+---
+<p></p><section class="Quick_links" id="Quick_Links"><ol><li><strong><a href="/ja/docs/Mozilla/Firefox_OS/API/NFC_API">NFC API</a></strong></li><li><strong><a href="/ja/docs/Mozilla/Firefox_OS/API/Archive"><code>Archive</code></a></strong></li><li class="toggle"><details open><summary>NFC API に関連するページ</summary><ol><li><a href="/ja/docs/Mozilla/Firefox_OS/API/MozNDEFRecord"><code>MozNDEFRecord</code></a></li><li><a href="/ja/docs/Mozilla/Firefox_OS/API/MozNFC"><code>MozNFC</code></a></li><li><a href="/ja/docs/Mozilla/Firefox_OS/API/MozNFCPeer"><code>MozNFCPeer</code></a></li><li><a href="/ja/docs/Mozilla/Firefox_OS/API/MozNFCTag"><code>MozNFCTag</code></a></li></ol></details></li></ol></section><p></p>
+
+<p></p><div class="warning">
+    <p style="text-align: center;">この API は <a href="/ja/docs/Mozilla/Firefox_OS">Firefox OS</a> 上の<a href="/ja/docs/Mozilla/Firefox_OS/Security/Application_security#App_Types">特権付きアプリ、または認定済みアプリ</a>からのみ有効になります。</p>
+</div><p></p>
+
+<div class="summary">
+<p><code>NFCPeer</code> は、他のNFC対応デバイスと相互作用するピアツーピア (P2P)インターフェイスを提供します。これは NDEF メッセージの送信と、ファィル送信に使われます。</p>
+</div>
+
+<h2 id="メソッド">メソッド</h2>
+
+<dl>
+ <dt><a href="/ja/docs/Web/API/MozNFCPeer/sendFile" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>MozNFCPeer.sendFile()</code></a></dt>
+ <dd><code>sendFile()</code> sends files to other NFC-enabled devices. This should be called inside a <a href="/ja/docs/Web/API/MozNFC/onpeerfound" title="MozNFC インターフェースの onpeerfound イベントハンドラは、MozNFCPeer が検出された時にの呼び出されます 。"><code>mozNFC.onpeerfound()</code></a> event callback. <strong> This method is available in certified apps only.</strong></dd>
+ <dt><a href="/ja/docs/Web/API/MozNFCPeer/sendNDEF" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>MozNFCPeer.sendNDEF()</code></a></dt>
+ <dd><code>sendNDEF()</code> sends NDEF Messages to other NFC-enabled devices. This should be called inside a <a href="/ja/docs/Web/API/MozNFC/onpeerfound" title="MozNFC インターフェースの onpeerfound イベントハンドラは、MozNFCPeer が検出された時にの呼び出されます 。"><code>mozNFC.onpeerfound()</code></a> event callback.</dd>
+</dl>
+
+<h2 id="サンプル">サンプル</h2>
+
+<pre class="brush: js">navigator.mozNfc.onpeerfound = function (evt) {
+  var peer = evt.peer;
+  // ndef is an instance of MozNDEFRecord contains the shared data, like URL.
+  peer.sendNDEF([ndef]);
+};
+</pre>
+
+<h2 id="仕様">仕様</h2>
+
+<p>The NFC implementation in Gecko follows the <a href="http://members.nfc-forum.org/specs/">NFC Forum specifications</a>.</p>
+
+<dl>
+</dl>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ互換性</h2>
+
+<p></p><p class="warning"><strong><a href="https://github.com/mdn/browser-compat-data">現在、互換性データを可読形式の JSON フォーマットに置き換えているところです。</a></strong>
+            この互換性一覧は古い形式を使っており、これに含まれるデータの置き換えが済んでいません。
+            <strong><a href="/ja/docs/MDN/Contribute/Structures/Compatibility_tables">手助けしていただける場合は、こちらから！</a></strong></p>
+
+<div class="htab">
+    <a id="AutoCompatibilityTable" name="AutoCompatibilityTable"></a>
+    <ul>
+        <li class="selected"><a>デスクトップ</a></li>
+        <li><a>モバイル</a></li>
+    </ul>
+</div><p></p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>
+    <p><span style="color: #f00;">未サポート</span></p>
+   </td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td>2.0 <span class="inlineIndicator prefixBox prefixBoxInline" title="prefix"><a href="/ja/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with 'moz' as this browser considers it experimental">moz</a></span> [1]</td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Available in privileged apps as of Firefox OS 2.2; certified-only before that.</p>
+
+<h2 id="こちらも見よ">こちらも見よ</h2>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/NFC_API/Using_the_NFC_API">Using the NFC API</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/NFC_API/Using_the_NFC_emulator">Using the NFC emulator</a></li>
+ <li><a class="external external-icon" href="http://www.adafruit.com/datasheets/Introduction_to_NFC_v1_0_en.pdf">Introduction to NFC</a> (fairly long reference doc, featuring general NFC terms, and some Nokia platform specifics.)</li>
+</ul>

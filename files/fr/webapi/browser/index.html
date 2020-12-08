@@ -1,0 +1,209 @@
+---
+title: Using the Browser API
+slug: WebAPI/Browser
+tags:
+  - WebAPI
+translation_of: Mozilla/Gecko/Chrome/API/Browser_API/Using
+---
+<p>{{ non-standard_header() }}</p>
+
+<p>{{ B2GOnlyHeader2('privileged') }}</p>
+
+<h2 id="Résumé">Résumé</h2>
+
+<p>L'API HTML Browser (Navigateur HTML) est une extension de l'élément {{HTMLElement("iframe")}} qui permet aux applications d'implémenter des navigateurs ou des applications de navigations. Cela implique deux choses principales :</p>
+
+<ul>
+ <li>Il faut faire apparaître l'élément <code>iframe</code> comme une fenêtre de navigation à part entière au sein du contenu intégré. Cela signifie que les propriétés <span id="summary_alias_container"><span id="short_desc_nonedit_display"><a href="/fr/docs/DOM/window.top" title="/fr/docs/DOM/window.top"><code>window.top</code></a>, <a href="/fr/docs/DOM/window.parent" title="/fr/docs/DOM/window.parent"><code>window.parent</code></a>, <a href="/fr/docs/DOM/window.frameElement" title="/fr/docs/DOM/window.frameElement"><code>window.frameElement</code></a> et autres ne devraient pas refléter la structure de la frame.</span></span> Il est également possible d'exprimer ce qui est intégré au sein de l'application web.</li>
+ <li>Une API pour manipuler et surveiller l'état du contenu.</li>
+</ul>
+
+<p>Il est également possible de communiquer sur le fait que le contenu intégré soit une <a href="/fr/docs/Apps" title="/fr/docs/Apps">application web</a>. Dans ce cas, le contenu sera chargé avec le contexte pertinent (comme les permissions).</p>
+
+<h2 id="Utilisation">Utilisation</h2>
+
+<p>Un élément {{HTMLElement("iframe")}} est transformé en fenêtre de navigateur en utilisant l'attribut {{htmlattrxref("mozbrowser","iframe")}} :</p>
+
+<pre class="brush: html">&lt;iframe src="http://hostname.tld" mozbrowser&gt;</pre>
+
+<p>Afin d'intégrer une application web, il faut également renseigner l'attribut {{htmlattrxref("mozapp","iframe")}}, la valeur sera le chemin vers le manifeste de l'application :</p>
+
+<pre>&lt;iframe src="http://hostname.tld" mozapp='http://chemin/du/manifeste.webapp' mozbrowser&gt;</pre>
+
+<p>Enfin, en utilisant l'attribut {{htmlattrxref("remote","iframe")}} le contenu de l'élément{{HTMLElement("iframe")}} peut être chargé en utilisant uniquement un processus fils qui sera séparé de celui de la page qui contient l'élément {{HTMLElement("iframe")}}.</p>
+
+<pre>&lt;iframe src="http://hostname.tld" mozbrowser remote&gt;</pre>
+
+<div class="warning">
+<p><strong>Warning :</strong> Ce dernier attribut est indispensable pour des raisons de sécurité lors du chargement de contenu provenant d'une origine inconnue. Si vous ne l'utilisez pas, cela rendra votre application vulnérable aux attaques d'un site web malveillant.</p>
+</div>
+
+<h2 id="Permissions_de_l'application">Permissions de l'application</h2>
+
+<p>Chaque application qui souhaite intégrer une fenêtre de navigateur devra avoir la permission <code>browser</code> au sein du <a href="/fr/docs/Web/Apps/Manifest" title="/fr/docs/Web/Apps/Manifest">manifeste d'application</a>.</p>
+
+<pre class="brush: json">{
+  "permissions": {
+    "browser": {}
+  }
+}</pre>
+
+<p>Si elle souhaite intégrer une application web, l'application hôte devra disposer de la permission <code>embed-apps</code>.</p>
+
+<pre class="brush: json">{
+  "permissions": {
+    "browser": {},
+    "embed-apps": {}
+  }
+}</pre>
+
+<h2 id="Méthodes_supplémentaires">Méthodes supplémentaires</h2>
+
+<p>Afin d'être conforme aux spécifications d'un navigateur  {{HTMLElement("iframe")}}, Firefox OS étend l'interface DOM {{domxref("HTMLIFrameElement")}}. Ces nouvelles méthodes permettent d'augmenter les capacités de l'élément  {{HTMLElement("iframe")}} :</p>
+
+<h3 id="Les_méthodes_de_navigation">Les méthodes de navigation</h3>
+
+<p>Ces méthodes permettent de naviguer au sein de l'historique de l'élément {{HTMLElement("iframe")}}. Elles sont nécessaires afin d'implémenter les boutons de pages précédentes, suivantes ou le bouton d'actualisation de la page.</p>
+
+<ul>
+ <li>{{domxref("HTMLIFrameElement.reload","reload()")}} : permet de recharger le contenu de l'élément {{HTMLElement("iframe")}}.</li>
+ <li>{{domxref("HTMLIFrameElement.stop","stop()")}} : permet d'arrêter le chargement du contenu de l'élément {{HTMLElement("iframe")}}.</li>
+ <li>{{domxref("HTMLIFrameElement.getCanGoBack","getCanGoBack()")}} : permet de de savoir s'il est possible de naviguer dans les pages précédentes (s'il y en a).</li>
+ <li>{{domxref("HTMLIFrameElement.goBack","goBack()")}} : remplace l'emplacement de l'élément {{HTMLElement("iframe")}} par l'emplacement précédent contenu dans l'historique.</li>
+ <li>{{domxref("HTMLIFrameElement.getCanGoForward","getCanGoForward()")}} : permet de savoir s'il est possible de naviguer vers la (les) page(s) suivante(s).</li>
+ <li>{{domxref("HTMLIFrameElement.goForward","goForward()")}} : remplace l'emplacement de l'élément {{HTMLElement("iframe")}} par l'emplacement suivant contenu dans l'historique.</li>
+</ul>
+
+<h3 id="Les_méthodes_liées_aux_performances">Les méthodes liées aux performances</h3>
+
+<p>Ces méthodes sont utilisées pour gérer les ressources utilisées par un navigateur contenu dans un élément {{HTMLElement("iframe")}}. Cela est particulièrement utile lorsqu'il s'agit d'un navigateur utilisant des onglets.</p>
+
+<ul>
+ <li>{{domxref("HTMLIFrameElement.setVisible","setVisible()")}}: modifie la visibilité du navigateur {{HTMLElement("iframe")}}. Cela peut avoir un impact sur l'allocation des ressources et des fonctions d'utilisations comme {{domxref("window.requestAnimationFrame","requestAnimationFrame")}}.</li>
+ <li>{{domxref("HTMLIFrameElement.getVisible","getVisible()")}} : permet de connaître l'état de visibilité du navigateur {{HTMLElement("iframe")}} à un moment.</li>
+ <li>{{domxref("HTMLIFrameElement.purgeHistory","purgeHistory()")}} : permet de supprimer toutes les ressources associées au navigateur {{HTMLElement("iframe")}} (comme les cookies, le cache...) .</li>
+</ul>
+
+<h3 id="Méthodes_liées_aux_événements">Méthodes liées aux événements</h3>
+
+<p>Afin de gérer le contenu du navigateur {{HTMLElement("iframe")}} il est nécessaire d'introduire de nouveaux événements (voir ci-après). Les méthodes suivantes peuvent être utilisées pour manipuler ces événements :</p>
+
+<ul>
+ <li>L'élément {{HTMLElement("iframe")}} aura le support des méthodes suivantes de l'interface {{domxref("EventTarget")}} : {{domxref("EventTarget.addEventListener","addEventListener()")}}, {{domxref("EventTarget.removeEventListener","removeEventListener()")}} et {{domxref("EventTarget.dispatchEvent","dispatchEvent()")}}.</li>
+ <li>{{domxref("HTMLIFrameElement.sendMouseEvent","sendMouseEvent()")}} : permet d'envoyer un événement {{domxref("MouseEvent")}} au contenu de l'élément {{HTMLElement("iframe")}}.</li>
+ <li>{{domxref("HTMLIFrameElement.sendTouchEvent","sendTouchEvent()")}} : permet d'envoyer un événement {{domxref("TouchEvent")}} au contenu de l'élément {{HTMLElement("iframe")}}. Cette méthode n'est disponible que pour les appareils disposant d'une interface tactile.</li>
+ <li>{{domxref("HTMLIFrameElement.addNextPaintListener","addNextPaintListener()")}} : permet de définir un gestionnaire d'événement pour surveiller le premier événement {{event("MozAfterPaint")}} du navigateur  {{HTMLElement("iframe")}}.</li>
+ <li>{{domxref("HTMLIFrameElement.removeNextPaintListener","removeNextPaintListener()")}} : permet de supprimer un gestionnaire d'événement qui avait été créé avec {{domxref("HTMLIFrameElement.addNextPaintListener","addNextPaintListener()")}}.</li>
+</ul>
+
+<h3 id="Méthodes_diverses">Méthodes diverses</h3>
+
+<p>Ces méthodes sont des utilitaires destinés aux applications qui conteiennent un navigateur {{HTMLElement("iframe")}}.</p>
+
+<ul>
+ <li>{{domxref("HTMLIFrameElement.getScreenshot","getScreenshot()")}} : permet de prendre une capture d'écran du contenu du navigateur {{HTMLElement("iframe")}}. Ceci est surtout utile pour avoir un aperçu en vignettes pour une application de navigation à onglets.</li>
+</ul>
+
+<h2 id="Événements">Événements</h2>
+
+<p>Afin de permettre à une application de manipuler le navigateur {{HTMLElement("iframe")}}, l'application peut écouter, surveiller les nouveaux événements qui se passent au sein du navigateur  {{HTMLElement("iframe")}}. Il est possible de surveiller les événements suivant :</p>
+
+<ul>
+ <li>{{event("mozbrowserasyncscroll")}} : est envoyé lorsque la position du déroulement (<em>scrolling</em>) change au sein du navigateur  {{HTMLElement("iframe")}}</li>
+ <li>{{event("mozbrowserclose")}} : est envoyé lorsque la méthode {{domxref("window.close()")}} est appelée au sein du navigateur {{HTMLElement("iframe")}}.</li>
+ <li>{{event("mozbrowsercontextmenu")}}: est envoyé lorsque le navigateur {{HTMLElement("iframe")}} tente d'ouvrir un menu contextuel. Cela permet notamment de manipuler l'élément  {{HTMLElement("menuitem")}} disponible dans le contenu du navigateur {{HTMLElement("iframe")}}.</li>
+ <li>{{event("mozbrowsererror")}} : est envoyé lorsqu'il y a une erreur pendant le chargement d'un contenu dans le navigateur {{HTMLElement("iframe")}}.</li>
+ <li>{{event("mozbrowsericonchange")}} : est envoyé lorsqu'il y a une modification du favicon du navigateur {{HTMLElement("iframe")}}.</li>
+ <li>{{event("mozbrowserloadend")}} : est envoyé lorsque le navigateur {{HTMLElement("iframe")}} a terminé de charger tout ses composants.</li>
+ <li>{{event("mozbrowserloadstart")}} : est envoyé lorsque le navigateur  {{HTMLElement("iframe")}} commence à charger une nouvelle page.</li>
+ <li>{{event("mozbrowserlocationchange")}} : est envoyé lorsqu'il y a un changement d'emplacement (un changement de page par exemple) dans le navigateur {{HTMLElement("iframe")}}.</li>
+ <li>{{event("mozbrowseropenwindow")}} : est envoyé lorsque la méthode {{domxref("window.open()")}} est appelée à partir du navigateur {{HTMLElement("iframe")}}.</li>
+ <li>{{event("mozbrowsersecuritychange")}} : est envoyé lorsqu'il y a un changement de l'état SSL du navigateur {{HTMLElement("iframe")}}. Cet événement fournit deux propriétés : <code>state</code> qui est une chaîne de caractères qui peut prendre les valeurs <code>"broken"</code>, <code>"secure"</code> ou <code>"insecure"</code> ; <code>isEV</code> qui doit valoir <code>true</code> si le certificat SSL courant est un certificat Extend Validation (cependant, à l'heure actuelle, il renvoie toujours <code>false</code> tant que le bogue {{bug(764496)}} n'est pas réparé).</li>
+ <li>{{event("mozbrowsershowmodalprompt")}} : est envoyé lorsque les méthodes {{domxref("window.alert","alert()")}}, {{domxref("window.confirm","confirm()")}} ou {{domxref("window.prompt","prompt()")}} sont appelées depuis un navigateur {{HTMLElement("iframe")}}.</li>
+ <li>{{event("mozbrowsertitlechange")}} : est envoyé lorsqu'il y a un changement de la propriété <code>document.title</code> dans le navigateur  {{HTMLElement("iframe")}}.</li>
+ <li>{{event("mozbrowserusernameandpasswordrequired")}} : est envoyé lorsqu'une authentification HTTP est demandée.</li>
+</ul>
+
+<h2 id="Exemple">Exemple</h2>
+
+<p>Dans cet exemple, nous verrons comment implémenter un navigateur intégré de manière simplifiée.</p>
+
+<h3 id="HTML">HTML</h3>
+
+<p>Dans le code HTML, il faut juste ajouter une barre pour la saisie de l'URL, un bouton « Aller à », un bouton « Arrêter » et un élément  {{HTMLElement("iframe")}} pour le navigateur.</p>
+
+<pre class="brush: html">&lt;header&gt;
+  &lt;input id="url"&gt;
+  &lt;button id="go"&gt;Aller à&lt;/button&gt;
+  &lt;button id="stop"&gt;Arrêter&lt;/button&gt;
+&lt;/header&gt;
+
+&lt;iframe src="about:blank" mozbrowser remote&gt;&lt;/iframe&gt;
+</pre>
+
+<h3 id="CSS">CSS</h3>
+
+<p>Il est possible de passer du bouton « Aller à » au bouton « Arrêter »  (et vice versa) en utilisant ce fragment de code CSS :</p>
+
+<pre class="brush: css">button:disabled {
+  display: none;
+}</pre>
+
+<h3 id="JavaScript">JavaScript</h3>
+
+<p>Et maintenant, il faut ajouter les fonctionnalités nécessaires au navigateur :</p>
+
+<pre class="brush: js">document.addEventListener("DOMContentLoaded", function () {
+  var url  = document.getElementById("url");
+  var go   = document.getElementById("go");
+  var stop = document.getElementById("stop");
+
+  var browser = document.getElementsByTagName("iframe")[0];
+
+  // Cette fonction permet de passer entre le bouton "Aller" au bouton "Arreter"
+  // (et vice versa). Si le navigateur charge, le bouton "Aller" est désactivé
+  // et le bouton "Arrêter" est activé. Sinon, on a l'état inverse.
+  function uiLoading(isLoading) {
+      go.disabled =  isLoading;
+    stop.disabled = !isLoading;
+  }
+
+  go.addEventListener("touchend", function () {
+    browser.setAttribute("src", url.value);
+  });
+
+  stop.addEventListener("touchend", function () {
+    browser.stop();
+  });
+
+  // Quand le navigateur charge, on change l'état des boutons "Aller" et "Arrêter"
+  browser.addEventListener('mozbrowserloadstart', function () {
+    uiLoading(true);
+  });
+
+  // Quand le navigateur a fini de charger du contenu,
+  // on change l'état des boutons "Aller" et "Arrêter"
+  browser.addEventListener('mozbrowserloadend', function () {
+    uiLoading(false);
+  });
+
+  // Si jamais il y a une erreur il faut également
+  // changer l'état des boutons "Aller" et "Arrêter"
+  browser.addEventListener('mozbrowsererror', function (event) {
+    uiLoading(false);
+    alert("Erreur de chargement : " + event.detail);
+  });
+
+  // Lorsqu'un utilisateur suit un lien il faut s'assurer que
+  // l'emplacement de la nouvelle page apparaît dans la barre d'URL
+  browser.addEventListener('mozbrowserlocationchange', function (event) {
+    url.value = event.detail;
+  });
+});</pre>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>{{HTMLElement("iframe")}}</li>
+ <li>{{domxref("HTMLIFrameElement")}}</li>
+</ul>

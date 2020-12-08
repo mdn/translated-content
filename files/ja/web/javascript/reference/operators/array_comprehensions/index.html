@@ -1,0 +1,198 @@
+---
+title: 配列内包表記
+slug: Web/JavaScript/Reference/Operators/Array_comprehensions
+tags:
+  - JavaScript
+  - Non-standard
+  - Operator
+  - Reference
+translation_of: Archive/Web/JavaScript/Array_comprehensions
+---
+<div class="warning"><strong>非標準。使用しないでください!</strong><br>
+配列内包は非標準であり、Firefox 58 から削除されています。将来向きの用途には、{{jsxref("Array.prototype.map")}}、{{jsxref("Array.prototype.filter")}}、{{jsxref("Functions/Arrow_functions", "アロー関数", "", 1)}}、{{jsxref("Operators/Spread_operator", "スプレッド構文", "", 1)}} の使用を検討してください。</div>
+
+<div>{{jsSidebar("Operators")}}</div>
+
+<p><strong>array comprehension</strong> 構文は、既存のものに基づいている新しい配列をすばやく組み立てることができるJavaScriptの式でした。しかし、これは標準仕様や Firefox の実装から削除されました。使用しないでください!</p>
+
+<h2 id="構文">構文</h2>
+
+<pre class="syntaxbox">[for (x of iterable) x]
+[for (x of iterable) if (condition) x]
+[for (x of iterable) for (y of iterable) x + y]
+</pre>
+
+<h2 id="説明">説明</h2>
+
+<p>配列の内包表記内で、下記の二種類のコンポーネントが許されています。:</p>
+
+<ul>
+ <li>{{jsxref("Statements/for...of", "for...of")}}</li>
+ <li>{{jsxref("Statements/if...else", "if")}}</li>
+</ul>
+
+<p>for-of イテレーションは常に最初のコンポーネントです。複数のfor-of イテレーションは、ステートメントが許可されている場合。</p>
+
+<p>配列内包は以前、ECMAScript 2016 で標準化を提案されていました。これは別のものに基づいて新たな配列を構成するための手っ取り早い方法を提供します。配列内包は一般に、{{jsxref("Array.prototype.map", "map()")}} および {{jsxref("Array.prototype.filter", "filter()")}} を呼び出す代わりとして、あるいはそれら 2 つを結合する手段として用いることができます。</p>
+
+<p>次の配列内包は数値の配列を取り込んで、その各数値を 2 倍した値による新しい配列を作成します。</p>
+
+<pre class="brush: js">var numbers = [1, 2, 3, 4];
+var doubled = [for (i of numbers) i * 2];
+console.log(doubled); // logs 2,4,6,8
+</pre>
+
+<p>これは以下の {{jsxref("Array.prototype.map", "map()")}} による操作と同等です:</p>
+
+<pre class="brush: js">var doubled = numbers.map(i =&gt; i * 2);
+</pre>
+
+<p>配列内包は、特定の式にマッチするアイテムの選択に用いることもできます。以下は、偶数だけを選択する内包です:</p>
+
+<pre class="brush: js">var numbers = [1, 2, 3, 21, 22, 30];
+var evens = [for (i of numbers) if (i % 2 === 0) i];
+console.log(evens); // logs 2,22,30
+</pre>
+
+<p>同じ目的で {{jsxref("Array.prototype.filter", "filter()")}} を用いることができます:</p>
+
+<pre class="brush: js">var evens = numbers.filter(i =&gt; i % 2 === 0);
+</pre>
+
+<p>{{jsxref("Array.prototype.map", "map()")}} および {{jsxref("Array.prototype.filter", "filter()")}} 方式の操作を、ひとつの配列内包に統合することができます。以下は偶数だけをフィルタリングして、それらを 2 倍した値を含む配列を作成します:</p>
+
+<pre class="brush: js">var numbers = [1, 2, 3, 21, 22, 30];
+var doubledEvens = [for (i of numbers) if (i % 2 === 0) i * 2];
+console.log(doubledEvens); // logs 4,44,60
+</pre>
+
+<p>配列内包の角括弧は、スコープ目的の暗黙的なブロックをもたらします。新しい変数 (上記の例における i ) は、{{jsxref("Statements/let","let")}} を用いて宣言されたかのように扱われます。つまり、それらの変数は配列内包の外部で使用できません。</p>
+
+<p>配列内包の入力自体は、配列である必要はありません。<a href="/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators" title="JavaScript/Guide/Iterators and Generators">イテレータおよびジェネレータ</a> も使用できます。</p>
+
+<p>文字列を入力とすることもできます。(配列状のオブジェクトにおいて) 前出の filter や map の動作を実現するには以下のようにします:</p>
+
+<pre class="brush: js">var str = 'abcdef';
+var consonantsOnlyStr = [for (c of str) if (!(/[aeiouAEIOU]/).test(c)) c].join(''); // 'bcdf'
+var interpolatedZeros = [for (c of str) c + '0' ].join(''); // 'a0b0c0d0e0f0'
+</pre>
+
+<p>繰り返しになりますが入力データの形式は維持されませんので、文字列へ戻すために {{jsxref("Array.prototype.join", "join()")}} を使用しなければなりません。</p>
+
+<h2 id="例">例</h2>
+
+<h3 id="簡単な配列の内包表記">簡単な配列の内包表記</h3>
+
+<pre class="brush:js">[for (i of [ 1, 2, 3 ]) i*i ];
+// [ 1, 4, 9 ]
+
+var abc = [ "A", "B", "C" ];
+[for (letters of abc) letters.toLowerCase()];
+// [ "a", "b", "c" ]</pre>
+
+<h3 id="if文で配列の内包表記">if文で配列の内包表記</h3>
+
+<pre class="brush: js">var years = [ 1954, 1974, 1990, 2006, 2010, 2014 ];
+[for (year of years) if (year &gt; 2000) year];
+// [ 2006, 2010, 2014 ]
+[for (year of years) if (year &gt; 2000) if(year &lt; 2010) year];
+// [ 2006], the same as below:
+[for (year of years) if (year &gt; 2000 &amp;&amp; year &lt; 2010) year];
+// [ 2006]
+</pre>
+
+<h3 id="mapとfilterを比較する配列の内包表記"><code>map</code>と<code>filter</code>を比較する配列の内包表記</h3>
+
+<p>配列の内包表記構文を理解する簡単な方法は、Array {{jsxref("Array.map", "map")}}や{{jsxref("Array.filter", "filter")}}メソッドと比較することです。:</p>
+
+<pre class="brush: js">var numbers = [ 1, 2, 3 ];
+
+numbers.map(function (i) { return i * i });
+numbers.map(i =&gt; i*i);
+[for (i of numbers) i*i ];
+// all are [ 1, 4, 9 ]
+
+numbers.filter(function (i) { return i &lt; 3 });
+numbers.filter(i =&gt; i &lt; 3);
+[for (i of numbers) if (i &lt; 3) i];
+// all are [ 1, 2 ]
+</pre>
+
+<h3 id="二つの配列の内包表記">二つの配列の内包表記</h3>
+
+<p>二つの配列で動作させるために二つのfor-ofイテレーションを使用する:</p>
+
+<pre class="brush: js">var numbers = [ 1, 2, 3 ];
+var letters = [ "a", "b", "c" ];
+
+var cross = [for (i of numbers) for (j of letters) i+j];
+// [ "1a", "1b", "1c", "2a", "2b", "2c", "3a", "3b", "3c" ]
+
+var grid = [for (i of numbers) [for (j of letters) i+j]];
+// [
+//  ["1a", "1b", "1c"],
+//  ["2a", "2b", "2c"],
+//  ["3a", "3b", "3c"]
+// ]
+
+[for (i of numbers) if (i &gt; 1) for (j of letters) if(j &gt; "a") i+j]
+// ["2b", "2c", "3b", "3c"], the same as below:
+
+[for (i of numbers) for (j of letters) if (i &gt; 1) if(j &gt; "a") i+j]
+// ["2b", "2c", "3b", "3c"]
+
+[for (i of numbers) if (i &gt; 1) [for (j of letters) if(j &gt; "a") i+j]]
+// [["2b", "2c"], ["3b", "3c"]], not the same as below:
+
+[for (i of numbers) [for (j of letters) if (i &gt; 1) if(j &gt; "a") i+j]]
+// [[], ["2b", "2c"], ["3b", "3c"]]
+</pre>
+
+<h2 id="Specifications" name="Specifications">仕様</h2>
+
+<p>最初は ECMAScript 2015 のドラフトでしたが、リビジョン 27 (2014 年 8 月) で取り除かれました。仕様セマンティクスのために ES2015 の古いリビジョンを参照してください。</p>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+
+
+
+<p>{{Compat("javascript.operators.array_comprehensions")}}</p>
+
+<h2 id="Differences_to_the_older_JS1.7JS1.8_comprehensions" name="Differences_to_the_older_JS1.7JS1.8_comprehensions">古い JS1.7/JS1.8 の内包表記との違い</h2>
+
+<div class="warning">JS1.7/JS1.8 の内包表記は、バージョン 46 で Gecko から削除しました ({{bug(1220564)}})。</div>
+
+<p><strong>古い内包表記の構文 (使用しないでください!):</strong></p>
+
+<pre class="brush: js example-bad">[X for (Y in Z)]
+[X for each (Y in Z)]
+[X for (Y of Z)]
+</pre>
+
+<p>違い:</p>
+
+<ul>
+ <li>ESNext の内包表記は全体の内包表記のかわりに"for"ノードごとに１スコープを生成します。
+  <ul>
+   <li>旧: <code>[()=&gt;x for (x of [0, 1, 2])][1]() // 2</code></li>
+   <li>新: <code>[for (x of [0, 1, 2]) ()=&gt;x][1]() // 1, each iteration creates a fresh binding for x. </code></li>
+  </ul>
+ </li>
+ <li>ESNext の内包表記は代入式のかわりに"for"で始まります。
+  <ul>
+   <li>旧: <code>[i * 2 for (i of numbers)]</code></li>
+   <li>新: <code>[for (i of numbers) <code>i * 2</code>]</code></li>
+  </ul>
+ </li>
+ <li>ESNext の内包表記は複数の<code>if</code>と<code>for</code>コンポーネントを持ち得ます。</li>
+ <li>ESNext の内包表記は<code>{{jsxref("Statements/for...of", "for...of")}}</code>でのみ動作し、<code>{{jsxref("Statements/for...in", "for...in")}}</code>イテレーションで 動作しません。</li>
+</ul>
+
+<p>コード更新の提案について、<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1220564#c42">Bug 1220564 のコメント 42</a> をご覧ください。</p>
+
+<h2 id="関連情報">関連情報</h2>
+
+<ul>
+ <li>{{jsxref("Statements/for...of", "for...of")}}</li>
+ <li>{{jsxref("Operators/Generator_comprehensions", "Generator comprehensions", "" ,1)}}</li>
+</ul>

@@ -1,0 +1,376 @@
+---
+title: nsIFilePicker
+slug: Mozilla/Tech/XPCOM/Reference/Interface/nsIFilePicker
+tags:
+  - Filepicker
+  - 文件选取器
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIFilePicker
+---
+<p></p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/widget/nsIFilePicker.idl" rel="custom">widget/nsIFilePicker.idl</a></code><span style="text-align: right; float: right;"><a href="/zh-CN/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">脚本化</a></span></div>
+<span style="padding: 4px 2px;">
+
+文件选择器组件是通过显示标准的用户界面来让用户来选择文件和目录，以及选择目的地来命名和新建文件。
+</span>
+
+<div style="background: #eee; padding: 2px;">
+继承于: <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
+<span style="text-align: right; float: right;">最后修改于Gecko 17.0 (Firefox 17.0 / Thunderbird 17.0 / SeaMonkey 2.14)</span></div>
+</div><p></p>
+
+<p>实现自： <code>@mozilla.org/filepicker;1</code>。要创建一个实例，使用以下代码：</p>
+
+<pre class="eval">var filePicker = Components.classes["@mozilla.org/filepicker;1"]
+                 .createInstance(Components.interfaces.nsIFilePicker);
+</pre>
+
+<h2 id="Method_overview" name="Method_overview">方法概述</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="#appendFilter()">appendFilter</a>(in AString title, in AString filter);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#appendFilters()">appendFilters</a>(in long filterMask);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#init()">init</a>(in nsIDOMWindow parent, in AString title, in short mode);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#open()">open</a>(in nsIFilePickerShownCallback aFilePickerShownCallback);</code> </td>
+  </tr>
+  <tr>
+   <td><code>short <a href="#show()">show</a>();</code> <span class="inlineIndicator deprecated deprecatedInline" title="(Firefox 17.0 / Thunderbird 17.0 / SeaMonkey 2.14)">已废弃 Gecko 17.0</span></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Attributes" name="Attributes">属性</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">属性</td>
+   <td class="header">类型</td>
+   <td class="header">说明</td>
+  </tr>
+  <tr>
+   <td><code>addToRecentDocs</code> </td>
+   <td><code>boolean</code></td>
+   <td>If <code>true</code>, the file is added to the operating system's "recent documents" list (if the operating system has one; nothing happens if there is no such concept on the user's platform). This attribute has no effect if private browsing mode is in effect.</td>
+  </tr>
+  <tr>
+   <td><code>defaultExtension</code></td>
+   <td><code><a href="/en/AString" title="en/AString">AString</a></code></td>
+   <td>The extension for the type of files you want to work with. On some platforms, this is automatically appended to filenames the user enters, if required.  Specify it without a leading dot, for example "jpg".</td>
+  </tr>
+  <tr>
+   <td><code>defaultString</code></td>
+   <td><code><a href="/en/AString" title="en/AString">AString</a></code></td>
+   <td>The filename, including extension, that should be suggested to the user as a default. This should be set this before calling <code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFilePicker#open()">open()</a></code> or <code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFilePicker#show()">show()</a></code>.
+    <h6 id="Exceptions_thrown" name="Exceptions_thrown">Exceptions thrown</h6>
+
+    <dl>
+     <dt><code>NS_ERROR_FAILURE</code></dt>
+     <dd>If you try to read this attribute.</dd>
+    </dl>
+   </td>
+  </tr>
+  <tr>
+   <td><code>displayDirectory</code></td>
+   <td><code><code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILocalFile" title="">nsILocalFile</a></code></code></td>
+   <td>The directory that the file picker dialog should initially display. This should be set this before calling <code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFilePicker#open()">open()</a></code> or <code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFilePicker#show()">show()</a></code> to specify a starting point.</td>
+  </tr>
+  <tr>
+   <td><code>file</code></td>
+   <td><code><code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILocalFile" title="">nsILocalFile</a></code></code></td>
+   <td>The currently selected file or directory. <strong>Read only.</strong></td>
+  </tr>
+  <tr>
+   <td><code>files</code></td>
+   <td><code><code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISimpleEnumerator" title="">nsISimpleEnumerator</a></code></code></td>
+   <td>
+    <p>An enumerator of the currently selected files. <strong>Read only.</strong></p>
+    <div class="blockIndicator note"><strong>Note:</strong> Only works with <code>modeOpenMultiple</code> mode.</div></td>
+  </tr>
+  <tr>
+   <td><code>fileURL</code></td>
+   <td><code><code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI" title="">nsIURI</a></code></code></td>
+   <td>The URI of the currently selected file or directory. <strong>Read only.</strong></td>
+  </tr>
+  <tr>
+   <td><code>filterIndex</code></td>
+   <td><code><a href="/en/long" title="en/long">long</a></code></td>
+   <td>The (0-based) index of the filter which is currently selected in the file picker dialog. Set this to choose a particular filter to be selected by default.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Constants" name="Constants">常量</h2>
+
+<h3 id="Mode_constants" name="Mode_constants">模式常量</h3>
+
+<p>These constants are used to specify the type of file picker to create when calling <code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFilePicker#init()">init()</a></code>.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">常量</td>
+   <td class="header">值</td>
+   <td class="header">说明</td>
+  </tr>
+  <tr>
+   <td><code>modeOpen</code></td>
+   <td><code>0</code></td>
+   <td>Load a file or directory.</td>
+  </tr>
+  <tr>
+   <td><code>modeSave</code></td>
+   <td><code>1</code></td>
+   <td>Save a file or directory.</td>
+  </tr>
+  <tr>
+   <td><code>modeGetFolder</code></td>
+   <td><code>2</code></td>
+   <td>Select a folder/directory.</td>
+  </tr>
+  <tr>
+   <td><code>modeOpenMultiple</code></td>
+   <td><code>3</code></td>
+   <td>Load multiple files.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Return_value_constants" name="Return_value_constants">返回值常量</h3>
+
+<p>These values are returned by <code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFilePicker#show()">show()</a></code>, indicating the result of the file picker activity.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Constant</td>
+   <td class="header">Value</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>returnOK</code></td>
+   <td><code>0</code></td>
+   <td>The file picker dialog was closed by the user hitting 'Ok'</td>
+  </tr>
+  <tr>
+   <td><code>returnCancel</code></td>
+   <td><code>1</code></td>
+   <td>The file picker dialog was closed by the user hitting 'Cancel'</td>
+  </tr>
+  <tr>
+   <td><code>returnReplace</code></td>
+   <td><code>2</code></td>
+   <td>The user chose an existing file and acknowledged that they want to overwrite the file</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Filter_constants" name="Filter_constants">筛选器常量</h3>
+
+<p>These constants are used to create filters for commonly-used file types. For the most up to date list see <a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/content/filepicker.properties" rel="custom">filepicker.properties</a>.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Constant</td>
+   <td class="header">Value</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>filterAll</code></td>
+   <td><code>0x001</code></td>
+   <td>Corresponds to the *.* filter for file extensions. All files will pass through the filter.</td>
+  </tr>
+  <tr>
+   <td><code>filterHTML</code></td>
+   <td><code>0x002</code></td>
+   <td>Corresponds to the *.html, *.htm, *.shtml and *.xhtml filters for file extensions.</td>
+  </tr>
+  <tr>
+   <td><code>filterText</code></td>
+   <td><code>0x004</code></td>
+   <td>Corresponds to the *.txt and *.text filter for file extensions.</td>
+  </tr>
+  <tr>
+   <td><code>filterImages</code></td>
+   <td><code>0x008</code></td>
+   <td>Corresponds to the *.jpe, *.jpg, *.jpeg, *.gif, *.png, *.bmp, *.ico, *.svg, *.svgz, *.tif, *.tiff, *.ai, *.drw, *.pct, *.psp, *.xcf, *.psd and *.raw filters for file extensions.</td>
+  </tr>
+  <tr>
+   <td><code>filterXML</code></td>
+   <td><code>0x010</code></td>
+   <td>Corresponds to the *.xml filter for file extensions.</td>
+  </tr>
+  <tr>
+   <td><code>filterXUL</code></td>
+   <td><code>0x020</code></td>
+   <td>Corresponds to the *.xul filter for file extensions.</td>
+  </tr>
+  <tr>
+   <td><code>filterApps</code></td>
+   <td><code>0x040</code></td>
+   <td>Corresponds to the platform specific application filter for file extensions. Application files for the user's platform will pass through the filter.</td>
+  </tr>
+  <tr>
+   <td><code>filterAllowURLs</code></td>
+   <td><code>0x80</code></td>
+   <td>Allow URLs. </td>
+  </tr>
+  <tr>
+   <td><code>filterAudio</code></td>
+   <td><code>0x100</code></td>
+   <td>Corresponds to the *.aac, *.aif, *.flac, *.iff, *.m4a, *.m4b, *.mid, *.midi, *.mp3, *.mpa, *.mpc, *.oga, *.ogg, *.ra, *.ram, *.snd, *.wav and *.wma filters for file extensions. </td>
+  </tr>
+  <tr>
+   <td><code>filterVideo</code></td>
+   <td><code>0x200</code></td>
+   <td>Corresponds to the *.avi, *.divx, *.flv, *.m4v, *.mkv, *.mov, *.mp4, *.mpeg, *.mpg, *.ogm, *.ogv, *.ogx, *.rm, *.rmvb, *.smil, *.webm, *.wmv and *.xvid filters for file extensions. </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Methods" name="Methods">方法</h2>
+
+<h3 id="appendFilter()" name="appendFilter()">appendFilter()</h3>
+
+<p>Appends a custom file extension filter to the dialog. The filter appended first will be used to display the <code>nsIFilePicker</code> dialog, the user may then select another from the list.</p>
+
+<pre class="eval">void appendFilter(
+  in AString title,
+  in AString filter
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>title</code></dt>
+ <dd>The title of the filter.</dd>
+ <dt><code>filter</code></dt>
+ <dd>The filter string. Multiple extensions may be included, separated by a semicolon and a space.</dd>
+</dl>
+
+<h6 id="appendFilter_example" name="appendFilter_example">Example</h6>
+
+<p>Some example filter strings:</p>
+
+<ul>
+ <li>"*.ics"</li>
+ <li>"*.txt; *.doc; *.rtf"</li>
+</ul>
+
+<h3 id="appendFilters()" name="appendFilters()">appendFilters()</h3>
+
+<p>Appends a list of file extension filters, from the predefined list, to the dialog.</p>
+
+<pre class="eval">void appendFilters(
+  in long filterMask
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<div class="note"><strong>Note:</strong> If <code>appendFilters</code> is the first (or only) call to set the file filters the filter with the smallest code will be used as default filter when displaying the <code>nsIFilePicker</code> dialog. If you would like to use another you must append it separately before the others you want to go into the drop down list.</div>
+
+<dl>
+ <dt><code>filterMask</code></dt>
+ <dd>A combination of the <a class="internal" href="#Filter_constants" title="Filter constants">filters</a> you wish to use. You may OR multiple filters together; for example <code>filterAll | filterHTML</code>.</dd>
+</dl>
+
+<h3 id="init()" name="init()">init()</h3>
+
+<p>Initialize the file picker widget. The file picker is not valid until this method is called.</p>
+
+<pre class="eval">void init(
+  in nsIDOMWindow parent,
+  in AString title,
+  in short mode
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>parent</code></dt>
+ <dd>The <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindow" title="">nsIDOMWindow</a></code> parent. This dialog will be dependent on this parent. Must be non-null.</dd>
+ <dt><code>title</code></dt>
+ <dd>The file picker dialog title. If this is <code>null</code>, the dialog will have the default title.</dd>
+ <dt><code>mode</code></dt>
+ <dd>One of the <a class="internal" href="#Mode_constants" title="Mode constants">mode constants</a>, indicating the type of picker to create.</dd>
+</dl>
+
+<h3 id="open">open</h3>
+
+<p>Opens the file dialog asynchrounously. The passed in object's done method will be called upon completion.</p>
+
+<pre class="eval">void open(
+  in nsIFilePickerShownCallback aFilePickerShownCallback
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>aFilePickerShownCallback</code></dt>
+ <dd>The <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFilePickerShownCallback" title="">nsIFilePickerShownCallback</a></code> to be called on completion.</dd>
+</dl>
+
+<h3 id="show">show</h3>
+
+<p>Displays the file picker dialog. The dialog is displayed modally.</p>
+
+<pre class="eval">short show();
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<p>None.</p>
+
+<h6 id="Return_value" name="Return_value">Return value</h6>
+
+<p>One of the <a class="internal" href="#Return_value_constants" title="Return value constants">return constants</a>.</p>
+
+<h2 id="Example" name="Example">示例</h2>
+
+<p>Here's an example:</p>
+
+<pre>const nsIFilePicker = Components.interfaces.nsIFilePicker;
+
+var fp = Components.classes["@mozilla.org/filepicker;1"]
+	           .createInstance(nsIFilePicker);
+fp.init(window, "Dialog Title", nsIFilePicker.modeOpen);
+fp.appendFilters(nsIFilePicker.filterAll | nsIFilePicker.filterText);
+
+var rv = fp.show();
+if (rv == nsIFilePicker.returnOK || rv == nsIFilePicker.returnReplace) {
+  var file = fp.file;
+  // Get the path as string. Note that you usually won't
+  // need to work with the string paths.
+  var path = fp.file.path;
+  // work with returned nsILocalFile...
+}
+</pre>
+
+<p>If your code is a component and <code>window</code> is not defined, you can get one using <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWindowMediator" title="">nsIWindowMediator</a></code>.</p>
+
+<p>When selecting multiple files:</p>
+
+<pre>    ....
+    fp.init(window, "Dialog Title", nsIFilePicker.modeOpenMultiple);
+    ....
+
+    var files = fp.files;
+    var paths = [];
+    while (files.hasMoreElements())
+    {
+        var arg = files.getNext().QueryInterface(Components.interfaces.nsILocalFile).path;
+        paths.push(arg);
+    }
+</pre>

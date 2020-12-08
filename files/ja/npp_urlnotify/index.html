@@ -1,0 +1,69 @@
+---
+title: NPP URLNotify
+slug: NPP_URLNotify
+tags:
+  - NPAPI
+  - NeedsEditorialReview
+  - Plugins
+translation_of: Archive/Plugins/Reference/NPP_URLNotify
+---
+<p> « <a href="https://developer.mozilla.org/ja/docs/Gecko_Plugin_API_Reference">Gecko Plugin API Reference</a> « <a href="https://developer.mozilla.org/ja/docs/Gecko_Plugin_API_Reference/Plug-in_Side_Plug-in_API">Plug-in Side Plug-in API</a>
+
+
+</p><h3 id=".E6.A6.82.E8.A6.81" name=".E6.A6.82.E8.A6.81">概要</h3>
+
+<p>URL リクエストの完了をインスタンスに通知します。</p>
+
+<h3 id=".E6.96.87.E6.B3.95" name=".E6.96.87.E6.B3.95">文法</h3>
+
+<pre>#include &lt;npapi.h&gt;
+
+void NPP_URLNotify(NPP         instance,
+                   const char* url,
+                   NPReason    reason,
+                   void*       notifyData);
+</pre>
+
+<h3 id=".E3.83.91.E3.83.A9.E3.83.A1.E3.83.BC.E3.82.BF" name=".E3.83.91.E3.83.A9.E3.83.A1.E3.83.BC.E3.82.BF">パラメータ</h3>
+
+<p>この関数は以下のパラメータを取ります:</p>
+
+<dl>
+ <dt>instance</dt>
+ <dd>現在のプラグインのインスタンスへのポインタ。</dd>
+</dl>
+
+<dl>
+ <dt>url</dt>
+ <dd><a href="ja/NPN_GetURLNotify">NPN_GetURLNotify</a> と <a href="ja/NPN_PostURLNotify">NPN_PostURLNotify</a> のリクエストの URL。</dd>
+</dl>
+
+<dl>
+ <dt>reason</dt>
+ <dd>リクエストの完了に対する理由コード。 値:
+ <ul>
+  <li>NPRES_DONE （最も一般的）: 正常終了。</li>
+  <li>NPRES_USER_BREAK: 中止ボタンを押して直接的に、あるいはインスタンスを削除したり高優先度のネットワーク操作を初期化するなどして間接的に、ユーザがストリームを取り消しました。</li>
+  <li>NPRES_NETWORK_ERR: ネットワークやディスク I/O の問題、メモリ不足、その他の問題でストリームが失敗しました。</li>
+ </ul>
+ </dd>
+</dl>
+
+<dl>
+ <dt>notifyData</dt>
+ <dd>前の <a href="ja/NPN_GetURLNotify">NPN_GetURLNotify</a> や <a href="ja/NPN_PostURLNotify">NPN_PostURLNotify</a> のリクエストを次の <code>NPP_URLNotify</code> の呼び出しと結びつけるためのプラグインのプライベートな値。</dd>
+</dl>
+
+<h3 id=".E8.AA.AC.E6.98.8E" name=".E8.AA.AC.E6.98.8E">説明</h3>
+
+<p><a href="ja/NPN_GetURLNotify">NPN_GetURLNotify</a> や <a href="ja/NPN_PostURLNotify">NPN_PostURLNotify</a> のリクエストが完了した後で要求は完了しその完了に対する理由コードが提供されたことをプラグインに通知するためにブラウザは <code>NPP_URLNotify</code> を呼びます</p>
+
+<p>最も一般的な理由コードは NPRES_DONE であり、単にリクエストが正常終了したことを表します。他のありうる理由コードはユーザの行動（例えば、中止ボタンのクリック）によってリクエストが中止されたことを表す NPRES_USER_BREAK や、おそらく URL を見つけられなかったために、リクエストを完了させることができなかったことを表す NPRES_NETWORK_ERR です。</p>
+
+<p>パラメータ notifyData は前の <a href="ja/NPN_GetURLNotify">NPN_GetURLNotify</a> や <a href="ja/NPN_PostURLNotify">NPN_PostURLNotify</a> の呼び出しによって引数として渡されるプラグインのプライベートな値であり、リクエストに対する識別子として使えます。</p>
+
+<h3 id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE" name=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE">関連項目</h3>
+
+<p><a href="ja/NPN_GetURLNotify">NPN_GetURLNotify</a>, <a href="ja/NPN_GetURL">NPN_GetURL</a>, <a href="ja/NPN_PostURLNotify">NPN_PostURLNotify</a>, <a href="ja/NPN_PostURL">NPN_PostURL</a></p>
+
+<p>{{ languages( { "en": "en/NPP_URLNotify" } ) }}</p>

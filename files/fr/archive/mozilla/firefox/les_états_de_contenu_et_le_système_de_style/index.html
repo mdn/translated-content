@@ -1,0 +1,26 @@
+---
+title: Les états de contenu et le système de style
+slug: Archive/Mozilla/Firefox/Les_états_de_contenu_et_le_système_de_style
+tags:
+  - Développement_de_Mozilla
+translation_of: Archive/Mozilla/Firefox/Content_states_and_the_style_system
+---
+<p>
+Les états de contenu sont ce que Gecko utilise pour mettre en œuvre les différentes règles CSS dépendant de l'état du contenu (comme par exemple <code>:hover</code>, <code>:active</code>, <code>:focus</code>, <code>target</code>, <code>:checked</code>). Nous nous concentrerons sur la description de la façon dont les changements dans ces états de contenus sont manipulés.
+</p><p>Généralement, quand l'état de contenu d'un nœud change, le style doit être résolu à nouveau (recalculé) pour ce nœud et tous ses descendants. C'est une opération coûteuse cependant, c'est pourquoi le système de style essaie de minimiser le nombre de styles qu'il doit recalculer. À cette fin, quand une notification <a href="https://dxr.mozilla.org/mozilla-central/source/content/base/public/nsIDocumentObserver.h" rel="custom">&lt;code&gt;ContentStatesChanged&lt;/code&gt;</a><sup>(en)</sup> est acheminée pour un nœud de contenu, la première chose qui est faite est de vérifier si ce changement dans les états de contenu <em>pourrait</em> affecter certains styles.
+</p><p>Ceci est réalisé en parcourant la liste de tous les <a class="external" href="http://www.w3.org/TR/CSS21/selector.html#q2"><sup>(en) </sup>sélecteurs simples CSS2.1</a> dans toutes les feuilles de style appliquées à la page qui ont une pseudo-classe de dépendance d'état faisant partie du sélecteur. Cette liste est créée durant l'analyse des feuilles de style impliquées. Pour chaque sélecteur de cette liste, on vérifie s'il a pu cesser correspondre au nœud ou commencer à le faire. Si c'est le cas, le style pourrait dépendre de l'état qui a changé et ce style doit donc être recalculé.
+</p><p>Pour déterminer si le sélecteur pourrait avoir arrêté ou commencé à correspondre au nœud, on vérifie en fait s'il correspond à la règle selon laquelle toutes les pseudo-classes dépendantes de l'état correspondant aux états qui ont changé doivent être traitées comme concordantes avec le nœud (le fait qu'elles concordent, et leur éventuelle inversion). Ceci est nécessaire pour obtenir à la fois les sélecteurs qui se sont mis à concorder et ceux qui ne concordent plus.
+</p><p>Par exemple, supposons que nous avons les sélecteurs suivants :
+</p>
+<pre class="eval"> a:hover
+ a:not(:hover)
+ div:hover
+</pre>
+<p>et que l'état <code>hover</code> sur certains nœuds change. On essaie alors d'appliquer au nœud ces sélecteurs, en supposant qu'à la fois <code>:hover</code> et <code>:not(:hover)</code> correspondent au nœud. L'effet sera donc identique à essayer d'appliquer à chaque nœud les sélecteurs :
+</p>
+<pre class="eval"> a
+ a
+ div
+</pre>
+<p>Le code qui met en œuvre ce procédé est dans la <a href="http://mxr.mozilla.org/mozilla-central/search?string=PRBool+SelectorMatches%28"><code>méthode SelectorMatches</code></a><sup>(en)</sup>, à qui est passée la liste des états qui ont changé dans le paramètre <code>aStateMask</code>.
+</p>

@@ -1,0 +1,249 @@
+---
+title: Gaia 構造入門書
+slug: Archive/B2G_OS/Developing_Gaia/構造入門書
+tags:
+  - Build documentation
+  - Building
+  - Firefox OS
+  - Gaia
+  - Guide
+translation_of: Archive/B2G_OS/Developing_Gaia/Build_System_Primer
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details open>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/ja/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<div class="summary">
+<p>この記事ではGaiaのビルドシステムがどのように動作するのかを、makefileや、ビルド手順や、環境変数や、カスタマイズを含めて説明します。</p>
+</div>
+
+<p>ビルドステップ用に意味のある成果の大半は、Gaiaの <code>build/</code> サブディレクトリにあるスクリプトによって実行されます。これはmakeやnode.jsや、<a href="/ja/docs/Mozilla/Projects/XULRunner">XULRunner</a>の実行環境である <a href="https://developer.mozilla.org/ja/docs/XPConnect/xpcshell" title="https://developer.mozilla.org/en-US/docs/XPConnect/xpcshell">XPCShell</a> (JS Shellとも言う)を使って実行されます。Gaiaのビルドシステムは、webアプリのインストールや、テストや、ローカライゼイションや、実端末へパッケージするのに役立つヘルパーツールを含んでいます。その他に開発者がGaiaをカスタマイズするのも可能になり、例えば、デフォルトの壁紙、着信音、アプリ、設定の変更ができます。</p>
+
+<div class="note">
+<p><strong>記</strong>: XPCShell は node.js と同様ですが、違いとしていくつかMozilla風味の javascriptも実行できます。これは Gaia ビルドスクリプトを Firefox拡張機能内で実行できるようにします。</p>
+</div>
+
+<h2 id="Makefile">Makefile</h2>
+
+<p>Makefileはひとかたまりのゴールから構成されています。 この節では最も役立つものを説明します。</p>
+
+<h3 id="install-gaia">install-gaia</h3>
+
+<p>このゴールは全てのGaia用アプリを端末にプッシュします。特定のアプリだけをプッシュしたい場合、次のように<code> APP</code> フラグを使用できます:</p>
+
+<pre class="brush: bash">APP=calendar make install-gaia</pre>
+
+<p>このディレクトリは Gaia アプリのディレクトリ(例 <code>apps</code>)の中にある必要があります。</p>
+
+<h3 id="reset-gaia">reset-gaia</h3>
+
+<p>これは <code>install-gaia</code> とほぼ同じ動きをしますが、違いはまず掃除(clean)をして、次に全アプリをインストールした後にパーミッションをセットアップします。アプリはエンジニアリングビルドと同様に <code>/data/local</code> 内にあります。これはテストやデバッグのアプリもプッシュします。</p>
+
+<div class="warning">
+<p><strong>要注意</strong>: <code>APP</code> 環境変数を <code>reset-gaia</code> と一緒に使うと動作しているように見えますが、電話機が使えない状態 (このゴールを APP 変数なしで実行すると復活できます) になるでしょう。なので行わないようにして下さい。</p>
+</div>
+
+<h3 id="production">production</h3>
+
+<p><code>reset-gaia と同様で、違いはソースコードが最適化されます。このゴールは基本的にユーザビルドのエミュレーションを可能にします。これはユーザビルドでインストールされるアプリもプッシュされます。</code></p>
+
+<div class="warning">
+<p><strong>要注意</strong>: <code>APP</code> 環境変数を <code>production</code> と一緒に使うと動作しているように見えますが、電話機が使えない状態 (このゴールを APP 変数なしで実行すると復活できます) になるでしょう。なので行わないようにして下さい。</p>
+</div>
+
+<h3 id="reference_workloads">reference workloads</h3>
+
+<p>このゴールは端末に色々なサイズの負荷をかけて、デバッグしたり、パフォーマンスや、起こりうるスケーラビリティの問題を修正したりするのに役立ちます。このゴールは APP または APPS 環境変数を受け入れ、それはスペースで区切られたアプリ名を含みます、例えば</p>
+
+<pre class="brush: bash">APP=sms make reference-workload-light
+APPS="sms communications/contacts" make reference-workload-heavy
+</pre>
+
+<div class="note">
+<p><strong>記</strong>: 詳細情報は、<a href="/ja/Firefox_OS/Platform/Gaia/Hacking#Reference_Workloads">Hacking Gaia: Reference workloads</a>を読んで下さい。</p>
+</div>
+
+<h2 id="環境変数">環境変数</h2>
+
+<p>いくつかの環境変数は端末へのビルドとインストールの側面を制御します、例えば:</p>
+
+<h4 id="P1">P=1</h4>
+
+<p>これはマルチコアCPUを活かしてビルド時間を高速化するパラレルビルドを有効にします。デフォルト値は <strong>0</strong>です。</p>
+
+<div class="warning">
+<p><strong>要注意</strong>: パラレルビルドは実験的機能で、不安定な場合があります。</p>
+</div>
+
+<h4 id="GAIA_OPTIMIZE1">GAIA_OPTIMIZE=1</h4>
+
+<p>これは JavaScript ファイルの最適化を有効にします。これは <code>make production </code>実行時に自動的にセットされます。これは <code>install-gaia</code> や <code>reset-gaia</code> でも使われることがあります。</p>
+
+<h4 id="PRODUCTION1">PRODUCTION=1</h4>
+
+<p>これは基本的に <code>make production</code> のエイリアスです。</p>
+
+<h4 id="DEBUG1">DEBUG=1</h4>
+
+<p>これは Gaia <a href="/ja/docs/Mozilla/Firefox_OS/Platform/Testing/Gaia_unit_tests" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Gaia_unit_tests">ユニットテスト</a>や、FirefoxでFirefox OSアプリを開発する時に使う、デバッグプロファイルを生成できるようになります。新規生成の前に、既存のプロファイルディレクトリを削除しておく必要があります。</p>
+
+<h4 id="DEVICE_DEBUG1">DEVICE_DEBUG=1</h4>
+
+<p>端末の画面ロックを無効にします。</p>
+
+<h4 id="GAIA_DEVICE_TYPEphone">GAIA_DEVICE_TYPE=phone</h4>
+
+<p>この変数は色々な 'app.list' から特定端末をビルドするのを許可します。全ての 'app.list' ファイルは /build/config/$(GAIA_DEVICE_TYPE)/  フォルダにあります。</p>
+
+<p>GAIA_DEVICE_TYPE のデフォルト値は <strong>phone</strong> です。</p>
+
+<div class="note">
+<p><strong>記</strong>: 詳細とオプションについては、<a href="/ja/Firefox_OS/Platform/Gaia/Hacking#Make_options">Hacking Gaia make options</a> のガイドを参照下さい。</p>
+</div>
+
+<h2 id="ビルド手順">ビルド手順</h2>
+
+<p>ここにgaiaをビルドするためのシーケンス図があります:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8635/gaia-build-system-seq-diagram.png" style="height: 1497px; width: 2222px;"></p>
+
+<p>pre-app.js と app.js と post-app.js とは Makefile によって実行され、大抵のビルドタスクは xpcshell スクリプトによって完了します。Makefile はOSを判定したり b2g-desktop をダウンロードするのに使われ、我々はMakefile から xpcshell スクリプトにタスクを移行する予定です。</p>
+
+<p>なぜ pre-app と app と post-app とがあるのか疑問に思うかもしれません、それは Makefile から xpcshell スクリプトへ、依存性を移動しているからです、なので大半の依存性を xpcshell に移行するため、 pre-app.js と post-app.js を <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1021051">bug 1021051</a> に基いて作りました。そして最終的には、<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1053703">bug 1053703 </a>に基いてapp.js と pre-app.js と post-app.js はマージされるでしょう。</p>
+
+<p>gaiaビルドシステムには3種類のディレクトリがあります:</p>
+
+<ol>
+ <li>ソースディレクトリ: apps, dev_apps, shared ディレクトリ</li>
+ <li>ステージディレクトリ: build_stage</li>
+ <li>プロファイルディレクトリ: profile, profile-debug や profile-test ディレクトリ</li>
+</ol>
+
+<p>我々のゴールはソースディレクトリにファイル生成することでは決してなく、不幸にもまだソースディレクトリにファイル生成するモジュールが残っていますが、この問題を解決する予定です。どのモジュールがソース、ステージ、プロファイルディレクトリにファイル生成するのかを示す表がここにあります。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8653/file-accessing.png" style="height: 1250px; width: 1136px;"></p>
+
+<p>ここにgaiaディレクトリで <code>make</code> が実行された時のビルドプロセスを、実行される順に載せます:</p>
+
+<ol>
+ <li><strong>b2g_sdk</strong>: b2g-デスクトップは<code> GAIA_DIR/build/</code>にある xpcshell スクリプトを実行するのに使われます。</li>
+ <li><strong>svoperapps</strong>: モバイル通信事業者や国がインストールするアプリ用に、アプリをダウンロードして、設定ファイルを生成します。</li>
+ <li><strong>webapp-manifests</strong>: ビルドプロセス用のwebアプリのメタデータを生成します。</li>
+ <li><strong>keyboard-layouts</strong>: デフォルトのキーボードレイアウト設定を生成します。</li>
+ <li><strong>settings.json (settings.js)</strong>: この JavaScript はFirefox OSのデフォルト設定を生成し、それは Gaia により読み込まれます。</li>
+ <li><strong>webapp-shared</strong>: 各アプリに使われるファイルを、shared ディレクトリから build_stage ディレクトリに移動します。</li>
+ <li><strong>preferences</strong>: Firefox OS用のデフォルト設定を生成します; <code>user.js</code> ファイルを生成して端末に配置し、Geckoにより読み込まれます。この値は <code>DEBUG=1</code> のような別の環境変数によって変更される可能性があるのに注意して下さい。</li>
+ <li><strong>app.js</strong>: <code>アプリ</code>ディレクトリ内のMakefile: これらが存在する場合に実行されます。各アプリにとって、アプリのMakefileがなければ、Gaia Makefile がアプリのディレクトリを<code>build_stage</code>にコピーして、<code>[アプリ</code>ディレクトリ<code>]/build/build.js</code> があれば実行します。より詳細は <a href="#Build_script_for_apps">Build script for apps</a> を見て下さい。</li>
+ <li><strong>test-agent-bootstrap &amp; test-agent-config</strong>: 2つのmakeルールを含む test-agent をセットアップします<code>、test-agent-config</code> と <code>test-agent-bootstrap-apps</code> で、これは各アプリのテスト環境セットアップに使われます。</li>
+ <li><strong>webapp-optimize</strong>: このスクリプトはJavaScript 最小化、ローカライゼーションリソースファイルを JSON ファイルにまとめる、必要に応じてデフォルト言語用の HTML ファイルを生成する、といった色々な最適化手順を含みます。</li>
+ <li><strong>webapp-zip</strong>: これは各アプリを別のzipファイルに圧縮して <code>profile/</code> ディレクトリに配置します。</li>
+ <li><strong>optimize-clean</strong>: <code>optimize-clean</code> はデフォルト言語のHTMLファイルをきれいにします。</li>
+ <li><strong>contacts</strong>: <code>GAIA_DISTRIBUTION_DIR </code>に存在すれば、事前読込された連絡先ファイルをプロファイルにコピーします</li>
+ <li><strong>extensions</strong>: <code>GAIA_DIR/tools/extensions</code> 内の拡張機能をプロファイルディレクトリにコピーします; 別の設定のセットアップは別の拡張機能のコピー指定を可能にします。</li>
+ <li><strong>installed-extensions.json (additional-extensions.js)</strong>: 最終的に、このスクリプトが追加拡張機能をプロファイルディレクトリにダウンロードします。</li>
+</ol>
+
+<h2 id="アプリ用のビルドスクリプト">アプリ用のビルドスクリプト</h2>
+
+<p>デフォルトでは、アプリのビルドスクリプト <span style="font-family: courier new,andale mono,monospace; line-height: 1.5;">[アプリディレクトリ]/build/build.js</span><span style="line-height: 1.5;"> がある場合、app.js によって実行されます。$APP/build/build.js がない場合、app.js はアプリを build_stage にコピーします。</span></p>
+
+<p>アプリディレクトリ内のファイルは、アプリのビルドスクリプトによってbuild_stage ディレクトリにコピーされるべきです、なぜなら app.js はアプリのビルドスクリプトがある場合はそれらをコピーしないからです。例えばカレンダーアプリに build/build.js があって、カレンダーアプリ用の build.js によって<a href="https://github.com/mozilla-b2g/gaia/blob/a0fa29db8e9e15afe3b1787bf494caa86a033f10/apps/calendar/build/build.js#L8">utils.copyToStage() が呼ばれるべきです。</a></p>
+
+<div class="note">
+<p><strong>記</strong>: アプリケーション外部のソース (shared/ の中のような) のために、index.html の&lt;head&gt; 内のコメントの中に入れておく必要があって、それにより、shared/ がアプリ内にコピーされるようになります。</p>
+</div>
+
+<p> </p>
+
+<p>アプリ用のビルドスクリプトは $GAIA_DIR/build 内の全ビルドモジュールが必要で、特にアプリのビルドに便利なユーティリティモジュールが要ります。モジュールを取得するのに require('utils') を使えます。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8651/flow-diagram.png" style="height: 952px; width: 1004px;"></p>
+
+<h2 id="設定をカスタマイズする">設定をカスタマイズする</h2>
+
+<p>カスタム設定があると気づいた場合、端末に書き込む時間をそれぞれセットする必要があり、<code>custom-prefs.js</code> というファイルを<code>build/config</code> ディレクトリ内に作ってその中におく事ができます。これで上書きされてソース制御外になるのを防止できます。</p>
+
+<p>ここに便利な設定があります:</p>
+
+<pre class="brush: js">// this enables marionette which lets you run performance tests
+// see https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Gaia_performance_tests
+user_pref("marionette.defaultPrefs.enabled", true);
+
+// this sets the port for remote debugging your application on the device
+user_pref("devtools.debugger.remote-port", 60000);
+
+// this enables the remote debugger
+user_pref("devtools.debugger.remote-enabled", true);
+
+// this outputs debug information about the Radio Interface Layer in logcat
+user_pref("ril.debugging.enabled", true);
+</pre>
+
+<p>このファイルはプロファイル生成するたびに読み込まれます。全て確実に生成させるのに最も安全な方法は、最初にプロファイルを消す事です:</p>
+
+<pre class="brush: bash">rm -rf profile &amp;&amp; make profile</pre>
+
+<p>それで <code>install-gaia</code> ゴールを安全に使えます。</p>
+
+<h2 id="FAQ">FAQ</h2>
+
+<h3 id="焼き込み後に端末が黒いままになる">焼き込み後に端末が黒いままになる</h3>
+
+<p>これは端末がアイドル時に焼き込みした場合に時々起こりえます。これを治療するには単にコマンドラインで次のコマンドを使って B2G を再起動します:</p>
+
+<pre class="brush: bash">adb shell stop b2g &amp;&amp; adb shell start b2g</pre>
+
+<p> </p>
+
+<div id="divLookup" style="background-color: transparent; color: #000000; position: absolute; top: 5161px; left: 906px; padding: 0px; border-radius: 2px;"><img></div>

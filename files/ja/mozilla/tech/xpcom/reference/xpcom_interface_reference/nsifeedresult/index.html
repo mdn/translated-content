@@ -1,0 +1,105 @@
+---
+title: nsIFeedResult
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsIFeedResult
+tags:
+  - Interfaces
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIFeedResult
+---
+<p><code>nsIFeedResult</code> インタフェースは HTTP へのアクセスと、フィードあるいはエントリのメタデータのパースを提供します。</p>
+
+<p><br>
+ </p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/feeds/public/nsIFeedResult.idl" rel="custom">toolkit/components/feeds/public/nsIFeedResult.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">最終更新: Gecko 1.8.1 (Firefox 2 / Thunderbird 2 / SeaMonkey 1.1)</span></div>
+</div>
+
+<p>継承元: <code><a href="ja/NsISupports">nsISupports</a></code></p>
+
+<h2 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E6.A6.82.E8.A6.81" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E6.A6.82.E8.A6.81">メソッドの概要</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="#registerExtensionPrefix.28.29">registerExtensionPrefix</a>(in AString namespace, in AString prefix);</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id=".E5.B1.9E.E6.80.A7" name=".E5.B1.9E.E6.80.A7">属性</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">属性</td>
+   <td class="header">型</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code>bozo</code></td>
+   <td><code>boolean</code></td>
+   <td>フィードが XML パース中に深刻なエラーを引き起こすと、フィードプロセッサは <code>bozo</code> ビットを設定します。エラーが発生する前にパースされたフィードのメタデータとエントリがあるかもしれません。</td>
+  </tr>
+  <tr>
+   <td><code>doc</code></td>
+   <td><code><a href="ja/NsIFeedContainer">nsIFeedContainer</a></code></td>
+   <td>パースされたフィードあるいはエントリ。フィードでないものが処理された場合は <code>null</code> です。</td>
+  </tr>
+  <tr>
+   <td><code>headers</code></td>
+   <td><code><a href="ja/NsIProperties">nsIProperties</a></code></td>
+   <td>フィードに伴って発生する HTTP レスポンスヘッダ。</td>
+  </tr>
+  <tr>
+   <td><code>stylesheet</code></td>
+   <td><code><a href="ja/NsIURI">nsIURI</a></code></td>
+   <td>フィードのソースを変換するために利用可能な <a href="ja/XSLT">XSLT</a> スタイルシート。いくつかのフィードは処理命令 (processing instruction)にこの情報を含んでいます。それは一般に特定のフィードで動作するように設計されたクライアントで使うことが意図されています。</td>
+  </tr>
+  <tr>
+   <td><code>uri</code></td>
+   <td><code><a href="ja/NsIURI">nsIURI</a></code></td>
+   <td>取り込んだフィードのアドレス。</td>
+  </tr>
+  <tr>
+   <td><code>version</code></td>
+   <td><code><a href="ja/AString">AString</a></code></td>
+   <td>フィードのバージョン; フィードでないものが処理された場合は <code>null</code> です。値は以下のどれか一つになります:
+    <blockquote>atom, rss2, rss09, rss091, rss091userland, rss092, rss1, atom03, atomEntry, rssItem</blockquote>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89">メソッド</h2>
+
+<h3 id="registerExtensionPrefix.28.29" name="registerExtensionPrefix.28.29">registerExtensionPrefix()</h3>
+
+<p>フィードあるいはエントリの<span style="color: darkgreen; background: #ef9;">【訳注: RSS また Atom の】</span>拡張にアクセスするために使われる名前空間の接頭辞を登録する。</p>
+
+<div class="warning"><strong>警告:</strong> このメソッドは現時点では実装されていません。</div>
+
+<pre class="eval"> void registerExtensionPrefix(
+   in AString namespace,
+   in AString prefix
+ );
+</pre>
+
+<h6 id=".E3.83.91.E3.83.A9.E3.83.A1.E3.83.BC.E3.82.BF" name=".E3.83.91.E3.83.A9.E3.83.A1.E3.83.BC.E3.82.BF">パラメータ</h6>
+
+<dl>
+ <dt>namespace</dt>
+ <dd>拡張の名前空間;prefix</dd>
+ <dd>拡張にアクセスするために使われる接頭辞</dd>
+</dl>
+
+<h2 id=".E5.8F.82.E7.85.A7" name=".E5.8F.82.E7.85.A7">参照</h2>
+
+<p><a href="ja/NsISupports">nsISupports</a>, <a href="ja/NsIFeedContainer">nsIFeedContainer</a>, <a href="ja/NsIURI">nsIURI</a>, <a href="ja/NsIProperties">nsIProperties</a></p>

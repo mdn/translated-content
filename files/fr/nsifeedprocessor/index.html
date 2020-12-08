@@ -1,0 +1,99 @@
+---
+title: nsIFeedProcessor
+slug: nsIFeedProcessor
+tags:
+  - Interfaces
+  - Référence_de_l'API_XPCOM
+  - 'XPCOM:Références'
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIFeedProcessor
+---
+<p>
+</p><p>L'interface <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFeedProcessor" title="">nsIFeedProcessor</a></code> analyse les flux RSS ou Atom, déclenchant des rappels suivant leur contenu, pendant et après leur analyse.
+</p><p><br>
+</p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/feeds/public/nsIFeedProcessor.idl" rel="custom">toolkit/components/feeds/public/nsIFeedProcessor.idl</a></code><span style="text-align: right; float: right;"><a href="/fr/docs/Interfaces/À_propos_des_interfaces_scriptables" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">Last changed in Gecko 1.8.1 (Firefox 2 / Thunderbird 2 / SeaMonkey 1.1)</span></div>
+</div>
+<p></p><p>Hérité de : <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIStreamListener" title="">nsIStreamListener</a></code>
+</p><p>Implémentée par : <code>@mozilla.org/feed-processor;1</code>. Pour créer une instance, utilisez :
+</p>
+<pre class="eval">var fp = Components.classes["@mozilla.org/feed-processor;1"]
+                   .createInstance(Components.interfaces.nsIFeedProcessor);
+</pre>
+<h2 id="Synoptique">Synoptique</h2>
+<table class="standard-table"> <tbody><tr>
+<td> <code>void <a href="#parseAsync.28.29">parseAsync</a>(in nsIRequestObserver requestObserver, in nsIURI uri);</code>
+</td></tr>
+<tr>
+<td> <code>void <a href="#parseFromStream.28.29">parseFromStream</a>(in nsIInputStream stream, in nsIURI uri);</code>
+</td></tr>
+<tr>
+<td> <code>void <a href="#parseFromString.28.29">parseFromString</a>(in AString str, in nsIURI uri);</code>
+</td></tr>
+</tbody></table>
+<h2 id="Attributs">Attributs</h2>
+<table class="standard-table"> <tbody><tr>
+<td class="header">Attribut
+</td><td class="header">Type
+</td><td class="header">Description
+</td></tr> <tr>
+<td><code>listener</code>
+</td><td><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFeedResultListener" title="">nsIFeedResultListener</a></code>
+</td><td> Le destinataire des évènements fournis par l'analyseur de flux.
+</td></tr>
+</tbody></table>
+<h2 id="Méthodes">Méthodes</h2>
+<h3 id="parseAsync()">parseAsync()</h3>
+<p>Analyse un flux de façon asynchrone. L'appelant doit ensuite appeler la méthode <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIStreamListener" title="">nsIStreamListener</a></code> du processeur pour piloter le processus d'analyse. Vous ne devez appeler aucune autre méthode d'analyse sur l'interface <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFeedProcessor" title="">nsIFeedProcessor</a></code> pendant une analyse asynchrone.
+</p>
+<pre class="eval"> void parseAsync(
+   in nsIRequestObserver requestObserver,
+   in nsIURI uri
+ );
+</pre>
+<h6 id="Paramètres">Paramètres</h6>
+<dl><dt>&lt;tt&gt;requestObserver&lt;/tt&gt;
+</dt><dd>L'observateur à prévenir lorsque l'analyse commence et s'arrête. <code>null</code> est une valeur acceptée.
+</dd><dt>&lt;tt&gt;uri&lt;/tt&gt;
+</dt><dd>L'URI de base par rapport à laquelle toutes les autres URI du flux seront résolues.
+</dd></dl>
+<h3 id="parseFromStream()">parseFromStream()</h3>
+<p>Analyse un flux depuis une <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsInputStream" title="">nsInputStream</a></code>.
+</p>
+<pre class="eval"> void parseFromStream(
+   in nsIInputStream stream,
+   in nsIURI uri
+ );
+</pre>
+<h6 id="Paramètres_2">Paramètres</h6>
+<dl><dt>&lt;tt&gt;stream&lt;/tt&gt;
+</dt><dd> Un pointeur vers le <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsInputStream" title="">nsInputStream</a></code> depuis lequel lire et analyser le flux.
+</dd><dt>&lt;tt&gt;uri&lt;/tt&gt;
+</dt><dd> L'URI de base par rapport à laquelle toutes les autres URI du flux seront résolues.
+</dd></dl>
+<h3 id="parseFromString()">parseFromString()</h3>
+<p>Analyse un flux depuis une <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/AString" title="">AString</a></code>.
+</p>
+<pre class="eval"> void parseFromString(
+   in AString str,
+   in nsIURI uri
+ );
+</pre>
+<h6 id="Paramètres_3">Paramètres</h6>
+<dl><dt>&lt;tt&gt;str&lt;/tt&gt;
+</dt><dd> La chaîne à analyser comme un flux.
+</dd><dt>&lt;tt&gt;uri&lt;/tt&gt;
+</dt><dd> L'URI de base par rapport à laquelle toutes les autres URI du flux seront résolues.
+</dd></dl>
+<h2 id="Voir_également">Voir également</h2>
+<p><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIStreamListener" title="">nsIStreamListener</a></code>, <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFeedResultListener" title="">nsIFeedResultListener</a></code>
+</p><p><br>
+<span>Liens Interwikis</span>
+</p>

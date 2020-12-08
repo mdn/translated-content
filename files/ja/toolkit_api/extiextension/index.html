@@ -1,0 +1,75 @@
+---
+title: extIExtension
+slug: Toolkit_API/extIExtension
+tags:
+  - FUEL
+  - Interfaces
+  - SMILE
+  - STEEL
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/Toolkit_API/extIExtension
+---
+<div>
+  <div class="blockIndicator standardNote">
+<p>この記事は <a href="https://developer.mozilla.org/ja/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a>  の新機能について述べています</p>
+</div></div>
+<p><code>extIExtension</code> インタフェースは、拡張機能の情報を提供します。<code>extIExtension</code> は <code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/exthelper/extIApplication.idl" rel="custom">toolkit/components/exthelper/extIApplication.idl</a></code> で定義されています。</p>
+<p>XPCOM サービスを通して実装された <a href="/ja/docs/Toolkit_API/extIApplication" title="Toolkit API/extIApplication"><code>extIApplication</code></a>: <a href="/ja/docs/Toolkit_API/FUEL" title="Toolkit_API/FUEL">FUEL</a> (Firefox) または <a href="/ja/docs/Toolkit_API/STEEL" title="Toolkit_API/STEEL">STEEL</a> (Thunderbird)、<a href="/ja/docs/Toolkit_API/SMILE" title="Toolkit_API/SMILE">SMILE</a> (SeaMonkey) のページの説明を参照してください。</p>
+<h2 id="Method_overview" name="Method_overview">メソッドの概要</h2>
+<p>---</p>
+<h2 id="Attributes" name="Attributes">プロパティ</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">プロパティ</td>
+   <td class="header">型</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code>id</code></td>
+   <td><code>readonly attribute AString</code></td>
+   <td>拡張機能の id</td>
+  </tr>
+  <tr>
+   <td><code>name</code></td>
+   <td><code>readonly attribute AString</code></td>
+   <td>拡張機能の名前</td>
+  </tr>
+  <tr>
+   <td><code>enabled</code></td>
+   <td><code>readonly attribute boolean</code></td>
+   <td>拡張機能が有効の場合は <code>true</code> を返す</td>
+  </tr>
+  <tr>
+   <td><code>version</code></td>
+   <td><code>readonly attribute AString</code></td>
+   <td>拡張機能のバージョン番号</td>
+  </tr>
+  <tr>
+   <td><code>firstRun</code></td>
+   <td><code>readonly attribute boolean</code></td>
+   <td>拡張機能をインストールした後の初回起動かどうかを示す</td>
+  </tr>
+  <tr>
+   <td><code>prefs</code></td>
+   <td><code>readonly attribute <a href="/ja/docs/Toolkit_API/extIPreferenceBranch" title="FUEL/PreferenceBranch">extIPreferenceBranch</a></code></td>
+   <td>拡張機能の設定オブジェクト。デフォルトでは "extensions.&lt;extensionid&gt;." ブランチ</td>
+  </tr>
+  <tr>
+   <td><code>storage</code></td>
+   <td><code>readonly attribute <a href="/ja/docs/Toolkit_API/extISessionStorage" title="FUEL/SessionStorage">extISessionStorage</a></code></td>
+   <td>拡張機能のストレージオブジェクト</td>
+  </tr>
+  <tr>
+   <td><code>events</code></td>
+   <td><code>readonly attribute extIEvents</code></td>
+   <td>拡張機能のイベントオブジェクト。 "uninstall" をサポート。</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Methods" name="Methods">メソッド</h2>
+<p>---</p>
+<h2 id="See_also" name="See_also">関連情報</h2>
+<p><code>firstRun</code> の実装については、<a href="http://lxr.mozilla.org/mozilla/source/toolkit/components/exthelper/extApplication.js#395">extApplication.js line:395</a> を参照してください。拡張機能の設定ブランチ下の <code>"install-event-fired"</code> 設定 (extensions.YOUR_EXTENSION_ID.install-event-fired) の値は、拡張機能がインストールされた後、false に設定されます。テスト中は、この設定を about:config で変更する必要があるでしょう。</p>
+<p><a href="/ja/docs/Toolkit_API/FUEL" title="Toolkit_API/FUEL">FUEL</a> (Firefox)、 <a href="/ja/docs/Toolkit_API/STEEL" title="Toolkit_API/STEEL">STEEL</a> (Thunderbird)、 <a href="/ja/docs/Toolkit_API/SMILE" title="Toolkit_API/SMILE">SMILE</a> (SeaMonkey) のページも参照してください。</p>

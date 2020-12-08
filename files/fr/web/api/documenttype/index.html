@@ -1,0 +1,205 @@
+---
+title: DocumentType
+slug: Web/API/DocumentType
+tags:
+  - API
+  - DOM
+  - DocumentType
+  - Interface
+translation_of: Web/API/DocumentType
+---
+<div>{{APIRef("DOM")}}</div>
+
+<p>L'interface <strong><code>DocumentType</code></strong> représente un nœud ({{domxref("Node")}}) contenant un <em>doctype</em>.</p>
+
+<p>{{InheritanceDiagram}}</p>
+
+<h2 id="Propriétés">Propriétés</h2>
+
+<p><em>Cette interface hérite de propriétés de la part de son parent, {{domxref("Node")}}, et implémente l'interface {{domxref("ChildNode")}}.</em></p>
+
+<dl>
+ <dt>...</dt>
+ <dt>{{domxref("DocumentType.entities")}} {{readonlyInline}} {{obsolete_Inline}}</dt>
+ <dd>Une {{domxref ("NamedNodeMap")}} des entités déclarées dans la DTD. Chaque noeud de cette carte implémente l'interface {{domxref ("Entity")}}.</dd>
+ <dt>{{domxref("DocumentType.internalSubset")}} {{readonlyInline}} {{obsolete_Inline}}</dt>
+ <dd>Un {{domxref ("DOMString")}} du sous-ensemble interne, ou null s'il n'y en a pas. Par exemple "&lt;! ELEMENT foo (bar)"&gt;</dd>
+ <dt>{{domxref("DocumentType.name")}} {{readonlyInline}}</dt>
+ <dd>une {{domxref("DOMString")}}, par exemple, <code>"html"</code> pour <code>&lt;!DOCTYPE HTML&gt;</code>.</dd>
+ <dt>{{domxref("DocumentType.notations")}} {{readonlyInline}} {{obsolete_Inline}}</dt>
+ <dd>une {{domxref ("NamedNodeMap")}} avec les notations déclarées dans la DTD. Chaque nœud de cette carte implémente l'interface {{domxref ("Notation")}}.</dd>
+ <dt>{{domxref("DocumentType.publicId")}} {{readonlyInline}}</dt>
+ <dd>une {{domxref("DOMString")}}, par exemple <code>"-//W3C//DTD HTML 4.01//EN"</code>, chaîne vide pour HTML5.</dd>
+ <dt>{{domxref("DocumentType.systemId")}} {{readonlyInline}}</dt>
+ <dd>une {{domxref("DOMString")}}, par exemple, <code>"http://www.w3.org/TR/html4/strict.dtd"</code>, chaîne vide pour HTML5.</dd>
+</dl>
+
+<h2 id="Méthodes">Méthodes</h2>
+
+<p><em>Cette interface hérite de méthodes de la part de son parent, {{domxref("Node")}}, et implémente l'interface {{domxref("ChildNode")}}.</em></p>
+
+<dl>
+ <dt>{{domxref("ChildNode.remove()")}} {{experimental_inline}}</dt>
+ <dd>Cette méthode retire l'objet de la liste des enfants de son élément parent.</dd>
+</dl>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Spécification</th>
+   <th scope="col">État</th>
+   <th scope="col">Commentaires</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM WHATWG', '#documenttype', 'DocumentType')}}</td>
+   <td>{{Spec2('DOM WHATWG')}}</td>
+   <td>Implémente désormais l'interface {{domxref("ChildNode")}}.<br>
+    Retrait des propriétés <code>internalSubset</code>, <code>entities</code> et <code>notation</code>.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM3 Core', 'core.html#ID-412266927', 'DocumentType')}}</td>
+   <td>{{Spec2('DOM3 Core')}}</td>
+   <td>Aucune modification depuis {{SpecName('DOM2 Core')}}.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM2 Core', 'core.html#ID-412266927', 'CharacterData')}}</td>
+   <td>{{Spec2('DOM2 Core')}}</td>
+   <td>Ajout des propriétés <code>publicID</code>, <code>systemID</code>  et <code>internalSubset</code>.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM1', 'level-one-core.html#ID-412266927', 'CharacterData')}}</td>
+   <td>{{Spec2('DOM1')}}</td>
+   <td>Définition initiale.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Fonctionnalité</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>1.0</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop("1.0")}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>entities</code> and <code>notations</code></td>
+   <td>1.0<sup>[1]</sup></td>
+   <td>{{CompatVersionUnknown}}<sup>[3]</sup></td>
+   <td>{{CompatGeckoDesktop("1.0")}}<br>
+    {{CompatNo}}{{CompatGeckoDesktop("6.0")}}</td>
+   <td>{{CompatVersionUnknown}}<sup>[3]</sup></td>
+   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>internalSubset</code></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatNo}} (not anymore in any case)</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td>Implements {{domxref("ChildNode")}}</td>
+   <td>29.0</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop("25.0")}}<sup>[2]</sup></td>
+   <td>{{CompatNo}}</td>
+   <td>16.0</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Fonctionnalité</th>
+   <th>Android</th>
+   <th>Edge</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("1.0")}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>entities</code> and <code>notations</code></td>
+   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("1.0")}}<br>
+    {{CompatNo}}{{CompatGeckoMobile("6.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>internalSubset</code></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td>Implements {{domxref("ChildNode")}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("25.0")}}<sup>[2]</sup></td>
+   <td>{{CompatNo}}</td>
+   <td>16.0</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+</div>
+
+<div id="compat-mobile"></div>
+
+<p>[1] Le projet Chromium prévoit d'abandonner la prise en charge des propriétés <code>internalSubset</code>, <code>entities</code> et <code>notations</code>.</p>
+
+<p>[2] Firefox 25 ajouta également les propriétés <code>previousElementSibling</code> et <code>nextElementSibling</code>. Celles-ci furent retirées à partir de Firefox 28 pour des raisons de compatibilité.</p>
+
+<p>[3] Les propriétés <code>entities</code> et <code>notations</code> existent dans IE et Edge, mais semblent toujours être  <code>null</code>?</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="/fr/docs/Web/API/Document_Object_Model">L'index des interfaces du DOM</a></li>
+ <li>{{domxref("Entity")}}</li>
+ <li>{{domxref("Notation")}}</li>
+</ul>

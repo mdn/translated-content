@@ -1,0 +1,253 @@
+---
+title: Positionnement des éléments
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Positionnement_des_éléments
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Element_Positioning
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Le_modèle_de_boîte" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Détails_sur_le_modèle_de_boîte">Suivant  »</a></p>
+</div>
+
+<p>Ici nous apprendrons à contrôler la position et la taille d'un élément.</p>
+
+<h2 id="Positionnement_des_.C3.A9l.C3.A9ments_de_bo.C3.AEte" name="Positionnement_des_.C3.A9l.C3.A9ments_de_bo.C3.AEte">Positionnement des éléments de boîte</h2>
+
+<p>Jusqu'ici, nous avons appris à placer des éléments horizontalement ou verticalement à l'intérieur d'une boîte. Nous aurons souvent besoin d'un meilleur contrôle sur la position et la taille des éléments à l'intérieur d'une boîte. Pour cela, nous devons d'abord comprendre le fonctionnement d'une boîte.</p>
+
+<p>La position d'un élément est déterminée par le style de mise en plage de son conteneur. Par exemple, la position d'un bouton dans une boîte horizontale est à droite du bouton précédent, s'il y en a plusieurs. La dimension d'un élément est déterminée par deux facteurs, la place que cet élément cherche à occuper et la taille que vous avez spécifiée. La taille qu'un élément cherche à avoir est déterminée par son contenu. Par exemple, la largeur d'un bouton est déterminée par la quantité de texte à l'intérieur du bouton.</p>
+
+<p>Un élément sera généralement juste assez large pour les besoins de l'affichage de son contenu, et pas plus large. Quelques éléments, tels que les boîtes de textes, utiliseront une taille par défaut. Une boîte aura la largeur nécessaire à l'affichage des éléments qu'elle contient. Une boîte horizontale contenant trois boutons aura la largeur de ces trois boutons, plus la marge.</p>
+
+<p>Dans l'image ci-dessous, les deux premiers boutons ont la taille suffisante à l'affichage de leur texte. Le troisième bouton est plus large parce que son contenu est plus grand. La largeur de la boîte contenant les boutons correspond au total des largeurs de ces boutons plus la marge entre eux. La hauteur des boutons est une taille adaptée à l'affichage du texte.</p>
+
+<p><img alt="Image:xultu_boxstyle1n.png" class="internal" src="/@api/deki/files/1505/=Xultu_boxstyle1n.png"></p>
+
+<h3 id="Attributs_de_largeur_et_de_hauteur" name="Attributs_de_largeur_et_de_hauteur">Attributs de largeur et de hauteur</h3>
+
+<p>Vous pourriez avoir besoin de mieux contrôler la taille d'un élément dans une fenêtre. Plusieurs dispositifs vous permettent de contrôler la dimension d'un élément. La méthode la plus rapide est d'ajouter simplement les attributs <code id="a-width"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/width">width</a></code> et <code id="a-height"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/height">height</a></code> sur un élément, un peu comme vous le feriez avec la balise HTML <code>img</code>. Voir l'exemple ci-dessous :</p>
+
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_1.xul">Voir</a></p>
+
+<pre>&lt;button label="OK" width="100" height="40"/&gt;</pre>
+
+<p>Cependant, il n'est pas recommandé de procéder ainsi. Cette méthode n'est pas vraiment portable et peut ne pas s'adapter à certains thèmes. Une meilleure méthode consiste à utiliser des propriétés de style, dont le fonctionnement est similaire aux feuilles de styles du HTML. Les propriétés CSS suivantes peuvent être utilisées.</p>
+
+<dl>
+ <dt><code id="a-width"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/width">width</a></code> </dt>
+ <dd>Ceci indique la largeur d'un élément.</dd>
+ <dt><code id="a-height"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/height">height</a></code> </dt>
+ <dd>Ceci indique la hauteur d'un élément.</dd>
+</dl>
+
+<p>En plaçant l'une ou l'autre de ces deux propriétés, l'élément sera créé avec cette largeur et cette hauteur. Si vous spécifiez seulement une de ces deux propriétés, l'autre est calculée en fonction de ses propres besoins. La valeur de ces propriétés de style doit être définie par un nombre suivi d'une unité de mesure.</p>
+
+<h3 id=".C3.89l.C3.A9ments_flexibles" name=".C3.89l.C3.A9ments_flexibles">Éléments flexibles</h3>
+
+<p>Les dimensions des éléments non flexibles sont assez faciles à calculer. Elles correspondent simplement aux largeurs et de hauteurs spécifiées, ou si ces valeurs ne sont pas définies, elles sont ajustées par défaut au contenu. Pour les éléments flexibles, le calcul est légèrement plus savant.</p>
+
+<p>Les éléments flexibles sont ceux qui ont un attribut <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code> dont la valeur est supérieure à 0. Rappelez-vous que les éléments flexibles s'étirent et s'élargissent pour remplacer l'espace vide. Leurs tailles par défaut restent calculées de la même façon que les éléments non flexibles. Considérez l'exemple suivant :</p>
+
+<p><span id="Exemple_2"><a id="Exemple_2"></a><strong>Exemple 2</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_2.xul">Voir</a></p>
+
+<pre>&lt;window orient="horizontal"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;box&gt;
+   &lt;button label="Oui" flex="1"/&gt;
+   &lt;button label="Non"/&gt;
+   &lt;button label="Je ne connais pas vraiment cette manière ou l'autre"/&gt;
+&lt;/box&gt;
+</pre>
+
+<p>La fenêtre apparaîtra initialement comme sur l'image précédente. Les deux premiers boutons seront dimensionnés à une largeur par défaut convenable et le troisième bouton sera plus large parce que son libellé est plus long. Le premier bouton est flexible et les trois éléments ont été placés à l'intérieur d'une boîte. La largeur de la boîte correspondra à la largeur totale des trois boutons (environs 515 pixels dans l'image).</p>
+
+<p>Si vous augmentez la largeur de la fenêtre, une vérification de la flexibilité des éléments est effectuée afin d'assurer le remplissage de l'espace libre à afficher. Le bouton est le seul élément flexible, mais il ne s'élargira pas plus, parce que la boîte contenant le bouton n'est pas flexible. Un élément inflexible ne change jamais de taille même lorsque de l'espace est disponible, c'est pourquoi le bouton ne s'agrandit pas non plus. Ainsi, le bouton ne pourra pas s'élargir.</p>
+
+<p>La solution est de rendre la boîte flexible également. De cette façon, quand vous élargirez la fenêtre, de l'espace supplémentaire sera disponible, et la boîte s'élargira alors pour remplir cet espace supplémentaire. Puisque la boîte est plus grande, une plus grande quantité d'espace libre est créée à l'intérieur de celle-ci, et le bouton flexible qu'elle contient s'élargira pour occuper l'espace disponible. Ce processus est répété pour toutes les boîtes présentes, autant de fois que nécessaire.</p>
+
+<h2 id="R.C3.A9glage_des_tailles_minimales_et_maximales" name="R.C3.A9glage_des_tailles_minimales_et_maximales">Réglage des tailles minimales et maximales</h2>
+
+<p>Vous pouvez autoriser un élément à être flexible tout en limitant ses dimensions de sorte à certaines valeurs. À l'inverse, vous pouvez définir des dimensions minimales. Ce comportement se définit par les quatre attributs suivants :</p>
+
+<dl>
+ <dt><code id="a-minwidth"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/minwidth">minwidth</a></code> </dt>
+ <dd>Ceci indique la largeur minimale que l'élément peut posséder.</dd>
+ <dt><code id="a-minheight"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/minheight">minheight</a></code> </dt>
+ <dd>Ceci indique la hauteur minimale que l'élément peut posséder.</dd>
+ <dt><code id="a-maxwidth"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/maxwidth">maxwidth</a></code> </dt>
+ <dd>Ceci indique la largeur minimale que l'élément peut posséder.</dd>
+ <dt><code id="a-maxheight"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/maxheight">maxheight</a></code> </dt>
+ <dd>Ceci indique la hauteur minimale que l'élément peut posséder.</dd>
+</dl>
+
+<p>Les valeurs sont toujours mesurées en pixels. Vous pouvez également employer les propriétés CSS correspondantes, <code>min-width</code>, <code>min-height</code>, <code>max-width</code> et <code>max-height</code>.</p>
+
+<p>Ces propriétés ne sont utiles que pour des éléments flexibles. En plaçant une hauteur maximale, par exemple, un bouton extensible s'étirera seulement jusqu'à cette hauteur maximale. Vous pourrez toujours agrandir la fenêtre au-delà de ce point mais la taille du bouton cessera de s'accroître. La boîte dans laquelle le bouton se trouve continuera également à s'agrandir, à moins que vous ne définissiez aussi une hauteur maximale pour la boîte.</p>
+
+<p>Si deux boutons sont flexibles, ils se partageront normalement tous les deux la quantité d'espace disponible. Si un bouton a une largeur maximale, le second devrait continuer de s'agrandir en prenant tout l'espace restant.</p>
+
+<p>Si une boîte a une largeur ou une hauteur maximale, les enfants ne peuvent pas se développer au-delà de cette taille maximale. Si une boîte a une largeur ou une taille minimale, les enfants ne peuvent pas rétrécir au-delà de cette taille minimale.</p>
+
+<h3 id="Exemples_de_r.C3.A9glage_de_largeurs_et_de_hauteurs" name="Exemples_de_r.C3.A9glage_de_largeurs_et_de_hauteurs">Exemples de réglage de largeurs et de hauteurs</h3>
+
+<pre>&lt;button label="1" style="width: 100px;"/&gt;
+&lt;button label="2" style="width: 100em; height: 10px;"/&gt;
+&lt;button label="3" flex="1" style="min-width: 50px;"/&gt;
+&lt;button label="4" flex="1" style="min-height: 2ex; max-width: 100px"/&gt;
+&lt;textbox flex="1" style="max-width: 10em;"/&gt;
+&lt;description style="max-width: 50px"&gt;Ceci est quelque peu ennuyant mais c'est un texte s'étalant simplement.&lt;/description&gt;
+</pre>
+
+<dl>
+ <dt>Exemple 1 </dt>
+ <dd>Le premier bouton sera affiché avec une largeur de 100 pixels (le <code>px</code> signifie pixels). Vous devez ajouter l'unité, ou la largeur définie sera ignorée.</dd>
+ <dt>Exemple 2 </dt>
+ <dd>Le deuxième bouton sera affiché avec une hauteur de dix pixels et une largeur de 100 em (un <code>em</code> correspond à la taille d'un caractère dans la police courante).</dd>
+ <dt>Exemple 3 </dt>
+ <dd>Le troisième bouton flexible s'agrandira en se basant sur la taille de la boîte qui le contient. Cependant, le bouton ne rétrécira jamais au-dessous de 50 pixels. D'autres composants flexibles tels que des éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/spacers" title="spacers">spacers</a></code> absorberont l'espace restant, brisant ainsi le rapport de flexibilité.</dd>
+ <dt>Exemple 4 </dt>
+ <dd>Le quatrième bouton est flexible et n'aura jamais une hauteur inférieure à 2 ex (un <code>ex</code> correspond habituellement à la taille de la lettre x dans la police courante) ou une largeur supérieure à 100 pixels.</dd>
+ <dt>Exemple 5 </dt>
+ <dd>Le champ de saisie de texte est flexible mais sa largeur ne sera jamais supérieure à 10 em. Vous employerez souvent les ems quand vous préciserez les tailles des champs de saisie de texte en fonction du texte qu'ils contiennent. Cette unité est utile pour des champs de saisie de texte qui peuvent ainsi s'adapter à la police de caractères utilisée, même si la police est très grande.</dd>
+ <dt>Exemple 6 </dt>
+ <dd>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/description" title="description">description</a></code> est limité à 50 pixels en largeur maximale. À l'intérieur, une césure du texte sur la ligne suivante interviendra après 50 pixels.</dd>
+</dl>
+
+<div class="highlight">
+<h3 id="Notre_exemple_de_recherche_de_fichiers" name="Notre_exemple_de_recherche_de_fichiers">Notre exemple de recherche de fichiers</h3>
+
+<p>Ajoutons quelques-uns de ces styles à notre exemple de fenêtre de recherche de fichiers. Nous le ferons de telle manière que le champ de saisie de texte s'étire pour remplir entièrement la fenêtre.</p>
+
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxstyle.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxstyle.xul">Voir</a></p>
+
+<pre>&lt;textbox id="find-text" '''flex="1" style="min-width: 15em;"'''/&gt;</pre>
+
+<div class="float-right"><img alt="Image:xultu_boxstyle1.png" class="internal" src="/@api/deki/files/1504/=Xultu_boxstyle1.png"></div>
+
+<p>Ici, le champ de saisie de texte a été rendu flexible. De cette façon, il s'agrandira si l'utilisateur change la taille de la fenêtre. C'est utile si l'utilisateur veut saisir une longue chaîne de caractères. En outre, une largeur minimale de 15 em a été définie de sorte que le champ de saisie de texte affiche toujours au moins 15 caractères. Si l'utilisateur redimensionne la fenêtre en diminuant sa taille, le champ de saisie de texte ne se rétrécira pas en-dessous de 15 em. Il sera dessiné comme s'il se prolongait au-delà du bord de la fenêtre. Notez que sur l'image, le champ de saisie de texte s'est étiré de façon à occuper toute la largeur de la fenêtre.</p>
+</div>
+
+<h2 id="Empaquetage_de_bo.C3.AEte" name="Empaquetage_de_bo.C3.AEte">Empaquetage de boîte</h2>
+
+<p>Nous avons une boîte avec deux éléments enfants, qui ne sont pas flexibles, mais dans la boîte qui est flexible. Par exemple :</p>
+
+<p><span id="Exemple_3"><a id="Exemple_3"></a><strong>Exemple 3</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_3.xul">Voir</a></p>
+
+<pre>&lt;box flex="1"&gt;
+   &lt;button label="Heureux"/&gt;
+   &lt;button label="Triste"/&gt;
+&lt;/box&gt;
+</pre>
+
+<p>Si vous redimensionnez la fenêtre, la boîte s'étirera pour s'ajuster à la taille de la fenêtre. Les boutons n'étant pas flexibles, leur largeur ne changera pas. Le résultat est qu'un espace supplémentaire apparaîtra sur le côté droit de la fenêtre, à l'intérieur de la boîte. Cependant, vous pouvez désirer que l'espace supplémentaire apparaisse plutôt sur le côté gauche alors que les boutons restent alignés sur la droite de la fenêtre.</p>
+
+<p>Vous pouvez réaliser cela en plaçant un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code> à l'intérieur de la boîte, mais cela peut rendre le code confus quand vous devez le faire plusieurs fois. Une meilleure solution est d'utiliser l'attribut <code id="a-pack"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/pack">pack</a></code> sur la boîte. Cet attribut indique comment empaqueter les éléments enfants à l'intérieur d'une boîte. Pour des boîtes orientées horizontalement, il contrôle le positionnement horizontal des enfants. Pour les boîtes orientées verticalement, il contrôle le positionnement vertical des enfants. Vous pouvez utilisez les valeurs suivantes :</p>
+
+<dl>
+ <dt>start </dt>
+ <dd>Ceci positionne les éléments sur le bord gauche pour les boîtes horizontales et sur le bord haut pour les boîtes verticales. C'est la valeur par défaut.</dd>
+ <dt>center </dt>
+ <dd>Ceci centre les éléments enfants dans la boîte.</dd>
+ <dt>end </dt>
+ <dd>Ceci positionne les éléments sur le bord droit pour les boîtes horizontales et sur le bord bas pour les boîtes verticales.</dd>
+</dl>
+
+<p>L'attribut <code id="a-pack"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/pack">pack</a></code> s'applique à la boîte contenant les éléments à empaqueter et non aux éléments eux-mêmes.</p>
+
+<p>Nous pouvons modifier l'exemple précédent pour centrer les éléments de cette façon :</p>
+
+<p><span id="Exemple_4"><a id="Exemple_4"></a><strong>Exemple 4</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_4.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_4.xul">Voir</a></p>
+
+<pre>&lt;box flex="1" pack="center"&gt;
+   &lt;button label="Heureux"/&gt;
+   &lt;button label="Triste"/&gt;
+&lt;/box&gt;
+</pre>
+
+<p>Maintenant, lorsque la fenêtre est redimensionnée, les boutons sont centrés horizontalement. Comparez ce comportement à celui de l'exemple précédent.</p>
+
+<h2 id="Alignement_de_bo.C3.AEte" name="Alignement_de_bo.C3.AEte">Alignement de boîte</h2>
+
+<p>Si vous redimensionnez horizontalement la fenêtre dans l'exemple « Heureux-Triste », la boîte devrait s'élargir. Si vous redimensionnez verticalement la fenêtre, vous noterez que les boutons sont étirés. Ceci est dû à la flexibilité qui est affectée par défaut à l'autre direction.</p>
+
+<p>Vous pouvez contrôler ce comportement avec l'attribut <code id="a-align"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/align">align</a></code>. Pour les boîtes horizontales, il contrôle le positionnement vertical des enfants. Pour les boîtes verticales, il contrôle le positionnement horizontal des enfants. Les valeurs possibles sont similaires à celles de l'attibut <code id="a-pack"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/pack">pack</a></code>.</p>
+
+<dl>
+ <dt>start </dt>
+ <dd>Ceci aligne les éléments le long du bord haut pour les boîtes horizontales et le long du bord gauche pour les boîtes verticales.</dd>
+ <dt>center </dt>
+ <dd>Ceci centre les éléments enfants dans la boîte.</dd>
+ <dt>end </dt>
+ <dd>Ceci aligne les éléments le long du bord bas pour les boîtes horizontales et le long du bord droit pour les boîtes verticales.</dd>
+ <dt>baseline </dt>
+ <dd>Ceci aligne les éléments et le texte. Il est utilisable seulement avec des boîtes horizontales.</dd>
+ <dt>stretch </dt>
+ <dd>Cette valeur, affectée par défaut, provoque l'agrandissement des éléments proportionnellement à la taille de la boîte, un peu à la façon d'un élément flexible, mais dans la direction opposée.</dd>
+</dl>
+
+<p>Comme avec l'attribut <code id="a-pack"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/pack">pack</a></code>, l'attribut <code id="a-align"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/align">align</a></code> s'applique à la boîte contenant les éléments à aligner et non aux éléments eux-mêmes.</p>
+
+<p>Dans l'exemple ci-dessous, la première boîte aura ses enfants étirés, car c'est le comportement par défaut. La seconde boîte a un attribut <code id="a-align"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/align">align</a></code>, c'est pourquoi ses enfants sont placés au centre.</p>
+
+<p><span id="Exemple_5"><a id="Exemple_5"></a><strong>Exemple 5</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_5.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_5.xul">Voir</a></p>
+
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;window id="yesno" title="Question" orient="horizontal"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+  &lt;hbox&gt;
+    &lt;button label="Oui"/&gt;
+    &lt;button label="Non"/&gt;
+  &lt;/hbox&gt;
+  &lt;hbox align="center"&gt;
+    &lt;button label="Peut-être"/&gt;
+    &lt;button label="Il se peut"/&gt;
+  &lt;/hbox&gt;
+
+&lt;/window&gt;
+</pre>
+
+<div class="float-right"><img alt="Image:xultu_boxstyle2-b.png" class="internal" src="/@api/deki/files/1506/=Xultu_boxstyle2-b.png"></div>
+
+<p>Vous pouvez aussi utiliser les propriétés de style <a href="/fr/CSS/-moz-box-pack" title="fr/CSS/-moz-box-pack">-moz-box-pack</a> et <a href="/fr/CSS/-moz-box-pack" title="fr/CSS/-moz-box-pack">-moz-box-align</a> à la place des attributs indiqués.</p>
+
+<div class="note">Vous pouvez trouver l'<a class="external" href="http://developer.mozilla.org/samples/xultu/examples/aligner.xul">exemple d'alignement de boîte</a> pratique pour tester les différentes propriétés de boîte (<abbr title="Note du Traducteur">NdT</abbr> : vous pouvez aussi voir une <a class="external" href="http://xulfr.org/sources/tutoriel/boite/boite.xul">autre démonstration du même genre sur xulfr</a>).</div>
+
+<h2 id="Coupure_du_texte_et_des_boutons" name="Coupure_du_texte_et_des_boutons">Coupure du texte et des boutons</h2>
+
+<p>Vous pouvez potentiellement créer un élément bouton qui contient un libellé plus large que la largeur maximale du bouton. Bien sûr, une solution serait d'augmenter la taille du bouton. Cependant, les boutons (et les autres éléments avec un libellé) ont un attribut spécial appelé <code id="a-crop"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/crop">crop</a></code> qui vous permet d'indiquer de quelle manière le texte doit être traité s'il est trop grand.</p>
+
+<p>Si le texte est coupé, un point de suspension (…) apparaît sur le bouton où le texte a été enlevé. Quatre valeurs sont valides :</p>
+
+<dl>
+ <dt>left </dt>
+ <dd>Le texte est coupé sur son côté gauche.</dd>
+ <dt>right </dt>
+ <dd>Le texte est coupé sur son côté droit.</dd>
+ <dt>center </dt>
+ <dd>Le texte est coupé au milieu.</dd>
+ <dt>none </dt>
+ <dd>Le texte n'est pas coupé. C'est la valeur par défaut.</dd>
+</dl>
+
+<p>Cet attribut est vraiment utile quand une boîte de dialogue a été conçue pour être utilisable à n'importe quelle taille. L'attribut <code id="a-crop"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/crop">crop</a></code> peut aussi être utilisé avec les autres éléments qui utilisent un attribut <code id="a-label"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/label">label</a></code> en tant que libellé. L'exemple suivant montre l'utilisation de cet attribut :</p>
+
+<p><span id="Exemple_6"><a id="Exemple_6"></a><strong>Exemple 6</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_6.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_6.xul">Voir</a></p>
+
+<div class="float-right"><img alt="Image:xultu_boxstyle2.png" class="internal" src="/@api/deki/files/1507/=Xultu_boxstyle2.png"></div>
+
+<pre>&lt;button label="Pressez moi, s'il vous plait !" crop="right" flex="1"/&gt;</pre>
+
+<p>Notez comment le texte sur le bouton voit son côté droit coupé si la fenêtre est réduite.</p>
+
+<hr>
+<p>Dans la prochaine section, nous ferons un petit résumé et décrirons quelques détails supplémentaires concernant le modèle de boîte.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Le_modèle_de_boîte" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Détails_sur_le_modèle_de_boîte">Suivant  »</a></p>
+</div>

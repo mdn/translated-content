@@ -1,0 +1,51 @@
+---
+title: アプリの統計情報
+slug: Archive/Mozilla/Marketplace/Publishing/Managing_your_apps/App_Statistics
+translation_of: Archive/Mozilla/Marketplace/Publishing/Managing_your_apps/App_Statistics
+---
+<div class="summary">
+ <p>Firefox Marketplace では、提供されたアプリに関して、さまざまな統計情報を利用できます。<span class="seoSummary">こ のページでは、アプリに関する Firefox Marketplace の統計情報にアクセスする方法、レポートデータの表示、およびレポート内の特定の情報を分析するためのオプション、利用できるレポートの種類、およびエク スポートされたレポートデータの使用方法について説明します。</span></p>
+</div>
+<h2 id="アプリの統計情報へのアクセス">アプリの統計情報へのアクセス</h2>
+<p>公開しているアプリの統計情報を表示するには、Firefox Marketplace で <b>[</b><strong>Developer Hub]</strong>、<b>[</b><strong>My Submissions]</strong> の順に開きます。公開している各アプリに対して、(1) <strong><b>[</b>Statistics]</strong> リンクが表示されます。</p>
+<p><img alt="In My Submissions, for each published app you will find a link to the app's stats page" src="https://mdn.mozillademos.org/files/8281/Stats%20link.png" style="width: 990px; height: 210px;"></p>
+<h2 id="レポートの基礎知識">レポートの基礎知識</h2>
+<p>アプリの <b>[</b><strong>Statistics]</strong> リンクを開くと、<strong>統計ダッシュボード</strong> (下図参照) が起動し、使用できる統計レポートを視覚的に要約したページが表示されます。</p>
+<p><img alt="The stats dashboard provides a visual summary of your app's stats and links to the 5 reports" src="https://mdn.mozillademos.org/files/8285/Stats%20Dashboard.png" style="width: 1041px; height: 723px;"></p>
+<p>このページから、次のレポートを開くことができます。</p>
+<ul>
+ <li><strong>Installs</strong>:完了したアプリのインストール数</li>
+ <li><strong>Visits</strong>:アプリの Marketplace 公開ページへのアクセス数</li>
+ <li><strong>Ratings</strong>: アプリに対する評価数</li>
+ <li><strong>Abuse Reports</strong>:  アプリに対する不正レポート数</li>
+ <li><strong>Average Rating</strong>: アプリに対する通算平均評価</li>
+</ul>
+<p>各レポートは、下に示す同一の基本的な構造に従っています。</p>
+<p><img alt="All reports follow the same basic structure with date selector, region selector (Installs report only) graph, JSON export option and daily summary." src="https://mdn.mozillademos.org/files/8287/Report%20layout%20overview.png" style="width: 1045px; height: 1026px;"></p>
+<ol>
+ <li>日付の選択: レポートの開始日と終了日を設定するためのボックスです</li>
+ <li>地域の選択 (Installs レポートのみ) レポートの対象を全世界とするか、特定の国または地域とするかを選択します
+  <div class="warning">
+   この記事の執筆時点では、この機能はバグの修正作業の一環としてデータを蓄積する間、無効になっています。 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1028448">Bug 1028448 </a>を参照してください。</div>
+ </li>
+ <li>[Update] ボタン: 現在の日付と地域の条件に基づいて、レポートの内容を更新します</li>
+ <li>日別のアクティビティのグラフ</li>
+ <li>JSON エクスポートオプション</li>
+ <li>日別のアクティビティの代替グラフ</li>
+</ol>
+<h2 id="エクスポートデータの使用">エクスポートデータの使用</h2>
+<p>データをエクスポートして、スプレッドシートアプリケーションで使用する必要が生じる場合があります。しかし、主流のスプレッドシートアプリケー ション (Microsoft Excel、Apple iWorks Numbers、OpenOffice Calc) は、どれも JSON 形式のデータをインポートする機能がありません。これを解決するためには、JSON のエクスポートファイルを CSV に変換します。これにより、ほとんどのスプレッドシートアプリケーションにデータをインポートできるようになります。JSON から CSV への変換には、複数のオンラインオプションがあります。次に例を示します。</p>
+<ul>
+ <li><a href="http://www.convertcsv.com/json-to-csv.htm">Convert JSON to CSV</a> は、ファイルや貼り付けたテキストを、さまざまな CSV 出力オプション (区切り文字をコロンやセミコロンなどに変更するなど) を使用して変換し、変換されたデータをテキスト表示や CSV ファイルのダウンロードとして出力します。</li>
+ <li><a href="https://json-csv.com/">JSON to CSV - Online converter</a> は、ファイルや貼り付けたテキストを、さまざまな CSV 出力オプション (カンマ、タブ、セミコロンなど) を使用して変換し、変換されたデータを書式化された表形式で表示したり、CSV ファイルのダウンロードとして出力したりします。変換された JSON データへの固定リンクを作成することができます。無料バージョンは、1 MB 未満のソースファイルにのみ対応します。</li>
+ <li><a href="http://konklone.io/json/">JSON to CSV</a> では、表示されるデータページやデータ表に JSON データを貼り付けると、CSV ファイルとしてダウンロードできるようになります。必要に応じて、JSON / ページへの固定リンクを作成することもできます。ソースコードは、<a href="https://github.com/konklone/json"> GitHub でホスト</a>され、プロジェクトの背景情報が作成者の<a href="http://sunlightfoundation.com/blog/2014/03/11/making-json-as-simple-as-a-spreadsheet/">ブログ</a>で紹介されています。</li>
+</ul>
+<p>また、次のリソースでは、さまざまなスプレッドシートアプリケーションへの自動インポート処理を作成するためのコードが提供されています。</p>
+<ul>
+ <li>Excel
+  <ul>
+   <li><a href="https://code.google.com/p/vba-json/">VBA-JSON</a></li>
+   <li><a href="http://www.ediy.co.nz/vbjson-json-parser-library-in-vb6-xidc55680.html">VB-JSON</a></li>
+  </ul>
+ </li>
+</ul>

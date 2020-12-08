@@ -1,0 +1,101 @@
+---
+title: 高度なウィザード
+slug: Archive/Mozilla/XUL/Tutorial/More_Wizards
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/More_Wizards
+---
+<p>
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Creating_a_Wizard" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Overlays">次のページ  »</a></p>
+</div>
+<p>このセクションでは、いくつかのウィザードの付加的な機能について説明していきます。
+</p>
+<h3 id=".E8.A4.87.E9.9B.91.E3.81.AA.E3.83.8A.E3.83.93.E3.82.B2.E3.83.BC.E3.82.B7.E3.83.A7.E3.83.B3" name=".E8.A4.87.E9.9B.91.E3.81.AA.E3.83.8A.E3.83.93.E3.82.B2.E3.83.BC.E3.82.B7.E3.83.A7.E3.83.B3"> 複雑なナビゲーション </h3>
+<p>通常、ウィザードでは <code><code><a href="/ja/docs/Mozilla/Tech/XUL/wizardpage" title="wizardpage">wizardpage</a></code></code> を、XUL ファイルに記述された順に表示します。
+しかしながら、場合によっては、利用者がそれまでのページで選択した内容によって、
+ウィザードの異なるページを表示させたいこともあると思います。
+</p><p>このためには、まず各ページに <code>pageid</code> 属性を置くことで、
+それぞれに識別子を設定する必要があります。
+次に、以下の 2 つの方法のいずれかを使用して、ページの移動を行います。
+</p>
+<ol><li> 各ページに <code>next</code> 属性を置いて、次に移動するページのページ ID を設定します。 必要ならば、この属性を変更することで、移動するページを変更することも可能です。
+</li><li> ウィザードの <code>goTo()</code> メソッドを呼び出します。 このメソッドは、引数として移動するページのページ ID を 1 つ取ります。 このメソッドは <code>onpageadvanced</code> や <code>onwizardnext</code> のようなハンドラから呼び出すことも可能です。 ただし、この場合 <code>goTo()</code> によるページ移動が上書きされないように、ハンドラには false を返して、デフォルトのページ移動を抑止する必要があります。 また、<code>goTo()</code> メソッドによるページ変更のために、イベントが再送出されることも覚えておいてください。 このため、ハンドラでは再送出されたイベントを適切に処理する必要があります。
+</li></ol>
+<p>以下に、一連のウィザードページの例を示します。
+(内部のコンテンツは除いてあります)
+</p>
+<pre>&lt;wizardpage pageid="type" next="font"&gt;
+&lt;wizardpage pageid="font" next="done"&gt;
+&lt;wizardpage pageid="color" next="done"&gt;
+&lt;wizardpage pageid="done"&gt;
+</pre>
+<ul><li> ウィザードは、常に最初のページから始まります。 この例の場合は、ページ ID が <code>type</code> のページです。 次のページには、ページ ID が <code>font</code> のページが指定されているため、ウィザードは、次にそのページに移動します。
+</li><li> ページ ID が <code>font</code> のページでは、次のページどして <code>done</code> が指定されているため、次は、そのページが表示されることになります。
+</li><li> ページ ID が、<code>done</code> のページは <code>next</code> 属性が設定されていないため、最後のページになります。
+</li></ul>
+<p>なお、ページ ID が、<code>color</code> のページに移動する必要があるときには、
+スクリプトにより、必要に応じて <code>next</code> 属性の調整を行います。
+</p>
+<h3 id=".E3.82.A6.E3.82.A3.E3.82.B6.E3.83.BC.E3.83.89.E9.96.A2.E6.95.B0" name=".E3.82.A6.E3.82.A3.E3.82.B6.E3.83.BC.E3.83.89.E9.96.A2.E6.95.B0"> ウィザード関数 </h3>
+<p>ウィザードは、<a href="ja/XUL_Tutorial/Tabboxes">タブ付きパネル</a>と良く似た動作をします。
+主な相違点は、タブが表示されないことと、利用者が下部のボタンを使用してページ間を移動することぐらいです。
+ウィザードは、全てのページが同じ XUL ファイル上に記述されることになるため、
+表示時には、全てのページの全フィールド値が、常に保持されることになります。
+このため、ページを移動するときに、情報をロードしたりセーブしたりする必要がありません。
+</p><p>しかしながら、いくつかのフィールドの検査については、各ページで行いたいと思うかもしれません。
+このためには、前のセクションで説明したハンドラが使用できます。
+これを利用して、フィールドの値が不適当だった場合には、アラートの表示を行うのが常套ではありますが、
+場合によっては、正しい入力が行われるまで、「次へ (<span style="color: green;">Next</span>)」ボタンを<span style="border-bottom: 1px dashed green;" title="disable">無効</span>にしておく方がよい場合もあると思います。
+</p><p>ウィザードのプロパティの <code>canAdvance</code> に true を設定することで「次へ」ボタンが有効であることを指示できます。
+ここに false を設定すると「次へ」ボタンは無効化されます。
+このプロパティは、ページに入力されたデータが不適切になったか、あるいは適切になったことを検出したとき、変更することが可能です。
+</p>
+<h4 id=".E3.82.A6.E3.82.A3.E3.82.B6.E3.83.BC.E3.83.89.E3.81.AE.E4.BE.8B" name=".E3.82.A6.E3.82.A3.E3.82.B6.E3.83.BC.E3.83.89.E3.81.AE.E4.BE.8B"> ウィザードの例 </h4>
+<p>以下の例では、利用者は、ウィザードの最初のページで、テキスト入力欄にシークレットコードを入力しなければなりません。
+<code>checkCode()</code> 関数は、<code>onpageshow</code> 属性で指定されているため、最初のページが表示されるときには常に呼び出されます。
+また、この関数はテキスト入力欄でキーが押されるたびにも呼び出されて、
+「次へ」ボタンを再び有効にするかどうかの判定を行います。
+</p><p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advwiz_1.xul.txt">ソース</a>
+</p>
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;wizard id="theWizard" title="Secret Code Wizard"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;script&gt;
+function checkCode(){
+  document.getElementById('theWizard').canAdvance = (document.getElementById('secretCode').value == "cabbage");
+}
+&lt;/script&gt;
+
+  &lt;wizardpage onpageshow="checkCode(); return true;"&gt;
+       &lt;label value="Enter the secret code:"/&gt;
+       &lt;textbox id="secretCode" onkeyup="checkCode();"/&gt;
+  &lt;/wizardpage&gt;
+
+  &lt;wizardpage&gt;
+       &lt;label value="That is the correct secret code."/&gt;
+  &lt;/wizardpage&gt;
+
+&lt;/wizard&gt;
+</pre>
+<p>また、関連するプロパティに、「戻る (<span style="color: green;">Back</span>)」ボタンの有効と無効を切り替えるための <code>canRewind</code> プロパティもあります。
+どちらのプロパティも、ページを移動するたびに自動的に調整されます。
+このため、最初のページで「戻る」ボタンを明示的に無効にする必要はありません。
+</p><p>さらに、ウィザードには、<code>currentPage</code> という便利なプロパティもあります。
+このプロパティは、現在表示されている <code>wizardpage</code> の参照を持っています。
+また、このプロパティを変更することで、現在のページを変更することも可能です。
+なお、このプロパティの変更によりページを変更した場合であっても、
+各種のページ変更イベントは、変わることなく送出されます。
+</p><p>次のセクションでは、共通のコンテントを扱うためのオーバーレイの使い方について見ていきます。
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Creating_a_Wizard" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Overlays">次のページ  »</a></p>
+</div>
+<p><br>
+</p>
+<div class="noinclude">
+</div>

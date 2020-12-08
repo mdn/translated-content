@@ -1,0 +1,478 @@
+---
+title: nsILocalFile
+slug: Mozilla/Tech/XPCOM/Reference/Interface/nsILocalFile
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsILocalFile
+---
+<p> </p>
+
+<div class="note">
+<p>In <span title="(Firefox 14 / Thunderbird 14 / SeaMonkey 2.11)">Gecko 14</span> this Interface was merged into the <code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile" title="">nsIFile</a></code> interface.</p>
+</div>
+
+<p> </p>
+
+<p></p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/xpcom/io/nsILocalFile.idl" rel="custom">xpcom/io/nsILocalFile.idl</a></code><span style="text-align: right; float: right;"><a href="/zh-CN/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">脚本化</a></span></div>
+<span style="padding: 4px 2px;">
+
+This interface adds methods to <code>nsIFile</code> that are particular to a file that is accessible via the local file system.
+</span>
+
+  <div style="height: 42px; position: relative; padding: 2px; width: auto;">
+
+  <div style="top: 22px; font-size: 11px; position: absolute; left: 0px; text-align: right; float: right; width: 100%;">66</div>
+
+<div style="height: 8px; top: 16px; left: 0%; background: #00dd00; position: absolute; width: 25.71428571428571%;" title="Introduced in Gecko 1.0 "></div>
+
+<div style="top: 0px; font-size: 11px; position: absolute; left: 0%;">Introduced</div>
+<div style="top: 22px; font-size: 11px; position: absolute; left: 0%;">Gecko 1.0</div>
+
+    <div style="height: 8px; top: 16px; left: 25.71428571428571%; background: #ff8000; position: absolute; width: 74.28571428571429%;" title="Deprecated in Gecko 14 (Firefox 14 / Thunderbird 14 / SeaMonkey 2.11)"></div>
+
+  <div style="top: 0px; font-size: 11px; position: absolute; left: 25.71428571428571%;">Deprecated</div>
+  <div style="top: 22px; font-size: 11px; position: absolute; left: 25.71428571428571%;">Gecko 14</div>
+
+</div>
+
+<div style="background: #eee; padding: 2px;">
+继承于: <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile" title="">nsIFile</a></code>
+<span style="text-align: right; float: right;">最后修改于Gecko 1.0 </span></div>
+</div><p></p>
+
+<p>Implemented by: <code>@mozilla.org/file/local;1</code>. To create an instance, use:</p>
+
+<pre class="eval">var localFile = Components.classes["@mozilla.org/file/local;1"]
+                .createInstance(Components.interfaces.nsILocalFile);
+</pre>
+
+<h2 id="Method_overview" name="Method_overview">Method overview</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="#appendRelativeNativePath()">appendRelativeNativePath</a>(in ACString relativeFilePath);</code> <span class="inlineIndicator noscript noscriptInline" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#appendRelativePath()">appendRelativePath</a>(in AString relativeFilePath);</code></td>
+  </tr>
+  <tr>
+   <td><code>ACString <a href="#getRelativeDescriptor()">getRelativeDescriptor</a>(in nsILocalFile fromFile);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#initWithFile()">initWithFile</a>(in nsILocalFile aFile);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#initWithNativePath()">initWithNativePath</a>(in ACString filePath);</code> <span class="inlineIndicator noscript noscriptInline" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#initWithPath()">initWithPath</a>(in AString filePath);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#launch()">launch</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>PRLibraryStar <a href="#load()">load</a>();</code> <span class="inlineIndicator noscript noscriptInline" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span></td>
+  </tr>
+  <tr>
+   <td><code>FILE <a href="#openANSIFileDesc()">openANSIFileDesc</a>(in string mode);</code> <span class="inlineIndicator noscript noscriptInline" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span></td>
+  </tr>
+  <tr>
+   <td><code>PRFileDescStar <a href="#openNSPRFileDesc()">openNSPRFileDesc</a>(in long flags, in long mode);</code> <span class="inlineIndicator noscript noscriptInline" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#reveal()">reveal</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#setRelativeDescriptor()">setRelativeDescriptor</a>(in nsILocalFile fromFile, in ACString relativeDesc);</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Attributes" name="Attributes">Attributes</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Attribute</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>diskSpaceAvailable</code></td>
+   <td><code><a href="/zh-cn/PRInt64" title="zh-cn/PRInt64">PRInt64</a></code></td>
+   <td>The number of bytes available to non-superuser on the disk volume containing the <code>nsILocalFile</code>. <strong>Read only.</strong></td>
+  </tr>
+  <tr>
+   <td><code>followLinks</code></td>
+   <td><code><a href="/zh-cn/PRBool" title="zh-cn/PRBool">PRBool</a></code></td>
+   <td>
+    <p>Determines whether or not the <code>nsILocalFile</code> will automatically resolve symbolic links.</p>
+    By default, this value is <code>false</code> on all non-UNIX systems. As of Mozilla 1.7, this attribute is ignored on UNIX systems.</td>
+  </tr>
+  <tr>
+   <td><code>persistentDescriptor</code></td>
+   <td><code><a href="/zh-cn/ACString" title="zh-cn/ACString">ACString</a></code></td>
+   <td>
+    <p>On some platforms, the value of <a href="https://developer.mozilla.org/zh-CN/docs/XPCOM_Interface_Reference/nsIFile#path">nsIFile.path</a> may be insufficient to uniquely identify the file on the local file system. The persistent descriptor is intended to be used whenever a <code>nsILocalFile</code> needs to be serialized to disk and later recovered. This string is not intended for display to users.</p>
+    <div class="blockIndicator note"><strong>Note:</strong> The value of the <code>followLinks</code> attribute is not encoded in the persistent descriptor.</div></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Constants" name="Constants">Constants</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Constant</td>
+   <td class="header">Value</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>DELETE_ON_CLOSE</code></td>
+   <td><code>0x80000000</code></td>
+   <td>Optional parameter used by <code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILocalFile#openNSPRFileDesc()">openNSPRFileDesc()</a></code>. </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Methods" name="Methods">Methods</h2>
+
+<p></p><div><span class="indicatorInHeadline noscript noscriptMethod" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span><h3 id="appendRelativeNativePath">appendRelativeNativePath</h3></div><p></p>
+
+<p>Appends a relative, native character encoding, path to the current path of the <code>nsILocalFile</code> object.</p>
+
+<pre class="eval">void appendRelativeNativePath(
+  in ACString relativeFilePath
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>relativeFilePath</code></dt>
+ <dd>A native relative path. For security reasons, this cannot contain '..' or cannot start with a directory separator '.'. Must be in the native file system character set.</dd>
+</dl>
+
+<h6 id="Exceptions_thrown" name="Exceptions_thrown">Exceptions thrown</h6>
+
+<dl>
+ <dt><code>NS_ERROR_FILE_UNRECOGNIZED_PATH</code></dt>
+ <dd>Indicates that <code>relativeFilePath</code> incorrectly begins with a path separator character or otherwise contains invalid characters.</dd>
+</dl>
+
+<h3 id="appendRelativePath()" name="appendRelativePath()">appendRelativePath()</h3>
+
+<p>Appends a relative native path to the current path of the <code>nsILocalFile</code> object.</p>
+
+<pre class="eval">void appendRelativePath(
+  in AString relativeFilePath
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>relativeFilePath</code></dt>
+ <dd>A native relative path. For security reasons, this cannot contain '..' or cannot start with a directory separator '.' .</dd>
+</dl>
+
+<h6 id="Exceptions_thrown" name="Exceptions_thrown">Exceptions thrown</h6>
+
+<dl>
+ <dt><code>NS_ERROR_FILE_UNRECOGNIZED_PATH</code></dt>
+ <dd>Indicates that <code>relativeFilePath</code> incorrectly begins with a path separator character or otherwise contains invalid characters.</dd>
+</dl>
+
+<h3 id="getRelativeDescriptor()" name="getRelativeDescriptor()">getRelativeDescriptor()</h3>
+
+<p>Returns a relative file path in an opaque, cross platform format. It is therefore not a native path.</p>
+
+<pre class="eval">ACString getRelativeDescriptor(
+  in nsILocalFile fromFile
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>fromFile</code></dt>
+ <dd>The file from which the descriptor is relative. There is no defined result if this parameter is <code>null</code>.</dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value">Return value</h6>
+
+<p>An opaque string value with undefined character encoding. This string is not intended for display to users.</p>
+
+<p>The result returned from this method may be used with <code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILocalFile#setRelativeDescriptor()">setRelativeDescriptor()</a></code> to initialize a <code>nsILocalFile</code> instance.</p>
+
+<h3 id="initWithFile()" name="initWithFile()">initWithFile()</h3>
+
+<p>Initializes this object with another file.</p>
+
+<pre class="eval">void initWithFile(
+  in nsILocalFile aFile
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>aFile</code></dt>
+ <dd>The file this becomes equivalent to.</dd>
+</dl>
+
+<p></p><div><span class="indicatorInHeadline noscript noscriptMethod" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span><h3 id="initWithNativePath">initWithNativePath</h3></div><p></p>
+
+<p>Used to set the full path that this <code>nsILocalFile</code> references. All current settings will be reset.</p>
+
+<pre class="eval">void initWithNativePath(
+  in ACString filePath
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>filePath</code></dt>
+ <dd>A string that specifies a platform-specific, full path to a file or directory. Must be in the native file system character set.</dd>
+</dl>
+
+<h6 id="Exceptions_thrown" name="Exceptions_thrown">Exceptions thrown</h6>
+
+<dl>
+ <dt><code>NS_ERROR_FILE_UNRECOGNIZED_PATH</code></dt>
+ <dd>Indicates that FilePath is not an absolute file path.</dd>
+</dl>
+
+<h3 id="initWithPath()" name="initWithPath()">initWithPath()</h3>
+
+<p>Used to set the full path that this <code>nsILocalFile</code> references. All current settings will be reset.</p>
+
+<pre class="eval">void initWithPath(
+  in AString filePath
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>filePath</code></dt>
+ <dd>A string that specifies a platform-specific, full path to a file or directory.</dd>
+</dl>
+
+<h6 id="Exceptions_thrown" name="Exceptions_thrown">Exceptions thrown</h6>
+
+<dl>
+ <dt><code>NS_ERROR_FILE_UNRECOGNIZED_PATH</code></dt>
+ <dd>Indicates that FilePath is not an absolute file path.</dd>
+</dl>
+
+<h3 id="launch()" name="launch()">launch()</h3>
+
+<p>Requests that the operating system attempt to open this file.</p>
+
+<pre class="eval">void launch();
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<p>None.</p>
+
+<p></p><div><span class="indicatorInHeadline noscript noscriptMethod" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span><h3 id="load">load</h3></div><p></p>
+
+<p>Returns the result of <a href="/zh-cn/PR_LoadLibrary" title="zh-cn/PR LoadLibrary"><code>PR_LoadLibrary()</code></a> on the file. The caller is responsible for calling <a href="/zh-cn/PR_UnloadLibrary" title="zh-cn/PR UnloadLibrary"><code>PR_UnloadLibrary()</code></a> on the result.</p>
+
+<pre class="eval">PRLibraryStar load();
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<p>None.</p>
+
+<h6 id="Return_value" name="Return_value">Return value</h6>
+
+<p>A pointer to a <a href="/zh-cn/PRLibrary" title="zh-cn/PRLibrary"><code>PRLibrary</code></a>.</p>
+
+<h6 id="Example" name="Example">Example</h6>
+
+<pre class="brush: cpp">#include "prlink.h"
+#include "nsError.h"
+#include "nsILocalFile.h"
+
+// Load the DLL corresponding to the given nsILocalFile...
+
+nsresult LoadDLL(nsILocalFile *aLocalFile)
+{
+  PRLibrary *dll;
+  nsresult rv = aLocalFile-&gt;Load(&amp;dll);
+  if (NS_FAILED(rv))
+    return rv;
+
+  // Do something with the library now that it is open...
+
+  PR_FreeLibrary(dll);
+  return NS_OK;
+}
+</pre>
+
+<p></p><div><span class="indicatorInHeadline noscript noscriptMethod" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span><h3 id="openANSIFileDesc">openANSIFileDesc</h3></div><p></p>
+
+<p>Returns the result of <code>fopen()</code> on the file. The caller is responsible for calling <code>fclose()</code> on the result.</p>
+
+<pre class="eval">FILE openANSIFileDesc(
+  in string mode
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>mode</code></dt>
+ <dd>An ANSI file open mode string, which will be passed to <code>fopen()</code>.</dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value">Return value</h6>
+
+<p>A pointer to an ANSI <code>FILE</code> type.</p>
+
+<h6 id="Example" name="Example">Example</h6>
+
+<pre class="brush: cpp">#include &lt;stdio.h&gt;
+#include "nsError.h"
+#include "nsILocalFile.h"
+
+// Read the contents of a nsILocalFile...
+
+nsresult ReadLocalFile(nsILocalFile *aLocalFile)
+{
+  FILE *fp;
+  nsresult rv = aLocalFile-&gt;OpenANSIFileDesc("r", &amp;fp);
+  if (NS_FAILED(rv))
+    return rv;
+
+  char buf[512];
+  size_t n;
+
+  while ((n = fread(buf, sizeof(buf), 1, fp)) &gt; 0)
+  {
+    // Do something with n-byte block of data from file...
+  }
+
+  if (ferror(fp) != 0)
+    rv = NS_ERROR_UNEXPECTED;
+
+  fclose(fp);
+  return rv;
+}
+</pre>
+
+<p></p><div><span class="indicatorInHeadline noscript noscriptMethod" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span><h3 id="openNSPRFileDesc">openNSPRFileDesc</h3></div><p></p>
+
+<p>Returns the result of <a href="/zh-cn/PR_Open" title="zh-cn/PR Open"><code>PR_Open()</code></a> on the file. The caller is responsible for calling <a href="/zh-cn/PR_Close" title="zh-cn/PR Close"><code>PR_Close()</code></a> on the result.</p>
+
+<pre class="eval">PRFileDescStar openNSPRFileDesc(
+  in long flags,
+  in long mode
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>flags</code></dt>
+ <dd>
+ <p>The <a href="/zh-cn/PR_Open" title="zh-cn/PR Open"><code>PR_Open()</code></a> flags from <code><a href="https://dxr.mozilla.org/mozilla-central/source/nsprpub/pr/include/prio.h" rel="custom">nsprpub/pr/include/prio.h</a></code>, plus optionally <code>DELETE_ON_CLOSE</code>. <code>DELETE_ON_CLOSE</code> may be implemented by removing the file (by path name) immediately after opening it, so beware of possible races; the file should be exclusively owned by this process.</p>
+
+ <p>A bitwise combination of the following open flags:</p>
+
+ <ul>
+  <li><code><strong>PR_RDONLY</strong></code> Open for reading only.</li>
+  <li><code><strong>PR_WRONLY</strong></code> Open for writing only.</li>
+  <li><code><strong>PR_RDWR</strong></code> Open for reading and writing.</li>
+  <li><code><strong>PR_CREATE_FILE</strong></code> If the file does not exist, the file is created. If the file exists, this flag has no effect.</li>
+  <li><code><strong>PR_APPEND</strong></code> The file pointer is set to the end of the file prior to each write.</li>
+  <li><code><strong>PR_TRUNCATE</strong></code> If the file exists, its length is truncated to 0.</li>
+  <li><code><strong>PR_SYNC</strong></code> If set, each write will wait for both the file data and file status to be physically updated.</li>
+  <li><code><strong>PR_EXCL</strong></code> With <code>PR_CREATE_FILE</code>, if the file does not exist, the file is created. If the file already exists, no action and null is returned.</li>
+  <li><code><strong>DELETE_ON_CLOSE</strong></code> File will be deleted when closed.</li>
+ </ul>
+ </dd>
+ <dt><code>mode</code></dt>
+ <dd>A UNIX-style file permissions value. For example, the octal value 0600 may be used to limit read and write access to the current user of the system. This parameter may be ignored on systems that do not support file permissions.</dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value">Return value</h6>
+
+<p>If the file is successfully opened, returns a pointer to the <a href="/zh-cn/PRFileDesc" title="zh-cn/PRFileDesc"><code>PRFileDesc</code></a> created for the newly opened file. Returns a null pointer if the open failed.</p>
+
+<h6 id="Example" name="Example">Example</h6>
+
+<pre class="brush: cpp">#include "prio.h"
+#include "nsError.h"
+#include "nsILocalFile.h"
+
+// Read the contents of a nsILocalFile...
+
+nsresult ReadLocalFile(nsILocalFile *aLocalFile)
+{
+  PRFileDesc *fd;
+  nsresult rv = aLocalFile-&gt;OpenNSPRFileDesc(PR_RDONLY, 0, &amp;fd);
+  if (NS_FAILED(rv))
+    return rv;
+
+  char buf[512];
+  PRInt32 n;
+
+  while ((n = PR_Read(fd, buf, sizeof(buf))) &gt; 0)
+  {
+    // Do something with n-byte block of data from file...
+  }
+
+  if (n &lt; 0)
+    rv = NS_ERROR_UNEXPECTED;
+
+  PR_Close(fd);
+  return rv;
+}
+</pre>
+
+<h3 id="reveal()" name="reveal()">reveal()</h3>
+
+<p>Ask the operating system to open the folder which contains this file or folder. This routine only works on platforms which support the ability to open a folder. See the note in the <a href="#Remarks">remarks</a> below.</p>
+
+<pre class="eval">void reveal();
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<p>None.</p>
+
+<h3 id="setRelativeDescriptor()" name="setRelativeDescriptor()">setRelativeDescriptor()</h3>
+
+<p>Initializes the file to the location relative to <code>fromFile</code> using a string returned by <code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILocalFile#getRelativeDescriptor()">getRelativeDescriptor()</a></code>.</p>
+
+<pre class="eval">void setRelativeDescriptor(
+  in nsILocalFile fromFile,
+  in ACString relativeDesc
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>fromFile</code></dt>
+ <dd>The file to which the descriptor is relative.</dd>
+ <dt><code>relativeDesc</code></dt>
+ <dd>The relative descriptor obtained from <code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILocalFile#getRelativeDescriptor()">getRelativeDescriptor()</a></code>.</dd>
+</dl>
+
+<h2 id="Remarks" name="Remarks">Remarks</h2>
+
+<p>The methods <code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILocalFile#initWithNativePath()">initWithNativePath()</a></code> and <code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILocalFile#appendRelativeNativePath()">appendRelativeNativePath()</a></code> take string valued parameters that are encoded using the native character encoding. That means, you cannot deal with files whose name contain characters outside the default code page on Windows even though Windows 2000 or later has no problem with them. Therefore, <strong>never</strong> use these functions unless you are absolutely sure that the path passed to them is <strong>always</strong> ASCII-only. See <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile" title="">nsIFile</a></code> for more information on the native character encoding.</p>
+
+<h2 id="See_also" name="See_also">See also</h2>
+
+<ul>
+ <li><code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile" title="">nsIFile</a></code></li>
+</ul>

@@ -1,0 +1,204 @@
+---
+title: 建立 Gecko SDK
+slug: Mozilla/Tech/XPCOM/Guide/Creating_components/Setting_up_the_Gecko_SDK
+tags:
+  - XPCOM
+  - 所有分类
+translation_of: Mozilla/Tech/XPCOM/Guide/Creating_components/Setting_up_the_Gecko_SDK
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/Creating_XPCOM_Components:Packaging_WebLock" style="float: left;">« 上一页</a><a href="/zh-CN/docs/Creating_XPCOM_Components:Resources">下一页  »</a></p>
+</div><p></p>
+
+<p>这一章提供建立 Gecko SDK 的基本方法, 下面会告诉开发人员如何下载和组织 Gecko SDK, 如何象 <em>WebLock</em> 一样创建一个新的组件工程.</p>
+
+<h3 id=".E4.B8.8B.E8.BD.BD.E5.92.8C.E5.BB.BA.E7.AB.8B_SDK" name=".E4.B8.8B.E8.BD.BD.E5.92.8C.E5.BB.BA.E7.AB.8B_SDK">下载和建立 SDK</h3>
+
+<p>Gecko SDK 提供了编译 XPCOM 组件所需要的所有的工具, 头文件和库. SDK 现在有 Windows 和 Linux 两个版本, 其他操作系统上的 SDK 正在开发. SDK 在下面的地址下载:</p>
+
+<ul>
+ <li>Linux: <a class="external" href="http://ftp.mozilla.org/pub/mozilla/releases/mozilla1.4a/gecko-sdk-i686-pc-linux-gnu-1.4a.tar.gz" rel="freelink">http://ftp.mozilla.org/pub/mozilla/r...nu-1.4a.tar.gz</a></li>
+ <li>Windows: <a class="external" href="http://ftp.mozilla.org/pub/mozilla/releases/mozilla1.4a/gecko-sdk-win32-1.4a.zip" rel="freelink">http://ftp.mozilla.org/pub/mozilla/r...win32-1.4a.zip</a></li>
+</ul>
+
+<p>注意版号要大于1.4a. 可以在下面的地址获取更新的 SDK 版本 <a class="external" href="http://ftp.mozilla.org/pub/mozilla/releases/" rel="freelink">http://ftp.mozilla.org/pub/mozilla/releases/</a>.</p>
+
+<p>一旦你下载了SDK, 你可以解压缩到任何合适的目录. 在本附录中, 我们建立Windows Gecko SDK 到 <code>c:\gecko-sdk\</code>. 如果你选择其他的位置, 记得调整这里描述的设置指向这个位置(e.g., in the <a href="#建立一个Microsoft_visual_cpp工程">建立一个Microsoft visual cpp工程</a> 章节) .</p>
+
+<p>当你解压缩SDK，它的目录结构看起来应该是：</p>
+
+<p><span id="Layout_of_the_Extracted_SDK"><a id="Layout_of_the_Extracted_SDK"></a><strong>Layout of the Extracted SDK</strong></span></p>
+
+<p><img alt="Image:sdk-layout.png" class="internal" src="/@api/deki/files/2682/=Sdk-layout.png"></p>
+
+<p>目录分别代表SDK中的不同模块。例如网络通讯的所有头文件放在<code>necko</code>目录中，而所有XPCOM需要的头文件则放在 XPCOM 目录中。 这个目录结构使得编译脚本变得比较复杂（因为会产生很多include路径）但是他帮助把SKD的部分组织得更有条例。</p>
+
+<p>两组顶级头文件是比较特别的。<code>mozilla-config.h</code>列出了SDK中使用的所有define，在你的文件中包含着个头文件会保证你创建的组件和Gecko库使用的相同的define。注意<code>mozilla-config.h</code>可能需要在你的组件代码中第一个被include.</p>
+
+<p>每一个模块的目录都分成三个子目录：</p>
+
+<p><span id="Module_Subdirectories"><a id="Module_Subdirectories"></a><strong>Module Subdirectories</strong></span></p>
+
+<p><img alt="Image:module-directory-subdirs.png" class="internal" src="/@api/deki/files/2669/=Module-directory-subdirs.png"></p>
+
+<p><code>bin</code>目录包含了静态库，动态库, 和一些可能会在开发中使用的tools。<code>idl</code>目录包含了模块所公开的公共的IDL文件。<code>includes</code>目录包含了你的组件使用的C++头文件。</p>
+
+<p>现在我们应该提到XPCOM公开的一组二进制代码文件。下面的列表罗列了可执行的Windows文件名：</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Application Name</td>
+   <td class="header">Description of functionality</td>
+  </tr>
+  <tr>
+   <td><code>regxpcom.exe</code></td>
+   <td>Registers or Unregisters components with XPCOM</td>
+  </tr>
+  <tr>
+   <td><code>xpidl.exe</code></td>
+   <td>Generates typelib and C++ headers from XPIDL</td>
+  </tr>
+  <tr>
+   <td><code>xpt_dump.exe</code></td>
+   <td>Prints out information about a given typelib</td>
+  </tr>
+  <tr>
+   <td><code>xpt_link.exe</code></td>
+   <td>Combines multiple typelibs into a single typelib</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Library Name</td>
+   <td class="header">Description of functionality</td>
+  </tr>
+  <tr>
+   <td><code>xpcomglue.lib</code></td>
+   <td>XPCOM Glue library to be used by xpcom components.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id=".E7.BC.96.E8.AF.91.E4.B8.80.E4.B8.AA_Microsoft_Visual_Cpp_.E5.B7.A5.E7.A8.8B" name=".E7.BC.96.E8.AF.91.E4.B8.80.E4.B8.AA_Microsoft_Visual_Cpp_.E5.B7.A5.E7.A8.8B">编译一个 Microsoft Visual Cpp 工程</h3>
+
+<p>一担你建立了Gecko SDK，你可以创建一个Miscrosoft visual c++项目来处理你基于SDK的组件开发。</p>
+
+<h4 id=".E5.88.9B.E5.BB.BA.E4.B8.80.E4.B8.AA.E6.96.B0.E7.9A.84.E5.B7.A5.E7.A8.8B" name=".E5.88.9B.E5.BB.BA.E4.B8.80.E4.B8.AA.E6.96.B0.E7.9A.84.E5.B7.A5.E7.A8.8B">创建一个新的工程</h4>
+
+<p>启动Visual c++以后，从文件菜单重选择new。然后在新建对话框中选择"Win32 Dynamic-Link Library"。 使用对话框右边的栏目输入你的项目和位置。(这个例子使用了 "SampleGeckoProject"作为问兼并，位置是<code>C:\</code> ).</p>
+
+<p><span id="New_Dialog"><a id="New_Dialog"></a><strong>New Dialog</strong></span></p>
+
+<p><img alt="Image:new-vcpp-project.png" class="internal" src="/@api/deki/files/2671/=New-vcpp-project.png"></p>
+
+<p>选择OK. 在出现的Win32 Dynamic-Link Library 对话框里, 你可以选择缺省的 "An Empty DLL Project" 作为DLL的类型.</p>
+
+<p><img alt="Image:vcpp-dll-dialog.png" class="internal" src="/@api/deki/files/2690/=Vcpp-dll-dialog.png"></p>
+
+<p>选择Finish. Microsoft Studio 将根据你的设定建立一个新的项目并且展开项目开发视图。</p>
+
+<h4 id=".E6.8A.8A_Gecko_SDK_.E6.B7.BB.E5.8A.A0.E5.88.B0.E5.B7.A5.E7.A8.8B.E8.AE.BE.E7.BD.AE" name=".E6.8A.8A_Gecko_SDK_.E6.B7.BB.E5.8A.A0.E5.88.B0.E5.B7.A5.E7.A8.8B.E8.AE.BE.E7.BD.AE">把 Gecko SDK 添加到工程设置</h4>
+
+<p>为了build使用Gecko的所有信息，你还需要进一步修改项目使得它知道在哪里取得Gecko SDK。为了编辑项目设置, 从项目菜单种选择Settings (or press Alt-F7).</p>
+
+<p>大部分你在下面步骤中所做的修改方法都适用于所有项目设置的修改(包括Debug和Optimize)。选择从Setting菜单中选择"All Configurations"，出现一个下拉菜单：</p>
+
+<p><img alt="Image:vcpp-project-settings.png" class="internal" src="/@api/deki/files/2692/=Vcpp-project-settings.png"></p>
+
+<p>在C/C++ tab，选择Preprocessor组。在这个窗口里你要添加到Gecko SDK的include路径，以及两个 preprocessor defines:</p>
+
+<ul>
+ <li><code>XPCOM_GLUE</code></li>
+ <li><code>MOZILLA_STRICT_API</code></li>
+</ul>
+
+<p>最起码你要加上include <code>nspr</code>, <code>embedstring</code> 和 <code>string</code> <code>include</code>目录, 和<code>xpcom</code> <code>include</code> 子目录. 如果你的组件适用其他SDK的部分（例如Necko), 你也要添加指向他们的路径.</p>
+
+<p>假定你使用例子项目的路径，这些路径看起来会是：</p>
+
+<ul>
+ <li><code>c:\gecko-sdk\embedstring\include</code></li>
+ <li><code>c:\gecko-sdk\xpcom\include</code></li>
+ <li><code>c:\gecko-sdk\nspr\include</code></li>
+ <li><code>c:\gecko-sdk\string\include</code></li>
+</ul>
+
+<p><img alt="Image:vcpp-project-settings-includes.png" class="internal" src="/@api/deki/files/2691/=Vcpp-project-settings-includes.png"></p>
+
+<p>在C++ language组, 禁止异常处理. 正如在 <a href="/cn/XPCOM%E6%A6%82%E8%A7%88/XPCOM%E4%B8%AD%E7%9A%84%E5%BC%82%E5%B8%B8" title="cn/XPCOM概览/XPCOM中的异常">XPCOM中的异常</a>章节所表明的, 异常处理不支持跨越Interface, 所以使用这个功能将可能在开发中引起问题。</p>
+
+<p><strong>WebLock</strong> 组件需要引用必要的库文件以使用XPCOM Glue. 为添加这些库文件，选择Link tab, 然后选择Input category. 在这个面板上不要连接到 <code>nspr</code>， <code>embedstring</code>和<code>xpcom</code>中的子目录<code>include</code> ，而改用<code>bin</code>子目录.</p>
+
+<p>我们也会连接到一些Object/library 模块中的库:</p>
+
+<ul>
+ <li><code>nspr4.lib</code></li>
+ <li><code>plds4.lib</code></li>
+ <li><code>plc4.lib</code></li>
+ <li><code>embedstring.lib</code></li>
+ <li><code>xpcomglue.lib</code></li>
+</ul>
+
+<p>这些设定看起来会是：</p>
+
+<p><img alt="Image:vcpp-project-settings.png" class="internal" src="/@api/deki/files/2692/=Vcpp-project-settings.png"></p>
+
+<p>最后一个你需要让Gecko SDK在你的项目中设定成功的修改是"Use run-time library" 设定为 "Multithreaded DLL." 因为这个设置是根据其他设定而确定的，你<strong>必须设定Release configuration run-time library 为 release multithreaded DLL runtime， 并且Debug configuration 设定为 the debug multithreaded dll runtime</strong> (这个需要澄清一下):</p>
+
+<p><img alt="Image:vcpp-runtime-settings.png" class="internal" src="/@api/deki/files/2693/=Vcpp-runtime-settings.png"></p>
+
+<p>完成所有这些设定后，选择OK. 这就完成了项目设定并且让你的项目能包含和编译XPCOM组件.</p>
+
+<h3 id="Unix_.E4.B8.8B.E7.9A.84.E4.B8.80.E4.B8.AA_Makefile" name="Unix_.E4.B8.8B.E7.9A.84.E4.B8.80.E4.B8.AA_Makefile">Unix 下的一个 Makefile</h3>
+
+<p>Linux 下不采用工程而采用 <code>Makefile</code> 来组织代码. <code>Makefile</code> 中放置编译环境中的编译选项, 包括使用 Gecko SDK 编译的路径和配置更新等.</p>
+
+<p>下面是一个使用 SDK 来编译的 <code>Makefile</code>, 这里对 <code>Makefile</code> 的详细用法不做解释. 它与 Visual C++ 的工程(<a href="#Building_a_Microsoft_Visual_Cpp_Project">Building a Microsoft Visual Cpp Project</a>)相类似, 关于 Makefile 的命令请参看 <a class="external" href="http://www.gnu.org/manual/make/">Make 手册</a>.</p>
+
+<p><span id="Gecko_SDK_%E4%B8%8B%E7%9A%84%E4%B8%80%E4%B8%AA_Makefile_%E4%BE%8B%E5%AD%90"><a id="Gecko_SDK_%E4%B8%8B%E7%9A%84%E4%B8%80%E4%B8%AA_Makefile_%E4%BE%8B%E5%AD%90"></a><strong>Gecko SDK 下的一个 Makefile 例子</strong></span></p>
+
+<pre>CXX   = c++
+
+CPPFLAGS +=     -fno-rtti              \
+                -fno-exceptions        \
+                -shared
+
+# Change this to point at your Gecko SDK directory.
+GECKO_SDK_PATH = /home/dougt/gecko-sdk
+
+# GCC only define which allows us to not have to #include mozilla-config
+# in every .cpp file.  If your not using GCC remove this line and add
+# #include "mozilla-config.h" to each of your .cpp files.
+GECKO_CONFIG_INCLUDE = -include mozilla-config.h
+
+GECKO_DEFINES  = -DXPCOM_GLUE -DMOZILLA_STRICT_API
+
+GECKO_INCLUDES = -I $(GECKO_SDK_PATH)                    \
+                 -I $(GECKO_SDK_PATH)/xpcom/include      \
+                 -I $(GECKO_SDK_PATH)/nspr/include       \
+                 -I $(GECKO_SDK_PATH)/string/include     \
+                 -I $(GECKO_SDK_PATH)/embedstring/include
+
+GECKO_LDFLAGS =  -L $(GECKO_SDK_PATH)/xpcom/bin -lxpcomglue \
+                 -L $(GECKO_SDK_PATH)/nspr/bin -lnspr4      \
+                 -L $(GECKO_SDK_PATH)/nspr/bin -lplds4      \
+                 -L $(GECKO_SDK_PATH)/embedstring/bin/ -lembedstring
+
+build:
+        $(CXX) -o MozShim.so $(GECKO_CONFIG_INCLUDE) $(GECKO_DEFINES) $(GECKO_INCLUDES) $(GECK\
+O_LDFLAGS) $(CPPFLAGS) $(CXXFLAGS) MozShim.cpp
+        chmod +x MozShim.so
+
+clean:
+        rm MozShim.so
+</pre>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/Creating_XPCOM_Components:Packaging_WebLock" style="float: left;">« 上一页</a><a href="/zh-CN/docs/Creating_XPCOM_Components:Resources">下一页  »</a></p>
+</div> <p></p><div class="licenseblock">
+<p>Copyright (c) 2003 by Doug Turner and Ian Oeschger. This material may be distributed only subject to the terms and conditions set forth in the <a class="external" href="http://www.opencontent.org/openpub/" rel="noopener">Open Publication License</a>, v1.02 or later. Distribution of substantively modified versions of this document is prohibited without the explicit permission of the copyright holder. Distribution of the work or derivative of the work in any standard (paper) book form is prohibited unless prior permission is obtained from the copyright holder.</p>
+</div><p></p>

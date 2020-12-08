@@ -1,0 +1,64 @@
+---
+title: More Wizards
+slug: Mozilla/Tech/XUL/Tutorial/More_Wizards
+translation_of: Archive/Mozilla/XUL/Tutorial/More_Wizards
+---
+<div>
+ <div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial/Creating_a_Wizard" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial/Overlays">下一页  »</a></p>
+</div></div>
+<p>This section describes some additional features of wizards.</p>
+<h2 id="More_Complex_Wizard_Navigation" name="More_Complex_Wizard_Navigation">More Complex Wizard Navigation</h2>
+<p>Normally, a wizard displays each <code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/wizardpage" title="wizardpage">wizardpage</a></code></code> in the order that you place them in the XUL file. In some cases however, you may want to have different pages of the wizard appear depending on what the user selects in earlier pages.</p>
+<p>In this case, place a <code>pageid</code> attribute on each of the pages. This should be set to an identifier for each page. Then, to navigate to a page, use one of two methods:</p>
+<ol>
+ <li>Set the <code>next</code> attribute on each page to the page ID of the next page to go to. You can change these attributes as needed to navigate to different pages.</li>
+ <li>Call the wizard's <code>goTo()</code> method. It takes one argument, the page ID of a page to go to. You might call this method in the <code>onpageadvanced</code> or <code>onwizardnext</code> handlers. Remember to return false in this case, because you have already changed the page yourself. Note that the <code>goTo()</code> method, because it causes a page change, will fire the events again, so you'll have to make sure you handle that case.</li>
+</ol>
+<p>For example, here are a set of wizard pages (the inner content has been omitted):</p>
+<pre class="brush:xml">&lt;wizardpage pageid="type" next="font"&gt;
+&lt;wizardpage pageid="font" next="done"&gt;
+&lt;wizardpage pageid="color" next="done"&gt;
+&lt;wizardpage pageid="done"&gt;</pre>
+<ul>
+ <li>The wizard always starts at the first page, which in this case has the page ID <code>type</code>. The next page is the one with the page ID <code>font</code>, so the wizard will navigate to that page next.</li>
+ <li>On the page with the page ID <code>font</code>, we can see that the next page is <code>done</code>, so that page will be displayed afterwards.</li>
+ <li>The page with the page ID <code>done</code> has no <code>next</code> attribute, so this will be the last page.</li>
+</ul>
+<p>A script will adjust the <code>next</code> attributes as necessary to go to the page with the page ID <code>color</code> when needed.</p>
+<h2 id="Wizard_Functions" name="Wizard_Functions">Wizard Functions</h2>
+<p>The wizard works much like a <a href="/en-US/docs/XUL_Tutorial/Tabboxes" title="XUL_Tutorial/Tabboxes">tabbed panel</a>, except that the tabs are not displayed and the user navigates between pages by using the buttons along the bottom. Because all of the pages are part of the same file, all of the values of the fields on all pages will be remembered. Thus, you do not have to load and save information between pages.</p>
+<p>However, you may want to do some validation of each field on each page. For this, use the handlers described in the previous section. If a field is invalid, you might display an alert. In some cases, it would be more convenient to disable the Next button until valid input has been entered.</p>
+<p>The wizard has a property <code>canAdvance</code>, which can be set to true to indicate that the Next button should be enabled. If set to false, the Next button is disabled. You can change the property when invalid or valid data has been entered.</p>
+<p>In the following example, the user must enter a secret code into a textbox on the first page of the wizard. The function checkCode() is called whenever the first page is shown as indicated by the <code>onpageshow</code> attribute. It is also called whenever a key is pressed in the textbox, to determine whether the Next button should be enabled again.</p>
+<h3 id="Wizard_example" name="Wizard_example">Wizard example</h3>
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_advwiz_1.xul.txt">Source</a></p>
+<pre class="brush:xml">&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;wizard id="theWizard" title="Secret Code Wizard"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;script&gt;
+function checkCode(){
+  document.getElementById('theWizard').canAdvance = (document.getElementById('secretCode').value == "cabbage");
+}
+&lt;/script&gt;
+
+  &lt;wizardpage onpageshow="checkCode(); return true;"&gt;
+       &lt;label value="Enter the secret code:"/&gt;
+       &lt;textbox id="secretCode" onkeyup="checkCode();"/&gt;
+  &lt;/wizardpage&gt;
+
+  &lt;wizardpage&gt;
+       &lt;label value="That is the correct secret code."/&gt;
+  &lt;/wizardpage&gt;
+
+&lt;/wizard&gt;</pre>
+<p>There is also a corresponding <code>canRewind</code> property that you can use to enable or disable the Back button. Both properties are adjusted automatically as you switch pages. Thus, the Back button will be disabled on the first page so you don't have to set it yourself.</p>
+<p>Another useful property of the wizard is <code>currentPage</code>, which holds a reference to the currently displayed <code>wizardpage</code>. You can also modify the current page by changing this property. If you do change it, the various page change events will still be fired.</p>
+<p>Next, we'll see how to use overlays to <a href="/en-US/docs/XUL_Tutorial/Overlays" title="XUL_Tutorial/Overlays">handle common content</a>.</p>
+<div>
+ <div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial/Creating_a_Wizard" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial/Overlays">下一页  »</a></p>
+</div></div>

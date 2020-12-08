@@ -1,0 +1,227 @@
+---
+title: nsIDragService
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsIDragService
+tags:
+  - Interfaces
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIDragService
+---
+<div class="blockIndicator draft">
+    <p><strong>草案</strong><br>
+    このページは完成していません。</p>
+
+</div>
+<p><br>
+ </p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/widget/public/nsIDragService.idl" rel="custom">widget/public/nsIDragService.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">最終更新: Gecko 1.9 (Firefox 3)</span></div>
+</div>
+<p>継承元: <a href="ja/NsISupports">nsISupports</a></p>
+<h2 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E6.A6.82.E8.A6.81" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E6.A6.82.E8.A6.81">メソッドの概要</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="#invokeDragSession.28.29">invokeDragSession</a>(in <a href="ja/NsIDOMNode">nsIDOMNode</a> aDOMNode, in <a href="ja/NsISupportsArray">nsISupportsArray</a> aTransferables, in <a href="ja/NsIScriptableRegion">nsIScriptableRegion</a> aRegion, in unsigned long aActionType);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#invokeDragSessionWithImage.28.29">invokeDragSessionWithImage</a>(in <a href="ja/NsIDOMNode">nsIDOMNode</a> aDOMNode, in <a href="ja/NsISupportsArray">nsISupportsArray</a> aTransferableArray, in <a href="ja/NsIScriptableRegion">nsIScriptableRegion</a> aRegion, in unsigned long aActionType,in <a href="ja/NsIDOMNode">nsIDOMNode</a> aImage, in long aImageX, in long aImageY, in <a href="ja/NsIDOMMouseEvent">nsIDOMMouseEvent</a> aDragEvent);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#invokeDragSessionWithSelection.28.29">invokeDragSessionWithSelection</a>(in <a href="ja/NsISelection">nsISelection</a> aSelection, in <a href="ja/NsISupportsArray">nsISupportsArray</a> aTransferableArray, in unsigned long aActionType, in <a href="ja/NsIDOMMouseEvent">nsIDOMMouseEvent</a> aDragEvent);</code></td>
+  </tr>
+  <tr>
+   <td><code>nsIDragSession <a href="#getCurrentSession.28.29">getCurrentSession</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>void<a href="#startDragSession.28.29">startDragSession</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#endDragSession.28.29">endDragSession</a>(in <a href="ja/PRBool">PRBool</a> aDoneDrag);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#fireDragEventAtSource.28.29">fireDragEventAtSource</a>(in unsigned long aMsg);</code> </td>
+  </tr>
+ </tbody>
+</table>
+<h2 id=".E5.AE.9A.E6.95.B0" name=".E5.AE.9A.E6.95.B0">定数</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">定数</td>
+   <td class="header">値</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code>DRAGDROP_ACTION_NONE</code></td>
+   <td>0</td>
+   <td><code>LONG</code> データ形式。</td>
+  </tr>
+  <tr>
+   <td><code>DRAGDROP_ACTION_COPY</code></td>
+   <td>1</td>
+   <td><code>LONG</code> データ形式。</td>
+  </tr>
+  <tr>
+   <td><code>DRAGDROP_ACTION_MOVE</code></td>
+   <td>2</td>
+   <td><code>LONG</code> データ形式。</td>
+  </tr>
+  <tr>
+   <td><code>DRAGDROP_ACTION_LINK</code></td>
+   <td>3</td>
+   <td><code>LONG</code> データ形式。</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89">メソッド</h2>
+<h3 id="invokeDragSession.28.29" name="invokeDragSession.28.29">invokeDragSession()</h3>
+<p>移転可能なオブジェクトの配列を伴った、モーダルなドラッグセッションを開始します。</p>
+<pre class="eval">  void invokeDragSession (
+   in nsIDOMNode aDOMNode,
+   in nsISupportsArray aTransferables,
+   in nsIScriptableRegion aRegion,
+   in unsigned long aActionType
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0" name=".E5.BC.95.E6.95.B0">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aDOMNode&lt;/tt&gt;</dt>
+ <dd>
+   </dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aTransferables&lt;/tt&gt;</dt>
+ <dd>
+  ドラッグされる移転可能なオブジェクトの配列。</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aRegion&lt;/tt&gt;</dt>
+ <dd>
+  カーソルフィードバックの矩形を含む範囲。ウィンドウ座標で指定。</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aActionType&lt;/tt&gt;</dt>
+ <dd>
+  コピー、移動、リンクのうち、いずれが可能かを指定。</dd>
+</dl>
+<h3 id="invokeDragSessionWithImage.28.29" name="invokeDragSessionWithImage.28.29">invokeDragSessionWithImage()</h3>
+<p>画像を利用して、モーダルなドラッグセッションを開始します。最初 4 つの引数は <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/invokeDragSession" title="">invokeDragSession</a></code> と同じです。</p>
+<p><code>aImage</code> 引数を使って独自の画像を指定することができます。画像が指定された場合、<code>aImageX</code> と <code>aImageY</code> 引数で、その画像の中でカーソルが位置するオフセットを指定できます。つまり、画像が表示されたときに、指定された量だけ左上に画像がずらされて、画像内のその位置にカーソルが現れます。<code>aImage</code> が <code>null</code> の場合、<code>aImageX</code> と <code>aImageY</code> は使われず、代わりにソースノードである <code>aDOMNode</code> から画像が判別され、オフセットは自動計算されます。このため、画像の初期位置は、要素が位置するのと同じ画面上の位置になります。ノードはドキュメント内になくてはなりません。</p>
+<p>今のところ、サポートされている画像はすべて DOM ノードです。これが HTML <code>&lt;image&gt;</code> あるいは <code>&lt;canvas&gt;</code> 要素の場合、ドラッグに付随する画像はその画像データから取得されます。要素がドキュメント上にある場合は、画像は表示されているサイズで表示されます。ドキュメント上にない場合は、実際のサイズで表示されます。他の種類の要素については、現在表示されているのと同じ方法で、画面外のバッファとして表示されます。ドキュメント上の選択範囲はドラッグ中非表示となります。画像の位置を計算するのに、イベントの現在の画面座標が必要となるため、<code>aDragEvent</code> は必ず指定する必要があります。</p>
+<pre class="eval">  void invokeDragSessionWithImage(in nsIDOMNode aDOMNode,
+                                  in nsISupportsArray aTransferableArray,
+                                  in nsIScriptableRegion aRegion,
+                                  in unsigned long aActionType,
+                                  in nsIDOMNode aImage,
+                                  in long aImageX,
+                                  in long aImageY,
+                                  in nsIDOMMouseEvent aDragEvent
+  );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_2" name=".E5.BC.95.E6.95.B0_2">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aImage&lt;/tt&gt;</dt>
+ <dd>
+  画像オブジェクト</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aImageX&lt;/tt&gt;</dt>
+ <dd>
+  画像の X 座標</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aImageY&lt;/tt&gt;</dt>
+ <dd>
+  画像の Y 座標</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aDragEvent&lt;/tt&gt;</dt>
+ <dd>
+   </dd>
+</dl>
+<h3 id="invokeDragSessionWithSelection.28.29" name="invokeDragSessionWithSelection.28.29">invokeDragSessionWithSelection()</h3>
+<p>選択範囲をドラッグ画像として利用して、モーダルなドラッグセッションを開始します。画像の位置を計算するのに、イベントの現在の画面座標が必要となるため、<code>aDragEvent</code> は必ず指定する必要があります。</p>
+<pre class="eval">  void invokeDragSessionWithSelection(
+     in nsISelection aSelection,
+     in nsISupportsArray aTransferableArray,
+     in unsigned long aActionType,
+     in nsIDOMMouseEvent aDragEvent
+  );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_3" name=".E5.BC.95.E6.95.B0_3">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aSelection&lt;/tt&gt;</dt>
+ <dd>
+   </dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aTransferableArray&lt;/tt&gt;</dt>
+ <dd>
+   </dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aActionType&lt;/tt&gt;</dt>
+ <dd>
+  コピー、移動、リンクのうち、いずれが可能かを指定。</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aDragEvent&lt;/tt&gt;</dt>
+ <dd>
+   </dd>
+</dl>
+<h3 id="getCurrentSession.28.29" name="getCurrentSession.28.29">getCurrentSession()</h3>
+<p>現在のドラッグセッションを返します。</p>
+<pre class="eval">  nsIDragSession getCurrentSession ( ) ;
+</pre>
+<h3 id="startDragSession.28.29" name="startDragSession.28.29">startDragSession()</h3>
+<p>ドラッグサービスにドラッグセッションを開始するよう伝えます。これは外部でドラッグが発生したときに呼び出されます。</p>
+<pre class="eval">  void startDragSession ( ) ;
+</pre>
+<h3 id="endDragSession.28.29" name="endDragSession.28.29">endDragSession()</h3>
+<p>ドラッグサービスにドラッグセッションを終了するよう伝えます。これは外部でドラッグが発生したときに呼び出されます。</p>
+<pre class="eval">  void endDragSession (
+     in PRBool aDoneDrag
+  ) ;
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_4" name=".E5.BC.95.E6.95.B0_4">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aDoneDrag &lt;/tt&gt; </dt>
+ <dd>
+  <code>aDoneDrag</code> が <code>true</code> の場合、ドラッグはすでに終了しています。そうでない場合、ドラッグはウィンドウを離れたところです。この引数は Firefox 3 以前のバージョンには存在しません。</dd>
+</dl>
+<h3 id="fireDragEventAtSource.28.29" name="fireDragEventAtSource.28.29">fireDragEventAtSource()</h3>
+<p>ドラッグのソースに対してドラッグイベントを発生させます。このメソッドは Firefox 3 以降で利用可能です。</p>
+<pre class="eval">  void fireDragEventAtSource (
+     in unsigned long aMsg
+  );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_5" name=".E5.BC.95.E6.95.B0_5">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aMsg &lt;/tt&gt;</dt>
+ <dd>
+   </dd>
+</dl>
+<div class="noinclude">
+  </div>

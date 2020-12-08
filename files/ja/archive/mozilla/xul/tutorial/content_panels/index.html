@@ -1,0 +1,58 @@
+---
+title: コンテンツパネル
+slug: Archive/Mozilla/XUL/Tutorial/Content_Panels
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Content_Panels
+---
+<div>
+  <div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/Tutorial/Grids" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/Tutorial/Splitters">次のページ  »</a></p>
+</div></div>
+<p>このセクションでは、HTML ページや、他の XUL ファイルを表示できるパネルを追加する方法を見ていきます。</p>
+<h2 id="Adding_Child_Panels" name="Adding_Child_Panels">子パネルを追加する</h2>
+<p>HTML でページを作成する場合に、 <span style="border-bottom: 1px dashed green;" title="document">文書</span> の一部として別のページをロードさせたい場面が、しばしばあると思います。 XUL の場合も、ウィンドウの一部を変更したくなるような場面に、しばしば遭遇することになります。 よい例が対話形式のウィザードです。 これは、いくつかの質問をまとめたスクリーン群を順番に提示していくことで案内する機能です。 利用者が「次へ」ボタンをクリックするたびに、次のウィザードの画面が表示されます。</p>
+<p>個々の画面用に別のウィンドウを開くことにより、ウィザードインタフェースを作ってもかまいませんが、 このアプローチには 3 つ問題があります。 まず考えられるのは、個々のウィンドウが別の位置に表示されるかもしれないということです。 (位置を揃える方法はあるのですが、好ましくありません)。 次は、「戻る」や「次へ」ボタンなどの要素が、インタフェース全体を通して同じものにならないということです。 ウィザードの内容を表示するエリアだけが変更されるようにできれば、さらによいはずです。 最後にあげるのは、別々のウィンドウで実行されるスクリプトを協調して動作させるのは難しいということです。</p>
+<p>XUL には、ウィザードインタフェースを作成するために使う <code><a href="/ja/docs/Mozilla/Tech/XUL/wizard" title="wizard">wizard</a></code> 要素があることを補足しておきます。 これについては、<a href="/ja/docs/XUL/Tutorial/Creating_a_Wizard">後のセクション</a>で述べます。</p>
+<p>もうひとつのアプローチは、<code><a href="/ja/docs/Mozilla/Tech/XUL/iframe" title="iframe">iframe</a></code> 要素を使うことです。 これは、同名の HTML 要素と同様に、ウィンドウ内に異なった文書を作ります。 <code><a href="/ja/docs/Mozilla/Tech/XUL/iframe" title="iframe">iframe</a></code> 要素には、どこにでも置けるということと、その内容を別のファイルからロードできるという利点があります。 <code id="a-src"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/src">src</a></code> 属性で、フレーム内に表示するファイルの URL を設定します。 この URL は、普通は HTML ファイルか XUL ファイルを指しますが、どの種類のファイルを指していてもかまいません。 スクリプトを使って、メインウィンドウに影響を与えることなく、<code><a href="/ja/docs/Mozilla/Tech/XUL/iframe" title="iframe">iframe</a></code> の内容を変更することが可能です。</p>
+<p>Mozilla ブラウザのウィンドウでは、ウェブページが表示されるエリアは、<code><a href="/ja/docs/Mozilla/Tech/XUL/iframe" title="iframe">iframe</a></code> を使って作られています。 ユーザが URL を入力するか、あるいは文書中のリンクをクリックすると、フレームのソースが変更されます。</p>
+<h3 id="iframe_example" name="iframe_example">iframe の使用例</h3>
+<p>以下に、<code><a href="/ja/docs/Mozilla/Tech/XUL/iframe" title="iframe">iframe</a></code> を使う例を示します。</p>
+<p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_cpanels_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_cpanels_1.xul">表示</a></p>
+<pre class="brush:xml">&lt;toolbox&gt;
+  &lt;toolbar id="nav-toolbar"&gt;
+    &lt;toolbarbutton label="Back"　/&gt;
+    &lt;toolbarbutton label="Forward"　/&gt;
+    &lt;textbox id="urlfield"　/&gt;
+  &lt;/toolbar&gt;
+&lt;/toolbox&gt;
+
+&lt;iframe id="content-body" src="http://www.mozilla.org/index.html" flex="1"　/&gt;
+</pre>
+<p>この例では、ウェブブラウザのための非常に簡単なインタフェースを作ります。 作成されるボックスには、2 つの要素 <code><a href="/ja/docs/Mozilla/Tech/XUL/toolbox" title="toolbox">toolbox</a></code> と <code><a href="/ja/docs/Mozilla/Tech/XUL/iframe" title="iframe">iframe</a></code> が含まれています。 Back ボタン、Forward ボタン、URL 入力欄を、ひとつだけあるツールバーに加えています。 (ツールバーについては、<a href="/ja/docs/XUL/Tutorial/Toolbars">後のセクション</a>で説明する予定です)。 ウェブページは、<code><a href="/ja/docs/Mozilla/Tech/XUL/iframe" title="iframe">iframe</a></code> に表示されます。 この例の場合、index.html ファイルがデフォルトで表示されます。</p>
+<p>この例は、まだ完全には機能しません。 次の段階に進めば、<code id="a-src"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/src">src</a></code> 属性を、要求が発生したとき (例えば、利用者が Enter キーを押したとき) に変更するためのスクリプトを加えたくなると思います。</p>
+<h2 id="Browsers" name="Browsers">ブラウザ要素</h2>
+<p>次に、コンテンツパネルの一種として、<code><a href="/ja/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code> タグを使ったものについて説明します。 これは、ブラウザのようにコンテンツを表示するフレームを作りたい場合に使用します。 実際、<code><a href="/ja/docs/Mozilla/Tech/XUL/iframe" title="iframe">iframe</a></code> でも同じことが可能ですが、ブラウザ要素にはたくさんの付加機能が追加されています。 例えば、ブラウザ要素は「戻る」、「進む」ボタンで使うページ履歴を保持します。 また、リファラーや他のフラグの付いたページを読み込むことも可能です。 本質からいって、<code><a href="/ja/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code> タグは、ブラウザ風のインタフェースを作りたいときに使用するべきだと思います。 一方 <code><a href="/ja/docs/Mozilla/Tech/XUL/iframe" title="iframe">iframe</a></code> は、単純なパネルが欲しいときに使用します。</p>
+<p>同様の要素に <code><a href="/ja/docs/Mozilla/Tech/XUL/tabbrowser" title="tabbrowser">tabbrowser</a></code> があります。 これは <code><a href="/ja/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code> の機能に加えて、さらに複数のページを切り替えるためのタブバーも提供しているもので、 Mozilla ブラウザがタブブラウジング・インタフェースとして使っているウィジェットになります。 <code><a href="/ja/docs/Mozilla/Tech/XUL/tabbrowser" title="tabbrowser">tabbrowser</a></code> 要素は、実際には <code>browser</code> 要素の集合を持つ <code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code></code> として実装されています。 どちらのブラウザ要素とも、表示されるページに対して同様のコントロールを提供しています。</p>
+<h3 id="browser_example" name="browser_example">ブラウザ要素の例</h3>
+<p>ブラウザ要素の例を示します。</p>
+<div>
+  <span id="%E4%BE%8B_2"><a id="%E4%BE%8B_2"></a><strong>例 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_cpanels_2.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_cpanels_2.xul">表示</a></div>
+<pre class="brush:xml">&lt;browser src="http://www.mozilla.org" flex="1"　/&gt;
+</pre>
+<p>iframe と同じように、<code id="a-src"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/src">src</a></code> 属性を使って、ブラウザ要素に URL を指定できます。 <code><a href="/ja/docs/Mozilla/Tech/XUL/tabbrowser" title="tabbrowser">tabbrowser</a></code> は、ひとつの URL だけを表示するわけではないので、このように直接 URL を設定することはできません。 代わりにスクリプトを使って <code>loadURI</code> 関数を呼び出す必要があります。</p>
+<p>内部に表示したいコンテンツの種別により、ブラウザ要素には 3 つのクラスがあります。 その型は <code id="a-type"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/type">type</a></code> 属性を使って指定します。 最初の型はデフォルトであり、型を指定しない場合に使用されます。 この場合、ブラウザ要素内に読み込まれるコンテンツは、同じアプリケーションの一部として扱われ、外部のウィンドウにアクセスすることができます。 これは、ブラウザ要素内に読み込まれたスクリプトが、最上位ウィンドウを取得しようとした場合、外側の XUL ウィンドウを得ることになるということです。</p>
+<p>この挙動は、アプリケーションの一部として、子の XUL パネルを作成する場合は適当ですが、ブラウザ要素にウェブページを読み込ませたい場合には適当ではありません。 この場合、読み込まれたウェブページには、そのページのコンテンツへのアクセス許可のみが与えられるように制限したいはずです。 Mozilla ブラウザのウィンドウは、メインエリアを形成する <code><a href="/ja/docs/Mozilla/Tech/XUL/tabbrowser" title="tabbrowser">tabbrowser</a></code> とともに、ツールバーやステータスバー、その他いろいろな XUL で作成された内容を持っていることに注意してみてください。 ウィンドウの内部にあるエリアでウェブページを表示しますが、そのウェブページからは周りの XUL にアクセスすることはできないようになっています。 これは、<code id="a-type"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/type">type</a></code> 属性に <code>content</code> という値を設定することで指定される、ブラウザ要素の第 2 の型を使用しているためです。 この設定によって、コンテンツとして読み込まれた部分から、XUL ウィンドウへ横断的にアクセスされるのを防いでいます。 以下に例を示します。</p>
+<pre class="brush:xml">&lt;browser src="http://www.mozilla.org" type="content" flex="1"　/&gt;
+</pre>
+<div class="note">
+  <b>重要</b> : <code><a href="/ja/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code> 要素の内部にリモートのウェブサイトを表示しようとしているのであれば、<code id="a-type"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/type">type</a></code> 属性を正しく設定しなければなりません。</div>
+<p><code><a href="/ja/docs/Mozilla/Tech/XUL/tabbrowser" title="tabbrowser">tabbrowser</a></code> は、作成するタブブラウザ全てに対して自動的に <code id="a-type"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/type">type</a></code> 属性に <code>content</code> を設定します。 このため、タブブラウザ要素では、明示的に <code id="a-type"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/type">type</a></code> 属性を設定する必要はありません。</p>
+<p>3 番目の型は、ウィンドウが複数のブラウザ要素を含んでいるとき、例えばサイドバーに付加的なコンテンツを表示させているような場合に使用します。 メインとなるブラウザ要素に対して、<code id="a-type"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/type">type</a></code> 属性に <code>content-primary</code> を設定することで、そこで表示されるコンテンツが、そのウィンドウ内での「主となるコンテンツ」であることを示すことができます。 この型を設定されたブラウザ要素は、読み込まれたコンテンツに XUL ウィンドウの「content」プロパティを使ってアクセスできることを除いては、<code>content </code> を設定された場合と同じように動作します。 これは、スクリプトを使った場合に、メインブラウザのコンテンツへのアクセスを容易にします。 <code><a href="/ja/docs/Mozilla/Tech/XUL/tabbrowser" title="tabbrowser">tabbrowser</a></code> 要素では、表示状態に切り替えられたブラウザ要素に対して自動的に <code id="a-type"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/type">type</a></code> 属性に <code>content-primary</code> を設定します。 これは、XUL ウィンドウの <code>content</code> プロパティを使用することで、常にそのとき表示されているコンテンツにアクセスできることを意味しています。</p>
+<p>次のセクションでは、スプリッターの作り方を見ることにします。</p>
+
+<div><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/Tutorial/Grids" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/Tutorial/Splitters">次のページ  »</a></p>
+</div></div>

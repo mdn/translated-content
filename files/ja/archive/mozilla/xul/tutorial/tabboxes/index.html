@@ -1,0 +1,192 @@
+---
+title: タブボックス
+slug: Archive/Mozilla/XUL/Tutorial/Tabboxes
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Tabboxes
+---
+<p>
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Stack_Positioning" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Grids">次のページ  »</a></p>
+</div>
+<p>設定ダイアログでは、タブ付きページを使用したものをよく見かけると思います。
+ここでは、その作り方を見ていきます。
+</p><p><span id="Tabboxes"></span>
+</p>
+<h3 id=".E3.82.BF.E3.83.96.E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9" name=".E3.82.BF.E3.83.96.E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9"> タブボックス </h3>
+<p>タブボックスは、アプリケーションの設定ウィンドウでよく利用されます。
+タブボックスでは、ウィンドウの上部にタブが並んで表示されます。
+利用者は、個々のタブをクリックすることで、異なったオプション設定を表示させることが可能です。
+これは、1 つの画面に収まらないほどオプションがあるような場合に使用すると便利です。
+</p><p>XUL では、こうしたダイアログを作るための方法を提供しています。
+このために、5 つの新しい要素を使用します。
+その概要を以下に示した後、詳細の説明に移ります。
+</p>
+<dl><dt> <code><a href="/ja/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code>
+</dt><dd> 上部のタブとタブページ全体を含む外側のボックスです。
+</dd><dt> <code><a href="/ja/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code>
+</dt><dd> 個々のタブを含んだ内部のボックス。言い換えれば、タブの並びの部分です。
+</dd><dt> <code><a href="/ja/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code>
+</dt><dd> 特定の 1 つのタブです。タブをクリックすると、タブページが前面に表示されます。
+</dd><dt> <code><a href="/ja/docs/Mozilla/Tech/XUL/tabpanels" title="tabpanels">tabpanels</a></code>
+</dt><dd> 一連のページを含むコンテナになります。
+</dd><dt> <code><a href="/ja/docs/Mozilla/Tech/XUL/tabpanel" title="tabpanel">tabpanel</a></code>
+</dt><dd> 特定の 1 ページの本文です。ページの内容はこの要素内に置きます。最初の <code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabpanel" title="tabpanel">tabpanel</a></code></code> は最初のタブに対応し、2 番目の <code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabpanel" title="tabpanel">tabpanel</a></code></code> は 2 番目のタブに対応するという具合になります。
+</dd></dl>
+<p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code></code> は、タブボックス全体を含む、最も外側に位置する要素です。
+これは、タブの並びの部分を含む <code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code></code> 要素と、
+タブ付けされたページ部分を含む <code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabpanels" title="tabpanels">tabpanels</a></code></code> 要素の、
+2 つの子要素からなっています。
+</p><p>以下に、タブボックスの一般的な構文を示します。
+</p>
+<pre>&lt;tabbox id="tablist"&gt;
+  &lt;tabs&gt;
+    &lt;!-- tab 要素をここに記述 --&gt;
+  &lt;/tabs&gt;
+  &lt;tabpanels&gt;
+    &lt;!-- tabpanel 要素をここに記述 --&gt;
+  &lt;/tabpanels&gt;
+&lt;/tabbox&gt;
+</pre>
+<p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code></code> 要素は <code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code></code> 要素の内部に置かれます。
+<code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code></code> 要素は、機能的には通常のボックスとほとんど同じです。
+<code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code></code> 要素自身は、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code></code> 要素の内部に置かれます。
+また、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code></code> には、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabpanels" title="tabpanels">tabpanels</a></code></code> 要素も含まれています。
+タブボックス全体は垂直配置であるため、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabpanels" title="tabpanels">tabpanels</a></code></code>　要素は、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code></code> 要素の下に表示されます。
+</p><p>実際のところ、タブ関係の要素と通常のボックスの違いで、特殊なものは 1 つもありません。
+ボックスと同様に、タブの内容にも任意の要素を含めることが可能です。
+違いとしては、タブの部分が少々異なった風に描画されるということと、
+タブのパネル部分の内容は、デッキ (<code><code><a href="/ja/docs/Mozilla/Tech/XUL/deck" title="deck">deck</a></code></code>) と同様、一度に 1 つしか可視化されないということです。
+</p><p>個々のタブページの内容は、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabpanel" title="tabpanel">tabpanel</a></code></code> 要素の中に入れる必要があります。
+<code><code><a href="/ja/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code></code> 要素の方ではありません。
+こちらには上部に並ぶタブの内容 (見出し文字列) が入ります。
+</p><p>個々の <code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabpanel" title="tabpanel">tabpanel</a></code></code> 要素は、タブ付きで表示されるページになります。
+最初のパネルは最初のタブに対応し、パネル内の 2 番目の要素は 2 番目の要素に対応するといった具合です。
+<code><code><a href="/ja/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code></code> 要素と <code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabpanel" title="tabpanel">tabpanel</a></code></code> 要素の間には、1 対 1 の関係があります。
+</p><p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code></code> のサイズを決めるために、一番大きいページのサイズが使われます。
+具体的には、あるタブページに 10 個のテキスト入力欄があり、別のタブページには 1 個しかない場合、
+10 個の方がより多くのスペースを必要とするため、1 個の方も 10 個の方に合わせたサイズに拡大されるということです。
+タブボックスにより占められる領域は、利用者が新しいタブのページに切り替えても変化しません。
+</p><p><span id="Tabbox_example"></span>
+</p>
+<h4 id=".E3.82.BF.E3.83.96.E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9.E3.81.AE.E4.BE.8B" name=".E3.82.BF.E3.83.96.E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9.E3.81.AE.E4.BE.8B"> タブボックスの例 </h4>
+<p>それでは、以下にタブボックスの例を示します。
+</p><p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_tabpanel_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_tabpanel_1.xul">表示</a>
+</p>
+<pre>&lt;tabbox&gt;
+  &lt;tabs&gt;
+    &lt;tab label="Mail"/&gt;
+    &lt;tab label="News"/&gt;
+  &lt;/tabs&gt;
+  &lt;tabpanels&gt;
+    &lt;tabpanel id="mailtab"&gt;
+      &lt;checkbox label="Automatically check for mail"/&gt;
+    &lt;/tabpanel&gt;
+    &lt;tabpanel id="newstab"&gt;
+      &lt;button label="Clear News Buffer"/&gt;
+    &lt;/tabpanel&gt;
+  &lt;/tabpanels&gt;
+&lt;/tabbox&gt;
+</pre>
+<div class="float-right"><img alt="画像:tabpanel1.png"></div>
+<p>この例では、最初に「Mail」というラベルを付けたタブを、2 番目に「News」というラベルを付けたタブを追加しています。
+ユーザーが「Mail」タブをクリックすると、最初のページの内容が表示されます。
+この場合は「Automatically check for mail」というラベルのチェックボックスがあるページが表示されます。
+また、2 番目のタブをクリックすると「Clear News Buffer」というラベルのボタンを持つページが表示されます。
+</p><p>現在選択されている <code><code><a href="/ja/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code></code> 要素には、true に設定された <code><code id="a-selected"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/selected">selected</a></code></code> 属性が付加されます。
+これは、現在選択されているタブを、選択されていることがわかる外見に変更するために使われます。
+この属性に true が設定されるのは、一度に 1 つのタブだけです。
+</p><p><span id="Position_of_the_tabs"></span>
+</p>
+<h4 id=".E3.82.BF.E3.83.96.E3.81.AE.E8.A1.A8.E7.A4.BA.E4.BD.8D.E7.BD.AE" name=".E3.82.BF.E3.83.96.E3.81.AE.E8.A1.A8.E7.A4.BA.E4.BD.8D.E7.BD.AE"> タブの表示位置 </h4>
+<p>最後に、タブの位置を変更して、タブページの任意の辺に沿って表示させる方法について説明します。
+といっても、このために特別な構文があるわけではありません。
+単純に、必要に応じて、<code><code id="a-orient"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code></code> 属性と <code><code id="a-dir"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/dir">dir</a></code></code>属性を設定するだけです。
+タブ関連の要素は、レイアウトという点では通常のボックスとほとんど同じであるということを思い出してください。
+もう少し詳しく述べると、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code></code> 要素は、垂直配置がデフォルトの通常のコンテナ用ボックスとほとんど同じであり、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code></code> 要素は、水平配置がデフォルトのコンテナ用ボックスとほとんど同じであるということがいえます。
+</p><p>例えば、タブを左側に並べるには、まず、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code></code> の <code><code id="a-orient"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code></code> 属性を垂直配置に変更して、縦に積み上げるように表示させます。
+さらに、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code></code> も合わせて水平配置に変更します。
+これで、タブはタブページの上ではなく左に表示されるようになるはずです。
+<code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabpanel" title="tabpanel">tabpanel</a></code></code> の <code><code id="a-orient"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code></code> 属性を変更しても、タブの表示位置には何の影響も無いことを補足しておきます。これは、タブページが (タブ関係の要素の包含関係を層構造ととらえたとき) 一番上の層に位置するためです。
+</p><p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code></code> 要素を移動して <code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabpanels" title="tabpanels">tabpanels</a></code></code> の後に置くことによって、タブを右側や下側に置くことができます。
+もしくは、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code></code> 要素の <code><code id="a-dir"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/dir">dir</a></code></code> 属性を <code>reverse</code> に設定しても、同様になります。
+このように、タブは任意の辺に配置可能ではありますが、できるだけ上部に置いたほうが無難です。それ以外では、一部のテーマで見栄えがよくならない可能性があります。
+</p><p><span id="Adding_Tabs_to_our_Find_Files_Dialog"></span>
+</p>
+<h3 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AB.E3.82.BF.E3.83.96.E3.82.92.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AB.E3.82.BF.E3.83.96.E3.82.92.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B"> ファイル検索ダイアログにタブを追加する </h3>
+<div class="highlight">
+<p>それでは、2 番目のパネルを、ファイル検索ダイアログに追加してみましょう。
+いくつかの検索オプションを含む「Options」タブを作ります。(これがデフォルトになるようにします)。
+この仕様は、検索オプションの指定を行なう方法としては、最善のインターフェイスではないかもしれませんが、タブの実例を示すために使ってみることにします。
+まず、上部にわたって表示されるラベルと検索条件入力ボックスを、最初のタブに移す必要があります。
+そして、2 番目のタブには、オプションをいくつか追加することにします。
+プログレスバーとボタンは、タブの外側のメインダイアログ上に残します。
+</p>
+<pre class="eval">&lt;vbox flex="1"&gt;
+
+<span class="highlightred">&lt;tabbox selectedIndex="1"&gt;
+  &lt;tabs&gt;
+    &lt;tab label="Search"/&gt;
+    &lt;tab label="Options"/&gt;
+  &lt;/tabs&gt;
+
+  &lt;tabpanels&gt;
+   &lt;tabpanel id="searchpanel" orient="vertical"&gt;</span>
+
+    &lt;description&gt;
+     Enter your search criteria below and select the Find button to begin
+     the search.
+    &lt;/description&gt;
+
+    &lt;spacer style="height: 10px"/&gt;
+
+    &lt;groupbox orient="horizontal"&gt;
+      <span class="nowiki">&lt;caption label="Search Criteria"/&gt;</span>
+
+      &lt;menulist id="searchtype"&gt;
+        &lt;menupopup&gt;
+          &lt;menuitem label="Name"/&gt;
+          &lt;menuitem label="Size"/&gt;
+          &lt;menuitem label="Date Modified"/&gt;
+        &lt;/menupopup&gt;
+      &lt;/menulist&gt;
+      &lt;spacer style="width: 10px;"/&gt;
+      &lt;menulist id="searchmode"&gt;
+        &lt;menupopup&gt;
+          &lt;menuitem label="Is"/&gt;
+          &lt;menuitem label="Is Not"/&gt;
+        &lt;/menupopup&gt;
+      &lt;/menulist&gt;
+
+      &lt;spacer style="height: 10px"/&gt;
+      &lt;textbox id="find-text" flex="1" style="min-width: 15em;"/&gt;
+
+    &lt;/groupbox&gt;
+   <span class="highlightred">&lt;/tabpanel&gt;
+
+   &lt;tabpanel id="optionspanel" orient="vertical"&gt;
+    &lt;checkbox id="casecheck" label="Case Sensitive Search"/&gt;
+    &lt;checkbox id="wordscheck" label="Match Entire Filename"/&gt;
+   &lt;/tabpanel&gt;
+
+ &lt;/tabpanels&gt;
+&lt;/tabbox&gt;</span>
+</pre>
+<p><img alt="画像:tabpanel2.png">
+</p><p>タブ関連の要素がウィンドウの主な内容を囲んで置かれました。
+「Search」と「Options」の 2 つのタブを確認できます。
+それぞれのタブをクリックすると、対応するタブページが引き出されます。
+画像で示すように、2 つのオプションが 2 番目のタブに表示されています。
+最初のタブは、上にタブが並ぶことを除けば、変更前のものからほとんどかわりません。
+</p><p><span id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"><a id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"></a><strong>ここまでのファイル検索ダイアログの例</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-tabpanel.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-tabpanel.xul">表示</a>
+</p>
+</div>
+<p>次のセクションでは、内容をグリッド状に並べる方法を見ていきます。
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Stack_Positioning" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Grids">次のページ  »</a></p>
+</div>
+
+<div class="noinclude">
+</div>

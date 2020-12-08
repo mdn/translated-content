@@ -1,0 +1,32 @@
+---
+title: パフォーマンス分析
+slug: Tools/Network_Monitor/Performance_Analysis
+tags:
+  - '110n:priority'
+  - Dev Tools
+  - Firefox
+  - ガイド
+  - ツール
+  - デバッグ
+  - ネットワーク
+translation_of: Tools/Network_Monitor/Performance_Analysis
+---
+<p>{{ToolsSidebar}}</p>
+
+<p>ネットワークモニタにはパフォーマンス分析ツールが含まれており、ブラウザーがサイトのさまざまな部分をダウンロードするのに必要な時間を表示できます。</p>
+
+<h2 id="パフォーマンス分析ツールの使用">パフォーマンス分析ツールの使用</h2>
+
+<p>パフォーマンス分析ツールを実行するには<a href="/ja/docs/Tools/Network_Monitor#Toolbar">ツールバー</a>のストップウォッチアイコンをクリックします。</p>
+
+<p>(また、ネットワークモニタを開いたばかりのときに、まだリクエストのリストが表示されていない場合は、メインウィンドウにストップウォッチアイコンが表示されます。)</p>
+
+<p>その後、ネットワークモニタはサイトを2回読み込みます。1回は空のブラウザキャッシュ、もう1回はプライム付きブラウザキャッシュです。これはユーザーが初めてサイトを訪問し、その後の訪問をシミュレートします。 それぞれの実行結果を並べて表示するか、ブラウザウィンドウが狭い場合は垂直方向に表示します。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/16277/network_performance.png" style="border: 1px solid black; display: block; height: 1176px; margin-left: auto; margin-right: auto; width: 900px;"></p>
+
+<p>各実行結果は表と円グラフにまとめられています。テーブルはリソースをタイプ別にグループ化し、各リソースの合計サイズとそれらのロードに要した合計時間を表示します。付随する円グラフは、各リソースタイプの相対的なサイズを示しています。</p>
+
+<p>ネットワークモニターのネットワークリクエストリストに戻るには、左側の「戻る」ボタンをクリックします。</p>
+
+<p>円グラフのスライスをクリックすると、その実行のためのネットワークモニタが表示され、フィルタが自動的に適用されて<a href="/ja/docs/Tools/Network_Monitor#Filtering_by_content_type">そのリソースタイプのみ</a>が表示されます。</p>

@@ -1,0 +1,161 @@
+---
+title: Implementing QueryInterface
+slug: Implementing_QueryInterface
+tags:
+  - XPCOM
+translation_of: Mozilla/Implementing_QueryInterface
+---
+<p>このドキュメントでは、<code>QueryInterface()</code> の正しい書き方について解説します。</p>
+<h3 id="QueryInterface_.E3.81.AE.E3.83.AA.E3.83.95.E3.82.A1.E3.83.AC.E3.83.B3.E3.82.B9.E5.AE.9F.E8.A3.85" name="QueryInterface_.E3.81.AE.E3.83.AA.E3.83.95.E3.82.A1.E3.83.AC.E3.83.B3.E3.82.B9.E5.AE.9F.E8.A3.85">QueryInterface のリファレンス実装</h3>
+<pre class="eval">NS_IMETHODIMP
+nsMyImplementation::QueryInterface( REFNSIID aIID, void** aInstancePtr )
+  {
+    NS_ASSERTION(aInstancePtr, "QueryInterface requires a non-NULL destination!");
+      <span class="comment">// このメソッドの結果を置く場所を用意せずにこのメソッドを呼ぶのは、実行時エラーではなく、論理エラーです。</span>
+
+      <span class="comment">// ...しかし非デバッグビルドにおいて、間違ってこのメソッドを呼び出す時は問題にはなりません。</span>
+    if ( !aInstancePtr )
+      return NS_ERROR_NULL_POINTER;
+
+    nsISupports* foundInterface;
+
+    if ( aIID.Equals(nsCOMTypeInfo&lt;nsIX&gt;::GetIID()) )
+      foundInterface = NS_STATIC_CAST(nsIX*, this);
+    else if ( aIID.Equals(nsCOMTypeInfo&lt;nsIY&gt;::GetIID()) )
+      foundInterface = NS_STATIC_CAST(nsIY*, this);
+
+    <span class="comment">// ...必要に応じて複数の場合を書きます...</span>
+
+    else if ( aIID.Equals(nsCOMTypeInfo&lt;nsISupports&gt;::GetIID()) )
+      foundInterface = NS_STATIC_CAST(nsISupports*, NS_STATIC_CAST(nsIX*, this));
+        <span class="comment">//このオブジェクトは複数の |nsISupports| を持っているかもしれません。
+        //  そのため、まず特定のベースインタフェースへキャストして、あいまいさを避けます。</span>
+    else
+      foundInterface = 0;
+
+    nsresult status;
+    if ( !foundInterface )
+      status = NS_NOINTERFACE;
+    else
+      {
+        NS_ADDREF(foundInterface);
+        status = NS_OK;
+      }
+
+    *aInstancePtr = foundInterface;
+    return status;
+  }
+</pre>
+<h3 id=".E3.81.A9.E3.81.93.E3.81.8C.E8.89.AF.E3.81.84.E3.81.AE.E3.81.A7.E3.81.97.E3.82.87.E3.81.86.E3.81.8B.EF.BC.9F" name=".E3.81.A9.E3.81.93.E3.81.8C.E8.89.AF.E3.81.84.E3.81.AE.E3.81.A7.E3.81.97.E3.82.87.E3.81.86.E3.81.8B.EF.BC.9F">どこが良いのでしょうか？</h3>
+<ul>
+ <li>これは、分かりやすく、しかも単純です。</li>
+ <li>OK。これには、ひとつ以上の <code>return</code> がありますが、重要な <code>return</code> はこの関数の最後の <code>return</code> です。そして、付加的な <code>return</code> は分かりやすく、関数の頭に単独で存在します。</li>
+ <li><code>AddRef</code> がひとつだけしかありません。</li>
+ <li><code>this</code> ではなく、返って来るインタフェースに対して <code>AddRef</code> を実行しており、COM の規約に沿った方法 (特に集約では重要です) で実行しています。</li>
+ <li><code>kTIID</code> ではなく、<code>nsCOMTypeInfo&lt;T&gt;::GetIID()</code> を使っています。このようにして、グローバルな宣言とグローバルな空間を保存しています。</li>
+ <li><code>NS_STATIC_CAST</code> 経由で、C++ の <code>static_cast</code> を使っています。static_cast は実際には、望むインタフェースを得られない時に、エラーを検出します。</li>
+ <li><code><span class="nowiki">*aInstancePtr</span></code>の使用の繰り返しやそれに対する代入の繰り返しは、コンパイラの最適化を困難にしますが、これを避けています。</li>
+ <li>エラーを返すときは、結果、つまり <code><span class="nowiki">*aInstancePtr</span></code> をクリアしてます。</li>
+ <li>典型的な code&gt;QueryInterface&lt;/code&gt; の実装より少ないコードを生成します。</li>
+ <li>デバッグビルドにおいて、論理エラーをすぐに見つけるために、<code>NS_ASSERTION</code> を使って、間違った入力をテストしています。</li>
+</ul>
+<h3 id=".E3.81.84.E3.81.8F.E3.81.A4.E3.81.8B.E3.81.AE.E4.BB.A3.E6.A1.88" name=".E3.81.84.E3.81.8F.E3.81.A4.E3.81.8B.E3.81.AE.E4.BB.A3.E6.A1.88">いくつかの代案</h3>
+<h4 id="NS_IMPL_QUERY_INTERFACE.5B012.5D_.E3.83.9E.E3.82.AF.E3.83.AD" name="NS_IMPL_QUERY_INTERFACE.5B012.5D_.E3.83.9E.E3.82.AF.E3.83.AD"><code>NS_IMPL_QUERY_INTERFACE</code>[<code>012</code>] マクロ</h4>
+<p>上記のサンプルは、<code>nsISupports</code> に加えて、二つの XPCOM インタフェースを実装しています。<code>NS_IMPL_QUERY_INTERFACE2</code> マクロを使って、この関数を書くことができます。(もっともマクロを勧めるのは気が進まないのですけど。) 例えば、</p>
+<pre class="eval">NS_IMPL_QUERY_INTERFACE2(nsMyImplementation, nsIX, nsIY)
+                                          <span class="comment">// implements |nsMyImplementation::QueryInterface| as above</span>
+
+NS_IMPL_QUERY_INTERFACE1(nsFoo, nsIFoo)   <span class="comment">// |nsFoo::QueryInterface| provides |nsIFoo| and |nsISupports|</span>
+NS_IMPL_QUERY_INTERFACE0(nsBar)           <span class="comment">// |nsBar::QueryInterface| can only provide an |nsISupports|</span>
+</pre>
+<p>同様に、実装するインタフェースをひとつだけ追加したい時は、<code>NS_IMPL_QUERY_INTERFACE1</code> マクロを使うことができます。また、<code>nsISupports</code> だけを実装する時は、<code>NS_IMPL_QUERY_INTERFACE0</code> マクロを使うことができます。これらのマクロは、<code>NS_IMPL_ISUPPORTS</code><code>[012]</code> マクロを使った時に実行されます。このマクロは、対応する <code>QueryInterface</code> と <code>AddRef</code> と <code>Release</code> の実装を提供します。</p>
+<h4 id=".E7.B6.99.E6.89.BF.E3.81.97.E3.81.9F_QueryInterface_.E3.82.92.E5.91.BC.E3.81.B3.E5.87.BA.E3.81.99" name=".E7.B6.99.E6.89.BF.E3.81.97.E3.81.9F_QueryInterface_.E3.82.92.E5.91.BC.E3.81.B3.E5.87.BA.E3.81.99">継承した <code>QueryInterface</code> を呼び出す</h4>
+<p>時々、多くのインタフェースをサポートする実装に、単にひとつか二つのインタフェースを加えたい場合があるでしょう。そのような場合は、おそらく、関係のある特定の <code>IID</code> をテストした後で、元の実装を呼び出したいでしょう。これにより、コードスペースと複雑さが低減されます。以下のコードでは、異なっている部分が強調されています。</p>
+<pre class="eval">class nsMyImplmentation : public nsBaseImplementation, public nsIX, public nsIY { ... };
+
+NS_IMETHODIMP
+nsMyImplementation::QueryInterface( REFNSIID aIID, void** aInstancePtr )
+    <span class="comment">/*
+      (このクラスには) |nsIX| と |nsIY| を追加しました。
+      (このクラスの) ベースクラスの |nsBaseImplementation| は残りのすべてを提供します。
+    */</span>
+  {
+    NS_ASSERTION(aInstancePtr, "QueryInterface requires a non-NULL destination!");
+
+    if ( !aInstancePtr )
+      return NS_ERROR_NULL_POINTER;
+
+    nsISupports* foundInterface;
+
+    if ( aIID.Equals(nsCOMTypeInfo&lt;nsIX&gt;::GetIID()) )
+      foundInterface = NS_STATIC_CAST(nsIX*, this);
+    else if ( aIID.Equals(nsCOMTypeInfo&lt;nsIY&gt;::GetIID()) )
+      foundInterface = NS_STATIC_CAST(nsIY*, this);
+    <span class="warning">// 注: |nsISupports| をチェックしないでください。|nsBaseImplementation| がこのクラスのためにそれを行うはずです</span>
+    else
+      foundInterface = 0;
+
+
+    nsresult status;
+    if ( !foundInterface )
+        <span class="comment">// OK, インタフェースを見付けることができませんでした。このクラスのベースクラスがやってくれるでしょう。</span>
+      <span class="warning">status = nsBaseImplementation::QueryInterface(aIID, &amp;foundInterface);</span>
+    else
+      {
+        NS_ADDREF(foundInterface);
+        status = NS_OK;
+      }
+
+    *aInstancePtr = foundInterface;
+    return status;
+  }
+</pre>
+<p>ベースの実装の <code>QueryInterface</code> が適切なインタフェースを見付けた場合、あなたの <code>QueryInterface</code> では <code>AddRef</code> を呼び出してはいけないことに注意してください。上記のコードでは、このことが考慮されています。</p>
+<p>このテクニックは、<code>nsBaseImplementation</code> がすでにそれ自身で使われている完全なクラスであるために、正常に動作します。このテクニックは、複数の完全なクラスから派生した時は、あまり適切ではありません。しかし、もし順番にこだわるのであれば、このテクニックを使うことができます。例えば、</p>
+<pre class="eval">    <span class="comment">// ...</span>
+    nsresult status;
+    if ( !foundInterface )
+      {
+        <span class="comment">// OK, ask |nsBase1Imp| first, because I want _it_ to be the one true |nsISupports|.</span>
+        status = nsBase1Imp::QueryInterface(aIID, &amp;foundInterface);
+
+        if ( !foundInterface )
+          status = nsBase2Imp::QueryInterface(aIID, &amp;foundInterface);
+
+        if ( !foundInterface )
+          status = nsBase3Imp::QueryInterface(aIID, &amp;foundInterface);
+      }
+    else
+      {
+        NS_ADDREF(foundInterface);
+        status = NS_OK;
+      }
+    <span class="comment">// ...</span>
+</pre>
+<p>もし不可能でないとしても、あなたのベースクラスのどれかが本当の集約に加わって、正常に動作させるのは困難でしょう。集約されたオブジェクト上の <code>QueryInterface</code> に対する呼び出しを捕まえることはできないでしょう。それができたとすると、間違ったインタフェースを返すかもしれません。特に集約を避ける、また複雑な階層構造を避けるもう一つの理由があります。</p>
+<h4 id="NS_GET_IID_.E3.83.9E.E3.82.AF.E3.83.AD" name="NS_GET_IID_.E3.83.9E.E3.82.AF.E3.83.AD"><code>NS_GET_IID</code> マクロ</h4>
+<p>あなたは、完全な <code>GetIID</code> 表現をタイプする代わりに、<code>NS_GET_IID</code> マクロを使うことができます。 一般的に私は、マクロが異なる状況で異なるテキストへ拡張されるマクロでない限り、認めません。 例えば、異なるプラットフォーム、デバッグ時と非デバッグ時、などです。 そのような場合、マクロなしで済ますことはできません。 他の場合では、マクロはいくらかの人々を助けるかもしれませんが、しばしば他の問題に悪い影響を与えます。 それらは、常にプログラムソースをより脆弱にしてしまいます。 この場合、マクロは便宜のためだけのものであり、私はこれを勧めはしませんが、代案としては示そうと思います。</p>
+<pre class="eval">    <span class="comment">// ...</span>
+    if ( aIID.Equals(<span class="warning">NS_GET_IID(</span>nsIX<span class="warning">)</span>) )
+      foundInterface = NS_STATIC_CAST(nsIX*, this);
+    else if ( aIID.Equals(<span class="warning">NS_GET_IID(</span>nsIY<span class="warning">)</span>) )
+      foundInterface = NS_STATIC_CAST(nsIY*, this);
+
+    <span class="comment">// ...as many cases as needed...</span>
+
+    else if ( aIID.Equals(<span class="warning">NS_GET_IID(</span>nsISupports<span class="warning">)</span>) )
+    <span class="comment">// ...</span>
+</pre>
+<h3 id=".E8.AC.9D.E8.BE.9E" name=".E8.AC.9D.E8.BE.9E">謝辞</h3>
+<p><a class="link-mailto" href="mailto:heikki@citec.fi">Heikki Toivonen</a>、<a class="link-mailto" href="mailto:waterson@netscape.com">Chris Waterson</a>、<a class="link-mailto" href="mailto:jband@netscape.com">John Bandhauer</a> に感謝します。らが、価値あるフィードバックをしてくれたおかげで、ここに載せた実装を著しく改善することができました。</p>
+<div class="originaldocinfo">
+ <h2 id=".E5.8E.9F.E6.96.87.E6.9B.B8.E3.81.AE.E6.83.85.E5.A0.B1" name=".E5.8E.9F.E6.96.87.E6.9B.B8.E3.81.AE.E6.83.85.E5.A0.B1">原文書の情報</h2>
+ <ul>
+  <li>著者: <a class="external" href="http://www.meer.net/ScottCollins/">Scott Collins</a></li>
+  <li>最終更新日: May 8, 2003</li>
+  <li>著作権: Portions of this content are © 1998–2007 by individual mozilla.org contributors; content available under a Creative Commons license | <a class="external" href="http://www.mozilla.org/foundation/licensing/website-content.html">詳細</a></li>
+ </ul>
+</div>
+<div class="noinclude">
+  </div>
+<p>{{ languages( { "en": "en/Implementing_QueryInterface" } ) }}</p>

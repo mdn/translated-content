@@ -1,0 +1,175 @@
+---
+title: Gaia のコードの変更をテストする
+slug: Archive/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes
+tags:
+  - Firefox OS
+  - Gaia
+  - UI
+  - コントリビュート
+  - テスト
+  - 統合
+translation_of: Archive/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details open>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/ja/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<div class="summary">
+<p><span class="seoSummary">Gaiaコードベースへの変更が完了して動作がOKと思われる時、次のステップは、プロジェクトに戻すパッチを投稿する前に、テストプロシージャを一通り通して、変更が本当に動作する —のと、Gaiaのその他の部分と一緒に正しく動作する— のを確認する事です。この記事では方法を説明します。</span></p>
+</div>
+
+<p>テストの手順は、一般にこんな構成です:</p>
+
+<ul>
+ <li>標準のデバッグ手順</li>
+ <li>自動テストを実行する</li>
+</ul>
+
+<p>両方の領域を観察してみましょう。</p>
+
+<h2 id="標準デバッグを行う">標準デバッグを行う</h2>
+
+<p>熟練のweb開発者ならGaiaのコードをデバッグするのは慣れたプロセスでしょう。すでに<a href="/ja/Firefox_OS/Developing_Gaia/Running_the_Gaia_codebase#Running_Gaia_in_Desktop_Firefox">デスクトッブ版FirefoxでGaiaを実行する</a>方法や、<a href="/ja/Firefox_OS/Developing_Gaia/Making_Gaia_code_changes#Simple_code_change_example">簡単な変更を加える</a>方法を見てきました。もっと複雑なコードベースの追加のためには、デスクトッブ版Firefoxのビューにてアクセスできる、Firefoxデバッグツールをもっと使いこなしたくなるでしょう。</p>
+
+<p><strong>記</strong>: これらのツールの詳細なマニュアルは<a href="/ja/docs/Tools">Tools zone</a>にあります。</p>
+
+<h2 id="自動テスト">自動テスト</h2>
+
+<p>パッチを投稿する前に、Gaiaにふさわしい標準テストスイートも実行しておくべきであり、そうすることで既存の主要な電話機能に逆行した変更をしていないことを確認します。 実行できるテストは:</p>
+
+<ul>
+ <li>ユニットテスト</li>
+ <li>統合テスト</li>
+ <li>パフォーマンステスト</li>
+ <li>UI テスト</li>
+</ul>
+
+<p>一般的にパッチの投稿前には、テスト実施を求めます; 最初の貢献の場合はテストなしに投稿できますが、将来にテストが実施されるように手助けを求める必要があります。テスト実行の前にはGaiaリポジトリを更新して、最新のものが手元にあるのを確認すべきです。</p>
+
+<div class="note">
+<p><strong>ショートカット</strong>: もしテスト環境の構築方法を知らない場合、<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Automated_testing/MozITP">MozITP</a> を使用してください — このツールセットは自動で Ubuntu VMをセットアップし、インテグレーションテストを実施し UI のテストを実施するテスト環境をワンクリックで作成することが出来ます。</p>
+</div>
+
+<div class="note">
+<p><strong>記</strong>: テストを動作させる方法については、<a href="/ja/Firefox_OS/Platform/Testing/">Firefox OS の自動テスト のページ</a>で見つけることができます。</p>
+</div>
+
+<div class="note">
+<p><strong>記</strong>: 利用可能であれば実機端末 (いくつかの機能 /ハードは、エミュレータではサポートしません) での各テストの実行を検討し、利用不可の場合はB2G デスクトッブエミュレータか、Firefoxナイトリーを使います。</p>
+</div>
+
+<h3 id="ユニットテスト">ユニットテスト</h3>
+
+<p>ユニットテストは、大きなアプリケーション内の、個々のユニットのテスト — Gaiaの場合ぱ個々のアプリ—です。Gaiaで使用するのは:</p>
+
+<ul>
+ <li>テストフレームワークとしての<a href="http://visionmedia.github.io/mocha/">mocha</a></li>
+ <li>アサートライブラリの<a href="http://chaijs.com/api/assert/">chai</a></li>
+ <li>モック&amp;スタブライブラリ<a href="http://sinonjs.org/">sinon.js</a></li>
+ <li>テストカバレッジツールの<a href="http://blanketjs.org/">blanket.js</a></li>
+</ul>
+
+<p>下記コマンドでダウンロード、インストール、及び ユニットテストサーバの提供ができます(実行にかなりの時間がかかり、なのでお茶を入れる良い時間かもしれません):</p>
+
+<pre class="brush: bash">DEBUG=1 make
+export FIREFOX=/Applications/FirefoxNightly.app/Contents/MacOS/firefox
+bin/gaia-test</pre>
+
+<p>ユニットテスト一覧のwebページが開くでしょう。実行するにす:</p>
+
+<ul>
+ <li>ページ内の一覧から実行したいユニットテストを選択します (アスタリスクが横に出ています)。</li>
+ <li>"Execute" ボタンをクリックします。</li>
+ <li>ページ下端にスクロールして結果を見ます。</li>
+</ul>
+
+<p>開いているウィンドウで、新規のターミナルウィンドウから全テストスイートを実行することもできます。:</p>
+
+<pre class="brush: bash">make test-agent-test</pre>
+
+<div class="note">
+<p><strong>記</strong>: これはかなり長い時間がかかります、なぜなら実行すべきテストが大量にあるためで(ひょっとして1時間以上)、ゆえにおそらくあなたが変更したアプリ向けのテストだけを実行したくなるでしょう。これを行うには <code>APP=&lt;app folder name&gt;</code> をコマンドに追加します、例えば <code>APP=settings</code>。</p>
+</div>
+
+<div class="note">
+<p><strong>記</strong>: テストについてのより詳しい情報は<a href="/ja/Firefox_OS/Platform/Testing/Gaia_unit_tests">Gaia ユニットテスト</a> を見て下さい。</p>
+</div>
+
+<h3 id="統合テスト">統合テスト</h3>
+
+<p>統合テストには、異なるユニットのコードを一緒なグループにして、それらが一緒に正しく動作するかのテストを含んでおり、ユニットテストの次の論理的ステップです。Gaiaの統合テストは JavaScriptで書かれるmarionetteスクリプトと pythonベースのサーバで動かされます。これはGeckoと通信してブラウザと Firefox OS 端末の両方の制御と、お互いの相互作用が可能になります。</p>
+
+<p>下記コマンドを実行して統合テストを起動できます:</p>
+
+<pre class="brush: bash">make test-integration</pre>
+
+<div class="note">
+<p><strong>記</strong>: ユニットテストと同様に、統合テストスイート全体の実施には時間がかかります、なので <code>APP=&lt;app folder name&gt;</code> を上記のコマンドに追加してアプリ単体をテストできます、例えば  <code>APP=calendar</code>。</p>
+</div>
+
+<div class="note">
+<p><strong>記</strong>: 統合テストのより詳細な情報は、<a href="/ja/Firefox_OS/Platform/Automated_testing/Gaia_integration_tests">Gaia 統合テスト</a>を読んでください。</p>
+</div>
+
+<h3 id="パフォーマンステスト">パフォーマンステスト</h3>
+
+<p>Gaia のパフォーマンステストは、 外部の <a href="/docs/Mozilla/Firefox_OS/Platform/Testing/Raptor">Raptor CLI ツール</a> で実行されます。Raptor ではアプリを複数回起動することを自動化できて、アプリの起動時間についての統計情報を出力します。テスト実行後には、Raptor はアプリケーションについてのメモリ情報も出力します。</p>
+
+<p>Raptor のパフォーマンステストを実行するには、次を見てください <a href="/docs/Mozilla/Firefox_OS/Platform/Testing/Raptor#Getting_Started">Raptor: Getting Started.</a></p>
+
+<h3 id="UIテスト">UIテスト</h3>
+
+<p> <a href="/ja/Firefox_OS/Platform/Automated_testing/gaia-ui-tests">Gaia UI テスト入門</a>を見て下さい。</p>
+
+<div id="divLookup" style="background-color: transparent; color: #000000; position: absolute; top: 2293px; left: 473px; padding: 0px; border-radius: 2px;"><img></div>

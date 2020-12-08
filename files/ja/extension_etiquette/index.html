@@ -1,0 +1,41 @@
+---
+title: 拡張機能のエチケット
+slug: Extension_Etiquette
+tags:
+  - Add-ons
+  - Extensions
+  - NeedsEditorialReview
+translation_of: Archive/Add-ons/Extension_etiquette
+---
+<p> </p>
+<p>この記事は拡張機能を作る際の慣行について述べます。あなたは既に<a href="/ja/Building_an_Extension" title="ja/Building_an_Extension">拡張機能の作り方</a>について詳しいだろうと仮定します。</p>
+<p>これは公式な文章ではありません。<a href="/Talk:en/Extension_Etiquette" title="Talk:en/Extension_Etiquette">'トークページ</a>で自由に議論してください。</p>
+<p> </p>
+<h3 id=".E3.83.84.E3.83.BC.E3.83.AB.E3.83.A1.E3.83.8B.E3.83.A5.E3.83.BC.E9.A0.85.E7.9B.AE">ツールメニュー項目</h3>
+<p>拡張機能作者はこの点について最も多くの選択肢をもっています。拡張機能の項目がツールメニューの先頭、あるいは最後、あるいは中間のどこかにあるべきかは作者の考えの問題です。しかし、理想的には、拡張機能が追加するメニュー項目は、他の拡張機能が追加するコマンドと同様に、「アドオン」項目の下の位置に置くべきです（<code><a href="/en/XUL/menuitem" title="en/XUL/menuitem">menuitem</a>:<a href="/en/XUL/Attribute/insertafter" title="en/XUL/Attribute/insertafter">insertafter</a>="javascriptConsole,devToolsSeparator"</code>）。サブメニューは、一つの拡張機能が複数のメニュー項目を必要とする場合に使うべきです。「ツール」メニューに対しては、オプションや設定のための項目を作るべきではありません (オプションや設定については、アドオンマネージャを使ってください)。メニュー項目を加える時は、できれば、最もふさわしいメニューの中に項目を作りましょう。例えば、ブックマークを共有するような拡張機能は、ブックマークメニューの中から呼ばれるべきです。標準的なテーマの外観を維持するために、メニュー項目のアイコンの使用は避けてください。</p>
+<h3 id=".E3.81.9D.E3.81.AE.E4.BB.96.E3.81.AE_UI_.E8.A6.81.E7.B4.A0">その他の UI 要素</h3>
+<p>一般に、ツールバー項目はエンドユーザにとって とても便利です。なぜなら必要に応じてそれらを様々なツールバーに追加したり削除できるからです。ステータスバー項目は、広告ブロックやページランク、クッキー管理などのように、状態を常に監視するような種類の拡張機能だけが追加すべきです。同様に、コンテキストメニューの項目も慎重に使ってください。コンテキストメニューの項目は、頻繁に行われる動作やウェブページの特定の要素で行われる動作に対してのみ提供されるべきです。</p>
+<h3 id="About_.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0">About ダイアログ</h3>
+<p><a href="/ja/Install_Manifests" title="ja/Install_Manifests">install.rdf</a> のデータによって作られる、標準のポップアップ About ダイアログ があります。普通は、XUL を使って新しい About ボックスを作る必要はありません。カスタマイズされた About ボックスをやめることでダウンロードサイズを減らすことができます。(カスタムアップデータのような) 特別な機能を含めなくてはならない場合のみ、独自の About ボックスを作ってください。</p>
+<h3 id=".E3.83.86.E3.83.BC.E3.83.9E">テーマ</h3>
+<p>もしあなたの拡張機能に XUL 製のボタンが含まれていて、それがブラウザに元々ある機能と似た機能 (例えば、フィードリーダの再読み込みと読み込み中止のような) である場合は、ブラウザのテーマに含まれているアイコンを使用してください。これによって拡張機能のファイルサイズを削減して軽くできますし、(特に異なったテーマを使用しているユーザのために) より外観の一貫性を高めることもできます。</p>
+<h3 id=".E6.8B.A1.E5.BC.B5.E6.A9.9F.E8.83.BD.E3.81.AE.E3.82.A2.E3.82.A4.E3.82.B3.E3.83.B3">拡張機能のアイコン</h3>
+<p>独自のアイコンは普通、ダウンロードするファイル容量が増えたとしても、加えるだけの価値があります。それらによってアドオンマネージャで他の拡張機能の中から簡単に識別できるようになります。</p>
+<h3 id=".E5.90.8D.E5.89.8D.E3.81.AE.E4.BB.98.E3.81.91.E6.96.B9">名前の付け方</h3>
+<p>創造的なものにしてください! 名前に「拡張」、「Mozilla/Firefox/Thunderbird」またはバージョン番号を含めないでください。余分です。</p>
+<h3 id=".E8.AA.AC.E6.98.8E">説明</h3>
+<p>拡張機能マネージャの初期状態のウィンドウ幅に収まるように、うまく説明する文章を作ってください。 Mozilla の拡張機能 (DOM インスペクタ、障害のレポータ、Talkback) は、「ブラウザで動作を実行します。」のように、動詞から書き始めるのが最も良い方法だと信じているようです。{{ 訳注("英語では「does an action in the browser. (……は、ブラウザの中で何かします)」という風に、文章としてそれ単体では完結しておらず、拡張機能の名前に続けて読んだ場合に自然な文章になるような説明文がよく使われるようです。") }}</p>
+<h3 id="ID">ID</h3>
+<p>Firefox/Thunderbird 1.5 以降は拡張機能の ID の書き方について 1.0 の頃よりも厳密に扱うようになりました。それらが<a href="/ja/Install_Manifests#id" title="ja/Install_Manifests#id">正しい形式</a>になっているかどうか確認してください。</p>
+<p> </p>
+<h3 id=".E3.83.90.E3.83.BC.E3.82.B8.E3.83.A7.E3.83.B3.E7.95.AA.E5.8F.B7">バージョン番号</h3>
+<p>Mozilla のパターンに従ってください。つまり(「1.0.7」のように)、このような形式です：「&lt;メジャーバージョン&gt;.&lt;より具体的な現在のバージョン&gt;.&lt;セキュリティ/バグ修正のリリース番号&gt;」</p>
+<h3 id=".E3.83.AD.E3.82.B1.E3.83.BC.E3.83.AB">ロケール</h3>
+<p>もしあなたの拡張機能が一つの言語だけを提供していたとしても、常にロケール <a href="/ja/XUL_Tutorial/Localization" title="ja/XUL_Tutorial/Localization">DTD</a> と <a href="/ja/XUL_Tutorial/Property_Files" title="ja/XUL_Tutorial/Property_Files">プロパティファイル</a> を使ってください。これは拡張機能を他の言語に翻訳しやすくします (実際、拡張機能を他の人が他の言語に訳してくれるのはよくある事です)。 <span>== Options == Firefox users like options. Lots of options. Try to include everything a user could ever want to customize in your extension, remembering more can be added later. For a large number of options for your extension, break the options window into multiple pages (tabs) that are well labeled. Don't hesitate to give long descriptions for each preference, as long as they are easy to understand, even for non-computer-savvy users. Please make sure the default set of preferences is adequate, however -- option tweaking should not be mandatory for your extension's functionality.</span></p>
+<h3 id=".E8.A8.AD.E5.AE.9A.E3.81.AE.E5.86.85.E9.83.A8.E5.90.8D">設定の内部名</h3>
+<p>拡張機能の Firefox の内部設定 (つまり、about:config に表示される設定の名前) は全て "<code>extensinons.</code>" で始まり、次に拡張機能の内部名(「.」を付けて)、その次に設定の名前であるべきです。例えばプライバシポリシを表示しないようにする Reporter 拡張機能の真偽値型のオションは "<code>extensions.reporter.hidePrivacyStatement</code>" です。</p>
+<h3 id=".E4.BE.9D.E5.AD.98">依存</h3>
+<p>自分の拡張機能を使うために他の拡張機能のダウンロードを要求することは良いことではありません。<a class="external" href="http://jslib.mozdev.org/">jsLib</a> は例外にあたるでしょうが、他の拡張機能、特にあなたが開発していない拡張機能への依存は避けるように常に努力してください。</p>
+<h3 id=".E3.83.89.E3.82.AD.E3.83.A5.E3.83.A1.E3.83.B3.E3.83.86.E3.83.BC.E3.82.B7.E3.83.A7.E3.83.B3">ドキュメンテーション</h3>
+<p>あなたのユーザの大多数は Mozilla の内側の仕組みについて、あなた程の知識はないと仮定してください。あなたの拡張機能のホームページが当り前のことを書いているか確認してください。また、あなたの拡張機能が簡単な HowTo と共に公開されている場合にはより高く評価される事も憶えておいて下さい。</p>
+<p>{{ languages( { "en": "en/Extension_Etiquette" } ) }}</p>

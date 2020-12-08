@@ -1,0 +1,139 @@
+---
+title: display-inside
+slug: Archive/Web/CSS/display-inside
+tags:
+  - CSS
+  - Experimental
+  - NeedsLiveSample
+  - Reference
+  - Web
+translation_of: Archive/Web/CSS/display-inside
+---
+<div><section class="Quick_links" id="Quick_Links"><ol><li><strong><a href="/fr/docs/Web/CSS">CSS</a></strong></li><li><strong><a href="/fr/docs/Web/CSS/Reference">Référence CSS</a></strong></li></ol></section><div class="notice overheadIndicator experimental">
+    <p><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span> <strong>Cette fonction est expérimentale</strong><br>Puisque cette fonction est toujours en développement dans certains navigateurs, veuillez consulter le <a href="#Browser_compatibility">tableau de compatibilité</a> pour les préfixes à utiliser selon les navigateurs.<br>Il convient de noter qu'une fonctionnalité expérimentale peut voir sa syntaxe ou son comportement modifié dans le futur en fonction des évolutions de la spécification.</p>
+</div></div>
+
+<p>La propriété <strong><code>display-inside</code></strong> indique le type d'affichage (<em>display type</em>) intérieur généré par un élément, celui-ci indique la façon dont son contenu est organisé à l'intérieur de la boîte de l'élément.</p>
+
+<pre class="brush:css no-line-numbers">/* Valeurs avec un mot-clé */
+display-inside: auto;
+display-inside: block;
+display-inside: table;
+display-inside: flex;
+display-inside: grid;
+display-inside: ruby;
+
+/* Valeurs globales */
+display-inside: inherit;
+display-inside: initial;
+display-inside: unset;
+</pre>
+
+<p><span style="color: red;">Valeur introuvable dans la base de données</span></p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<p>Cette propriété est définie avec un des mots-clés définis ci-après.</p>
+
+<h3 id="Valeurs">Valeurs</h3>
+
+<dl>
+ <dt><code>auto</code></dt>
+ <dd>Si la valeur calculée de <a href="/fr/docs/Web/CSS/display-outside" title="La propriété display-outside définit le type d'affichage (display type) à l'extérieur de la boîte générée par un élément et indique la façon dont l'élément s'inscrit dans le contexte de formatage de l'élément parent."><code>display-outside</code></a> pour l'élément vaut <code>inline-level</code>, l'élément sera un élément en ligne (<em>inline</em>) et organisera son contenu comme du contenu en ligne (<em>inline</em>). Si la valeur calculée de <a href="/fr/docs/Web/CSS/display-outside" title="La propriété display-outside définit le type d'affichage (display type) à l'extérieur de la boîte générée par un élément et indique la façon dont l'élément s'inscrit dans le contexte de formatage de l'élément parent."><code>display-outside</code></a> pour l'élément est un type de disposition spécifique interne, l'élément agit normalement selon la valeur donnée par <a href="/fr/docs/Web/CSS/display-outside" title="La propriété display-outside définit le type d'affichage (display type) à l'extérieur de la boîte générée par un élément et indique la façon dont l'élément s'inscrit dans le contexte de formatage de l'élément parent."><code>display-outside</code></a>. Sinon, la valeur calculée est <code>block</code>.</dd>
+ <dt><code>block</code></dt>
+ <dd>L'élément organise son contenu avec une disposition en bloc.</dd>
+ <dt><code>table</code></dt>
+ <dd>L'élément organise son contenu avec une disposition en tableau.</dd>
+ <dt><code>flex</code></dt>
+ <dd>L'élément organise son contenu avec une disposition flexible.</dd>
+ <dt><code>grid</code></dt>
+ <dd>L'élément organise son contenu avec une disposition en grille.</dd>
+ <dt><code>ruby</code></dt>
+ <dd>L'élément organise son contenu avec une disposition ruby.</dd>
+</dl>
+
+<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+
+<pre class="syntaxbox">La syntaxe n'a pas été trouvée !</pre>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Spécification</th>
+   <th scope="col">État</th>
+   <th scope="col">Commentaires</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><a class="external" href="https://drafts.csswg.org/css-display/#the-display-inside" hreflang="en" lang="en">CSS Display Module Level 3<br><small lang="fr">La définition de 'display-inside' dans cette spécification.</small></a></td>
+   <td><span class="spec-WD">Version de travail</span></td>
+   <td>Définition initiale.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<p></p><p class="warning"><strong><a href="https://github.com/mdn/browser-compat-data">Nous convertissons les données de compatibilité dans un format JSON</a></strong>.
+            Ce tableau de compatibilité utilise encore l'ancien format
+            car nous n'avons pas encore converti les données qu'il contient.
+            <strong><a href="/fr/docs/MDN/Contribute/Structures/Compatibility_tables">Vous pouvez nous aider en contribuant !</a></strong></p>
+
+<div class="htab">
+    <a id="AutoCompatibilityTable" name="AutoCompatibilityTable"></a>
+    <ul>
+        <li class="selected"><a>Ordinateur</a></li>
+        <li><a>Mobile</a></li>
+    </ul>
+</div><p></p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Fonctionnalité</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Support simple</td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Fonctionnalité</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Support simple</td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p> </p>

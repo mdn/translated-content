@@ -1,0 +1,49 @@
+---
+title: b2g.shスクリプトをカスタマイズする
+slug: Archive/B2G_OS/Developing_Firefox_OS/Customizing_the_b2g.sh_script
+tags:
+  - B2G
+  - Firefox OS
+  - デバッグ
+  - ハック
+translation_of: Archive/B2G_OS/Developing_Firefox_OS/Customizing_the_b2g.sh_script
+---
+<div class="summary">
+ <p>電話機では、<code><a href="/en-US/docs/Mozilla/Firefox_OS/Architecture#The_userspace_process_architecture" title="/en-US/docs/Mozilla/Firefox_OS/Architecture#The_userspace_process_architecture">b2g</a></code> アプリケーション(とりわけFirefox OS API群を提供します)は <code>/system/bin/b2g.sh</code> スクリプト経由で起動します。このスクリプトをカスタマイズしてFirefox OSの挙動を変更でき、この記事で方法を説明します。</p>
+</div>
+<h2 id="環境変数のセット">環境変数のセット</h2>
+<p>単にB2Gを一度実行するために環境変数をセットしたい場合、下記のようにします:</p>
+<pre class="brush: bash">adb shell stop b2g
+adb shell "export ENV_VAR=value &amp;&amp; /system/bin/b2g.sh"
+</pre>
+<p>ずっと同じ環境変数を使いたい場合、<code>次の節に書いてあるように<code> b2g.sh を</code>編集できます。</code></p>
+<h2 id="b2g.shを編集する">b2g.shを編集する</h2>
+<p>デバッグ用途で、ログ取得やb2gプログラムの動作に影響を与えるために環境変数をセットしたい場合があります。<code>b2g.sh</code><code><code>スクリプトを</code>編集</code>することで、これが可能です。電話機上でファイルを書き換えるツールはないので、まずコンピュータにファイルをコピーしないといけません。</p>
+<ol>
+ <li>電話機をコンピュータに接続し、ターミナルウィンドウを開き、下記コマンドを実行してスクリプトを編集します:
+  <pre>adb pull /system/bin/b2g.sh</pre>
+ </li>
+ <li>お好みの変更となるようスクリプトを編集します。例えば、ログ出力が見たいとすると(デバッグビルドが必要です)、下記のようなものを追加します:
+  <pre>export NSPR_LOG_FILE=/data/local/tmp/mylog.txt
+export NSPR_LOG_MODULES=Layers:5
+</pre>
+ </li>
+ <li>下記のコマンドを実行し、更新された<code>b2g.sh</code>スクリプトを電話機に保存してb2gを再起動します:
+  <pre>adb shell stop b2g
+adb remount
+adb push b2g.sh /system/bin
+adb shell chmod 0755 /system/bin/b2g.sh
+adb shell start b2g
+</pre>
+ </li>
+</ol>
+<div class="note">
+ <p><strong>記:</strong> <code>/data/local/tmp</code> は、コンテントプロセスから書き込み可能となる、ファイルシステム上の唯一の場所です。</p>
+</div>
+<h2 id="参考">参考</h2>
+<ul>
+ <li><a href="/ja/Firefox_OS/Building_and_installing_Firefox_OS" title="/en-US/docs/Mozilla/Boot_to_Gecko/Building_and_installing_Boot_to_Gecko">Firefox OS のビルドとインストール</a></li>
+ <li><a href="/ja/Firefox_OS/Platform/Architecture" title="/en-US/docs/Mozilla/Firefox_OS/Architecture">Firefox OSのアーキテクチャ</a></li>
+ <li><a href="/ja/Firefox_OS/Debugging" title="/en-US/docs/Mozilla/Boot_to_Gecko/Debugging_on_Boot_to_Gecko">Firefox OSをデバッグする</a></li>
+</ul>
+<p> </p>

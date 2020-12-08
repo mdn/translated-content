@@ -1,0 +1,357 @@
+---
+title: tree
+slug: Archive/Mozilla/XUL/tree
+tags:
+  - XUL Elements
+  - XUL Reference
+translation_of: Archive/Mozilla/XUL/tree
+---
+<div class="noinclude"><span class="breadcrumbs XULRef_breadcrumbs">
+ « <a href="/ja/docs/XUL/XUL_Reference">XUL リファレンス HOME</a>    [
+ <a href="#Examples">例</a> |
+ <a href="#Attributes">属性</a> |
+ <a href="#Properties">プロパティ</a> |
+ <a href="#Methods">メソッド</a> |
+ <a href="#Related">関連項目</a> ]
+</span></div>
+<p>表のような要素、あるいは階層的な要素の行を保持するために使用するコンテナ。tree は行と列をいくつでも含みます。tree の各行は、親から字下げして表示される子の行を含みます。他の要素と異なり、tree 内に表示されるデータはタグを使って指定されるのではなく、View オブジェクトから決定されます。View オブジェクトは <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeView" title="">nsITreeView</a></code> インタフェースを実装しています。tree にデータを表示するために、View を検索します。tree の使用方法は、下の一覧のようにいくつかあります。2 列目はその tree の <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/view">view</a></span></code> プロパティ経由で利用可能なインタフェースの一覧です。3 列目は <code><a href="/ja/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code> 要素が使われるかどうかを示します。</p>
+<p>tree を水平にスクロールできるようにしたいときは、<code id="a-width"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/width">width</a></code> 属性を各列に設定し、tree の幅を含まれるオブジェクトより広くします。</p>
+<table class="fullwidth-table"> <tbody> <tr> <th>tree の種類</th> <th>View インタフェース</th> <th>DOM ノードを持つか?</th> <th>説明</th> </tr> <tr> <td>コンテンツツリー</td> <td><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeView" title="">nsITreeView</a></code>, <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeContentView" title="">nsITreeContentView</a></code></td> <td>はい</td> <td>このツリーは <code><a href="/ja/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code> 要素のなかに <code><a href="/ja/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code> 要素を持ちます。この場合、より特化した種類のビューであるコンテントビュー( <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeContentView" title="">nsITreeContentView</a></code> インターフェースを実装しています) は <code><a href="/ja/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code> 要素とそれらの子孫を、ツリーに表示されるデータを定義するために使用します。しかし、ツリーアイテムが直接表示されるわけではありません。それらはコンテントビューのデータとしてのみ使われます。しかし、ツリーアイテムが変更されると、コンテントビューは自動的にツリーを更新するでしょう。</td> </tr> <tr> <td>RDF ツリー</td> <td><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeView" title="">nsITreeView</a></code>, <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXULTreeBuilder" title="">nsIXULTreeBuilder</a></code></td> <td>いいえ</td> <td>このツリーは RDF データソースから生成されます。<code id="a-datasources"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/datasources">datasources</a></code> 属性をもち <code id="a-flags"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flags">flags</a></code> 属性に <code>dont-build-content</code> が指定されたとき、それが使われます。このツリーでは RDF データソースのデータを直接使います。DOM <code><a href="/ja/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code> は作られません。テンプレートが treeitem 要素をコンテントを定義するために使っていたとしても、それらの DOM ノードは作られません。これは RDF によって生成された大量の行をもつツリーに使われるべきタイプです。</td> </tr> <tr> <td>RDF コンテンツツリー</td> <td><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeView" title="">nsITreeView</a></code>, <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXULTreeBuilder" title="">nsIXULTreeBuilder</a></code>, <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeContentView" title="">nsITreeContentView</a></code></td> <td>はい</td> <td>このツリーは RDF データソースから作られます。前の種類に似ていますが、ツリーが <code id="a-flags"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flags">flags</a></code> 属性に <code>dont-build-content</code> をもっていないときに使われます。DOM <code><a href="/ja/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code> が作られるため、データに RDF 関数や DOM 関数でアクセスできます。このタイプは RDF で生成される、ごく少数の行しかもたないツリーに最適です。</td> </tr> <tr> <td>カスタムツリービュー</td> <td><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeView" title="">nsITreeView</a></code></td> <td>いいえ</td> <td>このツリーに対しては <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeView" title="">nsITreeView</a></code> インタフェースを自身で実装します。このツリーのデータはこのカスタムビューから読み出されます。カスタムビューはツリーの <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/view">view</a></span></code> プロパティを設定することでツリーに付加されるべきです。</td> </tr> </tbody>
+</table>
+<p>詳しい情報が <a href="/ja/XUL_Tutorial/Trees" title="ja/XUL_Tutorial/Trees">XUL チュートリアル</a>にあります。または <a href="/ja/Tree_Widget_Changes" title="ja/Tree_Widget_Changes">Tree Widget Changes</a> を参照してください。</p>
+<table style="border: 1px solid rgb(204, 204, 204); margin: 0px 0px 10px 10px; padding: 0px 10px; background: rgb(238, 238, 238) none repeat scroll 0% 0%;"> <tbody> <tr> <td><strong><a href="/ja/XUL_accessibility_guidelines#Trees" title="ja/XUL_accessibility_guidelines#Trees">関連するアクセシビリティのガイドライン</a></strong><small> </small> <ul> <li><small>Provide alternative access (for example, via menus) to column picker and for header behaviors like sorting (these have no default keyboard access).</small></li> </ul> </td> </tr> </tbody>
+</table>
+<dl> <dt>属性</dt> <dd><a href="#a-disableKeyNavigation">disableKeyNavigation</a>, <a href="#a-disabled">disabled</a>, <a href="#a-tree.editable">editable</a>, <a href="#a-enableColumnDrag">enableColumnDrag</a>, <a href="#a-flags">flags</a>, <a href="#a-hidecolumnpicker">hidecolumnpicker</a>, <a href="#a-tree.onselect">onselect</a>, <a href="#a-rows">rows</a>, <a href="#a-seltype">seltype</a>, <a href="#a-statedatasource">statedatasource</a>, <a href="#a-tabindex">tabindex</a>, <a href="#a-treelines">treelines</a></dd>
+</dl>
+<dl> <dt>プロパティ</dt> <dd><a href="#p-accessibleType">accessibleType</a>, <a href="#p-builderView">builderView</a>, <a href="#p-columns">columns</a>, <a href="#p-contentView">contentView</a>, <a href="#p-currentIndex">currentIndex</a>, <a href="#p-disableKeyNavigation">disableKeyNavigation</a>, <a href="#p-disabled">disabled</a>, <a href="#p-editingColumn">editingColumn</a>, <a href="#p-editingRow">editingRow</a>, <a href="#p-enableColumnDrag">enableColumnDrag</a>, <a href="#p-firstOrdinalColumn">firstOrdinalColumn</a>, <a href="#p-tree.inputField">inputField</a>, <a href="#p-selType">selType</a>, <a href="#p-selstyle">selstyle</a>, <a href="#p-tabIndex">tabIndex</a>, <a href="#p-treeBoxObject">treeBoxObject</a>, <a href="#p-view">view</a></dd>
+</dl>
+<div><span id="Examples"></span></div>
+<h3 id="Examples" name="Examples">例</h3>
+<div><span id="A_tree_with_several_columns"></span></div>
+<h4 id="いくつかの列を持つツリー">いくつかの列を持つツリー</h4>
+<pre class="brush: xml">&lt;tree flex="1" rows="2"&gt;
+
+  &lt;treecols&gt;
+    &lt;treecol id="sender" label="Sender" flex="1"/&gt;
+    &lt;treecol id="subject" label="Subject" flex="2"/&gt;
+  &lt;/treecols&gt;
+
+  &lt;treechildren&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="joe@somewhere.com"/&gt;
+        &lt;treecell label="Top secret plans"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="mel@whereever.com"/&gt;
+        &lt;treecell label="Let's do lunch"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+  &lt;/treechildren&gt;
+
+&lt;/tree&gt;
+</pre>
+<div><img alt="Image:trees1.png" class="internal" src="/@api/deki/files/899/=Trees1.png"></div>
+<p><span id="A_tree_with_several_columns_and_nested_items"></span></p>
+<h4 id="いくつかの入れ子状のアイテムを持つツリー">いくつかの入れ子状のアイテムを持つツリー</h4>
+<pre class="brush: xml">&lt;tree id="myTree" flex="1" hidecolumnpicker="false" seltype="single" class="tree"
+      rows="5"&gt;
+  &lt;treecols id="myTree2-treeCols"&gt;
+    &lt;treecol id="myTree2-treeCol0" primary="true" flex="2" label="Column A"
+             persist="width" ordinal="1"/&gt;
+    &lt;splitter class="tree-splitter" ordinal="2"/&gt;
+    &lt;treecol id="myTree2-treeCol1" flex="1" label="Column B"
+             persist="width" ordinal="3"/&gt;
+  &lt;/treecols&gt;
+  &lt;treechildren&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="1"/&gt;
+        &lt;treecell label="a"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+    &lt;!-- Make sure to set container="true" --&gt;
+    &lt;treeitem container="true" open="true"&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="2"/&gt;
+        &lt;treecell label="b"/&gt;
+      &lt;/treerow&gt;
+      &lt;treechildren&gt;
+        &lt;treeitem&gt;
+          &lt;treerow&gt;
+            &lt;treecell label="2a"/&gt;
+            &lt;treecell label="ba"/&gt;
+          &lt;/treerow&gt;
+        &lt;/treeitem&gt;
+      &lt;/treechildren&gt;
+    &lt;/treeitem&gt;
+  &lt;/treechildren&gt;
+&lt;/tree&gt;
+</pre>
+<div><span id="Attributes"></span></div>
+<h3 id="Attributes" name="Attributes">属性</h3>
+<div id="a-disabled">
+
+<dl>
+  <dt>
+    <code id="a-disabled"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code></dt>
+  <dd>
+    型: <em>論理型</em></dd>
+  <dd>
+    要素が無効化されているかどうかを示します。ある要素が <code>true</code> に設定されていたら、その要素は無効化されています。無効化された要素は通常グレイ表示のテキストで描画されます。要素が無効化されていると、ユーザのアクションには応答せず、フォーカスもあてられず、<code>command</code> イベントも発生しません。
+
+  </dd>
+</dl>
+
+<p> </p>
+</div><div id="a-disableKeyNavigation">
+
+<dl><dt> <code id="a-disableKeyNavigation"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/disableKeyNavigation">disableKeyNavigation</a></code> </dt><dd> 型: <em>論理型</em> </dd><dd> この属性が使用されていない場合、ユーザは、項目のラベル内の文字にマッチするキーを押すことによって、要素内の特定の項目に移動することができます。これはインクリメンタルに行われるため、さらに文字を入力して、項目をさらに特定することができます。この機能は、この属性を <code>true</code> に設定することによって無効化されます。 </dd></dl>
+
+</div><div id="a-tree.editable">
+
+<dl><dt> <code id="a-tree.editable"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/tree.editable">editable</a></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code><a href="/ja/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code> のセルが編集可能であることを示す。 </dd></dl>
+
+</div><div id="a-enableColumnDrag">
+
+<dl><dt> <code id="a-enableColumnDrag"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/enableColumnDrag">enableColumnDrag</a></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code>true</code> に設定した場合、ユーザはコラムヘッダをドラッグして表示順を変更できます。 </dd></dl>
+
+</div><div id="a-flags">
+
+<dl><dt> <code id="a-flags"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flags">flags</a></code> </dt><dd> 型: <em>スペースで区切られた下記の値のリスト</em> </dd><dd> flag の設定は様々な目的で使用されます。この属性の値には 2 つの flag が定義されています。 </dd></dl>
+<ul> <li><code>dont-test-empty</code>: テンプレートが生成したコンテンツに対して、ビルダはコンテナが空かどうかをチェックしません。</li> <li><code>dont-build-content</code>: この flag は、要素が生成すべきではないコンテンツを示すために tree 上で使用されます。この結果、パフォーマンスは向上しますが、tree の row を取得するために DOM 関数を使用することができなくなります。</li>
+</ul>
+
+</div><div id="a-hidecolumnpicker">
+
+<dl><dt> <code id="a-hidecolumnpicker"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/hidecolumnpicker">hidecolumnpicker</a></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code>false</code> に設定した場合、<code><a href="/ja/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code> の右上隅に、表示する列を選択するドロップダウンメニューが表示されます。<code>true</code> に設定した場合、このコラムピッカは隠されます。デフォルト値は <code>false</code> です。 </dd></dl>
+
+</div><div id="a-tree.onselect">
+
+<dl><dt> <code id="a-tree.onselect"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/tree.onselect">onselect</a></code> </dt><dd> 型: <em>script code</em> </dd><dd> このイベントは行が選択された時、または選択が変更された時、<code><a href="/ja/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code> に送られます。ユーザは、Shift または Ctrl を押しながら行をクリックすることにより、複数の行を選択することができます。<code>onselect</code> イベントは選択が追加、または解除された各項目に送られます。 </dd></dl>
+
+
+</div><div id="a-rows">
+
+<dl><dt> <code id="a-rows"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/rows">rows</a></code> </dt><dd> 型: <em>整数型</em> </dd><dd> 要素内に表示する行数。要素がこの数値よりも多くの行を含むときはスクロールバーが現れます。要素内の実際の rows の値を取得するには <span id="m-getRowCount"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getRowCount">getRowCount</a></code></span> メソッドを使用してください。 </dd></dl>
+
+</div><div id="a-seltype">
+
+<dl>
+ <dt>
+  <code id="a-seltype"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/seltype">seltype</a></code> </dt>
+ <dd>
+  型: <em>下記の値のいずれか一つ</em></dd>
+ <dd>
+  複数の選択を許可するかどうかを指示します。</dd>
+</dl>
+<ul>
+ <li><code>single</code>: 一度に一行だけが選択できます。(<code>listbox</code> のデフォルト値)</li>
+ <li><code>multiple</code>: 一度に複数行が選択できます。(<code>tree</code> のデフォルト値)</li>
+</ul>
+<p>tree 要素ではさらに、</p>
+<ul>
+ <li><code>cell</code> : 個々のセルが選択できます。</li>
+ <li><code>text</code> : 行が選択されたとき、最初の列のテキストのみが強調表示されます。</li>
+</ul>
+</div><div id="a-statedatasource">
+
+<dl><dt> <code id="a-statedatasource"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/statedatasource">statedatasource</a></code> </dt><dd> 型: <em>datasource の URI</em> </dd><dd> Chrome XUL は、<code><a href="/ja/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code> state 情報の格納に使用する RDF データソースを指定します。これは、tree 項目を展開した状態や折り畳んだ状態を維持するために使用されます。この情報は、次に XUL ファイルが開かれたときのために記憶されます。この属性を指定しない場合、state 情報は local store(<code>rdf:local-store</code>) に格納されます。 </dd></dl>
+
+</div><div id="a-tabindex">
+
+<dl><dt> <code id="a-tabindex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/tabindex">tabindex</a></code> </dt><dd> 型: <em>整数型</em> </dd><dd> 要素のタブの順番。タブの順番は <code>tab</code> キーが押下されたときにフォーカスが移動する順番です。より大きな <code>tabindex</code> の値をもつ要素は、タブの遷移が後になります。 </dd></dl>
+
+</div><div id="a-treelines">
+
+<dl><dt> <code id="a-treelines"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/treelines">treelines</a></code> <br>
+</dt><dd> Type: <em>boolean</em> </dd><dd> When set to <code>true</code>, lines are drawn connecting the lines in the tree; when <code>false</code>, the lines are not drawn. This is <code>false</code> by default.<br>
+</dd></dl>
+</div>
+<div><span id="Properties"></span></div>
+<h3 id="Properties" name="Properties">プロパティ</h3>
+<p> </p><div id="p-accessibleType">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/accessibleType">accessibleType</a></span></code> </dt><dd> 型: <em>整数型</em> </dd><dd> 要素の accessibility オブジェクトの種類を示す値。 </dd></dl>
+
+</div> <div id="p-builderView">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/builderView">builderView</a></span></code> </dt><dd> 型: <em><a href="/ja/NsIXULTreeBuilder" title="ja/NsIXULTreeBuilder">nsIXULTreeBuilder</a></em> </dd><dd> <code><a href="/ja/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code> データを構築する tree builder への参照。builder は、tree 内の各行のための RDF リソースへのアクセスを提供し、列のデータを並べ替えられるようにします。Mozilla の最近のバージョンでは、<code>builderView</code> プロパティは <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/view">view</a></span></code> プロパティの別名です。これら二つのインタフェースは <a href="/ja/JavaScript" title="ja/JavaScript">JavaScript</a> で一つのインタフェースに合わさっています。このプロパティは読み取り専用です。 </dd></dl>
+</div> <div id="p-columns">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/columns">columns</a></span></code></dt>
+  <dd>
+    型: <em><a href="/ja/NsITreeColumns" title="ja/NsITreeColumns">nsITreeColumns</a></em></dd>
+  <dd>
+    tree の列を <a href="/ja/NsITreeColumns" title="ja/NsITreeColumns">nsITreeColumns</a> オブジェクトとして返す。</dd>
+</dl></div> <div id="p-contentView">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/contentView">contentView</a></span></code></dt>
+  <dd>
+    型: <em><a href="/ja/NsITreeContentView" title="ja/NsITreeContentView">nsITreeContentView</a></em></dd>
+  <dd>
+    コンテンツビルダで構築された (<code id="a-flags"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flags">flags</a></code> 設定を持たない) tree では、<code>contentView</code> は <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeContentView" title="">nsITreeContentView</a></code> への参照になります。このインタフェースは、与えられた行の index に対応する DOM 要素の取得や設定を行います。コンテンツビルダで構築されたものでない tree では取得する DOM ノードが存在しないため、<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeContentView" title="">nsITreeContentView</a></code> の関数を利用することはできません。Mozilla の最近のバージョンでは、<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeContentView" title="">nsITreeContentView</a></code> プロパティは <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/view">view</a></span></code> プロパティの別名です。これら 2 つのインタフェースは <a href="/ja/docs/JavaScript" title="JavaScript">JavaScript</a> で 1 つのインタフェースに合わさっています。このプロパティは読み取り専用です。</dd>
+</dl></div> <div id="p-currentIndex">
+<dl><dt> <code><span><a href="http://api/ja/docs/XUL/Property/currentIndex">currentIndex</a></span></code> </dt><dd> 型: <em>整数型</em> </dd><dd> 現在フォーカスされた <code><a href="/ja/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code> 内の行の index を設定します。行がフォーカスされていない場合、値は <code>-1</code> になります。複数選択できる tree では、現在の index は選択された最後の行になります。このプロパティを選択の変更に使用してはいけません。代わりに、<code>tree.view.selection</code> を通して利用可能な <code><a href="/ja/NsITreeSelection" title="ja/NsITreeSelection">nsITreeSelection</a></code> オブジェクトのメソッドを使用してください。 </dd></dl>
+
+</div> <div id="p-disabled">
+<dl><dt> <code><span><a href="http://api/ja/docs/XUL/Property/disabled">disabled</a></span></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code id="a-disabled"><a href="http://api/ja/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code> 属性の値の取得と設定。 </dd></dl>
+</div> <div id="p-disableKeyNavigation">
+<dl>
+  <dt><code><span><a href="http://api/ja/docs/XUL/Property/disableKeyNavigation">disableKeyNavigation</a></span></code></dt>
+  <dd>型: <em>論理型</em></dd>
+  <dd><code id="a-disableKeyNavigation"><a href="http://api/ja/docs/Mozilla/Tech/XUL/Attribute/disableKeyNavigation">disableKeyNavigation</a></code> 属性の値の取得と設定。</dd>
+</dl></div> <div id="p-editingColumn">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/editingColumn">editingColumn</a></span></code>  </dt><dd> 型: <em><code><a href="/en/NsITreeColumn" title="en/NsITreeColumn">nsITreeColumn</a></code></em> </dd><dd> 現在編集中の <a href="/ja/XUL/tree" title="ja/XUL/tree">tree</a> セルの列。セルが編集中でないときは <code>null</code> になります。 </dd></dl>
+</div> <div id="p-editingRow">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/editingRow">editingRow</a></span></code>  </dt><dd> 型: <em>整数型</em> </dd><dd> 現在編集中の tree セルの行 index。セルが編集中でないときは <code>-1</code> になります。 </dd></dl>
+</div> <div id="p-enableColumnDrag">
+<dl><dt> <code><span><a href="http://api/ja/docs/XUL/Property/enableColumnDrag">enableColumnDrag</a></span></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code>true</code> に設定した場合、ユーザはコラムヘッダをドラッグして表示順を変更できます。 </dd></dl>
+</div> <div id="p-firstOrdinalColumn">
+<dl><dt> <code><span><a href="http://api/ja/docs/XUL/Property/firstOrdinalColumn">firstOrdinalColumn</a></span></code> </dt><dd> 型: <em><code><a href="/ja/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code> 要素</em> </dd><dd> 最初の <code><a href="/ja/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code> 要素への参照。tree 内に表示された最初の列とは限りません。 </dd></dl>
+</div> <div id="p-tree.inputField">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/tree.inputField">inputField</a></span></code> </dt><dd> 型: <em><code><a href="/ja/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code> 要素</em> </dd><dd> 編集に使用される <code><a href="/ja/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code> を保持。このプロパティは読み取り専用です。 </dd></dl>
+</div> <div id="p-selType">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/selType">selType</a></span></code>  </dt><dd> 型: <em>文字列型</em> </dd><dd> <code id="a-seltype"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/seltype">seltype</a></code> 属性の値の取得と設定。 </dd></dl>
+</div> <div id="p-selstyle">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/selstyle">selstyle</a></span></code> </dt><dd> 型: <em>文字列型</em> </dd><dd> 値に <code>primary</code> を設定すると、tree 内の項目が選択された時、最初の列のラベルのみが強調表示されます。その他の場合はすべての行が強調表示されます。違いを知るには、Mozilla メールのフォルダリストとメッセージリストの選択スタイルを比較してください。 </dd></dl>
+</div> <div id="p-tabIndex">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/tabIndex">tabIndex</a></span></code> </dt><dd> 型: <em>整数型</em> </dd><dd> <code id="a-tabindex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/tabindex">tabindex</a></code> 属性の値の取得と設定。 </dd></dl>
+</div> <div id="p-treeBoxObject">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/treeBoxObject">treeBoxObject</a></span></code> </dt><dd> 型: <em><a href="/ja/NsITreeBoxObject" title="ja/NsITreeBoxObject">nsITreeBoxObject</a></em> </dd><dd> box オブジェクトが window 上の <code><a href="/ja/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code> を描画します。このオブジェクトは <a href="/ja/NsITreeBoxObject" title="ja/NsITreeBoxObject">nsITreeBoxObject</a> インタフェースを実装し、特定の座標のセルを取得する関数を含み、セルの再描画および tree のスクロールを行います。このプロパティは <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/boxObject">boxObject</a></span></code> プロパティと同等です。 </dd></dl>
+</div> <div id="p-view">
+
+<dl>
+ <dt><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/view">view</a></span></code></dt>
+ <dd>型: <em><a href="/ja/NsITreeView" title="ja/NsITreeView">nsITreeView</a></em></dd>
+ <dd><code><a href="/ja/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code> の表示領域 (view)。これは、表示されるデータを生成するオブジェクトです。 <a href="/ja/NsITreeView" title="ja/NsITreeView">nsITreeView</a> を実装するオブジェクトをこのプロパティに割り当ててください。RDF から構築されたツリーや <code><a href="/ja/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code> を直接使用するツリーはすでに表示領域を持っています。表示領域内のセルに含まれるデータを取得できる関数が利用可能です。この関数は他のものに入れ子になった行を決定します。view 関数の完全なリストは <a href="/ja/NsITreeView" title="ja/NsITreeView">nsITreeView</a> インタフェースをご覧ください。</dd>
+</dl></div>
+<div><span id="Methods"></span></div>
+<h3 id="Methods" name="Methods">メソッド</h3>
+<div style="border: 1px solid rgb(204, 204, 204); margin: 0px 0px 10px 10px; padding: 0px 10px; background: rgb(238, 238, 238) none repeat scroll 0% 50%;">
+<p><strong>XUL 要素からの継承</strong><br>
+<small> <span id="m-blur"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/blur">blur</a></code></span>, <span id="m-click"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/click">click</a></code></span>, <span id="m-doCommand"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/doCommand">doCommand</a></code></span>, <span id="m-focus"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/focus">focus</a></code></span>, <span id="m-getElementsByAttribute"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getElementsByAttribute">getElementsByAttribute</a></code></span>, <span id="m-getElementsByAttributeNS"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getElementsByAttributeNS">getElementsByAttributeNS</a></code></span> </small></p>
+<p><strong>DOM 要素からの継承</strong><br>
+<small> <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.addEventListener">addEventListener()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.appendChild">appendChild()</a></code>, <a class="internal" href="/ja/DOM/Node.compareDocumentPosition" title="ja/DOM/Node.compareDocumentPosition">compareDocumentPosition</a>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.dispatchEvent">dispatchEvent()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getAttribute">getAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getAttributeNode">getAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getAttributeNodeNS">getAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getAttributeNS">getAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getElementsByTagName">getElementsByTagName()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getElementsByTagNameNS">getElementsByTagNameNS()</a></code>, <a class="internal" href="/ja/DOM/Node.getFeature" title="ja/DOM/Node.getFeature">getFeature</a>, <a class="internal" href="/ja/DOM/Node.getUserData" title="ja/DOM/Node.getUserData">getUserData</a>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.hasAttribute">hasAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.hasAttributeNS">hasAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.hasAttributes">hasAttributes()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.hasChildNodes">hasChildNodes()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.insertBefore">insertBefore()</a></code>, <a class="internal" href="/ja/DOM/Node.isEqualNode" title="ja/DOM/Node.isEqualNode">isEqualNode</a>, <a class="internal" href="/ja/DOM/Node.isSameNode" title="ja/DOM/Node.isSameNode">isSameNode</a>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.isSupported">isSupported()</a></code>, <a class="internal" href="/ja/DOM/Node.lookupNamespaceURI" title="ja/DOM/Node.lookupNamespaceURI">lookupNamespaceURI</a>, <a class="internal" href="/ja/DOM/Node.lookupPrefix" title="ja/DOM/Node.lookupPrefix">lookupPrefix</a>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.normalize">normalize()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeAttribute">removeAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeAttributeNode">removeAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeAttributeNS">removeAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeChild">removeChild()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeEventListener">removeEventListener()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.replaceChild">replaceChild()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.setAttribute">setAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.setAttributeNode">setAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.setAttributeNodeNS">setAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.setAttributeNS">setAttributeNS()</a></code>, <a class="internal" href="/ja/DOM/Node.setUserData" title="ja/DOM/Node.setUserData">setUserData</a></small></p>
+</div> <dl>
+  <dt>
+    <span id="m-startEditing"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/startEditing">startEditing( row, column )</a></code></span> </dt>
+  <dd>
+    戻り値の型: <em>戻り値なし</em></dd>
+  <dd>
+    指定セルのユーザによる編集可能状態を有効にします。これは <var>row</var> index およびセルの位置の <a href="/ja/docs/XPCOM_Interface_Reference/nsITreeColumn"><code>nsITreeColumn</code></a> によって指定します。セルの内容を取得するためにツリービューの <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsITreeView#getCellText()">nsITreeView.getCellText()</a></code> メソッドが呼び出されます。</dd>
+</dl> <dl>
+  <dt><span id="m-stopEditing"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/stopEditing">stopEditing( shouldaccept )</a></code></span> </dt>
+  <dd>戻り値の型: <em>戻り値無し</em></dd>
+  <dd>編集中のセルの編集を中止します。<code>shouldAccept</code> 引数が <code>true</code> の場合、セルのラベルは編集した値に変更されます (セルの内容を変更するためにツリービューの <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsITreeView#setCellText()">nsITreeView.setCellText()</a></code> メソッドが呼び出されます)。この引数が <code>false</code> 場合、セルのラベルは編集前の値に戻されます。</dd>
+</dl>
+<div><span id="Related"></span></div>
+<h3 id="Related" name="Related">関連項目</h3>
+<dl> <dt>要素</dt> <dd><code><a href="/ja/docs/Mozilla/Tech/XUL/treecols" title="treecols">treecols</a></code>, <code><a href="/ja/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code>, <code><a href="/ja/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code>, <code><a href="/ja/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code>, <code><a href="/ja/docs/Mozilla/Tech/XUL/treerow" title="treerow">treerow</a></code>, <code><a href="/ja/docs/Mozilla/Tech/XUL/treecell" title="treecell">treecell</a></code>, <code><a href="/ja/docs/Mozilla/Tech/XUL/treeseparator" title="treeseparator">treeseparator</a></code></dd> <dt>インタフェース</dt> <dd><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAccessibleProvider" title="">nsIAccessibleProvider</a></code>, <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMXULTreeElement" title="">nsIDOMXULTreeElement</a></code>, <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMXULMultiSelectControlElement" title="">nsIDOMXULMultiSelectControlElement</a></code></dd>
+</dl>
+<div><span id="Script_Examples"></span></div>
+<h3 id="Script_Examples" name="Script_Examples">スクリプトの例</h3>
+<p>スタイルシートで各列へ交互に色を付けるには、次のようなスタイル規則を使用してください:</p>
+<p> </p>
+<pre class="brush: css">treechildren::-moz-tree-row(selected) { background-color: #FFFFAA; }
+treechildren::-moz-tree-row(odd) { background-color: #EEEEEE; }
+treechildren::-moz-tree-row(odd, selected) { background-color: #FFFFAA; }
+treechildren::-moz-tree-cell-text(selected) { color: #000000; }
+treechildren::-moz-tree-cell-text(odd, selected) { color: #000000; }
+</pre>
+<p>コンテンツツリー上で選択された各行の id 属性の値を取得するには、次のようにします:</p>
+<pre class="brush: js">var idList = [];
+var rangeCount = tree.view.selection.getRangeCount();
+for (var i = 0; i &lt; rangeCount; i++) {
+  var start = {};
+  var end = {};
+  tree.view.selection.getRangeAt(i, start, end);
+  for (var c = start.value; c &lt;= end.value; c++) {
+    idList.push(tree.view.getItemAtIndex(c).firstChild.id);
+  }
+}
+</pre>
+<p>次の例は、チェックボックス型の列にチェックが入った値の行の index 値の配列を返します:</p>
+<pre class="brush: js">function getCellChecked(tree, columnid) {
+  var arr = [];
+  var column = tree.columns.getNamedColumn(columnid);
+  for (var i = 0; i &lt; tree.view.rowCount; i++) {
+    if (tree.view.getCellValue(i, column) == 'true')
+      arr.push(i);
+  }
+  return arr;
+}
+</pre>
+<p>tree で現在選択されている行から、特定の列 ('age' と名付けられた列) のテキストの値を取得するには:</p>
+<pre class="brush: js">var t = document.getElementById('mytree');
+document.title = t.view.getCellText(t.currentIndex,t.columns.getNamedColumn('age'));
+</pre>
+<div class="noinclude"> <p>チェックボックスを選択し、そのセルのテキストを表示するには、次のようにします。</p> <p>XUL (treeの):</p> <pre class="brush: xml">&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+&lt;?xml-stylesheet href="file://C:/main.css" type="text/css"?&gt;
+&lt;window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;row&gt;&lt;button label="GetRowValues" oncommand="getrowcellvalues();"/&gt;&lt;/row&gt;
+ &lt;tree flex="1" editable="true" id="mytree"&gt;
+
+  &lt;treecols&gt;
+    &lt;treecol label="Active" type="checkbox" editable="true" /&gt;
+    &lt;treecol label="Name" flex="1" id="name"/&gt;
+  &lt;/treecols&gt;
+
+  &lt;treechildren&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell value="false"/&gt;
+        &lt;treecell label="Alice"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell value="false"/&gt;
+        &lt;treecell label="Bob"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+  &lt;/treechildren&gt;
+
+&lt;/tree&gt;
+
+&lt;/window&gt;
+</pre> <p>CSS:</p> <pre class="brush: css">treechildren::-moz-tree-checkbox {
+  /* 選択されていないチェックボックスのtreecell。
+     *必ず* treechildren::-moz-tree-checkbox(checked)より前に指定すること。そうしないと効果がなくなる。 */
+  list-style-image: url("")
+}
+treechildren::-moz-tree-checkbox(checked) {
+  /* 選択されたチェックボックスのtreecell。
+     cbox-check.gifは、Mac OS XのFirefox 1～3では使えない。自身の拡張機能などの画像のURLを指定すべき。 */
+  list-style-image: url("chrome://global/skin/checkbox/cbox-check.gif");
+}
+treechildren::-moz-tree-checkbox(disabled) {
+  /* 無効なチェックボックスのtreecell。
+     cbox-check-dis.gifも、Mac OS XのFirefox 1～3では使えない。 */
+  list-style-image: url("chrome://global/skin/checkbox/cbox-check-dis.gif")
+}
+
+treechildren::-moz-tree-row(selected)            { background-color: #FFFFAA; }
+treechildren::-moz-tree-row(odd)                 { background-color: #EEEEEE; }
+treechildren::-moz-tree-row(odd, selected)       { background-color: #FFFFAA; }
+treechildren::-moz-tree-cell-text(selected)      { color: #000000; }
+treechildren::-moz-tree-cell-text(odd, selected) { color: #000000; }
+treechildren::-moz-tree-row(hover) {background-color: #FFFFAA !important;}
+
+treechildren:-moz-tree-column {
+  border-right:1px solid rgb(220,220,220) !important;
+}
+</pre> <p>JavaScript (選択された列のテキストを取得する):</p> <div> <pre class="brush: js">function getrowcellvalues() {
+  var tree = document.getElementById('mytree');
+  for (var i = 0; i &lt; tree.view.rowCount; i++) {
+    if (tree.view.getCellValue(i, tree.columns.getColumnAt(0)) == 'true'){
+      alert(tree.view.getCellText(i, tree.columns.getNamedColumn("name")));
+    }
+  }
+}
+</pre> </div> <p>この方法で、選択されたチェックボックスと対応する列のtreecellの値を取得できます。</p>
+</div>

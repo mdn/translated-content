@@ -1,0 +1,96 @@
+---
+title: Firefox OS 1.4 for developers
+slug: Archive/B2G_OS/Releases/1.4
+tags:
+  - B2G
+  - Firefox OS
+  - Release Note
+translation_of: Archive/B2G_OS/Releases/1.4
+---
+<div class="summary">
+<p><span class="seoSummary"><strong>Firefox OS 1.4</strong> は、現在プレリリース段階です。Gecko コンポーネントは <strong>Firefox 30</strong> をベースにしています。(<a href="/ja/docs/Mozilla/Firefox/Releases/30" title="/ja/docs/Mozilla/Firefox/Releases/30">開発者向け Firefox 30 のリリースノート</a> をご覧ください。) このページは、Firefox OS で新しく実装された開発者向け機能について解説します。</span></p>
+</div>
+
+<h2 id="CSS">CSS</h2>
+
+<p>Gecko 全般:</p>
+
+<ul>
+ <li><a href="/ja/docs/Web/CSS/background-blend-mode" title="CSS の background-blend-mode プロパティは、要素の背景画像を互いに、あるいは要素の背景色とどのようにブレンドするかを示します。"><code>background-blend-mode</code></a> プロパティをデフォルトで有効にしました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=970600" title="FIXED: Enable background-blend-mode by default">バグ 970600</a>)。</li>
+ <li>非標準である <a href="/ja/docs/Web/CSS/overflow-clip-box" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>overflow-clip-box</code></a> プロパティが UI スタイルシートでのみ使用できるように実装しました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=966992" title="FIXED: Implement overflow-clip-box: content-box">バグ 966992</a>)。</li>
+ <li><a href="/ja/docs/Web/CSS/line-height" title="CSS の line-height プロパティは、ブロックレベル要素に含まれるラインボックスの、最小の高さを定義します。"><code>line-height</code></a> プロパティが、単一行のテキスト入力 (<code>&lt;input type=text|password|email|search|tel|url|unknown&gt;</code> ) に作用します。ただし、行の高さは <code>1.0</code> 以下にはなりません (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=349259" title="FIXED: CSS Property 'line-height' has no effects on input text fields">バグ 349259</a>)。</li>
+ <li><a href="/ja/docs/Web/CSS/line-height" title="CSS の line-height プロパティは、ブロックレベル要素に含まれるラインボックスの、最小の高さを定義します。"><code>line-height</code></a> プロパティは、<code>type=button</code> にも制限なく作用します (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=697451" title='FIXED: Allow use of line-height for &amp;amp;lt;input type="reset|button|submit">'>バグ 697451</a>)。</li>
+ <li>キーフレームの名前の変更は現在の要素に作用しません (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=978648" title="FIXED: Change to keyframes' name does not affect current elements">バグ 978648</a>)。</li>
+</ul>
+
+<h2 id="JavaScript">JavaScript</h2>
+
+<p><a href="/ja/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a> 全般:</p>
+
+<ul>
+ <li>ES6 互換の新たな <a href="/ja/docs/Web/JavaScript/Reference/Operators/Array_comprehensions">内包配列 </a> <code>[for (item of iterable) item]</code> と <a href="/ja/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions">Generator 内包</a> <code>(for (item of iterable) item)</code> を実装しました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=979865" title="FIXED: Implement ES6 array and generator comprehensions">バグ 979865</a>)。</li>
+ <li>Typed arrays が拡張可能になり、新たな名前のプロパティをサポートしました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=695438" title="FIXED: TypedArrays don't support new named properties">バグ 695438</a>)。</li>
+ <li><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Error/stack" title="Error オブジェクトの非標準の stack プロパティは、呼び出された関数のトレース、つまり、その呼び出し順、呼び出したファイルの行番号、呼び出した関数の引数を提供します。スタック文字列は、最後の呼び出しから最初の呼び出しへ進み、元のグローバルスコープの呼び出しまで遡ります。"><code>Error.prototype.stack</code></a> プロパティがカラム番号を含むようになり (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=762556" title="FIXED: Error stack should contain column number">バグ 762556</a>)、<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack#Stack_of_eval'ed_code"><code>Function()</code> や <code>eval()</code> を呼び出す</a> 際の動作が向上しました。ミニファイされた、あるいは生成された JavaScript コードのデバッグを改善する助けになります。</li>
+</ul>
+
+<h2 id="インターフェイスAPIsDOM">インターフェイス/APIs/DOM</h2>
+
+<p>Firefox OS の仕様:</p>
+
+<ul>
+ <li><span id="summary_alias_container"><span id="short_desc_nonedit_display">Navigator.HasCameraSupport</span></span> が使用できる条件下で、カメラオブジェクトが使用できるようになりました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=983180" title="FIXED: [Camera][Gecko] Make availability of camera object conditional on Navigator.HasCameraSupport">バグ 983180</a>)。</li>
+ <li>顔追跡 API を実装しました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=965420" title="FIXED: [Madai][Camera][Gecko] Implement face-tracking API">バグ 965420</a>)。</li>
+ <li><a href="/ja/docs/Web/API/Camera_Control_API">Camera Control API</a> が整理されました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=909542" title="FIXED: Camera Control API clean-up/streamline">バグ 909542</a>)。</li>
+ <li><a href="/ja/docs/Web/API/Network_Information_API">Network Information API</a> を Firefox OS 上でサポートしました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=960426" title="FIXED: Support Network Information API in Firefox OS">バグ 960426</a>)。</li>
+ <li><a href="/ja/docs/Web/API/Wifi_Direct_API">Wifi Direct API</a> を実装しました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=811635" title="FIXED: B2G Wifi: Support Wifi Direct">バグ 811635</a>)。</li>
+</ul>
+
+<p>Gecko 全般:</p>
+
+<ul>
+ <li><code>URLSearchParams.size</code> のサポートが Gecko から削除されました。これにより、DOM 使用からイテレータサポートがファイナライズされるまで削除されます (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=959988" title="FIXED: Remove URLSearchParams.prototype.size">バグ 959988</a>)。</li>
+ <li>WebRTC 向け <a href="/ja/docs/Web/API/Identity_Provider_API">Identity Provider API</a> が実装されました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=884573" title="FIXED: PeerConnection.js persona integration">バグ 884573</a>)。</li>
+ <li><a href="/ja/docs/Web/HTML/Element/shadow" title="HTML &lt;shadow> 要素 (Web Components 技術スイートの廃止された部分) は shadow DOM の insertion point として使用するものでした。shadow ホスト配下に複数の shadow ルートを生成する場合に使用します。これは通常の HTML としては役立ちません。"><code>&lt;shadow&gt;</code></a> 要素が実装されました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=887538" title="FIXED: Implement web components shadow element.">バグ 887538</a>)。</li>
+ <li><a href="/ja/docs/Web/API/FileSystem/createFile" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>createFile()</code></a> メソッドが <a href="/ja/docs/Web/API/File_System_API">File System API</a> で実装されました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=934367" title="FIXED: [Filesystem API] Implement createFile method for device storage.">バグ 934367</a>)。</li>
+ <li>デバイスストレージ API で <a href="/ja/docs/Web/API/File_System_API">File System API</a> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=910412" title="FIXED: Change DeviceStorage API to use FileSystem API spec">バグ 910412</a>) を使用するようになりました。前者の API は今後廃止される計画があります。</li>
+ <li>テレメトリーの収集を容易にする <a href="/ja/docs/Web/API/Navigator/sendBeacon" title="navigator.sendBeacon() は HTTP で少量のデータを非同期にサーバに送ることに利用できます。"><code>Navigator.sendBeacon</code></a> を実装しました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=936340" title="FIXED: Implement navigator.sendBeacon">バグ 936340</a>)。</li>
+ <li><a href="/ja/docs/Web/API/HTMLLinkElement" title="link オブジェクトは、外部リソースの参照情報、また、外部リソースから文書に対しての関係も含む、HTMLLinkElement インタフェースを公開します。このオブジェクトは HTMLElement のすべてのプロパティとメソッドを継承します。"><code>HTMLLinkElement</code></a>、<a href="/ja/docs/Web/API/HTMLAreaElement" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>HTMLAreaElement</code></a>、<a href="/ja/docs/Web/API/HTMLAnchorElement" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>HTMLAnchorElement</code></a> に、<a href="/ja/docs/Web/API/DOMTokenList" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>DOMTokenList</code></a> を返す <code>relList</code> プロパティを追加しました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=968637" title="FIXED: add the DOMTokenList relList to HTMLLinkElement, HTMLAreaElement and HTMLAnchorElement">バグ 968637</a>)。</li>
+ <li>最新の仕様により、<a href="/ja/docs/Web/API/OscillatorNode/start" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>OscillatorNode.start</code></a> および <a href="/ja/docs/Web/API/OscillatorNode/stop" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>OscillatorNode.stop</code></a> の第 1 引数は省略可能および既定値が <code>0</code> になりました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=982541" title="FIXED: Update OscillatorNode.{start, stop} to have the first argument optional and default to zero">バグ 982541</a>)。</li>
+ <li><a href="/ja/docs/Web/API/Navigator/requestWakeLock" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>Navigator.requestWakeLock()</code></a> メソッドおよび非標準である <a href="/ja/docs/Web/API/MozWakeLock" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>MozWakeLock</code></a> メソッドは、デスクトップ版 Firefox で使用できなくなりました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=963366" title="FIXED: Hide navigator.requestWakeLock and MozWakeLock from the web except on Firefox OS">バグ 963366</a>)。</li>
+ <li><code>DOM_VK_ENTER</code> 定数を <a href="/ja/docs/Web/API/KeyboardEvent" title="KeyboardEvent オブジェクトとは、キーボードに対するユーザの動作を表すオブジェクトです。 入力を受けたキーは個々のイベントによって表され、動作の種類はイベントの種類（keydown / keypress / keyup）によって表されます。"><code>KeyboardEvent</code></a> から削除しました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=969247" title="FIXED: Get rid of related code of NS_VK_ENTER and nsIDOMKeyEvent::DOM_VK_ENTER">バグ 969247</a>)。</li>
+ <li>Web components の <a href="/ja/docs/Web/API/Document/register" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>Document.register</code></a> を、最新版の仕様で説明されている動作に従うよう修正しました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=856140" title="FIXED: Update document.register to adhere to the latest Custom Element spec">バグ 856140</a>)。</li>
+ <li>Canvas の Hit resion の基本的なサポートを追加: <a href="/ja/docs/Web/API/CanvasRenderingContext2D/addHitRegion" title="Canvas 2D APIのCanvasRenderingContext2D.addHitRegion()メソッドはビットマップにヒット領域を追加します。これにより、ヒット検出が容易になり、イベントをDOM要素にルートでき、ユーザーはcanvasを見なくても操作できるようになります。"><code>CanvasRenderingContext2D.addHitRegion()</code></a> メソッドおよび <a href="/ja/docs/Web/API/CanvasRenderingContext2D/removeHitRegion" title="Canvas 2D APIのCanvasRenderingContext2D.removeHitRegion() メソッドは、canvasから与えられたヒット領域を削除します。"><code>CanvasRenderingContext2D.removeHitRegion()</code></a> メソッドを追加しました。これらはデフォルトで無効です。有効化するには設定項目 <code>canvas.hitregions.enabled</code> を <code>true</code> に変更してください。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=966591" title="FIXED: Add basic support for Hit regions in Canvas">バグ 966591</a>)</li>
+ <li>非標準であり Firefox 15 から非推奨であった <a href="/ja/docs/Web/API/Blob/mozSlice" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>Blob.mozSlice</code></a> を廃止しました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=961804" title="FIXED: Drop support for Blob.mozSlice">バグ 961804</a>)。</li>
+ <li>非標準である <a href="/ja/docs/Web/API/ArchiveReader" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>ArchiveReader</code></a> および <a href="/ja/docs/Web/API/ArchiveRequest" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>ArchiveRequest</code></a> は Web 向けに公開しないようになりました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=968883" title="FIXED: ArchiveReader and ArchiveRequest should not be exposed interfaces">バグ 968883</a>)。</li>
+ <li>コンストラクタを関数として呼び出すことができなくなりました。キーワード <code>new</code> を前につけることが必要です。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=916644" title="FIXED: Disallow calling WebIDL constructors as functions on the web">バグ 916644</a>)</li>
+ <li><a href="/ja/docs/Web/API/Canvas/getContext" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>Canvas.getContext()</code></a> メソッドで、アルファブレンディングを保存しなければならないか否かを定義可能にする、省略可能な第 2 引数 (<code>alpha</code>) をサポートしました。設定しない場合、ピクセルごとのアルファ値は常に <code>1.0</code> になります。これによりバックエンドでファストトラックの実装が可能になります。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=982480" title="FIXED: Add support for the alpha option to the canvas context options">バグ 982480</a>)</li>
+</ul>
+
+<h2 id="SVG">SVG</h2>
+
+<p>Gecko 全般:</p>
+
+<ul>
+ <li>Filter Effects Module より、<a href="/ja/docs/Web/SVG/Element/feDropShadow" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>&lt;feDropShadow&gt;</code></a> およびそのインターフェイスである <a href="/ja/docs/Web/API/SVGFEDropShadowElement" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>SVGFEDropShadowElement</code></a> をサポートしました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=964200" title="FIXED: Implement Filter Effects Module feDropShadow filter">バグ 964200</a>)。</li>
+</ul>
+
+<h2 id="マニフェスト">マニフェスト</h2>
+
+<ul>
+ <li><code><a href="/ja/Apps/Build/Manifest#precompile">precompile</a></code> マニフェストフィールドをサポートしました。アプリ内に含まれている asm.js コードをインストール時にコンパイルし、初回起動時にインストールする場合に指定します。</li>
+</ul>
+
+<h2 id="関連情報">関連情報</h2>
+
+<ul>
+ <li><a href="https://www.mozilla.org/en-US/firefox/os/notes/1.4/">Firefox OS 1.4 Notes</a></li>
+</ul>
+
+<h2 id="以前のバージョン">以前のバージョン</h2>
+
+<p></p><div class="multiColumnList">
+<ul>
+<li><a href="/ja/docs/Mozilla/Firefox_OS/Releases/1.3">Firefox OS 1.3 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox_OS/Releases/1.2">Firefox OS 1.2 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox_OS/Releases/1.1">Firefox OS 1.1 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox_OS/Releases/1.0.1">Firefox OS 1.0.1 for developers</a></li></ul>
+</div><p></p>
+
+<p> </p>

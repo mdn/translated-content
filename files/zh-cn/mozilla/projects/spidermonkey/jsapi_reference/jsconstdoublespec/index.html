@@ -1,0 +1,56 @@
+---
+title: JSConstDoubleSpec
+slug: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JSConstDoubleSpec
+translation_of: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JSConstDoubleSpec
+---
+<h3 id=".E6.91.98.E8.A6.81" name=".E6.91.98.E8.A6.81">摘要</h3>
+<p><b>数据结构</b></p>
+<p>定义一个双浮点类型的变量并进行赋值。</p>
+<h3 id=".E8.AF.AD.E6.B3.95" name=".E8.AF.AD.E6.B3.95">语法</h3>
+<pre>struct JSConstDoubleSpec {
+    jsdouble dval;
+    const char *name;
+    uint8 flags;
+    uint8 spare[3];
+};
+</pre>
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>名称</th>
+   <th>类型</th>
+   <th>描述</th>
+  </tr>
+  <tr>
+   <td><code>dval</code></td>
+   <td><code>jsdouble</code></td>
+   <td>双浮点类型的值。</td>
+  </tr>
+  <tr>
+   <td><code>name</code></td>
+   <td><code>const char *</code></td>
+   <td>给双浮点类型定义的名称。</td>
+  </tr>
+  <tr>
+   <td><code>flags</code></td>
+   <td><code>uint8</code></td>
+   <td>双浮点类型的属性。这里可以是0或者是下面这些值之中的一个：
+    <ul>
+     <li><code><a href="cn/JSPROP_ENUMERATE">JSPROP_ENUMERATE</a></code>: 在for循环中的可用性。</li>
+     <li><code><a href="cn/JSPROP_READONLY">JSPROP_READONLY</a></code>: 只读性。</li>
+     <li><code><a href="cn/JSPROP_PERMANENT">JSPROP_PERMANENT</a></code>: 非删除性。</li>
+     <li><code><a href="cn/JSPROP_EXPORTED">JSPROP_EXPORTED</a></code>: 可导出性。(property can be exported outside its object.)</li>
+     <li><code><a href="cn/JSPROP_INDEX">JSPROP_INDEX</a></code>: 数组(array)元素的当前索引。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <td><code>spare</code></td>
+   <td><code>uint8{{ mediawiki.external(3) }}</code></td>
+   <td>为以后的扩展保留的属性。</td>
+  </tr>
+ </tbody>
+</table>
+<h3 id=".E6.8F.8F.E8.BF.B0" name=".E6.8F.8F.E8.BF.B0">描述</h3>
+<p><code>JS双浮点型的构造规范</code> 典型应用于定义一个双浮点值集合，并使用<code><a href="cn/JS_DefineConstDoubles">JS_DefineConstDoubles</a></code>对生成的对象进行赋值。使用<code>JS_DefineConstDouble</code>为指定的对象创建一个或多个双浮点类型属性。</p>
+<p><code>JS_DefineConstDoubles</code>为一类由<code>JSConstDoubleSpecs</code>定义的数组提供证明。为每个数据元素定义独立的属性名和设置独立的属性值。数组的最后一个元素必须包括0值(zero-valued)的属性。<code>JS_DefineConstDoubles</code> 为数组中每个非0值(non-zero)元素创建一个属性值。</p>

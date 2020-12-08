@@ -1,0 +1,309 @@
+---
+title: ツリービューの詳細
+slug: Archive/Mozilla/XUL/Tutorial/Tree_View_Details
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Tree_View_Details
+---
+<p> </p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Custom_Tree_Views" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Tree_Box_Objects">次のページ  »</a></p>
+</div>
+<p>このセクションでは、高度なツリービューの機能について見ていきます。</p>
+<p><span id="Creating_a_Hierarchical_Custom_View"></span></p>
+<h3 id=".E9.9A.8E.E5.B1.A4.E3.82.AB.E3.82.B9.E3.82.BF.E3.83.A0.E3.83.93.E3.83.A5.E3.83.BC.E3.81.AE.E4.BD.9C.E6.88.90" name=".E9.9A.8E.E5.B1.A4.E3.82.AB.E3.82.B9.E3.82.BF.E3.83.A0.E3.83.93.E3.83.A5.E3.83.BC.E3.81.AE.E4.BD.9C.E6.88.90">階層カスタムビューの作成</h3>
+<p>前のセクションでは、最低限の機能のみを実装した簡単なツリービューを作成しました。 続いては、ビューに実装可能な追加機能について、いくつかを見ていきたいと思います。 今回はカスタムビューを使用して、階層的な項目のセットを作成する方法について学習します。 そのためには各項目について子の有無や開閉状態を管理する必要があり、かなり技巧を要する処理が必要になります。</p>
+<p><span id="Nesting_Level"></span></p>
+<h4 id=".E5.85.A5.E3.82.8C.E5.AD.90.E3.81.AE.E3.83.AC.E3.83.99.E3.83.AB" name=".E5.85.A5.E3.82.8C.E5.AD.90.E3.81.AE.E3.83.AC.E3.83.99.E3.83.AB">入れ子のレベル</h4>
+<p>ツリーでは、全ての行に入れ子のレベルが設定されます。 最上位の行は、レベル 0 で、それらの子のレベルは 1、更にその子のレベルは 2 といったように設定していきます。 ツリーは、ビューに対して、各行の入れ子のレベルを問い合わせるために、<code>getLevel()</code> メソッドを呼び出します。 呼び出されたビューの方では、(表に直接置かれることになる) 最も外側の行については 0 を返し、入れ子になっている行については、外側の行より大きな値を返さなければなりません。 そしてツリーでは、ビューから得られたレベル情報を基にして行の階層構造を把握し、描画を行うことになります。</p>
+<p>さらにビューでは、<code>getLevel()</code> メソッドによるレベル情報に加えて、 <code>hasNextSibling()</code> 関数を提供して、引数で指定された行について同レベルで後続行が存在するか否かの判定を行えるようにする必要あります。 この関数は後続行が存在するときに true を返す必要があり、ツリーでは、主にツリーの左端にある入れ子関係を表す線の描画で利用します。</p>
+<p>またビューでは、<code>getParentIndex()</code> メソッドによって、引数で指定された行の親の行、 つまり「その行より前にあって、レベル値がその行より小さいものの中で、その行に一番近いもの」を取得できるようにする必要もあります。 ツリーで、行の入れ子を正しく処理させるためには、これらの全てのメソッドをビューに実装する必要があります。</p>
+<p><span id="Containers"></span></p>
+<h4 id=".E3.82.B3.E3.83.B3.E3.83.86.E3.83.8A" name=".E3.82.B3.E3.83.B3.E3.83.86.E3.83.8A">コンテナ</h4>
+<p>加えてビューでは、ツリーが親項目を処理するために利用する関数として、 <code>isContainer()</code>、<code>isContainerEmpty()</code>、<code>isContainerOpen()</code> の 3 つも提供しなければなりません。</p>
+<ul>
+ <li><code>isContainer()</code> メソッドは、行がコンテナ、つまり子を持つことが可能であるかを判定して、コンテナの場合は true を返す必要があります。</li>
+ <li><code>isContainerEmpty()</code> メソッドは、行が空のコンテナであるとき、例えばディレクトリで中にファイルが存在していない場合などに true を返す必要があります。</li>
+ <li><code>isContainerOpen()</code> メソッドは、どの項目が開いているか、または閉じているかを調べるために呼び出されます。このため、ビューは項目の開閉について管理しておかなければなりません。ツリーはコンテナの開閉状態を知るために、このメソッドを呼び出します。</li>
+</ul>
+<p>なお、ツリーは <code>isContainer()</code> メソッドの返り値によって、コンテナでないことが提示された行については、<code>isContainerEmpty()</code> と <code>isContainerOpen()</code> の呼び出しを行わないことを補足しておきます。</p>
+<p>コンテナは、コンテナでない行とは異なった表示をされます。 具体的には、(多くのテーマでは) コンテナにはフォルダを表すアイコンが横に表示されます。 また、項目のスタイル付けを行うために、スタイルシートを利用することも可能です。 これによって、行の開閉状態など、いくつかのプロパティに応じたスタイルを設定することができます。 これについては、<a href="ja/XUL_Tutorial/Styling_a_Tree">後のセクション</a>で述べます。 さらに、空でないコンテナには、利用者が子の項目を見るために開閉操作ができるように、<span style="border-bottom: 1px dashed green;" title="twisty">ツイスティ</span> ([+] のアイコン) が表示されます。 なお、空のコンテナにはツイスティは表示されませんが、コンテナとして扱われます。</p>
+<p>利用者が行を開くためにツイスティをクリックすると、ツリーはビューの <code>toggleOpenState()</code> メソッドを呼び出します。 呼び出されたビューのメソッドでは、必要な処理によって子の行の取得を行ったあと、 ツリーに表示の更新を要求します。</p>
+<p><span id="Review_of_the_Methods"></span></p>
+<h4 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E3.81.BE.E3.81.A8.E3.82.81" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E3.81.BE.E3.81.A8.E3.82.81">メソッドのまとめ</h4>
+<p>階層ビューを実装するために必要なメソッドを以下にまとめます。</p>
+<pre>getLevel(row)
+hasNextSibling(row, afterIndex)
+getParentIndex(row)
+isContainer(row)
+isContainerEmpty(row)
+isContainerOpen(row)
+toggleOpenClose(row)
+</pre>
+<p><code>hasNextSibling()</code> 関数の引数
+ <i>
+  afterIndex</i>
+ は、後続行の有無を調べるとき、最適化のために、その位置以降から調べれば済むように渡されます。 例えば、行にいくつかの子行があって、それらにさらに子行があり、いくつかは開いている様な状況を想像してみてください。 このような場合、ビューの実装によっては次の隣接行のインデックスの算出に時間がかかるかもしれません。 呼び出し元 (ツリー) は、隣接行があるとすれば、どこに存在するかを知っている場合があるため、ビュー側の最適化をサポートするために、その値を渡してくれます。</p>
+<p><span id="Example_of_Hierarchical_Custom_View"></span></p>
+<h3 id=".E9.9A.8E.E5.B1.A4.E3.82.AB.E3.82.B9.E3.82.BF.E3.83.A0.E3.83.93.E3.83.A5.E3.83.BC.E3.81.AE.E4.BE.8B" name=".E9.9A.8E.E5.B1.A4.E3.82.AB.E3.82.B9.E3.82.BF.E3.83.A0.E3.83.93.E3.83.A5.E3.83.BC.E3.81.AE.E4.BE.8B">階層カスタムビューの例</h3>
+<p>それでは、ここまでに説明したことをまとめて簡単な例を作成してみましょう。 配列に格納されたデータからツリーを構築してみることにします。 このツリーでは、親子の階層は 1 レベルしかサポートしませんが、 追加のレベルをサポートするように拡張することもそれほど困難ではありません。 大きな例なので、部分単位で順番に確認していくことにします。</p>
+<pre>&lt;window onload="init();"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;tree id="elementList" flex="1"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="element" label="Element" primary="true" flex="1"/&gt;
+  &lt;/treecols&gt;
+  &lt;treechildren/&gt;
+&lt;/tree&gt;
+
+&lt;/window&gt;
+</pre>
+<p>ここでは、ツリーには <code><code><a href="/ja/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code></code> 要素にデータを何も含まない単純なものを使用します。 ウィンドウが読み込まれたとき、ツリーを初期化するための <code>init()</code> 関数が呼び出されます。 この関数は、以下に示すようにツリー要素を取得して、その <code>view</code> プロパティに、<code>treeView</code>の名前で作成されるカスタムビューを設定します。</p>
+<pre>function init() {
+  document.getElementById("elementList").view = treeView;
+}
+</pre>
+<p>次に <code>treeView</code> を定義します。 このカスタムツリービューには、多くのメソッドを実装する必要があります。 このうち、重要なものについては個別に見ていくことにします。 まずは、ツリーのデータを保持するために 2 つのデータ構造を定義します。 1 つは、親の項目と属している子の項目の対応を保持し、もう 1 つは表示状態 (<span style="color: green;">visible</span>)になっている項目の配列を保持するものです。 カスタムビューは、どの項目が表示状態にあるかを管理しなければならないことに留意してください。</p>
+<pre>var treeView = {
+  childData : {
+    Solids: ["Silver", "Gold", "Lead"],
+    Liquids: ["Mercury"],
+    Gases: ["Helium", "Nitrogen"]
+  },
+
+  visibleData : [
+    ["Solids", true, false],
+    ["Liquids", true, false],
+    ["Gases", true, false]
+  ],
+</pre>
+<p><code>childData</code> は、3 つの親ノードについて、それぞれに対応する子の配列を保持しています。 配列 <code>visibleData</code> は、3 つのトップレベルの親項目のみが表示されるように初期化されています。 この配列には、項目の開閉に応じて項目の追加と削除が行われることになります。 つまり、親の行が開かれたときに、その子項目を <code>childData</code> から取得して <code>visibleData</code> に挿入することになります。 例えば、「Liquids」の行が開かれた場合、<code>childData</code> から対応する配列が取得されて、 そこに含まれる「Mercury」 1 つだけが <code>visibleData</code> の「Liquids」と「Gases」の間に挿入され、 配列のサイズは 1 つ増えます。 また、<code>visibleData</code> の各行にある 2 つの真偽値は、順に行がコンテナであるかどうかと開かれているかどうかを表します。 このため、挿入される子項目については、両方とも false を設定することになります。</p>
+<p><span id="Implement_the_Tree_View_Interface"></span></p>
+<h4 id=".E3.83.84.E3.83.AA.E3.83.BC.E3.83.93.E3.83.A5.E3.83.BC.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.BC.E3.83.95.E3.82.A7.E3.82.A4.E3.82.B9.E3.81.AE.E5.AE.9F.E8.A3.85" name=".E3.83.84.E3.83.AA.E3.83.BC.E3.83.93.E3.83.A5.E3.83.BC.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.BC.E3.83.95.E3.82.A7.E3.82.A4.E3.82.B9.E3.81.AE.E5.AE.9F.E8.A3.85">ツリービューインターフェイスの実装</h4>
+<p>続いて、ツリービューのインターフェイスを実装する必要があります。 まずは単純なものをまとめて示します。</p>
+<pre>  treeBox: null,
+  selection: null,
+
+  get rowCount()                     { return this.visibleData.length; },
+  setTree: function(treeBox)         { this.treeBox = treeBox; },
+  getCellText: function(idx, column) { return this.visibleData[idx][0]; },
+  isContainer: function(idx)         { return this.visibleData[idx][1]; },
+  isContainerOpen: function(idx)     { return this.visibleData[idx][2]; },
+  isContainerEmpty: function(idx)    { return false; },
+  isSeparator: function(idx)         { return false; },
+  isSorted: function()               { return false; },
+  isEditable: function(idx, column)  { return false; },
+</pre>
+<p><code>rowCount()</code> 関数は、配列 <code>visibleData</code> の長さを返します。 これは全行数ではなく、そのとき表示状態になっている行数を返す必要があることに注意してください。 この例の場合、初期状態では 3 項目のみが表示されているため、<code>rowCount()</code> は 3 を返す必要があり、隠されている 6 項目を数えてはいけません。</p>
+<p><code>setTree()</code> 関数は、ビューにツリーのボックスオブジェクトを設定するために呼び出されます。 ツリーボックスオブジェクトは、ボックスオブジェクトの一種で、 ツリー特有の仕様に対応するために拡張された、ツリー専用のボックスオブジェクトです。 これについての詳細は、次のセクションで説明する予定ですが、主にツリーの描画を補助するために使用されます。 この例の場合、項目の追加や削除が行われたときにツリーを再描画するために、ボックスオブジェクトの関数を 1 つだけ必要としています。</p>
+<p>また、<code>getCellText()</code>、<code>isContainer()</code>、<code>isContainerOpen()</code> 関数は、 単に配列 <code>visibleData</code> から対応する値を返すだけです。 残りの関数については、ここでは不要な機能なので、単に false を返しています。 なお、子を持たないコンテナ行がある場合、<code>isContainerEmpty()</code> 関数がそれらの行に対して true を返すように実装しなければなりません。</p>
+<p>次は <code>getParentIndex()</code> 関数です。</p>
+<pre>  getParentIndex: function(idx) {
+    if (this.isContainer(idx)) return -1;
+    for (var t = idx - 1; t &gt;= 0 ; t--) {
+      if (this.isContainer(t)) return t;
+    }
+  },
+</pre>
+<p><code>getParentIndex()</code> は、引数 (インデックス) で指定された行の親を探す必要があります。 今回の単純な例では、レベルは 2 つだけで、コンテナは親を持たないことがわかっているため、コンテナの場合には、即 -1 を返しています。 それ以外の場合は、行を逆方向に走査してコンテナであるものを探し出します。</p>
+<p>次は <code>getLevel()</code> 関数です。</p>
+<pre>  getLevel: function(idx) {
+    if (this.isContainer(idx)) return 0;
+    return 1;
+  },
+</pre>
+<p><code>getLevel()</code> 関数も、 今回の例の「レベルは 2 つだけで、コンテナは親を持たない」ことと 「トップレベルにはコンテナのみが置かれている」ことを前提にして単純に実装しています。 つまり、コンテナ行に対しては 0 で、そうでないものに対しては 1 を返すだけです。 もし入れ子レベルを１つ増やす場合、後者の行のレベルは 2 になる可能性もあり、複雑な実装が必要になってきます。</p>
+<p>次は <code>hasNextSibling()</code> 関数です。</p>
+<pre>  hasNextSibling: function(idx, after) {
+    var thisLevel = this.getLevel(idx);
+    for (var t = idx + 1; t &lt; this.visibleData.length; t++) {
+      var nextLevel = this.getLevel(t)
+      if (nextLevel == thisLevel) return true;
+      else if (nextLevel &lt; thisLevel) return false;
+    }
+  },
+</pre>
+<p><code>hasNextSibling()</code> 関数は、引数で指定された行と同レベルの後続行が存在するときに true を返す必要があります。 上のコードは、<span style="border-bottom: 1px dashed green;" title="brute force">力技</span>、 つまり単に次々に行を調べていって同レベルの行が見つかれば true を、 一度でもより小さいレベルの行が見つかれば false を返す方法で実装しています。 今回の単純な例では、このやり方でも十分ですが、より多数のデータを扱うツリーの場合には、 後続の隣接行の有無を調べるために、もっと最適化された方法を検討することになるでしょう。</p>
+<p><span id="Opening_or_Closing_a_Row"></span></p>
+<h4 id=".E8.A1.8C.E3.81.AE.E9.96.8B.E9.96.89.E5.87.A6.E7.90.86" name=".E8.A1.8C.E3.81.AE.E9.96.8B.E9.96.89.E5.87.A6.E7.90.86">行の開閉処理</h4>
+<p>最後に説明する関数は、<code>toggleOpenState()</code> で、今回の例の中で、最も複雑なものになります。 行の開閉が行われたときには、配列 <code>visibleData</code> の内容を更新する必要があるからです。</p>
+<pre>  toggleOpenState: function(idx) {
+    var item = this.visibleData[idx];
+    if (!item[1]) return;
+
+    if (item[2]) {
+      item[2] = false;
+
+      var thisLevel = this.getLevel(idx);
+      var deletecount = 0;
+      for (var t = idx + 1; t &lt; this.visibleData.length; t++) {
+        if (this.getLevel(t) &gt; thisLevel) deletecount++;
+        else break;
+      }
+      if (deletecount) {
+        this.visibleData.splice(idx + 1, deletecount);
+        this.treeBox.rowCountChanged(idx + 1, -deletecount);
+      }
+    }
+    else {
+      item[2] = true;
+
+      var label = this.visibleData[idx][0];
+      var toinsert = this.childData[label];
+      for (var i = 0; i &lt; toinsert.length; i++) {
+        this.visibleData.splice(idx + i + 1, 0, [toinsert[i], false]);
+      }
+      this.treeBox.rowCountChanged(idx + 1, toinsert.length);
+    }
+  },
+</pre>
+<p>まず、行がコンテナかどうかをチェックする必要があります。 コンテナでない場合は開閉できないので、そのまま return で戻ります。 次に、 <code>item</code> 配列の 3 番目の値 (配列のインデックス値は 2) で、行の開閉状態を保持しているため、この値を判定して処理の分岐を行います。 最初の方 (if ブロック) が行を閉じる処理で、後の方 (else ブロック) が開く処理になります。 それぞれのコードをブロック単位で確認していきますが、 順番は入れ替えて、まず行を開く処理を行う 2 番目のブロックから見ていくことにします。</p>
+<pre>      item[2] = true;
+
+      var label = this.visibleData[idx][0];
+      var toinsert = this.childData[label];
+      for (var i = 0; i &lt; toinsert.length; i++) {
+        this.visibleData.splice(idx + i + 1, 0, [toinsert[i], false]);
+      }
+      this.treeBox.rowCountChanged(idx + 1, toinsert.length);
+</pre>
+<p>最初に、<code>item</code> 配列が保持する行の開閉状態を true にしています。 これは、次回 <code>toggleOpenState()</code> 関数が呼び出されたときには、 この処理ではなく行を閉じる処理を行わせるために必要です。 次に、今回開く行について <code>childData</code> からデータを取得します。 取得結果は <code>toinsert</code> に代入され、これは子行の配列のひとつ、例えば 「Solids」が開かれる場合は <code>["Silver", "Gold", "Lead"]</code> になります。 続いて、<code>visibleData</code> 配列に <code>splice()</code> 関数を利用して各項目に対応する新しい行を挿入していきます。 行「Solids」の場合は、3 つの項目が挿入されることになります。</p>
+<p>最後に、ツリーボックスの <code>rowCountChanged()</code> 関数を呼び出す必要があります。 この <code>treeBox</code> には、既に <code>setTree()</code> 関数によってツリーボックスオブジェクトが設定されていることを思い出してください。 ツリーボックスオブジェクトはツリーによって作成されて、アプリケーション側に提供されるものであるため、 アプリケーションのコードからそれらの関数を呼び出すことが可能です。 ここでは <code>rowCountChanged()</code> 関数を使って、元になるデータにいくつかの行が追加されたことを、ツリーに対して通知しています。 それを受けて、ツリーでは必要な箇所の再描画を行い、その結果コンテナ内に子行が表示されることになります。 このとき、上で実装した <code>getLevel()</code> や <code>isContainer()</code> などの種々の関数が、 ツリーに描画する内容の確定に利用するために、ツリーから呼び出されることになります。</p>
+<p>この <code>rowCountChanged()</code> 関数は、引数として、行の挿入開始位置のインデックスと、挿入される行の総数の 2 つをとります。 上のコードでは、開始行は <code>idx</code> の値に１を加えたもので、その親の最初の子行の位置になります。 ツリーでは、この情報を利用して、適切な行数分の空間を作成するために後続の行を下方にずらします。 このため正しい数値を渡すようにしないと、ツリーの再描画が正しく行われなかったり、必要以上の行数の描画が行われてしまう可能性があります。</p>
+<p>以下は、行が閉じられたときに行の削除を行うためのコードです。</p>
+<pre>      item[2] = false;
+
+      var thisLevel = this.getLevel(idx);
+      var deletecount = 0;
+      for (var t = idx + 1; t &lt; this.visibleData.length; t++) {
+        if (this.getLevel(t) &gt; thisLevel) deletecount++;
+        else break;
+      }
+      if (deletecount) {
+        this.visibleData.splice(idx + 1, deletecount);
+        this.treeBox.rowCountChanged(idx + 1, -deletecount);
+      }
+</pre>
+<p>まず、<code>item</code> 配列の開閉状態を false にして、閉じていることにします。 次に、各行を同レベルの行に遭遇するまで順に走査していきます。 そのときスキップした、よりレベル値の大きい行は削除する必要がありますが、見つかった同レベルの行は次のコンテナであるため、削除対象ではありません。</p>
+<p>最後に <code>splice()</code> 関数を使用して配列 <code>visibleData</code> から行を削除し、<code>rowCountChanged()</code> 関数を呼び出してツリーの再描画を要求します。 なお、行を削除する場合には、<code>rowCountChanged()</code> の 2 番目の引数に削除した行数を負の値で渡す必要があります。</p>
+<p><span id="Complete_Example"></span></p>
+<h4 id=".E5.AE.8C.E5.85.A8.E3.81.AA.E4.BE.8B" name=".E5.AE.8C.E5.85.A8.E3.81.AA.E4.BE.8B">完全な例</h4>
+<p>他にもまだいくつかの実装可能なビューの関数はありますが、 この例では必要無いため、何もしない関数を作成しておきます。 それらを最後の方に加えた完全な例を以下に示します。</p>
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;window onload="init();"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;tree id="elementList" flex="1"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="element" label="Element" primary="true" flex="1"/&gt;
+  &lt;/treecols&gt;
+  &lt;treechildren/&gt;
+&lt;/tree&gt;
+
+&lt;script&gt;
+&lt;![CDATA[
+
+var treeView = {
+  childData : {
+    Solids: ["Silver", "Gold", "Lead"],
+    Liquids: ["Mercury"],
+    Gases: ["Helium", "Nitrogen"]
+  },
+
+  visibleData : [
+    ["Solids", true, false],
+    ["Liquids", true, false],
+    ["Gases", true, false]
+  ],
+
+  treeBox: null,
+  selection: null,
+
+  get rowCount()                     { return this.visibleData.length; },
+  setTree: function(treeBox)         { this.treeBox = treeBox; },
+  getCellText: function(idx, column) { return this.visibleData[idx][0]; },
+  isContainer: function(idx)         { return this.visibleData[idx][1]; },
+  isContainerOpen: function(idx)     { return this.visibleData[idx][2]; },
+  isContainerEmpty: function(idx)    { return false; },
+  isSeparator: function(idx)         { return false; },
+  isSorted: function()               { return false; },
+  isEditable: function(idx, column)  { return false; },
+
+  getParentIndex: function(idx) {
+    if (this.isContainer(idx)) return -1;
+    for (var t = idx - 1; t &gt;= 0 ; t--) {
+      if (this.isContainer(t)) return t;
+    }
+  },
+  getLevel: function(idx) {
+    if (this.isContainer(idx)) return 0;
+    return 1;
+  },
+  hasNextSibling: function(idx, after) {
+    var thisLevel = this.getLevel(idx);
+    for (var t = idx + 1; t &lt; this.visibleData.length; t++) {
+      var nextLevel = this.getLevel(t)
+      if (nextLevel == thisLevel) return true;
+      else if (nextLevel &lt; thisLevel) return false;
+    }
+  },
+  toggleOpenState: function(idx) {
+    var item = this.visibleData[idx];
+    if (!item[1]) return;
+
+    if (item[2]) {
+      item[2] = false;
+
+      var thisLevel = this.getLevel(idx);
+      var deletecount = 0;
+      for (var t = idx + 1; t &lt; this.visibleData.length; t++) {
+        if (this.getLevel(t) &gt; thisLevel) deletecount++;
+        else break;
+      }
+      if (deletecount) {
+        this.visibleData.splice(idx + 1, deletecount);
+        this.treeBox.rowCountChanged(idx + 1, -deletecount);
+      }
+    }
+    else {
+      item[2] = true;
+
+      var label = this.visibleData[idx][0];
+      var toinsert = this.childData[label];
+      for (var i = 0; i &lt; toinsert.length; i++) {
+        this.visibleData.splice(idx + i + 1, 0, [toinsert[i], false]);
+      }
+      this.treeBox.rowCountChanged(idx + 1, toinsert.length);
+    }
+  },
+
+  getImageSrc: function(idx, column) {},
+  getProgressMode : function(idx,column) {},
+  getCellValue: function(idx, column) {},
+  cycleHeader: function(col, elem) {},
+  selectionChanged: function() {},
+  cycleCell: function(idx, column) {},
+  performAction: function(action) {},
+  performActionOnCell: function(action, index, column) {},
+  getRowProperties: function(idx, column, prop) {},
+  getCellProperties: function(idx, column, prop) {},
+  getColumnProperties: function(column, element, prop) {},
+};
+
+function init() {
+  document.getElementById("elementList").view = treeView;
+}
+
+]]&gt;&lt;/script&gt;
+
+&lt;/window&gt;
+</pre>
+<p>次のセクションでは、ツリーボックスオブジェクトの詳細を見ていきます。</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Custom_Tree_Views" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Tree_Box_Objects">次のページ  »</a></p>
+</div>

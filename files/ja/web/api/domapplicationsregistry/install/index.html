@@ -1,0 +1,96 @@
+---
+title: Apps.install
+slug: Web/API/DOMApplicationsRegistry/install
+tags:
+  - API
+  - Apps
+  - Apps API
+  - Firefox OS
+  - Method
+translation_of: Archive/Marketplace/API/DOMApplicationsRegistry/install
+---
+<div>
+ {{ApiRef}} {{non-standard_header}}</div>
+<h2 id="Summary" name="Summary">概要</h2>
+<p>アプリのインストールを実行します。インストールの過程で、アプリは検証され、ユーザはインストールを許可するかどうか訪ねられます。</p>
+<p>アプリが既に同じドメインからインストールされていた場合、<code>install()</code> を再度呼び出すことで既存のインストールデータが確認なく上書きされます。これは、例えばユーザが無料版からプレミアム版にアップグレードした場合など、購入レシートの変更に使用される場合があります。</p>
+<h2 id="Syntax" name="Syntax">構文</h2>
+<pre class="syntaxbox"><code>var <em>request</em> = window.navigator.mozApps.install(<em>url</em>, <em>[receipt1, …]</em>)</code>;</pre>
+<h3 id="Parameters" name="Parameters">引数</h3>
+<div class="note">
+ <strong>注:</strong> 現在 (2012 年 5 月時点)、<code>url</code> 引数に相対パスを使った場合に生じるバグがあります。{{ Bug("745928") }} を参照してください。</div>
+<dl>
+ <dt>
+  <code>url</code></dt>
+ <dd>
+  インストールされる <a href="/ja/docs/Web/Apps/Manifest">マニフェスト</a> の場所を含んだ <a href="/ja/docs/JavaScript/Reference/Global_Objects/String"><code>string</code></a> 型の URL。独自配布の場合 (インストール元がアプリの生成元と同じ場合)、インストール元のサイトは URL の生成元部分を省略し、(<code>/</code> で始まる) 絶対パスを使うことも可能です。</dd>
+ <dt>
+  <code><strong>receipts</strong></code></dt>
+ <dd>
+  (オプション) 1 つあるいは複数のレシートの配列を含む配列。例:</dd>
+ <dd>
+  <pre>window.navigator.mozApps.install(url, ["receipt"])</pre>
+ </dd>
+ <dd>
+  <code>receipts</code> が省略された場合、これは <code>null</code> として扱われます。詳しくは <a href="/ja/docs/Web/Apps/Publishing/Validating_a_receipt">レシートの検証</a> を参照してください。</dd>
+</dl>
+<p>要求された引数 (<code>url</code>) が欠落していた場合、あるいは非対応の引数が与えられた場合、<code>install()</code> 関数は例外を投げます。</p>
+<h2 id="Returns" name="Returns">戻り値</h2>
+<p><code>install()</code> 関数は {{ domxref("DOMRequest") }} オブジェクトを返します。<code>DOMRequest.result</code> フィールドには <a href="/ja/docs/Web/API/App"><code>App</code> オブジェクト</a> が含まれ、これはインストールされたばかりのアプリを説明する JavaScript オブジェクトです。操作が完了するまでは、<code>DOMRequest.result</code> は <code>null</code> です。</p>
+<p>インストールが成功しなかった場合、<code>DOMRequest.error</code> には <a href="/ja/docs/Web/Apps/JavaScript_API/Error_object "><code>DOMError</code> オブジェクト</a> が含まれ、これにはエラーに関する情報が含まれます。</p>
+<h2 id="Example" name="Example">例</h2>
+<p><code>DOMRequest.onsuccess</code> と <code>DOMRequest.onerror</code> コールバックプロパティとともに <code>install()</code> を使う方法を示した例です。</p>
+<pre class="brush: js">var request = window.navigator.mozApps.install(manifestUrl);
+request.onsuccess = function () {
+  // 戻り値の App オブジェクトを保存
+  var appRecord = this.result;
+  alert('インストール成功！');
+};
+request.onerror = function () {
+  // DOMError オブジェクトからエラー情報を表示
+  alert('インストール失敗、エラー: ' + this.error.name);
+};
+</pre>
+<p>インストールが成功した場合、<code>onsuccess</code> コールバックが呼び出されます。これは、<a href="/ja/docs/Web/Apps/Platform-specific_details">ここ</a> に書かれているインストールアクションが発生したことを意味します。</p>
+<p>インストールが成功しなかった場合、<code>onerror</code> コールバックが呼び出されます。失敗したインストールでは、<code>DOMRequest.error</code> にエラーに関する情報を含む <code>DOMError</code> オブジェクトが含まれます。</p>
+<p>上のコードでは、既に呼び出された関数の後にリスナーが追加されているため、おかしな感じに見えるかもしれません。しかし、これが <code>DOMRequest</code> オブジェクトの操作方法なのです。関数の呼び出しはリスナーが定義されるまで待機し、リスナーは適切に呼び出されます。<code>install()</code> 関数は <code>onsuccess</code> や <code>onerror</code> リスナーが定義されていない場合でも動作します。</p>
+<h2 id="Error" name="Error">エラー</h2>
+<p>インストールが成功しなかった場合、以下のエラーのいずれかが <code>DOMRequest.error</code> に含まれて返ります。</p>
+<dl>
+ <dt>
+  <code>DENIED</code></dt>
+ <dd>
+  ユーザがインストールをキャンセルした。</dd>
+ <dt>
+  <code>INVALID_MANIFEST</code></dt>
+ <dd>
+  マニフェストが、正しい JSON 形式ではあるものの、必要な項目を含んでいないか、何らかの不正な状態。</dd>
+ <dt>
+  <code>MANIFEST_URL_ERROR</code></dt>
+ <dd>
+  HTTP 200 以外のステータスコードが返ってきた、あるいは何らかの接続エラー。</dd>
+ <dt>
+  <code>MANIFEST_PARSE_ERROR</code></dt>
+ <dd>
+  マニフェストの JSON が不正な形式。</dd>
+ <dt>
+  <code>NETWORK_ERROR</code></dt>
+ <dd>
+  接続エラー。</dd>
+ <dt>
+  <code>REINSTALL_FORBIDDEN</code></dt>
+ <dd>
+  アプリの再インストールが禁止されている。</dd>
+ <dt>
+  <code>MULTIPLE_APPS_PER_ORIGIN_FORBIDDEN</code></dt>
+ <dd>
+  インストール可能なアプリには「オリジンごとにアプリひとつ」というセキュリティポリシーが適用され、基本的に 1 つのオリジンで 2 つ以上のアプリをホストできません。</dd>
+</dl>
+<h2 id="Related_topics" name="Related_topics">関連情報</h2>
+<ul>
+ <li><a href="/ja/docs/Web/Apps/Publishing/Validating_a_receipt">レシートの検証</a></li>
+ <li><a href="/ja/docs/Web/Apps/Platform-specific_details">プラットフォーム固有の詳細</a></li>
+ <li><a href="/ja/docs/Web/API/App">App オブジェクト</a></li>
+ <li><a href="/ja/docs/Web/API/DOMError">DOMError オブジェクト</a></li>
+ <li><a href="/ja/docs/Web/Apps/JavaScript_API">Apps JavaScript API</a></li>
+</ul>

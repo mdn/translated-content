@@ -1,0 +1,33 @@
+---
+title: Apps.mgmt.getAll
+slug: Web/API/DomApplicationsManager/getAll
+tags:
+  - API Apps
+  - Apps
+translation_of: Archive/Marketplace/API/DOMApplicationsManager/getAll
+---
+<p>{{ ApiRef() }}</p>
+<p>{{ non-standard_header() }}</p>
+<h2 id="Résumé">Résumé</h2>
+<p>Liste toutes les applications installées dans le repertoire de l'utilisateur.</p>
+<h2 id="Syntaxe">Syntaxe</h2>
+<pre>window.navigator.mozApps.mgmt.getAll()
+</pre>
+<h2 id="Paramètres">Paramètres</h2>
+<p>Aucun.</p>
+<h2 id="Renvoie">Renvoie</h2>
+<p><code>getAll()</code> renvoie un objet <code>pendingGetAll</code>. Il est nécessaire de définir des callbacks pour les propriétés <code>onsuccess</code> et <code>onerror</code> de l'objet renvoyé.</p>
+<p><code>pendingGetAll.result</code> sera un tableau d'objet {{ domxref("App") }} qui contient les applications actuellement installées dans le navigateur. <code>pendingGetAll.result</code> sera une liste vide si aucune application n'est installée. <code>onerror</code> sera appelé si un problème grave intervient pendant cette vérification.</p>
+<p>Cet appel a un accès restreint. <code>navigator.mozApps.mgmt</code> sera <code>null</code> si vous n'avez pas l'autorisation de récuperer les applications.</p>
+<h2 id="Erreurs">Erreurs</h2>
+<p>L'erreur suivante peut être renvoyée dans <code>DOMRequest.error</code>.</p>
+<dl>
+</dl>
+<dl>
+ <dt>
+  DENIED</dt>
+ <dd>
+  Autorisation refusée.</dd>
+</dl>
+<h2 id="Sujet_en_relation">Sujet en relation</h2>
+<p><a href="/fr/docs/Applications/API_JavaScript_Apps">API JavaScript Apps</a></p>

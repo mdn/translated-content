@@ -1,0 +1,63 @@
+---
+title: 'Partie 7 : Ecrire vos propres tests'
+slug: >-
+  Archive/B2G_OS/Automated_testing/gaia-ui-tests/Partie_7_Ecrire_vos_propres_tests
+tags:
+  - interface utilisateur
+translation_of: Archive/B2G_OS/Automated_testing/gaia-ui-tests/Part_7_Writing_your_own_tests
+---
+<p></p><div style="text-align: right;" class="prevnext">
+    <p><a style="float: left;" href="/fr/docs/Mozilla/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_6_Marionette_By_class">« Précédent</a><a href="/fr/docs/Mozilla/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_8_Using_a_base_class">Suivant  »</a></p>
+</div><p></p>
+
+<div class="summary">
+<p><span class="seoSummary">Jusqu'à présent nous vous avons donné la plupart des outils et informations dont vous avez besoin pour commencer à écrire vos propres tests automatisés sur Firefox OS,  avec suffisamment d'étapes à suivre pour vous permettre de démarrer rapidement. Dans cette partie nous allons vous lâcher, en vous fournissant des ressources et idées, et ensuite en vous encourageant à faire votre propre chemin. Ici, nous allons vous pousser à écrire vos propres tests - profitez-en !</span></p>
+</div>
+
+<h2 id="Ressources">Ressources</h2>
+
+<p>Les ressources suivantes seront utiles quand vous commencerez à construire vos propres tests unitaires.</p>
+
+<ul>
+ <li>Le <a href="/en-US/Firefox_OS/Using_the_App_Manager">gestionnaire d'applications Firefox OS</a> est un formidable outil pour déboguer Gaia directement sur l'appareil ou sur un simulateur. C'est une bonne manière d'inspecter le code sous-jacent pour trouver quels repères utiliser pour accéder et manipuler des éléments.</li>
+ <li>Comme mécanisme de contrôle général plus limité mais plus fiable, vous pouvez aussi déposer la source HTML dans la console en utilisant la commande <code>print self.marionette.page_source</code>.</li>
+ <li>Une autre option est de regarder le HTML brut dans le <a href="https://github.com/mozilla-b2g/gaia/tree/master/apps">dépôt Git de Gaia</a>.</li>
+ <li>Pour en savoir plus sur les commandes Marionette, lisez les <a href="https://marionette_client.readthedocs.org/en/latest/">documents Marionette</a>.</li>
+</ul>
+
+<h2 id="Idées_pour_des_nouveaux_tests_et_des_modifications_de_tests">Idées pour des nouveaux tests et des modifications de tests</h2>
+
+<p>Cette section vous fournir un peu d'idées pour vous lancer.</p>
+
+<h3 id="Modifier_test_add_contact.py">Modifier test_add_contact.py</h3>
+
+<p>Commençons par modifier le test sur lequel nous avons déjà travaillé :</p>
+
+<ol>
+ <li>Faire que le contact testé ait un nom unique à chaque fois.</li>
+ <li>Supprimer tous les contacts dans l'étape <code>setUp()</code>.</li>
+ <li>Réveiller l'écran avant le déverrouillage.</li>
+</ol>
+
+<p>Maintenant ajoutons une nouvelle méthode de test. Vous pouvez l'appeler comme vous le souhaitez du moment qu'elle commence par <code>test_</code>. Ce test réalise les choses suivantes :</p>
+
+<ol>
+ <li>Ouvrez Contacts.</li>
+ <li>Créez un contact avec un nom différent de celui créé dans le premier test.</li>
+ <li>Entrez de nouveau dans le mode édition du contact.</li>
+ <li>Ajoutez une <em>Société</em>.</li>
+ <li>Appuyez sur <em>OK</em>.</li>
+ <li>Vérifiez que l'entreprise est listée.</li>
+</ol>
+
+<p>Maintenant quand vous exécutez le fichier test, les deux tests vont s'exécuter. Nous nous rapprochons de la force de l'automatisation de tests - la capacité d'exécuter une série de tests de manière automatique et de remonter les résultats !</p>
+
+<h3 id="D'autres_idées_nouvelles_de_tests">D'autres idées nouvelles de tests</h3>
+
+<ul>
+ <li>Créer un contact, éditer le contact et changer le nom. Le changement de nom devrait apparaitre sur l'écran.</li>
+ <li>Créer un contact et appuyer sur l'étoile pour l'ajouter dans les favoris. Sur l'écran principal il devrait s'afficher sous la catégorie des favoris.</li>
+ <li>Créer un contact avec un numéro de téléphone. Après avoir ouvert le répertoire de contacts et appuyé sur l'icône Message, l'application messages devrait s'ouvrir avec le contact dans le champ des destinataires.</li>
+</ul>
+
+<p> </p>

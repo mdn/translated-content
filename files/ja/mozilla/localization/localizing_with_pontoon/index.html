@@ -1,0 +1,137 @@
+---
+title: Pontoon でローカライズする
+slug: Mozilla/Localization/Localizing_with_Pontoon
+tags:
+  - Localization
+translation_of: Mozilla/Localization/Localizing_with_Pontoon
+---
+<p><a href="https://pontoon.mozilla.org" title="https://pontoon.mozilla.org">Pontoon</a> は、ウェブベースで、What-You-See-Is-What-You-Get (WYSIWYG) のローカライズ (l10n) ツールです。Mozilla では、すべての Mozilla の製品やウェブサイトをローカライズするために使用します。Pontoon は、l10n のワークフローで技術的なスキルはほとんど必要なく、とても簡単で直感的に使用できるツールです。サインインから貢献を完了するところまで、プロジェクトをローカライズするのに、Pontoon を使用する方法を説明します。手順に沿って、l10n の貢献を効率的に、そして簡単にする素晴らしい機能をいくつか説明します。</p>
+
+<div class="note">
+<p><strong>開発者の場合</strong>、<a href="/docs/Implementing_Pontoon_Mozilla">プロジェクトに Pontoon を実装する方法</a> や <a href="https://github.com/mozilla/pontoon">GitHub</a> で参加する方法をご覧ください。</p>
+</div>
+
+<h2 id="First_steps" name="First_steps">第一ステップ</h2>
+
+<p><a href="https://pontoon.mozilla.org" title="https://pontoon.mozilla.org">Pontoon のホームページ</a> を使用するのはとても簡単です。プロジェクトのローカライズを始めるには、右上のメニューからサインインします。次に、ドロップダウンメニューから作業したいプロジェクトとロケールを選択します。Pontoon で自動的にそのロケールのプロジェクトを開きます。ここでは、<a href="https://affiliates.mozilla.org/">Firefox Affiliates</a> のウェブサイトを使用して Pontoon の機能やワークフローを説明します。Pontoon 内で、以下のような画面が開きます:</p>
+
+<p><em><img alt="Browser app and workspace" src="https://mdn.mozillademos.org/files/8323/affiliates.png" style="height: 558px;"></em></p>
+
+<h3 id="Main_toolbar" name="Main_toolbar">メインツールバー</h3>
+
+<p>見て分かるように、ほとんどのインターフェイスは、翻訳されたウェブサイトの画面になっています。以下の項目が含まれた Pontoon のツールバーのみが上部にあります (左から順に):</p>
+
+<p><img alt="Main toolbar" src="https://mdn.mozillademos.org/files/8325/toolbar.png"></p>
+
+<h4 id="List_of_strings" name="List_of_strings">文字列の一覧</h4>
+
+<p>ローカライズするすべての文字列の一覧がサイドバーで開きます。</p>
+
+<h4 id="Project_selector_(Affiliates)" name="Project_selector_(Affiliates)"><span id="cke_bm_939S" style="display: none;"> </span>プロジェクト選択 (Affiliates)</h4>
+
+<p>ローカライズするプロジェクトを切り替えられます。</p>
+
+<h4 id="Resource_selector_(Homepage)" name="Resource_selector_(Homepage)"><span id="cke_bm_940S" style="display: none;"> </span>リソース選択 (Homepage)</h4>
+
+<p>サブページやローカライズファイルのような、ローカライズするリソースを切り替えます。プロジェクト内に利用できるリソースがない場合は表示されません。</p>
+
+<h4 id="sect1"><span id="cke_bm_941S" style="display: none;"> </span></h4>
+
+<dl>
+</dl>
+
+<h4 id="Locale_selector_(Slovenian)" name="Locale_selector_(Slovenian)">ロケール選択 (Slovenian)</h4>
+
+<p>ローカライズする言語を切り替えられます。</p>
+
+<h4 id="Go">Go</h4>
+
+<p>プロジェクト、リソース、ロケールで選択したものを開きます。</p>
+
+<h4 id="Progress_indicator" name="Progress_indicator">進捗インジケーター</h4>
+
+<p>ローカライズ中のリソースの進捗を表示します。ポップアップで詳しく表示されます。</p>
+
+<dl>
+</dl>
+
+<h4 id="User_menu" name="User_menu"><span id="cke_bm_943S" style="display: none;"> </span>ユーザーメニュー</h4>
+
+<p>リポジトリのコミットや、ファイルのダウンロード、サインアウトなど、ユーザー固有のタスクを行えます。</p>
+
+<h4 id="Info_menu" name="Info_menu">インフォメーションメニュー</h4>
+
+<p>参加したプロジェクトのタイムラインや、キーボードショートカットの一覧のような重要な情報が表示されます。</p>
+
+<dl>
+</dl>
+
+<p>では、翻訳をどうやって行うのでしょうか？<span id="cke_bm_608E" style="display: none;"> </span></p>
+
+<dl>
+</dl>
+
+<h2 id="Translate_strings" name="Translate_strings">文字列の翻訳</h2>
+
+<p>Pontoon を使用してローカライズするとき、文字列を翻訳するにはいくつかののオプションがあります。コンテキスト内、コンテキスト外、両方の組み合わせで翻訳できます。まず、コンテキスト内での翻訳から始めましょう。</p>
+
+<h3 id="In-context" name="In-context">コンテキスト内</h3>
+
+<p>Pontoon のコンテキスト内翻訳モードは、他の翻訳を上書きします。ウェブページ (またはウェブアプリ) を開き、ページをリアルタイムに編集できます。翻訳する方法は:</p>
+
+<p><img alt="In-context localization" src="https://mdn.mozillademos.org/files/8331/in-context.png"></p>
+
+<ol>
+ <li>翻訳したいテキストをマウスでホバーします。</li>
+ <li>テキストに翻訳ボタンが表示されます。このボタンをクリックすると翻訳モードが有効になります。</li>
+ <li>もとのテキストを翻訳した文字列に置き換えます。</li>
+ <li>保存ボタンをクリックして翻訳を保存します。</li>
+</ol>
+
+<div>
+<h3 id="Out-of-context" name="Out-of-context">コンテキスト外</h3>
+
+<p>ウェブサイトの &lt;title&gt; タグのコンテンツや、配置される文字列や複数形のように、コンテキスト内で翻訳することができない文字列もあります。メインツールバーにあるハンバーガーボタンをクリックし、すべての文字列と翻訳の一覧が表示されます。サイドバーを使用してもコンテキスト外ローカライズを行えます:</p>
+
+<p><img alt="Out-of-context localization: list" src="https://mdn.mozillademos.org/files/8337/out-of-context-1.png"> <img alt="Out-of-context localization: translate" src="https://mdn.mozillademos.org/files/8335/out-of-context-2.png"></p>
+
+<ol>
+ <li>翻訳したい文字列をクリックします。</li>
+ <li>翻訳パネルが開き、もとの文字列と詳細 (コメントなど) が表示されます。</li>
+ <li>翻訳エリアで文字列を翻訳します。</li>
+ <li>保存ボタンをクリックし翻訳を保存します。</li>
+</ol>
+
+<p>コンテキスト内でも翻訳できる場合、コンテキスト外で文字列を翻訳すると、ウェブサイトにも翻訳が表示されます。</p>
+
+<h3 id="Translation_helpers" name="Translation_helpers">翻訳ヘルパー</h3>
+</div>
+
+<p>見て分かるように、履歴からの候補、翻訳の記録、機械翻訳や他のロケールがコンテキスト外の翻訳パネルに表示されます。これらを翻訳ヘルパーと呼び、文字列を翻訳する手助けとなります:</p>
+
+<p><img alt="Translation helpers: History" src="https://mdn.mozillademos.org/files/8339/helpers-history.png"> <img alt="Translation helpers: Machinery" src="https://mdn.mozillademos.org/files/8341/helpers-machinery.png"> <img alt="Translation helpers: Other locales" src="https://mdn.mozillademos.org/files/8343/helpers-locales.png"> <img alt="Translation helpers: Search" src="https://mdn.mozillademos.org/files/8345/helpers-menu.png"></p>
+
+<h4 id="History" name="History">履歴</h4>
+
+<p>他のユーザーが翻訳したものも含め、以前に翻訳した候補が表示されます。</p>
+
+<h4 id="Machinery" name="Machinery">機械翻訳</h4>
+
+<p>様々なサービスから一致するものを表示します: 内部の翻訳の記録、<a href="http://transvision.mozfr.org/">Mozilla Transvision</a>、<a href="https://amagama-live.translatehouse.org/">オープンソース翻訳の記憶</a>、<a href="http://www.microsoft.com/Language/">Microsoft terminology</a>、<a href="http://www.bing.com/translator">機械翻訳</a>。</p>
+
+<h4 id="Other_locales" name="Other_locales">他のロケール</h4>
+
+<p>他のロケールから一致する翻訳を表示します。</p>
+
+<h4 id="Search" name="Search">検索</h4>
+
+<p>機械的とほぼ同じですが、もとの文字列の代わりにパラメータとしてキーワードを入力する必要があります。</p>
+
+<p>候補をクリックすると、翻訳エリアにコピーされます。</p>
+
+<dl>
+</dl>
+
+<h2 id="Publishing_your_localization" name="Publishing_your_localization">ローカライズを公開する</h2>
+
+<p>Pontoon で、レポジトリにコミットし、l10n の作業を完了させましょう。この作業も Pontoon で行えます。実際、時間単位で自動的に同期されています。自分のやったことを称えたり、踊ったり、寝たり、他のことをして祝福してください！</p>

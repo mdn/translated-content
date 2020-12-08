@@ -1,0 +1,118 @@
+---
+title: アニメーションインスペクターの例：Web Animations API
+slug: >-
+  Tools/Page_Inspector/How_to/Work_with_animations/Animation_inspector_example:_Web_Animations_API
+translation_of: >-
+  Tools/Page_Inspector/How_to/Work_with_animations/Animation_inspector_example:_Web_Animations_API
+---
+<div>{{ToolsSidebar}}</div>
+
+<h2 id="firefox-logo-animation" name="firefox-logo-animation">firefox-logo-animation</h2>
+
+<p><a href="/ja/docs/Web/API/Web_Animations_API">Web Animations API</a> を使用するアニメーションのサンプルです。</p>
+
+<h3 id="HTML_コンテンツ">HTML コンテンツ</h3>
+
+<pre class="brush: html">&lt;div class="channel"&gt;
+   &lt;img src="https://mdn.mozillademos.org/files/11827/developer.png" id="icon"/&gt;
+   &lt;span id="note"&gt;Firefox Developer Edition&lt;/span&gt;
+&lt;/div&gt;</pre>
+
+<h3 id="CSS_コンテンツ">CSS コンテンツ</h3>
+
+<pre class="brush: css">.channel {
+  padding: 2em;
+  margin: 0.5em;
+  box-shadow: 1px 1px 5px #808080;
+  margin: 1.5em;
+}
+
+.channel &gt; * {
+  vertical-align: middle;
+  line-height: normal;
+}
+
+#icon {
+  width: 50px;
+  height: 50px;
+  filter: grayscale(100%);
+}
+
+#note {
+  margin-left: 1em;
+  font: 1.5em "Open Sans",Arial,sans-serif;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  opacity: 0;
+  width: 0;
+}
+</pre>
+
+<h3 id="JavaScript_コンテンツ">JavaScript コンテンツ</h3>
+
+<pre class="brush: js">var iconKeyframeSet = [
+  { transform: 'scale(1)', filter: 'grayscale(100%)'},
+  { filter:  'grayscale(100%)', offset: 0.333},
+  { transform: 'scale(1.5)', offset: 0.666 },
+  { transform: 'scale(1.5)', filter: 'grayscale(0%)'}
+];
+
+var noteKeyframeSet = [
+  { opacity: '0', width: '0'},
+  { opacity: '1', width: '300px'}
+];
+
+var iconKeyFrameOptions = {
+  duration: 750,
+  fill: 'forwards',
+  easing: 'ease-in',
+  endDelay: 100
+}
+
+var noteKeyFrameOptions = {
+  duration: 500,
+  fill: 'forwards',
+  easing: 'ease-in',
+  delay: 150
+}
+
+var icon = document.getElementById("icon");
+var note = document.getElementById("note");
+
+var iconKeyframes = new KeyframeEffect(
+  icon,
+  iconKeyframeSet,
+  iconKeyFrameOptions
+);
+
+var noteKeyframes = new KeyframeEffect(
+  note,
+  noteKeyframeSet,
+  noteKeyFrameOptions
+);
+
+var iconAnimation = new Animation(iconKeyframes, document.timeline);
+var noteAnimation = new Animation(noteKeyframes, document.timeline);
+
+var firstTime = true;
+
+function animateChannel(e) {
+  if (e.button != 0) {
+    return;
+  }
+  if (e.target.id != "icon") {
+    return;
+  }
+  if (firstTime) {
+    iconAnimation.play();
+    noteAnimation.play();
+    firstTime = false;
+  } else {
+    iconAnimation.reverse();
+    noteAnimation.reverse();
+  }
+}
+
+document.addEventListener("click", animateChannel);
+</pre>

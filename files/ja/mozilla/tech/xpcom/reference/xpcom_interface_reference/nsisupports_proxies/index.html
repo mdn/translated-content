@@ -1,0 +1,89 @@
+---
+title: nsISupports proxies
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsISupports_proxies
+tags:
+  - MDC Project
+  - NeedsUpdate
+  - XPCOM
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsISupports_proxies
+---
+<p>この文脈において、「プロキシ」とは、<code><a href="ja/NsISupports">nsISupports</a></code> から派生していてタイプライブラリを持つ任意のクラスのメソッドが、任意のプロセス中のスレッドにおいて呼び出しを行えるようにするスタブオブジェクトのことです。</p>
+<p>nsISupports プロキシが必要な主な理由は、JavaScript と UI が一つのスレッド上にあることです。ひとつのスレッドがビジーの場合、他のスレッドはブロックされます。このことの良い例が XPInstall です。そのインストールスクリプトは、小さくかつ速く走る、多くの JavaScript とは異なっています。XPInstall インストールスクリプトは、しばしばとても複雑であり、また、解凍のためやネイティブなファイルシステムの動作のために、長い実行時間を要求します。もし XPInstall が UI スレッドの上で動作するのであれば、製品はスクリプトが完了するまで動作できなくなるでしょう。これは、あきらかにまずいです。このため、XPInstall は、それ自身のスレッドに移動します。現在 XPInstall は、製品が動作している時に、インストールを実行できます。しかし、現在 XPInstall はプログレスメーターや確認ダイアログのようなUI要素にアクセスできません。分離した非 UI スレッドが UI スレッド上で動作しているかのように見せるにはどうしたらよいでしょう。ここで、<code>nsISupports</code> プロキシのユーティリティを使います。</p>
+<p>Seamonkey にかかわっている他の人々も同様の解決策を望んでいると思います。このドキュメントでは、nsISupports プロキシの使い方を説明しようと思います。また、<a class="external" href="http://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/78236a4b312a2de4/939240fc3f5123a8?lnk=st&amp;rnum=1#939240fc3f5123a8"> もご参照ください。 </a></p>
+<h3 id=".E3.81.A9.E3.81.86.E3.82.84.E3.81.A3.E3.81.A6.E4.BD.BF.E3.81.86.E3.81.8B.EF.BC.9F" name=".E3.81.A9.E3.81.86.E3.82.84.E3.81.A3.E3.81.A6.E4.BD.BF.E3.81.86.E3.81.8B.EF.BC.9F"><a class="external" href="http://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/78236a4b312a2de4/939240fc3f5123a8?lnk=st&amp;rnum=1#939240fc3f5123a8">どうやって使うか？ </a></h3>
+<div class="note">
+ <p><a class="external" href="http://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/78236a4b312a2de4/939240fc3f5123a8?lnk=st&amp;rnum=1#939240fc3f5123a8">Mozilla 1.9 で API に変更が行われましたが、以下のコードは更新されていません。更新後のインターフェースとドキュメントは <code></code></a><code><a href="https://dxr.mozilla.org/mozilla-central/source/xpcom/proxy/public/nsIProxyObjectManager.idl" rel="custom">xpcom/proxy/public/nsIProxyObjectManager.idl</a></code> をご覧ください。<a class="external" href="http://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/78236a4b312a2de4/939240fc3f5123a8?lnk=st&amp;rnum=1#939240fc3f5123a8"> もご参照ください。 </a></p>
+</div>
+<p><a class="external" href="http://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/78236a4b312a2de4/939240fc3f5123a8?lnk=st&amp;rnum=1#939240fc3f5123a8">ユーザの視点からいうと、</a><code><a href="ja/NsIProxyObjectManager">nsIProxyObjectManager</a></code> を調べるだけです。これには、二つの入口点があります。</p>
+<pre class="eval">NS_IMETHOD GetProxyForObject(nsIEventQueue *destQueue,
+                             const nsIID &amp; iid,
+                             nsISupports *object,
+                             PRInt32 proxyType,
+                             void * *result);
+
+NS_IMETHOD GetProxy(nsIEventQueue *destQueue,
+                    const nsIID &amp; cid,
+                    nsISupports *aOuter,
+                    const nsIID &amp; iid,
+                    PRInt32 proxyType,
+                    void * *result);
+</pre>
+<p>2 つの API は基本的に同じです。違いは、最初の方はすでに作成した <code>object</code> オブジェクトを受け入れるのに対し、後の方は中でオブジェクトを作成することです。この生成は、目的のイベントキューで起きます。例えば、もしオブジェクトをリモートで使うだけでなく、リモートで作成したい場合、2 番目の API を使う必要があります。</p>
+<p>要求した IID はタイプライブラリの中に存在しなければ
+ <i>
+  なりません</i>
+ 。このことは、それに対する IDL とタイプライブラリを作成しておかなければならないことを意味します。もしそうしない場合や私が何を言っているのか理解できない場合は、 <a class="external" href="http://www.mozilla-japan.org/scriptable/" rel="freelink">http://www.mozilla-japan.org/scriptable/</a> を見てください</p>
+<p><code>proxyType</code> パラメータは、2 つのフラグのどちらかをとります。<code>PROXY_SYNC</code> または <code>PROXY_ASYNC</code> です。これら 2 つのフラグは、どちらも <code>PROXY_ALWAYS</code> と OR をとることができます。</p>
+<p><code>PROXY_ALWAYS</code> は、現在のスレッドがなんであれ、プロキシオブジェクトがいつも作られることを保証します。もしこのフラグがセットされていなければ、プロキシオブジェクトマネージャは、現在のスレッド上のイベントキューと渡されてきたイベントキューを比較します。もしこれらが一致したら、
+ <i>
+  プロキシ化されていない</i>
+ 、そのままのオブジェクトを返します。ほとんどの場合は、あなたはこのフラグをセットしたいでしょう。</p>
+<p><code>PROXY_SYNC</code> は、メソッドが目的のスレッド上で実行されるまで、呼び出しているスレッドをブロックするため、単なる関数呼び出しを行っているように振舞います。これが通常でかつデフォルトの場合です。</p>
+<p>一方、<code>PROXY_ASYNC</code> は、「飛んでいって (戻るのを) 忘れてしまう」メソッド呼び出しです。このフラグで作成されたオブジェクトでの呼び出しは、直ちに復帰し、復帰情報は失われます。NS_OK が (復帰値として) 返ってきます。</p>
+<div class="warning">
+ <code>PROXY_ASYNC</code> についての<b>警告</b>:
+ <p>このフラグを使う際には、よく気をつける必要があります。呼び出しているスレッドが終了した時、呼び出し側のスタックにアクセスしているすべてのメソッドが失敗します。例えば:</p>
+ <pre class="eval"> myFoo-&gt;bar(&amp;x)
+
+ ... スレッドが終了してしまう ...
+
+ bar(PRInt32 *x)
+ {
+     ...
+     *x = 0;   &lt;-----  ここで失敗します
+ }
+</pre>
+</div>
+<p>そのため、メソッドを実行するためのイベントキュー、そして作成された <code>nsISupports</code> オブジェクトや CID そしてフラグが渡されて、新しい <code>nsISupports</code> プロキシオブジェクトが返ってきます。一旦プロキシオブジェクトを手にすると、それをあたかも「本当の」オブジェクトであるかのように扱うことができます。「本当の」オブジェクトでのすべてのメソッドに対して、プロキシオブジェクトがスタブの役目を果たします。プロキシオブジェクトの使用が終わったら <code><a href="ja/NS_RELEASE">NS_RELEASE</a></code> を呼び出すべきです。これにより、自分自身と同様に「本当の」オブジェクトの解放も行います。自分でオブジェクトを作ってから、プロキシを作ったのであれば、少なくとも参照カウントが 2 でなければならないことに注意してください。(ひとつがプロキシのため、もうひとつは <code>GetProxyObject</code> の呼び出しで渡して作成したオブジェクトのためです。それに、その他の参照カウントが足されます。)</p>
+<p>ここでは、<code>GetProxyObject</code> に対してどのようにイベントキューを提供するかということを取り上げます。二つの可能性があります。ひとつは、興味を持っているイベントキューを知っている場合です。この場合、単にそれを使ってください。ほとんどの場合では、メイン UI スレッド (一種の基本的なスレッド) が必要でしょう。もしその場合、イベントキューとして、単に <code>nsnull</code> を渡すことができます。<code><a href="https://dxr.mozilla.org/mozilla-central/source/xpcom/threads/nsIEventQueueService.h#44" rel="custom">xpcom/threads/nsIEventQueueService.h#44</a></code> にある定義済のフラグも使うことができます。</p>
+<p>呼び出し元が目的のスレッドにいるかどうかを決定するロジックもあります。これが真であれば、プロキシ経由では呼び出されずに、最適化のためにメソッド (最適化) を直接呼び出します。この検知は、<code>PROXY_SYNC</code> フラグで作成されたプロキシを使うときだけに使われます。</p>
+<h4 id=".E4.BD.BF.E7.94.A8.E4.BE.8B" name=".E4.BD.BF.E7.94.A8.E4.BE.8B">使用例</h4>
+<pre class="eval">nsresult rv = NS_OK;
+
+NS_WITH_SERVICE( nsIProxyObjectManager, pIProxyObjectManager, kProxyObjectManagerCID, &amp;rv);
+if(NS_FAILED(rv)) return rv;
+
+rv = pIProxyObjectManager-&gt;GetProxyForObject( NS_UI_THREAD_EVENTQ,
+                                                  nsITestProxy::GetIID(),
+                                                  createdTestObject,
+                                                  PROXY_SYNC | PROXY_ALWAYS,
+                                                  (void**)proxyToTestObject);
+
+    // もう本当のオブジェクトについては、気にしない。すなわち、GetProxyObjectが
+    // 参照カウントを行っている。
+NS_RELEASE(createdTestObject);
+
+proxyToTestObject-&gt;Test1(x,y,z);
+
+NS_RELEASE(proxyToTestObject);
+</pre>
+<div class="originaldocinfo">
+ <h2 id=".E5.8E.9F.E6.96.87.E6.9B.B8.E3.81.AE.E6.83.85.E5.A0.B1" name=".E5.8E.9F.E6.96.87.E6.9B.B8.E3.81.AE.E6.83.85.E5.A0.B1">原文書の情報</h2>
+ <ul>
+  <li>著者: <a class="link-mailto" href="mailto:dougt@netscape.com">Doug Turner</a></li>
+  <li>最終更新日: January 27, 2007</li>
+  <li>著作権: Portions of this content are © 1998–2007 by individual mozilla.org contributors; content available under a Creative Commons license | <a class="external" href="http://www.mozilla.org/foundation/licensing/website-content.html">詳細</a></li>
+ </ul>
+</div>
+<div class="noinclude">
+  </div>

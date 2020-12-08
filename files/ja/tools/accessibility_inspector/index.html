@@ -1,0 +1,160 @@
+---
+title: アクセシビリティインスペクター
+slug: Tools/Accessibility_inspector
+tags:
+  - Accessibility
+  - Accessibility inspector
+  - DevTools
+  - Guide
+  - Tools
+translation_of: Tools/Accessibility_inspector
+---
+<div>{{ToolsSidebar}}</div>
+
+<p class="summary">アクセシビリティインスペクターは、アクセシビリティツリーによって現在のページで支援技術に公開される重要な情報へアクセスする手段を提供して、欠けている情報やほかに注意が必要なことを確認できます。この記事では、アクセシビリティインスペクターの主な機能や使用方法を説明します。</p>
+
+<h2 id="A_(very)_brief_guide_to_accessibility" name="A_(very)_brief_guide_to_accessibility">アクセシビリティの (とても) 簡単なガイド</h2>
+
+<p>アクセシビリティは、可能な限り多くの人々があなたのウェブサイトを利用できるようにするための慣習です。これは利用者の障がいや、使用する端末・ネットワーク速度・地理的な位置といった個人の状況によって情報へアクセスできない状態にしないように、最善を尽くすことです。</p>
+
+<p>ここでは主に、視覚障がいを持つ人々に情報を提供すること (これはウェブブラウザーで使用できる <a href="https://www.smashingmagazine.com/2015/03/web-accessibility-with-accessibility-api/">accessibility API</a> で実現します) について扱います。それは、あなたのページでさまざまな要素がどのような役割を持つかという情報を提供します (例えば単純なテキスト、ボタン、リンク、フォーム要素など)。</p>
+
+<p>セマンティック DOM 要素はデフォルトで、その用途を示唆する役割が割り当てられています。しかし、時には複雑な独自のコントロールを作成するためにセマンティックではないマークアップ (例えば {{htmlelement("div")}}) を使用しなければならず、これは用途を反映するデフォルトの役割を持っていません。このような状況では、自身の役割を与えるために <a href="/ja/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA</a> ロール属性を使用できます。</p>
+
+<p>ブラウザーの accessibility API によって公開される役割やほかの情報は、アクセシビリティツリーと呼ばれる階層構造で提供されます。これは DOM ツリーに少し似ていますが、含まれる要素一式がより制限されており、またツリーが持つ情報も若干異なっています。</p>
+
+<p>スクリーンリーダーなどの支援技術は、ウェブページに何があるかを見つけるためにこの情報を使用して、ユーザーにそれが何であるかを伝えて、ページと対話できるようにします。開発ツールのアクセシビリティインスペクターもこの情報を使用して、価値があるアクセシビリティのデバッグ機能を提供します。</p>
+
+<h2 id="Accessing_the_accessibility_inspector" name="Accessing_the_accessibility_inspector">アクセシビリティインスペクターにアクセスする</h2>
+
+<p>アクセシビリティインスペクター (Firefox 61 から使用可能) は、デフォルトで開発ツールに表示されていません。有効化するには開発ツールの設定 (<kbd>F1</kbd> を押下するか、"三点リーダー" メニューで <em>設定</em> を選択する) を開いて、<em>標準の開発ツール</em> の <em>アクセシビリティ</em> チェックボックスにチェックを入れてください。これにより開発ツールに <em>アクセシビリティ</em> タブが現れます。タブをクリックすると、アクセシビリティパネルを表示します:</p>
+
+<p><img alt="Accessibility tab in firefox devtools, turned off, with a button labeled Turn On Accessibility Features" src="https://mdn.mozillademos.org/files/16021/accessibility-inspector-panel-off.png" style="border-style: solid; border-width: 1px; height: 654px; width: 1692px;"></p>
+
+<p>初期状態では開発ツールのアクセシビリティ機能を無効にしており (別のブラウザータブですでに有効にしている場合や、スクリーンリーダーのユーザーやテスターであるなどの理由で Firefox のアクセシビリティエンジンをすでに開始している場合を除きます)。これは、アクセシビリティ機能が有効であるときにバックグラウンドでアクセシビリティエンジンを実行するためです。エンジンを実行すると、パフォーマンスが低下してメモリ消費が増えます。それにより、<a href="/ja/docs/Tools/Memory">メモリー</a> や <a href="/ja/docs/Tools/Performance">パフォーマンス</a> といったほかのパネルの測定を妨げたり、ブラウザー全体のパフォーマンスが低下したりします。このため、特に使用しないときはアクセシビリティ機能を無効にしておくべきです。</p>
+
+<p>[<em>アクセシビリティ機能を有効にする</em>] ボタンを押すと、アクセシビリティ機能を有効にします。</p>
+
+<p>パネルの内容が読み込まれたら、左上にある [<em>アクセシビリティ機能を無効にする</em>] ボタンを押すと再び無効にできます。ただし、スクリーンリーダーを使用するためにアクセシビリティエンジンがすでに動作していた場合は除きます。この場合はボタンが使用できません。</p>
+
+<div class="note">
+<p><strong>注記</strong>: 複数のタブでアクセシビリティ機能を使用している場合は、あるタブで無効にするとすべてのタブで無効になります。</p>
+</div>
+
+<h2 id="Features_of_the_Accessibility_panel" name="Features_of_the_Accessibility_panel">アクセシビリティパネルの機能</h2>
+
+<p>アクセシビリティパネルを有効にすると以下のようになります:</p>
+
+<p><img alt="Accessibility tab in firefox devtools, turned on, showing two information panels plus a button labeled Turn Off Accessibility Features" src="https://mdn.mozillademos.org/files/16022/accessibility-inspector-panel-on.png" style="border-style: solid; border-width: 1px; height: 654px; width: 1692px;"></p>
+
+<p>左側に、現在のページのアクセシビリティツリー内のすべてのアイテムを表す樹形図があります。入れ子の子孫を持つアイテムにはクリックして子孫を表示できる矢印がありますので、階層の深い部分へ移動できます。それぞれのアイテムで、2 つのプロパティを示します:</p>
+
+<ul>
+ <li><em>役割</em> — ページ上でこのアイテムが持つ役割 (例えば <code>pushbutton</code> や <code>footer</code>)。これはブラウザーが与えたデフォルトの役割か、WAI-ARIA の <code>role</code> 属性で与えた役割のいずれかです。</li>
+ <li><em>名前</em> — ページ上でこのアイテムが持つ名前。これが何に由来するかは、要素によって異なります。例えばほとんどのテキスト要素の名前は単に <code>textContent</code> ですが、フォーム要素の名前は、その要素に関連付けられた {{htmlelement("label")}} の内容物です。</li>
+</ul>
+
+<p>右側には、選択中のアイテムに関する詳細情報を表示します。ここには以下のプロパティを表示します:</p>
+
+<ul>
+ <li><em>name</em> — 前述した、アイテムの名前。</li>
+ <li><em>role</em> — 前述した、アイテムの役割。</li>
+ <li><em>actions</em> — アイテムで実行できるアイテムの一覧。例えば押しボタンでは "Press"、リンクでは "Jump" があります。</li>
+ <li><em>value</em> — アイテムの値。この意味はアイテムの種類によって異なります。例えば入力フォーム (role: entry) ではフォームに入力された値、リンクでは対応する <code>&lt;a&gt;</code> 要素の <code>href</code> 属性にある URL です。</li>
+ <li><em>DOMNode</em> — アクセシビリティツリー内のアイテムが表す、DOM ノードのタイプです。値の後ろにある "標的" のアイコンをクリックすると、<a href="/ja/docs/Tools/Page_Inspector">ページインスペクター</a> でノードを選択できます。"標的" のアイコンにマウスポインターを載せると、ページで DOM ノードをハイライト表示します。<br>
+  <img alt="DOMNode property in accessibility inspector with target icon highlighted" src="https://mdn.mozillademos.org/files/16025/dom-node-target-icon.png" style="height: 55px; width: 294px;"></li>
+ <li><em>description</em> — 要素で提供された詳細説明。通常は title 属性の内容です。</li>
+ <li><em>help</em> — これは Gecko で実装していませんので、常に空文字列を返します。Firefox 62 でインスペクターから削除する予定です ({{bug(1467643)}})。</li>
+ <li><em>keyboardShortcut</em> — 要素をアクティブにするために使用できるキーボードショートカットであり、<code>accessKey</code> 属性で指定します。これは Firefox 62 から正常に動作します ({{bug("1467381")}})。</li>
+ <li><em>childCount</em> — アクセシビリティツリーの階層で、現在のアイテムが持つ子孫の数です。</li>
+ <li><em>indexInParent</em> — 親アイテムの中で何番目の子アイテムであるかを示すインデックスの値です。親アイテムの中で最初のアイテムである場合は 0 になります。2 番目のアイテムであれば 1 になります。以降も同じです。</li>
+ <li><em>states</em> — 現在のアイテムに適用可能な、さまざまなアクセシビリティ関連の状態のリストです。例えば、あるデモの中のリンクのひとつは focusable、linked、selectable text、opaque、enabled、sensitive の状態を持ちます。内部状態の一覧については、<a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/States">Gecko states</a> をご覧ください。</li>
+ <li><em>attributes</em> — アイテムに適用されている、すべてのアクセシビリティ関連の属性の一覧です。これは margin-left や text-indent などスタイル関連の属性、ドラッグ可能やレベル (例えば見出しであれば、見出しのレベル) といったアクセシビリティ情報に関して役に立つ状態が含まれます。使用可能な状態の一覧については、<a href="/ja/docs/Web/Accessibility/AT-APIs/Gecko/Attrs">Gecko object attributes</a> をご覧ください。</li>
+</ul>
+
+<div class="note">
+<p><strong>注記</strong>: 公開される情報は、すべてのプラットフォームで同じです。インスペクターはプラットフォームのアクセシビリティ層の情報ではなく、Gecko のアクセシビリティツリーを公開します。</p>
+</div>
+
+<h3 id="Keyboard_controls" name="Keyboard_controls">キーボード操作</h3>
+
+<p><em>アクセシビリティ</em> タブは、キーボードで操作可能です:</p>
+
+<ul>
+ <li>Tab キーで [<em>アクセシビリティ機能を無効にする</em>] ボタンや左右のパネルを行き来できます。</li>
+ <li>いずれかのパネルにフォーカスがあるとき、上下矢印キーを使用してアイテムのフォーカスを上下に移動できます。また左右矢印キーを使用して、展開可能な行 (例えばアクセシビリティツリーのさまざまな階層レベル) の展開や折りたたみが可能です。</li>
+</ul>
+
+<h2 id="Notable_related_features" name="Notable_related_features">注目すべき関連機能</h2>
+
+<p>アクセシビリティ機能を有効にすると、開発ツールでいくつかの有用な追加機能を利用できます。ここでは、それらを詳しく説明します:</p>
+
+<h3 id="Context_menu_options" name="Context_menu_options">コンテキストメニューの項目</h3>
+
+<p>ウェブページで UI を右クリックまたは <kbd>Ctrl</kbd> + クリックしたときの通常のコンテキストメニューと、インスペクターの HTML ペインで DOM 要素を右クリックまたは <kbd>Ctrl</kbd> + クリックしたときのコンテキストメニューの両方に、項目が追加されます:</p>
+
+<p><img alt="context menu in the browser viewport, with a highlighted option: Inspect Accessibility Properties" src="https://mdn.mozillademos.org/files/16028/web-page-context-menu.png" style="border-style: solid; border-width: 1px; height: 798px; width: 1200px;"></p>
+
+<p><img alt="context menu in the DOM inspector, with a highlighted option: Show Accessibility Properties" src="https://mdn.mozillademos.org/files/16020/dom-inspector-context-menu.png" style="border-style: solid; border-width: 1px; height: 803px; width: 1200px;"></p>
+
+<p>コンテキストメニューの [<em>アクセシビリティプロパティを調査</em>]/[<em>アクセシビリティプロパティを表示</em>] を選択すると、対応するアクセシビリティツリーのアイテムやプロパティを表示するために、<em>アクセシビリティ</em> タブが直ちに開きます。</p>
+
+<div class="note">
+<p><strong>注記</strong>: 一部の DOM 要素はアクセシビリティプロパティがありません。このような場合は [<em>アクセシビリティプロパティを調査</em>]/[<em>アクセシビリティプロパティを表示</em>] のメニュー項目がグレーアウトします。</p>
+</div>
+
+<h3 id="Highlighting_of_UI_items" name="Highlighting_of_UI_items">UI アイテムのハイライト表示</h3>
+
+<p>アクセシビリティタブでアクセシビリティアイテムにマウスポインターを載せると、可能であれば関連する UI アイテムで半透明のハイライト表示を行います。小さな情報バーに、アイテムの役割や名前を表示します。これは、アクセシビリティツリーのアイテムが実際のページでどの UI アイテムに関連しているかを判断するのに役立ちます。</p>
+
+<p>以下の例では画像がハイライト表示されており、役割 "graphic" と名前 "Road, Asphalt, Sky, Clouds, Fall" を上の情報バーに表示していることがわかります。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/16302/image_accessibility.png" style="border: 1px solid black; display: block; height: 347px; margin: 0px auto; width: 451px;"></p>
+
+<h4 id="カラーコントラスト">カラーコントラスト</h4>
+
+<p>コントラスト比が十分でない場合、色盲などの視覚障害を持つ読者はテキストを読み取ることができないため、コントラスト比の情報は、ウェブサイトのカラーパレットを設計するときに特に便利です。Web コンテンツアクセシビリティガイドライン (WCAG) 2.0 では、Web ページ上の小さなテキストの前景色と背景色との最小コントラスト比として 4.5:1 を定義しています。例えば：</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/16305/text_contrast_2.png" style="display: block; height: 67px; margin: 0px auto; width: 259px;"></p>
+
+<p>上記の画像の色のコントラストは 2.77 であり、読みやすいようにコントラストが不十分である可能性があります。コントラストが許容されるコントラスト比を満たしていないことを示す警告記号に注目してください。それを以下と比較してください：</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/16304/text_contrast_1.png" style="display: block; height: 64px; margin: 0 auto; width: 336px;"></p>
+
+<p>この例では、コントラストは 12.63 です。今回は AAA とチェックマークが緑色で表示され、テキストのコントラスト比が 7:1 以上であることを示しています。つまり、コントラストの強化基準、またはレベル AAA を満たしています。</p>
+
+<p> </p>
+
+<h3 id="Accessibility_picker" name="Accessibility_picker">アクセシビリティピッカー</h3>
+
+<p><a href="/ja/docs/Tools/Page_Inspector/How_to/Select_an_element#With_the_node_picker">インスペクターの HTML ペインピッカー</a> と同様に、<em>アクセシビリティ</em>タブのピッカーボタンを押すと現在のページで UI アイテムを選択できます。そして、アクセシビリティツリーで対応するオブジェクトをハイライト表示します。</p>
+
+<p>アクセシビリティタブのピッカーは、以下のようにインスペクターの HTML ペインピッカーとは外見が若干異なります:</p>
+
+<p><img alt="highlighted dom inspector picker button, with a tooltip saying Pick an element from the page" src="https://mdn.mozillademos.org/files/16024/dom-inspector-picker.png" style="border-style: solid; border-width: 1px; height: 677px; width: 1716px;"></p>
+
+<p><img alt="highlighted accessibility inspector button, with a tooltip saying Pick accessible object from the page" src="https://mdn.mozillademos.org/files/16023/accessibility-inspector-picker.png" style="border-style: solid; border-width: 1px; height: 677px; width: 1717px;"></p>
+
+<p>"オブジェクトを選択" するとアクセシビリティツリーでアクセス可能なオブジェクトをハイライト表示して、ピッカーが非アクティブ化します。ただし <kbd>Shift</kbd> キーを押しながら "オブジェクトを選択" すると、ツリーでアクセス可能なオブジェクトを "プレビュー" できます (右ペインにオブジェクトのプロパティを表示します) が、<kbd>Shift</kbd> キーを離すまではいくつでも選択し続ける (ピッカーがキャンセルされません) ことができます。</p>
+
+<p>ピッカーがアクティブであるとき、ピッカーボタンを再度押すか <kbd>Esc</kbd> キーを押すと、ピッカーを非アクティブ化できます。</p>
+
+<h2 id="Typical_use_cases" name="Typical_use_cases">典型的な使用方法</h2>
+
+<p>アクセシビリティインスペクターは、アクセシビリティの問題を一目で見抜くためにとても役に立ちます。第一に、適切な同等文字列がないアイテム (例えば <code>alt</code> 文字列がない画像や、<code>name</code> プロパティが <code>null</code> で適切なラベルがないフォーム要素) を調査できます。</p>
+
+<p><img alt="A form input highlighted in the UI, with information about it shown in the accessibility inspector to reveal that it has no label — it has a name property of null" src="https://mdn.mozillademos.org/files/16027/use-case-no-label.png" style="border-style: solid; border-width: 1px; height: 1180px; width: 1182px;"></p>
+
+<p>また、セマンティクスの検証でも役に立ちます。[<em>アクセシビリティオブジェクトを調査</em>] コンテキストメニュー項目を使用して、アイテムに正しい役割 (例えばボタンが実際にボタンの役割、リンクが実際にリンクの役割を持つか) を設定しているかをすばやく確認できます。</p>
+
+<p><img alt="A UI element that looks like a button, with information about it shown in the accessibility inspector to reveal that it isn't a button, it is a section element. It has a name property of null" src="https://mdn.mozillademos.org/files/16026/use-case-fake-button.png" style="border-style: solid; border-width: 1px; height: 1180px; width: 1182px;"></p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><a href="/ja/docs/Learn/Accessibility">アクセシビリティの基礎</a></li>
+ <li><a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility">実践的なデバッグ情報</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/Understanding_WCAG">WCAG を理解する</a></li>
+ <li><a href="/ja/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA の基本</a></li>
+ <li><a href="https://www.smashingmagazine.com/2015/03/web-accessibility-with-accessibility-api/">Accessibility APIs: A Key To Web Accessibility</a> by Léonie Watson</li>
+</ul>

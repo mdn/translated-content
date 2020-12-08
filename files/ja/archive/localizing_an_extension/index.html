@@ -1,0 +1,164 @@
+---
+title: Localizing an extension
+slug: Archive/Localizing_an_extension
+tags:
+  - Add-ons
+  - Extensions
+  - Internationalization
+  - Localization
+  - 翻訳中
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/Adding_preferences_to_an_extension" style="float: left;">« 前のページ</a><a href="/ja/docs/Updating_an_extension_to_support_multiple_Mozilla_applications">次のページ  »</a></p>
+</div><p></p>
+
+<p>This article expands upon the previous samples on extension writing by adding localization support to our stock watcher extension. Performing a few simple steps makes your extension much easier to localize into various languages without having to edit the XUL or JavaScript files themselves.</p>
+
+<p>If you haven't already created an extension, or would like to refresh your memory, take a look at the previous articles in this series:</p>
+
+<ul>
+ <li><a href="ja/Creating_a_status_bar_extension">Creating a status bar extension</a></li>
+ <li><a href="ja/Creating_a_dynamic_status_bar_extension">Creating a dynamic status bar extension</a></li>
+ <li><a href="ja/Adding_preferences_to_an_extension">Adding preferences to an extension</a></li>
+</ul>
+
+<h2 id="Download_the_sample" name="Download_the_sample">Download the sample</h2>
+
+<p>You can download this article's sample code so you can look at it side-by-side with the article, or to use it as a basis for your own extension.</p>
+
+<p><a class="external" href="http://developer.mozilla.org/samples/extension-samples/localizedstockwatcher.zip" rel="freelink">http://developer.mozilla.org/samples...ockwatcher.zip</a></p>
+
+<h2 id="Localizing_strings_in_XUL_files" name="Localizing_strings_in_XUL_files">Localizing strings in XUL files</h2>
+
+<h3 id="Create_the_needed_locale_files" name="Create_the_needed_locale_files">Create the needed locale files</h3>
+
+<p>Each XUL file that comprises the user interface for your extension should have a locale file in its locale directory.</p>
+
+<p>Each locale file maps entity names referenced in the XUL files to the strings themselves. The preference dialog, whose XUL file is <code>options.xul</code>, has a corresponding <code>options.dtd</code> file that looks like this:</p>
+
+<pre class="eval"> &lt;!ENTITY options_window_title "StockWatcher 2 Preferences"&gt;
+ &lt;!ENTITY options_symbol.label "Stock to watch: "&gt;
+</pre>
+
+<p>The "options_window_title" entity maps to the string "StockWatcher 2 Preferences", which is used as the title of the preference window.</p>
+
+<p>The <code>stockwatcher2.dtd</code> file contains the mappings for the <code>stockwatcher2.xul</code> file:</p>
+
+<pre class="eval"> &lt;!ENTITY panel_loading "Loading..."&gt;
+ &lt;!ENTITY menu_refresh_now.label "Refresh Now"&gt;
+ &lt;!ENTITY menu_apple.label "Apple (AAPL)"&gt;
+ &lt;!ENTITY menu_google.label "Google (GOOG)"&gt;
+ &lt;!ENTITY menu_microsoft.label "Microsoft (MSFT)"&gt;
+ &lt;!ENTITY menu_yahoo.label "Yahoo (YHOO)"&gt;
+</pre>
+
+<h3 id="Update_the_XUL_files" name="Update_the_XUL_files">Update the XUL files</h3>
+
+<p>Each XUL file needs to reference its corresponding locale file. We also need to update the code to use the entities instead of the strings, so that the substitutions take place based on the currently active locale.</p>
+
+<p>To add a reference to the correct locale file for a given XUL file, we need to add one line to the XUL file. To <code>options.xul</code>, we add this line:</p>
+
+<pre class="eval"> &lt;!DOCTYPE window SYSTEM "<a class="external" rel="freelink">chrome://stockwatcher2/locale/options.dtd</a>"&gt;
+</pre>
+
+<p>We add a similar line to the <code>stockwatcher.xul</code> file:</p>
+
+<pre class="eval"> &lt;!DOCTYPE overlay SYSTEM "<a class="external" rel="freelink">chrome://stockwatcher2/locale/stockwatcher2.dtd</a>"&gt;
+</pre>
+
+<p>In larger applications you might need to use entities from several locale files in a single XUL file. <a href="ja/Using_multiple_DTDs">Using multiple DTDs</a> describes how to do it.</p>
+
+<p>Note that the URLs of the DTD files don't actually include the name of the localization to use. The Chrome Registry resolves the URIs based on the user's current locale setting and the data you provide in your <a href="#Update_the_chrome_manifest">Chrome manifest</a>.</p>
+
+<p>Then we simply replace each text string in our XUL files with the corresponding entity. For example, in <code>stockwatcher2.xul</code>, we change this line:</p>
+
+<pre class="eval"> &lt;menuitem label="Refresh Now" oncommand="StockWatcher.refreshInformation()"/&gt;
+</pre>
+
+<p>to</p>
+
+<pre class="eval"> &lt;menuitem label="&amp;menu_refresh_now.label;" oncommand="StockWatcher.refreshInformation()"/&gt;
+</pre>
+
+<p>Do this for every string used in each XUL file.</p>
+
+<h2 id="Update_the_chrome_manifest" name="Update_the_chrome_manifest">Update the chrome manifest</h2>
+
+<p>To let Firefox know about the locale files, we need to make a revision to our <code><a href="ja/Chrome_Registration">chrome.manifest</a></code> file, adding one line for each localization:</p>
+
+<pre class="eval"> locale stockwatcher2 en-US chrome/locale/en-US/
+</pre>
+
+<p>This instructs Firefox that the en-US localization is located in the <code>chrome/locale/en-US</code> directory.</p>
+
+<h2 id="Localizing_strings_in_JavaScript_code" name="Localizing_strings_in_JavaScript_code">Localizing strings in JavaScript code</h2>
+
+<p>If your JavaScript code contains literal strings that need to be localized, as does our stock watcher sample, we need to make those localizable as well. We can do this by moving the strings into a string bundle. String bundles are created by establishing a property file that maps keys to string values. For a detailed explanation of how this works, see <a href="ja/XUL_Tutorial/Property_Files">XUL Tutorial:Property Files</a>.</p>
+
+<h3 id="Create_a_properties_file" name="Create_a_properties_file">Create a properties file</h3>
+
+<p>The first thing we do is create a property file for the literal strings used by the JavaScript code in <code>stockwatcher2.js</code>:</p>
+
+<pre class="eval">changeString=Chg:
+openString=Open:
+lowString=Low:
+highString=High:
+volumeString=Vol:
+</pre>
+
+<p>The stockwatcher2.properties file shown above maps five keys (<code>changeString</code>, <code>openString</code>, <code>lowString</code>, <code>highString</code>, and <code>volumeString</code>) to the corresponding text in English.</p>
+
+<h3 id="Create_the_string_bundle" name="Create_the_string_bundle">Create the string bundle</h3>
+
+<p>The next step is to modify the stockwatcher2.xul file to reference this property file. We do this by creating a string bundle, using the following code:</p>
+
+<pre class="eval"> &lt;stringbundleset id="stringbundleset"&gt;
+   &lt;stringbundle id="string-bundle" src="<a class="external" rel="freelink">chrome://stockwatcher2/locale/stockw...er2.properties</a>"/&gt;
+ &lt;/stringbundleset&gt;
+</pre>
+
+<p>This establishes a new string bundle, referenced by the ID "string-bundle", whose keys and values are to be loaded from the <code>stockwatcher2.properties</code> file we've already created.</p>
+
+<h3 id="Update_the_JavaScript_code" name="Update_the_JavaScript_code">Update the JavaScript code</h3>
+
+<p>Now we're ready to revise the JavaScript code to load the strings from the string bundle instead of using literal strings. This involves rewriting the <code>refreshInformation()</code> function to load the strings, and its enclosed <code>infoReceived()</code> function to use the loaded, localized, strings instead of string literals.</p>
+
+<p>We add to <code>refreshInformation()</code> the following code:</p>
+
+<pre class="eval"> var stringsBundle = document.getElementById("string-bundle");
+ var changeString = stringsBundle.getString('changeString') + " ";
+ var openString = stringsBundle.getString('openString') + " ";
+ var lowString = stringsBundle.getString('lowString') + " ";
+ var highString = stringsBundle.getString('highString') + " ";
+ var volumeString = stringsBundle.getString('volumeString') + " ";
+</pre>
+
+<p>This code gets a reference to the string bundle element we added to stockwatcher2.xul by calling <code>document.getElementById()</code>, specifying the ID "string-bundle". Then it fetches all the strings we need from the bundle, one by one, by calling the string bundle's <code><a class="external" href="http://www.xulplanet.com/references/elemref/ref_stringbundle.html#prop_getString">getString()</a></code> method, passing the appropriate key for each string.</p>
+
+<p>In this case, we're also appending a space to the end of each string. That's just how this particular program works, and isn't something that you have to do.</p>
+
+<p>Then we replace any occurrences of the literal strings with the appropriate variables:</p>
+
+<pre class="eval"> samplePanel.tooltipText = changeString + fieldArray[4] + " | " +
+     openString + fieldArray[5] + " | " +
+     lowString + fieldArray[6] + " | " +
+     highString + fieldArray[7] + " | " +
+     volumeString + fieldArray[8];
+</pre>
+
+<h2 id="Localizing_the_description_in_install.rdf" name="Localizing_the_description_in_install.rdf">Localizing the description in install.rdf</h2>
+
+<p>See <a href="ja/Localizing_extension_descriptions">Localizing extension descriptions</a>.</p>
+
+<h2 id="Adding_more_localizations" name="Adding_more_localizations">Adding more localizations</h2>
+
+<p>To add another localization for a new language, all you need to do is add another line to the chrome manifest referencing the new locale. For example, to add a Spanish localization, you would add:</p>
+
+<pre class="eval"> locale stockwatcher2 es-ES chrome/locale/es-ES/
+</pre>
+
+<p>Then just create a subdirectory <code>chrome/locale/es-ES</code> and add the needed DTD files; in this case, <code>options.dtd</code> and <code>stockwatcher2.dtd</code>. These files should map the same tags to the Spanish translations of the strings used by the extension.</p>
+
+<p>Likewise, if we have any property files containing localizable strings for our JavaScript code, we need to create localized versions of those property files in the <code>chrome/locale/es-ES</code> directory as well. Only the strings should be localized; the keys should be the same for each localization. </p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/Adding_preferences_to_an_extension" style="float: left;">« 前のページ</a><br></p>
+</div><p></p>

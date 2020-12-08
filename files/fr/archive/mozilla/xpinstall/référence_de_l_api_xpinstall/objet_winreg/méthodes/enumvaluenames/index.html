@@ -1,0 +1,39 @@
+---
+title: enumValueNames
+slug: >-
+  Archive/Mozilla/XPInstall/Référence_de_l_API_XPInstall/Objet_WinReg/Méthodes/enumValueNames
+translation_of: Archive/Mozilla/XPInstall/Reference/WinReg_Object/Methods/enumValueNames
+---
+<p> </p>
+<h3 id="enumValueNames" name="enumValueNames">enumValueNames</h3>
+<p>Énumère la valeur d'une clef donnée.</p>
+<h4 id="M.C3.A9thode_de" name="M.C3.A9thode_de">Méthode de</h4>
+<p>Objet <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_WinReg">WinReg</a></p>
+<h4 id="Syntaxe" name="Syntaxe">Syntaxe</h4>
+<pre class="eval">String enumValueNames ( Chaîne key, int subkeyIndex );
+</pre>
+<h4 id="Param.C3.A8tres" name="Param.C3.A8tres">Paramètres</h4>
+<p>La méthode <code>enumValueNames</code> a les paramètres suivants</p>
+<dl>
+ <dd>
+   </dd>
+ <dt>
+  <code>key</code></dt>
+ <dd>
+  Le chemin de la clef vers l'emplacement approprié dans la hiérarchie de clefs, tel que <code>"Software\\Netscape\\Navigator\\Mail"</code>.</dd>
+ <dt>
+  <code>subkeyIndex</code></dt>
+ <dd>
+  Un entier représentant l'index base 0 de la clef dont on cherche la valeur.</dd>
+</dl>
+<h4 id="Retour" name="Retour">Retour</h4>
+<p>La valeur de la clef en tant que chaîne si l'opération réussit ou <code>NULL</code> si la sous-clef indiquée n'existe pas.</p>
+<h4 id="Description" name="Description">Description</h4>
+<p>La méthode <code>enumValueNames</code> peut être utilisée pour exécuter une itération dans les valeurs d'une clef donnée. L'exemple suivant récupère la valeur d'une clef à l'aide de cette méthode :</p>
+<pre class="eval">var winreg = getWinRegistry();
+winreg.setRootKey(winreg.HKEY_LOCAL_MACHINE);
+v1 = winreg.enumValueNames("SOFTWARE\\Mozilla\\", 0);
+logComment("The first subkey value of the Mozilla key: " + v1)
+</pre>
+<p><span class="comment">Interwiki Language Links</span></p>
+<p>{{ languages( { "en": "en/XPInstall_API_Reference/WinReg_Object/Methods/enumValueNames" } ) }}</p>

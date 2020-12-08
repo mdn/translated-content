@@ -1,0 +1,87 @@
+---
+title: initInstall
+slug: >-
+  Archive/Mozilla/XPInstall/Référence_de_l_API_XPInstall/Objet_Install/Méthodes/initInstall
+translation_of: Archive/Mozilla/XPInstall/Reference/Install_Object/Methods/initInstall
+---
+<p> </p>
+<h3 id="initInstall" name="initInstall">initInstall</h3>
+<p>Initialise l'installation du logiciel spécifié et de sa version.</p>
+<h4 id="M.C3.A9thode_de" name="M.C3.A9thode_de">Méthode de</h4>
+<p>Objet <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install">Install</a></p>
+<h4 id="Syntaxe" name="Syntaxe">Syntaxe</h4>
+<pre class="eval">int initInstall (
+   Chaîne displayName,
+   Chaîne package,
+   InstallVersion version,
+   int flags);
+</pre>
+<pre class="eval">int initInstall (
+   Chaîne displayName,
+   Chaîne package,
+   Chaîne version,
+   int flags);
+</pre>
+<pre class="eval">int initInstall (
+   Chaîne displayName,
+   Chaîne package,
+   Chaîne version);
+</pre>
+<p>int initInstall (</p>
+<pre class="eval">  String displayName,
+  String package,
+  InstallVersion version);
+</pre>
+<h4 id="Param.C3.A8tres" name="Param.C3.A8tres">Paramètres</h4>
+<p>La méthode <code>initInstall</code> a les paramètres suivants :</p>
+<dl>
+ <dt>
+  <code>displayName</code></dt>
+ <dd>
+  Une <code>chaîne</code> qui contient le nom du logiciel à installer. Le nom du logiciel est visible par l'utilisateur.</dd>
+ <dt>
+  <code>package</code></dt>
+ <dd>
+  Le chemin dans la
+  <i>
+   Client Version Registry</i>
+  concernant le logiciel (par exemple : <code>Plugins/Adobe/Acrobat</code> ou <code>/royalairways/RoyalPI/</code>).</dd>
+ <dd>
+  Fournir un nom vide ou <code>null</code> est une erreur.</dd>
+ <dd>
+  Le chemin peut être absolu ou relatif. Un chemin relatif est relatif à l'espace de nommage de Netscape 6. Un chemin relatif doit débuter par <code>plugins/</code>, pour être relatif à la partie plugins de cet espace de nommage ou par <code>java/download/</code>, pour être relatif à la partie Java. Toutes les autres parties de l'espace de nommage de Netscape 6 sont réservées à l'usage de Netscape.</dd>
+ <dd>
+  La
+  <i>
+   Client Version Registry</i>
+  est une description hiérarchique du logiciel enregistré pour être utilisé par Netscape 6. Le chemin fourni ici n'est pas l'emplacement du logiciel sur le disque local, il correspond aux informations concernant le logiciel dans le registre. La distinction est importante lorsque vous ajoutez des composants avec la méthode <code><a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/addFile">addFile</a></code>.</dd>
+ <dt>
+  <code>version</code></dt>
+ <dd>
+  Un objet <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_InstallVersion">InstallVersion</a> ou une <code>Chaîne</code> représentant la version du paquetage à installer. Lorsque <code>version</code> est une <code>Chaîne</code> il peut contenir jusqu'à quatre nombres entiers, délimités par des points, tel que <code>1.17.1999.1517</code>.</dd>
+ <dt>
+  <code>flags</code></dt>
+ <dd>
+  Un champ optionnel, réservé pour un usage futur. Passe <code>0</code> comme valeur par défaut.</dd>
+</dl>
+<h4 id="Retour" name="Retour">Retour</h4>
+<p>Un nombre entier correspondant à un code d'erreur. Pour la liste complète des valeurs possibles, voir <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Codes_retourn%c3%a9s">Codes retournés</a>.</p>
+<h4 id="Description" name="Description">Description</h4>
+<p>La méthode <code>initInstall</code> initialise l'installation du logiciel spécifié. Elle doit être appelée immédiatement après le constructeur. Il est erroné d'appeler toute autre méthode de l'objet <code>Install</code> avant l'appel de <code>initInstall</code>.</p>
+<p>Après l'appel de la méthode <code>initInstall</code>, le script d'installation doit appeler les méthodes <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/performInstall">performInstall</a> ou <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/cancelInstall">cancelInstall</a> avant qu'il ne se termine. Si ces appels ne sont pas faits, Netscape 6 ne sera pas en mesure de nettoyer proprement les fichiers temporaires après la fin de l'exécution du script.</p>
+<h4 id="Exemple" name="Exemple">Exemple</h4>
+<p>Pour débuter l'installation du plugin
+ <i>
+  Royal Airways</i>
+ , on peut utiliser ce code :</p>
+<pre class="eval">initInstall("Royal Airways TripPlanner","/RoyalAirways/
+TripPlanner","1.0.0.0");
+...
+err = getLastError();
+if (!err)
+   performInstall();
+else
+   cancelInstall(err);
+</pre>
+<p><span class="comment">Interwiki Language Links</span></p>
+<p>{{ languages( { "en": "en/XPInstall_API_Reference/Install_Object/Methods/initInstall" } ) }}</p>

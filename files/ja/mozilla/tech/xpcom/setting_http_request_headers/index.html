@@ -1,0 +1,273 @@
+---
+title: Setting HTTP request headers
+slug: Mozilla/Tech/XPCOM/Setting_HTTP_request_headers
+tags:
+  - Add-ons
+  - Extensions
+  - HTTP
+  - XUL
+  - XULRunner
+  - 要更新
+translation_of: Mozilla/Tech/XPCOM/Setting_HTTP_request_headers
+---
+<p>HTTP は Web の中核を成す技術の一つです。実際のコンテンツに加え、HTTP ヘッダによって<a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html">いくつかの重要な情報</a>が HTTP リクエストとレスポンスの両方で渡されます。</p>
+
+<p>アプリケーションが作成するどんなリクエストに対しても、独自の HTTP ヘッダを加える事ができます。そのリクエストがあなたのコードで明示的に HTTP チャンネルを開くことによって開始されたリクエストであっても、また <a href="/ja/docs/XMLHttpRequest">XMLHttpRequest</a> の活動や、コンテンツ内の <a href="/ja/docs/Web/HTML/Element/img" title="HTML の &lt;img> 要素は、文書に画像を埋め込みます。これは置換要素です。"><code>&lt;img&gt;</code></a> タグ、さらに例え <a href="/ja/docs/Web/CSS">CSS</a> からのものであったとしても、それは可能です。</p>
+
+
+
+
+
+
+
+
+
+
+
+<h3 id="HTTP_Channels" name="HTTP_Channels">HTTP チャンネル</h3>
+<p>HTTP リクエストとレスポンスを扱う時には、大抵は <code><a href="/ja/docs/NsIHttpChannel">nsIHttpChannel</a></code> を扱います。<code>nsIHttpChannel</code> インタフェースにはたくさんのプロパティやメソッドがありますが、ここで重要なメソッドは <code>setRequestHeader</code> です。このメソッドを使って <em>HTTP リクエストヘッダを設定</em>する事ができます。</p>
+<p>下は HTTP ヘッダを設定するコードの例です。</p>
+<pre class="brush:js">// リクエストに "X-Hello: World" ヘッダを加える
+httpChannel.setRequestHeader("X-Hello", "World", false);
+</pre>
+
+
+<p>このコードの <code>httpChannel</code> という変数は、<code>nsIHttpChannel</code> を実装したオブジェクトを示しています。(変数名はどんなものでも結構です。)</p>
+<p><code>setRequestHeader</code> メソッドは 3 つのパラメータを取ります。1 つめは HTTP リクエストヘッダの<em>名前</em>で、2 つめは HTTP リクエストヘッダの<em>値</em>です。3 つめのパラメータに関しては今のところ無視して、常に <code>false</code> にしておきます。</p>
+<p>このサンプルコードでは <code>X-Hello</code> という<em>名前</em>の HTTP リクエストヘッダが追加され、この HTTP リクエストヘッダの<em>値</em>は <code>World</code> となっています。</p>
+<div class="note">
+  <p><strong>注</strong>: 独自の HTTP ヘッダを作成する場合には、名前の前に<code> X-</code> を付けなければなりません。(上のサンプルコードでもちゃんと名前の前に <code>X-</code> を追加しているため、作成した HTTP ヘッダは <code>Hello</code> ではなく <code>X-Hello</code> となっています。)</p>
+</div>
+
+
+
+
+
+
+<h3 id="Notifications" name="Notifications">通知</h3>
+<p>ここでおそらく、HTTP リクエストが開始された時にどうやって <code>nsIHttpChannel</code> を取得するのかという疑問が出てくるでしょう。</p>
+<p>あなたのコードによってリクエストが開始された場合には、おそらく既に取得できているでしょう。その他のリクエストを捕捉するには、<span style="border-bottom: 1px dashed green;" title="notifications">通知</span> を使います。これは他の言語やフレームワークでは<em><span style="border-bottom: 1px dashed green;" title="events">イベント</span></em> や<em><span style="border-bottom: 1px dashed green;" title="signals">シグナル</span></em> と呼ばれるものと同じようなものです。</p>
+<p>具体的に言えば、HTTP リクエストが作られる直前に <code>nsIHttpChannel</code> を取得するには <code>"http-on-modify-request"</code> トピックを<em>監視 (<span style="color: green;">observe</span>)</em> する必要があります。(<code>"http-on-modify-request"</code> は文字列です。)</p>
+<div class="note">
+  <p><strong>注</strong>: 通知を受けられるトピックは <code>"http-on-modify-request"</code> の他にもたくさんあります。例えば <code>"http-on-examine-response"</code> や <code>"xpcom-shutdown"</code> などです。また、独自のトピックを作り出したり、自分で通知を送る事も可能です。</p>
+  <p>通知のフレームワークや一般的な通知トピックのリストについてのより詳しい情報を得るには <a href="/ja/docs/Observer_Notifications">Observer Notifications</a> を参照して下さい。</p>
+</div>
+
+
+
+
+
+
+<h3 id="Observers" name="Observers">オブザーバ</h3>
+<p>あるトピック (<code>"http-on-modify-request"</code> など) についての通知を得るには、<strong>オブザーバ (<span style="color: green;">observer</span>)</strong> を作成しなければなりません。オブザーバは <a href="/ja/docs/nsIObserver">nsIObserver</a> インタフェースを実装したコンポーネントです。あるトピックに対してオブザーバが<em>登録</em>されると、オブザーバは <code>observe</code> メソッドが呼ばれる事によってそのトピックについての通知を受けます。</p>
+<p>下のコードは http-on-modify-request の通知によって渡されたチャンネルに "X-Hello" という独自のヘッダを追加するオブザーバの例です。</p>
+<pre class="brush:js">var httpRequestObserver =
+{
+  observe: function(subject, topic, data)
+  {
+    if (topic == "http-on-modify-request") {
+      var httpChannel = subject.QueryInterface(Components.interfaces.nsIHttpChannel);
+      httpChannel.setRequestHeader("X-Hello", "World", false);
+    }
+  }
+};
+</pre>
+<p><span class="comment">div class="note"&gt; Doesn't seem very suitable for this article; readers should are typically assumed to be familiar with JS. Nickolay '''NOTE''': Often people expect <a href="/ja/docs/JavaScript">JavaScript</a> to be just like <a href="/ja/docs/Java">Java</a>. And while superficially, they look very similar, there are some important differences between the two. For example, while Java is an &lt;em&gt;object-oriented programming language&lt;/em&gt;, JavaScript is not. JavaScript is &lt;em&gt;prototype-based programming language&lt;/em&gt; and as such while it has &lt;em&gt;objects&lt;/em&gt; it does not have &lt;em&gt;classes&lt;/em&gt;. (Which is why, if you are not well versed with JavaScript, the object creation in the sample code above may look strange.) &lt;/div</span></p>
+<p><code>observe</code> メソッドが取るパラメータの数が重要です。このメソッドは (上のサンプルコードにあるように) 3 つのパラメータを取ります。<code>"http-on-modify-request"</code> トピックに対しては、1 つめのパラメータ (上のコードでは <code>subject</code>) は <code>nsIHttpChannel</code> になります。ただしこれは <code><a href="/ja/docs/NsISupports">nsISupports</a></code> として渡されます。なので <code>nsISupports</code> から <code>nsIHttpChannel</code> に<em>変換</em>しなければならず、<code>QueryInterface</code> を呼び出すことによってこれを行っています。</p>
+<p><code>if</code> ブロックの 2 行目のコードは既にご存知でしょう。この記事の最初の方で HTTP リクエストヘッダを追加するのに使ったコードと同じものです。</p>
+<p>このオブジェクトの名前 (<code>httpRequestObserver</code>) は重要ではありません。好きな名前を付けて結構です。</p>
+
+
+
+
+
+<h3 id="Registering" name="Registering">登録する</h3>
+<p>オブザーバを作成したら、それを登録する必要があります。今回の場合は、オブザーバを <code>"http-on-modify-request"</code> トピックに対して登録しようとしています。これは以下のコードによって可能です。</p>
+<pre class="brush:js">var observerService = Components.classes["@mozilla.org/observer-service;1"]
+                                .getService(Components.interfaces.<a href="/ja/docs/nsIObserverService">nsIObserverService</a>);
+observerService.addObserver(httpRequestObserver, "http-on-modify-request", false);
+</pre>
+<p>1 つめの文で、通知を受けたいトピックにオブザーバを登録するためのオブジェクトを取得しています。</p>
+<p>2 つめの文では実際に登録を行っています。 <code>"http-on-modify-request"</code> トピック (それぞれの HTTP リクエストの直前に起こる) が発生したときに、<code>httpRequestObserver</code> が (<code>observe</code> メソッドが呼び出されることによって) 通知を受けられるようにしています。</p>
+
+
+
+
+
+
+<h3 id="Unregistering" name="Unregistering">登録を解除する</h3>
+<p>アプリケーションの終了時にはオブザーバの登録を解除するべきです。これを怠るとメモリリークが引き起こされる可能性があります。オブザーバの登録を解除するには、次のように <code>nsIObserverService.removeObserver</code> を使ってください。</p>
+
+<pre class="brush:js">observerService.removeObserver(httpRequestObserver, "http-on-modify-request");
+</pre>
+
+
+
+
+
+
+<h3 id="XPCOM_components" name="XPCOM_components">XPCOM コンポーネント</h3>
+<p><code>http-on-modify-request</code> オブザーバは、アプリケーションごとに 1 つしか登録する必要はありません (ウィンドウごとに 1 つではありません)。つまり、オブザーバの実装は<a href="/ja/docs/XUL_Overlays">オーバーレイ</a>ではなく <a href="/ja/docs/How_to_Build_an_XPCOM_Component_in_Javascript">XPCOM コンポーネント</a>に置くべきです。</p>
+
+
+
+
+
+<h3 id=".E3.81.BE.E3.81.A8.E3.82.81" name=".E3.81.BE.E3.81.A8.E3.82.81">まとめ</h3>
+
+<p>基本的には大体こんな感じです。しかし、あなたに役立つように、<code>httpRequestObserver</code> オブジェクトの少し違ったバージョンも示しておきます。</p>
+
+<p>前に示したバージョンは学習のためには有効ですが、実際のアプリケーションでは次のようなコードにしたほうがいいでしょう。</p>
+
+
+<pre class="brush:js">var httpRequestObserver =
+{
+  observe: function(subject, topic, data)
+  {
+    if (topic == "http-on-modify-request") {
+      var httpChannel = subject.QueryInterface(Components.interfaces.nsIHttpChannel);
+      httpChannel.setRequestHeader("X-Hello", "World", false);
+    }
+  },
+
+  get observerService() {
+    return Components.classes["@mozilla.org/observer-service;1"]
+                     .getService(Components.interfaces.nsIObserverService);
+  },
+
+  register: function()
+  {
+    this.observerService.addObserver(this, "http-on-modify-request", false);
+  },
+
+  unregister: function()
+  {
+    this.observerService.removeObserver(this, "http-on-modify-request");
+  }
+};
+</pre>
+
+<p>このオブジェクトには <code>register()</code> と <code>unregister()</code> という便利なメソッドがあり、下のように呼び出すだけでオブザーバを有効にする事が出来ます。</p>
+
+<pre class="brush:js">httpRequestObserver.register();
+</pre>
+
+<p>また、終了時にはオブザーバの登録を解除するのも忘れないでください。</p>
+
+<pre class="brush:js">httpRequestObserver.unregister();
+</pre>
+
+<p>以上です。</p>
+
+<p><span class="comment">We need downloadable XPCOM component for this</span></p>
+
+
+
+
+
+
+<h3 id="Example_Code" name="Example_Code">サンプルコード</h3>
+<pre class="brush:js">var headerName  = "X-hello";
+var headerValue = "world";
+
+function LOG(text)
+{
+    //    var consoleService = Components.classes["@mozilla.org/consoleservice;1"].getService(Components.interfaces.nsIConsoleService);
+    //    consoleService.logStringMessage(text);
+}
+
+function myHTTPListener() { }
+
+myHTTPListener.prototype = {
+
+  observe: function(subject, topic, data)
+  {
+      if (topic == "http-on-modify-request") {
+
+          LOG("----------------------------&gt; (" + subject + ") mod request");
+
+          var httpChannel = subject.QueryInterface(Components.interfaces.nsIHttpChannel);
+          httpChannel.setRequestHeader(headerName, headerValue, false);
+          return;
+      }
+
+
+      if (topic == "app-startup") {
+
+          LOG("----------------------------&gt; app-startup");
+
+          var os = Components.classes["@mozilla.org/observer-service;1"]
+                             .getService(Components.interfaces.nsIObserverService);
+
+          os.addObserver(this, "http-on-modify-request", false);
+          return;
+      }
+  },
+
+  QueryInterface: function (iid) {
+        if (iid.equals(Components.interfaces.nsIObserver) ||
+            iid.equals(Components.interfaces.nsISupports))
+            return this;
+
+        Components.returnCode = Components.results.NS_ERROR_NO_INTERFACE;
+        return null;
+    },
+};
+
+var myModule = {
+    registerSelf: function (compMgr, fileSpec, location, type) {
+
+        var compMgr = compMgr.QueryInterface(Components.interfaces.nsIComponentRegistrar);
+        compMgr.registerFactoryLocation(this.myCID,
+                                        this.myName,
+                                        this.myProgID,
+                                        fileSpec,
+                                        location,
+                                        type);
+
+
+          LOG("----------------------------&gt; registerSelf");
+
+        var catMgr = Components.classes["@mozilla.org/categorymanager;1"].getService(Components.interfaces.nsICategoryManager);
+        catMgr.addCategoryEntry("app-startup", this.myName, this.myProgID, true, true);
+    },
+
+
+    getClassObject: function (compMgr, cid, iid) {
+
+          LOG("----------------------------&gt; getClassObject");
+
+        return this.myFactory;
+    },
+
+    myCID: Components.ID("{9cf5f3df-2505-42dd-9094-c1631bd1be1c}"),
+
+    myProgID: "@dougt/myHTTPListener;1",
+
+    myName:   "Simple HTTP Listener",
+
+    myFactory: {
+        QueryInterface: function (aIID) {
+            if (!aIID.equals(Components.interfaces.nsISupports) &amp;&amp;
+                !aIID.equals(Components.interfaces.nsIFactory))
+                throw Components.results.NS_ERROR_NO_INTERFACE;
+            return this;
+        },
+
+        createInstance: function (outer, iid) {
+
+          LOG("----------------------------&gt; createInstance");
+
+          return new myHTTPListener();
+        }
+    },
+
+    canUnload: function(compMgr) {
+        return true;
+    }
+};
+
+function NSGetModule(compMgr, fileSpec) {
+    return myModule;
+}
+</pre>

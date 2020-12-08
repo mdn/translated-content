@@ -1,0 +1,284 @@
+---
+title: テンプレート
+slug: Archive/Mozilla/XUL/Tutorial/Templates
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Templates
+---
+<p>
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Introduction_to_RDF" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Trees_and_Templates">次のページ  »</a></p>
+</div>
+<p>このセクションでは、データに基づいて要素を生成する方法について見ていきます。
+</p><p><span id="Populating_Elements"></span>
+</p>
+<h3 id=".E3.83.87.E3.83.BC.E3.82.BF.E3.81.AB.E5.9F.BA.E3.81.A5.E3.81.8F.E8.A6.81.E7.B4.A0.E3.81.AE.E7.94.9F.E6.88.90" name=".E3.83.87.E3.83.BC.E3.82.BF.E3.81.AB.E5.9F.BA.E3.81.A5.E3.81.8F.E8.A6.81.E7.B4.A0.E3.81.AE.E7.94.9F.E6.88.90"> データに基づく要素の生成 </h3>
+<p>XUL には、RDF によって供給されるデータに基づいて要素を生成する機能が存在します。
+このための供給源として、RDF ファイルと内部データソース (<span style="color: green;">datasource</span>)の両方を利用することが可能です。
+Mozilla では、ブックマークや履歴、あるいはメールメッセージなど、多くの情報がデータソースとして提供されます。
+これらについては、<a href="ja/XUL_Tutorial/RDF_Datasources">後のセクション</a>で詳細に扱う予定です。
+</p><p>通常は、ツリー項目 (<span style="color: green;">treeitem</span>)やメニュー項目 (<span style="color: green;">menuitem</span>)といった要素が、データに基づいて生成されることになります。
+また、必要な状況は限られているとしても、必要ならば他の要素を生成することも可能です。
+といってもツリーやメニュー項目を生成するためには多くのコードを記述する必要があるので、
+とりあえず簡単に記述可能なそれ以外の要素を例にして説明を始めたいと思います。
+</p><p>RDF データに基づいた要素の生成を行うためには、
+簡単なテンプレートを生成される各要素の雛形になるように作成する必要があります。
+言い換えれば、最初の要素だけを作成しておいて、残りの要素はそれを元に自動構築させるのと本質的には変わらない作業になります。
+</p><p>テンプレートは <code><code><a href="/ja/docs/Mozilla/Tech/XUL/template" title="template">template</a></code></code> 要素を使用して、
+その中に自動構築される各要素の雛形となる要素を置いていくことで作成できます。
+なお、<code>template</code> 要素は、その場所に展開されることになるため、
+構築された要素を置くのに適したコンテナ要素の中に置く必要があります。
+例えばツリーの場合は、<code>template</code> 要素を <code><code><a href="/ja/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code></code> 要素内に置く必要があります。
+</p><p><span id="Simple_Template_Example"></span>
+</p>
+<h4 id=".E7.B0.A1.E5.8D.98.E3.81.AA.E3.83.86.E3.83.B3.E3.83.97.E3.83.AC.E3.83.BC.E3.83.88.E3.81.AE.E4.BE.8B" name=".E7.B0.A1.E5.8D.98.E3.81.AA.E3.83.86.E3.83.B3.E3.83.97.E3.83.AC.E3.83.BC.E3.83.88.E3.81.AE.E4.BE.8B"> 簡単なテンプレートの例 </h4>
+<p>例を見ながら説明する方が良さそうなので、
+簡単な例として、トップレベルにあるブックマークを基にしてボタンを生成してみることにします。
+データの取得には、Mozilla が提供するブックマークデータソースを利用します。
+この例では、ボタンを生成するためにトップレベルのブックマーク (あるいはブックマークフォルダ) のみを取得します。
+なお、下層のブックマークを表示するためには、ボタンではなくツリーやメニューのような階層表示に対応した要素を使う必要があります。
+</p>
+<div class="note">
+<p>この例のように、内部の RDF データソースを参照するコードは、chrome URL から読み込まれた場合のみ動作します。セキュリティ上の理由から、 Mozilla はそれ以外の場所 (URL) から読み込まれたコードに対して、こういったデータソースへのアクセスを許可しません。
+</p>
+</div>
+<p>この例を実際に見るためには、chrome パッケージを作成してファイルをそこから読み込ませる必要があります。
+(簡単な方法で可能です。詳細は <a href="ja/XUL_Tutorial/Manifest_Files">マニフェストファイル</a>を参照してください)
+パッケージを認識させることができたら、ブラウザの URL フィールドに作成したファイルの chrome URL を入力することで呼び出すことが可能です。
+</p><p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_templates_1.xul.txt">ソース</a>
+</p>
+<pre>&lt;vbox datasources="rdf:bookmarks" ref="NC:BookmarksRoot" flex="1"&gt;
+  &lt;template&gt;
+    &lt;button uri="rdf:*" label="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+  &lt;/template&gt;
+&lt;/vbox&gt;
+</pre>
+<div class="float-right"><img alt="画像:templates1.jpg"></div>
+<p>この例を実行すると垂直ボックスが作成され、その中にトップレベルのブックマークに基づいて生成されたボタン群が 1 列に並んで配置されます。
+このコードでは、<code>template</code> 要素には <code><code><a href="/ja/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code> 要素 1 つだけが含まれていますが、
+このボタンを元にして、すべての必要なボタンが生成されることになります。
+画像から、一連のボタンが生成され、それぞれが各ブックマークに対応していることが確認できると思います。
+</p><p>この例のウインドウを開いたままにして、ブラウザでブックマークを追加すると、
+例で生成したボタンに即座に反映されることが確認できるはずです。
+(ウインドウにフォーカスを与えないとだめな場合もあります)。
+</p><p><span id="Container_and_Datasources"></span>
+</p>
+<h4 id=".E3.82.B3.E3.83.B3.E3.83.86.E3.83.8A.E8.A6.81.E7.B4.A0.E3.81.A8.E3.83.87.E3.83.BC.E3.82.BF.E3.82.BD.E3.83.BC.E3.82.B9" name=".E3.82.B3.E3.83.B3.E3.83.86.E3.83.8A.E8.A6.81.E7.B4.A0.E3.81.A8.E3.83.87.E3.83.BC.E3.82.BF.E3.82.BD.E3.83.BC.E3.82.B9"> コンテナ要素とデータソース </h4>
+<p>このテンプレート自体は、垂直ボックスの中に置かれています。
+このボックスには、テンプレートのコンテナとして使用するために設定された 2 つの特別な属性があり、これによってテンプレートが利用するデータの取得元を指定しています。
+最初の属性の <code>datasources </code> は、テンプレートから要素を生成するときに、どの RDF データソースをデータの供給源として利用するかを宣言するために使用します。
+この例では、<code>rdf:bookmarks</code> を指定しており、
+言うまでもなく、これはブックマークデータソースを利用することを意味しています。
+また、このデータソースは Mozilla が提供していますが、
+独自のデータソースを使用する場合は、以下の例で示すように <code>datasources</code> 属性に、その RDF ファイルの URL を指定します。
+</p>
+<pre>&lt;box datasources="chrome://zoo/content/animals.rdf"
+     ref="http://www.some-fictitious-zoo.com/all-animals"&gt;
+</pre>
+<p>なお、この属性値には、空白文字で区切ることによって、一度に複数のデータソースを指定することも可能です。
+複数のソースからデータを表示させる必要がある場合は、この方法で指定します。
+</p><p>次の <code>ref</code> 属性では、データソース内で、どのデータを取得するかを指定します。
+上記のブックマークの例の場合は、値として <code>NC:BookmarksRoot</code> が、ブックマーク階層のルートを指定するために使用されています。
+なお、ここに指定可能な値は、利用するデータソースに依存します。
+例えば、独自の RDF ファイルをデータソースとして使用する場合は、
+通常 RDF の <code>Bag</code>、<code>Seq</code>、<code>Alt</code> 要素の <code>about</code> 属性と対応する値が指定可能になります。
+</p><p><span id="Inside_the_Template"></span>
+</p>
+<h4 id=".E3.83.86.E3.83.B3.E3.83.97.E3.83.AC.E3.83.BC.E3.83.88.E5.86.85.E9.83.A8.E3.81.AE.E8.A8.98.E8.BF.B0" name=".E3.83.86.E3.83.B3.E3.83.97.E3.83.AC.E3.83.BC.E3.83.88.E5.86.85.E9.83.A8.E3.81.AE.E8.A8.98.E8.BF.B0"> テンプレート内部の記述 </h4>
+<p>テンプレートから要素を生成するためには、これら 2 つの属性を上記のボックスに設定する必要ありますが、
+加えて、テンプレートの中の要素についても通常とは異なった宣言が必要になります。
+上記の例からも、<code>button</code> 要素に <code>uri</code> 属性が設定されていて、 <code>label</code> 属性の値も通常とは異なった値が設定されていることが確認できると思います。
+</p><p>上記の例の、<code>label</code> 属性で行っているように、
+テンプレートの中にある属性値では「rdf:」で始めることにより、データソースから値を取得すべきであることを指示できます。
+このとき、属性値の残りの部分で、参照するデータソースの name プロパティを指定します。
+これは、データソースが使用する名前空間の URL に、プロパティ名を付加したもので構成されます。
+(もし、この意味が分からない場合は、<a href="ja/XUL_Tutorial/Introduction_to_RDF">前のセクション</a>の最後の方で、RDF で供給されるリソースの参照方法を説明しているので、その部分を読み直してみるとよいでしょう)。
+なお、この例ではブックマーク名しか利用していませんが、利用可能なフィールドは、この他にも多数あります。
+</p><p>このボタンには、ラベルとしてブックマーク名を使用するために、<code>label</code> 属性に特別な URI を設定しています。
+こういった URI は、 <code>button</code> 要素の任意の属性や、それ以外の要素の属性に設定することも可能で、
+URI が設定された属性の値は、データソース (この例ではブックマーク) から供給されるデータに置き換えられます。
+その結果、最終的にボタンのラベルとしてブックマーク名が設定されることになります。
+</p><p>以下の例で、ボタンのラベル以外の属性に対して、データソースを利用して値を設定する方法を示します。
+もちろん、この架空のデータソースからは適切なリソースが供給されることが前提ですが、
+もし属性に対応するリソースが見つからない場合は、その属性の値には空の文字列が設定されます。
+</p>
+<pre>&lt;button class="rdf:http://www.example.com/rdf#class"
+        uri="rdf:*"
+        label="rdf:http://www.example.com/rdf#name"
+        crop="rdf:http://www.example.com/rdf#crop"/&gt;
+</pre>
+<p>また、これを応用して、別々のデータソースから供給される属性値を持った一連の要素を動的に生成させることも可能です。
+</p><p><code>uri</code> 属性は、コンテント生成時に起点となる要素を指定するために使用します。
+これ以前のコンテントは 1 回だけ生成されるのに対し、この要素と内部のコンテントはリソースごとに生成されることになります。
+この挙動は、<a href="ja/XUL_Tutorial/Trees_and_Templates">ツリー用のテンプレートの作成</a>について見るときに詳細に説明する予定です。
+</p><p><span id="More_Examples"></span>
+</p>
+<h4 id=".E3.81.84.E3.82.8D.E3.81.84.E3.82.8D.E3.81.AA.E4.BE.8B" name=".E3.81.84.E3.82.8D.E3.81.84.E3.82.8D.E3.81.AA.E4.BE.8B"> いろいろな例 </h4>
+<p>こういった設定をテンプレートのコンテナ (この例ではボックス) と、テンプレート中の要素に付加することで、
+いろいろと興味深いコンテントのリストを外部のデータから生成させることができます。
+もちろん、テンプレートの中には複数の要素を置いてもよく、それらの任意の要素に RDF を参照するための特別な URI を設定することが可能です。
+以下に、記述例を示します。
+</p><p><span id="%E4%BE%8B_2"><a id="%E4%BE%8B_2"></a><strong>例 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_templates_2.xul.txt">ソース</a>
+</p>
+<pre>&lt;vbox datasources="rdf:bookmarks" ref="NC:BookmarksRoot" flex="1"&gt;
+  &lt;template&gt;
+    &lt;vbox uri="rdf:*"&gt;
+      &lt;button label="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+      &lt;label value="rdf:http://home.netscape.com/NC-rdf#URL"/&gt;
+    &lt;/vbox&gt;
+  &lt;/template&gt;
+&lt;/vbox&gt;
+</pre>
+<p>この例は、各ブックマークに対応するボタンとラベルを持つ垂直ボックスを生成します。
+ボタンはブックマーク名、ラベルには URL を持つことになります。
+</p><p>機能的には、テンプレートから生成された新たな要素と、XUL 内に直接記述された要素とでは、何も違いはありません。
+テンプレートから生成されるすべての要素には、リソースを特定するために <code>id</code> 属性が設定されます。
+これを利用することで、要素に対応するリソースを特定することが可能です。
+</p><p>また、以下の例のように、同じ属性に複数のリソース値を空白文字で区切って指定することもできます。
+リソース構文の詳細については、XULPlanet の <a class="external" href="http://www.xulplanet.com/tutorials/xultu/templateex.html">Template Syntax Examples</a> を参照してください。
+</p><p><span id="%E4%BE%8B_3"><a id="%E4%BE%8B_3"></a><strong>例 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_templates_3.xul.txt">ソース</a>
+</p>
+<pre>&lt;vbox datasources="rdf:bookmarks" ref="NC:BookmarksRoot"
+     flex="1"&gt;
+  &lt;template&gt;
+    &lt;label uri="rdf:*" value="rdf:http://home.netscape.com/NC-rdf#Name rdf:http://home.netscape.com/NC-rdf#URL"/&gt;
+  &lt;/template&gt;
+&lt;/vbox&gt;
+</pre>
+<p><span id="How_Templates_are_Built"></span>
+</p>
+<h3 id=".E3.83.86.E3.83.B3.E3.83.97.E3.83.AC.E3.83.BC.E3.83.88.E3.81.AE.E3.83.93.E3.83.AB.E3.83.89.E5.8B.95.E4.BD.9C" name=".E3.83.86.E3.83.B3.E3.83.97.E3.83.AC.E3.83.BC.E3.83.88.E3.81.AE.E3.83.93.E3.83.AB.E3.83.89.E5.8B.95.E4.BD.9C"> テンプレートのビルド動作 </h3>
+<p>要素に <code>datasources</code> 属性が設定されることが、その要素がテンプレートからビルドされることを示すことになります。
+コンテントをビルドする必要があるかどうかは、<code>template</code> タグではなく、
+<code>datasources</code> 属性で判定されることに注意してください。
+この属性が存在するとき、ビルダー (<span style="color: green;">builder</span>)と呼ばれるオブジェクトが要素に付加されて、
+テンプレートからコンテントをビルドする動作を遂行します。
+なお、JavaScript からも、<code>builder</code> プロパティで、ビルダーオブジェクトにアクセスすることが可能です。
+もっとも、通常、ビルダーへのアクセスは、コンテント生成が自動的に行われないときに、コンテントの再生成を行わせる場合にのみ必要なだけです。
+</p><p>ビルダーには 2 種類あります。
+1 つは、コンテントビルダーで、これはほとんど場面で利用されます。
+もう 1 つは、ツリービルダーで、これはツリーに対してのみ利用されます。
+</p><p><span id="Content_Builder"></span>
+</p>
+<h4 id=".E3.82.B3.E3.83.B3.E3.83.86.E3.83.B3.E3.83.88.E3.83.93.E3.83.AB.E3.83.80.E3.83.BC" name=".E3.82.B3.E3.83.B3.E3.83.86.E3.83.B3.E3.83.88.E3.83.93.E3.83.AB.E3.83.80.E3.83.BC"> コンテントビルダー </h4>
+<p>コンテントビルダーは、<code>template</code> 要素の中のコンテントを取り出して、
+データソースから取得される<span style="border-bottom: 1px dashed green;" title="row">行</span>ごとに複製します。
+具体的には、上記の例では、利用者が 10 個のブックマークを持っている場合、
+10 個の <code><code><a href="/ja/docs/Mozilla/Tech/XUL/label" title="label">label</a></code></code> 要素が生成されて、
+<code><code><a href="/ja/docs/Mozilla/Tech/XUL/vbox" title="vbox">vbox</a></code></code> 要素の子要素として追加されることになります。
+DOM 関数を利用して文書ツリーを走査することで、生成された要素を見つけてプロパティを調べることが可能です。
+なお、テンプレートから生成された要素は画面に表示されますが、<code>template</code> 要素自体は表示はされません。
+ただし、<code>template</code> 要素も文書ツリー中には存在しています。
+加えて、生成された各ラベルの <code>id</code> 属性には、RDF リソースの対応する行を示す値が設定されます。
+</p><p>コンテントビルダーは、常に <code>uri="rdf:*"</code> が指定されたところから生成を開始します。
+<code>uri</code> 属性が、要素ツリーで下位の要素に設定されている場合、それより上位 (外側) の要素は、1 回だけ作成されることになります。
+以下の例では、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/hbox" title="hbox">hbox</a></code></code> が 1 つ作成され、その中は項目ごとに生成されるラベルで埋められることになります。
+</p>
+<pre>&lt;template&gt;
+  &lt;hbox&gt;
+    &lt;label uri="rdf:*" value="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+  &lt;/hbox&gt;
+&lt;/template&gt;
+</pre>
+<p>また、<code>datasources</code> 属性を持つ要素の中で、テンプレートの外側にそれ以外のコンテントが存在する場合も表示されます。
+このように、テンプレートを使用する場合、静的なコンテントと、動的なコンテントを混合することが可能です。
+</p><p><span id="Tree_Builder"></span>
+</p>
+<h4 id=".E3.83.84.E3.83.AA.E3.83.BC.E3.83.93.E3.83.AB.E3.83.80.E3.83.BC" name=".E3.83.84.E3.83.AA.E3.83.BC.E3.83.93.E3.83.AB.E3.83.80.E3.83.BC"> ツリービルダー </h4>
+<p>一方のツリービルダーは、行ごとに DOM 要素を生成したりはしません。
+その代わり、必要になるたびに RDF データソースからデータを直接取得します。
+ツリーは、しばしば何千もの行を表示することが想定されるので、この方法の方が効率的に動作します。
+つまり、個々のセルに対して要素を生成するのは、コストが高すぎて現実的ではないわけです。
+ただし、このためツリーには、テキストや画像といった限られた種類の情報しか表示できず、
+個々の要素が生成されないために、通常の方法では CSS プロパティを利用して、ツリーのセルにスタイルを設定することもできないという制約があります。
+</p><p>ツリービルダーは、ツリーのみが利用し、他の要素は、コンテントビルダーのみを利用します。
+といっても、メニューなどの他の要素は、ツリーのように多数の項目を表示することは想定されていないため、問題はありません。
+また、コンテントビルダーをツリーに利用することも可能で、この場合は <code><code><a href="/ja/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></code> 要素と関連する要素が行ごとに作成されます。
+</p><p><span id="Rules"></span>
+</p>
+<h3 id=".E3.83.AB.E3.83.BC.E3.83.AB" name=".E3.83.AB.E3.83.BC.E3.83.AB"> ルール </h3>
+<p>先ほどテンプレートの記述例として示した画像で、
+3 番目のボタンがハイフンのみの表示であることが気にならなかったでしょうか。
+これは、ブックマークリストに、セパレータが含まれているため発生しています。
+これまでの方法では、 RDF ブックマークデータソースからは、
+セパレータは通常のブックマークと同じものとして供給されます。
+しかしながら、本当はセパレータのリソースに対しては、ボタンのかわりに小さな隙間を置きたいところです。
+このためには、通常のブックマークとセパレータとで、異なる種類のコンテントを生成させる必要があります。
+</p><p>これは、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/rule" title="rule">rule</a></code></code> 要素を利用することで可能になります。
+このために、ルールをテンプレートから生成させたい要素のバリエーションに対応して定義する必要があります。
+この場合、ブックマークに対するルールと、セパレータに対するルールが必要になります。
+<code>rule</code> 要素に設定する属性によって、どのルールが、どの RDF リソースに適用されるかが判断されます。
+</p><p>データに適用するルールを走査するときは、それぞれの <code>rule</code> 要素について順番に、そのデータとマッチするかを調べていきます。
+この挙動は、ルールを定義する順番が重要であることを意味しています。
+つまり、先に定義されているルールの方が、後で定義されているルールよりも優先されるということです。
+</p><p><span id="Rule_Example"></span>
+</p>
+<h4 id=".E3.83.AB.E3.83.BC.E3.83.AB.E3.81.AE.E4.BE.8B" name=".E3.83.AB.E3.83.BC.E3.83.AB.E3.81.AE.E4.BE.8B"> ルールの例 </h4>
+<p>以下の例は、先ほどの例に 2 つのルールを加えたものです。
+</p><p><span id="%E4%BE%8B_4"><a id="%E4%BE%8B_4"></a><strong>例 4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_templates_4.xul.txt">ソース</a>
+</p>
+<pre>&lt;window
+  id="example-window"
+  title="Bookmarks List"
+  xmlns:html="http://www.w3.org/1999/xhtml"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+ &lt;vbox datasources="rdf:bookmarks" ref="NC:BookmarksRoot" flex="1"&gt;
+   &lt;template&gt;
+
+    &lt;rule rdf:type="http://home.netscape.com/NC-rdf#BookmarkSeparator"&gt;
+     &lt;spacer uri="rdf:*" height="16"/&gt;
+    &lt;/rule&gt;
+
+    &lt;rule&gt;
+      &lt;button uri="rdf:*" label="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+    &lt;/rule&gt;
+
+  &lt;/template&gt;
+ &lt;/vbox&gt;
+
+&lt;/window&gt;
+</pre>
+<div class="float-right"><img alt="画像:templates2.jpg"></div>
+<p>2 つのルールを使用することで、テンプレート中のコンテントは選択的に生成されることになります。
+最初の <code>rule</code> 要素では、ブックマークセパレータだけが選択されます。
+この条件は、<code>rdf:type</code> 属性によって設定されています。
+また、後のルールでは、<code>rule</code> 要素に属性が何も設定されていないため、すべてのデータがマッチします。
+</p><p><code>rule</code> タグに置かれたすべての属性が、マッチ条件として使用されます。
+この例の場合、ブックマークデータソースが供給する <code>rdf:type</code> プロパティを利用することで、セパレータの区別を行います。
+RDF ブックマークデータソースでは、データがセパレータの場合、この属性にセパレータを示す固有の値が設定されることになるため、
+この方法で、セパレータをそれ以外のものから区別することが可能です。
+また、このテクニックは、RDF の <code>Description</code> 要素に設定される任意の属性に対しても応用できます。
+</p><p>上記の例で、最初のルールに設定されている URL は、セパレータを示すための固有 URL で、セパレータを区別するために使用されています。
+このため、セパレータの場合は、最初のルールが適用されることになり、
+16 ピクセルの隙間を空ける <code><code><a href="/ja/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code></code> 要素が生成されます。
+また、セパレータ以外の要素は、すべて最初のルールにはマッチしないので、2 番目のルールのチェックに移ることになります。
+2 番目のルールには、属性が一切指定されていないので、すべてのデータがマッチすることになります。
+したがって、ここでは、セパレータ以外のデータに対して行いたいことが、行われることになります。
+</p><p>また、RDF 名前空間 (<code>rdf:type</code>) から属性を取り出すために、
+名前空間の宣言を <code><code><a href="/ja/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> タグに追加する必要があることも確認してください。
+そうしない場合、属性は XUL 名前空間から探されますが、
+当然、そこには存在しないので、ルールにマッチしないことになります。
+独自の名前空間の属性を利用する場合も、ルールにマッチさせるためには、名前空間の宣言が必要になります。
+</p><p>2 番目のルールを取り除いた場合は、予想されるとおり、
+その結果は、セパレータが 1 つ表示されるだけで、
+ブックマークは、マッチするルールが無いので表示されなくなります。
+</p><p>簡単にまとめると、ルールは <code>rule</code> 要素に設定された全ての属性について、
+対応する RDF リソースの属性とマッチしたとき、そのルールはマッチしたことになります。
+また、RDF ファイルを利用する場合、リソースは <code>Description</code> 要素になります。
+</p><p>ただし、若干の例外はあり、
+ルールでは、属性 <code>id</code>、<code>rdf:property</code>、<code>rdf:instanceOf</code> に基づいてマッチさせることはできません。
+といっても、必要なら自前の属性を自前の名前空間で用意すれば済むことなので、この制限が問題になることは無いと思います。
+</p><p>また、最初の例のように、ルールが存在しないテンプレートについては、
+機能的には属性を持たないルールが 1 つだけ指定されているのと完全に同じであることを補足しておきます。
+</p><p>次のセクションでは、テンプレートをツリーに対して利用する方法を見ていきます。
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Introduction_to_RDF" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Trees_and_Templates">次のページ  »</a></p>
+</div>
+<p><br>
+</p>
+<div class="noinclude">
+</div>

@@ -1,0 +1,89 @@
+---
+title: CSS シェイプのパスを編集する
+slug: Tools/Page_Inspector/How_to/Edit_CSS_shapes
+tags:
+  - CSS
+  - DevTools
+  - Page Inspector
+  - Rules view
+  - Tools
+  - highlighter
+  - shapes
+translation_of: Tools/Page_Inspector/How_to/Edit_CSS_shapes
+---
+<div>{{ToolsSidebar}}</div>
+
+<p class="summary">シェイプパスエディターは、CSS の {{cssxref("clip-path")}}、{{cssxref("shape-outside")}} プロパティと {{cssxref("&lt;basic-shape&gt;")}} 値を使用して作成したシェイプの確認や編集を支援するツールです。このガイドでは、ツールで使用可能なオプションを見ていきます。</p>
+
+<h2 id="Activate_deactivate_the_Shape_Path_Editor" name="Activate_deactivate_the_Shape_Path_Editor">シェイプパスエディターを起動および終了する</h2>
+
+<p>シェイプパスエディターは CSS ルールパネルからアクセスできます。パネルの開き方は <a href="/ja/docs/Tools/Page_Inspector/How_to/Open_the_Inspector">インスペクターを開く</a> のガイドで説明しています。要素を選択すると、<code>shape-outside</code> など有効な値のそばにシェイプのアイコンが表示されます。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/15915/enable-shapes-editor.png" style="border-style: solid; border-width: 1px; height: 370px; width: 1836px;"></p>
+
+<p>アイコンをクリックすると、シェイプをハイライト表示するエディターが現れます。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/15916/circle.png" style="height: 686px; width: 1210px;"></p>
+
+<p>アイコンを再度クリックするとエディターが閉じます。あるいは別の要素を選択すると、別のエディターが現れます。シェイプパスエディターは、ページの再読み込み後に維持されません。再読み込みすると、もう一度要素を選択しなければなりません。</p>
+
+<h2 id="Understanding_the_lines_drawn_by_the_editor" name="Understanding_the_lines_drawn_by_the_editor">エディターが表示する線を理解する</h2>
+
+<p>ページ上のシェイプを選択するとシェイプパスエディターが、作成されたパスの理解を支援する線を表示します。</p>
+
+<ul>
+ <li><strong>実線</strong>は、テキストを折り返すシェイプの輪郭を表します。これはあなたが指定したシェイプです。シェイプがマージンボックスによって切り抜かれる場合は、マージンボックスがこの線の一部を構成します。</li>
+ <li><strong>破線</strong>は、マージンボックスを超えるシェイプの輪郭を表します。これは、マージンボックスによって切り抜かれる領域です。マージンボックスや、CSS シェイプで使用されるほかのボックスについては、<a href="/ja/docs/Web/CSS/CSS_Shapes/From_box_values">ボックス値からのシェイプ</a> のガイドをご覧ください。</li>
+</ul>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/15917/clipped-margin-box.png" style="height: 692px; width: 1290px;"></p>
+
+<h2 id="Editing_Basic_Shapes" name="Editing_Basic_Shapes">基本シェイプを編集する</h2>
+
+<p>この機能は、編集する基本シェイプの種類に応じて異なるツールが提供されます。アイコンをクリックしてシェイプパスエディターを起動すると、この機能を使用できます。また、コンテキストメニュー (<kbd>Ctrl</kbd> または <kbd>Cmd</kbd> + クリック) から付加機能を使用できます。</p>
+
+<h3 id="circle()" name="circle()">circle()</h3>
+
+<p><code>shape-outside</code> の値が <code>circle()</code> である場合は、<a href="/ja/docs/Web/CSS/CSS_Shapes/Basic_Shapes#circle()">円形の基本シェイプ</a> を作成します。<code>circle()</code> 値の隣にあるシェイプアイコンをクリックすると、シェイプをハイライト表示して、円のサイズ変更と中心の移動を行う機能を提供します。マージンボックスを超えるように円を移動したりサイズを変更したりすると、マージンボックスによって輪郭が切り抜かれます。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/15917/clipped-margin-box.png" style="height: 692px; width: 1290px;"></p>
+
+<p>シェイプの編集に応じて、ルールパネルで <code>circle()</code> の値が変化します。これらの値をコピーしてスタイルシートに貼り付けると、編集後のパスで新しいシェイプを作成できます。</p>
+
+<h3 id="ellipse()" name="ellipse()">ellipse()</h3>
+
+<p><code>shape-outside</code> の値が <code>ellipse()</code> である場合は、<a href="/ja/docs/Web/CSS/CSS_Shapes/Basic_Shapes#ellipse()">楕円形の基本シェイプ</a> を作成します。シェイプパスエディターは <code>ellipse()</code> 値でも、<code>circle()</code> とほぼ同様に機能します。楕円形はつぶれた円形ですので、シェイプのアイコンをクリックすると水平および垂直方向にサイズを変更する機能を提供します。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/15920/ellipse.png" style="height: 570px; width: 1216px;"></p>
+
+<h3 id="inset()" name="inset()">inset()</h3>
+
+<p><code>shape-outside</code> の値が <code>inset()</code> である場合は、<a href="/ja/docs/Web/CSS/CSS_Shapes/Basic_Shapes#inset()">inset 型の基本シェイプ</a> を作成します。これは、マージンボックスの中で内容物を切り抜くオフセット値によってシェイプを作成できます。</p>
+
+<p>シェイプアイコンをクリックすると、矩形のそれぞれの辺を対象にしたシェイプパスエディターが起動しきます。辺をドラッグすると、オフセット値の top、right、bottom、left が更新されます。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/15923/inset.png" style="height: 606px; width: 1214px;"></p>
+
+<h3 id="polygon()" name="polygon()">polygon()</h3>
+
+<p><code>shape-outside</code> の値が <code>polygon()</code> である場合は、<a href="/ja/docs/Web/CSS/CSS_Shapes/Basic_Shapes#polygon()">多角形の基本シェイプ</a> を作成します。これは基本シェイプでもっとも複雑な値であり、シェイプを編集する際にツールが多くの機能を提供します:</p>
+
+<ul>
+ <li>シェイプのアイコンをクリックするとシェイプパスエディターが起動して、多角形シェイプの頂点を移動する機能を提供します。</li>
+ <li>辺の任意の場所をダブルクリックすると、新しい頂点を作成します。</li>
+ <li>既存の頂点をダブルクリックすると、頂点を削除します。<em>多角形は少なくとも 3 つの頂点が必要ですので注意してください</em>。</li>
+</ul>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/15918/polygon-edit.png" style="height: 660px; width: 1260px;"></p>
+
+<h3 id="Moving_and_scaling_shapes" name="Moving_and_scaling_shapes">シェイプを移動および拡大縮小する</h3>
+
+<p>ハイライト表示したシェイプで付加機能を使用できます。シェイプのアイコンを <kbd>Ctrl</kbd> または <kbd>Cmd</kbd> + クリックすると、シェイプの拡大・縮小や移動が可能なハイライト表示に替わります。こちらも、マージンボックスの境界を超える部分は切り抜かれます。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/15924/scaled-circle.png"></p>
+
+<p>多角形シェイプでは、軸にそって回転させる機能も提供します。</p>
+
+<h2 id="Browser_support" name="Browser_support">ブラウザーのサポート</h2>
+
+<p>シェイプパスエディターは現在、{{cssxref("clip-path")}} で生成したシェイプで機能します。Firefox 62 では {{cssxref("shape-outside")}} で生成したシェイプでも機能します。</p>

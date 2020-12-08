@@ -1,0 +1,60 @@
+---
+title: Firefox OS のトラブルシューティング
+slug: Archive/B2G_OS/トラブルシューティング
+tags:
+  - Firefox OS
+  - Mobile
+  - toublesooting
+translation_of: Archive/B2G_OS/Troubleshooting
+---
+<div class="summary">
+<p>この記事ではFirefox OSを使用している際に発生する可能性のある一般的な問題を解決するためのヒントを提供します。どうぞご自由にこのページにコンテンツを追加してください！</p>
+</div>
+
+<h2 id="ネットワークの問題">ネットワークの問題</h2>
+
+<p>もし、Wi-Fiネットワークの接続問題があるのであればデバイスからWi-Fiの構成ファイルを削除することが役に立つと思われます。以下のように行うことができます</p>
+
+<pre>adb shell rm /data/misc/wifi/wpa_supplicant.conf
+adb reboot
+</pre>
+
+<div class="note">
+<p><strong>記:</strong> この操作法は、端末の <a href="/docs/Mozilla/Firefox_OS/Installing_on_a_mobile_device#Configuring_the_udev_rule_for_your_device" title="en-US/docs/Mozilla/Firefox_OS/Installing_on_a_mobile_device#Configuring_the_udev_rule_for_your_device">udev設定を構成済み</a> と想定しています。</p>
+</div>
+
+<h2 id="電話の故障">電話の故障</h2>
+
+<p>電話を故障させてしまった場合、例えば間違ったイメージを焼こうとした場合、ブートローダ(端末によってfastboot やheimdal )で再起動してみます。正確なシーケンスは電話によって変わります。USBケーブルを外し、電池を外して再度取り付けたりしてみます。Unagi と Otoro用には、音量アップと電源ボタンを、スプラッシュ画面が見えるまで数秒間、長押しします。電話がブートローダモードに入っているのを <code>fastboot devices</code> (またはサムスンの電話のいくつかでは <code>heimdall devices</code> )で確認します。いったん<code>fastboot devices</code>を使って電話が見えるようになったら、ベースイメージか、端末メーカーの提供するSDのパッケージファイル(電話による)を含むフォルダを探します。いま、焼き込むには2つのオプションがあります:</p>
+
+<ul>
+ <li><code>./flash.sh を使用してイメージを焼く</code>(推奨)</li>
+ <li>ターミナルウィンドウから次のコマンドを実行する:</li>
+</ul>
+
+<pre class="brush: bash language-html"><code class="language-bash">fastboot flash boot boot.img
+fastboot flash userdata userdata.img
+fastboot flash system system.img
+fastboot flash recovery recovery.img
+fastboot erase cache
+fastboot reboot</code></pre>
+
+<h2 id="赤色LEDの点滅_(otorounagi)">赤色LEDの点滅 (otoro/unagi)</h2>
+
+<p>この動作は、起動するのに電池容量が少なすぎることを意味しています。(赤色LEDの点滅が止まってからもう少しまで) 再度充電をするか、USBケーブルを抜き、電池を取り外し、USBケーブルを差し、電池を再度取り付けてください。</p>
+
+<h2 id="iPhoneから切り替えた後にSMS受信に失敗する">iPhoneから切り替えた後にSMS受信に失敗する</h2>
+
+<p>SIM カードを iPhone から Firefox OS (またはその他の色々なプラットフォーム) の端末に切り替えた場合、iPhone ユーザからのテキストメッセージを一切受け取れない問題にぶち当たることがあります。これはiPhoneからiPhoneへのSMSメッセージは<a href="https://www.apple.com/ios/messages/">iMessage</a> を用いて送信されるためであり、これはiPhone同士のメッセージを実際のテキストメッセージとして送る代わりに、Appleのサーバ経由でルーティングしてユーザのお金をセーブするものです。あなたがiPhoneを離れると不幸にも、iMessage は離れた事を知るすべはなく、他のiPhoneユーザからのSMSは依然iMessage経由で送ろうとするため、つまりあなたはそれを受け取れなくなります。<br>
+ <br>
+ これを修正するには、SIMで iMessage を切ります; imore.com にその方法があります —  <a href="http://www.imore.com/text-issues-switching-iphone-android-heres-fix">Here's how to turn off iMessage</a> を読んで下さい。</p>
+
+<h2 id="OSXで_ADB_に端末が出てこない">OSXで ADB に端末が出てこない</h2>
+
+<p>OSXで <code>adb devices</code> を実行すると、いくつかの端末は端末リストに出てこないことがあり、これにはさまざまな理由があります。これはあなたの <code>~/.android/adb_usb.ini</code> ファイルに端末ベンダIDを追加して、ADBに端末を見つけるヒントを与えると直ります。</p>
+
+<div class="note">
+<p><strong>記</strong>: もっと詳細は <a href="http://stackoverflow.com/a/7136003/1027966">この stackoverflow ポスト</a> を見てください、ここには接続端末のベンダIDを見つける方法や、それを <code>adb_usb.ini</code> に追加する方法が載っています。</p>
+</div>
+
+<p>　</p>

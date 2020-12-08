@@ -1,0 +1,102 @@
+---
+title: テーマ
+slug: Themes/背景
+translation_of: Mozilla/Add-ons/Themes/Lightweight_themes
+---
+<h2 id="オリジナルテーマの作り方">オリジナルテーマの作り方</h2>
+
+<div class="primary auto" id="getting-started">
+<p>ファイヤーフォックスの テーマのスキンは、ヘッダー画像で構成されています。</p>
+
+<p>デザインが完成したら <a href="https://addons.mozilla.org/developers/theme/submit">こちらから登録!</a></p>
+
+<h3 id="テーマのヘッダー画像の作成について">テーマのヘッダー画像の作成について</h3>
+
+<p class="screenshot">ヘッダー画像は、ブラウザの上部の背景としてブラウザの右上隅で固定され、ツールバー、アドレスバー、検索バー、タブの背後に表示されます。</p>
+
+<p class="screenshot"><img alt="" src="https://mdn.mozillademos.org/files/9929/header-step.jpg" style="height: 215px; width: 1059px;"></p>
+
+<ul>
+ <li><a href="https://addons.cdn.mozilla.net/static/img/docs/themes/header.jpg">テーマのヘッダーサンプルを見る場合はこちら</a></li>
+</ul>
+
+<h4 id="画像の条件">画像の条件</h4>
+
+<ul>
+ <li>画像サイズ　<strong>3000px 幅　× 200px 高さ</strong></li>
+ <li>フォーマットは、PNG または JPG</li>
+ <li>画像のファイルサイズは、 300 KB 以下</li>
+</ul>
+
+<h4 id="制作のコツ">制作のコツ</h4>
+
+<ul>
+ <li>ソフトな色合いのものや、グラデーションのほうが見やすくなります。ディテールの細かなものは、ブラウザのUIが見にくくなってしまします。</li>
+ <li><span lang="ja">ツールバーやUI要素が追加された場合は、ヘッダー画像の下の方まで表示されるようになります。</span>.</li>
+ <li>ヘッダー画像の右上を、最も目立たせたいデザインにすることが大切です。—ブラウザの幅が広がると、左側の見える範囲も増加していきます。</li>
+</ul>
+
+<h4 id="オンラインイメージエディタの紹介">オンラインイメージエディタの紹介</h4>
+
+<ul>
+ <li><a href="http://www.pixlr.com">Pixlr</a> — Pixlr は、ブラウザで簡単に使えて、高機能画像処理ソフトです。</li>
+ <li><a href="http://www.photoshop.com">Photoshop</a> — Photoshop® Express は、無料のオンラインエディターです。</li>
+</ul>
+
+<h3 id="テーマのフッター画像の作成について">テーマのフッター画像の作成について</h3>
+
+<p>古いバージョンのファイヤーフォックスや、特定のアドオンをインストールしている場合に、ブラウザの下部の背景としてブラウザの右下隅で固定され、アドオン、検索バーの背後に表示されます。フッター画像はオプションです。</p>
+
+<p class="screenshot"><img alt="" src="https://mdn.mozillademos.org/files/9935/footer-step.jpg" style="height: 56px; width: 1249px;"></p>
+
+<ul>
+ <li><a href="https://addons.cdn.mozilla.net/static/img/docs/themes/footer.jpg">テーマのフッターサンプルを見る場合はこちら</a></li>
+</ul>
+
+<h4 id="画像の条件_2">画像の条件</h4>
+
+<ul>
+ <li>画像サイズ　<strong>3000px 幅　× 100px 高さ</strong></li>
+ <li>フォーマットは、PNG または JPG</li>
+ <li>画像のファイルサイズは、 300 KB 以下</li>
+</ul>
+
+<h4 id="制作のコツ_2">制作のコツ</h4>
+
+<ul>
+ <li>ソフトな色合いのものや、グラデーションのほうが見やすくなります。ディテールの細かなものは、ブラウザのUIが見にくくなってしまします。</li>
+ <li><span lang="ja">検索バーが開いた場合や拡張されている場合は、フッター画像の上の方まで表示されるようになります。</span>.</li>
+ <li>フッター画像の左側を、最も目立たせたいデザインにすることが大切です。—ブラウザの幅が広がると、右側の見える範囲も増加していきます。</li>
+</ul>
+
+<h3 id="作成したテーマの登録方法について">作成したテーマの登録方法について</h3>
+
+<p>作成したテーマの登録は、テーマの登録ページで行います。</p>
+
+<ol class="itemized">
+ <li><strong>テーマの名前</strong> — テーマの名前つけます。既に登録されたテーマと重複する名前はつけることができません。</li>
+ <li><strong>カテゴリとタグの選択</strong> — カテゴリを選択して、作成したテーマに合うタグを入力してください。 カテゴリやタグが作成したテーマと無関係な場合は、登録を拒否される場合がありますので、ご注意ください。</li>
+ <li><strong>テーマの説明</strong> — 作成したテーマの短い説明を書いてください。作成したテーマの説明として適当でない場合は、登録を拒否される場合がありますので、ご注意ください。</li>
+ <li><strong>作成したテーマのライセンスを選択</strong> — 著作権についてのライセンスを決定します。 <a href="http://creativecommons.org/licenses/">著作権のライセンスについて詳しい説明はこちらから.</a>
+  <ul>
+   <li><strong>重要:</strong> テーマの作成に使用する画像の権利を持っているかどうか、必ず確認してください。</li>
+  </ul>
+ </li>
+ <li><strong>画像のアップロード</strong> — 画像のファイルサイズは、300 KB 以下。フォーマットは、 JPG または PNG</li>
+ <li><strong>テキストとタブの色を選択</strong> — 作成したテーマに合うブラウザのタブ背景色と、テキストの色を選択することができます。</li>
+ <li><strong>作成したテーマのプレビュー</strong> — 作成したテーマのプレビューができます。 送信ボタンのイメージにマウスを持っていくだけで、プレビューを見ることができます。</li>
+ <li><strong>作成したテーマを登録</strong> — 問題がなければボタンをクリックしてテーマを登録すれば完了です。プロフィールページで、これまでに作成してきたすべてのテーマを見ることができます。
+  <ul>
+   <li><strong>登録されるためのコツ:</strong> テーマギャラリーに承認されるためには、コンテンツのガイドラインと利用規約を守ってください。</li>
+  </ul>
+ </li>
+</ol>
+
+<p class="screenshot"><img alt="" src="https://mdn.mozillademos.org/files/9933/submission-step.jpg" style="height: 1800px; width: 785px;"></p>
+
+<p class="call-to-submit"><a class="button prominent" href="https://addons.mozilla.org/en-US/developers/theme/submit">Submit Your Theme Now</a></p>
+
+<h2 class="call-to-submit" id="その他のチュートリアル">その他のチュートリアル</h2>
+
+<p><a href="http://vanillaorchidstutorials.blogspot.com/2015/11/mozilla-themes-focal-point-sizing.html">Mozilla Themes のサイズについて</a> - A tutorial on theming with a focus on sizing, by VanillaOrchids.</p>
+</div>

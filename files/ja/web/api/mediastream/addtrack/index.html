@@ -1,0 +1,132 @@
+---
+title: MediaStream.addTrack()
+slug: Web/API/MediaStream/addTrack
+translation_of: Web/API/MediaStream/addTrack
+---
+<p>{{APIRef("Media Capture and Streams")}}</p>
+
+<p><strong><code>MediaStream.addTrack()</code></strong>メソッドはストリームへ新しいトラックを追加するメソッドです。パラメータとして渡されるこのトラックの型は{{domxref("MediaStreamTrack")}}です。</p>
+
+<div class="note">
+<p>If the specified track is already in the stream's track set, this method has no effect.</p>
+</div>
+
+<h2 id="文法">文法</h2>
+
+<pre class="syntaxbox"><em>stream</em>.addTrack(<em>track</em>);
+</pre>
+
+<h3 id="パラメータ">パラメータ</h3>
+
+<dl>
+ <dt><code>track</code></dt>
+ <dd>このストリームへ追加する{{domxref("MediaStreamTrack")}}です。</dd>
+</dl>
+
+<h3 id="戻り値">戻り値</h3>
+
+<p>{{jsxref("undefined")}}</p>
+
+<h2 id="例">例</h2>
+
+<p> </p>
+
+<h2 id="Specifications" name="Specifications">仕様</h2>
+
+<table class="standard-table" style="height: 49px; width: 1000px;">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状況</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('Media Capture','#widl-MediaStream-addTrack-void-MediaStreamTrack-track','addTrack()') }}</td>
+   <td>{{ Spec2('Media Capture') }}</td>
+   <td>初版</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">{{ CompatUnknown() }}
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{ CompatGeckoDesktop(34) }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+  <tr>
+   <td><code>addTrack()</code> and {{domxref("removeTrack()")}}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoDesktop(44)}}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Edge</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{ CompatGeckoMobile(34) }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+  <tr>
+   <td><code>addTrack()</code> and {{domxref("removeTrack()")}}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{CompatGeckoDesktop(44)}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="関連項目">関連項目</h2>
+
+<ul>
+ <li>{{domxref("MediaStream")}}インタフェース</li>
+</ul>

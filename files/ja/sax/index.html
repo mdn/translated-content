@@ -1,0 +1,113 @@
+---
+title: SAX
+slug: SAX
+tags:
+  - Add-ons
+  - Extensions
+translation_of: Archive/SAX
+---
+<p>
+</p><p><b>SAX</b> は <i>Simple API for XML</i> の略で XML をパースする API です。もともとは Java のみの API でした。SAX は Java における XML のために最初に広く採用された API で、 そして後にいくつもの他のプログラミング言語環境に実装されました。<a href="ja/Firefox_2">Firefox 2</a> から SAX パーサが XUL アプリケーションと拡張機能で利用可能になります。より詳しい情報は <a class="external" href="http://www.saxproject.org/">SAX のホームページ</a>を参照してください。
+</p>
+<h3 id="クイックスタート"> クイックスタート </h3>
+<p>SAX パーサ機能は XML reader コンポーネントとして利用可能です。それをつくるには以下のコードを使ってください。:
+</p>
+<pre class="eval">var xmlReader = Components.classes["@mozilla.org/saxparser/xmlreader;1"]
+                          .createInstance(Components.interfaces.nsISAXXMLReader);
+</pre>
+<p>SAX パーサを作った後、興味を持ちパース処理を発したいイベントのハンドラを設定する必要があります。全ての機能は <a href="https://dxr.mozilla.org/mozilla-central/source/parser/xml/public/nsISAXXMLReader.idl" rel="custom">nsISAXXMLReader</a> インターフェースを通して利用可能です。
+</p>
+<h4 id="ハンドラを設定する"> ハンドラを設定する </h4>
+<p>ハンドラは SAX ハンドラインターフェースをユーザが定義したオブジェクトです。それらはパーサから得たいと思う情報の種類に依ります。パース処理が始まった後、ハンドラは処理される XML コンテンツの一連のコールバックを受け取ります。以下のハンドラが利用可能です:
+</p>
+<table class="fullwidth-table">
+<tbody><tr> <th>インターフェース</th> <th>目的</th>
+</tr>
+<tr> <td><a href="https://dxr.mozilla.org/mozilla-central/source/parser/xml/public/nsISAXContentHandler.idl" rel="custom">nsISAXContentHandler</a></td> <td>文書の論理的コンテンツの通知を受け取ります(例えば、要素と属性、ホワイトスペース、処理命令)。</td>
+</tr>
+<tr> <td><a href="https://dxr.mozilla.org/mozilla-central/source/parser/xml/public/nsISAXDTDHandler.idl" rel="custom">nsISAXDTDHandler</a></td> <td>DTD に関連した基本的なイベントの通知を受け取ります。</td>
+</tr>
+<tr> <td><a href="https://dxr.mozilla.org/mozilla-central/source/parser/xml/public/nsISAXErrorHandler.idl" rel="custom">nsISAXErrorHandler</a></td> <td>入力ストリームのエラーの通知を受け取ります。</td>
+</tr>
+<tr> <td><a href="https://dxr.mozilla.org/mozilla-central/source/parser/xml/public/nsISAXLexicalHandler.idl" rel="custom">nsISAXLexicalHandler</a></td> <td>語彙イベントの SAX2 拡張ハンドラです(例えば、コメントや CDATA ノード、DTD 宣言とエンティティ)。</td>
+</tr>
+</tbody></table>
+<p>最も一般的に使われるコンテンツのハンドラの実装例:
+</p>
+<pre>function print(s) {
+  dump(s + "\n");
+}
+
+xmlReader.contentHandler = {
+  // nsISAXContentHandler
+  startDocument: function() {
+    print("startDocument");
+  },
+
+  endDocument: function() {
+    print("endDocument");
+  },
+
+  startElement: function(uri, localName, qName, /*nsISAXAttributes*/ attributes) {
+    var attrs = [];
+    for(var i=0; i&lt;attributes.length; i++) {
+      attrs.push(attributes.getQName(i) + "='" +
+                 attributes.getValue(i) + "'");
+    }
+
+    print("startElement: namespace='" + uri + "', localName='" +
+          localName + "', qName='" + qName + "', attributes={" +
+          attrs.join(",") + "}");
+  },
+
+  endElement: function(uri, localName, qName) {
+    print("endElement: namespace='" + uri + "', localName='" +
+          localName + "', qName='" + qName + "'");
+  },
+
+  characters: function(value) {
+    print("characters: " + value);
+  },
+
+  processingInstruction: function(target, data) {
+    print("processingInstruction: target='" + target + "', data='" +
+          data + "'");
+  },
+
+  ignorableWhitespace: function(whitespace) {
+    // 気にしない
+  },
+
+  startPrefixMapping: function(prefix, uri) {
+    // 気にしない
+  },
+
+  endPrefixMapping: function(prefix) {
+    // 気にしない
+  },
+
+  // nsISupports
+  QueryInterface: function(iid) {
+    if(!iid.equals(Components.interfaces.nsISupports) &amp;&amp;
+       !iid.equals(Components.interfaces.nsISAXContentHandler))
+      throw Components.results.NS_ERROR_NO_INTERFACE;
+    return this;
+  }
+};
+</pre>
+<h4 id="パースの開始"> パースの開始 </h4>
+<p>XML Reader コンポーネントは <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIInputStream" title="">nsIInputStream</a></code> で文字列から XML をパースすることもでき、<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIStreamListener" title="">nsIStreamListener</a></code> インターフェースを経由して非同期にパースすることもできます。以下は文字列からパースする例です:
+</p>
+<pre class="eval">xmlReader.parseFromString("&lt;f:a xmlns:f='g' d='1'&gt;&lt;BBQ/&gt;&lt;/f:a&gt;", "text/xml");
+</pre>
+<p>このコールは以下のような出力になります(上の例のコンテンツハンドラを使ったと想定しています):
+</p>
+<pre>startDocument
+startElement: namespace='g', localName='a', qName='f:a', attributes={d='1'}
+startElement: namespace='', localName='BBQ', qName='BBQ', attributes={}
+endElement: namespace='', localName='BBQ', qName='BBQ'
+endElement: namespace='g', localName='a', qName='f:a'
+endDocument
+</pre>
+<div class="noinclude">
+</div>

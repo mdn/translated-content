@@ -1,0 +1,174 @@
+---
+title: Firefox et le protocole "about"
+slug: Mozilla/Firefox/Le_protocole_about
+tags:
+  - Firefox
+  - Guide
+  - Mozilla
+  - Protocoles
+translation_of: Mozilla/Firefox/The_about_protocol
+---
+<div>{{FirefoxSidebar}}</div>
+
+<p>Il existe un grand nombre d'informations utiles à propos de Firefox cachées derrière le protocole d'URL <code>about:</code>. La plus utile est l'URL <code>about:config</code> qui affiche les préférences et les paramètres qui peuvent être consultés et modifiés. Voici la liste complète des URL du pseudo-protocole <code>about:</code> :</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Page <code>about:</code></th>
+   <th scope="col">Description</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>about:about</code></td>
+   <td>Fournit un aperçu de toutes les pages about:</td>
+  </tr>
+  <tr>
+   <td><code>about:addons</code></td>
+   <td>Gestionnaire de modules complémentaires</td>
+  </tr>
+  <tr>
+   <td><code>about:buildconfig</code></td>
+   <td>Affiche la plate-forme et la configuration utilisées pour construire Firefox</td>
+  </tr>
+  <tr>
+   <td><code>about:cache</code></td>
+   <td>Affiche les informations sur les caches mémoire, disque et appcache</td>
+  </tr>
+  <tr>
+   <td><code>about:checkerboard</code></td>
+   <td>Permet de diagnostiquer les apparitions de damiers à l'affichage</td>
+  </tr>
+  <tr>
+   <td><code>about:config</code></td>
+   <td>Fournit un moyen d'inspecter et modifier les préférences et paramètres de Firefox</td>
+  </tr>
+  <tr>
+   <td><code>about:crashes</code></td>
+   <td>Liste tous les plantages qui se sont produits pendant le fonctionnement de Firefox (dans le cas où l'utilisateur a activé les rapports de plantage)</td>
+  </tr>
+  <tr>
+   <td><code>about:credits</code></td>
+   <td>Liste tous les contributeurs du projet Firefox</td>
+  </tr>
+  <tr>
+   <td><code>about:debugging</code></td>
+   <td>Affiche la page de déboguage des modules complémentaires</td>
+  </tr>
+  <tr>
+   <td><code>about:devtools</code></td>
+   <td>Introduction aux outils de développement</td>
+  </tr>
+  <tr>
+   <td><code>about:downloads</code></td>
+   <td>Affiche tous les téléchargements faits dans Firefox</td>
+  </tr>
+  <tr>
+   <td><code>about:home</code></td>
+   <td>Page de démarrage de Firefox lors de l'ouverture d'une nouvelle fenêtre</td>
+  </tr>
+  <tr>
+   <td><code>about:license</code></td>
+   <td>Affiche les informations de licence</td>
+  </tr>
+  <tr>
+   <td><code>about:logo</code></td>
+   <td>Logo de Firefox</td>
+  </tr>
+  <tr>
+   <td><a href="/fr/docs/Performance/about%3Amemory">about:memory</a></td>
+   <td>Fournit un moyen d'afficher l'utilisation de la mémoire, de l'enregistrer dans un rapport et de lancer les GC et CC</td>
+  </tr>
+  <tr>
+   <td><code>about:mozilla</code></td>
+   <td>Page spéciale affichant un message extrait de l'ouvrage "Le Livre de Mozilla"</td>
+  </tr>
+  <tr>
+   <td><code>about:networking</code></td>
+   <td>Affiche des informations sur le réseau</td>
+  </tr>
+  <tr>
+   <td><code>about:newtab</code></td>
+   <td>Page de démarrage à l'ouverture d'un nouvel onglet</td>
+  </tr>
+  <tr>
+   <td><code>about:performance</code></td>
+   <td>Affiche une indication de l'utilisation du processeur et de la mémoire des onglets/modules/processus</td>
+  </tr>
+  <tr>
+   <td><code>about:plugins</code></td>
+   <td>Affiche les informations sur les plugins installés</td>
+  </tr>
+  <tr>
+   <td><code>about:policies</code></td>
+   <td>Liste les <a href="https://support.mozilla.org/fr/products/firefox-enterprise/policies-enterprise">stratégies d'entreprise</a></td>
+  </tr>
+  <tr>
+   <td><code>about:preferences</code></td>
+   <td>Paramètres de Firefox (également accessibles à partir du menu Firefox &gt; <em>Préférences</em>)</td>
+  </tr>
+  <tr>
+   <td><code>about:privatebrowsing</code></td>
+   <td>Page de démarrage lors de l'ouverture d'une fenêtre de navigation privée</td>
+  </tr>
+  <tr>
+   <td><code>about:profiles</code></td>
+   <td>Affichages et gestion des profils</td>
+  </tr>
+  <tr>
+   <td><code>about:restartrequired</code></td>
+   <td>Page informant l'utilisateur de la nécessité d'un redémarage après une mise à jour</td>
+  </tr>
+  <tr>
+   <td><code>about:reader</code></td>
+   <td>Indique qu'une page utilise le mode lecture</td>
+  </tr>
+  <tr>
+   <td><code>about:rights</code></td>
+   <td>Affiche des informations sur les droits</td>
+  </tr>
+  <tr>
+   <td><code>about:robots</code></td>
+   <td>Page spéciale affichant des remarques concernant les robots</td>
+  </tr>
+  <tr>
+   <td><code>about:serviceworkers</code></td>
+   <td>Affiche les ServiceWorkers inscrits</td>
+  </tr>
+  <tr>
+   <td><code>about:sessionrestore</code></td>
+   <td>Restauration de session (affichée après un plantage de Firefox)</td>
+  </tr>
+  <tr>
+   <td><code>about:support</code></td>
+   <td>Informations de dépannage (également accessible à partir du menu Firefox &gt; <em>? (point d'interrogation)</em> &gt; <em>Informations de dépannage</em>)</td>
+  </tr>
+  <tr>
+   <td><code>about:sync-log</code></td>
+   <td>Affiche un protocole de synchronisation relatif à la fonctionnalité <a href="https://www.mozilla.org/fr/firefox/sync/">Sync</a></td>
+  </tr>
+  <tr>
+   <td><code>about:telemetry</code></td>
+   <td>Affiche les données de télémétrie collectées et envoyées à Mozilla lorsque Firefox est en cours d'exécution (dans le cas où l'utilisateur a activé la télémétrie)</td>
+  </tr>
+  <tr>
+   <td><code>about:url-classifier</code></td>
+   <td>Affiche le statut de la classification d'URL (utilisée pour <a href="https://support.mozilla.org/fr/kb/comment-fonctionne-protection-contre-hame%C3%A7onnage-et-logiciels-malveillants">les protections contre l'hameçonnage et les logiciels malveillants</a>)</td>
+  </tr>
+  <tr>
+   <td><code>about:webrtc</code></td>
+   <td>Informations sur l'utilisation de WebRTC</td>
+  </tr>
+  <tr>
+   <td><code>about:welcome</code></td>
+   <td>Page affiché après l'installation de Firefox</td>
+  </tr>
+  <tr>
+   <td><code>about:welcomeback</code></td>
+   <td>Page d'information affichée après la réinitialisation de Firefox</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Ces URL sont définies dans {{source("docshell/base/nsAboutRedirector.cpp")}}, à l'intérieur du tableau <code>kRedirMap</code>. Celui-ci couvre la plupart des URL, de <code>config</code> jusqu'aux URL du pseudo-protocole <code>chrome:</code>, comme <code>chrome://global/content/config.xul</code>. Les informations sur les emplacements about sont dupliquées dans {{source("docshell/build/nsDocShellModule.cpp")}}.</p>

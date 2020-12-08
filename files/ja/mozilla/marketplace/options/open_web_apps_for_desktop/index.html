@@ -1,0 +1,115 @@
+---
+title: Open Web Apps for Desktop
+slug: Mozilla/Marketplace/Options/Open_web_apps_for_desktop
+translation_of: Archive/Marketplace/Options/Open_web_apps_for_desktop
+---
+<div class="summary">
+<p>デスクトップ版Firefoxのユーザーはフリーのマーケットプレイスアプリを'通常'のWindowsアプリ・Mac/Linuxアプリとしてインストールできます。これらのアプリは、デスクトップ版Webランタイム上で動作し、デスクトップ版Firefoxの機能を使ってインストールしています。Firefoxマーケットプレイス以外でもこの機能を使う事はできます。</p>
+</div>
+
+<h2 id="デスクトップの_Open_Web_Appsとは？">デスクトップの Open Web Appsとは？</h2>
+
+<p>デスクトップのOpen Web AppsはWindows/Mac/Linuxコンピューターユーザーマーケットプレイスアプリをインストールできるようにしています。一度インストールされたアプリは、通常のデスクトップアプリとして起動することが出来ます。<br>
+ アプリはデスクトップ版Firefoxに含まれるデスクトップ版Webランタイム上で実行されます。</p>
+
+<p>デスクトップのOpen Web Apps開発時には、デスクトップ開発知識や、特殊な開発ステップ、'ネイティブ'デスクトップアプリの配信の知識などは不要です。</p>
+
+<div class="note">
+<p><strong>Note</strong>: デスクトップのOpen Web Appsは、デスクトップ版Firefox 29以降でサポートしています。</p>
+</div>
+
+<p>デスクトップ版Webランタイムはデスクトップの機能（<a href="/ja/docs/IndexedDB">IndexedDB</a>, <a href="/en-US/docs/Web/API/Geolocation">Geolocation</a>, <a href="/ja/docs/WebAPI/Battery_Status">Battery status</a>など。）にアクセスするための12個のAPIをサポートしています。<br>
+ APIの詳細についは<a href="https://wiki.mozilla.org/WebAPI#APIs">complete list of supported APIs</a>　を御覧ください。"Available"列の"D"セルがデスクトップ版Webランタイムでの各APIの対応状況を示しています。緑色のセルは全機能をサポートしてます。マウスをかざすとさらなる情報が表示されます。</p>
+
+<p>近い将来、デスクトップ版WebランタイムでサポートするAPIをは追加されていきます。</p>
+
+<div class="note">
+<p><strong>Note</strong>: アプリがレスポンシブデザインで作られていない場合、Firefox OSとデスクトップコンピュータのように、大幅に異なるプラットフォームでは狙ったどおりに表示されません。これは、Firefox OS端末と違ってデスクトップコンピュータユーザの解像度(DPI)やサイズが異なるためです。レスポンシブデザインを考慮した設計をするように常に心がけでください。レスポンシブデザインに関する詳しい情報は<a href="https://developer.mozilla.org/ja/docs/Web/Apps/Design">アプリセンターのデザインセクション</a>を御覧ください。</p>
+</div>
+
+<h2 id="Firefoxマーケットプレイスからデスクトップ版Open_Web_Appsを利用する">Firefoxマーケットプレイスからデスクトップ版Open Web Appsを利用する</h2>
+
+<p>このセクションではデスクトップ版Open Web Appsの利用方法、Firefoxマーケットプレイスへ与える効果、アプリアップデートの情報を提供します。</p>
+
+<h3 id="アプリの提出">アプリの提出</h3>
+
+<p><a href="/ja/docs/Web/Apps/Submitting_an_app">Firefoxマーケットプレイスにアプリを提出する</a>際、デスクトップ版Firefoxを選択することが可能です。</p>
+
+<h3 id="アプリのレビュー">アプリのレビュー</h3>
+
+<p>アプリのレビュー時にレビューアは、Firefoxマーケットプレイスのレビューセクションからアプリをインストールします。デスクトップからレビューする際、デスクトップ版Firefoxはレビューアのコンピュータへアプリをインストールします。これにより、通常のアプリ同様完全な動作をレビューする事が可能になります。</p>
+
+<h3 id="アプリのインストール">アプリのインストール</h3>
+
+<p>Firefoxマーケットプレイスからユーザーがアプリを選択すると以下の動作をします。</p>
+
+<ol>
+ <li><a href="https://marketplace.firefox.com/">Firefoxマーケットプレイス</a>では通常アプリの詳細と<strong>無料</strong>ボタンが表示されます。</li>
+ <li>ユーザーが無料ボタンをクリックしたら、インストール確認用のFirefox標準ダイアログが表示されます。ダイアログには特権が必要なアプリの場合は必要となるパーミッションのリストが表示されます。このダイアログにはユーザーが懸念していることに関する説明も含まれます。</li>
+ <li>ユーザーがインストール継続をするためにインストールをクリックすると、<a href="/ja/docs/Web/API/Apps/install" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>Apps.install</code></a> / <a href="/ja/docs/Web/API/Apps/installPackage" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>Apps.installPackage</code></a>が意図されたとおりに実行され、デスクトップ版FirefoxはFirefoxマーケットプレイスからアプリの詳細を要求します。パッケージがタアプリノ場合はアプリのZipファイルをダウンロードします（これはアプリがホスト型か、パッケージ型かに依存します）。<br>
+  デスクトップ版FirefoxはデスクトップOSにアプリをインストールします。これによって、オフラインでもアプリを利用することが可能になります。（もし<a href="/ja/docs/Web/Apps/Manifest#appcache_path">AppCacheの記載</a>があれば、パッケージ型の場合はZipを、ホスト型の場合はアプリのアセットをインストールします。）</li>
+</ol>
+
+<p>一度アプリがインストールされると、通常のデスクトップOSのアプリと同じように表示されます。起動と削除方法も他のデスクトップアプリと変わりはありません。</p>
+
+<h3 id="アプリのアップデート">アプリのアップデート</h3>
+
+<p>デスクトップ版Webランタイムではアップデート可能なアプリをユーザーへ通知する仕組みを搭載しています。</p>
+
+<p>もし、ホスト型アプリであれば、いつでもサーバー上のコンテンツを変更すればユーザーの次回起動時に変更が反映されて動作します。</p>
+
+<p>他の全ての変更についてはFirefoxマーケットプレイスで新しいバージョンを追加する必要があります。</p>
+
+<ul>
+ <li>ホスト型アプリの場合、更新するマニフェストファイルを含むサーバー上のアプリへのリンク</li>
+ <li>パッケージ型アプリの場合、更新するマニフェストとコンテンツが含まれるzipファイル</li>
+</ul>
+
+<p>アプリが動作中の場合、デスクトップ版Webランタイムは毎日アプリのマニフェストファイルのバージョン番号のチェックをします。もし変更されている場合はユーザーに対してアップデートが入手できることを通知します。ユーザーは新しいバージョンをインストールする事を選択する事ができます。</p>
+
+<h2 id="他のロケーションからデスクトップ版Open_Web_Apps_を利用する">他のロケーションからデスクトップ版Open Web Apps を利用する</h2>
+
+<p>自身で構築したマーケットプレイスまたはサーバーにホスト型またはパッケージ型のOpen Web Apps を提供する事が可能であれば、そのケースではデスクトップ版 Open Web Appsを利用して自動インストールが可能です。Open Web Apps のオリジナルのロケーションで、新しいバージョンを検知した場合、Firefoxはアプリのアップデートをハンドリングします。</p>
+
+<h2 id="デスクトップ版Open_Web_Apps_のアプリインストール仕様">デスクトップ版Open Web Apps のアプリインストール仕様</h2>
+
+<p>このセクションではFirefox がどのように、デスクトップ版Open Web Apps をインストールするかを説明します。</p>
+
+<ol>
+ <li>ユーザーがアプリのインストールを選択した場合、上述した通り、デスクトップ版Firefox はホストしているサーバーに対し、アプリのマニフェストファイルやアイコン画像をを要求します。(Firefox Marketplace またはアプリをホストしているサーバーに対して要求)
+  <ul>
+   <li>ホスト型アプリの場合はメインのマニフェストファイル</li>
+   <li>パッケージ型アプリの場合は、ミニマニフェストファイル</li>
+  </ul>
+ </li>
+ <li>パッケージ型アプリでは、ホストしているサーバーに対して デスクトップ版Firefox はアプリのZIp ファイルを要求します。</li>
+ <li>デスクトップ版Firefoxはアプリのインストール処理をします。
+  <ul>
+   <li>ホスト型アプリの場合、Windows / Mac / Linux で実行可能なURL にラッピングし、デスクトップコンピュータ上に配置する</li>
+   <li>パッケージ型アプリの場合、Windows / Mac / Linux で実行可能なアプリのコンテンツをラッピングし、デスクトップコンピュータ上に配置する</li>
+  </ul>
+ </li>
+</ol>
+
+<p>以下のフロー図は、デスクトップ版Open Web Appsを利用したアプリのインストールワークフローを示したものです。</p>
+
+<p style="text-align: center;"><img alt="Open Web Apps for Desktop Sequence Diagram" src="https://mdn.mozillademos.org/files/8005/Open%20Web%20Apps%20for%20Desktop%20Sequence%20Diagram%20v4.png" style="height: 633px; width: 623px;"></p>
+
+<h2 id="FAQ">FAQ</h2>
+
+<p>ここでは、デスクトップ版Open Web Appsに関してよく聞かれる質問をまとめています。</p>
+
+<h3 id="アプリ内課金と有料アプリの機能はいつから提供されますか？">アプリ内課金と有料アプリの機能はいつから提供されますか？</h3>
+
+<p>この機能の実装時期は計画中です。デスクトップ版Open Web Appsに実装された場合信頼されたUIへのアクセスや、<a href="/ja/docs/Web/API/window.navigator.mozPay">mozPay</a>、そしてすべてのアプリ内課金支払いプロセスが提供されます。</p>
+
+<h3 id="デスクトップで動作させた場合のデバッグはどうすれば良いですか？">デスクトップで動作させた場合のデバッグはどうすれば良いですか？</h3>
+
+<p>コンソール( 他のリモート開発者ツール )にアクセスして、-debug フラグとオプション定義されたポート番号を使ってコマンドラインからアプリをスタートする事が可能です。<br>
+ Macの例では、Mykzilla テストアプリを以下のように開始します。</p>
+
+<p><code>&gt; /Applications/Mykzilla.app/Contents/MacOS/webapprt -debug 6000</code></p>
+
+<p>そして、Firefox の<strong>開発ツール</strong>メニューの<strong>接続... </strong>をクリックして、localhostの指定したポートに接続します。その後、Firefox の<strong>接続</strong>をクリックして、アプリへ戻り接続状況を確認してください。Firefoxに戻り、"tab"(たとえばアプリの開いているウィンドウ)を選択するかWeb ランタイムのChrome コードをデバッグするための"メインプロセス"を選択します。</p>
+
+<p>Firefox のリモート開発ツールのコピーは新しいウィンドウとして開くと、"tab"に接続できます。</p>

@@ -1,0 +1,34 @@
+---
+title: '-moz-mac-graphite-theme'
+slug: Web/CSS/@media/-moz-mac-graphite-theme
+tags:
+  - '@media'
+  - CSS
+  - Caractéristique média
+  - Non-standard
+translation_of: Archive/Web/CSS/@media/-moz-mac-graphite-theme
+---
+<div>{{cssref}} {{Non-standard_header}}</div>
+
+<div class="note">
+<p><strong>Note </strong>: Depuis <a href="/fr/docs/Mozilla/Firefox/Releases/58">Firefox 58</a>, cette caractéristique média n'est plus disponible pour être utilisée sur du contenu web. Elle ne peut être utilisée que de façon interne (c'est-à-dire avec XUL et pour le code du chrome). Cf. {{bug(1396066)}} pour plus de détails.</p>
+</div>
+
+<p>La <a href="/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries#Cibler_des_caractéristiques_média">caractéristique média</a> <strong><code>-moz-mac-graphite-theme</code></strong>, rattachée à la règle @  <a href="/fr/docs/Web/CSS/@media" title="The @media CSS at-rule lets you specify declarations that depend on the condition of a media query. The rule may be placed at the top level of your code or nested inside any other conditional group at-rule."><code>@media</code></a>, est spécifique à Gecko et peut être utilisée afin d'appliquer des styles si, sur macOS, l'utilisateur utilise le thème "Graphite".</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<dl>
+ <dt>{{cssxref("&lt;integer&gt;")}}</dt>
+ <dd>Si l'utilisateur a configuré son appareil afin d'utiliser le thème "Graphite" de macOS X, cette caractéristique vaut 1. Sinon, elle vaut 0.</dd>
+</dl>
+
+<p><br>
+ <strong>Média :</strong> {{cssxref("Media/Visual")}}<br>
+ <strong>Gestion des préfixes min/max :</strong> Non</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>Cette caractéristiquee correspond à la pseudo-classe {{CSSxRef(":-moz-system-metric/mac-graphite-theme", ":-moz-system-metric(mac-graphite-theme)")}}.</li>
+</ul>

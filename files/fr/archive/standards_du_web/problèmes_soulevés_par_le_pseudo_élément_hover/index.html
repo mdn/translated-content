@@ -1,0 +1,73 @@
+---
+title: Problèmes soulevés par le pseudo élément hover
+slug: Archive/Standards_du_Web/Problèmes_soulevés_par_le_pseudo_élément_hover
+tags:
+  - CSS
+translation_of: Archive/Web_Standards/Issues_Arising_From_Arbitrary-Element_hover
+---
+<p> </p>
+<p><br>
+  <span class="comment">Summary: Thanks to long-standing limitations, we're used to thinking of hover styles as applying only to hyperlinks, which has led to some sloppy authoring practices that are now causing problems for some Web sites. This technote explains the source of the problems and how to avoid encountering them.</span></p>
+<p>Beaucoup d'auteurs utilisent la pseudo-classe CSS2 <code>:hover</code> pour appliquer un style à leurs liens. Cette innovation, introduite en premier par Microsoft® Internet Explorer et adoptée dans les spécifications CSS, est très populaire pour styler des liens texte, en remplacement des « rollovers » faits en JavaScript. Toutefois, le support avancé de CSS dans les navigateurs a entraîné des comportements agressifs inattendus sur certaines pages.</p>
+<h3 id="Hover_et_.C3.A9l.C3.A9ments_non-liens" name="Hover_et_.C3.A9l.C3.A9ments_non-liens">Hover et éléments non-liens</h3>
+<p><a class="external" href="http://www.yoyodesign.org/doc/w3c/css2/selector.html#dynamic-pseudo-classes">Le chapitre 5.11.3 de CSS2</a> définit les trois types de pseudo-classes (<code>:hover</code>, <code>:active</code>, et <code>:focus</code>) et mentionne que :</p>
+<blockquote>
+  CSS ne définit pas lesquels des éléments peuvent être dans un de ces états ou comment ceux-ci entrent et sortent de ces états. L'écriture peut varier, selon que les éléments réagissent aux actions de l'utilisateur, ou non, et les divers appareils et agents utilisateurs peuvent avoir différentes façons de désigner ou d'activer les éléments.</blockquote>
+<p>Ainsi, bien que les auteurs s'imaginent que ces trois états ne s'appliquent exclusivement qu'aux liens hypertexte, il n'y a pas de limitation dans CSS2. Tout élément peut, en théorie, se trouver dans l'un de ces trois états et être stylé selon ces états. Ce n'était pas traditionnellement le cas.</p>
+<h3 id="Pseudo-classes_nues" name="Pseudo-classes_nues">Pseudo-classes nues</h3>
+<p>La seconde partie du problème vient lorsque nous considérons les effets d'une pseudo-classe « nue » dans un sélecteur. Par exemple :</p>
+<pre class="eval">:hover {color: red;}
+</pre>
+<p>Cette règle est équivalente à la règle CSS2 suivante :</p>
+<pre class="eval">*:hover {color: red;}
+</pre>
+<p>…qui se traduit en « tout élément survolé aura sa couleur d'écriture mise en rouge ». Ainsi, le survol de paragraphes, de tableaux, d'en-têtes et tous autres éléments dans un document coloriera le texte en rouge.</p>
+<p>Une variante classique consiste à utiliser une classe nue et une pseudo-classe <code>hover</code> comme ceci :</p>
+<pre class="eval">.nav:hover {color: red;}
+</pre>
+<p>Les situations où seules les instances de la valeur <code>nav</code> de la classe <code>class</code> sont appliquées aux liens hypertextes fonctionnent correctement. Cependant, les règles de ce type se rencontrent habituellement avec des balises comme ceci :</p>
+<pre>&lt;td class="nav"&gt;
+&lt;a href="one.html" class="nav"&gt;un&lt;/a&gt; |
+&lt;a href="two.html" class="nav"&gt;deux&lt;/a&gt; |
+&lt;a href="thr.html" class="nav"&gt;trois&lt;/a&gt; |
+&lt;a href="fou.html" class="nav"&gt;quatre&lt;/a&gt;
+&lt;/td&gt;</pre>
+<p>Comme la cellule du tableau a une <code>class</code> à <code>nav</code>, le caractère barre verticale virera en rouge lorsque l'utilisateur déplacera la souris n'importe où dans la cellule. Les liens vireront également en rouge lorsqu'ils sont survolés.</p>
+<h3 id="Comportement_de_Gecko" name="Comportement_de_Gecko">Comportement de Gecko</h3>
+<p>Dans les navigateurs basés sur des compilations de Gecko postérieures à 20020410 (Netscape 6.1+), les styles <code>:hover</code> peuvent s'appliquer à n'importe quel élément d'un document. De ce fait, les auteurs qui ont employé des pseudo-classes nues ou leur combinaisons, risquent de voir ce style s'appliquer même à d'autres éléments que leurs liens. La meilleure parade est d'ajouter l'élément ancre aux sélecteurs comme ceci :</p>
+<pre class="eval">a:hover {color: red;}
+a.nav:hover {color: red;}
+</pre>
+<p>Pour éviter le plus possible les problèmes avec des documents anciens, les navigateurs basés sur Mozilla 1.0 et suivant (Netscape 7+) incluent du code permettant aux pseudo-classes d'être restreintes aux seuls liens seulement si le document est rendu dans le mode « quirks ». Dans les navigateurs basés sur un moteur postérieure à Mozilla 1.3b, ce mode <i>quirk</i> a été étendu pour couvrir les sélecteurs qui combinent un sélecteur de classe nu avec la pseudo-classes <code>:hover</code> (voir le <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=169078" title="FIXED: .class:hover should be ignored for non-links in quirks mode">bug 169078</a> pour plus de détails).</p>
+<h3 id="Probl.C3.A8mes_des_ancres_nomm.C3.A9es" name="Probl.C3.A8mes_des_ancres_nomm.C3.A9es">Problèmes des ancres nommées</h3>
+<p>En plus des effets précédemment décrit, il y a deux autres effets relativement répandus que les auteurs de pages Web peuvent ne pas désirer. Le premier est facilement corrigible grâce à la validation du document, mais le second est un peu plus subtil.</p>
+<p>Tout d'abord, il y a le problème des ancres nommées ouvertes mais non fermées. Par exemple :</p>
+<pre>&lt;a name="pagetop"&gt;
+&lt;h2&gt;My Page&lt;/h2&gt;
+</pre>
+<p>Sans balise de fermeture <code>&lt;/a&gt;</code>, le <code>name</code> englobera la suite du document. Ceci signifie généralement que la suite du document se verra attribuer les styles <code>hover</code>. Considérons les effets de la règle suivante :</p>
+<pre class="eval">a:hover {color: red;}
+</pre>
+<p>Dans un document comportant une ancre nommée non fermée, tout texte suivant la balise d'ouverture de l'ancre sera coloré en rouge (à moins qu'une autre règle CSS ne soit définie).</p>
+<p>Ceci nous amène au second problème, qui est que les ancres nommées peuvent accepter des styles <code>hover</code>. Bien que les auteurs désirent souvent que le sélecteur <code>a:hover</code> ne s'applique qu'aux hyperliens, il peut également s'appliquer aux ancres nommées, puisque le sélecteur spécifie que chaque élément <code>a</code> sera stylé lors de son survol. Afin d'éviter de problème, les auteurs devraient utiliser la syntaxe de la pseudo-classe combinée décrite dans CSS2 :</p>
+<pre class="eval">a:link:hover {color: red;}
+a:visited:hover {color: maroon;}
+</pre>
+<p>Remarquez qu'avec cette syntaxe, il est possible de styler les liens visités et non visités différemment lorsqu'ils sont survolés. Ce n'était pas possible avec un simple <code>a:hover</code>. Cela signifie, bien entendu, que le sélecteur <code>a:link:hover</code> ne s'appliquera qu'aux liens non visités, ainsi les auteurs désireux d'obtenir le même style pour les liens visités et non visités lors du survol doivent grouper les deux sélecteurs dans une seule et unique règle.</p>
+<h3 id="Recommendation" name="Recommendation">Recommendation</h3>
+<p>Pour éviter les problèmes inattendus, les auteurs sont <b>fortement</b> encouragés à inclure des noms d'élément dans les pseudo-classes dynamiques qui sont destinées à être appliquées aux hyperliens. En outre, combiner des pseudo-classes prévient l'application de styles <code>:hover</code> à des ancres qui ne sont pas des hyperliens. Ainsi, <code>a:hover</code> devrait toujours être utilisé à la place du simple <code>:hover</code>, et <code>a:link:hover</code> (et <code>a:visited:hover</code>) sont préférables à un simple <code>a:hover</code>.</p>
+<h3 id="Liens_connexes" name="Liens_connexes">Liens connexes</h3>
+<ul>
+  <li><a class="external" href="http://www.yoyodesign.org/doc/w3c/css2/selector.html#dynamic-pseudo-classes">Les pseudo-classes dynamiques : :hover, :active, et :focus</a></li>
+</ul>
+<div class="originaldocinfo">
+  <h3 id="Informations_sur_le_document_original" name="Informations_sur_le_document_original">Informations sur le document original</h3>
+  <ul>
+    <li>Auteur(s) : Eric A. Meyer, Netscape Communications</li>
+    <li>Dernière mise à jour : Publié le 7 mars 2003 ; Révisé le 21 mars 2003</li>
+    <li>Copyright : Copyright © 2001-2003 Netscape. All rights reserved.</li>
+    <li>Note : This reprinted article was originally part of the DevEdge site.</li>
+  </ul>
+</div>
+<p><span class="comment">Interwiki Languages Links</span></p>
+<p></p>

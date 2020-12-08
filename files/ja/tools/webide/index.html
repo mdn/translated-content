@@ -1,0 +1,42 @@
+---
+title: WebIDE
+slug: Tools/WebIDE
+tags:
+  - Apps
+  - Debugging
+  - Firefox OS
+  - WebIDE
+  - tool
+  - アプリ
+  - ツール
+translation_of: Archive/WebIDE
+---
+<div>{{ToolsSidebar}}</div>
+
+<div class="summary">
+<p>WebIDEでは、Android 版 Firefox や Android 版 Chrome 、iOS 版 Safari といったさまざまなブラウザに、<a href="/ja/docs/Tools">Firefox の開発ツール</a>を接続できます。各ブラウザに接続する手順については、<a href="/ja/docs/Tools/Remote_Debugging">リモートデバッグ</a>のページをご覧ください。</p>
+</div>
+
+<p>WebIDE では、始めに <a href="/ja/docs/Tools/WebIDE/Setting_up_runtimes">1 つ以上のランタイムをセットアップ</a>します。ランタイムは、アプリの実行やデバッグを行う環境です。ランタイムは USB (<a href="/ja/Firefox/Releases/39">Firefox 39</a> 以降では Wi-Fi も可能) でパソコンに接続した Firefox OS デバイスか、パソコン自体にインストールした Firefox OS シミュレータを使用できます。</p>
+
+<p>次に、<a href="/ja/docs/Tools/WebIDE/Creating_and_editing_apps">アプリを作成するか既存のアプリを開きます</a>。アプリを新規作成する場合は、アプリを作り始めるのに必要なディレクトリ構造や最小限の標準モデルを収めたテンプレートか、Privileged API を使用する方法を示す、より充実したテンプレートを使用できます。WebIDE はアプリ内のファイルをツリーに表示します。また内蔵のソースエディタでそれらの編集や保存が可能です。もちろん、内蔵のエディタを使用しないことも可能です。アプリの開発は WebIDE の外部で行い、デバッグにのみ WebIDE を使用できます。</p>
+
+<p>そして、<a href="/ja/docs/Tools/WebIDE/Running_and_debugging_apps">アプリをいずれかのランタイムにインストールして実行できます</a>。また実行中のアプリを調査または変更するために<a href="/ja/docs/Tools/Page_Inspector">インスペクタ</a>、<a href="/ja/docs/Tools/Web_Console">コンソール</a>、<a href="/ja/docs/Tools/Debugger">JavaScript デバッガ</a>などの開発ツール一式を開くことができます。</p>
+
+<hr>
+<dl>
+ <dt><a href="/ja/docs/Tools/WebIDE/Opening_WebIDE">WebIDE を開く</a></dt>
+ <dd>Firefox で WebIDE を開く方法を説明します。</dd>
+ <dt><a href="/ja/docs/Tools/WebIDE/Setting_up_runtimes">ランタイムのセットアップ</a></dt>
+ <dd>Firefox OS デバイス、Firefox OS シミュレータ、Android 版 Firefox といった、アプリのインストールが可能なランタイムに接続する方法を説明します。</dd>
+ <dt><a href="/ja/docs/Tools/WebIDE/Creating_and_editing_apps">アプリの作成と編集</a></dt>
+ <dd>WebIDE を使用してアプリを作成し、開いて、開発する方法を説明します。</dd>
+ <dt><a href="/ja/docs/Tools/WebIDE/The_runtime_menu">ランタイムメニュー</a></dt>
+ <dd>ランタイムを選択するとランタイムメニューを使用して、ランタイムやアプリの情報を確認したり、設定を変更したり、スクリーンショットを取得することができます。</dd>
+ <dt><a href="/ja/docs/Tools/WebIDE/Running_and_debugging_apps">アプリの実行とデバッグ</a></dt>
+ <dd>アプリをランタイムにインストールする方法や、Firefox の開発ツールを使用してデバッグする方法を説明します。</dd>
+ <dt><a href="/ja/docs/Tools/WebIDE/Working_with_Cordova_apps_in_WebIDE">WebIDE で Cordova アプリを扱う</a></dt>
+ <dd>Firefox 39 より、WebIDE で Cordova アプリの編集やデバッグが可能になりました。</dd>
+ <dt><a href="/ja/docs/Tools/WebIDE/Troubleshooting">トラブルシューティング</a></dt>
+ <dd>WebIDE のトラブル、特にランタイムとの接続に関するトラブルのヘルプです。</dd>
+</dl>

@@ -1,0 +1,497 @@
+---
+title: Events
+slug: Mozilla/Tech/XUL/Events
+translation_of: Archive/Mozilla/XUL/Events
+---
+<div class="boxed translate-display">
+<p> </p>
+
+<p><a href="https://developer.mozilla.org/zh-CN/docs/XUL_Reference" title="« XUL Reference">« XUL Reference</a></p>
+
+<p> </p>
+
+<p>下列表格描述了对大部分 XUL 元素有效的事件句柄（Event Handler）。您可以使用 <a href="https://developer.mozilla.org/en/DOM/element.addEventListener" title="en/DOM/element.addEventListener">addEventListener</a> 添加事件的监听器（Listener），并使用 <a href="https://developer.mozilla.org/en/DOM/element.removeEventListener" title="en/DOM/element.removeEventListener">removeEventListener</a> 以移除这些监听器。</p>
+
+<p>其中一些事件同样可以使用属性值绑定。当使用属性值绑定事件时，您要注意这样做始终只能绑定一个监听器——后一次绑定会覆盖掉前面一次的绑定。对应的属性名是事件名前加上“on”前缀。</p>
+
+<h3 id="继承的文档树事件">继承的文档树事件</h3>
+
+<p>继承的文档树事件（Inherited DOM Events）</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>事件</th>
+   <th>描述</th>
+  </tr>
+  <tr>
+   <td>
+    <p>blur</p>
+   </td>
+   <td>
+    <p>与 focus 事件相对，当一个元素失去焦点时会触发 blur 事件。<br>
+     <strong>属性：</strong>onblur</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>change</p>
+   </td>
+   <td>
+    <p>当文本框的值被修改且失去焦点后，会触发 change 事件。<br>
+     <strong>属性：</strong> onchange</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>click</p>
+   </td>
+   <td>
+    <p>当鼠标键被按下并松开后会触发 click 事件。您可以通过事件对象的 <code>button</code> 属性判断按下的是哪个按键。用户双击时同样会触发这个事件，您可以通过 <code>detail</code> 属性检查有多少次点击发生，用它来检查双击或者三击。在 XUL 中，您应当使用 command 事件响应用户操作，而不应使用 click 事件。</p>
+
+    <p><strong>属性：</strong> onclick</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>dblclick</p>
+   </td>
+   <td>
+    <p>这个事件和 click 事件类似，但是仅当用户双击鼠标的时候触发。这是另一种检查 click 事件中 detail 属性的方法。<br>
+     <strong>属性：</strong> ondblclick</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>DOMMouseScroll</p>
+   </td>
+   <td>
+    <p>当用户滑动鼠标滚轮时会触发这个事件。不论鼠标滚轮的滑动是否造成了页面内容的滚动。事件的 target 属性是滑动滚轮时在鼠标指针下的对象，这与 click 事件相似。</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>focus</p>
+   </td>
+   <td>
+    <p>当一个元素收到焦点的时候，会触发 focus 属性。一旦某个元素获得了焦点，那么键盘事件将会被发送到这个元素上。焦点可以通过鼠标点击、按 Tab 键、按 back Tab 键切换到其他的元素上。<br>
+     <strong>属性：</strong> onfocus</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>keydown</p>
+   </td>
+   <td>
+    <p>当键盘按键被按下但是并未抬起时，会触发当前具有焦点的元素的 keydown 事件。<br>
+     <strong>属性：</strong> onkeydown</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>keypress</p>
+   </td>
+   <td>
+    <p>当键盘按键被按下并松开后，会触发当前具有焦点的元素的 keypress 事件。当用户按下并松开一个键时，会依次触发 keydown 事件、 keypress 事件和 keyup 事件。在一个文本框里，用户可以按住一个键来发送多个对应的字符，这时会像用户重复按了对应键多次一样触发多组按键事件。<br>
+     <strong>属性：</strong> onkeypress</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>keyup</p>
+   </td>
+   <td>
+    <p>当键盘按键被松开后，会触发当前具有焦点的元素的 keyup 事件。<br>
+     <strong>属性：</strong> onkeyup</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>load</p>
+   </td>
+   <td>
+    <p>当一个窗口（window）被完整加载后，会触发他的 load 事件。这个事件被用在窗口元素上和图片（image）元素或其他支持图片属性的上。用在图片元素上时，当图片元素被加载时会触发这个事件。图片元素的 load 事件不会起泡（bubble up），换句话说，不会因此触发窗口的 load 事件。<br>
+     <strong>属性：</strong> onload</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>mousedown</p>
+   </td>
+   <td>
+    <p>当鼠标点击了某个元素但尚未松开时，会触发 mousedown 事件。<br>
+     <strong>属性：</strong> onmousedown</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>mousemove</p>
+   </td>
+   <td>
+    <p>当鼠标在一个元素上移动时，会反复地发送 mousemove 事件。<br>
+     <strong>属性：</strong> onmousemove</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>mouseout</p>
+   </td>
+   <td>
+    <p>与 mouseover 事件相对，当用户将鼠标移出某个元素时，会触发这个元素的 mouseout 事件。<br>
+     <strong>属性：</strong> onmouseout</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>mouseover</p>
+   </td>
+   <td>
+    <p>当鼠标首次移动到某个元素上时，会触发这个元素的 mouseover 事件。<span class="short_text" id="result_box" lang="zh-CN"><span class="alt-edited">您可以使用此事件来提供给用户反馈。</span></span><br>
+     <strong>属性：</strong> onmouseover</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>mouseup</p>
+   </td>
+   <td>
+    <p>当鼠标在某个元素上松开时，会触发 mouseup 事件。<br>
+     <strong>属性：</strong> onmouseup</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>select</p>
+   </td>
+   <td>
+    <p>This event is sent to a listbox or tree when an item is selected.<br>
+     <strong>属性：</strong> onselect</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>unload</p>
+   </td>
+   <td>
+    <p>This event is sent to a window when the window has closed. This is done after the close event. You should place this event handler on the window element.<br>
+     <strong>属性：</strong>onunload</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Mutation_DOM_events" name="Mutation_DOM_events">Mutation 文档树事件</h3>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>事件</th>
+   <th>描述</th>
+  </tr>
+  <tr>
+   <td>
+    <p>DOMAttrModified</p>
+   </td>
+   <td>
+    <p>当一个元素的属性被修改时，会触发 DOMAttrModified 事件。您可以通过 <code>attrName</code> 属性查看哪个属性被修改了，并通过 <code>prevValue</code> 和 <code>newValue</code> 属性查看对应属性的旧值和新值。</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>DOMNodeInserted</p>
+   </td>
+   <td>
+    <p>当一个节点作为一个元素的子节点被添加时，会触发 DOMNodeInsterted 事件。如果您在 document 层捕获这个事件，您可以收到所有对文档修改的动作。</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>DOMNodeRemoved</p>
+   </td>
+   <td>
+    <p>当一个节点被移除时，会触发 DOMNodeRemoved 事件。如果您在 document 层捕获这个事件，您可以收到所有对文档修改的动作。</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<div class="warning">
+<p>请注意，向文档中添加任何 mutation 事件监听器会降低后续文档树操作的性能。而且在后续操作中移除这些监听器并不会使之好转。要了解详细信息，请参考  <a href="https://developer.mozilla.org/en-US/docs/DOM/Mutation_events" title="en-US/docs/DOM/Mutation_events">Mutation events</a> ，并且参考 <a href="https://developer.mozilla.org/en-US/docs/DOM/DOM_Mutation_Observers" title="en-US/docs/DOM/DOM_Mutation_Observers">Mutation observers</a> 考虑使用其他效率更好的方式。</p>
+</div>
+
+<h3 id="Common_XUL_events" name="Common_XUL_events">通用 XUL 事件</h3>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>事件</th>
+   <th>描述</th>
+  </tr>
+  <tr>
+   <td>
+    <p>broadcast</p>
+   </td>
+   <td>
+    <p>您应当将这个事件句柄置于观察者上。当对应元素（如广播者）的属性被改变时，会触发 boardcast 事件。<br>
+     <strong>属性：</strong> onbroadcast</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Events/close_event">close</a></p>
+   </td>
+   <td>
+    <p>当用户按下关闭按钮以要求关闭窗口时，会触发 close 事件。如果您在一个窗口元素上放置该事件的句柄，您可以陷入（trap）窗口的关闭。如果您在监听器中调用 event.preventDefault() ，可以阻止窗口的关闭。注意， close 事件仅针对用户按了标题栏上的关闭按钮，而不针对诸如点击了菜单中的文件—退出的操作。您可以考虑使用窗口的 unload 事件来处理所有关闭窗口的事件。<br>
+     <strong>属性：</strong> onclose</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>command</p>
+   </td>
+   <td>
+    <p>当一个元素被激活时，会触发 command 事件。对于不同的元素，这个事件触发的方式也不尽相同。例如，点击按钮可以触发这个事件，在按钮获得焦点时按回车键也可以触发这个事件，用鼠标选择菜单项时可以触发这个事件，用键盘快捷键选择某个菜单项时同样会触发这个事件。您应当考虑使用 command 事件，而非使用 click 事件，因为 command 事件可以在所有上面说的情况下被调用。<br>
+     <strong>属性：</strong> oncommand</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>commandupdate</p>
+   </td>
+   <td>
+    <p>This event occurs when a command update occurs on a &lt;commandset&gt; element. You would use this to update the disabled status of its commands.<br>
+     <strong>属性：</strong> oncommandupdate</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>contextmenu</p>
+   </td>
+   <td>
+    <p>当用户试图显示某个元素的菜单时，会触发 contextmenu 事件。因平台不同，这个事件的触发方式也有所不同，通常来说是通过右键单击来触发的。这个事件可以用来在用户点击时动态地设置菜单的内容。您还可以使用 popupshowing 事件。在事件句柄中返回 false 可以阻止菜单弹出。<br>
+     <strong>属性：</strong> oncontextmenu</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>drag </p>
+   </td>
+   <td>
+    <p>当拖拽一个节点时，会每秒数次地触发被拖拽节点的 drag 事件。<br>
+     <strong>属性：</strong> ondrag</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>dragdrop</p>
+   </td>
+   <td>
+    <p>当用户松开鼠标以释放一个被拖拽的对象时，会触发 dragdrop 事件。The element, if it accepts the drop, should respond in some manner such inserting the dragged object into itself.<br>
+     <strong>属性：</strong> ondragdrop</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>dragend </p>
+   </td>
+   <td>
+    <p>当拖拽事件结束时，会触发被拖拽的节点的 dragend 事件。<br>
+     <strong>属性：</strong> ondragend</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>dragenter</p>
+   </td>
+   <td>
+    <p>在拖拽过程中，当鼠标节点第一次进入某个对象的范围内时，会触发 dragenter 事件。这个事件与 mouseover 事件相似，不同点在于在拖拽的过程中触发。<br>
+     <strong>属性：</strong> ondragenter</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>dragexit</p>
+   </td>
+   <td>
+    <p>在拖拽的过程中，当鼠标指针从一个元素上移出的时候，会触发 dragexit 事件。这个事件同样会在释放元素后触发。这个事件与 mouseout 事件相似，不同点在于在拖拽的过程中触发。<br>
+     <strong>属性：</strong> ondragexit</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>draggesture</p>
+   </td>
+   <td>
+    <p>当用户开始拖拽一个元素时，会触发 draggesture 事件。一般来说，拖拽是由按住鼠标移动产生的。<br>
+     <strong>属性：</strong> ondraggesture</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>dragover</p>
+   </td>
+   <td>
+    <p>类似于 mouseover 事件，当有东西被拖拽到某个元素之上时，会触发 dragover 事件。这个事件应当判断被拖拽的对象是否可以释放。<br>
+     <strong>属性：</strong> ondragover</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>input</p>
+   </td>
+   <td>
+    <p>当用户在文本框输入的时候，会触发 input 事件。仅当显示的文本被修改时会触发这个事件，因此如果用户按了不会显示出来的按键时，这个事件是不会被触发的。<br>
+     <strong>属性：</strong> oninput</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>overflow</p>
+   </td>
+   <td>
+    <p>仅当 CSS 的 overflow 属性被设置为 visible 以外的值时才会触发 overflow 。当没有足够的空间显示某个元素当内容时，会触发 overflow 事件。例如，一个最大尺寸为 100 像素的盒，但是可用的空间只有 80 像素，那么就会触发 overflow 事件。如果因为用户修改窗口大小等因素导致大小被改变了，因此有了足够的空间时，会触发相应的 underflow 事件。<br>
+     <strong>属性：</strong> onoverflow</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>popuphidden</p>
+   </td>
+   <td>
+    <p>当一个弹出的元素被隐藏了时，会触发 popuphidden 事件。<br>
+     <strong>属性：</strong> onpopuphidden</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>popuphiding</p>
+   </td>
+   <td>
+    <p>当一个弹出的元素将被隐藏时，会触发 popuphiding 事件。<br>
+     <strong>属性：</strong> onpopuphiding</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>popupshowing</p>
+   </td>
+   <td>
+    <p>当一个弹出元素将被显示时，会触发 popupshowing 事件。这个事件经常被用来在用户需要显示弹出元素时动态地设置它的内容。在句柄中返回 false 可以阻止元素弹出。<br>
+     <strong>属性：</strong> onpopupshowing</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>popupshown</p>
+   </td>
+   <td>
+    <p>当一个弹出元素被显示了时，会触发 popupshown 事件。这类似于窗口上的 load 事件。<br>
+     <strong>属性：</strong> onpopupshown</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>syncfrompreference</p>
+   </td>
+   <td>
+    <p>因为选项的修改而导致元素改变时，会调用 syncfrompreference 事件。这个事件只会对 <a href="https://developer.mozilla.org/en/XUL/prefwindow" title="en/XUL/prefwindow">prefwindow</a> 中的元素生效。这不是实际意义上的事件而仅仅是一个函数调用，所以这个事件必须使用属性形式的语法定义。函数可以返回不同于选项的特定的值。这个事件通常被用于为了让选项值更适合显式在用户界面中而调整选项值。<br>
+     <strong>属性：</strong> onsyncfrompreference</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>synctopreference</p>
+   </td>
+   <td>
+    <p>当与对象连接的属性值被修改时，会调用 synctopreference 事件。这不是实际意义上的事件而仅仅是一个函数调用，所以这个事件必须使用属性形式的语法定义。函数可以返回不同于选项的特定的值，以设置属性的值，而非使用元素的 value 。<br>
+     <strong>属性：</strong> onsynctopreference</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>underflow</p>
+   </td>
+   <td>
+    <p>当有了足够的空间完整地显示某个元素时，会触发这个元素的 underflow 事件。这个事件对所有 CSS 的 overflow 属性不为 visible 的盒或其他布局元素生效。这个事件说明滚动条已经没必要了。<br>
+     <strong>属性：</strong> onunderflow</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>DOMMenuItemActive</p>
+   </td>
+   <td>
+    <p>当鼠标在菜单或菜单项上时或某个菜单项没高亮时，会触发 DOMMenuItemActive 事件。这个事件是起泡的（bubbles）。</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>DOMMenuItemInactive</p>
+   </td>
+   <td>
+    <p>当鼠标移出菜单或菜单项或某个菜单项不再被高亮时，会触发 DOMMenuItemInactive 事件。这个事件是起泡的。</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="窗口事件">窗口事件</h3>
+
+<p>下列事件被绑定在顶级文档树窗口上，可以使用 window.addEventListener 监听。</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Event</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>activate </td>
+   <td>当窗口变为活动窗口时触发。</td>
+  </tr>
+  <tr>
+   <td>deactivate </td>
+   <td>当窗口变为非活动窗口时触发。</td>
+  </tr>
+  <tr>
+   <td>sizemodechange </td>
+   <td>
+    <p>当某个窗口被最小化，取消最小化，切换到全屏模式，或切换到窗口模式时触发。注意，这个事件可能被调用多次，或者因为修改窗口大小而被调用，（见 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=715867" title="FIXED: sizemodechange event fires during resizing on mac, even when sizemode/windowState doesn't change">bug 715867</a> ）。所以应当在事件中查看 <a href="/zh-CN/docs/Web/API/Window/windowState" title="此页面仍未被本地化, 期待您的翻译!"><code>window.windowState</code></a> 检查窗口的状态。</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Accessibility_events" name="Accessibility_events">可访问性事件</h3>
+
+<p>这些事件被用来通知可访问性系统。一般来说你不应该自行使用这些事件。</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Event</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>
+    <p>CheckboxStateChange</p>
+   </td>
+   <td>
+    <p>当一个 <a href="https://developer.mozilla.org/en/XUL/checkbox" title="en/XUL/checkbox">checkbox</a> 被选中或取消选中时，会触发 CheckboxStateChange 事件。这个事件可能由于用户动作触发，也可能由于脚本改变了选框的值。相比之下， command 事件只会因为用户的动作而触发，这时 CheckboxStateChange 事件在 command 事件之前触发。 CheckboxStateChange 事件是不起泡的。</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>RadioStateChange</p>
+   </td>
+   <td>
+    <p>当一个 <a href="https://developer.mozilla.org/en/XUL/radio" title="en/XUL/radio"> radio</a> 被选中时，会触发 RadioStateChange 事件。这个事件可能时由于用户动作触发，也可能时因为脚本修改了对应的值。相比之下， command 事件只会因为用户的动作而触发，这时 RadioStateChange 事件在 command 事件之前触发。 RadioStateChange 事件是起泡的，因此你可以在 <a href="https://developer.mozilla.org/en/XUL/radiogroup" title="en/XUL/radiogroup"> radiogroup</a> 绑定事件句柄。</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p></p>
+</div>
+
+<p> </p>

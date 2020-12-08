@@ -1,0 +1,100 @@
+---
+title: WifiManager
+slug: Web/API/WifiManager
+translation_of: Archive/B2G_OS/API/WifiManager
+---
+<p>{{APIRef("Firefox OS")}}{{ non-standard_header() }}</p>
+
+<p>{{ B2GOnlyHeader2('certified') }}</p>
+
+<h2 id="Sommaire">Sommaire</h2>
+
+<p>Le manager Wifi (WifiManager) donne un accès aux périphriques wifi</p>
+
+<h2 id="Interface">Interface</h2>
+
+<pre>interface WifiManager {
+  readonly attribute boolean enabled;
+  readonly attribute string macAddress;
+  readonly attribute object connection;
+  readonly attribute object connectionInformation;
+
+  attribute nsIDOMEventListener onenabled;
+  attribute nsIDOMEventListener ondisabled;
+  attribute nsIDOMEventListener onstatuschange;
+  attribute nsIDOMEventListener onconnectioninfoupdate;
+  attribute nsIDOMEventListener onstationinfoupdate
+
+  DOMRequest getNetworks();
+  DOMRequest getKnownNetworks();
+  DOMRequest associate(object network);
+  DOMRequest forget(object network);
+  DOMRequest wps(object detail);
+  DOMRequest setPowerSavingMode(boolean enabled);
+  DOMRequest setStaticIpMode(object network, object info)
+};
+</pre>
+
+<h2 id="Propriétés">Propriétés</h2>
+
+<dl>
+ <dt>{{domxref("WifiManager.enabled")}} {{readonlyinline}}</dt>
+ <dd>Un booléen qui indique si le wifi est en marche (<code>true</code>) ou pas (<code>false</code>).</dd>
+ <dt>{{domxref("WifiManager.macAddress")}} {{readonlyinline}}</dt>
+ <dd>Une chaine de caractères représentant l' <a href="http://en.wikipedia.org/wiki/MAC_address" title="http://en.wikipedia.org/wiki/MAC_address">adresse MAC </a>de l'adaptateur wifi</dd>
+ <dt>{{domxref("WifiManager.connection")}} {{readonlyinline}}</dt>
+ <dd>Un objet donnant des informations a propos de la connexion en cours (statut et réseau en cours d'utilisation).</dd>
+ <dt>{{domxref("WifiManager.connectionInformation")}} {{readonlyinline}}</dt>
+ <dd>Un objet donnant des informations supplémentaires a propos de la connexion en cours ou <code>null</code> si le périphérique n'est pas connecté en wifi.</dd>
+</dl>
+
+<h3 id="Gestion_des_évènements">Gestion des évènements</h3>
+
+<dl>
+ <dt>{{domxref("WifiManager.onenabled")}}</dt>
+ <dd>Signal {{event("enabled")}} ; Ce signal est déclenché quand le wifi est allumé.</dd>
+ <dt>{{domxref("WifiManager.ondisabled")}}</dt>
+ <dd>Signal {{event("disabled")}} ; Ce signal est déclenché quand le wifi est arrêté.</dd>
+ <dt>{{domxref("WifiManager.onstatuschange")}}</dt>
+ <dd>Signal {{event("statuschange")}} ; L'objet retourné correspondant à l'évènement est une instance de {{domxref("MozWifiStatusChangeEvent")}}.</dd>
+ <dt>{{domxref("WifiManager.connectionInfoUpdate")}}</dt>
+ <dt>{{domxref("WifiManager.onconnectionInfoUpdate")}}</dt>
+ <dt>{{domxref("WifiManager.onconnectioninfoupdate")}}</dt>
+ <dd>Signal {{event("connectioninfoupdate")}} ; Déclenché à chaque fois que les informations de connexion changent. L'objet retourné correspondant à l'évènement est une instance de {{domxref("MozWifiConnectionInfoEvent")}}.</dd>
+ <dt>{{domxref("WifiManager.onstationInfoUpdate")}}</dt>
+ <dt>{{domxref("WifiManager.onstationinfoupdate")}}</dt>
+ <dd>TBD</dd>
+</dl>
+
+<h2 id="Méthodes">Méthodes</h2>
+
+<dl>
+ <dt>{{domxref("WifiManager.associate()")}}</dt>
+ <dd>Permet d'associer (et de connecter) un périphérique avec un réseau donné. Retourne un {{domxref("DOMRequest")}}.</dd>
+ <dt>{{domxref("WifiManager.forget()")}}</dt>
+ <dd>permet de créer un périphérique non associé à un réseau donné. Retourne un {{domxref("DOMRequest")}}.</dd>
+ <dt>{{domxref("WifiManager.getKnownNetworks()")}}</dt>
+ <dd>Permet de récupérer la liste de tous les réseaux avec lesquels le périphérique est associé. Retourne un {{domxref("DOMRequest")}}.</dd>
+ <dt>{{domxref("WifiManager.getNetworks()")}}</dt>
+ <dd>Permet de récupérer la liste de tous les réseaux disponibles dans la zone couverte par le périphérique. Retourne un {{domxref("DOMRequest")}}.</dd>
+ <dt>{{domxref("WifiManager.setPowerSavingMode()")}}</dt>
+ <dd>Permet à l'adaptateur wifi d'entrer/de sortir du <u>mode d'enregistrement allumé</u>  "power saving mode". Retourne un {{domxref("DOMRequest")}}.</dd>
+ <dt>{{domxref("WifiManager.setStaticIpMode()")}}</dt>
+ <dd>Permet de configurer une adresse IP statique pour le périphérique dans un réseau donné. Retourne un {{domxref("DOMRequest")}}.</dd>
+ <dt>{{domxref("WifiManager.wps()")}}</dt>
+ <dd>Permet de connecter le périphérique à un réseau en utilisant le système réseau <a href="http://en.wikipedia.org/wiki/Wi-Fi_Protected_Setup" title="http://en.wikipedia.org/wiki/Wi-Fi_Protected_Setup">WPS</a> (si disponible). Retourne un {{domxref("DOMRequest")}}.</dd>
+</dl>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<p>Il n'y a pas de spécifications pour ce module</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>{{domxref("window.navigator.mozWifiManager","navigator.mozWifiManager")}}</li>
+ <li>{{domxref("MozWifiConnectionInfoEvent")}}</li>
+ <li>{{domxref("MozWifiStatusChangeEvent")}}</li>
+ <li>L'article à propos de l'<a href="/en-US/docs/WebAPI/WiFi_Information" title="/en-US/docs/WebAPI/WiFi_Information">API Wifi</a></li>
+ <li>les pages ayant le Tag {{Tag("WiFi")}}</li>
+</ul>

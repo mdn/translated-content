@@ -1,0 +1,138 @@
+---
+title: イベントハンドラの追加
+slug: Archive/Mozilla/XUL/Tutorial/Adding_Event_Handlers
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_Event_Handlers
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Scrolling_Menus" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:More_Event_Handlers">次のページ  »</a></p>
+</div>
+
+<p>ここまでの作業で、ファイル検索ダイアログの外観は、かなり良くなりました。 まだ仕上がっていない箇所も多いですが、シンプルなユーザインターフェイスを簡単に作ることができています。 次は、そこにスクリプトを付け加えていく方法を見ていくことにします。</p>
+
+<h3 id=".E3.82.B9.E3.82.AF.E3.83.AA.E3.83.97.E3.83.88.E3.81.AE.E4.BD.BF.E7.94.A8" name=".E3.82.B9.E3.82.AF.E3.83.AA.E3.83.97.E3.83.88.E3.81.AE.E4.BD.BF.E7.94.A8">スクリプトの使用</h3>
+
+<p>ファイル検索ダイアログが機能するようにするためには、利用者がダイアログを操作したときに実行されるスクリプトを追加する必要があります。 つまり、Find ボタン、Cancel ボタン、それに各メニューの操作を扱うために、スクリプトの追加を必要としています。 このために、<a href="ja/JavaScript">JavaScript</a> の関数を、<a href="ja/HTML">HTML</a> に対して使用するのと、ほとんど同じように使って書くことができます。</p>
+
+<p>XUL ファイルにスクリプトを含めるためには <code><code><a href="/ja/docs/Mozilla/Tech/XUL/script" title="script">script</a></code></code> 要素を使用することができます。 スクリプトコードを <code><code><a href="/ja/docs/Mozilla/Tech/XUL/script" title="script">script</a></code></code> タグの、開始と終了タグの間に置くことで、XUL ファイル上に直接埋め込むこともできますが、 XUL ウィンドウの読み込みが少し速くなるため、別ファイルにスクリプトコードを置いて読み込むようにする方がお勧めです。 この場合、<code><code id="a-src"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/src">src</a></code></code> 属性が外部スクリプトファイルにリンクするのに用いられます。</p>
+
+<div class="highlight">
+<p>Our find files example</p>
+
+<h5 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AB.E3.82.B9.E3.82.AF.E3.83.AA.E3.83.97.E3.83.88.E3.82.92.E8.BF.BD.E5.8A.A0" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AB.E3.82.B9.E3.82.AF.E3.83.AA.E3.83.97.E3.83.88.E3.82.92.E8.BF.BD.E5.8A.A0">ファイル検索ダイアログにスクリプトを追加</h5>
+
+<p>それでは、ファイル検索ダイアログにスクリプトを追加してみましょう。 スクリプトファイルはどのような名前でも問題はありませんが、通常は XUL ファイルと同じにして、拡張子を .js にします。 したがって、この例の場合は findfile.js を使用します。 以下の行を <code><code><a href="/ja/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> の開始タグの直後で、全ての要素の前に追加してください。</p>
+
+<pre class="eval"><span class="highlightred">&lt;script src="findfile.js"/&gt;</span>
+</pre>
+
+<p>実際にスクリプトファイルを作るのは、そこに書く内容を学んだ後にします。 そのファイルには、いくつかの関数を定義し、イベントハンドラからそれらを呼び出すことになります。</p>
+</div>
+
+<p>1 つ 1 つが別のスクリプトファイルを指している、複数の <code><code><a href="/ja/docs/Mozilla/Tech/XUL/script" title="script">script</a></code></code> タグを使用することで、 1 つの XUL ファイルに複数のスクリプトを読み込むことができます。 ファイルの指定は、相対 URL でも、絶対 URL でもかまいません。 例えば、次のような形式の URL を使うこと可能です。</p>
+
+<pre class="eval">&lt;script src="findfile.js"/&gt;
+&lt;script src="<a class="external" rel="freelink">chrome://findfiles/content/help.js</a>"/&gt;
+&lt;script src="<span class="nowiki">http://www.example.com/js/items.js</span>"/&gt;
+</pre>
+
+<p>なお、JavaScript 自体の使い方についての説明は、 かなり大きなトピックになってしまうのと、<a href="ja/JavaScript">他に役立つリソース</a>がたくさんあるため、 このチュートリアルでは行いません。</p>
+
+<div class="note">デフォルトでは、JavaScript コンソールには Web コンテンツで発生したエラーしか表示されません。 chrome の JavaScript で発生したエラーを表示させるためには、<code>javascript.options.showInConsole</code> <span style="border-bottom: 1px dashed green;" title="preference">設定</span>を true に変更する必要があります。 また、さらにデバッグを簡単にするためには <code>javascript.options.strict</code> を変更するのも有効です。 この値を true に設定すると、非標準の方法を使用した場合や、記述の不足、ロジックエラーによると思われる事象が検出されたときに、JavaScript コンソールに出力されるようになります。</div>
+
+<h3 id=".E3.82.A4.E3.83.99.E3.83.B3.E3.83.88.E3.81.B8.E3.81.AE.E5.BF.9C.E7.AD.94" name=".E3.82.A4.E3.83.99.E3.83.B3.E3.83.88.E3.81.B8.E3.81.AE.E5.BF.9C.E7.AD.94">イベントへの応答</h3>
+
+<p>スクリプトには、利用者や他の要因から発生する種々のイベントに対して応答するコードが含まれます。 イベントは、およそ 30 ほどあり、いくつか異なる方法で扱うことができます。 典型的なイベントは、ユーザがマウスのボタンやキーを押すことで発生します。 個々の XUL 要素は、いくつかの異なる状況に応じたイベントを送出することができます。 また、いくつかのイベントは、特定の要素からのみ送出されます。</p>
+
+<p>イベントには、個別に名前が付けられています。 例えば「mousemove」は、利用者がマウスを UI 要素上で動かしたときに送出されるイベントの名前です。 XUL は、<a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events/">DOM Events</a> で定義されているのと同じイベント機構を採用しています。 「利用者がマウスを移動させる」といった、イベントを送出する契機となる動作がされたとき、そのイベントタイプに対応したイベントオブジェクトが作成されます。 イベントオブジェクトには、マウスの位置や、押されたキーといった、様々なプロパティが設定されます。</p>
+
+<p>イベントは、フェーズごとに XUL に送信されます。</p>
+
+<ul>
+ <li>捕捉フェーズでは、イベントは、まずウィンドウに送信され、次に文書オブジェクトといった具合に、オブジェクトの親子関係を先祖側から順にたぐって、イベントが起きた XUL 要素に至るまでの各要素にイベントが送信されていきます。</li>
+ <li>対象フェーズでは、そのイベントが対象の XUL 要素に送信されます。</li>
+ <li>浮上}フェーズでは、イベントは、オブジェクトの親子関係を、親側に浮上していき、再びウィンドウに達するまでの各要素に順に送信されていきます。</li>
+</ul>
+
+<p>捕捉フェーズと浮上フェーズの両方で、イベントに応答することが可能です。 また、イベントの伝播が終了した後に、任意のデフォルト動作 (要素に組み込まれている挙動) が起動します。</p>
+
+<p>例えば、マウスをボックス内にあるボタン上で移動させた場合、「mousemove」イベントが生成されて、最初にウィンドウへ送信され、その後、文書、ボックスの順に送信されます。 これで捕捉フェーズが終了です。 次に、「mousemove」イベントはボタンへ送信されます。 最後に、浮上フェーズに入って、イベントは、ボックス、文書、ウィンドウの順で送信されます。 浮上フェーズは、本質的に捕捉フェーズの逆になります。 なお、いくつかのイベントでは、浮上フェーズが行われないことを補足しておきます。</p>
+
+<p>イベント伝播の各ステップでイベントを捉えるために、各要素にリスナーを結びつけることができます。 一つのイベントが、親子関係にある全ての要素に渡っていく仕組みのため、リスナーを結びつけるのは、ある特定の要素でも、より高い階層に位置する要素でもかまいません。 当然ですが、イベントを高位の要素で捉えるように結びつけた場合は、その要素が内包する全ての要素からの通知を受信することになり、イベントをボタンで捉えるように結びつけた場合は、そのボタンに関連するイベントのみを受信することになります。 この仕様は、同じコード、あるいは類似のコードを使って処理したい要素が複数ある場合に、有効に利用できます。</p>
+
+<p>最もよく使用されるイベントは「command」イベントです。 command イベントは、利用者によって要素を活性化が行われたとき、 具体的には、ボタンの押下、チェックボックスの変更、メニューからの項目選択などが行われた場合に送出されます。 command イベントは、複数の異なる方法による要素の活性化を自動的に処理するため、利用しやすいイベントです。 マウスを使ってボタンをクリックしたのか、Enter キーを押したのかに関係なく、command イベントは送出されます。</p>
+
+<p>イベントリスナーを要素に結びつける方法は 2 つあります。 1 つめは、属性を使用して、その属性値としてスクリプトを指定する方法です。 2 つめは、要素の <code><a href="ja/DOM/element.addEventListener">addEventListener</a></code> メソッドを呼び出して設定する方法です。 前者は、浮上中のイベントしか処理できませんが、記述が簡単になりやすい傾向があります。 後者を使うと、どちらのフェーズのイベントでも処理でき、 1 つの要素に同じイベントに対応する複数のリスナーを結びつけることが可能になります。 といっても、通常は、ほとんどのイベントで、属性形式の方がよく使われています。</p>
+
+<h3 id=".E5.B1.9E.E6.80.A7.E3.82.A4.E3.83.99.E3.83.B3.E3.83.88.E3.83.AA.E3.82.B9.E3.83.8A.E3.83.BC" name=".E5.B1.9E.E6.80.A7.E3.82.A4.E3.83.99.E3.83.B3.E3.83.88.E3.83.AA.E3.82.B9.E3.83.8A.E3.83.BC">属性イベントリスナー</h3>
+
+<p>属性形式を使うには、イベントリスナーを付けたい要素に、イベント名の前に「on」という語を付けた名前の属性を置きます。 例えば、「command」イベントに対応する属性は、「oncommand」になります。 この属性の値には、イベントが発生したときに実行するスクリプトを設定する必要があります。 通常、このコードは短く、分離されたスクリプトの方で定義された関数を呼び出すだけです。 ボタンが押されたときの応答の例を示します。</p>
+
+<p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_events_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_events_1.xul">表示</a></p>
+
+<pre class="eval">&lt;button label="OK" oncommand="alert('Button was pressed!');"/&gt;
+</pre>
+
+<p>発生した command イベントは浮上していくので、その要素を囲んでいる要素にイベントリスナーを置くことも可能です。 下の例では、リスナーはボックスに置かれており、両方の要素のイベントを受け取ります。</p>
+
+<p><span id="%E4%BE%8B_2"><a id="%E4%BE%8B_2"></a><strong>例 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_events_2.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_events_2.xul">表示</a></p>
+
+<pre class="eval">&lt;vbox oncommand="alert(event.target.tagName);"&gt;
+  &lt;button label="OK"/&gt;
+  &lt;checkbox label="Show images"/&gt;
+&lt;/vbox&gt;
+</pre>
+
+<p>この例では、command イベントが、button 要素や checkbox 要素から vbox 要素まで浮上して、そこで処理されます。 2 つめのリスナー (<code>oncommand</code> 属性) が button 要素に付けられた場合は、まず最初にそのコードが呼ばれ、次に vbox 要素のハンドラが呼ばれます。 イベントハンドラには、イベントオブジェクトが、「event」という名前の暗黙の引数として渡されます。 このオブジェクトは、イベントに関する固有の情報を得るために用いられます。 よく使われるプロパティの 1 つは、event の「target」プロパティで、イベントが実際に発生した要素を保持しています。 上の例では、target のタグ名を示すアラートを表示します。 この target プロパティは、浮上イベントを処理するときに役に立ちます。 例えば、ボタンの集合があって、全てを 1 つのスクリプトで扱うといった場合です。</p>
+
+<p>属性の構文が、HTML 文書のイベントに使われているものと似ていることに気づいていると思います。 実際、HTML と XUL は同じイベントメカニズムを共有しています。 一つ重要な違いは、ボタンへの応答として、HTML では「click」イベント (<code>onclick</code> 属性) が使われていますが、XUL では代わりに command イベントを使うべきであるということです。 XUL にも click イベントはありますが、 これはマウスのクリックに応答するだけで、キーボードを使用した場合には応答しません。 このため、XUL では マウスでのみ処理可能な要素を持つ理由がない限り、click イベントの使用は避けるべきです。 付け加えれば、command イベントは、要素が無効状態の場合は送信されませんが、click イベントは、無効かどうかにかかわらず送信されます。</p>
+
+<div class="highlight">
+<p>Our find files example</p>
+
+<h5 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AB.E3.83.8F.E3.83.B3.E3.83.89.E3.83.A9.E3.82.92.E8.BF.BD.E5.8A.A0" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AB.E3.83.8F.E3.83.B3.E3.83.89.E3.83.A9.E3.82.92.E8.BF.BD.E5.8A.A0">ファイル検索ダイアログにハンドラを追加</h5>
+
+<p>それでは、command ハンドラを、ファイル検索ダイアログの Find と Cancel ボタンに置いてみましょう。 Find ボタンを押すと検索が開始されるべきですが、この部分は実装しない予定ですので省略します。 しかし、Cancel ボタンは、押されたときにウィンドウを閉じるように動作するべきでしょう。 下のコードは、その方法を示しています。 また同様に、メニュー項目の Close にも同じコードを加えてみましょう。</p>
+
+<pre class="eval">&lt;menuitem label="Close" accesskey="c" <span class="highlightred">oncommand="window.close();"</span>/&gt;
+...
+
+&lt;button id="cancel-button" label="Cancel"
+     <span class="highlightred">oncommand="window.close();</span>"/&gt;
+</pre>
+
+<p>ここで 2 つのハンドラが追加されています。 <code><code id="a-oncommand"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/oncommand">oncommand</a></code></code> 属性が Close のメニュー項目に追加されました。 このハンドラを使用することで、利用者がメニュー項目をマウスでクリックした場合と、キーボードで選択した場合のどちらでもウィンドウを閉じることができます。 また、同様の <code><code id="a-oncommand"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/oncommand">oncommand</a></code></code> ハンドラがキャンセルボタンにも追加されています。</p>
+</div>
+
+<h3 id="DOM_.E3.82.A4.E3.83.99.E3.83.B3.E3.83.88.E3.83.AA.E3.82.B9.E3.83.8A.E3.83.BC" name="DOM_.E3.82.A4.E3.83.99.E3.83.B3.E3.83.88.E3.83.AA.E3.82.B9.E3.83.8A.E3.83.BC">DOM イベントリスナー</h3>
+
+<p>イベントハンドラを追加する 2 つめの方法は、要素の <code><a href="ja/DOM/element.addEventListener">addEventListener</a></code> メソッドを呼び出すことです。 これにより、イベントリスナーを動的に付けることができ、捕捉フェーズでイベントを捉えることが可能になります。 構文は以下のようになります。</p>
+
+<p><span id="%E4%BE%8B_3"><a id="%E4%BE%8B_3"></a><strong>例 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_events_3.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_events_3.xul">表示</a></p>
+
+<pre>&lt;button id="okbutton" label="OK"/&gt;
+
+&lt;script&gt;
+function buttonPressed(event){
+  alert('Button was pressed!');
+}
+
+var button = document.getElementById("okbutton");
+button.addEventListener('command', buttonPressed, true);
+&lt;/script&gt;
+</pre>
+
+<p><code><a href="ja/DOM/document.getElementById">getElementById()</a></code> 関数は、指定した id を持つ要素を返します。 この例の場合はボタンになります。 新規の捕捉イベントリスナーを追加するために、<code><a href="ja/DOM/element.addEventListener">addEventListener()</a></code> 関数を呼び出します。 最初の引数は、捉えるイベントの名前です。 2 つめの引数は、イベントが発生したときに呼び出されるイベントリスナー関数です。 最後の引数は、捕捉リスナーでは <code>true</code> でなければなりません。 最後の引数を <code>false</code> に設定することで、浮上フェーズで捉えるようにすることも可能です。 2 つめの引数で指定するイベントリスナー関数は、上の例の <code>buttonPressed</code> 関数の宣言で示したように、引数を 1 つ取って、そこにイベントオブジェクトが渡されます。</p>
+
+<div class="highlight"><span id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"><a id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"></a><strong>ここまでのファイル検索ダイアログの例</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-events.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-events.xul">表示</a></div>
+
+<p>次のセクションでは、イベントオブジェクトをさらに詳細に見ていきます。</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Scrolling_Menus" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:More_Event_Handlers">次のページ  »</a></p>
+</div>

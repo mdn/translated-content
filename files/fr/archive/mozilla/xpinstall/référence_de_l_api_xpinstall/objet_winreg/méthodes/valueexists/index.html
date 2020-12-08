@@ -1,0 +1,43 @@
+---
+title: valueExists
+slug: >-
+  Archive/Mozilla/XPInstall/Référence_de_l_API_XPInstall/Objet_WinReg/Méthodes/valueExists
+translation_of: Archive/Mozilla/XPInstall/Reference/WinReg_Object/Methods/valueExists
+---
+<p> </p>
+<h3 id="valueExists" name="valueExists">valueExists</h3>
+<p>Retourne si une valeur existe pour une clé données.</p>
+<h4 id="M.C3.A9thode_de" name="M.C3.A9thode_de">Méthode de</h4>
+<p>Objet <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_WinReg">WinReg</a></p>
+<h4 id="Syntaxe" name="Syntaxe">Syntaxe</h4>
+<pre class="eval">boolean valueExists ( chaîne key, chaîne value );
+</pre>
+<h4 id="Param.C3.A8tres" name="Param.C3.A8tres">Paramètres</h4>
+<p>La méthode <code>valueExists</code> a les paramètres suivants :</p>
+<dl>
+ <dt>
+  <code>key</code></dt>
+ <dd>
+  Une chaîne représentant le chemin de la clef.</dd>
+ <dt>
+  <code>value</code></dt>
+ <dd>
+  Une chaîne représentant la valeur à chercher.</dd>
+</dl>
+<h4 id="Retour" name="Retour">Retour</h4>
+<p>Une valeur booléenne : <code>true</code> si la clef existe et si l'utilisateur a accès en lecture, <code>false</code> dans le cas contraire.</p>
+<h4 id="Exemple" name="Exemple">Exemple</h4>
+<pre class="eval">winreg = getWinRegistry();
+if ( winreg != null )
+{
+    winreg.setRootKey( winreg.HKEY_LOCAL_MACHINE);
+    if(winreg.valueExists("SOFTWARE\\mozilla", "value name"))
+    {
+    //valueExists retourne true
+    } else {
+    //valueExists retourne false
+    }
+}
+</pre>
+<p><span class="comment">Interwiki Language Links</span></p>
+<p>{{ languages( { "en": "en/XPInstall_API_Reference/WinReg_Object/Methods/valueExists" } ) }}</p>

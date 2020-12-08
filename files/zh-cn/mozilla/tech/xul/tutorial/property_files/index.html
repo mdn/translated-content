@@ -1,0 +1,97 @@
+---
+title: 属性文件
+slug: Mozilla/Tech/XUL/Tutorial/Property_Files
+translation_of: Archive/Mozilla/XUL/Tutorial/Property_Files
+---
+<div id="page-top">
+ <div class="pageText" id="pageText">
+  <p> </p>
+  <p>    在脚本中，不能使用实体，用属性文件代替。</p>
+  <p> </p>
+  <div id="section_1">
+   <h3 class="editable" id="属性"><span>属性</span></h3>
+   <div class="editIcon">
+    <a href="../../../../en/XUL_Tutorial/Property_Files#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+   <p>    当你在XUL文件中使用DTD文件是恰当的。然而，脚本不解析实体。也就是说，如果你希望在脚本中显示信息而且你不知道到底要显示什么，请使用属性文件</p>
+   <p>    一个属性文件包含一系列字符串。你可以在DTD文件旁边找到属性文件（.properties后缀）。属性按照以下语法定义 name=value。实例如下。</p>
+   <pre>notFoundAlert=No files were found matching the criteria.
+deleteAlert=Click OK to have all your files deleted.
+resultMessage=%2$S files found in the %1$S directory.
+</pre>
+   <p>    上例中，属性文件包含桑属性，可以由脚本读取显示给用户。</p>
+  </div>
+  <div id="section_2">
+   <h3 class="editable" id="Stringbundles"><span>Stringbundles </span></h3>
+   <div class="editIcon">
+    <a href="../../../../en/XUL_Tutorial/Property_Files#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+   <p>   你可以写一段代码手动来读取属性，而在XUL中有一个 <code><span class="lang lang-en"><a href="../../../../en/XUL/stringbundle" rel="internal">stringbundle</a> </span></code>元素来帮你做。这个元素有一系列函数有属性文件中获取属性并得到本地化信息。这个元素有属性文件读取内容并为你建立一个属性列表。你可以通过名字来查找属性。</p>
+   <pre>&lt;stringbundleset id="strbundles"&gt;
+&lt;stringbundle id="strings" src="strings.properties"/&gt;
+&lt;/stringbundleset&gt;
+</pre>
+   <p>    这个元素会从与该XUL文件系统的目录中读取名为 'strings.properties'的文件。像其他非显示元素一样你可以使用一个 <code><span class="lang lang-en"><a href="../../../../en/XUL/stringbundleset" rel="internal">stringbundleset</a> <span style="font-family: Verdana,Tahoma,sans-serif;">来包含所以的</span></span></code><code><span class="lang lang-en"><a href="../../../../en/XUL/stringbundle" rel="internal">stringbundle</a> </span></code><code><span class="lang lang-en"><span style="font-family: Verdana,Tahoma,sans-serif;">。</span></span></code></p>
+   <div id="section_3">
+    <h4 class="editable" id="由_stringbundle获取字符串"><span>由 </span><code><span class="lang lang-en"><a href="../../../../en/XUL/stringbundle" rel="internal">stringbundle</a>获取字符串</span></code></h4>
+    <div class="editIcon">
+     <a href="../../../../en/XUL_Tutorial/Property_Files#" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+    <p>     <code><span class="lang lang-en"><a href="../../../../en/XUL/stringbundle" rel="internal">stringbundle</a> </span></code> 元素有一系列方法。首先是 <code>getString</code> 用于脚本读取字符串。</p>
+    <pre>var strbundle = document.getElementById("strings");
+var nofilesfound=strbundle.getString("notFoundAlert");
+
+alert(nofilesfound);
+</pre>
+    <ul>
+     <li>本例首先使用 <code>id 获得字符串束的一个引用</code></li>
+     <li>然后在属性文件中查找 'notFoundAlert' 字符串 <code>getString()</code> 函数返回字符串的值或 null （字符串不存在）。</li>
+     <li>最后把职工文本显示在提示框里。</li>
+    </ul>
+   </div>
+   <div id="section_4">
+    <h4 class="editable" id="文本格式"><span>文本格式</span></h4>
+    <div class="editIcon">
+     <a href="../../../../en/XUL_Tutorial/Property_Files#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+    <p>    <code>getFormattedString()</code>方法也根据名字从文本束中查找字符串，此外会按照格式控制代码 (如 <code>%S</code>) 将其后给出的数组内容替换入字符串。</p>
+    <pre>var dir = "/usr/local/document";
+var count = 10;
+
+var strbundle = document.getElementById("strings");
+var result = strbundle.getFormattedString("resultMessage", [ dir, count ]);
+
+alert(result);
+</pre>
+    <p>    本例显示如下。</p>
+    <pre>10 files found in the /usr/local/document directory.</pre>
+    <p>    你会注意到格式化代码 <code>%1$S</code> 及 <code>%2$S</code>被使用，替换顺序也和在数组中的不同。格式化代码 %<em>n</em>$S 直接描述替换参数的位置。尽管在不同语言中词序可能不同通过 <code>getFormattedString()</code>描述的顺序可以被写入属性文件。</p>
+   </div>
+  </div>
+  <div id="section_5">
+   <h3 class="editable" id="非ASCII码的换码符"><span>非ASCII码的换码符 </span></h3>
+   <div class="editIcon">
+    <a href="../../../../en/XUL_Tutorial/Property_Files#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+   <p>    （这可能不再正确：在 <a href="../../../../en/Localizing_extension_descriptions" rel="internal">Localizing extension descriptions</a>中说 “使用 UTF-8 编码(而非 BOM) 保证外文正确显示。” UTF-8 编码文本有效， 换码符同样有用。一些新想法的引入会更有用。）</p>
+   <p>    尽管大多数语言使用非ASCII字符集。属性文件只能使用ASCII字符集编制。然而，属性文件支持其他字符的换码形式： <code>\uXXXX</code> 这里的 XXXX 是字符码，因此，你的属性文件可以包含非ASCII字符，不过你需要把他们转换为换码形式。你可以使用 Sun's Java Development Kit (JDK)的 native2ascii 命令来完成它。</p>
+   <p>Gecko 1.8.x (or later) 支持属性文件以 UTF-8编码。你可以直接写入非ASCII字符。</p>
+   <p><br>
+    下一章，我们将讨论 XBL，它用于定义元素的行为（ <a href="../../../../en/XUL_Tutorial/Introduction_to_XBL" rel="internal">behavior of an element</a>.）</p>
+   <p> </p>
+   <div class="prevnext">
+    <p><span style="float: left;">« <a href="../../../../en/XUL_Tutorial/Localization" rel="internal">Previous</a></span> <span style="float: right;"><a href="../../../../en/XUL_Tutorial/Introduction_to_XBL" rel="internal">Next</a> »</span></p>
+   </div>
+   <p>  </p>
+   <p> </p>
+  </div>
+ </div>
+</div>
+<div class="printfooter" id="printfooter">
+ <hr>
+ <p>Retrieved from "<a href="../../../../En/XUL_Tutorial/Property_Files">https://developer.mozilla.org/En/XUL_Tutorial/Property_Files</a>"</p>
+</div>
+<div class="collapsed" id="languages">
+ <h5 id="Languages">Languages</h5>
+ <ul style="display: none;">
+  <li><a href="../../../../fr/Tutoriel_XUL/Les_fichiers_de_propri%c3%a9t%c3%a9s" rel="internal">Français</a></li>
+  <li><a href="../../../../pl/Kurs_XUL/Plik_w%c5%82asno%c5%9bci" rel="internal">Polski</a></li>
+  <li><a href="../../../../ja/XUL_Tutorial/Property_Files" rel="internal">日本語</a></li>
+ </ul>
+</div>
+<p> </p>

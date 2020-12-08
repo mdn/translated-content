@@ -1,0 +1,54 @@
+---
+title: modDateChanged
+slug: >-
+  Archive/Mozilla/XPInstall/Référence_de_l_API_XPInstall/Objet_File/Méthodes/modDateChanged
+translation_of: Archive/Mozilla/XPInstall/Reference/File_Object/Methods/modDateChanged
+---
+<p> </p>
+<h3 id="modDateChanged" name="modDateChanged">modDateChanged</h3>
+<p>Retourne si le fichier a été modifié depuis une certaine date.</p>
+<h4 id="M.C3.A9thode_de" name="M.C3.A9thode_de">Méthode de</h4>
+<p>Objet <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_File">File</a></p>
+<h4 id="Syntaxe" name="Syntaxe">Syntaxe</h4>
+<pre class="eval">boolean modDateChanged (FileSpecObject aSourceFolder, Number anOldDate);
+</pre>
+<h4 id="Param.C3.A8tres" name="Param.C3.A8tres">Paramètres</h4>
+<p>La méthode <code>modDateChanged</code> a les paramètres suivants :</p>
+<dl>
+ <dt>
+  <code>aSourceFolder</code></dt>
+ <dd>
+  Un objet
+  <i>
+   FileSpecObject</i>
+  représentant le fichier à interroger.</dd>
+ <dt>
+  <code>anOldDate</code></dt>
+ <dd>
+  Un nombre à double précision représentant la date.</dd>
+</dl>
+<h4 id="Retour" name="Retour">Retour</h4>
+<p>Une valeur booléenne indiquant si le fichier a été modifié ou non depuis la date spécifiée.</p>
+<h4 id="Description" name="Description">Description</h4>
+<p>Le plus souvent, la date passée comme second paramètre de la méthode <code>modDateChanged</code> est la valeur retournée par une méthode <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_File/M%c3%a9thodes/modDate">modDate</a> appliquée à un fichier séparé, comme dans l'exemple ci-dessous, dans lequel on compare les dates de modification des deux fichiers.</p>
+<h4 id="Exemple" name="Exemple">Exemple</h4>
+<pre class="eval">fileSource1 = getFolder("Program", "file1.txt");
+fileSource2 = getFolder("Program", "file2.txt");
+err1 = File.modDate(fileSource1);    // retourne la valeur de base
+
+err2 = File.modDateChanged(fileSource1, err1);
+logComment("File.modDateChanged doit retourner 'false' = " + err2);
+// La raison pour laquelle False est attendu, est que
+// nous comparons la valeur de date retournée pour
+// file1.txt avec le fichier réel file1.txt lui-même.
+// Ainsi, il n'y a pas de changement de la valeur de date (time stamp)
+
+err3 = File.modDateChanged(fileSource2, err1);
+logComment("File.modDateChanged doit retourner 'true' = " + err2);
+// La raison pour laquelle True est attendu, est que
+// nous comparons la valeur de date retournée pour
+// file1.txt avec un autre fichier, file2.txt, avec
+// une valeur de date différente.
+</pre>
+<p><span class="comment">Interwiki Languages Links</span></p>
+<p>{{ languages( { "en": "en/XPInstall_API_Reference/File_Object/Methods/modDateChanged" } ) }}</p>

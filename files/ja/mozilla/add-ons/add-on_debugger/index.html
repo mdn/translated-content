@@ -1,0 +1,66 @@
+---
+title: アドオンデバッガ
+slug: Mozilla/Add-ons/Add-on_Debugger
+translation_of: 'https://extensionworkshop.com/documentation/develop/debugging/'
+---
+<div class="geckoVersionNote">
+<p>The Add-on Debugger is new in Firefox 31.</p>
+</div>
+
+<p>Starting in Firefox 31, the Add-on Debugger lets you run the <a href="/en-US/docs/Tools/Debugger">JavaScript Debugger</a> in the context of an add-on.</p>
+
+<p>From Firefox 32 onwards you can also use the<a href="/en-US/docs/Tools/Web_Console"> Console</a>, to see logged messages and evaluate JavaScript in the add-on's context, and<a href="/en-US/docs/Tools/Scratchpad"> Scratchpad</a>, to conveniently evaluate multiline JavaScript in the add-on context and save it to a file.</p>
+
+<p>The Add-on Debugger is only available for <a href="/en-US/Add-ons/Bootstrapped_extensions">restartless</a> and <a href="/en-US/Add-ons/SDK">SDK-based add-ons</a>. It's still experimental: if you find bugs, we'd love it if you <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox&amp;component=Developer%20Tools%3A%20Debugger&amp;blocked=addon-dbg">filed them in Bugzilla</a>.</p>
+
+<p>For a quick introduction to the Add-on Debugger, see this screencast:</p>
+
+<p>{{EmbedYouTube("KU3Xsck7qy0")}}</p>
+
+<h2 id="Opening_the_Add-on_Debugger">Opening the Add-on Debugger</h2>
+
+<p>To enable the Add-on Debugger you need to check the "Enable chrome and addon debugging" and "Enable remote debugging" settings in Firefox.</p>
+
+<p>To do this, select "Toggle Tools" from the Web Developer menu in Firefox, open the <a href="/en-US/docs/Tools/Tools_Toolbox#Settings">Developer Tools Settings</a>, and check "Enable chrome and addon debugging" and "Enable remote debugging".</p>
+
+<p>Now open the Add-on Manager. Next to the entry for your add-on you will see a button labeled "Debug". Click this button to launch the debugger.</p>
+
+<p>Next you'll see a dialog asking you to accept an incoming connection. Click "OK", and the debugger will start in a separate window. Note that sometimes the debugger window is hidden by the main Firefox window.</p>
+
+<p>{{EmbedYouTube("DvNpUVJcG_E")}}</p>
+
+<h2 id="Using_the_Add-on_Debugger">Using the Add-on Debugger</h2>
+
+<p>The Add-on Debugger looks and behaves very much like the <a href="/en-US/docs/Tools/Browser_Toolbox">Browser Toolbox</a>, except that while the scope of the Browser Toolbox is the whole browser, the Add-on Debugger is focused on a specific add-on. Like the Browser Toolbox, a toolbar along the top lets you switch between a number of different tools. In Firefox 31 there's only one such tool, the JavaScript Debugger, but with Firefox 32 you also get the Console and Scratchpad.</p>
+
+<h3 id="The_JavaScript_Debugger">The JavaScript Debugger</h3>
+
+<p>This behaves just like the normal <a href="/en-US/docs/Tools/Debugger">JavaScript Debugger</a>, except its scope is the add-on rather than a web page. On the left-hand side it lists JavaScript sources:</p>
+
+<ul>
+ <li>at the top is <code>bootstrap.js</code>: either the one you've written if your add-on is a manually written <a href="/en-US/Add-ons/Bootstrapped_extensions">bootstrapped add-on</a>, or the one included by the SDK if your add-on is an SDK add-on.</li>
+ <li>next, if your add-on is an SDK add-on, you'll find your add-on's <code>main.js</code>, any <a href="/en-US/Add-ons/SDK/Guides/Module_structure_of_the_SDK#Local_Modules">local modules</a> shipping with your add-on, and any content scripts that are currently loaded</li>
+ <li>next, all the SDK modules used directly or indirectly by your add-on</li>
+</ul>
+
+<h4 id="Content_scripts">Content scripts</h4>
+
+<p>Content scripts are only listed if they are currently loaded. Also, if you set a breakpoint in a content script, it will not be active for instances of the content script which are loaded after the breakpoint is set.</p>
+
+<p>For example, suppose you have an add-on that attaches a content script to every tab the user loads. The content script adds a click handler to the page. As soon as you open a tab, this content script will be listed in the debugger. If you then set a breakpoint in the content script's click handler, then execution will pause whenever you click the page. But if you open a new tab, there are now two instances of the content script, and the breakpoint will not be enabled for the second instance You'll need to set a new breakpoint now if you want to it work for the second instance.</p>
+
+<p>We're investigating improvements to this in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1016046">bug 1016046</a>.</p>
+
+<h3 id="The_Console">The Console</h3>
+
+<p>The Console behaves just like the <a href="/en-US/docs/Tools/Web_Console">Web Console</a>, but its scope is the add-on rather than the web page.</p>
+
+<p>However, note that it actually runs in the context of the add-on's <code>bootstrap.js</code>, which may not be what you expect if your add-on uses the SDK: you won't see any objects defined in your add-on's <code>main.js</code>, and you won't see <code>require()</code> either. This issue is being tracked as <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1005193">bug 1005193</a>.</p>
+
+<p>You can execute Console statements in the context of <code>main.js</code> while execution is paused inside <code>main.js</code>.</p>
+
+<h3 id="The_Scratchpad">The Scratchpad</h3>
+
+<p>The Scratchpad behaves just like the normal <a href="/en-US/docs/Tools/Scratchpad">Scratchpad</a>, but its scope is the add-on rather than the web page.</p>
+
+<p>Like the Console, the add-on Scratchpad runs in the context of the add-on's <code>bootstrap.js</code> even if the add-on uses the SDK, and as with the Console you can execute Scratchpad code in the context of <code>main.js</code> while execution is paused inside <code>main.js</code>.do</p>

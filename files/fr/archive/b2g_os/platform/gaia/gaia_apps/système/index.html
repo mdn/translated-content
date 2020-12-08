@@ -1,0 +1,303 @@
+---
+title: Système
+slug: Archive/B2G_OS/Platform/Gaia/Gaia_apps/Système
+tags:
+  - Apps
+  - FTU
+  - Firefox OS
+  - Gaia
+  - JavaScript
+  - UI
+  - système
+  - écran de verrouillage
+translation_of: Archive/B2G_OS/Platform/Gaia/Gaia_apps/System
+---
+<div class="summary">
+<p><span class="seoSummary">L'application Système est la première application web chargée par Gecko lors de la <a href="https://developer.mozilla.org/fr/Firefox_OS/Platform/Architecture#D%C3%A9roulement_du_chargement_de_Firefox_OS">procédure de chargement de Firefox OS</a> ; elle gère un grand nombre de fonctionnalités qui sont requises pour le fonctionnement du système en général et ne font donc pas l'objet d'applications web individuelles. Cet article explique en détails comment Système fonctionne.</span></p>
+</div>
+
+<blockquote>
+<p>Any application that can be written in JavaScript, will eventually be written in JavaScript. -- Atwood's Law</p>
+</blockquote>
+
+<div class="note">
+<p><strong>Note</strong> : Le <a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/system">code source de l'application Système</a> se trouve dans le dépôt Github de Gaia.</p>
+</div>
+
+<h2 id="Comment_est_chargée_l'application_système">Comment est chargée l'application système</h2>
+
+<p>Quand Gecko essaye de démarrer l'application Système, il référence le manifest.webapp de Système et charge le fichier index.html référencé par le paramètre <code>launch_path</code> (<code>launch_path</code> vaut toujours /index.html pour les applications Gaia.) <code>index.html</code> contient les liens vers tous les styles et JavaScript du système dans sa globalité. Pour gérer un système mobile complet, l'application Système doit charger un grand nombre de ressources.</p>
+
+<p>Le processus de démarrage est lancé à partir de <code>bootstrap.js</code>, avec le code suivant :</p>
+
+<pre class="brush: js">window.addEventListener('load', function startup() {
+// define safelyLaunchFTU
+function safelyLaunchFTU() {
+  ...
+}
+
+if (Applications.ready) {
+  safelyLaunchFTU();
+} else {
+  ...
+}
+
+window.addEventListener('ftudone', function doneWithFTU() {
+  window.removeEventListener('ftudone', doneWithFTU);
+
+  var lock = window.navigator.mozSettings.createLock();
+  lock.set({
+    'gaia.system.checkForUpdates': true
+  });
+}
+
+  ...
+
+// With all important event handlers in place, we can now notify
+// Gecko that we're ready for certain system services to send us
+// messages (e.g. the radio).
+var evt = new CustomEvent('mozContentEvent',
+{ bubbles: true, cancelable: false,
+  detail: { type: 'system-message-listener-ready' } });
+  window.dispatchEvent(evt);
+}</pre>
+
+<p>Le code fonctionne comme ceci :</p>
+
+<ol>
+ <li>Système est une véritable application web exécutée dans un moteur de navigateur, toutes les ressources dont elle dépend doivent être chargées — y compris les styles et les images. Nous lançons donc tout au déclenchement de l'événement <a href="/fr/docs/Web/API/Window/onload" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>window.onload</code></a>.</li>
+ <li>Tout d'abord, nous préparons le lancement de l'expérience de première utilisation FTU (First Time Use) et de l'écran d'accueil avec la fonction <code>safelyLaunchFTU()</code>. Comme son nom l'indique, FTU n'est affichée que si l'utilisateur démarre Firefox OS pour la première fois.</li>
+ <li>Quand l'utilisateur appuie sur TERMINÉ dans le FTU, l'événement personnalisé <code>ftudone</code> est activé puis <code>bootstrap.js</code> se met en écoute sur cet événement dans l'attente de le traiter.</li>
+ <li>Ensuite, nous utilisons <a href="/fr/docs/Web/API/Settings_API" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>Settings API</code></a> (<code>navigator.mozSettings</code>) pour définir le réglage <code>gaia.system.checkForUpdates</code> sur <code>vrai</code>, ce qui indique que le système va rechercher les mises à jour.</li>
+ <li>Enfin, nous lançons l'événement personnalisé <code>window.dispatchEvent</code>,  via <code>CustomEvent</code>. C'est un modèle très important utilisé par Gaia pour les notifications systèmes et la communication avec Gecko. Dans le cas présent, l'application Gaia Système notifie à Gecko qu'elle est prête à se mettre en écoute et à gérer les événements.</li>
+</ol>
+
+<h2 id="Modularisation_instanciable">Modularisation instanciable</h2>
+
+<p>Le système lui-même évolue constamment vers plus de modularité et de flexibilité. Depuis la version 1.4, une initiative est en cours pour <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=912952">faire évoluer le module système vers un objet instanciable</a>.</p>
+
+<p>Une fois tout le code au-dessus exécuté, les références vers chaque composant système dans <code>bootstrap.js</code> seront de la forme suivante :</p>
+
+<pre class="brush: js">window.telephonySettings = new TelephonySettings();
+window.telephonySettings.start();</pre>
+
+<p>Le squelette du code source de <code>TelephonySettings()</code> serait :</p>
+
+<pre class="brush: js">(function(exports) {
+  'use strict';
+  function TelephonySettings() {
+    this.init_param = false;
+  }
+
+  TelephonySettings.prototype = {
+    // Initialzes all settings.
+    start: function() {
+      ...
+    },
+
+    // Clean all settings.
+    stop: function() {
+      ...
+    },
+
+    1st_method: function ts_1st_method() {
+      ...
+    },
+
+    2nd_method: function ts_2nd_method() {
+      ...
+    }
+  };
+
+  exports.TelephonySettings = TelephonySettings;
+
+}(window));</pre>
+
+<p>Ce modèle contribue à la modularisation des composants systèmes et rend ces derniers davantage testables.</p>
+
+<h2 id="Animations_de_démarrage_et_d'extinction">Animations de démarrage et d'extinction</h2>
+
+<p>Cette section explique comment l'application Système contrôle les animations de démarrage et d'extinction. <code>init_logo_handler.js</code> et <code>sleep_menu.js</code> gèrent ces animations de démarrage et d'arrêt du système.</p>
+
+<h3 id="Animations_de_démarrage">Animations de démarrage</h3>
+
+<p>L'action de l'animation de démarrage n'est en fait pas contenue dans la procédure principale de démarrage, mais il s'agit au contraire d'un hook installé par <code>EventListeners</code>.</p>
+
+<p>Le code de l'animation de démarrage dans <code>init_logo_handler.js</code> se déroule ainsi :</p>
+
+<p>Pour dessiner le logo ou l'animation une fois Gecko prêt à afficher quelque chose à l'écran, nous lançons le gestionnaire système approprié après le chargement du DOM, puis le logo est caché après le lancement d'un événement <code>ftudone</code> ou <code>ftuskip</code>. La méthode <code>_appendCarrierPowerOn</code>, contenue dans <code>init_logo_handler.js</code>, montre comment Gaia se prépare à lancer l'animation ou le logo de démarrage en attendant l'événement <code>DOMContentLoaded</code>. Le <code>logoLoader</code> est défini dans <code>logo_loader.js</code>.</p>
+
+<pre class="brush: js">var self = this;
+document.addEventListener('DOMContentLoaded', function() {
+  self.carrierLogo.appendChild(self.logoLoader.element);
+  self._setReady();
+});</pre>
+
+<p>Une fois le logo préparé, le système appelle la méthode <code>_setReady()</code> qui met en place un écouteur en attente de l'événement spécial <code>mozChromeEvent</code> avec le type <code>system-first-paint</code> pour indiquer que le système est prêt à dessiner sur l'écran.</p>
+
+<pre class="brush: js">var elem = this.logoLoader.element;
+  ...
+window.addEventListener('mozChromeEvent', function startVideo(e) {
+  if (e.detail.type == 'system-first-paint') {
+    window.removeEventListener('mozChromeEvent', startVideo);
+    if (elem &amp;amp;&amp;amp; elem.ended === false) {
+      elem.play();
+    }
+  }
+});</pre>
+
+<p>À ce stade, l'élément graphique est animé. Après déclenchement d'un événement <code>ftuopen</code> ou <code>ftuskip</code>, <code>init_logo_handler.js</code> invoque la méthode par défaut <code>handleEvent()</code> qui appelle à son tour la méthode <code>animate()</code> pour faire disparaître l'animation avec comme transition un effet de fondu.</p>
+
+<pre class="brush: js">init: function ilh_init(logoLoader) {
+  window.addEventListener('ftuopen', this);
+  window.addEventListener('ftuskip', this);
+    ...
+},
+
+handleEvent: function ilh_handleEvent() {
+  this.animate();
+},</pre>
+
+<h3 id="Animations_d'extinction">Animations d'extinction</h3>
+
+<p>Une fois le système prêt, un appui long sur le bouton marche/arrêt déclenche un événement <code>holdsleep</code>, tel que défini dans <code>hardware_button.js</code>. Ce script gère tous les événements "bouton physique pressé", dont marche/arrêt (veille), accueil, volume haut/bas et ainsi de suite.</p>
+
+<pre class="brush: js">HardwareButtonsSleepState.prototype.enter = function() {
+  this.timer = setTimeout(function() {
+    / * When the user holds Sleep button more than HOLD_INTERVAL. */
+    this.hardwareButtons.publish('holdsleep');
+    this.hardwareButtons.setState('base');
+  }.bind(this), this.hardwareButtons.HOLD_INTERVAL);
+};</pre>
+
+<p>L'animation d'extinction est traitée par <code>sleep_menu.js</code> ; ce script se met en écoute de l'événement <code>holdsleep</code> et affiche le dialogue du menu lorsqu'il est déclenché.</p>
+
+<pre class="brush: js">init: function sm_init() {
+    ...
+  window.addEventListener('holdsleep', this.show.bind(this));
+    ...
+}</pre>
+
+<p>Si l'utilisateur choisit d'éteindre l'appareil via les options de menu redémarrer ou éteindre, la fonction <code>startPowerOff()</code> est déclenchée, puis celle-ci appelle à son tour la fonction <code>LogoLoader()</code> qui a la charge de gérer l'affichage de l'animation d'arrêt.</p>
+
+<pre class="brush: js">handleEvent: function sm_handleEvent(evt) {
+  switch (evt.type) {
+    case 'click':
+      ...
+    this.handler(action);
+    break;
+    ...
+  }
+}
+
+handler: function sm_handler(action) {
+  switch (action) {
+    ...
+    case 'restart':
+      this.startPowerOff(true);
+      break;
+
+    case 'power':
+      this.startPowerOff(false);
+      break;
+    ...
+  }
+}</pre>
+
+<h2 id="Fonctions_systèmes">Fonctions systèmes</h2>
+
+<p>L'application Système gère de nombreuses fonctions et responsabilités, le fait que certaines d'entre-elles soient de son ressort pourrait vous surprendre. L'application Système s'occupe de la gestion de la barre d'état et de la zone de notifications, du verrouillage SIM, du gestionnaire de mises à jour, du lanceur de l'écran d'accueil, de la gestion des fenêtres des applis web, et d'autres choses encore. Cette section aborde quelques-unes des fonctions desservies les plus importantes.</p>
+
+<h3 id="Barre_d'état_et_zone_de_notifications">Barre d'état et zone de notifications</h3>
+
+<p>La barre d'état et le menu déroulant de Système (Gaia l'appelle la <em>zone de notification </em>; Android emploie le terme de<em> barre de notification</em>) sont gérés par <code>statusbar.js</code> et <code>utility_tray.js</code>. À l'intérieur du fichier <code>index.html</code> de l'application, les éléments de la barre d'état sont définis dans <code>&lt;div id="statusbar" data-z-index-level="statusbar"&gt;</code> tandis que ceux de la zone de notification résident dans la structure suivante :</p>
+
+<pre class="brush: html">&lt;div id="utility-tray" data-z-index-level="utility-tray"&gt;
+  &lt;div id="notifications-container"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+<p>Il existe certains panneaux spéciaux dans la zone de notification, tels que le gestionnaire de mises à jour, le gestionnaire des appels d'urgence, la notification de surveillance du stockage, les contrôles et notification de lecture de médias, l'état des transferts Bluetooth et l'outil pour changer de méthode de saisie clavier (IME). Les gestionnaires et styles correspondants sont situés dans les répertoires <code>js</code>/ et <code>style/</code>.</p>
+
+<h3 id="Lanceurs_d'applications_spéciaux">Lanceurs d'applications spéciaux</h3>
+
+<p>L'application Système dispose de trois lanceurs spéciaux qui appellent des applications web séparées lorsque c'est nécessaire :</p>
+
+<ul>
+ <li>Le lanceur de l'écran d'accueil : Lance l'application Écran d'accueil (Homescreen), qui affiche l'écran d'accueil lorsque l'utilisateur appuie sur le bouton <em>Accueil</em>, ou si une application web plante ou est quittée d'une autre manière.</li>
+ <li>Le lanceur de l'écran de verrouillage : Lance l'application Écran de verrouillage (Lockscreen), qui affiche l'écran de verrouillage à chaque fois qu'un utilisateur active l'écran.</li>
+ <li>Le lanceur FTU : Lance l'application d'expérience FTU. Ceci n'arrive qu'une fois car les utilisateurs verront l'expérience FTU uniquement la première fois qu'ils démarreront un nouvel appareil FirefoxOS (ou qu'ils réinitialiseront leur appareil à son réglage d'usine). De plus, l'application web FTU ne permet pas à l'utilisateur de sortir de l'application en se servant du bouton Accueil.</li>
+</ul>
+
+<h3 id="Écran_de_verrouillage">Écran de verrouillage</h3>
+
+<p>Le principal point d'entrée de l'application Lockscreen est <code>system/js/lockscreen.js</code>. Sur cet écran, l'utilisateur peut procéder au déverrouillage, déclencher l'appareil photo sécurisé et contrôler le lecteur de musiques.</p>
+
+<h3 id="Appels_d'urgence">Appels d'urgence</h3>
+
+<p>Le code du téléphone d'urgence est contenu dans le répertoire <code>gaia/apps/system/emergency-call/</code>. Il s'agit d'une version simplifiée de l'application Téléphone (Dialer) qui permet à l'utilisateur d'y accéder depuis le <a href="#Dialogue_de_déverrouillage_PIN_de_la_carte_SIM">Dialogue de déverrouillage PIN de la carte SIM</a> pour composer des appels d'urgence vers des services comme la police.</p>
+
+<h2 id="Interface_utilisateur_du_système">Interface utilisateur du système</h2>
+
+<p>L'application Système assure la gestion de quasiment toute l'interface utilisateur du système, celle-ci étant constituée essentiellement de dialogues comme ceux de l'avertissement de volume, du déverrouillage PIN SIM, de la diffusion cellulaire et d'éléments d'interface utilisateur affectant le comportement des fenêtres, comme le bouton d'accueil logiciel.</p>
+
+<h3 id="Niveau_z-index">Niveau z-index</h3>
+
+<p>Avec le fichier <code>index.html</code> de l'application Système, l'attribut <code>data-z-index-level</code> est intégré à de nombreux composants, par exemple :</p>
+
+<pre class="brush: html">&lt;div id="sleep-menu" data-z-index-level="sleep-menu"&gt;
+  ...
+&lt;/div&gt;</pre>
+
+<p>Les z-index-levels correspondants sont définis dans <code>system/style/zindex.css</code>, par exemple :</p>
+
+<pre class="brush: css">#screen &gt; [data-z-index-level="sleep-menu"] {
+  z-index: 65536;
+}
+
+...
+
+#screen &gt; [data-z-index-level="app"] &gt; .appWindow {
+  z-index: 3;
+}</pre>
+
+<p>Les paramètres z-index sont organisés en fonction de l'ordre dans lequel les éléments sont affichés à l'écran — les éléments qui doivent apparaître au-dessus dans la hiérarchie visuelle se voient attribués un nombre plus élevé. C'est de cette manière que l'application Système traite à un niveau basique la gestion des fenêtres.</p>
+
+<h3 id="Le_bouton_d'accueil_logiciel">Le bouton d'accueil logiciel</h3>
+
+<p>Le bouton d'accueil logiciel est une alternative au bouton d'accueil, automatiquement activé sur les appareils dépourvus de bouton d'accueil matériel, e.g. Nexus 4. Pour contrôler son apparence, Gecko fournit une caractéristique média propriétaire appelée <code>-moz-physical-home-button</code> qui peut être utilisée dans une requête média afin d'appliquer des styles basés sur la présence d'un bouton d'accueil matériel. Le gestionnaire de fenêtres alloue si nécessaire un certain espace d'écran pour le bouton d'accueil logiciel.</p>
+
+<p>Vous verrez ceci dans <code>system/style/window.css</code> (et dans beaucoup d'autres fichiers de styles systèmes) :</p>
+
+<pre class="brush: css">@media not all and (-moz-physical-home-button) {
+  #screen:not(.software-button-disabled) &gt; #windows &gt; .appWindow {
+    bottom: 5rem;
+  }
+ }</pre>
+
+<h3 id="Geste_de_retour_à_l'accueil_(mouvement_du_bas_vers_le_haut_de_l'écran)">Geste de retour à l'accueil (mouvement du bas vers le haut de l'écran)</h3>
+
+<p>Le geste tactile de retour à l'accueil est une autre alternative au bouton d'accueil matériel ; il peut être activé dans les <a href="/fr/Firefox_OS/Déboguer/Les_paramètres_développeurs">Paramètres développeurs</a>, et le code qui le contrôle se trouve dans <code>system/js/home_gesture.js</code>. Le geste consiste en un glissement à partir du bas de l'écran, et peut être utilisé pour fermer des applications, par exemple.</p>
+
+<p>Ce geste est automatiquement activé sur les tablettes Firefox OS. Le seuil défini dans <code>gaia/shared/js/screen_layout.js</code> est utilisé pour détecter si l'appareil est une tablette ou non.</p>
+
+<h3 id="Dialogue_d'avertissement_du_volume">Dialogue d'avertissement du volume</h3>
+
+<p>Le code qui contrôle le dialogue d'avertissement de volume se situe dans <code>system/js/sound_manager.js</code>. Ce dialogue apparaîtra quand toutes les conditions suivantes seront remplies :</p>
+
+<ul>
+ <li>Les écouteurs sont branchés.</li>
+ <li>Un niveau sonore de 85dB est dépassé.</li>
+ <li>La lecture est en cours sur le canal audio.</li>
+</ul>
+
+<h3 id="Dialogue_de_déverrouillage_PIN_de_la_carte_SIM">Dialogue de déverrouillage PIN de la carte SIM</h3>
+
+<p>Le code qui contrôle le dialogue de déverrouillage PIN de la carte SIM est situé dans <code>system/js/simcard_dialog.js</code> — cette boîte de dialogue s'affiche quand l'option de verrouillage par code est activée, l'écran de verrouillage étant affiché. L'application ouvrante doit également avoir les permissions de téléphonie précisées dans son fichier <code>manifest.webapp</code> (ce qui est le cas de l'application Système).</p>
+
+<div class="note">
+<p><strong>Note</strong> : la boîte de dialogue de déverrouillage PIN de la carte SIM n'est pas affichée tant que le téléphone est en mode Avion.</p>
+</div>
+
+<p> </p>

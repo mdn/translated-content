@@ -1,0 +1,71 @@
+---
+title: Structure d'un paquet installable
+slug: Bundles
+tags:
+  - API_du_toolkit
+translation_of: Archive/Mozilla/Bundles
+---
+<p> </p>
+<p>Les <a href="/fr/Empaqueter_une_application_XUL" title="fr/Empaqueter_une_application_XUL">applications XULRunner</a>, les <a href="/fr/Extensions" title="fr/Extensions">extensions</a> et les <a href="/fr/Th%C3%A8mes" title="fr/Thèmes">thèmes</a> partagent tous une structure de répertoire commune, et dans certains cas le même paquet peut être utilisé comme une application XULRunner indépendante aussi bien que comme une extension installable dans une autre application. La structure de base des paquets (bundles) peut contenir n'importe quels fichiers parmi ceux-ci :</p>
+<pre class="eval">/<a href="/fr/Manifestes_d'installation" title="fr/Manifestes_d'installation">install.rdf</a>                        <em>Manifeste d'installation de thème/extension</em>
+/<a href="/fr/Empaqueter_une_application_XUL" title="fr/Empaqueter_une_application_XUL">application.ini</a>                    <em>Manifeste de lancement de l'application</em>
+/components/*                       <em>Fichiers XPT et composants .so/.dll</em>/.js (&gt;=1.7)
+/<a href="/fr/Construire_une_extension#Fichiers_par_d.C3.A9faut" title="fr/Construire_une_extension#Fichiers_par_d.C3.A9faut">defaults/preferences/*.js</a>          <em>Préférences par défaut</em>              (&gt;=1.7)
+/plugins/*                          <em>Plugins NPAPI</em>                       (&gt;=1.8)
+/<a href="/fr/Enregistrement_chrome" title="fr/Enregistrement_chrome">chrome.manifest</a>                    <em>Manifestes d'enregistrements chrome</em> (&gt;=1.8)
+/<a href="/fr/Ic%C3%B4nes_de_fen%C3%AAtre" title="fr/Icônes_de_fenêtre">chrome/icons/default/*</a>             <em>Icônes de fenêtre</em>                   (&gt;=1.8)
+</pre>
+<p>Bien sûr, une extension n'a pas besoin de (et normalement n'aura pas) tous ces répertoires. Les thèmes sont limités pour des raisons de sécurité et ne peuvent normalement fournir qu'un <a href="/fr/Enregistrement_chrome" title="fr/Enregistrement_chrome">chrome.manifest</a> enregistrant le thème et un fichier JAR.</p>
+<p> </p>
+<h3 id="Sous-r.C3.A9pertoires_sp.C3.A9cifiques_.C3.A0_une_plateforme" name="Sous-r.C3.A9pertoires_sp.C3.A9cifiques_.C3.A0_une_plateforme">Sous-répertoires spécifiques à une plateforme</h3>
+<p>Dans certains cas, une seule extension ou application peut avoir besoin d'inclure des composants binaires ou plugins pour plusieurs plateformes, ou des auteurs de thème peuvent vouloir inclure plusieurs fichiers JAR spécifiques à une plateforme. Pour faciliter les choses dans le premier cas, le chargeur d'extension/application possède des sous-répertoires spéciaux prévus spécialement pour les fichiers spécifiques à une plateforme (à partir du toolkit/Gecko 1.8, Firefox/Thunderbird 1.5). La chaîne de plateforme est définie au cours du processus de compilation du toolkit à une valeur unique pour la combinaison du système d'exploitation, l'architecture du processeur et le compileur. Le format de la chaîne de plateforme est :</p>
+<pre class="eval"><em>{OS_TARGET}_{<a href="/fr/XPCOM_ABI" title="fr/XPCOM_ABI">TARGET_XPCOM_ABI</a>}</em>
+</pre>
+<p>Tous les fichiers qui sont chargés depuis le répertoire principal de l'extension sont chargés depuis le sous-répertoire</p>
+<pre class="eval">/platform/<em>{chaîne de plateforme}</em>
+</pre>
+<p>si celui-ci existe. Par exemple, si un vendeur de plugin désire fournir un plugin aux utilisateurs de Linux, Macintosh et Windows, il fournira les fichiers suivants :</p>
+<pre class="eval">/platform/Linux_x86-gcc3/plugins/libMyPlugin.so
+/platform/WINNT_x86-msvc/plugins/MyPlugin.dll
+/platform/Darwin_ppc-gcc3/plugins/libMyPlugin.dylib
+/platform/Linux_x86-gcc3/components/myComponents.so
+
+</pre>
+<p>Étant donné que les fichiers XPT ne dépendent pas de la plateforme, tous les éventuels fichiers XPT associés seront placés dans le répertoire de composants génériques :</p>
+<pre class="eval">/components/MyPlugin.xpt
+</pre>
+<p>Si une extension a du code spécifique à une plateforme non binaire (comme du code utilisant la base de registres de Windows depuis un script), elle peut aussi utiliser l'identifiant du système d'exploitation comme sous-répertoire de plateforme :</p>
+<pre class="eval">/platform/WINNT/components/registerDoctype.js
+</pre>
+<p>Lorsque des fichiers JAR spécifiques à une plateforme sont utilisés, chaque répertoire de plateforme doit avoir son propre fichier <code>chrome.manifest</code> :</p>
+<pre class="eval">chrome.manifest
+chrome/mytheme-base.jar
+platform/Darwin/chrome.manifest
+platform/Darwin/chrome/mytheme-mac.jar
+platform/WINNT/chrome.manifest
+platform/WINNT/chrome/mytheme-win.jar
+</pre>
+<p>Le chargeur d'application/extension analyse d'abord le répertoire de base, puis les répertoires de plateforme applicables (d'abord /{OS_TARGET}/, ensuite /{OS_TARGET}_{<a href="/fr/XPCOM_ABI" title="fr/XPCOM_ABI">TARGET_XPCOM_ABI</a>}/). Lorsque les préférences par défaut sont définies dans plusieurs répertoires, ceux qui sont chargés en dernier ont priorité sur ceux chargés auparavant.</p>
+<h3 id="Fichiers_d.27extension_sp.C3.A9cifiques_.C3.A0_une_application" name="Fichiers_d.27extension_sp.C3.A9cifiques_.C3.A0_une_application">Fichiers d'extension spécifiques à une application</h3>
+<p>En plus des fichiers d'extension listés plus haut, les applications peuvent lire des fichiers supplémentaires depuis des extensions. Par exemple, <a href="/fr/Firefox_1.5_pour_les_d%C3%A9veloppeurs" title="fr/Firefox_1.5_pour_les_développeurs">Firefox 1.5</a> et supérieur cherchera les plugins de recherche Sherlock dans</p>
+<pre class="eval">/searchplugins/*.src
+</pre>
+<p><a href="/fr/Firefox_2_pour_les_d%C3%A9veloppeurs" title="fr/Firefox_2_pour_les_développeurs">Firefox 2</a> (et supérieurs) recherchera également les <a href="/fr/Cr%C3%A9ation_de_plugins_MozSearch" title="fr/Création_de_plugins_MozSearch">plugins MozSearch et OpenSearch</a> dans</p>
+<pre class="eval">/searchplugins/*.xml
+</pre>
+<p>ainsi que les dictionnaires Myspell dans</p>
+<pre class="eval">/dictionaries/*.{aff|dic}
+</pre>
+<h3 id="R.C3.A9f.C3.A9rences_officielles_de_l.27API_du_toolkit" name="R.C3.A9f.C3.A9rences_officielles_de_l.27API_du_toolkit">Références officielles de l'<a href="/fr/API_du_toolkit" title="fr/API_du_toolkit">API du toolkit</a></h3>
+<p>
+  </p><ul>
+    <li><a href="/en/Bundles" title="en/Bundles">Structure of an Installable Bundle</a>: describes the common structure of installable bundles, including extensions, themes, and XULRunner applications</li>
+    <li><a href="/en/Extension_Packaging" title="en/Extension_Packaging">Extension Packaging</a>: specific information about how to package extensions</li>
+    <li><a href="/en/Theme_Packaging" title="en/Theme_Packaging">Theme Packaging</a>: specific information about how to package themes</li>
+    <li><a href="/en/Multiple_Item_Packaging" title="en/Multiple_Item_Packaging">Multiple-item Extension Packaging</a>: specific information about multiple-item extension XPIs</li>
+    <li><a href="/en/XUL_Application_Packaging" title="en/XUL_Application_Packaging">XUL Application Packaging</a>: specific information about how to package XULRunner applications</li>
+    <li><a href="/en/Chrome_Registration" title="en/Chrome_Registration">Chrome Registration</a></li>
+    <li><a href="/en-US/docs/Mozilla/Tech/XUL/Printing">Printing in XUL Apps</a></li>
+  </ul>
+
+<p> </p>

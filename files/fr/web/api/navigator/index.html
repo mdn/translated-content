@@ -1,0 +1,164 @@
+---
+title: Navigator
+slug: Web/API/Navigator
+tags:
+  - API
+  - DOM4
+  - Interface
+  - Navigateur
+  - Références(2)
+  - Web
+translation_of: Web/API/Navigator
+---
+<p>{{ APIRef("DOM4") }}</p>
+
+<p>L'interface <code><strong>Navigator</strong></code> représente l'état et l'identité de l'agent utilisateur. Elle permet aux scripts de l'interroger et de s'enregister eux-mêmes pour poursuivre certaines tâches.</p>
+
+<p>Un objet <code>Navigator</code> peut être récupéré en utilisant la propriété en lecture seule {{domxref("Window.navigator")}}.</p>
+
+<h2 id="Propriétés">Propriétés</h2>
+
+<p><em>N'hérite d'aucune propriété, mais implémente celles définies dans </em> <em>{{domxref("NavigatorID")}}, {{domxref("NavigatorLanguage")}}, {{domxref("NavigatorOnLine")}}, {{domxref("NavigatorContentUtils")}}, {{domxref("NavigatorStorage")}}, {{domxref("NavigatorStorageUtils")}}, {{domxref("NavigatorConcurrentHardware")}}, {{domxref("NavigatorPlugins")}}</em> <em> et </em> <em>{{domxref("NavigatorUserMedia")}}.</em></p>
+
+<h3 id="Standard">Standard</h3>
+
+<dl>
+ <dt>{{domxref("Navigator.activeVRDisplays")}} {{readonlyInline}}{{experimental_inline}}</dt>
+ <dd>Retourne un tableau contenant chaque objet {{domxref("VRDisplay")}} qui est actuellement en train d'être présenté ({{domxref("VRDisplay.ispresenting")}} <code>est true <em>(vrai)</em></code>).</dd>
+</dl>
+
+<dl>
+ <dt>{{domxref("NavigatorID.appCodeName")}} {{readonlyInline}}{{experimental_inline}}</dt>
+ <dd>Retourne le nom de "code" interne du navigateur actuel. Ne vous fiez pas à cette propriété pour renvoyer la valeur correcte.</dd>
+ <dt>{{domxref("NavigatorID.appName")}} {{readonlyInline}}{{experimental_inline}}</dt>
+ <dd>Retourne une {{domxref("DOMString")}} <em>(chaîne de caractères)</em> avec le nom officiel du navigateur. Ne vous fiez pas à cette propriété pour renvoyer la valeur correcte.</dd>
+ <dt>{{domxref("NavigatorID.appVersion")}} {{readonlyInline}}{{experimental_inline}}</dt>
+ <dd>Retourne la version du navigateur en tant que {{domxref("DOMString")}} <em>(chaîne de caractères)</em>. Ne vous fiez pas à cette propriété pour renvoyer la valeur correcte.</dd>
+ <dt>{{domxref("Navigator.battery")}} {{readonlyInline}}</dt>
+ <dd>Retourne un objet {{domxref("BatteryManager")}} que vous pouvez utiliser pour récupérer des information sur l'état de chargement de la batterie.</dd>
+ <dt>{{domxref("Navigator.connection")}} {{readonlyInline}}{{experimental_inline}}</dt>
+ <dd>Fournit un objet  {{domxref("NetworkInformation")}} contenant les informations sur la connection réseau du matériel.</dd>
+ <dt>{{domxref("Navigator.cookieEnabled")}} {{readonlyinline}}</dt>
+ <dd>Retourne "false" <em>(faux)</em> <span id="result_box" lang="fr"><span>si la définition d'un cookie est ignorée et "true" <em>(vrai)</em> dans le cas contraire.</span></span></dd>
+ <dt>{{domxref("NavigatorGeolocation.geolocation")}} {{readonlyInline}}</dt>
+ <dd>Retourne un objet {{domxref("Geolocation")}} permettant d'accéder à la géolocalisation de l'appareil.</dd>
+ <dt>{{domxref("NavigatorConcurrentHardware.hardwareConcurrency")}} {{readOnlyInline}}</dt>
+ <dd>Retourne le nombre de processeurs logiques disponibles</dd>
+ <dt>{{domxref("NavigatorPlugins.javaEnabled")}} {{readonlyInline}}{{experimental_inline}}</dt>
+ <dd>Retourne une marque ("flag") {{domxref("Boolean")}} indiquant si java est activé ou non.</dd>
+ <dt>{{domxref("NavigatorLanguage.language")}} {{readonlyInline}}</dt>
+ <dd>Retourne une {{domxref("DOMString")}} <em>(chaîne de caractères)</em> représentant la langue préférée de l'utilisateur, généralement celle de l'interface utilisateur du navigateur. La valeur <code>Null</code> est retournée quand elle est inconnue.</dd>
+ <dt>{{domxref("NavigatorLanguage.languages")}} {{readonlyInline}}</dt>
+ <dd>Retourne un tableau de {{domxref("DOMString")}} représentant les langues connues par l'utilisateur, par ordre de préférence.</dd>
+ <dt>{{domxref("NavigatorPlugins.mimeTypes")}} {{readonlyInline}}{{experimental_inline}}</dt>
+ <dd>Retourne un {{domxref("MimeTypeArray")}} listant les types MIME supportés par le navigateur.</dd>
+ <dt>{{domxref("NavigatorOnLine.onLine")}} {{readonlyInline}}</dt>
+ <dd>Retourne un {{domxref("Boolean")}} indiquant si le navigateur fonctionne avec une connexion internet.</dd>
+ <dt>{{domxref("Navigator.oscpu")}}</dt>
+ <dd>Retourne une chaîne de caractères représentant le système d'exploitation utilisé.</dd>
+ <dt>{{domxref("Navigator.permissions")}} {{readonlyinline}}{{experimental_inline}}</dt>
+ <dd>Retourne un objet {{domxref("Permissions")}} qui peut être utilisé pour interroger et mettre à jour les permissions des API couvertes par <a href="https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API">Permissions API</a>.</dd>
+</dl>
+
+<dl>
+ <dt>{{domxref("NavigatorID.platform")}} {{readonlyInline}}{{experimental_inline}}</dt>
+ <dd>Retourne une chaîne de caractères représentant la plateforme du navigateur. Ne pas attendre de cette fonction qu'elle retourne une valeur significative.</dd>
+ <dt>{{domxref("NavigatorPlugins.plugins")}} {{readonlyInline}}{{experimental_inline}}</dt>
+ <dd>Retourne un {{domxref("PluginArray")}} listant les modules installés sur le navigateur.</dd>
+ <dt>{{domxref("NavigatorID.product")}} {{readonlyInline}} {{experimental_inline}}</dt>
+ <dd>Retourne toujours <code>'Gecko'</code>, sur n'importe quel navigateur. Cette propriété est gardée juste dans un but de compatibilité.</dd>
+</dl>
+
+<dl>
+ <dt>{{domxref("Navigator.serviceWorker")}} {{readonlyInline}}</dt>
+ <dd>Retourne un objet {{domxref("ServiceWorkerContainer")}}, contenant l'accès à l'enregistrement, la suppression, la mise à jour et la communication avec l'objet {{domxref("ServiceWorker")}} pour les <a href="https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window">documents associés</a>.</dd>
+ <dt>{{domxref("Navigator.storage")}} {{readonlyinline}}</dt>
+ <dd>Retourne un objet unique {{domxref('StorageManager')}} utilisé pour gérer les autorisations de persistance et estimer l'espace disponible sur une base site par site / application par application.</dd>
+</dl>
+
+<dl>
+ <dt>{{domxref("NavigatorID.userAgent")}} {{readonlyInline}}</dt>
+ <dd>Retourne la chaîne de caractères de l'agent utilisateur du navigateur actuel.</dd>
+</dl>
+
+<h3 id="Methods" name="Methods">Non-standard</h3>
+
+<div class="note">
+<p><span id="result_box" lang="fr"><span>Les périphériques Firefox OS ajoutent d'autres propriétés non standard.</span> <span>Vous pouvez les consulter sur l'article </span></span> <a href="https://developer.mozilla.org/fr/docs/Mozilla/Firefox_OS/API/Navigator">Firefox OS Navigator extensions</a></p>
+</div>
+
+<dl>
+ <dt>{{domxref("Navigator.buildID")}} {{non-standard_inline}}</dt>
+ <dd>Retourne l'identifiant constructeur du navigateur (par exemple, "2006090803").</dd>
+ <dt>{{domxref("Navigator.cookieEnabled")}} {{non-standard_inline}}</dt>
+ <dd>Retourne un booléen indicant si les cookies sont activés dans le navigateur ou pas.</dd>
+ <dt>{{domxref("Navigator.credentials")}} {{non-standard_inline}}</dt>
+ <dd>Retourne une interface {{domxref("CredentialsContainer")}} <span id="result_box" lang="fr"><span>qui expose des méthodes pour demander des informations d'identification et avertir l'agent utilisateur lorsque des événements intéressants se produisent, tels que la connexion réussie ou la déconnexion.</span></span></dd>
+ <dt>{{domxref("navigator.doNotTrack")}} {{non-standard_inline}}</dt>
+ <dd><span id="result_box" lang="fr"><span>Indique la valeur de la préférence de non-suivi de l'utilisateur.</span> <span>Lorsque cette valeur est "oui", votre site Web ou votre application ne doit pas suivre l'utilisateur.</span></span></dd>
+ <dt>{{domxref("Navigator.id")}} {{non-standard_inline}}</dt>
+ <dd>Retourne l'objet {{domxref("window.navigator.id", "id")}} <span id="result_box" lang="fr"><span>que vous pouvez utiliser pour ajouter le support pour</span></span> <a href="/en-US/docs/BrowserID" title="BrowserID">BrowserID</a> vers votre site web.</dd>
+ <dt>{{domxref("Navigator.mediaDevices")}} {{non-standard_inline}}</dt>
+ <dd><span id="result_box" lang="fr"><span>Renvoie une référence à un objet {{domxref ("MediaDevices")}} qui peut ensuite être utilisée pour obtenir des informations sur les périphériques multimédia disponibles {{domxref ("MediaDevices.enumerateDevices ()")}}</span>, trouver</span><span id="result_box" lang="fr"><span> quelles propriétés contraignantes sont supportées par les médias de l'ordinateur de l'utilisateur et l'agent utilisateur {{domxref ("MediaDevices.getSupportedConstraints ()")}}), et demander l'accès aux médias à l'aide de {{domxref ("MediaDevices.getUserMedia ()</span> <span>")}}.</span></span></dd>
+ <dt>{{domxref("Navigator.mozNotification")}} {{deprecated_inline("22")}} {{non-standard_inline}}<br>
+ {{domxref("Navigator.webkitNotification")}}</dt>
+ <dd>Retourne un objet {{domxref("navigator.mozNotification", "notification")}} utilisable pour délivrer des notifications à l'utilisateur depuis l'application web.</dd>
+ <dt>{{domxref("Navigator.mozSocial")}} {{non-standard_inline}}</dt>
+ <dd>Les objets retournés par la propriété <code>navigator.mozSocial</code> sont <span id="result_box" lang="fr"><span>disponibles dans le panneau du fournisseur de médias sociaux pour fournir les fonctionnalités dont il peut avoir besoin.</span></span></dd>
+ <dt>{{domxref("Navigator.presentation")}} {{non-standard_inline}}</dt>
+ <dd>Retourne une référence vers l'API {{domxref("Presentation")}}</dd>
+ <dt>{{domxref("Navigator.productSub")}} {{non-standard_inline}}</dt>
+ <dd>Retourne le nombre constructeur du navigateur actuel (par exemple, "20060909").</dd>
+ <dt>{{domxref("Navigator.securitypolicy")}} {{non-standard_inline}}</dt>
+ <dd>Retourne une chaîne vide. Dans Netscape 4.7x, retourne "US &amp; CA domestic policy"  <em>(politique américaine)</em> ou "Export policy" <em>(politique d'exportation)</em>.</dd>
+ <dt>{{domxref("Navigator.standalone")}} {{non-standard_inline}}</dt>
+ <dd>Retourne un booléen indiquant si le navigateur fonctionne en mode autonome.  <span class="short_text" id="result_box" lang="fr"><span>Disponible uniquement sur le Safari iOS d'Apple.</span></span></dd>
+ <dt>{{domxref("Navigator.storageQuota")}} {{readonlyinline}} {{experimental_inline}}</dt>
+ <dd>Retourne une interface {{domxref('StorageQuota')}} qui fournit des moyens d'interroger et de demander des informations sur l'utilisation de l'espace de stockage et les quotas.</dd>
+ <dt>{{domxref("Navigator.vendor")}} {{non-standard_inline}}</dt>
+ <dd>Retourne le nom du fournisseur du navigateur courant (par exemple, "Netscape6").</dd>
+ <dt>{{domxref("Navigator.vendorSub")}} {{non-standard_inline}}</dt>
+ <dd>Retourne le numéro de version du fournisseur (par exemple, "6.1").</dd>
+ <dt>{{domxref("Navigator.webkitPointer")}} {{non-standard_inline}}</dt>
+ <dd>Retourne un objet PointerLock <em>(verrou du pointeur)</em> pour l'API <a href="https://developer.mozilla.org/en-US/docs/API/Pointer_Lock_API" title="Mouse Lock API">Mouse Lock</a>.</dd>
+</dl>
+
+<h2 id="Methods" name="Methods">Méthodes</h2>
+
+<p><em>N'hérite d'aucune méthode, mais met en oeuvre celles définies par {{domxref("NavigatorID")}}, {{domxref("NavigatorContentUtils")}}, <em>{{domxref("NavigatorUserMedia")}} </em>et {{domxref("NavigatorStorageUtils")}}.</em></p>
+
+<h3 id="Standard_2">Standard</h3>
+
+<dl>
+ <dt>{{domxref("Navigator.getVRDisplays()")}} {{experimental_inline}}</dt>
+ <dd>Retourne <span id="result_box" lang="fr"><span>une annonce qui résout un tableau d'objets {{domxref ("VRDisplay")}} représentant tous les périphériques VR disponibles connectés à l'ordinateur.</span></span></dd>
+ <dt>{{domxref("Navigator.getUserMedia", "Navigator.getUserMedia()")}} {{experimental_inline}}</dt>
+ <dd><span id="result_box" lang="fr"><span>Après avoir demandé l'autorisation de l'utilisateur, renvoie le flux audio ou vidéo associé à une caméra ou un microphone sur l'ordinateur local.</span></span></dd>
+ <dt>{{domxref("Navigator.registerContentHandler()")}}</dt>
+ <dd><span id="result_box" lang="fr"><span>Permet aux sites Web de s'inscrire eux-mêmes comme un gestionnaire possible pour un type MIME donné.</span></span></dd>
+ <dt>{{domxref("Navigator.registerProtocolHandler()")}}</dt>
+ <dd><span id="result_box" lang="fr"><span>Permet aux sites Web de s'inscrire eux-mêmes comme un gestionnaire possible pour un protocole donné.</span></span></dd>
+ <dt>{{domxref("Navigator.requestMediaKeySystemAccess()")}} {{experimental_inline}}</dt>
+ <dd>Retourne une <span style="line-height: 19.0909080505371px;">{{jsxref("Promise")}}</span> pour un objet " <span style="line-height: 19.0909080505371px;">MediaKeySystemAccess</span> ".</dd>
+ <dt>{{domxref("Navigator.sendBeacon()")}}{{experimental_inline}}</dt>
+ <dd><span id="result_box" lang="fr"><span>Utilisé pour transférer de manière asynchrone une petite quantité de données à l'aide de </span></span> {{Glossary("HTTP")}} <span lang="fr"><span> de l'agent utilisateur vers un serveur Web.</span></span></dd>
+ <dt>{{domxref("Navigator.share()")}}{{experimental_inline}}</dt>
+ <dd><span id="result_box" lang="fr"><span>Appelle le mécanisme de partage natif de la plateforme actuelle.</span></span></dd>
+ <dt>{{domxref("NavigatorID.taintEnabled()")}} {{deprecated_inline("1.7.8")}} {{obsolete_inline("9.0")}} {{experimental_inline}}</dt>
+ <dd>Retourne <code>false</code><em>(faux)</em>. <span id="result_box" lang="fr"><span>Fonctions JavaScript taint / untaint supprimées dans JavaScript 1.2.</span></span></dd>
+ <dt>{{domxref("Navigator.vibrate()")}} {{gecko_minversion_inline("11.0")}}</dt>
+ <dd><span id="result_box" lang="fr"><span>Provoque des vibrations sur les appareils avec support.</span> <span>Ne fait rien si le support de vibration n'est pas disponible.</span></span></dd>
+</dl>
+
+<h3 id="Specification" name="Specification">Non standard</h3>
+
+<div class="note">
+<p>Les appareils Firefox OS ajoutent d'autres méthodes non standard. Elles peuvent être consultées dans l'article <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/API/Navigator">Firefox OS Navigator extensions</a>.</p>
+</div>
+
+<dl>
+ <dt>{{domxref("Navigator.mozIsLocallyAvailable()")}} {{non-standard_inline}}</dt>
+ <dd><span id="result_box" lang="fr"><span>Permet de vérifier le code pour voir si le document d'un URI donné est disponible sans utiliser le réseau.</span></span></dd>
+ <dt>{{domxref("Navigator.mozPay()")}} {{non-standard_inline}}</dt>
+ <dd><span class="short_text" id="result_box" lang="fr"><span>Permet le paiement dans l'application.</span></span></dd>
+</dl>

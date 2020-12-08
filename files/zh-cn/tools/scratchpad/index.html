@@ -1,0 +1,118 @@
+---
+title: Scratchpad
+slug: Tools/Scratchpad
+tags:
+  - Scratchpad
+  - 工具
+  - 网页开发
+  - 网页开发：工具
+translation_of: Archive/Tools/Scratchpad
+---
+<div>{{ToolsSidebar}}</div>
+
+<p>Scratchpad 使用JavaScript去提供一种实验环境。你能编写，执行代码，并且查看代码和Web页面交互的结果</p>
+
+<p>和被设计为一次只能执行单行命<a class="toggler" href="https://developer.mozilla.org/zh-CN/docs/Tools/Scratchpad#">更多工具</a>令的<a href="/zh-CN/Tools/Web_Console" title="en/Using the Web Console"> Web Console</a> 不同的是， Scratchpad 让你可以编辑大段的Javascript代码, 然后就取决于你希望如何输出，有多种方式执行这些代码。</p>
+
+<p>{{EmbedYouTube("Pt7DZACyClM")}}</p>
+
+<h2 id="使用"><strong>使用</strong></h2>
+
+<h3 id="在单独窗口中打开Scratchpad"><strong>在单独窗口中打开Scratchpad</strong></h3>
+
+<p>有几种不同的方式可以在独立窗口中打开Scratchpad</p>
+
+<ul>
+ <li>按下<kbd>Shift</kbd> + <kbd>F4</kbd>, 开启Scratchpad窗口，或是从Web Developer 菜单 (在OS X 和Linux 中是Tools菜单的子菜单) 中选择Scratchpad，开启的Scratchpad包含一个提供如何使用Scratchpad的帮助信息的注释。从这里你能直接开始书写代码。</li>
+ <li>点击扳手图标 (<img alt="" src="https://mdn.mozillademos.org/files/12710/wrench-icon.png" style="height: 21px; width: 21px;">), 你可以在主工具栏或者汉堡菜单 (<img alt="" src="https://mdn.mozillademos.org/files/12712/hamburger.png" style="height: 20px; width: 22px;">)找到, 然后选择"Scratchpad".</li>
+</ul>
+
+<p>这都能在单独窗口中打开Scratchpad。</p>
+
+<h3 id="从工具箱中打开Scratchpad">从工具箱中打开Scratchpad</h3>
+
+<div class="geckoVersionNote">New in Firefox 47.</div>
+
+<p>从Firefox 47起，你能从<a href="https://developer.mozilla.org/en-US/docs/Tools/Tools_Toolbox">Toolbox</a>中打开Scratchpad。首先你需要在<a href="https://developer.mozilla.org/zh-CN/docs/Tools/Tools_Toolbox#Settings_2">设置</a>的"Default Firefox Developer Tools"部分里选中"Scratchpad"。</p>
+
+<p>现在你应该可以在Toolbox中使用Scratchpad了，还有其他工具，如页面检查器和Web控制台。这在<a href="/zh-CN/docs/Tools/Web_Console/Split_console">拆分控制台模式</a>下特别有用：您可以使用Scratchpad作为持久性，多行编辑器，或者控制台来与页面进行交互。</p>
+
+<h3 id="编辑"><strong>编辑</strong></h3>
+
+<p>Scratchpad 窗口看起来如下图 (在OS X中菜单条在屏幕顶部)</p>
+
+<p><img alt="A screenshot of the Scratchpad" src="https://mdn.mozillademos.org/files/5983/scratchpad.png"></p>
+
+<p>如果想了解编辑器本身或者有用的键盘快捷键，请查看 <a href="/zh-CN/Tools/Using_the_Source_Editor" title="Using the Source Editor">Using the Source Editor</a></p>
+
+<p>File菜单提供 Javascript 代码的保存和加载，以便以后你能反复使用这些代码。</p>
+
+<h4 id="代码补完">代码补完</h4>
+
+<p>Scratchpad 使用<a href="http://ternjs.net/">tern code analysis engine</a> 提供自动补完建议并使用弹出窗口显示当前符号的关于信息。使用 Control + Space 便可以呼出自动补完。如果是为了显示弹出信息， 在Firefox 32中使用<kbd>Shift</kbd> + <kbd>Space</kbd>。</p>
+
+<p>例如，键入<kbd>d</kbd>, 然后按下<kbd>Control</kbd> + <kbd>Space</kbd>。 你可以看到自动补完的弹框，类似如下</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7933/scratchpad-autocomplete.png" style="display: block; margin-left: auto; margin-right: auto;">每个显示在建议之前的图标表明了类型，当前高亮显示的会弹出更多的信息，使用<kbd>↑</kbd> 或 <kbd>↓</kbd>箭头切换选项并使用<kbd>Enter</kbd> 或 <kbd>Tab</kbd>来选择高亮的选项。</p>
+
+<h4 id="內连文档">內连文档</h4>
+
+<p>当鼠标位于某个标识符上时，通过按下 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Space</kbd> 进行显示内连文档的弹框. 举个例子, 当你输入 <code>document</code>.<code>addEventListener</code>, 人后按下 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Space</kbd>, 你将会看到该方法的语法摘要以及一段简介:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7935/scratchpad-symbolinfo.png" style="display: block; margin-left: auto; margin-right: auto;">这个"[docs]"链接指向该标志的MDN文档</p>
+
+<h3 id="Executing">Executing</h3>
+
+<p class="note">当你写好了你的代码后，选中你想要的代码来运行。如果你没有选中任何代码，整个窗口的代码都会被执行。选择你想要的运行方式，可以通过顶部的按钮、运行菜单，或者上下文菜单。代码会在当前选中的Tab范围内被执行。你在函数外声明的变量会被加到这个标签栏的全局对象中</p>
+
+<p>这里有4个可用的选项：</p>
+
+<h4 id="Run">Run</h4>
+
+<p>当你选择Run选项，选中的代码会被执行。这是用来执行那些只是操纵页面内容而不需要返回结果的函数或者其他代码的。</p>
+
+<h4 id="Inspect">Inspect</h4>
+
+<p>Inspect选项会像Run选项一样执行代码，但是当代码返回时会打开一个对象检查器让你验证返回值</p>
+
+<p>例如，当你敲入这段代码</p>
+
+<pre>window
+</pre>
+
+<p>然后选择Inspect，对象检查器就会显示如下：</p>
+
+<p><img alt="Inspecting an object in the Scratchpad" src="https://mdn.mozillademos.org/files/5985/scratchpad-inspect.png"></p>
+
+<h4 id="Display">Display</h4>
+
+<p>Display选项执行选中的代码，然后直接将结果作为一个注解插入到你的Sratchpad编辑窗口，所以你可以把它当作一个<a href="http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop">REPL</a></p>
+
+<h4 id="Reload_And_Run">Reload And Run</h4>
+
+<p>Reload And Run选项只在执行菜单可用，它首先重新加载页面，然后当页面加载完毕执行代码。这在比较古老的运行环境中比较有用。</p>
+
+<h2 id="在浏览器上下文中运行Scratchpad">在浏览器上下文中运行Scratchpad</h2>
+
+<p>你可以在整个浏览器的上下文环境运行Sratchpad，而不只是在指定的网页中。这在你使用Firefox工作或开发插件时很有用。要使用这个请在<a href="/en-US/docs/Tools/Tools_Toolbox#Settings_2">Developer Tool Settings</a>中确认允许chrome跟插件调试。设置完后环境菜单会有个浏览器选项。选中它的时候，你的作用域就是整个浏览器而不只是页面范围了，从下面的测试中可以看出一些全局变量。</p>
+
+<pre class="brush: js">window
+/*
+[object ChromeWindow]
+*/
+
+gBrowser
+/*
+[object XULElement]
+*/</pre>
+
+<p>Scratchpad的执行环境在该状态下将被设置为browser：当代码段的第一行为<br>
+ <code>// -sp-context: browser</code></p>
+
+<h2 id="Keyboard_shortcuts">Keyboard shortcuts</h2>
+
+<p>{{ Page ("zh-CN/docs/tools/Keyboard_shortcuts", "scratchpad") }}</p>
+
+<h3 id="Source_editor_shortcuts">Source editor shortcuts</h3>
+
+<p>{{ Page ("zh-CN/docs/tools/Keyboard_shortcuts", "source-editor") }}</p>

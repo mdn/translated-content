@@ -1,0 +1,421 @@
+---
+title: Prérequis pour construire B2G OS
+slug: Archive/B2G_OS/Prerequis_pour_construire_Firefox_OS
+tags:
+  - Build Firefox OS
+  - Build documentation
+  - Build prerequisite
+  - Firefox OS
+  - Mobile
+  - Mobile OS
+translation_of: Archive/B2G_OS/B2G_OS_build_prerequisites
+---
+<div class="summary">
+<p><span class="seoSummary">Avant d'obtenir le code source pour compiler B2G OS, même si c'est juste pour essayer de construire Gaia, vous aurez besoin d'un <a href="https://developer.mozilla.org/fr/docs/Documentation_sur_la_compilation" title="https://developer.mozilla.org/en-US/docs/Developer_Guide/Build_Instructions">système de compilation</a> correctement configuré — cette page vous montre comment faire. Pour l'instant, vous pouvez compiler sur des distributions Linux 64 bits et sous OS X.</span></p>
+</div>
+
+<h2 id="Cibles_de_compilation_compatibles">Cibles de compilation compatibles</h2>
+
+<p>Vous avez besoin d'un appareil compatible pour lequel effectuer la compilation, ou alors vous pouvez utiliser un émulateur.</p>
+
+<div class="note">
+<p><strong>Note</strong> : Le <a href="https://github.com/mozilla-b2g/B2G">code source de B2G</a> de Mozilla constitue l'implémentation de référence de B2G OS, bien que les vendeurs de téléphones effectuent souvent des modifications. Lorsque vous achetez un appareil dans le commerce, il intègre la version spécifique au fabricant. Cela n'affecte pas les applications installées, mais cela peut différer au niveau de la plate-forme. Le portage pour Nexus 5 est maintenu directement par Mozilla ; il possède une meilleure compatibilité avec notre version de Gecko comparé à d'autres appareils.</p>
+</div>
+
+<h3 id="Émulateur"><a href="/fr/docs/B2G_OS/Using_the_B2G_emulators" title="en-US/docs/Mozilla/Firefox_OS/Using_the_B2G_emulators">Émulateur</a></h3>
+
+<p>Deux émulateurs sont disponibles : l'un émule du code ARM tandis que l'autre exécute tout en code x86. <a href="/fr/docs/B2G_OS/Using_the_B2G_emulators" title="/en-US/docs/Mozilla/Firefox_OS/Using_the_B2G_emulators">Apprenez comment les installer et les utiliser</a>. <strong>N'utilisez pas l'émulateur x86 — il est difficile à installer et n'est pas si compatible.</strong></p>
+
+<h3 id="Bureau"><a href="/fr/docs/B2G_OS/Building_the_Firefox_OS_simulator" title="/en-US/docs/Mozilla/Firefox_OS/Using_the_B2G_desktop_client">Bureau</a></h3>
+
+<p>Vous pouvez construire une version de B2G OS pour ordinateur de bureau ; elle fait fonctionner <a href="/fr/docs/Gecko" title="/en-US/docs/Mozilla/Gecko">Gecko</a> au sein d'une application <a href="/fr/docs/XULRunner" title="/en-US/docs/XULRunner">XULRunner</a>, et vous utilisez ensuite l'interface utilisateur <a href="/fr/docs/B2G_OS/Platform/Gaia/Introduction_a_Gaia" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Gaia/Introduction_to_Gaia">Gaia</a> à l'intérieur de celle-ci.</p>
+
+<h3 id="Appareils"><a href="/fr/docs/B2G_OS/Building_and_installing_Boot_to_Gecko/Appareils_compatibles">Appareils</a></h3>
+
+<p>Plusieurs appareils sont compatibles avec B2G OS, mais certains sont plus compatibles que d'autres, et la compatibilité d'un appareil peut se restreindre à des variantes spécifiques. Vérifiez la page des <a href="/fr/docs/B2G_OS/Building_and_installing_Boot_to_Gecko/Appareils_compatibles">appareils compatibles</a> pour plus de détails.</p>
+
+<div class="warning"><strong>Important</strong> : Seuls les appareils qui font fonctionner au minimum <strong>Android 4.3</strong> (c'est-à-dire <strong>Jellybean, Kitkat ou Lollipop</strong>) sont compatibles. Si votre appareil est listé ci-dessus mais fonctionne avec une version d'Android plus ancienne, mettez-le à jour.</div>
+
+<h2 id="Prérequis_pour_GNULinux">Prérequis pour GNU/Linux</h2>
+
+<p>Pour compiler sur Linux, vous aurez besoin de :</p>
+
+<ul>
+ <li>Une distribution <strong>GNU/Linux 64 bits</strong> (Ubuntu 14.04 LTS est conseillée).</li>
+ <li>Au moins <strong>4 Go</strong> de RAM.</li>
+ <li>Au moins <strong>40 Go</strong> d'espace disque disponible.</li>
+</ul>
+
+<p>Vous aurez aussi besoin de la présence des outils suivants :</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td>
+    <ul>
+     <li><strong>autoconf 2.13</strong></li>
+     <li><strong>bison</strong></li>
+     <li><strong>bzip2</strong></li>
+     <li><strong>ccache</strong></li>
+     <li><strong>curl</strong></li>
+     <li><strong>flex</strong></li>
+     <li><strong>gawk</strong></li>
+     <li><strong>git</strong></li>
+     <li><strong>gcc</strong></li>
+     <li><strong>nodejs</strong></li>
+     <li><strong>python</strong></li>
+    </ul>
+   </td>
+   <td>
+    <ul>
+     <li><strong>g++ / g++-multilib</strong></li>
+     <li><strong>java sdk (jdk)</strong></li>
+     <li><strong>lzop</strong></li>
+     <li><strong>make</strong></li>
+     <li><strong>OpenGL shared libraries</strong></li>
+     <li><strong>patch</strong></li>
+     <li><strong>X11 headers</strong></li>
+     <li><strong>32-bit ncurses</strong></li>
+     <li><strong>32-bit zlib</strong></li>
+     <li><strong>unzip</strong></li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Ubuntu_12.04_LTS_Debian_6_Linux_Mint_13">Ubuntu 12.04 LTS / Debian 6 / Linux Mint 13</h3>
+
+<p>Exécutez la commande suivante dans un Terminal :</p>
+
+<pre><code>sudo apt-get install autoconf2.13 bison bzip2 ccache curl flex gawk gcc g++ g++-multilib git ia32-libs lib32ncurses5-dev lib32z1-dev libasound-dev libgconf2-dev libgl1-mesa-dev libx11-dev lzop make zip libxml2-utils nodejs unzip python</code></pre>
+
+<p>vous pouvez installer le jdk via <a href="http://www.webupd8.org/2012/01/install-oracle-java-jdk-7-in-ubuntu-via.html">ce ppa</a>.</p>
+
+<h3 id="Ubuntu_14.04_LTS_Debian_7">Ubuntu 14.04 LTS / Debian 7</h3>
+
+<p>Tout d'abord, lancez les commandes suivantes pour définir les architectures requises :</p>
+
+<pre><code>sudo dpkg --add-architecture i386</code>
+sudo dpkg --add-architecture amd64
+</pre>
+
+<p>Ensuite, exécutez la commande suivante dans un Terminal :</p>
+
+<pre><code>sudo apt-get install --no-install-recommends autoconf2.13 bison bzip2 ccache curl flex gawk gcc g++ g++-multilib git lib32ncurses5-dev lib32z1-dev libgconf2-dev zlib1g:amd64 zlib1g-dev:amd64 zlib1g:i386 zlib1g-dev:i386 libgl1-mesa-dev libx11-dev make zip lzop libxml2-utils openjdk-7-jdk nodejs unzip python</code>
+</pre>
+
+<h3 id="Ubuntu_16.04">Ubuntu 16.04</h3>
+
+<div class="note">
+<p>Ubuntu 16.04, juin 2016, la version de <strong>make</strong> est <strong>4.1</strong>, ce qui empêche la construction d'android ; si vous rencontrez ce cas, vous devrez ajouter le dépôt trusty (14.04) et revenir à la <strong>version 3.81</strong> en exécutant cette commande :</p>
+
+<pre><code>sudo apt-get install make=3.81-8.2ubuntu3</code></pre>
+
+<p>ensuite, pour éviter toute mise à jour automatique, vous pouvez marquer le paquet <strong>make</strong> avec <em>hold</em> pour le conserver</p>
+
+<pre><code>sudo apt-mark hold make </code></pre>
+</div>
+
+<p>Premièrement, lancez les commandes suivantes pour définir les architectures requises :</p>
+
+<pre><code>sudo dpkg --add-architecture i386</code>
+sudo dpkg --add-architecture amd64
+</pre>
+
+<p>Ensuite, exécutez la commande suivanre dans un Terminal :</p>
+
+<pre><code>sudo apt-get install --no-install-recommends autoconf2.13 bison bzip2 ccache curl flex gawk gcc g++ g++-multilib git lib32ncurses5-dev lib32z1-dev libgconf2-dev zlib1g:amd64 zlib1g-dev:amd64 zlib1g:i386 zlib1g-dev:i386 libgl1-mesa-dev libx11-dev make zip lzop libxml2-utils openjdk-8-jdk nodejs unzip python</code>
+</pre>
+
+<h3 id="Ubuntu_16.10">Ubuntu 16.10</h3>
+
+<p>Sur ubuntu 16.10, la version par défaut de make est la 4.1 ce qui empêche la compilation d'android ; pour résoudre ce problème, entrez les commandes suivantes dans la console :</p>
+
+<pre>wget http://ftp.us.debian.org/debian/pool/main/m/make-dfsg/make_3.81-8.2_amd64.deb
+
+sudo dpkg -i make_3.81-8.2_amd64.deb</pre>
+
+<p>Ensuite, pour éviter les mises à jour automatiques, vous pouvez marquer le paquet make comme étant à conserver :</p>
+
+<pre>sudo apt-mark hold make</pre>
+
+<p>Vous devez ansuite ajouter les architectures requises :</p>
+
+<pre>sudo dpkg --add-architecture i386
+
+sudo dpkg --add-architecture amd64 </pre>
+
+<p>Puis, lancez la commande suivante dans un Terminal :</p>
+
+<pre><code>sudo apt-get install --no-install-recommends autoconf2.13 bison bzip2 ccache curl flex gawk gcc g++ g++-multilib git lib32ncurses5-dev lib32z1-dev libgconf2-dev zlib1g:amd64 zlib1g-dev:amd64 zlib1g:i386 zlib1g-dev:i386 libgl1-mesa-dev libx11-dev make zip lzop libxml2-utils openjdk-8-jdk nodejs unzip python</code> </pre>
+
+<p> </p>
+
+<h3 id="Configurer_l'accès_USB">Configurer l'accès USB</h3>
+
+<p>Sur les systèmes Linux, par défaut, les utilisateurs classiques ne peuvent pas accéder directement aux périphériques USB. Il faut configurer des règles udev. Créez un fichier appelé <code>/etc/udev/rules.d/51-android.rules</code> avec la commande suivante :</p>
+
+<p><strong>À FAIRE : Fusionner avec le bogue 1230463</strong></p>
+
+<pre><code>wget -S -O - https://raw.githubusercontent.com/cm-b2g/B2G/1230463/tools/51-android.rules | sudo tee &gt;/dev/null /etc/udev/rules.d/51-android.rules; sudo udevadm control --reload-rules
+
+<s>wget -S -O - https://raw.githubusercontent.com/mozilla-b2g/B2G/master/tools/51-android.rules | sudo tee &gt;/dev/null /etc/udev/rules.d/51-android.rules; sudo udevadm control --reload-rules</s></code></pre>
+
+<p>Les nouvelles règles prendront effet au prochain branchement d'un périphérique.</p>
+
+<h3 id="Configurer_ccache">Configurer ccache</h3>
+
+<p>Une tonne de code est compilée mais une grande quantité ne change pas d'une version à l'autre. Nous pouvons considérablement accélérer la construction avec l'outil de compilation ccache. Attribuez-lui un cache de 50 Go avec la commande suivante :</p>
+
+<pre><code>ccache -M 50G</code></pre>
+
+<div class="note">
+<p><strong>Note</strong> : Si vous avez peu d'espace disque, vous pouvez néanmoins définir un cache inférieur à 50 Go.</p>
+</div>
+
+<h3 id="Distributions_alternatives">Distributions alternatives</h3>
+
+<h4 id="Fedora_22">Fedora 22</h4>
+
+<p>Lancez la commande suivante dans un Terminal :</p>
+
+<pre><code>sudo yum install autoconf213 bison bzip2 ccache curl flex gawk gcc-c++ git glibc-devel glibc-static libstdc++-static libX11-devel make mesa-libGL-devel ncurses-devel patch zlib-devel ncurses-devel.i686 readline-devel.i686 zlib-devel.i686 libX11-devel.i686 mesa-libGL-devel.i686 glibc-devel.i686 libstdc++.i686 libXrandr.i686 zip perl-Digest-SHA wget lzop libxml2-utils</code></pre>
+
+<h4 id="Arch_Linux">Arch Linux</h4>
+
+<p>Lancez la commande suivante dans un Terminal :</p>
+
+<pre><code>sudo pacman -S --needed alsa-lib autoconf2.13 bison ccache curl firefox flex gcc-multilib git gperf libnotify libxt libx11 mesa multilib-devel wget wireless_tools yasm zip lib32-mesa lib32-mesa-libgl lib32-ncurses lib32-readline lib32-zlib lzop</code></pre>
+
+<p>Pour installer les paquets lib32-*, vous devrez activer le dépôt multilib.</p>
+
+<p>Par défaut, Arch Linux utilise Python 3. Vous allez devoir le forcer à utiliser l'ancien Python 2. C'est possible en faisant un lien depuis l'exécutable python2 vers python mais cela est déconseillé et considéré comme source d'erreurs. Cela va également casser Python 3 s'il est installlé sur votre système. Une meilleure méthode consiste à utiliser <code>virtualenv</code>/<code>virtualenvwrapper</code> :</p>
+
+<pre><code><span><span>sudo pacman -S python-virtualenvwrapper
+</span></span>source /usr/bin/virtualenvwrapper.sh
+mkvirtualenv -p `which python2` firefoxos
+workon firefoxos</code>
+</pre>
+
+<p>Ainsi, l'exécution de</p>
+
+<pre><code>python --version</code></pre>
+
+<p>Donne comme résultat "Python 2.7.12".</p>
+
+<h4 id="Gentoo_Linux">Gentoo Linux</h4>
+
+<h5 id="Installation_de_ccache">Installation de ccache</h5>
+
+<p>Vous aurez besoin d'installer <strong><a href="http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=2&amp;chap=3#doc_chap3">ccache</a></strong>, un outil pour mettre en cache des constructions partielles.</p>
+
+<pre><code><span><span># emerge -av ccache</span></span>
+</code></pre>
+
+<p>Comme ccache est connu pour souvent provoquer des problèmes, Gentoo encourage les personnes à l'utiliser de manière <em>explicite</em> et avec <em>parcimonie</em>.</p>
+
+<p>Pour activer l'utilisation nécessaire de ccache, lors de l'<em>étape suivante</em> de ce guide où le script <code>./build.sh</code> script est appelé, les utilisateurs de Gentoo doivent à la place lancer la commande avec un chemin explicite étendu, c'est-à-dire :</p>
+
+<pre><code><span><span><strong>PATH=/usr/lib64/ccache/bin:$PATH</strong> ./build.sh</span></span>
+</code></pre>
+
+<p id="Generating_Partition_Images"><strong>Génération des images de partitions</strong></p>
+
+<p>Si vous compilez B2G pour un véritable appareil physique, alors vous serez amené à un certain moment à générer certaines images de partitions pour les envoyer sur votre appareil. (Par exemple, pour restaurer des fichiers sauvegardés vers l'appareil via l'utilitaire <strong><em>fastboot</em></strong>)</p>
+
+<p>Le format utilisé pour l'image du système de fichiers dans ce cas est YAFFS2 (Yet Another Filesystem 2). Gentoo intègre le support de la toute dernière version (ie. git HEAD) du paquet <code>yaffs2-utils</code> en espace utilisateur dans le portage. (Note : Vous aurez aussi besoin de correctifs noyau si vous souhaitez monter des images YAFFS2, mais ce n'est pas vraiment obligatoire car à la place vous pouvez les déconstruire puis les reconstruire.)</p>
+
+<pre><code># emerge --autounmask-write yaffs2-utils; etc-update; emerge -av yaffs2-utils</code></pre>
+
+<p>Afin de générer une telle image, placez-vous simplement dans le répertoire parent de l'arborescence du système de fichiers de la partition que vous voulez empaqueter, puis envoyez  une commande comme ceci :</p>
+
+<pre><code>mkyaffs2image system/ system.img</code></pre>
+
+<h3 id="Branches_anciennes">Branches anciennes</h3>
+
+<p>Si vous souhaitez compiler une ancienne branche de B2G OS, des erreurs de compilation peuvent survenir. Voir la page <a href="/fr/docs/B2G_OS/Building_and_installing_Boot_to_Gecko/Construire_anciennes_branches">Construire d'anciennes branches</a>.</p>
+
+<h2 id="Prérequis_pour_OS_X">Prérequis pour OS X</h2>
+
+<div class="note">
+<p><strong>Note : La configuration et la compilation de B2G pour Keon <u>ne fonctionne pas</u> sur Mac</strong>. Il vous faut utiliser Linux pour construire B2G pour cet appareil.</p>
+</div>
+
+<div class="note">
+<p><strong>Note : La compilation de B2G pour Fairphone2 <u>ne fonctionne pas</u> sur Mac</strong>. Il vous faudra utiliser Linux pour construire B2G pour cet appareil. La cause est l'échec de la vérification MD5 des blobs ; pour plus d'informations, voir : <a href="https://forum.fairphone.com/t/blobs-md5-checksum-doenst-match/18107">Lien</a></p>
+</div>
+
+<p>La construction de B2G OS sur OS X est possible, mais elle n'est ni facile ni très bien supportée. Il sera nécessaire d'installer une ancienne version de Xcode qui pourrait interférer avec la version actuelle si vous l'utilisez déjà. Pour une meilleure expérience, vous devriez compiler sur Ubuntu 14.04 LTS. Cependant, si vous <em>insistez</em>, essayez ces étapes :</p>
+
+<h3 id="OS_X_10.11_El_Capitan_et_OS_X_10.10_Yosemite">OS X 10.11 El Capitan et OS X 10.10 Yosemite</h3>
+
+<div class="warning">
+<p><strong>Important </strong>: La construction sur OS X 10.11 El Capitan est expérimentale et peut ne pas se terminer ! Restez sur OS X 10.10 Yosemite jusqu'à ce que les instructions ci-dessous soient améliorées et que cet avertissement soit supprimé.</p>
+</div>
+
+<h4 id="Système_de_fichiers_sensible_à_la_casse">Système de fichiers sensible à la casse</h4>
+
+<p>L'installation par défaut d'OS X ne convient pas pour la compilation de B2G OS. Il vous faut réinstaller OS X sur un système de fichiers sensible à la casse.</p>
+
+<h4 id="Xcode_7.2">Xcode 7.2</h4>
+
+<ol>
+ <li>Installez la dernière version de Xcode à partir de l'Apple Store.</li>
+ <li>Acceptez la licence avec la commande suivante :</li>
+</ol>
+
+<pre><code>sudo xcodebuild -license</code></pre>
+
+<h4 id="Xcode_Command_Line_Tools">Xcode Command Line Tools</h4>
+
+<p>Installez Xcode Command Line Tools avec la commande suivante :</p>
+
+<pre><code>xcode-select --install</code></pre>
+
+<h4 id="Xcode_5.1.1">Xcode 5.1.1</h4>
+
+<div class="warning">
+<p><strong>Important </strong>: Veuillez installer Homebrew et ses outils (voir la section ci-dessous) avant de passer à celle du SDK de Xcode 5.1.1 - l'installation d'Homebrew sur le SDK Xcode 5.1.1 <em>va</em> échouer !</p>
+</div>
+
+<p>AOSP, et par conséquent B2G OS, n'est pas compatible avec la dernière version du SDK d'Xcode. Nous avons besoin d'installer une version plus ancienne à côté de la plus récente.</p>
+
+<ol>
+ <li>Téléchargez Xcode 5.1.1 depuis <a href="https://developer.apple.com/downloads/">developer.apple.com</a> et installez-le dans /Applications/Xcode-5.1.1</li>
+ <li>Basculez vers l'utilisation du SDK Xcode 5.1.1 avec la commande suivante :</li>
+</ol>
+
+<pre><code>sudo xcode-select --switch "/Applications/Xcode-5.1.1/Xcode.app/Contents/Developer"</code></pre>
+
+<h4 id="Java_SE_Development_Kit_7">Java SE Development Kit 7</h4>
+
+<p>AOSP, et par conséquent B2G OS, n'est pas compatible avec le JDK Java <strong>v8</strong>, il est donc nécessaire d'installer le JDK Java <strong>v7</strong>. Vous pouvez le télécharger depuis <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html">http://www.oracle.com/</a>.</p>
+
+<h4 id="Profil_Bash">Profil Bash</h4>
+
+<p>Ajouter les lignes suivantes à votre fichier <code>~/.bash_profile</code> :</p>
+
+<pre><code>export PATH=~/bin:$PATH
+export PATH=/usr/local/bin:$PATH
+export BUILD_MAC_SDK_EXPERIMENTAL=1
+export LC_CTYPE=C
+export LANG=C
+export USE_CCACHE=1</code></pre>
+
+<h3 id="Homebrew">Homebrew</h3>
+
+<p>Nous devons installer certains outils en ligne de commande <em>en plus</em> car ils ne sont pas fournis par Apple. Installez Homebrew :</p>
+
+<pre><code id="selectable">ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code></pre>
+
+<p>Ensuite, installez les outils avec la commande suivante :</p>
+
+<pre><code>brew install ccache coreutils cmake findutils git gnu-tar gnu-sed gpg lzop yasm</code></pre>
+
+<p>Il faut une version spécifique d'autoconf, la version 2.13 :</p>
+
+<pre><code>brew install homebrew/versions/autoconf213
+</code></pre>
+
+<h3 id="Configurer_ccache_2">Configurer ccache</h3>
+
+<p>Beaucoup de code est compilé mais une grande partie de change pas selon les versions. La vitesse de compilation peut être considérablement accélérée avec l'outil de compilation ccache. Attribuez-lui un cache de 50 Go avec la commande suivante :</p>
+
+<pre><code>prebuilts/misc/darwin-x86/ccache/ccache -M 50G</code></pre>
+
+<h3 id="Anciennes_instructions_pour_OS_X">Anciennes instructions pour OS X</h3>
+
+<h4 id="Exécutez_B2G_OS_Mac_Bootstrap">Exécutez B2G OS Mac Bootstrap</h4>
+
+<p>Ensuite, ouvrez un terminal et lancez la commande suivante :</p>
+
+<pre class="brush: bash"><code>curl -fsSL https://raw.github.com/mozilla-b2g/B2G/master/scripts/bootstrap-mac.sh | bash</code></pre>
+
+<p>Cela va récupérer et lancer un script de bootstrap qui va s'assurer que vous disposez de tous les éléments requis pour construire l'émulateur. Il vous demandera aussi la permission d'installer ce qui pourrait manquer et fournir des avertissements et des suggestions de correction en cas de problème.</p>
+
+<p>Pour développer avec B2G, vous allez avoir besoin de récupérer une branche particulière. Cette dernière est à télécharger depuis Mercurial. <a href="http://mozilla-version-control-tools.readthedocs.io/en/latest/hgmozilla/installing.html">(en apprendre plus)</a> Comme OSX ne dispose pas de Mercurial par défaut, vous devez l'installer avec ce code :</p>
+
+<pre>$ brew install mercurial</pre>
+
+<h4 id="Tenez_compte_de_la_sensibilité_à_la_casse_du_système_de_fichiers_Mac">Tenez compte de la sensibilité à la casse du système de fichiers Mac</h4>
+
+<p>Par défaut, OS X est installé sur un système de fichiers insensible à la casse. Cela pose problème car le noyau Linux contient un certain nombre de fichiers avec des noms identiques, mais avec des casses différentes. Par exemple, les fichiers d'en-tête <code>xt_CONNMARK.h</code> et <code>xt_connmark.h</code> Cela a pour conséquence de faire paraître un certain nombre de fichiers comme ayant été modifiés dans <code>/kernel</code> après un tout récent <code>./config.sh</code>.</p>
+
+<p>Dans de nombreux cas, vous pouvez lancer la compilation sans problème ; sur certaines plateformes par contre, vous pouvez rencontrer l'erreur suivante :</p>
+
+<pre><code><span class="quote">ERROR: You have uncommited changes in kernel
+You may force overwriting these changes
+with |source build/envsetup.sh force|
+
+ERROR: Patching of kernel/ failed.</span></code></pre>
+
+<p><span class="quote">Veuillez vous référer au <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=867259" title="https://bugzilla.mozilla.org/show_bug.cgi?id=867259">bogue 867259</a></span> pour plus de détails et des correctifs éventuels pour ce problème.</p>
+
+<p>Sinon, ce sera toujours plus sûr de compiler sur un système de fichiers sensible à la casse. La méthode la plus simple pour cela consiste à créer une image disque montable, distincte, avec la sensibilité à la casse activée. Faîtes attention à ne pas utiliser de lettres en capitale si vous changez le nom spécifié par -volname. L'image peut être créée avec l'application d'Apple Disk Utility ou en ligne de commande :</p>
+
+<pre><code>hdiutil create -volname 'firefoxos' -type SPARSE -fs 'Case-sensitive Journaled HFS+' -size 80g ~/firefoxos.sparseimage</code></pre>
+
+<p>Montez le lecteur avec :</p>
+
+<pre><code>open ~/firefoxos.sparseimage</code></pre>
+
+<p>Changez de répertoire vers le lecteur monté avec :</p>
+
+<pre><code>cd /Volumes/firefoxos/</code></pre>
+
+<p>Vous pouvez ensuite récupérer le code et le compiler depuis cet emplacement sans vous préoccuper des problèmes de sensibilité à la casse.</p>
+
+<h3 id="Optionnel_Installer_HAX">Optionnel : Installer HAX</h3>
+
+<p>Intel fournit un pilote spécial qui permet à l'émulateur B2G d'exécuter son code en natif sur votre Mac au lieu de l'émuler lorsque vous utilisez l'émulateur x86. Si vous souhaitez l'utiliser, vous pouvez le <a class="external" href="http://software.intel.com/en-us/articles/intel-hardware-accelerated-execution-manager/" title="http://software.intel.com/en-us/articles/intel-hardware-accelerated-execution-manager/">télécharger et l'installer</a>. Ce n'est pas obligatoire, mais cela peut améliorer les performances et la stabilité de l'émulation.</p>
+
+<p>Avant que vous ne puissiez installer HAX, vous devez installer le <a href="http://developer.android.com/sdk/index.html" title="http://developer.android.com/sdk/index.html">SDK d'Android</a>.</p>
+
+<h3 id="Installer_adb">Installer adb</h3>
+
+<p>Le processus de construction a besoin d'extraire les blobs binaires de l'installation d'Android présente sur le téléphone avant de compiler B2G (sauf si vous construisez l'émulateur bien sûr). Dans ce but, il sera nécessaire d'avoir <code>adb</code> (Android Debug Bridge). Notre article <a href="/fr/docs/B2G_OS/Déboguer/Installer_ADB">Installer ADB</a> explique comment faire.</p>
+
+<div class="warning">
+<p>Note pour plus tard lorsque vous commencerez à utiliser adb : l'écran de verrouillage du téléphone doit être déverrouillé pour qu'adb puisse voir votre téléphone (au moins dans les dernières versions de B2G OS). Vous préférerez sans doute désactiver l'écran de verrouillage (nous verrons comment plus loin dans les instructions de compilation).</p>
+</div>
+
+<h3 id="Étapes_additionnelles_pour_le_Samsung_Galaxy_S2">Étapes additionnelles pour le Samsung Galaxy S2</h3>
+
+<p>Si vous envisagez de compiler pour le Samsung Galaxy S2, il vous sera aussi nécessaire d'avoir installé heimdall. Voir <a href="#Installer_heimdall">Installer heimdall</a> pour les détails. Le script de bootstrap <strong>ne</strong> le fera <strong>pas</strong> à votre place !</p>
+
+<p>De plus, vous devez garder à l'esprit les points suivants :</p>
+
+<ol>
+ <li>Lorsqu'éventuellement vous êtes sur le point d'<a href="/fr/docs/B2G_OS/Installer_sur_un_telephone_mobile">installer votre build</a> sur un appareil S2, avant de lancer le script <code>flash.sh</code>, vous devez remplacer toutes les occurences de <code>factoryfs</code> par <code>FACTORYFS</code>, ainsi que <code>kernel</code> par <code>KERNEL</code> (vérifiez la sortie de <code>pit</code> pour confirmation), sinon cela ne fonctionnera pas.</li>
+ <li>La ROM de Recovery <a href="http://www.gokhanmoral.com/2013/02/17/siyahkernel-s2-v6-0beta5/">Siyah-s2</a> est celle qui fonctionne le mieux. <a href="http://forum.xda-developers.com/wiki/ClockworkMod_Recovery">CWM</a> fonctionne bien aussi, mais présente quelques soucis.</li>
+ <li>Flasher votre S2 avec <code>flash.sh</code> va permettre de faire fonctionner l'OS de base mais la version de Gaia incluse peut avoir des problèmes. La rafraîchir avec <code>make reset-gaia PRODUCTION=1</code> devrait les résoudre.</li>
+</ol>
+
+<div class="note"><strong>Note :</strong> Si vous avez installé l'outil <a class="external" href="http://www.samsung.com/us/kies/" title="http://www.samsung.com/us/kies/">Samsung Kies</a>, lequel est utilisé pour gérer le contenu de nombreux téléphones Samsung, vous aller devoir le supprimer avant de pouvoir flasher B2G OS sur votre appareil. Vous pouvez employer le procédé classique de Windows pour désinstaller l'application ; sur Mac, le disque d'installation de Kies contient un utilitaire pour complétement supprimer Kies du système. Le flashage <strong>ne fonctionnera pas</strong> si Kies est installé. Si vous oubliez de le supprimer, le système de compilation va le détecter et vous rappeler de le désinstaller. Remarquez aussi que l'outil de désinstallation ne supprime pas correctement le dossier <code>~/Library/Application Support/.FUS</code>, et y laisse une référence à un utilitaire dans votre liste d'éléments de démarrage utilisateur. Vous pourrez les supprimer manuellement.</div>
+
+<h3 id="Installer_heimdall">Installer heimdall</h3>
+
+<p>Heimdall est un utilitaire pour flasher le Samsung Galaxy S2. Il est utilisé par l'utilitaire de flashage de Boot to Gecko aussi bien pour remplacer le contenu du téléphone par B2G OS que pour flasher des versions mises à jour de B2G et de Gaia sur l'appareil. Vous en aurez besoin si vous voulez installer B2G OS sur un Galaxy S2 ; il <strong>n'est pas</strong> nécessaire pour les autres appareils. Pour ces derniers, nous construisons et utilisons l'utilitaire fastboot à la place.</p>
+
+<div class="note"><strong>Note :</strong> Encore une fois, il est important de noter que cela est <strong>nécessaire uniquement pour installer B2G OS sur le Samsung Galaxy S2</strong>.</div>
+
+<p>Il y a deux méthodes pour installer heimdall :</p>
+
+<ul>
+ <li>Vous pouvez <a class="link-https" href="https://github.com/Benjamin-Dobell/Heimdall" title="https://github.com/Benjamin-Dobell/Heimdall">télécharger le code</a> GitHub et le compiler vous-même.</li>
+ <li>Utiliser un gestionnaire de paquets pour l'installer.
+  <ul>
+   <li>Sur Linux: <code>sudo apt-get install libusb-1.0-0 libusb-1.0-0-dev</code></li>
+   <li>Sur Mac, vous pouvez <a class="link-https" href="https://github.com/downloads/Benjamin-Dobell/Heimdall/heimdall-suite-1.3.2-mac.dmg" title="https://github.com/downloads/Benjamin-Dobell/Heimdall/heimdall-suite-1.3.2-mac.dmg">télécharger un installeur</a> et l'utiliser.</li>
+  </ul>
+ </li>
+</ul>
+
+<div class="note">
+<p><strong>Note </strong>: À l'heure actuelle, compiler la dernière version d'Heimdall à partir des sources génère des erreurs. Il vaut mieux à la place utiliser la version sous forme de paquet 64 bits des dépôts Ubuntu 14.04. i.e. n'utilisez pas heimdall-flash:i386 si vous pouvez l'éviter.</p>
+</div>
+
+<h2 id="Prochaine_étape">Prochaine étape</h2>
+
+<p>À ce stade, vous êtes prêt pour <a href="/fr/docs/B2G_OS/Preparing_for_your_first_B2G_build" title="en-US/docs/Mozilla/Firefox_OS/Preparing_for_your_first_B2G_build">récupérer le code source de B2G OS </a>!</p>

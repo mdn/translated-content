@@ -1,0 +1,62 @@
+---
+title: '-moz-stack-sizing'
+slug: Web/CSS/-moz-stack-sizing
+tags:
+  - CSS
+  - Non-standard
+  - Propriété
+  - Reference
+  - XUL
+translation_of: Archive/Web/CSS/-moz-stack-sizing
+---
+<div>{{Non-standard_header}}{{CSSRef}}{{gecko_minversion_header("1.9.1")}}</div>
+
+<p>La propriété <strong><code>-moz-stack-sizing</code></strong> est une propriété propriétaire. Normalement, un élément {{XULElem("stack")}} changera sa taille pour que tous ses éléments fils soient complètement visibles. Ainsi, si on déplace un élément fils de cette pile vers la droite, la pile s'élargira pour que l'élément reste visible.</p>
+
+<pre class="brush:css">/* Valeurs avec un mot-clé */
+-moz-stack-sizing: stretch-to-fit;
+-moz-stack-sizing: ignore;
+
+/* Valeurs globales */
+-moz-stack-sizing: inherit;
+-moz-stack-sizing: initial;
+-moz-stack-sizing: unset;
+</pre>
+
+<p>Si on veut empêcher le redimensionnement automatique, on pourra définir <code>-moz-stack-sizing</code> avec la valeur <code>ignore</code> sur l'élément fils. La propriété n'est pas définie sur la pile elle-même mais sur les éléments fils de la pile. Cela permet d'ignorer certains éléments fils mais pas d'autres.</p>
+
+<p class="note"><strong>Note :</strong> Dans les versions antérieures de Gecko, on pouvait contourner ce problème en définissant des marges basse et droite négatives sur la pile et des marges basse et droite positives sur les éléments fils qu'on ne souhaitait pas ignorer.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<h3 id="Valeurs">Valeurs</h3>
+
+<dl>
+ <dt><code>stretch-to-fit</code></dt>
+ <dd>L'élément enfant influencera la taille de la pile.</dd>
+ <dt><code>ignore</code></dt>
+ <dd>La pile ne prendra pas en compte cet élément enfant lors du calcul de la taille.</dd>
+</dl>
+
+<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+
+<pre class="syntaxbox">{{csssyntax}}</pre>
+
+<h2 id="Exemples">Exemples</h2>
+
+<pre class="brush:css">.mainsheet {
+  -moz-stack-sizing: ignore;
+}
+</pre>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<p>Cette propriété est une propriété propriétaire liée à Mozilla/Gecko et ne fait partie d'aucune spécification.</p>
+
+<p>{{cssinfo}}</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>{{bug("346189")}}</li>
+</ul>

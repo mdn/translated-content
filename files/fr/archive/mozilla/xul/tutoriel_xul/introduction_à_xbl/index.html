@@ -1,0 +1,78 @@
+---
+title: Introduction à XBL
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Introduction_à_XBL
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Introduction_to_XBL
+---
+<p> </p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Les_fichiers_de_propriétés" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Contenu_anonyme">Suivant  »</a></p>
+</div>
+<p><a href="/fr/XUL" title="fr/XUL">XUL</a> a un langage qui lui est parent, <a href="/fr/XBL" title="fr/XBL">XBL</a> (eXtensible Bindings Language). Ce langage est utilisé pour déclarer le comportement des éléments graphiques de XUL.</p>
+<h3 id="Liaisons" name="Liaisons">Liaisons</h3>
+<p>Vous pouvez utiliser XUL pour définir la mise en page de l'interface utilisateur d'une application. Vous pouvez adapter l'apparence des éléments en leur appliquant <a href="/fr/Tutoriel_XUL/Ajouter_des_feuilles_de_style" title="fr/Tutoriel_XUL/Ajouter_des_feuilles_de_style">des styles</a>. Vous pouvez aussi <a href="/fr/Tutoriel_XUL/Créer_un_thème" title="fr/Tutoriel_XUL/Créer_un_thème">créer de nouveaux thèmes</a> en modifiant les styles. L'apparence basique de tous les éléments, comme <a href="/fr/Tutoriel_XUL/Barres_de_défilement" title="fr/Tutoriel_XUL/Barres_de_défilement">les barres de défilement</a> et <a href="/fr/Tutoriel_XUL/Les_champs_de_saisie#Les_cases_.C3.A0_cocher_et_les_boutons_radio" title="fr/Tutoriel_XUL/Les_champs_de_saisie#Les_cases_.C3.A0_cocher_et_les_boutons_radio">les cases à cocher</a> pourrait être modifiée en ajustant le style ou en déclarant des attributs à l'élément. Cependant, XUL ne fournit aucun moyen de vous permettre de changer le fonctionnement d'un élément. Par exemple, vous pourriez vouloir changer le fonctionnement des composants d'une barre de défilement. Pour cela, vous avez besoin de <a href="/fr/XBL" title="fr/XBL">XBL</a>.</p>
+<p>Un fichier XBL contient un ensemble de liaisons. Chaque liaison décrit le comportement d'un élément graphique de XUL. Par exemple, une liaison pourrait être attachée à une barre de défilement. Le comportement décrit les propriétés et méthodes de la barre de défilement en plus de décrire les éléments de XUL qui la composent.</p>
+<p>Comme XUL, XBL est un langage XML, ainsi il a des règles syntaxiques similaires. L'exemple suivant montre le squelette basique d'un fichier XBL :</p>
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;bindings xmlns="http://www.mozilla.org/xbl"&gt;
+  &lt;binding id="binding1"&gt;
+    &lt;!-- le contenu, propriétés, méthodes et descriptions d'évènements viennent ici --&gt;
+  &lt;/binding&gt;
+  &lt;binding id="binding2"&gt;
+    &lt;!-- le contenu, propriétés, méthodes et descriptions d'évènements viennent ici --&gt;
+  &lt;/binding&gt;
+&lt;/bindings&gt;
+</pre>
+<p>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/bindings" title="bindings">bindings</a></code> est l'élément racine d'un fichier XBL et contient un ou plusieurs élément <code><a href="/fr/docs/Mozilla/Tech/XUL/binding" title="binding">binding</a></code>. Chaque élément <code><a href="/fr/docs/Mozilla/Tech/XUL/binding" title="binding">binding</a></code> déclare une seule liaison. L'attribut <code id="a-id"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/id">id</a></code> peut être utilisé pour identifier la liaison, comme dans l'exemple ci-dessus. Le modèle a deux liaisons, l'une appelée 'liaison1' et l'autre appelée 'liaison2'. L'une pourrait être attachée à une barre de défilement et l'autre à un menu. Une liaison peut être attachée à n'importe quel élément de XUL. Si vous utilisez des classes CSS, vous pouvez utiliser autant de liaisons que vous avez besoin. Notez l'espace de nommage de l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/bindings" title="bindings">bindings</a></code> dans le modèle ci-dessus. Il déclare que nous sommes en train d'utiliser une syntaxe XBL.</p>
+<p>Vous assignez une liaison à un élément en déclarant la propriété CSS <a href="/fr/CSS/-moz-binding" title="fr/CSS/-moz-binding">-moz-binding</a> avec l'URL des fichiers de liaisons. Par exemple :</p>
+<pre>scrollbar {
+    -moz-binding: url('chrome://findfile/content/findfile.xml#binding1');
+}
+</pre>
+<p>L'URL pointe vers la liaison avec l'<code id="a-id"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/id">id</a></code> 'binding1' dans le fichier '<a class=" external" rel="freelink">chrome://findfile/content/findfile.xml</a>'. La syntaxe '#binding1' est utilisée pour pointer vers une liaison spécifique, de la même façon que si vous pointiez vers une ancre dans un fichier HTML. Vous mettrez habituellement toutes vos liaisons dans un seul fichier. Le résultat dans cet exemple, est que toutes les barres de défilement auront leur comportement décrit par la liaison "binding1".</p>
+<p>Une liaison déclare cinq types de choses :</p>
+<ol> <li>Le contenu : les éléments fils qui sont ajoutés à l'élément auquel la liaison est attachée.</li> <li>Les propriétés : les propriétés ajoutées à l'élément. Elles sont accessibles par un script.</li> <li>Les méthodes : les méthodes ajoutées à l'élément. Elles peuvent être appelées à partir d'un script.</li> <li>Les événements : les événements, comme les clics de souris et les appuis sur les touches auxquels l'élément répondra. La liaison peut ajouter des scripts pour fournir la manipulation par défaut. En plus de cela, de nouveaux événements peuvent être définis.</li> <li>Le style : adapte les propriétés de style que l'élément XBL possède.</li>
+</ol>
+<h3 id="Exemple_de_liaison" name="Exemple_de_liaison">Exemple de liaison</h3>
+<p>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/box" title="box">box</a></code> est suffisamment générique pour que vous l'utilisiez afin de créer des éléments graphiques personnalisés (bien que vous puissiez utiliser d'autres éléments, même un élément composé par vous-même). En assignant un attribut <code id="a-class"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/class">class</a></code> à une balise <code><a href="/fr/docs/Mozilla/Tech/XUL/box" title="box">box</a></code>, vous associez une liaison aux boîtes qui possèdent cette classe. L'exemple suivant le démontre :</p>
+<pre class="eval"><strong>XUL (example.xul):</strong>
+
+&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="<a class=" external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;
+&lt;?xml-stylesheet href="<a class=" external" rel="freelink">chrome://example/skin/example.css</a>" type="text/css"?&gt;
+
+&lt;window
+     xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+  &lt;box class="okcancelbuttons"/&gt;
+&lt;/window&gt;
+
+<strong>CSS (example.css):</strong>
+
+box.okcancelbuttons {
+    -moz-binding: url('<a class=" external" rel="freelink">chrome://example/skin/example.xml#okcancel'</a>);
+}
+
+<strong>XBL (example.xml):</strong>
+
+&lt;?xml version="1.0"?&gt;
+&lt;bindings xmlns="<span class="nowiki">http://www.mozilla.org/xbl</span>"
+         xmlns:xul="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+  &lt;binding id="okcancel"&gt;
+    &lt;content&gt;
+      &lt;xul:button label="OK"/&gt;
+      &lt;xul:button label="Annuler"/&gt;
+    &lt;/content&gt;
+  &lt;/binding&gt;
+&lt;/bindings&gt;
+</pre>
+<p>Cet exemple crée une fenêtre avec une seule boîte. La boîte a été déclarée pour avoir un attribut <code>class</code> de valeur 'okcancelbuttons'. La feuille de styles associée au fichier indique que les boîtes avec les classes 'okcancelbuttons' ont une liaison spécialisée, définie dans le fichier XBL. Vous pouvez employer d'autres éléments derrière l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/box" title="box">box</a></code>, même pour votre propre balise adaptée.</p>
+<p>Nous verrons plus de détails concernant la partie XBL dans la section suivante. Cependant, pour récapituler, cet exemple entraîne l'ajout automatique de deux boutons dans la boîte, un bouton 'Ok' et un autre 'Annuler'.</p>
+<hr>
+<p>Dans la prochaine section, nous verrons comment créer un contenu avec XBL.</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Les_fichiers_de_propriétés" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Contenu_anonyme">Suivant  »</a></p>
+</div>
+<p><span class="comment">Interwiki</span></p>

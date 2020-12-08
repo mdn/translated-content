@@ -1,0 +1,44 @@
+---
+title: HTMLElement.click
+slug: Web/API/HTMLElement/click
+tags:
+  - API
+  - HTML DOM
+  - HTMLElement
+translation_of: Web/API/HTMLElement/click
+---
+<div>{{ APIRef("HTML DOM") }}</div>
+
+<p><strong>click</strong> 方法可以用来模拟鼠标左键单击一个元素。</p>
+
+<p>当在支持click方法的元素上使用该方法时（比如{{ HTMLElement("input") }}元素），会触发该元素的 click 事件。该事件会一直向文档树的上层元素冒泡，也会触发它们各自的click事件。但是，冒泡而来的事件会让一个 {{HTMLElement("a")}} 元素像受到真实的鼠标点击一样执行页面的跳转。</p>
+
+<h3 id="Syntax" name="Syntax">语法</h3>
+
+<pre class="syntaxbox">element.click()
+</pre>
+
+<h3 id="Specification" name="Specification">规范</h3>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('DOM2 HTML', 'html.html#ID-2651361')}}</td>
+   <td>{{Spec2('DOM2 HTML')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+
+
+<p>{{Compat("api.HTMLElement.click")}}</p>

@@ -1,0 +1,197 @@
+---
+title: chrome 脚本的限制
+slug: Mozilla/Firefox/Multiprocess_Firefox/Limitations_of_chrome_scripts
+translation_of: Mozilla/Firefox/Multiprocess_Firefox/Limitations_of_chrome_scripts
+---
+<div>{{FirefoxSidebar}}</div><p>This page describes patterns that used to work in the chrome process that will no longer work in multiprocess Firefox. These are the sorts of things that will break an old add-on in multiprocess Firefox. The fix is generally some variant of "do that in a frame script loaded into the content process".</p>
+
+<p>This is one of a pair of articles: the other one lists <a href="/en-US/Firefox/Multiprocess_Firefox/Limitations_of_frame_scripts">limitations of frame scripts</a>.</p>
+
+<h2 id="兼容性垫片">兼容性垫片</h2>
+
+<p>For many of the patterns described here we've implemented compatibility shims so the patterns still work. For example: whenever extensions try to access web content from the chrome process, the browser will return a <a href="https://developer.mozilla.org/en-US/docs/Cross_Process_Object_Wrappers">Cross Process Object Wrapper</a> that gives the chrome code synchronous access to the content.</p>
+
+<p>You'll get the shims for your add-on by default, unless you set the <a href="/en-US/Add-ons/Install_Manifests#multiprocessCompatible"><code>multiprocessCompatible</code> flag in your add-on's install manifest</a>.</p>
+
+<p>However, these shims are not a substitute for migrating extensions:</p>
+
+<ul>
+ <li>they are only a temporary measure, and will be removed eventually</li>
+ <li>they can have a bad effect on responsiveness</li>
+ <li>there are likely to be edge cases in which they don't work properly</li>
+</ul>
+
+<p>For each pattern we've noted:</p>
+
+<ul>
+ <li>whether a shim exists and what kind of behavior it provides</li>
+ <li>how to update your add-on so you don't need the shim</li>
+</ul>
+
+<h2 id="gBrowser.contentWindow_window.content...">gBrowser.contentWindow, window.content...</h2>
+
+<h3 id="如果没有垫片">如果没有垫片</h3>
+
+<p>所有在 chrome 进程中的 API 提供的直接访问内容对象将不再工作。例如：</p>
+
+<pre class="brush: js">// chrome code
+
+gBrowser.contentWindow;                    // null
+
+gBrowser.contentDocument;                  // null
+
+gBrowser.selectedBrowser.contentWindow;    // null
+
+window.content;                            // null
+
+content;                                   // null
+</pre>
+
+<p>特别说明，docshells 存在于内容进程，因此它们也无法访问：</p>
+
+<pre>gBrowser.docShell;                         // null
+
+gBrowser.selectedBrowser.docShell;         // null</pre>
+
+<h3 id="如果有垫片">如果有垫片</h3>
+
+<p>在这些情况下，垫片为你通过一个 <a href="/en-US/Firefox/Multiprocess_Firefox/Cross_Process_Object_Wrappers">CPOW</a> 提供内容对象。</p>
+
+<p>In some situations, the content process may not be initialized when an add-on asks for access to its content. In this case, the shim will return a JavaScript object that looks somewhat like a window or a document for about:blank. However, this "dummy" object is completely static and only exposes a few of the normal properties that windows and documents have. For this reason, add-ons that try to access content objects in fresh &lt;browser&gt; elements may run into trouble.</p>
+
+<p>To make the shim unnecessary: factor the code that needs to access content into a separate script, load that script into the content process as a frame script, and communicate between the chrome script and the frame script using the message-passing APIs. See the article on <a href="/en-US/Firefox/Multiprocess_Firefox/The_message_manager">using the message manager</a>.</p>
+
+<h2 id="CPOW_的限制">CPOW 的限制</h2>
+
+<p><a href="/en-US/Firefox/Multiprocess_Firefox/Cross_Process_Object_Wrappers">跨进程对象包装器</a> (CPOWs) 是一个迁移辅助，给 chrome 代码带来同步访问内容对象的能力。但是，在使用它时也有各种<a href="/en-US/Firefox/Multiprocess_Firefox/Cross_Process_Object_Wrappers#Limitations_of_CPOWs">限制</a>。</p>
+
+<h2 id="nsIContentPolicy">nsIContentPolicy</h2>
+
+<h3 id="如果没有垫片_2">如果没有垫片</h3>
+
+<p>在多进程的 Firefox 上，你无法在 chrome  进程中使用 <a href="http://dxr.mozilla.org/mozilla-central/source/dom/base/nsIContentPolicy.idl"><code>nsIContentPolicy</code></a>，因为它需要接触网络内容。</p>
+
+<h3 id="如果有垫片_2">如果有垫片</h3>
+
+<p>The shim enables you to add content policies in the chrome process. It transparently registers an <code>nsIContentPolicy</code> in the content process, whose <code>shouldLoad</code> just forwards to the chrome process. The content to check is forwarded as a <a href="/en-US/Firefox/Multiprocess_Firefox/Cross_Process_Object_Wrappers">CPOW</a>. The chrome process then checks the content against the policy supplied by the add-on, and forwards the response back to the child to be enforced.</p>
+
+<p>为了使垫片不再必要，在内容进程中定义和注册 <code>nsIContentPolicy</code>。如果你需要确保该政策只注册一次，使用一个 <a href="/en-US/docs/User:wbamberg/Multiprocess_Firefox-2/Message_manager/Process_scripts">process 脚本</a> 来注册该政策。</p>
+
+<h2 id="nsIWebProgressListener">nsIWebProgressListener</h2>
+
+<p>这个 API 在 chrome 进程中工作。有一个垫片让你可以访问传递到 <code>onStateChange</code> 的<code> </code><a href="http://dxr.mozilla.org/mozilla-central/source/uriloader/base/nsIWebProgress.idl"><code>nsIWebProgress</code></a>  对象的 <code>DOMWindow</code> 属性。但是，该 <code>DOMWindow</code> 是异步传递，因此在 chrome 进程收到时，DOM 可能已经改变了（例如，因为代码运行的内容进程已经修改它，或者我们已经导航到另一个页面）。</p>
+
+<p>还要注意，不同于其他垫片，这个垫片始终有效。</p>
+
+<p>我们正在努力修复此问题，见 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1118880">bug 1118880</a>。</p>
+
+<p>另外，你可以在内容进程中使用 <code>nsIWebProgressListener</code>。</p>
+
+<h2 id="chrome_进程中的_Observers">chrome 进程中的 Observers</h2>
+
+<p>根据不同的主题，你需要在 chrome 进程或者一个框架脚本中注册 observers。</p>
+
+<p>对于大多数主题，你需要在 chrome 进程中注册 observers。</p>
+
+<p>但是，你必须在一个框架脚本中监听 <a href="/en/docs/Observer_Notifications#Documents"><code>content-document-global-created</code> and <code>document-element-inserted</code></a>。这些主题的 <a href="http://dxr.mozilla.org/mozilla-central/source/xpcom/ds/nsIObserver.idl">Observers</a> 获取内容对象并作为 <code>aSubject</code> 参数到 <code>observe()</code>，因此通知不会发送到 chrome 进程。</p>
+
+<p>有一个垫片会将两个主题转发到 chrome 进程，将 <a href="/en-US/Firefox/Multiprocess_Firefox/Cross_Process_Object_Wrappers">CPOWs</a> 发送为 <code>aSubject</code> 参数。</p>
+
+<h3 id="HTTP_请求">HTTP 请求</h3>
+
+<p>你不能观测（observe）内容进程中的 <a href="https://developer.mozilla.org/en/docs/Observer_Notifications#HTTP_requests">HTTP 请求</a>。如果这样做，你将得到一个错误。<br>
+ <br>
+ 如果你在 chrome 进程中这样做，它一般会工作。observer 通知的主题将是一个 <code><a href="http://dxr.mozilla.org/mozilla-central/source/netwerk/protocol/http/nsIHttpChannel.idl">nsIHttpChannel</a></code>，正如你所期望的。</p>
+
+<p>A common pattern here is to use the <code>notificationCallbacks</code> property of the <code>nsIHttpChannel</code> to get the DOM window that initiated the load, like this:</p>
+
+<pre class="brush: js">observe: function (subject, topic, data) {
+  if (topic == "http-on-modify-request") {
+    var httpChannel = subject.QueryInterface(Ci.nsIHttpChannel);
+    var domWindow = httpChannel.notificationCallbacks.getInterface(Ci.nsIDOMWindow);
+  }
+}</pre>
+
+<p>或者这样：</p>
+
+<pre class="brush: js">observe: function (subject, topic, data) {
+  if (topic == "http-on-modify-request") {
+    var httpChannel = subject.QueryInterface(Ci.nsIHttpChannel);
+    var domWindow = httpChannel.notificationCallbacks.getInterface(Ci.nsILoadContext).associatedWindow;
+  }
+}</pre>
+
+<p>In multiprocess Firefox these patterns will no longer work: the <code>getInterface</code> call will fail.</p>
+
+<p>In multiprocess Firefox, <code>notificationCallbacks</code> is a special object that tries to emulate the single-process <code>notificationsCallbacks</code> object as best it can. It will return a dummy <code>nsILoadContext</code> when asked, but any attempt to get a window out of it will fail.<br>
+ <br>
+ There is an outstanding bug (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1108827">bug 1108827</a>) to implement a shim here that will make <code>notificationCallbacks</code> a <a href="/en-US/Firefox/Multiprocess_Firefox/Cross_Process_Object_Wrappers">CPOW</a> for the objects in the content process.</p>
+
+<p>The correct way to access the DOM window is through a message manager. In an HTTP observer, you can get the browser message manager for the window using code like this:</p>
+
+<pre class="brush: js">observe: function (subject, topic, data) {
+  if (topic == "http-on-modify-request") {
+    var httpChannel = subject.QueryInterface(Ci.nsIHttpChannel);
+    var loadContext = httpChannel.notificationCallbacks.getInterface(Ci.nsILoadContext);
+    // topFrameElement is the &lt;browser&gt; element
+    var topFrameElement = loadContext.topFrameElement;
+    var browserMM = topFrameElement.messageManager;
+    console.log("browserMM: " + browserMM);
+  }
+}</pre>
+
+<p>However, before Firefox 38, this technique will not work if multiprocess Firefox is disabled: specifically, <code>topFrameElement</code> will be null. This means that if you need to write code that works before Firefox 38 and on both multiprocess and non-multiprocess variants, you need to implement both paths:</p>
+
+<ul>
+ <li>test whether <code>topFrameElement</code> is null</li>
+ <li>if it is, you're running in single-process Firefox, and should use the old way</li>
+ <li>if it isn't, you're running in multiprocess Firefox and should use the new way</li>
+</ul>
+
+<p>From Firefox 38 onwards, the topFrameElement approach always works.</p>
+
+<h2 id="DOM_事件">DOM 事件</h2>
+
+<h3 id="如果没有垫片_3">如果没有垫片</h3>
+
+<p>In multiprocess Firefox, if you want to register an event listener on some content DOM node, that needs to happen in the content process.</p>
+
+<p>It used to be that if you registered a listener on the <a href="/en-US/docs/XUL/browser">XUL <code>&lt;browser&gt;</code></a>  or <a href="/en-US/docs/XUL/tab"><code>&lt;tab&gt;</code></a> element that hosted some DOM content, then events in the content would bubble up to the XUL and you could handle them there. This no longer happens in multiprocess Firefox.</p>
+
+<h3 id="如果有垫片_3">如果有垫片</h3>
+
+<p>The shim intercepts chrome process code that adds listeners to XUL elements and sets up listeners in the content process, relaying the result back to the chrome process. The <a href="/en-US/docs/Web/API/Event"><code>Event</code></a> object itself is relayed to the chrome process as a <a href="/en-US/Firefox/Multiprocess_Firefox/Cross_Process_Object_Wrappers">CPOW</a>.</p>
+
+<p>To make the shim unnecessary: register event listeners on the global object inside a <a href="/en-US/Firefox/Multiprocess_Firefox/The_message_manager">frame script</a>. For example:</p>
+
+<pre class="brush: js">addEventListener("load", handler, true) // for example</pre>
+
+<div>如果你需要在这时联系 chrome 进程，发送一个消息。</div>
+
+<div> </div>
+
+<h2 id="沙盒">沙盒</h2>
+
+<div>You can create sandboxes in the chrome or the content process. Sandboxes are often used as a safe way to manipulate web content, and if that's your goal, create the sandbox in the content process.</div>
+
+<div> </div>
+
+<div>There is a shim for sandboxes: if you make a sandbox in the chrome process and give it content principals (by passing a CPOW as the first argument to <a href="/en-US/docs/Components.utils.Sandbox">Components.utils.Sandbox</a>) then we'll actually make it in the content process.</div>
+
+<div> </div>
+
+<div>
+<h2 id="nsIAboutModule">nsIAboutModule</h2>
+
+<p>By default, custom about: pages registered using nsIAboutModule are loaded in the chrome process. This means that you can't access their content from the content process (via XHR, for example).</p>
+
+<p>你可以在你注册 about: URI 的代码中改变这个默认值。见 <a href="/en-US/Firefox/Multiprocess_Firefox/about:_and_chrome:_URIs">about: 和 chrome: URI</a>。</p>
+</div>
+
+<h2 id="JavaScript_代码模块_(JSM)">JavaScript 代码模块 (JSM)</h2>
+
+<div>在单进程的 Firefox 中，你可以使用 <a href="/en-US/docs/Mozilla/JavaScript_code_modules">JavaScript 代码模块 (JSM)</a> 来维持全局状态。在多进程的 Firefox 中，一个加载到某个进程的 JSM 不与加载到另一个进程的同样 JSM 共享状态：因此你不能使用一个 JSM 在 chrome 和内容进程之间共享状态。</div>
+
+<div> </div>
+
+<div>If an add-on wants to use a JSM to share state in this way, it's best to load the JSM in the chrome process, and have frame scripts store and access the JSM's state by sending messages to the chrome process using the message manager.</div>

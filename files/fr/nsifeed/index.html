@@ -1,0 +1,103 @@
+---
+title: nsIFeed
+slug: nsIFeed
+tags:
+  - Interfaces
+  - 'XPCOM:Références'
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIFeed
+---
+<p>
+</p><p>L'interface <code>nsIFeed</code> représente un unique flux de news Atom ou RSS (Really Simple Syndication). Elle comporte des attributs qui fournissent des informations sur le flux, de même que l'accès aux éléments ou données du flux.
+</p><p><br>
+</p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/feeds/public/nsIFeed.idl" rel="custom">toolkit/components/feeds/public/nsIFeed.idl</a></code><span style="text-align: right; float: right;"><a href="/fr/docs/Interfaces/À_propos_des_interfaces_scriptables" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">Last changed in Gecko 1.8.1 (Firefox 2 / Thunderbird 2 / SeaMonkey 1.1)</span></div>
+</div>
+<p></p><p>Hérité de : <code><a href="fr/NsIFeedContainer">nsIFeedContainer</a></code>
+</p>
+<h2 id="Attributs">Attributs</h2>
+<table class="standard-table"> <tbody><tr>
+<td class="header">Attribut
+</td><td class="header">Type
+</td><td class="header">Description
+</td></tr> <tr>
+<td><code>cloud</code>
+</td><td> <code><a href="fr/NsIWritablePropertyBag2">nsIWritablePropertyBag2</a></code>
+</td><td>Personne ne sait vraiment à quoi correspond l'attribut <code>cloud</code>. On le soupçonne d'être lié aux services XML-RPC ou SOAP.
+</td></tr>
+<tr>
+<td><code>enclosureCount</code>
+</td><td><code>long</code>
+</td><td>Indique le nombre d'éléments inclus dans le flux.
+</td></tr>
+<tr>
+<td><code>generator</code>
+</td><td><code><a href="fr/NsIFeedGenerator">nsIFeedGenerator</a></code>
+</td><td>Décrit le logiciel qui a généré le flux.
+</td></tr>
+<tr>
+<td><code>image</code>
+</td><td><code><a href="fr/NsIWritablePropertyBag2">nsIWritablePropertyBag2</a></code>
+</td><td>Fournit une URL image et des métadonnées, tel que définit par RSS 2.
+</td></tr>
+<tr>
+<td><code>items</code>
+</td><td><code><a href="fr/NsIArray">nsIArray</a></code>
+</td><td>Spécifie une liste des éléments ou des entrées du flux comme une liste d'objets <code><a href="fr/NsIFeedEntry">nsIFeedEntry</a></code>.
+</td></tr>
+<tr>
+<td><code>skipDays</code>
+</td><td><code><a href="fr/NsIArray">nsIArray</a></code>
+</td><td>Une liste des jours de la semaine où le flux ne doit pas être extrait. Chaque entrée de la liste est le nom d'un jour de la semaine à omettre. Par exemple, pour omettre l'extraction les lundis, un flux devra spécifier "Lundi" dans cette liste.
+<div class="note"><b>Note :</b> Cet attribut est très peu implémenté par les aggrégateurs.</div>
+</td></tr>
+<tr>
+<td><code>skipHours</code>
+</td><td><code><a href="fr/NsIArray">nsIArray</a></code>
+</td><td>Une liste des heures pendant lesquelles le flux ne doit pas être extrait. Les heures sont représentées par des valeurs réelles allant de 0 (minuit) à 23 (23 heures), et sont toujours indiquées en temps UTC.
+<div class="note"><b>Note :</b> Cet attribut est très peu implémenté.</div>
+</td></tr>
+<tr>
+<td><code>subtitle</code>
+</td><td><code><a href="fr/NsIFeedTextConstruct">nsIFeedTextConstruct</a></code>
+</td><td>Retourne un sous-titre pour le flux, basé sur sa description, son sous-titre et les extensions appropriées.
+</td></tr>
+<tr>
+<td><code>textInput</code>
+</td><td><code><a href="fr/NsIWritablePropertyBag2">nsIWritablePropertyBag2</a></code>
+</td><td>Information sur la boîte texte qui peut être affichée avec le flux par les aggrégateurs supportant cette fonction, pour permettre au lecteur d'envoyer une réponse à la source du flux.
+<div class="note"><b>Note :</b> Cet attribut est très peu utilisé, et il est incompatible avec nombre d'aggrégateurs.</div>
+</td></tr>
+<tr>
+<td><code>type</code>
+</td><td><code>long</code>
+</td><td>Indique le type de contenu délivré par un flux.
+<p>Les valeurs possibles sont:
+</p>
+<dl><dt> <code>TYPE_FEED</code>
+</dt><dd> Un flux texte standard.
+</dd></dl>
+<dl><dt> <code>TYPE_AUDIO</code>
+</dt><dd> Un flux audio, tel qu'un podcast.
+</dd></dl>
+<dl><dt> <code>TYPE_IMAGE</code>
+</dt><dd> Un flux image, tel qu'un photocast.
+</dd></dl>
+<dl><dt> <code>TYPE_VIDEO</code>
+</dt><dd> Un flux vidéo, tel qu'un videocast.
+</dd></dl>
+<p><i>Cet attribut est en lecture seule.</i>
+</p>
+<div class="note"><b>Note :</b> Vous devriez considérer ceci comme un masque de valeurs ; à terme, l'attribut "type" pourrait inclure simultanément plusieurs de ces valeurs. Il n'est pas certain que cela se produise avant la sortie de Firefox 2.</div>
+</td></tr>
+</tbody></table>
+<h2 id="Voir_également">Voir également</h2>
+<p><a href="fr/NsIFeedContainer">nsIFeedContainer</a>
+</p>

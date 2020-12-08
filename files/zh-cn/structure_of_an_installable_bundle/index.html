@@ -1,0 +1,144 @@
+---
+title: 可安装bundle的目录结构
+slug: Structure_of_an_installable_bundle
+translation_of: Archive/Mozilla/Bundles
+---
+<p><a href="/en/XUL_Application_Packaging" title="/en/XUL_Application_Packaging">XULRunner应用</a>、<a href="/en/Extensions" title="/en/Extensions">扩展</a>和<a href="/en/Themes" title="/en/Themes">主题</a>都共享相同的目录结构，并且这样的目录结构某些时候还可以用于像可安装应用扩展那样的独立XULRunner应用。</p>
+<h3 id="Basic_Structure_of_a_Bundle" name="Basic_Structure_of_a_Bundle">一个bundle的基本目录结构</h3>
+<p>一个bundle可能包含以下任何种类的文件：</p>
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th>bundle内容相对于root的路径</th>
+      <th>说明</th>
+      <th>
+        <p>版本信息</p>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>/<a href="/en/Install_Manifests" title="en/Install_Manifests">install.rdf</a></code></td>
+      <td>扩展或主题的安装清单文件</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code>/<a href="/en/XUL_Application_Packaging" title="en/XUL_Application_Packaging">application.ini</a></code></td>
+      <td>应用启动清单文件</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code>/<a href="/en/Extensions/Bootstrapped_extensions" title="en/Extensions/Bootstrapped extensions">bootstrap.js</a></code></td>
+      <td>The bootstrap script for extensions not requiring a restart (those with <code>&lt;em:bootstrap&gt;true&lt;/em:bootstrap&gt;</code> in their <code>install.rdf</code>). Note that other files and directories (e.g. <code>chrome.manifest</code>, <code>components</code>, <code>defaults</code>) in bootstrapped extensions are not processed by a supporting application.</td>
+      <td><a href="/en/Gecko#Versions_of_Gecko" title="en/Gecko#Versions_of_Gecko">(&gt;=2.0)</a></td>
+    </tr>
+    <tr>
+      <td><code>/<a href="/en/Chrome_Registration#The_Chrome_Registry" title="en/Chrome_Registration#The_Chrome_Registry">chrome.manifest</a></code></td>
+      <td>Chrome注册清单文件</td>
+      <td><a href="/en/Gecko#Versions_of_Gecko" title="en/Gecko#Versions_of_Gecko">(&gt;=1.8)</a></td>
+    </tr>
+    <tr>
+      <td><code>/components/*</code></td>
+      <td>XPCOM 组件 (*.js, *.dll)和 *.xpt 接口文件</td>
+      <td><a href="/en/Gecko#Versions_of_Gecko" title="en/Gecko#Versions_of_Gecko">(&gt;=1.7)</a></td>
+    </tr>
+    <tr>
+      <td><code><a href="/en/Building_an_Extension#Defaults_Files" title="en/Building_an_Extension#Defaults_Files">/defaults/preferences/*.js</a></code></td>
+      <td>默认配置文件</td>
+      <td><a href="/en/Gecko#Versions_of_Gecko" title="en/Gecko#Versions_of_Gecko">(&gt;=1.7)</a></td>
+    </tr>
+    <tr>
+      <td><code>/plugins/*</code></td>
+      <td><a href="/en/Plugins" title="en/Plugins">NPAPI 插件</a></td>
+      <td><a href="/en/Gecko#Versions_of_Gecko" title="en/Gecko#Versions_of_Gecko">(&gt;=1.8)</a></td>
+    </tr>
+    <tr>
+      <td><code>/<a href="/en/Window_icons" title="en/Window_icons">chrome/icons/default/*</a></code></td>
+      <td>窗口图标</td>
+      <td><a href="/en/Gecko#Versions_of_Gecko" title="en/Gecko#Versions_of_Gecko">(&gt;=1.8)</a></td>
+    </tr>
+    <tr>
+      <td><code>/<a href="/en/Extensions/Inline_Options" title="/en/Extensions/Inline_Options">options.xul</a></code></td>
+      <td>用于显示在Add-ons管理器中的扩展配置选项画面</td>
+      <td><a href="/en/Gecko#Versions_of_Gecko" title="en/Gecko#Versions_of_Gecko">(&gt;=7.0)</a></td>
+    </tr>
+    <tr>
+      <td>...</td>
+      <td>附加资源 (如 chrome:// 或 resource:// 提供可在<a href="/en/Chrome_Registration" title="/en/Chrome_Registration">chrome.manifest</a>文件中被注册的附加资源)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <th colspan="3">Application-specific</th>
+    </tr>
+    <tr>
+      <td><code>/searchplugins/*.src</code></td>
+      <td>Sherlock search plugins</td>
+      <td><a href="/en/Firefox_1.5_for_developers" title="en/Firefox_1.5_for_developers">Firefox 1.5</a> and greater.</td>
+    </tr>
+    <tr>
+      <td><code>/searchplugins/*.xml</code></td>
+      <td><a href="/en/Creating_MozSearch_plugins" title="en/Creating_MozSearch_plugins">MozSearch and OpenSearch plugins</a></td>
+      <td><a href="/en/Firefox_2_for_developers" title="en/Firefox_2_for_developers">Firefox 2</a> and greater</td>
+    </tr>
+    <tr>
+      <td><code>/dictionaries/*.{aff|dic}</code></td>
+      <td>Myspell dictionaries</td>
+      <td><a href="/en/Firefox_2_for_developers" title="en/Firefox_2_for_developers">Firefox 2</a> and greater</td>
+    </tr>
+  </tbody>
+</table>
+<p>当然一个扩展并不需要（通常是不需要）所有的这些目录。主题由于安全原因被限制了功能，并且通常仅能提供一个<a href="/en/Chrome_Registration" title="/en/Chrome_Registration">chrome.manifest</a>文件用于注册主题和JAR文件。</p>
+<h3 id="平台特定文件">平台特定文件</h3>
+<p>Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1) 移除了对平台特定文件子目录的支持，接下来讨论。取而代之的是你需要使用清单标识（如<a href="/en/Chrome_Registration#os" title="/en/Chrome_Registration#os">OS</a>和<a href="/en/Chrome_Registration#abi" title="/en/Chrome_Registration#abi">ABI</a>标识）在你的<a href="/en/Chrome_Registration" title="/en/Chrome_Registration">chrome.manifest</a>文件中以指定组件应该被加载到哪种平台上。</p>
+<p>例如：</p>
+<pre>binary-component components/windows/mycomponent.dll ABI=WINNT_x86-msvc
+binary-component components/mac/mycomponent.dylib ABI=Darwin_x86-gcc3
+binary-component components/mac/mycomponent64.dylib ABI=Darwin_x86_64-gcc3
+binary-component components/linux/mycomponent.so ABI=Linux_x86-gcc3
+</pre>
+<p>这也意味着你可以不再将平台特定配置文件包含进你的bundle。</p>
+<h4 id="平台特定子目录：Gecko_1.9.2x及其更早版本">平台特定子目录：Gecko 1.9.2x及其更早版本</h4>
+<div class="geckoVersionNote">
+  <div class="geckoVersionHeading">
+Gecko 2.0 note
+<div style="font-size: 9px; line-height: 1; font-style: italic;">(Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)</div>
+</div>
+  <p>对于平台特定子目录的支持已经在Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)中被移除. 参见 <a href="/en/Bundles#Platform-specific_files" title="en/Bundles#Platform-specific files">Platform-specific files</a> 以学习如何使用平台特定文件。</p>
+</div>
+<p>在某些情况下一个扩展或应用可能希望包含针对不同平台的组件或插件，或者主题的作者可能想要包含多平台特定的JAR文件。为了实现第一种情况，扩展或应用需要为平台特定文件(starting with Toolkit/Gecko 1.8, Firefox/Thunderbird 1.5)指定特定的子目录。平台字符串标识被定义于工具构建处理、操作系统唯一结果结合、处理器架构和编译期间。具体字符串格式如下：</p>
+<pre class="eval"><em>{<a href="/en/OS_TARGET" title="en/OS_TARGET">OS_TARGET</a>}</em>_<em>{<a href="/en/XPCOM_ABI" title="en/XPCOM_ABI">TARGET_XPCOM_ABI</a>}</em>
+</pre>
+<p>所有加载于主扩展目录中的文件此时都会从子目录中被加载</p>
+<pre class="eval">/platform/<em>{platform string}</em>
+</pre>
+<p>如何它存在的话。比如如果一个插件的供应商想让他的插件可以用于装有Linux(of the form: /platform/Linux*/)、Macintosh(of the form: /platform/Darwin*/)或Windows(of the form: /platform/WIN*/)的电脑上，那么他需要提供以下文件：</p>
+<pre class="eval">/platform/Linux_x86-gcc3/plugins/libMyPlugin.so
+/platform/WINNT_x86-msvc/plugins/MyPlugin.dll
+/platform/Darwin_ppc-gcc3/plugins/libMyPlugin.dylib
+</pre>
+<p>因为XPT文件不是平台特定的，因此任何相关的XPT文件都可以放到通用的组件目录中：</p>
+<pre class="eval">/components/MyPlugin.xpt
+</pre>
+<p>如果一个扩展含有非二进制的平台特定代码（例如那种从脚本中使用windows注册表的代码），那么它也可以使用系统标识符作为平台子目录名：</p>
+<pre class="eval">/platform/WINNT/components/registerDoctype.js
+</pre>
+<p>当平台特定JAR文件被使用时，每个平台目录都应该拥有它自己的chrome.manifest清单文件：</p>
+<pre class="eval">chrome.manifest
+chrome/mytheme-base.jar
+platform/Darwin/chrome.manifest
+platform/Darwin/chrome/mytheme-mac.jar
+platform/WINNT/chrome.manifest
+platform/WINNT/chrome/mytheme-win.jar
+</pre>
+<p>应用或扩展加载器先处理基础目录，然后再是可应用平台目录(先是 /{OS_TARGET}/, 然后是 /{<a href="/en/OS_TARGET" title="en/OS_TARGET">OS_TARGET</a>}_{<a href="/en/XPCOM_ABI" title="en/XPCOM_ABI">TARGET_XPCOM_ABI</a>}/)。当默认配置被定义于几个目录中，那么最后一个被加载的配置将覆盖之前的配置。</p>
+<h3 id="Official_References_for_Toolkit_API" name="Official_References_for_Toolkit_API">Official references for <a href="/en/Toolkit_API" title="en/Toolkit_API">toolkit API</a></h3>
+<p>
+  </p><ul>
+    <li><a href="/en/Bundles" title="en/Bundles">Structure of an Installable Bundle</a>: describes the common structure of installable bundles, including extensions, themes, and XULRunner applications</li>
+    <li><a href="/en/Extension_Packaging" title="en/Extension_Packaging">Extension Packaging</a>: specific information about how to package extensions</li>
+    <li><a href="/en/Theme_Packaging" title="en/Theme_Packaging">Theme Packaging</a>: specific information about how to package themes</li>
+    <li><a href="/en/Multiple_Item_Packaging" title="en/Multiple_Item_Packaging">Multiple-item Extension Packaging</a>: specific information about multiple-item extension XPIs</li>
+    <li><a href="/en/XUL_Application_Packaging" title="en/XUL_Application_Packaging">XUL Application Packaging</a>: specific information about how to package XULRunner applications</li>
+    <li><a href="/en/Chrome_Registration" title="en/Chrome_Registration">Chrome Registration</a></li>
+    <li><a href="/en-US/docs/Mozilla/Tech/XUL/Printing">Printing in XUL Apps</a></li>
+  </ul>

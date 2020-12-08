@@ -1,0 +1,139 @@
+---
+title: Intl.NumberFormat.prototype.resolvedOptions()
+slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions
+tags:
+  - Internationalization
+  - JavaScript
+  - Method
+  - NumberFormat
+  - Prototype
+translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions
+---
+<div>{{JSRef}}</div>
+
+<p>ローケルを反映しているプロパティとこの{{jsxref("Global_Objects/NumberFormat", "NumberFormat")}}オブジェクトの初期化中に計算された数値変換オプションをもった新しいオブジェクトを返します。</p>
+
+<h2 id="構文">構文</h2>
+
+<pre class="syntaxbox"><code><var>numberFormat</var>.resolvedOptions()</code></pre>
+
+<h2 id="説明">説明</h2>
+
+<p>ローケルを反映しているプロパティとこの{{jsxref("Global_Objects/NumberFormat", "NumberFormat")}}オブジェクトの初期化中に計算された数値変換オプションをもった新しいオブジェクトを返します。オブジェクトは次のプロパティを持っています。:</p>
+
+<dl>
+ <dt><code>locale</code></dt>
+ <dd>実際に使われているローケルに対するBCP47言語タグ。Unicode表現値が入力BCP47言語タグでリクエストされたら、このローケルに対してリクエストされサポートされているキー／バリューペアは<code>locale</code>に含まれます。</dd>
+ <dt><code>numberingSystem</code></dt>
+ <dd>Unicode表現キー<code>"nu"</code>を使うかデフォルトとして設定される値。</dd>
+ <dt><code>style</code></dt>
+ <dt><code>useGrouping</code></dt>
+ <dd><code>options</code>引数でプロパティに対して提供されるかデフォルトとして設定される値。</dd>
+ <dt><code>currency</code></dt>
+ <dt><code>currencyDisplay</code></dt>
+ <dd><code>options</code>引数でプロパティに対して提供されるかデフォルトとして設定される値。<code>style</code>が<code>"currency"</code>の場合のみ、これらのプロパティは存在しています。</dd>
+</dl>
+
+<p>次の２つのプロパティのグループのうちどちらかのみが含まれています。:</p>
+
+<dl>
+ <dt><code>minimumIntegerDigits</code></dt>
+ <dt><code>minimumFractionDigits</code></dt>
+ <dt><code>maximumFractionDigits</code></dt>
+ <dd><code>options</code>引数でプロパティに対して提供されるかデフォルトとして設定される値。<code>minimumSignificantDigits</code>または<code>maximumSignificantDigits</code>が<code>options</code>引数で提供されなかった場合のみ、これらのプロパティは存在しています。</dd>
+ <dt><code>minimumSignificantDigits</code></dt>
+ <dt><code>maximumSignificantDigits</code></dt>
+ <dd><code>options</code>引数でプロパティに対して提供されるかデフォルトとして設定される値。 これらのプロパティのうち少なくとも１つが<code>options</code>引数で提供された場合のみ、これらのプロパティは存在しています。</dd>
+</dl>
+
+<h2 id="例">例</h2>
+
+<h3 id="resolvedOptions_メソッドを使う"><code>resolvedOptions</code> メソッドを使う</h3>
+
+<pre class="brush: js">var de = new Intl.NumberFormat('de-DE');
+var usedOptions = de.resolvedOptions();
+
+usedOptions.locale;                // "de-DE"
+usedOptions.numberingSystem;       // "latn"
+usedOption.style;                  // "decimal"
+usedOptions.minimumIntegerDigits;  // 1
+usedOptions.minimumFractionDigits; // 0
+usedOptions.maximumFractionDigits; // 3
+usedOptions.useGrouping;           // true
+</pre>
+
+<h2 id="仕様">仕様</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状況</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES Int 1.0', '#sec-11.3.3', 'Intl.NumberFormat.prototype.resolvedOptions')}}</td>
+   <td>{{Spec2('ES Int 1.0')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>機能</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>基本サポート</td>
+   <td>{{CompatChrome("24")}}</td>
+   <td>{{CompatGeckoDesktop("29")}}</td>
+   <td>{{CompatIE("11")}}</td>
+   <td>{{CompatOpera("15")}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>機能</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>基本サポート</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatChrome("26")}}</td>
+   <td>{{CompatNo}}<br>
+    {{bug("864843")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="関連情報">関連情報</h2>
+
+<ul>
+ <li>{{jsxref("NumberFormat", "Intl.NumberFormat")}}</li>
+</ul>

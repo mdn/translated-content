@@ -1,0 +1,68 @@
+---
+title: CheckboxStateChange
+slug: Archive/Mozilla/XUL/Events/CheckboxStateChange
+tags:
+  - Event
+translation_of: Archive/Mozilla/XUL/Events/CheckboxStateChange
+---
+<p><code>CheckboxStateChange</code> イベントは、<a href="/ja/docs/Mozilla/Tech/XUL/checkbox">&lt;checkbox&gt;</a> 要素の状態が変更されたときに実行されます。</p>
+
+<p>このイベントは、主にアクセシビリティの目的で使用されます。</p>
+
+<h2 id="一般情報">一般情報</h2>
+
+<dl>
+ <dt style="float: left; text-align: right; width: 140px;">仕様</dt>
+ <dd style="margin: 0 0 0 140px;">XUL</dd>
+ <dt style="float: left; text-align: right; width: 140px;">インターフェイス</dt>
+ <dd style="margin: 0 0 0 140px;">Event</dd>
+ <dt style="float: left; text-align: right; width: 140px;">バブル</dt>
+ <dd style="margin: 0 0 0 140px;">Yes</dd>
+ <dt style="float: left; text-align: right; width: 140px;">キャンセル可能</dt>
+ <dd style="margin: 0 0 0 140px;">Yes</dd>
+ <dt style="float: left; text-align: right; width: 140px;">ターゲット</dt>
+ <dd style="margin: 0 0 0 140px;">element</dd>
+ <dt style="float: left; text-align: right; width: 140px;">既定のアクション</dt>
+ <dd style="margin: 0 0 0 140px;">None</dd>
+</dl>
+
+<h2 id="プロパティ">プロパティ</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">プロパティ</th>
+   <th scope="col">タイプ</th>
+   <th scope="col">説明</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>target</code> {{ReadOnlyInline}}</td>
+   <td>{{domxref("EventTarget")}}</td>
+   <td>イベントのターゲット (DOMツリーの一番上のターゲット)</td>
+  </tr>
+  <tr>
+   <td><code>type</code> {{ReadOnlyInline}}</td>
+   <td>{{domxref("DOMString")}}</td>
+   <td>イベントのタイプ</td>
+  </tr>
+  <tr>
+   <td><code>bubbles</code> {{ReadOnlyInline}}</td>
+   <td><code>boolean</code></td>
+   <td>イベントは通常バブルか</td>
+  </tr>
+  <tr>
+   <td><code>cancelable</code> {{ReadOnlyInline}}</td>
+   <td><code>boolean</code></td>
+   <td>イベントをキャンセルすることは可能か</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="関連するイベント">関連するイベント</h2>
+
+<ul>
+ <li>{{Event("ValueChange")}}</li>
+ <li>{{Event("RadioStateChange")}}</li>
+</ul>

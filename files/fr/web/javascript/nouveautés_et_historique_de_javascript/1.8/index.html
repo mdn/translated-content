@@ -1,0 +1,41 @@
+---
+title: Nouveautés de JavaScript 1.8
+slug: Web/JavaScript/Nouveautés_et_historique_de_JavaScript/1.8
+tags:
+  - JavaScript
+  - Versions
+translation_of: Archive/Web/JavaScript/New_in_JavaScript/1.8
+---
+<div>{{jsSidebar("New_in_JS")}}</div>
+
+<p>Cette page présente le journal des modifications (<em>changelog</em>) pour JavaScript 1.8. Cette version de Javascript a été introduite dans <a href="/fr/Firefox/Releases/3">Firefox 3</a> avec Gecko 1.9. Consultez le {{ Bug(380236) }} pour suivre les progrès du développement de JavaScript 1.8.</p>
+
+<h2 id="Utilisation_de_JavaScript_1.8" name="Utilisation_de_JavaScript_1.8">Utilisation de JavaScript 1.8</h2>
+
+<p>Afin d'utiliser certaines des nouvelles fonctionnalités de JavaScript 1.8, utilisez :</p>
+
+<pre class="brush: html">&lt;script type="application/javascript;version=1.8"&gt;
+  ... votre code ...
+&lt;/script&gt;
+</pre>
+
+<p>Une autre méthode (non recommandée) consiste à utiliser l'attribut déprécié <code>language</code> de la balise <code> &lt;script&gt;</code> avec la valeur « JavaScript1.8 ».</p>
+
+<p>Lorsque vous utilisez le <a href="/fr/Introduction_au_shell_JavaScript">shell JavaScript</a>, des composants XPCOM JavaScript ou des éléments <code>&lt;script&gt;</code> XUL, la dernière version de JavaScript (JavaScript 1.8 dans Mozilla 1.9) est utilisée automatiquement (cf. {{ Bug(381031) }}, {{ Bug(385159) }}).</p>
+
+<p>Pour utiliser les fonctionnalités nécessitant l'utilisation des nouveaux mots-clés « <code>yield</code> » et « <code>let</code> », la version 1.7 ou supérieure doit être spécifiée, car du code existant peut utiliser ces mots-clés comme noms de variables ou de fonctions. Les fonctionnalités qui n'utilisent pas de nouveaux mots-clés (comme les expressions génératrices) peuvent être utilisés sans préciser la version de JavaScript.</p>
+
+<h2 id="Nouvelles_fonctionnalités_dans_JavaScript_1.8">Nouvelles fonctionnalités dans JavaScript 1.8</h2>
+
+<ul>
+ <li>{{jsxref("Opérateurs/Expression_Closures", "Expressions de fermetures")}} (<em>Expression Closures</em>).</li>
+ <li><a href="/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs#Expression_g.C3.A9n.C3.A9ratrices">Expression génératrices</a>. Facilite la création de générateurs (introduits avec <a href="/fr/docs/Web/JavaScript/New_in_JavaScript/1.7" title="Nouveauté dans JavaScript 1.7">JavaScript 1.7</a>). Auparavant pour créer un générateur il fallait écrire une fonction contenant l'instruction <code>yield</code>. Les expressions génératrices permettent de créer le même générateur à l'aide d'une syntaxe proche d'une liste en compréhension.</li>
+ <li>{{jsxref('Array.prototype.reduce()')}}</li>
+ <li>{{jsxref('Array.prototype.reduceRight()')}}</li>
+</ul>
+
+<h2 id="Changements_apportés_par_JavaScript_1.8">Changements apportés par JavaScript 1.8</h2>
+
+<h3 id="Affectation_par_décomposition_dans_les_boucles_for...in">Affectation par décomposition dans les boucles <code>for...in</code></h3>
+
+<p>L'une des modifications apportées par JavaScript 1.8 est la correction d'un bug lié à l'{{ jsxref('Opérateurs/Affecter_par_décomposition', 'Affection par décomposition de tableaux') }}, introduite avec JavaScript 1.7. Il était auparavant possible de décomposer les clés et valeurs d'un tableau avec la syntaxe <code>for ( var [clé, valeur] in tableau )</code>. Cela rendait cependant impossible la décomposition des valeurs d'un tableau de tableaux. Ce bug a été résolu ({{ Bug("366941") }}), et la syntaxe a utiliser est devenue la suivante : <code>for ( var [clé, valeur] in Iterator(tableau))</code>.</p>

@@ -1,0 +1,133 @@
+---
+title: JavaScript style guide
+slug: Mozilla/JavaScript_style_guide
+tags:
+  - Developing Mozilla
+  - JavaScript
+translation_of: Mozilla/JavaScript_Tips
+---
+<p> </p>
+<h2 id=".E3.81.AF.E3.81.98.E3.82.81.E3.81.AB" name=".E3.81.AF.E3.81.98.E3.82.81.E3.81.AB">はじめに</h2>
+<p>このガイドでは {{ Source("browser", "mozilla/browser") }} 内のコードを対象としています (すなわち Firefox)。</p>
+<p>既存のスクリプトを編集する際には、既存のコードに合わせるためにこれらのガイドラインをいじらなければならないかもしれません。すでに大量の変更を加えているのであれば既存のコードの書式を見直すことも検討すべきですが。</p>
+<p>これは <a class="external" href="http://neil.rashbrook.org/JS.htm" title="http://neil.rashbrook.org/JS.htm">Neil のガイド</a> を元にしていますが、コードレビュー担当者は最新のスタイルに合わせるためにこれを更新してください。</p>
+<h2 id=".E3.83.9B.E3.83.AF.E3.82.A4.E3.83.88.E3.82.B9.E3.83.9A.E3.83.BC.E3.82.B9" name=".E3.83.9B.E3.83.AF.E3.82.A4.E3.83.88.E3.82.B9.E3.83.9A.E3.83.BC.E3.82.B9">ホワイトスペース</h2>
+<ul> <li>基本的なインデントはスペース 2 つです。タブを使ってはいけません。</li> <li>1 行は 80 文字以下になるようにしてください。行を折り返すときは前の行の関係のあるアイテムと並ぶようにインデントしてください。{{ Anch("インデントの例") }} をご覧ください。</li> <li>行末にスペースを入れないようにしてください。たとえ 2 項演算子やコンマやセミコロンの後ろでもだめです。</li> <li>2 項演算子はスペースで離してください。</li> <li>コンマやセミコロンの後ろにスペースを入れてください。前にではありません。</li> <li>キーワードの後ろにスペースを入れてください。例：<code>if (x &gt; 0)</code></li> <li>定義のブロックの間には空行を 1 つ（もしくは 2 つ）入れてください。大きなコードのブロックも空行で分割するようにしてください。</li> <li>ファイルの最後には改行してください。（特に emacs ユーザに当てはまります。）</li>
+</ul>
+<h2 id=".E8.A8.98.E5.8F.B7" name=".E8.A8.98.E5.8F.B7">記号</h2>
+<ul> <li>インラインの関数やオブジェクトでは、コンマやセミコロンの前を除いて波括弧の前後にスペースを入れてください。</li>
+</ul>
+<pre class="eval">function valueObject(aValue) { return { value: aValue }; }
+</pre>
+<ul> <li>パラメータのリストや配列の添え字など、角括弧の中ではスペースは必須ではありません。これは丸括弧の中のインラインオブジェクトを折り返す場合や、<code>for (;;)</code> 構文も該当します。後者に関して、最初のセミコロンの後ろに通常必要なスペースは 2 番目のセミコロンによっていらなくなり、2 番目のセミコロンの後ろのスペースは閉じ括弧によっていらなくなります。</li> <li>二重引用符を使うようにしてください。インラインのイベントハンドラ内や二重引用符をくくる場合は例外です。</li> <li>波括弧はその親の文に対してインデントしないでください。既存のファイルではそこで使われているスタイルを一貫して使ってください。ただし、新しくファイルを作るときは以下の使用可能な構文から好きなものを選んで使っても構いません。</li>
+</ul>
+<pre>if (dlmgrWindow)
+  dlmgrWindow.focus();
+
+if (dlmgrWindow) {
+  dlmgrWindow.focus();
+} else {
+  dlmgr.open(window, null);
+}
+</pre>
+<ul> <li>非 ASCII 文字に関しては <a href="/ja/JavaScript/Guide/Unicode" title="ja/Core_JavaScript_1.5_Guide/Unicode"><code>\uXXXX</code> 形式の Unicode エスケープ</a> を使用してください。XUL、DTD、スクリプト、プロパティファイル向けの文字セットは UTF-8 です。</li>
+</ul>
+<h2 id=".E3.82.B3.E3.83.BC.E3.83.89.E3.82.B9.E3.82.BF.E3.82.A4.E3.83.AB" name=".E3.82.B3.E3.83.BC.E3.83.89.E3.82.B9.E3.82.BF.E3.82.A4.E3.83.AB">コードスタイル</h2>
+<ul> <li>else は上で示したように常に単独の行に書いてください。</li> <li><code>return</code> の後には <code>else</code> を使わないでください。</li>
+</ul>
+<pre>if (x &lt; y)
+  return -1;
+if (x &gt; y)
+  return 1;
+return 0;
+</pre>
+<ul> <li><code>i++</code> も <code>++i</code> も使用可能です。</li> <li>インライン関数はそのデバッグが楽になるように名前を付けてください。関数をプロパティに代入しただけではその関数に名前を付けることはできません。次のようにしてください。</li>
+</ul>
+<pre>var offlineObserver = {
+  observe: function OO_observe(aSubject, aTopic, aState) {
+    if (aTopic == "network:offline-status-changed")
+      setOfflineUI(aState == "offline");
+  }
+};
+</pre>
+<h2 id=".E9.96.A2.E6.95.B0.E3.82.84.E5.A4.89.E6.95.B0.E3.81.AE.E3.83.8D.E3.83.BC.E3.83.9F.E3.83.B3.E3.82.B0" name=".E9.96.A2.E6.95.B0.E3.82.84.E5.A4.89.E6.95.B0.E3.81.AE.E3.83.8D.E3.83.BC.E3.83.9F.E3.83.B3.E3.82.B0">関数や変数のネーミング</h2>
+<ul> <li>名前や列挙値には interCaps のような形式を使用してください。他の定数は UPPER_CASE のようにしてください。</li> <li>コンストラクタは interCaps を使用し、1 文字目は大文字にしてください。</li> <li>インタフェース名用の利便のための定数の名前は nsI から始まるようにしてください。</li>
+</ul>
+<pre class="eval">const nsISupports = Components.interfaces.nsISupports;
+const nsIWBN = Components.interfaces.nsIWebBrowserNavigation;
+</pre>
+<ul> <li>列挙値は k という文字から始まるようにしてください。例：<code>const kDisplayModeNormal = 0;</code></li> <li>グローバル変数は g という文字から始まるようにしてください。例：<code>gFormatToolbar</code></li> <li>引数（パラメータ名）は a という文字から始まるようにしてください。</li> <li>プライベートメンバは _ から始まるようにしてください。例：<code>_internalFunction</code></li> <li>イベントハンドラ関数は on という語から始まるようにしてください。具体的には <code>onLoad</code>、<code>onDialogAccept</code>、<code>onDialogCancel</code> のような名前を使うようにしてください。こうすることで明白になります。</li> <li>関数名、ローカル変数、オブジェクトのメンバに接頭辞はいりません。</li> <li>ローカル変数はできるかぎりそれが使用されるところの近くで宣言するようにしてください。そしてすべての変数を初期化するようにしてください。</li> <li>XUL オーバレイでコードを挿入するときは、既存あるいは将来の関数名や変数名との衝突を避けるために、関数や変数を一意の名前を持つオブジェクトの中に隠蔽してください。</li>
+</ul>
+<pre class="eval">var UniqueName = {
+  _privateMember: 3,
+  publicMember: "A string",
+
+  init: function UN_init() {
+    this.doSomething(this.anotherMember);
+  },
+
+  doSomething: function UN_doSomething(aParam) {
+    alert(aParam);
+  }
+};
+</pre>
+<h2 id="JavaScript_.E3.82.89.E3.81.97.E3.81.84.E9.83.A8.E5.88.86" name="JavaScript_.E3.82.89.E3.81.97.E3.81.84.E9.83.A8.E5.88.86">JavaScript らしい部分</h2>
+<ul> <li>以下のような厳格な JavaScript の警告が書いたコードに対して出ていないかを確認してください。 <ul> <li>変数の宣言の重複</li> <li><code>return;</code> と <code>return value;</code> の混合。</li> <li>JavaScript オブジェクトの宣言における末尾のコンマ。</li> <li>未宣言の変数やメンバ。配列の値が存在するか不確かな場合はインデックスを配列の長さと比較してください。オブジェクトのメンバが存在するか不確かな場合は <code>"name" in aObject</code> を使用してください。期待している特定の型があるのであれば <code>typeof aObject.name == "function"</code>（または期待している型）を使用しても構いません。</li> </ul> </li> <li>JavaScript 配列を作るときは混乱しやすい <code>new Array(value1, value2)</code> よりも <code>{{ mediawiki.external('value1, value2') }}</code> を使用してください。<code>{{ mediawiki.external('value') }}</code> は常に 1 要素の配列を生成するのに対して、<code>new Array(length)</code> は実際には与えられた論理的な長さを持つ物理的には空の配列を生成するからです。配列用にメモリをあらかじめ割り当てることができるかは実際には保証できません。</li> <li>JavaScript オブジェクトを作るときは <code>{ member: value, ... }</code> を使用してください。<code>new Object()</code> に対して有利な点は、初期プロパティを作ることができ、さらに拡張 JavaScript 構文を使用してゲッタやセッタを定義することができることです。デフォルトのプロパティを代入する必要があるコンストラクタが定義されている場合、オブジェクトリテラルをプロトタイププロパティに代入するようにしてください。</li>
+</ul>
+<pre>function SupportsString(data) {
+  this.data = data;
+}
+SupportsString.prototype = {
+  toString: function toString() {
+    return data;
+  }
+};
+</pre>
+<ul> <li>正規表現を使用してください。だだし賢く使用してください。例えば、<code>aString</code> がホワイトスペースではないことをチェックするには <code>/\S/.test(aString);</code> を使用してください。結果の位置を知る必要がある場合でのみ <code>aString.search</code> を使用してください。また、マッチした部分文字列（正規表現では括弧区切り）をまとめたい場合にのみ <code>aString.match</code> を使用してください。マッチするかがあらかじめわかっていない場合や、文字列の決まった既知の場所から部分文字列を抜き出す場合は正規表現はあまり便利ではありません。例えば、<code>aString.slice(-1)</code> は <code>aString</code> の最後の文字を返します。<code>aString</code> が空であれば空の文字列を返します。</li> <li>真偽値を <code>true</code> や <code>false</code> と比較しないでください。例えば、<code>if (ioService.offline)</code> のように書いてください。混乱のおそれがある場合、オブジェクトなら <code>null</code> と、数値なら <code>0</code> と、文字列なら <code>""</code> と比較してください。</li> <li>どんなときでも <a href="/ja/JavaScript/Reference" title="ja/Core_JavaScript_1.5_Reference">JavaScript リファレンス</a> を読む価値があります。例えば、あたかも配列かのように、文字列にインデックスを付けることができるということを忘れないようにするために。</li>
+</ul>
+<h2 id="XPConnect" name="XPConnect">XPConnect</h2>
+<ul> <li>オブジェクトのメソッドやプロパティを必要以上に使用しないでください。一時変数に結果を格納しておくとより高速になります。</li> <li>必要のないメソッドを呼び出さないでください。例えば、1 つのウィンドウに対してならば <code>windowManager.getEnumerator(aType).hasMoreElements()</code> ではなく <code>windowManager.getMostRecentWindow(aType) != null</code> が使用できます。</li> <li>そのインタフェースのメソッドやプロパティにアクセスする必要がないときは、インタフェースにクエリをかけないでください。オブジェクトを比較するときもオブジェクトをパラメータとして渡すときもインタフェースにクエリをかける必要はありません。（C++ では両者とも必要です。）</li> <li>成功しそうでないときは <code>QueryInterface</code> を呼び出さないでください。その代わりに <code>instanceof</code> を使用してください。</li>
+</ul>
+<pre>if (target instanceof Components.interfaces.nsIRDFResource)
+  return target.Value;
+if (target instanceof Components.interfaces.nsIRDFLiteral)
+  return target.Value;
+return null;
+</pre>
+<ul> <li><code>QueryInterface</code> の戻り値をテストしないでください。成功すると常にオリジナルの変数を返します。XPConnect は tearoff に関してすべて知っていますし、既知のインタフェースをすべて得るために <code>QueryInterface</code> や <code>instanceof</code> をしたオブジェクトを変更します。</li> <li>オブジェクトを XPCOM のメソッドに渡す際に、渡すオブジェクトが XPCOM オブジェクトかどうか確認することはしばしば有用です。そうすることで C++ のメソッドは C++ のオブジェクトにアクセスできます。しかし、これは常に必要であるとは限りません。例えば、上で宣言したオフラインオブザーバは XPCOM オブジェクトとともに登録された JavaScript のオブジェクトです。そうすることで XPCOM からのコールバックが JavaScript のメソッドを実行できます。XPCOM メソッドにはいくつかのインタフェースを実装したオブジェクトを期待したものもあります。そのために <code>QueryInterface</code> メソッドを使う必要が出てきます。しかし、C++ だとヘルパクラスを必要とする弱参照については、JavaScript だと至極簡単に書けます。</li>
+</ul>
+<pre>var weakObserver = {
+  QueryInterface: function QueryInterface(aIID) {
+    if (aIID.equals(Components.interfaces.nsIObserver) ||
+        aIID.equals(Components.interfaces.nsISupportsWeakReference) ||
+        aIID.equals(Components.interfaces.nsISupports))
+       return this;
+    throw Components.results.NS_NOINTERFACE;
+  },
+  observe: function observe(aSubject, aTopic, aState) {
+  }
+}
+</pre>
+<ul> <li>XPCOM メソッドを宣言するときは、インタフェース定義で使われているのと同じメソッドのパラメータの名前を使用するようにしてください。</li>
+</ul>
+<h2 id="DOM_.E8.A6.81.E7.B4.A0" name="DOM_.E8.A6.81.E7.B4.A0">DOM 要素</h2>
+<ul> <li>DOM 要素は単にあらかじめいくつかインタフェースが備わっている XPCOM オブジェクトです。</li> <li>ある属性が存在しているかを確かめるのに <a href="/ja/DOM/element.getAttribute" title="ja/DOM/element.getAttribute">getAttribute</a> を呼び出さないでください。その代わりに <a href="/ja/DOM/element.hasAttribute" title="ja/DOM/element.hasAttribute">hasAttribute</a> を呼び出してください。</li> <li>next/previousSibling と一緒に first/lastChild を使うのではなく、childNodes に対するループを使うようにしてください。ただし、<code>childNodes.length &gt; 0</code> ではなく hasChildNodes() を使用してください。同様に、<code>document.getElementsByTagName(aTag).length &gt; 0</code> ではなく <code>document.getElementsByTagName(aTag).item(0) != null</code> を使用するようにしてください。</li> <li>tagName ではなく localName を使用するようにしてください。</li> <li>XUL の要素にはプロパティに対応した属性がたくさんあります。こうなっているのには理由がありますので、どんどん使用してください。そのプロパティは以下のものです。 <ul> <li>id</li> <li>align</li> <li>dir</li> <li>flex</li> <li>orient</li> <li>pack</li> <li>observes</li> <li>contextMenu</li> <li>tooltip</li> <li>width</li> <li>height</li> <li>minWidth</li> <li>minHeight</li> <li>maxWidth</li> <li>maxHeight</li> <li>persist</li> <li>left</li> <li>top</li> <li>datasources</li> <li>ref</li> <li>tooltipText</li> <li>statusText</li> <li>allowEvents</li> </ul> </li> <li>XUL は <code>ordinal</code> 属性も対応させていますが、これがない場合のデフォルトは "1" です。</li> <li>XUL は <code>class</code> 属性も対応させていますが、残念ながら <code>class</code> は予約済みの識別子であるためにプロパティは <code>className</code> という名前です。（プロパティは <code>{{ mediawiki.external('"class"') }}</code> として実装できそうですが、見た目が悪いです。）</li> <li>XUL は <code>hidden</code> および <code>collapsed</code> 属性もプロパティに対応させていますが、上のリストがすべて文字列のプロパティであるのに対してこれらは真偽値のプロパティであることに注意してください。</li> <li>XBL バインディングを使うことで XUL は他の便利なプロパティやメソッドも対応させられますが、これは要素によって異なります。</li> <li>最高のパフォーマンスを求めるために、すべての重要な要素に id を付けてください。しかしながら、タグ名によって要素を特定することに加えて、XUL は属性によって要素を特定することもできます。使える属性は文書の要素によって異なります。</li> <del><code>event.keyCode == 13</code> ではなく <code>event.keyCode == KeyEvent.DOM_VK_RETURN</code> のような DOM 定数を使用するのを忘れないでください。</del><ins>現在、KeyEvent定数はDOM仕様から外れたため(既に他のブラウザでもサポートされていない場合が多い)、数値を用いて比較するのが妥当です。</ins> </ul> <h2 id=".E3.82.A4.E3.83.B3.E3.83.87.E3.83.B3.E3.83.88.E3.81.AE.E4.BE.8B" name=".E3.82.A4.E3.83.B3.E3.83.87.E3.83.B3.E3.83.88.E3.81.AE.E4.BE.8B">インデントの例</h2> <p>妥当なインデントの例：</p> <pre class="eval">var result = prompt(aMessage,
+                    aInitialValue,
+                    aCaption);
+
+var IOService = Components.classes["@mozilla.org/network/io-service;1"]
+                          .getService(Components.interfaces.nsIIOService);
+</pre> <p>XPCOM コンポーネントの初期化の妥当なスタイル：</p> <pre class="eval">var IOService = Components.classes["@mozilla.org/network/io-service;1"]
+                          .getService(Components.interfaces.nsIIOService);
+
+const Ci = Components.interfaces;
+const Cc = Components.classes;
+
+var IOService = Cc["@mozilla.org/network/io-service;1"].
+                getService(Ci.nsIIOService);
+
+var IOService = Cc["@mozilla.org/network/io-service;1"].
+                  getService(Ci.nsIIOService);
+</pre> <pre class="eval">Cc["@mozilla.org/consoleservice;1"].getService(Ci.nsIConsoleService)
+                                   .logStringMessage(aMsg);
+</pre> <h2 id=".E3.83.84.E3.83.BC.E3.83.AB" name=".E3.83.84.E3.83.BC.E3.83.AB">ツール</h2> <ul> <li><a class="external" href="http://beaufour.dk/jst-review/">JST Review</a> - C++ 用ではありますが、基本的な JS のルール（タブ、行の長さなど）にも対応しています。</li> </ul> <h2 id=".E5.8F.82.E8.80.83.E8.B3.87.E6.96.99" name=".E5.8F.82.E8.80.83.E8.B3.87.E6.96.99">参考資料</h2> <ul> <li>これは <a class="external" href="http://neil.rashbrook.org/JS.htm" title="http://neil.rashbrook.org/JS.htm">Neil のガイド</a> を転載することから始まりました</li> <li>より新しい情報はこの <a class="external" href="http://dietrich.ganx4.com/blog/?p=226">ブログの投稿</a> にあります</li> </ul> <p>{{ languages( { "en": "en/JavaScript_style_guide" } ) }}</p>

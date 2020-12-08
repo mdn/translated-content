@@ -1,0 +1,311 @@
+---
+title: 创建_XPCOM_组件/使用_XPCOM_组件
+slug: Mozilla/Tech/XPCOM/Guide/Creating_components/Using_XPCOM_Components
+tags:
+  - XPCOM
+  - 所有分类
+translation_of: Mozilla/Tech/XPCOM/Guide/Creating_components/Using_XPCOM_Components
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/创建_XPCOM_组件:XPCOM_简介" style="float: left;">« 上一页</a><a href="/zh-CN/docs/Creating_XPCOM_Components:Component_Internals">下一页  »</a></p>
+</div><p></p>
+
+<p>创建一个新的 XPCOM 组件, 特别是在我们设计一个供别人使用的组件接口的时候, 最好方式是参照已有的组件. 我们在编写 <a href="cn/Creating_XPCOM_Components/Starting_WebLock">Starting WebLock</a> 这个例子的时候, 也是这么做的.</p>
+
+<p>Mozilla 浏览器应用是复杂的, 模块化的 XPCOM 客户程序. 实际上, 基本上所有与浏览器相关的功能都被定义成了组件的形式, 包括网页间的跳转, 窗口管理, cookie 管理, 书签, 安全, 搜索, 润色等等的其他功能, 这些功能都是由组件的接口提供的. Mozilla<em>就是</em>一堆 XPCOM 组件.</p>
+
+<p>本章将讨论 Mozilla 是如何使用象 CookieManager 这样的 XPCOM 对象, 然后根据这些例子我们定义 WebLock 组件的访问接口.</p>
+
+<h3 id=".E7.BB.84.E4.BB.B6.E7.9A.84.E4.BE.8B.E5.AD.90" name=".E7.BB.84.E4.BB.B6.E7.9A.84.E4.BE.8B.E5.AD.90">组件的例子</h3>
+
+<p>可以在这里 <a href="cn/XPCOM_API_Reference">XPCOM API Reference</a> 找到下面要描述的组件. 我们要了解的是象本节中所给出的组件是如何被 Mozilla 浏览器获取和使用的.</p>
+
+<h4 id="Cookie_.E7.AE.A1.E7.90.86.E5.99.A8" name="Cookie_.E7.AE.A1.E7.90.86.E5.99.A8">Cookie 管理器</h4>
+
+<p>Cookie 管理是以组件形式向 Mozilla 浏览器提供支持的众多组件之一, 这些组件可以被重用在需要类似功能的应用中. 当用户通过 Cookie 管理器对话框来观察, 组织, 或者删除 cookies 的时候, Cookie 管理器在背后默默的工作. <a href="#Cookie_管理器对话框">Cookie 管理器对话框</a>负责向用户提供 Cookie 管理器的 UI 界面<sup><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Guide/Creating_components/Using_XPCOM_Components#endnote_cookie-manager-ui">[cookie-manager-ui]</a></sup>.</p>
+
+<p><span id="Cookie_%E7%AE%A1%E7%90%86%E5%99%A8%E5%AF%B9%E8%AF%9D%E6%A1%86"><a id="Cookie_%E7%AE%A1%E7%90%86%E5%99%A8%E5%AF%B9%E8%AF%9D%E6%A1%86"></a><strong>Cookie 管理器对话框</strong></span></p>
+
+<p><img alt="Image:cookie_mgr_dlog.png"></p>
+
+<p>对话框是用 XUL (XML UI 语言) 和 JavaScript 语言编写, 使用称为<em>XPConnect</em> 的组件无缝连接到 Cookie 管理器组件(参看下面的 <a href="#从接口连接到组件">从接口连接到组件</a>). XUL 只是一种暴露 Cookie 管理器功能的方式, 但是却是 Mozilla 环境下最有用的方式之一.</p>
+
+<p>CookieManager 组件的功能通过 <code>nsICookieManager</code> 接口提供, 接口的方法如下:</p>
+
+<p><span id="%3Ccode%3EnsICookieManager%3C/code%3E_%E6%8E%A5%E5%8F%A3"><a id="%3Ccode%3EnsICookieManager%3C/code%3E_%E6%8E%A5%E5%8F%A3"></a><strong><code>nsICookieManager</code> 接口</strong></span></p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>removeAll</code></td>
+   <td>删除 cookie 列表中所有的 cookies.</td>
+  </tr>
+  <tr>
+   <td><code>enumerator</code></td>
+   <td>通过 cookie 列表枚举.</td>
+  </tr>
+  <tr>
+   <td><code>remove</code></td>
+   <td>从列表中删除某个 cookie .</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>XPCOM 中所有的接口必须固定, 虽然组件对接口的实现会有所变化. 接口都是<em>public</em> 的, 相对的, 接口实现是 private 的<sup><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Guide/Creating_components/Using_XPCOM_Components#endnote_private-xpcom-interfaces">[private-xpcom-interfaces]</a></sup>. 当用户选中 cookie 列表中的一个 cookie, 点击 Remove 按钮, <code>nsICookieManager</code> 接口的 <code>Remove</code> 方法被调用. CookieManager 组件执行该函数, 选中的组件就被删除了.</p>
+
+<p>下面的<a href="#从_JavaScript_中访问_CookieManager_组件">从 JavaScript 中访问 CookieManager 组件</a>代码, 展示了如何从 JavaScript 中调用 <code>Remove()</code> 方法:</p>
+
+<p><span id="%E4%BB%8E_JavaScript_%E4%B8%AD%E8%AE%BF%E9%97%AE_CookieManager_%E7%BB%84%E4%BB%B6"><a id="%E4%BB%8E_JavaScript_%E4%B8%AD%E8%AE%BF%E9%97%AE_CookieManager_%E7%BB%84%E4%BB%B6"></a><strong>从 JavaScript 中访问 CookieManager 组件</strong></span></p>
+
+<pre>// xpconnect to cookiemanager
+// get the cookie manager component in JavaScript
+var cmgr = Components.classes["@mozilla.org/cookiemanager;1"]
+                     .getService();
+cmgr = cmgr.QueryInterface(Components.interfaces.nsICookieManager);
+
+// called as part of a largerDeleteAllCookies() function
+function FinalizeCookieDeletions() {
+  for (var c=0; c&lt;deletedCookies.length; c++) {
+    cmgr.remove(deletedCookies[c].host,
+                deletedCookies[c].name,
+                deletedCookies[c].path);
+  }
+  deletedCookies.length = 0;
+}
+</pre>
+
+<div class="side-note">
+<p><span id="%E4%BB%8E%E6%8E%A5%E5%8F%A3%E8%BF%9E%E6%8E%A5%E5%88%B0%E7%BB%84%E4%BB%B6"><a id="%E4%BB%8E%E6%8E%A5%E5%8F%A3%E8%BF%9E%E6%8E%A5%E5%88%B0%E7%BB%84%E4%BB%B6"></a><strong>从接口连接到组件</strong></span></p>
+
+<p>Mozilla 中使用的从 JavaScript 访问 XPCOM 组件的技术称为<em>XPConnect</em>, XPConnect 也是一个组件.</p>
+
+<p>XPConnect 把应用程序代码与 Mozilla 浏览器, 基于 Gecko 的 XUL, 和象 xpcshell 这样的 JavaScript 环境绑定在一起.</p>
+
+<p>xpcshsell 是 Mozilla 内嵌的 XPCOM 工具, 它是 JavaScript 的命令行解释器.</p>
+
+<p>参看 <a class="external" href="http://www.mozilla.org/scriptable/" rel="freelink">http://www.mozilla.org/scriptable/</a>, 获取更多关于 XPConnect 和 JavaScript 的信息.</p>
+</div>
+
+<p>上面展现的技术当然并不是 XPCOM 的全部, 但是却是一个重要的方面. XPCOM 强加的契约打开了一扇通往<em>二进制互操作</em>技术的大门. - 这是一种能够在运行时刻访问, 使用, 重用 XPCOM 组件的技术, 这种技术能够保证用某种语言编写的组件能够被其他的语言所访问.</p>
+
+<p>在 Mozilla 浏览器中, 组件常常通过接口在 JavaScript 中访问, 搜索 Mozilla 的源代码, 会发现 CookieManager 组件<em>只是</em>在 JavaScript 中被调用. 在本教程中, 我们也使用这种方式来访问它<sup><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Guide/Creating_components/Using_XPCOM_Components#endnote_教程中使用的_coocki_管理器">[教程中使用的 coocki 管理器]</a></sup>.</p>
+
+<div class="side-note">
+<p><span id="JavaScript_%E4%B8%8E_Mozilla"><a id="JavaScript_%E4%B8%8E_Mozilla"></a><strong>JavaScript 与 Mozilla</strong></span></p>
+
+<p>JavaScript 是 Mozilla 浏览器的喉舌, 它把自己与 XPCOM 紧紧地绑定在一起. XPCOM 的这种<em>可扩展</em>能力 - 从 XPConnect 绑定的语言中访问组件的能力, 是 XPCOM 的一个关键属性.</p>
+</div>
+
+<h4 id="WebBrowserFind_.E7.BB.84.E4.BB.B6" name="WebBrowserFind_.E7.BB.84.E4.BB.B6"><code>WebBrowserFind</code> 组件</h4>
+
+<p>组件的应用是广泛的: 在浏览这样的高级应用中, 会有 <code>nsWebBrowserFind</code> 这样的接口, 它提供 <code>find()</code> 和 <code>findNext()</code> 方法用于在网页上查找特定内容. 在一些低级应用中, 会提供数据管理这样的功能. 虽然 Mozilla 并不能将所有的 API 都写成 XPCOM 组件的形式, 但是绝大多数浏览器的典型功能都是用 XPCOM 的组件形式实现的, 因此可以被嵌入和扩展.</p>
+
+<p>除了 CookieManager 组件, 这里还要介绍一个 WebBrowserFind 组件. 它实现的 <code>nsIWebBrowserFind</code> 接口见下表 <a href="#nsIWebBrowserFind_接口">nsIWebBrowserFind 接口</a>.</p>
+
+<p><span id="nsIWebBrowserFind_%E6%8E%A5%E5%8F%A3"><a id="nsIWebBrowserFind_%E6%8E%A5%E5%8F%A3"></a><strong>nsIWebBrowserFind 接口</strong></span></p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>findNext</code></td>
+   <td>找到字符串出现的下一个位置.</td>
+  </tr>
+  <tr>
+   <td><code>findBackwards</code></td>
+   <td>布尔类型属性值, 控制 <code>findNext()</code> 方法向前/向后搜索.</td>
+  </tr>
+  <tr>
+   <td><code>searchFrames</code></td>
+   <td>布尔类型属性值, 标识是否搜索当前页面的子框(subframes).</td>
+  </tr>
+  <tr>
+   <td><code>matchCase</code></td>
+   <td>布尔类型属性值, 标识是否按照大小写匹配搜索网页.</td>
+  </tr>
+  <tr>
+   <td><code>entireWord</code></td>
+   <td>布尔类型属性值, 标识是否匹配整个词.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>一旦我们使用接口来获的了某个组件, 我们就可以询问该组件是否支持其他的接口. 这种基本服务由 <code>nsISupports</code> 接口提供, 会由所有的 XPCOM 组件继承; 它允许我们查询组件的接口, 并在接口之间进行切换; 它展现了 XPCOM 的<em>运行时刻确定类型</em>的能力. 它由 <code>QueryInterface</code> 方法实现, 我们将在后面<a href="cn/Creating_XPCOM_Components/%e4%bb%80%e4%b9%88%e6%98%af_XPCOM%3f">什么是 XPCOM?</a>一章中介绍. <a href="cn/XPCOM_API_Reference">XPCOM API Reference</a> 中提供了完整的 XPCOM 组件的索引.</p>
+
+<h4 id="WebLock_.E7.BB.84.E4.BB.B6" name="WebLock_.E7.BB.84.E4.BB.B6"><strong>WebLock</strong> 组件</h4>
+
+<p>现在我们把 <strong>WebLock</strong> 组件看成另一个 XPCOM 组件的例子. 在面向对象编程中, 通常是先设计接口 - 首先定义要提供的功能, 而不是考虑如何实现这些功能. 因此我们把实现这个组件的细节问题放到下一章, 这一章先考虑从外部如何看待这个组件. - 即定义 WebLock 组件的接口.</p>
+
+<p><span id="IWebLock_%E6%8E%A5%E5%8F%A3"><a id="IWebLock_%E6%8E%A5%E5%8F%A3"></a><strong>IWebLock 接口</strong></span></p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>lock</code></td>
+   <td>锁定浏览器到当前站点, 或者是磁盘上保存的某个白名单上的站点.</td>
+  </tr>
+  <tr>
+   <td><code>unlock</code></td>
+   <td>解开浏览器锁定, 开放访问所有站点.</td>
+  </tr>
+  <tr>
+   <td><code>addSite</code></td>
+   <td>添加一个新的站点到白名单.</td>
+  </tr>
+  <tr>
+   <td><code>removeSite</code></td>
+   <td>从白名单上删除某个站点.</td>
+  </tr>
+  <tr>
+   <td><code>sites</code></td>
+   <td>枚举白名单上的站点.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>WebLock 组件就是要实现上面接口定义的功能. 它在浏览器启动的时候, 注册自己. 当用户或者管理员点击浏览器上的 weblock 图标时, 类厂会创建对象实例.</p>
+
+<h3 id="Mozilla_.E4.B8.AD.E4.BD.BF.E7.94.A8.E7.9A.84.E7.BB.84.E4.BB.B6" name="Mozilla_.E4.B8.AD.E4.BD.BF.E7.94.A8.E7.9A.84.E7.BB.84.E4.BB.B6">Mozilla 中使用的组件</h3>
+
+<p>那么我们应该如何获得组件, 然后如何在 Mozilla 中使用它呢?　我们在前面已经看到了一小段 JavaScript 代码, 但是我们并没有解释一般情况下该如何获得 XPCOM 组件.</p>
+
+<p>这一节讨论 Mozilla 中实际使用的组件例子. 本节分成三部分: 一部分是关于该如何在 Mozilla 上找到组件. 其他两个部分是关于该如何访问这些组件.</p>
+
+<h4 id=".E6.9F.A5.E6.89.BE_Mozilla_.E7.BB.84.E4.BB.B6" name=".E6.9F.A5.E6.89.BE_Mozilla_.E7.BB.84.E4.BB.B6">查找 Mozilla 组件</h4>
+
+<p>本书试图向读者提供关于 XPCOM 组件和当前冻结的接口的索引信息. <a class="external" href="http://www.mozilla.org/projects/embedding/">Mozilla 嵌入工程</a>跟踪了当前冻结的接口.</p>
+
+<p>Mozilla 包含了 Gecko 提供的查找和显示组件信息的工具 -<em>XPCOM 组件观察器</em><a class="external" href="http://lxr.mozilla.org/">LXR</a>.</p>
+
+<p>提供 XPCOM 组件信息的主要问题是, Mozilla 接口在不断的发展, 试图选择一个冻结的断面是困难的. 组件观察器的实现并没有考虑组件是否已被冻结, 在 LXR 中我们会发现, 被冻结的接口会在头部标记 <code>@status frozen</code>.</p>
+
+<h5 id="XPCOM_.E7.BB.84.E4.BB.B6.E8.A7.82.E5.AF.9F.E5.99.A8" name="XPCOM_.E7.BB.84.E4.BB.B6.E8.A7.82.E5.AF.9F.E5.99.A8">XPCOM 组件观察器</h5>
+
+<p><a class="external" href="http://www.hacksrus.com/~ginda/cview">组件观察器</a> 是一个可选安装的浏览器插件.</p>
+
+<p><span id="XPCOM_%E7%BB%84%E4%BB%B6%E8%A7%82%E5%AF%9F%E5%99%A8"><a id="XPCOM_%E7%BB%84%E4%BB%B6%E8%A7%82%E5%AF%9F%E5%99%A8"></a><strong>XPCOM 组件观察器</strong></span></p>
+
+<p><img alt="Image:using-component-viewer.png"></p>
+
+<p>在上面的图中, 左列显示的是以<em>gtx</em> 字符串搜索契约 ID 得到的组件子集, 右列是左列选中组件实现的接口.</p>
+
+<p>XPCOM 观察器在获取组件的大致信息的时候非常有用, 但是要知道组件观察器显示的是<em>所有</em>的组件, 有些组件并不稳定, 组件的接口可能会在后续版本中变化, 所以要慎重选取我们自己工程中使用的组件.</p>
+
+<p><span class="comment">XXX mediawiki is t3h suxx0r</span> <span class="comment">XXX give me my C++</span></p>
+
+<h4 id=".E5.9C.A8_Cpp_.E4.BB.A3.E7.A0.81.E4.B8.AD.E4.BD.BF.E7.94.A8_XPCOM_.E7.BB.84.E4.BB.B6" name=".E5.9C.A8_Cpp_.E4.BB.A3.E7.A0.81.E4.B8.AD.E4.BD.BF.E7.94.A8_XPCOM_.E7.BB.84.E4.BB.B6">在 Cpp 代码中使用 XPCOM 组件</h4>
+
+<p>XPConnect 把对 XPCOM 组件作为 JavaScript 对象, 使得对 XPCOM 组件的访问变得非常简单, 从 C++ 代码中访问 XPCOM 要复杂一些.</p>
+
+<p><a href="#从_Cpp_代码管理_Cookies">从 Cpp 代码管理 Cookies</a> 以 C++ 代码重新实现了<a href="#从_JavaScript_中访问_CookieManager_组件">从 JavaScript 中访问 CookieManager 组件</a>的功能.</p>
+
+<p><span id="%E4%BB%8E_Cpp_%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86_Cookies"><a id="%E4%BB%8E_Cpp_%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86_Cookies"></a><strong>从 Cpp 代码管理 Cookies</strong></span></p>
+
+<pre>nsCOMPtr&lt;nsIServiceManager&gt; servMan;
+nsresult rv = NS_GetServiceManager(getter_AddRefs(servMan));
+if (NS_FAILED(rv))
+  return -1;
+
+nsCOMPtr&lt;nsICookieManager&gt; cookieManager;
+rv = servMan-&gt;GetServiceByContractID("@mozilla.org/cookiemanager",
+                                     NS_GET_IID(nsICookieManager),
+                                     getter_AddRefs(cookieManager));
+
+if (NS_FAILED(rv))
+  return -1;
+
+PRUint32 len;
+deletedCookies-&gt;GetLength(&amp;len);
+
+for (int c=0; c&lt;len; c++)
+    cookieManager-&gt;Remove(deletedCookies[c].host,
+                          deletedCookies[c].name,
+                          deletedCookies[c].path,
+                          PR_FALSE);
+</pre>
+
+<p><span class="comment">XXX: In the original document, there were only the first three parameters to the |Remove| call. I added |PR_TRUE| as a fourth parameter because the interface seems to require it: <a class="external" href="http://lxr.mozilla.org/mozilla/source/netwerk/cookie/public/nsICookieManager.idl#64" rel="freelink">http://lxr.mozilla.org/mozilla/sourc...Manager.idl#64</a> This problem also appears in the JavaScript version below, and I've added |false| as a fourth parameter there as well.</span></p>
+
+<p>如果我们的应用是用 C++ 编写, <a href="#从_Cpp_代码管理_Cookies">从 Cpp 代码管理 Cookies</a> 这段代码向我们提供了很好的模板.</p>
+
+<h4 id="XPConnect:_.E5.9C.A8.E8.84.9A.E6.9C.AC.E4.B8.AD.E4.BD.BF.E7.94.A8_XPCOM_.E7.BB.84.E4.BB.B6" name="XPConnect:_.E5.9C.A8.E8.84.9A.E6.9C.AC.E4.B8.AD.E4.BD.BF.E7.94.A8_XPCOM_.E7.BB.84.E4.BB.B6">XPConnect: 在脚本中使用 XPCOM 组件</h4>
+
+<p>在本章开始我们讨论了CookieManager组件，他提供了一个很好的例子来说明如何使用javascript访问组件.在下面的代码片断里你可以看到如何通过getService()方法创建一个CookieManager组件对象，并且通过它提供的功能来让我们从用户界面来读取和删除cookies.</p>
+
+<p><span id="Managing_Cookies_from_JavaScript"><a id="Managing_Cookies_from_JavaScript"></a><strong>Managing Cookies from JavaScript</strong></span></p>
+
+<pre>var cmgr = Components.classes["@mozilla.org/cookiemanager;1"]
+                     .getService();
+cmgr = cmgr.QueryInterface(Components.interfaces.nsICookieManager);
+
+function loadCookies() {
+  // load cookies into a table
+  var enumerator = cmgr.enumerator;
+  var count = 0;
+  var showPolicyField = false;
+  while (enumerator.hasMoreElements()) {
+    var nextCookie = enumerator.getNext();
+    nextCookie = nextCookie.QueryInterface(Components.interfaces.nsICookie);
+    /* .... */
+}
+function FinalizeCookieDeletions() {
+  for (var c=0; c&lt;deletedCookies.length; c++) {
+    cmgr.remove(deletedCookies[c].host,
+                deletedCookies[c].name,
+                deletedCookies[c].path,
+                false);
+  }
+  deletedCookies.length = 0;
+}
+</pre>
+
+<p><span class="comment">XXX: In the original document, there were only the first three parameters to the |remove| call. I added |false| as a fourth parameter because the interface seems to require it: <a class="external" href="http://lxr.mozilla.org/mozilla/source/netwerk/cookie/public/nsICookieManager.idl#64" rel="freelink">http://lxr.mozilla.org/mozilla/sourc...Manager.idl#64</a> This problem also appears in the C++ version above, and I've added |PR_FALSE| as a fourth parameter there as well.</span></p>
+
+<p>除了CookieManager被调用的方法以外（也就是<code>cookiemanager.remove</code>(他会映射到<code>remove()</code><a href="#The_&lt;code>nsICookieManager&lt;/code>_Interface">The <code>nsICookieManager</code> Interface</a>)，请注意那些在Javascript中反映XPCOM组件的专门的XPConnect对象和方法。</p>
+
+<p><code>Components</code> 是用来控制到组件连接的JavaScript对象, 而<code>classes</code> 是一组所有你可以根据契约ID来查询的对象。为了在Javascript中实例化XPCOM组件，你创建一个新的<code>Component</code>对象同时传入你所需要查询的组件契约ID，返回的可能是一个singleton或者一个实例。</p>
+
+<pre>var cmgr = Components.classes["@mozilla.org/cookiemanager;1"]
+                     .getService();
+</pre>
+
+<p><code>cookiemanager</code> 对象的结果提供组件的所有在IDL中编译好然后编译到类型库中的方法的入口。 使用CookieManager组件, 你可以写如下的代码来完成从系统中清除所有cookies的操作：</p>
+
+<pre>cmgr = Components.classes["@mozilla.org/cookiemanager;1"]
+                 .getService();
+cmgr = cmgr.QueryInterface(Components.interfaces.nsICookieManager);
+
+// delete all cookies
+function trashEm() {
+   cmgr.removeAll();
+}
+</pre>
+
+<p>这个例子所展示的另外一个关键的XPConnect特性的是可以在所有从XPCOM映射到javascript的对象上执行的<code>QueryInterface</code>方法。如同在C++中, 你可以使用这个方法询问给定对象的别的接口。</p>
+
+<div class="side-note">
+<p><span id="Services_Versus_Regular_Instances"><a id="Services_Versus_Regular_Instances"></a><strong>Services Versus Regular Instances</strong></span></p>
+
+<p>到底让客户把你的组件作为一个实例还是服务是一个设计问题，你应当在你的组件文挡中进行描述。实际上，例子中通过方法<code>createInstance()调用</code><code>getService()</code>方法的方法实际上也可以是对组件对象调用并且缓存结果，并让他做为一个singlenton而不是实例。</p>
+
+<p>用来建立服务的singleton设计模式在<a href="cn/Creating_XPCOM_Components/What_is_XPCOM%3f#XPCOM_Services">XPCOM Services</a>进行描述。</p>
+</div>
+
+<p>请记住，<code>QueryInterface</code>让你查询一个对象所支持的接口。在<a href="#The_&lt;code>nsICookieManager&lt;/code>_Interface">The <code>nsICookieManager</code> Interface</a>的代码片断中, <code>QueryInterface</code>方法被用来从eunumerator中获得<code>nsICookie</code>接口，从而, 比如说, JavaScript代码就可以获得每个cookie的<code>value</code>和<code>name</code>属性。</p>
+
+<ol>
+ <li><div class="blockIndicator note"><strong>Note:</strong> cookie-manager-ui</div> 注意接口不是组件的一部分. XPCOM通过Mozilla's Cross Platform Front End (XPFE)和其他的用户接口使使用CookieManager这样的组件变得容易，但是组件本身并不提供自身的UI。</li>
+</ol>
+
+<ol>
+ <li><div class="blockIndicator note"><strong>Note:</strong> private-xpcom-interfaces</div>这方面也有例外. 一些XPCOM接口也可以是private并且不是作为公用的. Private接口和在IDL中公开的接口要求有所不同。</li>
+</ol>
+
+<ol>
+ <li><div class="blockIndicator note"><strong>Note:</strong> cookie-manager-in-tutorial</div> CookieManager组件用来支持本教程所描述的网页所定功能。</li>
+</ol>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/创建_XPCOM_组件:XPCOM_简介" style="float: left;">« 上一页</a><a href="/zh-CN/docs/Creating_XPCOM_Components:Component_Internals">下一页  »</a></p>
+</div> <p></p><div class="licenseblock">
+<p>Copyright (c) 2003 by Doug Turner and Ian Oeschger. This material may be distributed only subject to the terms and conditions set forth in the <a class="external" href="http://www.opencontent.org/openpub/" rel="noopener">Open Publication License</a>, v1.02 or later. Distribution of substantively modified versions of this document is prohibited without the explicit permission of the copyright holder. Distribution of the work or derivative of the work in any standard (paper) book form is prohibited unless prior permission is obtained from the copyright holder.</p>
+</div><p></p>

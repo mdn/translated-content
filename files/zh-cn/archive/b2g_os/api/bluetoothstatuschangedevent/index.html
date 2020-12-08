@@ -1,0 +1,54 @@
+---
+title: 蓝牙状态更改事件
+slug: Archive/B2G_OS/API/BluetoothStatusChangedEvent
+translation_of: Archive/B2G_OS/API/BluetoothStatusChangedEvent
+---
+<h2 id="概要">概要</h2>
+
+<p>BluetoothStatusChangedEvent API可以访问有关蓝牙设备状态的任何更改的信息。</p>
+
+<p>当触发以下某个事件时，会发生状态更改:</p>
+
+<ul>
+ <li>{{Event("a2dpstatuschange")}} : 当A2DP连接状态发生变化时。看到{{domxref("BluetoothAdapter.ona2dpstatuschanged")}} 了解更多信息。</li>
+ <li>{{Event("hfpstatuschange")}} : 发生在HFP连接状态发生变化时。看到{{domxref("BluetoothAdapter.onhfpstatuschanged")}} 了解更多信息.</li>
+ <li>{{Event("pairedstatuschange")}} : 当设备的配对状态发生变化时。看到{{domxref("BluetoothAdapter.onpairedstatuschanged")}} for more information.了解更多信息</li>
+ <li>{{Event("scostatuschange")}} : 它发生在SCO连接状态改变时。看到{{domxref("BluetoothAdapter.onscostatuschanged")}} for more information.</li>
+</ul>
+
+<h2 id="接口概述">接口概述</h2>
+
+<pre>interface BluetoothStatusChangedEvent: Event
+{
+  readonly attribute DOMString address;
+  readonly attribute boolean status;
+};</pre>
+
+<h2 id="属性">属性</h2>
+
+<dl>
+ <dt>{{domxref("BluetoothStatusChangedEvent.address")}} {{readonlyinline}}</dt>
+ <dd>表示蓝牙微网中状态发生变化的设备地址的字符串。.</dd>
+ <dt>{{domxref("BluetoothStatusChangedEvent.status")}} {{readonlyinline}}</dt>
+ <dd>表示连接当前状态的布尔值。它可以被启用（true）或禁用（false）。</dd>
+ <dt></dt>
+</dl>
+
+<h2 id="方法">方法</h2>
+
+<p>目前没有。</p>
+
+<h2 id="规范">规范</h2>
+
+<p>还不是任何规范的一部分。它应该作为<a href="http://www.w3.org/2012/sysapps/">W3C's System Applications Working Group</a>的一部分进行讨论。</p>
+
+<h2 id="也可以看看">也可以看看</h2>
+
+<ul>
+ <li>{{domxref("BluetoothAdapter")}}</li>
+ <li>{{domxref("BluetoothAdapter.ona2dpstatuschanged")}}</li>
+ <li>{{domxref("BluetoothAdapter.onhfpstatuschanged")}}</li>
+ <li>{{domxref("BluetoothAdapter.onpairedstatuschanged")}}</li>
+ <li>{{domxref("BluetoothAdapter.onscostatuschanged")}}</li>
+ <li><a href="/en-US/docs/WebAPI/WebBluetooth">Web Bluetooth</a></li>
+</ul>

@@ -1,0 +1,254 @@
+---
+title: XUL_教程/元素定位
+slug: Mozilla/Tech/XUL/Tutorial/Element_Positioning
+tags:
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Element_Positioning
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:The_Box_Model" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:Box_Model_Details">下一页  »</a></p>
+</div><p></p>
+
+<h2 id=".E5.88.86.E7.BB.84.E5.85.83.E7.B4.A0.E5.AE.9A.E4.BD.8D" name=".E5.88.86.E7.BB.84.E5.85.83.E7.B4.A0.E5.AE.9A.E4.BD.8D">分组元素定位</h2>
+
+<p>迄今为止, 我们知道怎么在一个分组里面将元素进行水平或垂直定位。我们通常需要在分组内对元素的定位和尺寸进行更多的控制。为此，我们首先需要知道一个分组是怎么工作的。</p>
+
+<p>一个元素的定位由他所属容器的布局样式决定。例如，在水平分组中的一个按钮在前面的按钮的右边。一个元素的尺寸由两个因素决定：元素期望的大小和用户指定的大小。元素期望的大小由该元素所包含的内容决定。例如，一个按钮的宽度由按钮上所显示文本的长度决定。</p>
+
+<p>一般来说元素的大小仅够容纳它的内容。一些元素，像文本输入框会使用一个默认的尺寸。分组会分配足够的尺寸去将元素放在它里面。一个包括三个按钮的水平分组将会包含比三个按钮更多的宽度，插入一些填充。</p>
+
+<div class="float-right"><img alt="Image:boxstyle1n.png" class="internal" src="/@api/deki/files/2649/=Boxstyle1n.png"></div>
+
+<p>在图片中，开始两个按钮为它们的文本提供了合适的尺寸。第三个按钮比较长因为它包含更多的内容。分组的宽度包含按钮间的填充空间和按钮的宽度总和。按钮的高度采用能够放置它的文本的合适尺寸。</p>
+
+<h3 id=".E5.AE.BD.E5.BA.A6.E5.92.8C.E9.AB.98.E5.BA.A6.E5.B1.9E.E6.80.A7" name=".E5.AE.BD.E5.BA.A6.E5.92.8C.E9.AB.98.E5.BA.A6.E5.B1.9E.E6.80.A7">宽度和高度属性</h3>
+
+<p>在窗口中你可能需要对元素的尺寸进行更多的控制。有更多的特性允许你去控制元素的尺寸。有一个快捷的方法可以通过在元素中简单添加<code><code id="a-width"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/width">width</a></code></code> 和 <code><code id="a-height"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/height">height</a></code></code> 属性，更像你在HTML中的 <code>img</code> 标签的用法。下面展示了一个例子：</p>
+
+<p><span id="%E4%BE%8B1"><a id="%E4%BE%8B1"></a><strong>例1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_1.xul">View</a></p>
+
+<pre>&lt;button label="确认" width="100" height="40"/&gt;
+</pre>
+
+<p>然而，不推荐这样做。这么做适用性不好且可能与某些主题不匹配。一个更好的方法是使用样式表属性，它可以像中HTML中的样式表一样工作。可以使用下面的CSS属性。</p>
+
+<dl>
+ <dt>width </dt>
+ <dd>指定元素的宽度。</dd>
+ <dt>height </dt>
+ <dd>指定元素的高度。</dd>
+</dl>
+
+<p>随便设置这两属性中的一个，元素将会创建它的宽度和高度。如果你只指定一个尺寸属性，另一个需要被算出。这些样式表属性的尺寸可以指定一个数字后面跟着一个单位。</p>
+
+<h4 id=".E5.8F.AF.E4.BC.B8.E7.BC.A9.E5.85.83.E7.B4.A0" name=".E5.8F.AF.E4.BC.B8.E7.BC.A9.E5.85.83.E7.B4.A0">可伸缩元素</h4>
+
+<p>非伸缩元素可以很简单快捷地计算尺寸。它们的宽度和高度可以直接被指定，如果没有指定尺寸，元素的默认尺寸就是刚好能放下它的内容的大小。对于可伸缩元素，计算需要一点窍门。</p>
+
+<p>可伸缩元素有一个可以设置为大于0的属性<code><code id="a-flex"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code>。被用来设置在可伸缩性元素中可以扩展和收缩的有用填充空间。它们的默认尺寸可以像非伸缩元素一样被计算。下面的例子做了这个的演示：</p>
+
+<p><span id="%E4%BE%8B2"><a id="%E4%BE%8B2"></a><strong>例2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_2.xul">View</a></p>
+
+<pre>&lt;window orient="horizontal"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;hbox&gt;
+  &lt;button label="Yes" flex="1"/&gt;
+  &lt;button label="No"/&gt;
+  &lt;button label="I really don't know one way or the other"/&gt;
+&lt;/hbox&gt;
+
+&lt;/window&gt;
+</pre>
+
+<p>这个窗口会像之前的图片所显示的一样。前面两个按钮将一个合适尺寸作为默认宽度，第三个按钮将会比较大因为它有一个较长的标签。第一个按钮被建成是可伸缩的，并且将所有的三元素放在一个分组里面。分组的宽度被设置成全部三个元素的总宽度（图片的宽度大约是430像素）。</p>
+
+<p>如果你增加窗口的宽度，元素会被检查清楚它们是否是可伸缩的，然后被分配到填充的空白空间。按钮只是可伸缩元素，但它不会增加宽度。这是因为按钮所在的分组不是可伸缩的。一个非伸缩元素在空间有效时也不会改变尺寸，所以按钮不会比其他情况下变得更宽。因此，按钮不会变得更宽。</p>
+
+<p>这个解决方案也用于创建可伸缩性的分组。于是，当你创建一个更宽的窗口时，因此分组会伸长以便填充多余的空间。因为分组比较大，更多的空余空间可以被放在它里面，放在它里面的可伸缩按钮可以填充有效空间而得到扩展。这会被许多内嵌的分组重复处理。</p>
+
+<h2 id=".E8.AE.BE.E7.BD.AE.E6.9C.80.E5.B0.8F.E5.92.8C.E6.9C.80.E5.A4.A7.E5.B0.BA.E5.AF.B8" name=".E8.AE.BE.E7.BD.AE.E6.9C.80.E5.B0.8F.E5.92.8C.E6.9C.80.E5.A4.A7.E5.B0.BA.E5.AF.B8">设置最小和最大尺寸</h2>
+
+<p>你可以允许一个元素能够扩展但限制它的尺寸不能比一个确定的尺寸更大。或者，你可设置一个最小尺寸。你可以通过以下四个属性来达到这个目的：</p>
+
+<dl>
+ <dt><code id="a-minwidth"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/minwidth">minwidth</a></code> </dt>
+ <dd>指定元素的最小宽度。</dd>
+ <dt><code id="a-minheight"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/minheight">minheight</a></code> </dt>
+ <dd>指定元素的最小高度。</dd>
+ <dt><code id="a-maxwidth"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/maxwidth">maxwidth</a></code> </dt>
+ <dd>指定元素的最大宽度。</dd>
+ <dt><code id="a-maxheight"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/maxheight">maxheight</a></code> </dt>
+ <dd>指定元素的最大高度。</dd>
+</dl>
+
+<p>这个值的单位是像素。你也可以使用相应的CSS属性：<code>min-width</code>， <code>min-height</code>， <code>max-width</code> 和 <code>max-height</code>。</p>
+
+<p>这些属性只可以用于可伸缩元素。例如，设置一个最大高度，一个可伸缩的按钮将只能扩展到一个 确定的最大高度。你可以更改窗口的尺寸超过这个值但按钮会在指定的尺寸停止扩展。分组中的按钮将会一直扩展到你设置的分组最大高度时止。</p>
+
+<p>如果两个按钮都具有相等的弹性值，普通情况下它们两个会共享相同的多余空间。如果一个按钮有一个最大宽度，第二个将会一直扩展直到用光所有的空间为止。</p>
+
+<p>如果一个分组有一个最大宽度或高度，子分组不会扩展超出它的最大尺寸。如果一个分组有一个最小宽度或高度，它的子分组不能缩小到比它的最小尺寸更小。</p>
+
+<h5 id=".E8.AE.BE.E7.BD.AE.E5.AE.BD.E5.BA.A6.E5.92.8C.E9.AB.98.E5.BA.A6.E7.9A.84.E4.BE.8B.E5.AD.90" name=".E8.AE.BE.E7.BD.AE.E5.AE.BD.E5.BA.A6.E5.92.8C.E9.AB.98.E5.BA.A6.E7.9A.84.E4.BE.8B.E5.AD.90">设置宽度和高度的例子</h5>
+
+<pre>&lt;button label="1" style="width: 100px;"/&gt;
+&lt;button label="2" style="width: 100em; height: 10px;"/&gt;
+&lt;button label="3" flex="1" style="min-width: 50px;"/&gt;
+&lt;button label="4" flex="1" style="min-height: 2ex; max-width: 100px"/&gt;
+&lt;textbox flex="1" style="max-width: 10em;"/&gt;
+&lt;description style="max-width: 50px"&gt;This is some boring but simple
+wrapping text.&lt;/description&gt;
+</pre>
+
+<dl>
+ <dt>例1 </dt>
+ <dd>第一个按钮将显示成宽度为100像素的（px 的意思是像素）。你必须增加单位否则宽度将被忽略。</dd>
+ <dt>例2 </dt>
+ <dd>第二个按钮将显示成高度为10像素和宽度为100em（em是当前字体一个字符的尺寸）。</dd>
+ <dt>例3 </dt>
+ <dd>第三个按钮是可伸缩的所以它可以基于包含它的分组的尺寸进行扩展。然而，按钮不能收缩到比50像素更小。其它可伸缩组件像定位格可以吸收保留空间，而不管弹性比率。</dd>
+ <dt>例4 </dt>
+ <dd>第四个按钮是可伸缩的并且不能有一个比2ex(ex是当前字体中的字母x的高度)小的高度或比100像素更大的宽度。</dd>
+ <dt>例5 </dt>
+ <dd>文本输入框是可伸缩的但不能扩展超过10em。你会经常去使用em单位作为指定文本内容它们的尺寸。这个单位用于文本输入框因此字体可以更改并且文本输入框可以一直有个合适的尺寸，如果字体非常大时也一样。</dd>
+ <dt>例6 </dt>
+ <dd><code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/description" title="description">description</a></code></code> 元素包含50像素的最大宽度。在50像素后，文本会自动被截到下一行。</dd>
+</dl>
+
+<div class="highlight">
+<h5 id=".E6.88.91.E4.BB.AC.E7.9A.84.E6.96.87.E4.BB.B6.E6.9F.A5.E6.89.BE.E5.AF.B9.E8.AF.9D.E6.A1.86" name=".E6.88.91.E4.BB.AC.E7.9A.84.E6.96.87.E4.BB.B6.E6.9F.A5.E6.89.BE.E5.AF.B9.E8.AF.9D.E6.A1.86">我们的文件查找对话框</h5>
+
+<p>让我们将这些样式增加到文件查找对话框。我们将会创建它因此文本输入框可以在输入窗口中改变尺寸。</p>
+
+<pre>&lt;textbox id="find-text" flex="1" style="min-width: 15em;"/&gt;
+</pre>
+
+<div class="float-right"><img alt="Image:boxstyle1.png" class="internal" src="/@api/deki/files/2648/=Boxstyle1.png"></div>
+在这里，文本输入框被做成可伸缩的。这样，它可以在用户改变对话框的尺寸时进行扩展。这可以用于如果用户想要输入一个很长的文本字符串时。通常地，设置了一个最小宽度为15em则输入框会一直显示为至少15个字符的宽度。如果用户更改对话框的尺寸到很小，文本输入框不会缩小超过15个字符长度。在窗口里面的输入框将会被画出来，并超出窗口的范围。注解：在图片中文本输入框被扩展为充满窗口的尺寸。</div>
+
+<h2 id="Box_Packing" name="Box_Packing">Box Packing</h2>
+
+<p>Let's say you have a box with two child elements, both of which are not flexible, but the box is flexible. For example:</p>
+
+<p><span id="Example_3"><a id="Example_3"></a><strong>Example 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_3.xul">View</a></p>
+
+<pre>&lt;box flex="1"&gt;
+  &lt;button label="Happy"/&gt;
+  &lt;button label="Sad"/&gt;
+&lt;/box&gt;
+</pre>
+
+<p>If you resize the window, the box will stretch to fit the window size. The buttons are not flexible, so they will not change their widths. The result is extra space that will appear on the right side of the window, inside the box. You may wish, however, for the extra space to appear on the left side instead, so that the buttons stay right aligned in the window.</p>
+
+<p>You could accomplish this by placing a <code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code></code> inside the box, but that gets messy when you have to do it numerous times. A better way is to use an additional attribute <code><code id="a-pack"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/pack">pack</a></code></code> on the <code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/box" title="box">box</a></code></code>. This attribute indicates how to <code><code id="a-pack"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/pack">pack</a></code></code> the child elements inside the box. For horizontally oriented boxes, it controls the horizonal positioning of the children. For vertically oriented boxes, it controls the vertical positioning of the children. You can use the following values:</p>
+
+<dl>
+ <dt>start </dt>
+ <dd>This positions elements at the left edge for horizontal boxes and at the top edge for vertical boxes. This is the default value.</dd>
+ <dt>center </dt>
+ <dd>This centers the child elements in the box.</dd>
+ <dt>end </dt>
+ <dd>This positions elements at the right edge for horizontal boxes and at the bottom edge for vertical boxes.</dd>
+</dl>
+
+<p>The <code><code id="a-pack"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/pack">pack</a></code></code> attribute applies to the box containing the elements to be packed, not to the elements themselves.</p>
+
+<p>We can change the earlier example to center the elements as follows:</p>
+
+<p><span id="Example_4"><a id="Example_4"></a><strong>Example 4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_4.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_4.xul">View</a></p>
+
+<pre>&lt;box flex="1" pack="center"&gt;
+  &lt;button label="Happy"/&gt;
+  &lt;button label="Sad"/&gt;
+&lt;/box&gt;
+</pre>
+
+<p>Now, when the window is resized, the buttons center themselves horizontally. Compare this behavior to that of the previous example.</p>
+
+<h2 id="Box_Alignment" name="Box_Alignment">Box Alignment</h2>
+
+<p>If you resize the window in the Happy-Sad example above horizontally, the box will grow in width. If you resize the window vertically however, you will note that the buttons grow in height. This is because the flexibility is assumed by default in the other direction.</p>
+
+<p>You can control this behavior with the <code><code id="a-align"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/align">align</a></code></code> attribute. For horizontal boxes, it controls the position of the children vertically. For vertical boxes, it controls the position of the children horizontally. The possible values are similar to those for <code><code id="a-pack"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/pack">pack</a></code></code>.</p>
+
+<dl>
+ <dt>start </dt>
+ <dd>This aligns elements along the top edge for horizontal boxes and along the left edge for vertical boxes.</dd>
+ <dt>center </dt>
+ <dd>This centers the child elements in the box.</dd>
+ <dt>end </dt>
+ <dd>This aligns elements along the bottom edge for horizontal boxes and along the right edge for vertical boxes.</dd>
+ <dt>baseline </dt>
+ <dd>This aligns the elements so that the text lines up. This is only useful for horizontal boxes.</dd>
+ <dt>stretch </dt>
+ <dd>This value, the default, causes the elements to grow to fit the size of the box, much like a flexible element, but in the opposite direction.</dd>
+</dl>
+
+<p>As with the <code><code id="a-pack"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/pack">pack</a></code></code> attribute, the <code><code id="a-align"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/align">align</a></code></code> attribute applies to the box containing the elements to be aligned, not to the elements themselves.</p>
+
+<p>For example, the first box below will have its children stretch, because that is the default. The second box has an <code><code id="a-align"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/align">align</a></code></code> attribute, so its children will be placed centered.</p>
+
+<p><span id="Example_5"><a id="Example_5"></a><strong>Example 5</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_5.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_5.xul">View</a></p>
+
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;window id="yesno" title="Question" orient="horizontal"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+  &lt;hbox&gt;
+    &lt;button label="Yes"/&gt;
+    &lt;button label="No"/&gt;
+  &lt;/hbox&gt;
+  &lt;hbox align="center"&gt;
+    &lt;button label="Maybe"/&gt;
+    &lt;button label="Perhaps"/&gt;
+  &lt;/hbox&gt;
+
+&lt;/window&gt;
+</pre>
+
+<div class="float-right"><img alt="Image:boxstyle2-b.png" class="internal" src="/@api/deki/files/2650/=Boxstyle2-b.png"></div>
+
+<p>You can also use the style properties <code><a href="/cn/CSS/-moz-box-pack" title="cn/CSS/-moz-box-pack">-moz-box-pack</a></code> and <code><a href="/cn/CSS/-moz-box-align" title="cn/CSS/-moz-box-align">-moz-box-align</a></code> instead of specifying attributes.</p>
+
+<div class="note">You may find the <a class="external" href="http://developer.mozilla.org/samples/xultu/examples/aligner.xul">Box Alignment Example</a> useful for trying out the various box properties.</div>
+
+<h2 id="Cropping_Text_and_Buttons" name="Cropping_Text_and_Buttons">Cropping Text and Buttons</h2>
+
+<p>You could potentially create a button element that contains a label that is larger than the maximum width of the button. Of course, a solution would be to increase the size of the button. However, buttons (and other elements with a label) have a special attribute called <code>crop</code> that allows you to specify how the text may be cropped if it is too big.</p>
+
+<p>If the text is cropped, an ellipsis (...) will appear on the button where the text was taken out. Four possible values are valid:</p>
+
+<dl>
+ <dt>left </dt>
+ <dd>The text is cropped on its left side</dd>
+ <dt>right </dt>
+ <dd>The text is cropped on its right side</dd>
+ <dt>center </dt>
+ <dd>The text is cropped in the middle.</dd>
+ <dt>none </dt>
+ <dd>The text is not cropped. This is the default value.</dd>
+</dl>
+
+<p>This attribute is really only useful when a dialog has been designed to be useful at any size. The <code>crop</code> attribute can also be used with other elements that use the <code>label</code> attribute for labels. The following shows this attribute in use:</p>
+
+<p><span id="Example_6"><a id="Example_6"></a><strong>Example 6</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_6.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_6.xul">View</a></p>
+
+<div class="float-right"><img alt="Image:boxstyle2.png" class="internal" src="/@api/deki/files/2651/=Boxstyle2.png"></div>
+
+<pre>&lt;button label="Push Me Please!" crop="right" flex="1"/&gt;
+</pre>
+
+<p>Notice how the text on the button has had the right side of it cropped after the window is made smaller.</p>
+
+<div class="highlight">
+<p><span id="Find_files_example_so_far"><a id="Find_files_example_so_far"></a><strong>Find files example so far</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxstyle.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxstyle.xul">View</a></p>
+</div>
+
+<p>Next, a summary and some <a href="/cn/XUL_Tutorial/Box_Model_Details" title="cn/XUL_Tutorial/Box_Model_Details">additional details of the box model are described</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:The_Box_Model" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:Box_Model_Details">下一页  »</a></p>
+</div><p></p>

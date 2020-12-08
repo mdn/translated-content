@@ -1,0 +1,403 @@
+---
+title: File I/O
+slug: Code_snippets/File_I_O
+tags:
+  - Add-ons
+  - Extensions
+translation_of: Archive/Add-ons/Code_snippets/File_I_O
+---
+<p>
+</p><p>この文書では、chrome JavaScript 内でローカルのファイル入出力を行う方法について解説しています。
+</p><p>ファイルシステムには、Mozilla <a href="ja/XPCOM">XPCOM</a> コンポーネント経由でアクセスできます。ローカル I/O のために利用されるコンポーネントのリストは <a class="external" href="http://xulplanet.com/references/xpcomref/group_FilesandStreams.html">XUL Planet</a> にあります。
+</p><p>{{ 英語版章題("Available libraries") }}
+</p>
+<h3 id=".E5.88.A9.E7.94.A8.E5.8F.AF.E8.83.BD.E3.81.AA.E3.83.A9.E3.82.A4.E3.83.96.E3.83.A9.E3.83.AA" name=".E5.88.A9.E7.94.A8.E5.8F.AF.E8.83.BD.E3.81.AA.E3.83.A9.E3.82.A4.E3.83.96.E3.83.A9.E3.83.AA">利用可能なライブラリ</h3>
+<p>いくつかの I/O に関する XPCOM コンポーネントの JavaScript ラッパが存在します。<a class="external" href="http://jslib.mozdev.org/">JSLib</a> や <a href="ja/Io.js">io.js</a> (<a class="external" href="http://gratisdei.com/io.js">MonkeeSage</a> が元) を参照してください。io.js モジュールはより小さくて、非常に簡単に利用できます。(簡単なサンプルがモジュール内にあります)
+</p><p>{{ 英語版章題("Creating a file object (\"opening\" files)") }}
+</p>
+<h3 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E3.81.AE.E4.BD.9C.E6.88.90_.28.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.92_.22.E9.96.8B.E3.81.8F.22.29" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E3.81.AE.E4.BD.9C.E6.88.90_.28.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.92_.22.E9.96.8B.E3.81.8F.22.29">ファイルオブジェクトの作成 (ファイルを "開く")</h3>
+<pre>var file = Components.classes["@mozilla.org/file/local;1"]
+                     .createInstance(Components.interfaces.nsILocalFile);
+file.initWithPath("/home");
+</pre>
+<div class="note">
+<p><b>注意</b>: <code>initWithPath()</code> へ渡すパスは、(&lt;tt&gt;"C:\\Windows"&lt;/tt&gt; といった) ネイティブ形式である必要があります。もし、初期化に <a class=" external" rel="freelink">file://</a> URI を利用したいならば下を参照してください。
+</p>
+</div>
+<div class="note">
+<p><b>注意</b>: <code>initWithPath()</code> / <code>initWithFile()</code> 関数はファイルが存在しなくても例外を投げません。例外は、<code>isDirectory()</code>, <code>moveTo()</code> といったファイルが存在する必要のあるメソッドを読んだ時に投げられます。
+</p>
+</div>
+<p>{{ 英語版章題("Getting special files") }}
+</p>
+<h3 id=".E7.89.B9.E6.AE.8A.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.92.E5.8F.96.E5.BE.97.E3.81.99.E3.82.8B" name=".E7.89.B9.E6.AE.8A.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.92.E5.8F.96.E5.BE.97.E3.81.99.E3.82.8B">特殊ファイルを取得する</h3>
+<pre>// get profile directory
+var file = Components.classes["@mozilla.org/file/directory_service;1"]
+                     .getService(Components.interfaces.nsIProperties)
+                     .get("ProfD", Components.interfaces.nsIFile);
+</pre>
+<p><code>"ProfD"</code> に入れるべき文字列は以下のものです。(MonkeeSage の I/O モジュールコンポーネントから抜粋)
+</p>
+<table class="standard-table">
+<tbody><tr>
+<th> 文字列
+</th><th> 意味
+</th></tr>
+<tr>
+<td>ProfD </td><td> プロファイルディレクトリ
+</td></tr>
+<tr>
+<td> DefProfRt </td><td> ユーザの (/root/.mozilla など)
+</td></tr>
+<tr>
+<td> UChrm </td><td> %profile%/chrome
+</td></tr>
+<tr>
+<td> DefRt </td><td> %installation%/defaults
+</td></tr>
+<tr>
+<td> PrfDef </td><td> %installation%/defaults/pref
+</td></tr>
+<tr>
+<td> ProfDefNoLoc </td><td> %installation%/defaults/profile
+</td></tr>
+<tr>
+<td> APlugns </td><td> %installation%/plugins
+</td></tr>
+<tr>
+<td> AChrom </td><td> %installation%/chrome
+</td></tr>
+<tr>
+<td> ComsD </td><td> %installation%/components
+</td></tr>
+<tr>
+<td> CurProcD </td><td> (通常) インストールされたディレクトリ
+</td></tr>
+<tr>
+<td> Home </td><td> OS ルートディレクトリ (/root など)
+</td></tr>
+<tr>
+<td> TmpD </td><td> OS 一時ディレクトリ (/tmp など)
+</td></tr>
+<tr>
+<td> ProfLD </td><td> Windows でのローカル設定; ネットワークキャッシュや fastload ファイルの保管場所
+</td></tr>
+<tr>
+<td> resource:app </td><td> XULRunner アプリケーションでのアプリケーションディレクトリ
+</td></tr></tbody></table>
+<p>他の利用可能な文字列に関しては、ソースを見てください : {{ Source("xpcom/io/nsDirectoryServiceDefs.h") }} や {{ Source("xpcom/io/nsAppDirectoryServiceDefs.h") }}
+</p><p>{{ 英語版章題("Getting your extension\'s folder") }}
+</p>
+<h4 id=".E3.81.82.E3.81.AA.E3.81.9F.E3.81.AE.E6.8B.A1.E5.BC.B5.E3.81.AE.E3.83.95.E3.82.A9.E3.83.AB.E3.83.80.E3.83.BC.E3.82.92.E5.8F.96.E5.BE.97.E3.81.99.E3.82.8B" name=".E3.81.82.E3.81.AA.E3.81.9F.E3.81.AE.E6.8B.A1.E5.BC.B5.E3.81.AE.E3.83.95.E3.82.A9.E3.83.AB.E3.83.80.E3.83.BC.E3.82.92.E5.8F.96.E5.BE.97.E3.81.99.E3.82.8B">あなたの拡張のフォルダーを取得する</h4>
+<div class="note">
+<p><b>注意</b>: Firefox/Thunderbird 1.5+ で動作します。1.0 では動きません。
+</p>
+</div>
+<p>拡張がインストールされているディレクトリを取得するには、<code>nsIExtensionManager</code> を次のように呼びます。
+</p>
+<pre class="eval">const id = "ID";
+var ext = Components.classes["@mozilla.org/extensions/manager;1"]
+                    .getService(Components.interfaces.nsIExtensionManager)
+                    .getInstallLocation(id)
+                    .getItemLocation(id);
+// ext は nsIFile のインスタンス、ext.path はディレクトリ文字列を保持します
+</pre>
+<p><i>ID</i> を拡張の <a href="ja/Install_Manifests#id">ID</a> に置き換えてください。<code>nsIFile</code> に拡張のディレクトリが入って戻ります。この値は読み出し専用です。詳細については、ソースを見てください : {{ Source("toolkit/mozapps/extensions/public/nsIExtensionManager.idl") }}
+</p><p>JavaScript XPCOM コンポーネント中では、<a href="ja/Creating_Custom_Firefox_Extensions_with_the_Mozilla_Build_System#Accessing_Data_Files_From_Components">ここ</a> に述べられている特別な <code>__LOCATION__</code> 変数を利用することもできます。
+<a class="external" href="http://groups.google.com/group/mozilla.dev.extensions/browse_frm/thread/7df3952aad134252/c25a5d29f08e612d#c25a5d29f08e612d">ここにあるように</a>、この方法は、より信頼性が高く、Firefox/Thunderbird 1.5+ と 1.0 の両方で動作します。
+</p><p>{{ 英語版章題("Creating Folders") }}
+</p>
+<h3 id=".E3.83.95.E3.82.A9.E3.83.AB.E3.83.80.E3.83.BC.E3.81.AE.E4.BD.9C.E6.88.90" name=".E3.83.95.E3.82.A9.E3.83.AB.E3.83.80.E3.83.BC.E3.81.AE.E4.BD.9C.E6.88.90">フォルダーの作成</h3>
+<p>フォルダーを作成するには、<code>nsIFile.create()</code> を利用します。
+</p>
+<pre class="eval">var file = Components.classes["@mozilla.org/file/directory_service;1"]
+                     .getService(Components.interfaces.nsIProperties)
+                     .get("ProfD", Components.interfaces.nsIFile);
+file.append(<i>"DIR"</i>);
+if( !file.exists() || !file.isDirectory() ) {   // if it doesn't exist, create
+   file.create(Components.interfaces.nsIFile.DIRECTORY_TYPE, 0664);
+}
+</pre>
+<p>上のサンプルは、<a class="external" href="http://www.mozilla.org/support/firefox/profile">プロファイルフォルダー</a> の中に <i>"DIR"</i> という名前のフォルダーを作成します。詳細は、<a href="ja/NsIFile/create"><code>nsIFile.create</code> リファレンス</a> を参照してください。
+</p><p>{{ 英語版章題("Creating temporary files") }}
+</p>
+<h3 id=".E4.B8.80.E6.99.82.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AE.E4.BD.9C.E6.88.90" name=".E4.B8.80.E6.99.82.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AE.E4.BD.9C.E6.88.90">一時ファイルの作成</h3>
+<p>一時ファイルを作成するには、<code>nsIFile.createUnique()</code> を利用します。
+</p>
+<pre>var file = Components.classes["@mozilla.org/file/directory_service;1"]
+                     .getService(Components.interfaces.nsIProperties)
+                     .get("TmpD", Components.interfaces.nsIFile);
+file.append("suggestedName.tmp");
+file.createUnique(Components.interfaces.nsIFile.NORMAL_FILE_TYPE, 0664);
+// 作成したファイルに必要なことを行ってください
+alert(file.path);
+</pre>
+<p>{{ 英語版章題("User input via nsIFilePicker") }}
+</p>
+<h3 id="nsIFilePicker_.E7.B5.8C.E7.94.B1.E3.81.AE.E3.83.A6.E3.83.BC.E3.82.B6.E3.81.8B.E3.82.89.E3.81.AE.E5.85.A5.E5.8A.9B" name="nsIFilePicker_.E7.B5.8C.E7.94.B1.E3.81.AE.E3.83.A6.E3.83.BC.E3.82.B6.E3.81.8B.E3.82.89.E3.81.AE.E5.85.A5.E5.8A.9B">nsIFilePicker 経由のユーザからの入力</h3>
+<p><a href="ja/NsIFilePicker">ファイル選択コンポーネント (nsIFilePicker)</a> を、標準的なファイルを開く・保存するダイアログを開くのに利用できます。このコンポーネントは、<code><a href="ja/NsIFile">nsIFile</a></code> でユーザの指定したファイルを返します。
+</p><p>{{ 英語版章題("nsIFile and path strings") }}
+</p>
+<h3 id="nsIFile_.E3.81.A8.E3.83.91.E3.82.B9.E6.96.87.E5.AD.97.E5.88.97" name="nsIFile_.E3.81.A8.E3.83.91.E3.82.B9.E6.96.87.E5.AD.97.E5.88.97">nsIFile とパス文字列</h3>
+<p><code>nsIFile.path</code> をプラットフォーム依存のパス文字列を取得するのに利用可能です。たとえば、 &lt;tt&gt;"C:\Windows\System32"&lt;/tt&gt; や &lt;tt&gt;"/usr/share"&lt;/tt&gt; などです。
+</p><p>もし、ファイルの <i><a class=" external" rel="freelink">file://</a></i> URL や <i><a class=" external" rel="freelink">file://</a></i> URL から <code>nsIFile</code> を取得したいなら、<a href="ja/NsIFileProtocolHandler">nsIFileProtocolHandler</a> を利用できます。
+</p>
+<pre>// file is nsIFile
+var ios = Components.classes["@mozilla.org/network/io-service;1"]
+                    .getService(Components.interfaces.nsIIOService);
+var fileHandler = ios.getProtocolHandler("file")
+                     .QueryInterface(Components.interfaces.nsIFileProtocolHandler);
+var URL = fileHandler.getURLSpecFromFile(file);
+</pre>
+<p><i><a class=" external" rel="freelink">file://</a></i>, <i><a class=" external" href="http://" rel="freelink">http://</a></i>, <i><a class=" external" rel="freelink">chrome://</a></i>, <i><a class=" external" rel="freelink">resource://</a></i> や他の URL 形式から直接読み込むには、<a href="ja/XMLHttpRequest">XMLHttpRequest</a> か <a href="ja/NsIChannel">nsIChannel</a> を利用してください (<a class="external" href="http://forums.mozillazine.org/viewtopic.php?p=921150#921150">サンプル</a>)。
+</p><p>一般的には <code>nsIFile::path</code> を利用する必要はありません。可能ならば <code>nsIFile</code> を直接利用してください。以下のサンプルで、ユーザ設定にどのようにパスを保存するかを示しています。
+</p><p>{{ 英語版章題("Storing nsILocalFile in preferences") }}
+</p>
+<h3 id="nsILocalFile_.E3.82.92.E3.82.AA.E3.83.97.E3.82.B7.E3.83.A7.E3.83.B3.E3.81.AB.E4.BF.9D.E5.AD.98.E3.81.99.E3.82.8B" name="nsILocalFile_.E3.82.92.E3.82.AA.E3.83.97.E3.82.B7.E3.83.A7.E3.83.B3.E3.81.AB.E4.BF.9D.E5.AD.98.E3.81.99.E3.82.8B">nsILocalFile をオプションに保存する</h3>
+<p>次の二つのコード例は、ファイルパスをユーザのオプションに保存する正しい方法を示しています。(<a href="ja/Code_snippets/Preferences">Mozilla でのオプションについての詳細</a>):
+</p><p>{{ 英語版章題("Absolute path (nsILocalFile)") }}
+</p>
+<h4 id=".E7.B5.B6.E5.AF.BE.E3.83.91.E3.82.B9_.28nsILocalFile.29" name=".E7.B5.B6.E5.AF.BE.E3.83.91.E3.82.B9_.28nsILocalFile.29">絶対パス (nsILocalFile)</h4>
+<p>絶対パスをユーザのオプションに保存するには、次のコードを利用します。
+</p>
+<pre>// |file| is nsILocalFile
+// 1. パスを prefs に書き込む
+var prefs = Components.classes["@mozilla.org/preferences-service;1"]
+                      .getService(Components.interfaces.nsIPrefService)
+                      .getBranch("extensions.myext.");
+prefs.setComplexValue("filename", Components.interfaces.nsILocalFile, file);
+
+// 2. prefs からパスを読み込む
+var file = prefs.getComplexValue("filename", Components.interfaces.nsILocalFile);
+</pre>
+<p>{{ 英語版章題("Relative path (nsIRelativeFilePref)") }}
+</p>
+<h4 id=".E7.9B.B8.E5.AF.BE.E3.83.91.E3.82.B9_.28nsIRelativeFilePref.29" name=".E7.9B.B8.E5.AF.BE.E3.83.91.E3.82.B9_.28nsIRelativeFilePref.29">相対パス (nsIRelativeFilePref)</h4>
+<p>プロファイルフォルダーからの相対パスといった、上にリストされているフォルダーを親とする相対パスを保存するには、次のコードを利用します。
+</p>
+<pre>// 1. prefs へ書き込む
+var relFile = Components.classes["@mozilla.org/pref-relativefile;1"]
+                        .createInstance(Components.interfaces.nsIRelativeFilePref);
+relFile.relativeToKey = "ProfD"; // ProfD もしくは上にリストされている文字列
+relFile.file = file;             // |file| is nsILocalFile
+prefs.setComplexValue("filename",
+     Components.interfaces.nsIRelativeFilePref, relFile);
+
+// 2. prefs から読み込む
+var value = prefs.getComplexValue("filename",
+     Components.interfaces.nsIRelativeFilePref);
+// |value.file| is the file.
+</pre>
+<p>{{ 英語版章題("Navigating with nsIFile") }}
+</p>
+<h3 id="nsIFile_.E3.81.A7.E3.83.8A.E3.83.93.E3.82.B2.E3.83.BC.E3.82.B7.E3.83.A7.E3.83.B3.E3.82.92.E8.A1.8C.E3.81.86" name="nsIFile_.E3.81.A7.E3.83.8A.E3.83.93.E3.82.B2.E3.83.BC.E3.82.B7.E3.83.A7.E3.83.B3.E3.82.92.E8.A1.8C.E3.81.86">nsIFile でナビゲーションを行う</h3>
+<p>{{ 英語版章題("Get a file in given directory") }}
+</p>
+<h4 id=".E4.B8.8E.E3.81.88.E3.82.89.E3.82.8C.E3.81.9F.E3.83.87.E3.82.A3.E3.83.AC.E3.82.AF.E3.83.88.E3.83.AA.E3.81.AE.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.92.E5.8F.96.E5.BE.97.E3.81.99.E3.82.8B" name=".E4.B8.8E.E3.81.88.E3.82.89.E3.82.8C.E3.81.9F.E3.83.87.E3.82.A3.E3.83.AC.E3.82.AF.E3.83.88.E3.83.AA.E3.81.AE.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.92.E5.8F.96.E5.BE.97.E3.81.99.E3.82.8B">与えられたディレクトリのファイルを取得する</h4>
+<p><code>file</code> は <code>nsIFile</code> で、なんらかのディレクトリをさしているとします。(ユーザプロファイルディレクトリなど) <code>file.append("myfile.txt");</code> で、<code>file</code> が同じディレクトリの中の &lt;tt&gt;myfile.txt&lt;/tt&gt; をさすようにできます。
+</p>
+<div class="note">
+<p><b>注</b>: クロスプラットフォームでないことから、<code>dir.path+"\\"+"myfile.txt"</code> を利用しないでください。<code>((path.search(/\\/) != -1) ? path + "\\" : path + "/") + "myfile.txt";</code> のようなものも可能ですが、<code>nsIFile.append()</code> がより簡単に読め、Mozilla が動作する全てのプラットフォームで動作が保障されています。
+</p>
+</div>
+<p>{{ 英語版章題("Enumerating files in given directory") }}
+</p>
+<h4 id=".E4.B8.8E.E3.81.88.E3.82.89.E3.82.8C.E3.81.9F.E3.83.87.E3.82.A3.E3.83.AC.E3.82.AF.E3.83.88.E3.83.AA.E3.81.AE.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.92.E8.A1.A8.E7.A4.BA.E3.81.99.E3.82.8B" name=".E4.B8.8E.E3.81.88.E3.82.89.E3.82.8C.E3.81.9F.E3.83.87.E3.82.A3.E3.83.AC.E3.82.AF.E3.83.88.E3.83.AA.E3.81.AE.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.92.E8.A1.A8.E7.A4.BA.E3.81.99.E3.82.8B">与えられたディレクトリのファイルを表示する</h4>
+<p>以下のコードは、与えられたディレクトリのサブディレクトリやサブファイルの <code>nsIFile</code> の配列を作成します。フォルダーかファイルかは、それぞれの <code>entry</code> で <code>nsIFile.isDirectory()</code> と、<code>nsIFile.isFile()</code> を呼ぶことで判断できます。
+</p>
+<pre>// file は nsIFile のディレクトリです
+var entries = file.directoryEntries;
+var array = [];
+while(entries.hasMoreElements())
+{
+  var entry = entries.getNext();
+  entry.QueryInterface(Components.interfaces.nsIFile);
+  array.push(entry);
+}
+</pre>
+<p>{{ 英語版章題("Reading from a file") }}
+</p>
+<h3 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.92.E8.AA.AD.E3.81.BF.E8.BE.BC.E3.82.80" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.92.E8.AA.AD.E3.81.BF.E8.BE.BC.E3.82.80">ファイルを読み込む</h3>
+<div class="note">
+<p><b>注</b>: 以下のサンプルコードは non-ASCII 文字を含むテキストを処理できません。詳細とそれらの文字を含むテキストを読む方法については、<a href="ja/Reading_textual_data">Reading textual data</a> を参照してください。
+</p>
+</div>
+<p>{{ 英語版章題("Simple") }}
+</p>
+<h4 id=".E5.8D.98.E7.B4.94.E3.81.AA.E6.96.B9.E6.B3.95" name=".E5.8D.98.E7.B4.94.E3.81.AA.E6.96.B9.E6.B3.95">単純な方法</h4>
+<pre>// |file| is nsIFile
+var data = "";
+var fstream = Components.classes["@mozilla.org/network/file-input-stream;1"]
+                        .createInstance(Components.interfaces.nsIFileInputStream);
+var sstream = Components.classes["@mozilla.org/scriptableinputstream;1"]
+                        .createInstance(Components.interfaces.nsIScriptableInputStream);
+fstream.init(file, -1, 0, 0);
+sstream.init(fstream);
+
+var str = sstream.read(4096);
+while (str.length &gt; 0) {
+  data += str;
+  str = sstream.read(4096);
+}
+
+sstream.close();
+fstream.close();
+alert(data);
+</pre>
+<p>{{ 英語版章題("Line by line") }}
+</p>
+<h4 id=".E8.A1.8C.E3.81.94.E3.81.A8.E3.81.AB" name=".E8.A1.8C.E3.81.94.E3.81.A8.E3.81.AB">行ごとに</h4>
+<pre>// file から入力ストリームを開く
+var istream = Components.classes["@mozilla.org/network/file-input-stream;1"]
+                        .createInstance(Components.interfaces.nsIFileInputStream);
+istream.init(file, 0x01, 0444, 0);
+istream.QueryInterface(Components.interfaces.nsILineInputStream);
+
+// 行を配列に読み込む
+var line = {}, lines = [], hasmore;
+do {
+  hasmore = istream.readLine(line);
+  lines.push(line.value);
+} while(hasmore);
+
+istream.close();
+
+// データで何かする
+alert(lines);
+</pre>
+<p>{{ 英語版章題("Asynchronously") }}
+</p>
+<h4 id=".E9.9D.9E.E5.90.8C.E6.9C.9F" name=".E9.9D.9E.E5.90.8C.E6.9C.9F">非同期</h4>
+<p>以下のサンプルでファイルを UI スレッドとは独立に読み込めます。
+</p>
+<pre>// |file| is nsIFile
+var ios = Components.classes["@mozilla.org/network/io-service;1"]
+                    .getService(Components.interfaces.nsIIOService);
+var fileURI = ios.newFileURI(file);
+var channel = ios.newChannelFromURI(fileURI);
+var observer = {
+  onStreamComplete : function(aLoader, aContext, aStatus, aLength, aResult)
+  {
+    alert(aResult);
+  }
+};
+var sl = Components.classes["@mozilla.org/network/stream-loader;1"]
+                   .createInstance(Components.interfaces.nsIStreamLoader);
+sl.init(channel, observer, null);
+</pre>
+<p>{{ 英語版章題("Binary File") }}
+</p>
+<h4 id=".E3.83.90.E3.82.A4.E3.83.8A.E3.83.AA.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB" name=".E3.83.90.E3.82.A4.E3.83.8A.E3.83.AA.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB">バイナリファイル</h4>
+<p>単純な例として、PNG ファイルのデータの取得方法
+</p>
+<pre>var ios = Components.classes["@mozilla.org/network/io-service;1"]
+                    .getService(Components.interfaces.nsIIOService);
+var url = ios.newURI(aFileURL, null, null);
+
+if (!url || !url.schemeIs("file")) throw "Expected a file URL.";
+
+var pngFile = Components.classes["@mozilla.org/file/local;1"]
+                        .createInstance(Components.interfaces.nsILocalFile);
+pngFile.initWithPath(url.path);
+
+var istream = Components.classes["@mozilla.org/network/file-input-stream;1"]
+                        .createInstance(Components.interfaces.nsIFileInputStream);
+istream.init(pngFile, -1, -1, false);
+
+var bstream = Components.classes["@mozilla.org/binaryinputstream;1"]
+                        .createInstance(Components.interfaces.nsIBinaryInputStream);
+bstream.setInputStream(istream);
+
+var bytes = bstream.readBytes(bstream.available());
+</pre>
+<p>{{ 英語版章題("Writing to a file") }}
+</p>
+<h3 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AB.E6.9B.B8.E3.81.8D.E5.87.BA.E3.81.99" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AB.E6.9B.B8.E3.81.8D.E5.87.BA.E3.81.99">ファイルに書き出す</h3>
+<div class="note">
+<p>'<i>注</i>: このコードは国際化されていません。non-ASCII文字列では、<b>正常に動作しません</b>。国際化については、<a href="ja/Writing_textual_data">Writing textual data</a> を参照してください。
+</p>
+</div>
+<pre>// file は nsIFile、data は文字列
+var foStream = Components.classes["@mozilla.org/network/file-output-stream;1"]
+                         .createInstance(Components.interfaces.nsIFileOutputStream);
+
+// ファイル追記の際は、0x02 | 0x10 を使う
+foStream.init(file, 0x02 | 0x08 | 0x20, 0664, 0); // write, create, truncate
+foStream.write(data, data.length);
+foStream.close();
+</pre>
+<p><code>nsIFileOutputStream::init()</code> 関数のフラグパラメータは次のようなものです。
+(詳細は {{ Source("nsprpub/pr/include/prio.h") }} を参照してください)
+</p><p><b>フラグ</b>: ファイルステータスフラグです。以下のBITフラグの bit ごとの OR を利用します。(最初の三つについては、どれか一つを利用します)
+</p>
+<table class="standard-table">
+<tbody><tr>
+<th> 名前 </th><th> 値 </th><th> 説明
+</th></tr>
+<tr>
+<td> PR_RDONLY </td><td> 0x01 </td><td> 読み込み専用
+</td></tr>
+<tr>
+<td> PR_WRONLY </td><td> 0x02 </td><td> 書き出し専用
+</td></tr>
+<tr>
+<td> PR_RDWR </td><td> 0x04 </td><td> 読み書き両方
+</td></tr>
+<tr>
+<td> PR_CREATE_FILE </td><td> 0x08 </td><td>
+<p>ファイルが存在しないならば作成する。ファイルがあれば何もしない。
+</p>
+</td></tr>
+<tr>
+<td> PR_APPEND </td><td> 0x10 </td><td>
+<p>書き込みごとにファイルポインタはファイルの最後にセットされます。(追記モード)
+</p>
+</td></tr>
+<tr>
+<td> PR_TRUNCATE </td><td> 0x20 </td><td>
+<p>ファイルが存在すれば、長さを 0 にします。
+</p>
+</td></tr>
+<tr>
+<td> PR_SYNC </td><td> 0x40 </td><td>
+<p>書き込みごとにファイルデータとステータスが物理的にアップデートされるのを待ちます。
+</p>
+</td></tr>
+<tr>
+<td> PR_EXCL </td><td> 0x80 </td><td>
+<p>PR_CREATE_FILE と一緒に利用された場合、ファイルが存在しなければ作成されます。
+ファイルが存在すれば、NULL を返してなにもしません。
+</p>
+</td></tr></tbody></table>
+<p>{{ 英語版章題("Writing a Binary File") }}
+</p>
+<h4 id=".E3.83.90.E3.82.A4.E3.83.8A.E3.83.AA.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.92.E6.9B.B8.E3.81.8D.E8.BE.BC.E3.82.80" name=".E3.83.90.E3.82.A4.E3.83.8A.E3.83.AA.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.92.E6.9B.B8.E3.81.8D.E8.BE.BC.E3.82.80">バイナリファイルを書き込む</h4>
+<p>例として、PNG データをファイルに書き込むサンプルです。
+</p>
+<pre>// pngBinary は既に存在する
+var aFile = Components.classes["@mozilla.org/file/local;1"]
+                      .createInstance(Components.interfaces.nsILocalFile);
+
+aFile.initWithPath( "/tmp/mypicture.png" );
+aFile.createUnique( Components.interfaces.nsIFile.NORMAL_FILE_TYPE, 600);
+
+var stream = Components.classes["@mozilla.org/network/safe-file-output-stream;1"]
+                       .createInstance(Components.interfaces.nsIFileOutputStream);
+stream.init(aFile, 0x04 | 0x08 | 0x20, 664, 0); // write, create, truncate
+
+stream.write(pngBinary, pngBinary.length);
+if (stream instanceof Components.interfaces.nsISafeOutputStream) {
+    stream.finish();
+} else {
+    stream.close();
+}
+</pre>
+<p>{{ 英語版章題("More") }}
+</p>
+<h3 id=".E7.99.BA.E5.B1.95" name=".E7.99.BA.E5.B1.95">発展</h3>
+<p><code>nsIFile</code> と <code>nsILocalFile</code> インターフェースにはよりたくさんのメソッドとプロパティーがありますので、
+<a class="external" href="http://xulplanet.com/references/xpcomref/group_Files.html">XUL Planet</a> のドキュメントを参照してください。これらのメソッド・プロパティーは大半が一目瞭然ですので、ここにはサンプルを入れていません。
+</p>
+<div class="noinclude">
+</div>
+{{ languages( { "en": "en/Code_snippets/File_I//O", "fr": "fr/Extraits_de_code/Fichiers_E//S", "pl": "pl/Fragmenty_kodu/Plik_I//O" } ) }}

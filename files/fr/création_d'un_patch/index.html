@@ -1,0 +1,38 @@
+---
+title: Création d'un patch
+slug: Création_d'un_patch
+tags:
+  - Développement_de_Mozilla
+translation_of: Mercurial/Using_Mercurial
+---
+<p> </p>
+<p>Après avoir <a href="fr/Obtenir_le_code_source_de_Mozilla_via_CVS">récupéré le code source</a>, l'avoir modifié, <a href="fr/Compilation_et_installation">compilé</a> et testé, vous voudrez peut être que vos modifications soient <a class="external" href="http://www.mozilla.org/hacking/life-cycle.html">examinées et intégrées</a>. Pour cela, vous devez créer un fichier répertoriant les modifications que vous avez apporté, appelé
+  <i>
+    patch</i>
+  ou
+  <i>
+    fichier diff</i>
+  . Vous pouvez le générer en utilisant la commande <b>cvs diff</b>.</p>
+<h3 id="Cr.C3.A9ation_d.27un_diff_pour_un_unique_fichier" name="Cr.C3.A9ation_d.27un_diff_pour_un_unique_fichier">Création d'un diff pour un unique fichier</h3>
+<p>Afin de créer le diff d'un unique fichier local par rapport à son homologue sur le dépôt cvs, utilisez :</p>
+<pre class="eval">$ cvs diff -u8p NOM_FICHIER
+</pre>
+<p>Cette commande crée un diff dans le format dit 'unifié' (&lt;tt&gt;-u&lt;/tt&gt;), avec 8 lignes de contexte. Par défaut, le résultat est envoyé vers la sortie standard. Pour le rediriger vers un fichier, utilisez la commande :</p>
+<pre class="eval">$ cvs diff -u8p NOM_FICHIER &gt; FICHIER_RESULTAT
+</pre>
+<h3 id="Cr.C3.A9ation_d.27un_diff_pour_plusieurs_fichiers" name="Cr.C3.A9ation_d.27un_diff_pour_plusieurs_fichiers">Création d'un diff pour plusieurs fichiers</h3>
+<p>Si, au lieu d'indiquer un fichier dans NOM_FICHIER, vous indiquez un répertoire, ce répertoire et tous ses sous-répertoires sont examinés récursivement. Par exemple :</p>
+<pre class="eval">$ cvs diff -u8p . &gt; FICHIER_RESULTAT
+</pre>
+<p>Cette commande compare tous les fichiers du répertoire courant et de ses sous-répertoires aux versions du dépôt cvs, et écrit les diffs unifiés combinés dans un fichier appelé FICHIER_RESULTAT, en utilisant 8 lignes de contexte.</p>
+<p>Le contexte fourni dans le patch devrait être suffisant pour le rendre compréhensible sans avoir à ouvrir le fichier source. La règle de base est d'utiliser 8 lignes de contexte ; si plus de contexte est nécessaire pour rendre le patch compréhensible, remplacez 8 par une valeur plus élevée. Notez que plus vous insérez de contexte, plus vous aurez de chance que votre patch puisse être appliqué à un fichier qui diffère nettement du fichier original sur le dépôt qui a servi à créer le diff.</p>
+<h3 id="Inclusion_de_nouveaux_fichiers_dans_un_patch" name="Inclusion_de_nouveaux_fichiers_dans_un_patch">Inclusion de nouveaux fichiers dans un patch</h3>
+<p>Pour inclure un nouveau fichier dans votre patch, utilisez l'option &lt;tt&gt;-N&lt;/tt&gt; :</p>
+<pre class="eval">$ cvs diff -u8pN . &gt; FICHIER_RESULTAT
+</pre>
+<p>Un problème courant ici est que <b>cvs diff</b> n'inclura pas les nouveaux fichiers qui n'ont pas été préalablement ajoutés sur le dépot par un <b>cvs add</b>, et cette dernière commande nécessite des droits d'écriture sur le dépôt cvs.</p>
+<p>La solution est d'utiliser l'utilitaire <b>cvsdo</b> <a class="external" href="http://viper.haque.net/~timeless/redbean/"> qui permet d'édition de &lt;tt&gt;CVS/Entries&lt;/tt&gt; pour faire croire à cvs que le fichier a été ajouté au dépôt. </a></p>
+<pre class="eval"><a class="external" href="http://viper.haque.net/~timeless/redbean/">$ cvsdo add NOUVEAU_FICHIER
+$ cvs diff -u8pN NOUVEAU_FICHIER &gt; FICHIER_RESULTAT
+</a></pre>
+<p><a class="external" href="http://viper.haque.net/~timeless/redbean/">Notez que cette astuce ne fonctionne pas pour des nouveaux répertoires ; pour ceux là en fait, <code>cvs add</code> doit pouvoir modifier le dépôt immédiatement, ce qui nécessite des droits d'écriture. </a></p>

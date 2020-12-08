@@ -1,0 +1,112 @@
+---
+title: <image>
+slug: Web/SVG/Element/image
+translation_of: Web/SVG/Element/image
+---
+<div>{{SVGRef}}</div>
+
+<p>L'élément Image SVG (&lt;image&gt;) permet d'inclure une image matricielle dans un document SVG.</p>
+
+<h2 id="Contexte_dUtilisation">Contexte d'Utilisation</h2>
+
+<p>{{svginfo}}</p>
+
+<h2 id="Exemple">Exemple</h2>
+
+<p>Rendu basique d'une image PNG dans un objet SVG :</p>
+
+<pre class="brush: html notranslate">&lt;svg width="100%" height="100%" viewBox="0 0 100 100"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+  &lt;image xlink:href="/files/2917/fxlogo.png" x="0" y="0" height="100" width="100" /&gt;
+&lt;/svg&gt;
+</pre>
+
+<p>{{EmbedLiveSample("Exemple",250,260)}}</p>
+
+<h2 id="Attributs">Attributs</h2>
+
+<h3 id="Attributs_globaux">Attributs globaux</h3>
+
+<ul>
+ <li><a href="/fr/SVG/Attribute#ConditionalProccessing" title="en/SVG/Attribute#ConditionalProccessing">Attributs de traitement conditionnel</a> »</li>
+ <li><a href="/fr/SVG/Attribute#Core" title="en/SVG/Attribute#Core">Attributs noyau</a> »</li>
+ <li><a href="/fr/SVG/Attribute#GraphicalEvent" title="en/SVG/Attribute#GraphicalEvent">Attributs d'événement graphique</a> »</li>
+ <li><a href="/fr/SVG/Attribute#XLink" title="en/SVG/Attribute#XLink">Attributs Xlink</a> »</li>
+ <li><a href="/en/SVG/Attribute#Presentation" title="en/SVG/Attribute#Presentation">Attributs de présentation</a> »</li>
+ <li>{{ SVGAttr("class") }}</li>
+ <li>{{ SVGAttr("style") }}</li>
+ <li>{{ SVGAttr("externalResourcesRequired") }}</li>
+ <li>{{ SVGAttr("transform") }}</li>
+</ul>
+
+<h3 id="Attributs_spécifiques">Attributs spécifiques</h3>
+
+<ul>
+ <li>{{ SVGAttr("x") }}</li>
+ <li>{{ SVGAttr("y") }}</li>
+ <li>{{ SVGAttr("width") }}</li>
+ <li>{{ SVGAttr("height") }}</li>
+ <li>{{ SVGAttr("xlink:href") }}</li>
+ <li>{{ SVGAttr("preserveAspectRatio") }}</li>
+</ul>
+
+<h2 id="Interface_DOM">Interface DOM</h2>
+
+<p>Cet élément implémente l'interface <code><a href="/fr/DOM/SVGImageElement" title="en/DOM/SVGImageElement">SVGImageElement</a></code>.</p>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Fonctionnalité</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Accepté</td>
+   <td>1.0</td>
+   <td>{{ CompatGeckoDesktop('1.8') }}</td>
+   <td>{{ CompatIE('9.0') }}</td>
+   <td>{{ CompatOpera('8.0') }}</td>
+   <td>{{ CompatSafari('3.0.4') }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Fonctionnalité</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Accepté</td>
+   <td>{{ CompatAndroid('3.0') }}</td>
+   <td>{{ CompatGeckoMobile('1.8') }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatSafari('3.0.4') }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>Cette table s'appuit sur <a href="/fr/SVG/Compatibility_sources" title="en/SVG/Compatibility sources">ces sources</a>.</p>
+
+<h3 id="Notes_spécifiques_à_Gecko">Notes spécifiques à Gecko</h3>
+
+<p>Avant <span>Gecko 2.0 {{ geckoRelease("2.0") }}</span> seule les images matricielles étaient acceptées.</p>

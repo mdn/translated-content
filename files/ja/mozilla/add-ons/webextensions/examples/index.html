@@ -1,0 +1,29 @@
+---
+title: 拡張機能の例
+slug: Mozilla/Add-ons/WebExtensions/Examples
+tags:
+  - Interface
+  - WebExtensions
+translation_of: Mozilla/Add-ons/WebExtensions/Examples
+---
+<div>{{AddonSidebar}}</div>
+
+<p>拡張機能の開発方法を分かりやすく説明するため、シンプルな拡張機能のサンプルを集めたリポジトリ <a href="https://github.com/mdn/webextensions-examples">https://github.com/mdn/webextensions-examples</a> を公開しています。この記事では、そのリポジトリで使われている WebExtension API について説明します。</p>
+
+<p>これらのサンプルは Firefox Nightly で動作します。ほとんどのものがよりバージョン番号の小さい Firefox でも動作しますが、拡張機能の manifest.json に指定されている <code><a href="/ja/Add-ons/WebExtensions/manifest.json/applications">strict_min_version</a></code> キーを確認してください。</p>
+
+<p>試してみたい方には、3 つの選択肢があります:</p>
+
+<ol>
+ <li>リポジトリを clone し、アドオンをソースディレクトリーから直接読み込む方法。<a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">{{原語併記("Load Temporary Add-on", "一時的にアドオンを読み込み")}}</a> 機能を使います。Firefox を再起動するまで拡張機能は読み込まれたままです。</li>
+ <li>リポジトリを clone し、<a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/Getting_started_with_web-ext">web-ext</a> コマンドラインツールを使って その拡張機能がインストールされた状態で Firefox を起動する。</li>
+ <li>リポジトリを clone し、<a href="https://github.com/mdn/webextensions-examples/tree/master/build">build</a> ディレクトリーに移動する。ここにはすべてのサンプルのビルドされ署名されたバージョンが置かれています。Firefox のメニュー ファイル/ファイルを開く から開いて、拡張機能をインストールすることができます。<a href="https://addons.mozilla.org/en-US/firefox/">addons.mozilla.org</a> からインストールしたのと同じ状態になります。</li>
+</ol>
+
+<div class="blockIndicator warning">
+<p><strong>重要</strong>: この例の WebExtension を AMO (addons.mozilla.org)に投稿しないでください、WebExtension のサンプルを実行するのに署名をする必要はありません。単に上記の手順に従ってください。</p>
+</div>
+
+<p>リポジトリにコントリビュートしたい方は、是非とも <a href="https://github.com/mdn/webextensions-examples/blob/master/CONTRIBUTING.md">pull request</a> を送ってください！</p>
+
+<p>{{WebExtAllExamples}}</p>

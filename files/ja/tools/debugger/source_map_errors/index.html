@@ -1,0 +1,58 @@
+---
+title: ソースマップのエラー
+slug: Tools/Debugger/Source_map_errors
+tags:
+  - Debugger
+  - ソースマップ
+  - ツール
+  - デバッグ
+  - リファレンス
+  - 開発ツール
+translation_of: Tools/Debugger/Source_map_errors
+---
+<div>{{ToolsSidebar}}</div>
+
+<p class="summary">ソースマップはJSONファイルで、ブラウザで見られるように変換されたソースを、開発者が書いた元のソースと関連付けることができます。ソースマップを操作する際に問題が発生することがあります。このページでは、最も一般的な問題とその解決方法について説明します。</p>
+
+<div class="note">
+<p><strong>注</strong>: ソースマップが初めての方は、<a href="/ja/docs/Tools/Debugger/How_to/Use_a_source_map">ソースマップの使い方</a>で詳細をご覧ください。</p>
+</div>
+
+<h2 id="一般的なソースマップのエラー報告">一般的なソースマップのエラー報告</h2>
+
+<p>問題が見つかると、Webコンソールにメッセージが表示されます。このメッセージには、エラーメッセージ、リソースURL、およびソースマップのURLが表示されます。</p>
+
+<p><img alt="Error from invalid JSON" src="https://mdn.mozillademos.org/files/15423/invalid-json.png" style="border-style: solid; border-width: 1px; display: block; height: 57px; margin: 0px auto; width: 744px;"></p>
+
+<p>ここでリソースURLは、<code>bundle.js</code>にソースマップが記述されていることを示しています。ソースマップURLは、ソースマップデータの場所（この場合はリソースとの相対位置）を示します。このエラーは、ソースマップがJSONデータではないことを示しているため、間違ったファイルを提供していることになります。</p>
+
+<p>ソースマップが間違っていることがある一般的な方法がいくつかあります。 次のセクションで詳しく説明します。</p>
+
+<h2 id="ソースマップが見つからないかアクセスできない">ソースマップが見つからないかアクセスできない</h2>
+
+<p>ソースマップリソースが見つからない、またはアクセスできない可能性があります。</p>
+
+<p><img alt="Source map file is missing" src="https://mdn.mozillademos.org/files/15429/missing-map.png" style="border-style: solid; border-width: 1px; display: block; height: 42px; margin: 0px auto; width: 733px;"></p>
+
+<p>ここではファイルが提供されていることを確認し、ブラウザがアクセスできるようにすることで修正します。</p>
+
+<h2 id="不正なソースマップ">不正なソースマップ</h2>
+
+<p>ソースマップデータは、単にJSONファイルではなく、不正な構造であった時に無効になる可能性があります。一般的なエラーメッセージは次のとおりです。</p>
+
+<ul>
+ <li><code>SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data</code></li>
+ <li><code>Error: "version" is a required argument</code></li>
+</ul>
+
+<p><img alt='Error: "version" is a required argument' src="https://mdn.mozillademos.org/files/15425/missing-field.png" style="border-style: solid; border-width: 1px; display: block; height: 45px; margin: 0px auto; width: 743px;"></p>
+
+<h2 id="元のソースがない">元のソースがない</h2>
+
+<p>元のソースが不足している可能性があります。デバッガで元のソースの1つを開こうとすると、この問題が発生することがあります。この場合、メッセージは少し違って見えます：</p>
+
+<p><img alt="Debugger source tab showing the error" src="https://mdn.mozillademos.org/files/15421/Screenshot%20from%202017-09-15%2014-32-02.png" style="border-style: solid; border-width: 1px; display: block; height: 35px; margin: 0px auto; width: 727px;"></p>
+
+<p>この場合、エラーはデバッガのソースタブにも表示されます。</p>
+
+<p><img alt="Debugger source tab showing the error" src="https://mdn.mozillademos.org/files/15427/debugger-tab.png" style="border-style: solid; border-width: 1px; display: block; height: 109px; margin: 0px auto; width: 616px;"></p>

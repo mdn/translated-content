@@ -1,0 +1,319 @@
+---
+title: Introduction to XPCOM for the DOM
+slug: Mozilla/Tech/XPCOM/Introduction_to_XPCOM_for_the_DOM
+translation_of: Mozilla/Tech/XPCOM/Introduction_to_XPCOM_for_the_DOM
+---
+<p>Fabian Guisset &lt;<a class="link-mailto" href="mailto:fguisset@softhome.net">fguisset@softhome.net</a>&gt;
+</p><p>注意: この文書はまだ DOM の権威の校正を経ておりませんので、正確でない部分があるかもしれません。
+</p><p>この文書は <b>DOM コードのコンテキスト</b>で XPCOM を<b>使用する</b>方法の入門書です。文書に記述されています XPCOM や nsCOMPtr の使用法は DOM コードを読んだり、書いたりするために必要な知識の 8 割をカバーしています。XPCOM の上級向けの内容については <a href="ja/XPCOM">XPCOM</a> のページをご参照ください。
+</p><p>この文書のバグの追跡は <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=99592" title="FIXED: hacking the DOM feedback">バグ 99592</a> で可能です。
+</p><p>対象読者: DOM コードに C++ と XPCOM を使用するための手っ取り早い入門書が必要な読者。<a class="external" href="http://www.mozilla-japan.org/docs/dom/mozilla/hacking.html">DOM ハッキングガイド</a> の残りの部分を読むには、この文書の内容を理解している必要があります。
+</p>
+<div class="note">
+<p>重要な注意事項: この文書は C++ の知識、特にそのオブジェクト指向の部分の理解を前提としています。Stanley Lippman と Josee Lajoie による「C++ Primer」を読んで、私は C++ を学んでから、DOM コードをあれこれ試してみました。この本は、その分野に関わるすべての初心者にお勧めできます。 </p>
+</div>
+<h3 id=".E5.85.A5.E9.96.80.E3.81.B8.E3.81.AE.E6.89.8B.E5.BC.95.E3.81.8D" name=".E5.85.A5.E9.96.80.E3.81.B8.E3.81.AE.E6.89.8B.E5.BC.95.E3.81.8D"> 入門への手引き </h3>
+<p>DOM は XPCOM を広く使います。事実、 DOM を実装して使用するには XPCOM が必要になります。しかし、コードを読んだり既存のフレームワークに何かするだけならば、詳細まで知る必要はありません。nsCOMPtr も含めて DOM が提供する数多くのマクロや機能はとても便利なものです。この章では、できるだけ枝葉末節の解説を避けて、 XPCOM のうち DOM で最も広く使われている範囲をカバーしたいと思います。そして nsCOMPtr のインターフェイス、参照カウント、 nsISupports インターフェイスを解説します。新しいインターフェイスの追加方法についてのチュートリアルや、最後に C++ におけるクラスの継承についての詳細の議論についても解説します。
+</p>
+<h3 id=".E3.82.A4.E3.83.B3.E3.82.BF.E3.83.BC.E3.83.95.E3.82.A7.E3.82.A4.E3.82.B9" name=".E3.82.A4.E3.83.B3.E3.82.BF.E3.83.BC.E3.83.95.E3.82.A7.E3.82.A4.E3.82.B9"> インターフェイス </h3>
+<p>オブジェクト指向のプログラミングは<b>クラス</b>間の<b>継承</b>の使用を基本にしています。さらに、メソッドを宣言しても実装しないメソッドがある場合、クラスは「抽象クラス」として宣言することができます。この概念を最大限に推し進めると、メソッドを実装せずに宣言したクラスは「完全に仮想的」になります。そのようなクラスはインターフェイスと呼ばれます。インターフェイスの目的は、ひとつのインターフェイスに・・・実装の詳細内容を心配することなく、(普通クラスとして表される) オブジェクトを操作する一セットのメソッドを持たせることです。もしあるクラスが、あるインターフェイスを実装しているならば、そのままインターフェイスのメソッドを使うようにしてください。そうすれば、インターフェイスの実装 (具象クラス) に変更があっても、気にする必要がなくなります。XPCOM はこの考えを究極まで推進しています。純粋な仮想メソッドが以下の構文で宣言されます: </p>
+<pre class="eval">virtual nsresult FunctionFoo() = 0;
+</pre>
+<p>インターフェイスはこのようにすべてのメンバ関数が純粋に仮想関数として宣言される、単に C++ のクラスです。インターフェイスはまた <a href="ja/XPIDL">XPIDL</a> を使って定義されます。この件は、 1.E の節「新しいインターフェイスの追加方法」で解説されます。
+</p><p>インターフェイスは実装を備えていないので、非抽象クラス (具象クラス) によって実装される必要があります。その際、インターフェイスが nsIFoo 、クラスが nsFoo である場合、「nsFoo は nsIFoo を実装する」あるいは「nsFoo は nsIFoo を継承する」と言います。C++ クラスのコードは次のようになります:
+</p>
+<pre class="eval">class nsFoo : public nsIFoo
+</pre>
+<p>オブジェクト指向の C++ を知らない人のために言うと、nsFoo は nsIFoo からの「派生」として宣言されることになります。そしてこの時、nsIFoo は nsFoo の「基底クラス」になります。この入門書では、オブジェクト指向の C++ についてもっと多くを知る必要はありません。しかし、1.F 節ではその件でさらに詳しい議論があり、DOM コードのほとんどを理解することが必要になります。
+</p><p>(オブジェクトと呼ばれる) クラスのインスタンスは (ヒープや空き領域に)、下記の構文を使って動的に割り付けられます。 </p>
+<pre class="eval">nsFoo *fooptr = new nsFoo;
+</pre>
+<p>その時オブジェクトは、 fooptr 経由でのみ操作されます。この時、nsFoo クラスが nsIFoo インターフェイスを実装するならどうなるかを考えてみましょう。nsFoo オブジェクトを fooptr 経由で直接操作可能ですね。しかし、コードはあまり頑健ではありません。事実、使われているメソッドの名前やシグニチャーを変更する者がいると、全コードに渡りこれらのメソッドへの呼び出しをすべて変えなければなりません。具象クラスとは反対に、インターフェイスは時が経過しても安定しているはずです。事実、Mozilla コードの多くのインターフェイスは凍結されて (インターフェイス定義の最初に @Frozen コメントで指示されて) います。これは、それらのインターフェイスがこの先変わることがないという意味です。メリットは、こうして作られたコードが将来永遠に (最高の条件で) 存在し続けることです。反対に欠点は、そのようなインタフェースを改善する方法を見つけなければならないということと、それらを凍結すると実装者に新しいインタフェースを作らせるのを強いることになってしまう、ということです。要するに、必要な時はいつでも実装ではなくインターフェイスを操作することです。nsFoo によって実装される nsIFoo インターフェイスへのポインタは以下のように宣言されます。
+</p>
+<pre class="eval">nsIFoo *fooptr = new nsFoo;
+</pre>
+<p>fooptr のようなポインタはその時、「nsFoo クラスのインスタンスによって実装される nsIFoo インターフェイスへのポインタ」とか、それを短縮して「nsIFoo へのポインタ」と呼ばれます。今後私が「インターフェイスへのポインタ」について言う時は、「C++ 具象クラスのインターフェイスによって実装されたインターフェイスへのポインタ」を事実上意味します。注意すべき重要点は、nsIFoo へのポインタのみが nsIFoo インターフェイスやその親で定義されたメソッドを呼び出せることです。たとえば、nsFoo が nsIFoo と nsIBa というふたつの異なるインターフェイスを実装するなら、nsIFoo へのポインタは nsIBa で定義されたメソッドを呼び出せません。その逆もありません。
+</p><p>注意: 前の段落は大変重要です。もしそれが完全に理解できていないならば、これ以上読み進める必要はありません。
+</p><p>参照カウントの基本
+</p><p>XPCOM は参照カウントのメカニズム(短縮形 refcount )を使って、インターフェイスのポインタがオブジェクトを指している間にオブジェクトが削除されていないことを確認します。事実、削除されたオブジェクトを指し示すポインタを間接参照することは悪い影響を及ぼす可能性があります。そんな訳で、インターフェイスへのポインタがオブジェクトのアドレスを代入される都度、そのオブジェクトのカウントを一つ増やす必要があります。これを実行する関数は、”AddRef”と呼ばれ、nsISupports インターフェイスで定義されます。ポインタがすでにオブジェクトのアドレスを保持しない時、そのオブジェクトの参照カウントを一つ減じる必要があります。これには同じく、nsISupports インターフェイスで定義された”Release”関数を使用します。オブジェクトの参照カウントが 0(zero) に達するとオブジェクトは自分自身を削除します。こんなわけで、各々のオブジェクトの参照カウントの記録を確保することは大変重要になります。最初のケースでは、もし AddRef を使ってオブジェクトのカウントを増やすのを忘れると、私たちがポインタを使用して何かする前にオブジェクトは自分自身を削除するかもしれません。そのために、間接参照される時に、クラッシュを引き起こすことがあります。次のケースでは、もしオブジェクトを Release 関数を使って開放することを忘れると、オブジェクトは自分自身を削除しません。それで「メモリリーク」を発生させ、つまり、不要になってもオブジェクトを確保しているので、メモリがシステムに返されることはありません。どちらのケースも不都合なので、参照カウントには細心の注意を払わなくてはなりません。
+</p><p>幸運なことに、とっても便利な nsCOMPtr があります。 </p>
+<h3 id="nsCOMPtr" name="nsCOMPtr"> nsCOMPtr </h3>
+<p>Scott Collins は私たちに <a href="ja/Using_nsCOMPtr">nsCOMPtr</a> を授けてくれたので、すぐにそれを使用しましょう。 nsCOMPtr は C++ auto_ptr の拡張機能で、参照カウントの操作を管理します。そして、比較、初期化などに対していくつかの機能を提供します。nsCOMPtr は大抵の場合インターフェイスへの通常のポインタのように使われます。nsIFoo インターフェイスへのポインタは、通常下記のように宣言されます:
+</p>
+<pre class="eval">nsIFoo *fooptr;
+</pre>
+<p>同じ nsIFoo インターフェイスへの nsCOMPtr は下記のように宣言されます:
+</p>
+<pre class="eval">nsCOMPtr&lt;nsIFoo&gt; fooptr;
+</pre>
+<p>nsCOMPtr　は次の節で解説されます。nsCOMPtr　についての詳細情報は <a href="ja/Using_nsCOMPtr#Getting_Started_Guide">ユーザの手引き</a> を読んでください。
+</p>
+<h3 id="QueryInterface.28.29" name="QueryInterface.28.29"> QueryInterface() </h3>
+<p>再び、nsIFoo と nsIFoo2　の 2 つのインターフェイスを実装する nsFoo クラスを考えてください:
+</p>
+<pre class="eval">class nsFoo : public nsIFoo, public nsIFoo2
+</pre>
+<p>ともかく nsFoo のインスタンスが作られることを前提としましょう (この断定はほとんど常に正しいです)。そうすると、nsIFoo　インターフェイスで定義されたメソッドを使ってそのオブジェクトを操作したくなるでしょう。目的は nsIFoo インターフェイスへポインタを確保することです。そのために、主な 2 つのテクニックが存在し、コンテキストによってするべきことが分かります。最初のテクニックは「Getter」を使うことであり、次のテクニックは「this」ポインタで　static なキャストを使うことです。
+</p><p>getter は、グローバルな領域やクラスの領域で定義され、要求されたインターフェイスへのポインタを「返す」関数です。一般的に　getter　は以下のように機能します:最初にインターフェイスへのポインタである ifooptr を代入なしに宣言します。それから、getter 関数へポインタのアドレスを渡します。この時 getter 関数は、ポインタへ正確なアドレスを代入し、要求されたインターフェイスへのポインタへ QueryInterface します。ifooptr はすでに、実際のオブジェクトのアドレスを代入されたインターフェイスへのポインタとなっています。このようにして、ifooptr 経由で nsIFoo で定義されたメソッドをすぐに呼び出せます。以下にコードの例を示します。 </p>
+<pre class="eval">nsCOMPtr&lt;nsIFoo&gt; ifooptr;
+GetInterfaceIFoo(getter_AddRefs(ifooptr));
+ifooptr-&gt;FunctionOfnsIFoo();
+</pre>
+<p>独特の構文である getter_AddRefs(pointer) は、通常の「&amp;」(address-of) C++ 演算子に対して nsCOMPtr が対応するものと同じです。すなわち、Getter メソッドは AddRef メソッドを呼び出します。これは、「このオブジェクトに参照を追加しません。もうすでにあなたが追加していますからね」という呼び出し元と「このオブジェクトへは私が参照を追加しますので、追加しないでください」という呼び出し先との間の契約になります。もし、呼び出し元と呼び出し先が両方で AddRef を実行すると、どちらかの参照は解放されないので、オブジェクトはメモリリークとなります。
+</p><p>すべての Getter 関数は返されたポインタを <b>AddRef しなければならない</b>ことに注意してください。それでも今 Getter 関数 を使用しているとしても、心配することはありません。<a href="ja/XPCOM_ownership_guidelines">XPCOM 所有の手引き</a> で詳しい情報を参照できます。
+</p><p>フレームやビューのように、インターフェイスには参照カウントされないものがあることにも注意してください。これらに対しては生のインターフェイスポインタを使用しなければなりません。マニュアルで参照カウントする必要はありません。 </p>
+<pre class="eval">今 nsIFoo2 インターフェイスで宣言され、nsFoo で実装された関数を実行したいとしましょう。しかしこの時、ifooptr 経由ではその関数にアクセスできません。それは 1.B の節で述べた理由のために ifooptr が nsIFoo へのポインタだからです。XPCOM には便利なメソッドがあり、別のインターフェイスへのポインタがある時、インターフェイスへのポインタを持てます。そして、2 つのインターフェイスは同じオブジェクトによって実装されます。この時のメソッドが　QueryInterface() です。それは nsISupports インターフェイスで定義されます。<b>Mozilla の各々のインターフェイスは nsISupports を継承しています</b>。このことは、XPCOM の主要規則の 1 つです。目的はこうです。オブジェクト (クラスのインスタンス) が所定のインターフェイスを実装するかどうかを知る。これが QueryInterface() の働きです。インターフェイスとインターフェイスを保持するポインタのアドレスを QueryInterface() に渡します。その時インターフェイスがオブジェクトによって実装されていれば、渡されたポインタはオブジェクトのアドレスを代入されます。もし実装されていなければ、 QueryInterface() は NS_NOINTERFACE を返し、渡されたポインタは null になります。
+</pre>
+<p>QueryInterface() はユーザへオブジェクトの実装を隠蔽するのに便利です。 QueryInterface() をただ呼び出してから、インターフェイスのメソッドを呼び出します。その外は知る必要がありません。それでは、nsIFoo へのポインタがある時、どのように QueryInterface() を使って nsIFoo2 へのポインタを得るのでしょうか？　ifooptr を再利用できない以上、nsIFoo2 への新ポインタである ifooptr2 を作ります。以下の構文が (nsCOMPtr とだけ使う場合) 推奨されます: </p>
+<pre class="eval">nsCOMPtr&lt;nsIFoo2&gt; ifooptr2 (do_QueryInterface(ifooptr));
+</pre>
+<p>この構文は nsCOMPtr の宣言と初期化を同時にするのに推奨されます。あとで、別のアドレスをそこへ代入する必要があるならば、簡単にこうできます:
+</p>
+<pre class="eval">ifooptr2 = do_QueryInterface(another_pointer);
+
+</pre>
+<p>しかしこの構文は、単に実際の関数への便利なショートカットにすぎません。以下の構文は生のポインタで QueryInterface() を使用する方法を表します。
+</p>
+<pre class="eval">nsIFoo2 *ifooptr2;
+ifooptr-&gt;QueryInterface(NS_GET_IID(nsIFoo2), (void **)&amp;ifooptr2);
+</pre>
+<p>NS_GET_IID は引数の IID に対して評価をするマクロです。2 つのインターフェイスを比較して同一性を調べるのに便利です。nsCOMPtr への getter_AddRefs() の働きについてはすでに見たとおりです。今回は、ifooptr2 のアドレスを渡します。nsFoo は nsIFoo2 を実装するので、ifooptr2 は nsFoo の現在のインスタンスのアドレスを代入されます。すると、ifooptr2 経由で nsIFoo2 で定義されたメソッドを呼び出せます:
+</p>
+<pre class="eval">ifooptr2-&gt;FunctionOfnsIFoo2();
+</pre>
+<p>ところで、 nsFoo で実装されないインターフェイスへ QueryInterface を試みるならば、渡されたポインタは null となります。そんな訳で、自分の処理を本当に確実に明白に間違いないと思われないなら、nsCOMPtr が　null になっていないかどうか必ず確認してください。以下のサンプルを参考にしてください。
+</p>
+<pre class="eval">nsCOMPtr&lt;nsINotImplemented&gt; iptr(do_QueryInterface(ifooptr));
+if(!iptr) {
+  // nsFoo は nsINotImplemented を実装しない。 iptr はそのため null である
+  return NS_OK;
+}
+</pre>
+<p>QueryInterface が null-safe であることに注意することも大切です。たとえば前の例では、ifooptr がnull であっても、不都合は発生しません。さらに、QueryInterface の呼び出しの戻り値は正当な理由がない限りは返されるべきではありません。NS_NOINTERFACE を返すことが心配ならば、前のサンプルが示すように NS_OK を返してください。
+</p><p>この節の始めに、インターフェイスへのポインタを取得する 2 つ目の方法について話しました。これは、getter 関数が有効でない場合に使われるはずです。おそらくご存知でしょうが、オブジェクトの”this”メンバはそのオブジェクトへのポインタです。そこで必要なインターフェイスへ static に”this”を単にキャストできます。しかしキャストする前にご自分の処理が絶対間違いようにしてください。間違いがあれば参照カウントで問題が発生します。
+</p><p>最近遭遇した問題の例を紹介します: nsHTMLAnchorElement クラスのメンバ関数で、nsHTMLAnchorElement オブジェクトによって実装された nsIContent インターフェイスへのポインタを取得する必要がありました。しかし、getter 関数がなかったので 2 つ目の方法を使わなければなりませんでした: </p>
+<pre class="eval">nsCOMPtr&lt;nsIContent&gt; content = getter_AddRefs(NS_STATIC_CAST(nsIContent*, this));
+// または自分自身をカウントしたいならば、
+nsIContent *content = NS_STATIC_CAST(nsIContent*, this);
+</pre>
+<p>この 2 つめの構文は注意して扱われる必要があり、XPCOM プログラマーの上級者だけに推奨されます。
+</p><p>ここまでに解説しました XPCOM と nsCOMPtr の使用方法はコードを読んだり少しでも書くのに必要な知識の 8 割をカバーしています。引き続き do_GetService へ進んで、QueryInterface などの実装の説明は可能ですが、そこまでする必要があると思いません。そこで XPCOM のさらに詳しい内容については <a class="external" href="http://www.mozilla-japan.org/projects/xpcom/">XPCOM プロジェクトのページ</a> を参照してください。
+</p><p>次の節は Mozilla DOM へ新しいインターフェイスを追加する方法に関するチュートリアルであり、ビルドの解説やその他を含みます。最後の節はオブジェクト指向の C++ 、インターフェイスの継承、その他面白いトピックに関する詳細の内容についての議論になっています。 </p>
+<h3 id=".E3.83.81.E3.83.A5.E3.83.BC.E3.83.88.E3.83.AA.E3.82.A2.E3.83.AB_.E6.96.B0.E3.81.97.E3.81.84.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.BC.E3.83.95.E3.82.A7.E3.82.A4.E3.82.B9.E3.81.AE.E8.BF.BD.E5.8A.A0.E6.96.B9.E6.B3.95" name=".E3.83.81.E3.83.A5.E3.83.BC.E3.83.88.E3.83.AA.E3.82.A2.E3.83.AB:_.E6.96.B0.E3.81.97.E3.81.84.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.BC.E3.83.95.E3.82.A7.E3.82.A4.E3.82.B9.E3.81.AE.E8.BF.BD.E5.8A.A0.E6.96.B9.E6.B3.95"> チュートリアル: 新しいインターフェイスの追加方法 </h3>
+<h4 id=".E5.A7.8B.E3.82.81.E3.81.AB" name=".E5.A7.8B.E3.82.81.E3.81.AB"> 始めに </h4>
+<p>このチュートリアルの目的は、DOM に新しいインターフェイスを追加しそれを実装する方法を解説することです。チュートリアルを理解するために前節をよく理解してください。新しいインターフェイスを追加したくなるのにはいくつかの理由があります。新しい DOM のオブジェクトを追加したり、最終的な「インターフェイスの凍結”を順守するためです。最初に XPIDL を調べて、それがどのようにインターフェイスの定義を支援できるか見てみましょう。次にビルドシステム、makefiles、などを解説します。最後に、 nsIDOMFabian インターフェイス (Fabian は私の名前なのですが ;-) を通じてこれらの新しいインターフェイスの実装を観てみましょう。
+</p>
+<h4 id="XPIDL" name="XPIDL"> XPIDL </h4>
+<p>XPIDL は Cross-Platform Interface Definition Language の頭文字です。 C++ でインターフェイスを直接コーディングせずに、 XPIDL を使うことが可能です。それを使用するとインターフェイスの定義のタスクを簡略化し、文書の自動生成や XPT の生成などの面白い機能をいくつか提供します。最初にするべきことは、私たちのインターフェイスである nsIDOMFabian　が何をするか決めます。この文書のために、私は nsIDOMFabian という新しい HTML インターフェイスを実装することにしました。そのインターフェイスは nsHTMLDocument クラスによって実装されます。
+</p><p>XPIDL の構文は簡単です: </p>
+<pre class="eval"><span class="nowiki">
+ #include "domstubs.idl";
+
+ [scriptable, uuid(xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)]
+ interface nsIDOMFabian : nsISupports
+ {
+   void fabian();
+   readonly attribute boolean neat;
+ };
+ </span>
+</pre>
+<p>これが nsIDOMFabian インターフェイスの定義です。インターフェイスの <i>uuid</i> は一意の識別子であり、すべてのインターフェイスに 1 つ必要です。ウインドウで guidgen を使うか、また irc.mozilla.org の #mozilla で「mozbot uuid」コマンドを発行して uuid を生成できます。
+</p><p>コンパイル時に、XPIDL コンパイラはこのインターフェイスの定義を実際の C++ コードに変換しますが、これは純粋な抽象クラスを備えたヘッダファイルです。このクラスは以下のようになっています: </p>
+<pre class="eval"><span class="nowiki">
+ #define NS_IDOMFABIAN_IID \
+   {0xxxxxxxxx, 0xxxxx, 0xxxxx, \
+     { 0xxx, 0xxx, 0xxx, 0xxx, 0xxx, 0xxx, 0xxx, 0xxx }}
+
+ class nsIDOMFabian : public nsISupports {
+  public:
+
+   NS_IMETHOD Fabian(void) = 0;
+   NS_IMETHOD GetNeat(PRBool *aNeat) = 0;
+
+ };
+
+ #define NS_DECL_NSIDOMFABIAN
+ #define NS_FORWARD_NSIDOMFABIAN(_to)
+ #define NS_FORWARD_SAFE_NSIDOMFABIAN(_to)
+ </span>
+</pre>
+<p>見て分かるとおり、自動生成のヘッダは私たちのインターフェイスの IID を備えており、「純粋な抽象クラス」は正しく定義されます。XPIDL コンパイラは IDL メソッドと属性を以下の規則に従って C++ の関数へ変換します:
+</p><p>インターフェイスのメソッドは C++ でも同じ名前を保持します。しかし IDL ではいわゆる「interCaps」モデルを使用しなければなりません。つまり最初の文字は小文字になり、そのあとの新しい単語の最初の文字は大文字になります。たとえば、IDL では getElementById と書くので、C++ では　GetElementById に翻訳されることになります。
+</p><p>NS_IMETHOD は基本的に「virtual nsresult」を意味するマクロです。ここでは解説していませんが、規則に従って引数のリストと戻り値の型は正しい C++ の型へ変換されます。
+</p><p>インターフェイスの属性は 2 つの関数になります: getter と setter です。私たちの例では、属性は read-only で宣言されるので、getter だけが定義されます: GetNeat です。引数は自動的に XPIDL によって生成される PRBool 型のオブジェクトへのポインタです。賢いですね。同じ interCaps のモデルが同様に IDL の属性へ適用されることに注意してください。
+</p><p>1.E.d で 3 つのマクロが詳細に解説されます。次のステップは新しいインターフェイスをビルドすることです。 </p><p><br>
+</p>
+<h4 id=".E3.83.93.E3.83.AB.E3.83.89.E3.82.B7.E3.82.B9.E3.83.86.E3.83.A0" name=".E3.83.93.E3.83.AB.E3.83.89.E3.82.B7.E3.82.B9.E3.83.86.E3.83.A0"> ビルドシステム </h4>
+<p>ここはとても簡単なところです: すでにあるものをコピーするだけですから。最初にどのディレクトリへインターフェイスを置くか決めなければなりません。最も論理的選択は、すべての HTML インターフェイスが存在する dom/public/idl/html です。次に、このディレクトリのすべての makefiles へ nsIDOMFabian.idl を追加しなければなりません。これには必要であれば、「MANIFEST」「makefile.win」「Makefile.in」などが含まれます。単に nsIDOMFabian の既存のエントリをコピーしてください。<b>注意: Makefiles では、TABS と ホワイトスペースが混在します。他のエントリはかならず正確にコピーしてください。</b>
+</p><p>次にインターフェイスをビルドするために dom/ へ「make」とタイプしてください。すべてうまく行けば、 nsIDOMFabian.h ファイルが dom/public/idl/html/_xpidlgen/ にあり、インターフェイスに対して C++ コードを保持しているはずです。私の経験ではインターフェイスを機能させる前に、残念ながら「distclean」をビルドしなければならないことがあります。 </p>
+<h4 id=".E3.82.A4.E3.83.B3.E3.82.BF.E3.83.BC.E3.83.95.E3.82.A7.E3.82.A4.E3.82.B9.E3.81.AE.E5.AE.9F.E8.A3.85" name=".E3.82.A4.E3.83.B3.E3.82.BF.E3.83.BC.E3.83.95.E3.82.A7.E3.82.A4.E3.82.B9.E3.81.AE.E5.AE.9F.E8.A3.85"> インターフェイスの実装 </h4>
+<p>インターフェイスの実装方法をさらに詳細に観てみましょう。 C++ の具象クラスによってインターフェイスが実装されなければならないことをすでに知っています。このクラスは複数のインターフェイスを直接または継承によって実装できます (継承の議論は次の節を参照してください)。また私たちは XPIDL で定義されたインターフェイスがメソッドと属性を保持し、これらは XPIDL コンパイラによって C++ の関数に変換されることも知りました。インターフェイスを実装するクラスは明示的に、インターフェイスで定義された各メソッドを実装し、各属性の setter と getter を実装しなければなりません。もし属性が read-only であればもちろん getter だけが必要になります。
+</p><p><a href="https://dxr.mozilla.org/mozilla-central/source/content/html/document/src/nsHTMLDocument.h" rel="custom">nsHTMLDocument.h</a> で定義されている nsHTMLDocument クラスに nsIDOMFabian を実装することにしました。するべきことが 3 つあります: クラスの宣言を変更すること、クラスの本体を変更すること、インターフェイスで宣言された関数をコード化することです。
+</p><p>クラス宣言とクラス本体の変更: </p>
+<pre class="eval"><span class="nowiki">
+ #include "nsIDOMFabian.h"
+ class nsHTMLDocument: public ... ,
+                       public nsIDOMFabian
+ {
+   // ...
+   NS_DECL_NSIDOMFABIAN
+   // ...
+ };
+ </span>
+</pre>
+<p>最初に nsIDOMFabian を継承するように、nsHTMLDocument クラスを宣言する必要があります。それからクラスの public なインターフェイスで、マクロの NS_DECL_NSIDOMFABIAN を使ってインターフェイスの実装に必要なメソッドを宣言します。このマクロは XPIDL コンパイラによって自動生成されることを憶えてください。　それは　nsIDOMFabian インターフェイスのためのクラスで実装されるメソッドをすべて宣言します。典型的な NS_DECL_NSIFOO マクロは以下のようになっています:
+</p>
+<pre class="eval"><span class="nowiki">
+ #define NS_DECL_NSIFOO \
+   NS_IMETHOD GetBar();
+ </span>
+</pre>
+<p>このマクロはクラスの定義で使われる必要があり、nsFoo クラスは nsFoo::GetBar() メソッドを備えることになります。関数が宣言されたので、最後にコード化が可能になります。
+</p><p>関数を実装する様々な可能性があります。最初の方法は最も簡単です。実装しなければならない関数は nsHTMLDocument::Fabian() と nsHTMLDocument::GetNeat() です。それでは、コード化してみましょう。 </p>
+<pre class="eval">NS_IMETHODIMP nsHTMLDocument::Fabian(void)
+{
+  printf("Hello from the nsIDOMFabian interface\n");
+  // 任意のコード...
+  return NS_OK;
+}
+
+NS_IMETHODIMP nsHTMLDocument::GetNeat(PRBool *aNeat)
+{
+  if(!aNeat) {
+    return NS_ERROR_NULL_POINTER;
+  }
+
+  nsresult rv = Fabian();
+  if( rv == NS_OK ) {
+    *aNeat = PR_TRUE;
+  } else {
+    *aNeat = PR_FALSE;
+  }
+  return NS_OK;
+}
+</pre>
+<p>このコードはもちろん nsHTMLDocument.cpp で書かれます。関数はとても簡単であり、ただ概念を説明しているだけです。2 番めの可能性は「インターフェイス転送マクロ」を使うことです。このマクロはまた XPIDL コンパイラによって自動生成されます。以下はインターフェイス転送の背景にある理論で、そのあとに来るのは nsIDOMFabian のサンプルです。
+</p>
+<h5 id=".E7.90.86.E8.AB.96" name=".E7.90.86.E8.AB.96"> 理論 </h5>
+<p>実際のクラス nsBar を継承する実際のクラス nsFoo があると仮定しましょう。また nsFoo が nsIFoo インターフェイスを実装するとも仮定しましょう。nsFoo が nsIFoo を実装する可能性の 1 つは、 nsIFoo インターフェイスのメソッドを、クラス　nsBar のこれらの同じメソッドの実装へ転送することです。
+</p>
+<pre class="eval">// XPIDLでの nsIFoo インターフェイス (最低限の実装)
+interface nsIFoo {
+    attribute type prop;
+    void meth();
+};
+
+class nsBar {
+    NS_IMETHOD GetProp();
+    NS_IMETHOD SetProp();
+    NS_IMETHOD Meth();
+};
+
+class nsFoo : public nsIFoo,
+              public nsBar {
+// nsFoo クラスの定義
+};
+
+nsFoo::GetProp() { return nsBar::GetProp(); }
+nsFoo::SetProp() { return nsBar::SetProp(); }
+nsFoo::Meth() { return nsBar::Meth(); }
+</pre>
+<p>このようなコードが機能するのに nsBar はもちろん GetProp、 SetProp、 Meth を実装しなければなりません。注意が必要なのは、nsBar は nsIFoo インターフェイスのメソッドを実装しますが、nsIFoo インターフェイスを継承<b>しません</b>。 そしてこの場合<b>だけ</b>インターフェイス転送を使用できます。
+</p><p>この時 3 つのメソッドをタイプして nsBar へ送らなくても、代わりに「インターフェイス転送マクロ」の NS_FORWARD_NSIFOO を使用できます。 </p>
+<pre class="eval"><span class="nowiki">
+ #define NS_FORWARD_NSIFOO(_to)                       \
+   NS_IMETHOD GetProp() { return _to GetProp(); }  \
+   NS_IMETHOD SetProp() { return _to SetProp(); }  \
+   NS_IMETHOD Meth() { return _to Meth(); }
+ </span>
+</pre>
+<p>このマクロの意味を理解するのは簡単です。 _to クラスの実装に対して nsIFoo インターフェイスのすべてのメソッドを転送します。
+</p><p>nsIDOMFabian のアプリケーション: nsDocument で 2 つの関数をコード化し nsHTMLDocument から nsDocument へ nsIDOMFabian を転送できます。こうすることで例えば、 nsXMLDocument で nsDocument のコードを再利用することもできます。この技術はすでに大抵のドキュメントメソッドで使われています。 </p>
+<pre class="eval">// File nsDocument.h:
+class nsDocument : public ...
+{
+  // ...
+  NS_IMETHOD Fabian(void);
+  NS_IMETHOD GetNeat(PRBool *aNeat);
+  // ...
+}
+
+// File nsDocument.cpp:
+nsDocument::Fabian()
+{
+  // ...
+}
+nsDocument::GetNeat(PRBool *aNeat)
+{
+  // ...
+}
+
+// File nsHTMLDocument.h:
+class nsHTMLDocument : public ... ,
+                       public nsIDOMFabian
+{
+  // ...
+  NS_FORWARD_NSIDOMFABIAN(nsDocument::)
+  // ...
+}
+
+// Nothing needed in nsHTMLDocument.cpp
+</pre>
+<p>これは「インターフェイス転送」の簡単な例です。これらの2つの方法は DOM でインターフェイスを実装する最も一般的方法です。もう少し複雑な他の方法がありますが、ここでは扱いません
+</p><p><b>重要な注記: どの DOM クラスによって実装される nsISupports インターフェイスも、転送マクロや宣言マクロを使って実装されません。nsISupports の実装には特別なマクロが提供されます</b>
+</p><p>新しいインターフェイスの追加方法についてのチュートリアルはここで終わりです。ただ全面的に rebuild してください。distclean でビルドするといいでしょう。<b>しかし、JavaScript からメソッドを有効にすることはできません</b>。というのは、nsIDOMFabian は Class Info. にないからです。その追加方法に関しては <a class="external" href="http://www.mozilla.org/docs/dom/mozilla/hacking.html#oneh">Class Info の使い方</a> を参照してください。 </p>
+<h3 id=".E3.82.A4.E3.83.B3.E3.82.BF.E3.83.BC.E3.83.95.E3.82.A7.E3.82.A4.E3.82.B9.E3.81.AE.E7.B6.99.E6.89.BF_.28.E4.B8.8A.E7.B4.9A.E8.80.85.E5.90.91.E3.81.91.29" name=".E3.82.A4.E3.83.B3.E3.82.BF.E3.83.BC.E3.83.95.E3.82.A7.E3.82.A4.E3.82.B9.E3.81.AE.E7.B6.99.E6.89.BF_.28.E4.B8.8A.E7.B4.9A.E8.80.85.E5.90.91.E3.81.91.29"> インターフェイスの継承 (上級者向け) </h3>
+<p>Mozilla における継承モデルは当然 C++ クラスの継承モデルと同じです。オブジェクト指向のプログラミングに詳しい方であれば、この議論の理解には問題はないでしょう。
+</p>
+<h5 id=".E7.94.9F.E3.81.AE.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.BC.E3.83.95.E3.82.A7.E3.82.A4.E3.82.B9.E3.81.AE.E7.B6.99.E6.89.BF" name=".E7.94.9F.E3.81.AE.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.BC.E3.83.95.E3.82.A7.E3.82.A4.E3.82.B9.E3.81.AE.E7.B6.99.E6.89.BF"> 生のインターフェイスの継承 </h5>
+<p>最初の概念を理解するのは難しくありません。それは、「インターフェイスの継承」です。XPIDL や header にインターフェイスの定義があれば、そのインターフェイスは必ず他のインターフェイスを継承しています。たとえば、 nsIDOMHTMLAnchorElement インターフェイスにとって以下の「連鎖」が備わっています:<br> nsISupports -&gt; nsIDOMNode -&gt; nsIDOMElement -&gt; nsIDOMHTMLElement -&gt; nsIDOMHTMLAnchorElement
+</p><p>すなわち、クラスが連鎖にあるインターフェイスの 1 つを実装すると、そのクラスは<i>実装されたインターフェイスのすべての祖先</i>を実装しなければならないということです。たとえば、実際のクラスが、nsIDOMElement を実装するなら、そのクラスは nsIDOMNode と nsISupports をも実装しなければならないのです。 </p>
+<h5 id=".E7.90.86.E8.AB.96_2" name=".E7.90.86.E8.AB.96_2"> 理論 </h5>
+<p>インターフェイスの継承がどういうことであるかを理解できたので、もっと一般的なケースを調べてみましょう。最初にごく理論的に考えて、次に nsHTMLAnchorElement のサンプルを使って議論を解説します。
+</p><p>実際のクラス nsFoo によって実装されている DOM オブジェクト Foo があると仮定しましょう。nsIFoo1、nsIFoo2、nsIFoo3 の 3 つのインターフェイス に加えて別の実際のクラス nsBar もあるとしましょう。この状況は以下のようになります: </p>
+<pre class="eval">nsBar &lt;- nsIFoo1
+  |
+  V
+nsFoo &lt;- nsIFoo2 &lt;- nsIFoo3
+</pre>
+<p>この状況で上記に記されているように nsIFoo2 インターフェイスは nsIFoo3 インターフェイスを継承します。 nsFoo は nsIFoo2 を実装しその結果 nsIFoo3 も実装します。nsBar は nsIFoo1 を実装します。実際のクラス nsFoo は別の実際のクラス nsBar を継承します。継承を説明する規則は以下のようになっています:
+</p>
+<ul><li> nsFoo は自動的に nsIFoo1 を実装します。というのは、すでに nsIFoo1 を実装しているクラスを継承しているからです。
+</li><li> nsBar は nsIFoo1　を実装しなければ<i>なりません</i>。
+</li><li> nsFoo は、nsIFoo2 と nsIFoo3　が nsBar へ<i>転送</i>されない限りは、nsIFoo2 と nsIFoo3　を実装しなければ<i>なりません</i>。インターフェイスの転送については 1.E.d　の節で解説されています。
+</li></ul>
+<p>これらの規則はとても簡単であり DOM のコードで広く使われています。クラスやインターフェイスが増えるにつれてコードはより複雑になりますが、上記の方法を使えば必ず問題を低減することができます。
+</p>
+<h5 id=".E3.82.B5.E3.83.B3.E3.83.97.E3.83.AB" name=".E3.82.B5.E3.83.B3.E3.83.97.E3.83.AB"> サンプル </h5>
+<p>簡単なサンプルである HTML Anchor Element を見てみましょう。　最初に、インターフェイスの継承規則を解説しましょう。nsIDOMHTMLAnchorElement(HTML Anchor Element のために　W3C によって定義されたメソッドやプロパティを備えているが)を見れば、それが別のインターフェイスである nsIDOMHTMLElement を継承してるのが分かります:
+</p>
+<pre class="eval">interface nsIDOMHTMLAnchorElement : nsIDOMHTMLElement
+</pre>
+<p>すなわち、nsIDOMHTMLAnchorElement　インターフェイスを実装するクラスはすべて nsIDOMHTMLElement インターフェイスも実装しなければならないということです。 nsIDOMHTMLElement　を見ると、それが nsIDOMElement　を継承しており、後者は nsIDOMNode を継承しており、さらに nsIDOMNode が、nsISupports　を継承しているのが分かります。 nsIDOMHTMLAnchorElement は継承のために今述べたすべてのインターフェイスを実装しなければなりません。インターフェイスの実装方法は 1.E.d.の段落を参照してください。
+</p><p>インターフェイスの継承によってトップレベルのインターフェイスが nsISupports　であることが分かります。すべてのインターフェイスは直接的にまた間接的に nsISupports　を継承しなければなりません。このインターフェイスは　1.B. の節で説明された AddRef()、 Release()、QueryInterface()　という3　つのメソッドを定義します。 nsISupports は <a href="https://dxr.mozilla.org/mozilla-central/source/xpcom/base/nsISupports.idl" rel="custom">xpcom/base/</a>　で　1999　年以降変更されることなく平和に息づいています。 XPCOM インターフェイスと nsISupports　については、<a class="external" href="http://www.mozilla-japan.org/docs/modunote.htm">モジュール化の方法</a> をご参照ください。
+</p><p>インターフェイスが継承された時の実装を解説するのに、HTML Anchor Element　を実装している実際のクラスを調べてみましょう。調べるのは nsHTMLAnchorElement です。実際のクラスの継承の連鎖はこのようになっています: </p>
+<pre class="eval">nsGenericElement -&gt; nsGenericHTMLElement -&gt; nsGenericHTMLContainerElement -&gt; nsHTMLAnchorElement
+</pre>
+<p>クラスの定義は以下のようになっています:
+</p>
+<pre class="eval">class nsHTMLAnchorElement : public nsGenericHTMLContainerElement
+class nsGenericHTMLContainerElement : public nsGnericHTMLElement
+class nsGenericHTMLElement : public nsGenericElement
+</pre>
+<pre class="eval">クラスの定義を見ると、nsGenericHTMLElement と nsGenericHTMLContainerElement は直接インターフェイスを実装していません。しかし、nsGenericElement は実装しています:
+</pre>
+<pre class="eval">class nsGenericElement : public nsIHTMLContent
+</pre>
+<p>これはもちろん nsGenericElement が nsIHTMLContent　インターフェイスを実装していることになります。 nsIHTMLContent への継承の連鎖は以下のようになります:
+</p>
+<pre class="eval">nsISupports -&gt; nsIContent -&gt; nsIStyledContent -&gt; nsIXMLContent -&gt; nsIHTMLContent
+</pre>
+<p>nsGenericElement は上記のすべてのインターフェイスを実装しなくてはなりません。そして、<i>nsGenericElement を継承するすべての実際のクラスは自動的にこれらのインターフェイスを実装します</i>。 このことはすでにこの段落で定義した規則と一致しています。
+</p>
+<h3 id=".E9.96.A2.E9.80.A3.E8.B3.87.E6.96.99" name=".E9.96.A2.E9.80.A3.E8.B3.87.E6.96.99"> 関連資料 </h3>
+<ul><li> <a href="ja/XPIDL/xpidl">XPIDL リファレンス</a>
+</li><li> <a class="external" href="http://www.mozilla-japan.org/docs/dom/mozilla/classes/">DOM オブジェクトを C++ クラスへマッピングする</a>
+</li><li> <a class="external" href="http://www.mozilla-japan.org/docs/modunote.htm">モジュール化の方法</a>
+</li></ul>
+<div class="noinclude">
+</div>

@@ -1,0 +1,36 @@
+---
+title: 初回起動
+slug: Jetpack/Meta/First_Run
+translation_of: Archive/Mozilla/Jetpack/Meta/firstrun
+---
+<p>Jetpack ではユーザがあなたのjetpackをインストールする際に表示される任意の内容を指定することが出来ます。インストール完了後に呼び出されるコールバックを登録することも可能です。</p>
+<h2 id="初回起動ページ">初回起動ページ</h2>
+<p>ユーザがあなたのjetpackをインストールすると、インストールが成功したことを知らせる新しいページに誘導されます。標準では、このページにはユーザが既にjetpackを利用できるようになった事と、アンインストールの方法を説明する簡単な文章が含まれます。あなたはこの文章をあなたのjetpackに適した内容のページで置き換える事が出来ます。例えば、ユーザにあなたのjetpackの使い方を説明したり、あなたのjetpackのホームページへのリンクを掲載することができます。このページはHTMLあるいは外部URLとして定義することが出来ます。</p>
+<p>初回起動ページはあなたの jetpackマニュフェストの <code>firstRunPage</code>プロパティで定義されます。マニュフェストは manifest という変数名が設定された単なるオブジェクトです。この変数はjetpack内のグローバル名前空間であればどこでも定義することが出来ます。マニュフェストはjetpackに<a href="/ja/Jetpack/Storage/Settings" title="ja/Jetpack/Storage/Settings"> settings</a> を定義する際に使用するのと同じものです。</p>
+<p><code>firstRunPage</code> の値は string もしくは <a href="/ja/E4X/Processing_XML_with_E4X" title="ja/E4X/Processing XML with E4X">E4X XML</a> のいずれかで無ければいけません。もし、値が string かつ有効なURLであれば、そのURLが示すページが初回起動ページとなります。それ以外の場合、値はHTMLと見なされ、初回起動ページの <code>body</code>となります。</p>
+<p>この例は初回起動ページをHTMLで設定しています：</p>
+<pre class="brush: js">var manifest = {
+  firstRunPage: '&lt;p&gt;Thanks for installing!  Visit my &lt;a href="http://example.com/myJetpack"&gt;homepage&lt;/a&gt;.&lt;/p&gt;'
+};
+</pre>
+<p>これは上の例と同じ内容ですが、E4X XML を使用しています:</p>
+<pre class="brush: js">var manifest = {
+  firstRunPage: &lt;&gt;
+    &lt;p&gt;
+      Thanks for installing!  Visit my &lt;a href="http://example.com/myJetpack"&gt;homepage&lt;/a&gt;.
+    &lt;/p&gt;
+  &lt;/&gt;
+};
+</pre>
+<p>この例では <code><a class="external" href="http://example.com/myJetpack" rel="freelink">http://example.com/myJetpack</a></code> にあるページが初回起動ページとなります:</p>
+<pre class="brush: js">var manifest = {
+  firstRunPage: "http://example.com/myJetpack"
+};
+</pre>
+<h2 id="初回起動コールバック">初回起動コールバック</h2>
+<p>あなたのjetpackが正常にインストールされた後に呼び出されるコールバックを登録することが可能です。<a href="/ja/Jetpack/Meta/Me" title="ja/Jetpack/Meta/Me"><code>jetpack.me.onFirstRun()</code></a> を参照。</p>
+<h2 id="See_also">See also</h2>
+<ul>
+ <li><a href="/ja/Jetpack/Meta/Me" title="ja/Jetpack/Meta/Me"><code>jetpack.me.onFirstRun()</code></a></li>
+ <li><a class="link-https" href="https://wiki.mozilla.org/Labs/Jetpack/JEP/30" title="https://wiki.mozilla.org/Labs/Jetpack/JEP/30">Jetpack Enhancement Proposal 30</a></li>
+</ul>

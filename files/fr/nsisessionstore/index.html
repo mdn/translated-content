@@ -1,0 +1,292 @@
+---
+title: nsISessionStore
+slug: nsISessionStore
+tags:
+  - Interfaces
+  - 'Interfaces:Scriptable'
+  - Référence_de_l'API_XPCOM
+  - XPCOM
+  - 'XPCOM:Références'
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsISessionStore
+---
+<p>
+</p><p>L'interface <code>nsISessionStore</code> fournit un moyen aux extensions ou a tout autre morceau de code, de stocker des données en association avec les sessions du navigateur, les onglets et les fenêtres. Voir également l'article <a href="fr/Session_store_API">Session store API</a>.
+</p><p><br>
+</p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/browser/components/sessionstore/nsISessionStore.idl" rel="custom">browser/components/sessionstore/nsISessionStore.idl</a></code><span style="text-align: right; float: right;"><a href="/fr/docs/Interfaces/À_propos_des_interfaces_scriptables" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">Last changed in Gecko 1.8.1 (Firefox 2 / Thunderbird 2 / SeaMonkey 1.1)</span></div>
+</div>
+<p></p><p>Hérité de : <a href="fr/NsISupports">nsISupports</a>
+</p>
+<h2 id="Synoptique">Synoptique</h2>
+<table class="standard-table"> <tbody><tr>
+<td> <code>void <a href="fr/NsISessionStore#deleteTabValue.28.29">deleteTabValue</a>(in nsIDOMNode aTab, in AString aKey);</code>
+</td></tr>
+<tr>
+<td> <code>void <a href="fr/NsISessionStore#deleteWindowValue.28.29">deleteWindowValue</a>(in nsIDOMWindow aWindow, in AString aKey);</code>
+</td></tr>
+<tr>
+<td> <code>AString <a href="fr/NsISessionStore#getBrowserState.28.29">getBrowserState</a>();</code>
+</td></tr>
+<tr>
+<td> <code>unsigned long <a href="fr/NsISessionStore#getClosedTabCount.28.29">getClosedTabCount</a>(in nsIDOMWindow aWindow);</code>
+</td></tr>
+<tr>
+<td> <code>AString <a href="fr/NsISessionStore#getClosedTabData.28.29">getClosedTabData</a>(in nsIDOMWindow aWindow);</code>
+</td></tr>
+<tr>
+<td> <code>AString <a href="fr/NsISessionStore#getTabValue.28.29">getTabValue</a>(in nsIDOMNode aTab, in AString aKey);</code>
+</td></tr>
+<tr>
+<td> <code>AString <a href="fr/NsISessionStore#getWindowState.28.29">getWindowState</a>(in nsIDOMWindow aWindow);</code>
+</td></tr>
+<tr>
+<td> <code>AString <a href="fr/NsISessionStore#getWindowValue.28.29">getWindowValue</a>(in nsIDOMWindow aWindow, in AString aKey);</code>
+</td></tr>
+<tr>
+<td> <code>void <a href="fr/NsISessionStore#init.28.29">init</a>(in nsIDOMWindow aWindow);</code>
+</td></tr>
+<tr>
+<td> <code>void <a href="fr/NsISessionStore#persistTabAttribute.28.29">persistTabAttribute</a>(in AString aName);</code>
+</td></tr>
+<tr>
+<td> <code>void <a href="fr/NsISessionStore#setBrowserState.28.29">setBrowserState</a>(in AString aState);</code>
+</td></tr>
+<tr>
+<td> <code>void <a href="fr/NsISessionStore#setTabValue.28.29">setTabValue</a>(in nsIDOMNode aTab, in AString aKey, in AString aStringValue);</code>
+</td></tr>
+<tr>
+<td> <code>void <a href="fr/NsISessionStore#setWindowState.28.29">setWindowState</a>(in nsIDOMWindow aWindow, in AString aState, in boolean aOverwrite);</code>
+</td></tr>
+<tr>
+<td> <code>void <a href="fr/NsISessionStore#setWindowValue.28.29">setWindowValue</a>(in nsIDOMWindow aWindow, in AString aKey, in AString aStringValue);</code>
+</td></tr>
+<tr>
+<td> <code>void <a href="fr/NsISessionStore#undoCloseTab.28.29">undoCloseTab</a>(in nsIDOMWindow aWindow, in unsigned long aIndex);</code>
+</td></tr>
+</tbody></table>
+<h2 id="Méthodes">Méthodes</h2>
+<h3 id="deleteTabValue()">deleteTabValue()</h3>
+<p>Efface une valeur de la fenêtre spécifiée.
+</p>
+<pre class="eval"> void deleteTabValue(
+   in nsIDOMNode aTab,
+   in AString aKey
+ );
+</pre>
+<h6 id="Paramètres">Paramètres</h6>
+<dl><dt>&lt;tt&gt;aTab&lt;/tt&gt;
+</dt><dd> L'onglet pour lequel effacer la valeur.
+</dd><dt>&lt;tt&gt;aKey&lt;/tt&gt;
+</dt><dd> La clef dont la valeur doit être effacée.
+</dd></dl>
+<h3 id="deleteWindowValue()">deleteWindowValue()</h3>
+<p>Efface une valeur de la fenêtre spécifiée.
+</p>
+<pre class="eval"> void deleteWindowValue(
+   in nsIDOMWindow aWindow,
+   in AString aKey
+ );
+</pre>
+<h6 id="Paramètres_2">Paramètres</h6>
+<dl><dt>&lt;tt&gt;aWindow&lt;/tt&gt;
+</dt><dd> La fenêtre dans laquelle effacer la valeur.
+</dd><dt>&lt;tt&gt;aKey&lt;/tt&gt;
+</dt><dd> La clef dont la valeur doit être effacée.
+</dd></dl>
+<h3 id="getBrowserState()">getBrowserState()</h3>
+<p>Retourne l'état actuel du navigateur, comprenant tous les onglets ouverts dans toutes les fenêtres.
+</p>
+<pre class="eval"> AString getBrowserState();
+</pre>
+<h6 id="Valeur_retournée">Valeur retournée</h6>
+<p>Une chaîne <a href="fr/JSON">JSON</a> représentant l'état actuel de la session.
+</p>
+<h3 id="getClosedTabCount()">getClosedTabCount()</h3>
+<p>Retourne le nombre total d'onglets pouvant être restauré pour une fenêtre donnée.
+</p>
+<pre class="eval"> unsigned long getClosedTabCount(
+   in nsIDOMWindow aWindow
+ );
+</pre>
+<h6 id="Paramètres_3">Paramètres</h6>
+<dl><dt>&lt;tt&gt;aWindow&lt;/tt&gt;
+</dt><dd> La fenêtre pour laquelle le nombre d'onglets pouvant être restaurés doit être retourné.
+</dd></dl>
+<h6 id="Valeur_retournée_2">Valeur retournée</h6>
+<p>Le nombre d'onglets de la fenêtre pouvant être restaurés.
+</p>
+<h3 id="getClosedTabData()">getClosedTabData()</h3>
+<p>Retourne la liste des onglets fermés pour une fenêtre spécifiée.
+</p>
+<pre class="eval"> AString getClosedTabData(
+   in nsIDOMWindow aWindow
+ );
+</pre>
+<h6 id="Paramètres_4">Paramètres</h6>
+<dl><dt>&lt;tt&gt;aWindow&lt;/tt&gt;
+</dt><dd> La fenêtre pour laquelle la liste des onglets fermés doit être retournée.
+</dd></dl>
+<h6 id="Valeur_retournée_3">Valeur retournée</h6>
+<p>Une chaîne <a href="fr/JSON">JSON</a> représentant la liste des onglets fermés dans la fenêtre spécifiée dans &lt;tt&gt;aWindow&lt;/tt&gt;. La liste est classée dans l'ordre dernier ouvert/Premier fermé (LIFO), ainsi le premier élément de la liste est le dernier onglet qui a été fermé.
+</p>
+<h3 id="getTabValue()">getTabValue()</h3>
+<p>Retourne la valeur correspondante à une clef d'une fenêtre donnée.
+</p>
+<pre class="eval"> AString getTabValue(
+   in nsIDOMNode aTab,
+   in AString aKey
+ );
+</pre>
+<h6 id="Paramètres_5">Paramètres</h6>
+<dl><dt>&lt;tt&gt;aTab&lt;/tt&gt;
+</dt><dd> L'onglet pour lequel récupérer la valeur.
+</dd><dt>&lt;tt&gt;aKey&lt;/tt&gt;
+</dt><dd> La clef dont la valeur correspondante doit être retournée.
+</dd></dl>
+<h6 id="Valuer_retournée">Valuer retournée</h6>
+<p>La valeur de la chaîne précédemment assignée à &lt;tt&gt;aKey&lt;/tt&gt; par <code><a href="fr/NsISessionStore#setTabValue.28.29">setTabValue()</a></code>.
+</p>
+<h3 id="getWindowState()">getWindowState()</h3>
+<p>Retourne l'état actuel de la fenêtre de navigateur spécifiée.
+</p>
+<pre class="eval"> AString getWindowState(
+   in nsIDOMWindow aWindow
+ );
+</pre>
+<h6 id="Paramètres_6">Paramètres</h6>
+<dl><dt>&lt;tt&gt;aWindow&lt;/tt&gt;
+</dt><dd> La fenêtre du navigateur pour laquelle l'état doit être retourné.
+</dd></dl>
+<h6 id="Valeur_retournée_4">Valeur retournée</h6>
+<p>Une chaîne <a href="fr/JSON">JSON</a> représentant l'état de la session qui contient uniquement la fenêtre spécifiée dans &lt;tt&gt;aWindow&lt;/tt&gt;.
+</p>
+<h3 id="getWindowValue()">getWindowValue()</h3>
+<p>Retourner la valeur de la chaîne associée à une clef donnée pour une fenêtre.
+</p>
+<pre class="eval"> AString getWindowValue(
+   in nsIDOMWindow aWindow,
+   in AString aKey
+ );
+</pre>
+<h6 id="Paramètres_7">Paramètres</h6>
+<dl><dt>&lt;tt&gt;aWindow&lt;/tt&gt;
+</dt><dd> La fenêtre pour laquelle la valeur doit être récupérée.
+</dd><dt>&lt;tt&gt;aKey&lt;/tt&gt;
+</dt><dd> La clef dont la valeur correspondante doit être récupérée.
+</dd></dl>
+<h6 id="Valeur_retournée_5">Valeur retournée</h6>
+<p>La valeur de la chaîne précédemment sauvegardée pour la clef spécifiée, ou une chaîne vide si aucune valeur n'a été définie pour cette clef.
+</p>
+<h3 id="init()">init()</h3>
+<p>Initialise le service de gestion de sessions.
+</p>
+<div class="note"><b>Note :</b> Cette fonction est uniquement destinée à être utilisée par le navigateur ; les extensions ne devraient pas l'utiliser.</div>
+<pre class="eval"> void init(
+   in nsIDOMWindow aWindow
+ );
+</pre>
+<h6 id="Paramètres_8">Paramètres</h6>
+<dl><dt>&lt;tt&gt;aWindow&lt;/tt&gt;
+</dt><dd> La fenêtre pour laquelle initialiser le service.
+</dd></dl>
+<h3 id="setBrowserState()">setBrowserState()</h3>
+<p>Définit l'état actuel du navigateur.
+</p>
+<pre class="eval"> void setBrowserState(
+   in AString aState
+ );
+</pre>
+<h6 id="Paramètres_9">Paramètres</h6>
+<dl><dt>&lt;tt&gt;aState&lt;/tt&gt;
+</dt><dd> Une chaîne <a href="fr/JSON">JSON</a> représentant l'état de session à utiliser.
+</dd></dl>
+<div class="note"><b>Note :</b> Appeler <code>setBrowserState()</code> remplace immédiatement la session courante, en restaurant l'état complet de l'application dans l'état indiqué par le paramètre &lt;tt&gt;aState&lt;/tt&gt;.</div>
+<h3 id="persistTabAttribute()">persistTabAttribute()</h3>
+<p>Définit le nom d'un attribut d'onglet à sauvegarder et à restaurer pour tous les onglets XUL.
+</p>
+<pre class="eval"> void persistTabAttribute(
+   in AString aName
+ );
+</pre>
+<div class="note"><b>Note :</b> Actuellement, il n'y a aucun moyen de récupérer et de choisir les onglets pour lesquels appliquer des attributs persistants. Cette méthode affecte tous les onglets sans discrimination.</div>
+<h6 id="Paramètres_10">Paramètres</h6>
+<dl><dt>&lt;tt&gt;aName&lt;/tt&gt;
+</dt><dd> Le nom de l'attribut à sauvegarder et à restaurer pour tous les onglets.
+</dd></dl>
+<h3 id="setTabValue()">setTabValue()</h3>
+<p>Applique la valeur de la clef spécifiée à un onglet.
+</p>
+<pre class="eval"> void setTabValue(
+   in nsIDOMNode aTab,
+   in AString aKey,
+   in AString aStringValue
+ );
+</pre>
+<h6 id="Paramètres_11">Paramètres</h6>
+<dl><dt>&lt;tt&gt;aTab&lt;/tt&gt;
+</dt><dd> L'onglet pour lequel appliquer la valeur.
+</dd><dt>&lt;tt&gt;aKey&lt;/tt&gt;
+</dt><dd> La clef dont la valeur doit être appliquée.
+</dd><dt>&lt;tt&gt;aStringValue&lt;/tt&gt;
+</dt><dd> Une chaîne à définir comme étant la valeur de la clef &lt;tt&gt;aKey&lt;/tt&gt;. Vous pouvez utiliser la méthode <code><a href="fr/ToSource">toSource()</a></code> sur des objets JavaScript, ou la fonction <code><a href="fr/Eval">eval()</a></code>, pour assigner comme valeur des données plus complexes (voire des objets entiers).
+</dd></dl>
+<h3 id="setWindowState()">setWindowState()</h3>
+<p>Applique la valeur enregistrée donnée à l'état de la fenêtre spécifiée.
+</p>
+<pre class="eval"> void setWindowState(
+   in nsIDOMWindow aWindow,
+   in AString aState,
+   in boolean aOverwrite
+ );
+</pre>
+<h6 id="Paramètres_12"> Paramètres </h6>
+<dl><dt>&lt;tt&gt;aWindow&lt;/tt&gt;
+</dt><dd> La <a href="fr/NsIDOMWindow">fenêtre du navigateur</a> dont l'état doit être défini par celui indiqué dans &lt;tt&gt;aState&lt;/tt&gt;.
+</dd><dt>&lt;tt&gt;aState&lt;/tt&gt;
+</dt><dd> L'état de sauvegarde à appliquer à la fenêtre spécifiée.
+</dd><dt>&lt;tt&gt;aOverwrite&lt;/tt&gt;
+</dt><dd> Si le paramètre est égal à <code>true</code>, tous les onglets existants sont fermés et remplacés par ceux contenus dans le paramètre &lt;tt&gt;aState&lt;/tt&gt;. S'il est égal à <code>false</code>, les onglets contenus dans &lt;tt&gt;aState&lt;/tt&gt; sont ajoutés à la suite de ceux déjà ouverts dans la fenêtre.
+</dd></dl>
+<h3 id="setWindowValue()">setWindowValue()</h3>
+<p>Applique la valeur correspondante à une clef donnée pour la fenêtre spécifiée.
+</p>
+<pre class="eval"> void setWindowValue(
+   in nsIDOMWindow aWindow,
+   in AString aKey,
+   in AString aStringValue
+ );
+</pre>
+<h6 id="Paramètres_13">Paramètres</h6>
+<dl><dt>&lt;tt&gt;aWindow&lt;/tt&gt;
+</dt><dd> La fenêtre pour laquelle la valeur doit être appliquée.
+</dd><dt>&lt;tt&gt;aKey&lt;/tt&gt;
+</dt><dd> La clef dont la valeur doit être appliquée.
+</dd><dt>&lt;tt&gt;aStringValue&lt;/tt&gt;
+</dt><dd> Une chaîne à appliquer telle que la valeur de la clef &lt;tt&gt;aKey&lt;/tt&gt;. Vous pouvez utiliser la méthode <code><a href="fr/ToSource">toSource()</a></code> sur des objets JavaScript, ou la fonction <code><a href="fr/Eval">eval()</a></code>, pour assigner comme valeur des données plus complexes (voire même des objets entiers).
+</dd></dl>
+<h3 id="undoCloseTab()">undoCloseTab()</h3>
+<p>Rouvre un onglet fermé dans la fenêtre spécifée.
+</p>
+<pre class="eval"> void undoCloseTab(
+   in nsIDOMWindow aWindow,
+   in unsigned long aIndex
+ );
+</pre>
+<h6 id="Paramètres_14">Paramètres</h6>
+<dl><dt>&lt;tt&gt;aWindow&lt;/tt&gt;
+</dt><dd> La fenêtre dans laquelle rouvrir un onglet précédemment fermé.
+</dd><dt>&lt;tt&gt;aIndex&lt;/tt&gt;
+</dt><dd> Le numéro d'index de l'onglet à restaurer. Cette valeur doit être comprise entre 0 et la valeur retournée par <code><a href="fr/NsISessionStore#getClosedTabCount.28.29">getClosedTabCount()</a></code> diminuée de 1. La liste des onglets fermés est stockée dans l'ordre dernier ouvert/premier fermé (LIFO), ainsi l'onglet d'index 0 est le dernier à avoir été fermé.
+</dd></dl>
+<h2 id="Voir_également">Voir également</h2>
+<p><a href="fr/NsISupports">nsISupports</a>
+</p><p><span>Interwikis Languages Links</span>
+</p>

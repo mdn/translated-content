@@ -1,0 +1,143 @@
+---
+title: ボックスモデル
+slug: Archive/Mozilla/XUL/Tutorial/The_Box_Model
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/The_Box_Model
+---
+<div>
+  <div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:More_Button_Features" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Element_Positioning">次のページ  »</a></p>
+</div></div>
+<p>このセクションでは、どのように XUL がレイアウトを処理するかを見ていきます。</p>
+<h2 id="Introduction_to_Boxes" name="Introduction_to_Boxes">ボックス入門</h2>
+<p>XUL でレイアウトを行うための主な仕組みは「ボックスモデル (<span style="color: green;">Box Model</span>) 」と呼ばれるものです。 このモデルでは、ウィンドウを一連のボックスに分割し、それぞれのボックス内では要素を水平方向または垂直方向に並べることでレイアウトを行っていきます。 つまり、一連のボックスやスペーサー、<code><code id="a-flex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code> 属性をもった要素を組み合わせることによって、ウィンドウのレイアウトをコントロールすることを可能にしています。</p>
+<p>ボックスは、XUL 要素をレイアウトするための基礎となる部分ではありますが、それ自身は極めて単純ないくつかのルールに従って動作します。 ボックスでは、その子要素を水平方向か垂直方向かのいずれかの配置でレイアウトすることが可能です。 水平 (<span style="color: green;">horizontal</span>) ボックスは、子要素を水平方向に並べ、垂直 (<span style="color: green;">vertical</span>) ボックスは、子要素を垂直方向に並べます。 つまり、ボックスは 1 行だけ、または 1 列だけの HTML のテーブルようなものだと考えることができます。 子要素の方に設定される様々な属性と、いくつか CSS によるスタイルプロパティを加えることによって、子要素の正確な位置とサイズをコントロールすることが可能になります。</p>
+<h3 id="Box_elements" name="Box_elements">ボックス要素</h3>
+<p>ボックスの基本的な構文は、以下のようになります。</p>
+
+
+<pre class="brush:xml">&lt;hbox&gt;
+  &lt;!-- ここに置かれた要素は水平に並べて配置される --&gt;
+&lt;/hbox&gt;
+
+&lt;vbox&gt;
+  &lt;!-- ここに置かれた要素は垂直に並べて配置される --&gt;
+&lt;/vbox&gt;
+</pre>
+
+
+<p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/hbox" title="hbox">hbox</a></code></code> 要素は、水平配置のボックスを作るのに使われます。 <code><code><a href="/ja/docs/Mozilla/Tech/XUL/hbox" title="hbox">hbox</a></code></code> 内に置かれた個々の要素は、1 行で水平に配置されます。 <code><code><a href="/ja/docs/Mozilla/Tech/XUL/vbox" title="vbox">vbox</a></code></code> 要素は、垂直配置のボックスを作るのに使われます。 この中に要素を追加すると、その列の一番下に配置されます。</p>
+<p>これ以外に、汎用的な <code><code><a href="/ja/docs/Mozilla/Tech/XUL/box" title="box">box</a></code></code> 要素もあります。 <code><code><a href="/ja/docs/Mozilla/Tech/XUL/box" title="box">box</a></code></code> 要素は、水平配置がデフォルトなので、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/hbox" title="hbox">hbox</a></code></code> と同等です。 ただし、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/box" title="box">box</a></code></code>は、<code><code id="a-orient"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code></code> 属性を使って、ボックスの配置方向をコントロールすることができます。 水平配置のボックスを作る場合には、この属性に <code>horizontal</code> という値を設定し、垂直配置のボックスを作るには <code>vertical</code> という値を設定します。</p>
+<p>このため、以下の 2 つも同等です。</p>
+
+
+
+<pre class="brush:xml">&lt;vbox&gt;&lt;/vbox&gt;
+
+&lt;box orient="vertical"&gt;&lt;/box&gt;
+</pre>
+
+
+<p>次の例は、3 つのボタンを垂直方向に置く方法を示しています。</p>
+<p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxes_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxes_1.xul">表示</a></p>
+<div class="float-right">
+  <img height="128" src="/@api/deki/files/559/=Boxes-ex1.png" width="123"></div>
+
+
+<pre class="brush:xml">&lt;vbox&gt;
+  &lt;button id="yes" label="Yes" /&gt;
+  &lt;button id="no" label="No" /&gt;
+  &lt;button id="maybe" label="Maybe" /&gt;
+&lt;/vbox&gt;
+</pre>
+
+
+<p>3 つのボタンは、ボックスで指定されるとおり、垂直方向に配置されています。 ボタンが水平に配置されるように変更する場合、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/vbox" title="vbox">vbox</a></code></code> 要素を <code><code><a href="/ja/docs/Mozilla/Tech/XUL/hbox" title="hbox">hbox</a></code></code> 要素に変更するだけで完了します。</p>
+<h3 id="Login_prompt_example" name="Login_prompt_example">ログインプロンプトの例</h3>
+<p>ボックスの中には、必要なだけ要素を追加することが可能です。 また、要素としてボックスを入れ子に追加することも可能です。 水平ボックスの場合、追加された要素は、その直前にある要素の右側に置かれていきます。 要素をどれだけ追加しても、ウィンドウの幅が広くなるだけで、途中で折り返されることはありません。 同様に、垂直ボックスにの場合、追加された要素は、その直前にある要素の下に置かれていきます。 以下の例は、簡単なログインプロンプトです。</p>
+
+<p><span id="%E4%BE%8B_2"><a id="%E4%BE%8B_2"></a><strong>例 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxes_2.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxes_2.xul">表示</a></p>
+
+
+
+<pre class="brush:xml">&lt;vbox&gt;
+  &lt;hbox&gt;
+    &lt;label control="login" value="Login:" /&gt;
+    &lt;textbox id="login" /&gt;
+  &lt;/hbox&gt;
+  &lt;hbox&gt;
+    &lt;label control="pass" value="Password:" /&gt;
+    &lt;textbox id="pass" /&gt;
+  &lt;/hbox&gt;
+  &lt;button id="ok" label="OK" /&gt;
+  &lt;button id="cancel" label="Cancel" /&gt;
+&lt;/vbox&gt;
+</pre>
+
+
+<div class="float-right">
+  <img height="136" src="/@api/deki/files/561/=Boxes-ex2.png" width="203"></div>
+<p>この例では、4 つの要素が、垂直方向に配置されています。 2 つは内部の <code><code><a href="/ja/docs/Mozilla/Tech/XUL/hbox" title="hbox">hbox</a></code></code> タグで、残りの 2 つは、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code> 要素です。 外側のボックスの直接の子要素だけが垂直方向に配置されていることが確認できます。 ラベルとテキスト入力欄は、内部の <code><code><a href="/ja/docs/Mozilla/Tech/XUL/hbox" title="hbox">hbox</a></code></code> 要素の中にあるため、そちらに従って水平に配置されています。 ラベルとテキスト入力欄が水平方向に配置されていることも画像から確認できます。</p>
+<h4 id="Aligning_textboxes" name="Aligning_textboxes">入力欄の水平位置をそろえる</h4>
+<p>上のログインダイアログのレイアウトをよく見ると、2 つのテキスト入力欄の水平位置がきちんとそろっていない点が気になります。 改善のため、そろえてみることにします。 そのためにはボックスをいくつか追加する必要があります。</p>
+<p><span id="%E4%BE%8B_3"><a id="%E4%BE%8B_3"></a><strong>例 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxes_3.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxes_3.xul">表示</a></p>
+
+
+<pre class="brush:xml">&lt;vbox&gt;
+  &lt;hbox&gt;
+    &lt;vbox&gt;
+      &lt;label control="login" value="Login:" /&gt;
+      &lt;label control="pass" value="Password:" /&gt;
+    &lt;/vbox&gt;
+    &lt;vbox&gt;
+      &lt;textbox id="login" /&gt;
+      &lt;textbox id="pass" /&gt;
+    &lt;/vbox&gt;
+  &lt;/hbox&gt;
+  &lt;button id="ok" label="OK" /&gt;
+  &lt;button id="cancel" label="Cancel" /&gt;
+&lt;/vbox&gt;
+</pre>
+
+
+<div class="float-right">
+  <img height="136" src="/@api/deki/files/563/=Boxes-ex3.png" width="203"></div>
+<p>テキスト入力欄をそろえるための方法を見ていきます。 このためには、メインとなるボックスの内部にボックスを追加する必要があります。 とりあえず、2 つのラベルと 2 つのテキスト入力欄は、すべて同じ水平ボックス内に置きます。 さらに、その中でラベルとテキスト入力欄の組を、それぞれ分けて別の垂直ボックスに置きます。 内側のボックスは、要素を垂直に配置するために使用します。 水平ボックスは、ラベル用 vbox とテキスト入力欄用 vbox を水平方向に並べるために必要です。 水平ボックスを取り除いた場合、テキスト入力欄は、両方ともラベルの下に表示されてしまいます。</p>
+<p>新しい例では、「Password」というラベルの位置が上すぎるという問題があります。 実際にこれを解決するためには、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/grid" title="grid">grid</a></code></code> 要素を使う必要がありますが、この要素についてはもう少し<a href="/ja/docs/XUL_Tutorial/Grids">後のセクション</a>で説明する予定です。</p>
+<h3 id="Our_Find_Files_Dialog_example" name="Our_Find_Files_Dialog_example">ファイル検索ダイアログにボックスを追加</h3>
+<p>それでは、ファイル検索ダイアログにボックスをいくつか追加してみましょう。 垂直ボックスを要素全体の外側に追加し、水平ボックスをテキスト入力欄とボタンの外側に追加します。 その結果、ボタンは、テキスト入力欄の下に表示されます。</p>
+
+
+<pre class="brush:xml">&lt;vbox flex="1"&gt;
+  &lt;description&gt;
+    Enter your search criteria below and select the Find button to begin
+    the search.
+  &lt;/description&gt;
+
+  &lt;hbox&gt;
+    &lt;label value="Search for:" control="find-text" /&gt;
+    &lt;textbox id="find-text" /&gt;
+  &lt;/hbox&gt;
+
+  &lt;hbox&gt;
+    &lt;spacer flex="1" /&gt;
+
+    &lt;button id="find-button" label="Find" /&gt;
+    &lt;button id="cancel-button" label="Cancel" /&gt;
+  &lt;/hbox&gt;
+&lt;/vbox&gt;
+</pre>
+
+
+
+<p>垂直ボックスによって、メインとなるテキストとテキスト入力欄からなるボックス、ボタンからなるボックスは、垂直方向に配置されます。 内部のボックスは、その中の要素を水平方向に配置します。 下の画像から分かるように、ラベルとテキスト入力欄は、並んで配置されます。 スペーサ (<code><a href="/ja/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code>) と 2 つのボタンも、ボックス内に水平方向に置かれます。 スペーサが伸縮可能であることによって、ボタンが右側に表示されていることに注意して下さい。</p>
+<p><img height="110" src="/@api/deki/files/565/=Boxes1.png" width="469"></p>
+<p><span id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"><a id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"></a><strong>ここまでのファイル検索ダイアログの例</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxes.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxes.xul">表示</a></p>
+<p>次のセクションでは、個々の要素のサイズの指定と、そのサイズを制約する方法を見ていきます。</p>
+<div>
+  <div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:More_Button_Features" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Element_Positioning">次のページ  »</a></p>
+</div></div>

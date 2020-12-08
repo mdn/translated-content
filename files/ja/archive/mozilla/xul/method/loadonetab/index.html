@@ -1,0 +1,33 @@
+---
+title: loadOneTab
+slug: Archive/Mozilla/XUL/Method/loadOneTab
+tags:
+  - XUL Methods
+  - XUL Reference
+translation_of: Archive/Mozilla/XUL/Method/loadOneTab
+---
+<div class="noinclude">
+  <span class="breadcrumbs XULRefMeth_breadcrumbs">« <a href="/ja/docs/XUL_Reference" title="/ja/docs/XUL_Reference">XUL リファレンス HOME</a></span></div>
+<dl>
+  <dt>形式 1:
+    <span id="m-loadOneTab"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/loadOneTab">loadOneTab( URL, referrerURI, charset, postData, loadInBackground, allowThirdPartyFixup )</a></code></span></dt>
+  <dt>形式 2:
+    <span id="m-loadOneTab"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/loadOneTab">loadOneTab( URL, { referrerURI: ..., charset: ..., postData: ..., inBackground: ..., allowThirdPartyFixup: ..., relatedToCurrent: ... })</a></code></span></dt>
+  <dd>
+    戻り値の型: <em><code><a href="/ja/docs/Mozilla/Tech/XUL/tab" title="tab">tab</a></code> 要素</em></dd>
+  <dd>
+    指定した <code>URL</code> のページを読み込む新しいタブを開きます。残りの引数は任意です。このメソッドは <a href="/ja/docs/XUL/Method/addTab"><code>addTab</code></a> と同じ動作をしますが、<code>loadInBackground</code> 引数で新しいタブを前面と背面のどちらに開くかを選ぶことができます。また、owner タブは自動的に指定されるため、<code>owner</code> 引数はありません。</dd>
+  <dd>
+    <dl>
+      <dt>
+        <var>inBackground</var></dt>
+      <dd>
+        <code>true</code> の場合、タブはバックグラウンドでロードされます。 <code>false</code> の場合はタブは新たに選択したタブになります。 引数が <code>null</code> かまたは無指定の場合、このパラメータは <code>browser.tabs.loadInBackground</code> の設定に追従します。</dd>
+    </dl>
+  </dd>
+  <dd>
+    <div class="blockIndicator standardNote">
+    <p><a href="https://developer.mozilla.org/ja/docs/Mozilla/Firefox/Releases/3.6">Firefox 3.6 における注記</a></p>
+    <p style="font-weight: 400;">このメソッドの 2 つ目の形式は Firefox 3.6 で追加されたものです。 <code>relatedToCurrent</code> パラメータが追加されており、パラメータは任意の順序で、名前によって指定することができます。</p>
+</div></dd>
+</dl>

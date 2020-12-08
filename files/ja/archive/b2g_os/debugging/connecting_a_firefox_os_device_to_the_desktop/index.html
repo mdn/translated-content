@@ -1,0 +1,41 @@
+---
+title: Firefox OS端末をコンピュータに接続する
+slug: Archive/B2G_OS/Debugging/Connecting_a_Firefox_OS_device_to_the_desktop
+tags:
+  - ADB
+  - Firefox OS
+translation_of: Archive/B2G_OS/Debugging/Connecting_a_Firefox_OS_device_to_the_desktop
+---
+<div class="summary">
+ <p><span class="seoSummary">このガイドではコンピュータとFirefox OS端末とをUSBで接続する方法を説明します。</span></p>
+</div>
+<div class="note">
+ <p><strong>紀</strong>: 単にFirefox OS端末上でアプリをデバッグしたい場合で、Firefox OS 1.2以降を実行しているなら、<a href="https://developer.mozilla.org/en-US/docs/Tools/WebIDE">WebIDE</a> の使用がベストな選択です。Firefox OSバージョンが 1.2未満の場合、<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Debugging/Setting_up">Setting up to debug on Firefox OS using Firefox developer tools</a>を読んで標準的なリモートデバッグの使用について学んで下さい。</p>
+</div>
+<h2 id="端末をセットアップする">端末をセットアップする</h2>
+<p>Firefox OS端末上で (<a href="/en-US/docs/Mozilla/Firefox_OS/Debugging/Developer_settings#The_Developer_panel">see the layout</a>):</p>
+<ol>
+ <li>Settingsアプリを開<code>いて、Device Information</code> &gt; <code>More Information</code> &gt; <code>Developer</code> へ</li>
+ <li>developerメニューで"Remote debugging"をチェックする</li>
+</ol>
+<h2 id="コンピュータをセットアップする">コンピュータをセットアップする</h2>
+<p>端末をコンピュータに接続するため、<a class="external external-icon" href="http://developer.android.com/tools/help/adb.html" title="http://developer.android.com/tools/help/adb.html">Android Debug Bridge (adb)</a> のインストールが必要です。ADB Helperアドオン (<a href="https://developer.mozilla.org/en-US/docs/Tools/WebIDE">WebIDE</a> と一緒に使用) はadbをバンドルしているのを気に留めて下さい。</p>
+<p>コンピュータをセットアップするための指示はOSに固有であり、Android開発者サイトの<a class="external" href="https://developer.android.com/tools/device.html" title="https://developer.android.com/tools/device.html">"Setting up a Device for Development"</a>に3つのポイントとして詳解されています。追加の指示を下記に記載します。</p>
+<h3 id="Mac_OS_X用の特別な指示">Mac OS X用の特別な指示</h3>
+<p>Mac OS Xを実行している場合、 <code>adt-bundle-mac-x86_64-20130522</code> のような名前のパッケージをダウンロードしています。そのフォルダを"アプリケーション"フォルダに置き、<code>/Applications/adt-bundle-mac-x86_64-20130522/</code> のようにします。ここには2つのディレクトリがあります: <code>eclipse</code> と <code>sdk です。</code> <code>~/.bashrc</code> を編集し、下記を追加します:</p>
+<pre>export PATH="/Applications/adt-bundle-mac-x86_64-20130522/sdk/platform-tools:$PATH"</pre>
+<p>(次回シェルを起動した時に準備できているでしょう。) シェルのCLI上でこのようにタイプできます:</p>
+<pre>adb devices
+</pre>
+<p>下記のように接続された端末のリストが返ってきます:</p>
+<pre>List of devices attached
+AA:BB:A5:B5:AA:BB    device</pre>
+<h3 id="Linux用の特別な指示">Linux用の特別な指示</h3>
+<p>Linuxを使っているなら、Firefox OS Geeksphone 端末に使われるベンダーIDは <code>05c6で、このため </code><code>/etc/udev/rules.d/51-android.rules</code> ファイルに下記と同様なエントリを含むべきです:</p>
+<pre class="bash" style="font-family: monospace;"><span style="color: #007800;">SUBSYSTEM</span>=="usb", ATTR<span style="color: #7a0874; font-weight: bold;">{</span>idVendor<span style="color: #7a0874; font-weight: bold;">}</span>=="05c6", <span style="color: #007800;">MODE</span>="0666", <span style="color: #007800;">GROUP</span>="plugdev"</pre>
+<h3 id="Windows用の特別な指示">Windows用の特別な指示</h3>
+<p>Geeksphone 用のWindowsドライバは <a href="http://www.geeksphone.com/downloads/fos/fos_usb_driver.zip" title="http://www.geeksphone.com/downloads/fos/fos_usb_driver.zip">Geeksphone website</a> からダウンロードできます。</p>
+<p>Windows 8 はデフォルトで署名のないドライバをインストールできません。 <a href="http://www.craftedge.com/tutorials/driver_install_windows8/driver_install_win8.html" title="http://www.craftedge.com/tutorials/driver_install_windows8/driver_install_win8.html">"How to install an unsigned driver on Windows 8"</a>のチュートリアルを見て下さい。</p>
+<p>Windows XP Home Edition には <code>tasklist.exe</code> が入っていないため、Simulator は端末を発見しません。 <a href="http://www.computerhope.com/download/winxp.htm">ComputerHope website</a> からそのファイルをダウンロードして、<code>Windows\System32 </code>フォルダに置くことで解決できます。</p>
+<h2 id="セットアップを確認する">セットアップを確認する</h2>
+<p>これらの指示に従ったら、端末をUSBケーブルでコンピュータに接続し、コマンドプロンプトを開いて"<code>adb devices</code>" (adb にpathが通ってるのを確認する) とタイプします。 Firefox OS端末が出力の中に載っているのが見えるでしょう。</p>

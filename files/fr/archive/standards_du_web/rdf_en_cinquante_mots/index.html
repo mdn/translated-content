@@ -1,0 +1,69 @@
+---
+title: RDF en cinquante mots
+slug: Archive/Standards_du_Web/RDF_en_cinquante_mots
+tags:
+  - RDF
+translation_of: Archive/Web_Standards/RDF_in_Fifty_Words_or_Less
+---
+<p>D'accord, peut-être qu'il y a un peu plus de cinquante mots, mais les points-clés sont plutôt simples (et <strong>en gras</strong> pour vous les dirigeants qui voulez juste aller à l'essentiel). Le <a class="external" href="http://developer.mozilla.org/en/docs/RDF"><em>Resource Description Framework</em></a> (NdT : « Cadre de description de ressources »), ou « RDF », c'est en fait deux choses.</p>
+
+<p><strong>D'abord, RDF est un modèle à base de graphes pour décrire les ressources Internet (comme les pages web ou les emails), et comment ces ressources sont liées les unes aux autres.</strong></p>
+
+<p>Mais qu'est-ce que cela signifie<em>réellement</em> ? Pour un développeur Mozilla, cela veut dire que le modèle de donnée RDF (le « graphe ») peut être utilisé comme mécanisme pour intégrer et organiser les ressources Internet.</p>
+
+<p>Prenons un exemple : les marque-pages. Actuellement, la plupart des navigateurs vous permettent d'organiser hiérarchiquement vos marque-pages dans des<em>dossiers</em>. Chaque marque-page est un<em>pointeur</em> vers une page web, appelé <strong>URI</strong> (<strong>U</strong>niform <strong>R</strong>esource <strong>I</strong>dentifier, ou identifiant uniforme de ressource).</p>
+
+<p>Mais une page web est seulement une sorte de ressource Internet. Il y en a des tonnes d'autres, dont les emails, les articles de news Usenet (ou les newsgroups Usenet entiers), et les résultats de recherche de votre moteur de recherche favori, pour n'en citer que quelques uns. Et fondamentalement, il n'y a aucune raison pour que vous ne traitiez pas ces ressources comme des « marque-pages », en les regroupant dans des dossiers selon votre bon plaisir, ou même en créant des dossiers « intelligents » qui, quand vous les ouvrez, génèrent leur contenu dynamiquement en lançant une recherche commune que vous avez définie.</p>
+
+<p>Et un marque-page peut vraiment avoir des propriétés arbitraires associées : vous pourriez vouloir inventer votre propre schéma « classification » pour un marque-page codé à la façon « cool » Macintosh. Ou vous pourriez vouloir relier un marque-page à un autre marque-page, ou le garder dans plusieurs « dossiers » à la fois.</p>
+
+<p>Le graphe RDF fournit un modèle de données parfait sur lequel construire un service de marque-pages « universel » comme décrit ci-dessus : le graphe peut contenir des pointeurs vers des ressources arbitraires et les regrouper de n'importe quelle manière que vous pouvez imaginer.</p>
+
+<p>Mais attendez, il y a plus…</p>
+
+<p><strong>Ensuite, RDF est une syntaxe de sérialisation. Cette syntaxe permet aux modèle à base de graphes d'être transmis entre « agents ».</strong></p>
+
+<p>D'accord, qu'est-ce que ça peut bien vouloir dire ? Fondamentalement, cela signifie que les parties du modèle de données RDF peuvent être communiquées au-delà des frontières du réseau, et les contenus du graphe peuvent changer dynamiquement lorsque l'information provient d'un service distant.</p>
+
+<p>Reprenons l'exemple des marque-pages. Disons que l'un de mes « dossiers » de marque-pages est réellement un pointeur vers ma boîte de réception : lorsque j'ouvre ce dossier,<em>voilà</em>! Tous les messages que j'ai reçus dans la nuit apparaissent.</p>
+
+<p>Mais comment cela marche-t-il ? Le dossier « boîte de réception » était en fait un simple pointeur vers une ressource Internet qui contient plus de RDF qui étendent le graphe. Cette « ressource Internet » était une URI qui pointait vers un script CGI (disons, <span class="nowiki">http://www.mozilla.org/smart-mail/get-mail.cgi?user=waterson&amp;folder=inbox</span>). Le script CGI génère en fait du<em>RDF sérialisé</em>, qui est simplement un moyen de formater un graphe en <a class="external" href="http://developer.mozilla.org/en/docs/XML">XML</a> :</p>
+
+<pre class="eval">&lt;rdf:RDF
+    xmlns:rdf="<a class="external" href="http://www.w3.org/TR/WD-rdf-syntax#" rel="freelink">http://www.w3.org/TR/WD-rdf-syntax#</a>"
+    xmlns:sm="<a class="external" href="http://www.mozilla.org/smart-mail/schema#" rel="freelink">http://www.mozilla.org/smart-mail/schema#</a>"&gt;
+  &lt;rdf:Description
+    about="<a class="external" href="http://www.mozilla.org/smart-mail/get-mail.cgi?user=waterson&amp;folder=inbox" rel="freelink">http://www.mozilla.org/smart-mail/ge...n&amp;folder=inbox</a>"&gt;
+    &lt;sm:message id="4025293"&gt;
+       &lt;sm:recipient&gt;
+         Chris Waterson "<a class="link-mailto" href="mailto:waterson@netscape.com" rel="freelink">waterson@netscape.com</a>"
+       &lt;/sm:recipient&gt;
+       &lt;sm:sender&gt;
+         Aunt Helga "<a class="link-mailto" href="mailto:helga@netcenter.net" rel="freelink">helga@netcenter.net</a>"
+       &lt;/sm:sender&gt;
+       &lt;sm:received-by&gt;x-wing.mcom.com&lt;/sm:received-by&gt;
+       &lt;sm:subject&gt;Great recipe for Yam Soup!&lt;/sm:subject&gt;
+       &lt;sm:body&gt;
+         <a class="external" href="http://www.mozilla.org/smart-mail/get-body.cgi?id=4025293" rel="freelink">http://www.mozilla.org/smart-mail/ge...cgi?id=4025293</a>
+       &lt;/sm:body&gt;
+    &lt;/sm:message&gt;
+    &lt;sm:message id="4025294"&gt;
+       &lt;sm:recipient&gt;
+         Chris Waterson "<a class="link-mailto" href="mailto:waterson@netscape.com" rel="freelink">waterson@netscape.com</a>"
+       &lt;/sm:recipient&gt;
+       &lt;sm:sender&gt;
+         Sarah Waterson "<a class="link-mailto" href="mailto:waterson.2@postbox.acs.ohio-state.edu" rel="freelink">waterson.2@postbox.acs.ohio-state.edu</a>"
+       &lt;/sm:sender&gt;
+       &lt;sm:received-by&gt;x-wing.mcom.com&lt;/sm:received-by&gt;
+       &lt;sm:subject&gt;We won our ultimate game&lt;/sm:subject&gt;
+       &lt;sm:body&gt;
+         <a class="external" href="http://www.mozilla.org/smart-mail/get-body.cgi?id=4025294" rel="freelink">http://www.mozilla.org/smart-mail/ge...cgi?id=4025294</a>
+       &lt;/sm:body&gt;
+    &lt;/sm:message&gt;
+  &lt;/rdf:Description&gt;
+&lt;/rdf:RDF&gt;
+</pre>
+
+<p>À la réception de la monstruosité ci-dessus, le moteur RDF incorpore le RDF à la bonne place dans le graphe, et le contrôle arbre qui implémente réellement l'UI dans le marque-page est informé qu'il devrait commencer à dessiner des icônes pour le dernier message sur la purée de patate douce de Tante Helga.</p>
+
+<p>C'est<em>exactement</em> comme ça que fonctionne SmartMail.</p>

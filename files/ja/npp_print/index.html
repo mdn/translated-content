@@ -1,0 +1,58 @@
+---
+title: NPP_Print
+slug: NPP_Print
+tags:
+  - NPAPI
+  - Plugins
+translation_of: Archive/Plugins/Reference/NPP_Print
+---
+<p> « <a href="https://developer.mozilla.org/ja/docs/Gecko_Plugin_API_Reference">Gecko Plugin API Reference</a> « <a href="https://developer.mozilla.org/ja/docs/Gecko_Plugin_API_Reference/Plug-in_Side_Plug-in_API">Plug-in Side Plug-in API</a>
+</p>
+
+<h3 id=".E6.A6.82.E8.A6.81" name=".E6.A6.82.E8.A6.81">概要</h3>
+
+<p>組み込みやフルスクリーンプラグインにプラットフォーム固有の印刷操作を要求します。</p>
+
+<h3 id=".E6.96.87.E6.B3.95" name=".E6.96.87.E6.B3.95">文法</h3>
+
+<pre>#include &lt;npapi.h&gt;
+
+void NPP_Print(NPP instance, NPPrint* PrintInfo);
+</pre>
+
+<h3 id=".E3.83.91.E3.83.A9.E3.83.A1.E3.83.BC.E3.82.BF" name=".E3.83.91.E3.83.A9.E3.83.A1.E3.83.BC.E3.82.BF">パラメータ</h3>
+
+<p>この関数は以下のパラメータを取ります:</p>
+
+<dl>
+ <dt>instance</dt>
+ <dd>現在のプラグインのインスタンスへのポインタ。組込みかフルスクリーンでなければなりません。</dd>
+</dl>
+
+<dl>
+ <dt>printInfo</dt>
+ <dd><a href="ja/NPPrint">NPPrint</a> 構造体へのポインタ。</dd>
+</dl>
+
+<h3 id=".E8.AA.AC.E6.98.8E" name=".E8.AA.AC.E6.98.8E">説明</h3>
+
+<p>目に見えるプラグイン（組込みかフルページかのいずれか）を含むウェブページに対してユーザが印刷を要求したときに <code>NPP_Print</code> が呼ばれます。プラグインを組み込みのプラグインとして印刷するのかフルページのプラグインとして印刷するかのを決めるために printInfo パラメータ内の <a href="ja/NPPrint">NPPrint</a> 構造体で設定された印刷モードを使用します。</p>
+
+<ul>
+ <li>組み込みのプラグインはブラウザで印刷を共有します; プラグインは占有しているページの一部を印刷し、ブラウザはページの残りの部分の印刷だけではなく印刷ダイアログボックスの表示、印刷デバイスコンテキストの取得や印刷に含まれる他のタスクそれ以外のすべてを扱います。組み込みのプラグインに対しては、printInfo フィールドを <a href="ja/NPEmbedPrint">NPEmbedPrint</a> に設定します。</li>
+ <li>フルページプラグインは印刷自体のすべての側面を扱います。プルページプラグインに対しては printInfo フィールドを <a href="ja/NPFullPrint">NPFullPrint</a> か null に設定します。</li>
+</ul>
+
+<p>あなたのプラットフォーム上での印刷に関する情報については、プラットフォームのドキュメントを参照してください。</p>
+
+<h4 id="MS_Windows" name="MS_Windows">MS Windows</h4>
+
+<p>On MS Windows 上では <code>printInfo-&gt;print.embedPrint.platformPrint</code> はデバイスコンテキスト (DC) ハンドルです。これを必ず型 HDC に確実にキャストするようにしてください。</p>
+
+<p>ウィンドウの長方形の座標は TWIPS フォーマット内にあります。これは テキストを出力するときは Windows API コール DPtoLP を使用して x-y 座標に変換する必要があるという意味です。</p>
+
+<h3 id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE" name=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE">関連項目</h3>
+
+<p><a href="ja/NPPrint">NPPrint</a>, <a href="ja/NPFullPrint">NPFullPrint</a>, <a href="ja/NPEmbedPrint">NPEmbedPrint</a></p>
+
+<p>{{ languages( { "en": "en/NPP_Print" } ) }}</p>

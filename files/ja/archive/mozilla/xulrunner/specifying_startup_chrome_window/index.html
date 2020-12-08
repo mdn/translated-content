@@ -1,0 +1,39 @@
+---
+title: Specifying Startup Chrome Window
+slug: Archive/Mozilla/XULRunner/Specifying_Startup_Chrome_Window
+tags:
+  - XUL
+  - XULRunner
+translation_of: Archive/Mozilla/XULRunner/Specifying_Startup_Chrome_Window
+---
+<p> </p>
+
+<h4 id=".E3.83.A1.E3.82.A4.E3.83.B3.E3.82.AF.E3.83.AD.E3.83.A0.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6" name=".E3.83.A1.E3.82.A4.E3.83.B3.E3.82.AF.E3.83.AD.E3.83.A0.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6">メインクロムウィンドウ</h4>
+
+<p><a href="ja/XULRunner">XULRunner</a> アプリケーションのメインクロムウィンドウを指定するためには、アプリケーションのディレクトリツリーに設定ファイルを追加し、そのファイルに toolkit.defaultChromeURI という名前の設定項目を追加する必要があります。</p>
+
+<p><a class="external" href="http://friedfish.homeip.net/~darinf/xulrunner/xulmine.html">xulmine</a> という XULRunner アプリケーションを見てみましょう。そのディレクトリ構造は以下のようになっています。</p>
+
+<pre>xulmine
+├───chrome
+├───components
+└───defaults
+    └───preferences
+</pre>
+
+<p>defaults/preferences の中には xulmine.js という名前のファイルが格納されています。その内容は以下のとおりです。</p>
+
+<pre class="eval">pref("<a href="/ja/docs/toolkit.defaultChromeURI">toolkit.defaultChromeURI</a>", "<a class="external" rel="freelink">chrome://xulmine/content/xulmine.xul</a>");
+</pre>
+
+<p><a href="/ja/docs/toolkit.defaultChromeURI">toolkit.defaultChromeURI</a> という設定項目で <a class="external" rel="freelink">chrome://xulmine/content/xulmine.xul</a> という XUL ウィンドウをメインのアプリケーションウィンドウに指定しています。</p>
+
+<h4 id=".E5.8D.98.E4.B8.80.E3.82.A4.E3.83.B3.E3.82.B9.E3.82.BF.E3.83.B3.E3.82.B9.E3.81.AE.E3.83.A1.E3.82.A4.E3.83.B3.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.81.AE.E6.8C.87.E5.AE.9A" name=".E5.8D.98.E4.B8.80.E3.82.A4.E3.83.B3.E3.82.B9.E3.82.BF.E3.83.B3.E3.82.B9.E3.81.AE.E3.83.A1.E3.82.A4.E3.83.B3.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.81.AE.E6.8C.87.E5.AE.9A">単一インスタンスのメインウィンドウの指定</h4>
+
+<p>デフォルトではユーザがアプリケーションを起動するたびに XULRunner は toolkit.defaultChromeURI で指定されたウィンドウを開きます。メインウィンドウを 1 つしか開きたくないアプリケーションは、<a href="/ja/docs/toolkit.singletonWindowType">toolkit.singletonWindowType</a> という設定項目をセットし、メインアプリケーションウィンドウの windowtype 属性を指定してください。</p>
+
+<h4 id=".E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.81.AE.E7.89.B9.E6.80.A7.E3.81.AE.E6.8C.87.E5.AE.9A" name=".E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.81.AE.E7.89.B9.E6.80.A7.E3.81.AE.E6.8C.87.E5.AE.9A">ウィンドウの特性の指定</h4>
+
+<p>デフォルトでは、メインウィンドウはリサイズ可能で非ダイアログのクロムウィンドウとして開かれます。<a href="/ja/docs/toolkit.defaultChromeFeatures">toolkit.defaultChromeFeatures</a> という設定項目をセットすることでこのデフォルトを変えることができます。</p>
+
+<p></p>

@@ -1,0 +1,442 @@
+---
+title: 'Raptor: Gaia用パフォーマンスツール'
+slug: Archive/B2G_OS/Automated_testing/Raptor
+tags:
+  - Firefox OS
+  - Performance
+  - Raptor
+  - User Timing
+translation_of: Archive/B2G_OS/Developing_Gaia/Raptor
+---
+<div class="summary">
+<p>この記事は Raptor について説明します: これは、特に Firefox OS に関するパフォーマンス計測用のCLI(コマンドライン)ツールです。これはツールの機能の背後にある戦略を見て、ツールを始める方法を示してくれて、先進トピック、例えば自身のテストを書いたり、可視化したり、自動化したりに移動できます。</p>
+</div>
+
+<p>Raptor は、以前のツール <code>make test-perf でパフォーマンステストをする時に直面する、たくさんの落とし穴</code>を克服することを狙っています:</p>
+
+<ul>
+ <li><code>test-perf</code> ツールは、アプリが読み込みのライフサイクルでキーポイントで発行するイベントをリッスンするのに、 Marionette.js に依存していました。これは、あらゆるアプリのイベント毎にイベントリスナーをバインドするように、atomスクリプトが挿入されるのを要求します。仮想標準イベントがキャプチャされる毎に、スクリプトは変更されないといけません。これはMarionette.js　自体を使うことの上にオーバーヘッドがあり、多くのメンテナンス時間を意味します。</li>
+ <li>パフォーマンスイベントを作る API は一貫していません。標準パフォーマンスイベントを簡単にキャプチャするために、<code>test-perf</code> ではカスタムイベントを投げることで行われていました。たとえば <code>window.dispatchEvent(new CustomEvent('moz-app-visually-complete'))</code>。不幸にも、アプリが自身のパフォーマンスイベントを発行した場合、パフォーマンステストのヘルパースクリプトから、別のAPI を使わなければいけませんでした。</li>
+ <li>あらゆるアプリがパフォーマンステストのヘルパースクリプトを入れないといけません。このスクリプトは API がパフォーマンスイベントにアクセスするのに必要ではありますが、それ自身についてのオーバーヘッドとメンテも必要になります。</li>
+ <li><code>test-perf</code> ツールはコア Gaia アプリのパフォーマンスメトリクスを集めるのに適していますが、それ以外の多くを扱うように拡張するのは難しいです。ホームスクリーンや、システムや、アプリ起動以外のインタラクションを、このフレームワーク空間内でテストするのはとても難しいです。</li>
+</ul>
+
+<p>Raptor はこうした問題を解決し、より効率的で拡張性の高く、自身に多くのオーバーヘッドを加えないテストフレームワークを提供するように、設計されました。</p>
+
+<h2 id="戦略">戦略</h2>
+
+<p>この章では、Raptorの機能を実装する中で取られた戦略について述べます。.</p>
+
+<h3 id="ユーザタイミング">ユーザタイミング</h3>
+
+<p><a href="http://www.w3.org/TR/user-timing/">ユーザタイミング API</a> は、カスタムパフォーマンス指標と計測とを指し示すメカニズムとwebドキュメントを提供しています。標準化されたAPIを使うことで、パフォーマンスイベントを無視するヘルパースクリプトをアプリが同梱しないといけなくなるのを回避できます。実際に、ユーザタイミングは、全くイベントに依存していません。</p>
+
+<pre class="brush: js  language-js"><code class="language-js"><span class="comment token">// Legacy performance events
+</span>window<span class="punctuation token">.</span><span class="function token">dispatchEvent<span class="punctuation token">(</span></span><span class="keyword token">new</span> <span class="class-name token">CustomEvent</span><span class="punctuation token">(</span><span class="string token">'moz-app-visually-complete'</span><span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+PerformanceTestingHelper<span class="punctuation token">.</span><span class="function token">dispatch<span class="punctuation token">(</span></span><span class="string token">'settings-load-start'</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+
+<pre class="brush: js  language-js"><code class="language-js"><span class="comment token">// User Timing API
+</span>performance<span class="punctuation token">.</span><span class="function token">mark<span class="punctuation token">(</span></span><span class="string token">'visuallyLoaded'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+performance<span class="punctuation token">.</span><span class="function token">mark<span class="punctuation token">(</span></span><span class="string token">'settingsStart'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+performance<span class="punctuation token">.</span><span class="function token">mark<span class="punctuation token">(</span></span><span class="string token">'settingsEnd'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+performance<span class="punctuation token">.</span><span class="function token">measure<span class="punctuation token">(</span></span><span class="string token">'settingsLoad'</span><span class="punctuation token">,</span> <span class="string token">'settingsStart'</span><span class="punctuation token">,</span> <span class="string token">'settingsEnd'</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+
+<h3 id="ロギング">ロギング</h3>
+
+<p>パフォーマンスに影響するのを避けるように、アプリケーションから切り離したやり方でパフォーマンスエントリを捕捉するために、我々はパフォーマンスのメタデータを端末のログストリームに出力することを選びました、すなわち <code>adb logcat</code> です。Raptor はこのストリームを消費して、メトリクスを集めるログからパフォーマンスエントリを解析します。</p>
+
+<h3 id="sect1"> </h3>
+
+<h3 id="Phases_と拡張性">Phases と拡張性</h3>
+
+<p>Raptor は "phases"という概念を導入し、これは汎用的な方法でテストの相互作用をするためのフレームワークを置くものです。現在、Raptor はコールド起動と、再起動、B2Gの再起動を、計画済みの追加フェーズでサポートしています。これらの作業は、端末をパフォーマンス測定前のあるフェーズに配置することで、実際のパフォーマンステストのロジックをより簡単にします。</p>
+
+<h3 id="端末のインタラクション">端末のインタラクション</h3>
+
+<p>Raptor works to abstract device interactions. Some of its major features are as follows:</p>
+
+<ul>
+ <li>Raptor uses the Marionette.js client for familiar device interactions using a high-level API. The same Marionette.js client used for writing integration tests can be used for trigger device actions which contain performance measurements.</li>
+ <li>For low-level interactions, Raptor relies on the low-level <a href="https://github.com/wlach/orangutan">Orangutan</a> tool for triggering touch events. This works by injecting coordinate-based touch events directly into the driver interface, e.g. <code>/dev/input/event0</code> on a Firefox OS Flame. This has the benefit of simulating the touch event through the OS very transparently. In addition, trigger touch events have a similar API for triggering, e.g. triggering a tap may look like: <code>device.input.tap(300, 400, 1)</code>, which simulates a single tap at XY coordinates (300,400).</li>
+ <li>All calls to and from the logging interface (i.e. <code>adb logcat</code>) have a consistent and managed JavaScript-based API.</li>
+ <li>Raptor also has interfaces for pushing and pulling files to/from devices.</li>
+</ul>
+
+<h2 id="さぁ始めよう">さぁ始めよう</h2>
+
+<div class="note">
+<p><strong>NOTE:</strong> While Raptor can be run on emulators, the results should not be relied on for performance comparisons. Desktop computers and their power means that they are not comparable to the performance characteristics of devices and end users, and should not be used for time-based decision making.</p>
+</div>
+
+<h3 id="前提条件">前提条件</h3>
+
+<p>You must have a copy of <a href="https://github.com/mozilla-b2g/gaia/">Gaia</a> v2.2+ available on your system, as well as Node.js v0.12+/npm v2+ installed.</p>
+
+<h3 id="Raptorのインストール">Raptorのインストール</h3>
+
+<p>Raptor は、npmからインストールできる CLI (コマンドラインインターフェイス)ツールです。こうしてインストールできます:</p>
+
+<pre class="brush: bash language-html"><code class="language-bash">$ npm install -g @mozilla/raptor</code></pre>
+
+<p>インストールが完了したら、コマンドラインのraptorコマンドから実行できます:</p>
+
+<pre class="brush: bash language-html"><code class="language-bash">$ raptor --help</code></pre>
+
+<h4 id="もう一つのインストール">もう一つのインストール</h4>
+
+<p>Inpm が<code> /usr</code> や <code>/usr/local</code> ディレクトリへのグローバルパッケージとしてインストールする方法に不満がある場合、 いくつか別のオプションがあります:</p>
+
+<ol>
+ <li>npm のデフォルトディレクトリを別のディレクトリに変更する。<a href="https://docs.npmjs.com/getting-started/fixing-npm-permissions#option-2-change-npm-s-default-directory-to-another-directory">npmの手順に従うと</a>、npmがグローバルパッケージをインストールする場所を変更できて、ひょっとするとホームフォルダの特別なディレクトリに配置できます。</li>
+ <li>Raptor をローカルディレクトリにインストールして、相対的に参照します、例えば:</li>
+</ol>
+
+<pre class="brush: bash language-html"><code class="language-bash">$ cd ~
+$ mkdir raptor-cli &amp;&amp; cd raptor-cli
+$ npm install @mozilla/raptor
+
+<strong># Elsewhere</strong>
+$ ~/raptor-cli/node_modules/@mozilla/raptor/bin/raptor --help
+
+<strong># Symlink or add to aliases to save on verbosity</strong>
+$ cd ~
+$ ln -s ~/raptor-cli/node_modules/@mozilla/raptor/bin/raptor raptor
+
+<strong># Now you can use it elsewhere</strong>
+$ raptor --help</code></pre>
+
+<h3 id="プロファイルのインストール">プロファイルのインストール</h3>
+
+<p>In order to interact with the device in a predictable way, Raptor needs a few profile options and custom settings. The default <code>make</code> command for Raptor optimizes Gaia, disables FTU, enables User Timing to write to logcat, and resets Gaia.</p>
+
+<pre class="brush: bash language-html"><code class="language-bash"># Equivalent of:
+# PERF_LOGGING=1 DEVICE_DEBUG=1 GAIA_OPTIMIZE=1 NOFTU=1 SCREEN_TIMEOUT=0 make reset-gaia
+make raptor</code></pre>
+
+<p>If you already have a profile on your device, at a bare minimum you need the following profile options/settings set in order to use Raptor for performance testing:</p>
+
+<ul>
+ <li><code>PERF_LOGGING=1</code>, this sets <code>dom.performance.enable_user_timing_logging</code> in the profile to true.</li>
+ <li><code>NOFTU=1</code>, this disables the First-time experience, which is only needed if you are dealing with a freshly-reset Gaia.</li>
+ <li><code>SCREEN_TIMEOUT=0</code>, prevents the device from going to sleep and shutting off the screen.</li>
+ <li><code>NO_LOCKSCREEN=1</code>, removes the lock screen for easy application launching from the homescreen.</li>
+</ul>
+
+<h3 id="コマンドラインインターフェイス">コマンドラインインターフェイス</h3>
+
+<p>Raptor provides a bit of helpful information right through the command line:</p>
+
+<pre class="brush: bash language-html"><code class="language-bash">$ raptor --help
+
+<strong>Usage:</strong> raptor &lt;command&gt; [options]
+
+command
+  test     Run a performance test by name or path location.
+  submit     Submit a Raptor metrics file to an InfluxDB database
+
+Options:
+   -v, --version               outputs the raptor cli tool version
+   --config &lt;path&gt;             specify additional Orangutan device configuration JSON. Environment: RAPTOR_CONFIG
+   --homescreen &lt;origin&gt;       specify the origin or gaiamobile.org prefix of an application that is the device homescreen  [verticalhome.gaiamobile.org]
+   --system &lt;origin&gt;           specify the origin or gaiamobile.org prefix of an application that is the system application  [system.gaiamobile.org]
+   --serial &lt;serial&gt;           target a specific device for testing. Environment: ANDROID_SERIAL
+   --adb-host &lt;host&gt;           connect to a device on a remote host. tip: use with --adb-port. Environment: ADB_HOST
+   --adb-port &lt;port&gt;           set port for connecting to a device on a remote host. use with --adb-host. Environment: ADB_PORT
+   --marionette-host &lt;host&gt;    <span class="blob-code-inner"><span class="pl-s">connect to marionette on a remote host. tip: use with --marionette-port. Envrionment: MARIONETTE_HOST
+   --marionette-port &lt;port&gt;    set port for connecting to marionette on a remote host. tip: use with --marionette-host. Environment: MARIONETTE_PORT</span></span>
+   --forward-port &lt;port&gt;       forward an adb port to the --marionette-port.  [0]
+   --host &lt;host&gt;               host for reporting metrics to InfluxDB database. Environment: RAPTOR_HOST [localhost]
+   --port &lt;port&gt;               port for reporting metrics to InfluxDB database. Environment: RAPTOR_PORT [8086]
+   --username &lt;username&gt;       username for reporting metrics to InfluxDB database. Environment: RAPTOR_USERNAME [root]
+   --password &lt;password&gt;       password for reporting metrics to InfluxDB database. Environment: RAPTOR_PASSWORD [root]
+   --database &lt;database&gt;       name of InfluxDB database for reporting metrics. Environment: RAPTOR_DATABASE
+   --protocol &lt;protocol&gt;       Protocol used to connect to InfluxDB database for reporting metrics. Environment: RAPTOR_PROTOCOL  [http]
+   --metrics &lt;path&gt;            path to store historical test metrics. Environment: RAPTOR_METRICS
+   --output &lt;mode&gt;             output mode: normal or quiet. Environment: RAPTOR_OUTPUT [normal]
+   --batch &lt;count&gt;             batch database requests to &lt;count&gt; number of records  [5000]</code></pre>
+
+<p>The core command to execute is the <code>test</code> command, which also has some helpful information:</p>
+
+<pre class="brush: bash language-html"><code class="language-bash">$ raptor test --help
+
+Usage: raptor test &lt;nameOrPath&gt; [options]
+
+nameOrPath  named test or path to a particular test to run. Named tests:
+   coldlaunch    cold-launch lifecycle of an application from appLaunch to fullyLoaded
+   reboot        device reboot lifecycle from device power-on until System/Homescreen fullyLoaded
+   restart-b2g   restart B2G lifecycle from B2G start until System/Homescreen fullyLoaded
+
+Options:
+   ...
+   --runs &lt;runs&gt;                         number of times to run the test and aggregate results [1]
+   --app &lt;appOrigin&gt;                     specify the origin or gaiamobile.org prefix of an application to test
+   --entry-point &lt;entryPoint&gt;            specify an application entry point other than the default
+   --timeout &lt;milliseconds&gt;              time to wait between runs for success to occur [60000]
+   --retries &lt;times&gt;                     times to retry test or run if failure or timeout occurs [1]
+   --launch-delay &lt;milliseconds&gt;         time to wait between subsequent application launches [10000]
+   --memory-delay &lt;milliseconds&gt;         time to wait before capturing memory after application fully loaded [0]
+   --script-timeout &lt;milliseconds&gt;       time to wait when running scripts via marionette  [10000]
+   --connection-timeout &lt;milliseconds&gt;   marionette driver tcp connection timeout  [2000]
+   --logcat &lt;path&gt;                       write the output from `adb logcat` to a file
+   --time &lt;epochMilliseconds&gt;            override the start time and unique identifier for test runs</code></pre>
+
+<p>This should give us enough information to run our first performance test.</p>
+
+<h3 id="Running_a_performance_test">Running a performance test</h3>
+
+<p>Running a performance test consists of a few parts:</p>
+
+<ul>
+ <li>The raptor CLI command</li>
+ <li>A test to run, whether a named test or a path to a test</li>
+ <li>Any relevant test settings</li>
+</ul>
+
+<p>For the most basic test, we can do a cold launch test against an application with a command like this:</p>
+
+<pre class="brush: bash language-html"><code class="language-bash">$ raptor test coldlaunch --app clock
+
+[Cold Launch: clock.gaiamobile.org] Preparing to start testing...
+[Cold Launch: clock.gaiamobile.org] Priming application
+[Cold Launch: clock.gaiamobile.org] Starting run 1
+[Cold Launch: clock.gaiamobile.org] Run 1 complete
+[Cold Launch: clock.gaiamobile.org] Results from clock.gaiamobile.org
+
+| Metric                | Mean   | Median | Min    | Max    | StdDev | p95    |
+| --------------------- | ------ | ------ | ------ | ------ | ------ | ------ |
+| navigationLoaded      | 939    | 939    | 939    | 939    | 0      | 939    |
+| navigationInteractive | 1014   | 1014   | 1014   | 1014   | 0      | 1014   |
+| visuallyLoaded        | 1247   | 1247   | 1247   | 1247   | 0      | 1247   |
+| contentInteractive    | 1249   | 1249   | 1249   | 1249   | 0      | 1249   |
+| fullyLoaded           | 1250   | 1250   | 1250   | 1250   | 0      | 1250   |
+| uss                   | 14.836 | 14.836 | 14.836 | 14.836 | 0      | 14.836 |
+| pss                   | 19.137 | 19.137 | 19.137 | 19.137 | 0      | 19.137 |
+| rss                   | 31.191 | 31.191 | 31.191 | 31.191 | 0      | 31.191 |
+
+[Cold Launch: clock.gaiamobile.org] Testing complete</code></pre>
+
+<p>During the cold launch test, you'll see B2G restart; the stated application will then launch once to prime it, and a second time to measure its performance. Looking at the log output above, you can see when each application run starts and stops. When a particular application has completed its testing, you will be given a table of metrics and testing will continue, if applicable. In the metrics table you'll see statistics for each performance entry captured during the lifespan of the test: mean (average), median, minimum value, maximum value, standard deviation, and 95th percentile.</p>
+
+<div class="note">
+<p><strong>Note</strong>: One fun fact is that the table produced by Raptor is compatible with GitHub-flavored Markdown.</p>
+</div>
+
+<div class="note">
+<p><strong>Note:</strong> Standard deviation and 95th percentile need a collection of runs before they output statistically-useful data.</p>
+</div>
+
+<p>All metrics relate to the name of the performance entry. The numbers gathered here are not just aggregations of the values produced by User Timing entries, so it's important to understand how these numbers are derived.</p>
+
+<h3 id="メトリクス集約">メトリクス集約</h3>
+
+<p>While Raptor relies on the User Timing API to gather its metrics, it also makes some assumptions about measurements that are different to what's expected in the context of normal web pages. In a typical web page, a performance marker represents the High-Resolution time from the moment of <code>navigationStart</code>. The User Timing API still captures this data, but Raptor's calculations also include additional time depending on the type of test running. Let's compare the creation of a performance marker in the context of a typical web page versus a Firefox OS application being cold launched.</p>
+
+<h4 id="典型的なwebページ">典型的なwebページ</h4>
+
+<p>In any web page, Firefox OS application or not, creating a performance marker with the User Timing API is simple:</p>
+
+<pre class="brush: js  language-js"><code class="language-js">performance<span class="punctuation token">.</span><span class="function token">mark<span class="punctuation token">(</span></span><span class="string token">'hello'</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+
+<div style="top: 0px;" class="line-number"> </div>
+
+<p>Now let's get the value back and inspect its contents:</p>
+
+<pre class="brush: js  language-js"><code class="language-js">performance<span class="punctuation token">.</span><span class="function token">getEntriesByType<span class="punctuation token">(</span></span><span class="string token">'mark'</span><span class="punctuation token">)</span><span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
+<span class="comment token">
+// returns the following object
+</span>PerformanceMark <span class="punctuation token">{</span> name<span class="punctuation token">:</span> <span class="string token">"hello"</span><span class="punctuation token">,</span> entryType<span class="punctuation token">:</span> <span class="string token">"mark"</span><span class="punctuation token">,</span> startTime<span class="punctuation token">:</span> <span class="number token">5159.366323</span><span class="punctuation token">,</span> duration<span class="punctuation token">:</span> <span class="number token">0</span> <span class="punctuation token">}</span></code></pre>
+
+<div style="top: 0px;" class="line-number"> </div>
+
+<div style="top: 19px;" class="line-number"> </div>
+
+<div style="top: 38px;" class="line-number"> </div>
+
+<div style="top: 57px;" class="line-number"> </div>
+
+<p>Note the mark's <code>startTime</code> and <code>duration</code>. The <code>startTime</code> is nothing more than the high-resolution time elapsed since the time of <code>performance.timing.navigationStart</code>; in this case a little over 5,000 milliseconds. The duration is 0 because this represents a single point in time, which has no duration. The <code>startTime</code> simply states at what moment the marker was created. Inspecting the output of a performance marker is no different in Firefox OS.</p>
+
+<p>A performance measure on the other hand <em>does</em> include a duration, because it is the delta between two performance markers:</p>
+
+<pre class="brush: js  language-js"><code class="language-js">performance<span class="punctuation token">.</span><span class="function token">mark<span class="punctuation token">(</span></span><span class="string token">'hello'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+performance<span class="punctuation token">.</span><span class="function token">mark<span class="punctuation token">(</span></span><span class="string token">'goodbye'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+performance<span class="punctuation token">.</span><span class="function token">measure<span class="punctuation token">(</span></span><span class="string token">'greeting'</span><span class="punctuation token">,</span> <span class="string token">'hello'</span><span class="punctuation token">,</span> <span class="string token">'goodbye'</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+
+<div style="top: 57px;" class="line-number">Again, let's inspect the performance entry:</div>
+
+<pre class="brush: js  language-js"><code class="language-js">performance<span class="punctuation token">.</span><span class="function token">getEntriesByType<span class="punctuation token">(</span></span><span class="string token">'measure'</span><span class="punctuation token">)</span><span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
+<span class="comment token">
+// returns the following object
+</span>PerformanceMeasure <span class="punctuation token">{</span> name<span class="punctuation token">:</span> <span class="string token">"greeting"</span><span class="punctuation token">,</span> entryType<span class="punctuation token">:</span> <span class="string token">"measure"</span><span class="punctuation token">,</span> startTime<span class="punctuation token">:</span> <span class="number token">3528.523661</span><span class="punctuation token">,</span> duration<span class="punctuation token">:</span> <span class="number token">4183.291375999805</span> <span class="punctuation token">}</span></code></pre>
+
+<div style="top: 57px;" class="line-number">The duration is populated for performance measures, and in this example it took approximately 4.2 seconds to perform a <code>greeting</code>; going from <code>hello</code> to <code>goodbye</code>.</div>
+
+<h4 id="Raptor_コンテキスト">Raptor コンテキスト</h4>
+
+<p>The difference comes in the calculations that Raptor will report. Raptor makes an assumption that all markers generated are actually performance <em><strong>measures</strong></em> in reality, with their duration measured as the time between the application being instructed to launch and the marker being generated. For cold launch, the homescreen application (<code>gaia_grid</code> specifically) creates a special performance marker when an application is launching:</p>
+
+<pre class="brush: js  language-js"><code class="language-js">performance<span class="punctuation token">.</span><span class="function token">mark<span class="punctuation token">(</span></span><span class="string token">'appLaunch@'</span> <span class="operator token">+</span> appOrigin<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+
+<div style="top: 0px;" class="line-number">In Raptor, performance markers can be given an <code>@-directive</code> that overrides the context of the marker. If the homescreen instead had invoked <code>performance.mark('appLaunch')</code>, normally we'd assume it is in the application's context. With an <code>@-directive</code> however we can key the performance marker to be against a different application, in essense creating a performance marker for one application inside another. This would evaluate to something like:</div>
+
+<pre class="brush: js  language-js"><code class="language-js">performance<span class="punctuation token">.</span><span class="function token">mark<span class="punctuation token">(</span></span><span class="string token">'appLaunch@clock.gaiamobile.org'</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+
+<div style="top: 0px;" class="line-number">In this case the homescreen is generating a performance marker for the clock application denoting the time of <code>appLaunch</code>. Raptor will then calculate a delta between <code>appLaunch</code> and all performance markers to achieve a more accurate <em>user-perceived</em> time for a marker to be hit. By moving the moment of capture to earlier in the loading process, specifically as close to icon touch as possible, it makes the data between Raptor and camera-based measurements much more comparable.</div>
+
+<h3 id="テストを選択する">テストを選択する</h3>
+
+<p>Tests are selected by changing the name or file that Node.js executes. For example, to run the device reboot performance test instead of a cold launch test you'd do the following:</p>
+
+<pre class="brush: bash language-html"><code class="language-bash">$ raptor test reboot</code></pre>
+
+<p>More examples:</p>
+
+<pre class="brush: bash language-html"><code class="language-bash"><strong># Test Dialer cold launch</strong>
+$ raptor test coldlaunch --app communications --entry-point dialer
+
+<strong># Change the number of runs</strong>
+$ raptor test coldlaunch --app clock --runs 10
+
+<strong># Introduce a 1-second delay before capturing memory</strong>
+$ raptor test reboot --memory-delay 1000
+
+<strong># Target a particular device</strong>
+$ raptor test reboot --serial f30eccef
+$ ANDROID_SERIAL=f30eccef raptor test reboot
+
+<strong># Turn on Raptor debug output, useful for bugs or problems
+</strong>$ DEBUG=raptor:* raptor test reboot
+
+<strong># JSON mode, useful for post-processing of aggregate values</strong>
+$ raptor test coldlaunch --app clock --output json
+
+<strong># Quiet mode, useful if you only care about the results</strong>
+$ raptor test coldlaunch --app clock --output quiet</code></pre>
+
+<h2 id="テストを書く">テストを書く</h2>
+
+<p>While Raptor currently contains a few tests for running cold launch tests, rebooting, and restarting B2G, it is possible to write tests that run custom logic.</p>
+
+<p>We can inspect the contents of the current launch test to glean how we can write new tests.</p>
+
+<pre class="brush: js  language-js"><code class="language-js"><span class="comment token">// mozilla-b2g/raptor
+</span><span class="comment token">// tests/coldlaunch.js
+</span>
+<span class="function token">setup<span class="punctuation token">(</span></span><span class="keyword token">function</span><span class="punctuation token">(</span>options<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  options<span class="punctuation token">.</span>test <span class="operator token">=</span> <span class="string token">'cold-launch'</span><span class="punctuation token">;</span>
+  options<span class="punctuation token">.</span>phase <span class="operator token">=</span> <span class="string token">'cold-launch'</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+<span class="function token">afterEach<span class="punctuation token">(</span></span><span class="keyword token">function</span><span class="punctuation token">(</span>phase<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  <span class="keyword token">return</span> phase<span class="punctuation token">.</span><span class="function token">closeApp<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+
+<div style="top: 190px;" class="line-number">First comes setting up the test. In <code>setup</code>, pass a function to be executed, which will configure the test. This function will be passed all the current configuration settings. At a minimum, you will need the set the phase of the test, which determines the state the device is in when the test begins. Depending on which phase you select when setting options, you may need to pass additional information. For the launch test example, using the <code>cold</code> phase requires an application to be specified. This can either be set on the command line, or you can hard-code it via the <code>app</code> option to force the test to be specific to a certain app.</div>
+
+<div class="note">
+<p><strong>Note:</strong> If you hard-code the application to be launched, make you specify the origin host completely, e.g. "clock.gaiamobile.org". For entry-point-based apps, specify the <code>app</code> option and the <code>entryPoint</code> option.</p>
+</div>
+
+<div class="warning">
+<p><strong>Important</strong>: Any test harness functions doing asynchronous work should return a Promise so Raptor can properly wait.</p>
+</div>
+
+<p>The <code>afterEach()</code> function will be called once for each run after the phase has been started. For cold launch, it is after an application in context has been primed, exited, and re-opened, and the application denotes it is ready — i.e. <code>performance.mark('fullyLoaded')</code>. For reboot and B2G restart, the phase will be designated as ready when the System application and the Homescreen application are marked as fully loaded.</p>
+
+<p>The <code>phase</code> argument passed to <code>afterEach()</code> represents the current context instance of the phase test runner; in other words, it is specific to the current test being run. It contains methods and functionality that help you trigger device actions which will have profiled performance code. For example, you can start a Marionette.js session and trigger commands:</p>
+
+<pre class="brush: js  language-js"><code class="language-js"><span class="function token">setup<span class="punctuation token">(</span></span><span class="keyword token">function</span><span class="punctuation token">(</span>options<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  options<span class="punctuation token">.</span>phase <span class="operator token">=</span> <span class="string token">'cold'</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+<span class="function token">afterEach<span class="punctuation token">(</span></span><span class="keyword token">function</span><span class="punctuation token">(</span>phase<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+ <span class="comment token"> // Note that returning a Promise denotes that we are done running the test
+</span>  <span class="keyword token">return</span> phase<span class="punctuation token">.</span>device<span class="punctuation token">.</span>marionette
+    <span class="punctuation token">.</span><span class="function token">startSession<span class="punctuation token">(</span></span><span class="punctuation token">)</span>
+    <span class="punctuation token">.</span><span class="function token">then<span class="punctuation token">(</span></span><span class="keyword token">function</span><span class="punctuation token">(</span>client<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+      client<span class="punctuation token">.</span><span class="function token">executeScript<span class="punctuation token">(</span></span><span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+       <span class="comment token"> // trigger code that captures the performance.measures created
+</span>       <span class="comment token"> // by the application being tested
+</span>      <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+      client<span class="punctuation token">.</span><span class="function token">deleteSession<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+
+<div style="top: 285px;" class="line-number">The runner can also run a <code>teardown()</code> function when all tests are complete.</div>
+
+<pre class="brush: js  language-js"><code class="language-js"><span class="function token">teardown<span class="punctuation token">(</span></span><span class="keyword token">function</span><span class="punctuation token">(</span>phase<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  <span class="keyword token">return</span> <span class="keyword token">new</span> <span class="class-name token">Promise</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span>resolve<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+   <span class="comment token"> // teardown the test, then resolve
+</span>    <span class="function token">resolve<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+
+<div style="top: 95px;" class="line-number">The Raptor Phase API has not yet been documented, so currently you'll need to <a href="https://github.com/mozilla-b2g/raptor/tree/master">read the source</a> for all the functionality available to you. It may be faster to <a href="https://developer.mozilla.org/ja/Firefox_OS/Platform/Testing/Raptor$edit#Support">seek help from a contributor</a> for help on getting started writing a particular test.</div>
+
+<h2 id="可視化と自動化">可視化と自動化</h2>
+
+<p>Raptor has improved tooling available for automation and visualization. The <code>test-perf</code> tool used to use the <a href="https://datazilla.mozilla.org/b2g/">Datazilla</a> tool for graphing and visualizing results to gain insight into possible regressions and performance pulse of applications. Raptor has moved away from Datazilla however for its visualization capabilities — for maintenance and usability reasons — instead having its own UI at <a href="https://raptor.mozilla.org/">https://raptor.mozilla.org</a>. The Raptor dashboards currently categorize performance metrics in a few key categories per device instance — measures and memory — with more metrics planned in the future.</p>
+
+<p>Raptor's front-end uses the <a href="http://grafana.org/">Grafana</a> visualization tool, and its backing store is <a href="http://influxdb.com/">InfluxDB</a>, a time series database. Grafana provides Raptor UI users with the ability to carry out custom drill-downs into charts, slice time as desired, view data point revisions, and build custom charts and data queries. The default view of several charts displays the 95th percentile of many metrics, but charts can be user-edited to graph other mathematical functions.</p>
+
+<p>This guide is not meant to be a tutorial on the usage of Grafana and InfluxDB, so to learn more about taking full advantage of the Raptor UI, read through these important pieces of documentation:</p>
+
+<ul>
+ <li><a href="http://docs.grafana.org/guides/gettingstarted/">Getting started with Grafana</a></li>
+ <li><a href="https://influxdb.com/docs/v0.9/query_language/functions.html">InfluxDB Aggregate Functions</a></li>
+</ul>
+
+<h2 id="プライベートな可視化">プライベートな可視化</h2>
+
+<p>The Raptor dashboard visualization discussed in the previous section can also be installed and used privately. The installation is a Heroku-deployable environment for easy setup. It is also possible to run the Heroku application locally if you use Linux.</p>
+
+<p>To get started with private visualization, or want to learn more about its innards, see the repository: <a href="https://github.com/mozilla-b2g/raptor-dashboards">https://github.com/mozilla-b2g/raptor-dashboards</a>.</p>
+
+<p>You will also need an installation of InfluxDB 0.9.3+. You can learn more about installing it at: <a href="https://influxdb.com/docs/v0.9/introduction/installation.html">https://influxdb.com/docs/v0.9/introduction/installation.html</a>. Those who are familiar with Docker can also install InfluxDB from Docker Hub: <a href="https://hub.docker.com/r/tutum/influxdb/">https://hub.docker.com/r/tutum/influxdb/</a>.</p>
+
+<p>Raptor needs CLI options or environment variables for creating a connection to an InfluxDB database. It would be tedious to specify these continually on the command line, so to simplify this, you can export these environment variables from your shell, e.g. <code>~/.bashrc</code>, <code>~/.zshrc</code>, etc.</p>
+
+<pre class="brush: bash language-html"><code class="language-bash"># These settings will point to the installation and credentials of your InfluxDB instance:
+export RAPTOR_HOST=localhost
+export RAPTOR_USERNAME=root
+export RAPTOR_PASSWORD=root
+export RAPTOR_DATABASE=raptor
+export RAPTOR_PROTOCOL=https
+export RAPTOR_PORT=8086</code></pre>
+
+<p>In addition, Raptor's database schema requires its results to be tagged properly in order to display it in correct categories in its dashboard UI. Failure to have these properties set when running performance tests will cause the data to not be displayed. By default, you need to persist the memory configuration of the device, the device type, and the branch the performance test is based on. For example, if you are performance testing a KitKat-based Flame set to 319MB of memory and your patch is based off of Gaia's master branch, you will set the following properties via ADB:</p>
+
+<pre class="brush: bash language-html"><code class="language-bash">$ adb shell setprop persist.raptor.device flame-kk
+$ adb shell setprop persist.raptor.memory 319
+$ adb shell setprop persist.raptor.branch master</code></pre>
+
+<div class="note">
+<p><strong>Note:</strong> If you are having trouble with the values being persisted or not saving at all, restart ADB as root with <code>adb root</code>.</p>
+</div>
+
+<p>If you were working on a branch that was based off of v2.5 on an Aries with 2 Gigabytes of memory, you would use the following properties:</p>
+
+<pre class="brush: bash language-html"><code class="language-bash">$ adb shell setprop persist.raptor.device aries
+$ adb shell setprop persist.raptor.memory 2048
+$ adb shell setprop persist.raptor.branch v2.5</code></pre>
+
+<div class="warning">
+<p><strong>Important</strong>: Currently visualization is highly-dependent on the existence of these persisted properties. They are only necessary when using the local visualization tooling; if you flash your device or otherwise unset these properties, you will need to re-set them in order to visualize performance metrics.</p>
+</div>
+
+<p>Other than setting up the environment and device tags, Raptor can be run as normal locally. Upon each successful run, Raptor will report its metrics to the database. Once the test is complete, you can open a browser to your private visualization instance and view your own custom performance data.</p>
+
+<h2 id="必要に応じて動的にパフォーマンスマークを加える">必要に応じて動的にパフォーマンスマークを加える</h2>
+
+<p>One issue with Raptor is that since the tests require us to add performance marks into code, the Gaia codebase could quickly become littered with <code>Performance.mark()</code> calls without any meaningful relationship between them, making the code clutted and harder to understand. The best way to deal with this is to collect all the marks into some kind of patching files, and apply them dynamically as required when we want to run specific Raptor tests.</p>
+
+<p>To this end, Greg Weng has created a code transformer tool that will do just what is described above. The tool is currently a work in progress, but you can find more about it (including how to get it running) at this newsgroup entry: <a href="https://groups.google.com/forum/#%21topic/mozilla.dev.gaia/vBRUjSRLG6g">Raptor: code transformer + marionette workflow now is almost ready</a>. See also <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1181069" title="FIXED: [Build][Raptor] Add a code transformer tool to support dynamically adding marks to help to test app performance">バグ 1181069</a> for implementation specifics.</p>
+
+<p>We will publish more formal instructions once the tool has stabilised.</p>
+
+<h2 id="サポート">サポート</h2>
+
+<p>If you have questions about Raptor, visualization, or performance tooling in general, feel free to ping <code>:Eli</code> or <code>:rwood</code> in the #raptor channel on <a href="https://wiki.mozilla.org/IRC">Mozilla IRC</a>.</p>

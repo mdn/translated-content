@@ -1,0 +1,98 @@
+---
+title: Mise à jour de commandes
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Mise_à_jour_de_commandes
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Updating_Commands
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Commandes" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Broadcasters_et_Observateurs">Suivant  »</a></p>
+</div>
+
+<p>Dans cette section, nous verrons comment mettre à jour des commandes.</p>
+
+<h3 id="Appel_des_commandes" name="Appel_des_commandes">Appel des commandes</h3>
+
+<p>Si une commande a un attribut <code id="a-oncommand"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/oncommand">oncommand</a></code>, vous pouvez simplement l'appeler en utilisant la méthode <code><span id="m-doCommand"><code><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Méthodes/doCommand">doCommand</a></code></span></code> de la commande ou un élément qui lui est attaché. Pour d'autres commandes, vous aurez besoin de quelques lignes de codes supplémentaires. Vous devrez passer par ces étapes spéciales dans le cas où les commandes appelées sont implémentées par un contrôleur. Vous aurez aussi besoin de le faire dans le cas où vous créez votre propre menu de commandes, par exemple pour implémenter les commandes du menu d'édition de votre propre application.</p>
+
+<p>Heureusement, le code spécial est assez simple. Tout ce que nous avons besoin de faire est d'obtenir le contrôleur demandé et d'appeler la commande. Une manière simple de le faire est la suivante :</p>
+
+<pre>var controller = document.commandDispatcher.getControllerForCommand("cmd_paste");
+if (controller &amp;&amp; controller.isCommandEnabled("cmd_paste")){
+  controller.doCommand(command);
+}
+</pre>
+
+<p>Le code ci-dessus recherche d'abord le contrôleur pour la commande '<code>cmd_paste</code>' grâce au répartiteur de commandes. Puis, il teste si la commande est activée, et enfin exécute la commande utilisant la méthode <code>doCommand</code> du contrôleur. Notez que nous n'avons pas besoin de préciser l'élément ou le contrôleur à utiliser. Le répartiteur de commandes s'en charge. En outre, nous pourrions juste appeler <code>doCommand</code> sans vérifier si la commande est activée ou non, mais il vaut mieux le faire.</p>
+
+<p>Le code ci-dessus est tellement générique qu'il pourrait être une fonction prenant une commande en argument et exécutant cette commande. Cette fonction pourrait être ainsi réutilisée pour toutes les commandes. En fait, c'est tellement commun que Mozilla inclut une bibliothèque qui ne fait que ça. Si vous incluez le script '<code><a class="external" rel="freelink">chrome://global/content/globalOverlay.js</a></code>' dans un fichier XUL, vous pouvez appeler la méthode <span id="m-goDoCommand"><code><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Méthodes/goDoCommand">goDoCommand</a></code></span> qui exécute la commande passée en argument. Le code pour cette fonction ne fait que quelques lignes, ainsi vous pourriez l'inclure directement dans votre code si pour certaines raisons vous ne souhaitez pas inclure la bibliothèque.</p>
+
+<pre>&lt;script src="chrome://global/content/globalOverlay.js"/&gt;
+
+&lt;command id="cmd_paste" oncommand="goDoCommand('cmd_paste');/&gt;
+&lt;button label="Coller" command="cmd_paste"/&gt;
+</pre>
+
+<p>L'exemple ci-dessus va implémenter un bouton pour « Coller ». Il est relié à la commande qui va appeler la commande du contrôleur concerné lorsqu'il est appelé. Le code ci-dessus est tout ce dont vous avez besoin pour implémenter la fonctionnalité de la commande Coller dans votre application. La seule autre chose dont vous avez besoin est de vous assurer que le statut de la commande Coller qui est activé, et donc du bouton, est mis à jour au bon moment, comme décrit ci-dessous.</p>
+
+<h3 id="Dispositifs_de_mise_.C3.A0_jour_de_commande" name="Dispositifs_de_mise_.C3.A0_jour_de_commande">Dispositifs de mise à jour de commande</h3>
+
+<p>Un dispositif de mise à jour de commande est un dispositif spécial de l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/commandset" title="commandset">commandset</a></code> qui lui permet de mettre à jour les statuts activés d'une ou plusieurs commandes lorsque certains événements se produisent. Vous devrez y pensez lorsqu'une commande est valide et lorsqu'elle ne l'est pas. De plus, vous devrez considérer quand l'état pourrait changer et quand les commandes devraient être mises à jour.</p>
+
+<p>Par exemple, la commande « Coller » est valide lorsque le champ de saisie de texte a le focus et qu'il y a quelque chose dans le presse-papiers à coller. La commande deviendra active chaque fois que le champ de saisie aura le focus et lorsque le contenu du presse-papiers changera. Un dispositif de mise à jour de contenu surveillera ces situations et le code qui active et désactive les commandes pourra être exécuté selon les besoins.</p>
+
+<p>Un simple dispositif de mise à jour de commandes ressemble à ceci :</p>
+
+<pre>&lt;commandset id="updatePasteItem"
+            commandupdater="true"
+            events="focus"
+            oncommandupdate="goUpdateCommand('cmd_paste');"/&gt;
+</pre>
+
+<p>Un dispositif de mise à jour de commandes est indiqué en utilisant l'attribut <code id="a-commandupdater"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/commandupdater">commandupdater</a></code>, qui devrait être déclaré à 'true'. L'attribut <code id="a-events"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/events">events</a></code> est utilisé pour lister les événements que le dispositif de mise à jour de commandes surveille. Vous pouvez spécifier de multiples événements en les séparant par des virgules. Dans l'exemple ci-dessus, le dispositif de mise à jour de commandes surveille les événements de focus. Il a pour effet de mettre à jour les commandes lorsqu'un élément reçoit le focus.</p>
+
+<p>Lorsqu'un événement de focus se produit, le code dans l'attribut <code id="a-oncommandupdate"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/oncommandupdate">oncommandupdate</a></code> est appelé. Dans l'exemple, la méthode <code>goUpdateCommand</code>, qui est une fonction provenant du script globalOverlay.js décrit plus tôt, est appelée. Elle va mettre à jour la commande et activer ou désactiver les items de boutons et de menus nécessaires. Le code qui est derrière est assez simple. Il appelle seulement le contrôleur nécessaire, appelle sa méthode <code>isCommandEnabled</code>, et enfin active ou désactive la commande. Si vous avez plusieurs commandes à mettre à jour, appelez la méthode <code>goUpdateCommand</code> une fois pour chaque commande.</p>
+
+<div class="note">Notez que le dispositif de mise à jour de commandes recevra les notifications de tous les événements de focus sur tous les éléments, même si d'autres gestionnaires d'événements répondent à l'événement. Un dispositif de mise à jour de commandes est par essence un gestionnaire global d'événements.</div>
+
+<p>Les dispositifs de mise à jour de commandes disposent de plusieurs événements pouvant répondre à ceux qui sont listés ci-dessous. Il est également possible de créer le votre.</p>
+
+<ul>
+ <li><strong>focus</strong> : se produit lorsque l'élément qui a le focus change.</li>
+ <li><strong>select</strong> : se produit lorsque le texte sélectionné change.</li>
+ <li><strong>undo</strong> : se produit lorsque le tampon d'annulation change.</li>
+ <li><strong>clipboard</strong> : se produit lorsque le contenu du presse-papiers change.</li>
+</ul>
+
+<p>L'exemple suivant montre le dispositif de mise à jour de commandes utilisé dans le navigateur Mozilla pour mettre à jour le menu d'édition de commandes. Les fonctions utilisées sont disponibles dans le script '<code><a class="external" rel="freelink">chrome://communicator/content/utilityOverlay.js</a></code>'.</p>
+
+<pre>&lt;commandset id="globalEditMenuItems"
+            commandupdater="true"
+            events="focus"
+            oncommandupdate="goUpdateGlobalEditMenuItems()"/&gt;
+&lt;commandset id="selectEditMenuItems"
+            commandupdater="true"
+            events="select"
+            oncommandupdate="goUpdateSelectEditMenuItems()"/&gt;
+&lt;commandset id="undoEditMenuItems"
+            commandupdater="true"
+            events="undo"
+            oncommandupdate="goUpdateUndoEditMenuItems()"/&gt;
+&lt;commandset id="clipboardEditMenuItems"
+            commandupdater="true"
+            events="clipboard"
+            oncommandupdate="goUpdatePasteMenuItems()"/&gt;
+</pre>
+
+<hr>
+<p>Ensuite, nous vous montrerons comment utiliser les observateurs.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Commandes" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Broadcasters_et_Observateurs">Suivant  »</a></p>
+</div>
+
+<p><span class="comment">Interwiki</span></p>

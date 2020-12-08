@@ -1,0 +1,186 @@
+---
+title: Porter B2G sur le Nexus Player (Lollipop)
+slug: Archive/B2G_OS/Porter_Firefox_OS/B2G_Nexus_Player
+tags:
+  - B2G
+  - B2G OS
+  - Firefox OS
+  - Guide
+  - Nexus
+  - Nexus Player
+  - TV
+  - portage
+translation_of: Archive/B2G_OS/Porting_B2G_OS/B2G_Nexus_Player
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/fr/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/fr/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<p class="summary">Cet article donne une vue d'ensemble du processus permettant à B2G OS (la version TV — sur laquelle <a href="/en-US/docs/Mozilla/Firefox_OS/TV">Firefox OS pour TV</a> est basée) d'être porté sur le Nexus Player (versions faisant touner Lollipop.)</p>
+
+<div class="warning">
+<p><strong>Important</strong> : Le public visé par ces instructions est essentiellement les développeurs expérimentés qui sont déjà familiarisés avec la compilation de Firefox OS ou d'AOSP.</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong> : Nous ne pouvons garantir la fiabilité des appareils portés. Cependant, les développeurs intéressés par le processus de portage et disposés à contribuer au programme sont encouragés à hacker leurs propres appareils. Les questions et les retours constructifs sont toujours les bienvenus : adressez-nous vos courriels à <a href="mailto:smarttv@mozilla.com">smarttv@mozilla.com</a>.</p>
+</div>
+
+<div class="note">
+<p><font size="2"><strong>Note :</strong> Cet article, estimant que votre Nexus Player est déverrouillé, ne vous apprendra pas comment le rooter et/ou déverrouiller.</font></p>
+</div>
+
+<h2 id="Préparer_l'environnement_de_compilation">Préparer l'environnement de compilation</h2>
+
+<p>Actuellement, la construction de B2G OS pour Nexus Player nécessite un PC sous Ubuntu 14.04 LTS x64 ou compatible.</p>
+
+<p>Vous devez commencer par lancer les commandes suivantes :</p>
+
+<pre class="brush: bash">sudo dpkg --add-architecture i386
+sudo dpkg --add-architecture amd64
+sudo apt-get update
+sudo apt-get install --no-install-recommends autoconf2.13 bison bzip2 ccache curl flex gawk gcc g++ g++-multilib git lib32ncurses5-dev lib32z1-dev libgconf2-dev zlib1g:amd64 zlib1g-dev:amd64 zlib1g:i386 zlib1g-dev:i386 libgl1-mesa-dev libx11-dev make zip lzop libxml2-utils openjdk-7-jdk nodejs unzip python</pre>
+
+<h2 id="Configurer_l'USB">Configurer l'USB</h2>
+
+<p>Par défaut, sur les systèmes Linux, un utilisateur normal ne peut pas accéder directement aux périphériques USB. Vous devez configurer des règles udev.</p>
+
+<p>Créez un fichier <code>/etc/udev/rules.d/51-android.rules</code> contenant la commande suivante, puis enregistrez-le :</p>
+
+<pre class="brush: bash">wget -S -O - https://raw.githubusercontent.com/cm-b2g/B2G/1230463/tools/51-android.rules | sudo tee &gt;/dev/null /etc/udev/rules.d/51-android.rules; sudo udevadm control --reload-rules</pre>
+
+<p>Les nouvelles règles prendront effet la prochaine fois qu'un appareil sera branché.</p>
+
+<div class="note">
+<p><strong>Note</strong> : Pour plus d'informations sur les environnement de compilation appropriés, veuillez vous référer aux <a href="/fr/Firefox_OS/Prerequis_pour_construire_Firefox_OS">Prérequis pour construire Firefox OS</a>.</p>
+</div>
+
+<h2 id="Télécharger_le_code_source">Télécharger le code source</h2>
+
+<p>Pour télécharger le code source pour le Nexus Player, assurez-vous au préalable d'avoir <a href="https://git-scm.com/">Github</a> installé, puis exécutez les commandes suivantes:</p>
+
+<pre>git clone git://github.com/mozilla-b2g/B2G.git nexusplayer
+cd nexusplayer
+BRANCH=v2.6 ./config.sh nexusplayer-l</pre>
+
+<p>Pour télécharger manuellement le code source Gecko correspondant, exécutez la commande suivante :</p>
+
+<pre>git clone https://github.com/mozilla-b2g/gecko-b2g</pre>
+
+<p>Et suivez les instructions de <a href="/fr/Firefox_OS/Customisation_avec_le_fichier_.userconfig#Changer_l'arbre_source_de_Gecko">Changer l'arbre source de Gecko</a> pour en construire une version personnalisée.</p>
+
+<h2 id="Compiler">Compiler</h2>
+
+<p>Une fois l'environnement mis en place et le code source téléchargé, sa construction se résume à exécuter la commande suivante :</p>
+
+<pre class="brush: bash">./build.sh</pre>
+
+<h2 id="Flasher_B2G_sur_le_Nexus_Player">Flasher B2G sur le Nexus Player</h2>
+
+<p>Flashez B2G OS sur le Nexus Player avec la commande suivante :</p>
+
+<pre class="brush: bash">./flash.sh</pre>
+
+<p>Le flashage terminé, l'appareil devrait redémarrer et charger B2G OS. Sauf si quelque chose n'allait pas, vous devriez voir peu de temps après l'écran d'accueil TV de B2G OS.</p>
+
+<h2 id="Dépannage">Dépannage</h2>
+
+<p>Quelquefois, les choses peuvent mal se passer. Ce qui suit est une liste des problèmes connus, avec des suggestions de solutions.</p>
+
+<h3 id="Fastboot_ne_trouve_pas_le_Nexus_Player">Fastboot ne trouve pas le Nexus Player</h3>
+
+<p>Il est possible que <code>./flash.sh</code> redémarre avec succès le Nexus Player en mode bootloader mais que ça se bloque indéfiniment sur le message <code>&lt; waiting for device &gt;</code>. Cela peut être résolu en remplaçant le <code>fastboot</code> de votre système par celui situé dans le répertoire <code>&lt;b2g&gt;/</code><span class="im"><code>out/host/linux-x86/bin/</code>.</span></p>
+
+<h3 id="La_fonctionnalité_Bluetooth_est_absente">La fonctionnalité Bluetooth est absente</h3>
+
+<p>Nous ne pouvons pas construire automatiquement <code>bluetooth.default.so</code> ni <code>libbt-vendor.so</code> sur <code>nexusplayer-l</code>, c'est pourquoi le Bluetooth ne fonctionne pas par défaut. Une solution de contournement consiste actuellement à construire les fichiers manquants à la main et à les flasher sur <code>nexusplayer-l</code>, après quoi vous serez en mesure d'activer le bluetooth dans l'application <em>Paramètres</em>.</p>
+
+<p>Les étapes de construction figurent ci-dessous :</p>
+
+<h4 id="Étapes_pour_construire_bluetooth.default.so">Étapes pour construire bluetooth.default.so</h4>
+
+<ol>
+ <li>Aller sur <code>dir nexusplayer</code> puis tapez <code>source setup.sh</code>.</li>
+ <li>Aller sur <code>dir nexusplayer/external/tinyxml2</code> puis tapez <code>mm</code>.</li>
+ <li>Aller sur <code>dir nexusplayer/external/bluetooth/bluedroid</code> puis tapez<strong> </strong><code>mm</code><strong>.</strong></li>
+ <li>Aller sur <code>dir nexusplayer/</code> puis tapez la commande suivante :</li>
+</ol>
+
+<pre class="brush: bash">adb push out/target/product/fugu/system/lib/hw/bluetooth.default.so
+/system/lib/hw</pre>
+
+<h4 id="Étapes_pour_construire_libbt-vendor.so">Étapes pour construire libbt-vendor.so</h4>
+
+<ol>
+ <li>Aller sur <code>dir nexusplayer</code> puis tapez <code>source setup.sh</code>.</li>
+ <li>Aller sur <code>dir nexusplayer/hardware/broadcom/libbt</code> puis tapez <code>mm</code><strong>.</strong></li>
+ <li>Aller sur <code>dir nexusplayer</code> puis tapez la commande suivante :</li>
+</ol>
+
+<pre class="brush: bash">adb push out/target/product/fugu/system/vendor/lib/libbt-vendor.so
+/system/vendor/lib</pre>
+
+<h3 id="L'écran_d'accueil_TV_ne_gère_pas_les_événements_de_la_souris">L'écran d'accueil TV ne gère pas les événements de la souris</h3>
+
+<p>Par défaut, l'application écran d'accueil TV ne gère pas les événements de la souris (voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1260083" title="[nexusplayer] TV home doesn't handle mouse event.">bug 1260083</a>). Pour le moment, la recommandation est de se passer de l'usage de la souris et d'utiliser la télécommande à la place.</p>
+
+<p>Suivez ces étapes pour que les choses fonctionnent :</p>
+
+<ol>
+ <li>Utilisez le clavier physique pour démarrer le Nexus Player.</li>
+ <li>Utilisez les touches fléchées pour naviguer sur l'écran d'accueil et aller dans l'application <em>Paramètres</em>.</li>
+ <li>Utilisez les touches fléchées pour aller sur le panneau de configuration du Bluetooth et associez l'appareil avec la télécommande.</li>
+</ol>
+
+<p>Vous pouvez alors utiliser la télécommande à la place. Branchez la souris lorsque vous souhaitez naviguer dans l'application <em>Navigateur</em>.</p>

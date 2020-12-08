@@ -1,0 +1,43 @@
+---
+title: XUL_教程/XUL的结构
+slug: Mozilla/Tech/XUL/Tutorial/XUL_Structure
+tags:
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/XUL_Structure
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/1-3_关于Chrome_URL">下一页  »</a></p>
+</div><p></p>
+<p> </p>
+<h2 id=".5BXUL.E5.AD.A6.E4.B9.A0.5DXUL_Tutorial.28.E4.BA.8C.29_--_XUL_Structure" name=".5BXUL.E5.AD.A6.E4.B9.A0.5DXUL_Tutorial.28.E4.BA.8C.29_--_XUL_Structure">XUL是怎么被处理的？</h2>
+<p>XUL与HTML的处理方式一样，先读出内容，然后解析为一棵对象树，再对每个对象作处理，使其显示出来。因为XUL是用来定义用户界面的，因此它与HTML用来做显示的功能一样。实际上，在Mozilla中，HTML和XUL，甚至SVG都是使用同样的底层代码来处理的。这样意味着一些CSS属性(注意是属性，不是CSS的全部)可以用在HTML和XUL。XUL同HTML一样可以从本地文件系统或web页面读取(不过这样多少有些功能上的限制)。另外就是打成一个包，可以让别人下载和安装。安装后的包就可以有一些更强的权限，象读文本文件，读用户参数和bookmark，以及访问其它系统特性。</p>
+<p>包注册就是Firefox扩展的安装方式。包是由XUL、Javascript、CSS、HTML和图片等构成。文件名后缀为.xpi，它其实是一个zip格式的压缩包。象Firefox的扩展一般是通过overlay的方式，对Firefox进行扩展的，如增加菜单、工具条等。但这些功能的代码其实是与浏览器分离的，而且卸载也很容易(就象NewEdit中的插件一样)。</p>
+<p>注册的包不一定要使用overlay的扩展方式(overlay是对已经存在的应用的扩展)。但这样，你就不能直接通过浏览器来使用这些功能。但你仍然可以使用称为chrome(增色) URL的方式来调用注册包。这种chrome URL的形式为"<a class="external" rel="freelink">chrome://</a>"。它用来指示安装的包和扩展。</p>
+<p>通过chrome方式来访问可以获得比http方式更多的权限，而通过这种方式，你就可以做访问本地文件等操作。这一点非常重要，权限的区分是通过URL的类型来实现的。通过http方式访问HTML和XUL，没有这些特别的权限，而通过chrome方式访问，HTML和XUL都具有这样的权力。</p>
+<p>Mozilla浏览器本身就是由许多的包构成的。而这些文件就是通过chrome URL来访问的，以获得特别的权限。</p>
+<p>Mozilla中有三种主要的文档类型：HTML, XUL和XML。它们之间有些是可能共享的特性，有些是不能共享的，使用时要注意。</p>
+<p>小结：</p>
+<p>Mozilla使用同样的引擎来渲染HTML和XUL，使用CSS来指明它们的外观。 XUL可以从web站点、本地文件系统，或作为包被安装并通过chrome URL来访问(这就是浏览器扩展所做的方式)。 Chrome URL可以用来访问安装的包，并且使用特别的权限来打开它们。 HTML、XUL、XML有不同的文档类型。一些特性是互通的，然而另一些特性是各自的。</p>
+<h3 id=".E5.8C.85.E7.BB.84.E7.BB.87" name=".E5.8C.85.E7.BB.84.E7.BB.87">包的组织</h3>
+<p>由Mozilla提供的包可以在Mozilla的安装目录下的chrome子目录中找到。但仅仅把文件拷贝到chrome目录下是不会赋给它任何的权限，也不可以通过chrome URL来访问的，还需要配置才可以。需要按照chrome包格式的要求来组织才可以。</p>
+<p>一个包的文件通常被组织为一个JAR文件。注意，很象Java中的Jar包，都是Zip格式的。但里面可不是Java程序。这也造成了某些人认为开发扩展需要懂Java，其实不是的。只是后缀与Java一样。(不清楚为什么用这个后缀)同时，也可以不打成一个JAR包，就是展开的目录也可以(如果你看到另一个教程XUL App Tutorial，你会看到就没有打成一个JAR包)。</p>
+<p>通常一个chrome包有三个目录，但它们都是可选的，分别为：content、skin和locale。</p>
+<ul>
+ <li>content -- 窗口和脚本</li>
+</ul>
+<p>用户界面的定义都放在XUL文件中，这些文件都以.xul为后缀。一个content目录下可以有多个XUL文件，但主窗体文件名必须与包名相同。例如editor包必须有一个叫做editor.xul的文件。其它的脚本文件(一般是.js文件，Javascript)也放在这个目录下。</p>
+<ul>
+ <li>skin -- 样式表、图片，和其它与theme相关的文件</li>
+</ul>
+<p>样式表用来描述窗口显示的外观。它们与XUL分离，可以灵活地修改程序的外观。</p>
+<ul>
+ <li>locale -- 与语言相关的文件</li>
+</ul>
+<p>所有界面中用到的文本都放在这里。如果支持多国语言，它们将按语言种类进行组织。只要在这里进行翻译即可实现多语言。 同时在每个目录下还应该有一个名为：contents.rdf的文件，它用来描述相关目录的信息清单。Mozilla将读取它，并使用它的内容来注册包，并给这个包分配一个chrome URL，这样这些文件就可以通过这个chrome URL来访问了。如果没有contents.rdf文件，这个包就不能被分配一个chrome URL，因此也就不能通过chrome来访问了。同时要注意，只有你需要通过chrome URL来访问的目录才需要contents.rdf文件，不需要访问的目录可能不要。再有，如果一个目录下还有子目录，但子目录通过与父目录相同的chrome URL来访问，子目录也可以不要contents.rdf文件。</p>
+<p>在locale目录中，语言化文件有两种形式：DTD和属性(properties)文件。DTD(Document Type Definition，文档类型定义)是XML中常用的文件，它一般是用来定义XML中的元素规则，还可以用来定义XML中出现的实体(entity)元素。XUL要使用DTD中的实体声明，用来显示文本信息。因此如果想实现多语言，就要按语种创建子目录，生成多个DTD文件。属性文件是给脚本使用的。</p>
+<p>Mozilla中的包通常是放在chrome目录下，但是你也可以不放在这个目录下，而是放在磁盘任意的地方。在chrome目录下的chrome.rdf文件保存了安装了的包、skin、locale的列表及它们的位置。放在chrome下是最常见的。对于存在多种skin和locale的情况，chrome.rdf中保存了激活的配置。</p>
+<p> </p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/1-3_关于Chrome_URL">下一页  »</a></p>
+</div><p></p>
+<p></p>

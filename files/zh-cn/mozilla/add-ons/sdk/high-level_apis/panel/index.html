@@ -1,0 +1,899 @@
+---
+title: panel
+slug: Mozilla/Add-ons/SDK/High-Level_APIs/panel
+translation_of: Archive/Add-ons/Add-on_SDK/High-Level_APIs/panel
+---
+<div class="note">
+<p>稳定版本</p>
+</div>
+
+<p><span class="seoSummary">创建临时的 add-on's 用户界面对话框.</span></p>
+
+<h2 id="用法">用法</h2>
+
+<p>该模块导出了一个单独的构造函数函数 <code>Panel()</code> 构建一个Panel对话框 .</p>
+
+<p>面板是一个对话框。其内容是指定的HTML，你可以在它执行脚本，所以面板的外观和行为是有限的只有你可以使用HTML，CSS，JavaScript。</p>
+
+<p>下面的截图显示了一个面板，其内容是从当前打开的选项卡的列表中构建的：</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6595/panel-tabs-osx.png" style="display: block; height: 238px; margin-left: auto; margin-right: auto; width: 307px;"></p>
+
+<p>面板是呈现临时用户界面中容易忽视和解聘的用户比模态对话框的方式，是有用的，因为面板隐藏瞬间用户交互部分的应用程序接口外。</p>
+
+<p><br>
+ 面板的内容加载快作为它是创建，面板显示之前，和内容仍然加载时面板是隐藏的，所以它是可能保持面板周围的背景，更新其内容适当地准备下一次显示。</p>
+
+<p><br>
+ 您的插件可以接收通知，当面板显示或隐藏通过听其显示和隐藏事件。<br>
+ 打开面板将关闭已打开的面板。</p>
+
+<h3 id="Panel_内容">Panel 内容</h3>
+
+<p>该面板的内容指定为HTML，它是在contenturl选项面板的构造函数提供的URL加载。</p>
+
+<p><br>
+ 你可以加载远程HTML到面板：</p>
+
+<pre class="brush: js">var panel = require("sdk/panel").Panel({
+  width: 180,
+  height: 180,
+  contentURL: "https://en.wikipedia.org/w/index.php?title=Jetpack&amp;useformat=mobile"
+});
+
+panel.show();</pre>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6597/wikipedia-jetpack-panel.png" style="display: block; height: 411px; margin-left: auto; margin-right: auto; width: 494px;"></p>
+
+<p>你也可以加载HTML已经打包你的 add-on，这可能是你将如何创建对话框。要做到这一点，在你的 add-on 的 <em><strong>data </strong></em>目录中保存的HTML 和加载使用 <strong><em><code>data.url()</code></em></strong>方法，由 <em><strong><a href="/en-US/Add-ons/SDK/High-Level_APIs/self"><code>self</code></a></strong></em> 模块导出, 像下面:</p>
+
+<pre class="brush: js">var panel = require("sdk/panel").Panel({
+  contentURL: require("sdk/self").data.url("myFile.html")
+});
+
+panel.show();</pre>
+
+<div class="note">
+<p>从Firefox 34以后, 你可以使用 <code>"./myFile.html" 作为</code><code>self.data.url("myFile.html")</code> 的<code>别名</code>. 所以你可以重写成下面的示例:</p>
+
+<pre class="brush: js">var panel = require("sdk/panel").Panel({
+  contentURL: "./myFile.html"
+});
+
+panel.show();
+</pre>
+</div>
+
+<h3 id="Panel_positioning">Panel positioning</h3>
+
+<p>By default the panel appears in the center of the currently active browser window. You can position the panel by passing a <code>position</code> to the panel's <a href="/en-US/Add-ons/SDK/High-Level_APIs/panel#Panel(options)">constructor</a> or to its <a href="/en-US/Add-ons/SDK/High-Level_APIs/panel#show(options)"><code>show()</code></a> method.</p>
+
+<h3 id="Attaching_panels_to_buttons">Attaching panels to buttons</h3>
+
+<p>You can attach a panel to a <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_toggle">toggle button</a> by passing the button itself as the <code>position</code> option to the panel's <a href="/en-US/Add-ons/SDK/High-Level_APIs/panel#show(options)"><code>show()</code></a> method or to its constructor:</p>
+
+<pre class="brush: js">var { ToggleButton } = require('sdk/ui/button/toggle');
+var panels = require("sdk/panel");
+var self = require("sdk/self");
+
+var button = ToggleButton({
+  id: "my-button",
+  label: "my button",
+  icon: {
+    "16": "./icon-16.png",
+    "32": "./icon-32.png",
+    "64": "./icon-64.png"
+  },
+  onChange: handleChange
+});
+
+var panel = panels.Panel({
+  contentURL: self.data.url("panel.html"),
+  onHide: handleHide
+});
+
+function handleChange(state) {
+  if (state.checked) {
+    panel.show({
+      position: button
+    });
+  }
+}
+
+function handleHide() {
+  button.state('window', {checked: false});
+}</pre>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7615/panel-button.png" style="display: block; height: 332px; margin-left: auto; margin-right: auto; width: 397px;"></p>
+
+<h3 id="Updating_panel_content">Updating panel content</h3>
+
+<p>You can update the panel's content by:</p>
+
+<ul>
+ <li>sending a message to a content script that updates the DOM in the same document. This is usually the best approach.</li>
+ <li>embedding an <a href="/en-US/docs/Web/HTML/Element/iframe">iframe</a> in the panel, and changing its document</li>
+ <li>setting the panel's <code>contentURL</code> property. However, doing this will cause any content scripts to be unloaded and then reloaded, so it may be less efficient, and you'll lose any state associated with the scripts.</li>
+</ul>
+
+<h3 id="Scripting_panel_content">Scripting panel content</h3>
+
+<p>You can't directly access your panel's content from your main add-on code. To access the panel's content, you need to load a script into the panel. In the SDK these scripts are called "content scripts" because they're explicitly used for interacting with web content.</p>
+
+<p>While content scripts can access the content they're attached to, they can't use the SDK's APIs. So implementing a complete solution usually means you have to send messages between the content script and the main add-on code.</p>
+
+<ul>
+ <li>
+  <p>You can specify one or more content scripts to load into a panel using the <code>contentScript</code> or <code>contentScriptFile</code> options to the <a href="/en-US/Add-ons/SDK/High-Level_APIs/panel#Panel(options)"><code>Panel()</code> constructor</a>.</p>
+ </li>
+ <li>
+  <p>You can communicate with the script using either the <a href="/en-US/Add-ons/SDK/Guides/using_postMessage"><code>postMessage()</code></a> API or (preferably, usually) the <a href="/en-US/Add-ons/SDK/Guides/using_port"><code>port</code></a> API.</p>
+ </li>
+</ul>
+
+<p>For example, here's an add-on whose content script intercepts mouse clicks on links inside the panel, and sends the target URL to the main add-on code. The content script sends messages using <code>self.port.emit()</code> and the add-on script receives them using <code>panel.port.on()</code>.</p>
+
+<pre class="brush: js">var myScript = "window.addEventListener('click', function(event) {" +
+               "  var t = event.target;" +
+               "  if (t.nodeName == 'A')" +
+               "    self.port.emit('click-link', t.toString());" +
+               "}, false);"
+
+var panel = require("sdk/panel").Panel({
+  contentURL: "http://www.bbc.co.uk/mobile/index.html",
+  contentScript: myScript
+});
+
+panel.port.on("click-link", function(url) {
+  console.log(url);
+});
+
+panel.show();</pre>
+
+<p>This example uses <code>contentScript</code> to supply the script as a string. It's usually better practice to use <code>contentScriptFile</code>, which is a URL pointing to a script file saved under your add-on's <code>data</code> directory.</p>
+
+<div class="warning">
+<p><strong>Warning:</strong> Unless your content script is extremely simple and consists only of a static string, don't use <code>contentScript</code>: if you do, you may have problems getting your add-on approved on AMO.</p>
+
+<p>Instead, keep the script in a separate file and load it using <code>contentScriptFile</code>. This makes your code easier to maintain, secure, debug and review.</p>
+</div>
+
+<h3 id="Getting_user_input">Getting user input</h3>
+
+<div class="note">
+<p><strong>Note:</strong> This example uses the <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action">action button</a> API, which is only available from Firefox 29 onwards.</p>
+</div>
+
+<p>The following add-on adds a button which displays a panel when clicked. The panel just contains a {{HTMLElement("textarea")}} element: when the user presses the <code>return</code> key, the contents of the <code>&lt;textarea&gt;</code> is sent to the main add-on code.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7647/panel.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+
+<p>The add-on consists of six files:</p>
+
+<ul>
+ <li><code>main.js</code>: the main add-on code, that creates the button and panel</li>
+ <li><code>get-text.js</code>: the content script that interacts with the panel content</li>
+ <li><code>text-entry.html</code>: the panel content itself, specified as HTML</li>
+ <li><code>icon-16.png</code>, <code>icon-32.png</code>, and <code>icon-64.png</code>: icons for the button in three different sizes</li>
+</ul>
+
+<p>"main.js" is saved in your add-on's <code>lib</code> directory, and the other files go in your add-on's <code>data</code> directory:</p>
+
+<pre>my-addon/
+         data/
+              get-text.js
+              icon-16.png
+              icon-32.png
+              icon-64.png
+              text-entry.html
+         lib/
+             main.js
+</pre>
+
+<p>The "main.js" looks like this:</p>
+
+<pre class="brush: js">var data = require("sdk/self").data;
+// Construct a panel, loading its content from the "text-entry.html"
+// file in the "data" directory, and loading the "get-text.js" script
+// into it.
+var text_entry = require("sdk/panel").Panel({
+  contentURL: data.url("text-entry.html"),
+  contentScriptFile: data.url("get-text.js")
+});
+
+// Create a button
+require("sdk/ui/button/action").ActionButton({
+  id: "show-panel",
+  label: "Show Panel",
+  icon: {
+    "16": "./icon-16.png",
+    "32": "./icon-32.png",
+    "64": "./icon-64.png"
+  },
+  onClick: handleClick
+});
+
+// Show the panel when the user clicks the button.
+function handleClick(state) {
+  text_entry.show();
+}
+
+// When the panel is displayed it generated an event called
+// "show": we will listen for that event and when it happens,
+// send our own "show" event to the panel's script, so the
+// script can prepare the panel for display.
+text_entry.on("show", function() {
+  text_entry.port.emit("show");
+});
+
+// Listen for messages called "text-entered" coming from
+// the content script. The message payload is the text the user
+// entered.
+// In this implementation we'll just log the text to the console.
+text_entry.port.on("text-entered", function (text) {
+  console.log(text);
+  text_entry.hide();
+});</pre>
+
+<p>The content script "get-text.js" looks like this:</p>
+
+<pre class="brush: js">// When the user hits return, send the "text-entered"
+// message to main.js.
+// The message payload is the contents of the edit box.
+var textArea = document.getElementById("edit-box");
+textArea.addEventListener('keyup', function onkeyup(event) {
+  if (event.keyCode == 13) {
+    // Remove the newline.
+    text = textArea.value.replace(/(\r\n|\n|\r)/gm,"");
+    self.port.emit("text-entered", text);
+    textArea.value = '';
+  }
+}, false);
+// Listen for the "show" event being sent from the
+// main add-on code. It means that the panel's about
+// to be shown.
+//
+// Set the focus to the text area so the user can
+// just start typing.
+self.port.on("show", function onShow() {
+  textArea.focus();
+});</pre>
+
+<p>Finally, the "text-entry.html" file defines the <code>&lt;textarea&gt;</code> element:<code> </code></p>
+
+<pre class="brush: html">&lt;html&gt;
+&lt;head&gt;
+    &lt;style type="text/css" media="all"&gt;
+      textarea {
+        margin: 10px;
+      }
+      body {
+        background-color: gray;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+&lt;body&gt;
+    &lt;textarea rows="13" cols="33" id="edit-box"&gt;&lt;/textarea&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+
+<p>Finally, save these three icon files to the "data" directory:</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/7635/icon-16.png" style="height: 16px; width: 16px;"></td>
+   <td>icon-16.png</td>
+  </tr>
+  <tr>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/7637/icon-32.png" style="height: 32px; width: 32px;"></td>
+   <td>icon-32.png</td>
+  </tr>
+  <tr>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/7639/icon-64.png" style="height: 64px; width: 64px;"></td>
+   <td>icon-64.png</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>To learn much more about content scripts, see the <a href="/en-US/Add-ons/SDK/Guides/Content_Scripts">Working with Content Scripts</a> guide.</p>
+
+<h3 id="Scripting_trusted_panel_content">Scripting trusted panel content</h3>
+
+<div class="note">
+<p><strong>Note:</strong> This example uses the <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action">action button</a> API, which is only available from Firefox 29 onwards.</p>
+</div>
+
+<p>We've already seen that you can package HTML files in your add-on's <code>data</code> directory and use them to define the panel's content. We can call this "trusted" content, because unlike content loaded from a source outside the add-on, the add-on author knows exactly what it's doing. To interact with trusted content you don't need to use content scripts: you can just include a script from the HTML file in the normal way, using <code>script</code> tags.</p>
+
+<p>Like a content script, these scripts can communicate with the add-on code using the <a href="/en-US/Add-ons/SDK/Guides/using_postMessage"><code>postMessage()</code></a> API or the <a href="/en-US/Add-ons/SDK/Guides/using_port"><code>port</code></a> API. The crucial difference is that these scripts access the <code>postMessage</code> and <code>port</code> objects through the <code>addon</code> object, whereas content scripts access them through the <code>self</code> object.</p>
+
+<p>To show the difference, we can easily convert the <code>text-entry</code> add-on above to use normal page scripts instead of content scripts.</p>
+
+<p>The main add-on code is exactly the same as the main add-on code in the previous example, except that we don't attach a content script:</p>
+
+<pre class="brush: js">var data = require("sdk/self").data;
+// Construct a panel, loading its content from the "text-entry.html"
+// file in the "data" directory, and loading the "get-text.js" script
+// into it.
+var text_entry = require("sdk/panel").Panel({
+  contentURL: data.url("text-entry.html")
+});
+
+// Create a button
+require("sdk/ui/button/action").ActionButton({
+  id: "show-panel",
+  label: "Show Panel",
+  icon: {
+    "16": "./icon-16.png",
+    "32": "./icon-32.png",
+    "64": "./icon-64.png"
+  },
+  onClick: handleClick
+});
+
+// Show the panel when the user clicks the button.
+function handleClick(state) {
+  text_entry.show();
+}
+
+// When the panel is displayed it generated an event called
+// "show": we will listen for that event and when it happens,
+// send our own "show" event to the panel's script, so the
+// script can prepare the panel for display.
+text_entry.on("show", function() {
+  text_entry.port.emit("show");
+});
+
+// Listen for messages called "text-entered" coming from
+// the content script. The message payload is the text the user
+// entered.
+// In this implementation we'll just log the text to the console.
+text_entry.port.on("text-entered", function (text) {
+  console.log(text);
+  text_entry.hide();
+});</pre>
+
+<p>The page script is exactly the same as the content script above, except that instead of <code>self</code>, we use <code>addon</code> to access the messaging APIs:</p>
+
+<pre class="brush: js">// When the user hits return, send the "text-entered"
+// message to main.js.
+// The message payload is the contents of the edit box.
+var textArea = document.getElementById("edit-box");
+textArea.addEventListener('keyup', function onkeyup(event) {
+  if (event.keyCode == 13) {
+    // Remove the newline.
+    text = textArea.value.replace(/(\r\n|\n|\r)/gm,"");
+    addon.port.emit("text-entered", text);
+    textArea.value = '';
+  }
+}, false);
+// Listen for the "show" event being sent from the
+// main add-on code. It means that the panel's about
+// to be shown.
+//
+// Set the focus to the text area so the user can
+// just start typing.
+addon.port.on("show", function onShow() {
+  textArea.focus();
+});</pre>
+
+<p>Finally, the HTML file now references "get-text.js" inside a {{HTMLElement("script")}} tag:</p>
+
+<pre class="brush: html">&lt;html&gt;
+&lt;head&gt;
+    &lt;style type="text/css" media="all"&gt;
+      textarea {
+        margin: 10px;
+      }
+      body {
+        background-color: gray;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;script src="get-text.js"&gt;&lt;/script&gt;
+    &lt;textarea rows="13" cols="33" id="edit-box"&gt;&lt;/textarea&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<h3 id="Styling_panel_content">Styling panel content</h3>
+
+<p>The panel's default style is different for each operating system:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8001/panel-styles-os.png" style="display: block; margin-left: auto; margin-right: auto;">This helps to ensure that the panel's style is consistent with the dialogs displayed by Firefox and other applications, but means you need to take care when applying your own styles.</p>
+
+<p>If the panel's content is packaged along with your add-on and specified using an HTML file in your <code>data</code> directory, you can style it by embedding CSS directly in the HTML file or by referencing a CSS file stored under <code>data</code>:</p>
+
+<pre class="brush: html">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link href="panel-style.css" type="text/css" rel="stylesheet"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    My panel content
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+
+<p>From Firefox 31 onwards, you can style panel content using the <code>contentStyle</code> or <code>contentStyleFile</code> options. You can use these options even if the panel content is not packaged along with the add-on:</p>
+
+<pre class="brush: js">var panel = require("sdk/panel").Panel({
+  contentURL: "https://en.wikipedia.org/w/index.php?title=Jetpack&amp;useformat=mobile",
+  contentStyle: "body { border: 3px solid blue; }"
+});
+
+panel.show();</pre>
+
+<pre class="brush: js">var self = require("sdk/self");
+
+var panel = require("sdk/panel").Panel({
+  contentURL: "https://en.wikipedia.org/w/index.php?title=Jetpack&amp;useformat=mobile",
+  contentStyleFile: self.data.url("panel-style.css")
+});
+
+panel.show();</pre>
+
+<h3 id="Private_browsing">Private browsing</h3>
+
+<p>If your add-on has not <a href="/en-US/Add-ons/SDK/High-Level_APIs/private-browsing">opted into private browsing</a>, and it calls <code>panel.show()</code> when the currently active window is a <a href="/en-US/Add-ons/SDK/High-Level_APIs/private-browsing#Per-window_private_browsing">private window</a>, then the panel will not be shown.</p>
+
+<h3 id="Panel_limitations">Panel limitations</h3>
+
+<p>Although panels can host HTML documents, they are not implemented as browser tabs, so many things that work in normal web pages do not work inside panels:</p>
+
+<ul>
+ <li>Prior to Firefox 33, you don't get a context menu. From Firefox 33 you can enable a context menu by passing <code>contextMenu: true</code> to the panel's constructor.</li>
+ <li>The HTML {{HTMLElement("select")}} element doesn't work.</li>
+ <li>The HTML {{HTMLElement("datalist")}} element doesn't give you autocomplete suggestions (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=918600">bug 918600</a>).</li>
+ <li>You can't embed Flash (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=952578">bug 952578</a>).</li>
+ <li>You can't provide tooltips using <a href="/en-US/docs/Web/HTML/Global_attributes#attr-title"><code>title</code> attributes</a> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=918600">bug 918600</a>).</li>
+ <li>Security warning pages (the <a href="https://support.mozilla.org/en-US/kb/connection-untrusted-error-message">"This Connection is Untrusted" warning</a>) does not work, so panels which trigger it will be broken (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1031554">bug 1031554</a>).</li>
+ <li>Mouse button shortcuts, such as using the middle button to open a link in a new page, don't work.</li>
+ <li>Scrolling using keyboard doesn't work properly (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1001914">bug 1001914</a>)</li>
+</ul>
+
+<h2 id="Globals">Globals</h2>
+
+<h3 id="Constructors">Constructors</h3>
+
+<h4 class="addon-sdk-api-name" id="Panel(options)"><code>Panel(options)</code></h4>
+
+<p>Creates a panel.</p>
+
+<h5 id="Parameters">Parameters</h5>
+
+<p><strong>options : object</strong><br>
+ Optional options:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Name</th>
+   <th scope="col">Type</th>
+   <th scope="col"> </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>width</code></td>
+   <td>number</td>
+   <td>
+    <p>The width of the panel in pixels. Optional.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>height</code></td>
+   <td>number</td>
+   <td>
+    <p>The height of the panel in pixels. Optional.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>position</code></td>
+   <td>
+    <p>object, button, widget</p>
+   </td>
+   <td>
+    <p>The position of the panel. Ignored if the panel is opened by a widget.</p>
+
+    <p>This may be one of three things:</p>
+
+    <ul>
+     <li>a <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_toggle">toggle button</a>. If this is supplied the panel will be shown attached to the button. See the section on <a href="/en-US/Add-ons/SDK/High-Level_APIs/panel#Attaching_panels_to_buttons">attaching panels to buttons</a>.</li>
+     <li>a <a href="/en-US/Add-ons/SDK/High-Level_APIs/widget">widget</a> object. If this is supplied the panel will be shown attached to the widget.</li>
+     <li>an object which specifies where in the window the panel should be shown. The rest of this section describes this object.</li>
+    </ul>
+
+    <p>The position object has one or more of the following properties: <code>top</code>, <code>right</code>, <code>bottom</code> and <code>left</code>. Their values are expressed in pixels. Any other properties will be ignored.</p>
+
+    <p>The default alignment along each axis is centered: so to display a panel centred along the vertical or horizontal axis, just omit that axis:</p>
+
+    <pre class="brush: js">
+// Show the panel centered horizontally and
+// aligned to the bottom of the content area
+require("sdk/panel").Panel({
+  position: {
+   bottom: 0
+  }
+}).show();
+
+// Show the panel centered vertically and
+// aligned to the left of the content area
+require("sdk/panel").Panel({
+  position: {
+    left: 0
+  }
+}).show();
+
+// Centered panel, default behavior
+require("sdk/panel").Panel({}).show();</pre>
+
+    <p>As with the CSS <code>top</code>, <code>bottom</code>, <code>left</code>, and <code>right</code> properties, setting both <code>top</code> and <code>bottom</code> or both <code>left</code> and <code>right</code> will implicitly set the panel's <code>height</code> or <code>width</code> relative to the content window:</p>
+
+    <pre class="brush: js">
+// Show the panel centered horizontally, with:
+// - the top edge 40px from the top
+// of the content window
+// - the bottom edge 100px from the bottom
+// of the content window
+require("sdk/panel").Panel({
+  position: {
+    top: 40,
+    bottom: 100
+  }
+}).show();</pre>
+
+    <p>If you set both <code>top</code> and <code>bottom</code>, but also set the panel's height explicitly using the <code>height</code> property, then the panel will ignore <code>bottom</code>, just as CSS does for its properties with the same name:</p>
+
+    <pre class="brush: js">
+// Show the panel centered horizontally, with:
+// - the top edge 40px from the top
+// of the content window
+// - a height of 400px
+require("sdk/panel").Panel({
+  position: {
+    top: 40,
+    bottom: 100,
+  },
+  height: 400
+}).show();
+
+// This is equivalent to:
+
+require("panel").Panel({
+  position {
+    top: 40
+  },
+  height: 400
+}).show();</pre>
+
+    <p>The same principle is applied in the horizontal axis with <code>width</code>, <code>left</code> and <code>right</code>.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>focus</code></td>
+   <td>boolean</td>
+   <td>
+    <p>Set to <code>false</code> to prevent taking the focus away when the panel is shown. Only turn this off if necessary, to prevent accessibility issue. Optional, default to <code>true</code>.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>contentURL</code></td>
+   <td>string,URL</td>
+   <td>
+    <p>The URL of the content to load in the panel. That is, they can't refer to remote scripts. The URLs are usually constructed using <a href="/en-US/Add-ons/SDK/High-Level_APIs/self#data.url(name)"><code>self.data.url()</code></a>.</p>
+
+    <div class="note">
+    <p>From Firefox 34, you can use <code>"./my-file.html"</code> as an alias for <code>self.data.url("my-<code>file.html</code>")</code>.</p>
+    </div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>allow</code></td>
+   <td>object</td>
+   <td>
+    <p>An optional object describing permissions for the content. It should contain a single key named <code>script</code> whose value is a boolean that indicates whether or not to execute script in the content. <code>script</code> defaults to true.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>contentScriptFile</code></td>
+   <td>string,array</td>
+   <td>
+    <p>A URL or an array of URLs. The URLs point to scripts to load into the panel.</p>
+
+    <p>The scripts must be packaged with the add-on under the add-on's <code>data</code> directory. That is, they can't refer to remote scripts. The URLs are usually constructed using <a href="/en-US/Add-ons/SDK/High-Level_APIs/self#data.url(name)"><code>self.data.url()</code></a>.</p>
+
+    <div class="note">
+    <p>From Firefox 34, you can use <code>"./my-script.js"</code> as an alias for <code>self.data.url("my-script.js")</code>.</p>
+    </div>
+
+    <p>Content scripts specified by this property are loaded <em>before</em> those specified by the <code>contentScript</code> property.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>contentScript</code></td>
+   <td>string,array</td>
+   <td>
+    <p>A string or an array of strings containing the texts of content scripts to load. Content scripts specified by this property are loaded <em>after</em> those specified by the <code>contentScriptFile</code> property.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>contentStyleFile</code></td>
+   <td>string, array</td>
+   <td>
+    <p>A URL or an array of URLs. The URLs point to CSS stylesheets to load into the panel.</p>
+
+    <p>The stylesheets must be packaged with the add-on under the add-on's <code>data</code> directory. That is, they can't refer to remote stylesheets. The URLs are usually constructed using <a href="/en-US/Add-ons/SDK/High-Level_APIs/self#data.url(name)"><code>self.data.url()</code></a>.</p>
+
+    <p>Stylesheets specified by this property are loaded <em>before</em> those specified by the <code>contentStyle</code> property.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>contentStyle</code></td>
+   <td>string, array</td>
+   <td>
+    <p>A string or an array of strings containing the texts of stylesheets to load. Stylesheets specified by this property are loaded <em>after</em> those specified by the <code>contentStyleFile</code> property.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>contentScriptWhen</code></td>
+   <td>string</td>
+   <td>
+    <p>When to load the content scripts. This may take one of the following values:</p>
+
+    <ul>
+     <li>"start": load content scripts immediately after the document element for the panel is inserted into the DOM, but before the DOM content itself has been loaded</li>
+     <li>"ready": load content scripts once DOM content has been loaded, corresponding to the <a href="https://developer.mozilla.org/en/Gecko-Specific_DOM_Events">DOMContentLoaded</a> event</li>
+     <li>"end": load content scripts once all the content (DOM, JS, CSS, images) for the panel has been loaded, at the time the <a href="https://developer.mozilla.org/en/DOM/window.onload">window.onload event</a> fires</li>
+    </ul>
+
+    <p>This property is optional and defaults to "end".</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>contentScriptOptions</code></td>
+   <td>object</td>
+   <td>
+    <p>Read-only value exposed to content scripts under <code>addon.options</code> property.</p>
+
+    <p>Any kind of jsonable value (object, array, string, etc.) can be used here. Optional.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>contextMenu</code></td>
+   <td>boolean</td>
+   <td>
+    <div class="geckoVersionNote">
+    <p>New in Firefox 33</p>
+    </div>
+
+    <p>Whether to show a context menu when the user context-clicks in the panel. The context menu will be the same one that's displayed in web pages. Optional, defaults to <code>false</code>.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>onMessage</code></td>
+   <td>function</td>
+   <td>
+    <p>Include this to listen to the panel's <code>message</code> event.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>onShow</code></td>
+   <td>function</td>
+   <td>
+    <p>Include this to listen to the panel's <code>show</code> event.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>onHide</code></td>
+   <td>function</td>
+   <td>
+    <p>Include this to listen to the panel's <code>hide</code> event.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Panel">Panel</h2>
+
+<p>The Panel object represents a floating modal dialog that can by an add-on to present user interface content.</p>
+
+<p>Once a panel object has been created it can be shown and hidden using its <code>show()</code> and <code>hide()</code> methods. Once a panel is no longer needed it can be deactivated using <code>destroy()</code>.</p>
+
+<p>The content of a panel is specified using the <code>contentURL</code> option. An add-on can interact with the content of a panel using content scripts which it supplies in the <code>contentScript</code> and/or <code>contentScriptFile</code> options. For example, a content script could create a menu and send the user's selection to the add-on.</p>
+
+<h3 id="Methods">Methods</h3>
+
+<h4 class="addon-sdk-api-name" id="destroy()"><code>destroy()</code></h4>
+
+<p>Destroys the panel, unloading any content that was loaded in it. Once destroyed, the panel can no longer be used. If you just want to hide the panel and might show it later, use <code>hide</code> instead.</p>
+
+<h4 class="addon-sdk-api-name" id="postMessage(message)"><code>postMessage(message)</code></h4>
+
+<p>Sends a message to the content scripts.</p>
+
+<h5 id="Parameters_2">Parameters</h5>
+
+<p><strong>message : value</strong><br>
+ The message to send. Must be stringifiable to JSON.</p>
+
+<h4 class="addon-sdk-api-name" id="show(options)"><code>show(options)</code></h4>
+
+<p>Displays the panel.</p>
+
+<p>If the <code>options</code> argument is given, it will be shallow merged with the options provided in the constructor: the <code>options</code> passed in the <code>show</code> method takes precedence.</p>
+
+<p>Passing options here is useful for making temporary changes without touching the default values.</p>
+
+<h5 id="Parameters_3">Parameters</h5>
+
+<p><strong>options : object</strong><br>
+ Optional options:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Name</th>
+   <th scope="col">Type</th>
+   <th scope="col"> </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>width</td>
+   <td>number</td>
+   <td>
+    <p>The width of the panel in pixels. Optional.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>height</td>
+   <td>number</td>
+   <td>
+    <p>The height of the panel in pixels. Optional.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>position</td>
+   <td>object</td>
+   <td>
+    <p>The position of the panel. Optional. See <a href="/en-US/Add-ons/SDK/High-Level_APIs/panel#Panel(options)">Panel's options</a> for further details.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>focus</td>
+   <td>boolean</td>
+   <td>
+    <p>Set to <code>false</code> to prevent taking the focus away when the panel is shown.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 class="addon-sdk-api-name" id="hide()"><code>hide()</code></h4>
+
+<p>Stops displaying the panel.</p>
+
+<h4 class="addon-sdk-api-name" id="resize(width_height)"><code>resize(width, height)</code></h4>
+
+<p>Resizes the panel.</p>
+
+<h5 id="Parameters_4">Parameters</h5>
+
+<p><strong>width : number</strong><br>
+ The new width of the panel in pixels.</p>
+
+<p><strong>height : number</strong><br>
+ The new height of the panel in pixels.</p>
+
+<h4 class="addon-sdk-api-name" id="on(type_listener)"><code>on(type, listener)</code></h4>
+
+<p>Registers an event listener with the panel.</p>
+
+<h5 id="Parameters_5">Parameters</h5>
+
+<p><strong>type : string</strong><br>
+ The type of event to listen for.</p>
+
+<p><strong>listener : function</strong><br>
+ The listener function that handles the event.</p>
+
+<h4 class="addon-sdk-api-name" id="removeListener(type_listener)"><code>removeListener(type, listener)</code></h4>
+
+<p>Unregisters an event listener from the panel.</p>
+
+<h5 id="Parameters_6">Parameters</h5>
+
+<p><strong>type : string</strong><br>
+ The type of event for which <code>listener</code> was registered.</p>
+
+<p><strong>listener : function</strong><br>
+ The listener function that was registered.</p>
+
+<h3 id="Properties">Properties</h3>
+
+<h4 class="addon-sdk-api-name" id="port"><code>port</code></h4>
+
+<p>EventEmitter object that allows you to:</p>
+
+<ul>
+ <li>send events to the content script using the <code>port.emit</code> function</li>
+ <li>receive events from the content script using the <code>port.on</code> function</li>
+</ul>
+
+<p>See the guide to <a href="/en-US/Add-ons/SDK/Guides/using_port"> communicating using <code>port</code></a> for details.</p>
+
+<h4 class="addon-sdk-api-name" id="isShowing"><code>isShowing</code></h4>
+
+<p>Tells if the panel is currently shown or not. This property is read-only.</p>
+
+<h4 class="addon-sdk-api-name" id="height"><code>height</code></h4>
+
+<p>The height of the panel in pixels.</p>
+
+<h4 class="addon-sdk-api-name" id="width"><code>width</code></h4>
+
+<p>The width of the panel in pixels.</p>
+
+<h4 class="addon-sdk-api-name" id="focus"><code>focus</code></h4>
+
+<p>Whether or not focus will be taken away when the panel is shown. This property is read-only.</p>
+
+<h4 class="addon-sdk-api-name" id="contentURL"><code>contentURL</code></h4>
+
+<p>The URL of content loaded into the panel. This can point to local content loaded from your add-on's "data" directory or remote content. Setting it updates the panel's content immediately.</p>
+
+<h4 class="addon-sdk-api-name" id="allow"><code>allow</code></h4>
+
+<p>An object describing permissions for the content. It contains a single key named <code>script</code> whose value is a boolean that indicates whether or not to execute script in the content.</p>
+
+<h4 class="addon-sdk-api-name" id="contentScriptFile"><code>contentScriptFile</code></h4>
+
+<p>A local file URL or an array of local file URLs of content scripts to load. Content scripts specified by this property are loaded <em>before</em> those specified by the <code>contentScript</code> property.</p>
+
+<h4 class="addon-sdk-api-name" id="contentScript"><code>contentScript</code></h4>
+
+<p>A string or an array of strings containing the texts of content scripts to load. Content scripts specified by this property are loaded <em>after</em> those specified by the <code>contentScriptFile</code> property.</p>
+
+<h4 class="addon-sdk-api-name" id="contentScriptWhen"><code>contentScriptWhen</code></h4>
+
+<p>When to load the content scripts. This may have one of the following values:</p>
+
+<ul>
+ <li>"start": load content scripts immediately after the document element for the panel is inserted into the DOM, but before the DOM content itself has been loaded</li>
+ <li>"ready": load content scripts once DOM content has been loaded, corresponding to the <a href="https://developer.mozilla.org/en/Gecko-Specific_DOM_Events">DOMContentLoaded</a> event</li>
+ <li>"end": load content scripts once all the content (DOM, JS, CSS, images) for the panel has been loaded, at the time the <a href="https://developer.mozilla.org/en/DOM/window.onload">window.onload event</a> fires</li>
+</ul>
+
+<h4 class="addon-sdk-api-name" id="contentScriptOptions"><code>contentScriptOptions</code></h4>
+
+<p>Read-only value exposed to content scripts under <code>addon.options</code> property.</p>
+
+<p>Any kind of jsonable value (object, array, string, etc.) can be used here. Optional.</p>
+
+<h3 id="Events">Events</h3>
+
+<h4 class="addon-sdk-api-name" id="show"><code>show</code></h4>
+
+<p>This event is emitted when the panel is shown.</p>
+
+<h4 class="addon-sdk-api-name" id="hide"><code>hide</code></h4>
+
+<p>This event is emitted when the panel is hidden.</p>
+
+<h4 class="addon-sdk-api-name" id="message"><code>message</code></h4>
+
+<p>If you listen to this event you can receive message events from content scripts associated with this panel. When a content script posts a message using <code>self.postMessage()</code>, the message is delivered to the add-on code in the panel's <code>message</code> event.</p>
+
+<h5 id="Arguments">Arguments</h5>
+
+<p><strong>value</strong> : Listeners are passed a single argument which is the message posted from the content script. The message can be any <a href="/en-US/Add-ons/SDK/Guides/Content_Scripts/using_port#JSON-Serializable_Values">JSON-serializable value</a>.</p>
+
+<h4 class="addon-sdk-api-name" id="error"><code>error</code></h4>
+
+<p>This event is emitted when an uncaught runtime error occurs in one of the panel's content scripts.</p>
+
+<h5 id="Arguments_2">Arguments</h5>
+
+<p><strong>Error</strong> : Listeners are passed a single argument, the <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Error">Error</a> object.</p>

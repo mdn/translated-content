@@ -1,0 +1,253 @@
+---
+title: Creating Sandboxed HTTP Connections
+slug: Creating_Sandboxed_HTTP_Connections
+tags:
+  - Add-ons
+  - Extensions
+  - HTTP
+  - XUL
+  - XULRunner
+translation_of: Mozilla/Creating_sandboxed_HTTP_connections
+---
+<p>
+</p><p>{{ 英語版章題("Introduction") }}
+</p>
+<h3 id=".E5.B0.8E.E5.85.A5"> 導入 </h3>
+<p><a href="ja/Gecko">Gecko</a> 1.8.1 (<a href="ja/Firefox_2">Firefox 2</a>) から、ユーザの Cookie に影響しないサンドボックス内の HTTP 接続を作成できるようになりました。この記事では JavaScript の XPCOM から HTTP 接続を行うための基礎を扱いますが、C++ の XPCOM にも簡単に移植できるはずです。
+</p><p>{{ 英語版章題("Setting up an HTTP connection") }}
+</p>
+<h3 id="HTTP_.E6.8E.A5.E7.B6.9A.E3.82.92.E7.A2.BA.E7.AB.8B.E3.81.99.E3.82.8B"> HTTP 接続を確立する </h3>
+<p>URL (文字列に格納されている) から HTTP 接続を確立するための最初の手順として、その URL から <code>nsIURI</code> を作成します。<code>nsIURI</code> は XPCOM における URI の表現で、URI をクエリしたり操作するのに便利なメソッドを持っています。文字列から <code>nsIURI</code> を作成するには、<code>nsIIOService</code> の <code>newURI</code> メソッドを使います。
+</p>
+<pre>// IO サービス
+var ioService = Components.classes["@mozilla.org/network/io-service;1"]
+                          .getService(Components.interfaces.nsIIOService);
+
+// nsIURI を作成する
+var uri = ioService.newURI(myURLString, null, null);
+</pre>
+<p><code>nsIURI</code> が作成されれば、それから <code>nsIIOService</code> の <code>newChannelFromURI</code> メソッドを使って <code>nsIChannel</code> を生成できます。
+</p>
+<pre>// その nsIURI に対するチャンネルを取得する
+var channel = ioService.newChannelFromURI(uri);
+</pre>
+<p>接続を開始するには <code>asyncOpen</code> メソッドを呼び出します。このメソッドはリスナとそのリスナのメソッドに渡されるコンテキストの 2 つの引数を取ります。
+</p>
+<pre>channel.asyncOpen(listener, null);
+</pre>
+<p>{{ 英語版章題("HTTP notifications") }}
+</p>
+<h3 id="HTTP_.E3.81.AE.E9.80.9A.E7.9F.A5"> HTTP の通知 </h3>
+<p>上で述べたリスナは <code>nsIStreamListener</code> で、HTTP リダイレクトやデータの取得といったイベントについての通知を受けます。
+</p>
+<ul><li> <code>onStartRequest</code> - 新しいリクエストが開始される時に呼ばれる。
+</li><li> <code>onDataAvailable</code> - 新しいデータが取得できるようになった。これはストリームなので、(返されるデータのサイズやネットワークの状態などによっては) 複数回呼ばれることがある。
+</li><li> <code>onStopRequest</code> - リクエストが完了した。
+</li><li> <code>onChannelRedirect</code> - リダイレクトが発生すると、新しく <code>nsIChannel</code> が作成され、古い方と新しい方が引数として渡される。
+</li></ul>
+<p><code>nsIStreamListener</code> は Cookie をサポートしておらず、Cookie の通知に対しては他のリスナを使う (次の節で取り上げます) ため、現在使用されているチャンネルはグローバル変数として格納する必要があります。必要なメソッドを全て実装した JavaScript ラッパを使い、指定したコールバック関数を接続が完了した時に呼び出すのが、普通は最もよい方法です。
+</p>
+<pre>// グローバルチャンネル
+var gChannel;
+
+// チャンネルを初期化する
+
+// IO サービス
+var ioService = Components.classes["@mozilla.org/network/io-service;1"]
+                          .getService(Components.interfaces.nsIIOService);
+
+// nsIURI を作成する
+var uri = ioService.newURI(myURLString, null, null);
+
+// その nsIURI に対するチャンネルを取得する
+gChannel = ioService.newChannelFromURI(uri);
+
+// リスナを取得する
+var listener = new StreamListener(callbackFunc);
+
+gChannel.notificationCallbacks = listener;
+gChannel.asyncOpen(listener, null);
+
+function StreamListener(aCallbackFunc) {
+  this.mCallbackFunc = aCallbackFunc;
+}
+
+StreamListener.prototype = {
+  mData: "",
+
+  // nsIStreamListener
+  onStartRequest: function (aRequest, aContext) {
+    this.mData = "";
+  },
+
+  onDataAvailable: function (aRequest, aContext, aStream, aSourceOffset, aLength) {
+    var scriptableInputStream =
+      Components.classes["@mozilla.org/scriptableinputstream;1"]
+        .createInstance(Components.interfaces.nsIScriptableInputStream);
+    scriptableInputStream.init(aStream);
+
+    this.mData += scriptableInputStream.read(aLength);
+  },
+
+  onStopRequest: function (aRequest, aContext, aStatus) {
+    if (Components.isSuccessCode(aStatus)) {
+      // リクエストは成功した
+      this.mCallbackFunc(this.mData);
+    } else {
+      // リクエストは失敗した
+      this.mCallbackFunc(null);
+    }
+
+    gChannel = null;
+  },
+
+  // nsIChannelEventSink
+  onChannelRedirect: function (aOldChannel, aNewChannel, aFlags) {
+    // リダイレクトしたら、新しいチャンネルを格納する
+    gChannel = aNewChannel;
+  },
+
+  // nsIInterfaceRequestor
+  getInterface: function (aIID) {
+    try {
+      return this.QueryInterface(aIID);
+    } catch (e) {
+      throw Components.results.NS_NOINTERFACE;
+    }
+  },
+
+  // nsIProgressEventSink (実装しないとうっとうしい例外を引き起こす)
+  onProgress : function (aRequest, aContext, aProgress, aProgressMax) { },
+  onStatus : function (aRequest, aContext, aStatus, aStatusArg) { },
+
+  // nsIHttpEventSink (実装しないとうっとうしい例外を引き起こす)
+  onRedirect : function (aOldChannel, aNewChannel) { },
+
+  // XPCOM インターフェイスに見せかけているので、QI を実装する必要がある
+  QueryInterface : function(aIID) {
+    if (aIID.equals(Components.interfaces.nsISupports) ||
+        aIID.equals(Components.interfaces.nsIInterfaceRequestor) ||
+        aIID.equals(Components.interfaces.nsIChannelEventSink) ||
+        aIID.equals(Components.interfaces.nsIProgressEventSink) ||
+        aIID.equals(Components.interfaces.nsIHttpEventSink) ||
+        aIID.equals(Components.interfaces.nsIStreamListener))
+      return this;
+
+    throw Components.results.NS_NOINTERFACE;
+  }
+};
+</pre>
+<p>ちょっとしたメモ: グローバルスコープにチャンネルを格納するのは (特に拡張機能では) あまり良い方法ではありませんが、コードを読みやすくするためにそうしました。全ての実装をクラスの中に入れ、チャンネルをメンバとして格納した方が良いでしょう。
+</p>
+<pre class="eval"> function myClass() {
+   this.mChannel = null;
+   ...
+   var listener = new this.StreamListener(callbackFunc);
+   ...
+ }
+
+ myClass.prototype.StreamListener = function (aCallbackFunc) {
+   return ({
+     mData: "",
+     ...
+   })
+ }
+</pre>
+<p>{{ 英語版章題("Handling cookies") }}
+</p>
+<h3 id="Cookie_.E3.82.92.E6.89.B1.E3.81.86"> Cookie を扱う </h3>
+<p>リクエストを送る時、その URL に対応する Cookie が HTTP リクエストと共に送られます。また HTTP レスポンスにも Cookie が含まれることがあり、ブラウザはそれを処理します。Mozilla 1.8.1 (<a href="ja/Firefox_2">Firefox 2</a>) 現在では、これら 2 つのケースを横取りする事が出来ます。
+</p><p>これにより、例えばユーザが Web メールのアカウントにログインしていても、同じドメインの違うアカウントをユーザの Cookie に変更を加えることなくチェックすることが出来ます。
+</p><p>{{ 訳語("オブザーバサービス", "observer service") }} (<code><a href="ja/NsIObserverService">nsIObserverService</a></code>) は{{ 訳語("通知", "notifications") }}全般を送るのに使われ、その中には Cookie に関するものが 2 つ含まれています。特定の{{ 訳語("トピック", "topic") }}に対するオブザーバを追加するには <code>addObserver</code> メソッドを使います。これは 3 つの引数を取ります。
+</p>
+<ul><li> <code><a href="ja/NsIObserver">nsIObserver</a></code> を実装するオブジェクト
+</li><li> {{ 原語併記("捕捉", "listen") }} するトピック。Cookie に関する 2 つのトピックは、
+<ul><li> <code>http-on-modify-request</code> - Cookie データがリクエストに読み込まれた後、リクエストが送られる前に起こる。
+</li><li> <code>http-on-examine-response</code> - レスポンスが受け取られた後、Cookie が処理される前に起こる。
+</li></ul>
+</li><li> 引数として渡されたオブザーバに対して{{ 原語併記("弱い参照", "weak reference") }} を保持するかどうか。<code>false</code> を使ってください。
+</li></ul>
+<p><b>メモリリークを回避する</b>ため、どこかの時点でオブザーバを削除しなければなりません。<code>removeObserver</code> メソッドはリスナオブジェクトとトピックを引数に取り、それを通知リストから削除します。
+</p><p>上記のストリームリスナと同じように、<code>nsIObserver</code> を実装したオブジェクトが必要になります。これが実装しなければならないのは、<code>observe</code> というメソッド一つだけです。<code>observe</code> メソッドには 3 つの引数が渡されます。2 つの Cookie トピックに関して言えばこの引数は、
+</p>
+<ul><li> <code>aSubject</code>: この通知を引き起こしたチャンネル (<code>nsIChannel</code>)。
+</li><li> <code>aTopic</code>: 通知トピック。
+</li><li> <code>aData</code>: この 2 つのトピックに関しては <code>null</code> 。
+</li></ul>
+<p>オブザーバは登録されたトピックの通知をあらゆる接続から受け取るので、リスナ側でその通知が自分のコードが作成した HTTP 接続からのものかを確認しなければなりません。通知を引き起こしたチャンネルは 1 つめの引数として渡されるので、それを前の節でグローバルスコープに格納されたチャンネル (<code>gChannel</code>、リダイレクトが起こるたびに更新される) と比較します。
+</p>
+<pre>// nsIObserver を実装するオブジェクトを作成する
+var listener = {
+  observe : function(aSubject, aTopic, aData) {
+    // まず自分で作った接続かどうか確かめる
+    if (aSubject == gChannel) {
+      var httpChannel = aSubject.QueryInterface(Components.interfaces.nsIHttpChannel);
+      if (aTopic == "http-on-modify-request") {
+         // ...
+      } else if (aTopic == "http-on-examine-response") {
+         // ...
+      }
+    }
+  },
+
+  QueryInterface : function(aIID) {
+    if (aIID.equals(Components.interfaces.nsISupports) ||
+        aIID.equals(Components.interfaces.nsIObserver))
+      return this;
+    throw Components.results.NS_NOINTERFACE;
+  }
+};
+
+// オブザーバサービスを取得して 2 つの Cookie トピックに対して登録する
+var observerService = Components.classes["@mozilla.org/observer-service;1"]
+                                .getService(Components.interfaces.nsIObserverService);
+observerService.addObserver(listener, "http-on-modify-request", false);
+observerService.addObserver(listener, "http-on-examine-response", false);
+</pre>
+<p>最後に Cookie を操作します。Cookie を操作するには、<code>QueryInterface</code> (QI) を使って <code>nsIChannel</code> を <code>nsIHttpChannel</code> に変換する必要があります。
+</p>
+<pre class="eval">var httpChannel = aSubject.QueryInterface(Components.interfaces.nsIHttpChannel);
+</pre>
+<p>Cookie は実際には HTTP ヘッダの一部であり、<code>nsIHttpChannel</code> はヘッダを扱う 4 つのメソッドを備えています。2 つはリクエストヘッダを取得および設定するもので、もう 2 つはレスポンスヘッダを取得および設定するものです。リクエストに対しての Cookie ヘッダは "Cookie" という名前で、レスポンスに対しては "Set-Cookie" です。
+</p>
+<ul><li> <code>getRequestHeader(aHeader)</code> - 指定されたヘッダに対するリクエストヘッダの値を返す。
+</li><li> <code>setRequestHeader(aHeader, aValue, aMerge)</code> - リクエストヘッダの値を設定する。<code>aMerge</code> が <code>true</code> なら新しい値が追加され、そうでなければ古い値が上書きされる。
+</li><li> <code>getResponseHeader(aHeader)</code> - 指定されたヘッダに対するレスポンスヘッダの値を返す。
+</li><li> <code>setResponseHeader(aHeader, aValue, aMerge)</code> - レスポンスヘッダの値を設定する。<code>aMerge</code> が <code>true</code> なら新しい値が追加され、そうでなければ古い値が上書きされる。
+</li></ul>
+<p>これらのメソッドは Cookie が処理されたり送られる前に変更するのに必要な機能を全て備えており、これによりユーザの Cookie に影響しないサンドボックス内の Cookie 接続が可能になります。
+</p><p>{{ 英語版章題("HTTP referrer") }}
+</p>
+<h3 id="HTTP_.E3.83.AA.E3.83.95.E3.82.A1.E3.83.A9"> HTTP リファラ </h3>
+<p>HTTP リクエストにリファラを設定する必要があるなら、<code>nsIChannel</code> を作成した後、それが開かれるまえに 2 つの手順を追加しなければなりません。まず、リファラ URL に対して <code>nsIURI</code> を生成します。前と同じように、<code>nsIIOService</code> を使います。
+</p>
+<pre class="eval">var referrerURI = ioService.newURI(referrerURL, null, null);
+</pre>
+<p>次に、<code>nsIChannel</code> を <code>nsIHttpChannel</code> に QI し、<code>referrer</code> プロパティを先ほど生成した <code>nsIURI</code> に設定します。
+</p>
+<pre class="eval">var httpChannel = channel.QueryInterface(Components.interfaces.nsIHttpChannel);
+httpChannel.referrer = referrerURI;
+</pre>
+<p>{{ 英語版章題("Creating HTTP POSTs") }}
+</p>
+<h3 id="HTTP_POST_.E3.82.92.E4.BD.9C.E6.88.90.E3.81.99.E3.82.8B"> HTTP POST を作成する </h3>
+<p>HTTP POST を作成するには、<code>nsIChannel</code> を作成した後にいくつかの手順を追加する必要があります。
+</p><p>まず、<code>nsIInputStream</code> のインスタンスを作成し、その後 <code>setData</code> メソッドを呼び出します。1 つめの引数は文字列としての POST データで、2 つめの引数はそのデータの長さです。この場合ではデータは URL エンコードされるので、文字列は <code>foo=bar&amp;baz=eek</code> のようになっていなければなりません。
+</p>
+<pre class="eval">var inputStream = Components.classes["@mozilla.org/io/string-input-stream;1"]
+                  .createInstance(Components.interfaces.nsIStringInputStream);
+inputStream.setData(postData, postData.length);
+</pre>
+<p>次に、<code>nsIChannel</code> を <code>nsIUploadChannel</code> に QI します。それの <code>setUploadStream</code> メソッドを、<code>nsIInputStream</code> とその形式 (この場合は "application/x-www-form-urlencoded") を渡して呼び出します。
+</p>
+<pre class="eval">var uploadChannel = gChannel.QueryInterface(Components.interfaces.nsIUploadChannel);
+uploadChannel.setUploadStream(inputStream, "application/x-www-form-urlencoded", -1);
+</pre>
+<p>バグにより、<code>setUploadStream</code> を呼び出すと <code>nsIHttpChannel</code> が PUT リクエストにリセットされるので、リクエストタイプを POST に設定します。
+</p>
+<pre class="eval">// 順番が重要 - setUploadStream は PUT にリセットする
+httpChannel.requestMethod = "POST";
+</pre>
+<div class="noinclude">
+</div>
+{{ languages( { "en": "en/Creating_Sandboxed_HTTP_Connections" } ) }}

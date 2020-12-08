@@ -1,0 +1,91 @@
+---
+title: VBArray.ubound
+slug: Archive/Web/JavaScript/Extensions_Microsoft/VBArray/ubound
+tags:
+  - JavaScript
+  - Méthode
+  - Non-standard
+  - Reference
+translation_of: Archive/Web/JavaScript/Microsoft_Extensions/VBArray/ubound
+---
+<div>{{JSRef}}{{Non-standard_header}}</div>
+
+<div class="warning"><strong>Attention !</strong> Cette méthode est spécifique à Microsoft et ne fonctionne qu'avec Internet Explorer.</div>
+
+<p>La méthode <strong><code>VBArray.ubound()</code></strong> renvoie l'indice le plus haut de l'objet {{jsxref("VBArray")}} pour la dimension indiquée.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre>monVBArray.ubound(dimension)</pre>
+
+<h3 id="Paramètres">Paramètres</h3>
+
+<dl>
+ <dt><code>dimension</code> {{optional_inline}}</dt>
+ <dd>La dimension pour laquelle on veut l'indice le plus haut. La valeur par défaut est 1.</dd>
+</dl>
+
+<h3 id="Valeur_de_retour">Valeur de retour</h3>
+
+<p>Si le tableau est vide, {{jsxref("undefined")}}, sinon l'indice le plus haut pour la dimension souhaitée. Si la valeur de <code>dimension</code> excède le nombre de dimensions du tableau <code>VBArray</code>, une erreur "Subscript out of range" est levée.</p>
+
+<h2 id="Exemples">Exemples</h2>
+
+<pre class="brush: js">&lt;head&gt;
+  &lt;script type="text/vbscript"&gt;
+  &lt;!--
+  Function CreateVBArray()
+     Dim i, j, k
+     Dim a(2, 2)
+     k = 1
+     For i = 0 To 2
+        For j = 0 To 2
+           a(j, i) = k
+           document.writeln(k)
+           k = k + 1
+        Next
+        document.writeln("&lt;br /&gt;")
+     Next
+     CreateVBArray = a
+  End Function
+  --&gt;
+  &lt;/script&gt;
+
+  &lt;script type="text/javascript"&gt;
+  &lt;!--
+  function VBArrayTest(vbarray) {
+     var a = new VBArray(vbarray);
+     var b = a.toArray();
+     var s = "";
+     for (i = 1; i &lt;= a.dimensions() ; i++) {
+       s += "La borne supérieure de la dimension " + i ";
+       s += " est " + a.ubound(i) + ".";
+     }
+     return s;
+  }
+  --&gt;
+  &lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;script type="text/javascript"&gt;
+    &lt;!--
+    VBArrayTest(CreateVBArray());
+    --&gt;
+  &lt;/script&gt;
+&lt;/body&gt;</pre>
+
+<h2 id="Prérequis">Prérequis</h2>
+
+<p>Cette fonctionnalité est prise en charge par les modes suivants : Quirks, Internet Explorer 6 en mode standard, Internet Explorer 7 en mode standard, Internet Explorer 8 en mode standard, Internet Explorer 9 en mode standard et Internet Explorer 10 en mode standard. Elle n'est pas prise en charge par les applications Windows 8.x Store.</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>{{jsxref("VBArray")}}</li>
+ <li>{{jsxref("VBArray.getItem()")}}</li>
+ <li>{{jsxref("VBArray.dimensions()")}}</li>
+ <li>{{jsxref("VBArray.lbound()")}}</li>
+ <li>{{jsxref("VBArray.toArray()")}}</li>
+ <li><a href="/fr/docs/Web/JavaScript/Extensions_JavaScript_Microsoft">Les extensions JavaScript spécifiques de Microsoft</a></li>
+</ul>

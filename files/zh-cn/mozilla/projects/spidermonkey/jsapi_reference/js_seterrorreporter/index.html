@@ -1,0 +1,61 @@
+---
+title: SpiderMonkey/JSAPI_参考/JS_SetErrorReporter
+slug: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_SetErrorReporter
+translation_of: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_SetErrorReporter
+---
+<p>指定一个程序的错误报告途径.</p>
+<h2 id="Syntax" name="Syntax">语法</h2>
+<pre class="eval"><a href="/en/SpiderMonkey/JSAPI_Reference/JS_SetErrorReporter" title="en/JS_SetErrorReporter">JSErrorReporter</a> <strong>JS_SetErrorReporter</strong>(<a href="/en/SpiderMonkey/JSAPI_Reference/JSRuntime" title="en/JSRuntime">JSContext</a> *cx, <a href="/en/SpiderMonkey/JSAPI_Reference/JS_SetErrorReporter" title="en/JS_SetErrorReporter">JSErrorReporter</a> er);
+</pre>
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>形式参数</th>
+   <th>类型</th>
+   <th>描述</th>
+  </tr>
+  <tr>
+   <td><code>cx</code></td>
+   <td><code><a href="/en/SpiderMonkey/JSAPI_Reference/JSRuntime" title="en/JSRuntime">JSContext</a> *</code></td>
+   <td>Pointer to a JS context from which to derive runtime information.</td>
+  </tr>
+  <tr>
+   <td><code>er</code></td>
+   <td><code><a href="/en/SpiderMonkey/JSAPI_Reference/JS_SetErrorReporter" title="en/JS_SetErrorReporter">JSErrorReporter</a></code></td>
+   <td>在你的程序中用于报告错误的自定义函数, 见下面的描述.</td>
+  </tr>
+ </tbody>
+</table>
+<h3 id="Callback_Syntax" name="Callback_Syntax">  回调函数语法</h3>
+<pre class="eval">typedef void (*<strong>JSErrorReporter</strong>)(
+    <a href="/en/SpiderMonkey/JSAPI_Reference/JSRuntime" title="en/JSRuntime">JSContext</a> *cx, const char *message, <a href="/en/SpiderMonkey/JSAPI_Reference/JSErrorReport" title="en/JSErrorReport">JSErrorReport</a> *report);
+</pre>
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>形式参数</th>
+   <th>类型</th>
+   <th>描述</th>
+  </tr>
+  <tr>
+   <td><code>cx</code></td>
+   <td><code><a href="/en/SpiderMonkey/JSAPI_Reference/JSRuntime" title="en/JSRuntime">JSContext</a> *</code></td>
+   <td>错误发生的上下文。</td>
+  </tr>
+  <tr>
+   <td><code>message</code></td>
+   <td><code>const char *</code></td>
+   <td>一个错误信息。</td>
+  </tr>
+  <tr>
+   <td><code>report</code></td>
+   <td><code><a href="/en/SpiderMonkey/JSAPI_Reference/JSErrorReport" title="en/JSErrorReport">JSErrorReport</a> *</code></td>
+   <td>一个包含错误额外的详细资料报告记录。</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Description" name="Description">描述</h2>
+<p><code>JS_SetErrorReporter</code> enables you to define and use your own error reporting mechanism in your applications. The reporter you define is automatically passed a <code><a href="/en/SpiderMonkey/JSAPI_Reference/JSErrorReport" title="en/JSErrorReport">JSErrorReport</a></code> structure when an error occurs and has been parsed by <code><a href="/en/SpiderMonkey/JSAPI_Reference/JS_ReportError" title="en/JS_ReportError">JS_ReportError</a></code>.</p>
+<p>Typically, the error reporting mechanism you define should log the error where appropriate (such as to a log file), and display an error to the user of your application. The error you log and display can make use of the information passed about the error condition in the <code>JSErrorReport</code> structure.</p>
+<p>Like all other SpiderMonkey callbacks, the error reporter callback must not throw a C++ exception.</p>
+<p>{{ LXRSearch("ident", "i", "JS_SetErrorReporter") }}</p>

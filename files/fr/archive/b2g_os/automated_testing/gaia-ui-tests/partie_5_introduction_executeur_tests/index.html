@@ -1,0 +1,190 @@
+---
+title: 'Partie 5 : Introduction à un exécuteur de tests'
+slug: >-
+  Archive/B2G_OS/Automated_testing/gaia-ui-tests/Partie_5_Introduction_executeur_tests
+tags:
+  - Automatisation
+  - B2G
+  - Firefox OS
+  - Gaia
+  - Marionette
+  - Python
+  - interface utilisateur
+  - tests
+translation_of: >-
+  Archive/B2G_OS/Automated_testing/gaia-ui-tests/Part_5_Introducing_a_test_runner
+---
+<p></p><div style="text-align: right;" class="prevnext">
+    <p><a style="float: left;" href="/fr/docs/Mozilla/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_4_Reusing_commands_Firefox_OS_setup">« Précédent</a><a href="/fr/docs/Mozilla/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_6_Marionette_By_class">Suivant  »</a></p>
+</div><p></p>
+
+<div class="summary">
+<p><span class="seoSummary">Jusqu'ici tout va bien, mais nous avons toujours traité un seul test. Quand on teste une réelle application web il peut y avoir des centaines de cas de tests, et nous ne voulons certainement pas exécuter chacun d'eux manuellement. Dans un tel scénario, nous devons utiliser un exécuteur de tests pour trouver et exécuter les tests à pour nous. C'est le sujet de cet article.</span></p>
+</div>
+
+<h2 id="Exécuteurs_de_tests">Exécuteurs de tests</h2>
+
+<p>Un exécuteur de tests fournit la bonne base pour un framework de test réel. Il est conçu pour exécuter des tests, des étiquettes de tests avec des attributs (annotations), fournir du reporting et bien d'autres fonctionnalités encore. Il existe de nombreux exécuteurs de tests Python disponibles, mais dans notre cas, nous allons utiliser le <strong>unittest </strong>de Python puisqu'il est simple, efficace et inclus dans le package Python (comme cela nous n'avons pas besoin d'installer quoi que ce soit).</p>
+
+<p>En général on sépare les tests en 3 sections standard : <code>setUp()</code>, tests, et <code>tearDown()</code>, typique pour une configuration d'exécuteur de tests.<br>
+  <br>
+ Les méthodes <code>setUp()</code> et <code>tearDown()</code> sont exécutées automatiquement pour chaque test et contiennent respectivement :</p>
+
+<ul>
+ <li>Les étapes de configuration qu'il faut réaliser avant d'exécuter le test, comme déverrouiller l'écran et tuer les applications ouvertes.</li>
+ <li>Les étapes de refroidissement qu'il faut exécuter après le test, comme fermer la session Marionette.</li>
+</ul>
+
+<p>La partie test de la configuration est le code que vous voulez exécuter pour le test en cours. Regardons maintenant comment nous pouvons appliquer cela au test que nous avons construit dans les parties 2 à 4.</p>
+
+<h2 id="Exécuter_test_add_contact.py_avec_unittest">Exécuter test_add_contact.py avec unittest</h2>
+
+<p>Pour utiliser unittest nous devons tout d'abord importer unittest : ajoutez la ligne suivante en dessous de vos autres lignes d'import :</p>
+
+<pre class="brush: python">import unittest</pre>
+
+<p>Ensuite, nous devons créer un exécuteur de tests. Pour faire cela, nous allons faire hériter la classe <code>TestContacts</code> de la classe <code>unittest.Testcase</code> ; mettez à jour votre ligne <code>class</code> comme suit :</p>
+
+<pre class="brush: python">class TestContacts(unittest.TestCase):</pre>
+
+<p>Nous devons également supprimer ceci :</p>
+
+<pre class="brush: python">    def __init__(self):
+        self.test_add_contacts()</pre>
+
+<p>L'initialisation du test sera gérée à la place par unittest, ainsi nous ne devons pas le gérer nous-mêmes. A la fin du code, remplacez ce qui suit :</p>
+
+<pre class="brush: python">if __name__ == '__main__':
+    TestContacts()</pre>
+
+<p>par :</p>
+
+<pre class="brush: python">if __name__ == '__main__':
+    unittest.main()</pre>
+
+<p>Ensuite, nous devons créer une méthode <code>setUp(self):</code> dans notre classe <code>TestContacts</code> et insérer les étapes suivantes :</p>
+
+<ol>
+ <li>Instancier Marionette et démarrer une session Marionette</li>
+ <li>Déverrouiller l'écran</li>
+ <li>Tuer les applications ouvertes</li>
+ <li>Charger l'application Contacts</li>
+</ol>
+
+<p>La méthode devrait ressembler au code ci-dessous. Vous devrez supprimer les lignes identiques qui sont déjà dans <code>test_add_contacts</code>.</p>
+
+<pre class="brush: python">    def setUp(self):
+         # Create the client for this session. Assuming you're using the default port on a Marionette instance running locally
+        self.marionette = Marionette()
+        self.marionette.start_session()
+
+        # Unlock the screen
+        self.unlock_screen()
+
+        # kill all open apps
+        self.kill_all()
+
+        # Switch context to the homescreen iframe
+        time.sleep(2)
+        home_frame = self.marionette.find_element('css selector', 'div.homescreen iframe')
+        self.marionette.switch_to_frame(home_frame)</pre>
+
+<p>Maintenant passons à la méthode <code>tearDown(self)</code>. A l'intérieur de celle-ci nous devons ajouter le code pour fermer la session Marionette. La méthode devrait ressembler à ceci :</p>
+
+<pre class="brush: python">    def tearDown(self):
+        # Close the Marionette session now that the test is finished
+        self.marionette.delete_session()
+</pre>
+
+<p>Encore une fois, n'oubliez pas de supprimer les lignes identiques dans <code>test_add_contacts</code>.</p>
+
+<p>Manitenant essayez d'exécuter le test exactement comme vous l'avez fait précédemment. Vous allez voir que vous obtenez un rapport de succès et d'échecs. Ceci est un des avantages d'utiliser un exécuteur de tests comme unittest ou py.test.</p>
+
+<div class="note">
+<p><strong>Note </strong>: Si vous êtes bloqués, il existe de nombreux guides d'utilisation de unittest sur Internet. Nous recommandons <a href="http://selenium-python.readthedocs.org/en/latest/getting-started.html">http://selenium-python.readthedocs.org/en/latest/getting-started.html</a> et <a href="http://assertselenium.com/2013/10/07/getting-started-with-python-webdriver/">http://assertselenium.com/2013/10/07/getting-started-with-python-webdriver/</a>. Ils sont pour Python et WebDriver mais sont tout de même appropriés.</p>
+</div>
+
+<h2 id="Code_de_référence">Code de référence</h2>
+
+<p>Pour référence, notre code final à cette étape ressemble à celui-ci :</p>
+
+<pre class="brush: python">import time
+from marionette import Marionette
+from marionette_driver import Wait
+import unittest
+
+
+class TestContacts(unittest.TestCase):
+
+    def unlock_screen(self):
+        self.marionette.execute_script('window.wrappedJSObject.lockScreen.unlock();')
+
+    def kill_all(self):
+        self.marionette.switch_to_frame()
+        self.marionette.execute_async_script("""
+             // Kills all running apps, except the homescreen.
+             function killAll() {
+               let manager = window.wrappedJSObject.AppWindowManager;
+
+               let apps = manager.getApps();
+               for (let id in apps) {
+                 let origin = apps[id].origin;
+                 if (origin.indexOf('verticalhome') == -1) {
+                   manager.kill(origin);
+                 }
+               }
+             };
+             killAll();
+             // return true so execute_async_script knows the script is complete
+             marionetteScriptFinished(true);
+            """)
+
+    def setUp(self):
+         # Create the client for this session. Assuming you're using the default port on a Marionette instance running locally
+        self.marionette = Marionette()
+        self.marionette.start_session()
+
+        # Unlock the screen
+        self.unlock_screen()
+
+        # kill all open apps
+        self.kill_all()
+
+        # Switch context to the homescreen iframe and tap on the contacts icon
+        time.sleep(2)
+        home_frame = self.marionette.find_element('css selector', 'div.homescreen iframe')
+        self.marionette.switch_to_frame(home_frame)
+
+
+    def test_add_contacts(self):
+        <code>contacts_icon = self.marionette.find_element('xpath', "</code><code>//div[@class='icon']//span[contains(text(),'Contacts')]")</code>
+        contacts_icon.tap()
+
+        # Switch context back to the base frame
+        self.marionette.switch_to_frame()
+        Wait(self.marionette).until(lambda m: m.find_element('css selector', "iframe[data-url*='contacts']").is_displayed())
+
+        # Switch context to the contacts app
+        contacts_frame = self.marionette.find_element('css selector', "iframe[data-url*='contacts']")
+        self.marionette.switch_to_frame(contacts_frame)
+
+        # Tap [+] to add a new Contact
+        self.marionette.find_element('id', 'add-contact-button').tap()
+        Wait(self.marionette).until(lambda m: m.find_element('id', 'save-button').location['y']== 0)
+
+        # Type name into the fields
+        self.marionette.find_element('id', 'givenName').send_keys('John')
+        self.marionette.find_element('id', 'familyName').send_keys('Doe')
+
+        # Tap done
+        self.marionette.find_element('id', 'save-button').tap()
+        Wait(self.marionette).until(lambda m: not m.find_element('id', 'save-button').is_displayed())
+
+    def tearDown(self):
+        # Close the Marionette session now that the test is finished
+        self.marionette.delete_session()
+
+if __name__ == '__main__':
+    unittest.main()
+
+</pre>

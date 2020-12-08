@@ -1,0 +1,252 @@
+---
+title: Traitement de XML avec E4X
+slug: JavaScript_Guide/Traitement_de_XML_avec_E4X
+translation_of: Archive/Web/E4X/Processing_XML_with_E4X
+---
+<h2 id="Traitement_de_XML_avec_E4X" name="Traitement_de_XML_avec_E4X">Traitement de XML avec E4X</h2>
+
+<p>Introduit pour la première fois dans JavaScript 1.6, <strong><a href="fr/E4X">E4X</a></strong> ajoute un objet XML natif au langage JavaScript, ainsi qu'une syntaxe pour intégrer des document XML littéraux dans du code JavaScript.</p>
+
+<p>Une définition complète d'E4X peut être trouvé dans la <a class="external" href="http://www.ecma-international.org/publications/standards/Ecma-357.htm">spécification Ecma-357</a> (en anglais). Cet chapitre fournit un aperçu pratique du langage ; il ne s'agit pas d'une référence complète.</p>
+
+<h3 id="Probl.C3.A8mes_de_compatibilit.C3.A9" name="Probl.C3.A8mes_de_compatibilit.C3.A9">Problèmes de compatibilité</h3>
+
+<p>Avant que l'élément <code>&lt;script&gt;</code> soit couramment géré dans les navigateurs, il n'était pas rare de voir le JavaScript intégré dans une page entouré de balises de commentaires HTML pour empêcher les navigateurs ne connaissant pas <code>&lt;script&gt;</code> d'afficher le code JavaScript à l'utilisateur. Cette pratique n'est plus nécessaire, mais reste visible dans d'anciens codes. Pour des raisons de compatibilité ascendante, E4X ignore par défaut les commentaires et sections CDATA. Il est possible d'ajouter un paramètre <code>e4x=1</code> à une balise <code>&lt;script&gt;</code> pour désactiver cette restriction :</p>
+
+<pre>&lt;script type="text/javascript;e4x=1"&gt;
+...
+&lt;/script&gt;
+</pre>
+
+<h3 id="Cr.C3.A9ation_d.27un_objet_XML" name="Cr.C3.A9ation_d.27un_objet_XML">Création d'un objet XML</h3>
+
+<p>E4X permet de créer un objet XML de deux manières. La première est de passer une chaîne au constructeur <code>XML</code> :</p>
+
+<pre class="eval"> var langages = new XML('&lt;langages type="dynamique"&gt;&lt;lang&gt;JavaScript&lt;/lang&gt;&lt;lang&gt;Python&lt;/lang&gt;&lt;/langages&gt;');
+</pre>
+
+<p>La seconde est d'intégrer le XML directement dans un script, comme littéral XML :</p>
+
+<pre class="eval"> var langages = &lt;langages type="dynamique"&gt;
+   &lt;lang&gt;JavaScript&lt;/lang&gt;
+   &lt;lang&gt;Python&lt;/lang&gt;
+ &lt;/langages&gt;;
+</pre>
+
+<p>Dans les deux cas, l'objet résultat sera un objet XML E4X, qui permet d'utiliser une syntaxe pratique pour l'accès et la modification des données encapsulées.</p>
+
+<p>Bien que l'objet XML ressemble et se comporte d'une manière similaire à un objet JavaScript normal, ce n'est pas tout à fait la même chose. E4X introduit une nouvelle syntaxe qui ne fonctionne qu'avec les objets XML E4X. La syntaxe est conçue pour être familière aux programmeurs JavaScript, mais E4X ne fournit pas une correspondance directe entre XML et les objets JavaScript natifs ; juste l'illusion qu'il y en a une.</p>
+
+<h3 id="Utilisation_d.27attributs" name="Utilisation_d.27attributs">Utilisation d'attributs</h3>
+
+<p>Après avoir exécuté l'exemple ci-dessus, la variable <code>langages</code> fait référence à un objet XML correspondant au nœud <code>&lt;langages&gt;</code> dans le document XML. Ce nœud a un attribut, <code>type</code>, qui peut être consulté et modifié de différentes manières :</p>
+
+<pre class="eval"> alert(langages.@type); // Affiche "dynamique"
+ langages.@type = "agile";
+ alert(langages.@type); // Affiche "agile"
+</pre>
+
+<pre class="eval"> alert(langages.toString());
+ /* Affiche :
+   &lt;langages type="agile"&gt;&lt;lang&gt;JavaScript&lt;/lang&gt;&lt;lang&gt;Python&lt;/lang&gt;&lt;/langages&gt;
+ */
+</pre>
+
+<h3 id="Utilisation_d.27objets_XML" name="Utilisation_d.27objets_XML">Utilisation d'objets XML</h3>
+
+<p>Les objets XML fournissent un certain nombre de méthodes pour inspecter et mettre à jour leur contenu. Ils permettent d'utiliser la notation classique de JavaScript avec des points et <code>[]</code>, mais plutôt que d'accéder à des propriétés de l'objet, E4X surcharge ces opérateurs pour accéder aux enfants de l'élément :</p>
+
+<pre>var personne = &lt;personne&gt;
+  &lt;nom&gt;Jean Dupont&lt;/nom&gt;
+  &lt;aime&gt;
+    &lt;os&gt;Linux&lt;/os&gt;
+    &lt;navigateur&gt;Firefox&lt;/navigateur&gt;
+    &lt;langage&gt;JavaScript&lt;/langage&gt;
+    &lt;langage&gt;Python&lt;/langage&gt;
+  &lt;/aime&gt;
+&lt;/personne&gt;;
+
+alert(personne.nom); // Jean Dupont
+alert(personne['nom']); // Jean Dupont
+alert(personne.aime.navigateur); // Firefox
+alert(personne['aime'].navigateur); // Firefox
+</pre>
+
+<p>Si l'on accède à quelque chose qui correspond à plus d'un élément, on reçoit une <code>XMLList</code> :</p>
+
+<pre>alert(personne.aime.langage.length()); // 2
+</pre>
+
+<p>Comme avec le DOM, <code>*</code> peut servir à accéder à tous les nœuds enfants :</p>
+
+<pre>alert(personne.aime.*.length()); // 4
+</pre>
+
+<p>Alors que l'opérateur <code>.</code> accède aux enfants directs du nœud, l'opérateur <code>..</code> accède à tous les enfants quel que soit leur niveau de profondeur :</p>
+
+<pre>alert(personne..*.length()); // 11
+</pre>
+
+<p>La méthode <code>length()</code> renvoie ici 11 car tant les éléments que les nœuds texte font partie de la <code>XMLList</code> résultante.</p>
+
+<p>Les objets représentant des éléments XML fournissent un bon nombre de méthodes utiles, dont certaines sont illustrées ci-dessous : <span class="comment">TODO : Ajouter toutes les méthodes à la référence JavaScript, et les lier depuis cette section</span></p>
+
+<pre>alert(personne.nom.text()); // Jean Dupont
+
+var xml = personne.toXMLString(); // Une chaîne contenant le XML
+
+var copiePersonne = personne.copy(); // Une copie profonde de l'objet XML
+
+var enfant = person.child(1); // Le second nœud enfant ; dans ce cas l'élément &lt;aime&gt;
+</pre>
+
+<h3 id="Utilisation_de_XMLLists" name="Utilisation_de_XMLLists">Utilisation de XMLLists</h3>
+
+<p>Outre l'objet XML, E4X introduit un objet <code>XMLList</code>. <code>XMLList</code> est utilisé pour représenter une collection ordonnée d'objets XML ; par exemple, une liste d'éléments. Pour poursuivre avec l'exemple ci-dessus, on peut accéder à une <code>XMLList</code> des éléments <code>&lt;lang&gt;</code> dans la page comme ceci :</p>
+
+<pre class="eval"> var langs = langages.lang;
+</pre>
+
+<p><code>XMLList</code> fournit une méthode <code>length()</code> qui peut être utilisée pour trouver le nombre d'éléments contenus :</p>
+
+<pre class="eval"> alert(langages.lang.length());
+</pre>
+
+<p>Notez que contrairement aux tableaux JavaScript, <code>length</code> est une méthode et non une propriété, et doit donc être appelée avec des parenthèses comme ceci : <code>length()</code>.</p>
+
+<p>Il est possible de parcourir les éléments correspondants comme ceci :</p>
+
+<pre class="eval"> for (var i = 0; i &lt; langages.lang.length(); i++) {
+     alert(langages.lang[i].toString());
+ }
+</pre>
+
+<p>Ici on utilise une syntaxe identique à celle utilisée pour accéder à des éléments numérotés dans un tableau. Malgré ces similarités avec les tableaux normaux, <code>XMLList</code> ne gère pas les méthodes d'<code>Array</code> comme <code>forEach</code>, et les méthodes génériques comme <code>Array.forEach()</code> ne sont pas compatibles avec les objets <code>XMLList</code>.</p>
+
+<p>Il est également possible d'utiliser <a href="fr/R%c3%a9f%c3%a9rence_de_JavaScript_1.5_Core/Instructions/for_each...in">l'instruction <code>for each...in</code></a> introduite dans JavaScript 1.6 en même temps que le support E4X :</p>
+
+<pre class="eval"> for each (var lang in langages.lang) {
+     alert(lang);
+ }
+</pre>
+
+<p><code>for each...in</code> peut également être utilisée avec des objets JavaScript normaux pour parcourir les valeurs (par opposition aux clés) contenues dans l'objet. Comme avec <a href="fr/R%c3%a9f%c3%a9rence_de_JavaScript_1.5_Core/Instructions/for...in"><code>for...in</code></a>, il est <a href="fr/R%c3%a9f%c3%a9rence_de_JavaScript_1.5_Core/Instructions/for...in#Description">fortement déconseillé</a> de l'utiliser avec des tableaux.</p>
+
+<p>Il est possible de créer une <code>XMLList</code> à l'aide de la syntaxe XML littérale sans avoir à créer un document XML bien formé, de la manière suivante :</p>
+
+<pre class="eval"> var xmllist = &lt;&gt;
+   &lt;lang&gt;JavaScript&lt;/lang&gt;
+   &lt;lang&gt;Python&lt;/lang&gt;
+ &lt;/&gt;;
+</pre>
+
+<p>L'opérateur <code>+=</code> peut être utilisé pour ajouter des éléments à une <code>XMLList</code> au sein d'un document:</p>
+
+<pre class="eval"> langages.lang += &lt;lang&gt;Ruby&lt;/lang&gt;;
+</pre>
+
+<p>Notez que contrairement aux listes de nœuds renvoyées par les méthodes DOM classiques, les <code>XMLList</code>s sont statiques et ne sont pas mises à jour automatiquement pour refléter les changements dans le DOM. Si vous créez une <code>XMLList</code> comme un sous-ensemble d'un objet <code>XML</code> existant et modifiez ensuite l'objet <code>XML</code> original, la <code>XMLList</code> ne reflètera pas ces changements ; il vous faudra la recréer pour avoir les mises à jour les plus récentes :</p>
+
+<pre class="eval"> var langages = &lt;langages&gt;
+   &lt;lang&gt;JavaScript&lt;/lang&gt;
+   &lt;lang&gt;Python&lt;/lang&gt;
+ &lt;/langages&gt;;
+
+ var lang = langages.lang;
+ alert(lang.length()); // Affiche 2
+
+ langages.lang += &lt;lang&gt;Ruby&lt;/lang&gt;;
+ alert(lang.length()); // Affiche toujours 2
+
+ lang = langages.lang; // Recrée la XMLList
+ alert(lang.length()); // Affiche 3
+</pre>
+
+<h3 id="Recherche_et_filtrage" name="Recherche_et_filtrage">Recherche et filtrage</h3>
+
+<p>E4X fournit des opérateurs spéciaux pour sélectionner des nœuds dans un document qui correspondent à des critères spécifiques. Ces opérations de filtrage sont spécifiées à l'aide d'une expression contenue entre parenthèses :</p>
+
+<pre>var html = &lt;html&gt;
+  &lt;p id="p1"&gt;Premier paragraphe&lt;/p&gt;
+  &lt;p id="p2"&gt;Second paragraphe&lt;/p&gt;
+&lt;/html&gt;;
+
+alert(html.p.(@id == "p1")); // Affiche "Premier paragraphe"
+</pre>
+
+<p>Les nœuds correspondant au chemin avant l'expression (dans ce cas les éléments paragraphe) sont ajoutées à la chaîne de visibilité avant l'évaluation de l'expression, comme s'ils avaient été spécifiés avec <a href="fr/R%c3%a9f%c3%a9rence_de_JavaScript_1.5_Core/Instructions/with">l'instruction <code>with</code></a>.</p>
+
+<p>Par conséquents, des filtres peuvent également être utilisés pour la valeur d'un seul nœud contenu dans l'élément courant :</p>
+
+<pre>var gens = &lt;gens&gt;
+  &lt;personne&gt;
+    &lt;nom&gt;Pierre&lt;/nom&gt;
+    &lt;age&gt;32&lt;/age&gt;
+  &lt;/personne&gt;
+  &lt;personne&gt;
+    &lt;nom&gt;Paul&lt;/nom&gt;
+    &lt;age&gt;46&lt;/age&gt;
+  &lt;/personne&gt;
+&lt;/gens&gt;;
+
+alert(gens.personne.(nom == "Paul").age); // Affiche 46
+</pre>
+
+<p>Les expressions de filtres peuvent même utiliser des fonctions JavaScript :</p>
+
+<pre>function plusde40(i) {
+    return i &gt; 40;
+}
+
+alert(gens.personne.(plusde40(parseInt(age))).nom); // Affiche Paul
+</pre>
+
+<h3 id="Gestion_des_espaces_de_noms" name="Gestion_des_espaces_de_noms">Gestion des espaces de noms</h3>
+
+<p>E4X gère entièrement les espaces de noms. Tout objet XML représentant un nœud ou un attribut fournit une méthode <code>name()</code> renvoyant un objet <code>QName</code>, qui permet d'inspecter facilement les éléments avec un espace de noms.</p>
+
+<h4 id="Défini_par_défaut">Défini par défaut</h4>
+
+<pre class="brush: js">default xml namespace = "http://www.w3.org/1999/xhtml";
+// Il n'est plus nécessaire de spécifier l'espace de noms dans la balise html
+var xhtml = &lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;
+            &lt;p&gt;text&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;;
+alert(xhtml.head);
+</pre>
+
+<h4 id="Défini_manuellement">Défini "manuellement"</h4>
+
+<pre class="brush: js">var xhtml = &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+	&lt;head&gt;
+		&lt;title&gt;Démo de SVG intégré&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;h1&gt;Démo de SVG intégré&lt;/h1&gt;
+		&lt;svg xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 100 100"&gt;
+			&lt;circle cx="50"
+				cy="50"
+				r="20"
+				stroke="orange"
+				stroke-width="2px"
+				fill="yellow" /&gt;
+		&lt;/svg&gt;
+	&lt;/body&gt;
+&lt;/html&gt;;
+
+alert(xhtml.name().localName); // Affiche "html"
+alert(xhtml.name().uri); // Affiche "http://www.w3.org/1999/xhtml"
+</pre>
+
+<p>Pour accéder à des éléments qui sont au sein d'un espace de noms pas défini par défaut, créez d'abord un objet <code>Namespace</code> encapsulant l'URI pour cet espace de noms :</p>
+
+<pre class="deki-transform">var svgns = new Namespace('http://www.w3.org/2000/svg');
+</pre>
+
+<p>Celui-ci peut alors être utilisé dans des requêtes E4X en utilisant <code>namespace::localName</code> au lieu d'un nom d'élément normal :</p>
+
+<pre class="deki-transform">var svg = xhtml..svgns::svg;
+alert(svg); // Affiche la portion &lt;svg&gt; du document
+</pre>
+
+<p>{{ languages( { "en": "en/Core_JavaScript_1.5_Guide/Processing_XML_with_E4X", "ja": "ja/Core_JavaScript_1.5_Guide/Processing_XML_with_E4X" } ) }}</p>

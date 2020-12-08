@@ -1,0 +1,65 @@
+---
+title: Idle API
+slug: WebAPI/Idle
+translation_of: Archive/B2G_OS/API/Idle_API
+---
+<div>
+ {{non-standard_header}} {{B2GOnlyHeader2('certified')}}</div>
+<h2 id="Summary">Summary</h2>
+<p>L'API Idle est utilisée pour notifier une application lorsque l'utilisateur est inactif. Cela permet à une application d'intervenir lorsque l'utilisateur ne fait rien avec son appareil. Le cas d'utilisation le plus courant consiste à économiser la batterie; dans ce cas, Il est couramment utilisé en conjonction avec le <a href="/en-US/docs/WebAPI/Power_Management">Power Management API</a>.</p>
+<h2 id="Surveiller_un_utilisateur_inactif">Surveiller un utilisateur inactif</h2>
+<p>Quand une application veut être averti de l'inactivité du système, elle doit inscrire un <strong>idle observer</strong>. Un idle observer est un objet composé de trois propriétés :</p>
+<ul>
+ <li>Une propriété <code>time</code> qui définit le temps, exprimé en secondes, qui doit passer après la dernière action de l'utilisateur avant que l'utilisateur est considéré comme inactif.</li>
+ <li>Une propriété <code>onidle</code>, qui est une fonction appelée lorsque l'utilisateur est considéré comme inactif.</li>
+ <li>Une propriété <code>onactive</code>, qui est une fonction appelée lorsque l'utilisateur redevient actif.</li>
+</ul>
+<h3 id="Exemple_diminuer_la_luminosité_de_l'écran_lorsque_l'utilisateur_est_inactif">Exemple: diminuer la luminosité de l'écran lorsque l'utilisateur est inactif</h3>
+<p>Dans cet exemple, un observateur idle est mis en place pour réduire la luminosité de l'écran à 50 % lorsque l'utilisateur est inactif pendant 10 secondes et le restaurer à 100 % lorsque l'utilisateur est de nouveau actif. Un deuxième observateur est mis en place pour éteindre l'écran lorsque l'utilisateur est inactif pendant au moins 15 secondes.</p>
+<pre class="brush: js">// REMARQUE: mozPower fait partie de l'API de gestion de puissance (Power Management API)
+
+var fadeLight = {
+  time: 10, // 10 secondes
+
+  onidle: function () {
+    // L'utilisateur ne semble pas actif, nous allons diminuer la luminosité de l'écran
+    navigator.mozPower.screenBrightness = 0.5;
+  },
+
+  onactive: function () {
+    // OK, l'utilisateur est de retour, nous allons ré-éclairer l'écran
+    navigator.mozPower.screenBrightness = 1;
+  }
+}
+
+var screenOff = {
+  time: 15, // quinze seconds
+
+  onidle: function () {
+    // OK, l'utilisateur a eu sa chance, mais il est vraiment inactif, nous allons désactiver l'écran
+    navigator.mozPower.screenEnabled = false;
+  },
+
+  onactive: function () {
+    // OK, l'utilisateur est de retour, nous allons allumer l'écran
+    navigator.mozPower.screenEnabled = true;
+  }
+}
+
+// Enregistrer les observateurs inactifs
+
+navigator.addIdleObserver(fadeLight);
+navigator.addIdleObserver(screenOff);
+</pre>
+<p>Ce code définit deux objets idle observer : <code>fadeLight</code> et <code>screenOff</code>, puis appelle {{domxref("window.navigator.addIdleObserver","navigator.addIdleObserver()")}} une fois pour chacun d'eux afin de les enregistrer dans le système. Les applications peuvent mettre en place autant d'observateurs inactif que nécessaire.</p>
+<p>Si l'application n'a plus besoin de surveiller l’inactivité de l'utilisateur, il peut enlever les observateurs en appelant la méthode {{domxref("window.navigator.removeIdleObserver","navigator.removeIdleObserver()")}}, comme indiqué ci-dessous :</p>
+<pre class="brush:js">navigator.removeIdleObserver(fadeLight);
+navigator.removeIdleObserver(screenOff);
+</pre>
+<h2 id="Spécification">Spécification</h2>
+<p>Ne fait partie d'aucune spécification pour le moment ; cependant, cette API sera discutée au W3C dans le cadre de la <a href="http://www.w3.org/2012/sysapps/" rel="external">System Applications Working Group</a>.</p>
+<h2 id="Voir_aussi">Voir aussi</h2>
+<ul>
+ <li>{{domxref("window.navigator.addIdleObserver","navigator.addIdleObserver()")}}</li>
+ <li>{{domxref("window.navigator.removeIdleObserver","navigator.removeIdleObserver()")}}</li>
+</ul>

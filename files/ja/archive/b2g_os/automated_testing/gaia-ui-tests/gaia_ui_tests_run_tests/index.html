@@ -1,0 +1,356 @@
+---
+title: 'Gaia UI Tests: Running Tests'
+slug: Archive/B2G_OS/Automated_testing/gaia-ui-tests/Gaia_UI_Tests_Run_Tests
+tags:
+  - Automation
+  - Firefox OS
+  - Gaia
+  - Guide
+  - Testing
+  - gaia-ui-test
+  - gaiatest
+translation_of: Archive/B2G_OS/Automated_testing/gaia-ui-tests/Gaia_UI_Tests_Run_Tests
+---
+<div><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/ja/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section></div>
+
+<div class="summary">
+<p><span class="seoSummary">この記事は、実際のFireFox OS 端末やB2Gデスクトップ、Gaia 自身内部にあるものに合わせた、Gaia UI テストの実行の仕方・流れの詳細を配信してます。Gaia プロジェクトは、コミット毎の継続的インテグレーションとプルリクエストテストをする為に、<a href="https://treeherder.mozilla.org/">Treeherder</a> を使用しています。</span></p>
+</div>
+
+<p>Gaia UI テスト は、実際の端末やエミュレーター、<a href="https://developer.mozilla.org/en-US/Firefox_OS/Using_the_B2G_desktop_client">B2G Desktop </a>クライアントで実行する性能をもって開発されています。もっとずっと簡単な方法は、B2G デスクトップに対して実行させることです。あなたがお使いのFirefox OS のバージョンと対して実行させる為に、Gaia の正しいブランチを選ばないといけないことを、忘れないで下さい。</p>
+
+<h2 id="sect1"> </h2>
+
+<h2 id="B2G_デスクトップ上でテスト">B2G デスクトップ上でテスト</h2>
+
+<p>B2G クラインアントは、次のようなものです。：デスクトップから楽にFirefox OS上でwebアプリケーションのテスト実行に使える、B2Gのデスクトップ・バージョンです。もし、このテストに詳しくなければ、<a href="https://developer.mozilla.org/en-US/Firefox_OS/Using_the_B2G_desktop_client">B2G デスクトップ・クライアント・テストの使用</a>をお読み下さい。この項目では、B2GデスクトップでのUI テストの仕方を教えています。</p>
+
+<div class="note">
+<p>ショートカット：手作業でのPCの環境設定が嫌でしたら、<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Automated_testing/MozITP">MozITP</a>を使用できます。このツール・セットは自動で、仮想マシンのUbuntu と、任意のタイミングで1クリックで実物のデバイスやMulet 上でのテストを開始できる、gaia UI テスト環境を準備・設定してくれます。</p>
+</div>
+
+<div>
+<h3 id="sect2"> </h3>
+
+<h3 id="前提条件">前提条件</h3>
+
+<p>　●デスクトップ版B2G をビルドして下さい。 ご自分のPCか仮想マシンのディレクトリに、<a href="http://nightly.mozilla.org/">こちら</a>（試用版を含む）をダウンロードするか<a href="https://developer.mozilla.org/en-US/Firefox_OS/Using_the_B2G_desktop_client#Building_the_desktop_client">自身でコンパイル</a>し、mozconfig ファイルに、<code>ENABLE_MARIONETTE=1</code>　この1行を追加して下さい。</p>
+
+<p>●<a href="https://github.com/mozilla-b2g/gaia/">Gaia Github repository</a> がクローン（コピー）を生成し、確認します。ここでプロフィールを生成する必要があります。<code>プロフィールの生成をしている間、DEBUG=1 で通過していけないことを、注意して下さい。</code>Gaia プロフィールのデバッグの使用は、Gaia UI テストからB2G デスクトップ・インスタンスへ接続への失敗の原因となります。</p>
+
+<p>● <code>testvars.json ファイル で以下を確認して下さい。</code></p>
+
+<p><a href="#Configuring_test_variables">Configuring test variables</a></p>
+
+<p>実物のデバイスが使用できず、電話レベル機能が必要ない場合、デスクトップ B2G クライアントは、テスト開発に理想的です。テストの実行が速く、入手しやすく、MacやWindows、Linux で行えます！</p>
+
+<h3 id="テストの実行">テストの実行</h3>
+
+<p>新しいテストの実行を確認して見ていきましょう。自分達の変更点が即拾い上げられるように、私達は、Gaia のリポジトリーから直接、gaiatest の作業tree内のバージョンをインストールしています。あなたがクローンを生成したGaiaのバージョンで、<code>gaia/tests/python/gaia-ui-tests</code>  へ移動し、下記の設定のコマンドを実行して下さい。</p>
+
+<pre class="brush: bash line-numbers  language-bash"><code class="language-bash">python setup.py develop</code></pre>
+
+<p>これは、仮想環境内で実行されない時、権限の拒否によるエラーを与えることがあります。その場合では、まだインストールされていないなら <code>virtualenv</code> と <code>virtualenvwrapper</code>　をインストールします。</p>
+
+<pre>pip install virtualenv
+pip install virtualenvwrapper (perhaps need to use sudo here)
+export WORKON_HOME=~/Envs
+source /usr/local/bin/virtualenvwrapper.sh
+<code class="java plain">echo </code><code class="java string">"source /usr/local/bin/virtualenvwrapper.sh"</code> <code class="java plain">&gt;&gt; .bash (rc or _profile)</code></pre>
+
+<p>それから、仮想環境を作って入って下さい。</p>
+
+<pre><code>mkvirtualenv gaia-ui-test</code></pre>
+
+<p>私達がテストを始める場合、Marionette経由で <code>gaiatest</code> はB2Gデスクトップを起動できます。これをするには、B2GバイナリーファイルとB2Gプロファイルへのパスを渡しておく必要があります。下記の例では <code>$HOME</code> 変数に <code>b2g</code> バイナリーと b2g プロファイルを含めています。これは単に、B2Gデスクトップをダウンロード後に、zip展開した場所です。全てのテストを実行するコマンドは下記の通り:</p>
+</div>
+
+<pre class="brush: bash">gaiatest --binary=$HOME/b2g/b2g-bin --profile=$HOME/b2g/gaia/profile --testvars=testvars.json --restart --type=b2g ./gaiatest/tests/functional/manifest.ini
+</pre>
+
+<p>B2G デスクトップに互換性のないテスト — 例えば電話をかけたりSMS送信したりするもの — はテスト実行から自動的に省かれます。</p>
+
+<p>コマンドライン上でファイルを直接呼んでテスト実行できます:</p>
+
+<pre class="brush: bash">gaiatest --binary=$HOME/b2g/b2g-bin --profile=$HOME/b2g/gaia/profile --testvars=testvars.json --restart ./gaiatest/tests/functional/clock/test_clock_set_alarm.py
+</pre>
+
+<h2 id="Firefox_OS_デバイスの上でのテスト">Firefox OS デバイスの上でのテスト</h2>
+
+<p><span style="line-height: 1.5;">実際のFirefox OSデバイス上でのテストは、より複雑です。しかし、テストの中で実際のデバイス上でAPIにアクセスする（+ etc...）ため、より正確な結果を得る事ができます。全てのデバイスAPIや、ハードウェア機能といったものへアクセスできます。しなしながら、Firefox OS の実端末を持っていない場合や、使っている機能が実際のハードウェアを必要としない場合は、エミュレータ内で一般機能をテストすることもできます。</span></p>
+
+<div class="note">
+<p>If you don't want to setup the environment manually. You can try <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Automated_testing/MozITP">MozITP</a>, it will automatically setup a pre-configured Ubuntu VM and Gaia UI Test environment, so you can start testing on real device or simulator in one-click.</p>
+</div>
+
+<p><font size="5"><span style="letter-spacing: -0.5px; line-height: 24px;">前提条件</span></font></p>
+
+<div>
+<ul>
+ <li><a href="/en-US/Firefox_OS/Debugging/Installing_ADB">Android Debug Bridge</a> がPCにインストールされていること、<a href="/en-US/Firefox_OS/Firefox_OS_build_prerequisites#For_Linux.3A_configure_the_udev_rule_for_your_phone">udev rules configured</a> が済んでいること</li>
+ <li>Marionetteが有効になっているビルドのソフトがフラッシュされた、Firefox OSデバイス</li>
+ <li>あなたのFirefox OSデバイスにフラッシュされたソフトをビルドした際、cloneしてcheck outしたものと同じブランチの、gaiaレポジトリ (<a href="https://github.com/mozilla-b2g/gaia/">Gaia Github repository</a>) </li>
+ <li><a href="#testvars">testvars.json ファイル</a>  (詳しくは、他の関連セクションで説明されています)</li>
+</ul>
+</div>
+
+<h3 id="テストを実行する">テストを実行する</h3>
+
+<p>The gaiatest package is needed to run the tests. We need to install this for the branch that we want to run the tests on. Navigate to the <code>gaia/tests/python/gaia-ui-tests/</code> directory and install gaiatest with this command:</p>
+
+<pre class="brush: bash line-numbers  language-bash"><code class="language-bash">python setup.py develop</code></pre>
+
+<div class="note">
+<p><strong>Note</strong>: Before you start to run the test, read through <a href="http://gaiatest.readthedocs.org/en/latest/testrunner.html#risks" title="https://developer.mozilla.org/en-US/docs/Gaia_Test_Runner#Risks">this warning</a> in order to acknowledge that running gaia-ui-tests on a device may cause data to be deleted from the device!</p>
+</div>
+
+<div class="note">
+<p><strong>Debug Firefox OS builds: </strong>Firefox OS builds built with DEBUG=1 will need a greater timeout than the default (20 seconds). Try adding to the command line --timeout 60000 or higher, depending upon the speed of the device.</p>
+</div>
+
+<p>Marionette on the device awaits commands on port 2828. We need to forward our local port to the remote port on the device using adb. Run the following command:</p>
+
+<pre class="brush: bash line-numbers  language-bash"><code class="language-bash">adb forward tcp:2828 tcp:2828</code></pre>
+
+<p>Please be reminded that you'll need to start your emulator before the command, if you are not running on a real Firefox OS device.</p>
+
+<p>You can use the following command to execute all the gaia-ui-tests:</p>
+
+<pre class="brush: bash line-numbers  language-bash"><code class="language-bash">gaiatest --address=localhost:2828 --testvars=&lt;TESTVARS_FILE&gt; --restart --type=b2g gaiatest/tests/functional/manifest.ini</code></pre>
+
+<p>Or use the following if you want to run a single test (substituting the last part for the actual test you want to run):</p>
+
+<pre class="brush: bash line-numbers  language-bash"><code class="language-bash">gaiatest --address=localhost:2828 --testvars=&lt;TESTVARS_FILE&gt; --restart gaiatest/tests/functional/clock/test_clock_create_new_alarm.py</code></pre>
+
+<p>After the test, you will see all the pass/fail results and stacktraces for each file.</p>
+
+<h2 id="Gecko_とGaia_開発者向けの_Treeherder_を用いてテストを行う">Gecko とGaia 開発者向けの Treeherder を用いてテストを行う</h2>
+
+<p>In this section we will focus upon replicating a Treeherder test locally. Before testing locally with a Treeherder configuration, you need to be aware that it builds a Gaia profile separately. The profile that comes packaged with the Treeherder build or rel-eng build is NOT the same Gaia profile that Treeherder uses.</p>
+
+<div>
+<h3 id="前提条件_2">前提条件</h3>
+
+<ul>
+ <li>A B2G desktop build. You can either <a href="http://nightly.mozilla.org/">download</a> it (including from a Try push) and unpack to a directory on your computer or virtual machine or <a href="https://developer.mozilla.org/en-US/Firefox_OS/Using_the_B2G_desktop_client#Building_the_desktop_client">compile it yourself</a>, with the addition of <code>ENABLE_MARIONETTE=1</code> in your mozconfig.</li>
+ <li>The <a href="https://github.com/mozilla-b2g/gaia/">Gaia Github repository</a> checked out (for making the Gaia profile, and installing gaiatest and the test files).</li>
+ <li>A <code>testvars.json</code> file; see <a href="#Configuring_test_variables">Configuring test variables</a>.</li>
+</ul>
+</div>
+
+<h3 id="Treeherder_設定を使って_Gaia_プロファイルを作成する">Treeherder 設定を使って Gaia プロファイルを作成する</h3>
+
+<p>Before building a profile we need to check the environment variables that were used to build the profile. Searching in the "brief log" of the Gu test run, find this command block:</p>
+
+<pre class="brush: bash line-numbers  language-bash"><code class="language-bash">Using env: {'DEBUG': '0',
+            'DESKTOP': '0',
+            'DESKTOP_SHIMS': '0',
+            'NOFTU': '0'}</code></pre>
+
+<p>These settings can drastically change the way desktop B2G behaves. It is very important to match Treeherder's settings.</p>
+
+<p>The next step is to checkout the git commit that matches the hg commit that Treeherder ran with. You can also find the hg commit in the "brief log" of the Treeherder run but you will need to correlate that with the git commit yourself.</p>
+
+<p>The gaia test repository includes a <code>make</code> script for building a Gaia profile. Navigate to the Gaia repo that you have cloned locally, and build the profile using the environment variables we found on Treeherder:</p>
+
+<pre class="brush: bash line-numbers  language-bash"><code class="language-bash">DEBUG=0 DESKTOP=0 DESKTOP_SHIMS=0 NOFTU=0 make</code></pre>
+
+<h3 id="テストを実行する_2">テストを実行する</h3>
+
+<p>Using the same git commit that Treeherder used to run the test, go to the <code>gaia/tests/python/gaia-ui-tests</code> directory and install gaiatest using the following command:</p>
+
+<pre class="brush: bash line-numbers  language-bash"><code class="language-bash">python setup.py develop</code></pre>
+
+<p>Now that you have built the Gaia profile, the only significant difference to running these tests is that you must direct gaiatest to the binary location and profile location.</p>
+
+<p>Inside the <code>gaia-ui-tests</code> directory, run the below command, with the following substitutions made:</p>
+
+<ul>
+ <li><code>$BINARY_PATH</code>: The path to the <code>b2g-bin</code> file in the directory you have built or unpacked desktop B2G to.</li>
+ <li><code>$PROFILE_PATH</code>: The path to your locally build Gaia profile. If built from the Gaia repository it will be <code>~/gaia/profile</code>.</li>
+</ul>
+
+<pre class="brush: bash line-numbers  language-bash"><code class="language-bash">gaiatest --binary $BINARY_PATH/b2g/b2g-bin --profile $PROFILE_PATH/profile --restart --testvars testvars.json gaiatest/tests/manifest.ini --type=b2g</code></pre>
+
+<div class="note">
+<p><strong>Note</strong>: There is no need to forward port 2828 unless you have set the Marionette server to use a different default port.</p>
+</div>
+
+<div class="warning">
+<p><strong>Important</strong>: Try to keep your mouse cursor clear of the b2g window so that pointer events do not pollute the test run.</p>
+</div>
+
+<h3 id="入り組んだ_Treeherder_ジョブの中から_HTML_レポートを見つける">入り組んだ Treeherder ジョブの中から HTML レポートを見つける</h3>
+
+<p>All Treeherder jobs (both pass and fail) have an HTML report output generated and stored.</p>
+
+<ol>
+ <li>For the commit and <em>Gip</em> job, click the chunk of interest (e.g., f1, f2).</li>
+ <li>In the status bar at the bottom of the screen find the section titled: <strong><label>artifact uploaded</label></strong> <span> <span class="ng-binding ng-scope">output.html</span></span>.</li>
+ <li>Click link to view the report.</li>
+</ol>
+
+<h2 id="既に実行済みのデスクトップ_B2G_バイナリをテストする">既に実行済みのデスクトップ B2G バイナリをテストする</h2>
+
+<p>In this section we will look at running the tests against an already running Desktop B2G binary with modified source code.</p>
+
+<div>
+<h3 id="前提条件_3">前提条件</h3>
+
+<ul>
+ <li>A B2G desktop build with your Gecko changes. You can either <a href="http://nightly.mozilla.org/">download</a> it (including from a Try push) and unpack to a directory on your computer or virtual machine or <a href="https://developer.mozilla.org/en-US/Firefox_OS/Using_the_B2G_desktop_client#Building_the_desktop_client">compile it yourself</a>, with the addition of <code>ENABLE_MARIONETTE=1</code> in your mozconfig.</li>
+ <li>Your debugger of choice attached to the B2G binary.</li>
+ <li>The <a href="https://github.com/mozilla-b2g/gaia/">Gaia Github repository</a> checked out (for installing gaiatest and the test files).</li>
+ <li>A <code>testvars.json</code> file; see <a href="#Configuring_test_variables">Configuring test variables</a>.</li>
+</ul>
+</div>
+
+<h3 id="テストを実行する_3">テストを実行する</h3>
+
+<p>Running tests against an existing b2g process is quite easy — you've already gone through the hard parts to build B2G!</p>
+
+<p>If you have not already installed gaiatest then do so now by going to <code>gaia/tests/python/gaia-ui-tests</code> and running the following:</p>
+
+<pre class="brush: bash line-numbers  language-bash"><code class="language-bash">python setup.py develop</code></pre>
+
+<p>Once you have started the b2g binary process and attached your debugger you need to direct gaiatest to the port using the <code>--address</code> command. Do not use <code>--binary</code> or <code>--profile</code>, otherwise gaiatest will just send commands directly to the port without attempting to start or close the binary.</p>
+
+<pre class="brush: bash line-numbers  language-bash"><code class="language-bash">gaiatest --testvars testvars.json gaiatest/tests/functional/test_that_is_being_debugged.py</code></pre>
+
+<div class="note">
+<p><strong>Note</strong>: We have omitted the <code>--restart</code> command too. As gaiatest does not attempt to stop or start the binary, some data from your test run may be left behind in Firefox OS databases or even in the DOM. It is your responsibility to reset B2G back to a basic state before trying to run the test for a second time.</p>
+</div>
+
+<h2 id="テスト変数を設定する">テスト変数を設定する</h2>
+
+<p>You can customize variables used during the test using a <code>testvars.json</code> file. The gaia-ui-tests will wipe the databases on your phone in order to give the test a clean profile to run against. Gaiatest contains protection against running and wiping your device's data. Please read <a href="https://developer.mozilla.org/en-US/docs/Gaia_Test_Runner#Risks" title="https://developer.mozilla.org/en-US/docs/Gaia_Test_Runner#Risks">the warning</a> before you set up your test variables file.</p>
+
+<p>We use the <code>--testvars</code> option to pass in local variables, particularly those that cannot be checked into the repository. For example in gaia-ui-tests these variables can be your private login credentials, phone number, or details of your WiFi connection.</p>
+
+<p>To use it, copy <code>testvars_template.json</code> to a different filename but add it into <code>.gitignore</code> so you don't check it into your repository.</p>
+
+<p>When running your tests add the argument: <code>--testvars=(filename).json</code></p>
+
+<h3 id="(端末用の)_testvars.json_を使って_WiFi_設定する方法">(端末用の) testvars.json  を使って WiFi 設定する方法</h3>
+
+<p>By setting the WiFi key in <code>testvars.json</code> you can configure the Firefox OS Settings database with your WiFi configuration. Then the test cases can use your WiFi connection.</p>
+
+<p>No WiFi authentication:</p>
+
+<pre><code class="brush: bash">"wifi": { "ssid": "MyNetwork"} </code></pre>
+
+<p>WEP authentication:</p>
+
+<pre><code>"wifi": { "ssid": "MyNetwork", "keyManagement": "WEP", "wep": "MyPassword" } </code></pre>
+
+<p>WPA-PSK authentication:</p>
+
+<pre><code>"wifi": { "ssid": "MyNetwork", "keyManagement": "WPA-PSK", "psk": "MyPassword" } </code></pre>
+
+<div class="note">
+<p><strong>Note:</strong> Due to <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=775499" title="FIXED: [Wifi] Support subject_match to WPA-EAP Enterprise networks">バグ 775499</a>, WiFi connections via WPA-EAP are not possible at this time.</p>
+</div>
+
+<h2 id="トラブルシューティング">トラブルシューティング</h2>
+
+<p>この節では、いくつかのよくあるエラーメッセージを、潜在的な解決策を挙げつつ解説します。</p>
+
+<h3 id="テスト開始前によくある問題">テスト開始前によくある問題</h3>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col" style="text-align: center;"><strong>エラーメッセージ</strong></th>
+   <th scope="col" style="text-align: center;">対応策</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>error: [Errno 111] Connection refused</td>
+   <td>
+    <p>"adb forward tcp:2828 tcp:2828" コマンドを再発行する<br>
+     <br>
+     B2G プロセスが実行されていない</p>
+   </td>
+  </tr>
+  <tr>
+   <td>Element ... not visible before timeout</td>
+   <td>テストするアプリにて、要素(element)が表示されている事を確認する</td>
+  </tr>
+  <tr>
+   <td>TimeoutException: Condition timed out</td>
+   <td>アプリの条件が、期待しているのと同じである事を確認する</td>
+  </tr>
+  <tr>
+   <td>marionette.errors.MarionetteException: localhost:2828 is unavailable.</td>
+   <td>何者か、よくあるのが `adb forward` コマンドがポートをブロックしている。`adb kill-server` で解決するか、アプリを停止することでポートは開放される</td>
+  </tr>
+  <tr>
+   <td>ImportError: No module named bluetooth</td>
+   <td>
+    <p>コマンド内で、 <code>--type=b2g</code> を<br>
+     <code>--type=b2g-bluetooth</code><br>
+     に置き換える、あるいは pybluez Python bluetooth パッケージをインストールする</p>
+   </td>
+  </tr>
+  <tr>
+   <td>OSError: [Errno 2] No such file or directory: '~/moz/gaia/profile'</td>
+   <td>コマンドラインにて、 $HOME のつもりで ~ を使っていないかどうか確認する</td>
+  </tr>
+ </tbody>
+</table>
+
+<p> </p>

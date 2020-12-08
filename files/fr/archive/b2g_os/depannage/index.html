@@ -1,0 +1,60 @@
+---
+title: Dépannage de Firefox OS
+slug: Archive/B2G_OS/depannage
+tags:
+  - B2G
+  - Firefox OS
+  - Mobile
+translation_of: Archive/B2G_OS/Troubleshooting
+---
+<div class="summary">
+<p>Cet article offre des astuces pour résoudre des problèmes courants pouvant survenir lors de l'utilisation de Firefox OS. N'hésitez pas à compléter cette page !</p>
+</div>
+
+<h2 id="Problème_de_réseau">Problème de réseau</h2>
+
+<p>Si vous avez des difficultés à vous connecter aux réseaux Wi-Fi, il peut être utile de supprimer le fichier de configuration Wi-Fi de l'appareil. Vous pouvez le faire de cette façon :</p>
+
+<pre>adb shell rm /data/misc/wifi/wpa_supplicant.conf
+adb reboot
+</pre>
+
+<div class="note">
+<p><strong>Note :</strong> Ces instructions partent du principe que vous avez <a href="/fr/Firefox_OS/Installer_sur_un_telephone_mobile#Configurer_les_r.C3.A8gles_udev_pour_votre_appareil" title="/en-US/docs/Mozilla/Firefox_OS/Installing_on_a_mobile_device#Configuring_the_udev_rule_for_your_device">configuré le paramètre udev</a> pour l'appareil.</p>
+</div>
+
+<h2 id="Téléphone_briqué">Téléphone briqué</h2>
+
+<p>Si vous avez briqué votre téléphone, par exemple en essayant de le flasher avec de mauvaises images, essayez de redémarrer sur le bootloader (fastboot ou heimdal en fonction de votre téléphone). La séquence exacte dépend du téléphone. Retirez le câble USB. Retirez la batterie. Réinsérez la batterie. Pour Unagi et Otoro, appuyez et maintenez le bouton d'augmentation du volume ainsi que le bouton d'alimentation pendant plusieurs secondes jusqu'à voir l'écran de chargement. Vérifiez que le téléphone est dans le mode bootloader en utilisant <code>fastboot devices</code> (ou <code>heimdall devices</code> sur certains téléphones Samsung). Une fois que vous pouvez voir le téléphone en utilisant <code>fastboot devices</code>, positionnez-vous dans le dossier contenant une image de base, ou les fichiers fournis par le fabriquant du téléphone (pour certains téléphones). </p>
+
+<p>Vous avez deux options pour flasher :</p>
+
+<ul>
+ <li>utiliser <code>./flash.sh </code>(recommandé).</li>
+ <li>exécuter les commandes suivantes dans un terminal:</li>
+</ul>
+
+<pre class="brush: bash">fastboot flash boot boot.img
+fastboot flash userdata userdata.img
+fastboot flash system system.img
+fastboot flash recovery recovery.img
+fastboot erase cache
+fastboot reboot</pre>
+
+<h2 id="LED_rouge_clignotante_(otorounagi)">LED rouge clignotante (otoro/unagi)</h2>
+
+<p>Ceci veut dire que la batterie est trop faible pour démarrer l'appareil. Vous pouvez la laisser se charger pendant un moment (jusqu'à ce que la LED rouge arrête de clignoter, et un petit peu plus longtemps), ou vous pouvez débrancher le câble USB, retirer la batterie, insérer le câble USB, et réinsérer la batterie.</p>
+
+<h2 id="Impossibilité_de_recevoir_un_SMS_avec_une_carte_SIM_utilisée_précédemment_dans_un_iPhone">Impossibilité de recevoir un SMS avec une carte SIM utilisée précédemment dans un iPhone</h2>
+
+<p>Si vous faites passer votre carte SIM d'un iPhone à un téléphone Firefox OS (ou une autre plateforme), il ce peut que vous ne puissiez plus recevoir de SMS d'utilisateurs d'iPhone. La raison est que les SMS entre iPhone sont envoyés en utilisant <a href="https://www.apple.com/ios/messages/">iMessage</a>, qui fait passer les messages par les serveurs d'Apple au lieu de les envoyer comme de véritables SMS, dans le but de faire faire des économies aux utilisateurs. Malheureusement, lorsque vous quitter l'iPhone, iMessage ne peut pas le savoir donc les message en provenance d'autres utilisateurs d'iPhone seront toujours envoyés avec iMessage, ce qui veut dire que vous ne pourrez pas les recevoir.</p>
+
+<p>Pour rectifier ce comportement, vous devez désactiver iMessage pour votre SIM. Pour savoir comment faire, veuillez lire le guide sur imore.com: <a href="http://www.imore.com/text-issues-switching-iphone-android-heres-fix">Here's how to turn off iMessage</a>.</p>
+
+<h2 id="Appareil_invisible_pour_ADB_sur_OSX">Appareil invisible pour ADB sur OSX</h2>
+
+<p>Lorsque vous exécutez <code>adb devices</code> sur OSX, certains appareils peuvent ne pas apparaitre pas dans la liste, pour pleins de bonnes raisons. Ceci peut s'arranger en ajoutant le vendor ID de votre appareil au fichier <code>~/.android/adb_usb.ini</code> , pour aider ADB à le voir.</p>
+
+<div class="note">
+<p><strong>Note</strong>: Voir <a href="http://stackoverflow.com/a/7136003/1027966">ce post stackoverflow</a> pour obtenir tous les détails, notamment comment trouver le vendor ID de votre appareil, et comment l'ajouter au fichier <code>adb_usb.ini</code>.</p>
+</div>

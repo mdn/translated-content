@@ -1,0 +1,71 @@
+---
+title: Account examples
+slug: Mozilla/Thunderbird/Account_examples
+tags:
+  - Extensions
+  - thunderbird
+translation_of: Mozilla/Thunderbird/Account_examples
+---
+<div class="blockIndicator draft">
+<p><strong>Brouillon</strong><br>
+ Cette page n'est pas complète</p>
+</div>
+
+<div class="blockIndicator standardNote">
+<p>Ce contenu couvre les fonctionnalités introduites dans <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a></p>
+</div>
+
+<p>Cet article fournit des exemples d'accès et de manipulation des comptes Thunderbird. Les <a class="internal" href="/en-US/docs/Thunderbird/Account_interfaces" title="en/Thunderbird/Account interfaces">interfaces de compte</a> fournissent une vue d'ensemble des interfaces associées. Voir <a class="internal" href="/en-US/docs/Extensions/Thunderbird/An_overview_of_the_Thunderbird_interface" title="En/Extensions/Thunderbird/An overview of the Thunderbird interface">Présention des composants Thunderbird </a>pour une description générale de l'interface utilisateur de Thunderbird et des interfaces de programmation associées.</p>
+
+<h2 id="Itérer_sur_tous_les_comptes_connus">Itérer sur tous les comptes connus</h2>
+
+<pre class="brush: js notranslate">var acctMgr = Components.classes["@mozilla.org/messenger/account-manager;1"]
+                        .getService(Components.interfaces.nsIMsgAccountManager);
+var accounts = acctMgr.accounts;
+if (accounts.queryElementAt) {
+  // Gecko 17+
+  for (var i = 0; i &lt; accounts.length; i++) {
+    var account = accounts.queryElementAt(i, Components.interfaces.nsIMsgAccount);
+    // Faire quelque chose avec le compte
+  }
+} else {
+  // Gecko &lt; 17
+  for (var i = 0; i &lt; accounts.Count(); i++) {
+    var account = accounts.QueryElementAt(i, Components.interfaces.nsIMsgAccount);
+    // Faire quelque chose avec le compte
+  }
+}
+</pre>
+
+<h2 id="Introspectez_les_détails_de_certains_comptes_noms_paramètres_etc.">Introspectez les détails de certains comptes (noms, paramètres, etc.)</h2>
+
+<pre class="brush: js notranslate">var acctMgr = Components.classes["@mozilla.org/messenger/account-manager;1"]
+                        .getService(Components.interfaces.nsIMsgAccountManager);
+var accounts = acctMgr.accounts;
+for (var i = 0; i &lt; accounts.length; i++) {
+  var account = accounts.queryElementAt(i, Components.interfaces.nsIMsgAccount);
+  Application.console.log(account.key);
+  // account.incomingServer est un nsIMsgIncomingServer
+  // account.identities est un nsISupportsArray de nsIMsgIdentity objects
+  //                    vous pouvez le parcourir comme acctMgr.accounts ci-dessus
+  // account.defaultIdentity est un nsIMsgIdentity
+}
+</pre>
+
+<h2 id="Parcourir_les_dossiers_dun_compte">Parcourir les dossiers d'un compte</h2>
+
+<pre class="brush: js notranslate">var acctMgr = Components.classes["@mozilla.org/messenger/account-manager;1"]
+                        .getService(Components.interfaces.nsIMsgAccountManager);
+var accounts = acctMgr.accounts;
+for (var i = 0; i &lt; accounts.length; i++) {
+  var account = accounts.queryElementAt(i, Components.interfaces.nsIMsgAccount);
+  var rootFolder = account.incomingServer.rootFolder; // nsIMsgFolder
+  Application.console.log(rootFolder.prettiestName);
+  if (rootFolder.hasSubFolders) {
+    var subFolders = rootFolder.subFolders; // nsIMsgFolder
+    while(subFolders.hasMoreElements()) {
+      var folder = subFolders.getNext().QueryInterface(Components.interfaces.nsIMsgFolder);
+      Application.console.log(folder.prettiestName);
+    }
+  }
+}</pre>

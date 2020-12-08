@@ -1,0 +1,696 @@
+---
+title: nsIPromptService
+slug: Mozilla/Tech/XPCOM/Reference/Interface/nsIPromptService
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIPromptService
+---
+<p></p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/embedding/components/windowwatcher/public/nsIPromptService.idl" rel="custom">embedding/components/windowwatcher/public/nsIPromptService.idl</a></code><span style="text-align: right; float: right;"><a href="/zh-CN/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">脚本化</a></span></div>
+<span style="padding: 4px 2px;">该接口用来显示一些简单的对话框.在chrome上下文,你应该使用该接口的所属方法来替代常规的DOM方法,例如 <a href="/zh-CN/docs/Web/API/Window/alert" title='显示一个警告对话框,上面显示有指定的文本内容以及一个"确定"按钮。'><code>window.alert</code></a>, <a href="/zh-CN/docs/Web/API/Window/confirm" title="Window.confirm() 方法显示一个具有一个可选消息和两个按钮(确定和取消)的模态对话框 。"><code>window.confirm</code></a>, 等.</span>
+
+<div style="background: #eee; padding: 2px;">
+继承于: <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
+<span style="text-align: right; float: right;">最后修改于Gecko 1.7.5 </span></div>
+</div><p></p>
+<p>You can define access keys (or keyboard shortcuts) for buttons by including an ampersand ("&amp;") in front of the character that should be the access key for that button. If you need to include an ampersand in the button's text, use two of them, like this: "&amp;&amp;".</p>
+<div class="note">
+ <strong>Note:</strong> Some of these interface methods use <code>out</code> and <code>inout</code> parameters. In C++, <code>out</code> parameters are pointers. For JavaScript, they are extra work, as you can't use an <code>out</code> parameter directly. You need to wrap them in a temporary object, which can be either empty or have a <code>value</code> property set to the <code>out</code> parameter type. For more information on out parameters and JavaScript refer to <a href="/zh-cn/Working_with_out_parameters" title="zh-cn/Working with out parameters">Working with out parameters</a>.</div>
+<p>该接口由: <code>@mozilla.org/embedcomp/prompt-service;1</code> 组件实现,下面的代码可以得到一个promptService对象实例:</p>
+<pre>var promptService = Components.classes["@mozilla.org/embedcomp/prompt-service;1"]
+                              .getService(Components.interfaces.nsIPromptService);
+</pre>
+<h2 id="Method_overview" name="Method_overview">方法概述</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="#alert()">alert</a>(in <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindow" title="">nsIDOMWindow</a></code> aParent, in wstring aDialogTitle, in wstring aText);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#alertCheck()">alertCheck</a>(in <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindow" title="">nsIDOMWindow</a></code> aParent, in wstring aDialogTitle, in wstring aText, in wstring aCheckMsg, inout boolean aCheckState);</code></td>
+  </tr>
+  <tr>
+   <td><code>boolean <a href="#confirm()">confirm</a>(in <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindow" title="">nsIDOMWindow</a></code> aParent, in wstring aDialogTitle, in wstring aText);</code></td>
+  </tr>
+  <tr>
+   <td><code>boolean <a href="#confirmCheck()">confirmCheck</a>(in <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindow" title="">nsIDOMWindow</a></code> aParent, in wstring aDialogTitle, in wstring aText, in wstring aCheckMsg, inout boolean aCheckState);</code></td>
+  </tr>
+  <tr>
+   <td><code>PRInt32 <a href="#confirmEx()">confirmEx</a>(in <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindow" title="">nsIDOMWindow</a></code> aParent,in wstring aDialogTitle,in wstring aText, in unsigned long aButtonFlags,in wstring aButton0Title, in wstring aButton1Title,in wstring aButton2Title,in wstring aCheckMsg, inout boolean aCheckState);</code></td>
+  </tr>
+  <tr>
+   <td><code>boolean <a href="#prompt()">prompt</a>(in <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindow" title="">nsIDOMWindow</a></code> aParent, in wstring aDialogTitle, in wstring aText, inout wstring aValue, in wstring aCheckMsg, inout boolean aCheckState);</code></td>
+  </tr>
+  <tr>
+   <td><code>boolean <a href="#promptUsernameAndPassword()">promptUsernameAndPassword</a>(in <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindow" title="">nsIDOMWindow</a></code> aParent, in wstring aDialogTitle, in wstring aText, inout wstring aUsername, inout wstring aPassword, in wstring aCheckMsg, inout boolean aCheckState);</code></td>
+  </tr>
+  <tr>
+   <td><code>boolean <a href="#promptPassword()">promptPassword</a>(in <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindow" title="">nsIDOMWindow</a></code> aParent, in wstring aDialogTitle, in wstring aText, inout wstring aPassword, in wstring aCheckMsg, inout boolean aCheckState);</code></td>
+  </tr>
+  <tr>
+   <td><code>boolean <a href="#select()">select</a>(in <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindow" title="">nsIDOMWindow</a></code> aParent, in wstring aDialogTitle, in wstring aText, in PRUint32 aCount, [array, size_is(aCount)] in wstring aSelectList, out long aOutSelection);</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Constants" name="Constants">常量</h2>
+<p>The following flags are combined to form the <code>aButtonFlags</code> parameter passed to <a href="#confirmEx">confirmEx</a>. All flags are defined as <code>unsigned long</code> constants and can be accessed as <code>Components.interfaces.nsIPromptService.<em>flagname</em></code> from JavaScript and as nsIPromptService::<code><em>flagname</em></code> from C++.</p>
+<h3 id="Button_position_flags">Button position flags</h3>
+<p>On Linux and Mac, button 2 is on the left of the prompt, while buttons 1 and 0 are on the right. On Windows and OS/2, the buttons are centred in the order 0, 2, 1.</p>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Constant</td>
+   <td class="header">Value</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>BUTTON_POS_0</code></td>
+   <td><code>1</code></td>
+   <td>This is usually the button used to confirm the prompt. It typically has the label "OK", "Yes" or "Save".</td>
+  </tr>
+  <tr>
+   <td><code>BUTTON_POS_1</code></td>
+   <td><code>256</code></td>
+   <td>This is the button used to cancel the prompt. It typically has the label "Cancel" or "No". It is equivalent to pressing the Escape key (or Cmd+. on the Mac), or closing the window through the OS controls.</td>
+  </tr>
+  <tr>
+   <td><code>BUTTON_POS_2</code></td>
+   <td><code>65536</code></td>
+   <td>This button can be used to give the user a choice of options, but still allowing the user to cancel the prompt. For instance, it might have the label "Don't Save".</td>
+  </tr>
+ </tbody>
+</table>
+<h3 id="Button_title_flags">Button title flags</h3>
+<p>These flags are used along with <a href="#Button_position_flags">Button position flags</a> to set the labels of buttons in the prompt.</p>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Constant</td>
+   <td class="header">Value</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>BUTTON_TITLE_OK</code></td>
+   <td><code>1</code></td>
+   <td rowspan="7"> These flags are used to select standard labels from the user's current locale.</td>
+  </tr>
+  <tr>
+   <td><code>BUTTON_TITLE_CANCEL</code></td>
+   <td><code>2</code></td>
+  </tr>
+  <tr>
+   <td><code>BUTTON_TITLE_YES</code></td>
+   <td><code>3</code></td>
+  </tr>
+  <tr>
+   <td><code>BUTTON_TITLE_NO</code></td>
+   <td><code>4</code></td>
+  </tr>
+  <tr>
+   <td><code>BUTTON_TITLE_SAVE</code></td>
+   <td><code>5</code></td>
+  </tr>
+  <tr>
+   <td><code>BUTTON_TITLE_DONT_SAVE</code></td>
+   <td><code>6</code></td>
+  </tr>
+  <tr>
+   <td><code>BUTTON_TITLE_REVERT</code></td>
+   <td><code>7</code></td>
+  </tr>
+  <tr>
+   <td><code>BUTTON_TITLE_IS_STRING</code></td>
+   <td><code>127</code></td>
+   <td>This flag indicates that the label is passed as a separate string. Use this for labels that don't match one of the constants above.</td>
+  </tr>
+ </tbody>
+</table>
+<h3 id="Button_default_flags">Button default flags</h3>
+<p>These flags are used to select which button is the default.</p>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Constant</td>
+   <td class="header">Value</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td>BUTTON_POS_0_DEFAULT</td>
+   <td>0</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>BUTTON_POS_1_DEFAULT</td>
+   <td>16777216</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>BUTTON_POS_2_DEFAULT</td>
+   <td>33554432</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+<h3 id="BUTTON_DELAY_ENABLE">BUTTON_DELAY_ENABLE</h3>
+<p><code>BUTTON_DELAY_ENABLE</code> causes the buttons to be initially disabled. They are enabled after a timeout expires. The implementation may interpret this loosely, as the intent is to ensure that the user does not click through a security dialog too quickly. Strictly speaking, the implementation could choose to ignore this flag. A delay can be useful not only to give the user more time to think before acting, but also as a countermeasure against malicious web sites that intentionally create a race condition whereby the user intends to click or type a key responding, for example, to the web site's prompt but the security dialog pops up unexpectedly and its button is unintentionally activated.</p>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Constant</td>
+   <td class="header">Value</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td>BUTTON_DELAY_ENABLE</td>
+   <td>67108864</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+<h3 id="Standard_Buttons_flags">Standard Buttons flags</h3>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Constant</td>
+   <td class="header">Value</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>STD_OK_CANCEL_BUTTONS</code></td>
+   <td>513</td>
+   <td>
+    <p>selects the standard set of OK/Cancel buttons.</p>
+    <code>(BUTTON_TITLE_OK *BUTTON_POS_0) +(BUTTON_TITLE_CANCEL * BUTTON_POS_1)</code></td>
+  </tr>
+  <tr>
+   <td><code>STD_YES_NO_BUTTONS</code></td>
+   <td>1027</td>
+   <td>
+    <p>selects the standard set of Yes/No buttons.</p>
+    <code>(BUTTON_TITLE_YES *BUTTON_POS_0) +(BUTTON_TITLE_NO * BUTTON_POS_1)</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Methods" name="Methods">方法</h2>
+<h3 id="alert()">alert()</h3>
+<p><code>alert</code> 方法显示一个警告对话框,包含一个确认按钮. 除了可以设置对话框的标题以外,效果和<a href="/zh-CN/docs/Web/API/Window/alert" title='显示一个警告对话框,上面显示有指定的文本内容以及一个"确定"按钮。'><code>window.alert</code></a>全都相同 . 在chrome上下文,你应该使用该xpcom方法来替代<code>window.alert</code>.</p>
+<pre>void alert(
+  in nsIDOMWindow aParent,
+  in wstring aDialogTitle,
+  in wstring aText
+);
+</pre>
+<h6 id="Parameters" name="Parameters">参数</h6>
+<dl>
+ <dt>
+  <code>aParent</code></dt>
+ <dd>
+  对话框的父窗口,如果该值设为 <code>null</code>,则父窗口为当前激活的窗口 <code>nsIWindowWatcher.activeWindow</code>.</dd>
+ <dt>
+  <code>aDialogTitle</code></dt>
+ <dd>
+  对话框的标题文字.</dd>
+ <dt>
+  <code>aText</code></dt>
+ <dd>
+  对话框的内容文字.</dd>
+</dl>
+<p>代码示例:<a href="#alert_example">alert_example</a>.</p>
+<h3 id="alertCheck()">alertCheck()</h3>
+<p>显示一个警告对话框,包含一个确认按钮和一个复选框.</p>
+<pre>void alertCheck(
+  in nsIDOMWindow aParent,
+  in wstring aDialogTitle,
+  in wstring aText,
+  in wstring aCheckMsg,
+  inout boolean aCheckState
+);
+</pre>
+<h6 id="Parameters" name="Parameters">参数</h6>
+<dl>
+ <dt>
+  <code>aParent</code></dt>
+ <dd>
+  对话框的父窗口,如果该值设为 <code>null</code>,则父窗口为当前激活的窗口 <code>nsIWindowWatcher.activeWindow</code>..</dd>
+ <dt>
+  <code>aDialogTitle</code></dt>
+ <dd>
+  对话框的标题文字.</dd>
+ <dt>
+  <code>aText</code></dt>
+ <dd>
+  对话框的内容文字.</dd>
+ <dt>
+  <code>aCheckMsg</code></dt>
+ <dd>
+  复选框的说明文字.</dd>
+ <dt>
+  <code>aCheckState</code></dt>
+ <dd>
+  该变量是一个对象引用,当对话框打开时,变量的value属性控制了复选框的初始选择状态.当对话框关闭时,变量的value属性会存储下复选框的最后选择状态.该变量初始化时可以包含一个类型为布尔值的value属性或者是空对象.</dd>
+</dl>
+<p>代码示例:<a href="#alertCheck_example">alertCheck_example</a>.</p>
+<h3 id="confirm()">confirm()</h3>
+<p>显示一个确认对话框,包含一个确认按钮和一个取消按钮.</p>
+<pre>boolean confirm(
+  in nsIDOMWindow aParent,
+  in wstring aDialogTitle,
+  in wstring aText
+);
+</pre>
+<h6 id="Parameters" name="Parameters">参数</h6>
+<dl>
+ <dt>
+  <code>aParent</code></dt>
+ <dd>
+  对话框的父窗口,如果该值设为 <code>null</code>,则父窗口为当前激活的窗口 <code>nsIWindowWatcher.activeWindow</code>.</dd>
+ <dt>
+  <code>aDialogTitle</code></dt>
+ <dd>
+  对话框的标题文字.</dd>
+ <dt>
+  <code>aText</code></dt>
+ <dd>
+  对话框的内容文字.</dd>
+</dl>
+<h6 id="Return_value" name="Return_value">返回值</h6>
+<dl>
+ <dd>
+  点确定按钮返回 <code>true</code> , 点取消按钮返回 <code>false</code></dd>
+</dl>
+<p>代码示例:<a href="#confirm_example">confirm_example</a>.</p>
+<h3 id="confirmCheck()">confirmCheck()</h3>
+<p>显示一个对话框,包含一个确认按钮,一个取消按钮和一个复选框.</p>
+<p>代码示例:<a href="#confirm_example">confirm_example</a>.</p>
+<pre>boolean confirmCheck(
+  in nsIDOMWindow aParent,
+  in wstring aDialogTitle,
+  in wstring aText,
+  in wstring aCheckMsg,
+  inout boolean aCheckState
+);
+</pre>
+<h6 id="Parameters" name="Parameters">参数</h6>
+<dl>
+ <dt>
+  <code>aParent</code></dt>
+ <dd>
+  对话框的父窗口,如果该值设为 <code>null</code>,则父窗口为当前激活的窗口 <code>nsIWindowWatcher.activeWindow</code>.</dd>
+ <dt>
+  <code>aDialogTitle</code></dt>
+ <dd>
+  对话框的标题文字.</dd>
+ <dt>
+  <code>aText</code></dt>
+ <dd>
+  对话框的内容文字.</dd>
+ <dt>
+  <code>aCheckMsg</code></dt>
+ <dd>
+  复选框的说明文字.</dd>
+ <dt>
+  <code>aCheckState</code></dt>
+ <dd>
+  该变量是一个对象引用,当对话框打开时,变量的value属性控制了复选框的初始选择状态.当对话框关闭时,变量的value属性会存储下复选框的最后选择状态.该变量初始化时可以包含一个类型为布尔值的value属性或者是空对象.</dd>
+</dl>
+<h6 id="Return_value" name="Return_value">返回值</h6>
+<dl>
+ <dd>
+  点确定按钮返回 <code>true</code> , 点取消按钮返回 <code>false</code></dd>
+</dl>
+<h3 id="confirmEx()">confirmEx()</h3>
+<p>Puts up a dialog with up to 3 buttons and an optional, labeled checkbox.</p>
+<p>The Buttons are numbered 0 - 2. The implementation can decide what order the buttons appear in, and it may not be simply right-to-left (2, 1, 0) or left-to-right (0, 1, 2). See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=624043" title="nsIPromptService.confirmEx : buttons show up in the order 0,2,1 instead of 0,1,2">bug 624043</a> for more on this. Button 0 is the default button unless one of the Button Default Flags is specified (see <a href="/zh-cn/XPCOM_Interface_Reference/nsIPromptService#Button_default_flags" title="https://developer.mozilla.org/zh-cn/XPCOM_Interface_Reference/nsIPromptService#Button_default_flags">Button default flags</a>).</p>
+<p>A button may use a predefined title, specified by one of the Button Title Flags values. Each title value can be multiplied by a position value to assign the title to a particular button. If BUTTON_TITLE_IS_STRING is used for a button, the string parameter for that button will be used. If the value for a button position is zero, the button will not be shown.</p>
+<p>The following Example creates a Dialog with an OK button an an custom button description.</p>
+<p><code>aButtonFlags = (BUTTON_POS_0) * (BUTTON_TITLE_OK) +<br>
+ (BUTTON_POS_1) * (BUTTON_TITLE_IS_STRING) +<br>
+ BUTTON_POS_1_DEFAULT; </code></p>
+<div class="note">
+ confirmEx always returns 1 if the user closes the window using the close button in the titlebar! <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=345067" title="Issues with prompt service's confirmEx - confirmEx always returns 1 when user closes dialog window using the X button in titlebar">bug 345067</a></div>
+<pre>PRInt32 confirmEx(
+  in nsIDOMWindow  aParent,
+  in wstring aDialogTitle,
+  in wstring aText,
+  in unsigned long aButtonFlags,
+  in wstring aButton0Title,
+  in wstring aButton1Title,
+  in wstring aButton2Title,
+  in wstring aCheckMsg,
+  inout boolean aCheckState
+);
+</pre>
+<h6 id="Parameters" name="Parameters">参数</h6>
+<dl>
+ <dt>
+  <code>aParent</code></dt>
+ <dd>
+  对话框的父窗口,如果该值设为 <code>null</code>,则父窗口为当前激活的窗口 <code>nsIWindowWatcher.activeWindow</code>.</dd>
+ <dt>
+  <code>aDialogTitle</code></dt>
+ <dd>
+  对话框的标题文字.</dd>
+ <dt>
+  <code>aText</code></dt>
+ <dd>
+  对话框的内容文字.</dd>
+ <dt>
+  <code>aButtonFlags</code></dt>
+ <dd>
+  <code>aButtonFlags</code> is a combination of <a href="#Button_flags">Button flags</a> as described in <a href="#Using_the_button_flags">Using the button flags</a> below.</dd>
+ <dt>
+  <code>aButton0Title</code></dt>
+ <dd>
+  caption displayed for button 0 if<code>(BUTTON_TITLE_IS_STRING*</code><code>BUTTON_TITLE_POS_0)</code> flags are set in aButtonFlags</dd>
+ <dt>
+  <code>aButton1Title</code></dt>
+ <dd>
+  caption displayed for button 1 if<code>(BUTTON_TITLE_IS_STRING*</code><code>BUTTON_TITLE_POS_1)</code> flags are set in aButtonFlags</dd>
+ <dt>
+  <code>aButton2Title</code></dt>
+ <dd>
+  caption displayed for button 2 if<code>(BUTTON_TITLE_IS_STRING*</code><code>BUTTON_TITLE_POS_2)</code> flags are set in aButtonFlags</dd>
+ <dt>
+  <code>aCheckMsg</code></dt>
+ <dd>
+   复选框的说明文字. 如果值设为Null,则复选框不会显示.</dd>
+ <dt>
+  <code>aCheckState</code></dt>
+ <dd>
+  该变量是一个对象引用,当对话框打开时,变量的value属性控制了复选框的初始选择状态.当对话框关闭时,变量的value属性会存储下复选框的最后选择状态.该变量初始化时可以包含一个类型为布尔值的value属性或者是空对象.</dd>
+</dl>
+<h6 id="Return_value" name="Return_value">返回值</h6>
+<dl>
+ <dd>
+  按下按钮的索引.</dd>
+</dl>
+<h3 id="prompt()">prompt()</h3>
+<p>显示一个对话框,包含一个文本框,一个可选的复选框.</p>
+<p>代码示例:<a href="#prompt_example">prompt_example</a>.</p>
+<pre>boolean prompt(
+  in nsIDOMWindow aParent,
+  in wstring aDialogTitle,
+  in wstring aText,
+  inout wstring aValue,
+  in wstring aCheckMsg,
+  inout boolean aCheckState
+);
+</pre>
+<h6 id="Parameters" name="Parameters">参数</h6>
+<dl>
+ <dt>
+  <code>aParent</code></dt>
+ <dd>
+  对话框的父窗口,如果该值设为 <code>null</code>,则父窗口为当前激活的窗口 <code>nsIWindowWatcher.activeWindow</code>.</dd>
+ <dt>
+  <code>aDialogTitle</code></dt>
+ <dd>
+  对话框的标题文字.</dd>
+ <dt>
+  <code>aText</code></dt>
+ <dd>
+  对话框的内容文字.</dd>
+ <dt>
+  <code>aValue</code></dt>
+ <dd>
+  该变量是一个对象引用,当对话框打开时,变量的value属性值就是文本输入框的的初始值.当用户点击确认按钮关闭对话框时,变量的value属性会存储下文本输入框的最后确定值.其他方法关闭对话框时,变量的value属性值不会改变.该变量初始化时可以包含一个类型为字符串值的value属性或者是空对象.</dd>
+ <dt>
+  <code>aCheckMsg</code></dt>
+ <dd>
+  复选框的说明文字. 如果值设为Null,则复选框不会显示.</dd>
+ <dt>
+  <code>aCheckState</code></dt>
+ <dd>
+  该变量是一个对象引用,当对话框打开时,变量的value属性控制了复选框的初始选择状态.当对话框关闭时,变量的value属性会存储下复选框的最后选择状态.该变量初始化时可以包含一个类型为布尔值的value属性或者是空对象.</dd>
+</dl>
+<h6 id="Return_value" name="Return_value">返回值</h6>
+<dl>
+ <dd>
+  点确定按钮返回 <code>true</code> , 点取消按钮返回 <code>false</code></dd>
+</dl>
+<h3 id="promptUsernameAndPassword()">promptUsernameAndPassword()</h3>
+<p>显示一个对话框,内部包含一个文本输入框,一个密码输入框,和一个可选的复选框.</p>
+<p>代码示例:<a href="#promptUsernameAndPassword_example">promptUsernameAndPassword_example</a>.</p>
+<pre>boolean promptUsernameAndPassword(
+  in nsIDOMWindow aParent,
+  in wstring aDialogTitle,
+  in wstring aText,
+  inout wstring aUsername,
+  inout wstring aPassword,
+  in wstring aCheckMsg,
+  inout boolean aCheckState
+);
+</pre>
+<h6 id="Parameters" name="Parameters">参数</h6>
+<dl>
+ <dt>
+  <code>aParent</code></dt>
+ <dd>
+  对话框的父窗口,如果该值设为 <code>null</code>,则父窗口为当前激活的窗口 <code>nsIWindowWatcher.activeWindow</code>.</dd>
+ <dt>
+  <code>aDialogTitle</code></dt>
+ <dd>
+  对话框的标题文字.</dd>
+ <dt>
+  <code>aText</code></dt>
+ <dd>
+  对话框的内容文字.</dd>
+ <dt>
+  <code>aUsername</code></dt>
+ <dd>
+  该变量是一个对象引用,当对话框打开时,变量的value属性值就是用户名输入框的的初始值.当用户点击确认按钮关闭对话框时,变量的value属性会存储下用户名输入框的最后确定值.其他方法关闭对话框时,变量的value属性值不会改变.该变量初始化时可以包含一个类型为字符串值的value属性或者是空对象.</dd>
+ <dt>
+  <code>aPassword</code></dt>
+ <dd>
+  该变量是一个对象引用,当对话框打开时,变量的value属性值就是密码输入框的的初始值.当用户点击确认按钮关闭对话框时,变量的value属性会存储下密码输入框的最后确定值.其他方法关闭对话框时,变量的value属性值不会改变.该变量初始化时可以包含一个类型为字符串值的value属性或者是空对象.</dd>
+ <dt>
+  <code>aCheckMsg</code></dt>
+ <dd>
+  复选框的说明文字. 如果值设为Null,则复选框不会显示.</dd>
+ <dt>
+  <code>aCheckState</code></dt>
+ <dd>
+  该变量是一个对象引用,当对话框打开时,变量的value属性控制了复选框的初始选择状态.当对话框关闭时,变量的value属性会存储下复选框的最后选择状态.该变量初始化时可以包含一个类型为布尔值的value属性或者是空对象.</dd>
+</dl>
+<h6 id="Return_value" name="Return_value">返回值</h6>
+<dl>
+ <dd>
+  点确定按钮返回 <code>true</code> , 点取消按钮返回 <code>false</code></dd>
+</dl>
+<h3 id="promptPassword()">promptPassword()</h3>
+<p>显示一个对话框,包含一个密码框,一个可选的复选框.</p>
+<p>代码示例:<a href="#promptPassword_example">promptPassword_example</a>.</p>
+<pre>boolean promptPassword(
+  in nsIDOMWindow aParent,
+  in wstring aDialogTitle,
+  in wstring aText,
+  inout wstring aPassword,
+  in wstring aCheckMsg,
+  inout boolean aCheckState
+);
+</pre>
+<h6 id="Parameters" name="Parameters">参数</h6>
+<dl>
+ <dt>
+  <code>aParent</code></dt>
+ <dd>
+  对话框的父窗口,如果该值设为 <code>null</code>,则父窗口为当前激活的窗口 <code>nsIWindowWatcher.activeWindow</code>.</dd>
+ <dt>
+  <code>aDialogTitle</code></dt>
+ <dd>
+  对话框的标题文字.</dd>
+ <dt>
+  <code>aText</code></dt>
+ <dd>
+  对话框的内容文字.</dd>
+ <dt>
+  <code>aPassword</code></dt>
+ <dd>
+  该变量是一个对象引用,当对话框打开时,变量的value属性值就是密码输入框的的初始值.当用户点击确认按钮关闭对话框时,变量的value属性会存储下密码输入框的最后确定值.其他方法关闭对话框时,变量的value属性值不会改变.该变量初始化时可以包含一个类型为字符串值的value属性或者是空对象.</dd>
+ <dt>
+  <code>aCheckMsg</code></dt>
+ <dd>
+  复选框的说明文字. 如果值设为Null,则复选框不会显示.</dd>
+ <dt>
+  <code>aCheckState</code></dt>
+ <dd>
+      该变量是一个对象引用,当对话框打开时,变量的value属性控制了复选框的初始选择状态.当对话框关闭时,变量的value属性会存储下复选框的最后选择状态.该变量初始化时可以包含一个类型为布尔值的value属性或者是空对象.</dd>
+</dl>
+<h6 id="Return_value" name="Return_value">返回值</h6>
+<dl>
+ <dd>
+  点确定按钮返回 <code>true</code> , 点取消按钮返回 <code>false</code></dd>
+</dl>
+<h3 id="select()">select()</h3>
+<p>显示一个对话框,包含一个单项选择的字符串列表.</p>
+<p>代码示例:<a href="#select_example">select_example</a>.</p>
+<pre>boolean select(
+  in  nsIDOMWindow aParent,
+  in  wstring       aDialogTitle,
+  in  wstring       aText,
+  in  PRUint32     aCount,
+  [array, size_is(aCount)] in wstring aSelectList,
+  out long         aOutSelection
+);
+</pre>
+<dl>
+ <dt>
+  <code>aParent</code></dt>
+ <dd>
+  对话框的父窗口,如果该值设为 <code>null</code>,则父窗口为当前激活的窗口 <code>nsIWindowWatcher.activeWindow</code>.</dd>
+ <dt>
+  <code>aDialogTitle</code></dt>
+ <dd>
+  对话框的标题文字.</dd>
+ <dt>
+  <code>aText</code></dt>
+ <dd>
+  对话框的内容文字.</dd>
+ <dt>
+  <code>aCount</code></dt>
+ <dd>
+  参数aSelectList的数组长度.</dd>
+ <dt>
+  <code>aSelectList</code></dt>
+ <dd>
+  构成字符串列表的字符串数组.</dd>
+ <dt>
+  <code>aOutSelection</code></dt>
+ <dd>
+  该变量是一个对象引用,当用户选择某个项目后,变量的value属性值存储了用户所选列表项目的索引值.</dd>
+</dl>
+<h6 id="Return_value" name="Return_value">返回值</h6>
+<dl>
+ <dd>
+  点确定按钮返回 <code>true</code> , 点取消按钮返回 <code>false</code></dd>
+</dl>
+<h2 id="代码示例">代码示例</h2>
+<p> </p>
+<h3 id="alert_example">alert example</h3>
+<p><a href="#alert()">alert()</a> 显示一个简单的对话框.</p>
+<p><img alt="" class="internal" src="/@api/deki/files/4072/=AlertExample.png" style="width: 365px; height: 129px;"></p>
+<pre class="brush: js">var prompts = Components.classes["@mozilla.org/embedcomp/prompt-service;1"]
+                        .getService(Components.interfaces.nsIPromptService);
+
+prompts.alert(null, "Title of this Dialog", "Hello! You have now been alerted.");
+</pre>
+<h3 id="alertCheck_example">alertCheck example</h3>
+<p><a href="#alertCheck()">alertCheck()</a> 显示一个包含复选框的对话框</p>
+<p><img alt="" class="internal" src="/@api/deki/files/4073/=AlertCheckExample.png" style="width: 365px; height: 152px;"></p>
+<pre class="brush: js">var prompts = Components.classes["@mozilla.org/embedcomp/prompt-service;1"]
+                        .getService(Components.interfaces.nsIPromptService);
+
+var check = {value: false};                      // default the checkbox to false
+
+prompts.alertCheck(null, "Title of this Dialog", "Hello! You have now been alerted.",
+                   "And this is a checkbox", check);
+
+// check.value is now true if the box was checked and false if the box was cleared
+</pre>
+<h3 id="confirm_example">confirm example</h3>
+<p><a href="#confirm()">confirm()</a> 显示一个提示框,内部包含一个确认按钮和一个取消按钮.</p>
+<pre class="brush: js">var prompts = Components.classes["@mozilla.org/embedcomp/prompt-service;1"]
+                        .getService(Components.interfaces.nsIPromptService);
+
+var result = prompts.confirm(null, "Title of this Dialog", "Are you sure?");
+
+// result is now true if OK was clicked, and false if cancel was clicked
+</pre>
+<h3 id="confirmCheck_example">confirmCheck example</h3>
+<p><a href="#confirmCheck">confirmCheck</a> 显示一个提示框,内部包含一个确认按钮,一个取消按钮,一个复选框.</p>
+<pre class="brush: js">var prompts = Components.classes["@mozilla.org/embedcomp/prompt-service;1"]
+                        .getService(Components.interfaces.nsIPromptService);
+
+var check = {value: true};                   // default the checkbox to true
+
+var result = prompts.confirmCheck(null, "Title of this Dialog", "Are you sure?",
+                                  "Don't ask again", check);
+
+// check.value is now true if the box was checked AND OK was pressed, false if
+// the box was cleared AND OK was pressed, and is the default of true if Cancel was pressed.
+</pre>
+<h3 id="confirmEx_example">confirmEx example</h3>
+<p><a href="#confirmEx()">confirmEx()</a>  显示一个对话框,内部包含三个或三个以下的按纽,和一个可选的复选框.</p>
+<p><img alt="" class="internal" src="/@api/deki/files/4075/=confirmExExample.png" style="width: 365px; height: 129px;"></p>
+<pre class="brush: js">var prompts = Components.classes["@mozilla.org/embedcomp/prompt-service;1"]
+                        .getService(Components.interfaces.nsIPromptService);
+
+var check = {value: false};                  // default the checkbox to false
+
+var flags = prompts.BUTTON_POS_0 * prompts.BUTTON_TITLE_SAVE +
+            prompts.BUTTON_POS_1 * prompts.BUTTON_TITLE_IS_STRING  +
+            prompts.BUTTON_POS_2 * prompts.BUTTON_TITLE_CANCEL;
+// This value of flags will create 3 buttons. The first will be "Save", the
+// second will be the value of aButtonTitle1, and the third will be "Cancel"
+
+var button = prompts.confirmEx(null, "Title of this Dialog", "What do you want to do?",
+                               flags, "", "Button 1", "", null, check);
+
+// The checkbox will be hidden, and button will contain the index of the button pressed,
+// 0, 1, or 2.
+</pre>
+<h3 id="prompt_example">prompt example</h3>
+<p><a href="#prompt()">prompt()</a> 显示一个对话框,内部包含一个文本输入框.</p>
+<pre class="brush: js">var prompts = Components.classes["@mozilla.org/embedcomp/prompt-service;1"]
+                        .getService(Components.interfaces.nsIPromptService);
+
+var check = {value: false};                  // default the checkbox to false
+
+var input = {value: "Bob"};                  // default the edit field to Bob
+
+var result = prompts.prompt(null, "Title", "What is your name?", input, null, check);
+
+// result is true if OK is pressed, false if Cancel. input.value holds the value of the edit field if "OK" was pressed.
+</pre>
+<h3 id="promptUsernameAndPassword_example">promptUsernameAndPassword example</h3>
+<p><a href="#promptUsernameAndPassword()">promptUsernameAndPassword()</a> 显示一个对话框,内部包含一个文本输入框,一个密码输入框和一个可选的复选框.</p>
+<p><img alt="" class="internal" src="/@api/deki/files/4076/=promptUsernameAndPasswordExample.png" style="width: 365px; height: 200px;"></p>
+<pre class="brush: js">var prompts = Components.classes["@mozilla.org/embedcomp/prompt-service;1"]
+                        .getService(Components.interfaces.nsIPromptService);
+
+var username = {value: "user"};              // default the username to user
+
+var password = {value: "pass"};              // default the password to pass
+
+var check = {value: true};                   // default the checkbox to true
+
+var result = prompts.promptUsernameAndPassword(null, "Title", "Enter username and password:",
+                                               username, password, "Save", check);
+
+// result is true if OK was pressed, false if cancel was pressed. username.value,
+// password.value, and check.value are set if OK was pressed.
+</pre>
+<h3 id="promptPassword_example">promptPassword example</h3>
+<p><a href="#promptPassword()">promptPassword()</a> 显示一个对话框,内部包含一个密码输入框和一个可选的复选框.</p>
+<pre class="brush: js">var prompts = Components.classes["@mozilla.org/embedcomp/prompt-service;1"]
+                        .getService(Components.interfaces.nsIPromptService);
+
+var password = {value: "pass"};              // default the password to pass
+
+var check = {value: true};                   // default the checkbox to true
+
+var result = prompts.promptPassword(null, "Title", "Enter password:", password, null, check);
+
+// result is true if OK was pressed, false if cancel was pressed. password.value is
+// set if OK was pressed. The checkbox is not displayed.
+</pre>
+<h3 id="select_example">select example</h3>
+<p><a href="#select()">select()</a> 显示一个对话框,内部是一个包含多个选项的列表框.</p>
+<p><img alt="" class="internal" src="/@api/deki/files/4074/=selectExample.png" style="width: 333px; height: 196px;"></p>
+<pre class="brush: js">var prompts = Components.classes["@mozilla.org/embedcomp/prompt-service;1"]
+                        .getService(Components.interfaces.nsIPromptService);
+
+var items = ["Hello", "Welcome", "Howdy", "Hi", ":)"]; // list items
+
+var selected = {};
+
+var result = prompts.select(null, "Title", "What greeting do you want?", items.length,
+                            items, selected);
+
+// result is true if OK was pressed, false if cancel. selected is the index of the item array
+// that was selected. Get the item using items[selected.value].
+</pre>
+<h2 id="See_also" name="See_also">相关链接</h2>
+<ul>
+ <li><code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPrompt" title="">nsIPrompt</a></code></li>
+ <li><a href="/zh-cn/Working_with_out_parameters" title="zh-cn/Working with out parameters">Working with out parameters</a></li>
+</ul>
+<p></p>

@@ -1,0 +1,306 @@
+---
+title: nsILoginManager
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsILoginManager
+tags:
+  - Firefox 3
+  - Interfaces
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsILoginManager
+---
+<p> <a href="/ja/nsIPasswordManager" title="ja/nsIPasswordManager">nsIPasswordManager</a> に替わり Firefox 3 では <code>nsILoginManager</code> がパスワードマネージャーのインターフェイスとして使われます。</p>
+
+<p>使用例については <a href="/ja/Using_nsILoginManager" title="ja/Using_nsILoginManager">Using nsILoginManager</a> をご覧ください。</p>
+
+<p><br>
+ </p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/passwordmgr/public/nsILoginManager.idl" rel="custom">toolkit/components/passwordmgr/public/nsILoginManager.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">最終更新: Gecko 1.9 (Firefox 3)</span></div>
+</div>
+
+<p>Inherits from: <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILoginManager" title="">nsILoginManager</a></code></p>
+
+<p>Implemented by: <code>@mozilla.org/login-manager;1</code>. To create an instance, use:</p>
+
+<pre class="eval">var loginManager = Components.classes["@mozilla.org/login-manager;1"]
+                   .getService(Components.interfaces.nsILoginManager);
+</pre>
+
+<h2 id="Method_overview" name="Method_overview">Method overview</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="#addLogin.28.29">addLogin</a>(in <a href="/ja/nsILoginInfo" title="ja/nsILoginInfo">nsILoginInfo</a> aLogin);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#removeLogin.28.29">removeLogin</a>(in <a href="/ja/nsILoginInfo" title="ja/nsILoginInfo">nsILoginInfo</a> aLogin);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#modifyLogin.28.29">modifyLogin</a>(in <a href="/ja/nsILoginInfo" title="ja/nsILoginInfo">nsILoginInfo</a> oldLogin, in <a href="/ja/nsILoginInfo" title="ja/nsILoginInfo">nsILoginInfo</a> newLogin);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#removeAllLogins.28.29">removeAllLogins</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#getAllLogins.28.29">getAllLogins</a>(out unsigned long count, [retval, array, size_is(count)] out <a href="/ja/nsILoginInfo" title="ja/nsILoginInfo">nsILoginInfo</a> logins);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#getAllDisabledHosts.28.29">getAllDisabledHosts</a>(out unsigned long count, [retval, array, size_is(count)] out wstring hostnames);</code></td>
+  </tr>
+  <tr>
+   <td><code>boolean <a href="#getLoginSavingEnabled.28.29">getLoginSavingEnabled</a>(in <a href="/ja/AString" title="ja/AString">AString</a> aHost);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#setLoginSavingEnabled.28.29">setLoginSavingEnabled</a>(in <a href="/ja/AString" title="ja/AString">AString</a> aHost, in boolean isEnabled);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#findLogins.28.29">findLogins</a>(out unsigned long count, in <a href="/ja/AString" title="ja/AString">AString</a> aHostname, in AString aActionURL, in AString aHttpRealm, [retval, array, size_is(count)] out <a href="/ja/nsILoginInfo" title="ja/nsILoginInfo">nsILoginInfo</a> logins);</code></td>
+  </tr>
+  <tr>
+   <td><code>unsigned long <a href="#countLogins.28.29">countLogins</a>(in <a href="/ja/AString" title="ja/AString">AString</a> aHostName, in <a href="/ja/AString" title="ja/AString">AString</a> aActionURL, in <a href="/ja/AString" title="ja/AString">AString</a> aHttpRealm,);</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/ja/NsIAutoCompleteResult" title="ja/NsIAutoCompleteResult">nsIAutoCompleteResult</a> <a href="#autoCompleteSearch.28.29">autoCompleteSearch</a>(in <a href="/ja/AString" title="ja/AString">AString</a> aSearchString, in nsIAutoCompleteResult aPreviousResult, in <a href="/ja/NsIDOMHTMLInputElement" title="ja/NsIDOMHTMLInputElement">nsIDOMHTMLInputElement</a> aElement);</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89">メソッド</h2>
+
+<h3 id="addLogin.28.29" name="addLogin.28.29">addLogin()</h3>
+
+<p>新しいログイン情報をログインマネージャーに保存します。</p>
+
+<pre class="eval"> void addLogin(
+   in nsILoginInfo aLogin
+ );
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>aLogin</code></dt>
+ <dd>The login to store.</dd>
+</dl>
+
+<h3 id="removeLogin.28.29" name="removeLogin.28.29">removeLogin()</h3>
+
+<p>ログインマネージャーからログイン情報を削除します。</p>
+
+<pre class="eval"> void removeLogin(
+   in nsILoginInfo aLogin
+ );
+</pre>
+
+<h6 id="Parameters_2" name="Parameters_2">Parameters</h6>
+
+<dl>
+ <dt><code>aLogin</code></dt>
+ <dd>The login to remove from the Login Manager.</dd>
+</dl>
+
+<h3 id="modifyLogin.28.29" name="modifyLogin.28.29">modifyLogin()</h3>
+
+<p>既存のログイン情報を修正し上書きします。</p>
+
+<pre class="eval"> void modifyLogin(
+   in nsILoginInfo oldLogin,
+   in nsILoginInfo newLogin
+ );
+</pre>
+
+<h6 id="Parameters_3" name="Parameters_3">Parameters</h6>
+
+<dl>
+ <dt><code>oldLogin</code></dt>
+ <dd>The login to be updated.</dd>
+ <dt><code>newLogin</code></dt>
+ <dd>The login information to replace the <code>oldLogin</code> with.</dd>
+</dl>
+
+<h3 id="removeAllLogins.28.29" name="removeAllLogins.28.29">removeAllLogins()</h3>
+
+<p>ログインマネージャーに保存されているすべてのログイン情報を削除します。この動作はマスターパスワードによる保護を無視します。</p>
+
+<pre class="eval"> void removeAllLogins();
+</pre>
+
+<h6 id="Parameters_4" name="Parameters_4">Parameters</h6>
+
+<p>None.</p>
+
+<h3 id="getAllLogins.28.29" name="getAllLogins.28.29">getAllLogins()</h3>
+
+<p>ログインマネージャーに保存されているすべてのログイン情報を配列として返します。</p>
+
+<pre class="eval"> void getAllLogins(
+   out unsigned long count,
+   [retval, array, size_is(count)] out nsILoginInfo logins
+ );
+</pre>
+
+<h6 id="Parameters_5" name="Parameters_5">Parameters</h6>
+
+<dl>
+ <dt><code>count</code></dt>
+ <dd>The number of elements in the returned array. JavaScript callers can simply use the array's <code>length</code> property and supply a dummy argument for this parameter.</dd>
+ <dt><code>logins</code></dt>
+ <dd>An array of <code><a href="/ja/nsILoginInfo" title="ja/nsILoginInfo">nsILoginInfo</a></code> objects containing all the logins the Login Manager has on record.</dd>
+</dl>
+
+<h6 id="Remarks" name="Remarks">Remarks</h6>
+
+<p>このメソッドは JavaScript から次のように呼ぶことができます:</p>
+
+<pre class="eval"> var logins = myLoginMgr.getAllLogins({});
+</pre>
+
+<p><code>logins</code> にはログイン情報が配列形式で戻されます。</p>
+
+<h3 id="getAllDisabledHosts.28.29" name="getAllDisabledHosts.28.29">getAllDisabledHosts()</h3>
+
+<p>ログイン情報の保存が無効に設定されているホストの一覧を返します。</p>
+
+<pre class="eval"> void getAllDisabledHosts(
+   out unsigned long count,
+   [retval, array, size_is(count)] out wstring hostnames
+ );
+</pre>
+
+<h6 id="Parameters_6" name="Parameters_6">Parameters</h6>
+
+<dl>
+ <dt><code>count</code></dt>
+ <dd>The number of elements in the returned array. JavaScript callers can simply use the array's <code>length</code> property and supply a dummy argument for this parameter.</dd>
+ <dt><code>hostnames</code></dt>
+ <dd>An array of hostname strings in URL format without a pathname. For example: <span class="nowiki">"https://www.site.com"</span>.</dd>
+</dl>
+
+<h6 id="Remarks_2" name="Remarks_2">Remarks</h6>
+
+<p>You can call this method from JavaScript like this:</p>
+
+<pre class="eval"> var disabledHosts = myLoginMgr.getAllDisabledHosts({});
+</pre>
+
+<h3 id="getLoginSavingEnabled.28.29" name="getLoginSavingEnabled.28.29">getLoginSavingEnabled()</h3>
+
+<p>指定されたホストでログイン情報を保存可能かどうかを返します。</p>
+
+<pre class="eval"> boolean getLoginSavingEnabled(
+   in AString aHost
+ );
+</pre>
+
+<h6 id="Parameters_7" name="Parameters_7">Parameters</h6>
+
+<dl>
+ <dt><code>aHost</code></dt>
+ <dd>The hostname to check. This argument should be in the origin URL format, with no pathname. For example: <span class="nowiki">"https://www.site.com"</span>.</dd>
+</dl>
+
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4" name=".E6.88.BB.E3.82.8A.E5.80.A4">戻り値</h6>
+
+<p>ホストがログイン情報を保存できる場合は <code>treu</code> を、そうでない場合は <code>false</code> を返します。</p>
+
+<h3 id="setLoginSavingEnabled.28.29" name="setLoginSavingEnabled.28.29">setLoginSavingEnabled()</h3>
+
+<p>Enables or disables storing logins for a specified host. When login storing is disabled, the Login Manager won't prompt the user to store logins for that host. Existing logins are not affected.</p>
+
+<pre class="eval"> void setLoginSavingEnabled(
+   in AString aHost,
+   in boolean isEnabled
+ );
+</pre>
+
+<h6 id="Parameters_8" name="Parameters_8">Parameters</h6>
+
+<dl>
+ <dt><code>aHost</code></dt>
+ <dd>The hostname to adjust the setting for. This argument should be in the origin URL format, with no pathname. For example: <span class="nowiki">"https://www.site.com"</span>.</dd>
+ <dt><code>isEnabled</code></dt>
+ <dd>If <code>true</code>, login saving is enabled for the specified host. If <code>false</code>, login saving is disabled.</dd>
+</dl>
+
+<h3 id="findLogins.28.29" name="findLogins.28.29">findLogins()</h3>
+
+<p>Searches for logins matching the specified criteria. Called when looking for logins that might be applicable to a given form or authentication request.</p>
+
+<pre class="eval"> void findLogins(
+   out unsigned long count,
+   in AString aHostname,
+   in AString aActionURL,
+   in AString aHttpRealm,
+   [retval, array, size_is(count)] out nsILoginInfo logins
+ );
+</pre>
+
+<h6 id="Parameters_9" name="Parameters_9">Parameters</h6>
+
+<dl>
+ <dt><code>count</code></dt>
+ <dd>The number of elements in the returned array. JavaScript callers can simply use the array's <code>length</code> property and supply a dummy argument for this parameter.</dd>
+ <dt><code>aHostname</code></dt>
+ <dd>The hostname to which to restrict searches. When looking for form logins, this argument should be in origin HTML format, with no pathname. For protocol logins, such as http or ftp, it should be the hostname with the port number appended, such as "www.bar.com:443".</dd>
+ <dt><code>aActionURL</code></dt>
+ <dd>For form logins, this parameter should specify the URL to which the form will be submitted. For protocol logins, specify <code>null</code>.</dd>
+ <dt><code>aHttpRealm</code></dt>
+ <dd>For protocol logins, specify the HTTP Realm for which the login applies; this is obtained from the WWW-Authenticate header (see <a class="external" href="http://tools.ietf.org/html/rfc2617" title="http://tools.ietf.org/html/rfc2617">RFC 2617</a>). For form logins, this parameter should be <code>null</code>.</dd>
+ <dt><code>logins</code></dt>
+ <dd>An array of <code><a href="/ja/nsILoginInfo" title="ja/nsILoginInfo">nsILoginInfo</a></code> objects.</dd>
+</dl>
+
+<h6 id="Remarks_3" name="Remarks_3">Remarks</h6>
+
+<p>This method can be called from JavaScript like this:</p>
+
+<pre class="eval"> var logins = myLoginMgr.findLogins({}, hostname, ...);
+</pre>
+
+<h3 id="countLogins.28.29" name="countLogins.28.29">countLogins()</h3>
+
+<p>Returns the number of logins matching the specified criteria. Called when only the number of logins is needed, and not the actual logins (which avoids prompting the user for a Master Password, as the logins don't need to be decrypted).</p>
+
+<pre class="eval"> unsigned login countLogins(
+   in AString aHostname,
+   in AString aActionURL,
+   in AString aHttpRealm,
+ );
+</pre>
+
+<h6 id="Parameters_10" name="Parameters_10">Parameters</h6>
+
+<dl>
+ <dt><code>aHostname</code></dt>
+ <dd>The hostname to which to restrict searches. When looking for form logins, this argument should be in origin HTML format, with no pathname. For protocol logins, such as http or ftp, it should be the hostname with the port number appended, such as "www.bar.com:443".</dd>
+ <dt><code>aActionURL</code></dt>
+ <dd>For form logins, this parameter should specify the URL to which the form will be submitted. To match any form login, specify <code>""</code> (empty string). To not match any form logins (eg, when interested in protocol logins only), specify <code>null</code>.</dd>
+ <dt><code>aHttpRealm</code></dt>
+ <dd>For protocol logins, specify the HTTP Realm for which the login applies; this is obtained from the WWW-Authenticate header (see <a class="external" href="http://tools.ietf.org/html/rfc2617" title="http://tools.ietf.org/html/rfc2617">RFC 2617</a>). To match any protocol login, specify <code>""</code> (empty string). To not match any protocol logins (eg, when interested in form logins only), specify <code>null</code>.</dd>
+</dl>
+
+<p> </p>
+
+<h3 id="autoCompleteSearch.28.29" name="autoCompleteSearch.28.29">autoCompleteSearch()</h3>
+
+<p>Generates results for a user field autocomplete menu.</p>
+
+<div class="note">
+<p>This method is provided for use only by the FormFillController, which calls it directly. It should not be used for any other purpose, so no specific usage documentation is provided here.</p>
+</div>
+
+<h2 id="Remarks_4" name="Remarks_4">Remarks</h2>
+
+<p>Fill this out.</p>
+
+<h2 id="See_also" name="See_also">See also</h2>
+
+<p><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILoginInfo" title="">nsILoginInfo</a></code>, <a href="/ja/Using_nsILoginManager" title="ja/Using_nsILoginManager">Using nsILoginManager</a></p>

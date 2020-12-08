@@ -1,0 +1,94 @@
+---
+title: How Mozilla determines MIME Types
+slug: Mozilla/How_Mozilla_determines_MIME_Types
+translation_of: Mozilla/How_Mozilla_determines_MIME_Types
+---
+<h2 id="Introduction" name="Introduction">Introduction</h2>
+
+<p>All data handling in Mozilla is based on the MIME type of the content. This means that every time an URI is loaded, Mozilla must find out its MIME type. The several ways how this happens are described in this document.</p>
+
+<h2 id="Content-Type_.22hints.22" name="Content-Type_.22hints.22">Content-Type "hints"</h2>
+
+<p>Mozilla has a concept of "content-type hints". This means that, for example, if Mozilla encounters a <code>&lt;link type="text/css" rel="stylesheet" href="..."&gt;</code> element, a type of text/css will be assumed. This is, however, overridden by the actual MIME type the server sends (if any). (For this specific example, the server override only happens in standards-compliant mode. See <a href="/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode" title="Mozilla's_Quirks_Mode">Mozilla's Quirks Mode</a> or <a href="/en-US/docs/Mozilla/Mozilla_Web_Developer_FAQ">Web Author FAQ</a>).</p>
+
+<p>Similar handling happens for <code>&lt;a href="..." type="foo/bar"&gt;</code>, starting in Mozilla 1.6alpha.</p>
+
+<h2 id="HTTP" name="HTTP">HTTP</h2>
+
+<p>For HTTP URIs Mozilla usually gets a MIME type sent from the server, and uses it. Contrary to <a class="external external-icon" href="https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775147(v=vs.85)">Internet Explorer's MIME type guessing</a>, Mozilla will generally not sniff the type of the document. However, starting in Mozilla 1.7alpha, Mozilla does do content sniffing, like this:</p>
+
+<p>When the Content-Type sent by the server is one of (case-sensitively)</p>
+
+<ul>
+ <li>text/plain</li>
+ <li>text/plain; charset=ISO-8859-1</li>
+ <li>text/plain; charset=iso-8859-1</li>
+</ul>
+
+<p>and the server did not send a Content-Encoding header, Mozilla will sniff the first block of data it gets and check for non-text bytes. Text bytes are 9-13, 27, and 31-255. When encountering a non-text byte, the helper app dialog will be shown, showing the MIME type corresponding to the extension of the file.</p>
+
+<p>Also, for images loaded via <code>&lt;img src&gt;</code>, Mozilla's image library will do content sniffing (never extension sniffing) to find out the real type of the image.</p>
+
+<p>If the server did not send a Content-Type header, Mozilla uses the unknown decoder to find a MIME type.</p>
+
+<h2 id="File_URIs" name="File_URIs">File URIs</h2>
+
+<p>For file: URIs, Mozilla will ask the <a href="#ExternalHelperAppService">ExternalHelperAppService</a> for a MIME type.</p>
+
+<h2 id="FTP" name="FTP">FTP</h2>
+
+<p>Like HTTP URIs without a MIME type, FTP URIs go through the unknown decoder.</p>
+
+<h2 id="Unknown_Decoder" name="Unknown_Decoder">Unknown Decoder</h2>
+
+<p>Located at {{ Source("netwerk/streamconv/converters/nsUnknownDecoder.cpp") }}, the interesting part starts at {{ Source("netwerk/streamconv/converters/nsUnknownDecoder.cpp#287", "line 287") }}, the sSnifferEntries array together with the DetermineContentType function. It does the following:</p>
+
+<ul>
+ <li>Checks the start of the file for "magic numbers"; this can currently detect PDF and Postscript.</li>
+ <li>If the file starts with <code>&lt;?xml</code>, asks the <a href="#ExternalHelperAppService">ExternalHelperAppService</a> for a MIME type for the URI. This is done because the generic <code>text/xml</code> MIME type does not work for XUL files, and XHTML files get a different DOM when interpreted as <code>text/xml</code>.</li>
+ <li>The Image Library will be asked for the MIME type given the content. This should allow reliable detection of all image types Mozilla supports.</li>
+ <li>Checks whether the data is HTML by looking for some common HTML tags.</li>
+ <li>The URI is handed to the ExternalHelperAppService for MIME type guessing</li>
+ <li>If all else fails, the buffer (i.e. the first few bytes of the file) is searched for embedded nulls; if none are found, <code>text/plain</code> will be used, otherwise <code>application/octet-stream</code>.</li>
+</ul>
+
+<h2 id="ExternalHelperAppService" name="ExternalHelperAppService">ExternalHelperAppService</h2>
+
+<p>(located at {{ Source("uriloader/exthandler/nsExternalHelperAppService.cpp") }})</p>
+
+<p>The file-&gt;MIME type mapping works like this:</p>
+
+<ul>
+ <li>On BeOS, the operating system is asked for the type of the file (not quite yet, {{ Bug(217723) }})</li>
+ <li>On MacOS, the type and creator code will be used to lookup the type of the file from the OS</li>
+ <li>a hardcoded list of extensions is checked (containing currently 13 entries, {{ Source("uriloader/exthandler/nsExternalHelperAppService.cpp#463", "nsExternalHelperAppService.cpp line 463") }} (This is done for speed – it is faster to find data in the hardcoded list than asking the OS or looking in preferences)</li>
+ <li>If the extension is not listed there, it becomes interesting. Firstly, the Operating System is asked for a MIME type. (On Unix, this means checking <code>mime.types</code>.)</li>
+ <li>If that fails, a user-supplied helper app is searched for by extension, and the specified MIME type will be used. (i.e. the list in Edit/Preferences/Helper Applications) If that failed, a list of "extra" MIME types is searched for an extension match. See {{ Source("uriloader/exthandler/nsExternalHelperAppService.cpp#507", "line 507") }} for the complete list.</li>
+ <li>If that also failed, the list of loaded plugins is checked for a plugin that can handle this extension, and is asked for the MIME type</li>
+ <li>If no plugin is registered, the ext-to-type-mapping XPCOM category is searched for the extension. This allows extensions to register additional mappings. The key of the category entry is the extension without leading dot, the value is the MIME type. The extension must be lowercase.</li>
+ <li>If no ext-to-type-mapping category is found, the ExternalHelperAppService returns <code>application/x-extension-EXT</code>, where EXT is the extension of the file.</li>
+</ul>
+
+<h2 id="Helper_Applications" name="Helper_Applications">Helper Applications</h2>
+
+<p>A somewhat related issue are the helper applications. When loading an URI with a type that Mozilla can not handle, a helper app dialog shows up, and the displayed information comes from these sources:</p>
+
+<ul>
+ <li>Ask the OS for a handler of the given &lt;extension, MIME Type&gt; pair. Note that the extension here comes from the Content-Disposition header if present, and from the URL itself otherwise. This is where the listed "default application" comes from.</li>
+ <li>The "data source" (that is, the list of helper applications) is searched for an entry with the MIME type of the URI. The data source is the <code>mimeTypes.rdf</code> file in the profile directory. If this fails, the data source is searched via the extension (Content-Disposition as above). If one of these lookups succeed, this is where the application in the "Open with" field comes from, and also where the description of the type comes from.</li>
+ <li>If this also failed, the extras are searched again, and will supply the extension-list and a description of the MIME type.</li>
+</ul>
+
+<h2 id="Related_Information">Related Information</h2>
+
+<p><a class="internal" href="/en-US/docs/Archive/Mozilla/Firefox/Document_Loading" title="Document Loading - From Load Start to Finding a Handler">Document Loading - From Load Start to Finding a Handler</a></p>
+
+<div class="originaldocinfo">
+<h2 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h2>
+
+<ul>
+ <li>Author(s): <a class="link-mailto" href="mailto:cbiesinger@web.de">Christian Biesinger</a></li>
+ <li>Last Updated Date: March 7, 2005</li>
+ <li>Copyright Information: Copyright (C) <a class="link-mailto" href="mailto:cbiesinger@web.de">Christian Biesinger</a></li>
+</ul>
+</div>

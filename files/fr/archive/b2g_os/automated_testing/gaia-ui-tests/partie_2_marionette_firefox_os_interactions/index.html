@@ -1,0 +1,120 @@
+---
+title: >-
+  Partie 2 : Interactions de base avec Firefox OS via l'utilisation de
+  Marionette
+slug: >-
+  Archive/B2G_OS/Automated_testing/gaia-ui-tests/Partie_2_Marionette_Firefox_OS_interactions
+tags:
+  - Automatisation
+  - interface utilisateur
+translation_of: >-
+  Archive/B2G_OS/Automated_testing/gaia-ui-tests/Part_2_Marionette_Firefox_OS_interactions
+---
+<p></p><div style="text-align: right;" class="prevnext">
+    <p><a style="float: left;" href="/fr/docs/Mozilla/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_1_Marionette_Firefox_OS_start">« Précédent</a><a href="/fr/docs/Mozilla/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_3_Reusable_tests">Suivant  »</a></p>
+</div><p></p>
+
+<div class="summary">
+<p><span class="seoSummary">Dans la deuxième partie de notre tutoriel nous allons débuter avec des commandes Marionette simples qui vont nous permettre de contrôler à distance Firefox OS. Même si nous n'allons pas couvrir l'écriture d'un test en intégralité, cet article vous enseigne les fonctionnalités basiques de code que vous pourrez utiliser pour écrire un test. Dans la troisième partie, nous irons plus loin pour faire évoluer ce code en un test réel.</span></p>
+</div>
+
+<h2 id="Démarrage_de_Firefox_OS">Démarrage de Firefox OS</h2>
+
+<p>Pour écrire ces tests vous avez besoin d'avoir Firefox OS déjà en cours d'exécution et prêt à recevoir des commandes :</p>
+
+<ol>
+ <li>Démarrer le bureau B2G.</li>
+ <li>Désactiver l'écran de verrouillage en utilisant <em>Paramètres &gt; Ecran de verrouillage &gt; décocher verrouiller l'écran</em>.</li>
+ <li>Désactiver la mise en veille de l'écran en changeant le paramètre <em>Paramètres &gt; Affichage &gt; Ecran de veille </em>à <em>jamais</em>.</li>
+ <li>Déplacer la fenêtre sur le côté en attendant les commandes de test.</li>
+</ol>
+
+<h2 id="Démarrage_de_Marionette">Démarrage de Marionette</h2>
+
+<p>Maintenant nous allons démarrer une console Python : allez simplement dans une fenêtre de terminal et tapez la commande <code>python</code>.</p>
+
+<p>Depuis cette console nous pouvons envoyer des commandes au serveur Marionette dans Firefox OS. Après avoir saisi les commandes qui suivent vous devriez voir répondre Firefox OS. Dans la console Python, entrez la commande suivante pour importer la librairie Marionette contenant le code dont nous avons besoin :</p>
+
+<pre class="brush: bash">from marionette import Marionette</pre>
+
+<p>Exécutez maintenant les deux lignes suivantes, qui débutent une session Marionette et le préparent à recevoir des commandes de la part du client :</p>
+
+<pre class="brush: bash">marionette = Marionette()
+marionette.start_session()</pre>
+
+<p>Si vous ne désactivez pas l'écran de verrouillage comme expliqué ci-dessus, vous pouvez déverrouiller l'écran  en ligne de commande, en utilisant :</p>
+
+<pre class="brush: bash">marionette.execute_script('window.wrappedJSObject.lockScreen.unlock();')</pre>
+
+<h2 id="Accès_à_différents_cadres_dans_Firefox_OS">Accès à différents cadres dans Firefox OS</h2>
+
+<p>Les applications web dans Firefox OS opèrent dans différents iFrames. Exécuter des applications web dans des cadres séparés leur donnent des conteneurs différents pour la gestion de la sécurité et du visuel (comme une fenêtre). Vous pouvez imaginer que cela fonctionne comme un bac à sable dans lequel l'application s'exécute. Marionette ne peut fonctionner que dans un seul cadre à la fois. Nous avons besoin de Marionette pour passer dans le cadre avec lequel nous voulons interagir.</p>
+
+<p>Le cadre du haut est aussi l'application Système. Toutes les applications et leurs cadres sont des filles de l'application Système. Notre nouvelle session Marionette commence dans le cadre Système mais pour commencer le test nous devons passer dans l'écran d'accueil.</p>
+
+<p>Pour trouver le iFrame, nous devons d'abord l'identifier. Comme Marionette est basée sur l'API WebDriver, elle utilise les mêmes stratégies pour localiser des éléments, donc nous pouvons utiliser une de ces stratégies pour identifier les éléments web de WebDriver. Pour plus d'informations, lire <a href="http://www.w3.org/TR/webdriver/#element-location-strategies">element location strategies</a>.</p>
+
+<p>Dans ce cas, nous allons utiliser le sélecteur CSS <code>div.homescreen iframe</code> pour sélectionner le iFrame de l'écran d'accueil ; la fonction <code>find_element()</code> le prend comme deuxième argument, le premier étant une définition du mécanisme de sélection utilisé pour faire la recherche. Nous allons ensuite stocker ce résultat dans une variable et exécuter la fonction <code>switch_to_frame()</code> avec la variable comme argument. À présent, essayez les deux commandes suivantes :</p>
+
+<pre class="brush: bash"># Switch context to the homescreen iframe and tap on the Contacts app icon
+home_frame = marionette.find_element('css selector', 'div.homescreen iframe')
+marionette.switch_to_frame(home_frame)</pre>
+
+<div class="note">
+<p><strong>Note</strong>: Pour plus d'informations et de diagrammes décrivant le changement de cadres, vous pouvez lire <a href="https://blog.mozilla.org/webqa/2013/02/13/part-2-ui-testing-on-firefox-os-working-with-iframes/">Working with iFrames</a>.</p>
+</div>
+
+<h2 id="Ouverture_d'une_application">Ouverture d'une application</h2>
+
+<p>OK. Maintenant que nous nous trouvons dans l'application Homescreen nous pouvons cibler les icônes et les cliquer en utilisant la fonction <code>find_element()</code>, combinée avec la fonction <code>tap()</code>.</p>
+
+<pre class="brush: bash"><code>contacts_icon = marionette.find_element('xpath', "</code><code>//div[@class='icon']//span[contains(text(),'Contacts')]")</code>
+contacts_icon.tap()</pre>
+
+<p>Si tout se passe bien, vous devriez maintenant avoir l'application Contacts ouverte, mais nous devons encore passer dans cadre de l'application Contacts pour interagir avec lui, comme nous l'avions fait précédemment avec l'écran d'accueil :</p>
+
+<pre class="brush: bash"># First, we need to switch context back to the System frame
+marionette.switch_to_frame()
+
+# Now, switch context to the contacts app frame
+contacts_frame = marionette.find_element('css selector', "iframe[data-url*='contacts']")
+marionette.switch_to_frame(contacts_frame)</pre>
+
+<p>Passer dans le cadre devrait renvoyer <code>True</code>. Si c'est le cas, c'est super ! Cela signifie que nous sommes dans le contexte de l'application Contacts et que nous sommes prêts à l'utiliser.</p>
+
+<h2 id="Manipulation_de_l'application">Manipulation de l'application</h2>
+
+<p>Dans la prochaine étape, nous allons réaliser une tâche de test typique — créer un nouveau contact, lui entrer un nom, et le sauvegarder. Premièrement, nous allons appuyer sur le bouton d'ajout d'un contact :</p>
+
+<pre class="brush: bash"># Tap [+] to add a new Contact
+marionette.find_element('id', 'add-contact-button').tap()</pre>
+
+<p>Maintenant, ajoutons le nom du contact en utilisant les deux commandes suivantes (<code>send_keys()</code> est utilisée pour insérer une valeur dans un élément) :</p>
+
+<pre class="brush: bash">marionette.find_element('id', 'givenName').send_keys('Foo')
+# Add the contact's surname
+marionette.find_element('id', 'familyName').send_keys('Bar')</pre>
+
+<p>À présent, appuyons sur le bouton OK pour sauvegarder le contact :</p>
+
+<pre class="brush: bash"><code class="language-html">marionette.find_element('id', 'save-button').tap()</code></pre>
+
+<p>Vous devriez voir un nouveau contact entré dans l'application Contacts. Si c'est le cas, c'est parfait !</p>
+
+<div class="note">
+<p><strong>Note </strong>: si ce n'est pas le cas, redémarrez ou tuez l'application Contacts, retournez sur l'écran d'accueil et essayez d'exécuter la tâche de nouveau.</p>
+</div>
+
+<h2 id="Fermeture_de_votre_session_Marionette">Fermeture de votre session Marionette</h2>
+
+<p>Pour finir, vous devez fermer votre session Marionette en saisissant la commande suivante :</p>
+
+<pre class="brush: bash">marionette.delete_session()</pre>
+
+<p>Tout cela a bien fonctionné, mais vous ne pouvez pas taper dans une console Python à chaque fois que vous voulez exécuter un test ! Dans la partie 3, nous allons compiler ce script dans un fichier Python que nous pourrons réutiliser à chaque fois que l'on voudra exécuter un test. Nous ajouterons également une ligne pour déterminer si le test a réussi ou échoué.</p>
+
+<div class="note">
+<p><strong>Note </strong>: lors de l'écriture des commandes Marionette, vous avez certainement remarqué que l'accès à la structure HTML sous-jacente de l'application est vitale pour comprendre les repères dont vous avez besoin. <a href="https://developer.mozilla.org/en-US/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_7_Writing_your_own_tests#Resources">Partie 7: Ecrire vos propres tests</a> offre quelques ressources utiles pour vous aider sur ce sujet.</p>
+</div>
+
+<p> </p>

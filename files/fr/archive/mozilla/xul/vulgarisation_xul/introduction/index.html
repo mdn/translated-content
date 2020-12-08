@@ -1,0 +1,102 @@
+---
+title: Introduction
+slug: Archive/Mozilla/XUL/Vulgarisation_XUL/Introduction
+translation_of: Archive/Add-ons/Overlay_Extensions/XUL_School/Introduction
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Vulgarisation_XUL/Premiers_pas_avec_les_extensions_Firefox">Suivant  »</a></p>
+</div>
+<p>Bonjour, et bienvenue sur le tutoriel de vulgarisation XUL pour les développeurs d'extension !</p>
+<p><span class="long_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="This tutorial is meant to be the stepping
+stone that will turn you into a professional Firefox extension developer
+in no time.">Ce tutoriel est destiné à être le tremplin qui va vous transformer en un développeur d'extensions professionnelles sous Firefox en peu de temps. </span><span style="background-color: rgb(255, 255, 255);" title="We have poured years of XUL experience into it, providing all
+kinds of solutions for common problems, and describing the pros and cons
+of different approaches for solving these problems.">Il contient des années d'expérience en XUL, en fournissant toutes sortes de solutions aux problèmes communs, et en décrivant les avantages et les inconvénients des différentes approches pour résoudre ces problèmes. </span><span style="background-color: rgb(255, 255, 255);" title="This tutorial also
+reflects a new way of making Firefox extensions, taking advantage of
+the new features and APIs that Firefox 3 provides.">Ce tutoriel reflète également une nouvelle manière de faire des extensions Firefox, profitant des nouvelles fonctionnalités et API que Firefox 3 fournit.</span></span></p>
+<p><span class="long_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="XUL School was created by Glaxstar (now
+Appcoast), one of the few companies dedicated to building high-quality
+Firefox extensions.">Ce tutoriel XUL a été créé par Glaxstar (maintenant <a class="external" href="http://appcoast.com/" title="http://appcoast.com/">Appcoast</a>), l'une des rares entreprises spécialisée dans l'élaboration d'extensions de haute qualité pour Firefox. </span></span><span class="long_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="A team of over a dozen XUL developers
+conformed Glaxstar at the time this tutorial was created, and the
+combined experiences of years creating Firefox extensions are reflected
+here.">Une équipe de plus d'une douzaine de développeurs XUL de chez Glaxstar ont participé en même temps à ce tutoriel, et l'ensemble des expériences des années de création d'extensions Firefox sont reflétées ici.</span></span></p>
+<p><span class="long_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="In this tutorial you'll learn how to develop
+Firefox extensions.">Dans ce tutoriel, vous apprendrez à développer des extensions Firefox. </span><span style="background-color: rgb(255, 255, 255);" title="You'll learn how to quickly do the most common tasks in
+extension development, comparing several different approaches to solve
+them.">Vous apprendrez comment faire rapidement les tâches les plus communes dans le développement d'extensions, en comparant plusieurs approches différentes pour les résoudre. </span><span style="background-color: rgb(255, 255, 255);" title="In most cases we'll
+provide code examples that you can easily copy and adapt to your needs,
+as well as some working example extensions.">Dans la plupart des cas, nous vous fournirons des exemples de code que vous pouvez facilement copier et adapter à vos besoins, ainsi que certains exemples fonctionnels d'extensions. </span><span style="background-color: rgb(255, 255, 255);" title="The tutorial aims to be as brief as possible, often
+falling back on Mozilla documentation for more detailed information.">Le tutoriel vise à être aussi bref que possible, en faisant des renvois fréquent sur la documentation de Mozilla pour plus d'informations. </span><span style="background-color: rgb(255, 255, 255);" title="You can think of it
+as a quick guide to the expansive world that is the Mozilla platform.">Vous pouvez penser que c'est un guide trop court face au monde vaste qui est la plate-forme Mozilla. </span><span style="background-color: rgb(255, 255, 255);" title="Most links in this documentation are meant to be clicked
+and read, since we're not aiming to be comprehensive.">La plupart des liens dans cette documentation sont destinés à être ouverts et lus, puisque nous ne cherchons pas à être exhaustif.</span></span></p>
+<p><span class="medium_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="We'll start with a brief introduction to
+some key concepts, in case you're not familiar with Mozilla and
+Firefox.">Nous allons commencer par une brève introduction à certains concepts clés, au cas où vous n'êtes pas familier avec Mozilla et Firefox. </span><span title="You can safely skip these sections if you
+already know this.">Vous pouvez ignorer ces sections si vous les connaissez déjà.</span></span></p>
+<h2 id="Mozilla_and_Firefox">Mozilla and Firefox</h2>
+<p><span class="long_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="The term Mozilla can be used to refer to
+several concepts: the Mozilla project, the Mozilla Foundation, the
+Mozilla Corporation and the old Mozilla browser.">Le terme <a class="external" href="http://fr.wikipedia.org/wiki/Mozilla" title="http://fr.wikipedia.org/wiki/Mozilla">Mozilla</a> sert à définir plusieurs concepts : le projet Mozilla, la <a class="external" href="http://fr.wikipedia.org/wiki/Fondation_Mozilla" title="http://fr.wikipedia.org/wiki/Fondation_Mozilla">fondation Mozilla</a>, la <a class="external" href="http://fr.wikipedia.org/wiki/Mozilla_Corporation" title="http://fr.wikipedia.org/wiki/Mozilla_Corporation">Mozilla Corporation</a> et le vieux <a class="external" href="http://fr.wikipedia.org/wiki/Mozilla_Application_Suite" title="http://fr.wikipedia.org/wiki/Mozilla_Application_Suite">navigateur Mozilla</a>. </span><span title='Even Firefox is sometimes referred to as "Mozilla".'>Même Firefox est parfois appelé "Mozilla". </span><span style="background-color: rgb(255, 255, 255);" title="If you're
+unfamiliar with these terms, it's good that you take some time and learn
+a little about Mozilla.">Si vous n'êtes pas familier avec ces termes, il est bon que vous prendre un peu de temps et d'en apprendre un peu plus sur Mozilla. </span><span style="background-color: rgb(255, 255, 255);" title="This will help you understand the culture that surrounds the
+Mozilla community.">Cela vous aidera à comprendre la culture qui entoure la communauté Mozilla.</span></span></p>
+<p><span class="long_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Mozilla has spawned several products and
+projects, the most notable being the Mozilla Firefox web browser,
+currently the second most used browser in the world, with a very large
+and growing user base and a very large and growing contributor and
+developer community.">Mozilla a donné naissance à plusieurs <a class="external" href="http://www.mozilla.org/projects/" title="http://www.mozilla.org/projects/">produits et projets</a>, le plus important étant le navigateur Web Mozilla Firefox, qui est actuellement le deuxième navigateur le plus utilisé dans le monde, avec une base d'utilisateurs très importante et croissante et un nombre de contributeurs </span></span><span class="long_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Mozilla has spawned several products and
+projects, the most notable being the Mozilla Firefox web browser,
+currently the second most used browser in the world, with a very large
+and growing user base and a very large and growing contributor and
+developer community.">et une communauté de développeurs </span></span><span class="long_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Mozilla has spawned several products and
+projects, the most notable being the Mozilla Firefox web browser,
+currently the second most used browser in the world, with a very large
+and growing user base and a very large and growing contributor and
+developer community.">très importants et croissants. </span><span style="background-color: rgb(255, 255, 255);" title="Firefox is one of the most successful open source projects in
+history, combining the openness, standards-compliance and sophistication
+of open source with the focus on user experience and powerful marketing
+of more commercial offerings.">Firefox est l'un des projet libre les plus réussis dans l'histoire, combinant l'ouverture, aux normes de conformité et de la sophistication de l'open source en mettant l'accent sur l'expérience utilisateur et sur un marketing puissant d'offres commerciales.</span></span></p>
+<p><span class="long_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Version 1.0 of Firefox was released in
+November 2004, version 2.0 in October 2006, and version 3.0 in June
+2008.">La version 1.0 de Firefox a été publiée en Novembre 2004, la version 2.0 en Octobre 2006, et la version 3.0 en Juin 2008. </span><span style="background-color: rgb(255, 255, 255);" title="Version 3.0
+includes a wide variety of changes, some of which are not
+backwards-compatible, so you need to take this into account when
+building extensions.">La version 3.0 comprend une grande variété de modifications, dont certaines ne sont pas rétro-compatibles, donc vous devez en tenir compte lors du développement d'extensions. </span><span style="background-color: rgb(255, 255, 255);" title="This tutorial
+focuses on development for Firefox 3.0 and above, but most of it applies
+for the Firefox 2 and Firefox 1 lines as well.">Ce tutoriel se concentre sur le développement de Firefox 3.0 et suivant, mais une majorité de son contenu s'applique également pour Firefox 2 et Firefox 1. </span><span title="The tutorial will specify when a certain solution works only on
+newer versions of Firefox.">Le tutoriel précisera quand une solution ne fonctionne que sur certaines versions les plus récentes de Firefox.</span></span></p>
+<div class="note">
+ <p><span class="long_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="We recommend that you develop your
+extensions for Firefox 3 and above.">Nous vous recommandons de développer vos extensions pour Firefox 3 et plus. </span><span style="background-color: rgb(255, 255, 255);" title="Firefox 3 users
+will shortly be the majority of Firefox users, and the advantages of
+using the new features of Firefox 3 are significant.">Les utilisateurs de Firefox 3 seront bientôt la majorité des utilisateurs de Firefox, et les avantages d'utiliser les nouvelles fonctionnalités de Firefox 3 sont importants.</span></span></p>
+</div>
+<h2 id="XUL">XUL</h2>
+<p><span class="long_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title='XUL (pronounced "zool") is one of
+many technologies used for creating Mozilla-based products and
+extensions.'><a href="/fr/XUL" title="fr/XUL">XUL</a> (prononcez «zool») est l'une des nombreuses technologies utilisées pour créer des produits </span></span><span class="long_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title='XUL (pronounced "zool") is one of
+many technologies used for creating Mozilla-based products and
+extensions.'>et des extensions </span></span><span class="long_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title='XUL (pronounced "zool") is one of
+many technologies used for creating Mozilla-based products and
+extensions.'>basés sur Mozilla. </span><span style="background-color: rgb(255, 255, 255);" title="It is only one part of the development landscape, but given that
+it's practically exclusive to Mozilla, it tends to be used to identify
+all Mozilla-related development.">C'est seulement une partie de l'environnement de développement, mais étant donné qu'il est pratiquement exclusif à Mozilla, il tend à être utilisé pour identifier tous les développements liés à Mozilla. </span><span style="background-color: rgb(255, 255, 255);" title="You'll sometimes read terms like &quot;XUL
+applications&quot; and &quot;XUL extensions&quot;, but rarely will they
+refer to projects that are exclusively built with XUL.">Vous verrez parfois écrit des termes comme "applications XUL" et "extensions XUL", mais rarement ils vont se référer à des projets qui sont exclusivement construits avec XUL. </span><span style="background-color: rgb(255, 255, 255);" title="It usually means that the projects were built using
+Mozilla technologies.">Cela signifie généralement que les projets ont été construits en utilisant les technologies Mozilla. </span><span style="background-color: rgb(255, 255, 255);" title="Even this project,
+called XUL School, covers several other technologies such as JavaScript,
+CSS, XBL and XPCOM.">Même ce tutoriel couvre plusieurs autres technologies telles que JavaScript, CSS, XBL et XPCOM.</span></span></p>
+<h2 id="Gecko">Gecko</h2>
+<p>Le <a href="/fr/Gecko" title="fr/Gecko">moteur Gecko</a> est la partie de Firefox utilisée pour le rendu des pages Web et sa propre interface utilisateur. Vous pouvez identifier le niveau de compatibilité des standards du Web dans les <a class="external" href="http://fr.wikipedia.org/wiki/Gecko_%28moteur_de_rendu%29#Logiciels_utilisant_Gecko" title="http://fr.wikipedia.org/wiki/Gecko_(moteur_de_rendu)#Logiciels_utilisant_Gecko">navigateurs basés sur Gecko</a> en regardant leur chaîne d'<a class="external" href="http://fr.wikipedia.org/wiki/User-Agent" title="http://fr.wikipedia.org/wiki/User-Agent">agent utilisateur</a>, qui devrait inclure la version Gecko. Les versions de Gecko sont indépendantes des versions de Firefox, et vous pouvez voir une cartographie des versions de Firefox et les versions Gecko sur la <a href="/fr/Gecko" title="fr/Gecko">page Gecko</a>. La chaîne d'agent utilisateur pour Firefox au moment d'écrire ces lignes (en anglais américain, Mac OS X) est la suivante :</p>
+<p>Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:<strong>1.9.2</strong>) Gecko/20100115 Firefox/3.6</p>
+<p>La section en surbrillance est la version Gecko: 1.9.2. Vous pouvez lire et copier la chaîne de l'agent utilisateur de n'importe quelle fenêtre de Firefox, en choisissant "? &gt; À propos de Mozilla Firefox" dans le menu principal ("Firefox &gt; À propos de Mozilla Firefox", sur Mac).</p>
+<h2 id="XULRunner">XULRunner</h2>
+<p>Firefox et d'autres applications Mozilla peuvent être considérés comme composés de deux parties distinctes : une couche d'interface utilisateur qui est distincte pour chaque projet, et une plate-forme commune sur laquelle la couche d'interface est construite. Cette plate-forme est connue sous le nom de <a href="/fr/XULRunner" title="fr/XULRunner">XULRunner</a>. XULRunner inclut le moteur de rendu Gecko, la <a href="/fr/Necko" title="fr/Necko">bibliothèque réseau Necko</a>, et plusieurs autres composants qui permettent aux gestionnaires de fichiers OS indépendant, l'accessibilité et la localisation, entre autres. C'est cette plate-forme très puissante qui a permis une croissance rapide de la communauté de développement autour de Mozilla et Firefox.</p>
+<p>XULRunner est disponible sous forme binaire sur la <a href="/fr/XULRunner" title="fr/XULRunner">page XULRunner</a>, et il est la base de plusieurs projets, tels que Songbird, Miro et Eudora. Il y a une liste très complète d'applications XULRunner dans le <a href="/fr/Florilège_des_applications_XULrunner" title="fr/Florilège des applications XULrunner">Hall of Fame XULRunner</a>.</p>
+<h2 id="Sur_le_tutoriel">Sur le tutoriel</h2>
+<p>Avec ce rappel des concepts de base, nous pouvons maintenant aller droit au développement d'extensions. Vous êtes probablement encore à vous demander qu'est-ce qu'est exactement une extension, ce qu'elle fait, et comment vous pouvez en faire. Eh bien, tout ce tutoriel est consacré à vous l'expliquer.</p>
+<p>Bienvenue dans le monde du développement d'extensions. Maintenant, allons-y.</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Vulgarisation_XUL/Premiers_pas_avec_les_extensions_Firefox">Suivant  »</a></p>
+</div>
+<p><span style="font-size: small;">Ce tutoriel a été gracieusement offert à Mozilla par Appcoast.</span></p>

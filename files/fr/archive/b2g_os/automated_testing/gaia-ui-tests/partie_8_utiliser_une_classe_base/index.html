@@ -1,0 +1,94 @@
+---
+title: 'Partie 8 : Utiliser une classe base'
+slug: >-
+  Archive/B2G_OS/Automated_testing/gaia-ui-tests/Partie_8_Utiliser_une_classe_base
+tags:
+  - Automatisation
+translation_of: Archive/B2G_OS/Automated_testing/gaia-ui-tests/Part_8_Using_a_base_class
+---
+<p></p><div style="text-align: right;" class="prevnext">
+    <p><a style="float: left;" href="/fr/docs/Mozilla/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_7_Writing_your_own_tests">« Précédent</a><a href="/fr/docs/Mozilla/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_9_app_objects">Suivant  »</a></p>
+</div><p></p>
+
+<div class="summary">
+<p><span class="seoSummary">À présent vous avez des tests multiples et vous sentez probablement que vous avez bien progressé. Pourtant, il existe d'autres manières d'améliorer encore l'efficacité de votre code — vous pouvez remarquer que vous avez dû jusqu'ici inclure les méthodes <code>setUp()</code> et <code>tearDown()</code> dans chaque fichier de test, au fur et à mesure de notre progression. Si vous avez plusieurs douzaines de tests alors il y a beaucoup de duplication de code ! Dans cet article, nous allons regarder comment mettre le code <code>setUp()</code>/<code>tearDown()</code> commun à tous les tests dans une classe <code>TestBase</code>, qui peut ainsi être importée dans chaque fichier de test.</span></p>
+</div>
+
+<h2 id="test_base.py">test_base.py</h2>
+
+<p>Pour commencer, créez un nouveau fichier nommé <code>test_base.py</code>, dans le même dossier que vos cas de tests existants.</p>
+
+<p>Ensuite, déplacez vos déclarations relatives à la configuration commune (<code>unittest</code>, <code>Marionette</code> et <code>time</code>) dans le fichier, avec une classe <code>TestBase</code> contenant les méthodes <code>setUp()</code> et <code>tearDown()</code>, et les fonctions d'aide communes (comme <code>unlock_screen()</code>). Le fichier devrait ressembler à cela :</p>
+
+<pre class="brush: python">import time
+import unittest
+from marionette import Marionette
+
+
+class TestBase(unittest.TestCase):
+
+    def unlock_screen(self):
+        self.marionette.execute_script('window.wrappedJSObject.lockScreen.unlock();')
+
+    def kill_all(self):
+        self.marionette.switch_to_frame()
+        self.marionette.execute_async_script("""
+             // Kills all running apps, except the homescreen.
+             function killAll() {
+               let manager = window.wrappedJSObject.AppWindowManager;
+
+               let apps = manager.getApps();
+               for (let id in apps) {
+                 let origin = apps[id].origin;
+                 if (origin.indexOf('verticalhome') == -1) {
+                   manager.kill(origin);
+                 }
+               }
+             };
+             killAll();
+             // return true so execute_async_script knows the script is complete
+             marionetteScriptFinished(true);
+            """)
+
+    def setUp(self):
+         # Create the client for this session. Assuming you're using the default port on a Marionette instance running locally
+        self.marionette = Marionette()
+        self.marionette.start_session()
+
+        # Unlock the screen
+        self.unlock_screen()
+
+        # kill all open apps
+        self.kill_all()
+
+        # Switch context to the homescreen iframe and tap on the contacts icon
+        time.sleep(2)
+        home_frame = self.marionette.find_element('css selector', 'div.homescreen iframe')
+        self.marionette.switch_to_frame(home_frame)
+
+
+    def tearDown(self):
+        # Close the Marionette session now that the test is finished
+        self.marionette.delete_session()
+</pre>
+
+<h2 id="Mettre_à_jour_vos_fichiers_de_test">Mettre à jour vos fichiers de test</h2>
+
+<p>Avec la création de votre fichier <code>test_base.py</code>, vous devez importer <code>TestBase</code> dans vos fichiers de test, et les classes de test doivent être changées pour étendre la classe <code>TestBase</code> :</p>
+
+<pre class="brush: python">import unittest
+from marionette import Wait
+from marionette import By
+from test_base import TestBase
+
+class TestContacts(TestBase):
+
+    def test(self):
+        # Tests in here
+
+if __name__ == '__main__':
+    unittest.main()</pre>
+
+<p>Essayez d'exécuter votre fichier de test de nouveau.</p>
+
+<p>Vous ne devriez pas voir de grande différence maintenant mais si vous avez des douzaines ou des centaines de tests, cela économise beaucoup de code dupliqué.</p>

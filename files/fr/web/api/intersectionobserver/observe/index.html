@@ -1,0 +1,75 @@
+---
+title: IntersectionObserver.observe()
+slug: Web/API/IntersectionObserver/observe
+tags:
+  - API
+  - Intersection Observer
+  - IntersectionObserver
+  - IntersectionObserver API
+  - Méthode
+  - Reference
+  - observe
+translation_of: Web/API/IntersectionObserver/observe
+---
+<div>{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}</div>
+
+<p>La méthode <code><strong>observe()</strong></code> de l'interface {{domxref("IntersectionObserver")}} ajoute un élément à l'ensemble des éléments cibles étant observés par l'<code>IntersectionObserver</code>. Un observateur a un ensemble de seuils d'intersection et une racine, mais peut observer plusieurs éléments cibles en surveillant leurs changements de visibilité indépendamment. Pour cesser d'observer un élément, il faut appeler la méthode {{domxref("IntersectionObserver.unobserve()")}}.</p>
+
+<p>Lorsque la visibilité d'un élément cible franchit l'un des seuils d'intersection de l'observateur (tel que listé dans {{domxref("IntersectionObserver.thresholds")}}, la fonction de rappel de l'observateur est executée avec un {{domxref("IntersectionObserverEntry")}} représentant le changement d'intersection qui a été observé. À noter que cette conception permet à de multiples changements d'intersection d'éléments différents d'être traités par un unique appel à la fonction de rappel au moyen d'un tableau d'objets <code>IntersectionObserverEntry</code>.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox"><em>IntersectionObserver</em>.observe(cible);</pre>
+
+<h3 id="Paramètres">Paramètres</h3>
+
+<dl>
+ <dt><code>cible</code></dt>
+ <dd>Un {{domxref("element")}} dont la visibilité dans la racine est à suivre. Cet élément doit nécessairement être descendant de l'élément racine (ou contenu dans le document courant si la racine est la fenêtre du document).</dd>
+</dl>
+
+<h3 id="Valeur_de_retour">Valeur de retour</h3>
+
+<p><code>undefined</code>.</p>
+
+
+<h2 id="Exemples">Exemples</h2>
+
+<pre class="brush: js">  // Créer l'observateur
+  let observateur = new IntersectionObserver(fonctionRappel, optionsObservateur);
+</pre>
+
+<p>Faire observer un élément par l'observateur :</p>
+
+<pre class="brush: js">observateur.observe(cible);</pre>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Spécification</th>
+   <th scope="col">Statut</th>
+   <th scope="col">Commentaire</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('IntersectionObserver','#dom-intersectionobserver-observe','IntersectionObserver.observe()')}}</td>
+   <td>{{Spec2('IntersectionObserver')}}</td>
+   <td>Définition initiale.</td>
+  </tr>
+ </tbody>
+</table>
+
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p>{{Compat("api.IntersectionObserver.observe")}}</p>
+
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>{{domxref("IntersectionObserver.unobserve()")}}</li>
+</ul>

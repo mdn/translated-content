@@ -1,0 +1,106 @@
+---
+title: Référence XBL 1.0
+slug: Archive/Mozilla/XBL/Référence_XBL_1.0
+tags:
+  - XBL
+translation_of: Archive/Mozilla/XBL/XBL_1.0_Reference
+---
+<p>
+</p>
+<h3 id="Résumé"> Résumé </h3>
+<p>Ce document décrit le langage de liaison extensible (Extensible Binding Language, <a href="fr/XBL">XBL</a>) 1.0 tel qu'implémenté dans les navigateurs basés sur <a href="fr/Gecko">Gecko</a>.
+</p><p>XBL est un langage de balisage basé sur <a href="fr/XML">XML</a> pour implémenter des composants réutilisables (liaisons ou <i>bindings</i>) qui peuvent être liés à des éléments d'autres documents. L'élément pour lequel une liaison a été spécifiée, appelé l'élément lié ou <i>bound element</i>, reçoit un nouveau comportement spécifié par la liaison. Les liaisons peuvent être liées à des éléments à l'aide de feuilles de style en cascade (<a href="fr/CSS">CSS</a>) ou via le <a href="fr/DOM">DOM</a>. Un élément peut être lié à plusieurs liaisons différentes en même temps. </p><p>Fonctionnellement, les liaisons XBL peuvent être comparées avec les fonctionnalités <a class="external" href="http://msdn.microsoft.com/workshop/components/htc/reference/htcref.asp">Behaviors</a> et <a class="external" href="http://msdn.microsoft.com/workshop/author/behaviors/overview/viewlink_ovw.asp">Viewlink</a> de Microsoft, mais implémentées comme une solution XML intégrée.
+</p><p>Les liaisons peuvent contenir des gestionnaires d'évènements enregistrées sur l'élément lié, une implémentation de nouvelles méthodes et propriétés qui deviennent accessibles depuis celui-ci, et du contenu anonyme à insérer autour de cet élément.
+</p>
+<div class="note">
+<p>Différents ajustements dans l'implémentation actuelle ont été faits depuis les <a class="external" href="http://www.w3.org/TR/xbl/">propositions XBL plus anciennes</a>, et tous ne sont pas encore reflétés dans ce document. Le processus de documentation est toujours en cours : gardez cela à l'esprit lorsque vous utilisez les informations fournies.
+</p>
+</div>
+<h3 id="Éléments_XBL"> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/%c3%89l%c3%a9ments">Éléments XBL</a> </h3>
+<p>Les éléments XBL 1.0 sont dans l'espace de noms <code><span class="nowiki">http://www.mozilla.org/xbl</span></code>.
+</p>
+<ul><li> <code><a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/%c3%89l%c3%a9ments#bindings">bindings</a></code>
+</li><li> <code><a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/%c3%89l%c3%a9ments#binding">binding</a></code>
+</li><li> <code><a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/%c3%89l%c3%a9ments#_content">content</a></code>
+</li><li> <code><a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/%c3%89l%c3%a9ments#children">children</a></code>
+</li><li> <code><a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/%c3%89l%c3%a9ments#implementation">implementation</a></code>
+</li><li> <code><a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/%c3%89l%c3%a9ments#constructor">constructor</a></code>
+</li><li> <code><a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/%c3%89l%c3%a9ments#destructor">destructor</a></code>
+</li><li> <code><a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/%c3%89l%c3%a9ments#field">field</a></code>
+</li><li> <code><a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/%c3%89l%c3%a9ments#property">property</a></code>
+</li><li> <code><a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/%c3%89l%c3%a9ments#getter">getter</a></code>
+</li><li> <code><a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/%c3%89l%c3%a9ments#setter">setter</a></code>
+</li><li> <code><a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/%c3%89l%c3%a9ments#method">method</a></code>
+</li><li> <code><a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/%c3%89l%c3%a9ments#parameter">parameter</a></code>
+</li><li> <code><a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/%c3%89l%c3%a9ments#body">body</a></code>
+</li><li> <code><a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/%c3%89l%c3%a9ments#handlers">handlers</a></code>
+</li><li> <code><a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/%c3%89l%c3%a9ments#handler">handler</a></code>
+</li><li> <code><a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/%c3%89l%c3%a9ments#resources">resources</a></code>
+</li><li> <code><a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/%c3%89l%c3%a9ments#stylesheet">stylesheet</a></code>
+</li><li> <code><a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/%c3%89l%c3%a9ments#image">image</a></code>
+</li></ul>
+<h3 id="Attachement_et_détachement_de_liaisons"> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Attachement_et_d%c3%a9tachement_de_liaisons">Attachement et détachement de liaisons</a> </h3>
+<ul><li> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Attachement_et_d%c3%a9tachement_de_liaisons#Attachement_avec_CSS">Attachement avec CSS</a>
+</li><li> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Attachement_et_d%c3%a9tachement_de_liaisons#Attachement_avec_la_propri.C3.A9t.C3.A9_element.style">Attachement avec la propriété element.style</a>
+</li><li> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Attachement_et_d%c3%a9tachement_de_liaisons#Appel_de_.3Cconstructor.3E">Appel de &lt;constructor&gt;</a>
+</li><li> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Attachement_et_d%c3%a9tachement_de_liaisons#Appel_de_.3Cdestructor.3E">Appel de &lt;destructor&gt;</a>
+</li><li> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Attachement_et_d%c3%a9tachement_de_liaisons#Documents_de_liaison">Documents de liaison</a>
+</li></ul>
+<h3 id="Interfaces_DOM"> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Interfaces_DOM">Interfaces DOM</a> </h3>
+<ul><li> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Interfaces_DOM#L.27interface_DocumentXBL">L'interface DocumentXBL</a>
+</li><li> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Interfaces_DOM#L.27interface_ElementXBL">L'interface ElementXBL</a>
+</li></ul>
+<h3 id="Contenu_anonyme"> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Contenu_anonyme">Contenu anonyme</a> </h3>
+<ul><li> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Contenu_anonyme#Introduction">Introduction</a>
+</li><li> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Contenu_anonyme#Visibilit.C3.A9_et_acc.C3.A8s_depuis_le_DOM">Visibilité et accès depuis le DOM</a>
+</li><li> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Contenu_anonyme#G.C3.A9n.C3.A9ration_de_contenu">Génération de contenu</a>
+<ul><li> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Contenu_anonyme#R.C3.A8gles_de_g.C3.A9n.C3.A9ration">Règles de génération</a>
+</li><li> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Contenu_anonyme#L.27.C3.A9v.C3.A8nement_contentgenerated">L'évènement contentgenerated</a>
+</li><li> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Contenu_anonyme#L.27.C3.A9v.C3.A8nement_contentdestroyed">L'évènement contentdestroyed</a>
+</li></ul>
+</li><li> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Contenu_anonyme#Redirection_d.27attribut">Redirection d'attribut</a>
+</li><li> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Contenu_anonyme#Points_d.27insertion">Points d'insertion</a>
+<ul><li> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Contenu_anonyme#.3Cchildren.3E_et_.3Celement.3E">&lt;children&gt; et &lt;element&gt;</a>
+</li><li> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Contenu_anonyme#Gestion_des_changements_du_DOM">Gestion des changements du DOM</a>
+</li></ul>
+</li><li> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Contenu_anonyme#Flux_et_ciblage_des_.C3.A9v.C3.A8nements">Flux et ciblage des évènements</a>
+<ul><li> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Contenu_anonyme#Flux_et_ciblage_au_travers_des_visibilit.C3.A9s">Flux et ciblage au travers des visibilités</a>
+</li><li> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Contenu_anonyme#.C3.89v.C3.A8nements_Focus_et_Blur">Évènements Focus et Blur</a>
+</li><li> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Contenu_anonyme#.C3.89v.C3.A8nements_Mouseover_et_Mouseout">Évènements Mouseover et Mouseout</a>
+</li></ul>
+</li><li> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Contenu_anonyme#Contenu_anonyme_et_CSS">Contenu anonyme et CSS</a>
+<ul><li> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Contenu_anonyme#S.C3.A9lecteurs_et_visibilit.C3.A9">Sélecteurs et visibilité</a>
+</li><li> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Contenu_anonyme#Liaison_de_feuilles_de_style">Liaison de feuilles de style</a>
+</li></ul>
+</li></ul>
+<h3 id="Implémentations_de_liaisons"> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Impl%c3%a9mentations_de_liaisons">Implémentations de liaisons</a> </h3>
+<ul><li> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Impl%c3%a9mentations_de_liaisons#Introduction">Introduction</a>
+</li><li> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Impl%c3%a9mentations_de_liaisons#M.C3.A9thodes">Méthodes</a>
+</li><li> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Impl%c3%a9mentations_de_liaisons#Propri.C3.A9t.C3.A9s">Propriétés</a>
+</li><li> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Impl%c3%a9mentations_de_liaisons#H.C3.A9ritage_d.27impl.C3.A9mentations">Héritage d'implémentations</a>
+</li></ul>
+<h3 id="Gestionnaires_d'évènements"> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Gestionnaires_d'%c3%a9v%c3%a8nements">Gestionnaires d'évènements</a> </h3>
+<h3 id="Exemple_-_Notes"> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Exemple_-_Notes">Exemple - Notes</a> </h3>
+<p>Mis à jour et ajusté pour l'implémentation actuelle de Firefox.
+</p>
+<div class="note">
+<p>Cet exemple est destiné à montrer l'utilisation de XBL plutôt que pour être une application utile en pratique. Pour cette raison, il contient de nombreux commentaires et certains blocs qui auraient pu être évités dans une solution plus compacte mais sont utilisés ici à des fins de démonstration.
+</p>
+</div>
+<ul><li> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Exemple_-_Notes#notes.html">notes.html</a>
+</li><li> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Exemple_-_Notes#notes.xml">notes.xml</a>
+</li><li> <a href="fr/XBL/R%c3%a9f%c3%a9rence_XBL_1.0/Exemple_-_Notes#notes.css">notes.css</a>
+</li></ul>
+<p><a class="external" href="http://www.nskom.com/external/xbl/notes.html">Voir cet exemple</a>
+</p><p><br>
+<span class="comment"><a class="external" href="http://www.nskom.com/external/xbl/notes.zip" title="http://www.nskom.com/external/xbl/notes.zip">Téléchargement de tous les fichiers (archive .zip)</a> need to ask to adjust the server - it gives "Access denied" for zip files (?)</span>
+</p>
+<h3 id="Références"> Références </h3>
+<ul><li> <a class="external" href="http://www.w3.org/TR/xbl/">Proposition initiale de XBL 1.0 soumise comme note au W3C</a> (en anglais, ne reflète pas l'implémentation actuelle dans Mozilla, ni les plans futurs)
+</li><li> <a class="external" href="http://www.mozilla.org/projects/xbl/xbl2.html">Projet XBL 2.0</a>
+</li></ul>
+<div class="originaldocinfo">
+<h3 id="Informations_sur_le_document_original"> Informations sur le document original </h3>
+<ul><li> Date de dernière mise à jour : le 24 avril 2006
+</li></ul>
+</div>

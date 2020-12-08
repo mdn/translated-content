@@ -1,0 +1,223 @@
+---
+title: L'API Web Bluetooth
+slug: Archive/B2G_OS/Bluetooth_API
+tags:
+  - API
+  - B2G
+  - Non-standard
+  - WebAPI
+translation_of: Archive/B2G_OS/Bluetooth_API
+---
+<div><section class="Quick_links" id="Quick_Links"><ol><li><strong><a href="/fr/docs/Web/API/Web_Bluetooth_API">Web Bluetooth API</a></strong></li><li><strong><a href="/fr/docs/Web/API/Archive"><code>Archive</code></a></strong></li><li class="toggle"><details open><summary>Pages liées à Bluetooth API</summary><ol><li><a href="/fr/docs/Web/API/BluetoothAdvertisingData"><code>BluetoothAdvertisingData</code></a></li><li><a href="/fr/docs/Web/API/BluetoothDevice"><code>BluetoothDevice</code></a></li><li><a href="/fr/docs/Web/API/BluetoothGATTCharacteristic"><code>BluetoothGATTCharacteristic</code></a></li><li><a href="/fr/docs/Web/API/BluetoothGATTDescriptor"><code>BluetoothGATTDescriptor</code></a></li><li><a href="/fr/docs/Web/API/BluetoothGATTRemoteServer"><code>BluetoothGATTRemoteServer</code></a></li></ol></details></li></ol></section><div class="overheadIndicator nonStandard nonStandardHeader">
+      <p><strong><span title="Cette API n'a pas été standardisée."><i class="icon-warning-sign"> </i></span> Non standard</strong><br>
+      Cette fonctionnalité n'est ni standard, ni en voie de standardisation. Ne l'utilisez pas pour des sites accessibles sur le Web : elle ne fonctionnera pas pour tout utilisateur. Il peut également y avoir d'importantes incompatibilités entre les implémentations et son comportement peut être modifié dans le futur.</p>
+      </div><div class="warning">
+    <p style="text-align: center;">Cette API est disponible sur <a href="/fr/docs/Mozilla/Firefox_OS">Firefox OS</a> pour <a href="/fr/docs/Mozilla/Firefox_OS/Security/Application_security#App_Types">des applications internes</a> seulement.</p>
+</div></div>
+
+<p>L'API <strong>WebBluetooth</strong> permet à une application web de se connecter à des périphériques Bluetooth. C'est une API complètement expérimentale et non-standard, elle n'est actuellement disponible que pour les applications certifiées. Cependant, il y a de bonnes raisons d'avoir une telle API disponible ; cette question sera examinée dans le cadre du <a class="external external-icon" href="http://www.w3.org/2012/sysapps/">groupe de travail des applications système du W3C</a> .</p>
+
+<div class="note">
+<p><strong>Remarque:</strong> Les développeurs d'applications qui souhaitent envoyer des données à un périphérique Bluetooth peuvent utiliser <a href="https://developer.mozilla.org/en-US/docs/WebAPI/Web_Activities#Firefox_OS_activities">share activity</a>. Cette activity permet seulement le partage d'images, d'audio, de vidéo et de contenu <a href="https://fr.wikipedia.org/wiki/VCard">vCard</a>.</p>
+</div>
+
+<h2 id="Aperçu_de_l'API">Aperçu de l'API</h2>
+
+<p>Le principal point d'entrée de l'API est la propriété <a href="/fr/docs/Web/API/Navigator/mozBluetooth" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>Navigator.mozBluetooth</code></a> qui retourne un objet <a href="/fr/docs/Web/API/BluetoothManager" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>BluetoothManager</code></a>.</p>
+
+<h3 id="Interfaces_de_base">Interfaces de base</h3>
+
+<p>Les interfaces suivantes fournissent une application avec les fonctionnalités de base Bluetooth</p>
+
+<dl>
+ <dt><a href="/fr/docs/Web/API/BluetoothManager" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>BluetoothManager</code></a></dt>
+ <dd>Permet l'accès à tous les adaptateurs Bluetooth disponibles sur l'appareil. Des adaptateurs sont l'interface de connexion pour connecter un autre périphérique Bluetooth à l'appareil actuel.</dd>
+ <dt><a href="/fr/docs/Web/API/BluetoothAdapter" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>BluetoothAdapter</code></a></dt>
+ <dd>Utilisé pour traiter toutes les opérations demandées par les réseaux Bluetooth.</dd>
+ <dt><a href="/fr/docs/Web/API/BluetoothClassOfDevice" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>BluetoothClassOfDevice</code></a></dt>
+ <dd>Fournit identifiant / informations d'un périphérique Bluetooth distant, disponible au stade recherche.</dd>
+ <dt><a href="/fr/docs/Web/API/BluetoothDevice" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>BluetoothDevice</code></a></dt>
+ <dd>Fournit des informations concernant un périphérique Bluetooth distant.</dd>
+ <dt><a href="/fr/docs/Web/API/BluetoothDiscoveryHandle" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>BluetoothDiscoveryHandle</code></a></dt>
+ <dd>Utilisé pour notifier à l'application en cours de la découverte d'un périphérique Bluetooth distant.</dd>
+ <dt><a href="/fr/docs/Web/API/BluetoothPairingHandle" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>BluetoothPairingHandle</code></a></dt>
+ <dd>Contient les fonctionnalités nécessaires pour achever une opération de connexion, y compris les clés d'accès, et les mécanismes pour répondre aux codes PIN saisis par l'utilisateur et confirmer des codes d'authentification.</dd>
+ <dt><a href="/fr/docs/Web/API/BluetoothPairingListener" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>BluetoothPairingListener</code></a></dt>
+ <dd>Définit les gestionnaires d'événements déclenchés pour différentes opérations d'appariement.</dd>
+</dl>
+
+<h3 id="Interfaces_Gatt">Interfaces Gatt</h3>
+
+<p>Les interfaces suivantes permettent à Firefox OS de communiquer avec les services basés sur <a href="https://developer.bluetooth.org/TechnologyOverview/Pages/GATT.aspx">Gatt (Generic Attribute Profile)</a> sur les périphériques distants Smart/<a href="https://fr.wikipedia.org/wiki/Wibree">LE</a>(intelligent/basse énergie).</p>
+
+<dl>
+ <dt><a href="/fr/docs/Web/API/BluetoothGatt" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>BluetoothGatt</code></a></dt>
+ <dd>Handles de communications initiales et de connexions avec les services Gatt.</dd>
+ <dt><a href="/fr/docs/Web/API/BluetoothGattServer" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>BluetoothGattServer</code></a></dt>
+ <dd>Fournit des fonctionnalités serveur Bluetooth GATT pour permettrent la création de services et caractéristiques Bluetooth Smart/LE.</dd>
+ <dt><a href="/fr/docs/Web/API/BluetoothGattService" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>BluetoothGattService</code></a></dt>
+ <dd>Représente un service fourni par un serveur GATT, y compris la définition du service, la liste des services inclus, et la liste des caractéristiques de ce service.</dd>
+ <dt><a href="/fr/docs/Web/API/BluetoothGattCharacteristic" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>BluetoothGattCharacteristic</code></a></dt>
+ <dd>Représente une caractéristique de service GATT, qui comprend la définition de la caractéristique, la valeur des propriétés et les informations de configuration, et la liste de descripteurs qui fournissent des informations connexes.</dd>
+ <dt><a href="/fr/docs/Web/API/BluetoothGattDescriptor" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>BluetoothGattDescriptor</code></a></dt>
+ <dd>Représente un descripteur GATT, qui contient des informations connexes sur une valeur caractéristique.</dd>
+</dl>
+
+<h3 id="Interfaces_d'événements_Bluetooth">Interfaces d'événements Bluetooth</h3>
+
+<p>Ces objets représentent différents événements ayant lieu au sein d'une interaction Bluetooth.</p>
+
+<dl>
+ <dt><a href="/fr/docs/Web/API/BluetoothAdapterEvent" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>BluetoothAdapterEvent</code></a></dt>
+ <dd>Donne accès à l'objet <a href="/fr/docs/Web/API/BluetoothAdapter" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>BluetoothAdapter</code></a> et à son adresse comme paramètre d'un gestionnaire d'événement <code><a class="new" href="https://developer.mozilla.org/fr/docs/Web/Events/adapteradded">adapteradded</a></code> ou <code><a class="new" href="https://developer.mozilla.org/fr/docs/Web/Events/adapterremoved">adapterremoved</a></code> (voir <a href="https://developer.mozilla.org/fr/docs/Web/API/BluetoothManager/onadapteradded"><code>BluetoothManager.onadapteradded</code></a> et<a class="new" href="https://developer.mozilla.org/fr/docs/Web/API/BluetoothManager/onadapterremoved"><code> BluetoothManager.onadapterremoved</code></a>).</dd>
+ <dt><a href="/fr/docs/Web/API/BluetoothAttributeEvent" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>BluetoothAttributeEvent</code></a></dt>
+ <dd>Permet d'accéder à des attributs modifiés et à leurs nouvelles valeurs par le paramètre <code><a class="new" href="https://developer.mozilla.org/en-US/docs/Web/Events/attributechanged">attributechanged</a></code> du gestionnaires d'événements (y compris <a class="new" href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothManager/onattributechanged"><code>BluetoothManager.onattributechanged</code></a>, <a class="new" href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothAdapter/onattributechanged"><code>BluetoothAdapter.onattributechanged</code></a> et<a class="new" href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice/onattributechanged"><code> BluetoothDevice.onattributechanged</code></a> ).</dd>
+ <dt><a href="/fr/docs/Web/API/BluetoothDeviceEvent" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>BluetoothDeviceEvent</code></a></dt>
+ <dd>Fournit un accès à un périphérique trouvé/apparié (<a href="https://developer.mozilla.org/fr/docs/Web/API/BluetoothDevice"><code>BluetoothDevice</code></a>) ou à l'adresse ou à un dispositif non apparié comme paramètre d'un gestionnaire d'événement <code><a class="new" href="https://developer.mozilla.org/en-US/docs/Web/Events/devicefound">devicefound</a></code>,<code> </code><code><a class="new" href="https://developer.mozilla.org/en-US/docs/Web/Events/devicepaired">devicepaired</a></code> ou <code><a class="new" href="https://developer.mozilla.org/en-US/docs/Web/Events/deviceunpaired">deviceunpaired</a></code>.</dd>
+ <dt><a href="/fr/docs/Web/API/BluetoothGattCharacteristicEvent" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>BluetoothGattCharacteristicEvent</code></a></dt>
+ <dd>Fournit un accès à une mise à jour <a href="https://developer.mozilla.org/fr/docs/Web/API/BluetoothGattCharacteristic"><code>BluetoothGattCharacteristic</code></a> comme paramètre du gestionnaire <a class="new" href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothGatt/oncharacteristicchanged"><code>BluetoothGatt.oncharacteristicchanged</code></a>, lorsque l'événement <code><a class="new" href="https://developer.mozilla.org/en-US/docs/Web/Events/characteristicchanged">characteristicchanged</a></code> est déclenché.</dd>
+ <dt><a href="/fr/docs/Web/API/BluetoothLeDeviceEvent" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>BluetoothLeDeviceEvent</code></a></dt>
+ <dd>Permet d'accéder à un objet <a href="https://developer.mozilla.org/fr/docs/Web/API/BluetoothDevice"><code>BluetoothDevice</code></a> de <a href="https://fr.wikipedia.org/wiki/Wibree">LE</a>, à sa valeur <a href="https://fr.wikipedia.org/wiki/Received_Signal_Strength_Indication">RSSI</a> et son annonce d'enregistrement, par le paramètre d'un gestionnaire d'événement <code><a class="new" href="https://developer.mozilla.org/en-US/docs/Web/Events/devicefound">devicefound</a></code> (voir<a class="new" href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDiscoveryHandle/ondevicefound"><code> BluetoothDiscoveryHandle.ondevicefound</code></a>).</dd>
+ <dt><a href="/fr/docs/Web/API/BluetoothPairingEvent" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>BluetoothPairingEvent</code></a></dt>
+ <dd>Permet d'accéder à un nom de dispositif et à l'objet <a href="https://developer.mozilla.org/fr/docs/Web/API/BluetoothPairingHandle"><code>BluetoothPairingHandle</code></a> requis pour l'association de périphériques (incluant par exemple <a class="new" href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothPairingListener/ondisplaypasskeyreq"><code>BluetoothPairingListener.ondisplaypasskeyreq</code></a> et<a class="new" href="https://developer.mozilla.org/fr/docs/Web/API/BluetoothPairingListener/onenterpincodereq"><code> BluetoothPairingListener.onenterpincodereq</code></a>).</dd>
+</dl>
+
+<h3 id="Les_messages_du_système">Les messages du système</h3>
+
+<p>Comme certaines actions de périphériques distants peuvent nécessiter le réveil d'une application pour les manipuler, il y a plusieurs messages système liés à Bluetooth:</p>
+
+<ul>
+ <li><code>bluetooth-dialer-command</code></li>
+ <li><code>bluetooth-cancel</code></li>
+ <li><code>bluetooth-hid-status-changed</code></li>
+ <li><code>bluetooth-pairing-request</code></li>
+ <li><code>bluetooth-opp-transfer-complete</code></li>
+ <li><code>bluetooth-opp-update-progress</code></li>
+ <li><code>bluetooth-opp-receiving-file-confirmation</code></li>
+ <li><code>bluetooth-opp-transfer-start</code></li>
+</ul>
+
+<div class="note">
+<p><strong>Note :</strong> une application peut réagir à ces messages en les demandant dans son <a href="https://developer.mozilla.org/fr/Apps/Build/Manifest">fichier manifeste</a> et en utilisant la fonction <a class="new" href="https://developer.mozilla.org/fr/docs/Web/API/Navigator/mozSetMessageHandler"><code>navigator.mozSetMessageHandler()</code></a> pour définir un gestionnaire de messages.</p>
+</div>
+
+<h3 id="Interfaces_obsolètes">Interfaces obsolètes</h3>
+
+<dl>
+ <dt><a href="/fr/docs/Web/API/BluetoothStatusChangedEvent" title="L'API BluetoothStatusChangedEvent donne accès aux informations de modification du statut de l'équipement Bluetooth."><code>BluetoothStatusChangedEvent</code></a></dt>
+ <dd>Fournit un accès à l'information concernant tout changement d'état d'un périphérique Bluetooth.</dd>
+</dl>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Spécification</th>
+   <th scope="col">Statut</th>
+   <th scope="col">Commentaires</th>
+  </tr>
+  <tr>
+   <td><a class="external" href="https://webbluetoothcg.github.io/web-bluetooth/" hreflang="en" lang="en" title="La spécificaction 'Web Bluetooth'">Web Bluetooth</a></td>
+   <td><span class="spec-Draft">Projet</span></td>
+   <td>Brouillon. Ne fait partie d'aucune spécification à l'heure actuelle. Doit être discuté avec le <a href="http://www.w3.org/2012/sysapps/">W3C's System Applications Working Group</a>.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<div><p class="warning"><strong><a href="https://github.com/mdn/browser-compat-data">Nous convertissons les données de compatibilité dans un format JSON</a></strong>.
+            Ce tableau de compatibilité utilise encore l'ancien format
+            car nous n'avons pas encore converti les données qu'il contient.
+            <strong><a href="/fr/docs/MDN/Contribute/Structures/Compatibility_tables">Vous pouvez nous aider en contribuant !</a></strong></p>
+
+<div class="htab">
+    <a id="AutoCompatibilityTable" name="AutoCompatibilityTable"></a>
+    <ul>
+        <li class="selected"><a>Ordinateur</a></li>
+        <li><a>Mobile</a></li>
+    </ul>
+</div></div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Fonctionnalité</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Support simple</td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Fonctionnalité</th>
+   <th>Android</th>
+   <th>Android Webview</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>Bluetooth 'v2' support</td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+   <td>2.1</td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+  </tr>
+  <tr>
+   <td>Bluetooth initial support: <code>BluetoothManager</code>, <code>BluetoothAdapter</code>, <code>BluetoothDevice</code>, <code>BluetoothDeviceEvent</code>, <code>BluetoothStatusChangedEvent</code></td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+   <td>1.0.1</td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h3 id="Notes_de_compatibilité">Notes de compatibilité</h3>
+
+<ul>
+ <li>L'API Web Bluetooth est implémenté dans Firefox OS 1.0.1 et au-dessus.</li>
+ <li>Cependant, sur Firefox OS &lt;1.2, vous devez être prudent avec le partage de fichiers Bluetooth. Si vous partagez un fichier directement à partir de la SDCard vous êtes ok, mais si vous partagez un blob d'image directement depuis l'appareil via une application Web vous rencontrerez des problèmes, parce que Bluetooth attend un chemin d'accès valide via la SDCard (voir <a class="external external-icon" href="https://github.com/mozilla-b2g/gaia/blob/v1.0.1/apps/bluetooth/js/transfer.js#L277">1.0.1 B2G app Gaia Bluetooth</a>). Ceci est <a class="external external-icon" href="https://github.com/mozilla-b2g/gaia/blob/15b019e3acbbc111652640c6ef95882e90d65e18/apps/bluetooth/js/transfer.js#L159-L179">fixé dans Firefox OS 1.2</a>. Dans Firefox &lt;1.2 vous auriez à écrire sur une carte SD via <a href="https://developer.mozilla.org/fr/docs/WebAPI/Device_Storage">le périphérique de stockage</a>, puis à transférer via Bluetooth.</li>
+ <li>Il y a une complication supplémentaire : le stockage du périphérique est uniquement disponible pour les applications privilégiées (empaquetées), donc si votre application est hébergée, vous ne pouvez pas utiliser le stockage de périphériques pour résoudre le problème ci-dessus.</li>
+ <li>Un autre problème que vous pouvez rencontrer lorsque vous tentez d'utiliser le partage de fichiers Bluetooth entre Firefox OS et un autre dispositif est que l'autre périphérique peut ne pas avoir de partage Bluetooth (Firefox OS est activé par défaut.) Pour exemple sur Mac OSX 10.9 il est allumé via <em>System Preferences &gt; Sharing &gt; check "Bluetooth Sharing"</em>.  </li>
+</ul>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API/Using_the_Web_Bluetooth_API">Utilisation de l'API Web Bluetooth</a></li>
+</ul>
+
+<p> </p>
+
+<p> </p>

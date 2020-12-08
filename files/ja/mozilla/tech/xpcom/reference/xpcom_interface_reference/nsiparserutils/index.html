@@ -1,0 +1,205 @@
+---
+title: nsIParserUtils
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsIParserUtils
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIParserUtils
+---
+<div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/parser/html/nsIParserUtils.idl" rel="custom">parser/html/nsIParserUtils.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+Provides non-Web HTML parsing functionality to Firefox extensions and XULRunner applications.
+</span>
+
+  <div style="height: 42px; position: relative; padding: 2px; width: auto;">
+
+  <div style="top: 22px; font-size: 11px; position: absolute;">1.0</div>
+
+  <div style="top: 22px; font-size: 11px; position: absolute; left: 0px; text-align: right; float: right; width: 100%;">66</div>
+
+  <div style="height: 8px; top: 16px; background: #dd0000; left: 0px; position: absolute; width: 24.285714285714285%;"></div>
+
+<div style="height: 8px; top: 16px; left: 24.285714285714285%; background: #00dd00; position: absolute; width: 75.71428571428572%;" title="Introduced in Gecko 13.0 (Firefox 13.0 / Thunderbird 13.0 / SeaMonkey 2.10)"></div>
+
+<div style="top: 0px; font-size: 11px; position: absolute; left: 24.285714285714285%;">Introduced</div>
+<div style="top: 22px; font-size: 11px; position: absolute; left: 24.285714285714285%;">Gecko 13.0</div>
+
+    <div style="height: 8px; top: 16px; left: 25.21428571428571%; background: #eeee00; position: absolute; width: 1%; border-radius: 4px; -webkit-border-radius: 4px;" title="Last changed in Gecko 14.0 (Firefox 14.0 / Thunderbird 14.0 / SeaMonkey 2.11)"></div>
+
+</div>
+
+<div style="background: #eee; padding: 2px;">
+継承元: <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
+<span style="text-align: right; float: right;">最終更新: Gecko 14.0 (Firefox 14.0 / Thunderbird 14.0 / SeaMonkey 2.11)</span></div>
+</div>
+
+<div class="warning">警告: Geckoの中からこれを使用しないでください。代わりに<code>nsContentUtils</code>、<code>nsTreeSanitizer</code>などを直接使用してください。</div>
+
+<p>Implemented by: <code>@mozilla.org/parserutils;1</code> as a service:</p>
+
+<pre class="eval">var parserUtils = Components.classes["@mozilla.org/<code>parserutils;1</code>"]
+                  .getService(Components.interfaces.nsIParserUtils);
+</pre>
+
+<h2 id="Method_overview" name="Method_overview">メソッド概要</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>AString <a href="#convertToPlainText()">convertToPlainText</a>(in AString src, in unsigned long flags, in unsigned long wrapCol);</code></td>
+  </tr>
+  <tr>
+   <td><code>nsIDOMDocumentFragment <a href="#parseFragment()">parseFragment</a>(in AString fragment, in unsigned long flags, in boolean isXML, in nsIURI baseURI, in nsIDOMElement element);</code> </td>
+  </tr>
+  <tr>
+   <td><code>AString <a href="#sanitize()">sanitize</a>(in AString src, in unsigned long flags);</code> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Constants" name="Constants">定数</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Constant</td>
+   <td class="header">Value</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>SanitizerAllowComments</code></td>
+   <td><code>(1 &lt;&lt; 0)</code></td>
+   <td>Flag for sanitizer: Allow comment nodes. </td>
+  </tr>
+  <tr>
+   <td><code>SanitizerAllowStyle</code></td>
+   <td><code>(1 &lt;&lt; 1)</code></td>
+   <td>
+    <p>Flag for sanitizer: Allow <a href="/ja/docs/Web/HTML/Element/style" title="HTML の &lt;style> 要素は、文書あるいは文書の一部分のスタイル情報を含みます。"><code>&lt;style&gt;</code></a> elements and <code>style</code> attributes (with contents sanitized in case of <code>-moz-binding</code>).</p>
+
+    <div class="note"><strong>Note:</strong> If <code>-moz-binding</code> is absent, properties that might be XSS risks in other Web engines are preserved! </div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>SanitizerCidEmbedsOnly</code></td>
+   <td><code>(1 &lt;&lt; 2)</code></td>
+   <td>
+    <p>Flag for sanitizer: Only allow cid: URLs for embedded content.</p>
+
+    <p>At present, sanitizing CSS backgrounds, and so on., is not supported, so setting this together with <code>SanitizerAllowStyle</code> doesn't make sense.</p>
+    At present, sanitizing CSS syntax in SVG presentational attributes is not supported, so this option flattens out SVG. </td>
+  </tr>
+  <tr>
+   <td><code>SanitizerDropNonCSSPresentation</code></td>
+   <td><code>(1 &lt;&lt; 3)</code></td>
+   <td>Flag for sanitizer: Drops non-CSS presentational HTML elements and attributes, such as <a href="/ja/docs/Web/HTML/Element/font" title="フォント要素（&lt;font>）はその内包するテキストの、フォントサイズ、文字色、使用フォントを定義します。"><code>&lt;font&gt;</code></a>, <a href="/ja/docs/Web/HTML/Element/center" title="廃止済みの HTML の中央揃え要素 (&lt;center>) は、中に含まれるブロックレベルまたはインラインコンテンツを中央揃えして表示するブロックレベル要素です。"><code>&lt;center&gt;</code></a>, and the <code>bgcolor</code> attribute. </td>
+  </tr>
+  <tr>
+   <td><code>SanitizerDropForms</code></td>
+   <td><code>(1 &lt;&lt; 4)</code></td>
+   <td>Flag for sanitizer: Drops forms and form controls (excluding <a href="/ja/docs/Web/HTML/Element/fieldset" title="HTML の &lt;fieldset> 要素は、ウェブフォーム内のラベル (&lt;label>) などのようにいくつかのコントロールをグループ化するために使用します。"><code>&lt;fieldset&gt;</code></a> and <a href="/ja/docs/Web/HTML/Element/legend" title="HTML の &lt;legend> 要素は、その親要素である &lt;fieldset> の内容のキャプションを表します。"><code>&lt;legend&gt;</code></a>. </td>
+  </tr>
+  <tr>
+   <td><code>SanitizerDropMedia</code></td>
+   <td><code>(1 &lt;&lt; 5)</code></td>
+   <td>Flag for sanitizer: Drops <a href="/ja/docs/Web/HTML/Element/img" title="HTML の &lt;img> 要素は、文書に画像を埋め込みます。これは置換要素です。"><code>&lt;img&gt;</code></a>, <a href="/ja/docs/Web/HTML/Element/video" title="HTML の映像要素 (&lt;video>) は、文書中に映像再生に対応するメディアプレイヤーを埋め込みます。"><code>&lt;video&gt;</code></a>, <a href="/ja/docs/Web/HTML/Element/audio" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>&lt;audio&gt;</code></a>, and <a href="/ja/docs/Web/HTML/Element/source" title="HTML の &lt;source> 要素は、 &lt;picture> 要素、 &lt;audio> 要素、 &lt;video> 要素に対し、複数のメディアリソースを指定します。この要素自体は空要素です。この要素は一般的に、同一のメディアコンテンツをそれぞれのブラウザーに対応した複数のメディア形式で提供する場合に用います。"><code>&lt;source&gt;</code></a>, and flattens out <a href="/en/SVG" title="en/SVG">SVG</a>. </td>
+  </tr>
+  <tr>
+   <td><code>SanitizerLogRemovals</code></td>
+   <td><code>(1 &lt;&lt; 6)</code></td>
+   <td>Flag for sanitizer: Log messages to the <a href="/en-US/docs/Tools/Browser_Console">console</a> for everything that gets sanitized.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Methods" name="Methods">メソッド</h2>
+
+<h3 id="convertToPlainText" name="convertToPlainText()">convertToPlainText()</h3>
+
+<p>Converts HTML to plain text.</p>
+
+<pre class="eval">AString convertToPlainText(
+  in AString src,
+  in unsigned long flags,
+  in unsigned long wrapCol
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>src</code></dt>
+ <dd>The HTML source to parse (C++ callers are allowed but not required to use the same string for the return value.)</dd>
+ <dt><code>flags</code></dt>
+ <dd>Conversion option flags defined in <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDocumentEncoder" title="">nsIDocumentEncoder</a></code>.</dd>
+ <dt><code>wrapCol</code></dt>
+ <dd>Number of characters per line; 0 for no auto-wrapping.</dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value">Return value</h6>
+
+<p>The plain text conversion of the HTML specified in <code>src</code>.</p>
+
+<h3 id="parseFragment">parseFragment()</h3>
+
+<p>Parses markup into a sanitized document fragment.</p>
+
+<pre class="eval">nsIDOMDocumentFragment parseFragment(
+  in AString fragment,
+  in unsigned long flags,
+  in boolean isXML,
+  in nsIURI baseURI,
+  in nsIDOMElement element
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>fragment</code></dt>
+ <dd>The input markup.</dd>
+ <dt><code>flags</code></dt>
+ <dd>Sanitization option flags defined above.</dd>
+ <dt><code>isXML</code></dt>
+ <dd><code>true</code> if |fragment| is XML and <code>false</code> if HTML.</dd>
+ <dt><code>baseURI</code></dt>
+ <dd>The base URL for this fragment.</dd>
+ <dt><code>element</code></dt>
+ <dd>The context node for the fragment parsing algorithm.</dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value">Return value</h6>
+
+<p>An <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMDocumentFragment" title="">nsIDOMDocumentFragment</a></code> object for the resulting sanitized document fragment.</p>
+
+<h3 id="sanitize">sanitize()</h3>
+
+<p>Parses a string into an HTML document, sanitizes the document, and returns the result serialized to a string.</p>
+
+<p>The sanitizer is designed to protect against XSS when sanitized content is inserted into a different-origin context without an iframe-equivalent sandboxing mechanism.</p>
+
+<p>By default, the sanitizer doesn't try to avoid leaking information that the content was viewed to third parties. That is, by default, for example <a href="/ja/docs/Web/HTML/Element/img" title="HTML の &lt;img> 要素は、文書に画像を埋め込みます。これは置換要素です。"><code>&lt;img&gt;</code></a> with a source pointing to an HTTP server potentially controlled by a third party is not removed. To avoid ambient information leakage upon loading the sanitized content, use the <code>SanitizerInternalEmbedsOnly</code> flag. In that case, <a href="/ja/docs/Web/HTML/Element/a" title="HTML の &lt;a> 要素 (アンカー要素) は、別のウェブページ、ファイル、同一ページ内の場所、電子メールアドレス、または他の URL へのハイパーリンクを作成します。"><code>&lt;a&gt;</code></a> links (and similar) to other content are preserved, so an explicit user action (following a link) after the content has been loaded can still leak information.</p>
+
+<p>By default, non-dangerous non-CSS presentational HTML elements and attributes or forms are not removed. To remove these, use <code>SanitizerDropNonCSSPresentation</code> and/or <code>SanitizerDropForms</code>.</p>
+
+<p>By default, comments and CSS is removed. To preserve comments, use <code>SanitizerAllowComments</code>. To preserve <a href="/ja/docs/Web/HTML/Element/style" title="HTML の &lt;style> 要素は、文書あるいは文書の一部分のスタイル情報を含みます。"><code>&lt;style&gt;</code></a> elements and <code>style</code> attributes on other elements, use <code>SanitizerAllowStyle</code>. <code>-moz-binding</code> is removed from <a href="/ja/docs/Web/HTML/Element/style" title="HTML の &lt;style> 要素は、文書あるいは文書の一部分のスタイル情報を含みます。"><code>&lt;style&gt;</code></a> elements and <code>style</code> attributes if present. In this case, properties that Gecko doesn't recognize can get removed as a side effect.</p>
+
+<div class="note"><strong>Note:</strong> If <code>-moz-binding</code> is not present, <a href="/ja/docs/Web/HTML/Element/style" title="HTML の &lt;style> 要素は、文書あるいは文書の一部分のスタイル情報を含みます。"><code>&lt;style&gt;</code></a> elements and <code>style</code> attributes, and if <code>SanitizerAllowStyle</code> is specified, the sanitized content may still be XSS dangerous if loaded into a non-Gecko Web engine!</div>
+
+<pre class="eval">AString sanitize(
+  in AString src,
+  in unsigned long flags
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>src</code></dt>
+ <dd>The HTML source to parse (C++ callers are allowed but not required to use the same string for the return value).</dd>
+ <dt><code>flags</code></dt>
+ <dd>Sanitization option flags defined above.</dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value">Return value</h6>
+
+<p>The resulting text.</p>

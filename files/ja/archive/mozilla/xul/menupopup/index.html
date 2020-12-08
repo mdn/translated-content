@@ -1,0 +1,152 @@
+---
+title: menupopup
+slug: Archive/Mozilla/XUL/menupopup
+tags:
+  - XUL Elements
+  - XUL Reference
+translation_of: Archive/Mozilla/XUL/menupopup
+---
+<div class="noinclude"><span class="breadcrumbs XULRef_breadcrumbs">
+ « <a href="/ja/docs/XUL/XUL_Reference">XUL リファレンス HOME</a>    [
+ <a href="#Examples">例</a> |
+ <a href="#Attributes">属性</a> |
+ <a href="#Properties">プロパティ</a> |
+ <a href="#Methods">メソッド</a> |
+ <a href="#Related">関連項目</a> ]
+</span></div>
+<p>ポップアップメニューの内容を表示するために使用されるコンテナ。menupopup が開かれると、ウィンドウ上に浮いて境界の外まで拡がります。menupopup の使用方法には以下のようなものがあります。</p>
+<ol> <li>メニューやボタンが押下されたときに開くポップアップを生成するため、<code><a href="/ja/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code> や <code><a href="/ja/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code>、<code><a href="/ja/docs/Mozilla/Tech/XUL/toolbarbutton" title="toolbarbutton">toolbarbutton</a></code>、または <a href="#a-type">type</a> 属性に "menu" が設定された <code><a href="/ja/docs/Mozilla/Tech/XUL/button" title="button">button</a></code> 内に設置する。</li> <li><code id="a-popup"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/popup">popup</a></code> 属性を使用して任意の要素に結び付ける。要素がマウスの左ボタンでクリックされると、menupopup が表示されます。</li> <li><code id="a-context"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/context">context</a></code> 属性を使用して任意の要素に結び付ける。コンテキストメニューが開かれると、menupopup が表示されます。コンテキストメニューは、要素を右クリックするか、キーボードのメニューキーを押下することによって開きます。</li>
+</ol>
+<p>詳しい情報は、<a href="/ja/XUL_Tutorial/Simple_Menu_Bars" title="ja/XUL_Tutorial/Simple_Menu_Bars">XUL チュートリアル</a>と<a href="/ja/XUL/PopupGuide" title="ja/XUL/PopupGuide">ポップアップガイド</a>を参照してください。</p>
+<dl> <dt>属性</dt> <dd><a href="#a-ignorekeys">ignorekeys</a>, <a href="#a-popup.left">left</a>, <a href="#a-onpopuphidden">onpopuphidden</a>, <a href="#a-onpopuphiding">onpopuphiding</a>, <a href="#a-onpopupshowing">onpopupshowing</a>, <a href="#a-onpopupshown">onpopupshown</a>, <a href="#a-popup.position">position</a>, <a href="#a-popup.top">top</a></dd>
+</dl>
+<dl> <dt>プロパティ</dt> <dd><a href="#p-accessibleType">accessibleType</a>, <a href="#p-anchorNode">anchorNode</a>, <a href="#p-popupBoxObject">popupBoxObject</a>, <a href="#p-position">position</a>, <a href="#p-state">state</a>, <a href="#p-triggerNode">triggerNode</a></dd>
+</dl>
+<dl> <dt>メソッド</dt> <dd><a href="#m-hidePopup">hidePopup</a>, <a href="#m-moveTo">moveTo</a>, <a href="#m-openPopup">openPopup</a>, <a href="#m-openPopupAtScreen">openPopupAtScreen</a>, <a href="#m-setConsumeRollupEvent">setConsumeRollupEvent</a>, <a href="#m-showPopup">showPopup</a>, <a href="#m-sizeTo">sizeTo</a></dd>
+</dl>
+<h3 id="Examples" name="Examples">例</h3>
+<p>次の例は、menupopup を <code><a href="/ja/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code> に取り付ける方法を示します。</p>
+<pre>&lt;menulist&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="Mozilla" value="http://mozilla.org"/&gt;
+    &lt;menuitem label="Slashdot" value="http://slashdot.org"/&gt;
+    &lt;menuitem label="Sourceforge" value="http://sf.net"/&gt;
+    &lt;menuitem label="Freshmeat" value="http://freshmeat.net"/&gt;
+  &lt;/menupopup&gt;
+&lt;/menulist&gt;
+</pre>
+<p>次の例は、menupopup を要素のコンテキストメニューとして使用する方法を示します。label を右クリックするとメニューが表示されます。</p>
+<div class="float-right"><img alt="Image:XUL_ref_popup.png" class="internal" src="/@api/deki/files/1822/=XUL_ref_popup.png"></div>
+<pre>&lt;menupopup id="clipmenu"&gt;
+  &lt;menuitem label="Cut"/&gt;
+  &lt;menuitem label="Copy"/&gt;
+  &lt;menuitem label="Paste"/&gt;
+&lt;/menupopup&gt;
+&lt;label value="Right click for popup" context="clipmenu"/&gt;
+</pre>
+<h3 id="Attributes" name="Attributes">属性</h3>
+<p> </p><div id="a-ignorekeys">
+
+<dl><dt> <code id="a-ignorekeys"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/ignorekeys">ignorekeys</a></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code>true</code> に設定した場合、popup 内の項目のキーボード操作は無効になります。 </dd></dl>
+
+</div> <div id="a-popup.left">
+
+<dl><dt> <code id="a-popup.left"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/popup.left">left</a></code> </dt><dd> 型: <em>整数型</em> </dd><dd> <span id="m-showPopup"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/showPopup">showPopup</a></code></span> メソッドで指定されたポップアップの水平方向の位置を上書きします。 </dd></dl>
+
+</div> <div id="a-onpopuphidden">
+
+<dl><dt> <code id="a-onpopuphidden"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/onpopuphidden">onpopuphidden</a></code> </dt><dd> 型: <em>スクリプトコード</em> </dd><dd> このイベントはポップアップが非表示になった時に発生します。 </dd></dl>
+
+</div> <div id="a-onpopuphiding">
+
+<dl><dt> <code id="a-onpopuphiding"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/onpopuphiding">onpopuphiding</a></code> </dt><dd> 型: <em>スクリプトコード</em> </dd><dd> このイベントはポップアップを非表示にしようとしている時に発生します。 </dd></dl>
+
+</div> <div id="a-onpopupshowing">
+
+<dl><dt> <code id="a-onpopupshowing"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/onpopupshowing">onpopupshowing</a></code> </dt><dd> 型: <em>スクリプトコード</em> </dd><dd> このイベントは、ポップアップが開かれる直前にポップアップに送られます。通常、このハンドラはユーザがポップアップの表示を要求したとき、動的にコンテンツを設定するために使用されます。このイベントハンドラから <code>false</code> が返るとポップアップの表示が抑制されます。 </dd></dl>
+
+</div> <div id="a-onpopupshown">
+
+<dl><dt> <code id="a-onpopupshown"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/onpopupshown">onpopupshown</a></code> </dt><dd> 型: <em>スクリプトコード</em> </dd><dd> このイベントはポップアップが表示された後に発生します。ウィンドウが開かれた時に発生する <code>onload</code> イベントと類似しています。 </dd></dl>
+
+</div> <div id="a-popup.position">
+
+<dl><dt> <code id="a-popup.position"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/popup.position">position</a></code> </dt><dd> 型: <em>下記の値のいずれか一つ</em> </dd><dd> <code>position</code> 属性は、ユーザがクリックした要素に関する popup が現れる位置を決定します。これは、popup をボタンの側に置くことができます。 </dd></dl>
+<ul> <li><code>after_start</code>: popup は要素の下側に現れ、その左上隅と要素の左下隅が並びます。これは一般的に、ドロップダウンメニューに使用されます。</li> <li><code>after_end</code>: popup は要素の下側に現れ、その右上隅と要素の右下隅が並びます。要素と popup の右端が揃います。</li> <li><code>before_start</code>: popup は要素の上側に現れ、その左下隅と要素の左上隅が並びます。要素と popup の左端が揃います。</li> <li><code>before_end</code>: popup は要素の上側に現れ、その右下隅と要素の右上隅が並びます。要素と popup の右端が揃います。</li> <li><code>end_after</code>: popup は要素の右側に現れ、その左下隅と要素の右下隅が並びます。要素と popup の下端が揃います。</li> <li><code>end_before</code>: popup は要素の右側に現れ、その左上隅と要素の右上隅が並びます。要素と popup の上端が揃います。</li> <li><code>start_after</code>: popup は要素の左側に現れ、その右下隅と要素の左下隅が並びます。要素と popup の下端が揃います。</li> <li><code>start_before</code>: popup は要素の左側に現れ、その右上隅と要素の左上隅が並びます。要素と popup の上端が揃います。</li> <li><code>overlap</code>: popup は要素上に現れ、その左上隅が揃います。</li> <li><code>at_pointer</code>: popup はマウスポインタと同じ位置に現れます。</li> <li><code>after_pointer</code>: popup はマウスポインタと同じ水平位置に現れます。垂直位置は要素のすぐ下になります。</li>
+</ul>
+
+
+</div> <div id="a-popup.top">
+
+<dl><dt> <code id="a-popup.top"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/popup.top">top</a></code> </dt><dd> 型: <em>整数型</em> </dd><dd> <span id="m-showPopup"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/showPopup">showPopup</a></code></span> メソッドで指定されたポップアップの垂直方向の位置を上書きします。 </dd></dl>
+
+</div>
+<h3 id="Properties" name="Properties">プロパティ</h3>
+<p> </p><div id="p-accessibleType">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/accessibleType">accessibleType</a></span></code> </dt><dd> 型: <em>整数型</em> </dd><dd> 要素の accessibility オブジェクトの種類を示す値。 </dd></dl>
+
+</div> <div id="p-anchorNode">
+
+<dl>
+  <dt><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/anchorNode">anchorNode</a></span></code>  <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">読取専用 </span></dt>
+  <dd>型: <em><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMElement" title="">nsIDOMElement</a></code></em></dd>
+  <dd>この読み取り専用プロパティは、ポップアップを開いたときにアンカーとして指定された DOM ノードを保持しています。</dd>
+</dl></div> <div id="p-popupBoxObject">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/popupBoxObject">popupBoxObject</a></span></code> </dt><dd> 型: <em><a href="/ja/NsIPopupBoxObject" title="ja/NsIPopupBoxObject">nsIPopupBoxObject</a></em> </dd><dd> この読み取り専用のプロパティは、popup を実装する <a href="/ja/NsIPopupBoxObject" title="ja/NsIPopupBoxObject">nsIPopupBoxObject</a> を保持しています。popup 自身を通して関数のすべてを利用できるため、通常、このプロパティを使用する必要はありません。 </dd></dl>
+</div> <div id="p-position">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/position">position</a></span></code> </dt><dd> 型: <em>文字列型</em> </dd><dd> <a href="/ja/XUL/Attribute/popup.position" title="ja/XUL/Attribute/popup.position">position</a> 属性の値の取得と設定。 </dd></dl>
+</div> <div id="p-state">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/state">state</a></span></code>  </dt><dd> 型: <em>文字列型</em> </dd><dd> popup が開かれているかどうかを示します。このプロパティは読み取り専用です。次の 4 つの値が利用可能です: </dd></dl>
+<ul> <li><code>closed</code>: popup は閉じられており、画面上に表示されていません。</li> <li><code>open</code>: popup は開かれており、画面上に表示されています。</li> <li><code>showing</code>: popup を開く要求がされているが、まだ開かれていない状態。この状態は popupshowing イベントの間に起こります。</li> <li><code>hiding</code>: popup が隠されます。この状態は popuphiding イベントの間に起こります。</li>
+</ul>
+</div> <div id="p-triggerNode">
+<dl> <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/triggerNode">triggerNode</a></span></code> </dt> <dd>Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMNode" title="">nsIDOMNode</a></code></em></dd> <dd>This read-only property holds the DOM node that generated the event triggering the opening of the popup. The value is <code>null</code> if the popup isn't open.</dd>
+</dl></div>
+<h3 id="Methods" name="Methods">メソッド</h3>
+<p>("moveTo")}} </p><dl>
+  <dt><span id="m-openPopup"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/openPopup">openPopup( anchor , position , x , y , isContextMenu, attributesOverride )</a></code></span> </dt>
+  <dd>戻り値の型: <em>戻り値無し</em></dd>
+</dl>
+
+
+<p>特定のノードから見た相対的な指定位置にポップアップを開きます。</p>
+<p>ポップアップは他のノードにアンカーすることも、自由な位置に開く事もできます。ポップアップをノードにアンカーするには、anchor ノードを指定して、ポップアップをどのように開くかを示す文字列を position に設定します。</p>
+
+<p>position が取り得る値は before_start, before_end, after_start, after_end, start_before, start_after, end_before, end_after, overlap, after_pointer のいずれかです。</p>
+
+<p>anchor ノードはポップアップと同じドキュメント内のものである必要はありません。</p>
+
+<p>引数 attributesOverride が true ならば、ポップアップノードの position 属性が引数 position の値を上書きします。attributesOverride が false ならば、position 属性は引数 position が空の場合のみ使用されます。</p>
+
+<p>アンカーされたポップアップでは、引数 x と y はアンカーされた位置からのオフセットとして使用されます。この数値は CSS の pixel 単位で計測されます。</p>
+
+<p>アンカーされないポップアップは、anchor ノードとして null を指定することで作成できます。このポップアップは、ポップアップノードを含むドキュメントの表示領域からの、x と y で指定された相対位置に表示されます。この場合、引数 position と attributesOverride は無視されます。</p>
+
+<p>引数 isContextMenu は、コンテキストメニューの場合は true に、それ以外の場合は false にしてください。この引数はメニュー項目のハイライトに影響します。コンテキストメニューが開かれている間は、それ以前に開かれたメニューはハイライトされず、メニュー内の項目を実行できません。</p> <dl>
+  <dt><span id="m-openPopupAtScreen"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/openPopupAtScreen">openPopupAtScreen( x, y, isContextMenu )</a></code></span> </dt>
+  <dd>戻り値の型: <em>戻り値無し</em></dd>
+</dl>
+<p><var>x</var> と <var>y</var> で指定された画面上の特定の位置にポップアップを開きます。ポップアップが画面からはみ出るように指定された場合には位置が調整されます。座標 <var>x</var> と <var>y</var> は CSS の pixel 単位で計測されます。</p>  <dl>
+  <dt><span id="m-showPopup"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/showPopup">showPopup( element, x, y, popupType, anchor, align )</a></code></span> <span style="border: 1px solid rgb(152, 152, 240); background-color: rgb(221, 221, 255); font-size: 9px; vertical-align: text-top;">Mozilla 1.9 で非推奨</span></dt>
+  <dd>戻り値の型: <em>戻り値なし</em></dd>
+  <dd>popup 要素を開きます。popup を表示する場所を指定するには二通りの方法があります。スクリーン位置を指定するか、window 内の要素からの相対位置を指定します。<var>x</var> または <var>y</var> に値を設定すると、popup がそのスクリーン座標 (<var>x</var>,<var>y</var>) に表示されます。<var>x</var> および <var>y</var> が <code>-1</code> の場合、popup の位置は最初の引数 <var>element</var> で指定された要素からの相対位置になります。これは例えば、ボタンの下に popup を表示するときに使用します。この二番目の場合は、<var>anchor</var> および <var>align</var> 引数が、popup が現れる要素の相対位置をさらに制御するために使用されます。<var>anchor</var> 引数は要素上の <code id="a-popupanchor"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/popupanchor">popupanchor</a></code> 属性に対応します。<var>align</var> 引数は要素上の <code id="a-popupalign"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/popupalign">popupalign</a></code> 属性に対応します。<var>x</var> または <var>y</var> が <code>-1</code> でない場合、これらの引数は無視されます。</dd>
+</dl>
+<dl>
+  <dd>popup をさらに数ピクセル離れた他の要素からの相対位置に表示するには、要素の <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/boxObject">boxObject</a></span></code>.screenX プロパティおよび <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/boxObject">boxObject</a></span></code>.screenY プロパティを使用し、それらを <var>x</var> および <var>y</var> 引数にオフセットとして値を与え、要素の実際のスクリーン位置を確定してください。</dd>
+</dl>
+<dl>
+  <dd><var>popupType</var> の値は、<code>popup</code> または <code>context</code>, <code>tooltip</code> のいずれかの文字列でなければなりません。各 popup の形式は一時的に表示されることを意図しているため、永久に表示されることはありません。一度に一つの popup のみが表示されます。</dd>
+</dl> <dl>
+  <dt><span id="m-sizeTo"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/sizeTo">sizeTo( width, height )</a></code></span></dt>
+  <dd>戻り値の型: <em>戻り値無し</em></dd>
+  <dd>ポップアップの現在の大きさを指定した <var>width</var> (幅) と <var>height</var> (高さ) に変更します。</dd>
+</dl>
+<p> </p>
+<h3 id="Related" name="Related">関連項目</h3>
+<dl> <dt>要素</dt> <dd><code><a href="/ja/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code>, <code><a href="/ja/docs/Mozilla/Tech/XUL/menubar" title="menubar">menubar</a></code>, <code><a href="/ja/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code>, <code><a href="/ja/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code>, <code><a href="/ja/docs/Mozilla/Tech/XUL/menuseparator" title="menuseparator">menuseparator</a></code></dd>
+</dl>
+<dl> <dt>インタフェース</dt> <dd><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAccessibleProvider" title="">nsIAccessibleProvider</a></code>, <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMXULPopupElement" title="">nsIDOMXULPopupElement</a></code></dd>
+</dl>
+<div class="noinclude">
+
+</div>

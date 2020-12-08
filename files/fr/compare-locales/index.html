@@ -1,0 +1,47 @@
+---
+title: Compare-locales
+slug: Compare-locales
+tags:
+  - Localisation
+  - Tools
+translation_of: Mozilla/Projects/compare-locales
+---
+<p><code>compare-locales</code> est un script en python pour aider les localisateurs à vérifier leur travail sans lancer Firefox ou une autre application.</p>
+<h3 id="Installation" name="Installation">Installation</h3>
+<p><code>compare-locales</code> doit être installé, et nécessite une installation de Python sur votre machine. La manière la plus simple est de faire</p>
+<pre class="eval">easy_install -U compare-locales
+</pre>
+<p>si Python est déjà installé, car la version courante a été placée sur <a class="external" href="http://pypi.python.org/pypi/compare-locales">pypi</a>. Si ce n'est pas le cas, vous en saurez plus en consultant <a class="external" href="http://peak.telecommunity.com/DevCenter/EasyInstall">EasyInstall</a>.</p>
+<p><span class="comment">It's checked in to cvs at &lt;code&gt;mozilla/testing/tests/l10n&lt;/code&gt;, so you can get it via cvs -z3 <a class="link-mailto" href="mailto:-d:pserver:anonymous@cvs-mirror.mozilla.org" rel="freelink">-d:pserver:anonymous@cvs-mirror.mozilla.org</a>:/cvsroot co mozilla/testing/tests/l10n To actually install it, go into the source dir and use the regular distutils &lt;code&gt;setup.py&lt;/code&gt; commands: cd mozilla/testing/tests/l10n python setup.py install You can specify a &lt;code&gt;--prefix&lt;/code&gt; option in the latter, but make sure that you have your &lt;code&gt;PYTHONPATH&lt;/code&gt; set up correctly to pick it up.</span></p>
+<p>Ceci installera les modules python nécessaires ainsi que quelques scripts en ligne de commande, en particulier <code>compare-locales</code>.</p>
+<div class="note">
+ La dernière version se trouve à présent sur <a class="external" href="http://hg.mozilla.org/users/axel_mozilla.com/tooling" rel="freelink">http://hg.mozilla.org/users/axel_mozilla.com/tooling</a>, bien qu'elle n'ait pas été vérifiée récemment par quelqu'un d'extérieur. La version placée sur pypi est cependant également produite à partir de là.</div>
+<h3 id="Ex.C3.A9cution" name="Ex.C3.A9cution">Exécution</h3>
+<div class="note">
+ Ceci décrit la syntaxe d'appel pour les versions 0.5 et ultérieures. Pour les versions plus anciennes veuillez consulter <a class="external" href="http://developer.mozilla.org/en/docs/index.php?title=Compare-locales&amp;oldid=74094">les archives de la documentation</a>.</div>
+<p><code>compare-locales</code> rassemble les répertoires à comparer depuis un fichier INI, généralement placé dans <code>$APP/locales/l10n.ini</code>. Passez à la fois le chemin vers le fichier INI et le répertoire parent des localisations comme premiers paramètres, suivis des codes des locales à comparer. Si vous voulez par exemple tester la localisation pour <code>fr</code>, exécutez</p>
+<pre class="eval">compare-locales browser/locales/l10n.ini ../l10n/ fr
+</pre>
+<p>À partir de la version 0.5, les répertoires de localisation ne doivent pas se trouver liées dans un emplacement relatif à votre répertoire mozilla. Ceci fonctionne sur les branches CVS ainsi que sur mozilla-central.</p>
+<h4 id="Options" name="Options">Options</h4>
+<p>À faire.</p>
+<h3 id="Sortie" name="Sortie">Sortie</h3>
+<p>La sortie de <code>compare-locales</code> donne les chaînes manquantes et obsolètes dans un format pseudo-diff.</p>
+<pre class="eval">ab-CD
+  browser
+    chrome/browser
+      browser.dtd
+          +backForwardMenu.tooltip
+          +fullZoomEnlargeCmd.commandkey3
+          +fullZoomReduceCmd.commandkey2
+          +fullZoomResetCmd.commandkey2
+          +organizeBookmarks.label
+          -showAllBookmarksCmd2.label
+      migration/migration.dtd
+          -importFromFile.accesskey
+          -importFromFile.label
+          +importFromHTMLFile.accesskey
+          +importFromHTMLFile.label
+</pre>
+<p>Lorsque vous voyez des entités retirées et ajoutées avec un nom similaire, ce sont probablement des chaînes modifiées. Les noms de fichiers seront affichés sous une forme hiérarchique, dans l'exemple ci-dessus les fichiers sont <code>browser.dtd</code> dans <code>ab-CD/browser/chrome/browser</code> et <code>migration.dtd</code> dans un autre répertoire de niveau inférieur.</p>
+<p>La sortie se termine par un résumé, donnant le compte total des chaînes manquantes et obsolètes (les entrées individuelles dans les fichiers manquants ne sont pas comptées pour l'instant), ainsi que quelques statistiques sur le nombre de chaînes modifiées ou non, à l'exclusion des touches d'accès rapide et de commandes. Cela permet aux localisateurs d'avoir une idée de la complétude de leur localisation. Ce nombre n'atteindra en général par 100% mais devrait se situer aux alentours de 85% en définitive.</p>

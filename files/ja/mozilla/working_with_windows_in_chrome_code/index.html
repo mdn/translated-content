@@ -1,0 +1,308 @@
+---
+title: chrome コードでウィンドウを取り扱う
+slug: Mozilla/Working_with_windows_in_chrome_code
+tags:
+  - Add-ons
+  - Extensions
+translation_of: Mozilla/Working_with_windows_in_chrome_code
+---
+<p>この文書では、Mozilla の chrome コード (<a href="/ja/XUL" title="ja/XUL">XUL</a> アプリケーションや <a href="/ja/Extensions" title="ja/Extensions">拡張機能</a>) の中で複数のウィンドウを取り扱う方法を解説します。また、新規ウィンドウを開く、すでにウィンドウが開いているか確認する、異なるウィンドウ間でデータを受け渡すといった場面での tips やサンプルコードを紹介します。</p>
+<p>{{ 英語版章題("Opening windows") }}</p>
+<h3 id=".E6.96.B0.E8.A6.8F.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.82.92.E9.96.8B.E3.81.8F" name=".E6.96.B0.E8.A6.8F.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.82.92.E9.96.8B.E3.81.8F">新規ウィンドウを開く</h3>
+<p>新規ウィンドウを開くためには、通常は <code><a href="/ja/DOM/window.open" title="ja/DOM/window.open">window.open</a></code> もしくは <code><a href="/ja/DOM/window.openDialog" title="ja/DOM/window.openDialog">window.openDialog</a></code> の DOM メソッドを次のように呼び出します。</p>
+<pre class="eval">var win = window.open("<a class="external" rel="freelink">chrome://myextension/content/about.xul</a>",
+                      "aboutMyExtension", "chrome,centerscreen");
+</pre>
+<p><code>window.open</code> の 1 つめのパラメータはウィンドウとその内容を記述した XUL ファイルの URI です。</p>
+<p>2 つめのパラメータは、ウィンドウ名です。この名前はリンクやフォームにおいて <code>target</code> 属性として利用することができます。これは、ユーザが見るウィンドウタイトルとは異なります。そちらは、XULを使って指定します。</p>
+<p>3 つめは任意のパラメータで、ウィンドウに設定する特別な機能のリストです。</p>
+<p><code>window.openDialog</code> 関数は同様に動作しますが、JavaScript コードから参照可能な追加の引数を設定することができます。また、ウィンドウの機能設定についても <code>dialog</code> 機能が常に設定されているように動作するなど、多少異なります。</p>
+<p>XPCOM コンポーネントのコードからウィンドウを開く時などのように <code>Window</code> オブジェクトを利用できない場合、 <a href="/ja/NsIWindowWatcher" title="ja/NsIWindowWatcher">nsIWindowWatcher</a> インターフェイスを利用できます。パラメータは <code>window.open</code> に類似しており、実際 <code>window.open</code> の実装では <code>nsIWindowWatcher</code> のメソッドを呼び出しています。</p>
+<pre class="eval">var ww = Components.classes["@mozilla.org/embedcomp/window-watcher;1"]
+                   .getService(Components.interfaces.nsIWindowWatcher);
+var win = ww.openWindow(null, "<a class="external" rel="freelink">chrome://myextension/content/about.xul</a>",
+                        "aboutMyExtension", "chrome,centerscreen", null);
+</pre>
+<p>{{ 英語版章題("Window object") }}</p>
+<h3 id="Window_.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88" name="Window_.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88">Window オブジェクト</h3>
+<p>上記セクションで <code>window.open</code> の戻り値を代入されている <code>win</code> 変数に注目してください。これを使って開いたウィンドウにアクセスすることが出来ます。 <code>window.open</code> (やそれに似たメソッド) の戻り値は、 <code>window</code> 変数と同じ型の <code><a class="external" href="http://xulplanet.com/references/objref/Window.html">Window</a></code> オブジェクト (普通は <code><a class="external" href="http://xulplanet.com/references/objref/ChromeWindow.html">ChromeWindow</a></code>) です。</p>
+<p>技術的には、この戻り値は <code><a href="/ja/NsIDOMJSWindow" title="ja/NsIDOMJSWindow">nsIDOMJSWindow</a></code> や <code><a href="/ja/NsIDOMWindowInternal" title="ja/NsIDOMWindowInternal">nsIDOMWindowInternal</a></code> を含む多くのインターフェイスを実装していますが、ユーザー定義のグローバル変数のプロパティやウィンドウの関数も持っています。なので、例えば、そのウィンドウに対応する DOM ドキュメントにアクセスするのに <code><a href="/ja/DOM/window.document" title="ja/DOM/window.document">win.document</a></code> を使うことが出来ます。</p>
+<p>しかし注意すべきなのは、 <code>open()</code> の呼び出しが返るのは、そのウィンドウが完全にロードされる <em>前</em> なので、 <code><a href="/ja/DOM/document.getElementById" title="ja/DOM/document.getElementById">win.document.getElementById()</a></code> のような幾つかの呼び出しは失敗するであろうという事です。この困難に打ち勝つには、開かれようとしているウィンドウの <code>load</code> ハンドラに初期化コードを移動するか、<a href="#callback">下記</a>にあるようにコールバック関数を渡すのがいいでしょう。</p>
+<p><code><a href="/ja/DOM/document.defaultView" title="ja/DOM/document.defaultView">document.defaultView</a></code> を使ってドキュメントから <code>Window</code> オブジェクトを取得できます。</p>
+<p>{{ 英語版章題("Content windows") }}</p>
+<h3 id=".E3.82.B3.E3.83.B3.E3.83.86.E3.83.B3.E3.83.84.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6" name=".E3.82.B3.E3.83.B3.E3.83.86.E3.83.B3.E3.83.84.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6">コンテンツウィンドウ</h3>
+<p>XUL ウィンドウが、 <code>&lt;browser&gt;</code> や <code>&lt;iframe&gt;</code> のようなページを表示できるウィジェットを含んでいる時、そのウィジェットのドキュメントは、当然、chrome ウィンドウ自体のドキュメントからは分離されています。個々のサブドキュメントにもまた、一般常識的にはウィンドウが無いにもかかわらず、<code>Window</code> オブジェクトがあります。</p>
+<p><code>&lt;tabbrowser&gt;</code> のタブの中に開かれた chrome ウィンドウにも同じことが当てはまります。タブの中に開かれた chrome ドキュメント上の要素はあなたの chrome ドキュメントから分離されています。</p>
+<p>次の二つのサブセクションでは、(異なるコンテキストにあるにもかかわらず) chrome とコンテンツの境界線を越えるどちらかの方法、すなわち、chrome ドキュメントの祖先である要素にアクセスする方法と、chrome ドキュメントの子孫である要素にアクセスする方法を記述します。</p>
+<p>{{ 英語版章題("Accessing content documents") }}</p>
+<h4 id=".E3.82.B3.E3.83.B3.E3.83.86.E3.83.B3.E3.83.84.E3.81.AE.E3.83.89.E3.82.AD.E3.83.A5.E3.83.A1.E3.83.B3.E3.83.88.E3.81.AB.E3.82.A2.E3.82.AF.E3.82.BB.E3.82.B9.E3.81.99.E3.82.8B" name=".E3.82.B3.E3.83.B3.E3.83.86.E3.83.B3.E3.83.84.E3.81.AE.E3.83.89.E3.82.AD.E3.83.A5.E3.83.A1.E3.83.B3.E3.83.88.E3.81.AB.E3.82.A2.E3.82.AF.E3.82.BB.E3.82.B9.E3.81.99.E3.82.8B">コンテンツのドキュメントにアクセスする</h4>
+<p>ドキュメントの中に <code>&lt;tabbrowser&gt;</code>、 <code>&lt;browser&gt;</code>、 もしくは <code>&lt;iframe&gt;</code> 要素に読み込まれたドキュメントがあるとします。そのドキュメントには <code>browser.contentDocument</code> を、そのドキュメントの <code>Window</code> オブジェクトには <code>browser.contentWindow</code> を使ってアクセスできます。</p>
+<p><a href="/ja/XPCNativeWrapper#What_is_a_trusted_window.3F" title="ja/XPCNativeWrapper#What_is_a_trusted_window.3F">信頼できないコンテンツ</a>を扱う時には <a href="/ja/XPCNativeWrapper" title="ja/XPCNativeWrapper">XPCNativeWrapper</a> についてよく知っておくべきです。XPCNativeWrapper が有効 (Firefox 1.5+ ではデフォルト) だと、拡張機能はコンテンツドキュメントの DOM に安全にアクセスできますが、コンテンツの JavaScript にはアクセスできません。コンテンツの JavaScript を直接扱うために XPCNativeWrapper をバイパスすることはセキュリティ上の問題に繋がります。</p>
+<p>コンテンツページとやり取りする必要があるならば、 <a href="/ja/Code_snippets/Interaction_between_privileged_and_non-privileged_pages" title="ja/Code_snippets/Interaction_between_privileged_and_non-privileged_pages">特権コードと非特権コードの協調</a> を参照して下さい。</p>
+<p>{{ 英語版章題("The content shortcut") }}</p>
+<h5 id="content_.E3.82.B7.E3.83.A7.E3.83.BC.E3.83.88.E3.82.AB.E3.83.83.E3.83.88" name="content_.E3.82.B7.E3.83.A7.E3.83.BC.E3.83.88.E3.82.AB.E3.83.83.E3.83.88"><code>content</code> ショートカット</h5>
+<p><code>&lt;browser type="content-primary"/&gt;</code> の場合、 <a href="/ja/DOM/window.content" title="ja/DOM/window.content">content</a> ショートカットプロパティを使ってコンテンツドキュメントの <code>Window</code> オブジェクトにアクセスできます。例えば、</p>
+<pre class="eval">// content-primary ウィジェットに表示されているドキュメントのタイトルを警告ダイアログで表示する
+
+alert(content.document.title);
+</pre>
+<p>例えば、<code>browser.xul</code> オーバーレイの中で <code>content.document</code> を使うことで、Firefox のウィンドウで選択されているタブのウェブページにアクセスできます。</p>
+<div class="note">
+ 幾つかの例では <code>_content</code> を <code>content</code> の代わりに使っています。 前者はここ最近非推奨とされているので、新しくコードを書く時には <code>content</code> を使うべきです。</div>
+<p>{{ 英語版章題("Accessing a document in the sidebar") }}</p>
+<h4 id=".E3.82.B5.E3.82.A4.E3.83.89.E3.83.90.E3.83.BC.E5.86.85.E3.81.AE.E3.83.89.E3.82.AD.E3.83.A5.E3.83.A1.E3.83.B3.E3.83.88.E3.81.AB.E3.82.A2.E3.82.AF.E3.82.BB.E3.82.B9.E3.81.99.E3.82.8B" name=".E3.82.B5.E3.82.A4.E3.83.89.E3.83.90.E3.83.BC.E5.86.85.E3.81.AE.E3.83.89.E3.82.AD.E3.83.A5.E3.83.A1.E3.83.B3.E3.83.88.E3.81.AB.E3.82.A2.E3.82.AF.E3.82.BB.E3.82.B9.E3.81.99.E3.82.8B">サイドバー内のドキュメントにアクセスする</h4>
+<p>Firefox にはサイドバーがあり、id="sidebar" の <code>&lt;browser&gt;</code> 要素として実装されています。サイドバー内部の要素や変数にアクセスするには、{{ Anch("コンテンツのドキュメントにアクセスする") }}時のように、 <code>document.getElementById("sidebar").contentDocument</code> や <code>.contentWindow</code> を使う必要があります。</p>
+<p><a href="/ja/Code_snippets/Sidebar" title="ja/Code_snippets/Sidebar">Code snippets:Sidebar</a> でサイドバーに関するより多くの Tips を参照して下さい。</p>
+<p>{{ 英語版章題("Accessing the elements of the top-level document from a child window") }}</p>
+<h4 id=".E5.AD.90.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.81.8B.E3.82.89.E3.83.88.E3.83.83.E3.83.97.E3.83.AC.E3.83.99.E3.83.AB.E3.83.89.E3.82.AD.E3.83.A5.E3.83.A1.E3.83.B3.E3.83.88.E3.81.AE.E8.A6.81.E7.B4.A0.E3.81.AB.E3.82.A2.E3.82.AF.E3.82.BB.E3.82.B9.E3.81.99.E3.82.8B" name=".E5.AD.90.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.81.8B.E3.82.89.E3.83.88.E3.83.83.E3.83.97.E3.83.AC.E3.83.99.E3.83.AB.E3.83.89.E3.82.AD.E3.83.A5.E3.83.A1.E3.83.B3.E3.83.88.E3.81.AE.E8.A6.81.E7.B4.A0.E3.81.AB.E3.82.A2.E3.82.AF.E3.82.BB.E3.82.B9.E3.81.99.E3.82.8B">子ウィンドウからトップレベルドキュメントの要素にアクセスする</h4>
+<p>逆のケースとして、<code>&lt;browser&gt;</code> や <code>&lt;iframe&gt;</code> に読み込まれた特権スクリプトから chrome ドキュメントにアクセスしたい場合があります。</p>
+<p>これが役に立つ典型的な例は、Firefox のメインウィンドウのサイドバー内でコードを実行して、メインのブラウザウィンドウ内の要素にアクセスしたい時です。</p>
+<p><a href="/ja/DOM_Inspector" title="ja/DOM_Inspector">DOM Inspector</a> で見られるような DOM ツリーはこのようになっています。</p>
+<pre class="eval">#document
+  window                 main-window
+    ...
+      browser
+        #document
+          window         myExtensionWindow
+</pre>
+<p>子ウィンドウがある場所がコードが実行される場所です。</p>
+<p>やるべき事は chrome ドキュメントの上の要素にアクセスすること、すなわち chrome ウィンドウから脱出して祖先にアクセスすることです。これは下記の文によって可能になります。</p>
+<pre class="eval">var mainWindow = window.QueryInterface(Components.interfaces.nsIInterfaceRequestor)
+                   .getInterface(Components.interfaces.nsIWebNavigation)
+                   .QueryInterface(Components.interfaces.nsIDocShellTreeItem)
+                   .rootTreeItem
+                   .QueryInterface(Components.interfaces.nsIInterfaceRequestor)
+                   .getInterface(Components.interfaces.nsIDOMWindow);
+</pre>
+<p>これによって chrome と コンテンツ の境界を越えることができ、メインウィンドウのオブジェクトが返ってきます。</p>
+<p>{{ 英語版章題("Finding already opened windows") }}</p>
+<h3 id=".E3.81.99.E3.81.A7.E3.81.AB.E9.96.8B.E3.81.84.E3.81.A6.E3.81.84.E3.82.8B.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.82.92.E8.A6.8B.E3.81.A4.E3.81.91.E3.82.8B" name=".E3.81.99.E3.81.A7.E3.81.AB.E9.96.8B.E3.81.84.E3.81.A6.E3.81.84.E3.82.8B.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.82.92.E8.A6.8B.E3.81.A4.E3.81.91.E3.82.8B">すでに開いているウィンドウを見つける</h3>
+<p>ウィンドウメディエータ XPCOM コンポーネント (<a href="/ja/nsIWindowMediator" title="ja/nsIWindowMediator">nsIWindowMediator</a> インターフェイス) は、存在しているウィンドウに関する情報を提供します。現在開かれているウィンドウの情報を得るために、<code>getMostRecentWindow</code> と <code>getEnumerator</code> という二つのメソッドがよく使われます。<a href="/ja/nsIWindowMediator" title="ja/nsIWindowMediator">nsIWindowMediator</a> のページでより多くの情報と <code>nsIWindowMediator</code> の使用例を参照して下さい。 <span class="comment">{{英語版章題("Example: Opening a window only if it's not opened already")}} === Example: Opening a window only if it's not opened already === XXX TBD</span></p>
+<p>{{ 英語版章題("Passing data between windows") }}</p>
+<h3 id=".E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E9.96.93.E3.81.A7.E3.81.AE.E3.83.87.E3.83.BC.E3.82.BF.E3.81.AE.E3.82.84.E3.82.8A.E5.8F.96.E3.82.8A" name=".E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E9.96.93.E3.81.A7.E3.81.AE.E3.83.87.E3.83.BC.E3.82.BF.E3.81.AE.E3.82.84.E3.82.8A.E5.8F.96.E3.82.8A">ウィンドウ間でのデータのやり取り</h3>
+<p>複数のウィンドウを扱っていると、一方のウィンドウからもう一方へ情報を渡さなければならないことがよくあります。ウィンドウが異なると DOM ドキュメントとグローバルオブジェクトも別個のものをスクリプトに対して持っているので、スクリプトの中で違うウィンドウから一つのグローバル JavaScript 変数を単純に使うことはできません。</p>
+<p>データを共有するためのテクニックには効力や単純さの点で異なるものが幾つかあります。次の幾つかのセクションで最も単純なものから最も複雑なものまで説明しましょう。</p>
+<p>{{ 英語版章題("Example 1: Passing data to window when opening it with openDialog") }}</p>
+<h4 id=".E4.BE.8B_1:_openDialog_.E3.81.A7.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.82.92.E9.96.8B.E3.81.84.E3.81.9F.E6.99.82.E3.81.AB.E3.83.87.E3.83.BC.E3.82.BF.E3.82.92.E6.B8.A1.E3.81.99" name=".E4.BE.8B_1:_openDialog_.E3.81.A7.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.82.92.E9.96.8B.E3.81.84.E3.81.9F.E6.99.82.E3.81.AB.E3.83.87.E3.83.BC.E3.82.BF.E3.82.92.E6.B8.A1.E3.81.99">例 1: <code>openDialog</code> でウィンドウを開いた時にデータを渡す</h4>
+<p><code><a href="/ja/DOM/window.openDialog" title="ja/DOM/window.openDialog">window.openDialog</a></code> または <code>nsIWindowWatcher.openWindow</code> でウィンドウを開く時に、そのウィンドウに任意の<em>引数</em>を渡すことができます。引数は単純な JavaScript オブジェクトで、開かれたウィンドウの中で <code><a href="/ja/DOM/window.arguments" title="ja/DOM/window.arguments">window.arguments</a></code> プロパティからアクセスできます。</p>
+<p>この例では、プログレスダイアログを開くのに <code>window.openDialog</code> を使用しています。最大値と現在の進行値だけでなく、現在の状況を示すテキストも渡しています。<code>nsIWindowWatcher.openWindow</code> の使い方は少しだけ変わっているので注意してください 。 <span class="comment">TODO: link to <a href="/ja/How_To_Pass_an_XPCOM_Object_to_a_New_Window">How To Pass an XPCOM Object to a New Window</a> when it has a more useful example</span></p>
+<p>開く側のコード:</p>
+<pre class="eval">window.openDialog("<a class="external" rel="freelink">chrome://test/content/progress.xul</a>",
+                  "myProgress", "chrome,centerscreen",
+                  {status: "Reading remote data", maxProgress: 50, progress: 10} );
+</pre>
+<p><code>progress.xul</code>:</p>
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;window onload="onLoad();" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+&lt;script&gt;&lt;![CDATA[
+  var gStatus, gProgressMeter;
+  var maxProgress = 100;
+  function onLoad() {
+    gStatus = document.getElementById("status");
+    gProgressMeter = document.getElementById("progressmeter");
+
+    if("arguments" in window &amp;&amp; window.arguments.length &gt; 0) {
+      maxProgress = window.arguments[0].maxProgress;
+      setProgress(window.arguments[0].progress);
+      setStatus(window.arguments[0].status);
+    }
+  }
+
+  function setProgress(value) {
+    gProgressMeter.value = 100 * value / maxProgress;
+  }
+
+  function setStatus(text) {
+    gStatus.value = "Status: " + text + "...";
+  }
+]]&gt;&lt;/script&gt;
+
+&lt;label id="status" value="(No status)"/&gt;
+&lt;hbox&gt;
+  &lt;progressmeter id="progressmeter" mode="determined"/&gt;
+  &lt;button label="Cancel" oncommand="close();"/&gt;
+&lt;/hbox&gt;
+
+&lt;/window&gt;
+</pre>
+<p>{{ 英語版章題("Example 2: Interacting with the opener") }}</p>
+<h4 id=".E4.BE.8B_2:_.E9.96.8B.E3.81.84.E3.81.9F.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.81.A8.E3.81.AE.E7.9B.B8.E4.BA.92.E3.81.AE.E3.82.84.E3.82.8A.E5.8F.96.E3.82.8A" name=".E4.BE.8B_2:_.E9.96.8B.E3.81.84.E3.81.9F.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.81.A8.E3.81.AE.E7.9B.B8.E4.BA.92.E3.81.AE.E3.82.84.E3.82.8A.E5.8F.96.E3.82.8A">例 2: 開いたウィンドウとの相互のやり取り</h4>
+<p>開かれたウィンドウがそれを開いたウィンドウとやり取りしなければならないことがあります。例えば、ユーザーがウィンドウに変化を加えたことを知らせるためにはその必要があるでしょう。開かれたウィンドウの <a href="/ja/Window.opener" title="ja/Window.opener">window.opener</a> プロパティを使うか、前のセクションで述べた方法でウィンドウに渡されたコールバック関数を介して、ウィンドウを開いたウィンドウを見つける事が出来ます。</p>
+<p>先の例に、ユーザーがプログレスダイアログのキャンセルボタンを押した時に、それを開いたウィンドウにそれを知らせるためのコードを追加してみましょう。</p>
+<ul>
+ <li><strong><code>window.opener</code> を使う。</strong><code>opener</code> プロパティはそのウィンドウを開いたウィンドウを返します。さらに言えば、そのウィンドウを開いた {{ Anch("Window オブジェクト") }}です。</li>
+</ul>
+<p>もしプログレスダイアログを開いたウィンドウが <code>cancelOperation</code> 関数を宣言した事がわかっているなら、ユーザーがキャンセルボタンを押したのを知らせるのにこのように <code>window.opener.cancelOperation()</code> を使うことが出来ます。</p>
+<pre class="eval">&lt;button label="Cancel" oncommand="<strong>opener.cancelOperation();</strong> close();"/&gt;
+</pre>
+<ul>
+ <li><strong>コールバック関数を使う。</strong>別のやり方として、開いた側のウィンドウは、前の例で状態を表す文字列を渡したのと同じ方法で、プログレスダイアログにコールバック関数を渡すことが出来ます:</li>
+</ul>
+<pre class="eval">function onCancel() {
+  alert("Operation canceled!");
+}
+
+...
+
+window.openDialog("<a class="external" rel="freelink">chrome://test/content/progress.xul</a>",
+                  "myProgress", "chrome,centerscreen",
+                  {status: "Reading remote data", maxProgress: 50, progress: 10},
+                  <strong>onCancel</strong>);
+</pre>
+<p>そうすると、プログレスダイアログはこのようにしてコールバック関数を実行できます:</p>
+<pre class="eval">&lt;button label="Cancel" oncommand="<strong>window.arguments[1]();</strong> close();"/&gt;
+</pre>
+<p>{{ 英語版章題("Example 3: Using nsIWindowMediator when opener is not enough") }}</p>
+<h4 id=".E4.BE.8B_3:_opener_.E3.81.A7.E4.BA.8B.E8.B6.B3.E3.82.8A.E3.81.AA.E3.81.91.E3.82.8C.E3.81.B0_nsIWindowMediator_.E3.82.92.E4.BD.BF.E3.81.86" name=".E4.BE.8B_3:_opener_.E3.81.A7.E4.BA.8B.E8.B6.B3.E3.82.8A.E3.81.AA.E3.81.91.E3.82.8C.E3.81.B0_nsIWindowMediator_.E3.82.92.E4.BD.BF.E3.81.86">例 3: <code>opener</code> で事足りなければ <code>nsIWindowMediator</code> を使う</h4>
+<p><code>window.opener</code> プロパティはとても簡単に使うことが出来ますが、ウィンドウがいくつかのよく知られた場所から開かれたことが判っている時にしか使えません。より複雑なケースでは、上で紹介された <code><a href="/ja/nsIWindowMediator" title="ja/nsIWindowMediator">nsIWindowMediator</a></code> を使う必要があります。</p>
+<p><code>nsIWindowMediator</code> を使いたくなるケースの一つは、拡張機能の設定ウィンドウです。あなたは browser.xul へのオーバーレイと設定ウィンドウから成るブラウザ拡張機能を開発しているとします。オーバーレイには設定ウィンドウを開くボタンが含まれており、そのウィンドウはブラウザウィンドウから幾つかのデータを読み取る必要があるとします。あなたは覚えているでしょうが、Firefox の拡張マネージャもあなたの設定ダイアログを開くのに使われることがあります。</p>
+<p>これはつまり、あなたの設定ダイアログにおける <code>window.opener</code> の値は必ずしもブラウザウィンドウではなく、拡張マネージャウィンドウかもしれないということです。<code>opener</code> の <code>location</code> プロパティを調べて、それが拡張マネージャウィンドウの場合には <code>opener.opener</code> を使うということも出来るかもしれませんが、より良い方法は <code>nsIWindowMediator</code> を使う事です。</p>
+<pre class="eval">var wm = Components.classes["@mozilla.org/appshell/window-mediator;1"]
+                   .getService(Components.interfaces.nsIWindowMediator);
+var browserWindow = wm.getMostRecentWindow("navigator:browser");
+// |browserWindow| から値を読む
+</pre>
+<p>設定ダイアログでユーザーが行なった変更を適用するのに同じテクニックを使いたい衝動に駆られるかもしれませんが、それをするのにより良い方法は <a class="external" href="http://kb.mozillazine.org/Dev_:_Using_preferences#Using_preferences_observers">preferences observers</a> を使う事です。</p>
+<p>{{ 英語版章題("Advanced data sharing") }}</p>
+<h3 id=".E9.AB.98.E5.BA.A6.E3.81.AA.E3.83.87.E3.83.BC.E3.82.BF.E5.85.B1.E6.9C.89.E6.96.B9.E6.B3.95" name=".E9.AB.98.E5.BA.A6.E3.81.AA.E3.83.87.E3.83.BC.E3.82.BF.E5.85.B1.E6.9C.89.E6.96.B9.E6.B3.95">高度なデータ共有方法</h3>
+<p>上のコードは一つのウィンドウから他のウィンドウやウィンドウ群にデータを渡す必要がある場合には便利ですが、ただ単に異なるウィンドウ間で共通の JavaScript 変数を共有したいだけの場合もあります。それぞれのウィンドウで、ローカル変数とそれに対応するセッタ関数を宣言して、ウィンドウをまたいで変数の「インスタンス」を同期させるという事も出来ますが、幸運にも、もっと良いやり方があります。</p>
+<p>共有の変数を宣言するには、アプリケーションが起動している間ずっと存在していて、異なる chrome ウィンドウ内のコードから簡単にアクセスできるような場所を見つける必要があります。そういった場所は実際に幾つかあります。</p>
+<p>{{ 英語版章題("Using JavaScript code modules") }}</p>
+<h4 id="JavaScript_.E3.82.B3.E3.83.BC.E3.83.89.E3.83.A2.E3.82.B8.E3.83.A5.E3.83.BC.E3.83.AB.E3.81.AE.E4.BD.BF.E7.94.A8" name="JavaScript_.E3.82.B3.E3.83.BC.E3.83.89.E3.83.A2.E3.82.B8.E3.83.A5.E3.83.BC.E3.83.AB.E3.81.AE.E4.BD.BF.E7.94.A8">JavaScript コードモジュールの使用</h4>
+<p><a href="/ja/JavaScript_code_modules/Using" title="ja/JavaScript_code_modules/Using">JavaScript コードモジュール</a> {{ Fx_minversion_inline(3) }} は、グローバルな共有シングルトンオブジェクトを作成し、あらゆる JavaScript スコープにインポートするための簡単な方法です。インポートする側のスコープはコードモジュール内のオブジェクトとデータにアクセスできるようになります。コードモジュールはキャッシュされるため、すべてのスコープがコードモジュールの同じインスタンスを取得し、モジュール内のデータを共有できます。詳しくは <a href="/ja/Components.utils.import" title="ja/Components.utils.import">Components.utils.import</a> を参照してください。</p>
+<ul>
+ <li>長所:
+  <ul>
+   <li>これは「まっとうなやり方」です。</li>
+   <li>作成やインポートはとても簡単です。</li>
+   <li>XPCOM コンポーネントを構築する必要がありません。</li>
+  </ul>
+ </li>
+ <li>短所:
+  <ul>
+   <li>Firefox 3 以降でしか使えません。</li>
+   <li>モジュールとインポートする側のスコープとの間でスコープが共有されるため、名前の衝突に気をつける必要があります。</li>
+  </ul>
+ </li>
+</ul>
+<p>{{ 英語版章題("Using an XPCOM singleton component") }}</p>
+<h4 id="XPCOM_.E3.82.B7.E3.83.B3.E3.82.B0.E3.83.AB.E3.83.88.E3.83.B3.E3.82.B3.E3.83.B3.E3.83.9D.E3.83.BC.E3.83.8D.E3.83.B3.E3.83.88.E3.82.92.E4.BD.BF.E3.81.86" name="XPCOM_.E3.82.B7.E3.83.B3.E3.82.B0.E3.83.AB.E3.83.88.E3.83.B3.E3.82.B3.E3.83.B3.E3.83.9D.E3.83.BC.E3.83.8D.E3.83.B3.E3.83.88.E3.82.92.E4.BD.BF.E3.81.86">XPCOM シングルトンコンポーネントを使う</h4>
+<p>データを共有する方法として最もクリーンで強力なのは、独自の XPCOM コンポーネント (<a href="/ja/How_to_Build_an_XPCOM_Component_in_Javascript" title="ja/How_to_Build_an_XPCOM_Component_in_Javascript">Javascript で書けます</a>) を定義する方法です。このコンポーネントには、 <code>getService</code> を呼び出すことでどこからでもアクセスできます。</p>
+<pre class="eval">Components.classes["@domain.org/mycomponent;1"].getService();
+</pre>
+<ul>
+ <li>長所:
+  <ul>
+   <li>これは「まっとうなやり方」です。</li>
+   <li>コンポーネントの中に任意の JavaScript オブジェクトを保管できます。</li>
+   <li>コンポーネント間でスコープが共有されないので、名前の衝突を心配する必要はありません。</li>
+   <li>古いバージョンの Firefox でも使用できます。</li>
+  </ul>
+ </li>
+ <li>短所:
+  <ul>
+   <li><code><a href="/ja/DOM/window" title="ja/DOM/window">window</a></code> オブジェクトや、<code>alert</code> や <code>open</code> といったそのメンバ、その他ウィンドウ内部から取得できるたくさんのオブジェクトが利用できません。しかし、その機能性は失われていません。それらの便利なショートカットの代わりに、直接 XPCOM コンポーネントを使わなければならないだけのことです。もちろん、単にコンポーネント内にデータを保存するだけならこの事は問題ではありません。</li>
+   <li>XPCOM コンポーネントの作成を学ぶのに時間がかかります。</li>
+  </ul>
+ </li>
+</ul>
+<p>オンラインに XPCOM コンポーネントの作成についての記事や本が幾つかあります。</p>
+<p>{{ 英語版章題("Using FUEL Application object") }}</p>
+<h4 id="FUEL_.E3.81.AE_Application_.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E3.82.92.E4.BD.BF.E3.81.86" name="FUEL_.E3.81.AE_Application_.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E3.82.92.E4.BD.BF.E3.81.86">FUEL の Application オブジェクトを使う</h4>
+<p>JavaScript ライブラリ FUEL {{ Fx_minversion_inline(3) }} には、ウィンドウ間でデータを共有する簡単な方法があります。<code>Application</code> オブジェクトはデータをグローバルに格納するのに使用できる <code>storage</code> プロパティをサポートしています。この方法は XPCOM シングルトンを使用する方法を単純化したものです。</p>
+<pre class="eval">Application.storage.set(keyname, data);
+
+var data = Application.storage.get(keyname, default);
+
+意味: keyname はデータを識別するのに使用する文字列
+      data はデータ
+      default は keyname が存在しない場合に返されるデータ値
+</pre>
+<ul>
+ <li>長所:
+  <ul>
+   <li>これは「まっとうなやり方」です。</li>
+   <li>コンポーネントの中に任意の JavaScript オブジェクトを保管できます。</li>
+   <li>コンポーネント間でスコープが共有されないので、名前の衝突を心配する必要はありません。</li>
+   <li>XPCOM コンポーネントを構築する必要がありません。</li>
+  </ul>
+ </li>
+ <li>短所:
+  <ul>
+   <li>Firefox 3 以降でしか使えません。</li>
+   <li><code><a href="/ja/DOM/window" title="ja/DOM/window">window</a></code> オブジェクトや、<code>alert</code> や <code>open</code> といったそのメンバ、その他ウィンドウ内部から取得できるたくさんのオブジェクトが利用できません。しかし、その機能性は失われていません。それらの便利なショートカットの代わりに、直接 XPCOM コンポーネントを使わなければならないだけのことです。もちろん、単にコンポーネント内にデータを保存するだけならこの事は問題ではありません。</li>
+  </ul>
+ </li>
+</ul>
+<p>{{ 英語版章題("Storing shared data in preferences") }}</p>
+<h4 id=".E8.A8.AD.E5.AE.9A.E3.81.AB.E5.85.B1.E6.9C.89.E3.83.87.E3.83.BC.E3.82.BF.E3.82.92.E4.BF.9D.E7.AE.A1.E3.81.99.E3.82.8B" name=".E8.A8.AD.E5.AE.9A.E3.81.AB.E5.85.B1.E6.9C.89.E3.83.87.E3.83.BC.E3.82.BF.E3.82.92.E4.BF.9D.E7.AE.A1.E3.81.99.E3.82.8B">設定に共有データを保管する</h4>
+<p>単に文字列や数値を保管したいだけなら、XPCOM コンポーネントを丸々書くような難しいことをする必要は無いかもしれません。そういったケースでは<a class="external" href="http://www.xulplanet.com/references/xpcomref/ifaces/nsIPrefService.html">設定サービス</a>が使えます。</p>
+<ul>
+ <li>長所:
+  <ul>
+   <li>きわめて簡単に単純なデータを保管できます。</li>
+  </ul>
+ </li>
+ <li>短所:
+  <ul>
+   <li>複雑なデータを保管するのは簡単ではありません。</li>
+   <li>設定サービスを乱用してその後片付けを自分でしないと、<code>prefs.js</code> が肥大化してアプリケーションの起動が遅くなる場合があります。</li>
+  </ul>
+ </li>
+</ul>
+<p>プリファレンスシステムの詳しい解説とコードの例は <a href="/ja/Code_snippets/Preferences" title="ja/Code_snippets/Preferences">Code snippets:Preferences</a> を参照して下さい。</p>
+<p>例:</p>
+<pre class="eval">var prefs = Components.classes["@mozilla.org/preferences-service;1"]
+                      .getService(Components.interfaces.nsIPrefService);
+var branch = prefs.getBranch("extensions.myext.");
+var var1 = branch.getBoolPref("var1"); // 設定値を得る
+</pre>
+<p>{{ 英語版章題("The hidden window hack") }}</p>
+<h4 id=".E9.9A.A0.E3.81.97.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.82.92.E4.BD.BF.E3.81.A3.E3.81.9F.E3.83.8F.E3.83.83.E3.82.AF" name=".E9.9A.A0.E3.81.97.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.82.92.E4.BD.BF.E3.81.A3.E3.81.9F.E3.83.8F.E3.83.83.E3.82.AF">隠しウィンドウを使ったハック</h4>
+<p>拡張機能の作者の中には、データやコードを保管するのに特殊な <em>隠しウィンドウ</em> を使っている人もいます。隠しウィンドウは普通のウィンドウに似ていますが、他のウィンドウと違って、アプリケーションが起動している間中ずっと利用でき、ユーザーからは見えません。このウィンドウに読み込まれるドキュメントは、メニューを実装するのにこれが使われている Mac では <code><a class="external" rel="freelink">chrome://browser/content/hiddenWindow.xul</a></code> で、他のオペレーティングシステムでは <code><a class="external" rel="freelink">resource://gre/res/hiddenWindow.html</a></code> です。隠しウィンドウは、ゆくゆくはそれが必要とされないオペレーティングシステムからは削除されるでしょう ({{ Bug(71895) }}) 。</p>
+<p>隠しウィンドウへの参照は nsIAppShellService インターフェイスから取得できます。他の DOM オブジェクトと同じように独自のプロパティを設定できます:</p>
+<pre class="eval">var hiddenWindow = Components.classes["@mozilla.org/appshell/appShellService;1"]
+         .getService(Components.interfaces.nsIAppShellService)
+         .hiddenDOMWindow;
+hiddenWindow.myExtensionStatus = "ready";
+</pre>
+<p>しかし、隠しウィンドウに入れられたオブジェクトは依然としてそれを作ったウィンドウに所属しています。もしそういったオブジェクトのメソッドが <code>XMLHttpRequest</code> のような <code>window</code> オブジェクトのプロパティにアクセスしたら、元のウィンドウが閉じられていた場合にはエラーメッセージが出るでしょう。これを避けるには、スクリプトファイルを使ってオブジェクトを隠しウィンドウに読み込むのがいいでしょう:</p>
+<pre class="eval">var hiddenWindow = Components.classes["@mozilla.org/appshell/appShellService;1"]
+         .getService(Components.interfaces.nsIAppShellService)
+         .hiddenDOMWindow;
+hiddenWindow.Components.classes["@mozilla.org/moz/jssubscript-loader;1"]
+         .getService(Components.interfaces.mozIJSSubScriptLoader)
+         .loadSubScript("<a class="external" rel="freelink">chrome://my-extension/content/globalObject.js</a>");
+hiddenWindow.myExtensionObject.doSomething();
+</pre>
+<p><code>globalObject.js</code> にはこのようなコードが含まれています:</p>
+<pre class="eval">var myExtensionObject = {
+  doSomething: function() {
+    return new XMLHttpRequest();
+  }
+}
+</pre>
+<ul>
+ <li>長所:
+  <ul>
+   <li>隠しウィンドウでコードを実行する場合、コンポーネントを使うのとは違い、<code>window</code> オブジェクトやそのプロパティを利用できます。</li>
+   <li>隠しウィンドウに任意の JavaScript オブジェクトを保管できます。</li>
+  </ul>
+ </li>
+ <li>短所:
+  <ul>
+   <li>これはハックです。</li>
+   <li>同じウィンドウに異なる拡張機能がアクセスするので、衝突を避ける為に長い変数名を使わなければなりません。</li>
+   <li>Windows や Linux のビルドでは、隠しウィンドウは削除されるかもしれません。</li>
+  </ul>
+ </li>
+</ul>
+<p>{{ 英語版章題("See also") }}</p>
+<h3 id=".E5.8F.82.E8.80.83" name=".E5.8F.82.E8.80.83">参考</h3>
+<ul>
+ <li><a href="/ja/Code_snippets/Dialogs_and_Prompts" title="ja/Code_snippets/Dialogs_and_Prompts">Code snippets:Dialogs</a></li>
+</ul>
+<p> </p>
+<p> </p>

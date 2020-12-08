@@ -1,0 +1,132 @@
+---
+title: 'パート 6: クラスによって、タプルと Marionette を使う'
+slug: Archive/B2G_OS/Automated_testing/gaia-ui-tests/Part_6_Marionette_By_class
+tags:
+  - Automation
+  - Firefox OS
+  - Gaia
+  - Python
+  - Testing
+  - gaia-ui-tests
+translation_of: Archive/B2G_OS/Automated_testing/gaia-ui-tests/Part_6_Marionette_By_class
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/ja/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/Mozilla/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_5_Introducing_a_test_runner" style="float: left;">« 前のページ</a><a href="/ja/docs/Mozilla/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_7_Writing_your_own_tests">次のページ  »</a></p>
+</div><p></p>
+
+<div class="summary">
+<p><span class="seoSummary">コードでは、これまで、特定の要素を見つけるために多くのロケータを使用しています。アプリケーション(iFrames)やアプリケーションの特定の部分であるかどうか。今まで、結果として、直接インラインロケータを書いて、コードを複製しています。さらに状況を改善するためには、再利用できるように、Pythonのタプル変数にこのロケータを抽象化することをお勧めします。この記事では、どのようにお見せしましょう。</span></p>
+</div>
+
+<h2 id="タプル、およびクラスによるMarionette">タプル、およびクラスによるMarionette</h2>
+
+<p>例として、連絡先アプリiFrameを見つけるために使用しているロケータを考えてください。:</p>
+
+<pre class="brush: python">'css selector', "iframe[data-url*='contacts']"</pre>
+
+<p>表示されるようにフレームを待っているときと切り替えるときの両方でこのロケータを使用します。簡単に物事を行うために、変数でこれを保存することができます。(また<code>By</code>をインポートする必要があります。):</p>
+
+<pre class="brush: python">from marionette import By
+
+_contacts_frame_locator = (By.CSS_SELECTOR, "iframe[data-url*='contacts']")</pre>
+
+<p>Marionette <code>By</code> クラスは、<code>id</code>やCSSセレクタなどのように位置決め技術へのアクセスへのショートカットを提供します。前のように、セレクタを使用して要素を取得し、次にCSSのタプル変数に格納します。HTML（とロケータ）が変化した場合、2つの場所で変更を行うよりも、一度変数を更新する方が簡単です。このタプルを使用するには、そのような<code>find_element()</code>メソッドでそれを含みます。:</p>
+
+<pre class="brush: python">self.marionette.find_element(*self._contacts_frame_locator)</pre>
+
+<div class="note">
+<p><strong>注意</strong>: <code>*</code> — これに関連して — Pythonコードは、引数リストを開梱するためのものです; それは<code>find_element()</code>に渡る必要がある2つの引数に元のタプルを分割しています。詳細および例について、Pythonのドキュメントで<a href="http://docs.python.org/2/tutorial/controlflow.html#unpacking-argument-lists">Unpacking argument lists</a>をご覧ください。</p>
+</div>
+
+<p>他のタプルの例、それは、<code>id</code> 属性によって探し出しますが、以下のとおりであります:</p>
+
+<pre class="brush: python">_add_contact_button_locator = (By.ID, 'add-contact-button')</pre>
+
+<h2 id="連絡先のテストでタプルとByを使用">連絡先のテストでタプルとByを使用</h2>
+
+<p>今では、テストのうち、ロケータを共有することができる <code>TestContacts</code> クラスのスコープにロケータを移動させることにより、<code>test_add_contact.py</code> のテストケースで重複を減らすための時間です。２，３のロケータを代入する方法を示し、その後、読者の演習として残りの部分を残しておきます。</p>
+
+<p>まず第一に、コードの先頭に次のように置くことによって、<code>By</code> をインポートすることを確認する必要があります。:</p>
+
+<pre class="brush: python">from marionette import By</pre>
+
+<p>今、<code>TestContacts</code>クラスの一番上にタプルを追加することができます。ちょうど<code>class TestContacts(unittest.TestCase):</code>行の下に次の行を追加します。:</p>
+
+<pre class="brush: python">_contacts_frame_locator = (By.CSS_SELECTOR, "iframe[data-url*='contacts']")
+_save_button_locator = (By.ID, "save-button")
+</pre>
+
+<p>今、コードを通過し、すべてのインスタンスを置き換えることができます</p>
+
+<pre class="brush: python">find_element('id', 'save-button')</pre>
+
+<p>with</p>
+
+<pre class="brush: python">find_element(*self._save_button_locator)</pre>
+
+<p>and all instances of</p>
+
+<pre class="brush: python">find_element('css selector', "iframe[data-url*='contacts']")</pre>
+
+<p>with</p>
+
+<pre class="brush: python">find_element(*self._contacts_frame_locator)</pre>
+
+<p>そして、それは今のところこれだけです。既にあってもこの単純な例では、このコードの再利用のメリットを確認できるようになることを確信しています。この手法では、同じロケータが5、10または20回使用することを有することができる、より複雑なテストを書くために開始するように、特に有効になり始めます。<br>
+ <br>
+  </p>

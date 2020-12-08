@@ -1,0 +1,35 @@
+---
+title: Téléviseurs et appareils connectés
+slug: Archive/B2G_OS/Firefox_OS_Connected-Devices_Guide
+tags:
+  - TopicStub
+translation_of: Mozilla/Firefox_OS_for_TV
+---
+<p class="summary">Ce document est écrit pour les développeurs Web qui sont intéressés par Firefox OS pour les téléviseurs, le travail actuel et à venir, ainsi que les applications web pour les téléviseurs. Il est montré comment construire et exécuter le simulateur Firefox OS TV, puis comment commencer à créer des applications pour les TV et les déployer.</p>
+
+<p>Les principales différences entre l'utilisation de Firefox OS sur un téléviseur et un téléphone (ou un ordinateur) sont :</p>
+
+<ul>
+ <li><strong>Moyens de contrôle</strong> : Firefox OS sur la TV doit être contrôlé à distance avec une télécommande, ce qui n'est pas aussi pratique qu'un clavier et qu'une souris.</li>
+ <li><strong>Résolution</strong> : Les téléviseurs intelligents d'aujourd'hui sont FULL HD (1920x1080) voir même du Ultra HD (4K). Le nombre de pixels sur les téléviseurs est très différent du nombre de pixels utilisé sur la plupart des téléphones mobiles.</li>
+</ul>
+
+<h2 id="Statut_actuelle_et_futurs_projets">Statut actuelle et futurs projets</h2>
+
+<p>Gaia 2.2 et supérieur contient des fonctionnalités pour fonctionner sur la télévision. Vous pouvez trouver des applications prêtes à l'emploi pour les téléviseurs intelligents dans <a href="https://github.com/mozilla-b2g/gaia/tree/master/tv_apps">gaia/tv_apps</a>; les applications avec le préfixe <code>smart-</code> sont appelées applications de télévision intelligente. <span class="tlid-translation translation" lang="fr"><span title="">À partir du premier semestre 2015, il y aura des appareils TV sur le marché avec des interfaces utilisateur basées sur les applications répertoriées ici.</span></span></p>
+
+<div class="note">
+<p><strong>Note:</strong> <code>smart-home</code> et <code>smart-deck</code> sont de bonnes applications à prendre comme modèles de départ pour vos propres applications ou pour vous faire des idées et trouver l'inspiration.</p>
+</div>
+
+<h2 id="Développement_des_applications_TV">Développement des applications TV</h2>
+
+<p>Dans cette partie, vous allez découvrir comment configurer un environement de développement pour exécuter et tester vos propres applications TV et comment assembler une application simple de test.</p>
+
+<h3 id="Téléchargement_des_outils">Téléchargement des outils</h3>
+
+<p>Vous aurez besoin de trois composants pour construire votre environnement de développement :</p>
+
+<ul>
+ <li><strong>Simulateur sur ordinateur</strong> : vous devez télécharger et installer le dernier <a href="https://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-central/">Nightly Desktop Simulator</a> (plus connue sous le nom de B2G Desktop), ou – si vous êtes vraiment courageux – <a href="https://developer.mozilla.org/fr/Firefox_OS/Building_the_Firefox_OS_simulator">le construire vous-même</a>. Vous devez télécharger la version adaptée à votre système d'exploitation et ajouter  <code>b2g- </code>au début de votre nom de fichier.</li>
+</ul>

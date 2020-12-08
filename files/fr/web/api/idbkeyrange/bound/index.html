@@ -1,0 +1,191 @@
+---
+title: IDBKeyRange.bound()
+slug: Web/API/IDBKeyRange/bound
+tags:
+  - API
+  - IDBKeyRange
+  - IndexedDB
+  - Méthode
+  - Reference
+translation_of: Web/API/IDBKeyRange/bound
+---
+<div>{{APIRef("IndexedDB")}}</div>
+
+<p>La méthode <strong><code>bound()</code></strong>, rattachée à l'interface {{domxref("IDBKeyRange")}}, renvoie un intervalle de clé délimité par une borne inférieure et une borne supérieure.</p>
+
+<p>L'intervalle peut être ouvert (les limites sont exclues) ou fermé (les limites sont incluses). Par défaut, l'intervalle est fermé.</p>
+
+<p>{{AvailableInWorkers}}</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="brush: js">myKeyRange = IDBKeyRange.bound(lower, upper, lowerOpen, upperOpen);</pre>
+
+<h3 id="Paramètres">Paramètres</h3>
+
+<dl>
+ <dt><code>lower</code></dt>
+ <dd>La limite inférieure de l'intervalle.</dd>
+ <dt><code>upper</code></dt>
+ <dd>La limite supérieure de l'intervalle.</dd>
+ <dt><code>lowerOpen</code> {{optional_inline}}</dt>
+ <dd>Si cette valeur vaut <code>false</code> (la valeur par defaut), l'intervalle contient la limite inférieure.</dd>
+ <dt><code>upperOpen</code> {{optional_inline}}</dt>
+ <dd>Si cette valeur vaut <code>false</code> (la valeur par défaut), l'intervalle contient la limite supérieure.</dd>
+</dl>
+
+<h3 id="Valeur_de_retour">Valeur de retour</h3>
+
+<p>Un objet {{domxref("IDBKeyRange")}} qui représente l'intervalle de clé.</p>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<dl>
+ <dt><code>DataError</code></dt>
+ <dd>Cette exception {{domxref("DOMException")}} est levée si :
+ <ul>
+  <li>Une des limites passé n'est pas valide.</li>
+  <li>La limite inférieur est supèrieur à la limite supérieur.</li>
+  <li>Les limites correspondent et l'intervalle est ouvert.</li>
+ </ul>
+ </dd>
+</dl>
+
+<h2 id="Exemples">Exemples</h2>
+
+<p>Dans l'exemple qui suit, on illustre comment créer un intervalle de clé. On déclare <code>keyRangeValue = IDBKeyRange.bound("A", "F");</code> ce qui représente un intervalle entre "A" et "F". Ensuite, on ouvre une transaction grâce à un objet {{domxref("IDBTransaction")}} puis on ouvre un magasin d'objets et on ouvre un curseur avec la méthode {{domxref("IDBObjectStore.openCursor")}} pour lequel on indique <code>keyRangeValue</code> comme intervalle de clé correspondant. Cela signifie que le curseur ne parcourera que les enregistrements dont les clés sont contenues dans cet intervalle. L'intervalle contient bien les valeurs "A" et "F" car les bornes sont incluses. Si on avait utilisé <code>IDBKeyRange.bound("A", "F", true, true);</code>, l'intervalle n'aurait pas inclus "A" et "F" mais uniquement les valeurs intermédiaires.</p>
+
+<pre class="brush: js">function displayData() {
+  var keyRangeValue = IDBKeyRange.bound("A", "F");
+
+  var transaction = db.transaction(['fThings'], 'readonly');
+  var objectStore = transaction.objectStore('fThings');
+
+  objectStore.openCursor(keyRangeValue).onsuccess = function(event) {
+    var cursor = event.target.result;
+      if(cursor) {
+        var listItem = document.createElement('li');
+        listItem.innerHTML = '&lt;strong&gt;' + cursor.value.fThing + '&lt;/strong&gt;, ' + cursor.value.fRating;
+        list.appendChild(listItem);
+
+        cursor.continue();
+      } else {
+        console.log('Les éléments ont été affichés.');
+      }
+    };
+  };</pre>
+
+<div class="note">
+<p><strong>Note </strong>: Pour un exemple complet qui utilise les intervalles de clé, vous pouvez consulter <a href="https://github.com/mdn/IDBKeyRange-example">le dépôt GitHub IDBKeyRange-example</a> (<a href="https://mdn.github.io/IDBKeyRange-example/">ainsi que la démonstration associée</a>).</p>
+</div>
+
+<h2 id="Spécification">Spécification</h2>
+
+<div>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Spécification</th>
+   <th scope="col">État</th>
+   <th scope="col">Commentaires</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('IndexedDB', '#widl-IDBKeyRange-bound-IDBKeyRange-any-lower-any-upper-boolean-lowerOpen-boolean-upperOpen', 'bound()')}}</td>
+   <td>{{Spec2('IndexedDB')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Fonctionnalité</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Support simple</td>
+   <td>23{{property_prefix("webkit")}}<br>
+    24</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>10 {{property_prefix("moz")}}<br>
+    {{CompatGeckoDesktop("16.0")}}</td>
+   <td>10, partial</td>
+   <td>15</td>
+   <td>7.1</td>
+  </tr>
+  <tr>
+   <td>Disponible dans les <em>web workers</em></td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("37.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Fonctionnalité</th>
+   <th>Android</th>
+   <th>Webview Android</th>
+   <th>Edge</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome pour Android</th>
+  </tr>
+  <tr>
+   <td>Support simple</td>
+   <td>4.4</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("22.0")}}</td>
+   <td>10</td>
+   <td>22</td>
+   <td>8</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td>Disponible dans les <em>web workers</em></td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("37.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB">Utiliser IndexedDB</a></li>
+ <li>Initier une connexion : {{domxref("IDBDatabase")}}</li>
+ <li>Utiliser les transactions : {{domxref("IDBTransaction")}}</li>
+ <li>Définir un intervalle de clés : {{domxref("IDBKeyRange")}}</li>
+ <li>Récupérer et modifier les données : {{domxref("IDBObjectStore")}}</li>
+ <li>Utiliser les curseurs {{domxref("IDBCursor")}}</li>
+ <li>Exemple de référence : <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="https://mdn.github.io/to-do-notifications/">exemple <em>live</em></a>).</li>
+</ul>

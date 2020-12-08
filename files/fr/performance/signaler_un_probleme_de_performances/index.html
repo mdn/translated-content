@@ -1,0 +1,31 @@
+---
+title: Signaler un problème de performances
+slug: Performance/Signaler_un_probleme_de_performances
+tags:
+  - Performances
+  - Profilage
+  - QA
+  - tests
+translation_of: Mozilla/Performance/Reporting_a_Performance_Problem
+---
+<p>Cet article va vous expliquer comment signaler un problème de performances au moyen de <a href="/en-US/docs/Mozilla/Performance/Profiling_with_the_Built-in_Profiler">l'extension Gecko Profiler</a>.</p>
+
+<h2 id="Installation_de_l'extension_Gecko_Profiler">Installation de l'extension Gecko Profiler</h2>
+
+<ol>
+ <li>Téléchargez et lancez une <a class="external" href="http://nightly.mozilla.org/" title="http://nightly.mozilla.org/">version nightly</a> de Firefox pour votre plateforme. Avant de la lancer, assurez-vous de fermer toutes les autres instances de Firefox ;</li>
+ <li>Assurez-vous que cette version fonctionne correctement. Pour cela, allez dans « À propos de Nightly » et vérifiez qu'à la troisième ligne, « nightly » est bien le canal de mise à jour. L'icône devrait être un globe bleu ;</li>
+ <li>Téléchargez <a class="external" href="https://github.com/bgirard/Gecko-Profiler-Addon/raw/master/geckoprofiler.xpi" title="geckoprofiler.xpi">la dernière version de l'extension Gecko Profiler</a> et installez-la en faisant glisser le .xpi au dessus de la fenêtre de Firefox ;</li>
+ <li>L'extension apparaitra sous la forme d'une icône de globe à droite de la barre d'URL ;</li>
+ <li><strong>N'oubliez pas de désactiver ou de désinstaller l'extension si vous ne l'utilisez plus.</strong></li>
+</ol>
+
+<h2 id="Utilisation_du_profileur">Utilisation du profileur</h2>
+
+<ol>
+ <li>Essayez de reproduire le problème de performances. Si possible, laissez-le se manifester pendant 5 à 10 secondes ;</li>
+ <li>Cliquez sur l'icône de l'extension et sélectionnez « Analyse ». Essayez de le faire dans les secondes qui suivent l'apparition du souci de performances. L'extension n'enregistre que quelques secondes. Si vous voyez apparaitre un gros bloc rouge sur la ligne du temps, c'est bon signe ;<br>
+  <img alt="" src="https://perf-html.io/e9a699daa7c33fcf80c361278055c65d.png" style="height: 536px; width: 780px;"></li>
+ <li>Les données vont s'ouvrir dans un nouvel onglet. Un bouton « Share » en bas à gauche va envoyer les données collectées vers un serveur de Mozilla et fournir un lien pour y accéder. Copiez l'adresse de ce lien via un clic droit. Créez un ticket dans Bugzilla pour décrire le problème et collez-y ce lien, ou envoyez-le directement à la bonne personne. Essayez de décrire précisément le contexte afin de permettre de reproduire le problème. Indiquez l'URL et ce qu'il faut faire pour que survienne le souci (par exemple faire défiler la page sur gmail.com).<br>
+   </li>
+</ol>

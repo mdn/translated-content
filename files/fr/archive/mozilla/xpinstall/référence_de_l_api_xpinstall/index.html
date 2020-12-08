@@ -1,0 +1,193 @@
+---
+title: Référence de l'API XPInstall
+slug: Archive/Mozilla/XPInstall/Référence_de_l_API_XPInstall
+tags:
+  - Référence_de_l'API_XPInstall
+  - XPInstall
+translation_of: Archive/Mozilla/XPInstall/Reference
+---
+<div class="warning"><p>Cette page fait parti de la <a href="https://developer.mozilla.org/fr/docs/Référence_de_l'API_XPInstall">Référence de l'API XPInstall</a>. Notez que si vous être un développeur d'<a href="https://developer.mozilla.org/fr/docs/Extensions">extension</a>, de <a href="https://developer.mozilla.org/fr/docs/Thèmes">thème</a>, ou de <a href="https://developer.mozilla.org/fr/docs/Plugins">plug-in</a>, vous n'avez plus besoin d'une grande partie de cette API. Plus particulièrement, le script <code>install.js</code> utilisé pour l'installation et l'enregistrement du contenu des <code>XPI</code> est déprécié en faveur du nouveau manifeste déclaratif <code><a href="https://developer.mozilla.org/fr/docs/Manifestes_d'installation">install.rdf</a></code> et du nouveau <a href="https://developer.mozilla.org/fr/docs/Bundles">schéma de paquetage</a>.</p></div>
+
+<h3 id="Objets" name="Objets">Objets</h3>
+
+<h4 id="Install" name="Install"><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install">Install</a></h4>
+
+<dl>
+ <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/Propri%c3%a9t%c3%a9s">Propriétés</a></dd>
+ <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes">Méthodes</a></dd>
+</dl>
+
+<dl>
+ <dd>
+ <dl>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/addDirectory">addDirectory</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/addFile">addFile</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/alert">alert</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/cancelInstall">cancelInstall</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/confirm">confirm</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/deleteRegisteredFile">deleteRegisteredFile</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/execute">execute</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/gestalt">gestalt</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/getComponentFolder">getComponentFolder</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/getFolder">getFolder</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/getLastError">getLastError</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/getWinProfile">getWinProfile</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/getWinRegistry">getWinRegistry</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/initInstall">initInstall</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/loadResources">loadResources</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/logComment">logComment</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/patch">patch</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/performInstall">performInstall</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/refreshPlugins">refreshPlugins</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/registerChrome">registerChrome</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/resetError">resetError</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/setPackageFolder">setPackageFolder</a></dd>
+ </dl>
+ </dd>
+</dl>
+
+<h4 id="InstallTrigger" name="InstallTrigger"><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_InstallTrigger">InstallTrigger</a></h4>
+
+<dl>
+ <dd><em>Aucune propriété</em></dd>
+ <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_InstallTrigger/M%c3%a9thodes">Méthodes</a></dd>
+</dl>
+
+<dl>
+ <dd>
+ <dl>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_InstallTrigger/M%c3%a9thodes/compareVersion">compareVersion</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_InstallTrigger/M%c3%a9thodes/enabled">enabled</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_InstallTrigger/M%c3%a9thodes/getVersion">getVersion</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_InstallTrigger/M%c3%a9thodes/install">install</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_InstallTrigger/M%c3%a9thodes/installChrome">installChrome</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_InstallTrigger/M%c3%a9thodes/startSoftwareUpdate">startSoftwareUpdate</a></dd>
+ </dl>
+ </dd>
+</dl>
+
+<h4 id="InstallVersion" name="InstallVersion"><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_InstallVersion">InstallVersion</a></h4>
+
+<dl>
+ <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_InstallVersion/Propri%c3%a9t%c3%a9s">Propriétés</a></dd>
+ <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_InstallVersion/M%c3%a9thodes">Méthodes</a></dd>
+</dl>
+
+<dl>
+ <dd>
+ <dl>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_InstallVersion/M%c3%a9thodes/compareTo">compareTo</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_InstallVersion/M%c3%a9thodes/init">init</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_InstallVersion/M%c3%a9thodes/toString">toString</a></dd>
+ </dl>
+ </dd>
+</dl>
+
+<h4 id="File" name="File"><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_File">File</a></h4>
+
+<dl>
+ <dd><em>Aucune propriété</em></dd>
+ <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_File/M%c3%a9thodes">Méthodes</a></dd>
+</dl>
+
+<dl>
+ <dd>
+ <dl>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_File/M%c3%a9thodes/copy">copy</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_File/M%c3%a9thodes/dirCreate">dirCreate</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_File/M%c3%a9thodes/dirGetParent">dirGetParent</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_File/M%c3%a9thodes/dirRemove">dirRemove</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_File/M%c3%a9thodes/dirRename">dirRename</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_File/M%c3%a9thodes/diskSpaceAvailable">diskSpaceAvailable</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_File/M%c3%a9thodes/execute">execute</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_File/M%c3%a9thodes/exists">exists</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_File/M%c3%a9thodes/isDirectory">isDirectory</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_File/M%c3%a9thodes/isFile">isFile</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_File/M%c3%a9thodes/macAlias">macAlias</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_File/M%c3%a9thodes/modDate">modDate</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_File/M%c3%a9thodes/modDateChanged">modDateChanged</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_File/M%c3%a9thodes/move">move</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_File/M%c3%a9thodes/remove">remove</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_File/M%c3%a9thodes/rename">rename</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_File/M%c3%a9thodes/size">size</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_File/M%c3%a9thodes/windowsGetShortName">windowsGetShortName</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_File/M%c3%a9thodes/windowsRegisterServer">windowsRegisterServer</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_File/M%c3%a9thodes/windowsShortcut">windowsShortcut</a></dd>
+ </dl>
+ </dd>
+</dl>
+
+<h4 id="WinProfile" name="WinProfile"><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_WinProfile">WinProfile</a></h4>
+
+<dl>
+ <dd><em>Aucune propriété</em></dd>
+ <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_WinProfile/M%c3%a9thodes">Méthodes</a></dd>
+</dl>
+
+<dl>
+ <dd>
+ <dl>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_WinProfile/M%c3%a9thodes/getString">getString</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_WinProfile/M%c3%a9thodes/writeString">writeString</a></dd>
+ </dl>
+ </dd>
+</dl>
+
+<h4 id="WinReg" name="WinReg"><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_WinReg">WinReg</a></h4>
+
+<dl>
+ <dd><em>Aucune propriété</em></dd>
+ <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_WinReg/M%c3%a9thodes">Méthodes</a></dd>
+</dl>
+
+<dl>
+ <dd>
+ <dl>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_WinReg/M%c3%a9thodes/createKey">createKey</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_WinReg/M%c3%a9thodes/deleteKey">deleteKey</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_WinReg/M%c3%a9thodes/deleteValue">deleteValue</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_WinReg/M%c3%a9thodes/enumKeys">enumKeys</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_WinReg/M%c3%a9thodes/enumValueNames">enumValueNames</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_WinReg/M%c3%a9thodes/getValue">getValue</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_WinReg/M%c3%a9thodes/getValueNumber">getValueNumber</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_WinReg/M%c3%a9thodes/getValueString">getValueString</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_WinReg/M%c3%a9thodes/isKeyWritable">isKeyWritable</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_WinReg/M%c3%a9thodes/keyExists">keyExists</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_WinReg/M%c3%a9thodes/setRootKey">setRootKey</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_WinReg/M%c3%a9thodes/setValue">setValue</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_WinReg/M%c3%a9thodes/setValueNumber">setValueNumber</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_WinReg/M%c3%a9thodes/setValueString">setValueString</a></dd>
+  <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_WinReg/M%c3%a9thodes/valueExists">valueExists</a></dd>
+ </dl>
+ </dd>
+</dl>
+
+<dl>
+ <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_WinReg/WinRegValue">Constructeur WinRegValue</a></dd>
+</dl>
+
+<h3 id="Autres_informations" name="Autres_informations">Autres informations</h3>
+
+<h4 id="Codes_retourn.C3.A9s" name="Codes_retourn.C3.A9s">Codes retournés</h4>
+
+<dl>
+ <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Codes_retourn%c3%a9s">Voir la liste complète</a></dd>
+</dl>
+
+<h4 id="Exemples" name="Exemples">Exemples</h4>
+
+<dl>
+ <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Exemples/Scripts_de_d%c3%a9clenchement_et_scripts_d'installation">Scripts de déclenchement et scripts d'installation</a></dd>
+</dl>
+
+<h5 id="Extraits_de_code" name="Extraits_de_code">Extraits de code</h5>
+
+<dl>
+ <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Exemples/File.macAlias">File.macAlias</a></dd>
+ <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Exemples/File.windowsShortcut">File.windowsShortcut</a></dd>
+ <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Exemples/Install.addDirectory">Install.addDirectory</a></dd>
+ <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Exemples/Install.addFile">Install.addFile</a></dd>
+ <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Exemples/InstallTrigger.installChrome">InstallTrigger.installChrome</a></dd>
+ <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Exemples/InstallTrigger.startSoftwareUpdate">InstallTrigger.startSoftwareUpdate</a></dd>
+ <dd><a href="/fr/docs/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Exemples/Windows_Install">Windows Install</a></dd>
+</dl>

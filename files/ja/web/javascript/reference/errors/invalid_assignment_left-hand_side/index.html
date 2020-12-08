@@ -1,0 +1,54 @@
+---
+title: 'ReferenceError: invalid assignment left-hand side'
+slug: Web/JavaScript/Reference/Errors/Invalid_assignment_left-hand_side
+tags:
+  - Errors
+  - JavaScript
+  - ReferenceError
+translation_of: Web/JavaScript/Reference/Errors/Invalid_assignment_left-hand_side
+---
+<div>{{jsSidebar("Errors")}}</div>
+
+<h2 id="メッセージ">メッセージ</h2>
+
+<pre class="syntaxbox">ReferenceError: invalid assignment left-hand side
+</pre>
+
+<h2 id="エラータイプ">エラータイプ</h2>
+
+<p>{{jsxref("ReferenceError")}}。</p>
+
+<h2 id="何がうまくいかなかったのか？">何がうまくいかなかったのか？</h2>
+
+<p>どこかに予想外の割り当てがあります。たとえば、<a href="/ja/docs/Web/JavaScript/Reference/Operators/Assignment_Operators">代入演算子</a> と <a href="/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">比較演算子</a> にミスマッチがあるせいかもしれません。"<code>=</code>" 記号が 1 つの場合は変数に値を割り当てる一方、"<code>==</code>" か "<code>===</code>" 演算子は値を比較します。</p>
+
+<h2 id="例">例</h2>
+
+<pre class="brush: js example-bad">if (Math.PI = 3 || Math.PI = 4) {
+  console.log('no way!');
+}
+// ReferenceError: invalid assignment left-hand side
+
+var str = 'Hello, '
++= 'is it me '
++= 'you\'re looking for?';
+// ReferenceError: invalid assignment left-hand side
+</pre>
+
+<p><code>if</code> ステートメントでは、比較演算子（"=="）が必要ですし、文字連結にはプラス（"+"）演算子が必要です。</p>
+
+<pre class="brush: js example-good">if (Math.PI == 3 || Math.PI == 4) {
+  console.log('no way!');
+}
+
+var str = 'Hello, '
++ 'from the '
++ 'other side!';
+</pre>
+
+<h2 id="関連項目">関連項目</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Assignment_Operators">代入演算子</a></li>
+ <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">比較演算子</a></li>
+</ul>

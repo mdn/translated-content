@@ -1,0 +1,105 @@
+---
+title: command
+slug: Mozilla/Tech/XUL/command
+tags:
+  - XUL Elements
+  - XUL Reference
+translation_of: Archive/Mozilla/XUL/command
+---
+<div class="noinclude">
+ <span class="breadcrumbs XULRef_breadcrumbs">
+ « <a href="/zh-CN/docs/XUL_Reference">XUL Reference home</a>    [
+ <a href="#Examples">示例</a> |
+ <a href="#Attributes">属性</a> |
+ <a href="#Properties">特性</a> |
+ <a href="#Methods">方法</a> |
+ <a href="#Related">相关</a> ]
+</span><br>
+ <code>command </code>元素响应不同来源的、对于同一操作的操作请求。比如，剪贴板的粘贴操作，可以来自 “编辑”菜单，可以来自鼠标右键的上下文菜单，也可以来自键盘快捷键。你可以通过 command 的 <code id="a-oncommand"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/oncommand">oncommand</a></code> 属性调用代码。对于用户来说，从什么地方触发了这个操作并不重要。另外，关闭 command 将自动关闭菜单中的项目和对键盘快捷键的响应。</div>
+<p>Commands are identified by their <code><code id="a-id"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code>. If you include the script <code><a class="external" rel="freelink">chrome://global/content/globalOverlay.js</a></code> in your window, you can use the function <code>goDoCommand</code> function to invoke the command. Using this function has the advantage that the command will be sent to the part of the UI which will respond to it. Typically, this will be the currently focused element.</p>
+<p>Like a <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/broadcaster" title="broadcaster">broadcaster</a></code>, commands forward attributes to other elements.</p>
+<p>More information is available in the <a href="/cn/XUL_Tutorial/Commands" title="cn/XUL_Tutorial/Commands">XUL tutorial</a>. See also: <code id="a-command"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/command">command</a></code> attribute, <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/commandset" title="commandset">commandset</a></code> element</p>
+<dl>
+ <dt>
+  Attributes</dt>
+ <dd>
+  <a href="#a-disabled">disabled</a>, <a href="#a-label">label</a>, <a href="#a-oncommand">oncommand</a></dd>
+</dl>
+<h3 id="Examples" name="Examples">Examples</h3>
+<p>The following code will send a paste command (<code>cmd_paste</code>) to the currently focused element:</p>
+<pre class="eval"> // First include <a class="external" rel="freelink">chrome://global/content/globalOverlay.js</a>
+ goDoCommand("cmd_paste");
+</pre>
+<p>Example with two buttons</p>
+<pre>&lt;command id="cmd_openhelp" oncommand="alert('Help');"/&gt;
+&lt;button label="Help" command="cmd_openhelp"/&gt;
+&lt;button label="More Help" command="cmd_openhelp"/&gt;
+</pre>
+<h3 id="Attributes" name="Attributes">Attributes</h3>
+<p> </p><div id="a-disabled">
+
+
+<dl>
+ <dt><code id="a-disabled"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code></dt>
+ <dd> </dd>
+ <dd>
+ <h5 id="类型boolean">类型:<em>boolean</em></h5>
+ </dd>
+ <dd>
+ <h5 id="表示元素是被禁用的。">表示元素是被禁用的。</h5>
+
+ <p>如果这个元素的disabled属性被设置为true，表示元素被禁用，被禁用的属性在页面上通常会显示灰色文本，它无法响应用户的操作，它也无法得到光标。</p>
+
+ <p>然而，这个元素仍然能够响应鼠标事件，如果要启用这个元素，把disabled设置为false</p>
+ </dd>
+</dl>
+
+<h4 id="示例：">示例：</h4>
+
+<div class="float-right"><img alt="Image:XUL_ref_attr_disabled.png" src="https://mdn.mozillademos.org/files/1742/XUL_ref_attr_disabled.png"></div>
+
+<pre><code>// Disabling an element
+document.getElementById('buttonRemove').setAttribute("disabled", "true");
+
+// Enabling back an element by removing the "disabled" attribute
+document.getElementById('buttonRemove').removeAttribute("disabled");</code></pre>
+
+<p></p><div class="blockIndicator standardNote standardNoteBlock">
+    <p><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Firefox/Releases/3.5">Firefox 3.5 note</a></p>
+    <p style="font-weight: 400;">For <a href="https://developer.mozilla.org/en-US/docs/XUL/keyset" title="en/XUL/Keyset"><code>keyset</code></a> elements, support for this attribute was added in Firefox 3.5.</p>
+</div><p></p>
+</div> <div id="a-label">
+
+<dl>
+ <dt>
+  <code id="a-label"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></dt>
+ <dd>
+  Type: <em>string</em></dd>
+ <dd>
+  The label that will appear on the element. If this is left out, no text appears.<br>
+  label 在元素上显示。如果左侧出界，则不显示任何文字。</dd>
+</dl>
+
+<p></p>
+</div> <div id="a-oncommand">
+
+
+<dl>
+ <dt><code id="a-oncommand"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/oncommand">oncommand</a></code></dt>
+ <dd>Type: <em>script code</em></dd>
+ <dd>This event handler is called when the command is activated. This occurs when a user selects a menu item or presses a keyboard shortcut attached to the command.</dd>
+</dl>
+
+
+</div><p></p>
+<h3 id="Properties" name="Properties">Properties</h3>
+<p></p><table style="border: 1px solid rgb(204, 204, 204); margin: 0px 0px 10px 10px; padding: 0px 10px; background: rgb(238, 238, 238) none repeat scroll 0% 50%;"> <tbody> <tr> <td> <p><strong>Inherited Properties</strong><br> <small> <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/align">align</a></span></code>, , <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/allowEvents">allowEvents</a></span></code>, , <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/boxObject">boxObject</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/builder">builder</a></span></code>, , , , <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/className">className</a></span></code>, , , , , <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/collapsed">collapsed</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/contextMenu">contextMenu</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/controllers">controllers</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/database">database</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/datasources">datasources</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/dir">dir</a></span></code>, , , <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/flex">flex</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/height">height</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/hidden">hidden</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/id">id</a></span></code>, , , <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/left">left</a></span></code>, , <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/maxHeight">maxHeight</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/maxWidth">maxWidth</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/menu">menu</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/minHeight">minHeight</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/minWidth">minWidth</a></span></code>, , , , , , , <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/observes">observes</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/ordinal">ordinal</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/orient">orient</a></span></code>, , <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/pack">pack</a></span></code>, , <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/persist">persist</a></span></code>, , , , <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/ref">ref</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/resource">resource</a></span></code>, , , , , <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/statusText">statusText</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/style">style</a></span></code>, ,, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/tooltip">tooltip</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/tooltipText">tooltipText</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/top">top</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/width">width</a></span></code></small></p> </td> </tr> </tbody>
+</table><p></p>
+<h3 id="Methods" name="Methods">Methods</h3>
+<p></p><table style="border: 1px solid rgb(204, 204, 204); margin: 0px 0px 10px 10px; padding: 0px 10px; background: rgb(238, 238, 238) none repeat scroll 0% 50%;"> <tbody> <tr> <td> <p><strong>Inherited from XUL element</strong><br> <small> <span id="m-blur"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/blur">blur</a></code></span>, <span id="m-click"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/click">click</a></code></span>, <span id="m-doCommand"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/doCommand">doCommand</a></code></span>, <span id="m-focus"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/focus">focus</a></code></span>, <span id="m-getElementsByAttribute"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/getElementsByAttribute">getElementsByAttribute</a></code></span></small></p> <p><strong>Inherited from DOM element</strong><br> <small> <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.addEventListener">addEventListener()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.appendChild">appendChild()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.dispatchEvent">dispatchEvent()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttribute">getAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttributeNode">getAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttributeNodeNS">getAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttributeNS">getAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getElementsByTagName">getElementsByTagName()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getElementsByTagNameNS">getElementsByTagNameNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasAttribute">hasAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasAttributeNS">hasAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasAttributes">hasAttributes()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasChildNodes">hasChildNodes()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.insertBefore">insertBefore()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.isSupported">isSupported()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.normalize">normalize()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeAttribute">removeAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeAttributeNode">removeAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeAttributeNS">removeAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeChild">removeChild()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeEventListener">removeEventListener()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.replaceChild">replaceChild()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttribute">setAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttributeNode">setAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttributeNodeNS">setAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttributeNS">setAttributeNS()</a></code></small></p> </td> </tr> </tbody>
+</table><p></p>
+<h3 id="Related" name="Related">Related</h3>
+<ul>
+ <li><a href="/cn/XUL/List_of_commands" title="cn/XUL/List_of_commands">XUL:List of commands</a></li>
+</ul>
+<p></p>

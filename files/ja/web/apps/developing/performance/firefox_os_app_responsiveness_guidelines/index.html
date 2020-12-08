@@ -1,0 +1,220 @@
+---
+title: 'Firefox OS アプリ 起動: 応答性 ガイドライン'
+slug: Web/Apps/Developing/Performance/Firefox_OS_app_responsiveness_guidelines
+tags:
+  - Apps
+  - Firefox OS
+  - パフォーマンス
+translation_of: Archive/B2G_OS/Developing_Gaia/Raptor/Responsiveness_guidelines
+---
+<p><span class="seoSummary">アプリの起動段階やタイミング (やユーザーストーリー) についての下記の表には、Firefox OS アプリ用のベストプラクティスがあります。それは全て(低スペック端末も含めた)Firefox OS端末のアプリパフォーマンスとして "受容できる" 観点のものです。これはFirefox OS パフォーマンスチームの、性能要件を満たしたアプリの UX-承認 定義を形成し、Firefox OSの応答性と知覚できるパフォーマンス用のMozillaのプログラムの一部です。</span></p>
+
+<h2 id="アプリの起動段階や認識時間の目標">アプリの起動段階や認識時間の目標</h2>
+
+<p>下記の表はアプリ起動時の色々な段階と、知覚されるアプリパフォーマンスの改善時に狙う目標を定義します。</p>
+
+<h3 id="段階">段階</h3>
+
+<table class="fullwidth-table wikitable">
+ <thead>
+  <tr>
+   <th scope="col">段階</th>
+   <th scope="col"><strong>説明</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Chrome Visible</td>
+   <td>アプリのワイヤーフレーム、例えば ヘッダ、フッタやナビゲーション要素が表示されている。</td>
+  </tr>
+  <tr>
+   <td>Chrome Interactive</td>
+   <td>アプリのワイヤーフレーム、例えば ヘッダ、フッタやナビゲーション要素がユーザーの操作可能になっている。</td>
+  </tr>
+  <tr>
+   <td><strong>Content Visible</strong></td>
+   <td><strong>初期の 'above-the-fold' ファーストビューとも言う、スクロールしなくても見えている部分 コンテンツが表示され、レンダリングが完了している。この状態では、アプリが視覚的にユーザー操作可能な準備ができているように見えている。</strong></td>
+  </tr>
+  <tr>
+   <td>Interaction Ready</td>
+   <td>'above-the-fold' コンテンツ用に主要なサブセットがユーザーの操作可能になっている。</td>
+  </tr>
+  <tr>
+   <td>Content Ready</td>
+   <td>アプリの残っている、重要でない部分がロードされて操作可能であり、全てのバックグラウンドプロセスが完了している。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="目標">目標</h3>
+
+<table class="fullwidth-table wikitable">
+ <thead>
+  <tr>
+   <th scope="col"><strong>スピード</strong></th>
+   <th scope="col"><strong>アクション</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>0 - 140ms</td>
+   <td>アプリアイコンがタッチされた表示になる。</td>
+  </tr>
+  <tr>
+   <td>0 - 1.0s</td>
+   <td>アプリのランチアニメーションが開始し、完了している。</td>
+  </tr>
+  <tr>
+   <td>0 - 1.0s</td>
+   <td>アプリのワイヤーフレーム、例えばバナーやコントロール、がロードされ、表示されている。</td>
+  </tr>
+  <tr>
+   <td><strong>0 - 1.0s</strong></td>
+   <td>アプリの表示コンテンツやロード中のインジケーターが表示されるべきである。この指標は上記の "Content Visible" 段階でヒットしないといけない。</td>
+  </tr>
+  <tr>
+   <td>0 - 1.25s</td>
+   <td>アプリはユーザー操作、例えばタッチ、スクロール、などが可能である</td>
+  </tr>
+ </tbody>
+</table>
+
+<div class="note">
+<p><strong>記</strong>: これらの目標時間は、アプリのコールド起動について言及し、蓄積されたものです。例えば、アプリアイコンのタッチとアプリの反応準備ができるまでは 1.25 秒以内に起こるべきです。</p>
+</div>
+
+<h3 id="実装">実装</h3>
+
+<p>バッケージ型の認定アプリ用に、共有された PerformanceTestingHelper スクリプトが同梱されている限り、実装はwindow要素から離れたイベントを起動するシンプルなものです、なぜならPerformanceTestingHelper はメトリクスを集めるためにこうしたプラットフォーム標準イベントをリッスンしているからです。</p>
+
+<hr>
+<pre>// moz-chrome-dom-loaded
+window.dispatchEvent(new CustomEvent('moz-chrome-dom-loaded'));</pre>
+
+<p>あなたのアプリが、DOM内に主要なchromeやナビゲーションインターフェイスを存在させていると指定し、それらが表示される準備ができているとマークする時に、このイベントを発生させて下さい。例えば要素が <code>display: none;</code> や他の非表示機能ではない時です。</p>
+
+<hr>
+<pre>// moz-chrome-interactive
+window.dispatchEvent(new CustomEvent('moz-chrome-interactive'));</pre>
+
+<p>あなたのアプリが、主要なchromeやナビゲーションインターフェイスのイベントが関連づけられてユーザー操作可能であると指定する時に、このイベントを発生させて下さい。</p>
+
+<hr>
+<pre>// moz-app-visually-complete
+window.dispatchEvent(new CustomEvent('moz-app-visually-complete'));</pre>
+
+<p>このイベントは上記の <strong><em>Content Visible</em></strong> マーカーの重要な割当になります。あなたのアプリが視覚的にロードされたのを指定する時に、このイベントを発生させて下さい。例えば"above-the-fold" コンテンツがDOM内に存在し、それが表示される準備ができている、<code>つまりdisplay: none;</code> や他の非表示機能でないのをマークします。</p>
+
+<hr>
+<pre>// moz-content-interative
+window.dispatchEvent(new CustomEvent('moz-content-interactive'));</pre>
+
+<p>あなたのアプリが、最小機能セットのイベントと関連づけできていて、 the user to interact with the <code>moz-app-visually-complete</code> で利用可能になった"above-the-fold" コンテンツをユーザーが操作できるのを指定する時に、このイベントを発生させて下さい。</p>
+
+<hr>
+<pre>// moz-app-loaded
+window.dispatchEvent(new CustomEvent('moz-app-loaded'));</pre>
+
+<p>あなたのアプリが完全にロードされたのを指定する時に、このイベントを発生させて下さい。例えばあらゆる関連した "below-the-fold" ファーストビュー以外 機能がDOMに流し込まれ、表示済みにマークされ、操作の準備ができていて、必要となる起動時のバックアッププロセスは完了していて、さらなるユーザー操作を妨げる安定状態にあるべきです。</p>
+
+<h2 id="ユーザーストーリー">ユーザーストーリー</h2>
+
+<p>下記のユーザーストーリーは、アプリ使用時にユーザーがどのように時間やパフォーマンスを知覚するかについて、いくつかの洞察を提供します。</p>
+
+<h3 id="原因と結果の知覚_(140ms)"><strong><strong>原因と結果の知覚</strong> (140ms)</strong></h3>
+
+<ul>
+ <li>時間: 140ミリ秒</li>
+ <li>ユースケース
+  <ul>
+   <li>タッチ状態 (つまりキーボード)</li>
+   <li>遷移</li>
+   <li>端末の回転</li>
+  </ul>
+ </li>
+ <li>ストーリー
+  <ul>
+   <li>ユーザーとして、アプリ起動に 140ms 以内の見た目の変化を期待します。</li>
+   <li>ユーザーとして、ボタンやリスト項目がタッチされてから140ms 以内にハイライト状態が表示されるのを期待します。</li>
+   <li>ユーザーとして、スクリーン遷移が140ms 以内の初期化で開始されるのを期待します。</li>
+   <li>ユーザーとして、端末が回転して140ms 以内に、アプリで縦/横向きに再描画が開始されるのを期待します。</li>
+  </ul>
+ </li>
+</ul>
+
+<h3 id="進行中の知覚"><strong><strong>進行中の知覚</strong></strong></h3>
+
+<ul>
+ <li>時間: 1秒</li>
+ <li>ユースケース
+  <ul>
+   <li>アプリが起動する。</li>
+   <li>最初の描画。</li>
+   <li>"above the fold"部のロード</li>
+   <li>完全なロード</li>
+   <li>時間のかかる操作 (例: ダウンロード、wifi 接続).</li>
+   <li>最初の操作までの時間</li>
+  </ul>
+ </li>
+ <li>ストーリー
+  <ul>
+   <li>ユーザーとして、 アプリのファーストビュー(above the fold)のレンダリングが1秒以内に完了するのを期待します。</li>
+   <li>ユーザーとして、長い時間のかかる操作の進行中は、継続的な見た目の更新を期待します。</li>
+   <li>ユーザーとして、アプリの操作が1秒以内にできるのを期待します。</li>
+  </ul>
+ </li>
+</ul>
+
+<h3 id="手と目の協調"><strong><strong>手と目の協調</strong></strong></h3>
+
+<ul>
+ <li>時間: 100ミリ秒</li>
+ <li>ユースケース
+  <ul>
+   <li>ドラッグ &amp; ドロップ (ホームスクリーンとドックアイコンを動かす)</li>
+   <li>スクロールする</li>
+   <li>ピンチ/ズームする</li>
+   <li>ページをスワイプ、ドロワーを引き出す</li>
+  </ul>
+ </li>
+ <li>ストーリー
+  <ul>
+   <li>ユーザーとして、ドラッグの動作の見た目が100ms以内に反応することを期待します。</li>
+   <li>ユーザーとして、ピンチ/ズームがサポートされている場合、100ms以内に見た目が反応することを期待します。</li>
+   <li>ユーザーとして、スクロールが100ms以内に初期化されて、見た目が反応することを期待します。</li>
+   <li>ユーザーとして、スクロールがタッチイベントに同期して100ms以内残ることを期待します。</li>
+   <li>ユーザーとして、スワイプ開始から100ms以内に見た目が反応することを期待します。</li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="参考情報">参考情報</h2>
+
+<h3 id="動画"><span class="mw-headline" id="Videos">動画</span></h3>
+
+<ul>
+ <li><a class="external text" href="https://www.youtube.com/watch?v=7ubJzEi3HuA" rel="nofollow">Fluent 2014: Ilya Grigorik, "Speed, Performance, and Human Perception"</a></li>
+ <li><a class="external text" href="https://www.youtube.com/watch?v=znjy4Kl3IfU" rel="nofollow">Fluent 2014: Steve Souders, "The Perception of Speed"</a></li>
+ <li><a class="external text" href="https://www.youtube.com/watch?v=ZpFdyfs03Ug" rel="nofollow">SXSW 2012: Andy Hume: "CSS for Grownups"</a></li>
+</ul>
+
+<h3 id="文書"><span class="mw-headline" id="Documents">文書</span></h3>
+
+<ul>
+ <li><a class="external text" href="https://en.wikipedia.org/wiki/List_of_cognitive_biases" rel="nofollow">Cognitive Biases</a></li>
+ <li><a class="external text" href="http://coglode.com/" rel="nofollow">Cognitive Load</a>: The latest behavioral economics &amp; consumer psychology research distilled down into helpful little brain gems.</li>
+ <li>CSS
+  <ul>
+   <li><a class="external text" href="https://medium.com/web-design-technique/6b51bf53743a" rel="nofollow">Blend Modes</a></li>
+   <li><a class="external text" href="/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS" rel="nofollow">Writing Efficient CSS</a></li>
+   <li><a class="external text" href="http://www.masonchang.com/2013/12/5/the-will-animate-css-property" rel="nofollow">will-change property</a></li>
+  </ul>
+ </li>
+ <li><a class="external text" href="http://stevesouders.com/" rel="nofollow">High Performance Web Sites (Steve Souders)</a></li>
+ <li><a class="external text" href="http://jankfree.org/" rel="nofollow">Jank-free Web</a></li>
+ <li><a class="external text" href="https://mozilla.app.box.com/s/aww17rx74k7fjds5vada" rel="nofollow">Perceived Performance Introduction</a></li>
+</ul>
+
+<p> </p>
+
+<p> </p>

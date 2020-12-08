@@ -1,0 +1,534 @@
+---
+title: ctypes
+slug: Mozilla/js-ctypes/js-ctypes_reference/ctypes
+translation_of: Mozilla/js-ctypes/js-ctypes_reference/ctypes
+---
+<section class="Quick_links" id="Quick_Links">
+ <ol>
+  <li><a href="/zh-CN/docs/Mozilla/js-ctypes"><strong><em>js-ctypes</em></strong></a></li>
+  <li class="toggle">
+      <details>
+        <summary>Introduction</summary>
+        <ol><li><a href="/zh-CN/docs/Mozilla/js-ctypes/Using_js-ctypes/Declaring_and_Using_Callbacks" title="C函数偶尔将函数指针作为参数，它们通常用作回调。.在这些情况下，js-ctypes允许您传递常规JavaScript函数作为回调。这是非常强大的，因为它允许本地代码透明地调用JavaScript。">Declaring and Using Callbacks</a> <a href="/zh-CN/docs/Mozilla/js-ctypes/Using_js-ctypes/Declaring_and_Using_Callbacks$translate" style="opacity: 0.5;" title="此页面仍未被本地化, 期待您的翻译!">[我来译!]</a></li></ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details open>
+        <summary>References</summary>
+        <ol><li><a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/ctypes" title="The ctypes object contains methods and predefined data types used to create and manage a library."><code>ctypes</code></a> <a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/ctypes$translate" style="opacity: 0.5;" title="此页面仍未被本地化, 期待您的翻译!">[我来译!]</a></li></ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+        <summary>Examples</summary>
+
+      </details>
+  </li>
+ </ol>
+</section>
+
+
+
+<div class="blockIndicator draft">
+    <p><strong>草案</strong><br>
+    本页尚未完工.</p>
+
+</div>
+
+<p>The <code>ctypes</code> object contains methods and predefined data types used to create and manage a library.</p>
+
+<h2 id="方法概览">方法概览</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>CType <a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/ArrayType" title="此页面仍未被本地化, 期待您的翻译!"><code>ArrayType</code></a>(type[, length]);</code></td>
+  </tr>
+  <tr>
+   <td><code>CData <a href="#cast%28%29">cast</a>(data, type);</code></td>
+  </tr>
+  <tr>
+   <td><code>CType <a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/FunctionType" title="此页面仍未被本地化, 期待您的翻译!"><code>FunctionType</code></a>(abi, returnType[, argType1, ...]);</code></td>
+  </tr>
+  <tr>
+   <td><code>CData <a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/Int64" title="此页面仍未被本地化, 期待您的翻译!"><code>Int64</code></a>(n);</code></td>
+  </tr>
+  <tr>
+   <td><code>String <a href="#libraryName%28%29">libraryName</a>(name);</code></td>
+  </tr>
+  <tr>
+   <td><code>Library <a href="#open%28%29">open</a>(libSpec);</code></td>
+  </tr>
+  <tr>
+   <td><code>CType <a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/PointerType" title="此页面仍未被本地化, 期待您的翻译!"><code>PointerType</code></a>(typeSpec);</code></td>
+  </tr>
+  <tr>
+   <td><code>CType <a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/StructType" title="此页面仍未被本地化, 期待您的翻译!"><code>StructType</code></a>(name[, fields]);</code></td>
+  </tr>
+  <tr>
+   <td><code>CData <a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/UInt64" title="此页面仍未被本地化, 期待您的翻译!"><code>UInt64</code></a>(n);</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="属性">属性</h2>
+
+<table class="standard-table" style="width: auto;">
+ <tbody>
+  <tr>
+   <td class="header">Property</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>errno</code></td>
+   <td><code>Number</code></td>
+   <td>最后一次的系统错误。与库中的errno一样，所有平台都一样，不能被设置。.</td>
+  </tr>
+  <tr>
+   <td><code>winLastError</code></td>
+   <td><code>Number|undefined</code></td>
+   <td>最后一次发生的Windows 的错误。与Windows下的 GetLastError类似,只在Window下有效，不能被设置。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="常量">常量</h2>
+
+<h3 id="ABI_constants">ABI constants</h3>
+
+<p>这些常量是用于调用库的方法时使用。</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Constant</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>default_abi</code></td>
+   <td>Corresponds to <code>cdecl</code>; standard libraries use this ABI. You also use this for all system calls on Mac OS X and Linux.</td>
+  </tr>
+  <tr>
+   <td><code>stdcall_abi</code></td>
+   <td>Used for calling functions declared with <code>stdcall</code> on Windows. These functions' names are automatically mangled for you by js-ctypes.</td>
+  </tr>
+  <tr>
+   <td><code>winapi_abi</code></td>
+   <td>用于调用Windows 系统函数。与楼上的不同之处在于不能自己指定函数名字.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="预定义的数据类型">预定义的数据类型</h2>
+
+<h4 id="原始类型">原始类型</h4>
+
+<p>这些类型在所有平台的表现方式都一样</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>int8_t</code></td>
+   <td>Signed 8-bit integer.</td>
+  </tr>
+  <tr>
+   <td><code>uint8_t</code></td>
+   <td>Unsigned 8-bit integer.</td>
+  </tr>
+  <tr>
+   <td><code>int16_t</code></td>
+   <td>Signed 16-bit integer.</td>
+  </tr>
+  <tr>
+   <td><code>uint16_t</code></td>
+   <td>Unsigned 16-bit integer.</td>
+  </tr>
+  <tr>
+   <td><code>int32_t</code></td>
+   <td>Signed 32-bit integer.</td>
+  </tr>
+  <tr>
+   <td><code>uint32_t</code></td>
+   <td>Unsigned 32-bit integer.</td>
+  </tr>
+  <tr>
+   <td><code>int64_t</code></td>
+   <td>Signed 64-bit integer.</td>
+  </tr>
+  <tr>
+   <td><code>uint64_t</code></td>
+   <td>Unsigned 64-bit integer.</td>
+  </tr>
+  <tr>
+   <td><code>float32_t</code></td>
+   <td>32-bit floating-point value.</td>
+  </tr>
+  <tr>
+   <td><code>float64_t</code></td>
+   <td>64-bit floating-point value.</td>
+  </tr>
+ </tbody>
+</table>
+
+<div class="note"><strong>Note:</strong> Some 64-bit values are outside the range of numeric values supported by JavaScript. Because of this, <code>ctypes.int64</code> and <code>ctypes.uint64</code> do not automatically convert to JavaScript numbers. Instead, they convert to objects of the wrapper types <code>ctypes.Int64</code> and <code>ctypes.UInt64</code>, which are JavaScript objects rather than CData objects. See <a href="/en/Mozilla/js-ctypes/Using_js-ctypes/Working_with_data#64-bit_integers" title="en/js-ctypes/Using js-ctypes/Working with data#64-bit integers">64-bit integers</a> for details.</div>
+
+<h4 id="C语言特定类型">C语言特定类型</h4>
+
+<p>These types are designed to work exactly like the corresponding type on the native platform.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>bool</code></td>
+   <td>A Boolean type that behaves like the corresponding C type on the platform.</td>
+  </tr>
+  <tr>
+   <td><code>short</code></td>
+   <td>A short integer type that behaves like the corresponding C type on the platform.</td>
+  </tr>
+  <tr>
+   <td><code>unsigned_short</code></td>
+   <td>An unsigned short integer type that behaves like the corresponding C type on the platform.</td>
+  </tr>
+  <tr>
+   <td><code>int</code></td>
+   <td>An integer type that behaves like the <code>int</code> C type on the platform.</td>
+  </tr>
+  <tr>
+   <td><code>unsigned_int</code></td>
+   <td>An unsigned integer type that behaves like the <code>unsigned int</code> C type on the platform.</td>
+  </tr>
+  <tr>
+   <td><code>long</code></td>
+   <td>
+    <p>A long integer type that behaves like the corresponding C type on the platform.</p>
+
+    <div class="warning">
+    <p><strong>NOTE</strong> This automatically converts to an <code>Int64</code> JavaScript object on all platforms, since it's unknown whether this is a 32-bit or 64-bit value. This is done for compatibility's sake.</p>
+    </div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>unsigned_long</code></td>
+   <td>
+    <p>An unsigned long integer type that behaves like the corresponding C type on the platform.</p>
+
+    <div class="warning">
+    <p><strong>NOTE</strong> This automatically converts to a <code>UInt64</code> JavaScript object on all platforms, since it's unknown whether this is a 32-bit or 64-bit value. This is done for compatibility's sake.</p>
+    </div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>long_long</code></td>
+   <td>A integer type at least 64 bits wide.</td>
+  </tr>
+  <tr>
+   <td><code>unsigned_long_long</code></td>
+   <td>An unsigned integer type at least 64 bits wide.</td>
+  </tr>
+  <tr>
+   <td><code>float</code></td>
+   <td>A floating point value that behaves like the <code>float</code> type on the platform.</td>
+  </tr>
+  <tr>
+   <td><code>double</code></td>
+   <td>A double-precision floating point value that behaves like the <code>double</code> type on the platform.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="字符类型">字符类型</h4>
+
+<p>Character types are 8-bit values that behave like their C counterparts. They're similar to the <code>int8_t</code> and <code>uint8_t</code> types, except conversion is handled differently.</p>
+
+<p>For example, <code>ctypes.char.array(30)(str)</code> converts the string <code>str</code> to UTF-8 and returns a new <code>CData</code> object of array type.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>char</code></td>
+   <td>
+    <p>A character type that behaves like the <code>char</code> C type on the platform.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>signed_char</code></td>
+   <td>A signed character that behaves like the <code>char</code> type on the platform.</td>
+  </tr>
+  <tr>
+   <td><code>unsigned_char</code></td>
+   <td>An unsigned character that behaves like the <code>unsigned char</code> type on the platform.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h5 id="大小与处理器位数有关的类型"><strong>大小与处理器位数有关的类型</strong></h5>
+
+<p>Because it's unknown whether these values will be 32-bit or 64-bit, they are not automatically converted into JavaScript numbers. Instead, these convert into <code>ctypes.Int64</code> or <code>ctypes.UInt64</code> JavaScript objects; see <a href="/en/Mozilla/js-ctypes/Using_js-ctypes/Working_with_data#64-bit_integers" title="en/js-ctypes/Using js-ctypes/Working with data#64-bit integers">64-bit integers</a> for details.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>size_t</code></td>
+   <td>A platform-dependent size type.</td>
+  </tr>
+  <tr>
+   <td><code>ssize_t</code></td>
+   <td>A platform-dependent size type.</td>
+  </tr>
+  <tr>
+   <td><code>intptr_t</code></td>
+   <td>A platform-dependent integer representation of a pointer.</td>
+  </tr>
+  <tr>
+   <td><code>uintptr_t</code></td>
+   <td>A platform-dependent unsigned integer representation of a pointer.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="JavaScript_characters">JavaScript characters</h4>
+
+<p>16-bit C Unicode characters are handled by js-ctypes using the <code>jschar</code> type.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>jschar</code></td>
+   <td>A 16-bit unsigned character. This is different from <code>uint16_t</code> in that C <code>jschar</code> values are automatically converted into 1-character JavaScript strings. These are Unicode characters.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Special_C_types">Special C types</h4>
+
+<p>These types represent C types that have special meanings.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>void_t</code></td>
+   <td>
+    <p>The special C type <code>void</code>. This can only be used as a return value type.</p>
+
+    <div class="note"><strong>Note:</strong> You must use <code>void_t</code>, not <code>void</code>, since <code>void</code> is a keyword in JavaScript.</div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>voidptr_t</code></td>
+   <td>The C type <code>void *</code>. This is a pointer to an indeterminate type of data.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Large_integer_types">Large integer types</h4>
+
+<p>Because JavaScript doesn't support large (64-bit) integers, js-ctypes provides two data types allowing access to 64-bit integer data.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>Int64</code></td>
+   <td>A JavaScript object representing a 64-bit signed integer.</td>
+  </tr>
+  <tr>
+   <td><code>UInt64</code></td>
+   <td>A JavaScript object representing a 64-bit unsigned integer.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Methods">Methods</h2>
+
+<h3 id="cast" name="cast()">cast()</h3>
+
+<p>把某个对象转换成新的类型，返回值是拥有这些值的新类型的对象。更多了解可以查看<a href="/en/Mozilla/js-ctypes/Using_js-ctypes/Working_with_data#Type_casting" title="en/js-ctypes/Using js-ctypes/Working with data#Type casting">Type casting</a>。</p>
+
+<pre>CData cast(
+  data,
+  type
+);</pre>
+
+<h6 id="Parameters_2">Parameters</h6>
+
+<dl>
+ <dt><code>data</code></dt>
+ <dd>要转换的数据对象。</dd>
+ <dt><code>type</code></dt>
+ <dd>转换后的数据类型，可以是 <a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/ctypes#Predefined_data_types" title="The ctypes object contains methods and predefined data types used to create and manage a library.">Predefined data types</a>, 也可以是任何自定义类型。</dd>
+</dl>
+
+<h6 id="Return_value">Return value</h6>
+
+<p>拥有相同数据的，不过类型是type的一个新对象。</p>
+
+<h3 id="libraryName" name="libraryName()">libraryName()</h3>
+
+<p>Returns the correct platform-specific filename for a given library name (e.g. <code>libnss3.dylib</code> for <code>nss3</code> on OS X.)</p>
+
+<pre class="eval">String libraryName(
+  name
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>name</code></dt>
+ <dd>The name of the library.</dd>
+</dl>
+
+<h6 id="Return_value_2">Return value</h6>
+
+<p>String containing the platform-specific filename of the library.</p>
+
+<h3 id="open" name="open()">open()</h3>
+
+<p>Opens a library, specified by a pathname. The library is loaded from the specified full path, or, if a partial path is specified, from the appropriate library directory based on the platform on which the application is running. See <a href="/en/Mozilla/js-ctypes/Using_js-ctypes#Library_search_paths" title="en/js-ctypes/Using js-ctypes#Library search paths">Library search paths</a> for more details.</p>
+
+<pre class="eval">Library open(
+  libSpec
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>libSpec</code></dt>
+ <dd>The native library to open, specified as a pathname string.</dd>
+</dl>
+
+<h6 id="Return_value_3">Return value</h6>
+
+<p>A <a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/Library" title="此页面仍未被本地化, 期待您的翻译!"><code>Library</code></a> object representing the opened library.</p>
+
+<h2 id="举些栗子">举些栗子</h2>
+
+<p><code>Windows下使用StructType()的例子</code></p>
+
+<p>好了，上帝说要有按钮<code>TB_BUTTON</code>,所以我们到MSDN上找<code>TB_BUTTON</code> 的结构体 (<a href="http://msdn.microsoft.com/en-us/library/windows/desktop/bb760476%28v=vs.85%29.aspx">MSDN :: TB_BUTTON Structure</a>) ，然后找到了：</p>
+
+<pre class="brush: cpp">typedef struct {
+  int       iBitmap;
+  int       idCommand;
+  BYTE      fsState;
+  BYTE      fsStyle;
+#ifdef _WIN64
+  BYTE      bReserved[6];
+#else
+#if defined(_WIN32)
+  BYTE      bReserved[2];
+#endif
+#endif
+  DWORD_PTR dwData;
+  INT_PTR   iString;
+} TBBUTTON, *PTBBUTTON, *LPTBBUTTON;</pre>
+
+<p>所以我们现在注意到64位和32位是不同的。所以我们将会指出这个不同之处，然后创造结构体。代码看起来会是这样的：</p>
+
+<pre class="brush: js">var struct_TBButton;
+if (ctypes.voidptr_t.size == 4 /* 32-bit */) {
+  struct_TBButton = ctypes.StructType('TBButton', [
+    {'iBitmap': ctypes.int},
+    {'idCommand': ctypes.int},
+    {'fbState': ctypes.unsigned_char},
+    {'fsStyle': ctypes.unsigned_char},
+    {'bReserved': ctypes.unsigned_char},
+    {'bReserved2': ctypes.unsigned_char},
+    {'dwData': ctypes.uintptr_t},
+    {'iString': ctypes.intptr_t}
+  ]);
+}
+else if (ctypes.voidptr_t.size == 8 /* 64-bit */) {
+  struct_TBButton = ctypes.StructType('TBButton', [
+    {'iBitmap': ctypes.int},
+    {'idCommand': ctypes.int},
+    {'fbState': ctypes.unsigned_char},
+    {'fsStyle': ctypes.unsigned_char},
+    {'bReserved': ctypes.unsigned_char},
+    {'bReserved2': ctypes.unsigned_char},
+    {'bReserved3': ctypes.unsigned_char},
+    {'bReserved4': ctypes.unsigned_char},
+    {'bReserved5': ctypes.unsigned_char},
+    {'bReserved6': ctypes.unsigned_char},
+    {'dwData': ctypes.uintptr_t},
+    {'iString': ctypes.intptr_t}
+  ]);
+}
+else {
+  throw new Error("wut?!");
+}
+
+console.log(struct_TBButton.size);
+// 20 on 32-bit, 32 on 64-bit if I'm not mistaken</pre>
+
+<p>There is another way to do this, we can use <code>ArrayType</code>, but example for this I don't know at this time.</p>
+
+<p>Credit for this example is to nmaier (<a href="http://stackoverflow.com/a/24117551/1828637">StackOverflow :: Getting TB_BUTTON is crashing and not working</a>)</p>
+
+<h3 id="Example_of_cast_and_FunctionType_on_Windows">Example of <code>cast </code>and <code>FunctionType</code> on Windows</h3>
+
+<pre class="brush: js">Components.utils.import("resource://gre/modules/ctypes.jsm");
+
+var kernel = ctypes.open("kernel32.dll");
+var HMODULE = ctypes.uint32_t;
+var HWND = ctypes.uint32_t;
+var LPCTSTR = ctypes.jschar.ptr;
+var LPCSTR = ctypes.char.ptr;
+var LoadLibrary = kernel.declare("LoadLibraryW", ctypes.winapi_abi, HMODULE, LPCTSTR);
+var GetProcAddress = kernel.declare("GetProcAddress", ctypes.winapi_abi, ctypes.void_t.ptr, HMODULE, LPCSTR);
+
+var hUser = LoadLibrary("user32");
+var funcPtr = GetProcAddress(hUser, "MessageBoxW");
+
+// Now we have a pointer to a function, let's cast it to the right type
+var MessageBoxType = ctypes.FunctionType(ctypes.winapi_abi, ctypes.int32_t, [HWND, LPCTSTR, LPCTSTR, ctypes.uint32_t]);
+funcPtr = ctypes.cast(funcPtr, MessageBoxType.ptr);
+funcPtr(0, "Test1", "Test2", 0);
+</pre>
+
+<p>Credit for this example is to Wladimir Palant (<a href="http://stackoverflow.com/a/16384129/1828637">StackOverflow :: How to call a function using pointer in js-ctypes</a>)</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en/Mozilla/js-ctypes" title="en/JavaScript code modules/ctypes.jsm">ctypes.jsm</a></li>
+ <li><a href="/en/Mozilla/js-ctypes/Using_js-ctypes" title="en/js-ctypes/Using js-ctypes">Using js-ctypes</a></li>
+ <li><a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/ArrayType" title="此页面仍未被本地化, 期待您的翻译!"><code>ArrayType</code></a></li>
+ <li><a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/FunctionType" title="此页面仍未被本地化, 期待您的翻译!"><code>FunctionType</code></a></li>
+ <li><a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/PointerType" title="此页面仍未被本地化, 期待您的翻译!"><code>PointerType</code></a></li>
+ <li><a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/StructType" title="此页面仍未被本地化, 期待您的翻译!"><code>StructType</code></a></li>
+ <li><a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/Int64" title="此页面仍未被本地化, 期待您的翻译!"><code>Int64</code></a></li>
+ <li><a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/UInt64" title="此页面仍未被本地化, 期待您的翻译!"><code>UInt64</code></a></li>
+ <li><a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/ABI" title="此页面仍未被本地化, 期待您的翻译!"><code>ABI</code></a></li>
+ <li><a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/Library" title="此页面仍未被本地化, 期待您的翻译!"><code>Library</code></a></li>
+</ul>

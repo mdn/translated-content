@@ -1,0 +1,54 @@
+---
+title: DOMの割り当て例
+slug: Tools/Memory/DOM_allocation_example
+translation_of: Tools/Memory/DOM_allocation_example
+---
+<div>{{ToolsSidebar}}</div><p>この記事では、メモリーツールの機能を示すために使用するシンプルなページについて説明します。</p>
+
+<p>これは <a href="https://mdn.github.io/performance-scenarios/dom-allocs/alloc.html">https://mdn.github.io/performance-scenarios/dom-allocs/alloc.html</a> で試すことができます。</p>
+
+<p>このページは、大量の DOM ノードを生成するスクリプトが含まれています:</p>
+
+<pre class="brush: js">var toolbarButtonCount = 20;
+var toolbarCount = 200;
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function createToolbarButton() {
+  var toolbarButton = document.createElement("span");
+  toolbarButton.classList.add("toolbarbutton");
+  // stop Spidermonkey from sharing instances
+  toolbarButton[getRandomInt(0,5000)] = "foo";
+  return toolbarButton;
+}
+
+function createToolbar() {
+  var toolbar = document.createElement("div");
+  // stop Spidermonkey from sharing instances
+  toolbar[getRandomInt(0,5000)] = "foo";
+  for (var i = 0; i &lt; toolbarButtonCount; i++) {
+    var toolbarButton = createToolbarButton();
+    toolbar.appendChild(toolbarButton);
+  }
+  return toolbar;
+}
+
+function createToolbars() {
+  var container = document.getElementById("container");
+  for (var i = 0; i &lt; toolbarCount; i++) {
+    var toolbar = createToolbar();
+    container.appendChild(toolbar);
+  }
+}
+
+createToolbars();</pre>
+
+<p>このコードの動作を簡単に表現すると、以下のようになります:</p>
+
+<pre>createToolbars()
+    -&gt; createToolbar() // 200 回呼び出され、毎回 1 個の DIV 要素を生成します
+       -&gt; createToolbarButton() // Toolbar ごとに 20 回呼び出され、毎回 1 個の SPAN 要素を生成します</pre>
+
+<p>最終的に、200 個の <code><a href="/ja/docs/Web/API/HTMLDivElement">HTMLDivElement</a></code> オブジェクトと 4,000 個の <code><a href="/ja/docs/Web/API/HTMLSpanElement">HTMLSpanElement</a></code> オブジェクトを生成します。</p>

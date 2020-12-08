@@ -1,0 +1,160 @@
+---
+title: Object.observe()
+slug: Web/JavaScript/Reference/Global_Objects/Object/observe
+tags:
+  - ECMAScript7
+  - Experimental
+  - JavaScript
+  - Method
+  - Object
+  - observe
+translation_of: Archive/Web/JavaScript/Object.observe
+---
+<div>{{JSRef}} {{obsolete_header}}</div>
+
+<h2 id="概述">概述</h2>
+
+<p><strong><code>Object.observe()</code></strong> 方法用于异步地监视一个对象的修改。当对象属性被修改时，方法的回调函数会提供一个有序的修改流。然而，这个接口已经被废弃并从各浏览器中移除。你可以使用更通用的 {{jsxref("Proxy")}} 对象替代。</p>
+
+<h2 id="语法">语法</h2>
+
+<pre class="syntaxbox"><code>Object.observe(<var>obj</var>, <var>callback</var></code>[, <var>acceptList</var>])</pre>
+
+<h3 id="参数">参数</h3>
+
+<dl>
+ <dt><code>obj</code></dt>
+ <dd>被监控的对象.</dd>
+ <dt><code>callback</code></dt>
+ <dd>当对象被修改时触发的回调函数，其参数为:
+ <dl>
+  <dt><code>changes</code></dt>
+  <dd>一个数组，其中包含的每一个对象代表一个修改行为。每个修改行为的对象包含:
+  <ul>
+   <li><strong><code>name</code></strong>: 被修改的属性名称<span style="font-family: consolas,monaco,andale mono,monospace;">。</span></li>
+   <li><strong><code>object</code></strong>: 修改后该对象的值<span style="font-family: consolas,monaco,andale mono,monospace;">。</span></li>
+   <li><strong><code>type</code></strong>: 表示对该对象做了何种类型的修改，可能的值为<code>"add"</code>, <code>"update"</code>, or <code>"delete"</code><span style="font-family: consolas,monaco,andale mono,monospace;">。</span></li>
+   <li><strong><code>oldValue</code></strong>: 对象修改前的值。该值只在<code>"update"<font face="Open Sans, sans-serif">与</font></code><code>"delete"有效。</code></li>
+   <li> </li>
+  </ul>
+  </dd>
+  <dt><font face="Consolas">acceptList</font></dt>
+  <dd>在给定对象上给定回调中要监视的变化类型列表。如果省略， <code><font face="Courier New">["add", "update", "delete", "reconfigure", "setPrototype", "preventExtensions"]</font></code> 将会被使用。</dd>
+ </dl>
+ </dd>
+</dl>
+
+<h2 id="描述">描述</h2>
+
+<p><code style="font-style: normal;">callback</code> 函数会在<code>对象被改变时被调用，其参数为一个包含所有修改信息的有序的数组对象。</code></p>
+
+<h2 id="例子">例子</h2>
+
+<h3 id="例子_打印出三种不同操作类型的日志">例子: 打印出三种不同操作类型的日志</h3>
+
+<pre class="brush: js">var obj = {
+  foo: 0,
+  bar: 1
+};
+
+Object.observe(obj, function(changes) {
+  console.log(changes);
+});
+
+obj.baz = 2;
+// [{name: 'baz', object: &lt;obj&gt;, type: 'add'}]
+
+obj.foo = 'hello';
+// [{name: 'foo', object: &lt;obj&gt;, type: 'update', oldValue: 0}]
+
+delete obj.baz;
+// [{name: 'baz', object: &lt;obj&gt;, type: 'delete', oldValue: 2}]
+</pre>
+
+<h3 id="例子_数据绑定">例子: 数据绑定</h3>
+
+<pre class="brush: js">// 一个数据模型
+var user = {
+  id: 0,
+  name: 'Brendan Eich',
+  title: 'Mr.'
+};
+
+// 创建用户的greeting
+function updateGreeting() {
+  user.greeting = 'Hello, ' + user.title + ' ' + user.name + '!';
+}
+updateGreeting();
+
+Object.observe(user, function(changes) {
+  changes.forEach(function(change) {
+    // 当name或title属性改变时, 更新greeting
+    if (change.name === 'name' || change.name === 'title') {
+      updateGreeting();
+    }
+  });
+});
+</pre>
+
+<h2 id="Specifications" name="Specifications">规范</h2>
+
+<p><a href="https://github.com/arv/ecmascript-object-observe">Strawman proposal for ECMAScript 7</a>.</p>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatChrome("36")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatOpera("23")}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatChrome("36")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatOpera("23")}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="See_also" name="See_also">相关链接</h2>
+
+<ul>
+ <li>{{jsxref("Object.unobserve()")}} {{experimental_inline}}</li>
+ <li>{{jsxref("Array.observe()")}} {{experimental_inline}}</li>
+</ul>

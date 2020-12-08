@@ -1,0 +1,48 @@
+---
+title: Rhino JavaScript Compiler
+slug: Rhino_JavaScript_Compiler
+tags:
+  - Rhino
+translation_of: Mozilla/Projects/Rhino/JavaScript_Compiler
+---
+<h3 id=".E6.A6.82.E8.A6.81" name=".E6.A6.82.E8.A6.81"> 概要 </h3>
+<p>JavaScript コンパイラは、JavaScript ソースを Java クラス・ファイルへと変換します。結果の Java クラス・ファイルは、別の機会に読み込んで実行することができます。JavaScript を変換したり、翻訳コストを抑えるための、便利なメソッドが提供されています。
+</p><p>シェルで利用できるトップレベルの関数 (print のような) は、コンパイルされたスクリプトの場合、シェルの外部で実行するときは利用できないことに注意してください。
+</p>
+<h3 id=".E3.82.B3.E3.83.B3.E3.83.91.E3.82.A4.E3.83.A9.E3.81.AE.E3.82.B3.E3.83.9E.E3.83.B3.E3.83.89.E3.83.A9.E3.82.A4.E3.83.B3" name=".E3.82.B3.E3.83.B3.E3.83.91.E3.82.A4.E3.83.A9.E3.81.AE.E3.82.B3.E3.83.9E.E3.83.B3.E3.83.89.E3.83.A9.E3.82.A4.E3.83.B3"> コンパイラのコマンドライン </h3>
+<p>&lt;tt&gt;java org.mozilla.javascript.tools.jsc.Main&lt;/tt&gt; <small>{{ mediawiki.external('<i>オプション</i>') }}</small> &lt;tt&gt;file1.js {{ mediawiki.external('file2.js...') }}&lt;/tt&gt;
+</p><p><i>オプション</i> について:
+</p><p>&lt;tt&gt;-extends&lt;/tt&gt; <small><i>java-class-name</i></small>
+</p><p>Java クラスの <i>java-class-name</i> を拡張するものとして、JavaScript ソースファイルを元に生成する。ソースファイル内の各グローバル関数は、生成されるクラスのメソッドとして作られ、基底クラスの同名のメソッドがあればオーバーライドされる。
+</p><p>&lt;tt&gt;-implements&lt;/tt&gt; <small><i>java-intf-name</i></small>
+</p><p>Java インターフェースの <i>java-class-name</i> を実装するものとして、JavaScript ソースファイルを元に生成する。ソースファイル内の各グローバル関数は、生成されるクラスのメソッドとして作られ、インターフェース内の同名のメソッドがあれば実装されることになる。
+</p><p>&lt;tt&gt;-debug<br>
+-g&lt;/tt&gt;
+</p><p>デバッグ情報を生成する。ゼロより大きい optLevel の最適化とは、併用できないかもしれない。
+</p><p>&lt;tt&gt;-main-method-class&lt;/tt&gt; <small><i>className</i></small>
+</p><p>メインのメソッド実装に使われるクラス名を指定する。ここでのクラスは &lt;tt&gt;public static void main(Script sc, String[] args)&lt;/tt&gt; に合ったメソッドを持たなければならない。
+</p><p>&lt;tt&gt;-nosource&lt;/tt&gt;
+</p><p>クラス・ファイル内にソースを保持しない。このようにコンパイルされた関数やスクリプトは、逆コンパイルできない。このオプションは、ソースの流出を避けたり、単に結果のクラス・ファイルのスペースの節約のために利用することができる。
+</p><p>&lt;tt&gt;-o&lt;/tt&gt; <small><i>outputFile</i></small>
+</p><p>指定のファイル (.class で終わっているべき) に、クラス・ファイルを書き込む。<i>outputFile</i> は、書き込み可能なファイル名でなければならない。
+</p><p>&lt;tt&gt;-opt&lt;/tt&gt; <small><i>optLevel</i></small>
+</p><p><i>optLevel</i> のレベルで最適化を行う。それは -1〜9 の間の数値でなければならない。詳しくは、<a href="ja/Rhino_Optimization">最適化</a> を参照のこと。<i>optLevel</i> がゼロより大きければ、&lt;tt&gt;-debug&lt;/tt&gt; は指定できないはずです。
+</p><p>&lt;tt&gt;-package&lt;/tt&gt; <small><i>packageName</i></small>
+</p><p>指定のパッケージとしてクラスを生成する。<i>packageName</i> は、任意でピリオドによって分割された、有効な識別文字で構成されていなければならない。
+</p><p>&lt;tt&gt;-version&lt;/tt&gt; <small><i>versionNumber</i></small>
+</p><p>指定の言語バージョンとしてコンパイルする。<i>versionNumber</i> の値は、100, 110, 120, 130, 140, 150, あるいは 160 のうちのいずれかでなければならない。言語バージョンについて、詳しくは <a href="ja/Rhino_Overview#JavaScript_Language_Versions">JavaScript 言語バージョン</a> を参照のこと。
+</p>
+<h3 id=".E5.AE.9F.E4.BE.8B" name=".E5.AE.9F.E4.BE.8B"> 実例 </h3>
+<pre>$ cat test.js
+java.lang.System.out.println("hi, mom!");
+$ java org.mozilla.javascript.tools.jsc.Main test.js
+$ ls *.class
+test.class
+$ java test
+hi, mom!
+$ java org.mozilla.javascript.tools.jsc.Main -extends java.applet.Applet
+    -implements java.lang.Runnable NervousText.js
+</pre>
+<div class="noinclude">
+</div>
+{{ languages( { "en": "en/Rhino_JavaScript_Compiler" } ) }}

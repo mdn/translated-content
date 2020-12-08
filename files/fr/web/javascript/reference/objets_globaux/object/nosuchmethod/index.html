@@ -1,0 +1,76 @@
+---
+title: Object.prototype.__noSuchMethod__
+slug: Web/JavaScript/Reference/Objets_globaux/Object/noSuchMethod
+tags:
+  - JavaScript
+  - Object
+  - Obsolete
+  - Propriété
+  - Prototype
+  - Reference
+translation_of: Archive/Web/JavaScript/Object.noSuchMethod
+---
+<div>{{JSRef}}{{Non-standard_Header}}{{Obsolete_Header("gecko43")}}</div>
+
+<p>La propriété <code><strong>__noSuchMethod__</strong></code> était utilisée pour faire référence à une fonction qui devait être utilisée lorsqu'on appelait une méthode inexistante d'un objet. Cette fonction n'est plus disponible.</p>
+
+<p>Si <code><strong>__noSuchMethod__</strong></code> a été abandonnée, la spécification ECMAScript 2015 (ES6) fournit les objets <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Proxy">Proxy</a></code> qui permettent de réaliser ce qui pouvait être fait avec cette propriété (et plus encore).</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox"><var>obj</var>.__noSuchMethod__ = <var>fun</var></pre>
+
+<h3 id="Paramètres">Paramètres</h3>
+
+<dl>
+ <dt><code>fun</code></dt>
+ <dd>Une fonction de la forme</dd>
+ <dd>
+ <pre class="brush: js">function (<var>id</var>, <var>args</var>) { . . . }</pre>
+
+ <dl>
+  <dt><code>id</code></dt>
+  <dd>Le nom de la méthode qui n'est pas définie pour l'objet et qui a été appelée.</dd>
+  <dt><code>args</code></dt>
+  <dd>Le tableau d'arguments passé à la méthode.</dd>
+ </dl>
+ </dd>
+</dl>
+
+<h2 id="Description">Description</h2>
+
+<p>Par défaut, lorsqu'on appelle une méthode qui n'existe pas pour un objet, cela lève une exception {{jsxref("TypeError")}}. Ce comportement peut être modifié en définissant une fonction pour la propriété <code>__noSuchMethod__</code>. Cette fonction prend en compte deux arguments : le premier qui est le nom de la méthode non définie qui a été appelée et le second qui correspond au tableau des arguments passés lors de l'appel. Le deuxième argument est bien un tableau (il hérite de {{jsxref("Array.prototype")}}) et n'est pas un objet semblable à un tableau comme l'objet {{jsxref("Fonctions/arguments","arguments")}}.</p>
+
+<p>Si cette méthode ne peut être appelée, soit parce qu'elle vaut <code>undefined</code> (sa valeur par défaut), soit parce qu'elle a été supprimée ou définie avec une valeur qui n'est pas une fonction, le moteur JavaScript reprendra le comportement par défaut et renverra des exceptions <code>TypeError</code>.</p>
+
+<h2 id="Exemples">Exemples</h2>
+
+<h3 id="Un_test_simple_avec___noSuchMethod__">Un test simple avec <code>__noSuchMethod__</code></h3>
+
+<pre class="brush: js">var o = {
+  __noSuchMethod__: function(id, args) {
+                     console.log(id, '(' + args.join(', ') + ')');
+                    }
+};
+
+o.toto(1, 2, 3);
+o.truc(4, 5);
+o.machin();
+
+// affichera
+// toto (1, 2, 3)
+// truc (4, 5)
+// machin ()
+</pre>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<p>Cette propriété ne fait partie d'aucune spécification et a été retirée : voir le {{bug(683218)}}.</p>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<div>
+
+
+<p>{{Compat("javascript.builtins.Object.noSuchMethod")}}</p>
+</div>

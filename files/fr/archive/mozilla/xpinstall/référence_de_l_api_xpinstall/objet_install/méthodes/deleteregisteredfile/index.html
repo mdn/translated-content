@@ -1,0 +1,40 @@
+---
+title: deleteRegisteredFile
+slug: >-
+  Archive/Mozilla/XPInstall/Référence_de_l_API_XPInstall/Objet_Install/Méthodes/deleteRegisteredFile
+translation_of: >-
+  Archive/Mozilla/XPInstall/Reference/Install_Object/Methods/deleteRegisteredFile
+---
+<p> </p>
+<h3 id="deleteRegisteredFile" name="deleteRegisteredFile">deleteRegisteredFile</h3>
+<p>(Netscape 6 et Mozilla ne supportent pas cette méthode)</p>
+<p>Efface le fichier spécifié et supprime son entrée dans la
+ <i>
+  Client Version Registry</i>
+ .</p>
+<h4 id="M.C3.A9thode_de" name="M.C3.A9thode_de">Méthode de</h4>
+<p>Objet <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install">Install</a></p>
+<h4 id="Syntaxe" name="Syntaxe">Syntaxe</h4>
+<pre class="eval">int deleteRegisteredFile
+   (Chaîne registryName);
+</pre>
+<h4 id="Param.C3.A8tres" name="Param.C3.A8tres">Paramètres</h4>
+<p>La méthode <code>deleteRegisteredFile</code> a la paramètre suivant :</p>
+<dl>
+ <dt>
+  <code>registryName</code></dt>
+ <dd>
+  Le chemin dans la
+  <i>
+   Client Version Registry</i>
+  du fichier à effacer.</dd>
+</dl>
+<h4 id="Retour" name="Retour">Retour</h4>
+<p>Un nombre entier correspondant à un code d'erreur. Pour la liste complète des valeurs possibles, voir <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Codes_retourn%c3%a9s">Codes retournés</a>.</p>
+<h4 id="Description" name="Description">Description</h4>
+<p>La méthode <code>deleteRegisteredFile</code> efface le fichier spécifié et supprime son entrée dans la
+ <i>
+  Client Version Registry</i>
+ . Si le fichier est en cours d'utilisation, le nom du fichier qui doit être effacé est enregistré et Netscape 6 essaiera de l'effacer à chaque lancement jusqu'à ce qu'il arrive à l'effacer. Cette méthode est utilisée pour effacer des fichiers qui ne peuvent pas être supprimés par la méthode <code>uninstall</code>, pour supprimer des fichiers qui ne sont plus utilisés ou dont le nom a changé.</p>
+<p><span class="comment">Interwiki Languages Links</span></p>
+<p>{{ languages( { "en": "en/XPInstall_API_Reference/Install_Object/Methods/deleteRegisteredFile" } ) }}</p>

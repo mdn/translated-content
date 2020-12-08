@@ -1,0 +1,130 @@
+---
+title: CallEvent
+slug: Archive/B2G_OS/API/CallEvent
+translation_of: Archive/B2G_OS/API/CallEvent
+---
+<p></p><section class="Quick_links" id="Quick_Links"><ol><li><strong><a href="/fr/docs/Web/API/Archive"><code>Archive</code></a></strong></li><li class="toggle"><details open><summary>Pages liées à Firefox OS</summary><ol><li><a href="/fr/docs/Web/API/MozAlarmsManager"><code>MozAlarmsManager</code></a></li><li><a href="/fr/docs/Web/API/MozMobileNetworkInfo"><code>MozMobileNetworkInfo</code></a></li><li><a href="/fr/docs/Web/API/MozWifiP2pGroupOwner"><code>MozWifiP2pGroupOwner</code></a></li></ol></details></li></ol></section><p></p>
+
+<p></p><div class="overheadIndicator nonStandard nonStandardHeader">
+      <p><strong><span title="Cette API n'a pas été standardisée."><i class="icon-warning-sign"> </i></span> Non standard</strong><br>
+      Cette fonctionnalité n'est ni standard, ni en voie de standardisation. Ne l'utilisez pas pour des sites accessibles sur le Web : elle ne fonctionnera pas pour tout utilisateur. Il peut également y avoir d'importantes incompatibilités entre les implémentations et son comportement peut être modifié dans le futur.</p>
+      </div><p></p>
+
+<p></p><div class="warning">
+    <p style="text-align: center;">Cette API est disponible sur <a href="/fr/docs/Mozilla/Firefox_OS">Firefox OS</a> pour <a href="/fr/docs/Mozilla/Firefox_OS/Security/Application_security#App_Types">des applications internes</a> seulement.</p>
+</div><p></p>
+
+<p>L'interface <code>CallEvent</code> de l'<a href="https://developer.mozilla.org/fr/docs/Web/API/Web_Telephony_API">API Web Téléphony</a> représente les événements liés aux appels téléphoniques.</p>
+
+<h2 id="Propriétés">Propriétés</h2>
+
+<dl>
+ <dt><a href="/fr/docs/Web/API/CallEvent/call" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>CallEvent.call</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="Cette valeur ne peut pas être changée.">Lecture seule </span></dt>
+ <dd>Un objet <a href="/fr/docs/Web/API/TelephonyCall" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>TelephonyCall</code></a> représantant l'appel à l'origine de l'événement.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush: js">// Telephony object
+var tel = navigator.mozTelephony;
+
+// Receive a call
+tel.onincoming = function(e) {
+  var incomingCall = e.call;
+
+  // Answer the call
+  incomingCall.answer();
+};</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><a class="external" href="https://wiki.mozilla.org/WebAPI/WebTelephony" hreflang="en" lang="en" title="La spécificaction 'Web Telephony'">Web Telephony</a></td>
+   <td><span class="spec-Draft">Projet</span></td>
+   <td>Draft</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>For obvious reasons, support is primarily expected on mobile browsers.</p>
+
+<p></p><p class="warning"><strong><a href="https://github.com/mdn/browser-compat-data">Nous convertissons les données de compatibilité dans un format JSON</a></strong>.
+            Ce tableau de compatibilité utilise encore l'ancien format
+            car nous n'avons pas encore converti les données qu'il contient.
+            <strong><a href="/fr/docs/MDN/Contribute/Structures/Compatibility_tables">Vous pouvez nous aider en contribuant !</a></strong></p>
+
+<div class="htab">
+    <a id="AutoCompatibilityTable" name="AutoCompatibilityTable"></a>
+    <ul>
+        <li class="selected"><a>Ordinateur</a></li>
+        <li><a>Mobile</a></li>
+    </ul>
+</div><p></p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+   <td>12.0 (12.0)</td>
+   <td>1.0.1</td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+   <td><span style="color: #f00;">Pas de support</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/Guide/API/Telephony/Using_the_Web_Telephony_API">Using the Web Telephony API</a></li>
+ <li><a href="/fr/docs/Web/API/Telephony" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>Telephony</code></a></li>
+ <li><a href="/fr/docs/Web/API/CallEvent" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>CallEvent</code></a></li>
+ <li><a href="/fr/docs/Web/API/Navigator/mozTelephony" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>Navigator.mozTelephony</code></a></li>
+</ul>

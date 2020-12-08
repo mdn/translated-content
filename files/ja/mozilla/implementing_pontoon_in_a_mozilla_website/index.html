@@ -1,0 +1,76 @@
+---
+title: Mozilla プロジェクトでの Pontoon の実装
+slug: Mozilla/Implementing_Pontoon_in_a_Mozilla_website
+tags:
+  - Localization
+translation_of: Mozilla/Implementing_Pontoon_in_a_Mozilla_website
+---
+<p><a class="external external-icon" href="https://pontoon.mozilla.org">Pontoon</a> は、ウェブベースの WYSIWYG (What-You-See-Is-What-You-Get) ローカライゼーション (localization, l10n) ツールです。Mozilla では、現在 Pontoon を使用して、さまざまな Mozilla プロジェクトや、Gaia という名前で知られる Firefox OS アプリのインターフェイスをローカライズしています。Pontoon は非常にシンプルで直感的なツールで、ローカライズする利用者に技術的なスキルをあまり要求しないため、プロジェクトのローカライズ版を短時間で公開することができるようになります。この記事では、Pontoon をあなたの Mozilla プロジェクトに導入する方法について話します。</p>
+
+<div class="note">
+<p><strong>Pontoon の改善に興味がありますか？</strong> ぜひ <a href="https://github.com/mozilla/pontoon">GitHub</a> を訪れてみてください。</p>
+</div>
+
+<div class="note">
+<p><strong>プロジェクトをローカライズするのは初めてですか？</strong> wiki で <a href="https://wiki.mozilla.org/L10n:NewProjects">getting your project localized</a> を読んでみてください。</p>
+</div>
+
+<h2 id="A._プロジェクトをローカライズ可能にする">A. プロジェクトをローカライズ可能にする</h2>
+
+<p>以下のことがらはすでに Mozilla でのプロジェクトのローカライズにおける標準のベストプラクティスだとみなされていますが、リマインダーとしてここでもう一度軽く説明しておくのもいいでしょう。</p>
+
+<ol>
+ <li>少なくとも1つのローカライゼーションフレームワーク (<a class="external external-icon" href="https://www.gnu.org/software/gettext/">gettext</a>, <a class="external external-icon" href="https://docs.oasis-open.org/xliff/xliff-core/v2.0/xliff-core-v2.0.html">XLIFF</a>, <a class="external external-icon" href="https://projectfluent.org/">L20n</a>, <a class="external external-icon" href="https://github.com/mozilla-l10n/langchecker/wiki/.lang-files-format">lang</a>, <a class="external external-icon" href="https://wikipedia.org/wiki/.properties">properties</a> など) に対応させる。</li>
+ <li>ローカライズ可能な文字列をリソースファイルとして抽出する。</li>
+ <li>リソースファイルをリポジトリ (SVN, HG, Git) にプッシュする。
+  <ul>
+   <li>個別のロケールフォルダはディレクトリツリーの同じレベルになるように配置する。ソースとなるロケールは <code>templates</code>、<code>en</code>、<code>en-US</code> のいずれかの名前にする。ロケール専用の <code>locales</code> フォルダーを作成するといいかもしれません。ロケールコードはファイル名に含まれないようにする。</li>
+   <li>正しいパターン:
+    <pre>/locales/{locale_code}/path/to/file.extension</pre>
+   </li>
+   <li>正しくないパターン:
+    <pre>/locales/{locale_code}/path/to/file.{locale_code}.extension</pre>
+   </li>
+  </ul>
+ </li>
+ <li>Pontoon にリポジトリへの書き込み権限を与える。
+  <ul>
+   <li>GitHub を使用する場合、<a class="external external-icon" href="https://github.com/mozilla-pontoon">mozilla-pontoon</a> または <a href="https://github.com/orgs/mozilla/teams/pontoon-l10n-robots">pontoon-l10n-robots</a> をプロジェクトのコラボレーターとして追加すれば大丈夫です。</li>
+  </ul>
+ </li>
+</ol>
+
+<h2 id="B._オプション_ウェブプロジェクトでページ内ローカライゼーションを有効にする">B. (オプション) ウェブプロジェクトでページ内ローカライゼーションを有効にする</h2>
+
+<ol>
+ <li>HTML の <code>&lt;body&gt;</code> 要素内でスクリプトへのリンクを貼ります。これにより Pontoon がサイトとお話したり、コンテンツを編集したり、その場でローカライズできるようになります。そのために必要なのは、ページ内ローカライゼーションを利用する環境 (たとえば、ステージングサーバー上) で、次のコードを追加することだけです。
+
+  <ul>
+   <li>
+    <pre id="line1"><span>  </span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">src</span>="<a class="attribute-value">https://pontoon.mozilla.org/pontoon.js</a>"</span><span>&gt;&lt;/<span class="end-tag">script</span>&gt;</span></pre>
+   </li>
+  </ul>
+ </li>
+ <li>もしサイトが <a href="/ja/docs/Web/HTTP/CSP">CSP</a> を使用している場合、<code>pontoon.mozilla.org</code> ドメインに対して、次の操作が許可されるようにしてください。
+  <ol>
+   <li>内部での iframe の読み込み</li>
+   <li>リモートの CSS の読み込み</li>
+   <li>リモートの画像の読み込み</li>
+  </ol>
+ </li>
+ <li>もしサイトが <a href="/ja/docs/Web/HTTP/X-Frame-Options">X-Frame-Options</a> ヘッダを使用している場合、<code>pontoon.mozilla.org</code> ドメインに対して iframe の内部での読み込みが許可されるようにしてください。</li>
+ <li>サイトを HTTPS に対応させてください。フリーで自動化できるオープンなサービス、<a href="https://letsencrypt.org/">Let's encrypt</a>! を使いましょう！</li>
+</ol>
+
+<h2 id="C._プロジェクトを_Pontoon_に追加する">C. プロジェクトを Pontoon に追加する</h2>
+
+<p>これで、プロジェクトを Pontoon に追加する準備ができました。<a class="external external-icon" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Localization%20Infrastructure%20and%20Tools&amp;component=Administration%20%2F%20Setup">Localization Infrastructure and Tools :: Administration / Setup</a> にバグ報告としてファイルを作り、以下の情報を知らせてください。</p>
+
+<ul>
+ <li>Project name (プロジェクト名)</li>
+ <li>Repository URL (リポジトリの URL)</li>
+ <li>List of requested locales (リクエストするロケールのリスト)</li>
+ <li>Website URL, including all subpage URLs (only if using in-page localization) (すべてのサブページの URL を含む、ウェブサイトの URL (ページ内ローカライゼーションを利用する場合のみ))</li>
+</ul>
+
+<p>さらに詳しい情報については、<a class="external external-icon" href="mailto:pontoon-team@mozilla.com">Project Management Team</a> に相談してください。</p>

@@ -1,0 +1,110 @@
+---
+title: ラベルと画像を追加する
+slug: Archive/Mozilla/XUL/Tutorial/Adding_Labels_and_Images
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_Labels_and_Images
+---
+<p>
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Adding_Buttons" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Input_Controls">次のページ  »</a></p>
+</div>
+<p>このセクションでは、ウィンドウにラベルと画像を追加する方法について説明します。
+また、ラベルとボタン要素をグループ化する方法にも触れます。
+</p><p><span id="Text_Elements"></span>
+</p>
+<h3 id=".E3.83.86.E3.82.AD.E3.82.B9.E3.83.88.E8.A6.81.E7.B4.A0" name=".E3.83.86.E3.82.AD.E3.82.B9.E3.83.88.E8.A6.81.E7.B4.A0"> テキスト要素 </h3>
+<p>XUL では、タグで囲まずに直接 XUL ファイルに記述しても、そのテキストが表示されることはありません。
+テキストの表示は、以下で説明する 2 つの要素を使用することで可能になります。
+</p><p><span id="Label_Element"></span>
+</p>
+<h4 id="label_.E8.A6.81.E7.B4.A0" name="label_.E8.A6.81.E7.B4.A0"> label 要素 </h4>
+<p>ウィンドウにテキストを表示させるための、最も基本的な方法は、<code><a href="/ja/docs/Mozilla/Tech/XUL/label" title="label">label</a></code> 要素を使用することになります。
+ボタンのような制御用の要素のそばに説明ラベルを置きたい場合には、この要素を使用する必要があります。
+以下に例を示します。
+</p><p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_1.xul">表示</a>
+</p>
+<pre>&lt;label value="This is some text"/&gt;
+</pre>
+<p><code><code id="a-value"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code></code> 属性は、表示したいテキストを指定するのに使用します。
+<code><code id="a-value"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code></code> 属性でテキストを指定したとき、テキストは途中で改行されないため、テキストの全てが単一の行として表示されることになります。
+このため、この構文はラベルのためによく利用されます。
+</p><p>テキストの<span style="border-bottom: 1px dashed green;" title="wrap">自動改行</span>が必要な場合は、以下の例のようにテキストを開始タグと終了タグの間に置けば可能になります。
+</p><p><span id="%E4%BE%8B_2"><a id="%E4%BE%8B_2"></a><strong>例 2</strong></span> :
+</p>
+<pre>&lt;label&gt;This is some longer text that will wrap onto several lines.&lt;/label&gt;
+</pre>
+<p>HTML と同様に、改行と余分な<span style="border-bottom: 1px dashed green;" title="whitespace">空白文字</span>は、1 つの空白に縮められます。
+<a href="ja/XUL_Tutorial/Element_Positioning">後のセクション</a>で要素の幅を制限する方法を説明する予定です。
+幅の制限を行った場合、自動改行はより起こりやすくなります。
+</p><p><span id="Control_Attribute"></span>
+</p>
+<h5 id="control_.E5.B1.9E.E6.80.A7" name="control_.E5.B1.9E.E6.80.A7"> control 属性 </h5>
+<p>ラベルに、関連するコントロールを指定するために、<code><code id="a-control"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/control">control</a></code></code> 属性が使用できます。
+関連を設定すると、利用者が関連するラベルをクリックしたとき、対応するコントロールがフォーカスされるようになります。
+また、この関連付けは、<a href="ja/Accessibility">アクセシビリティ</a>の点からも重要です。
+なぜならば、<span style="border-bottom: 1px dashed green;" title="screen readers">画面の読み上げ機能</span>は、利用者がタブ操作で移動した制御要素のラベルを読み上げることになるからです。
+この <code><code id="a-control"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/control">control</a></code></code> 属性の値には、フォーカスしたい要素の <code><code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> を設定します。
+</p><p><span id="%E4%BE%8B_3"><a id="%E4%BE%8B_3"></a><strong>例 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_3.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_3.xul">表示</a>
+</p>
+<pre>&lt;label value="Click here:" control="open-button"/&gt;
+&lt;button id="open-button" label="Open"/&gt;
+</pre>
+<p>上の例では、ラベルのクリックによって、ボタンがフォーカスされるはずです。
+</p><p><span id="Description_Element"></span>
+</p>
+<h4 id="description_.E8.A6.81.E7.B4.A0" name="description_.E8.A6.81.E7.B4.A0"> description 要素 </h4>
+<p>特定の制御要素と関連しない説明用のテキストには、<code><a href="/ja/docs/Mozilla/Tech/XUL/description" title="description">description</a></code> タグが利用できます。
+この要素は、例えばダイアログの先頭や、制御要素のグループに対する情報を示すために適しています。
+<code><a href="/ja/docs/Mozilla/Tech/XUL/label" title="label">label</a></code> と同様に、単一行の場合は <code>value</code> 属性を利用でき、長いテキストブロックの場合には description の開始と終了タグの間にテキストコンテントを置くことが可能です。
+通常、属性を使用する構文は label に対してよく利用され、テキストコンテントの構文は description に対してよく利用されています。
+</p><p><span id="%E4%BE%8B_4"><a id="%E4%BE%8B_4"></a><strong>例 4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_2.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_2.xul">表示</a>
+</p>
+<pre>&lt;description&gt;
+  This longer section of text is displayed.
+&lt;/description&gt;
+</pre>
+<p>内部的には <code><code><a href="/ja/docs/Mozilla/Tech/XUL/label" title="label">label</a></code></code> 要素と <code><code><a href="/ja/docs/Mozilla/Tech/XUL/description" title="description">description</a></code></code> 要素は同じものです。
+ですが <code><code><a href="/ja/docs/Mozilla/Tech/XUL/label" title="label">label</a></code></code> 要素は、テキスト入力欄の様なコントロールのラベルとして利用することが意図されています。
+このため <code>control</code> 属性は label に対してのみサポートされています。
+また <code><code><a href="/ja/docs/Mozilla/Tech/XUL/description" title="description">description</a></code></code> 要素は、その他の、ダイアログボックス冒頭の説明といった、記述的なテキストのために利用することが意図されています。
+</p><p><span id="Images"></span>
+</p>
+<h3 id=".E7.94.BB.E5.83.8F.E8.A6.81.E7.B4.A0" name=".E7.94.BB.E5.83.8F.E8.A6.81.E7.B4.A0"> 画像要素 </h3>
+<p>HTML と同様、XUL にも、ウィンドウに画像を表示するための要素があります。
+この要素は、文字どおり <code><a href="/ja/docs/Mozilla/Tech/XUL/image" title="image">image</a></code> と名付けられています。
+タグ名が HTML と異なっていることに注意してください (img ではなく image です)。
+画像ファイルの URL を指定するために、 <code><code id="a-src"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/src">src</a></code></code> 属性が使用できます。
+以下に例を示します。
+</p>
+<pre>&lt;image src="images/banner.jpg"/&gt;
+</pre>
+<p>この構文を使用しても良いのですが、より良い方法として、画像の URL を設定するためにスタイルシートを使用することも可能です。
+<a href="ja/XUL_Tutorial/Adding_Style_Sheets">スタイルシートの使い方</a>については、後のセクションで触れる予定ですが、完全を期すため、今回も例を示しておくことにします。
+画像の URL を指定するには、CSS プロパティの <a href="/ja/docs/Web/CSS/list-style-image" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>list-style-image</code></a> が使用可能です。
+以下に例を示します。
+</p>
+<pre class="eval"><b>XUL:</b>
+ &lt;image id="image1"/&gt;
+ &lt;image id="search"/&gt;
+</pre>
+<pre class="eval"><b>Style Sheet:</b>
+ #image1 {
+   list-style-image: url("<a class=" external" rel="freelink">chrome://findfile/skin/banner.jpg</a>");
+ }
+
+ #search {
+   list-style-image: url("<a class=" external" rel="freelink">chrome://findfile/skin/images/search.png</a>");
+ }
+</pre>
+<p>画像は、 chrome ディレクトリに置かれた findfile パッケージのための skin の中から呼び出されます。
+スキンに応じて画像を変えるために、通常、画像は skin ディレクトリに置いておきます。
+</p><p>次のセクションでは、ウィンドウに入力コントロールを追加する方法を学びます。
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Adding_Buttons" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Input_Controls">次のページ  »</a></p>
+</div>
+
+<div class="noinclude">
+</div>

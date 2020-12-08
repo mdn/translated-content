@@ -1,0 +1,195 @@
+---
+title: XBL で定義した要素へのメソッドの追加
+slug: Archive/Mozilla/XUL/Tutorial/Adding_Methods_to_XBL-defined_Elements
+tags:
+  - Tutorials
+  - XBL
+  - XUL
+  - XUL_Tutorial
+  - 要更新
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_Methods_to_XBL-defined_Elements
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Adding_Properties_to_XBL-defined_Elements" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Adding_Event_Handlers_to_XBL-defined_Elements">次のページ  »</a></p>
+</div>
+
+<p>続いては、<a href="/ja/docs/XBL">XBL</a> で定義された要素に、カスタムメソッドを追加する方法について見ていきます。</p>
+
+<h3 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89">メソッド</h3>
+
+<p>XBL で定義された要素には、スクリプトプロパティの追加に加えて、メソッドを追加することも可能です。 追加したメソッドは、スクリプトから呼び出すことが可能になります。 メソッドとは、「<code>window.open()</code>」のように、特定のオブジェクトに属した関数のことを指しています。 <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#method">method</a></code></code> 要素を使用することで、独自に定義した要素にカスタムメソッドを定義することが可能になります。 メソッドを定義するための一般的な構文を以下に示します。</p>
+
+<pre>&lt;implementation&gt;
+  &lt;method name="method-name"&gt;
+    &lt;parameter name="parameter-name1"/&gt;
+    &lt;parameter name="parameter-name2"/&gt;
+    .
+    .
+    .
+    &lt;body&gt;
+      -- method script goes here --
+    &lt;/body&gt;
+  &lt;/method&gt;
+&lt;/implementation&gt;
+</pre>
+
+<p>メソッドの宣言は、フィールドやプロパティの場合と同様に、 <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#implementation">implementation</a></code></code> 要素の中で行います。 このとき、<code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#method">method</a></code></code> 要素には、 メソッドへのパラメータを記述する <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#parameter">parameter</a></code></code> 要素と、 メソッドの処理を記述したスクリプトを置くための <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#body">body</a></code></code> 要素の 2 種類の子要素を置くことになります。</p>
+
+<p><code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#method">method</a></code></code> 要素の <code>name</code> 属性の値がメソッドの名前になります。 同様に、<code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#parameter">parameter</a></code></code> 要素の <code>name</code> 属性が、個々のパラメータの名前になります。 個々の <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#parameter">parameter</a></code></code> 要素は、メソッドへのパラメータの 1 つを宣言するために使用します。 このため、例えばメソッドにパラメータが 3 つある場合には、<code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#parameter">parameter</a></code></code> 要素は 3 つ必要になります。 なお、メソッドにパラメータがない場合は、<code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#parameter">parameter</a></code></code> 要素を置く必要はありません。</p>
+
+<p>また、<code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#body">body</a></code></code> 要素には、メソッドが呼ばれたときに実行されるスクリプトを置きます。 このスクリプトに対して、パラメータは、通常の関数の場合のパラメータと同じように、 <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#parameter">parameter</a></code></code> 要素で指定された名前を持ったスクリプト変数として定義されることになります。 このため、例えば、以下の JavaScript 関数は、その下に示すような XBL メソッドとしても記述することが可能です。</p>
+
+<pre>function getMaximum(num1,num2)
+{
+  if (num1&lt;=num2) return num2;
+  else return num1;
+}
+
+<strong>XBL:</strong>
+
+&lt;method name="getMaximum"&gt;
+  &lt;parameter name="num1"/&gt;
+  &lt;parameter name="num2"/&gt;
+  &lt;body&gt;
+    if (num1&amp;lt;=num2) return num2;
+    else return num1;
+  &lt;/body&gt;
+&lt;/method&gt;
+</pre>
+
+<p>この <code>getMaximum</code> という関数は、メソッドにパラメータとして渡された値のうち、最大のものを返します。 スクリプト中の比較のための小なり記号 ('&lt;') が、タグの始まりとして解釈されないように、エスケープする必要がある点に注意してください。 または、個別の文字をエスケープするのではなく、XML の CDATA セクションを使って、コードブロック全体をエスケープするのでも構いません。 上記の <code>getMaximum</code> メソッドが定義された XBL をバインドした要素の参照を<em>element</em> とした場合、 このメソッドは、「<em>element</em><code>.getMaximum(5,10)</code>」のようなコードによって呼び出すことが可能です。</p>
+
+<p><code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#parameter">parameter</a></code></code> タグによって、メソッドへ渡すパラメータを定義することが可能です。 Mozilla はスクリプト言語として JavaScript を使用し、JavaScript は<span style="border-bottom: 1px dashed green;" title="non-typed language">型のない言語</span>であるため、現時点ではパラメータの型を指定する必要はありません。 しかしながら、将来的には、それ以外の言語も XBL で使用されるようになるかもしれません。</p>
+
+<h3 id=".E5.8C.BF.E5.90.8D.E3.82.B3.E3.83.B3.E3.83.86.E3.83.B3.E3.83.88.E3.81.AB.E3.82.A2.E3.82.AF.E3.82.BB.E3.82.B9.E3.81.99.E3.82.8B" name=".E5.8C.BF.E5.90.8D.E3.82.B3.E3.83.B3.E3.83.86.E3.83.B3.E3.83.88.E3.81.AB.E3.82.A2.E3.82.AF.E3.82.BB.E3.82.B9.E3.81.99.E3.82.8B">匿名コンテントにアクセスする</h3>
+
+<p>メソッドの <code>body</code> に置かれたスクリプトなどから、<code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#content">content</a></code></code> 要素の内部で定義された要素について外観などを変更したいことは、しばしばあると思います。 しかしながら、これらの要素は匿名で生成されるため、通常の DOM 関数からアクセスすることはできません。 通常のアプリケーション開発者が利用する範囲では、その要素がどのように実装されているのかまでは知る必要がないため、これらは隠されています。 このために、匿名コンテントを取得するためには専用の方法を用いる必要があります。</p>
+
+<p>XBL で<span style="border-bottom: 1px dashed green;" title="behavior">振る舞い</span>を設定された要素には、内部に匿名 (<span style="color: green;">anonymous</span>) の子要素の配列をもつための特殊なプロパティがあります。 この配列の各要素には、XBL で定義された要素の直接の子要素が保持されています。 といっても、この特殊なプロパティに直接アクセスすることはできません。 その代わりに、<code>document</code> の <code><a href="/ja/docs/XBL/XBL_1.0_Reference/DOM_Interfaces#getAnonymousNodes">getAnonymousNodes()</a></code> メソッドを呼び出す必要があります。</p>
+
+<pre>var value=document.getAnonymousNodes(element);
+</pre>
+
+<p>ここで、「<code>element</code>」には、匿名コンテントを取得したい要素への参照を設定します。 この関数は、匿名コンテントの要素を配列として返します。 そこから下の階層の要素については隠されていないため、通常の DOM 関数を利用して取得することが可能です。 ただし、XBL がバインドされた要素を、別の XBL の中の要素として置いた場合は例外で、 この場合には、<code><a href="/ja/docs/XBL/XBL_1.0_Reference/DOM_Interfaces#getAnonymousNodes">getAnonymousNodes()</a></code> 関数を再度使用する必要があるので注意してください。</p>
+
+<p>以下の例は、1 行に並んだボタンを作ります。</p>
+
+<pre>&lt;binding id="buttonrow"&gt;
+  &lt;content&gt;
+    &lt;button label="Yes"/&gt;
+    &lt;button label="No"/&gt;
+    &lt;button label="Sort Of"/&gt;
+  &lt;/content&gt;
+&lt;/binding&gt;
+</pre>
+
+<p>個々のボタンを参照するには、<code><a href="/ja/docs/XBL/XBL_1.0_Reference/DOM_Interfaces#getAnonymousNodes">getAnonymousNodes()</a></code> 関数が使用できます。 このとき、パラメータには、このバインディングがバインドされている要素への参照を渡します。 返される配列の最初の配列要素 (<code>getAnonymousNodes(element)[0]</code> で参照できる値) には最初のボタンが格納され、 2 番目の配列要素には 2 つ目のボタンが 、3 番目の配列要素には 3 つ目のボタンが格納されます。 なお、バインディングメソッドの中のコードからは、「<code>this</code>」を <code><a href="/ja/docs/XBL/XBL_1.0_Reference/DOM_Interfaces#getAnonymousNodes">getAnonymousNodes()</a></code> へのパラメータとして渡すことができます。</p>
+
+<p>次の例は、見出しのついたテキストを作成するために使用できるもので、 メソッド <code>showTitle()</code> によって、ラベルの表示と非表示を切り替えることが可能です。 これは、匿名コンテントの配列から、見出しのための要素への参照を取得し、 その可視性 (<span style="color: green;">visibility</span>) を変更することで実現しています。</p>
+
+<pre><strong>XUL:</strong>
+
+&lt;box id="num" class="labeledbutton" title="Number of Things:" value="52"/&gt;
+
+&lt;button label="Show" oncommand="document.getElementById('num').showTitle(true)"/&gt;
+&lt;button label="Hide" oncommand="document.getElementById('num').showTitle(false)"/&gt;
+
+<strong>XBL:</strong>
+
+&lt;binding id="labeledbutton"&gt;
+  &lt;content&gt;
+    &lt;xul:label xbl:inherits="value=title"/&gt;
+    &lt;xul:label xbl:inherits="value"/&gt;
+  &lt;/content&gt;
+  &lt;implementation&gt;
+    &lt;method name="showTitle"&gt;
+      &lt;parameter name="state"/&gt;
+      &lt;body&gt;
+        if (state) document.getAnonymousNodes(this)[0].
+          setAttribute("style","visibility: visible");
+        else document.getAnonymousNodes(this)[0].
+          setAttribute("style","visibility: collapse");
+      &lt;/body&gt;
+    &lt;/method&gt;
+  &lt;/implementation&gt;
+&lt;/binding&gt;
+</pre>
+
+<p>XUL の側に追加された 2 つのボタンには、ラベルの可視性を変更するために使用する <code><code id="a-oncommand"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/oncommand">oncommand</a></code></code> ハンドラがあり、 どちらの場合も <code>showTitle()</code> メソッドを呼び出します。 このメソッドは、渡された <code>state</code> パラメータをチェックして、見出し用の要素を表示するか隠すかを判定します。 いずれの場合も、匿名コンテントの配列の最初の要素を処理の対象にします。 つまり <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#content">content</a></code></code> 要素の最初の子要素である 最初のラベルウィジェットを参照し、 この要素のスタイルを更新することで可視性の変更を行います。</p>
+
+<h3 id=".E5.8C.BF.E5.90.8D.E3.82.B3.E3.83.B3.E3.83.86.E3.83.B3.E3.83.88.E3.81.8B.E3.82.89.E3.82.A2.E3.82.AF.E3.82.BB.E3.82.B9.E3.81.99.E3.82.8B" name=".E5.8C.BF.E5.90.8D.E3.82.B3.E3.83.B3.E3.83.86.E3.83.B3.E3.83.88.E3.81.8B.E3.82.89.E3.82.A2.E3.82.AF.E3.82.BB.E3.82.B9.E3.81.99.E3.82.8B">匿名コンテントからアクセスする</h3>
+
+<p>別の方法として、匿名コンテント中から、その XBL がバインドされた要素を DOM の親要素を取得するための <a href="/ja/docs/Web/API/Node/parentNode" title="指定されたノードの DOM ツリー内の親ノードを返します。"><code>Node.parentNode</code></a> プロパティを使用して取得するやり方もあります。 例えば、Show ボタンと Hide ボタンを XBL ファイルの側に移すには、以下のようにします。</p>
+
+<p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_xblmethods_1.xml.txt">ソース</a></p>
+
+<pre>&lt;binding id="labeledbutton"&gt;
+  &lt;content&gt;
+    &lt;xul:label xbl:inherits="value=title"/&gt;
+    &lt;xul:label xbl:inherits="value"/&gt;
+    &lt;xul:button label="Show" oncommand="parentNode.showTitle(true);"/&gt;
+    &lt;xul:button label="Hide" oncommand="parentNode.showTitle(false);"/&gt;
+  &lt;/content&gt;
+  &lt;implementation&gt;
+    &lt;method name="showTitle"&gt;
+      &lt;parameter name="state"/&gt;
+      &lt;body&gt;
+        if (state) document.getAnonymousNodes(this)[0].setAttribute("style","visibility: visible");
+        else document.getAnonymousNodes(this)[0].setAttribute("style","visibility: collapse");
+      &lt;/body&gt;
+    &lt;/method&gt;
+  &lt;/implementation&gt;
+&lt;/binding&gt;
+</pre>
+
+<p>ここでは、<code><code id="a-oncommand"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/oncommand">oncommand</a></code></code> ハンドラは、まず、ハンドラがある要素の親要素の参照を取得します。 これは <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#content">content</a></code></code> 要素ではなく、XBL がバインドされている XUL 要素になります。 (この例では、<code>labeledbutton</code> クラスをもつボックスが該当します)。 続いて、前述の <code>showTitle()</code> メソッドが呼び出されます。</p>
+
+<p>カスタムプロパティとメソッドは、XBL がバインドされた外枠の XUL 要素だけに追加され、 <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#content">content</a></code></code> タグ内で宣言された要素は、これらのプロパティやメソッドを持つことはできません。 このため、まず最初に親要素の取得から行う必要があります。</p>
+
+<p>なお、XUL ファイルの側に置かれた子要素は、通常の方法で取得することが可能です。 これは、<code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#children">children</a></code></code> タグを使った場合でも変わることはありません。 以下に例を示します。</p>
+
+<pre><strong>XUL:</strong>
+
+&lt;box id="outer" class="container"&gt;
+  &lt;button label="One"/&gt;
+  &lt;button label="Two"/&gt;
+  &lt;button label="Three"/&gt;
+  &lt;button label="Four"/&gt;
+&lt;/box&gt;
+
+<strong>XBL:</strong>
+
+&lt;binding id="labeledbutton"&gt;
+  &lt;content&gt;
+    &lt;description value="A stack:"/&gt;
+    &lt;stack&gt;
+      &lt;children/&gt;
+    &lt;/stack&gt;
+  &lt;/content&gt;
+&lt;/binding&gt;
+</pre>
+
+<p><a href="/ja/docs/Web/API/Node/childNodes" title="Node.childNodes読み取り専用プロパティは、最初の子ノードにインデックス0が割り当てられている、指定された要素の子nodesの現在のNodeListを返します。"><code>Node.childNodes</code></a> のような DOM 関数を使用して子要素の取得を行った場合、 <code>id</code> として <code>outer</code> が設定された XUL ボックスからは、4 つの子要素が取得でき、これらは 4 つのボタンに対応しています。 つまり、DOM から取得する場合、これらのボタンが実際にはスタックの中に描画されていることに影響を受けることはありません。 一方、スタックの子要素は 1 つだけで、<code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#children">children</a></code></code> 要素そのものが対応することになります。 また、このときの外枠のボックスに対応する匿名コンテントの配列の長さは 2 で、 最初の要素としては <code><code><a href="/ja/docs/Mozilla/Tech/XUL/description" title="description">description</a></code></code> 要素、 2 番目の要素には <code><code><a href="/ja/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code></code> 要素が格納されることになります。</p>
+
+<h3 id=".E3.82.B3.E3.83.B3.E3.82.B9.E3.83.88.E3.83.A9.E3.82.AF.E3.82.BF.E3.81.A8.E3.83.87.E3.82.B9.E3.83.88.E3.83.A9.E3.82.AF.E3.82.BF" name=".E3.82.B3.E3.83.B3.E3.82.B9.E3.83.88.E3.83.A9.E3.82.AF.E3.82.BF.E3.81.A8.E3.83.87.E3.82.B9.E3.83.88.E3.83.A9.E3.82.AF.E3.82.BF">コンストラクタとデストラクタ</h3>
+
+<p>XBL は、専用のタグ <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#constructor">constructor</a></code></code> と <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#destructor">destructor</a></code></code> を使用して作成する 2 つの特殊なメソッドをサポートしています。 コンストラクタ (<span style="color: green;">constructor</span>) は、バインディングが要素に結び付けられるたびごとに呼び出されるため、 <span style="border-bottom: 1px dashed green;" title="preferences">設定値</span>の読み込みや、フィールドへのデフォルト値の設定といった、コンテントの初期化処理のために使用できます。 また、デストラクタ (<span style="color: green;">destructor</span>) は、バインディングが要素から取り除かれるときに呼び出されるため、 設定された情報を保存する必要がある場合などに使用できます。</p>
+
+<p>バインディングが要素へ結び付けられる契機は、2 つあります。 まず、1 つ目の契機は、ウィンドウが表示されるときです。 このときには、ウィンドウ上の XBL のコンテントがバインドされた要素が持っているコンストラクタは、全て実行されます。 このため、複数のファイルがロードされても構わないように、 呼び出される順番に依存しないようにしておく必要があります。 なお、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> の <code><code id="a-onload"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/onload">onload</a></code></code> ハンドラは、全てのバインディングが結びつけられてコンストラクタの実行が終了するまでは呼び出されません。 次に、2 つ目の契機は、要素の <a href="/ja/docs/Web/CSS/-moz-binding" title="CSS の -moz-binding プロパティは、 Mozilla ベースのアプリケーションで XBL を DOM 要素に結び付けるために使用します。"><code>-moz-binding</code></a> スタイルプロパティを変更したときです。 この場合、まずそれまで設定されていたバインディングに対してデストラクタが実行され、その後そのバインディングが要素から取り除かれます。 次に、その要素に新しいバインディングが追加され、そのコンストラクタが実行されることになります。</p>
+
+<p>コンストラクタやデストラクタ用のスクリプトは、それらのタグの中に直接置く必要があります。 また、コンストラクタとデストラクタには引数を設定することはできず、 バインディングに複数のコンストラクタやデストラクタを置くこともできません。 以下に例を示します。</p>
+
+<pre>&lt;constructor&gt;
+  if (this.childNodes[0].getAttribute("open") == "true"){
+    this.loadChildren();
+  }
+&lt;/constructor&gt;
+
+&lt;destructor action="saveMyself(this);"/&gt;
+</pre>
+
+<p>次のセクションでは、XBL で定義された要素にイベントハンドラを追加する方法を示します。</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Adding_Properties_to_XBL-defined_Elements" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Adding_Event_Handlers_to_XBL-defined_Elements">次のページ  »</a></p>
+</div>

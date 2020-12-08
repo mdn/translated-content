@@ -1,0 +1,129 @@
+---
+title: Gaia の開発
+slug: Archive/B2G_OS/Developing_Gaia
+tags:
+  - Firefox
+  - Gaia
+  - Mozilla
+  - OS
+  - UI
+translation_of: Archive/B2G_OS/Developing_Gaia
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details open>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/ja/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<div class="summary">
+<p><span class="seoSummary">Gaia は B2G OS のユーザインタフェイスで、デフォルトアプリスイートです: 画面ロック、ホーム画面、電話、その他のアプリが含まれています。Gaia は本来 B2G OS プラットフォームの上位層で起動する Web アプリの集合です。Gaia プロジェクトに貢献するために知っておく必要がある記事を紹介します。</span></p>
+</div>
+
+<p>このガイドでは、<em>Gaia</em> に貢献するための効果的なワークフローを一通り紹介します - そして、これにより、<em>Gaia</em> コードベースに機能を追加し、<em>Gaia</em> プロジェクトについて登録されたバグに取り組むことを意味します。最初の記事群は、順番に読んでください。また、特定のプロセスの見方についてリフレッシュする必要がある場合は、関連したセクションまで読み飛ばすこともできます。</p>
+
+<p>その後には、追加のトピックスについてのリファレンスや情報が提供されています。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7951/gaia-2.0-screen.png" style="float: right; height: 533px; padding: 0px 0px 30px 30px; width: 320px;"></p>
+
+<h2 id="基礎">基礎</h2>
+
+<ol>
+ <li><a href="/ja/Firefox_OS/Developing_Gaia/Running_the_Gaia_codebase">Gaia コードベースを実行する</a></li>
+ <li><a href="/ja/Firefox_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Gaia コードベースを理解する</a></li>
+ <li><a href="/ja/Firefox_OS/Developing_Gaia/Making_Gaia_code_changes">Gaia のコードに変更を加える</a></li>
+ <li><a href="/ja/Firefox_OS/Developing_Gaia/Test_Gaia_code_changes">Gaia のコードの変更をテストする</a></li>
+ <li><a href="/ja/Firefox_OS/Developing_Gaia/Submitting_a_Gaia_patch">Gaia のパッチを提出する</a></li>
+</ol>
+
+<h2 id="Gaia_ビルドリファレンス">Gaia ビルドリファレンス</h2>
+
+<ul>
+ <li><a href="/ja/Firefox_OS/Developing_Gaia/Build_System_Primer">Gaia ビルドシステム入門</a></li>
+ <li><a href="/ja/Firefox_OS/Developing_Gaia/Customizing_build-time_apps">ビルド時のアプリをカスタマイズする</a></li>
+ <li><a href="/ja/Firefox_OS/Developing_Gaia/make_options_reference">make オプションのリファレンス</a></li>
+ <li><a href="/ja/Firefox_OS/Developing_Gaia/Gaia_tools_reference">Gaia ツールのリファレンス</a></li>
+</ul>
+
+<h2 id="補足情報">補足情報</h2>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/ja/Firefox_OS/Platform/Testing/Raptor">Raptor: Gaia 用パフォーマンスツール</a></li>
+ <li><a href="https://developer.mozilla.org/docs/Mozilla/Firefox_OS/Developing_Gaia/Localizing_Firefox_OS">B2G OS をローカライズする</a></li>
+ <li><a href="/ja/Firefox_OS/Firefox_OS_build_prerequisites">B2G OS ビルドの必要条件</a></li>
+ <li><a href="/ja/Firefox_OS/Developing_Gaia/Different_ways_to_run_Gaia">Gaia を実行する他の方法</a></li>
+ <li><a href="/ja/Firefox_OS/Developing_Gaia/Market_customizations_guide">マーケットカスタマイズガイド</a></li>
+ <li><a href="/ja/Firefox_OS/Developing_Gaia/Customizing_the_keyboard">B2G OS アプリ内でキーボードをカスタマイズする</a></li>
+</ul>
+
+<p> </p>
+
+<p></p><div class="overheadIndicator communitybox">
+
+    <div class="column-container">
+        <h2 id="Gaiaコミュニティに参加してください">Gaiaコミュニティに参加してください</h2>
+        <div class="column-half">
+            <div class="communitysubhead">あなたの好きな方法でディスカッションに参加してください</div>
+            <ul class="communitymailinglist">
+  <li><a href="https://lists.mozilla.org/listinfo/dev-gaia"> メーリングリストとして</a></li>
+
+
+  <li><a href="http://groups.google.com/group/mozilla.dev.gaia"> ニュースグループとして</a></li>
+  <li><a href="http://groups.google.com/group/mozilla.dev.gaia/feeds"> フィードとして</a></li>
+</ul>
+        </div>
+        <div class="column-half">
+            <ul class="communitycontact"><li><strong>IRC: </strong><a href="irc://irc.mozilla.org/gaia">#gaia</a> <span class="smaller">(<a href="https://wiki.mozilla.org/IRC">さらに詳しく</a>)</span></li><li><strong>他の IRC チャンネル: </strong><a href="irc://irc.mozilla.org/b2g" title="Discuss B2G, the overall Firefox OS platform">#b2g</a>, <a href="irc://irc.mozilla.org/openwebapps" title="Talk with Web app developers">#openwebapps</a>, <a href="irc://irc.mozilla.org/webapi" title="Discuss Web APIs used to create powerful Web apps">#webapi</a></li></ul>
+        </div>
+    </div>
+</div><p></p>
+
+<div id="divLookup" style="background-color: transparent; color: #000000; position: absolute; top: 942px; left: 135px; padding: 0px; border-radius: 2px;"><img></div>

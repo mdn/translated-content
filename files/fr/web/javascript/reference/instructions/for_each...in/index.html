@@ -1,0 +1,80 @@
+---
+title: for each...in
+slug: Web/JavaScript/Reference/Instructions/for_each...in
+tags:
+  - Déprécié
+  - E4X
+  - Instruction
+  - JavaScript
+  - Reference
+translation_of: Archive/Web/JavaScript/for_each...in
+---
+<div>{{JsSidebar("Statements")}}{{deprecated_header}}</div>
+
+<div class="warning">
+<p>L'instruction for each...in est dépréciée car elle appartient au standard ECMA-357 (<a href="/fr/docs/E4X">E4X</a>). E4X sera désactivé par défaut puis retiré à l'avenir. Il faut désormais utiliser l'instruction {{jsxref("Instructions/for...of","for...of")}}. (Voir {{ bug("791343")}}.)<br>
+ <strong>Firefox lance désormais des avertissements lorsque des boucles <code>for each...in</code> et cette instruction a été retirée du canal <em>Nightly</em>.<br>
+ Veuillez consulter <a href="/fr/docs/Web/JavaScript/Reference/Erreurs/For-each-in_loops_are_deprecated">l'article sur cet avertissement pour des indications</a> quant aux solutions de migration.</strong></p>
+</div>
+
+<p>L'instruction <strong><code>for each...in</code></strong> itère une variable donnée sur toutes les propriétés d'un objet. Pour chaque propriété distincte, une instruction spécifique est exécutée.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox">for each (<var>variable</var> in <var>objet</var>) {
+  <var>instruction</var>
+}</pre>
+
+<dl>
+ <dt><code>variable</code></dt>
+ <dd>Une variable à itérer sur les valeurs des propriétés, elle peut être déclarée avec le mot-clé {{jsxref("Instructions/var","var")}}. Cette variable est locale à la fonction et non à la boucle.</dd>
+</dl>
+
+<dl>
+ <dt><code>objet</code></dt>
+ <dd>L'objet pour lequel les propriétés sont itérées.</dd>
+</dl>
+
+<dl>
+ <dt><code>instruction</code></dt>
+ <dd>Une instruction à exécuter pour chaque propriétés. Pour effectuer plusieurs instructions au sein de la boucle, il faut utiliser une instruction de {{jsxref("Instructions/block","bloc","",1)}} (<code>{ ... }</code>) pour regrouper les instructions.</dd>
+</dl>
+
+<h2 id="Description">Description</h2>
+
+<p>L'itération ne s'effectue que sur les propriétés spécifiques, définies par l'utilisateur. Elle ne s'effectuera pas sur les propriétés implicites déjà intégrées comme les méthodes objet telles que la méthode <code>indexOf</code> des chaînes de caractères.</p>
+
+<h2 id="Exemple">Exemple</h2>
+
+<h3 id="Utiliser_for_each...in">Utiliser <code>for each...in</code></h3>
+
+<p><strong>Attention :</strong> Ne jamais utiliser cette boucle sur un tableau. Ne l'utiliser que pour les objets. (Voir des détails sur la page de l'instruction {{jsxref("Instructions/for...in")}}).</p>
+
+<p>Le fragment de code parcourt les propriétés d'un objet et en calcule leur somme.</p>
+
+<pre class="brush:js">var somme = 0;
+var obj = {prop1: 5, prop2: 13, prop3: 8};
+
+for each (var item in obj) {
+  somme += item;
+}
+
+console.log(somme); // affiche "26", ce qui correspond à 5+13+8</pre>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<p>Cette instruction ne fait partie d'aucune spécification ECMA-262. Elle a été implémentée avec JavaScript 1.6 et est dépréciée.</p>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<div class="hidden">Ce tableau de compatibilité a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à envoyer une <em>pull request</em> sur <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>.</div>
+
+<p>{{Compat("javascript.statements.for_each_in")}}</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>{{jsxref("Instructions/for...in","for...in")}} : une instruction similaire permettant d'itérer sur les noms des propriétés.</li>
+ <li>{{jsxref("Instructions/for...of","for...of")}} : une instruction similaire qui permet d'itérer sur les valeurs des propriétés mais dont le comportement est différent de <code>for each...in</code>. Cette instruction ne s'utilise que pour les types itérables.</li>
+ <li>{{jsxref("Instructions/for","for")}}</li>
+</ul>

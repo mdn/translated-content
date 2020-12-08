@@ -1,0 +1,25 @@
+---
+title: Résolution des problèmes
+slug: Archive/Web/XForms/Résolution_des_problèmes_avec_XForms
+translation_of: Archive/Web/XForms/Form_Troubleshooting
+---
+<p> </p>
+<div class="note">
+ Cette page est en cours de traduction, son contenu peut donc être incomplet ou contenir des parties en anglais. N'hésitez pas à participer à sa traduction à partir de</div>
+<p> </p>
+<h3 id="Introduction">Introduction</h3>
+<p>Le but de cette page est de collecter toute une sériée de solutions à des erreurs fréquemment rencontrées quand on utilise XForm.</p>
+<h3 id="Commencez_toujours_par_ça">Commencez toujours par ça</h3>
+<ol>
+ <li>Assurez-vous d'utiliser la <a class="external" href="http://www.mozilla.org/projects/xforms/download.html">dernière version</a> de l'extension.</li>
+ <li>Testez votre code avec le <a class="external" href="http://xformsinstitute.com/validator/">validateur XForms</a>. Il vérifie votre formulaire pour y déceler les erreurs. Ce n'est pas parfait mais c'est mieux que rien et permet de mettre en lumière un certain nombre d'erreurs.</li>
+ <li>Ayez toujours un œil sur la <em>Console d'erreurs</em> (Outils, Console d'erreurs). Si des erreurs sont détectées, n'espérez pas que votre formulaire fonctionne.</li>
+</ol>
+<h3 id="Troubleshooting" name="Troubleshooting">Problèmes et solutions</h3>
+<h4 id="Check_The_File_Type" name="Check_The_File_Type">Vérifiez le type de fichier</h4>
+<p>La page est-elle interprétée en tant que document <u>XHTML</u> ? Cliquez droit dans un endroit vide de la page, et sélectionnez <em>Informations sur la page</em>. Le champ <em>Type</em> devrait afficher <code>application/xhtml+xml</code> comme valeur. Toute autre valeur est mauvaise.</p>
+<p>Si vous ouvrez votre fichier directement depuis votre système (en local), l'extension du fichier doit être .xhtml ou .xml. Si vous chargez le fichier depuis un serveur, vérifiez que le serveur déserve bien le fichier en tant qu'<code>application/xhtml+xml</code> ou en tant que <code>text/xml</code>.</p>
+<h4 id="Check_the_XHTML_1.0_Namespace_Declaration" name="Check_the_XHTML_1.0_Namespace_Declaration">Vérifiez la déclaration de l'espace de nom XHTML 1.0</h4>
+<p>Mozilla XForms est construit sur base de la spécification d'XHTML 1.0, laquelle se trouve ici <a class="external" href="http://www.w3.org/1999/xhtml" rel="freelink">http://www.w3.org/1999/xhtml</a>. Assurez-vous que l'élément &lt;html&gt; contienne la bonne déclaration de l'espace de nom :</p>
+<pre>xmlns="http://www.w3.org/1999/xhtml"</pre>
+<p>(à la place de la dernière spécification, non-ratifiée, XHTML 2.0, située ici <a class="external" href="http://www.w3.org/2002/06/xhtml2" rel="freelink">http://www.w3.org/2002/06/xhtml2</a> )</p>

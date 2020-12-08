@@ -1,0 +1,1104 @@
+---
+title: 开始WebLock
+slug: Mozilla/Tech/XPCOM/Guide/Creating_components/Starting_WebLock
+tags:
+  - XPCOM
+  - 所有分类
+translation_of: Mozilla/Tech/XPCOM/Guide/Creating_components/Starting_WebLock
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/Creating_XPCOM_Components:Using_XPCOM_Utilities_to_Make_Things_Easier" style="float: left;">« 上一页</a><a href="/zh-CN/docs/Creating_XPCOM_Components:Finishing_the_Component">下一页  »</a></p>
+</div><p></p>
+
+<p>在本章，我们开始设计和实现网络锁定功能本身。我们已经建立了实现多数通用组件功能的模块（例如注册）。这章将关注实际操作网页锁定的功能。</p>
+
+<h3 id="Getting_Called_at_Startup" name="Getting_Called_at_Startup">Getting Called at Startup</h3>
+
+<p>没有人是一个孤岛，组件也一样。你所建立的例子组件到目前为止还没有任何功能。当他被注册以后，他没做任何事情。</p>
+
+<p>为了当某些事件发生的时候被启动或者通知到，例子组件需要挂接到Mozilla，或者覆盖一个现存组件，或者注册到一些事件上面。<strong>WebLock</strong>用后面的方式在Gecko Profile Startup发生的时候被调用。当Gecko应用启动的时候，注册的组件被创建或者通过通用观察者接口被提醒<code>nsIObserver</code>。</p>
+
+<p><em>Observer</em>是一些对象，他们当特定的事件发生的时候被通知。使用这种机制提供了一个相互不必了解而可以在对象之间传送信息的机制。</p>
+
+<p>通常，一个对象会通知一系列观察者。例如一个对象被创建的时候它的<code>observe</code>方法被调用，或者它可以注册当XPCOM关闭的时候被通知。这个接口的核心是<code>observe</code>方法。</p>
+
+<pre>void observe(in nsISupports aSubject,
+             in string aTopic,
+             in wstring aData);
+</pre>
+
+<p>实际上ovserver方法的参数没有什么限制。这些参数根据事件的类型变化。例如，XPCOM关闭的时候，aSubject和aData被定义，aTopic被定义为“xpcom-shotdown’，如果你的对象希望注册到这些事件上面，他首先要实现nsIObserver接口，一旦你完成这些，实现nsIObserverService的observer服务将会利用接口通知你的对象，如下所示：</p>
+
+<p><span id="The_Observer_Interfaces"><a id="The_Observer_Interfaces"></a><strong>The Observer Interfaces</strong></span></p>
+
+<p><img alt="Image:observation-overview.png"></p>
+
+<p>上图表现了observer服务管理了所有<code>nsIObserver</code>对象的列表. 当通知产生的时候，<code>nsIObserverService</code>把呼叫者从<code>NotifyObserver()</code>发送出的消息传送给<code>nsIObserver</code>的<code>Observe()</code>方法。这是一个让不同的类解藕的办法。<code>nsIObserver</code>是一个通用的接口，用来在两个或多个对象间传递信息，而不必定义一个特定的冻结接口，它也是XPCOM建立扩展的一个方式。</p>
+
+<p>WebLock组件对<code>nsIObserver</code>接口的实现和对<code>nsIFactory</code>接口是类似的。<span class="comment">XXX what is Example 2?</span>下面的例子2中，你改变一个类的定义为支持<code>nsIObserver</code>接口并且改变<code>NS_IMPL_ISUPOORTS1</code>，从而<code>QueryInterface</code>实现知道组件也支持<code>nsIObserver</code>。启动的时候被通知的<code>WebLock</code>类定义如下：</p>
+
+<pre>class WebLock: public nsIObserver {
+  public:
+    WebLock();
+    virtual ~WebLock();
+
+    NS_DECL_ISUPPORTS
+    NS_DECL_NSIOBSERVER
+};
+
+NS_IMPL_ISUPPORTS1(WebLock, nsIObserver);
+</pre>
+
+<p><code>Observe()</code>最简单的实现仅仅是比较字符串<code>aTopic</code>和对象所接受事件所定义的值. 如果相匹配, 你可以按照你的方式处理事件. 如果对象仅仅注册到一个消息上, 那你可以忽略字符串 <code>aTopic</code> 而仅仅处理事件. 换句话说，对于对象所没有注册的事件，<code>Observe</code> 方法不应该被调用。</p>
+
+<pre>NS_IMETHODIMP
+WebLock::Observe(nsISupports *aSubject,
+                 const char *aTopic,
+                 const PRUnichar *aData)
+{
+  return NS_OK;
+}
+</pre>
+
+<p>从observer service来的消息可能是间接的. 直接获得来自observer service的消息的方法是初始化一个<code>nsIObserver</code> 对象. 大多数情况下这样是可以的，但是要注意当你通过这个消息建立组件的情况. 因为组件还没有被建立，所以不存在初始化的 <code>nsIObserver</code> 对象可以用来传递给 <code>nsIObserverService</code>, 组件代码在他被装载以前不能做什么.</p>
+
+<h4 id=".E6.B3.A8.E5.86.8C.E5.88.B0.E6.B6.88.E6.81.AF" name=".E6.B3.A8.E5.86.8C.E5.88.B0.E6.B6.88.E6.81.AF">注册到消息</h4>
+
+<p><code>nsIObserverService</code> 接口有处理注册和注销一个<code>nsIObserver</code>对象的方法. 这两个方法用来动态添加或者删除一个notification topic上的observer. 但是 <strong>WebLock</strong> 要被自动初始化和添加到observer service, 这就意味着需要一些数据持久化。(不管怎么说, 我们需要组件在程序每次启动的时候也启动).</p>
+
+<p>This is where a new service that manages sets of related data comes in handy. This service, the <code>nsICategoryService</code>, is what XPCOM and Gecko embedding applications use to persist lists of <code>nsIObserver</code> components that want to have startup notification.</p>
+
+<p>The <code>nsICategoryService</code> maintains sets of name-value pairs like the one below.</p>
+
+<p><span id="The_Category_Manager"><a id="The_Category_Manager"></a><strong>The Category Manager</strong></span></p>
+
+<p><img alt="Image:category-manager-table.png"></p>
+
+<p>Every category is identified by a string that represents the name of the category. Each category contains a set of name-value pairs. For example, you might have a category named "Important People" in which the name-value pairs would be names and phone numbers. The format of the name-value pair is left up to you.</p>
+
+<p>This data structure is more than enough to support the persisting of components that what to be started up. The category name also maps nicely onto the notion of a notification "topic." The topic name could be something like "xpcom-startup", for instance, and the name-value pair could contain the contract IDs required to create the components requesting startup. In fact, this is exactly how categories are used to handle registration with XPCOM for startup notification. You will see the code which does this in the next section.</p>
+
+<h4 id="Getting_Access_to_the_Category_Manager" name="Getting_Access_to_the_Category_Manager">Getting Access to the Category Manager</h4>
+
+<p>Two fields in the <code>nsModuleComponentInfo</code> structure introduced in the last section are addresses for registration and unregistration callbacks. The first callback is called when the component's <code>nsIModule::RegisterSelf</code> method is called. This callback allows the component to execute any one-time registration code it may need. The inverse of this function is the unregistration callback, where it's a good idea to undo whatever the registration function did. The two functions look like this:</p>
+
+<pre>static NS_METHOD
+WebLockRegistration(nsIComponentManager *aCompMgr,
+                    nsIFile *aPath,
+                    const char *registryLocation,
+                    const char *componentType,
+                    const nsModuleComponentInfo *info);
+
+static NS_METHOD
+WebLockUnregistration(nsIComponentManager *aCompMgr,
+                      nsIFile *aPath,
+                      const char *registryLocation,
+                      const nsModuleComponentInfo *info);
+</pre>
+
+<p>The names of the functions can be anything you wish. Both functions are passed the Component Manager and the path to the component, including the opaque <code>registryLocation</code>. These are also parameters in the <code>nsIModule</code> implementation in <span class="comment">XXX what is Example 1? link to it here</span>Example 1. In addition to these parameters, the callback functions are passed the <code>nsModuleComponentInfo</code> struct, which is the same structure initially passed into <code>NS_IMPL_NSGETMODULE</code>.</p>
+
+<p>During registration, the registration callback is where you get the <code>nsICategoryManager</code>. Once you have it, you can add the component to the category of components that get started automatically. As a service, the <code>nsICategoryManager</code> is accessible via the <code>nsIServiceManager</code>. Also note that the <code>nsIComponentManager</code> is passed into the callback. Since the object that implements the <code>nsIComponentManager</code> interface also implements <code>nsIServiceManager</code>, all you have to do is <code>QueryInterface</code> the <code>nsIComponentManager</code> to <code>nsIServiceManager</code> to get the Service Manager. You can then use the Service Manager to add the component to the category:</p>
+
+<pre>nsresult rv;
+
+nsCOMPtr&lt;nsIServiceManager&gt; servman =
+     do_QueryInterface((nsISupports*)aCompMgr, &amp;rv);
+
+if (NS_FAILED(rv))
+  return rv;
+</pre>
+
+<div class="side-note">
+<p><span id="%3Ccode%3Edo_QueryInterface%3C/code%3E"><a id="%3Ccode%3Edo_QueryInterface%3C/code%3E"></a><strong><code>do_QueryInterface</code></strong></span></p>
+
+<p>The previous code uses the special <code>nsCOMPtr</code> function <code>do_QueryInterface</code> that lets you <code>QueryInterface</code> without having to worry about reference counting, error handling, and other overhead. The <code>do_QueryInterface</code> knows what interface to <abbr title="QueryInterface">QI</abbr> to based on the <code>nsCOMPtr</code> that is being assigned into. We could have just as easily have used the raw <code>QueryInterface()</code> method, but using <code>nsCOMPtr</code> is much more economical (see <a href="cn/Creating_XPCOM_Components/Using_XPCOM_Utilities_to_Make_Things_Easier#Smart_Pointers">Smart Pointers</a>).</p>
+</div>
+
+<p>Once you have a <code>nsIServiceManager</code> reference, you can ask it for the service you are interested in. This process is similar to using <code>CreateInstance</code> from the <code>nsIComponentManager</code>, but there is no aggregation parameter since the object has already been constructed.</p>
+
+<pre>nsCOMPtr&lt;nsICategoryManager&gt; catman;
+rv = servman-&gt;GetServiceByContractID(NS_CATEGORYMANAGER_CONTRACTID,
+                                     NS_GET_IID(nsICategoryManager),
+                                     getter_AddRefs(catman));
+if (NS_FAILED(rv))
+  return rv;
+</pre>
+
+<p>There are two service getters on the <code>nsIServiceManager</code> interface: one that takes a CID and another interface that takes a Contract ID. Here we'll use the latter. The first parameter to the <code>GetServiceByContractID</code> is of course the contract ID, which is defined in the <code>nsXPCOM.h</code> header file. The next parameter is a nifty macro that returns the IID for the interface name that you pass in. The last parameter assigns an out interface pointer to a <code>nsCOMPtr</code>. Assuming there weren't any unexpected errors, the variable <code>catman</code> holds the <code>nsICategoryManager</code> interface pointer, which you can use to add the component as a startup observer by calling a method on the <code>nsICategoryManager</code>.</p>
+
+<p>The next step is to figure out which parameters to pass to the method. There is a category name and a name-value pair, but since the name-value pair meaning is category-specific, you need to figure out which category to use.</p>
+
+<p>There are two startup notifications, both of which create the observer if it isn't already created. The first is provided by XPCOM. This notification will occur during initialization of XPCOM, where all XPCOM services are guaranteed to be available during the calls. Embedding applications may provide other notifications.</p>
+
+<p><span id="Common_XPCOM_Notifications"><a id="Common_XPCOM_Notifications"></a><strong>Common XPCOM Notifications</strong></span></p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Category</td>
+   <td class="header">Name</td>
+   <td class="header">Value</td>
+   <td class="header">Creates Component</td>
+  </tr>
+  <tr>
+   <td>xpcom-startup</td>
+   <td>Any</td>
+   <td>Contract ID</td>
+   <td>Yes</td>
+  </tr>
+  <tr>
+   <td>xpcom-shutdown</td>
+   <td>Any</td>
+   <td>Contract ID</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <td>xpcom-autoregistration</td>
+   <td>Any</td>
+   <td>Contract ID</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <td>app-startup</td>
+   <td>Any</td>
+   <td>service, Contract ID</td>
+   <td>*</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The table above summarizes the popular persistent notifications registered through the category manager. The name of the category itself is a well defined string, but the name-value pairs can be anything.</p>
+
+<p>When naming your component in the category, take care to use something that means something and doesn't muddy up the namespace. In this case, "WebLock" is unique and provides context to anyone looking at the category. The value of the name-value part is expected to be the contract ID of the component.</p>
+
+<p>Since every category can define the name-value pairs, the application "app-startup" category can support not only services but component instances as well. For the app-startup notification, you must explicitly pass the string "service," prior to the component's Contract ID. If you do not, the component will be created and then released after the notification, which may cause the component to be deleted.</p>
+
+<p>In short, to register the <strong>WebLock</strong> component as an xpcom-startup observer, do the following:</p>
+
+<pre>char* previous = nsnull;
+rv = catman-&gt;AddCategoryEntry("xpcom-startup",
+                              "WebLock",
+                              WebLock_ContractID,
+                              PR_TRUE,  // persist category
+                              PR_TRUE,  // replace existing
+                              &amp;previous);
+if (previous)
+  nsMemory::Free(previous); // free the memory the replaced value might have used
+</pre>
+
+<p>The unregistration, which should occur in the unregistration callback, looks like this:</p>
+
+<pre>rv = catman-&gt;DeleteCategoryEntry("xpcom-startup",
+                                 "WebLock",
+                                  PR_TRUE);  // persist
+</pre>
+
+<p>A complete code listing for registering <strong>WebLock</strong> as a startup observer follows:</p>
+
+<pre>#define MOZILLA_STRICT_API
+
+#include "nsIGenericFactory.h"
+
+#include "nsCOMPtr.h"
+#include "nsXPCOM.h"
+#include "nsIServiceManager.h"
+#include "nsICategoryManager.h"
+
+#include "nsMemory.h"
+
+#include "nsIObserver.h"
+
+#include "nsEmbedString.h"
+
+#define WebLock_CID \
+{ 0x777f7150, 0x4a2b, 0x4301, \
+{ 0xad, 0x10, 0x5e, 0xab, 0x25, 0xb3, 0x22, 0xaa}}
+
+#define WebLock_ContractID "@dougt/weblock"
+
+class WebLock: public nsIObserver
+{
+  public:
+    WebLock();
+    virtual ~WebLock();
+
+    NS_DECL_ISUPPORTS
+    NS_DECL_NSIOBSERVER
+};
+
+WebLock::WebLock()
+{
+  NS_INIT_ISUPPORTS();
+}
+
+WebLock::~WebLock()
+{
+}
+
+NS_IMPL_ISUPPORTS1(WebLock, nsIObserver);
+
+NS_IMETHODIMP
+WebLock::Observe(nsISupports *aSubject, const char *aTopic, const PRUnichar *aData)
+{
+  return NS_OK;
+}
+
+static NS_METHOD WebLockRegistration(nsIComponentManager *aCompMgr,
+                                     nsIFile *aPath,
+                                     const char *registryLocation,
+                                     const char *componentType,
+                                     const nsModuleComponentInfo *info)
+{
+  nsresult rv;
+
+  nsCOMPtr&lt;nsIServiceManager&gt; servman = do_QueryInterface((nsISupports*)aCompMgr, &amp;rv);
+  if (NS_FAILED(rv))
+    return rv;
+
+  nsCOMPtr&lt;nsICategoryManager&gt; catman;
+  rv = servman-&gt;GetServiceByContractID(NS_CATEGORYMANAGER_CONTRACTID,
+                                       NS_GET_IID(nsICategoryManager),
+                                       getter_AddRefs(catman));
+
+  if (NS_FAILED(rv))
+    return rv;
+
+  char* previous = nsnull;
+  rv = catman-&gt;AddCategoryEntry("xpcom-startup",
+                                "WebLock",
+                                WebLock_ContractID,
+                                PR_TRUE,
+                                PR_TRUE,
+                                &amp;previous);
+  if (previous)
+    nsMemory::Free(previous);
+
+  return rv;
+}
+
+static NS_METHOD WebLockUnregistration(nsIComponentManager *aCompMgr,
+                                       nsIFile *aPath,
+                                       const char *registryLocation,
+                                       const nsModuleComponentInfo *info)
+{
+  nsresult rv;
+
+  nsCOMPtr&lt;nsIServiceManager&gt; servman = do_QueryInterface((nsISupports*)aCompMgr, &amp;rv);
+  if (NS_FAILED(rv))
+    return rv;
+
+  nsCOMPtr&lt;nsICategoryManager&gt; catman;
+  rv = servman-&gt;GetServiceByContractID(NS_CATEGORYMANAGER_CONTRACTID,
+                                       NS_GET_IID(nsICategoryManager),
+                                       getter_AddRefs(catman));
+  if (NS_FAILED(rv))
+    return rv;
+
+  rv = catman-&gt;DeleteCategoryEntry("xpcom-startup",
+                                   "WebLock",
+                                   PR_TRUE);
+
+  return rv;
+}
+
+NS_GENERIC_FACTORY_CONSTRUCTOR(WebLock)
+
+static const nsModuleComponentInfo components[] =
+{
+  {
+    "WebLock",
+    WebLock_CID,
+    WebLock_ContractID,
+    WebLockConstructor,
+    WebLockRegistration,
+    WebLockUnregistration
+  }
+};
+
+NS_IMPL_NSGETMODULE(WebLockModule, components)
+</pre>
+
+<h3 id="Providing_Access_to_WebLock" name="Providing_Access_to_WebLock">Providing Access to <strong>WebLock</strong></h3>
+
+<p>At this point, the component will be called when XPCOM starts up. <strong>WebLock</strong> has already implemented the <code>nsISupports</code>, <code>nsIFactory</code>, <code>nsIModule</code>, and <code>nsIObserver</code> interfaces that handle generic component functionality including being initialized at startup. And it speaks to the Component Manager, Service Manager, Category Manager, and the Component Registrar to register itself properly with XPCOM.</p>
+
+<p>The next step is to expose additional functionality to Gecko applications and other clients to query and control the <strong>WebLock</strong> component. For example, the user interface needs to be able to enable and disable the web locking functionality, see what sites are in the whitelist, and add or remove sites from that list. WebLock needs to provide an API, and it needs to hook into Gecko in order to implement the actual locking functionality.</p>
+
+<p>译: 下一步是expose另外的功能以使得Gecko应用以及其它clients查询和控制WebLock组件. 例如, user interface(用户接口)要有能力去允许或者禁止web locking(web锁定)功能, 查看哪些站点在白名单列表中, 并向列表中添加或移除站点. WebLock需要提供一个API并挂接到Gecko中进而实现实际的locking功能.</p>
+
+<div class="side-note">
+<p><span id="The_WebLock_User_Interface"><a id="The_WebLock_User_Interface"></a><strong>The WebLock User Interface</strong></span></p>
+
+<p>The <strong>WebLock</strong> component in this tutorial uses XUL to define the additional browser UI in a cross-platform way, and XUL uses JavaScript to access and control XPCOM components, but Gecko's pluggable UI allows any user interface to call into Gecko and the components you create as easily as you can from XUL. See <a href="cn/Creating_XPCOM_Components/Building_the_WebLock_UI#XUL">XUL</a> for a discussion of how XUL interacts with JavaScript and XPCOM.</p>
+
+<p>在这个教程中<strong>WebLock</strong>组件使用XUL来定义跨平台的浏览器UI, XUL使用JavaScript来访问和控制XPCOM组件, 但Gecko的可挂接UI也允许任何user interface调用Gecko和你所创建的组件, 就如同XUL一样容易. <a href="cn/Creating_XPCOM_Components/Building_the_WebLock_UI#XUL">XUL</a>讨论了XUL如何与JavaScript和XPCOM交互.</p>
+</div>
+
+<h3 id="Creating_the_WebLock_Programming_Interface" name="Creating_the_WebLock_Programming_Interface">Creating the WebLock Programming Interface</h3>
+
+<p>Design is one of the hardest parts of any programming problem. The question the interface for the <strong>WebLock</strong> component must answer is: How should <strong>WebLock</strong> look to the outside world? What, in other words, is the interaction of clients with the <strong>WebLock</strong> component? In this section, we enumerate the basic functionality the component should expose and create the single interface that organizes and provides this functionality.</p>
+
+<p>译: 设计是任何编程问题中最困难的部分之一. 问题是<strong>WebLock</strong>组件必须要回答一些问题: <strong>WebLock</strong>应该如何look to外面的世界? 换言之, 什么是clients与<strong>WebLock</strong>的交互? 在这部分列举了组件应该expose的基本功能和create一个组织和提供这些功能的接口.</p>
+
+<p>Instead of starting with the implementation, developers use XPIDL (see <a href="cn/Creating_XPCOM_Components/An_Overview_of_XPCOM#XPIDL_and_Type_Libraries">XPIDL and Type Libraries</a> for more information about XPIDL) to define the interface to the component: how the functionality should be organized, expressed, and exposed to its clients.</p>
+
+<p>译: 开发人员应该使用XPIDL(see <a href="cn/Creating_XPCOM_Components/An_Overview_of_XPCOM#XPIDL_and_Type_Libraries">XPIDL and Type Libraries</a> for more information about XPIDL)为组件定义接口(定义功能应该如何被组织, 描述和暴露给它的clients)做为开始, 而不应该从实现开始.</p>
+
+<p>In general, the <strong>WebLock</strong> service interface needs to include the following functionality:</p>
+
+<p>译: 通常, <strong>WebLock</strong>服务接口要包括以下功能:</p>
+
+<ul>
+ <li><code>Lock</code> - Enable web locking so that any browser in the Gecko application is restricted to the white list of website domains.</li>
+</ul>
+
+<p>        译: <code>Lock</code> - 允许web locking, 这样任何Gecko应用中的浏览器被限定只能访问白名单中的web站点域.</p>
+
+<ul>
+ <li><code>Unlock</code> - Disable web locking. This should allow any browser in the Gecko application to browse any website regardless of the white list.</li>
+</ul>
+
+<p>        译: <code>Unlock</code> - 禁止web locking. 允许Gecko应该中的浏览器访问任何web站点, 而不去管白名单列表.</p>
+
+<ul>
+ <li><code>AddSite</code> - Add the current URL to the white list.</li>
+</ul>
+
+<p>        译: <code>AddSite</code> - 添加当前URL到白名单列表.</p>
+
+<ul>
+ <li><code>RemoveSite</code> - Remove the current URL from the white list.</li>
+</ul>
+
+<p>        译: <code>RemoveSite</code> - 从白名单列表中移除当前URL.</p>
+
+<ul>
+ <li><code>EnumerateSites</code> - Allows the enumeration of all sites in the white list. <code>EnumerateSites</code> might be used in the user interface to provide something like an editable listbox of all sites in the white list.</li>
+</ul>
+
+<p>        译: <code>EnumerateSites</code> - 允许列举出所有白名单中的站点. <code>EnumerateSites</code>可能会被user         interface(用户接口/用户界面)所提供的例如显示所有白名单列表的可编辑列表框控件所使用.</p>
+
+<p>Even this simple outline presents some ambiguity, however. It's certainly not enough to spell out the interface for the <strong>WebLock</strong> component in this way. For example, <code>AddSite</code> is supposed to add the current URL to the white list, but is the URL an input parameter to the method, is it the topmost web page in the Gecko application, or is it something more random-a URL picked from global history or that's been given context in some other way?</p>
+
+<p>As a strongly typed and implementation-agnostic language, XPIDL requires that you be quite specific about the APIs, the list of parameters, their order, and their types. XPIDL requires that you spell it all out, in other words. And it's this formality that makes the interfaces in XPCOM effective contracts between services and clients.</p>
+
+<p>The next section shows the interface of the <strong>WebLock</strong> component, <code>iWebLock</code>, in XPIDL. Once the interface has been described in the XPIDL language, the interface file can be used to generate the header files needed for the implementation code, the binary type library files that let you use the interface of the <strong>WebLock</strong> component from JavaScript, and even <span class="comment">broken link</span><a href="cn/Javadoc">javadoc</a> style HTML documentation.</p>
+
+<h3 id="Defining_the_Weblock_Interface_in_XPIDL" name="Defining_the_Weblock_Interface_in_XPIDL">Defining the <strong>Weblock</strong> Interface in XPIDL</h3>
+
+<p>Most interfaces in the XPCOM world are described in XPIDL. The XPIDL file for the <code>iWebLock</code> interface can be used to generate the C++ header file, which you'll need to implement the interface in the component and also a type library that makes the component accessible from JavaScript or other interpreted languages. In Mozilla, JavaScript is the bridge between components and the XUL-based user interface.</p>
+
+<p>译: 在XPCOM世界里大多数接口都是用XPIDL描述的. <code>iWebLock</code>接口的XPIDL文件可以被用来生成C++ header file(你需要它来在组件中实现接口和用来使组件在JavaScript和其它的解译型语言中可访问的类型库). 在Mozilla中, JavaScript是组件与基于XUL的user interface之间的桥梁.</p>
+
+<p>The XPIDL Syntax (XPIDL语法)</p>
+
+<p>The XPIDL syntax is a mix of C++ and Java, and of course it's very much like the OMG IDL upon which it is closely based. The XPIDL for <code>iWebLock</code> appears below:</p>
+
+<p><span id="iWebLock"><a id="iWebLock"></a><strong>iWebLock</strong></span></p>
+
+<pre>#include "nsISupports.idl"
+interface nsISimpleEnumerator;
+[scriptable, uuid(ea54eee4-9548-4b63-b94d-c519ffc91d09)]
+interface iWeblock : nsISupports
+{
+  void lock();
+  void unlock();
+
+  // assume strings are UTF-8
+  void addSite(in string url);
+  void removeSite(in string url);
+  attribute nsISimpleEnumerator sites;
+};
+</pre>
+
+<p>The first line includes the file <code>nsISupports.idl</code>, which defines the <code>nsISupports</code> interface from which all XPCOM interfaces must derive, and makes it possible for the <code>iWebLock</code> interface to subclass that base interface.</p>
+
+<pre>#include "nsISupports.idl"
+</pre>
+
+<p>The next line of the XPIDL is a forward declaration of the interface <code>nsISimpleEnumerator</code>. Again, this is similar to the forward declare in C++ (except that C++ does not have the <code>interface</code> keyword seen here).</p>
+
+<pre>interface nsISimpleEnumerator;
+</pre>
+
+<p>See the <a href="cn/Creating_XPCOM_Components/Resources#XPCOM_Resources">XPCOM resources</a> for more information about the XPIDL syntax.</p>
+
+<h4 id="Scriptable_Interfaces" name="Scriptable_Interfaces">Scriptable Interfaces</h4>
+
+<p>The third line in <a href="#iWebLock">iWebLock</a> is more complex. The first thing it says is that <code>iWebLock</code> will be<em>scriptable</em> .</p>
+
+<pre>[scriptable, uuid(ea54eee4-9548-4b63-b94d-c519ffc91d09)]
+</pre>
+
+<p>The rest of the line provides a UUID for this interface. Recall that every interface has a unique number that is assigned to it. In the case of interfaces, the identifier is an IID. In the case of the components, which also require unique identifiers, the identifier is the CID.</p>
+
+<h4 id="Subclassing_nsISupports" name="Subclassing_nsISupports">Subclassing <code>nsISupports</code></h4>
+
+<p>The next line in <a href="#iWebLock">iWebLock</a> names the interface and defines its base interface. <code>iWeblock</code> derives from <code>nsISupports</code>. XPIDL has no way to define multiple inheritance - something that all scriptable objects must deal with.</p>
+
+<pre>interface iWebLock : nsISupports
+</pre>
+
+<h4 id="The_Web_Locking_Interface" name="The_Web_Locking_Interface">The Web Locking Interface</h4>
+
+<p>The body of the block (the stuff between the curly braces) defines the methods and attributes of our interface. There are basically two functional sets on this interface. The first section of the interface controls whether or not <strong>WebLock</strong> checks to see if a web page can be loaded. If locked, <strong>WebLock</strong> will prevent sites not on the white list from loading.</p>
+
+<pre>  void lock();
+  void unlock();
+</pre>
+
+<p>This interface does not enforce any policy with respect to how the user enables or disables this feature. This allows maximum flexibility in the implementation. Any place in the application can acquire this interface via the Service Manager and call <code>unlock</code> or <code>lock</code>. For example, the user interface may bring up a dialog asking the user for a password before calling <code>unlock</code>. Another area of code, such as a "Profile Manager" that starts up and lets users choose which profile to use, may unconditionally call <code>unlock</code> on such a component when switching a profile.</p>
+
+<p>The next set of functionality manages the white list where acceptable domains are stored:</p>
+
+<pre>  void addSite(in string url);
+  void removeSite(in string url);
+  attribute nsISimpleEnumerator sites;
+</pre>
+
+<p>Operations in this set - <code>add</code>, <code>remove</code>, and <code>enumerate</code> - will be called from a user interface that manages the white list and adds the current website to the white list. There is no policy applied to what sites get added or removed to this list, or who can remove a site.</p>
+
+<p>The most interesting method definition is the enumerator. First of all, it does not look like a method at all:</p>
+
+<pre>attribute nsISimpleEnumerator sites;
+</pre>
+
+<p>This line defines an attribute in the interface. In C++, this is considered a public variable and "compiled" into a <code>Get</code> method (e.g., <code>getSites</code>). If an attribute is not marked <code>readonly</code>, then both <code>Get</code> and <code>Set</code> methods are generated.</p>
+
+<p>The getter created by this attribute returns a <code>nsISimpleEnumerator</code> interface pointer. This interface allows you to pass a list of elements between interfaces. It has two methods: <code>hasMoreElements()</code> and <code>getNext()</code>.</p>
+
+<pre>[scriptable, uuid(D1899240-F9D2-11D2-BDD6-000064657374)]
+interface nsISimpleEnumerator : nsISupports
+{
+  /**
+   * Called to determine whether or not the enumerator has
+   * any elements that can be returned via getNext(). This method
+   * is generally used to determine whether or not to initiate or
+   * continue iteration over the enumerator, though it can be
+   * called without subsequent getNext() calls. Does not affect
+   * internal state of enumerator.
+   *
+   * @see getNext()
+   * @return PR_TRUE if there are remaining elements in the enumerator.
+   *         PR_FALSE if there are no more elements in the enumerator.
+   */
+  boolean hasMoreElements();
+
+  /**
+   * Called to retrieve the next element in the enumerator. The "next"
+   * element is the first element upon the first call. Must be
+   * preceded by a call to hasMoreElements() which returns PR_TRUE.
+   * This method is generally called within a loop to iterate over
+   * the elements in the enumerator.
+   *
+   * @see hasMoreElements()
+   * @return NS_OK if the call succeeded in returning a non-null
+   *               value through the out parameter.
+   *         NS_ERROR_FAILURE if there are no more elements
+   *                          to enumerate.
+   * @return the next element in the enumeration.
+   */
+  nsISupports getNext();
+};
+</pre>
+
+<h3 id="Implementing_WebLock" name="Implementing_WebLock">Implementing <strong>WebLock</strong></h3>
+
+<p>Once you have defined the interfaces that the component will implement, you can begin to write the implementation code that will actually carry out the web locking functionality.</p>
+
+<p>The <strong>WebLock</strong> component implements three interfaces:</p>
+
+<ul>
+ <li><code>nsISupports</code></li>
+ <li><code>nsIObserver</code></li>
+ <li><code>iWebLock</code></li>
+</ul>
+
+<p><code>nsISupports</code> is the base interface that all XPCOM objects must implement. The <code>nsIObserver</code> interface is for listening to various events that Gecko generates. Finally, the <code>iWebLock</code> interface is the interface that actually controls the web locking functionality. The first two have already been implemented as part of the generic module code. Recall from <a href="cn/Creating_XPCOM_Components/Using_XPCOM_Utilities_to_Make_Things_Easier">Using XPCOM Utilities to Make Things Easier</a> that implementing these basic interfaces can be easy and straightforward if you use the macros and other utilities that XPCOM provides.</p>
+
+<h4 id="Declaration_Macros" name="Declaration_Macros">Declaration Macros</h4>
+
+<p>The class declaration for the <code>WebLock</code> class that implements these three interfaces is as follows:</p>
+
+<pre>class WebLock: public nsIObserver, public iWebLock
+{
+  public:
+    WebLock();
+    virtual ~WebLock();
+
+    NS_DECL_ISUPPORTS
+    NS_DECL_NSIOBSERVER
+    NS_DECL_IWEBLOCK
+};
+</pre>
+
+<p>Note that we derive from the <code>nsIObserver</code> interface as well as the <code>iWeblock</code> class. We do not need to explicitly derive from <code>nsISupports</code> as both of these two other interfaces are already subclasses of <code>nsISupports</code>:</p>
+
+<p><span id="Interface_Hierarchy_for_WebLock"><a id="Interface_Hierarchy_for_WebLock"></a><strong>Interface Hierarchy for WebLock</strong></span></p>
+
+<p><img alt="Image:weblock-interface-hierarchy.png"></p>
+
+<p>The body of the class declaration uses declaration macros that are generated from an XPIDL interface file. Every header generated from an XPIDL file has a similar macro that defines all the methods in that interface. This makes changes to the interface when designing a bit simpler, as you do not have to modify any class declarations.</p>
+
+<p>There are times, of course, when you cannot use these macros-as when two interfaces share the same method signatures. In these cases you have to manually declare the methods in your class. But in practice, manually declaring class methods in XPCOM is the exception and not the rule. The <code>NS_DECL_IWEBLOCK</code> declaration macro expands into the following:</p>
+
+<pre>  NS_IMETHOD Lock(void);
+  NS_IMETHOD Unlock(void);
+  NS_IMETHOD AddSite(const char *url);
+  NS_IMETHOD RemoveSite(const char *url);
+  NS_IMETHOD GetSites(nsISimpleEnumerator * *aSites);
+  NS_IMETHOD SetSites(nsISimpleEnumerator *aSites);
+</pre>
+
+<h4 id="Representing_Return_Values_in_XPCOM" name="Representing_Return_Values_in_XPCOM">Representing Return Values in XPCOM</h4>
+
+<p>The code sample above is the C++ version of the <code>iWebLock</code> interface methods. The return result of XPCOM methods generated from XPIDL is always of the type <code>nsresult</code>, and the small macro used in these expansions, <code>NS_IMETHOD</code>, actually represents that return type. <code>nsresult</code> is returned even when in XPIDL you specify that the method return a <code>void</code>. If you require the return result to be something else, the methods are not truly XPCOM methods. If you really want to change the return result type you can use a special flag in your XPIDL that denotes this (see <a class="external" href="http://www.mozilla.org/scriptable/xpidl/">the XPIDL reference</a>). However, we suggest that you simply add an out parameter to the method.</p>
+
+<h4 id="XPIDL_Code_Generation" name="XPIDL_Code_Generation">XPIDL Code Generation</h4>
+
+<p>The XPIDL compiler also generates a stub implementation of the interface in a commented section of the generated header file, in which each method returns <code>NS_ERROR_NOT_IMPLEMENTED</code>. If you copy the stub implementation from the header file into the source, then rename the dummy class name ("<code>_MYCLASS_</code>") to the <code>WebLock</code> class name already defined, you should be able to compile the source successfully.</p>
+
+<h4 id="Getting_the_WebLock_Service_from_a_Client" name="Getting_the_WebLock_Service_from_a_Client">Getting the WebLock Service from a Client</h4>
+
+<p>At this point, you can install the XPCOM component and have other systems use it. The component doesn't do anything useful, of course, but you have written enough of the code to have it recognized and accessed as a component in XPCOM. The code snippet below illustrates how to get the <strong>WebLock</strong> service when the component is present:</p>
+
+<pre>nsCOMPtr&lt;nsIServiceManager&gt; servMan;
+nsresult rv = NS_GetServiceManager(getter_AddRefs(servMan));
+if (NS_FAILED(rv))
+{
+  printf("ERROR: XPCOM error [%x].\n", rv);
+  return -1;
+}
+nsCOMPtr&lt;iWebLock&gt; weblock;
+rv = servMan-&gt;GetServiceByContractID("@dougt/weblock",
+                                     NS_GET_IID(iWeblock),
+                                     getter_AddRefs(weblock));
+
+if (NS_FAILED(rv))
+{
+  printf("ERROR: XPCOM obtaining service [%x].\n", rv);
+  return -1;
+}
+</pre>
+
+<h4 id="Implementing_the_iWebLock_Interface_.28.E5.AE.9E.E7.8E.B0iWebLock.E6.8E.A5.E5.8F.A3.29" name="Implementing_the_iWebLock_Interface_.28.E5.AE.9E.E7.8E.B0iWebLock.E6.8E.A5.E5.8F.A3.29">Implementing the <code>iWebLock</code> Interface (实现iWebLock接口)</h4>
+
+<p>Once the interface is defined, you can focus on implementing the web lock startup functionality itself. The <strong>WebLock</strong> component starts automatically when XPCOM is started up because it's been registered as a category in XPCOM. When <strong>WebLock</strong> is called, one of the first things it wants to do is read in a file that lists the <abbr title="Uniform Resource Locator">URLs</abbr> that the browser is allowed to load. This file can exist anywhere on the local system, but we've placed it next to the application to keep things simple. The first step in this implementation phase, then, is to create the functionality that accesses this <strong>WebLock</strong> white list and uses its data to determine which domains are allowed and which are to be blocked. For this, we need to use the file interfaces available in XPCOM.</p>
+
+<p>一旦接口已被定义, 那你的重点应该放在实现web lock的功能上. 当XPCOM运行后WebLock组件也会被自动运行, 因为它已经被注册成为一个XPCOM中的category. 当WebLock被调用时, 它应该做的第一个事情就是读取一个文件, 这个文件列出了允许被浏览器加载的URLs. 这个文件可以位于本地系统中的任何位置, 但我们需要将其放置在距应用程序不远的地方以便操作起来简单一些. 接下来在实现阶段的第一步是实现两个功能, 一是访问WebLock的白名单, 二是使用这些数据去决定哪些域是被允许, 以及哪些是应该被拦截的. 为此, 我们需要使用XPCOM中的文件接口.</p>
+
+<h5 id="File_Interfaces" name="File_Interfaces">File Interfaces</h5>
+
+<p>Files and directories are abstracted and encapsulated by interfaces. There are a few reasons for not using strings to represent file locations, but the most important one is that not all file systems can be represented by a series of characters separated by a slash. On the Macintosh platform, for example, files are represented as a triplet - two numbers and one string - so using a string on the Macintosh does not adequately identify files on that operating system.</p>
+
+<p>文件和目录是通过接口来抽象和封装的. 这里有几个原因说明为什么不使用字符串来表示文件位置, 但更重要的一点是并不是所有的文件系统都能够表示成斜线所分割的字符序列. 例如, 在Macintosh(Apple的系统)平台上, 文件被表示成一个triplet(意思是由三个部分组成), 两个数字一个字符串, 因此在Macintosh系统上使用字符串并不能充分在标识文件.</p>
+
+<p><code>nsIFile</code>, the file interface in XPCOM, provides most of the functionally that file handling requires. That interface includes members representing the file name, file attributes, permissions, existence, and others. A related interface called <code>nsILocalFile</code> provides access to operations specific to local files, but the <code>nsIFile</code> functionality is adequate for the <strong>WebLock</strong> component.</p>
+
+<p>nsIFile, XPCOM中的文件接口, 提供了大多数操作文件所必须的功能. 这个接口中所包含的成员描述了文件的名字, 属性, 权限, 是否存在等等. 与之相关的接口nsILocalFile提供 操作特定的本地文件, 不过nsIFile的功能对于WebLock组件来说已经足够了.</p>
+
+<p><span id="File_Interface_Hierarchy"><a id="File_Interface_Hierarchy"></a><strong>File Interface Hierarchy</strong></span></p>
+
+<p><img alt="Image:file-iface-hierarchy.png"></p>
+
+<div class="side-note">
+<p><span id="Remote_Files_and_nsIFile"><a id="Remote_Files_and_nsIFile"></a><strong>Remote Files and nsIFile</strong></span></p>
+
+<p>It is not inconceivable for remote files to be represented by the <code>nsIFile</code> interface. Someone could write an <code>nsIFile</code> implementation that represented FTP files on some server. The existing code would need to change very little for a <strong>WebLock</strong> implementation to take advantage of files that do not actually exist on disk. This kind of implementation does not exist, but this expandability shows some of the flexibility that interface-based programming can provide.</p>
+
+<p>并不难想象, 为远程文件使用nsIFile接口来表示它. 某人可以写一个nsIFile的实现用以表示一些服务器上的FTP文件. 已经存在的代码必须要做一些效小的修改以使WebLock的实现可以接受实际上并不是存在于磁盘上的文件. 这种类型的实现虽然还并不存在, 但至少这种扩展性可以显现出一些基于接口的编程带来的灵活性.</p>
+
+<p>The <a href="cn/XPCOM_API_Reference">XPCOM API Reference</a> contains detailed information on <code>nsIFile</code> and other XPCOM interfaces.</p>
+</div>
+
+<h4 id="The_Directory_Service_.28.E7.9B.AE.E5.BD.95.E6.9C.8D.E5.8A.A1.29" name="The_Directory_Service_.28.E7.9B.AE.E5.BD.95.E6.9C.8D.E5.8A.A1.29">The Directory Service (目录服务)</h4>
+
+<p>The file interfaces are most useful when you can use them to find and manipulate files that are relative to the application. The Directory Service provides directory and file locations in a cross platform uniform way to make this easier. This service, available as <code>nsIDirectoryService</code>, stores the location of various common system locations, such as the the directory containing the running process, the user's <code>HOME</code> directory, and others. It can be expanded so that applications and components can define and store their own special locations - an application plugin directory, for example, preference files and/or directories, or other application specific paths. For example, to expose the location of the "white list" file containing all of the URLs that are safe for <strong>WebLock</strong>, you can add its location to the <code>nsDirectoryService</code>, which clients can then query for this infomation.</p>
+
+<p>文件接口较有助于当你使用它们去查找和操作与应用相关的文件. 目录服务提供了跨平台的目录与文件定位的统一方法, 这使得进行这种操作变得容易. 这个服务(利用nsIDirectoryService)存储了各种各样通用系统区域的位置, 例如像是包括了正在运行的程序的目录, 用户的HOME目录等等. 因此它可以被扩展为应用程序和组件能够定义并且存储它们自己的特定位置(应用程序插件目录), 例如, 用户自定义的文件和目录, 或者其它的应用程序的特定路径. 比如指定一个"white list"所在的位置, 它包括了所有对于WebLock来讲是安全的URLs, 你可以将这个位置添加到nsDirectoryService中, 使客户端接下来可以查询到这个信息.</p>
+
+<p>The Directory Service implements the <code>nsIProperties</code> interface, which allows you to <code>Get()</code>, <code>Set()</code>, and <code>Undefine()</code> interface pointers. In the case of <strong>WebLock</strong>, these interface pointers will be <code>nsIFile</code> objects.</p>
+
+<p>目录服务实现了nsIProperties接口, 它允许你Get(), Set()以及Undefine()接口指针. 在WebLock中这些接口指针是nsIFile对象.</p>
+
+<pre>[scriptable, uuid(78650582-4e93-4b60-8e85-26ebd3eb14ca)]
+interface nsIProperties : nsISupports
+{
+    /**
+     * Gets a property with a given name.
+     * 用给定的名字(name)取得一个属性(property)
+     *
+     * @return NS_ERROR_FAILURE if a property with that
+     * name doesn't exist.
+     * 如果给定名字的属性不存在, 函数返回NS_ERROR_FAILURE
+     * @return NS_ERROR_NO_INTERFACE if the
+     * found property fails to QI to the
+     * given iid.
+     * 如果取得的属性在以给定的iid于QI方法上调用失败,
+     * 函数返回NS_ERROR_NO_INTERFACE
+     */
+    void get(in string prop,
+             in nsIIDRef iid,
+             [iid_is(iid),retval] out nsQIResult result);
+
+    /**
+     * Sets a property with a given name to a given value.
+     * 用给定的名字和给定的值为设置一个属性
+     */
+    void set(in string prop, in nsISupports value);
+
+    /**
+     * Returns true if the property with the given name exists.
+     * 如果与给定名字的属性存在, 返回true
+     */
+    boolean has(in string prop);
+
+    /**
+     * Undefines a property. 取消一个属性的定义
+     * @return NS_ERROR_FAILURE if a property with that name doesn't
+     * already exist.
+     * 如果给定名字的属性还不存在, 那么函数返回NS_ERROR_FAILURE
+     */
+    void undefine(in string prop);
+
+    /**
+     *  Returns an array of the keys.
+     *  返回一个key的集合
+     */
+    void getKeys(out PRUint32 count,
+                 [array, size_is(count), retval] out string keys);
+};
+</pre>
+
+<p><span id="Directory_Service_Hierarchy"><a id="Directory_Service_Hierarchy"></a><strong>Directory Service Hierarchy</strong></span></p>
+
+<p><img alt="Image:directoryservice-iface-hierarchy.png"></p>
+
+<p>There are two steps involved to find directories or files with the Directory Service (<code>nsIDirectoryService</code>). You must know the string key (or property) that refers to the location you are interested in, which is published in the file <code>nsDirectoryServiceDefs.h</code> that comes with the Gecko SDK (for a listing of these locations, see the <a href="cn/XPCOM_API_Reference">XPCOM API Reference</a>). The string key for the directory containing the application executable is <code>NS_XPCOM_CURRENT_PROCESS_DIR</code>. Given this key, you can acquire the directory service, call <code>Get()</code>, and pass the key. In the example below, <code>appDir</code> will point to the directory that contains the executable.</p>
+
+<p>这里有两个步骤有关于通过目录服务(nsIDirectoryService)查找目录或文件. 你必须要知道字符串键(或叫属性)用以引用你所想要的位置, 字符串键(或叫属性)被公开于随Gecko SDK一起提供的nsDirectoryServiceDefs.h文件中(可参见<a href="cn/XPCOM_API_Reference">XPCOM API Reference</a>以得到这些位置的一个列表). 包含可执行程序的目录的字符串键是NS_XPCOM_CURRENT_PROCESS_DIR. 给定这个键, 你就可以通过调用Get()并将键传递到函数中以获得目录服务. 在下面的实例中, appDir将指向一个包含了可执行程序的目录.</p>
+
+<pre>nsCOMPtr&lt;nsIServiceManager&gt; servMan;
+nsresult rv = NS_GetServiceManager(getter_AddRefs(servMan));
+if (NS_FAILED(rv)) return -1;
+
+nsCOMPtr&lt;nsIProperties&gt; directoryService;
+rv = servMan-&gt;GetServiceByContractID(NS_DIRECTORY_SERVICE_CONTRACTID,
+                                     NS_GET_IID(nsIProperties),
+                                     getter_AddRefs(directoryService));
+
+if (NS_FAILED(rv)) return -1;
+
+nsCOMPtr&lt;nsIFile&gt; appDir;
+rv = directoryService-&gt;Get(NS_XPCOM_CURRENT_PROCESS_DIR,
+                           NS_GET_IID(nsIFile),
+                           getter_AddRefs(appDir));
+
+if (NS_FAILED(rv)) return -1;
+</pre>
+
+<p>Most of the useful functionality is exposed by the <code>nsIProperties</code> interface, but the directory service also implements <code>nsIDirectoryService</code>. This interface allows you to extend and override <code>nsIFile</code> objects registered with the directory service. There are currently two ways to add a file location to the directory service: directly and using the delayed method. The direct method is to add a new <code>nsIFile</code> object using the <code>nsIProperties</code> interface, in which case you pass the <code>nsIFile</code> object as an <code>nsISupports</code> to the <code>Set()</code> method of the <code>nsIProperties</code> interface.</p>
+
+<p>大多数有用的功能都是通过nsIProperties接口所提供, 但目录服务还实现了nsIDirectoryService. nsIDirectoryService接口允许利用目录服务你去扩展和重写nsIFile对象的注册. 当前有两种方法添加一个文件位置到目录服务中:立即的与延迟的两种方法. 立即的方法是使用nsIProperties接口添加一个新的nsIFile对象, 在这种情况下你要把nsIFile对象当成一个nsISupports传递给nsIProperties接口的Set()函数.</p>
+
+<p>In the delayed method, you register to be a callback that can provide an <code>nsIFile</code>. To do this, you must get the implementation like we did above. When you have it, <code>QueryInterface</code> for the <code>nsIDirectoryService</code> interface. In this interface, there is a function which allows you to register an <code>nsIDirectoryServiceProvider</code> interface. The interface callback looks like this:</p>
+
+<pre>[scriptable, uuid(bbf8cab0-d43a-11d3-8cc2-00609792278c)]
+interface nsIDirectoryServiceProvider: nsISupports
+{
+/**
+* getFile
+*
+* Directory Service calls this when it gets the first request for
+* a prop or on every request if the prop is not persistent.
+*
+* @param prop The symbolic name of the file.
+* @param persistent TRUE - The returned file will be cached by Directory
+* Service. Subsequent requests for this prop will
+* bypass the provider and use the cache.
+* FALSE - The provider will be asked for this prop
+* each time it is requested.
+*
+* @return The file represented by the property.
+*
+*/
+nsIFile getFile(in string prop, out PRBool persistent);
+};
+</pre>
+
+<h4 id="Modifying_Paths_with_nsIFile" name="Modifying_Paths_with_nsIFile">Modifying Paths with <code>nsIFile</code></h4>
+
+<p>The directory service returns an <code>nsIFile</code> object, but that object points to the application directory and not the file itself. To modify this <code>nsIFile</code> so that it points to the file, you must call the <code>Append</code> method of the <code>nsIFile</code>. <code>Append</code> adds the input string to the path already specified in the <code>nsIFile</code>. On Unix, for example, calling <code>Append("b")</code> on an <code>nsIFile</code> modifies that <code>nsIFile</code> representing <code>/u/home/dougt/a</code> to point to <code>/u/home/dougt/a/b</code>. The next operation on the <code>nsIFile</code> returns results associated with the "b" path. If "a" wasn't a directory, further operations would fail, even if the initial <code>Append</code> was successful. This is why <code>Append</code> is considered a string operation.</p>
+
+<p>目录服务返回一个nsIFile对象, 但nsIFile对象指向的是应用程序目录而并不是文件. 因此为了修改nsIFile对象以指向文件你必须要调用nsIFile的Append函数. Append函数将字符串输入参数追加到已经被指定到nsIFile的路径里. 例如在Unix里, 在一个nsIFile上调用Append("b")将使nsIFile从指向/u/home/dougt/a修改为指向/u/home/dougt/a/b. 在nsIFile上的后续操作返回的结果将是关于"b"这个路径的. 如果"a"不是一个目录, 那么进一步的操作将会失败, 尽管对于Append函数的调用是成功的. 这就是为什么Append函数被认为是对字符串的操作(不进行目录路径的有效性验证).</p>
+
+<p>The <strong>WebLock</strong> component manipulates a file named <code>weblock.txt</code>. The following snippet adjusts the <code>theFile</code> object representing that file:</p>
+
+<p>WebLock组件操作名为weblock.txt的文件, 以下程序片段调整了theFile对象以表示那个文件:</p>
+
+<pre>nsEmbedCString fileName("weblock.txt");
+appDir-&gt;AppendNative(fileName);
+</pre>
+
+<h4 id="Manipulating_Files_with_nsIFile" name="Manipulating_Files_with_nsIFile">Manipulating Files with <code>nsIFile</code></h4>
+
+<p>Once you have an <code>nsIFile</code> object pointing to the file that you're interested in, you can open it and read its contents into memory. There are many ways to do this: You can use Standard ANSI File I/O, or NSPR (see <a href="#The_Netscape_Portable_Runtime_Library">The Netscape Portable Runtime Library</a> below for a brief description of NSPR), or you can use the networking APIs that Gecko provides.</p>
+
+<div class="side-note">
+<p><span id="The_Netscape_Portable_Runtime_Library"><a id="The_Netscape_Portable_Runtime_Library"></a><strong>The Netscape Portable Runtime Library</strong></span></p>
+
+<p>The<em>Netscape Portable Runtime Library</em> (NSPR) is a platform-independent library that sits below XPCOM. As a layer of abstraction above the operating system, the NSPR allows Gecko applications to be platform independent by providing the following system-level facilities:</p>
+
+<ul>
+ <li>Threads</li>
+ <li>Thread synchronization</li>
+ <li>File and network I/O</li>
+ <li>Timing and intervals</li>
+ <li>Memory management</li>
+ <li>Shared library linking</li>
+</ul>
+
+<p>The NSPR is included in the Gecko SDK.</p>
+</div>
+
+<p>To keep things as simple as possible, we'll read the file into memory using standard ANSI file I/O, but for examples and information about how to use<em>necko</em> , the Gecko networking libraries, see <a class="external" href="http://www.mozilla.org/projects/netlib/" rel="freelink">http://www.mozilla.org/projects/netlib/</a>.</p>
+
+<h4 id="Using_nsILocalFile_for_Reading_Data" name="Using_nsILocalFile_for_Reading_Data">Using <code>nsILocalFile</code> for Reading Data</h4>
+
+<p>An <code>nsIFile</code> object returned from the directory service may also implement the <code>nsILocalFile</code> interface, which has a method that will return a <code>FILE</code> pointer that can be used in <code>fread()</code>. To implement the actual read, you need to allocate a buffer the length of the file, use the <code>nsILocalFile</code> interface pointer to obtain a <code>FILE *</code>, use this result with <code>fread</code>, and close the file pointer.</p>
+
+<p>The following code loads the contents of the file referenced by the <code>nsIFile</code> object <code>theFile</code> into the buffer <code>buf</code>:</p>
+
+<pre>nsCOMPtr&lt;nsILocalFile&gt; localFile = do_QueryInterface(theFile);
+if (!localFile)
+  return -1;
+
+PRBool exists;
+rv = theFile-&gt;Exists(&amp;exists);
+if (NS_FAILED(rv))
+  return -1;
+
+char *buf = NULL;
+
+if (exists)
+{
+  // determine file size:
+  PRUint32 fs, numread;
+  PRInt64 fileSize;
+  rv = theFile-&gt;GetFileSize(&amp;fileSize);
+  if (NS_FAILED(rv))
+    return -1;
+
+  // Converting 64 bit value to unsigned int
+  LL_L2UI(fs, fileSize);
+
+  FILE* openFile;
+  rv = localFile-&gt;OpenANSIFileDesc("rw", &amp;openFile);
+  if (NS_FAILED(rv))
+    return -1;
+
+  char *buf = (char *)malloc((fs+1) * sizeof(char));
+  if (!buf)
+    return -1;
+
+  numread = fread(buf, sizeof(char), fs, openFile);
+
+  if (numread != fs)
+    // do something useful.
+
+  // ...
+}
+
+if (buf)
+  free(buf);
+</pre>
+
+<p>The first line of the code calls <code>QueryInterface</code> on <code>theFile</code>, and if that succeeds assigns the new interface pointer to <code>localFile</code>. If the <code>QueryInterface</code> call fails, <code>localFile</code> will have a value of <code>NULL</code>.</p>
+
+<div class="side-note">
+<p>Note that the out parameter of the method <code>GetFileSize</code> is a 64-bit integer. The type of this variable is <code>PRInt64</code>, but this type is not represented as a primitive on all platforms. On some platforms, <code>PRInt64</code> is a <code>struct</code> with two fields - a high and a low 32-bit integer. So operations on this type must use special macros that do the right thing on each platform. On Windows or Linux, for example, it is possible to multiply a <code>PRInt64</code> by a long like this:</p>
+
+<pre>PRInt64 x = 1, y = 2;
+y = x * 2;
+</pre>
+
+<p>However, this same snippet will not compile on a platform like Macintosh OS 9, where you need to use macros to perform the calculation:</p>
+
+<pre>PRInt64 x, y, two;
+LL_I2L(x, 1);
+LL_I2L(y, 2);
+LL_I2L(two, 2);
+LL_MUL(y, x, two);
+</pre>
+
+<p>A full listing of NSPR's <code>long long</code> support can be found at <a class="external" href="http://www.mozilla.org/projects/nspr/" rel="freelink">http://www.mozilla.org/projects/nspr/</a>.</p>
+
+<p>The <strong>WebLock</strong> component doesn't have to deal with files that are longer than 2<sup>32</sup> bytes. Truncating this value to whatever can fit into a 32-bit unsigned integer may not work for every application, but in this case it doesn't really matter.</p>
+</div>
+
+<h4 id="Processing_the_White_List_Data" name="Processing_the_White_List_Data">Processing the White List Data</h4>
+
+<p>There are various ways to process the file data itself. The file <code>weblock.txt</code> consists of URL tokens separated by return characters, which makes them easy to read into a data structure.</p>
+
+<p>The white list file can be read in as soon as the component starts up (i.e., as <strong>WebLock</strong> intercepts the startup notification in the <code>Observe</code> method of the <code>nsIObserver</code> interface that we implement). Since we have only registered to receive a notification when XPCOM starts up, it's a safe assumption that <code>Observe</code> will only be called during the startup event, so we can read the file data in the callback.</p>
+
+<p>After you've read the data into memory, you need to store it in some way to make data access quick and efficient.</p>
+
+<div class="side-note">
+<p><span id="URL_Checking"><a id="URL_Checking"></a><strong>URL Checking</strong></span></p>
+
+<p>The way in which URL checking is implemented in the <strong>WebLock</strong> component is not at all optimal. The <strong>WebLock</strong> component manages a simple linked list of URL strings. A linear search through the data in the white list may not be terribly bad if the number of URLs is under a couple of dozen, but it decays as the list grows. There's also a large bottleneck in the network request. URL data is accessed as in the diagram below:</p>
+
+<p><img alt="Image:urldata-access-in-weblock.png"></p>
+
+<p>You might construct hash values for each of the URL strings instead, or add them to some kind of database. But we leave optimizations and real-world performance for web locking to the reader.</p>
+</div>
+
+<h3 id="iWebLock_Method_by_Method" name="iWebLock_Method_by_Method"><code>iWebLock</code> Method by Method</h3>
+
+<p>The implementation of the <code>iWeblock</code> interface is straightforward. <strong>WebLock</strong> is designed so that the user interface notifies this service when we should go into lock mode. During this time, any new URL request that is not in our list of "good" URLs will be denied. Through scriptable access to the <code>iWebLock</code> interface, the user interface can also add, remove, and enumerate the list of URLs that it knows about.</p>
+
+<h4 id="Lock_and_Unlock" name="Lock_and_Unlock"><code>Lock</code> and <code>Unlock</code></h4>
+
+<p>The <code>lock</code> and <code>unlock</code> methods simply set a Boolean representing state in the object. This Boolean value will be used later to determine if we should be denying URL requests:</p>
+
+<pre>/* void lock (); */
+NS_IMETHODIMP
+WebLock::Lock()
+{
+  mLocked = PR_TRUE;
+  return NS_OK;
+}
+
+/* void unlock (); */
+NS_IMETHODIMP WebLock::Unlock()
+{
+  mLocked = PR_FALSE;
+  return NS_OK;
+}
+</pre>
+
+<h4 id="AddSite" name="AddSite"><code>AddSite</code></h4>
+
+<p>For <code>AddSite</code>, we add a new node to our linked list. The link list nodes contain a <code>char*</code> which points to the string URL that we care about and, of course, a pointer to the next element in the list.</p>
+
+<div class="side-note">
+<p><span id="%3Ccode%3EnsMemory%3C/code%3E_for_Cross-component_Boundaries"><a id="%3Ccode%3EnsMemory%3C/code%3E_for_Cross-component_Boundaries"></a><strong><code>nsMemory</code> for Cross-component Boundaries</strong></span></p>
+
+<p>WebLock maintains ownership of all the memory it allocates, so you can use just about any allocator that you want for <strong>WebLock</strong>, but this is not always the case. In other places, where allocated buffers cross interface boundaries, you must ensure that the correct allocator is used - namely <code>nsMemory</code> - so that the allocators can match the allocation with the deallocation.</p>
+
+<p>Suppose you call <code>malloc</code> from object A and pass this buffer to another object B, for example. But if object B is using a special allocator that does garbage collection, then when object B deletes a buffer allocated by object A's allocator, the results are unpredictable: probably an assertion will be raised, possibly a memory leak, or a crash. The <code>nsMemory</code> class is a wrapper around the <code>nsIMemory</code> interface, whose only implementation is part of XPCOM. When you use <code>nsMemory</code>, you are guaranteed to be using this same memory allocator in all cases, and this avoids the problem described here.</p>
+</div>
+
+<h4 id="RemoveSite" name="RemoveSite"><code>RemoveSite</code></h4>
+
+<p><code>RemoveSite</code> deletes a node from the linked list:</p>
+
+<pre>// a simple link list.
+struct urlNode
+{
+  char* urlString;
+  struct urlNode* next;
+};
+
+/* void addSite (in string url); */
+NS_IMETHODIMP
+WebLock::AddSite(const char *url)
+{
+  // we don't special-case duplicates here
+  urlNode* node = (urlNode*) malloc(sizeof(urlNode));
+  node-&gt;urlString = strdup(url);
+  node-&gt;next = mRootURLNode;
+  mRootURLNode = node;
+
+  return NS_OK;
+}
+
+/* void removeSite (in string url); */
+NS_IMETHODIMP
+WebLock::RemoveSite(const char *url)
+{
+  // find our entry.
+  urlNode* node = mRootURLNode;
+  urlNode* prev = nsnull;
+
+  while (node)  // test this!
+  {
+    if (strcmp(node-&gt;urlString, url) == 0)
+    {
+      free(node-&gt;urlString);
+      if (prev)
+        prev-&gt;next = node-&gt;next;
+      free(node);
+      return NS_OK;
+    }
+    prev = node;
+    node = node-&gt;next;
+  }
+
+  return NS_ERROR_FAILURE;
+}
+</pre>
+
+<h4 id="SetSites" name="SetSites"><code>SetSites</code></h4>
+
+<p>The purpose of <code>SetSites</code> is to allow clients to pass an enumeration, or set, of URL strings to add to the white list of URLs. <code>SetSites</code> uses an <code>nsISimpleEnumerator</code> and shows how primitive data can be passed as an <code>nsISupports</code> object. The <code>nsISimpleEnumerator</code> interface is shown in <a href="#The_Web_Locking_Interface">The Web Locking Interface</a>.</p>
+
+<p>The first method returns a Boolean if there are more elements in the set. Internally, the object knows the number of elements it has in its enumeration, and every time a client calls <code>getNext</code>, it decrements a counter - or adjusts a pointer to the next element. When the counter goes to zero or the pointer points to a non-element, <code>hasMoreElements</code> will return false.</p>
+
+<p>There is no way to reset an <code>nsISimpleEnumerator</code>. For example, you can't re-enumerate the set. If you need random access to the elements in a <code>nsISimpleEnumerator</code>, you can read them from the <code>nsISimpleEnumerator</code>, store them in an array, and access them there. The <code>getNext</code> method returns a <code>nsISupports</code> interface pointer.</p>
+
+<p>When you want to pass primitive data types like numbers, strings, characters, <code>void *</code>, and others, the solution is to use one of the <code>nsISupportsPrimitive</code> interfaces. These interfaces wrap primitive data types and derive from <code>nsISupports</code>. This allows types like the strings that represent URLs in the <strong>WebLock</strong> component to be passed though methods that take an <code>nsISupports</code> interface pointer. This becomes clear when when you see the implementation of <code>SetSites</code>:</p>
+
+<pre>NS_IMETHODIMP
+WebLock::SetSites(nsISimpleEnumerator * aSites)
+{
+  PRBool more = PR_TRUE;
+  while (more)
+  {
+    nsCOMPtr&lt;nsISupports&gt; supports;
+    aSites-&gt;GetNext(getter_AddRefs(supports));
+
+    nsCOMPtr&lt;nsISupportsCString&gt; supportsString =  do_QueryInterface(supports);
+
+    if (supportsString)
+    {
+      nsEmbedCString url;
+      supportsString-&gt;GetData(url);
+      AddSite(url.get());
+    }
+
+        aSites-&gt;HasMoreElements(&amp;more);
+  }
+
+  return NS_OK;
+}
+</pre>
+
+<h4 id="GetNext" name="GetNext"><code>GetNext</code></h4>
+
+<p><code>GetNext</code> is called with the <code>nsCOMPtr</code> of an <code>nsISupportsCString</code>. <code>nsCOMPtr</code>s are nice because they do whatever <code>QueryInterface</code> calls are necessary under the hood. For example, we know that the <code>GetNext</code> method takes an <code>nsISupports</code> object, but we may not be sure whether the return result supports the interface we want, <code>nsISupportsCString</code>. But after <code>GetNext</code> returns, the <code>nsCOMPtr</code> code takes the out parameter from <code>GetNext</code> and tries to <code>QueryInterface</code> it to the <code>nsCOMPtr</code>'s type. In this case, if the out parameter of <code>GetData</code> does not return something that is <code>QueryInterface</code>-able to an <code>nsISupportsCString</code>, the variable will be set to <code>null</code>. Once you know that you have an <code>nsISupportsCString</code>, you can grab the data from the primitive supports interface.</p>
+
+<p>To get something you can pass into the <code>AddSite</code> method, you need to convert from an <code>nsEmbedCString</code> to a <code>const char*</code>. To do this, you can take advantage of the <code>nsEmbedCString</code> described in <a href="cn/Creating_XPCOM_Components/Using_XPCOM_Utilities_to_Make_Things_Easier#String_Classes_in_XPCOM">String Classes in XPCOM</a>.</p>
+
+<h4 id="GetSites" name="GetSites"><code>GetSites</code></h4>
+
+<p>The implementation of <code>GetSites</code> is more involved. You must construct an implementation of <code>nsISimpleEnumerator</code> and return it when <code>GetSites</code> is called. The class needs to walk the list of <code>urlNode</code>'s for every call to <code>GetNext</code>, so it makes sense for the constructor itself to take an <code>urlNode</code>:</p>
+
+<pre>class myEnumerator : public nsISimpleEnumerator
+{
+  public:
+    NS_DECL_ISUPPORTS
+    NS_DECL_NSISIMPLEENUMERATOR
+
+    myEnumerator(urlNode* node) {
+      NS_INIT_ISUPPORTS()
+      mNode = node;
+    }
+    virtual ~myEnumerator(void) {}
+
+  protected:
+    urlNode* mNode;
+    nsCOMPtr&lt;nsIComponentManager&gt; mCompMgr;
+};
+
+NS_IMPL_ISUPPORTS1(myEnumerator, nsISimpleEnumerator);
+</pre>
+
+<p>The <code>myEnumerator</code> class is going to implement the <code>nsISupports</code> interface and also <code>nsISimpleEnumerator</code>. The only state that it needs to maintain is the current URL node - the one that will be return on the next call to <code>GetNext</code>. There is also an <code>nsCOMPtr</code> to the <code>nsIComponentManager</code>, which is used in every call to <code>GetNext</code> so that you can create <code>nsISupportsCString</code> objects and cache the interface pointer as an optimization.</p>
+
+<h4 id="HasMoreElements" name="HasMoreElements"><code>HasMoreElements</code></h4>
+
+<p><code>HasMoreElements</code> is simple. All you need to do is make sure that <code>mNode</code> isn't <code>null</code>:</p>
+
+<pre>NS_IMETHODIMP
+myEnumerator::HasMoreElements(PRBool* aResult)
+{
+  if (!aResult)
+    return NS_ERROR_NULL_POINTER;
+
+  if (!mNode) {
+    *aResult = PR_FALSE;
+    return NS_OK;
+  }
+
+  *aResult = PR_TRUE;
+  return NS_OK;
+}
+</pre>
+
+<p><code>GetNext</code> needs to create an <code>nsISupportsCString</code> so that you can pass the URL string out through the <code>nsISupports</code> parameter. You must also move <code>mNode</code> to point to the next <code>urlNode</code>.</p>
+
+<pre>static NS_DEFINE_CID(kSupportsCStringCID, NS_SUPPORTS_CSTRING_CID);
+
+NS_IMETHODIMP
+myEnumerator::GetNext(nsISupports** aResult)
+{
+  if (!aResult)
+    return NS_ERROR_NULL_POINTER;
+
+  *aResult = nsnull;
+
+  if (!mNode)
+    return NS_ERROR_FAILURE;
+
+  if (!mCompMgr)
+  {
+    NS_GetComponentManager(getter_AddRefs(mCompMgr));
+    if (!mCompMgr)
+      return NS_ERROR_UNEXPECTED;
+  }
+
+  nsISupportsCString* stringSupports;
+  mCompMgr-&gt;CreateInstance(kSupportsCStringCID,
+                           nsnull,
+                           NS_GET_IID(nsISupportsCString),
+                           (void**)&amp;stringSupports);
+  if (!stringSupports)
+    return NS_ERROR_UNEXPECTED;
+
+  nsEmbedCString str(mNode-&gt;urlString);
+  stringSupports-&gt;SetData(str);
+
+  *aResult = stringSupports; // addref'ed above.
+
+  mNode = mNode-&gt;next;
+
+  return NS_OK;
+}
+</pre>
+
+<p>在实际的<code>GetSites</code>呼叫中, 你需要做的就是产生一个<code>myEnumerator</code>实例并且返回它.</p>
+
+<p>此前，我们建立了一个类并且把它注册到组件管理器。当一个客户端需要获取某个接口的实现时，实际上的对象建立过程隐藏在XPCOM代码中。 但是其中, 你要初始化你自己的<code>nsISimpleEnumerator</code>实现. 这是一个简单的事情，但是你需要注意<code>NS_ADDREF</code>.</p>
+
+<pre>NS_IMETHODIMP
+WebLock::GetSites(nsISimpleEnumerator * *aSites)
+{
+  myEnumerator* enumerator = new myEnumerator(mRootURLNode);
+  if (!enumerator)
+    return NS_ERROR_OUT_OF_MEMORY;
+
+  NS_ADDREF(*aSites = enumerator);
+  return NS_OK;
+}
+</pre>
+
+<div class="side-note">
+<p><span id="AddRef,_Releasing,_and_Deleting_Objects"><a id="AddRef,_Releasing,_and_Deleting_Objects"></a><strong>AddRef, Releasing, and Deleting Objects</strong></span></p>
+
+<p>永远不要忘记调用你通过<code>new</code>建立的XPCOM对象的<code>AddRef</code>方法。所有的代码或者活动组件都应该有一个起码一个引用计数。忘记这点可能引起麻烦。</p>
+
+<p>一个相关的警示试你不要忘记永远不要用<code>delete</code>删除一个XPCOM. 当系统的一部分不是释放而是删除一个XPCOM对象的时候，可能会引起几个小时的资源搜索并且引起崩溃。</p>
+</div>
+
+<p>注意上面的实现中，当其他的线程访问链接表的时候<code>myEnumerator</code> 可能变得非法。枚举仅仅表现了访问URL字符串链接表的一个方法。如果你需要枚举成为URL字符串链表的一个快照，你需要重构这个实现让枚举持有一个链表的copy。</p>
+
+<p>当组件中止的时候，你也需要把链表写到磁盘里并且释放空间。我们把这个作为练习留给读者。</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/Creating_XPCOM_Components:Using_XPCOM_Utilities_to_Make_Things_Easier" style="float: left;">« 上一页</a><a href="/zh-CN/docs/Creating_XPCOM_Components:Finishing_the_Component">下一页  »</a></p>
+</div> <p></p><div class="licenseblock">
+<p>Copyright (c) 2003 by Doug Turner and Ian Oeschger. This material may be distributed only subject to the terms and conditions set forth in the <a class="external" href="http://www.opencontent.org/openpub/" rel="noopener">Open Publication License</a>, v1.02 or later. Distribution of substantively modified versions of this document is prohibited without the explicit permission of the copyright holder. Distribution of the work or derivative of the work in any standard (paper) book form is prohibited unless prior permission is obtained from the copyright holder.</p>
+</div><p></p>

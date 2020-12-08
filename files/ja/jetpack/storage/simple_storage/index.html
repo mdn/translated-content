@@ -1,0 +1,78 @@
+---
+title: Simple storage
+slug: Jetpack/Storage/Simple_storage
+translation_of: Archive/Mozilla/Jetpack/Storage/Simple_storage
+---
+<p> <code>jetpack.storage.simple</code> 名前空間はブラウザの再起動をまたいでデータを永続化させるための簡単な方法を提供します。これはシンプルでキーベースの永続するオブジェクトデータの記憶域です。</p>
+<p>Simple storage は本当に単純です。<code>jetpack.storage.simple</code> は １つの存続する JavaScript オブジェクトで、各 jetpack ごとにそれぞれプライベートなものです。ほとんど全ての場合において、このオブジェクトはそのほかの JavaScript オブジェクトと同じように振る舞い、望みうるあらゆるプロパティを設定することが出来ます。そのため、永続化されたデータを扱うのに必要とされるのは、<a class="text" href="/ja/Core_JavaScript_1.5_Reference" rel="nofollow" title="ja/Core JavaScript 1.5 Reference">標準の JavaScript 関数と演算子</a>のみです。</p>
+<p><code>jetpack.simple.storage</code> オブジェクトは自動的かつ定期的にディスクに書き出されます。どのように、いつ、書き出しが行われるかは実装にゆだねられています。しかしながら、<code>jetpack.storage.simple.sync()</code> を呼び出すことにより、手動で書き出しを行う事も可能です。データは自動で読み込まれますが、<code>jetpack.storage.simple.open()</code> を呼び出すことで、強制的にディスクから再読込することも可能です。<strong>これらのメソッドを乱用しないでください。</strong>これらのメソッドはディスクアクセスのために、Firefox（それも全体）が実行中の処理を中断させます。もし、これらのメソッドを頻繁に呼びすぎると、Firefox はユーザの環境によっては応答できなくなるかもしれません。あなたが変なことをするのでなければ、Jetpackがあなたのためにデータを書き出すのに任せてください。</p>
+<p>この名前空間は現在 <a class="link-https" href="https://wiki.mozilla.org/Labs/Jetpack/JEP/13" title="https://wiki.mozilla.org/Labs/Jetpack/JEP/13">future</a> に存在するため使用する前にインポートする必要があります:</p>
+<pre class="brush: js">jetpack.future.import("storage.simple");
+</pre>
+<h2 id="sync()">sync()</h2>
+<p>前述の通り、<code>jetpack.storage.simple</code> オブジェクトは自動的にディスクに書き込まれますが、<code>jetpack.storage.simple.sync() </code>を呼び出すことで強制的に書き出すことも可能です。このメソッドを乱用しないでください。</p>
+<h2 id="open()">open()</h2>
+<p>前述の通り、<code>jetpack.storage.simple</code> オブジェクトは機能の読み込み時に自動的にデータが読み込まれますが、<code>jetpack.storage.simple.open() </code>を呼び出すことでオブジェクトにディスクからの読み出しを強要することも可能です。このメソッドを乱用しないでください。</p>
+<h2 id="例">例</h2>
+<p>このコードはいくつかのデータを永続化して保存します:</p>
+<pre class="brush: js">jetpack.future.import("storage.simple");
+var myStorage = jetpack.storage.simple;
+myStorage.fribblefrops = [1, 3, 3, 7];
+myStorage.heimelfarbs = { bar: "baz" };
+</pre>
+<p>そして、このコードは（上のコードと同じjetpack内にあるものとして）単純にそのデータを利用しています:</p>
+<pre class="brush: js">myStorage.fribblefrops.forEach(function (elt) console.log(elt));
+var bar = myStorage.heimelfarbs.bar;
+jetpack.notifications.show(bar.baz);
+</pre>
+<p>これが全てです！  これらの例では <code>jetpack.storage.simple</code> が単なる普通の JavaScript オブジェクトであるという事実を強調するために変数<code> myStorage </code>を作っていることに注意してください。単純に、<code>jetpack.storage.simple </code>をそのまま使用することも出来ます。</p>
+<p> </p>
+<p>実際に使われるような完全な例は以下の通りです。これはノートを取るための簡単なjetpackです。ページ内の文章を選択し、右クリックして Note を選びます。 文章はノートとして、ブラウザの再起動を跨いで保存されます。全てのノートはツールメニューに表示されます。この例は <a class="external" href="http://jetpackgallery.mozillalabs.com/jetpacks/245" title="http://jetpackgallery.mozillalabs.com/jetpacks/245">Jetpack Gallery</a> からインストールすることが出来ます。</p>
+<pre class="brush: js">jetpack.future.import("menu");
+jetpack.future.import("selection");
+jetpack.future.import("storage.simple");
+
+// 存在しない場合、永続化するノート達の配列を作る
+jetpack.storage.simple.notes = jetpack.storage.simple.notes || [];
+var notes = jetpack.storage.simple.notes;
+
+// Jetpackのメニューを現在のノート達で更新する。
+// 全てのノート達のリストをサブメニューとして持つ Notes メニューを追加する。
+// ノートが１つも存在しない場合は、
+// 無効化された "(Empty)" メニューアイテムを表示する.
+function updateJetpackMenu() {
+  jetpack.menu.set({
+    label: "Notes",
+    menu: new jetpack.Menu(notes.length &gt; 0 ?
+                           notes :
+                           [{ label: "(Empty)", disabled: true }])
+  });
+}
+
+// ページのコンテキストメニューを表示される前にこっそり変更する。
+// もし、選択範囲が有る場合は、新しいノートを作るための Note メニューアイテムを追加し、そうでない場合は
+// メニューを何も変更しない。 ノート達の数は20個に制限し、
+// 古いノートは忘れてしまう。 :(
+jetpack.menu.context.page.beforeShow = function (menu) {
+  menu.reset();
+  if (jetpack.selection.text)
+    menu.add({
+      label: "Note",
+      command: function () {
+        notes.unshift(jetpack.selection.text);
+        if (notes.length &gt; 20)
+          notes.pop();
+        updateJetpackMenu();
+      }
+    });
+};
+
+// Initialize the Jetpack menu with the current notes.
+updateJetpackMenu();
+</pre>
+
+<h2 id="See_also"><span id="f-lastmod">See also</span></h2>
+<ul>
+ <li><a href="/ja/Jetpack/Storage/Settings" title="ja/Jetpack/Storage/Settings"><span>設定</span></a></li>
+ <li><a class="link-https" href="https://wiki.mozilla.org/Labs/Jetpack/JEP/11" title="https://wiki.mozilla.org/Labs/Jetpack/JEP/11">Jetpack Enhancement Proposal 11</a></li>
+</ul>

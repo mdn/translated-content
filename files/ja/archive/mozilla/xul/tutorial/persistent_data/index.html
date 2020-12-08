@@ -1,0 +1,74 @@
+---
+title: 永続性のあるデータ
+slug: Archive/Mozilla/XUL/Tutorial/Persistent_Data
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Persistent_Data
+---
+<p>
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Advanced_Rules" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Adding_Style_Sheets">次のページ  »</a></p>
+</div>
+<p>このセクションでは、XUL ウィンドウの状態を保存する方法について説明します。
+</p>
+<h3 id=".E7.8A.B6.E6.85.8B.E3.82.92.E4.BF.9D.E5.AD.98.E3.81.99.E3.82.8B" name=".E7.8A.B6.E6.85.8B.E3.82.92.E4.BF.9D.E5.AD.98.E3.81.99.E3.82.8B"> 状態を保存する </h3>
+<p>大きなアプリケーションを作るときには、しばしば、セッションを越えてウィンドウの状態を保存したい場合があると思います。
+例えば、利用者がアプリケーションを終了したときに、そのウィンドウでは、どのツールバーが<span style="border-bottom: 1px dashed green;" title="collapsed">折り畳まれて</span>いたかが保存されるほうが、利用者にとっての利便性が向上します。
+</p><p>このためには、スクリプトを作成して保存しておきたい情報の収集を行い、それをファイルに保存する方法も考えられますが、
+すべてのアプリケーションについて同様の処理を作成していくのは、苦痛でしかないと思います。
+幸いなことに、XUL では、ウィンドウの状態を保存するメカニズムが提供されているため、これを利用するのがより便利な方法になります。
+</p><p>この方法を利用すると、必要な情報が収集されて、利用者の他の<span style="border-bottom: 1px dashed green;" title="preferences">設定情報</span>を置くのと同じディレクトリに、RDF ファイル <code>localstore.rdf</code> として保存されるようになります。
+つまり、この RDF ファイルに、個々のウィンドウの状態についての情報が保持されるということです。
+また、この方法には、Mozilla のユーザプロファイルと連動するという利点もあります。
+これは、個々の利用者ごとに異なった設定が可能になることを意味しています。
+</p><p>XUL では、どの要素の状態も保存できます。
+通常は、ツールバーの状態やウィンドウの位置、あるいはパネルが表示されているかどうかといった情報を保存させたい場合が多いと思いますが、機能としては、ほとんど何でも保存することが可能です。
+</p>
+<h4 id="persist_.E5.B1.9E.E6.80.A7" name="persist_.E5.B1.9E.E6.80.A7"> persist 属性 </h4>
+<p>状態を保存可能にするためには、保存したい値をもつ要素に <code>persist</code> 属性を追加するだけです。<span style="color: darkgreen; background: #ef9;">【訳注: persist は「持続する」あるいは「永続する」といった意味】</span>
+<code><code id="a-persist"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/persist">persist</a></code></code> 属性の値には、その要素で保存したい属性を、空白区切りのリスト形式で指定します。
+なお、<code>persist</code> を設定する要素には、その要素を識別できるように <code><code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> 属性を設定する必要があります。
+</p><p>ウィンドウの大きさを保存する例を、以下に示します。
+</p>
+<pre>&lt;window
+  id="someWindow"
+  width="200"
+  height="300"
+  persist="width height"
+  .
+  .
+  .
+</pre>
+<p>これによって、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> 要素の 2 つの属性、<code><code id="a-width"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/width">width</a></code></code> と <code><code id="a-height"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/height">height</a></code></code> が保存されます。
+また、<code><code id="a-persist"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/persist">persist</a></code></code> 属性に、別の属性名を空白で区切って加えることで、その属性も保存させることが可能です。
+<code><code id="a-persist"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/persist">persist</a></code></code> 属性は、どの要素にも加えることができ、どの属性でも保存することができます。
+なお、スクリプトを使って属性を操作した場合、通常ありえない値が保存される可能性があります。
+</p>
+<h4 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AE.E4.BE.8B" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AE.E4.BE.8B"> ファイル検索ダイアログの例 </h4>
+<div class="highlight">
+<p>それでは、<code>persist</code> 属性を、ファイル検索ダイアログのいくつかの要素に追加してみることにしましょう。
+ここでは、ウィンドウの位置を保存したいとします。
+このためには、<code>window</code> を変更する必要があります。
+</p>
+<pre class="eval">&lt;window
+  id="findfile-window"
+  title="Find Files"
+  <span class="highlightred">persist="screenX screenY width height"</span>
+  orient="horizontal"
+  xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+</pre>
+<p>これによって、ウィンドウの x 座標と y 座標、ウィンドウの幅と高さが保存されます。
+また、さらにスプリッターの折り畳みについての状態を保存するように拡張するのもよいと思います。
+しかしながら、現在のタブの状態については、保存したとしても利用者の利便の向上にはあまり役に立たないでしょう。
+</p><p><span id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"><a id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"></a><strong>ここまでのファイル検索ダイアログの例</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-persist.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-persist.xul">表示</a>
+</p>
+</div>
+<p>次のセクションでは、XUL ファイルに対してスタイルシートを使う方法を見ることにします。
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Advanced_Rules" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Adding_Style_Sheets">次のページ  »</a></p>
+</div>
+
+<div class="noinclude">
+</div>

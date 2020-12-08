@@ -1,0 +1,30 @@
+---
+title: 字节码
+slug: Mozilla/Projects/SpiderMonkey/Internals/Bytecodes
+tags:
+  - SpiderMonkey
+translation_of: Mozilla/Projects/SpiderMonkey/Internals/Bytecodes
+---
+<div>{{SpiderMonkeySidebar("Internals")}}</div>
+
+<h2 id="背景知识">背景知识</h2>
+
+<p>SpiderMonkey字节码是JavaScript引擎使用的标准代码表示形式。JavaScript前端根据源文本构建AST，然后根据JSScript数据结构的一部分从AST生成基于堆栈的字节码。字节码可以引用原子和对象（通常通过数组索引），这些原子和对象也包含在JSScript数据结构中。</p>
+
+<p>在引擎内，所有字节码都在堆栈帧内执行。堆栈帧与全局（顶级）代码和<code>eval</code>代码相关联。堆栈上的框架为几个不同类别的JavaScript值（标记值格式）留出空间。单个JavaScript值空间称为“插槽”，类别为：</p>
+
+<ul>
+ <li>参数槽：保存传递给当前框架的实际参数。</li>
+ <li>本地插槽：保存当前代码中使用的本地变量。</li>
+ <li>表达式槽：保存在堆栈上计算表达式所需的临时空间。例如，<code>(a + b) + c</code>会压入a，然后压入b，再压入+，然后压入c，再压入+，依此类推。这需要最多两个表达槽的深度。</li>
+</ul>
+
+<p>还有一些保留给专用功能的插槽，用于处理<code>this</code>和<code>callee</code>返回值。.</p>
+
+<p>总有一个“堆栈顶部”（TOS），它对应于推入表达式堆栈的最新值。所有字节码都根据该位置隐式运行。</p>
+
+<h2 id="字节码列表">字节码列表</h2>
+
+<p>所有操作码都用<code> [-popcount, +pushcount] </code>标注，以表示整个执行的堆栈效果。</p>
+
+<p>字节码列表已移至 <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/Internals/Bytecode" title="SpiderMonkey Internals: Bytecode Descriptions">SpiderMonkey Internals: Bytecode Descriptions</a> 页面。</p>

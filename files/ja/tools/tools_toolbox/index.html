@@ -1,0 +1,99 @@
+---
+title: ツールボックス
+slug: Tools/Tools_Toolbox
+translation_of: Tools/Tools_Toolbox
+---
+<div>{{ToolsSidebar}}</div><p>ツールボックスは、Firefox に組み込まれている開発ツールのほとんどを提供するホームです。</p>
+
+<p>ツールボックスを開く方法がいくつかあります:</p>
+
+<ul>
+ <li>[ウェブ開発] メニュー (OS X や Linux では [ツール] メニューの配下、Windows では [Firefox] メニューの配下にあります) の [開発ツールを表示] を選択します。</li>
+ <li>メインツールバーまたはハンバーガーメニュー (<img alt="" src="https://mdn.mozillademos.org/files/12712/hamburger.png" style="height: 20px; width: 22px;">) の中にあるレンチのアイコン (<img alt="" src="https://mdn.mozillademos.org/files/12710/wrench-icon.png" style="height: 21px; width: 21px;">) をクリックして、[開発ツールを表示] を選択します。</li>
+ <li>ツールボックスに含まれているいずれかのツール (例えば JavaScript デバッガーやページインスペクターなど) を開きます。</li>
+ <li>Windows および Linux では <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>、OS X では <kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>I</kbd> を押下します。<a href="/ja/docs/Tools/Keyboard_shortcuts">キーボードショートカット</a> もご覧ください。</li>
+</ul>
+
+<p>デフォルトでは Firefox のウィンドウの下側にドッキングした状態で表示されますが、好みに応じて切り離すこともできます。ドッキングしているときは以下のような表示になります:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6923/toolbox.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+
+<p>ウィンドウ自体は 2 つのパーツに分かれています。上部のツールバーと、その下にあるメインペインです:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6925/toolbox-annotated-29.png" style="display: block; height: 471px; margin-left: auto; margin-right: auto; width: 876px;"></p>
+
+<h2 id="Docking_mode" name="Docking_mode">ドッキングモード</h2>
+
+<p>デフォルトでツールボックスはブラウザーウィンドウの下部にドッキングした状態で表示しますが、<a href="/ja/docs/Tools/Tools_Toolbox#Toolbox_controls">ツールバーのボタン</a>を使用してウィンドウの右側にドッキングしたり、個別のウィンドウで表示することもできます。</p>
+
+<h2 id="Toolbar" name="Toolbar">ツールバー</h2>
+
+<p>ツールバーには個々のツールをアクティブ化、ウィンドウのドッキングや切り離し、およびウィンドウを閉じるためのコントロールがあります。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7913/toolbox-toolbar-annotated.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+
+<h3 id="Node_picker" name="Node_picker">ノードの選択</h3>
+
+<p>ツールバーの左端に、ノード選択ツールを起動するボタンがあります。このツールで、ページ内で調査する要素を選択できます。"<a href="/ja/docs/Tools/Page_Inspector/How_to/Select_an_element">要素を選択する</a>" をご覧ください。</p>
+
+<h3 id="Toolbox-hosted_tools" name="Toolbox-hosted_tools">ツールボックスで提供するツール</h3>
+
+<p>その隣にはツールボックスで提供するさまざまなツールを切り替えるための、ラベルがついたボタンが並んでいます。この並びには以下のツールが含まれています:</p>
+
+<ul>
+ <li><a href="/ja/docs/Tools/Web_Console" title="Tools/Web_Console">ウェブコンソール</a></li>
+ <li><a href="/ja/docs/Tools/Debugger" title="Tools/Debugger">JavaScript デバッガー</a></li>
+ <li><a href="/ja/docs/Tools/Page_Inspector" title="Tools/Page_Inspector">ページインスペクター</a></li>
+ <li><a href="/ja/docs/Tools/Style_Editor" title="Tools/Style_Editor">スタイルエディター</a></li>
+ <li><a href="/ja/docs/Tools/Profiler" title="Performance/Profiling_with_the_Built-in_Profiler">プロファイラー</a></li>
+ <li><a href="/ja/docs/Tools/Network_Monitor" title="Performance/Profiling_with_the_Built-in_Profiler">ネットワークモニター</a></li>
+</ul>
+
+<p>すべてのツールが表示されるとは限らない点に注意してください。その状況で実際に使用可能なツールだけが表示されます (例えば、リモートデバッグが未サポートのツールがあるため、デバッグ対象がツールボックスを起動した Firefox のインスタンスではない場合は、一部のツールしか表示されません)。</p>
+
+<h3 id="Extra_tools" name="Extra_tools">付加ツール</h3>
+
+<p>ツールボタンの隣には、<a href="#Settings">開発ツールのオプション</a> で追加および削除可能なボタンが並んでいます。デフォルトでは以下のボタンがあります:</p>
+
+<ul>
+ <li><a href="/ja/docs/Tools/Web_Console#The_split_console">コンソールの常時表示の切り替え</a></li>
+ <li><a href="/ja/docs/Tools/Responsive_Design_Mode">レスポンシブデザインモード</a></li>
+ <li><a href="/ja/docs/tools/Working_with_iframes">作業対象のドキュメントとしてフレームを選択</a> (Firefox 41 より、デフォルトで表示します)</li>
+</ul>
+
+<p>以下のツールはデフォルトでツールバーに含まれていませんが、<a href="#Settings">オプション</a> で追加できます:</p>
+
+<ul>
+ <li><a href="/ja/docs/Tools/Paint_Flashing_Tool">描画された領域のハイライト</a></li>
+ <li><a href="/ja/docs/Tools/3D_View">3D ビュー</a> (Firefox 40 では使用できません)</li>
+ <li><a href="/ja/docs/Tools/Scratchpad">スクラッチパッド</a></li>
+ <li><a href="/ja/docs/Tools/Eyedropper">ページから色を選択</a></li>
+ <li>ページ全体のスクリーンショットを撮影: ウェブページ全体のスクリーンショットを撮影して、ダウンロードディレクトリーに保存します。</li>
+ <li><a href="/ja/docs/Tools/Rulers">ルーラーの表示切り替え</a></li>
+ <li>ページの一部を測定: ページ内の領域を選択することにより、ウェブサイトの一部分を測定します。</li>
+</ul>
+
+<h3 id="Toolbox_controls" name="Toolbox_controls">ツールボックスのコントロール</h3>
+
+<p>右端には以下のボタンが並んでいます:</p>
+
+<ul>
+ <li>ウィンドウを閉じる</li>
+ <li>ツールボックスをブラウザーウィンドウの下側にドッキングするか、横にドッキングするかを切り替える</li>
+ <li>ツールボックスを単独で表示するか、ブラウザーウィンドウにドッキングするかを切り替える</li>
+ <li><a href="#Settings" title="#Settings">開発ツールのオプション</a> を開く</li>
+</ul>
+
+<h2 id="Settings_2" name="Settings_2"><a name="Settings">設定</a></h2>
+
+<p><a href="/ja/docs/Tools/Settings">開発ツールのオプションについては、別個のページをご覧ください</a>。</p>
+
+<h2 id="Main_Pane" name="Main_Pane">メインペイン</h2>
+
+<p>ツールボックスのメインペインの内容は選択されているツールに特有であり、またツールによって全面的に制御されます。</p>
+
+<h2 id="Keyboard_shortcuts" name="Keyboard_shortcuts">キーボードショートカット</h2>
+
+<p>{{Page ("ja/docs/tools/Keyboard_shortcuts", "toolbox-shortcuts")}}</p>
+
+<p>{{Page ("ja/docs/tools/Keyboard_shortcuts", "all-toolbox-tools")}}</p>

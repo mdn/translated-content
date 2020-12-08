@@ -1,0 +1,40 @@
+---
+title: getWinProfile
+slug: >-
+  Archive/Mozilla/XPInstall/Référence_de_l_API_XPInstall/Objet_Install/Méthodes/getWinProfile
+translation_of: Archive/Mozilla/XPInstall/Reference/Install_Object/Methods/getWinProfile
+---
+<p> </p>
+<h3 id="getWinProfile" name="getWinProfile">getWinProfile</h3>
+<p>(Microsoft Windows uniquement)</p>
+<p>Construit un objet pour travailler avec un fichier &lt;tt&gt;.ini&lt;/tt&gt; de Windows.</p>
+<h4 id="M.C3.A9thode_de" name="M.C3.A9thode_de">Méthode de</h4>
+<p>Objet <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install">Install</a></p>
+<h4 id="Syntaxe" name="Syntaxe">Syntaxe</h4>
+<pre class="eval">WinProfile getWinProfile (
+   Objet dossier,
+   Chaîne fichier);
+</pre>
+<h4 id="Param.C3.A8tres" name="Param.C3.A8tres">Paramètres</h4>
+<p>La méthode <code>getWinProfile</code> a les paramètres suivants :</p>
+<dl>
+ <dt>
+  <code>dossier</code></dt>
+ <dd>
+  Un objet représentant un répertoire. Cet objet est créé en passant une chaîne représentant le répertoire à la méthode <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/getFolder">getFolder</a>.</dd>
+ <dt>
+  <code>fichier</code></dt>
+ <dd>
+  Un chemin relatif vers un fichier d'initialisation dans le répertoire spécifié par le paramètre <code>dossier</code>, tel que <code>royal/royal.ini</code>.</dd>
+</dl>
+<h4 id="Retour" name="Retour">Retour</h4>
+<p>Un objet <code><a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_WinProfile">WinProfile</a></code>.</p>
+<h4 id="Description" name="Description">Description</h4>
+<p>La méthode <code>getWinProfile</code> crée un objet pour manipuler le contenu d'un fichier &lt;tt&gt;.ini&lt;/tt&gt; de Windows. Une fois cet objet créé, on peut appeler cette méthode pour récupérer des chaînes du fichier ou lui en ajouter. Pour plus d'informations sur l'objet retourné, voir <code><a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_WinProfile">WinProfile</a></code>.</p>
+<p>Cette méthode retourne <code>null</code> sur les plate-formes Unix et Macintosh.</p>
+<h4 id="Exemple" name="Exemple">Exemple</h4>
+<p>Pour éditer le fichier <code>win.ini</code>, on crée un <code>WinProfile</code> par cet appel :</p>
+<pre class="eval">var myWinProfileObj =
+   getWinProfile (getFolder("Windows"), "win.ini");
+</pre>
+<p>{{ languages( { "en": "en/XPInstall_API_Reference/Install_Object/Methods/getWinProfile" } ) }}</p>

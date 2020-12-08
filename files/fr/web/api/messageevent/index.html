@@ -1,0 +1,103 @@
+---
+title: MessageEvent
+slug: Web/API/MessageEvent
+translation_of: Web/API/MessageEvent
+---
+<div>Une interface <strong>MessageEvent </strong>permet de recevoir un message (une donnée texte), grâce soit au {{domxref("WebSocket")}} soit par un WebRTC {{domxref("RTCDataChannel")}}. </div>
+
+<div> </div>
+
+<p>L'interface dispose d'un gestionnaire d'événements déclenché par l'événement<span style="line-height: 1.5;"> {{domxref("WebSocket.onmessage")}} ou {{domxref("RTCDataChannel.onmessage")}}.</span></p>
+
+<p>{{AvailableInWorkers}}</p>
+
+<h2 id="Constructor">Constructor</h2>
+
+<dl>
+ <dt>{{domxref("MessageEvent.MessageEvent", "MessageEvent()")}}</dt>
+ <dd>Créer une nouvelle instance <code>MessageEvent</code>.</dd>
+</dl>
+
+<h2 id="Properties">Properties</h2>
+
+<p><em>Cette interface hérite des méthodes et propriétés de son parent {{domxref("Event")}}.</em></p>
+
+<dl>
+ <dt>{{domxref("MessageEvent.data")}} {{ReadonlyInline}}</dt>
+ <dd>Retourne un {{domxref("DOMString")}}, {{domxref("Blob")}} ou un tableau {{domxref("ArrayBuffer")}} contenant les données émises par le serveur/ l'émetteur. </dd>
+ <dt>{{domxref("MessageEvent.origin")}}</dt>
+ <dd>est une {{domxref("DOMString")}} …</dd>
+ <dt>{{domxref("MessageEvent.ports")}}</dt>
+ <dd>…</dd>
+ <dt>{{domxref("MessageEvent.source")}}</dt>
+ <dd>…</dd>
+</dl>
+
+<h2 id="Methods">Methods</h2>
+
+<p><em>Cette interface hérite des méthodes et propriétés de son parent {{domxref("Event")}}.</em></p>
+
+<dl>
+ <dt>{{domxref("MessageEvent.initMessageEvent()")}} {{deprecated_inline}}</dt>
+ <dd><strong>… Ne pas utiliser directement (déprécié) </strong>: préférer le constructeur {{domxref("MessageEvent.MessageEvent", "MessageEvent()")}} en lieu et place.</dd>
+</dl>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoDesktop("2.0")}}<sup>[1]</sup></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] As of Gecko 11.0 {{geckoRelease("11.0")}}, Gecko supports <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code> for data, but not {{domxref("Blob")}}.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{domxref("ExtendableMessageEvent")}}, interface similaire, mais utiliser pour donner plus de flexibilité aux auteurs.</li>
+ <li><a href="/en-US/docs/Web/API/WebSocket_API">WebSocket API</a></li>
+ <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
+</ul>

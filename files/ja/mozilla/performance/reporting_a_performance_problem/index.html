@@ -1,0 +1,62 @@
+---
+title: パフォーマンスの問題を報告する
+slug: Mozilla/Performance/Reporting_a_Performance_Problem
+translation_of: Mozilla/Performance/Reporting_a_Performance_Problem
+---
+<p>この記事では、<a href="/ja/docs/Mozilla/Performance/Profiling_with_the_Built-in_Profiler">Gecko Profiler拡張機能</a>を使用してパフォーマンスの問題を報告する方法について説明します。 あなたが読むよりそれを好むなら<a href="https://www.youtube.com/watch?v=kGBs0BQsoQg">ビデオチュートリアル</a>もあります。</p>
+
+<h2 id="Gecko_Profilerの拡張機能を設定する">Gecko Profilerの拡張機能を設定する</h2>
+
+<ol>
+ <li>Download and install the <a class="external" href="https://perf-html.io/" title="geckoprofiler.xpi">latest version of the Gecko Profiler extension</a></li>
+ <li>The profiler extension will show up in the top right of the URL bar as a globe icon (if not, <a href="https://support.mozilla.org/en-US/kb/how-customize-toolbars#w_how-do-i-customize-or-rearrange-toolbar-items">drag it there from the Customize window</a>).<br>
+  <br>
+  <img alt="The Gecko Profiler Add-on installed and visible within the Nightly toolbar." src="https://mdn.mozillademos.org/files/14859/Gecko%20Profiler%20Toolbar%20Button.PNG" style="height: 139px; width: 254px;"></li>
+ <li><strong>Remember to disable or uninstall the extension if you're not using it.</strong></li>
+</ol>
+
+<p><em>macOS only, or to check whether a problem has been fixed in a later Firefox version (macOS release builds will currently produce profiles missing some important information):</em></p>
+
+<ol>
+ <li>Download and start the <a class="external" href="http://nightly.mozilla.org/" title="http://nightly.mozilla.org/">nightly build</a> for your platform. You will have to close all running instance(s) of Firefox before launching nightly.</li>
+ <li>Nightly is a development version, which may contain bugs, so <a href="https://support.mozilla.org/en-US/kb/profile-manager-create-and-remove-firefox-profiles">test with a new profile or back up your data</a>.</li>
+ <li>Verify that it is running correctly by going to 'About Nightly' by looking for 'nightly' as the update channel (3rd line). The icon should be a blue globe.</li>
+</ol>
+
+<h2 id="Using_the_Add-on">Using the Add-on</h2>
+
+<p>Once installed, the profiler becomes active immediately (the icon being blue indicates it is active). The profiler uses a fixed size buffer to store sample data. When it runs out of space in its buffer, it discards old entries so you may want to increase the buffer size if you find you are unable to capture the profile quickly enough after you notice a performance problem. In the Settings part of the UI you can adjust the size of the buffer (presently defaults to 9 MB) and the time interval between data collection (presently defaults to 1 ms). Note that increasing the buffer size uses more memory and can make capturing a profile take longer.</p>
+
+<p><img alt="Profiler UI" src="https://perf-html.io/e9a699daa7c33fcf80c361278055c65d.png" style="height: 376px; width: 546px;"></p>
+
+<p>Using the keyboard shortcuts is often more convenient than using the mouse to interact with the UI:</p>
+
+<ul>
+ <li><code>Ctrl+Shift+1</code> - Start/Stop the profiler</li>
+ <li><code>Ctrl+Shift+2</code> - Take a profile and launch Cleopatra to view it</li>
+</ul>
+
+<h2 id="Capturing_and_sharing_a_profile">Capturing and sharing a profile</h2>
+
+<ol>
+ <li>Reproduce the performance problem. If possible let the problem manifest itself for 5-10 seconds.</li>
+ <li>Press <code>Ctrl+Shift+2</code> or click on the 'Globe' icon in the top right and select 'Capture Profile'. Try to do this within a few seconds from reproducing the performance problem as only the last few seconds are recorded. If the timeline has a large red block it's a good sign.<br>
+  <img alt="Jank markers appearing in the Perf.html profile analysis tool." src="https://mdn.mozillademos.org/files/14861/Perf%20Dot%20HTML%20Red%20Lines.PNG" style="height: 238px; width: 558px;"></li>
+ <li>The data will open in a new tab. Wait until the "Waiting for symbol tables for library libxul.pdb..." notification disappears before sharing the profile.</li>
+ <li>There will be a button in the top right labeled 'Share' which will upload this profile and once completed will write out a link. Copy this URL to your clipboard by right clicking and add the profile URL to the bug for your performance problem and/or send it to the appropriate person. Try to give some context about what you were doing when the performance problem arose such as the URL you were viewing and what actions were you doing (ex. scrolling on gmail.com).<br>
+  <img alt="The button for sharing a profile." src="https://mdn.mozillademos.org/files/14863/Share.PNG" style="height: 142px; width: 329px;"></li>
+</ol>
+
+<h2 id="Viewing_addon_performance_in_GeckoView">Viewing addon performance in GeckoView</h2>
+
+<p>Sometimes an addon or more are slowing down Firefox. These addons might be using the extension API in ways that were not meant to. You can see which of these addons are causing problems by adding the "moz-extension" filter.</p>
+
+<p><img alt="moz-extension filter print screen" src="https://i.imgur.com/EJCrt4N.png" style="height: 287px; width: 1217px;"></p>
+
+<p>Make sure you are selecting the process that is using up the CPU since all of the processes are shown. You might have a content process using up the CPU and not the main one.</p>
+
+<p>Make sure you are doing whatever it is that slows down Firefox while recording the profile. For example you might have one addon that <a href="https://vimeo.com/269371096">slows down page load</a> and <a href="https://vimeo.com/269371201">another one that slows down tab switch</a>.</p>
+
+<p>Your first reflex once you find what addon is slowing down the profile might be to disable it and search for alternatives. Before you do this, please share the performance profile with the addon authors trough a bug report. Gecko profiler allows you to share a link with the profile.</p>
+
+<p> </p>

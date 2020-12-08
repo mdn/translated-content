@@ -1,0 +1,305 @@
+---
+title: SOAP in Gecko-based Browsers
+slug: Archive/Mozilla/Firefox/SOAP_in_Gecko-based_Browsers
+tags:
+  - SOAP
+  - XML Web Services
+translation_of: Archive/Mozilla/Firefox/SOAP_in_Gecko-based_Browsers
+---
+<p></p><div class="overheadIndicator obsolete obsoleteHeader"><p><strong><span title="これは廃止されたAPIであり、今後の動作は保障されていません。ご注意下さい。"><i class="icon-trash"> </i></span> 廃止</strong><br>この機能は廃止されました。まだいくつかのブラウザーで動作するかもしれませんが、いつ削除されてもおかしくないので、使わないようにしましょう。</p></div> <div class="blockIndicator standardNote standardNoteBlock">
+    <p><a href="https://developer.mozilla.org/ja/docs/Mozilla/Firefox/Releases/3">Firefox 3 における注記</a></p>
+    <p style="font-weight: 400;">WSDL および SOAP のネイティブなサポートは Mozilla 1.9/Firefox 3 から削除されました。</p>
+</div><p></p>
+
+<p> </p>
+
+<p>この記事は、最近の Gecko ベースのブラウザ (しかし、 Firefox 3 では SOAP のサポートが外されています) で SOAP と JavaScript を使い、Web サービスにアクセスする方法について書かれています。</p>
+
+<h3 id=".E5.B0.8E.E5.85.A5" name=".E5.B0.8E.E5.85.A5">導入</h3>
+
+<p>Simple Object Access Protocol (<a class="external" href="http://www.w3.org/TR/SOAP/">SOAP</a>) は、Web サービスの元になっています。SOAP は、XML を基にしたプロトコルでWeb サービスの互換性と情報伝達に使われます。Mozilla 1.0 (Netscape 7.0x がビルドされた) と Firefox は、現在では JavaScript を通して低レベルの SOAP 実装を使用する Web サービスと直接通信することができます。</p>
+
+<p>SOAP の呼び出しを確立するための Gecko の JavaScript インタフェースは、いくつかの特別なJavaScript オブジェクトを使って SOAP envelope を作成する低レベル API です。 この記事は、基本的な SOAP 操作を担当しています。;Gecko での低レベル SOAP API の詳細は<a class="external" href="http://lxr.mozilla.org/mozilla/source/extensions/webservices/docs/Soap_Scripts_in_Mozilla.html">ここ</a>にあります。</p>
+
+<p>Web サービスと通信する JavaScript は、ドメインを超えることによる他のスクリプトと同じセキュリティポリシーの条件に制限を受けます。それ故に、JavaScript が動いているサーバ以外の Web サービスにアクセスすることは、クロスドメインポリシーに違反します。この記事には、テスト目的で一時的にこれをどのように回避するかが書かれています。</p>
+
+<h3 id="SOAP_.E5.91.BC.E3.81.B3.E5.87.BA.E3.81.97.E3.81.AE.E8.A8.AD.E5.AE.9A" name="SOAP_.E5.91.BC.E3.81.B3.E5.87.BA.E3.81.97.E3.81.AE.E8.A8.AD.E5.AE.9A">SOAP 呼び出しの設定</h3>
+
+<p>最も基本的なオブジェクトは、<code>SOAPCall</code>です。SOAP 呼び出しの開始と起動に使用します。</p>
+
+<p>Figure 1 : 基本的な設定と SOAP 呼び出しの起動</p>
+
+<pre>var mySOAPCall = new SOAPCall();
+mySOAPCall.transportURI = "http-based service URI"
+
+var parameters = new Array();
+mySOAPCall.encode(SOAPCall.VERSION_1_1,
+                  // method
+                  "method", "namespaceURI",
+                  // header block
+                  0, null,
+                  // parameter
+                  parameters.length, parameters);
+
+var response = mySOAPCall.invoke();
+</pre>
+
+<p><code>SOAPCall</code> は <code>transportURI</code> と呼ばれているメンバーを持っています。それは、SOAP 呼び出しを送る先の URI を指定します。<code>encode()</code> メソッドは、Web サービスで呼び出すメソッド名、名前空間の URI、通過させる SOAP パラメータの数、全てのパラメータを含んだ SOAP パラメータ配列を必要とします。これらの全てのパレメータは、例の段落で書かれている Web サービスの WSDL ファイルで見つけることが出来ます。</p>
+
+<p>SOAP パラメータは、<code>SOAPParameter</code>オブジェクトを使って作られます。Web サービスで送られる名前/値の組です。</p>
+
+<p>Figure 2 : SOAP パラメータを作る</p>
+
+<pre>var param = new SOAPParameter();
+param.name = "translationmode";
+param.value = "en_fr";
+</pre>
+
+<h3 id=".E5.BF.9C.E7.AD.94.E3.81.AE.E3.83.8F.E3.83.B3.E3.83.89.E3.83.AA.E3.83.B3.E3.82.B0" name=".E5.BF.9C.E7.AD.94.E3.81.AE.E3.83.8F.E3.83.B3.E3.83.89.E3.83.AA.E3.83.B3.E3.82.B0">応答のハンドリング</h3>
+
+<p>一度 <code>invoke()</code> が呼び出されると、Gecko は SOAP envelope を作り、指定された URI に送信されます。 その呼び出しは同期されていて、応答は、<code>invoke()</code> の戻り値になります。</p>
+
+<p>Figure 3 : 応答のハンドリング</p>
+
+<pre>var returnObject = mySOAPCall.invoke();
+
+if(returnObject.fault){
+  alert("An error occured: " + returnObject.fault.faultString);
+} else {
+  var response = new Array();
+  response = returnObject.getParameters(false, {});
+  alert("Return value: " + response[0].value);
+}
+</pre>
+
+<p><code>invoke()</code> の戻り値は保存され、<code>fault</code> メンバーでチェックされました。もし、<code>fault</code> が存在したら、Web サービスでエラーが起きています。そして、エラーメッセージは、<code>fault.faultString</code> に保存されています。もし、<code>fault</code> が無ければ、SOAP パラメータの応答のオブジェクトを取り出すために <code>getParameters() を呼びます。</code></p>
+
+<h3 id=".E4.BE.8B" name=".E4.BE.8B">例</h3>
+
+<p>ここの例では、既に存在している Web サービス、<a class="external" href="http://www.xmethods.net/">xmethods.net</a> で提供されている Babelfish を利用します。Babelfish Web サービスは、いくつかの言語間の翻訳を許しています。それは、2 つのパラメータをとります: "元の言語_結果の言語"の書式の文字列と他の言語へ変換する文字列。Babelfish Web サービスの WSDL ファイルは、<a class="external" href="http://www.xmethods.net/sd/2001/BabelFishService.wsdl">ここ</a>にあり、Web サービスを呼ぶための低レベルの SOAP 呼び出しを設定するのに必要な情報を含んでいます。</p>
+
+<p>初めの段階は、Web サービスの位置を解決することです。<code>SOAPCall</code> の <code>transportURI</code> メンバーの値です。これは、WSDL の<code>service</code> 要素、特に、<code>soap:address</code> の <code>location</code> 属性に見つけることが出来ます。</p>
+
+<p>Figure 4 : WSDL から Web サービスの場所を特定する</p>
+
+<pre class="eval"><strong>WSDL:</strong>
+  &lt;service name="BabelFishService"&gt;
+    &lt;documentation&gt;
+      Translates text of up to 5k in length, between a variety of languages.
+    &lt;/documentation&gt;
+    &lt;port name="BabelFishPort" binding="tns:BabelFishBinding"&gt;
+      <span style="color: green;">&lt;soap:address location="<span class="nowiki">http://services.xmethods.net:80/perl/soaplite.cgi</span>"/&gt;</span>
+    &lt;/port&gt;
+  &lt;service&gt;
+
+<strong>JavaScript:</strong>
+  var babelFishCall = new SOAPCall();
+  babelFishCall.transportURI = "<span class="nowiki">http://services.xmethods.net:80/perl/soaplite.cgi</span>";
+  ...
+</pre>
+
+<p>次のステップは、もっと複雑です。:Web サービスが送信されることを期待しているパラメータを正確に形作ることです。 Babelfish Web サービスには、たった1つのメソッド "BabelFish" があります。これは、WSDL の中の<code>portType</code> 要素の子要素の <code>operation</code> に書かれています。WSDL の <code>operation</code> 毎に 2 つの子要素があります。:型の情報を含んだinputとoutput要素です。型は、<code>message</code> 要素で定義されています。型には 2 つあり: <code>BabelFishRequest</code>は、WebService に何を渡すかを表しています。そして、<code>BabelFishResponse</code> は、返ってくる型を表しています。</p>
+
+<p><br>
+ BableFishは、2 つのパラメータが operation に含まれていることを期待しています: <code>translationmode</code> と <code>sourcedata</code></p>
+
+<p>Figure 5 の例では、"I am" を英語からフランス語に翻訳します。</p>
+
+<p>Figure 5 : 必要なパラメータを設定する</p>
+
+<pre class="eval"><strong>WSDL:</strong>
+  &lt;message <span style="color: blue;">name="BabelFishRequest"&gt;</span>
+    <span style="color: green;">&lt;part name="translationmode" type="xsd:string"/&gt;</span>
+    <span style="color: green;">&lt;part name="sourcedata" type="xsd:string"/&gt;</span>
+  &lt;/message&gt;
+
+  &lt;message name="BabelFishResponse"&gt;
+      &lt;part name="return" type="xsd:string"/&gt;
+  &lt;/message&gt;
+
+  &lt;portType name="BabelFishPortType"&gt;
+    &lt;operation name="BabelFish"&gt;
+      <span style="color: green;">&lt;input message="tns:BabelFishRequest"/&gt;</span>
+      &lt;output message="tns:BabelFishResponse"/&gt;
+    &lt;/operation&gt;
+  &lt;/portType&gt;
+
+<strong>JavaScript:</strong>
+  // SOAP parameters
+  var param1 = new SOAPParameter();
+  param1.value = "en_fr";
+  param1.name = "translationmode";
+
+  var param2 = new SOAPParameter();
+  param2.value = "I am";
+
+  param2.name = "sourcedata";
+
+  // combine the 2 params into an array
+  var myParamArray = [param1,param2];
+</pre>
+
+<p>次に、<code>SOAPCall</code> オブジェクトの設定と呼び出しをする時です。"BabelFish" は、Web サービスの例として使って欲しいメソッドです。次のパラメータは、BabelFish のメソッドに Web サービスで渡されることが期待されている名前空間です。 これは、WSDL の <code>binding</code> 要素に見つけることが出来ます。<code>binding</code> 要素は、BabelFish メソッドのために <code>operation</code> を子供に持っています。名前空間の必要性は、<code>input</code> 要素の中の <code>soap:body</code> の属性の <code>namespace</code> の値です。</p>
+
+<p>Figure 6 : エンコードされたメソッドを設定する</p>
+
+<pre class="eval"><strong>WSDL:</strong>
+  &lt;binding name="BabelFishBinding" type="tns:BabelFishPortType"&gt;
+    &lt;soap:binding style="rpc" transport="<span class="nowiki">http://schemas.xmlsoap.org/soap/http</span>"/&gt;
+    &lt;operation name="BabelFish"&gt;
+      &lt;soap:operation soapAction="urn:xmethodsBabelFish#BabelFish"/&gt;
+      &lt;input&gt;
+        <span style="color: green;">&lt;soap:body use="encoded" namespace="urn:xmethodsBabelFish"
+                   encodingStyle="<span class="nowiki">http://schemas.xmlsoap.org/soap/encoding/</span>"/&gt;</span>
+      &lt;/input&gt;
+      ...
+    &lt;/operation&gt;
+  &lt;/binding&gt;
+
+<strong>JavaScript:</strong>
+  babelFishCall.encode(0, "BabelFish", "urn:xmethodsBabelFish", 0, null, myParamArray.length, myParamArray);
+
+  var translation = babelFishCall.invoke();
+</pre>
+
+<p>Figure 5 で見たように、BabelFish メソッド ("BabelFishResponse") の応答は、名前を持った 1 つのパラメータを持っています。</p>
+
+<p>エラーが返ってきていないのを確認した後、返ってきたオブジェクトの <code>getParameters()</code> メソッドは、SOAPResponse 配列を取り出すのに使われます。たった 1 つのパラメータが返ってくるのが期待されます。-- 解釈されたテキスト -- <code>alert()</code> メソッドは、テクストを表示するのに使われます。</p>
+
+<p>Figure 7 : 応答のハンドリング</p>
+
+<pre class="eval"><strong>JavaScript:</strong>
+  if(translation.fault){
+    // error returned from the web service
+    alert(translation.fault.faultString);
+  } else {
+    // we expect only one return SOAPParameter - the translated string.
+    var response = new Array();
+    response = translation.getParameters(false, {});
+    alert("Translation: " + response[0].value);
+  }
+</pre>
+
+<p>導入で言及されたように、SOAP 呼び出しは、スクリプトのためのクロスドメインポリシーのままに動きます。テストの目的でセキュリティポリシーを欺く以下の 2 つの方法があります。</p>
+
+<ol>
+ <li>
+  <p>ローカルディスクからスクリプトを動作させる。</p>
+
+  <p>コードをハードディスクに保存してください。</p>
+
+  <p>クロスドメインセキュリティモデルは、ローカルハードディスクから実行には作用しません。</p>
+ </li>
+ <li>
+  <p>クロスドメインアクセスを許可する</p>
+
+  <p>設定でクロスドメインを回避することが出来ます。お勧めの設定は、 <a href="ja/Bypassing_Security_Restrictions_and_Signing_Code">Bypassing Security Restrictions and Signing Code</a> に説明があります。そして、クロスドメインチェックを上書きを要求する JavaScript コマンドが載っています。</p>
+
+  <p>チェックを回避した後、ブラウザを動かし、ここ<a class="external" href="http://developer.mozilla.org/samples/soap/example-crossdomain.html">modified example page</a> を読み込んでください。SOAP 呼び出しを生成する機能のためにクロスドメイン(このセッションの)を切るのを許可するか(ダイアログで)聞いてきます。変更する場所は、SOAP 呼び出しを生成する機能に <code>netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead");</code> を追加するだけです。</p>
+ </li>
+</ol>
+
+<p>Figure 8 : 最終的なコード - <a class="external" href="http://developer.mozilla.org/samples/soap/example.html">Local example</a>, <a class="external" href="http://developer.mozilla.org/samples/soap/example-crossdomain.html">Cross-Domain example</a></p>
+
+<pre class="eval"><strong>JavaScript:</strong>
+  var babelFishCall = new SOAPCall();
+  babelFishCall.transportURI = "<span class="nowiki">http://services.xmethods.net:80/perl/soaplite.cgi</span>";
+
+  // SOAP params
+  var param1 = new SOAPParameter();
+  param1.value = "en_fr";
+  param1.name = "translationmode";
+
+  var param2 = new SOAPParameter();
+  param2.value = "I am";
+  param2.name = "sourcedata";
+
+  // combine the 2 params into an array
+  var myParamArray = [param1,param2];
+
+  babelFishCall.encode(0, "BabelFish", "urn:xmethodsBabelFish", 0, null, myParamArray.length, myParamArray);
+
+  var translation = babelFishCall.invoke();
+
+  if(translation.fault){
+    // error returned from the web service
+    alert(translation.fault.faultString);
+  } else {
+   // we expect only one return SOAPParameter - the translated string.
+   var response = new Array();
+   response = translation.getParameters(false, {});
+   alert("Translation: " + response[0].value);
+ }
+</pre>
+
+<h3 id="Soap_Envelope_.E3.82.92.E8.BF.BD.E8.B7.A1.E3.81.99.E3.82.8B" name="Soap_Envelope_.E3.82.92.E8.BF.BD.E8.B7.A1.E3.81.99.E3.82.8B">Soap Envelope を追跡する</h3>
+
+<p>ここでは、例を実行したときに、実際に受け渡しされたデータの HTTP ダンプを (クロスプラットフォームな <a class="external" href="http://www.wireshark.org/">Wireshark</a> ツールを使って) 見ます。</p>
+
+<p>Figure 9 : HTTP ダンプ</p>
+
+<pre class="eval"><strong>送信:</strong>
+POST /perl/soaplite.cgi HTTP/1.1
+Host: services.xmethods.net:80
+...
+Content-Type: text/xml
+Content-Length: 516
+
+&lt;env:Envelope xmlns:env="<span class="nowiki">http://schemas.xmlsoap.org/soap/envelope/</span>"
+              xmlns:enc="<span class="nowiki">http://schemas.xmlsoap.org/soap/encoding/</span>"
+              env:encodingStyle="<span class="nowiki">http://schemas.xmlsoap.org/soap/encoding/</span>"
+              xmlns:xs="<span class="nowiki">http://www.w3.org/1999/XMLSchema</span>"
+              xmlns:xsi="<span class="nowiki">http://www.w3.org/1999/XMLSchema-instance</span>"&gt;
+  &lt;env:Header/&gt;
+  &lt;env:Body&gt;
+      &lt;a0:BabelFish xmlns:a0="<span style="color: green;">urn:xmethodsBabelFish</span>"&gt;
+          <span style="color: green;">&lt;a0:translationmode xsi:type="xs:string"&gt;en_fr&lt;/a0:translationmode&gt;</span>
+          <span style="color: green;">&lt;a0:sourcedata xsi:type="xs:string"&gt;I am&lt;/a0:sourcedata&gt;</span>
+      &lt;/a0:BabelFish&gt;
+  &lt;/env:Body&gt;
+&lt;/env:Envelope&gt;
+
+
+<strong>受信:</strong>
+HTTP/1.1 200 OK
+Date: Tue, 11 Mar 2003 20:28:11 GMT
+Server: Apache/1.3&amp; (Unix) Enhydra-Director/3 PHP/4.0.6 DAV/1.0.3 AuthNuSphere/1.0.0
+SOAPServer: SOAP::Lite/Perl/0.52
+Content-Length: 532
+
+...
+Content-Type: text/xml; charset=utf-8
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENC="<span class="nowiki">http://schemas.xmlsoap.org/soap/encoding/</span>"
+                   SOAP-ENV:encodingStyle="<span class="nowiki">http://schemas.xmlsoap.org/soap/encoding/</span>"
+                   xmlns:SOAP-ENV="<span class="nowiki">http://schemas.xmlsoap.org/soap/envelope/</span>"
+                   xmlns:xsi="<span class="nowiki">http://www.w3.org/1999/XMLSchema-instance</span>"
+                   xmlns:xsd="<span class="nowiki">http://www.w3.org/1999/XMLSchema</span>"&gt;
+  &lt;SOAP-ENV:Body&gt;
+    &lt;namesp1:BabelFishResponse xmlns:namesp1="urn:xmethodsBabelFish"&gt;
+      <span style="color: green;">&lt;return xsi:type="xsd:string"&gt;je suis&lt;/return&gt;</span>
+    &lt;/namesp1:BabelFishResponse&gt;
+  &lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;
+</pre>
+
+<h3 id=".E8.B3.87.E6.96.99" name=".E8.B3.87.E6.96.99">資料</h3>
+
+<p><a class="external" href="http://lxr.mozilla.org/mozilla/source/extensions/webservices/docs/Soap_Scripts_in_Mozilla.html">SOAP Scripts in Mozilla</a> by Ray Whitmer<br>
+ <a class="external" href="http://www.oreillynet.com/lpt/a/2677">Using the Mozilla SOAP API</a> by Scott Andrew LePera and Apple Developer Connection.<br>
+ <a class="external" href="http://www.w3.org/TR/soap12-part1/">The Latest w3.org SOAP Specification</a><br>
+ <a class="external" href="http://www.onlamp.com/lpt/a/5981">Calling SOAP Servers from JS in Mozilla</a> OnLamp.com article by Zachary Kessin<br>
+ <a class="external" href="http://www.xulplanet.com/references/objref/SOAPCall.html">SOAPCall documentation on XULPlanet.com</a><br>
+ <a class="external" href="http://www.xulplanet.com/references/objref/SOAPResponse.html">SOAPResponse documentation on XULPlanet.com</a></p>
+
+<p></p><div class="originaldocinfo">
+<h2 id="Original_Document_Information" name="Original_Document_Information">原文書の情報</h2>
+<ul>
+<li>著者: Doron Rosenberg</li>
+<li>最終変更日: March 14, 2003</li>
+<li>著作権: © 2001-2003 Netscape.</li>
+<li>原文書の場所: <a class="external" href="http://devedge-temp.mozilla.org/viewsource/2003/soap/01/index_en.html" rel="noopener">http://devedge-temp.mozilla.org/viewsource/2003/soap/01/index_en.html</a></li>
+<li>注記: This reprinted article was originally part of the DevEdge site.</li>
+</ul>
+</div><p></p>

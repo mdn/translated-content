@@ -1,0 +1,39 @@
+---
+title: Troubleshooting
+slug: Mozilla/Add-ons/SDK/Tutorials/Troubleshooting
+tags:
+  - add-on sdk 安装指南
+  - add-on sdk安装解惑
+translation_of: Archive/Add-ons/Add-on_SDK/Tutorials/Troubleshooting
+---
+<p>{{AddonSidebar}}</p>
+
+<p>如果你的SDK安装和运行遇到了问题，不要慌！本页面列出了一些基本点，来帮助你追踪你的问题。</p>
+
+<h2 id="检查你的_Firefox">检查你的 Firefox</h2>
+
+<p><code>jpm</code> 会搜索你系统中 Firefox 常见的地址，<code>jpm</code> 也许不能找到火狐安装在哪，或者你有多个地方安装了火狐，<code>jpm</code> 也许找错了地方。这种情况下，你需要使用 <code>jpm</code> 的 <code>--binary</code> 选项。参看 <code><a href="/en-US/Add-ons/SDK/Tools/jpm">jpm</a></code> 指南以获取更多信息</p>
+
+<p>当你运行 <code>jpm</code> 来测试你的 add-on 或者运行单元测试时，它会打印出 Firefox 或 XULRunner 二进制文件的地址，所有你可以检查一下它的输出内容来做确认。</p>
+
+<h2 id="检查你的文本控制台">检查你的文本控制台</h2>
+
+<p>当你的代码代码和SKD的API产生错误时，他们会被记录到文本控制台。这应该和你运行 <code>jpm</code> 命令的是同一控制台或shell</p>
+
+<h2 id="搜索已知的问题">搜索已知的问题</h2>
+
+<p>也许有人已经遇到过和你一样的问题了。其他用户经常发布问题到 <a href="http://groups.google.com/group/mozilla-labs-jetpack/topics">项目邮件列表</a>。你也可以浏览<a href="https://bugzilla.mozilla.org/buglist.cgi?order=Bug%20Number&amp;resolution=---&amp;resolution=DUPLICATE&amp;query_format=advanced&amp;product=Add-on%20SDK">已知问题</a>列表或者<a href="https://bugzilla.mozilla.org/query.cgi?format=advanced&amp;product=Add-on%20SDK">搜索</a>特定的关键词。</p>
+
+<h2 id="与项目团队和用户组交流">与项目团队和用户组交流</h2>
+
+<p>SDK的用户和项目团队成员对问题和建议在 <a href="http://groups.google.com/group/mozilla-labs-jetpack/topics">项目的邮件列表</a>.  别人可能有与你相同的问题，所以试着搜索列表。也欢迎你发表问题.</p>
+
+<p>你也可以与其他SDK用户在 <a href="http://irc.mozilla.org/">Mozilla的 IRC 网络</a> 的 <a href="http://mibbit.com/?channel=%23jetpack&amp;server=irc.mozilla.org">#jetpack</a> 聊天室聊天.</p>
+
+<p>如果你想<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Add-on%20SDK&amp;component=General">报告SDK的bug</a><span>，我们非常欢迎！您将需要创建一个 Bugzilla 的帐号，Bugzilla 是 Mozilla 的 bug 追踪系统。</span></p>
+
+<div id="xunlei_com_thunder_helper_plugin_d462f475-c18e-46be-bd10-327458d045bd"> </div>
+
+<div id="xunlei_com_thunder_helper_plugin_d462f475-c18e-46be-bd10-327458d045bd"> </div>
+
+<div id="xunlei_com_thunder_helper_plugin_d462f475-c18e-46be-bd10-327458d045bd"> </div>

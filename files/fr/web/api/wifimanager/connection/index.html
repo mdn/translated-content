@@ -1,0 +1,44 @@
+---
+title: WifiManager.connection
+slug: Web/API/WifiManager/connection
+tags:
+  - API
+  - B2G
+  - Non-standard
+  - Propriété
+  - Reference
+  - WebAPI
+  - Wi-Fi
+translation_of: Archive/B2G_OS/API/WifiManager/connection
+---
+<div>{{APIRef("Firefox OS")}}{{non-standard_header}}</div>
+
+<div>{{B2GOnlyHeader2('certified')}}</div>
+
+<p>La valeur de la propriété <strong><code>connection</code></strong> offre le statut et le réseau actuel utilisé par l'adaptateur WiFi.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox">var mac = navigator.mozWifiManager.connection</pre>
+
+<h2 id="Valeur">Valeur</h2>
+
+<p>Renvoie un objet avec les propriétés suivantes:</p>
+
+<dl>
+ <dt><code>status</code> {{readonlyinline}}</dt>
+ <dd>Une chaîne représentant l'état actuel de la connexion, l'un des <code>disconnected</code>, <code>connecting</code>,<code> associated</code> ou <code>connected</code> (voir {{domxref("MozWifiStatusChangeEvent.status")}} pour plus d'informations sur chacun de ces statuts).</dd>
+ <dt><code>network</code> {{readonlyinline}}</dt>
+ <dd>Un objet network représentant le réseau en cours d'utilisation ou <code>null</code> si l'appareil n'est connecté à aucun réseau (voir {{domxref("WifiManager.getNetworks()")}} pour plus d'informations).</dd>
+</dl>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<p>Ne fait partie d'aucune spécification.</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>{{domxref("WifiManager")}}</li>
+ <li><a href="/fr/docs/WebAPI/WiFi_Information">WifI Information API</a></li>
+</ul>

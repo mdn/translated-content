@@ -1,0 +1,106 @@
+---
+title: Firefox Marketplace へのアプリの読み込み
+slug: Archive/Mozilla/Marketplace/Publishing/Submit/Load_your_app
+translation_of: Archive/Mozilla/Marketplace/Publishing/Submit/Load_your_app
+---
+<div class="summary">
+ <p>前のステップでは、開発者アカウントにログインし、開発者規約に同意しました。ここでは、アプリの詳細情報を入力し、Firefox Marketplace に対してマニフェストファイルを指定します。</p>
+</div>
+<h2 id="概要">概要</h2>
+<p><b>[</b><strong>Submit an App] </strong>ページを開きます。このページでは次の操作を実行できます。</p>
+<ul>
+ <li>アプリの収益化モデル (完全に無料または有料 / アプリ内課金) の指定</li>
+ <li>アプリに対応するプラットフォームの指定</li>
+ <li>アプリのパッケージ方法に応じた操作
+  <ul>
+   <li>ホスト型アプリのマニフェストの場所の指定</li>
+   <li>パッケージ型アプリの ZIP ファイルのアップロード</li>
+  </ul>
+ </li>
+ <li>アプリで必要な機能に関する情報の提供</li>
+</ul>
+<h2 id="収益化">収益化</h2>
+<p>アプリについて提供すべき最初の情報は、使用される収益化モデルです。</p>
+<ol>
+ <li>アプリに応じて、(1) <strong>[Free]</strong> または <b>[</b><strong>Paid / in-app]</strong> タブをクリックします。<br>
+  <img alt="Select either Free if the app is free to download and use, or Paid / In-app of the app has to be purchased or contains any in-app payment options" src="https://mdn.mozillademos.org/files/8213/Select%20monetization%20model.png" style="width: 978px; height: 162px;"></li>
+</ol>
+<div class="note">
+ <p>無料でダウンロードできるアプリとして提供するが、アプリ内課金製品によって収益化する場合は、<strong>[Paid / In-app]</strong> をクリックします。</p>
+</div>
+<div class="note">
+ <p><strong>[Paid / In-app] </strong>を選択して登録プロセスを完了した後で、それを無料アプリに変更することはできません。ただし、<strong>無料</strong>アプリから<strong>有料 / アプリ内課金</strong>への変更はいつでも可能です。</p>
+</div>
+<h2 id="プラットフォームの互換性">プラットフォームの互換性</h2>
+<p>選択した <strong>[Free]</strong> タブまたは <strong>[Paid / In-app]</strong> タブで、アプリが動作するオペレーティングシステムやブラウザの実装を定義します。</p>
+<ol>
+ <li>アプリに対応するプラットフォームを選択します<br>
+  <img alt="Select the OS and browser implementations the app is designed to work on." src="https://mdn.mozillademos.org/files/8217/Select%20compatible%20platforms.png" style="width: 980px; height: 337px;"></li>
+</ol>
+<p>収益モデル別の使用可能なプラットフォームを下に示します。</p>
+<table class="standard-table" style="width: 60% ;">
+ <thead>
+  <tr>
+   <th scope="row" style="width: 60% ;"> </th>
+   <th scope="col" style="width: 20%;">Free</th>
+   <th scope="col" style="width: 20%;">Paid /In-app</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">Firefox OS</th>
+   <td style="text-align: center;"><img alt="" src="https://mdn.mozillademos.org/files/8219/Tick_20x20.png" style="width: 20px; height: 20px;"></td>
+   <td style="text-align: center;"><img alt="" src="https://mdn.mozillademos.org/files/8219/Tick_20x20.png" style="width: 20px; height: 20px;"></td>
+  </tr>
+  <tr>
+   <th scope="row">Firefox for Desktop</th>
+   <td style="text-align: center;"><img alt="" src="https://mdn.mozillademos.org/files/8219/Tick_20x20.png" style="width: 20px; height: 20px;"></td>
+   <td style="text-align: center;"> </td>
+  </tr>
+  <tr>
+   <th scope="row">Firefox Mobile<br>
+    (Firefox for Android on screen 7" or less)</th>
+   <td style="text-align: center;"><img alt="" src="https://mdn.mozillademos.org/files/8219/Tick_20x20.png" style="width: 20px; height: 20px;"></td>
+   <td style="text-align: center;"> </td>
+  </tr>
+  <tr>
+   <th scope="row">Firefox Tablet<br>
+    (Firefox for Android on screen over 7")</th>
+   <td style="text-align: center;"><img alt="" src="https://mdn.mozillademos.org/files/8219/Tick_20x20.png" style="width: 20px; height: 20px;"></td>
+   <td style="text-align: center;"> </td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="アプリの読み込み">アプリの読み込み</h2>
+<p>ここでは、Firefox Marketplace でアプリを指定します。</p>
+<ol>
+ <li>アプリがホスト型アプリの場合は、(1)<a href="/docs/Web/Apps/Manifest">アプリマニフェスト</a>のサーバ上でのアプリの場所 (完全な URL) を入力し、(2) <strong>[Validate]</strong> をクリックします。<br>
+  <img alt="Enter the URL for the manifest of a Hosted App" src="https://mdn.mozillademos.org/files/8223/Identify%20Hosted%20App.png" style="width: 982px; height: 198px;"><br>
+  <br>
+  Marketplace によって、アプリのマニフェストファイルが検証されます。
+  <ul>
+   <li>アプリのマニフェストが検証されたら、<b>[Continue] </b>をクリックします。</li>
+   <li>アプリのマニフェストを検証した結果、エラーまたは警告が発生した場合、詳細なレポートへのリンクが提供されます。レポートを確認し、エラーを修正した後、マニフェストを再登録して検証を受けます。<br>
+    <img alt="If there are errors or warning as a result of validating the app's manifest a link is provided to a full report" src="https://mdn.mozillademos.org/files/8225/Validation%20results.png" style="width: 981px; height: 55px;"></li>
+  </ul>
+ </li>
+ <li>アプリがパッケージ型アプリの場合は、<b>[</b><strong>Packaged]</strong> タブをクリックし、<b>[</b><strong>Select a file</strong><b>]</b> をクリックします。コンピュータのファイルブラウザが開きます。アプリの zip ファイルを参照し、ファイルを開いてアップロードします。<br>
+  <img alt="Click Select a file to upload a packaged app's ZIP file" src="https://mdn.mozillademos.org/files/8211/Select%20Packaged%20App.png" style="width: 982px; height: 189px;"><br>
+  Marketplace によって、アプリのパッケージが検証されます。
+  <ul>
+   <li>アプリが検証されたら、<b>[Continue] </b>をクリックします。</li>
+   <li>アプリのパッケージ (ZIP) を検証した結果、エラーまたは警告が発生した場合、詳細なレポートへのリンクが表示されますレポートを確認してエラーを修正した後、アプリのパッケージファイルをリビルドし、再度アップロードします。<br>
+    <img alt="If there are errors or warning as a result of validating the app's manifest a link is provided to a full report" src="https://mdn.mozillademos.org/files/8225/Validation%20results.png" style="width: 981px; height: 55px;"></li>
+  </ul>
+ </li>
+</ol>
+<h2 id="アプリの最小_API_要件の指定">アプリの最小 API 要件の指定</h2>
+<p>アプリの検証が完了すると、<strong><b>[</b>App Minimum Requirements]</strong> セクションが表示されます。このセクションには最初、最もよく使われる API 要件のリストが表示されます。アプリで必要な要件が含まれていない場合は、(1) <b>[</b><strong>View all]</strong> をクリックし、(2) 不足している要件のチェックボックスをクリックします。</p>
+<div class="note">
+ <p>Marketplace では、ユーザのデバイスが、このセクションで選択された要件を満たしていない場合、そのユーザにはこのアプリが表示されません。</p>
+</div>
+<p><img alt="An automatically populated list of app requirements displays, click View all and add any that have been missed" src="https://mdn.mozillademos.org/files/8227/Select%20the%20apps%20minimum%20API%20requiements.png" style="width: 984px; height: 506px;"></p>
+<h2 id="次のステップ">次のステップ</h2>
+<p>このステップはこれで完了です。<b>[<strong>Continue</strong>] </b>をクリックし、次のステップに進みます。</p>
+<p><img alt="When the details have been added to the page, clicking Continue moves onto the next step." src="https://mdn.mozillademos.org/files/8233/Continue%20option.png" style="width: 982px; height: 91px;"></p>
+<p>詳細については、次のステップの記事を参照してください。次のステップ: <a href="/Marketplace/Publishing/Submit/Enter_your_apps_detailsa">アプリの詳細情報の入力</a></p>

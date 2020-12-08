@@ -1,0 +1,57 @@
+---
+title: Considérations de sécurité
+slug: Archive/Mozilla/Persona/Considerations_de_securite
+tags:
+  - Persona
+translation_of: Archive/Mozilla/Persona/Security_Considerations
+---
+<p>Lorsque vous ajoutez Persona sur votre site, il s'occupe du fardeau que représente la sécurité tant qu'il le peut. Cependant, certains aspects de la sécurité peuvent uniquement être gérés par votre site. Ils sont listés ci-dessous.</p>
+<h2 id="Essential_practices" name="Essential_practices">Pratiques essentielles</h2>
+<h3 id="Verify_assertions_on_your_server" name="Verify_assertions_on_your_server">Vérifier les assertions côté serveur</h3>
+<p>Lorsque vous utilisez Persona, les assertions d'identité sont passées à la fonction <code> onlogin</code> passée à <a href="/fr/docs/Web/API/Navigator/id/watch" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>navigator.id.watch()</code></a>. Vous devriez <em>toujours</em> envoyer l'assertion au serveur pour vérification, et seul votre serveur devrait décider de donner à l'utilisateur les permissions additionnelles selon le résultat de la vérification:</p>
+<pre class="brush:js;">// Dans navigator.id.watch({ ...
+onlogin: function(assertion) {
+  // Un utilisateur veut se connecter ! Vous devez:
+  // 1. Envoyer l'assertion à votre backend pour vérification et création d'une session.
+  // 2. Mettre à jour l'interface.
+},
+</pre>
+<p>Si vous essayez de vérifier l'assertion en utilisant le JavaScript client, un utilisateur malveillant pourrait usurper l'identité d'un utilisateur légitime en injectant localement du code et en modifiant votre JavaScript. Ceci est possible parce que vous n'êtes pas en contrôle total de ce qui se passe dans le navigateur de l'utilisateur, là où le JavaScript est exécuté.</p>
+<p>Encore une fois, vous devriez <em>systématiquement</em> envoyer l'assertion au serveur pour vérification. Même si vous utilisez l'API de vérification locale.</p>
+<h3 id="Explicitly_specify_the_audience_parameter" name="Explicitly_specify_the_audience_parameter">Spécifiez explicitement le paramètre audience</h3>
+<p>Pour vérifier une assertion, vous pouvez envoyer une requête POST à l'adresse <code>https://verifier.login.persona.org/verify</code>. La requêtre inclut un paramètre appelé <code>audience :</code></p>
+<pre><code>assertion=&lt;ASSERTION&gt;&amp;audience=https://monsite.com:443"</code></pre>
+<p>Le paramètre <code>audience</code> est requis. Vous devriez toujours spécifier l'audience explicitement dans votre code, où dans votre configuration. Attention à :</p>
+<ul>
+ <li>Ne pas croire le header Host envoyé par le navigateur.</li>
+ <li>Ne pas croire un paramètre explicite envoyé par le navigateur, mais généré par votre JavaScript en utilisant par exemple <code>document.location</code>.</li>
+</ul>
+<p>Si vous faites confiance au navigateur pour vous fournir l'audience, alors il devient possible pour un site malveillant de réutiliser les assertions de <em>son</em> site pour se connecter sur <em>votre</em> site.</p>
+<h3 id="Verify_SSL_certificates" name="Verify_SSL_certificates">Vérifier les certificats SSL</h3>
+<p>Pour vérifier une assertion, vous pouvez envoyer une requête POST à l'adresse <code>https://verifier.login.persona.org/verify</code>. Vous devez vous assurer que la requête HTTPS vérifie le certificat envoyé par le serveur contre un certificat-racine sûr. Si vous ne le faites pas, alors un hacker pourrait se faire passer pour <code>verifier.login.persona.org</code> et renvoyer des vérifications erronées.</p>
+<p>Vérifiez que la librairie utilisée vérifie les certicicats correctements, et que vous l'intialisez avec les certificats-racines appropriés.</p>
+<p><span style="line-height: 1.572;">Par exemple, le module standard de Python 2.7 ne valide pas les certificats serveurs. Nous recommandons plutôt d'utiliser les modules "</span><a class="external" href="http://pypi.python.org/pypi/requests" style="line-height: 1.572;">requests</a><span style="line-height: 1.572;">" (en) ou "</span><a class="external" href="http://pypi.python.org/pypi/urllib3" style="line-height: 1.572;" title="http://pypi.python.org/pypi/urllib3">urllib3</a><span style="line-height: 1.572;">" (en) en Python 2.x, ou la classe standard <code>http.client.HTTPSConnection</code></span> en Python 3.x<span style="line-height: 1.572;">. En Perl, assurez-vous d'utiliser au moins la version 6.0 de <code>libwww-perl</code></span>. En fonction du langage, de la bibliothèque et du système d'exploitation utilisé, vous pourriez devoir fournir soit une liste de certificats-racines sûrs, soit le seul certificat utilisé par <code>verifier.login.persona.org</code>.</p>
+<h3 id="Implement_CSRF_protection" name="Implement_CSRF_protection">Implémenter une protection CSRF</h3>
+<p>Lors d'une attaque de connexion CSRF (Cross-Site Request Forgery, contrefaçon de requêtes trans-sites), un hacker utilise une contrefaçon de requête trans-site pour connecter un utilisateur sur un site en utilisant ses identifiants.</p>
+<p>Par exemple : un utilisateur visite un site web malveillant contenant un élément <code>form</code>. L'attribut <font face="Courier New, Andale Mono, monospace"><span style="line-height: normal;">action</span></font> du formulaire est défini sur une requête HTTP POST pointant vers <a class="external" href="http://www.google.com/login" title="http://www.google.com/login">http://www.google.com/login</a>, en envoyant le nom d'utilisateur et le mot de passe du hacker. Lorsque l'utilisateur envoie le formulaire, sa requête est envoyée à Google, la connexion est faite avec succès et le serveur Google définit un cookie dans le navigateur de l'utilisateur. À présent, l'utilisateur est sans le savoir connecté sur le compte Google du hacker.</p>
+<p>Cette attaque peut être utilisée pour récupérer des informations sensibles à propos de l'utilisateur. Par exemple, la fonctionnalité d'<a class="link-https" href="https://www.google.com/history/">Historique Web</a> de Google recense tous les mots-clefs de recherche de l'utilisateur. Si l'utilisateur est connecté sur le compte Google du hacker ayant la fonctionnalité d'Historique Web activée, alors l'utilisateur donne toutes ses informations au hacker.</p>
+<p>Les attaques de connexion CSRF, et les défenses potentielles à mettre en place contre elles, sont documentées plus exhaustivement dans <a class="external" href="http://www.adambarth.com/papers/2008/barth-jackson-mitchell-b.pdf">Défenses robustes contre les contrefaçons de requêtes trans-sites</a> (PDF, en). Elles ne sont pas spécifiques à Persona : la plupart des mécanismes de connexion sont potentiellement vulnérables face à elles.</p>
+<p>Il y a plusieurs techniques qui peuvent être utilisées pour protéger un site contre les attaques de connexion CSRF, qui sont documentées plus exhaustivement dans l'étude ci-dessus.</p>
+<p>Une de ces approches est de créer un identifiant secret dans le serveur, partagé avec le navigateur et de demander au navigateur de le fournir lors de requêtes de connexions. Par exemple :</p>
+<ol>
+ <li>Dès que l'utilisateur arrive sur votre site, avant qu'il n'essaie de se connecter, créez une session pour lui sur le serveur. Enregistrez l'ID de la session dans un cookie de navigateur.</li>
+ <li>Sur le serveur, générez une chaîne de caractères aléatoire d'au moins 10 caractères alphanumériques. Un UUID généré aléatoirement est une bonne solution. C'est le jeton CSRF. Enregistrez-le dans la session.</li>
+ <li>Donnez le jeton CSRF au navigateur en l'incluant dans du JavaScript ou dans le HTML en tant que variable de formulaire cachée.</li>
+ <li>Assurez-vous que les envois AJAX ou les requêtes POST de formulaires incluent le jeton CSRF.</li>
+ <li>Côté serveur, avant d'accepter une assertion, assurez-vous que le jeton CSRF envoyé correspond au jeton CSRF enregistré dans la session.</li>
+</ol>
+<h2 id="Enhancements" name="Enhancements">Améliorations</h2>
+<h3 id="Content_Security_Policy_(CSP)" name="Content_Security_Policy_(CSP)">Politique de sécurité du contenu (CSP)</h3>
+<p>La <a href="/fr/docs/Sécurité/CSP" title="Security/CSP">Politique de sécurité du contenu</a> (CSP) est une couche supplémentaire de sécurité qui aide à détecter et atténuer certains types d'attaques, dont le Scriptage Trans-sites (XSS) et les attaques d'injection de données. Ces attaques sont utilisées pour beaucoup de choses du vol de données à la dégradation du site ou la distribution de logiciels malveillants.</p>
+<p>Si vous utilisez la CSP sur votre site, vous devriez modifier votre politique pour inclure Persona. En fonction de votre politique, vous pourriez avoir besoin de :</p>
+<ul>
+ <li>Supprimer les URI <font face="Courier New, Andale Mono, monospace"><span style="line-height: normal;">javascript:</span></font> les remplacer par du code chargé depuis un fichier de script additionnel. Ce fichier peut parcourir les éléments d'après leur ID et attacher des événements aux éléments en modifiant la propriété <a href="/fr/docs/Web/API/Element/onclick" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>onclick</code></a> ou en apppelant <a href="/fr/docs/Web/API/Element/addEventListener" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>addEventListener()</code></a>.</li>
+ <li>Autoriser <code>https://login.persona.org</code> aussi bien en tant que <code>script-src</code> qu'en tant que <code>frame-src</code> afin que votre site puisse charger le fichier <code>include.js</code> local et que ce fichier puisse communiquer avec l'implémentation alternative de Persona.</li>
+</ul>
+<p>Une configuration Apache d'example pourrait inclure :</p>
+<pre><span class="diff-content"><span class="idiff">Header set X-Content-Security-Policy: "default-src 'self'; frame-src 'self' https://login.persona.org ; script-src 'self' https://login.persona.org"</span></span></pre>

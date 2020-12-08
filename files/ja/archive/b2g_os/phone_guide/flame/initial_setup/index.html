@@ -1,0 +1,108 @@
+---
+title: 初期セットアップ
+slug: Archive/B2G_OS/Phone_guide/Flame/Initial_setup
+tags:
+  - B2G
+  - Firefox OS
+  - Flame
+translation_of: Archive/B2G_OS/Phone_guide/Flame/Initial_setup
+---
+<div class="summary">
+<p>Flameを入手して端末の更新を試す前に、使っているOSに応じて、確実に従っておくべきいくつかの手順があります。例えばFlameのFirefox OSのバージョンを更新したり、アプリを電話機にプッシュしたり（両方とも下記に載っています）する前に。この両方が続く記事に載っていますが、まず一通りこの記事に取り組むべきです。</p>
+</div>
+
+<h3 id="全てのOS">全てのOS</h3>
+
+<p>コ ンピューターにADBとFastbootをインストールする必要があります — これらは、電話機とコンピューター同士を、USB充電ケーブル接続時に、相互作用を可能にするアプリケーションです。これらは新バージョンの Firefox OSを電話機に焼く時や、無反応状態から回復する時、アプリを電話機にプッシュする時、などに必要です。</p>
+
+<div class="note">
+<p><strong>記</strong>: Ubuntu上で ADB や Fastboot をインストールするには、単に <code>sudo apt-get install android-tools-adb android-tools-fastboot</code> をコマンドラインで使います。</p>
+</div>
+
+<div class="note">
+<p><strong>記</strong>: Mac OS上で ADB や Fastboot をインストールするには、コマンドラインでHomebrewを使いいます。 <a href="https://developer.mozilla.org/ja/Firefox_OS/Debugging/Installing_ADB">ADBをインストールして使用する</a>.を見て下さい。</p>
+</div>
+
+<p>ADBとFastbootは<a class="external-icon external" href="http://developer.android.com/sdk/index.html" title="Android Developer Tookit">Android Developer Toolkit</a>で入手できます:</p>
+
+<ol>
+ <li>このリンクに移動します。</li>
+ <li>"<em>Download Eclipse ADT</em>"ボタンを押します。</li>
+ <li>ライセンス条件に同意します。</li>
+ <li>32-bitか64-bitバージョンを選択します(よく分からない時は32-bitで良い)</li>
+ <li>最終の"<em>Download Eclipse ADT with the Android SDK...</em>"ボタンをクリックします。</li>
+ <li>ダウンロードが終わったら、コンピューターのデスクトップにzipファイルを展開します。</li>
+ <li>フォルダ名が多少ややこしいかもしれません、単に<em>adt</em>に名前変更します。</li>
+</ol>
+
+<p>ADB はコマンドラインから実行するツールです。ターミナル/コマンドプロンプトを開いた場合、adt/sdk/platform-tools へ移動して <code>adb</code> コマンドを実行します。ADBで何ができるかについての大量の情報が帰ってくるのが見えるでしょう。 <code>adb devices</code> を実行すると <code>List of devices attached</code>の行だけが返り、なぜならまだ端末を接続してないためです。</p>
+
+<p>しかしこの時点で、PATH 変数が ADB ツールを指すようにセットする必要があり、そうするとどこからでも、ADBが入っているディレクトリにいなくても実行できます。</p>
+
+<p>Windows 8 で実行するには(Windows 7 は同様ですがメニューオプションが多少変わります):</p>
+
+<ul>
+ <li>下 端の左側にあるWindows ボタンを右クリックし、Control Panel &gt; System and Security &gt; System &gt; Advanced System settings &gt; Environment Variables を選びます。</li>
+ <li><em>システム変数一覧に、</em>Pathを探して選択して、 <em>Edit...</em> をクリック</li>
+ <li><em>結果のダイアログボックスの変数の値</em> のテキストフィールドの中で、大きな文字列の最後に、セミコロン (;) に続いてお使いのシステムのadbツールの場所を入力します。それは <em>C:\Users\[YOUR USER NAME]\Desktop\adt\sdk\platform-tools</em> になるでしょう。</li>
+ <li>あなたの名前がjamessmithならば、こう入力します; <em>C:\Users\jamessmith\Desktop\adt\sdk\platform-tools</em></li>
+ <li>全てのダイアログボックスでokを押します。</li>
+ <li>コマンドプロンプトを閉じて、新しく開き、<code>adb devices</code> とタイプしてテストします。<code>List of devices attached と出たら成功です</code>!　下記の <a href="#Windows.E3.81.AE.E8.BF.BD.E5.8A.A0.E6.89.8B.E9.A0.86">Windowsの追加手順</a> 節の手順に従う必要もあります。</li>
+</ul>
+
+<p>Mac/Linuxでは:</p>
+
+<ul>
+ <li>Finderアプリで、ホームフォルダに移動します (家のアイコン)</li>
+ <li>まだ非表示ファイル(例えば、ドット(.)で始まるシステムファイル)が見えない場合、ターミナルへ移動し、<code>defaults write com.apple.finder AppleShowAllFiles とコマンド入力し、はいと答えて</code>Finderを再起動します。</li>
+ <li>.bash_profile または .bashrc ファイルを、Text WranglerやSublime Text (プレーンテキストエディタが必要です) のようなプレーンテキストエディタで開きます。</li>
+ <li>ファイル内に PATH=/Users/<em>[YOUR USER NAME]</em>/Desktop/adt/sdk/platform-tools:$PATH と書いた行を追加します</li>
+ <li>ファイルを保存して閉じます。</li>
+ <li>ターミナルを再起動して、<code>adb devices</code>とタイプしてテストします。<code>List of devices attached</code><code> と出たら成功です</code>!</li>
+</ul>
+
+<h3 id="Linuxの追加手順">Linuxの追加手順</h3>
+
+<p>Linuxのディストリビューションによっては、電話機に<a href="https://developer.mozilla.org/ja/Firefox_OS/Firefox_OS_build_prerequisites#For_Linux.3A_configure_the_udev_rule_for_your_phone">udevルールを追加</a>します。</p>
+
+<p>端末のベンダーIDを知るには、電話機をUSB経由で接続して <code>lsusb</code> コマンドを使ってUSBサブシステム上に検知される端末を見ます。一覧から電話機を見ます見つけて、"ID"に続く4桁の数字をメモします。Flame によくあるIDは <code>05c6 なので、この時のudevルールは</code>下記のようになります:</p>
+
+<pre class="language-html"><code class="language-html">SUBSYSTEM=="usb", ATTRS{idVendor}=="05c6", MODE="0666"</code></pre>
+
+<p>別の番号が載っている場合、代わりにそれを使います。例えば:</p>
+
+<pre class="language-html"><code class="language-html">SUBSYSTEM=="usb", ATTRS{idVendor}=="18d1", MODE="0666"</code></pre>
+
+<p><code><code>udevadm control --reload-rules </code>を実行し(環境に依っては自動で行われます)、端末の抜き差しを忘れずに行っておきます。</code></p>
+
+<p> </p>
+
+<h3 id="Windowsの追加手順">Windowsの追加手順</h3>
+
+<p>Flame端末に<a href="https://developer.mozilla.org/ja/Firefox_OS/Debugging/Installing_ADB">ADB</a>やMozilla開発ツールの<a href="https://developer.mozilla.org/ja/Firefox_OS/Using_the_App_Manager">App Manager</a>/<a href="https://developer.mozilla.org/ja/docs/Tools/WebIDE">WebIDE</a>でアクセスするにはUSBドライバが必要です。下記の章にある手順にしたがってインストールして下さい。</p>
+
+<h4 id="ドライバをダウンロードする">ドライバをダウンロードする</h4>
+
+<p><a href="http://cds.w5v8t3u9.hwcdn.net/Alcatel_USB_Driver_Q_4.0.0_2013_11_11_noinstall.zip">この場所からWindowsドライバをダウンロードします。</a>終わったらZIPファイルをハードディスクの適当な場所に展開します。</p>
+
+<div class="note">
+<p><strong>記</strong>: Android デバッグブリッジ (<a href="https://developer.mozilla.org/ja/Firefox_OS/Debugging/Installing_ADB">ADB</a>) が先にインストールされていなければなりません: まだこれが終わっていない場合、上記指示を見て下さい。</p>
+</div>
+
+<h4 id="USBドライバをインストールする">USBドライバをインストールする</h4>
+
+<p>この時点で、Flame端末とコンピュータをUSBケーブルで接続します。</p>
+
+<p>ドライバをインストールするには、ZIPファイルを展開してできる the <code>Alcatel_USB_Driver_Q_4.0.0_2013_11_11_noinstall</code> フォルダを開き、<code>DriverInstaller.exe</code> の実行ファイルをダブルクリックします。この時に不明な発行元の警告が出るかもしれません。その場合、はいを選んで実行ファイルを起動します。</p>
+
+<p><img alt="Simple dialog box showing a picture of a phone along with install and uninstall buttons." src="https://mdn.mozillademos.org/files/8079/driver-install.png" style="width: 358px; height: 523px; display: block; margin: 0px auto;"></p>
+
+<p><em>Install</em> ボタンをクリックしてドライバをインストールします。</p>
+
+<p>ドライバのインストール後、コマンドラインウィンドーで <code>adb devices</code> とタイプして動作をチェックします。<br>
+ 接続されている端末がこのように出力されます。</p>
+
+<pre class="language-html"><code class="language-html">List of devices attached
+3561d02a          device</code></pre>
+
+<p>ここで端末が出てこない時、Windowsのデバイスマネージャを開 きます。Flameが"ACER ADB Interface"として出ているかもしれません。端末を抜いた時にデバイスマネージャで消えるかで、これを確認できます。"ACER ADB Interface"を右クリックし、アンインストールをクリックして、ドライバをアンインストールします。ドライバソフトウェアの削除ダイアログの中でチェックがされていることを確認して下さい。ここで上記のインストーラを再度起動します。Flameの画面タイムアウト設定をいくらか高くしておくとよいでしょう (<em>Settings </em>&gt; <em>Display </em>&gt; <em>Screen timeout</em>) 。画面が消えている時に、Windowsがたまにデフォルトのドライバを再インストールするようです。</p>

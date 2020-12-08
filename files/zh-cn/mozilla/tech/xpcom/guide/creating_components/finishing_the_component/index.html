@@ -1,0 +1,337 @@
+---
+title: Finishing the Component
+slug: Mozilla/Tech/XPCOM/Guide/Creating_components/Finishing_the_Component
+tags:
+  - XPCOM
+  - 所有分类
+translation_of: Mozilla/Tech/XPCOM/Guide/Creating_components/Finishing_the_Component
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/Creating_XPCOM_Components:Starting_WebLock" style="float: left;">« 上一页</a><a href="/zh-CN/docs/Creating_XPCOM_Components:Building_the_WebLock_UI">下一页  »</a></p>
+</div><p></p>
+
+<p>At this point you have created most of the infrastructure of the component. The component will be recognized by XPCOM and registered with the Category Manager so that it starts up when XPCOM initializes. When the component starts up, it populates a list of URLs read in from a file stored next to the Gecko binary on the local system.</p>
+
+<h3 id="Using_Frozen_Interfaces" name="Using_Frozen_Interfaces">Using Frozen Interfaces</h3>
+
+<p>The core functionality of blocking sites is still missing, however. The interfaces needed to block certain URLs from loading are not frozen, and there is still some debate about how exactly this functionality should be exposed to embedders and component developers, so the APIs are not ready to be published. This puts you in the same situation as many developers using Mozilla - you want to use some specific functionality, but the interfaces seem to change on a daily basis.</p>
+
+<p>All of the Mozilla source code is publicly available, and interfaces can be used easily enough. Grab the right headers, use the Component or Service Manager to access the interface you want, and the XPCOM object(s) that implement that interface will do your bidding. With this huge amount of flexibility, however, you lose compatibility. If you use "stuff" that isn't frozen, that stuff is subject to change in future versions of Gecko.</p>
+
+<p>If you want to be protected against changes in Gecko, you must only use interfaces and APIs that are clearly marked as FROZEN. The marking is made in the comments above the interface declaration. For example, take a look at the <code>nsIServiceManager</code>:</p>
+
+<pre>/**
+ * The nsIServiceManager manager interface provides a means to obtain
+ * global services in an application. The service manager depends
+ * on the repository to find and instantiate factories to obtain
+ * services.
+ *
+ * Users of the service manager must first obtain a pointer to the
+ * global service manager by calling NS_GetServiceManager. After that,
+ * they can request specific services by calling GetService.
+ * When they are finished they can NS_RELEASE() the service as usual.
+ *
+ * A user of a service may keep references to particular services
+ * indefinitely and only must call Release when it shuts down.
+ *
+ * @status FROZEN
+ */
+</pre>
+
+<p>These frozen interfaces and functions are part of the Gecko SDK. The rule of thumb is that interfaces outside of the SDK are considered "experimental" or unfrozen. See the following sidebar for information about how frozen and unfrozen interfaces can affect your component development, and for technical details about how interface changes beneath your code can cause havoc.</p>
+
+<div class="side-note">
+<p><span id="The_Danger_of_Using_Unfrozen_Interfaces"><a id="The_Danger_of_Using_Unfrozen_Interfaces"></a><strong>The Danger of Using Unfrozen Interfaces</strong></span></p>
+
+<p>Suppose that you need to use the interface <code>nsIFoo</code> that isn't frozen. You build your component using this interface, and it works great with the version of Gecko that you have tested against. However, some point in the future, the <code>nsIFoo</code> interface requires a major change, and methods are reordered, some are added, others are removed. Moreover, since this interface was never supposed to be used by clients other than Gecko or Mozilla, the maintainers of the interface don't know that it's being used, and don't change the IID of the interface. When your component runs in a version of Gecko in which this interface is updated, your method calls will be routed through a different v-table than the one the component expected, most likely resulting in a crash.</p>
+
+<p>Below, the component is compiled against a version of the <code>nsIFoo</code> interface that has three methods. The component calls the method <code>TestA</code> and passes an integer, 10. This works fine in any Gecko installation where a contract guarantees that the interface that was compiled against has the same signature. However, when this same component is used in a Gecko installation where this interface has changed, the method <code>TestA</code> does not exist in the <code>nsIFoo</code> interface; the first entry in the v-table is in fact <code>IsPrime()</code>. When this method call is made, the code execution treats the <code>IsPrime</code> method as <code>TestA</code>. Needless to say, this is a bad thing. Furthermore, there is no way easy way to realize this error at runtime.</p>
+
+<p><img alt="Image:vtable-of-altered-interface.png"></p>
+
+<p>Gecko developers could change the interface's IID, and some do. This can prevent many errors like this. But unfrozen interfaces are not supported in any formal way, and relying upon a different IID for any change in the interface is not a good idea either.</p>
+
+<p>When using frozen interfaces, you are guaranteed compatibility with future versions of Gecko. The only trouble occurs when the compiler itself changes its v-table layout, which can happen when the compiler changes its ABI. For example, in 2002 the GNU Compiler Collection (GCC), version 3.2 changed the C++ ABI, and this caused problems between libraries compiled with GCC 3.2 and applications compiled with an earlier version and vice versa. Similar problems occurred with GCC 4.0, which underwent similar ABI changes.</p>
+</div>
+
+<p>Before attempting to use unfrozen interfaces, you should contact the developers who are responsible for the code you're trying to use (i.e.,<em><a class="external" href="http://www.mozilla.org/owners.html">module owners</a></em> ) and ask them how best to do what you are trying to do. Be as precise you possibly can. They may be able to suggest a supported alternative, or they may be able to notify you about pending changes.</p>
+
+<p>The interface that we need for this project is something called <code>nsIContentPolicy</code>. At the time this book was written, this interface was under review. An interface reaches this state when a group of module owners and peers are actively engaged in discussion about how best to expose it. Usually there are only minor changes to interfaces marked with such a tag. Even with interfaces marked "under review," however, it's still a good idea to contact the module owners responsible for the interfaces you are interested in using.</p>
+
+<h4 id="Copying_Interfaces_into_Your_Build_Environment" name="Copying_Interfaces_into_Your_Build_Environment">Copying Interfaces into Your Build Environment</h4>
+
+<p>To get and implement interfaces that are not part of Gecko in your component, simply create a new directory in the Gecko SDK named <code>unfrozen</code>. Copy the headers and IDL files that you need from the <code><a href="https://dxr.mozilla.org/mozilla-central/source/content/base/public" rel="custom">content/base/public</a></code> source directory of the Gecko build into this new directory. (For <strong>WebLock</strong>, all you need are the headers for <code>nsIContentPolicy</code> and the <code>nsIContentPolicy.idl</code>.) Then, using the same steps you used to create the <code>Weblock.h</code>, create a header from this IDL file using the xpidl compiler. Once you have these interface and header files, you can modify the <code>WebLock</code> class to implement the <code>nsIContentPolicy</code> interface. The Weblock class will then support four interfaces: <code>nsISupports</code>, <code>nsIObserver</code>, <code>nsIContentPolicy</code>, and <code>iWeblock</code>.</p>
+
+<p><img alt="Image:weblock-implemented-ifaces.png"></p>
+
+<p><span id="%3Ccode%3EWebLock%3C/code%3E_Interfaces"><a id="%3Ccode%3EWebLock%3C/code%3E_Interfaces"></a><strong><code>WebLock</code> Interfaces</strong></span></p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Interface Name</td>
+   <td class="header">Defined by</td>
+   <td class="header">Status</td>
+   <td class="header">Summary</td>
+  </tr>
+  <tr>
+   <td><code>nsISupports</code></td>
+   <td>XPCOM</td>
+   <td>Frozen</td>
+   <td>Provides interface discovery, and object reference counting</td>
+  </tr>
+  <tr>
+   <td><code>nsIObserver</code></td>
+   <td>XPCOM</td>
+   <td>Frozen</td>
+   <td>Allows messaging passing between objects</td>
+  </tr>
+  <tr>
+   <td><code>nsIContentPolicy</code></td>
+   <td>Content</td>
+   <td>Not Frozen</td>
+   <td>Interface for policy control mechanism</td>
+  </tr>
+  <tr>
+   <td><code>iWeblock</code></td>
+   <td>Web Lock</td>
+   <td>Not Frozen</td>
+   <td>Enables and disables Weblock. Also, provides access to the URL that are whitelisted.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Implementing_the_nsIContentPolicy_Interface" name="Implementing_the_nsIContentPolicy_Interface">Implementing the <code>nsIContentPolicy</code> Interface</h4>
+
+<p>To implement the new interface, you must <code>#include</code> the unfrozen <code><a class="internal" href="/en/nsIContentPolicy" title="en/nsIContentPolicy">nsIContentPolicy</a></code>, and you must also make sure the build system can find the file you've brought over. The location of the file and the steps for adding that location to the build system vary depending on how you build this component.</p>
+
+<p>Once you have made sure that your component builds with the new header file, you must derive the <code>Weblock</code> class from the interface <code>nsIContentPolicy</code>, which you can do by simply adding a public declaration when defining the class. At the same time, you can add the macro <code>NS_DECL_NSICONTENTPOLICY</code> to the class declaration that provides all of the methods defined in the interface nsIContentPolicy. The updated <code>WebLock</code> class looks as follows:</p>
+
+<pre>class WebLock: public nsIObserver, public iWeblock, public nsIContentPolicy
+{
+  public:
+    WebLock();
+    virtual ~WebLock();
+
+    NS_DECL_ISUPPORTS
+    NS_DECL_NSIOBSERVER
+    NS_DECL_IWEBLOCK
+    NS_DECL_NSICONTENTPOLICY
+
+  private:
+    urlNode* mRootURLNode;
+    PRBool   mLocked;
+};
+</pre>
+
+<p>Remember to change the <code>nsISupports</code> implementation macro to include <code>nsIContentPolicy</code> so that other parts of Gecko will know <strong>WebLock</strong> supports the <code>nsIContentPolicy</code> interface without modifying this macro.</p>
+
+<pre>NS_IMPL_ISUPPORTS3(WebLock, nsIObserver, iWeblock, nsIContentPolicy);
+</pre>
+
+<h4 id="Receiving_Notifications" name="Receiving_Notifications">Receiving Notifications</h4>
+
+<p>To receive notifications, you must register as a new category. You have already registered as a category to receive startup notification. This time, the category name to use is "content-policy". To add the <strong>WebLock</strong> component to this category, modify the <code>WebLockRegistration</code> callback function so that it looks like this:</p>
+
+<pre>static NS_METHOD WebLockRegistration(nsIComponentManager *aCompMgr,
+                                     nsIFile *aPath,
+                                     const char *registryLocation,
+                                     const char *componentType,
+                                     const nsModuleComponentInfo *info)
+{
+  nsresult rv;
+  nsCOMPtr&lt;nsIServiceManager&gt; servman = do_QueryInterface((nsISupports*)aCompMgr, &amp;rv);
+  if (NS_FAILED(rv))
+    return rv;
+
+  nsCOMPtr&lt;nsICategoryManager&gt; catman;
+  servman-&gt;GetServiceByContractID(NS_CATEGORYMANAGER_CONTRACTID,
+                                  NS_GET_IID(nsICategoryManager),
+                                  getter_AddRefs(catman));
+  if (NS_FAILED(rv))
+    return rv;
+
+  char* previous = nsnull;
+  rv = catman-&gt;AddCategoryEntry("xpcom-startup",
+                                "WebLock",
+                                WebLock_ContractID,
+                                PR_TRUE,
+                                PR_TRUE,
+                                &amp;previous);
+  if (previous)
+    nsMemory::Free(previous);
+
+  rv = catman-&gt;AddCategoryEntry("content-policy",
+                                "WebLock",
+                                WebLock_ContractID,
+                                PR_TRUE,
+                                PR_TRUE,
+                                &amp;previous);
+  if (previous)
+    nsMemory::Free(previous);
+  return rv;
+}
+</pre>
+
+<p>This code adds a new category entry under the topic "content-policy," and it calls <code>AddCategoryEntry</code> in the same way we did in <a href="cn/Creating_XPCOM_Components/Starting_WebLock#Registering_for_Notifications">Registering for Notifications</a>. A similar step is required for unregistration.</p>
+
+<h3 id="Implementing_the_nsIContentPolicy" name="Implementing_the_nsIContentPolicy">Implementing the <code>nsIContentPolicy</code></h3>
+
+<p>At this point, you can take the <strong>WebLock</strong> component and install it into a Gecko installation. When the component is loaded, Gecko calls the <code>nsIContentPolicy</code> implementation in <strong>WebLock</strong> on every page load, and this prevents pages from displaying by returning the proper value when the load method is called.</p>
+
+<p>The web locking policy that we are going to put into place is quite simple: for every load request that comes through, we will ensure that the URI is in the list of "good" URLs on the white list.</p>
+
+<div class="side-note">
+<p>If you care to extend this implementation so that the list of URLs is held remotely on a server somewhere - as might be the case when the <strong>WebLock</strong> component is used in a corporate intranet, for example - there are Networking APIs in Gecko that will support this. Or you could implement the web lock so that instead of blocking any site, the component would simply log all URLs that are loaded. In any case, the process to make the XPCOM component is the same.</p>
+</div>
+
+<p>The method that handles the check before page loading and the only method we care about in our own implementation of <code>nsIContentPolicy</code> is <code>ShouldLoad()</code>. The other method on the <code>nsIContentPolicy</code> interface is for blocking processing of specific elements in a document, but our policy is more restrictive: if the URL isn't on the white list, the entire page should be blocked. In the <strong>WebLock</strong> component, the <code>ShouldLoad</code> method looks like this:</p>
+
+<pre>NS_IMETHODIMP WebLock::ShouldLoad(PRInt32 contentType,
+                                  nsIURI *contentLocation,
+                                  nsISupports *ctxt,
+                                  nsIDOMWindow *window,
+                                  PRBool *_retval)
+</pre>
+
+<h4 id="Uniform_Resource_Locators" name="Uniform_Resource_Locators">Uniform Resource Locators</h4>
+
+<p>The method passes in an interface pointer of type <code>nsIURI</code>, which is based on the Uniform Resource Identifier, or URI. This type is defined by the <a class="external" href="http://www.w3.org/">World Wide Web Consortium</a> as:</p>
+
+<ul>
+ <li>The naming scheme of the mechanism used to access the resource.</li>
+ <li>The name of the machine hosting the resource.</li>
+ <li>The name of the resource itself, given as a path.</li>
+</ul>
+
+<p>In this context, URIs are the strings used refer to places or things on the web. This specific form of URI is called a Uniform Resource Locator, or URL. See the <a class="external" href="http://www.w3.org/TR/REC-html40/intro/intro.html">intro to the HTML 4 specification</a> for more information about URIs and URLs.</p>
+
+<p>Gecko encapsulates these identifiers into two interfaces, <code>nsIURI</code> and <code>nsIURL</code>. You can <code>QueryInterface</code> between these two interfaces. The networking library, Necko, deals only with these interfaces when handling requests. When you want to download a file using Necko, for example, all you probably have is a string that represents the URI of the file. When you pass that string to Necko, it creates an object that implements at least the <code>nsIURI</code> interface (and perhaps other interfaces as well).</p>
+
+<p>Currently, the <strong>WebLock</strong> implementation of the <code>ShouldLoad</code> method compares the in parameter with each string in the white list. But it only should do this comparison for remote URLs, because we don't want to block the application from loading local content that it requires, like files it gets via the <code><a class="external" rel="freelink">resource://</a></code> protocol. If URIs of this kind are blocked, then Gecko will not be able to start up, so we'll restrict the content policy to the HTTP and FTP protocols.</p>
+
+<p>Instead of extracting the string <code>spec</code> out of the <code>nsIURI</code> to do a string comparison, which would require you to do the parsing yourself, you can compare the <code>nsIURI</code> objects with each other, as in the following section. This ensures that the URLs are canonical before they are compared.</p>
+
+<h4 id="Checking_the_White_List" name="Checking_the_White_List">Checking the White List</h4>
+
+<p>The <strong>WebLock</strong> implementation of the <code>ShouldLoad</code> method starts by extracting the scheme of the incoming <code>nsIURI</code>. If the scheme isn't "http", "https", or "ftp", it immediately returns true, which continues the loading process unblocked.</p>
+
+<p>These three are the only kinds of URI that <strong>Weblock</strong> will try to block. When it has one, it walks the linked list and creates a new <code>nsIURI</code> object for each string URL in the list. From each object, <code>ShouldLoad()</code> extracts the host and compares it to the URI. If they match, the component allows the load to continue by returning true. If these two strings do not match, then the component returns return false and blocks the load.</p>
+
+<div class="side-note">
+<p><span id="URI_Caching"><a id="URI_Caching"></a><strong>URI Caching</strong></span></p>
+
+<p>Caching the URI would make this method implementation much faster by avoiding the need to create and destroy so many objects. This points out an important drawback of XPCOM, which is that you cannot create an object on the stack.</p>
+
+<p>Creating this many objects is OK in a tight loop if the buffer of memory that holds the contents of the URLs is guaranteed to be valid for the lifetime of the object. But regardless of how optimized the implementation is with respect to is memory usage, a heap allocation will be made for every XPCOM object created.</p>
+</div>
+
+<p>The string comparison with the URL type "http", "https", and "ftp" looks like this:</p>
+
+<pre>nsEmbedCString scheme;
+contentLocation-&gt;GetScheme(scheme);
+
+if (strcmp("http", scheme.get())  != 0 &amp;&amp;
+    strcmp("https", scheme.get()) != 0 &amp;&amp;
+    strcmp("ftp", scheme.get())   != 0)
+{
+  // this isn't a type of URI that we deal with.
+  *_retval = PR_TRUE;
+  return NS_OK;
+}
+</pre>
+
+<h4 id="Creating_nsIURI_Objects" name="Creating_nsIURI_Objects">Creating <code>nsIURI</code> Objects</h4>
+
+<p>To create an <code>nsIURI</code>, use <code>nsIIOService</code>. <code>nsIIOService</code> is the part of the networking library ("necko") that's responsible for kicking off network requests, managing protocols such as http, ftp, or file, and creating <code>nsIURI</code>s. Necko offers tremendous network functionality, but all the <strong>WebLock</strong> component needs is to create the <code>nsIURI</code> object that can be compared with the URIs on the white list.</p>
+
+<p>Use the Service Manager to acquire the <code>nsIIOService</code>. Since this object is going to be used for the life of the component, it can also be cached. A good place to get an <code>nsIIOService</code> is in the component's <code>Observe()</code> method, which already has a pointer to the <code>Service Manager</code>. The code for getting the IO service from the Service Manager looks like this:</p>
+
+<pre>// Get a pointer to the IOService
+rv = servMan-&gt;GetServiceByContractID("@mozilla.org/network/io-service;1",
+                                     NS_GET_IID(nsIIOService),
+                                     getter_AddRefs(mIOService));
+</pre>
+
+<p>Once you have this interface pointer, you can easily create <code>nsIURI</code> objects from a string, as in the following snippet:</p>
+
+<pre>nsCOMPtr&lt;nsIURI&gt; uri;
+nsEmbedCString urlString(node-&gt;urlString);
+mIOService-&gt;NewURI(urlString,
+                   nsnull,
+                   nsnull,
+                   getter_AddRefs(uri));
+</pre>
+
+<p>This code wraps a C-string with a <code>nsEmbedCString</code>, which you'll recall is a string class that many of the Gecko APIs require. See <a href="cn/Creating_XPCOM_Components/Using_XPCOM_Utilities_to_Make_Things_Easier#String_Classes_in_XPCOM">String Classes in XPCOM</a> for more information about strings.</p>
+
+<p>Once the URL string is wrapped in a <code>nsEmbedCString</code>, it can be passed to the method <code>NewURI</code>. This method expects to parse the incoming string and create an object which implements an <code>nsIURI</code> interface. The two <code>nsnull</code> parameters passed to <code>NewURI</code> are used to specify the charset of the string and any base URI to use, respectively. We are assuming here that the charset of the URL string is <a href="cn/UTF-8">UTF-8</a>, and also assuming that every URL string is absolute. See the <a class="external" href="http://www.w3.org/TR/REC-html40/intro/intro.html">intro to the HTML 4 specification</a> for more information about relative URLs.</p>
+
+<p>Here is the complete implementation of the <code>ShouldLoad()</code> method:</p>
+
+<pre>NS_IMETHODIMP
+WebLock::ShouldLoad(PRInt32 contentType,
+                    nsIURI *contentLocation,
+                    nsISupports *ctxt,
+                    nsIDOMWindow *window,
+                    PRBool *_retval)
+{
+  if (!contentLocation)
+    return NS_ERROR_FAILURE;
+
+
+  nsEmbedCString scheme;
+  contentLocation-&gt;GetScheme(scheme);
+
+  if (strcmp("http", scheme.get())  != 0 &amp;&amp;
+      strcmp("https", scheme.get()) != 0 &amp;&amp;
+      strcmp("ftp",  scheme.get())  != 0)
+  {
+    // this isn't a type of URI that we deal with
+    *_retval = PR_TRUE;
+    return NS_OK;
+  }
+
+  nsEmbedCString hostToLoad;
+  contentLocation-&gt;GetHost(hostToLoad);
+
+  // Assume failure.  Do not allow this nsIURI to load.
+  *_retval = PR_FALSE;
+
+  nsresult rv;
+
+  urlNode* node = mRootURLNode;
+  PRBool match = PR_FALSE;
+
+  while (node)
+  {
+    nsCOMPtr&lt;nsIURI&gt; uri;
+    nsEmbedCString urlString(node-&gt;urlString);
+    rv = mIOService-&gt;NewURI(urlString, nsnull,  nsnull, getter_AddRefs(uri));
+
+    // if anything bad happens, just abort
+    if (NS_FAILED(rv))
+      return rv;
+
+    nsEmbedCString host;
+    uri-&gt;GetHost(host);
+
+    if (strcmp(hostToLoad.get(), host.get()) == 0)
+    {
+      // match found.  Allow this nsIURI to load
+      *_retval = PR_TRUE;
+      return NS_OK;
+    }
+    node = node-&gt;next;
+  }
+  return NS_OK;
+}
+</pre>
+
+<p>At this point, all of the backend work is complete. You can of course improve this backend in many ways, but this example presents the basic creation of what is commonly referred to as a "browser helper object" like <strong>WebLock</strong>. The next chapter looks at how to tie this into the front end - specifically, how to use XPConnect to access and control this component from JavaScript in the user interface.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/Creating_XPCOM_Components:Starting_WebLock" style="float: left;">« 上一页</a><a href="/zh-CN/docs/Creating_XPCOM_Components:Building_the_WebLock_UI">下一页  »</a></p>
+</div> <p></p><div class="licenseblock">
+<p>Copyright (c) 2003 by Doug Turner and Ian Oeschger. This material may be distributed only subject to the terms and conditions set forth in the <a class="external" href="http://www.opencontent.org/openpub/" rel="noopener">Open Publication License</a>, v1.02 or later. Distribution of substantively modified versions of this document is prohibited without the explicit permission of the copyright holder. Distribution of the work or derivative of the work in any standard (paper) book form is prohibited unless prior permission is obtained from the copyright holder.</p>
+</div><p></p>

@@ -1,0 +1,183 @@
+---
+title: 其他事件处理器
+slug: Mozilla/Tech/XUL/Tutorial/More_Event_Handlers
+translation_of: Archive/Mozilla/XUL/Tutorial/More_Event_Handlers
+---
+<div class="pageTitle">
+ <h1 id="更多关于事件处理">更多关于事件处理</h1>
+</div>
+<div id="page-top">
+ <div class="pageText" id="pageText">
+  <p> </p>
+  <p> </p>
+  <div class="prevnext">
+   <p><span style="float: left;">« <a href="../../../../en/XUL_Tutorial/Adding_Event_Handlers" rel="internal">Previous</a></span> <span style="float: right;"><a href="../../../../en/XUL_Tutorial/Keyboard_Shortcuts" rel="internal">Next</a> »</span></p>
+  </div>
+  <p>  </p>
+  <p> </p>
+  <p>    在这一章，详细讨论事件对象，并引入一些新事件。</p>
+  <div id="section_1">
+   <h3 class="editable" id="事件对象"><span>事件对象</span></h3>
+   <div class="editIcon">
+    <a href="/../../../../en/XUL_Tutorial/More_Event_Handlers#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+   <p>    每一个事件处理函数都包含一个保存这事件（ <a href="../../../../en/DOM/event" rel="internal">event</a> ）对象的参数。在以属性的发生添加的事件监听器里也有一个隐含的事件对象（event）被当作参数传递到事件监听器中。在 <a href="../../../../en/DOM/element.addEventListener" rel="internal">addEventListener</a> 的形式中，事件监听器的第一个参数就是事件对象。实践大学有一系列的属性，完整列表参见 <a href="../../../../en/DOM/event" rel="internal"> reference</a>。</p>
+   <p>    我们已经在上一章知道了<code><a href="../../../../en/DOM/event.target" rel="internal">target</a></code> 属性，它保存这产生事件元素的一个引用。一个相似的 <code><a href="../../../../en/DOM/event.currentTarget" rel="internal">currentTarget</a></code> 属性当前处理此事件的元素，下面的例子 <code><a href="../../../../en/DOM/event.currentTarget" rel="internal">currentTarget</a></code> 总是 vbox，而 <code><a href="../../../../en/DOM/event.target" rel="internal">target</a></code> 可能是不同的元素， button 或 checkbox。</p>
+   <p><span class="lang lang-en"><span id="Example_1"><strong>Example 1</strong></span> </span> : <span class="lang lang-en"><a class="external" href="http://developer.mozilla.org/samples/xultu/examples/ex_advevents_1.xul.txt" rel="external nofollow" title="http://developer.mozilla.org/samples/xultu/examples/ex_advevents_1.xul.txt">Source</a> <a class="external" href="http://developer.mozilla.org/samples/xultu/examples/ex_advevents_1.xul" rel="external nofollow" title="http://developer.mozilla.org/samples/xultu/examples/ex_advevents_1.xul">View</a> </span></p>
+   <pre>&lt;vbox oncommand="alert(event.currentTarget.tagName);"&gt;
+  &lt;button label="OK"/&gt;
+  &lt;checkbox label="Show images"/&gt;
+&lt;/vbox&gt;
+</pre>
+   <div id="section_2">
+    <h4 class="editable" id="停止事件传播"><span>停止事件传播</span></h4>
+    <div class="editIcon">
+     <a href="/../../../../en/XUL_Tutorial/More_Event_Handlers#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+    <p>    一旦你处理一个事件，无论事件传播到什么程度，你都希望停止事件继续向下传播。因为添加事件监听器的方式不同有以下两种方式停止事件传播。</p>
+    <p>    由于路由阶段先于返回阶段发生所以路由监听器会先于返回监听器触发。如果路由阶段停止事件传播，那么其后的路由监听器及所有返回监听器都不会触发。手动停止事件对象传播使用 <code><a href="../../../../en/DOM/event.stopPropagation" rel="internal">stopPropagation</a></code> 方法，如下例。</p>
+    <p><span class="lang lang-en"><span id="Example_2"><strong>Example 2</strong></span> </span> : <span class="lang lang-en"><a class="external" href="http://developer.mozilla.org/samples/xultu/examples/ex_advevents_2.xul.txt" rel="external nofollow" title="http://developer.mozilla.org/samples/xultu/examples/ex_advevents_2.xul.txt">Source</a> <a class="external" href="http://developer.mozilla.org/samples/xultu/examples/ex_advevents_2.xul" rel="external nofollow" title="http://developer.mozilla.org/samples/xultu/examples/ex_advevents_2.xul">View</a> </span></p>
+    <pre>&lt;hbox id="outerbox"&gt;
+  &lt;button id="okbutton" label="OK"/&gt;
+&lt;/hbox&gt;
+
+&lt;script&gt;
+function buttonPressed(event){
+  alert('Button was pressed!');
+}
+
+function boxPressed(event){
+  alert('Box was pressed!');
+  event.stopPropagation();
+}
+
+var button = document.getElementById("okbutton");
+button.addEventListener('command',buttonPressed,true);
+
+var outerbox = document.getElementById("outerbox");
+outerbox.addEventListener('command',boxPressed,true);
+&lt;/script&gt;
+</pre>
+    <p>    这里分别在按钮和box上添加事件监听器，在调用box的监听器中使用了 <code><a href="../../../../en/DOM/event.stopPropagation" rel="internal">stopPropagation</a></code> 方法，因此按钮的监听器永远不会被调用。如果去掉此命令两个监听器的显示都会出现。</p>
+   </div>
+   <div id="section_3">
+    <h4 class="editable" id="阻止默认响应"><span>阻止默认响应</span></h4>
+    <div class="editIcon">
+     <a href="/../../../../en/XUL_Tutorial/More_Event_Handlers#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+    <p>    如果没有注册事件处理，那么当完成路由及返回后，元素会以一种默认的方式对事件作出响应。这种默认响应依赖于元素的定义。比如， 'popupshowing' 事件在快捷菜单显示之前被发送。默认的响应就是显示快捷菜单。如果默认的响应被阻止，那么快捷菜单就不会显示。默认的响应可以使用事件对象的 <code><a href="../../../../en/DOM/event.preventDefault" rel="internal">preventDefault</a></code> 方法阻止，如下例。</p>
+    <p><span class="lang lang-en"><span id="Example_3"><strong>Example 3</strong></span> </span> : <span class="lang lang-en"><a class="external" href="http://developer.mozilla.org/samples/xultu/examples/ex_advevents_3.xul.txt" rel="external nofollow" title="http://developer.mozilla.org/samples/xultu/examples/ex_advevents_3.xul.txt">Source</a> <a class="external" href="http://developer.mozilla.org/samples/xultu/examples/ex_advevents_3.xul" rel="external nofollow" title="http://developer.mozilla.org/samples/xultu/examples/ex_advevents_3.xul">View</a> </span></p>
+    <pre>&lt;button label="Types" type="menu"&gt;
+  &lt;menupopup onpopupshowing="event.preventDefault();"&gt;
+    &lt;menuitem label="Glass"/&gt;
+    &lt;menuitem label="Plastic"/&gt;
+  &lt;/menupopup&gt;
+&lt;/button&gt;
+</pre>
+    <p>     另一种方式， 对于以属性形式使用的可以在代码中直接返回 false 。 注意阻止默认响应不同于 <code><a href="../../../../en/DOM/event.stopPropagation" rel="internal">stopPropagation</a></code> 方法，即使默认响应被阻止，事件依然会传播下去。同样的，定义 <code><a href="../../../../en/DOM/event.stopPropagation" rel="internal">stopPropagation</a></code> 方法也不会阻止默认响应。如果需要，必须同时调用。</p>
+    <p>    注意一旦传播或默认调用被阻止，都不可恢复。</p>
+    <p>    下面的几章列出可能用到的一些事件，一个完整的列表在这里 <a class="external" href="http://www.xulplanet.com/references/elemref/ref_EventHandlers.html" rel="external nofollow" title="http://www.xulplanet.com/references/elemref/ref_EventHandlers.html">XULPlanet event reference</a>。</p>
+   </div>
+  </div>
+  <div id="section_4">
+   <h3 class="editable" id="鼠标事件"><span>鼠标事件</span></h3>
+   <div class="editIcon">
+    <a href="/../../../../en/XUL_Tutorial/More_Event_Handlers#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+   <p>    这里的一些事件用来描述鼠标动作，简单的描述如下：</p>
+   <dl>
+    <dt>
+     click </dt>
+    <dd>
+     当鼠标键在一个元素上按下并释放后调用。</dd>
+   </dl>
+   <dl>
+    <dt>
+     dblclick </dt>
+    <dd>
+     当鼠标双击时调用。</dd>
+   </dl>
+   <dl>
+    <dt>
+     mousedown </dt>
+    <dd>
+     当鼠标键在一个元素上按下时调用，事件处理会被立即调用，甚至在鼠标键释放之前。</dd>
+   </dl>
+   <dl>
+    <dt>
+     mouseup </dt>
+    <dd>
+     当鼠标键在一个元素上释放时调用。</dd>
+   </dl>
+   <dl>
+    <dt>
+     mouseover </dt>
+    <dd>
+     当鼠标移动到一个元素之上时调用，你可以使用它来高亮显示该元素，然而CSS提供了一个方案自动实现它，所以你可能不会使用它，当然你也可以在状态栏显示一些提示信息。</dd>
+   </dl>
+   <dl>
+    <dt>
+     mousemove </dt>
+    <dd>
+     当鼠标在一个元素上移动时调用，在移动过程中可能会多次调用事件处理，请务必避免冗长，复杂操作。</dd>
+   </dl>
+   <dl>
+    <dt>
+     mouseout </dt>
+    <dd>
+     当指针移除元素时调用。你可以将该元素取消高亮或移除状态栏提示。</dd>
+   </dl>
+   <p>    也有一些与拖动相关的事件，当用户按下鼠标键并移动鼠标时产生，这一部分参见 <a href="../../../../en/Drag_and_Drop" rel="internal">Drag and Drop</a>.</p>
+   <div id="section_5">
+    <h4 class="editable" id="鼠标键事件属性"><span>鼠标键事件属性</span></h4>
+    <div class="editIcon">
+     <a href="/../../../../en/XUL_Tutorial/More_Event_Handlers#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+    <p>    当一个鼠标键事件产生，一系列附件属性也随之产生用以描述哪个鼠标键被按下及鼠标指针的位置。事件的 <code><a href="../../../../en/DOM/event.button" rel="internal">button</a></code> 可以用于确定哪个按键被按下。0 代表左键，1 代表中键 ，2代表右键。如果鼠标设置不同，值也不同。</p>
+    <p>    <code><a href="../../../../en/DOM/event.detail" rel="internal">detail</a></code> 保存着鼠标键被短时间内快速点击的次数。这允许你检查这是一次单击，双击还是三击。当然如果你希望检查双击你可以使用 dblclick 事件代替。一旦第一次点击开始 click 事件就会触发，第二次点击会再触发一次，第三次又一次。但 dblclick 事件仅在双击发生时触发。</p>
+    <p>     <code><a href="../../../../en/DOM/event.button" rel="internal">button</a></code> 及 <code><a href="../../../../en/DOM/event.detail" rel="internal">detail</a></code> 仅支持与鼠标键相关的事件，对鼠标移动事件无效。对于鼠标移动事件这两个值均为0。</p>
+   </div>
+   <div id="section_6">
+    <h4 class="editable" id="鼠标位置事件属性"><span>鼠标位置事件属性 </span></h4>
+    <div class="editIcon">
+     <a href="/../../../../en/XUL_Tutorial/More_Event_Handlers#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+    <p>    所以的鼠标事件都提供事件发生时鼠标的坐标位置。有两个坐标系统。其一是 <code><a href="../../../../en/DOM/event.screenX" rel="internal">screenX</a></code> 、 <code><a href="../../../../en/DOM/event.screenY" rel="internal">screenY</a></code> 属性他们是基于屏幕左上角的。另一个是 <code><a href="../../../../en/DOM/event.clientX" rel="internal">clientX</a></code> 、 <code><a href="../../../../en/DOM/event.clientY" rel="internal">clientY</a></code> 他们是相对于文件左上角的。这里有一个显示当前鼠标位置的例子。</p>
+    <p><span class="lang lang-en"><span id="Example_4"><strong>Example 4</strong></span> </span> : <span class="lang lang-en"><a class="external" href="http://developer.mozilla.org/samples/xultu/examples/ex_advevents_4.xul.txt" rel="external nofollow" title="http://developer.mozilla.org/samples/xultu/examples/ex_advevents_4.xul.txt">Source</a> <a class="external" href="http://developer.mozilla.org/samples/xultu/examples/ex_advevents_4.xul" rel="external nofollow" title="http://developer.mozilla.org/samples/xultu/examples/ex_advevents_4.xul">View</a> </span></p>
+    <pre>&lt;script&gt;
+
+function updateMouseCoordinates(e){
+  var text = "X:" + e.clientX + " Y:" + e.clientY;
+  document.getElementById("xy").value = text;
+}
+&lt;/script&gt;
+
+&lt;label id="xy"/&gt;
+&lt;hbox width="400" height="400" onmousemove="updateMouseCoordinates(event);"/&gt;
+</pre>
+    <p>    在这个例子里，box 的尺寸被准确设定，这样更容易看出结果。事件处理器得到 <code><a href="../../../../en/DOM/event.clientX" rel="internal">clientX</a></code> 和 <code><a href="../../../../en/DOM/event.clientY" rel="internal">clientY</a></code> 属性并根据他们创建一个字符串。这个字符串又被设置成为 label.value 的值。注意事件对象必须作为参数传递给<code>updateMouseCoordinates</code> 函数。如果快速的在剥削的边缘上移动鼠标，你可能会发现坐标并不会准确的停到 400。这是因为 mousemove 事件触发的间隔取决于鼠标移动的速度。因为当鼠标移动过一段距离后新的事件才触发，因为发送鼠标每一像素的移动是十分没有效率的。</p>
+   </div>
+   <div id="section_7">
+    <h4 class="editable" id="元素相关坐标"><span>元素相关坐标</span></h4>
+    <div class="editIcon">
+     <a href="/../../../../en/XUL_Tutorial/More_Event_Handlers#" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+    <p>    你经常想知道事件发生时对元素的坐标而非对于这个窗口。这时你可以使用减法来计算，示例如下。</p>
+    <pre>var element = event.target;
+var elementX = event.clientX - element.boxObject.x;
+var elementY = event.clientY - element.boxObject.y;
+</pre>
+    <p>      XUL 元素有一个 box 对象可以通过 <code><span class="lang lang-en"><a href="../../../../en/XUL/Property/boxObject" rel="internal">boxObject</a> <span style="font-family: Verdana,Tahoma,sans-serif;">属性获得。在</span></span></code><a href="../../../../en/XUL_Tutorial/Box_Objects" rel="internal"><code><span class="lang lang-en"><span style="font-family: Verdana,Tahoma,sans-serif;">后一章</span></span></code></a><code><span class="lang lang-en"><span style="font-family: Verdana,Tahoma,sans-serif;">我们会学习更多相关内容</span></span></code>，但记住它保存着如何显示元素包括元素的x，y 位置。在这个例子中，这些坐标被从事件坐标中减去，这样就得到了事件相对于元素的坐标。</p>
+   </div>
+  </div>
+  <div id="section_8">
+   <h3 class="editable" id="加载事件"><span>加载事件 </span></h3>
+   <div class="editIcon">
+    <a href="/../../../../en/XUL_Tutorial/More_Event_Handlers#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+   <p>    一旦XUL文件加载完成 load 事件就会被发送到文件 ( <code><span class="lang lang-en"><a href="../../../../en/XUL/window" rel="internal">window</a> <span style="font-family: Verdana,Tahoma,sans-serif;">标记</span></span></code>)，此时正是内容显示之前。这个事件通常被用于初始化操作及完成一些任务使得用户可以使用窗口。你可以通过调用一个顶层的脚本函数来使用这一事件处理以上这些事情。这是因为XUL文件为完全加载，一些事情可能会处理出错。使用 load 事件，在 <code><span class="lang lang-en"><a href="../../../../en/XUL/window" rel="internal">window</a> </span></code>标记处放置 <code><span class="lang lang-en"><a href="../../../../en/XUL/Attribute/onload" rel="internal">onload</a> <span style="font-family: Verdana,Tahoma,sans-serif;">属性，调用处理加载事件的处理器来完成必要的界面初始化。</span></span></code></p>
+   <p>    也有unload 事件，它当窗口关闭时被调用，或者作为浏览器的内容时，页面换为另一URL 时调用。你可以使用这一事件保存任何改变的信息。</p>
+   <p><br>
+         接下来我们看看如何添加键盘快捷方式（ <a href="../../../../en/XUL_Tutorial/Keyboard_Shortcuts" rel="internal">keyboard shortcuts</a>）.</p>
+   <p> </p>
+   <div class="prevnext">
+    <p><span style="float: left;">« <a href="../../../../en/XUL_Tutorial/Adding_Event_Handlers" rel="internal">Previous</a></span> <span style="float: right;"><a href="../../../../en/XUL_Tutorial/Keyboard_Shortcuts" rel="internal">Next</a> »</span></p>
+   </div>
+   <p>  </p>
+   <p> </p>
+  </div>
+ </div>
+</div>
+<p> </p>

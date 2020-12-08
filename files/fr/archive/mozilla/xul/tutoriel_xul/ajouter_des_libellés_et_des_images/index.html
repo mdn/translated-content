@@ -1,0 +1,64 @@
+---
+title: Ajouter des libellés et des images
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Ajouter_des_libellés_et_des_images
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_Labels_and_Images
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL/Ajouter_des_boutons" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL/Les_champs_de_saisie">Suivant  »</a></p>
+</div>
+<p>Cette section décrit la façon d'ajouter des libellés et des images dans une fenêtre. En complément, nous verront comment inclure des éléments dans des groupes.</p>
+<h3 id=".C3.89l.C3.A9ments_de_texte" name=".C3.89l.C3.A9ments_de_texte">Éléments de texte</h3>
+<p>Vous ne pouvez pas écrire du texte directement dans un fichier XUL sans le placer entre des balises, et espérer qu'il s'affiche. Vous avez deux éléments XUL à votre disposition pour cela.</p>
+<h4 id=".C3.89l.C3.A9ment_label" name=".C3.89l.C3.A9ment_label">Élément <code>label</code></h4>
+<p>La façon la plus basique pour inclure du texte dans une fenêtre est d'utiliser l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/label" title="label">label</a></code>. Il sert à placer un libellé à côté d'un contrôle, tel qu'un bouton. Voici un exemple :</p>
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_1.xul">Voir</a></p>
+<pre>&lt;label value="ceci est du texte"/&gt;</pre>
+<p>L'attribut <code id="a-value"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/value">value</a></code> sert à spécifier le texte à afficher. Le texte ne sera pas coupé, et donc apparaîtra sur une seule ligne. Il s'agit de la syntaxe la plus courante pour des libellés.</p>
+<p>Si le texte doit être coupé, vous pouvez placer son contenu à l'intérieur de balises ouvrantes et fermantes comme dans l'exemple suivant :</p>
+<p><span id="Exemple_2"><a id="Exemple_2"></a><strong>Exemple 2</strong></span> :</p>
+<pre>&lt;label&gt;Ceci est un texte plus long qui peut être coupé sur plusieurs lignes.&lt;/label&gt;</pre>
+<p>Comme en HTML, les césures de ligne et espaces supplémentaires sont réduits à un simple espace. Plus tard, nous verrons <a href="/fr/Tutoriel_XUL/Positionnement_des_éléments" title="fr/Tutoriel_XUL/Positionnement_des_éléments">comment imposer la largeur des éléments</a> pour que la césure se voit plus facilement.</p>
+<h4 id="Attribut_XULAttrcontrol" name="Attribut_XULAttrcontrol">Attribut <code id="a-control"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/control">control</a></code></h4>
+<p>Vous pouvez utiliser l'attribut <code id="a-control"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/control">control</a></code> pour définir quel contrôle est associé au libellé. Lorsque l'utilisateur clique sur le libellé associé, le contrôle obtient le focus. Cette association est également importante pour l'<a href="/fr/Accessibilité" title="fr/Accessibilité">accessibilité</a>, permettant aux lecteurs vocaux de lire le libellé du contrôle que l'utilisateur a tabulé. Définissez la valeur de l'attribut <code id="a-control"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/control">control</a></code> avec l'<code id="a-id"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/id">id</a></code> de l'élément obtiendra le focus.</p>
+<p><span id="Exemple_2"><a id="Exemple_2"></a><strong>Exemple 2</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_3.xul">Voir</a></p>
+<pre>&lt;label value="Cliquez ici" control="open-button" /&gt;
+&lt;button id="open-button" label="Ouvrir"/&gt;
+</pre>
+<p>Dans l'exemple du dessus, en cliquant sur le libellé, le focus sera mis sur le bouton.</p>
+<h4 id=".C3.89l.C3.A9ment_description" name=".C3.89l.C3.A9ment_description">Élément <code>description</code></h4>
+<p>Pour du texte descriptif non associé avec un contrôle particulier, vous pouvez utiliser l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/description" title="description">description</a></code>. Cet élément est utile pour du texte informatif placé en haut d'une boîte de dialogue ou d'un groupe de contrôles par exemple. Comme pour l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/label" title="label">label</a></code>, vous pouvez soit utiliser l'attribut <code id="a-value"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/value">value</a></code> pour une seule ligne de texte, soit placer le contenu du texte dans des balises ouvrantes et fermantes <code><a href="/fr/docs/Mozilla/Tech/XUL/description" title="description">description</a></code> pour des blocs de texte plus long. L'usage veut que la syntaxe avec attribut serve pour les libellés et que celle avec le contenu de texte serve pour des descriptions.</p>
+<p><span id="Exemple_4"><a id="Exemple_4"></a><strong>Exemple 4</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_2.xul">Voir</a></p>
+<pre>&lt;description&gt;
+     Cette longue section de texte est affichée.
+&lt;/description&gt;
+</pre>
+<p>Intrinsèquement, les deux éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/label" title="label">label</a></code> et <code><a href="/fr/docs/Mozilla/Tech/XUL/description" title="description">description</a></code> sont les mêmes. Les éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/label" title="label">label</a></code> sont généralement utilisés pour des libellés, tels que ceux des champs de saisie. L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/description" title="description">description</a></code> est généralement employé pour d'autres textes descriptifs telle qu'une information placée en haut d'une boîte de dialogue.</p>
+<h3 id="Les_images" name="Les_images">Les images</h3>
+<p>Comme en HTML, XUL a un élément pour afficher des images à l'intérieur d'une fenêtre. Cet élément est nommé naturellement <code><a href="/fr/docs/Mozilla/Tech/XUL/image" title="image">image</a></code>. Notez que le nom de la balise est différent de celle en HTML (<code>image</code> au lieu de <code>img</code>). Vous pouvez utiliser l'attribut <code id="a-src"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/src">src</a></code> pour indiquer l'URL de l'image. L'exemple suivant le montre :</p>
+<pre>&lt;image src="images/banner.jpg" /&gt;
+</pre>
+<p>Bien que vous pouvez utiliser cette syntaxe, il est préférable d'utiliser une feuille de styles pour spécifier une URL. Une section ultérieure vous décriera comment <a href="/fr/Tutoriel_XUL/Ajouter_des_feuilles_de_style" title="fr/Tutoriel_XUL/Ajouter_des_feuilles_de_style">utiliser des feuilles de styles</a>, mais l'exemple ci-dessous vous permettra d'appréhender le sujet. Vous pouvez utiliser le style CSS <code><a href="/fr/CSS/list-style-image" title="fr/CSS/list-style-image">list-style-image</a></code> pour définir l'URL de l'image. Voici des exemples :</p>
+<pre class="eval"><strong>XUL:</strong>
+ &lt;image id="image1"/&gt;
+ &lt;image id="search"/&gt;
+</pre>
+<pre class="eval"><strong>Style Sheet:</strong>
+ #image1 {
+   list-style-image: url("<a class="external" rel="freelink">chrome://findfile/skin/banner.jpg</a>");
+ }
+
+ #search {
+   list-style-image: url("<span class="nowiki">http://example.com/images/search.png</span>");
+ }
+</pre>
+<p>Ces images proviennent du répertoire chrome, dans le thème du paquetage findfile. Comme les images varient selon le thème graphique, vous devez normalement mettre les images dans le répertoire skin.</p>
+<hr>
+<p>Dans la section suivante, nous apprendrons comment ajouter des contrôles de saisie à une fenêtre.</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL/Ajouter_des_boutons" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL/Les_champs_de_saisie">Suivant  »</a></p>
+</div>
+<p><span class="comment">Interwiki</span></p>

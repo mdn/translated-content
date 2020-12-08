@@ -1,0 +1,62 @@
+---
+title: NPP_SetWindow
+slug: NPP_SetWindow
+tags:
+  - NPAPI
+  - Plugins
+translation_of: Archive/Plugins/Reference/NPP_SetWindow
+---
+<p> « <a href="https://developer.mozilla.org/ja/docs/Gecko_Plugin_API_Reference">Gecko Plugin API Reference</a> « <a href="https://developer.mozilla.org/ja/docs/Gecko_Plugin_API_Reference/Plug-in_Side_Plug-in_API">Plug-in Side Plug-in API</a>
+</p>
+
+<h3 id=".E6.A6.82.E8.A6.81" name=".E6.A6.82.E8.A6.81">概要</h3>
+
+<p>ウィンドウを作成したり、移動したり、サイズを変えたり、破棄したときにプラグインに告知します。</p>
+
+<h3 id=".E6.96.87.E6.B3.95" name=".E6.96.87.E6.B3.95">文法</h3>
+
+<pre>#include &lt;npapi.h&gt;
+
+NPError NPP_SetWindow(NPP instance, NPWindow *window);
+</pre>
+
+<h3 id=".E3.83.91.E3.83.A9.E3.83.A1.E3.83.BC.E3.82.BF" name=".E3.83.91.E3.83.A9.E3.83.A1.E3.83.BC.E3.82.BF">パラメータ</h3>
+
+<p>この関数は以下のパラメータを取ります:</p>
+
+<dl>
+ <dt>instance</dt>
+ <dd>現在のプラグインのインスタンスへのポインタ。組み込みかフルスクリーンでなければいけません。</dd>
+</dl>
+
+<dl>
+ <dt>window</dt>
+ <dd>インスタンスの描画するウィンドウへのポインタ。window 構造体はウィンドウハンドルや左上の角の値、幅、高さやクリッピングの長方形を含みます（以下の Unix に関する注を参照してください）。</dd>
+</dl>
+
+<h3 id=".E6.88.BB.E3.82.8A.E5.80.A4" name=".E6.88.BB.E3.82.8A.E5.80.A4">戻り値</h3>
+
+<ul>
+ <li>成功ならば、この関数は NPERR_NO_ERROR を返します。</li>
+ <li>失敗ならば、プラグインは読み込まれず、この関数はエラーコードを返します。返しうる値については、<a href="ja/NPAPI/Constants#Error_Codes">エラーコード</a>を参照してください。</li>
+</ul>
+
+<h3 id=".E8.AA.AC.E6.98.8E" name=".E8.AA.AC.E6.98.8E">説明</h3>
+
+<p>描画を始められるようにインスタンスの作成の後にブラウザは <code>NPP_SetWindow</code> を呼びます。後のSubsequent calls to <code>NPP_SetWindow</code> への呼び出しはサイズや位置の変化を示します; これらの呼び出しでは毎回同じ <a href="ja/NPWindow">NPWindow</a> オブジェクトを渡しますが、違う値を持っています。ウィンドウハンドルが null に設定されているならば、ウィンドウは破棄されます。この場合、プラグインはウィンドウに更なる画像処理をどのようなものであっても行ってはならず、すべての関連づけられたリソースを開放すべきです。</p>
+
+<p><code>NPP_SetWindow</code> 内で渡されるデータ構造体は <a href="ja/NPWindow">NPWindow</a> オブジェクトであり、それにはインスタンスの領域の座標や多様なプラットフォーム固有のデータが含まれています。このウィンドウはインスタンスが生きている間か、異なる値で再び <code>NPP_SetWindow</code> が呼ばれるまで有効です。</p>
+
+<p>Windows や Unix 上でのウィンドウを持つブラグインに対しては、window パラメータはブラウザウィンドウ階層のサブウィンドウへのハンドルを含みます。Mac OS 上では、このフィールドは <a href="ja/NP_Port">NP_Port</a> 構造体を指します。ウィンドウを持たないプラグインに対しては、それは描画可能なものへのプラットフォーム 固有のハンドルです。</p>
+
+<p>window パラメータを新しいウィンドウを指すように設定する前に、すべての変化を把握するために新しいウィンドウについての情報を（存在すれば）前のウィンドウと比較するのはいい考えです。</p>
+
+<div class="note">
+<p>注: NPP_SetWindow はウィンドウ内に描画される組み込み (NP_EMBED) かフルスクリーン (NP_FULL) プラグインに対してのみ役立ちます。表示されないプラグインに対しては無意味です。</p>
+</div>
+
+<h3 id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE" name=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE">関連項目</h3>
+
+<p><a href="ja/NPP_HandleEvent">NPP_HandleEvent</a>, <a href="ja/NPWindow">NPWindow</a>, <a href="ja/NP_Port">NP_Port</a></p>
+
+<p>{{ languages( { "en": "en/NPP_SetWindow" } ) }}</p>

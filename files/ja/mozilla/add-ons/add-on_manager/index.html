@@ -1,0 +1,68 @@
+---
+title: Add-on Manager
+slug: Mozilla/Add-ons/Add-on_Manager
+tags:
+  - Add-on Manager
+  - Add-ons
+  - NeedsEditorialReview
+  - NeedsTechnicalReview
+  - NeedsTranslation
+  - TopicStub
+translation_of: Mozilla/JavaScript_code_modules/Add-on_Manager
+---
+<p>{{ gecko_minversion_header("2.0") }}</p>
+
+<p>The Add-on Manager is responsible for managing all of the add-ons installed in the application. Through its APIs information about all installed add-ons can be retrieved and new add-ons can be installed. The APIs are designed to be generic and support many different types of add-ons.</p>
+
+<p>Many functions in the Add-on Manager interface operate asynchronously returning results through callbacks passed to the functions. The callbacks may be called immediately while the initial function is still executing or shortly after depending on when the requested data becomes available.</p>
+
+<h2 id="Accessing_installed_add-ons">Accessing installed add-ons</h2>
+
+<p>Information about installed add-ons can be retrieved through the main <code><a href="/ja/Add-ons/Add-on_Manager/AddonManager" title="AddonManager">AddonManager</a></code> API. All of its functions are asynchronous meaning that a callback function must be passed to receive the <code><a href="/ja/Add-ons/Add-on_Manager/Addon" title="Addon">Addon</a></code> instances. The callback may well only be called after the API function returns. For example:</p>
+
+<pre class="brush: js">Components.utils.import("resource://gre/modules/AddonManager.jsm");
+
+AddonManager.getAllAddons(function(aAddons) {
+  // Here aAddons is an array of <code><a href="/ja/Add-ons/Add-on_Manager/Addon" title="Addon">Addon</a></code> objects
+});
+// This code will execute before the code inside the callback
+</pre>
+
+<p>Notifications about changes to installed add-ons are dispatched to any registered <code><a href="/ja/Add-ons/Add-on_Manager/AddonListener" title="AddonListener">AddonListener</a></code>s. They must be registered through the <code><a href="/ja/Add-ons/Add-on_Manager/AddonManager#addAddonListener()" title="AddonManager.addAddonListener()">addAddonListener()</a></code> method.</p>
+
+<h2 id="Installing_new_add-ons">Installing new add-ons</h2>
+
+<p>New add-ons can be installed by using the <code><a href="/ja/Add-ons/Add-on_Manager/AddonManager#getInstallForFile()" title="AddonManager.getInstallForFile()">getInstallForFile()</a></code> or <code><a href="/ja/Add-ons/Add-on_Manager/AddonManager#getInstallForURL()" title="AddonManager.getInstallForURL()">getInstallForURL()</a></code> methods on the <code><a href="/ja/Add-ons/Add-on_Manager/AddonManager" title="AddonManager">AddonManager</a></code> object. These will pass an <code><a href="/ja/Add-ons/Add-on_Manager/AddonInstall" title="AddonInstall">AddonInstall</a></code> instance to the callback which can then be used to install the add-on:</p>
+
+<pre class="brush: js">Components.utils.import("resource://gre/modules/AddonManager.jsm");
+
+AddonManager.getInstallForURL("http://www.foo.com/test.xpi", function(aInstall) {
+  // aInstall is an instance of <code><a href="/ja/Add-ons/Add-on_Manager/AddonInstall" title="AddonInstall">AddonInstall</a></code>
+  aInstall.install();
+}, "application/x-xpinstall");
+</pre>
+
+<p>The progress of <code><a href="/ja/Add-ons/Add-on_Manager/AddonInstall" title="AddonInstall">AddonInstall</a></code>s can be monitored using an <code><a href="/ja/Add-ons/Add-on_Manager/InstallListener" title="InstallListener">InstallListener</a></code>. A listener can be registered either for a specific install using the <code><a href="/ja/Add-ons/Add-on_Manager/AddonInstall#addListener()" title="AddonInstall.addListener()">addListener()</a></code> method or for all installs using the <code><a href="/ja/Add-ons/Add-on_Manager/AddonManager#addInstallListener()" title="AddonManager.addInstallListener()">addInstallListener()</a></code> method.</p>
+
+<h2 id="Finding_updates">Finding updates</h2>
+
+<p>Add-ons can be checked for updates using the <code><a href="/ja/Add-ons/Add-on_Manager/Addon#findUpdates()" title="Addon.findUpdates()">findUpdates()</a></code> method. It must be passed an <code><a href="/ja/Add-ons/Add-on_Manager/UpdateListener" title="UpdateListener">UpdateListener</a></code> to receive information about compatibility information and new update information. Any available update is returned as an <code><a href="/ja/Add-ons/Add-on_Manager/AddonInstall" title="AddonInstall">AddonInstall</a></code> which is ready to be downloaded and installed.</p>
+
+<p>{{ h1_gecko_minversion("Detecting add-on changes", "7.0") }}</p>
+
+<p>You can also get lists of add-ons that, at startup, were changed in various ways. The <code><a href="/ja/Add-ons/Add-on_Manager/AddonManager#getStartupChanges()" title="AddonManager.getStartupChanges()">getStartupChanges()</a></code> method lets you find out which add-ons were installed, removed, updated, enabled, or disabled at application startup.</p>
+
+<p>For example, to take a look at the add-ons that were disabled at startup:</p>
+
+<pre class="brush: js">Components.utils.import("resource://gre/modules/AddonManager.jsm");
+
+let addonIDs = AddonManager.getStartupChanges(AddonManager.STARTUP_CHANGE_DISABLED);
+if (addonIDs.length &gt; 0) {
+  // addonIDs is now an array of the add-on IDs that have been disabled
+alert("Note: " + addonIDs.length + " add-ons have been disabled.");
+}
+</pre>
+
+<h2 id="See_also">See also</h2>
+
+<p>{{ ListSubpages() }}</p>

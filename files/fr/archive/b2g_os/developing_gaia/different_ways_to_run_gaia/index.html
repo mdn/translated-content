@@ -1,0 +1,230 @@
+---
+title: Différentes façons d'exécuter Gaia
+slug: Archive/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia
+tags:
+  - ADB
+  - Appareil
+  - Firefox
+  - Firefox OS
+  - Gaia
+  - Gaia+Gecko
+  - Mac OS X
+  - USB
+  - WebIDE
+  - bureau
+  - contribuer
+  - débogage
+  - exécuter Gaia
+  - nightly
+  - simulateur
+  - émulateur(2)
+translation_of: Archive/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/fr/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details open>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/fr/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<div class="summary">
+<p><span class="seoSummary">Vous pouvez exécuter Gaia dans un simulateur via WebIDE, dans Firefox Mulet (une version spéciale de Firefox pour ordinateur destinée au développement Gaia), dans un émulateur ou sur un appareil mobile compatible. Cet article fournit un résumé pour réaliser chacun de ces cas, avec des liens vers des informations complémentaires.</span></p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong> : Pour faire tourner Gaia sur ordinateur, la méthode actuellement recommandée consiste à utiliser Mulet (voir <a href="#Utiliser_Gaia_dans_Firefox_Mulet">Utiliser Gaia dans Firefox Mulet</a>, ci-dessous.)</p>
+</div>
+
+<div class="note">
+<p><strong>Note </strong>: Parfois, vous serez confronté à des problèmes dûŝ à certaines de vos modifications qui nécessitent des paramètres de préférences actualisés etc. Si vous rencontrez ce genre de cas, essayez de regénérer votre profil pour voir si cela corrige le problème (lancez de nouveau la commande make).</p>
+</div>
+
+<h2 id="À_quel_point_cela_est-il_proche_de_la_réalité">À quel point cela est-il proche de la réalité ?</h2>
+
+<p dir="ltr" id="docs-internal-guid-46d8bd5f-ac65-2c23-a6c9-cc3bc3dc3cd5">Certaines des solutions détaillées dans cet article pour exécuter Gaia sont plus proches que d'autres de l'expérience rencontrée avec un appareil réel. Dans l'ordre de facilité d'exécution :</p>
+
+<ol dir="ltr">
+ <li>Gaia dans un Simulateur via WebIDE</li>
+ <li>Gaia dans Firefox Mulet</li>
+ <li>Gaia dans un Émulateur</li>
+ <li>Gaia flashé sur un téléphone</li>
+ <li>Gaia+Gecko flashés sur un téléphone</li>
+</ol>
+
+<p>L'ordre de “À quel point cela est-il proche du produit commercialisé” est exactement l'opposé de cette liste. Selon la fonctionnalité sur laquelle vous travaillez, vous devrez trouver l'ennvironnement qui répond à la problématique posée.</p>
+
+<h2 id="Explication_des_options_de_make">Explication des options de make</h2>
+
+<p>Dans les sections ci-dessous sur WebIDE et Mulet, il vous est demandé de construire votre propre profil Gaia en utilisant la commande suivante :</p>
+
+<pre class="brush: bash">DEBUG=1 DESKTOP=0 make</pre>
+
+<ul>
+ <li>La partie <code>DEBUG=1</code> crée une version debug qui fait tourner Gaia en tant qu'applications hébergées sur un serveur web embarqué plutôt qu'avec les applications par défaut empaquetées qui doivent être ré-empaquetées à chaque modification. Ainsi, pour voir les changements, vous devez juste recharger l'application, ce qui est beaucoup plus efficace pour le débogage.</li>
+ <li>La partie <code>DESKTOP=0</code> doit être inclue parce que l'option <code>DEBUG=1</code> est accompagnée par défaut de l'option <code>DESKTOP=1</code> qui est cassée et doit donc être supprimée. Vous ne devriez plus avoir besoin de le faire à l'avenir.</li>
+</ul>
+
+<p>Cela va construire votre profil dans un répertoire nommé <code>profile-debug</code>.</p>
+
+<p>Si vous souhaitez faire un test avec une version de production de Gaia pour davantage de réalisme, lancez seulement <code>make</code> pour construire votre profil. Celui-ci sera créé dans un répertoire nommé <code>profile</code>.</p>
+
+<div class="note">
+<p><strong>Note</strong> : Il existe tout un tas d'options make disponibles pour Gaia — voir la <a href="/fr/docs/B2G_OS/Developing_Gaia/Référence_options_make">référence des options make de Gaia</a> pour beaucoup plus de détails.</p>
+</div>
+
+<h2 id="Utiliser_Gaia_dans_un_Simulateur_via_WebIDE">Utiliser Gaia dans un Simulateur via WebIDE</h2>
+
+<p>La méthode la plus rapide pour essayer Gaia est d'utiliser <a href="/fr/docs/Outils/WebIDE">WebIDE</a>, un outil développeur disponible dans Firefox pour ordinateur. Il apporte un certain nombre d'outils utiles pour vous aider à tester, déployer et déboguer des applications web HTML5 sur les téléphones Firefox OS et dans le Simulateur Firefox OS, directement à partir de votre navigateur.<br>
+ <br>
+ Dans le navigateur pour ordinateur Firefox 34+, ouvrez WebIDE via le menu <em>Outils &gt; Développement web &gt; WebIDE</em>. Ouvrez le menu Environnement en haut à droite pour installer et démarrer un Simulateur.</p>
+
+<p>Pour faire tourner votre propre profil Gaia personnalisé, le processus est un petit peu plus complexe, mais cela reste relativement simple :</p>
+
+<ol>
+ <li>Avant d'essayer de faire ça, il faut construire vous-même un profil d'appareil Gaia de debug — allez dans votre clone de dépôt Gaia puis lancez <code>DEBUG=1 DESKTOP=0 make</code>. Cela va générer dans votre répertoire <code>gaia</code> un dossier appelé <code>profile-debug</code>, contenant votre profil.  Avec ce type de profil, vous serez en mesure de déboguer les applications internes de Gaia dans WebIDE sans avoir à configurer autre chose, et vous n'aurez pas à accepter la boîte de dialogue pour confirmer le débogage distant dans le simulateur à chaque fois que vous le lancerez. Si vous voulez faire des tests avec une version de production plus réaliste, lancez la construction avec uniquement la commande <code>make</code>.</li>
+ <li>Ouvrez Firefox (<a href="https://nightly.mozilla.org/">Nightly</a> est recommandé.)</li>
+ <li>Ouvrez WebIDE depuis <em>Outils &gt; Développement web &gt; WebIDE</em>.</li>
+ <li>Installez un Simulateur Firefox OS en allant dans <em>Choisir un environnement &gt; Installer un Simulateur</em> dans WebIDE et en choisissant une option. Assurez-vous d'utiliser les mêmes versions de simulateur et du Gaia que vous faites tourner (ainsi par exemple, si votre branche Gaia est la 2.1, vous devrez utiliser le Simulateur Firefox OS 2.1.)</li>
+ <li>Dans le menu de droite, vous pouvez voir votre simulateur dans la liste. Cliquez sur le bouton options (engrenage) qui est juste à côté pour accéder à l' <a href="/en-US/docs/Tools/WebIDE/Setting_up_runtimes#Configuring_Simulators">écran des Options du Simulateur</a>.</li>
+ <li>Choisissez <em>Profil &gt; Personnaliser profil Gaia...</em>, puis sélectionner le dossier de votre profil Gaia dans le sélecteur de fichiers.</li>
+ <li>Ouvrez ce simulateur dans WebIDE, et il devrait alors s'ouvrir avec votre profil Gaia en cours d'exécution.</li>
+</ol>
+
+<div class="note">
+<p><strong>Note</strong> : Si la commande ne fonctionne pas (il est possible d'avoir un message affichant <em>"A copy of B2G is already open. Only one copy of B2G can be open at a time."</em> — alors qu'il n'est pas déjà ouvert), vérifiez alors que le répertoire de votre <code>profil dispose bien des permissions de lecture</code>/écriture, par exemple avec <code>chmod</code>.</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong> : Si vous souhaitez réinitialiser votre simulateur pour qu'il ne fasse plus tourner de profil Gaia personnalisé, vous aurez besoin d'aller dans Firefox sur <a href="/about:config">about:config</a> ; cherchez la préférence <code>extensions.fxos_2_2_simulator@mozilla.org.gaiaProfile</code>  (2_2 peut être différent en fonction de la version du simulateur que vous avez personnalisée), double-cliquez dessus, supprimez la valeur dans la boîte de dialogue qui s'affiche puis cliquez sur OK.</p>
+</div>
+
+<h2 id="Utiliser_Gaia_dans_Firefox_Mulet">Utiliser Gaia dans Firefox Mulet</h2>
+
+<p>Il est également possible d'exécuter Gaia dans une version spéciale de Firefox appelée Firefox Mulet. Cela donne l'avantage d'avoir un cycle de développement rapide, ainsi que des outils de développement web standards et des débogueurs pour travailler avec.</p>
+
+<ol>
+ <li>Tout d'abord, vous devez avoir cloné le dépôt <a href="https://github.com/mozilla-b2g/gaia">Gaia</a> sur votre machine (voir <a href="https://developer.mozilla.org/fr/docs/B2G_OS/Developing_Gaia/Faire_fonctionner_code_Gaia#Lancer_votre_compilation_de_Gaia">Lancer votre compilation de Gaia</a> pour voir la meilleure façon de le faire si vous voulez contribuer au projet.) Mulet ne fonctionnant que sur Gaia 2.2 et au-dessus, il est une bonne idée d'utiliser la branche master.</li>
+ <li>Ensuite, placez-vous dans le dépôt Gaia avec <code>cd</code> et construisez votre propre profil (voir <a href="/fr/docs/B2G_OS/Developing_Gaia/Référence_options_make">référence des options make</a> pour les différents types disponibles) avec <code>DEBUG=1 DESKTOP=0 make</code>. Si vous voulez faire des tests en utilisant une version de production plus réaliste, utilisez seulement la commande <code>make</code>.</li>
+ <li>Vous pouvez à présent installer la dernière version de mulet dans <code>gaia/firefox</code> grâce à la commande <code>make mulet</code>. Il s'agit de la méthode la plus rapide pour l'installer.
+  <ol>
+   <li>Si vous voulez avoir plus de contrôle sur l'endroit où installer mulet, vous devrez le télécharger vous-même — trouvez les builds Windows et Mac sur <a href="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-central/">Mozilla Central</a>, et <a href="https://tools.taskcluster.net/index/artifacts/#gecko.v1.mozilla-central.latest.linux.mulet/gecko.v1.mozilla-central.latest.linux.mulet.opt">regardez ici pour Linux</a>. Les builds Mulet sont les paquets dont les noms commencent par <code>firefox-*</code>, par exemple <code>firefox-36.0a1.en-US.mac64.dmg. </code>Les builds Linux sont nommés<code> target.linux-x86_64.tar.bz2</code> — choisissez la version appropriée à votre machine de développement.</li>
+   <li>Une fois le build Mulet téléchargé, installez-le en lieu sûr afin de ne pas écraser votre version de Firefox Nightly normale. Par exemple, sur Mac OS X, créez un nouveau dossier dans Applications appelé "mulet", et faîtes-le glisser dedans.<span id="cke_bm_93E" style="display: none;"> </span></li>
+  </ol>
+ </li>
+ <li>Lancez maintenant le build Mulet à partir de la ligne de commande, en lui passant votre profil Gaia comme profil à utiliser lors de l'ouverture (spécifié par l'option <code>-profile</code>.) Par exemple, vous pouvez lancer quelque chose de ce genre depuis l'intérieur de votre dossier Applications sur Mac OS X si vous l'avez installé là :
+  <pre class="brush: bash">./firefox/Contents/MacOS/firefox-bin -no-remote -profile /Users/my-home-folder/git/gaia/profile-debug/</pre>
+ </li>
+</ol>
+
+<p>Le build Mulet résultant devrait apparaître, comme ceci :</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/9467/mulet-screenshot.png" style="display: block; height: 491px; margin: 0px auto; width: 800px;"></p>
+
+<div class="note">
+<p><strong>Note </strong>: Si la commande ne fonctionne pas (il est possible d'obtenir un message disant <em>"A copy of Firefox is already open. Only one copy of Firefox can be open at a time."</em> — alors qu'il n'est pas déjà ouvert), alors vérifiez que vous avez le droit de lancer l'exécutable <code>firefox</code> comme ça — vous pouvez lancer la commande ci-dessus en plaçant <code>sudo</code> devant, bien qu'une meilleure solution, plus sûre,consiste à faire un <code>chmod</code> sur votre dossier d'installation.</p>
+</div>
+
+<div class="note">
+<p><strong>Note :</strong> Les nouvelles versions de Gaia ont parfois besoin d'une version de mulet plus récente ; pour faire la mise à jour vers la dernière version de mulet, vous pouvez lancer la commande <code>rm -rf firefox &amp;&amp; make mulet</code> dans le répertoire <code>gaia/</code>.</p>
+</div>
+
+<p>Sur cet affichage, vous avez de disponible la <a href="https://developer.mozilla.org/fr/docs/Outils/Outils_boite_à_outils">boîte à outils</a> standard de Firefox afin de déboguer vos applications Gaia, plus un émulateur Firefox OS fonctionnant dans la partie gauche, ainsi qu'un certain nombre d'autres outils utiles à l'environnement Gaia. Les contrôles au-dessus de l'émulateur vous permettent de :</p>
+
+<ul>
+ <li>Choisir différentes tailles d'écran pour l'émulateur (il s'agit en fait d'une <a href="/fr/docs/Outils/Vue_adaptative">vue adaptative</a>).</li>
+ <li>Faire pivoter l'écran de l'émulateur.</li>
+ <li>Activer ou désactiver la simulation des évenements tactiles (si désactivée, vous ne pouvez pas utiliser la souris pour faire glisser l'UI et les applications ouvertes.)</li>
+ <li>Prendre des captures d'écran.</li>
+</ul>
+
+<h2 id="Flasher_Gaia_sur_un_véritable_appareil">Flasher Gaia sur un véritable appareil</h2>
+
+<div class="warning">
+<p><strong>Important </strong>: Si vous tentez de flasher Gaia sur un appareil doté de peu de mémoire, comme un Tarako ou un Spice Fire One, vous devez le flasher avec une branche de Gaia spéciale optimisée pour les faibles quantités de mémoire, comme la <a href="https://github.com/mozilla-b2g/gaia/tree/v1.3t">branche 1.3t</a>. Essayer de flasher un tel appareil avec la branche principale de Gaia va probablement avoir pour résultat de rendre le téléphone inopérant.</p>
+</div>
+
+<p dir="ltr" id="docs-internal-guid-46d8bd5f-ac6a-0884-5265-76e0fe740fa6">Pour flasher une nouvelle version de Gaia sur un vrai appareil :</p>
+
+<ol dir="ltr">
+ <li>Assurez-vous d'abord d'avoir cloné le dépôt Gaia sur votre ordinateur et d'avoir installé <a href="/fr/docs/B2G_OS/Déboguer/Installer_ADB">ADB</a>.</li>
+ <li>Vérifiez d'avoir activé le <a href="/fr/docs/B2G_OS/Déboguer/Les_paramètres_développeurs#Débogage_via_USB">Débogage via USB</a>.</li>
+ <li>Branchez votre appareil sur votre ordinateur en USB.</li>
+ <li>S'il y a un appareil détecté, vous pouvez procéder aux commandes suivantes. Sinon, vous (utilisateur de Windows ou de distribution Linux) pouvez avoir à vérifier la page des Pilotes OEM USB pour correctement configurer le pilote USB de votre ordinateur.</li>
+ <li>Pour de véritables appareils, lancez adb en tant qu'utilisateur root en utilisant la commande suivante :
+  <pre class="brush: bash">$ adb root</pre>
+ </li>
+ <li>Lancez la commande suivante à l'intérieur du dépôt Gaia pour réinitialiser votre téléphone et mettre à jour votre code source de Gaia :
+  <pre class="brush: bash">$ make reset-gaia</pre>
+ </li>
+ <li>Pour tester des applications non-systèmes, vous pouvez les installer sans redémarrer l'appareil grâce à la commande suivante :
+  <pre class="brush: bash" dir="ltr">$ make install-gaia</pre>
+ </li>
+ <li>Si vous souhaitez installer une application spécifique unique, vous pouvez la passer via la variable APP comme ceci :
+  <pre class="brush: bash">$ make install-gaia APP=browser</pre>
+ </li>
+</ol>
+
+<div class="note">
+<p dir="ltr"><strong>Note </strong>: Envoyer Gaia sur votre appareil en utilisant <code>make install-gaia</code> / <code>make reset-gaia</code> construit Gaia avec une définition de résolution 1x par défaut. Pour spécifier une résolution supérieure, vous devez utiliser les options de make <code>GAIA_DEV_PIXELS_PER_PX</code> ou <code>GAIA_DPPX</code>  (voir <a href="/fr/docs/B2G_OS/Developing_Gaia/Référence_options_make#Ressources_images_en_haute_résolution">Ressources images en haute résolution</a> pour davantage d'informations sur ces options.) Lors de l'envoi de Gaia sur votre appareil de cette façon, vous devez indiquer les options de make correspondantes au facteur d'échelle de votre appareil ; donc par exemple <code>make install-gaia GAIA_DEV_PIXELS_PER_PX=1.5</code> pour un appareil Flame (ou 2, ou 2.5, etc ; voir les valeurs de facteur d'échelle du tableau situé dans <a href="/en-US/Apps/Build/Icon_implementation_for_apps#512_icon_for_device_display">512 icônes pour l'affichage</a>.)</p>
+</div>
+
+<p dir="ltr">Pour vérifier que votre appareil est correctement branché en USB, vous pouvez taper :</p>
+
+<pre class="brush: bash" dir="ltr">$ adb devices</pre>
+
+<p dir="ltr">Vous devriez obtenir un résultat de ce genre :</p>
+
+<pre class="brush: bash" dir="ltr">List of devices attached
+emulator-5554  device</pre>
+
+<h2 id="Construire_Gecko_et_Gaia_et_les_utiliser_dans_un_émulateur_ou_sur_un_véritable_appareil">Construire Gecko et Gaia et les utiliser dans un émulateur ou sur un véritable appareil</h2>
+
+<p>Si vous disposez d'un appareil mobile compatible, vous pouvez <a href="/fr/docs/B2G_OS/Building_and_installing_Boot_to_Gecko" title="Mozilla/Firefox_OS/Building_and_installing_Firefox_OS">construire et installer votre propre version de Firefox OS</a> et ensuite l'exécuter sur un Émulateur ou la placer sur votre appareil.</p>

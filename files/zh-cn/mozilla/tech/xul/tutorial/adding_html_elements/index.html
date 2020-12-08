@@ -1,0 +1,113 @@
+---
+title: XUL_教程/增加HTML元素
+slug: Mozilla/Tech/XUL/Tutorial/Adding_HTML_Elements
+tags:
+  - XUL_教程
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_HTML_Elements
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Progress_Meters" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:Using_Spacers">下一页  »</a></p>
+</div><p></p>
+<p> </p>
+<h3 id=".E5.A2.9E.E5.8A.A0HTML.E5.85.83.E7.B4.A0.E5.88.B0.E7.AA.97.E5.8F.A3" name=".E5.A2.9E.E5.8A.A0HTML.E5.85.83.E7.B4.A0.E5.88.B0.E7.AA.97.E5.8F.A3">增加HTML元素到窗口</h3>
+<p>除了可以使用XUL的所有元素，你也可以直接将HTML元素添加到XUL文件的内部。现在你可以在XUL文件中使用任意的HTML元素，意思是说可以在窗口中布置JAVA小应用程序(applet)和表格。如果可以你应该避免在XUL文件中使用HTML元素。(这是有原因的，主要涉及<a href="/cn/XUL_教程/Box_Model_Details" title="cn/XUL_教程/Box_Model_Details">版面的控制</a>这将在后面进行描述)。然而，不管怎样这节将描述如何使用它们。记住XML是大小写敏感的，因此你必须用小写输入标签和属性。</p>
+<h4 id="XHTML.E5.91.BD.E5.90.8D.E7.A9.BA.E9.97.B4.28namespace.29" name="XHTML.E5.91.BD.E5.90.8D.E7.A9.BA.E9.97.B4.28namespace.29">XHTML命名空间(namespace)</h4>
+<p>为了在XUL文件中使用HTML元素，你必须声明你要用到的XHTML命令空间。这个方法是Mozilla从XUL中区分HTML标签的。 下面的属性应该加在XUL文件的<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> 标签中，或者放到HTML元素的最外面。</p>
+<pre class="eval"><span class="nowiki">xmlns:html="http://www.w3.org/1999/xhtml"</span>
+</pre>
+<p>这个HTML的声明很像我们用过的XUL声明。要正常显示必须正确地输入这句，否则它不能正常运行。注意：Mozilla不会去下载这个URL的内容，但它会在运行HTML时对它进行验证。</p>
+<p>这是一个可以加到文件查找窗口的例子：</p>
+<pre class="eval"> &lt;?xml version="1.0"?&gt;
+ &lt;?xml-stylesheet href="<a class="external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;
+ &lt;window
+   id="findfile-window"
+   title="Find Files"
+   orient="horizontal"
+   <span class="highlightred"><span class="nowiki">xmlns:html="http://www.w3.org/1999/xhtml"</span></span>
+   xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+</pre>
+<p>因此，你可以像平常一样使用HTML，下面列出需注意的守则：</p>
+<ul>
+ <li>你必须在每个标检的开始增加一个<code>html:</code>的前缀，像上面一样声明的HTML命名空间。</li>
+ <li>标签<em>必须用小写输入</em>.</li>
+ <li>"双引号" 必须完全把所有的属性值括起来。</li>
+ <li>在没有内容的XML标签的末端(&gt;)前一定要加上结束符(/)，下面的例子很清楚地进行了示范。</li>
+</ul>
+<h4 id=".E4.BD.BF.E7.94.A8HTML.E5.85.83.E7.B4.A0" name=".E4.BD.BF.E7.94.A8HTML.E5.85.83.E7.B4.A0">使用HTML元素</h4>
+<p>你可以像<code>head</code> 和 <code>body</code>使用所有的HTML标签，不是真的有益。下面演示一些使用HTML元素的例子。</p>
+<pre>&lt;html:img src="banner.jpg"/&gt;
+
+&lt;html:input type="checkbox" value="true"/&gt;
+
+&lt;html:table&gt;
+  &lt;html:tr&gt;
+    &lt;html:td&gt;
+      A simple table
+    &lt;/html:td&gt;
+  &lt;/html:tr&gt;
+&lt;/html:table&gt;
+</pre>
+<p>这些示例将从banner.jpg创建一个图像，一个多选项和一个只有一个单元格的表。如果XUL的特性是可用的你应该总是使用它们并且你不应该在XUL中使用表格作为布局。(XUL有自己的布局元素可以用)。注意<code>html:</code>前缀需要添加到每个标签的前面。这是Mozilla为什么会知道它是一个HTML标签而不是一个XUL标签。如果你没有加上<code>html:</code>部份，浏览器就会认为元素是一个XUL元素并且它们不能被正常显示，因为 img, input, table, 等都不是有效的XUL标签。</p>
+<p>在XUL，你可以使用<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/description" title="description">description</a></code></code>或<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/label" title="label">label</a></code></code>元素添加文本标签。当你要用时应该使用这些元素。你也可以使用HTML的<code>label</code>元素添加文本标签的操作或者你可以像下面的例子一样简单地将文本放在不同的HTML元素之间(就像<code>p</code>或<code>div</code>)。</p>
+<p><span id="%E4%BE%8B1"><a id="%E4%BE%8B1"></a><strong>例1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_htmlelem_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_htmlelem_1.xul">View</a></p>
+<pre>&lt;html:p&gt;
+  搜索:
+  &lt;html:input id="find-text"/&gt;
+  &lt;button id="okbutton" label="确定"/&gt;
+&lt;/html:p&gt;
+</pre>
+<p>这段代码的目的是显示'搜索:'，接着显示一个文本输入框元素和一个确定按钮。注意XUL按钮可以显示在HTML元素之间，在这里它可以正常使用。在HTML元素之间的纯文本仅仅用来显示通常用来显示文字(就像<code>p</code>标签)。放在外面的文本是不能被显示的，除非XUL元素允许将文本放在里面(例如：<code>description</code>元素)。下面的例子可以帮助你理解。</p>
+<h3 id="HTML.E5.85.83.E7.B4.A0.E7.9A.84.E5.AE.9E.E4.BE.8B" name="HTML.E5.85.83.E7.B4.A0.E7.9A.84.E5.AE.9E.E4.BE.8B">HTML元素的实例</h3>
+<p>下面是在窗口在添加HTML元素的一些例子。在每个例子的窗口边都能找到简单的说明信息。</p>
+<h4 id=".E5.B8.A6.E5.A4.9A.E9.80.89.E6.A1.86.E7.9A.84.E5.AF.B9.E8.AF.9D.E6.A1.86" name=".E5.B8.A6.E5.A4.9A.E9.80.89.E6.A1.86.E7.9A.84.E5.AF.B9.E8.AF.9D.E6.A1.86">带多选框的对话框</h4>
+<p><span id="%E4%BE%8B2"><a id="%E4%BE%8B2"></a><strong>例2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_htmlelem_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_htmlelem_2.xul">View</a></p>
+<div class="float-right">
+ <img alt="Image:htmlelem-ex1.png" class="internal" src="/@api/deki/files/2661/=Htmlelem-ex1.png"></div>
+<pre>&lt;html:p&gt;
+  点击下面方框会记住这个结果。
+  &lt;html:p&gt;
+    &lt;html:input id="rtd" type="checkbox"/&gt;
+    &lt;html:label for="rtd"&gt;记住这个结果&lt;/html:label&gt;
+  &lt;/html:p&gt;
+&lt;/html:p&gt;
+</pre>
+<p>在这个例子，一个 <code>p</code> 标签用来放置文本，另外一人用来放置分离的多行文本。</p>
+<h4 id=".E5.9C.A8HTML.E5.9D.97.E5.A4.96.E9.9D.A2.E7.9A.84.E6.96.87.E6.9C.AC" name=".E5.9C.A8HTML.E5.9D.97.E5.A4.96.E9.9D.A2.E7.9A.84.E6.96.87.E6.9C.AC">在HTML块外面的文本</h4>
+<p><span id="%E4%BE%8B3"><a id="%E4%BE%8B3"></a><strong>例3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_htmlelem_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_htmlelem_3.xul">View</a></p>
+<div class="float-right">
+ <img alt="Image:htmlelem-ex2.png" class="internal" src="/@api/deki/files/2662/=Htmlelem-ex2.png"></div>
+<pre>&lt;html:div&gt;
+    你想保存下面的文档吗?
+    &lt;html:hr/&gt;
+&lt;/html:div&gt;
+Expense Report 1
+What I Did Last Summer
+&lt;button id="yes" label="Yes"/&gt;
+&lt;button id="no" label="No"/&gt;
+</pre>
+<p>从图像上可以看到，在<code>div</code>标签里面的文本可以显示出来但其它的文本没有显示(Expense Report 1 和 What I Did Last Summer)。这是因为要显示的文本没有被HTML或XUL元素围绕起来。要显示这些文本，你必须将它放在<code>div</code>标签里面，或者用<code>description</code> 标签将它围起来。</p>
+<h4 id=".E6.97.A0.E6.95.88.E7.9A.84HTML.E5.85.83.E7.B4.A0" name=".E6.97.A0.E6.95.88.E7.9A.84HTML.E5.85.83.E7.B4.A0">无效的HTML元素</h4>
+<pre>&lt;html:po&gt;Case 1&lt;/html:po&gt;
+&lt;div&gt;Case 2&lt;/div&gt;
+&lt;html:description value="Case 3"/&gt;
+</pre>
+<p>上面这三个样例不能被显示，每个都有一个不同的原因。</p>
+<dl>
+ <dt>
+  样例1 </dt>
+ <dd>
+  <code>po</code>不是一个正确的HTML标签，所以Mozilla不知怎么去处理它。</dd>
+ <dt>
+  样例2 </dt>
+ <dd>
+  <code>div</code>是有效的，但是只能用在HTML中。如果要在这里使用，你必须为它添加html:限定符。</dd>
+ <dt>
+  样例3 </dt>
+ <dd>
+  <code>description</code>元素仅仅在XUL中是有效的，而不是在HTML中。它不可以有html:限定符。</dd>
+</dl>
+<p>接下来，我们将要学习如何用 <a href="/cn/XUL_教程/使用定位格" title="cn/XUL_教程/使用定位格">在元素间添加定位格</a>.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Progress_Meters" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:Using_Spacers">下一页  »</a></p>
+</div><p></p>
+<p></p>

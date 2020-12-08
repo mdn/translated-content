@@ -1,0 +1,99 @@
+---
+title: QuerySelector
+slug: Code_snippets/QuerySelector
+tags:
+  - DOM
+translation_of: Archive/Add-ons/Code_snippets/QuerySelector
+---
+<p>jQuery や Prototype などの他のフレームワークのラインに沿って、 "querySelector" という名前を短縮すると便利です：</p>
+
+<pre class="brush: js">function $ (selector, el) {
+     if (!el) {el = document;}
+     return el.querySelector(selector);
+}
+function $$ (selector, el) {
+     if (!el) {el = document;}
+     return el.querySelectorAll(selector);
+     // Note: the returned object is a NodeList.
+     // If you'd like to convert it to a Array for convenience, use this instead:
+     // return Array.prototype.slice.call(el.querySelectorAll(selector));
+}
+alert($('#myID').id);
+</pre>
+
+<p>(Firefox の <a href="/ja/docs/Tools/Web_Console">Web コンソール</a>を使用している間は、上記の機能は自動的に利用可能です。)</p>
+
+<p>XUL と XML の両方を簡単にサポートすることができます (次の代替アプローチは、ChromeWindow.prototype または Window.prototype を追加したり、this.document.querySelector にアクセスしたり、jQuery スタイルのチェーンに続いて $() のプロトタイプメソッドを含む 'this' を返すことです)：</p>
+
+<pre class="brush: js">HTMLDocument.prototype.$ = function (selector) { // Only for HTML
+    return this.querySelector(selector);
+};
+
+Example:
+
+&lt;h1&gt;Test!&lt;/h1&gt;
+&lt;script&gt;
+HTMLDocument.prototype.$ = function (selector) {
+    return this.querySelector(selector);
+};
+alert(document.$('h1')); // [object HTMLHeadingElement]
+&lt;/script&gt;
+</pre>
+
+<pre class="brush: js">XULDocument.prototype.$ = function (selector) { // Only for XUL
+    return this.querySelector(selector);
+};
+
+Example:
+
+&lt;label value="Test!"/&gt;
+&lt;script type="text/javascript"&gt;&lt;![CDATA[
+XULDocument.prototype.$ = function (selector) { // Only for XUL
+    return this.querySelector(selector);
+};
+
+alert(document.$('label')); // [object XULElement]
+]]&gt;&lt;/script&gt;
+</pre>
+
+<pre class="brush: js">Document.prototype.$ = function (selector) { // Only for plain XML
+    return this.querySelector(selector);
+};
+var foo = document.implementation.createDocument('someNS', 'foo', null); // Create an XML document &lt;foo xmlns="someNS"/&gt;
+var bar = foo.createElementNS('someNS', 'bar'); // add &lt;bar xmlns="someNS"/&gt;
+foo.documentElement.appendChild(bar);
+alert(foo.$('bar').nodeName); // gives 'bar'
+</pre>
+
+<pre class="brush: js">Element.prototype.$ = function (selector) { // Works for HTML, XUL, and plain XML
+    return this.querySelector(selector);
+};
+
+HTML example:
+&lt;h1&gt;&lt;a&gt;Test!&lt;a/&gt;&lt;/h1&gt;
+&lt;script&gt;
+Element.prototype.$ = function (selector) {
+    return this.querySelector(selector);
+};
+alert(document.getElementsByTagName('h1')[0].$('a').nodeName); // 'A'
+
+XUL example:
+&lt;hbox&gt;&lt;vbox/&gt;&lt;/hbox&gt;
+&lt;script type="text/javascript"&gt;&lt;![CDATA[
+Element.prototype.$ = function (selector) {
+    return this.querySelector(selector);
+};
+var XULNS = 'http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul';
+alert(document.getElementsByTagNameNS(XULNS, 'hbox')[0].$('vbox').nodeName); // vbox
+]]&gt;&lt;/script&gt;
+
+XML example:
+&lt;foo xmlns="someNS"&gt;&lt;bar/&gt;&lt;/foo&gt; in document earlier
+var foo = document.getElementsByTagNameNS('someNS', 'foo')[0];
+alert(foo.$('bar'));
+
+</pre>
+
+<p>単純なXMLの場合、# 'id' セレクタは 'id' 属性では機能しないことに注意してください (このような名前付き属性は HTML や XUL にはありますが、XML では必ずしも ID 型である必要はない) <a href="https://developer.mozilla.org/en/xml/xml:id" title="en/xml/id">xml:id</a> で動作します。</p>
+
+<p>しかし、プレフィックスのないアトリビュート (「id」など。しかし xml:id：<a class="external external-icon" href="http://www.w3.org/TR/selectors-api/#resolving" rel="freelink">http://www.w3.org/TR/selectors-api/#resolving</a> ではない) をターゲットとする属性セレクタでも機能します (CSS3 名前空間の属性セレクタ：<a class="external external-icon" href="http://www.w3.org/TR/css3-selectors/#attrnmsp" rel="freelink">http://www.w3.org/TR/css3-selectors/#attrnmsp</a> および潜在的な xml:id as＃：<a class="external external-icon" href="http://www.w3.org/TR/css3-selectors/#id-selectors" rel="freelink">http://www.w3.org/TR/css3-selectors/#id-selectors</a> をサポートしています)。</p>

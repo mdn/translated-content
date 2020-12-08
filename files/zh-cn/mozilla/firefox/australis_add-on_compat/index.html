@@ -1,0 +1,130 @@
+---
+title: Australis and add-on compatibility
+slug: Mozilla/Firefox/Australis_add-on_compat
+tags:
+  - 扩展
+translation_of: Mozilla/Firefox/Australis_add-on_compat
+---
+<div>{{FirefoxSidebar}}</div>
+
+<h2 id="扩展程序的改变">扩展程序的改变</h2>
+
+<p><strong>我们已经移除了扩展程序的工具栏（包括状态栏）。</strong>您不应再依赖它的存在。已有一个填隙片会尝试迁移您的图标，但它可能不起作用或只能部分起作用。 最好的解决方案是更改按钮的位置。 这也许是一个很好的时机去考虑您的扩展程序是否真的需要在默认情况下对所有用户可见的工具栏按钮。<strong>使用扩展程序SDK开发的扩展程序不需要注意这次改变。</strong></p>
+
+<p><strong>我们已经移除了应用(Firefox)菜单。</strong> 取而代之的是一个<strong>新的基于面板的菜单</strong>，可以用导航栏远端的一个按钮打开它。可以将工具栏项目拖进/拖出这个面板。</p>
+
+<p>一些默认的工具栏按钮ID已更改，我们添加了一些新的ID，并且后退/前进按钮，URL栏，停止/重新加载按钮的顺序将不再可自定义。这也意味着用户不能用常规的自定义流程在这些按钮中添加新的(扩展程序提供的)按钮。</p>
+
+<p>独立的暂停刷新按钮已被移除</p>
+
+<p>我们正在更改工具栏按钮的添加方式。 虽然我们尝试保持某种向后兼容性，但是以下的 the following are deprecated and will be removed in the near future: the <code style="">toolbar.insertItem</code> 方法， <code style="">toolbar.currentSet</code> 属性, and the <code style="">currentset</code> 属性 on toolbars. If possible, please stop relying on them. Instead, you should use the <a href="http://mxr.mozilla.org/projects-central/source/ux/browser/components/customizableui/src/CustomizableUI.jsm">CustomizableUI</a> module.</p>
+
+<p>CustomizableUI introduces a new API to insert, move and remove toolbar buttons and other toolbar items, as well as creating panels that are anchored to these toolbarbuttons. We believe this will be simpler and more powerful than the previous mix of APIs.</p>
+
+<p>Because of the new customization APIs, your toolbar buttons may not be direct children of a XUL <code style="">&lt;toolbar&gt;</code>; they might still be in a toolbar, or they might be in the "customization target" of a toolbar (a descendant node in a toolbar), or they might be in the new menu panel. The customization target of any toolbar (whether the target is a child node, or the toolbar itself) via <code style="">toolbar.customizationTarget.</code></p>
+
+<p><strong>Icon sizes in toolbars have changed</strong>, and you should ideally provide a larger icon for your add-on's buttons, should they exist, for use in the menu panel and customization area (palette). The new icon sizes are the same on all platforms and are:</p>
+
+<ul>
+ <li>Toolbars:<br>
+  <strong>16px</strong> (32px @2dppx) without padding.<br>
+  Internal icons on the navbar use 18px. For add-ons, by default the padding is set up so it should work well if add-ons specify an icon of size 16px.</li>
+ <li>Menu panel/Customization area (palette):<br>
+  <strong>32px</strong> (64px @2dppx)<br>
+  Please note that smaller icons will be <em>upscaled</em>.</li>
+</ul>
+
+<p>When in the customization area (palette), the button will be wrapped in a toolbarpaletteitem with a <code style="">place</code> attribute set to <code style="">palette</code>. Putting it all together, your updated CSS might look like this:</p>
+
+<pre class="brush: css notranslate" style="">#my-addon-button {
+    list-style-image: url(icon16.png);
+}
+#my-addon-button[cui-areatype="menu-panel"],
+toolbarpaletteitem[place="palette"] &gt; #my-addon-button {
+    list-style-image: url(icon32.png);
+}
+
+/* High-resolution displays */
+@media (min-resolution: 2dppx) {
+    #my-addon-button {
+        list-style-image: url(icon32.png);
+    }
+    #my-addon-button[cui-areatype="menu-panel"],
+    toolbarpaletteitem[place="palette"] &gt; #my-addon-button {
+        list-style-image: url(icon64.png);
+    }
+}
+</pre>
+
+<p>Tab markup and styling have changed. If your add-on affects the tabstrip or provides alternative visualizations of the tabstrip, changes tab colors, or anything else related to the tabstrip, you may want to verify that it still works.</p>
+
+<p>The navigation toolbar is always visible (except in popup windows where a reduced navigation toolbar with the urlbar is visible) and can no longer be hidden e.g. for update pages or in-content UI. The related Add-on SDK module <a href="/en-US/Add-ons/SDK/High-Level_APIs/addon-page">addon-page</a> has been removed as it no longer has any effect.</p>
+
+<p>Items in the navigation toolbar can be overflowed if the browser window is made too small. Items in the toolbar will be moved into the new "overflow panel" when this occurs. The overflow panel is anchored to a button that appears in the navigation toolbar when one or more items are overflowed. If your item should never be overflowed, set an <code style="">overflows</code> attribute to <code style="">false</code> on the item. The <code style="">urlbar-container</code> is not overflowable by default, for example. Items that are overflowed have the <code style="">overflowedItem</code> attribute set to <code style="">true</code>.</p>
+
+<p>The menu panel uses a 3-column grid layout. Items should either fit in a single grid column (<code style="">toolbarbutton</code>s will be styled to do so automatically) or span the entire width of the panel if they wouldn't fit in a single grid column, e.g. for wide <code style="">toolbaritem</code>s. In order to have the latter work correctly, you should use the <code style="">panel-wide-item</code> class on your <code style="">toolbaritem</code>.</p>
+
+<p>If your add-on provides a <code style="">&lt;toolbarbutton type="menu"/&gt;</code> or <code style="">&lt;toolbarbutton type="menu-button"/&gt;</code>, consider moving to a subview-based design, which will work much better in the menu panel. There's some <a href="/en-US/docs/Mozilla/JavaScript_code_modules/CustomizableUI.jsm">documentation</a> you can look at, as well as <a href="http://hg.mozilla.org/projects/ux/annotate/8b514254b168/browser/components/customizableui/src/CustomizableWidgets.jsm#l56">the implementation of the history widget</a>.</p>
+
+<p>If your add-on provides a simple <code style="">toolbarbutton</code> then it should automatically be styled correctly in the menu panel, overflow panel and palette. If it provides a <code style="">toolbaritem</code> it is likely you will need to do additional work to make it look nice in places other than a toolbar.</p>
+
+<p>All items will have context menus allowing users to move the items between the palette, panel and the navigation toolbar. If your add-on uses the contextmenu itself, we will not override or change it (see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=892463">this bug</a> for a lengthy discussion as to why). You are requested, however, to update your menus yourself so that users do have the possibility of using these options even for your add-on's button.</p>
+
+<p>The <code style="">class</code> attribute on tab close buttons has been changed. Extensions shouldn't be relying on the class attribute value since it is a list of tokens and should instead look for the <code style="">anonid </code>attribute with value "<code style="">close-button</code>".</p>
+
+<p>The <code style="">close-icon</code> class now works cross-platform to provide a close icon with a default, hover, and active state. Previously, this wasn't available on Linux and the GTK close icon (gtk-close) was used instead.</p>
+
+<p>The BrowserToolboxCustomizeDone, BrowserToolboxCustomizeChange, and BrowserCustomizeToolbar global window functions have been removed. <a href="/en-US/docs/XUL/Toolbars/Toolbar_customization_events">The customize events fired from the toolbox</a> are now the preferred mechanism for hooking new logic into the customization feature.</p>
+
+<h3 id="Add-on_SDK_Australis_APIs" style="">Add-on SDK Australis APIs</h3>
+
+<p>If you're using the Add-on SDK, there are several new APIs for building your add-on's user interface in Australis. See the <a href="/en-US/Add-ons/SDK/High-Level_APIs/ui">reference documentation</a>. Also note that the <code style=""><a href="/en-US/Add-ons/SDK/High-Level_APIs/widget">widget</a></code> module has been deprecated in favor of the new APIs.</p>
+
+<h2 id="Changes_for_themes">Changes for themes</h2>
+
+<p>We've changed the tab markup. If you style these differently, you'll need to check whether it still works.</p>
+
+<p>We'll be drawing tabs in the titlebar and on top, on all platforms (currently implemented on Windows and OS X), except when not showing tabs at all (in popup windows).</p>
+
+<p>Support for small icons mode as well as text and icons mode have been removed.</p>
+
+<p>We've changed the default iconsets, and there are new icon sizes for the menupanel. If you're building on the default theme with new icons, you'll need to rearrange your icons in your Toolbar icon files. In both this case and if you supply a complete theme, you will also need to provide icons for the menu panel. The new icon sizes are the same on all platforms and are:</p>
+
+<ul>
+ <li>Toolbars:<br>
+  <strong>16px</strong> (32px @2dppx) without padding.<br>
+  Internal icons on the navbar use 18px. For add-ons, by default the padding is set up so it should work well if add-ons specify an icon of size 16px.</li>
+ <li>Menu panel/Customization area (palette):<br>
+  <strong>32px</strong> (64px @2dppx)<br>
+  Please note that smaller icons will be <em>upscaled</em>.</li>
+</ul>
+
+<p>We've removed the add-on bar, but have a shim in place to migrate icons to other places. Any styles pertaining to should be removed so as not to disturb the migration work.</p>
+
+<p>We've changed a few toolbarbutton IDs, such as those for the bookmark and history buttons. We also added new ones.</p>
+
+<p>The application (Firefox) menu has been removed.</p>
+
+<p>The back, forward, stop and refresh buttons will no longer be movable. They will always remain in their current position next to the urlbar. Your CSS rules can probably be simplified now that this is the case.</p>
+
+<p>The navigation toolbar can no longer be hidden e.g. for update pages or in-content UI.<br>
+  </p>
+
+<h2 id="Known_issues_related_to_add-ons">Known issues related to add-ons</h2>
+
+<ul>
+ <li>Add-ons that have copied their toolbarbutton-insertion code from Adblock Plus hide their toolbarbutton icon. They keep track of their insertion point by themselves. Even though our compatibility shims correctly insert these button initially, their detection code decides it is not in a toolbar (it is in fact in a customization target inside a toolbar, see above) and removes the icon on restart. This has been fixed in Adblock Plus but add-ons using similar code patterns might still be affected.</li>
+ <li>Many add-ons check whether their button is in the toolbox (rather than in a toolbar or some other visible place) by checking the result of <code style="">document.getElementById()</code>. This is <strong>no longer enough</strong>. If your button is in the menu panel, it will not be moved there until the menu panel is first shown. Instead, use:<a href="/en-US/docs/Mozilla/JavaScript_code_modules/CustomizableUI.jsm"><code style=""> CustomizableUI.getPlacementOfWidget("mytoolbarbuttonId")</code></a>. This will return <code style="">null</code> if and only if the widget is in the palette.</li>
+ <li>If a <code style="">&lt;menulist&gt;</code> element is wrapped inside a toolbaritem, popping up the <code style="">&lt;menulist&gt;</code> closes the new menu panel. This issue is being tracked <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=964944">here</a>.</li>
+ <li>Add-ons that automatically re-add their icons to the add-on bar when removed will need to fix their own insertion code to not do that.</li>
+ <li>Elements inserted in the statusbar element or the add-on bar itself will not be shown. This can only be fixed by the add-on authors, who need to update their add-on to use toolbaritems instead of statuspanels, and insert into a normal toolbar.</li>
+ <li>For toolbaritems and toolbarbuttons inserted into the add-on bar, we will attempt to migrate them to a visible toolbar automatically <strong>if</strong> the add-on bar was visible in the user's profile before migrating to Australis. However, depending on your add-on's code this may or may not work correctly without further code changes on your part.</li>
+ <li>Toolbar buttons of type <code style="">menu </code>with a <code style="">orient="horizontal"</code> attribute will not display properly in the menu panel. This attribute should probably be avoided altogether.</li>
+</ul>
+
+<h2 id="See_Also">See Also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Mozilla/JavaScript_code_modules/CustomizableUI.jsm">CustomizableUI.jsm</a></li>
+ <li><a href="/en-US/Firefox/Releases/29">Firefox 29 for developers</a></li>
+</ul>

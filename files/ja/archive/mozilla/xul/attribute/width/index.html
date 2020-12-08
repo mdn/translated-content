@@ -1,0 +1,28 @@
+---
+title: width
+slug: Archive/Mozilla/XUL/Attribute/width
+tags:
+  - XUL Attributes
+  - XUL Reference
+translation_of: Archive/Mozilla/XUL/Attribute/width
+---
+<div class="noinclude"><span class="breadcrumbs xulRefAttr_breadcrumbs">« <a href="/ja/docs/XUL/XUL_Reference">XUL リファレンス HOME</a></span></div>
+<dl><dt> <code id="a-width"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/width">width</a></code> </dt><dd> 型: <em>文字列型</em> (整数型に相当) </dd><dd> 優先的な要素の幅。すべての値はピクセルなので値に単位を含むべきではありません。実際に表示される幅は、要素やその内容が持つ最小幅または最大幅によって異なります。または、要素の幅はその親要素に従って柔軟に調節されます。CSS の width プロパティもまた使用されます。 </dd></dl>
+<div class="noinclude">
+<p>この例では、優先する内側の hbox の幅は 40 ピクセルで表示されます。表示される幅も、伸縮したり調節されることなく 40 ピクセルになります。</p>
+<pre>&lt;hbox&gt;
+  &lt;hbox width="40" style="background-color: red;"&gt;
+    &lt;label value="40"/&gt;
+  &lt;/hbox&gt;
+&lt;/hbox&gt;
+</pre>
+<p>しかし次の例では、優先する box の幅が 30 ピクセルであるにも関わらず、表示される box のサイズは、それより大きなラベルに適応して大きくなります。</p>
+<pre>&lt;vbox width="30" align="start" style="background-color: red;"&gt;
+  &lt;label value="vbox xul width 10px red"/&gt;
+&lt;/vbox&gt;
+</pre>
+<div class="note"><strong>注意:</strong> <code><a href="/ja/XUL/treecol" title="ja/XUL/treecol">treecol</a></code> オブジェクト上で使用した場合、列の幅が tree が含まれるオブジェクトより広くなったとき、水平スクロールできるように <code>width</code> 属性を使用することができます。 </div>
+</div>
+<div class="noinclude">
+
+</div>

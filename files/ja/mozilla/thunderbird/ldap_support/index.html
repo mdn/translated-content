@@ -1,0 +1,32 @@
+---
+title: Thunderbird の LDAP 対応を利用したカスタマイズ
+slug: Mozilla/Thunderbird/LDAP_Support
+tags:
+  - Administration
+  - enterprise
+  - thunderbird
+---
+<p>このドキュメントは、ビジネスユーザが Mozilla Thunderbird の LDAP 対応を活用しカスタマイズする方法を補足するために書かれました。LDAP や Mozilla 製品そのものの解説ではありません。読者が、Thunderbird で LDAP ディレクトリを使用する設定に加えて、社内に展開している製品の設定項目を変更する方法について既に知っていることを前提としています。なお、このドキュメントに書かれているすべての情報は、Thunderbird と SeaMonkey アプリケーションスイートの両方で有効です。</p>
+<h2 id="メール編集画面での自動補完">メール編集画面での自動補完</h2>
+<p>メール編集画面では、メールアドレスの一部を入力するだけで、アドレス帳や LDAP ディレクトリに登録されている項目に一致するアドレスの候補がドロップダウンリストで表示されます。大企業では、同じ姓のユーザが多数ディレクトリに登録されている場合もあるでしょう。そうした場合、どの人物が実際にメッセージを送りたい相手なのかを見分けることが難しくなります。Thunderbird では、このドロップダウンリストをカスタマイズして、任意の LDAP 属性を表示させることができます。これは以下のような設定を行うことで実現可能です。</p>
+<pre>    user_pref("mail.autoComplete.commentColumn", 2);
+    user_pref("ldap_2.servers.<em>ディレクトリ名</em>.autoComplete.commentFormat", "[ou]");
+</pre>
+<p>最初の設定項目は、ドロップダウンリストにコメント欄を表示させるという意味で (初期値は 0 でコメントは表示されません)、コメントの値は各ディレクト固有のカスタム文字列です。次の commentFormat という設定は、必ず各ディレクトリごとに設定する必要があります。この設定はテンプレートの働きをして、コメント欄に追加させたい追加の LDAP 属性と、その属性をどのような形式で表示するかを指定します。これは以下のような書式で記述します。</p>
+<ul> <li>目的の LDAP 属性は角括弧で囲みます。上の例では、LDAP 属性の部署名を設定しています。</li> <li>また、任意の文字列を挿入して、LDAP 属性を明示することもできます。例えば「所属: [ou]」と記述した場合、ドロップダウンリストには「山田太郎       所属: 営業部」のように表示されます。</li>
+</ul><h2 id="LDAP_スキーマ">LDAP スキーマ</h2>
+<p>次の表は、Thunderbird が LDAP 属性とアドレス帳内の属性をマッピングするのに使用しているスキーマを要約したものです。この関係には以下のような注意点があります。</p>
+<ul> <li>LDAP 属性とそれに相当するアドレス帳属性には、多対一の関係が存在します。</li> <li>アドレス帳属性とそれに相当する LDAP 属性には、一対一の関係が存在します。ひとつのアドレス帳属性に複数の項目があった場合、最初の項目が優先します。</li>
+</ul>
+<p>これらの関係は、LDAP 属性をアドレス帳属性にマッピングする際に普遍性が維持され、LDAP サーバに保存されているアドレス帳属性を編集する際にも逆の一貫性が保たれるように配慮されています。</p>
+<table> <tbody> <tr> <th>アドレス帳の属性</th> <th>LDAP 属性</th> </tr> <tr> <td>FirstName</td> <td>givenname</td> </tr> <tr> <td>LastName</td> <td>sn</td> </tr> <tr> <td>LastName</td> <td>surname</td> </tr> <tr> <td>DisplayName</td> <td>cn</td> </tr> <tr> <td>DisplayName</td> <td>commonname</td> </tr> <tr> <td>DisplayName</td> <td>displayname</td> </tr> <tr> <td>NickName</td> <td>xmozillanickname</td> </tr> <tr> <td>PrimaryEmail</td> <td>mail</td> </tr> <tr> <td>SecondEmail</td> <td>xmozillasecondemail</td> </tr> <tr> <td>WorkPhone</td> <td>telephonenumber</td> </tr> <tr> <td>HomePhone</td> <td>homephone</td> </tr> <tr> <td>FaxNumber</td> <td>fax</td> </tr> <tr> <td>FaxNumber</td> <td>facsimiletelephonenumber</td> </tr> <tr> <td>PagerNumber</td> <td>pager</td> </tr> <tr> <td>PagerNumber</td> <td>pagerphone</td> </tr> <tr> <td>CellularNumber</td> <td>mobile</td> </tr> <tr> <td>CellularNumber</td> <td>cellphone</td> </tr> <tr> <td>CellularNumber</td> <td>carphone</td> </tr> <tr> <td>WorkAddress</td> <td>postofficebox</td> </tr> <tr> <td>WorkAddress</td> <td>streetaddress</td> </tr> <tr> <td>WorkCity</td> <td>l</td> </tr> <tr> <td>WorkCity</td> <td>locality</td> </tr> <tr> <td>WorkState</td> <td>st</td> </tr> <tr> <td>WorkState</td> <td>region</td> </tr> <tr> <td>WorkZipCode</td> <td>postalcode</td> </tr> <tr> <td>WorkZipCode</td> <td>zip</td> </tr> <tr> <td>WorkCountry</td> <td>countryname</td> </tr> <tr> <td>JobTitle</td> <td>title</td> </tr> <tr> <td>Department</td> <td>ou</td> </tr> <tr> <td>Department</td> <td>orgunit</td> </tr> <tr> <td>Department</td> <td>department</td> </tr> <tr> <td>Department</td> <td>departmentnumber</td> </tr> <tr> <td>Company</td> <td>o</td> </tr> <tr> <td>Company</td> <td>company</td> </tr> <tr> <td>WorkCountry</td> <td>countryname</td> </tr> <tr> <td>_AimScreenName</td> <td>nscpaimscreenname</td> </tr> <tr> <td>WebPage1</td> <td>workurl</td> </tr> <tr> <td>WebPage2</td> <td>homeurl</td> </tr> <tr> <td>BirthYear</td> <td>birthyear</td> </tr> <tr> <td>Custom1</td> <td>custom1</td> </tr> <tr> <td>Custom2</td> <td>custom2</td> </tr> <tr> <td>Custom3</td> <td>custom3</td> </tr> <tr> <td>Custom4</td> <td>custom4</td> </tr> <tr> <td>Notes</td> <td>notes</td> </tr> <tr> <td>Notes</td> <td>description</td> </tr> <tr> <td>PreferMailFormat</td> <td>xmozillausehtmlmail</td> </tr> <tr> <td>LastModifiedDate</td> <td>modifytimestamp</td> </tr> </tbody>
+</table>
+<h2 id="独自の_LDAP_属性">独自の LDAP 属性</h2>
+<p>Thunderbird は様々なアドレス帳属性に対する独自の LDAP 属性に対応しています。詳しくは <a class=" external" href="http://bugzilla.mozilla.org/show_bug.cgi?id=119291">Bug 119291</a> をご覧ください。</p>
+<div class="originaldocinfo">
+<h2 id="Original_Document_Information" name="Original_Document_Information">原文書の情報</h2>
+
+<ul> <li>著者: Scott MacGregor</li> <li>著作権情報: Portions of this content are © 1998–2010 by individual mozilla.org contributors; content available under a Creative Commons license | <a class="external" href="http://www.mozilla.org/foundation/licensing/website-content.html">Details</a>.</li>
+</ul>
+</div>
+<p>{{ languages( { "en": "en/LDAP_Support_in_Thunderbird" } ) }}</p>

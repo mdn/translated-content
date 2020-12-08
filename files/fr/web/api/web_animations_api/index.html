@@ -1,0 +1,78 @@
+---
+title: Web Animations API
+slug: Web/API/Web_Animations_API
+translation_of: Web/API/Web_Animations_API
+---
+<p><font><font>{{DefaultAPISidebar ("Web Animations")}}</font></font></p>
+
+<p><font><font>L' </font></font><strong><font><font>API Web Animations</font></font></strong><font><font> permet de synchroniser et de chronométrer les changements de présentation d'une page Web, c'est-à-dire l'animation d'éléments DOM. </font><font>Pour ce faire, il combine deux modèles: le modèle de synchronisation et le modèle d'animation.</font></font></p>
+
+<h2 id="Concepts_et_utilisation"><font><font>Concepts et utilisation</font></font></h2>
+
+<p><font><font>L'API Web Animations fournit un langage commun aux navigateurs et aux développeurs pour décrire les animations sur les éléments DOM. </font><font>Pour obtenir plus d'informations sur les concepts derrière l'API et comment l'utiliser, lisez </font></font><a href="/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API"><font><font>Utilisation de l'API Web Animations</font></font></a><font><font> .</font></font></p>
+
+<h2 id="Interfaces_danimations_Web"><font><font>Interfaces d'animations Web</font></font></h2>
+
+<dl>
+ <dt><font><font>{{domxref ("Animation")}}</font></font></dt>
+ <dd><font><font>Fournit des commandes de lecture et une chronologie pour un nœud ou une source d'animation. </font><font>Peut prendre un objet créé avec le constructeur {{domxref ( "KeyframeEffect.KeyframeEffect", "KeyframeEffect ()")}}.</font></font></dd>
+ <dt><font><font>{{domxref ("KeyframeEffect")}}</font></font></dt>
+ <dd><font><font>Décrit des ensembles de propriétés et de valeurs animables, appelées </font></font><strong><font><font>images clés</font></font></strong><font><font> et leurs </font></font><a href="/en-US/docs/Web/API/Web_Animations_API/Animation_timing_options"><font><font>options de minutage</font></font></a><font><font> . </font><font>Ceux-ci peuvent ensuite être lus en utilisant le constructeur {{domxref ("Animation.Animation", "Animation ()")}}.</font></font></dd>
+ <dt><font><font>{{domxref ("AnimationTimeline")}}</font></font></dt>
+ <dd><font><font>Représente la chronologie de l'animation. </font><font>Cette interface existe pour définir les fonctionnalités de la chronologie (héritées par {{domxref ("DocumentTimeline")}} et les futurs objets de chronologie) et n'est pas elle-même accessible par les développeurs.</font></font></dd>
+ <dt><font><font>{{domxref ("AnimationEvent")}}</font></font></dt>
+ <dd><font><font>Fait actuellement partie des animations CSS.</font></font></dd>
+ <dt><font><font>{{domxref ("DocumentTimeline")}}</font></font></dt>
+ <dd><font><font>Représente les chronologies d'animation, y compris la chronologie du document par défaut (accessible à l'aide de la propriété {{domxref ("Document.timeline")}}).</font></font></dd>
+ <dt><font><font>{{domxref ("EffectTiming")}}</font></font></dt>
+ <dd><font><font>{{domxref ("Element.animate ()")}}, {{domxref ("KeyframeEffectReadOnly.KeyframeEffectReadOnly ()")}} et {{domxref ("KeyframeEffect.KeyframeEffect ()")}} acceptent tous un dictionnaire facultatif objet des propriétés de synchronisation.</font></font></dd>
+</dl>
+
+<h2 id="Extensions_à_dautres_interfaces"><font><font>Extensions à d'autres interfaces</font></font></h2>
+
+<p><font><font>L'API Web Animations ajoute de nouvelles fonctionnalités à {{domxref ("document")}} et {{domxref ("element")}}.</font></font></p>
+
+<h3 id="Extensions_à_l_Documentinterface"><font><font>Extensions à l' </font></font><code>Document</code><font><font>interface</font></font></h3>
+
+<dl>
+ <dt><font><font>{{domxref ("document.timeline")}}</font></font></dt>
+ <dd><font><font>L' </font></font><code>DocumentTimeline</code><font><font>objet représentant la chronologie du document par </font><font>défaut.</font></font></dd>
+ <dt><font><font>{{domxref ("document.getAnimations ()")}}</font></font></dt>
+ <dd><font><font>Renvoie un tableau d'objets {{domxref ("Animation")}} actuellement en vigueur sur les éléments du </font></font><code>document</code><font><font>.</font></font></dd>
+ <dt>
+ <h3 id="Extensions_à_l_Elementinterface"><font><font>Extensions à l' </font></font><code>Element</code><font><font>interface</font></font></h3>
+ </dt>
+ <dt><font><font>{{domxref ("Element.animate ()")}}</font></font></dt>
+ <dd><font><font>Une méthode de raccourci pour créer et lire une animation sur un élément. </font><font>Il renvoie l'instance d'objet {{domxref ("Animation")}} créée.</font></font></dd>
+ <dt><font><font>{{domxref ("Element.getAnimations ()")}}</font></font></dt>
+ <dd><font><font>Renvoie un tableau d'objets {{domxref ("Animation")}} affectant actuellement un élément ou qui sont programmés pour le faire à l'avenir.</font></font></dd>
+</dl>
+
+<h2 id="Caractéristiques"><font><font>Caractéristiques</font></font></h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col"><font><font>spécification</font></font></th>
+   <th scope="col"><font><font>Statut</font></font></th>
+   <th scope="col"><font><font>Commentaire</font></font></th>
+  </tr>
+  <tr>
+   <td><font><font>{{SpecName ('Web Animations')}}</font></font></td>
+   <td><font><font>{{Spec2 ('Web Animations')}}</font></font></td>
+   <td><font><font>Définition initiale</font></font></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Voir_également"><font><font>Voir également</font></font></h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API"><font><font>Utilisation de l'API Web Animations</font></font></a></li>
+ <li><a href="https://mozdevs.github.io/Animation-examples/"><font><font>Démos d'animations Web</font></font></a></li>
+ <li><a href="https://github.com/web-animations/web-animations-js"><font><font>Polyfill</font></font></a></li>
+ <li><font><a href="https://birtles.github.io/areweanimatedyet/"><font>Implémentation</font></a><font> actuelle de Firefox: </font></font><a href="https://birtles.github.io/areweanimatedyet/"><font><font>AreWeAnimatedYet</font></font></a></li>
+ <li>
+  <p><a href="http://codepen.io/danwilson/pen/xGBKVq"><font><font>Test de prise en charge du navigateur</font></font></a></p>
+ </li>
+</ul>

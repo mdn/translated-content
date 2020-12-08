@@ -1,0 +1,42 @@
+---
+title: WebIDE で Cordova アプリを扱う
+slug: Tools/WebIDE/Working_with_Cordova_apps_in_WebIDE
+translation_of: Archive/WebIDE/Working_with_Cordova_apps_in_WebIDE
+---
+<div>{{ToolsSidebar}}</div><div class="geckoVersionNote">
+<p>Firefox 39 の新機能</p>
+</div>
+
+<p><a href="http://cordova.apache.org/">Apache Cordova</a> を使用すると HTML、JavaScript、CSS を使用してアプリを作成できます。また iOS や Android といったモバイルプラットフォーム向けのネイティブアプリも生成できます。Cordova では、<a href="/ja/Apps/Tools_and_frameworks/Cordova_support_for_Firefox_OS">Firefox OS 向けのアプリも作成できます</a>。</p>
+
+<p>Firefox 39 より、WebIDE で Cordova アプリを直接扱えます。すなわち WebIDE で Cordova アプリを編集する、あるいは WebIDE で Firefox OS 向けのアプリを生成することができます。</p>
+
+<p>始めに、通常どおりの手順で Cordova アプリを作成します:</p>
+
+<ul>
+ <li>Cordova が未インストールでしたら、インストールします:
+  <pre class="brush: bash"><code>npm install -g cordova</code></pre>
+ </li>
+</ul>
+
+<ul>
+ <li>Cordova アプリを新規作成します:
+  <pre class="brush: bash"><code>cordova create my-app</code></pre>
+ </li>
+</ul>
+
+<ul>
+ <li>アプリの対象プラットフォームに Firefox OS を追加します:
+  <pre class="brush: bash">cd my-app
+cordova platform add firefoxos</pre>
+ </li>
+</ul>
+
+<p>次に:</p>
+
+<ul>
+ <li><a href="/ja/docs/Tools/WebIDE/Opening_WebIDE">WebIDE を開きます</a>。</li>
+ <li><a href="/ja/docs/Tools/WebIDE/Creating_and_editing_apps#Open_a_packaged_app">"パッケージ型アプリを開く"</a> を選択して、Cordova アプリの <code>config.xml</code> ファイルがあるディレクトリを指定します。</li>
+</ul>
+
+<p>以上で Cordova アプリを編集できます。また<a href="/ja/docs/Tools/WebIDE/Running_and_debugging_apps#Running_apps">アプリを実行</a>するたびに、WebIDE はバックグラウンドで Firefox OS 版のアプリを生成します。WebIDE はアプリの<a href="/ja/Apps/Build/Manifest">マニフェスト</a>に影響を与える変更が施された際も Firefox OS 版を再生成しますので、<a href="/ja/docs/Tools/WebIDE/Creating_and_editing_apps#Manifest_validation">マニフェストの検証</a>も実施できます。</p>

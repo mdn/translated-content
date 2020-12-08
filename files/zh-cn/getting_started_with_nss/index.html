@@ -1,0 +1,35 @@
+---
+title: NSS簡介
+slug: Getting_Started_With_NSS
+translation_of: Mozilla/Projects/NSS/Getting_started_with_NSS
+---
+<h2 id="如何参与NSS">如何参与NSS</h2>
+<p><span style="font-family: Times; line-height: normal;">Network Security Services (NSS) 是一个由Mozilla software所使用的加密算法和网络安全协议基础库</span></p>
+<p style="margin-bottom: 0px; line-height: normal; font-family: Times;">你想要参与并且帮助我们改善Mozilla火狐和其它使用NSS的应用的核心安全性吗？我们正期待你的帮助!</p>
+<p style="margin-bottom: 0px; line-height: normal; font-family: Times;"> </p>
+<p style="margin-bottom: 0px; line-height: normal; font-family: Times;"><span style="">我们有很多任务等着你的关注，而且我们也很乐意去帮助你找到符合你的兴趣和技能的领域。你可以在</span><a href="http://irc.mozilla.org/" style=""><span style="color: rgb(1, 149, 221);">irc.mozilla.org</span></a><span style=""> 的 </span><span style="color: rgb(1, 149, 221);">#nss</span><span style=""> 频道找到我们或者在 </span><a href="https://lists.mozilla.org/listinfo/dev-tech-crypto/" style=""><span style="color: rgb(1, 149, 221);">mozilla.dev.tech.crypto</span></a><span style=""> newsgroup 里提出你的问题。</span></p>
+<p style="margin-bottom: 0px; line-height: normal; font-family: Times;"> </p>
+<p><span style="font-family: Times; line-height: normal;">NSS库以及它的支持性指令工具是由C语言所写成的。它的编译系统和自动测试是基于makefiles和bash scripts写成。</span></p>
+<p><span style="font-family: Times; line-height: normal;">随着时间的推移，许多关于NSS不同方面的文档已经产生。你可以从这里开始：</span></p>
+<ul>
+ <li><span style="font-family: Times; line-height: normal; text-indent: -36px;">目前的我们从其他文档链接的 </span><span style="font-family: Times; line-height: normal; text-indent: -36px; text-decoration: underline;"><a href="https://developer.mozilla.org/en-US/docs/NSS" style="">NSS主要文档页面</a></span></li>
+ <li><span style="font-family: Times; line-height: normal; text-indent: -36px;">NSS所能提供给其他应用的功能的</span><span style="font-family: Times; line-height: normal; text-indent: -36px; text-decoration: underline;"><a href="https://developer.mozilla.org/en-US/docs/Overview_of_NSS" style="font-family: Times; line-height: normal; text-indent: -36px;">大体综述</a></span></li>
+ <li>概括性<span style="font-family: Times; line-height: normal; text-indent: -36px;">的</span><span style="font-family: Times; line-height: normal; text-indent: -36px; text-decoration: underline; color: rgb(1, 149, 221);"><a href="https://developer.mozilla.org/en-US/docs/An_overview_of_NSS_Internals" style="font-family: Times; line-height: normal; text-indent: -36px;">NSS内部介绍</a></span></li>
+ <li><span style="font-family: Times; line-height: normal; text-indent: -36px;">怎样能够得到 </span><span style="font-family: Times; line-height: normal; text-indent: -36px; text-decoration: underline; color: rgb(1, 149, 221);"><a href="https://developer.mozilla.org/en-US/docs/NSS_Sources_Building_Testing" style="font-family: Times; line-height: normal; text-indent: -36px;">NSS的源代码，编译和测试</a></span></li>
+ <li><span style="font-family: Times; line-height: normal; text-indent: -36px;">存放在mozilla.org存档的</span><a href="http://www-archive.mozilla.org/projects/security/pki/nss/" style="font-family: Times; line-height: normal; text-indent: -36px;"><span style="text-decoration: underline; color: rgb(73, 155, 201);">旧文档</span></a><span style="font-family: Times; line-height: normal; text-indent: -36px;">.</span></li>
+</ul>
+<p><span style="font-family: Times; line-height: normal; text-indent: -36px;">​</span><span style="font-family: Times; line-height: normal;">(不巧的是目前 NSS 项目沒有一位技术作家, 所以我们的文档没有归整成我们想要的方式。你也可以帮忙把文档用更好的方式整理起来。)</span></p>
+<h3 id="NSS_示范代码">NSS 示范代码</h3>
+<p style="margin-bottom: 0px; line-height: normal; font-family: Times;">一个很好的学习怎样编写NSS应用的出发点是由NSS开发者们维护的指令工具。你可以在子目录 mozilla/security/nss/cmd 找到</p>
+<p style="margin-bottom: 0px; line-height: normal; font-family: Times;">或者看一些基本的 <a href="https://developer.mozilla.org/zh-CN/docs/NSS/NSS_Sample_Code"><span style="text-decoration: underline; color: rgb(1, 149, 221);">NSS示范代码</span></a>.</p>
+<p style="margin-bottom: 0px; line-height: normal; font-family: Times;">一些开发中的新示范代码可以在<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=490238"><span style="text-decoration: underline; color: rgb(1, 149, 221);">创建新NSS示范</span></a>中找到.</p>
+<div>
+ <span style="font-family: Times; line-height: normal;">非常欢迎你通过 git clone </span></div>
+<p style="margin-bottom: 0px; line-height: normal; font-family: Times;"><span style="text-decoration: underline ;">git://fedorapeople.org/~emaldonado/samples.git</span></p>
+<p style="margin-bottom: 0px; line-height: normal; font-family: Times;">下载示范代码</p>
+<div>
+ <p style="margin-bottom: 0px; font-size: 24px; line-height: normal; font-family: Times;">贡献机会:</p>
+ <p style="margin-bottom: 0px; line-height: normal; font-family: Times;">... (这部分正在建设当中，但是仍然有很多贡献的机会)</p>
+ <p style="margin-bottom: 0px; line-height: normal; font-family: Times;">你可以查看 <a href="https://wiki.mozilla.org/NSS:BurnDownList"><span style="text-decoration: underline;">近期任务</span></a>.</p>
+</div>
+<p> </p>

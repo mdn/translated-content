@@ -1,0 +1,109 @@
+---
+title: スタイルエディター
+slug: Tools/Style_Editor
+tags:
+  - CSS
+  - Stylesheets
+  - Tools
+  - Web Development
+  - 'Web Development:Tools'
+translation_of: Tools/Style_Editor
+---
+<div>{{ToolsSidebar}}</div><p>スタイルエディターでできること:</p>
+
+<ul>
+ <li>ページに関連づけられているすべてのスタイルシートの閲覧と編集</li>
+ <li>フロムスクラッチで新たなスタイルシートを作成して、ページに適用する</li>
+ <li>既存のスタイルシートをインポートして、ページに適用する</li>
+</ul>
+
+<p>{{EmbedYouTube("7839qc55r7o")}}</p>
+
+<p>スタイルエディターを開くには、[ウェブ開発] メニュー (Mac では、[ツール] メニューのサブメニューです) で、[スタイルエディター] を選択します。スタイルエディターをアクティブにして、ブラウザーウィンドウの下部に <a href="/ja/docs/Tools/Tools_Toolbox" title="Tools/Tools_Toolbox">ツールボックス</a> が現れます:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6941/style-editor.png" style="display: block; height: 238px; margin-left: auto; margin-right: auto; width: 816px;"></p>
+
+<p>スタイルエディターは 3 つの主要なセクションに分かれています:</p>
+
+<ul>
+ <li><a href="/ja/docs/Tools/Style_Editor#The_style_sheet_pane">左側のスタイルシートペイン</a></li>
+ <li><a href="/ja/docs/Tools/Style_Editor#The_editor_pane">右側のエディター</a></li>
+ <li><a href="/ja/docs/Tools/Style_Editor#The_media_sidebar">メディアサイドバー</a></li>
+</ul>
+
+<h2 id="The_style_sheet_pane" name="The_style_sheet_pane">スタイルシートペイン</h2>
+
+<p>ウィンドウ左側のスタイルシートペインには、現在のドキュメントで使用しているすべてのスタイルシートの一覧を表示します。スタイルシート名の左にある目玉のアイコンをクリックすると、そのスタイルシートの有効/無効をすばやく切り替えることができます。一覧の各シート項目の右下にある保存ボタンをクリックすると、スタイルシートの変更内容をローカルコンピューターに保存することができます。</p>
+
+<p>Firefox 40 より、選択したスタイルシートを新しいタブで開くことができるコンテキストメニューが、スタイルシートペインにあります。</p>
+
+<h2 id="The_editor_pane" name="The_editor_pane">エディターペイン</h2>
+
+<p>右側はエディターペインです。ここでは選択したスタイルシートのソースの閲覧や編集が可能です。変更した内容は、ページへ直ちに反映されます。これにより、実験・修正・確認がとても簡単にできます。変更内容に満足したら、スタイルシートペインの項目にある保存ボタンをクリックして、スタイルシートのコピーをローカルに保存できます。</p>
+
+<p>CSS を読みやすくするために、エディターには行番号の表示や文法のハイライト機能があります。また、いくつもの <a href="/ja/docs/Tools/Style_Editor#Source_editor_shortcuts">キーボードショートカット</a> をサポートしています。</p>
+
+<p>最小化されたスタイルシートを検出すると、元のシートに影響がない形で自動的に最小化を解除します。これは、最適化済みのページで行う作業をより容易にします。</p>
+
+<p>スタイルエディターはオートコンプリートをサポートしています。入力を始めると、候補のリストを提供します。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6943/style-editor-autocomplete.png" style="display: block; margin-left: auto; margin-right: auto;"><a href="/ja/docs/Tools/Tools_Toolbox#Style_Editor">スタイルエディターの設定</a> でオートコンプリートを無効にできます。</p>
+
+<h2 id="The_media_sidebar" name="The_media_sidebar">メディアサイドバー</h2>
+
+<p>選択中のスタイルシートに <a href="/ja/docs/Web/Guide/CSS/Media_queries"><code>@media</code> 規則</a> が含まれている場合に、スタイルエディターの右側にサイドバーを表示します。このサイドバーは規則を一覧表示して、スタイルシートで規則が定義されている行へのリンクも提供します。項目をクリックすると、スタイルシート内で規則が存在する場所にジャンプします。現在適用していないメディアクエリー規則の条件文は、グレーアウト表示します。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8365/style-editor-media-sidebar-detail.png" style="display: block; margin-left: auto; margin-right: auto;">メディアサイドバーはレスポンシブレイアウトの作成やデバッグにおいて、<a href="/ja/docs/Tools/Responsive_Design_Mode">レスポンシブデザインモード</a> と組み合わせることで特に役立ちます:</p>
+
+<p>{{EmbedYouTube("aVUXmvLSwoM")}}</p>
+
+<p>Firefox 46 より、<code>@media</code> 規則にスクリーンサイズの条件が含まれている場合に、条件をクリックできます。クリックするとレスポンシブデザインモードを使用して、条件に合うようにスクリーンをリサイズします:</p>
+
+<p>{{EmbedYouTube("XeocxoW2NYY")}}</p>
+
+<h2 id="Creating_and_importing_style_sheets" name="Creating_and_importing_style_sheets">スタイルシートの作成とインポート</h2>
+
+<p>ツールバーの新規作成ボタンをクリックすると、新しいスタイルシートを作成できます。そして、新しいエディターに CSS の入力を始めて、他のシートに対する変更と同様にページへリアルタイムに適用された結果を確認できます。</p>
+
+<p>インポートボタンをクリックすると、スタイルシートをディスクから読み込んでページに適用できます。</p>
+
+<h2 id="Source_map_support" name="Source_map_support">ソースマップのサポート</h2>
+
+<p>{{EmbedYouTube("zu2eZbYtEUQ")}}</p>
+
+<p>ウェブ開発者は <a href="http://sass-lang.com/">Sass</a>、<a href="http://lesscss.org/">Less</a>、<a href="http://learnboost.github.io/stylus/">Stylus</a> といったプリプロセッサーを使用して CSS ファイルを作成することがよくあります。これらのツールは、リッチかつ表現性の高い構文から CSS ファイルを生成します。これを行うとメンテナンスするものが、生成された CSS ではなくプリプロセッサーの構文になりますので、生成された CSS の閲覧や編集が可能でもあまり役に立ちません。よって生成された CSS を編集してから、元のソースへどのようにして再適用するかを手作業で考えなければなりません。</p>
+
+<p>ソースマップにより、生成された CSS から元の構文への対応づけをツールが行えるようになりますので、元の構文を表示して編集および保存が可能になります。Firefox 29 より、スタイルエディターが CSS ソースマップを理解します。</p>
+
+<p>例えば Sass を使用すると、スタイルエディターは Sass ファイルから生成された CSS ではなく、Sass ファイルを表示して編集することが可能になります:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6939/style-editor-sourcemap-820.png" style="display: block; margin-left: auto; margin-right: auto;">ソースマップが動作するための必要条件は以下のとおりです:</p>
+
+<ul>
+ <li><a href="https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k/edit">Source Map Revision 3 proposal</a> を理解する CSS プリプロセッサーを使用する。現在は <a href="http://sass-lang.com/">Sass</a> 3.3.0 以上または <a href="http://roots.io/using-less-source-maps/">Less のバージョン 1.5.0</a> が該当します。他のプリプロセッサーはサポートするために作業中、またはサポートを検討中です。</li>
+ <li>プリプロセッサーにソースマップを生成するよう指示する。例えば Sass コマンドラインツールでは <code>--sourcemap</code> パラメーターを与えます。</li>
+</ul>
+
+<h3 id="Viewing_original_sources" name="Viewing_original_sources">元のソースを表示</h3>
+
+<p><a href="/ja/docs/Tools/Tools_Toolbox#Style_Editor">スタイルエディターの設定</a> で [元のソースを表示] にチェックを入れると、<a href="/ja/docs/Tools/Page_Inspector#Rules_view">ルールビュー</a> で CSS 規則の隣にあるリンクが、スタイルエディター内にある元のソースへのリンクになります。</p>
+
+<p>Firefox 35 より、デフォルトで元のソースを表示します。</p>
+
+<h3 id="Editing_original_sources" name="Editing_original_sources">元のソースを編集</h3>
+
+<p>スタイルエディターで元のソースを編集することや、それがページへ直ちに適用された結果を見ることも可能です。これを実現するための追加作業が 2 つあります。</p>
+
+<p>まずプリプロセッサーが元のソースを監視して、ソースが変更された際は自動的に CSS を再生成するようにセットアップします。Sass では <code>--watch</code> オプションを渡すことで可能になります:</p>
+
+<pre>sass index.scss:index.css --sourcemap --watch</pre>
+
+<p>次にスタイルエディターで、ファイル名の隣にある [保存] ボタンをクリックして元のファイルを上書き保存します。</p>
+
+<p>これで、スタイルエディターでソースファイルを変更したときに CSS が再生成され、変更結果をすぐに確認できます。</p>
+
+<h2 id="Keyboard_shortcuts" name="Keyboard_shortcuts">キーボードショートカット</h2>
+
+<h3 id="Source_editor_shortcuts" name="Source_editor_shortcuts">ソースエディターのショートカット</h3>
+
+<p>{{Page ("ja/docs/tools/Keyboard_shortcuts", "source-editor")}}</p>

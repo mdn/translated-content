@@ -1,0 +1,96 @@
+---
+title: js-ctypes reference
+slug: Mozilla/js-ctypes/js-ctypes_reference
+tags:
+  - JavaScript
+  - NeedsTranslation
+  - TopicStub
+  - js-ctypes
+translation_of: Mozilla/js-ctypes/js-ctypes_reference
+---
+<section class="Quick_links" id="Quick_Links">
+ <ol>
+  <li><a href="/zh-CN/docs/Mozilla/js-ctypes"><strong><em>js-ctypes</em></strong></a></li>
+  <li class="toggle">
+      <details>
+        <summary>Introduction</summary>
+        <ol><li><a href="/zh-CN/docs/Mozilla/js-ctypes/Using_js-ctypes/Declaring_and_Using_Callbacks" title="C函数偶尔将函数指针作为参数，它们通常用作回调。.在这些情况下，js-ctypes允许您传递常规JavaScript函数作为回调。这是非常强大的，因为它允许本地代码透明地调用JavaScript。">Declaring and Using Callbacks</a> <a href="/zh-CN/docs/Mozilla/js-ctypes/Using_js-ctypes/Declaring_and_Using_Callbacks$translate" style="opacity: 0.5;" title="此页面仍未被本地化, 期待您的翻译!">[我来译!]</a></li></ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details open>
+        <summary>References</summary>
+        <ol><li><a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/ctypes" title="The ctypes object contains methods and predefined data types used to create and manage a library."><code>ctypes</code></a> <a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/ctypes$translate" style="opacity: 0.5;" title="此页面仍未被本地化, 期待您的翻译!">[我来译!]</a></li></ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+        <summary>Examples</summary>
+
+      </details>
+  </li>
+ </ol>
+</section>
+
+<p>This doc is a work in progress.</p>
+
+<h2 id="ctypes_Reference">ctypes Reference</h2>
+
+<p>The <code>ctypes</code> object is the base of the ctypes API. It is obtained by by loading the ctypes module:</p>
+
+<p><code>Components.utils.import("<a class="external" rel="freelink">resource://gre/modules/ctypes.jsm</a>");</code></p>
+
+<p>You can use the <a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/ctypes" title="The ctypes object contains methods and predefined data types used to create and manage a library."><code>ctypes</code></a> object to load libraries, construct types, and perform miscellaneous tasks such as type casting. The <code><code>ctypes</code></code> object also provides numerous <a href="/en/Mozilla/js-ctypes/js-ctypes_reference/ctypes#Predefined_data_types" title="en/js-ctypes/js-ctypes reference/ctypes#Predefined data types">predefined types</a> that correspond to primitives and common typedefs in C.</p>
+
+<h2 id="Working_with_libraries">Working with libraries</h2>
+
+<p>To load a <a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/Library" title="此页面仍未被本地化, 期待您的翻译!"><code>Library</code></a>, use <a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/ctypes#open()" title="The ctypes object contains methods and predefined data types used to create and manage a library."><code>ctypes.open()</code></a>.</p>
+
+<p>The <a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/Library" title="此页面仍未被本地化, 期待您的翻译!"><code>Library</code></a> object is used mostly to declare native functions provided by the library so that js-ctypes knows how to call them. See <a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/Library#declare()" title="此页面仍未被本地化, 期待您的翻译!"><code>Library.declare()</code></a> for instructions on how to declare these functions.</p>
+
+<p>Once you have finished working with a Library, call <a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/Library#close()" title="此页面仍未被本地化, 期待您的翻译!"><code>Library.close()</code></a>.</p>
+
+<h2 id="Calling_conventions">Calling conventions</h2>
+
+<p>See <a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/ABI" title="此页面仍未被本地化, 期待您的翻译!"><code>ABI</code></a>.</p>
+
+<h2 id="Types_and_data">Types and data</h2>
+
+<p>To use js-ctypes effectively, it is important to understand the different kinds of objects that the module provides. There are three major categories:</p>
+
+<h3 id="Types">Types</h3>
+
+<p>These represent a type in C, and are thus represented by <a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/CType" title="此页面仍未被本地化, 期待您的翻译!"><code>CType</code></a> objects. These objects have two main purposes. First, they provide a concrete representation of different data types, allowing the programmer to describe the arguments and return type of a native function (see <a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/Library#declare()" title="此页面仍未被本地化, 期待您的翻译!"><code>Library.declare()</code></a>).  Second, they serve as constructors to create concrete instances of the given type, i.e. <a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/CData" title="此页面仍未被本地化, 期待您的翻译!"><code>CData</code></a> objects.</p>
+
+<p>Out of the box, js-ctypes supports a number of <a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/ctypes#Predefined_data_types" title="The ctypes object contains methods and predefined data types used to create and manage a library.">predefined types</a>.</p>
+
+<h3 id="Type_constructors">Type constructors</h3>
+
+<p>These are functions that define new types, and thus return a <a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/CType" title="此页面仍未被本地化, 期待您的翻译!"><code>CType</code></a> object. These include</p>
+
+<ul>
+ <li><a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/PointerType" title="此页面仍未被本地化, 期待您的翻译!"><code>ctypes.PointerType(type)</code></a> and the <code>.ptr</code> property, which creates a new type describing a pointer to an existing type.</li>
+ <li><a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/ArrayType" title="此页面仍未被本地化, 期待您的翻译!"><code>ctypes.ArrayType(type, [length])</code></a> and the <a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/CType#array()" title="此页面仍未被本地化, 期待您的翻译!"><code>.array()</code></a> method, which creates a new type describing an array of objects of an existing type.</li>
+ <li><a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/StructType" title="此页面仍未被本地化, 期待您的翻译!"><code>ctypes.StructType()</code></a>, which creates a new type describing a C struct.</li>
+ <li><a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/FunctionType" title="此页面仍未被本地化, 期待您的翻译!"><code>ctypes.FunctionType(abi, returnType, argType1 [, argType2 ...])</code></a>, which creates a new type describing a C function.</li>
+</ul>
+
+<h3 id="Data">Data</h3>
+
+<p>These are instances of types, represented by <a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/CData" title="此页面仍未被本地化, 期待您的翻译!"><code>CData</code></a> objects and instantiated by calling <a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/CType" title="此页面仍未被本地化, 期待您的翻译!"><code>CType</code></a> objects as functions.<span id="1314129036225E" style="display: none;"> </span></p>
+
+<p>These distinctions are crucial, and understanding them will alleviate much of the confusion surrounding js-ctypes. Calling a Type Constructor will return a <a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/CType" title="此页面仍未被本地化, 期待您的翻译!"><code>CType</code></a>. Calling a <a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/CType" title="此页面仍未被本地化, 期待您的翻译!"><code>CType</code></a> will return a <a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/CData" title="此页面仍未被本地化, 期待您的翻译!"><code>CData</code></a>. You <em>declare</em> the arguments and return value of a native function with <a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/CType" title="此页面仍未被本地化, 期待您的翻译!"><code>CType</code></a> objects. You <em>call</em> a native function with <a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/CData" title="此页面仍未被本地化, 期待您的翻译!"><code>CData</code></a> objects.</p>
+
+<h2 id="Other_Features">Other Features</h2>
+
+<h3 id="Error-handling">Error-handling</h3>
+
+<p>js-ctypes supports both <a href="/en/Mozilla/js-ctypes/js-ctypes_reference/ctypes#Properties" title="en/Mozilla/js-ctypes/js-ctypes_reference/ctypes#Properties">errno</a> (on all platforms) and <a href="/en/Mozilla/js-ctypes/js-ctypes_reference/ctypes#Properties" title="en/Mozilla/js-ctypes/js-ctypes_reference/ctypes#Properties">GetLastError</a> (on Windows platforms).</p>
+
+<h3 id="Callbacks">Callbacks</h3>
+
+<p>You can pass regular JavaScript functions as callbacks to native functions. See the <a href="/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/Declaring_and_Using_Callbacks" title="en/js-ctypes/js-ctypes reference/Callbacks">Callbacks</a> page for details.</p>
+
+<h3 id="64-Bit_integer_handling">64-Bit integer handling</h3>
+
+<p>Because JavaScript <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number" title="JavaScript 的 Number 对象是经过封装的能让你处理数字值的对象。Number 对象由 Number() 构造器创建。"><code>Number</code></a> objects can't directly represent every possible 64-bit integer value, js-ctypes provides new types for these. See <a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/Int64" title="此页面仍未被本地化, 期待您的翻译!"><code>Int64</code></a> and <a href="/zh-CN/docs/Mozilla/js-ctypes/js-ctypes_reference/UInt64" title="此页面仍未被本地化, 期待您的翻译!"><code>UInt64</code></a>.</p>

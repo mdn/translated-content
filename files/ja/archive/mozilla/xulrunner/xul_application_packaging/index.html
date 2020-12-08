@@ -1,0 +1,90 @@
+---
+title: XUL アプリケーションのパッケージ化
+slug: Archive/Mozilla/XULRunner/XUL_Application_Packaging
+tags:
+  - XUL
+  - XULRunner
+translation_of: Archive/Mozilla/XULRunner/XUL_Application_Packaging
+---
+<p><a href="ja/XULRunner">XULRunner</a> アプリケーションパッケージは、 Firefox 拡張機能のような標準的な <a href="ja/Bundles">toolkit bundles</a> へ、アプリケーションを記述するためのマニフェストファイル (<code>application.ini</code>) を加えたものである。 XULアプリケーションは通常、拡張子 .xulapp または .xpi で ZIP 圧縮されたアーカイブである。これらは XULRunner のコマンドラインフラグ "-install-app" によってインストールすることができる (<a href="ja/XULRunner_1.8.0.4_Release_Notes">XULRunner 1.8.0.4 リリースノート</a> 参照)。</p>
+
+
+<h2 id="application.ini" name="application.ini">application.ini</h2>
+
+<p><code>application.ini</code> マニフェストは拡張機能のルートに配置され、 XULRunner にアプリケーションを正しく起動させるためのめたデータを提供する。これは Windows の INI ファイルのように <code>[Headings]</code> と <code>Key=Value</code> の組み合わせでパースされる。<code>;</code> または <code>#</code> で始まる行は、コメントとして扱われる。</p>
+<p>サンプルの application.ini ファイルは <a href="https://dxr.mozilla.org/mozilla-central/source/xulrunner/examples/simple/application.ini" rel="custom">the mozilla ソースツリー</a> にあります。</p>
+
+
+
+<h3 id="The_.5BApp.5D_section" name="The_.5BApp.5D_section">[App] セクション</h3>
+<p><code>App</code> セクションはアプリケーションに関するメタデータを指定する。</p>
+
+<dl>
+<dt>Name</dt>
+<dd>アプリケーション名を指定する。<br>
+必須<br>
+例: <code>Name=TestApplication</code></dd>
+<dt>Version</dt>
+<dd>アプリケーションのバージョン番号を指定する。<br>
+必須<br>
+バージョン番号についての詳細はこちら <a href="ja/Toolkit_version_format">Toolkit version format</a><br>
+例: <code>Version=0.1</code></dd>
+<dt>BuildID</dt>
+<dd>一意のビルド ID を指定する。これは通常日付の ID であり、アプリケーションのすべてのリリースされたバージョンで異なる必要がある。<br>
+必須<br>
+例: <code>BuildID=20060201</code></dd>
+<dt>ID</dt>
+<dd>一意のアプリケーション ID を指定する。<br>
+必須<br>
+アプリケーション ID は、<a href="ja/Install_Manifests#id">extension IDs</a>と同じく、E メールのような <code><a class="link-mailto" href="mailto:ApplicationName@vendor.tld" rel="freelink">ApplicationName@vendor.tld</a></code> 形式も、UUID <code>{12345678-1234-1234-1234-123456789abc}</code> 形式も可能である。新たに開発されたアプリケーションについては E メール形式が推奨される。<br>
+例: <code><a class="link-mailto" href="mailto:ID=TestApplication@example.tld" rel="freelink">ID=TestApplication@example.tld</a></code></dd>
+<dt>Vendor</dt>
+<dd>アプリケーションベンダー名を指定する。<br>
+任意<br>
+例: <code>Vendor=Grinch Productions</code></dd>
+<dt>Profile</dt>
+<dd>アプリケーションで使用されるプロファイルへのパスを指定する。ユーザのアプリケーションデータのディレクトリを基準とした相対パス。<br>
+任意<br>
+例: <code>Profile=MyAppData</code></dd>
+</dl>
+
+
+<h3 id="The_.5BGecko.5D_section" name="The_.5BGecko.5D_section">[Gecko] セクション</h3>
+<p><code>Gecko</code> セクションはどのバージョンの XULRunner が必要かを指定する。</p>
+
+
+<dl>
+<dt>MinVersion</dt>
+<dd>このアプリケーションに必要な XULRunner の最小バージョンを指定する。<br>
+必須<br>
+例: <code>MinVersion=1.8</code></dd>
+<dt>MaxVersion</dt>
+<dd>このアプリケーションに必要な XULRunner の最大バージョンを指定する。<br>
+任意 - デフォルト値は XULRunner 2 未満のすべての XULRunner である。<br>
+例: <code>MaxVersion=1.8.0.*</code></dd>
+</dl>
+
+
+<h3 id="The_.5BXRE.5D_section" name="The_.5BXRE.5D_section">[XRE] セクション</h3>
+<p><code>XRE</code> セクションは XULRunner のさまざまな機能を起動時に有効にするかどうかを指定する。</p>
+
+
+<dl>
+<dt id="em">EnableExtensionManager</dt>
+<dd>拡張機能と拡張機能マネージャを有効にするかどうかを指定する。適切な値は 1 か 0 である。<br>
+任意 - デフォルトは 0<br>
+注意: このオプションは拡張機能／テーマのマネージャを開くための UI となるメニュー項目を加えるものではない。それはアプリケーション開発者がするべきことである。<br>
+例: <code>EnableExtensionManager=1</code></dd>
+<dt>EnableProfileMigrator</dt>
+<dd>アプリケーションを初めて起動した時にプロファイルが存在しなかった場合、 nsIProfileMigrator インターフェースを通してプロファイルの移行を有効にするかどうかを指定する。
+<p>適切な値は 1 か 0 である。<br>
+任意 - デフォルトは 0<br>
+注意: アプリケーション開発者は <a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/profile/public/nsIProfileMigrator.idl" rel="custom">nsIProfileMigrator インタフェース</a>を実装しなければならない。未実装の場合、プロファイルの移行は実行されない。<br>
+例: <code>EnableProfileMigrator=1</code></p></dd>
+</dl>
+
+
+<h3 id="The_.5BCrash_Reporting.5D_Section" name="The_.5BCrash_Reporting.5D_Section">[Crash Reporting] セクション</h3>
+<ul>
+<li><a href="ja/Using_Crash_Reporting_in_a_XULRunner_Application">Using Crash Reporting in a XULRunner Application</a></li>
+</ul>

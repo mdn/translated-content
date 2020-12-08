@@ -1,0 +1,40 @@
+---
+title: 省略語(abbr) と頭字語(acronym) のスタイル付け
+slug: Archive/Web_Standards/Styling_Abbreviations_and_Acronyms
+tags:
+  - Accessibility
+  - CSS
+translation_of: Archive/Web_Standards/Styling_Abbreviations_and_Acronyms
+---
+<p> </p><p><br>
+<span class="comment">要約: HTML 要素の abbr と acronym はアクセシビリティの手助けに役立ちます。しかし、それらのスタイル付けは制作者にとって驚きでした。これらの要素の提供しているものを犠牲にせずに、どのようにコントロールすることができるかをご覧ください。</span>
+多くの制作者が自身の Web ページに HTML 要素の <code>abbr</code> (省略語) および <code>acronym</code> を使用し始めています。これは、<a class="external" href="http://www.w3.org/TR/WCAG10/#gl-abbreviated-and-foreign">Web Content Accessibility Guidelines のガイドライン 4</a> によれば、"学習障害または認知症、聴覚障害を含むすべての人々のための Web の可読性" を向上させるために、両方の要素に <code>title</code> 属性を与えるべきであると奨励されています。
+</p>
+<h3 id=".E5.95.8F.E9.A1.8C.E7.82.B9" name=".E5.95.8F.E9.A1.8C.E7.82.B9"> 問題点 </h3>
+<p>制作者は Mozilla および関連ブラウザ内で、<code>title</code> 属性を持つ <code>abbr</code> や <code>acronym</code> に点線の "下線" が描画されることを見つけました。この "下線" は、<code>text-decoration: none</code> 宣言で取り除くことはできません。その理由は Mozilla の &lt;tt&gt;html.css&lt;/tt&gt; ファイルの中に見つけることができます:
+</p> <pre>abbr[title], acronym[title] {
+     border-bottom: dotted 1px;
+   }</pre>
+<p>結局、"下線" は下側の境界線でした。 </p>
+<h3 id=".E8.A7.A3.E6.B1.BA.E6.B3.95" name=".E8.A7.A3.E6.B1.BA.E6.B3.95"> 解決法 </h3>
+<p>制作者が <code>abbr</code> および <code>acronym</code> から "下線" を削除したい場合は、以下のようにします:
+</p> <pre>abbr[title], acronym[title] {
+     border-bottom-width: 0;
+   }</pre>
+<p>もちろん、境界線のスタイルや色を変更したり、テキスト要素の外観を変更したり、微妙に異なる文字色を使用するなど、代わりに幾つかの方法で削除することもできます。
+</p><p>これは、実際に削除しないでビジュアル的な境界線の太さを教えるのに良いでしょう。"下線" は読み手に、単語には追加の情報が関連付けられていることを伝えます。Mozilla では、要素上にマウスポインタを置いてしばらくすると、title 属性の内容がマウスポインタの隣に "ツールチップ" として表示されます。これらの要素から "下線" を削除することは、追加の情報が利用可能であるという指示を読み手から奪うことになります。
+</p>
+<h3 id=".E6.8E.A8.E5.A5.A8" name=".E6.8E.A8.E5.A5.A8"> 推奨 </h3>
+<ul><li> "下線" が削除される場合は、制作者は要素の下側の境界線をスタイル付けしなければなりません。この状況では <code>text-decoration</code> が適用されません。
+</li></ul>
+<h3 id=".E9.96.A2.E9.80.A3.E3.83.AA.E3.83.B3.E3.82.AF" name=".E9.96.A2.E9.80.A3.E3.83.AA.E3.83.B3.E3.82.AF"> 関連リンク </h3>
+<ul><li> <a href="ja/Web_Content_Accessibility_Guidelines_1.0">Web Content Accessibility Guidelines 1.0</a>
+</li></ul>
+<div class="originaldocinfo">
+<h3 id=".E3.82.AA.E3.83.AA.E3.82.B8.E3.83.8A.E3.83.AB.E3.83.89.E3.82.AD.E3.83.A5.E3.83.A1.E3.83.B3.E3.83.88.E6.83.85.E5.A0.B1" name=".E3.82.AA.E3.83.AA.E3.82.B8.E3.83.8A.E3.83.AB.E3.83.89.E3.82.AD.E3.83.A5.E3.83.A1.E3.83.B3.E3.83.88.E6.83.85.E5.A0.B1"> オリジナルドキュメント情報 </h3>
+<ul><li> 著者: Eric A. Meyer, Netscape Communications
+</li><li> 最終更新日: Published 09 Aug 2002
+</li><li> 著作権情報: Copyright (c) 2001-2003 Netscape. All rights reserved.
+</li><li> 補足: この再版記事は DevEdge サイトの一部でした。
+</li></ul>
+</div>

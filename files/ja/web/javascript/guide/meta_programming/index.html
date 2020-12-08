@@ -1,0 +1,290 @@
+---
+title: メタプログラミング
+slug: Web/JavaScript/Guide/Meta_programming
+tags:
+  - ECMAScript 2015
+  - Guide
+  - JavaScript
+  - Proxy
+  - Reflect
+  - 'l10n:priority'
+translation_of: Web/JavaScript/Guide/Meta_programming
+---
+<div>{{jsSidebar("JavaScript Guide")}} {{Previous("Web/JavaScript/Guide/Iterators_and_Generators")}}</div>
+
+<p class="summary">ECMAScript 2015 から、JavaScript には {{jsxref("Proxy")}} オブジェクトと {{jsxref("Reflect")}} オブジェクトがサポートされました。これらは基本的な言語操作（例えば、プロパティ検索、代入、列挙、関数呼び出しなど）に割り込み、動作をカスタマイズできます。この 2 つのオブジェクトのおかげで、JavaScript でメタレベルのプログラミングが行えます。</p>
+
+<h2 id="Proxies" name="Proxies">Proxy</h2>
+
+<p>ECMAScript 6 で導入された {{jsxref("Proxy")}} オブジェクトによって、特定の操作に割り込んで動作をカスタマイズできます。</p>
+
+<p>例えば、オブジェクトのプロパティを取得してみましょう :</p>
+
+<pre class="brush: js notranslate">let <var>handler</var> = {
+  get: function(<var>target</var>, name) {
+    return name in <var>target</var>? <var>target</var>[name] : 42
+  }
+}
+
+let p = new Proxy({}, <var>handler</var>)
+p.a = 1
+console.log(p.a, p.b) // 1, 42
+</pre>
+
+<p>この <code>Proxy</code> オブジェクトは <code>target</code>（ここでは空オブジェクト）と <code>get</code> トラップが実装された <code>handler</code> オブジェクトを定義しています。ここで、プロキシとなったオブジェクトは未定義のプロパティを取得しようとした時 <code>undefined</code> を返さず、代わりに数値 42 を返します。</p>
+
+<p>さらなる使用例がリファレンスの「{{jsxref("Proxy")}}」ページにあります。</p>
+
+<h3 id="Terminology" name="Terminology">用語集</h3>
+
+<p>プロキシの機能について話題にする際は、次の用語が使用されます。</p>
+
+<dl>
+ <dt>{{jsxref("Global_Objects/Proxy/handler","ハンドラ","","true")}} <span>(handler)</span></dt>
+ <dd>トラップを入れるためのプレースホルダ用オブジェクト。</dd>
+ <dt>{{原語併記("トラップ","trap")}}</dt>
+ <dd>プロパティへのアクセスを提供するメソッド。オペレーティングシステムにおけるトラップの概念と同じようなものです。</dd>
+ <dt>{{原語併記("ターゲット","target")}}</dt>
+ <dd>プロキシが仮想化するオブジェクト。これはプロキシのストレージバックエンドとしてしばしば使われます。拡張・設定可能でないプロパティを持つオブジェクトに関する不変条件（変更されないセマンティック、つまりオブジェクトの意味情報）は、このターゲットに対して検証されます。</dd>
+ <dt>{{原語併記("不変条件","invariant")}}</dt>
+ <dd>カスタマイズした動作を実装する際、変更されないセマンティックを<strong>不変条件</strong>と呼びます。ハンドラの不変条件に違反した場合、{{jsxref("TypeError")}} が発生します。</dd>
+</dl>
+
+<h2 id="Handlers_and_traps" name="Handlers_and_traps">ハンドラとトラップ</h2>
+
+<p>次の表は、<code>Proxy</code> オブジェクトに対して利用可能なトラップをまとめたものです。詳細と例についてはリファレンスの<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler">ハンドラについてのページ</a>をご覧ください。</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th>ハンドラ / トラップ</th>
+   <th>割り込みされる処理</th>
+   <th>不変条件</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{jsxref("Global_Objects/Proxy/handler/getPrototypeOf", "handler.getPrototypeOf()")}}</td>
+   <td>{{jsxref("Object.getPrototypeOf()")}}<br>
+    {{jsxref("Reflect.getPrototypeOf()")}}<br>
+    {{jsxref("Object/proto", "__proto__")}}<br>
+    {{jsxref("Object.prototype.isPrototypeOf()")}}<br>
+    {{jsxref("Operators/instanceof", "instanceof")}}</td>
+   <td>
+    <ul style="padding-left: 20px; margin: 5px;">
+     <li><code>getPrototypeOf</code> メソッドはオブジェクトか <code>null</code> を返す必要があります。</li>
+     <li><code>target</code> が拡張不可の場合、<code>Object.getPrototypeOf(proxy)</code> メソッドは <code>Object.getPrototypeOf(target)</code> と同じ値を返す必要があります。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Global_Objects/Proxy/handler/setPrototypeOf", "handler.setPrototypeOf()")}}</td>
+   <td>{{jsxref("Object.setPrototypeOf()")}}<br>
+    {{jsxref("Reflect.setPrototypeOf()")}}</td>
+   <td><code>target</code> が拡張不可の場合、<code>prototype</code> パラメータは <code>Object.getPrototypeOf(target)</code> と同じ値である必要があります。</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Global_Objects/Proxy/handler/isExtensible", "handler.isExtensible()")}}</td>
+   <td>{{jsxref("Object.isExtensible()")}}<br>
+    {{jsxref("Reflect.isExtensible()")}}</td>
+   <td><code>Object.isExtensible(proxy)</code> は <code>Object.isExtensible(target)</code> と同じ値を返す必要があります。</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Global_Objects/Proxy/handler/preventExtensions", "handler.preventExtensions()")}}</td>
+   <td>{{jsxref("Object.preventExtensions()")}}<br>
+    {{jsxref("Reflect.preventExtensions()")}}</td>
+   <td>
+    <p><code>Object.isExtensible(proxy)</code> が <code>false</code> の場合のみ、<code>Object.preventExtensions(proxy)</code> は <code>true</code> を返します。</p>
+   </td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Global_Objects/Proxy/handler/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}</td>
+   <td>{{jsxref("Object.getOwnPropertyDescriptor()")}}<br>
+    {{jsxref("Reflect.getOwnPropertyDescriptor()")}}</td>
+   <td>
+    <ul style="padding-left: 20px; margin: 5px;">
+     <li><code>getOwnPropertyDescriptor</code> はオブジェクトか <code>undefined</code> のいずれかを返す必要があります。</li>
+     <li>ターゲットオブジェクトに設定不可の所有プロパティとして存在する場合、そのプロパティについて存在しないと報告することはできません。</li>
+     <li>拡張不可のターゲットオブジェクトに所有プロパティとして存在する場合、そのプロパティについて存在しないと報告することはできません。</li>
+     <li>拡張不可のターゲットオブジェクトに所有プロパティとして存在しない場合、そのプロパティについて存在すると報告することはできません。</li>
+     <li>ターゲットオブジェクトに所有プロパティとして存在しない場合、あるいはターゲットオブジェクトに設定可能な所有プロパティとして存在する場合、そのプロパティについて設定不可と報告することはできません。</li>
+     <li><code>Object.getOwnPropertyDescriptor(target)</code> の結果は <code>Object.defineProperty</code> を使用してターゲットオブジェクトに適用され、この時に例外は発生しません。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty()")}}</td>
+   <td>{{jsxref("Object.defineProperty()")}}<br>
+    {{jsxref("Reflect.defineProperty()")}}</td>
+   <td>
+    <ul style="padding-left: 20px; margin: 5px;">
+     <li>ターゲットオブジェクトが拡張可能ではない場合、プロパティは追加できません。</li>
+     <li>ターゲットオブジェクトに設定不可の所有プロパティとして存在しない場合、そのプロパティを追加したり、また設定不可に更新することはできません。</li>
+     <li>ターゲットオブジェクトに対応する設定可能なプロパティとして存在する場合、そのプロパティを設定不可としてもかまいません。</li>
+     <li>プロパティが対応するターゲットオブジェクトプロパティを持つ場合、<code>Object.defineProperty(target, prop, descriptor)</code> は例外を発生しません。</li>
+     <li>strict モードでは、<code>defineProperty</code> ハンドラからの戻り値が <code>false</code> の場合、{{jsxref("TypeError")}} 例外が発生します。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Global_Objects/Proxy/handler/has", "handler.has()")}}</td>
+   <td>プロパティの照会 :<br>
+    <code>foo in proxy</code><br>
+    継承されたプロパティの照会 :<br>
+    <code>foo in Object.create(proxy)</code><br>
+    {{jsxref("Reflect.has()")}}</td>
+   <td>
+    <ul style="padding-left: 20px; margin: 5px;">
+     <li>ターゲットオブジェクトに設定不可の所有プロパティとして存在する場合、そのプロパティについて存在しないと報告することはできません。</li>
+     <li>ターゲットオブジェクトの所有プロパティとして存在し、そのターゲットオブジェクトが拡張可能ではない場合、そのプロパティについて存在しないと報告することはできません。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Global_Objects/Proxy/handler/get", "handler.get()")}}</td>
+   <td>プロパティへのアクセス :<br>
+    <code>proxy[foo]</code>and <code>proxy.bar</code><br>
+    継承されたプロパティアクセス :<br>
+    <code>Object.create(proxy)[foo]</code><br>
+    {{jsxref("Reflect.get()")}}</td>
+   <td>
+    <ul style="padding-left: 20px; margin: 5px;">
+     <li>ターゲットオブジェクトプロパティが書込不可、設定不可のデータプロパティである場合、プロパティに対して報告する値は対応するプロパティと同じ値である必要があります。</li>
+     <li>対応するターゲットオブジェクトプロパティが、Get 属性に <code>undefined</code> を持つ設定不可のアクセサプロパティである場合、プロパティに対して報告される値を <code>undefined</code> とする必要があります。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Global_Objects/Proxy/handler/set", "handler.set()")}}</td>
+   <td>プロパティへの代入　:<br>
+    <code>proxy[foo] = bar</code>, <code>proxy.foo = bar</code><br>
+    継承されたプロパティの割り当て :<br>
+    <code>Object.create(proxy)[foo] = bar</code><br>
+    {{jsxref("Reflect.set()")}}</td>
+   <td>
+    <ul style="padding-left: 20px; margin: 5px;">
+     <li>対応するターゲットオブジェクトのプロパティが書込不可、設定不可のデータプロパティである場合、そのプロパティとは違うプロパティ値に変更することはできません。</li>
+     <li>対応するターゲットオブジェクトプロパティが、Set 属性に <code>undefined</code> を持つ設定不可のアクセサプロパティである場合、プロパティの値を設定することはできません。</li>
+     <li>strict モードでは、<code>set</code> ハンドラからの戻り値が <code>false</code> の場合、{{jsxref("TypeError")}} 例外が発生します。
+      <ul>
+      </ul>
+     </li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Global_Objects/Proxy/handler/deleteProperty", "handler.deleteProperty()")}}</td>
+   <td>プロパティの削除 :<br>
+    <code>delete proxy[foo]</code>, <code>delete proxy.foo</code><br>
+    {{jsxref("Reflect.deleteProperty()")}}</td>
+   <td>ターゲットオブジェクトに設定不可の所有プロパティとして存在する場合、削除することはできません。</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Global_Objects/Proxy/handler/enumerate", "handler.enumerate()")}}</td>
+   <td>プロパティの列挙 / for...in :<br>
+    <code>for (var name in proxy) {...}</code><br>
+    {{jsxref("Reflect.enumerate()")}}</td>
+   <td><code>enumerate</code> メソッドはオブジェクトを返す必要があります。</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Global_Objects/Proxy/handler/ownKeys", "handler.ownKeys()")}}</td>
+   <td>{{jsxref("Object.getOwnPropertyNames()")}}<br>
+    {{jsxref("Object.getOwnPropertySymbols()")}}<br>
+    {{jsxref("Object.keys()")}}<br>
+    {{jsxref("Reflect.ownKeys()")}}</td>
+   <td>
+    <ul style="padding-left: 20px; margin: 5px;">
+     <li><code>ownKeys</code> の結果はリストとなります。</li>
+     <li>出力リストの要素の型は {{jsxref("String")}} か {{jsxref("Symbol")}} のどちらかとなります。</li>
+     <li>出力リストはターゲットオブジェクト中にあるすべての設定不可な所有プロパティのキーを含める必要があります。</li>
+     <li>ターゲットオブジェクトが拡張不可の場合、出力リストはターゲットオブジェクト中の所有プロパティのキーをすべて含める必要があり、他の値は含まれません。
+      <ul>
+      </ul>
+     </li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Global_Objects/Proxy/handler/apply", "handler.apply()")}}</td>
+   <td><code>proxy(..args)</code><br>
+    {{jsxref("Function.prototype.apply()")}} and {{jsxref("Function.prototype.call()")}}<br>
+    {{jsxref("Reflect.apply()")}}</td>
+   <td><code>handler.apply</code> メソッドに対する不変条件はありません。</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Global_Objects/Proxy/handler/construct", "handler.construct()")}}</td>
+   <td><code>new proxy(...args)</code><br>
+    {{jsxref("Reflect.construct()")}}</td>
+   <td>出力結果は <code>Object</code> とする必要があります。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Revocable_Proxy" name="Revocable_Proxy">取り消し可能 <code>Proxy</code></h2>
+
+<p>{{jsxref("Proxy.revocable()")}} メソッドは取り消し可能な <code>Proxy</code> オブジェクトの生成に使用されます。これにより、プロキシを <code>revoke</code> 関数で取り消し、プロキシの機能を停止することができます。</p>
+
+<p>その後はプロキシを通じたいかなる操作も {{jsxref("TypeError")}} になります。</p>
+
+<pre class="brush: js notranslate">let revocable = Proxy.revocable({}, {
+  get: function(target, name) {
+    return '[[' + name + ']]'
+  }
+})
+let proxy = revocable.proxy
+console.log(proxy.foo)  // "[[foo]]"
+
+revocable.revoke()
+
+console.log(proxy.foo)  // TypeError が発生
+proxy.foo = 1           // TypeError が再び発生
+delete proxy.foo        // TypeError がここでも発生
+typeof proxy            // "object" が返され, typeof はどんなトラップも引き起こさない
+</pre>
+
+<h2 id="Reflection" name="Reflection">リフレクション</h2>
+
+<p>{{jsxref("Reflect")}} は JavaScript で割り込み操作を行うメソッドを提供するビルトインオブジェクトです。そのメソッドは {{jsxref("Global_Objects/Proxy/handler","Proxy ハンドラ","","true")}}のメソッドと同じです。</p>
+
+<p><code>Reflect</code> は関数オブジェクトではありません。</p>
+
+<p><code>Reflect</code> はハンドラから<code><var>ターゲット</var></code>へのデフォルト操作を転送するのに役立ちます。</p>
+
+<p>例えば、{{jsxref("Reflect.has()")}} を使えば、<a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/in"><code>in</code> 演算子</a>を関数として使うことができます :</p>
+
+<pre class="brush: js notranslate">Reflect.has(Object, 'assign') // true
+</pre>
+
+<h3 id="A_better_apply_function" name="A_better_apply_function">より優れた <code>apply</code> 関数</h3>
+
+<p>ES5 では、所定の <code>this</code> 値と配列や<a href="/ja/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects">配列様のオブジェクト</a>として提供される <code>arguments</code> を使って関数を呼び出す {{jsxref("Function.prototype.apply()")}} メソッドがよく使われてきました。</p>
+
+<pre class="brush: js notranslate">Function.prototype.apply.call(Math.floor, undefined, [1.75])
+</pre>
+
+<p>{{jsxref("Reflect.apply")}} を使えば、より簡潔で分かりやすいものにできます :</p>
+
+<pre class="brush: js notranslate">Reflect.apply(Math.floor, undefined, [1.75])
+// 1
+
+Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111])
+// "hello"
+
+Reflect.apply(RegExp.prototype.exec, /ab/, ['confabulation']).index
+// 4
+
+Reflect.apply(''.charAt, 'ponies', [3])
+// "i"
+</pre>
+
+<h3 id="Checking_if_property_definition_has_been_successful" name="Checking_if_property_definition_has_been_successful">プロパティ定義の成否チェック</h3>
+
+<p>成功した時はオブジェクトを返し、失敗した時は {{jsxref("TypeError")}} を発生させる {{jsxref("Object.defineProperty")}} では、プロパティを定義する際に発生するエラーを捉えるのに {{jsxref("Statements/try...catch","try...catch")}} ブロックを使おうとしていたでしょう。{{jsxref("Reflect.defineProperty")}} では成功したかどうかによって真偽値を返すので、ここでは {{jsxref("Statements/if...else","if...else")}} ブロックを使えます :</p>
+
+<pre class="brush: js notranslate">if (Reflect.defineProperty(target, property, attributes)) {
+  // 成功した時の処理
+} else {
+  // 失敗した時の処理
+}</pre>
+
+<p>{{Previous("Web/JavaScript/Guide/Iterators_and_Generators")}}</p>

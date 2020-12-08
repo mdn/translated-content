@@ -1,0 +1,71 @@
+---
+title: nsITraceableChannel
+slug: Mozilla/Tech/XPCOM/Reference/Interface/NsITraceableChannel
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/NsITraceableChannel
+---
+<p></p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/netwerk/base/public/nsITraceableChannel.idl" rel="custom">netwerk/base/public/nsITraceableChannel.idl</a></code><span style="text-align: right; float: right;"><a href="/zh-CN/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">脚本化</a></span></div>
+<span style="padding: 4px 2px;">这个接口用于允许拦截 <a href="/en-US/docs/HTTP" title="/en-US/docs/HTTP">HTTP</a> 流量。It is implemented by <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIHttpChannel" title="">nsIHttpChannel</a></code>.</span>
+
+  <div style="height: 42px; position: relative; padding: 2px; width: auto;">
+
+  <div style="top: 22px; font-size: 11px; position: absolute;">1.0</div>
+
+  <div style="top: 22px; font-size: 11px; position: absolute; left: 0px; text-align: right; float: right; width: 100%;">66</div>
+
+  <div style="height: 8px; top: 16px; background: #dd0000; left: 0px; position: absolute; width: 8.952380571428572%;"></div>
+
+<div style="height: 8px; top: 16px; left: 8.952380571428572%; background: #00dd00; position: absolute; width: 91.04761942857142%;" title="Introduced in Gecko 1.9.0.4 "></div>
+
+<div style="top: 0px; font-size: 11px; position: absolute; left: 8.952380571428572%;">Introduced</div>
+<div style="top: 22px; font-size: 11px; position: absolute; left: 8.952380571428572%;">Gecko 1.9.0.4</div>
+
+</div>
+
+<div style="background: #eee; padding: 2px;">
+继承于: <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
+<span style="text-align: right; float: right;">最后修改于Gecko 1.9.0.4 </span></div>
+</div><p></p>
+<p>使用这个接口的典型方式如下：</p>
+<ul>
+  <li><a href="/en/XUL_School/Intercepting_Page_Loads#HTTP_Observers" title="en/XUL_School/Intercepting_Page_Loads#HTTP_Observers">注册“http-on-examine-response”通知</a>来跟综全部 HTTP 响应；</li>
+  <li>跳过重定义 (<code>responseStatus</code> = 3xx on <a href="/en-US/docs/XPCOM_Interface_Reference/nsIHttpChannel" title="/en-US/docs/XPCOM_Interface_Reference/nsIHttpChannel">nsIHttpChannel</a>)，否则你可能<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=728901#c8" title="https://bugzilla.mozilla.org/show_bug.cgi?id=728901#c8">最终有两个监听视（listeners）注册通道（channel）</a>;</li>
+  <li>QI the channel passed as the "<code>subject</code>" to your observer to <code>nsITraceableChannel</code>, and replace the default <code>nsIStreamListener</code> (that passes the data to the original requester - e.g. to XMLHttpRequest or to the browser tab that made the request) with your own implementation (see <a href="#Using_channel_listeners" title="#Using_channel_listeners">"Implementing nsIStreamListener"</a> below).</li>
+</ul>
+<p>之后，你的 nsIStreamListener 实现将会获取到响应数据（response data），并且能够传递数据到原始的 nsIStreamListener（可能会修改它）。</p>
+<p>See <a class="external" href="http://www.softwareishard.com/blog/firebug/nsitraceablechannel-intercept-http-traffic/" title="http://www.softwareishard.com/blog/firebug/nsitraceablechannel-intercept-http-traffic/">nsITraceableChannel, Intercept HTTP Traffic</a> for a more detailed description with code samples.</p>
+<p>See <a href="http://stackoverflow.com/questions/5205672/modify-url-before-loading-page-in-firefox/" title="http://stackoverflow.com/questions/5205672/modify-url-before-loading-page-in-firefox/"> Modify URL before loading page in firefox</a> for an overview of how to <strong>modify</strong> a request before it is made.</p>
+<h2 id="Method_overview" name="Method_overview">Method overview</h2>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <td><code>nsIStreamListener <a href="#setNewListener()">setNewListener</a>(in nsIStreamListener aListener);</code></td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="Methods" name="Methods">Methods</h2>
+<h3 id="setNewListener()" name="setNewListener()">setNewListener()</h3>
+<p>用一个新的来替换该通道的当前监听器，返回先前分配给该通道的监听器。</p>
+<pre class="eval">nsIStreamListener setNewListener(
+  in nsIStreamListener aListener
+);
+</pre>
+<h6 id="Parameters" name="Parameters">参数</h6>
+<dl>
+  <dt>
+    <code>aListener</code></dt>
+  <dd>
+    An <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIStreamListener" title="">nsIStreamListener</a></code> to be notified of events on the HTTP channel.</dd>
+</dl>
+<h6 id="Return_value" name="Return_value">返回值</h6>
+<p>该通道的前一个监听器。Each listener call through to the previous listener for every call, in order to establish a call chain to allow all interested parties a chance to act on each event.</p>
+<h2 id="Using_channel_listeners" name="Using_channel_listeners">实现 nsIStreamListener</h2>
+<p>一个 <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIStreamListener" title="">nsIStreamListener</a></code> 接口传递给 <code>setNewListener()</code> 需要实现下列的方法，这是通过调用（这些方法）来通知它在 HTTP stream 上发生的事件：</p>
+<ul>
+  <li><code>onStartRequest</code>：一个 HTTP 请求开始。</li>
+  <li><code>onDataAvailable：</code>数据到达 HTTP 通道（HTTP channel）。</li>
+  <li><code>onStopRequest</code>：HTTP 请求结束。</li>
+</ul>
+<div class="note">
+  <strong>Note:</strong> It is critical that you pass along requests to the previous listener as soon as possible -- especially for <code>onStartRequest</code>.</div>
+<p>Channels may restrict when you may replace the listener. In particular, listeners typically should not be replaced after <code>onStartRequest</code> has been called.</p>

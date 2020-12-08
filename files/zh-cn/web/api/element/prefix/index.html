@@ -1,0 +1,112 @@
+---
+title: Element.prefix
+slug: Web/API/Element/prefix
+translation_of: Web/API/Element/prefix
+---
+<div>{{APIRef("DOM")}}</div>
+
+<p><code><strong>Element.prefix</strong></code> 只读属性返回指定元素的命名空间前缀，如果未指定前缀，则返回null。</p>
+
+<div class="note">
+<p>在DOM4之前，该API是在 {{domxref("Node")}}  interface 中定义的。</p>
+</div>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox"><var>string</var> = <var>element</var>.prefix
+</pre>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The following logs "x" to the console.</p>
+
+<pre class="brush:xml">&lt;x:div onclick="console.log(this.prefix)"/&gt;
+</pre>
+
+<h2 id="Notes">Notes</h2>
+
+<p>This will only work when a namespace-aware parser is used, i.e. when a document is served with an XML MIME type. This will not work for HTML documents.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("DOM4", "#dom-element-prefix", "Element.prefix")}}</td>
+   <td>{{Spec2("DOM4")}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>46.0<sup>[1]</sup></td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop("48.0")}}<sup>[1]</sup></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Edge</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("48.0")}}<sup>[1]</sup></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] This API was previously available on the {{domxref("Node")}} API.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{domxref("Element.namespaceURI")}}</li>
+ <li>{{domxref("Element.localName")}}</li>
+ <li>{{domxref("Attr.prefix")}}</li>
+ <li>{{domxref("Node.prefix")}}</li>
+</ul>

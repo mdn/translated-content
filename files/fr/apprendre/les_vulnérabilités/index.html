@@ -1,0 +1,60 @@
+---
+title: Les vulnérabilités
+slug: Apprendre/Les_vulnérabilités
+tags:
+  - Beginner
+  - Learn
+  - Security
+translation_of: Archive/Security/Vulnerabilities
+---
+<p>{{draft}}</p>
+
+<div class="summary">
+<p>Dans cet article, nous abordons les vulnérabilités : ce qu'elles sont et pourquoi elles sont présentes dans chaque système.</p>
+</div>
+
+<table class="learn-box standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Prérequis :</th>
+   <td>Vous devriez connaître au préalable <a href="/fr/Apprendre/Confidentialité_intégrité_et_disponibilité">les trois objectifs majeurs de la sécurité</a>.</td>
+  </tr>
+  <tr>
+   <th scope="row">Objectifs :</th>
+   <td>Apprendre ce qu'est une vulnérabilité et comment elle peut affecter des données et/ou des systèmes.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Une vulnérabilité est une faiblesse d'un système qui peut être exploitée de façon négative pour compromettre la confidentialité, l'intégrité ou la disponibilité d'un système et/ou de des données. Il existe de nombreuses méthodes pour catégoriser les vulnérabilités. Dans cet article, nous les classerons dans trois grands groupes : les erreurs logicielles, les erreurs de configuration des systèmes de sécurité et la mauvaise utilisation d'une fonctionnalité d'un logiciel. Ces catégories sont décrites ci-après.</p>
+
+<h2 id="Pédagogie_active">Pédagogie active</h2>
+
+<p><em>Il n'y a, pour le moment, pas d'élément de pédagogie active pour cette section. <a href="https://developer.mozilla.org/fr/docs/MDN/D%C3%A9buter_sur_MDN">Vous pouvez néanmoins contribuer</a>.</em></p>
+
+<h2 id="Aller_plus_loin">Aller plus loin</h2>
+
+<h3 id="Les_différentes_catégories_de_vulnérabilités">Les différentes catégories de vulnérabilités</h3>
+
+<p><em>Une vulnérabilité liée à une erreur logicielle</em> est causée par une erreur, non-intentionnelle, lors de la conception ou du développement du logiciel. Par exemple, cela peut être une erreur de validation lorsqu'un utilisateur saisit quelque chose à entrer dans le logiciel, dans ce cas, un utilisateur mal-intentionné pourrait concevoir des chaînes de caractères ou des valeurs spécifiques pour attaquer le système. Un autre exemple peut être une <a href="https://fr.wikipedia.org/wiki/Situation_de_comp%C3%A9tition">situation de compétition</a> qui permettrait à un attaquant d'effectuer une action avec des privilèges qu'il n'aurait pas dû avoir.</p>
+
+<p><em>Une vulnérabilité liée à une erreur de configuration des éléments de sécurité</em> est un cas où la sécurité d'un logiciel est compromise à cause du logiciel lui-même. Par exemple, un système d'exploitation peut permettre à un utilisateur de contrôler qui peut accéder à quels fichiers en fonction de ses privilèges, généralement le système d'exploitation fournira donc une application qui permet d'activer ou de désactiver certains privilèges ou certains contrôles. Une vulnérabilité de ce type apparaît quand un des réglages de la configuration impacte négativement la sécurité du logiciel.</p>
+
+<p><em>Une vulnérabilité liée à une mauvaise utilisation d'une fonctionnalité logicielle</em> apparaît quand un logoiciel offre une certaine méthode permettant de compromettre la sécurité d'un système. Ces vulnérabilités proviennent généralement d'une hypothèse de confiance, prise lors du développement du logiciel, qui peut être mise à défaut lors de l'utilisation du logiciel. Par exemple, un client de courrier électronique peut disposer d'une fonctionnalité pour afficher les e-mails qui contiennent du HTML. Un attaquant pourrait donc créer un courrier électronique qui contient des liens qui soient tout à fait « sains » en apparence mais qui redirigent en fait vers un site mal intentionné. Ici, l'hypothèse de confiance consiste à penser qu'avec cette fonctionnalité de rendu HTML, un utilisateur ne recevra pas d'e-mails mal intentionnés ou qu'il ne cliquera pas sur ces liens.</p>
+
+<p>Ces vulnérabilités liées à l'utilisation du logiciel apparaissent lors de la conception du logiciel ou d'un de ses composants. Les hypothèses de confiance peuvent avoir été explicites (par exemple, un concepteur est conscient de telle faiblesse en termes de sécurité et estime qu'une option séparée sera plus efficace). Cependant, la plupart du temps, ces hypothèses sont implicites : créer une fonctionnalité sans évaluer les risques que celle-ci introduit, l'évolution du logiciel ou d'un protocole au cours du temps... Le protocole <em>Address Resolution Protocol</em> (ARP en anglais ou protocole de résolution des adresses) fait par exemple « confiance » au sens où il ne vérifie pas que l'association fourni dans les réponses reçues entre l'adresse <em>Media Access Control</em> (MAC) et l'adresse <em>Internet Protocol</em> (IP). L'ARP garde en cache ces informations pour fournir un service qui permettra aux différents appareils d'un réseau local de s'envoyer des données. Toutefois, un attaquant pourrait générer de faux messages ARP afin d'« empoisonner » les tableaux ARP d'un système et ainsi déclencher un déni de service ou une attaque « de l'homme du milieu ». Le protocole ARP a été standardisé 25 ans auparavant, les menaces ont grandement évolué depuis et c'est pourquoi les hypothèses de confiance sur lesquelles le protocole a été conçu ne seraient plus d'actualité aujourd'hui.</p>
+
+<p>Cela peut s'avérer difficile de différencier les vulnérabilités de ce dernier type au regard des deux premiers. Une faille d'un logiciel et une mauvaise utilisation d'un logiciel peuvent tous les deux provenir d'erreurs lors de la conception du logiciel. Cependant, les failles logicielles ont un impact purement négatif alors que les vulnérabilités liées à la mauvaise utilisation d'un logiciel proviennent de fonctionnalités supplémentaires.</p>
+
+<p>On peut également parfois confondre cette dernière catégorie avec la seconde. La différence principale est qu'une vulnérabilité liée à une mauvaise utilisation du logiciel aura un réglage qui active/désactive une fonctionnalité entière et ne concerne pas uniquement la sécurité. En revanche, pour une vulnérabilité liée à la configuration, un réglage équivalent n'impactera que la sécurité du logiciel. Si on dispose par exemple d'un réglage permettant de désactiver l'affichage HTML des e-mails, cela aura un impact sur la sécurité et sur une fonctionnalité du client mail : une vulnérabilité liée à ce réglage serait donc une vulnérabilité liée à une mauvaise utilisation du logiciel. En revanche, une vulnérabilité liée à un réglage qui permet de désactiver la sécurité anti-hameçonnage (quelque chose qui ne concerne que la sécurité) serait une vulnérabilité liée à un défaut de configuration.</p>
+
+<h3 id="La_présence_de_vulnérabilités">La présence de vulnérabilités</h3>
+
+<p><strong>Aucun système n'est parfaitement sécurisé</strong>. Chaque système possède des vulnérabilités. À un instant donné, un système peut éventuellement être épargné de failles de sécurité logicielles connues mais les problèmes de configuration ou de mauvaise utilisation sont toujours présents. La mauvaise utilisation de fonctionnalités est inhérente au logiciel car chaque fonctionnalité repose sur des hypothèses de confiance qui peuvent être mises en défaut. Les défauts de configuration sont également inévitables pour deux raisons. Premièrement, la plupart des réglages de sécurité permettent d'augmenter la sécurité mais réduisent d'autres fonctionnalités : utiliser les réglages les plus stricts en termes de sécurité conduiraient donc parfois à un logiciel peu (voire pas du tout) utilisable. Deuxièmement, de nombreux réglages de sécurité ont un impact à la fois positif et négatif sur la sécurité. On peut ici prendre l'exemple du nombre d'essais maximum pour saisir un mot de passe avant de verrouiller le compte utilisateur. Si on fixe ce seuil à 1, on obtient une sécurité maximale contre les attaques qui consistent à essayer différents mots de passe mais les utilisateurs légitimes n'auraient pas le droit à l'erreur. Cela pourrait également permettre à un attaquant de mener une attaque de déni de serveice contre certains utilisateurs en effectuant une tentative de connexion sur leurs comptes.</p>
+
+<p>La somme de toutes ces vulnérabilités potentielles, qu'elles soient liées à des défauts de configuration, à une mauvaise utilisation du logiciel ou à des failles techniques dans son code, font donc qu'on peut avoir des dizaines (voire centaines) de vulnérabilités pour un système donné à un instant donné. Il est probable que les caractéristiques de ces vulnérabilités varient grandement : certaines seront faciles à exploiter tandis que d'autres ne pourront être exploitées que si une conjonction de conditions très improbables se produit. Une vulnérabilité peut fournir un accès administrateur à un système alors qu'une autre pourrait ne donner qu'un accès en lecture à un fichier sans importance. En fin de compte, une organisation a besoin de savoir :</p>
+
+<ul>
+ <li>la difficulté d'exploiter chaque vulnérabilité connue ;</li>
+ <li>l'impact d'une exploitation potentielle d'une vulnérabilité (connue ou non).</li>
+</ul>

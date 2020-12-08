@@ -1,0 +1,61 @@
+---
+title: Samsung Nexus S
+slug: Archive/B2G_OS/Samsung_Nexus_S
+tags:
+  - B2G
+  - Firefox OS
+  - NexusS
+  - Samsung
+  - nexus_s
+translation_of: Archive/B2G_OS/Phone_guide
+---
+<p>Le Nexus S est une plate-forme de second rang (tier 2) pour Firefox OS. Ce n'est pas une cible, mais il y a du support pour le processus de construction. Toute aide pour supporter cet équipement est la bienvenue. Notez qu'à partir de mi-mars 2015, il n'est plus utilisé activement ni maintenu.</p>
+
+<h2 id="Compatibilité">Compatibilité</h2>
+
+<p>Les équipements i9020, i9020A, i9023 et SHW-M200k sont connus pour fonctionner. Une liste complète de problèmes relatifs au support de cet équipement est disponible à cette adresse : <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=b2g-nexuss">https://bugzilla.mozilla.org/show_bug.cgi?id=b2g-nexuss</a>.</p>
+
+<h2 id="Utilisabilité_(jusqu'à_v1.1)">Utilisabilité (jusqu'à v1.1)</h2>
+
+<p>Le téléphone devrait être utilisable au quotidien sans problème bloquant. Jusqu'ici, voici ce qui doit correctement fonctionner en construisant un système Gecko 18 (BRANCH=v1-train ./config.sh nexus-s) :</p>
+
+<ul>
+ <li>Emettre/recevoir des appels téléphoniques</li>
+ <li>Gérer les codes MMI/USSD (comme *#06# pour l'IMEI, *#21# pour l'état du transfert d'appel)</li>
+ <li>Emettre et recevoir des SMS et MMS</li>
+ <li>Prendre des photos (Le dépôt Gaia à la fin de cette page contient une modification spécifique pour prendre des photos de 5Mp)</li>
+ <li>Enregitrer des vidéos 480p (Le dépôt Gaia à la fin de cette page contient une modification spécifique pour enregistrer des vidéos)</li>
+ <li>Utiliser HSDPA et le WiFi (fonctionne également avec EAP, nécessite d'écrire manuellement la configuration WPA Supplicant)</li>
+ <li>Bluetooth</li>
+ <li>Géolocalisation</li>
+ <li>Lecture de vidéo avec accélération matérielle (avec quelques modifications, voir les problèmes référencés)</li>
+ <li>Stockage de masse USB</li>
+ <li>USB Tethering</li>
+ <li>WiFi Tethering (voir ci-dessous)</li>
+</ul>
+
+<h2 id="Utilisabilité_(master_depuis_v1.42.0)">Utilisabilité (master, depuis v1.4/2.0)</h2>
+
+<p>La plupart des fonctionnalités doivent marcher. La lecture et l'enregistrement vidéo ne fonctionnent pas complètement.</p>
+
+<h2 id="Problèmes_à_l'exécution">Problèmes à l'exécution</h2>
+
+<h3 id="WiFi_Tethering">WiFi Tethering</h3>
+
+<p>Le WiFi Tethering fonctionne, mais il semble que le Wifi soit indisponible après l'avoir désactivé. Décharger puis recharger le pilote noyau Wifi ou redémarrer l'appareil permettent de contourner ce problème.</p>
+
+<pre>rmmod bcm4329 &amp;&amp; insmod /system/modules/bcm4329.ko iface_name=wlan0</pre>
+
+<h2 id="Dépôts_de_modifications">Dépôts de modifications</h2>
+
+<p>Utilisez la branche gecko-18-local (et gecko-18-local+hd) pour le dépôt mozilla-central, master-local pour les autres.</p>
+
+<ul>
+ <li><a href="https://github.com/lissyx/mozilla-central" title="https://github.com/lissyx/mozilla-central">https://github.com/lissyx/mozilla-central</a></li>
+ <li><a href="https://github.com/lissyx/gaia" title="https://github.com/lissyx/gaia">https://github.com/lissyx/gaia</a></li>
+ <li><a href="https://github.com/lissyx/android-device-crespo" title="https://github.com/lissyx/android-device-crespo">https://github.com/lissyx/android-device-crespo</a></li>
+</ul>
+
+<h2 id="Plus_d'informations">Plus d'informations</h2>
+
+<p>Vous trouverez un fil de discussion à propos de Firefox OS sur le Nexus S ici <a href="http://forum.xda-developers.com/showthread.php?t=1924367&amp;page=13" title="http://forum.xda-developers.com/showthread.php?t=1924367&amp;page=13">http://forum.xda-developers.com/showthread.php?t=1924367</a>. Il devrait contenir des images relativement à jour et fonctionnelles.</p>

@@ -1,0 +1,44 @@
+---
+title: Motivation
+slug: Mozilla/Firefox/Multiprocessus_Firefox/Motivation
+translation_of: Mozilla/Firefox/Multiprocess_Firefox/Motivation
+---
+<div>{{FirefoxSidebar}}</div><p>Il y a trois raisons qui nous poussent à faire tourner le contenu de Firefox dans un processus séparé : performance, sécurité, stabilité.</p>
+
+<h2 id="Performance">Performance</h2>
+
+<p>La plupart des travaux de Mozilla ces deux dernières années ont mis l'accent sur la réactivité du navigateur. Le but est de réduire les lenteurs de l'interface (<a href="/en-US/docs/Glossary/Jank">jank</a>) - c'est-à-dire quand le navigateur a l'air de se figer lors du chargement d'une grosse page, au remplissage d'un formulaire ou lors du défilement de la page. La réactivité devient plus importante que le débit sur le web aujourd'hui. Un gros du travail a été réalisé comme une partie du projet <a href="https://wiki.mozilla.org/Performance/Snappy">Snappy</a>. En voici les principaux axes :</p>
+
+<ul>
+ <li>Mettre les actions longues à réaliser dans un thread séparé pour que le thread principal puisse continuer à répondre.</li>
+ <li>Rendre les Entrées/Sorties asynchrones ou dans des threads séparés pour que le thread principal ne soit pas bloqué par le disque dur.</li>
+ <li>Réduire les gros codes en plusieurs petits morceaux et en exécutant la boucle d'évènement entre ces morceaux.</li>
+</ul>
+
+<p>Une grande partie de ces travaux a déjà été réalisée. Les points restants sont difficiles à résoudre. Par exemple, l'exécution de JavaScript se déroule dans le thread principal ce qui bloque la boucle d'évènements. Exécuter ces composants dans un thread séparé est difficile parce qu'ils accèdent à des données comme le DOM qui ne sont pas sécurisées dans le cas d'accès par différents threads. Comme alternative, nous avons envisagé de pouvoir exécuter la boucle d'évènements au milieu de l'exécution de JavaScript, mais cela briserait beaucoup d'hypothèses de différentes parties de Firefox (comme les extensions).</p>
+
+<p>Exécuter le contenu web dans un processus séparé est une alternative viable. Comme l'approche avec différents threads, Firefox est capable d'exécuter la boucle d'évènements pendant que le JavaScript et l'agencement s'exécutent dans un processus contenu. Mais, le code d'Interface Utilisateur n'a pas accès au contenu du DOM ou d'autres structures de données du contenu, il y a donc un besoin de verrouillage et de protection d'accès sur cette partie. L'inconvénient est que tout code présent dans le processus interface utilisateur de Firefox qui a besoin d'accéder au contenu doit le faire explicitement via un passage de messages.</p>
+
+<p>Nous pensons que ce compromis est logique pour plusieurs raisons :</p>
+
+<ul>
+ <li>L'accès au DOM par le code de Firefox n'est pas commun.</li>
+ <li>Le code partagé avec Firefox OS utilise déjà le passage de messages.</li>
+ <li>Dans le modèle multi-processus, <span id="result_box" lang="fr"><span>le code</span> <span class="hps">de Firefox qui</span> <span class="hps">ne parvient pas à</span> <span class="hps">utiliser</span> <span class="hps">le passage de messages</span> afin d'accéder <span class="hps">au contenu</span> <span class="hps">va échouer</span> <span class="hps">de</span> <span class="hps">manière </span><span class="hps">évidente. Dans un modèle</span> multi-threads, le <span class="hps">code qui accède à</span> <span class="hps">du contenu sans</span> <span class="hps">blocage</span> <span class="hps">correct</span> <span class="hps">échouera</span> <span class="hps">de façon subtile</span>, et sera bien plus difficile <span class="hps">à déboguer.</span></span></li>
+</ul>
+
+<h2 id="Sécurité">Sécurité</h2>
+
+<p>Aujourd'hui, si quelqu'un découvre un bug exploitable dans Firefox, il est capable de prendre le contrôle des ordinateurs des utilisateurs. Il existe des solutions pour parer ce problème, la plus connue est la technique du <a href="http://fr.wikipedia.org/wiki/Sandbox_%28s%C3%A9curit%C3%A9_informatique%29">bac à sable</a>. Cette méthode ne nécessite pas une architecture multi-processus. Cependant, un bac à sable fonctionnant avec Firefox en processus unique ne serait pas très efficace. Les bacs à sable permettent seulement d'empêcher à un processus d'effectuer des actions qu'il ne devrait pas réaliser. Malheureusement, Firefox nécessite l'accès à bien plus de choses que le réseau et le système de fichiers (surtout lorsque des extensions sont installées). Ainsi, un bac à sable pour Firefox en processus unique ne pourrait pas bloquer grand-chose.</p>
+
+<p>Avec Firefox multi-processus, les processus contenus seront mis dans un bac à sable. Ainsi, un processus ne pourra pas accéder directement au système de fichiers, mais devra demander au processus principal. À ce moment, le processus principal pourra vérifier que la requête est sécurisée et logique. Par conséquent, le bac à sable peut être très restrictif. On espère que cette méthode rende plus difficile l'exploitation de trous de sécurité dans Firefox.</p>
+
+<h2 id="Stabilité">Stabilité</h2>
+
+<p>Actuellement, un plantage dans un code s'exécutant dans une page va faire tomber le navigateur en entier. Avec Firefox multi-processus, seul le processus du contenu qui s'est planté sera détruit.</p>
+
+<div class="note">
+<p>Cette page contient pas mal de contenu provenant de l'article de blog de Bill McCloskey's sur Firefox multi-processus : <a href="http://billmccloskey.wordpress.com/2013/12/05/multiprocess-firefox/">http://billmccloskey.wordpress.com/2013/12/05/multiprocess-firefox/</a> (en)</p>
+</div>
+
+<p> </p>

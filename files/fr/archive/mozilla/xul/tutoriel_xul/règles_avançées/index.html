@@ -1,0 +1,213 @@
+---
+title: Règles avançées
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Règles_avançées
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Advanced_Rules
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Sources_de_données_RDF" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Données_persistantes">Suivant  »</a></p>
+</div>
+
+<p>Cette section décrit la syntaxe des règles les plus complexes.</p>
+
+<h3 id="La_syntaxe_des_r.C3.A8gles_compl.C3.A8tes" name="La_syntaxe_des_r.C3.A8gles_compl.C3.A8tes">La syntaxe des règles complètes</h3>
+
+<p>La syntaxe des règles décrites jusqu'ici est utile pour certaines sources de données, mais parfois les données doivent être affichées de manière plus sophistiquée. La syntaxe de règle simple n'est en fait qu'un raccourci pour la syntaxe de règle complète qui est décrite ci-dessous. Comme pour la syntaxe de règle simple, la règle complète est placée entre des balises <code><a href="/fr/docs/Mozilla/Tech/XUL/rule" title="rule">rule</a></code>.</p>
+
+<p>Une syntaxe de règle complète contient trois balises filles : une balise <code><a href="/fr/docs/Mozilla/Tech/XUL/conditions" title="conditions">conditions</a></code> , une balise <code><a href="/fr/docs/Mozilla/Tech/XUL/bindings" title="bindings">bindings</a></code> et une balise <code><a href="/fr/docs/Mozilla/Tech/XUL/action" title="action">action</a></code>. La balise <code><a href="/fr/docs/Mozilla/Tech/XUL/bindings" title="bindings">bindings</a></code> n'est pas toujours nécessaire.</p>
+
+<p>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/conditions" title="conditions">conditions</a></code> spécifie le critère qui doit correspondre à une ressource donnée. Vous pouvez spécifier plusieurs conditions qui doivent toutes correspondre à la ressource donnée. En utilisant la syntaxe de règle simple, les conditions sont directement placées dans l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/rule" title="rule">rule</a></code>.</p>
+
+<p>Si les conditions correspondent à une ressource donnée, le contenu placé entre les balises <code><a href="/fr/docs/Mozilla/Tech/XUL/action" title="action">action</a></code> est généré. Dans la syntaxe de règle simple, le contenu est directement placé dans la balise <code><a href="/fr/docs/Mozilla/Tech/XUL/rule" title="rule">rule</a></code>.</p>
+
+<h3 id="Conditions_d.27une_r.C3.A8gle" name="Conditions_d.27une_r.C3.A8gle">Conditions d'une règle</h3>
+
+<p>Lorsque qu'un arbre, un menu ou tout autre élément avec une source de données génère son contenu, le générateur de modèle cherche en premier lieu la ressource marquée par l'attribut <code id="a-ref"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/ref">ref</a></code>. L'opération est ensuite répétée pour l'ensemble des ressources filles. Le générateur compare chaque ressource aux conditions. Si celles-ci sont vérifiées, le contenu de l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/action" title="action">action</a></code> est généré pour ces ressources. Si elles ne sont pas vérifiées, rien n'est généré.</p>
+
+<h4 id=".C3.89l.C3.A9ment_content" name=".C3.89l.C3.A9ment_content">Élément <code>content</code></h4>
+
+<p>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/conditions" title="conditions">conditions</a></code> contient trois sous-éléments. Le premier est l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/content" title="content">content</a></code> qui ne doit être présent qu'une seule fois. Il sert de marqueur lorsque le générateur de modèle parcourt les ressources. Il indique le nom de la variable dans laquelle est placée une référence à la ressource racine pendant que les conditions sont analysées. La ressource racine est indiquée par l'attribut <code id="a-ref"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/ref">ref</a></code> dans l'élément contenant le modèle.</p>
+
+<p>La syntaxe d'un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/content" title="content">content</a></code> est la suivante :</p>
+
+<pre>&lt;content uri="?var"/&gt;</pre>
+
+<p>La point d'interrogation indique que le texte qui suit est une variable. Vous pouvez alors utiliser la variable <code>var</code> dans le reste des conditions. Bien entendu, vous pouvez nommer la variable comme vous le voulez.</p>
+
+<h4 id=".C3.89l.C3.A9ment_member" name=".C3.89l.C3.A9ment_member">Élément <code>member</code></h4>
+
+<p>L'élément suivant est l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/member" title="member">member</a></code> qui est utilisé pour parcourir un ensemble de ressources filles. En termes RDF, il est comparable à <code>Seq</code>, <code>Bag</code> ou <code>Alt</code>. Imaginons que vous ayez une liste de villes, comme dans l'extrait RDF/XML suivant :</p>
+
+<pre>&lt;RDF:Seq about="http://www.xulplanet.com/rdf/weather/cities"&gt;
+  &lt;RDF:li resource="http://www.xulplanet.com/rdf/weather/city/Paris"/&gt;
+  &lt;RDF:li resource="http://www.xulplanet.com/rdf/weather/city/Manchester"/&gt;
+  &lt;RDF:li resource="http://www.xulplanet.com/rdf/weather/city/Melbourne"/&gt;
+  &lt;RDF:li resource="http://www.xulplanet.com/rdf/weather/city/Kiev"/&gt;
+&lt;/RDF:Seq&gt;
+
+&lt;RDF:Description about="http://www.xulplanet.com/rdf/weather/city/Paris"&gt;
+  &lt;cityset:name&gt;Paris&lt;/cityset:name&gt;
+&lt;/RDF:Description&gt;
+
+.
+.
+.
+</pre>
+
+<p>Vous voulez afficher une ligne dans une arborescence pour chaque ville. Pour accomplir cela, utilisez l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/member" title="member">member</a></code> comme ceci :</p>
+
+<pre>&lt;tree id="citiesTree" datasources="weather.rdf"
+      ref="http://www.xulplanet.com/rdf/weather/cities"&gt;
+  &lt;template&gt;
+    &lt;rule&gt;
+      &lt;conditions&gt;
+        &lt;content uri="?list"/&gt;
+        &lt;member container="?list" child="?city"/&gt;
+      &lt;/conditions&gt;
+    &lt;rule&gt;
+  &lt;template&gt;
+&lt;/tree&gt;
+</pre>
+
+<p>Le générateur de modèle commence par récupérer la valeur de l'attribut <code id="a-ref"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/ref">ref</a></code> qui dans ce cas est '<span class="nowiki">http://www.xulplanet.com/rdf/weather/cities</span>'. Cette ressource va être mise dans la variable <code>list</code> comme il est indiqué par la balise <code><a href="/fr/docs/Mozilla/Tech/XUL/content" title="content">content</a></code>. Vous obtiendrez les ressources associées à la ressource racine en utilisant la variable <code>list</code>.</p>
+
+<p>Le générateur de modèle s'intéresse ensuite à l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/member" title="member">member</a></code>. Le générateur est contraint de parcourir les fils d'un élément. Le parent est indiqué par l'attribut <code id="a-container"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/container">container</a></code> et les fils par l'attribut <code id="a-child"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/child">child</a></code>. Dans l'exemple ci-dessus, la valeur de l'attribut <code id="a-container"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/container">container</a></code> est la variable <code>list</code>. Ainsi le parent sera la valeur de la variable <code>list</code> qui a la valeur de la ressource racine '<span class="nowiki">http://www.xulplanet.com/rdf/weather/cities</span>'. L'effet induit va être de parcourir la liste de tous les fils de '<span class="nowiki">http://www.xulplanet.com/rdf/weather/cities</span>'.</p>
+
+<p>Si vous regardez en détail le RDF ci-dessus, la ressource '<span class="nowiki">http://www.xulplanet.com/rdf/weather/cities</span>' a quatre filles, une pour chaque ville. Le générateur de modèle parcourt chacune d'elle, comparant la fille avec la valeur de l'attribut <code id="a-child"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/child">child</a></code>. Dans le cas présent, celui-ci contient la valeur 'city'. Donc le générateur va donner à la variable <code>city</code> la valeur des ressources filles au fur et à mesure.</p>
+
+<p>Comme il n'y a pas d'autres conditions, la condition correspond à chacune des quatre ressources et le générateur va créer du contenu pour chacune d'entre elles. Bien sûr, l'exemple ci-dessus n'a aucun contenu. On l'ajoutera par la suite.</p>
+
+<h4 id=".C3.89l.C3.A9ment_triple" name=".C3.89l.C3.A9ment_triple">Élément <code>triple</code></h4>
+
+<p>L'élément suivant est l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/triple" title="triple">triple</a></code>. Il est utilisé pour vérifier l'existence d'un triplet (ou assertion) dans la source de données du RDF. Un triplet est comme la propriété d'une ressource. Par exemple, un triplet existe entre un marque-page et son URL associée. Il peut-être exprimé ainsi :</p>
+
+<pre>Un marque-page vers mozilla.org -&gt; URL -&gt; www.mozilla.org</pre>
+
+<p>Cela signifie qu'il existe un triplet entre le marque-page 'Un marque-page vers mozilla.org' et 'www.mozilla.org' par la propriété <code>URL</code>. La première partie est appelée le sujet, la seconde, le prédicat, et la dernière, l'objet. Exprimé avec l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/triple" title="triple">triple</a></code>, ce mécanisme est décrit comme ceci :</p>
+
+<pre>&lt;triple subject="A Bookmark to mozilla.org"
+           predicate="URL"
+           object="www.mozilla.org"/&gt;
+</pre>
+
+<p>Ce code a été simplifié par rapport au code réel. Le prédicat devrait normalement inclure les espaces de nommage, et le sujet devrait être l'identifiant ressource du marque-page, et non pas le titre du marque-page comme ici. En fait, le titre du marque-page devrait être un autre triplet dans la source de données, qui utiliserait le prédicat 'nom'.</p>
+
+<p>Vous pouvez remplacer le sujet et l'objet dans l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/triple" title="triple">triple</a></code> par des références aux variables, auquel cas les valeurs seront substituées aux variables. Si aucune valeur n'est définie pour une variable, le générateur de modèle va attribuer à la variable la valeur de la source de données.</p>
+
+<p>Disons, par exemple, que l'on veuille ajouter une prédiction météo à la source de données des villes. Les conditions suivantes peuvent être utilisées :</p>
+
+<pre>&lt;conditions&gt;
+  &lt;content uri="?list"/&gt;
+  &lt;member container="?list" child="?city"/&gt;
+  &lt;triple subject="?city"
+             predicate="http://www.xulplanet.com/rdf/weather#prediction"
+             object="?pred"/&gt;
+&lt;/conditions&gt;
+</pre>
+
+<p>Le générateur de modèle va parcourir chaque ville comme précédemment. Lorsqu'il arrivera au triplet, il va s'intéresser aux assertions de la source de données RDF pour une prédiction météo. La prédiction météo est attribuée à la variable 'pred'. Le générateur va répéter cette opération pour chacune des quatre villes. Une comparaison a lieu et le générateur va créer du contenu pour chaque ville qui a une prédiction météo associée. Si la ville n'a pas de ressource de prédiction, la condition ne correspond pas et aucun contenu ne sera créé pour cette ville. Remarquez que vous n'avez pas besoin de mettre 'rdf:' au début du prédicat, car il est sous-entendu.</p>
+
+<p>On peut aussi remplacer l'attribut <code id="a-object"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/object">object</a></code> par une valeur statique. par exemple :</p>
+
+<pre>&lt;conditions&gt;
+  &lt;content uri="?city"/&gt;
+  &lt;triple subject="?city"
+             predicate="http://www.xulplanet.com/rdf/weather#prediction"
+             object="Nuageux"/&gt;
+&lt;/conditions&gt;
+</pre>
+
+<p>Cet exemple est similaire mais nous spécifions que nous voulons une comparaison qui s'effectue sur « 'Nuageux' ». Le résultat obtenu est que la condition ne sera remplie que pour les villes dont la prédiction météo est « 'Nuageux' ».</p>
+
+<p>Nous pouvons ajouter davantage de triplets pour réaliser d'autres comparaisons. Par exemple, dans l'exemple ci-dessus, la température et la vitesse du vent peuvent être testées. Pour cela, il suffit d'ajouter un autre triplet qui vérifiera les ressources supplémentaires. La condition sera remplie si et seulement si l'intégralité des triplets retournent des valeurs.</p>
+
+<p>L'exemple ci-dessous va vérifier un triplet supplémentaire appliqué au nom de la ville. Il lui sera attribué une variable <code>name</code>. La condition va correspondre si la ville possède à la fois un nom et une prédiction météo.</p>
+
+<pre>&lt;conditions&gt;
+  &lt;content uri="?list"/&gt;
+  &lt;member container="?list" child="?city"/&gt;
+  &lt;triple subject="?city"
+             predicate="http://www.xulplanet.com/rdf/weather#name"
+             object="?name"/&gt;
+  &lt;triple subject="?city"
+             predicate="http://www.xulplanet.com/rdf/weather#prediction"
+             object="?pred"/&gt;
+&lt;/conditions&gt;
+</pre>
+
+<h3 id="G.C3.A9n.C3.A9rer_du_contenu" name="G.C3.A9n.C3.A9rer_du_contenu">Générer du contenu</h3>
+
+<p>Le contenu à générer pour une règle est spécifié dans l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/action" title="action">action</a></code>. Il peut être le contenu des lignes d'un arbre, des items de menu ou tout ce que vous souhaitez générer. À l'intérieur du contenu, vous pouvez vous référer aux variables qui ont été définies dans les conditions. Ainsi, dans l'exemple météo ci-dessus, vous pouvez utiliser les variables <code>name</code> ou <code>pred</code> pour afficher la ville ou la prédiction météo. Vous pouvez aussi utiliser les variables <code>list</code> ou <code>city</code>, mais elles contiennent des ressources et non du texte, donc elles n'auront pas de sens pour les utilisateurs.</p>
+
+<p>Dans la syntaxe de règle simple, la syntaxe <code>uri="rdf:*"</code> est utilisée pour indiquer où le contenu doit être généré. Dans la syntaxe de règles complètes, vous appliquez la valeur de l'attribut <code id="a-uri"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/uri">uri</a></code> à une variable que l'on a utilisée dans la partie des conditions. Normalement, ce sera la variable assignée à l'attribut <code id="a-child"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/child">child</a></code> de l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/member" title="member">member</a></code>.</p>
+
+<h4 id="Exemple_complet_d.27arbre" name="Exemple_complet_d.27arbre">Exemple complet d'arbre</h4>
+
+<p>L'exemple suivant montre un arbre complet avec des conditions et une action. Vous pouvez consulter le fichier RDF séparément (<a href="https://developer.mozilla.org/samples/xultu/examples/weather.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/weather.rdf">RDF</a>).</p>
+
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advrules_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advrules_1.xul">Voir</a></p>
+
+<pre>&lt;tree id="weatherTree" flex="1" datasources="weather.rdf"
+      ref="http://www.xulplanet.com/rdf/weather/cities"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="city" label="Ville" primary="true" flex="1"/&gt;
+    &lt;treecol id="pred" label="Prédiction Météo" flex="1"/&gt;
+  &lt;/treecols&gt;
+
+  &lt;template&gt;
+    &lt;rule&gt;
+      &lt;conditions&gt;
+        &lt;content uri="?list"/&gt;
+        &lt;member container="?list" child="?city"/&gt;
+        &lt;triple subject="?city"
+                predicate="http://www.xulplanet.com/rdf/weather#name"
+                object="?name"/&gt;
+        &lt;triple subject="?city"
+                predicate="http://www.xulplanet.com/rdf/weather#prediction"
+                object="?pred"/&gt;
+      &lt;/conditions&gt;
+      &lt;action&gt;
+        &lt;treechildren&gt;
+          &lt;treeitem uri="?city"&gt;
+            &lt;treerow&gt;
+              &lt;treecell label="?name"/&gt;
+              &lt;treecell label="?pred"/&gt;
+            &lt;/treerow&gt;
+          &lt;/treeitem&gt;
+        &lt;/treechildren&gt;
+      &lt;/action&gt;
+    &lt;/rule&gt;
+  &lt;/template&gt;
+&lt;/tree&gt;
+</pre>
+
+<p>Deux colonnes apparaissent dans cet arbre, l'une qui affiche la valeur de 'name' pour chacun ligne, et l'autre qui affiche le résultat de la prédiction météo.</p>
+
+<div class="note">Si vous utilisez le marqueur 'dont-build-content' (ne-pas-générer-de-contenu) sur un arbre, remplacez l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/content" title="content">content</a></code> par un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></div>
+
+<h3 id="Ajouter_des_liaisons_suppl.C3.A9mentaires" name="Ajouter_des_liaisons_suppl.C3.A9mentaires">Ajouter des liaisons supplémentaires</h3>
+
+<p>Le dernier élément que vous pouvez ajouter à l'intérieur d'une règle est l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/bindings" title="bindings">bindings</a></code>. À l'intérieur de celui-ci, vous pouvez mettre un ou plusieurs éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/binding" title="binding">binding</a></code>. Une liaison dans une règle a la même syntaxe qu'un triplet et remplit quasiment la même fonction. Par exemple, dans l'exemple météo précédent, on peut ajouter la liaison suivante :</p>
+
+<pre>&lt;bindings&gt;
+  &lt;binding subject="?city"
+             predicate="http://www.xulplanet.com/rdf/weather#temperature"
+             object="?temp"/&gt;
+&lt;/bindings&gt;
+</pre>
+
+<p>La liaison va prendre la ressource "température" de chaque ville et l'attribuer à la variable <code>temp</code>. C'est tout à fait similaire à ce qu'un triplet accomplit. La différence réside dans le fait que la liaison créée par le binding n'est pas prise en compte dans la vérification des conditions. Ainsi, pour qu'une ville soit affichée, il est impératif qu'elle ait un nom et une prédiction météo, mais peu importe qu'elle ait ou non une température. Si toutefois elle en possède une, la valeur sera attribuée à la variable <code>temp</code> et pourra être utilisée dans une action. Si une ville n'a pas de température, la variable <code>temp</code> sera une chaîne de caractère vide.</p>
+
+<hr>
+<p>Par la suite, nous verrons comment sauvegarder les états des éléments XUL.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Sources_de_données_RDF" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Données_persistantes">Suivant  »</a></p>
+</div>
+
+<p><span class="comment">Interwiki</span></p>

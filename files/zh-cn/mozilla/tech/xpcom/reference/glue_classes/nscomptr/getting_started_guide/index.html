@@ -1,0 +1,478 @@
+---
+title: 入门指南
+slug: Mozilla/Tech/XPCOM/Reference/Glue_classes/nsCOMPtr/Getting_Started_Guide
+translation_of: Mozilla/Tech/XPCOM/Using_nsCOMPtr/Getting_Started_Guide
+---
+<p>下面开始探讨智能指针问题。</p>
+<h3 id="Introduction" name="Introduction">介绍</h3>
+<h4 id="What_is_nsCOMPtr.3F" name="What_is_nsCOMPtr.3F">什么是 <code>nsCOMPtr</code>?</h4>
+<p><code>nsCOMPtr</code> 是防止内存泄漏的一种工具。</p>
+<p><code>nsCOMPtr</code> 是一种智能指针。 它是一个模板类，在使用上类似C/C++中的普通指针。如：可使用*或者-&gt;得到其所指定的内容。<code>nsCOMPtr</code>之所以智能，是因为它不像一般指向XPCOM对象的指针<code>，nsCOMPtr还管理</code><code>AddRef</code>, <code>Release</code>, 和<code>QueryInterface</code>方法。 <code>nsCOMPtr</code>是在以下源文件中定义的：</p>
+<ul>
+ <li>{{ Source("xpcom/glue/nsCOMPtr.h", "xpcom/glue/nsCOMPtr.h") }}</li>
+ <li>{{ Source("xpcom/glue/nsCOMPtr.cpp", "xpcom/glue/nsCOMPtr.cpp") }}</li>
+</ul>
+<p>...though you probably don't want to look in there, just yet.</p>
+<p><code>利用nsCOMPtr</code>，比使用原始的XPCOM接口指针，能够把代码写的更简短，更清晰，更明白，更安全。</p>
+<h4 id=".5BXP.5DCOM_Basics:_Ownership_and_Reference_Counting" name=".5BXP.5DCOM_Basics:_Ownership_and_Reference_Counting">[XP]COM Basics: Ownership and Reference Counting</h4>
+<p>这段是对XPCOM的一些基本问题的一个复习。对<code>nsCOMPtr</code>s的理解，需要对XPCOM有一个基本的认识。您可通过以下方式对XPCOM进行学习。<a class="external" href="http://www.develop.com/dbox/">Don Box</a>的<a class="external" href="http://www.amazon.com/exec/obidos/ASIN/0201634465">Essential COM</a> 介绍了COM的基本规则和使用。 Don Box 在 <a class="external" href="http://www.amazon.com/exec/obidos/ASIN/0201379686">Effective COM</a>.一书中更详尽的说明了COM的细节，缺陷和易犯的错误。您还需要对C++有基本的了解。这里列举三本比较有用的书：Bjarne Stroustrup 的 <a class="external" href="http://www.amazon.com/exec/obidos/ASIN/0201889544">The C++ Programming Language</a>，Scott Meyers 的 <a class="external" href="http://www.amazon.com/exec/obidos/ASIN/0201924889">Effective C++</a> 和 <a class="external" href="http://www.amazon.com/exec/obidos/ASIN/020163371X">More Effective C++</a>。</p>
+<p>All XPCOM objects are allocated on the heap. Clients don't get to know much about the implementation of any such object. They reference it only through a pointer to an `interface', i.e., the static type of the pointer is a pointer to an abstract base class, the actual object pointed to is a class derived from that abstract base class. The XPCOM object is said to `implement that interface'. The client's reference to the object is typically called `an interface pointer'.</p>
+<p>An object may implement many interfaces. Each interface is (at least conceptually) separately `reference counted'. That is, the interface keeps a count of the number of clients holding references to it. When that count goes to zero, the interface may <code>delete</code> itself. Clients are expected to keep this reference count accurate by incrementing it when they acquire a reference to the interface, and decrementing it before they let go. To facilitate this, all interfaces inherit from an abstract base class that provides the member functions <code>AddRef</code>, and <code>Release</code>.</p>
+<p>A rule of XPCOM is that any function that creates or returns an interface pointer will have already <code>AddRef</code>ed it. The caller can then hold onto the reference indefinitely, calling <code>Release</code> when it no longer needs it. When the last pointer to an interface is <code>Release</code>d, the interface (and consequently, typically the underlying object) will <code>delete</code> itself. As long as there is an outstanding <code>AddRef</code> against the interface, it continues to exist. If you forget to call <code>Release</code>, the object will leak, i.e., the storage for that object will never be reclaimed. Leaks are bad <code><span class="nowiki">:-)</span></code>.</p>
+<p>A reference through which you will call <code>AddRef</code> and <code>Release</code> is called an <strong>owning reference</strong>. It holds a stake in the underlying object. That object cannot go away until the owning reference has relinquished its claim. Not all references need to be owning references. In fact, if two objects somehow end up owning each other (even transitively) it becomes difficult for either of those object to be reclaimed without adding some `out-of-band' mechanism for breaking the ownership cycle. The document <a href="/en/XPCOM_ownership_guidelines" title="en/XPCOM_ownership_guidelines">Some COM Ownership Guidelines</a> provides some hints on when ownership is needed. The following lists are good starting point, but by no means complete.</p>
+<p>You use an owning reference when</p>
+<ul>
+ <li>you created the object;</li>
+ <li>you got the object from a function that <em>might</em> have created it, e.g., any `getter' function, such as <code>QueryInterface</code>, or <code>CreateInstance</code>. All good getters <code>AddRef</code> the interface pointers they produce, thus providing you with an owning reference;</li>
+ <li>you will hold onto the reference longer than the scope of the function in which you acquired it, e.g., you got it as a parameter, but you're hanging onto it in a member variable (see, for example, {{ web.link("#Comparison_1", "Comparison 1") }}, below).</li>
+</ul>
+<p>You don't need an owning reference when</p>
+<ul>
+ <li>the object is passed in as a parameter, and you <em>don't</em> need to keep it any longer than the scope of this function;</li>
+ <li>the object's lifetime is known to contain yours in some well defined way, e.g., in the nodes of a tree, parent nodes keep owning references to their children, children need not keep owning references to their parents.</li>
+</ul>
+<p>It turns out that reference counting by hand is hard for programmers to get right. It may sound simple, but in practice it's very easy to forget to <code>Release</code> at the appropriate moment. Or to <code>AddRef</code> too many or too few times.</p>
+<h4 id="How_does_nsCOMPtr_help.3F" name="How_does_nsCOMPtr_help.3F">How does <code>nsCOMPtr</code> help?</h4>
+<p><code>nsCOMPtr</code> manages <code>AddRef</code>, <code>Release</code>, and other red-tape for you. An <code>nsCOMPtr</code> looks and acts as much like a raw XPCOM interface pointer as C allows, but it knows it owns the object it points to. This takes a little getting used to on your part, but ends up with less typing, clearer, safer code, and less leaks.</p>
+<p>For instance, here is a typical snippet of code (at its most compact) where you assign a XPCOM interface pointer into a member variable, i.e., the body of a `setter' function, side-by-side using raw XPCOM interface pointers and <code>nsCOMPtr</code>s. </p>
+<p>对照1.设置成员变量。</p>
+<p> </p>
+<table>
+ <caption>
+   </caption>
+ <tbody>
+  <tr>
+   <td>
+    <pre class="eval">
+<span class="comment">// raw [XP]COM interface pointers...</span>
+<span class="comment">// given: |nsIFoo* mFooPtr;|</span>
+
+<span class="comment"><span class="nowiki">/*
+   |AddRef| the new value if it's not
+   |NULL|; assign it in; and |Release|
+   the old value, if any (so we don't
+   leak it).
+
+   This order of assignment is special
+   and must be used to avoid particular
+   ownership bugs.
+ */</span></span>
+
+<strong>NS_IF_ADDREF(aFooPtr);
+nsIFoo* temp = mFooPtr;</strong>
+mFooPtr = aFooPtr;
+<strong>NS_IF_RELEASE(temp);</strong>
+</pre>
+   </td>
+   <td>
+    <pre class="eval">
+<span class="comment">// |nsCOMPtr|...</span>
+<span class="comment">// given: |nsCOMPtr&lt;nsIFoo&gt; mFooPtr;|</span>
+
+<span class="comment"><span class="nowiki">/*
+   This assignment automatically
+   |Release|s the old value in
+   |mFooPtr|, if any, and |AddRef|s the
+   new one, in the appropriate sequence
+   to avoid the ownership bug mentioned
+   earlier.
+ */</span></span>
+
+
+
+
+
+mFooPtr = aFooPtr;
+
+</pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>Additionally, the class using raw XPCOM interface pointers will need a destructor to <code>Release</code> <code>mFooPtr</code><span class="nowiki">; and a constructor to ensure that </span><code>mFooPtr</code> is initially set to <code>NULL</code> (or some other reasonable value).</p>
+<p><code>nsCOMPtr</code> helps you write code that is leak-proof, exception safe, and significantly less verbose than you would with raw XPCOM interface pointers. With <code>nsCOMPtr</code>, you may never have to call <code>AddRef</code>, <code>Release</code>, or <code>QueryInterface</code> by hand.</p>
+<p>You still have to understand XPCOM. You still have to know which functions return interface pointers that have already been <code>AddRef</code>ed and which don't. You still have to ensure your program logic doesn't produce circularly referencing garbage. <code>nsCOMPtr</code> is not a panacea. It is, however, helpful, easy to use, well-tested, and polite. It doesn't require that a function author cooperate with you, nor does your use force others to use it.</p>
+<h3 id="Using_nsCOMPtr" name="Using_nsCOMPtr"><span style="font-family: monospace;">使用</span><code>nsCOMPtr</code></h3>
+<h4 id="The_Basics" name="The_Basics">The Basics</h4>
+<p>多数情况下，使用nsCOMPtr和一个一般的XPCOM接口指针是类似的。注意在声明中的细微区别。</p>
+<table>
+ <caption>
+  对照 2. 相似点: <code>nsCOMPtr</code>类似于 XPCOM接口指针</caption>
+ <tbody>
+  <tr>
+   <td>
+    <pre class="eval">
+<span class="comment">// raw [XP]COM interface pointers...</span>
+
+nsIFoo<strong><span class="nowiki">*</span></strong> fooPtr <strong><span class="nowiki">= 0</span></strong><span class="nowiki">;
+ </span><span class="comment">// ...</span>
+fooPtr-&gt;SomeFunction(x, y, z);
+AnotherFunction(fooPtr);
+
+if ( fooPtr )
+  <span class="comment">// ...</span>
+
+if ( fooPtr == foo2Ptr )
+  <span class="comment">// ...</span>
+</pre>
+   </td>
+   <td>
+    <pre class="eval">
+<span class="comment">// |nsCOMPtr|...</span>
+
+<strong>nsCOMPtr&lt;</strong>nsIFoo<strong>&gt;</strong> fooPtr;
+<span class="comment">// ...</span>
+fooPtr-&gt;SomeFunction(x, y, z);
+AnotherFunction(fooPtr);
+
+if ( fooPtr )
+  <span class="comment">// ...</span>
+
+if ( fooPtr == foo2Ptr )
+  <span class="comment">// ...</span>
+</pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p> </p>
+<p>有两点主要区别。第一：不需要也不再允许调用<code>AddRef</code> 和 <code>Release</code>方法。 </p>
+<table>
+ <caption>
+  对照 3. 不同点: <code>AddRef</code> <span style="font-family: monospace;">和 </span><code>Release</code> 对于 <code>nsCOMPtr</code>s 来说是非法的。</caption>
+ <tbody>
+  <tr>
+   <td>
+    <pre class="eval">
+<span class="comment">// raw [XP]COM interface pointers...</span>
+<span class="comment">// given: |nsIFoo* mFooPtr;|</span>
+
+  <span class="comment">/*
+    Note: this sequence is not the
+    correct order to do assign
+    raw pointers anyway (see
+    {{ Anch("Comparison 1") }}) but I need it
+    for this comparison.
+  */</span>
+
+NS_IF_RELEASE(mFooPtr);
+
+mFooPtr = aFooPtr;
+NS_IF_ADDREF(mFooPtr);
+
+</pre>
+   </td>
+   <td>
+    <pre class="eval">
+<span class="comment">// |nsCOMPtr|...</span>
+<span class="comment">// given: |nsCOMPtr&lt;nsIFoo&gt; mFooPtr;|</span>
+
+  <span class="comment">/*
+    You no longer need, nor will the
+    compiler let you, call |AddRef|,
+    or |Release|.
+  */</span>
+
+
+
+<span class="warning">NS_IF_RELEASE(mFooPtr);</span>
+  <span class="comment">// Error: |Release| is private</span>
+mFooPtr = aFooPtr;
+<span class="warning">NS_IF_ADDREF(mFooPtr);</span>
+  <span class="comment">// Error: |AddRef| is private</span>
+</pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p> </p>
+<p>第二：使用 <a href="/en/Using_nsCOMPtr/Reference_Manual#.60Out.27_Parameters:_getter_AddRefs" title="en/Using_nsCOMPtr/Reference_Manual#.60Out.27_Parameters:_getter_AddRefs"><code>getter_AddRefs</code></a> 标识nsCOMPtr，作为获取指针返回值的函数的参数，而不能只使用<code>nsCOMPtr</code>的地址作为参数。</p>
+<table>
+ <caption>
+  对照 4. 不同点: <span style="font-family: monospace;">当 </span><code>nsCOMPtr</code> 作为输出参数时，使用 getter_AddRefs。</caption>
+ <tbody>
+  <tr>
+   <td>
+    <pre class="eval">
+<span class="comment">// raw [XP]COM interface pointers...</span>
+
+nsIFoo* foo;
+
+GetFoo(<strong>&amp;</strong>foo);
+</pre>
+   </td>
+   <td>
+    <pre class="eval">
+<span class="comment">// |nsCOMPtr|s...</span>
+
+nsCOMPtr&lt;nsIFoo&gt; foo;
+
+GetFoo(<strong>getter_AddRefs(</strong>foo<strong>)</strong>);
+</pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p> </p>
+<p>以上是对nsCOMPtrS的一些说明，基本涵盖了平日使用的90%。以下是在一些复杂情况下，对其的细节说明。</p>
+<p> </p>
+<h4 id="A_Few_Details" name="A_Few_Details">一些细节</h4>
+<p> </p>
+<p>以下是更多细节让您更了解 <code>nsCOMPtr</code>。</p>
+<p>通常，通过调用 <code>QueryInterface 获取接口指针</code><span style="font-family: monospace;">。</span> <code>QueryInterface</code> 是一个 getter 函数，由以上方法，可通过 <code>getter_AddRefs</code> 方法来获取。</p>
+<table>
+ <caption>
+  The hard way to <code>QueryInterface</code> into an <code>nsCOMPtr</code>.</caption>
+ <tbody>
+  <tr>
+   <td>
+    <pre class="eval">
+<span class="comment">// A way (though not the best way) to |QueryInterface| into an |nsCOMPtr|...</span>
+
+nsCOMPtr&lt;nsIFoo&gt; foo;
+
+nsresult rv = bar-&gt;QueryInterface(NS_GET_IID(nsIFoo), getter_AddRefs(foo));
+
+  <span class="comment">// Or, if you're a savvy [XP]COM programmer,</span>
+  <span class="comment">//  you use the type-safe version...</span>
+nsresult rv = CallQueryInterface(bar, getter_AddRefs(foo));
+</pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p><code>因为 QueryInterface</code> 使用频繁，<code>nsCOMPtr</code> 提供了一种特殊方式对其调用。这种方式是类型安全的，<code>QueryInterface的返回值能</code>直接构造nsCOMPtr。这种构造方式比通过赋值进行构造效率更高。这种方式是 <a href="/en/Using_nsCOMPtr/Reference_Manual#nsCOMPtr.3CT.3E_.3D_do_QueryInterface.28_nsISupports.2A_.29.2CnsCOMPtr.3CT.3E_.3D_do_QueryInterface.28_nsISupports.2A.2C_nsresult.2A_.29" title="en/Using_nsCOMPtr/Reference_Manual#nsCOMPtr.3CT.3E_.3D_do_QueryInterface.28_nsISupports.2A_.29.2CnsCOMPtr.3CT.3E_.3D_do_QueryInterface.28_nsISupports.2A.2C_nsresult.2A_.29"><code>do_QueryInterface</code></a> 。通过使用这种方式，以上例子可写为：</p>
+<table>
+ <caption>
+  How to <code>QueryInterface</code> into an <code>nsCOMPtr</code>.</caption>
+ <tbody>
+  <tr>
+   <td>
+    <pre class="eval">
+<span class="comment">// The best way to |QueryInterface| into an |nsCOMPtr|...</span>
+
+nsresult rv;
+nsCOMPtr&lt;nsIFoo&gt; foo( <strong>do_QueryInterface(</strong>bar, &amp;rv<strong>)</strong> );
+
+  <span class="comment">// Or, if you don't care about the |nsresult|</span>
+nsCOMPtr&lt;nsIFoo&gt; foo( <strong>do_QueryInterface(</strong>bar<strong>)</strong> );
+</pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p><code>nsCOMPtr</code> happily calls <code>AddRef</code> and <code>Release</code> implicitly. This same favor is <em>not</em> extended to <code>QueryInterface</code>. <code>nsCOMPtr</code> does not <code>QueryInterface</code> on assignment without your explicit permission in the form of the <code>do_QueryInterface</code> directive. You need never worry about hidden queries. However, be aware that if you <em>should</em> have queried but didn't, e.g., when assigning in a raw pointer where C allows the assignment, but XPCOM wouldn't, <code>nsCOMPtr</code> will <a href="/en/Using_nsCOMPtr/Reference_Manual#Type_Safeguards" title="en/Using_nsCOMPtr/Reference_Manual#Type_Safeguards">assert at runtime</a>. Use <code>do_QueryInterface</code> whenever you assign in a pointer to a XPCOM interface of a different type, even if that type happens to derive from the base type of the <code>nsCOMPtr</code></p>
+<p> </p>
+<table>
+ <caption>
+  对照6. <code>do_QueryInterface</code> 避免了XPCOM 中的类型错误。</caption>
+ <tbody>
+  <tr>
+   <td>
+    <pre class="eval">
+class nsIBar
+  : public nsIFoo ... { ... };
+
+nsIBar* p = ...;
+
+  <span class="comment">// C   thinks every |nsIBar*| is an</span>
+  <span class="comment">//  |nsIFoo*|, therefore, C   allows</span>
+  <span class="comment">//  this...</span>
+nsCOMPtr&lt;nsIFoo&gt; <span class="warning">foo = p;</span>
+  <span class="comment">//  ...even though it is an [XP]COM</span>
+  <span class="comment">//  type error</span>
+</pre>
+   </td>
+   <td>
+    <pre class="eval">
+class nsIBar
+  : public nsIFoo ... { ... };
+
+nsIBar* p = ...;
+
+
+
+  <span class="comment">// No type error here...</span>
+nsCOMPtr&lt;nsIFoo&gt; foo( <strong>do_QueryInterface(</strong>p<strong>)</strong> );
+
+
+</pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>Remember, the C type system and the XPCOM type system are really two independent things. Because XPCOM interfaces are expressed as abstract C base classes, you may be tempted to let C handle the differences, or to use C casts to navigate between interface types. This is wrong. The only sanctioned way to get between XPCOM types is with <code>QueryInterface</code>. In the example above, there is no reason to assume that the <code>nsIFoo*</code> C pulls out of <code>p</code> would be the same one that <code>p-&gt;QueryInterface()</code> would return.</p>
+<p><a href="/en/Using_nsCOMPtr/Reference_Manual#nsCOMPtr.3CT.3E_.3D_dont_AddRef.28_T.2A_.29.2CnsCOMPtr.3CT.3E_.3D_getter_AddRefs.28_T.2A_.29" title="en/Using_nsCOMPtr/Reference_Manual#nsCOMPtr.3CT.3E_.3D_dont_AddRef.28_T.2A_.29.2CnsCOMPtr.3CT.3E_.3D_getter_AddRefs.28_T.2A_.29"><code>dont_AddRef</code></a> is a similar directive that helps you when you assign in a pointer that has already been <code>AddRef</code>ed, e.g., because you called a getter that returned the pointer as its function result.</p>
+<table>
+ <caption>
+  Using <code>dont_AddRef</code>.</caption>
+ <tbody>
+  <tr>
+   <td>
+    <pre class="eval">
+nsCOMPtr&lt;nsIFoo&gt; foo( <strong>dont_AddRef(</strong>CreateFoo()<strong>)</strong> );
+  <span class="comment">// |CreateFoo| |AddRef|s its result, as all good getters do</span>
+</pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h4 id="Something_nsCOMPtr_Doesn.27t_Do" name="Something_nsCOMPtr_Doesn.27t_Do">Something <code>nsCOMPtr</code> <em>Doesn't</em> Do</h4>
+<p>An <code>nsCOMPtr</code> does all that is necessary to behave as an owning reference. A given <code>nsCOMPtr</code> does not, however, cooperate in making <em>other</em> owning pointers. After learning how <code>nsCOMPtr</code> automatically <code>AddRef</code>s a pointer as it is being assigned <em>in</em>, the natural assumption is that it does the same thing when assigning <em>out</em>. Here is a snippet of code that demonstrates this misconception.</p>
+<table>
+ <tbody>
+  <tr>
+   <td>
+    <pre class="eval">
+<span class="comment">// Incorrect assumptions about |nsCOMPtr|...</span>
+
+nsresult
+nsCacheRecord::GetFileSpec( nsIFileSpec** aFileSpecResult )
+    <span class="comment">/*
+      ...fills in the callers |nsFileSpec*| (which the caller supplied
+      the address of) with a copy of my member variable |mFileSpec|,
+      an |nsCOMPtr|.  I.e., this function is a `getter'.
+
+      Remember: good [XP]COM getters always |AddRef| their result.
+    */</span>
+  {
+    <span class="comment">// ...</span>
+    *aFileSpec = mFileSpec;
+      <span class="warning"><span class="comment">// the |nsCOMPtr| should take care of the refcount here, right?</span></span>
+    return NS_OK;
+  }
+</pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>Plainly, the author believed (though perhaps with some question) that the <code>nsCOMPtr</code>, <code>mFileSpec</code>, would <code>AddRef</code> automatically as it was assigned into <code><span class="nowiki">*aFileSpec</span></code>. This is <em>not</em> the case. An <code>nsCOMPtr</code> automatically calls <code>AddRef</code> and <code>Release</code> (only) on its <em>own</em> behalf. In all other situations, it is designed to be a drop in replacement for a raw XPCOM pointer. Where ever an <code>nsCOMPtr</code> is used in a situation where a raw pointer is needed, the <code>nsCOMPtr</code> automatically provides one.</p>
+<table>
+ <tbody>
+  <tr>
+   <td>
+    <pre class="eval">
+<span class="comment">// |nsCOMPtr| produces a raw pointer when needed...</span>
+
+nsCOMPtr&lt;nsIFoo&gt; foo = ...;
+
+  <span class="comment">// 1.  Assigning into a raw pointer</span>
+nsIFoo* raw_foo = foo;
+
+  <span class="comment">// 2.  Assigning into another |nsCOMPtr|</span>
+nsCOMPtr&lt;nsIFoo&gt; foo2 = foo;
+
+  <span class="comment">// 3.  As a parameter</span>
+SetFoo(foo);
+
+  <span class="comment">// 4.  Testing the value in an |if| expression</span>
+  <span class="comment">// 5.  Calling a member function</span>
+if ( foo )
+  foo-&gt;DoSomething();
+</pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>In all of these cases, pretty much the exact same code is executed (case 2 is slightly different, but the intent is the same). In each case, you are essentially extracting the raw pointer value for your own purpose. If the <code>nsCOMPtr</code> <code>AddRef</code>ed the value each time you did that, cases 4 and 5 would obviously always generate leaks. <code>SetFoo</code>, from case 3, would have to be written two different ways when given an <code>nsCOMPtr</code>, it would know the value was already <code>AddRef</code>ed, and when given a raw pointer it would assume the value was not <code>AddRef</code>ed. Actually the contradictions run deeper than that. All these cases show that automatically <code>AddRef</code>ing on `output' makes <code>nsCOMPtr</code>s and raw-pointers act differently from the point of view of the clients. The goal is to make them act the same so that <code>nsCOMPtr</code>s can be a drop in replacement (modulo managing its own `ownership').</p>
+<p>Given what you now know, the rule is predictable. As described above, and unless you tell it otherwise, an <code>nsCOMPtr</code> <code>AddRef</code>s when you assign <em>in</em> to it. It does nothing when you assign <em>out</em> of it.</p>
+<h4 id="Where_should_I_use_nsCOMPtrs.3F" name="Where_should_I_use_nsCOMPtrs.3F">Where should I use <code>nsCOMPtr</code>s?</h4>
+<p>You should use an <code>nsCOMPtr</code> any place you use an interface pointer as an owning reference, i.e., where you call <code>AddRef</code> and <code>Release</code> on it. You should use <code>nsCOMPtr</code> as a member variable, where it will simplify setters, and eliminate constructors, destructors, and assignment operators. You should use <code>nsCOMPtr</code> on the stack, where it makes calling <code>QueryInterface</code> almost pleasant, and eliminates the complex logic that falls out of error handling.</p>
+<h4 id="Where_shouldn.27t_I_use_nsCOMPtrs.3F" name="Where_shouldn.27t_I_use_nsCOMPtrs.3F">Where shouldn't I use <code>nsCOMPtr</code>s?</h4>
+<p>Don't use <code>nsCOMPtr</code>s where you don't need an owning reference. See <a href="/en/XPCOM_ownership_guidelines" title="en/XPCOM_ownership_guidelines">Some COM Ownership Guidelines</a>. <code>nsCOMPtr</code> is designed to be used with XPCOM interfaces, so don't use it with non-interfaces with specific exceptions described <a href="/en/Using_nsCOMPtr/Getting_Started_Guide#nsCOMPtrs_for_non-interface_classes" title="en/Using_nsCOMPtr/Getting_Started_Guide#nsCOMPtrs_for_non-interface_classes">below</a>. Don't use <code>nsCOMPtr</code>s in XPCOM interfaces. Don't use them in plain old C code; <code>nsCOMPtr</code>s are, of course, a C only construct. <a href="/en/Using_nsCOMPtr/Reference_Manual#Casting" title="en/Using_nsCOMPtr/Reference_Manual#Casting">Never cast</a> an <code>nsCOMPtr</code>, it's almost guaranteed to leak.</p>
+<h4 id="nsCOMPtrs_for_non-interface_classes" name="nsCOMPtrs_for_non-interface_classes"><code>nsCOMPtr</code>s for non-interface classes</h4>
+<p>Appropriately formatted answer to come, in the meanwhile, the full details are available in <a class="link-news" href="news://news.mozilla.org/scc-3E1526.12182423042001@h-204-29-187-152.netscape.com">this news posting</a> (<a class="external" href="http://groups.google.com/group/netscape.public.mozilla.xpcom/browse_frm/thread/77258f1cd7d99773/268b949066f2ba4a?hl=de&amp;q=#268b949066f2ba4a" title="http://groups.google.com/group/netscape.public.mozilla.xpcom/browse_frm/thread/77258f1cd7d99773/268b949066f2ba4a?hl=de&amp;q=#268b949066f2ba4a">via Google Groups</a>).</p>
+<h4 id="nsCOMPtrs_in_function_signatures" name="nsCOMPtrs_in_function_signatures"><code>nsCOMPtr</code>s in function signatures</h4>
+<p>In general, you won't want to use <code>nsCOMPtr</code> in the signature of XPCOM (i.e., `scriptable') functions. <code>nsCOMPtr</code> is not currently directly supported by IDL. However, you may sometime be tempted to use an <code>nsCOMPtr</code> in a non-scriptable function.</p>
+<h5 id="nsCOMPtr.3CT.3E_f.28.29_don.27t_return_an_nsCOMPtr" name="nsCOMPtr.3CT.3E_f.28.29_don.27t_return_an_nsCOMPtr"><span class="warning"><code>nsCOMPtr&lt;T&gt; f()</code></span> 不返回 <code>nsCOMPtr</code></h5>
+<p>This practice is dangerous. Returning an <code>AddRef</code>ed pointer in almost any form as a function result leads to several potential errors, some of which are leaks, some of which are dangling pointers. Returning an <code>nsCOMPtr</code> may seem like a good idea (since it tells clients you are giving them ownership), however it can be the cause of an dangling pointer. Consider:</p>
+<table>
+ <tbody>
+  <tr>
+   <td>
+    <pre class="eval">
+<span class="comment">// Don't return |nsCOMPtr|s...</span>
+nsCOMPtr&lt;nsIFoo&gt; CreateFoo();
+<span class="comment">// ...</span>
+
+<span class="warning">nsIFoo* myFoo = CreateFoo();</span> <span class="comment">// Oops: |myFoo| now dangles!</span>
+  <span class="comment">// |CreateFoo| returns an |nsCOMPtr|, which</span>
+  <span class="comment">//  automatically |Release|s right after this</span>
+  <span class="comment">//  assignment.  Now |myFoo| refers to a</span>
+  <span class="comment">//  deleted object.</span>
+</pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>You can tell callers you are giving them ownership in a way that doesn't pose this hazard by returning a <code>already_AddRefed&lt;T&gt;</code> (see bug <a class="external" href="http://bugzilla.mozilla.org/show_bug.cgi?id=59212"><span class="nowiki">#59212</span></a>). An <code>nsCOMPtr</code> knows not to <code>AddRef</code> a value that is <code>already_AddRefed</code>.</p>
+<table>
+ <tbody>
+  <tr>
+   <td>
+    <pre class="eval">
+<span class="comment">// Preferred form: if you must return a pointer, use |already_AddRefed|...</span>
+already_AddRefed&lt;nsIFoo&gt; CreateFoo();
+<span class="comment">// ...</span>
+
+nsIFoo* myFoo1 = CreateFoo(); <span class="comment">// doesn't dangle</span>
+nsCOMPtr&lt;nsIFoo&gt; myFoo2( CreateFoo() ); <span class="comment">// doesn't leak</span>
+nsCOMPtr&lt;nsIFoo&gt; myFoo3( dont_AddRef(CreateFoo()) ); <span class="comment">// redundant, but legal and correct</span>
+</pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>Compare this to the most frequent leaks caused by returning a raw pointer you have already <code>AddRef</code>ed:</p>
+<table>
+ <tbody>
+  <tr>
+   <td>
+    <pre class="eval">
+<span class="comment">// Don't return raw pointers; that incites leaks...</span>
+nsIFoo* CreateFoo(); <span class="comment">// returns an |AddRef|ed pointer</span>
+<span class="comment">// ...</span>
+
+<span class="warning">nsCOMPtr&lt;nsIFoo&gt; myFoo = CreateFoo();</span> <span class="comment">// Oops: leak;</span>
+nsCOMPtr&lt;nsIFoo&gt; myFoo( <span class="notice">dont_AddRef(</span>CreateFoo()<span class="notice">)</span> );
+  <span class="comment">// Since |CreateFoo| already |AddRef|s its result, we must remind</span>
+  <span class="comment">//  our |nsCOMPtr| not to.  It's easy to forget.  Prevent it in advance</span>
+  <span class="comment">//  by not returning pointers as function results, or else by returning</span>
+  <span class="comment">//  an |already_AddRefed&lt;T&gt;| as above.</span>
+</pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h5 id="void_f.28_nsCOMPtr.3CT.3E_.29_don.27t_pass_an_nsCOMPtr_by_value" name="void_f.28_nsCOMPtr.3CT.3E_.29_don.27t_pass_an_nsCOMPtr_by_value"><span class="warning"><code>void f( nsCOMPtr&lt;T&gt; )</code></span> don't pass an <code>nsCOMPtr</code> by value</h5>
+<p>This practice is wasteful, but not otherwise harmful. There is no need to <code>AddRef</code> parameters, as they are guaranteed to live as long as the function call. You only need to <code>AddRef</code> them as you store them in a structure that will live longer than the function call. Which means the appropriate member of that structure should be an <code>nsCOMPtr</code>, not the function parameter. Additionally, this signature may confuse callers into thinking they need an <code>nsCOMPtr</code> just to call the function.</p>
+<h5 id="void_f.28_const_nsCOMPtr.3CT.3E&amp;_.29_don.27t_pass_an_nsCOMPtr_by_const_reference" name="void_f.28_const_nsCOMPtr.3CT.3E&amp;_.29_don.27t_pass_an_nsCOMPtr_by_const_reference"><span class="warning"><code>void f( const nsCOMPtr&lt;T&gt;&amp; )</code></span> don't pass an <code>nsCOMPtr</code> by <code>const</code> reference</h5>
+<p>Exactly as the signature above, this practice is wasteful, but not otherwise harmful, and has the same impact as passing an <code>nsCOMPtr</code> by value if the caller only supplied a raw pointer.</p>
+<h5 id="void_f.28_nsCOMPtr.3CT.3E.2A_.29_avoid_passing_an_nsCOMPtr_by_address.2C_if_possible" name="void_f.28_nsCOMPtr.3CT.3E.2A_.29_avoid_passing_an_nsCOMPtr_by_address.2C_if_possible"><span class="warning"><code>void f( nsCOMPtr&lt;T&gt;* )</code></span> avoid passing an <code>nsCOMPtr</code> by address, if possible</h5>
+<p>This practice requires callers to have an <code>nsCOMPtr</code>, and requires them to do a little extra work, as <code>operator&amp;</code> for <code>nsCOMPtr</code>s is <code>private</code> (to help prevent <a href="/en/Using_nsCOMPtr/Reference_Manual#Casting" title="en/Using_nsCOMPtr/Reference_Manual#Casting">leaks caused by casting</a>; also see {{ Bug(59414) }}). This is an acceptable way to declare `in/out' parameters, but prefer passing <code>nsCOMPtr</code>s by reference, as below.</p>
+<table>
+ <tbody>
+  <tr>
+   <td>
+    <pre class="eval">
+<span class="comment">// Passing an |nsCOMPtr| by pointer requires extra work...</span>
+void f( nsCOMPtr&lt;nsIFoo&gt;* );
+<span class="comment">// ...</span>
+
+nsCOMPtr&lt;nsIFoo&gt; myFoo = ...;
+
+f( <span class="notice">address_of(</span>myFoo<span class="notice">)</span> );
+</pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h5 id="void_f.28_nsCOMPtr.3CT.3E&amp;_.29_do_pass_an_nsCOMPtr_by_reference_for_.60in.2Fout.27_parameters" name="void_f.28_nsCOMPtr.3CT.3E&amp;_.29_do_pass_an_nsCOMPtr_by_reference_for_.60in.2Fout.27_parameters"><code>void f( nsCOMPtr&lt;T&gt;&amp; )</code> do pass an <code>nsCOMPtr</code> by reference for `in/out' parameters</h5>
+<p>This is the prefered scheme for providing `in/out' parameters. If you were to use a raw pointer instead, your function couldn't know what ownership relationship the caller had to the input value, and hence, couldn't know whether to <code>Release</code> it or not before assigning in the new value. By declaring the parameter as an <code>nsCOMPtr&amp;</code>, the relationship is explicit.</p>
+<h3 id="Summary" name="Summary">Summary</h3>
+<p>An <code>nsCOMPtr</code> is an owning reference. Whatever it points to has been <code>AddRef</code>ed, counting the <code>nsCOMPtr</code> as one of its `owners'. An <code>nsCOMPtr</code> always calls <code>Release</code> before letting go, whether the <code>nsCOMPtr</code> is letting go so that it can point to a different object, or because the <code>nsCOMPtr</code> is going out of scope. Any time a new value is assigned into an <code>nsCOMPtr</code>, the <code>nsCOMPtr</code> automatically always <code>Release</code>s its old referent, if any, and (unless you tell it you already have) <code>AddRef</code>s the new.</p>
+<p>You use an <code>nsCOMPtr</code> exactly as you would a raw XPCOM interface pointer in almost all cases. You won't have to explictly call <code>AddRef</code> or <code>Release</code> through it, nor will the compiler allow it. The only place you can't use an <code>nsCOMPtr</code> without change is where a raw XPCOM interface pointer is an `out' parameter. In this case, you wrap the <code>nsCOMPtr</code> with <a href="/en/Using_nsCOMPtr/Reference_Manual#.60Out.27_Parameters:_getter_AddRefs" title="en/Using_nsCOMPtr/Reference_Manual#.60Out.27_Parameters:_getter_AddRefs"><code>getter_AddRefs</code></a> (see {{ web.link("#Comparison_4", "Comparison 4") }}).</p>
+<p>When assigning into an <code>nsCOMPtr</code>, you will usually just supply another pointer (either a raw XPCOM interface pointer or an <code>nsCOMPtr</code>), with no additional directives { web.link("#Comparison_1", "Comparison 1") }}). As stated above, with no directives, the <code>nsCOMPtr</code> will <code>Release</code> its old referent, if any, and <code>AddRef</code> the new. This is appropriate when the thing you're assigning in hasn't yet been <code>AddRef</code>ed to account for the new reference. This is typically the case when you are assigning in a pointer that you <em>didn't</em> call a function to get, e.g., one that was passed in as a parameter, or that you pulled out of a structure.</p>
+<p>You can tell <code>nsCOMPtr</code> it doesn't need to <code>AddRef</code> the new value on assignment by wrapping the new value in <a href="/en/Using_nsCOMPtr/Reference_Manual#nsCOMPtr.3CT.3E_.3D_dont_AddRef.28_T.2A_.29.2CnsCOMPtr.3CT.3E_.3D_getter_AddRefs.28_T.2A_.29" title="en/Using_nsCOMPtr/Reference_Manual#nsCOMPtr.3CT.3E_.3D_dont_AddRef.28_T.2A_.29.2CnsCOMPtr.3CT.3E_.3D_getter_AddRefs.28_T.2A_.29"><code>dont_AddRef</code></a>. Do this, for example, when you got the new value from a function which, like all good XPCOM getters, already called <code>AddRef</code> on your behalf.</p>
+<p>You may not assign in a pointer to a different interface type; you must first query it to the right type (see, e.g., {{ web.link("#Comparison_6", "Comparison 6") }} and the surrounding discussion). <code>nsCOMPtr</code> <em>never</em> calls <code>QueryInterface</code> implicitly, i.e., you must call it yourself, or explictly ask <code>nsCOMPtr</code> to call it with <a href="/en/Using_nsCOMPtr/Reference_Manual#nsCOMPtr.3CT.3E_.3D_do_QueryInterface.28_nsISupports.2A_.29.2CnsCOMPtr.3CT.3E_.3D_do_QueryInterface.28_nsISupports.2A.2C_nsresult.2A_.29" title="en/Using_nsCOMPtr/Reference_Manual#nsCOMPtr.3CT.3E_.3D_do_QueryInterface.28_nsISupports.2A_.29.2CnsCOMPtr.3CT.3E_.3D_do_QueryInterface.28_nsISupports.2A.2C_nsresult.2A_.29"><code>do_QueryInterface</code></a>. The <code>do_QueryInterface</code> directive allows you to do the query as part of the assignment. This better facilitates constructing an <code>nsCOMPtr</code> directly from the right value, rather than constructing it and assigning in the correct value later. Construction alone is more efficient than construction followed by assignment. Prefer construction over assignment whereever reasonable. Be careful not to apply <code>do_QueryInterface</code> to a function returning an <code>AddRef</code>ed pointer [see <a href="/en/Using_nsCOMPtr/Reference_Manual#nsCOMPtr.3CT.3E_.3D_.2F.2A_call_QueryInterface_but_don.27t_AddRef_.2A.2F" title="en/Using_nsCOMPtr/Reference_Manual#nsCOMPtr.3CT.3E_.3D_.2F.2A_call_QueryInterface_but_don.27t_AddRef_.2A.2F">this short section</a> for an explanation]</p>
+<p>For more details, continue on to the <a href="/en/Using_nsCOMPtr/Reference_Manual" title="en/Using_nsCOMPtr/Reference_Manual">Reference Manual</a>.</p>

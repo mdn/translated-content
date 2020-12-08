@@ -1,0 +1,53 @@
+---
+title: autocompletesearch
+slug: Archive/Mozilla/XUL/Attribute/autocompletesearch
+tags:
+  - XUL Attributes
+  - XUL Reference
+translation_of: Archive/Mozilla/XUL/Attribute/autocompletesearch
+---
+<div><span class="breadcrumbs xulRefAttr_breadcrumbs">« <a href="/ja/docs/XUL/XUL_Reference">XUL リファレンス HOME</a></span></div>
+
+<dl>
+  <dt>
+    <code id="a-autocompletesearch"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/autocompletesearch">autocompletesearch</a></code> <span class="inlineIndicator standardNote">New in <a href="https://developer.mozilla.org/ja/docs/Mozilla/Thunderbird/Releases/2">Thunderbird 2</a></span><span class="inlineIndicator standardNote standardNoteInline">要 SeaMonkey 1.1</span></dt>
+  <dd>
+    Type: <em>space-separated list of values</em></dd>
+  <dd>
+    A space-separated list of search component names, each of which implements the <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAutoCompleteSearch" title="">nsIAutoCompleteSearch</a></code> interface. The components are created using the name <code>@mozilla.org/autocomplete/search;1?name=</code> where <var>name</var> is listed in this attribute.</dd>
+</dl>
+
+<dl>
+  <dt>
+    <code>search-autocomplete</code>  <span class="inlineIndicator standardNote standardNoteInline">要 SeaMonkey 2.1</span></dt>
+  <dd>
+    The user's default search engine's suggestions are searched.</dd>
+  <dt>
+    <code>places-tag-autocomplete</code>  <span class="inlineIndicator standardNote standardNoteInline">要 SeaMonkey 2.1</span></dt>
+  <dd>
+    The user's Places tags are searched.</dd>
+  <dt>
+    <code>mydomain</code> <span class="inlineIndicator standardNote">New in <a href="https://developer.mozilla.org/ja/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a></span> <span class="inlineIndicator standardNote standardNoteInline">要 SeaMonkey 2.0</span></dt>
+  <dd>
+    The user's email domain is suggested.</dd>
+  <dt>
+    <code>history</code>  <span class="inlineIndicator standardNote standardNoteInline">要 SeaMonkey 2.0</span></dt>
+  <dd>
+    The user's URL history is searched.</dd>
+  <dt>
+    <code>form-history</code> <span class="inlineIndicator standardNote standardNoteInline">要 SeaMonkey 2.0</span></dt>
+  <dd>
+    Search the values that the user has entered into form fields.</dd>
+  <dt>
+    <code>file</code>  (Linux only)</dt>
+  <dd>
+    The local file system is searched.</dd>
+  <dt>
+    <code>gloda</code> <span class="inlineIndicator standardNote">New in <a href="https://developer.mozilla.org/ja/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a></span></dt>
+  <dd>
+     </dd>
+  <dt>
+    <code>addrbook</code> <span class="inlineIndicator standardNote">New in <a href="https://developer.mozilla.org/ja/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a></span> <span class="inlineIndicator standardNote standardNoteInline">要 SeaMonkey 2.0</span></dt>
+  <dd>
+    The user's address book is searched.</dd>
+</dl>

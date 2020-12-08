@@ -1,0 +1,110 @@
+---
+title: WebVR环境配置
+slug: Web/API/WebVR_API/WebVR_environment_setup
+translation_of: Archive/WebVR/WebVR_environment_setup
+---
+<p>{{draft("WebVR API文档目前正在更新中以涵盖1.0版本规范， 因此这些信息中的一部分将会过时。如果你对此有任何疑问请联系 ~~chrisdavidmills。")}}</p>
+
+<p class="summary">在这篇文章中， 我们将带你了解配置你的WebVR测试环境所需要做的工作 — 包括硬件和软件配置以及一些常见的错误的解决方法.</p>
+
+<h2 id="硬件">硬件</h2>
+
+<p>首先来看WebVR的硬件需求。</p>
+
+<h3 id="头戴式显示器与位置追踪器">头戴式显示器与位置追踪器</h3>
+
+<p>目前有几款产品可作为VR头戴式显示器，其中最好的是<a href="https://developer.oculus.com/">Oculus Rift</a>，它具有坚固的头戴式显示器和安装在三脚架或监视器上的位置追踪相机。Oculus Rift DK2 目前的零售价是350美元(约2410人民币)，但是随着技术的进步和越来越多的头戴设备的出现，预计Oculus Rigt的价格会下降。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/11037/hw-setup.png" style="display: block; height: 78px; margin: 0px auto; width: 70%;"></p>
+
+<p>对于那些没有能力购买整套VR设备的人，也有其他便宜的产品可以选择。一个VR头戴式显示器其实就是一个高分辨率的屏幕，这个屏幕前面有一组眼镜。显示屏显示的是两个并排的有些偏移和渐晕的屏幕影像的副本，人的两眼各看其中一个，这样就给用户带来立体感，这些对于创建VR景象都是至关重要的。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10695/stereoscopic.png" style="display: block; height: 540px; margin: 0px auto; width: 960px;"></p>
+
+<p>你可以使用支持的浏览器去感受几近相同的体验，比如使用 Android <a href="https://nightly.mozilla.org/">Nightly</a>版的火狐浏览器—— 如同谷歌的<a href="https://www.google.com/get/cardboard/">Google Cardboard</a>的想法那样，你可以用任何能固定在头部的装置将手机固定在双眼前面，然后通过手机运行VR软件。这里主要的缺点就是没有位置追踪器，手机处理器没有桌面PC的处理器强大，所以体验上相对就没有那么真实（你转动头部的时候你可能得不到和PC上相同的体验，它有可能比较卡），但是，作为一个便宜的入门的设备，它还是不错的。</p>
+
+<h3 id="一台计算机：用于渲染VR场景">一台计算机：用于渲染VR场景</h3>
+
+<p>VR硬件需要提供高精度，低延迟的数据，来提供令人满意的用户体验 — 显示刷新需要达到60fps，否则，用户会觉得卡顿、抖动。为了保证达到这点，单位时间有大量的数据需要处理。因此，运行VR应用的计算机的配置要求比较高。最理想的是，你有台带独显的高配的笔记本或台式电脑，如新版MacBook Pro 15“/ 17”或Mac Pro，或Windows游戏本。如果你的电脑运行比较慢，你的体验会比较糟糕。</p>
+
+<h2 id="软件">软件</h2>
+
+<p>要运行WebVR软件，你需要如下描述的软件设置。</p>
+
+<h3 id="Oculus_Rift_SDK">Oculus Rift SDK</h3>
+
+<p>如果你使用Oculus Rift，你需要在你的系统上下载并安装 <a href="https://developer.oculus.com/downloads/">Oculus Rift SDK</a> 。它包含了VR软件所需的运行环境和<em>OculusWorldDemo</em>示例软件，它对排除故障很有用。</p>
+
+<h3 id="Firefox_Nightly与WebVR_Enabler_Add-on_(或其他可替代的)">Firefox Nightly与WebVR Enabler Add-on (或其他可替代的)</h3>
+
+<p>要设置浏览器，请按照下列步骤操作:</p>
+
+<ol>
+ <li>Firefox <a href="https://nightly.mozilla.org/">Nightly</a> 和<a href="https://www.mozilla.org/en-US/firefox/developer/">Developer Edition</a> 都支持WebVR。如果你还没装选择其中之一安装，注意安装最新的版本。</li>
+ <li>然后，安装 <a class="external external-icon" href="http://www.mozvr.com/downloads/webvr-addon-0.1.0.xpi">WebVR Enabler Add-on</a> — 这将启用WebVR并禁用多处理浏览（<a class="basiclink-blue" href="https://wiki.mozilla.org/Electrolysis">E10S</a>），这是一种新的Firefox浏览功能，目前与WebVR不兼容。</li>
+ <li>最后，重启浏览器。</li>
+</ol>
+
+<div class="note">
+<p><strong>Note</strong>: 手动开启对WebVR的支持，你可以进入 <a>about:config</a> 然后打开dom.vr*选项。 WebVR Enabler Add-on更加的fang方便，它一次可以完成您所需要的一切。</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: 对于移动端用户，Android版Firefox在<a href="http://nightly.mozilla.org/">Nightly builds</a>中也支持WebVR，但是现在还没优化，欢迎反馈意见。</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: 还有可用的WebVR支持的实验性Chrome产品。 要了解更多，请查看Brandon Jones的 <a class="external external-icon" href="http://blog.tojicode.com/2014/07/bringing-vr-to-chrome.html">Bringing VR to Chrome</a>。</p>
+</div>
+
+<h3 id="显示配置">显示配置</h3>
+
+<p>为了获得最佳性能，以下步骤的显示器配置非常重要。 不这样做会导致过度抖动和延迟。 我们正在努力改进这些方面，使WebVR真正的即插即用，但是现在最好的结果需要手动配置。</p>
+
+<h4 id="Windows">Windows</h4>
+
+<p>在控制面板中，先进入<em>Display &gt; Screen Resolution（显示 &gt; 屏幕分辨率）</em>. 设置<em>:</em></p>
+
+<ul>
+ <li><em>Orientation</em> to <em>Landscape (flipped). // 横向（翻转）</em></li>
+ <li><em>Multiple displays</em> to <em>Extend these displays</em>. // 扩展这些显示器</li>
+</ul>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10683/win-screen-resolution.png" style="display: block; height: 573px; margin: 0px auto; width: 644px;"></p>
+
+<p>然后，进入 <em>Advanced Settings &gt; Monitor &gt; Monitor Settings（高级显示设置 &gt; 监视器 &gt; 监视器设置），</em> 设置屏幕刷新频率为 <em>60Hz</em>.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10685/win-monitor.png" style="display: block; height: 573px; margin: 0px auto; width: 644px;"></p>
+
+<h4 id="Mac">Mac</h4>
+
+<p>首先，进入System Preferences &gt; Displays &gt; Display. 设置:</p>
+
+<ul>
+ <li><em>Optimize for</em> to <em>Rift</em></li>
+ <li><em>Rotation</em> to <em>90°</em></li>
+ <li><em>Refresh</em> to <em>60Hz</em></li>
+</ul>
+
+<p><em><img alt="" src="https://mdn.mozillademos.org/files/10691/mac-displays.png" style="display: block; height: 528px; margin: 0px auto; width: 1342px;"></em></p>
+
+<p>然后，进入 <em>System Preferences <span class="gray5 light px1">&gt; </span>Displays <span class="gray5 light px1">&gt; </span>Arrangement</em> 设置<em>Arrangement</em>为<em>Mirrored</em>.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10693/mac-displays-mirrored.png" style="display: block; height: 528px; margin: 0px auto; width: 668px;"></p>
+
+<h2 id="故障排除">故障排除</h2>
+
+<p>在这个部分，我们提供一些故障排除方法。</p>
+
+<dl>
+ <dt>我的头戴式显示器或者位置追踪器相机不工作</dt>
+ <dd>尝试使用Oculus Rift SDK附带的OculusWorldDemo测试系统，如果您使用的是其他的VR硬件设备，则使用配套的测试系统。 如果您的硬件设备完全不工作，请确保已完全按照随附手册中的说明进行设置。 常见的错误包括将镜头盖留在追踪相机上和忘记插入USB电缆。</dd>
+ <dt>我的头戴式显示器或者位置追踪器相机还是不工作</dt>
+ <dd>一个常见的问题是追踪摄像机停止工作，所以你仍然可以看到图像，但它不会跟着你的头一起旋转。 提示：如果摄像机工作，相机的蓝色指示灯将亮起。 如果WebVR应用程序仍然不工作，并且OculusWorldDemo正常运行，请尝试重新启动浏览器 —— Nightly仍然处于实验性阶段，有时会出现异常。</dd>
+ <dt>即使我正确的配置了 {{anch("Display configuration")}}，我看到显示的图像卡顿抖动</dt>
+ <dd>有可能是您的显卡太慢，您没有独显，或者当Oculus Rift打开时，您的计算机没有切换到显卡。 但我们不能确定适用于所有的电脑。无论哪种情况，你可以通过测试看看发生了什么，比如在Mac上使用<a href="https://gfx.io/">gfxCardStatus</a>软件来测试。 它会让你看到在什么时候集成或独显会切换，或强制使用某一个。 如果它返回消息“您正在使用gfxCardStatus不支持的系统，请确保您使用的是具有双GPU的MacBook Pro。 那么你可能没有GPU，你需要一个更快的处理器或选择容忍。 对于Windows，目前没有类似的应用程序，您必须手动进行更改。</dd>
+ <dt>我的VR设备旁的第二个监视器表现很奇怪。</dt>
+ <dd>如果你有第二个监视器（或者笔记本的外接显示器），当你使用 VR设备的时候最好将它断开，否则，有时候它会造成奇怪的问题。</dd>
+ <dt>Linux系统可以使用吗？</dt>
+ <dd>WebVR在Linux系统上目前不能使用。未完待续</dd>
+</dl>

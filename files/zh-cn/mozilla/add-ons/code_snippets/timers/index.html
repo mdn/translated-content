@@ -1,0 +1,67 @@
+---
+title: JavaScript timers
+slug: Mozilla/Add-ons/Code_snippets/Timers
+translation_of: Archive/Add-ons/Code_snippets/Timers
+---
+<p><span style="color: #000000; display: inline !important; float: none; font-family: Cantarell; font-size: 14.666666984558105px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal;">{{LegacyAddonsNotice}}</span></p>
+
+<p> </p>
+
+<p>JavaScript的代码块通常情况下是顺序执行的。不过有几个JavaScript内置函数（计时器），能够让我们推迟任意指令的执行：</p>
+
+<ul>
+ <li>{{domxref("window.setTimeout","setTimeout()")}}</li>
+ <li>{{domxref("window.setInterval","setInterval()")}}</li>
+ <li>{{domxref("window.setImmediate","setImmediate()")}}</li>
+ <li>{{domxref("window.requestAnimationFrame","requestAnimationFrame()")}}</li>
+</ul>
+
+<p>The <code>setTimeout()</code> function is commonly used if you wish to have your function called <em>once</em> after the specified delay. The <code>setInterval()</code> function is commonly used to set a delay for functions that are executed again and again, such as animations. The <code>setImmediate()</code> function can be used instead of the <code>setTimeout(<em>fn</em>, <strong>0</strong>)</code> method to execute heavy operations in IE. The <code>requestAnimationFrame()</code> function tells the browser that you wish to perform an animation and requests that the browser schedule a repaint of the window for the next animation frame.</p>
+
+<h2 class="Documentation" id="Documentation" name="Documentation">Documentation</h2>
+
+<dl>
+ <dt>{{domxref("window.setTimeout","setTimeout()")}}</dt>
+ <dd>Calls a function or executes a code snippet after specified delay.</dd>
+ <dt>{{domxref("window.setInterval","setInterval()")}}</dt>
+ <dd>Calls a function or executes a code snippet repeatedly, with a fixed time delay between each call to that function.</dd>
+ <dt>{{domxref("window.setImmediate","setImmediate()")}}</dt>
+ <dd>Calls a function immediately after the browser has completed other operations, such as events and display updates.</dd>
+ <dt>{{domxref("window.clearTimeout","clearTimeout()")}}</dt>
+ <dd>Clears the delay set by <code>setTimeout()</code>.</dd>
+ <dt>{{domxref("window.clearInterval","clearInterval()")}}</dt>
+ <dd>Cancels repeated action which was set up using <code>setInterval()</code>.</dd>
+ <dt>{{domxref("window.clearImmediate","clearImmediate()")}}</dt>
+ <dd>Cancels the immediate actions, just like {{domxref("window.clearTimeout","clearTimeout()")}} for {{domxref("window.setTimeout","setTimeout()")}}.</dd>
+ <dt><a href="/en-US/docs/Web/JavaScript/Timers/Daemons">Using JavaScript timers within animations (Javascript Daemons Management)</a></dt>
+ <dd>In Computer science a <em>daemon</em> is a task that runs as a background process, rather than being under the direct control of an interactive user. In JavaScript programming language, all <em>daemons</em> are processes created by JavaScript timers or by a {{domxref("Worker")}} instantiation. Here are some code snippets which simplify and abstract the management of daemons.</dd>
+ <dt>{{domxref("window.requestAnimationFrame","requestAnimationFrame()")}}</dt>
+ <dd><code>requestAnimationFrame()</code> tells the browser that you wish to perform an animation and requests that the browser schedule a repaint of the window for the next animation frame. The method takes as an argument a callback to be invoked before the repaint.</dd>
+ <dt>{{domxref("performance.now","performance.now()")}}</dt>
+ <dd>
+ <p><code>performance.now()</code> returns a timestamp, measured in milliseconds, accurate to one thousandth of a millisecond. This timestamp is equal to the number of milliseconds since the <code>navigationStart </code>attribute of the <a href="/en-US/docs/Navigation_timing" title="/en-US/docs/Navigation_timing"><code>performance.timing</code></a> interface.</p>
+ </dd>
+ <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now"><code>Date.now()</code></a></dt>
+ <dd><code>Date.now()</code> returns the number of milliseconds elapsed since 1 January 1970 00:00:00 UTC.</dd>
+ <dt><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers#Timeouts_and_intervals">Using JavaScript timers within workers</a></dt>
+ <dd>Workers can use timeouts and intervals just like the main thread can. This can be useful, for example, if you want to have your worker thread run code periodically instead of nonstop.</dd>
+ <dt><a href="/en-US/docs/Web/Guide/Needs_categorization/Functions_available_to_workers">Functions available to workers</a></dt>
+ <dd>In addition to the standard JavaScript set of functions (such as String, Array, Object, JSON etc), there are a variety of functions available from the DOM to workers. This article provides a list of those.</dd>
+ <dt><a href="/en-US/docs/Web/HTML/Canvas/Tutorial/Basic_animations">Basic animations</a></dt>
+ <dd>Since we're using script to control canvas elements it's also very easy to make (interactive) animations. Unfortunately the canvas element was never designed to be used in this way (unlike Flash) so there are limitations.</dd>
+ <dt><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Timer.jsm" title="/en-US/docs/Mozilla/JavaScript_code_modules/Timer.jsm">Timer.jsm</a></dt>
+ <dd>The <code>Timer.jsm</code> JavaScript code module contains pure-JavaScript implementations of <a href="/en-US/docs/DOM/window.setTimeout" title="/en-US/docs/DOM/window.setTimeout"><code>setTimeout </code></a>and <a href="/en-US/docs/DOM/window.clearTimeout" title="/en-US/docs/DOM/window.clearTimeout"><code>clearTimeout</code></a> that are compatible with the DOM window functions, but that can be used by code that does not have access to a DOM window (for example, <a href="/en-US/docs/Mozilla/JavaScript_code_modules" title="/en-US/docs/Mozilla/JavaScript_code_modules">JavaScript code modules </a>or <a href="/en-US/docs/The_message_manager" title="/en-US/docs/The_message_manager">content frame scripts</a>).</dd>
+</dl>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/window.setTimeout#Callback_arguments">Callback arguments polyfill</a></li>
+ <li><a href="/en-US/docs/Web/API/window.setInterval#A_little_framework">A little <code>setInterval</code> framework</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript">JavaScript</a>, <a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Workers</a></li>
+ <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a></li>
+ <li>{{domxref("window.performance")}}</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date"><code>Date</code></a></li>
+</ul>
+
+<p>&lt;embed height="0" id="xunlei_com_thunder_helper_plugin_d462f475-c18e-46be-bd10-327458d045bd" type="application/thunder_download_plugin" width="0"&gt;</p>

@@ -1,0 +1,149 @@
+---
+title: Object.observe()
+slug: Archive/Web/JavaScript/Object.observe
+tags:
+  - JavaScript
+  - Method
+  - Object
+  - Obsolete
+translation_of: Archive/Web/JavaScript/Object.observe
+---
+<div>{{JSRef}} {{obsolete_header}}</div>
+
+<p><strong><code>Object.observe()</code></strong> メソッドは、オブジェクトの変更を非同期で監視するために使用されました。このメソッドは、発生順に並んだ一連の変更の流れを提供します。このメソッドによって発生順に一連の変更内容が生成されます。しかしながら、この API の使用は非推奨となり、ブラウザから削除されています。代わりに、一般的な {{jsxref("Proxy")}} オブジェクトを使用してください。</p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="syntaxbox">Object.observe(<var>obj</var>, <var>callback</var>[, <var>acceptList</var>])</pre>
+
+<h3 id="Parameters" name="Parameters">引数</h3>
+
+<dl>
+ <dt><code>obj</code></dt>
+ <dd>監視対象のオブジェクト。</dd>
+ <dt><code>callback</code></dt>
+ <dd>変更のたびに呼ばれる関数。以下の引数とともに使われます:
+ <dl>
+  <dt><code>changes</code></dt>
+  <dd>変更を表すオブジェクトからなる配列。これら変更オブジェクトのプロパティは次のとおり:
+  <ul>
+   <li><strong><code>name</code></strong>: 変更されたプロパティの名称。</li>
+   <li><strong><code>object</code></strong>: 変更後のオブジェクト。</li>
+   <li><strong><code>type</code></strong>: 変更の種類を示す文字列。<code>"add"</code>、<code>"update"</code>、<code>"delete"</code> のいずれか。</li>
+   <li><strong><code>oldValue</code></strong>: <code>"update"</code> と <code>"delete"</code> についてのみ。変更前の値。</li>
+  </ul>
+  </dd>
+ </dl>
+ </dd>
+ <dt><code>acceptList</code></dt>
+ <dd>与えたコールバックに対し、引数に渡したオブジェクト上で監視された変更の種類のリスト。省略した場合、<code>["add", "update", "delete", "reconfigure", "setPrototype", "preventExtensions"]</code> という配列が使用される。</dd>
+</dl>
+
+<h3 id="Return_value" name="Return_value">戻り値</h3>
+
+<p>監視されるオブジェクト。</p>
+
+<h2 id="Description" name="Description">説明</h2>
+
+<p><code>callback</code> は、<code>obj</code> に変更があるたび呼び出され、発生順にすべての変更結果を含む配列が渡されます。</p>
+
+<h2 id="Examples" name="Examples">使用例</h2>
+
+<h3 id="Logging_all_six_different_types" name="Logging_all_six_different_types">全 6 種類の変更のログ</h3>
+
+<pre class="brush: js">var obj = {
+  foo: 0,
+  bar: 1
+};
+
+Object.observe(obj, function(changes) {
+  console.log(changes);
+});
+
+obj.baz = 2;
+// [{name: 'baz', object: , type: 'add'}]
+
+obj.foo = 'hello';
+// [{name: 'foo', object: , type: 'update', oldValue: 0}]
+
+delete obj.baz;
+// [{name: 'baz', object: , type: 'delete', oldValue: 2}]
+
+Object.defineProperty(obj, 'foo', {writable: false});
+// [{name: 'foo', object: , type: 'reconfigure'}]
+
+Object.setPrototypeOf(obj, {});
+// [{name: '__proto__', object: , type: 'setPrototype', oldValue: }]
+
+Object.seal(obj);
+// [
+//   {name: 'foo', object: , type: 'reconfigure'},
+//   {name: 'bar', object: , type: 'reconfigure'},
+//   {object: , type: 'preventExtensions'}
+// ]
+</pre>
+
+<h3 id="Data_Binding" name="Data_Binding">データバインディング</h3>
+
+<pre class="brush: js">// A user model
+var user = {
+  id: 0,
+  name: 'Brendan Eich',
+  title: 'Mr.'
+};
+
+// ユーザへの挨拶文を作成
+function updateGreeting() {
+  user.greeting = 'Hello, ' + user.title + ' ' + user.name + '!';
+}
+updateGreeting();
+
+Object.observe(user, function(changes) {
+  changes.forEach(function(change) {
+    // 名前と肩書が変更されたら挨拶文を更新する
+    if (change.name === 'name' || change.name === 'title') {
+      updateGreeting();
+    }
+  });
+});
+</pre>
+
+<h3 id="Custom_change_type" name="Custom_change_type">独自の変更タイプ</h3>
+
+<pre class="brush: js">// 2 次元平面上の点
+var point = {x: 0, y: 0, distance: 0};
+
+function setPosition(pt, x, y) {
+  // 独自のプロパティ変更を行う
+  Object.getNotifier(pt).performChange('reposition', function() {
+    var oldDistance = pt.distance;
+    pt.x = x;
+    pt.y = y;
+    pt.distance = Math.sqrt(x * x + y * y);
+    return {oldDistance: oldDistance};
+  });
+}
+
+Object.observe(point, function(changes) {
+  console.log('Distance change: ' + (point.distance - changes[0].oldDistance));
+}, ['reposition']);
+
+setPosition(point, 3, 4);
+// Distance change: 5
+</pre>
+
+<h2 id="Specifications" name="Specifications">仕様書</h2>
+
+<p>どの標準にも含まれていません。<a href="https://github.com/arv/ecmascript-object-observe">Strawman proposal specification</a>.</p>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+
+<p>どこでも対応されていません。歴史的には Firefox のバージョン 36 から 52 までが対応していました。</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>{{jsxref("Object.unobserve()")}}</li>
+ <li>{{jsxref("Array.observe()")}}</li>
+ <li><a href="https://esdiscuss.org/topic/an-update-on-object-observe">Object.Observer の提案撤回</a></li>
+</ul>

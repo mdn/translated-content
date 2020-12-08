@@ -1,0 +1,96 @@
+---
+title: nsIAsyncInputStream
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsIAsyncInputStream
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIAsyncInputStream
+---
+<div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/xpcom/io/nsIAsyncInputStream.idl" rel="custom">xpcom/io/nsIAsyncInputStream.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+継承元: <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIInputStream" title="">nsIInputStream</a></code>
+<span style="text-align: right; float: right;">最終更新: Gecko 1.7 </span></div>
+</div>
+<p> </p>
+<p>ノンブロッキングな入力ストリームは、読み込みの際にNS_BASE_STREAM_WOULD_BLOCKを返すことがあります。この場合、呼び出し元では、ストリームに読み取り対象のデータが到着するまで待機する必要があります。もしもストリームがnsIAsyncInputStreamを実装していれば、呼び出し元はこのインタフェースを使って、( <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIAsyncInputStream#AsyncWait()">AsyncWait()</a></code> メソッドを介して)、ストリームが読み取り可能になるか閉じたときに、非同期で通知するよう要求できます。</p>
+<div>
+  このインタフェースはもっぱらノンブロッキングなストリームに対して使用されますが、 <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIInputStream#isNonBlocking()">nsIInputStream.isNonBlocking()</a></code> は必ずしもtrueを返す必要はありません。ノンブロッキングな <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIInputStream" title="">nsIInputStream</a></code> がnsIAsyncInputStreamを必ず実装している必要もありません。</div>
+<div>
+   </div>
+<h2 id="Method_overview" name="Method_overview">Method overview</h2>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <td><code>void <a href="#asyncWait()">asyncWait</a>(in nsIInputStreamCallback aCallback, in unsigned long aFlags, in unsigned long aRequestedCount, in nsIEventTarget aEventTarget);</code></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#closeWithStatus()">closeWithStatus</a>(in nsresult aStatus);</code></td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="Constants" name="Constants">Constants</h2>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <td class="header">Constant</td>
+      <td class="header">Value</td>
+      <td class="header">Description</td>
+    </tr>
+    <tr>
+      <td><code>WAIT_CLOSURE_ONLY</code></td>
+      <td><code>(1&lt;&lt;0)</code></td>
+      <td>
+        <p><code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIAsyncInputStream#asyncWait()">asyncWait()</a></code> に渡すと、このフラグはデフォルトの挙動を上書きし、OnInputStreamReadyによる通知がストリームが閉じるまで抑制されるようになります( closeWithStatusかcloseがストリームに対して呼ばれるか、おそらくストリーム内の何らかのエラーが原因で閉じられるまで抑制されます)。</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="Methods" name="Methods">Methods</h2>
+<h3 id="asyncWait" name="asyncWait()">asyncWait()</h3>
+<p>ストリームが読み取り可能になるか閉じられるのを、非同期に待ち受けます。通知は1度だけ、つまりasyncWaitの呼び出しごとにちょうど一度だけcallbackによる通知が行われます。OnInputStreamReady イベントが送信されると、ストリームは <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIInputStreamCallback" title="">nsIInputStreamCallback</a></code> イベントへの参照を解放します。この通知イベントのハンドラの中で再びasyncWaitを呼び出しても安全です。</p>
+<div>
+  このメソッドは任意のタイミングで(まだ読み出しが行われていない場合ですら)呼び出される可能性があります。言い換えればこれは、ストリームに既に読み取り対象のデータがある場合に呼び出される可能性もあるということです。ストリームが閉じているときに呼び出される可能性もあります。asyncWaitが呼び出された時にストリームが既に読み取り可能または閉じていた場合、 <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIInputStreamCallback#onInputStreamReady()">nsIInputStreamCallback.onInputStreamReady()</a></code> イベントはただちに送信されます。それ以外の場合、ストリームが読み取り可能になるまたは閉じるのを待って、イベントは送信されます。</div>
+<p> </p>
+<pre class="eval">void asyncWait(
+  in nsIInputStreamCallback aCallback,
+  in unsigned long aFlags,
+  in unsigned long aRequestedCount,
+  in nsIEventTarget aEventTarget
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>aCallback</code></dt>
+  <dd>
+    ストリームの準備が整うと呼び出されるオブジェクトです。既存のコールバックをクリアするためにnullをセットすることもできます。</dd>
+  <dt>
+    <code>aFlags</code></dt>
+  <dd>
+    このメソッドの動作を設定するために渡すフラグを、オプションで指定します。何も指定しない場合は0を渡してください。</dd>
+  <dt>
+    <code>aRequestedCount</code></dt>
+  <dd>
+    指定されたバイト数以上データが読み込み可能になるまで待機します。このパラメータは実際のストリームに対する提案にすぎず、実際には無視されるかもしれません。特に指定が無い場合は0を渡すとよいでしょう。</dd>
+  <dt>
+    <code>aEventTarget</code></dt>
+  <dd>
+    nullを指定すると、通知を任意のスレッドで受け取ります(呼び出し元スレッド上で再帰的に受け取り、同期呼び出しになる可能性もあります)。特定のイベントターゲットを指定すると、そこに通知されるようになります。  </dd>
+</dl>
+<h3 id="closeWithStatus" name="closeWithStatus()">closeWithStatus()</h3>
+<p>このメソッドは、ストリームを閉じて内部ステータスをセットします。ストリームが既に閉じられている場合、このメソッドの呼び出しは無視されます。いったんストリームが閉じられると、ストリームのステータスを変更することはできません。成功ステータスをこのメソッドに渡した場合は<code>NS_BASE_STREAM_CLOSEDとして扱われ、これは</code><code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIInputStream#close()">nsIInputStream.close()</a></code>と同等の効果があります。</p>
+<div class="blockIndicator note"><strong>註:</strong> このメソッドは、入力側と出力側を持ったパイプをサポートするために存在しているようなところがあります。パイプの入力側が閉じられると、パイプの出力側への書き込みは失敗するようになります。"壊れた"パイプに書き込もうとした時に返ってくるエラーコードが、パイプの入力側を閉じたときに渡されたステータスコードに相当します。これにより、パイプの取り扱いが非常に簡単になるケースがあります。</div>
+<pre class="eval">void closeWithStatus(
+  in nsresult aStatus
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>aStatus</code></dt>
+  <dd>
+    閉じられたストリームがアクセスされた場合に返るエラーです。</dd>
+</dl>

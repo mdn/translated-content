@@ -1,0 +1,63 @@
+---
+title: chargingtimechange
+slug: Web/Events/chargingtimechange
+translation_of: Archive/Events/chargingtimechange
+---
+<p>L'événement <strong>chargingtimechange</strong> est déclenché quand l'attribut <em>chargingTime</em> de l'<a href="/fr/docs/DOM/window.navigator.battery">API batterie</a> a été modifié.</p>
+
+<h2 id="Informations_générales">Informations générales</h2>
+
+<dl>
+ <dt style="float: left; text-align: right; width: 120px;">Spécification</dt>
+ <dd style="margin: 0 0 0 120px;"><a class="external" href="http://www.w3.org/TR/battery-status/">Battery</a></dd>
+ <dt style="float: left; text-align: right; width: 120px;">Interface</dt>
+ <dd style="margin: 0 0 0 120px;">Event</dd>
+ <dt style="float: left; text-align: right; width: 120px;">Propagation</dt>
+ <dd style="margin: 0 0 0 120px;">Non</dd>
+ <dt style="float: left; text-align: right; width: 120px;">Annulable</dt>
+ <dd style="margin: 0 0 0 120px;">Non</dd>
+ <dt style="float: left; text-align: right; width: 120px;">Cible</dt>
+ <dd style="margin: 0 0 0 120px;">{{domxref("BatteryManager")}}</dd>
+ <dt style="float: left; text-align: right; width: 120px;">Action par défaut</dt>
+ <dd style="margin: 0 0 0 120px;">Aucune</dd>
+</dl>
+
+<h2 id="Properties" name="Properties">Propriétés</h2>
+
+<p>Le callback de l'événement ne reçoit aucun objet événement, mais les propriétés peuvent être lues à partir de l'objet {{domxref("BatteryManager")}} reçu par la méthode {{domxref("navigator.getBattery")}}.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Property</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td>{{domxref("BatteryManager.chargingTime")}} {{readOnlyInline}}</td>
+   <td>double (float)</td>
+   <td>Le temps restant en seconde jusqu'à ce que la batterie du système soit pleine. Retourne 0 si la batterie est chargée. Retourne l'infini positif si la batterie se décharge ou si l'implémentation est incapable de trouver le temps restant de charge.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Example" name="Example">Exemple</h2>
+
+<pre class="brush: js">navigator.getBattery().then(function(battery) {
+
+  console.log("Battery charging time: " + battery.chargingTime + " seconds");
+
+  battery.addEventListener('chargingtimechange', function() {
+    console.log("Battery charging time: " + battery.chargingTime + " seconds");
+  });
+
+});
+</pre>
+
+<h2 id="Evénements_liés">Evénements liés</h2>
+
+<ul>
+ <li>{{Event("chargingchange")}}</li>
+ <li>{{Event("dischargingtimechange")}}</li>
+ <li>{{Event("levelchange")}}</li>
+</ul>

@@ -1,0 +1,180 @@
+---
+title: Network Security Services
+slug: Mozilla/Projects/NSS
+tags:
+  - NSS
+  - NeedsMigration
+translation_of: Mozilla/Projects/NSS
+---
+<p><strong>Network Security Services</strong> (<strong>NSS</strong>) は、セキュリティ対応のクライアントおよびサーバアプリケーションのクロスプラットフォーム開発をサポートするために設計されたライブラリのセットです。NSS を使用して構築されたアプリケーションは、SSL v3、TLS、PKCS #5、PKCS #7、PKCS #11、PKCS #12、S/MIME、X.509 v3 証明書、およびその他のセキュリティ標準をサポートすることができます。</p>
+
+<p>サポートされている規格の詳細については、<a href="/ja/docs/Mozilla/Projects/NSS/Overview_of_NSS">NSS の概要</a>を参照してください。よくある質問のリストについては、<a href="/ja/docs/Mozilla/Projects/NSS/NSS_FAQ">FAQ</a>を参照してください。</p>
+
+<p>NSS は Mozilla Public License の下で利用可能です。NSS のリリースを tar ファイルとしてダウンロードする方法については、<a href="/ja/docs/Mozilla/Projects/NSS/NSS_Sources_Building_Testing">Download PKI Source</a> を参照してください。</p>
+
+<p>開発者の方でNSSに貢献したいと思っている方は、NSSの内部の詳細についてのハイレベルな概要と、NSSを使い始めるためのドキュメントを読んでみてはいかがでしょうか。</p>
+
+<table class="topicpage-table">
+ <tbody>
+  <tr>
+   <td>
+    <h2 class="Documentation" id="Documentation" name="Documentation">ドキュメント</h2>
+
+    <h3 id="背景となる情報">背景となる情報</h3>
+
+    <dl>
+     <dt><a href="/ja/docs/Mozilla/Projects/NSS/Overview_of_NSS">NSS の概要</a></dt>
+     <dd>NSS とその能力の概要を説明します。</dd>
+     <dt><a href="/ja/docs/Mozilla/Projects/NSS/NSS_FAQ">NSS FAQ</a></dt>
+     <dd>NSS に関する基本的な質問に答えます。</dd>
+     <dt><a href="/ja/docs/Introduction_to_Public-Key_Cryptography">公開鍵暗号入門</a></dt>
+     <dd>NSS の基礎となる公開鍵暗号の基本的な概念を解説します。</dd>
+     <dt><a href="/ja/docs/Introduction_to_SSL">SSL 入門</a></dt>
+     <dd>SSL でサポートされている暗号化方式や、SSL ハンドシェイクの手順など、SSL プロトコルを紹介しています。</dd>
+    </dl>
+
+    <h3 id="はじめに">はじめに</h3>
+
+    <dl>
+     <dt><a href="/ja/docs/Mozilla/Projects/NSS/NSS_Releases">NSS のリリース</a></dt>
+     <dd>このページでは、NSS の現在のリリース情報と過去のリリース情報を掲載しています。</dd>
+     <dt><a href="/ja/docs/Mozilla/Projects/NSS/NSS_Sources_Building_Testing">ソースコードを取得してビルドする</a></dt>
+     <dd>サポートされている異なるプラットフォーム上で NSS を構築する方法の説明書。</dd>
+     <dt><a href="https://wiki.developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Source_Code/Mercurial">Mercurial を使って Mozilla のソースコードを取得する</a></dt>
+     <dd>Mercurial との連携についての情報です。</dd>
+     <dt><a href="/ja/docs/Mozilla/Developer_Guide/Source_Code/CVS">CVS を使った Mozilla ソースコードの取得 (非推奨)</a></dt>
+     <dd>古い非推奨の CVS ドキュメント。</dd>
+    </dl>
+
+    <h3 id="NSS_の_API">NSS の API</h3>
+
+    <dl>
+     <dt><a href="/ja/docs/Mozilla/Projects/NSS/Introduction_to_Network_Security_Services">Network Security Services のご紹介</a></dt>
+     <dd>NSS ライブラリの概要と使用するために知っておくべきことを紹介しています。</dd>
+     <dt><a href="/ja/docs/Mozilla/Projects/NSS/SSL_functions">NSS SSL 公開関数</a></dt>
+     <dd>NSS 共有ライブラリがエクスポートした SSL API をまとめます。</dd>
+     <dt><a href="/ja/docs/Mozilla/Projects/NSS/NSS_reference">NSS SSL リファレンス</a></dt>
+     <dd>SSL 操作を呼び出すためのAPIです。</dd>
+     <dt><a href="/ja/docs/Mozilla/Projects/NSS/NSS_API_Guidelines">NSS API ガイドライン</a></dt>
+     <dd>ライブラリとコードがどのように構成されているか、コードを開発する際のガイドライン (命名規則、エラー処理、スレッドの安全性など) を説明します。</dd>
+     <dt><a href="/ja/docs/Mozilla/Projects/NSS/NSS_Tech_Notes">NSS 技術ノート</a></dt>
+     <dd>NSS の新機能に関する最新情報や、NSS を使ったプログラミングの高度なトピックについての補足資料を提供する NSS テクニカルノートのリンク集です。</dd>
+    </dl>
+
+    <h3 id="ツール、テスト、その他技術的な詳細">ツール、テスト、その他技術的な詳細</h3>
+
+    <dl>
+     <dt><a href="/ja/docs/Mozilla/Projects/NSS/Building">NSS のビルド手順</a></dt>
+     <dd>NSS のリリースをチェックアウトしてビルドする方法を説明します。</dd>
+    </dl>
+
+    <dl>
+     <dt><a href="/ja/docs/Mozilla/Projects/NSS/NSS_Developer_Tutorial">NSS 開発者向けチュートリアル</a></dt>
+     <dd>NSS での変更の仕方。コーディングスタイル、ABI 互換性の維持。</dd>
+    </dl>
+
+    <dl>
+     <dt><a href="/ja/docs/Mozilla/Projects/NSS/tools">NSS ツール</a></dt>
+     <dd>NSS を使用したアプリケーションの開発、デバッグ、管理のためのツールです。</dd>
+     <dt><a href="/ja/docs/Mozilla/Projects/NSS/NSS_Sample_Code">サンプルコード</a></dt>
+     <dd>暗号処理、証明書の取り扱い、SSL などに NSS がどのように利用できるかを実演します。</dd>
+     <dt><a href="/ja/docs/Mozilla/Projects/NSS/NSS_Third-Party_Code">サードパーティコード</a></dt>
+     <dd>NSS ライブラリに含まれるサードパーティのコードの一覧です。</dd>
+     <dt><a href="https://www-archive.mozilla.org/projects/security/pki/nss/testnss_32.html">NSS 3.2 Test Suite</a></dt>
+     <dd><strong>アーカイブ版</strong>。標準の NSS テストの実行方法について説明しています。</dd>
+     <dt><a href="https://www-archive.mozilla.org/projects/security/pki/nss/performance_reports.html">NSS Performance Reports</a></dt>
+     <dd><strong>アーカイブ版</strong>。NSS 3.2 以降のリリースのパフォーマンスレポートへのリンクです。</dd>
+     <dt><a href="https://www-archive.mozilla.org/projects/security/pki/nss/nss-3.11/nss-3.11-algorithms.html">Encryption Technologies Available in NSS 3.11</a></dt>
+     <dd><strong>アーカイブ版</strong>。NSS 3.11 で使用されている暗号アルゴリズムの一覧です。</dd>
+     <dt><a href="https://www-archive.mozilla.org/projects/security/pki/nss/loadable_certs.html">NSS 3.1 Loadable Root Certificates</a></dt>
+     <dd><strong>アーカイブ版</strong>。ルート CA 証明書をロードするスキームについて説明します。</dd>
+     <dt><a href="https://www-archive.mozilla.org/projects/security/pki/nss/db_formats.html">cert7.db</a></dt>
+     <dd><strong>アーカイブ版</strong>。cert7.db データベースの一般的なフォーマット。</dd>
+    </dl>
+
+    <h3 id="PKCS_11_情報">PKCS #11 情報</h3>
+
+    <ul>
+     <li><a href="https://wiki.developer.mozilla.org/en-US/docs/PKCS11" title="PKCS11">Documentation on PKCS #11 modules</a></li>
+     <li><a href="https://wiki.developer.mozilla.org/en-US/docs/PKCS11_Implement">Implementing PKCS #11 for NSS</a></li>
+     <li><a href="https://wiki.developer.mozilla.org/en-US/docs/PKCS11_Module_Specs" title="PKCS11_Module_Specs">The strings NSS uses to load PKCS #11 modules</a></li>
+     <li><a href="https://wiki.developer.mozilla.org/en-US/docs/PKCS11_FAQ">PKCS #11 FAQ</a></li>
+     <li><a href="https://wiki.developer.mozilla.org/en-US/docs/PKCS11_Jar_Install">Using the JAR Installation Manager to Install a PKCS #11 Cryptographic Module</a></li>
+     <li><a href="https://www-archive.mozilla.org/projects/security/pki/pkcs11/">PKCS #11 Conformance Testing - Archived version</a></li>
+    </ul>
+
+    <dl>
+    </dl>
+
+    <h3 id="NSS_にプリロードされた_CA_証明書">NSS にプリロードされた CA 証明書</h3>
+
+    <ul>
+     <li><a href="https://www.mozilla.org/projects/security/certs/policy/">Mozilla CA certificate policy</a></li>
+     <li><a href="https://wiki.mozilla.org/CA/Included_Certificates">List of pre-loaded CA certificates</a>
+      <ul>
+       <li>このリストの消費者は、含まれる各ルート証明書のトラストビット設定を考慮する必要があります。<a href="https://www.imperialviolet.org/2012/01/30/mozillaroots.html">More Information</a>, <a href="https://github.com/agl/extract-nss-root-certs">root とそのトラストビットの抽出</a></li>
+      </ul>
+     </li>
+    </ul>
+
+    <dl>
+    </dl>
+
+    <h3 id="NSS_は_Netscape_Portable_Runtime_NSPR_の上に構築されています。">NSS は Netscape Portable Runtime (NSPR) の上に構築されています。</h3>
+
+    <dl>
+     <dt><a href="https://wiki.developer.mozilla.org/ja/docs/Mozilla/Projects/NSPR">Netscape Portable Runtime</a></dt>
+     <dd>NSPR project page.</dd>
+     <dt><a href="https://wiki.developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference">NSPR Reference</a></dt>
+     <dd>NSPR API documentation.</dd>
+    </dl>
+
+    <h3 id="その他の情報">その他の情報</h3>
+
+    <ul>
+     <li><a href="https://wiki.developer.mozilla.org/en-US/docs/JavaScript_crypto" title="JavaScript_crypto">Using the window.crypto object from JavaScript</a></li>
+     <li><a href="https://wiki.developer.mozilla.org/en-US/docs/HTTP_Delegation" title="HTTP_Delegation">Delegation of HTTP download for OCSP</a></li>
+     <li><a href="https://wiki.developer.mozilla.org/en-US/docs/TLS_Cipher_Suite_Discovery" title="TLS_Cipher_Suite_Discovery">TLS Cipher Suite Discovery</a></li>
+     <li><a href="https://wiki.developer.mozilla.org/en-US/docs/NSS_Certificate_Download_Specification" title="NSS_Certificate_Download_Specification">NSS Certificate Download Specification</a></li>
+     <li><a href="https://wiki.developer.mozilla.org/en-US/docs/NSS/FIPS_Mode_-_an_explanation" title="FIPS Mode - an explanation">FIPS Mode - an explanation</a></li>
+     <li><a href="https://wiki.developer.mozilla.org/en-US/docs/NSS_Key_Log_Format" title="NSS Key Log Format">Format of key log files</a></li>
+     <li>View <a href="https://wiki.developer.mozilla.org/en-US/docs/tag/NSS" title="/en-US/docs/tag/NSS">all NSS-related articles on MDN</a></li>
+    </ul>
+
+    <h3 id="計画">計画</h3>
+
+    <p>NSS の計画に関する情報は、<a class="external external-icon" href="https://wiki.mozilla.org/NSS">wiki.mozilla.org</a> に掲載されています。</p>
+
+    <ul>
+     <li><a class="external external-icon" href="https://wiki.mozilla.org/FIPS_Validation">FIPS Validation</a></li>
+     <li><a class="external external-icon" href="https://wiki.mozilla.org/NSS:Roadmap">NSS Roadmap page</a></li>
+     <li><a href="https://fedoraproject.org/wiki/User:Mitr/NSS:DeveloperFriendliness" title="https://fedoraproject.org/wiki/User:Mitr/NSS:DeveloperFriendliness">NSS Improvement Project</a></li>
+    </ul>
+   </td>
+   <td>
+    <h2 class="Community" id="Community" name="Community">コミュニティ</h2>
+
+    <ul>
+     <li>Mozilla Security フォーラムを見る...</li>
+    </ul>
+
+    <p>{{ DiscussionList("dev-security", "mozilla.dev.security") }}</p>
+
+    <ul>
+     <li>Mozilla Cryptography フォーラムを見る...</li>
+    </ul>
+
+    <p>{{ DiscussionList("dev-tech-crypto", "mozilla.dev.tech.crypto") }}</p>
+
+    <h2 class="Related_Topics" id="Related_Topics" name="Related_Topics">関連トピック</h2>
+
+    <ul>
+     <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Security" title="Security">Security</a></li>
+    </ul>
+
+    <dl>
+    </dl>
+   </td>
+  </tr>
+ </tbody>
+</table>

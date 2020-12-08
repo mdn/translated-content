@@ -1,0 +1,171 @@
+---
+title: 簡単なメニューバー
+slug: Archive/Mozilla/XUL/Tutorial/Simple_Menu_Bars
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Simple_Menu_Bars
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Toolbars" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:More_Menu_Features">次のページ  »</a></p>
+</div>
+
+<p>このセクションでは、複数のメニューを持つメニューバーの作成方法を見て行きます。</p>
+
+<p><span id="Creating_a_Menu"></span></p>
+
+<h2 id=".E3.83.A1.E3.83.8B.E3.83.A5.E3.83.BC.E3.81.AE.E4.BD.9C.E6.88.90" name=".E3.83.A1.E3.83.8B.E3.83.A5.E3.83.BC.E3.81.AE.E4.BD.9C.E6.88.90">メニューの作成</h2>
+
+<p>XUL には、メニューを作る方法がいくつかあります。 最も基本的な方法は、他の多くのアプリケーションが持っているような、複数のメニューが 1 列に並んだメニューバーを追加することです。 また、ポップアップメニューも作成可能です。 XUL のメニュー機能は、いくつかの異なる要素で構成されており、これらを利用してメニューバーやポップアップメニューを作ることができます。 メニューの項目をカスタマイズするのはとても簡単です。 <code><code><a href="/ja/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code></code> を使用した<a href="/ja/XUL_Tutorial/List_Controls#Drop-down_Lists" title="ja/XUL_Tutorial/List_Controls#Drop-down_Lists">メニューを作成する方法</a>の一部については既に説明しています。 このセクションはそれを前提に構成しています。</p>
+
+<p>メニューバーは、おおむねツールバーと同じように作成されます。 また、メニューバーはオプションで <code><code><a href="/ja/docs/Mozilla/Tech/XUL/toolbox" title="toolbox">toolbox</a></code></code> の中に置くことができます。 メニューは他のツールバーと同じように動作します。 XUL は、メニュー固有の特殊な機能を提供するために専用の要素をいくつか持っています。</p>
+
+<p>メニューバーと、メニューの作成に関係する要素は 5 つあります。 以下で簡単に紹介した後、詳細な説明を行っていきます。</p>
+
+<dl>
+ <dt><code id="a-menubar"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/menubar">menubar</a></code></dt>
+ <dd>メニューの列を入れるためのコンテナです。</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-menu"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/menu">menu</a></code></dt>
+ <dd>「menu」という名前ですが、実際にはメニューバーに表示されるメニューのタイトルだけを持っています。この要素はメニューバーの中に置くことが可能です。またはメニューバーとは別の場所に置くこともできます。</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-menupopup"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/menupopup">menupopup</a></code></dt>
+ <dd>メニューのタイトルをクリックした時に、ポップアップして表示されるボックスです。このボックスには、利用者に提示する操作項目のリストが含まれます。</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-menuitem"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/menuitem">menuitem</a></code></dt>
+ <dd>メニュー上の個々の<span style="border-bottom: 1px dashed green;" title="command">操作項目</span>です。 この要素は <code><code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code> の中に置かれます。</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-menuseparator"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/menuseparator">menuseparator</a></code></dt>
+ <dd>メニューを分割するための線です。この要素は <code><code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code> の中に置かれます。</dd>
+</dl>
+
+<div class="note">
+<p>メニューバーのメニューは Macintosh を除く全てのプラットフォームで、何でも好きなようにカスタマイズできます。 Macintosh では、システムによって制御されている OS 自身の特別なメニューが画面の上部に置かれるため、その制限を超えたカスタマイズはできません。 どのような特別なスタイル定義や、非メニュー要素を含んだカスタムメニューでも作成する事ができますが、メニューの上に配置した場合に適用されていない可能性があります。 このことは、メニューを作る時には常に留意してください。</p>
+</div>
+
+<p><span id="Example_of_a_simple_menu_bar"></span></p>
+
+<h4 id=".E7.B0.A1.E5.8D.98.E3.81.AA.E3.83.A1.E3.83.8B.E3.83.A5.E3.83.BC.E3.83.90.E3.83.BC.E3.81.AE.E4.BE.8B" name=".E7.B0.A1.E5.8D.98.E3.81.AA.E3.83.A1.E3.83.8B.E3.83.A5.E3.83.BC.E3.83.90.E3.83.BC.E3.81.AE.E4.BE.8B">簡単なメニューバーの例</h4>
+
+<p>簡単なメニューバーの例を以下に示します。</p>
+
+<p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_menubar_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_menubar_1.xul">表示</a></p>
+
+<pre>&lt;toolbox flex="1"&gt;
+  &lt;menubar id="sample-menubar"&gt;
+    &lt;menu id="file-menu" label="File"&gt;
+      &lt;menupopup id="file-popup"&gt;
+        &lt;menuitem label="New"/&gt;
+        &lt;menuitem label="Open"/&gt;
+        &lt;menuitem label="Save"/&gt;
+        &lt;menuseparator/&gt;
+        &lt;menuitem label="Exit"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+    &lt;menu id="edit-menu" label="Edit"&gt;
+      &lt;menupopup id="edit-popup"&gt;
+        &lt;menuitem label="Undo"/&gt;
+        &lt;menuitem label="Redo"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+  &lt;/menubar&gt;
+&lt;/toolbox&gt;
+</pre>
+
+<div class="float-right"><img alt="画像:menubar-ex1.png" class="internal" src="/@api/deki/files/1923/=Menubar-ex1.png"></div>
+
+<p>この画像は、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/menubar" title="menubar">menubar</a></code></code> 要素を使って作成した簡単なメニューバーです。 この要素は、メニューを置くための行部分を作ります。 2 つのメニュー、File と Edit が作られています。 <code><code><a href="/ja/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code></code> 要素は、メニューの一番上にあるタイトルの部分を作り、メニューバーの所に表示されます。 ポップアップは <code><code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code> 要素を使って作ります。 これは、利用者が親メニューのタイトルをクリックしたときにポップアップされます。 ポップアップのサイズは、その中にある<span style="border-bottom: 1px dashed green;" title="command">操作項目</span>に合わせて大きくなります。 操作項目自体は、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></code> 要素を使って作成されます。 それぞれが、メニューのポップアップ中の 1 つの操作項目を表しています。</p>
+
+<p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/menuseparator" title="menuseparator">menuseparator</a></code></code> 要素を使って、メニューに分割線を作るも可能です。 この要素は、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></code> をグループに分割するために使用します。 英語版章題 <span id="menubar_element"></span></p>
+
+<h3 id="menubar_.E8.A6.81.E7.B4.A0" name="menubar_.E8.A6.81.E7.B4.A0">menubar 要素</h3>
+
+<p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/menubar" title="menubar">menubar</a></code></code> 要素は、メニューを含んでいるボックスです。 例では、この要素が伸縮可能な <code><code><a href="/ja/docs/Mozilla/Tech/XUL/toolbox" title="toolbox">toolbox</a></code></code> の中に置かれていることに注目してください。 この要素には特別な属性はありませんが、これもボックスの一種です。 このことは、<code><code id="a-orient"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code></code> 属性に <code>vertical</code> を設定することで、垂直配置のメニューバーが作成可能であることを意味しています。</p>
+
+<p><span id="menu_element"></span></p>
+
+<h3 id="menu_.E8.A6.81.E7.B4.A0" name="menu_.E8.A6.81.E7.B4.A0">menu 要素</h3>
+
+<p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code></code>要素は、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code>に似たような動作をします。 <code><code><a href="/ja/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code></code> は <code><code><a href="/ja/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code> と同じ属性と、いくつかの付加的な属性を受け付けます。</p>
+
+<dl>
+ <dt><code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></dt>
+ <dd>メニューのタイトルボタンのための一意な識別子。</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></dt>
+ <dd>File や Edit といったメニューに表示するテキスト。</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-disabled"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code></dt>
+ <dd>この論理型の属性は、メニュー項目を無効にするかどうかを決めます。この設定は可能ですが、メニュー全体を無効にする必要があることは、めったにないと思います。この属性には <code>true</code> と <code>false</code>が設定可能です。もちろん、初期値は後者になります。</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-accesskey"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/accesskey">accesskey</a></code></dt>
+ <dd>この属性は、利用者がメニューのアイテムをアクティブにするために押すキーです。この文字は、通常メニュータイトルに下線をつけて表示されます。Mozilla は <code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code> 属性の値を参照し、この属性で指定された文字に下線を付けて表示させます。このため、<code id="a-accesskey"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/accesskey">accesskey</a></code> の値には <code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code> のテキストに存在する文字を指定するべきです。(そうしない場合でも、キーによる入力は依然動作します)。<span style="color: darkgreen; background: #ef9;">【訳注: 日本語の場合、英字がメニューのラベルに直接現れることはまれなので、「(キー)」をラベルに付加して置きます】</span></dd>
+</dl>
+
+<div class="float-right"><img alt="画像:menubar-ex2.jpg" class="internal" src="/@api/deki/files/1924/=Menubar-ex2.jpg"></div>
+
+<p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code></code> 要素は、通常は <code><code><a href="/ja/docs/Mozilla/Tech/XUL/menubar" title="menubar">menubar</a></code></code> 要素の中に配置されます。 しかしながら、このことは必須ではありません。 ただし、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/menubar" title="menubar">menubar</a></code></code> 要素の中に置かない場合は、見た目が変わります。 この画像は、前の例からメニューバーを無くしたものを示しています。</p>
+
+<p><span id="menupopup_element"></span></p>
+
+<h3 id="menupopup_.E8.A6.81.E7.B4.A0" name="menupopup_.E8.A6.81.E7.B4.A0">menupopup 要素</h3>
+
+<p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code> 要素は、メニューの操作項目を含むポップアップウインドウを作成します。 この要素もボックスの一種で、デフォルトでは垂直配置になります。 必要なら水平配置に変更することも可能で、その場合 <code><code><a href="/ja/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></code> は、横一列に配置されます。 通常、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></code> と <code><code><a href="/ja/docs/Mozilla/Tech/XUL/menuseparator" title="menuseparator">menuseparator</a></code></code> のみが <code><code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code> に配置されます。 それ以外のどんな要素でも <code><code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code> に配置することも可能ではありますが、その場合は Macintosh を無視することになります。</p>
+
+<p><span id="menuitem_element"></span></p>
+
+<h3 id="menuitem_.E8.A6.81.E7.B4.A0" name="menuitem_.E8.A6.81.E7.B4.A0">menuitem 要素</h3>
+
+<p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></code> 要素は <code><code><a href="/ja/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code></code> 要素とよく似ており、同じ属性を持っています。</p>
+
+<dl>
+ <dt><code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></dt>
+ <dd>メニュー項目の一意な識別子。</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></dt>
+ <dd>Open や Save といったメニュー項目に加えるテキスト。</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-disabled"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code></dt>
+ <dd>この論理型の属性は、メニュー項目を無効にするかどうかを決めます。この属性には<code>true</code>と<code>false</code>が設定可能で、初期値は後者になります。</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-accesskey"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/accesskey">accesskey</a></code></dt>
+ <dd>この属性は、利用者がメニューのアイテムをアクティブにするために押すキーです。この文字は、通常メニュータイトルに下線をつけて表示されます。Mozilla は label 属性の値を参照し、この属性で指定された文字に下線を付けて表示させます。このため、accesskey の値には label のテキストに存在する文字を指定するべきです。</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-acceltext"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/acceltext">acceltext</a></code></dt>
+ <dd>ここには、メニューの操作項目のテキストの隣に表示されている (Ctrl+Zのような) ショートカットキーのテキストを指定します。これは (表示テキストの指定だけであり) メニュー項目をキーボード操作と関係づけるものではありません。メニュー項目とキーを関連づける方法は、<a href="/ja/XUL_Tutorial/Keyboard_Shortcuts" title="ja/XUL_Tutorial/Keyboard_Shortcuts">後のセクション</a>で説明する予定です。</dd>
+</dl>
+
+<p><span id="menuseparator_element"></span></p>
+
+<h3 id="menuseparator_.E8.A6.81.E7.B4.A0" name="menuseparator_.E8.A6.81.E7.B4.A0">menuseparator 要素</h3>
+
+<p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/menuseparator" title="menuseparator">menuseparator</a></code></code> には特別な属性はありません。 これは、単に次の <code><code><a href="/ja/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></code> との間に水平な線を作るだけです。</p>
+
+<p>次のセクションでは、よりたくさんのメニューの機能を学びます。</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Toolbars" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:More_Menu_Features">次のページ  »</a></p>
+</div>

@@ -1,0 +1,55 @@
+---
+title: nsIPrompt
+slug: Mozilla/Tech/XPCOM/Reference/Interface/nsIPrompt
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIPrompt
+---
+<p></p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/netwerk/base/public/nsIPrompt.idl" rel="custom">netwerk/base/public/nsIPrompt.idl</a></code><span style="text-align: right; float: right;"><a href="/zh-CN/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">脚本化</a></span></div>
+<span style="padding: 4px 2px;">
+
+This is the prompt interface which can be used without knowledge of a parent window. The parentage is hidden by the <code>GetInterface</code> though which it is obtained.
+</span>
+
+<div style="background: #eee; padding: 2px;">
+继承于: <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
+<span style="text-align: right; float: right;">最后修改于Gecko 1.8 (Firefox 1.5 / Thunderbird 1.5 / SeaMonkey 1.0)</span></div>
+</div><p></p>
+<div class="note">
+  <strong>注:</strong> 本接口基本等价于<code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPromptService" title="">nsIPromptService</a></code>,只是没有parent <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindow" title="">nsIDOMWindow</a></code>这个参数.为了避免重复的文档,下面的所有方法都链接到了<code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPromptService" title="">nsIPromptService</a></code>.如果你准备使用这个接口,一定要删除那些方法中的<code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindow" title="">nsIDOMWindow</a></code>参数.</div>
+<p>Normally you would use the prompt service as it is more flexible, but sometimes a callback will request an <code>nsIPrompt</code> via <code><a href="https://developer.mozilla.org/zh-CN/docs/XPCOM_Interface_Reference/nsIInterfaceRequestor#getInterface()">nsIInterfaceRequestor.getInterface()</a></code>. To get an instance, call the <code><a href="https://developer.mozilla.org/zh-CN/docs/XPCOM_Interface_Reference/nsIWindowWatcher#getNewPrompter()">nsIWindowWatcher.getNewPrompter()</a></code>.</p>
+<h2 id="Method_overview" name="Method_overview">方法概述</h2>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <td><code>void <a href="/zh-CN/docs/XPCOM_Interface_Reference/nsIPromptService#alert()" title="en/XPCOM_Interface_Reference/nsIPromptService#alert()">alert</a>(in wstring dialogTitle, in wstring text);</code></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="/zh-CN/docs/XPCOM_Interface_Reference/nsIPromptService#alertCheck()" title="en/XPCOM_Interface_Reference/nsIPromptService#alertCheck()">alertCheck</a>(in wstring dialogTitle, in wstring text, in wstring checkMsg, inout boolean checkValue);</code></td>
+    </tr>
+    <tr>
+      <td><code>boolean <a href="/zh-CN/docs/XPCOM_Interface_Reference/nsIPromptService#confirm()" title="en/XPCOM_Interface_Reference/nsIPromptService#confirm()">confirm</a>(in wstring dialogTitle, in wstring text);</code></td>
+    </tr>
+    <tr>
+      <td><code>boolean <a href="/zh-CN/docs/XPCOM_Interface_Reference/nsIPromptService#confirmCheck()" title="en/XPCOM_Interface_Reference/nsIPromptService#confirmCheck()">confirmCheck</a>(in wstring dialogTitle, in wstring text, in wstring checkMsg, inout boolean checkValue);</code></td>
+    </tr>
+    <tr>
+      <td><code>PRInt32 <a href="/zh-CN/docs/XPCOM_Interface_Reference/nsIPromptService#confirmEx()" title="en/XPCOM_Interface_Reference/nsIPromptService#confirmEx()">confirmEx</a>(in wstring dialogTitle, in wstring text, in unsigned long buttonFlags, in wstring button0Title, in wstring button1Title, in wstring button2Title, in wstring checkMsg, inout boolean checkValue);</code></td>
+    </tr>
+    <tr>
+      <td><code>boolean <a href="/zh-CN/docs/XPCOM_Interface_Reference/nsIPromptService#prompt()" title="en/XPCOM_Interface_Reference/nsIPromptService#prompt()">prompt</a>(in wstring dialogTitle, in wstring text, inout wstring value, in wstring checkMsg, inout boolean checkValue);</code></td>
+    </tr>
+    <tr>
+      <td><code>boolean <a href="/zh-CN/docs/XPCOM_Interface_Reference/nsIPromptService#promptPassword()" title="en/XPCOM_Interface_Reference/nsIPromptService#promptPassword()">promptPassword</a>(in wstring dialogTitle, in wstring text, inout wstring password, in wstring checkMsg, inout boolean checkValue);</code></td>
+    </tr>
+    <tr>
+      <td><code>boolean <a href="/zh-CN/docs/XPCOM_Interface_Reference/nsIPromptService#promptUsernameAndPassword()" title="en/XPCOM_Interface_Reference/nsIPromptService#promptUsernameAndPassword()">promptUsernameAndPassword</a>(in wstring dialogTitle, in wstring text, inout wstring username, inout wstring password, in wstring checkMsg, inout boolean checkValue);</code></td>
+    </tr>
+    <tr>
+      <td><code>boolean <a href="/zh-CN/docs/XPCOM_Interface_Reference/nsIPromptService#select()" title="en/XPCOM_Interface_Reference/nsIPromptService#select()">select</a>(in wstring dialogTitle, in wstring text, in PRUint32 count, [array, size_is(count)] in wstring selectList, out long outSelection);</code></td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="Constants" name="Constants">常量</h2>
+<p><code>nsIPrompt中的</code>按钮标识同样等同于<code><a href="https://developer.mozilla.org/zh-CN/docs/XPCOM_Interface_Reference/nsIPromptService#Constants">nsIPromptService.Constants</a></code>中定义的那些.示例代码可以在这里找到: <a href="/zh-CN/docs/XPCOM_Interface_Reference/nsIPromptService#Using_the_button_flags" title="en/XPCOM_Interface_Reference/nsIPromptService#Using_the_button_flags">使用按钮标识</a></p>
+<h2 id="相关链接">相关链接</h2>
+<p><code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPromptService" title="">nsIPromptService</a></code></p>

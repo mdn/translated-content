@@ -1,0 +1,115 @@
+---
+title: Add a Context Menu Item
+slug: Mozilla/Add-ons/SDK/Tutorials/Add_a_Context_Menu_Item
+translation_of: Archive/Add-ons/Add-on_SDK/Tutorials/Add_a_Context_Menu_Item
+---
+<p>{{AddonSidebar}}</p>
+
+<div class="note">
+<p><span>Pour suivre ce tuto , vous aurez besoin d'avoir appris des rudiments de<a href="/fr/docs/Mozilla/Add-ons/SDK/Tutorials/Getting_Started_%28jpm%29"> <code>jpm</code></a>. </span></p>
+</div>
+
+<p>Pour ajouter des éléments et des sous-menus dans le menu contextuel de Firefox, utilisez le module <a href="https://developer.mozilla.org/fr/docs/Mozilla/Add-ons/SDK/High-Level_APIs/context-menu"><code>context-menu</code></a>.</p>
+
+<p>Voici un add-on qui ajoute un nouvel élément de menu contextuel. L'élément est affiché à chaque fois qu'une séléction est opérée dans la page. Si l'élément est cliqué, la séléction est envoyé au code principal.</p>
+
+<pre class="brush: js">var contextMenu = require("sdk/context-menu");
+var menuItem = contextMenu.Item({
+  label: "Log Selection",
+  context: contextMenu.SelectionContext(),
+  contentScript: 'self.on("click", function () {' +
+                 '  var text = window.getSelection().toString();' +
+                 '  self.postMessage(text);' +
+                 '});',
+  onMessage: function (selectionText) {
+    console.log(selectionText);
+  }
+});</pre>
+
+<p>Executer l'add-on, charger une page web, séléctioner un texte et faites un clic droit, le nouvel élément doit apparaitre:<img src="https://mdn.mozillademos.org/files/6513/context-menu-selection.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+
+<p>Click it, and the selection is <a href="/en-US/Add-ons/SDK/Tutorials/Logging">logged to the console</a> (or the shell, if you're running an instance of Firefox from the command line):</p>
+
+<pre>info: elephantine lizard
+</pre>
+
+<h2 id="Details">Details</h2>
+
+<p>All this add-on does is to construct a context menu item. You don't need to add it: once you have constructed the item, it is automatically added in the correct context. The constructor in this case takes four options: <code>label</code>, <code>context</code>, <code>contentScript</code>, and <code>onMessage</code>.</p>
+
+<h3 id="label">label</h3>
+
+<p>The <code>label</code> is just the string that's displayed.</p>
+
+<h3 id="context">context</h3>
+
+<p>The <code>context</code> describes the circumstances in which the item should be shown. The <code>context-menu</code> module provides a number of simple built-in contexts, including this <code>SelectionContext()</code>, which means: display the item when something on the page is selected.</p>
+
+<p>If these simple contexts aren't enough, you can define more sophisticated contexts using scripts.</p>
+
+<h3 id="contentScript">contentScript</h3>
+
+<p>This attaches a script to the item. In this case the script listens for the user to click on the item, then sends a message to the add-on containing the selected text.</p>
+
+<h3 id="onMessage">onMessage</h3>
+
+<p>The <code>onMessage</code> property provides a way for the add-on code to respond to messages from the script attached to the context menu item. In this case it just logs the selected text.</p>
+
+<p>So:</p>
+
+<ol>
+ <li>the user clicks the item</li>
+ <li>the content script's <code>click</code> event fires, and the content script retrieves the selected text and sends a message to the add-on</li>
+ <li>the add-on's <code>message</code> event fires, and the add-on code's handler function is passed the selected text, which it logs</li>
+</ol>
+
+<h2 id="More_options">More options</h2>
+
+<h3 id="Adding_an_image">Adding an image</h3>
+
+<p>You can add an image to a context menu item with the <code>image</code> option. This is a URL pointing to a 16x16 icon that's displayed at the left side of the context menu item. Typically you'd store the image in your add-on's "data" directory, and construct the URL using <code>self.data.url()</code>:</p>
+
+<pre class="brush: js">var self = require("sdk/self");
+
+var contextMenu = require("sdk/context-menu");
+var menuItem = contextMenu.Item({
+  label: "Log Selection",
+  context: contextMenu.SelectionContext(),
+  contentScript: 'self.on("click", function () {' +
+                 '  var text = window.getSelection().toString();' +
+                 '  self.postMessage(text);' +
+                 '});',
+  image: self.data.url("icon-16.png"),
+  onMessage: function (selectionText) {
+    console.log(selectionText);
+  }
+});</pre>
+
+<h3 id="Adding_an_access_key">Adding an access key</h3>
+
+<div class="geckoVersionNote">
+<p>New in Firefox 35.</p>
+</div>
+
+<p>From Firefox 35 you can specify an access key using the <code>accessKey</code> option. This must be a single-character string. Pressing the key selects the option when the context menu is open:</p>
+
+<pre class="brush: js">var contextMenu = require("sdk/context-menu");
+var menuItem = contextMenu.Item({
+  label: "Log Selection",
+  context: contextMenu.SelectionContext(),
+  contentScript: 'self.on("click", function () {' +
+                 '  var text = window.getSelection().toString();' +
+                 '  self.postMessage(text);' +
+                 '});',
+  accessKey: "l",
+  onMessage: function (selectionText) {
+    console.log(selectionText);
+  }
+});
+</pre>
+
+<p> </p>
+
+<h2 id="Learning_More">Learning More</h2>
+
+<p>To learn more about the <code>context-menu</code> module, see the <a href="/en-US/Add-ons/SDK/High-Level_APIs/context-menu"><code>context-menu</code> API reference</a>.</p>

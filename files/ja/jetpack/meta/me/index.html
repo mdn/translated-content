@@ -1,0 +1,29 @@
+---
+title: Me
+slug: Jetpack/Meta/Me
+translation_of: Archive/Mozilla/Jetpack/Meta/Me
+---
+<p><code>jetpack.me</code> 名前空間はjetpack内部の動的な状態を知るための仕組みを提供します。この名前空間は現在 <a class="link-https" href="https://wiki.mozilla.org/Labs/Jetpack/JEP/13" title="https://wiki.mozilla.org/Labs/Jetpack/JEP/13">future</a> に存在しており、使用前にインポートする必要があります:</p>
+<pre class="brush: js">jetpack.future.import("me");
+</pre>
+<p>現在のところ、この名前空間のメンバには <code>onFirstRun() </code>のみが存在します。</p>
+<h2 id="onFirstRun()">onFirstRun()</h2>
+<p><code>jetpack.me.onFirstRun()</code> を使うと、jetpackが正常にインストールされた後にそのことを通知することができます。onFirstRun() はインストール後に呼び出されるコールバックを受け付けます。この機能が<a href="/en/Jetpack/Meta/First_Run" title="en/Jetpack/Meta/First run">初回起動ページ</a>とは独立したものであることに注意してください。具体的には、コールバックは load イベントリスナあるいは jQuery の ready コールバックではありません。onFirstRun() はjetpack内のどこででも呼び出すことが出来ますが、timeout や XMLHttpRequest のような非同期処理の結果として呼び出された場合は無視されます。複数回onFirstRun() を呼び出した場合、最後の呼び出し以外は無視されます。</p>
+<h6 id="パラメータ">パラメータ</h6>
+<dl>
+ <dt>
+  callback</dt>
+ <dd>
+  関数。 パラメータ無し。  関数内で<code>this</code> は jetpack cotext を指す。</dd>
+</dl>
+<h6 id="例">例</h6>
+<pre class="brush: js">jetpack.me.onFirstRun(function () {
+  jetpack.notifications.show("Oh boy, I'm installed!");
+});
+
+</pre>
+<h2 id="See_also">See also</h2>
+<ul>
+ <li><a href="/ja/Jetpack/Meta/First_Run" title="ja/Jetpack/Meta/First Run">初回起動</a></li>
+ <li><a class="link-https" href="https://wiki.mozilla.org/Labs/Jetpack/JEP/30" title="https://wiki.mozilla.org/Labs/Jetpack/JEP/30">Jetpack Enhancement Proposal 30</a></li>
+</ul>

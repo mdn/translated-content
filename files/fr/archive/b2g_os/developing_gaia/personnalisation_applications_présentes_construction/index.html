@@ -1,0 +1,88 @@
+---
+title: Personnaliser les applications présentes lors de la construction
+slug: >-
+  Archive/B2G_OS/Developing_Gaia/Personnalisation_applications_présentes_construction
+tags:
+  - Apps
+  - B2G
+  - Customization
+  - Firefox OS
+  - Gaia
+  - Guide
+translation_of: Archive/B2G_OS/Developing_Gaia/Customizing_build-time_apps
+---
+<div class="summary">
+ <p><span class="seoSummary">Si vous êtes développeur ou vendeur d'appareil, vous voudrez personnaliser et choisir les applications qui seront présentes sur l'appareil quand il sera utilisé pour la première fois. Cet article explique les différents outils pour le faire.</span></p>
+</div>
+<h2 id="Emplacement_des_applications_dans_Gaia">Emplacement des applications dans Gaia</h2>
+<p>Les applications qui fonctionnent sur Firefox OS sont toutes contenues dans les dossiers de Gaia, dans l'un de ces deux répertoires :</p>
+<ul>
+ <li><a href="https://github.com/mozilla-b2g/gaia/tree/master/apps">gaia/apps/</a> : Les applications par défaut du système se trouvent à cet endroit (par exemple : le calendrier, les e-mails, les réglages, etc.).</li>
+ <li><a href="https://github.com/mozilla-b2g/gaia/tree/master/dev_apps">gaia/dev-apps/</a> : Les autres applications se trouvent ici, notamment celles qui participent à la personnalisation.</li>
+</ul>
+<p>Si vous souhaitez enlever/ajouter certaines applications pour votre construction (<em>build</em>) de Gaia/B2G, vous disposez de plusieurs outils décrits ci-après.</p>
+<h2 id="Méthode_brute">Méthode brute</h2>
+<p>La méthode « brute » consiste à supprimer les applications que vous ne souhaitez pas installer lors du <em>build </em>(avant de lancer le processus de construction).</p>
+<h2 id="Éditer_les_listes_de_configuration">Éditer les listes de configuration</h2>
+<p>Une méthode plus fine consiste à éditer les fichier <code>apps-*.list</code> (qui se trouve dans un répertoire différent en fonction de l'appareil et qui est sous <a href="https://github.com/mozilla-b2g/gaia/tree/master/build/config">gaia/build/config/</a>, comme <code>phone/</code> et <code>tablet/</code>). Dans ces fichiers, il suffit d'ajouter les applications que vous souhaitez intégrer lors de la construction. Par exemple, <a href="https://github.com/mozilla-b2g/gaia/blob/master/build/config/phone/apps-production.list">gaia/build/config/phone/apps-production.list</a> ressemble à :</p>
+<pre class="brush: bash">apps/bluetooth
+apps/bookmark
+apps/browser
+apps/calendar
+apps/callscreen
+etc.</pre>
+<p>Vous pouvez également indiquer d'utiliser toutes les applications d'un répertoire, de la façon suivante :</p>
+<pre class="brush: bash">apps/*</pre>
+<p>Le mécanisme utilisé pour déterminer quel fichier <code>apps-*.list</code> est utilisé pendant la construction est décrit dans le fichier <a href="https://github.com/mozilla-b2g/gaia/blob/master/Makefile">gaia/Makefile</a>, et ressemble à :</p>
+<pre class="brush: cpp"><span class="nv">GAIA_DEVICE_TYPE</span><span class="o">?=</span>phone
+  ...
+GAIA_APP_TARGET?=engineering
+  ...
+ifeq ($(MAKECMDGOALS), demo)
+GAIA_DOMAIN=thisdomaindoesnotexist.org
+GAIA_APP_TARGET=demo
+else ifeq ($(MAKECMDGOALS), dogfood)
+DOGFOOD=1
+else ifeq ($(MAKECMDGOALS), production)
+PRODUCTION=1
+endif
+  ...
+ifeq ($(PRODUCTION), 1)
+GAIA_OPTIMIZE=1
+GAIA_APP_TARGET=production
+endif
+
+ifeq ($(DOGFOOD), 1)
+GAIA_APP_TARGET=dogfood
+endif
+  ...
+ifndef GAIA_APP_CONFIG
+GAIA_APP_CONFIG=build$(SEP)config$(SEP)apps-$(GAIA_APP_TARGET).list
+endif</pre>
+<p>Au départ, la variable <code>GAIA_APP_TARGET</code> vaut <code>engineering</code> et la variable <code><span class="nv">GAIA_DEVICE_TYPE</span></code> vaut <code>phone</code>, par défaut, la construction de Gaia utilisera<a href="https://github.com/mozilla-b2g/gaia/blob/master/build/config/phone/apps-engineering.list"> gaia/config/phone/app-engineering.list</a> (qui contient l'ensemble des tests, des démos, etc.)</p>
+<p>Pour définir l'utilisation souhaitée, il faut utiliser les différentes options de la commande <code>make</code>. Par exemple, pour construire Gaia avec <a href="https://github.com/mozilla-b2g/gaia/blob/master/build/config/phone/apps-production.list">gaia/build/config/phone/apps-production.list</a>, il faut utiliser l'option suivante :</p>
+<pre class="brush: bash">PRODUCTION=1 make</pre>
+<p>Si vous utilisez <code>DEMO=1</code>, le fichier <a href="https://github.com/mozilla-b2g/gaia/blob/master/build/config/phone/apps-demo.list">apps-demo.list</a> sera utilisé. Si vous choisissez le paramètre <code>DOGFOOD=1</code>, la construction utilisera le fichier <a href="https://github.com/mozilla-b2g/gaia/blob/master/build/config/phone/apps-dogfood.list">apps-dogfood.list</a>.</p>
+<p>Vous pouvez totalement contrôler le choix en éditant <code>GAIA_APP_CONFIG</code> dans le fichier <a href="https://github.com/mozilla-b2g/gaia/blob/master/Makefile">gaia/Makefile</a>, et en fournissant votre propre fichier <code>apps-*.list</code>.</p>
+<p><a href="https://github.com/mozilla-b2g/gaia/blob/master/Android.mk#L24-L28">gaia/Android.mk</a> contient ces lignes :</p>
+<pre class="brush: cpp">ifneq ($(filter user userdebug, $(TARGET_BUILD_VARIANT)),)
+GAIA_MAKE_FLAGS += PRODUCTION=1
+B2G_SYSTEM_APPS := 1
+endif</pre>
+<p>Lors de la construction, si <code>VARIANT=user</code> ou si <code>VARIANT=userdebug</code> sont choisis (et sont repercutés dans la variable <code>TARGET_BUILD_VARIANT</code>), <code>PRODUCTION=1</code> sera automatiquement défini lors de la construction de Gaia.</p>
+<div class="note">
+ <p><strong>Note</strong> : Pour trouver plus d'informations sur les options de make, voir la <a href="/fr/Firefox_OS/Developing_Gaia/make_options_reference">référence des options de make</a>.</p>
+</div>
+<h2 id="Utiliser_le_système_de_personnalisation_(Market_customizations)">Utiliser le système de personnalisation (<em>Market customizations</em>)</h2>
+<p>La troisième méthode est la plus fine (et également la plus complexe) et utilise le système de personnalisation. Ce système permet de définir des instructions de personnalisation pour la construction et ce, sans modifier le cœur de Gaia. Vous pouvez inclure les personnalisations de votre choix dans des dossiers distincts ou bien en utilisant les répertoires existants.</p>
+<p>Par exemple, en définissant l'emplacement des personnalisations grâce à la variable d'environnement <code>GAIA_DISTRIBUTION_DIR</code> comme ça :</p>
+<pre class="brush: bash"><code class="language-html">GAIA_DISTRIBUTION_DIR=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DISTRIBUTION_PATH</span><span class="token punctuation">&gt;</span></span> make production</code></pre>
+<p>Pour plus d'exemples sur le mécanisme de distribution, voir <a href="https://github.com/mozilla-b2g/gaia/tree/master/customization">https://github.com/mozilla-b2g/gaia/tree/master/customization</a></p>
+<p>Les personnalisations sont un sujet à part entière, pour plus d'informations sur ce sujet, lire <a href="/en-US/Firefox_OS/Developing_Firefox_OS/Market_customizations_guide">le guide du système de personnalisation (<em>Market customizations</em>)</a>.</p>
+<div class="note">
+ <p><strong>Note </strong>: Si vous souhaitez inclure des applications externes dans votre build de Gaia, vous devrez les construire d'une certaine façon, puis les placer dans le répertoire <code>gaia/dev-apps/</code>. Lire l'article <a href="https://developer.mozilla.org/en-US/Firefox_OS/Developing_Firefox_OS/Market_customizations_guide#Building_Prebundled_web_apps">Construire des applications web pré-packagées</a> pour en savoir plus.</p>
+</div>
+<div class="warning">
+ <p><strong>Important</strong> : Si vous êtes distributeur ou fabricant de matériel et que vous souhaitez construire une version spécifique de B2G/Gaia pour la distribuer, vous devez répondre à certains critères pour avoir l'autorisation d'inclure le Marketplace Firefox sur vos téléphones/tablettes. Merci de contacter Mozilla pour plus de détails.</p>
+</div>
+<p> </p>

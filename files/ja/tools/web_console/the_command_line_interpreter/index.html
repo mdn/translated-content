@@ -1,0 +1,123 @@
+---
+title: コマンドラインインタープリター
+slug: Tools/Web_Console/The_command_line_interpreter
+translation_of: Tools/Web_Console/The_command_line_interpreter
+---
+<p>{{ToolsSidebar}}</p>
+
+<p>ウェブコンソールのコマンドラインで、JavaScript の構文を即座に評価することができます。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13280/console-cli.png" style="display: block; height: 296px; margin-left: auto; margin-right: auto; width: 877px;"></p>
+
+<h2 id="Entering_expressions" name="Entering_expressions">式を入力する</h2>
+
+<p>式の入力方法は、コマンドラインに入力して <kbd>Enter</kbd> を押下するだけです。複数行の式を入力する場合は、<kbd>Enter</kbd> の代わりに <kbd>Shift</kbd>+<kbd>Enter</kbd> を使用します。</p>
+
+<p>入力した式をメッセージ表示ウィンドウにエコー出力して、その後に結果を出力します:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7377/commandline-executejs.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+
+<div class="geckoVersionNote">Firefox 47 の新機能</div>
+
+<p>Firefox 47 より、<kbd>Enter</kbd> を押下したときに入力が完了していないと思われる場合は、<kbd>Shift</kbd>+<kbd>Enter</kbd> として扱い、入力を完了できるようになりました。</p>
+
+<p>例えば、以下のように入力します:</p>
+
+<pre class="brush: js">function foo() {</pre>
+
+<p>そして <kbd>Enter</kbd> を押下すると、コンソールは直ちに入力内容を実行せずに <kbd>Shift</kbd>+<kbd>Enter</kbd> を押下したかのように動作しますので、関数定義の入力を完了できます。</p>
+
+<h2 id="Accessing_variables" name="Accessing_variables">変数にアクセスする</h2>
+
+<p>ページで定義している変数にアクセスすることができ、<code>window</code> のように組み込み済みの変数と <code>jQuery</code> のように JavaScript で追加した変数のどちらでも可能です:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7367/commandline-accessbuiltin.png" style="display: block; margin-left: auto; margin-right: auto;"><img alt="" src="https://mdn.mozillademos.org/files/7369/commandline-accesspageadded.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+
+<h2 id="Autocomplete" name="Autocomplete">オートコンプリート</h2>
+
+<p>コマンドラインにオートコンプリート機能があります。最初の数文字を入力すると、考えられる完成形を示すポップアップを表示します:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7375/commandline-autocomplete.png" style="display: block; margin-left: auto; margin-right: auto;">候補を受け入れるには <kbd>Enter</kbd> または <kbd>Tab</kbd> を押下します。また上/下矢印キーで別の候補へ移動できます。どの候補も望まない場合は入力を続けてください。</p>
+
+<p>コンソールは、現在実行中のスタックフレームのスコープから候補を提示します。これにより関数内でブレークポイントに当たった場合は、関数内のローカルオブジェクトもオートコンプリートの対象になります。</p>
+
+<p>配列要素向けのオートコンプリート候補も表示します:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7383/commandline-arrayautocomplete.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+
+<h2 id="Defining_variables" name="Defining_variables">変数を定義する</h2>
+
+<p>独自の変数を定義したり、その変数にアクセスしたりできます:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7371/commandline-addingvariable1.png" style="display: block; margin-left: auto; margin-right: auto;"><img alt="" src="https://mdn.mozillademos.org/files/7373/commandline-addingvariable2.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+
+<h2 id="Command_history" name="Command_history">コマンド履歴</h2>
+
+<p>コマンドラインは、あなたが入力したコマンドを覚えています: 上下矢印キーで、履歴を行き来できます。</p>
+
+<p>Firefox 39 より、この履歴はセッションをまたいで維持するようになりました。履歴をクリアするには、<code>clearHistory()</code> <a href="/ja/docs/Tools/Web_Console/The_command_line_interpreter#Helper_commands">支援コマンド</a> を使用してください。</p>
+
+<h2 id="Working_with_iframes" name="Working_with_iframes">iframe で作業する</h2>
+
+<p>ページに <a href="/ja/docs/Web/HTML/Element/iframe">インラインフレーム</a> を埋め込んでいる場合は、<code>cd()</code> コマンドで特定のインラインフレームにコンソールのスコープを切り替えることができます。また、インラインフレームで表示しているドキュメントで定義した関数を実行できます。<code>cd()</code> でインラインフレームを選択する方法は 3 通りあります:</p>
+
+<p>インラインフレームの DOM 要素を渡すことができます:</p>
+
+<pre class="brush: js">var frame = document.getElementById("frame1");
+cd(frame);</pre>
+
+<p>インラインフレームにマッチする CSS セレクターを渡すことができます:</p>
+
+<pre class="brush: js">cd("#frame1");</pre>
+
+<p>インラインフレームの window グローバルオブジェクトを渡すことができます:</p>
+
+<pre class="brush: js">var frame = document.getElementById("frame1");
+cd(frame.contentWindow);
+</pre>
+
+<p>トップレベルの window にコンテキストを戻す場合は、引数を与えずに <code>cd()</code> を呼び出してください:</p>
+
+<pre class="brush: js">cd();</pre>
+
+<p>例えば、インラインフレームを埋め込んだドキュメントがあるものとします:</p>
+
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;iframe id="frame1" src="static/frame/my-frame1.html"&gt;&lt;/iframe&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+
+<p>インラインフレームで新たな関数を定義しています:</p>
+
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;script&gt;
+      function whoAreYou() {
+        return "I'm frame1";
+      }
+   &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+
+<p>以下のようにしてコンテキストをインラインフレームに切り替えることができます:</p>
+
+<pre class="brush: js">cd("#frame1");</pre>
+
+<p>グローバル window の document がインラインフレームであることがわかります:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7355/web-console-iframe-document.png" style="display: block; height: 75px; margin-left: auto; margin-right: auto; width: 632px;">また、インラインフレーム内で定義した関数を呼び出すことができます:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7357/web-console-iframe-function.png" style="display: block; height: 77px; margin-left: auto; margin-right: auto; width: 632px;"></p>
+
+<h2 id="Helper_commands" name="Helper_commands">支援コマンド</h2>
+
+<p>{{page("/ja/Using_the_Web_Console/Helpers", "The commands")}}</p>

@@ -1,0 +1,38 @@
+---
+title: 扩展打包
+slug: Mozilla/Add-ons/Extension_Packaging
+tags:
+  - Extensions
+  - Toolkit API
+translation_of: Archive/Add-ons/Extension_Packaging
+---
+<p> </p>
+<p>扩展为一种<a href="cn/Bundles">可安装包</a>的形式,它可以由使用者下载并安装,或者是由外部程序或应用程序提供的预安装包。扩展使用<a href="cn/Bundles">目录结构</a>,此结构提供有chrome,components,和其他文件以扩展XUL程序的功能。</p>
+<p>每个扩展必须提供一个<a href="cn/Install.rdf">install.rdf</a>文件,包含关于扩展的元数据,例如唯一的ID,版本,作者,和兼容性信息。</p>
+<p>扩展文件和install.rdf准备好之后，有几种方法准备扩展以便安装：将扩展目录ZIP打包为用户可安装的<a href="cn/XPI">XPI</a>(xpinstall)文件，直接将扩展解开到用户程序或设置目录中，或将扩展注册到Windows注册表中。</p>
+<h3 id=".E5.88.B6.E4.BD.9C.E6.89.A9.E5.B1.95XPI" name=".E5.88.B6.E4.BD.9C.E6.89.A9.E5.B1.95XPI">制作扩展XPI</h3>
+<p>一个<a href="cn/XPI">XPI</a> (XPInstall) 文件就是一个简单的ZIP文件，包括了扩展文件,<a href="cn/Install.rdf">install.rdf</a>文件在ZIP的根目录中。使用者可以从网站上下载或者从本地安装XPI文件，将其打开或拖拽到扩展管理窗口。</p>
+<p>XPI文件的MIME类型被Firefox识别为
+ <i>
+  application/x-xpinstall</i>
+ ，因为大多数HTTP服务器不能够默认设置为将.xpi返回MIME类型。在Apache HTTP服务器上,可以在设置文件或.htaccess中增加以下命令来实现:</p>
+<pre class="eval">AddType application/x-xpinstall .xpi
+</pre>
+<h3 id=".E7.9B.B4.E6.8E.A5.E5.AE.89.E8.A3.85.E6.89.A9.E5.B1.95.E6.96.87.E4.BB.B6" name=".E7.9B.B4.E6.8E.A5.E5.AE.89.E8.A3.85.E6.89.A9.E5.B1.95.E6.96.87.E4.BB.B6">直接安装扩展文件</h3>
+<p>如果你知道程序的位置(例如,如果你作为应用程序安装者的角色来安装扩展),你可以直接将扩展文件安装到&lt;appdir&gt;/extensions/&lt;extensionID&gt;中。在下次程序启动的时候扩展管理器会自动找到此扩展。</p>
+<p>当使用此方法的时候你必须核实以确保系统允许扩展目录和文件正确设置。否则,扩展管理器在此扩展下不能够正确运行,或者扩展本身不能正确工作。</p>
+<h3 id=".E4.BD.BF.E7.94.A8Windows.E6.B3.A8.E5.86.8C.E8.A1.A8.E5.B7.A5.E5.85.B7.E6.B3.A8.E5.86.8C.E6.89.A9.E5.B1.95.E6.89.80.E5.9C.A8.E7.9B.AE.E5.BD.95" name=".E4.BD.BF.E7.94.A8Windows.E6.B3.A8.E5.86.8C.E8.A1.A8.E5.B7.A5.E5.85.B7.E6.B3.A8.E5.86.8C.E6.89.A9.E5.B1.95.E6.89.80.E5.9C.A8.E7.9B.AE.E5.BD.95">使用Windows注册表工具注册扩展所在目录</h3>
+<p>外部安装程序（例如Java虚拟机）也许希望将应用程序整合点作为扩展安装，即便是应用程序还没有安装。这可以在Windows中<a href="cn/Adding_Extensions_using_the_Windows_Registry">使用注册表</a>来完成。</p>
+<h3 id=".E5.A4.9A.E6.9D.A1.E7.9B.AE.E6.89.A9.E5.B1.95_XPIs" name=".E5.A4.9A.E6.9D.A1.E7.9B.AE.E6.89.A9.E5.B1.95_XPIs">多条目扩展 XPIs</h3>
+<p>在有些情况下也许希望用单独的XPI文件安装多个扩展/主题。一种特殊的扩展XPI称为<a href="cn/Multiple_Item_Packaging">多条目包</a>,用来解释如何创建此类型的扩展包。(需要Firefox 1.5/XULRunner 1.8。)</p>
+<h3 id="Toolkit_API.E7.9A.84.E5.AE.98.E6.96.B9.E5.8F.82.E8.80.83" name="Toolkit_API.E7.9A.84.E5.AE.98.E6.96.B9.E5.8F.82.E8.80.83"><a href="cn/Toolkit_API">Toolkit API</a>的官方参考</h3>
+<p>
+  </p><ul>
+    <li><a href="/en/Bundles" title="en/Bundles">Structure of an Installable Bundle</a>: describes the common structure of installable bundles, including extensions, themes, and XULRunner applications</li>
+    <li><a href="/en/Extension_Packaging" title="en/Extension_Packaging">Extension Packaging</a>: specific information about how to package extensions</li>
+    <li><a href="/en/Theme_Packaging" title="en/Theme_Packaging">Theme Packaging</a>: specific information about how to package themes</li>
+    <li><a href="/en/Multiple_Item_Packaging" title="en/Multiple_Item_Packaging">Multiple-item Extension Packaging</a>: specific information about multiple-item extension XPIs</li>
+    <li><a href="/en/XUL_Application_Packaging" title="en/XUL_Application_Packaging">XUL Application Packaging</a>: specific information about how to package XULRunner applications</li>
+    <li><a href="/en/Chrome_Registration" title="en/Chrome_Registration">Chrome Registration</a></li>
+    <li><a href="/en-US/docs/Mozilla/Tech/XUL/Printing">Printing in XUL Apps</a></li>
+  </ul>

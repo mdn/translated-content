@@ -1,0 +1,412 @@
+---
+title: L'essentiel d'une extension
+slug: Archive/Mozilla/XUL/Vulgarisation_XUL/L'essentiel_d'une_extension
+translation_of: Archive/Add-ons/Overlay_Extensions/XUL_School/The_Essentials_of_an_Extension
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Vulgarisation_XUL/Premiers_pas_avec_les_extensions_Firefox" style="float: left;">« Précédent</a><a href="/fr/docs/XUL_School/Setting_Up_a_Development_Environment">Suivant  »</a></p>
+</div>
+
+<h2 id="Le_fichier_install.rdf">Le fichier install.rdf</h2>
+
+<p>Dans la section précédente, nous avons examiné le contenu de l'extension "Hello World". Maintenant, nous allons examiner dans son code et ses fichiers, en commençant par le fichier <em>install.rdf</em>. Vous pouvez l'ouvrir avec n'importe quel éditeur de texte.</p>
+
+<p>Le fichier est formaté selon un type particulier XML appelé <a class="external" href="http://fr.wikipedia.org/wiki/Resource_Description_Framework" title="http://fr.wikipedia.org/wiki/Resource_Description_Framework">RDF</a>. RDF est utilisé pour le mécanisme de stockage centralisé pour Firefox, mais il est maintenant remplacé par un système plus simple de base de données. Nous aborderons ces deux systèmes de stockage plus loin dans le tutoriel.</p>
+
+<p>Maintenant, regardons les parties importantes du fichier.</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java">&lt;em:id&gt;helloworld@xulschool.com&lt;/em:id&gt;</pre>
+</div>
+</div>
+
+<p>Il s'agit d'un identifiant unique pour l'extension. Firefox en a besoin pour distinguer votre extension des autres, il est donc nécessaire que cet identifiant soit unique.</p>
+
+<p>Il existe deux normes acceptées pour les IDS des extensions. Le premier est le format de type e-mail comme dans l'exemple "Hello World", qui devrait être quelque chose comme <em>&lt;project-name&gt;@&lt;yourdomain&gt;</em>. L'autre pratique standard consiste à utiliser une chaîne UUID générée qui est extrêmement peu probable à être reproduite. Les systèmes basés sur Unix ont un outil en ligne de commande appelé <em>uuidgen</em> qui génère des UUIDs. Il existe également des outils téléchargeables disponibles pour toutes les plates-formes pour les générer. Les crochets entourant ne sont que la notation, et il s'agit d'une simple notation courante. Tant que votre id a une certaine unicité, il est possible d'utiliser l'une des deux formes.</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java">&lt;em:name&gt;XUL School Hello World&lt;/em:name&gt;
+&lt;em:description&gt;Welcome to XUL School!&lt;/em:description&gt;
+&lt;em:version&gt;0.1&lt;/em:version&gt;
+&lt;em:creator&gt;Appcoast&lt;/em:creator&gt;
+<span class="code-comment">&lt;em:homepageURL&gt;https://developer.mozilla.org/en/XUL_School&lt;/em:homepageURL&gt;</span></pre>
+</div>
+</div>
+
+<p>Il s'agit des données qui sont affichées avant et après l'installation de l'extension, et que vous pouvez voir dans la fenêtre des modules complémentaires. L'URL de la page d'accueil peut être visité par un clic droit sur l'extension et en choisissant Visitez la page Web. Il y a beaucoup d'autres balises pouvant être ajoutées, pour les auteurs et les traducteurs. La <a href="/fr/Manifestes_d'installation" title="fr/Manifestes_d'installation">spécification complète</a> du fichier install.rdf contient tous les détails.</p>
+
+<p>Comme les extensions peuvent être traduites en plusieurs langues, il est souvent nécessaire de traduire la description de l'extension, ou même son nom. Sur Firefox 3 et suivant, une description localisée et un nom peuvent être ajoutés par le code suivant :</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java">&lt;em:localized&gt;
+  &lt;Description&gt;
+    &lt;em:locale&gt;es-ES&lt;/em:locale&gt;
+    &lt;em:name&gt;XUL School Hola Mundo&lt;/em:name&gt;
+    &lt;em:description&gt;Bienvenido a XUL School!&lt;/em:description&gt;
+  &lt;/Description&gt;
+&lt;/em:localized&gt;</pre>
+</div>
+</div>
+
+<p>La chaîne de localisation <em>es-ES</em> indique que la langue est l'espagnol (es) pour l'Espagne (ES). Vous pouvez ajouter autant de sections <em>&lt;em:localized&gt;</em> que vous avez besoin. Pour Firefox 2, la <a href="/fr/Localisation_des_descriptions_d'extensions#La_localisation_avant_Gecko_1.9" title="fr/Localisation des descriptions d'extensions#La localisation avant Gecko 1.9">localisation de ce fichier</a> est un peu plus compliqué. Nous verrons la localisation plus loin dans cette section.</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java">&lt;em:type&gt;2&lt;/em:type&gt;</pre>
+</div>
+</div>
+
+<p>Ceci précise que le module en cours d'installation est une extension. Vous pouvez consulter les différents types possibles dans <a href="/fr/Manifestes_d'installation#Type" title="fr/Manifestes d'installation#Type">la spécification install.rdf</a>.</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java">&lt;em:targetApplication&gt;
+  &lt;Description&gt;
+    &lt;em:id&gt;{ec8030f7-c20a-464f-9b0e-13a3a9e97384}&lt;/em:id&gt;
+    &lt;em:minVersion&gt;3.0&lt;/em:minVersion&gt;
+    &lt;em:maxVersion&gt;3.6.*&lt;/em:maxVersion&gt;
+  &lt;/Description&gt;
+&lt;/em:targetApplication&gt;</pre>
+</div>
+</div>
+
+<p>Ce nœud spécifie l'application cible et les versions cibles de l'extension, en particulier Firefox de la version 3.0 au versions 3.6.*. L'UUID est l'ID unique de Firefox. Les autres applications Mozilla et basées sur Mozilla telles que Thunderbird et Seamonkey ont le leurs. Vous pouvez avoir une extension qui fonctionne sur de multiples applications et versions. Par exemple, si vous créez une extension de Firefox, il faudrait normalement peu d'effort pour la porter sur Flock ou sur SeaMonkey, qui ont une interface utilisateur et des caractéristiques très similaires.</p>
+
+<p>Le min et max de la version spécifie l'étendue des versions où l'extension peut être installée. Des détails sont disponibles sur le <a href="/en/Toolkit_version_format" title="en/Toolkit version format">format de version</a>. Si l'application ou la plage de version ne correspondent pas, vous ne serez pas autorisé à installer l'extension, ou l'extension sera installée dans un état désactivé. Les utilisateurs peuvent désactiver les contrôles version grâce à des préférences ou d'installer des modules complémentaires comme <a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/15003" title="https://addons.mozilla.org/en-US/firefox/addon/15003">Add-on Compatibility Reporter</a>.</p>
+
+<p>Ce sont les seules informations dont Firefox et d'autres applications Mozilla ont besoin pour installer un module complémentaire. Toutes erreurs ou manques d'information entraînent un échec du processus d'installation, ou laissent l'extension s'installer dans un état désactivé.</p>
+
+<h2 id="Le_fichier_chrome.manifest">Le fichier chrome.manifest</h2>
+
+<blockquote>
+<p>Le chrome est l'ensemble des éléments de l'interface utilisateur d'une application qui sont situés en dehors de la zone de contenu d'une fenêtre. Les barres d'outils, les barres de menus, les barres de progression, et les titres de fenêtres sont tous des exemples d'éléments qui font habituellement partie du chrome.</p>
+</blockquote>
+
+<p>Citation de <a href="/fr/Enregistrement_chrome" title="fr/Enregistrement chrome">Enregistrement Chrome</a>.</p>
+
+<p>En d'autres termes, le chrome correspond à tout ce que vous voyez dans Firefox. Toutes les fenêtres Firefox peuvent être considérées comme ayant deux parties : (1) le chrome et (2) peut-être une zone de contenu, comme celui qui affiche les pages Web dans un onglet Firefox. Les fenêtres comme le gestionnaire de modules complémentaires et de la fenêtre de téléchargements sont en chrome pur. La plupart du code pour une extension réside dans le dossier chrome, tout comme dans l'exemple Hello World.</p>
+
+<p>Les fichiers Chrome sont tous empaquetés dans une archive JAR, généralement nommée d'après l'extension. Il n'est pas nécessaire d'empaqueter les fichiers chrome, mais c'est une pratique courante et recommandée pour des raisons de performances.</p>
+
+<p>Comme nous l'avons vu dans la structure des répertoires de l'extension décompressée, le chrome est composé de 3 sections : content, locale et skin. Les 3 sont nécessaires pour la plupart des extensions. Si nous ouvrons le fichier chrome.manifest (encore une fois, un éditeur de texte fera l'affaire), nous voyons que les 3 mêmes sections sont mentionnés :</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java">content   xulschoolhello              jar:chrome/xulschoolhello.jar!/content/
+skin      xulschoolhello  classic/1.0 jar:chrome/xulschoolhello.jar!/skin/
+locale    xulschoolhello  en-US       jar:chrome/xulschoolhello.jar!/locale/en-US/</pre>
+</div>
+</div>
+
+<p>Le fichier <em>chrome.manifest</em> indique à Firefox où chercher les fichiers chrome. Le texte est espacé pour ressembler à un tableau, mais ce n'est pas nécessaire. L'analyseur ignorera les espaces répétées.</p>
+
+<p>Le premier mot d'une ligne indique à Firefox ce qui est déclaré (le contenu, le thème graphique, la langue, ou d'autres choses que nous verrons plus loin). Le second est le nom du paquet, que nous expliquerons bientôt. Les paquets des thèmes et langages ont une troisième valeur afin de définir ce qu'ils étendent. Il peut y avoir plusieurs thèmes ou langages. Le cas le plus fréquent est d'avoir une seule entrée pour le thème correspondant au thème global <em>classic/1.0</em>, et des entrées multiples de langages, une pour chaque langue. Enfin, l'emplacement est spécifié. Note sur le schéma jar: ; il indique à Firefox de d'ouvrir le fichier JAR et de lire les fichiers à leur emplacement. Si vous voulez avoir une extension avec un répertoire chrome non empaqueté, il vous suffit de modifier les chemins d'accès en quelque chose comme <em>chrome/ content/</em>.</p>
+
+<p>Quelques options supplémentaires peuvent être inclues dans les entrées d'un fichier <em>chrome.manifest</em>. Elles sont documentées dans la page <a href="/fr/Enregistrement_chrome" title="fr/Enregistrement chrome">Enregistrement Chrome</a>. Notamment, nous pouvons avoir des entrées qui sont spécifiques à l'OS. Ceci est important, spécialement dans Firefox 3 et plus, où l'apparence du navigateur est très différente selon le système d'exploitation. Si notre extension doit avoir une apparence différence sur d'autres systèmes, nous pourrions modifier le fichier manifest comme ceci :</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java">content   xulschoolhello              jar:chrome/xulschoolhello.jar!/content/
+skin      xulschoolhello  classic/1.0 jar:chrome/xulschoolhello.jar!/skin/unix/
+skin      xulschoolhello  classic/1.0 jar:chrome/xulschoolhello.jar!/skin/mac/ os=Darwin
+skin      xulschoolhello  classic/1.0 jar:chrome/xulschoolhello.jar!/skin/win/ os=WinNT
+locale    xulschoolhello  en-US       jar:chrome/xulschoolhello.jar!/locale/en-US/</pre>
+</div>
+</div>
+
+<p>De cette façon, nous pouvons avoir des thèmes graphiques  distincts pour Windows, Mac OS X, et Linux (ainsi que d'autres systèmes de type Unix), définis chacun dans un répertoire distinct. Comme la plupart des autres systèmes sont basés sur Unix, le thème "unix" est la valeur par défaut, sans drapeaux.</p>
+
+<h2 id="Le_Chrome">Le Chrome</h2>
+
+<p>Comme mentionné précédemment, le chrome est composé de 3 sections : le contenu, le langage et le thème. Le contenu est la section la plus importante, contenant les fichiers de l'interface utilisateur (XUL) et du script (JS). La section du thème contient les fichiers définissant principalement l'apparence graphique de l'interface utilisateur (en utilisant le CSS et les images, tout comme les pages Web). Enfin, la section du langage regroupe tous les textes utilisés dans l'extension, dans des fichiers DTD et properties. Cette division permet aux développeurs de créer d'autres thèmes graphiques, et aux traducteurs de créer des versions dans des langues différentes, tout cela sans avoir à modifier votre extension ou votre code. Cela donne aux extensions Firefox beaucoup de flexibilité.</p>
+
+<p>Les fichiers Chrome sont accessibles via le protocole chrome. Les URIs chrome sont définis comme suit </p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java">chrome:<span class="code-comment">//packagename/section/path/to/file</span></pre>
+</div>
+</div>
+
+<p>Ainsi, par exemple, si je veux accéder au fichier <em>browserOverlay.xul</em> dans l'extension, l'URI chrome serait <em><a class="external" rel="freelink">chrome://xulschoolhello/content/browserOverlay.xul</a></em>. Si vous avez trop de fichiers dans le contenu et vous souhaitez les organiser en sous-répertoires, il n'y a rien à changer de <em>chrome.manifest</em>, il vous suffit d'ajouter le chemin correspondant après <em>content</em> dans l'URI. Les fichiers des thèmes ou de langages fonctionnent de la même manière, et vous n'avez pas besoin de spécifier leurs noms exacts. Ainsi, pour accéder au fichier DTD dans l'exemple Hello World, le chemin de chrome est <em><a class="external" rel="freelink">chrome://xulschoolhello/locale/browserOverlay.dtd</a></em>. Firefox sait de quel fichier de traduction il s'agit.</p>
+
+<p>Voici une expérience intéressante. Ouvrez un nouvel onglet Firefox, tapez <em><a class="external" rel="freelink">chrome://mozapps/content/downloads/downloads.xul</a></em> dans votre barre d'adresse et appuyez sur ENTRER. Surpris ? Vous venez d'ouvrir la fenêtre des Téléchargements dans un onglet Firefox ! Vous pouvez accéder à un fichier chrome en tapant simplement son URI dans la barre d'adresse. Cela peut être utile si vous voulez inspecter les fichiers de script qui font partie de Firefox, d'autres extensions, ou de la votre. La plupart de ces fichiers sont ouverts sous forme de fichiers texte, à l'exception des fichiers XUL qui sont exécutés et affichés comme vous les verriez normalement sur une fenêtre.</p>
+
+<h3 id="Content">Content</h3>
+
+<p>Il y a 2 fichiers dans le répertoire content. Regardons le premier fichier XUL.</p>
+
+<p>Les fichiers <a href="/XUL" title="XUL">XUL</a> sont des fichiers XML qui définissent les éléments de l'interface utilisateur dans Firefox et les extensions Firefox. XUL a été inspiré par le HTML, donc vous verrez beaucoup de similitudes entre les deux. Cependant, XUL est aussi une amélioration par rapport à HTML, ayant appris de bon nombre des erreurs commises durant l'évolution de HTML. XUL permet de créer des interfaces plus riches et plus interactives que celles que vous pouvez créer avec le langage HTML, ou tout au moins XUL les rend plus facile.</p>
+
+<p>Les fichiers XUL définissent généralement l'une des deux choses suivantes : les fenêtres ou les superpositions (overlay). Le fichier que vous avez ouvert précédemment, <em>downloads.xul</em>, a un code qui définit la fenêtre de téléchargements. Le fichier XUL inclus dans l'extension Hello World est une superposition. Une superposition étend une fenêtre existante, en ajoutant de nouveaux éléments ou en remplaçant certains des éléments qu'elle contient. La ligne que nous avons sauté dans les lignes du fichier <em>chrome.manifest</em> décrit que ce fichier XUL est une superposition de la fenêtre principale du navigateur :</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java">overlay chrome:<span class="code-comment">//browser/content/browser.xul  chrome://xulschoolhello/content/browserOverlay.xul</span></pre>
+</div>
+</div>
+
+<p>With this line, Firefox knows that it needs to take the contents of <em>browserOverlay.xul</em> and overlay it on the main browser window, <em>browser.xul</em>. You can declare overlays for any window or dialog in Firefox, but overlaying the main browser window is the most common case by far.</p>
+
+<p>Now let's look at the contents of our XUL file. We'll skip the first few lines because they relate to skin and locale, which we'll cover later.</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java">&lt;overlay id="xulschoolhello-browser-overlay"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;</pre>
+</div>
+</div>
+
+<p>The root element in the file is an <em>overlay</em>. Other XUL documents use the <em>window</em> or <em>dialog</em> tag. The element has a unique id, which you should have on most elements in your XUL. The second attribute is the namespace, which is something you should always define in your XUL root element. It says that this node and all child nodes are XUL. You only need to change namespace declarations when you combine different types of content, such as XUL with HTML or SVG.</p>
+
+<div class="panel" style="border-width: 1px;">
+<div class="panelContent">
+<div class="note">You may have noticed the naming we use on several places, such as the id <em>xulschoolhello-browser-overlay</em>. This is the namespacing standard that we use to avoid conflicts with Firefox and other extensions, as well as making some development tasks easier. We namespace all ids and style classes in overlay elements because they will be mixed with other elements in the main browser window. If we used generic ids like <em>container</em> or <em>input</em>, they will likely conflict with ids used within Firefox, or with ids from other extension overlays. Using namespaces minimizes compatibility problems with other extensions. We use camel casing for file names, and all lower case with dashes for element ids and CSS style class names.</div>
+</div>
+</div>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java">&lt;script type=<span class="code-quote">"application/x-javascript"</span>
+  src=<span class="code-quote">"chrome:<span class="code-comment">//xulschoolhello/content/browserOverlay.js"</span> /&gt;</span></pre>
+</div>
+</div>
+
+<p>Just like in HTML, this includes a JavaScript script file. You can have as many <em>script</em> elements on a XUL file as you need. We'll look into its code later.</p>
+
+<div class="panel" style="border-width: 1px;">
+<div class="panelContent">
+<div class="note">You also probably noticed how we format our code, and wonder about the rules we follow. Our general rule on line length is not having lines longer than 80 characters. This feels very restrictive, specially with XML files, but the number was chosen to allow pretty much any text editor to handle these files easily. Even old command line editors work well with files that cut their lines at 80 characters. The tabulation is very straightforward: 2 blank space indents. We never use actual tab characters, with the exception of Makefiles, which will be covered later on. Most of our coding standards are based on Mozilla's or other known and used standards.</div>
+</div>
+</div>
+
+<p> We'll skip some code that is covered in the locale section, moving on to the most important part of the content:</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java">&lt;menubar id="main-menubar"&gt;
+  &lt;menu id="xulschoolhello-hello-menu" label="&amp;xulschoolhello.hello.label;"
+    accesskey="&amp;xulschoolhello.helloMenu.accesskey;" insertafter="helpMenu"&gt;
+    &lt;menupopup&gt;
+      &lt;menuitem id="xulschoolhello-hello-menu-item"
+        label="&amp;xulschoolhello.hello.label;"
+        accesskey="&amp;xulschoolhello.helloItem.accesskey;"
+        oncommand="XULSchoolChrome.BrowserOverlay.sayHello(event);" /&gt;
+    &lt;/menupopup&gt;
+  &lt;/menu&gt;
+&lt;/menubar&gt;</pre>
+</div>
+</div>
+
+<p>This is the code that adds the Hello World menu to the browser window. In order to write this code, we needed some knowledge of the XUL code in <em>browser.xul</em>. We needed to know that the id of the main menu is <em>main-menubar</em>. We're adding a menu of our own, and telling Firefox to add it in the main menu bar, right after the Help menu. That's the purpose of the attribute:</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java">insertafter=<span class="code-quote">"helpMenu"</span></pre>
+</div>
+</div>
+
+<p><em>helpMenu</em> is the id of the menu element that corresponds to the Help menu in the main menu of the browser. We'll see later how we can find out things like the ids of browser elements, but for now let's look at the elements that compose the Hello World menu.</p>
+
+<p>The <a href="/en/XUL/menubar" title="en/XUL/menubar">menubar</a> element represents the menu bar you normally see at the top of an application window. The main Firefox window has one, but few of its other windows do. It's also rare for additional extension windows to have their own menu bars.</p>
+
+<p>We added the Hello World menu right in the "root" of the menu bar so that it would be very easy for you to spot it, but this is not a recommended practice. Imagine if all extensions added menus to the top menu bar; having a few extensions would make the menu look like an airplane dashboard, full of options. The recommended location for extension menus is under the <em>Tools</em> menu, so the code should really look like this:</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java">&lt;menupopup id=<span class="code-quote">"menu_ToolsPopup"</span>&gt;
+  &lt;menu id=<span class="code-quote">"xulschoolhello-hello-menu"</span> label=<span class="code-quote">"&amp;</span><span class="code-quote">xulschoolhello</span><span class="code-quote">.hello.label;"</span>
+    accesskey=<span class="code-quote">"&amp;</span><span class="code-quote">xulschoolhello</span><span class="code-quote">.helloMenu.accesskey;"</span>
+    insertafter=<span class="code-quote">"javascriptConsole,devToolsSeparator"</span>&gt;
+    &lt;menupopup&gt;
+      &lt;menuitem id=<span class="code-quote">"</span><span class="code-quote">xulschoolhello</span><span class="code-quote">-hello-menu-item"
+      </span>  label=<span class="code-quote">"&amp;</span><span class="code-quote">xulschoolhello</span><span class="code-quote">.hello.label;"</span>
+        accesskey=<span class="code-quote">"&amp;</span><span class="code-quote">xulschoolhello</span><span class="code-quote">.helloItem.accesskey;"</span>
+        oncommand=<span class="code-quote">"XULSchoolChrome.BrowserOverlay.sayHello(event);"</span> /&gt;
+    &lt;/menupopup&gt;
+  &lt;/menu&gt;
+&lt;/menupopup&gt;</pre>
+</div>
+</div>
+
+<p>We're overlaying a menu that is deeper into the XUL tree, but it doesn't matter because all we need is the id of the element we want to overlay. In this case it is the <a href="/en/XUL/menupopup" title="en/XUL/menupopup">menupopup</a> element that's inside of the Tools <a href="/en/XUL/menu" title="en/XUL/menu">menu</a> element. The <em>insertafter</em> attribute tells Firefox to add the menu below the Error Console item (formerly known as JavaScript Console) in the Tools menu, just like recommended in the <a href="/en/Extension_Etiquette" title="en/Extension Etiquette"><span class="external">Extension Etiquette page</span></a>. We'll discuss more about menus later on in the tutorial. For now let's focus on the following line:</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java">oncommand=<span class="code-quote">"XULSchoolChrome.BrowserOverlay.sayHello(event);"</span></pre>
+</div>
+</div>
+
+<p>This attribute defines an event handler. The <em>command</em> event is the most frequently used in Firefox, since it corresponds to the main action for most UI elements. The value of the attribute is JavaScript code that invokes a function. This function is defined in the JS file that was included with the <em>script</em> tag. The JS function will be called once the user clicks on the menu item in the Hello World menu. All event handlers define a special object named <em>event</em>, which is usually good to pass as an argument to the function. Event handlers are explained in grater depth further ahead.</p>
+
+<p>Now let's look at the JavaScript file and see what's going on when the event is fired.</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="brush: js">/**
+ * XULSchoolChrome namespace.
+ */
+if ("undefined" == typeof(XULSchoolChrome)) {
+  var XULSchoolChrome = {};
+};</pre>
+</div>
+</div>
+
+<p>The <em>XULSchoolChrome</em> namespace is defined. All objects and variables we define in this JavaScript are global, meaning that scripts in Firefox and other extensions can see them and interact with them. This also means that if we define an object called <em>MenuHandler</em> or some other generic name, it's likely going to conflict with an existing object. What we do here is define a single global object: <em>XULSchoolChrome</em>. Now we know that all of our objects are inside this object, which is unlikely to be duplicated or overwritten by other extensions.</p>
+
+<p>You can read more about the <a href="/en/JavaScript/Reference/Operators/Special/typeof" title="en/Core JavaScript 1.5
+Reference/Operators/Special Operators/typeof Operator"><span class="external">typeof operator</span></a>. If you're unfamiliar with JavaScript or this particular syntax, initializing an object as <em>{}</em> is the equivalent of initializing it to <em>new Object()</em>.</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="brush: js">/**
+ * Controls the browser overlay <span class="code-keyword">for</span> the Hello World extension.
+ */
+XULSchoolChrome.BrowserOverlay = {</pre>
+</div>
+</div>
+
+<p>Finally, <em>BrowserOverlay</em> is our object. Naming and referencing  objects in such a long and verbose manner can feel uncomfortable at first, but it's worth the cost.</p>
+
+<div class="panel" style="border-width: 1px;">
+<div class="panelContent">
+<div class="note">We use <a class="external" href="http://java.sun.com/j2se/javadoc/writingdoccomments/index.html">Javadoc</a> style comments on all namespaces, objects and object members. This is a similar standard to the one used in Mozilla code, and some tools can generate documentation automatically from Javadoc.</div>
+</div>
+</div>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="brush: js">sayHello : function(aEvent) {
+  let stringBundle = document.getElementById("xulschoolhello-string-bundle");
+  let message = stringBundle.getString("xulschoolhello.greeting.label");
+
+  window.alert(message);
+}</pre>
+</div>
+</div>
+
+<p>And, finally, this is our function declaration. Three lines of code are all we need for it to work. The first line in the body of the function declares a variable that will hold the <a href="/en/XUL/stringbundle" title="en/XUL/stringBundle">stringbundle</a> element defined in the overlay. The variable is declared using <em>let,</em> which is similar to <em>var</em> but with more restricted scope. Here you can read more about <a href="/en/JavaScript/New_in_JavaScript/1.7#Block_scope_with_let" title="en/New in JavaScript 1.7#Block scope
+with let"><span class="external">let declarations</span></a>. It's worth noting that this is a relatively new addition to JavaScript in Firefox and you should use <em>var</em> if you're creating an extension compatible with very old versions.</p>
+
+<p>Just like in regular JS, we can use the <a href="/en/DOM" title="en/DOM"><span class="external">DOM</span></a> (Document Object Model) in order to manipulate the XUL document. First we get a reference of the <a href="/en/XUL/stringbundle" title="en/XUL/stringbundle"><span class="external">stringbundle element</span></a> in the document. This is a special element that allows us to obtain localized strings dynamically, by only providing a "key" that identifies the string. This is what we do on the second line. We call the <a href="/en/XUL/stringbundle#m-getString" title="en/XUL/stringbundle#m-getString">getString method</a> of the bundle element and get the localized message to be displayed. We then call the <a href="/en/DOM/window.alert" title="en/DOM/window.alert">window.alert</a> function with the message, just like we would do in an HTML document.</p>
+
+<h3 id="Locale">Locale</h3>
+
+<p>There are two types of locale files: DTD and properties, and in this example we use them both. DTD is the most efficient way of showing text in XUL, so you should use it whenever possible. It is somewhat inflexible so it can't be used for dynamically generated text, hence the need for an alternate way of getting localized strings.</p>
+
+<p>Looking back at the menu code, you probably noticed some attributes such as this:</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java">label=<span class="code-quote">"&amp;xulschoolhello.hello.label;"</span> accesskey=<span class="code-quote">"&amp;xulschoolhello.helloItem.accesskey;"</span></pre>
+</div>
+</div>
+
+<p>These attributes define the text that you see on the menus, and they are string keys that are defined in our DTD file, <em>browserOverlay.dtd</em>. The DTD file was included in the XUL file with the following code:</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java">&lt;!DOCTYPE overlay SYSTEM "chrome://xulschoolhello/locale/browserOverlay.dtd" &gt;</pre>
+</div>
+</div>
+
+<p>And in the DTD file you can see the association between keys and localized strings:</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java">&lt;!ENTITY xulschoolhello.hello.label            <span class="code-quote">"Hello World!"</span>&gt;
+&lt;!ENTITY xulschoolhello.helloMenu.accesskey    <span class="code-quote">"l"</span>&gt;
+&lt;!ENTITY xulschoolhello.helloItem.accesskey    <span class="code-quote">"H"</span>&gt;</pre>
+</div>
+</div>
+
+<p>Notice that on the XUL file you enclose the string key with <em>&amp;</em> and <em>;</em> while on the DTD file you only specify the key. You may get weird parsing errors or incorrect localization if you don't get it right.</p>
+
+<p>Access keys are the shortcuts that allow you to quickly navigate a menu using only the keyboard. They are also the only way to navigate a menu for people with accessibility problems, such as partial or total blindness, or physical disabilities that make using a mouse very difficult or impossible. You can easily recognize the access keys on Windows because the letter that corresponds to the access key is underlined, as in the following image:</p>
+
+<div>
+<p><img alt="" class="internal" src="../../../../@api/deki/files/4226/=accesskeys.png" style="height: 58px; width: 167px;"></p>
+</div>
+
+<p>Most user interface controls have the <em>accesskey</em> attribute, and you should use it. The value of the access key is localized because it should match a letter in the label text. You should also be careful to avoid access key repetition. For example, within a menu or submenu, access keys should not be repeated. In a window you have to be more careful picking access keys because there are usually more controls there. You have to be specially careful when picking access keys on an overlay. In our case, we can't use the letter "H" as an accesskey in the Main menu item, because it would be the same as the access key in the Help menu. Same goes with "W" and the Window menu on Mac OS. So we settled on the letter "l".</p>
+
+<p>DTD strings are resolved and set when the document is being loaded. If you request the <em>label</em> attribute value for the Hello World menu using DOM, you get the localized string, not the string key. You cannot dynamically change an attribute value with a new DTD key, you have to set the new value directly:</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="brush: js">let helloItem = document.getElementById(<span class="code-quote">"xulschoolhello-hello-menu-item"</span>);
+
+<span class="code-comment">// The alert will say <span class="code-quote">"Hello World!"</span>
+</span>alert(helloItem.getAttribute(<span class="code-quote">"label"</span>));
+<span class="code-comment">// Wrong
+</span>helloItem.setAttribute(<span class="code-quote">"label"</span>, <span class="code-quote">"&amp;</span><span class="code-quote">xulschoolhello</span><span class="code-quote">.hello2.label;"</span>);
+<span class="code-comment">// Better
+</span>helloItem.setAttribute(<span class="code-quote">"label"</span>, <span class="code-quote">"Alternate message"</span>);
+<span class="code-comment">// Right!
+</span>helloItem.setAttribute(<span class="code-quote">"label"</span>, someStringBundle.getString(<span class="code-quote">"</span><span class="code-quote">xulschoolhello</span><span class="code-quote">.hello2.label"</span>));</pre>
+</div>
+</div>
+
+<p>This is the reason DTD strings are not a solution for all localization cases, and the reason we often need to include string bundles in XUL files:</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java">&lt;stringbundleset id="stringbundleset"&gt;
+  &lt;stringbundle id="xulschoolhello-string-bundle"
+    src="chrome://xulschoolhello/locale/browserOverlay.properties" /&gt;
+&lt;/stringbundleset&gt;</pre>
+</div>
+</div>
+
+<p>The <a href="/en/XUL/stringbundleset" title="en/XUL/stringbundleset">stringbundleset</a> element is just a container for <a href="/en/XUL/stringbundle" title="en/XUL/stringbundle">stringbundle</a> elements. There should only be one per document, which is the reason why we overlay the <em>stringbundleset</em> that is in <em>browser.xul</em>, hence the very generic id. We don't include the <em>insertbefore</em> or <em>insertafter</em> attributes because the ordering of string bundles doesn't make a difference. The element is completely invisible. If you don't include any of those ordering attributes in an overlay element, Firefox will just append your element as the last child of the parent element.</p>
+
+<p>All you need for the string bundle is an id (to be able to fetch the element later) and the chrome path to the properties file. And, of course, you need the properties file:</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java">xulshoolhello.greeting.label = Hi! How are you?</pre>
+</div>
+</div>
+
+<p>The whitespace around the equals sign is ignored. Just like in <em>install.rdf</em>, comments can be added using the # character at the beginning of the line. Empty lines are ignored as well.</p>
+
+<p>You will often want to include dynamic content as part of localized strings, like when you want to inform the user about some stat related to the extension. For example: "Found 5 words matching the search query". Your first idea would probably be to simply concatenate strings, and have one "Found" property and another "words matching..." property. This is not a good idea. It greatly complicates the work of localizers, and grammar rules on different languages may change the ordering of the sentence entirely. For this reason it's better to use parameters in the properties:</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java">xulshoolhello.search.label = Found %S words matching the search query!</pre>
+</div>
+</div>
+
+<p>Then you use <a href="/en/XUL/stringbundle#m-getFormattedString" title="en/XUL/stringbundle#m-getFormattedString">getFormattedString</a> instead of <em>getString</em> in order to get the localized string. Thanks to this we don't need to have multiple properties, and life is easier for translators. You can read more about it on the <a href="/en/XUL_Tutorial/Property_Files#Text_Formatting" title="en/XUL Tutorial/Property Files#Text Formatting">Text Formatting section</a> of the XUL Tutorial. Also have a look at the <a href="/en/Localization_and_Plurals" title="en/Localization and Plurals">Plurals and Localization</a> article, that covers a new localization feature in Firefox 3 that allows you to further refine this last example to handle different types of plural forms that are also language-dependent.</p>
+
+<h3 id="Skin">Skin</h3>
+
+<p>Styling XUL is very similar to styling HTML. We'll look into some of the differences when we cover the XUL Box Model, and other more advanced topics. There isn't much styling you can do to a minimal menu and a very simple alert message, so the Hello World extension only includes an empty CSS file and the compulsory global skin file:</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java">&lt;?xml-stylesheet type=<span class="code-quote">"text/css"</span> href=<span class="code-quote">"chrome:<span class="code-comment">//global/skin/"</span>  ?&gt;
+</span>&lt;?xml-stylesheet type=<span class="code-quote">"text/css"</span>
+  href=<span class="code-quote">"chrome:<span class="code-comment">//xulschoolhello/skin/browserOverlay.css"</span>  ?&gt;</span></pre>
+</div>
+</div>
+
+<p>The global skin CSS file holds the default styles for all XUL elements and windows. Forgetting to include this file in a XUL window usually leads to interesting and often unwanted results. In our case we don't really need to include it, since we're overlaying the main browser XUL file, and that file already includes this global CSS. At any rate it's better to always include it. This way it's harder to make the mistake of not including it. You can enter the chrome path in the location bar and inspect the file if you're curious.</p>
+
+<p>This covers all of the files in the Hello World extension. Now you should have an idea of the basics involved in extension development, so now we'll jump right in and set up a development environment. But first, a little exercise.</p>
+
+<h2 id="Exercise">Exercise</h2>
+
+<p>Change the welcome message that is displayed in the alert window and move the Hello World menu to the Tools Menu, where it belongs. Repackage the XPI and re-install it. You can just drag the XPI file to the browser and it will be installed locally. Test it and verify your changes worked. If you run into problems at installation, it's likely that you didn't reproduce the XPI structure correctly, maybe adding unnecessary folders.</p>
+
+<p>Once you're done, you can look at this reference solution: <a class="internal" href="/@api/deki/files/4227/=xulschoolhello2.xpi" title="/@api/deki/files/4227/=xulschoolhello2.xpi">Hello World 2</a>.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Vulgarisation_XUL/Premiers_pas_avec_les_extensions_Firefox" style="float: left;">« Précédent</a><a href="/fr/docs/XUL_School/Setting_Up_a_Development_Environment">Suivant  »</a></p>
+</div>
+
+<p><span style="font-size: small;">This tutorial was kindly donated to Mozilla by Appcoast.</span></p>

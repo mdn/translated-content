@@ -1,0 +1,41 @@
+---
+title: 'Appendix A: Add-on Performance'
+slug: 'Archive/Mozilla/XUL/School_tutorial/Appendix_A:_Add-on_Performance'
+tags:
+  - Add-ons
+  - Extensions
+  - Performance
+translation_of: 'Archive/Add-ons/Overlay_Extensions/XUL_School/Appendix_A:_Add-on_Performance'
+---
+<p>アドオンは、Firefox のパフォーマンスに大きな影響を与えます。これは、多くのアドオンがインストールされた Firefox のプロファイルを開くと明らかになります。プロファイルによっては読み込みに時間がかかり、ユーザに迷惑をかけ、Firefox に対して悪い印象を与えます。アドオン開発者は、アドオンが Firefox のパフォーマンスに与える影響を最小限にする必要があります。ここでは、これを達成するために従うべき簡単なガイドラインを紹介します。</p>
+<h2 id="Startup" name="Startup">起動時</h2>
+<p>これは、アドオンがパフォーマンスに最も影響を与える部分です。ほとんどのアドオンは、そのオブジェクトの初期化やファイルの読み込み、またはリモートデータを取得するために、load イベントハンドラをメインのオーバーレイ内で使用します。<em>onload</em> イベントの問題は、メインのウィンドウが表示される前に実行されることです。そのため、ユーザがウィンドウを見られるようになる前に、すべてのハンドラが完了する必要があります。アドオンによる load ハンドラが原因で、通常は数百ミリ秒が起動時間に追加されます。これをどのアドオンが行っているかを知るのは難しくありません。</p>
+<p>幸運なことに、次のガイドラインに従えば、簡単に起動時間を短くすることができます:</p>
+<ol>
+ <li>必要になるまで、コードを読み込んだり実行したりしてはいけません。アドオンは、ユーザの操作に依存して利用可能になる追加の機能を持つことができます。他のアドオンで、ユーザがサービスにログインしなければほとんどの機能が利用できないものもあります。起動時に必要でないものは読み込んではいけません。</li>
+ <li><a href="/ja/docs/JavaScript_code_modules/Using" title="JavaScript_code_modules/Using">JavaScript コードモジュール</a> (JSM) を使用してください。 JSM により、JavaScript コードを純粋なモジュールに分離できます。これは、起動時にオーバーレイと共に読み込まれる chrome スクリプトと違い、要求に応じて読み込まれます。できるだけ多くのコードを JSM に置き、モジュール化してください。そして、必要なモジュールだけを読み込んでください。あなたのアドオンが JSM を使用するほど複雑でない場合は、気にしないでください。まだ、もう一つできることがあります。</li>
+ <li>load ハンドラ内のコードは、できるだけ少なくしてください。後で 100ms か 500ms で実行できるものがありませんか？ もしあるなら、<a href="/ja/docs/XPCOM_Interface_Reference/nsITimer" title="XPCOM_Interface_Reference/nsITimer">nsITimer</a> や <a href="/ja/docs/DOM/window.setTimeout" title="DOM/window.setTimeout">setTimeout</a> 関数を使用し、そのコードの実行を遅らせてください。Firefox ウィンドウが早く読み込まれ、そのすぐ後に、ホームページや保存されたセッションの読み込みと並行して、あなたの起動時のコードが実行されるでしょう。これで browser の読み込みが速くなりました。実際は、あなたのコードが起動時に読み込まれます。これらのことを行うコードはとても簡単です:</li>
+</ol>
+<pre class="brush: js">// これは load イベントハンドラ内で呼び出される関数です
+init : function() {
+  let that = this;
+  // 後でこれを実行し、window を読み込ませます
+  window.setTimeout(function() { that.postInit(); }, 500);
+},
+
+postInit: function() {
+  // 実際の初期化コードをここに書きます
+},
+</pre>
+<p>このコードがどのように動作するか言えますか？ <a class="link-https" href="https://wiki.mozilla.org/Firefox/Projects/StartupPerformance/MeasuringStartup" title="https://wiki.mozilla.org/Firefox/Projects/StartupPerformance/MeasuringStartup">Measuring Startup</a> の Wiki ページには、これに関する簡単なテストがあります。このテストで、初期状態の Firefox のプロファイルとあなたのアドオンがインストールされたプロファイルを比べてください。</p>
+<h2 id="Page_Loads" name="Page_Loads">ページの読み込み</h2>
+<p>これは、多くのアドオンが足を踏み入れるもう一つの重大なルートです。<a href="/ja/docs/XUL_School/Intercepting_Page_Loads" title="XUL School/Intercepting Page Loads">ページ読み込みへの割り込み</a>のセクションに、いくつかのテクニックの詳細があります。これらすべてを注意しながら読み、必要なテクニックを理解してください。これらのイベントの一部は、一つのページの読み込み中に何度も発生します。イベントハンドラ内に効率の悪いコードがあると、ユーザが待ちくたびれるほどの大きな遅延を引き起こす原因となります。</p>
+<p>記事内のソースコードのサンプルを見て、それらのほとんどが <em>if</em> 条件文から成っていることに注目してください。これは、不要なケースをフィルタで除外し、それらのリクエストによってアドオンが遅くならないようにするために、<strong>はじめに</strong>行うべきことです。ほとんどのアドオンが少数のドメインに制限されるため、一般的にはページの URL をフィルタにします。必要であれば正規表現を使用し、あなたの比較コードができるだけ効率的にしてください。</p>
+<p>最後に、ページを読み込むすべてのコードを効率的にしてください。これは、ホワイトリストやブラックリストを確認する必要のある広告ブロックまたはスクリプトブロックのような、一部のアドオンにとって扱いにくいコードになります。それにも係わらず、ページの読み込みは Firefox にとって重要な部分であり、ユーザがその速さを期待する部分でもあります。ページの読み込みが遅くならないように最善を尽くしてください。</p>
+<h2 id="Other_Recommendations" name="Other_Recommendations">その他の推奨事項</h2>
+<ul>
+ <li>常に後始末をしてください。イベントリスナーやオブザーバ、他のハンドラは通常、add と remove の両方の関数を持っています。必要なくなった時に remove を呼び出すことを忘れてはいけません！ window 全体の中で何か必要とするものがあっても、unload イベントハンドラ内ですべての後始末をしてください。</li>
+ <li>unload イベントは効率的に扱われるべきです。他の部分ほど重要でなくても、アドオンが原因で Firefox のシャットダウンが遅くなることがあります。シャットダウンの前に unload できるものがある場合や、さらに効率的に unload できるものがある場合は、それを行うことが重要です。</li>
+ <li>決して、同期モードで XMLHttpRequest を<strong>使用しないでください</strong>。</li>
+ <li>あなたのアドオンがデータの並べ替えや複雑で厳密な計算などの重い処理を行う必要がある場合は、<a href="/ja/docs/Using_web_workers" title="Using web workers">DOM Workers</a> を利用し、作業を他のスレッドへ振り分けてください。</li>
+</ul>

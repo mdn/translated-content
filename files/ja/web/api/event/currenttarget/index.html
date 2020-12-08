@@ -1,0 +1,105 @@
+---
+title: Event.currentTarget
+slug: Web/API/Event/currentTarget
+tags:
+  - API
+  - DOM
+  - Gecko
+  - NeedsBrowserCompatibility
+  - Property
+translation_of: Web/API/Event/currentTarget
+---
+<p>{{APIRef("DOM")}}</p>
+
+<p>イベントは DOM を横断するので、イベントの現在のターゲットを識別します。イベントが発生した要素を特定する <code>event.target</code> とは対照的に、常にイベントハンドラがアタッチされた要素を参照します。</p>
+
+<h2 id="例">例</h2>
+
+<p><code>event.currentTarget</code> は、同じイベントハンドラを複数の要素にアタッチしているときに使用すると興味深いです。</p>
+
+<pre class="brush: js">function hide(e){
+  e.currentTarget.style.visibility = "hidden";
+  // この関数がイベントハンドラとして使用されるとき： this === e.currentTarget
+}
+
+var ps = document.getElementsByTagName('p');
+
+for(var i = 0; i &lt; ps.length; i++){
+  ps[i].addEventListener('click', hide, false);
+}
+
+// 周辺をクリックすると段落が消えます。
+</pre>
+
+<h2 id="仕様">仕様</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>仕様</th>
+   <th>状態</th>
+   <th>コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("DOM2 Events", "#Events-Event-currentTarget", "Event.currentTarget")}}</td>
+   <td>{{Spec2("DOM2 Events")}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>機能</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>基本サポート</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>機能</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>基本サポート</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Internet Explorer 6 から 8 では、イベントモデルが異なります。イベントリスナは非標準の <code>element.attachEvent</code> メソッドでアタッチされます。このモデルでは、<code>event.currentTarget</code> と同等の機能はなく、<code>this</code> はグローバルオブジェクトです。<code>event.currentTarget</code> 機能をエミュレートするための 1 つの解決策は、ハンドラを最初の引数として要素とともに <code>Function.prototype.call</code> を使用するハンドラを呼び出す関数でラップすることです。この方法であれば、 <code>this</code> は予想通りの値になります。</p>
+
+<h2 id="関連項目">関連項目</h2>
+
+<p><a href="/ja/docs/Web/API/Event/Comparison_of_Event_Targets">Comparison of Event Targets</a></p>

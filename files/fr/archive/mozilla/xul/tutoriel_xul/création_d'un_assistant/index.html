@@ -1,0 +1,141 @@
+---
+title: Création d'un assistant
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Création_d'un_assistant
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Creating_a_Wizard
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Boîte_de_dialogue_de_fichier" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Assistant_avançé">Suivant  »</a></p>
+</div>
+
+<p>Beaucoup d'applications utilisent des assistants pour aider l'utilisateur dans des tâches complexes. XUL fournit un moyen de créer des assistants facilement.</p>
+
+<h3 id="L.27.C3.A9l.C3.A9ment_XULElemwizard" name="L.27.C3.A9l.C3.A9ment_XULElemwizard">L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/wizard" title="wizard">wizard</a></code></h3>
+
+<p>Un assistant est un type spécial de boîte de dialogue, contenant un certain nombre de pages. Des boutons de navigation apparaissent en bas de la boîte de dialogue pour passer d'une page à l'autre. Les assistants sont habituellement utilisés pour aider l'utilisateur à effectuer des tâches complexes. Chaque page contient une seule question ou un ensemble de questions associées. À la dernière page, l'opération est effectuée.</p>
+
+<p>XUL fournit un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/wizard" title="wizard">wizard</a></code> qui peut être utilisé pour créer des assistants. Le contenu à l'intérieur de l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/wizard" title="wizard">wizard</a></code> inclut tout le contenu de chaque page. Les attributs placés sur l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/wizard" title="wizard">wizard</a></code> sont utilisés pour contrôler la navigation. Quand vous créez un assistant, utilisez la balise <code><a href="/fr/docs/Mozilla/Tech/XUL/wizard" title="wizard">wizard</a></code> à la place de la balise <code><a href="/fr/docs/Mozilla/Tech/XUL/window" title="window">window</a></code>.</p>
+
+<div class="note">Notez que pour le moment les assistants ne fonctionnent correctement qu'à partir d'URLs chrome.</div>
+
+<p>Un assistant consiste en un ensemble de sections, bien que la mise en page exacte variera pour chaque plateforme. L'aspect visuel de l'assistant s'adaptera à la plateforme de l'utilisateur. Une mise en page type inclura un titre en haut, un ensemble de boutons de navigations en bas, et le contenu de la page entre les deux.</p>
+
+<p>Le titre du haut est créé en utilisant l'attribut <code id="a-title"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/title">title</a></code> comme on le ferait pour les fenêtres normales. Les boutons de navigation sont créés automatiquement. Les pages de l'assistant sont créées en utilisant l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/wizardpage" title="wizardpage">wizardpage</a></code>. Vous pouvez y placer tout contenu que vous voulez.</p>
+
+<h4 id="Exemple_d.27assistant" name="Exemple_d.27assistant">Exemple d'assistant</h4>
+
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_wizard_1.xul.txt">Source</a></p>
+
+<pre>&lt;?xml version="1.0" encoding="iso-8859-1"?&gt;
+
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;wizard id="example-window" title="Assistant de sélection de chien"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+  &lt;wizardpage&gt;
+    &lt;description&gt;
+      Cet assistant vous aidera à sélectionner le type de chien qui sera le mieux pour vous.
+    &lt;/description&gt;
+    &lt;label value="Pourquoi voulez vous un chien ?"/&gt;
+    &lt;menulist&gt;
+      &lt;menupopup&gt;
+        &lt;menuitem label="Pour faire peur aux gens"/&gt;
+        &lt;menuitem label="Pour se débarrasser d'un chat"/&gt;
+        &lt;menuitem label="J'ai besoin d'un meilleur ami"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menulist&gt;
+  &lt;/wizardpage&gt;
+
+  &lt;wizardpage description="Détails sur le chien"&gt;
+    &lt;label value="Fournissez plus de détails sur le chien que vous désirez :"/&gt;
+    &lt;radiogroup&gt;
+      &lt;caption label="Taille"/&gt;
+      &lt;radio value="small" label="Petit"/&gt;
+      &lt;radio value="large" label="Grand"/&gt;
+    &lt;/radiogroup&gt;
+    &lt;radiogroup&gt;
+      &lt;caption label="Sexe"/&gt;
+      &lt;radio value="male" label="Male"/&gt;
+      &lt;radio value="female" label="Femelle"/&gt;
+    &lt;/radiogroup&gt;
+  &lt;/wizardpage&gt;
+
+&lt;/wizard&gt;
+</pre>
+
+<div class="float-right"><img alt="Image:xultu_wizard1.jpg" class="internal" src="/@api/deki/files/1567/=Xultu_wizard1.jpg"></div>
+
+<p>L'assistant a deux pages, une qui a une liste déroulante et une autre qui a un ensemble de boutons radios. L'assistant sera formaté automatiquement, avec un titre en haut et un ensemble de boutons le long du bas de la fenêtre. L'utilisateur peut naviguer entre les pages de l'assistant avec les boutons 'Précédent' et 'Suivant'. Ces boutons s'activeront ou se désactiveront eux-mêmes aux moments appropriés. De plus, sur la dernière page, le bouton 'Terminer' apparaîtra. Tout ceci est automatique, aussi, vous n'avez rien à faire pour manipuler les pages.</p>
+
+<p>L'attribut <code id="a-description"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/description">description</a></code> peut être éventuellement placé sur l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/wizardpage" title="wizardpage">wizardpage</a></code> pour fournir un sous-titre pour la page concernée. Dans l'exemple du dessus, il est placé sur la seconde page, mais pas sur la première.</p>
+
+<h3 id="Gestion_des_changements_de_page" name="Gestion_des_changements_de_page">Gestion des changements de page</h3>
+
+<p>Généralement, vous souhaitez réaliser une action après que le bouton 'Terminer' ait été pressé. Vous pouvez mettre un attribut <code id="a-onwizardfinish"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/onwizardfinish">onwizardfinish</a></code> sur l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/wizard" title="wizard">wizard</a></code> pour accomplir cette tâche. Spécifiez-y un script qui exécutera ce que vous voulez et qui renverra 'true'. Le script peut être utilisé pour sauvegarder les informations que l'utilisateur a saisi dans l'assistant. Par exemple :</p>
+
+<pre>&lt;wizard id="example-window" title="Assistant de sélection de chien"
+  onwizardfinish="return saveDogInfo();"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+</pre>
+
+<p>Quand l'utilisateur clique sur le bouton 'Terminer', la fonction <code>saveDogInfo</code> définie dans un script sera appelée pour sauvegarder les informations saisies. Si la fonction renvoie 'true', l'assistant se fermera. Si elle renvoie 'false', alors l'assistant ne se fermera pas, ce qui pourrait signifier par exemple que la fonction <code>saveDogInfo</code> a rencontré une saisie invalide.</p>
+
+<p>Il existe également les attributs similaires <code id="a-onwizardback"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/onwizardback">onwizardback</a></code>, <code id="a-onwizardnext"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/onwizardnext">onwizardnext</a></code> et <code id="a-onwizardcancel"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/onwizardcancel">onwizardcancel</a></code> qui sont appelés quand les boutons 'Précédent', 'Suivant' et 'Annuler' sont respectivement pressés. Ces fonctions sont appelées quelque soit la page en cours affichée.</p>
+
+<p>Pour appeler un code différent en fonction de la page où vous êtes, utilisez les attributs <code id="a-onpagerewound"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/onpagerewound">onpagerewound</a></code> ou <code id="a-onpageadvanced"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/onpageadvanced">onpageadvanced</a></code> sur un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/wizardpage" title="wizardpage">wizardpage</a></code>. Ils fonctionnent de manière similaire aux autres fonctions, excepté que vous pouvez utiliser un script différent pour chaque page. Cette méthode vous permet de valider les informations saisies sur chaque page avant que l'utilisateur ne continue.</p>
+
+<p>Une troisième méthode est l'utilisation des attributs <code id="a-onpagehide"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/onpagehide">onpagehide</a></code> et <code id="a-onpageshow"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/onpageshow">onpageshow</a></code> sur l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/wizardpage" title="wizardpage">wizardpage</a></code>. Ils sont appelés lorsque la page est cachée ou affichée, indifféremment du bouton pressé (excepté quand le bouton 'Annuler' est pressé ; vous devez utiliser <code id="a-onwizardcancel"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/onwizardcancel">onwizardcancel</a></code> pour le vérifier).</p>
+
+<p>Ces trois méthodes devraient fournir suffisamment de souplesse pour gérer la navigation comme vous le souhaitez. Ce qui suit est un résumé des fonctions d'attributs appelées quand l'utilisateur presse 'Suivant', dans l'ordre dans lequel elles sont vérifiées. Dés que l'une renvoie 'false', la navigation est annulée.</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Attribut</th>
+   <th>Placé sur la balise</th>
+   <th>Quand est-il appelé ?</th>
+  </tr>
+  <tr>
+   <td>pagehide</td>
+   <td>wizardpage</td>
+   <td>Appelé sur la page que l'utilisateur quitte.</td>
+  </tr>
+  <tr>
+   <td>pageadvanced</td>
+   <td>wizardpage</td>
+   <td>Appelé sur la page que l'utilisateur quitte.</td>
+  </tr>
+  <tr>
+   <td>wizardnext</td>
+   <td>wizard</td>
+   <td>Appelé sur l'assistant.</td>
+  </tr>
+  <tr>
+   <td>pageshow</td>
+   <td>wizardpage</td>
+   <td>Appelé sur la page sur laquelle l'utilisateur entre.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Un processus similaire existe pour le bouton 'Précédent'.</p>
+
+<div class="note">À chaque fois que vous utiliserez une fonction dans un des événements ci-dessus, tel que pageadvanced, vous devrez utiliser <code>return NomFonct()</code> au lieu de simplement appeler <code>NomFonct()</code>.
+
+<pre>&lt;wizardpage pageadvanced='return NomFonct()'&gt;&lt;/wizardpage&gt;</pre>
+</div>
+
+<hr>
+<p>Dans la prochaine section, nous verrons des fonctionnalités supplémentaires sur les assistants.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Boîte_de_dialogue_de_fichier" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Assistant_avançé">Suivant  »</a></p>
+</div>
+
+<p><span class="comment">Interwiki</span></p>

@@ -1,0 +1,28 @@
+---
+title: How To Pass an XPCOM Object to a New Window
+slug: How_To_Pass_an_XPCOM_Object_to_a_New_Window
+translation_of: Mozilla/Tech/XPCOM/How_to_pass_an_XPCOM_object_to_a_new_window
+---
+<div class="note">
+<p><span id="result_box" lang="fr"><span class="hps">Un exemple plus</span> <span class="hps">utile</span> <span class="hps">est disponible dans</span> <span class="hps">le code source</span></span>e: <code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/help/content/contextHelp.js#61" rel="custom">toolkit/components/help/content/contextHelp.js#61</a></code></p>
+</div>
+
+<p><span id="result_box" lang="fr"><span class="hps">Si vous</span> <span class="hps">voulez être en mesure</span> <span class="hps">d'appeler des fonctions</span> <span class="hps">au sein d'un</span> <span class="hps">objet XPCOM</span> <span class="hps">à partir du code</span> <span class="hps">d'une fenêtre</span> <span class="hps">XUL</span></span>, vous pouvez le faire si vous passez l'objet XPCOM comme un des arguments de la méthode de création de la fenêtre Windows.</p>
+
+<p>Par exemple</p>
+
+<pre>var ww =
+      Components.classes["@mozilla.org/embedcomp/window-watcher;1"].
+            getService(Components.interfaces.nsIWindowWatcher);
+
+var win = ww.openWindow(null,
+      "chrome://myextension/content/debug.xul",
+      "debug history", "chrome,centerscreen,resizable", myObject);
+</pre>
+
+<p>Notez dans cet exemple que <code>myObject</code> à la méthode<code> openWindow(); vous pouvez passer tous objets XPCOM (</code>ou toute autre valeur<code>, </code>en l'occurence) par ce moyen. Pour accéder à l'objet XPCOM à partir du code de la fenêtre, vous pouvez accéder au tableau des arguments de la fenêtre comme illustré dans l'exemple ci-dessous</p>
+
+<pre>Components.utils.reportError(String(window.arguments[0]));
+</pre>
+
+<p>This will produce output similar to "<code>[xpconnect wrapped nsIMyXPCOMObject]</code>".</p>

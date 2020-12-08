@@ -1,0 +1,130 @@
+---
+title: Using the W3C DOM
+slug: Archive/Using_Web_Standards_in_your_Web_Pages/Using_the_W3C_DOM
+translation_of: Archive/Using_Web_Standards_in_your_Web_Pages/Using_the_W3C_DOM
+---
+<p>
+</p><p><code>document</code> オブジェクトはブラウザによっては要素の配列や各種の要素にアクセスするためのプロパティを持っています。たとえば Internet Explorer では、ドキュメント内の特定の要素にアクセスするのに <code>document.all[]</code> が使われます。このような配列の多くは <abbr title="World Wide Web Consortium">W3C</abbr> の Document Object Model 仕様に含まれておらず、Firefox、SeaMonkey、Netscape 7 のような標準に準拠したブラウザでは JavaScript エラーの要因になります。
+</p><p><a class="external" href="http://www.w3.org/DOM/DOMTR">W3C <abbr title="World Wide Web Consortium">W3C</abbr> Document Object Model</a> は、HTML ページのほとんどすべての要素をスクリプト処理可能なオブジェクトとして解放します。一般的に、<abbr title="World Wide Web Consortium">W3C</abbr> DOM の属性とメソッドは、DHTML プログラミングで使われていた独自のオブジェクトモデルより強力です。<strong><abbr title="World Wide Web Consortium">W3C</abbr> DOM の属性とメソッドは、MSIE 7、Opera 9、Safari 2、Konqueror 3.x、Mozilla ベースのブラウザ (Firefox、Seamonkey、Netscape 7+、Camino) などのモダンブラウザでおおむね完全にサポートされています。このため、ブラウザ独自のオブジェクトモデルに依存することで得られるメリットは何もありません。</strong>
+</p>
+<h3 id=".E3.82.B5.E3.83.9D.E3.83.BC.E3.83.88.E3.81.95.E3.82.8C.E3.81.A6.E3.81.84.E3.81.AA.E3.81.84_DOM_.E9.96.A2.E9.80.A3.E3.81.AE.E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3" name=".E3.82.B5.E3.83.9D.E3.83.BC.E3.83.88.E3.81.95.E3.82.8C.E3.81.A6.E3.81.84.E3.81.AA.E3.81.84_DOM_.E9.96.A2.E9.80.A3.E3.81.AE.E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3"> サポートされていない DOM 関連のプロパティ </h3>
+<p>以下の <code>document</code> オブジェクトプロパティは <abbr title="World Wide Web Consortium">W3C</abbr> Document Object Model ではサポートされません。
+</p>
+<ul><li> <code>document.layers[]</code>
+</li><li> <code>id_attribute_value</code>
+</li><li> <code>document.all</code>
+</li><li> <code>document.all.id_attribute_value</code>
+</li><li> <code>document.all[id_attribute_value]</code>
+</li></ul>
+<p>以下の要素プロパティ (Internet Explorer が起源) も同様に <abbr title="World Wide Web Consortium">W3C</abbr> Document Object Model ではサポートされません。
+</p>
+<ul><li> <code>FormName.InputName.value</code>
+</li><li> <code>InputName.value</code>
+</li><li> <code>FormCtrlName</code>
+</li><li> <code>document.forms(0)</code>
+</li></ul>
+<p>このようなプロパティを使うスクリプトは、Firefox、Mozilla、Netscape 7 や他の標準準拠のブラウザでは実行されません。<strong>
+</strong></p><p>代わりに、次の節で説明している <abbr title="World Wide Web Consortium">W3C</abbr> DOM のアクセス属性・メソッドを使ってください。これらは Internet Explorer でもサポートされていますので、IE 独自の属性やメソッドを使う必要はありません。
+</p>
+<h3 id="W3C_DOM_.E3.81.A7.E8.A6.81.E7.B4.A0.E3.81.AB.E3.82.A2.E3.82.AF.E3.82.BB.E3.82.B9.E3.81.99.E3.82.8B" name="W3C_DOM_.E3.81.A7.E8.A6.81.E7.B4.A0.E3.81.AB.E3.82.A2.E3.82.AF.E3.82.BB.E3.82.B9.E3.81.99.E3.82.8B"> <abbr title="World Wide Web Consortium">W3C</abbr> DOM で要素にアクセスする </h3>
+<p><strong>HTML ページの要素にスクリプトでアクセスする最良の手段は <code>document.getElementById(<var>id</var>)</code> を呼び出すことです。</strong>ほとんどのブラウザ (MSIE 5+、Firefox、NS 7+、Seamonkey、Opera 6+、Safari 1.x、Konqueror 3.x など) は document.getElementById(<var>id</var>) をサポートしています。
+</p><p>このメソッドは<strong>独特の識別名をつけた要素への参照</strong>を返し、その要素に対するスクリプトの使用を可能にします。たとえば次の短いサンプルは、「inset」という <code>id</code> のついた <code>div</code> 要素の左マージンを動的に 0.5 インチに設定します:
+</p>
+<pre>// HTML の中身: &lt;div id="inset"&gt;サンプルテキスト&lt;/div&gt;
+document.getElementById("inset").style.marginLeft = ".5in";</pre>
+<table class="standard-table" id="dom_access"> <tbody><tr style="text-align: center;"><th scope="col">要素にアクセスする IE 固有の方法</th><th scope="col"> <abbr title="World Wide Web Consortium">W3C</abbr> 標準による置き換え</th></tr> <tr><td>id_attribute_value</td><td>document.getElementById(id_attribute_value)</td></tr> <tr><td>document.all.id_attribute_value</td><td>document.getElementById(id_attribute_value)</td></tr> <tr><td>document.all[id_attribute_value]</td><td>document.getElementById(id_attribute_value)</td></tr> <tr><td>FormName.InputName.value</td><td>document.forms["FormName"].InputName.value or<br> document.forms["FormName"].elements["InputName"].value</td></tr> <tr><td>InputName.value</td><td>document.forms["FormName"].InputName.value or<br> document.forms["FormName"].elements["InputName"].value</td></tr> <tr><td>FormCtrlName</td><td>document.forms["FormName"].FormCtrlName or<br> document.forms["FormName"].elements["FormCtrlName"]</td></tr> <tr><td>document.forms(0)</td><td>document.forms[0]</td></tr> </tbody></table>
+<p>フォームとフォーム要素にアクセスする方法の詳細はこちらのリンクを参照してください。<br>
+<a class="external" href="http://jibbering.com/faq/faq_notes/form_access.html">Referencing Forms and Form Controls</a> by comp.lang.javascript newsgroup FAQ notes<br>
+<a class="external" href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-40002357">DOM 2 specification on accessing forms and form elements</a><br>
+<a class="external" href="http://www.javascripttoolbox.com/bestpractices/#forms">Referencing Forms and Form elements correctly</a>, Javascript Best Practices, by Matt Kruse
+</p><p>要素群にアクセスするために、DOM 仕様には <code>getElementsByTagName</code> もあり、与えられたタグ名のすべての要素のリストをドキュメントに現れる順で返します。
+</p>
+<pre>var arrCollection_Of_Pargs = document.getElementsByTagName("p");
+var objFirst_Parg = arrCollection_Of_Pargs[0];
+// objFirst_Parg will reference the first paragraph in the document
+objFirst_Parg.style.border = "2px solid green";
+// and now, the first paragraph in the document
+// gets a 2px solid green border.
+</pre>
+<p>これらのアクセスメソッドに加え、<abbr title="World Wide Web Consortium">W3C</abbr> DOM2 仕様は、新しい要素を作成してドキュメントに挿入するメソッド、属性や新たな内容を作成するメソッド、コンテンツツリーを縦断するメソッド、ユーザーがドキュメント自体に働きかけたときに起きるイベントの処理などのためのメソッドを提供します。
+</p>
+<h3 id=".E3.83.89.E3.82.AD.E3.83.A5.E3.83.A1.E3.83.B3.E3.83.88.E3.81.AE.E3.82.B9.E3.82.BF.E3.82.A4.E3.83.AB.E3.81.A8.E5.86.85.E5.AE.B9.E3.81.AE.E6.93.8D.E4.BD.9C" name=".E3.83.89.E3.82.AD.E3.83.A5.E3.83.A1.E3.83.B3.E3.83.88.E3.81.AE.E3.82.B9.E3.82.BF.E3.82.A4.E3.83.AB.E3.81.A8.E5.86.85.E5.AE.B9.E3.81.AE.E6.93.8D.E4.BD.9C"> ドキュメントのスタイルと内容の操作 </h3>
+<h4 id="DOM_.E3.82.92.E5.88.A9.E7.94.A8.E3.81.97.E3.81.A6.E8.A6.81.E7.B4.A0.E3.81.AE.E3.82.B9.E3.82.BF.E3.82.A4.E3.83.AB.E3.82.92.E5.A4.89.E6.9B.B4.E3.81.99.E3.82.8B" name="DOM_.E3.82.92.E5.88.A9.E7.94.A8.E3.81.97.E3.81.A6.E8.A6.81.E7.B4.A0.E3.81.AE.E3.82.B9.E3.82.BF.E3.82.A4.E3.83.AB.E3.82.92.E5.A4.89.E6.9B.B4.E3.81.99.E3.82.8B"> DOM を利用して要素のスタイルを変更する </h4>
+<p><span id="dom_manip">
+以下の表は Web ページのさまざまな HTML 要素に定義されたスタイルルールにアクセスしたり変更したりするための標準に準拠したメソッドを説明しています。<abbr title="World Wide Web Consortium">W3C</abbr> の DOM2 勧告の <a class="external" href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/css.html#CSS-extended">CSS2 拡張インターフェイス</a> を参照してください。
+</span></p><p>DOM レベル 2 では、要素の CSS プロパティに新しい値を設定するために、<code><var>ElemRef</var>.style</code> オブジェクトの参照を使用します。スタイルに対応する要素は DOM の <code>getElementById</code> や上の <a href="#dom_access">DOM アクセス</a> の節で説明したメソッドによって取得できます。
+</p>
+<table class="standard-table"> <tbody><tr style="text-align: center;">
+<th scope="col">推奨されないコーディング慣習</th>
+<th scope="col">DOM2 による適切な置き換え</th>
+</tr> <tr>
+<td>IE5+: <code><var>ElemRef</var>.style.pixelLeft</code></td>
+<td>DOM level 2: <code>parseInt(<var>ElemRef</var>.style.left, 10)</code></td>
+</tr> <tr>
+<td>IE5+: <code><var>ElemRef</var>.style.pixelTop</code></td>
+<td>DOM level 2: <code>parseInt(<var>ElemRef</var>.style.top, 10)</code></td>
+</tr> <tr>
+<td>IE5+: <code><var>ElemRef</var>.style.pixelLeft = <var>x</var>;<br>
+<var>ElemRef</var>.style.pixelTop = <var>y</var>;</code></td>
+<td>DOM level 2:<br>
+<p><code><var>ElemRef</var>.style.left = <var>x</var> + "px";</code><br>
+</p>
+<code><var>ElemRef</var>.style.top = <var>y</var> + "px";</code></td>
+</tr> </tbody></table>
+<h5 id=".E8.A6.81.E7.B4.A0.E3.81.AE_CSS_.E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3.E3.81.B8.E3.81.AE_W3C_DOM2_.E3.81.AE.E5.8F.8D.E6.98.A0" name=".E8.A6.81.E7.B4.A0.E3.81.AE_CSS_.E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3.E3.81.B8.E3.81.AE_W3C_DOM2_.E3.81.AE.E5.8F.8D.E6.98.A0"> 要素の CSS プロパティへの <abbr title="World Wide Web Consortium">W3C</abbr> DOM2 の反映 </h5>
+<p><abbr title="World Wide Web Consortium">W3C</abbr> 勧告によれば、要素のスタイルプロパティから返される値は当該要素の <code>STYLE</code> 属性の静的な設定のみを反映するだけであり、親から継承されるスタイル設定を含めた全体としての「算出結果スタイル」ではないことに注意してください。それゆえ、DOM2 を介して JavaScript からこれらのプロパティを読み書きしたければ、次の2つの方法のいずれかを採ってください。
+</p>
+<ul><li> 要素の静的な CSS の宣言は (あれば) すべて要素の <code>STYLE</code> 属性の中に置く。
+</li><li> 要素に対しては静的な CSS 宣言を一切使わず、JavaScript から DOM を利用してその CSS プロパティを初期化する。
+</li></ul>
+<h5 id=".E8.A6.81.E7.B4.A0.E3.81.AE_CSS_.E3.83.9D.E3.82.B8.E3.82.B7.E3.83.A7.E3.83.8B.E3.83.B3.E3.82.B0.E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3.E3.81.B8.E3.81.AE_W3C_DOM2_.E3.81.AE.E5.8F.8D.E6.98.A0" name=".E8.A6.81.E7.B4.A0.E3.81.AE_CSS_.E3.83.9D.E3.82.B8.E3.82.B7.E3.83.A7.E3.83.8B.E3.83.B3.E3.82.B0.E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3.E3.81.B8.E3.81.AE_W3C_DOM2_.E3.81.AE.E5.8F.8D.E6.98.A0"> 要素の CSS ポジショニングプロパティへの <abbr title="World Wide Web Consortium">W3C</abbr> DOM2 の反映 </h5>
+<p><abbr title="World Wide Web Consortium">W3C</abbr> DOM2 の <code>style.left</code> や <code>style.top</code> プロパティが返す値は CSS の単位 ("px" など) を含みます。ところが、Nav4 の <code><i>element</i>.left</code> や IE4/5 の <code><i>element</i>.style.pixelLeft</code> (及び top に対応するプロパティ) は整数値を返します。したがって 要素の左や上のインライン <code>STYLE</code> セッティングを整数値で取得したい場合は、parseInt() を使って 文字列から整数を解析してください。逆に、要素の左や上のインライン <code>STYLE</code> セッティングを設定したければ整数値に単位を表す文字列を付け加えること ("140px" のように) を忘れないでください。したがって 要素の左や上のインライン <code>STYLE</code> セッティングを整数値で取得したい場合は、parseInt() を使って 文字列から整数を解析してください。逆に、要素の左や上のインライン <code>STYLE</code> セッティングを設定したければ整数値に単位を表す文字列を付け加えること ("140px" のように) を忘れないでください。
+</p><p><strong>CSS 1 and CSS 2.x specifications require that non-zero values must be specified with a length unit; otherwise, the css declaration will be ignored.</strong> Mozilla-based browsers, MSIE 6+, Opera 7+ and other W3C standards-compliant browsers enforce such handling of parsing error.<br>
+<a class="external" href="http://www.w3.org/TR/REC-CSS1#forward-compatible-parsing">CSS 1 Forward-compatible parsing</a><br>
+<a class="external" href="http://www.w3.org/TR/CSS21/syndata.html#parsing-errors">CSS 2.1 Rules for handling parsing errors</a>
+</p>
+<h4 id="DOM_.E3.82.92.E5.88.A9.E7.94.A8.E3.81.97.E3.81.A6.E8.A6.81.E7.B4.A0.E3.81.AE.E3.83.86.E3.82.AD.E3.82.B9.E3.83.88.E3.82.92.E5.A4.89.E6.9B.B4.E3.81.99.E3.82.8B" name="DOM_.E3.82.92.E5.88.A9.E7.94.A8.E3.81.97.E3.81.A6.E8.A6.81.E7.B4.A0.E3.81.AE.E3.83.86.E3.82.AD.E3.82.B9.E3.83.88.E3.82.92.E5.A4.89.E6.9B.B4.E3.81.99.E3.82.8B"> DOM を利用して要素のテキストを変更する </h4>
+<p>現在の要素のテキストコンテントの変更方法は普通の操作手段と比して大きく変更されました。各要素のコンテントは一連の子ノードに分割されています。各ノードはプレインテキスト及び子要素で構成されます。要素のテキストを変更するためにスクリプトはノードを操作します。
+</p><p>ノードの構造及びサポートされるメソッドは <abbr title="World Wide Web Consortium">W3C</abbr> <a class="external" href="http://www.w3.org/TR/REC-DOM-Level-1/">DOM レベル 1</a> 勧告で定められています。
+</p><p>要素が子要素を持たずにテキストのみであるならば、(通常) <code>ElemRef.childNodes[0]</code> としてアクセスされる 1 つの子ノードを持ちます。<code>ElemRef.innerText</code> の大雑把な代替として <code>ElemRef.childNodes[0].nodeValue</code> が使えます。
+<span class="comment">We could introduce DOM 3 Core textContent attribute here which is supported by Mozilla 1.5+, Safari 2.x, Opera 9.x and is a perfect equivalent to MSIE's innerText. <a class=" external" href="http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/core.html#Node3-textContent" rel="freelink">http://www.w3.org/TR/2004/REC-DOM-Le...e3-textContent</a></span>
+</p><p>次の例では、既に HTML ファイル中にある <code>SPAN</code> 要素のテキストをどう変更するか示します。
+</p>
+<pre>&lt;body&gt;
+  &lt;p&gt;Papa's got &lt;span id="dynatext"&gt;a lot of nerve&lt;/span&gt;!&lt;/p&gt;
+
+  &lt;script type="text/javascript"&gt;
+// SPAN 要素の参照を取得
+var SpanElemRef = document.getElementById("dynatext");
+
+// SpanElemRef.innerText = "a brand new bag" を実現
+var new_txt = document.createTextNode("a brand new bag");
+SpanElemRef.replaceChild(new_txt, SpanElemRef.childNodes[0]);
+
+// 他に、いささか危険な実現方法も
+// (childNodes[0] がテキストノードでなければ機能しない)
+SpanElemRef.childNodes[0].nodeValue = "a brand new bag";
+
+// SpanElemRef.innerHTML = "a brand &lt;b&gt;new&lt;/b&gt; bag" を実現
+var new_el = document.createElement(SpanElemRef.nodeName);
+new_el.appendChild(document.createTextNode("a brand "));
+var bold_el = document.createElement("b");
+bold_el.appendChild(document.createTextNode("new"));
+new_el.appendChild(bold_el);
+new_el.appendChild(document.createTextNode(" bag"));
+span_el.parentNode.replaceChild(new_el, SpanElemRef);
+  &lt;/script&gt;
+&lt;/body&gt;
+</pre>
+<p>最初の例は <code>SPAN</code> 中のテキスト置き換えの比較的単純な方法であり、元のテキストノードを新しいもので置き換えています。ここでの想定として、<code>SPAN</code> は単一のテキストを子に持つものとしています。そうでない場合もコードは機能しますが、結果は予期せざるものになるかも知れません。
+</p><p>2 番目の例は同じ事を行う、より簡潔ではあるが乱暴で強引な手法です。注釈を入れたように、第一の子ノードがテキストノードでない場合、これは機能しません。子要素は <code>nodeValue</code> を持ちますが、そのフィールドの中身はドキュメント中に表示されることはないのです。
+</p><p>最後の例は <code>innerHTML</code> の設定に相当する手法です。まず、新しい要素を作ります。その要素は元のものと同じ型 (<code>SPAN</code>) になります。次に 3 つのノードを追加します。初めのテキストノード、自身のテキストノードを持つ <code>B</code> 要素、最後のテキストノード、の 3 つです。そしてスクリプトは <code>SPAN</code> 要素の親 (<code>P</code> 要素) にアクセスし、親の子ノードリスト中にある元の <code>SPAN</code> を新しい要素で置き換えます。
+</p><p>ドキュメントの内容を変更するスクリプトの書き換えがくだらない作業ではないのは自明でしょう。このような変換によって得られるものは、スクリプトが Firefox 2、Seamonkey 1、Netscape 7+ や他の Gecko ベースのプログラムのような現代的な <abbr title="World Wide Web Consortium">W3C</abbr> DOM 互換のブラウザで動作するということです。しかしながら後方互換性の要求はマルチプラットフォームでの扱いの難しさを増すばかりか悪化させます。
+</p><p>Useful references on changing an element's text using the DOM
+</p>
+<ul><li> <a href="ja/Whitespace_in_the_DOM">Whitespace in the DOM</a> by David Baron
+</li><li> <a class="external" href="http://slayeroffice.com/articles/innerHTML_alternatives/">Alternatives to innerHTML</a> for more advanced users
+</li><li> <a class="external" href="http://www.developer-x.com/content/innerhtml/">innerHTML VS DOM</a> by Tim Scarfe; an <b>excellent article</b>, for more advanced users
+</li><li> <a class="external" href="http://www.gtalbot.org/DHTMLSection/innerHTMLvsNodeValue.html">Speed and performance comparison between innerHTML attribute and DOM's nodeValue when modifying the text data of a text node</a> by Gérard Talbot
+</li><li> <a class="external" href="http://www.gtalbot.org/DHTMLSection/DOM2CharacterData.html">Interactive DOM level 2 CharacterData Interface attributes and methods tests</a>: other ways to modify (replace, delete, manipulate) efficiently text nodes in the DOM by Gérard Talbot
+</li></ul>

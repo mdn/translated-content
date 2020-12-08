@@ -1,0 +1,159 @@
+---
+title: XUL_教程/简单菜单栏
+slug: Mozilla/Tech/XUL/Tutorial/Simple_Menu_Bars
+tags:
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Simple_Menu_Bars
+---
+<p> </p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Toolbars" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:More_Menu_Features">下一页  »</a></p>
+</div><p></p>
+
+<p>在本节中，我们来看看如何创建菜单栏及菜单项。</p>
+
+<h3 id=".E5.88.9B.E5.BB.BA.E8.8F.9C.E5.8D.95" name=".E5.88.9B.E5.BB.BA.E8.8F.9C.E5.8D.95">创建菜单</h3>
+
+<p>XUL有几种不同的方式来创建菜单。最基本的方式当然是类似大多数程序拥有一个菜单栏并附有一排菜单项在上面。也可以创建弹出式菜单。XUL的菜单特性由几种不同的元素组成，它可以让你创建菜单栏和弹出式菜单。菜单上的项可以轻松的进行自定义。我们在<a href="cn/XUL_Tutorial/List_Controls#Drop-down_Lists">part of how to make menus</a>一文中已经学习过使用<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code></code>了。本节我们就以此为基础。</p>
+
+<p>菜单栏通常像<code><a href="/zh-CN/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code>一样创建。菜单栏也可以放置于<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/toolbox" title="toolbox">toolbox</a></code></code>中，则菜单就像在其它类型工具栏一样。XUL拥有一些特殊元素，可以提供一些特定功能的菜单。</p>
+
+<p>有五种相关的元素用来创建菜单栏及其菜单，在此我们简单解释一下，在后面我们再详述：</p>
+
+<dl>
+ <dt><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menubar" title="menubar">menubar</a></code></dt>
+ <dd>一排菜单的窗口。</dd>
+</dl>
+
+<dl>
+ <dt><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code></dt>
+ <dd>尽管名字是菜单，但它实际上在菜单栏上仅仅体现其主题而已。该元素可以放置在菜单栏中或者独立放置。</dd>
+</dl>
+
+<dl>
+ <dt><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></dt>
+ <dd>当点击菜单主题时，弹出框会显现。该框包括了菜单命令的列表。</dd>
+</dl>
+
+<dl>
+ <dt><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></dt>
+ <dd>菜单上的独立命令。应放置于<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code>中。</dd>
+</dl>
+
+<dl>
+ <dt><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menuseparator" title="menuseparator">menuseparator</a></code></dt>
+ <dd>菜单上的分割条。应放置于<code>menupopup</code>中。</dd>
+</dl>
+
+<div class="note">
+<p>你可以在除Macintosh之外的任何平台在菜单栏中自定义任何你想要的菜单。这是因为Macintosh自己特殊的菜单置于屏幕最顶端，由系统控制着。虽然你可以创建自定义菜单，但放置于菜单上的任何特殊样式的规则或非菜单元素均不能生效。在创建菜单时头脑中留意这一点。</p>
+</div>
+
+<h5 id=".E7.AE.80.E5.8D.95.E8.8F.9C.E5.8D.95.E6.A0.8F.E7.A4.BA.E4.BE.8B" name=".E7.AE.80.E5.8D.95.E8.8F.9C.E5.8D.95.E6.A0.8F.E7.A4.BA.E4.BE.8B">简单菜单栏示例</h5>
+
+<p><span id="Example_1"><a id="Example_1"></a><strong>Example 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_menubar_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_menubar_1.xul">View</a></p>
+
+<div class="float-right"><img alt="Image:menubar-ex1.png"></div>
+
+<pre>&lt;toolbox flex="1"&gt;
+  &lt;menubar id="sample-menubar"&gt;
+    &lt;menu id="file-menu" label="File"&gt;
+      &lt;menupopup id="file-popup"&gt;
+        &lt;menuitem label="New"/&gt;
+        &lt;menuitem label="Open"/&gt;
+        &lt;menuitem label="Save"/&gt;
+        &lt;menuseparator/&gt;
+        &lt;menuitem label="Exit"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+    &lt;menu id="edit-menu" label="Edit"&gt;
+      &lt;menupopup id="edit-popup"&gt;
+        &lt;menuitem label="Undo"/&gt;
+        &lt;menuitem label="Redo"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+  &lt;/menubar&gt;
+&lt;/toolbox&gt;
+</pre>
+
+<p>喏，使用<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menubar" title="menubar">menubar</a></code></code>元素创建了一个简单的菜单栏。上面还会创建一排菜单。<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code></code>元素在菜单顶端创建菜单主题显示于菜单栏上。使用<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code>元素创建弹出菜单。用户点击父菜单主题时，会弹出显示。弹出菜单框的大小会足够的大，可以容纳里面所有的菜单命令显示。菜单命令本身使用<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></code>元素进行创建。每一个都代表菜单弹出框上的一个单独命令。</p>
+
+<p>你还可以使用<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menuseparator" title="menuseparator">menuseparator</a></code></code>元素创建菜单上面的分割线。用于分割不同的菜单项组。</p>
+
+<h4 id="menubar.E5.85.83.E7.B4.A0" name="menubar.E5.85.83.E7.B4.A0"><code>menubar</code>元素</h4>
+
+<p><code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menubar" title="menubar">menubar</a></code></code>是一个包括菜单的框。注意它已经被放置于一个固定的<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/toolbox" title="toolbox">toolbox</a></code></code>中。菜单栏没有特殊的属性一，仅仅是一种类型的框。这意味着可以创建一个垂直的工具栏，通过设置<code><code id="a-orient"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code></code>属性为vertical。</p>
+
+<h4 id="menu.E5.85.83.E7.B4.A0" name="menu.E5.85.83.E7.B4.A0"><code>menu</code>元素</h4>
+
+<p><code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code></code>元素运行起来就像是<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code>元素。可以接受与它相同的部分属性及额外的一些属性：</p>
+
+<dl>
+ <dt><code id="a-id"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></dt>
+ <dd>菜单主题按钮的唯一标识符。</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-label"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></dt>
+ <dd>显示在菜单上的文字，例如　文件　或　编辑。</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-disabled"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code></dt>
+ <dd>该布尔属性决定菜单是否被禁用。虽然可以，但很少情况需要禁止整个菜单。该属性值可以被设置为<code>true</code>或者<code>false</code>。当然，后者是默认值。</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-accesskey"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/accesskey">accesskey</a></code></dt>
+ <dd>该属性值是用户可以按键盘激活菜单项的键值。该字母通常在菜单主题后面以下划线方式显示。Mozilla会视标签属性根据在此指定的字符给它加上下划线。因此，需要指定一个在文本中存在的字符（尽管指定的键不在文本中也能正常工作）。</dd>
+</dl>
+
+<div class="float-right"><img alt="Image:menubar-ex2.jpg"></div>
+
+<p><code>menu</code>元素通常放置在菜单栏上，尽管这不是必需的。但是，这将出现不一样的显示结果。此处的图片展示了早期没有菜单栏的示例看起来的效果。</p>
+
+<h4 id="menupopup.E5.85.83.E7.B4.A0" name="menupopup.E5.85.83.E7.B4.A0"><code>menupopup</code>元素</h4>
+
+<p><code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code>元素创建包括菜单命令的弹出窗口。它是一种类型的框，默认为垂直布局。如果你想要并且将<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code>s</code>放置在一排中，你可以将它改为水平布局。通常仅有<code>menuitem</code>s元素和<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menuseparator" title="menuseparator">menuseparator</a></code>s</code>放置在<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code>中。你可以放置任何元素在<code>menupopup</code>中，但是在Macintosh中它们都会被忽略。</p>
+
+<h4 id="menuitem.E5.85.83.E7.B4.A0" name="menuitem.E5.85.83.E7.B4.A0"><code>menuitem</code>元素</h4>
+
+<p><code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></code>元素与<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code></code>元素非常相似并且拥有部分相同属性。</p>
+
+<dl>
+ <dt><code id="a-id"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></dt>
+ <dd>菜单项的唯一标识符。</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-label"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></dt>
+ <dd>显示在菜单项上的文本，例如打开　或　保存。</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-disabled"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code></dt>
+ <dd>该布尔属性值决定菜单项是否被禁止。该属性可以被设置为<code>true</code>或者<code>false</code>，但默认值是后者。</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-accesskey"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/accesskey">accesskey</a></code></dt>
+ <dd>该值是用户可以使用键盘激活菜单项的键值。该字母通常以下划线方式显示于菜单主题后面。Mozilla将视<code><code id="a-label"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code>属性值给指定的字母加上下划线。因此，你需要指定在文本中存在的字符。</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-acceltext"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/acceltext">acceltext</a></code></dt>
+ <dd>该值指定显示在菜单命令末尾的快捷键文本提示。但是它还没有与<code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code>进行键的关联。我们在后面再研究如何<a href="cn/XUL_Tutorial/Keyboard_Shortcuts">do this later</a>.</dd>
+</dl>
+
+<h4 id="menuseparator.E5.85.83.E7.B4.A0" name="menuseparator.E5.85.83.E7.B4.A0"><code>menuseparator</code>元素</h4>
+
+<p><code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menuseparator" title="menuseparator">menuseparator</a></code></code>没有特别的属性。它只是在两个相信的菜单元素之间创建一条水平的分割线。</p>
+
+<p>下一节，我们会学习一些<a href="cn/XUL_%e6%95%99%e7%a8%8b/%e6%9b%b4%e5%a4%9a%e8%8f%9c%e5%8d%95%e7%89%b9%e6%80%a7">更多菜单特性</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Toolbars" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:More_Menu_Features">下一页  »</a></p>
+</div><p></p>
+
+<p></p>

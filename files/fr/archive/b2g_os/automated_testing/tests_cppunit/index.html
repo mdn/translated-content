@@ -1,0 +1,44 @@
+---
+title: Tests Cppunit
+slug: Archive/B2G_OS/Automated_testing/Tests_Cppunit
+tags:
+  - Automatisation
+  - cppunit
+  - tests
+translation_of: Archive/B2G_OS/Automated_testing/Cppunit_Tests
+---
+<div class="summary">
+<p><span class="seoSummary">Les tests Cppunit, sont des tests unitaires sans tête (headless) Gecko C++. Vous pouvez lancer les tests Cppunit sur B2G; dans cet article, nous verrons comment les réaliser. Actuellement, les tests sont effectués principalement sur l'émulateur, mais devrait en théorie fonctionner aussi bien sur les appareils.</span></p>
+</div>
+
+<div class="note">
+<p><strong>A noter</strong>: Dans cet article, <code>$B2G_HOME</code> fait référence au clone du dépôt B2G.</p>
+</div>
+
+<h2 id="À_la_dur">À la dur</h2>
+
+<p>Actuellement, il n'y a pas de commande mach pour lancer les tests cppunit, alors nous sommes cantonnés à les lancer "à la dur".</p>
+
+<h3 id="Prérequis">Prérequis</h3>
+
+<ul>
+ <li>Vous devez compiler B2G pour la cible que vous testez (voir: <a href="/fr/Firefox_OS/Building_and_installing_Firefox_OS">Compiler et installer Firefox OS</a>). Actuellement, seuls les compilations de l'émulateur sont supportés, cependant d'autres appareils peuvent fonctionner.</li>
+ <li>Vous devez installer quelques paquetages Python, que ce soit pour un environnement virtuel ou autre chose:
+  <pre>cd $GECKO_DIR/testing/mozbase
+python setup_development.py
+cd $GECKO_DIR/testing/marionette/client
+python setup.py develop
+</pre>
+ </li>
+ <li>Assurez vous qu'<code>adb</code> soit dans votre variable d'environnement path, ou spécifiez le chemin avec <code>--adbpath</code> (sur Linux il se trouve dans <code>$B2G_HOME/out/host/linux-x86/bin/adb</code><em>.</em>)</li>
+ <li>Ayez une copie en local de <a href="http://busybox.net/downloads/binaries/latest/busybox-armv6l">Busybox</a> (ce n'est pas strictement nécessaire, mais peut réduire le temps de mise en place de manière significative.)</li>
+</ul>
+
+<h3 id="Lancer_les_tests">Lancer les tests</h3>
+
+<p>Vous pouvez alors lancer les tests xpcshell en démarrant d'abord un émulateur puis en exécutant les commandes suivante:</p>
+
+<pre>cd $B2G_HOME/objdir-gecko
+make package-tests
+cd dist/test-stage/cppunittests
+python remotecppunittests.py --xre-path $B2G_HOME/objdir-gecko/dist/bin --adbpath $ADB_PATH --dm_trans=adb --addEnv LD_LIBRARY_PATH=/vendor/lib:/system/lib:/system/b2g &lt;test1&gt; &lt;test2&gt; ...</pre>

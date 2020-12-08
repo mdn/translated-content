@@ -1,0 +1,231 @@
+---
+title: wizard
+slug: Archive/Mozilla/XUL/wizard
+tags:
+  - XUL Elements
+  - XUL Reference
+translation_of: Archive/Mozilla/XUL/wizard
+---
+<div class="noinclude"><span class="breadcrumbs XULRef_breadcrumbs">
+ « <a href="/ja/docs/XUL/XUL_Reference">XUL リファレンス HOME</a>    [
+ <a href="#Examples">例</a> |
+ <a href="#Attributes">属性</a> |
+ <a href="#Properties">プロパティ</a> |
+ <a href="#Methods">メソッド</a> |
+ <a href="#Related">関連項目</a> ]
+</span></div> <p>この要素はいくつかのアプリケーションでみられるタスク全体をユーザに案内するための段階的なウィザードを作るために使われます。それは複数のページに含まれる複数の段階のウィンドウとして使われます。この要素はヘッダとページの下のボタン及びページ間の移動を処理します。それぞれのページは <code><a href="/ja/docs/Mozilla/Tech/XUL/wizardpage" title="wizardpage">wizardpage</a></code> を使ってつくられます。ページは順序を変更するために <code id="a-next"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/next">next</a></code> と <code id="a-pageid"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/pageid">pageid</a></code> 属性が使われない限り、<code>wizard</code> におかれた順に表示されます。ウィザードはユーザの選択したテーマとプラットフォームに的した方法で表示されます。Mozilla の新しいバージョンでは wizard 要素に全てのページで共有される <code><a href="/ja/docs/Mozilla/Tech/XUL/statusbar" title="statusbar">statusbar</a></code> を直接おくことができます。
+</p><p>詳しい情報が <a href="ja/XUL_Tutorial/Creating_a_Wizard">XUL チュートリアル</a>にあります。
+</p>
+<dl><dt> 属性
+</dt><dd> <a href="#a-firstpage">firstpage</a>, <a href="#a-lastpage">lastpage</a>, <a href="#a-onextra1">onextra1</a>, <a href="#a-onextra2">onextra2</a>, <a href="#a-onwizardback">onwizardback</a>, <a href="#a-onwizardcancel">onwizardcancel</a>, <a href="#a-onwizardfinish">onwizardfinish</a>, <a href="#a-onwizardnext">onwizardnext</a>, <a href="#a-pagestep">pagestep</a>, <a href="#a-title">title</a>, <a href="#a-windowtype">windowtype</a>
+</dd></dl>
+<dl><dt> プロパティ
+</dt><dd> <a href="#p-canAdvance">canAdvance</a>, <a href="#p-canRewind">canRewind</a>, <a href="#p-currentPage">currentPage</a>, <a href="#p-onFirstPage">onFirstPage</a>, <a href="#p-onLastPage">onLastPage</a>, <a href="#p-pageCount">pageCount</a>, <a href="#p-pageIndex">pageIndex</a>, <a href="#p-pageStep">pageStep</a>, <a href="#p-title">title</a>, <a href="#p-wizardPages">wizardPages</a>
+</dd></dl>
+<dl><dt> メソッド
+</dt><dd> <a href="#m-advance">advance</a>, <a href="#m-cancel">cancel</a>, <a href="#m-extra1">extra1</a>, <a href="#m-extra2">extra2</a>, <a href="#m-getButton">getButton</a>, <a href="#m-getPageById">getPageById</a>, <a href="#m-goTo">goTo</a>, <a href="#m-rewind">rewind</a>
+</dd></dl>
+<p><span id="Examples"></span>
+</p>
+<h3 id=".E4.BE.8B" name=".E4.BE.8B"> 例 </h3>
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;wizard id="theWizard" title="Secret Code Wizard"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;script&gt;
+function checkCode(){
+  document.getElementById('theWizard').canAdvance = (document.getElementById('secretCode').value == "cabbage");
+}
+&lt;/script&gt;
+
+  &lt;wizardpage onpageshow="checkCode();"&gt;
+       &lt;label value="Enter the secret code:"/&gt;
+       &lt;textbox id="secretCode" onkeyup="checkCode();"/&gt;
+  &lt;/wizardpage&gt;
+
+  &lt;wizardpage&gt;
+       &lt;label value="That is the correct secret code."/&gt;
+  &lt;/wizardpage&gt;
+
+&lt;/wizard&gt;
+</pre>
+<p><span id="Attributes"></span>
+</p>
+<h3 id=".E5.B1.9E.E6.80.A7" name=".E5.B1.9E.E6.80.A7"> 属性 </h3>
+<p>
+</p><div id="a-activetitlebarcolor">
+
+<dl><dt> <code id="a-activetitlebarcolor"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/activetitlebarcolor">activetitlebarcolor</a></code>  </dt><dd> 型: <em>color 文字列</em> </dd><dd> ウィンドウがアクティブな時のタイトルバーについて、背景色を指定された色にし、ウィンドウ内容との間の境界線を非表示にします。<em>この属性は Mac OS X でのみ有効です。</em> </dd></dl>
+
+</div>
+<div id="a-firstpage">
+
+<dl><dt> <code id="a-firstpage"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/firstpage">firstpage</a></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code><a href="/ja/docs/Mozilla/Tech/XUL/wizard" title="wizard">wizard</a></code> が最初の page であるとき <code>true</code> になります。 </dd></dl>
+
+</div>
+<div id="a-inactivetitlebarcolor">
+
+<dl><dt> <code id="a-inactivetitlebarcolor"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/inactivetitlebarcolor">inactivetitlebarcolor</a></code>  </dt><dd> 型: <em>color 文字列</em> </dd><dd> ウィンドウが非アクティブな時のタイトルバーについて、背景色を指定された色にし、ウィンドウ内容との間の境界線を非表示にします。<em>この属性は Mac OS X でのみ有効です。</em> </dd></dl>
+
+</div>
+<div id="a-lastpage">
+
+<dl><dt> <code id="a-lastpage"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/lastpage">lastpage</a></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code><a href="/ja/docs/Mozilla/Tech/XUL/wizard" title="wizard">wizard</a></code> が最後の page であるとき <code>true</code> になります。 </dd></dl>
+
+</div>
+<div id="a-onextra1">
+
+<dl><dt> <code id="a-onextra1"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/onextra1">onextra1</a></code> </dt><dd> 型: <em>スクリプトコード</em> </dd><dd> ユーザが extra1 ボタンを押した時に呼び出されるコードを設定します。 </dd></dl>
+
+</div>
+<div id="a-onextra2">
+
+<dl><dt> <code id="a-onextra2"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/onextra2">onextra2</a></code> </dt><dd> 型: <em>スクリプトコード</em> </dd><dd> ユーザが extra2 ボタンを押した時に呼び出されるコードを設定します。 </dd></dl>
+
+</div>
+<div id="a-onwizardback">
+
+<dl><dt> <code id="a-onwizardback"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/onwizardback">onwizardback</a></code> </dt><dd> 型: <em>スクリプトコード</em> </dd><dd> ユーザが Back ボタンを押した時に呼び出されるコードを設定します。前のページの表示を許可するには <code>true</code> を返し、前のページへの移動を許可しないときは <code>false</code> を返してください。ユーザに (Back ボタンを無効にして) ページを戻れないことを示すには <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/canRewind">canRewind</a></span></code> プロパティを使用してください。 </dd></dl>
+
+</div>
+<div id="a-onwizardcancel">
+
+<dl>
+ <dt>
+  <code id="a-onwizardcancel"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/onwizardcancel">onwizardcancel</a></code></dt>
+ <dd>
+  型: <em>スクリプトコード</em></dd>
+ <dd>
+  ユーザが Cancel ボタンを押した時に呼び出されるコードを設定します。wizard のキャンセルを許可して閉じるには <code>true</code> を返し、wizard のキャンセルを防ぐには <code>false</code> を返してください。<span class="comment">ユーザに (Cancel ボタンを無効にして) キャンセルできないことを示すには <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/canCancel">canCancel</a></span></code> プロパティを使用してください。</span></dd>
+</dl>
+<p> </p>
+</div>
+<div id="a-onwizardfinish">
+
+<dl><dt> <code id="a-onwizardfinish"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/onwizardfinish">onwizardfinish</a></code> </dt><dd> 型: <em>スクリプトコード</em> </dd><dd> ユーザが Finish ボタンを押した時に呼び出されるコードを設定します。Finish ボタンは wizard の最後のページで Next ボタンの位置に現れます。wizard を閉じてページ上に入力された値に同意するには <code>true</code> を返し、wizard を閉じないようにするには <code>false</code> を返してください。ユーザに (Finish ボタンを無効にして) wizard が終了できないことを示すには <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/canAdvance">canAdvance</a></span></code> プロパティを使用してください。 </dd></dl>
+
+</div>
+<div id="a-onwizardnext">
+
+<dl><dt> <code id="a-onwizardnext"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/onwizardnext">onwizardnext</a></code> </dt><dd> 型: <em>スクリプトコード</em> </dd><dd> ユーザが Next ボタンを押した時に呼び出されるコードを設定します。次のページを表示するには <code>true</code> を返し、次のページへの移動を許可しないときは <code>false</code> を返してください。ユーザに (Next ボタンを無効にして) 次のページへ移動できないことを示すには <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/canAdvance">canAdvance</a></span></code> プロパティを使用してください。 </dd></dl>
+
+</div>
+<div id="a-pagestep">
+
+<dl><dt> <code id="a-pagestep"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/pagestep">pagestep</a></code> </dt><dd> 型: <em>整数型</em> </dd><dd> 現在のページの index。 </dd></dl>
+
+</div>
+<div id="a-title">
+
+<dl><dt> <code id="a-title"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/title">title</a></code> </dt><dd> 型: <em>文字列型</em> </dd><dd> window のタイトルバーに表示するためのテキスト。 </dd></dl>
+
+</div>
+<div id="a-windowtype">
+
+<dl><dt> <code id="a-windowtype"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/windowtype">windowtype</a></code> </dt><dd> 型: <em>文字列型</em> </dd><dd> window の種類を識別するために使用する文字列を設定します。例えば、ブラウザウィンドウと編集ウィンドウを区別するために使用します。Mozilla のウィンドウを扱う関数の一部は、この属性を同じ種類のウィンドウをグループ化するために使用します。 </dd></dl>
+
+</div>
+<p><span id="Properties"></span>
+</p>
+<h3 id=".E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3" name=".E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3"> プロパティ </h3>
+<p>
+</p><div id="p-canAdvance">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/canAdvance">canAdvance</a></span></code> </dt><dd> 型: <em>論理型</em> </dd><dd> このプロパティは、ユーザが Next ボタンを押して次のページへ進めるとき、<code>true</code> に設定されます。このプロパティが <code>false</code> の場合、ユーザは次のページへ移動することができません。ユーザが次のページへ進めることを示すには、このプロパティを <code>true</code> に設定します。次のページへの移動を拒否するには <code>false</code> に設定します。これは Next ボタン (wizard の最後のページでは Finish ボタン) を有効または無効にします。 </dd></dl>
+</div>
+<div id="p-canRewind">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/canRewind">canRewind</a></span></code> </dt><dd> 型: <em>論理型</em> </dd><dd> このプロパティは、ユーザが Back ボタンを押して前のページへ戻れるとき、true に設定されます。このプロパティが false の場合、ユーザは前のページへ移動することができません。ユーザが前のページへ戻れることを示すには、このプロパティを true に設定します。前のページへの移動を拒否するには false に設定します。これは Back ボタンを有効または無効にします。 </dd></dl>
+</div>
+<div id="p-currentPage">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/currentPage">currentPage</a></span></code> </dt><dd> 型: <em><code><a href="/ja/docs/Mozilla/Tech/XUL/wizardpage" title="wizardpage">wizardpage</a></code> 要素</em> </dd><dd> このプロパティは現在表示されている <code><a href="/ja/docs/Mozilla/Tech/XUL/wizardpage" title="wizardpage">wizardpage</a></code> 要素を返します。この値を調整して現在のページを変更することができます。 </dd></dl>
+</div>
+<div id="p-onFirstPage">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/onFirstPage">onFirstPage</a></span></code> </dt><dd> 型: <em>論理型</em> </dd><dd> このプロパティは、ユーザが最初のページを開いているとき、<code>true</code> に設定されます。このページは最初の index かもしれません。 </dd></dl>
+</div>
+<div id="p-onLastPage">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/onLastPage">onLastPage</a></span></code> </dt><dd> 型: <em>論理型</em> </dd><dd> このプロパティは、ユーザが wizard の最後のページを開いている時、<code>true</code> に設定されます。 </dd></dl>
+</div>
+<div id="p-pageCount">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/pageCount">pageCount</a></span></code> </dt><dd> 型: <em>整数型</em> </dd><dd> このプロパティは <code><a href="/ja/docs/Mozilla/Tech/XUL/wizard" title="wizard">wizard</a></code> 内のページ数を保持します。 </dd></dl>
+</div>
+<div id="p-pageIndex">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/pageIndex">pageIndex</a></span></code> </dt><dd> 型: <em>整数型</em> </dd><dd> このプロパティは現在選択されているページの index を返します。このプロパティを調整して選択されたページを変更することができます。 </dd></dl>
+</div>
+<div id="p-pageStep">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/pageStep">pageStep</a></span></code> </dt><dd> 型: <em>整数型</em> </dd><dd> このプロパティはユーザが辿ってきたページ数を返します。つまり、ユーザが Back ボタンを押すと、この値もその回数分最初に戻ります。ユーザが各ページへ順番に移動する必要はないため、このプロパティは <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/pageIndex">pageIndex</a></span></code> と異なります。 </dd></dl>
+</div>
+<div id="p-title">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/title">title</a></span></code> </dt><dd> 型: <em>文字列型</em> </dd><dd> <code><a href="/ja/docs/Mozilla/Tech/XUL/wizard" title="wizard">wizard</a></code> の上部に表示されるタイトル。これは、各ページの <code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code> 属性によって上書きされます。 </dd></dl>
+</div>
+<div id="p-wizardPages">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/wizardPages">wizardPages</a></span></code> </dt><dd> 型: <em><code><a href="/ja/docs/Mozilla/Tech/XUL/wizardpage" title="wizardpage">wizardpage</a></code> 要素の DOM NodeList</em> </dd><dd> このプロパティは <code><a href="/ja/docs/Mozilla/Tech/XUL/wizard" title="wizard">wizard</a></code> 内の <code><a href="/ja/docs/Mozilla/Tech/XUL/wizardpage" title="wizardpage">wizardpage</a></code> 要素のリストを保持します。 </dd></dl>
+</div>
+<p><span id="Methods"></span>
+</p>
+<h3 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89"> メソッド </h3>
+<table style="border: 1px solid rgb(204, 204, 204); margin: 0 0 10px 10px; padding: 0 10px; background: rgb(238, 238, 238); float: right; width: 250px;">
+<tbody>
+<tr>
+<td>
+<p><strong>XUL 要素からの継承</strong><br>
+<small> <span id="m-blur"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/blur">blur</a></code></span>, <span id="m-click"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/click">click</a></code></span>, <span id="m-doCommand"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/doCommand">doCommand</a></code></span>, <span id="m-focus"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/focus">focus</a></code></span>, <span id="m-getElementsByAttribute"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getElementsByAttribute">getElementsByAttribute</a></code></span> <span id="m-getElementsByAttributeNS"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getElementsByAttributeNS">getElementsByAttributeNS</a></code></span></small></p> <p><strong>DOM 要素からの継承</strong><br>
+<small> <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.addEventListener">addEventListener()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.appendChild">appendChild()</a></code>, <a href="/ja/DOM/Node.compareDocumentPosition" title="ja/DOM/Node.compareDocumentPosition">compareDocumentPosition</a>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.dispatchEvent">dispatchEvent()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getAttribute">getAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getAttributeNode">getAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getAttributeNodeNS">getAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getAttributeNS">getAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getElementsByTagName">getElementsByTagName()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getElementsByTagNameNS">getElementsByTagNameNS()</a></code>, <a href="/ja/DOM/Node.getFeature" title="ja/DOM/Node.getFeature">getFeature</a>, <a href="/ja/DOM/Node.getUserData" title="ja/DOM/Node.getUserData">getUserData</a>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.hasAttribute">hasAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.hasAttributeNS">hasAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.hasAttributes">hasAttributes()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.hasChildNodes">hasChildNodes()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.insertBefore">insertBefore()</a></code>, <a href="/ja/DOM/Node.isEqualNode" title="ja/DOM/Node.isEqualNode">isEqualNode</a>, <a href="/ja/DOM/Node.isSameNode" title="ja/DOM/Node.isSameNode">isSameNode</a>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.isSupported">isSupported()</a></code>, <a href="/ja/DOM/Node.lookupNamespaceURI" title="ja/DOM/Node.lookupNamespaceURI">lookupNamespaceURI</a>, <a href="/ja/DOM/Node.lookupPrefix" title="ja/DOM/Node.lookupPrefix">lookupPrefix</a>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.normalize">normalize()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeAttribute">removeAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeAttributeNode">removeAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeAttributeNS">removeAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeChild">removeChild()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeEventListener">removeEventListener()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.replaceChild">replaceChild()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.setAttribute">setAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.setAttributeNode">setAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.setAttributeNodeNS">setAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.setAttributeNS">setAttributeNS()</a></code>, <a href="/ja/DOM/Node.setUserData" title="ja/DOM/Node.setUserData">setUserData</a></small></p>
+
+</td>
+</tr>
+</tbody>
+</table>
+<div><span class="breadcrumbs XULRefMeth_breadcrumbs">« <a href="/ja/docs/XUL_Reference" title="/ja/docs/XUL_Reference">XUL リファレンス HOME</a></span></div>
+
+<dl>
+  <dt>
+    <span id="m-advance"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/advance">advance( pageID )</a></code></span></dt>
+  <dd>
+    戻り値の型: <em>戻り値なし</em></dd>
+  <dd>
+    次のページへ移動するには、このメソッドを呼び出します。これは Next ボタンの押下と同等です。ページを変更するために、<code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/canAdvance">canAdvance</a></span></code> プロパティが <code>true</code> に設定されていなければなりません。<code id="a-onwizardnext"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/onwizardnext">onwizardnext</a></code> 属性内のコードはページが変更される前に呼び出されます。<var>pageID</var> 引数はジャンプ先のページの index を指定します。次のページへ順番に移動するには、引数に <code>null</code> を設定します。</dd>
+</dl>
+<dl>
+  <dt><span id="m-cancel"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/cancel">cancel()</a></code></span></dt>
+  <dd>戻り値の型: <em>戻り値無し</em></dd>
+  <dd>wizard をキャンセルして閉じるには、このメソッドを呼び出します。 wizard がキャンセルされる前に、<code><code id="a-onwizardcancel"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/onwizardcancel">onwizardcancel</a></code></code> 属性内のコードが呼び出されます。</dd>
+</dl>
+<dl>
+  <dt>
+    <span id="m-extra1"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/extra1">extra1()</a></code></span></dt>
+  <dd>
+    戻り値の型: <em>戻り値無し</em></dd>
+  <dd>
+    extra1 ボタンのクリックをシミュレートするには、このメソッドを呼び出します。 <code id="a-onextra1"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/onextra1">onextra1</a></code> 属性内のコードが呼び出されます。</dd>
+</dl>
+<dl>
+  <dt><span id="m-extra2"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/extra2">extra2()</a></code></span></dt>
+  <dd>戻り値の型: <em>戻り値無し</em></dd>
+  <dd>extra2 ボタンのクリックをシミュレートするには、このメソッドを呼び出します。 <code id="a-onextra2"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/onextra2">onextra2</a></code> 属性内のコードが呼び出されます。</dd>
+</dl>
+<dl>
+  <dt><span id="m-getButton"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getButton">getButton( type )</a></code></span></dt>
+  <dd>戻り値の型: <em>button 要素</em></dd>
+  <dd>指定した <var>type</var> に一致する、 dialog 内の <code><a href="/ja/docs/Mozilla/Tech/XUL/button" title="button">button</a></code> 要素を返します。</dd>
+</dl>
+<dl><dt> <span id="m-getPageById"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getPageById">getPageById( pageID )</a></code></span> </dt><dd> 戻り値の型: <em><code><a href="/ja/docs/Mozilla/Tech/XUL/wizardpage" title="wizardpage">wizardpage</a></code> 要素</em> </dd><dd> 指定した <var>pageID</var> に対応する <code><a href="/ja/docs/Mozilla/Tech/XUL/wizardpage" title="wizardpage">wizardpage</a></code> 要素を返します。 </dd></dl>
+<dl>
+  <dt><span id="m-goTo"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/goTo">goTo( pageID )</a></code></span></dt>
+  <dd>戻り値の型: <em>戻り値無し</em></dd>
+  <dd>このメソッドは、現在表示されているページを <var>pageID</var> 引数で指定されたページに変更します。ページは <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/canAdvance">canAdvance</a></span></code> や <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/canRewind">canRewind</a></span></code> の値にかまわず変更されます。この関数を使用した場合、<code id="a-onwizardback"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/onwizardback">onwizardback</a></code> および <code id="a-onwizardnext"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/onwizardnext">onwizardnext</a></code> のコードは呼び出されません。</dd>
+</dl>
+<dl>
+  <dt><span id="m-rewind"><code><a href="http://api/ja/docs/Mozilla/Tech/XUL/Method/rewind">rewind()</a></code></span></dt>
+  <dd>戻り値の型: <em>戻り値無し</em></dd>
+  <dd>ページを戻るには、このメソッドを呼び出します。これは Back ボタンの押下と同等です。ページを変更するために、<code><span><a href="http://api/ja/docs/XUL/Property/canRewind">canRewind</a></span></code> プロパティが <code>true</code> に設定されていなければなりません。ページが変更される前に、<code id="a-onwizardback"><a href="http://api/ja/docs/Mozilla/Tech/XUL/Attribute/onwizardback">onwizardback</a></code> 属性内のコードが呼び出されます。</dd>
+</dl>
+<p><span id="Related"></span>
+</p>
+<h3 id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE" name=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"> 関連項目 </h3>
+<p><a href="ja/XUL/wizardpage">wizardpage</a>
+</p>
+<div class="noinclude">
+<div class="noinclude">
+</div>
+</div>

@@ -1,0 +1,1047 @@
+---
+title: CSS3
+slug: Archive/CSS3
+tags:
+  - CSS
+  - CSS 参考
+  - CSS3
+  - 进阶
+translation_of: Archive/CSS3
+---
+<p><strong>CSS3</strong> 是<em>层叠样式表（Cascading Style Sheets）</em>语言的最新版本，旨在扩展CSS2.1。</p>
+
+<p>它带来了许多期待已久的新特性， 例如圆角、阴影、<a href="/zh-CN/docs/Web/Guide/CSS/Using_CSS_gradients" title="Using CSS gradients">gradients(渐变)</a> 、<a href="/zh-CN/docs/Web/Guide/CSS/Using_CSS_transitions" title="CSS transitions">transitions(过渡)</a> 与 <a href="/zh-CN/docs/Web/Guide/CSS/Using_CSS_animations" title="CSS animations">animations(动画)</a> 。以及新的布局方式，如 <a href="/en/CSS/Using_CSS_multi-column_layouts" title="Using CSS multi-column layouts">multi-columns</a> 、<a href="/zh-CN/docs/Web/Guide/CSS/Flexible_boxes"> flexible box</a> 与 grid layouts。实验性特性以浏览器引擎为前缀（vendor-prefixed），应避免在生产环境中使用，或极其谨慎地使用，因为将来它们的语法和语义都有可能被更改。</p>
+
+<h2 id="模块和标准化进程">模块和标准化进程</h2>
+
+<p>CSS Level 2 经历了 9 年的时间（从 2002 年 8 月到 2011 年 6 月）才达到 Recommendation（推荐） 状态，主要原因是被一些次要特性拖了后腿。为了加快那些已经确认没有问题的特性的标准化速度，W3C 的 <a class="external" href="http://www.w3.org/blog/CSS/" title="http://www.w3.org/blog/CSS/">CSS Working Group(CSS 工作组)</a>  作出了一项被称为 <a class="external" href="http://fantasai.inkedblade.net/weblog/2011/inside-csswg/modules" title="http://fantasai.inkedblade.net/weblog/2011/inside-csswg/modules">Beijing doctrine</a> 的决定，将 CSS 划分为许多小组件，称之为<em>模块</em>。这些模块彼此独立，按照各自的进度来进行标准化。其中一些已经是 W3C Recommendation 状态，也有一些仍是 early Working Drafts（早期工作草案）。当新的需求被肯定后， 新的模块也会同样地添加进来。</p>
+
+<p><a href="/@api/deki/files/6120/=CSS_Modules_and_Snapshots.png" title="CSS_Modules_and_Snapshots.png"><img alt="CSS Modules and Snapshots as defined since CSS3" class="internal lwrap" src="/files/3623/CSS_Modules_and_Snapshots.png" style="float: left; width: 550px;"> </a></p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p>从形式上来说，CSS3 标准<em>自身已经不存在了</em>。每个模块都被独立的标准化，现在标准 CSS 包括了修订后的 CSS2.1 以及完整模块对它的扩充，模块的 level（级别）数并不一致。可以在每个时间点上为 CSS 标准定义一个 <span style="line-height: 1.5;">snapshots（</span><span style="line-height: 1.5;">快照），列出 CSS 2.1 和成熟的模块。</span></p>
+
+<p>W3C 会定期的发布这些 <span style="line-height: 1.5;">snapshots</span><span style="line-height: 1.5;">，如 </span><a class="external" href="http://www.w3.org/TR/css-beijing/" style="line-height: 1.5;" title="http://www.w3.org/TR/css-beijing/">2007</a>, <a class="external" href="http://www.w3.org/TR/css-2010/" style="line-height: 1.5;" title="http://www.w3.org/TR/css-2010/">2010</a>, <a href="https://www.w3.org/TR/css-2015/">2015</a> 或 <a href="https://www.w3.org/TR/css-2017/">2017</a>。</p>
+
+<p>目前为止，还没有 level 超过 3 的模块被标准化，未来应该会有所改变。 不过有些模块，比如 Selectors（选择器）4 或 CSS Borders and Backgrounds（边框和背景）Level 4 早已拥有了 Editor's Draft（编辑草案），即使它们还没达到 First Published Working Draft（初次发布工作草案）状态。</p>
+
+<div style=""> </div>
+
+<h2 id="CSS_模块状态" style="">CSS 模块状态</h2>
+
+<h3 id="稳定模块（Stable_modules）">稳定模块（Stable modules）</h3>
+
+<p>有些 CSS 模块已经十分稳定，其状态为 CSSWG 规定的三个推荐品级之一：Candidate Recommendation（候选推荐）， Proposed Recommendation（建议推荐）或 Recommendation（推荐）。表明这些模块已经十分稳定，使用时也不必添加前缀， 但有些特性仍有可能在 Candidate Recommendation 阶段被放弃。</p>
+
+<p>这些模块扩展并修改了 CSS2.1 规范（核心规范）。 以下为 CSS 规范当前的 snapshot。</p>
+
+<h4 id="Colors_(Level_3)" style="display: none;">Colors (Level 3)</h4>
+
+<table class="standard-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="border: solid 1px; width: 30%; background-color: rgb(128,255,128);"><strong>{{ SpecName("CSS3 Colors", "", "") }}</strong></td>
+   <td style="border: solid 1px;">{{ Spec2("CSS3 Colors") }} 自 2011 年 6 月 7 日</td>
+  </tr>
+  <tr>
+   <td colspan="2" style="border: solid 1px;">
+    <p>增加 {{ cssxref("opacity") }} 属性，还有 <code>hsl</code><code>()，</code> <code>hsla()</code>， <code>rgba()</code> 和 <code>rgb()</code> 函数来创建 {{cssxref("&lt;color&gt;")}} 值。 它还将 <code>currentColor</code> 关键字定义为合法的颜色值。</p>
+
+    <p><code>transparent</code> 颜色目前是真彩色 (多亏了支持 alpha 通道) 并且是 <code>rgba(0,0,0,0.0)</code> 的别名。</p>
+
+    <p>它废弃了<span style="color: #4d4e53; line-height: 1.5;"> system-color keywords(</span><span style="line-height: 1.5;">系统颜色关键字)， 它们已经不能在生产环境中使用。</span></p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Selectors" style="display: none;">Selectors</h4>
+
+<table class="standard-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="border: solid 1px; width: 30%; background-color: rgb(128,255,128);"><strong>{{ SpecName("CSS3 Selectors", "", "") }}</strong></td>
+   <td style="border: solid 1px;">{{ Spec2("CSS3 Selectors") }} 自 2011 年 9 月 29 日</td>
+  </tr>
+  <tr>
+   <td colspan="2" style="border: solid 1px;">
+    <p>增加：</p>
+
+    <ul>
+     <li>子串匹配的属性选择器， <code>E[attribute^="value"]</code>， <code>E[attribute$="value"]，</code> <code>E[attribute*="value"]。</code></li>
+     <li>新的伪类：{{ cssxref(":target") }}， {{ cssxref(":enabled") }} 和 {{ cssxref(":disabled") }}， {{ cssxref(":checked") }}， {{ cssxref(":indeterminate") }}， {{ cssxref(":root") }}， {{ cssxref(":nth-child") }} 和 {{ cssxref(":nth-last-child") }}， {{ cssxref(":nth-of-type") }} 和 {{ cssxref(":nth-last-of-type") }}， {{ cssxref(":last-child") }}， {{ cssxref(":first-of-type") }} 和 {{ cssxref(":last-of-type") }}， {{ cssxref(":only-child") }} 和 {{ cssxref(":only-of-type") }}， {{ cssxref(":empty") }}， 和 {{ cssxref(":not") }}。</li>
+     <li>伪元素使用两个冒号而不是一个来表示：<code>:after</code> 变为 {{ cssxref("::after") }}， <code>:before</code> 变为 {{ cssxref("::before") }}， <code>:first-letter</code> 变为 {{ cssxref("::first-letter") }}， 还有 <code>:first-line</code> 变为 {{ cssxref("::first-line") }}。</li>
+     <li>新的 <em>general sibling combinator(普通兄弟选择器)</em>  ( <code>h1~pre</code> )。</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p><a class="external" href="http://dev.w3.org/csswg/selectors4/" title="http://dev.w3.org/csswg/selectors4/">下一个迭代的选择器规范</a>早已开始运作，它还没有达到 First Public Working Draft 阶段。</p>
+
+<h4 id="Namespaces" style="display: none;">Namespaces</h4>
+
+<table class="standard-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="border: solid 1px; width: 30%; background-color: rgb(128,255,128);"><strong>{{ SpecName("CSS3 Namespaces", "", "") }}</strong></td>
+   <td style="border: solid 1px;">{{ Spec2("CSS3 Namespaces") }} 自 2011 年 9 月 29 日</td>
+  </tr>
+  <tr>
+   <td colspan="2" style="border: solid 1px;">
+    <p>通过定义 <em>CSS qualified name(CSS 限定名)</em> 的概念来增加对 XML Namespace(名空间) 的支持， 使用 ' <code>|</code> ' 语法并增加 {{ cssxref("@namespace") }} CSS @ 规则。</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Media_Queries" style="display: none;">Media Queries</h4>
+
+<table class="standard-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="border: solid 1px; width: 30%; background-color: rgb(128,255,128);"><strong>{{ SpecName("CSS3 Media Queries", "", "") }}</strong></td>
+   <td style="border: solid 1px;">{{ Spec2("CSS3 Media Queries") }} 自 2012 年 6 月 19 日</td>
+  </tr>
+  <tr>
+   <td colspan="2" style="border: solid 1px;">
+    <p>将之前的媒体类型 ( <code>print，</code> <code>screen，……</code>) 扩充为完整的语言， 允许使用类似 <code style="font-size: 12px;">only screen 和 (color)</code><span style="line-height: 1.5;"> 来实现</span><span style="line-height: 1.5;"> </span><a href="/en/CSS/Media_queries" style="line-height: 1.5;" title="en/CSS/Media_queries">设备媒体能力查询功能</a><span style="line-height: 1.5;">。</span></p>
+
+    <p>媒体查询并非仅能用于 CSS 文档中，它也被用于 HTML 元素的某些属性中， 例如 <span style="line-height: 1.5;">{{ HTMLElement("link") }} 元素的 </span><span style="line-height: 1.5;">{{ htmlattrxref("media","link") }} 属性。</span></p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p><a href="http://dev.w3.org/csswg/mediaqueries4" title="http://dev.w3.org/csswg/mediaqueries4">该规范的下一个迭代</a>也在进行中，借助新的媒体特征例如 <span style="line-height: 1.5;"> </span><code style="font-size: 14px;">hover</code><span style="line-height: 1.5;"> 或 </span><code style="font-size: 14px;">pointer，可以在 User Agent(用户代理) 上对 Web 站点的输入方法进行定制。</code><span style="line-height: 1.5;">对 ECMAScript 的检测， 使用 </span><code style="font-size: 14px;">script</code><span style="line-height: 1.5;"> 媒体特征也已经被提出。</span></p>
+
+<h4 id="Style_attribute" style="display: none;">Style attribute</h4>
+
+<table class="standard-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="border: solid 1px; width: 30%; background-color: rgb(128,255,128);"><strong>{{ SpecName("CSS3 Style", "", "") }}</strong></td>
+   <td style="border: solid 1px;">{{ Spec2("CSS3 Style") }} 自 2013 年 11 月 7 日</td>
+  </tr>
+  <tr>
+   <td colspan="2" style="border: solid 1px;">正式定义了 HTML <a href="/en/HTML/Global_attributes#attr-style" title="en/HTML/Global_attributes#attr-style"> <code>style</code> </a> 全局属性内容的语法。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Backgrounds_and_Borders" style="display: none;">Backgrounds and Borders</h4>
+
+<table class="standard-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="border: solid 1px; width: 30%; background-color: rgb(220,255,220);"><strong>{{ SpecName("CSS3 Backgrounds", "", "") }}</strong></td>
+   <td style="border: solid 1px;">{{ Spec2("CSS3 Backgrounds") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2" style="border: solid 1px;">
+    <p>增加：</p>
+
+    <ul>
+     <li>背景支持各种类型的 {{cssxref("&lt;image&gt;")}}， 并不局限于之前定义的 <code>url()。</code></li>
+     <li>支持 multiple background images(多背景图片)。</li>
+     <li>{{ cssxref("background-repeat") }} 属性的 <code>space</code> 和 <code>round</code> 值，还有支持两个值的语法。</li>
+     <li>{{ cssxref("background-attachment") }} <code>local</code> 值。</li>
+     <li>CSS {{ cssxref("background-origin") }}，{{ cssxref("background-size") }} 和 {{ cssxref("background-clip") }} 属性。</li>
+     <li>支持带弧度的 border corner(边框角) CSS 属性：{{ cssxref("border-radius") }}，{{ cssxref("border-top-left-radius") }}，{{ cssxref("border-top-right-radius") }}，{{ cssxref("border-bottom-left-radius") }} 和 {{ cssxref("border-bottom-right-radius") }} 。</li>
+     <li>支持边框使用 {{cssxref("&lt;image&gt;")}}： {{ cssxref("border-image") }}，{{ cssxref("border-image-source") }}，{{ cssxref("border-image-slice") }}，{{ cssxref("border-image-width") }}，{{ cssxref("border-image-outset") }} 和 {{ cssxref("border-image-repeat") }} 。</li>
+     <li>支持元素的阴影：{{ cssxref("box-shadow") }} 。</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p><a class="external" href="http://dev.w3.org/csswg/css4-background/" title="http://dev.w3.org/csswg/css4-background/">背景和边框规范的 CSS4 迭代</a>早已进行，即便它还没有达到 First Public Working Draft 阶段，它计划增加对边框的裁剪功能 (借助 CSS {{ cssxref("border-clip") }}，{{ cssxref("border-clip-top") }}，{{ cssxref("border-clip-right") }}，{{ cssxref("border-clip-bottom") }} 和 {{ cssxref("border-clip-left") }} 属性) 或边框一角的形状 (使用 CSS {{ cssxref("border-corner-shape") }} 属性)。</p>
+
+<h4 id="Multi-column_layout" style="display: none;">Multi-column layout</h4>
+
+<table class="standard-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="border: solid 1px; width: 30%; background-color: rgb(220,255,220);"><strong>{{ SpecName("CSS3 Multicol", "", "") }}</strong></td>
+   <td style="border: solid 1px;">{{ Spec2("CSS3 Multicol") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2" style="border: solid 1px;">增加简单的多列布局， 使用 CSS {{ cssxref("columns") }}， {{ cssxref("column-count") }}， {{ cssxref("column-fill") }}， {{ cssxref("column-gap") }}， {{ cssxref("column-rule") }}， {{ cssxref("column-rule-color") }}， {{ cssxref("column-rule-style") }}， {{ cssxref("column-rule-width") }}， {{ cssxref("column-span") }}， {{ cssxref("column-width") }}， {{ cssxref("break-after") }}， {{ cssxref("break-before") }}， 和{{ cssxref("break-inside") }}。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Speech" style="display: none;">Speech</h4>
+
+<table class="standard-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="border: solid 1px; width: 30%; background-color: rgb(220,255,220);"><strong>{{ SpecName("CSS3 Speech", "", "") }}</strong></td>
+   <td style="border: solid 1px;">{{ Spec2("CSS3 Speech") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2" style="border: solid 1px;">定义 <code>speech</code> 媒体类型，一个 aural formatting model(听觉格式化模型) 和多个用于 speech-rendering(语音呈现) 用户代理的属性。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Image_Values_and_Replaced_Content" style="display: none;">Image Values and Replaced Content</h4>
+
+<table class="standard-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="border: solid 1px; width: 30%; background-color: rgb(220,255,220);"><strong>{{ SpecName("CSS3 Images", "", "") }}</strong></td>
+   <td style="border: solid 1px;">{{ Spec2("CSS3 Images") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2" style="border: solid 1px;">
+    <p>定义 {{cssxref("&lt;image&gt;")}} 数据类型。</p>
+
+    <p>扩充 <code>url()</code> 语法使其支持使用 media fragments(媒体片段) 来切割图片。</p>
+
+    <p>增加：</p>
+
+    <ul>
+     <li>{{cssxref("&lt;resolution&gt;")}} 数据类型的 <code>dppx</code> 单位。</li>
+     <li><code>image()</code> 函数，作为 <code>url()</code> 的更具灵活性的替代版本， 使用 url 来定义图片。<br>
+      <strong>有风险：</strong>由于缺少足够的浏览器支持， <code>image()</code> 函数的标准化可能会被推迟到该模块的下一个迭代中。</li>
+     <li>支持 <code>linear-gradient()，</code> <code>repeating-linear-gradient()</code>， <code>radial-gradient()</code> 和 <code>repeating-radial-gradient()。</code></li>
+     <li>使用 CSS {{ cssxref("object-fit") }} 属性来定义一个“替换元素”的“内容(Content)”如何适应包含这个“替换元素”的盒子。<br>
+      <strong>有风险</strong><strong>： </strong>由于缺少足够的浏览器支持， {{ cssxref("object-fit") }} 及其属性的标准化可能会被推迟到该模块的下一个迭代中。</li>
+     <li>使用 CSS {{cssxref("image-resolution") }} 和 {{cssxref("image-orientation") }} 属性来覆盖一个外部图片的分辨率和方向。<br>
+      <strong>有风险：</strong>由于缺少足够的浏览器支持，{{cssxref("image-resolution") }} 和 {{ cssxref("image-orientation")}} 属性的标准化可能会被推迟到该模块的下一个迭代中。</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>用于取代 CSS Image Level 3 的 <a href="#Images_(Level_4)">CSS Image Values and Replaced Content Level 4</a> 正在发展中，目前为 {{Spec2("CSS4 Images")}}。</p>
+
+<h4 id="Values_and_Units" style="display: none;">Values and Units</h4>
+
+<table class="standard-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="border: 1px solid; width: 30%; background-color: rgb(220, 255, 220);"><strong>{{ SpecName("CSS3 Values", "", "") }}</strong></td>
+   <td style="border: solid 1px;">{{ Spec2("CSS3 Values") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2" style="border: solid 1px;">
+    <p>使 <code>initial</code> 和 <code>inherit</code> 关键字能够被用于任意 CSS 属性中。</p>
+
+    <p>正式定义了 CSS 2.1 中的 CSS 数据类型，之前是隐晦的由它们的语法记号和文本来定义。</p>
+
+    <p>增加：</p>
+
+    <ul>
+     <li>定义了新的相对字体长度单位：<code>rem</code> 和 <code>ch。</code></li>
+     <li>定义了相对视口长度单位：<code>vw，</code><code>vh，</code><code>vmax</code> 和 <code>vmin</code> 。</li>
+     <li>精确了绝对长度单位的实际尺寸，此前它们并非是绝对值，而是使用了 reference pixel(参考像素) 来定义。</li>
+     <li>定义 {{ cssxref("&lt;angle&gt;") }}，{{cssxref("&lt;time&gt;")}}， {{cssxref("&lt;frequency&gt;")}}，{{cssxref("&lt;resolution&gt;")}}。</li>
+     <li>规范 {{cssxref("&lt;color&gt;")}}，{{cssxref("&lt;image&gt;")}} 和 {{cssxref("&lt;position&gt;")}} 定义的值。</li>
+     <li>{{cssxref("calc", "calc()") }}，{{cssxref("attr", "attr()")}}和 <code>toggle()</code> 函数符号的定义。</li>
+    </ul>
+
+    <p><strong>有风险：</strong> 由于缺少足够的浏览器支持，<code>calc()，</code> <code>attr()，</code> 和 <code>toggle()</code> 函数符号的标准化可能会被推迟到该模块的下一个迭代中。</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>像 <code>&lt;ident&gt;</code> 和 <code>&lt;custom-ident&gt; </code>这样的类型定义在 CSS Values and Units Module Level 4 中被推迟。</p>
+
+<h4 id="Flexible_box_layout" style="display: none;">Flexible box layout</h4>
+
+<table class="standard-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="border: solid 1px; width: 30%; background-color: rgb(220,255,220);"><strong>{{ SpecName("CSS3 Flexbox", "", "") }}</strong></td>
+   <td style="border: solid 1px;">{{ Spec2("CSS3 Flexbox") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2" style="border: solid 1px;">为 CSS {{ cssxref("display") }} 属性增加了 flexbox layout(伸缩盒布局) 及多个新 CSS 属性来控制它：{{ cssxref("flex") }}，{{ cssxref("flex-align") }}，{{ cssxref("flex-direction") }}，{{ cssxref("flex-flow") }}，{{ cssxref("flex-item-align") }}，{{ cssxref("flex-line-pack") }}，{{ cssxref("flex-order") }}，{{ cssxref("flex-pack") }} 和 {{ cssxref("flex-wrap") }}。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Conditional_Rules" style="display: none;">Conditional Rules</h4>
+
+<table class="standard-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="border: solid 1px; width: 30%; background-color: rgb(220, 255, 220);"><strong>{{ SpecName("CSS3 Conditional", "", "") }}</strong></td>
+   <td style="border: solid 1px;">{{ Spec2("CSS3 Conditional") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2" style="border: solid 1px;">增加了对样式表部分内容进行条件处理的功能， 若浏览器或文档的能力符合条件，则该部分的样式生效。它主要是允许了在 {{ cssxref("@media") }} 中嵌套 @ 规则， 增加了一个新的 CSS @ 规则， {{ cssxref("@supports") }} 和一个新的 DOM 方法 {{domxref("CSS.supports()")}}。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Text_decorations" style="display: none;">Text decorations</h4>
+
+<table class="standard-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="border: solid 1px; width: 30%; background-color: rgb(220, 255, 220);"><strong>{{ SpecName("CSS3 Text Decoration", "", "") }}</strong></td>
+   <td style="border: solid 1px;">{{ Spec2("CSS3 Text Decoration") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2" style="border: solid 1px;">
+    <p>扩展：</p>
+
+    <ul>
+     <li>CSS {{ cssxref("text-decoration") }} 属性作为 CSS {{ cssxref("text-decoration-line") }}， {{ cssxref("text-decoration-color") }}， 和 {{ cssxref("text-decoration-style") }} 属性的简写形式。并增加了 {{ cssxref("text-decoration-skip") }}， 和 {{ cssxref("text-underline-position") }} 属性。</li>
+    </ul>
+
+    <p>增加：</p>
+
+    <ul>
+     <li>使用 CSS {{ cssxref("text-emphasis") }}， {{ cssxref("text-emphasis-style") }}， {{ cssxref("text-emphasis-color") }}， 和 {{ cssxref("text-emphasis-position") }} 属性来支持 East-Asian-script emphasis marks(东亚文本重点符号)。</li>
+     <li>使用 CSS {{ cssxref("text-shadow") }} 属性来支持文本的阴影。</li>
+    </ul>
+
+    <p>明确：</p>
+
+    <ul>
+     <li>装饰的绘制顺序。</li>
+    </ul>
+
+    <p><strong>有风险</strong><strong>： </strong>由于缺少足够的浏览器支持，<code>text-decoration-skip </code>行定位规则和在相同的基础文本上放置重点符号和 ruby 的能力的标准化可能会被推迟到该模块的下一个迭代中。</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(220,255,220);"><strong>{{ SpecName("CSS3 Fonts", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Fonts") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <p>修正 CSS2.1 字体匹配算法，以便接近于真实的实现。</p>
+
+    <p>增加：</p>
+
+    <ul>
+     <li>通过 CSS {{ cssxref("@font-face") }} @ 规则来支持可下载字体。</li>
+     <li>借助 CSS {{ cssxref("font-kerning") }} 属性来控制 contextual inter-glyph spacing(上下文 inter-glyph 间距)。</li>
+     <li>借助 CSS {{ cssxref("font-language-override") }} 属性来选择语言指定的字形。</li>
+     <li>借助 CSS {{ cssxref("font-feature-settings") }} 属性来选择带有 OpenType 特性的字形。</li>
+     <li>借助 CSS {{ cssxref("font-size-adjust") }} 属性来控制当使用 fallback fonts(备用字体) 时的宽高比。</li>
+     <li>选择替代字体，使用 CSS {{ cssxref("font-stretch") }}，{{ cssxref("font-variant-alternates") }}，{{ cssxref("font-variant-caps") }}，{{ cssxref("font-variant-east-asian") }}，{{ cssxref("font-variant-ligatures") }}，{{ cssxref("font-variant-numeric") }}，和 {{ cssxref("font-variant-position") }} 属性。还扩展了相关的 CSS {{ cssxref("font-variant") }} 速记属性，并引入了 {{ cssxref("@font-features-values") }} @ 规则。</li>
+     <li>当这些字体在 CSS {{ cssxref("font-synthesis") }} 属性中找不到时自动生成斜体或粗体的控制。</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(220,255,220);"><strong>{{ SpecName("CSS3 Cascade", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Cascade") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <p>增加:</p>
+
+    <ul>
+     <li>属性的初始值和未设定值。</li>
+     <li>CSS {{ cssxref("all") }} 属性。</li>
+     <li>域机制。</li>
+    </ul>
+
+    <p>明确：</p>
+
+    <ul>
+     <li>与媒体依赖的@import声明交互与样式表的加载要求。</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(220,255,220);"><strong>{{ SpecName("CSS3 Writing Modes", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Writing Modes") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2">定义了水平和垂直脚本书写模式，概况了 CSS {{ cssxref("direction") }} 和 {{ cssxref("unicode-bidi") }} 属性是如何与新 CSS {{ cssxref("text-orientation") }} 属性相互之间产生影响的，并在需要它们的地方扩展它们。</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(220,255,220);"><strong>{{ SpecName("CSS Shapes", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS Shapes") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <p>定义了可用于浮动（float）的几何图形。这些图形描述了行内元素可被包裹的区域，而非包裹其边界框（ bounding box）。</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(220,255,220);"><strong>{{ SpecName("CSS Masks", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS Masks") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <p>定义了部分或完整隐藏可视元素的一种方式。其描述了如何使用另一图形元素或图片作为亮度遮罩（luminance）或透明度遮罩（alpha）。</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="处于改善阶段的模块">处于改善阶段的模块</h3>
+
+<p>处于改善阶段（refining phase）的规范已基本稳定。虽然还有可能被修改，但不会和当前的实现产生冲突；其主要定义在个别特殊情况的行为。</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,255,220);"><strong>{{ SpecName("Web Animations", "", "") }}</strong></td>
+   <td>{{ Spec2("Web Animations") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,255,220);"><strong>{{ SpecName("CSS3 Counter Styles", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Counter Styles") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,255,220);"><strong>{{ SpecName("Compositing", "", "") }}</strong></td>
+   <td>{{ Spec2("Compositing") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,255,220);"><strong>{{ SpecName("CSS3 Syntax", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Syntax") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"><span class="short_text" id="result_box" lang="zh-CN"><span>澄清如何确定字符集;</span> <span>分析和标记化算法的最小变化。</span></span></td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,255,220);"><strong>{{ SpecName("CSS Will Change", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS Will Change") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Basic_User_Interface" style="display: none;">Basic User Interface</h4>
+
+<h4 id="Transitions" style="display: none;">Transitions</h4>
+
+<table class="standard-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="border: solid 1px; width: 30%; background-color: rgb(255,255,220);"><strong>{{ SpecName("CSS3 Transitions", "", "") }}</strong></td>
+   <td style="border: solid 1px;">{{ Spec2("CSS3 Transitions") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2" style="border: solid 1px;">通过增加 CSS {{ cssxref("transition") }}，{{ cssxref("transition-delay") }}，{{ cssxref("transition-duration") }}， {{ cssxref("transition-property") }}，和 {{ cssxref("transition-timing-function") }} 属性来支持定义两个属性值间的 transitions effects(<span style="line-height: 1.5;">过渡效果)。</span></td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Animations" style="display: none;">Animations</h4>
+
+<table class="standard-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="border: solid 1px; width: 30%; background-color: rgb(255,255,220);"><strong>{{ SpecName("CSS3 Animations", "", "") }}</strong></td>
+   <td style="border: solid 1px;">{{ Spec2("CSS3 Animations") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2" style="border: solid 1px;">允许定义动画效果， 借助于新增的 CSS {{ cssxref("animation") }}， {{ cssxref("animation-delay") }}， {{ cssxref("animation-direction") }}， {{ cssxref("animation-duration") }}， {{ cssxref("animation-fill-mode") }}， {{ cssxref("animation-iteration-count") }}， {{ cssxref("animation-name") }}， {{ cssxref("animation-play-state") }}， 和 {{ cssxref("animation-timing-function") }} 属性， 以及 {{ cssxref("@keyframes") }} @ 规则。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Transforms" style="display: none;">Transforms</h4>
+
+<table class="standard-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="border: solid 1px; width: 30%; background-color: rgb(255,255,220);"><strong>{{ SpecName("CSS3 Transforms", "", "") }}</strong></td>
+   <td style="border: solid 1px;">{{ Spec2("CSS3 Transforms") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2" style="border: solid 1px;">
+    <p>增加：</p>
+
+    <ul>
+     <li>支持适用于任何元素的 bi-dimensional transforms(二维变形)，使用 CSS {{ cssxref("transform") }} 和 {{ cssxref("transform-origin") }} 属性。支持的变形有： <code>matrix</code><code>()</code>，<code>translate()</code>，<code>translateX()</code>，<code>translateY(，</code> <code>scale()</code>，<code>scaleX()</code>，<code>scaleY()</code>，<code>rotate()</code>，<code>skewX()</code>，和 <code>skewY()。</code></li>
+     <li>支持适用于任何元素的 tri-dimensional transforms(三维变形)，使用 CSS  {{ cssxref("transform-style") }}， {{ cssxref("perspective") }}， {{ cssxref("perspective-origin") }}， 和 {{ cssxref("backface-visibility") }} 属性和扩展的 {{ cssxref("transform") }} 属性，使用以下变形： <code>matrix</code> <code>3d()</code>， <code>translate3d()</code>，<code>translateZ()</code>，<code>scale3d()</code>，<code>scaleZ()</code>，<code>rotate3d()</code>，<code>rotateX</code><code>()</code> ，<code>rotateY</code><code>()</code>，<code>rotateZ()</code>，和 <code>perspective()。</code></li>
+    </ul>
+
+    <p><em><strong>注意：</strong> 该规范是 CSS 2D-Transforms， CSS 3D-Transforms 和 SVG transforms 合并的结果。</em></p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Fragmentation" style="display: none;">Fragmentation</h4>
+
+<table class="standard-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="border: 1px solid; width: 30%; background-color: rgb(255, 255, 220);"><strong>{{ SpecName("CSS3 Fragmentation", "", "") }}</strong></td>
+   <td style="border: solid 1px;">{{ Spec2("CSS3 Fragmentation") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2" style="border: solid 1px;">
+    <p>定义了网页的分割将如何实行，即分页、分栏，以及窗口和孤儿页面的处理。</p>
+
+    <p>增加：</p>
+
+    <ul>
+     <li>通过 CSS {{ cssxref("box-decoration-break") }} 属性定义一个盒（box）被在页、栏或行被分割时，诸如边框与背景颜色或图片等修饰行为的支持。</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Text" style="display: none;">Text</h4>
+
+<table class="standard-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="border: solid 1px; width: 30%; background-color: rgb(255,255,220);"><strong>{{ SpecName("CSS3 Text", "", "") }}</strong></td>
+   <td style="border: solid 1px;">{{ Spec2("CSS3 Text") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2" style="border: solid 1px;">
+    <p>扩展：</p>
+
+    <ul>
+     <li>CSS {{ cssxref("text-transform") }} 属性的值 <code>full-width。</code></li>
+     <li>CSS {{ cssxref("text-align") }} 属性的值 <code>start<font face="Open Sans, sans-serif"><span style="line-height: 18px;">，</span></font></code><code>end<font face="Open Sans, sans-serif"><span style="line-height: 18px;">，</span></font></code><code>start end，</code>和 <code>match-parent</code>，为包含多个方向文本的文档提供良好支持。</li>
+     <li>CSS {{ cssxref("text-align") }} 属性的 {{cssxref("&lt;string&gt;")}} 值来根据该字符对齐。对于数字的小数点对齐特别有用。</li>
+     <li>CSS {{ cssxref("word-spacing") }} 和 {{ cssxref("letter-spacing") }} 属性拥有范围限制，来控制两端对齐时的灵活性。</li>
+    </ul>
+
+    <p>增加：</p>
+
+    <ul>
+     <li>使用 CSS {{ cssxref("text-space-collapse") }} 和 {{ cssxref("tab-size") }} 属性来控制空白该如何显示。</li>
+     <li>使用 CSS {{ cssxref("line-break") }}，{{ cssxref("word-break") }}，{{ cssxref("hyphens") }}，{{ cssxref("text-wrap") }}，{{ cssxref("overflow-wrap") }}，和 {{ cssxref("text-align-last") }} 属性来控制折行和单词边界。</li>
+     <li>使用 CSS {{ cssxref("text-justify") }} 属性来控制两端对齐的行为，这是为了对更多语言类型增加支持。</li>
+     <li>使用 CSS {{ cssxref("text-indent") }} 和 {{ cssxref("hanging-punctuation") }} 属性来控制 edge effect(边缘影响)。</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>一部分出现在早期 CSS Text Level 3 草案中的特性<a class="external" href="http://dev.w3.org/csswg/css3-text/#recent-changes" title="http://dev.w3.org/csswg/css3-text/#recent-changes">被推迟到了该规范的下个迭代中</a>。</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,255,220);"><strong>{{ SpecName("CSS3 Variables", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Variables") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"><span class="short_text" id="result_box" lang="zh-CN"><span>定义了允许在 CSS 中定义变量的机制。</span></span></td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,255,220);"><strong>{{ SpecName("Compositing", "", "") }}</strong></td>
+   <td>{{ Spec2("Compositing") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Fonts" style="display: none;">Fonts</h4>
+
+<h3 id="处于修正阶段的模块">处于修正阶段的模块</h3>
+
+<p>处于修正阶段的模块没处于改善阶段的模块稳定。它们的语法一般还需要详细审查，可能还会有些大变化，还有可能不兼容之前的规范。<span lang="zh-CN"><span>替代语法已通过测试并被广泛实践。</span></span></p>
+
+<table class="standard-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="border: solid 1px; width: 30%; background-color: rgb(255,160,100);"><strong>{{ SpecName("CSS3 Basic UI", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Basic UI") }}</td>
+  </tr>
+  <tr>
+   <td colspan="3" style="border: solid 1px;">
+    <p>增加：</p>
+
+    <ul>
+     <li>使用 CSS {{ cssxref("box-sizing") }} 属性来转换盒模型的能力。<br>
+      <strong><em><em><em><strong>处于风险中</strong></em><strong><em>：</em></strong></em></em> </strong><em><em><em><em>由于缺少足够的浏览器支持</em></em></em> ， <code>padding</code><code>-box</code> 值的</em><em><em>标准化</em>可能会被推迟到该模块的下一个迭代中。</em></li>
+     <li>根据表单内容来设置样式， 使用 CSS {{ cssxref(":indeterminate") }}， {{ cssxref(":default") }}， {{ cssxref(":valid") }}， {{ cssxref(":invalid") }}， {{ cssxref(":in-range") }}， {{ cssxref(":out-of-range") }}， {{ cssxref(":required") }}， {{ cssxref(":optional") }}， {{ cssxref(":read-only") }}，和 {{ cssxref(":read-write") }} 伪类与 {{ cssxref("::value") }}， {{ cssxref("::choices") }}， {{ cssxref("::repeat-item") }}， 和 {{ cssxref("::repeat-index") }} 伪元素。<br>
+      <em><strong><em><em><em><strong>处于风险中</strong></em><strong><em>：</em></strong></em></em></strong> <em><em><em><em>由于缺少足够的浏览器支持</em></em></em> ，</em>伪元素 {{ cssxref("::value") }}， {{ cssxref("::choices") }}， {{ cssxref("::repeat-item") }}， 和 {{ cssxref("::repeat-index") }} </em><em>的</em><em><em>标准化</em>可能会被推迟到该模块的下一个迭代中。</em></li>
+     <li>支持图标，通过 CSS {{ cssxref("icon") }} 属性定义， 同时在 CSS {{ cssxref("content") }} 属性中设置新<span style="font-family: courier new,andale mono,monospace; line-height: normal;">图标</span>的值。<br>
+      <em><em><strong><em><em><em><strong>处于风险中</strong></em><strong><em>：</em></strong></em></em></strong> </em><em><em><em><em><em>由于缺少足够的浏览器支持</em></em></em> ，</em></em>{{ cssxref("icon") }} 属性和 <code>icon</code> 值</em><em>的</em><em><em>标准化</em>可能会被推迟到 CSS 4 中。</em></li>
+     <li>支持 CSS {{ cssxref("outline-offset") }} 属性， 这样可以对 outline 的位置做更多的控制。</li>
+     <li>支持 CSS {{ cssxref("resize") }} 属性， Web 开发者可以控制元素是否能够以及如何调整大小。</li>
+     <li>支持 CSS {{ cssxref("text-overflow") }} 属性， 定义文本溢出的行为。<br>
+      <em><em><em><strong><em><em><em><strong>处于风险中</strong></em><strong><em>：</em></strong></em></em></strong></em></em> <em><em><em><em><em><em>由于缺少足够的浏览器支持</em></em></em> ，</em></em></em>该属性的双值语法也和 {{cssxref("&lt;string&gt;")}} 值一样， 它们的</em><em><em>标准化</em>可能会被推迟到该模块的下一个迭代中。</em></li>
+     <li>定义鼠标 hotspot(热点) 的功能， 扩展了 {{ cssxref("cursor") }} 属性， 增加了新值：  <code>none</code>, <code>context-menu</code>, <code>cell</code>, <code>vertical-text</code>, <code>alias</code>, <code>copy</code>, <code>no-drop</code>, <code>not-allowed</code>, <code>nesw-</code><code>resize</code>, <code>nwse-</code><code>resize</code>, <code>col-resize</code>, <code>row-resize</code>, <code>all-scroll</code>, <code>zoom-in</code>, <code>zoom-out。</code></li>
+     <li>指定 sequential navigation order(连续导航顺序， 即 <em>tabbing order(移动顺序)</em>) 的功能， 使用 CSS {{ cssxref("nav-index") }}， {{ cssxref("nav-up") }}， {{ cssxref("nav-right") }}， {{ cssxref("nav-left") }}， {{ cssxref("nav-down") }} 属性。<br>
+      <em><em><em><em><strong><em><em><em><strong>处于风险中</strong></em><strong><em>：</em></strong></em></em></strong></em></em></em> <em><em><em><em><em><em><em>由于缺少足够的浏览器支持，</em></em></em></em></em></em></em>导航属性</em><em>的</em><em><em>标准化</em>可能会被推迟到该模块的下一个迭代中。</em></li>
+     <li>控制 IME editor(输入法编辑器) 使用的功能， 使用 CSS {{ cssxref("ime-mode") }} 属性。<br>
+      <em><em><em><em><em><strong><em><em><em><strong>处于风险中</strong></em><strong><em>：</em></strong></em></em></strong></em></em></em></em> <em>由于缺少足够的浏览器支持，</em>{{ cssxref("ime-mode") }}</em><em>属性</em><em>的</em><em><em>标准化</em>可能会被推迟到该模块的下一个迭代中。</em></li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p><a class="external external-icon" href="http://wiki.csswg.org/spec/css4-ui" title="http://wiki.csswg.org/spec/css4-ui">这里</a>提供了会出现在下次 <span style="line-height: 1.5;"> CSS Basic User Interface Module 迭代中的功能列表。</span></p>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,160,100);"><strong>{{ SpecName("CSS3 Grid", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Grid") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2">添加了 grid 布局给 CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display" title=""><code>display</code></a> 属性，以及一些新的属性来控制它：{{cssxref("grid")}}，{{cssxref("grid-area")}}，{{cssxref("grid-auto-columns")}}，{{cssxref("grid-auto-flow")}}，{{cssxref("grid-auto-position")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-column")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-row")}}, {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-template")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-template-rows")}}, and {{cssxref("grid-template-columns")}}.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,160,100);"><strong>{{ SpecName("CSS3 Box Alignment", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Box Alignment") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,160,100);"><strong>{{ SpecName("CSS3 Paged Media", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Paged Media") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,160,100);"><strong>{{ SpecName("CSSOM View", "", "") }}</strong></td>
+   <td>{{ Spec2("CSSOM View") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,160,100);"><strong>{{ SpecName("CSS4 Selectors", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS4 Selectors") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Writing_modes" style="display: none;">Writing modes</h4>
+
+<h3 id="处于探索阶段的模块">处于探索阶段的模块</h3>
+
+<h4 id="Images_(Level_4)" style="display: none;">Images (Level 4)</h4>
+
+<table class="standard-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="border: solid 1px; width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS4 Images", "", "") }}</strong></td>
+   <td style="border: solid 1px;">{{ Spec2("CSS4 Images") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2" style="border: solid 1px;">
+    <p>扩展：</p>
+
+    <ul>
+     <li><code>image()</code> 函数标记来描述图片 (<code>rtl 或</code> <code>ltr</code>) 的方向性，允许 bidi-sensitive(双向敏感) 的图片。</li>
+     <li>为 {{ cssxref("image-orientation") }} 属性增加关键字 <code>from-image，允许使用存储在图片中的 </code>EXIF 数据。</li>
+    </ul>
+
+    <p>增加：</p>
+
+    <ul>
+     <li><code>image-set()</code> 函数标记，允许定义不同分辨率下的对应图片实现依据分辨率选择图片。</li>
+     <li><code>element()</code> 函数标记， 允许将页面的部分当作图片来使用。</li>
+     <li><code>cross-fade()</code> 函数标记， 允许在两张图片之间过渡时使用中间图片，并定义了两张图片间的 interpolation(插值)。</li>
+     <li><code>conic-gradient()</code> 和 <code>repeating-conic-gradient()</code> 函数标记，描述了一种新的渐变类型。</li>
+     <li>{{cssxref("image-rendering")}} 属性允许定义如何处理改变图片大小的行为。</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Device_Adaptation" style="display: none;">Device Adaptation</h4>
+
+<table class="standard-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="border: solid 1px; width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS3 Device", "", "") }}</strong></td>
+   <td style="border: solid 1px;">{{ Spec2("CSS3 Device") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2" style="border: solid 1px;">增加一个新的 @ 规则， {{ cssxref("@viewport") }}，允许为视口指定尺寸（size）、缩放因子（zoom factor）和方向（orientation），这些将作为 initial containing block(初始包含块) 的基础。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Grid_Layout" style="display: none;">Grid Layout</h4>
+
+<h4 id="GCPM" style="display: none;">GCPM</h4>
+
+<table class="standard-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="border: solid 1px; width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS3 GCPM", "", "") }}</strong></td>
+   <td style="border: solid 1px;">{{ Spec2("CSS3 GCPM") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2" style="border: solid 1px;">增加调整打印版本的功能，允许控制页头，页脚，同时引用表索引或表内容。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Exclusions_and_Shapes" style="display: none;">Exclusions and Shapes</h4>
+
+<table class="standard-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="border: solid 1px; width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS3 Exclusions", "", "") }}</strong></td>
+   <td style="border: solid 1px;">{{ Spec2("CSS3 Exclusions") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2" style="border: solid 1px;">扩展浮动机制，在任何定位方案中生成一个 exclusion regions(<span style="line-height: 1.5;">排斥区域)。增加形状标记，其中的内容必须流动。</span></td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Lists" style="display: none;">Lists</h4>
+
+<table class="standard-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="border: solid 1px; width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS3 Lists", "", "") }}</strong></td>
+   <td style="border: solid 1px;">{{ Spec2("CSS3 Lists") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2" style="border: solid 1px;">扩展了列表计数机制， 这样可以为列表标记设置样式，并使 Web 开发者定义新的列表计数方案。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Regions" style="display: none;">Regions</h4>
+
+<table class="standard-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="border: solid 1px; width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS3 Regions", "", "") }}</strong></td>
+   <td style="border: solid 1px;">{{ Spec2("CSS3 Regions") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2" style="border: solid 1px;">
+    <p>定义了一种可使内容流动至数个非连续空间的机制，称为区域（Regions）。</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Variables" style="display: none;">Variables</h4>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("Filters 1.0", "", "") }}</strong></td>
+   <td>{{ Spec2("Filters 1.0") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS3 Template", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Template") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS3 Sizing", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Sizing") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS Line Grid", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS Line Grid") }}</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS3 Positioning", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Positioning") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS3 Ruby", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Ruby") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSSOM", "", "") }}</strong></td>
+   <td>{{ Spec2("CSSOM") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS3 Overflow", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Overflow") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS3 Font Loading", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Font Loading") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS3 Display", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Display") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS Scope", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS Scope") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS4 Media Queries", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS4 Media Queries") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS Non-element Selectors", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS Non-element Selectors") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("Geometry Interfaces", "", "") }}</strong></td>
+   <td>{{ Spec2("Geometry Interfaces") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{ SpecName("CSS3 Inline", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Inline") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="在重写的模块">在重写的模块</h3>
+
+<p><span id="result_box" lang="zh-CN"><span>以下模块已经过时，需要重写。</span>其<span>语法仍然在审查，可能会以不兼容的方式</span></span><span lang="zh-CN"><span>发展出很多。</span><span>替代语法已通过测试并被广泛实践。</span></span></p>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F33;"><strong>{{ SpecName("CSS3 Box", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Box") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F33;"><strong>{{ SpecName("CSS3 Content", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Content") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F33;"><strong>{{ SpecName("CSS3 Inline Layout", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Inline Layout") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<p> </p>

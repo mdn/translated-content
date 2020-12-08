@@ -1,0 +1,325 @@
+---
+title: XPCOM Objects
+slug: Archive/Mozilla/XUL/School_tutorial/XPCOM_Objects
+translation_of: Archive/Add-ons/Overlay_Extensions/XUL_School/XPCOM_Objects
+---
+<div><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/School_tutorial/JavaScript_Object_Management" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/School_tutorial/Observer_Notifications">次のページ  »</a></p>
+</div></div>
+
+
+
+
+
+
+<h2 id="XPCOM" name="XPCOM">XPCOM</h2>
+
+<blockquote>
+  <p><strong>XPCOM</strong> は、Microsoft COM に似た、クロスプラットフォームのコンポーネントオブジェクトモデルです。</p>
+</blockquote>
+
+<p>これは、<a href="/ja/docs/XPCOM" title="XPCOM">XPCOM のページ</a>からの引用です。</p>
+
+<p>Firefox は、2 つの階層から構成されていることが分かります。2 つの内の大きな方は、大部分が C++ で書かれ、コンパイルされたプラットフォームです。その上に、大部分が XML や JavaScript、CSS で書かれた chrome が横たわっています。事実、2 つに分けることができます。私たちは度々、他の "Mozilla ベースのアプリケーション" に言及します。これらは、簡単に言えば、基礎をなすプラットフォームにいくつかの変更と機能追加をして独自の chrome の階層部分を書いたアプリケーションです。この下層部分は <a href="/ja/docs/XULRunner" title="XULRunner">XULRunner</a> と呼ばれています。これは、とても強力なプラットフォームであり、ウェブ利用可能でクロスプラットフォームなアプリケーションのための頑丈な開発ベースを提供します。OS に依存しないアプリケーションを簡単に作成できることは、XULRunner の大きなセールスポイントです。</p>
+
+<p>XPCOM は、2 つの階層 (XULRunner と chrome) を橋渡しする方法です。下層のほとんどのオブジェクトや関数は、chrome に隠されています。これらは、XPCOM コンポーネントとインタフェースを通して露出される必要があります。XPCOM を Firefox の下層で利用可能なすべての権限への参照として考えてください。</p>
+
+<p>XPCOM コンポーネントを使用することは、前回のセクションの例のように、比較的簡単です。</p>
+
+<pre class="brush:js">this.obsService = Cc["@mozilla.org/observer-service;1"].getService(Ci.nsIObserverService);</pre>
+
+<p><em>Cc</em> オブジェクト (<a href="/ja/docs/Components.classes" title="Components.classes">Components.classes</a>) は、XPCOM と通して利用可能な静的オブジェクトと class 定義のインデックスです。角括弧内の文字列はただの識別子です。この場合は Observer サービスに相当します。コードの例やドキュメントを読めば、どの文字列を使用するか分かってくるでしょう。これらの総合的なリストは (私たちが知る限り) ありません。もしあれば、アドオンによって拡張することもできるため、このリストはとても長くなります。現在インストールされた Firefox のこのリストを表示したいときは、エラーコンソールで次のコードを実行してください:</p>
+
+<pre class="brush:js">var str = ""; for (var i in Components.classes) { str += i + "\n" }; str</pre>
+
+<p>Firefox 3.6.2 にいくつかの拡張機能をインストールした環境では、876 行の文字列が出力されました。とても多いですね。幸運なことに、拡張機能開発のために知っておく必要のあるものは一握りだけです。<em>@mozilla.org/</em> プレフィックスは、名前空間に保持しておくために付いています。私たちが独自のコンポーネントを作成する時は、<em>@xulschool.com/</em> のような名前を使います。</p>
+
+<p>コンポーネントは、JavaScript で扱っているオブジェクトと同じような、サービス (静的オブジェクト) とクラスのインスタンスのどちらかです。<em>Cc["some-string"]</em> で呼び出せるメソッドは、問い合わせるものによって、<em>getService</em> と <em>createInstance</em> のどちらかになります。多くの場合、どちらを呼び出すかがはっきりと区別できます。そうでない場合は、これらのドキュメントを参照してください。これら 2 つのメソッドは、常にインタフェース識別子を引数として受け取ります。</p>
+
+<p><em>Cc</em> と似た <em>Ci</em> (<a href="/ja/docs/Components.interfaces" title="Components.interfaces">Components.interfaces</a>) は、利用可能なインタフェースのインデックスです。上記のコードスニペットを少し変更すれば、利用可能なインタフェースの長いリストを得られます。コンポーネント識別子と同じように、<em>nsI</em> はインタフェースを整理するためのものです。"NS" は、Mozilla の前のアプリケーションである Netscape を意味し、"I" は、インタフェースを意味しています。私たちのインタフェース名は、<em>xsIHello</em> のようなプレフィックスで始めます。</p>
+
+<p>インタフェースは、オブジェクトに実装されている属性とメソッドのセットの定義でしかありません。XPCOM コンポーネントは複数のインタフェースを実装できます (多くの場合、複数実装されています)。この例として、Preference サービスを見てみましょう。このドキュメントを、<a href="http://www.xulplanet.com/">XUL Planet</a> と呼ばれるとても古い XUL のサイトで見ていきます。このサイトのすべてのドキュメントは MDC へ移行されましたが、完了する前に XUL Planet が閉鎖されてしまったようです。これらの XPCOM ドキュメントはコンポーネントとインタフェースの関係を見るには良いドキュメントなので、私たちはこれを利用します。</p>
+
+<p>もう一つの役立つリファレンスは、<a href="http://www.oxymoronical.com/experiments/xpcomref/" title="http://www.oxymoronical.com/experiments/xpcomref/">この XPCOM リファレンス</a>です。これはソースコードから生成されており、自動的に更新されています。このリファレンスは、コンポーネントとインタフェースの関係を表示しますが、これは、ドキュメント参照というよりもソースブラウザと言った方がよいでしょう。</p>
+
+<p>タイムマシンに乗り込んで、<a href="http://web.archive.org/web/20080311100120/http://www.xulplanet.com/references/xpcomref/comps/c_preferencesservice1.html" title="http://web.archive.org/web/20080311100120/http://www.xulplanet.com/references/xpcomref/comps/c_preferencesservice1.html">Preferences サービスコンポーネントのページ</a>を見ましょう。右側の上部には、実装されているインタフェースのリストがあり、各ドキュメントのページへリンクされています。その次に、このオブジェクトのすべてのメンバのリストと説明があります。この部分は特に重要です。コンポーネントのすべてのメンバと、メンバが定義されているインタフェースが書かれています。<em>getBranch</em> メソッドのリンクをクリックすると、<a href="http://web.archive.org/web/20080305031645/www.xulplanet.com/references/xpcomref/ifaces/nsIPrefService.html#method_getBranch" title="http://web.archive.org/web/20080305031645/www.xulplanet.com/references/xpcomref/ifaces/nsIPrefService.html#method_getBranch">nsIPrefService のドキュメントのページ</a>へ移動します。ここには、インタフェースとメソッドについての詳細があります。また、このインタフェースを実装しているコンポーネントのリストもあります。これらのドキュメントはすべて、Firefox のソースファイルから生成されているため、生成された当時のドキュメントとして完成されています。しかし、残念なことに XUL Planet はもう存在しません。</p>
+
+<p>インタフェースの扱いは不便なことがあります。メソッドの呼び出しやコンポーネントのインタフェース X の属性を使用したいときは、最初にコンポーネントをインタフェース X に "キャスト" する (割り当てる) 必要があります。これは、すべての XPCOM コンポーネントに含まれている <em>QueryInterface</em> メソッドを通して行います。</p>
+
+<pre class="brush:js">this._prefService =
+  Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefBranch);
+
+this._prefValue = this._prefService.getBoolPref("somePreferenceName");
+
+this._prefService.QueryInterface(Ci.nsIPrefBranch2);
+this._prefService.addObserver("somePreferenceName", this, false);
+this._prefService.QueryInterface(Ci.nsIPrefBranch);</pre>
+
+<p>これは、環境設定に関するコンポーネントや JSM を初期化する一般的なコード片です。コードの 4 行目で行っているように、環境設定の値を取得、設定するために Preferences サービスを利用します。これらのメソッドは <em>nsIPrefBranch</em> インタフェース内にあります。<em>getService</em> メソッドと <em>createInstance</em> メソッドは、インタフェースにすでにセットされているコンポーネントを取得します。多くの場合、使用する必要のあるインタフェースは一つだけであり、<em>QueryInterface</em> について心配する必要はありません。しかし、この例の場合は、環境設定のオブザーバを追加するメソッドが含まれた <em>nsIPrefBranch2</em> へインタフェースを変更する必要があります。オブザーバを追加した後は、環境設定の値の取得と設定だけが必要なため、インタフェースをこれらのメソッドが含まれた <em>nsIPrefBranch</em> に戻しています。</p>
+
+<div class="note">
+  正しいインタフェースをセットせずにメソッドや属性へアクセスしようとすると、例外が投げられます。</div>
+
+
+
+
+
+<h2 id="Passing_parameters" name="Passing_parameters">引数を渡す</h2>
+
+<p>XPCOM メソッドへ引数を渡すことは、いくつかの例外を除き、他の JavaScript オブジェクトの場合と違いはありません。一般的には、JavaScript による値の型変換に頼ることができますが、最初の場所で正しい型を渡すことが最善です。このセクションは、XPCOM ドキュメントの読み方についてのクイックガイドです。ここでは、XPCOM インタフェースで使用される言語の <a href="/ja/docs/XPIDL" title="XPIDL">XPIDL</a> の構文が理解できるようにします。</p>
+
+<p>MDC では、次のように書かれています:</p>
+
+<pre class="brush:js">void setCharPref(in string aPrefName, in string aValue);</pre>
+
+<p>ここで注目すべき最も重要な点の一つは、両方の引数に <em>in</em> キーワードが使用されていることです。このキーワードは、これらの引数が入力パラメータであり、値はメソッドがその動作のために使用することを指定します。どのような場合に <em>in</em> でない引数になるでしょうか？ 一部のメソッドでは、実際の値を返す引数のために <em>out</em> キーワードが使用されます。これは、IDL 内で、戻り値として正しくない型指定された配列などの特定の型に対して使用されます。</p>
+
+<pre class="brush:js">void getChildList(in string aStartingAt, out unsigned long aCount,[array, size_is(aCount), retval] out string aChildArray);</pre>
+
+<p>このメソッドは文字列の配列を返します。1 番目の引数は、メソッドに文字列を見始める場所を教える入力パラメータです。2 番目の引数は、返された配列の長さを保持し、3 番目の引数は、その配列自身を保持します。各括弧内にメタデータが含まれていることに注意してください。これは、引数が配列であり、そのサイズが <em>aCount</em> パラメータによって決定されていることを示しています。次の例は、このメソッドの使用例の一つです:</p>
+
+<pre class="brush:js">let childArrayObj = new Object();
+let childArray;
+
+this._prefService.getChildList("", {}, childArrayObj);
+
+// .value は実際の配列を保持しています。
+childArray = childArrayObj.value;</pre>
+
+<p>一般的な <em>out</em> の引数の使い方は、引数に空のオブジェクトを渡し、メソッドを呼び出した後にこのオブジェクトの <em>value</em> 属性へアクセスすることによって値を取得します。<em>value</em> 属性はメソッドがセットします。また、JavaScript 配列には、その長さを取得する <em>length</em> 属性があるため、2 番目の引数を使用する必要はありません。そのため、使用されない空のオブジェクトを渡しています。2 番目の引数は、高レベルの配列の代わりにポインタを使用する C++ コードから呼び出される場合に必要になります。</p>
+
+<p>一部のよく使用される XPCOM メソッドは、引数として他の XPCOM の型を必要とします。例えば、<em>nsIPrefBranch2</em> の <em>addObserver</em> メソッドがあります。</p>
+
+<pre class="brush:js">void addObserver(in string aDomain, in nsIObserver aObserver, in boolean aHoldWeak);</pre>
+
+<p>幸運なことに、JavaScript オブジェクトを preference オブザーバとして登録したいときは、何も特別なことをする必要はありません。<em>nsIObserver</em> には単独の <em>observe</em> メソッドがあるため、必要なことは、あなたのオブジェクト内で <em>observe</em> メソッドを記述することだけです。</p>
+
+<pre class="brush:js">XULSchool.PrefObserver = {
+  init: function() {
+
+    this._prefService =
+      Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefBranch2);
+    // nsIOvserver を実装するかのように 'this' を渡します
+    this._prefService.addObserver(
+      "extensions.xulschoolhello.somePref", this, false);
+  },
+
+  observe : function(aSubject, aTopic, aData) {
+    // オブザーブ処理
+  }
+};</pre>
+
+<p>最後に、次の表は、最もよく遭遇する XPCOM インタフェースの型の要約とその扱い方の表です:</p>
+
+<table class="fullwidth-table">
+  <thead>
+    <tr>
+      <th>JS の型</th>
+      <th>IDL の型</th>
+      <th>補足</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Strings</td>
+      <td>AUTF8String, string, wstring, char*, others</td>
+      <td>歴史的に、XPCOM にはいくつかの文字列型があります。現在最も使用されているのは <em>AUTF8String</em> です。これらの文字列型の詳細については、<a href="/ja/docs/Mozilla_internal_string_guide" title="Mozilla internal string guide">XPCOM 文字列ガイド</a>をお読みください。</td>
+    </tr>
+    <tr>
+      <td>Integers</td>
+      <td>short, unsigned short, long, unsigned long, PRInt32, PRUInt32</td>
+      <td><em>PRInt32</em> は、<em>long</em> と等価です。ほとんどの <em>PR*</em> 型は等価の型を簡単に読めるため、これらを使うことが望ましいです。</td>
+    </tr>
+    <tr>
+      <td>Floating point</td>
+      <td>float</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Boolean</td>
+      <td>boolean, PRBool</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Void</td>
+      <td>void</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Timestamps</td>
+      <td>PRTime</td>
+      <td>この型は、Javascript Date オブジェクトの <em>getTime()</em> メソッドの出力のような、ミリ秒単位のタイムスタンプを渡すために使用されます。</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>XPIDL についての詳細は、<a href="/ja/docs/XPIDL/Syntax" title="XPIDL/Syntax">XPDIL 構文の定義</a>を参照してください。</p>
+
+
+
+
+
+<h2 id="Creating_Your_Own_Components" name="Creating_Your_Own_Components">独自のコンポーネントの作成</h2>
+
+
+
+
+
+<h3 id="JavaScript_XPCOM_Components" name="JavaScript_XPCOM_Components">JavaScript で書かれた XPCOM コンポーネント</h3>
+
+<p>以前にも言ったように、できるだけ JSM を使用することをお勧めします。しかし、特定の機能を追加するために XPCOM コンポーネントを作成するしかない場合もあります。このような場合は、C++ で書かれコンパイルされた XPCOM コンポーネントと JavaScript XPCOM コンポーネントのどちらかを選べます。作成や管理がそれほど複雑でない後者を選ぶとよいでしょう。</p>
+
+<p>多くの場合、JavaScript XPCOM コンポーネントには、IDL インタフェースファイルと機能を実装する JavaScript ファイルの 2 個のソースファイルが必要です。最終的な拡張機能の XPI には、JavaScript の実装ファイルと IDL ファイルをコンパイルした XPT ファイルを含める必要があります。コンポーネントが既存の Firefox のインタフェースだけを利用する場合は、IDL ファイルや XPT ファイルは必要ありません。このような場合は、JSM と <a href="/ja/docs/JavaScript/Code_modules/XPCOMUtils.jsm" title="JavaScript code modules/XPCOMUtils.jsm">XPCOMUtils モジュール</a>を使用して簡単にコンポーネントを実装できることが分かるでしょう。</p>
+
+<p>XPCOM を含めたバージョンの <a href="/@api/deki/files/4265/=HelloWorld4.zip" title="/@api/deki/files/4265/=HelloWorld4.zip">Hello World プロジェクト</a>をダウンロードして、XPCOM ファイルがどのように構成され、ビルドされるかを確認してください。(おそらく、あなたのビルドは完了しないでしょう。このことは後で取り上げます。)</p>
+
+<p><em>components</em> ディレクトリの <em>xsIHelloCounter.idl</em> ファイルは次の内容です:</p>
+
+<pre class="brush:js">#include "nsISupports.idl"
+
+/**
+ * Counter for the Hello World extension. Keeps track of how many times the
+ * hello world message has been shown.
+ */
+[scriptable, uuid(BD46F689-6C1D-47D0-BC07-BB52B546B8B5)]
+interface xsIHelloCounter : nsISupports
+{
+  /* The maximum allowed count. */
+  const short MAX_COUNT = 100;
+
+  /* The current count. */
+  readonly attribute short count;
+
+  /**
+
+   * Increments the display count and returns the new count.
+   * @return the incremented count.
+   */
+  short increment();
+};</pre>
+
+
+<p><em>nsISupports</em> についての部分は、ほとんどの XPCOM インタフェース定義で共通です。<em>nsISupports</em> は、すべてのインタフェースの基礎となるインタフェースです。そのため、他のインタフェースを拡張する場合を除き、常に含まれていなければなりません。他のインタフェースを拡張する場合は、<em>nsISupports</em> の部分をそのインタフェースに置き換えるだけです。また、複数のインタフェースをカンマ区切りで記述して、それらのインタフェースから拡張することもできます。</p>
+
+
+<pre class="code-java">[scriptable, uuid(BD46F689-6C1D-47D0-BC07-BB52B546B8B5)]</pre>
+
+<p><em>scriptable</em> 限定子は、このコンポーネントが JavaScript コードからアクセスされることを宣言します。これはまた、Firefox のインタフェースの一部に見られるメソッドの基底ごとに指定されます。しかし、独自のコンポーネントでは行わなくてもよいでしょう。2 番目の部分は、インタフェースの UUID を定義します。各インタフェースに一つ、新しいものを生成しなければなりません。また、インタフェースが変更されるごとに毎回 UUID も変更すべきです。この部分は、拡張機能の ID に使用されるようなメールアドレス形式では動作しないため、UUID 形式で記述しなければなりません。</p>
+
+<p>IDL ファイルには定数と属性、メソッドの 3 つの例を含めましたが、これは、簡単なカウンタにしておくには明らかに作りこみ過ぎです。</p>
+
+<p>IDL ファイルでは、数値と真偽値の定数が定義できますが、文字列の定数は定義できません。これは、XPIDL の既知の制限です。簡単な回避策は、代わりに <em>readonly 属性</em> を定義することです。それでも、実装ファイルでは getter を定義しなければなりません。コンポーネントの参照を通じて、またはインタフェースから直接、定数へアクセスできます:</p>
+
+
+<pre class="brush:js">// これらは等価です
+max = Ci.xsIHelloCounter.MAX_COUNT;
+max = counterReference.MAX_COUNT;</pre>
+
+<p>実装ファイルの <em>xsHelloCounter.js</em> はとても長いので、部分ごとに解説していきます。</p>
+
+<pre class="brush:js">const Cc = Components.classes;
+const Ci = Components.interfaces;
+const Cr = Components.results;
+const Ce = Components.Exception;</pre>
+
+<p>このコードは分かりますね。ここでは、さらに <a href="/ja/docs/Components.results" title="Components.results">Components.results</a> と <a href="/ja/docs/Components.Exception" title="Components.Exception">Components.Exception</a> の 2 行が追加されています。これらは、さらに後で使用されます。</p>
+
+<pre class="brush:js">const CLASS_ID = Components.ID("{37ED5D2A-E223-4386-9854-B64FD38932BF}");
+const CLASS_NAME = "Hello World Counter";
+const CONTRACT_ID = "@xulschool.com/counter;1";</pre>
+
+<p>これらの定数は、下のコンポーネント登録コード内で使用されます。これらは、ユニーク UUID (IDL の UUID とは異なるものを生成しなければなりません)、このコンポーネントを表す名前 (この名前はどこにも使用されないようです)、コンポーネントへの参照を得るために使用される文字列の contract ID など、コンポーネントの詳細を定義しています。contract ID 文字列の末尾の <em>";1"</em> は、コンポーネントのバージョンを示すためのものですが、あまり変更すべきではありません。これは、複数の互換性のないバージョンのコンポーネントが同時にインストールされている場合に役立ちます。</p>
+
+<p>実装オブジェクトそのものは、簡単に理解できるでしょう。ここで注意すべきことは、これらのメソッドや属性の名前を IDL で定義したものと一致させなければならないことと、<em>QueryInterface</em> メソッドを実装しなければならないことだけです:</p>
+<pre class="brush:js">QueryInterface : function(aIID) {
+  if (!aIID.equals(Ci.xsIHelloCounter) &amp;&amp;
+      !aIID.equals(Ci.nsISupports)) {
+    throw Cr.NS_ERROR_NO_INTERFACE;
+  }
+
+  return this;
+}</pre>
+
+<p>メソッドはとても簡単です。呼び出し元がサポートされたインタフェースを要求しているか検証し、そうでなければ例外を投げます。</p>
+
+<p>コードの残りは、長く複雑に見えますが、すべてのコンポーネントで同じ内容であるため心配することはありません。他のコンポーネントからコピーしていくつかの名前を変更するだけです。これらのコードの目的は、コンポーネントを登録し、他の Firefox のコンポーネントのように参照を得られるようにすることです。ここは、下から上へ向かって読むのがよいでしょう。</p>
+
+<pre class="brush:js">function NSGetModule(aCompMgr, aFileSpec) {
+  return CounterModule;
+}</pre>
+
+<p>このコードは、Firefox が <em>components</em> ディレクトリ内のすべての実装ファイルから探す最初の関数です。これは、単にコンポーネントに先立つオブジェクトを返します。</p>
+
+<pre class="brush:js">var CounterModule = {
+  // registerSelf, unregisterSelf, getClassObject, canUnload
+};</pre>
+
+<p>ここで変更する必要があるのは、<a href="/ja/docs/XPCOM_Interface_Reference/nsICategoryManager" title="nsICategoryManager">Category Manager</a> を使用する必要がある場合だけです。Category Manager は、既存または独自のカテゴリにコンポーネントを登録できるサービスです。また、このサービスは、カテゴリに登録されたすべてのコンポーネントを得ることができ、そのコンポーネント上のメソッドを呼び出すことができます。このサービスは一般的に、コンポーネントを <a href="/ja/docs/nsIContentPolicy" title="nsIContentPolicy">Content Policy</a> として登録するために使用します。こうすると、URL の読み込みを検知してフィルタにかけることができます。これについては、別のセクションで取り上げます。</p>
+
+<p>Category Manager への <em>add</em> と <em>delete</em> は、<em>registerSelf</em> メソッドと <em>unregisterSelf</em> メソッド内で行われます:</p>
+
+<pre class="brush:js">registerSelf : function(aCompMgr, aLocation, aLoaderStr, aType) {
+  let categoryManager =
+    Cc[@mozilla.org/categorymanager;1].getService(Ci.nsICategoryManager);
+
+  aCompMgr.QueryInterface(Ci.nsIComponentRegistrar);
+  aCompMgr.registerFactoryLocation(
+    CLASS_ID, CLASS_NAME, CONTRACT_ID, aLocation, aLoaderStr, aType);
+  categoryManager.addCategoryEntry(
+    "content-policy", "XULSchool Hello World", CONTRACT_ID, true, true);
+},</pre>
+
+<p>この場合、コンポーネントは <em>nsIContentPolicy</em> を実装する必要があるでしょう。</p>
+
+<p>最後は factory オブジェクトです。</p>
+
+<pre class="brush:js">var CounterFactory = {
+  /* Single instance of the component. */
+  _singletonObj: null,
+
+  createInstance: function(aOuter, aIID) {
+    if (aOuter != null) {
+      throw Cr.NS_ERROR_NO_AGGREGATION;
+    }
+    // in this case we need a unique instance of the service.
+    if (!this._singletonObj) {
+      this._singletonObj = MessageCounter;
+    }
+
+    return this._singletonObj.QueryInterface(aIID);
+  }
+};</pre>
+
+<p>単独のサービスを使用する代わりに具体的なクラスに置き換えたい場合、Factory は次のようになります:</p>
+
+<pre class="brush:js">var CounterFactory = {
+  createInstance: function(aOuter, aIID) {
+    if (aOuter != null) {
+      throw Cr.NS_ERROR_NO_AGGREGATION;
+    }
+    return (new Counter()).QueryInterface(aIID);
+  }
+};</pre>
+
+<p>IDL ファイルをビルドする手順は、このチュートリアルの『<a href="/ja/docs/XUL/School_tutorial/Setting_Up_a_Development_Environment#Building_IDL_files" title="XUL/School_tutorial/Setting Up a Development Environment">開発環境のセットアップ</a>』のセクションに書かれています。</p>
+
+
+
+
+
+<h2 id="C.2B.2B_XPCOM_Components" name="C.2B.2B_XPCOM_Components">C++ XPCOM コンポーネント</h2>
+
+<p>これは使いたくないでしょう。あなたは本当に使うことはありません。</p>
+
+<p>この種類のコンポーネントを使用するのは、いくつかの理由があります。一つは、Firefox がネイティブでサポートしていない機能を追加するためです。この場合、この機能をすべてのプラットフォーム向けに実装するか、拡張機能の互換性をサポートするプラットフォームだけに限定する必要があるでしょう。また、Windows 用の DLL、Mac (Intel, PPC) 用の dylib、Linux または互換 OS 用の .so ライブラリをそれぞれビルドする必要があります。</p>
+
+<p>この詳細については、チュートリアルに相応しくないため取り上げません。<a href="http://nerdlife.net/building-a-c-xpcom-component-in-windows/" title="http://nerdlife.net/building-a-c-xpcom-component-in-windows/">bkrausz 氏のブログ記事</a>に、XPCOM ビルドのセットアップについての詳細が書かれています。また、これがどのように行われるか理解するため、<a href="/ja/docs/Developer_Guide/Build_Instructions" title="Build Documentation">ビルドについてのドキュメント</a>も読む必要があるでしょう。</p>
+
+<div class="note">
+  システムのライブラリを利用する必要があり、独自の XPCOM コンポーネントを作成する必要がない場合は、代わりに c-types の使用を検討してください。<a href="/ja/docs/JavaScript/Code_modules/ctypes.jsm" title="JavaScript code modules/ctypes.jsm">c-types モジュール</a>は、Firefox 3.7 で導入された、JavaScript とネイティブバイナリの間の新しいブリッジです。これを使えば、XPCOM を使用せずに、既存のシステムライブラリを利用することができます。</div>
+
+<div><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/School_tutorial/JavaScript_Object_Management" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/School_tutorial/Observer_Notifications">次のページ  »</a></p>
+</div></div>
+
+<p><small>This tutorial was kindly donated to Mozilla by Appcoast.</small></p>

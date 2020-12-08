@@ -1,0 +1,78 @@
+---
+title: GetObject
+slug: Archive/Web/JavaScript/Extensions_Microsoft/GetObject
+tags:
+  - JavaScript
+  - Microsoft
+  - Non-standard
+  - Reference
+translation_of: Archive/Web/JavaScript/Microsoft_Extensions/GetObject
+---
+<div>{{JSRef}}{{Non-standard_header}}</div>
+
+<div class="warning"><strong>Attention !</strong> Cette fonction est spécifique à Microsoft et est uniquement prise en charge par Internet Explorer dans les versions antérieures à IE 9 (en mode standard).</div>
+
+<p>La fonction <strong><code>GetObject()</code></strong> renvoie une référence à un objet <code>Automation</code> à partir d'un fichier donné.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre>GetObject([pathname] [, class])</pre>
+
+<h3 id="Paramètres">Paramètres</h3>
+
+<dl>
+ <dt><code>pathname </code></dt>
+ <dd>Un chemin complet contenant également le nom du fichier contenant l'objet qu'on souhaite récupérer. Si <code>pathname</code> n'est pas présent, l'argument <code>class</code> sera obligatoire.</dd>
+ <dt><code>class</code> {{optional_inline}}</dt>
+ <dd>La classe de l'objet. Cet argument suit une syntaxe <code>appname.objecttype</code> où :</dd>
+ <dd><code>appname</code> correspond au nom de l'application fournissant l'objet</dd>
+ <dd><code>objecttype</code> correspond au type ou à la classe d'objet à créer.</dd>
+</dl>
+
+<h3 id="Notes">Notes</h3>
+
+<p>La fonction <code>GetObject()</code> n'est pas prise en charge par Internet Explorer 9 en mode standard, Internet Explorer 10 en mode standard, Internet Explorer 11 en mode standard et par les applications Windows Store.</p>
+
+<h2 id="Exemples">Exemples</h2>
+
+<pre class="brush: js">var CADObject;
+CADObject = GetObject("C:\\CAD\\SCHEMA.CAD");
+</pre>
+
+<p>Lorsque ce code est exécuté, l'application associée au chemin indiquée est démarrée et l'objet indiqué est activé. Si l'argument <code>pathname</code> est une chaîne vide (""), <code>GetObject</code> renvoie une nouvelle instance du type souhaité. Si l'argument <code>pathname</code>est absent, <code>GetObject()</code> renvoie l'objet actif courant pour le type indiqué. Si aucun objet ne correspond, une erreur est déclenchée.</p>
+
+<p>Certaines applications permettent d'activer une partie d'un fichier. Pour cela, on peut terminer l'argument <code>pathname</code> par un point d'exclamation suivi du nom de la partie du fichier qu'on souhaite activer. Pour plus d'informations sur la composition du nom de la partie, voir la documentation de l'application qui a créé l'objet.</p>
+
+<p>Ainsi, pour une application de dessin avec différents calques enregistrés dans un même fichier, on pourra utiliser l'instruction suivante pour récupérer un calque précis :</p>
+
+<pre class="brush: js">var LayerObject = GetObject("C:\\CAD\\SCHEMA.CAD!Layer3");
+</pre>
+
+<p>Si la classe de l'objet n'est pas passée en argument, l'objet <code>Automation</code> déterminera l'application à démarrer et l'objet à activer en fonction du nom de fichier passé en argument. Il est possible que certains fichiers prennent en charge plusieurs classes d'objet. Dans ce dernier cas, il faudra utiliser l'argument <code>class</code> afin d'indiquer la classe à récupérer :</p>
+
+<pre class="brush: js">var MyObject = GetObject("C:\\DRAWINGS\\SAMPLE.DRW", "FIGMENT.DRAWING");
+</pre>
+
+<p>Dans l'exemple précédent, <code>FIGMENT</code> est le nom d'une application de dessin et <code>DRAWING</code> est le nom d'un type d'objet pris en charge par cette application. Une fois l'objet activé, on peut y faire référence dans le code grâce à la variable qu'on a déclaré. Suite à l'instruction précédente, on peut manipuler les propriétés et méthodes du nouvel objet avec  <code>MyObject</code> :</p>
+
+<pre class="brush: js">MyObject.Line(9, 90);
+MyObject.InsertText(9, 100, "Hello, world.");
+MyObject.SaveAs("C:\\DRAWINGS\\SAMPLE.DRW");
+</pre>
+
+<div class="note">
+<p><strong>Note :</strong> On utilisera la fonction <code>GetObject()</code> lorsqu'on dispose d'une instance courante pour l'objet ou qu'on souhaite créer un objet à partir d'un fichier déjà chargé. Si on ne dispose encore d'aucunee instance et qu'on ne souhaite pas utiliser un objet d'un fichier chargé, il faudra utiliser l'objet <code>ActiveXObject</code>.</p>
+</div>
+
+<p>Si un objet est enregistré comme un singleton, une seule instance de l'objet sera créée, quel que soit le nombre de fois où <code>ActiveXObject</code> est exécuté. Pour un tel singleton, <code>GetObject()</code> renvoie toujours la même instance lorsqu'elle est appelée avec la chaîne vide et provoque une erreur si l'argument <code>pathname</code> est absent.</p>
+
+<h2 id="Prérequis">Prérequis</h2>
+
+<p>Cette fonctionnalité est prise en charge par les modes suivants : Quirks, Internet Explorer 6 en mode standard, Internet Explorer 7 en mode standard et Internet Explorer 8 en mode standard.</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="/fr/docs/Web/JavaScript/Extensions_JavaScript_Microsoft">Les extensions JavaScript spécifiques de Microsoft</a></li>
+ <li><code><a href="/fr/docs/Web/JavaScript/Microsoft_JavaScript_extensions">ActiveXObject</a></code></li>
+</ul>

@@ -1,0 +1,58 @@
+---
+title: 'Firefox OS上でテストを実行する: 開発者向けガイド'
+slug: Archive/B2G_OS/Running_Tests_on_Firefox_OS_for_Developers
+translation_of: Archive/B2G_OS/Running_Tests_on_Firefox_OS_for_Developers
+---
+<div class="summary">
+ <p>Mozillaの自動化ハーネスチームは自動テストインフラストラクチャを拡張しFirefox OSに適合させるために特に (古いハーネスが特化していた) ブラウザではなく電話向けOSのテストを対象とした新しいハーネスを記述する努力をしました。Firefox OSのアーキテクチャはすべてこれらのテストハーネスを動作させ適用する予定です。しかしそれは開発者がテストを実行し、パッチが動作するか否かを見るのをとても複雑にします。この記事はMozillaで利用可能なすべてのテストリソースの意味を理解することをめざします .</p>
+</div>
+<h2 id="導入">導入</h2>
+<p>もしあなたがGecko開発者なら、すでに親しんでいるテスト自動化についてのFirefox OSに特化したドキュメントを見るべきでしょう: <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Mochitests">mochitest</a>、<a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Reftests">reftest</a>、そして<a href="https://developer.mozilla.org/en-US/Firefox_OS/Platform/Automated_testing/XPCShell">xpcshell</a>.</p>
+<p>もしあなたがGaiaまたはアプリ開発者、あるいはOSの実際の動作をより深く "エンドユーザ" スタイルでテストすることに興味があるGecko開発者なら、Gaiaのテストスイートを見る必要があるでしょう。二つの重要なテストスイートがあります:</p>
+<ul>
+ <li><a href="/en-US/Firefox_OS/Platform/Automated_testing/gaia-ui-tests">Gaia UIテスト</a>:  これらのテストはPythonベースで作られており、デスクトップとデバイスの両方で実行できます。これらのテストはたとえば耐久力テスト (たくさんの連絡先を電話帳アプリに追加したり、繰り返しロックスクリーンアプリのロックを解除したり、たくさんのアラームをアラームアプリに設定したり、等)、機能性テスト (たとえば、FMラジオアプリで放送局を探したり、Cameraアプリで写真を撮ったり) やアクセシビリティテスト (たとえば、スクリーンリーダー機能をONにしたりOFFにしたり) のようにGaia UIの様々な側面をテストします。</li>
+ <li><a href="https://github.com/mozilla-b2g/gaia/#integration-tests">Gaia総合テスト</a>: これらのテストはJavaScriptベースで作られており、<a href="https://github.com/mozilla-b2g/marionette-js-runner">marionette-js-runner</a>を使っています。そしてこの記事を書いている時点ではB2Gデスクトップビルド上でのみ実行可能です (実機のサポートは間近です)。これらのテストは、Gaiaと他のアプリやサービスとの連携、たとえば、カレンダーアプリはCalDAVサーバーを追加することができるか、またはブラウザアプリはサーチエンジンと連携できるかなどの様々な側面をテストします。</li>
+</ul>
+<p>実際には優先するツールチェインとあなたがやりたいと考えているテストに応じてどちらか一つを選んでください。</p>
+<p>移動してこれらのテストが実行されているところを見てみましょう。</p>
+<h2 id="Gaia_UIテストの実行">Gaia UIテストの実行</h2>
+<p><a href="https://github.com/mozilla-b2g/gaia/tree/master/tests/python/gaia-ui-tests">Gaia UIテスト</a>スイートは実機とB2Gデスクトップビルドで実行可能です。しかし我々はこのセクションでは可能な限り常に実機ではベストであるように実機での実行にチームを集中しています。</p>
+<p>このテストは<em><strong>破壊的</strong></em>であることに注意してください。あなたはテストを実行する前に電話の各データをバックアップすべきです。どのテストを実行するかに応じて、それらは電話を掛けることができます。実行と電話のバックアップの仕方、SIMカードを取り除くなどについてとても注意深く行うことを意識してください。あなたがすでにエンジニアリングビルドを行っているならそれらを実行することは本当にたやすいでしょう。ここにあるように。</p>
+<h3 id="ワンタイムセットアップ">ワンタイムセットアップ</h3>
+<p>あなたはGaiaディレクトリの位置を変えないと仮定するならば、以下のステップを一度だけ実行する必要があります。Python virtualenvを作り (すでにインストールしていないなら<a href="https://pypi.python.org/pypi/virtualenv">virtualenvツールをインストール</a>します)、アクティブにし、Gaia UIテストツールをvirtualenvにインストールします。以下のステップで仮想環境を作作って、あなたのGaiaリポジトリにあるGaia UIテストハーネスの実行を確認します (それらは何かをデバッグする場合に有用です)。</p>
+<pre><code class="brush: bash">$ virtualenv gaia_ui_venv # This will create a gaia_ui_venv directory where the virtual environment lives. It can be anywhere on your system.
+$ source gaia_ui_venv/bin/activate # This activates our virtualenv
+(gaia_ui_venv)$ cd &lt;b2groot&gt;/gaia/tests/python/gaia-ui-tests;python setup.py develop # This installs the gaia ui harness into your virtual environment. </code></pre>
+<p>もしGaia UIテストのためにすでに仮想環境を作っているなら、以下だけ行えばよいでしょう:</p>
+<pre><code class="brush: bash">$ source gaia_ui_venv/bin/activate</code></pre>
+<h3 id="テストの実行">テストの実行</h3>
+<p>最初にtestvarsファイルを作る必要があります。これをするには、一つ以上標準をコピーし、<strong>このテストは電話上のコンテンツをすべて破壊するかもしれない</strong>という警告が止める属性を加えます。前後で状態を変えないのはよいテストです。テストが行われる前に電話がバックアップされることを確認する必要があるでしょう。ここにある指示は仮想環境が起動され且つ<code>gaia/tests/python/gaia-ui-tests</code>で行われることを仮定しています。</p>
+<pre><code class="brush: bash">(gaia_ui_venv)$ cp gaiatest/testvars_template.json testvars.json
+# testvars.jsonのコピーを編集して、JSONに次の属性を追加します:
+"acknowledged_risks": true,
+"skip_warning": true,</code></pre>
+<p>テストが実行される前にテストランナーがMarionetteのポートにアクセスでき、電話がUSBで接続されている必要があります。<code>gaiatest/tests</code>にあるテストを一つ選んで実行できます。 たとえば、電話帳のテストがしたいなら以下のようにします:</p>
+<pre><code>(gaia_ui_venv)$ adb forward tcp:2828 tcp:2828
+(gaia_ui_venv)$ gaiatest --testvars=testvars.json --address=localhost:2828 gaiatest/tests/functional/contacts/</code></pre>
+<div class="note">
+ <p><strong>注意</strong>: UIテストが利用可能か調べるには、<a href="https://github.com/mozilla-b2g/gaia/tree/master/tests/python/gaia-ui-tests/gaiatest/tests">Gaiaリポジトリ内のgaiatestディレクトリ</a>を参照します。</p>
+</div>
+<p>Python virtualenvから抜けるためには、virtualenvの特殊コマンド<code>deactivate</code>を使います:</p>
+<pre><code>(gaia_ui_venv)$ deactivate
+$</code></pre>
+<div class="note">
+ <p><strong>注意</strong>: Gaia UIテストについてさらに詳細な情報を学びたいなら、<a href="/en-US/Firefox_OS/Platform/Automated_testing/gaia-ui-tests">Gaia UIテスト</a>のページに移動してください。</p>
+</div>
+<h2 id="Gaia総合テストの実行">Gaia総合テストの実行</h2>
+<p>現在、<a style="line-height: 1.5;" href="https://github.com/mozilla-b2g/gaia/#integration-tests">Gaia総合テスト</a>を実行するにはB2G Desktopビルドを使わなくてはなりません (注釈: 近いうちにデバイス上でも利用可能になります)。ではその方法を見ていきましょう。</p>
+<p>These just require a Gaia tree and NodeJS to be installed on your computer; the following command will do the rest:</p>
+<pre><code>$ cd gaia $ make test-integration </code></pre>
+<p>That's it ? this instruction will download a B2G desktop build, and start running the tests in that build.</p>
+<div class="note">
+ <p><strong>Note</strong>: To learn more about Gaia Integration Tests, read the <a href="https://github.com/mozilla-b2g/gaia/#integration-tests">Gaia Integration Tests</a> Github repo.</p>
+</div>
+<div class="note">
+ <p><strong>Note</strong>: To find out what integration tests are available, look in the <a href="https://github.com/mozilla-b2g/gaia/tree/master/apps">apps directory in the Gaia repo</a>; integration tests can be found in <code>test/marionette/</code> subfolders.</p>
+</div>
+<h2 id="Wrapping_Up">Wrapping Up</h2>
+<p>As always, work is underway to make all our tests easier to run both locally for developers as well as in our automation systems. Feel free to drop into the #ateam channel any time you have questions about test automation for Firefox OS or any of the Mozilla automation tools.</p>

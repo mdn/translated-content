@@ -1,0 +1,142 @@
+---
+title: Le sniffing de DOCTYPE dans Mozilla
+slug: Archive/Standards_du_Web/Le_sniffing_de_DOCTYPE_dans_Mozilla
+tags:
+  - Développement_Web
+translation_of: Archive/Web_Standards/Mozilla_s_DOCTYPE_sniffing
+---
+<p> </p>
+<p>Ce document décrit comment Mozilla utilise la déclaration DOCTYPE pour choisir entre le mode strict et <a href="fr/Mode_quirks_de_Mozilla">le mode dégradé quirks</a>. Le code qui permet cette détermination est la fonction <a href="https://dxr.mozilla.org/mozilla-central/source/parser/htmlparser/src/nsParser.cpp#833" rel="custom">DetermineParseMode() dans nsParser.cpp</a>. Consultez le <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1312" title='FIXED: "Standard" compatibility mode needs to be hooked to DOCTYPE'>bug 1312</a> et le <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=55264" title="FIXED: [DOCTYPE] Documents with unknown DOCTYPE should be displayed in strict mode">bug 55264</a> pour plus d'informations sur l'histoire de cette détermination. Consultez le <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=153032" title="FIXED: Implement almost-standards rendering mode">bug 153032</a> pour la création du mode « presque standard » depuis Mozilla 1.0. L'objectif recherché pour ce comportement a été le suivant :</p>
+<ul>
+  <li>la plupart des pages <code>text/html</code> existantes sur le Web qui ont besoin d'un mode dégradé pour s'afficher correctement doivent être affichées avec le mode quirks (
+    <i>
+      presque</i>
+    toutes, plutôt que toutes, pour répondre également aux points suivants).</li>
+  <li>Les auteurs de pages Web écrivant selon les standards en vigueur doivent pouvoir basculer vers le mode strict.</li>
+  <li>Les pages écrites en utilisant n'importe quel identifiant public dans leur déclaration DOCTYPE qui apparaîtront dans l'avenir doivent s'afficher en mode strict.</li>
+</ul>
+<p>En d'autres termes, l'algorithme est la meilleure approximation que nous ayons trouvée pour déterminer quelles pages ont été écrites après que Mozilla ne devienne un navigateur important sur le Web.</p>
+<h3 id="Mode_standard_complet" name="Mode_standard_complet">Mode standard complet</h3>
+<p>Les lignes suivantes déclenchent le mode standard complet :</p>
+<ul>
+  <li>Tous les documents avec un type MIME XML tel que <code>text/xml</code>, <code>application/xml</code>, ou <code>application/xhtml+xml</code> (puisque le sniffing n'a lieu que pour les documents text/html).</li>
+  <li>Tous les documents <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+SYSTEM+%22http%3A%2F%2Fwww.w3.org%2FTR%2FREC-html40%2Fstrict.dtd%22%3E">"DOCTYPE HTML SYSTEM"</a> par opposition au "DOCTYPE HTML PUBLIC", à l'exception des doctypes IBM notés plus bas.</li>
+  <li>Une déclaration DOCTYPE sans DTD, c'est-à-dire <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML%3E">&lt;!DOCTYPE HTML&gt;</a>.</li>
+  <li>Une déclaration DOCTYPE avec un <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+%5B+%3C%21ELEMENT+TEST+-+-+%28P%29+%3E+%5D%3E+">sous-ensemble interne</a>.</li>
+  <li>Tout doctype inconnu, ce qui veut dire aussi les doctypes (techniquement connus) suivants :
+    <ul>
+      <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FW3C%2F%2FDTD+HTML+4.01%2F%2FEN%22%3E">"-//W3C//DTD HTML 4.01//EN"</a>.</li>
+      <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FW3C%2F%2FDTD+HTML+4.0%2F%2FEN%22%3E">"-//W3C//DTD HTML 4.0//EN"</a>.</li>
+      <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FW3C%2F%2FDTD+XHTML+1.0+Strict%2F%2FEN%22%3E">"-//W3C//DTD XHTML 1.0 Strict//EN"</a>.</li>
+      <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22ISO%2FIEC+15445:2000%2F%2FDTD+HyperText+Markup+Language%2F%2FEN%22%3E">"ISO/IEC 15445:2000//DTD HyperText Markup Language//EN"</a>.</li>
+      <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22ISO%2FIEC+15445:2000%2F%2FDTD+HTML%2F%2FEN%22%3E">"ISO/IEC 15445:2000//DTD HTML//EN"</a>.</li>
+      <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML+i18n%2F%2FEN%22%3E">"-//IETF//DTD HTML i18n//EN"</a>.</li>
+    </ul>
+  </li>
+</ul>
+<h3 id="Mode_presque_standard" name="Mode_presque_standard">Mode presque standard</h3>
+<p>Les lignes suivantes déclenchent le mode presque standard. Le <a href="fr/Mode_presque_standard_de_Gecko">mode presque standard</a> a été créé après les versions 1.0 et 1.1alpha de Mozilla, mais avant les versions 1.0.1 et 1.1beta. Avant la création de ce mode, ces doctypes permettaient de basculer en mode standard complet.</p>
+<ul>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FW3C%2F%2FDTD+XHTML+1.0+Transitional%2F%2FEN%22%3E">"-//W3C//DTD XHTML 1.0 Transitional//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FW3C%2F%2FDTD+XHTML+1.0+Frameset%2F%2FEN%22%3E">"-//W3C//DTD XHTML 1.0 Frameset//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FW3C%2F%2FDTD+HTML+4.01+Transitional%2F%2FEN%22+%22http%3A%2F%2Fwww.w3.org%2FTR%2Fhtml4%2Floose.dtd%22%3E">"-//W3C//DTD HTML 4.01 Transitional//EN"</a>, avec un identificateur système.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FW3C%2F%2FDTD+HTML+4.01+Frameset%2F%2FEN%22+%22http%3A%2F%2Fwww.w3.org%2FTR%2Fhtml4%2Fframeset.dtd%22%3E">"-//W3C//DTD HTML 4.01 Frameset//EN"</a>, avec un identificateur système.</li>
+</ul>
+<h3 id="Mode_d.C3.A9grad.C3.A9_quirks" name="Mode_d.C3.A9grad.C3.A9_quirks">Mode dégradé quirks</h3>
+<p>Les lignes suivantes déclenchent le mode quirks (cette liste doit être complète afin que les pages existantes sur le Web basculent en mode quirks) :</p>
+<p>Les sites suivants ont été utiles pour préparer cette liste : <a class="external" href="http://validator.w3.org/sgml-lib/catalog">W3C HTML Validator</a>, <a class="external" href="http://www.htmlhelp.com/tools/validator/lib/catalog">HTMLHelp HTML Validator</a>.</p>
+<ul>
+  <li>L'<a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=">absence de DOCTYPE</a>.</li>
+  <li>Une <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%3Fxml+version%3D%221.0%22%3F%3E">déclaration XML (pseudo-PI) sans doctype</a> (en d'autres termes, ignorer la déclaration XML et utiliser le DOCTYPE). Avant les versions 1.0 et 1.1alpha (mais pas 1.0.1 et 1.1beta), la présence d'une déclaration XML déclenchait le mode standard complet.</li>
+  <li>Une déclaration DOCTYPE qui <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+NOT+UNDERSTOOD%3E">ne peut pas être comprise</a> (par ex. qui ne correspond à rien).</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+html+SYSTEM+%22http%3A%2F%2Fwww.ibm.com%2Fdata%2Fdtd%2Fv11%2Fibmxhtml1-transitional.dtd%22%3E">"http://www.ibm.com/data/dtd/v11/ibmxhtml1-transitional.dtd"</a> (avant 1.5b et 1.4.2, il déclenchait le mode quasi standard).</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FW3C%2F%2FDTD+HTML+4.01+Transitional%2F%2FEN%22%3E">"-//W3C//DTD HTML 4.01 Transitional//EN"</a>, sans identificateur système.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FW3C%2F%2FDTD+HTML+4.01+Frameset%2F%2FEN%22%3E">"-//W3C//DTD HTML 4.01 Frameset//EN"</a>, sans identificateur système.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FW3C%2F%2FDTD+HTML+4.0+Transitional%2F%2FEN%22%3E">"-//W3C//DTD HTML 4.0 Transitional//EN"</a> (voir également <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FW3C%2F%2FDTD+HTML+4.0+Transitional%2F%2FEN%22+%22http%3A%2F%2Fwww.w3.org%2FTR%2FREC-html40%2Floose.dtd%22%3E">ce test avec un identificateur système</a>).</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FW3C%2F%2FDTD+HTML+4.0+Frameset%2F%2FEN%22%3E">"-//W3C//DTD HTML 4.0 Frameset//EN"</a> (voir également <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FW3C%2F%2FDTD+HTML+4.0+Frameset%2F%2FEN%22+%22http%3A%2F%2Fwww.w3.org%2FTR%2FREC-html40%2Fframeset.dtd%22%3E">ce test avec un identificateur système</a>).</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FSoftQuad+Software%2F%2FDTD+HoTMetaL+PRO+6.0::19990601::extensions+to+HTML+4.0%2F%2FEN%22%3E">"-//SoftQuad Software//DTD HoTMetaL PRO 6.0::19990601::extensions to HTML 4.0//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FSoftQuad%2F%2FDTD+HoTMetaL+PRO+4.0::19971010::extensions+to+HTML+4.0%2F%2FEN%22%3E">"-//SoftQuad//DTD HoTMetaL PRO 4.0::19971010::extensions to HTML 4.0//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML%2F%2FEN%2F%2F3.0%22%3E">"-//IETF//DTD HTML//EN//3.0"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FW3O%2F%2FDTD+W3+HTML+3.0%2F%2FEN%2F%2F%22%3E">"-//W3O//DTD W3 HTML 3.0//EN//"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FW3O%2F%2FDTD+W3+HTML+3.0%2F%2FEN%22%3E">"-//W3O//DTD W3 HTML 3.0//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FW3C%2F%2FDTD+HTML+3+1995-03-24%2F%2FEN%22%3E">"-//W3C//DTD HTML 3 1995-03-24//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML+3.0%2F%2FEN%22%3E">"-//IETF//DTD HTML 3.0//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML+3.0%2F%2FEN%2F%2F%22%3E">"-//IETF//DTD HTML 3.0//EN//"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML+3%2F%2FEN%22%3E">"-//IETF//DTD HTML 3//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML+Level+3%2F%2FEN%22%3E">"-//IETF//DTD HTML Level 3//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML+Level+3%2F%2FEN%2F%2F3.0%22%3E">"-//IETF//DTD HTML Level 3//EN//3.0"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML+3.2%2F%2FEN%22%3E">"-//IETF//DTD HTML 3.2//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FAdvaSoft+Ltd%2F%2FDTD+HTML+3.0+asWedit+%2B+extensions%2F%2FEN%22%3E">"-//AS//DTD HTML 3.0 asWedit + extensions//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FAdvaSoft+Ltd%2F%2FDTD+HTML+3.0+asWedit+%2B+extensions%2F%2FEN%22%3E">"-//AdvaSoft Ltd//DTD HTML 3.0 asWedit + extensions//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML+Strict%2F%2FEN%2F%2F3.0%22%3E">"-//IETF//DTD HTML Strict//EN//3.0"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FW3O%2F%2FDTD+W3+HTML+Strict+3.0%2F%2FEN%2F%2F%22%3E">"-//W3O//DTD W3 HTML Strict 3.0//EN//"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML+Strict+Level+3%2F%2FEN%22%3E">"-//IETF//DTD HTML Strict Level 3//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML+Strict+Level+3%2F%2FEN%2F%2F3.0%22%3E">"-//IETF//DTD HTML Strict Level 3//EN//3.0"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22HTML%22%3E">"HTML"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML%2F%2FEN%22%3E">"-//IETF//DTD HTML//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML%2F%2FEN%2F%2F2.0%22%3E">"-//IETF//DTD HTML//EN//2.0"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML+2.0%2F%2FEN%22%3E">"-//IETF//DTD HTML 2.0//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML+Level+2%2F%2FEN%22%3E">"-//IETF//DTD HTML Level 2//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML+Level+2%2F%2FEN%2F%2F2.0%22%3E">"-//IETF//DTD HTML Level 2//EN//2.0"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML+2.0+Level+2%2F%2FEN%22%3E">"-//IETF//DTD HTML 2.0 Level 2//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML+Level+1%2F%2FEN%22%3E">"-//IETF//DTD HTML Level 1//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML+Level+1%2F%2FEN%2F%2F2.0%22%3E">"-//IETF//DTD HTML Level 1//EN//2.0"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML+2.0+Level+1%2F%2FEN%22%3E">"-//IETF//DTD HTML 2.0 Level 1//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML+Level+0%2F%2FEN%22%3E">"-//IETF//DTD HTML Level 0//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML+Level+0%2F%2FEN%2F%2F2.0%22%3E">"-//IETF//DTD HTML Level 0//EN//2.0"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML+Strict%2F%2FEN%22%3E">"-//IETF//DTD HTML Strict//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML+Strict%2F%2FEN%2F%2F2.0%22%3E">"-//IETF//DTD HTML Strict//EN//2.0"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML+Strict+Level+2%2F%2FEN%22%3E">"-//IETF//DTD HTML Strict Level 2//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML+Strict+Level+2%2F%2FEN%2F%2F2.0%22%3E">"-//IETF//DTD HTML Strict Level 2//EN//2.0"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML+2.0+Strict%2F%2FEN%22%3E">"-//IETF//DTD HTML 2.0 Strict//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML+2.0+Strict+Level+2%2F%2FEN%22%3E">"-//IETF//DTD HTML 2.0 Strict Level 2//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML+Strict+Level+1%2F%2FEN%22%3E">"-//IETF//DTD HTML Strict Level 1//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML+Strict+Level+1%2F%2FEN%2F%2F2.0%22%3E">"-//IETF//DTD HTML Strict Level 1//EN//2.0"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML+2.0+Strict+Level+1%2F%2FEN%22%3E">"-//IETF//DTD HTML 2.0 Strict Level 1//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML+Strict+Level+0%2F%2FEN%22%3E">"-//IETF//DTD HTML Strict Level 0//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML+Strict+Level+0%2F%2FEN%2F%2F2.0%22%3E">"-//IETF//DTD HTML Strict Level 0//EN//2.0"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FWebTechs%2F%2FDTD+Mozilla+HTML%2F%2FEN%22%3E">"-//WebTechs//DTD Mozilla HTML//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FWebTechs%2F%2FDTD+Mozilla+HTML+2.0%2F%2FEN%22%3E">"-//WebTechs//DTD Mozilla HTML 2.0//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FNetscape+Comm.+Corp.%2F%2FDTD+HTML%2F%2FEN%22%3E">"-//Netscape Comm. Corp.//DTD HTML//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FNetscape+Comm.+Corp.%2F%2FDTD+HTML%2F%2FEN%22%3E">"-//Netscape Comm. Corp.//DTD HTML//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FNetscape+Comm.+Corp.%2F%2FDTD+Strict+HTML%2F%2FEN%22%3E">"-//Netscape Comm. Corp.//DTD Strict HTML//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FMicrosoft%2F%2FDTD+Internet+Explorer+2.0+HTML%2F%2FEN%22%3E">"-//Microsoft//DTD Internet Explorer 2.0 HTML//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FMicrosoft%2F%2FDTD+Internet+Explorer+2.0+HTML+Strict%2F%2FEN%22%3E">"-//Microsoft//DTD Internet Explorer 2.0 HTML Strict//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FMicrosoft%2F%2FDTD+Internet+Explorer+2.0+Tables%2F%2FEN%22%3E">"-//Microsoft//DTD Internet Explorer 2.0 Tables//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FMicrosoft%2F%2FDTD+Internet+Explorer+3.0+HTML%2F%2FEN%22%3E">"-//Microsoft//DTD Internet Explorer 3.0 HTML//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FMicrosoft%2F%2FDTD+Internet+Explorer+3.0+HTML+Strict%2F%2FEN%22%3E">"-//Microsoft//DTD Internet Explorer 3.0 HTML Strict//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FMicrosoft%2F%2FDTD+Internet+Explorer+3.0+Tables%2F%2FEN%22%3E">"-//Microsoft//DTD Internet Explorer 3.0 Tables//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FSun+Microsystems+Corp.%2F%2FDTD+HotJava+HTML%2F%2FEN%22%3E">"-//Sun Microsystems Corp.//DTD HotJava HTML//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FSun+Microsystems+Corp.%2F%2FDTD+HotJava+Strict+HTML%2F%2FEN%22%3E">"-//Sun Microsystems Corp.//DTD HotJava Strict HTML//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FIETF%2F%2FDTD+HTML+2.1E%2F%2FEN%22%3E">"-//IETF//DTD HTML 2.1E//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FO%27Reilly+and+Associates%2F%2FDTD+HTML+Extended+1.0%2F%2FEN%22%3E">"-//O'Reilly and Associates//DTD HTML Extended 1.0//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FO%27Reilly+and+Associates%2F%2FDTD+HTML+Extended+Relaxed+1.0%2F%2FEN%22%3E">"-//O'Reilly and Associates//DTD HTML Extended Relaxed 1.0//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FO%27Reilly+and+Associates%2F%2FDTD+HTML+2.0%2F%2FEN%22%3E">"-//O'Reilly and Associates//DTD HTML 2.0//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FSQ%2F%2FDTD+HTML+2.0+HoTMetaL+%2B+extensions%2F%2FEN%22%3E">"-//SQ//DTD HTML 2.0 HoTMetaL + extensions//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FSpyglass%2F%2FDTD+HTML+2.0+Extended%2F%2FEN%22%3E">"-//Spyglass//DTD HTML 2.0 Extended//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22%2B%2F%2FSilmaril%2F%2FDTD+HTML+Pro+v0r11+19970101%2F%2FEN%22%3E">"+//Silmaril//DTD HTML Pro v0r11 19970101//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FW3C%2F%2FDTD+HTML+Experimental+19960712%2F%2FEN%22%3E">"-//W3C//DTD HTML Experimental 19960712//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FW3C%2F%2FDTD+HTML+3.2%2F%2FEN%22%3E">"-//W3C//DTD HTML 3.2//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FW3C%2F%2FDTD+HTML+3.2+Final%2F%2FEN%22%3E">"-//W3C//DTD HTML 3.2 Final//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FW3C%2F%2FDTD+HTML+3.2+Draft%2F%2FEN%22%3E">"-//W3C//DTD HTML 3.2 Draft//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FW3C%2F%2FDTD+HTML+Experimental+970421%2F%2FEN%22%3E">"-//W3C//DTD HTML Experimental 970421//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FW3C%2F%2FDTD+HTML+3.2S+Draft%2F%2FEN%22%3E">"-//W3C//DTD HTML 3.2S Draft//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?doctype=%3C%21DOCTYPE+HTML+PUBLIC+%22-%2F%2FW3C%2F%2FDTD+W3+HTML%2F%2FEN%22%3E">"-//W3C//DTD W3 HTML//EN"</a>.</li>
+  <li>L'identificateur public <a class="external" href="http://dbaron.org/mozilla/tests/compat?pubid=-%2F%2FMetrius%2F%2FDTD+Metrius+Presentational%2F%2FEN">"-//Metrius//DTD Metrius Presentational//EN"</a>.</li>
+</ul>
+<p>Notez que toutes les comparaisons d'identificateurs publics sont insensibles à la casse, à cause du nombre important de pages qui utilisent des identificateurs ayant une casse incorrecte (ce qui est techniquement incorrect puisque les chaînes de caractères sont sensibles à la casse).</p>
+<h3 id="Voir_aussi" name="Voir_aussi">Voir aussi</h3>
+<ul>
+  <li><a href="fr/D%c3%a9veloppement_Web">Développement Web</a></li>
+  <li><a href="fr/Mode_quirks_de_Mozilla">Mode quirks de Mozilla</a></li>
+  <li><a href="fr/Comportement_du_mode_quirks_de_Mozilla">Comportement du mode quirks de Mozilla</a></li>
+</ul>
+<div class="originaldocinfo">
+  <h3 id="Informations_sur_le_document_original" name="Informations_sur_le_document_original">Informations sur le document original</h3>
+  <ul>
+    <li>Auteur(s) : <a class="external" href="http://dbaron.org/">David Baron</a></li>
+    <li>Dernière mise à jour : 2 août 2005</li>
+    <li>Copyright : Copyright © <a class="external" href="http://dbaron.org/">David Baron</a></li>
+  </ul>
+</div>
+<p> </p>

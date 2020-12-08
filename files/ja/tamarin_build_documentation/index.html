@@ -1,0 +1,160 @@
+---
+title: Tamarin Build Documentation
+slug: Tamarin_Build_Documentation
+tags:
+  - Build documentation
+  - Developing Mozilla
+  - Tamarin
+translation_of: Archive/Mozilla/Tamarin/Tamarin_Build_Documentation
+---
+<p><span id="Supported_platforms"></span></p>
+
+<h2 id=".E3.82.B5.E3.83.9D.E3.83.BC.E3.83.88.E3.81.95.E3.82.8C.E3.81.A6.E3.81.84.E3.82.8B.E3.83.97.E3.83.A9.E3.83.83.E3.83.88.E3.83.95.E3.82.A9.E3.83.BC.E3.83.A0" name=".E3.82.B5.E3.83.9D.E3.83.BC.E3.83.88.E3.81.95.E3.82.8C.E3.81.A6.E3.81.84.E3.82.8B.E3.83.97.E3.83.A9.E3.83.83.E3.83.88.E3.83.95.E3.82.A9.E3.83.BC.E3.83.A0">サポートされているプラットフォーム</h2>
+
+<p>Tamarin は現在 32 ビット Windows, Linux および Mac OS X (PPC, Intel) 上で動作します。プロトタイプの ARM プロセッサ移植コードが利用できますが、まだ不完全で十分テストされていません。</p>
+
+<p><span id="Getting_the_Tamarin_source"></span></p>
+
+<h2 id="Tamarin_.E3.81.AE.E3.82.BD.E3.83.BC.E3.82.B9.E3.81.AE.E5.85.A5.E6.89.8B" name="Tamarin_.E3.81.AE.E3.82.BD.E3.83.BC.E3.82.B9.E3.81.AE.E5.85.A5.E6.89.8B">Tamarin のソースの入手</h2>
+
+<p>Tamarin のソースは <a class="external" href="http://hg.mozilla.org/tamarin-central">Tamarin Central</a> の Mercurial に存在します。Tamarin レポジトリのコピーを作るには以下のコマンドを使います。</p>
+
+<pre class="eval">    $ hg clone <a class="external" href="http://hg.mozilla.org/tamarin-central" rel="freelink">http://hg.mozilla.org/tamarin-central</a> tamarin-central
+</pre>
+
+<p><span id="Building_Tamarin"></span></p>
+
+<h2 id="Tamarin_.E3.81.AE.E3.83.93.E3.83.AB.E3.83.89" name="Tamarin_.E3.81.AE.E3.83.93.E3.83.AB.E3.83.89">Tamarin のビルド</h2>
+
+<p>Tamarin のビルドは AVMPlus とガベージコレクタ (MMgc) の全ライブラリを作り、ABC ファイルフォーマットを実行するためのスタンドアローン実行ファイル <code>avmplus</code> を作成します。<code>avmplus</code> 実行ファイルの名前と場所はビルドシステムや設定パラメータによって様々です。引数なしで <code>avmplus</code> を実行すると利用可能なオプションの一覧が表示されます。追加のコマンドライン引数はデバッグ設定でのみ利用可能であることに注意してください。</p>
+
+<p><a href="ja/Tamarin">Tamarin</a> コードベースは Microsoft Visual Studio と Apple XCode 向けに独立したふたつのビルドシステムを含んでいます。さらに、Mozilla 開発者向けにクロスプラットフォームなビルドシステムがあります。</p>
+
+<p>Tamarin コードベースはデバッギングフックをサポートする追加コードをビルドすることができます。XCode プロジェクトでは、これは <code>Debug_Debugger</code> と <code>Release_Debugger</code> 設定です。Flash Player はコードサイズの理由からデバッギングフックを無効にしてビルドしていますが、Mozilla クライアントはデバッギングフックを有効にして Tamarin をビルドするでしょう。</p>
+
+<p><span id="Cross-platform_build"></span></p>
+
+<h3 id=".E3.82.AF.E3.83.AD.E3.82.B9.E3.83.97.E3.83.A9.E3.83.83.E3.83.88.E3.83.95.E3.82.A9.E3.83.BC.E3.83.A0.E3.83.93.E3.83.AB.E3.83.89" name=".E3.82.AF.E3.83.AD.E3.82.B9.E3.83.97.E3.83.A9.E3.83.83.E3.83.88.E3.83.95.E3.82.A9.E3.83.BC.E3.83.A0.E3.83.93.E3.83.AB.E3.83.89">クロスプラットフォームビルド</h3>
+
+<p>まず、あなたはプラットフォームの<a href="ja/Build_Documentation#Build_requirements">Mozilla のビルドの必要環境</a>が整っていなくてはなりません。更に Python 2.4 以上と GNU <code>make</code> 3.81 以上が必要です。(<strong>GNU <code>make</code> 3.80 は動作しません。</strong>他のいかなるブランドの <code>make</code> も動作しません。)</p>
+
+<p>正しい必要環境を使って、Tamarin をビルドするために以下のコマンドを使ってください:</p>
+
+<pre class="eval">    $ hg clone <a class="external" href="http://hg.mozilla.org/tamarin-central" rel="freelink">http://hg.mozilla.org/tamarin-central</a>
+    $ cd tamarin-central
+    $ mkdir objdir-debug
+    $ cd objdir-debug
+    $ python ../configure.py --enable-shell
+    $ make
+</pre>
+
+<p>これで全てです。</p>
+
+<p><span id="Microsoft_Visual_Studio"></span></p>
+
+<h3 id="Microsoft_Visual_Studio" name="Microsoft_Visual_Studio">Microsoft Visual Studio</h3>
+
+<p>Visual Studio 2005 (VS2005) が Windows での推奨ビルド環境です。Microsoft Visual Studio 2005 を使って Tamarin をビルドするには、Tamarin プロジェクトファイル "platform/win32/avmplus_8.sln" を開きます。プロジェクトファイル "platform/win32/avmplus.sln" を使う Visiual Studio 2003 はまだサポートされていますが、将来サポートが打ち切られるかもしれません。</p>
+
+<p>現在 Windows ビルドは手動で <code>mozilla-central/modules/zlib</code> を同期し <code>modules/zlib</code> ディレクトリを tamarin-central の親ディレクトリにコピーする必要があります。これは将来のビルドシステムではされるはずです。以下のコマンドを実行してください。</p>
+
+<pre class="eval">    $ hg clone <a class="external" href="http://hg.mozilla.org/mozilla-central" rel="freelink">http://hg.mozilla.org/mozilla-central</a> mozilla-central
+    $ mkdir ../modules
+    $ cp -r mozilla-central/modules/zlib ../modules/zlib
+</pre>
+
+<p><span id="Apple_XCode"></span></p>
+
+<h3 id="Apple_XCode" name="Apple_XCode">Apple XCode</h3>
+
+<p>プロジェクトファイルは XCode 2.3 と 2.4 向けに設計されています。"platform/mac/avmplus/avmplus.xcodeproj/" を参照してください。XCode 2.2 では動かないでしょう。</p>
+
+<p>プロジェクトファイルはデフォルトで Mac intel の実行ファイルをビルドします。</p>
+
+<p>PowerPC の Tamarin をビルドするには以下のコマンドを実行してください:</p>
+
+<pre class="eval">   $ cd tamarin-central
+   $ xcodebuild -project platform/mac/shell/shell.xcodeproj
+</pre>
+
+<p>PowerPC 向けにビルドするには <code>ARCHS=ppc</code> を <code>xcodebuild</code> コマンドに追加してください。デバッグビルドには <code>-configuration Debug</code> (大文字の <code>D</code> に注意) を追加してください。</p>
+
+<p>生成された実行ファイルは <code>platform/mac/shell/Release/shell</code> にビルドされています。 (注意: いくつかのライブラリは <code>tamarin-central</code> ディレクトリの<em>外</em>、<code>tamarin-central/../platform/mac/flash/Builds/Release</code> にビルドされます。これはおそらくバグです。)</p>
+
+<p>注意: CodeWarrior プロジェクトファイルが提供されていますがサポートされていません。それらを必要とするレガシーコードベースで作業する人々への礼儀として提供されています。</p>
+
+<p><span id="Linux_and_Unix"></span></p>
+
+<h3 id="Linux_.E3.81.A8_Unix" name="Linux_.E3.81.A8_Unix">Linux と Unix</h3>
+
+<p>Tamarin は Linux とその他の Unix 系 OS (<span style="color: green;">Unix flavors</span>) ではテストされていません。とはいえ Unix で Tamarin をビルドすることは可能です。 <a class="external" href="http://zlib.net/" rel="freelink">http://zlib.net/</a> から zlib のソースをダウンロードする必要があります (あるいはディストリビューションで利用できるソースパッケージを使ってください)。</p>
+
+<p>ビルドするには以下のコマンドを実行してください:</p>
+
+<pre class="eval">   $ cd tamarin-central/platform/unix
+   $ make ZLIB_ROOT=/path/to/zlib/sources
+</pre>
+
+<p>生成された "avmplus" 実行ファイルは現在のディレクトリにビルドされます。</p>
+
+<p><span id="Compiling_and_running_applications"></span></p>
+
+<h2 id=".E3.82.A2.E3.83.97.E3.83.AA.E3.82.B1.E3.83.BC.E3.82.B7.E3.83.A7.E3.83.B3.E3.81.AE.E3.82.B3.E3.83.B3.E3.83.91.E3.82.A4.E3.83.AB.E3.81.A8.E5.AE.9F.E8.A1.8C" name=".E3.82.A2.E3.83.97.E3.83.AA.E3.82.B1.E3.83.BC.E3.82.B7.E3.83.A7.E3.83.B3.E3.81.AE.E3.82.B3.E3.83.B3.E3.83.91.E3.82.A4.E3.83.AB.E3.81.A8.E5.AE.9F.E8.A1.8C">アプリケーションのコンパイルと実行</h2>
+
+<p>現在 Tamarin 用のコンパイラは Adobe ActionScript compiler だけです。ActionScript コンパイラ, <code>asc</code> は 2007 年後半にオープンソース化される予定で、現在は Adobe Flex® 2 SDK から自由に利用できます。コンパイラは Java で書かれ、Java™ 1.4 以降の JDK のインストールが必要です。</p>
+
+<p>プロトタイプのセルフホスティング ECMAScript 第 4 版 コンパイラ <code>esc</code> が Tamarin と一緒に提供されていますが、自分自身をブートストラップしたりアプリケーションをビルドする能力はまだありません。<code>esc</code> は活発に開発されており、今年の後半には Tamarin アプリケーションを生成できるようになるでしょう。</p>
+
+<p>ActionScript コンパイラをインストールするには以下の手順に従ってください。</p>
+
+<ol>
+ <li><a class="external" href="http://www.adobe.com/products/flex/downloads/">Adobe Flex 2 SDK</a> をダウンロードしてインストール</li>
+ <li>ActionScript コンパイラは <code>lib/asc.jar</code> にあります。<code>lib/asc.jar</code> を Flex SDK インストールディレクトリから <code>tamarin-central/utils/</code> にコピーします。</li>
+ <li>Tamarin 固有のスクリプトを <code>builtin.abc</code> にコンパイルするために asc.jar を使ってください:</li>
+</ol>
+
+<pre class="eval"> $ cd tamarin-central/core
+ $ java -ea -DAS3 -Xmx200m -DAVMPLUS -classpath ../utils/asc.jar \
+         macromedia.asc.embedding.ScriptCompiler -d -builtin -out builtin \
+         builtin.as Math.as Error.as RegExp.as Date.as XML.as
+ builtin: 40999
+ Files: 6 Time: 1952 ms
+</pre>
+
+<p>アプリケーションのコンパイルに <code>asc.jar</code> と <code>builtin.abc</code> を使うことができるようになりました。</p>
+
+<pre class="eval"> $ echo 'print("hello, world")' &gt; hello.as
+ $ java -jar ../utils/asc.jar -import builtin.abc hello.as
+ hello.abc, 86 bytes written
+</pre>
+
+<p>アプリケーションを実行するには先ほどビルドした avmplus スタンドアローン実行ファイルを使います:</p>
+
+<pre class="eval"> $ avmplus hello.abc
+ hello, world
+</pre>
+
+<p>詳細は <code>asc.jar</code> と <code>avmplus</code> の <code>-help</code> オプションを使ってください。</p>
+
+<p><span id="Running_Tamarin_compliance_tests"></span></p>
+
+<h2 id="Tamarin_.E6.BA.96.E6.8B.A0.E3.83.86.E3.82.B9.E3.83.88.E3.82.92.E5.AE.9F.E8.A1.8C.E3.81.99.E3.82.8B" name="Tamarin_.E6.BA.96.E6.8B.A0.E3.83.86.E3.82.B9.E3.83.88.E3.82.92.E5.AE.9F.E8.A1.8C.E3.81.99.E3.82.8B">Tamarin 準拠テストを実行する</h2>
+
+<p>現在 Tamarin 準拠テストはインストールを確認するのに使うことができます。Tamarin テストスイートを実行するには以下の手順に従う必要があります:</p>
+
+<ol>
+ <li><code>AVM</code> 環境変数を <code>avmplus</code> 実行ファイルのパスに設定する</li>
+ <li>事前にコンパイルされた <code>.abc</code> テストファイルを使いたいなら、<a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/js/tamarin/tamarin-test-abcs.tar.gz">tamarin-test-abcs.tar.gz</a> を <code>tamarin-central/test</code> ディレクトリに展開します。</li>
+ <li>テストをコンパイルしたいなら <code>$ASC</code> を <code>asc.jar</code> の場所に、<code>$GLOBALABC</code> を <code>builtin.abc</code> の場所に設定します。</li>
+ <li>テスト Perl スクリプトを実行します "test/runtests.pl"</li>
+</ol>
+
+<pre>$ cd tamarin-central/test
+$ perl runtests.pl
+
+Test Time : 3 minutes 49 seconds
+passes    : 54749
+failures  : 0
+</pre>
+
+<p>テストに失敗したら、<code>runtests.pl</code> のデバッグフラグ (<code>--d</code>) と詳細フラグ (<code>--v</code>) が役立つでしょう。もし <code>.abc</code> ファイルが不正であると <code>avmplus</code> が報告したら、上記の手順 2 のファイルのダウンロードでバイナリ転送プロトコルを使ったか確認してください。</p>

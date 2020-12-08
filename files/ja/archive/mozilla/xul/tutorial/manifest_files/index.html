@@ -1,0 +1,123 @@
+---
+title: マニフェストファイル
+slug: Archive/Mozilla/XUL/Tutorial/Manifest_Files
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Manifest_Files
+---
+<div>
+  <div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/Tutorial/The_Chrome_URL" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/Tutorial/Creating_a_Window">次のページ  »</a></p>
+</div></div>
+<p>このセクションでは、chrome と XUL ファイルをパッケージする方法と、それらのためにマニフェストファイルを作成する方法について確認します。</p>
+<h2 id="Packages" name="Packages">パッケージ</h2>
+<p><span style="border-bottom: 1px dashed green;" title="package">パッケージ</span>とは、ユーザインタフェースの機能を定義する 一式の XUL ファイルとスクリプトのことです。 パッケージは、Mozilla にインストールされた後、通常は chrome URL によって参照されることになります。 パッケージには、どんな種類のファイルでも含めることができ、多くの場合、パッケージを構成するパートごとに、サブディレクトリに振り分けて置かれます。 パッケージはディレクトリとしても、JAR アーカイブとしても保存することが可能です。</p>
+<h2 id="Manifest_Files" name="Manifest_Files">マニフェストファイル</h2>
+<p><span style="border-bottom: 1px dashed green;" title="manifest file">マニフェストファイル</span>は、パッケージについての記述を行い、パッケージのディスク上の位置を chrome URL へマッピングする情報を提供します。 chrome ディレクトリに置かれたマニフェストファイルは、Mozilla アプリケーションが起動するときに、インストールされているパッケージを確認するために調べられていきます。 つまり、新しいパッケージをインストールするために必要なことは、マニフェストファイルを、アプリケーションの chrome ディレクトリかユーザ固有の chrome ディレクトリのどちらかに追加することだけになります。 通常、ユーザ固有の chrome ディレクトリは、パッケージのインストール時、アプリケーションディレクトリに書き込むために十分な権限がない場合に使用されます。</p>
+<p>もし Firefox ブラウザで特権が必要な XUL コードをテストしてみたいのであれば、以下の手順で 1 行だけのマニフェストを作成するだけで簡単に行うことが可能です。</p>
+<ol>
+  <li>新しいディレクトリをどこかに作成します。 例として、Windows マシンで、C:\testfiles を使用することにします。</li>
+  <li>Firefox がインストールされているディレクトリにある chrome ディレクトリに test.manifest という名前で新しいファイルを ASCII<sup>1</sup> 形式で作成します <sub>(1. BOM 付の UTF-8 形式では動作しません) </sub>。 実際には、<code>.manifest</code> 拡張子になってさえいればよいため、(拡張子を除いた) ファイル名の部分は重要ではありません。</li>
+  <li>そのファイルに以下の行を加えます。</li>
+</ol>
+<pre>content tests file:///C:/testfiles/
+</pre>
+<p>加えた行に含まれているファイルパスは、上で作成したディレクトリを指す必要があります。 もし、ディレクトリのファイルパスがわからないのであれば、ブラウザでそのディレクトリを開いて、アドレス欄から URL をコピーしてください。</p>
+<p>これだけで完了です! 後は、いくつかの XUL ファイルを、作成したディレクトリに追加することが必要なだけです。 それが済めば、<code>chrome://tests/content/</code>&lt;ファイル名&gt; の形式の chrome URL をタイプすることにより、それらのファイルをロードすることができるはずです。 ただし、変更を有効にするためには、一度ブラウザを再起動する必要はあります。 もし、ファイルがロードされない場合は、ファイルパスが正しいかをもう一度確認してみてください。</p>
+<p>コンテントパッケージのためのマニフェストファイルの基本的な文法は以下になります。</p>
+
+<pre>'content &lt;packagename&gt; &lt;filepath&gt;'</pre>
+
+<p>最初のフィールドに置かれた「content」は、コンテントパッケージであることを示しています。 テーマの場合は「skin」を、ロケール の場合は「locale」を置くことになります。 packagename は、上の例では 「tests」になります。 これは、<code>chrome://tests/content/sample.xul</code> の「tests」のように、chrome URL における最初のフィールドになります。 パッケージ名が「browser」の場合は、chrome URL は <code>chrome://browser/content/</code> になります。 最後のフィールドはファイルが置かれているパスです。 ここには、ファイル URL によるローカルなファイルパスか、jar URL による JAR アーカイブのどちらかで指定することが可能です。 (jar アーカイブについては、もう少し後で説明します)。 マニフェストァイルに、別の行を加えることで、複数のパッケージを指定することも可能です。</p>
+<p>Firefox が使用する browser.manifest ファイルは以下のようになります。</p>
+<pre>content branding jar:browser.jar!/content/branding/ xpcnativewrappers=yes
+content browser jar:browser.jar!/content/browser/ xpcnativewrappers=yes
+overlay chrome://global/content/viewSource.xul chrome://browser/content/viewSourceOverlay.xul
+overlay chrome://global/content/viewPartialSource.xul chrome://browser/content/viewSourceOverlay.xul
+overlay chrome://browser/content/pageInfo.xul chrome://pippki/content/PageInfoOverlay.xul
+</pre>
+<p>ここでは「branding」と「browser」の 2 個のパッケージがリストされています。 また、他のパッケージに含まれているコンテンツに結合させるための 3 つの<span style="border-bottom: 1px dashed green;" title="overlay">オーバーレイ</span>が指定されています。 このオーバーレイは、<span style="border-bottom: 1px dashed green;" title="Extension">拡張機能</span>によって追加される UI (ユーザインタフェース) を、元のブラウザの UI に統合するために、最も多く利用されることになると思います。</p>
+<p>branding と browser パッケージのファイルパスは、コンテントがアーカイブにまとめられているため、jar URL を使用しています。 JAR アーカイブは、ZIP ユーティリティで作成することができます。 chrome ディレクトリに置かれた JAR ファイルを指定するための文法は、いたって単純です。</p>
+<pre>jar:&lt;filename.jar&gt;!/&lt;path_in_archive&gt;</pre>
+<p>browser パッケージの場合、アーカイブファイルは browser.jar で、(ファイル名だけが記述されているため) chrome ディレクトリに置かれているマニフェストファイルと同じ場所に置かれていることを示しています。 パス「content/browser」は、アーカイブ中で XUL ファイルが置かれている場所を指定しています。 もしアーカイブにディレクトリが含まれない場合は、パスを指定する必要はありません。 今回の場合は、branding パッケージのファイルが同じアーカイブに異なったパスで格納されているため指定する必要があります。</p>
+<p>上に作成された 「tests」パッケージでは、ファイルはアーカイブにまとめられていないので、ファイルへの直接パスが代わりに使用されています。 開発中であれば、ファイルを変更したときに毎回すべてのファイルをアーカイブし直す必要がないため、この方法が良いと思います。 しかし、完成したアプリケーションや拡張機能を配布するときは、小さなファイルがたくさんインストールされるのを避けるためにアーカイブにまとめたくなると思います。</p>
+<p>マニフェスト行の終わりにある xpcnativewrappers=yes の部分は、付加的に使用されるフラグです。 JavaScript では、Web ページが自前のコードで組込み関数をオーバライドすることが可能です。 xpcnativewrappers フラグが指定されている場合、それらのスクリプトが、特権を持ったコンテキストで実行されるとき、オーバライドされた方の関数ではなく、オリジナルの組み込み関数を呼ぶことを指定します。 そうしないと、もし拡張機能が変更された方の関数を呼ぶことを試みた場合、おそらく適切に動作しないと思われますし、さらに悪いケースではセキュリティ ホールになる可能性もあります。 このフラグは、こういった問題を防ぐために加えられたため、新しい拡張機能では、常に使用されるべきですが、この変更に対して互換性がないかもしれない古い拡張機能のために、使用しない指定も残されています。 この機能についての詳細は <a href="/ja/docs/XPCNativeWrapper">XPCNativeWrapper</a> を参照してください。</p>
+<h2 id="Themes_and_Locales" name="Themes_and_Locales">テーマとロケール</h2>
+<p><span style="border-bottom: 1px dashed green;" title="theme">テーマ</span>と <span style="border-bottom: 1px dashed green;" title="locale">ロケール</span>パッケージの文法は コンテントパッケージと類似していますが、コンテントパッケージで指定したのと同じフィールドに加えて、何のテーマまたはロケールを提供するのかを指定する必要があります。 以下に例を示します。</p>
+<pre>skin browser classic/1.0 jar:classic.jar!/skin/classic/browser/
+locale browser en-US jar:en-US.jar!/locale/browser/
+</pre>
+<p>これらには、browser に適用されるスキンとロケールについて示すために、専用のフィールドが加えられています。 このスキンの名前は 「classic/1.0」になります。 バージョン番号がテーマ名の一部として使用されていますが、独自にテーマを作成する場合、バージョン番号の使用は任意でかまいません。 Mozilla ではバージョン番号を扱うための特別な方法はなく、バージョン番号は単にテーマ名の一部です。 ロケールの方は「en-US」であることを示しています。 これらの chrome URL は、<code>chrome://browser/skin</code> と、<code>chrome://browser/locale</code> にマッピングされます。 もし、ブラウザのために、独自のテーマかロケールを作成しているのであれば、必要な作業は、上記の 2 行のうちの必要な方を書いたマニフェストファイルを作成して、作成するテーマかロケールに合うように変更することだけです。</p>
+<p>テーマに関する詳しい情報に関しては、<a href="/ja/docs/Themes">Themes</a> を参照してください。 ロケールに関する詳しい情報に関しては、<a href="/ja/docs/Localization">Localization</a> を参照してください。</p>
+<h2 id="Our_example_find_files_dialog" name="Our_example_find_files_dialog">ファイル検索ダイアログの例</h2>
+<div class="highlight">
+  <p>それでは、これから作成していくファイル検索ダイアログのために、マニフェストファイルを作成してみましょう。 必要なら、上記の 3 つのタイプのすべてを 1つのファイルに結合することも可能です。 これは 1 個のファイルの中に全てのパートがあるような拡張を作成するような場合などに利用されます。 ファイル検索ダイアログでは、これを利用してみることにします。 chrome ディレクトリに findfile.manifest という名前でファイルを作成し、以下をファイルに追加してください。</p>
+  <pre>content findfile file:///findfile/content/
+skin findfile classic/1.0 file:///findfile/skin/
+locale findfile en-US file:///findfile/locale/
+</pre>
+  <p>上でリストされたように新規のディレクトリを作成してください。 実のところ、ディレクトリは、どこに作成してもかまいませんが、マニフェストファイルのファイルパスが、そのディレクトリを示している必要があります。 当然のことですが、実際には自分のシステムに応じたディレクトリパスを使用したいはずです。 もし、このパッケージを配布するのであれば、JAR ファイルにパッケージして、パスを変更したいと思うでしょう。 今回は、マニフェストファイルの実例を示すことと、今後のセクションで作成していく例のためにディレクトリを準備することが目的のため、このように作成しておきます。</p>
+  <p>また、skin と locale の行の 2番目のフィールドが「findfile」を指定していることにも注意してください。 これは、skin と locale が、最初の行で指定された「findfile」パッケージを変更するものであることを示しています。</p>
+  <p>上の 3 つのパスは、各パートのためのサブディレクトリを指定しています。 各パートのファイルを分けたままにしたい場合は、このようにサブディレクトリを作成しておきます。</p>
+</div>
+<h2 id="Installing_a_Package" name="Installing_a_Package">パッケージのインストール</h2>
+<p>どのようなアプリケーションを作成しているかによって方法は変わると思いますが、一般的にアプリケーションをインストールするためには、そのためにインストーラを作成するか、または別のアプリケーションの一部として含めておく必要があると思います。</p>
+<p><span style="border-bottom: 1px dashed green;" title="Extension">拡張機能</span>の場合、「何がインストールされるか」、「その拡張機能の作者」、「ブラウザまたは他のアプリケーションのどのバージョンに適合するか」を記述するために、インストールファイルとして <code><a href="/ja/docs/Install_Manifests">install.rdf</a></code> を作成する必要があります。 拡張機能は、ファイルインストール先に制限があるため、それにあわせた<a href="/ja/docs/Bundles">専用のディレクトリ構造</a>も必要です。 拡張機能は <a href="/ja/docs/XPI">XPI</a> ファイルの中にパッケージされます。 XPI は、<a href="/ja/docs/XPInstall">XPInstall</a> の短縮であり、Mozilla によってコンポーネントをインストールするのに使用されます。 JAR ファイルのように、XPI ファイルは単に拡張子が異なるだけの ZIP ファイルであるため、ZIP ユーティリティによって XPI ファイルを作成したり、見たりすることが可能です。</p>
+<p>Firefox の拡張機能マネージャは、XPI ファイルの中にパッケージされた拡張機能を自動的に扱いインストールします。 作成した拡張機能を <a class="link-https" href="https://addons.mozilla.org/">Mozilla Add-onsサイト</a>にアップロードするのはお勧めです。 そうしておけば、利用者がインストールしたいとき、簡単に配布元を見つけることができるようになります。 拡張機能は、どんなサイトからでもインストールすることは可能ですが、Firefox は、それ以外のサイトでは、デフォルトでインストールを許容するように構成されていません。</p>
+<p>ファイルをインストールするために JavaScript に書かれたインストールスクリプトを使用することも可能です。 この方法では、どんな位置にもファイルをコピーすることが可能で、他のファイル管理タスクの実行することも出来ます。 しかしながら、スクリプトでインストールされたアプリケーションは、拡張機能マネージャによってリストされず、それらをアンインストールするための自動化された方法もありません。 この理由のために、インストールスクリプトは頻繁に使用されることはありません。</p>
+<p>スタンドアローンなアプリケーションは、XULRunner を使用してパッケージすることが可能です。 これによって、実行可能ファイルを分離して、アプリケーションをブラウザによらずに配布することができるようになります。</p>
+<p>拡張機能を作成することに関する詳しい情報に関しては、<a href="/ja/docs/Extensions">Extensions</a> を参照してください。 XULRunner に関する詳しい情報に関しては、<a href="/ja/docs/XULRunner">XULRunner</a> を参照してください。</p>
+<h2 id="Older_Applications" name="Older_Applications">古いアプリケーション</h2>
+<p>もし、Mozilla ソフトウェアの旧式のバージョンのアプリケーションを作成する場合、すなわち、Firefox 1.5 か Mozilla1.8 のより前の版のためには、プロセスはもう少し込み入っています。 以下は、以前のバージョンのためのパッケージをセットアップする方法を説明します。 もし、新しい拡張か XUL アプリケーションを書いているのであれば、このセクションはスキップしてもかまいません。</p>
+<div class="note">
+  <b>注意</b>: このより古い手順は、新しい SeaMonkey1.0 にも適用されます。SeaMonkey1.0 のコードベースでは、まだ「マニフェスト」形式を採用していません。</div>
+<pre class="brush:xml">&lt;?xml version="1.0"?&gt;
+
+&lt;RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:chrome="http://www.mozilla.org/rdf/chrome#"&gt;
+
+  &lt;RDF:Seq about="urn:mozilla:package:root"&gt;
+    &lt;RDF:li resource="urn:mozilla:package:myapplication" /&gt;
+  &lt;/RDF:Seq&gt;
+
+  &lt;RDF:Description about="urn:mozilla:package:myapplication"
+          chrome:displayName="Application Title"
+          chrome:author="Author Name"
+          chrome:name="myapplication"
+          chrome:extension="true" /&gt;
+
+&lt;/RDF:RDF&gt;
+</pre>
+<pre>content,install,url,file:///main/app/
+</pre>
+<ol>
+  <li>ディレクトリをディスクの上のどこかに作成してください。 多くの人は、サブディレクトリとして Mozilla の chrome ディレクトリに作成しますが、必須ではありません。ディレクトリは、どこでも、どんなディスクの上に置いてもかまいません。その作成したディレクトリに XUL ファイルを入れてください。</li>
+  <li>contents.rdf と呼ばれるファイルを作成し、同じディレクトリに置いてください。以下の囲いのテキストを、新しい contents.rdf ファイルにコピーしてください。 このファイルは、アプリケーションID、名前、作者、バージョンなどを特定するのに使用されます。</li>
+  <li>ファイルで上で強調された部分をあなた自身の情報に変更してください。 赤いテキスト「myapplication」はあなたの作成するアプリケーションの ID である必要があります。この内容を設定するとき、多くの場合、ID はあなたのアプリケーションの名前と類似したものします。 上で青く強調されたテキストはあなたのアプリケーションのタイトルと作者に置き換えてください。</li>
+  <li>もし、「chrome:extension」フィールドが true ならば、アプリケーションは Mozilla Firefox の<span style="border-bottom: 1px dashed green;" title="Extension">拡張機能</span>であることを示します。このため、ブラウザの 拡張のウィンドウに表示されるはずです。false の場合は、表示されません。</li>
+  <li>contents.rdf を保存して、それがあなたがステップ 1 で作成したディレクトリに置かれていることを確認して下さい。</li>
+  <li>ファイル &lt;mozilla-directory&gt;/chrome/installed-chrome.txt を開いてください。&lt;mozilla-directory&gt; は Mozilla がインストールされているディレクトリです。開く前に Mozilla を終了させて下さい。</li>
+  <li>次に、Mozilla に新しいアプリケーションを登録することによって、Mozilla がどこから新しいアプリケーションを見つけるかを理解します。まず、あなたが ステップ 1 で作成した新しいディレクトリを示すための行を、installed-chrome.txt の最後に加えてください。以下の強調されたテキストで示されるファイル URL のディレクトリ部分を変更して下さい。URL が確実に スラッシュで終わっていることと、行の最後で改行が押されたことを確認して下さい。URL が何であるかを確認出来ないのであれば、ステップ 1 で作成したディレクトリを Mozilla ブラウザに開いてください。そして、ロケーションフィールドから URL をコピーしてください。この参照がファイルでなく、常にディレクトリであるべきであることに注意してください。</li>
+  <li>ファイル &lt;mozilla-directory&gt;/chrome/chrome.rdf を削除してください。</li>
+  <li>Mozilla を起動します。<code>chrome://applicationid/content/file.xul</code> (<code>file.xul</code> はファイル名) の形式でディレクトリに置かれた任意の XUL ファイルを参照することが可能なはずです。メインの XUL ファイルの名前は <code>chrome://applicationid/content/</code> のショートカット URL を使用してロード可能な applicationid.xul にするべきです。</li>
+</ol>
+<p>スキン、そして/または、ロケールの部分を作成しているのであれば、contents.rdf ファイルの形式がわずかに異なっているのを除き、上のステップを繰り返してください。詳細は他のアプリケーションにおける contents.rdf ファイルを見てください。</p>
+<h2 id="Troubleshooting" name="Troubleshooting">トラブルシューティング</h2>
+<p>クロムパッケージを作成するとき、しばしばトリッキーなことがあり、それが問題の原因を判断するのを難しくしています。ここに、あなたが立ち往生したときのためにいくつかの Tipsを書いておきます。<span style="color: darkgreen; background: #ef9;">【訳注: この部分の記述は、「古いアプリケーション」のためのものがほとんどのようです】</span></p>
+<ul>
+  <li>ファイル &lt;mozilla-directory&gt;/chrome/chrome.rdf を開きます。そこで、あなたのアプリケーションIDのへの参照が見つけられるはずです。見つからないなら、登録に何か問題があります。見つかった場合は、ファイルをロードするときに、間違った chrome URL を使用しているのかもしれません。</li>
+  <li>&lt;mozilla-directory&gt;/chrome/chrome.rdf ファイルを削除してみます。 削除しても作り直されるはずです。 また、あなたがオーバレイを使用しているなら、(&lt;mozilla-directory&gt;)/chrome/overlayinfo/ ディレクトリ全体を削除してみます。</li>
+  <li>あなたが installed-chrome.txt に加えた行の URL がスラッシュで終わっていることと、そのファイルが空白行で終わっているのを確認します。</li>
+  <li>Windows では、ファイルURLの形式は <code>file:///C|/files/app/</code> 、C はドライブ名になります。(C:でもかまいません)</li>
+  <li>contents.rdf ファイルが正しいディレクトリにあって、形式に誤りがないことを確認します。正しい形式の XML として解釈されているかどうかを確認するためには、Mozilla で contents.rdf ファイルを開きます。形式に誤りがある場合、黄色い背景色によりエラー箇所を見つけることが出来ます。</li>
+  <li>デバッグ用にビルドされた Mozilla を使用すれば、起動時にチェックされた chrome アプリケーションについていくつかの情報が端末に表示されるはずです。あなたのアプリケーションがリストされているかどうかを確認します。</li>
+  <li>「XML Parsing Error: undefined entity」というエラーメッセージが XUL ファイルで出力された場合は、マニフェストファイルか、そのマニフェストが参照している jar ファイルに誤りがあります。例えば、XUL ファイルに「<code>&lt;!DOCTYPE window SYSTEM "chrome://fireclipse/locale/fireclipse.dtd"&gt;</code> という記述がある場合は、その DTD が存在して、かつマニフェストの <code>locale</code> で、正しく指定されていないと、「XML の解析 (<span style="color: green;">parsing</span>)」に失敗することになます。</li>
+</ul>
+<p>マニフェストファイルについての詳細な情報が必要な場合は、<a href="/ja/docs/Chrome_Registration">Chrome Registration</a> を参照してください。</p>
+<p>次のセクションでは、 XUL 言語についての説明を始めます。</p>
+<div>
+  <div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/Tutorial/The_Chrome_URL" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/Tutorial/Creating_a_Window">次のページ  »</a></p>
+</div></div>

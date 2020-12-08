@@ -1,0 +1,115 @@
+---
+title: Node.contains
+slug: Web/API/Node/contains
+tags:
+  - API
+  - DOM
+  - Filiation
+  - Méthodes
+  - Noeuds
+translation_of: Web/API/Node/contains
+---
+<div>{{APIRef("DOM")}}</div>
+
+<div>La méthode <strong><code>Node.contains()</code></strong> renvoie une valeur {{jsxref("Boolean")}} (<em>booléenne</em>) indiquant si un nœud est un descendant d'un nœud donné, c'est-à-dire le nœud lui-même, l'un de ses enfants directs ({{domxref("Node.childNodes", "childNodes")}}), l'un des enfants directs des enfants, et ainsi de suite.</div>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox">node.contains( otherNode )
+</pre>
+
+<h2 id="Example" name="Example">Exemple</h2>
+
+<p>Cette fonction vérifie si un élément est dans le corps de la page. Comme <code>contains</code> est inclusif, déterminer si le corps est contenu en lui-même n'est pas le but de <code>isInPage<font face="Open Sans, sans-serif">,</font></code><font face="Open Sans, sans-serif"> donc ce cas renvoie </font><code>false</code>.</p>
+
+<pre class="brush:js">function isInPage(node) {
+  return (node === document.body) ? false : document.body.contains(node);
+}</pre>
+
+<p> </p>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Spécification</th>
+   <th scope="col">Statut</th>
+   <th scope="col">Commentaire</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("DOM WHATWG", "#dom-node-contains", "Node.contains()")}}</td>
+   <td>{{Spec2("DOM WHATWG")}}</td>
+   <td>Définition initiale</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilité des navigateurs</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Fonctionnalité</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop("9.0")}}</td>
+   <td>5.0<sup>[1]</sup></td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>3.0<sup>[2]</sup></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Fonctionnalité</th>
+   <th>Android</th>
+   <th>Edge</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("9.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Internet Explorer <a href="https://connect.microsoft.com/IE/feedback/details/780874/node-contains-is-incorrect">only supports <code>contains()</code> for elements</a>.</p>
+
+<p>[2] Safari 2.x <a href="https://books.google.de/books?id=KW9G9rdlStIC&amp;lpg=PA299&amp;ots=4XRWUISZVr&amp;dq=safari+node+contains+professional+javascript&amp;pg=PA299&amp;hl=de#v=onepage&amp;q=safari%20node%20contains%20professional%20javascript&amp;f=false">implemented <code>contains()</code> incorrectly</a>.</p>
+</div>
+
+<h2 id="See_also" name="See_also">Voir aussi</h2>
+
+<ul>
+ <li>{{domxref("Node.compareDocumentPosition")}}</li>
+ <li>{{domxref("Node.hasChildNodes")}}</li>
+</ul>

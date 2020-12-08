@@ -1,0 +1,30 @@
+---
+title: iframe での作業
+slug: Tools/Working_with_iframes
+tags:
+  - Debugging
+  - DevTools
+  - Developer Tools
+  - Frames
+  - Tools
+translation_of: Tools/Working_with_iframes
+---
+<div>{{ToolsSidebar}}</div><div class="geckoVersionNote">
+<p>これは Firefox 34 の新機能です。</p>
+</div>
+
+<p>Firefox 34 より開発ツールで、ドキュメント内にある特定の <a href="/ja/docs/Web/HTML/Element/iframe"><code>iframe</code></a> を対象にすることができます。</p>
+
+<p>{{EmbedYouTube("Me9hjqd74m8")}}</p>
+
+<p>ツールバーに新たなボタンが現れます:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8547/frame-selection-button.png" style="display: block; margin-left: auto; margin-right: auto;">ボタンをクリックするとドキュメント自身に加えて、ドキュメント内にあるすべての iframe をポップアップで一覧表示します。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8549/frame-selection-popup.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+
+<div class="note">
+<p>現時点ではポップアップを表示するために、ページの再読み込みまたは開発ツールをいったん閉じて再び開く作業が必要です。この問題は <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1062233">bug 1062233</a> で追跡しています。</p>
+</div>
+
+<p>このリストで項目を選択すると、ツールボックス内の全ツール (<a href="/ja/docs/Tools/Page_Inspector">インスペクター</a>、<a href="/ja/docs/Tools/Web_Console">コンソール</a>、<a href="/ja/docs/Tools/Debugger">デバッガー</a> など) は iframe だけを対象にして、基本的にページの残りの部分は存在しないような状態で動作します。</p>

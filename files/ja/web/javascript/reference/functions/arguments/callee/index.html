@@ -1,0 +1,158 @@
+---
+title: arguments.callee
+slug: Web/JavaScript/Reference/Functions/arguments/callee
+tags:
+  - Deprecated
+  - JavaScript
+  - Reference
+  - arguments
+  - プロパティ
+  - 関数
+translation_of: Web/JavaScript/Reference/Functions/arguments/callee
+---
+<div>{{jsSidebar("Functions")}}</div>
+
+<p><strong><code>arguments.callee</code></strong> プロパティは現在実行中の関数を示します。</p>
+
+<h2 id="Description" name="Description">説明</h2>
+
+<p><code>callee</code> は <code>arguments</code> オブジェクトのプロパティです。関数の本体の内部で現在実行中の関数を参照するために使用します。これは関数名が不明であるとき、たとえば名前のない関数式（「無名関数」）の内部などで便利です。</p>
+
+<div class="warning"><strong>警告:</strong> ECMAScript 第5版では、 <a href="/ja/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode" title="/ja/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode">strict モード</a>における <code>arguments.callee()</code> の使用を禁止しています。関数式に名前を付けるか、関数が自身を呼び出す必要がある場合に関数宣言を使用するかして <code>arguments.callee()</code> の使用を避けてください。</div>
+
+<h3 id="Why_was_arguments.callee_removed_from_ES5_strict_mode" name="Why_was_arguments.callee_removed_from_ES5_strict_mode">なぜ <code>arguments.callee</code> は ES5 strict mode で削除されたのか</h3>
+
+<p>（<a href="http://stackoverflow.com/a/235760/578288" title="http://stackoverflow.com/a/235760/578288">olliej による Stack Overflow の回答</a>によれば）</p>
+
+<p>古いバージョンの JavaScript では名前付きの関数式が利用できず、このため再帰の関数式を作成することができませんでした。</p>
+
+<p>例えば、以下の構文は動作しました。</p>
+
+<pre class="brush: js notranslate">function factorial (n) {
+    return !(n &gt; 1) ? 1 : factorial(n - 1) * n;
+}
+
+[1, 2, 3, 4, 5].map(factorial);</pre>
+
+<p>しかし、</p>
+
+<pre class="brush: js notranslate">[1, 2, 3, 4, 5].map(function(n) {
+    return !(n &gt; 1) ? 1 : /*ここでどうする？*/ (n - 1) * n;
+});</pre>
+
+<p>は動作しませんでした。これをうまくやるために <code>arguments.callee</code> が追加され、あなたは以下のようなことができます。</p>
+
+<pre class="brush: js notranslate">[1, 2, 3, 4, 5].map(function(n) {
+    return !(n &gt; 1) ? 1 : arguments.callee(n - 1) * n;
+});</pre>
+
+<p>しかし、これは実際には本当にダメな解決法でした。これは（他の <code>arguments</code> や <code>callee</code>、<code>caller</code> の問題と組み合わさって）、一般的には、再帰のインライン化と末尾再帰が不可能になるのです（あなたはこれをトレースなどを通じて選択した場合では達成できます。しかし最良のコードであっても、逆に不要な検査においては最適未満です）。他の大きな問題としては、再帰呼び出しが別の <code>this</code> の値になることです。例えば、</p>
+
+<pre class="brush: js notranslate">var global = this;
+
+var sillyFunction = function(recursed) {
+    if (!recursed) { return arguments.callee(true); }
+    if (this !== global) {
+        alert('This is: ' + this);
+    } else {
+        alert('This is the global');
+    }
+}
+
+sillyFunction();</pre>
+
+<p>ECMAScript 3 は、名前付き関数式を許可することでこれらの問題を解決しました。例えば:</p>
+
+<pre class="brush: js notranslate">[1, 2, 3, 4, 5].map(function factorial(n) {
+    return !(n &gt; 1) ? 1 : factorial(n - 1)*n;
+});</pre>
+
+<p>これには多くの利点があります:</p>
+
+<ul>
+ <li>他の関数と同様に、あなたのコード内から呼び出すことができる</li>
+ <li>外側のスコープに変数を作らない (<a href="http://kangax.github.io/nfe/#example_1_function_expression_identifier_leaks_into_an_enclosing_scope">IE 8 以下を除く</a>)</li>
+ <li>arguments オブジェクトにアクセスするよりもパフォーマンスが良い</li>
+</ul>
+
+<p>Another feature that was deprecated was <code>arguments.callee.caller</code>, or more specifically <code>Function.caller</code>. Why is this? Well, at any point in time you can find the deepest caller of any function on the stack, and as I said above looking at the call stack has one single major effect: it makes a large number of optimizations impossible, or much much more difficult. For example, if you cannot guarantee that a function <code>f</code> will not call an unknown function, it is not possible to inline <code>f</code>. Basically it means that any call site that may have been trivially inlinable accumulates a large number of guards:</p>
+
+<pre class="brush: js notranslate">function f(a, b, c, d, e) { return a ? b * c : d * e; }</pre>
+
+<p>If the JavaScript interpreter cannot guarantee that all the provided arguments are numbers at the point that the call is made, it needs to either insert checks for all the arguments before the inlined code, or it cannot inline the function. Now in this particular case a smart interpreter should be able to rearrange the checks to be more optimal and not check any values that would not be used. However in many cases that's just not possible and therefore it becomes impossible to inline.</p>
+
+<h2 id="Examples" name="Examples">例</h2>
+
+<h3 id="Example.3A_Using_arguments.callee_in_an_anonymous_recursive_function" name="Example.3A_Using_arguments.callee_in_an_anonymous_recursive_function">例: 無名再帰関数内での <code>arguments.callee</code> の使用</h3>
+
+<p>再帰関数は自分自身を参照する必要があります。関数が自分自身を参照するには、一般的には関数の名前を使用します。しかしながら、無名関数には名前がありません。さらにその無名関数を参照するアクセス可能な変数も無い（関数がどの変数にも代入されていない）場合、その関数には自分自身を参照する手段がありません（無名関数は<a href="/ja/docs/JavaScript/Reference/Operators/Special_Operators/function_Operator" title="JavaScript/Reference/Operators/Special_Operators/function_Operator">関数式</a>または <a href="/ja/docs/JavaScript/Reference/Global_Objects/Function" title="JavaScript/Reference/Global_Objects/Function"><code>Function</code> コンストラクター</a>によって作成できます）。したがって、これを参照するアクセス可能な変数がない場合、関数が自分自身を参照できる唯一の方法は <code>arguments.callee</code> による方法です。</p>
+
+<p>次の例では関数を定義し、その関数内でさらに階乗関数を定義し、それを返しています。</p>
+
+<pre class="brush: js notranslate">function create() {
+   return function(n) {
+      if (n &lt;= 1)
+         return 1;
+      return n * arguments.callee(n - 1);
+   };
+}
+
+var result = create()(5); // 120 (5 * 4 * 3 * 2 * 1) を返す</pre>
+
+<h3 id="良い代替手段がない場合の_arguments.callee_の使用">良い代替手段がない場合の <code>arguments.callee</code> の使用</h3>
+
+<p>ただし次のような場合、 <code>arguments.callee</code> に代わるものが無いために、その非推奨はバグである可能性があります ( {{Bug("725398")}} を参照):</p>
+
+<pre class="brush: js notranslate">function createPerson(sIdentity) {
+    var oPerson = new Function('alert(arguments.callee.identity);');
+    oPerson.identity = sIdentity;
+    return oPerson;
+}
+
+var john = createPerson('John Smith');
+
+john();</pre>
+
+<h2 id="Specifications" name="Specifications">仕様策定状況</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状況</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES1')}}</td>
+   <td>{{Spec2('ES1')}}</td>
+   <td>初回定義。 JavaScript 1.2 で実装</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-10.6', 'Arguments Object')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+
+<div class="hidden">このページの互換性一覧表は構造化データから生成されます。データに貢献したいのであれば、 <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
+
+<p>{{Compat("javascript.functions.arguments.callee")}}</p>
+
+<h2 id="See_also" name="See_also">関連項目</h2>
+
+<ul>
+ <li>{{jsxref("Function")}}</li>
+</ul>

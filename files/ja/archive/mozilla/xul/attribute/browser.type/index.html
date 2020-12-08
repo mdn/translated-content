@@ -1,0 +1,19 @@
+---
+title: browser.type
+slug: Archive/Mozilla/XUL/Attribute/browser.type
+tags:
+  - XUL Attributes
+  - XUL Reference
+translation_of: Archive/Mozilla/XUL/Attribute/browser.type
+---
+<div class="noinclude"><span class="breadcrumbs xulRefAttr_breadcrumbs">« <a href="/ja/docs/XUL/XUL_Reference">XUL リファレンス HOME</a></span></div>
+<dl><dt> <code id="a-browser.type"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/browser.type">type</a></code> </dt><dd> 型: <em>下記の値のいずれか一つ</em> </dd><dd> browser 内に読み込まれたドキュメントのアクセスを設定するための browser の形式。これが設定されていない場合、読み込まれたドキュメントは <code><code><a href="/ja/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code></code> を含む window と同じアクセスを持ちます。 </dd></dl>
+<ul> <li><code><strong>content</strong></code>: コンテンツのためのブラウザ。browser 内に読み込まれたコンテンツは chrome より上位へのアクセスが許可されていません。</li> <li><code><strong>content-primary</strong></code>: コンテンツのための一次ブラウザ。browser 内に読み込まれたコンテンツは chrome より上位へのアクセスが許可されません。つまり、ウェブブラウザ内では、これはウェブページを表示する要素になります。一次コンテンツの window は、<a href="/ja/DOM/window.content" title="ja/DOM/window.content">window.content</a> を使用して取得すると便利です。</li> <li><code><strong>content-targetable</strong></code>: コンテンツのための多くの中の 1 つのブラウザ。browser 内に読み込まれたコンテンツは chrome より上位へのアクセスが許可されていません。この値は、同等の特権を持つ複数の browser を使用するアプリケーション内の、そのとき選択されていない任意の <code><code><a href="/ja/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code></code> 要素よりも優先されます。</li>
+</ul>
+<div class="noinclude">
+<h4 id="See_also" name="See_also">参照</h4>
+<p>詳しい情報が <a href="/ja/XUL_Tutorial/Content_Panels" title="ja/XUL_Tutorial/Content_Panels">XUL チュートリアル</a>と <code><a href="/ja/docs/Mozilla/Tech/XUL/iframe" title="iframe">iframe</a></code> にあります。</p>
+</div>
+<div class="noinclude">
+
+</div>

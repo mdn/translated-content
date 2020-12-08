@@ -1,0 +1,17 @@
+---
+title: Télécharger du JSON et du JavaScript dans une extension
+slug: Archive/Add-ons/Télécharger_du_JSON_et_du_JavaScript_dans_une_extension
+tags:
+  - AJAX
+  - Extensions
+translation_of: Archive/Add-ons/Downloading_JSON_and_JavaScript_in_extensions
+---
+<p>Une pratique courante utilisée par de nombreuses extensions est d'utiliser <a href="/fr/docs/XMLHttpRequest" title="/fr/docs/XMLHttpRequest">XMLHttpRequest</a> ou un mécanisme similaire pour charger du code JavaScript ou des données au format <a href="/fr/docs/JSON" title="/fr/docs/JSON">JSON</a> depuis un site distant. Le contenu récupéré est ensuite interprété avec la fonction <code><a href="/fr/docs/JavaScript/Reference/Objets_globaux/eval" title="/fr/docs/JavaScript/Reference/Objets_globaux/eval"> eval()</a></code>. Cette pratique est <strong>dangereuse</strong>, et une extension qui l'utiliserait ne pourrait pas franchir l'étape de la revue de code pour être hébergée sur le site <a class="external" href="http://addons.mozilla.org">AMO</a></p>
+<p>Cette pratique est dangereuse car le code ainsi interprété obtient les mêmes droits que l'extension, c'est à dire qu'il a un accès complet au chrome, donc à la machine de l'utilisateur, sur laquelle il peut faire ce qu'il veut. L'extension n'a aucun moyen de s'assurer que le site à partir duquel elle récupère du code ou des données n'a pas été piraté, et que le code récupéré est sans danger. AMO prend ce risque très au sérieux.</p>
+<p>Il existe heureusement un moyen de contourner ce problème.</p>
+<h3 id="Télécharger_du_JSON" name="Télécharger_du_JSON">Télécharger du JSON</h3>
+<p>Pour interpréter des données formatées en JSON, les développeurs ne devraient pas utiliser <code>eval()</code> mais plutôt une des méthodes indiquées sur <a href="/fr/docs/JSON" title="/fr/docs/JSON">cette page</a>. Ces méthodes protègent contre du code malicieux, par exemple en garantissant que l'object JSON ne contient que des propriétés, et qu'aucune de ses éventuelles fonctions ne sera exécutée. Pour décoder du JSON, utilisez une fonction faite pour ça, pas <code>eval()</code> !</p>
+<h3 id="Télécharger_du_JavaScript" name="Télécharger_du_JavaScript">Télécharger du JavaScript</h3>
+<p>Il arrive que du code JavaScript soit téléchargé d'un serveur distant et exécuté dans l'extension. Par exemple si le développeur veut que son extension soit toujours à jour, et ne pas faire appel au mécanisme de mise à jour à chaque modification de code. Dans ce cas, le code téléchargé devrait être exécuté dans un bac à sable pour protéger l'extension et la machine sur laquelle elle s'exécute.</p>
+<p>Pour exécuter ce code dans un environnement protégé, il faut faire appel au composant <code><a href="/Fr/Components.utils.evalInSandbox" title="fr/Components.utils.evalInSandbox">Components.utils.evalInSandbox()</a></code>. Le code JavaScript est exécuté dans un bac à sable avec tous les objets "sûrs" avec lesquels il doit communiquer. Cette méthode n'est cependant pas sans danger, et les développeurs devraient lire attentivement la documentation pour s'assurer que le code non sûr ne risque pas de sortir de ce contexte protégé</p>
+<p></p>

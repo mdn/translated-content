@@ -1,0 +1,512 @@
+---
+title: tree
+slug: Mozilla/Tech/XUL/tree
+translation_of: Archive/Mozilla/XUL/tree
+---
+<div class="noinclude"><span class="breadcrumbs XULRef_breadcrumbs">
+ « <a href="/zh-CN/docs/XUL_Reference">XUL Reference home</a>    [
+ <a href="#Examples">示例</a> |
+ <a href="#Attributes">属性</a> |
+ <a href="#Properties">特性</a> |
+ <a href="#Methods">方法</a> |
+ <a href="#Related">相关</a> ]
+</span></div>
+
+<p>tree是用来显示表格或层级行元素的容器。 包含若干行 （rows ）和列（columns）。树的每行包含若干缩进显示的子行（child rows）。 和其他元素不同的是，用来显示的数据不是通过标签（tags），而是通过一个显示对象（view object）来确定的。这个显示对象（view object）实现了接口 <a href="/en/XPCOM_Interface_Reference/nsITreeView" title="en/nsITreeView">nsITreeView</a> . The view is queried for the data to appear in the tree. 树的使用有以下几种方法， 第二列列出了通过树的 <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/view">view</a></span></code>属性（property）的可用的接口. 第三列指示<code><a href="/zh-CN/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code> 元素是否使用.</p>
+
+<p>If you would like to allow the tree to be horizontally scrolled, simply set the <code id="a-width"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/width">width</a></code> attributes for each column to make the tree wider than its containing object.</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Tree type</th>
+   <th>View interfaces</th>
+   <th>Has DOM nodes?</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>Content tree</td>
+   <td><a href="/en/XPCOM_Interface_Reference/nsITreeView" title="en/nsITreeView">nsITreeView</a>, <a href="/en/XPCOM_Interface_Reference/NsITreeContentView" title="en/NsITreeContentView">nsITreeContentView</a></td>
+   <td>Yes</td>
+   <td>This tree has <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code> elements placed within the <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code> element. In this situation, a content view (which implements the interface <a href="/en/XPCOM_Interface_Reference/NsITreeContentView" title="en/NsITreeContentView">nsITreeContentView</a>) which is a more specialized type of view, uses the <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code> elements and their descendants to determine the data to display in the tree. However, the treeitems are not displayed directly; they are used only as data to the content view. However, the content view will automatically update the tree if treeitems are changed.</td>
+  </tr>
+  <tr>
+   <td>RDF tree</td>
+   <td><a href="/en/XPCOM_Interface_Reference/nsITreeView" title="en/nsITreeView">nsITreeView</a>, <a href="/en/NsIXULTreeBuilder" title="en/NsIXULTreeBuilder">nsIXULTreeBuilder</a></td>
+   <td>No</td>
+   <td>This tree is generated from an RDF datasource. It is used when a tree has a <code id="a-datasources"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/datasources">datasources</a></code> attribute, and has <code>dont-build-content</code> in its <code id="a-flags"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/flags">flags</a></code> attribute. For this tree, the data comes directly from the RDF datasource. DOM <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code>s are not created. Even though the template uses treeitem elements to define the content, DOM nodes for these elements are not created. This is the type that should be used for RDF generated trees with lots of rows.</td>
+  </tr>
+  <tr>
+   <td>RDF content tree</td>
+   <td><a href="/en/XPCOM_Interface_Reference/nsITreeView" title="en/nsITreeView">nsITreeView</a>, <a href="/en/NsIXULTreeBuilder" title="en/NsIXULTreeBuilder">nsIXULTreeBuilder</a>, <a href="/en/XPCOM_Interface_Reference/NsITreeContentView" title="en/NsITreeContentView">nsITreeContentView</a></td>
+   <td>Yes</td>
+   <td>This tree is generated from an RDF datasource. It is similar to the previous type but is used when the tree does not have <code>dont-build-content</code> in its <code id="a-flags"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/flags">flags</a></code> attribute. DOM <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code>s are created, so you can access the data using RDF functions or DOM functions. This type is suitable for RDF generated trees with a fairly small number of rows.</td>
+  </tr>
+  <tr>
+   <td>Custom tree view</td>
+   <td><a href="/en/XPCOM_Interface_Reference/nsITreeView" title="en/nsITreeView">nsITreeView</a></td>
+   <td>No</td>
+   <td>For this tree you implement the <a href="/en/XPCOM_Interface_Reference/nsITreeView" title="en/nsITreeView">nsITreeView</a> interface yourself. The tree's data is retrieved from this custom view. The custom view should be attached to the tree by setting its <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/view">view</a></span></code> property.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>More information is available in the <a href="/en/XUL_Tutorial/Trees" title="en/XUL_Tutorial/Trees">XUL tutorial</a>. Also <a href="/en/Tree_Widget_Changes" title="en/Tree_Widget_Changes">Tree Widget Changes</a>.</p>
+
+<table style="background: #eeeeee none repeat scroll 0% 0%; border: 1px solid #cccccc; margin: 0px 0px 10px 10px; padding: 0px 10px;">
+ <tbody>
+  <tr>
+   <td><strong><a href="/en/XUL_accessibility_guidelines#Trees" title="en/XUL_accessibility_guidelines#Trees">Relevant accessbility guidelines</a></strong><small> </small>
+
+    <ul>
+     <li><small>Provide alternative access (e.g., via menus) to column picker and for header behaviors like sorting (these have no default keyboard access).</small></li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<dl>
+ <dt>Attributes</dt>
+ <dd><a href="#a-disableKeyNavigation">disableKeyNavigation</a>, <a href="#a-disabled">disabled</a>, <a href="#a-tree.editable">editable</a>, <a href="#a-enableColumnDrag">enableColumnDrag</a>, <a href="#a-flags">flags</a>, <a href="#a-hidecolumnpicker">hidecolumnpicker</a>, <a href="#a-tree.onselect">onselect</a>, <a href="#a-rows">rows</a>, <a href="#a-seltype">seltype</a>, <a href="#a-statedatasource">statedatasource</a>, <a href="#a-tabindex">tabindex</a>, <a href="#a-treelines">treelines</a></dd>
+</dl>
+
+<dl>
+ <dt>Properties</dt>
+ <dd><a href="#p-accessibleType">accessibleType</a>, <a href="#p-builderView">builderView</a>, <a href="#p-columns">columns</a>, <a href="#p-contentView">contentView</a>, <a href="#p-currentIndex">currentIndex</a>, <a href="#p-disableKeyNavigation">disableKeyNavigation</a>, <a href="#p-disabled">disabled</a>, <a href="#p-editingColumn">editingColumn</a>, <a href="#p-editingRow">editingRow</a>, <a href="#p-enableColumnDrag">enableColumnDrag</a>, <a href="#p-firstOrdinalColumn">firstOrdinalColumn</a>, <a href="#p-tree.inputField">inputField</a>, <a href="#p-selType">selType</a>, <a href="#p-selstyle">selstyle</a>, <a href="#p-tabIndex">tabIndex</a>, <a href="#p-treeBoxObject">treeBoxObject</a>, <a href="#p-view">view</a></dd>
+</dl>
+
+<h3 id="Examples" name="Examples">Examples</h3>
+
+<h4 id="A_tree_with_several_columns">A tree with several columns</h4>
+
+<pre class="script">&lt;tree flex="1" rows="2"&gt;
+
+  &lt;treecols&gt;
+    &lt;treecol id="sender" label="Sender" flex="1"/&gt;
+    &lt;treecol id="subject" label="Subject" flex="2"/&gt;
+  &lt;/treecols&gt;
+
+  &lt;treechildren&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="joe@somewhere.com"/&gt;
+        &lt;treecell label="Top secret plans"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="mel@whereever.com"/&gt;
+        &lt;treecell label="Let's do lunch"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+  &lt;/treechildren&gt;
+
+&lt;/tree&gt;
+</pre>
+
+<div><img alt="Image:trees1.png" class="internal" src="/@api/deki/files/899/=Trees1.png"></div>
+
+<h4 id="A_tree_with_several_columns_and_nested_items">A tree with several columns and nested items</h4>
+
+<pre class="script">&lt;tree id="myTree" flex="1" hidecolumnpicker="false" seltype="single" class="tree"
+      rows="5"&gt;
+  &lt;treecols id="myTree2-treeCols"&gt;
+    &lt;treecol id="myTree2-treeCol0" primary="true" flex="2" label="Column A"
+             persist="width" ordinal="1"/&gt;
+    &lt;splitter class="tree-splitter" ordinal="2"/&gt;
+    &lt;treecol id="myTree2-treeCol1" flex="1" label="Column B"
+             persist="width" ordinal="3"/&gt;
+  &lt;/treecols&gt;
+  &lt;treechildren&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="1"/&gt;
+        &lt;treecell label="a"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+    &lt;!-- Make sure to set container="true" --&gt;
+    &lt;treeitem container="true" open="true"&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="2"/&gt;
+        &lt;treecell label="b"/&gt;
+      &lt;/treerow&gt;
+      &lt;treechildren&gt;
+        &lt;treeitem&gt;
+          &lt;treerow&gt;
+            &lt;treecell label="2a"/&gt;
+            &lt;treecell label="ba"/&gt;
+          &lt;/treerow&gt;
+        &lt;/treeitem&gt;
+      &lt;/treechildren&gt;
+    &lt;/treeitem&gt;
+  &lt;/treechildren&gt;
+&lt;/tree&gt;
+</pre>
+
+<h3 id="Attributes" name="Attributes">Attributes</h3>
+
+<p> </p><div id="a-disabled">
+
+
+<dl>
+ <dt><code id="a-disabled"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code></dt>
+ <dd> </dd>
+ <dd>
+ <h5 id="类型boolean">类型:<em>boolean</em></h5>
+ </dd>
+ <dd>
+ <h5 id="表示元素是被禁用的。">表示元素是被禁用的。</h5>
+
+ <p>如果这个元素的disabled属性被设置为true，表示元素被禁用，被禁用的属性在页面上通常会显示灰色文本，它无法响应用户的操作，它也无法得到光标。</p>
+
+ <p>然而，这个元素仍然能够响应鼠标事件，如果要启用这个元素，把disabled设置为false</p>
+ </dd>
+</dl>
+
+<h4 id="示例：">示例：</h4>
+
+<div class="float-right"><img alt="Image:XUL_ref_attr_disabled.png" src="https://mdn.mozillademos.org/files/1742/XUL_ref_attr_disabled.png"></div>
+
+<pre><code>// Disabling an element
+document.getElementById('buttonRemove').setAttribute("disabled", "true");
+
+// Enabling back an element by removing the "disabled" attribute
+document.getElementById('buttonRemove').removeAttribute("disabled");</code></pre>
+
+<p></p><div class="blockIndicator standardNote standardNoteBlock">
+    <p><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Firefox/Releases/3.5">Firefox 3.5 note</a></p>
+    <p style="font-weight: 400;">For <a href="https://developer.mozilla.org/en-US/docs/XUL/keyset" title="en/XUL/Keyset"><code>keyset</code></a> elements, support for this attribute was added in Firefox 3.5.</p>
+</div><p></p>
+</div> <div id="a-disableKeyNavigation">
+
+
+<dl>
+ <dt><code id="a-disableKeyNavigation"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/disableKeyNavigation">disableKeyNavigation</a></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>If this attribute is not used, the user can navigate to specific items within the element by pressing keys corresponding to letters in the item's label. This is done incrementally, so typing more letters with select more specific items. This feature may be disabled by setting this attribute to <code>true</code>.</dd>
+</dl>
+</div> <div id="a-tree.editable">
+
+
+<dl>
+ <dt><code id="a-tree.editable"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/tree.editable">editable</a></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>Indicates that the cells of the <code><a href="/en-US/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code> may be edited.</dd>
+</dl>
+</div> <div id="a-enableColumnDrag">
+
+
+<dl>
+ <dt><code id="a-enableColumnDrag"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/enableColumnDrag">enableColumnDrag</a></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>When set to <code>true</code>, the user may drag the column headers around to change the order in which they are displayed.</dd>
+</dl>
+</div> <div id="a-flags">
+
+
+<dl>
+ <dt><code id="a-flags"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/flags">flags</a></code></dt>
+ <dd>Type: <em>space-separated list of the values below</em></dd>
+ <dd>A set of flags used for miscellaneous purposes. Two flags are defined, which may be the value of this attribute.
+ <ul>
+  <li><code>dont-test-empty</code>: For template generated content, the builder will not check that a container is empty.</li>
+  <li><code>dont-build-content</code>: This flag may be used on a tree to indicate that content elements should not be generated. This results in a performance enhancement, but you will not be able to use the DOM functions to retrieve the tree rows.</li>
+ </ul>
+ </dd>
+</dl>
+</div> <div id="a-hidecolumnpicker">
+
+
+<dl>
+ <dt><code id="a-hidecolumnpicker"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/hidecolumnpicker">hidecolumnpicker</a></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>When set to <code>false</code>, a drop-down will appear in the upper right corner of the <code><a href="/en-US/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code>, which the user may use to show and hide columns. When set to <code>true</code>, the column picker will be hidden. The default value is <code>false</code>.</dd>
+</dl>
+</div> <div id="a-tree.onselect">
+
+
+<dl>
+ <dt><code id="a-tree.onselect"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/tree.onselect">onselect</a></code></dt>
+ <dd>Type: <em>script code</em></dd>
+ <dd>This event is sent to a <code><a href="/en-US/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code> when a row is selected, or whenever the selection changes. The user can select multiple rows by holding down Shift or Control and clicking on a row. The <code>onselect</code> event will be sent for each item added to or removed from the selection.</dd>
+</dl>
+
+
+</div> <div id="a-rows">
+
+<dl>
+  <dt>
+    <code id="a-rows"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/rows">rows</a></code></dt>
+  <dd>
+    Type: <em>integer</em></dd>
+  <dd>
+    The number of rows to display in the element. If the element contains more than this number of rows, a scrollbar will appear which the user can use to scroll to the other rows. To get the actual number of rows in the element, use the <span id="m-getRowCount"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/getRowCount">getRowCount</a></code></span> method.</dd>
+</dl>
+</div> <div id="a-seltype">
+
+
+<dl>
+ <dt><code id="a-seltype"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/seltype">seltype</a></code></dt>
+ <dd>Type: <em>one of the values below</em></dd>
+ <dd>Used to indicate whether multiple selection is allowed.</dd>
+ <dd>
+ <dl>
+  <dt><code>single</code></dt>
+  <dd>Only one row may be selected at a time. (Default in <code>listbox</code> and <code>richlistbox</code>.)</dd>
+  <dt><code>multiple</code></dt>
+  <dd>Multiple rows may be selected at once. (Default in <code>tree</code>.)</dd>
+ </dl>
+ </dd>
+ <dd>
+ <p>For trees, you can also use the following values:</p>
+
+ <dl>
+  <dt><code>cell</code></dt>
+  <dd>Individual cells can be selected </dd>
+  <dt><code>text</code></dt>
+  <dd>Rows are selected; however, the selection highlight appears only over the text of the primary column.</dd>
+ </dl>
+
+ <p>For <code>richlistbox</code>, this is new in Firefox 3.5.</p>
+ </dd>
+</dl>
+</div> <div id="a-statedatasource">
+
+
+<dl>
+ <dt><code id="a-statedatasource"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/statedatasource">statedatasource</a></code></dt>
+ <dd>Type: <em>URI</em></dd>
+ <dd>Chrome XUL may specify an RDF datasource to use to store <code><a href="/en-US/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code> state information. This is used to hold which tree items are open and which items are collapsed. This information will be remembered for the next time the XUL file is opened. If you do not specify this attribute, state information will be stored in the local store (<code>rdf:local-store</code>).</dd>
+</dl>
+</div> <div id="a-tabindex">
+
+
+<dl>
+ <dt><code id="a-tabindex"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/tabindex">tabindex</a></code></dt>
+ <dd>Type:<em>integer</em></dd>
+ <dd>当用户按下 "<kbd>tab</kbd>" 键时焦点移动到元素上的顺序。<code>tabindex</code> 数字越大，顺序越靠后。</dd>
+</dl>
+
+
+
+<p></p>
+</div> <div id="a-treelines">
+
+<dl><dt> <code id="a-treelines"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/treelines">treelines</a></code> <br>
+</dt><dd> Type: <em>boolean</em> </dd><dd> When set to <code>true</code>, lines are drawn connecting the lines in the tree; when <code>false</code>, the lines are not drawn. This is <code>false</code> by default.<br>
+</dd></dl>
+</div><p></p>
+
+<h3 id="Properties" name="Properties">Properties</h3>
+
+<p> </p><div id="p-accessibleType">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/accessibleType">accessibleType</a></span></code></dt>
+ <dd>
+  Type:
+  <i>
+   integer</i>
+ </dd>
+ <dd>
+  A value indicating the type of accessibility object for the element.</dd>
+</dl>
+
+<p></p></div> <div id="p-builderView">
+
+<dl>
+ <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/builderView">builderView</a></span></code></dt>
+ <dd>Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXULTreeBuilder" title="">nsIXULTreeBuilder</a></code></em></dd>
+ <dd>A reference to the tree builder which constructed the <code><a href="/en-US/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code> data. The builder provides access to the RDF resources for each row in the tree, and allows sorting the data by column. In newer versions of Mozilla, the <code>builderView</code> property is actually a synonym for the <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/view">view</a></span></code> property, since the two interfaces are flattened together into a single interface in <a href="/en/JavaScript" title="en/JavaScript">JavaScript</a>. This property is read-only.</dd>
+</dl></div> <div id="p-columns">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/columns">columns</a></span></code></dt>
+  <dd>
+    Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeColumns" title="">nsITreeColumns</a></code></em></dd>
+  <dd>
+    Returns the columns for the tree as an <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeColumns" title="">nsITreeColumns</a></code> object.</dd>
+</dl></div> <div id="p-contentView">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/contentView">contentView</a></span></code></dt>
+  <dd>
+    Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeContentView" title="">nsITreeContentView</a></code></em></dd>
+  <dd>
+    For trees built with a content builder - that is, those that do not have <code id="a-flags"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/flags">flags</a></code> set -- the <code>contentView</code> will be a reference to the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeContentView" title="">nsITreeContentView</a></code> for the tree. This interface lets you retrieve the DOM element corresponding to a given a row index and vice versa. For trees that are not built with a content builder, the functions of <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeContentView" title="">nsITreeContentView</a></code> will not be available, since there are no DOM nodes to retrieve. In newer versions of Mozilla, the <code>contentView</code> property is actually a synonym for the <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/view">view</a></span></code> property, since the two interfaces are flattened together into a single interface in <a href="/en-US/docs/JavaScript" title="JavaScript">JavaScript</a>. This property is read-only.</dd>
+</dl></div> <div id="p-currentIndex">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/currentIndex">currentIndex</a></span></code></dt>
+  <dd>
+    Type: <em>integer</em></dd>
+  <dd>
+    <p>Set to the row index of the tree caret in the <code><a href="/en-US/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code>. For trees with focus, the caret's position is indicated by the focus ring, but unfocused trees won't show  a focus ring, naturally. For unfocused trees, the (undrawn) caret's position can still be obtained by this property. If the caret isn't present for any row (for example, because the tree has never been focused), the value will be <code>-1</code>.</p>
+    <p><strong>You cannot rely on this property to change or determine a tree selection</strong>, except for trees with <code><code id="a-seltype"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/seltype">seltype</a></code>="single"</code>. (All trees have <code>seltype="multiple"</code> by default.) To reliably change or determine a selection, instead use the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeSelection" title="">nsITreeSelection</a></code> interface methods available via <code>tree.view.selection</code>.</p>
+  </dd>
+</dl>
+</div> <div id="p-disabled">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/disabled">disabled</a></span></code></dt>
+ <dd>
+  Type:
+  <i>
+   boolean</i>
+ </dd>
+ <dd>
+  Gets and sets the value of the <code id="a-disabled"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code> attribute.</dd>
+</dl>
+
+<p></p></div> <div id="p-disableKeyNavigation">
+<dl>
+  <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/disableKeyNavigation">disableKeyNavigation</a></span></code></dt>
+  <dd>Type: <em>boolean</em></dd>
+  <dd>Gets or sets the value of the <code id="a-disableKeyNavigation"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/disableKeyNavigation">disableKeyNavigation</a></code> attribute.</dd>
+</dl></div> <div id="p-editingColumn">
+
+<dl>
+ <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/editingColumn">editingColumn</a></span></code> </dt>
+ <dd>Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeColumn" title="">nsITreeColumn</a></code></em></dd>
+ <dd>The column of the <code><a href="/en-US/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code> cell currently being edited, or <code>null</code> if there is no cell being edited.</dd>
+</dl></div> <div id="p-editingRow">
+
+<dl>
+ <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/editingRow">editingRow</a></span></code> </dt>
+ <dd>Type: <em>integer</em></dd>
+ <dd>The row index of the <a href="/en/XUL/tree" title="en/XUL/tree">tree</a> cell currently being edited, or <code>-1</code> if there is no cell currently being edited.</dd>
+</dl></div> <div id="p-enableColumnDrag">
+
+<dl>
+ <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/enableColumnDrag">enableColumnDrag</a></span></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>When set to <code>true</code>, the user may drag the column headers around to change the order in which they are displayed.</dd>
+</dl></div> <div id="p-firstOrdinalColumn">
+
+<dl>
+ <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/firstOrdinalColumn">firstOrdinalColumn</a></span></code></dt>
+ <dd>Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code> element</em></dd>
+ <dd>A reference to the first <code><a href="/en-US/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code> element, which or may not be the first column displayed in the tree.</dd>
+</dl></div> <div id="p-tree.inputField">
+
+<dl>
+ <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/tree.inputField">inputField</a></span></code></dt>
+ <dd>Type: <em>textbox element</em></dd>
+ <dd>Read-only property that holds the <code><a href="/en-US/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code> that is used for editing.</dd>
+</dl></div> <div id="p-selType">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/selType">selType</a></span></code> </dt>
+ <dd>
+  Type: <em>string</em></dd>
+ <dd>
+  Gets and sets the value of the <code id="a-seltype"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/seltype">seltype</a></code> attribute.</dd>
+</dl>
+<p> </p></div> <div id="p-selstyle">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/selstyle">selstyle</a></span></code></dt>
+  <dd>
+    Type: <em>string</em></dd>
+  <dd>
+    If set to the value <code>primary</code>, only the label of the primary column will be highlighted when an item in the tree is selected. Otherwise, the entire row will be highlighted. To see the difference, compare the selection style in the folder list and the message list in Mozilla mail.</dd>
+</dl></div> <div id="p-tabIndex">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/tabIndex">tabIndex</a></span></code></dt>
+ <dd>
+  Type:
+  <i>
+   integer</i>
+ </dd>
+ <dd>
+  Gets and sets the value of the <code id="a-tabindex"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/tabindex">tabindex</a></code> attribute.</dd>
+</dl>
+
+<p></p></div> <div id="p-treeBoxObject">
+
+<dl>
+ <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/treeBoxObject">treeBoxObject</a></span></code></dt>
+ <dd>Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeBoxObject" title="">nsITreeBoxObject</a></code></em></dd>
+ <dd>The box object is responsible for rendering the <code><a href="/en-US/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code> on the window. This object implements the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeBoxObject" title="">nsITreeBoxObject</a></code> interface and contains functions for retrieving the cells at certain coordinates, redrawing cells and scrolling the tree. This property is equivalent to the <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/boxObject">boxObject</a></span></code> property.</dd>
+</dl></div> <div id="p-view">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/view">view</a></span></code></dt>
+  <dd>
+    Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeView" title="">nsITreeView</a></code></em></dd>
+  <dd>
+    The view for the <code><a href="/en-US/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code>, which is the object which generates the data to be displayed. You can assign an object which implements <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeView" title="">nsITreeView</a></code> to this property. Trees built from RDF or those which use <code><a href="/en-US/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code>s directly will already have a view. Functions available in the view allow one to retrieve the data within the cells, and determine which rows are nested within others. For a complete list of view functions, see the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeView" title="">nsITreeView</a></code> interface.</dd>
+</dl></div><p></p>
+
+<h3 id="Methods" name="Methods">Methods</h3>
+
+<p></p><table style="border: 1px solid rgb(204, 204, 204); margin: 0px 0px 10px 10px; padding: 0px 10px; background: rgb(238, 238, 238) none repeat scroll 0% 50%;"> <tbody> <tr> <td> <p><strong>Inherited from XUL element</strong><br> <small> <span id="m-blur"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/blur">blur</a></code></span>, <span id="m-click"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/click">click</a></code></span>, <span id="m-doCommand"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/doCommand">doCommand</a></code></span>, <span id="m-focus"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/focus">focus</a></code></span>, <span id="m-getElementsByAttribute"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/getElementsByAttribute">getElementsByAttribute</a></code></span></small></p> <p><strong>Inherited from DOM element</strong><br> <small> <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.addEventListener">addEventListener()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.appendChild">appendChild()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.dispatchEvent">dispatchEvent()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttribute">getAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttributeNode">getAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttributeNodeNS">getAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttributeNS">getAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getElementsByTagName">getElementsByTagName()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getElementsByTagNameNS">getElementsByTagNameNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasAttribute">hasAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasAttributeNS">hasAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasAttributes">hasAttributes()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasChildNodes">hasChildNodes()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.insertBefore">insertBefore()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.isSupported">isSupported()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.normalize">normalize()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeAttribute">removeAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeAttributeNode">removeAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeAttributeNS">removeAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeChild">removeChild()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeEventListener">removeEventListener()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.replaceChild">replaceChild()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttribute">setAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttributeNode">setAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttributeNodeNS">setAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttributeNS">setAttributeNS()</a></code></small></p> </td> </tr> </tbody>
+</table> <dl>
+ <dt><span id="m-startEditing"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/startEditing">startEditing( row, column )</a></code></span> </dt>
+ <dd>Return type: <em>no return value</em></dd>
+ <dd>Activates user editing of the given cell, which is specified by row index number and the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeColumn" title="">nsITreeColumn</a></code> in which it is located. The tree view's <code><a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/nsITreeView#getCellText()">nsITreeView.getCellText()</a></code> method is called to obtain the cell contents.</dd>
+</dl> <dl>
+ <dt><span id="m-stopEditing"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/stopEditing">stopEditing( shouldaccept )</a></code></span> </dt>
+ <dd>Return type: <em>no return value</em></dd>
+ <dd>Stops editing the cell currently being edited. If the <code>shouldAccept</code> parameter is <code>true</code>, the cell's label is changed to the edited value (the tree view's <code><a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/nsITreeView#setCellText()">nsITreeView.setCellText()</a></code> method is called to change the cell contents). Otherwise the cell label is reverted to the value it had prior to editing.</dd>
+</dl><p></p>
+
+<h3 id="Related" name="Related">Related</h3>
+
+<dl>
+ <dt>Elements</dt>
+ <dd><a href="/en/XUL/treecols" title="en/XUL/treecols">treecols</a>, <a href="/en/XUL/treecol" title="en/XUL/treecol">treecol</a>, <a href="/en/XUL/treechildren" title="en/XUL/treechildren">treechildren</a>, <a href="/en/XUL/treeitem" title="en/XUL/treeitem">treeitem</a>, <a href="/en/XUL/treerow" title="en/XUL/treerow">treerow</a>, <a href="/en/XUL/treecell" title="en/XUL/treecell">treecell</a> and <a href="/en/XUL/treeseparator" title="en/XUL/treeseparator">treeseparator</a>.</dd>
+ <dt>Interfaces</dt>
+ <dd><a href="/en/XPCOM_Interface_Reference/nsIAccessibleProvider" title="en/nsIAccessibleProvider">nsIAccessibleProvider</a>, <a href="/en/NsIDOMXULTreeElement" title="en/NsIDOMXULTreeElement">nsIDOMXULTreeElement</a>, <a href="/en/NsIDOMXULMultiSelectControlElement" title="en/NsIDOMXULMultiSelectControlElement">nsIDOMXULMultiSelectControlElement</a></dd>
+</dl>
+
+<h3 id="Script_Examples" name="Script_Examples">Script Examples</h3>
+
+<p>To have alternating colors for each row, use the style rules like the following: <small>pma at daffodil dot uk dot com</small></p>
+
+<pre class="script">treechildren::-moz-tree-row(selected) { background-color: #FFFFAA; }
+treechildren::-moz-tree-row(odd) { background-color: #EEEEEE; }
+treechildren::-moz-tree-row(odd, selected) { background-color: #FFFFAA; }
+treechildren::-moz-tree-cell-text(selected) { color: #000000; }
+treechildren::-moz-tree-cell-text(odd, selected) { color: #000000; }
+</pre>
+
+<p>If using a content tree view, use the following to get the value of the id attribute for each of the selected rows of a tree: <small>tcooper_mont at yahoo dot com</small></p>
+
+<pre class="script">var idList = [];
+var rangeCount = tree.view.selection.getRangeCount();
+for (var i = 0; i &lt; rangeCount; i++)
+{
+   var start = {};
+   var end = {};
+   tree.view.selection.getRangeAt(i, start, end);
+   for(var c = start.value; c &lt;= end.value; c++)
+   {
+      idList.push(tree.view.getItemAtIndex(c).firstChild.id);
+   }
+}
+</pre>
+
+<p>The following returns a array of the indicies of the rows where the value is checked in a checkbox type column: <small>jfabre at ismans dot fr</small></p>
+
+<pre class="script">function getCellChecked(tree, columnid)
+{
+  var arr = [];
+  var column = tree.columns.getNamedColumn(columnid);
+  for (var i = 0; i &lt; tree.view.rowCount; i++){
+    if (tree.view.getCellValue(i, column) == 'true')
+      arr.push(i);
+  }
+  return arr;
+}
+</pre>
+
+<p>To get the text value for a specific column (e.g. column 'age') from the currently focused row in the tree:</p>
+
+<pre class="script">var t = document.getElementById('mytree');
+document.title = t.view.getCellText(t.currentIndex,t.columns.getNamedColumn('age'));
+</pre>
+
+<p></p>

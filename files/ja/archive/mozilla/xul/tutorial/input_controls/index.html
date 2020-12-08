@@ -1,0 +1,81 @@
+---
+title: 入力コントロール
+slug: Archive/Mozilla/XUL/Tutorial/Input_Controls
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Input_Controls
+---
+<p> </p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Adding_Labels_and_Images" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Numeric_Controls">次のページ  »</a></p>
+</div>
+<p>XUL にも、HTML の<a href="/ja/DOM/form" title="ja/DOM/form">フォーム</a>コントロールと同様な要素があります。</p>
+<p><span id="Text_Entry_Fields"></span></p>
+<h3 id=".E3.83.86.E3.82.AD.E3.82.B9.E3.83.88.E5.85.A5.E5.8A.9B.E6.AC.84" name=".E3.83.86.E3.82.AD.E3.82.B9.E3.83.88.E5.85.A5.E5.8A.9B.E6.AC.84">テキスト入力欄</h3>
+<p>HTML には、テキスト入力をコントロールするために使用可能な input 要素があります。 XUL にも、テキスト入力のための同様な要素として、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code></code> 要素があります。 <code><code><a href="/ja/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code></code> 要素は、何も属性を指定しなくとも、利用者がテキストを入力するためのボックス (テキスト入力欄) を作りますが、 <code><code><a href="/ja/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code></code> 要素に対しても、HTML の入力コントロールで使われるものと同様の属性が使用できます。 以下に、主な属性を示します。</p>
+<dl><dt> <code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code> </dt><dd> テキスト入力欄を識別するための一意な識別子。 </dd><dt> <code id="a-class"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/class">class</a></code> </dt><dd> テキスト入力欄のスタイルクラス。 </dd><dt> <code id="a-value"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code> </dt><dd> テキスト入力欄にデフォルトのテキストを指定したい場合、value 属性で指定します。 </dd><dt> <code id="a-disabled"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code> </dt><dd> テキスト入力欄を無効にしたい場合、<code>true</code> を設定します。 </dd><dt> <code id="a-type"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/type">type</a></code> </dt><dd> この属性に、特別な値 <code>password</code> を設定することで、入力した内容を伏せて表示するテキスト入力欄を作成することが出来ます。これは通常、パスワード入力欄に使用されます。 </dd><dt> <code id="a-maxlength"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/maxlength">maxlength</a></code> </dt><dd> テキスト入力欄に入力可能な最大文字数。 </dd></dl>
+<p>HTML では、種類の異なる入力欄を <code>input</code> 要素で作ることができましたが、 XUL では、種類ごとに別々の要素が用意されています。 以下に、テキスト入力欄の例をいくつか示します。</p>
+<p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_inputs_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_inputs_1.xul">表示</a></p>
+<pre>&lt;label control="some-text" value="Enter some text"/&gt;
+&lt;textbox id="some-text"/&gt;
+&lt;label control="some-password" value="Enter a password"/&gt;
+&lt;textbox id="some-password" type="password" maxlength="8"/&gt;
+</pre>
+<p><span id="Multiline_textbox"></span></p>
+<h4 id=".E8.A4.87.E6.95.B0.E8.A1.8C.E5.85.A5.E5.8A.9B.E3.81.8C.E5.8F.AF.E8.83.BD.E3.81.AA_textbox" name=".E8.A4.87.E6.95.B0.E8.A1.8C.E5.85.A5.E5.8A.9B.E3.81.8C.E5.8F.AF.E8.83.BD.E3.81.AA_textbox">複数行入力が可能な textbox</h4>
+<p>上の <code><code><a href="/ja/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code></code> の例では、1 行分のテキストだけが入力可能なテキスト入力欄が作成されます。 HTML では、より大きなテキスト入力領域を作成するために <code>textarea</code> 要素があります。 XUL では、同じ <code><code><a href="/ja/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code></code> 要素が使用できるため、別の要素は必要ありません。 <code><code id="a-multiline"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/multiline">multiline</a></code></code> 属性を <code>true</code> に設定することにより、複数行の入力が可能なテキスト入力欄が表示されます。</p>
+<p><span id="%E4%BE%8B_2"><a id="%E4%BE%8B_2"></a><strong>例 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_inputs_2.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_inputs_2.xul">表示</a></p>
+<pre>&lt;textbox multiline="true"
+           value="This is some text that could wrap onto multiple lines."/&gt;
+</pre>
+<p>HTML の <code>textarea</code> と同様に、入力欄の大きさを設定するために <code>rows</code> と <code>cols</code> 属性が使用できます。 ここには、表示する行数と文字の桁数を指定します。</p>
+<p><span id="Our_find_files_example"></span></p>
+<h4 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AE.E4.BE.8B" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AE.E4.BE.8B">ファイル検索ダイアログの例</h4>
+<div class="highlight">
+<p>それでは、ファイル検索ダイアログに検索の入力欄を追加してみましょう。 <code>textbox</code> 要素を使用してみます。</p>
+<pre class="eval"><span class="highlightred">&lt;label value="Search for:" control="find-text"/&gt;</span>
+<span class="highlightred">&lt;textbox id="find-text"/&gt;</span>
+
+&lt;button id="find-button" label="Find"/&gt;
+</pre>
+<div class="float-right"><img alt="画像:inputs1.png" class="internal" src="/@api/deki/files/1915/=Inputs1.png"></div>
+<p>これらの行を、以前のセクションで作成したボタンの前に追加します。 このウィンドウを開くと、画像で示したのと同様のものが表示されるはずです。</p>
+<p>ラベルと入力欄がウィンドウに表示されることが確認できると思います。 入力欄は完全に機能しますので、テキストを入力したり、選択することが可能です。 <code id="a-control"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/control">control</a></code> 属性の使用により、ラベル (<code><a href="/ja/docs/Mozilla/Tech/XUL/label" title="label">label</a></code>) がクリックされた時に入力欄が選択されることを確認してください。</p>
+<p><span id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"><a id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"></a><strong>ここまでのファイル検索ダイアログの例</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-inputs.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-inputs.xul">表示</a></p>
+</div>
+<p><span id="Checkboxes_and_Radio_Buttons"></span></p>
+<h3 id=".E3.83.81.E3.82.A7.E3.83.83.E3.82.AF.E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9.E3.81.A8.E3.83.A9.E3.82.B8.E3.82.AA.E3.83.9C.E3.82.BF.E3.83.B3" name=".E3.83.81.E3.82.A7.E3.83.83.E3.82.AF.E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9.E3.81.A8.E3.83.A9.E3.82.B8.E3.82.AA.E3.83.9C.E3.82.BF.E3.83.B3">チェックボックスとラジオボタン</h3>
+<p>チェックボックスとラジオボタンを作成するための 2 つの要素について説明します。 これらはボタンの一種です。 チェックボックスは、オプションを有効にするか無効かを設定するために使用されます。 ラジオボタンも同様の目的で利用されますが、一群のオプションの中から 1 つだけを選択する場合に用います。</p>
+<p>ボタンに設定可能な属性の多くが、チェックボックスとラジオボタンにも使用できます。 下の例は、単純なチェックボックスとラジオボタンを示します。</p>
+<pre>&lt;checkbox id="case-sensitive" checked="true" label="Case sensitive"/&gt;
+&lt;radio id="orange" label="Orange"/&gt;
+&lt;radio id="violet" selected="true" label="Violet"/&gt;
+&lt;radio id="yellow" label="Yellow"/&gt;
+</pre>
+<p>最初の行は単純なチェックボックス (<code><a href="/ja/docs/Mozilla/Tech/XUL/checkbox" title="checkbox">checkbox</a></code>) を作成します。 ユーザがチェックボックスをクリックすると、チェック状態と非チェック状態が切り替わります。 <code><code id="a-checked"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/checked">checked</a></code></code> 属性は、デフォルトの状態を指定するのに使用します。 ここには <code>true</code> または <code>false</code> のいずれかの値を設定します。 <code><code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> 属性によって、チェックボックスの横に表示されるラベルを設定することが出来ます。 ラジオボタン (<code><a href="/ja/docs/Mozilla/Tech/XUL/radio" title="radio">radio</a></code>) では、<code><code id="a-checked"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/checked">checked</a></code></code> 属性の代わりに <code><code id="a-selected"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/selected">selected</a></code></code> 属性を使用する必要があります。 デフォルトで選択されているラジオボタンに対して <code>true</code> を設定し、そのほかのラジオボタンでは、設定しないでおきます。</p>
+<p><span id="Radiogroup_element"></span></p>
+<h4 id="Radiogroup_.E8.A6.81.E7.B4.A0" name="Radiogroup_.E8.A6.81.E7.B4.A0">Radiogroup 要素</h4>
+<p>ラジオボタンをグループ化するためには、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code></code> 要素を使用する必要があります。 グループのラジオボタンは一度に 1 個しか選択できません。 1 つを選択すると、同じグループの他のものは選択されない状態になります。 下の例により、試すことができます。</p>
+<p><span id="%E4%BE%8B_3"><a id="%E4%BE%8B_3"></a><strong>例 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_inputs_3.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_inputs_3.xul">表示</a></p>
+<pre>&lt;radiogroup&gt;
+  &lt;radio id="orange" label="Orange"/&gt;
+  &lt;radio id="violet" selected="true" label="Violet"/&gt;
+  &lt;radio id="yellow" label="Yellow"/&gt;
+&lt;/radiogroup&gt;
+</pre>
+<p><span id="Attributes"></span></p>
+<h4 id=".E3.83.81.E3.82.A7.E3.83.83.E3.82.AF.E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9.E3.81.A8.E3.83.A9.E3.82.B8.E3.82.AA.E3.83.9C.E3.82.BF.E3.83.B3.E3.81.AE.E5.B1.9E.E6.80.A7" name=".E3.83.81.E3.82.A7.E3.83.83.E3.82.AF.E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9.E3.81.A8.E3.83.A9.E3.82.B8.E3.82.AA.E3.83.9C.E3.82.BF.E3.83.B3.E3.81.AE.E5.B1.9E.E6.80.A7">チェックボックスとラジオボタンの属性</h4>
+<p>ボタンと同様、チェックボックスとラジオボタンも、ラベルと画像よって構成されています。 画像は、クリックされたときのチェック状態と非チェック状態の切り替わりに応じて切り替わります。 チェックボックスに使用できる属性の多くは、ボタンと同じです。</p>
+<dl><dt> <code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code> </dt><dd> チェックボックスまたはラジオボタンのラベル。 </dd><dt> <code id="a-disabled"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code> </dt><dd> チェックボックスまたはラジオボタンの有効・無効を設定するために、<code>true</code> または <code>false</code> を設定します。 </dd><dt> <code id="a-accesskey"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/accesskey">accesskey</a></code> </dt><dd> この要素を選択するためのショートカットキー。指定された文字は通常ラベルに下線付きで表示されます。 </dd></dl>
+<p>次のセクションでは、数値の入力や選択を行うための要素について見て行きます。</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Adding_Labels_and_Images" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Numeric_Controls">次のページ  »</a></p>
+</div>
+
+
+
+<p> </p>
+<div id="gm_minibuffer_container" style="background-color: rgb(0, 0, 0);">
+  <span>$</span><input></div>

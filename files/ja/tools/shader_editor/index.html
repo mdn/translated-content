@@ -1,0 +1,60 @@
+---
+title: シェーダーエディター
+slug: Tools/Shader_Editor
+translation_of: Tools/Shader_Editor
+---
+<div>{{ToolsSidebar}}</div><p>シェーダーエディターで、<a href="/ja/docs/Web/WebGL">WebGL</a> で使用するバーテックスシェーダーおよびフラグメントシェーダーの参照や編集ができます。</p>
+
+<p>{{EmbedYouTube("hnoKqFuJhu0")}}</p>
+
+<p>WebGL は、プラグインを使用せずにブラウザーでインタラクティブな 3D グラフィックスや 2D グラフィックスをレンダリングするための JavaScript API です。WebGL では、<a href="https://www.opengl.org/wiki/Rendering_Pipeline_Overview">OpenGL レンダリングパイプライン</a> の適切なステージで名付けられている、"シェーダー" というプログラムを 2 つ提供します。ひとつは <a href="https://www.opengl.org/wiki/Vertex_Shader">バーテックスシェーダー</a> であり、これは描画する各頂点の座標を提供します。もうひとつは <a href="https://www.opengl.org/wiki/Fragment_Shader">フラグメントシェーダー</a> であり、こちらは描画する各ピクセルの色を提供します。</p>
+
+<p>これらのシェーダーは OpenGL Shading Language、別名 <a href="https://www.opengl.org/documentation/glsl/">GLSL</a> で記述します。WebGL では、それらをさまざまな方法でページに含めることができます。JavaScript のソース内にハードコードする、&lt;script&gt; タグでインクルードする別ファイルに書き込む、プレーンテキストとしてサーバーから取得する、といった方法があります。それらはページで実行する JavaScript コードによって、コンパイルのために WebGL API を使用して送出され、そしてデバイスの GPU で実行されます。</p>
+
+<p>シェーダーエディターでは、バーテックスシェーダーおよびフラグメントシェーダーのソースを調査および編集できます。</p>
+
+<p>こちらは複雑なアプリケーション (<a href="http://www.unrealengine.com/html5/">Unreal Engine</a> のデモ) でシェーダーエディターをどのように使用できるかを示したスクリーンキャストです:</p>
+
+<p>{{EmbedYouTube("YBErisxQkPQ")}}</p>
+
+<h2 id="Opening_the_Shader_Editor" name="Opening_the_Shader_Editor">シェーダーエディターを開く</h2>
+
+<p>シェーダーエディターはデフォルトで無効です。有効にするには <a href="/ja/docs/Tools_Toolbox#Settings">開発ツールのオプション</a> を開いて、[標準の Firefox 開発ツール] で [シェーダーエディター] にチェックを入れてください。これで、ツールバーに [シェーダーエディター] が現れます。これをクリックすると、シェーダーエディターが開きます。</p>
+
+<p>始めはページの再読み込みを求めるボタンが表示された、ブランクのウィンドウが現れます:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6421/shader-editor-open.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+
+<p>作業を始めるには、WebGL コンテキストを生成するページおよびプログラムを読み込みます。以降のスクリーンショットは、<a href="http://www.unrealengine.com/html5/">Unreal Engine</a> のデモを使用して取得しました。</p>
+
+<p>3 つのペインに分割されたウィンドウが現れます。左側はすべての GLSL プログラムのリスト、中央は選択したプログラムのバーテックスシェーダー、右側は選択したプログラムのフラグメントシェーダーです:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6431/shader-editor-loaded.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+
+<h2 id="Managing_programs" name="Managing_programs">プログラムの制御</h2>
+
+<p>左側のペインでは、現在の WebGL コンテキストで使用しているすべてのプログラムを一覧表示します。リストの項目にマウスポインタを載せると、そのプログラムで描画したジオメトリーを赤色でハイライトします:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6427/shader-editor-highlight.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+
+<p>プログラム項目の左側にある目玉のアイコンをクリックすると、そのプログラムを無効化します。これは特定のシェーダーに注目したり、重なっているジオメトリーを隠したりするのに役立ちます:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6429/shader-editor-disable.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+
+<p>項目をクリックすると、そのバーテックスシェーダーとフラグメントシェーダーが他の 2 つのペインに表示され、編集ができます。</p>
+
+<h2 id="Editing_shaders" name="Editing_shaders">シェーダーの編集</h2>
+
+<p>中央および右側のペインでは、選択したプログラムのバーテックスシェーダーおよびフラグメントシェーダーを表示します。</p>
+
+<p>これらのプログラムは編集することが可能であり、編集結果は次に WebGL コンテキストが再描画されるとき (例えば次のアニメーションフレーム) で確認できます。例えば、色を変更できます:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6433/shader-editor-edit-color.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+
+<p>エディターは、コード中の構文エラーをハイライトします:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6435/shader-editor-error.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+
+<p>エラーがある行の横に表示される×印にマウスポインタを載せると、詳しい問題点を確認できます:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6437/shader-editor-error-info.png" style="display: block; margin-left: auto; margin-right: auto;"></p>

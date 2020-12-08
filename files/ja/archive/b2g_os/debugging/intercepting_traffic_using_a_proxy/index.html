@@ -1,0 +1,185 @@
+---
+title: プロキシを使って Firefox OS トラフィックを傍受する
+slug: Archive/B2G_OS/Debugging/Intercepting_traffic_using_a_proxy
+tags:
+  - Apps
+  - B2G
+  - Debugging
+  - Firefox OS
+  - Gaia
+  - Security
+  - Testing
+translation_of: Archive/B2G_OS/Debugging/Intercepting_traffic_using_a_proxy
+---
+<p></p><div style="text-align: right;" class="prevnext">
+    <p><a style="float: left;" href="/ja/docs/Mozilla/Firefox_OS/Debugging/Debugging_and_security_testing">« 前のページ</a><a href="/ja/docs/Mozilla/Firefox_OS/Apps/Testing_in_a_privileged_context">次のページ  »</a></p>
+</div><p></p>
+
+<div class="summary">
+<p>デバッグとセキュリティテスト記事のこの部分では、プロキシツールを使ったFirefox OS トラフィックの傍受を見ます、それには プロキシの SSL 証明書をホワイトリストにしてFirefox OS が誰かが傍受しているのを記にしなくするのと、HTTPS通信の再カプセル化が含まれます。B2G デスクトップを使う場合、チュートリアルの最初にある、Marionette JavaScriptデバッグシェルのインストール・アタッチの方法の部分は、 <a href="/ja/docs/Mozilla/Firefox_OS/Security/Debugging_and_security_testing" title="/en-US/docs/Mozilla/Firefox_OS/Security/Debugging_and_security_testing">Debugging and security testing with Firefox OS</a>で説明されています。</p>
+</div>
+
+<p>HTML と JavaScript だけのアプリで作業している時、Web上でデータ転送する API を含む、本当に面白い作品がたくさん見つかるでしょう。このことは、それらのアプリが実行するHTTPリクエストを観察する事がしばしば役立つことを意味します。<a href="http://portswigger.net/burp/">Burp</a> や <a href="https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project">ZAP</a> といったプロキシーツールには、そんなトラフィックを観測するのに役立つ機能があります。これらはクライアントがどうやって自分自身を調節するのかについてや、TLS終端などをインストールするルート証明書などの情報を含んだマニフェストを提供しています。</p>
+
+<p><a href="/ja/Firefox_OS/Using_the_App_Manager">アプリマネージャ</a> の 'Firefox OS の main プロセスのデバッグ' 機能に関連して、スクラッチパッドで <a href="https://github.com/mozfreddyb/b2g-misc/blob/master/PnH-FxOS.js">いくつかのコードを</a> 実行して、プロキシーのルート証明書をあなたの端末にインストールできます。</p>
+
+<h2 id="Firefox_OS_の_mainプロセスをデバッグする">Firefox OS の mainプロセスをデバッグする</h2>
+
+<p>それでどうやって Firefox の mainプロセスをデバッグするのでしょう? Firefox Simulator か実端末のどちらでも、<a href="https://developer.mozilla.org/ja/Firefox_OS/Using_the_App_Manager#Debugging_Certified_Apps">プロファイルにいくつかの設定を入れる事で</a>認定アプリをアプリマネージャ経由でデバッグできます。 まず次のステップに従い、次にプラウザを再起動する前に <code>about:config</code> 内の<code>devtools.chrome.enabled</code> 設定を <code>true</code> にします。</p>
+
+<p>次に、アプリマネージャを使って端末・simulator に接続し、そして端末画面に "DEBUG MAIN PROCESS" ボタンが見えます; それをクリックすると JSMs のデバッグと、スクラッチパッドないでの権限つき JavaScript 実行ができるようになります。</p>
+
+<div class="note">
+<p><strong>記</strong>: mainプロセスで何を実行するかについては注意して下さい: たまたま端末を破壊してしまう可能性があります!</p>
+</div>
+
+<h2 id="ZAPを導入する">ZAPを導入する</h2>
+
+<p>まずは、ZAP を使ってプロセスを使い続けましょう。ZAP は、簡単にデバッグするためにHTTPS通信を妨害して再暗号化する防御プロキシーです。<a href="https://www.owasp.org/index.php/ZAP" title="https://www.owasp.org/index.php/ZAP">ZAP ホームページ</a> の大きな青いボタンをクリックしてダウンロードします。他のプロキシーを使用する事を選んだ場合、このアプローチは両方とも動作するはずなので、どうぞ併用して下さい。</p>
+
+<h3 id="ZAP_証明書">ZAP 証明書</h3>
+
+<p>いま、どのプロキシを使っていても、その証明書を <code>owasp_zap_root_ca.cer といったファイルにエクスポートします(メニューでは <em>Tools &gt; Options &gt; Dynamic SSL Certificates &gt; Save</em>)</code>。ZAP が初回起動した時、1年間有効な証明書を生成します。ダイナミック SSL 証明書のセクションから、新しい証明書を生成することもできます。</p>
+
+<h3 id="ローカルプロキシ">ローカルプロキシ</h3>
+
+<p>B2G デスクトップを使っている場合、必ず ZAP が <code>localhost</code> ではなく、代わりに属性 IP アドレス (イーサーネットかWi-Fi) をリッスンしているのを確かめる必要があります。これは B2G デスクトップの <code>localhost</code> はデスクトップコンピュータではなく、b2g バイナリ自身を指しているためです。例えば、次のIP アドレスを使うでしょう: <code>10.264.1.5</code>.</p>
+
+<p>実機で作業している時、必ず電話機とコンピュータが同一ネットワーク/VLANに接続していて、お互い通信できるようにしておきます (疑う場合、片方の端末の IP からもう一方をpingしてみて下さい)。</p>
+
+<h2 id="端末をプロキシに接続する">端末をプロキシに接続する</h2>
+
+<p>次に色々な方法でプロキシと接続できます:</p>
+
+<p>端末からデフォルト設定を取り出したり、それらを変更して関連するプロキシ設定を追加したり、戻したりできます。</p>
+
+<p>あるいは、ツール構成して <a href="https://www.computerist.org/blog/2014/07/23/Transparent-HTTPS-proxying-with-ZAP/">proxy HTTP and HTTPS transparently</a> にあわせて、端末がプロキシを指すように <code>iptables</code> をセットアップできます。例えば HTTPS トラフィックがプロキシツールを通過するようには:</p>
+
+<div class="codehilite">
+<pre><span class="n">adb</span> <span class="n">shell</span> <span class="n">iptables</span> <span class="o">-</span><span class="n">t</span> <span class="n">nat</span> <span class="o">-</span><span class="n">A</span> <span class="n">OUTPUT</span> <span class="o">-</span><span class="n">p</span> <span class="n">tcp</span> <span class="o">--</span><span class="n">dport</span> <span class="mi">443</span> <span class="o">-</span><span class="n">j</span> <span class="n">DNAT</span> <span class="o">--</span><span class="n">to</span><span class="o">-</span><span class="n">destination</span> <span class="mf">192.168.0.14</span><span class="o">:</span><span class="mi">8443</span>
+</pre>
+</div>
+
+<p>そして、完了後にリセットするには:</p>
+
+<div class="codehilite">
+<pre><span class="n">adb</span> <span class="n">shell</span> <span class="n">iptables</span> <span class="o">-</span><span class="n">t</span> <span class="n">nat</span> <span class="o">-</span><span class="n">F</span>
+</pre>
+</div>
+
+<h3 id="LANのプロキシをセットアップする">LANのプロキシをセットアップする</h3>
+
+<p>この種の活動が大変だと思う場合、ずっと便利な方法があります; 全てのトラフィックがデフォルトでプロキシを通るテストの LAN をセットアップすることです。この方法で、接続する無線LANを変更するだけで、プロキシのオンオフができます。</p>
+
+<p>raspberry pi を使ってビルドしていて、<a href="http://raspberry-at-home.com/hotspot-wifi-access-point/">手順はこれらと同様です</a>。<code>iptables</code> ルールを次のように変更しました:</p>
+
+<div class="codehilite">
+<pre class="brush: bash">*filter
+:INPUT ACCEPT [49:3128]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [37:3924]
+-A FORWARD -i eth0 -o wlan0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+-A FORWARD -i wlan0 -o eth0 -j ACCEPT
+COMMIT
+*nat
+:PREROUTING ACCEPT [1:72]
+:INPUT ACCEPT [1:72]
+:OUTPUT ACCEPT [1:148]
+-A PREROUTING -i wlan0 -p tcp -m tcp --dport 80 -j DNAT --to-destination &lt;proxy_host&gt;:&lt;http_port&gt;
+-A PREROUTING -i wlan0 -p tcp -m tcp --dport 443 -j DNAT --to-destination &lt;proxy_host&gt;:&lt;https_port&gt;
+:POSTROUTING ACCEPT [0:0]
+-A POSTROUTING -o eth0 -j MASQUERADE
+COMMIT
+</pre>
+</div>
+
+<h2 id="証明書データベースを作成する">証明書データベースを作成する</h2>
+
+<p>Accepting certificates happens in settings, which are stored in profiles. Here's a short primer on Firefox profiles:</p>
+
+<ol start="1" style="list-style-type: decimal; margin-left: 40px;">
+ <li>Start the Firefox profile manager using the -P option on the command line, and make sure that Firefox is not using any existing Firefox sessions (<code>-no-remote</code>):
+
+  <ul style="margin-left: 40px;">
+   <li>On Linux, you need to do:
+    <pre class="brush: bash">firefox -P -no-remote</pre>
+   </li>
+   <li>On Mac OS X:
+    <pre class="brush: bash">/Applications/Firefox.app/Contents/MacOS/firefox -P -no-remote</pre>
+   </li>
+  </ul>
+ </li>
+ <li>Now create a new profile called "zapped." Go to the certificate settings — <em>Edit &gt; Preferences &gt; Advanced &gt; Encryption &gt; View Certificates &gt; Import</em>. Now select the <code>owasp_zap_root_ca.cer</code> file created by your proxy and tell Firefox that it should trust this CA to identify web sites (this is really only valid for this profile).</li>
+ <li>Having used Firefox to create a certificate database for us, we can now use this database for our B2G profile. The name of your Firefox profile directory is a random string that ends with <em>zapped</em>. The location depends on your operating system; see <a href="/en-US/docs/Runtime_Directories" title="/en-US/docs/Runtime_Directories">Runtime Directories</a> for details on where it can be found.</li>
+ <li><strong>For B2G desktop</strong>, we only need the <code>cert8.db</code> file, which is the profile's certificate database. Copy it over to your b2g profile directory <code>b2g/gaia/profile/</code>.</li>
+ <li><strong>On a device,</strong> copy the cert9.db on your device profile directory:
+  <pre>$ adb shell stop b2g
+$ adb push cert9.db /data/b2g/mozilla/*.default</pre>
+ </li>
+</ol>
+
+<div class="note">
+<p><strong>Note</strong>: This will overwrite the existing file.</p>
+</div>
+
+<h2 id="B2Gをセットアップする">B2Gをセットアップする</h2>
+
+<p>The next step is to set ZAP as the default proxy for all network communication. The proxy settings, like the certificate settings, are currently not available from the Firefox OS user interface.</p>
+
+<h3 id="B2G_デスクトップでは">B2G デスクトップでは</h3>
+
+<p>You need to append these custom settings to the preferences file, <code>b2g/gaia/profile/prefs.js</code>:</p>
+
+<pre><code class="brush: bash">user_pref("network.proxy.backup.ftp", "10.264.1.5");
+user_pref("network.proxy.backup.ftp_port", 8080);
+user_pref("network.proxy.backup.socks", "10.264.1.5");
+user_pref("network.proxy.backup.socks_port", 8080);
+user_pref("network.proxy.backup.ssl", "10.264.1.5");
+user_pref("network.proxy.backup.ssl_port", 8080);
+user_pref("network.proxy.ftp", "10.264.1.5");
+user_pref("network.proxy.ftp_port", 8080);
+user_pref("network.proxy.http", "10.264.1.5");
+user_pref("network.proxy.http_port", 8080);
+user_pref("network.proxy.no_proxies_on", "");
+user_pref("network.proxy.share_proxy_settings", true);
+user_pref("network.proxy.socks", "10.264.1.5");
+user_pref("network.proxy.socks_port", 8080);
+user_pref("network.proxy.ssl", "10.264.1.5");
+user_pref("network.proxy.ssl_port", 8080);
+user_pref("network.proxy.type", 1);</code>
+</pre>
+
+<div class="note">
+<p><strong>Note</strong>: Remember to replace my IP address 10.264.1.5 with yours, and if your proxy does not listen on port 8080, make sure you change it in this file too.</p>
+</div>
+
+<p>At this point, you should be ready to go! Start B2G Desktop again, and try some browsing. Network traffic should appear in ZAP.</p>
+
+<h3 id="端末では">端末では</h3>
+
+<p>To enable this functionality on a device, you'll need to modify the <code>prefs.js</code> file located in your profile on the device. Connect the device to your computer which has previously been set up with the adb tools.</p>
+
+<p>First, you need to know what the name of your profile directory is. You can find it like this:</p>
+
+<pre>adb shell ls /data/b2g/mozilla</pre>
+
+<p>Among the output, you'll see a directory named with a number of random numbers and letters ending with ".default". This is your profile directory. Use that name where you see "xxxxxxxx" from here on in these instructions.</p>
+
+<p>Next, grab the <code>prefs.js</code> file so you can edit it:</p>
+
+<pre>adb pull /data/b2g/mozilla/xxxxxxx.default/prefs.js</pre>
+
+<p>Open the resulting file in your favorite text editor; at the end of the file, add the custom settings indicated in the section above and save your changes. Now all you need to do is push the changed file back to the device and restart the b2g process to pick up the changes, as follows (the B2G process should already be stopped if you followed the earlier instructions to push cert9.db):</p>
+
+<pre>adb push pref.js /data/b2g/mozilla/xxxxxxxx.default
+adb shell start b2g</pre>
+
+<p></p><div style="text-align: right;" class="prevnext">
+    <p><a style="float: left;" href="/ja/docs/Mozilla/Firefox_OS/Debugging/Debugging_and_security_testing">« 前のページ</a><a href="/ja/docs/Mozilla/Firefox_OS/Apps/Testing_in_a_privileged_context">次のページ  »</a></p>
+</div><p></p>
+
+<h3 id="Charles_Proxy">Charles Proxy</h3>
+
+<p>Users looking to use Charles Proxy should see this blog post: <a href="https://muffinresearch.co.uk/proxying-connections-from-ffos/">https://muffinresearch.co.uk/proxying-connections-from-ffos/</a></p>
+
+<p> </p>

@@ -1,0 +1,44 @@
+---
+title: Adding Extensions using the Windows Registry
+slug: Adding_Extensions_using_the_Windows_Registry
+tags:
+  - Extensions
+translation_of: >-
+  https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/
+---
+<h3 id="Introduction_.E7.AE.80.E4.BB.8B"> Introduction 简介 </h3>
+<p>This document explains how to "install" Firefox and Thunderbird <a href="cn/Extension">extensions</a> using the Windows Registry. This mechanism is designed to make it easier for third-party installers to register extensions with Firefox and Thunderbird.<br>
+本文说明如何使用Windows注意表"安装"Firefox/Thunderbird <a href="cn/Extension">extensions</a>. 此机制用以方便第三方为Firefox/Thunderbird注意extensions.
+</p><p><b>Note</b> The mechanism described in this document requires Firefox/Thunderbird 1.5 or later.<br>
+<b>注意</b> 此机制要求Firefox/Thunderbird 1.5或者更高版本.
+</p>
+<h3 id="Installation_.E5.AE.89.E8.A3.85"> Installation 安装 </h3>
+<p>Installation is performed by writing a Registry entry under one of the following keys:<br>
+在下列注册表键(或其中之一)下加入注册表项来完成安装:
+</p>
+<pre class="eval">HKEY_CURRENT_USER\Software\<i>Vendor</i>\<i>Name</i>\Extensions
+HKEY_LOCAL_MACHINE\Software\<i>Vendor</i>\<i>Name</i>\Extensions
+</pre>
+<p>Where <i>Vendor</i> and <i>Name</i> are the values returned from the corresponding properties of <a href="cn/NsIXULAppInfo">nsIXULAppInfo</a>. In Mozilla products, <i>Vendor</i> is "Mozilla", and <i>Name</i> is the short name of the product, e.g.:<br>
+<i>Vendor</i>和<i>Name</i>的值可由相对应的<a href="cn/NsIXULAppInfo">nsIXULAppInfo</a>属性得到. 在Mozilla产品中, <i>Vendor</i>的值为"Mozilla", <i>Name</i>为产品的短名称, 例如:
+</p>
+<pre class="eval">HKEY_CURRENT_USER\Software\Mozilla\Firefox\Extensions
+HKEY_CURRENT_USER\Software\Mozilla\Thunderbird\Extensions
+</pre>
+<p>The <a href="cn/Install_Manifests#id">ID</a> of the extension must be used as the name of the Registry entry. The Registry entry must have a type of <code>REG_SZ</code>, and its value must be an absolute path to the folder containing the extension (i.e., the location of the unpacked XPI). For example, to install the extension described in the <a href="cn/Building_an_Extension">Building an Extension</a> article, create a Registry entry with name equal to <code><a class=" link-mailto" href="mailto:sample@foo.net">sample@foo.net</a></code> and value equal to <code>c:\extensions\myExtension</code>.<br>
+Extension的<a href="cn/Install_Manifests#id">ID</a>必须作为注册项的名字. 注册项的类型必须为<code>REG_SZ</code>, 值必须是包含extension的文件夹的绝对路径. 例如, 要安装<a href="cn/Building_an_Extension">Building an Extension</a>文章中的extension, 创建名为<code><a class=" link-mailto" href="mailto:sample@foo.net">sample@foo.net</a></code>的注册项, 设定其值为<code>c:\extensions\myExtension</code>.
+</p><p>After the Registry entry is created, Firefox/Thunderbird will notice the change the next time it is launched. It is safe to modify the Registry keys while Firefox/Thunderbird is running.<br>
+注册项创建完成后, 在下一次启动时Firefox/Thunderbird将会注意到变化. 在Firefox/Thunderbird运行期间也可以安全地修改注册项.
+</p><p>If the same extension appears under both <code>HKEY_CURRENT_USER</code> and <code>HKEY_LOCAL_MACHINE</code>, then the instance under <code>HKEY_CURRENT_USER</code> will be used. If the same extension appears in the user's profile directory (via manual install), then it will take precedence over any instances found in the Registry.<br>
+如果<code>HKEY_CURRENT_USER</code>和<code>HKEY_LOCAL_MACHINE</code>下有相同的extension, 那么<code>HKEY_CURRENT_USER</code>将被先行使用. 如果用户目录下有相同extension, 那么它将优先于任何注册项.
+</p>
+<h3 id="Uninstallation_.E5.8D.B8.E8.BD.BD"> Uninstallation 卸载 </h3>
+<p>Extensions installed using the Windows Registry may be uninstalled by simply removing their corresponding Registry entry. After the Registry entry is removed, Firefox/Thunderbird will notice the change the next time it is launched. It is safe to modify the Registry keys while Firefox/Thunderbird is running.<br>
+由Windows注册表安装的extensions可简单的进行相应注册项的删除完成卸载. 注册项删除后, 在下一次启动时Firefox/Thunderbird将会注意到变化. Firefox/Thunderbird运行期间也可安全的修改注册表.
+</p>
+<h3 id="See_also_.E5.8F.82.E8.A7.81"> See also 参见 </h3>
+<p><a href="cn/Extension_Packaging">打包extension</a>
+</p>
+<div class="noinclude">
+</div>
+{{ languages( { "en": "en/Adding_Extensions_using_the_Windows_Registry", "ja": "ja/Adding_Extensions_using_the_Windows_Registry", "zh-tw": "zh_tw/\u4ee5_Windows_\u767b\u9304\u78bc\u5b89\u88dd\u64f4\u5145\u5957\u4ef6" } ) }}

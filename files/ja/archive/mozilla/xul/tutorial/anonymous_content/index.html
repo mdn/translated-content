@@ -1,0 +1,249 @@
+---
+title: 匿名コンテント
+slug: Archive/Mozilla/XUL/Tutorial/Anonymous_Content
+tags:
+  - Tutorials
+  - XBL
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Anonymous_Content
+---
+<p>
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Introduction_to_XBL" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:XBL_Attribute_Inheritance">次のページ  »</a></p>
+</div>
+<p>このセクションでは、XBL によりコンテントを生成する方法を見ていきます。
+</p>
+<h3 id="XBL_.E3.81.A8.E3.82.B3.E3.83.B3.E3.83.86.E3.83.B3.E3.83.88" name="XBL_.E3.81.A8.E3.82.B3.E3.83.B3.E3.83.86.E3.83.B3.E3.83.88"> XBL とコンテント </h3>
+<p>XBL を使用すれば、要素の中に要素のセットを自動的に追加できます。
+つまり、XUL ファイルでは<span style="border-bottom: 1px dashed green;" title="outer">外枠の</span>要素を指定するだけで、
+XBL に記述されている内側の要素を自動的に追加するように指定することが可能です。
+これにより、複数の<span style="border-bottom: 1px dashed green;" title="widget">ウィジェット</span>から、単一のウィジェットを組み上げることができます。
+こうして作成されたウィジェットは、単一のウィジェットとしてのみ参照することが可能です。
+このため、XUL で外枠の要素に設定された特定の属性を、XBL から生成された内側の要素に対して追加するメカニズムが提供されています (詳細は、<a href="ja/XUL_Tutorial/XBL_Attribute_Inheritance">次のセクション</a>で説明します)。
+</p>
+<h4 id=".E3.82.B9.E3.82.AF.E3.83.AD.E3.83.BC.E3.83.AB.E3.83.90.E3.83.BC.E3.82.92.E5.AE.A3.E8.A8.80.E3.81.99.E3.82.8B.E4.BE.8B" name=".E3.82.B9.E3.82.AF.E3.83.AD.E3.83.BC.E3.83.AB.E3.83.90.E3.83.BC.E3.82.92.E5.AE.A3.E8.A8.80.E3.81.99.E3.82.8B.E4.BE.8B"> スクロールバーを宣言する例 </h4>
+<p>以下の例は、スクロールバーを宣言するための方法を示しています
+(実際のものより若干単純化されています)。
+</p>
+<pre>&lt;bindings xmlns="http://www.mozilla.org/xbl"
+          xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+  &lt;binding id="scrollbarBinding"&gt;
+    &lt;content&gt;
+      &lt;xul:scrollbarbutton type="decrement"/&gt;
+      &lt;xul:slider flex="1"&gt;
+        &lt;xul:thumb/&gt;
+      &lt;/xul:slider&gt;
+      &lt;xul:scrollbarbutton type="increment"/&gt;
+    &lt;/content&gt;
+  &lt;/binding&gt;
+&lt;/bindings&gt;
+</pre>
+<p>このファイルに含まれている <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#binding">binding</a></code></code> 要素で宣言されたバインディングは 1 つだけですが、
+CSS の <a href="/ja/docs/Web/CSS/-moz-binding" title="CSS の -moz-binding プロパティは、 Mozilla ベースのアプリケーションで XBL を DOM 要素に結び付けるために使用します。"><code>-moz-binding</code></a> プロパティから参照することを可能にするために、
+バインディングの識別子として <code>id</code> 属性を設定しておく必要があります。
+</p><p>例中の <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#content">content</a></code></code> タグは、スクロールバーに追加される<span style="border-bottom: 1px dashed green;" title="anonymous content">匿名コンテント</span>を宣言するのに使われています。
+<code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#content">content</a></code></code> タグ中にあるすべての要素は、バインディングが結び付けられる要素の中に追加されることになります。
+なお、このバインディングはスクロールバーにバインドすることを想定していますが、
+それ以外にバインドすることが禁止されているわけではありません。
+CSS の <a href="/ja/docs/Web/CSS/-moz-binding" title="CSS の -moz-binding プロパティは、 Mozilla ベースのアプリケーションで XBL を DOM 要素に結び付けるために使用します。"><code>-moz-binding</code></a> プロパティに、このバインディングの URI が設定されたすべての要素がこのバインディングを使用することになります。
+</p><p>上記のバインディングの結果、以下の XUL の行は、その下に示すように展開されます。
+(<code>scrollbar</code> 要素には、CSS で上記の XBL がバインドされているものとします)
+</p>
+<pre class="eval">&lt;scrollbar&gt;
+
+<b>展開後:</b>
+
+&lt;scrollbar&gt;
+  &lt;xul:scrollbarbutton type="decrement"/&gt;
+    &lt;xul:slider flex="1"/&gt;
+      &lt;xul:thumb/&gt;
+    &lt;/xul:slider&gt;
+  &lt;xul:scrollbarbutton type="increment"/&gt;
+&lt;/scrollbar&gt;
+</pre>
+<p><code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#content">content</a></code></code> タグの中に置かれたコンテントは、スクロールバーに匿名で追加されます。
+この匿名コンテントは画面上には表示されますが、通常の方法ではスクリプトから取得することはできません。
+これは、実際には多数の要素から構成されていたとしても、XUL からは 1 つの単独の要素だけが存在するようにしか見えないことに起因しています。
+</p><p>上記の XBL に記述されている「矢印ボタン」「スライダー」「スライダーにある<span style="border-bottom: 1px dashed green;" title="thumb">サム</span>」「終端にある 2 つめの矢印ボタン」の各要素は、Mozilla ウィンドウのスクロールバーを構成する部品のための要素です。
+また、他のバインディングが、内部に置く XUL 要素としてスクロールバーを利用すると、これらの要素は、それらのバインディングにもバインドされることになります。
+</p><p>なお、XBL にコンテントの要素を記述するときには、
+それらの要素は、デフォルトの XBL の要素としては正しくなく、XUL の要素として扱う必要があることを示すために、
+XUL 名前空間の指定 (<code>xul:</code> の接頭辞) が必要であることに注意して下さい。
+(この名前空間は、<code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#bindings">bindings</a></code></code> タグで宣言されています)。
+もしも、XUL 要素に名前空間を明示しない場合は、Mozilla は要素が XBL であると想定するため、
+正しい要素であるとは認識されず、正常な動作は行われません。
+</p>
+<h4 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E5.90.8D.E5.85.A5.E5.8A.9B.E6.AC.84.E3.81.AE.E4.BE.8B" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E5.90.8D.E5.85.A5.E5.8A.9B.E6.AC.84.E3.81.AE.E4.BE.8B"> ファイル名入力欄の例 </h4>
+<p>別の例を示します。
+今度は、ファイル名の入力欄のためのものです。
+</p>
+<pre>&lt;binding id="fileentry"&gt;
+  &lt;content&gt;
+    &lt;textbox/&gt;
+    &lt;button label="Browse..."/&gt;
+  &lt;/content&gt;
+&lt;/binding&gt;
+</pre>
+<p>このバインディングを要素に設定することによって、その要素はテキストの入力欄と、その後ろの Browse ボタンを持つことになります。
+これらの内側のコンテントは、匿名で作成されるため、DOM を使って見ることはできません。
+</p>
+<h3 id="XBL_.E3.81.8B.E3.82.89.E4.B8.8E.E3.81.88.E3.81.9F.E8.A6.81.E7.B4.A0.E3.82.92.E4.B8.8A.E6.9B.B8.E3.81.8D.E3.81.99.E3.82.8B" name="XBL_.E3.81.8B.E3.82.89.E4.B8.8E.E3.81.88.E3.81.9F.E8.A6.81.E7.B4.A0.E3.82.92.E4.B8.8A.E6.9B.B8.E3.81.8D.E3.81.99.E3.82.8B"> XBL から与えた要素を上書きする </h3>
+<p>匿名コンテントは、バインディングが要素に設定された場合は常に自動的に生成されます。
+ただし、XUL 側でその要素に子要素を置いた場合、バインディングから与えた要素を上書きします。
+以下に、例として XUL コードの一部を抜き出したものを示します。
+(<code>scrollbar</code> には、前出の XBL がバインドされていると想定しています)
+</p>
+<pre>&lt;scrollbar/&gt;
+
+&lt;scrollbar&gt;
+  &lt;button label="Overridden"/&gt;
+&lt;/scrollbar&gt;
+</pre>
+<p>最初のスクロールバーは、それ自身ではコンテントを持たないため、XBL ファイルで宣言されたバインディング定義から生成されたコンテントを持つことになります。
+2 番目のスクロールバーは、それ自身がコンテントを持っているため、そちらが使われることになり、XBL の方のコンテントは使用されません。
+その結果、ほとんどスクロールバーとはいえないものが表示されることになります。
+なお、実際にはスクロールバーなどの組み込み要素は、XBL を toolkit パッケージの <code>bindings</code> ディレクトリに置かれたファイルから取得することを補足しておきます。
+</p><p>この上書きの挙動は、<code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#content">content</a></code></code> タグによる要素の定義だけに適用されます。
+プロパティやメソッドなど、XBL で定義するそれ以外の振る舞いについては、コンテントが XBL のものか、XUL 自身のもので上書きされたのかによらず有効です。
+</p>
+<h3 id="children_.E8.A6.81.E7.B4.A0.E3.82.92.E4.BD.BF.E7.94.A8.E3.81.99.E3.82.8B" name="children_.E8.A6.81.E7.B4.A0.E3.82.92.E4.BD.BF.E7.94.A8.E3.81.99.E3.82.8B"> children 要素を使用する </h3>
+<p>XBL で定義したコンテントと XUL ファイル自身のコンテントの両方を表示させたい場合も、しばしばあると思います。
+これは、XBL の <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#children">children</a></code></code> 要素を使用することで可能です。
+XUL の方で追加された子要素は、<code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#children">children</a></code></code> 要素の場所に追加されることになります。
+これを利用すれば、カスタムメニューウィジェットを手軽に作成することが可能です。
+例えば、以下のようにすれば、編集可能な <code><code><a href="/ja/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code></code> 要素の簡易版を作成することが可能です。
+</p>
+<pre class="eval"><b>XUL:</b>
+
+&lt;menu class="dropbox"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="1000"/&gt;
+    &lt;menuitem label="2000"/&gt;
+  &lt;/menupopup&gt;
+&lt;/menu&gt;
+
+<b>CSS:</b>
+
+menu.dropbox {
+    -moz-binding:  url('<a class=" external" rel="freelink">chrome://example/skin/example.xml#dropbox'</a>);
+}
+
+<b>XBL:</b>
+
+&lt;binding id="dropbox"&gt;
+  &lt;content&gt;
+    &lt;children/&gt;
+    &lt;xul:textbox flex="1"/&gt;
+    &lt;xul:button src="<a class=" external" rel="freelink">chrome://global/skin/images/dropbox.jpg</a>"/&gt;
+  &lt;/content&gt;
+&lt;/binding&gt;
+</pre>
+<p>この例は、入力欄とその横にボタンを作ります。
+<code><code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code> は、XBL に置かれたコンテントの <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#children">children</a></code></code> 要素で示す位置に追加されることになります。
+DOM 関数からアクセスすると、コンテントは XUL ファイルに置かれたとおりに見えることになるため、<code>menupopup</code> は <code>menu</code> の子要素になっていることに注意してください。
+XBL から展開されたコンテントは完全に隠されているため、XUL 開発者はそこに存在することすら意識する必要はありません。
+</p><p>その結果、出力されるコンテントは、以下のものと同等になります。
+</p>
+<pre>&lt;menu class="dropbox"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="1000"/&gt;
+    &lt;menuitem label="2000"/&gt;
+  &lt;/menupopup&gt;
+  &lt;textbox flex="1"/&gt;
+  &lt;button src="chrome://global/skin/images/dropbox.jpg"/&gt;
+&lt;/menu&gt;
+</pre>
+<h4 id="includes_.E5.B1.9E.E6.80.A7" name="includes_.E5.B1.9E.E6.80.A7"> includes 属性 </h4>
+<p>場合によって、子要素には特定の種類のコンテントだけを選択的に置けるようにしたいことや、
+複数の箇所に子要素を設定して、それぞれ異なる種類のコンテントを置けるようにしたいこともあると思います。
+<code>includes</code> 属性を利用すれば、コンテント中に表示する要素を、指定の要素のみに制限することが可能です。
+この属性の値には、単一のタグ名か、タグ名のリストを、(OR 演算を意味する)「<code>|</code>」記号で区切って指定する必要があります。
+</p>
+<pre>&lt;children includes="button"/&gt;
+</pre>
+<p>この行によって、
+結び付けられた要素の子要素として含まれている、すべての <code>button</code> を、
+<code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#children">children</a></code></code> タグのある場所に追加します。
+それ以外の要素は、このタグにはマッチしませんが、
+バインディングに複数の <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#children">children</a></code></code> 要素を置けば、別の場所にそれ以外のコンテントを追加させることが可能です。
+なお、XUL 側で設定した子要素が、どの <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#children">children</a></code></code> 要素にもマッチしなかった場合には、XBL に置かれたコンテントは使用されず、それらのマッチしない全ての要素が代わりに表示されることになります。
+</p><p>ここで、また別の例を見てみましょう。
+今度は、両端に拡大と縮小のためのズームボタンを備えた、画像表示用のウィジェットを作りたいとします。
+これは、画像と 2 つのボタンを持ったボックスとして作成することが可能です。
+このとき、<code>image</code> 要素については、毎回異なったものを指定可能なように、 XBL の外に置く必要があります。
+</p>
+<pre class="eval"><b>XUL:</b>
+
+&lt;box class="zoombox"&gt;
+  &lt;image src="images/happy.jpg"/&gt;
+  &lt;image src="images/angry.jpg"/&gt;
+&lt;/box&gt;
+
+<b>XBL:</b>
+
+&lt;binding id="zoombox"&gt;
+  &lt;content&gt;
+    &lt;xul:box flex="1"&gt;
+      &lt;xul:button label="Zoom In"/&gt;
+      &lt;xul:box flex="1" style="border: 1px solid black"&gt;
+        &lt;children includes="image"/&gt;
+      &lt;/xul:box&gt;
+      &lt;xul:button label="Zoom Out"/&gt;
+    &lt;/xul:box&gt;
+  &lt;/content&gt;
+&lt;/binding&gt;
+</pre>
+<p>XUL ファイルの方に明示的に記述された子要素は、XBL の <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#children">children</a></code></code> タグの位置に置かれることになります。
+ここでは、2 つの <code>image</code> 要素があるため、両方が並べて追加されます。
+その結果、表示は以下のものと同等になります。
+</p>
+<pre>&lt;binding id="zoombox"&gt;
+  &lt;content&gt;
+    &lt;xul:box flex="1"&gt;
+      &lt;xul:button label="Zoom In"/&gt;
+      &lt;xul:box flex="1" style="border: 1px solid black"&gt;
+        &lt;image src="images/happy.jpg"/&gt;
+        &lt;image src="images/angry.jpg"/&gt;
+      &lt;/xul:box&gt;
+      &lt;xul:button label="Zoom Out"/&gt;
+    &lt;/xul:box&gt;
+  &lt;/content&gt;
+&lt;/binding&gt;
+</pre>
+<p>しかしながら、DOM を使用して見た場合には、子要素の位置に変化はなく元のままになります。
+つまり、外枠の XUL ボックスには、2 つ <code>image</code> 要素が子要素として存在しています。
+また、内側の境界付きのボックスの子要素は、<code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#children">children</a></code></code> タグ 1 つだけになります。
+XBL 使用時に DOM を用いる場合、この違いを意識しておくことは重要です。
+また、このことは CSS のセレクタに記述するルールについても当てはまります。
+</p>
+<h4 id=".E8.A4.87.E6.95.B0.E3.81.AE_children_.E8.A6.81.E7.B4.A0" name=".E8.A4.87.E6.95.B0.E3.81.AE_children_.E8.A6.81.E7.B4.A0"> 複数の children 要素 </h4>
+<p>複数の <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#children">children</a></code></code> 要素を使用することで、特定の種類の要素を置く場所と、それ以外の要素を置く場所を指定することも可能です。
+このためには、<code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#children">children</a></code></code> 要素に <code>includes</code> 属性を追加して、
+そこに縦棒記号 (|) で区切ったタグ名のリストを設定することで、そのリストに含まれる要素だけをその場所に置くことができます。
+例えば、以下の XBL では、テキストラベルとボタンを、他の要素とは別の場所に表示させることが可能です。
+</p><p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_xblcontent_1.xml.txt">ソース</a>
+</p>
+<pre>&lt;binding id="navbox"&gt;
+  &lt;content&gt;
+    &lt;xul:vbox&gt;
+      &lt;xul:label value="Labels and Buttons"/&gt;
+      &lt;children includes="label|button"/&gt;
+    &lt;/xul:vbox&gt;
+    &lt;xul:vbox&gt;
+      &lt;xul:label value="Other Elements"/&gt;
+      &lt;children/&gt;
+    &lt;/xul:vbox&gt;
+  &lt;/content&gt;
+&lt;/binding&gt;
+</pre>
+<p>最初の <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#children">children</a></code></code> 要素では、<code>includes</code> 属性の指定によって、<code>label</code> と <code>button</code> 要素だけが捉えられます。
+そして、2 番目の <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#children">children</a></code></code> 要素には <code>includes</code> 属性がないため、残りのすべての要素が捉えられることになります。
+</p><p><small><span id="%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8"><a id="%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8"></a><strong>関連ページ</strong></span>: XBL リファレンスの <a href="ja/XBL/XBL_1.0_Reference/Anonymous_Content">匿名コンテント</a> セクション</small>
+</p><p>次のセクションでは、属性情報を匿名コンテントへ継承する方法を見ていきます。
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Introduction_to_XBL" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:XBL_Attribute_Inheritance">次のページ  »</a></p>
+</div>
+
+<div class="noinclude">
+</div>

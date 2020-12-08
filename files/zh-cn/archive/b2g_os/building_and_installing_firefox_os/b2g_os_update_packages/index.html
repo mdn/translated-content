@@ -1,0 +1,477 @@
+---
+title: 创建及获取B2G OS更新包
+slug: Archive/B2G_OS/Building_and_installing_Firefox_OS/B2G_OS_update_packages
+translation_of: Archive/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages
+---
+<div class="summary">
+<p>待我慢慢来翻译吧。20190416</p>
+
+<p> </p>
+
+<p>你若想让 B2G OS用户很容易地就能在其设备上进行系统更新，你需要给他们创建一个更新包。</p>
+
+<p>If you want to allow B2G OS users to easily update the version of the system code on their devices, you need to create an update package for them to use. This article goes through the different types of update package available and covers building the package, hosting the updates (and how the system polls for available updates), and applying and verifying those updates.</p>
+</div>
+
+<p>Creating and applying an update is split into four steps:</p>
+
+<ol>
+ <li>Building incremental update packages from old version(s) to a new version on a build host.</li>
+ <li>Finding the right update package to download on the client.</li>
+ <li>Downloading the update.</li>
+ <li>Applying the update to existing files on the device.</li>
+</ol>
+
+<p>Each of these steps are covered below.</p>
+
+<div class="note">
+<p><strong>Note</strong>: There are a number of useful tools for building and testing Firefox OS system updates, available at <a href="https://github.com/mozilla-b2g/B2G/tree/master/tools/update-tools">b2g/tools/update-tools</a>.</p>
+</div>
+
+<h2 id="Prerequisites_2"><span class="mw-headline" id="Prerequisites">Prerequisites</span></h2>
+
+<p>To build and apply updates you must ensure that your build has the updater and associated update tools enabled. By default those are enabled only in <strong>userdebug</strong> and <strong>user</strong> variants. You can however force building them by adding the following line to your <a href="/en-US/Firefox_OS/Customization_with_the_.userconfig_file">.userconfig file</a>:</p>
+
+<pre>export B2G_UPDATER=1</pre>
+
+<p>To sign update packages you will need a Java runtime environment (JRE) or Java software development kit (JDK) installed and the <strong>java</strong> command available in the default path.</p>
+
+<h2 id="Types_of_update"><span class="mw-headline" id="Types_of_updates">Types of update</span></h2>
+
+<p>There are two types of updates to know about: FOTA (Firmware Over-The-Air) and Gecko/Gaia OTA (Over-The-Air). Let's look at the differences between them.</p>
+
+<h3 id="FOTA_updates_2"><span class="mw-headline" id="FOTA_updates">FOTA updates</span></h3>
+
+<p><span class="mw-headline">We can update the entire B2G OS system through <strong>FOTA updates</strong>, the technology behind which is shared with the Android project. The locations on the phone's hard drive that can be changed using FOTA updates include the system partition, kernel, modem baseband, recovery image used for updating, or any other file on the device.</span></p>
+
+<p>B2G OS does not depend on a particular FOTA client; the interface is abstracted through an API we call <a class="externallink" href="http://git.mozilla.org/?p=b2g/librecovery.git;a=blob;f=librecovery.h;h=a6e13374f9bffcf947a39d6f3348290d67113321;hb=HEAD" rel="nofollow" title="http://git.mozilla.org/?p=b2g/librecovery.git;a=blob;f=librecovery.h;h=a6e13374f9bffcf947a39d6f3348290d67113321;hb=HEAD">librecovery</a>. However, we recommend using the GOTA recovery client (see below for more details), and the discussion here assumes GOTA is being used.</p>
+
+<p>FOTA update packages mainly consist of a file called <code>update.zip</code>. This package consists of</p>
+
+<ul>
+ <li>A set of binary diffs and new files required to update the client to the newer software version</li>
+ <li>An "update script" that controls how the diffs and new files are loaded onto the client</li>
+ <li>An internal signature used to verify the update package</li>
+</ul>
+
+<p>This format and set of files are the same as those used in normal Android updates, except that B2G OS additionally wraps the <code>update.zip</code> package in a <code>mar</code> wrapper (MAR stands for <strong>Mozilla ARchive</strong>). This <code>mar</code> wrapper allows an additional level of verification, which is explained below.</p>
+
+<h3 id="GeckoGaia_OTA_updates"><span class="mw-headline" id="Gecko.2FGaia_OTA_updates">Gecko/Gaia OTA updates</span></h3>
+
+<p><span class="mw-headline">Alteratively we can updat</span>e <em>just</em> t<span class="mw-headline">he Gecko and Gaia files on a B2G OS device, through a mechanism we call <strong>Gecko/Gaia OTA updates</strong>. All of the Gecko and Gaia files — comprising the core Gecko runtime and the device's user interface — are in the <code>/system/b2g</code> directory on the device.</span> This is the only directory that OTA updates can make changes to.</p>
+
+<p>Gecko/Gaia OTA updates use the same technology that's used to update the Firefox desktop web browser. Much like the FOTA <code>update.zip</code> packages discussed above, OTA updates consist of a MAR file containing a set of binary diffs and new files needed to update the client to a newer software version.</p>
+
+<p>The Gecko client verifies the integrity of <code>MARs</code> that it downloads, and <code>MARs</code> can be signed by multiple parties.</p>
+
+<h2 id="Why_have_two_update_technologies"><span class="mw-headline" id="Why_have_two_update_technologies.3F">Why have two update technologies?</span></h2>
+
+<p>OTA updates are not as comprehensive as FOTA updates, but they are a lot more user friendly and easy to apply, and will often be fine for what you need to update:</p>
+
+<ul>
+ <li>Gecko/Gaia OTA updates can be applied "in the background", while B2G OS continues to run normally. This provides a much better user experience because users don't need to reboot their phone and wait while an update is applied. Instead, the update is applied while the user continues to use the phone, and when the update is finished the user only needs to agree to restart the main <code>b2g</code> process. This takes a matter of seconds, instead of the minutes that are usually required to apply FOTA updates.</li>
+ <li>Gecko/Gaia OTA update packages can sometimes be smaller than FOTA update packages, though not always; they should never be larger. This means that users can sometimes have less data to download.</li>
+</ul>
+
+<p>Of course, if you need to update files outside Gecko/Gaia, you will have to go for the full FOTA package route.</p>
+
+<p>Let's move on and examine the package building process.</p>
+
+<h2 id="Building_update_packages"><span class="mw-headline" id="Building_updates_for_multiple_software_versions">Building update packages</span></h2>
+
+<p>Building updates is the process of generating the files needed to update B2G OS clients from <em>version X</em> of the software to a newer <em>version Y</em>. The update package that's needed to update the client depends on what files have changed between <em>version X</em> and <em>version Y</em>.</p>
+
+<ul>
+ <li>If <strong>only</strong> files in <code>/system/b2g</code> have changed, we will generate a Gecko/Gaia OTA update</li>
+ <li>If any files in a location outside of <code>/system/b2g</code> changed, we will generate a FOTA update</li>
+</ul>
+
+<p>To generate an incremental update package (for both FOTA and Gecko/Gaia OTA updates), our tools require full builds of both <em>version X</em> and <em>version Y</em>. <strong>Full build</strong> means that the package includes all the files that are needed to Flash a client. When we produce a full build for <em>version X</em>, we don't know which future versions we will be updating to from version<em>X</em> . Because of that, we build both full FOTA packages and Gecko/Gaia packages for each version. This allows us to generate either a Gecko/Gaia OTA incremental update, or a FOTA incremental update if needed, between <em>version X </em>and all future versions.</p>
+
+<p>At a high level, the process of building an update looks like this:</p>
+
+<ol>
+ <li>With software <em>version X</em>
+
+  <ul>
+   <li>Generate a complete Gecko/Gaia OTA <code>MAR</code> for the contents of <code>/system/b2g</code>.</li>
+   <li>Generate a complete FOTA target files zip, optionally signing it, for the device partitions. The target files zip is referenced below as <code>DEVICE-target_files-$VARIANT.$USER.zip</code>, and is a zip containing the files to update the phone directories, including <code>SYSTEM/</code>, <code>BOOT/</code>, etc. A full FOTA <code>update.zip</code> can be generated from the target files zip.</li>
+  </ul>
+ </li>
+ <li>With software <em>version Y</em>
+  <ul>
+   <li>Generate a complete Gecko/Gaia OTA <code>MAR</code> for the contents of <code>/system/b2g</code>.</li>
+   <li>Generate a complete FOTA target files zip, optionally signing it, for the device partitions. The target files zip is referenced below as <code>DEVICE-target_files-$VARIANT.$USER.zip</code>, and is a zip containing the files to update the phone directories, including <code>SYSTEM/</code>, <code>BOOT/</code>, etc. A full FOTA <code style="font-style: normal;">update.zip</code> can be generated from the target files zip.</li>
+  </ul>
+ </li>
+ <li>If only files in <code>/system/b2g</code> have changed, generate an incremental Gecko/Gaia OTA update <code>MAR</code> from <em>version X</em> to <em>version Y</em>.</li>
+ <li>Otherwise, generate an incremental FOTA <code>update.zip</code> from <em>version X </em>to <em>version Y</em>. Wrap the incremental FOTA <code>update.zip</code> in a <code>MAR</code> for delivery to the B2G client.</li>
+ <li>Sign the packages as required by delivery agreements.</li>
+</ol>
+
+<p>The subsections below describe how to use B2G's tools to implement each of these steps.</p>
+
+<div class="note">
+<p><strong>Note</strong>: the steps below assume that you have already set up a b2g build environment at the location <code>$b2g</code>. The commands below reference the <code>$b2g/build.sh</code> helper script, but <code>make</code> can also be used.</p>
+</div>
+
+<h3 id="Generating_a_complete_GeckoGaia_OTA_update_MAR"><span class="mw-headline" id="Generating_a_complete_Gecko.2FGaia_OTA_update_MAR">Generating a complete Gecko/Gaia OTA update MAR</span></h3>
+
+<p>To generate a complete OTA update MAR from the last successful <code>b2g</code> build (e.g. that you <a href="/en-US/Firefox_OS/Building">built</a> yourself), you need to invoke the <code>gecko-update-full</code> target. To place the MAR at <code>$b2g/objdir-gecko/dist/b2g-update/b2g-gecko-update.mar</code>, use the following commands:</p>
+
+<pre class="brush: bash">$ cd $b2g
+$ ./build.sh gecko-update-full
+$ cp objdir-gecko/dist/b2g-update/b2g-gecko-update.mar &lt;destination&gt;
+</pre>
+
+<h3 id="Generating_a_full_FOTA_update_MAR"><span class="mw-headline" id="Generating_a_complete_Gecko.2FGaia_OTA_update_MAR">Generating a full FOTA update MAR</span></h3>
+
+<p>To generate a full FOTA update MAR from the last successful <code>b2g</code> build (e.g. that you <a href="/en-US/Firefox_OS/Building">built</a> yourself), you need to invoke the <code>gecko-update-fota-full</code> target. This includes the contents of the entire <code>/system</code> partition. Here are the commands you need:</p>
+
+<pre class="brush: bash">$ cd $b2g
+$ ./build.sh gecko-update-fota-full
+</pre>
+
+<p>This will generate a ZIP file (<code>$PRODUCT_OUT/fota/full/update.zip</code>) and a MAR file (<code>$PRODUCT_OUT/fota-$TARGET_DEVICE-update-full.mar</code>). The ZIP file can be directly used with <code>adb sideload</code>, while the MAR is intended for distribution in the same manner as any other update package.</p>
+
+<h3 id="Generating_a_FOTA_update_MAR_plus_recovery_package">Generating a FOTA update MAR plus recovery package</h3>
+
+<p>As of Firefox OS 2.2 (mid April and beyond) we added a new make target, which can be invoked as follows:</p>
+
+<pre class="brush: bash">$ cd $b2g
+$ ./build.sh gecko-update-fota-fullimg</pre>
+
+<p>This is used to produce a recovery package that will dump a set of partitions images. The default set is controlled by the variable <code>B2G_FOTA_FULLIMG_PARTS</code>, defined in <code>gonk-misc/Android.mk</code> (along with most of the other new features seen below.) It's a space-separated string of <code>mountpoint:image</code> instances to include. The default value is <code>"/boot:boot.img /system:system.img /recovery:recovery.img /cache:cache.img"</code>.</p>
+
+<p>Along with this we have also introduced some new environment variables to control the production of the two other make targets — <code>gecko-update-fota</code> and <code>gecko-update-fota-full</code>:</p>
+
+<ul>
+ <li>The first is <code>B2G_FOTA_PARTS</code>, which follows the same syntax pattern as <code>B2G_FOTA_FULLIMG_PARTS</code>. This allows us to produce these update packages but arbitrarily dump partition images along with those, e.g. boot partition, modem firmware, etc.</li>
+ <li><code>B2G_FOTA_PARTS_FORMAT</code> provides a way to describe a set of partitions that we want formatted during the installation of the recovery package. It's a space-separated list of mount points to make use of during the formatting.</li>
+ <li>We also have two new variables that allow us to wipe caches and/or data during the build procedure:
+  <ul>
+   <li><code>B2G_FOTA_WIPE_DATA</code></li>
+   <li><code>B2G_FOTA_WIPE_CACHE</code></li>
+  </ul>
+ </li>
+</ul>
+
+<div class="note">
+<p><strong>Note</strong>: All of these new features heavily rely on having a proper <code>recovery.fstab</code> file provided for the device in question.</p>
+</div>
+
+<h3 id="Generating_a_partial_GeckoGaia_FOTA_update_MAR"><span class="mw-headline" id="Generating_a_complete_Gecko.2FGaia_OTA_update_MAR">Generating a partial Gecko/Gaia FOTA update</span> MAR</h3>
+
+<p>A partial FOTA update uses the same mechanism as a full FOTA update, but by default only includes Gecko/Gaia updates like a regular OTA update. Additional files outside of Gecko/Gaia (such as fonts) can also be included.</p>
+
+<p>The rationale for generating a partial FOTA update package is mainly related to licensing issues: when building a complete FOTA update package, the whole system partition (at least) will be included. This may include blobs that you don't have the authorization to redistribute. However, since MAR distribution is useful and Gecko/Gaia themselves are free software, there is no reason we should not be able to distribute them in this manner. A partial FOTA allows you to only update a subset of the system. An OTA update could be used instead in this scenario but it does come at a cost: OTA updates require enough space on the system partition to hold both the existing Gecko/Gaia files as well as the unpacked update files. A partial FOTA update does not suffer from this limitation as it can overwrite the existing files with the updated ones.</p>
+
+<p>To create a partial FOTA update from the last successful <code>b2g</code> build (e.g. that you <a href="/en-US/Firefox_OS/Building">built</a> yourself), Invoke the <code>gecko-update-fota</code> target with the following commands:</p>
+
+<pre class="brush: bash">$ cd $b2g
+$ ./build.sh gecko-update-fota
+</pre>
+
+<p>This will generate a ZIP file (<code>$PRODUCT_OUT/fota/partial/update.zip</code>) and a MAR file (<code>$PRODUCT_OUT/fota-$TARGET_DEVICE-update.mar</code>). The ZIP file can be directly used with <code>adb sideload</code>, while the MAR is intended for distribution in the same manner as any other update package.</p>
+
+<p>The construction can be controlled with a couple of environment variables, the most useful of which are documented below:</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">Variable</th>
+   <th scope="col">Meaning</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>$B2G_FOTA_DIRS</code></td>
+   <td>Space-separated list of directories to include in the update. Defaults to <code>system/b2g</code>.</td>
+  </tr>
+  <tr>
+   <td><code>$TARGET_UPDATE_BINARY</code></td>
+   <td>Binary used to execute the Edify script inside the package. When none is provided, a pre-built updater binary from ICS is used.</td>
+  </tr>
+  <tr>
+   <td><code>$FOTA_FINGERPRINTS</code></td>
+   <td>Comma-separated list of Android fingerprints to check against. The use case is to be able to distribute Gecko/Gaia update packages on top of a controlled Gonk base system that we cannot legally distribute. For example, Open C community builds are using this.</td>
+  </tr>
+ </tbody>
+</table>
+
+<div class="note">
+<p><strong>Note</strong>: A complete set of these variables is defined in the <a href="https://github.com/mozilla-b2g/gonk-misc/blob/master/Android.mk">Android.mk file of the gonk-misc repository</a>; note that <code>$FOTA_FINGERPRINTS</code> is used in our <a href="https://github.com/mozilla-b2g/B2G/blob/d75c2351fb32216c78a1f6c50835796af8756068/tools/update-tools/update_tools.py#L837">update_tools.py</a> tool.</p>
+</div>
+
+<h3 id="Generating_a_complete_FOTA_target_files_zip"><span class="mw-headline" id="Generating_a_complete_FOTA_update_zip_and_target_files_zip">Generating a complete FOTA target files zip</span></h3>
+
+<p>Invoke the <code>target-files-package</code> target to build a target files zip that can be used to generate both incremental and full FOTA update packages. The target files zip can also be signed by custom keys to ensure that only FOTA updates from known sources can be installed. After signing target files, all images and updates (also OTA) need to be generated again to catch the inserted keys.</p>
+
+<div class="note">
+<p><strong>Note</strong>: The target files zip is generated in the location <code>out/target/product/$DEVICE/obj/PACKAGING/target_files_intermediates/$DEVICE-target_files-$VARIANT.$USER.zip</code></p>
+</div>
+
+<p>The following commands will carry out this step:</p>
+
+<pre class="brush: bash">$ cd $b2g
+$ ./build.sh target-files-package
+$ cp out/target/product/$DEVICE/obj/PACKAGING/target_files_intermediates/$DEVICE-target_files-$VARIANT.$USER.zip &lt;destination&gt;
+</pre>
+
+<p>The variable values in the commands listed above should be filled in as follows:</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">Variable</th>
+   <th scope="col">Meaning</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>$DEVICE</code></td>
+   <td>Device name for the AOSP product</td>
+  </tr>
+  <tr>
+   <td><code>$VARIANT</code></td>
+   <td><code>eng</code>, <code>user</code>, or <code>userdebug</code></td>
+  </tr>
+  <tr>
+   <td><code>$USER</code></td>
+   <td>The build username</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Signing_a_complete_FOTA_target_files_zip"><a name="signing-target-files-package"></a>Signing a complete FOTA target files zip</h3>
+
+<p>Proper releases should typically be signed by custom release keys only known to the vendor. Having such keys will prevent FOTA updates where the source is unknown from being installed, hence introducing an extra security layer. For this to work, the images flashed to a device need to include public keys while the updates need to be signed by the corresponding private key. </p>
+
+<p>The first step is to generate custom keys and store them in a safe place. The Android Open Source Project has a script for generating these keys. For full compatibility, get this script from the branch corresponding to the Gonk version of the device in question. <a href="https://android.googlesource.com/platform/development/+/master/tools/make_key">Here is the master branch version</a>.</p>
+
+<p>A couple of keys are needed — create them with the following commands. <code>releasekey</code> is the key to use for signing FOTA update packages.</p>
+
+<pre class="brush: bash">$ development/tools/make_key releasekey '/C=US/ST=California/L=Mountain View/O=Android/OU=Android/CN=Android/emailAddress=android@android.com'
+$ development/tools/make_key platform '/C=US/ST=California/L=Mountain View/O=Android/OU=Android/CN=Android/emailAddress=android@android.com'
+$ development/tools/make_key shared '/C=US/ST=California/L=Mountain View/O=Android/OU=Android/CN=Android/emailAddress=android@android.com'
+$ development/tools/make_key media '/C=US/ST=California/L=Mountain View/O=Android/OU=Android/CN=Android/emailAddress=android@android.com'
+</pre>
+
+<p>With keys present, the target files zip can be signed using the following commands. This will insert the public keys and modify build properties to reflect the fact that it has been signed.</p>
+
+<pre class="brush: bash">$ cd $b2g
+$ ./build/tools/releasetools/sign_target_files_apks \
+<span style="font-size: 1rem;">  --default_key_mappings $RELEASEKEY_FOLDER \</span>
+<span style="font-size: 1rem;">  --replace_ota_keys \</span>
+<span style="font-size: 1rem;">  --signapk_path prebuilts/sdk/tools/lib/signapk.jar \</span>
+<span style="font-size: 1rem;">  $UNSIGNED_TARGET_FILES_ZIP \</span>
+<span style="font-size: 1rem;">  $SIGNED_TARGET_FILES_ZIP</span></pre>
+
+<p><span style="font-size: 1rem;">The variable values in the commands listed above should be filled in as follows:</span></p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Variable</th>
+   <th scope="col">Meaning</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>$RELEASEKEY_FOLDER</code></td>
+   <td>The path to the folder containing the custom keys</td>
+  </tr>
+  <tr>
+   <td><code>$UNSIGNED_TARGET_FILES_ZIP</code></td>
+   <td>The FOTA target files zip to sign.</td>
+  </tr>
+  <tr>
+   <td><code>$SIGNED_TARGET_FILES_ZIP</code></td>
+   <td>The signed FOTA target files zip to be generated</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Generating_an_incremental_OTA_update_MAR_2"><span class="mw-headline" id="Generating_an_incremental_OTA_update_MAR">Generating an incremental OTA update MAR</span></h3>
+
+<p>In this example, we're assuming that we're generating an update from software <em>version X</em> to <em>version Y</em>. The location of the full Gecko/Gaia OTA <code>MAR</code> built from software <em>version X</em> using the instructions above will be called <code>$MAR_X</code> below. This might be a path on a build server like <code>/home/build/b2g/versions/X/update.mar</code>. Similarly, the location of the full <code>MAR</code> built from <em>version Y</em> will be called <code>$MAR_Y</code>.</p>
+
+<p>The tool <code>build-gecko-mar.py</code> will generate an incremental Gecko/Gaia OTA update MAR using <code>$MAR_X</code> and <code>$MAR_Y</code>. We'll call the destination of the generated file <code>$GENERATED_INCREMENTAL_MAR_X_Y</code>. Use the following commands for this step:</p>
+
+<pre class="brush: bash">$ cd $b2g
+$ ./tools/update-tools/build-gecko-mar.py --from $MAR_X --to $MAR_Y $GENERATED_INCREMENTAL_MAR_X_Y
+</pre>
+
+<h3 id="Generating_an_incremental_FOTA_update_zip_2"><span class="mw-headline" id="Generating_an_incremental_FOTA_update_zip">Generating an incremental FOTA update zip</span></h3>
+
+<p>In this example, we're assuming that we're generating an update from software <em>version X</em> to <em>version Y</em>. The location of the full FOTA target zip built from software <em>version X </em>using the instructions above will be called <code>$TARGET_FILES_X</code> below. This might be a path on a build server like <code>/home/build/b2g/versions/X/target_files.zip</code>. Similarly, the location of the full FOTA target zip built from <em>version Y </em>will be called <code>$TARGET_FILES_Y</code>.</p>
+
+<p>The tool <code>build/tools/releasetools/ota_from_target_files</code> will generate an incremental FOTA update.zip using <code>$TARGET_FILES_X</code> and <code>$TARGET_FILES_Y</code>. We'll call the destination of this intermediate file <code>$INTERMEDIATE_FOTA_UPDATE_FOTA_X_Y</code>.</p>
+
+<p>After this <code>update.zip</code> is generated, the last step is to wrap it in a <code>MAR</code> for delivery to the B2G client. The tool <code>tools/update-tools/build-fota-mar.p</code> does this step. We'll call the destination of this generated file <code>$GENERATED_INCREMENTAL_FOTA_X_Y</code>.</p>
+
+<p>Use the following commands to complete this step:</p>
+
+<pre class="brush: bash">$ cd $b2g
+$ ./build/tools/releasetools/ota_from_target_files -v \
+    --incremental_from $TARGET_FILES_X \
+    --signapk_path prebuilts/sdk/tools/lib/signapk.jar \
+    --package_key $FOTA_SIGNING_KEY \
+    $TARGET_FILES_Y \
+    $INTERMEDIATE_FOTA_UPDATE_FOTA_X_Y
+$ ./tools/update-tools/build-fota-mar.py $INTERMEDIATE_FOTA_UPDATE_FOTA_X_Y --output=$GENERATED_INCREMENTAL_FOTA_X_Y
+</pre>
+
+<p>The variable values in the commands listed above should be filled in as follows:</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">Variable</th>
+   <th scope="col">Meaning</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>$TARGET_FILES_X</code></td>
+   <td>The FOTA target files zip for <em>version X</em></td>
+  </tr>
+  <tr>
+   <td><code>$TARGET_FILES_Y</code></td>
+   <td>The FOTA target files zip for <em>version Y</em></td>
+  </tr>
+  <tr>
+   <td><code>$INTERMEDIATE_FOTA_UPDATE_FOTA_X_Y</code></td>
+   <td>A temporary update.zip to generate a <span style="font-family: courier new,andale mono,monospace;">MAR</span> from</td>
+  </tr>
+  <tr>
+   <td><code>$GENERATED_INCREMENTAL_FOTA_X_Y</code></td>
+   <td>The destination incremental update zip wrapped in a <code>MAR</code> for delivery to clients</td>
+  </tr>
+  <tr>
+   <td><code>$FOTA_SIGNING_KEY</code></td>
+   <td>Path to the prefix for a private key and public cert for signing the update zip. <code>$FOTA_SIGNING_ZIP.pk8</code> and <code>$FOTA_SIGNING_ZIP.x509.pem</code> should both exist on the file system. If <code>$TARGET_FILES_X</code> is not signed this option can be omitted; the default testkey will still be picked up. In case <code>$TARGET_FILES_X</code> is a custom release key, refer to the <a href="#signing-target-files-package">target files zip signing section</a> on how to create it, and don't forget to sign <code>$TARGET_FILES_Y</code>.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Hosting_updates_and_polling_for_updates_on_the_client_side"><span class="mw-headline" id="Hosting_updates_.28respectively.2C_polling_for_updates_on_the_client_side.29">Hosting updates and polling for updates on the client side</span></h2>
+
+<p>B2G OS clients poll for updates by fetching and parsing an <strong>update manifest</strong>: <code>update.xml</code>. B2G OS clients are configured to poll for updates on specific servers — they query a specially-constructed path on the server. HTTPS is the recommended protocol that the client uses to query the server, however HTTP is also supported. The server and path polled by clients can be changed by shipping an update to existing clients that changes the polling code.</p>
+
+<p>In the examples below, we'll assume that updates are hosted on the server <code>updates.b2g.com</code>.</p>
+
+<p>The URL polled by the client commonly contains the following parameters:</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">Parameter</th>
+   <th scope="col">Explanation</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>PRODUCT_MODEL</code></td>
+   <td>The name of the device model. This is the <code>ro.product.model</code> value in the B2G property database.</td>
+  </tr>
+  <tr>
+   <td><code>CHANNEL</code></td>
+   <td>The update "channel". This is useful for testing: servers can be configured to host, for example, "nightly", "beta", and "release" channels.</td>
+  </tr>
+  <tr>
+   <td><code>VERSION</code></td>
+   <td>The client's software version. For example, "18.0.2".</td>
+  </tr>
+  <tr>
+   <td><code>BUILD_ID</code></td>
+   <td>A unique ID such as a timestamp, configured for a particular build.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The Firefox client uses the value of its configured update host and these values to construct a URL to poll at runtime. The structure is as follows:</p>
+
+<pre>https://aus4.mozilla.org/update/3/%PRODUCT%/%VERSION%/%BUILD_ID%/%PRODUCT_DEVICE%/%LOCALE%/%CHANNEL%/%OS_VERSION%/%DISTRIBUTION%/%DISTRIBUTION_VERSION%/update.xml</pre>
+
+<p>A real example of such a URL is as follows:</p>
+
+<pre class="brush: xml">https://aus4.mozilla.org/update/3/B2G/37.0a1/20141214040212/flame/en-US/nightly-b2g37/Boot2Gecko%202.2.0.0-prerelease%20%28SDK%2019%29/default/default/update.xml?force=1</pre>
+
+<p>If the server returns a "404 Not Found" in response to the client's request, then there is no update available. If the server returns a "200" and a manifest file, then there may be an update available. The manifest describes the newly available build; that is, the build the <strong>client would update to</strong>. An example manifest is:</p>
+
+<pre class="brush: xml">&lt;?xml version="1.0"?&gt;
+&lt;updates&gt;
+  &lt;update type="major" appVersion="19.0" version="19.0" extensionVersion="19.0" buildID="20121210123456"
+          licenseURL="http://www.mozilla.com/test/sample-eula.html"
+          detailsURL="http://www.mozilla.com/test/sample-details.html"
+          isOSUpdate="true"&gt;
+    &lt;patch type="partial" URL="https://updates.b2g.com/release/unagi1/18.0/20121203123456/update.mar"
+           hashFunction="SHA512" hashValue="5111e033875752b7d9b32b4795152dea5ef954cb8a9d4a602dd19a923b464c43521287dcb5781faf3af76e6dc5e8a3dd9c13edea18c1f2c8f3bd89e17d103d6f"
+           size="41901319"/&gt;
+  &lt;/update&gt;
+&lt;/updates&gt;
+</pre>
+
+<p>This follows the same schema as the B2G build manifest (see <a href="https://wiki.mozilla.org/Software_Update:updates.xml_Format">updates.xml Format</a> for more details). The fields in the manifest describe:</p>
+
+<ul>
+ <li>Metadata used to show a user interface on the client.</li>
+ <li>Metadata about the newly-available version.</li>
+ <li>The location of the update package.</li>
+ <li>Metadata used to verify the download of the update package.</li>
+</ul>
+
+<div class="note">
+<p><strong>Note</strong>: There is a useful update script available at <a href="https://github.com/mozilla-b2g/B2G/blob/master/tools/update-tools/build-update-xml.py">build-update-xml.py</a>, which given a MAR file, builds a B2G OS update.xml for testing.</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: The client device or the user may wish to decline an update.</p>
+</div>
+
+<div class="note">
+<p><strong>Note:</strong>  <code>isOSUpdate="true"</code> is needed for FOTA updates but not for OTA updates.</p>
+</div>
+
+<p>Using the mechanisms described above, servers can host update packages to update any old client version to the newest version. Or they may host only a "linear update history" in which clients must upgrade through a single path.</p>
+
+<p>The details of the interaction between build servers and the update host is currently beyond the scope of this document. It is highly dependent on the production environment. You can find some more details on our <a href="https://wiki.mozilla.org/Software_Update">Software Update</a> wiki page.</p>
+
+<h2 id="Verifying_and_applying_updates_2"><span class="mw-headline" id="Verifying_and_applying_updates">Verifying and applying updates</span></h2>
+
+<p>After a B2G OS client has successfully polled for an update (<a href="https://support.mozilla.org/en-US/kb/how-do-i-check-firefox-os-updates-and-install-them">handled from within the system</a>), downloaded it, and verified the integrity of the downloaded update package, the final step is to apply the update.</p>
+
+<p>The first step in applying an update is to verify the signatures embedded in the <code>MAR</code> packages (see <a href="#Generating_an_incremental_FOTA_update_zip">Generating an incremental FOTA update zip</a> for how these are created). This is done by the B2G OS client itself after checking the integrity of the downloaded package. The code used for this is the same for both FOTA and Gecko/Gaia OTA updates.</p>
+
+<div class="note">
+<p><strong>Note</strong>: It is not the MAR file that gets signed: it's the FOTA zip file that gets bundled into the MAR that's signed by <code>build/tools/releasetools/ota_from_target_file</code>. The signing of the FOTA update works the same as it does on Android; if you just run the script without specifying the key, it will use the developer key at <code>build/target/product/security/testkeys.*</code>. This is ok for testing but when you create a real update you need a secure key — i.e. one that no-one else knows about. The device will also verify that signature before applying the patch, so a device's initial images will need to contain the key as well.</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: The keys referred to above are found in the Android build systems; we've forked it in our <a href="https://github.com/mozilla-b2g/platform_build">platform_build repo</a>.</p>
+</div>
+
+<p>After signatures are verified, the process of applying an update diverges between Gecko/Gaia OTA updates and FOTA updates. Let's look at the differences between the two at this point.</p>
+
+<h3 id="Applying_GeckoGaia_OTA_updates"><span class="mw-headline" id="Applying_Gecko.2FGaia_OTA_updates">Applying Gecko/Gaia OTA updates</span></h3>
+
+<p>The B2G OS client applies these using the <code>updater</code> binary. This is part of the Gecko distribution and is the same code used to apply updates to desktop Firefox. As described above, the update is applied while the B2G OS client continues to run normally. Users are able to make and receive calls, run apps, browse the web, etc. while updates are being applied.</p>
+
+<p>The specific details of the <code>updater</code> binary are beyond the scope of this document, but it works approximately like so:</p>
+
+<ul>
+ <li>It makes a copy of the <code>/system/b2g</code> files.</li>
+ <li>It applies binary patches, removes old files, and adds new ones as specified by the <code>MAR</code> file.</li>
+ <li>It restarts the main <code>b2g</code> process so that it uses all the new files.</li>
+</ul>
+
+<p>After the <code>b2g</code> process finishes restarting, the user will be running the new version of the B2G client software.</p>
+
+<h3 id="Applying_FOTA_updates_2"><span class="mw-headline" id="Applying_FOTA_updates">Applying FOTA updates</span></h3>
+
+<p>The FOTA client applies these. The Gecko client "hands off" the update to be applied by calling into the <a class="externallink" href="http://git.mozilla.org/?p=b2g/librecovery.git;a=blob;f=librecovery.h;h=a6e13374f9bffcf947a39d6f3348290d67113321;hb=HEAD" rel="nofollow" title="http://git.mozilla.org/?p=b2g/librecovery.git;a=blob;f=librecovery.h;h=a6e13374f9bffcf947a39d6f3348290d67113321;hb=HEAD">librecovery</a> API. What happens after this step is specific to each FOTA client.</p>
+
+<p>In the implementation of librecovery used for the GOTA client, the downloaded update package is staged to be applied and special commands are enqueued for the recovery client. librecovery then reboots the device into recovery mode. The recovery client then runs the update script in the <code>update.zip</code> to update files and partitions as needed. The recovery client may need to reboot multiple times in order to update all files.</p>
+
+<p>After the final reboot, the device will be running the new version of the B2G OS client software.</p>

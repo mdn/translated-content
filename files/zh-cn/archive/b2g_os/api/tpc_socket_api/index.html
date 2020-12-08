@@ -1,0 +1,156 @@
+---
+title: TCP Socket API
+slug: Archive/B2G_OS/API/TPC_Socket_API
+tags:
+  - API
+  - Firefox OS
+  - TCP套接字
+  - WebAPI
+  - 指导
+  - 非标准
+translation_of: Archive/B2G_OS/API/TPC_Socket_API
+---
+<section class="Quick_links" id="Quick_Links">
+<ol>
+ <li><strong><a href="/en-US/docs/Web/API/TCP_Socket_API">TCP Socket API</a></strong></li>
+ <li data-default-state="open"><a href="#"><strong>Interfaces</strong></a>
+  <ol>
+   <li><a href="/en-US/docs/Web/API/TCPSocket"><code>TCPSocket</code></a></li>
+   <li><a href="/en-US/docs/Web/API/TCPServerSocket"><code>TCPServerSocket</code></a></li>
+  </ol>
+ </li>
+ <li data-default-state="open"><a href="#"><strong>Properties</strong></a>
+  <ol>
+   <li><a href="/en-US/docs/Web/API/Navigator/mozTCPSocket"><code>Navigator.mozTCPSocket</code></a></li>
+  </ol>
+ </li>
+ <li data-default-state="open"><a href="#"><strong>Events</strong></a>
+  <ol>
+   <li><a href="/en-US/docs/Web/Events/data"><code>data</code></a></li>
+   <li><a href="/en-US/docs/Web/Events/drain"><code>drain</code></a></li>
+   <li><a href="/en-US/docs/Web/Events/connect"><code>connect</code></a></li>
+   <li><a href="/en-US/docs/Web/Events/error"><code>error</code></a></li>
+  </ol>
+ </li>
+</ol>
+</section>
+
+<div class="overheadIndicator nonStandard nonStandardHeader">
+<p><strong>非标准</strong><br>
+ 这个特性不在当前的W3C标准上,但在Firefox OS平台上受支持. 尽管实现方式可能会在将来发生变化，并且不受浏览器的广泛支持, 它适合在专用于Firefox OS应用程序的代码中使用。</p>
+</div>
+
+<div class="warning">
+<p style="text-align: center;">该API可用于 <a href="/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a> 上仅适用于 <a href="/en-US/docs/Mozilla/Firefox_OS/Security/Application_security#App_Types" title="特权或认证的应用程序">privileged or certified applications</a>.</p>
+</div>
+
+<h2 id="摘要">摘要</h2>
+
+<p>TCPSocket API提供了一个完整的API，用于打开和使用TCP连接。 这使应用程序制造商可以实施TCP之上可用的任何协议，例如IMAP，IRC，POP，HTTP等，甚至可以构建自己的协议来满足他们可能拥有的任何特定需求。</p>
+
+<h2 id="权限">权限</h2>
+
+<p>为了使用该API，对于所有特权API，都需要在 <a href="/en-US/docs/Web/Apps/Manifest">app manifest</a> 中请求权限。</p>
+
+<pre class="brush: json notranslate">"permissions" : {
+  "tcp-socket" : {
+    "description" : "创建TCP套接字并通过它们进行通信。"
+  }
+}</pre>
+
+<h2 id="总览">总览</h2>
+
+<p>This API is available through the <a href="/en-US/docs/Web/API/Navigator/mozTCPSocket" title="The documentation about this has not yet been written; please consider contributing!"><code>Navigator.mozTCPSocket</code></a> property which is itself a <a href="/en-US/docs/Web/API/TCPSocket" title="The documentation about this has not yet been written; please consider contributing!"><code>TCPSocket</code></a> object.</p>
+
+<h3 id="Opening_a_socket">Opening a socket</h3>
+
+<p>Opening a socket is done with the <a href="/en-US/docs/Web/API/TCPSocket/open" title="The documentation about this has not yet been written; please consider contributing!"><code>TCPSocket.open()</code></a> method. This method expects up to three parameters:</p>
+
+<ol>
+ <li>A string representing the hostname of the server to connect to (it can also be its raw IP address).</li>
+ <li>A number representing the TCP port to be used by the socket (some protocols have a standard port, for example 80 for HTTP, 447 for SSL, 25 for SMTP, etc. Port numbers beyond 1024 are not assigned to any specific protocol and can be used for any purpose.)</li>
+ <li>A optional object containing up to two options: a boolean named <code>useSecureTransport</code> is the socket needed to use SSL, <code>false</code> by default; and a string named <code>binaryType</code> allows to state the type of data retrieved by the application through the <code><a href="/en-US/docs/Web/Events/data" title="/en-US/docs/Web/Events/data">data</a></code> event, with the expected values <code>string</code> or <code>arraybuffer</code>. By default, it is <code>string</code>.</li>
+</ol>
+
+<pre class="brush: js notranslate">var socket = navigator.mozTCPSocket.open('localhost', 80);</pre>
+
+<div class="note">
+<p><strong>Note:</strong> Only certified apps can use a port below 1024.</p>
+</div>
+
+<h3 id="Listening_for_connections">Listening for connections</h3>
+
+<p>Listening for connections is done with the <a href="/en-US/docs/Web/API/TCPSocket/listen" title="The documentation about this has not yet been written; please consider contributing!"><code>TCPSocket.listen()</code></a> <span class="inlineIndicator standardNote standardNoteInline" title="Requires FirefoxOS 1.2"><a href="/en-US/docs/Mozilla/Firefox_OS">Requires FirefoxOS 1.2</a></span> method. This method expects up to three parameters:</p>
+
+<ol>
+ <li>A number representing the TCP port to be used to listen for connections.</li>
+ <li>An optional object specifying the details of the socket. This object expects a property called <code>binaryType</code>, which is a string that can have two possible values: "string" or "arraybuffer". If the value is "arraybuffer" then the <a href="/en-US/docs/Web/API/TCPSocket/send" title="The documentation about this has not yet been written; please consider contributing!"><code>TCPSocket.send()</code></a> will use <a href="/en-US/docs/Web/API/ArrayBuffer" title="The documentation about this has not yet been written; please consider contributing!"><code>ArrayBuffer</code></a>s and the data received from the remote connection will also be available in that format.</li>
+ <li>A number representing the maximum length that the pending connections queue can grow.</li>
+</ol>
+
+<pre class="brush: js notranslate">var socket = navigator.mozTCPSocket.listen(8080);</pre>
+
+<div class="note">
+<p><strong>Note:</strong> Only certified apps can listen on a port below 1024.</p>
+</div>
+
+<h3 id="Sending_data">Sending data</h3>
+
+<p>Sending data is done using the <a href="/en-US/docs/Web/API/TCPSocket/send" title="The documentation about this has not yet been written; please consider contributing!"><code>TCPSocket.send()</code></a> method. The data sent can be either a string or a <code><a href="/en-US/docs/JavaScript/Typed_arrays/Uint8Array" title="/en-US/docs/JavaScript/Typed_arrays/Uint8Array">Uint8Array</a></code> object; however, remember that a TCP socket always deals with binary data. For that reason, it's a lot safer to use <code><a href="/en-US/docs/JavaScript/Typed_arrays/Uint8Array" title="/en-US/docs/JavaScript/Typed_arrays/Uint8Array">Uint8Array</a></code> instead of a string when sending data.</p>
+
+<p>As per the TCP protocol, it's a good optimization to send a maximum of 64kb of data at the same time. As long as less than 64kb has been buffered, a call to the <a href="/en-US/docs/Web/API/TCPSocket/send" title="The documentation about this has not yet been written; please consider contributing!"><code>send</code></a> method returns <code>true</code>. Once the buffer is full, the method will return <code>false</code> which indicates the application should make a pause to flush the buffer. Each time the buffer is flushed, a <code><a href="/en-US/docs/Web/Events/drain" title="/en-US/docs/Web/Events/drain">drain</a></code> event is fired and the application can use it to resume data sending.</p>
+
+<p>It's possible to know exactly the current amount of data buffered with the <a href="/en-US/docs/Web/API/TCPSocket/bufferedAmount" title="The documentation about this has not yet been written; please consider contributing!"><code>TCPSocket.bufferedAmount</code></a> property.</p>
+
+<pre class="brush: js notranslate">function getData() {
+  var data;
+
+  // do stuff that will retrieve data
+
+  return data;
+}
+
+function pushData() {
+  var data;
+
+  do {
+    data = getData();
+  } while (data != null &amp;&amp; socket.send(data));
+}
+
+// Each time the buffer is flushed
+// we try to send data again.
+socket.ondrain = pushData;
+
+// Start sending data.
+pushData();
+</pre>
+
+<h3 id="Getting_data">Getting data</h3>
+
+<p>Each time the socket gets some data from the host, it fires a <code><a href="/en-US/docs/Web/Events/data" title="/en-US/docs/Web/Events/data">data</a></code> event. This event will give access to the data from the socket. The type of the data depends on the option set when the socket was opened (see above).</p>
+
+<pre class="brush: js notranslate">socket.ondata = function (event) {
+  if (typeof event.data === 'string') {
+    console.log('Get a string: ' + event.data);
+  } else {
+    console.log('Get a Uint8Array');
+  }
+}</pre>
+
+<p>As the <code><a href="/en-US/docs/Web/Events/data" title="/en-US/docs/Web/Events/data">data</a></code> event is fired as much as needed, it can sometimes be necessary to pause the flow of incoming data. To that end, calling the <a href="/en-US/docs/Web/API/TCPSocket/suspend" title="The documentation about this has not yet been written; please consider contributing!"><code>TCPSocket.suspend()</code></a> method will pause reading incoming data and stop firing the <code><a href="/en-US/docs/Web/Events/data" title="/en-US/docs/Web/Events/data">data</a></code>. It's possible to start reading data and firing events again by calling the <a href="/en-US/docs/Web/API/TCPSocket/resume" title="The documentation about this has not yet been written; please consider contributing!"><code>TCPSocket.resume()</code></a> method.</p>
+
+<h3 id="Closing_a_socket">Closing a socket</h3>
+
+<p>Closing a socket is simply done using <a href="/en-US/docs/Web/API/TCPSocket/close" title="The documentation about this has not yet been written; please consider contributing!"><code>TCPSocket.close()</code></a>.</p>
+
+<h2 id="Standard">Standard</h2>
+
+<p>Not part of any specification yet; however, this API is discussed at W3C as part of the <a class="external" href="http://www.w3.org/2012/sysapps/" rel="external" title="http://www.w3.org/2012/sysapps/">System Applications Working Group</a> under the <a href="https://www.w3.org/TR/tcp-udp-sockets/" title="http://www.w3.org/2012/sysapps/raw-sockets/">Raw Sockets</a> proposal.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/TCPSocket" title="The documentation about this has not yet been written; please consider contributing!"><code>TCPSocket</code></a></li>
+ <li><a href="https://github.com/soapdog/firefoxos-sample-app-telnet-client" title="Firefox OS Simple Telnet Sample App">Firefox OS Simple Telnet Sample App</a></li>
+</ul>

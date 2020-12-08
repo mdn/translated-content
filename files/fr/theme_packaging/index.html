@@ -1,0 +1,100 @@
+---
+title: Empaqueter un thème
+slug: Theme_Packaging
+tags:
+  - Themes
+translation_of: Mozilla/Thunderbird/Thunderbird_extensions/Theme_Packaging
+---
+<p>Ce document décrit comment sont packagés les <a href="fr/Th%c3%a8mes">thèmes</a> pour Firefox et Thunderbird.</p>
+<h3 id="Pr.C3.A9alables" name="Pr.C3.A9alables">Préalables</h3>
+<p>Construire un thème pour Firefox ou Thunderbird requiert quelques connaissances des feuilles de style en cascade (<a href="fr/CSS">CSS</a>), probablement de <a href="fr/XBL">XBL</a>, et quelques notions de design graphique et d'esthétisme (...ou peut-être pas). Ce document décrit seulement comment les thèmes sont packagés afin d'être affichés dans la fenêtre des thèmes de l'application.</p>
+<h3 id="Arborescence_des_fichiers_d.27un_th.C3.A8me" name="Arborescence_des_fichiers_d.27un_th.C3.A8me">Arborescence des fichiers d'un thème</h3>
+<p>Les thèmes Firefox/Thunderbird sont packagés dans un fichier JAR avec la structure arborescente suivante :</p>
+<pre class="eval">montheme.jar :
+  install.rdf
+  contents.rdf
+  preview.png
+  icon.png
+  browser/<i>fichiers</i>
+  global/<i>fichiers</i>
+  mozapps/<i>fichiers</i>
+  communicator/<i>fichiers</i>
+  ...
+
+</pre>
+<ul>
+  <li>Vous devez avoir à la racine un fichier <a href="fr/Chrome.manifest">chrome.manifest</a> (Firefox/Thunderbird 1.5) ou un fichier contents.rdf qui référence le chrome pour le thème (comme avant) et aussi un manifest <a href="fr/Install.rdf">install.rdf</a> qui spécifit les meta-données affichées dans la fenêtre de gestion des thèmes.</li>
+  <li>preview.png est une image d'aperçu qui sera afficher dans la zone d'aperçu de la fenêtre de gestion des thèmes. Cette image peut avoir n'importe qu'elle taille a priori.</li>
+  <li>icon.png est un PNG de 32x32 (qui peut contenir un canal alpha de transparence) qui sera également visible dans la liste des thèmes de la fenêtre de gestion des thèmes.</li>
+</ul>
+<h3 id="install.rdf" name="install.rdf">install.rdf</h3>
+<p>Votre fichier manifest <a href="fr/Install.rdf">install.rdf</a> devrait ressembler à cela :</p>
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+
+&lt;RDF xmlns="<a class="external" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rel="freelink">http://www.w3.org/1999/02/22-rdf-syntax-ns#</a>"
+     xmlns:em="<a class="external" href="http://www.mozilla.org/2004/em-rdf#" rel="freelink">http://www.mozilla.org/2004/em-rdf#</a>"&gt;
+
+  &lt;Description about="urn:mozilla:install-manifest"&gt;
+    &lt;em:type&gt;4&lt;/em:type&gt;<i>more properties</i>
+  &lt;/Description&gt;
+&lt;/RDF&gt;
+</pre>
+<h4 id="Les_propri.C3.A9t.C3.A9s_requises_dans_install.rdf" name="Les_propri.C3.A9t.C3.A9s_requises_dans_install.rdf">Les propriétés requises dans install.rdf</h4>
+<p>Votre manifest install.rdf doit contenir les propriétés suivantes. Consultez la référence <a href="fr/Install.rdf">install.rdf</a> pour plus d'informations :</p>
+<ul>
+  <li>em:id</li>
+  <li>em:version</li>
+  <li>em:type</li>
+  <li>em:targetApplication</li>
+  <li>em:name</li>
+  <li>em:internalName</li>
+</ul>
+<h4 id="Les_propri.C3.A9t.C3.A9s_optionnelles_d.27install.rdf" name="Les_propri.C3.A9t.C3.A9s_optionnelles_d.27install.rdf">Les propriétés optionnelles d'install.rdf</h4>
+<ul>
+  <li>em:description</li>
+  <li>em:creator</li>
+  <li>em:contributor</li>
+  <li>em:homepageURL</li>
+  <li>em:updateURL</li>
+</ul>
+<p>Il est à noter que si votre thème est disponible sur le site Web officiel <a class="external" href="http://addons.mozilla.org" rel="freelink">http://addons.mozilla.org</a>, il ne devra pas inclure de propriété <code>updateURL</code>.</p>
+<h4 id="Exemple_de_fichier_manifest_install.rdf" name="Exemple_de_fichier_manifest_install.rdf">Exemple de fichier manifest install.rdf</h4>
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+
+&lt;RDF xmlns="<a class="external" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rel="freelink">http://www.w3.org/1999/02/22-rdf-syntax-ns#</a>"
+     xmlns:em="<a class="external" href="http://www.mozilla.org/2004/em-rdf#" rel="freelink">http://www.mozilla.org/2004/em-rdf#</a>"&gt;
+
+  &lt;Description about="urn:mozilla:install-manifest"&gt;
+    &lt;em:id&gt;{18b64b56-d42f-428d-a88c-baa413bc413f}&lt;/em:id&gt;
+    &lt;em:version&gt;1.0&lt;/em:version&gt;
+    &lt;em:type&gt;4&lt;/em:type&gt;
+
+    &lt;!-- Target Application this extension can install into,
+         with minimum and maximum supported versions. --&gt;
+    &lt;em:targetApplication&gt;
+      &lt;Description&gt;
+        &lt;em:id&gt;{ec8030f7-c20a-464f-9b0e-13a3a9e97384}&lt;/em:id&gt;
+        &lt;em:minVersion&gt;0.8&lt;/em:minVersion&gt;
+        &lt;em:maxVersion&gt;0.9&lt;/em:maxVersion&gt;
+      &lt;/Description&gt;
+    &lt;/em:targetApplication&gt;
+
+    &lt;!-- Front End MetaData --&gt;
+    &lt;em:name&gt;New Theme 1&lt;/em:name&gt;
+    &lt;em:description&gt;A test theme for Firefox&lt;/em:description&gt;
+    &lt;em:creator&gt;Ben Goodger&lt;/em:creator&gt;
+    &lt;em:contributor&gt;John Doe&lt;/em:contributor&gt;
+    &lt;em:homepageURL&gt;<a class="external" href="http://www.bengoodger.com/" rel="freelink">http://www.bengoodger.com/</a>&lt;/em:homepageURL&gt;
+
+    &lt;!-- Front End Integration Hooks (used by Theme Manager)--&gt;
+    &lt;em:internalName&gt;newtheme1&lt;/em:internalName&gt;
+  &lt;/Description&gt;
+&lt;/RDF&gt;
+</pre>
+<p>Ce qui suit sont les GUID habituels des applications que vous devez utiliser dans la propriété <code>targetApplication</code> :</p>
+<pre class="eval">Firefox      {ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+Thunderbird  {3550f703-e582-4d05-9a08-453d09bdfdc6}
+Sunbird      {718e30fb-e89b-41dd-9da7-e25a45638b28}
+</pre>
+<h3 id="R.C3.A9f.C3.A9rence_officielle_de_l.27API_du_toolkit" name="R.C3.A9f.C3.A9rence_officielle_de_l.27API_du_toolkit">Référence officielle de l'<a href="fr/API_du_toolkit">API du toolkit</a></h3>
+<p>{{page("/fr/API_du_toolkit/Références_officielles")}}</p>

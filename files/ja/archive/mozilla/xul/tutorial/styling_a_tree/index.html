@@ -1,0 +1,166 @@
+---
+title: ツリーのスタイル付け
+slug: Archive/Mozilla/XUL/Tutorial/Styling_a_Tree
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Styling_a_Tree
+---
+<p>
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Adding_Style_Sheets" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Modifying_the_Default_Skin">次のページ  »</a></p>
+</div>
+<p>このセクションでは、ツリーに対してスタイルを設定する方法を説明します。
+</p>
+<h3 id=".E3.83.84.E3.83.AA.E3.83.BC.E3.81.AB.E3.82.B9.E3.82.BF.E3.82.A4.E3.83.AB.E3.82.92.E8.A8.AD.E5.AE.9A.E3.81.99.E3.82.8B" name=".E3.83.84.E3.83.AA.E3.83.BC.E3.81.AB.E3.82.B9.E3.82.BF.E3.82.A4.E3.83.AB.E3.82.92.E8.A8.AD.E5.AE.9A.E3.81.99.E3.82.8B"> ツリーにスタイルを設定する </h3>
+<p>ツリーにスタイルを設定する場合、枠か列の見出しについて設定したいのであれば、他の要素と同じ方法で行うことが可能です。
+<code><code><a href="/ja/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code></code> 要素に設定されたスタイルは、ツリー全体 (枠) に適用されることになり、
+<code><code><a href="/ja/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code></code> 要素に設定れたスタイルは、
+列全体には適用されず、列の見出しの部分に対してのみ適用されることになります。
+</p><p>そして、ツリーの本体へのスタイル設定は、他の要素とは若干異なる方法で行う必要があります。
+これは、ツリー本体が他の要素とは異なった方法で格納されていることに起因する制約になります。
+つまり、ツリー本体では最も外側の <code><code><a href="/ja/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code></code> 要素のみが実在する要素で、
+内側の要素は直接表示されるわけではなく、単にツリーに供給するデータを定義するために置かれているに過ぎないからです。
+</p>
+<h4 id=".E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3.E3.81.AE.E8.A8.AD.E5.AE.9A" name=".E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3.E3.81.AE.E8.A8.AD.E5.AE.9A"> プロパティの設定 </h4>
+<p>このために、まず、行またはセルに対して <code><code id="a-properties"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/properties">properties</a></code></code> 属性を使用して、名前の付いたプロパティを設定する必要があります (属性の値がプロパティの名前になります)。
+これは、ツリーが静的なコンテントを利用する場合はもちろん、<a href="ja/XUL_Tutorial/Trees_and_Templates">RDF から生成されたコンテント</a>や、<a href="ja/XUL_Tutorial/Custom_Tree_Views">カスタムビュー</a>を使用する場合でも利用可能です。
+</p><p>それでは、例として、特定の行の背景色を青色にしてみることにしましょう。
+これは Mozilla メールのラベルに関する機能の実装にも利用されています。
+ここでは「<code>makeItBlue</code>」と呼ばれるプロパティを使用することにしますが、好きな名前を使っても構いません。
+なお、複数のプロパティを設定したい場合は、空白文字で区切って設定することが可能です。
+</p><p>以下に、行またはセルにプロパティを設定する例を示します。
+</p>
+<pre>&lt;treerow properties="makeItBlue"&gt;
+</pre>
+<h4 id=".E3.83.84.E3.83.AA.E3.83.BC.E3.81.AB.E5.AF.BE.E3.81.99.E3.82.8B_CSS_.E3.82.BB.E3.83.AC.E3.82.AF.E3.82.BF" name=".E3.83.84.E3.83.AA.E3.83.BC.E3.81.AB.E5.AF.BE.E3.81.99.E3.82.8B_CSS_.E3.82.BB.E3.83.AC.E3.82.AF.E3.82.BF"> ツリーに対する CSS セレクタ </h4>
+<p>スタイルシートからは、このプロパティを目印に使って、未読メッセージやラベルに対応する行の外観を変更することになります。
+つまり、この場合のプロパティとは、スタイルクラスとよく似た働きをするものだと考えてもよいでしょう。
+ただし、プロパティの方は、セルなどのツリーを構成するたくさんのパーツに対して、個別にスタイルを指定できるようにする必要があるため、
+スタイルシートから指定するときには、スタイルクラスより若干複雑な構文が必要になります。
+また、スタイルは、セルやその中のテキストだけでなく、<span style="border-bottom: 1px dashed green;" title="twisty">ツイスティ</span>に設定したりインデントの設定のために使用することも可能です。
+具体的には、以下のような構文が必要になります。
+</p>
+<pre>treechildren::-moz-tree-row(makeItBlue)
+{
+  background-color: blue;
+}
+</pre>
+<p>このスタイルは、複雑なセレクタを持っていて、「<code>makeItBlue</code>」プロパティを持つ行に、スタイルとして背景色を設定するために使用されます。
+この特別な構文は、それぞれのセルが独立した要素ではないために必要になります。
+つまり、ツリー本体部分に含まれている全てのコンテントは、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code></code> 要素により描画されることになりますが、
+CSS が持つ、要素の一部分だけを、<span style="border-bottom: 1px dashed green;" title="pseudo-element">疑似要素</span>とみなしてアクセスするというコンセプトを利用して、
+このセレクタは、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code></code> 要素に含まれているいくつかの行を、疑似要素とみなして選択します。
+このため、このスタイルは、表示されている要素の特定の部分に対してのみスタイルルールを設定することになります。
+したがって、上のスタイルルールは <code><code><a href="/ja/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code></code> 要素の中の 「<code>makeItBlue</code>」プロパティを持つすべてのツリー行の背景色を青色に設定することを意味します。
+</p><p>このセレクタに含まれる文字列 <code>::-moz-tree-row</code> は、どのコンテント領域を選択するかを指定するもので、この場合は行になります。
+ここに指定可能な値を以下に示します。
+</p>
+<ul><li> <b>::-moz-tree-cell</b>: セルに対応し、境界と背景色を設定するために利用します。
+</li><li> <b>::-moz-tree-cell-text</b>: セルに含まれるテキストに対応し、フォントやテキストの色を設定するために利用します。
+</li><li> <b>::-moz-tree-twisty</b>: 対応するツイスティの外観の設定をします。ツイスティとは子の行を開閉するための「+」のアイコンのことです。
+</li><li> <b>::-moz-tree-image</b>: セルの画像に対応します。画像は <a href="ja/CSS/list-style-image">list-style-image</a> プロパティで設定することができます。
+</li><li> <b>::-moz-tree-row</b>: 行に対応し、行の背景色を設定するために利用します。
+</li><li> <b>::-moz-tree-indentation</b>: 子の行の左側のインデントに対応します。
+</li><li> <b>::-moz-tree-column</b>: 列に対応します。
+</li><li> <b>::-moz-tree-line</b>: 親子の行を結ぶ線に対応します。
+</li><li> <b>::-moz-tree-separator</b>: ツリーに置かれたセパレータに対応します。
+</li><li> <b>::-moz-tree-progressmeter</b>: プログレスメーターセルのコンテントに対応します。列の <code>type</code> 属性を <code>progressmeter</code> に設定することで、プログレスメーターの列を作成することができます。
+</li><li> <b>::-moz-tree-drop-feedback</b>: ドラッグ＆ドロップからのフィードバックに対応します。
+</li><li> <b>::-moz-tree-checkbox</b>: チェックボックスの列で使用する画像に対応します。
+</li></ul>
+<p>また、コンマで区切って指定することで、複数のプロパティをチェックすることも可能です。
+以下の例は、「<code>readonly</code>」と「<code>unread</code>」プロパティを持つ行の背景色を灰色に設定します。
+加えて、「<code>readonly</code>」プロパティを持つ行に対しては、赤い枠線が描画されます。
+なお、最初のルールは、「<code>readonly</code>」が設定されている全ての行に対し適用され、
+「<code>unread</code>」など他のプロパティの設定の有無には影響を受けないことを注記しておきます。
+</p>
+<pre>treechildren::-moz-tree-row(readonly)
+{
+  border: 1px solid red;
+}
+treechildren::-moz-tree-row(readonly, unread)
+{
+  background-color: rgb(80%, 80%, 80%);
+}
+</pre>
+<h4 id=".E3.83.87.E3.83.95.E3.82.A9.E3.83.AB.E3.83.88.E3.81.AE.E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3" name=".E3.83.87.E3.83.95.E3.82.A9.E3.83.AB.E3.83.88.E3.81.AE.E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3"> デフォルトのプロパティ </h4>
+<p>ツリー関連の要素が持つプロパティのリストには、いくつかのデフォルトで設定されるプロパティが含まれており、これらもスタイルシートから利用することが可能です。
+以下に示す特別なプロパティは、コンテナや選択された行の外観を設定するために利用できます。
+これらのプロパティは、必要に応じて自動的に設定されます。
+</p>
+<dl><dt> focus</dt><dd> このプロパティは、ツリーが現在フォーカスを得ているときに設定されます。
+</dd><dt> selected</dt><dd> このプロパティは、行やセルが選択されているときに設定されます。
+</dd><dt> current</dt><dd> このプロパティは、カーソルがその行にあるときに設定されます。このプロパティが設定される行は、一度に 1 行だけになります。
+</dd><dt> container</dt><dd> このプロパティは、子を持つことが可能な行やセルに対して設定されます。
+</dd><dt> leaf</dt><dd> このプロパティは、子を持つことができない行やセルに対して設定されます。
+</dd><dt> open</dt><dd> このプロパティは、展開されている行やセルに対して設定されます。
+</dd><dt> closed</dt><dd> このプロパティは、畳まれている行やセルに対して設定されます。
+</dd><dt> primary</dt><dd> このプロパティは primary 属性が設定された列のセルに対して設定されます。
+</dd><dt> sorted</dt><dd> このプロパティは、現在ソート対象になっている列のセルに対して設定されます。
+</dd><dt> even</dt><dd> このプロパティは、偶数番目の行に対し設定されます。
+</dd><dt> odd</dt><dd> このプロパティは、奇数番目の行に対し設定されます。例えば、このプロパティと <code>even</code> プロパティを使用して、行ごとに交互に行の色を変えることができます。
+</dd><dt> dragSession</dt><dd> このプロパティは、何かがドラッグされているときに設定されます。
+</dd><dt> dropOn</dt><dd> このプロパティは、ツリー上で何かがドラッグされているときに、そのときマウスポインタが重なっている行に対して、重なっている間を通して設定されています。
+</dd><dt> dropBefore</dt><dd> このプロパティは、何かがドラッグされているときに、その行にマウスポインタが重なる直前にだけ設定されます。
+</dd><dt> dropAfter</dt><dd> このプロパティは、何かがドラッグされているときに、その行にマウスポインタが重ならなくなった直後にだけ設定されます。
+</dd><dt> progressNormal</dt><dd> このプロパティは、プログレスメーターセルで通常のプログレスメータの場合に設定されます。
+</dd><dt> progressUndetermined</dt><dd> このプロパティは、プログレスメーターセルで未定 (undeterminate) のプログレスメータの場合に設定されます。
+</dd><dt> progressNone</dt><dd> このプロパティは、プログレスメーターセルでプログレスメータが表示されていない場合に設定されます。
+</dd></dl>
+<p>これらのプロパティは、行や行に含まれるセルに対して、状態の変化に応じて設定されます。
+加えて、列とセルに対しては、プロパティとして、その列あるいはセルの属する列の <code>id</code> が設定されます。
+</p>
+<h4 id="RDF_.E7.94.9F.E6.88.90.E3.83.84.E3.83.AA.E3.83.BC.E3.81.AB.E5.AF.BE.E3.81.99.E3.82.8B.E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3.E3.81.AE.E8.A8.AD.E5.AE.9A" name="RDF_.E7.94.9F.E6.88.90.E3.83.84.E3.83.AA.E3.83.BC.E3.81.AB.E5.AF.BE.E3.81.99.E3.82.8B.E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3.E3.81.AE.E8.A8.AD.E5.AE.9A"> RDF 生成ツリーに対するプロパティの設定 </h4>
+<p><a href="ja/XUL_Tutorial/RDF_Datasources">RDF から構築されているツリー</a>に対しても、静的なコンテントの場合と同じ構文が利用できます。
+しかしながら、プロパティはデータソースの値を基にして設定することが多いと思います。
+</p>
+<h4 id=".E3.82.AB.E3.82.B9.E3.82.BF.E3.83.A0.E3.83.93.E3.83.A5.E3.83.BC.E3.81.A7.E3.81.AE.E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3.E3.81.AE.E8.A8.AD.E5.AE.9A" name=".E3.82.AB.E3.82.B9.E3.82.BF.E3.83.A0.E3.83.93.E3.83.A5.E3.83.BC.E3.81.A7.E3.81.AE.E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3.E3.81.AE.E8.A8.AD.E5.AE.9A"> カスタムビューでのプロパティの設定 </h4>
+<p>カスタムビューから構築されているツリーについても、ビューに <code>getRowProperties()</code>、<code>getColumnProperties()</code>、<code>getCellProperties()</code> 関数を実装して応答することによりプロパティを設定できます。
+これらは、それぞれ個々の行、列、セルについての情報を返します。
+これらの関数への引数には、対象となる行か列 (セルに対しては行と列) が設定されます。
+また、それぞれの関数の最後の引数は出力用で、ビューでは返すべきプロパティのリストを設定する必要があります (後の例で詳述します)。
+なお、<code>getColumnProperties()</code> 関数では、引数として対象となる列の <code><code><a href="/ja/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code></code> 要素に対応する TreeColumn オブジェクトも設定されます。
+</p>
+<pre>getRowProperties : function(row,prop){}
+getColumnProperties : function(column,columnElement,prop){}
+getCellProperties : function(row,column,prop){}
+</pre>
+<p>それでは、特定のセルの表示を変更する例を見てみましょう。
+<a href="ja/XUL_Tutorial/Custom_Tree_Views">以前のセクション</a>の例を、4 行に 1 回、テキストが青色になるようにしてみましょう。
+このためには、<code>getCellProperties()</code> 関数にコードを追加して、4 行に 1 回、セルに対して「<code>makeItBlue</code>」プロパティを設定する必要があります。
+(注:テキストの色は行からセルへ継承されないので、<code>getRowProperties()</code> を使うことはできません）
+</p><p><code>getCellProperties()</code> への最後の引数として渡されているプロパティオブジェクトは、<code>nsISupportsArray</code> インターフェイスを実装した <a href="ja/XPCOM">XPCOM</a> オブジェクトです。
+これは、単に配列の XPCOM 版で、この配列に要素を追加するために使用する <code>AppendElement()</code> 関数を持っています。
+また、プロパティとして使用する文字列<span style="border-bottom: 1px dashed green;" title="string atom">アトム</span>を構築するために <code>nsIAtomService</code> インターフェイスを利用します。
+</p>
+<pre>getCellProperties: function(row,col,props){
+  if ((row %4) == 0){
+    var aserv=Components.classes["@mozilla.org/atom-service;1"].
+              getService(Components.interfaces.nsIAtomService);
+    props.AppendElement(aserv.getAtom("makeItBlue"));
+  }
+}
+</pre>
+<p>この関数は、ビューオブジェクトの一部として定義されることになります。
+まず、何行目が要求されているかをチェックして、4 行に 1 回、セルに対するプロパティを設定します。
+引数で渡されるプロパティのリスト (props) では、アトムオブジェクト (文字列定数だと考えてもらって構いません) の配列が要求されます。
+このため、XPCOM の <code>nsIAtomService</code> インターフェイスを利用して作成した後、 <code>AppendElement()</code> 関数を使用してその配列に追加します。
+ここでは、アトムとして「<code>makeItBlue</code>」を作成しています。
+必要なら、さらに <code>AppendElement()</code> を呼び出して、他のプロパティを追加することも可能です。
+</p>
+<h4 id=".E3.82.B9.E3.82.BF.E3.82.A4.E3.83.AB.E3.82.B7.E3.83.BC.E3.83.88.E3.81.AE.E4.BE.8B" name=".E3.82.B9.E3.82.BF.E3.82.A4.E3.83.AB.E3.82.B7.E3.83.BC.E3.83.88.E3.81.AE.E4.BE.8B"> スタイルシートの例 </h4>
+<pre>treechildren::-moz-tree-row(selected)            { background-color: #FFFFAA; }
+treechildren::-moz-tree-row(odd)                 { background-color: #EEEEEE; }
+treechildren::-moz-tree-row(odd, selected)       { background-color: #FFFFAA; }
+treechildren::-moz-tree-cell-text(selected)      { color: #000000; }
+treechildren::-moz-tree-cell-text(odd, selected) { color: #000000; }
+</pre>
+<p>次のセクションでは、デフォルトのスキンを変更する方法について見ていきます。
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Adding_Style_Sheets" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Modifying_the_Default_Skin">次のページ  »</a></p>
+</div>
+
+<div class="noinclude">
+</div>

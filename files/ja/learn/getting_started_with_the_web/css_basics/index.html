@@ -1,0 +1,295 @@
+---
+title: CSS の基本
+slug: Learn/Getting_started_with_the_web/CSS_basics
+tags:
+  - CSS
+  - CodingScripting
+  - Styling
+  - Web
+  - 'l10n:priority'
+  - 初心者
+  - 学習
+translation_of: Learn/Getting_started_with_the_web/CSS_basics
+---
+<div>{{LearnSidebar}}</div>
+
+<div>{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}</div>
+
+<div class="summary">
+<p>CSS (Cascading Style Sheets) は、ウェブページのスタイルを設定するコードです。「<em>CSS の基本</em>」では、始めるのに必要なものを紹介します。ここでは、テキストを黒または赤にするにはどうすればいいのか？そのような場所でコンテンツを画面に表示させるにはどうすればいいのか？背景画像と色を使って ウェブページをどのように飾るのか？というような疑問に答えていきます。</p>
+</div>
+
+<h2 id="So_what_is_CSS_really" name="So_what_is_CSS_really">それでは CSS とは何でしょうか？</h2>
+
+<p>HTML のように、CSS は本当のプログラミング言語ではありません。またマークアップ言語でもありません。<strong>CSS はスタイルシート言語です</strong>。CSS は、HTML の要素を選択的にスタイルにするために使うものです。例えば、この CSS は段落のテキストを選択し、色を赤に設定しています。</p>
+
+<pre class="brush: css notranslate">p {
+  color: red;
+}</pre>
+
+<p>それでは試してみましょう: これらの 3 行の CSS をテキストエディタの新しいファイルに貼り付け、ファイルを <code>style.css</code> として <code>styles</code> ディレクトリに保存します。</p>
+
+<p>しかし、まだ CSS を HTML 文書に適用する必要があります。そうしないと CSS のスタイリングはブラウザの HTML 文書の表示方法に影響しません。(私たちのプロジェクトに従っていない場合、<a href="/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files">ファイルを扱う</a><span lang="ja"><span>と </span></span><a href="/ja/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML の基本</a>を読み、まず何をする必要があるのかを見てください)</p>
+
+<ol>
+ <li><code>index.html</code> ファイルを開き、head ({{HTMLElement("head")}} タグと <code>&lt;/head&gt;</code> タグの間) に以下の行を貼り付けます
+
+  <pre class="brush: html notranslate">&lt;link href="styles/style.css" rel="stylesheet" type="text/css"&gt;</pre>
+ </li>
+ <li><code>index.html</code> を保存し、ブラウザで読み込みます。このように表示されるでしょう :</li>
+</ol>
+
+<p><img alt="A mozilla logo and some paragraphs. The paragraph text has been styled red by our css." src="https://mdn.mozillademos.org/files/9435/website-screenshot-styled.png" style="display: block; height: 832px; margin: 0px auto; width: 711px;">段落テキスト(<code>&lt;p&gt;</code>と<code>&lt;/p&gt;</code>で囲んだ文字)が赤色になりましたか？おめでとうございます！今はじめて CSS を書き、成功しました！</p>
+
+<h3 id="Anatomy_of_a_CSS_ruleset" name="Anatomy_of_a_CSS_ruleset">CSS ルールセットの構造</h3>
+
+<p>上記の CSS をもう少し詳しく見てみましょう:</p>
+
+<p><img alt="CSS p declaration color red" src="https://mdn.mozillademos.org/files/9461/css-declaration-small.png" style="display: block; height: 480px; margin: 0px auto; width: 850px;"></p>
+
+<p>全体の構造は<strong>ルールセット</strong>と呼びます (しかし、しばしば "ルール" として略されます)。個々のパーツの名前にも注意してください :</p>
+
+<dl>
+ <dt>{{原語併記("セレクタ", "selector")}}</dt>
+ <dd>ルールセットの先頭にある HTML 要素名。これはスタイルを設定する要素 (この場合は p 要素) を選択します。別の要素をスタイルするには、Selector を変更します。</dd>
+ <dt>{{原語併記("宣言", "declaration")}}</dt>
+ <dd><code>color: red;</code> のような単一のルールで、要素の<strong>プロパティ</strong>のうちどの要素をスタイルするかを指定します。</dd>
+ <dt>{{原語併記("プロパティ", "property")}}</dt>
+ <dd>指定された HTML 要素のスタイルを設定する方法 (この場合 <code>color</code> は {{htmlelement("p")}} 要素のプロパティです)。CSS ではルール内でどのプロパティを適用するかを選択します。</dd>
+ <dt>{{原語併記("プロパティ値", "property value")}}</dt>
+ <dd>プロパティの右側にはコロンの後に<strong>プロパティ値</strong>があり、与えられたプロパティの多くの外観から 1 つを選択します (赤以外にも多くの色の値があります)。</dd>
+</dl>
+
+<p>構文の他の重要な部分に注意してください:</p>
+
+<ul>
+ <li>各ルールセット (セレクタを除く) は中括弧 (<code>{}</code>) で囲む必要があります。</li>
+ <li>各宣言内ではコロン (<code>:</code>) を使用してプロパティを値から分離する必要があります。</li>
+ <li>各規則セット内でセミコロン (<code>;</code>) を使用し、各宣言を次の規則と区切る必要があります。</li>
+</ul>
+
+<p>したがって、一度に複数のプロパティ値を変更するには、セミコロンで区切って次のように記述するだけです:</p>
+
+<pre class="brush: css notranslate">p {
+  color: red;
+  width: 500px;
+  border: 1px solid black;
+}</pre>
+
+<h3 id="Selecting_multiple_elements" name="Selecting_multiple_elements">複数の要素を選択する</h3>
+
+<p>複数の要素の種類を選択することができ、すべての要素に単一のルールセットを適用することもできます。カンマで区切られた複数のセレクタを含めます。例えば:</p>
+
+<pre class="brush: css notranslate">p,li,h1 {
+  color: red;
+}</pre>
+
+<h3 id="Different_types_of_selectors" name="Different_types_of_selectors">さまざまな種類のセレクタ</h3>
+
+<p>多くのさまざまな種類のセレクタがあります。上の項目では、特定のHTMLドキュメント内の特定のタイプのすべての要素を選択する<strong>要素セレクタ</strong>だけを取り上げました。しかしそれ以上に細かい選択をすることができます。一般的なタイプのセレクタを次に示します:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">セレクタ名</th>
+   <th scope="col">何を選択するか</th>
+   <th scope="col">例</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>要素セレクタ (時々タグまたは型セレクタと呼ばれます)</td>
+   <td>指定された型のすべての HTML 要素</td>
+   <td><code>p</code><br>
+    <code>&lt;p&gt;</code> を選択</td>
+  </tr>
+  <tr>
+   <td>ID セレクタ</td>
+   <td>ページ上の指定された ID を持つ要素。 特定のHTMLページでは、1つのIDにつき1つの要素（そしてもちろん1つの要素につき1つのID）しか許されません。</td>
+   <td><code>#my-id</code><br>
+    <code>&lt;p id="my-id"&gt;</code> または <code>&lt;a id="my-id"&gt;</code> を選択</td>
+  </tr>
+  <tr>
+   <td>クラスセレクタ</td>
+   <td>指定されたクラスを持つページの要素 (複数のクラスインスタンスがページに表示されます)</td>
+   <td><code>.my-class</code><br>
+    <code>&lt;p class="my-class"&gt;</code> 及び <code>&lt;a class="my-class"&gt;</code> を選択</td>
+  </tr>
+  <tr>
+   <td>属性セレクタ</td>
+   <td>指定された属性を持つページ上の要素</td>
+   <td><code>img[src]</code><br>
+    <code>&lt;img src="myimage.png"&gt;</code> を選択するが、<code>&lt;img&gt; は選択しない</code></td>
+  </tr>
+  <tr>
+   <td>擬似クラスセレクタ</td>
+   <td>指定された要素が指定された状態にあるとき。例えば、マウスポインターが上に乗っている (ホバー) 状態。</td>
+   <td><code>a:hover</code><br>
+    <code>&lt;a&gt;</code> を選択するが、マウスポインターがリンク上にあるときのみ。</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>セレクタの種類は多く、<a href="/ja/docs/Learn/CSS/Building_blocks/Selectors">セレクタガイド</a>により詳しい一覧があります。</p>
+
+<h2 id="Fonts_and_text" name="Fonts_and_text">フォントとテキスト</h2>
+
+<p>CSS の基本をいくつか勉強しましたので、<code>style.css</code> ファイルにいくつかのルールと情報を追加して、この例を見栄え良くしましょう。最初に、フォントとテキストの見ばえを少し良くしてみましょう。</p>
+
+<ol>
+ <li>まず最初に、どこかの安全に保存した<a href="/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#Font"> Google フォントの出力</a>を見つけてください。{{htmlelement("link")}} 要素を <code>index.html</code> の上部 (<code>&lt;head&gt;</code> タグと <code>&lt;/head&gt;</code> タグの間) のどこかに追加します。これは次のようになります:
+
+  <pre class="brush: html notranslate">&lt;link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'&gt;</pre>
+
+  <p>このコードは、ウェブページとともにOpen Sansフォントファミリをダウンロードするスタイルシートにページをリンクし、独自のスタイルシートを使用してHTML要素に設定することを可能にします。</p>
+ </li>
+ <li>次に <code>style.css</code> ファイルにある既存のルールを削除します。良いテストでしたが、赤いテキストは実のところあまりよくありません。</li>
+ <li>代わりに次の行を追加し、プレースホルダー行を Google フォントから取得した実際の <code>font-family</code> 行に置き換えます。(この <code>font-family</code> は、テキストに使用するフォントを意味します)。このルールは最初にページ全体のグローバルベースフォントとフォントサイズを設定します (<code>&lt;html&gt;</code> はページ全体の親要素です。その中のすべての要素は同じ <code>font-size</code> と <code>font-family</code> を継承します):
+  <pre class="brush: css notranslate">html {
+  font-size: 10px; /* px means 'pixels': the base font size is now 10 pixels high  */
+  font-family: 'Open Sans', sans-serif; /* this should be the rest of the output you got from Google fonts */
+}</pre>
+
+  <div class="note">
+  <p><strong>注</strong>: 「px」の意味を説明するコメントを追加しました。<code>/*</code> と <code>*/</code> の間にある CSS ドキュメント内のものは <strong>CSS コメント</strong>です。ブラウザはコードをレンダリングするときにこれを無視します。これはあなたが実施していることについての役立つメモを書く場所です。</p>
+  </div>
+ </li>
+ <li>HTML ボディ ({{htmlelement("h1")}}、{{htmlelement("li")}}、{{htmlelement("p")}}) 内のテキストを含む要素のフォントサイズを設定します)。また、読みやすくするために見出しのテキストを中央に置き、本文の内容に行の高さと文字の間隔を設定します:
+  <pre class="brush: css notranslate">h1 {
+  font-size: 60px;
+  text-align: center;
+}
+
+p, li {
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 1px;
+}</pre>
+ </li>
+</ol>
+
+<p>これらの <code>px</code> 値はあなたが望むようにデザインを得るために好きなものに調整できますが、一般的にデザインは次のようになります:</p>
+
+<p><img alt="a mozilla logo and some paragraphs. a sans-serif font has been set, the font sizes, line height and letter spacing are adjusted, and the main page heading has been centered" src="https://mdn.mozillademos.org/files/9447/website-screenshot-font-small.png" style="display: block; height: 1020px; margin: 0px auto; width: 921px;"></p>
+
+<h2 id="Boxes_boxes_its_all_about_boxes" name="Boxes_boxes_it's_all_about_boxes">ボックス、ボックス、ボックスについてのすべてのこと</h2>
+
+<p>CSS を書いていて気づくことの 1 つは、ボックスのサイズ・色・位置などを設定することです。ページの HTML 要素のほとんどはお互いの上にあるボックスと考えることができます。</p>
+
+<p><img alt="a big stack of boxes or crates sat on top of one another" src="https://mdn.mozillademos.org/files/9441/boxes.jpg" style="display: block; height: 463px; margin: 0px auto; width: 640px;"></p>
+
+<p>当然のことながら、CSS レイアウトは主に<em>ボックスモデル</em>に基づいています。ページ上のスペースを占める各ブロックは、次のようなプロパティを持ちます:</p>
+
+<ul>
+ <li><code>padding</code>: コンテンツのまわりのスペース (例えば段落テキストの周り)</li>
+ <li><code>border</code>: <code>padding</code> のすぐ外側にある実線</li>
+ <li><code>margin</code>: 要素の外側の周りの空間</li>
+</ul>
+
+<p><img alt="three boxes sat inside one another. From outside to in they are labelled margin, border and padding" src="https://mdn.mozillademos.org/files/9443/box-model.png" style="display: block; height: 450px; margin: 0px auto; width: 574px;"></p>
+
+<p>このセクションでは次のものを使用します :</p>
+
+<ul>
+ <li><code>width</code> (要素の)</li>
+ <li><code>background-color</code>: <span class="short_text" id="result_box" lang="ja"><span>要素の内容と padding の背後にある色</span></span></li>
+ <li><code>color</code>: 要素のコンテンツ (通常はテキスト) の色</li>
+ <li><code>text-shadow</code>: 要素内のテキストに影を設定する</li>
+ <li><code>display</code>: 要素の表示モードを設定します (これについてはまだ心配しないでください)</li>
+</ul>
+
+<p>では、ページに CSS を追加しましょう！これらの新しいルールをページの最後に追加しておき、値の変更を試すのを恐れることなく、どのように変化するかを確認してください。</p>
+
+<h3 id="Changing_the_page_color" name="Changing_the_page_color">ページの色を変更する</h3>
+
+<pre class="brush: css notranslate">html {
+  background-color: #00539F;
+}</pre>
+
+<p>このルールはページ全体の背景色に設定を行います。上記のカラーコードを、<a href="/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#Theme_color">サイトを計画する際に選択した</a>色に変更します。</p>
+
+<h3 id="Sorting_the_body_out" name="Sorting_the_body_out">ボディのスタイリング</h3>
+
+<pre class="brush: css notranslate">body {
+  width: 600px;
+  margin: 0 auto;
+  background-color: #FF9500;
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+}</pre>
+
+<p>次は {{htmlelement("body")}}  要素です。ここにはいくつかの宣言がありますので、それらをひとつひとつ見て行きましょう:</p>
+
+<ul>
+ <li><code>width: 600px;</code> — これにより body は常に 600 ピクセルの幅になります。</li>
+ <li><code>margin: 0 auto;</code> — <code> margin</code> や <code>padding</code> などのプロパティに 2 つの値を設定すると、最初の値は要素の上下の辺に影響を与えます (この場合は 0 になります )。2 番目の値は左右です (<a href="/ja/docs/Web/CSS/margin#Values">ここ</a>で <code>auto</code> は利用可能な水平スペースを左右に均等に分割します)。<a href="https://developer.mozilla.org/ja/docs/Web/CSS/margin#Values">margin の構文</a>で説明するように 1 つ、3 つ、または 4 つの値を使用することもできます。</li>
+ <li><code>background-color: #FF9500;</code> — 前と同じようにこれは要素の背景色を設定します。このプロジェクトでは <code>body</code> に <code>html</code> 要素の暗い青とは対照的な赤いオレンジ色の一種を使用しました。実験してください。<code>white</code> や何でも好きなものを自由に使用してください。</li>
+ <li><code>padding: 0 20px 20px 20px;</code> — <code>padding</code> に 4 つの値を設定して、コンテンツの周りに少しのスペースを確保します。今回はボディの上にパディングを設定せず、左・下・右に 20 ピクセルを設定します。値は上・右・下・左の順に設定されます。<code>margin</code> と同様に、<a href="/ja/docs/Web/CSS/padding#Syntax">パディング構文</a>で説明されているように、1つ、2つ、または3つの値を使用することもできます。</li>
+ <li><code>border: 5px solid black;</code> — これは <code>body</code> の全側面に 5 ピクセル幅の黒ベタの境界線を設定するだけです。</li>
+</ul>
+
+<h3 id="Positioning_and_styling_our_main_page_title" name="Positioning_and_styling_our_main_page_title">メインページタイトルの配置とスタイリング</h3>
+
+<pre class="brush: css notranslate">h1 {
+  margin: 0;
+  padding: 20px 0;
+  color: #00539F;
+  text-shadow: 3px 3px 1px black;
+}</pre>
+
+<p><code>body</code> の上部にひどい隙間があることに気づいたかもしれません。これは CSS をまったく適用していなくても、ブラウザが {{htmlelement("h1")}} 要素 (他の中でも) に<strong>デフォルトのスタイル</strong>を適用するためです。それは悪い考えのように聞こえるかもしれませんが、私たちは未構築のウェブページでも基本的な読みやすさを求めています。ギャップをなくすには、<code>margin: 0;</code> を設定してデフォルトのスタイルを上書きします。</p>
+
+<p>次に見出しの上下のパディングを 20 ピクセルに設定し、見出しテキストを <code>html</code> の背景色と同じ色にしました。</p>
+
+<p>私たちがここで使ってきた興味深いプロパティの 1 つは、要素のテキストコンテンツにテキストシャドウを適用する <code>text-shadow</code> です。その 4 つの値は次のとおりです。</p>
+
+<ul>
+ <li>最初のピクセル値は、テキストからのシャドウの<strong>水平オフセット</strong>を設定します。移動する距離は負の値で、左に移動する必要があります。</li>
+ <li>2 番目のピクセル値は、テキストからシャドウの<strong>垂直オフセット</strong>を設定します　(この例では、どれだけ下に移動するか)。負の値では上に移動します。</li>
+ <li>3 番目のピクセル値は影の<strong>ぼかし半径</strong>を設定します。値が大きいほど影がぼやけることを意味します。</li>
+ <li>4 番目の色は影の基本色を設定します。</li>
+</ul>
+
+<p>繰り返しますが、さまざまな値を試してみてください。</p>
+
+<h3 id="Centering_the_image" name="Centering_the_image">画像のセンタリング</h3>
+
+<pre class="brush: css notranslate">img {
+  display: block;
+  margin: 0 auto;
+}</pre>
+
+<p>最後に画像をよりよく見えるように中央に配置します。以前は <code>body</code> のために実施したことと同じようにもう一度 <code>margin: 0 auto</code> トリックを使うことができましたが、何か別のことをする必要もあります。<code>body</code> 要素は<strong>ブロックレベル</strong>です。つまり、ページ上のスペースを占有し、マージンや他のスペーシング値を適用することができます。一方、イメージは<strong>インライン</strong>要素でありできないことを意味します。画像にマージンを適用するには、<code>display: block;</code> を使用して画像のブロックレベルの動作を指定する必要があります。</p>
+
+<div class="note">
+<p><strong>注</strong>: 上記の手順では、本体に設定されている幅 (600ピクセル) よりも小さい画像を使用していることを前提としています。画像が大きい場合、それは本文をオーバーフローし、ページの残りの部分にはみ出します。これを修正するには、1) グラフィックスエディタを使用してイメージの幅を縮小するか、2) <code>&lt;img&gt;</code> 要素の {{cssxref("width")}} プロパティを小さな値、例えば <code>400 px;</code> に設定することで、 CSS を使用してイメージのサイズを変更します。</p>
+</div>
+
+<div class="note">
+<p><strong>注</strong>: あなたがまだ <code>display: block;</code> とブロックレベル/インラインの区別を理解していなくても、心配しないでください。CSS をもっと深く勉強することが出来ます。使用可能なさまざまな表示値の詳細については、<a href="/ja/docs/Web/CSS/display">display のリファレンスページ</a><span lang="ja">を参照してください。</span></p>
+</div>
+
+<h2 id="Conclusion" name="Conclusion">まとめ</h2>
+
+<p>この記事のすべての手順に従っている場合は、次のようなページが表示されます (<a href="http://mdn.github.io/beginner-html-site-styled/">このリンクから我々が作成したバージョンを見る</a>こともできます)。</p>
+
+<p><img alt="a mozilla logo, centered, and a header and paragraphs. It now looks nicely styled, with a blue background for the whole page and orange background for the centered main content strip." src="https://mdn.mozillademos.org/files/9455/website-screenshot-final.png" style="display: block; height: 1084px; margin: 0px auto; width: 940px;"></p>
+
+<p>もしわからなくなった場合、<a href="https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css">Github の完成したサンプルコード</a>と作業内容を常に比較することができます。</p>
+
+<p>ここでは、CSS の表面に少し触れただけです。詳細については、<a href="https://developer.mozilla.org/ja/docs/Learn/CSS">CSS の学習トピック</a><span lang="ja">をご覧ください。 </span></p>
+
+<p>{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}</p>
+
+<h2 id="In_this_module" name="In_this_module">このモジュール</h2>
+
+<ul>
+ <li id="Installing_basic_software"><a href="/ja/Learn/Getting_started_with_the_web/Installing_basic_software">基本的なソフトウェアのインストール</a></li>
+ <li id="What_will_your_website_look_like"><a href="/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">ウェブサイトをどんな外見にするか</a></li>
+ <li id="Dealing_with_files"><a href="/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files">ファイルの扱い</a></li>
+ <li id="HTML_basics"><a href="/ja/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML の基本</a></li>
+ <li id="CSS_basics"><a href="/ja/docs/Learn/Getting_started_with_the_web/CSS_basics">CSS の基本</a></li>
+ <li id="JavaScript_basics"><a href="/ja/docs/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript の基本</a></li>
+ <li id="Publishing_your_website"><a href="/ja/docs/Learn/Getting_started_with_the_web/%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E5%85%AC%E9%96%8B%E3%81%99%E3%82%8B">ウェブサイトの公開</a></li>
+ <li id="How_the_web_works"><a href="/ja/docs/Learn/Getting_started_with_the_web/How_the_Web_works">ウェブのしくみ</a></li>
+</ul>

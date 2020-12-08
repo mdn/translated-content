@@ -1,0 +1,88 @@
+---
+title: 使用 gdb 及相关工具调试 B2G
+slug: Archive/B2G_OS/Debugging/Debugging_B2G_using_gdb
+tags:
+  - B2G
+  - Firefox OS
+  - Mobile
+  - 调试
+translation_of: Archive/B2G_OS/Debugging/Debugging_B2G_using_gdb
+---
+<div class="summary">
+ <p><strong><code>gdb</code></strong> 是一个命令行调试器，提供了许多有用的选项，可以用来调试 Firefox OS 应用程序。其他相关的工具也是同样有效的，比如  <strong><code>b2g-ps</code></strong>, 它是对标准 ps 工具的封装，会显示 B2G 实例中运行的每个进程的名称。本文则描述了如何使用这些工具来执行 Fiefox OS 调试工作。</p>
+</div>
+<h2 id="在单进程模式下启动调试器">在单进程模式下启动调试器</h2>
+<div class="note">
+ <p><strong>注意:</strong> 在运行调试器前，你可能想要建立一个  <code>.userconfig</code> 文件来自定义一些配置。请查看 <a href="/en-US/docs/Mozilla/Boot_to_Gecko/Customization_with_the_.userconfig_file" title="/en-US/docs/Mozilla/Boot_to_Gecko/Customization_with_the_.userconfig_file">Customization with the .userconfig file</a> 获取更多信息。</p>
+</div>
+<p>要重启 Firefox OS 并在 gdb 控制下运行，只需要简单的运行 <code>run-gdb.sh</code> 脚本就可以了：</p>
+<pre>./run-gdb.sh
+</pre>
+<div class="note">
+ <p><strong>注意:</strong> 如果你想要在模拟器上调试，请确保并没有连接手机；否则可能会与模拟器上调试 gdb 相冲突。</p>
+</div>
+<p>如果 Firefox OS 已经在运行，你想要在不重启的情况下附加在上面，也可以这样做：</p>
+<pre>./run-gdb.sh attach
+</pre>
+<h2 id="调试_out-of-process_任务">调试 out-of-process 任务</h2>
+<p>Because of the threaded nature of Firefox OS, 你可能需要掉时除了主 B2G 任务之外的任务。最简单的方式就是使用 <code>b2g-ps</code> 命令来找出你需要调试的进程的 PID：</p>
+<pre>$ adb shell b2g-ps
+b2g              root      106   1     189828 56956 ffffffff 40101330 S /system/b2g/b2g
+Browser          app_0     4308  106   52688  16188 ffffffff 400db330 S /system/b2g/plugin-container
+</pre>
+<p>此处， Browser 是一个子进程用作 browser 应用的 "content process" 。因此如果在本例中，你想要调试  content process, 可以这么做：</p>
+<pre>$ ./run-gdb.sh attach 4308</pre>
+<p>有时候，如果有任何子进程被创建就立刻通知是非常有用的。我们可以在启动  <code>run-gdb.sh</code>  时添加  <code>MOZ_DEBUG_CHILD_PROCESS</code> 环境变量来实现：</p>
+<pre>MOZ_DEBUG_CHILD_PROCESS=1 ./run-gdb.sh</pre>
+<p>运行上面命令后，在 Firefox OS 中启动一个 OOP 应用时，就会输出新任务 plugin-container  的 PID。Having done this, launching an OOP application on Firefox OS will output the PID of the plugin-container for the new task, and will sleep for 30 seconds, enough time for you to run the attach command we saw above:</p>
+<pre>$ ./run-gdb.sh attach 4308</pre>
+<p>If you are trying to debug something that occurs during boot, you have to launch the debugger instance for the new application fairly quickly. Once the new debugger is launched, you should immediately press "c" to continue running the new task.</p>
+<h2 id="支持">支持</h2>
+<h3 id="What_level_of_functionality_to_expect">What level of functionality to expect</h3>
+<p>The following debugging features at least should definitely work. If they don't, it's likely that a simple tweak to your setup will make them work:</p>
+<ul>
+ <li>Symbols for all libraries (except perhaps certain drivers on certain Android phones)</li>
+ <li>Backtraces with full debug info (except for optimized-away argument values)</li>
+ <li>Breakpoints: you should be able to break on a symbol, or on a file:line, or on an address. All should work.</li>
+ <li>Single-stepping ('s' and 'n' should both work)</li>
+</ul>
+<p>The following debugging features are <strong>not</strong> supported. Don't try to use them.</p>
+<ul>
+ <li>Watchpoints.</li>
+</ul>
+<h3 id="Troubleshooting">Troubleshooting</h3>
+<p>Here are a few things to try first whenever GDB is not working as described above.</p>
+<h4 id="Ensure_that_your_B2G_clone_is_up-to-date">Ensure that your B2G clone is up-to-date</h4>
+<p>Always keep in mind to that to update your B2G clone you must run these <strong>two</strong> commands:</p>
+<pre>git pull
+./repo sync</pre>
+<p>Forgetting the <code>git pull</code> there is a typical reason why you'd end up with an old <code>run-gdb.sh</code> and not benefit from recent improvements.</p>
+<h4 id="确保你已经附着在了正确的进程上">确保你已经附着在了正确的进程上</h4>
+<p>Attaching to the wrong process (e.g. main B2G process versus Browser process) would explain why your breakpoints don't get hit.</p>
+<h4 id="Ensure_that_symbols_are_correctly_read">Ensure that symbols are correctly read</h4>
+<ol>
+ <li>In <code>gdb</code>, use <code>info shared</code> to check that symbols are correctly read:
+  <pre>(gdb) info shared
+From        To          Syms Read   Shared Object Library
+0xb0001000  0xb0006928  Yes         out/target/product/otoro/symbols/system/bin/linker
+0x40051100  0x4007ed74  Yes         /hack/b2g/B2G/out/target/product/otoro/symbols/system/lib/libc.so
+0x401ab934  0x401aba2c  Yes         /hack/b2g/B2G/out/target/product/otoro/symbols/system/lib/libstdc++.so
+...</pre>
+ </li>
+ <li>The <code>Syms Read</code> column should say <code>Yes</code> everywhere. Maybe on some android phone you would see <code>Yes (*)</code> for some system libraries or drivers; that would be OK. You should not see any <code>No.</code></li>
+ <li>If you do see a <code>No</code>, that is your first problem and you must solve it before looking at anything else.</li>
+ <li>Look for any error messages in the terminal output just after you typed your <code>run-gdb.sh</code> command.</li>
+ <li>Also check in that terminal output that the GDB command is sane. In particular, its last command line argument should be the path to your b2g executable. Here is a sane example:
+  <pre>prebuilt/linux-x86/toolchain/arm-linux-androideabi-4.4.x/bin/arm-linux-androideabi-gdb -x /tmp/b2g.gdbinit.bjacob /hack/b2g/B2G/objdir-gecko/dist/bin/b2g</pre>
+ </li>
+ <li>Check the value of these GDB variables: <code>solib-search-path</code> and <code>solib-absolute-prefix:</code>
+  <pre>(gdb) show solib-search-path
+The search path for loading non-absolute shared library symbol files is /hack/b2g/B2G/objdir-gecko/dist/bin:out/target/product/otoro/symbols/system/lib:out/target/product/otoro/symbols/system/lib/hw:out/target/product/otoro/symbols/system/lib/egl:out/target/product/otoro/symbols/system/bin:out/target/product/otoro/system/lib:out/target/product/otoro/system/lib/egl:out/target/product/otoro/system/lib/hw:out/target/product/otoro/system/vendor/lib:out/target/product/otoro/system/vendor/lib/hw:out/target/product/otoro/system/vendor/lib/egl.
+(gdb) show solib-absolute-prefix
+The current system root is "out/target/product/otoro/symbols".</pre>
+ </li>
+</ol>
+<div class="note">
+ <p><strong>Note</strong>: If you need more help, try the #b2g IRC channel. If you think you found a bug, report it on the <a href="https://github.com/mozilla-b2g/B2G/issues" title="https://github.com/mozilla-b2g/B2G/issues">B2G issue tracker</a>.</p>
+</div>
+<p> </p>

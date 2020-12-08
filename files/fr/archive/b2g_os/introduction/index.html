@@ -1,0 +1,86 @@
+---
+title: Introduction à Firefox OS
+slug: Archive/B2G_OS/Introduction
+tags:
+  - Firefox OS
+  - Gaia
+  - Introduction
+translation_of: Archive/B2G_OS/Introduction
+---
+<div class="summary">
+<p>Firefox OS est là pour agrandir le champ des possibles du Web sur mobile et permettre à de nouveaux pans de la population d'être connectés avec leur premier smartphone. <strong>C'est</strong> un système d'exploitation libre, pour mobile, basé sur Linux, des standards ouverts et la technologie de Mozilla : Gecko. Il s'agit d'une réinvention de ce qu'une plateforme mobile peut être.</p>
+
+<p>Avec l'arrivée des WebAPIs permettant d'accéder au matériel et en proposant une interface de smartphone intuitive et élégante, Mozilla souhaite offrir aux développeurs web de nouvelles possibilités de créer d'excellents produits pour de nouveaux publics.</p>
+</div>
+
+<h2 id="Public_ciblé">Public ciblé</h2>
+
+<p>Cet ensemble de documents est principalement à destination des développeurs web, ainsi qu'aux développeurs plate-forme qui veulent comprendre comment fonctionne Firefox OS, comment contribuer au projet et comment compiler et installer leur propre version sur des appareils. Pour ceux qui souhaitent créer et diffuser leurs applications web, l'<a href="/fr/Apps">App Center</a> et <a href="/fr/Marketplace">Marketplace Zone</a> sont conseillés.</p>
+
+<h2 id="La_pierre_angulaire_de_Firefox_OS">La pierre angulaire de Firefox OS</h2>
+
+<p>Pour les développeurs web/plate-forme, la chose la plus importante à comprendre est que la totalité de l'interface utilisateur est une application web, qui est capable d'afficher et lancer d'autres applications web. Toutes les modifications que vous pourriez apporter à l'interface utilisateur, ou toute application Firefox OS que vous voudriez créer, impliqueront les technologies web standard, tout en fournissant un accès privilégié au matériel et aux services de l'appareil.</p>
+
+<p>D'un point de vu produit, Firefox OS est une marque de Mozilla et ajoute une liste de services à Boot to Gecko (B2G), qui est le nom de code du système d'exploitation. L'interface utilisateur de Firefox OS est appelée Gaia, et inclut les applications essentielles ainsi que les fonctions système.</p>
+
+<p>Pour en apprendre plus sur l'architecture, voir le <a href="/fr/Firefox_OS/Platform">guide de la plateforme</a>.</p>
+
+<h2 id="Objectifs_présents_et_futurs">Objectifs présents et futurs</h2>
+
+<p>Plusieurs téléphones sont disponibles, tant pour développeurs que pour le grand public. Pour en savoir plus :</p>
+
+<ul>
+ <li><a href="/fr/Firefox_OS/Releases">Notes de version de Firefox OS</a> : nouveautés de chaque version.</li>
+ <li><a href="/fr/Firefox_OS/Developer_phone_guide">Guide des téléphones</a> : quels téléphones sont disponibles.</li>
+ <li><a href="https://wiki.mozilla.org/B2G/Roadmap">Feuille de route de B2G</a> : voir ce qui est prévu pour Firefox OS et pour quand.</li>
+</ul>
+
+<h3 id="Cycle_de_développement">Cycle de développement</h3>
+
+<p>Depuis Firefox OS 1.2, son cycle de développement est aligné, autant que possible, sur celui de Gecko et Firefox Desktop, qui ont des cycles de 6 semaines. Sachant qu'une nouvelle version de Firefox OS sort tout les 3 mois, elle sortira donc toutes les 2 versions de Gecko (cœur du navigateur Firefox).</p>
+
+<p>Par exemple Gecko 30 est présent dans Firefox OS 1.4, et Gecko 32 dans Firefox OS 2.0 (anciennement 1.5). Les versions 29 et 31 de Gecko n'étant pas utilisées.</p>
+
+<div class="note">
+<p><strong>Note</strong> : Voir notre <a href="https://wiki.mozilla.org/RapidRelease/Calendar">calendrier des sorties</a> pour vérifier les correspondances de version entre Firefox OS et Gecko / Firefox Desktop et lire <a href="https://wiki.mozilla.org/Release_Management/FirefoxOS/Release_Milestones">Firefox OS Release Milestones</a> pour plus d'informations concernant notre gestion des versions et leur diffusion.</p>
+</div>
+
+<h2 id="La_communauté">La communauté</h2>
+
+<p>Boot to Gecko et Gaia sont développés par des équipes d'ingénieurs au sein de Mozilla, ainsi que par un certain nombre de contributeurs externes appartenant à la grande communauté open source autour de Mozilla.</p>
+
+<p>Pour rapporter un bug, utilisez notre Bugzilla, et associez-le à un <a href="https://bugzilla.mozilla.org/describecomponents.cgi?product=Firefox%20OS">composant Firefox OS</a>. Si vous n'êtes pas sûr du composant à sélectionner, n'hésitez pas à demander conseil.</p>
+
+<div class="note">
+<p><strong>Note </strong>: Pour toute question ou remarque à propos d'une partie spécifique du code source B2G/Gaia (par exemple, une application Gaia particulière), vous pouvez trouver un contact plus spécialisé sur la <a href="https://wiki.mozilla.org/Modules/FirefoxOS">page des modules Firefox</a>.</p>
+</div>
+
+<h2 id="Compiler_le_système_d'exploitation">Compiler le système d'exploitation</h2>
+
+<p>Le système d'exploitation B2G est basé sur <a href="/fr/docs/Mozilla/Gecko">Gecko</a>, le moteur de rendu de Mozilla, qui se trouve au-dessus d'un noyau Linux et d'une couche d'abstraction matérielle en espace utilisateur (HAL) appelée <a href="/fr/docs/Mozilla/Firefox_OS/Platform/Gonk">Gonk</a>. Le Gecko mentionné ici est essentiellement le même que le Gecko utilisé dans Firefox pour Android, ou Windows, ou Mac OS X, etc. Gonk est simplement une nouvelle cible sur laquelle Gecko doit fonctionner.</p>
+
+<p>Pour apprendre à compiler et installer Firefox OS, voir <a href="/fr/Firefox_OS/Building_and_installing_Firefox_OS">Compiler et installer Firefox OS</a>. Le code source de B2G est disponible sur <a href="https://github.com/mozilla-b2g/B2G">Github</a>.</p>
+
+<h2 id="Contribuer_à_Gaia">Contribuer à Gaia</h2>
+
+<p>Pour contribuer à Gaia, pas besoin de beaucoup plus qu'une bonne connaissance du développement web. Pour apprendre à lancer et faire fonctionner Gaia, voir <a href="/fr/Firefox_OS/Hacking_Firefox_OS/Quickstart_guide_to_Gaia_development">Développer pour Gaia</a>.</p>
+
+<p>Il existe un certain nombre d'utilitaires pratiques pour déboguer Gaia et d'autres applications web fonctionnant sous Firefox OS. Voir le guide <a href="/fr/Firefox_OS/Platform/Gaia/Hacking">Hacker Gaia</a> pour en savoir plus.</p>
+
+<h2 id="Développer_des_applications_pour_Firefox_OS">Développer des applications pour Firefox OS</h2>
+
+<p>Les applications Firefox OS reposent sur les technologies standard du web — HTML, CSS, JavaScript, etc. — donc si vous êtes un développeur web, vous connaissez déjà une grande partie de ce dont vous aurez besoin. Il y a quelques API JavaScript spéciales à connaitre, qui permettent d'accéder au matériel et à des fonctionnalités clefs (telles que l'appareil photo, le gyroscope, le capteur de lumière, les contacts, les alarmes système et les notifications…), mais celles-ci sont bien documentées sur les pages <a href="/fr/Apps">App Center</a> et <a href="/fr/docs/Web">Web Platform</a>.</p>
+
+<div class="note">
+<p><strong>Note </strong>: Pour votre première application web ou Firefox OS, ou pour obtenir un aperçu des différences entre applications web et pages web traditionnelles, voir <a href="/fr/Apps/Quickstart">Commencer le développement d'applications web</a>.</p>
+</div>
+
+<h3 id="Gérer_plusieurs_versions_de_Firefox_OS">Gérer plusieurs versions de Firefox OS</h3>
+
+<p>En développant des applications pour Firefox OS, vous devez prendre en compte la version qu'utilisera votre client (voir notre <a href="/fr/Firefox_OS/Developer_phone_guide/Phone_specs#Firefox_OS_phones_available">tableau des téléphones disponibles</a> pour la liste). Rappelez-vous qu'il n'est pas aussi simple de mettre à jour le système d'un téléphone qu'un logiciel d'ordinateur — les utilisateurs sont souvent tributaires de leur opérateur. Vous devez donc développer des applications qui prennent en charge ces versions. Comme exemple, multiline Flexbox ne fonctionne pas sur les versions de Firefox OS antérieures à 1.3, vous pourriez donc devoir utiliser une disposition plus simple ou une alternative pour ces versions.</p>
+
+<p>Ce problème devrait s'estomper au fur et à mesure que de nouveaux appareils Firefox OS sortent équipés de versions plus récentes.</p>
+
+<div class="note">
+<p><strong>Note </strong>: <a href="/fr/docs/Web">Ces pages MDN</a> contiennent des informations de compatibilité navigateur/système et vous pourrez trouver des informations de compatibilité concernant des technologies plus spécifiques aux applications sur notre page <a href="/fr/Apps/Reference">Application API Reference</a>.</p>
+</div>

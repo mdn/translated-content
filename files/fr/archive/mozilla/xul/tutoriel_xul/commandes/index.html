@@ -1,0 +1,119 @@
+---
+title: Commandes
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Commandes
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Commands
+---
+<p> </p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Focus_et_Selection" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Mise_à_jour_de_commandes">Suivant  »</a></p>
+</div>
+<p>Une commande est une opération qui peut être invoquée.</p>
+<h3 id="Les_.C3.A9l.C3.A9ments_de_commande" name="Les_.C3.A9l.C3.A9ments_de_commande">Les éléments de commande</h3>
+<p>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/command" title="command">command</a></code> est utilisé pour créer des commandes qui pourront être utilisées pour exécuter des opérations. Vous n'avez pas besoin d'utiliser les commandes si vous avez juste à appeler un script pour manipuler des choses. Cependant, une commande a l'avantage de pouvoir être désactivée automatiquement quand c'est nécessaire, et de pouvoir être invoquée de l'extérieur sans avoir besoin de connaître les détails de son implémentation. Les commandes fournissent un moyen pour séparer de façon abstraite les opérations et le code. Elles deviennent très utiles pour les grosses applications.</p>
+<p>Par exemple, pour implémenter les commandes de menus du presse-papiers, <em>couper</em>, <em>copier</em> et <em>coller</em>, vous pouvez utiliser les commandes. Si vous ne les utilisiez pas, vous devriez trouver quel champ a le focus, ensuite s'assurer que l'opération est valable pour cet élément. De plus, les commandes de menus devraient être activées ou désactivées selon que l'élément cible a du texte sélectionné ou pas, et pour les opérations de collage, si le presse-papiers contient quelque chose qui peut être collé. Comme vous pouvez le voir, cela devient compliqué. En utilisant les commandes, votre travail est simplifié.</p>
+<p>Vous pouvez utiliser une commande pour n'importe quelle opération. Mozilla les utilise la plupart du temps pour les menus. De plus, les champs de saisie de texte et autres composants graphiques disposent de plusieurs commandes natives que vous pouvez invoquer. Vous devriez les utiliser quand les opérations dépendent de l'élément sélectionné.</p>
+<p>Une commande est identifiée par son attribut <code id="a-id"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/id">id</a></code>. Mozilla utilise une convention : les id de commandes commencent par '<code>cmd_</code>'. Vous voudrez probablement utiliser le même identifiant que celui d'une commande déjà utilisée, cependant, pour vos propres commandes, vous pouvez utiliser n'importe quel id de commande souhaité. Pour éviter les conflits, il est préférable d'inclure le nom de l'application dans l'id de la commande. Un moyen simple d'utilisation des commandes est montré ci-après :</p>
+<h4 id="Exemple.C2.A0_command_simple" name="Exemple.C2.A0:_command_simple">Exemple : <code>command</code> simple</h4>
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_commands_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_commands_1.xul">Voir</a>.</p>
+<pre>&lt;command id="cmd_openhelp" oncommand="alert('Aide !');"/&gt;
+&lt;button label="Aide" command="cmd_openhelp"/&gt;
+</pre>
+<p>Dans cet exemple, au lieu de placer l'attribut <code id="a-oncommand"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/oncommand">oncommand</a></code> sur l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/button" title="button">button</a></code>, nous le plaçons sur un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/command" title="command">command</a></code>. Les deux sont alors liés en utilisant l'attribut <code id="a-command"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/command">command</a></code> qui a la valeur de l'id de la commande. Ainsi, quand le bouton est pressé, la commande '<code>cmd_openhelp</code>' est invoquée.</p>
+<p>Cette approche présente deux avantages.</p>
+<ul> <li>Premièrement, Elle déplace toutes les opérations dans des commandes qui peuvent être toutes regroupées dans une seule section de fichier XUL. Cela signifie que le code est au même endroit, n'est pas éparpillé dans tout le code de l'interface utilisateur.</li> <li>Le second avantage est que différents boutons et autres éléments de l'interface graphique peuvent être rattachés à une même commande. Par exemple, vous pouvez avoir un item de menu, un bouton d'une barre de boutons et un raccourci clavier pour effectuer la même opération. Plutôt que de répéter le code trois fois, vous pouvez rattacher ces trois éléments à la même commande. Normalement, vous rattacherez seulement les éléments pouvant générer un événement de commande.</li>
+</ul>
+<p>De plus,</p>
+<ul> <li>si vous définissez l'attribut <code id="a-disabled"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/disabled">disabled</a></code> sur une commande, elle sera désactivée et ne pourra pas être invoquée.</li> <li>tous les boutons et les items de menus qui lui sont rattachés seront désactivés automatiquement.</li> <li>si vous réactivez la commande, les boutons deviendront de nouveau actifs.</li>
+</ul>
+<h4 id="Exemple.C2.A0_Activer.2FD.C3.A9sactiver_command" name="Exemple.C2.A0:_Activer.2FD.C3.A9sactiver_command">Exemple : Activer/Désactiver <code>command</code></h4>
+<p><span id="Exemple_2"><a id="Exemple_2"></a><strong>Exemple 2</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_commands_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_commands_2.xul">Voir</a></p>
+<pre>&lt;command id="cmd_openhelp" oncommand="alert('Aide');"/&gt;
+&lt;button label="Aide" command="cmd_openhelp"/&gt;
+&lt;button label="Plus d'aide" command="cmd_openhelp"/&gt;
+
+&lt;button label="Désactiver" oncommand="document.getElementById('cmd_openhelp').setAttribute('disabled','true');"/&gt;
+&lt;button label="Activer" oncommand="document.getElementById('cmd_openhelp').removeAttribute('disabled');"/&gt;
+</pre>
+<p>Dans cet exemple, les deux boutons utilisent la même commande. Quand le bouton « Désactiver » est pressé, la commande est désactivée en définissant son attribut <code id="a-disabled"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/disabled">disabled</a></code>, et les deux boutons seront aussi désactivés.</p>
+<p>Habituellement, un groupe de commandes se place à l'intérieur d'un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/commandset" title="commandset">commandset</a></code>, près du début du fichier XUL, comme dans l'exemple suivant :</p>
+<pre>&lt;commandset&gt;
+   &lt;command id="cmd_open" oncommand="alert('Ouvrir !');"/&gt;
+   &lt;command id="cmd_help" oncommand="alert('Aide !');"/&gt;
+&lt;/commandset&gt;
+</pre>
+<p>Une commande est invoquée quand l'utilisateur active le bouton ou les autres éléments rattachés à la commande. Vous pouvez aussi invoquer une commande en appelant la méthode <code><span id="m-doCommand"><code><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Méthodes/doCommand">doCommand</a></code></span></code>, que ce soit de l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/command" title="command">command</a></code> ou d'un élément rattaché à la commande, comme un bouton.</p>
+<h3 id="Le_r.C3.A9partiteur_de_commandes" name="Le_r.C3.A9partiteur_de_commandes">Le répartiteur de commandes</h3>
+<p>Vous pouvez aussi utiliser les commandes sans utiliser l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/command" title="command">command</a></code>, ou, au moins, sans ajouter un attribut <code id="a-oncommand"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/oncommand">oncommand</a></code> sur la commande. Dans ce cas, la commande n'invoquera pas un script directement, mais recherchera plutôt un élément ou une fonction qui traitera la commande. Cette fonction peut être séparée du XUL lui-même, et peut être embarquée par un élément graphique en interne. Afin de trouver ce qui traitera la commande, XUL utilise un objet appelé répartiteur de commande (<abbr title="Note du traducteur">NdT</abbr> : command dispatcher). Cet objet localise le gestionnaire d'une commande. Le gestionnaire d'une commande est appelé contrôleur. Ainsi, quand une commande est invoquée, le répartiteur de commande localise un contrôleur qui traite la commande. Vous pouvez déduire que l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/command" title="command">command</a></code> est un type de contrôleur pour une commande.</p>
+<p>Le répartiteur de commandes localise un contrôleur en regardant l'élément sélectionné pour voir s'il a un contrôleur qui gère la commande. Les éléments XUL ont une propriété <code>controllers</code> qui est utilisée pour la vérification. Vous pouvez l'utiliser pour ajouter vos propres contrôleurs. Vous pourriez l'utiliser pour avoir une boîte de liste qui répond aux opérations de couper, copier et coller. Un exemple sera fourni plus tard. Par défaut, seuls les champs de saisie (<code>textbox</code>) ont un contrôleur fonctionnel. Ce contrôleur gère aussi bien les opérations de presse-papiers, sélection, défaire et refaire, que les opérations d'édition. Notez qu'un élément peut avoir plusieurs contrôleurs, qui seront alors tous pris en compte.</p>
+<p>Si l'élément courant sélectionné n'a pas le contrôleur attendu, la fenêtre sera alors vérifiée. L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/window" title="window">window</a></code> a aussi une propriété <code>controllers</code> que vous pouvez modifier comme bon vous semble. Si le focus est à l'intérieur d'un cadre frame, chaque cadre parent est également vérifié. Ainsi, les commandes fonctionneront même si le focus est à l'intérieur d'un cadre. Ce mécanisme fonctionne bien pour un navigateur ; les commandes d'édition invoquées à partir du menu principal fonctionneront à l'intérieur de la zone de contenu. Notez que HTML a aussi un système de commandes et de contrôleur, bien que vous ne puissiez pas l'utiliser sur des pages Web sans privilèges. Mais vous pouvez l'utiliser, par exemple, dans une extension du navigateur. Si la fenêtre ne fournit pas un contrôleur capable de gérer la commande, rien ne se passera.</p>
+<p>Vous pouvez récupérer le répartiteur de commande en utilisant la propriété <code>commandDispatcher</code> de l'objet <code>document</code>, ou à partir des contrôleurs listés dans un élément ou la fenêtre. Le répartiteur de commande contient des méthodes pour récupérer les contrôleurs pour les commandes et pour récupérer et modifier le focus.</p>
+<h4 id="Ajout_de_contr.C3.B4leurs" name="Ajout_de_contr.C3.B4leurs">Ajout de contrôleurs</h4>
+<p>Vous pouvez implémenter vos propres contrôleurs pour répondre aux commandes. Vous pouvez tout aussi bien surcharger la gestion par défaut d'une commande en plaçant le contrôleur correctement. Un contrôleur doit implémenter quatre méthodes qui sont listées ci-dessous :</p>
+<dl> <dt>supportsCommand (command) </dt> <dd>Cette méthode doit renvoyer 'true' si le contrôleur gère la commande. Si vous renvoyez 'false', la commande n'est pas gérée et le répartiteur de commande interrogera un autre contrôleur. Un contrôleur peut gérer plusieurs commandes.</dd>
+</dl>
+<dl> <dt>isCommandEnabled (command) </dt> <dd>Cette méthode doit renvoyer 'true' si la commande est activée, 'false' sinon. Les boutons correspondants seront désactivés automatiquement.</dd>
+</dl>
+<dl> <dt>doCommand (command) </dt> <dd>exécute la commande. C'est ici que vous mettrez le code pour gérer la commande.</dd>
+</dl>
+<dl> <dt>onEvent (event) </dt> <dd>Cette méthode gère un événement.</dd>
+</dl>
+<h4 id="Exemple.C2.A0_impl.C3.A9mentation_d.27un_contr.C3.B4leur" name="Exemple.C2.A0:_impl.C3.A9mentation_d.27un_contr.C3.B4leur">Exemple : implémentation d'un contrôleur</h4>
+<p>Imaginons que nous voulions implémenter une boîte de liste (<code><a href="/fr/docs/Mozilla/Tech/XUL/listbox" title="listbox">listbox</a></code>) qui gère la commande « Supprimer ». Quand un utilisateur sélectionne « Supprimer » dans le menu, la boîte de liste efface la ligne sélectionnée. Dans ce cas, vous avez juste à attacher un contrôleur à l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/listbox" title="listbox">listbox</a></code> qui exécutera l'action correspondante dans sa méthode <code>doCommand</code>.</p>
+<p>Essayez d'ouvrir l'exemple qui suit (<a href="https://developer.mozilla.org/samples/xultu/examples/commands.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/commands.xul">Voir</a>) dans une fenêtre du navigateur et sélectionnez des items de la liste. Vous noterez que la commande « Supprimer » du menu « Edition » du navigateur est activée et qu'elle effacera la ligne sélectionnée. L'exemple n'est cependant pas complet. Nous devrions nous assurer que la sélection et le focus soient ajustés comme il faut après l'effacement.</p>
+<pre>&lt;window id="controller-example" title="Exemple de contrôleur" onload="init();"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;script&gt;
+function init()
+{
+  var list = document.getElementById("theList");
+
+  var listController = {
+    supportsCommand : function(cmd){ return (cmd == "cmd_delete"); },
+    isCommandEnabled : function(cmd){
+      if (cmd == "cmd_delete") return (list.selectedItem != null);
+      return false;
+    },
+    doCommand : function(cmd){
+      list.removeItemAt(list.selectedIndex);
+    },
+    onEvent : function(evt){ }
+  };
+
+  list.controllers.appendController(listController);
+}
+&lt;/script&gt;
+
+&lt;listbox id="theList"&gt;
+  &lt;listitem label="Océan"/&gt;
+  &lt;listitem label="Désert"/&gt;
+  &lt;listitem label="Jungle"/&gt;
+  &lt;listitem label="Marécage"/&gt;
+&lt;/listbox&gt;
+
+&lt;/window&gt;
+</pre>
+<p>Le contrôleur <code>listController</code> implémente les quatre fonctions décrites plus haut. La méthode <code>supportsCommand</code> renvoie 'true' pour la commande 'cmd_delete', qui est le nom de la commande utilisée lorsque l'item de menu « Supprimer » est sélectionné. Pour les autres commandes, 'false' est renvoyé puisque le contrôleur ne gère aucune autre commande. Si vous voulez gérer d'autres commandes, vous devrez les tester ici, car il est fréquent d'un simple contrôleur gère de multiples commandes apparentées.</p>
+<p>La méthode <code>isCommandEnabled</code> renvoie 'true' si la commande est activée. Dans le cas présent, nous vérifions s'il y a un item sélectionné dans la liste et renvoyons 'true' si c'est le cas. S'il n'y a pas de sélection, 'false' est renvoyé. Si vous effacez toutes les lignes dans l'exemple, la commande « Supprimer » deviendra inactive. Vous devrez cliquer sur la liste pour mettre à jour le menu dans cet exemple simple. La méthode <code>doCommand</code> sera appelée lorsque l'item de menu « Supprimer » sera sélectionné, et elle provoquera l'effacement de la ligne sélectionnée dans la liste. Rien ne doit se produire pour la méthode <code>onEvent</code>, aussi nous n'ajouterons pas de code pour celle-ci.</p>
+<h4 id="Surcharger_un_contr.C3.B4leur_par_d.C3.A9faut" name="Surcharger_un_contr.C3.B4leur_par_d.C3.A9faut">Surcharger un contrôleur par défaut</h4>
+<p>Nous attachons ce contrôleur à l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/listbox" title="listbox">listbox</a></code> en appelant la méthode <code>appendController</code> des objets contrôleurs de la liste. L'objet <a class="external" href="http://www.xulplanet.com/references/xpcomref/ifaces/nsIControllers.html">controller</a> a un certain nombre de méthodes qui peuvent être utilisées pour manipuler les contrôleurs. Par exemple, il possède une méthode <code>insertControllersAt</code> qui insère un contrôleur dans un élément avant les autres. Elle peut être utile pour surcharger des commandes. Par exemple, le code suivant désactivera le collage du presse-papiers dans un champ de saisie.</p>
+<pre>var tboxController = {
+  supportsCommand : function(cmd){ return (cmd == "cmd_paste"); },
+  isCommandEnabled : function(cmd){ return false; },
+  doCommand : function(cmd){ },
+  onEvent : function(evt){ }
+};
+
+document.getElementById("tbox").controllers.insertControllerAt(0,tboxController);
+</pre>
+<p>Dans cet exemple, nous insérons le contrôleur à l'index '0', c'est-à-dire avant tous les autres. Le nouveau contrôleur supporte la commande 'cmd_paste' et indique qu'elle est désactivée. Le contrôleur par défaut de <code><a href="/fr/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code> ne sera jamais appelé parce que le répartiteur de commande trouve un contrôleur avant celui-ci, prenant en charge la commande en premier.</p>
+<hr>
+<p>Dans la section suivante, nous allons voir comment mettre à jour les commandes.</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Focus_et_Selection" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Mise_à_jour_de_commandes">Suivant  »</a></p>
+</div>
+<p><span class="comment">Interwiki</span></p>

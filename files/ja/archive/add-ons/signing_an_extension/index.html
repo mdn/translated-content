@@ -1,0 +1,62 @@
+---
+title: 拡張機能への署名
+slug: Archive/Add-ons/Signing_an_extension
+tags:
+  - Add-ons
+  - Administration
+  - Extensions
+  - Themes
+  - XPInstall
+  - enterprise
+translation_of: Archive/Add-ons/Signing_an_extension
+---
+<p>この記事では、Object Signing 対応コードサイニング証明書を利用して、Firefox や Thunderbird の<a href="/ja/Extensions" title="ja/Extensions">拡張機能</a>にデジタル署名を付ける方法について説明します。なお、以下の手順は、<a href="/ja/Themes" title="ja/Themes">テーマ</a>など他の <a href="/ja/XPI" title="ja/XPI">XPI</a> ファイルにも当てはまります。</p>
+<p>ここで説明する手順は、Mac を使用し、既に認証局から正規の証明書を取得していることを前提としています。</p>
+<h2 id="署名ツールの入手">署名ツールの入手</h2>
+<p>署名には <a href="/ja/NSS" title="ja/NSS">NSS</a> を使用します。これは <a class="external" href="http://www.macports.org/">MacPorts</a> で簡単にインストールできます。</p>
+<pre>sudo port install nss</pre>
+<h2 id="証明書のエクスポート">証明書のエクスポート</h2>
+<p>証明書が Firefox にインストールされている場合は、以下の手順でエクスポートします。筆者がベリサインから購入した証明書は Windows 版 Firefox へ直接インストールされました。</p>
+<ol> <li>[Firefox] ボタンをクリックし、[オプション] を選択します。</li> <li>オプション画面が開いたら、[詳細] パネルを開き、[暗号化] タブを選択します。</li> <li>[証明書を表示] ボタンをクリックします。</li> <li>証明書マネージャが開いたら、[あなたの証明書] タブを選択します。</li> <li>自分の組織の証明書を選択して [バックアップ] ボタンをクリックします。</li> <li>ファイル名を入力します。例「<code>codesign.p12</code>」</li> <li>証明書のバックアップファイルを保護するパスワードを入力し、[OK] ボタンをクリックします。</li> <li>デスクトップに P12 ファイルがエクスポートされます。</li>
+</ol>
+<h2 id="証明書データベースの作成">証明書データベースの作成</h2>
+<p>署名をするには、まず証明書データベースを作成する必要があります。</p>
+<pre>mkdir keystore
+cd keystore
+nss-certutil -N -d .</pre>
+<p>パスワードを聞かれますので、強固なパスワードを設定します。これで <code>cert8.db</code>、<code>key3.db</code>、<code>secmod.db</code> が作成されます。次に、上でエクスポートした証明書をインポートします。</p>
+<pre>nss-pk12util -i codesign.p12 -d .</pre>
+<p>データベース内の証明書を確認します。</p>
+<pre>nss-certutil -L -d .</pre>
+<p>ルート証明書と中間証明書の信頼を設定します。これはベリサインの例です。</p>
+<pre>nss-certutil -M -n "Verisign Class 3 Public Primary Certification Authority" -t "C,C,C" -d .
+nss-certutil -M -n "VeriSign Class 3 Public Primary Certification Authority - G5 - VeriSign, Inc." -t "C,C,C" -d .
+nss-certutil -M -n "VeriSign Class 3 Code Signing 2010 CA - VeriSign, Inc." -t "C,C,C" -d .</pre>
+<p>これでデータベースの準備は完了です。</p>
+<h2 id="署名">署名</h2>
+<p>署名ツールの基本的な使い方は以下の通りです。</p>
+<pre>nss-signtool \
+ -d (証明書データベースファイルを含むディレクトリへのパス) \
+ -k (証明書のニックネーム) \
+ -p (証明書のパスワード) \
+ -X -Z (署名済みファイルの出力先パス＋ファイル名) \
+ (<strong>chrome</strong> ディレクトリ、<strong>chrome.manifest</strong> ファイル、<strong>install.rdf</strong>
+   ファイルなどを含む拡張機能の作業ディレクトリへのパス)
+</pre>
+<p>パスワードを直接スクリプトに記述するのは危険ですので、実際には以下のように使うと良いでしょう。</p>
+<pre>echo "Enter password for Object Signing:"
+read MYPASSWORD
+nss-signtool \
+ -d <em>/Volumes/Codesign/keystore</em> \
+ -k "<em>My Company の VeriSign, Inc. ID</em>" \
+ -p $MYPASSWORD \
+ -X -Z <em>~/Desktop/MyExtension/dest/MyExtension-1.0.xpi</em> \
+ <em>~/Desktop/MyExtension/source</em>
+unset MYPASSWORD</pre>
+<p>これで署名付き XPI ファイルが生成されます。</p>
+<h2 id="確認">確認</h2>
+<p>XPI ファイルを Firefox のコンテンツエリアにドラッグ＆ドロップして、インストールダイアログを表示します。ファイル名とともに、あなたの組織名が表示されているはずです。</p>
+<h2 id="参考資料">参考資料</h2>
+<ul> <li><a href="/ja/Signing_a_XPI" title="ja/Signing_a_XPI">Signing a XPI</a> - テスト手順も含めた詳しい解説です。</li> <li><a class="link-https" href="https://addons.mozilla.org/ja/firefox/addon/4471">Key Manager</a> - XPI への署名機能を備えた Firefox の拡張機能</li> <li><a class="external" href="http://oyoy.eu/huh/firefox-extension-code-signed-with-spc-pvk/">Signing a Firefox extension with a Windows Authenticode SSL certificate / key</a> - 認証局 (CA) によっては、Authenticode 証明書を Object Signing に転用することを許可 (あるいはサポート) していない場合がありますので、注意が必要です。必ず利用規約を確認してください。</li> <li><a href="/ja/Signing_an_executable_with_Authenticode" title="ja/Signing_an_executable_with_Authenticode">Authenticode による実行ファイルへの署名</a> - 実行ファイル (exe) への署名手順はこちらを参照してください。</li>
+</ul>
+<p></p>

@@ -1,0 +1,105 @@
+---
+title: 理解 Gaia 代码库
+slug: Archive/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase
+tags:
+  - B2G
+  - Code
+  - Firefox OS
+  - Gaia
+  - Guide
+  - JavaScript
+  - contribution
+translation_of: Archive/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase
+---
+<div class="summary">
+ <p><span class="seoSummary">在对 </span><span class="seoSummary"><a href="https://github.com/mozilla-b2g/gaia/">Gaia codebase</a></span><span class="seoSummary">作出您自己的修改之前，您需要理解下Gaia 的基本构成以及使用的编码规则。本文则涵盖了这些这些方面。</span></p>
+</div>
+<h2 id="Gaia_代码库结构">Gaia 代码库结构</h2>
+<p>下面的部分则概述了 Gaia 代码库最重要的部分。</p>
+<h3 id="apps">apps/</h3>
+<p>此目录包括所有的主 Gaia apps， 在 homescreen 中显示的 app（如 calendar 和 camera）和底层 app（如 system, homescreen 和 keyboard ) 。<br>
+ <br>
+ app 工作方式略有不同，但有许多公共的特点，包括：</p>
+<ul>
+ <li><code>index.html</code>: 每个 app的中心文件</li>
+ <li><code>manifest.webapp</code>: 定义 app 的清单文件</li>
+ <li><code>locales</code>: app 的本地化字符串</li>
+ <li><code>test</code>: 针对 app 的 单元和集成测试</li>
+ <li><code>js</code>, <code>style</code>: app 的 脚本和样式</li>
+ <li><code>resources</code>: 图片，声音以及其他的资源文件</li>
+</ul>
+<div class="note">
+ <p><strong>注意</strong>: 在 <a href="/zh-CN/Firefox_OS/Platform/Gaia/Gaia_apps">Gaia 应用指南</a> 一文中可获得更多关于 app 工作的内容。</p>
+</div>
+<h3 id="build">build/</h3>
+<p>包含编译脚本。</p>
+<h3 id="dev_apps">dev_apps/</h3>
+<p>文件夹中包含自定义的一些应用。例如，您可以包含一些自定义的 app。</p>
+<div class="note">
+ <p><strong>注意</strong>: 要获取更多关于 Gaia 自定义项的知识，请参考  <a href="/en-US/Firefox_OS/Developing_Firefox_OS/Market_customizations_guide">Market customizations guide</a>.</p>
+</div>
+<h3 id="keyboard">keyboard/</h3>
+<p> keyboard 文件夹包含了 keyboard 词典以及不同语言的布局。</p>
+<h3 id="locales">locales/</h3>
+<p>包含一个 JSON 文件，<code>languages_all.json</code>,  该文件定义了 Gaia 所支持的语言。要更深入的了解 apps 是如何本地化的，请参考  <a href="/en-US/Apps/Build/Localization/Getting_started_with_app_localization">Getting started with app localization</a>.</p>
+<h3 id="shared">shared/</h3>
+<p>此目录包含了多个应用使用的大量的资源文件；其中最重要的部分为：</p>
+<ul>
+ <li><code>gaia/shared/js</code>:  执行常用功能的 JavaScript 库</li>
+ <li><code>l10n.js</code>:  是一个本地化库，它会检测您的设备的本地化，使用 app  locales 文件夹下的字符串替换掉您app中的本地化字符串 (Localisable strings)。元素中需替换的本地字符串（Localisable strings）都带有 <code>data-l10n-id</code> 属性.</li>
+ <li><code>gaia/shared/locales</code>: 不同地域的本地化资源</li>
+ <li><code>gaia/shared/resources</code>: 常用资源，如图标，铃声和闹钟声音等。</li>
+ <li><code>gaia/shared/style</code>: 公共控件（如 按钮，进度条，工具栏，表格等）的样式表和其他样式资源。</li>
+ <li><code>gaia/shared/style_unstable</code>: 不稳定或正在测试的样式资源。</li>
+ <li><code>gaia/shared/test</code>: 定义集成和单元测试的 JavaScript 代码。</li>
+</ul>
+<h3 id="tools">tools/</h3>
+<p>tools 目录包含编译脚本和测试的工具。</p>
+<h2 id="Gaia_编码风格">Gaia 编码风格</h2>
+<p>Gaia 遵循 <a href="http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml">Google JavaScript coding style</a>.</p>
+<p>背景知识：</p>
+<ul>
+ <li>编码风格: <a href="/en-US/docs/Mozilla/Developer_guide/Coding_Style#General_practices">General practices</a></li>
+ <li>编码风格: <a href="/en-US/docs/Mozilla/Developer_guide/Coding_Style#JavaScript_practices">JavaScript practices</a></li>
+ <li>编码风格: <a href="/en-US/docs/Mozilla/Developer_guide/Coding_Style#Naming_and_Formatting_code">Naming and formatting code</a></li>
+</ul>
+<h3 id="具体规则">具体规则</h3>
+<ol>
+ <li>确保 HTML 文件都带有 <code>&lt;!DOCTYPE html&gt;</code>  声明（也就是 HTML5 文档）。如果您不这么做， Internet Explorer 9 以及后续的版本会以兼容模式来装载它们。</li>
+ <li>包含 <code>"use strict";</code> 这个语句（就像刚才写的一样，包含双引号）放在 Js 文件头部，会使 js 进入 strict 模式。</li>
+ <li>使用两个空格来缩进，而不是使用 tabs。</li>
+ <li>请使用换行符来分隔代码逻辑！</li>
+ <li>多单词的文件名称应该使用下划线字符来分隔单词，如<code>like_this.js</code>。</li>
+ <li>使用单引号而不是双引号来表示字符串。</li>
+ <li>使用扩展的条件结构:
+  <pre class="brush: js">Bad
+if (expression) doSomething();
+
+Correct
+if (expression) {
+  doSomething();
+}</pre>
+ </li>
+ <li>如果您修改 <a href="/en-US/Firefox_OS/Platform/Gaia/Gaia_apps/System">System app</a>，请阅读  <a href="https://groups.google.com/forum/#!msg/mozilla.dev.gaia/rEhSrw6XmT4/UNvE7qW9pgYJ">guidance listed here</a>.</li>
+</ol>
+<h3 id="每笔提交编码风格检查">每笔提交编码风格检查</h3>
+<p>在每个 commit 之前，通过调用  git pre-commit hook， Gaia 会使用  <a href="http://www.jshint.com/">jshint</a> 工具会自动对JS 编码风格进行检查。一旦您提交了对 Gaia 仓库的 Pull Request，  Travis (Github Continuous Integration) 服务器会运行这个工具来重复检查样式是否正确。</p>
+<p> precommit hook 脚本在<a href="https://github.com/mozilla-b2g/gaia/blob/master/tools/pre-commit">gaia/tools/pre-commit</a> 下，一旦  <code>make</code> 命令执行就会复制到 <code>.git/hooks</code> 文件夹 下。</p>
+<div class="note">
+ <p><strong>注意</strong>: 我们以前会使用  <a href="https://developers.google.com/closure/utilities/docs/linter_howto">gjslint</a> 来检查编码风格，但已将其弃用；而是使用 jshint 来产生更严格和更好的效果。从 Firefox OS 1.4 开始就一直使用 JSHint,  gjslint 只被用来检查一些还没有使用 JSHint 的旧文件。</p>
+</div>
+<h3 id="通过_Gaia_来手动运行_linting_检查">通过 Gaia 来手动运行 linting 检查</h3>
+<p>在提交 path 前我们推荐您在 patch 上手动运行 JSHint 来检查是否有任何样式上的错误。<br>
+ <br>
+ 您应该在 <a href="https://github.com/mozilla-b2g/gaia/tree/master/build/jshint">gaia/build/jshint</a> 目录下获取更多关于 Gaia 中 jshint 的细节；Gaia 为您提供了一个构建脚本，您可运行：</p>
+<pre class="brush: bash">$ make lint</pre>
+<p>来自动进行 gjshint 和 jshint 样式的检查。 或者您运行</p>
+<pre class="brush: bash">$ make hint</pre>
+<p>只运行 jshint 样式检查。</p>
+<div class="note">
+ <p><strong>注意</strong>: 如果您想要在不是用 Gaia 的情况下，自己安装 Jshint，可运行如下命令：</p>
+ <pre class="brush: bash">npm install jshint -g
+jshint myfile.js
+</pre>
+</div>
+<p> </p>

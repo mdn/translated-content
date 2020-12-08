@@ -1,0 +1,147 @@
+---
+title: nsILoginInfo
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsILoginInfo
+tags:
+  - Firefox 3
+  - MDC Project
+  - NeedsEditorialReview
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsILoginInfo
+---
+<p>
+<code>nsILoginInfo</code>はFirefox 3のログインマネージャにて格納されるログインのための情報を保持するオブジェクトです。
+</p><p>ログインを作成し、管理するには<a href="ja/NsILoginManager">nsILoginManager</a>を使用する必要があります。<a href="ja/Using_nsILoginManager">Using nsILoginManager</a>の例をご覧ください。
+</p><p><br>
+</p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/passwordmgr/public/nsILoginInfo.idl" rel="custom">toolkit/components/passwordmgr/public/nsILoginInfo.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">最終更新: Gecko 1.9 (Firefox 3)</span></div>
+</div>
+<p>Inherits from: <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
+</p><p>Implemented by: <code>@mozilla.org/login-manager/loginInfo;1</code>. インスタンスを作成するためには次の例を使用してください。
+</p>
+<pre class="eval">var myLoginInfo = Components.classes["@mozilla.org/login-manager/loginInfo;1"]
+                   .createInstance(Components.interfaces.nsILoginInfo);
+</pre>
+<h2 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E6.A6.82.E8.A6.81" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E6.A6.82.E8.A6.81">メソッドの概要</h2>
+<table class="standard-table"> <tbody><tr>
+<td> <code>void <a href="#init.28.29">init</a>(in AString aHostname, in AString aFormSubmitURL, in AString aHttpRealm, in AString aUsername, in AString aPassword, in AString aUsernameField, in AString aPasswordField);</code>
+</td></tr>
+<tr>
+<td> <code>boolean <a href="#equals.28.29">equals</a>(in nsILoginInfo aLoginInfo);</code>
+</td></tr>
+<tr>
+<td> <code>boolean <a href="#equalsIgnorePassword.28.29">equalsIgnorePassword</a>(in nsILoginInfo aLoginInfo);</code>
+</td></tr>
+</tbody></table>
+<h2 id=".E5.B1.9E.E6.80.A7" name=".E5.B1.9E.E6.80.A7">属性</h2>
+<table class="standard-table"> <tbody><tr>
+<td class="header">属性
+</td><td class="header">型
+</td><td class="header">記述
+</td></tr> <tr>
+<td><code>hostname</code>
+</td><td><code><a href="ja/AString">AString</a></code>
+</td><td> ログインが実行されるホストの名前。URLとしてフォーマットされます。（例として、"<a class=" external" href="http://www.wite.com" rel="freelink">http://www.wite.com</a>")。ポート番号(":123")が追加されることもあるでしょう。
+</td></tr>
+<tr>
+<td><code>formSubmitURL</code>
+</td><td><code><a href="ja/AString">AString</a></code>
+</td><td> フォームベースのログインがサブミットされるURL。HTMLフォームから獲得されるログイン向けにはこのフィールドは<code>form</code>要素の<code>action</code>属性になり、パスは削除されます（例として、"<a class=" external" href="http://www.site.com" rel="freelink">http://www.site.com</a>"）。<code>action</code>属性のないフォームはデフォルトとしてフォームの元のURLにサブミットされます。そのためにそれはここに格納されます。このフィールドはログインがプロトコル認証から得られた場合には<code>NULL</code>です。
+</td></tr>
+<tr>
+<td><code>httpRealm</code>
+</td><td><code><a href="ja/AString">AString</a></code>
+</td><td> ログインが要求されたHTTP Realm。HTTPサーバが401の結果を返した時、WWW-Authenticateヘッダは"保護空間"を特定するRealmを含みます。<a class="external" href="http://www.ietf.org/rfc/rfc2617.txt"></a><a class="external" href="http://tools.ietf.org/html/rfc2617" title="http://tools.ietf.org/html/rfc2617">RFC 2617</a>を参照してください。結果に realm が含まれていなかった場合、あるいは空白だった場合は、代わりにホスト名が使われます。HTMLフォームから獲得されたログインに関してはこのフィールドは<code>NULL</code>です。
+</td></tr>
+<tr>
+<td><code>username</code>
+</td><td><code><a href="ja/AString">AString</a></code>
+</td><td> ログインのユーザ名
+</td></tr>
+<tr>
+<td><code>usernameField</code>
+</td><td><code><a href="ja/AString">AString</a></code>
+</td><td> フォーム内のユーザ名入力フィールドの<code>name</code>属性。フォームを利用しないログインでは、空白の文字列 ("") を指定する必要があります。
+</td></tr>
+<tr>
+<td><code>password</code>
+</td><td><code><a href="ja/AString">AString</a></code>
+</td><td> ログインのパスワード。
+</td></tr>
+<tr>
+<td><code>passwordField</code>
+</td><td><code><a href="ja/AString">AString</a></code>
+</td><td> パスワード入力フィールドの<code>name</code>属性。プロトコル認証から獲得されたログインではこのフィールドは<code>NULL</code>になります。
+</td></tr>
+</tbody></table>
+<h2 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89">メソッド</h2>
+<h3 id="init.28.29" name="init.28.29">init()</h3>
+<p>新しく作成されたnsILoginInfoオブジェクトを初期化します。
+</p>
+<pre class="eval"> void init(in AString aHostname,
+   in AString aFormSubmitURL,
+   in AString aHttpRealm,
+   in AString aUsername,
+   in AString aPassword,
+   in AString aUsernameField,
+   in AString aPasswordField
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0" name=".E5.BC.95.E6.95.B0">引数</h6>
+<dl><dt>&lt;tt&gt;aHostname&lt;/tt&gt;
+</dt><dd><code>hostname</code>フィールドに割り当てられる値
+</dd><dt>&lt;tt&gt;aFormSubmitURL&lt;/tt&gt;
+</dt><dd><code>formSubmitURL</code>フィールドに割り当てられる値
+</dd><dt>&lt;tt&gt;aHttpRealm&lt;/tt&gt;
+</dt><dd><code>httpRealm</code>フィールドに割り当てられる値
+</dd><dt>&lt;tt&gt;aUsername&lt;/tt&gt;
+</dt><dd><code>username</code>フィールドに割り当てられる値
+</dd><dt>&lt;tt&gt;aPassword&lt;/tt&gt;
+</dt><dd><code>password</code>フィールドに割り当てられる値
+</dd><dt>&lt;tt&gt;aUsernameField&lt;/tt&gt;
+</dt><dd><code>usernameField</code>フィールドに割り当てられる値
+</dd><dt>&lt;tt&gt;aPasswordField&lt;/tt&gt;
+</dt><dd><code>passwordField</code>フィールドに割り当てられる値
+</dd></dl>
+<h3 id="equals.28.29" name="equals.28.29">equals()</h3>
+<p>このログインが別の<code>nsILoginInfo</code>オブジェクトと完全に等しいかどうか確定する
+</p>
+<pre class="eval"> boolean equals(
+   in nsILoginInfo aLoginInfo
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_2" name=".E5.BC.95.E6.95.B0_2">引数</h6>
+<dl><dt>&lt;tt&gt;aLoginInfo&lt;/tt&gt;
+</dt><dd>等しさを比較するログイン
+</dd></dl>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4" name=".E6.88.BB.E3.82.8A.E5.80.A4">戻り値</h6>
+<p>もし二つのログインが完全に等しければ<code>true</code>、そうでなければ<code>false</code>。
+</p>
+<h3 id="matches.28.29" name="matches.28.29">matches()</h3>
+<p>このログインが他の <code>nsILoginInfo</code> オブジェクトとほぼ等しいかどうかを判別するテストを行います。<code>passwordField</code> と <code>usernameField</code> の値は無視され、<code>password</code> の値も任意で無視できます。このログインの <code>formSubmitURL</code> が空白の文字列である (かつ null でない) 場合は、ワイルドカードと同等に扱われます。
+</p>
+<pre class="eval"> boolean matches(
+   in nsILoginInfo aLoginInfo,
+   in boolean      ignorePassword
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_3" name=".E5.BC.95.E6.95.B0_3">引数</h6>
+<dl><dt>&lt;tt&gt;aLoginInfo&lt;/tt&gt;
+</dt><dd>等しさを比較するログイン
+</dd></dl>
+<dl><dt>&lt;tt&gt;ignorePassword&lt;/tt&gt;
+</dt><dd>true の場合、判別時にパスワードの値を検査しません。
+</dd></dl>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4_2" name=".E6.88.BB.E3.82.8A.E5.80.A4_2">戻り値</h6>
+<p>2つのログインが同等ならば<code>true</code>、等しくなければ<code>false</code>。
+</p>
+<h2 id=".E5.8F.82.E7.85.A7" name=".E5.8F.82.E7.85.A7">参照</h2>
+<h2 id="See_also" name="See_also">See also</h2>
+<p><a href="ja/NsILoginManager">nsILoginManager</a>, <a href="ja/Using_nsILoginManager">Using nsILoginManager</a>
+</p>

@@ -1,0 +1,88 @@
+---
+title: 版本格式说明
+slug: Mozilla/Toolkit_version_format
+tags:
+  - Toolkit API
+translation_of: Mozilla/Toolkit_version_format
+---
+<p>本文档是 Firefox 1.5（XULRunner 1.8）及更高版本中使用的版本格式的参考。此格式由扩展管理器，软件更新和平台其他部分的使用。至少以下位置的版本必须符合以下格式：</p>
+
+<ul>
+ <li><a href="zh-CN/docs/Install_Manifests#version">插件</a>和<a href="zh-CN/docs/Install_Manifests#targetApplication">目标应用</a>版本<a href="zh-CN/docs/Install_Manifests">安装</a>和<a href="zh-CN/docs/Update_Manifest">更新</a>清单</li>
+ <li><code><font face="Open Sans, arial, sans-serif">在 </font>app.extensions.version</code> 和 <code>extensions.lastAppVersion</code> 中</li>
+ <li><a href="zh-CN/docs/NsIXULAppInfo">nsIXULAppInfo</a> 返回的版本</li>
+ <li><a href="zh-CN/docs/XULRunner">XULRunner</a> 中的 <a href="zh-CN/docs/XUL_Application_Packaging"><code>application.ini</code></a></li>
+ <li><a href="zh-CN/docs/Chrome_Registration">chrome manifests</a> 中的 <a href="zh-CN/docs/Chrome_Registration#appversion">appversion flag</a></li>
+</ul>
+
+<p>您可以使用 {{ interface("nsIVersionComparator") }} 来比较应用程序的版本。</p>
+
+<p>有关 Firefox / Thunderbird 1.0 中使用的旧版本格式的说明，请参阅 {{ Anch("Older version formats") }}.</p>
+
+<h3 id="Version_format" name="Version_format">版本格式</h3>
+
+<p>版本字符串由一个或多个版本部分组成，用点分隔。</p>
+
+<p>每个版本的一部分本身解析为四个部分组成一个序列：<code>&lt;number-a&gt;&lt;string-b&gt;&lt;number-c&gt;&lt;string-d&gt;. </code>每个部分都是可选的。数字是 10 进制的整数（可以是负数），字符串是非数字的ASCII字符。</p>
+
+<p>有效版本部分的几个例子：</p>
+
+<ul>
+ <li><code>0</code> (例如 <code>1.0</code>): <code>&lt;number-a&gt;=0</code></li>
+ <li><code>5a</code> (例如 <code>1.5a</code>): <code>&lt;number-a&gt;=5</code>, <code>&lt;string-b&gt;=a</code></li>
+ <li><code>5pre4</code> (例如 <code>3.5pre4</code>): <code>&lt;number-a&gt;=5</code>, <code>&lt;string-b&gt;=pre</code>, <code>&lt;number-c&gt;=4</code></li>
+ <li><code>*</code> (例如 <code>1.0.*</code>): <code>&lt;string-b&gt;=*</code></li>
+</ul>
+
+<p>应用一些特殊的解析规则来实现向后兼容性和可读性：</p>
+
+<ul>
+ <li>如果版本部分是单个星号，则将其解释为无限大的数字：<br>
+  <code>1.5.0.*</code> 和 <code>1.5.0.</code> 是相同的<em>(无限大)</em></li>
+ <li>如果 <code>&lt;string-b&gt;</code> 是加号，则 <code>&lt;number-a&gt;</code> 会增加以与 Firefox 1.0.x 兼容的版本格式：<br>
+  <code>1.0+</code> 和 <code>1.1pre</code> 是相同的</li>
+</ul>
+
+<p>当比较版本时，将版本分解为字符串部分和数字部分对应起来一一比较， 例如 <code>'1.0pre1' &lt; '1.0pre10'。</code>有关如何比较版本的详细信息，请参阅下一节。</p>
+
+<h3 id="Comparing_versions" name="Comparing_versions">比较版本</h3>
+
+<p>当比较两个版本字符串时，它们的版本部分将从左到右进行比较。空的或缺少的版本部分等于 0 。</p>
+
+<p>当一个版本字符串的版本部分大于另一个版本字符串的相应版本部分时，第一个版本字符串大于另一个版本字符串。</p>
+
+<p>否则，版本字符串相等。请注意，由于缺少的版本部分被视为 0，所以以下版本字符串相等： <code>1, 1.0, 1.0., 1.0.0, </code>还有 <code>1.0...</code></p>
+
+<h4 id="Comparing_version_parts" name="Comparing_version_parts">比较版本部分</h4>
+
+<p>版本部分也从左到右进行比较，将 <code>&lt;number-a&gt; </code>和 <code>&lt;number-c&gt; </code>作为数字进行比较，而 <code>&lt;string-b&gt; </code>和 <code>&lt;string-b&gt; </code>按字节比较。 存在的字符串部分始终小于不存在的字符串部分（如 <code>1.6a </code>小于<code>1.6</code>）。</p>
+
+<h3 id="Examples" name="Examples">一些例子</h3>
+
+<pre class="eval">1.-1
+&lt; 1 == 1. == 1.0 == 1.0.0
+&lt; 1.1a &lt; 1.1aa &lt; 1.1ab &lt; 1.1b &lt; 1.1c
+&lt; 1.1whatever
+&lt; 1.1pre == 1.1pre0 == 1.0+
+&lt; 1.1pre1a &lt; 1.1pre1aa &lt; 1.1pre1b &lt; 1.1pre1
+&lt; 1.1pre2
+&lt; 1.1pre10
+&lt; 1.1.-1
+&lt; 1.1 == 1.1.0 == 1.1.00
+&lt; 1.10
+&lt; 1.* &lt; 1.*.1
+&lt; 2.0
+</pre>
+
+<h3 id="Technical Reference" name="Technical Reference">技术参考</h3>
+
+<p>如果你有兴趣看 toolkit 版本比较的实现, 请参考 <a href="https://dxr.mozilla.org/mozilla-central/source/xpcom/glue/nsVersionComparator.cpp" title="http://mxr.mozilla.org/mozilla-central/source/xpcom/glue/nsVersionComparator.cpp">nsVersionComparator.cpp</a>.</p>
+
+<h3 id="Older_version_formats" name="Older_version_formats">旧版本的格式</h3>
+
+<p>Firefox 和 Thunderbird 1.0 使用简单的版本格式，即</p>
+
+<pre class="eval">major[.minor[.release[.build]]][+]
+</pre>
+
+<p>其中 <code>{{ mediawiki.external('..') }}</code> 表示可选部分， <code>major<font face="Open Sans, arial, sans-serif">，</font></code><code>minor</code>，<code>release </code>和 <code>build</code> 都是非负整数。</p>

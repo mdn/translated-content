@@ -1,0 +1,268 @@
+---
+title: Créer un thème
+slug: Archive/Themes/Creer_un_theme
+translation_of: Archive/Themes/Building_a_Theme
+---
+<h4 class="editable" id="Introduction"><span>Introduction</span></h4>
+
+<p>Ce tutoriel va vous mener à travers les étapes requises pour construire un <a class="internal" href="/Add-ons/Themes" title="en/Themes">thème</a> très basique qui va modifier la couleur de fond des barres d'outils dans Firefox.</p>
+
+<div class="note">
+<p><strong>Note :</strong> Ce tutoriel concerne la création de thèmes pour Firefox 29 et supérieur. D'autres tutoriels existent pour créer des thèmes destinés aux versions antérieurs de Firefox. Pour un ancien tutoriel, voir <a class="internal" href="/docs/Creating_a_Skin_for_Firefox_Getting_Started" title="en/Creating a Skin for Firefox//Getting Started">Créer un thème pour Firefox</a>.</p>
+</div>
+
+<div id="section_2">
+<div class="blockIndicator warning">
+<p class="editable"><strong>Note :</strong> FireFox pour Mac OS X utilise des répertoires qui ont été déplacés, ce qui peut rendre ce guide obsolète.</p>
+</div>
+
+<h4 class="editable" id="Mettre_en_place_l'environement_de_développement"><span>Mettre en place l'environement de développement</span></h4>
+
+<p>Les thèmes et extensions sont empaquetés et distribués dans des fichiers ZIP ou <a href="/docs/Bundles" rel="internal">Paquets</a>, avec l'extension de fichier <code>XPI</code> (<em>prononcé “zippy”</em>).</p>
+
+<p>Un exemple du contenu d'un fichier XPI typique d'un thème:</p>
+
+<pre class="eval">example.xpi:
+              /<a href="/Add-ons/Install_Manifests" rel="internal">install.rdf</a>
+              /<a href="/docs/Chrome_Registration" rel="internal">chrome.manifest</a>
+              /preview.png
+              /icon.png
+              /chrome/
+                     browser/
+                     communicator/
+                     global/
+                     mozapps/
+
+</pre>
+
+<p>Nous souhaitons créer une structure de fichier similaire à celle présentée ci-dessus pour notre tutoriel, donc commençons par créer un dossier pour votre thème quelque part sur votre disque dur (ex. : <code>C:\themes\mon_theme\</code> ou <code>~/themes/mon_theme/</code>). Dans votre nouveau dossier de thème, créez deux nouveaux fichiers texte vides, l'un nommé <code>chrome.manifest</code> et l'autre appelé <code>install.rdf</code>. Le fichier <code>preview.png</code> est montré comme une prévisulaisation du thème dans le paneau des thèmes de la fenêtre des modules complémentaires. Le fichier <code>icon.png</code> est utilisé comme une icône dans le même panneau. Nous les laisserons de côté pour l'instant, sauf si vous disposez déjà d'éléments graphiques que vous souhaitez utiliser.</p>
+
+<p>Les répertoires restants seront extraits depuis le thème par défaut. Pour commencer, vous devrez créer un répertoire quelque part. <strong>Copiez</strong> votre fichier <code>omni.ja</code> d'installation Firefox dans ce répertoire. La localisation diffère suivant le système d'exploitation :</p>
+
+<p><strong>Linux:</strong> <code>/usr/lib/MozillaFirefox/chrome/classic.jar</code> <em>ou</em> <code>/usr/lib/firefox-*.*.*/omni.ja</code></p>
+
+<p><strong>Windows:</strong> <code>\Program Files\Mozilla Firefox\omni.ja</code></p>
+
+<p><strong>Mac OS X: </strong><code>/Applications/Firefox.app/Contents/MacOS/omni.ja</code></p>
+
+<p>Maintenant, ouvrez (ou extrayez) ce fichier dans le répertoire que vous avez créé. Il contient plusieurs dossiers, <code>modules</code>, <code>jssubloader</code> et autres. Les fichiers dont vous aurez besoin sont situés dans le dossier <code>chrome\toolkit\skin\classic</code>.</p>
+
+<p>Créez un dossier nommé <code>chrome</code> dans le dossier de votre thème. Ensuite, le contenu des répertoires suivants dans leurs dossiers respectifs de ce dossier.</p>
+
+<ol>
+ <li><code>global</code> dans <code>chrome/global</code></li>
+ <li><code>mozapps</code> dans <code>chrome/mozapps</code></li>
+</ol>
+
+<p>À présent que vous avez copié les dossiers <code>global</code> et <code>mozapps</code>, une poignée d'autres dossiers de l'archive <code>browser/omni.ja</code> sont requis. Ils sont situés dans le dossier du navigateur à l'emplacement mentionné ci-dessus. Les fichiers dont nous aurons besoins dans l'archive browser/omni.ja sont situés dans <code>chrome/browser/skin/classic</code>.</p>
+
+<p>Copiez les contenus des répertoires suivants dans leurs dossiers respectifs. Ceci nous donnera une base de style avec laquelle nous allons commencer à travailler.</p>
+
+<ol>
+ <li><code>browser</code> dans <code>chrome/browser/</code></li>
+ <li><code>communicator</code> dans <code>chrome/communicator/</code></li>
+</ol>
+
+<p>La structure de vos répertoires doit être comme suit :</p>
+
+<pre>&lt;ext path&gt;/
+          /install.rdf
+          /chrome.manifest
+          /chrome/
+                 browser/
+                 communicator/
+                 global/
+                 mozapps/
+</pre>
+
+<p>Après ces étapes, nous vous recommandons de lire l'article <a href="/Add-ons/Setting_up_extension_development_environment" rel="internal">Setting up extension development environment</a> et les indications qui y sont données. En particulier, vous devrez installer le <a class="internal" href="/en/DOM_Inspector" title="en/DOM Inspector">DOM Inspector</a>, que nous utiliserons dans les étapes suivantes</p>
+</div>
+
+<div id="section_3">
+<h4 class="editable" id="Création_du_Manifeste_d'Installation_(Install_Manifest)">Création du Manifeste d'Installation (<em>Install Manifest</em>)<span> </span></h4>
+
+<p>Ouvrez le fichier nommé <code><a href="/Add-ons/Install_Manifests" rel="internal">install.rdf</a> </code>que vous avez créé en haut de la hierarchie de votre répertoire d'extention et ajoutez-y le contenu suivant :</p>
+
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+
+&lt;RDF xmlns="<a class="external" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rel="freelink">http://www.w3.org/1999/02/22-rdf-syntax-ns#</a>"
+     xmlns:em="<a class="external" href="http://www.mozilla.org/2004/em-rdf#" rel="freelink">http://www.mozilla.org/2004/em-rdf#</a>"&gt;
+
+  &lt;Description about="urn:mozilla:install-manifest"&gt;
+    &lt;em:id&gt;<strong><a class="link-mailto" href="mailto:sample@example.net" rel="external nofollow" title="mailto:sample@example.net">sample@example.net</a></strong>&lt;/em:id&gt;
+    &lt;em:version&gt;<strong>1.0</strong>&lt;/em:version&gt;
+    &lt;em:type&gt;<strong>4</strong>&lt;/em:type&gt;
+
+    &lt;!-- Target Application this theme can install into,
+         with minimum and maximum supported versions. --&gt;
+    &lt;em:targetApplication&gt;
+      &lt;Description&gt;
+        &lt;em:id&gt;<strong>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</strong>&lt;/em:id&gt;
+        &lt;em:minVersion&gt;<strong>29.0</strong>&lt;/em:minVersion&gt;
+        &lt;em:maxVersion&gt;32<strong>.*</strong>&lt;/em:maxVersion&gt;
+      &lt;/Description&gt;
+    &lt;/em:targetApplication&gt;
+
+    &lt;!-- Front End MetaData --&gt;
+    &lt;em:name&gt;<strong>My Theme</strong>&lt;/em:name&gt;
+    &lt;em:internalName&gt;<strong>sample</strong>&lt;/em:internalName&gt;
+    &lt;em:description&gt;<strong>A test extension</strong>&lt;/em:description&gt;
+    &lt;em:creator&gt;<strong>Your Name Here</strong>&lt;/em:creator&gt;
+    &lt;em:homepageURL&gt;<strong><a class="external" href="http://www.example.com/" rel="freelink">http://www.example.com/</a></strong>&lt;/em:homepageURL&gt;
+  &lt;/Description&gt;
+&lt;/RDF&gt;
+</pre>
+
+<ul>
+ <li><strong><a class="link-mailto" href="mailto:sample@example.net" rel="external nofollow" title="mailto:sample@example.net">sample@example.net</a></strong> - c'est l'ID de l'extension. Il s'agit d'un nom de votre choix qui permet d'identifier votre extension sous la forme d'une adresse courriel (notez que ce n'est pas <em>votre</em> adresse personnelle). Créez un nom unique. Vous pouvez vous aider d'un GUID. NOTE : ce paramètre DOIT être au format d'une adresse courriel, même si elle n'a PAS à être authentique et valide. (exemple.exemple.exemple)</li>
+ <li><strong>4</strong> - le type de l'add-on. '4' informe qu'il s'agit de l'installation d'un thème. Si vous souhaitiez installer une extension ce serait 2 (voir <a href="/Add-ons/Install_Manifests#type" rel="internal">Install Manifests#type</a> pour les autres types de codes).</li>
+ <li><strong>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</strong> - ID d'application de Firefox.</li>
+ <li><strong>29.0</strong> - Le numéro de la version exacte à partir de laquelle votre extension fonctionne. N'utilisez jamais une asterisque * dans minVersion, cela ne fera pas ce à quoi vous vous attendez.</li>
+ <li><strong>32.*</strong> - La version la plus récente de Firefox avec laquelle votre extension va fonctionner. Ne pas définir à une version plus récente que celle actuellement disponible ! Dans ce cas, "32.*" indique que l'extension fonctionne avec Firefox 32 et toutes les sous-version 32.x. Les thèmes sont compatibles par défaut, tant que vous ne définissez pas un mode de compatiblité stricte pour votre thème.</li>
+</ul>
+
+<p>Si vous obtenez un message qui vous informe que install.rdf est mal formé, il est utile de le charger dans Firefox en utilisant la commande Fichier-&gt;Ouvrir un fichier et il vous rapportera les erreurs XML.</p>
+
+<p>Voir <a href="/Add-ons/Install_Manifests" rel="internal">Install Manifests</a> pour une liste complète des propriétés requises et optionelles.</p>
+
+<p>Sauvegardez le fichier.</p>
+</div>
+
+<div id="section_4">
+<h4 class="editable" id="Styliser_l'interface_du_navigateur_avec_CSS">Styliser l'interface du navigateur avec CSS</h4>
+
+<p>L'interface utilisateur de Firefox est écrite en XUL et JavaScript. <a href="/docs/Mozilla/Tech/XUL" rel="internal">XUL</a> est une grammaire XML qui fournit des modules d'interface utilisateur comme les boutons, menus, barres d'outils, arbres, etc. Les actions utilisateur possèdent leurs fonctionnalités en utilisant du JavaScript. Ces éléments XUL sont stylisés en utilisant du <a class="internal" href="/en/CSS" title="en/CSS">CSS</a>. Si vous ne connaissez pas le CSS, ce sera une pente abrupte de votre apprentissage, et vous devriez essayer des tutoriels basés sur le HTML pour commencer.</p>
+
+<p>L'interface utilisateur du navigateur n'a absolument aucun style de base - si vous essayez de commencer avec un thème vide, Firefox deviendra inutilisable, car les boutons seront uniquement du texte. C'est pourquoi nous avons copié le style par défaut dans l'étape d'organisation.</p>
+
+<p>Lors de l'écriture d'un thème, la manière la plus simple de déterminer quels selecteurs CSS vous avez besoin d'écrire est d'utiliser l'inspecteur DOM que vous devriez avoir installé à l'étape d'organisation. Vous pouvez utiliser cela pour inspecter n'importe quel élément dans une page web ou un document XUL, ce qui en fait quelque chose d'important pour les thèmes.</p>
+
+<h4 class="editable" id="Modifier_le_style_de_la_barre_d'outils">Modifier le style de la barre d'outils</h4>
+
+<div class="note">
+<p><strong>Note</strong> Dans Firefox 4.0 et supérieur, l'option de surlignement de l'inspecteur DOM ne fonctionne plus. Pour contourner ça, désactivez l'accélération matérielle dans les options de Firefox.</p>
+</div>
+
+<p>Ouvrez maintenant l'inspecteur DOM (Dans le menu "Outils") et allez dans "Fichier-&gt;Inspecter le document chrome". Ce devrait être un menu contenant tous les documents XUL actuellement ouverts dans Firefox.<br>
+ Prenez le premier document avec un titre de page web, comme "Page de démarrage Firefox" et sélectionnez-le.</p>
+
+<p>Pour ce tutoriel, nous allons modifier la couleur de fond des barres d'outils. Sélectionnez l'outil de recherche de nœud (la case de la flèche pour en voir plus dans le coin en haut à gauche de l'inspecteur DOM) et cliquez dans n'importe quel espace non-utilisé d'une barre d'outils. Cela devrait sélectionner un nœud de type "xul:toolbar" dans l'inspecteur DOM.</p>
+
+<p>À partir d'ici, vous pouvez vous amuser avec différents styles pour la barre d'outils et les éléments associés. Par défaut, le panneau de droite devrait montrer le nœud DOM, qui possède des informations importantes comme la classe CSS et l'id de nœud. L'élément lui-même a le simple id <code>navigator-toolbox</code>, sans plus. Pour accorder son style avec notre thème, nous avons besoin d'écrire une règle de sélecteur pour sélectionner cette classe.</p>
+
+<p>Ouvrez le fichier <code>chrome/browser/browser.css</code> de votre thème. Cherchez dans ce fichier le sélecteur <code>#navigator-toolbox</code>, et ajoutez-lui cette règle<code> background: orange;</code></p>
+
+<p>Sauvegardez le fichier.</p>
+</div>
+
+<div id="section_6">
+<h4 class="editable" id="Chrome_URIs"><span>Chrome URIs</span></h4>
+
+<p><span id="result_box" lang="fr"><span>Ensuite, nous devons dire à Firefox où trouver les fichiers de thème pour votre thème.</span> <span>CSS, XUL et autres fichiers font partie de</span></span> "<a href="/docs/Chrome_Registration" rel="internal">Chrome Packages</a>" - <span id="result_box" lang="fr"><span>des composants d'interface utilisateur qui sont chargés via</span></span> <code><a class="external" rel="external nofollow" title="chrome://">chrome://</a></code> URIs. <span id="result_box" lang="fr"><span>Plutôt que de charger le navigateur depuis le disque</span></span> <code><a class="external" rel="external nofollow" title="file://">file://</a></code> <span id="result_box" lang="fr"><span>URI (car l'emplacement de Firefox sur le système peut changer d'une plateforme à l'autre), les développeurs de Mozilla ont mis au point une solution de création d'URI pour le contenu de l'add-on.</span></span></p>
+
+<p><span class="short_text" id="result_box" lang="fr"><span>La fenêtre du navigateur est:</span></span> <code><a class="external" rel="external nofollow" title="chrome://browser/content/browser.xul">chrome://browser/content/browser.xul</a></code>. <span id="result_box" lang="fr"><span>Essayez de taper cette URL dans la barre d'adresse dans Firefox !</span><br>
+ <br>
+ <span>Les URI de Chrome se composent de plusieurs composants:</span></span></p>
+
+<ul>
+ <li><span id="result_box" lang="fr"><span>Tout d'abord, le schéma URI (chrome) qui indique à la bibliothèque réseau de Firefox qu'il s'agit d'un URI de Chrome.</span> <span>Il indique que le contenu de l'URI doit être traité comme un (chrome).</span> <span>Comparez (chrome) à (http) qui indique à Firefox de traiter l'URI comme une page Web.</span></span></li>
+ <li><span id="result_box" lang="fr"><span>Deuxièmement, un nom de paquet (dans l'exemple ci-dessus, <strong>navigateur</strong>) qui identifie le paquet de composants d'interface utilisateur.</span></span></li>
+ <li><span id="result_box" lang="fr"><span>Troisièmement, le type de données demandées.</span> <span>Il existe trois types: le contenu (XUL, JavaScript, les liaisons XBL, etc., qui forment la structure et le comportement d'une interface utilisateur d'application), les paramètres régionaux (DTD, .properties, etc., qui contiennent des chaînes pour les UI</span></span> <a href="/docs/Glossary/Localization" rel="internal">localization</a>), <span class="short_text" id="result_box" lang="fr"><span>et l'apparence (CSS et images qui forment le</span></span> <a href="/Add-ons/Themes" rel="internal">theme</a> de l'UI).</li>
+ <li><span class="short_text" id="result_box" lang="fr"><span>Enfin, le chemin d'accès d'un fichier à charger.</span></span></li>
+</ul>
+
+<p>Alors, <code><a class="external" rel="external nofollow" title="chrome://foo/skin/bar.png">chrome://foo/skin/bar.png</a></code> <span id="result_box" lang="fr"><span>charge le fichier bar.png de la section skin du thème foo.</span></span></p>
+
+<p><span id="result_box" lang="fr"><span>Lorsque vous chargez du contenu à l'aide d'un URI Chrome, Firefox utilise le Registre Chrome pour traduire ces URI dans les fichiers source réels sur le disque (ou dans les packages JAR).</span></span></p>
+</div>
+
+<div id="section_7">
+<h4 class="editable" id="Creer_un_Chrome_Manifest"><span>Creer un Chrome Manifest</span></h4>
+
+<p><span id="result_box" lang="fr"><span>Le manifeste Chrome est le fichier qui mappe ces URI Chrome vers les fichiers de votre thème.</span> <span>Pour plus d'informations sur les Manifestes Google Chrome et les propriétés qu'ils prennent en charge,</span></span> <a href="/docs/Chrome_Registration" rel="internal">Chrome Manifest</a> reference.</p>
+
+<p><span id="result_box" lang="fr"><span>Ouvrez le fichier chrome.manifest que vous avez créé à côté du répertoire chrome à la racine de la hiérarchie des dossiers source de votre extension.</span><br>
+ <br>
+ <span>Ajouter dans ce code:</span></span></p>
+
+<pre class="eval">skin    browser         sample   chrome/browser/
+skin    communicator    sample   chrome/communicator/
+skin    global          sample   chrome/global/
+skin    mozapps         sample   chrome/mozapps/
+</pre>
+
+<p><span id="result_box" lang="fr"><span>N'oubliez pas la barre oblique, "/" !</span> <span>Sans elle, le paquet ne sera pas enregistré.</span> <span>La troisième colonne doit correspondre à la valeur Nom interne de votre thème à partir du manifeste d'installation ci-dessus.</span></span></p>
+
+<p><span id="result_box" lang="fr"><span>Cela liste les répertoires de l'apparence dans les emplacements de votre thème.</span> <span>Par exemple, le skin de l'explorateur de skin de ligne / navigateur / signifie "lorsque l'utilisateur a sélectionné l'exemple de thème sélectionné, utilisez le navigateur d'annuaire / pour rechercher des skins pour le package de navigateur".</span> <span>Plus concisément, cela signifie que l'URL</span></span> <a class="external" title="chrome://browser/skin/some/path/file.css">chrome://browser/skin/some/path/file.css</a> <span id="result_box" lang="fr"><span>recherchera un navigateur de fichiers / some / path / file.css dans le répertoire racine de votre thème.</span></span></p>
+
+<p>Enregistrer le fichier.</p>
+</div>
+
+<div id="section_9">
+<h4 class="editable" id="Test"><span>Test</span></h4>
+
+<p><span id="result_box" lang="fr"><span>Tout d'abord, nous devons informer Firefox de l'existence de votre thème.</span> <span>Depuis Firefox 2.0 et supérieur, a</span></span><span lang="fr"><span>u cours de la phase de développement , vous pouvez faire pointer Firefox vers le dossier où vous développez le thème et le charger à chaque redémarrage de Firefox.</span></span></p>
+
+<ol>
+ <li>Localisez votre <a class="external" href="http://kb.mozillazine.org/Profile_folder" rel="external nofollow" title="http://kb.mozillazine.org/Profile_folder">dossier de prifil</a> <span id="result_box" lang="fr"><span>et en dessous le profil avec lequel vous souhaitez travailler</span></span> (e.g. <code>Firefox/Profiles/&lt;profile_id&gt;.default/</code>).</li>
+ <li><code>Ouvrez l'extension /</code> folder, en le créant, si nécessaire.</li>
+ <li><span id="result_box" lang="fr"><span>Créez un nouveau fichier texte et placez le chemin d'accès complet à votre dossier de développement à l'intérieur</span></span> (e.g. <code>C:\themes\my_theme\</code> or <code>~/themes/my_theme/)</code>. <span id="result_box" lang="fr"><span>Les utilisateurs de Windows doivent conserver la direction du slash du système d'exploitation, et tout le monde devrait se rappeler d'<strong>inclure</strong> une barre oblique de fermeture et de <strong>supprimer</strong> les espaces à la fin.</span></span></li>
+ <li><span id="result_box" lang="fr"><span>Enregistrer le fichier avec l'ID de votre thème comme son nom</span></span> (e.g. <code><a class="link-mailto" href="mailto:sample@example.net" rel="external nofollow" title="mailto:sample@example.net">sample@example.net</a></code>). <span class="short_text" id="result_box" lang="fr"><span>Pas d'extension de fichier.</span></span></li>
+</ol>
+
+<p><span id="result_box" lang="fr"><span>Maintenant, vous devriez être prêt à tester votre thème !</span><br>
+ <br>
+ <span>Démarrez Firefox.</span> <span>Firefox détecte le lien texte vers votre répertoire de thèmes et installe le thème.</span> <span>Votre thème ne sera pas actif la première fois que vous l'installez, et vous devrez cliquer sur "Activer" et redémarrer avant de pouvoir voir votre changement.</span> <span>Après avoir redémarré cette deuxième fois, vous devriez voir que la couleur d'arrière-plan des barres d'outils s'affiche maintenant en orange.</span></span></p>
+
+<p><span id="result_box" lang="fr"><span>Vous pouvez maintenant revenir en arrière et apporter des modifications supplémentaires à vos fichiers css, fermer et redémarrer Firefox, et voir les mises à jour.</span></span></p>
+</div>
+
+<div id="section_10">
+<h4 class="editable" id="Package"><span>Package</span></h4>
+
+<p><span class="short_text" id="result_box" lang="fr"><span>Maintenant que votre thème fonctionne, vous pouvez</span></span> créer un <a href="/Add-ons/Extension_Packaging" rel="internal">package</a> <span class="short_text" id="result_box" lang="fr"><span>pour le déploiement et l'installation.</span></span></p>
+
+<p><span id="result_box" lang="fr"><span>Zip le contenu du dossier de votre thème (pas le dossier thème lui-même), et renommez le fichier zip pour avoir une extension .xpi.</span> <span>Dans Windows, vous pouvez le faire facilement en sélectionnant tous les fichiers et sous-dossiers dans votre dossier d'extension, faites un clic droit et choisissez "Envoyer vers -&gt; Dossier compressé (zippé)".</span> <span>Un fichier .zip sera créé pour vous.</span> <span>Il suffit de renommer et vous avez terminé!</span></span></p>
+
+<p><span id="result_box" lang="fr"><span>Sur Mac OS ou Linux, vous pouvez utiliser l'outil zip de ligne de commande:</span></span></p>
+
+<pre class="eval">zip -r my_theme.xpi install.rdf chrome.manifest browser communicator global mozapps
+</pre>
+
+<p><span id="result_box" lang="fr"><span>Ou, si vous avez 7-Zip installé, vous pouvez l'utiliser pour le zipper ceci:</span></span></p>
+
+<pre class="eval">7z a -tzip my_theme.xpi chrome chrome.manifest
+</pre>
+
+<p><span id="result_box" lang="fr"><span>Remarque: L'outil en ligne de commande met à jour un fichier zip existant et ne le remplace pas - donc si vous avez supprimé des fichiers de votre thème, supprimez le fichier .xpi avant de lancer la commande zip.</span></span></p>
+
+<p><span id="result_box" lang="fr"><span>Maintenant, téléchargez le fichier .xpi sur votre serveur, en vous assurant qu'il est servi en tant qu'application / x-xpinstall.</span> <span>Vous pouvez y accéder et permettre aux utilisateurs de le télécharger et de l'installer.</span> <span>Afin de tester notre fichier .xpi, nous pouvons simplement le glisser dans le Gestionnaire de compléments via "Outils -&gt; Gestionnaire de compléments", ou l'ouvrir en utilisant "Fichier -&gt; Ouvrir fichier ...".</span></span></p>
+
+<div id="section_11">
+<h5 class="editable" id="Installation_à_partir_d'une_page_web"><span>Installation à partir d'une page web</span></h5>
+
+<p><span id="result_box" lang="fr"><span>Il existe plusieurs façons d'installer des extensions à partir de pages Web, y compris le lien direct vers les fichiers XPI et l'utilisation de l'objet InstallTrigger.</span> <span>Les développeurs Web ou d'add-ons devraient utiliser</span></span> <a href="/docs/Installing_Extensions_and_Themes_From_Web_Pages" rel="internal"> InstallTrigger method</a> <span id="result_box" lang="fr"><span>pour installer les XPIs, car il fournit la meilleure expérience aux utilisateurs.</span></span></p>
+</div>
+
+<div id="section_12">
+<h5 class="editable" id="Utilisation_d'addons.mozilla.org"><span>Utilisation d'addons.mozilla.org</span></h5>
+
+<p><span id="result_box" lang="fr"><span>Mozilla Add-ons est un site de distribution où vous pouvez héberger votre thème gratuitement.</span> <span>Votre thème sera hébergé sur le réseau miroir de Mozilla pour garantir votre téléchargement même s'il devenait très populaire.</span> <span>Le site de Mozilla fournit également aux utilisateurs une installation plus facile et met automatiquement à disposition vos versions les plus récentes pour les utilisateurs de vos versions existantes lorsque vous les téléchargez.</span> <span>En outre, Mozilla Add-ons permet aux utilisateurs de commenter et de fournir des retours sur votre thème.</span> <span>Il est fortement recommandé d'utiliser <a href="https://addons.mozilla.org">Mozilla Add-ons</a> pour distribuer vos thèmes !</span></span></p>
+
+<p>Visitez <a class="external" href="https://addons.mozilla.org/developers/" rel="external nofollow" title="http://addons.mozilla.org/developers/">https://addons.mozilla.org/developers/</a> et créez votre compte pour proposer votre thème.</p>
+
+<p><em>Note:</em> <span id="result_box" lang="fr"><span>Votre thème sera transmis plus rapidement et plus téléchargé plus si vous en avez une bonne description et quelques captures d'écran.</span></span></p>
+</div>
+</div>
+
+<div id="section_21">
+<div id="section_23">
+<ul>
+ <li><a class="internal" href="/Add-ons/Themes" title="en/Themes">Themes</a></li>
+</ul>
+
+<p>______________________________</p>
+</div>
+</div>
+
+<p> </p>

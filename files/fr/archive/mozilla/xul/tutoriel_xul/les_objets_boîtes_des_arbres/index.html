@@ -1,0 +1,193 @@
+---
+title: Les objets boîtes des arbres
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Les_objets_boîtes_des_arbres
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Tree_Box_Objects
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Détails_sur_les_vues_d'arbres" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Introduction_à_RDF">Suivant  »</a></p>
+</div>
+
+<p>Cette section va décrire l'objet de boîte d'arbre qui est utilisé pour gérer l'affichage d'un arbre.</p>
+
+<h3 id=".C3.80_propos_de_l.27objet_de_bo.C3.AEte" name=".C3.80_propos_de_l.27objet_de_bo.C3.AEte">À propos de l'objet de boîte</h3>
+
+<p>Les objets de boîte ont été décrits dans <a href="/fr/Tutoriel_XUL/Les_objets_boîtes" title="fr/Tutoriel_XUL/Les_objets_boîtes">une section précédente</a>. L'objet de boîte d'arbre est un objet de boîte spécial utilisé spécifiquement pour les arbres (tree). La boîte d'arbre implémente l'interface <code><a class="external" href="http://www.xulplanet.com/references/objref/TreeBoxObject.html">TreeBoxObject</a></code>.</p>
+
+<h4 id="Rafraichissement_de_l.27arbre" name="Rafraichissement_de_l.27arbre">Rafraichissement de l'arbre</h4>
+
+<p>Nous avons déjà vu la fonction <code>rowCountChanged()</code> de l'objet de boîte d'arbre dans la section précédente. Elle est employée pour indiquer qu'une ou plusieurs lignes de l'arbre ont été ajoutées ou enlevées. L'arbre rafraîchira l'affichage de la zone affectée. Vous n'avez pas besoin d'appeler la fonction <code>rowCountChanged()</code> lorsqu'une ligne a simplement été modifiée, comme par exemple lors du changement du libellé d'une cellule. Dans ce cas, d'autres fonctions d'affichage peuvent être utilisées. La plus simple est la fonction <code>invalidateRow()</code> qui rafraîchit l'affichage d'une ligne spécifique d'un arbre. L'arbre appellera la vue pour obtenir les données mises à jour et actualise son contenu à l'écran.</p>
+
+<p>Les autres fonctions de rafraichissement sont :</p>
+
+<ul>
+ <li><code>invalidateCell()</code> pour le rafraichissement d'une unique cellule,</li>
+ <li><code>invalidateColumn()</code> pour le rafraichissement d'une colonne,</li>
+ <li><code>invalidateRange()</code> pour le rafraichissement d'une plage de lignes,</li>
+ <li><code>invalidate()</code> pour le rafraichissement de l'arbre entier.</li>
+</ul>
+
+<p>Notez que le rafraichissement de l'affichage n'aura lieu qu'une fois les tâches des scripts achevées, car Mozilla n'effectue pas cette opération en tâche de fond.</p>
+
+<h4 id="D.C3.A9filement_de_l.27arbre" name="D.C3.A9filement_de_l.27arbre">Défilement de l'arbre</h4>
+
+<p>Vous pouvez également faire défiler l'arbre en utilisant quatre méthodes différentes, similaires à celles disponibles pour les menus déroulants. La fonction <code>scrollToRow()</code> peut être utilisée pour faire le défilement jusqu'à une ligne particulière. Voici un exemple simple :</p>
+
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_treeboxobject_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_treeboxobject_1.xul">Voir</a></p>
+
+<pre>&lt;script&gt;
+function doScroll(){
+  var value = document.getElementById("tbox").value;
+  var tree = document.getElementById("thetree");
+
+  var boxobject = tree.boxObject;
+  boxobject.QueryInterface(Components.interfaces.nsITreeBoxObject);
+  boxobject.scrollToRow(value);
+}
+&lt;/script&gt;
+
+&lt;tree id="thetree" rows="4"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="row" label="Ligne" primary="true" flex="1"/&gt;
+  &lt;/treecols&gt;
+  &lt;treechildren&gt;
+    &lt;treeitem label="Ligne 0"/&gt;
+    &lt;treeitem label="Ligne 1"/&gt;
+    &lt;treeitem label="Ligne 2"/&gt;
+    &lt;treeitem label="Ligne 3"/&gt;
+    &lt;treeitem label="Ligne 4"/&gt;
+    &lt;treeitem label="Ligne 5"/&gt;
+    &lt;treeitem label="Ligne 6"/&gt;
+    &lt;treeitem label="Ligne 7"/&gt;
+    &lt;treeitem label="Ligne 8"/&gt;
+    &lt;treeitem label="Ligne 9"/&gt;
+  &lt;/treechildren&gt;
+&lt;/tree&gt;
+
+&lt;hbox align="center"&gt;
+  &lt;label value="Défile jusqu'à la ligne :"/&gt;
+  &lt;textbox id="tbox"/&gt;
+  &lt;button label="Défile" oncommand="doScroll();"/&gt;
+&lt;/hbox&gt;
+</pre>
+
+<div class="note">Notez que nous utilisons l'attribut <code id="a-rows"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/rows">rows</a></code> sur l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code> pour spécifier que quatre lignes seulement doivent être affichées à la fois. Ainsi, il est plus facile de se représenter l'exemple. Notez également que la première ligne commence à '0'.</div>
+
+<p>La fonction <code>doScroll()</code> récupère l'objet de boîte et appelle la fonction <code>scrollToRow()</code> avec comme argument la valeur saisie dans le champ texte. Vous noterez que l'objet de boîte d'arbre peut être obtenu de la même manière qu'avec d'autres objets de boîte, en utilisant la propriété <code>boxObject</code>. Nous devons cependant appeler <code>QueryInterface()</code> pour invoquer l'objet de boîte spécifique aux arbres. Les fonctions générales de l'objet de boîte sont également disponibles pour les arbres.</p>
+
+<p>Les méthodes supplémentaires de défilement incluent les fonctions <code>scrollByLines()</code>, <code>scrollByPages()</code>, et <code>ensureRowIsVisible()</code>.</p>
+
+<p>La fonction <code>scrollByLines()</code> fait défiler vers le haut ou vers le bas d'un certain nombre de lignes ; un nombre positif fait défiler vers le bas, un nombre négatif fait défiler vers le haut. La fonction <code>scrollByPages()</code> fait défiler d'un certain nombre de pages. Elle est automatiquement appelée lorsque l'utilisateur appuie sur une des touches <code>Page Up</code> ou <code>Page Down</code> et que l'arbre a le focus. Une page est égale au nombre de lignes visibles. Par exemple, si un arbre affiche 10 lignes en même temps, une page sera équivalente à 10 lignes. C'est une méthode pratique dès lors que l'utilisateur redimensionne un arbre flexible : la taille de la page augmentera ou diminuera automatiquement sans avoir à la recalculer manuellement. Il n'est pas trop difficile de calculer cette taille manuellement car l'objet de boîte d'arbre fournit également une fonction <code>getPageLength()</code> qui retourne le nombre de lignes dans une page. Dans l'exemple de défilement ci-dessus, <code>getPageLength()</code> retournerait '4'.</p>
+
+<div class="note">Notez que dans Firefox 1.0 et Mozilla 1.7, et les versions plus récentes, la fonction <code>getPageLength()</code> est plutôt appelée <code>getPageCount()</code>. Le nom a été changé en <code>getPageLength()</code> afin d'éviter les confusions avec une fonction qui ne retourne pas le nombre de pages d'un arbre, mais la taille de chaque page. Vous pouvez déterminer le nombre de pages en divisant le nombre total de lignes par la taille d'une page.</div>
+
+<p>La fonction <code>ensureRowIsVisible()</code> fera défiler l'arbre jusqu'à une ligne, comme avec la fonction <code>scrollToRow()</code>, mais seulement si la ligne n'est pas visible au moment de l'appel.</p>
+
+<h3 id="Coordonn.C3.A9es_d.27une_cellule" name="Coordonn.C3.A9es_d.27une_cellule">Coordonnées d'une cellule</h3>
+
+<p>Certaines des fonctions les plus intéressantes d'un objet de boîte d'arbre sont utilisées pour obtenir les parties d'un arbre se trouvant à des coordonnées spécifiques et vice versa.</p>
+
+<ul>
+ <li>La fonction <code>getCellAt()</code> peut être utilisée pour obtenir une cellule précise située à un emplacement défini en pixels,</li>
+ <li>La fonction <code>getRowAt()</code> peut être utilisée pour obtenir une ligne à un emplacement défini lui aussi en pixels. La fonction <code>getRowAt()</code> prend deux arguments qui sont les coordonnées horizontales (x) et verticales (y).</li>
+</ul>
+
+<pre>tree.boxObject.getRowAt( 50, 100 );</pre>
+
+<p>Cet exemple retournera l'index de la ligne ayant une position horizontale de '50' pixels et verticale de '100' pixel. Naturellement, la coordonnée x semble ne pas avoir beaucoup de sens dès lors que la ligne occupe tout l'espace horizontal de l'arbre.</p>
+
+<div class="note">Il est important de noter que les coordonnées sont mesurées à partir du coin supérieur gauche du document et non de l'arbre lui-même.</div>
+
+<p>Il est donc facile de passer à ces fonctions les coordonnées événementielles de l'objet <code>event</code>, comme avec la fonction <code>getCellAt()</code> dans l'exemple suivant.</p>
+
+<p><span id="Exemple_2"><a id="Exemple_2"></a><strong>Exemple 2</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_treeboxobject_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_treeboxobject_2.xul">Voir</a></p>
+
+<pre>&lt;script&gt;
+function updateFields(event){
+  var row = {}, column = {}, part = {};
+  var tree = document.getElementById("thetree");
+
+  var boxobject = tree.boxObject;
+  boxobject.QueryInterface(Components.interfaces.nsITreeBoxObject);
+  boxobject.getCellAt(event.clientX, event.clientY, row, column, part);
+
+  if (column.value &amp;&amp; typeof column.value != "string")
+    column.value = column.value.id;
+
+  document.getElementById("row").value = row.value;
+  document.getElementById("column").value = column.value;
+  document.getElementById("part").value = part.value;
+}
+&lt;/script&gt;
+
+&lt;tree id="thetree" flex="1" onmousemove="updateFields(event);"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="utensil" label="Ustensiles" primary="true" flex="1"/&gt;
+    &lt;treecol id="count" label="Nombre" flex="1"/&gt;
+  &lt;/treecols&gt;
+  &lt;treechildren&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Fourchette"/&gt;
+        &lt;treecell label="5"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Couteau"/&gt;
+        &lt;treecell label="2"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Cuillère"/&gt;
+        &lt;treecell label="8"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+  &lt;/treechildren&gt;
+&lt;/tree&gt;
+
+&lt;label value="Ligne:"/&gt;
+&lt;label id="row"/&gt;
+&lt;label value="Colonne:"/&gt;
+&lt;label id="column"/&gt;
+&lt;label value="Type enfant:"/&gt;
+&lt;label id="part"/&gt;
+</pre>
+
+<p>La fonction <code>getCellAt()</code> prend cinq arguments, les coordonnées où regarder et trois autres paramètres. Un argument par référence est utilisé parce que la fonction a besoin de retourner plusieurs valeurs. Vous verrez de nombreuses interfaces utilisant des arguments par référence avec <a class="external" href="http://www.xulplanet.com/references/objref/">les objets disponibles</a>. Ces arguments sont marqués avec un préfixe 'out'. Pour ceux-ci, vous devez transmettre un objet vide et la fonction remplira sa propriété <code id="a-value"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/value">value</a></code> avec la valeur adéquate.</p>
+
+<p>Les trois paramètres par référence seront renseignés avec la ligne, la colonne et le type enfant. L'objet row contient l'index de la ligne survolée par la souris au moment où la fonction a été appelée par un événement mousemove, avec les coordonnées de cet événement. Si les coordonnées ne sont pas au-dessus d'une ligne de l'arbre, la valeur <code>row.value</code> sera égale à '-1'. La variable column est un objet <code>column</code> tel que défini dans Mozilla 1.8 et supérieur. Dans les versions plus anciennes, les colonnes étaient identifiées avec une chaîne de caractères (string) : l'identifiant <code id="a-id"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/id">id</a></code> de la colonne. Avec les versions plus récentes, un objet de colonne spécifique existe et permet de réaliser des requêtes sur les données en colonne.</p>
+
+<p>La ligne suivante est utilisée pour que l'exemple ci-dessus puisse fonctionner avec toutes les versions.</p>
+
+<pre>if (column.value &amp;&amp; typeof column.value != "string")
+  column.value = column.value.id;
+</pre>
+
+<p>Si la colonne est une chaîne de caractères, nous tournons sur Mozilla 1.7 ou inférieur, mais pour les versions récentes, nous obtenons l'identifiant de la colonne à partir de l'objet column. Si vous écrivez du code pour des versions multiples, vous devrez effectuer un test comme indiqué ci-avant.</p>
+
+<p>Le dernier argument de la fonction <code>getCellAt()</code> est le type enfant renseigné avec une chaîne dépendante de la partie de la cellule pointée par les coordonnées. Si vous déplacez la souris dans l'exemple précédent, vous noterez que le libellé passe de 'text' à 'cell'. La valeur 'text' indique la zone où le texte est dessiné et la valeur 'cell' indique la zone autour du texte ; par exemple, la marge gauche où sont habituellement dessinées les poignées ouvrantes et fermantes. Toutefois, s'il y avait une poignée, la valeur aurait plutôt été 'twisty'. Cette information pratique permet de déterminer si l'utilisateur a cliqué sur une poignée plutôt que sur une autre partie de la ligne. En fait, lorsque l'utilisateur double-clique sur la poignée, le code natif sous-jacent utilise cette méthode. La dernière valeur qui peut être retournée est 'image' si une image se trouve dans la cellule et que les coordonnées correspondent à celles de cette image. Bien entendu, dans la plupart des cas, vous ne désirez pas connaître quelle partie de la cellule pointe les coordonnées, mais seulement la ligne et la colonne concernées.</p>
+
+<p>Pour inverser la recherche et obtenir les coordonnées spécifiques d'une cellule, utilisez la fonction <code>getCoordsForCellItem()</code>. Elle prend sept arguments tels que décrits ci-dessous.</p>
+
+<pre>var x = {}, y = {}, width = {}, height = {};
+if (typeof tree.columns != "undefined") column = tree.columns[column];
+tree.boxObject.getCoordsForCellItem( row, column, part, x, y, width, height );
+</pre>
+
+<p>Les arguments 'row', 'column' et 'part' sont similaires à ceux retournés par la fonction <code>getCellAt()</code>. De nouveau, le type de l'argument 'column' dépend de la version que vous utilisez, soit une chaîne de caractères (string), soit un objet column. Le type de la zone de la cellule peut être utilisé pour obtenir les coordonnées, soit du texte, soit de toute la cellule, soit de la poignée, soit de l'image dans la cellule. Les mêmes valeurs que la fonction <code>getCellAt()</code> sont utilisées. La fonction <code>getCoordsForCellItem()</code> retourne par le biais des arguments passés en référence les coordonnées horizontales (x) et verticales (y), accompagnées de la largeur et la hauteur.</p>
+
+<hr>
+<p>Par la suite, nous verrons comment RDF peut être utilisé automatiquement pour peupler des arbres et d'autres éléments.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Détails_sur_les_vues_d'arbres" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Introduction_à_RDF">Suivant  »</a></p>
+</div>
+
+<p><span class="comment">Interwiki</span></p>

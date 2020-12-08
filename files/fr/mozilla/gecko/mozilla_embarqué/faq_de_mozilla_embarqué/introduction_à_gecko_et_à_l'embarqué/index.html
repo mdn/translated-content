@@ -1,0 +1,53 @@
+---
+title: Introduction à Gecko et à l'embarqué
+slug: >-
+  Mozilla/Gecko/Mozilla_embarqué/FAQ_de_Mozilla_embarqué/Introduction_à_Gecko_et_à_l'embarqué
+tags:
+  - FAQ_de_Mozilla_embarqué
+translation_of: Mozilla/Gecko/Embedding_Mozilla/FAQ/How_do_I...
+---
+<p> </p>
+<h2 id="Introduction_.C3.A0_Gecko_et_.C3.A0_l.27embarquement" name="Introduction_.C3.A0_Gecko_et_.C3.A0_l.27embarquement">Introduction à Gecko et à l'embarquement</h2>
+<h3 id="Qu.27est-ce_que_Gecko_.3F" name="Qu.27est-ce_que_Gecko_.3F">Qu'est-ce que Gecko ?</h3>
+<p>Gecko est le moteur interne du navigateur, ce qui inclut networking, un parser, un modèle de contenu, chrome et les autres technologies sur lesquelles Mozilla et les autres applications sont basées. En d'autres termes, tout ce qui n'est pas spécifique à une application.</p>
+<p>La FAQ de Gecko est légèrement obsolète <a class="external" href="http://www.mozilla.org/newlayout/faq.html">FAQ</a>.</p>
+<h3 id="Qu.27est-ce_que_Mozilla_.3F" name="Qu.27est-ce_que_Mozilla_.3F">Qu'est-ce que Mozilla ?</h3>
+<p>Mozilla est un navigateur web open-source multi plates-formes, un éditeur et une application de messagerie / newsgroup créé sur Gecko.</p>
+<h3 id="Qu.27est-ce_que_le_GRE_.3F" name="Qu.27est-ce_que_le_GRE_.3F">Qu'est-ce que le GRE ?</h3>
+<p>Le GRE (formellement le MRE) qui est l'acronime de <a href="fr/GRE">Gecko Runtime Environment</a>, est un support d'exécution partagé que toutes les applications peuvent utiliser. Il est maintenant développé comme un projet indépendant connu sous le nom de <a href="fr/XULRunner">XULRunner</a>.</p>
+<h3 id="Qu.27est-ce_que_XPCOM_.3F" name="Qu.27est-ce_que_XPCOM_.3F">Qu'est-ce que XPCOM ?</h3>
+<p>XPCOM est un
+  <i>
+    modèle objet de composants</i>
+  (semblable à COM/DCOM de MS Windows mais conçut pour être portable sur plusieurs plates-formes) utilisé pour unifier la création, le contrôle, et la suppression d'objets et d'autres données à travers Mozilla. Le coeur de XPCOM est l'interface
+  <i>
+    nsISupports</i>
+  , qui offre des services de comptage des références et d'introspection (possibilité d'interroger les objets afin de se renseigner sur leurs capacités). Tout les objets XPCOM implémentent l'interface
+  <i>
+    nsISupports</i>
+  , en plus de toutes les interfaces spécifiques qui lui sont nécessaire. En fin de compte, XPCOM fournit une couche de services indépendante du language appelé
+  <i>
+    XPConnect</i>
+  qui permet l'implémentation d'objets dans tout language supporté. Grâce à
+  <i>
+    XPConnect</i>
+  , ces objets peuvent aussi être appelés à partir de n'importe lequel de ces languages.</p>
+<p>On peut trouver plus d'informations <a class="external" href="http://www.mozilla.org/projects/xpcom/">ici</a>.</p>
+<h3 id="Que_signifie_embarquer_Gecko_.3F" name="Que_signifie_embarquer_Gecko_.3F">Que signifie embarquer Gecko ?</h3>
+<p>Gecko autorise des developpeurs tiers à utiliser la même technologie que Mozilla. Cela signifie que vous pouvez tirer partie, dans une application tierce, des services d'un navigateur web, ouvrir des canaux de communications et faire transiter des flux de données à travers le service réseau, le
+  <i>
+    Modèle Objet de Document</i>
+  (NdT: en anglais DOM,
+  <i>
+    Document Object Model</i>
+  ) et plus encore. Vous pouvez même bâtir entièrement une nouvelle application en utilisant Gecko.</p>
+<h3 id="Quels_sont_les_termes_de_licence_pour_embarquer_Gecko_.3F" name="Quels_sont_les_termes_de_licence_pour_embarquer_Gecko_.3F">Quels sont les termes de licence pour embarquer Gecko ?</h3>
+<p>Les mêmes que pour le reste de Mozilla. Voir la <a class="external" href="http://www.mozilla.org/MPL/">page du MPL</a> pour plus d'informations.</p>
+<h3 id="Existe-t.27il_un_SDK_.3F" name="Existe-t.27il_un_SDK_.3F">Existe-t'il un SDK ?</h3>
+<p>Nous travaillons lentement sur une SDK, gelant et documentant les interfaces et retouchant le processus de construction. Pour le moment nous vous recommandons de <a class="external" href="http://developer.mozilla.org/fr/docs/T%C3%A9l%C3%A9chargement_du_code_source_de_Mozilla">télécharger le code source</a> puis de le <a class="external" href="http://developer.mozilla.org/fr/docs/Documentation_sur_la_compilation">compiler</a>.</p>
+<p>Des compilations nocturnes du SDK pour la plateforme Windows 32bits peuvent être disponibles <a class="link-ftp" href="ftp://ftp.mozilla.org/pub/mozilla.org/mozilla/nightly/latest-trunk/gecko-sdk-i586-pc-msvc.zip">ici</a>.</p>
+<h3 id="Quelle_est_la_derni.C3.A8re_version_.3F_Quelle_version_utiliser_.3F" name="Quelle_est_la_derni.C3.A8re_version_.3F_Quelle_version_utiliser_.3F">Quelle est la dernière version ? Quelle version utiliser ?</h3>
+<p>Les compilations embarquées et les source tarballs sont produites la nuit et peuvent être obtenues <a class="link-ftp" href="ftp://ftp.mozilla.org/pub/mozilla.org/xulrunner/nightly/latest-trunk/">ici</a>. Si vous privilégiez la stabilité, les compilations de la branche 1.7.x de Mozilla sont vivement recommendées.</p>
+<h3 id="Qui_utilise_d.C3.A9j.C3.A0_gecko_.3F" name="Qui_utilise_d.C3.A9j.C3.A0_gecko_.3F">Qui utilise déjà gecko ?</h3>
+<p>Voir <a class="external" href="http://www.mozilla.org/projects/embedding/examples/">ici</a> la liste des logiciels embarquant Gecko.</p>
+<p><span class="comment">Interwiki Language Links</span></p>

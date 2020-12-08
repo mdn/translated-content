@@ -1,0 +1,392 @@
+---
+title: nsIWebProgressListener
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsIWebProgressListener
+tags:
+  - Interfaces
+  - 'Interfaces:Scriptable'
+  - XPCOM
+  - XPCOM API Reference
+  - XPCOM Interface Reference
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIWebProgressListener
+---
+<div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/uriloader/base/nsIWebProgressListener.idl" rel="custom">uriloader/base/nsIWebProgressListener.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">このインターフェースは、<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebProgress" title="">nsIWebProgress</a></code> インスタンスのコンテクストだけではなく、すべての子 <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebProgress" title="">nsIWebProgress</a></code> インスタンスの、非同期リクエストの読み込みに関連する進捗を監視しようとするクライアントによって実装されています。</span>
+
+<div style="background: #eee; padding: 2px;">
+継承元: <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
+<span style="text-align: right; float: right;">最終更新: Gecko 15 (Firefox 15 / Thunderbird 15 / SeaMonkey 2.12)</span></div>
+</div>
+<p> </p>
+<h2 id="Method_overview" name="Method_overview">メソッド概要</h2>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <td><code>void <a href="#onLocationChange()">onLocationChange</a>(in nsIWebProgress aWebProgress, in nsIRequest aRequest, in nsIURI aLocation);</code></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#onProgressChange()">onProgressChange</a>(in nsIWebProgress aWebProgress, in nsIRequest aRequest, in long aCurSelfProgress, in long aMaxSelfProgress, in long aCurTotalProgress, in long aMaxTotalProgress);</code></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#onSecurityChange()">onSecurityChange</a>(in nsIWebProgress aWebProgress, in nsIRequest aRequest, in unsigned long aState);</code></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#onStateChange()">onStateChange</a>(in nsIWebProgress aWebProgress, in nsIRequest aRequest, in unsigned long aStateFlags, in nsresult aStatus);</code></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#onStatusChange()">onStatusChange</a>(in nsIWebProgress aWebProgress, in nsIRequest aRequest, in nsresult aStatus, in wstring aMessage);</code></td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="Constants" name="Constants">定数</h2>
+<h3 id="State_Transition_Flags" name="State_Transition_Flags">遷移状態フラグ(State Transition Flags)</h3>
+<p>これらのフラグは、リクエストがロードされ、遷移しているさまざまな状態を表します。これらのフラグは排他的です。</p>
+<p>リクエストが与えられる度、<code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIWebProgressListener#onStateChange()">onStateChange()</a></code> が呼び出されます。 <code>STATE_START</code> を伴って一回、<code>STATE_TRANSFERRING</code> フラグを伴ってゼロまたは数回、<code>STATE_REDIRECTING</code> と一回、最終的に<code>STATE_STOP</code> を伴って一回、<code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIWebProgressListener#onStateChange()">onStateChange()</a></code> は呼び出されます。</p>
+<div class="note">
+  <strong>註：</strong>ドキュメントのリクエストにおいて、2つ目の <code>STATE_STOP</code> が生成されます。（詳しくは <code>STATE_IS_WINDOW</code> の詳細を参照してください）</div>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <td class="header">定数</td>
+      <td class="header">値</td>
+      <td class="header">詳細</td>
+    </tr>
+    <tr>
+      <td><code>STATE_START</code></td>
+      <td><code>0x00000001</code></td>
+      <td>このフラグはリクエストが開始されたことを表します。このフラグはリクエストが初期化された際に設定されます。開始されたリクエストは、<code>STATE_STOP</code> フラグを伴って<code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIWebProgressListener#onStateChange()">onStateChange()</a></code> が呼び出された時に完了します。</td>
+    </tr>
+    <tr>
+      <td><code>STATE_REDIRECTING</code></td>
+      <td><code>0x00000002</code></td>
+      <td>このフラグはリクエストがリダイレクトされていることを表します。<code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIWebProgressListener#onStateChange()">onStateChange()</a></code> に通されたリクエストはリダイレクトされたものです。リダイレクトが発生したとき、その過程において自動的に新規リクエストが生成されます。新しいリクエストでも同様に <code>STATE_START</code> のイベントが発生し、リダイレクトされたリクエストは <code>STATE_STOP</code> を迎えると予想されます。</td>
+    </tr>
+    <tr>
+      <td><code>STATE_TRANSFERRING</code></td>
+      <td><code>0x00000004</code></td>
+      <td>このフラグは、リクエストしたデータがこちらへと転送されている状態にあることを表します。このフラグは、リクエストがつながり、ユーザーがリクエストに対応するコンテンツを見始めるようになることも意味します。</td>
+    </tr>
+    <tr>
+      <td><code>STATE_NEGOTIATING</code></td>
+      <td><code>0x00000008</code></td>
+      <td>このフラグは使用されません。</td>
+    </tr>
+    <tr>
+      <td><code>STATE_STOP</code></td>
+      <td><code>0x00000010</code></td>
+      <td>このフラグはリクエストが完了したことを表します。<code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIWebProgressListener#onStateChange()">onStateChange()</a></code> の aStatus パラメータは、リクエストの最終ステータスを表します。</td>
+    </tr>
+  </tbody>
+</table>
+<h3 id="State_Type_Flags" name="State_Type_Flags">状態種類フラグ(State Type Flags)</h3>
+<p>これらのフラグは、発生しているトランザクションの状態についての実態をより詳しく説明します。これらのフラグは<strong>排他的ではありません</strong>( <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIWebProgressListener#onStateChange()">onStateChange()</a></code> イベントはこれらのフラグが組み合わさっていることを示すかもしれません。)</p>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <td class="header">定数</td>
+      <td class="header">値</td>
+      <td class="header">詳細</td>
+    </tr>
+    <tr>
+      <td><code>STATE_IS_REQUEST</code></td>
+      <td><code>0x00010000</code></td>
+      <td>このフラグは、ドキュメントに限らないリクエストの遷移状態を表します。（下記のドキュメントのリクエストの詳細も参照してください）　（例えば画像やスタイルシートといった）インラインコンテンツのような、他の種類のリクエストはの通常のリクエストとして見做されています。</td>
+    </tr>
+    <tr>
+      <td><code>STATE_IS_DOCUMENT</code></td>
+      <td><code>0x00020000</code></td>
+      <td>
+        <p>このフラグは、ドキュメントリクエストの遷移状態を表します。このフラグは <code>STATE_IS_REQUEST</code> を追加で設定します。ドキュメントリクエストは、 <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIChannel" title="">nsIChannel</a></code> のサポートと、<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIChannel" title="">nsIChannel</a></code>::LOAD_DOCUMENT_URI を含む、リクエストの loadFlags 属性を含んでいます。</p>
+        <p>ドキュメントに対応した読み込みに関連するリクエストの全てが完了するまで、ドキュメントリクエストは完了しません。これには、（たとえば HTML &lt;iframe&gt; 要素といった）他のドキュメントリクエストも含まれます。ドキュメントリクエストに対応しているドキュメントは、<code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIWebProgressListener#onStateChange()">onStateChange()</a></code> の aWebProgress パラメータの <code>DOMWindow</code> 属性を経由して取得できます。</p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>STATE_IS_NETWORK</code></td>
+      <td><code>0x00040000</code></td>
+      <td>
+        <p>このフラグは、<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebProgress" title="">nsIWebProgress</a></code> インスタンスによって表わされる活動の開始または停止に対応する遷移状態を表します。このフラグには、<code>STATE_START</code> または <code>STATE_STOP</code> の一方及びその他の状態種類フラグが付随しています。</p>
+        <p><code>STATE_IS_WINDOW</code> とは異なり、このフラグは <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebProgress" title="">nsIWebProgress</a></code> インスタンスのアクティビティが開始または停止していると通知された時にのみ設定されます。アクティビティが子 <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebProgress" title="">nsIWebProgress</a></code> インスタンス でのみ発生した場合、そのアクテビティの開始または停止を示すためにこのフラグが設定されるでしょう。</p>
+        <p>例えば、HTML フレームセットの単体フレームのナビゲーションの場合、フレームセットウィンドウの <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebProgress" title="">nsIWebProgress</a></code> に加えられた <code>nsIWebProgressListener</code> インスタンスは、ナビゲーションの開始と中止を設定された <code>STATE_IS_NETWORK</code> フラグとともに <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIWebProgressListener#onStateChange()">onStateChange()</a></code> の呼び出しを受けます。言い換えれば、アクテビティが子ウィンドウに束縛された際には、外部ウィンドウのオブザーバーは開始または中止を 定義できるということです。</p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>STATE_IS_WINDOW</code></td>
+      <td><code>0x00080000</code></td>
+      <td>
+        <p>このフラグは、<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebProgress" title="">nsIWebProgress</a></code> インスタンスが示すアクティビティの開始と停止に対応する遷移状態を表します。このフラグは、<code>STATE_START</code> または <code>STATE_STOP</code> 、およびその他の状態種類フラグを伴います。</p>
+        <p>このフラグは、<code>STATE_IS_DOCUMENT</code> に類似しています。しかしながら、ドキュメントのリクエストが完了された時、生成された <code>STATE_STOP</code> と共に <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIWebProgressListener#onStateChange()">onStateChange()</a></code> が2回呼び出されます。ドキュメントのリクエストはそれぞれの呼び出しの際に aRequest を渡します。最初の呼び出しでは <code>STATE_IS_REQUEST</code> および <code>STATE_IS_DOCUMENT</code> が設定され、2回目の呼び出しでは <code>STATE_IS_WINDOW</code> が設定されます。（加えて、可能であれば <code>STATE_IS_NETWORK</code> が設定されます。<code>STATE_IS_NETWORK</code> が設定される場合の詳細については上記の詳細を参照してください）　この2つの <code>STATE_STOP</code> イベントは、ドキュメントのリクエストが完了した際に発生した作業を分別するのに有効とされます。</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h3 id="State_Modifier_Flags" name="State_Modifier_Flags">状態変更フラグ(State Modifier Flags)</h3>
+<p>これらのフラグは、発生しているトランザクションの状態についての実態をより詳しく説明します。これらのフラグは<strong>排他的ではありません</strong>( <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIWebProgressListener#onStateChange()">onStateChange()</a></code> イベントはこれらのフラグが組み合わさっていることを示すかもしれません。)</p>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <td class="header">定数</td>
+      <td class="header">値</td>
+      <td class="header">詳細</td>
+    </tr>
+    <tr>
+      <td><code>STATE_RESTORING</code></td>
+      <td><code>0x01000000</code></td>
+      <td>このフラグは、以前レンダリングされた表示結果の復元作業の開始または停止に相当する遷移状態を表します。このリクエストに関連するネットワーク・アクティビティはなく、読み込まれたオリジナルのドキュメントや表示に加えられた変更それ自体は、依然として存在しています。</td>
+    </tr>
+  </tbody>
+</table>
+<h3 id="State_Security_Flags" name="State_Security_Flags">セキュリティ状態フラグ(State Security Flags)</h3>
+<p>これらのフラグは <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIWebProgressListener#onSecurityChange()">onSecurityChange()</a></code> が呼び出されることによって 報告されるセキュリティの状態について説明します。これらのフラグは排他的です。</p>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <td class="header">定数</td>
+      <td class="header">値</td>
+      <td class="header">詳細</td>
+    </tr>
+    <tr>
+      <td><code>STATE_IS_INSECURE</code></td>
+      <td><code>0x00000004</code></td>
+      <td>このフラグは、リクエストに対応するデータが安全ではないチャンネルを経由して受信されたことを表します。</td>
+    </tr>
+    <tr>
+      <td><code>STATE_IS_BROKEN</code></td>
+      <td><code>0x00000001</code></td>
+      <td>このフラグは未知のセキュリティの状態であることを表します。これは、ページ中の一部のコンテンツのリクエストが、安全ではないチャンネルを経由して読み込まれていることを意味するかもしれません。</td>
+    </tr>
+    <tr>
+      <td><code>STATE_IS_SECURE</code></td>
+      <td><code>0x00000002</code></td>
+      <td>このフラグは、リクエストに対応するデータが安全なチャンネルを経由して受信されたことを表します。セキュリティの程度については、<code>STATE_SECURE_HIGH</code>、<code>STATE_SECURE_MED</code>、または <code>STATE_SECURE_LOW</code> によって表現されます。</td>
+    </tr>
+  </tbody>
+</table>
+<h3 id="Security_Strength_Flags" name="Security_Strength_Flags">セキュリティ強度フラグ(Security Strength Flags)</h3>
+<p>これらのフラグは、セキュリティの強度と、<code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIWebProgressListener#onSecurityChange()">onSecurityChange()</a></code> メソッドの呼び出しに伴う <code>STATE_IS_SECURE</code> について説明します。これらのフラグは排他的です。</p>
+<p>これらのフラグは、データ転送のセキュリティについて厳密な詳細を提供することを意味しません。これらは代わりに、セキュリティ通知の色区分や、その他ユーザー向けの基本的なデータ転送のフィードバックなどのような、簡易的なインジケータで使用されることを意図しています。</p>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <td class="header">定数</td>
+      <td class="header">値</td>
+      <td class="header">詳細</td>
+    </tr>
+    <tr>
+      <td><code>STATE_SECURE_HIGH</code></td>
+      <td><code>0x00040000</code></td>
+      <td>このフラグは高レベルのセキュリティにあることを示します。</td>
+    </tr>
+    <tr>
+      <td><code>STATE_SECURE_MED</code></td>
+      <td><code>0x00010000</code></td>
+      <td>このフラグは中レベルのセキュリティにあることを示します。</td>
+    </tr>
+    <tr>
+      <td><code>STATE_SECURE_LOW</code></td>
+      <td><code>0x00020000</code></td>
+      <td>このフラグは低レベルのセキュリティにあることを示します。</td>
+    </tr>
+  </tbody>
+</table>
+<h3 id="State_Identity_Flags" name="State_Identity_Flags">アイデンティティ状態フラグ（State identity flags）</h3>
+<p>これらのフラグは、<code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIWebProgressListener#onSecurityChange()">onSecurityChange()</a></code> メソッドの呼び出しにおける、身元検証のレベルについて説明します。</p>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <td class="header">定数</td>
+      <td class="header">値</td>
+      <td class="header">詳細</td>
+    </tr>
+    <tr>
+      <td><code>STATE_IDENTITY_EV_TOPLEVEL</code></td>
+      <td><code>0x00100000</code></td>
+      <td>
+        <p>ステータスビットにおける EV とは Extended Validation すなわち High Assurance であり、高く保証されていることを意味します。</p>
+        <p>最高位のドキュメントには EV 証明書が使用されています。 </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h3 id="Location_Change_Flags" name="Location_Change_Flags">ロケーション変更状態フラグ (Location Change flags)</h3>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <td class="header">定数</td>
+      <td class="header">値</td>
+      <td class="header">詳細</td>
+    </tr>
+    <tr>
+      <td><code>LOCATION_CHANGE_SAME_DOCUMENT</code></td>
+      <td><code>0x00000001</code></td>
+      <td>このフラグは、<code>aWebProgress</code> が新たにドキュメントを読み込まなかったときのものです。例としては、アンカーによるスクロールや pushState/popState/replaceState によるロケーションの変更が挙げられます。</td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="Methods" name="Methods">メソッド</h2>
+<h3 id="onLocationChange" name="onLocationChange()">onLocationChange()</h3>
+<p>変更を監視されているウィンドウのロケーションが変更された際に呼び出されます。読み込みがリクエストされたときではなく、与えられたウィンドウにおいて読み込みが発生しようとしているの一度確認された際に呼び出されます。たとえば、ウィンドウに於いて開始した読み込みが、新しいサイトに向けてプログレスとステータスメッセージを送信していたとしても、新たなページが読み込まれていると私たちが確認するまでは、<code>onLocationChange</code> は呼び出されないでしょう。別の例として、ブラウザの中でドキュメントが読み込まれているのではなく、サードパーティのツールへとドキュメントが渡された場合、PDFやフラッシュの読み込みでは <code>onLocationChange</code> は呼び出されないでしょう。</p>
+<pre class="eval">void onLocationChange(
+  in nsIWebProgress aWebProgress,
+  in nsIRequest aRequest,
+  in nsIURI aLocation
+  [optional] in unsigned long aFlags
+);
+</pre>
+<h6 id="Parameters" name="Parameters">引数</h6>
+<dl>
+  <dt>
+    <code>aWebProgress</code></dt>
+  <dd>
+    通知が発生した <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebProgress" title="">nsIWebProgress</a></code> インスタンス。</dd>
+  <dt>
+    <code>aRequest</code></dt>
+  <dd>
+    関連する <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIRequest" title="">nsIRequest</a></code> 。いくつかの場合では、この値は <code>null</code> かもしれません。</dd>
+  <dt>
+    <code>aLocation</code></dt>
+  <dd>
+    読み込まれているロケーションの URI 。</dd>
+  <dt>
+    <code>aFlags</code></dt>
+  <dd>
+    オプション：この値は、ロケーションが変更された状況や理由について表します。 <span class="inlineIndicator optional optionalInline">Optional from Gecko 10</span></dd>
+</dl>
+<h3 id="onProgressChange" name="onProgressChange()">onProgressChange()</h3>
+<p><code>aWebProgress</code> に関連するリクエストのひとつの変更されたプログレスを通知します。（<code>STATE_STOP</code> と <code>STATE_IS_WINDOW</code> フラグを含む <code>aStateFlags</code> を伴って呼び出された <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIWebProgressListener#onStateChange()">onStateChange()</a></code> に対応する） aWebProgress の全てのリクエストが完了したとき、プログレス全体はゼロへとリセットされます。</p>
+<div class="note">
+  <strong>註：</strong>プログレスの値が未知である、または長整数型の最大値を上回る場合、プログレスの値は -1 によって置き換えられます。</div>
+<div class="note">
+  <strong>註：</strong>オブジェクトが <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebProgressListener2" title="">nsIWebProgressListener2</a></code> を実装しており、尚且つ呼び出し側がそのインターフェースを知っている場合、この関数は呼び出されません。その場合、代わりに <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIWebProgressListener2#onProgressChange64()">nsIWebProgressListener2.onProgressChange64()</a></code> が呼び出されます。</div>
+<pre class="eval">void onProgressChange(
+  in nsIWebProgress aWebProgress,
+  in nsIRequest aRequest,
+  in long aCurSelfProgress,
+  in long aMaxSelfProgress,
+  in long aCurTotalProgress,
+  in long aMaxTotalProgress
+);
+</pre>
+<h6 id="Parameters" name="Parameters">引数</h6>
+<dl>
+  <dt>
+    <code>aWebProgress</code></dt>
+  <dd>
+    通知が発生した <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebProgress" title="">nsIWebProgress</a></code> インスタンス。</dd>
+  <dt>
+    <code>aRequest</code></dt>
+  <dd>
+    新しいプログレスを持つ <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIRequest" title="">nsIRequest</a></code> 。</dd>
+  <dt>
+    <code>aCurSelfProgress</code></dt>
+  <dd>
+    リクエストの現在のプログレス。</dd>
+  <dt>
+    <code>aMaxSelfProgress</code></dt>
+  <dd>
+    リクエストの最大のプログレス。</dd>
+  <dt>
+    <code>aCurTotalProgress</code></dt>
+  <dd>
+    aWebProgress に関連する全てのリクエストにおける、現在のプログレス。</dd>
+  <dt>
+    <code>aMaxTotalProgress</code></dt>
+  <dd>
+    aWebProgress に関連する全てのリクエストにおける、全体のプログレス。</dd>
+</dl>
+<h3 id="onSecurityChange" name="onSecurityChange()">onSecurityChange()</h3>
+<p>セキュリティプログレスを通知します。このメソッドは （例えば HTTP -&gt; HTTPS または HTTP, FOO -&gt; HTTPS といった）セキュリティの遷移に応じて、およびドキュメントの読み込みの完了と共に呼び出されます。ネットワーク読み込みの間にエラーが発生した場合でも、同様に呼び出されます。</p>
+<div class="note">
+  <strong>註：</strong>セキュリティパッケージを導入している場合、これらの通知は一度しか発生しません。</div>
+<pre class="eval">void onSecurityChange(
+  in nsIWebProgress aWebProgress,
+  in nsIRequest aRequest,
+  in unsigned long aState
+);
+</pre>
+<h6 id="Parameters" name="Parameters">引数</h6>
+<dl>
+  <dt>
+    <code>aWebProgress</code></dt>
+  <dd>
+    通知が発生した <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebProgress" title="">nsIWebProgress</a></code> インスタンス。</dd>
+  <dt>
+    <code>aRequest</code></dt>
+  <dd>
+    新しいセキュリティ状態の <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIRequest" title="">nsIRequest</a></code> 。</dd>
+  <dt>
+    <code>aState</code></dt>
+  <dd>
+    上述の<a href="#State_Security_Flags">セキュリティ状態フラグ</a>と<a href="#Security_Strength_Flags">セキュリティ強度フラグ</a>によって構成された値。将来的には未定義なビット列を受け取ることになるかもしれません。</dd>
+</dl>
+<h3 id="onStateChange" name="onStateChange()">onStateChange()</h3>
+<p>aWebProgress に関連するリクエストのいずれかの状態が変更されたことを通知します。</p>
+<pre class="eval">void onStateChange(
+  in nsIWebProgress aWebProgress,
+  in nsIRequest aRequest,
+  in unsigned long aStateFlags,
+  in nsresult aStatus
+);
+</pre>
+<h6 id="Parameters" name="Parameters">引数</h6>
+<dl>
+  <dt>
+    <code>aWebProgress</code></dt>
+  <dd>
+    通知が発生した <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebProgress" title="">nsIWebProgress</a></code> インスタンス。</dd>
+  <dt>
+    <code>aRequest</code></dt>
+  <dd>
+    状態が変更した <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIRequest" title="">nsIRequest</a></code> 。この引数は <code>null</code> である場合があります。</dd>
+  <dt>
+    <code>aStateFlags</code></dt>
+  <dd>
+    新しい状態のフラグを表します。この値は、上述した遷移状態フラグのひとつと、状態種類フラグのひとつ、または複数によって構成されています。将来的には未定義なビット列を受け取ることになるかもしれません。</dd>
+  <dt>
+    <code>aStatus</code></dt>
+  <dd>
+    <p>状態の変更に関連するエラーステータスコードです。この引数は aStateFlag が <code>STATE_STOP</code> ビットを含まない限りは無視されます。ステータスコードは状態の変更に関連するリクエストの成功または失敗を示します。</p>
+    <div class="note">
+      <strong>註：</strong>HTTP <code>404 File Not Found</code> エラーのようなサーバー側で発生したエラーに対しても、成功したとのコードを示すかもしれません。こうした場合において、リクエスト自体のエラー情報については、（HTTPリクエストについては <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIHttpChannel" title="">nsIHttpChannel</a></code> を参照するなど）拡張されたエラー情報を問い合わせるべきです。</div>
+  </dd>
+</dl>
+<h3 id="onStatusChange" name="onStatusChange()"><strong>onStatusChange()</strong></h3>
+<p>リクエストのステータスが変更されたことを通知します。ステータスメッセージは、ブラウザのステータスバーなどといった、ユーザーへの表示を意図されています。</p>
+<pre class="eval">void onStatusChange(
+  in nsIWebProgress aWebProgress,
+  in nsIRequest aRequest,
+  in nsresult aStatus,
+  in wstring aMessage
+);
+</pre>
+<h6 id="Parameters" name="Parameters">引数</h6>
+<dl>
+  <dt>
+    <code>aWebProgress</code></dt>
+  <dd>
+    通知が発火した　<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebProgress" title="">nsIWebProgress</a></code> 。</dd>
+  <dt>
+    <code>aRequest</code></dt>
+  <dd>
+    新たなステータスを持つ <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIRequest" title="">nsIRequest</a></code> 。</dd>
+  <dt>
+    <code>aStatus</code></dt>
+  <dd>
+    <p>この値はエラーコードではありません。その代わり、現在のリクエストのステータスを示す数値になります。このインターフェースはステータスコードの設定が可能なようには定義されていません。</p>
+    <div class="note">
+      <strong>註：</strong>いくつかのステータス値は、<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITransport" title="">nsITransport</a></code> および <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISocketTransport" title="">nsISocketTransport</a></code>で定義されています</div>
+  </dd>
+  <dt>
+    <code>aMessage</code></dt>
+  <dd>
+    aStatus に対応するローカライズされたテキスト。</dd>
+</dl>
+<h2 id="Example" name="Example">例</h2>
+<p>タブごとへの nsIWebProgressListener:</p>
+<ul>
+  <li><a href="https://dxr.mozilla.org/mozilla-central/source/browser/base/content/tabbrowser.xml#444" rel="custom">gBrowser.mTabProgressListener による作成</a></li>
+</ul>
+<p>gBrowser.mProgressListeners (上で述べたようにタブ毎の nsIWebProgressListener によって起動される):</p>
+<ul>
+  <li><a href="https://dxr.mozilla.org/mozilla-central/source/browser/base/content/browser.js#4306" rel="custom">XULBrowserWindow.onStateChange</a> (etc.)</li>
+</ul>
+<p> </p>

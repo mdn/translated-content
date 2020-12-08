@@ -1,0 +1,42 @@
+---
+title: setValue
+slug: >-
+  Archive/Mozilla/XPInstall/Référence_de_l_API_XPInstall/Objet_WinReg/Méthodes/setValue
+translation_of: Archive/Mozilla/XPInstall/Reference/WinReg_Object/Methods/setValue
+---
+<p> </p>
+<h3 id="setValue" name="setValue">setValue</h3>
+<p>(Netscape 6 and Mozilla ne supporte pas cette méthode)</p>
+<p>Définit la valeur d'une clef arbitraire.</p>
+<h4 id="M.C3.A9thode_de" name="M.C3.A9thode_de">Méthode de</h4>
+<p>Objet <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_WinReg">WinReg</a></p>
+<h4 id="Syntaxe" name="Syntaxe">Syntaxe</h4>
+<pre class="eval">String setValue ( Chaîne subkey, Chaîne valname, valeur WinRegValue);
+</pre>
+<h4 id="Param.C3.A8tres" name="Param.C3.A8tres">Paramètres</h4>
+<p>La méthode <code>setValue</code> a les paramètres suivants :</p>
+<dl>
+ <dt>
+   </dt>
+ <dd>
+  Le chemin de la clef vers l'emplacement approprié dans la hiérarchie de clef, tel que<code>"Software\\Netscape\\Navigator\\Mail"</code>.</dd>
+ <dt>
+  <code>valname</code></dt>
+ <dd>
+  Le nom de la paire nom_de_valeur/valeur à modifier.</dd>
+ <dt>
+  <code>value</code></dt>
+ <dd>
+  Un objet <code>WinRegValue</code> représentant une nouvelle valeur différente d'une chaîne. Pour plus d'informations sur ces valeurs, voir <code><a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_WinReg/WinRegValue">WinRegValue</a></code>.</dd>
+</dl>
+<dl>
+ <dt>
+  <code>subkey</code></dt>
+</dl>
+<h4 id="Retours" name="Retours">Retours</h4>
+<p>0 en cas de succès ; un nombre non nul si l'ordonnancement de la modification a échoué. Pour la liste complète des valeurs possibles, voir <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Codes_retourn%c3%a9s">Codes retournés</a>.</p>
+<p> </p>
+<h4 id="Description" name="Description">Description</h4>
+<p>La méthode <code>setValue</code> définit la valeur d'une clef arbitraire. Elle est utilisée si la valeur n'est pas une chaîne. Si la valeur est une chaîne, la méthode <code><a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_WinReg/M%c3%a9thodes/setValueString">setValueString</a></code> est plus appropriée.</p>
+<p><span class="comment">Interwiki Language Links</span></p>
+<p>{{ languages( { "en": "en/XPInstall_API_Reference/WinReg_Object/Methods/setValue" } ) }}</p>

@@ -1,0 +1,87 @@
+---
+title: Structures
+slug: Gecko_Plugin_API_Reference/Structures
+tags:
+  - Gecko Plugin API Reference
+  - NPAPI
+  - Plugins
+translation_of: Plugins/Guide/Structures
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/Gecko_Plugin_API_Reference:Scripting_plugins" style="float: left;">« 前のページ</a><a href="/ja/docs/Gecko_Plugin_API_Reference:Constants">次のページ  »</a></p>
+</div>
+
+<p>この章ではプラグイン API 内の多様なオブジェクトを示すのに使われるデータ構造体を説明しています。 <span id="Structure_Summary"></span></p>
+
+<h3 id=".E6.A7.8B.E9.80.A0.E4.BD.93.E6.A6.82.E8.A6.81" name=".E6.A7.8B.E9.80.A0.E4.BD.93.E6.A6.82.E8.A6.81">構造体概要</h3>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code><a href="/ja/docs/NPAnyCallbackStruct">NPAnyCallbackStruct</a></code></td>
+   <td>組み込みや印刷時に必要となる情報を含みます。</td>
+  </tr>
+  <tr>
+   <td><code><a href="/ja/docs/NPByteRange">NPByteRange</a></code></td>
+   <td>ストリームからの特定の一連のバイトを表します。</td>
+  </tr>
+  <tr>
+   <td><code><a href="/ja/docs/NPEmbedPrint">NPEmbedPrint</a></code></td>
+   <td>組み込みや印刷時に使われるプラットフォーム固有の情報を含む <code>NPPrint</code> のサブ構造体。</td>
+  </tr>
+  <tr>
+   <td><code><a href="/ja/docs/NPEvent">NPEvent</a></code></td>
+   <td>ウィンドウを持たないプラグインへ <code>NPP_HandleEvent</code> によって渡されるイベントを表します。</td>
+  </tr>
+  <tr>
+   <td><code><a href="/ja/docs/NPFullPrint">NPFullPrint</a></code></td>
+   <td>フルページモードの印刷時に使われるプラットフォーム固有の情報を含む <code>NPPrint</code> のサブ構造体。</td>
+  </tr>
+  <tr>
+   <td><code><a href="/ja/docs/NPP">NPP</a></code></td>
+   <td>プラグインの単一のインスタンスを表します。</td>
+  </tr>
+  <tr>
+   <td><code><a href="/ja/docs/NP_Port">NP_Port</a></code></td>
+   <td>NPWindow 構造体のウィンドウフィールドによって必要とされる情報を含みます。</td>
+  </tr>
+  <tr>
+   <td><code><a href="/ja/docs/NPPrint">NPPrint</a></code></td>
+   <td>フルページか組み込みモードでプラグインがそれ自身を印刷するのに必要な情報を含みます。</td>
+  </tr>
+  <tr>
+   <td><code><a href="/ja/docs/NPPrintCallbackStruct">NPPrintCallbackStruct</a></code></td>
+   <td>組み込みモードや印刷時に <code>NPEmbedPrint</code> の platformPrint フィールドによって必要とされる情報を含みます。</td>
+  </tr>
+  <tr>
+   <td><code><a href="/ja/docs/NPRect">NPRect</a></code></td>
+   <td>ページの長方形の領域を表します。</td>
+  </tr>
+  <tr>
+   <td><code><a href="/ja/docs/NPRegion">NPRegion</a></code></td>
+   <td>ページのプラットフォームで定義された領域を表します。</td>
+  </tr>
+  <tr>
+   <td><code><a href="/ja/docs/NPSavedData">NPSavedData</a></code></td>
+   <td>プラグインが削除された後に保存されるインスタンス情報のブロック; プラグインへ返されることがありえます。</td>
+  </tr>
+  <tr>
+   <td><code><a href="/ja/docs/NPSetWindowCallbackStruct">NPSetWindowCallbackStruct</a></code></td>
+   <td>プラグインの Unix ウィンドウ環境についての情報を含みます。</td>
+  </tr>
+  <tr>
+   <td><code><a href="/ja/docs/NPStream">NPStream</a></code></td>
+   <td>ブラウザによって作り出されプラグインによって消費されるか、プラグインによって作り出されブラウザによって消費されるかするデータのストリームを表します。</td>
+  </tr>
+  <tr>
+   <td><code><a href="/ja/docs/NPWindow">NPWindow</a></code></td>
+   <td>プラグインのインスタンスが描画できるターゲットについての情報を含みます。</td>
+  </tr>
+ </tbody>
+</table>
+
+<div class="noinclude">
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/Gecko_Plugin_API_Reference:Scripting_plugins" style="float: left;">« 前のページ</a><a href="/ja/docs/Gecko_Plugin_API_Reference:Constants">次のページ  »</a></p>
+</div>
+</div>

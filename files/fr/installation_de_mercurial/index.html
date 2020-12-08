@@ -1,0 +1,34 @@
+---
+title: Installation de Mercurial
+slug: Installation_de_Mercurial
+tags:
+  - Développement_de_Mozilla
+  - Mercurial
+translation_of: Mozilla/Mercurial/Installing_Mercurial
+---
+<p>{{ Note("si vous n\'avez pas lu <a href='\"fr/Les_bases_de_Mercurial\"'>Les bases de Mercurial</a>, faites-le maintenant ou consultez la page <a href='\"fr/Mercurial\"'>Mercurial</a> pour d\'autres ressources.") }}</p>
+<h3 id="Installation">Installation</h3>
+<p>Si vous utilisez <code>apt-get</code>, <code>emerge</code>, <code>port</code>, <code>yast</code> ou <code>yum</code> pour installer des logiciels, faites simplement comme d'habitude. Si cela vous donne une vieille version (inférieure à 1.0 — vérifiez avec <code>hg version</code>), vous pouvez la mettre à jour à l'aide d'<code>easy_install</code> comme suit (nous utiliserons <code>apt-get</code> dans cet exemple) :</p>
+<pre class="eval">sudo apt-get install python-setuptools python-dev build-essential
+sudo easy_install -U mercurial
+</pre>
+<p>Autrement, les <a class="external" href="http://www.selenic.com/mercurial/wiki/index.cgi/BinaryPackages">paquets binaires de Mercurial</a> sont pour vous. Consultez également {{ interwiki('wikimo', 'Mercurial_on_Windows', 'wikimo:Mercurial on Windows') }} (en anglais).</p>
+<h3 id="Programme_de_fusion">Programme de fusion</h3>
+<p>Après l'installation, <strong>choisissez un <a class="external" href="http://www.selenic.com/mercurial/wiki/index.cgi/MergeProgram">programme de fusion</a></strong> (<em>merge</em>). Cela doit être fait directement, sinon Mercurial en choisira un pour vous et il apparaîtra au moment le plus inattendu.</p>
+<p>Il est raisonnable de définir <code>ui.merge=internal:merge</code> dans le fichier de configuration de Mercurial (voir plus bas), Mercurial essaiera alors de fusionner les modifications et d'ajouter les marqueurs de conflits (à la manière de CVS) aux fichiers qui n'ont pas pu être fusionnés.</p>
+<p>Vous pouvez voir la liste des conflits en cherchant les lignes « merging ... failed! » dans la sortie de mise à jour.</p>
+<h3 id="Configuration">Configuration</h3>
+<p>Mercurial doit être configuré avant de récupérer le code. Votre fichier de configuration de Mercurial doit au moins contenir les paramètres suivants :</p>
+<pre class="eval">[ui]
+username = Votre vrai nom &lt;<a class=" link-mailto" href="mailto:utilisateur@example.com">utilisateur@example.com</a>&gt;
+merge = <em>votre-programme-de-fusion</em>
+
+[diff]
+git = 1
+
+[defaults]
+diff=-p -U 8
+</pre>
+<p>Sous Windows, ces paramètres peuvent être ajoutés à <code>C:\Program Files\Mercurial\Mercurial.ini</code>. Sur les systèmes UNIX et apparentés, ils doivent se trouver dans votre fichier <code>$HOME/.hgrc</code>.</p>
+<p>Vous pouvez configurer l'éditeur à utiliser pour les messages de soumission à l'aide de l'option <code>editor</code> dans la section <code>{{ mediawiki.external('ui') }}</code> ou en définissant la variable d'environnement <code>EDITOR</code>.</p>
+<p>{{ languages( { "en": "en/Installing_Mercurial" } ) }}</p>

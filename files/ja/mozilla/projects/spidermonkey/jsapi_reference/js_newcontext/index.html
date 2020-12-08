@@ -1,0 +1,93 @@
+---
+title: JS NewContext
+slug: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_NewContext
+tags:
+  - JSAPI Reference
+  - SpiderMonkey
+translation_of: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_NewContext
+---
+<p>
+
+</p><div class="breadcrumbs"><a href="/ja" title="ja">メインページ</a> » <a href="/ja/docs/SpiderMonkey" title="SpiderMonkey">SpiderMonkey</a> »
+ <a href="/ja/docs/SpiderMonkey/JSAPI_Reference" title="JSAPI_Reference">JSAPI リファレンス</a> »
+ <code>JS_NewContext</code></div>
+
+<p></p>
+
+<p>新たなJavaScriptコンテキストを生成します。 <span class="comment">Creates a new JavaScript context.</span></p>
+
+<h2 id=".E6.A7.8B.E6.96.87" name=".E6.A7.8B.E6.96.87">構文</h2>
+
+<p><span class="comment">= Syntax =</span></p>
+
+<pre class="eval"><a href="/ja/JSRuntime" title="ja/JSRuntime">JSContext</a> * <strong>JS_NewContext</strong>(<a href="/ja/JSRuntime" title="ja/JSRuntime">JSRuntime</a> *rt, size_t stackchunksize);
+</pre>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Name</th>
+   <th>Type</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td><code>rt</code></td>
+   <td><code><a href="/ja/JSRuntime" title="ja/JSRuntime">JSRuntime</a> *</code></td>
+   <td>コンテキストの親となるランタイムを指定します。JavaScriptのオブジェクト、関数、文字列、数値は<code>JSRuntime</code>内のコンテキスト内で共有されますが、<code>JSRuntime</code>をまたぐことはありません。
+    <p><span class="comment">Parent runtime for the new context. JavaScript objects, functions, strings, and numbers may be shared among the contexts in a &lt;code&gt;JSRuntime&lt;/code&gt;, but they cannot be shared across &lt;code&gt;JSRuntime&lt;/code&gt;s.</span></p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>stackchunksize</code></td>
+   <td><code>size_t</code></td>
+   <td>
+    <p>各スタック領域のサイズをバイトで指定します。標準的には<code>8192</code>が適切な値であり、大抵の場合において調節すべきでないパラメータです。 <span class="comment">The size, in bytes, of each "stack chunk". This is a memory management tuning parameter which most users should not adjust. &lt;code&gt;8192&lt;/code&gt; is a good default value.</span></p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id=".E8.AA.AC.E6.98.8E" name=".E8.AA.AC.E6.98.8E">説明</h2>
+
+<p><span class="comment">= Description =</span> スクリプトの実行および値の保持に利用するコンテキストを新規に生成する関数です。各スクリプトは独自のコンテキスト上で実行され、各コンテキストは特定の<code>JSRuntime</code>オブジェクト<code>rt</code>と関連づけられています。 <span class="comment">Creates a new JavaScript context for executing scripts and examining JavaScript values. Each script runs in its own context, and each context must be associated with a specified &lt;code&gt;JSRuntime&lt;/code&gt;, &lt;code&gt;rt&lt;/code&gt;.</span></p>
+
+<p><code>JS_NewContext</code>は、成功したとき新たなコンテキストへのポインタを返します。失敗したときは<code>NULL</code>を返します。 <span class="comment">On success, &lt;code&gt;JS_NewContext&lt;/code&gt; returns a pointer to the new context. Otherwise it returns &lt;code&gt;NULL&lt;/code&gt;.</span></p>
+
+<p>この関数の呼び元は、コンテキストを使い終わったら<code><a href="/ja/JS_DestroyContext" title="ja/JS_DestroyContext">JS_DestroyContext</a></code>を実行しなければなりません。<code>JSRuntime</code>を解放する前に、その<code>JSContext</code>をすべて解放する必要があります。 <span class="comment">The caller must call &lt;code&gt;<a href="/ja/JS_DestroyContext">JS_DestroyContext</a>&lt;/code&gt; when it is done using the context. Before a &lt;code&gt;JSRuntime&lt;/code&gt; may be destroyed, all the &lt;code&gt;JSContext&lt;/code&gt;s associated with it must be destroyed.</span></p>
+
+<p><code><a href="/ja/JS_THREADSAFE" title="ja/JS_THREADSAFE">JS_THREADSAFE</a></code>を有効にしたビルドでは、ある<code>JSContext</code>を同時にアクセスできるスレッドは一つだけです。新規の<code>JSContext</code>は、初期状態で呼び元のスレッドと関連付けられます。コンテキストがあるスレッドと関連付けられている間は、他のスレッドからそれを利用したり解放することはできません。<code>JSContext</code>を別のスレッドに移動する場合は、<code><a href="/ja/JS_ClearContextThread" title="ja/JS_ClearContextThread">JS_ClearContextThread</a></code>と<code><a href="/ja/JS_SetContextThread" title="ja/JS_SetContextThread">JS_SetContextThread</a></code>を利用してください。 <span class="comment">In a &lt;code&gt;<a href="/ja/JS_THREADSAFE">JS_THREADSAFE</a>&lt;/code&gt; build, only one thread may use a &lt;code&gt;JSContext&lt;/code&gt; at a time. The new &lt;code&gt;JSContext&lt;/code&gt; is initially associated with the calling thread. As long as it stays associated with that thread, no other thread may use it or destroy it. A &lt;code&gt;JSContext&lt;/code&gt; may be transferred from one thread to another by calling &lt;code&gt;<a href="/ja/JS_ClearContextThread">JS_ClearContextThread</a>&lt;/code&gt; and &lt;code&gt;<a href="/ja/JS_SetContextThread">JS_SetContextThread</a>&lt;/code&gt;.</span></p>
+
+<p>新たに生成した<code>JSContext</code>は、初期状態においてグローバルオブジェクトを持ちません。 <span class="comment">The new &lt;code&gt;JSContext&lt;/code&gt; initially has no global object.</span></p>
+
+<h3 id=".E6.B3.A8.E8.A8.98" name=".E6.B3.A8.E8.A8.98">注記</h3>
+
+<p><span class="comment">== Notes ==</span> 一度生成されたコンテキストは異なるスクリプトやJSAPI呼び出しのために複数回利用される可能性があります。具体的には、Webブラウザが各HTMLに対応する独立したコンテキストを生成したときに、ページ内のすべてのスクリプトは同じコンテキストを用いて実行されるといったシナリオが考えられます。 <span class="comment">Once created, a context can be used any number of times for different scripts or JSAPI queries. For example, a browser would create a separate context for each HTML page; every script in the page would use the same context.</span></p>
+
+<p>新規コンテキストは、<code>Object</code>、<code>Date</code>、<code>Array</code>といった標準的なグローバルオブジェクトを一切保持していません。それらを利用するには、<code><a href="/ja/JS_InitStandardClasses" title="ja/JS_InitStandardClasses">JS_InitStandardClasses</a></code>を呼び出す必要があります。JSAPIを利用するアプリケーションで独自の関数やクラスを提供したい場合には、<code><a href="/ja/JS_GetGlobalObject" title="ja/JS_GetGlobalObject">JS_GetGlobalObject</a></code>を使ってそのコンテキストのグローバルオブジェクトを取得し、<code><a href="/ja/JS_DefineFunctions" title="ja/JS_DefineFunctions">JS_DefineFunctions</a></code>および<code><a href="/ja/JS_InitClass" title="ja/JS_InitClass">JS_InitClass</a></code>をそれに適用することで独自のグローバル関数やクラスをコンテキストに追加できます。 <span class="comment">The new context initially does not contain any globals, even standard globals such as &lt;code&gt;Object&lt;/code&gt;, &lt;code&gt;Date&lt;/code&gt;, and &lt;code&gt;Array&lt;/code&gt;. To create them, call &lt;code&gt;<a href="/ja/JS_InitStandardClasses">JS_InitStandardClasses</a>&lt;/code&gt;. A JSAPI application typically also provides some custom functions and classes. Use &lt;code&gt;<a href="/ja/JS_GetGlobalObject">JS_GetGlobalObject</a>&lt;/code&gt; to get a context's global object. Use &lt;code&gt;&lt;/code&gt; and &lt;code&gt;<a href="/ja/JS_InitClass">JS_InitClass</a>&lt;/code&gt; to add custom global functions and classes to the context.</span></p>
+
+<p><code>stackchunksize</code>は、JavaScriptのスタックサイズを調節するものではありません(JSAPIでは、スタック長を調節するインタフェースを提供していません)。<code>stackchunksize</code>に大きい値を設定するのは誤った方法です。<code>DEBUG</code>ビルドにおいて、<code>stackchunksize</code>を大きくすると性能が著しく劣化します。一般的には<code>8192</code>が推奨されます。 <span class="comment">The &lt;code&gt;stackchunksize&lt;/code&gt; parameter does not control the JavaScript stack size. (The JSAPI does not provide a way to adjust the stack depth limit.) Passing a large number for &lt;code&gt;stackchunksize&lt;/code&gt; is a mistake. In a &lt;code&gt;DEBUG&lt;/code&gt; build, large chunk sizes can degrade performance dramatically. The usual value of &lt;code&gt;8192&lt;/code&gt; is recommended.</span></p>
+
+<h2 id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE" name=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE">関連項目</h2>
+
+<p><span class="comment">= See Also =</span></p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td>Groups</td>
+   <td><a href="/ja/JSAPI_Reference#Functions" title="ja/JSAPI_Reference#Functions">Functions</a></td>
+  </tr>
+  <tr>
+   <td>Documents</td>
+   <td>{{ LXRSearch("ident", "i", "JS_NewContext", "LXR ID Search") }}</td>
+  </tr>
+  <tr>
+   <td>Entries</td>
+   <td><a href="/ja/JS_ContextIterator" title="ja/JS_ContextIterator">JS_ContextIterator</a>,
+    <p><a href="/ja/JS_DestroyContext" title="ja/JS_DestroyContext">JS_DestroyContext</a>, <a href="/ja/JS_SetContextCallback" title="ja/JS_SetContextCallback">JS_SetContextCallback</a></p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>{{ languages( { "en": "en/JS_NewContext" } ) }}</p>

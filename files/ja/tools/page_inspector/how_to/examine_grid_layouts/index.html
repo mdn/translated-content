@@ -1,0 +1,135 @@
+---
+title: 'CSS グリッドインスペクター: グリッドレイアウトを調査する'
+slug: Tools/Page_Inspector/How_to/Examine_grid_layouts
+tags:
+  - Guide
+  - Inspector
+  - Tools
+translation_of: Tools/Page_Inspector/How_to/Examine_grid_layouts
+---
+<div>{{ToolsSidebar}}</div>
+
+<p class="summary"><strong>グリッドインスペクター</strong>で、Firefox の開発ツールを使用して <a href="/ja/docs/Web/CSS/CSS_Grid_Layout">CSS グリッドレイアウト</a> を調査できます。ページ上にあるグリッドを見つける、グリッドを調査および変更する、レイアウトのの問題をデバッグするといったことが可能です。</p>
+
+<div class="note">
+<p><strong>注記</strong>: この記事にあるスクリーンショットで示す例は、Jen Simmons による <a href="http://labs.jensimmons.com/2016/examples/futurismo-1.html">Futurismo</a> や <a href="http://labs.jensimmons.com/2017/01-003.html">Variations on a grid</a>、および Rachel Andrew による <a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#Naming_a_grid_area">名前付きグリッド領域の例</a> です。</p>
+</div>
+
+<h2 id="Discovering_CSS_grids" name="Discovering_CSS_grids">CSS グリッドを発見する</h2>
+
+<p>ページ内に <code><a href="/ja/docs/Web/CSS/display">display: grid</a></code> が適用された HTML 要素があるとき、グリッドの機能へ簡単にアクセスできるようにするため、開発ツールでいくつかの機能を使用できます。</p>
+
+<h3 id="In_the_HTML_pane" name="In_the_HTML_pane">HTML ペインの機能</h3>
+
+<p><a href="/ja/docs/Tools/Page_Inspector/UI_Tour#HTML_pane">HTML ペイン</a> では、グリッド方式でレイアウトされる要素のそばに "grid" マークがつきます。</p>
+
+<p><img alt="The HTML pane of the Firefox devtools, showing an element annotated with a grid marker, meaning that it has display: grid set on it" src="https://mdn.mozillademos.org/files/15977/html-pane.png" style="border-style: solid; border-width: 1px; display: block; height: 262px; margin: 0px auto; width: 400px;"></p>
+
+<h3 id="In_the_CSS_pane" name="In_the_CSS_pane">CSS ペインの機能</h3>
+
+<p><a href="/ja/docs/Tools/Page_Inspector/UI_Tour#CSS_pane">CSS ペイン</a> のルールビューでは、<code><a href="/ja/docs/Web/CSS/display">display: grid</a></code> 宣言の実体にグリッドアイコン (<img alt="" src="https://mdn.mozillademos.org/files/14524/Screen%20Shot%202016-12-16%20at%2010.51.15%20AM.png" style="height: 22px; margin-bottom: -5px; width: 22px;">) を表示します。</p>
+
+<p><img alt="The CSS pane of the Firefox devtools, showing the CSS for a grid layout with a grid icon included next to display: grid" src="https://mdn.mozillademos.org/files/15978/css-pane.png" style="border-style: solid; border-width: 1px; display: block; height: 399px; margin: 0px auto; width: 1146px;"></p>
+
+<p>アイコンをクリックすると、ページ上にグリッドをオーバーレイ表示する機能の有効・無効を切り替えます。これは要素に重ねて表示され、グリッドの線やトラックの位置を示すためにグリッドのように並べられます。</p>
+
+<p><img alt="A screenshot of the Firefox web browser, showing a colored overlay on top of a section of the page laid out like a grid " src="https://mdn.mozillademos.org/files/15979/grid-overlay.png" style="border-style: solid; border-width: 1px; display: block; height: 1383px; margin: 0px auto; width: 1842px;"></p>
+
+<p>このオーバーレイは別の要素を選択しても表示し続けますので、関連する CSS プロパティを編集して、グリッドにどのような影響があるかを確認できます。</p>
+
+<h3 id="The_Layout_view_Grid_section" name="The_Layout_view_Grid_section">レイアウトビューのグリッドセクション</h3>
+
+<p>ページ内にグリッドがあるとき、グリッドを確認するためのさまざまなオプションがある "グリッド" セクションが CSS ペインのレイアウトビューに表示されます。詳しくは後の章で説明します。</p>
+
+<div class="note">
+<p><strong>注記</strong>: レイアウトビューは、ページインスペクターの右側のペインにある<em>Layout</em>タブの中にあります。この記事内のスクリーンショットで、どこにあるかのヒントを得られるでしょう。</p>
+</div>
+
+<h2 id="Grid_options" name="Grid_options">グリッドのオプション</h2>
+
+<p>レイアウトビューのグリッドセクションは以下のようなものです:</p>
+
+<p><img alt="The grid options section of the Firefox devtools Layout view, showing multiple options for specifying how you want to see CSS grids displayed" src="https://mdn.mozillademos.org/files/15980/grid-options.png" style="border-style: solid; border-width: 1px; display: block; height: 408px; margin: 0px auto; width: 500px;"></p>
+
+<p>セクション内にオプションがいくつかあります:</p>
+
+<ul>
+ <li>グリッドをオーバーレイ表示: さまざまな設定とともに、ページ上にそれぞれのグリッドを表示するためのチェックボックスがあります。オーバーレイ表示のオン・オフを切り替えできます。</li>
+ <li>グリッドの表示設定:
+  <ul>
+   <li>線番号を表示: それぞれのグリッドオーバーレイで線番号の表示をオン・オフできます (デフォルトでオン)。</li>
+   <li>領域名を表示: グリッドの領域に名前がある場合に、領域名の表示をオン・オフできます (妥当であればデフォルトでオン)。</li>
+   <li>グリッド線を無限に延伸: デフォルトで、グリッドの線やトラックは <code>display: grid</code> が設定された要素の内部に限って表示します。このオプションを有効にすると、グリッド線がそれぞれの軸にそってビューポートの端まで延伸します。</li>
+  </ul>
+ </li>
+ <li>ミニグリッドビュー: 現在オーバーレイ表示しているグリッドを縮小表示します。</li>
+</ul>
+
+<div class="note">
+<p><strong>注記</strong>: オーバーレイの色や表示設定は、ページごとに再読み込み後も維持します。</p>
+</div>
+
+<p>これらの機能を、さらに詳しく見ていきましょう</p>
+
+<h3 id="Overlay_grid" name="Overlay_grid">グリッドをオーバーレイ表示</h3>
+
+<p>"グリッドをオーバーレイ表示" セクションに、ページ上のそれぞれのグリッドの項目が表示されます:</p>
+
+<p><img alt="An entry for a single grid in the Overlay Grid section of the Grid options, showing a grid's name, overlay color, and more." src="https://mdn.mozillademos.org/files/15981/overlay-grid-entry.png" style="border-style: solid; border-width: 1px; display: block; height: 37px; margin: 0px auto; width: 300px;"></p>
+
+<p>それぞれの項目の構成は (左から右の順に) 以下のとおりです:</p>
+
+<ul>
+ <li>グリッドのオーバーレイ表示のオン・オフを切り替えるチェックボックス。現在、オーバーレイは同時に 1 つしか表示しませんので注意してください。</li>
+ <li>グリッドを表すラベル。グリッドが適用された HTML 要素を識別するセレクターです。ここをクリックしても、オーバーレイ表示のオン・オフを切り替えできます。</li>
+ <li>標的のアイコン。クリックすると、このグリッドに関連する HTML 要素を HTML ペインで選択します。</li>
+ <li>グリッドオーバーレイの主要な色を変更できるカラーピッカー。グリッドを区別しやすくするため、色を変えるのに便利です。</li>
+</ul>
+
+<h3 id="Display_line_numbers" name="Display_line_numbers">線番号を表示</h3>
+
+<p>デフォルトで、グリッドオーバーレイに線番号を表示します。</p>
+
+<p><img alt="A CSS grid overlay with grid line numbers displayed" src="https://mdn.mozillademos.org/files/15982/line-numbers.png" style="border-style: solid; border-width: 1px; display: block; height: 582px; margin: 0px auto; width: 600px;"></p>
+
+<p>"線番号を表示" のチェックを外すと、線番号が消えます。</p>
+
+<p><img alt="A CSS grid overlay with grid line numbers not displayed" src="https://mdn.mozillademos.org/files/15983/no-line-numbers.png" style="border-style: solid; border-width: 1px; display: block; height: 580px; margin: 0px auto; width: 600px;"></p>
+
+<h3 id="Display_area_names" name="Display_area_names">領域名を表示</h3>
+
+<p>領域名があるグリッドでは、デフォルトで領域名をグリッドオーバーレイに表示します。</p>
+
+<p><img alt="A CSS grid overlay with named area names displayed" src="https://mdn.mozillademos.org/files/15984/grid-named-areas.png" style="border-style: solid; border-width: 1px; display: block; height: 777px; margin: 0px auto; width: 1396px;"></p>
+
+<p>"領域名を表示" のチェックを外すと、領域名が消えます。</p>
+
+<p><img alt="A CSS grid overlay with named area names not displayed" src="https://mdn.mozillademos.org/files/15990/no-grid-named-areas.png" style="border-style: solid; border-width: 1px; display: block; height: 788px; margin: 0px auto; width: 1400px;"></p>
+
+<h3 id="Extend_lines_infinitely" name="Extend_lines_infinitely">グリッド線を無限に延伸</h3>
+
+<p>デフォルトで、グリッドの線やトラックは <code>display: grid</code> が設定された要素の内部に限って表示します。</p>
+
+<p><img alt="A CSS grid overlay with grid lines not extended infinitely" src="https://mdn.mozillademos.org/files/15987/no-extend-lines.png" style="border-style: solid; border-width: 1px; display: block; height: 499px; margin: 0px auto; width: 1000px;"></p>
+
+<p>"グリッド線を無限に延伸" にチェックを入れると、グリッド線がそれぞれの軸にそってビューポートの端まで延伸します。</p>
+
+<p><img alt="A CSS grid overlay with grid lines extended infinitely" src="https://mdn.mozillademos.org/files/15986/extend-lines.png" style="border-style: solid; border-width: 1px; display: block; height: 501px; margin: 0px auto; width: 1000px;"></p>
+
+<h3 id="Mini_grid_view" name="Mini_grid_view">ミニグリッドビュー</h3>
+
+<p>現在オーバーレイ表示しているグリッドを、実際のグリッドに比例して小さく表示します。</p>
+
+<p><img alt="A mini CSS grid view from the Firefox DevTools" src="https://mdn.mozillademos.org/files/15988/mini-grid-view.png" style="border-style: solid; border-width: 1px; display: block; height: 246px; margin: 0px auto; width: 600px;"></p>
+
+<p>ミニグリッドのさまざまな領域にマウスポインターを載せると、グリッドオーバーレイで対応する領域もハイライト表示されます。また、領域の寸法や列番号・行番号などの有用な情報をツールチップで表示します。</p>
+
+<p><img alt="A firefox screenshot showing an area of a mini CSS grid being highlighted in the DevTools, and the corresponding area in the real grid being highlighted on the web page." src="https://mdn.mozillademos.org/files/15989/mini-grid-highlight.png" style="border-style: solid; border-width: 1px; display: block; height: 793px; margin: 0px auto; width: 1200px;"></p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><a href="http://labs.jensimmons.com/">labs.jensimmons.com</a> — さまざまな興味深いグリッドの例</li>
+ <li><a href="https://gridbyexample.com/">Grid by Example</a> — Rachel Andrew による、CSS グリッドを学ぶための資料</li>
+ <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a> — MDN の CSS グリッドレイアウトのリファレンスやチュートリアル</li>
+</ul>

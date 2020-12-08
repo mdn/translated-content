@@ -1,0 +1,129 @@
+---
+title: 'Partie 1: Bien commencer avec Marionette et Firefox OS'
+slug: >-
+  Archive/B2G_OS/Automated_testing/gaia-ui-tests/Partie_1_Marionette_Firefox_OS_commencer
+tags:
+  - Automatisation
+  - interface utilisateur
+translation_of: >-
+  Archive/B2G_OS/Automated_testing/gaia-ui-tests/Part_1_Marionette_Firefox_OS_start
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Mozilla/Firefox_OS/Platform/Automated_testing/gaia-ui-tests" style="float: left;">« Précédent</a><a href="/fr/docs/Mozilla/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_2_Marionette_Firefox_OS_interactions">Suivant  »</a></p>
+</div><p></p>
+
+<div class="summary">
+<p><span class="seoSummary">Cette série de tutoriels a pour objectif de vous familiariser avec l'écriture et l'exécution des tests automatisés de l'interface utilisateur pour Firefox OS en utilisant <a href="/en-US/docs/Mozilla/QA/Marionette">Marionette</a>, un package d'automatisation qui tourne sur votre ordinateur. Marionette publie des commandes pour exécuter des tests sur les plateformes basées sur Gecko. Cet article va vous faire parcourir plus particulièrement la configuration que vous devez effectuer avant d'exécuter des tests.</span></p>
+</div>
+
+<p>La série de tutoriels va parcourir les concepts de l'automatisation de tests et aussi vous familiariser au travail avec Firefox OS (y compris le très utile outil de test <a href="/en-US/Firefox_OS/Using_the_B2G_desktop_client">B2G Desktop</a>) et Marionette. Occasionnellement, nous présenterons quelques défis pour vous encourager à explorer vos propres solutions.</p>
+
+<div class="note">
+<p><strong>Note </strong>: le tutoriel n'est pas spécifique aux produits de Mozilla ; par exemple, si vous développez une application HTML5, vous pouvez utiliser ce tutoriel pour constuire un framework de tests.</p>
+</div>
+
+<h2 id="Logiciels_requis_pour_ce_tutoriel">Logiciels requis pour ce tutoriel</h2>
+
+<p>Au cours de ce tutoriel, nous allons installer et utiliser les logiciels suivants :</p>
+
+<ul>
+ <li>Python 2.7</li>
+ <li>pip installer</li>
+ <li>Un éditeur de texte ou IDE pour écrire le code</li>
+ <li>Le client de bureau Boot2Gecko (Firefox OS)</li>
+ <li>Le client Marionette (client WebDriver pour Firefox OS)</li>
+</ul>
+
+<h2 id="Python_et_pip">Python et pip</h2>
+
+<p>Des systèmes d'exploitation comme Linux auront Python déjà préinstallé. Avant d'installer Python, vérifiez qu'il n'est pas déjà installé. Depuis une ligne de commande ou un terminal, exécutez :</p>
+
+<pre class="brush: bash">python --version</pre>
+
+<p>Toute version de Python 2.6.x ou 2.7.x est valable pour ce tutoriel. Si vous n'avez pas Python 2.7 d'installé, vous pouvez trouver l'installeur sur le <a href="https://www.python.org/download/releases/2.7.6/">site de téléchargement de Python</a>.</p>
+
+<p>Pip est utilisé pour installer les outils Python et nous en avons besoin pour installer Marionette. Vous pouvez vérifier si pip est installé en saisissant <code>pip</code> dans votre terminal ou votre ligne de commande. Pour installer pip, suivez les instructions dans la <a href="http://pip.readthedocs.org/en/latest/installing.html">documentation pip</a>.<br>
+  </p>
+
+<h2 id="Bureau_B2G">Bureau B2G</h2>
+
+<p>Le client de bureau B2G vous permet d'exécuter Gaia — l'interface utilisateur de Firefox OS — et les applications Firefox OS sur un bureau d'ordinateur. Le client de bureau possède certaines limites — il n'émule pas le matériel de l'appareil comme l'appareil photo, la batterie, etc. — mais il sera parfait pour les sujets de ce tutoriel. Allez, installons-le maintenant.</p>
+
+<p>Téléchargez la dernière version du bureau B2G depuis le <a href="http://nightly.mozilla.org/">site Firefox Nightly</a> (voir Desktop Boot2Gecko, en bas). Dès que le bureau B2G est téléchargé, extraire les contenus dans un dossier sur votre ordinateur. Pour démarrer le simulateur Firefox OS exécutez le fichier script <strong>b2g</strong> approprié à votre système d'exploitation :</p>
+
+<ul>
+ <li><strong>Linux</strong> : naviguez vers le dossier où vous l'avez extrait et exécutez <code>./b2g</code></li>
+ <li><strong>Mac </strong>: glissez et déplacez B2G.app dans votre dossier Application et exécutez-le depuis celui-ci.</li>
+ <li><strong>Windows </strong>: exécutez b2g.exe depuis le dossier où vous avez extrait le zip.</li>
+</ul>
+
+<p>Dès que l'application démarre, vous devriez voir une fenêtre similaire à celle-ci :</p>
+
+<p><img alt="A welcome screen for Firefox OS - says welcome in multiple languages" src="https://mdn.mozillademos.org/files/7207/b2g-start-screen.png" style="width: 322px; height: 509px; display: block; margin: 0px auto;"></p>
+
+<p>Suivez les étapes de Premier Usage jusqu'à arriver sur l'écran d'accueil Firefox OS. Notez que vous pouvez émuler les boutons du téléphone en utilisant les commandes clavier suivantes, qui peuvent être parfois utiles (par exemple, appuyer sur Home pour éviter que le téléphone ne se mette en veille).</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="row">
+    <p> </p>
+   </th>
+   <th scope="col">
+    <p>Clavier Windows/Linux</p>
+   </th>
+   <th scope="col">
+    <p>Clavier Mac OS</p>
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">
+    <p>Bouton Home</p>
+   </th>
+   <td>
+    <p>Home</p>
+   </td>
+   <td>
+    <p>Fn + flèche gauche</p>
+   </td>
+  </tr>
+  <tr style="height: 0px;">
+   <th scope="row">
+    <p>Bouton Power</p>
+   </th>
+   <td>
+    <p>Fin</p>
+   </td>
+   <td>
+    <p>Fn + flèche droite</p>
+   </td>
+  </tr>
+  <tr>
+   <th scope="row">
+    <p>Volume haut/bas</p>
+   </th>
+   <td>
+    <p>Haut/Bas de page</p>
+   </td>
+   <td>
+    <p>Fn+ flèche haut/bas</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>À cette étape, vous pouvez laisser ouvert le bureau B2G et mettre la fenêtre de coté. Maintenant nous allons terminer le travail en installant Marionette.</p>
+
+<h2 id="Marionette">Marionette</h2>
+
+<p>Marionette est constitué de deux parties ; le client — qui fonctionne sur votre ordinateur — et le serveur — qui fonctionne à l'intérieur de Firefox OS. Le serveur Marionette, comme un marionnettiste, peut contrôler directement Firefox OS.</p>
+
+<p><img alt="marionette architecture showing marionette server inside Firefox OS and marionette client on its own outside" src="https://mdn.mozillademos.org/files/7223/marionette-basic-diagram.png" style="width: 352px; height: 186px; display: block; margin: 0px auto;"></p>
+
+<p>Puisque nous utilisons le client bureau B2G, le serveur Marionette est préinstallé (cela est aussi vrai quand vous utilisez une compilation préconfigurée de Firefox OS sur un appareil réel). Avant toutefois de pouvoir contrôler Firefox OS, nous devons installer le client Marionette sur notre ordinateur. On peut le faire en exécutant la commande suivante dans le terminal :</p>
+
+<pre class="brush: bash">pip install marionette_client</pre>
+
+<p>C'est tout pour le moment. Nous avons tout configuré et sommes prêts à commencer !</p>

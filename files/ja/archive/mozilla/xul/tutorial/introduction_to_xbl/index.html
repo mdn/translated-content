@@ -1,0 +1,124 @@
+---
+title: XBL 入門
+slug: Archive/Mozilla/XUL/Tutorial/Introduction_to_XBL
+tags:
+  - Tutorials
+  - XBL
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Introduction_to_XBL
+---
+<p>
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Property_Files" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Anonymous_Content">次のページ  »</a></p>
+</div>
+<p><a href="ja/XUL">XUL</a> には、姉妹言語として <a href="ja/XBL">XBL</a> (eXtensible Bindings Language) が用意されています。
+この言語を利用して、XUL ウィジェットの<span style="border-bottom: 1px dashed green;" title="behavior">振る舞い</span>を宣言することが可能です。
+</p>
+<h3 id=".E3.83.90.E3.82.A4.E3.83.B3.E3.83.87.E3.82.A3.E3.83.B3.E3.82.B0" name=".E3.83.90.E3.82.A4.E3.83.B3.E3.83.87.E3.82.A3.E3.83.B3.E3.82.B0"> バインディング </h3>
+<p>XUL を使用すれば、アプリケーションが提供するユーザーインターフェイスのレイアウトを定義することが可能です。
+また、それらに<a href="ja/XUL_Tutorial/Adding_Style_Sheets">スタイルを適用する</a>ことで、要素の外観をカスタマイズできます。
+さらに、スタイルを変更するために、<a href="ja/XUL_Tutorial/Creating_a_Skin">新しいスキンを作成する</a>ことも可能です。
+このとき、<a href="ja/XUL_Tutorial/Scroll_Bars">スクロールバー</a>や、<a href="ja/XUL_Tutorial/Input_Controls">チェックボックス</a>といった、すべての要素の基本的な外観については、スタイルを調整するか、要素に属性を設定することによって変更することが可能ですが、
+XUL では、要素の挙動については変更する手段がありません。
+例えば、スクロールバーについて、部分的に動作の内容を変更したい場合があるかもしれませんが、
+こういった場合は、<a href="ja/XBL">XBL</a> が必要になります。
+</p><p>XBL では、XUL ウィジェットの振る舞いをバインディング (<span style="color: green;">binging</span>) として記述することができ、
+XBL ファイルには、記述したいくつかのバインディングをまとめて置くことができます。
+例えば、スクロールバーに結びつけるためのバインディングを記述する場合、
+振る舞いとしては、
+スクロールバーを構成する XUL 要素についての記述に加えて、
+スクロールバーのプロパティとメソッドについても記述することになります。
+</p><p>XUL と同様に、XBL も XML 応用言語の一種であるため、構文規則も似たものになります。
+以下の例は、XBL ファイルの基本的な枠組みを示しています。
+</p>
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;bindings xmlns="http://www.mozilla.org/xbl"&gt;
+  &lt;binding id="binding1"&gt;
+    &lt;!-- content, property, method and event descriptions go here --&gt;
+  &lt;/binding&gt;
+  &lt;binding id="binding2"&gt;
+    &lt;!-- content, property, method and event descriptions go here --&gt;
+  &lt;/binding&gt;
+&lt;/bindings&gt;
+</pre>
+<p><code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#bindings">bindings</a></code></code> 要素は、XBL ファイルにおけるルート要素になっており、
+そこには、1 つ以上の <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#binding">binding</a></code></code> 要素が含まれています。
+それぞれの <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#binding">binding</a></code></code> 要素では、個々のバインディングを宣言します。
+そこに置かれている <code>id</code> 属性は、バインディングを識別するのに使用されることになります。
+上の雛形には、2 つのバインディングがあり、
+1 つは、<code>binding1</code> で、もう 1 つは、binding2 です。
+これらは、片方をスクロールバーに結びつけ、もう片方はメニューに結びつけるといったような具合に利用します。
+バインディングは、どの XUL 要素に対しても結びつけることが可能です。
+CSS クラスを使用すれば、異なったバインディングを必要なだけ利用できます。
+上記のテンプレートの <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#bindings">bindings</a></code></code> 要素に置かれている名前空間の指定に注目してください。
+これは、XBL の構文を使うことを宣言するものです。
+</p><p>バインディングを要素に割り当てるためには、CSS プロパティ <code><a href="ja/CSS/-moz-binding">-moz-binding</a></code> に、バインディングファイルを示す URL を設定します。
+例えば、次のようにします。
+</p>
+<pre>scrollbar {
+    -moz-binding: url('chrome://findfile/content/findfile.xml#binding1');
+}
+</pre>
+<p>この URL は、<code><a class=" external" rel="freelink">chrome://findfile/content/findfile.xml</a></code> ファイル中に置かれている <code>binding1</code> という <code>id</code> を持ったバインディングを指しています。
+ここで、<code>#binding1</code> の部分の構文は、特定のバインディングを指すために使用され、これは HTML ファイルの中のアンカーを指すための方法とよく似ています。
+通常、バインディングは、すべて 1 つのファイルにまとめて置きます。
+この例の結果、すべてのスクロールバー要素は、 <code>binding1 </code>というバインディングで記述された振る舞いをもつことになります。
+</p><p>バインディングには、以下の 5 種類のものを宣言します。
+</p>
+<ol><li> コンテント: バインディングが結びつけられた (バインドされた) 要素に追加する、子要素です。
+</li><li> プロパティ: バインドされた要素に追加する、スクリプトからアクセス可能なプロパティです。
+</li><li> メソッド: バインドされた要素に追加する、スクリプトからの呼び出し可能なメソッドです。
+</li><li> イベント: マウスクリックやキーの押下など、バインドされた要素が応答するイベントを設定します。バインディングでは、デフォルトの処理を規定するスクリプトを追加できます。加えて、新しいイベントを定義することも可能です。
+</li><li> スタイル: XBL により定義された要素がもっているカスタムスタイルプロパティです。
+</li></ol>
+<h3 id=".E3.83.90.E3.82.A4.E3.83.B3.E3.83.87.E3.82.A3.E3.83.B3.E3.82.B0.E3.81.AE.E4.BE.8B" name=".E3.83.90.E3.82.A4.E3.83.B3.E3.83.87.E3.82.A3.E3.83.B3.E3.82.B0.E3.81.AE.E4.BE.8B"> バインディングの例 </h3>
+<p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/box" title="box">box</a></code></code> 要素は汎用的なので、カスタムウィジェットの作成に利用するのに適しています。
+(といっても、必要ならば独自に作った要素まで含めて、任意の要素を利用することもできます)。
+<code><code><a href="/ja/docs/Mozilla/Tech/XUL/box" title="box">box</a></code></code> タグに <code>class</code> 属性を設定することで、そのクラスに属するボックスだけにバインディングを関連付けることが可能になります。
+以下に例を示します。
+</p>
+<pre class="eval"><b>XUL (example.xul):</b>
+
+&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="<a class=" external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;
+&lt;?xml-stylesheet href="<a class=" external" rel="freelink">chrome://example/skin/example.css</a>" type="text/css"?&gt;
+
+&lt;window
+     xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+  &lt;box class="okcancelbuttons"/&gt;
+&lt;/window&gt;
+
+<b>CSS (example.css):</b>
+
+box.okcancelbuttons {
+    -moz-binding: url('<a class=" external" rel="freelink">chrome://example/skin/example.xml#okcancel'</a>);
+}
+
+<b>XBL (example.xml):</b>
+
+&lt;?xml version="1.0"?&gt;
+&lt;bindings xmlns="<span class="nowiki">http://www.mozilla.org/xbl</span>"
+         xmlns:xul="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+  &lt;binding id="okcancel"&gt;
+    &lt;content&gt;
+      &lt;xul:button label="OK"/&gt;
+      &lt;xul:button label="Cancel"/&gt;
+    &lt;/content&gt;
+  &lt;/binding&gt;
+&lt;/bindings&gt;
+</pre>
+<p>この例では、ボックスを 1 つだけ持ったウィンドウを生成しています。
+このボックスは、<code>class</code> に <code>okcancelbuttons</code> を値として持つように宣言されています。
+そして、この XUL ファイルのためのスタイルシートでは、<code>okcancelbuttons</code> クラスを持つボックスは、XBL ファイルで定義された専用のバインディングを持っていることを指示しています。
+なお、バインディングの設定は、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/box" title="box">box</a></code></code> だけでなく、独自のカスタムタグを含めて他の任意の要素に対しても使用することが可能です。
+</p><p>次のセクションでは、XBL についてさらに詳しく見ていきますが、
+その前に、上記の例についてまとめておきます。
+この例を実行した場合には、OK ボタンと Cancel ボタンの 2 つのボタンがボックスの中に自動的に追加されることになります。
+</p><p>次のセクションでは、XBL を使ったコンテントの生成について見ていきます。
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Property_Files" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Anonymous_Content">次のページ  »</a></p>
+</div>
+
+<div class="noinclude">
+</div>

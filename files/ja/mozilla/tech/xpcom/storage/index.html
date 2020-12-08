@@ -1,0 +1,378 @@
+---
+title: Storage
+slug: Mozilla/Tech/XPCOM/Storage
+tags:
+  - Interfaces
+  - Storage
+  - Toolkit API
+  - 要更新
+translation_of: Mozilla/Tech/XPCOM/Storage
+---
+<p><strong>Storage</strong> is a <a href="http://www.sqlite.org/">SQLite</a> database API. It is available to trusted callers, meaning extensions and Firefox components only.</p>
+
+<p>The API is currently "unfrozen", which means it is subject to change at any time; in fact, it has changed somewhat with each release of Firefox since it was introduced, and will likely continue to do so for a while.</p>
+
+<div class="note"><strong>注記:</strong> Storage is not the same as the <a href="/ja/docs/DOM/Storage" title="DOM/Storage">DOM:Storage</a> feature which can be used by web pages to store persistent data or the <a href="/ja/docs/Session_store_API" title="Session_store_API">Session store API</a> (an <a href="/ja/docs/XPCOM" title="XPCOM">XPCOM</a> storage utility for use by extensions).</div>
+
+<h2 id="Getting_started" name="Getting_started">Getting started</h2>
+
+<p>This document covers the Storage API and some peculiarities of SQLite. It does <em>not</em> cover SQL or "regular" SQLite. You can find some very useful links in the <a href="#See_also">See also section</a> however. For Storage API help, you can post to mozilla.dev.apps.platform on the news server news.mozilla.org. To report bugs, use <a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Toolkit&amp;component=Storage">Bugzilla</a>.</p>
+
+<p>The overall procedure for use is:</p>
+
+<ol>
+ <li>Get the Storage service - <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageService" title="">mozIStorageService</a></code>.</li>
+ <li>Open a connection to the database of your choice - <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageConnection" title="">mozIStorageConnection</a></code>.</li>
+ <li>Create statements to execute on the connection - <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageStatement" title="">mozIStorageStatement</a></code>.</li>
+ <li>Bind parameters to a statement as necessary.</li>
+ <li>Execute the statement.</li>
+ <li>Check for errors.</li>
+ <li>Reset the statement.</li>
+</ol>
+
+<h2 id="Opening_a_connection" name="Opening_a_connection">Opening a connection</h2>
+
+<p>JavaScript example of opening <code>my_db_file_name.sqlite</code> in the profile directory:</p>
+
+<pre class="brush: js">Components.utils.import("resource://gre/modules/Services.jsm");
+Components.utils.import("resource://gre/modules/FileUtils.jsm");
+
+let file = FileUtils.getFile("ProfD", ["my_db_file_name.sqlite"]);
+let mDBConn = Services.storage.openDatabase(file); // Will also create the file if it does not exist
+</pre>
+
+<p>Likewise, the C++ would look like this:</p>
+
+<pre class="brush: cpp">nsCOMPtr&lt;nsIFile&gt; dbFile;
+rv = NS_GetSpecialDirectory(NS_APP_USER_PROFILE_50_DIR,
+                            getter_AddRefs(dbFile));
+NS_ENSURE_SUCCESS(rv, rv);
+rv = dbFile-&gt;Append(NS_LITERAL_STRING("my_db_file_name.sqlite"));
+NS_ENSURE_SUCCESS(rv, rv);
+nsCOMPtr&lt;mozIStorageService&gt; dbService =
+  do_GetService(MOZ_STORAGE_SERVICE_CONTRACTID, &amp;rv);
+NS_ENSURE_SUCCESS(rv, rv);
+
+nsCOMPtr&lt;mozIStorageConnection&gt; dbConn;
+rv = dbService-&gt;OpenDatabase(dbFile, getter_AddRefs(dbConn));
+NS_ENSURE_SUCCESS(rv, rv);
+</pre>
+
+<div class="note">Note: <code>MOZ_STORAGE_SERVICE_CONTRACTID</code> is defined in <code><a href="https://dxr.mozilla.org/mozilla-central/source/storage/build/mozStorageCID.h" rel="custom">storage/build/mozStorageCID.h</a></code>.</div>
+
+<div class="blockIndicator warning">
+    <p><strong>警告:</strong> It may be tempting to give your database a name ending in '.sdb' for <strong>s</strong>qlite <strong>d</strong>ata<strong>b</strong>ase, but this is <em>not recommended.</em> This extension is treated specially by Windows as a known extension for an 'Application Compatibility Database' and changes are backed up by the system automatically as part of system restore functionality. This can result in significantly higher overhead file operation.</p>
+</div>
+
+<h2 id="Statements" name="Statements">Closing a connection</h2>
+
+<p>To close a connection on which only synchronous transactions were performed, use the <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/mozIStorageConnection#close()">mozIStorageConnection.close()</a></code> method. If you performed any asynchronous transactions, you should instead use the <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/mozIStorageConnection#asyncClose()">mozIStorageConnection.asyncClose()</a></code> method. The latter will allow all ongoing transactions to complete before closing the connection, and will optionally notify you via callback when the connection is closed.</p>
+
+<h2 id="Statements" name="Statements">Statements</h2>
+
+<p>This section demonstrates how you can execute SQL statements on your database. For a complete reference see <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageStatement" title="">mozIStorageStatement</a></code>.</p>
+
+<h3 id="Creating_a_statement" name="Creating_a_statement">Creating a Statement</h3>
+
+<p>There are actually two ways to execute a statement. You should choose the right one based on your needs.</p>
+
+<h4 id="No_Results_to_be_Returned" name="No_Results_to_be_Returned">No Results to be Returned</h4>
+
+<p> </p>
+
+<p>If you do not need to get any results back, you can use <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/mozIStorageConnection#executeSimpleSQL()">mozIStorageConnection.executeSimpleSQL()</a></code> API like this in JavaScript:</p>
+
+<pre class="brush: js">dbConn.executeSimpleSQL("CREATE TEMP TABLE table_name (column_name INTEGER)");
+</pre>
+
+<p>Similarly, the C++ looks like this:</p>
+
+<pre class="brush: cpp">rv = mDBConn-&gt;ExecuteSimpleSQL(NS_LITERAL_CSTRING("CREATE TEMP TABLE table_name (column_name INTEGER)"));
+NS_ENSURE_SUCCESS(rv, rv);</pre>
+
+<h4 id="Results_to_be_Returned" name="Results_to_be_Returned">Results to be Returned</h4>
+
+<p>However, if you need to get results back, you should create the statement with the <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/mozIStorageConnection#createStatement()">mozIStorageConnection.createStatement()</a></code> API like this in JavaScript:</p>
+
+<pre class="brush: js">var statement = dbConn.createStatement("SELECT * FROM table_name WHERE column_name = :parameter");
+</pre>
+
+<p>This example uses a named placeholder called "parameter" to be bound later (described in <a href="#Binding_Parameters">Binding Parameters</a>). Similarly, the C++ looks like this:</p>
+
+<pre class="brush: cpp">nsCOMPtr&lt;mozIStorageStatement&gt; statement;
+rv = dbConn-&gt;CreateStatement(NS_LITERAL_CSTRING("SELECT * FROM table_name WHERE column_name = ?1"),
+                             getter_AddRefs(statement));
+NS_ENSURE_SUCCESS(rv, rv);
+</pre>
+
+<p>This example uses the numbered placeholder indexed by zero for a parameter to be bound later (described in <a href="#Binding_Parameters">Binding Parameters</a>).</p>
+
+<div class="blockIndicator note"><strong>註:</strong> Numerical indexes for parameters are always one less than the number you write in the SQL. The use of numerical indexes for parameters is strongly discouraged in JavaScript where named parameters are much easier to use.</div>
+
+<div class="blockIndicator note"><strong>註:</strong> If you need to execute a statement multiple times, caching the result of createStatement will give you a noticeable performance improvement because the SQL query does not need to be parsed each time.</div>
+
+<h3 id="Binding_parameters" name="Binding_parameters">Binding Parameters</h3>
+
+<p>In order to effectively use the statements that you create, you have to bind values to the parameters you placed in the statement. A given placeholder can appear multiple times in the same statement, and all instances of it will be replaced with the bound value. If you neglect to bind a value to a parameter, it will be interpreted as <code>NULL</code>.</p>
+
+<div class="warning">You should never try to construct SQL statements on the fly with values inserted in them. By binding the parameters, you prevent possible SQL injection attacks since a bound parameter can never be executed as SQL.</div>
+
+<h4 id="Binding_One_Set_of_Parameters" name="Binding_One_Set_of_Parameters">Binding One Set of Parameters</h4>
+
+<p>If you only have one row to insert, or are using the synchronous API you'll need to use this method. In JavaScript, there is a useful helper object (<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageStatementParams" title="">mozIStorageStatementParams</a></code>) available () that makes binding parameters much easier:</p>
+
+<pre class="brush: js">var statement = dbConn.createStatement("SELECT * FROM table_name WHERE id = :row_id");
+statement.params.row_id = 1234;
+</pre>
+
+<p>You can still use this helper object by manually creating the statement wrapper, <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageStatementWrapper" title="">mozIStorageStatementWrapper</a></code>, which is provided in Gecko 1.9.1 and later.</p>
+
+<p>Using named parameters in C++ is a lot more difficult, so it's generally accepted to use numerical placeholders instead. The example below uses <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/mozIStorageStatement#bindInt32Parameter()">mozIStorageStatement.bindInt32Parameter()</a></code>.<code><span style="font-family: Verdana,Tahoma,sans-serif;"> The full list of </span></code>binding functions can be found with the <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageStatement" title="">mozIStorageStatement</a></code> documentation.</p>
+
+<p>C++ example:</p>
+
+<pre class="brush: cpp">nsCOMPtr&lt;mozIStorageStatement&gt; statement;
+rv = mDBConn-&gt;CreateStatement(NS_LITERAL_CSTRING("SELECT * FROM table_name WHERE id = ?1"),
+                              getter_AddRefs(statement));
+NS_ENSURE_SUCCESS(rv, rv);
+
+rv = statement-&gt;BindInt32Parameter(0, 1234);
+NS_ENSURE_SUCCESS(rv, rv);
+</pre>
+
+<div class="blockIndicator note"><strong>註:</strong> Numerical indexes for parameters are always one less than the number you write in the SQL. The use of numerical indexes for parameters is strongly discouraged in JavaScript where named parameters are much easier to use.</div>
+
+<h4 id="Binding_Multiple_Sets_of_Parameters" name="Binding_Multiple_Sets_of_Parameters">Binding Multiple Sets of Parameters</h4>
+
+<div></div>
+
+<p>Starting in Gecko 1.9.2 (Firefox 3.6), there's a new, more convenient way to bind multiple sets of parameters at once prior to executing your statement asynchronously. This API is only available for asynchronous execution.</p>
+
+<pre class="brush: js">let stmt = dbConn.createStatement("INSERT INTO table_name (value) VALUES(:value)");
+let params = stmt.newBindingParamsArray();
+for (let i = 0; i &lt; 10; i++) {
+  let bp = params.newBindingParams();
+  bp.bindByName("value", i);
+  params.addParams(bp);
+}
+stmt.bindParameters(params);
+</pre>
+
+<p>You can attach multiple sets of bindings to a statement by adding multiple <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageBindingParams" title="">mozIStorageBindingParams</a></code> objects to the array of parameter lists, adding each one through calls to the <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/mozIStorageBindingParamsArray#addParams()">mozIStorageBindingParamsArray.addParams()</a></code>. Once all the parameters are set up, a single call to <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/mozIStorageStatement#bindParameters()">mozIStorageStatement.bindParameters()</a></code> will ensure that the parameters are bound before execution. You can then <a href="/ja/docs/Storage#Asynchronously" title="Storage#Asynchronously">execute the statement asynchronously</a>, and the statement will get each set of bindings bound to it before execution asynchronously.</p>
+
+<h3 id="Executing_a_statement" name="Executing_a_statement">Executing a Statement</h3>
+
+<p>You may execute statements either synchronously (which is supported in Firefox Gecko 1.8 and 1.9) or asynchronously (starting in Gecko 1.9.1). If your code needs to work with applications based on Gecko 1.8 or 1.9, you should the technique covered in the section <a href="#Synchronously">Synchronously</a> below. Otherwise, it's strongly recommended that you use asynchronous execution, for performance reasons.</p>
+
+<h4 id="Asynchronously" name="Asynchronously">Asynchronously</h4>
+
+<div></div>
+
+<p>Gecko 1.9.1 introduced support for asynchronous execution of a statement by calling <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/mozIStorageStatement#executeAsync()">mozIStorageStatement.executeAsync()</a></code> on the statement. Multiple statements can be executed in a transaction by calling <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/mozIStorageConnection#executeAsync()">mozIStorageConnection.executeAsync()</a></code> on the connection and passing in an array of statements. Both of these methods have similar signatures that accept an object as input that receives notifications the execution of the statement(s). A C++ example is omitted here because it would be verbose, but real-world code can be found in the Mozilla source tree (<a href="http://mxr.mozilla.org/mozilla-central/ident?i=mozIStorageStatementCallback">MXR ID で <code>mozIStorageStatementCallback</code> を</a>).</p>
+
+<p>After you create and bind a statement, your JavaScript should look something like this to execute a statement asynchronously:</p>
+
+<pre class="brush: js">statement.executeAsync({
+  handleResult: function(aResultSet) {
+    for (let row = aResultSet.getNextRow();
+         row;
+         row = aResultSet.getNextRow()) {
+
+      let value = row.getResultByName("column_name");
+    }
+  },
+
+  handleError: function(aError) {
+    print("Error: " + aError.message);
+  },
+
+  handleCompletion: function(aReason) {
+    if (aReason != Components.interfaces.mozIStorageStatementCallback.REASON_FINISHED)
+      print("Query canceled or aborted!");
+  }
+});
+</pre>
+
+<p>The call to <code>executeAsync</code> takes an object that implements <a href="/ja/docs/MozIStorageStatementCallback" title="MozIStorageStatementCallback">mozIStorageStatementCallback</a>. See its documentation for more details on each method. The callback is optional, however, so if you do not want to receive feedback, you can pass nothing.</p>
+
+<h4 id="Synchronously" name="Synchronously">Synchronously</h4>
+
+<p>If you are OK with the possibility of locking up your user interface, or if you are running on a background thread, you can use <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/mozIStorageStatement#executeStep()">mozIStorageStatement.executeStep()</a></code>. This function allows you to enumerate all the results produced by the statement.</p>
+
+<p>As you step through each row, you can obtain each parameter by name through a helper object (<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageStatementRow" title="">mozIStorageStatementRow</a></code>) in JavaScript ( ) like so:</p>
+
+<pre class="brush: js">while (statement.executeStep()) {
+  let value = statement.row.column_name;
+}
+</pre>
+
+<p>You can create this helper object yourself if it's not available in your version of Gecko. See <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageStatementWrapper" title="">mozIStorageStatementWrapper</a></code> for details.</p>
+
+<p>In C++, the code would look something like this:</p>
+
+<pre class="brush: cpp">bool hasMoreData;
+while (NS_SUCCEEDED(statement-&gt;ExecuteStep(&amp;hasMoreData)) &amp;&amp; hasMoreData) {
+  PRInt32 value;
+  rv = statement-&gt;GetInt32(0, &amp;value);
+  NS_ENSURE_SUCCESS(rv, rv);
+}
+</pre>
+
+<p>You can obtain other types of data by using the various methods available on <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageValueArray" title="">mozIStorageValueArray</a></code>.</p>
+
+<p>Alternatively, if you do not expect any results but still need to execute a bound statement, you can simply call <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/mozIStorageStatement#execute()">mozIStorageStatement.execute()</a></code>. This is equivalent to calling <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/mozIStorageStatement#executeStep()">mozIStorageStatement.executeStep()</a></code> and then <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/mozIStorageStatement#reset()">mozIStorageStatement.reset()</a></code>.</p>
+
+<h3 id="Resetting_a_Statement" name="Resetting_a_Statement">Resetting a Statement</h3>
+
+<p>When you execute a statement synchronously, it is important to make sure you reset your statement. You can accomplish this by calling <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/mozIStorageStatement#reset()">mozIStorageStatement.reset()</a></code> on the statement. If you end up finalizing the statement (see <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/mozIStorageStatement#finalize()">mozIStorageStatement.finalize()</a></code>) you do not need to worry about calling <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/mozIStorageStatement#reset()">mozIStorageStatement.reset()</a></code>. You should do this before you reuse the statement.</p>
+
+<div class="blockIndicator warning">
+    <p><strong>警告:</strong> If you fail to reset a write statement, it will continue to hold a lock on the database preventing future writes or reads. Additionally, if you fail to reset a read statement, it will prevent any future writes to the database.</p>
+</div>
+
+<p>In JavaScript, the language makes it pretty easy to ensure that you always reset a statement. Be aware that you should always reset even if an exception is thrown, so your code should look something like this:</p>
+
+<pre class="brush: js">var statement = dbConn.createStatement("SELECT * FROM table_name");
+try {
+  while (statement.step()) {
+    // Use the results...
+  }
+}
+finally {
+  statement.reset();
+}
+</pre>
+
+<p>In C++, Storage provides a helper object in <code><a href="https://dxr.mozilla.org/mozilla-central/source/storage/public/mozStorageHelper.h" rel="custom">storage/public/mozStorageHelper.h</a></code>, <code>mozStorageStatementScoper</code>, which ensures that the statement object is reset when the object falls out of scope. Of course, if your statement is local only to the function, you do not have to worry about calling reset since the object will be destroyed.</p>
+
+<pre class="brush: cpp">nsresult
+myClass::myFunction()
+{
+  // mSpecialStatement is a member variable of the class that contains a statement.
+  mozStorageStatementScoper scoper(mSpecialStatement);
+  // You can use mSpecialStatement without concern now.
+
+  nsCOMPtr&lt;mozIStorageStatement&gt; statement;
+  // mDBConn is a database connection that is stored a member variable of the class.
+  nsresult rv = mDBConn-&gt;CreateStatement(NS_LITERAL_CSTRING("DELETE FROM table_name"),
+                                         getter_AddRefs(statement));
+  NS_ENSURE_SUCCESS(rv, rv);
+  return statement-&gt;Execute();
+  // Once this function returns, mSpecialStatement will be reset, and statement will
+  // be destroyed.
+}
+</pre>
+
+<div class="blockIndicator note"><strong>註:</strong> Calling reset is not an expensive operation, and nothing bad happens if you call reset more than once.</div>
+
+<h2 id="Transactions" name="Transactions">Transactions</h2>
+
+<p>Transactions can be used to either improve performance, or group statements together as an atomic operation. In both cases, you execute more than one statement inside of a transaction.</p>
+
+<p>In JavaScript, managing transactions can be difficult when you are using the same connection on different threads, or are using a combination of asynchronous and synchronous statement execution. The best way to deal with this is to only execute your statements asynchronously using <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/mozIStorageConnection#executeAsync()">mozIStorageConnection.executeAsync()</a></code>. This method will manage the transactions for you, so you don't have to worry about them.</p>
+
+<div class="blockIndicator note"><strong>註:</strong> The database engine does not support nested transactions, so attempting to start a transaction when one is already active will throw an exception.</div>
+
+<p>Transactions can be started with <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/mozIStorageConnection#beginTransaction()">mozIStorageConnection.beginTransaction()</a></code> or <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/mozIStorageConnection#beginTransactionAs()">mozIStorageConnection.beginTransactionAs()</a></code>. The latter takes one of three constants to describe the type of transaction:</p>
+
+<ul>
+ <li><code><a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/mozIStorageConnection#TRANSACTION_DEFERRED">mozIStorageConnection.TRANSACTION_DEFERRED</a></code></li>
+ <li><code><a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/mozIStorageConnection#TRANSACTION_IMMEDIATE">mozIStorageConnection.TRANSACTION_IMMEDIATE</a></code></li>
+ <li><code><a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/mozIStorageConnection#TRANSACTION_EXCLUSIVE">mozIStorageConnection.TRANSACTION_EXCLUSIVE</a></code></li>
+</ul>
+
+<p><code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/mozIStorageConnection#beginTransaction()">mozIStorageConnection.beginTransaction()</a></code> is equivalent to calling <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/mozIStorageConnection#beginTransactionAs()">mozIStorageConnection.beginTransactionAs()</a></code> and passing <code><a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/mozIStorageConnection#TRANSACTION_DEFERRED">mozIStorageConnection.TRANSACTION_DEFERRED</a></code>. In general, this is the method you want to use.</p>
+
+<p>Once you start a transaction, you can either commit the changes by calling <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/mozIStorageConnection#commitTransaction()">mozIStorageConnection.commitTransaction()</a></code>, or rollback the changes by calling <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/mozIStorageConnection#rollbackTransaction()">mozIStorageConnection.rollbackTransaction()</a></code>.</p>
+
+<p>In C++ code, there is a helper class defined in <code><a href="https://dxr.mozilla.org/mozilla-central/source/storage/public/mozStorageHelper.h" rel="custom">storage/public/mozStorageHelper.h</a></code>, <code>mozStorageTransaction</code>, that will attempt to get a transaction for you, and handle it appropriately when it falls out of scope. If a transaction is already in progress, no transaction is obtained. If your function returns without calling <code>Commit</code> on the helper object, the transaction will be rolled back.</p>
+
+<pre class="brush: cpp">nsresult
+myClass::myFunction()
+{
+  // mDBConn is a member variable of our mozIStorageConnection.
+  mozStorageTransaction transaction(mDBConn);
+
+  // Execute some statements.  If we encounter an error, the transaction will
+  // be rolled back.
+
+  return transaction.Commit();
+}
+</pre>
+
+<h2 id="Collation_sorting" name="Collation_(sorting)">Collation (sorting)</h2>
+
+<p>SQLite provides several collation methods (<code>BINARY</code>, <code>NOCASE</code>, and <code>RTRIM</code>), but these are all very simple and have no support for various text encodings or the user's locale.</p>
+
+<div></div>
+
+<p><span title="(Firefox 3.6 / Thunderbird 3.1 / Fennec 1.0)">Gecko 1.9.2</span> added support for several new collation methods:</p>
+
+<dl>
+ <dt><code>locale</code></dt>
+ <dd>Case- and accent-insensitive collation.</dd>
+ <dt><code>locale_case_sensitive</code></dt>
+ <dd>Case-sensitive, accent-insensitive collation.</dd>
+ <dt><code>locale_accent_sensitive</code></dt>
+ <dd>Case-insensitive, accent-sensitive collation.</dd>
+ <dt><code>locale_case_accent_sensitive</code></dt>
+ <dd>Case- and accent-sensitive collation.</dd>
+</dl>
+
+<p>You can use them quite simply in your <code>SELECT</code> queries, like this:</p>
+
+<pre>var stmt = aConn.createStatement("SELECT * FROM foo ORDER BY name COLLATE locale ASC");
+var results = [];
+
+while (stmt.executeStep()) {
+  results.push(stmt.row.t);
+}
+stmt.finalize();
+</pre>
+
+<h2 id="How_to_corrupt_your_database" name="How_to_corrupt_your_database">How to Corrupt a Database</h2>
+
+<p>SQLite is very good about maintaining database integrity, but there are a few things you can do that can lead to database corruption. You can find out more by reading <a href="http://www.sqlite.org/lockingv3.html" title="http://www.sqlite.org/lockingv3.html">SQLite's documentation on this</a>. There are a few simple things you can do to help make sure this doesn't happen:</p>
+
+<ul>
+ <li>Open more than one connection to the same file with names that aren't exactly the same as determined by <code>strcmp</code>. This includes "my.db" and "../dir/my.db" or, on Windows (case-insensitive) "my.db" and "My.db". Sqlite tries to handle many of these cases, but you shouldn't count on it.</li>
+</ul>
+
+<ul>
+ <li>Access a database from a symbolic or hard link.</li>
+</ul>
+
+<ul>
+ <li>Access a statement from more than one thread (discussed in <a href="#Thread_safety">Thread safety</a>).</li>
+</ul>
+
+<ul>
+ <li>Call <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/mozIStorageService#backupDatabaseFile()">mozIStorageService.backupDatabaseFile()</a></code> on a locked database, assuming this will leave your database locked. Due to <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=626193" title="mozIStorageService.backupDatabaseFile() releases database locks">バグ 626193</a>, locked databases get unlocked when you call this.</li>
+</ul>
+
+<h2 id="Thread_safety" name="Thread_safety">Thread Safety</h2>
+
+<p><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageService" title="">mozIStorageService</a></code> and <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageConnection" title="">mozIStorageConnection</a></code> are thread safe. However, no other interface or method is, so do not use them on different threads at the same time!</p>
+
+<p>If you want to use concurrency to work on your database, you should use the asynchronous APIs provided by Storage.</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageConnection" title="">mozIStorageConnection</a></code> Database connection to a specific file or in-memory data storage</li>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageStatement" title="">mozIStorageStatement</a></code> Create and execute SQL statements on a SQLite database.</li>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageValueArray" title="">mozIStorageValueArray</a></code> Wraps an array of SQL values, such as a result row.</li>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageFunction" title="">mozIStorageFunction</a></code> Create a new SQLite function.</li>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageAggregateFunction" title="">mozIStorageAggregateFunction</a></code> Create a new SQLite aggregate function.</li>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageProgressHandler" title="">mozIStorageProgressHandler</a></code> Monitor progress during the execution of a statement.</li>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageStatementWrapper" title="">mozIStorageStatementWrapper</a></code> Storage statement wrapper</li>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageService" title="">mozIStorageService</a></code> Storage Service</li>
+</ul>
+
+<ul>
+ <li><a href="/ja/docs/Storage/Performance" title="Storage/Performance">Storage:Performance</a> How to get your database connection performing well.</li>
+ <li><a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/3072">Storage Inspector Extension</a> Makes it easy to view any sqlite database files in the current profile.</li>
+ <li><a href="http://www.sqlite.org/lang.html">SQLite Syntax</a> Query language understood by SQLite</li>
+ <li><a href="http://sqlitebrowser.sourceforge.net/">SQLite Database Browser</a> is a capable free tool available for many platforms. It can be handy for examining existing databases and testing SQL statements.</li>
+ <li><a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/5817">SQLite Manager Extension</a> helps manage sqlite database files on your computer.</li>
+</ul>

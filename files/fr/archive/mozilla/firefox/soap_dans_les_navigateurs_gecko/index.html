@@ -1,0 +1,284 @@
+---
+title: SOAP dans les navigateurs Gecko
+slug: Archive/Mozilla/Firefox/SOAP_dans_les_navigateurs_Gecko
+tags:
+  - SOAP
+  - Services_Web_XML
+translation_of: Archive/Mozilla/Firefox/SOAP_in_Gecko-based_Browsers
+---
+<p>Cet article décrit comment accéder à un service Web en utilisant SOAP et des fonctions JavaScript disponibles dans les navigateurs Gecko récents.</p>
+
+<h3 id="Introduction" name="Introduction">Introduction</h3>
+
+<p><em>Simple Object Access Protocol</em>(<a class="external" href="http://www.w3.org/TR/SOAP/">SOAP</a>) est la base de conception des services Web. C'est un protocole XML utilisé pour communiquer et interopérer avec les services Web. Avec Mozilla 1.0 (sur lequel est basé Netscape 7.0x) et Firefox, il est maintenant possible pour le navigateur de communiquer directement avec les services Web en utilisant son implémentation SOAP de bas niveau à l'aide de JavaScript.</p>
+
+<p>L'interface JavaScript de Gecko pour l'établissement des appels SOAP est une API de bas niveau qui requiert la construction de l'enveloppe SOAP en utilisant plusieurs objets JavaScript spécifiques à SOAP. Ce document couvre les opérations SOAP de base. Pour des informations plus détaillées sur l'API de bas niveau de SOAP dans Gecko, voir <a class="external" href="http://lxr.mozilla.org/mozilla/source/extensions/webservices/docs/Soap_Scripts_in_Mozilla.html">SOAP Scripts in Mozilla</a>.</p>
+
+<p>L'utilisation de JavaScript pour les communications avec les services Web est sujette aux mêmes politiques de sécurité que tous les autres scripts en terme d'accès inter-domaines. Par conséquent accéder à des services Web situés sur des serveurs autres que celui où est exécuté le JavaScript constitue une violation de la politique inter-domaines. Ce document montrera comment détourner temporairement ces règles pour la conduite de tests.</p>
+
+<h3 id="Param.C3.A9trer_un_appel_SOAP" name="Param.C3.A9trer_un_appel_SOAP">Paramétrer un appel SOAP</h3>
+
+<p>L'objet le plus basique est <code>SOAPCall</code>, il est utilisé pour initier et invoquer un appel SOAP.</p>
+
+<p>Figure 1 : paramétrage de base et invocation d'un appel SOAP</p>
+
+<pre>var mySOAPCall = new SOAPCall();
+mySOAPCall.transportURI = "http-based service URI"
+
+var parameters = new Array();
+mySOAPCall.encode(SOAPCall.VERSION_1_1,
+                  // method
+                  "method", "namespaceURI",
+                  // header block
+                  0, null,
+                  // parameter
+                  parameters.length, parameters);
+
+var response = mySOAPCall.invoke();
+</pre>
+
+<p>Un objet <code>SOAPCall</code> à un membre appelé <code>transportURI</code>, qui est l'URI de l'emplacement où il doit envoyer l'appel SOAP. La méthode <code>encode()</code> requiert le nom de la méthode à appeler depuis le service Web, son <code>namespaceURI</code>, le nombre de <code>SOAPParameters</code> passé, et un tableau de <code>SOAPParameters</code> qui contient tous les paramètres. Tous ces paramètres peuvent sont regroupés dans le fichier WSDL du service Web, qui sera abordé dans les exemples suivants.</p>
+
+<p>Les paramètres SOAP sont créés à l'aide de l'objet <code>SOAPParameter</code>. Ce sont des paires nom/valeur qui sont passées au service Web.</p>
+
+<p>Figure 2 : Création d'un paramètre SOAP</p>
+
+<pre>var param = new SOAPParameter();
+param.name = "translationmode";
+param.value = "en_fr";
+</pre>
+
+<h3 id="Traitement_d.27une_r.C3.A9ponse" name="Traitement_d.27une_r.C3.A9ponse">Traitement d'une réponse</h3>
+
+<p>Une fois que <code>invoke()</code> a été appelé, Gecko génère l'enveloppe SOAP et l'envoie à l'URI spécifiée. Comme la requête est synchrone, la réponse sera la valeur retournée par <code>invoke()</code>.</p>
+
+<p>Figure 3 : Traitement d'une réponse à un appel SOAP</p>
+
+<pre>var returnObject = mySOAPCall.invoke();
+
+if(returnObject.fault){
+  alert("An error occured: " + returnObject.fault.faultString);
+} else {
+  var response = new Array();
+  response = returnObject.getParameters(false, {});
+  alert("Return value: " + response[0].value);
+}
+</pre>
+
+<p>La valeur retournée par <code>invoke()</code> est stockée et examinée pour un membre <code>fault</code>. Si il existe, une erreur se produit du côté du service Web, et le message d'erreur est stocké dans <code>fault.faultString</code>. Si <code>fault</code> n'existe pas, nous appelons la fonction <code>getParameters()</code> sur l'objet retourné pour récupérer les <code>SOAPParameters</code> retournés.</p>
+
+<h3 id="Exemple" name="Exemple">Exemple</h3>
+
+<p>L'exemple utilise un service Web existant, Babelfish, fournit par <a class="external" href="http://www.xmethods.net/">xmethods.net</a>. Le service Web Babelfish permet des traductions dans de nombreuses langues. Il prend deux paramètres en entrée : une chaîne au format « originalLanguage_resultLanguage » et le texte à traduire. Le fichier WSDL du service Web Babelfish est disponible <a class="external" href="http://www.xmethods.net/sd/2001/BabelFishService.wsdl">à cette adresse</a> et contient toutes les informations nécessaires au paramétrage d'un appel SOAP de bas niveau vers le service Web.</p>
+
+<p>La première étape est de déterminer l'emplacement du service Web, qui sera la valeur du membre <code>transportURI</code> de <code>SOAPCall</code>. Elle peut être trouvée dans l'élément <code>service</code> de WSDL, et plus spécifiquement dans l'attribut <code>location</code> de <code>soap:address</code>.</p>
+
+<p>Figure 4 : Détermination de l'emplacement d'un service Web depuis son WSDL</p>
+
+<pre class="eval"><strong>WSDL:</strong>
+  &lt;service name="BabelFishService"&gt;
+    &lt;documentation&gt;
+      Traduit des textes dans de nombreuses langues.
+    &lt;/documentation&gt;
+    &lt;port name="BabelFishPort" binding="tns:BabelFishBinding"&gt;
+      <span style="color: green;">&lt;soap:address location="<span class="nowiki">http://services.xmethods.net:80/perl/soaplite.cgi</span>"/&gt;</span>
+    &lt;/port&gt;
+  &lt;service&gt;
+
+<strong>JavaScript:</strong>
+  var babelFishCall = new SOAPCall();
+  babelFishCall.transportURI = "<span class="nowiki">http://services.xmethods.net:80/perl/soaplite.cgi</span>";
+  ...
+</pre>
+
+<p>L'étape suivante est plus complexe : déterminer exactement quels paramètres le service Web attend qu'on lui envoie. Le service Web Babelfish ne possède qu'une méthode, « BabelFish », qui est représentée dans le WSDL entre la balise <code>operation</code>, qui est un enfant de l'élément <code>portType</code>. Chaque <code>operation</code> WSDL possède deux enfants : les éléments d'entrée et de sortie, qui peuvent contenir les types attendus. Les types sont définis dans les éléments <code>message</code>, au nombre de deux : <code>BabelFishRequest</code>, qui est ce qu'on passe au service Web, et <code>BabelFishResponse</code>, le type de retour.</p>
+
+<p>BabelFish attend l'opération deux dans les paramètres <code>translationmode</code> et <code>sourcedata</code>. L'exemple de la figure 5 va traduire la chaîne « I am » d'anglais en français.</p>
+
+<p>Figure 5 : Définir les paramètres nécessaires</p>
+
+<pre class="eval"><strong>WSDL:</strong>
+  &lt;message <span style="color: blue;">name="BabelFishRequest"&gt;</span>
+    <span style="color: green;">&lt;part name="translationmode" type="xsd:string"/&gt;</span>
+    <span style="color: green;">&lt;part name="sourcedata" type="xsd:string"/&gt;</span>
+  &lt;/message&gt;
+
+  &lt;message name="BabelFishResponse"&gt;
+      &lt;part name="return" type="xsd:string"/&gt;
+  &lt;/message&gt;
+
+  &lt;portType name="BabelFishPortType"&gt;
+    &lt;operation name="BabelFish"&gt;
+      <span style="color: green;">&lt;input message="tns:BabelFishRequest"/&gt;</span>
+      &lt;output message="tns:BabelFishResponse"/&gt;
+    &lt;/operation&gt;
+  &lt;/portType&gt;
+
+<strong>JavaScript:</strong>
+  // SOAP parameters
+  var param1 = new SOAPParameter();
+  param1.value = "en_fr";
+  param1.name = "translationmode";
+
+  var param2 = new SOAPParameter();
+  param2.value = "I am";
+
+  param2.name = "sourcedate";
+
+  // combine the 2 params into an array
+  var myParamArray = [param1,param2];
+</pre>
+
+<p>Ensuite, il faut définir et invoquer l'objet <code>SOAPCall</code>. « BabelFish » est la méthode que notre exemple veut utiliser pour le service Web. Le prochain paramètre est l'espace de nommage attendu qui doit être passé au service Web pour la méthode BabelFish.</p>
+
+<p>Ceci peut être trouvé dans le l'élément WSDL <code>binding</code>. L'élément <code>binding</code> possède un enfant <code>operation</code> pour la méthode BabelFish. L'espace de nommage voulu est la valeur de l'attribut <code>namespace</code> de <code>soap:body</code> qui se trouve dans l'élément <code>input</code>.</p>
+
+<p>Figure 6 : Définir la méthode d'encodage</p>
+
+<pre class="eval"><strong>WSDL:</strong>
+  &lt;binding name="BabelFishBinding" type="tns:BabelFishPortType"&gt;
+    &lt;soap:binding style="rpc" transport="<span class="nowiki">http://schemas.xmlsoap.org/soap/http</span>"/&gt;
+    &lt;operation name="BabelFish"&gt;
+      &lt;soap:operation soapAction="urn:xmethodsBabelFish#BabelFish"/&gt;
+      &lt;input&gt;
+        <span style="color: green;">&lt;soap:body use="encoded" namespace="urn:xmethodsBabelFish"
+                   encodingStyle="<span class="nowiki">http://schemas.xmlsoap.org/soap/encoding/</span>"/&gt;</span>
+      &lt;/input&gt;
+      ...
+    &lt;/operation&gt;
+  &lt;/binding&gt;
+
+<strong>JavaScript:</strong>
+  babelFishCall.encode(0, "BabelFish", "urn:xmethodsBabelFish", 0, null, myParamArray.length, myParamArray);
+
+  var translation = babelFishCall.invoke();
+</pre>
+
+<p>Comme on l'a vu à la figure 5, la réponse de la méthode BabelFish ("BabelFishResponse") est un paramètre, à savoir une chaîne. Après avoir vérifier que <code>fault</code> n'a pas été retourné, la méthode <code>getParameters()</code> de l'objet retourné est utilisée pour récupérer un tableau de SOAPResponses. Comme on n'attend qu'un seul paramètre en retour -- le texte traduit -- la méthode <code>alert()</code> est utilisée pour afficher la traduction.</p>
+
+<p>Figure 7 : Traitement de la réponse</p>
+
+<pre class="eval"><strong>JavaScript:</strong>
+  if(translation.fault){
+    // erreur retournée par le service Web
+    alert(translation.fault.faultString);
+  } else {
+    // nous attendons un seul SOAPParameter en retour - la chaîne traduite.
+    var response = new Array();
+    response = translation.getParameters(false, {});
+    alert("Translation: " + response[0].value);
+  }
+</pre>
+
+<p>Comme indiqué dans l'introduction, les appels SOAP obéissent à une politique d'accès inter-domaines des scripts. Il existe deux façons de contourner cette politique de sécurité pour conduire des tests :</p>
+
+<ol>
+ <li>
+  <p>Exécutez le script depuis votre disque local.</p>
+
+  <p>Enregistrez localement le code sur votre disque dur.</p>
+
+  <p>Le modèle de sécurité inter-domaines ne concerne pas les codes exécutés depuis un disque local.</p>
+ </li>
+ <li>
+  <p>Activer l'accès inter-domaine</p>
+
+  <p>Vous pouvez contourner la vérification inter-domaine en définissant une préférence comme expliqué dans l'article <a href="fr/Bypassing_Security_Restrictions_and_Signing_Code">contournement des restrictions de sécurité et signature de code (à traduire)</a> et en ajoutant une commande JavaScript pour demander une dérogation à la vérification inter-domaine.</p>
+
+  <p>Après avoir contourner la vérification, démarrez le navigateur et chargez cette <a class="external" href="http://developer.mozilla.org/samples/soap/example-crossdomain.html">page exemple modifiée</a>. Il vous sera demandé (dans une boîte de dialogue) l'autorisation de désactiver l'inter-domaine (pour cette session) de la fonction générant l'appel SOAP. Le seul changement est l'ajout de <code>netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead");</code> à la fonction qui génère l'appel SOAP.</p>
+ </li>
+</ol>
+
+<p>Figure 8 : Code final - <a class="external" href="http://developer.mozilla.org/samples/soap/example.html">Exemple local (en)</a>, <a class="external" href="http://developer.mozilla.org/samples/soap/example-crossdomain.html">Exemple inter-domaine (en)</a></p>
+
+<pre class="eval"><strong>JavaScript:</strong>
+  var babelFishCall = new SOAPCall();
+  babelFishCall.transportURI = "<span class="nowiki">http://services.xmethods.net:80/perl/soaplite.cgi</span>";
+
+  // paramètres SOAP
+  var param1 = new SOAPParameter();
+  param1.value = "en_fr";
+  param1.name = "translationmode";
+
+  var param2 = new SOAPParameter();
+  param2.value = "I am";
+  param2.name = "sourcedate";
+
+  // combinaison des 2 paramètres dans un tableau
+  var myParamArray = [param1,param2];
+
+  babelFishCall.encode(0, "BabelFish", "urn:xmethodsBabelFish", 0, null, myParamArray.length, myParamArray);
+
+  var translation = babelFishCall.invoke();
+
+  if(translation.fault){
+    // erreur retournée par le service Web
+    alert(translation.fault.faultString);
+  } else {
+   // nous attendons un seul SOAPParameter en retour - la chaîne traduite.
+   var response = new Array();
+   response = translation.getParameters(false, {});
+   alert("Translation: " + response[0].value);
+ }
+</pre>
+
+<h3 id="Chemin_de_l.27enveloppe_Soap" name="Chemin_de_l.27enveloppe_Soap">Chemin de l'enveloppe Soap</h3>
+
+<p>Voici un<em>HTTP dump</em> (utilisant l'outil multiplate-forme <a class="external" href="http://www.ethereal.com/">Ethereal</a>) de ce qui a été vraiment envoyé et reçu lorsque l'exemple a été exécuté :</p>
+
+<p>Figure 9 : HTTP Dumps</p>
+
+<pre class="eval"><strong>Sent:</strong>
+POST /perl/soaplite.cgi HTTP/1.1
+Host: services.xmethods.net:80
+...
+Content-Type: text/xml
+Content-Length: 516
+
+&lt;env:Envelope xmlns:env="<span class="nowiki">http://schemas.xmlsoap.org/soap/envelope/</span>"
+              xmlns:enc="<span class="nowiki">http://schemas.xmlsoap.org/soap/encoding/</span>"
+              env:encodingStyle="<span class="nowiki">http://schemas.xmlsoap.org/soap/encoding/</span>"
+              xmlns:xs="<span class="nowiki">http://www.w3.org/1999/XMLSchema</span>"
+              xmlns:xsi="<span class="nowiki">http://www.w3.org/1999/XMLSchema-instance</span>"&gt;
+  &lt;env:Header/&gt;
+  &lt;env:Body&gt;
+      &lt;a0:BabelFish xmlns:a0="<span style="color: green;">urn:xmethodsBabelFish</span>"&gt;
+          <span style="color: green;">&lt;a0:translationmode xsi:type="xs:string"&gt;en_fr&lt;/a0:translationmode&gt;</span>
+          <span style="color: green;">&lt;a0:sourcedata xsi:type="xs:string"&gt;I am&lt;/a0:sourcedata&gt;</span>
+      &lt;/a0:BabelFish&gt;
+  &lt;/env:Body&gt;
+&lt;/env:Envelope&gt;
+
+
+<strong>Recieved:</strong>
+HTTP/1.1 200 OK
+Date: Tue, 11 Mar 2003 20:28:11 GMT
+Server: Apache/1.3&amp; (Unix) Enhydra-Director/3 PHP/4.0.6 DAV/1.0.3 AuthNuSphere/1.0.0
+SOAPServer: SOAP::Lite/Perl/0.52
+Content-Length: 532
+
+...
+Content-Type: text/xml; charset=utf-8
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENC="<span class="nowiki">http://schemas.xmlsoap.org/soap/encoding/</span>"
+                   SOAP-ENV:encodingStyle="<span class="nowiki">http://schemas.xmlsoap.org/soap/encoding/</span>"
+                   xmlns:SOAP-ENV="<span class="nowiki">http://schemas.xmlsoap.org/soap/envelope/</span>"
+                   xmlns:xsi="<span class="nowiki">http://www.w3.org/1999/XMLSchema-instance</span>"
+                   xmlns:xsd="<span class="nowiki">http://www.w3.org/1999/XMLSchema</span>"&gt;
+  &lt;SOAP-ENV:Body&gt;
+    &lt;namesp1:BabelFishResponse xmlns:namesp1="urn:xmethodsBabelFish"&gt;
+      <span style="color: green;">&lt;return xsi:type="xsd:string"&gt;je suis&lt;/return&gt;</span>
+    &lt;/namesp1:BabelFishResponse&gt;
+  &lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;
+</pre>
+
+<h3 id="Ressources" name="Ressources">Ressources</h3>
+
+<p><a class="external" href="http://lxr.mozilla.org/mozilla/source/extensions/webservices/docs/Soap_Scripts_in_Mozilla.html">SOAP Scripts in Mozilla (en)</a> par Ray Whitmer<br>
+ <a class="external" href="http://www.oreillynet.com/lpt/a/2677">Using the Mozilla SOAP API (en)</a> par Scott Andrew LePera et Apple Developer Connection.<br>
+ <a class="external" href="http://www.w3.org/TR/soap12-part1/">The Latest w3.org SOAP Specification (en)</a><br>
+ <a class="external" href="http://www.onlamp.com/lpt/a/5981">Calling SOAP Servers from JS in Mozilla (en)</a>, article de OnLamp.com par Zachary Kessin<br>
+ <a class="external" href="http://www.xulplanet.com/references/objref/SOAPCall.html">SOAPCall documentation on XULPlanet.com (en)</a><br>
+ <a class="external" href="http://www.xulplanet.com/references/objref/SOAPResponse.html">SOAPResponse documentation on XULPlanet.com (en)</a></p>

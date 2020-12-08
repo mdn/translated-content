@@ -1,0 +1,119 @@
+---
+title: RDF の概要
+slug: Archive/Mozilla/XUL/Tutorial/Introduction_to_RDF
+tags:
+  - RDF
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Introduction_to_RDF
+---
+<p> </p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Tree_Box_Objects" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Templates">次のページ  »</a></p>
+</div>
+<p>このセクションでは、 RDF (Resource Description Framework) について見ていきます。</p>
+<p><span id="Resource_Description_Framework"></span></p>
+<h3 id="RDF_.E3.81.A8.E3.81.AF" name="RDF_.E3.81.A8.E3.81.AF">RDF とは</h3>
+<p>XUL では、<a href="ja/XUL_Tutorial/Trees">ツリー関連の要素</a>を使用することで、 ブックマークやメールメッセージといったデータの集合を表示させることができます。 しかし、そのために XUL ファイルに直接データまで記述しなければならないとすると、 不便なことがたくさんあります。 例えば、ブックマークの情報が、直接 XUL ファイルに書かれているとしたら、 変更処理は非常に難しいものになるはずです。 RDF <span style="border-bottom: 1px dashed green;" title="datasource">データソース</span>を利用することで、こういった問題を解決することが可能です。</p>
+<p><a href="ja/RDF">RDF</a> (Resource Description Framework) は、ブックマークやメールなどのリソース情報を保存するときのフォーマットとして使用できます。 または、他のフォーマットで保存しておいて、ファイルを読み込んだときに RDF データを生成するようなコードを書くことも可能です。 後者の方法が、Mozilla がブックマークや履歴、メールメッセージなどのデータを読み込むときに行っている方法になります。 Mozilla では、こういった共通のデータに対するデータソースを提供しており、 XUL アプリケーションからも簡単に利用することが可能です。</p>
+<p>ツリーで扱うデータの供給源として、Mozilla が提供する全ての RDF データソースを利用できます。 あるいは、XML 形式でデータを保存した、RDF ファイルを参照することも可能です。 これによって、多数の行が含まれるツリーを表示する場合の処理が非常に楽になります。 また、RDF はリストボックスやメニューといった他の要素で扱うデータの供給源としても利用できます。 これについては、次のセクションで見る予定です。</p>
+<p>ここでは、RDF についてのごく簡単な概略を説明します。 なお、RDF についての詳しい説明は、XULPlanet の <a class="external" href="http://www.xulplanet.com/tutorials/mozsdk/rdfstart.php">Introduction to the RDF Model</a> を参照してください。 RDF についての知識がない方は、このガイドに目を通しておくことを薦めます。 <span style="color: darkgreen; background: #ef9;">【訳注: リンク先は英語なので、日本語の場合 <a class='"external"' href='"http://ja.wikipedia.org/wiki/Resource_Description_Framework"'>Wikipedia</a> の記載ぐらいを読んでおくのが適当かもしれません】</span></p>
+<p>また、RDF についての詳細は、<a class="external" href="http://www.w3.org/RDF/">W3C の RDF のページ</a> から、RDF の仕様についての情報を参照してください。</p>
+<h4 id="RDF.2FXML" name="RDF.2FXML">RDF/XML</h4>
+<p>RDF は、データをグラフとして表現するモデルからなっています。<span style="color: darkgreen; background: #ef9;">【訳注: <a class='"external"' href='"http://ja.wikipedia.org/wiki/%E3%82%B0%E3%83%A9%E3%83%95%E7%90%86%E8%AB%96"'>グラフ理論</a>のグラフです】</span> また、RDF/XML は RDF データを XML 言語の構文を使用して表現したもので、 適切かつシンプルにまとめられた要素のセットで構成されています。 以下に、簡単な RDF/XML ファイルの雛形を示します。</p>
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;RDF:RDF
+  xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"&gt;
+  ...
+&lt;/RDF:RDF&gt;
+</pre>
+<p>上記から、XUL のヘッダ部分と類似していることが確認できます。 相違点としては、XUL では <code><code><a href="/ja/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> 要素だった場所に、<code>RDF</code> 要素が使用されていることと、 <code>RDF</code> 関連の要素が正しく認識されるようにするために、 RDF の名前空間が宣言されている点です。 この <code>RDF</code> 要素の内側にデータを記述していきます。 なお、RDF/XML ファイルの例としては、実際に Mozilla が提供しているものがいくつかあるので、それらを参考にするのがよいでしょう。 RDF/XML ファイルの拡張子は rdf になります。</p>
+<p><span id="RDF_database"></span></p>
+<h4 id="RDF_.E3.83.87.E3.83.BC.E3.82.BF.E3.83.99.E3.83.BC.E3.82.B9" name="RDF_.E3.83.87.E3.83.BC.E3.82.BF.E3.83.99.E3.83.BC.E3.82.B9">RDF データベース</h4>
+<p>それでは、例として RDF から生成されるブックマークリストについて見てみることにします。 ブックマークリストは、レコードの集合からなっており、個々のレコードには URL、タイトル、訪問日といったデータが関連付けられています。</p>
+<p>このためブックマーク情報は、データを多数のフィールドからなる大規模な表として保存するようなデータベースであると考えることができます。 ただし、このとき RDF では、リストに階層構造を持たせることが可能です。 これはブックマークにフォルダやカテゴリをに設定するために必要になります。 RDF データベース内の各フィールドはリソースで、それぞれリソースと結び付けられた名前が付けられており、それらの名前は URI で記述されます。</p>
+<p>例として、 Mozilla のブックマークリストのフィールドから、URI の記述をいくつか示します。</p>
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td>Name</td>
+   <td><span class="nowiki">http://home.netscape.com/NC-rdf#Name</span></td>
+   <td>ブックマーク名</td>
+  </tr>
+  <tr>
+   <td>URL</td>
+   <td><span class="nowiki">http://home.netscape.com/NC-rdf#URL</span></td>
+   <td>リンク先 URL</td>
+  </tr>
+  <tr>
+   <td>Description</td>
+   <td><span class="nowiki">http://home.netscape.com/NC-rdf#Description</span></td>
+   <td>ブックマークの説明</td>
+  </tr>
+  <tr>
+   <td>Last Visited</td>
+   <td><span class="nowiki">http://home.netscape.com/WEB-rdf#LastVisitDate</span></td>
+   <td>最終訪問日</td>
+  </tr>
+ </tbody>
+</table>
+<p>これらの URI は、名前空間名にフィールド名を付加して生成されます。 次のセクションでは、これらを使ってフィールドの値を自動設定する方法について見ていきます。 なお、最終訪問日は他の 3 つのフィールドと若干異なる名前空間になっていることを注記しておきます。</p>
+<p><span id="RDF/XML_file_example"></span></p>
+<h4 id="RDF.2FXML_.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AE.E4.BE.8B" name="RDF.2FXML_.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AE.E4.BE.8B">RDF/XML ファイルの例</h4>
+<p>以下に、3 つのレコードと 3 つのフィールドを持つ表のための RDF/XML ファイルの例を示します。</p>
+<pre>&lt;RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:ANIMALS="http://www.some-fictitious-zoo.com/rdf#"&gt;
+
+  &lt;RDF:Seq about="http://www.some-fictitious-zoo.com/all-animals"&gt;
+    &lt;RDF:li&gt;
+       &lt;RDF:Description about="http://www.some-fictitious-zoo.com/mammals/lion"&gt;
+         &lt;ANIMALS:name&gt;Lion&lt;/ANIMALS:name&gt;
+         &lt;ANIMALS:species&gt;Panthera leo&lt;/ANIMALS:species&gt;
+         &lt;ANIMALS:class&gt;Mammal&lt;/ANIMALS:class&gt;
+       &lt;/RDF:Description&gt;
+    &lt;/RDF:li&gt;
+    &lt;RDF:li&gt;
+       &lt;RDF:Description about="http://www.some-fictitious-zoo.com/arachnids/tarantula"&gt;
+         &lt;ANIMALS:name&gt;Tarantula&lt;/ANIMALS:name&gt;
+         &lt;ANIMALS:species&gt;Avicularia avicularia&lt;/ANIMALS:species&gt;
+         &lt;ANIMALS:class&gt;Arachnid&lt;/ANIMALS:class&gt;
+       &lt;/RDF:Description&gt;
+    &lt;/RDF:li&gt;
+    &lt;RDF:li&gt;
+       &lt;RDF:Description about="http://www.some-fictitious-zoo.com/mammals/hippopotamus"&gt;
+         &lt;ANIMALS:name&gt;Hippopotamus&lt;/ANIMALS:name&gt;
+         &lt;ANIMALS:species&gt;Hippopotamus amphibius&lt;/ANIMALS:species&gt;
+         &lt;ANIMALS:class&gt;Mammal&lt;/ANIMALS:class&gt;
+       &lt;/RDF:Description&gt;
+    &lt;/RDF:li&gt;
+  &lt;/RDF:Seq&gt;
+&lt;/RDF:RDF&gt;
+</pre>
+<p>ここでは、3 つのレコードが記述されていて、1 レコードが 1 つの動物 (animal) に対応しています。 1 つのレコードは、各 <code>RDF:Description</code> タグが対応します。 それぞれのレコードの内部には 3 つのフィールド、すなわち <code>name</code>、<code>species</code>、<code>class</code> が記述されています。 なお、すべてのレコードが同じフィールドで構成されていなければならないわけではありませんが、フィールドを揃えておくことで、より意味のあるデータになります。</p>
+<p>3 つのフィールドは、すべて名前空間として <code>ANIMALS</code> が指定されており、その URL は <code>RDF</code> タグで宣言されています。 フィールド名は、この例ではデータの意味合いを元に設定していますが、別の基準で設定してもかまいません。 なお、名前空間の特性によって、<code>class</code> というフィールド名が、スタイルにある <code>class</code> と衝突するのを回避していることを補足しておきます。</p>
+<p><code>Seq</code> 要素と <code>li</code> 要素は、レコードがリストになっていることを示すために使用します。 これは HTML でリストを宣言する方法と類似しています。 <code>Seq</code> 要素は、子要素の置かれる順番に意味があることを表すために使用します。 また、順番に意味がない場合は、<code>Seq</code> 要素ではなく <code>Bag</code> 要素を使用します。 なお、ここに <code>Alt</code> 要素を使用することで、データの各レコードが (ミラー URL のような) 代替の値を指定していることを表すことも可能です。</p>
+<p>RDF のリソースは、名前空間の URL とそれに続くフィールド名によって、XUL ファイルから参照することが可能です。 上の例では、以下に示す URI が、特定のフィールドを指定した参照を可能にするために生成されます。</p>
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td>Name</td>
+   <td><span class="nowiki">http://www.some-fictitious-zoo.com/rdf#name</span></td>
+  </tr>
+  <tr>
+   <td>Species</td>
+   <td><span class="nowiki">http://www.some-fictitious-zoo.com/rdf#species</span></td>
+  </tr>
+  <tr>
+   <td>Class</td>
+   <td><span class="nowiki">http://www.some-fictitious-zoo.com/rdf#class</span></td>
+  </tr>
+ </tbody>
+</table>
+<p>次のセクションでは、RDF から供給されるデータに基づいて XUL 要素を生成する方法について見ていきます。</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Tree_Box_Objects" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Templates">次のページ  »</a></p>
+</div>
+<p> </p>
+<div class="noinclude">
+  </div>

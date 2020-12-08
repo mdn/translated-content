@@ -1,0 +1,38 @@
+---
+title: xpcshell
+slug: Xpcshell
+translation_of: Mozilla/Tech/XPCOM/Language_bindings/XPConnect/xpcshell
+---
+<p><strong>xpcshell</strong>は、<a href="/ja/XPConnect" title="ja/XPConnect">XPConnect</a>を利用可能な<a href="/ja/JavaScript_shells" title="ja/JavaScript_shells">JavaScriptシェル</a>で、JavaScriptコードを実行することのできるコンソールアプリケーションです。 通常の<a href="/ja/SpiderMonkey/Introduction_to_the_JavaScript_shell" title="ja/SpiderMonkey/Introduction_to_the_JavaScript_shell">JS shell</a> (<code>js</code>)とは異なり、xpcshellは実行スクリプトに<a href="/ja/XPCOM" title="ja/XPCOM">XPCOM</a>の機能にアクセスすることを許容します。</p>
+<h3 id="Prerequisites">必要条件</h3>
+<p>xpcshellを使うには、Mozillaの<a href="/ja/Build_Documentation" title="ja/Build_Documentation">あなたによるビルド</a>が必要です。</p>
+<h3 id="Running_xpcshell">xpcshellを実行する</h3>
+<pre class="eval">./run-mozilla.sh ./xpcshell
+</pre>
+<p>xpcshellはほぼ必ず、run-mozilla.shと同じディレクトリにあります。</p>
+<pre class="eval">$ locate run-mozilla.sh
+/usr/lib/firefox-0.10.1/run-mozilla.sh
+/usr/lib/thunderbird-0.9/run-mozilla.sh
+/usr/local/mozilla/run-mozilla.sh
+/opt/mozilla/run-mozilla.sh
+/root/.Trash/mozilla/run-mozilla.sh
+</pre>
+<p>どれか一つを選んで、カレントディレクトリをそこに移動し、xpcshellが存在しているなら run-mozilla.sh xpcshell を実行してください。（しかし、デバッグ版でないFirefox、Mozilla、Thunderbirdなどの場合はxpcshellが存在しないかもしれません。）</p>
+<pre class="eval">$ cd /opt/mozilla
+$ ./run-mozilla.sh ./xpcshell
+js&gt;
+</pre>
+<h3 id="Using_the_Latest_Version_of_Javascript">最新バージョンのJavaScriptを使う</h3>
+<p>現時点では、xpcshellは最新バージョンのJavaScriptを扱わないため、JavaScript 1.7で導入された<code>let文のような言語の新しい機能は利用できません。</code>これを解消するには、xpcshellを <code>-v 180</code> コマンドラインオプション付きで起動してください。これはxpcshellにJavaScript 1.8を扱うように指示するものです。</p>
+<h3 id="Example">例</h3>
+<p>あなたはJavaScriptを直接Mozillaに対して入力できます。</p>
+<pre class="eval">js&gt; 5+7
+12
+js&gt; print("Hello, world!")
+Hello, world!
+js&gt;
+</pre>
+<h3 id="See_also">参考になる情報</h3>
+<ul> <li>ほとんどのMozillaのプログラムは、<a href="/ja/XPConnect" title="ja/XPConnect">XPConnect</a>経由で<a href="/ja/XPCOM" title="ja/XPCOM">XPCOM</a>コンポーネントを利用しています。 </li> <li>使い方を把握するためには、<a href="/ja/XPConnect/Using_components" title="ja/XPConnect/Using_components">XPConnect:コンポーネントを利用する</a>を読んでください。</li> <li>コマンドラインオプションと拡張された機能についての情報は、<a href="/ja/XPCShell_Reference" title="ja/XPCShell_Reference">XPCShellリファレンス</a>を参照してください。</li> <li><a href="/ja/Writing_xpcshell-based_unit_tests" title="ja/Writing_xpcshell-based_unit_tests">xpcshellベースでのユニットテストの書き方</a>を学べます。</li> <li>スクリプトのプロファイリングを行う方法についての情報は、<a href="/ja/XPCShell/Profiling" title="ja/XPCShell/Profiling">XPCShell:プロファイリング</a>を参照してください。</li>
+</ul>
+<p>{{ languages( { "en": "en/xpcshell", "fr": "fr/Xpcshell" } ) }}</p>

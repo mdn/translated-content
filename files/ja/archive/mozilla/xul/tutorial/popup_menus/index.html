@@ -1,0 +1,213 @@
+---
+title: ポップアップメニュー
+slug: Archive/Mozilla/XUL/Tutorial/Popup_Menus
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Popup_Menus
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:More_Menu_Features" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Scrolling_Menus">次のページ  »</a></p>
+</div>
+
+<p>前のセクションでは、メニューバーを使ったメニューの作り方を見てきました。 加えて、XUL ではポップアップメニューを作る機能も持っています。 ポップアップメニューとしては、利用者がマウスの右ボタンを押したときに表示されるメニューが典型的です。</p>
+
+<p><span id="Creating_a_Popup_Menu"></span></p>
+
+<h3 id=".E3.83.9D.E3.83.83.E3.83.97.E3.82.A2.E3.83.83.E3.83.97.E3.83.A1.E3.83.8B.E3.83.A5.E3.83.BC.E3.81.AE.E4.BD.9C.E6.88.90" name=".E3.83.9D.E3.83.83.E3.83.97.E3.82.A2.E3.83.83.E3.83.97.E3.83.A1.E3.83.8B.E3.83.A5.E3.83.BC.E3.81.AE.E4.BD.9C.E6.88.90">ポップアップメニューの作成</h3>
+
+<p>XUL には、3 種類の異なるポップアップがあります。 これらは、主にポップアップを表示させるための方法が異なっています。 以下に概要を示します。</p>
+
+<dl>
+ <dt>プレインポップアップ</dt>
+ <dd>プレインポップアップは、要素の上でマウスの左ボタンを押したときに表示されるポップアップウィンドウです。これはメニューバー上のメニューと似ていますが、任意の場所に配置できるここと、任意の内容を持つことができる点が異なります。ブラウザウィンドウで「戻る」や「進む」ボタンの右下にある、小さな下向き三角をクリックした時に表示されるドロップダウンメニューが、この良い例としてあげられます。</dd>
+</dl>
+
+<dl>
+ <dt>コンテキストポップアップ</dt>
+ <dd>コンテキストポップアップは、利用者がコンテキストメニューボタン (たいていは右マウスボタン) を押したときに表示されるポップアップウィンドウです。 厳密には、コンテキストメニューを開く方法はプラットフォームごとに異なります。 Macintosh を例にあげると、利用者は Control キーとマウスボタンを一緒に押すか、マウスボタンを数秒押したままにします。 また、コンテキストメニューをマウスを使用せずに、キーボードのメニューキーを押すといったような方法で開くことも可能であることを付け加えておきます。</dd>
+ <dt>ツールチップ</dt>
+ <dd>ツールチップ のポップアップウィンドウは、利用者がマウスカーソルを要素の上に移動したときに表示されます。この種類のポップアップは、主にボタン上の表示よりも、もっと詳しいボタンについての説明を提供するために使われます。</dd>
+</dl>
+
+<p>これら 3 つのポップアップは利用者が呼び出すときの方法が異なります。 また、ポップアップの種類は、ポップアップを呼び出す要素の側で指定されることになります。</p>
+
+<h4 id=".E3.83.9D.E3.83.83.E3.83.97.E3.82.A2.E3.83.83.E3.83.97.E3.81.99.E3.82.8B.E3.82.B3.E3.83.B3.E3.83.86.E3.83.B3.E3.83.88.E3.81.AE.E5.AE.9A.E7.BE.A9" name=".E3.83.9D.E3.83.83.E3.83.97.E3.82.A2.E3.83.83.E3.83.97.E3.81.99.E3.82.8B.E3.82.B3.E3.83.B3.E3.83.86.E3.83.B3.E3.83.88.E3.81.AE.E5.AE.9A.E7.BE.A9">ポップアップするコンテントの定義</h4>
+
+<p>ポップアップは <code><code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code> 要素を使って記述されます。 この要素はボックスの一種で、特別な属性は存在しません。 ポップアップが呼び出されると、ウィンドウが表示され、そこには <code><code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code> 要素の中に置かれた全てのものが含まれています。 また、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code> 要素の <code><code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> 属性は、ポップアップを、出したい要素と関連付けるのに必要なため、必ず設定する必要があります。 以下に例を示して、その後に意味を説明していきます。</p>
+
+<pre>&lt;popupset&gt;
+  &lt;menupopup id="clipmenu"&gt;
+    &lt;menuitem label="Cut"/&gt;
+    &lt;menuitem label="Copy"/&gt;
+    &lt;menuitem label="Paste"/&gt;
+  &lt;/menupopup&gt;
+&lt;/popupset&gt;
+</pre>
+
+<p>この例は、3 つの操作項目を持つ、単純なポップアップメニューを生成します。 この例では、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code> 要素は、3 つの <code><code><a href="/ja/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></code> 要素を囲っています。 また、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code> 要素に <code><code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> が設定されていることも確認してください。</p>
+
+<p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/popupset" title="popupset">popupset</a></code></code> 要素は、ポップアップメニューの宣言全体を囲みます。 これは、ポップアップのための汎用的なコンテナですが、使用は必須ではありません。 この要素によって、画面上に何かが描画されることはありませんが、全てのポップアップを一箇所にまとめて宣言するための置き場所として使用します。 この <code><code><a href="/ja/docs/Mozilla/Tech/XUL/popupset" title="popupset">popupset</a></code></code> という名前は、複数のポップアップ宣言を内側に置くことができるということから付けられています。 また、別のポップアップの定義を追加する場合には、最初の <code><code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code> 要素の後に置くだけで構いません。 複数の <code><code><a href="/ja/docs/Mozilla/Tech/XUL/popupset" title="popupset">popupset</a></code></code> をファイルに置いても構いませんが、通常は 1 つにまとめるようにします。</p>
+
+<h4 id=".E3.83.9D.E3.83.83.E3.83.97.E3.82.A2.E3.83.83.E3.83.97.E3.82.92.E8.A6.81.E7.B4.A0.E3.81.AB.E9.96.A2.E9.80.A3.E4.BB.98.E3.81.91.E3.82.8B" name=".E3.83.9D.E3.83.83.E3.83.97.E3.82.A2.E3.83.83.E3.83.97.E3.82.92.E8.A6.81.E7.B4.A0.E3.81.AB.E9.96.A2.E9.80.A3.E4.BB.98.E3.81.91.E3.82.8B">ポップアップを要素に関連付ける</h4>
+
+<p>これで、ポップアップの作成はできましたので、いよいよポップアップを表示させてみることにします。 このためには、ポップアップを出現させる要素と関係づける必要があります。 これは、ポップアップを、利用者がウィンドウのある一定のエリアをクリックした場合のみに出現させるために必要です。 ポップアップを表示させるエリアは、主にボタンかボックスを用いて指定します。</p>
+
+<p>ポップアップと要素と関係付けるためには、次に示す 3 つの属性のうちの 1 つを要素に加えます。 どの属性を加えるかは、作りたいポップアップの種類に応じて決定されます。 プレインポップアップを作成するには、<code><code id="a-popup"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/popup">popup</a></code></code> 属性を要素に加えます。 また、コンテキストポップアップには、<code><code id="a-context"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/context">context</a></code></code> 属性を加えます。 最後に、ツールチップポップアップの場合は、<code><code id="a-tooltip"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/tooltip">tooltip</a></code></code> 属性を加えます。</p>
+
+<p>これらの属性の値として、表示させるポップアップの <code><code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> 属性の値を指定する必要があります。 このために、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code> 要素には、必ず <code><code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> 属性を設定しなければなりません。 この仕様によって、簡単に複数のポップアップ宣言を 1 つのファイルにまとめておくことができるようになっています。</p>
+
+<p>上記の例に追加して、コンテキストメニューのポップアップを作ってみることにします。 そのためには、 <code><code id="a-context"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/context">context</a></code></code> 属性を使用する必要があります。 これは、ポップアップを関係づけたい要素の方に追加します。 以下に、適用した例を示します。</p>
+
+<p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_popups_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_popups_1.xul">表示</a></p>
+
+<div class="float-right"><img alt="画像:popups-ex1.png"></div>
+
+<pre>&lt;popupset&gt;
+  &lt;menupopup id="clipmenu"&gt;
+    &lt;menuitem label="Cut"/&gt;
+    &lt;menuitem label="Copy"/&gt;
+    &lt;menuitem label="Paste"/&gt;
+  &lt;/menupopup&gt;
+&lt;/popupset&gt;
+
+&lt;box context="clipmenu"&gt;
+  &lt;description value="Context click for menu"/&gt;
+&lt;/box&gt;
+</pre>
+
+<p>ここでは、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code> 要素をボックスと関係づけています。 ボックス内部の任意の場所で、context-click (右クリック) をすれば、ポップアップメニューが表示されます。 ポップアップは、ボックスの子要素の上でクリックした場合であっても表示されます。 したがって、この例で <code><code><a href="/ja/docs/Mozilla/Tech/XUL/description" title="description">description</a></code></code> 要素の上でクリックした場合であっても、ポップアップは表示されます。 <code><code id="a-context"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/context">context</a></code></code> 属性は、同じ id を持つ<code><code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code> とボックスを結びつけるのに用いられています。 この例では、<code>clipmenu</code> という id を持つ<code><code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code> が表示されることになります。 これによって、たくさんのポップアップを作成して、それぞれを異なる要素に結びつけることが可能になります。</p>
+
+<p>1 つの要素に対して、ポップアップの種類が異なる属性を追加することで、複数のポップアップを結びつけることも可能です。 また、同じポップアップを複数の要素と結びつけることも可能です。(これは、このポップアップための構文を採用したことによる優位点のひとつです)。 なお、ポップアップは、XUL 要素にのみ結びつけることが可能で、HTML 要素と結びつけることはできません。</p>
+
+<h3 id=".E3.83.84.E3.83.BC.E3.83.AB.E3.83.81.E3.83.83.E3.83.97" name=".E3.83.84.E3.83.BC.E3.83.AB.E3.83.81.E3.83.83.E3.83.97">ツールチップ</h3>
+
+<p>ここでは、ツールチップを作るための簡単な方法を見て行きます。 ツールチップを作る方法は、2 つあります。 最も簡単な方法は、<code><code id="a-tooltiptext"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/tooltiptext">tooltiptext</a></code></code> 属性を、ツールチップを設定したい要素に追加することです。(通常は、こちらの方が多く使われています)</p>
+
+<p>2 つめの方法は、ツールチップに表示する内容を含めるために <code><code><a href="/ja/docs/Mozilla/Tech/XUL/tooltip" title="tooltip">tooltip</a></code></code> 要素を使用します。 この方法では、個々のツールチップの内容部分を分離するか、またはツールチップの内容を設定するようなスクリプトを用意する必要があります。 しかしながら、この方法を用いた場合、ツールチップにテキストだけでなく任意の内容を使用できます。</p>
+
+<p><span id="Example_2"><a id="Example_2"></a><strong>Example 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_popups_2.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_popups_2.xul">表示</a></p>
+
+<pre>&lt;button label="Save" tooltiptext="Click here to save your stuff"/&gt;
+
+&lt;popupset&gt;
+  &lt;tooltip id="moretip" orient="vertical" style="background-color: #33DD00;"&gt;
+    &lt;description value="Click here to see more information"/&gt;
+    &lt;description value="Really!" style="color: red;"/&gt;
+  &lt;/tooltip&gt;
+&lt;/popupset&gt;
+
+&lt;button label="More" tooltip="moretip"/&gt;
+</pre>
+
+<p>この例にある 2 つのボタンは、それぞれツールチップを持っています。 最初のボタンは、デフォルトのツールチップのスタイルを使用します。 2 つ目のボタンは、背景色とテキストのスタイルを変更した、カスタムツールチップを使用します。 More ボタンには <code><code id="a-tooltip"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/tooltip">tooltip</a></code></code> 属性が使われていて、対応する <code><code><a href="/ja/docs/Mozilla/Tech/XUL/tooltip" title="tooltip">tooltip</a></code></code> 要素の <code><code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> の値が設定されています。 なお、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/tooltip" title="tooltip">tooltip</a></code></code> 要素も、他のポップアップ系の要素と同様に <code><code><a href="/ja/docs/Mozilla/Tech/XUL/popupset" title="popupset">popupset</a></code></code> の中に配置可能です。</p>
+
+<h3 id=".E3.83.9D.E3.83.83.E3.83.97.E3.82.A2.E3.83.83.E3.83.97.E3.81.AE.E8.A1.A8.E7.A4.BA.E4.BD.8D.E7.BD.AE" name=".E3.83.9D.E3.83.83.E3.83.97.E3.82.A2.E3.83.83.E3.83.97.E3.81.AE.E8.A1.A8.E7.A4.BA.E4.BD.8D.E7.BD.AE">ポップアップの表示位置</h3>
+
+<p>デフォルトでは、プレインとコンテキストポップアップのウィンドウは、マウスポインタの位置に表示されます。 また、ツールチップは、マウスポインタと重なって隠されることが無いように、要素の少し下に表示されます。 しかしながら、ポップアップの表示位置を、もっと詳細に指示したい場合もあると思います。 例えば、ブラウザのバックボタンをクリックした時に出現するポップアップメニューは、「バックボタンの下」に表示されるべきですが、それはプレインポップアップのデフォルトの表示位置である「マウスポインタの位置」とは異なります。</p>
+
+<p>ポップアップの表示位置を変更するためには、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code> に付加的な属性である <code><code id="a-position"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/position">position</a></code></code> を使うことで可能です。 また、<code><code id="a-position"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/position">position</a></code></code> 属性は、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code> 要素にも設定可能です。 この属性は、ポップアップの表示位置と、ポップアップの呼び出し元の要素の位置関係を指示するために使用します。 ここには、いくつかの値が設定可能です。以下に概要を示します。</p>
+
+<dl>
+ <dt>after_start</dt>
+ <dd>ポップアップは、要素の下に、要素とポップアップウィンドウの左端を揃えて表示されます。ポップアップウィンドウが要素よりも大きい場合は、右の方に広がります。この値は、ブラウザの「戻る」と「進む」ボタンに結びついているドロップダウンメニューに使われています。</dd>
+</dl>
+
+<dl>
+ <dt>after_end</dt>
+ <dd>ポップアップは、要素の下に、要素とポップアップウィンドウの右端を揃えて表示されます。</dd>
+</dl>
+
+<dl>
+ <dt>before_start</dt>
+ <dd>ポップアップは、要素の上に、要素とポップアップウィンドウの左端を揃えて表示されます。</dd>
+</dl>
+
+<dl>
+ <dt>before_end</dt>
+ <dd>ポップアップは、要素の上に、要素とポップアップウィンドウの右端を揃えて表示されます。</dd>
+</dl>
+
+<dl>
+ <dt>end_after</dt>
+ <dd>ポップアップは、要素の右に、要素とポップアップウィンドウの下端を揃えて表示されます。</dd>
+</dl>
+
+<dl>
+ <dt>end_before</dt>
+ <dd>ポップアップは、要素の右に、要素とポップアップウィンドウの上端を揃えて表示されます。</dd>
+</dl>
+
+<dl>
+ <dt>start_after</dt>
+ <dd>ポップアップは、要素の左に、要素とポップアップウィンドウの下端を揃えて表示されます。</dd>
+</dl>
+
+<dl>
+ <dt>start_before</dt>
+ <dd>ポップアップは、要素の左に、要素とポップアップウィンドウの上端を揃えて表示されます。</dd>
+</dl>
+
+<dl>
+ <dt>overlap</dt>
+ <dd>ポップアップは、要素と同じ位置に重なって表示されます。</dd>
+</dl>
+
+<dl>
+ <dt>at_pointer</dt>
+ <dd>ポップアップはマウスポインタの位置に出現します。</dd>
+</dl>
+
+<dl>
+ <dt>after_pointer</dt>
+ <dd>ポップアップはマウスポインタと水平位置は同じで、要素の下に表示されます。これはツールチップの表示に使われます。</dd>
+</dl>
+
+<p><code>position</code> 属性を <code>popup</code> 要素に加えることで、ポップアップの表示位置を正確に指定することができます。 ポップアップに対して、位置指定を直接ピクセル値で行うことはできません。 <code>position</code> 属性は、3 種類の全てのポップアップで使うことが可能です。 もっとも、ツールチップでは、ほとんど値を変える状況はないと思います。</p>
+
+<p>以下に、ポップアップメニューを持った戻るボタンを作る例を示します。</p>
+
+<p><span id="Example_3"><a id="Example_3"></a><strong>Example 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_popups_3.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_popups_3.xul">表示</a></p>
+
+<pre>&lt;popupset&gt;
+  &lt;menupopup id="backpopup" position="after_start"&gt;
+    &lt;menuitem label="Page 1"/&gt;
+    &lt;menuitem label="Page 2"/&gt;
+  &lt;/menupopup&gt;
+&lt;/popupset&gt;
+
+&lt;button label="Pop Me Up" popup="backpopup"/&gt;
+</pre>
+
+<h3 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AB.E3.83.9D.E3.83.83.E3.83.97.E3.82.A2.E3.83.83.E3.83.97.E3.82.92.E8.BF.BD.E5.8A.A0" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AB.E3.83.9D.E3.83.83.E3.83.97.E3.82.A2.E3.83.83.E3.83.97.E3.82.92.E8.BF.BD.E5.8A.A0">ファイル検索ダイアログにポップアップを追加</h3>
+
+<div class="highlight">
+<p>それでは、ファイル検索ダイアログに、簡単なポップアップメニューを追加してみましょう。 簡単にするために、Edit メニューの内容を複製することにします。 また、ポップアップは、最初のタブパネルの上でクリックした時に表示されるようにしたいと思います。</p>
+
+<pre class="eval"><span class="highlightred">&lt;popupset&gt;
+  &lt;menupopup id="editpopup"&gt;
+    &lt;menuitem label="Cut" accesskey="t"/&gt;
+    &lt;menuitem label="Copy" accesskey="c"/&gt;
+    &lt;menuitem label="Paste" accesskey="p" disabled="true"/&gt;
+  &lt;/menupopup&gt;
+&lt;/popupset&gt;</span>
+
+&lt;vbox flex="1"&gt;
+.
+.
+.
+
+<span class="highlightred">&lt;tabpanel id="searchpanel" orient="vertical" context="editpopup"&gt;</span>
+</pre>
+
+<p>この簡単なポップアップは、最初のタブパネルに追加されている Edit メニューと同じようなものになります。 最初のパネル上のどこかで右クリック (Macintosh ではControl+クリック) すれば、ポップアップが表示されるはずです。 また、ポップアップは、それ以外の場所でクリックした場合は表示されません。 テキスト入力欄 (<span style="color: green;">textbox</span>) は、要素自身に組み込まれたポップアップメニューを持っているため、こちらで指定しても上書きされてしまうことに注意してください。</p>
+
+<p><span id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"><a id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"></a><strong>ここまでのファイル検索ダイアログの例</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-popups.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-popups.xul">表示</a></p>
+</div>
+
+<p>次のセクションでは、どのようにスクロールメニューを作るかを見て行きます。</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:More_Menu_Features" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Scrolling_Menus">次のページ  »</a></p>
+</div>

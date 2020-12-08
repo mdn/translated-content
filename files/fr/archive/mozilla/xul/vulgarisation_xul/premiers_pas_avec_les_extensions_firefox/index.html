@@ -1,0 +1,132 @@
+---
+title: Premiers pas avec les extensions Firefox
+slug: Archive/Mozilla/XUL/Vulgarisation_XUL/Premiers_pas_avec_les_extensions_Firefox
+translation_of: >-
+  Archive/Add-ons/Overlay_Extensions/XUL_School/Getting_Started_with_Firefox_Extensions
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Vulgarisation_XUL/Introduction" style="float: left;">« Précédent</a><a href="/fr/docs/Vulgarisation_XUL/L'essentiel_d'une_extension">Suivant  »</a></p>
+</div>
+
+<h2 id="Qu'est-ce_qu'une_extension_Firefox">Qu'est-ce qu'une extension Firefox ?</h2>
+
+<blockquote>
+<p>Les extensions ajoutent de nouvelles fonctionnalités à des applications Mozilla telles que Firefox et Thunderbird. Elles peuvent ajouter n'importe quoi depuis le bouton d'une barre d'outils à une fonctionnalité entièrement nouvelle. Ils permettent à l'application d'être personnalisée pour répondre aux besoins personnels de chaque utilisateur en fonctionnalités supplémentaires, tout en gardant des applications légères à télécharger.</p>
+</blockquote>
+
+<p>Telle que décrit dans le texte cité, une extension est une petite application qui ajoute quelque chose de nouveau à une ou plusieurs applications Mozilla. Ce tutoriel se concentre sur des extensions pour Firefox, mais les mêmes (ou très similaires) principes s'appliquent à la création d'extensions pour d'autres applications comme Thunderbird, SeaMonkey, et Flock.</p>
+
+<p>Il est également intéressant de noter qu'il existe des différences entre la définition d'<em>extension</em> et de <em>module complémentaire</em>. Toutes les extensions sont des modules complémentaires, mais des modules complémentaires peuvent également être des thèmes, des plugins, ou paquetages de langue. Ce tutoriel porte sur le développement d'extensions, mais les thèmes et les paquetages de langues sont développés de manière très similaire. Les plugins sont tout à fait différents, et ils ne seront pas abordés dans ce tutoriel. Vous pourrez en savoir plus sur les plugins et leur développement dans la <a href="/fr/Mozilla/Add-ons/Plugins" title="fr/Plugins">page Plugins</a>.</p>
+
+<p>Firefox fournit une architecture très riche et flexible qui permet aux développeurs d'extensions d'ajouter des fonctionnalités avancées, de personnaliser l'expérience de l'utilisateur, et de remplacer ou d'enlever complètement des parties de votre navigateur. Le référentiel <a class="link-https" href="https://addons.mozilla.org" title="https://addons.mozilla.org/">Mozilla Add-ons</a> (AMO) regroupe un grand nombre d'extensions ayant une grande variété de fonctions : le filtrage de contenu (AdBlock Plus, NoScript), l'interaction d'application Web (Delicious Bookmarks, eBay Companion), le développement Web (DOM Inspector, Firebug) et la protection de l'enfance (Glubble pour les familles). Il s'agit d'extensions très avancées et complexes, et vous apprendrez plus qu'il n'en faut pour créer des extensions comme celles-ci (Glaxstar participe à 3 de celles qui sont énumérées).</p>
+
+<p>Nous commencerons par examiner une extension très simple.</p>
+
+<h2 id="L'extension_Hello_World">L'extension Hello World</h2>
+
+<p>Nos exemples d'extensions et ce tutoriel sont en général destinés à la version Firefox 3 et plus, mais la plupart fonctionne aussi sur les versions précédentes de Firefox. Nous essaierons de le préciser lorsque nous discuterons d'une fonction qui ne fonctionne que sur certaines versions de Firefox.</p>
+
+<p>Nous allons maintenant commencer par une extension basique "Hello World". Commençons par l'installation de l'extension. Cliquez sur le lien ci-dessous.</p>
+
+<div class="warning">
+<p>L'extension suivante servant d'exemple n'est pas signée numériquement. Pour pouvoir l'activer, vous devez disposer de Firefox Developer Edition et <a href="https://support.mozilla.org/fr/kb/signature-modules-complementaires-firefox#w_passer-outre-aa-la-signature-des-modules-complaementaires-utilisateurs-avancaes">désactiver le controle de la signature numérique</a>.</p>
+</div>
+
+<p><a href="/@api/deki/files/5139/=xulschoolhello1.xpi" title="https://developer.mozilla.org/@api/deki/files/4225/=xulschoolhello1.xpi">Installation de Hello World</a></p>
+
+<p>Ce lien déclenchera une installation ou un téléchargement de fichier, en fonction du Content-type utilisé par le serveur Web. Le type de contenu approprié pour déclencher une installation est <strong>application/x-xpinstall</strong>. Dans ce cas, un téléchargement de fichier doit se produire.</p>
+
+<p>Si le type de contenu est défini correctement, vous serez informé que le site n'est pas autorisé à installer des modules complémentaires sous Firefox. Il s'agit d'une mesure de sécurité qui empêche des sites d'installer des extensions sans le consentement de l'utilisateur. Cela est nécessaire car les extensions malveillantes peuvent avoir le même niveau de dommage que tout programme malveillant : le vol de données, l'effacement ou le remplacement des fichiers, et entraîner des comportements indésirables en général. AMO est le seul site de pré-autorisés car tous les modules complémentaires publiés sur l'AMO sont passés par un processus d'examen qui comprend des contrôles de sécurité.</p>
+
+<p>Après avoir téléchargé le fichier, vous pouvez le faire glisser et le déposer dans la zone de contenu Firefox, et l'installation devrait commencer.</p>
+
+<p>Vous verrez une fenêtre vous indiquant que vous êtes sur le point d'installer une extension, avec quelques informations supplémentaires telles que le nom de son auteur. Vous verrez un message disant que l'auteur ne peut être vérifié. Seules les extensions signées avec un certificat numérique peuvent être authentifiées. Les extensions signées sont rares, mais nous allons aborder la façon de les signer plus tard.</p>
+
+<p>Cliquez sur le bouton Installer maintenant. Après que l'extension soit installée, il vous sera demandé de redémarrer Firefox. L'installation, la désinstallation, l'activation et la désactivation des modules complémentaires (exceptés les plugins) nécessitent un redémarrage pour terminer, et il n'y a pas d'autre moyen de faire. C'est un point important à garder à l'esprit si vous construisez une extension qui manipule les autres extensions ou des thèmes. Il y a <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=256509" title="https://bugzilla.mozilla.org/show_bug.cgi?id=256509">un bug très ancien</a> qui permet de suivre cette question.</p>
+
+<p>Maintenant, après le redémarrage du navigateur, vous verrez la fenêtre du Gestionnaire de modules complémentaires, montrant le nom de l'extension, sa version, et une brève description.</p>
+
+<p><img alt="addonman.png" class="default internal" src="/@api/deki/files/4137/=addonman.png"></p>
+
+<p>Fermez le Gestionnaire de modules complémentaires. Regardez la fenêtre principale de Firefox et voyez si vous remarquez quelque chose de différent.</p>
+
+<p>L'avez-vous vu ? Il y a un nouveau menu dans la barre de menu principal, intitulé «Hello World!». Si vous ouvrez le menu, puis la sélection du menu surgissant, vous verrez un chouette message d'alerte. Cliquez sur le bouton OK pour le fermer.</p>
+
+<p><img alt="" class="internal" src="/@api/deki/files/4138/=helloworldalert.png" style="height: 126px; width: 326px;"></p>
+
+<p>C'est tout ce que l'extension fait. Maintenant, nous allons y regarder de plus près.  </p>
+
+<h2 id="Contenus_d'une_extension">Contenus d'une extension</h2>
+
+<p>Vous avez peut être remarqué que le fichier de l'extension que vous avez installé est nommé xulschoolhello1.xpi. <a href="/fr/XPI" title="fr/XPI">XPI</a> (prononcez "zippy") est synonyme de d'installeur multi plate-formes (NdT : Cross-Platform Installer), car le même fichier d'installation peut fonctionner sur les principales plates-formes, et c'est le cas pour la plupart des extensions XPI. Les fichiers XPI sont tout simplement des fichiers compressés au format ZIP, mais Firefox les reconnaît comme extension et déclenche le processus d'installation quand un lien XPI est cliqué.</p>
+
+<p>Pour regarder dans le fichier XPI, vous avez besoin de le télécharger d'abord sans l'installer. Si le serveur déclenche une installation en cliquant sur un lien ou sur un bouton, vous devez faire un clic droit sur le <a href="/@api/deki/files/4225/=xulschoolhello1.xpi" title="https://developer.mozilla.org/@api/deki/files/4225/=xulschoolhello1.xpi">lien d'installation</a>, puis cliquez sur l'option Enregistrer le lien sous….</p>
+
+<p>Ensuite, nous allons décompresser le fichier XPI. Une façon de faire est de renommer le fichier afin qu'il ait l'extension <em>zip</em> au lieu de <em>xpi</em>. Une autre façon est d'ouvrir le fichier en utilisant un utilitaire ZIP. La plupart des systèmes d'exploitation dispose d'un utilitaire de compression ZIP, et il existe des outils plus avancés disponibles en ligne. Faites votre choix, et décompressez le fichier dans un emplacement qui vous convient. Vous devriez voir une structure similaire à celle-ci :</p>
+
+<p>xulschoolhello1</p>
+
+<ul>
+ <li>
+  <ul>
+   <li>chrome.manifest</li>
+   <li>install.rdf</li>
+   <li>chrome
+    <ul>
+     <li>xulschoolhello.jar</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+<p>Le fichier JAR contient la majorité du code, alors nous devrons également en extraire son contenu. Tout comme pour les XPI, vous n'avez besoin que d'un utilitaire ZIP pour décompresser le fichier. Après avoir fait cela, vous aurez quelque chose comme ceci :</p>
+
+<p>xulschoolhello1</p>
+
+<ul>
+ <li>
+  <ul>
+   <li>chrome.manifest</li>
+   <li>install.rdf</li>
+   <li>chrome
+    <ul>
+     <li>xulschoolhello.jar</li>
+     <li>xulschoolhello
+      <ul>
+       <li>content
+        <ul>
+         <li>browserOverlay.xul</li>
+         <li>browserOverlay.js</li>
+        </ul>
+       </li>
+       <li>locale
+        <ul>
+         <li>en-US
+          <ul>
+           <li>browserOverlay.dtd</li>
+           <li>browserOverlay.properties</li>
+          </ul>
+         </li>
+        </ul>
+       </li>
+       <li>skin
+        <ul>
+         <li>browserOverlay.css</li>
+        </ul>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+<p>Cela fait beaucoup de fichiers pour quelque chose de si simple ! Eh bien, rassurez-vous, nous allons bientôt détailler tous ces fichiers et réaliser que c'est assez simple. Dans la section suivante nous allons examiner ces fichiers et voir ce qu'ils font.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Vulgarisation_XUL/Introduction" style="float: left;">« Précédent</a><a href="/fr/docs/Vulgarisation_XUL/L'essentiel_d'une_extension">Suivant  »</a></p>
+</div>
+
+<p><span style="font-size: small;">This tutorial was kindly donated to Mozilla by Appcoast.</span></p>

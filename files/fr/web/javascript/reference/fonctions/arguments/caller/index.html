@@ -1,0 +1,54 @@
+---
+title: caller
+slug: Web/JavaScript/Reference/Fonctions/arguments/caller
+tags:
+  - Functions
+  - JavaScript
+  - Obsolete
+  - Propriété
+  - Reference
+  - arguments
+translation_of: Archive/Web/JavaScript/arguments.caller
+---
+<div>{{jsSidebar("Functions")}}{{obsolete_header}}</div>
+
+<div>La propriété obsolète <strong><code>arguments.caller</code></strong> était utilisée afin de fournir la fonction ayant appelée la fonction en cours d'exécution. Cette propriété a été retirée et ne fonctione plus.</div>
+
+<h2 id="Description">Description</h2>
+
+<p>Cette propriété n'est plus disponible. Vous pouvez en revanche utiliser {{jsxref("Function.caller")}}.</p>
+
+<pre class="brush: js">function quiAppelle() {
+   if (quiAppelle.caller == null)
+      console.log('Appel depuis la portée globale.');
+   else
+      console.log(quiAppelle.caller + ' a appelé !');
+}</pre>
+
+<h2 id="Exemples">Exemples</h2>
+
+<p>Le code suivant pouvait être utilisé pour connaître la valeur de <code>arguments.caller</code> dans une fonction. La propriété étant obsolète, le code ne fonctionne plus.</p>
+
+<pre class="brush: js example-bad">function quiAppelle() {
+   if (arguments.caller == null)
+      console.log('Appel depuis la portée globale.');
+   else
+      console.log(arguments.caller + ' a appelé !');
+}
+</pre>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<p>Cette propriété ne fait partie d'aucun standard. Elle fut implémentée avec JavaScript 1.1 et retirée avec le {{bug(7224)}} en raisons d'éventuelles vulnérabilités.</p>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<div class="hidden">Ce tableau de compatibilité a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à envoyer une <em>pull request</em> sur <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>.</div>
+
+<p>{{Compat("javascript.functions.arguments.caller")}}</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>{{jsxref("Function")}}</li>
+</ul>

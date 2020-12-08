@@ -1,0 +1,51 @@
+---
+title: '&lt;preference&gt; 要素リファレンス'
+slug: Preferences_System/preference
+tags:
+  - Preferences system
+  - XUL
+---
+<p> </p>
+<h3 id="概説"> 概説 </h3>
+<p><b><code>&lt;preference&gt;</code></b> は設定を表現する要素で、ユーザ設定の項目とユーザインターフェイス要素との間を仲介するために使われます。
+</p><p>この要素は <code><a href="ja/Preferences_System/preferences">&lt;preferences&gt;</a></code> 要素の直接の子要素として記述しなければいけません。
+</p>
+<h3 id="XUL構文"> XUL構文 </h3>
+<pre class="eval">&lt;preference id="<i>pref_id</i>" name="<i>preference.name</i>" type="<i>int</i>"/&gt;
+</pre>
+<h3 id="属性"> 属性 </h3>
+<dl><dt> <code>id</code> </dt><dd> 要素のid。これはユーザインターフェイス要素の <code>preference</code> 属性の値として使われます。
+</dd><dt> <code>instantApply</code> </dt><dd> もし全体の設定が、設定の変更を即座に反映しないようになっていても、この設定の変更を即座に反映させるために、この属性の値を <code>true</code> にセットすることができます。
+</dd><dt> <code>inverted</code> </dt><dd> （<code>type="bool"</code> である要素に対してのみ適用）この値が <code>true</code> にセットされている時、関連づけられたユーザインターフェイス要素の値は反転されてユーザ設定に保存されます。
+</dd><dt> <code>name</code> </dt><dd> この要素が制御する設定の名前（例えば、 &lt;tt&gt;browser.preferences.instantApply&lt;/tt&gt; ）。
+</dd><dt> <code>readonly</code> </dt><dd> <code>true</code>にセットした場合、関連づけられたユーザインターフェイス要素の値の変更は設定に影響しません。注意：この属性を<code>true</code>に設定しても、ユーザインターフェイス要素は無効化されません。<span>もしこれが意図された動作であるなら、いったいどんなケースで役に立つというのでしょうか？</span>
+</dd><dt> <code>type</code> </dt><dd> 設定の型。以下の値が利用可能です： <code>int</code> （整数値）, <code>bool</code> （真偽値）, <code>string</code> （Unicodeでない（ASCII）文字列）, <code>wstring</code> （<a class="external" href="http://kb.mozillazine.org/Dev_:_Using_preferences#nsIPrefLocalizedString"><code>nsIPrefLocalizedString</code></a>のような文字列）, <code>unichar</code> （Unicode文字列）, <code>file</code> (<code>nsIFile</code>)
+</dd><dd>※日本語版注記：つまり、日本語の文字列を保存させる場合は<code>string</code>ではなく<code>unichar</code>を指定する必要がある。
+</dd></dl>
+<h3 id="プロパティ"> プロパティ </h3>
+<dl><dt> <code>defaultValue</code> （読み取り専用） </dt><dd> その設定の既定の値を返します。このプロパティの型は、 <code>type</code> プロパティによって指定された値に依存します。
+</dd><dt> <code>disabled</code> （真偽値）</dt><dd> <code>disabled</code> 属性の値を設定/取得し、同時に、関連づけられたユーザインターフェイス要素の <code>disabled</code> プロパティも更新します。（しかし初期値は何も影響しないようですが？？）
+</dd><dt> <code>hasUserValue</code> （読み取り専用、真偽値） </dt><dd> その設定がユーザによって変更された値を持つ場合、 <code>true</code> を返します。
+</dd><dt> <code>instantApply</code> （読み取り専用、真偽値） </dt><dd> この設定が <i>即座に反映される</i> かどうかを調べるために使われます。この要素の <code>instantApply</code> 属性が <code>true</code> に設定されているか、もしくは <code>&lt;prefwindow&gt;</code> の <code>instantApply</code> が <code>true</code> である場合に、 <code>true</code> となります。（しかし<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=293439">bug 293439</a>にも注意してください）
+</dd><dt> <code>inverted</code> （真偽値） </dt><dd> <code>inverted</code> 属性の値を取得または設定します。
+</dd><dt> <code>locked</code> （読み取り専用、真偽値） </dt><dd> この設定が <i>ロックされている</i> 場合、 <code>true</code> を返します。
+</dd><dt> <code>name</code> （文字列） </dt><dd> <code>name</code> 属性の値を取得または設定します。
+</dd><dt> <code>preferences</code> （読み取り専用、DOMElement） </dt><dd> <code>&lt;preferences&gt;</code> 要素の親要素。
+</dd><dt> <code>readonly</code> （真偽値） </dt><dd> <code>readonly</code> 属性の値を取得または設定します。
+</dd><dt> <code>tabIndex</code> （整数値） </dt><dd> <code>tabindex</code> 属性の値を取得または設定し、関連づけられたユーザインターフェイス要素のtabindex属性も更新します。（？？ <code>disabled</code>のものと同じコメント）
+</dd><dt> <code>type</code> （文字列） </dt><dd> <code>type</code> 属性の値を取得または設定します。
+</dd><dt> <code>value</code> </dt><dd> その設定の現在の値。もし instantApply がONである場合、この値は常に <code>valueFromPreferences</code> の値に等しいです。さもなくば、これは関連づけられたユーザインターフェイス要素の現在の値（言い替えれば、現在ユーザが見ている値）です。
+</dd><dt> <code>valueFromPreferences</code> </dt><dd> <code>name</code> 属性で指定されたユーザ設定に保存されている値を取得または設定します。
+</dd></dl>
+<h3 id="メソッド"> メソッド </h3>
+<dl><dt> <code>type getElementValue(in DOMElement element);</code> </dt><dd> 渡された値の現在の状態に基づいて、設定に書き込まれるべき値を取得します。このメソッドは <code>onsynctopreference</code> イベントハンドラを呼びます。
+</dd><dt> <code>boolean isElementEditable(in DOMElement element)</code> </dt><dd> 与えられた要素が "編集可能"（以下を参照）である場合に <code>true</code> を返します。
+</dd><dt> <code>void reset();</code> </dt><dd> 設定を既定の値にリセットします。
+</dd><dd> <b>注意:</b> このメソッドは、まだその設定がユーザによって変更されていない場合、例外を投げます。<span>（これは意図された動作なのでしょうか？？）</span>
+</dd><dt> <code>void setElementValue(in DOMElement element);</code> </dt><dd> 設定に保存された値に基づいて、渡された要素を初期化します。このメソッドは <code>onsyncfrompreference</code> イベントハンドラを呼びます。
+</dd><dt> <code>void updateElements();</code> </dt><dd> この設定を監視している全ての要素を更新します。
+</dd></dl>
+<h3 id="イベント"> イベント </h3>
+<dl><dt> <code>change</code> </dt><dd> 設定の値が変更された時、<code>onchange</code> または <code>change</code> イベントが &lt;preference&gt; 要素において発行されます。あなたは必要に応じてこれをハンドルできます。
+</dd></dl>
+<div class="moreinfo">  <p><strong><a href="/ja/docs/Preferences_System">設定システム</a>の資料:</strong></p>  <ul>    <li>簡単な紹介: <a href="/ja/docs/Preferences_System/Getting_Started">Getting Started</a> | <a href="/ja/docs/Preferences_System/Examples">サンプル</a> | <a href="/ja/docs/Preferences_System/Troubleshooting">トラブルシューティング</a></li>    <li>リファレンス: <code><a href="/ja/docs/Mozilla/Tech/XUL/prefwindow" title="prefwindow">prefwindow</a></code> | <code><a href="/ja/docs/Mozilla/Tech/XUL/prefpane" title="prefpane">prefpane</a></code> | <code><a href="/ja/docs/Mozilla/Tech/XUL/preferences" title="preferences">preferences</a></code> | <code><a href="/ja/docs/Mozilla/Tech/XUL/preference" title="preference">preference</a></code> | <a href="/ja/docs/Preferences_System/New_attributes">新しい属性</a></li>  </ul></div>

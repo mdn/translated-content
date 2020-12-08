@@ -1,0 +1,74 @@
+---
+title: FAQ et règles pour les accesskeys en XUL
+slug: Archive/Mozilla/XUL/FAQ_et_règles_pour_les_accesskeys_en_XUL
+tags:
+  - XUL
+translation_of: Archive/Mozilla/XUL/XUL_Accesskey_FAQ_and_Policies
+---
+<p>
+</p>
+<h3 id="Qu.27est-ce_qu.27une_accesskey_.3F" name="Qu.27est-ce_qu.27une_accesskey_.3F"> Qu'est-ce qu'une accesskey ? </h3>
+<p>Une accesskey ou touche mnémonique est une lettre soulignée dans une page Web, un menu ou un dialogue qui indique à l'utilisateur un raccourci clavier rapide simulant un clic sur cet élément. Par exemple, un bouton « Appliquer » peut avoir la lettre « A » soulignée. Sous Windows et UNIX, appuyer sur les touches &lt;kbd&gt;ALT+A&lt;/kbd&gt; est une façon pratique de pousser le bouton. Sous Macintosh, les accesskeys ne sont disponibles qu'en <a href="fr/HTML">HTML</a> et pas en <a href="fr/XUL">XUL</a>, et elles sont activées en utilisant la touche &lt;kbd&gt;CTRL+&lt;/kbd&gt; lettre au lieu de &lt;kbd&gt;ALT&lt;/kbd&gt;.
+</p>
+<h3 id="Comment_une_accesskey_est-elle_ajout.C3.A9e_.C3.A0_un_contr.C3.B4le_de_formulaire_.3F" name="Comment_une_accesskey_est-elle_ajout.C3.A9e_.C3.A0_un_contr.C3.B4le_de_formulaire_.3F"> Comment une accesskey est-elle ajoutée à un contrôle de formulaire ? </h3>
+<p>Une accesskey peut être ajoutée à un contrôle ou libellé de formulaire <a href="fr/HTML">HTML</a> ou <a href="fr/XUL">XUL</a> en utilisant l'attribut <code>accesskey</code>. Par exemple, voici comment on peut ajouter une accesskey à un bouton XUL :
+</p>
+<table style="margin: 0;"> <tbody><tr>
+<td><code>&lt;button label="Appliquer maintenant" accesskey="A" /&gt;</code>
+</td><td style="background-color: #DDF; border: blue outset; padding: 3px;"><span style="">A</span>ppliquer maintenant
+</td></tr> <tr>
+<td colspan="2">- ou -
+</td></tr> <tr>
+<td><code>&lt;button label="Appliquer maintenant" accesskey="a" /&gt;</code>
+</td><td style="background-color: #DDF; border: blue outset; padding: 3px;">Appliquer m<span style="">a</span>intenant
+</td></tr>
+</tbody></table>
+<p>Dans Mozilla, nous utilisons des DTD pour rajouter une autre couche d'abstraction à des fins d'internationalisation. L'exemple ci-dessus devrait donner :
+</p><p><code>&lt;button label="Appliquer maintenant" accesskey="&amp;applyInstantly.accesskey" /&gt; </code>
+</p><p>(Utilisez toujours <code>accesskey</code> au lieu de <code>akey</code>).
+</p><p>Si des méthodes comme <code>confirm()</code>, <code>confirmEx()</code> ou <code>prompt()</code> sont utilisées pour créer un dialogue, utilisez un « &amp; » devant le texte du bouton ou de la case à cocher fait du caractère qui suit une accesskey. Par exemple, <code>&amp;Maintenant</code> transforme « M » en accesskey soulignée. Pour insérer un véritable caractère esperluète, utilisez <code>&amp;&amp;</code>.
+</p>
+<h3 id="Comment_choisir_une_lettre_d.27accesskey_.3F" name="Comment_choisir_une_lettre_d.27accesskey_.3F"> Comment choisir une lettre d'accesskey ? </h3>
+<ul><li> L'attribut « accesskey » est sensible à la casse !
+<ul><li> Remarquez que la différence dans l'exemple des deux boutons ci-dessus est la spécification de la casse. La mise en œuvre des accesskeys de Mozilla essaiera d'abord de souligner une lettre de la même casse, mais s'il n'y en a pas il se rabattra sur la lettre de casse opposée. Nous préférons souligner la première lettre de l'un des mots, il est donc important d'être conscient ce cette particularité.
+</li></ul>
+</li><li> Évitez les doublons
+<ul><li> N'utilisez pas deux fois la même lettre d'accesskey dans la même fenêtre.
+</li><li> Soyez particulièrement attentifs aux menus déroulants dans la même fenêtre. Par exemple, dans le dialogue du Gestionnaire de marque-pages, n'utilisez pas F, E, A, T ou i (Fichier, Edition, Affichage, Tâches, Aide).
+</li><li> Aide demandée : il serait utile d'avoir un outil automatisé pour vérifier l'existence de doublons d'accesskeys et les accesskeys manquantes dans les fichiers XUL.
+</li></ul>
+</li><li> Rendez-les faciles à voir
+<ul><li> Utilisez les lettres au début du premier ou du second mot du libellé.
+</li><li> Utilisez un consonne ou une voyelle distinctive dans le libellé.
+</li><li> Utilisez les lettres de grande largeur, telles que w, m et les lettres majuscules.
+</li><li> Évitez les lettres avec des jambages, telles que p, g, q ou y.
+</li><li> Les lettres adjacentes aux lettres ayant des jambages.
+</li><li> Les lettres n'ayant qu'un pixel de largeur, comme i ou l.
+</li></ul>
+</li><li> Rendez-les faciles à mémoriser
+<ul><li> Faites en premier les menus importants pour qu'ils aient les meilleures accesskeys.
+</li><li> Regardez si un menu similaire a une accesskey quelque part ailleurs dans Mozilla et utilisez la même accesskey. Il y a aussi des accesskeys standard dans Windows, comme Propriétés.
+</li><li> Sinon, essayez la première lettre du premier mot du menu.
+</li><li> Puis la première lettre d'un autre mot.
+</li><li> Enfin, utilisez des lettres non muettes dans un mot d'action (faites cela quand vous avez choisi les accesskeys pour le reste du dialogue).
+</li></ul>
+</li><li> Éléments courants n'ayant pas d'accesskeys
+<ul><li> Boutons OK.
+</li><li> Boutons Annuler.
+</li><li> Boutons Fermer.
+</li><li> Libellés d'onglets.
+</li><li> Boutons des barres d'outils
+</li><li> Éléments d'arbres
+</li><li> Éléments de listes
+</li><li> En-têtes de colonnes
+</li></ul>
+</li></ul>
+<h3 id="Y_a-t-il_des_bogues_critiques_que_je_devrais_conna.C3.AEtre_.3F" name="Y_a-t-il_des_bogues_critiques_que_je_devrais_conna.C3.AEtre_.3F"> Y a-t-il des bogues critiques que je devrais connaître ? </h3>
+<ul><li> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=143065" title="FIXED: Scope of accesskey should be limited to a tab panel/-moz-deck">bug 143065</a> - La portée des accesskeys n'est pas limitée au panneau courant.
+</li></ul>
+<h3 id="O.C3.B9_les_accesskeys_doivent-elles_.C3.AAtre_ajout.C3.A9es_.3F" name="O.C3.B9_les_accesskeys_doivent-elles_.C3.AAtre_ajout.C3.A9es_.3F"> Où les accesskeys doivent-elles être ajoutées ? </h3>
+<p>Recherchez les dépendances du <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=129179" title="Meta bug: hook up XUL accesskeys throughout the UI">bug 129179</a> (le méta bogue de gestion des accesskeys XUL), ou recherchez les bogues avec « accesskey » ou « mnemonic » dans le résumé, ou recherchez les dialogues où il n'y a pas d'éléments avec des lettres soulignées.
+</p><p>Ouvrez les bogues sous le composant « Keyboard Navigation », et rendez le méta <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=129179" title="Meta bug: hook up XUL accesskeys throughout the UI">bug 129179</a> dépendant de ceux-ci.
+</p>
+<div class="noinclude">
+</div>

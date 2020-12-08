@@ -1,0 +1,54 @@
+---
+title: 概述
+slug: Mozilla/Add-ons/SDK/Tutorials/Annotator/Overview
+tags:
+  - addon sdk example
+  - annotator example
+  - 附加组件
+translation_of: Archive/Add-ons/Add-on_SDK/Tutorials/Annotator/Overview
+---
+<p>注释器使用内容脚本（content scripts）来构建用户界面，得到用户输入，并检查用户载入页面的DOM。</p>
+
+<p>同时，主要模块包括程序逻辑和调节不同SDK对象的交互。</p>
+
+<p>我们可以描述在主要模块和不同内容脚本的交互，像这样：</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6671/annotator-design.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+
+<h2 id="用户界面">用户界面</h2>
+
+<p>注释器的主要用户界面由一个控件和三个面板组成。</p>
+
+<ul>
+ <li><a href="/en-US/Add-ons/SDK/High-Level_APIs/widget">控件（widget）</a>用来选择打开或关闭注释器，显示所有已经储存的注释列表。</li>
+ <li><strong>注释编辑器（annotation-editor）</strong><a href="/en-US/Add-ons/SDK/High-Level_APIs/panel">面板</a>用来让用户输入注释。</li>
+ <li><strong>注释列表（annotation-list）</strong>面板用来显示保存的注释清单。</li>
+ <li><strong>注释（annotation）</strong>面板显示单条注释。</li>
+</ul>
+
+<p>除此之外，我们使用 <a href="/en-US/Add-ons/SDK/High-Level_APIs/notifications">notifications</a> 模块来告知用户附加组件的储存限额已满。</p>
+
+<h2 id="用DOM工作">用DOM工作</h2>
+
+<p>我们将使用 <a href="/en-US/Add-ons/SDK/High-Level_APIs/page-mod">page-mods</a> 来和用户打开的网页的DOM进行交互。</p>
+
+<ul>
+ <li>
+  <p><strong>选择器（selector）</strong>让用户选择一个元素来注释。它识别符合注释条件的页面元素，当鼠标在他们上方时高亮显示，并在用户点击高亮元素时通知主要的附加组件代码。</p>
+ </li>
+ <li>
+  <p><strong>匹配器（matcher）</strong>用来寻找被注释的元素：它初始化注释列表并网页中和注释相关连的元素。高亮网页上找到的关联元素，并高亮显示。当鼠标移动到已注释元素的上面，匹配器将通知显示注释面板的主要附加组件代码。</p>
+ </li>
+</ul>
+
+<h2 id="处理数据">处理数据</h2>
+
+<p>我们将使用<a href="/en-US/Add-ons/SDK/High-Level_APIs/simple-storage">simple-storage</a>模块来储存数据。</p>
+
+<p>由于我们将记录潜在的敏感信息，我们想阻止用户在隐私浏览模式下创建注释，最简单的方式是删除附加组件中“package.json“文件的<a href="/en-US/Add-ons/SDK/Tools/package_json#permissions">”private-browsing"键</a>。这样，附加组件就不能看见任何隐私浏览窗口，同时注释器的控件也将不再出现。</p>
+
+<h2 id="开始行动">开始行动</h2>
+
+<p>现在让我们来创建叫“注释器”的目录。Navigate to it and type <code>cfx init</code>.</p>
+
+<p>下一步，我们将<a href="/zh-CN/docs/Mozilla/Add-ons/SDK/Tutorials/Annotator/Implementing_the_widget">实现控件</a>。</p>

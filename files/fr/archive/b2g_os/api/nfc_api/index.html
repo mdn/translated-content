@@ -1,0 +1,118 @@
+---
+title: NFC API
+slug: Archive/B2G_OS/API/NFC_API
+tags:
+  - API
+  - Firefox OS
+  - NFC
+  - Non-standard
+  - Reference
+translation_of: Archive/B2G_OS/API/NFC_API
+---
+<section class="Quick_links" id="Quick_Links">
+<ol>
+ <li><strong><a href="/en-US/docs/Web/API/NFC_API">API NFC</a></strong></li>
+ <li data-default-state="open"><a href="#"><strong>Interfaces</strong></a>
+  <ol>
+   <li><a href="/en-US/docs/Web/API/MozNDEFRecord"><code>MozNDEFRecord</code></a></li>
+   <li><a href="/en-US/docs/Web/API/MozNFC"><code>MozNFC</code></a></li>
+   <li><a href="/en-US/docs/Web/API/MozNFCPeer"><code>MozNFCPeer</code></a></li>
+   <li><a href="/en-US/docs/Web/API/MozNFCTag"><code>MozNFCTag</code></a></li>
+  </ol>
+ </li>
+ <li data-default-state="open"><a href="#"><strong>Propriétés</strong></a>
+  <ol>
+   <li><a href="/en-US/docs/Web/API/Navigator/mozNfc"><code>Navigator.mozNfc</code></a></li>
+  </ol>
+ </li>
+</ol>
+</section>
+
+<div class="overheadIndicator nonStandard nonStandardHeader">
+<p><strong>Non-standard</strong><br>
+ Cette fonctionnalité ne fait pas partie des normes actuelles du W3C, mais elle est prise en charge sur la plate-forme Firefox OS. Bien que les implémentations puissent changer à l'avenir et qu'il ne soit pas largement pris en charge par les navigateurs, il convient pour une utilisation dans le code dédié aux applications Firefox OS.</p>
+</div>
+
+<div class="warning">
+<p style="text-align: center;">Cette API est disponible sur <a href="/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a> pour <a href="/en-US/docs/Mozilla/Firefox_OS/Security/Application_security#App_Types">les applications privilégiées ou certifiées</a> uniquement.</p>
+</div>
+
+<div class="summary">
+<p>L'API NFC (Near Field Communication) est utilisée pour échanger des données <span class="tlid-translation translation" lang="fr"><span title="">entre des appareils mobiles compatibles NFC ou des balises NFC en les touchant ensemble.</span></span></p>
+</div>
+
+<h2 id="Présentation">Présentation</h2>
+
+<p>Vous accédez à l'ensemble des fonctionnalités NFC via la propriété <a href="/en-US/docs/Web/API/Navigator/mozNfc" title="The documentation about this has not yet been written; please consider contributing!"><code>Navigator.mozNfc</code></a> , ce qui vous permet de retourner un objet <a href="/en-US/docs/Web/API/MozNFC" title="The documentation about this has not yet been written; please consider contributing!"><code>MozNFC</code></a> sur lequel vous pouvez effectuer d'autres opérations.</p>
+
+<h3 id="Permissions">Permissions</h3>
+
+<p>Les applications privilégiées qui souhaitent utiliser l'API NFC doivent demander l'autorisation NFC dans leur manifeste d'application. Firefox 2.2+ permet l'utilisation de la technologie NFC dans des applications privilégiées. Pour les versions anterieures, il n'est disponible que pour les applications certifiées.</p>
+
+<pre class="brush: json">"permission": {
+  "nfc":{}
+}</pre>
+
+<p>L'API NFC prend en charge trois modes d'opération définis dans le forum NFC.</p>
+
+<h4 id="Mode_LectureÉcriture">Mode Lecture/Écriture</h4>
+
+<p>Ce mode peut être utilisé pour lire / écrire des balises NFC via l'interface <a href="/en-US/docs/Web/API/MozNFCTag" title="The documentation about this has not yet been written; please consider contributing!"><code>MozNFCTag</code></a> à l'aide de <a href="/en-US/docs/Web/API/MozNDEFRecord" title="The documentation about this has not yet been written; please consider contributing!"><code>MozNDEFRecord</code></a>, ou pour communiquer avec la balise NFC en envoyant / recevant une commande APDU.</p>
+
+<h4 id="Mode_Pair_à_Pair">Mode Pair à Pair</h4>
+
+<p>Ce mode est utilisé pour partager du contenu avec un autre périphérique NFC via l'interface <a href="/en-US/docs/Web/API/MozNFCPeer" title="The documentation about this has not yet been written; please consider contributing!"><code>MozNFCPeer</code></a> .</p>
+
+<h4 id="Card_Emulation_Mode">Card Emulation Mode</h4>
+
+<p>Ce mode permet d'émuler le périphérique NFC en tant que balise NFC. Ce mode est principalement utilisé dans les paiements NFC.</p>
+
+<p>À partir de Firefox OS v2.2, seulement Secure Element-based Card Emulation est supporté.</p>
+
+<h3 id="Enregistrement_NDEF">Enregistrement NDEF</h3>
+
+<p>NDEF (NFC Data Exchange Format) est le format de données commun défini dans le forum NFC. En utilisant NDEF, une application peut oppérer sur <a href="/en-US/docs/Web/API/MozNFCTag" title="The documentation about this has not yet been written; please consider contributing!"><code>MozNFCTag</code></a> si la balise est compatible avec NFC Forum Tag, ou peut échanger des données avec <a href="/en-US/docs/Web/API/MozNFCPeer" title="The documentation about this has not yet been written; please consider contributing!"><code>MozNFCPeer</code></a>.</p>
+
+<p>En savoir plus : <a href="/en-US/docs/Web/API/MozNDEFRecord" title="The documentation about this has not yet been written; please consider contributing!"><code>MozNDEFRecord</code></a>.</p>
+
+<h3 id="Event_Dispatching">Event Dispatching </h3>
+
+<p>Pour les événements NFC Tag ou NFC Peer, la priorité est d’envoyer d’abord ces événements à l’application de premier plan (décidé par l’application Système). Si l'application de premier plan ne peut pas traiter l'événement, l'événement sera à nouveau redistribué vers l'application System. L'application System lancera les applications en appelant MozActivity.</p>
+
+<p>Vous pouvez trouver plus de détails sur l’utilisation de NFC dans Firefox OS dans <a href="/en-US/docs/Web/API/NFC_API/Using_the_NFC_API">Utiliser l'API NFC</a>.</p>
+
+<h2 id="Interfaces_NFC">Interfaces NFC</h2>
+
+<dl>
+ <dt><a href="/en-US/docs/Web/API/MozNDEFRecord" title="The documentation about this has not yet been written; please consider contributing!"><code>MozNDEFRecord</code></a></dt>
+ <dd>Structure NDEF (NFC Data Exchange Format) pour les données liées à NFC.</dd>
+ <dt><a href="/en-US/docs/Web/API/MozNFC" title="The documentation about this has not yet been written; please consider contributing!"><code>MozNFC</code></a></dt>
+ <dd>Objet Navigateur haut niveau pour les opérations NFC.</dd>
+ <dt><a href="/en-US/docs/Web/API/MozNFCTag" title="The documentation about this has not yet been written; please consider contributing!"><code>MozNFCTag</code></a></dt>
+ <dd>Objet NFC utilisé pour manipuler des données sur des balises.</dd>
+</dl>
+
+<dl>
+ <dt><a href="/en-US/docs/Web/API/MozNFCPeer" title="The documentation about this has not yet been written; please consider contributing!"><code>MozNFCPeer</code></a></dt>
+ <dd>Objet NFC utilisé pour manipuler des données sur des périphériques.</dd>
+</dl>
+
+<h2 id="Caractéristiques">Caractéristiques</h2>
+
+<p>L'implémentation NFC dans Gecko suit les <a href="http://members.nfc-forum.org/specs/">caracteristiques du Forum NFC</a>.</p>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilité</h2>
+
+<p>Supporté dans Firefox OS 1.0.<br>
+ Disponible dans les applications privilégiées à partir de Firefox OS 2.2.</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/NFC_API/Using_the_NFC_API">Utiliser l'API NFC</a></li>
+ <li><a href="/en-US/docs/Web/API/NFC_API/Using_the_NFC_emulator">Utiliser l'émulateur NFC</a></li>
+ <li><a href="http://developer.nokia.com/community/wiki/Inside_NFC:_Understanding_NDEF_message">Comprendre la structure des messages NDEF</a></li>
+ <li><a href="http://www.adafruit.com/datasheets/Introduction_to_NFC_v1_0_en.pdf">Introduction à NFC</a> (référence assez longue, contenant les termes généraux de la NFC et certaines spécificités de la plate-forme Nokia.)</li>
+</ul>
+
+<section id="Quick_Links"></section>

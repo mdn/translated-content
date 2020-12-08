@@ -1,0 +1,147 @@
+---
+title: ダイアログの作成
+slug: Archive/Mozilla/XUL/Tutorial/Creating_Dialogs
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Creating_Dialogs
+---
+<div><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Features_of_a_Window" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Open_and_Save_Dialogs">次のページ  »</a></p>
+</div></div>
+
+<p>XUL アプリケーションでは、しばしばダイアログを表示する必要があります。 このセクションでは、ダイアログの作り方について説明します。</p>
+
+<h3 id=".E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.82.92.E4.BD.9C.E6.88.90.E3.81.99.E3.82.8B" name=".E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.82.92.E4.BD.9C.E6.88.90.E3.81.99.E3.82.8B">ダイアログを作成する</h3>
+
+<p>ウィンドウを開くのに使われる <code><a href="ja/DOM/window.open">open()</a></code> 関数と関連する関数に、<code><a href="ja/DOM/window.openDialog">openDialog()</a></code> 関数があります。 <code>open()</code> と比較すると、<code>openDialog()</code> 関数にはいくつかの相違点があります。 まず、ウィンドウではなくダイアログを表示する点で、 これは、この関数が利用者に対して何か問い合わせを行うために使用されることを意味しています。 また、これ以外にも利用者に対して行われる動作や表示の方法に微妙な違いがあるかもしれません。 これらの違いは、アプリケーションを実行するプラットフォームに強く依存することになります。</p>
+
+<p>加えて、<code>openDialog()</code> 関数は、最初の 3 つ以外にも追加の引数を取ることができます。 これらの引数は、新しいダイアログに渡されて、作成された <code>window</code> の <code>arguments</code> プロパティに配列として保存されます。 <code>openDialog()</code> 関数には、必要であればいくつでも引数を渡すことができます。 この方法は、ダイアログのフィールドにデフォルト値を渡すために利用すると便利です。</p>
+
+<pre>var somefile=document.getElementById('enterfile').value;
+
+window.openDialog("chrome://findfile/content/showdetails.xul","showmore",
+                  "chrome",somefile);
+</pre>
+
+<p>この例は、「showdetails.xul」ダイアログを表示します。 このダイアログには、<code>enterfile</code> という ID をもつ要素の値から得られた <code>somefile</code> という引数が 1 つ渡されます。 また、ダイアログで使われているスクリプトからは、<code>window</code> の <code>arguments</code> プロパティを使用して引数を参照することが可能です。 以下に例を示します。</p>
+
+<pre>var fl = window.arguments[0];
+
+document.getElementById('thefile').value = fl;
+</pre>
+
+<p>この方法により、新しいウィンドウに効率的に値を渡すことができます。 また、開いたウィンドウから元のウィンドウに値を返すためには 2 つの方法があります。 1 つ目は、ダイアログから、開き元のウィンドウを保持している <code><a href="ja/DOM/window.opener">window.opener</a></code> プロパティにアクセスする方法です。 2 つ目は、ダイアログ作成時に、関数またはオブジェクトを引数の 1 つとして渡しておき、 開いたダイアログ側でその関数を呼び出すか、オブジェクトを変更する方法です。</p>
+
+<div class="note"><strong>注意</strong>: <code>openDialog()</code> の呼び出しには、UniversalBrowserWrite の<span style="border-bottom: 1px dashed green;" title="privilege">権限</span>が必要なため、リモートから読み込まれた場合は動作しません。この場合は、代わりに <code>window.open()</code> を使用する必要があります。</div>
+
+<h3 id=".E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E8.A6.81.E7.B4.A0" name=".E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E8.A6.81.E7.B4.A0">ダイアログ要素</h3>
+
+<p>ダイアログを作るときには、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> 要素の位置に、代わりに <code><code><a href="/ja/docs/Mozilla/Tech/XUL/dialog" title="dialog">dialog</a></code></code> 要素を使うことが推奨されます。 この要素は、ダイアログの下部に置く、OK や Cancel などの 4 つのボタンを作成するために役に立つ機能を提供します。 このとき、明示的に XUL の <code><code><a href="/ja/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code> 要素を置く必要はありませんが、 利用者がボタンを押したときに行うべき処理のためのコードは用意する必要があります。 このメカニズムは、プラットフォームによってボタンの表示順序が異なることに対応するために必要になります。</p>
+
+<h4 id=".E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AE.E4.BE.8B" name=".E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AE.E4.BE.8B">ダイアログの例</h4>
+
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_dialogs_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dialogs_1.xul">表示</a></p>
+
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?&gt;
+
+&lt;dialog id="donothing" title="Dialog example"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        buttons="accept,cancel"
+        ondialogaccept="return doOK();"
+        ondialogcancel="return doCancel();"&gt;
+
+&lt;script&gt;
+function doOK(){
+  alert("You pressed OK!");
+  return true;
+}
+
+function doCancel(){
+  alert("You pressed Cancel!");
+  return true;
+}
+&lt;/script&gt;
+
+&lt;description value="Select a button"/&gt;
+
+&lt;/dialog&gt;
+</pre>
+
+<p>ダイアログには、必要ならば任意の要素を置くことが可能です。 <code><code><a href="/ja/docs/Mozilla/Tech/XUL/dialog" title="dialog">dialog</a></code></code> 要素には、ウィンドウには無い、追加の属性がいくつかあります。 まず、<code><code id="a-buttons"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/buttons">buttons</a></code></code> 属性では、ダイアログにどのボタンを表示するかを指定します。 ここには、以下の値をコンマで区切って指定します。</p>
+
+<ul>
+ <li><code>accept</code> - OK ボタン</li>
+ <li><code>cancel</code> - キャンセル ボタン</li>
+ <li><code>help</code> - ヘルプ ボタン</li>
+ <li><code>disclosure</code> - <span style="border-bottom: 1px dashed green;" title="disclosure">詳細</span>ボタン。さらに詳細な情報を表示ために使用します。</li>
+</ul>
+
+<p>これらのボタンが押されたときに実行されるコードは、 <code><code id="a-ondialogaccept"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/ondialogaccept">ondialogaccept</a></code></code>、<code><code id="a-ondialogcancel"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/ondialogcancel">ondialogcancel</a></code></code>、<code><code id="a-ondialoghelp"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/ondialoghelp">ondialoghelp</a></code></code>、<code><code id="a-ondialogdisclosure"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/ondialogdisclosure">ondialogdisclosure</a></code></code> の各属性に設定することが可能です。 先述の例を試した場合、OK ボタンを押したときには <code>doOK</code> 関数が呼ばれ、 Cancel ボタンを押したときには <code>doCancel</code> 関数が呼ばれることがわかるはずです。</p>
+
+<p>これら 2 つの関数 <code>doOK()</code> と <code>doCancel()</code> は、 ダイアログを閉じることを指示するために <code>true</code> を返しています。 また、<code>false</code> を返した場合は、ダイアログは開いたままになります。 これは、ダイアログの入力欄に不正な値が入力されていたような場合に使うことができます。</p>
+
+<p>ダイアログが持っている、それ以外の有用な属性を以下に示します。</p>
+
+<ul>
+ <li><code><code id="a-buttonlabelaccept"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/buttonlabelaccept">buttonlabelaccept</a></code></code> - accept ボタンに表示するラベル (例: Save) を指定します。</li>
+ <li><code><code id="a-buttonaccesskeyaccept"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/buttonaccesskeyaccept">buttonaccesskeyaccept</a></code></code> - accept ボタンに使用するアクセスキー (例:S) を指定します。</li>
+ <li><code><code id="a-defaultButton"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/defaultButton">defaultButton</a></code></code> - Enter キーが押されたときに<span style="border-bottom: 1px dashed green;" title="activate">活性化</span>されるボタンを指定します。</li>
+</ul>
+
+<div class="note"><strong>注意:</strong>ダイアログがリモートサイトから読み込まれる場合には、ボタンの label 属性が必須になってしまいます。このセクションの例を実行した場合も該当するため、ボタンのラベルが表示されません。この件は <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=224996" title="&lt;dialog> buttons have no label in remote XUL">バグ 224996</a> で扱っています。</div>
+
+<h4 id=".E8.BF.BD.E5.8A.A0.E3.81.AE.E6.A9.9F.E8.83.BD.E3.82.92.E5.88.A9.E7.94.A8.E3.81.97.E3.81.9F.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AE.E4.BE.8B" name=".E8.BF.BD.E5.8A.A0.E3.81.AE.E6.A9.9F.E8.83.BD.E3.82.92.E5.88.A9.E7.94.A8.E3.81.97.E3.81.9F.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AE.E4.BE.8B">追加の機能を利用したダイアログの例</h4>
+
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?&gt;
+
+&lt;dialog id="myDialog" title="My Dialog"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        onload="window.sizeToContent();"
+        buttons="accept,cancel"
+        buttonlabelaccept="Set Favourite"
+        buttonaccesskeyaccept="S"
+        ondialogaccept="return doSave();"
+        buttonlabelcancel="Cancel"
+        buttonaccesskeycancel="n"
+        ondialogcancel="return doCancel();"&gt;
+
+&lt;script&gt;
+function doSave(){
+ //doSomething()
+ return true;
+}
+function doCancel(){
+  return true;
+}
+&lt;/script&gt;
+
+&lt;dialogheader title="My dialog" description="Example dialog"/&gt;
+&lt;groupbox flex="1"&gt;
+  &lt;caption label="Select favourite fruit"/&gt;
+  &lt;radio id="orange" label="Oranges because they are fruity"/&gt;
+  &lt;radio id="violet" selected="true" label="Strawberries because of colour"/&gt;
+  &lt;radio id="yellow" label="Bananna because it pre packaged"/&gt;
+&lt;/groupbox&gt;
+
+&lt;/dialog&gt;
+</pre>
+
+<p>ダイアログのボタン要素には、以下の JavaScript によってアクセス可能です。</p>
+
+<pre>// the accept button
+var acceptButt = document.documentElement.getButton("accept")
+</pre>
+
+<h4 id=".E3.81.95.E3.82.89.E3.81.AA.E3.82.8B.E4.BE.8B" name=".E3.81.95.E3.82.89.E3.81.AA.E3.82.8B.E4.BE.8B">さらなる例</h4>
+
+<p>これ以外にも <a href="ja/Code_snippets">Code snippets</a> の <a href="ja/Code_snippets/Dialogs_and_Prompts">Dialogs and prompts</a> にいくつかの例があります。</p>
+
+<p>次のセクションでは、ファイルダイアログを開く方法について見ていきます。</p>
+
+<div><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Features_of_a_Window" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Open_and_Save_Dialogs">次のページ  »</a></p>
+</div></div>

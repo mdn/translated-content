@@ -1,0 +1,103 @@
+---
+title: addFile
+slug: >-
+  Archive/Mozilla/XPInstall/Référence_de_l_API_XPInstall/Objet_Install/Méthodes/addFile
+translation_of: Archive/Mozilla/XPInstall/Reference/Install_Object/Methods/addFile
+---
+<p> </p>
+<h3 id="addFile" name="addFile">addFile</h3>
+<p>Extrait un sous-composant unique dans un répertoire temporaire. Met en file d'attente le sous-composant pour son ajout dans la
+ <i>
+  Client Version Registry</i>
+ et son installation dans le répertoire final.</p>
+<h4 id="M.C3.A9thode_de" name="M.C3.A9thode_de">Méthode de</h4>
+<p>Objet <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install">Install</a></p>
+<h4 id="Syntaxe" name="Syntaxe">Syntaxe</h4>
+<pre class="eval">public int addFile (
+   Chaîne registryName,
+   InstallVersion version,
+   Chaîne xpiSourcePath,
+   Objet localDirSpec,
+   Chaîne relativeLocalPath,
+   Booléen forceUpdate);
+
+public int addFile (
+   Chaîne registryName,
+   Chaîne version,
+   Chaîne xpiSourcePath,
+   Objet localDirSpec,
+   Chaîne relativeLocalPath,
+   Booléen forceUpdate);
+
+public int addFile (
+   Chaîne xpiSourcePath);
+
+public int addFile (
+   Chaîne registryName,
+   Chaîne xpiSourcePath,
+   Objet localDirSpec,
+   Chaîne relativeLocalPath);
+
+public int addFile (
+   Chaîne registryName,
+   Chaîne version,
+   Chaîne xpiSourcePath,
+   Objet localDirSpec,
+   Chaîne relativeLocalPath);
+</pre>
+<h4 id="Param.C3.A8tres" name="Param.C3.A8tres">Paramètres</h4>
+<p>La méthode <code>addFile</code> a les paramètres suivants :</p>
+<dl>
+ <dt>
+  <code>registryName</code></dt>
+ <dd>
+  Le chemin dans la
+  <i>
+   Client Version Registry</i>
+  concernant le fichier. Ce paramètre peut être un chemin absolu (commençant par /), tel que <code>/royalairways/RoyalSW/executable</code> ou un chemin relatif (ne commençant pas par /), tel que <code>executable</code>. Généralement, les chemins absolus ne sont utilisés que pour composants partagés, ou les composants provenant d'autres éditeurs, tel que <code>/Microsoft/shared/msvcrt40.dll</code>. Généralement, les chemins relatifs le sont par rapport au chemin principal spécifié dans la méthode <code>initInstall</code>. Ce paramètre peut également être vide, dans ce cas le paramètre <code>xpiSourcePath</code> est utilisé comme un chemin relatif. Remarquez que le chemin de registre n'est pas l'emplacement du logiciel sur l'ordinateur, il s'agit de l'emplacement des informations concernant le logiciel dans la
+  <i>
+   Client Version Registry</i>
+  .</dd>
+ <dt>
+  <code>version</code></dt>
+ <dd>
+  Un objet <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_InstallVersion">InstallVersion</a> ou une <code>Chaîne</code> de 1 à 4 valeurs entières délimitées par des points, telle que <code>1.17.1999.1517</code>. Pour les variantes de cette méthode sans argument de version, la valeur de <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/initInstall">initInstall</a> sera utilisée.</dd>
+ <dt>
+  <code>xpiSourcePath</code></dt>
+ <dd>
+  Une chaîne spécifiant l'emplacement du fichier dans l'archive &lt;tt&gt;xpi&lt;/tt&gt;.</dd>
+ <dt>
+  <code>localDirSpec</code></dt>
+ <dd>
+  Un objet représentant un répertoire. Le fichier est installé dans ce répertoire sur la machine de l'utilisateur. Vous pouvez créer cet objet en passant une chaîne représentant le répertoire à la méthode <code>getFolder</code>.</dd>
+ <dt>
+  <code>relativeLocalPath</code></dt>
+ <dd>
+  Un chemin relatif au paramètre <code>localDirSpec</code>. Le fichier est installé dans ce répertoire sur la machine de l'utilisateur. Vous devez toujours utiliser des barres obliques (/) dans ce chemin, sans considération pour les conventions d'écritures du système d'exploitation. Si ce paramètre n'est pas renseigné ou <code>NULL</code>, <code>xpiSourcePath</code> est utilisé.</dd>
+ <dt>
+  <code>flags</code></dt>
+ <dd>
+  Un champ optionnel, réservé pour un usage futur. Passe 0 comme valeur par défaut.</dd>
+</dl>
+<h4 id="Retour" name="Retour">Retour</h4>
+<p>Un code d'erreur entier. Pour la liste des valeurs possibles, voir <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Codes_retourn%c3%a9s">Codes retournés</a>.</p>
+<h4 id="Description" name="Description">Description</h4>
+<p>La méthode <code>addFile</code> met le fichier dans un répertoire temporaire. Pour le déplacer, ainsi que tous les autres fichiers, vers son emplacement final, appelez la méthode <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/performInstall">performInstall</a> après avoir ajouté avec succès tous les fichiers.</p>
+<div class="note">
+ Note : Si vous installez des fichiers binaires sur un Macintosh, soyez attentif à ce que le format binaire de ces fichiers doit être <code>AppleSingle</code> pour que les informations de ressources soient installées proprement. Certains logiciels de transfert de fichiers convertissent les binaires Apple dans ce format si vous les transférez d'un Macintosh vers une machine Unix/Windows avant de compresser ces fichiers sur la machine de destination.</div>
+<h4 id="Exemple" name="Exemple">Exemple</h4>
+<pre class="eval">var xpiSrc = "file.txt";
+initInstall("Ajout d'un fichier",
+   "addFile",
+   "1.0.1.7",
+   1);
+f = getFolder("Program");
+setPackageFolder(f);
+addFile(xpiSrc);
+if (0 == getLastError())
+   performInstall();
+else
+   cancelInstall();&lt;/pre&gt;
+</pre>
+<p><span class="comment">Interwiki Languages Links</span></p>
+<p>{{ languages( { "en": "en/XPInstall_API_Reference/Install_Object/Methods/addFile" } ) }}</p>

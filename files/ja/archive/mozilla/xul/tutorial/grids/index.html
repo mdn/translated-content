@@ -1,0 +1,154 @@
+---
+title: グリッド
+slug: Archive/Mozilla/XUL/Tutorial/Grids
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Grids
+---
+<div>
+  <div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/Tutorial/Tabboxes" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/Tutorial/Content_Panels">次のページ  »</a></p>
+</div></div>
+<p>XUL には、表組み用のグリッドを作成するため、いくつかの要素が用意されています。</p>
+<h2 id="XUL_Tabular_Layout" name="XUL_Tabular_Layout">XUL における表組みレイアウト</h2>
+<p>XUL では、<code><a href="/ja/docs/Mozilla/Tech/XUL/grid" title="grid">grid</a></code> 要素と、いくつかの関連要素を使用することで、要素を格子状に配置することが可能です。この要素は、HTML の <code>table</code> タグに、いくつかの点で類似していますが、全く同じではありません。例えば、グリッドは、単体では何も表示されず、いくつかの行と列からなる表形式に要素を配置するためだけに使用されます。</p>
+<p>グリッドは、テーブルと同じように、要素をいくつかの行の中に並べて保持します。 <code><a href="/ja/docs/Mozilla/Tech/XUL/grid" title="grid">grid</a></code> 内には、2 つのことを宣言します。 1 つは <code><a href="/ja/docs/Mozilla/Tech/XUL/columns" title="columns">columns</a></code> による列に使用される情報で、もう 1 つは <code><a href="/ja/docs/Mozilla/Tech/XUL/rows" title="rows">rows</a></code> による行に使用される情報です。グリッドでも、HTML のテーブルと同じように、行の中に、ラベルやボタンなどのコンテントを置いていくことになります。なお、グリッドでもコンテントは、行に置く方が一般的ではありますが、 <code><a href="/ja/docs/Mozilla/Tech/XUL/rows" title="rows">rows</a></code> に置けば行を基本に、<code><a href="/ja/docs/Mozilla/Tech/XUL/columns" title="columns">columns</a></code> に置けば列を基本にして構成することが可能であるため、どちらに置いても構いません。 <code><a href="/ja/docs/Mozilla/Tech/XUL/rows" title="rows">rows</a></code> の方にコンテントを置いて使用する場合であっても、<code><a href="/ja/docs/Mozilla/Tech/XUL/columns" title="columns">columns</a></code> の方も、グリッド内の列のサイズや外観を指定するために使用します。あるいは、コンテントを <code><a href="/ja/docs/Mozilla/Tech/XUL/columns" title="columns">columns</a></code> に置いて、<code><a href="/ja/docs/Mozilla/Tech/XUL/rows" title="rows">rows</a></code> を外観の指定に使うことも可能です。まずは、行を使って要素を構成する場合を見ていきます。</p>
+<h3 id="Declaring_a_grid" name="Declaring_a_grid">グリッドを宣言する</h3>
+<p>一連の行を宣言するために、<code><a href="/ja/docs/Mozilla/Tech/XUL/rows" title="rows">rows</a></code> タグを使います。 これは <code><a href="/ja/docs/Mozilla/Tech/XUL/grid" title="grid">grid</a></code> の子要素でなければなりません。 この中には、個々の行として使用する <code><a href="/ja/docs/Mozilla/Tech/XUL/row" title="row">row</a></code> 要素を追加します。 <code><a href="/ja/docs/Mozilla/Tech/XUL/row" title="row">row</a></code> 要素の中には、その行に置くべきコンテントを配置します。</p>
+<p>同じように、列は <code><a href="/ja/docs/Mozilla/Tech/XUL/columns" title="columns">columns</a></code> 要素を使って宣言されます。 これも <code><a href="/ja/docs/Mozilla/Tech/XUL/grid" title="grid">grid</a></code> の子要素として置かなければなりません。 その中に、個々の <code><a href="/ja/docs/Mozilla/Tech/XUL/column" title="column">column</a></code> 要素を置きます。 これはグリッド内のそれぞれの列に対応します。</p>
+<p>理解を容易にするために、以下に例を示して説明します。</p>
+<p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_1.xul">表示</a></p>
+<div class="float-right">
+  <img height="88" src="/@api/deki/files/703/=Grids1.png" width="167"></div>
+<pre class="brush:xml">&lt;grid flex="1"&gt;
+  &lt;columns&gt;
+    &lt;column flex="2" /&gt;
+    &lt;column flex="1" /&gt;
+  &lt;/columns&gt;
+
+  &lt;rows&gt;
+    &lt;row&gt;
+      &lt;button label="Rabbit" /&gt;
+      &lt;button label="Elephant" /&gt;
+    &lt;/row&gt;
+    &lt;row&gt;
+      &lt;button label="Koala" /&gt;
+      &lt;button label="Gorilla" /&gt;
+    &lt;/row&gt;
+  &lt;/rows&gt;
+&lt;/grid&gt;
+</pre>
+<p>2 つの行と 2 つの列がグリッドに加えられています。各列は <code><a href="/ja/docs/Mozilla/Tech/XUL/column" title="column">column</a></code> タグを使って宣言されています。また、各列は <code id="a-flex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code> 属性を与えられています。 各行には 2 つの要素があり、どちらもボタンです。 それぞれの <code><a href="/ja/docs/Mozilla/Tech/XUL/row" title="row">row</a></code> 要素の最初の要素は、グリッドの最初の列に置かれ、 各行の 2 番目の要素は、2 番目の列に配置されます。 セルを宣言するための要素は必要ないということに注意して下さい。 (HTML の <code>td</code> 要素に対応するものはありません)。 そのため、セルの内容は、直接 <code><a href="/ja/docs/Mozilla/Tech/XUL/row" title="row">row</a></code> 要素の中に置きます。</p>
+<h3 id="Grid_with_more_elements" name="Grid_with_more_elements">より多くの要素を含んだグリッド</h3>
+<p>もちろん <code><a href="/ja/docs/Mozilla/Tech/XUL/button" title="button">button</a></code> 要素だけでなく、どんな要素でも使うことができます。 特定のセルに複数の要素を入れたい場合は、<code><a href="/ja/docs/Mozilla/Tech/XUL/hbox" title="hbox">hbox</a></code> か、別のボックス要素を、入れ子にして使うことが可能です。 水平ボックス (<code>hbox</code>) は 1 つの要素ですが、必要ならその中にはいくつでも要素を入れることができます。 例を示します。</p>
+<p><span id="%E4%BE%8B_2"><a id="%E4%BE%8B_2"></a><strong>例 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_2.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_2.xul">表示</a></p>
+<pre class="brush:xml">&lt;grid flex="1"&gt;
+  &lt;columns&gt;
+    &lt;column /&gt;
+    &lt;column flex="1" /&gt;
+  &lt;/columns&gt;
+
+  &lt;rows&gt;
+    &lt;row&gt;
+      &lt;label control="doctitle" value="Document Title:" /&gt;
+      &lt;textbox id="doctitle" flex="1" /&gt;
+    &lt;/row&gt;
+    &lt;row&gt;
+      &lt;label control="docpath" value="Path:" /&gt;
+      &lt;hbox flex="1"&gt;
+        &lt;textbox id="docpath" flex="1" /&gt;
+        &lt;button label="Browse..." /&gt;
+      &lt;/hbox&gt;
+    &lt;/row&gt;
+  &lt;/rows&gt;
+&lt;/grid&gt;
+</pre>
+<div class="float-right">
+  <img height="85" src="/@api/deki/files/704/=Grids2.png" width="307"></div>
+<p>画像から、ラベルが置かれている最初の要素の列には、各行に 1 つの要素しかないという点を確認してください。 2 列目は 2 行目にボックスが含まれており、テキスト入力欄 (<code><a href="/ja/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code>) と、ボタン (<code><a href="/ja/docs/Mozilla/Tech/XUL/button" title="button">button</a></code>) の 2 つの要素が順番に配置されています。 1 つのセルの中に、ボックスを入れ子に追加していくことが可能です。別のグリッドを入れ子に加えても構いません。</p>
+<p>この例で表示されるウィンドウをリサイズすると、テキスト入力欄は伸縮するのに、他の要素は伸縮しないことが分かります。これは、テキスト入力欄と 2 つめの列に <code id="a-flex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code> 属性が追加されているためです。ラベルのサイズは変更する必要がないため、最初の列は伸縮可能である必要はありません。</p>
+<p>列の幅の初期値は、列の中で最も大きい要素によって決められます。同様に、行の高さも、行の中の要素の大きさによって決まります。また、<code id="a-minwidth"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/minwidth">minwidth</a></code> や、<code id="a-maxwidth"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/maxwidth">maxwidth</a></code> といった属性や、<a href="/ja/docs/Web/CSS/min-width" title="min-width は、要素の最小幅を指定する CSS プロパティです。width プロパティの 使用値 が、min-width で指定した値を下回らないようにします。"><code>min-width</code></a> や <a href="/ja/docs/Web/CSS/max-width" title="max-width は要素に与えられる幅の上限を指定する為に用いる CSS プロパティです。このプロパティは、 width プロパティの値が max-width で指定された値より大きくなることを防ぎます。"><code>max-width</code></a> などの CSS プロパティで、サイズの定義を付け加えることも可能です。</p>
+<h3 id="Column_based_organization" name="Column_based_organization">列に基づくグリッド</h3>
+<p>また、行の代わりに <code><a href="/ja/docs/Mozilla/Tech/XUL/column" title="column">column</a></code> 要素の内部に要素を置くことも可能です。以下の例では、<code><a href="/ja/docs/Mozilla/Tech/XUL/rows" title="rows">rows</a></code> は行数を指定するためだけに宣言されています。</p>
+<p><span id="%E4%BE%8B_3"><a id="%E4%BE%8B_3"></a><strong>例 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_3.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_3.xul">表示</a></p>
+<pre class="brush:xml">&lt;grid&gt;
+  &lt;rows&gt;
+    &lt;row/&gt;
+    &lt;row/&gt;
+    &lt;row/&gt;
+  &lt;/rows&gt;
+
+  &lt;columns&gt;
+    &lt;column&gt;
+      &lt;label control="first" value="First Name:" /&gt;
+      &lt;label control="middle" value="Middle Name:" /&gt;
+      &lt;label control="last" value="Last Name:" /&gt;
+    &lt;/column&gt;
+    &lt;column&gt;
+      &lt;textbox id="first" /&gt;
+      &lt;textbox id="middle" /&gt;
+      &lt;textbox id="last" /&gt;
+    &lt;/column&gt;
+  &lt;/columns&gt;
+
+&lt;/grid&gt;
+</pre>
+<p>このグリッドには、3 つの行と 2 つの列があります。 <code><a href="/ja/docs/Mozilla/Tech/XUL/row" title="row">row</a></code> 要素は、行数を指定するための、単なる<span style="border-bottom: 1px dashed green;" title="placeholders">数あわせ</span>として置かれています。 <code><a href="/ja/docs/Mozilla/Tech/XUL/row" title="row">row</a></code> に <code id="a-flex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code> 属性を追加することで、その行を伸縮可能に設定することが可能です。コンテントは、各 <code><a href="/ja/docs/Mozilla/Tech/XUL/column" title="column">column</a></code> の中に置かれています。 各 <code><a href="/ja/docs/Mozilla/Tech/XUL/column" title="column">column</a></code> 要素内の最初の要素は最初の行に置かれ、2 番目の要素は 2 行目に、3 番目の要素は 3 行目に置かれます。</p>
+<p>コンテントを <code><a href="/ja/docs/Mozilla/Tech/XUL/columns" title="columns">columns</a></code> と <code><a href="/ja/docs/Mozilla/Tech/XUL/rows" title="rows">rows</a></code> の両方に置いた場合、グリッド内の正しい値に配置されますが、互いに重なり合ってしまいます。これによって、スタック (<code><a href="/ja/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code>) 要素のグリッドとよく似た効果を得ることができます。</p>
+<p><code><a href="/ja/docs/Mozilla/Tech/XUL/grid" title="grid">grid</a></code> 内の要素の順序によって、どの要素が前面に表示され、どの要素が背面に配置されるかが決まります。 <code><a href="/ja/docs/Mozilla/Tech/XUL/rows" title="rows">rows</a></code> 要素が <code><a href="/ja/docs/Mozilla/Tech/XUL/columns" title="columns">columns</a></code> 要素の後に置かれると、<code><a href="/ja/docs/Mozilla/Tech/XUL/rows" title="rows">rows</a></code> の方のコンテントが前面に表示されます。 <code><a href="/ja/docs/Mozilla/Tech/XUL/columns" title="columns">columns</a></code> が <code><a href="/ja/docs/Mozilla/Tech/XUL/rows" title="rows">rows</a></code> 要素の後に置かれると、<code><a href="/ja/docs/Mozilla/Tech/XUL/columns" title="columns">columns</a></code> 内の方のコンテントが前面に表示されます。 スタックの場合と同様に、マウスボタンやキー入力などのイベントは、前面の要素だけに送られます。 このために、上の例では、<code><a href="/ja/docs/Mozilla/Tech/XUL/columns" title="columns">columns</a></code> が <code><a href="/ja/docs/Mozilla/Tech/XUL/rows" title="rows">rows</a></code> の後に宣言されています。 <code><a href="/ja/docs/Mozilla/Tech/XUL/columns" title="columns">columns</a></code> が最初に置かれた場合、<code><a href="/ja/docs/Mozilla/Tech/XUL/rows" title="rows">rows</a></code> の方がイベントを捕らえてしまい、欄に入力できなくなるはずです。</p>
+<h3 id="Flexibility_of_grids" name="Flexibility_of_grids">グリッドの伸縮性</h3>
+<p>グリッドが、ボックスを入れ子に組み合わせていく方法と比べた場合に持つ利点の 1 つとして、水平・垂直両方向に<span style="border-bottom: 1px dashed green;" title="flexible">伸縮可能</span>なセルが作れるということがあります。これは、<code><a href="/ja/docs/Mozilla/Tech/XUL/row" title="row">row</a></code> と <code><a href="/ja/docs/Mozilla/Tech/XUL/column" title="column">column</a></code> の両方に <code id="a-flex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code> 属性を設定することにより可能です。以下に例を示します。</p>
+<p><span id="%E4%BE%8B_4"><a id="%E4%BE%8B_4"></a><strong>例 4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_4.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_4.xul">表示</a></p>
+<pre class="brush:xml">&lt;grid flex="1"&gt;
+ &lt;columns&gt;
+  &lt;column flex="5" /&gt;
+  &lt;column /&gt;
+  &lt;column /&gt;
+ &lt;/columns&gt;
+ &lt;rows&gt;
+  &lt;row flex="10"&gt;
+    &lt;button label="Cherry" /&gt;
+    &lt;button label="Lemon" /&gt;
+    &lt;button label="Grape" /&gt;
+  &lt;/row&gt;
+  &lt;row flex="1"&gt;
+    &lt;button label="Strawberry" /&gt;
+    &lt;button label="Raspberry" /&gt;
+    &lt;button label="Peach" /&gt;
+  &lt;/row&gt;
+ &lt;/rows&gt;
+&lt;/grid&gt;
+</pre>
+<p>1 列目及び、全ての行に伸縮可能を設定してあります。このため、1 列目のセルはすべて水平方向に伸縮します。さらに、全ての <code><a href="/ja/docs/Mozilla/Tech/XUL/row" title="row">row</a></code> が伸縮可能であるため、全てのセルは垂直方向にも伸縮します。 ただし、1 行目の方が、flex の値が大きいため、より大きな割合で伸縮します。</p>
+<p>第 1 行、1 列目のセル (Cherry ボタン) は、水平方向で 5 の度合、垂直方向で 10 の度合で伸縮可能です。隣のセル (Lemon) は、垂直方向にだけ伸縮します。</p>
+<p><code>flex</code> 属性は <code><a href="/ja/docs/Mozilla/Tech/XUL/grid" title="grid">grid</a></code> 要素にも加えることができます。これによってグリッド全体が伸縮可能になります。この指定をしない場合、グリッドは一方向にしか伸びません。</p>
+<h2 id="Column_Spanning" name="Column_Spanning">列のスパン</h2>
+<p>グリッドでは、セルを指定された列数や行数分だけスパンするように配置する手段は存在しません。 しかしながら、グリッドの全ての列をスパンした行か、全ての行をスパンした列を作ることは可能です。 列を全てスパンした行を作る場合、コンテントを <code><a href="/ja/docs/Mozilla/Tech/XUL/row" title="row">row</a></code> 要素ではなく、<code><a href="/ja/docs/Mozilla/Tech/XUL/rows" title="rows">rows</a></code> 要素の中に直接置くようにするだけです。 その中に、いくつかの要素を配置したい場合は、例えばボックス型の要素を使用して、置きたい要素を配置することで可能になります。 以下に、簡単な例を示します。</p>
+<p><span id="%E4%BE%8B_5"><a id="%E4%BE%8B_5"></a><strong>例 5</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_5.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_grids_5.xul">表示</a></p>
+<pre class="brush:xml">&lt;grid&gt;
+  &lt;columns&gt;
+    &lt;column flex="1" /&gt;
+    &lt;column flex="1" /&gt;
+  &lt;/columns&gt;
+
+  &lt;rows&gt;
+    &lt;row&gt;
+      &lt;label value="Northwest" /&gt;
+      &lt;label value="Northeast" /&gt;
+    &lt;/row&gt;
+    &lt;button label="Equator" /&gt;
+    &lt;row&gt;
+      &lt;label value="Southwest" /&gt;
+      &lt;label value="Southeast" /&gt;
+    &lt;/row&gt;
+  &lt;/rows&gt;
+&lt;/grid&gt;
+</pre>
+<p>ボタンは、グリッドの行 (<span style="color: green;">row</span>) の中に置かれていないため、グリッドの幅一杯に伸張します。 同様に、<code><a href="/ja/docs/Mozilla/Tech/XUL/column" title="column">column</a></code> の間に要素を加えることで、行をスパンする列を作ることが可能です。 この場合、加えた要素はグリッドの高さ一杯に伸張します。 必要であれば、ひとつのグリッドで両方を行っても構いません。</p>
+<p>次のセクションでは、コンテンツパネルを加える方法を見ていきます。</p>
+<div>
+  <div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/Tutorial/Tabboxes" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/Tutorial/Content_Panels">次のページ  »</a></p>
+</div></div>

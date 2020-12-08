@@ -1,0 +1,261 @@
+---
+title: Localisation avec Mercurial
+slug: Localisation_avec_Mercurial
+tags:
+  - Localisation
+  - Mercurial
+  - Tutoriel
+translation_of: Mozilla/Localization/Localizing_with_Mercurial
+---
+<p>Dans Mozilla, nous utilisons le système de contrôle de version  <a href="/fr/Mercurial_basics" rel="internal">Mercurial</a>  (Hg) pour gérer le code source et les localisations. Mercurial permet aux localisateurs de travailler localement (sur leurs machines) et ensuite de pousser (<code><em>push</em></code>, un terme Hg) les changements vers un dépôt distant, qui est généralement hébergé sur les serveurs Mozilla (<a href="https://hg.mozilla.org/">hg.mozilla.org</a> . La localisation des versions actuelles de Firefox, Thunderbird et SeaMonkey inclut le travail avec Mercurial. Si la documentation est incomplète ou si vous avez des questions, veuillez passer par les canaux <a href="irc://irc.mozilla.org/l10n">#l10n</a> ou <a href="irc://irc.mozilla.org/hg">#hg</a>  sur irc.mozilla.org. Les <a href="https://mozilla-version-control-tools.readthedocs.io/fr/latest/hgmozilla/index.html">FAQ Mercurial</a> valent également le détour, en cas de problème</p>
+
+<p>Pour les plus avides et rapides, vous trouverez ci-dessous des instructions sur l'installation et la configuration de Mercurial, des instructions sur la réception d'un privilège de validation de compte Hg, ainsi que quelques tâches que vous pouvez effectuer sans privilège de compte.</p>
+
+<h2 id="Installation_de_Mercurial">Installation de Mercurial</h2>
+
+<p>Suivez les instructions ci-dessous pour installer Mercurial sur votre système. Une fois que vous aurez installé Mercurial, nous suivrons les étapes pour le <a href="https://mozilla-version-control-tools.readthedocs.io/fr/latest/hgmozilla/index.html">configurer</a>.</p>
+
+<h3 id="Mercurial_sur_Linux">Mercurial sur Linux</h3>
+
+<p>Vous pouvez facilement installer Mercurial à partir de la ligne de commande en exécutant l'une des commandes suivantes. Choisissez la commande appropriée pour votre installation et assurez-vous de l'exécuter en tant que root.</p>
+
+<pre># Debian/ubuntu
+$ apt-get install mercurial
+
+# Fedora
+$ dnf install mercurial
+
+# Gentoo
+$ emerge mercurial
+
+# Arch Linux
+$ pacman -S mercurial
+
+# OpenSolaris
+$ pkg install SUNWmercurial</pre>
+
+<p>Si vous préférez une interface graphique, <a href="https://codebeamer.com/cb/wiki/938267">vous pouvez télécharger et installer MercurialEclipse ici</a>.</p>
+
+<h4 id="Ça_a_marché">Ça a marché ?</h4>
+
+<p>Ouvrez une fenêtre de terminal et entrez  <code>hg --version</code> . Si vous voyez un message à propos de la version de Mercurial (par exemple, <code>Mercurial Distributed SCM (version 1.3.1)</code>), vous avez installé Mercurial avec succès.</p>
+
+<h4 id="Plus_de_détails">Plus de détails</h4>
+
+<p>Pour davantage de détails sur l'installation d' Hg sur les systèmes Linux, référez-vous aux instructions de la page de téléchargement de Mercurial.</p>
+
+<h3 id="Mercurial_sur_Windows">Mercurial sur Windows</h3>
+
+<p>Avec Windows, vous avez quelques options d'installation ;</p>
+
+<ul>
+ <li>Pour une <strong>interface de ligne de commande</strong>, téléchargez et installez le package {{interwiki("wikimo","MozillaBuild")}}. Cela permettra non seulement d'installer Hg, mais aussi tous les outils nécessaires pour construire des produits Mozilla sur Windows. Faites-nous confiance, vous le voudrez peut-être.</li>
+ <li><a href="/@api/deki/files/3863/=TortoiseHg.png"><img alt="TortoiseHg.png" src="/@api/deki/files/3863/=TortoiseHg.png?size=thumb"></a>Pour une interface graphique, vous pouvez vouloir <a href="https://bitbucket.org/">installer TortoiseHg</a>  qui s'intègre à votre shell Windows Explorer. Il installe également l'utilitaire de ligne de commande.</li>
+</ul>
+
+<p><a href="/@api/deki/files/3861/=Mercurial_Installer.png"><img alt="Mercurial Installer.png" src="/@api/deki/files/3861/=Mercurial_Installer.png?size=thumb"></a> Une partie de la ligne de commande d'installation de Hg pour Windows implique de s'assurer que l'exécutable <code>hg</code> est dans la variable %PATH% du système (TortoiseHg n'a pas besoin de cette étape). Utilisez l'utilitaire <code>add_path.exe</code> trouvé dans <code>C:\mozilla-build\hg</code> pour faire cela.</p>
+
+<pre>PS C:\Users\your_id&gt; cd C:\mozilla-build\hg
+PS C:\mozilla-build\hg&gt; .\add_path.exe /result .</pre>
+
+<p>Notez le point ("<code>.</code>") À la fin de la deuxième commande, ce qui signifie le répertoire courant. Si l'utilitaire a modifié avec succès <code>%PATH%</code>, une boîte de dialogue s'ouvrira disant "<code>%PATH%</code> a été correctement mis à jour".</p>
+
+<p>Ou bien, vous pouvez éditer la variable <code>%PATH%</code> manuellement. Pour ce faire, faites un clic droit sur l'icône de votre ordinateur, choisissez Propriétés &gt; Avancé &gt; Variables d'environnement, sélectionnez <code>PATH</code> et cliquez sur Modifier (<em><code>Edit</code></em>). Si vous ne voyez pas <code>PATH</code> parmi les options, vous devrez cliquer sur Ajouter (<em><code>Add</code></em>) et éditer dans la boîte de dialogue Ajouter. Voir la capture d'écran pour un exemple. <a href="/@api/deki/files/3862/=PATH.jpg"><img alt="PATH.jpg" src="/@api/deki/files/3862/=PATH.jpg?size=thumb"></a></p>
+
+<h4 id="Ça_a_marché_2">Ça a marché ?</h4>
+
+<ol>
+ <li>Allez sur <code>Start &gt; Run...</code> (<em>Démarrer &gt; Éxécuter...</em>)</li>
+ <li>Tapez <code>cmd.exe</code> et cliquez sur <code>OK. </code> Une nouvelle fenêtre shell devrait apparaître.</li>
+ <li>Tapez <code>hg --version</code> dans la nouvelle fenêtre shell. Si vous voyez un message sur la version de Mercurial (par exemple, <code>Mercurial Distributed SCM (version 1.3.1</code>)), vous avez installé Mercurial avec succès !</li>
+</ol>
+
+<h4 id="Plus_de_détails_2">Plus de détails</h4>
+
+<p>Pour davantage de détails sur l'installation d'Hg sur Windows, référez-vous aux <a href="https://mercurial.selenic.com/downloads/">instructions sur la page de téléchargement de Mercurial</a>.</p>
+
+<h3 id="Mercurial_sur_Mac_OSX">Mercurial sur Mac OSX</h3>
+
+<p>L'installation d'Hg sur Mac OSX est très facile. Vous pouvez installer Mercurial via <a href="https://www.macports.org/">MacPorts</a>  depuis le terminal, comme ceci :</p>
+
+<p><code>$ sudo port install mercurial</code></p>
+
+<p>Vous pouvez aussi l'installer par téléchargement du dmg package à partir de la <a href="https://mercurial.selenic.com/wiki/Download#Mac_OS_X">page de téléchargement Hg </a>. Elle a une boîte de dialogue d'installation qui vous guidera à travers le processus.</p>
+
+<p>Si vous préférez une interface graphique, vous pouvez <a href="https://javaforge.com/project/HGE">télécharger et installer MercurialEclipse ici</a>.</p>
+
+<h4 id="Ça_a_marché_3">Ça a marché ?</h4>
+
+<p>Ouvrez une fenêtre de terminal et tapez <code>hg --version</code>. Si vous voyez un message à propos de la version de Mercurial (par exemple, <code>Mercurial Distributed SCM (version 1.3.1)</code>), vous avez installé Mercurial avec succès.</p>
+
+<h4 id="Plus_de_détails_3">Plus de détails</h4>
+
+<p>Pour davantage de détails sur l'installation d'Hg sur Mac OSX, référez-vous aux <a href="https://mercurial.selenic.com/downloads/">instructions de la page de téléchargement Mercurial's</a>.</p>
+
+<h2 id="Configuration_de_Mercurial">Configuration de Mercurial</h2>
+
+<p>Une fois que vous avez installé Mercurial, vous devrez le configurer avant de pouvoir l'utiliser.</p>
+
+<p>Votre configuration Mercurial est contenue dans un fichier "config" que vous devez créer vous-même. Votre fichier de configuration s'appelle <code>~/ hgrc</code> (systèmes UNIX) ou <code>Mercurial.ini</code> (Windows), selon votre système d'exploitation.</p>
+
+<p>Votre fichier config doit avoir les paramètres suivants :</p>
+
+<pre>[ui]
+username = Votre vrai nom &lt;user@example.com&gt;
+merge = internal:merge
+
+[defaults]
+commit = -v
+
+[diff]
+git = 1
+showfunc = 1
+unified = 8</pre>
+
+<p>Pour configurer Hg, suivez ces étapes :</p>
+
+<ol>
+ <li>créez un nouveau fichier dans votre éditeur de texte préféré,</li>
+ <li>copiez les paramètres ci-dessus et collez-les dans votre nouveau fichier,</li>
+ <li>enregistrez le fichier avec l'extension, soit .hgrc (système UNIX) , soit . Ini (Windows) et enregistrez-le dans <code>$HOME/</code>  ou <code>C:\mozilla-build\hg\</code> ou <code>C:\Program Files\Mercurial\</code>.</li>
+</ol>
+
+<p>Maintenant que vous avez installé et configuré Mercurial, voici quelques tâches que vous pouvez faire sans privilèges d'accès Hg commit.</p>
+
+<h2 id="Clonage_et_mise_à_jour_de_référentiels">Clonage et mise à jour de référentiels</h2>
+
+<p>Il y a quelques référentiels qui contiennent les fichiers source en-US que la plupart des paramètres régionaux voudront traiter.</p>
+
+<ul>
+ <li><a href="/fr/mozilla-central">mozilla-central</a> contient les fichiers pour Firefox.</li>
+ <li><a href="/fr/comm-central">comm-central</a> contient les fichiers pour SeaMonkey et Thunderbird qui ne font pas déjà partie de Firefox.</li>
+ <li><a href="https://hg.mozilla.org/l10n-central/">l10n-central</a> contient tous les référentiels de L10n pour Firefox.</li>
+</ul>
+
+<div>
+<p><strong>Note ;</strong> Lorsque vous récupérez le référentiel comm-central, il contient également mozilla-central. Il est donc possible d'utiliser une seule installation pour le développement de Firefox, SeaMonkey et Thunderbird sans pour autant devoir récupérer mozilla-central une seconde fois.</p>
+</div>
+
+<p id="R.C3.A9cup.C3.A9ration_de_en-US">Voici maintenant comment récupérer (ou cloner) les fichiers source en-US pour la première fois</p>
+
+<ul>
+ <li>Exécutez les commandes suivantes dans la ligne de commande pour récupérer les fichiers source en-US de Firefox :</li>
+</ul>
+
+<pre>hg clone <a href="https://hg.mozilla.org/mozilla-central/" rel="freelink">https://hg.mozilla.org/mozilla-central/</a>
+</pre>
+
+<p>Cette commande crée un clone du référentiel mozilla-central dans le répertoire mozilla-central.</p>
+
+<ul>
+ <li>Exécutez les commandes suivantes dans la ligne de commande pour récupérer les fichiers source de la combinaison de Firefox, SeaMonkey et Thunderbird :</li>
+</ul>
+
+<pre>hg clone https://hg.mozilla.org/comm-central/
+cd comm-central
+python client.py checkout
+</pre>
+
+<p>La première commande crée un clone du référentiel comm-central. La seconde commande vous déplace dans le répertoire correspondant. La troisième commande produit un clone de mozilla-central et récupère d'autres référentiels hg. Les autres répertoires sont requis pour SeaMonkey et Thunderbird.</p>
+
+<ul>
+ <li>Cloner votre référentiel de localisation pour la première fois est facile. Par exemple, pour cloner votre référentiel L10n pour Firefox, exécutez la ligne de commande suivante dans le sous-répertoire de votre code de paramètres régionaux (<em>locale</em>) (<em>fr</em> pour le français):</li>
+</ul>
+
+<pre>hg clone https://hg.mozilla.org/l10n-central/ab-CD/</pre>
+
+<h3 id="Mise_à_jour_de_votre_référentiel_local">Mise à jour de votre référentiel local</h3>
+
+<ul>
+ <li>Pour mettre à jour votre copie de travail de mozilla-central, placez-vous dans votre répertoire mozilla-central et exécutez :</li>
+</ul>
+
+<pre>hg pull -u
+</pre>
+
+<p>Cela permet à la fois d'obtenir les nouvelles modifications de mozilla-central et d'appliquer ces changements dans votre copie de travail.</p>
+
+<ul>
+ <li>Pour mettre à jour votre copie de travail de comm-central, placez-vous dans votre répertoire comm-central et exécutez :</li>
+</ul>
+
+<pre>python client.py checkout</pre>
+
+<p>Ceci permet à la fois d'obtenir les modifications de comm-central, mozilla-central et des autres emplacements appropriés et d'appliquer ces changements dans votre copie de travail.</p>
+
+<ul>
+ <li>Pour mettre à jour votre référentiel L10n local après votre premier clone, exécutez cette commande à partir de votre répertoire L10n :</li>
+</ul>
+
+<pre>hg pull -u</pre>
+
+<h2 id="Création_des_paquets_L10n">Création des paquets L10n</h2>
+
+<p>Une autre chose que vous pouvez faire avec Hg sans avoir besoin de privilège de compte, est de créer des paquets L10n de votre travail pour que quelqu'un d'autre l'engage dans votre référentiel L10n distant sur les serveurs Mozilla. Cela garantit que vos tableaux de bord sont toujours précis, car ils regardent votre référentiel distant.</p>
+
+<p>Voici comment créer un paquet L10n avec Hg et l' <a href="https://mercurial.selenic.com/wiki/MqExtension">extension Mq</a>:</p>
+
+<ol>
+ <li>
+  <p>Activez Mq pour ajouter hg.ext = sur votre fichier config Mercurial (<code>~/.hgrc</code> sur Unix ou <code>Mercurial.ini</code> sur Windows) sous la section <code>[extensions]</code>.</p>
+ </li>
+ <li>
+  <p>Ouvrez votre outil de ligne de commande et naviguez vers votre répertoire L10n.</p>
+ </li>
+ <li>
+  <p>Dans votre répertoire L10n, initialisez votre référentiel avec Mq par l'exécution de <code>hg init --mq</code>.</p>
+ </li>
+ <li>
+  <p>Pour créer un nouveau paquet, exécutez <code>hg qnew -m "Votre message d'engagement" patch-name.patch</code>. Le message d'engagement doit prendre la forme de "Bug 123456 - Change this thing to work better by doing something; r=reviewers" si votre paquet résoud un bogue.</p>
+ </li>
+ <li>
+  <p>Faites votre modification.</p>
+ </li>
+ <li>
+  <p>Une fois vos changements finis, exécutez <code>hg qrefresh</code> pour engager vos changements dans le paquet.</p>
+ </li>
+ <li>
+  <p>Naviguez vers votre "référentiel/.hg/paquet" pour trouver votre .patch (<em>paquet</em>).</p>
+ </li>
+ <li>
+  <p>Vous pouvez répéter à partir de l'étape 4 pour un autre paquet. Vos paquets seront incrémentés, c'est-à-dire que de nouveaux paquets seront créés basés sur les anciens. Si vous voulez engager tous les paquets du référentiel et effacer la file de paquets, exécutez <code>hg qfinish</code>.</p>
+ </li>
+</ol>
+
+<p>Référez-vous aux <a href="https://mercurial.selenic.com/wiki/MqTutorial">MqTutorial</a> et <a href="https://mercurial.selenic.com/wiki/MqExtension">documentation Mq</a> pour l'utilisation de l'extension Mq et la gestion des correctifs.</p>
+
+<h2 id="Les_privilèges_de_compte_de_Mercurial">Les privilèges de compte de Mercurial</h2>
+
+<p>Finalement, vous ou votre chef d'équipe aurez besoin de privilèges de compte Hg. Regardons les choses en face, il est juste plus commode d'engager et de pousser votre travail sur le référentiel à distance vous-même, plutôt que de créer des correctifs et de demander à quelqu'un d'autre de les pousser pour vous.</p>
+
+<p>Pour avoir un accès en écriture aux référentiels l10n hg sur le serveur Mozilla, il y a un peu de paperasse à faire. Le "patron" de l'équipe de localisation doit trouver un bogue demandant un compte hg. Ce bogue va demander le privilège L10n niveau 1. Vous devez suivre les instructions concernant le formulaire de contributeur. L'accès en écriture aux référentiels hg nécessite un '' voucher '', qui, pour le propriétaire, sera fait en fonction de la critique de Mozilla. Pour les pairs d'une localisation, le propriétaire peut se porter garant (une fois enregistré).</p>
+
+<h2 id="Envoi_des_modifications_à_Mozilla">Envoi des modifications à Mozilla</h2>
+
+<p>Maintenant, vous avez les privilèges de compte, et vous pouvez envoyer votre travail à Mozilla vous-même. Les étapes pour l'envoi de votre travail L10n utilisant Mercurial :</p>
+
+<ol>
+ <li>Puisque votre travail L10n a lieu dans votre propre référentiel local, vous devez vous assurer qu'aucune modification n'a été apportée au référentiel distant avant de valider votre travail.  Pour ce faire, <a href="/fr/docs/Localisation_avec_Mercurial#Mise_%C3%A0_jour_de_votre_r%C3%A9f%C3%A9rentiel_local">mettez à jour votre référentiel local, comme vu dans la section ci-dessus.</a><a href="/fr/docs/">.</a></li>
+ <li>Lorsque vous avez terminé une modification ou un ensemble de modifications et que vous avez vérifié les modifications du référentiel distant, vous pouvez entrer cette commande :
+  <pre>hg commit -m "your message identifying the change (bug 555)"</pre>
+
+  <p>La validation n'envoie pas vos modifications au référentiel de Mozilla, mais les prépare pour cela. L'étape suivante enverra vos modifications à votre référentiel distant via "push".</p>
+ </li>
+ <li>Pour les envoyer aux répertoires hébergés chez Mozilla, vous devez avoir un accès en écriture et vous devez modifier le fichier <code><em>(votre-racine-hg-locale)</em>/. hg/hgrc</code> (note, ce n'est <strong>PAS</strong> votre fichier <code>~/.hgrc</code>) pour ajouter cette ligne (en remplaçant ab-CD par votre code de locale) :
+  <pre>[paths]
+default = <a href="https://hg.mozilla.org/l10n-central/ab-CD" rel="freelink">https://hg.mozilla.org/l10n-central/ab-CD</a>
+<strong>default-push = <a href="ssh://hg.mozilla.org/l10n-central/ab-CD" rel="freelink">ssh://hg.mozilla.org/l10n-central/ab-CD</a>
+</strong>
+</pre>
+ </li>
+ <li>Vous devrez encore indiquer à ssh le compte à utiliser pour vos envois, en ajoutant ces lignes à <code>~/.ssh/config</code> et en ajoutant ces lignes,, sur lesquelles : <code>user@host.domain</code> est votre compte.
+  <pre>Host hg.mozilla.org
+User user@host.domain
+</pre>
+ </li>
+ <li>Vous pouvez enfin faire un push de vos modifications vers le référentiel central (et vérifier le résultat sur le tableau de bord) par l'entrée de cette commande depuis votre répertoire local  :</li>
+</ol>
+
+<pre>hg push</pre>
+
+<p>Et tah dah ! Vous avez réussi ! Félicitations pour avoir achevé ce tutoriel. Faites une pause et prenez une collation, vous le méritez !</p>

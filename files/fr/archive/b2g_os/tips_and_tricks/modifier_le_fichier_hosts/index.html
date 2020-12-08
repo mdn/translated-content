@@ -1,0 +1,38 @@
+---
+title: Modifier le fichier hosts
+slug: Archive/B2G_OS/Tips_and_tricks/Modifier_le_fichier_hosts
+translation_of: Archive/B2G_OS/Developing_Firefox_OS/modifying_hosts_file
+---
+<div class="summary">
+<p>Il est parfois nécessaire d'éditer le fichier hosts de votre machine : en cas d'attaque, pour bloquer des connexions indésirables, pour rediriger des requêtes vers une adresse spécifique, etc... Cet article vous guidera à travers les étapes à effectuer pour modifier le fichier hosts de votre téléphone Firefox OS. Ce fichier se trouve par exemple dans le dossier /system/etc pour un Linux, et dans le dossier /etc dans les nouvelles versions de Mac OS X.</p>
+</div>
+<h2 id="Préparer_votre_téléphone">Préparer votre téléphone</h2>
+<p>Sur le téléphone, allez à <a href="/fr/Firefox_OS/Déboguer/Les_paramètres_développeurs">Paramètres pour développeurs</a> et cocher :</p>
+<ul>
+ <li>"Débogage distant" (Pour Firefox OS 1.4 et supérieur, choisissez "ADB et outils de développement" dans le menu Débogage USB")</li>
+ <li>"Activer la console"</li>
+</ul>
+<p>Branchez alors votre téléphone à votre ordinateur.</p>
+<p>Les étapes suivantes, pour modifier le fichier hosts, sont les mêmes que sur Android. Les développeurs Android retrouveront rapidement leurs petits !</p>
+<h2 id="Étapes_dans_le_terminal">Étapes dans le terminal</h2>
+<ol>
+ <li>Ouvrez une fenêtre de terminal.</li>
+ <li>Remontez la partition /system sur le téléphone afin d'obtenir les permissions en lecture/écriture
+  <pre class="brush: bash">adb remount</pre>
+ </li>
+ <li>Transférez le fichier hosts vers votre ordinateur
+  <pre class="brush: bash">adb pull /system/etc/hosts /tmp</pre>
+ </li>
+ <li>Modifiez le fichier hosts dans /tmp/hosts selon vos besoins puis sauvegardez le. Par exemple :
+  <pre class="brush: bash">127.0.0.1         localhost
+ip.à.rediriger   nom_de_la_machine_distante</pre>
+ </li>
+ <li>Envoyez le fichier hosts modifié vers votre téléphone
+  <pre class="brush: bash">adb push /tmp/hosts /system/etc/hosts</pre>
+ </li>
+</ol>
+<p>Voilà, votre fichier hosts devrait maintenant être à jour.</p>
+<div class="note">
+ <p><strong>A noter</strong> : En savoir plus sur ADB ? La <a href="http://developer.android.com/tools/help/adb.html" title="http://developer.android.com/tools/help/adb.html">documentation ADB</a> n'attend plus que vous !</p>
+</div>
+<p> </p>

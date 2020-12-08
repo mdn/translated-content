@@ -1,0 +1,296 @@
+---
+title: 本地化
+slug: Mozilla/Tech/XUL/Tutorial/Localization
+translation_of: Archive/Mozilla/XUL/Tutorial/Localization
+---
+<p> </p>
+<div class="prevnext">
+ <p><span style="float: left;">« <a href="../../../../en/XUL_Tutorial/Creating_a_Skin" rel="internal">Previous</a></span> <span style="float: right;"><a href="../../../../en/XUL_Tutorial/Property_Files" rel="internal">Next</a> »</span></p>
+</div>
+<p>  </p>
+<p> </p>
+<p>XUL 和 XML 提供的实体（entities）是一个本地化的好方法。</p>
+<div id="section_1">
+ <h3 class="editable" id="实体"><span>实体</span></h3>
+ <div class="editIcon">
+  <a href="/../../../../en/XUL_Tutorial/Localization#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+ <p>    不少软件都希望将界面上的语言尽可能简单的翻译为另外的语言。通常他们会为每一种语言创建一份字符串列表，来代替在代码中进行硬编码。代码中的每一段文本都代表字符串列表中的一项， <a href="../../../../en/XML" rel="internal">XML</a> 提供的实体正好实现这一目的。</p>
+ <p>    如果你写过 <a href="../../../../en/HTML" rel="internal">HTML</a> 代码，你应该对实体很熟悉 ， 像这样的代码 <code>&amp;lt;</code> 和 <code>&amp;gt;</code> 是作为“小于”和“大于”在文本中的替代出现的。XML 的语法允许你定义用户实体。你可以使用这些实体代替它实际的值，当然这个值可以是一段文本。实体可以用在任何文本应该出现的地方，包括属性。下面的例子在一个按钮中使用了实体。</p>
+ <pre>&lt;button label="&amp;findLabel;"/&gt;
+</pre>
+ <p>    出现在按钮上的文本将是 <code>&amp;findLabel;</code> 所代表的值。对每一种所要支持的语言需要创建一个文件包含对实体的定义。在英语中，<code>&amp;findLabel;</code> 实体可能代表文本 "Find"。</p>
+</div>
+<div id="section_2">
+ <h3 class="editable" id="DTD_文件"><span>DTD 文件 </span></h3>
+ <div class="editIcon">
+  <a href="/../../../../en/XUL_Tutorial/Localization#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+ <p>    实体在 <em>Document Type Definition</em> (DTD) 文件中定义。这类文件往往用于特定 XML 文件的语法和语义的定义，当然也可以用来定义实体。在  Mozilla 的 chrome 体系中，你会在<code> locales</code> 子目录中找到 DTD 文件。对应一个XUL 文件，一般会有一个 DTD 文件 (extension <code>.dtd</code>)。</p>
+ <p>    如果你查看 chrome 目录，你会看到一个针对你所用语言的压缩包 (<code>en-US.jar</code> 默认是英语的语言包) 。你也可能会找到多种语言的语言包：美式英语 (en-US) 、法语 (fr)等。在这些压缩包中，你会发现它保存着每个窗口的本地化文本。这种压缩包的结构与 <a href="../../../../en/XUL_Tutorial/Creating_a_Skin" rel="internal">skins</a> 是很相似的。</p>
+ <p>    你可以把你定义实体的 DTD 文件放置到语言包里，一般的，你应该为每一个 XUL 文件建立一个 DTD 文件，通常使用相同的文件名但以 <code>.dtd</code> 作为后缀。因此对应我们的 findfile 对话框，我们需要一个 <code>findfile.dtd</code> 文件。</p>
+ <p>    对于非安装的 chrome 文件，你可以简单的把 DTD 文件放在与 XUL 相同的目录中。</p>
+ <div class="note">
+  <strong>注意：</strong> 你需要将含有非 ASCII 字符的 DTD 文件的字符编码设为 UTF-8。也就是说你应该按照 UTF-8 格式 (<a class="external" href="http://www.mozdev.org/notes/l10n/unicode/editors-en.html" rel="external nofollow" title="http://www.mozdev.org/notes/l10n/unicode/editors-en.html">without BOM</a>)保存。参见 <a class="external" href="http://www.mozilla.org/projects/l10n/mlp_chrome.html#text" rel="external nofollow" title="http://www.mozilla.org/projects/l10n/mlp_chrome.html#text">Mozilla Language Packs</a>.</div>
+ <p>    一旦为你的 XUL 文件创立 DTD 文件，你应该在 XUL 文件上添加一行以声明使用 DTD 文件。否则会发生找不到实体的错误，在 XUL 文件的头部加如下一行。</p>
+ <pre>&lt;!DOCTYPE window SYSTEM "chrome://findfile/locale/findfile.dtd"&gt;
+</pre>
+ <p>    这一行表示这个 URL 被当作一个 DTD 使用。在这个例子中，我们引入了我们需要的 <code>findfile.dtd</code> 文件，这一行通常放在 <code><span class="lang lang-en"><a href="../../../../en/XUL/window" rel="internal">window</a> <span style="font-family: Verdana,Tahoma,sans-serif;">元素之前。</span></span></code></p>
+ <p>    你同样需要在 <a href="../../../../en/Chrome_Registration#locale" rel="internal">chrome.manifest</a> 文件中添加本地化信息，如下：</p>
+ <pre class="eval">locale findfile en-US locale/
+</pre>
+</div>
+<div id="section_3">
+ <h3 class="editable" id="申明实体"><span>申明实体 </span></h3>
+ <div class="editIcon">
+  <a href="/../../../../en/XUL_Tutorial/Localization#" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+ <p>    实体的申明使用如下语法：</p>
+ <pre>&lt;!ENTITY findLabel "Find"&gt;
+</pre>
+ <p>    上例创建了一个名为 <code>findLabel</code> 值为 "Find" 的实体，这意味着在文本中的任意位置出现的 "&amp;findLabel;" 都将会被 "Find" 替代。注意实体申明无需反斜杠结束。在不同语言的 DTD 文件中，文件使用的不同的语言替代即可。</p>
+ <pre class="eval"><strong>日文:</strong>
+&lt;!ENTITY findLabel "検索"&gt;
+</pre>
+ <p>    例如，下面的文字：</p>
+ <pre>&lt;description value="&amp;findLabel;"/&gt;
+</pre>
+ <p>被翻译为:</p>
+ <pre class="eval"><strong>英文版:</strong>
+&lt;description value="Find"/&gt;
+
+<strong>日文版:</strong>
+&lt;description value="検索"/&gt;
+</pre>
+ <p>    你应该为你在界面中出现的每一个标签或字符串申明一个实体，在XUL文件中不应出现任何的显示文本。</p>
+ <p>    补充来说你可以在任何因语言不同而不同的的地方使用实体。以 <a href="../../../../en/XUL_Tutorial/Keyboard_Shortcuts" rel="internal">Access keys 及 keyboard shortcuts </a>为例。</p>
+ <pre class="eval"> <strong>XUL</strong>
+ &lt;menuitem label="&amp;undo.label;" accesskey="&amp;undo.key;"/&gt;
+ <strong>DTD</strong>
+ &lt;!ENTITY undo.label "Undo"&gt;
+ &lt;!ENTITY undo.key "u"&gt;
+</pre>
+ <p>    上面的例子使用了两个实体，一个由于 Undo 菜单项的标签，第二个用于快捷键。</p>
+ <div class="highlight">
+  <div id="section_4">
+   <h3 class="editable" id="改写_Find_Files_的例子"><span>改写 Find Files 的例子</span></h3>
+   <div class="editIcon">
+    <a href="/../../../../en/XUL_Tutorial/Localization#" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+   <p>    让我们看一看如何使用DTD文件修改我们的find files 对话框并将所有文本放在一起。整个文件列在下面。</p>
+   <pre class="eval">&lt;?xml version="1.0"?&gt;
+
+&lt;?xml-stylesheet href="<a class="external" rel="freelink">chrome://global/skin/global.css</a>" type="text/css"?&gt;
+&lt;?xml-stylesheet href="findfile.css" type="text/css"?&gt;
+
+<span class="highlightred">&lt;!DOCTYPE window SYSTEM "<a class="external" rel="freelink">chrome://findfile/locale/findfile.dtd</a>"&gt;</span>
+
+&lt;window
+  id="findfile-window"
+  title="<span class="highlightred">&amp;findWindow.title;</span>"
+  persist="screenX screenY width height"
+  orient="horizontal"
+  onload="initSearchList()"
+  xmlns="<a class="external" href="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" rel="freelink">http://www.mozilla.org/keymaster/gat...re.is.only.xul</a>"&gt;
+
+&lt;script src="findfile.js"/&gt;
+
+&lt;popupset&gt;
+   &lt;menupopup id="editpopup"&gt;
+     &lt;menuitem label="<span class="highlightred">&amp;cutCmd.label;</span>" accesskey="<span class="highlightred">&amp;cutCmd.accesskey;</span>"/&gt;
+     &lt;menuitem label="<span class="highlightred">&amp;copyCmd.label;</span>" accesskey="<span class="highlightred">&amp;copyCmd.accesskey;</span>"/&gt;
+     &lt;menuitem label="<span class="highlightred">&amp;pasteCmd.label;</span>" accesskey="<span class="highlightred">&amp;pasteCmd.accesskey;</span>" disabled="true"/&gt;
+   &lt;/menupopup&gt;
+&lt;/popupset&gt;
+
+&lt;keyset&gt;
+   &lt;key id="cut_cmd" modifiers="accel" key="<span class="highlightred">&amp;cutCmd.commandkey;</span>"/&gt;
+   &lt;key id="copy_cmd" modifiers="accel" key="<span class="highlightred">&amp;copyCmd.commandkey;</span>"/&gt;
+   &lt;key id="paste_cmd" modifiers="accel" key="<span class="highlightred">&amp;pasteCmd.commandkey;</span>"/&gt;
+   &lt;key id="close_cmd" keycode="VK_ESCAPE" oncommand="window.close();"/&gt;
+&lt;/keyset&gt;
+
+&lt;vbox flex="1"&gt;
+
+ &lt;toolbox&gt;
+
+  &lt;menubar id="findfiles-menubar"&gt;
+    &lt;menu id="file-menu" label="<span class="highlightred">&amp;fileMenu.label;</span>"
+        accesskey="<span class="highlightred">&amp;fileMenu.accesskey;</span>"&gt;
+      &lt;menupopup id="file-popup"&gt;
+        &lt;menuitem label="<span class="highlightred">&amp;openCmd.label;</span>"
+                  accesskey="<span class="highlightred">&amp;openCmd.accesskey;</span>"/&gt;
+        &lt;menuitem label="<span class="highlightred">&amp;saveCmd.label;</span>"
+                  accesskey="<span class="highlightred">&amp;saveCmd.accesskey;</span>"/&gt;
+        &lt;menuseparator/&gt;
+        &lt;menuitem label="<span class="highlightred">&amp;closeCmd.label;</span>"
+                  accesskey="<span class="highlightred">&amp;closeCmd.accesskey;" key="close_cmd" oncommand="window.close();</span>"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+    &lt;menu id="edit-menu" label="<span class="highlightred">&amp;editMenu.label;</span>"
+          accesskey="<span class="highlightred">&amp;editMenu.accesskey;</span>"&gt;
+      &lt;menupopup id="edit-popup"&gt;
+        &lt;menuitem label="<span class="highlightred">&amp;cutCmd.label;</span>"
+                  accesskey="<span class="highlightred">&amp;cutCmd.accesskey;</span>" key="cut_cmd"/&gt;
+        &lt;menuitem label="<span class="highlightred">&amp;copyCmd.label;</span>"
+                  accesskey="<span class="highlightred">&amp;copyCmd.accesskey;</span>" key="copy_cmd"/&gt;
+        &lt;menuitem label="<span class="highlightred">&amp;pasteCmd.label;</span>"
+                  accesskey="<span class="highlightred">&amp;pasteCmd.accesskey;</span>" key="paste_cmd" disabled="true"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+  &lt;/menubar&gt;
+
+  &lt;toolbar id="findfiles-toolbar"&gt;
+    &lt;toolbarbutton id="opensearch" label="<span class="highlightred">&amp;openCmdToolbar.label;</span>"/&gt;
+    &lt;toolbarbutton id="savesearch" label="<span class="highlightred">&amp;saveCmdToolbar.label;</span>"/&gt;
+  &lt;/toolbar&gt;
+ &lt;/toolbox&gt;
+
+ &lt;tabbox&gt;
+  &lt;tabs&gt;
+    &lt;tab label="<span class="highlightred">&amp;searchTab;</span>" selected="true"/&gt;
+    &lt;tab label="<span class="highlightred">&amp;optionsTab;</span>"/&gt;
+  &lt;/tabs&gt;
+
+  &lt;tabpanels&gt;
+
+   &lt;tabpanel id="searchpanel" orient="vertical" context="editpopup"&gt;
+
+   &lt;description&gt;
+     <span class="highlightred">&amp;findDescription;</span>
+   &lt;/description&gt;
+
+   &lt;spacer class="titlespace"/&gt;
+
+   &lt;groupbox orient="horizontal"&gt;
+     &lt;caption label="<span class="highlightred">&amp;findCriteria;</span>"/&gt;
+
+     &lt;menulist id="searchtype"&gt;
+       &lt;menupopup&gt;
+         &lt;menuitem label="<span class="highlightred">&amp;type.name;</span>"/&gt;
+         &lt;menuitem label="<span class="highlightred">&amp;type.size;</span>"/&gt;
+         &lt;menuitem label="<span class="highlightred">&amp;type.date;</span>"/&gt;
+       &lt;/menupopup&gt;
+     &lt;/menulist&gt;
+   &lt;spacer class="springspace"/&gt;
+     &lt;menulist id="searchmode"&gt;
+       &lt;menupopup&gt;
+         &lt;menuitem label="<span class="highlightred">&amp;mode.is;</span>"/&gt;
+         &lt;menuitem label="<span class="highlightred">&amp;mode.isnot;</span>"/&gt;
+       &lt;/menupopup&gt;
+     &lt;/menulist&gt;
+   &lt;spacer class="springspace"/&gt;
+
+   &lt;menulist id="find-text" flex="1"
+             editable="true"
+             datasources="<a class="external" rel="freelink">file:///mozilla/recents.rdf</a>"
+             ref="<a class="external" href="http://www.xulplanet.com/rdf/recent/all" rel="freelink">http://www.xulplanet.com/rdf/recent/all</a>"&gt;
+     &lt;template&gt;
+       &lt;menupopup&gt;
+         &lt;menuitem label="rdf:<a class="external" href="http://www.xulplanet.com/rdf/recent#Label" rel="freelink">http://www.xulplanet.com/rdf/recent#Label</a>" uri="rdf:*"/&gt;
+       &lt;/menupopup&gt;
+     &lt;/template&gt;
+   &lt;/menulist&gt;
+
+   &lt;/groupbox&gt;
+
+  &lt;/tabpanel&gt;
+
+  &lt;tabpanel id="optionspanel" orient="vertical"&gt;
+     &lt;checkbox id="casecheck" label="<span class="highlightred">&amp;casesensitive;</span>"/&gt;
+     &lt;checkbox id="wordscheck" label="<span class="highlightred">&amp;matchfilename;</span>"/&gt;
+    &lt;/tabpanel&gt;
+
+  &lt;/tabpanels&gt;
+ &lt;/tabbox&gt;
+
+ &lt;tree id="results" style="display: none;" flex="1"&gt;
+   &lt;treecols&gt;
+     &lt;treecol id="name" label="<span class="highlightred">&amp;results.filename;</span>" flex="1"/&gt;
+     &lt;treecol id="location" label="<span class="highlightred">&amp;results.location;</span>" flex="2"/&gt;
+     &lt;treecol id="size" label="<span class="highlightred">&amp;results.size;</span>" flex="1"/&gt;
+   &lt;/treecols&gt;
+
+   &lt;treechildren&gt;
+     &lt;treeitem&gt;
+       &lt;treerow&gt;
+         &lt;treecell label="mozilla"/&gt;
+         &lt;treecell label="/usr/local"/&gt;
+         &lt;treecell label="<span class="highlightred">&amp;bytes.before;</span>2520<span class="highlightred">&amp;bytes.after;</span>"/&gt;
+       &lt;/treerow&gt;
+     &lt;/treeitem&gt;
+   &lt;/treechildren&gt;
+ &lt;/tree&gt;
+
+ &lt;splitter id="splitbar" resizeafter="grow" style="display: none;"/&gt;
+
+ &lt;spacer class="titlespace"/&gt;
+
+ &lt;hbox&gt;
+   &lt;progressmeter id="progmeter" value="50%" style="display: none;"/&gt;
+   &lt;spacer flex="1"/&gt;
+   &lt;button id="find-button" label="<span class="highlightred">&amp;button.find;</span>"
+           oncommand="doFind()"/&gt;
+   &lt;button id="cancel-button" label="<span class="highlightred">&amp;button.cancel;</span>"
+           oncommand="window.close();"/&gt;
+ &lt;/hbox&gt;
+&lt;/vbox&gt;
+
+&lt;/window&gt;
+</pre>
+   <p>    每一个字符串均被实体引用代替。一个 DTD 文件被包含在XUL文件的开头。每一个被引用的实体必须在DTD文件中申明，如果发现引用的实体没有申明，则窗口不会显示。</p>
+   <p>    注意实体的名字并不重要，在上面的例子里实体的名字被分成几段来写，请你不要这样，请按照其他代码的书写习惯来写实体引用。</p>
+   <p>    你可能已经注意到里字符串 '2520 bytes' 被两个实体代替。这是因为在别的语言中可能会有不同的语法要求。比如，可能要求数字写在后面而把 'bytes' 写在前面。当然对于 KB 、MB 会有更复杂的顺序要求。</p>
+   <p>    <font>键盘访问键</font>及快捷键也被翻译为实体因为对不同的语言这些也会不同。</p>
+   <p>    下面是 DTD 文件 - findfile.dtd：</p>
+   <pre>&lt;!ENTITY findWindow.title "Find Files"&gt;
+&lt;!ENTITY fileMenu.label "File"&gt;
+&lt;!ENTITY editMenu.label "Edit"&gt;
+&lt;!ENTITY fileMenu.accesskey "f"&gt;
+&lt;!ENTITY editMenu.accesskey "e"&gt;
+&lt;!ENTITY openCmd.label "Open Search..."&gt;
+&lt;!ENTITY saveCmd.label "Save Search..."&gt;
+&lt;!ENTITY closeCmd.label "Close"&gt;
+&lt;!ENTITY openCmd.accesskey "o"&gt;
+&lt;!ENTITY saveCmd.accesskey "s"&gt;
+&lt;!ENTITY closeCmd.accesskey "c"&gt;
+&lt;!ENTITY cutCmd.label "Cut"&gt;
+&lt;!ENTITY copyCmd.label "Copy"&gt;
+&lt;!ENTITY pasteCmd.label "Paste"&gt;
+&lt;!ENTITY cutCmd.accesskey "t"&gt;
+&lt;!ENTITY copyCmd.accesskey "c"&gt;
+&lt;!ENTITY pasteCmd.accesskey "p"&gt;
+&lt;!ENTITY cutCmd.commandkey "X"&gt;
+&lt;!ENTITY copyCmd.commandkey "C"&gt;
+&lt;!ENTITY pasteCmd.commandkey "V"&gt;
+&lt;!ENTITY openCmdToolbar.label "Open"&gt;
+&lt;!ENTITY saveCmdToolbar.label "Save"&gt;
+&lt;!ENTITY searchTab "Search"&gt;
+&lt;!ENTITY optionsTab "Options"&gt;
+&lt;!ENTITY findDescription "Enter your search criteria below and select the Find button to begin the search."&gt;
+&lt;!ENTITY findCriteria "Search Criteria"&gt;
+&lt;!ENTITY type.name "Name"&gt;
+&lt;!ENTITY type.size "Size"&gt;
+&lt;!ENTITY type.date "Date Modified"&gt;
+&lt;!ENTITY mode.is "Is"&gt;
+&lt;!ENTITY mode.isnot "Is Not"&gt;
+&lt;!ENTITY casesensitive "Case Sensitive Search"&gt;
+&lt;!ENTITY matchfilename "Match Entire Filename"&gt;
+&lt;!ENTITY results.filename "Filename"&gt;
+&lt;!ENTITY results.location "Location"&gt;
+&lt;!ENTITY results.size "Size"&gt;
+&lt;!ENTITY bytes.before ""&gt;
+&lt;!ENTITY bytes.after "bytes"&gt;
+&lt;!ENTITY button.find "Find"&gt;
+&lt;!ENTITY button.cancel "Cancel"&gt;
+</pre>
+   <p>    现在，为一个新语言添加文本仅需创建一个新的DTD文件。使用 chrome 系统把 DTD 文件加到另一个 <code> locales</code> 中，这样同一个 XUL 文件就可以使用不同的语言。</p>
+   <p>Find files example so far: <span class="lang lang-en"><a class="external" href="http://developer.mozilla.org/samples/xultu/examples//findfile/findfile-locale.xul.txt" rel="external nofollow" title="http://developer.mozilla.org/samples/xultu/examples//findfile/findfile-locale.xul.txt">Source</a> </span></p>
+  </div>
+ </div>
+ <p> </p>
+ <p>    下一章，看看 <a href="../../../../en/XUL_Tutorial/Property_Files" rel="internal">property files</a>.</p>
+ <p> </p>
+ <div class="prevnext">
+  <p><span style="float: left;">« <a href="../../../../en/XUL_Tutorial/Creating_a_Skin" rel="internal">Previous</a></span> <span style="float: right;"><a href="../../../../en/XUL_Tutorial/Property_Files" rel="internal">Next</a> »</span></p>
+ </div>
+ <p>  </p>
+ <p> </p>
+</div>
+<p> </p>

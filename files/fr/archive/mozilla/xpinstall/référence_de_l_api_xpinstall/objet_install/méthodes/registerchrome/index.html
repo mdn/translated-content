@@ -1,0 +1,61 @@
+---
+title: registerChrome
+slug: >-
+  Archive/Mozilla/XPInstall/Référence_de_l_API_XPInstall/Objet_Install/Méthodes/registerChrome
+translation_of: Archive/Mozilla/XPInstall/Reference/Install_Object/Methods/registerChrome
+---
+<p> </p>
+<h3 id="registerChrome" name="registerChrome">registerChrome</h3>
+<p>Enregistre chrome dans le registre Chrome.</p>
+<h4 id="M.C3.A9thode_de" name="M.C3.A9thode_de">Méthode de</h4>
+<p>Objet <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install">Install</a></p>
+<h4 id="Syntaxe" name="Syntaxe">Syntaxe</h4>
+<pre class="eval">int registerChrome(
+  SWITCH,
+  srcDir,
+  xpiPath);
+</pre>
+<h4 id="Param.C3.A8tres" name="Param.C3.A8tres">Paramètres</h4>
+<p>La méthode <code>registerChrome</code> a les paramètres suivants :</p>
+<dl>
+ <dt>
+  <code>SWITCH</code></dt>
+ <dd>
+  <code>SWITCH</code> est le switch chrome indiquant le type de fichier à enregistrer. <code>SKIN</code> est utilisé pour les thèmes, <code>LOCALE</code> est utilisé pour les paquetages de localisation. <code>PACKAGE</code>, un troisième type possible, est équivalent à <code>SKIN AND/OR LOCALE</code> et assure que tout dans le &lt;tt&gt;xpi&lt;/tt&gt; sera enregistré. Une option finale pour ce paramètre est <code>DELAYED_CHROME</code>, qui enregistre le switch uniquement après un redémarrage du navigateur.</dd>
+</dl>
+<p>Il est possible de combiner les switches comme dans l'exemple ci-dessous.</p>
+<dl>
+ <dt>
+  <code>srcDir</code></dt>
+ <dd>
+  <code>srcDir</code> est un objet <code>FileSpecObject</code> représentant la destination source de l'installation. Les
+  <i>
+   FileSpecObjects</i>
+  requis par cette fonction, sont créés en utilisant la méthode <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/getFolder">getFolder</a> de l'objet <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install">Install</a>.</dd>
+</dl>
+<dl>
+ <dt>
+  <code>xpiPath</code></dt>
+ <dd>
+  <code>xpiPath</code> est le chemin, dans le &lt;tt&gt;xpi&lt;/tt&gt;, où se trouve le fichier <code>contents.rdf</code> définissant le chrome. Par exemple,
+  <i>
+   locale/myLocale/aim</i>
+  pointe vers le sous-répertoire <code>locale/myLocale/aim</code> du même fichier &lt;tt&gt;xpi&lt;/tt&gt; que le script d'installation.</dd>
+</dl>
+<h4 id="Retour" name="Retour">Retour</h4>
+<p>Un nombre entier correspondant à un code d'erreur. Pour la liste complète des valeurs possibles, voir <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Codes_retourn%c3%a9s">Codes retournés</a>. Dans certains cas, cette méthode peut retourner d'autres codes d'erreur. Il peut arriver d'obtenir une erreur d'enregistrement.</p>
+<h4 id="Description" name="Description">Description</h4>
+<p>Lorsque le troisième paramètre est omis (pointage vers un emplacement précis dans l'archive &lt;tt&gt;xpi&lt;/tt&gt;), cette fonction est utilisée de façon dépréciée. Dans ce cas, <code>registerChrome</code> supporte l'ancien format des archives d'installation, dans lequel le fichier <code>manifest.rdf</code> était toujours situé au plus haut niveau de l'archive d'installation. <code>registerChrome</code> ne nécessite alors pas de chemin dans l'archive, comme il le requiert maintenant afin de localiser le format plus flexible du fichier <code>contents.rdf</code> des archives d'installation.</p>
+<p>Il est possible de regarder dans le fichier <code>installed-chrome.txt</code> du répertoire <code>chrome</code> pour savoir où et comment la fonction <code>registerChrome</code> a enregistré le paquetage dans le registre chrome.</p>
+<h4 id="Exemple" name="Exemple">Exemple</h4>
+<p>Cet exemple suppose que votre archive <code>xpi</code> se trouve dans le dossier <code>Plugins</code> et que le fichier <code>RDF</code> est dans le sous-dossier <code>resources</code> de l'archive.</p>
+<div class="note">
+ <p>Vous devriez évitez cet appel (au cas où vous feriez un copier/coller depuis un ancien script d'installation) pour l'installation de plugin pour Firefox 2.x. Il n'est pas certain de ce que produira cet « enregistrement chrome ».</p>
+</div>
+<pre class="eval">registerChrome(
+  PACKAGE | DELAYED_CHROME,
+  getFolder("Plugins"),
+  "resources");
+</pre>
+<p><span class="comment">Interwiki Language Links</span></p>
+<p>{{ languages( { "en": "en/XPInstall_API_Reference/Install_Object/Methods/registerChrome" } ) }}</p>

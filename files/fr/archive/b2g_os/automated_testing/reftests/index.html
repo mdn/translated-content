@@ -1,0 +1,191 @@
+---
+title: Firefox OS reftests
+slug: Archive/B2G_OS/Automated_testing/Reftests
+tags:
+  - B2G
+  - Firefox OS
+  - Tests automatiques
+translation_of: Archive/B2G_OS/Automated_testing/Reftests
+---
+<div class="summary">
+<p><span class="seoSummary">Les tests de référence (ou reftests), sont des tests simples qui comparent, deux rendus d'interface utilisateur, d'une application web séparément (Des éléments HTML, par exemple) pour vérifier si ils sont identiques ou non. Cet article vous fournit tout ce que vous devez savoir pour lancer la suite reftests de Mozilla sur B2G. Pour en savoir plus sur reftests, lisez <a href="/en-US/docs/Creating_reftest-based_unit_tests">Créer des tests unitaires basés sur reftest (Ressource en anglais)</a>.</span></p>
+</div>
+
+<h2 id="Prérequis_pour_lancer_reftests">Prérequis pour lancer reftests</h2>
+
+<p>Vous pouvez lancer <a href="/en-US/docs/Creating_reftest-based_unit_tests">reftests</a> sur B2G. Il est principalement essayé sur l'émulateur, mais en théorie doit fonctionner tout aussi bien sur des appareils. Dans cet article <code>$B2G_HOME</code> fait référence au clone du dépôt B2G. Vous trouverez ci-dessous ce que vous aurez besoin de compiler ou paramétrer, avant de pouvoir essayer de lancer les reftests B2G.</p>
+
+<div class="warning">
+<p>Si vous obtenez ce stacktrace pendant que vous jouez les reftests:</p>
+
+<p>ImportError: cannot import name expected</p>
+
+<div class="de2 li2">File "gecko-dev/objdir-b2g-ics-emulator/_tests/reftest/runreftestb2g.py", line <span class="nu0">16</span>, in &lt;module&gt;</div>
+
+<div class="de1 li1">    from b2g_desktop import run_desktop_reftest</div>
+
+<div class="de2 li2">File "Projects/gecko-dev/objdir-b2g-ics-emulator/_tests/reftest/b2g_desktop.py", line <span class="nu0">14</span>, in &lt;module&gt;</div>
+
+<div class="de2 li2">     from marionette import Marionette, expected</div>
+
+<div class="de2 li2"> </div>
+
+<div class="de2 li2">Ceci est un bogue connu sur https://bugzilla.mozilla.org/show_bug.cgi?id=1114474#c7</div>
+</div>
+
+<h3 id="Build_B2G_for_the_target_you're_testing">Build B2G for the target you're testing</h3>
+
+<p><a href="/en-US/docs/Mozilla/Boot_to_Gecko/Building_and_installing_Boot_to_Gecko">Regular B2G build instructions apply</a> — no need for any special build options.</p>
+
+<p>The B2G config that you will be using (what you pass to <code>./config.sh</code>) will probably be <code>emulator</code> as that is what reftests are typically run on. Before building B2G for the <code>emulator</code> config, pay special attention to the <a href="/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites#Emulator_build_issues" title="/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites#Emulator_build_issues">Emulator build issues</a> section in the <a href="/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites" title="/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites">Firefox OS build prerequisites</a> page.</p>
+
+<p>As usual, make sure <code>adb</code> is in your path and that it successfully connects to your running emulator or device. Try <code>adb devices</code> to make sure it is working ok.</p>
+
+<h2 id="Running_reftests">Running reftests</h2>
+
+<p>Having satisfied the above prerequisites, you can then run reftests using one of the following sets of terminal commands.</p>
+
+<h3 id="For_the_emulator">For the emulator</h3>
+
+<p>Use mach:</p>
+
+<pre>cd $B2G_HOME
+​./mach reftest-remote</pre>
+
+<p>This will run all reftests. If you want to run a specific reftest, do the following:</p>
+
+<pre>cd $B2G_HOME
+./mach reftest-remote relative/path/from/B2G/to/reftest.list</pre>
+
+<h3 id="For_a_real_device"><strong>For a real device</strong></h3>
+
+<p>Running reftests on a device is not officially supported yet. One problem is that most devices don't support the minimum required resolution (800x1000) for many of the tests. But if you want to try anyway, you should be able to do so using the following steps:</p>
+
+<pre class="brush: bash">cd $B2G_HOME/objdir-gecko
+make package-tests
+source _virtualenv/bin/activate
+cd dist/test-package-stage/reftest
+python runreftestb2g.py --b2gpath $B2G_HOME --xre-path /path/to/dir/containing/desktop/xpcshell --ignore-window-size <code>relative/path/from/B2G/objdir-gecko/to/reftest.list</code></pre>
+
+<h2 id="Running_crashtests">Running crashtests</h2>
+
+<p>To run crashtests, do the following:</p>
+
+<pre>cd $B2G_HOME
+​./mach crashtest-remote</pre>
+
+<p>This will run all crashtests. If you want to run a specific crashtest, do the following:</p>
+
+<pre>cd $B2G_HOME
+./mach reftest-remote relative/path/from/B2G/to/crashtests.list</pre>
+
+<h2 id="Running_jsreftests">Running jsreftests</h2>
+
+<p>JSReftests are not officially supported yet. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=972870">bug 972870</a> for progress updates on adding jsreftests to mach.</p>
+
+<h2 id="Running_reftest_with_non-default_options">Running reftest with non-default options</h2>
+
+<p>You can optionally add <code>--total-chunks</code> and <code>--this-chunks</code> arguments as you would with regular desktop reftests. Use:</p>
+
+<pre class="brush: bash">mach help reftest-remote</pre>
+
+<p>for a full list of supported arguments.</p>
+
+<h2 id="Running_reftest_with_a_downloaded_emulator">Running reftest with a downloaded emulator</h2>
+
+<p>If you've built B2G for another config (like otoro) and want to run the tests on an emulator, you can do so without building an emulator yourself. Just download the latest trunk arm emulator and do the following:</p>
+
+<pre class="brush: bash">pip install marionette-client
+python runreftestb2g.py --emulator arm --b2gpath path/to/emulator --xre-path /path/to/dir/containing/desktop/xpcshell --ignore-window-size <code>--emulator-res 800x1000 &lt;path_to_reftest_manifest&gt;</code></pre>
+
+<h2 id="Running_reftest_with_a_downloaded_emulator_and_downloaded_tests.zip_package">Running reftest with a downloaded emulator and downloaded tests.zip package</h2>
+
+<p>If you want to run reftests against a downloaded emulator and a downloaded <code>tests.zip</code> package, you should extract them both.</p>
+
+<p>Then run the following commands:</p>
+
+<pre class="brush: bash">cd $TESTS_ZIP_DIR/mozbase
+python setup_development.py
+cd $TESTS_ZIP_DIR/marionette
+python setup.py develop
+cd $TESTS_ZIP_DIR/reftest
+python runreftestb2g.py --emulator arm --b2gpath $EMULATOR_DIR --xre-path /path/to/dir/containing/desktop/xpcshell --ignore-window-size --emulator-res 800x1000 &lt;path_to_reftest_manifest&gt;</pre>
+
+<div class="note">
+<p><strong>Note</strong>: For best results, you should perform the above steps using a <a href="/en-US/docs/Python/Virtualenv" title="/en-US/docs/Python/Virtualenv">Python virtualenv</a>.</p>
+</div>
+
+<h2 id="Troubleshooting">Troubleshooting</h2>
+
+<p>The following sections provide some answers to common problems encountered when trying to use reftests.</p>
+
+<h3 id="I_can't_build_the_emulator!">I can't build the emulator!</h3>
+
+<p>If you have trouble building B2G in the <code>emulator</code> config, check out the <a href="/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites#Emulator_build_issues" title="/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites#Emulator_build_issues">Emulator build issues</a> section in the <a href="/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites" title="/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites">Firefox OS build prerequisites</a> page.</p>
+
+<h3 id="Check_that_your_B2G_buildemulator_works_and_that_ADB_can_connect_to_it">Check that your B2G build/emulator works and that ADB can connect to it</h3>
+
+<p>First check that your B2G build runs normally. If this is an emulator build, then <code>./run-emulator.sh</code> should work: it should start up the emulator and boot B2G inside it. If it doesn't, get the log from <code>adb logcat</code> and ask for help. If ADB fails to connect to the running emulator, make sure that you have no other (Android or B2G) devices connected, and try passing in the <code>-e</code> option to tell adb to focus on the emulator:</p>
+
+<pre class="brush: bash">adb logcat -e</pre>
+
+<p>Once you have verified that your B2G build/emulator works normally and that ADB can connect to it, the next step is to verify that your xpcshell desktop executable runs normally. If you built B2G for a real device and ADB can't connect to it, check out <a href="/en-US/docs/Mozilla/Firefox_OS/Debugging/Connecting_a_Firefox_OS_device_to_the_desktop" title="/en-US/docs/Mozilla/Firefox_OS/Debugging/Connecting_a_Firefox_OS_device_to_the_desktop">Connecting a Firefox OS device to the desktop</a>.</p>
+
+<div class="note">
+<p><strong>Note</strong>: None of the errors below should occur if you are using mach. If you have problems with mach, please file a bug under Testing/Reftest and CC :ahal</p>
+</div>
+
+<h3 id="Check_that_you_can_run_your_desktop_xpcshell_executable">Check that you can run your desktop xpcshell executable</h3>
+
+<p>The <code>python runreftestb2g.py</code> command line above will try to run xpcshell on your desktop with the path specified by the <code>--xre-path</code> argument. Check that running xpcshell from the current directory with this relative path actually works.</p>
+
+<p>For example, suppose that your command line contains:</p>
+
+<pre class="brush: bash">--xre-path /hack/mozilla-central/objdir/dist/bin</pre>
+
+<p>Try running this from the same directory as you want to run <code>python runreftestb2g.py</code> from<code>:</code></p>
+
+<pre><code class="brush: bash">$ /hack/mozilla-central/objdir/dist/bin/xpcshell</code></pre>
+
+<p>This should land you in a special-looking shell like this:</p>
+
+<pre class="brush: bash">js&gt;</pre>
+
+<p>If this fails with an error message complaining about being unable to find or load certain shared libraries, like this</p>
+
+<pre class="brush: bash">/hack/mozilla-central/objdir/dist/bin/xpcshell: error while loading shared libraries: libxul.so: cannot open shared object file: No such file or directory</pre>
+
+<p>then you need to set the right environment variable so that it looks for these libraries in the same directory. On Linux, you would set <code>LD_LIBRARY_PATH</code> to the same directory as you want to pass as <code>--xre-path</code>. For example, this should work:</p>
+
+<pre class="brush: bash">LD_LIBRARY_PATH=<code>/hack/mozilla-central/objdir/dist/bin <code>/hack/mozilla-central/objdir/dist/bin/xpcshell</code></code></pre>
+
+<p>On Mac OSX, the environment variable to set is <code>DYLD_LIBRARY_PATH</code>.</p>
+
+<h3 id="Check_that_reftest_can_find_httpd.js">Check that reftest can find httpd.js</h3>
+
+<p>If reftest still fails to run — returning early with an error — the next most likely cause of trouble is it failing to find certain files that it needs to load. The first file that it could fail to find is <code>httpd.js</code>. Typically, the reason why it would not find it is that you accidentally built xpcshell with <code>--disable-tests</code>. So, make sure that the path you pass to <code>--xre-path</code> does contain a <code>httpd.js</code> file under the <code>components</code> subdirectory.</p>
+
+<p>This is good:</p>
+
+<pre class="brush: bash">$ find /hack/mozilla-central/objdir/dist/bin/ -name httpd.js
+/hack/mozilla-central/objdir/dist/bin/components/httpd.js
+/hack/mozilla-central/objdir/dist/bin/modules/commonjs/sdk/test/httpd.js</pre>
+
+<p>This is bad (was caused by <code>--disable-tests</code>):</p>
+
+<pre class="brush: bash">$ find /hack/mozilla-central/objdir/dist/bin/ -name httpd.js
+/hack/mozilla-central/objdir/dist/bin/modules/commonjs/sdk/test/httpd.js</pre>
+
+<h3 id="Check_that_you_didn't_forget_to_make_package-tests">Check that you didn't forget to make package-tests</h3>
+
+<p>Forgetting the <code>make package-tests</code> step described above would certainly explain why nothing works.</p>
+
+<h3 id="Check_that_you_passed_a_correct_relative_path_to_the_reftest.list">Check that you passed a correct relative path to the reftest.list</h3>
+
+<p>The final argumant in the command line running reftest is the <code>relative/path/from/B2G/objdir-gecko/to/reftest.list</code>. This must be a relative path from the <code>B2G/objdir-gecko</code> directory to a <code>reftest.list</code> file under it. So check that a <code>reftest.list </code>file is actually present there! If it isn't, compare your command line to the sample command line below, and/or check that you didn't forget to make <code>package-tests</code> as explained above.</p>
+
+<p>Sample command line:</p>
+
+<pre class="brush: bash">$ LD_LIBRARY_PATH=/hack/mozilla-central/objdir/dist/bin python runreftestb2g.py --b2gpath /hack/b2g/B2G/ --xre-path /hack/mozilla-central/objdir/dist/bin  --ignore-window-size --emulator arm --emulator-res 800x1000 tests/layout/reftests/css-gradients/reftest.list</pre>
+
+<p>Here, we are running only the <code>css-gradients</code> directory of reftests.</p>

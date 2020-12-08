@@ -1,0 +1,93 @@
+---
+title: Test automatisé pour Firefox OS
+slug: Archive/B2G_OS/Automated_testing
+translation_of: Archive/B2G_OS/Automated_testing
+---
+<p></p>
+
+<div class="summary">
+<p>Vu que Firefox OS est en cours de développement, et que le support pour le nouveau matériel est à venir dans un futur proche, il est important de savoir comment le tester. Cette page présente des articles qui fournissent des informations concernant différents aspects pour le test de Firefox OS, ainsi que l’exécution des tests, l’automatisation, le suivi et l'établissemenr de rapports des résultats.</p>
+</div>
+
+<h2 id="Premiers_pas">Premiers pas</h2>
+
+<dl>
+ <dt><a href="/fr/Firefox_OS/Running_Tests_on_Firefox_OS_for_Developers">Exécuter des tests sur Firefox OS: un guide pour les développeurs</a></dt>
+ <dd>
+ <p>Un guide rapide, pour les développeurs, pour commencer à exécuter les tests. C’est d’ici que vous devez commencer si vous n’êtes pas confirmés dans l’exécution des tests Mozilla et les systèmes d’automatisation. Si vous l’êtes, vous aurez probablement une idée sur les tests que vous devez exécuter et comment procéder, et vous pouvez aller directement aux guides plus détaillées ci-dessous. </p>
+ </dd>
+</dl>
+
+<h2 id="Les_tests_Gaia">Les tests Gaia</h2>
+
+<p>Ces articles couvrent les suites de test primaires destinées à mettre Gaia à l’épreuve.</p>
+
+<dl>
+ <dt><a href="/fr/Firefox_OS/Automated_testing/gaia-ui-tests">Tests d'interface utilisateur Gaia</a></dt>
+ <dd>Tests Python des interactions et caractéristiques de l’interface utilisateur Gaia.</dd>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Gaia_integration_tests">Tests d'intégration Gaia</a></dt>
+ <dd>Tests d’intégration JavaScript pour Gaia, basés sur Marionette.</dd>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Gaia_unit_tests" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Gaia_unit_tests">Tests unitaires Gaia</a></dt>
+ <dd>Tests unitaires sans interaction avec l'interface utilisateur; écrits en JavaScript, et non basés sur Mrionette.</dd>
+ <dt><a href="/en-US/Firefox_OS/Platform/Automated_testing/Gaia_performance_tests">Tests de performance Gaia</a></dt>
+ <dd>Mesure des performance de l'application Gaia en se basant sur une instrumentation interne. The testing harness is in-tree.</dd>
+ <dt><a href="/en-US/Firefox_OS/Automated_testing/Raptor">Raptor: Outils de mesure de performance pour Gaia</a></dt>
+ <dd>Raptor est un outil qui permet de mesurer la performance spécifique à Firefox OS, qui à pour ambition d'améliorer les outils de test de performance existants.</dd>
+ <dt><a href="https://github.com/mozilla/b2gperf" title="https://github.com/mozilla/b2gperf">B2GPerf</a></dt>
+ <dd>Mesure la performance d'applications Gaia, basé sur une cuisine interne.</dd>
+ <dt><a href="https://wiki.mozilla.org/Project_Eideticker" title="https://github.com/mozilla/eideticker">Eideticker</a></dt>
+ <dd>Donne des mesures de performance d'applications Gaia, en se basant sur des captures d'écran.</dd>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Automated_testing/MTBF_tests">Tests MTBF</a></dt>
+ <dd>Durée moyenne avant panne(Mean Time Between Failure). Suite de tests lancés sur un périphérique pendant une longue période, essayant de trouver des problèmes de disponibilité de Gaia et de stabilité. (Actuellement, il est dans les mains de l'équipe Qualité à Taiwan et reste un framework de test en développement)</dd>
+</dl>
+
+<h2 id="Les_tests_B2G">Les tests B2G</h2>
+
+<p>Les tests ci-dessous couvrent différents faisceaux d'essai qui permettent de tester de nombreux aspect et fonctionnalités de B2G.</p>
+
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Mochitests" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Mochitests">Mochitests</a></dt>
+ <dd>Tests fonctionnels et d'API, basés sur HTML et JavaScript. Les tests n'interagissent pas avec Gaia.</dd>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Reftests" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Reftests">Reftests</a></dt>
+ <dd>Test d'exactitude des rendus des tests Gecko.</dd>
+ <dt><a href="/en-US/docs/Marionette/Marionette_JavaScript_Tests" title="/en-US/docs/Marionette/Marionette_JavaScript_Tests">WebAPI tests</a></dt>
+ <dd>Tests des WebAPI Gecko, en se basant sur JavaScript. La majorité de ces tests exigent un émulateur.</dd>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/XPCShell" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/XPCShell">xpcshell tests</a></dt>
+ <dd>Tests 'sans tête' (headless) des API XPCOM de Gecko.</dd>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Automated_testing/Cppunit_Tests">Tests cppunit</a></dt>
+ <dd>Tests unitaires C++ 'sans tête' (headless).</dd>
+</dl>
+
+<h2 id="Supporting_documentation">Supporting documentation</h2>
+
+<p>Cette section, apporte des liens, sur quelques-unes des technologies de support, sur lesquels les tests Mozilla s'appuient, et pour lesquels vous voudrez surement en savoir plus.</p>
+
+<dl>
+ <dt><a href="/en-US/docs/Marionette" title="/en-US/docs/Marionette">Marionette</a></dt>
+ <dd>Un conducteur de test à distance, basé sur Selenium.</dd>
+ <dt><a href="/en-US/docs/Marionette/Marionette_JavaScript_Tools">Outils JavaScript Marionette</a></dt>
+ <dd>Basés sur node.js ils permettent de lancer des tests sur Marionette.</dd>
+ <dt><a href="/en-US/docs/Marionette/Python_Marionette">Client Python Marionette</a></dt>
+ <dd>Un client Python pour lancer des tests sur Marionette.</dd>
+ <dt><a href="https://wiki.mozilla.org/Build:TryServer">Try server</a></dt>
+ <dd>Serveur de Mozilla permettant de tester les correctifs avant de les intégrer dans le répertoire central. Voir aussi le <a href="http://trychooser.pub.build.mozilla.org/">TryChooser Syntax Builder</a>.</dd>
+</dl>
+
+<div class="note">
+<p><strong>A noter</strong>: Si vous souhaitez lancer Marionette sur une compilation pour la production (pour lancer les tests d'intégration de gaia, gaia-ui-tests, etc.), vous pouvez <a href="https://github.com/mozilla-b2g/marionette-extension">installer Marionette comme une extension</a> (cela fonctionne pour l'instant uniquement sur les compilations en version 1.3, mais le support sera bientôt plus étendu.)</p>
+</div>
+
+<h2 id="Intégration_continue_et_rapport_des_résultats">Intégration continue et rapport des résultats</h2>
+
+<p>Les articles suivants couvrent les mécanismes d'intégration continue et d'établissement de rapports des résultats utilisés par Mozilla afin de sauvegarder et interpréter les données de test.</p>
+
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Automated_testing/Treeherder">Treeherder</a></dt>
+ <dd>Comprendre les tests et compilations lancées sur Treeherder.</dd>
+ <dt><a href="http://raptor-ui.divshot.io">Raptor</a></dt>
+ <dd>Visualisation des tests de performance lancés avec l'outil <a href="/en-US/Firefox_OS/Automated_testing/Raptor">Raptor</a>.</dd>
+ <dt><a href="https://wiki.mozilla.org/B2G/Datazilla" title="https://wiki.mozilla.org/B2G/Datazilla">Datazilla [déprécié]</a></dt>
+ <dd>Comprendre quels tests de performances sont rapportés sur <a href="https://datazilla.mozilla.org/b2g/" title="https://datazilla.mozilla.org/b2g/">Tableau de bord Datazilla</a>, et qu'est ce qu'ils mesurent.</dd>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Test_Execution_Chart" title="/en-US/docs/Mozilla/Firefox_OS/Testing/Test_Execution_Chart">Graphe de test d'exécution</a></dt>
+ <dd>Un graphe montrant quels tests ont été exécutés - sur quels appareils et quand - et quelles sont les plateformes supportées par chaque test.</dd>
+</dl>

@@ -1,0 +1,409 @@
+---
+title: browser
+slug: Mozilla/Tech/XUL/browser
+translation_of: Archive/Mozilla/XUL/browser
+---
+<div class="noinclude">
+ <span class="breadcrumbs XULRef_breadcrumbs">
+ « <a href="/zh-CN/docs/XUL_Reference">XUL Reference home</a>    [
+ <a href="#Examples">示例</a> |
+ <a href="#Attributes">属性</a> |
+ <a href="#Properties">特性</a> |
+ <a href="#Methods">方法</a> |
+ <a href="#Related">相关</a> ]
+</span></div>
+<p>A frame which is expected to contain a view of a Web document. It is similar to an <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/iframe" title="iframe">iframe</a></code> except that it holds a page history and contains additional methods to manipulate the currently displayed page.</p>
+<p>Most of the properties and methods of the browser will rarely be used and can only be called from chrome URLs. Other URLs will need to use the document and history objects to change the displayed document.</p>
+<dl>
+ <dt>
+  Attributes</dt>
+ <dd>
+  <a href="#a-autocompleteenabled">autocompleteenabled</a>, <a href="#a-autocompletepopup">autocompletepopup</a>, <a href="#a-autoscroll">autoscroll</a>, <a href="#a-disablehistory">disablehistory</a>, <a href="#a-disablesecurity">disablesecurity</a>, <a href="#a-homepage">homepage</a>, <a href="#a-showcaret">showcaret</a>, <a href="#a-src">src</a>, <a href="#a-browser.type">type</a></dd>
+</dl>
+<dl>
+ <dt>
+  Properties</dt>
+ <dd>
+  <a href="#p-accessibleType">accessibleType</a>, <a href="#p-canGoBack">canGoBack</a>, <a href="#p-canGoForward">canGoForward</a>, <a href="#p-contentDocument">contentDocument</a>, <a href="#p-contentPrincipal">contentPrincipal</a>, <a href="#p-contentTitle">contentTitle</a>, <a href="#p-contentViewerEdit">contentViewerEdit</a>, <a href="#p-contentViewerFile">contentViewerFile</a>, <a href="#p-contentWindow">contentWindow</a>, <a href="#p-currentURI">currentURI</a>, <a href="#p-docShell">docShell</a>, <a href="#p-documentCharsetInfo">documentCharsetInfo</a>, <a href="#p-homePage">homePage</a>, <a href="#p-markupDocumentViewer">markupDocumentViewer</a>, <a href="#p-messageManager">messageManager</a>, <a href="#p-browser.preferences">preferences</a>, <a href="#p-securityUI">securityUI</a>, <a href="#p-sessionHistory">sessionHistory</a>, <a href="#p-webBrowserFind">webBrowserFind</a>, <a href="#p-webNavigation">webNavigation</a>, <a href="#p-webProgress">webProgress</a></dd>
+</dl>
+<dl>
+ <dt>
+  Methods</dt>
+ <dd>
+  <a href="#m-addProgressListener">addProgressListener</a>, <a href="#m-goBack">goBack</a>, <a href="#m-goForward">goForward</a>, <a href="#m-goHome">goHome</a>, <a href="#m-gotoIndex">gotoIndex</a>, <a href="#m-loadURI">loadURI</a>, <a href="#m-loadURIWithFlags">loadURIWithFlags</a>, <a href="#m-reload">reload</a>, <a href="#m-reloadWithFlags">reloadWithFlags</a>, <a href="#m-removeProgressListener">removeProgressListener</a>, <a href="#m-stop">stop</a>, <a href="#m-swapDocShells">swapDocShells</a></dd>
+</dl>
+<h3 id="Examples" name="Examples">Examples</h3>
+<div class="float-right">
+ <img alt="Image:XUL_ref_browser.png" class="internal" src="/@api/deki/files/447/=XUL_ref_browser.png"></div>
+<pre>&lt;!-- shows Mozilla homepage inside a groupbox --&gt;
+&lt;groupbox flex="1"&gt;
+  &lt;caption label="Mozilla homepage"/&gt;
+  &lt;browser type="content" src="http://www.mozilla.org" flex="1"/&gt;
+&lt;/groupbox&gt;
+</pre>
+<h3 id="Attributes" name="Attributes">Attributes</h3>
+<p></p>
+<p></p><div id="a-autocompleteenabled">
+
+
+<dl>
+ <dt><code id="a-autocompleteenabled"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/autocompleteenabled">autocompleteenabled</a></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>Set to <code>true</code> to enable autocomplete of fields.</dd>
+</dl>
+</div> <div id="a-autocompletepopup">
+
+<dl>
+  <dt>
+    <code id="a-autocompletepopup"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/autocompletepopup">autocompletepopup</a></code></dt>
+  <dd>
+    Type: <em>id</em></dd>
+  <dd>
+    The <code id="a-id"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code> of a <code><a href="/en-US/docs/Mozilla/Tech/XUL/popup" title="popup">popup</a></code> element used to hold autocomplete results for the element.</dd>
+</dl>
+
+</div> <div id="a-autoscroll">
+
+
+<dl>
+ <dt><code id="a-autoscroll"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/autoscroll">autoscroll</a></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>Set to <code>false</code> to disable autoscroll for this browser. If this attribute is set to <code>true</code> or omitted, autoscroll will be enabled or depending on the user preference <code>general.autoScroll</code>.</dd>
+</dl>
+</div> <div id="a-disablehistory">
+
+<dl> <dt><code id="a-disablehistory"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/disablehistory">disablehistory</a></code></dt> <dd>Type: <em>boolean</em></dd> <dd>Disables both session and global history for the docshell attached to the browser.</dd>
+</dl>
+</div> <div id="a-disablesecurity">
+
+
+<dl>
+ <dt><code id="a-disablesecurity"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/disablesecurity">disablesecurity</a></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>Set this attribute to <code>true</code> to disable the security UI for this browser. Omit this attribute off to enable it.</dd>
+</dl>
+</div> <div id="a-homepage">
+
+
+<dl>
+ <dt><code id="a-homepage"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/homepage">homepage</a></code></dt>
+ <dd>Type: <em>URL</em></dd>
+ <dd>This attribute allows you to set a homepage for the browser element. It does not have any correlation with the user's browser homepage; instead it is a convenient property to hold a home page. You can switch to this home page using the <span id="m-goHome"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/goHome">goHome</a></code></span> method.</dd>
+</dl>
+</div> <div id="a-showcaret">
+
+
+<dl>
+ <dt><code id="a-showcaret"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/showcaret">showcaret</a></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>Whether or not to cause a typing caret to be visible in the content area. Default is <code>false</code>.</dd>
+</dl>
+
+
+</div> <div id="a-src">
+
+<dl>
+  <dt>
+    <code id="a-src"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/src">src</a></code></dt>
+  <dd>
+    Type: <em>URI</em></dd>
+  <dd>
+    The URI of the content to appear in the element.</dd>
+</dl>
+
+
+</div> <div id="a-browser.type">
+
+
+<dl>
+ <dt><code id="a-browser.type"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/browser.type">type</a></code></dt>
+ <dd><span class="seoSummary">Type: <em>one of the values below</em>.</span></dd>
+ <dd><span class="seoSummary">The type of browser, which can be used to set access of the document loaded inside the browser.</span> If this is not set, the loaded document has the same access as the window containing the <code><code><a href="/en-US/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code></code>. More precisely: The document loaded into a chrome window is always of chrome type. Subdocuments of chrome documents are of chrome type, unless the container element (one of iframe, browser or editor) has one of the special type attribute values (the common ones are content, content-targetable and content-primary) indicating that the subdocument is of content type. This boundary has a number of special effects, such as making window.top == window (unless the <code><code><a href="/en-US/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code></code> is added to a chrome document), and preventing documents from inheriting the principal of the parent document. The type attribute on all frames in content documents is ignored; subdocuments of content documents are always content documents.</dd>
+ <dt>
+ <div class="warning"><strong>Warning: </strong>The type attribute must be set before the element is inserted into the document.</div>
+ </dt>
+ <dd>
+ <dl>
+  <dt><code>content</code></dt>
+  <dd>A browser for content. The content that is loaded inside the browser is not allowed to access the chrome above it.</dd>
+  <dt><code>content-primary</code></dt>
+  <dd>The primary browser for content. The content that is loaded inside the browser is not allowed to access the chrome above it. For instance, in a web browser, this would be the element that displays the web page. The window for the primary content can be retrieved more conveniently using <a href="/en/DOM/window.content" title="en/DOM/window.content">window.content</a>.</dd>
+  <dt><code>content-targetable</code></dt>
+  <dd>One browser among many for content. The content that is loaded inside the browser is not allowed to access the chrome above it. This is the preferred value for any <code><code><a href="/en-US/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code></code> element in an application, which will use multiple browsers of equal privileges, and is unselected at the moment.</dd>
+  <dt><code>chrome</code></dt>
+  <dd>(default behaviour): A browser, intended to be used for loading privileged content using a chrome:// URI. Don't use for content from web, as this may cause serious security problems!</dd>
+ </dl>
+ </dd>
+</dl>
+
+
+</div><p></p>
+<h3 id="Properties" name="Properties">Properties</h3>
+<p></p>
+<p></p><div id="p-accessibleType">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/accessibleType">accessibleType</a></span></code></dt>
+ <dd>
+  Type:
+  <i>
+   integer</i>
+ </dd>
+ <dd>
+  A value indicating the type of accessibility object for the element.</dd>
+</dl>
+
+<p></p></div> <div id="p-canGoBack">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/canGoBack">canGoBack</a></span></code></dt>
+  <dd>
+    Type: <em>boolean</em></dd>
+  <dd>
+    This read-only property is <code>true</code> if there is a page to go back to in the session history and the Back button should be enabled.</dd>
+</dl></div> <div id="p-canGoForward">
+
+<dl>
+ <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/canGoForward">canGoForward</a></span></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>This read-only property is <code>true</code> if there is a page to go forward to in the session history and the Forward button should be enabled.</dd>
+</dl></div> <div id="p-contentDocument">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/contentDocument">contentDocument</a></span></code></dt>
+  <dd>
+    Type: <em>document</em></dd>
+  <dd>
+    This read-only property contains the document object in the element.</dd>
+</dl></div> <div id="p-contentPrincipal">
+
+<dl>
+ <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/contentPrincipal">contentPrincipal</a></span></code></dt>
+ <dd>Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPrincipal" title="">nsIPrincipal</a></code></em></dd>
+ <dd>This read-only property contains the principal for the content loaded in the browser, which provides security context information.</dd>
+</dl></div> <div id="p-contentTitle">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/contentTitle">contentTitle</a></span></code></dt>
+  <dd>
+    Type: <em>string</em></dd>
+  <dd>
+    This read-only property contains the title of the document object in the browser.</dd>
+</dl></div> <div id="p-contentViewerEdit">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/contentViewerEdit">contentViewerEdit</a></span></code></dt>
+  <dd>
+    Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentViewerEdit" title="">nsIContentViewerEdit</a></code></em></dd>
+  <dd>
+    This read-only property contains the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentViewerEdit" title="">nsIContentViewerEdit</a></code> which handles clipboard operations on the document.</dd>
+</dl></div> <div id="p-contentViewerFile">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/contentViewerFile">contentViewerFile</a></span></code></dt>
+  <dd>
+    Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentViewerFile" title="">nsIContentViewerFile</a></code></em></dd>
+  <dd>
+    Reference to the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentViewerFile" title="">nsIContentViewerFile</a></code> interface for the document.</dd>
+</dl></div> <div id="p-contentWindow">
+<dl> <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/contentWindow">contentWindow</a></span></code></dt> <dd>Type: <em>TODO</em></dd> <dd>Use the contentWindow.wrappedJSObject to obtain a DOM(html) window object</dd>
+</dl></div> <div id="p-currentURI">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/currentURI">currentURI</a></span></code></dt>
+  <dd>
+    Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI" title="">nsIURI</a></code></em></dd>
+  <dd>
+    This read-only property contains the currently loaded URL. To change the URL, use the <span id="m-loadURI"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/loadURI">loadURI</a></code></span> method.</dd>
+</dl></div> <div id="p-docShell">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/docShell">docShell</a></span></code></dt>
+  <dd>
+    Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDocShell" title="">nsIDocShell</a></code></em></dd>
+  <dd>
+    This read-only property contains the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDocShell" title="">nsIDocShell</a></code> object for the document.</dd>
+</dl></div> <div id="p-documentCharsetInfo">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/documentCharsetInfo">documentCharsetInfo</a></span></code> <span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 12.0 / Thunderbird 12.0 / SeaMonkey 2.9)">Obsolete since Gecko 12.0</span></dt>
+  <dd>
+    Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDocumentCharsetInfo" title="">nsIDocumentCharsetInfo</a></code></em></dd>
+  <dd>
+    This read-only property contains the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDocumentCharsetInfo" title="">nsIDocumentCharsetInfo</a></code> object for the document which is used to handle which character set should be used to display the document. The properties of the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDocumentCharsetInfo" title="">nsIDocumentCharsetInfo</a></code> object were merged into the docshell in Gecko 12.0 (Firefox 12.0 / Thunderbird 12.0 / SeaMonkey 2.9).</dd>
+</dl></div> <div id="p-homePage">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/homePage">homePage</a></span></code></dt>
+  <dd>
+    Type: <em>string home page URL</em></dd>
+  <dd>
+    This property holds the value of the user's home page setting.</dd>
+</dl></div> <div id="p-markupDocumentViewer">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/markupDocumentViewer">markupDocumentViewer</a></span></code></dt>
+  <dd>
+    类型: <em><code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMarkupDocumentViewer" title="">nsIMarkupDocumentViewer</a></code></em></dd>
+  <dd>
+    这个只读的属性包含 <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMarkupDocumentViewer" title="">nsIMarkupDocumentViewer</a></code> 接口，负责document文档的绘制。</dd>
+</dl></div> <div id="p-messageManager">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/messageManager">messageManager</a></span></code> </dt>
+  <dd>
+    Type: <em>message manager object</em></dd>
+  <dd>
+    This read-only property returns the <a href="/en/The_message_manager" title="en/The message manager">message manager</a> object for the <code><a href="/en-US/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code> element.</dd>
+</dl></div> <div id="p-browser.preferences">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/browser.preferences">preferences</a></span></code></dt>
+  <dd>
+    类型: <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPrefService" title="">nsIPrefService</a></code></dd>
+  <dd>
+    这是一个只读属性,其值为一个<code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPref" title="">nsIPref</a></code>对象,可以用来读取或设置用户的首选项.</dd>
+</dl></div> <div id="p-securityUI">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/securityUI">securityUI</a></span></code></dt>
+  <dd>
+    Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISecureBrowserUI" title="">nsISecureBrowserUI</a></code></em></dd>
+  <dd>
+    The read-only property holds an object which may be used to determine the security level of the loaded document.</dd>
+</dl></div> <div id="p-sessionHistory">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/sessionHistory">sessionHistory</a></span></code></dt>
+  <dd>
+    Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISHistory" title="">nsISHistory</a></code></em></dd>
+  <dd>
+    This read-only property contains the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISHistory" title="">nsISHistory</a></code> object which holds the session history.</dd>
+</dl></div> <div id="p-webBrowserFind">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/webBrowserFind">webBrowserFind</a></span></code></dt>
+  <dd>
+    Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebBrowserFind" title="">nsIWebBrowserFind</a></code></em></dd>
+  <dd>
+    This read-only property contains an <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebBrowserFind" title="">nsIWebBrowserFind</a></code> object which can be used to search for text in the document.</dd>
+</dl></div> <div id="p-webNavigation">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/webNavigation">webNavigation</a></span></code></dt>
+  <dd>
+    Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebNavigation" title="">nsIWebNavigation</a></code></em></dd>
+  <dd>
+    This read-only property contains the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebNavigation" title="">nsIWebNavigation</a></code> object for the document. Most of its methods are callable directly on the element itself, such as <span id="m-goBack"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/goBack">goBack</a></code></span> and <span id="m-goForward"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/goForward">goForward</a></code></span>. It also contains the load constants used by <span id="m-reloadWithFlags"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/reloadWithFlags">reloadWithFlags</a></code></span> and <span id="m-loadURIWithFlags"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/loadURIWithFlags">loadURIWithFlags</a></code></span>.</dd>
+</dl></div> <div id="p-webProgress">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/webProgress">webProgress</a></span></code></dt>
+  <dd>
+    Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebProgress" title="">nsIWebProgress</a></code></em></dd>
+  <dd>
+    This read-only property contains an <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebProgress" title="">nsIWebProgress</a></code> object which is used to monitor the progress of a document loading.</dd>
+</dl></div><p></p>
+<h3 id="Methods" name="Methods">Methods</h3>
+<p></p><table style="border: 1px solid rgb(204, 204, 204); margin: 0 0 10px 10px; padding: 0 10px; background: rgb(238, 238, 238); float: right; width: 250px;">
+<tbody>
+<tr>
+<td>
+<p><strong>Inherited Methods</strong><br>
+<small><code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.addEventListener">addEventListener()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.appendChild">appendChild()</a></code>, <span id="m-blur"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/blur">blur</a></code></span>, <span id="m-click"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/click">click</a></code></span>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.cloneNode">cloneNode()</a></code>, <a href="/En/DOM/Node.compareDocumentPosition" title="En/DOM/Node.compareDocumentPosition">compareDocumentPosition</a>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.dispatchEvent">dispatchEvent()</a></code>, <span id="m-doCommand"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/doCommand">doCommand</a></code></span>, <span id="m-focus"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/focus">focus</a></code></span>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttribute">getAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttributeNode">getAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttributeNodeNS">getAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttributeNS">getAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getBoundingClientRect">getBoundingClientRect()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getClientRects">getClientRects()</a></code>, <span id="m-getElementsByAttribute"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/getElementsByAttribute">getElementsByAttribute</a></code></span>, <span id="m-getElementsByAttributeNS"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/getElementsByAttributeNS">getElementsByAttributeNS</a></code></span>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getElementsByClassName">getElementsByClassName()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getElementsByTagName">getElementsByTagName()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getElementsByTagNameNS">getElementsByTagNameNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getFeature">getFeature()</a></code>, <a href="/En/DOM/Node.getUserData" title="En/DOM/Node.getUserData">getUserData</a>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasAttribute">hasAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasAttributeNS">hasAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasAttributes">hasAttributes()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasChildNodes">hasChildNodes()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.insertBefore">insertBefore()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.isDefaultNamespace">isDefaultNamespace()</a></code>, <a href="/En/DOM/Node.isEqualNode" title="En/DOM/Node.isEqualNode">isEqualNode</a>, <a href="/En/DOM/Node.isSameNode" title="En/DOM/Node.isSameNode">isSameNode</a>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.isSupported">isSupported()</a></code>, <a href="/En/DOM/Node.lookupNamespaceURI" title="En/DOM/Node.lookupNamespaceURI">lookupNamespaceURI</a>, <a href="/En/DOM/Node.lookupPrefix" title="En/DOM/Node.lookupPrefix">lookupPrefix</a>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.normalize">normalize()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.querySelector">querySelector()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.querySelectorAll">querySelectorAll()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeAttribute">removeAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeAttributeNode">removeAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeAttributeNS">removeAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeChild">removeChild()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeEventListener">removeEventListener()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.replaceChild">replaceChild()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttribute">setAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttributeNode">setAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttributeNodeNS">setAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttributeNS">setAttributeNS()</a></code>, <a href="/En/DOM/Node.setUserData" title="En/DOM/Node.setUserData">setUserData</a></small></p>
+
+</td>
+</tr>
+</tbody>
+</table><p></p>
+<p></p><dl>
+  <dt>
+    <span id="m-addProgressListener"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/addProgressListener">addProgressListener( listener )</a></code></span></dt>
+  <dd>
+    Return type: <em>no return value</em></dd>
+  <dd>
+    Add a progress listener to the browser which will monitor loaded documents. The progress listener should implement the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebProgressListener" title="">nsIWebProgressListener</a></code> interface.</dd>
+</dl> <dl>
+ <dt><span id="m-goBack"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/goBack">goBack()</a></code></span></dt>
+ <dd>Return type: <em>no return value</em></dd>
+ <dd>Go back one page in the history.</dd>
+</dl> <dl>
+ <dt><span id="m-goForward"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/goForward">goForward()</a></code></span></dt>
+ <dd>Return type: <em>no return value</em></dd>
+ <dd>Go forward one page in the history.</dd>
+</dl> <dl>
+ <dt><span id="m-goHome"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/goHome">goHome()</a></code></span></dt>
+ <dd>Return type: <em>no return value</em></dd>
+ <dd>Load the user's home page into the browser.</dd>
+</dl> <dl>
+ <dt><span id="m-gotoIndex"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/gotoIndex">gotoIndex( index )</a></code></span></dt>
+ <dd>Return type: <em>no return value</em></dd>
+ <dd>Navigate to the page in the history with the given index. Use a positive number to go forward and a negative number to go back.</dd>
+</dl> <p><span class="comment">NOTE: This is the XUL method on &lt;browser&gt; / &lt;tabbrowser&gt;, not the global function in <a class="external" rel="freelink">chrome://browser/content/browser.js</a>. Please check which one you're documenting! (This one has no post data parameter, see loadURIWithFlags for a version that does)</span></p>
+<dl>
+  <dt>
+    <span id="m-loadURI"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/loadURI">loadURI( uri, referrer, charset )</a></code></span></dt>
+  <dd>
+    Return type: <em>no return value</em></dd>
+  <dd>
+    Load a URL into the document, with the given referrer and character set.</dd>
+  <dd>
+    The first argument should be a string, not a <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI" title="">nsIURI</a></code> object. To get a string from an <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI" title="">nsIURI</a></code>, use <code>nsIURI.spec</code> or <code>nsIURI.asciiSpec</code></dd>
+</dl> <dl>
+ <dt><span id="m-loadURIWithFlags"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/loadURIWithFlags">loadURIWithFlags( uri, flags, referrer, charset, postData )</a></code></span></dt>
+ <dd>Return type: <em>no return value</em></dd>
+ <dd>Load a URL into the document, with the specified load flags, the given referrer, character set, and POST data. In addition to the flags allowed for the <span id="m-reloadWithFlags"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/reloadWithFlags">reloadWithFlags</a></code></span> method, the following flags are also valid:
+ <ul>
+  <li><code>LOAD_FLAGS_IS_REFRESH</code>: This flag is used when the URL is loaded because of a meta tag refresh or redirect.</li>
+  <li><code>LOAD_FLAGS_IS_LINK</code>: This flag is used when the URL is loaded because a user clicked on a link. The HTTP Referer header is set accordingly.</li>
+  <li><code>LOAD_FLAGS_BYPASS_HISTORY</code>: Do not add the URL to the session history.</li>
+  <li><code>LOAD_FLAGS_REPLACE_HISTORY</code>: Replace the current URL in the session history with a new one. This flag might be used for a redirect.</li>
+ </ul>
+ </dd>
+</dl>
+
+<p>(See <code><a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/nsIWebNavigation#loadURI()">nsIWebNavigation.loadURI()</a></code> for details on the <code>referrer</code> and <code>postData</code> parameters.)</p> <dl>
+ <dt><span id="m-reload"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/reload">reload()</a></code></span></dt>
+ <dd>Return type: <em>no return value</em></dd>
+ <dd>Reloads the document in the <code><a href="/en-US/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code> element on which you call this method.</dd>
+</dl> <dl>
+ <dt><span id="m-reloadWithFlags"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/reloadWithFlags">reloadWithFlags( flags )</a></code></span></dt>
+ <dd>Return type: <em>no return value</em></dd>
+ <dd>Reloads the document in the browser with the given load flags. The flags listed below may be used, which are all constants of the <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/webNavigation">webNavigation</a></span></code> property (or the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebNavigation" title="">nsIWebNavigation</a></code> interface). You may combine flags using a or symbol ( <code>|</code> ).
+ <ul>
+  <li><code>LOAD_FLAGS_NONE</code>: No special flags. The document is loaded normally.</li>
+  <li><code>LOAD_FLAGS_BYPASS_CACHE</code>: Reload the page, ignoring if it is already in the cache. This is the flag used when the reload button is pressed while the Shift key is held down.</li>
+  <li><code>LOAD_FLAGS_BYPASS_PROXY</code>: Reload the page, ignoring the proxy server.</li>
+  <li><code>LOAD_FLAGS_CHARSET_CHANGE</code>: This flag is used if the document needs to be reloaded because the character set changed.</li>
+ </ul>
+ </dd>
+</dl> <dl>
+ <dt><span id="m-removeProgressListener"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/removeProgressListener">removeProgressListener( listener )</a></code></span></dt>
+ <dd>Return type: <em>no return value</em></dd>
+ <dd>Remove a <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebProgressListener" title="">nsIWebProgressListener</a></code> from the browser.</dd>
+</dl> <dl>
+  <dt>
+    <span id="m-stop"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/stop">stop()</a></code></span></dt>
+  <dd>
+    返回值: 无返回值</dd>
+  <dd>
+    效果等同于按下了停止按钮,停止当前页面中文档的加载.</dd>
+</dl> <dl>
+  <dt>
+    <span id="m-swapDocShells"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/swapDocShells">swapDocShells( otherBrowser )</a></code></span></dt>
+  <dd>
+    Return type: <em>no return value</em></dd>
+  <dd>
+    Swaps the content, history and current state of this <code><a href="/en-US/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code> with another browser. During the swap, pagehide and pageshow events are fired on both browsers. This method can be used to move browser between windows or tear off a browser into a new window.</dd>
+</dl>
+
+<div class="note">
+<p><strong>Note:</strong> Both browsers must be either standalone browsers or embedded in a <a href="/en-US/docs/XUL/tabbrowser"><code>tabbrowser</code></a>. You can't mix them.</p></div><p></p>
+<h3 id="Related" name="Related">Related</h3>
+<dl>
+ <dt>
+  Interfaces</dt>
+ <dd>
+  <a href="/en/XPCOM_Interface_Reference/nsIAccessibleProvider" title="en/nsIAccessibleProvider">nsIAccessibleProvider</a></dd>
+</dl>
+<p></p>

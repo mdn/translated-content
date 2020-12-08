@@ -1,0 +1,86 @@
+---
+title: Twitter
+slug: Jetpack/Libraries/Twitter
+translation_of: Archive/Mozilla/Jetpack/Libraries/Twitter
+---
+<p><code>jetpack.lib.twitter</code>は、Twitter REST APIを扱う非常にシンプルで軽量なライブラリです。単なるXMLHTTPRequestの糖衣構文以上の事ができます。</p>
+<p>ライブラリを使うには、<a class="external" href="http://apiwiki.twitter.com/Twitter-API-Documentation">Twitter's own API</a>に慣れている必要があるでしょう. (簡単です！)</p>
+<h2 id="メソッドについて">メソッドについて</h2>
+<p>各メソッドはそれぞれTwitter APIに対応しています. 例えば、つぶやくためのAPIメソッド<code>statuses/update</code>は,<code>jetpack.lib.twitter.statuses.update()</code>に対応します. <code>trends/current</code>を呼ぶ為には <code>jetpack.lib.twitter.trends.current()</code>を使います. <code>search</code>は？ <code>jetpack.lib.twitter.search()</code>です. スラッシュをドットに変えれば、だいたいうまくいくでしょう。</p>
+<p>ほとんどのTwitter APIメソッドがサポートされていますが、サポートされていないものもあります。リストを取得するメソッドやスパムを報告するメソッド、OAuthはサポートされていません。使いたい機能がサポートされていなかった場合は、<a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?alias=&amp;assigned_to=nobody%40mozilla.org&amp;blocked=&amp;bug_file_loc=http%3A%2F%2F&amp;bug_severity=normal&amp;bug_status=UNCONFIRMED&amp;cc=adw%40mozilla.com&amp;cf_blocking_193=---&amp;cf_status_192=---&amp;comment=&amp;component=Jetpack&amp;contenttypeentry=&amp;contenttypemethod=autodetect&amp;contenttypeselection=text%2Fplain&amp;dependson=&amp;description=&amp;flag_type-4=X&amp;form_name=enter_bug&amp;keywords=&amp;maketemplate=Remember%20values%20as%20bookmarkable%20template&amp;op_sys=All&amp;priority=--&amp;product=Mozilla%20Labs&amp;qa_contact=jetpack%40mozilla-labs.bugs&amp;rep_platform=All&amp;short_desc=Twitter%20library%3A%20&amp;target_milestone=--&amp;version=unspecified" title="https://bugzilla.mozilla.org/enter_bug.cgi?alias=&amp;assigned_to=nobody@mozilla.org&amp;blocked=&amp;bug_file_loc=http://&amp;bug_severity=normal&amp;bug_status=UNCONFIRMED&amp;cc=adw@mozilla.com&amp;cf_blocking_193=---&amp;cf_status_192=---&amp;comment=&amp;component=Jetpack&amp;contenttypeentry=&amp;contenttypemethod=autodetect&amp;contenttypeselection=text/plain&amp;dependson=&amp;description=&amp;flag_type-4=X&amp;form_name=enter_bug&amp;keywords=&amp;maketemplate=Remember     values as bookmarkable     template&amp;op_sys=All&amp;priority=--&amp;product=Mozilla     Labs&amp;qa_contact=jetpack@mozilla-labs.bugs&amp;rep_platform=All&amp;short_desc=Twitter     library: &amp;target_milestone=--&amp;version=unspecified">バグを報告するか、</a>. <a class="external" href="http://hg.mozilla.org/labs/jetpack/file/tip/extension/content/js/twitter.js" title="http://hg.mozilla.org/labs/jetpack/file/tip/extension/content/js/twitter.js">パッチを書いて下さい</a>!</p>
+<dl>
+</dl>
+<h2 id="引数について">引数について</h2>
+<p>ライブラリの全てのメソッドは単一のオブジェクトを引数にとります。オブジェクトの定義の方法は2通りあります。</p>
+<p>シンプルな一つ目の方法は、Twitterメソッドのパラメータを表現するオブジェクトのプロパティを定義する方法です。例えば、いくつかのTwitterのメソッドは<code>id</code>パラメーターを取ります。これらのメソッドを使う場合、<code>id</code>プロパティを定義してユーザのIDをセットします。(<a class="external" href="http://apiwiki.twitter.com/Twitter-API-Documentation" title="http://apiwiki.twitter.com/Twitter-API-Documentation">TwitterのAPIリファレンス</a>に様々なメソッドのパラメータの解説が載っています)。 また、<code>success</code>と<code>error</code>という特別なパラメーターも存在します. <code>success</code>はリクエストが成功した場合に呼び出されるコールバック関数で、<code>error</code>はリクエストが失敗時に呼び出されるコールバック関数です. ライブラリは受け取ったコールバックを単純に<code>jQuery.ajax()</code>渡すため, 以下のように呼び出されます。</p>
+<ul>
+ <li><code>success(data, textStatus)</code>
+  <ul>
+   <li><code>data</code>はデコードされたJSONレスポンスです。</li>
+   <li><code>textStatus</code>はステータスを表すシンプルな文字列です。</li>
+  </ul>
+ </li>
+ <li><code>error(xmlHttpRequest, textStatus, errorThrown)</code>
+  <ul>
+   <li><code>xmlHttpRequest</code>はリクエストで使われたXHRです.</li>
+   <li><code>textStatus</code>はエラーの型を表すシンプルな文字列です.</li>
+   <li><code>errorThrown</code>は送出された例外オブジェクトです.</li>
+  </ul>
+ </li>
+</ul>
+<p>以下の全てのサンプルコードでは引数の与え方に、最初の単純な方法を使っています。</p>
+<p><code>jQuery.ajax()</code>に慣れた人は2番目の方法を使うのがよいでしょう。実際、与えられたオブジェクトはほとんどそのまま<code>jQuery.ajax</code>に渡されます。つまり、引数として渡されるオブジェクトの<code>data</code>プロパティはTwitterメソッドのパラメータとして使われます。この方法では様々な<a class="external" href="http://docs.jquery.com/Ajax/jQuery.ajax#options" title="http://docs.jquery.com/Ajax/jQuery.ajax#options"><code>jQuery.ajax()</code>オプション</a>をリクエストで使えるでしょう。例えば、<code>data</code>、<code>success</code>、<code>complete</code>、などです。以下に2番目の方法を使ったサンプルを表示します。</p>
+<pre class="brush: js">jetpack.lib.twitter.statuses.update({
+  data: {
+    status: "O frabjous day!"
+  },
+  username: "basic_auth_username",
+  password: "basic_auth_password",
+  success: function () console.log("Hey!")
+});
+</pre>
+<h2 id="ユーザの認証">ユーザの認証</h2>
+<p>以下で示すように、2番目の方法を使って認証が必要なメソッドにユーザ名とパスワードを渡す事ができます。</p>
+<p>もしくはもっと簡単に、Firefoxにたよることもできます。<code>jetpack.lib.twitter.statuses.update()</code>のように認証が必要なメソッドを使った時に、ユーザ名とパスワードを渡さなければ、Firefoxはまだ認証が済んでいないユーザの為にプロンプトを表示します。</p>
+<p>どちらの方法も<a class="external" href="http://en.wikipedia.org/wiki/Basic_access_authentication" title="http://en.wikipedia.org/wiki/Basic_access_authentication">HTTPベーシック認証</a>を使っています.  いずれライブラリは<a class="external" href="http://oauth.net/" title="http://oauth.net/">OAuth</a>するかもしれません。  <a class="external" href="http://apiwiki.twitter.com/Authentication" title="http://apiwiki.twitter.com/Authentication">Twitter's authentication documentation</a> に関連する情報が記載されています。</p>
+<h2 id="よくある質問">よくある質問</h2>
+<p><a class="external" href="http://apiwiki.twitter.com/FAQ" title="http://apiwiki.twitter.com/FAQ">Twitter's API FAQ</a>を見て下さい。  JetpackのTwitter libraryはTwitter APIの非常に薄いラッパーなので、ここに載っている事がだいたい当てはまりますし、載っていない事はあてはまらないでしょう。</p>
+<dl>
+</dl>
+<h2 id="サンプルコード">サンプルコード</h2>
+<h3 id="つぶやく">つぶやく</h3>
+<pre class="brush: js">jetpack.lib.twitter.statuses.update({ status: "O frabjous day!" });
+</pre>
+<p>Firefox will prompt for a username and password if the user is not already authenticated with Twitter.</p>
+<h3 id="ユーザの情報を取得する">ユーザの情報を取得する</h3>
+<pre class="brush: js">jetpack.lib.twitter.users.show({
+  id: "mozlabs",
+  success: function (data, status) console.log(data.toSource()),
+  error: function (xhr, errMsg, errObj) console.error(xhr.responseText)
+});
+</pre>
+<h3 id="ユーザのフォロワーを取得する">ユーザのフォロワーを取得する</h3>
+<pre class="brush: js">jetpack.lib.twitter.statuses.friends({
+  id: "mozlabs",
+  page: 3,
+  success: function (data, status) console.log(data.toSource()),
+  error: function (xhr, errMsg, errObj) console.error(xhr.responseText)
+});
+</pre>
+<h3 id="トレンド">トレンド</h3>
+<pre class="brush: js">jetpack.lib.twitter.trends({
+  success: function (data, status) console.log(data.toSource()),
+  error: function (xhr, errMsg, errObj) console.error(xhr.responseText)
+});
+</pre>
+<h3 id="検索">検索</h3>
+<pre class="brush: js">jetpack.lib.twitter.search({
+  q: "#jetpack",
+  lang: "ja",
+  rpp: 10,
+  page: 5,
+  since_id: 1337,
+  success: function (data, status) console.log(data.toSource()),
+  error: function (xhr, errMsg, errObj) console.error(xhr.responseText)
+});
+</pre>

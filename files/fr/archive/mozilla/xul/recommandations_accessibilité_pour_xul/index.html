@@ -1,0 +1,484 @@
+---
+title: Recommandations d'accessibilité pour XUL
+slug: Archive/Mozilla/XUL/Recommandations_accessibilité_pour_XUL
+tags:
+  - Accessibilité
+  - XUL
+translation_of: Archive/Mozilla/XUL/XUL_accessibility_guidelines
+---
+<h2 id="Introduction" name="Introduction">Introduction</h2>
+
+<p>Bienvenue dans les recommandations d'accessibilité pour XUL. En suivant ces principes et pratiques, vous pourrez écrire des applications XUL de manière à ce que tous les utilisateurs, même ceux souffrant de handicaps physiques, sensoriels ou communicatifs puissent l'utiliser et l'apprécier. L'accessibilité n'a rien de difficile, mais nécessite une compréhension basique des différents types de handicaps, des technologies assistives courantes et des fonctionnalités spéciales d'accessibilité fournies par le langage XUL. Plus que tout, l'accessibilité a besoin d'un effort conscient de votre part, et d'un désir d'intégrer tout le monde.</p>
+
+<p>Nous espérons que ces recommandations seront suffisamment claires et détaillées pour que tout le monde — même ceux qui n'ont aucune expérience dans le domaine de l'accessibilité — puisse les comprendre. Il existe également une communauté de développeurs spécialisés dans l'accessibilité au sein du projet Mozilla qui n'hésiteront pas à vous aider pour toutes les inquiétudes et questions suscitées par le fait de rendre vos applications XUL entièrement accessibles.</p>
+
+<table class="standard-table">
+ <caption>Pour en savoir plus</caption>
+ <tbody>
+  <tr>
+   <th>Accessibilité</th>
+   <th>Fonctionnalités de la plateforme</th>
+   <th>Communauté Mozilla</th>
+  </tr>
+  <tr>
+   <td><a class="external" href="http://www.mozilla.org/access/today">Software Accessibility - Where Are We Today?</a> Introduction à l'accessibilité, aux technologies assistives et ressources concernant Mozilla.
+    <p><a class="external" href="http://webaim.org/intro/">Introduction to Web Accessibility</a>. Aperçu de l'accessibilité Web de WebAIM.</p>
+
+    <p><a class="external" href="http://diveintoaccessibility.org/">Dive Into Accessibility</a>. Livre téléchargeable sur l'accessibilité Web avec astuces et mises en situation.</p>
+
+    <p><a class="external" href="http://kb.mozillazine.org/Assistive_technology_compatibility">Technology Compatibility</a>. Liste de technologies assistives courantes et de leurs niveaux de compatibilité respectifs avec XUL.</p>
+    <a class="link-irc" href="irc://irc.freenode.net/#accessibility">#accessibility</a>. Canal IRC sur l'accessibilité pour des discussions générales autour de l'accessibilité sur Internet. Utile lors de conférences.</td>
+   <td><a class="external" href="http://www.apple.com/accessibility/">Apple Accessibility</a>. Portail d'accessibilité d'Apple.
+    <p><a class="external" href="http://larswiki.atrc.utoronto.ca/wiki">LARS (Linux Accessibility Resource Site)</a>. Portail sur l'accessibilité générale sous Linux.</p>
+    <a class="external" href="http://www.microsoft.com/enable/">Microsoft Accessibility</a>. Portail pour l'accessibilité chez Microsoft.</td>
+   <td><a href="/fr/Accessibilité" title="fr/Accessibilité">Accessibilité - MDC</a>. Centre d'accessibilité sur le Mozilla Developer Center.
+    <p><a class="external" href="http://groups.google.com/group/mozilla.support.accessibility">mozilla.support.accessibility</a>. Newsgroup sur l'accessibilité dans Mozilla.</p>
+    <a class="link-irc" href="irc://irc.mozilla.org/#accessibility">#accessibility</a>. Canal sur l'accessibilité sur le serveur IRC de Mozilla.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p> </p>
+
+<h2 id="Recommandations" name="Recommandations">Recommandations</h2>
+
+<h3 id="Acc.C3.A8s_au_clavier" name="Acc.C3.A8s_au_clavier">Accès au clavier</h3>
+
+<p>L'accès au clavier est important pour les utilisateurs ne pouvant pas utiliser de souris. Beaucoup d'utilisateurs de lecteurs d'écran et de handicapés physiques s'appuient sur le clavier comme outil d'entrée principal. Ces utilisateurs ont besoin d'un contrôle au clavier aisé, prévisible et bien documenté.</p>
+
+<h4 id="Ordre_de_tabulation" name="Ordre_de_tabulation">Ordre de tabulation</h4>
+
+<p><strong>Fournissez un ordre de tabulation logique</strong> et assurez-vous que les utilisateurs puissent naviguer parmi tout le contenu à l'aide d'un clavier. Par défaut, l'ordre de tabulation est déterminé par l'ordre des éléments dans le code sous-jacent. Il peut également être redéfini programmatiquement à l'aide de l'attribut <code>tabindex</code> si nécessaire, mais cela doit se faire avec modération et être testé en profondeur lorsqu'on l'utilise. L'ordre de navigation doit être logique, généralement de gauche à droite et de haut en bas. L'ordre de navigation peut varier selon la nature de l'application ou le sens de lecture de la langue utilisée.</p>
+
+<p>Assurez-vous que l'ordre de tabulation est logique et que l'on puisse accéder à tous les éléments interactifs simplement sans utiliser de souris. Vous devriez arriver à effectuer toutes les tâches possibles, que ce soit directement dans l'application ou depuis des éléments du menu ou de menus contextuels.</p>
+
+<h4 id="Arbres" name="Arbres">Arbres</h4>
+
+<p><strong>Fournissez une manière alternative d'effectuer les opérations inaccessibles</strong>. Le sélecteur de colonne et les en-têtes de colonne dans les arbres XUL ne sont pas accessibles au clavier, pour respecter le comportement standard des arbres sur la plupart des systèmes d'exploitations actuels. Il est donc nécessaire de fournir une alternative accessible au clavier pour accéder à ces fonctions.</p>
+
+<div class="float-right"><img alt="Aperçu du menu Affichage de la gestion des marque-pages de Firefox." class="internal" src="/@api/deki/files/1326/=XUL_a11y_treesort.png"></div>
+
+<p>Un exemple d'arbre plus accessible est visible dans le gestionnaire de marque-pages de Firefox. Celui-ci permet aux utilisateurs de trier les marque-pages selon une certaine colonne d'information et de choisir les colonnes à afficher. Comme les en-têtes de colonne et le sélecteur de colonne, dans le coin supérieur droit de l'arbre, ne peuvent pas recevoir le focus, ils ne sont pas accessibles au clavier. Dans le gestionnaire de marque-pages, cette fonctionnalité est rendue accessible au clavier via le menu Affichage.</p>
+
+<h4 id="Boutons_de_barres_d.27outils" name="Boutons_de_barres_d.27outils">Boutons de barres d'outils</h4>
+
+<p>Par défaut, les boutons de barres d'outils ne peuvent pas recevoir le focus depuis le clavier. La manière conseillée de remédier à ce problème est de <strong>dupliquer toute fonctionnalité associée avec une barre d'outils ailleurs dans l'application</strong>, via un élément de menu principal ou contextuel par exemple. Dans les cas où cette duplication n'est pas possible (comme dans une fenêtre sans barre de menus), il est possible de permettre aux boutons de barres d'outils d'obtenir le focus en ajoutant la règle CSS spéciale <em>-moz-user-focus: normal</em>. (La fenêtre d'aperçu avant impression de Firefox utilise cette technique de secours.) Cela ne doit se faire qu'en dernier ressort, et être cohérent au sein d'une même fenêtre (c'est-à-dire que soit tous les boutons sont accessibles au clavier, soit aucun ne l'est).</p>
+
+<h4 id="Raccourcis_clavier" name="Raccourcis_clavier">Raccourcis clavier</h4>
+
+<p>Les raccourcis clavier sont très utiles pour les utilisateurs devant naviguer au clavier. Il existe de nombreuses manières d'en fournir. Celles-ci sont bien documentées dans le <a href="/fr/Tutoriel_XUL/Raccourcis_clavier" title="fr/Tutoriel_XUL/Raccourcis_clavier">Tutoriel XUL:Raccourcis clavier</a>.</p>
+
+<p><strong>Il convient de faire particulièrement attention lors du choix des raccourcis clavier.</strong> Lors de la création d'une extension (que ce soit pour Firefox ou une autre application XUL), assurez-vous que les raccourcis clavier que vous définissez n'interfèrent pas avec ceux déjà définis par l'application de base. Reportez-vous aux ressources suivantes lors de la définition de raccourcis clavier.</p>
+
+<div style="max-width: 35em;">
+<table class="standard-table">
+ <caption>En savoir plus</caption>
+ <tbody>
+  <tr>
+   <th>Raccourcis clavier et touches d'accès rapides</th>
+  </tr>
+  <tr>
+   <td><a class="external" href="http://www.mozilla.org/access/keyboard/">Mozilla Keyboard Planning FAQ and Cross Reference</a>. Un excellent guide pour déterminer les combinaisons de touches non utilisées et les problèmes dépendant de la plateforme.
+    <p><a class="external" href="http://www.mozilla.org/docs/end-user/moz_shortcuts.html">Mozilla Keyboard Shortcuts</a>. Une liste complète des raccourcis clavier des diverses applications Mozilla.</p>
+    <a class="external" href="http://www.mozilla.org/access/keyboard/accesskey">Mozilla's accesskey FAQ</a>. Une courte référence sur l'utilisation de l'attribut accesskey.</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h4 id="Menus_contextuels" name="Menus_contextuels">Menus contextuels</h4>
+
+<p>Le menu contextuel est le petit menu activé par un clic droit de la souris sur une zone de contenu ou un élément (ou à l'aide de <code>Shift + F10</code> ou <code>VK_APPS</code> sous Windows et <code>Ctrl + Click</code> ou <code>Ctrl + Espace</code> sur un Mac). <strong>Utilisez le gestionnaire d'évènement <em>oncontextmenu</em> ou l'attribut <em>context</em> pour créer des menus contextuels.</strong> Ne les codez pas pour s'ouvrir spécifiquement lors d'un clic-droit. L'évènement <code>oncontextmenu</code> et l'attribut <code>context</code> fonctionnent avec les déclencheurs de menus spécifiques à chaque plateforme, que ce soient les touches du clavier ou les clics de souris appropriés.</p>
+
+<h4 id="Scripts_d.C3.A9pendant_de_la_souris" name="Scripts_d.C3.A9pendant_de_la_souris">Scripts dépendant de la souris</h4>
+
+<p>Les fonctions associées aux évènements souris comme <em>onmouseover</em>, <em>onmousemove</em> et <em>ondrag</em> peuvent uniquement être activés à l'aide de la souris. Fournissez des points d'accès alternatifs au clavier pour ces fonctions. Envisagez d'utiliser des éléments de menus contextuels ou d'autres éléments XUL parallèlement aux raccourcis clavier.</p>
+
+<h4 id="D.C3.A9filement" name="D.C3.A9filement">Défilement</h4>
+
+<p><strong>Assurez-vous que le défilement est possible au clavier.</strong> Beaucoup d'éléments XUL peuvent être rendus défilables à l'aide de CSS. D'autres éléments, comme <code>arrowscrollbox</code> et <code>listbox</code>, sont conçus pour défiler automatiquement. En règle générale, les éléments prévus pour défiler sont inaccessibles si l'utilisateur ne peut pas faire défiler tout le contenu à l'aide du clavier. L'élément <code>arrowscrollbox</code>, par exemple, ne peut pas recevoir le focus ni défiler à l'aide du clavier. Un élément <code>listbox</code>, par contre, peut recevoir le focus et son contenu peut défiler. À peu près tous les éléments XUL peuvent être rendus défilables en définissant un style "overflow: auto" ou "overflow: scroll". Cette flexibilité doit être utilisée de manière réfléchie.</p>
+
+<h4 id="Maintien_du_focus" name="Maintien_du_focus">Maintien du focus</h4>
+
+<p>L'utilisateur doit typiquement pouvoir contrôler l'endroit où se trouve le focus actuel. <strong>Évitez de changer le focus automatiquement</strong>. Cependant, désactiver, masquer ou détruire l'élément qui a le focus (ou l'un de ses éléments parents) peut provoquer la perte du focus. Pour empêcher cela, <strong>déplacez le focus à l'élément suivant avant de désactiver, masquer ou détruire l'élément qui a le focus</strong>.</p>
+
+<p>L'exemple qui suit montre une fonction JavaScript qui peut être appelée avant de détruire un élément pour vérifier s'il a le focus et le déplacer si nécessaire.</p>
+
+<pre>function moveFocus(element)
+{
+    if(element == document.commandDispatcher.focusedElement)
+    {
+        document.commandDispatcher.advanceFocus();
+        return true;
+    }
+
+    return false;
+}
+</pre>
+
+<p><br>
+ Les changements de focus inattendus peuvent embrouiller ou désorienter les utilisateurs. Un exemple récurrent concerne les numéros de téléphones à entrer dans des champs de formulaire. Les numéros de téléphone aux États-Unis sont souvent affichés dans un format XXX-XXX-XXXX ou (XXX) XXX-XXXX. Pour conserver ce format, certains formulaires contiennent trois champs différents. Le problème se pose lorsqu'un développeur décide d'ajouter une fonctionnalité sautant vers le second champ du formulaire dès que 3 chiffres ont été entrés dans le premier champ de formulaire. Ce comportement se répète pour le champ suivant du formulaire. Les utilisateurs qui ont l'habitude de se déplacer eux-mêmes dans les champs de formulaire se retrouvent souvent à répéter l'opération de passage au champ suivant et passent donc au dessus d'un des champs du formulaire.</p>
+
+<h4 id="Focus_initial_dans_un_dialogue" name="Focus_initial_dans_un_dialogue">Focus initial dans un dialogue</h4>
+
+<p>Le focus initial dans une fenêtre de dialogue XUL (c'est-à-dire le focus à l'ouverture de la fenêtre) devrait toujours se trouver sur un contrôle spécifique et non sur le dialogue lui-même. Dans un dialogue comportant des onglets, le focus doit généralement commencer au premier contrôle de l'onglet sélectionné. Dans tous les autres dialogues, le focus doit commencer au premier contrôle (bien qu'il puisse s'agir de n'importe quel autre contrôle s'il y a une bonne raison de le faire, du moment que ce n'est pas le dialogue lui-même).</p>
+
+<h4 id="Test_de_l.27acc.C3.A8s_au_clavier" name="Test_de_l.27acc.C3.A8s_au_clavier">Test de l'accès au clavier</h4>
+
+<p>Pour tester l'accessibilité au clavier <strong>débranchez ou désactivez simplement votre souris</strong> et essayez d'utiliser votre application uniquement avec le clavier. Vérifiez que l'ordre de tabulation est logique. Assurez-vous de pouvoir accéder à toutes les fonctions soit directement, soit par des moyens alternatifs comme des choix de menus ou des menus contextuels. Assurez-vous également que l'utilisateur puisse lire tout le contenu.</p>
+
+<h3 id="Informations_assistives" name="Informations_assistives">Informations assistives</h3>
+
+<p>Les utilisateurs de technologies assistives ont souvent besoin d'un balisage supplémentaire pour comprendre des significations et associations qui peuvent être intuitives pour les utilisateurs valides. Ce balisage supplémentaire est appelé <em>information assistive.</em> Il est aisé de fournir ces informations, mais on l'oublie souvent car elles ne produisent que très peu de changements visuels, voire aucun.</p>
+
+<h4 id="Texte_alternatif" name="Texte_alternatif">Texte alternatif</h4>
+
+<p><strong>Fournissez un texte alternatif pour les images significatives</strong>. Il n'est pas nécessaire d'ajouter un texte alternatif lorsqu'une image assure une fonction purement décorative. Utilisez l'attribut <code>alt</code> pour décrire les images HTML et l'attribut <code>tooltiptext</code> pour les éléments XUL utilisant des images (c'est-à-dire les éléments image et les boutons avec images). Pour les boutons de barres d'outils avec images, on recommande d'utiliser à la fois une étiquette textuelle dans l'attribut <em>label</em> et un texte alternatif pour l'image dans l'attribut <em>tooltiptext</em>. Voyez les exemples de code ci-dessous.</p>
+
+<pre>&lt;image src="stop.png" tooltiptext="Stop" /&gt;
+
+&lt;html:img src="stop.jpg" alt="Stop" /&gt;
+&lt;html:img src="image_decorative.jpg" alt="" /&gt; &lt;!-- En HTML, l'attribut alt est obligatoire. --&gt;
+
+&lt;toolbarbutton label="Stop" image="stop.png" tooltiptext="Arrêter le chargement de la page" /&gt;
+</pre>
+
+<h4 id="Titres" name="Titres">Titres</h4>
+
+<p><strong>Fournissez des titres uniques</strong> aux éléments conteneurs des fenêtres, assistants et dialogues. Les titres fournissent aux utilisateurs les informations les informations les plus basiques concernant l'application. Le titre est souvent la première chose qui est prononcée par un lecteur d'écran lorsqu'une application est ouverte ou activée. Les utilisateurs peuvent également se référer au titre pour comprendre où ils se situent. Les titres sont affichés dans la barre supérieure d'une application. Voyez les exemples de code ci-dessous.</p>
+
+<pre>&lt;dialog id="print_dialog" title="Imprimer"                  ...&gt;
+&lt;window id="mywindow"     title="Mon application"           ...&gt;
+&lt;wizard id="reg_window"   title="Enregistrer le logiciel"   ...&gt;
+</pre>
+
+<h4 id="Labels_de_formulaires" name="Labels_de_formulaires">Labels de formulaires</h4>
+
+<p>Les labels ne sont pas automatiquement associés aux éléments de formulaires. <strong>Utilisez l'attribut <a href="/fr/XUL/label#a-control" title="fr/XUL/label#a-control">control</a></strong> pour lier une étiquette texte (d'un élément label ou de description) à un élément de formulaire. Les lecteurs d'écran liront alors le label lors du remplissage d'un champ de forumlaire.</p>
+
+<pre>&lt;label control="login-username" value="Utilisateur :"/&gt;
+&lt;textbox id="login-username"/&gt;
+
+&lt;description control="login-password"&gt;Mot de passe :&lt;/description&gt;
+&lt;textbox id="login-password" type="password"/&gt;
+</pre>
+
+<p>Les formulaires plus grand peuvent être difficiles à mettre en page et à structurer. Bien qu'il y ait toujours de nombreuses manières de structurer un formulaire visuellement, <strong>fournissez toujours un label texte pour chaque élément de formulaire</strong>. Il ne faut pas utiliser des éléments de formulaire pour en décrire d'autres.</p>
+
+<div class="float-right"><img alt="Capture d'écran du panneau Vie privé des options de Firefox." class="internal" src="/@api/deki/files/1325/=XUL_a11y_privacy.png"></div>
+
+<p>Lorsque des éléments de formulaire sont intégrés dans un groupbox avec une étiquette, les technologies assistives comme les lecteurs d'écran liront cette étiquette suivie du label de l'élément de formulaire. Par exemple, dans la section Vie privée des options, il y a trois groupes appelés <em>Historique</em>, <em>Cookies</em> et <em>Vie privée</em>. Si l'utilisateur se déplace avec la tabulation vers le bouton « Exceptions... », il entendra « cookies {pause} exceptions {pause} bouton. » L'élément suivant dira « cookies {pause} les conserver jusqu'à {pause} leur expiration {pause} un sur trois {pause} liste déroulante ». Si le lecteur d'écran lisait uniquement le label, l'utilisateur devrait deviner à quoi se référait le bouton « exceptions » ou la liste déroulante « les conserver jusqu'à ».</p>
+
+<p>Les groupes de contrôles sont essentiels pour les boutons radios ou groupes de cases à cocher concernant un thème similaire (c'est-à-dire où il faut cocher toutes celles qui s'appliquent). Si vous trouvez que des groupes de contrôles imbriqués sont peu agréables visuellement, utilisez CSS pour cacher la bordure du groupe interne afin qu'il reste visible dans le code pour servir aux utilisateurs de technologies assistives.</p>
+
+<p>Les formulaires complexes ont souvent besoin d'un système d'étiquetage plus avancé que ce qui est possible avec les attributs XUL standards. Par exemple, le premier élément du panneau Vie privée des options de Firefox (montré et décrit plus haut) est <code>[case à cocher] Se souvenir des pages visitées lors des [textbox] derniers jours</code>. La difficulté ici provient du fait que le label correct pour la case à cocher (« Se souvenir des pages visitées lors des x derniers jours ») est composé de trois pièces différentes, dont la seconde est la valeur actuellement entrée dans la boîte de texte. Le label correct pour la boîte de texte est en fait le même, mais on ne voudrait pas que les technologies assistives le lisent ou le montrent deux fois de suite. Ce qu'il faut, c'est une manière de spécifier dans le code source que la case à cocher, le champ d'édition et les labels textuels autour font tous partie d'une seule entité, et qu'ils s'étiquettent en quelque sorte l'un l'autre.</p>
+
+<p>Pour résoudre ce problème, on entourera d'abord tous ces contrôles dans un seul élément conteneur, comme (dans ce cas-ci) un <code>hbox</code>. On importe ensuite ce qu'on appelle « l'Accessible, Adaptable Applications Module » (du groupe WAI-ARIA du WC3) en ajoutant <em><span class="nowiki">xmlns:aaa="http://www.w3.org/2005/07/aaa"</span></em> comme attribut sur l'élément conteneur. Ceci nous permet d'utiliser l'attribut <em>labelledby</em> (notez le double L — aaa utilise l'orthographe anglaise du Royaume-Uni) pour spécifier que la case à cocher et la boîte de texte sont toutes deux décrites par l'ensemble du groupe de composants. Dans XUL, cela ressemblera à ce qui suit.</p>
+
+<pre>&lt;hbox id="historyBox" xmlns:aaa="http://www.w3.org/2005/07/aaa"&gt;
+  &lt;checkbox id="rememberHistoryDays" aaa:labelledby="historyBox" label="Se souvenir des pages visitées lors des"/&gt;
+  &lt;textbox  id="historyDays"         aaa:labelledby="historyBox"/&gt;
+  &lt;label&gt;derniers jours.&lt;/label&gt;
+&lt;/hbox&gt;
+</pre>
+
+<h4 id="Test_des_informations_assistives" name="Test_des_informations_assistives">Test des informations assistives</h4>
+
+<p>La meilleure manière de tester est pour de nombreuses raisons de faire le test avec un lecteur d'écran, car la navigation au clavier et la structure sémantique sous-jacente de l'interface utilisateur peuvent être testées simultanément. C'est un excellent indicateur concernant l'accessibilité d'une interface utilisateur, mais en aucun cas un test complet. En fin de compte, pour les applications qui doivent être entièrement accessibles, il est préférable que l'application soit testée par un large panel d'utilisateurs disposant de différentes configurations logicielles et de différentes technologies assistives.</p>
+
+<p>Si vous ne disposez pas d'un logiciel lecteur d'écran (et ne connaissez personne dont c'est le cas), votre meilleure option est de vérifier attentivement le code source pour vous assurer que toutes les règles ci-dessus ont été suivies, et ensuite que les utilisateurs ont un moyen de vous contacter en retour sur l'accessibilité (et d'autres aspects) de votre application.</p>
+
+<h3 id="Affichage" name="Affichage">Affichage</h3>
+
+<p>On entend souvent que « la présentation fait tout ». Bien qu'il soit vrai que la présentation est quelque chose d'essentiel, les documents doivent également être structurés de manière à ce que l'utilisateur puisse appeler des préférences d'affichage qui peuvent être nécessaires pour l'accessibilité. La présentation doit aussi être flexible pour s'adapter au redimensionnement des fenêtres et polices. Les applications coopératives s'adaptent bien à l'environnement de l'utilisateur.</p>
+
+<h4 id="Param.C3.A8tres_par_d.C3.A9faut_du_syst.C3.A8me" name="Param.C3.A8tres_par_d.C3.A9faut_du_syst.C3.A8me">Paramètres par défaut du système</h4>
+
+<p><strong>Respectez les réglages par défaut du système</strong>. Beaucoup d'utilisateurs configurent leur ordinateur pour utiliser des polices plus grandes et/ou des thèmes de couleur particuliers. Par défaut, les menus XUL, labels et autres contrôles obtiennent leur police, taille et paramètres de couleur des réglages de l'utilisateur spécifiés par le système d'exploitation. Respectez ces réglages à moins d'avoir une raison particulière et inévitable de les changer. Le cas échéant, utilisez CSS pour dimensionner les éléments par rapport à leurs tailles par défaut (par exemple, utilisez des tailles en <code>%</code> ou <code>em</code> plutôt que des tailles spécifiques en points ou en pixels).</p>
+
+<h4 id="Couleurs" name="Couleurs">Couleurs</h4>
+
+<p>La couleur est un outil important. Des couleurs différentes peuvent donner des significations différentes aux objets et au texte. Cependant, <strong>la couleur seule est inadéquate</strong> pour communiquer un sens ou une information particulière à l'utilisateur. Certains, principalement ceux qui sont aveugles ou ne voient pas les couleurs, n'arriveront pas à discerner certaines couleurs. Certains utilisateurs peuvent modifier le schéma de couleurs par défaut de votre application. La couleur doit uniquement être utilisée pour souligner la signification d'un objet ou d'un texte après avoir donné cette signification à l'utilisateur d'une autre manière.</p>
+
+<h4 id="Tailles_flexibles" name="Tailles_flexibles">Tailles flexibles</h4>
+
+<p>Un des avantages d'XUL est que l'apparence visuelle est très facile à contrôler. Sur le Web, la mise en page est souvent contrainte dans une taille spécifique. Avec XUL, vous pouvez permettre aux éléments de s'étendre lorsque la fenêtre de l'application est redimensionnée. Utilisez l'attribut <code>flex</code> pour fournir cette fonctionnalité.</p>
+
+<h4 id="Test_de_l.27affichage" name="Test_de_l.27affichage">Test de l'affichage</h4>
+
+<p>Vérifiez que votre application est fonctionnelle et que son apparence est plaisante en utilisant des polices et couleurs définies par l'utilisateur. Pour cela, changez les paramètres d'affichage du système en un thème accessible (comme le thème Contraste élevé sous Windows, disponible par <code>Alt-Gauche + Maj-Gauche + Impr. Écran</code>). Assurez-vous que le texte est mis en évidence correctement que que la couleur n'est pas utilisée comme seule manière de communiquer une signification. Assurez-vous également que lorsque les fenêtres sont redimensionnées, votre application s'adapte de bonne grâce.</p>
+
+<h3 id="Interaction_entre_l.27homme_et_la_machine" name="Interaction_entre_l.27homme_et_la_machine">Interaction entre l'homme et la machine</h3>
+
+<p>Lorsque vous utilisez une application, vous vous attendez à disposer d'un certain contrôle et d'un retour sur ce qui se passe. Fournissez aux utilisateurs des instructions et indications claires, et permettez-leur de corriger leurs erreurs. Certains utilisateurs handicapés ont des difficultés lorsqu'on leur demande une réponse rapide. Donnez-leur un temps adéquat pour effectuer leurs tâches.</p>
+
+<h4 id="Instructions" name="Instructions">Instructions</h4>
+
+<p>Fournissez une documentation d'aide aux utilisateurs. Même des applications très simples devraient contenir un document d'aide ou un manuel de référence pour l'utilisateur. Décrivez les raccourcis claver et toutes autres considérations concernant l'accessibilité. Les utilisateurs doivent avoir la possibilité de consulter une description complète de toutes les fonctionnalités majeures d'une application. Fournissez également des détails sur l'utilisation de la documentation d'aide lorsqu'elle est longue ou complexe.</p>
+
+<h4 id="Avertissements" name="Avertissements">Avertissements</h4>
+
+<p>Utilisez des avertissements accessibles pour présenter des informations importantes à l'utilisateur. Utilisez des scripts ou l'élément <a href="/fr/XUL/notificationbox" title="fr/XUL/notificationbox">notificationbox</a> pour déclencher des alertes.</p>
+
+<p>Évitez d'utiliser uniquement des alertes audio ou visuelles pour signaler des évènements urgents. Les utilisateurs qui ont réduit ou coupé le son, ou qui sont sourds ou malentendants ne pourront pas reconnaître des alertes uniquement sonores. Les utilisateurs souffrant de déficiences visuelles ne verront pas non plus les alertes qui sont purement visuelles (à moins que celles-ci soient présentées dans un texte fonctionnel également accessible à un lecteur d'écran).</p>
+
+<h4 id=".C3.89l.C3.A9ments_interactifs" name=".C3.89l.C3.A9ments_interactifs">Éléments interactifs</h4>
+
+<p><strong>Évitez les petites cibles</strong>, qui sont difficiles à voir et à atteindre avec un clic de souris. Vérifiez que la mise en page et le contraste sont suffisants pour distinguer les éléments interactifs les un des autres et par rapport aux parties statiques de l'application.</p>
+
+<h4 id="R.C3.A9cup.C3.A9ration_en_cas_d.27erreur" name="R.C3.A9cup.C3.A9ration_en_cas_d.27erreur">Récupération en cas d'erreur</h4>
+
+<p>Lorsque l'utilisateur provoque une erreur dans une application, <strong>permettez une récupération aisée</strong>. Par exemple, si l'utilisateur entre des lettres là où un nombre est attendu dans un formulaire, cela ne doit pas faire planter l'application. L'utilisateur doit être averti du problème et pouvoir corriger l'erreur.</p>
+
+<h4 id="Temps_de_r.C3.A9ponse" name="Temps_de_r.C3.A9ponse">Temps de réponse</h4>
+
+<p>Le cas échéant, <strong>avertissez l'utilisateur des limites de temps</strong> et permettez-lui d'ajuster la limite ou de demander plus de temps. Un des miracles de la technologie moderne est qu'elle permet aux personnes souffrant même des plus sévères limitations physiques d'utiliser des ordinateurs. Certains utilisent des contrôles à la bouche ou des périphériques de détection de mouvements comme des capteurs oculaires pour entrer des informations. Ce processus peut être lent. D'autres utilisateurs ont simplement besoin de temps pour comprendre ce qui se produit dans l'application.</p>
+
+<h4 id="Test_de_l.27interaction_homme_machine" name="Test_de_l.27interaction_homme_machine">Test de l'interaction homme machine</h4>
+
+<p>Assurez-vous que la documentation d'aide est à jour. Vérifiez que les avertissements sont affichés à l'aides des éléments XUL appropriés. Assurez-vous que l'utilisateur est informé de toutes ses erreurs et que des instructions et la possibilité d'effectuer à nouveau l'opération correcte sont fournies. Assurez-vous également que les utilisateurs ont le contrôle de leur temps de réponse.</p>
+
+<h3 id="M.C3.A9dias" name="M.C3.A9dias">Médias</h3>
+
+<h4 id="Audio" name="Audio">Audio</h4>
+
+<p>Des fichiers audio d'information comme des podcasts peuvent être rendus accessibles en fournissant une transcription mot-à-mot. Les transcriptions doivent identifier correctement les intervenants et décrire les autres sons significatifs comme les rires ou les chansons. Ces transcriptions peuvent prendre du temps à réaliser, mais c'est la seule manière de rendre du contenu sonore accessible.</p>
+
+<h4 id="Vid.C3.A9os" name="Vid.C3.A9os">Vidéos</h4>
+
+<p>Un fichier vidéo peut être rendu accessible en ajoutant des sous-titres synchronisés. La plupart des formats vidéo fournissent un moyen d'afficher des sous-titres. Les vidéos devraient également être accompagnées de transcriptions descriptives. En général, ces deux opérations vont ensemble, une fois que vous avez l'une, il est facile de produire l'autre.</p>
+
+<table class="standard-table">
+ <caption>En savoir plus</caption>
+ <tbody>
+  <tr>
+   <th>Sous-titrage</th>
+  </tr>
+  <tr>
+   <td><a class="external" href="http://webaim.org/techniques/captions/">Article de WebAIM : Web Captioning Overview</a><br>
+    <br>
+    <a class="external" href="http://webaim.org/resources/captioning/">WebAIM : Captioning Resources</a></td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="Animations" name="Animations">Animations</h4>
+
+<p>Les animations, le mouvement et les sons peuvent être dérangeantes pour certains utilisateurs souffrants de troubles de l'attention. Fournissez un mécanisme pour désactiver les médias et les mouvements.</p>
+
+<p>Les tremblements ou clignotements ne sont pas uniquement ennuyeux pour tout le monde, mais à une vitesse de plus de 3 cycles par seconde, ils peuvent provoquer un malaise chez les utilisateurs souffrant d'épilepsie photosensible. Si des tremblement ou clignotements sont nécessaires, avertissez l'utilisateur au préalable avant de les provoquer.</p>
+
+<h4 id="Test_de_m.C3.A9dias" name="Test_de_m.C3.A9dias">Test de médias</h4>
+
+<p>Assurez-vous que des alternatives aux médias sont disponibles dans un format accessible.</p>
+
+<h3 id="Autres_probl.C3.A8mes" name="Autres_probl.C3.A8mes">Autres problèmes</h3>
+
+<h4 id="Contr.C3.B4les_personnalis.C3.A9s" name="Contr.C3.B4les_personnalis.C3.A9s">Contrôles personnalisés</h4>
+
+<p>Évitez de recréer des fonctionnalités qui existent déjà. Assurez-vous que vos composants personnalisés sont construits en pensant à l'accessibilité. Utilisez les <a class="external" href="http://www.w3.org/TR/CSS21/ui.html#system-colors">couleurs système CSS</a> pour vous assurer que les nouveaux contrôles interagiront bien avec les autres contrôles ainsi qu'avec les thèmes et couleurs définis par l'utilisateur.</p>
+
+<table class="standard-table">
+ <caption>En savoir plus</caption>
+ <tbody>
+  <tr>
+   <th>Contrôles personnalisés accessibles</th>
+  </tr>
+  <tr>
+   <td><a href="/fr/ARIA/Applications_riches_Internet_accessibles" title="fr/ARIA/Applications_riches_Internet_accessibles">ARIA : Applications riches Internet accessibles</a><br>
+    <br>
+    <a href="/fr/Réalisation_de_composants_personnalisés_accessibles_en_XUL" title="fr/Réalisation_de_composants_personnalisés_accessibles_en_XUL">Réalisation de composants personnalisés accessibles en XUL</a></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Liste_de_contr.C3.B4le_d.27accessibilit.C3.A9_pour_XUL" name="Liste_de_contr.C3.B4le_d.27accessibilit.C3.A9_pour_XUL">Liste de contrôle d'accessibilité pour XUL</h2>
+
+<p>Utilisez la liste de contrôle suivante pour vérifier rapidement l'accessibilité d'une nouvelle application XUL, ou comme point de départ pour régler les problèmes d'accessibilité dans une application existante.</p>
+
+<h3 id="Acc.C3.A8s_au_clavier_2" name="Acc.C3.A8s_au_clavier_2">Accès au clavier</h3>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Point à vérifier</th>
+   <th scope="col">Correct</th>
+   <th scope="col">Incorrect</th>
+  </tr>
+  <tr>
+   <th scope="row">Ordre de tabulation</th>
+   <td>Un ordre de tabulation logique est fourni.</td>
+   <td>L'ordre de tabulation saute de manière inattendue.</td>
+  </tr>
+  <tr>
+   <th scope="row">Arbres</th>
+   <td>Un accès au clavier est fourni pour les fonctions inaccessibles comme le sélecteur de colonnes ou le tri par colonnes.</td>
+   <td>Aucun accès au clavier n'est fourni pour le choix des colonnes ou d'autres fonctionnalités.</td>
+  </tr>
+  <tr>
+   <th scope="row">Boutons de barres d'outils</th>
+   <td>Des alternatives au clavier sont fournies pour les fonctionnalités des boutons de barres d'outils.</td>
+   <td>Aucune alternative au clavier n'est fournie pour les fonctionnalités des boutons de barres d'outils.</td>
+  </tr>
+  <tr>
+   <th scope="row">Raccourcis clavier</th>
+   <td>Des raccourcis clavier sont présents pour les fonctionnalités importantes</td>
+   <td>Aucun raccourci clavier n'est fourni.</td>
+  </tr>
+  <tr>
+   <th scope="row">Menus contextuels</th>
+   <td>Les menus contextuels sont déclenchés par le gestionnaire d'évènement <em>oncontextmenu</em>.</td>
+   <td>Les menus contextuels sont déclenchés directement par un clic droit de la souris ou un autre déclencheur spécifique.</td>
+  </tr>
+  <tr>
+   <th scope="row">Scripts dépendants de la souris</th>
+   <td>Toutes les opérations à la souris ont des équivalents accessibles au clavier.</td>
+   <td>Certaines opérations ne peuvent être réalisées qu'avec une souris.</td>
+  </tr>
+  <tr>
+   <th scope="row">Défilement</th>
+   <td>Tous les éléments défilables peuvent être contrôlés au clavier.</td>
+   <td>Le défilement ne peut pas se faire au clavier.</td>
+  </tr>
+  <tr>
+   <th scope="row">Focus</th>
+   <td>Le focus clavier est conservé et ne se déplace pas de manière inattendue.</td>
+   <td>Le focus se déplace ou est désactivé de manière inattendue.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Informations_assistives_2" name="Informations_assistives_2">Informations assistives</h3>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Point à vérifier</th>
+   <th scope="col">Correct</th>
+   <th scope="col">Incorrect</th>
+  </tr>
+  <tr>
+   <th scope="row">Texte alternatif</th>
+   <td>Un texte alternatif est fourni pour les images significatives.</td>
+   <td>Le texte alternatif est manquant sur des images significatives, o n'est pas approprié pour la fonction d'une image.</td>
+  </tr>
+  <tr>
+   <th scope="row">Titres</th>
+   <td>Toutes les fenêtres, y compris les dialogues et les assistants, ont un titre descriptif.</td>
+   <td>Des fenêtres n'ont pas de titre ou un titre incorrect.</td>
+  </tr>
+  <tr>
+   <th scope="row">Labels de formulaires</th>
+   <td>Chaque élément de formulaire a un label associé et les boutons radios sont intégrés dans un groupbox.</td>
+   <td>Des éléments de formulaire n'ont pas de label ou ces labels ne sont pas connectés programmatiquement, ou des boutons radios ne font pas partie d'un groupbox.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Affichage_2" name="Affichage_2">Affichage</h3>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Point à vérifier</th>
+   <th scope="col">Correct</th>
+   <th scope="col">Incorrect</th>
+  </tr>
+  <tr>
+   <th scope="row">Réglages par défaut du système</th>
+   <td>Les paramètres systèmes sont respectés.</td>
+   <td>Les paramètres systèmes ne sont pas respectés.</td>
+  </tr>
+  <tr>
+   <th scope="row">Couleurs</th>
+   <td>La couleur seule n'est pas utilisée pour donner une signification, et le contraste entre le texte et la couleur de fond est suffisant.</td>
+   <td>La couleur seule est utilisée pour donner une signification, ou le contraste entre le texte et la couleur de fond est insuffisant.</td>
+  </tr>
+  <tr>
+   <th scope="row">Flexibilité</th>
+   <td>Les éléments visuels et leurs conteneurs se redimensionnent.</td>
+   <td>Les éléments visuels et leurs conteneurs ne se redimensionnent pas.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Interaction_homme-machine" name="Interaction_homme-machine">Interaction homme-machine</h3>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Point à vérifier</th>
+   <th scope="col">Correct</th>
+   <th scope="col">Incorrect</th>
+  </tr>
+  <tr>
+   <th scope="row">Instructions</th>
+   <td>Une documentation d'aide est fournie, avec une description des raccourcis clavier.</td>
+   <td>Aucune documentation d'aide n'est fournie, ou celle-ci est incomplète.</td>
+  </tr>
+  <tr>
+   <th scope="row">Avertissements</th>
+   <td>Les alertes sont affichées à l'aide de la fonction de script <code>alert()</code> ou l'élément <code>notificationbox</code>.</td>
+   <td>Les alertes sont uniquement visuelles ou audifives, ou utilisent une autre méthode que la fonction de script <code>alert()</code> ou l'élément <code>notificationbox</code>.</td>
+  </tr>
+  <tr>
+   <th scope="row">Éléments interactifs</th>
+   <td>Les éléments interactifs sont suffisamment grands et visibles.</td>
+   <td>Les éléments interactifs sont trop petits ou insuffisamment contrastés par rapport aux autres parties de l'application.</td>
+  </tr>
+  <tr>
+   <th scope="row">Récupération en cas d'erreur</th>
+   <td>Des avertissements sont affichés lorsque l'utilisateur commet une erreur. Il reçoit ensuite la possibilité et des instructions pour la corriger.</td>
+   <td>Aucun message d'erreur n'existe, ou des instructions inadéquates sont fournies.</td>
+  </tr>
+  <tr>
+   <th scope="row">Temps de réponse</th>
+   <td>L'utilisateur est informé des limites des temps et a le contrôle de cette limite lorsque c'est possible.</td>
+   <td>L'utilisateur n'est pas informé des limites de temps et/ou n'a aucun contrôle sur celles-ci.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="M.C3.A9dias_2" name="M.C3.A9dias_2">Médias</h3>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Point à vérifier</th>
+   <th scope="col">Correct</th>
+   <th scope="col">Incorrect</th>
+  </tr>
+  <tr>
+   <th scope="row">Audio</th>
+   <td>Des transcriptions sont fournies pour les pistes sonores.</td>
+   <td>Aucune transcription n'est fournie.</td>
+  </tr>
+  <tr>
+   <th scope="row">Vidéos</th>
+   <td>Les vidéos sont sous-titrées et une transcription est fournie.</td>
+   <td>Aucun sous-titre ou transcription n'est fourni.</td>
+  </tr>
+  <tr>
+   <th scope="row">Animations</th>
+   <td>L'utilisateur peut contrôler les animations et est prévenu lorsque le contenu va clignoter.</td>
+   <td>Il n'existe pas de contrôle pour les animations ni d'avertissements pour les clignotements.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Autres" name="Autres">Autres</h3>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th scope="col">Point à vérifier</th>
+   <th scope="col">Correct</th>
+   <th scope="col">Incorrect</th>
+  </tr>
+  <tr>
+   <th scope="row">Contrôles personnalisés</th>
+   <td>Les contrôles personnalisés sont accessibles.</td>
+   <td>Les contrôles personnalisés ne sont pas accessibles.</td>
+  </tr>
+ </tbody>
+</table>

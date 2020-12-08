@@ -1,0 +1,67 @@
+---
+title: Building TransforMiiX standalone
+slug: Building_TransforMiiX_standalone
+tags:
+  - 移行
+translation_of: Archive/Mozilla/Building_TransforMiiX_standalone
+---
+<p> </p>
+
+<div class="warning">This document is out of date.</div>
+
+<h2 id="TransforMiiX_.E3.82.B9.E3.82.BF.E3.83.B3.E3.83.89.E3.82.A2.E3.83.AD.E3.83.BC.E3.83.B3.E3.81.AE.E3.83.93.E3.83.AB.E3.83.89" name="TransforMiiX_.E3.82.B9.E3.82.BF.E3.83.B3.E3.83.89.E3.82.A2.E3.83.AD.E3.83.BC.E3.83.B3.E3.81.AE.E3.83.93.E3.83.AB.E3.83.89">TransforMiiX スタンドアローンのビルド</h2>
+
+<div class="warning">このドキュメントは古くなっています。</div>
+
+<p><br>
+ 私たちは Windows/Unix/Mac OS X 上での TransforMiiX スタンドアローンバージョンのビルドをサポートします。お使いのプラットフォームに合ったビルド・インストラクションを読んで、必要条件を手に入れてください。TransforMiiX に関するものは Mozilla に関するものと同じです。</p>
+
+<p>CVS からソースを入手する必要があります。</p>
+
+<pre class="eval">TX_EXE=1
+mk_add_options BUILD_MODULES="xpcom transformiix"
+ac_add_options --enable-standalone-modules="xpcom transformiix"
+</pre>
+
+<p>これを .mozconfig に追加し、いつものように client.mk を使って [/cvs.html pull] してください。これで CVS レポジトリから</p>
+
+<pre class="eval">mozilla/client.mk
+mozilla/build/unix/modules.mk
+mozilla/build
+mozilla/config
+mozilla/expat
+mozilla/extensions/transformiix
+mozilla/include
+mozilla/allmakefiles.sh
+mozilla/client.mk
+mozilla/aclocal.m4
+mozilla/configure
+mozilla/configure.in
+mozilla/Makefile.in
+
+</pre>
+
+<p>といった必要なサブツリーに加えて nspr と xpcom を pull できます。完全な Mozilla ツリーからのビルドはサポートされていません。</p>
+
+<pre class="eval">ac_add_options --disable-gtktest
+ac_add_options --without-jpeg
+ac_add_options --without-zlib
+ac_add_options --without-png
+ac_add_options --without-x
+</pre>
+
+<p>このように .mozconfig に追加することもお勧めします。これによって configure が必要のない lib をテストすることを止めることができます。</p>
+
+<pre class="eval">make -f client.mk build
+</pre>
+
+<p>これも通常通りです。</p>
+
+<p>もちろん</p>
+
+<pre class="eval">make -f client.mk
+</pre>
+
+<p>とすると、問題なく TransforMiiX だけをチェックし、ビルドできます。</p>
+
+<p>バイナリ <strong>transformiix(.exe)</strong> は extensions/transformiix/source と dist/bin/ （シンボリック・リンク）にあります。これを unices 上で run-mozilla.sh transformiix で実行すれば、Windows 上で transformiix.exe を実行できます。</p>

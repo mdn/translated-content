@@ -1,0 +1,127 @@
+---
+title: Syntax
+slug: Mozilla/Tech/XPIDL/Syntax
+tags:
+  - xpidl
+translation_of: Mozilla/Tech/XPIDL/Syntax
+---
+<h3 id="Status_of_this_document" name="Status_of_this_document">Status of this document</h3>
+
+<p>This is a partial reverse-engineering of the libIDL source code's parser, limited mostly to the subset of functionality that is supported by the Mozilla xpidl binary.</p>
+
+<h3 id="Purpose_of_this_document" name="Purpose_of_this_document">Purpose of this document</h3>
+
+<p>This document is <strong>not</strong> an introduction to XPIDL or IDL in general. It is more focused on XPIDL syntax and grammar. See <a href="/en/XPIDL" title="en/XPIDL">XPIDL Main Page</a> for more links and introductory content.</p>
+
+<h3 id="Simplifications.2C_conventions_and_notation" name="Simplifications.2C_conventions_and_notation">Simplifications, conventions and notation</h3>
+
+<p>The syntax is specified according to ABNF as defined by <a class="external" href="http://tools.ietf.org/html/rfc5234" title="http://tools.ietf.org/html/rfc5234">RFC 5234</a>, although a few productions use prose for clarity of understanding.</p>
+
+<p>Lexically, tokens are delimited by whitespace (defined here as spaces, tabs, vertical tabs, form feeds, line feeds, and carriage returns, or [ \t\v\f\r\n] in regular expression form). LibIDL only considers a single line feed as a newline, and not carriage returns (although xpidl begs to differ). Additionally, the use of both C-style (/* ... */) and C++-style (// ... end-of-line) comments are permitted between any two tokens.</p>
+
+<p>Some productions can only occur at the beginning of lines; to simplify the grammar, I will not mention them in the grammar, especially since they are handled as a preprocessing step before the IDL source code is actually parsed.</p>
+
+<ol>
+ <li>A `<code>%{</code>' that appears at the beginning of a line is the start of a <strong>raw code fragment</strong>, which extends until the end of a line that begins with `<code>%}</code>'. Text inside raw code fragments are not otherwise parsed by xpidl directly. This may be followed by the language, as in `<code>%{C++</code>', to output the raw fragment only in the specified language.</li>
+ <li>A `<code>#include "file"</code>' line instructs the xpidl processor to include that file in the same sense that the C preprocessor includes a file. Note that includes within comments or raw code fragments are not processed by xpidl. Unlike the C preprocessor, when a file is included multiple times, it acts as if the subsequent includes did not happen; this prevents the need for include guards.</li>
+</ol>
+
+<h3 id="XPIDL_Syntax_.28BNF.29" name="XPIDL_Syntax_.28BNF.29">XPIDL Syntax (ABNF)</h3>
+
+<p>The root production here is <code>idl_file</code>.</p>
+
+<p><code><code>idl_file = 1*definition<br>
+ definition = [type_decl / const_decl / interface] ";"<br>
+ interface = [prop_list] "interface" ident [[inheritance] "{" *(ifacebody) "}"]<br>
+ inheritance = ":" *(scoped_name ",") scoped_name]<br>
+ ifacebody = [type_decl / op_decl /attr_decl / const_decl] ";" / codefrag<br>
+ <br>
+ type_decl = [prop_list] "typedef" type_spec *(ident ",") ident<br>
+ type_decl /= [prop_list] "native" ident [parens]<br>
+ const_decl = "const" type_spec ident "=" expr<br>
+ op_decl = [prop_list] (type_spec / "void") parameter_decls raise_list<br>
+ parameter_decls = "(" [*(param_decl ",") param_decl] ")"<br>
+ param_decl = [prop_list] ("in" / "out" / "inout") type_spec ident<br>
+ attr_decl = [prop_list] ["readonly"] "attribute" type_spec *(ident ",") ident<br>
+ <br>
+ ; Descending order of precedence<br>
+ expr /= expr ("|" / "^" / "&amp;") expr ; Unequal precedence "|" is lowest<br>
+ expr /= expr ("&lt;&lt;" / "&gt;&gt;") expr<br>
+ expr /= expr ("+" / "-") expr<br>
+ expr /= expr ("*" / "/" / "%") expr<br>
+ expr /= ["-" / "+" / "~"] (scoped_name / literal / "(" expr ")" )<br>
+ <br>
+ ; Numeric literals: quite frankly, I'm sure you know how these kinds of<br>
+ ; literals work, and these are annoying to specify in ABNF.<br>
+ literal = octal_literal / decimal_literal / hex_literal / floating_literal<br>
+ literal /= string_literal / char_literal<br>
+ literal /= "TRUE" / "FALSE"<br>
+ <br>
+ ; In regex: /"[^"\n]*["\n]/. Yes, newline terminates.<br>
+ string_literal = 1*(%x22 *(any char except %x22 or %x0a) (%x22 / %x0a))<br>
+ ; Same as above, but s/"/'/g<br>
+ char_literal = 1*(%x27 *(any char except %x27 or %x0a) (%x27 / %x0a))<br>
+ <br>
+ type_spec = "float" / "double" / "string" / "wstring"<br>
+ type_spec /= ["unsigned"] ("short" / "long" / "long" "long")<br>
+ type_spec /= "char" / "wchar" / "boolean" / "octet"<br>
+ type_spec /= scoped_name<br>
+ <br>
+ prop_list = "[" *(property ",") property "]"<br>
+ property = ident [parens]<br>
+ raise_list = "raises" "(" *(scoped_name) ",") scoped_name ")"<br>
+ <br>
+ scoped_name = *(ident "::") ident / "::" ident</code></code><br>
+ <code><code>; In regex: [A-Za-z_][A-Za-z0-9_]*; identifiers beginning with _ cause warnings</code></code><br>
+ <code><code>ident = (%x41-5a / %x61-7a / "_") *(%x41-5a / %x61-7a / %x30-39 / "_")<br>
+ parens = "(" 1*(any char except ")") ")"</code></code></p>
+
+<h3 id="Functionality_not_used_in_xpidl">Functionality not used in xpidl</h3>
+
+<p>The libIDL parser we use is more powerful than xpidl itself can understand. The following is a list of potential features which are parseable but may not result in expected code:</p>
+
+<ul>
+ <li>Struct, union, and enumerated types</li>
+ <li>Array declarators (appears to be supported in xpidl_header.c but not xpidl_typelib.c)</li>
+ <li>Exception declarations</li>
+ <li>Module declarations</li>
+ <li>Variable arguments (that makes the ABNF get more wonky)</li>
+ <li>Sequence types</li>
+ <li>Max-length strings</li>
+ <li>Fixed-point numbers</li>
+ <li>"any" and "long double" types.</li>
+</ul>
+
+<h3 id="Pyxpidl_syntax">Pyxpidl syntax</h3>
+
+<p><code><code>idlfile = *(CDATA / INCLUDE / interface / typedef / native)<br>
+ <br>
+ typedef = "typedef" IDENTIFER IDENTIFIER ";"<br>
+ native = [attributes] "native" IDENTIFIER "(" NATIVEID ")"<br>
+ interface = [attributes] "interface" IDENTIFIER" [ifacebase] [ifacebody] ";"<br>
+ ifacebase = ":" IDENTIFIER<br>
+ ifacebody = "{" *(member) "}"<br>
+ <br>
+ member = CDATA / "const" IDENTIFIER IDENTIFIER "=" number ";"<br>
+ member /= [attributes] ["readonly"] "attribute" IDENTIFIER IDENTIFER ";"<br>
+ member /= [attributes] IDENTIFIER IDENTIFIER "(" paramlist ")" raises ";"<br>
+ paramlist = [param *("," param)]<br>
+ raises = ["raises" "(" IDENTIFIER *("," identifier) ")"]<br>
+ attributes = "[" attribute *("," attribute) "]"<br>
+ attribute = (IDENTIFIER / CONST) ["(" (IDENTIFIER / IID) ")"]<br>
+ param = [attributes] ("in" / "out" / "inout") IDENTIFIER IDENTIFIER<br>
+ <br>
+ number = NUMBER / IDENTIFIER<br>
+ number /= "(" number ")"<br>
+ number /= "-" number<br>
+ number /= number ("+" / "-" / "*") number<br>
+ number /= number ("&lt;&lt;" / &gt;&gt;") number<br>
+ number /= number "|" number<br>
+ <br>
+ ; Lexical tokens, I'm going to specify these in regex form<br>
+ NUMBER = /-?\d+|0x[0-9A-Fa-f]+/<br>
+ CDATA = /%\{[ ]*C\+\+[ ]*\n(.*?\n?)%\}[ ]*(C\+\+)?/s<br>
+ INCLUDE = /\#include[ \t]+"[^"\n]+"/<br>
+ NATIVEID = /[^()\n]+(?=\))/<br>
+ IID = /[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}/<br>
+ IDENTIFIER = /unsigned long long|unsigned short|unsigned long|long long|[A-Za-z][A-Za-z_0-9]*/</code></code></p>

@@ -1,0 +1,299 @@
+---
+title: 'Versions d''une extension, mise à jour et compatibilité'
+slug: 'Archive/Add-ons/Versions_extension,_mise_à_jour_et_compatibilité'
+tags:
+  - Extensions
+translation_of: 'Archive/Add-ons/Extension_Versioning,_Update_and_Compatibility'
+---
+<h2 id="Versions_d.27un_module" name="Versions_d.27un_module">Versions d'un module</h2>
+
+<p>Les modules doivent spécifier leurs versions en utilisant le <a href="fr/Format_de_version_du_toolkit">Format de version du toolkit</a>. Il s'agit approximativement d'une chaîne de caractères découpée par des points, comme par exemple :</p>
+
+<ul>
+ <li>2.0</li>
+ <li>1.0b1</li>
+ <li>3.0pre1</li>
+ <li>5.0.1.2</li>
+</ul>
+
+<div class="note"><strong>Note :</strong> Avant Firefox 1.5, un format de version plus basique était utilisé : major.minor.release.build[+] où seuls des chiffres étaient permis. Le format de version du toolkit gère la numérotation des versions de Firefox mais il permet une plus grande flexibilité.</div>
+
+<h2 id="Comment_les_applications_d.C3.A9terminent_la_compatibilit.C3.A9" name="Comment_les_applications_d.C3.A9terminent_la_compatibilit.C3.A9">Comment les applications déterminent la compatibilité</h2>
+
+<p>Lors de l'installation de modules, les applications regardent les entrées de <code><a href="fr/Install.rdf#targetApplication">targetApplication</a></code> dans le fichier install.rdf du module. L'id de cette entrée doit correspondre exactement à l'id de l'application. De plus, les valeurs <code>minVersion</code> et <code>maxVersion</code> de cette entrée doivent former un intervalle comprenant la version de l'application.</p>
+
+<p>Si l'application possède une entrée <code>targetApplication</code> pour une version incompatible, elle tentera alors d'obtenir des informations de mise à jour à partir de l'<code><a href="fr/Install.rdf#updateURL">updateURL</a></code> du module.</p>
+
+<p>Si le fichier install.rdf contient des entrées <code><a href="fr/Install.rdf#targetPlatform">targetPlatform</a></code>, la plateforme devant faire tourner l'application doit y être listée. Dans le cas contraire, l'installation sera refusée.</p>
+
+<p></p><div class="blockIndicator standardNote standardNoteBlock">
+    <p><a href="https://developer.mozilla.org/fr/docs/Mozilla/Firefox/Releases/3">Note concernant Firefox 3</a></p>
+    <p style="font-weight: 400;">Dans des applications basées sur Gecko 1.9, vous pouvez également utiliser une entrée <code>targetApplication</code> avec une id <code>toolkit@mozilla.org</code>, et des valeurs <code>minVersion</code> et <code>maxVersion</code> qui correspondent à la version du toolkit faisant tourner l'application. Cela vous permet que d'installer votre module sur n'importe quelle application basée sur ce toolkit.</p>
+</div><p></p>
+
+<h3 id="Passer_outre_les_tests_de_compatibilit.C3.A9" name="Passer_outre_les_tests_de_compatibilit.C3.A9">Passer outre les tests de compatibilité</h3>
+
+<p> Pour des besoins de tests, vous pouvez dire à l'application d'ignorer quelque peu les vérifications de compatibilité lors de l'installation de modules. Créez simplement une préférence booléenne <code>extensions.checkCompatibility</code> avec la valeur false.</p>
+
+<div class="note"><strong>Note :</strong> Avant Firefox 1.5, la préférence <code>app.extensions.version</code> servait à outrepasser la version que l'application croyait pouvoir installer normalement.</div>
+
+<h2 id="Choix_de_minVersion_et_maxVersion" name="Choix_de_minVersion_et_maxVersion">Choix de minVersion et maxVersion</h2>
+
+<p><code>minVersion</code> et <code>maxVersion</code> doivent spécifier la plage de versions de l'application sur laquelle vous avez fait des tests. En particulier, vous ne devriez jamais spécifier un <code>maxVersion</code> plus grand que la version actuelle de l'application, puisque vous ne connaissez pas les modifications possibles à venir des API et de l'interface utilisateur. Avec la <a href="#Mise_.C3.A0_jour_de_compatibilit.C3.A9">mise à jour de compatibilité</a>, il n'est pas nécessaire de fournir une version entière nouvelle de l'extension simplement pour augmenter son <code>maxVersion</code>.</p>
+
+<p>Pour la valeur <code>maxVersion</code>, il est généralement permis d'utiliser un * à la place de la version mineure de l'application supportée, par exemple 2.0.0.* signifiera que vous supporterez toutes les mises à jour mineures de la version 2.</p>
+
+<p>N'allez pas imaginer que * dans une version représente n'importe quelle version. Le * représente en fait un nombre infiniment grand et n'a réellement un sens que lorsqu'il est utilisé dans <code>maxVersion</code>. Si vous l'utilisez dans <code>minVersion</code>, vous n'obtiendrez pas le résultat escompté.</p>
+
+<h2 id="V.C3.A9rification_automatique_des_mises_.C3.A0_jour_de_modules" name="V.C3.A9rification_automatique_des_mises_.C3.A0_jour_de_modules">Vérification automatique des mises à jour de modules</h2>
+
+<p>Les applications vont vérifier périodiquement les mises à jour à installer des modules en récupérant le fichier <code><a href="fr/Install.rdf#updateURL">updateURL</a></code>. L'information renvoyée peut servir à prévenir l'utilisateur d'une mise à jour d'un module, aussi bien qu'indiquer à l'application qu'il existe des nouvelles versions d'applications compatibles avec ce module.</p>
+
+<h3 id="Mise_.C3.A0_jour_de_compatibilit.C3.A9" name="Mise_.C3.A0_jour_de_compatibilit.C3.A9">Mise à jour de compatibilité</h3>
+
+<p>Pendant la phase de vérification automatique, les applications examinent à la fois s'il existe des nouvelles versions et des mises à jour de compatibilité concernant la version installée d'un module. Cela signifie que votre manifeste de mise à jour contient une entrée pour la version actuellement installée du module, et l'entrée <code>targetApplication</code> spécifie un maxVersion plus grand, l'application utilisera cette valeur à la place de celle spécifiée dans le fichier install.rdf du module. De ce fait, des modules qui étaient désactivés car incompatibles peuvent s'activer, et des modules qui ne s'installaient normalement pas peuvent être installés.</p>
+
+<h3 id="Format_RDF_de_mise_.C3.A0_jour" name="Format_RDF_de_mise_.C3.A0_jour">Format RDF de mise à jour</h3>
+
+<p>Si vous hébergez l'<code>updateURL</code> de votre module vous-même, vous devrez alors retourner l'information de version dans un format RDF. Vous trouverez ci dessous un exemple de manifeste de mise à jour. Il liste les informations de 2 différentes versions de l'extension ayant pour id <code><a class="link-mailto" href="mailto:foobar@developer.mozilla.org" rel="freelink">foobar@developer.mozilla.org</a></code>. Les versions incluses sont 2.2 et 2.5, et chacune d'elles définit une compatibilité avec les versions de 1.5 à 2.0.0.* de Firefox. Pour la version 2.2, un lien https de mise à jour est employé tandis que pour la version 2.5, c'est un lien régulier http avec un hash pour vérifier le fichier récupéré.</p>
+
+<p>Il est important de récupérer correctement l'attribut about du RDF:Description initial. Cette information précisera de quel type de module il s'agit :</p>
+
+<ul>
+ <li>Pour une extension, il s'agit de <code>urn:mozilla:extension:&lt;id&gt;</code></li>
+ <li>Pour un thème, il s'agit de <code>urn:mozilla:theme:&lt;id&gt;</code></li>
+ <li>Pour tout autre type de module, il s'agit de <code>urn:mozilla:item:&lt;id&gt;</code></li>
+</ul>
+
+<p>Dans chacun des exemples qui vont suivre, la séquence des versions au sein de l'élément &lt;RDF:Seq&gt; est significative, les versions plus récentes devant être présentées après les versions plus anciennes. Il n'est pas nécessaire de lister toutes les versions intermédiaires si la dernière version est fournie.</p>
+
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:em="http://www.mozilla.org/2004/em-rdf#"&gt;
+
+  &lt;!-- Cette ressource de description inclut toutes les informations de mise à jour
+       et de compatibilité pour un unique module ayant l'id foobar@developer.mozilla.org.
+       Vous pouvez lister plusieurs informations de module dans un même fichier RDF. --&gt;
+  &lt;RDF:Description about="urn:mozilla:extension:foobar@developer.mozilla.org"&gt;
+    &lt;em:updates&gt;
+      &lt;RDF:Seq&gt;
+
+        &lt;!-- Chaque li est une version différente du même module --&gt;
+        &lt;RDF:li&gt;
+          &lt;RDF:Description&gt;
+            &lt;em:version&gt;2.2&lt;/em:version&gt; &lt;!-- Ceci est le numéro de version du module --&gt;
+
+            &lt;!-- Un targetApplication pour chacune des applications avec laquelle le module est compatible --&gt;
+            &lt;em:targetApplication&gt;
+              &lt;RDF:Description&gt;
+                &lt;em:id&gt;{ec8030f7-c20a-464f-9b0e-13a3a9e97384}&lt;/em:id&gt;
+                &lt;em:minVersion&gt;1.5&lt;/em:minVersion&gt;
+                &lt;em:maxVersion&gt;2.0.0.*&lt;/em:maxVersion&gt;
+
+                &lt;!-- Ceci est l'emplacement de téléchargement du module --&gt;
+                &lt;em:updateLink&gt;https://www.mysite.com/foobar2.2.xpi&lt;/em:updateLink&gt;
+
+                &lt;!-- Une page décrivant les nouveautés de la mise à jour --&gt;
+                &lt;em:updateInfoURL&gt;http://www.mysite.com/updateinfo2.2.xhtml&lt;/em:updateInfoURL&gt;
+              &lt;/RDF:Description&gt;
+            &lt;/em:targetApplication&gt;
+          &lt;/RDF:Description&gt;
+        &lt;/RDF:li&gt;
+
+        &lt;RDF:li&gt;
+          &lt;RDF:Description&gt;
+            &lt;em:version&gt;2.5&lt;/em:version&gt;
+            &lt;em:targetApplication&gt;
+              &lt;RDF:Description&gt;
+                &lt;em:id&gt;{ec8030f7-c20a-464f-9b0e-13a3a9e97384}&lt;/em:id&gt;
+                &lt;em:minVersion&gt;1.5&lt;/em:minVersion&gt;
+                &lt;em:maxVersion&gt;2.0.0.*&lt;/em:maxVersion&gt;
+                &lt;em:updateLink&gt;http://www.mysite.com/foobar2.5.xpi&lt;/em:updateLink&gt;
+                &lt;em:updateHash&gt;sha1:78fc1d2887eda35b4ad2e3a0b60120ca271ce6e6&lt;/em:updateHash&gt;
+              &lt;/RDF:Description&gt;
+            &lt;/em:targetApplication&gt;
+          &lt;/RDF:Description&gt;
+        &lt;/RDF:li&gt;
+
+      &lt;/RDF:Seq&gt;
+    &lt;/em:updates&gt;
+
+    &lt;!-- Une signature est nécessaire seulement si votre module inclut un updateKey dans
+         son fichier install.rdf. --&gt;
+    &lt;em:signature&gt;MIGTMA0GCSqGSIb3DQEBBQUAA4GBAMO1O2gwSCCth1GwYMgscfaNakpN40PJfOWt
+                  ub2HVdg8+OXMciF8d/9eVWm8eH/IxuxyZlmRZTs3O5tv9eWAY5uBCtqDf1WgTsGk
+                  jrgZow1fITkZI7w0//C8eKdMLAtGueGfNs2IlTd5P/0KH/hf1rPc1wUqEqKCd4+L
+                  BcVq13ad&lt;/em:signature&gt;
+  &lt;/RDF:Description&gt;
+&lt;/RDF:RDF&gt;
+</pre>
+
+<p>Certaines personnes préfèrent le format alternatif suivant (notez que beaucoup d'informations ont été retirées de cet exemple par souci de clarté) :</p>
+
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:em="http://www.mozilla.org/2004/em-rdf#"&gt;
+
+  &lt;!-- Cette ressource de description inclut toutes les informations de mise à jour
+       et de compatibilité pour un unique module ayant l'id foobar@developer.mozilla.org.
+       Vous pouvez lister plusieurs informations de module dans un même fichier RDF. --&gt;
+  &lt;RDF:Description about="urn:mozilla:extension:foobar@developer.mozilla.org"&gt;
+    &lt;em:updates&gt;
+      &lt;RDF:Seq&gt;
+        &lt;!-- L'attribut resource pointe vers une entrée RDF:Description correspondante
+             plus bas. L'uri peut être ce que vous voulez --&gt;
+        &lt;RDF:li resource="urn:mozilla:extension:foobar@developer.mozilla.org:2.2"/&gt;
+        &lt;RDF:li resource="urn:mozilla:extension:foobar@developer.mozilla.org:2.5"/&gt;
+      &lt;/RDF:Seq&gt;
+    &lt;/em:updates&gt;
+    &lt;em:signature&gt;MIGTMA0GCSqGSIb3DQEBBQUAA4GBAMO1O2gwSCCth1GwYMgscfaNakpN40PJfOWt
+                  ub2HVdg8+OXMciF8d/9eVWm8eH/IxuxyZlmRZTs3O5tv9eWAY5uBCtqDf1WgTsGk
+                  jrgZow1fITkZI7w0//C8eKdMLAtGueGfNs2IlTd5P/0KH/hf1rPc1wUqEqKCd4+L
+                  BcVq13ad&lt;/em:signature&gt;
+  &lt;/RDF:Description&gt;
+
+  &lt;!-- Ceci représente la même description qu'avec le li de l'exemple précédent --&gt;
+  &lt;RDF:Description about="urn:mozilla:extension:foobar@developer.mozilla.org:2.2"&gt;
+    &lt;em:version&gt;2.2&lt;/em:version&gt;
+
+    &lt;!-- suppression du contenu ici --&gt;
+
+  &lt;/RDF:Description&gt;
+
+  &lt;RDF:Description about="urn:mozilla:extension:foobar@developer.mozilla.org:2.5"&gt;
+    &lt;em:version&gt;2.5&lt;/em:version&gt;
+
+    &lt;!-- suppression du contenu ici --&gt;
+
+  &lt;/RDF:Description&gt;
+
+&lt;/RDF:RDF&gt;
+</pre>
+
+<h3 id="Fournir_des_d.C3.A9tails_sur_les_mises_.C3.A0_jour" name="Fournir_des_d.C3.A9tails_sur_les_mises_.C3.A0_jour">Fournir des détails sur les mises à jour</h3>
+
+<p></p>
+
+<h4 id="En_g.C3.A9n.C3.A9ral" name="En_g.C3.A9n.C3.A9ral">En général</h4>
+
+<p>Il est possible de fournir à l'utilisateur quelques détails sur les nouveautés d'une mise à jour d'un module. Ils seront visibles lorsque l'utilisateur reçoit une notification de mise à jour et devraient lui permettre d'avoir un aperçu rapide des nouvelles fonctionnalités et des problèmes de sécurité résolus.</p>
+
+<p>Pour réaliser cela, vous devez ajouter une entrée <code>updateInfoURL</code> à votre manifeste de mise à jour (voir l'exemple plus haut). La page à cette URL sera récupérée et affichée à l'utilisateur. Puisqu'elle est affichée en dehors du contexte d'une page Web normale, son contenu est énormément assaini, ce qui signifie qu'il n'y a pas beaucoup d'options de formatage disponibles et les scripts et images ne sont pas autorisés.</p>
+
+<ul>
+ <li>h1, h2 et h3 pour les en-têtes généraux</li>
+ <li>p pour les paragraphes</li>
+ <li>ul et ol pour les listes.</li>
+</ul>
+
+<p>À l'intérieur des listes, utilisez les balises habituelles <code>li</code> pour chaque item.</p>
+
+<p>À l'intérieur des balises h1, h2, h3, p et li, vous pouvez utiliser :</p>
+
+<ul>
+ <li>b ou strong pour du texte en gras</li>
+ <li>i ou em pour du texte en italique</li>
+</ul>
+
+<p>La page d'information récupérée doit pour l'instant être totalement valide en XHTML, et doit être servie avec le type MIME <code>application/xhtml+xml</code>.</p>
+
+<p>Vous pouvez ajouter <code>%APP_LOCALE%</code> dans votre <code>updateInfoURL</code> si vous désirez que les informations de locale soient fournis dans l'URL — ceci permet de personnaliser le texte selon la locale de l'utilisateur. Vous pouvez également utiliser les autres chaînes de substitution gérées par <code>updateURL</code>, bien qu'elles soient probablement moins utiles.</p>
+
+<h4 id="Ce_que_voit_l.27utilisateur" name="Ce_que_voit_l.27utilisateur">Ce que voit l'utilisateur</h4>
+
+<p>Le contenu de <code>updateInfoURL</code> sera affiché pour l'utilisateur dans la page des modules complémentaires, dans une liste des mises à jour disponibles. L'utilisateur peut ensuite cliquer sur le bouton <strong>Afficher les informations</strong> et verra celles-ci sur le côté droit. (notez que l'intitulé du bouton devient <strong>Masquer les informations</strong>)</p>
+
+<p><img alt="Image:Example_updateInfoURL2.png"></p>
+
+<h3 id="Mises_.C3.A0_jour_s.C3.A9curis.C3.A9es" name="Mises_.C3.A0_jour_s.C3.A9curis.C3.A9es">Mises à jour sécurisées</h3>
+
+<p> </p>
+
+<p>Gecko 1.9 dispose d'un processus supplémentaire destiné à protéger les utilisateurs contre <a class="external" href="http://fr.wikipedia.org/wiki/Attaque_de_l'homme_du_milieu">les attaques de l'homme du milieu</a> ainsi que pendant des mises à jour de modules. Dans le fichier install.rdf du module déjà installé, <code>updateURL</code> doit être défini d'une des façons suivantes :</p>
+
+<ul>
+ <li>L'<code><a href="fr/Install.rdf#updateURL">updateURL</a></code> utilise https, ou il n'y a aucun <code>updateURL</code> (ce qui par défaut correspond à addons.mozilla.org qui est en https)</li>
+ <li>L'<code><a href="fr/Install.rdf#updateURL">updateURL</a></code> utilise http et l'entrée <code><a href="fr/Install.rdf#updateKey">updateKey</a></code> est spécifiée pour permettre de vérifier les données du manifeste d'installation.</li>
+</ul>
+
+<p>Lorsque vous spécifier une <code>updateKey</code> dans install.rdf, vous devez inclure <a href="#Signature_de_manifestes_de_mise_.C3.A0_jour">une signature numérique</a> dans le manifeste de mise à jour ou l'information sera rejetée.</p>
+
+<p>Dans le manifeste de mise à jour délivré par <code>updateURL</code>, <code>updateLink</code> doit être défini d'une des façons suivantes :</p>
+
+<ul>
+ <li>Le lien <code>updateLink</code> vers un fichier XPI doit utiliser https</li>
+ <li>Le lien <code>updateLink</code> peut utiliser http et vous devez inclure une entrée <code><a href="#Hachages_de_mise_.C3.A0_jour">updateHash</a></code> pour le fichier XPI en utilisant des algorithmes de hachage sha1, sha256, sha384 ou sha512.</li>
+</ul>
+
+<p>Toutes les entrées du manifeste de mise à jour qui ne respectent pas ces deux exigences seront ignorées lors de la vérification des nouvelles versions.</p>
+
+<p>Notez que les liens https vers des sites ayant des certificats invalides ou qui redirigent les requêtes vers des sites http échoueront également pour les cas update.rdf et <code>updateLink</code></p>
+
+<h4 id="Hachages_de_mise_.C3.A0_jour" name="Hachages_de_mise_.C3.A0_jour">Hachages de mise à jour</h4>
+
+<p>Afin de vérifier l'intégrité du XPI téléchargé, vous devez fournir une entrée <code>updateHash</code> en même temps que le lien updateLink. Il s'agit d'un hachage généré à partir des données du fichier selon l'un des algorithmes gérés (sha1, sha256, sha384 et sha512). Dans Firefox 3, si la valeur <code>updateLink</code> n'est pas https le hachage doit être fait à l'aide d'un des membres de la famille d'algorithmes sha. L'algorithme de hachage utilisé est placé en préfixe de la chaîne de caractères et séparé par « <code>:</code> ».</p>
+
+<pre>  &lt;em:updateHash&gt;sha1:78fc1d2887eda35b4ad2e3a0b60120ca271ce6e6&lt;/em:updateHash&gt;
+</pre>
+
+<p></p><div class="note"><strong>Note :</strong> La valeur de <code>updateHash</code>, <strong>doit</strong> commencer par la chaîne de l'algorithme de hachage, une erreur courante est d'effacer le préfixe en mettant à jour la valeur de <code>updateHash</code> : <em><strong>sha1:</strong>78fc1d2887eda35b4ad2e3a0b60120ca271ce6e6</em></div><p></p>
+
+<p>Une erreur est affichée lorsque le hachage d'un fichier téléchargé diffère de son hachage spécifié.</p>
+
+<p>Différents outils peuvent être utilisés pour générer des hachages :</p>
+
+<p>De nombreuses variantes d'Unix fournissent sha1sum, sha256sum et ainsi de suite. Les utilisateurs de Windows peuvent utiliser <a class="external" href="http://beeblebrox.org/hashtab/">HashTab</a> pour une utilisation interactive (hors script de compilation). On pensera aussi aux <a class="external" href="http://gnuwin32.sourceforge.net/packages/coreutils.htm">outils GNU pour Windows</a> (en dehors des classiques comme Cygwin), qui peuvent servir en utilisation non interactive :</p>
+
+<pre class="eval">sha1sum FICHIER
+</pre>
+
+<p>On peut encore citer <a class="external" href="http://md5deep.sourceforge.net/">md5deep</a>, qui est multiplateforme :</p>
+
+<pre class="eval">sha1deep FICHIER
+</pre>
+
+<p>OpenSSL peut également générer des hachages :</p>
+
+<pre class="eval">openssl sha1 FICHIER
+</pre>
+
+<p>Sous Windows, <a class="external" href="http://beeblebrox.org/hashtab/">HashTab</a> peut servir d'extension au shell… un clic droit vous donnera des valeurs de hachage pour n'importe quel fichier.</p>
+
+<p>De plus, un <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=395368">bug d'amélioration est ouvert</a> pour ajouter une génération automatique de hachages pour les fichiers XPI à l'outil McCoy.</p>
+
+<p>Enfin, tous les langages (de script) populaires offrent cette fonctionnalité, par exemple : <a class="external" href="http://docs.python.org/lib/module-hashlib.html">Python</a>, Perl: CPAN Digest, <a class="external" href="http://de2.php.net/sha1_file">PHP</a>.</p>
+
+<h4 id="Signature_de_manifestes_de_mise_.C3.A0_jour" name="Signature_de_manifestes_de_mise_.C3.A0_jour">Signature de manifestes de mise à jour</h4>
+
+<p> </p>
+
+<p>Si vous souhaitez servir votre RDF de mise à jour depuis un serveur http classique, les applications basées sur Gecko 1.9 auront besoin que vous signez numériquement le manifeste de mise à jour pour garantir que l'information n'est pas altérée entre le moment où vous l'avez créée et celui où les applications la récupèrent. L'outil <a href="fr/McCoy">McCoy</a> doit être utilisé pour signer le RDF de mise à jour.</p>
+
+<p>Les détails techniques du mécanisme de signature dépasse le cadre de ce document, toutefois les bases sont les suivantes :</p>
+
+<h5 id="Premi.C3.A8re_.C3.A9tape_.E2.80.94_.C3.A0_faire_une_seule_fois.2C_avant_de_publier_le_module" name="Premi.C3.A8re_.C3.A9tape_.E2.80.94_.C3.A0_faire_une_seule_fois.2C_avant_de_publier_le_module">Première étape — à faire une seule fois, avant de publier le module</h5>
+
+<p>L'objectif et d'ajouter <code><a href="fr/Install.rdf#updateKey">updateKey</a></code> au fichier install.rdf.</p>
+
+<p>L'auteur du module crée une paire de clés cryptée RSA publique/privée.</p>
+
+<p>La partie publique de la clé est encodée en DER et encodée en base 64, puis ajoutée au fichier install.rdf du module dans l'entrée <code><a href="fr/Install.rdf#updateKey">updateKey</a></code>.</p>
+
+<h5 id="Deuxi.C3.A8me_.C3.A9tape_.E2.80.94_.C3.A0_faire_.C3.A0_chaque_modification_du_fichier_.C2.AB_update.rdf.E2.80.89.C2.BB" name="Deuxi.C3.A8me_.C3.A9tape_.E2.80.94_.C3.A0_faire_.C3.A0_chaque_modification_du_fichier_.C2.AB_update.rdf.E2.80.89.C2.BB">Deuxième étape — à faire à chaque modification du fichier « update.rdf »</h5>
+
+<p>L'objectif est de définir la valeur de <code><a href="fr/Update.rdf#signature">signature</a></code> dans update.rdf.</p>
+
+<p>Lorsque l'auteur crée le fichier rdf de mise à jour, un outil sert à le signer en utilisant la partie privée de la clé. Plus simplement, l'information de mise à jour est convertie en chaîne de caractères, puis hachée par un algorithme sha512 et le hachage obtenu est signé grâce à la clé privée. La donnée résultante est encodée en DER, puis encodée en base 64 pour être inclue dans update.rdf et comme une entrée de <code><a href="fr/Update.rdf#signature">signature</a></code>.</p>
+
+<h2 id="D.C3.A9bogage_et_r.C3.A9solution_de_probl.C3.A8mes" name="D.C3.A9bogage_et_r.C3.A9solution_de_probl.C3.A8mes">Débogage et résolution de problèmes</h2>
+
+<p>Les mécanismes de mise à jour peuvent envoyer des informations à la console, et afficher différentes informations pouvant vous aider à résoudre un problème. Pour activer l'affichage des messages :</p>
+
+<ol>
+ <li>Définissez la valeur de <strong>extensions.logging.enabled</strong> à <strong>true</strong> (en utilisant l'URL <code>about:config</code>).</li>
+ <li>Lancez Firefox en ligne de commande avec l'option <code>-console</code></li>
+</ol>
+
+<p>Si vous rencontrez des problèmes, examinez la sortie en console pour l'id de votre extension, et regardez si des erreurs ont été enregistrées.</p>

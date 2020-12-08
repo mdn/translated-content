@@ -1,0 +1,124 @@
+---
+title: fuelIAnnotations
+slug: Toolkit_API/FUEL/fuelIAnnotations
+tags:
+  - FUEL
+  - Firefox
+  - Interfaces
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/Toolkit_API/FUEL/fuelIAnnotations
+---
+<div>
+ {{ Fx_minversion_header(3) }} 注釈サービスは Firefox 3 にて Web ページに関する任意のデータを保存するために設計されました。</div>
+<h2 id="Method_overview" name="Method_overview">メソッドの概要</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>boolean <a href="#has.28.29">has</a>(in AString aName)</code></td>
+  </tr>
+  <tr>
+   <td><code>nsIVariant <a href="#get.28.29">get</a>(in AString aName)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#set.28.29">set</a>(in AString aName, in nsIVariant aValue, in PRInt32 aExpiration)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#remove.28.29">remove</a>(in AString aName)</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Attributes" name="Attributes">プロパティ</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">プロパティ名</td>
+   <td class="header">型</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code>names</code></td>
+   <td><code>読取専用属性 nsIVariant</code></td>
+   <td>この注釈オブジェクトを所有するブックマークアイテムに関連付けられたすべての注釈の名前の配列</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Methods" name="Methods">メソッド</h2>
+<h3 id="has.28.29" name="has.28.29">has()</h3>
+<p>指定した名前の注釈が存在するかどうかを調べる。</p>
+<pre class="eval">boolean has(in AString aName)
+</pre>
+<h4 id="Parameters" name="Parameters">引数</h4>
+<dl>
+ <dt>
+  <code>aName</code></dt>
+ <dd>
+  注釈の名前。</dd>
+</dl>
+<h4 id="Return_value" name="Return_value">戻り値</h4>
+<p>指定した名前の注釈が存在すれば true、さもなくば false。</p>
+<h3 id="get.28.29" name="get.28.29">get()</h3>
+<p>指定した名前の注釈の値を取得する。</p>
+<pre class="eval">nsIVariant get(in AString aName)
+</pre>
+<h4 id="Parameters" name="Parameters">引数</h4>
+<dl>
+ <dt>
+  <code>aName</code></dt>
+ <dd>
+  注釈の名前。</dd>
+</dl>
+<h4 id="Return_value" name="Return_value">戻り値</h4>
+<p>注釈の値を含む変数。文字列、真偽値、数値をサポートする。</p>
+<h3 id="set.28.29" name="set.28.29">set()</h3>
+<p>指定した名前の注釈へ値をセットする。</p>
+<pre class="eval">void set(in AString aName, in nsIVariant aValue, in PRInt32 aExpiration)
+</pre>
+<h4 id="Parameters" name="Parameters">引数</h4>
+<dl>
+ <dt>
+  <code>aName</code></dt>
+ <dd>
+  注釈の名前。</dd>
+ <dt>
+  <code>aValue</code></dt>
+ <dd>
+  注釈の値。文字列、真偽値、数値をサポートする。</dd>
+ <dt>
+  <code>aExpiration</code></dt>
+ <dd>
+  注釈の有効期限ポリシー。 nsIAnnotationService 参照。</dd>
+</dl>
+<h4 id="Return_value" name="Return_value">戻り値</h4>
+<h3 id="remove.28.29" name="remove.28.29">remove()</h3>
+<p>この注釈オブジェクトを所有するブックマークアイテムから、指定した名前の注釈を削除する。</p>
+<pre><code>void remove(in AString aName)</code></pre>
+<h4 id="Parameters" name="Parameters">引数</h4>
+<dl>
+ <dt>
+  <code>aName</code></dt>
+ <dd>
+  注釈の名前。</dd>
+</dl>
+<h4 id="Return_value" name="Return_value">戻り値</h4>
+<h2 id="Examples" name="Examples">例</h2>
+<pre class="brush:js">const NEVER_EXPIRE = 0;
+
+function url(spec) {
+  var ios = Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService);
+  return ios.newURI(spec, null, null);
+}
+
+var bookmark = Application.bookmarks.menu.addBookmark("Mozilla", url("http://www.mozilla.com/"));
+bookmark.annotations.set("mystuff/public", true, NEVER_EXPIRE);
+bookmark.annotations.set("mystuff/rating", 5, NEVER_EXPIRE);
+
+alert(bookmark.annotations.get("mystuff/rating"));
+
+bookmark.annotations.remove("mystuff/rating");
+</pre>
+<h2 id="See_also" name="See_also">参照</h2>
+<ul>
+ <li><a href="/ja/docs/Using_the_Places_annotation_service" title="Using_the_Places_annotation_service">Using the Places annotation service</a></li>
+ <li><a href="/ja/docs/NsIAnnotationService" title="NsIAnnotationService">nsIAnnotationService</a></li>
+</ul>

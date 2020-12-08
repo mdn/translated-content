@@ -1,0 +1,415 @@
+---
+title: Gecko Profiler のFAQ
+slug: Mozilla/Performance/Gecko_Profiler_FAQ
+translation_of: Mozilla/Performance/Gecko_Profiler_FAQ
+---
+<p>This documents lists a number of questions asked by people in preparation for a tutorial session about the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Performance/Profiling_with_the_Built-in_Profiler">Gecko Profiler</a>.  mstange and ehsan tried to respond to some of the questions in advance in writing, and you can find the answers below.</p>
+
+<ul id="docs-internal-guid-81b866d2-12e9-cfc9-07fb-bc00c016f7e3" style="margin-top: 0pt; margin-bottom: 0pt;">
+ <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+  <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">Is it possible to locate hot spots occurring within a single function?</span></p>
+
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">The Gecko Profiler currently doesn’t have the ability to show you information about line numbers, neither for JS code nor for native code.</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">For JS code, the profiler platform doesn’t capture any information about lines. It only knows what function was executed and what line this function starts at.</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">For native code, the profiler captures the necessary information but doesn’t have a way to display it.</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">Similarly it also can’t show you instruction level information about where each sample was captured (this is why there is no support for line-level sampling for native code either.)  At this point the granularity of each sample it displays is a native function.</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">Therefore the Gecko Profiler is not a suitable tool for finding hotspots within a single function.  For this purpose you should try to use a native profiler on your platform of choice (for example xperf/vtune on Windows, Instruments on OSX, and perf/Zoom on Linux.)</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">One workaround is to break the hot function into several explicitly-non-inline helpers, recompile, and re-profile. This can change some performance characteristics, but is a decent way to get a sense of which parts of a large function are expensive.</span></p>
+   </li>
+  </ul>
+ </li>
+ <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+  <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">How to profile startup code that regresses just a little (&lt;10-15ms ts_paint/tpaint)</span></p>
+
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">[mstange] We currently don’t have a good way to do that. You can write your own tools to assist you in this process, though. I did something like this a few years ago with the old profiler and I think something similar would work here:</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">I think there are three main challenges here. You need deterministic profiles that can be compared meaningfully, you need to gather enough data / samples, and you need a way to compare profiles.</span></p>
+
+    <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+     <li dir="ltr" style="list-style-type: square; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+      <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">To increase determinism, you really want an automated way of gathering the data. And you’ll want to make sure the profiles only contain data for the time range you’re interested in. To stop the profiler from gathering more samples after the “startup end” marker that you’re interested in, you can call Services.profiler.pause(); or you can insert a marker with a special string and then write a script that filters out all samples that were gathered after your marker.</span></p>
+     </li>
+     <li dir="ltr" style="list-style-type: square; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+      <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">To increase the amount of data, you should run your automated gathering procedure many times, and then combine multiple profiles into one. We don’t have a script that combines profiles, but I can help you write one if you’re interested. In the end, you should have one big “before” profile and one big “after” profile.</span></p>
+     </li>
+     <li dir="ltr" style="list-style-type: square; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+      <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">Profile comparison is tricky. The only way that I’ve tried before is to use a “difference calltree”: In the regular call tree, each node of the calltree is assigned a weight which is just the number of samples that were under this call stack. In a difference call tree, each node’s weight instead is computed as &lt;number of samples under this stack in the “after” profile&gt; minus &lt;number of samples under this stack in the “before” profile&gt;. That tree is then displayed in the usual way, with weights in decreasing order from top to bottom. Then the call stacks whose cost increased the most in the “after” profile will be at the top, and those are the ones you usually want to look at if you caused a regression.</span><br>
+       <span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">In this view, the timestamps of individual samples / stacks will not be meaningful.</span><br>
+       <span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">Perf.html does not have a comparison view at the moment. I can help you add one, though.</span></p>
+     </li>
+    </ul>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">There is </span><a href="https://github.com/devtools-html/perf.html/blob/master/docs/gecko-profile-format.md" style="text-decoration: none;"><u>documentation for the Gecko profile format</u></a><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">.</span></p>
+   </li>
+  </ul>
+ </li>
+ <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+  <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">Is it worth slowing down CPU to increase the profiler resolution?</span></p>
+
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">It depends on what you are trying to profile to some extent.  Usually you should be really careful when changing the characteristics of the environment that you are trying to measure to avoid measuring the wrong thing.</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">If the issue you are trying to avoid is not profiling on fast machines that Mozilla developers typically use to build Firefox on, a better solution may be using a less high-end machine that actually has lower spec’d hardware instead of artificially slowing down just the CPU.</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">Another approach to get more precision is also raising the sampling frequency to sub-millisecond ranges (it won’t work on Windows.)  High frequency sampling may also be an area where native profilers are a useful alternative tool to try.</span></p>
+   </li>
+  </ul>
+ </li>
+ <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+  <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">How do we profile "leaks" that show up after running Firefox for &gt; 40 mins?</span></p>
+
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">The Gecko Profiler has been designed specifically for the use case of having it run always in the background, and it’s pretty good at that!  It is quite reasonable to actually run the browser for 40 minutes and once the said leaks have happened capture the profiles and study what went wrong.</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">[ehsan] I have been profiling my real browser usage for months now, and so can you.  :-)</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">However, if it’s really just “leaks” that are the problem, it’s possible that those profiles only show you that we spend a lot of time in GC / CC. In that case, the Gecko Profiler is the wrong tool to debug this. Even about:memory would be more useful.</span></p>
+   </li>
+  </ul>
+ </li>
+ <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+  <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">Overview of the changes in the last (year?) to Cleopatra/etc</span></p>
+
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">Faster, hopefully more reliable</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">Has a Timeline tab</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">Lets you hide threads with a context menu</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">Supports symbolication for local builds on Windows if you run “mach buildsymbols” first</span></p>
+   </li>
+  </ul>
+ </li>
+ <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+  <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">Profiling non-nsThreads?</span></p>
+
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">The current setup requires each thread that you want to profile to notify the profiler about its existence. We have this hooked up for nsThreads, and as of very recently also for rayon threads (used in stylo). We have not attempted to register other threads with the profiler. </span><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1341811" style="text-decoration: none;"><u>Bug 1341811</u></a><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;"> suggests hooking platform thread spawning functions but nobody has looked at it yet.</span></p>
+   </li>
+  </ul>
+ </li>
+ <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+  <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">Profiling all nsThreads - how bad is the overhead?</span></p>
+
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">[mstange] I don’t know. I think Julian Seward has done some measurements on this, I think.</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">[ehsan] Try clicking the toolbar icon for the extension, expanding the Settings section, and enter the secret cheat code “,” in the Threads field and click on “Apply (Restart Profiler)”.  This will capture all of the threads that the Gecko Profiler has been hooked to.</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">This mode is usually recommended when you want to find a thread you want to do more focused profiling on, so that you can find its name and then construct a more useful thread filter string based on the found thread name.</span></p>
+   </li>
+  </ul>
+ </li>
+ <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+  <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">How can I run (micro-?) benchmarks on the memory allocator to see if changes in it (or entire allocator replacements) are slower/faster?</span></p>
+
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">What you *don’t* want to do is writing a micro-benchmark that call malloc/free in a loop and the like and call it a day!</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">A better idea would be picking up a real browser workload where through previous profiling we know that malloc overhead contributes a measurable percentage of overhead to the overall time and then study the change to that workload after replacing the allocator.</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">You do want to think about various characteristics of an allocator which may have an impact on performance.  For example, see Julian’s great investigation on the impact of cache line sharing across multiple cores on jemalloc’s multi-core performance in </span><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1291355#c26" style="text-decoration: none;"><u>https://bugzilla.mozilla.org/show_bug.cgi?id=1291355#c26</u></a><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">.</span></p>
+   </li>
+  </ul>
+ </li>
+ <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+  <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">What's the best way to measure the cost of new compiler flags (that affect all or most functions)?</span></p>
+
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">[ehsan] This is similar to the previous question to some extent, but the specific answer really depends on what kind of compiler flag we’re talking about and what performance impact we’re interested to study.  But the short answer is picking up real browser workloads, and finding ways to split out the overall cost contributed by the thing that your change is going to affect and compare things before and after.</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">[mstange] This question is more about benchmarking than about profiling. If you want to measure things, please measure without the profiler running, because the profiler can add its own overhead.</span></p>
+   </li>
+  </ul>
+ </li>
+ <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+  <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">How do we find performance regressions caused by third-party and system addons, especially ones that only show up after extended uptime?</span></p>
+
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">By running into them. I wish I had a better answer to this question.  In general, the Gecko Profiler is a profiling tool that helps you figure out what happens inside the browser as a performance issue is happening, it doesn’t help with reproducing the performance issues in the first place.</span></p>
+   </li>
+  </ul>
+ </li>
+ <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+  <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">TaskTracer: how to diagnose dispatch delays? (a demo)</span></p>
+
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">TaskTracer is currently not in a usable state. Sorry.</span></p>
+   </li>
+  </ul>
+ </li>
+ <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+  <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">TaskTracer: from the above, how do we decide on prioritization on the same thread event queue?</span></p>
+
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">See above.</span></p>
+   </li>
+  </ul>
+ </li>
+ <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+  <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">Do we profile memory page faults? (i.e. when we are accessing a virtual memory page that needs to reload from disk)</span></p>
+
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">The Gecko Profiler does not know about page faults.  On Linux, perf does a good job at visualizing page faults, for example, they will show up as part of the same call stack as the user-space call stack for the program you are profiling.</span></p>
+   </li>
+  </ul>
+ </li>
+ <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+  <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">If so, how complicated is to find out the reason the page has been purged?</span></p>
+
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">[mstange] I don’t know.</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">[ehsan] I don’t think this is very interesting in the general situation, since OSes can basically decide to swap out part of your virtual address space and you’d page fault when you access that page next and there is very little that the program can do about that.  Many times the reason you incur a page fault is merely that you are touching a memory page that hasn’t been touched in awhile.  For example, we have observed that the first access to large hashtables when doing a hashtable lookup can incur a page fault in many cases, and while the specific reason behind each one of those page faults may be different, the general conclusion from that observation would be something about the overall efficiency of your memory access patterns.  Typically we wouldn’t be optimizing away a single page fault anyway.</span></p>
+   </li>
+  </ul>
+ </li>
+ <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+  <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">What is the status of I/O detection, on any thread?</span></p>
+
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">The Gecko profiler has a “mainthreadio” feature which will cause markers for main thread IO to be inserted into the profile. However, the profiler add-on currently doesn’t have a checkbox to enable this feature.</span></p>
+   </li>
+  </ul>
+ </li>
+ <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+  <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">Are the timer probes synchronized, or random/independent?  (I'd guess they're independent).  When profiling hundred(s) of threads at low intervals, does this distort the measurement or operation? (I.e. I want to profile all threads, not just Main plus a couple of others)</span></p>
+
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">We haven’t done any measurements of how frequent sampling distorts measurement or operation.</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">There is only one sampler thread. It runs a loop that works like this:</span></p>
+
+    <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+     <li dir="ltr" style="list-style-type: square; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+      <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">Iterate over all threads. For each thread, suspend it, walk its stack, resume it.</span></p>
+     </li>
+     <li dir="ltr" style="list-style-type: square; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+      <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">Sleep until the next sample is due. Then go to the previous step.</span></p>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+  <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">I there an equivalent to ITIMER_PROF vs ITIMER_REAL settings?  (ITIMER_PROF interrupts every N ms regardless of which thread used the time, REAL interrupts every Nms of wall-clock time)</span></p>
+
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">The Gecko profiler does not know which thread is used at which time. It interrupts all threads based on wall-clock time.</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">[jesup] Ok, that's the equivalent to ITIMER_REAL, kinda, except that per the previous question it doesn't interrupt every thread at once and snapshot the thread you started the itimer on, it interrupts each thread one at a time, which likely means distortion of the measurement if the number of threads monitored is significant (especially at high sample rates).  A cleaner snapshot would stop all threads, walk all their stacks, and then resume all threads, especially on high-core systems.  (ITIMER_REAL (due to posix) requires the signal occur on the calling thread, not a random thread.  ITIMER_PROF interrupts the then-running thread, whichever one it is.</span></p>
+   </li>
+  </ul>
+ </li>
+ <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+  <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">Is there a way to isolate or filter a profile (at least of mainthread and maybe one or two other ones that make sense) to a specific tab/document/eventqueue?</span></p>
+
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">Currently not. Some functions (reflow, painting, JS excecution) insert the URL of the associated document into the call stack frame, so you can get a rough idea, but we don’t have instrumentation at the tab/document/eventqueue level.</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">For isolated profiles I recommend profiling a separate browser instance with only the tab that you’re interested in.</span></p>
+   </li>
+  </ul>
+ </li>
+ <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+  <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">What are the recommended native profilers across all OS's?</span></p>
+
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">Mac: Instruments; Linux: perf, zoom, callgrind; Windows: Concurrency Visualizer, VTune, xperf</span></p>
+   </li>
+  </ul>
+ </li>
+ <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+  <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">When to use Gecko profiler vs. native profilers?</span></p>
+
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">Gecko profiler: If you need JS callstacks or Gecko-specific instrumentation, or need to use any of its nifty UI features.</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">Native profilers: If you’re interested in lower-level information or are running into the Gecko profiler’s limitations. (See many of the questions above for examples of such limitations.)</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">Note that these tools should all be considered as complementary, it’s typical to capture a profile in Gecko Profiler and based on some investigations decide to delve into some part of it using a native profiler, etc.</span></p>
+   </li>
+  </ul>
+ </li>
+ <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+  <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">Nothing stands out in the profile, how can I accurately find the next bottleneck?</span></p>
+
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">This is a hard question.</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">You’ll probably want to accumulate costs that are somehow “similar” or “in the same bucket” but distributed over different parts of the call tree / time line, and then attack the biggest bucket.</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">Neither the process of accumulation, nor the process of assigning things to buckets, is easily doable with the current UI.</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">There are many cases where code is slow due to a death by a thousand cuts scenario, in which case you would need to find many micro-optimizations that overall amount to something significant.</span></p>
+   </li>
+  </ul>
+ </li>
+ <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+  <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">How to go from a web-page to a micro-benchmark which is representative of the web-page?</span></p>
+
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">Please let me know if you find a way to do this. It would make our job a lot easier.</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">In the off-chance where we have been able to do this, it typically happens as one of the last stages of the work, since you’d typically have finished fully analyzing the issue and through that have managed to figure out how to write a micro-benchmark that reproduces the exact issue.</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">It’s better to start getting used to profiling and analyzing real pages more.  :-)</span></p>
+   </li>
+  </ul>
+ </li>
+ <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+  <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">What's the best way to profile startup performance?</span></p>
+
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">Install the Gecko profiler add-on. Quit the browser. Start the browser with the environment variable MOZ_PROFILER_STARTUP=1 set. As soon as startup is done, collect a profile.</span></p>
+   </li>
+  </ul>
+ </li>
+ <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+  <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">What's the best way to do repeatable tests? ie: I want to measure perf of loading the same page with different stylo configurations.</span></p>
+
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">Probably by using Talos, especially if you want to measure and not profile.</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">You can make your own Talos pageload test which has just the one page that you’re interested in in its manifest.</span></p>
+   </li>
+  </ul>
+ </li>
+ <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+  <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">What actually means the percentage of the running time?</span></p>
+
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">The percentage of samples with stacks under this stack.</span></p>
+   </li>
+  </ul>
+ </li>
+ <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+  <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">How you identify a user action in the main thread </span></p>
+
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">We’re missing UI for this at the moment. The profile contains markers for DOM events, and those include user-generated events like mouse clicks, but these markers are only exposed as a huge unsearchable list in the Markers tab.</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">If you have a rough idea of what the user was doing, try searching for functions that you’d expect in the call tree and see where they are in the thread timeline.</span></p>
+   </li>
+  </ul>
+ </li>
+ <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+  <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">What is a suggested comprehensive performance analysis workflow for code changes that impact UI?</span></p>
+
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">[mstange] I don’t know if anybody has written down such a workflow.</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">My usual, very unscientific approach is: Use it for a while, and if you notice slowness, profile it. Pay attention to the red jank markers at the top.</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">[ehsan] Mike Conley’s </span><a href="https://mikeconley.github.io/ohnoreflow/" style="text-decoration: none;"><u>Oh No Reflow! Add-on</u></a><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;"> is helpful.</span></p>
+   </li>
+  </ul>
+ </li>
+ <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+  <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">How do we know when profiler output is statistically significant (for comparing across runs / across machines)?</span></p>
+
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">[mstange] Hard to say. Prefer to do comparisons by measuring your timings with code instead of by inspecting profiles. Always keep in mind that profiler overhead has the potential to skew the results.</span></p>
+   </li>
+  </ul>
+ </li>
+ <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+  <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">Is it better to profile across multiple platforms, or to focus time on Windows (since that's the bulk of our users)?</span></p>
+
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">[mstange] In my opinion, as long as you double-check that the problems you find are actually present on Windows, it doesn’t matter much what platform you find them on.</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">[ehsan] That being said, we do see a lot of Windows-specific issues that you will not find on other platforms, for example sometimes code calls into a Windows API that requires loading a DLL the first time you call it that takes 10s of milliseconds to finish, etc.  Unless if you profile on Windows you will never find those specific issues.</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">And when you get to the platform specific parts of the browser stack (such as graphics, media, etc.) then profiling on Windows would be certainly a lot more valuable than on other platforms.</span></p>
+   </li>
+  </ul>
+ </li>
+ <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+  <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">Should I profile known to be slow sites on slower hardware to get a better signal?</span></p>
+
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">[mstange] That’s probably a good idea. As long as the slower hardware is still capable enough that the profiler can successfully complete symbolication.</span></p>
+   </li>
+   <li dir="ltr" style="list-style-type: circle; font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;">
+    <p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">[ehsan] Performance issues are just much easier to spot on slower hardware, so if nothing else, using slower hardware will help </span><em>you</em><span style="background-color: transparent; color: #000000; font-family: Arial; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;"> find problems easier.  And don’t forget that if you’re interested in finding IO slowness issues, profiling on a machine with a fast SSD isn’t recommended.</span></p>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+<p> </p>

@@ -1,0 +1,474 @@
+---
+title: JavaScript エンジンを埋め込む方法
+slug: Mozilla/Projects/SpiderMonkey/How_to_embed_the_JavaScript_engine
+tags:
+  - Embedding Mozilla
+  - JavaScript
+  - SpiderMonkey
+  - チュートリアル
+translation_of: Mozilla/Projects/SpiderMonkey/How_to_embed_the_JavaScript_engine
+---
+<div>{{SpiderMonkeySidebar("General")}}</div>
+
+<p>特により良いコードの例として <a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_User_Guide" title="En/SpiderMonkey/JSAPI_User_Guide">JSAPI User Guide</a> も参照して下さい。</p>
+
+<h2 id="A_Bare_Bones_Tutorial" name="A_Bare_Bones_Tutorial">チュートリアル要点</h2>
+
+<h3 id="Hello_World_サンプル組み込みアプリケーション">Hello World サンプル組み込みアプリケーション</h3>
+
+<p>次のコードは、SpiderMonkey を埋め込んで単純な JavaScript スクリプトを実行する方法を示す非常に単純なアプリケーションです。下のコードのサンプルをビルドして実行するための手順を参照してください。</p>
+
+<p>コードは SpiderMonkey のバージョンごとに異なりますので、SpiderMonkey の正しいバージョンを選択してください。</p>
+
+<h4 id="SpiderMonkey_24">SpiderMonkey 24</h4>
+
+<pre class="brush: cpp line-numbers language-cpp"><code class="language-cpp"><span class="comment token">// following code might be needed in some case</span>
+<span class="comment token">// #define __STDC_LIMIT_MACROS</span>
+<span class="comment token">// #include &lt;stdint.h&gt;</span>
+#include <span class="string token">"jsapi.h"</span>
+
+<span class="comment token">/* The class of the global object. */</span>
+static JSClass global_class <span class="operator token">=</span> <span class="punctuation token">{</span>
+    <span class="string token">"global"</span><span class="punctuation token">,</span>
+    JSCLASS_GLOBAL_FLAGS<span class="punctuation token">,</span>
+    JS_PropertyStub<span class="punctuation token">,</span>
+    JS_DeletePropertyStub<span class="punctuation token">,</span>
+    JS_PropertyStub<span class="punctuation token">,</span>
+    JS_StrictPropertyStub<span class="punctuation token">,</span>
+    JS_EnumerateStub<span class="punctuation token">,</span>
+    JS_ResolveStub<span class="punctuation token">,</span>
+    JS_ConvertStub<span class="punctuation token">,</span>
+<span class="punctuation token">}</span><span class="punctuation token">;</span>
+
+int <span class="function token">main</span><span class="punctuation token">(</span>int argc<span class="punctuation token">,</span> const char <span class="operator token">*</span>argv<span class="punctuation token">[</span><span class="punctuation token">]</span><span class="punctuation token">)</span>
+<span class="punctuation token">{</span>
+    JSRuntime <span class="operator token">*</span>rt <span class="operator token">=</span> <span class="function token">JS_NewRuntime</span><span class="punctuation token">(</span><span class="number token">8</span>L <span class="operator token">*</span> <span class="number token">1024</span> <span class="operator token">*</span> <span class="number token">1024</span><span class="punctuation token">,</span> JS_USE_HELPER_THREADS<span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>rt<span class="punctuation token">)</span>
+        <span class="keyword token">return</span> <span class="number token">1</span><span class="punctuation token">;</span>
+
+    JSContext <span class="operator token">*</span>cx <span class="operator token">=</span> <span class="function token">JS_NewContext</span><span class="punctuation token">(</span>rt<span class="punctuation token">,</span> <span class="number token">8192</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>cx<span class="punctuation token">)</span>
+        <span class="keyword token">return</span> <span class="number token">1</span><span class="punctuation token">;</span>
+
+    <span class="punctuation token">{</span> <span class="comment token">// Scope for our various stack objects (JSAutoRequest, RootedObject), so they all go</span>
+      <span class="comment token">// out of scope before we JS_DestroyContext.</span>
+
+      JSAutoRequest <span class="function token">ar</span><span class="punctuation token">(</span>cx<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// In practice, you would want to exit this any</span>
+                            <span class="comment token">// time you're spinning the event loop</span>
+
+      JS<span class="punctuation token">:</span><span class="punctuation token">:</span>RootedObject <span class="function token">global</span><span class="punctuation token">(</span>cx<span class="punctuation token">,</span> <span class="function token">JS_NewGlobalObject</span><span class="punctuation token">(</span>cx<span class="punctuation token">,</span> <span class="operator token">&amp;</span>global_class<span class="punctuation token">,</span> nullptr<span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+      <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>global<span class="punctuation token">)</span>
+          <span class="keyword token">return</span> <span class="number token">1</span><span class="punctuation token">;</span>
+
+      JS<span class="punctuation token">:</span><span class="punctuation token">:</span>RootedValue <span class="function token">rval</span><span class="punctuation token">(</span>cx<span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+      <span class="punctuation token">{</span> <span class="comment token">// Scope for JSAutoCompartment</span>
+        JSAutoCompartment <span class="function token">ac</span><span class="punctuation token">(</span>cx<span class="punctuation token">,</span> global<span class="punctuation token">)</span><span class="punctuation token">;</span>
+        <span class="function token">JS_InitStandardClasses</span><span class="punctuation token">(</span>cx<span class="punctuation token">,</span> global<span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+        const char <span class="operator token">*</span>script <span class="operator token">=</span> <span class="string token">"'hello'+'world, it is '+new Date()"</span><span class="punctuation token">;</span>
+        const char <span class="operator token">*</span>filename <span class="operator token">=</span> <span class="string token">"noname"</span><span class="punctuation token">;</span>
+        int lineno <span class="operator token">=</span> <span class="number token">1</span><span class="punctuation token">;</span>
+        bool ok <span class="operator token">=</span> <span class="function token">JS_EvaluateScript</span><span class="punctuation token">(</span>cx<span class="punctuation token">,</span> global<span class="punctuation token">,</span> script<span class="punctuation token">,</span> <span class="function token">strlen</span><span class="punctuation token">(</span>script<span class="punctuation token">)</span><span class="punctuation token">,</span> filename<span class="punctuation token">,</span> lineno<span class="punctuation token">,</span> rval<span class="punctuation token">.</span><span class="function token">address</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+        <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>ok<span class="punctuation token">)</span>
+          <span class="keyword token">return</span> <span class="number token">1</span><span class="punctuation token">;</span>
+      <span class="punctuation token">}</span>
+
+      JSString <span class="operator token">*</span>str <span class="operator token">=</span> rval<span class="punctuation token">.</span><span class="function token">toString</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+      <span class="function token">printf</span><span class="punctuation token">(</span><span class="string token">"%s\n"</span><span class="punctuation token">,</span> <span class="function token">JS_EncodeString</span><span class="punctuation token">(</span>cx<span class="punctuation token">,</span> str<span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="punctuation token">}</span>
+
+    <span class="function token">JS_DestroyContext</span><span class="punctuation token">(</span>cx<span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="function token">JS_DestroyRuntime</span><span class="punctuation token">(</span>rt<span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="function token">JS_ShutDown</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="keyword token">return</span> <span class="number token">0</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span></code></pre>
+
+<h4 id="SpiderMonkey_31">SpiderMonkey 31</h4>
+
+<pre class="brush: cpp line-numbers language-cpp"><code class="language-cpp"><span class="comment token">// following code might be needed in some case</span>
+<span class="comment token">// #define __STDC_LIMIT_MACROS</span>
+<span class="comment token">// #include &lt;stdint.h&gt;</span>
+#include <span class="string token">"jsapi.h"</span>
+
+<span class="comment token">/* The class of the global object. */</span>
+static JSClass global_class <span class="operator token">=</span> <span class="punctuation token">{</span>
+    <span class="string token">"global"</span><span class="punctuation token">,</span>
+    JSCLASS_GLOBAL_FLAGS<span class="punctuation token">,</span>
+    JS_PropertyStub<span class="punctuation token">,</span>
+    JS_DeletePropertyStub<span class="punctuation token">,</span>
+    JS_PropertyStub<span class="punctuation token">,</span>
+    JS_StrictPropertyStub<span class="punctuation token">,</span>
+    JS_EnumerateStub<span class="punctuation token">,</span>
+    JS_ResolveStub<span class="punctuation token">,</span>
+    JS_ConvertStub<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    JS_GlobalObjectTraceHook
+<span class="punctuation token">}</span><span class="punctuation token">;</span>
+
+int <span class="function token">main</span><span class="punctuation token">(</span>int argc<span class="punctuation token">,</span> const char <span class="operator token">*</span>argv<span class="punctuation token">[</span><span class="punctuation token">]</span><span class="punctuation token">)</span>
+<span class="punctuation token">{</span>
+    <span class="function token">JS_Init</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+    JSRuntime <span class="operator token">*</span>rt <span class="operator token">=</span> <span class="function token">JS_NewRuntime</span><span class="punctuation token">(</span><span class="number token">8</span>L <span class="operator token">*</span> <span class="number token">1024</span> <span class="operator token">*</span> <span class="number token">1024</span><span class="punctuation token">,</span> JS_USE_HELPER_THREADS<span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>rt<span class="punctuation token">)</span>
+        <span class="keyword token">return</span> <span class="number token">1</span><span class="punctuation token">;</span>
+
+    JSContext <span class="operator token">*</span>cx <span class="operator token">=</span> <span class="function token">JS_NewContext</span><span class="punctuation token">(</span>rt<span class="punctuation token">,</span> <span class="number token">8192</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>cx<span class="punctuation token">)</span>
+        <span class="keyword token">return</span> <span class="number token">1</span><span class="punctuation token">;</span>
+
+    <span class="punctuation token">{</span> <span class="comment token">// Scope for our various stack objects (JSAutoRequest, RootedObject), so they all go</span>
+      <span class="comment token">// out of scope before we JS_DestroyContext.</span>
+
+      JSAutoRequest <span class="function token">ar</span><span class="punctuation token">(</span>cx<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// In practice, you would want to exit this any</span>
+                            <span class="comment token">// time you're spinning the event loop</span>
+
+      JS<span class="punctuation token">:</span><span class="punctuation token">:</span>RootedObject <span class="function token">global</span><span class="punctuation token">(</span>cx<span class="punctuation token">,</span> <span class="function token">JS_NewGlobalObject</span><span class="punctuation token">(</span>cx<span class="punctuation token">,</span> <span class="operator token">&amp;</span>global_class<span class="punctuation token">,</span> nullptr<span class="punctuation token">,</span> JS<span class="punctuation token">:</span><span class="punctuation token">:</span>FireOnNewGlobalHook<span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+      <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>global<span class="punctuation token">)</span>
+          <span class="keyword token">return</span> <span class="number token">1</span><span class="punctuation token">;</span>
+
+      JS<span class="punctuation token">:</span><span class="punctuation token">:</span>RootedValue <span class="function token">rval</span><span class="punctuation token">(</span>cx<span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+      <span class="punctuation token">{</span> <span class="comment token">// Scope for JSAutoCompartment</span>
+        JSAutoCompartment <span class="function token">ac</span><span class="punctuation token">(</span>cx<span class="punctuation token">,</span> global<span class="punctuation token">)</span><span class="punctuation token">;</span>
+        <span class="function token">JS_InitStandardClasses</span><span class="punctuation token">(</span>cx<span class="punctuation token">,</span> global<span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+        const char <span class="operator token">*</span>script <span class="operator token">=</span> <span class="string token">"'hello'+'world, it is '+new Date()"</span><span class="punctuation token">;</span>
+        const char <span class="operator token">*</span>filename <span class="operator token">=</span> <span class="string token">"noname"</span><span class="punctuation token">;</span>
+        int lineno <span class="operator token">=</span> <span class="number token">1</span><span class="punctuation token">;</span>
+        bool ok <span class="operator token">=</span> <span class="function token">JS_EvaluateScript</span><span class="punctuation token">(</span>cx<span class="punctuation token">,</span> global<span class="punctuation token">,</span> script<span class="punctuation token">,</span> <span class="function token">strlen</span><span class="punctuation token">(</span>script<span class="punctuation token">)</span><span class="punctuation token">,</span> filename<span class="punctuation token">,</span> lineno<span class="punctuation token">,</span> <span class="operator token">&amp;</span>rval<span class="punctuation token">)</span><span class="punctuation token">;</span>
+        <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>ok<span class="punctuation token">)</span>
+          <span class="keyword token">return</span> <span class="number token">1</span><span class="punctuation token">;</span>
+      <span class="punctuation token">}</span>
+
+      JSString <span class="operator token">*</span>str <span class="operator token">=</span> rval<span class="punctuation token">.</span><span class="function token">toString</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+      <span class="function token">printf</span><span class="punctuation token">(</span><span class="string token">"%s\n"</span><span class="punctuation token">,</span> <span class="function token">JS_EncodeString</span><span class="punctuation token">(</span>cx<span class="punctuation token">,</span> str<span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="punctuation token">}</span>
+
+    <span class="function token">JS_DestroyContext</span><span class="punctuation token">(</span>cx<span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="function token">JS_DestroyRuntime</span><span class="punctuation token">(</span>rt<span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="function token">JS_ShutDown</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="keyword token">return</span> <span class="number token">0</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span></code></pre>
+
+<h4 id="SpiderMonkey_38">SpiderMonkey 38</h4>
+
+<pre class="brush: cpp line-numbers language-cpp"><code class="language-cpp"><span class="comment token">// following code might be needed in some case</span>
+<span class="comment token">// #define __STDC_LIMIT_MACROS</span>
+<span class="comment token">// #include &lt;stdint.h&gt;</span>
+#include <span class="string token">"jsapi.h"</span>
+
+<span class="comment token">/* The class of the global object. */</span>
+static JSClass global_class <span class="operator token">=</span> <span class="punctuation token">{</span>
+    <span class="string token">"global"</span><span class="punctuation token">,</span>
+    JSCLASS_GLOBAL_FLAGS<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    JS_GlobalObjectTraceHook
+<span class="punctuation token">}</span><span class="punctuation token">;</span>
+
+int <span class="function token">main</span><span class="punctuation token">(</span>int argc<span class="punctuation token">,</span> const char <span class="operator token">*</span>argv<span class="punctuation token">[</span><span class="punctuation token">]</span><span class="punctuation token">)</span>
+<span class="punctuation token">{</span>
+    <span class="function token">JS_Init</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+    JSRuntime <span class="operator token">*</span>rt <span class="operator token">=</span> <span class="function token">JS_NewRuntime</span><span class="punctuation token">(</span><span class="number token">8</span>L <span class="operator token">*</span> <span class="number token">1024</span> <span class="operator token">*</span> <span class="number token">1024</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>rt<span class="punctuation token">)</span>
+        <span class="keyword token">return</span> <span class="number token">1</span><span class="punctuation token">;</span>
+
+    JSContext <span class="operator token">*</span>cx <span class="operator token">=</span> <span class="function token">JS_NewContext</span><span class="punctuation token">(</span>rt<span class="punctuation token">,</span> <span class="number token">8192</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>cx<span class="punctuation token">)</span>
+        <span class="keyword token">return</span> <span class="number token">1</span><span class="punctuation token">;</span>
+
+    <span class="punctuation token">{</span> <span class="comment token">// Scope for our various stack objects (JSAutoRequest, RootedObject), so they all go</span>
+      <span class="comment token">// out of scope before we JS_DestroyContext.</span>
+
+      JSAutoRequest <span class="function token">ar</span><span class="punctuation token">(</span>cx<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// In practice, you would want to exit this any</span>
+                            <span class="comment token">// time you're spinning the event loop</span>
+
+      JS<span class="punctuation token">:</span><span class="punctuation token">:</span>RootedObject <span class="function token">global</span><span class="punctuation token">(</span>cx<span class="punctuation token">,</span> <span class="function token">JS_NewGlobalObject</span><span class="punctuation token">(</span>cx<span class="punctuation token">,</span> <span class="operator token">&amp;</span>global_class<span class="punctuation token">,</span> nullptr<span class="punctuation token">,</span> JS<span class="punctuation token">:</span><span class="punctuation token">:</span>FireOnNewGlobalHook<span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+      <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>global<span class="punctuation token">)</span>
+          <span class="keyword token">return</span> <span class="number token">1</span><span class="punctuation token">;</span>
+
+      JS<span class="punctuation token">:</span><span class="punctuation token">:</span>RootedValue <span class="function token">rval</span><span class="punctuation token">(</span>cx<span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+      <span class="punctuation token">{</span> <span class="comment token">// Scope for JSAutoCompartment</span>
+        JSAutoCompartment <span class="function token">ac</span><span class="punctuation token">(</span>cx<span class="punctuation token">,</span> global<span class="punctuation token">)</span><span class="punctuation token">;</span>
+        <span class="function token">JS_InitStandardClasses</span><span class="punctuation token">(</span>cx<span class="punctuation token">,</span> global<span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+        const char <span class="operator token">*</span>script <span class="operator token">=</span> <span class="string token">"'hello'+'world, it is '+new Date()"</span><span class="punctuation token">;</span>
+        const char <span class="operator token">*</span>filename <span class="operator token">=</span> <span class="string token">"noname"</span><span class="punctuation token">;</span>
+        int lineno <span class="operator token">=</span> <span class="number token">1</span><span class="punctuation token">;</span>
+        JS<span class="punctuation token">:</span><span class="punctuation token">:</span>CompileOptions <span class="function token">opts</span><span class="punctuation token">(</span>cx<span class="punctuation token">)</span><span class="punctuation token">;</span>
+        opts<span class="punctuation token">.</span><span class="function token">setFileAndLine</span><span class="punctuation token">(</span>filename<span class="punctuation token">,</span> lineno<span class="punctuation token">)</span><span class="punctuation token">;</span>
+        bool ok <span class="operator token">=</span> JS<span class="punctuation token">:</span><span class="punctuation token">:</span><span class="function token">Evaluate</span><span class="punctuation token">(</span>cx<span class="punctuation token">,</span> global<span class="punctuation token">,</span> opts<span class="punctuation token">,</span> script<span class="punctuation token">,</span> <span class="function token">strlen</span><span class="punctuation token">(</span>script<span class="punctuation token">)</span><span class="punctuation token">,</span> <span class="operator token">&amp;</span>rval<span class="punctuation token">)</span><span class="punctuation token">;</span>
+        <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>ok<span class="punctuation token">)</span>
+          <span class="keyword token">return</span> <span class="number token">1</span><span class="punctuation token">;</span>
+      <span class="punctuation token">}</span>
+
+      JSString <span class="operator token">*</span>str <span class="operator token">=</span> rval<span class="punctuation token">.</span><span class="function token">toString</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+      <span class="function token">printf</span><span class="punctuation token">(</span><span class="string token">"%s\n"</span><span class="punctuation token">,</span> <span class="function token">JS_EncodeString</span><span class="punctuation token">(</span>cx<span class="punctuation token">,</span> str<span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="punctuation token">}</span>
+
+    <span class="function token">JS_DestroyContext</span><span class="punctuation token">(</span>cx<span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="function token">JS_DestroyRuntime</span><span class="punctuation token">(</span>rt<span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="function token">JS_ShutDown</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="keyword token">return</span> <span class="number token">0</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span></code></pre>
+
+<h4 id="SpiderMonkey_45">SpiderMonkey 45</h4>
+
+<pre class="brush: cpp line-numbers language-cpp"><code class="language-cpp"><span class="comment token">// following code might be needed in some case</span>
+<span class="comment token">// #define __STDC_LIMIT_MACROS</span>
+<span class="comment token">// #include &lt;stdint.h&gt;</span>
+#include <span class="string token">"jsapi.h"</span>
+#include <span class="string token">"js/Initialization.h"</span>
+
+<span class="comment token">/* The class of the global object. */</span>
+static JSClass global_class <span class="operator token">=</span> <span class="punctuation token">{</span>
+    <span class="string token">"global"</span><span class="punctuation token">,</span>
+    JSCLASS_GLOBAL_FLAGS<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    JS_GlobalObjectTraceHook
+<span class="punctuation token">}</span><span class="punctuation token">;</span>
+
+int <span class="function token">main</span><span class="punctuation token">(</span>int argc<span class="punctuation token">,</span> const char <span class="operator token">*</span>argv<span class="punctuation token">[</span><span class="punctuation token">]</span><span class="punctuation token">)</span>
+<span class="punctuation token">{</span>
+    <span class="function token">JS_Init</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+    JSRuntime <span class="operator token">*</span>rt <span class="operator token">=</span> <span class="function token">JS_NewRuntime</span><span class="punctuation token">(</span><span class="number token">8</span>L <span class="operator token">*</span> <span class="number token">1024</span> <span class="operator token">*</span> <span class="number token">1024</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>rt<span class="punctuation token">)</span>
+        <span class="keyword token">return</span> <span class="number token">1</span><span class="punctuation token">;</span>
+
+    JSContext <span class="operator token">*</span>cx <span class="operator token">=</span> <span class="function token">JS_NewContext</span><span class="punctuation token">(</span>rt<span class="punctuation token">,</span> <span class="number token">8192</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>cx<span class="punctuation token">)</span>
+        <span class="keyword token">return</span> <span class="number token">1</span><span class="punctuation token">;</span>
+
+    <span class="punctuation token">{</span> <span class="comment token">// Scope for our various stack objects (JSAutoRequest, RootedObject), so they all go</span>
+      <span class="comment token">// out of scope before we JS_DestroyContext.</span>
+
+      JSAutoRequest <span class="function token">ar</span><span class="punctuation token">(</span>cx<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// In practice, you would want to exit this any</span>
+                            <span class="comment token">// time you're spinning the event loop</span>
+
+      JS<span class="punctuation token">:</span><span class="punctuation token">:</span>RootedObject <span class="function token">global</span><span class="punctuation token">(</span>cx<span class="punctuation token">,</span> <span class="function token">JS_NewGlobalObject</span><span class="punctuation token">(</span>cx<span class="punctuation token">,</span> <span class="operator token">&amp;</span>global_class<span class="punctuation token">,</span> nullptr<span class="punctuation token">,</span> JS<span class="punctuation token">:</span><span class="punctuation token">:</span>FireOnNewGlobalHook<span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+      <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>global<span class="punctuation token">)</span>
+          <span class="keyword token">return</span> <span class="number token">1</span><span class="punctuation token">;</span>
+
+      JS<span class="punctuation token">:</span><span class="punctuation token">:</span>RootedValue <span class="function token">rval</span><span class="punctuation token">(</span>cx<span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+      <span class="punctuation token">{</span> <span class="comment token">// Scope for JSAutoCompartment</span>
+        JSAutoCompartment <span class="function token">ac</span><span class="punctuation token">(</span>cx<span class="punctuation token">,</span> global<span class="punctuation token">)</span><span class="punctuation token">;</span>
+        <span class="function token">JS_InitStandardClasses</span><span class="punctuation token">(</span>cx<span class="punctuation token">,</span> global<span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+        const char <span class="operator token">*</span>script <span class="operator token">=</span> <span class="string token">"'hello'+'world, it is '+new Date()"</span><span class="punctuation token">;</span>
+        const char <span class="operator token">*</span>filename <span class="operator token">=</span> <span class="string token">"noname"</span><span class="punctuation token">;</span>
+        int lineno <span class="operator token">=</span> <span class="number token">1</span><span class="punctuation token">;</span>
+        JS<span class="punctuation token">:</span><span class="punctuation token">:</span>CompileOptions <span class="function token">opts</span><span class="punctuation token">(</span>cx<span class="punctuation token">)</span><span class="punctuation token">;</span>
+        opts<span class="punctuation token">.</span><span class="function token">setFileAndLine</span><span class="punctuation token">(</span>filename<span class="punctuation token">,</span> lineno<span class="punctuation token">)</span><span class="punctuation token">;</span>
+        bool ok <span class="operator token">=</span> JS<span class="punctuation token">:</span><span class="punctuation token">:</span><span class="function token">Evaluate</span><span class="punctuation token">(</span>cx<span class="punctuation token">,</span> opts<span class="punctuation token">,</span> script<span class="punctuation token">,</span> <span class="function token">strlen</span><span class="punctuation token">(</span>script<span class="punctuation token">)</span><span class="punctuation token">,</span> <span class="operator token">&amp;</span>rval<span class="punctuation token">)</span><span class="punctuation token">;</span>
+        <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>ok<span class="punctuation token">)</span>
+          <span class="keyword token">return</span> <span class="number token">1</span><span class="punctuation token">;</span>
+      <span class="punctuation token">}</span>
+
+      JSString <span class="operator token">*</span>str <span class="operator token">=</span> rval<span class="punctuation token">.</span><span class="function token">toString</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+      <span class="function token">printf</span><span class="punctuation token">(</span><span class="string token">"%s\n"</span><span class="punctuation token">,</span> <span class="function token">JS_EncodeString</span><span class="punctuation token">(</span>cx<span class="punctuation token">,</span> str<span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="punctuation token">}</span>
+
+    <span class="function token">JS_DestroyContext</span><span class="punctuation token">(</span>cx<span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="function token">JS_DestroyRuntime</span><span class="punctuation token">(</span>rt<span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="function token">JS_ShutDown</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="keyword token">return</span> <span class="number token">0</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span></code></pre>
+
+<h4 id="SpiderMonkey_52">SpiderMonkey 52</h4>
+
+<pre class="brush: cpp line-numbers language-cpp"><code class="language-cpp">#include <span class="string token">"jsapi.h"</span>
+#include <span class="string token">"js/Initialization.h"</span>
+
+static JSClassOps global_ops <span class="operator token">=</span> <span class="punctuation token">{</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    nullptr<span class="punctuation token">,</span>
+    JS_GlobalObjectTraceHook
+<span class="punctuation token">}</span><span class="punctuation token">;</span>
+
+<span class="comment token">/* The class of the global object. */</span>
+static JSClass global_class <span class="operator token">=</span> <span class="punctuation token">{</span>
+    <span class="string token">"global"</span><span class="punctuation token">,</span>
+    JSCLASS_GLOBAL_FLAGS<span class="punctuation token">,</span>
+    <span class="operator token">&amp;</span>global_ops
+<span class="punctuation token">}</span><span class="punctuation token">;</span>
+
+int <span class="function token">main</span><span class="punctuation token">(</span>int argc<span class="punctuation token">,</span> const char <span class="operator token">*</span>argv<span class="punctuation token">[</span><span class="punctuation token">]</span><span class="punctuation token">)</span>
+<span class="punctuation token">{</span>
+    <span class="function token">JS_Init</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+    JSContext <span class="operator token">*</span>cx <span class="operator token">=</span> <span class="function token">JS_NewContext</span><span class="punctuation token">(</span><span class="number token">8</span>L <span class="operator token">*</span> <span class="number token">1024</span> <span class="operator token">*</span> <span class="number token">1024</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>cx<span class="punctuation token">)</span>
+        <span class="keyword token">return</span> <span class="number token">1</span><span class="punctuation token">;</span>
+    <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>JS<span class="punctuation token">:</span><span class="punctuation token">:</span><span class="function token">InitSelfHostedCode</span><span class="punctuation token">(</span>cx<span class="punctuation token">)</span><span class="punctuation token">)</span>
+        <span class="keyword token">return</span> <span class="number token">1</span><span class="punctuation token">;</span>
+
+    <span class="punctuation token">{</span> <span class="comment token">// Scope for our various stack objects (JSAutoRequest, RootedObject), so they all go</span>
+      <span class="comment token">// out of scope before we JS_DestroyContext.</span>
+
+      JSAutoRequest <span class="function token">ar</span><span class="punctuation token">(</span>cx<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// In practice, you would want to exit this any</span>
+                            <span class="comment token">// time you're spinning the event loop</span>
+
+      JS<span class="punctuation token">:</span><span class="punctuation token">:</span>CompartmentOptions options<span class="punctuation token">;</span>
+      JS<span class="punctuation token">:</span><span class="punctuation token">:</span>RootedObject <span class="function token">global</span><span class="punctuation token">(</span>cx<span class="punctuation token">,</span> <span class="function token">JS_NewGlobalObject</span><span class="punctuation token">(</span>cx<span class="punctuation token">,</span> <span class="operator token">&amp;</span>global_class<span class="punctuation token">,</span> nullptr<span class="punctuation token">,</span> JS<span class="punctuation token">:</span><span class="punctuation token">:</span>FireOnNewGlobalHook<span class="punctuation token">,</span> options<span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+      <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>global<span class="punctuation token">)</span>
+          <span class="keyword token">return</span> <span class="number token">1</span><span class="punctuation token">;</span>
+
+      JS<span class="punctuation token">:</span><span class="punctuation token">:</span>RootedValue <span class="function token">rval</span><span class="punctuation token">(</span>cx<span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+      <span class="punctuation token">{</span> <span class="comment token">// Scope for JSAutoCompartment</span>
+        JSAutoCompartment <span class="function token">ac</span><span class="punctuation token">(</span>cx<span class="punctuation token">,</span> global<span class="punctuation token">)</span><span class="punctuation token">;</span>
+        <span class="function token">JS_InitStandardClasses</span><span class="punctuation token">(</span>cx<span class="punctuation token">,</span> global<span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+        const char <span class="operator token">*</span>script <span class="operator token">=</span> <span class="string token">"'hello'+'world, it is '+new Date()"</span><span class="punctuation token">;</span>
+        const char <span class="operator token">*</span>filename <span class="operator token">=</span> <span class="string token">"noname"</span><span class="punctuation token">;</span>
+        int lineno <span class="operator token">=</span> <span class="number token">1</span><span class="punctuation token">;</span>
+        JS<span class="punctuation token">:</span><span class="punctuation token">:</span>CompileOptions <span class="function token">opts</span><span class="punctuation token">(</span>cx<span class="punctuation token">)</span><span class="punctuation token">;</span>
+        opts<span class="punctuation token">.</span><span class="function token">setFileAndLine</span><span class="punctuation token">(</span>filename<span class="punctuation token">,</span> lineno<span class="punctuation token">)</span><span class="punctuation token">;</span>
+        bool ok <span class="operator token">=</span> JS<span class="punctuation token">:</span><span class="punctuation token">:</span><span class="function token">Evaluate</span><span class="punctuation token">(</span>cx<span class="punctuation token">,</span> opts<span class="punctuation token">,</span> script<span class="punctuation token">,</span> <span class="function token">strlen</span><span class="punctuation token">(</span>script<span class="punctuation token">)</span><span class="punctuation token">,</span> <span class="operator token">&amp;</span>rval<span class="punctuation token">)</span><span class="punctuation token">;</span>
+        <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>ok<span class="punctuation token">)</span>
+          <span class="keyword token">return</span> <span class="number token">1</span><span class="punctuation token">;</span>
+      <span class="punctuation token">}</span>
+
+      JSString <span class="operator token">*</span>str <span class="operator token">=</span> rval<span class="punctuation token">.</span><span class="function token">toString</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+      <span class="function token">printf</span><span class="punctuation token">(</span><span class="string token">"%s\n"</span><span class="punctuation token">,</span> <span class="function token">JS_EncodeString</span><span class="punctuation token">(</span>cx<span class="punctuation token">,</span> str<span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="punctuation token">}</span>
+
+    <span class="function token">JS_DestroyContext</span><span class="punctuation token">(</span>cx<span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="function token">JS_ShutDown</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    <span class="keyword token">return</span> <span class="number token">0</span><span class="punctuation token">;</span>
+<span class="punctuation token">}</span></code></pre>
+
+<h3 id="Hello_Worldの例のビルドと実行">Hello Worldの例のビルドと実行</h3>
+
+<div>
+<p>ビルドコマンドラインは OS とツールに依存します。Mac と Linux のコマンドラインのサンプルを次に示します (<code>&lt;objdir&gt;</code> は SpiderMonkey がビルドされたディレクトリです)。</p>
+
+<pre class="line-numbers language-html"><code class="language-html"># </code>SpiderMonkey のデバッグビルドを使用している場合は、以下のコマンドに加えて -DDEBUG が必要です。<code class="language-html">
+# </code>SpiderMonkey 31 以外のバージョンを使用している場合は、-lmozjs-XX を自分のバージョンに変更してください。<code class="language-html">
+
+[Mac]
+clang++ -std=c++11 -I<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>objdir</span><span class="punctuation token">&gt;</span></span>/dist/include -L<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>objdir</span><span class="punctuation token">&gt;</span></span>/dist/lib helloworld.cpp -o helloworld  -lmozjs-31 -lz
+[Linux]
+g++ -std=c++11 -I<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>objdir</span><span class="punctuation token">&gt;</span></span>/dist/include -L<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>objdir</span><span class="punctuation token">&gt;</span></span>/dist/lib helloworld.cpp -o helloworld  -lmozjs-31 -lz -lpthread -ldl</code></pre>
+
+<p><code>"helloworld, it is TIME"</code> と表示されます (ここでは TIME が現在の時刻です)。</p>
+
+<ol>
+ <li>Make sure the build computer has the prerequisites for building SpiderMonkey: <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Linux_Prerequisites" title="Linux Prerequisites">Linux</a>, <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Windows_Prerequisites" title="Windows build prerequisites">Windows</a>, <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Mac_OS_X_Prerequisites" title="Mac OS X Build Prerequisites">Mac OS X</a>, <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Build_Instructions" title="Build Instructions">others</a>. For Windows, the following steps will assume that you have installed the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Windows_Prerequisites" title="MozillaBuild">MozillaBuild</a> package.</li>
+ <li>Get the SpiderMonkey source code. You can <a href="http://ftp.mozilla.org/pub/mozilla.org/js/" title="http://ftp.mozilla.org/pub/mozilla.org/js/">download a source archive</a> or use Mercurial (hg) to <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/Getting_SpiderMonkey_source_code#Getting_the_latest_SpiderMonkey_source_code" title="Getting the latest SpiderMonkey source code">pull the SpiderMonkey repository</a>. On Windows, do not install the SpiderMonkey source code under the MSYS root directory (which is usually c:\mozilla-build\msys). Instead use something like c:\mozjs-31.2.0</li>
+ <li>Compile SpiderMonkey using the build instructions at <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/Build_Documentation" title="Build Documentation">SpiderMonkey Build Documentation</a>. By default this will build a SpiderMonkey shared library that you will link into your application in a later step.</li>
+ <li>Copy the code example above into a text editor and save the file as helloworld.cpp in the SpiderMonkey js\src directory. To get a copy of the code sample without line numbers, hover over the sample near the top until buttons appear. Then click the view source button, and copy the code from the window that appears.</li>
+ <li>Compile the helloworld application and link to the SpiderMonkey library.</li>
+ <li>Run the helloworld executable at the command line:
+  <pre class="line-numbers language-html"><code class="language-html">./helloworld</code></pre>
+ </li>
+</ol>
+</div>
+
+<h3 id="JavaScript_から_C_関数の呼び出し方">JavaScript から C 関数の呼び出し方</h3>
+
+<p><code>doit</code> という名前のC関数について言及します。これは呼び出されるときに少なくとも二つの実際のパラメータを使います。(もし呼びだし元がより少ないパラメータを使う場合、JSエンジンは無くなった一つの変数に対して未定義の変数が渡される事を確認すべきです):</p>
+
+<pre class="eval">#define DOIT_MINARGS 2
+
+static JSBool
+doit(JSContext *cx, unsigned argc, jsval *vp)
+{
+<span id="the-code"><a class="d external" href="http://mxr.mozilla.org/mozilla-central/ident?i=jsval">    jsval</a> *<a class="d external" href="http://mxr.mozilla.org/mozilla-central/ident?i=argv">argv</a> = <a class="d external" href="http://mxr.mozilla.org/mozilla-central/ident?i=JS_ARGV">JS_ARGV</a>(<a class="d external" href="http://mxr.mozilla.org/mozilla-central/ident?i=cx">cx</a>, <a class="d external" href="http://mxr.mozilla.org/mozilla-central/ident?i=vp">vp</a>);</span>
+    /*
+     * Look in argv for argc actual parameters, set *rval to return a
+     * value to the caller.
+     */
+    ...
+}
+</pre>
+
+<p>そして、以下のようにコーディングし、JSに渡します:</p>
+
+<pre class="eval">ok = <a href="/en/SpiderMonkey/JSAPI_Reference/JS_DefineFunction" title="en/SpiderMonkey/JSAPI_Reference/JS_DefineFunction">JS_DefineFunction</a>(cx, global, "doit", doit, DOIT_MINARGS, 0);
+</pre>
+
+<p>または、ネイティブな関数群として定義するならば、おそらくそれらをテーブルの中に置き、関数テーブルとして定義するでしょう:</p>
+
+<pre class="eval">static <a href="/En/SpiderMonkey/JSAPI_Reference/JSFunctionSpec" title="En/SpiderMonkey/JSAPI_Reference/JSFunctionSpec">JSFunctionSpec</a> my_functions[] = {
+    {"doit", doit, DOIT_MINARGS, 0, 0},
+    etc...
+    {0,0,0,0,0},
+};
+</pre>
+
+<p>(最終的に、すべてのNULL 関数はテーブルを終端します)そして、以下のようにします:</p>
+
+<pre class="eval">ok = <a href="/en/SpiderMonkey/JSAPI_Reference/JS_DefineFunctions" title="en/SpiderMonkey/JSAPI_Reference/JS_DefineFunctions">JS_DefineFunctions</a>(cx, global, my_functions);
+</pre>
+
+<h3 id="C_から_JavaScript_の関数の呼び出し方">C から JavaScript の関数の呼び出し方</h3>
+
+<p>クリックイベントを最上位の UI から座標 (x,y) の UI 要素に焦点をあてます:</p>
+
+<pre class="eval">JSObject *target, *event;
+jsval argv[1], rval;
+
+/*
+ * Find event target and make event object to represent this click.
+ * Pass cx to NewEventObject so JS_NewObject can be called.
+ */
+target = FindEventTargetAt(cx, global, x, y);
+event = NewEventObject(cx, "click", x, y);
+argv[0] = <a href="/en/SpiderMonkey/JSAPI_Reference/OBJECT_TO_JSVAL" title="en/SpiderMonkey/JSAPI_Reference/OBJECT_TO_JSVAL">OBJECT_TO_JSVAL</a>(event);
+
+/* To emulate the DOM, you might want to try "onclick" too. */
+ok = <a href="/en/SpiderMonkey/JSAPI_Reference/JS_CallFunctionName" title="en/SpiderMonkey/JSAPI_Reference/JS_CallFunctionName">JS_CallFunctionName</a>(cx, target, "onClick", 1, argv, &amp;rval);
+
+/* Now test rval to see whether we should cancel the event. */
+if (<a href="/en/SpiderMonkey/JSAPI_Reference/JSVAL_IS_BOOLEAN" title="en/SpiderMonkey/JSAPI_Reference/JSVAL_IS_BOOLEAN">JSVAL_IS_BOOLEAN</a>(rval) &amp;&amp; !<a href="/en/SpiderMonkey/JSAPI_Reference/JSVAL_TO_BOOLEAN" title="en/SpiderMonkey/JSAPI_Reference/JSVAL_TO_BOOLEAN">JSVAL_TO_BOOLEAN</a>(rval))
+    CancelEvent(event);
+</pre>
+
+<p>繰り返しますが、ここではエラーチェックは無視しています。(関数呼び出し後の 戻り値 !ok のテストような)、いくつかのCのイベント管理処理やハンドラーが偽値を返したときのイベントをキャンセルする場合のDOMの伝統的なやり方を適切にエミュレートするために疑似コードを用いています。</p>
+
+<div class="originaldocinfo">
+<h2 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h2>
+
+<ul>
+ <li>Author: Brendan Eich</li>
+ <li>Last Updated Date: 21 February, 2000</li>
+</ul>
+</div>

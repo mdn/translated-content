@@ -1,0 +1,23 @@
+---
+title: Finding the file to modify
+slug: Creating_a_Mozilla_Extension/Finding_the_file_to_modify
+tags:
+  - Add-ons
+  - Extensions
+translation_of: Archive/Mozilla/Creating_a_Mozilla_extension/Finding_the_file_to_modify
+---
+<p>
+</p><p>これで改造できる Mozilla ができたので、次は改造するファイルを探しましょう。Mozilla の UI は、3 つのレイヤー 「構造」、「スタイル」、「ふるまい」に分かれています。構造レイヤーは部品 (メニュー、ボタンなど) とそれらの UI 上での相対位置を定義します。スタイルレイヤーは部品の見え方 (サイズ、色、スタイルなど) やそれらの全体的な位置 (アライメント <span style="color: darkgreen; background: #ef9;">【訳注: 右寄せや中央寄せなどを定義すること】</span>) を決定します。ふるまいレイヤーは、部品がどのように動作するか、ユーザが部品をどう使うことができるかを指定します。
+<span>mention the localization layer</span>
+</p><p>(注意: これらのレイヤーは完全に排他的ではではありません。例えば、位置の情報は構造レイヤーとスタイルレイヤーの両方で指定できますし、「ふるまい」の一部はスタイルレイヤーで定義できます。) </p><p>それでは、3つの UI レイヤーにコードを加えて行きましょう。まずは構造レイヤーから始めます。構造レイヤーは XUL ファイルで構成されています。<a href="ja/XUL">XUL</a> は XML-based User Interface Language の略で (「ズール」と発音します)、アプリケーションのインターフェイスを記述するために設計された、XML ベースの言語です。これは一般的なウィジェット (メニュー、ボタン、ツールバーなど) と、多くの洗練されたウィジェット (ツリー、ブラウザ、カラーピッカー) を含んでいます。
+</p><p>Mozilla のウィンドウやダイアログボックスでは、ひとつのウィンドウがひとつの XUL ファイルで定義されています (オーバーレイの仕組みを利用して、他のウィンドウから一部を提供してもらうこともあります)。Tinderbox の状態を示すアイコンを Mozilla に加えるには、まずはブラウザウィンドウの構造が一体どの XUL ファイルで定義されているのか探す必要があります。
+</p><p>ウィンドウに対応する XUL ファイルを見つけるには、DOM Inspector を使うのが最もよい方法です。<a href="ja/DOM_Inspector">DOM Inspector</a> は Mozilla に付属のツールで、Web ページおよび XUL ウィンドウの DOM を調べることができます。DOM Inspector を起動するには、[ツール] メニューから [Web 開発] サブメニューを選択し、[DOM Inspector] を選択します。DOM Inspector が別ウィンドウで開きます。
+</p><p>DOM Inspector ウィンドウで、[File] メニューから [Inspect a Window] サブメニューを選択し、Mozilla ブラウザウィンドウのアイテム (ブラウザが現在開いているページの名前がつけられています) を選択します。DOM Inspector には Mozilla ブラウザのウィンドウを定義している XUL ファイルの URL、ここでは <code><a class=" external">chrome://navigator/content/navigator.xul</a></code> が表示されます。
+</p><p>chrome URL は、Mozilla をインストールしたディレクトリの <code>chrome</code> サブディレクトリの中のファイルを参照するために Mozilla 内部で 使われている URL のことです。chrome URL にはパス部がありますが、そのパスは必ずしもディレクトリ階層そのものを 示しているわけではありません。この場合、chrome URL は <code>mozilla-installation-directory/chrome/content/navigator/navigator.xul</code> を示しています。
+<span>[explain further, http://www.mozilla.org/xpfe/ConfigChromeSpec.html]</span>
+</p><p></p><div style="text-align: right;" class="prevnext">
+    <p><a style="float: left;" href="/ja/docs/Creating_a_Mozilla_Extension:Making_a_Mozilla_installation_modifiable">« 前のページ</a><a href="/ja/docs/Creating_a_Mozilla_Extension:Finding_the_code_to_modify">次のページ  »</a></p>
+</div>
+<p></p>
+<div class="noinclude">
+</div>

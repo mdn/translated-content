@@ -1,0 +1,275 @@
+---
+title: radiogroup
+slug: Mozilla/Tech/XUL/radiogroup
+tags:
+  - radiogroup
+  - 单选按钮组
+translation_of: Archive/Mozilla/XUL/radiogroup
+---
+<div class="noinclude"><span class="breadcrumbs XULRef_breadcrumbs">
+ « <a href="/zh-CN/docs/XUL_Reference">XUL Reference home</a>    [
+ <a href="#Examples">示例</a> |
+ <a href="#Attributes">属性</a> |
+ <a href="#Properties">特性</a> |
+ <a href="#Methods">方法</a> |
+ <a href="#Related">相关</a> ]
+</span></div>
+
+<p>一组单选按钮。在单选按钮组内一次只能选择一个单选按钮。<code><a href="/zh-CN/docs/Mozilla/Tech/XUL/radio" title="radio">radio</a></code> 按钮可以指示单选按钮组或后代的子节点。 如果您想要一个边框或 <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/caption" title="caption">caption</a></code> ，请将Radiogroup放在一个 <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/groupbox" title="groupbox">groupbox</a></code>内。<strong>radiogroup </strong>默认为垂直方向。</p>
+
+<p>更多信息可以在 <a href="/en/XUL_Tutorial/Input_Controls" title="en/XUL_Tutorial/Input_Controls">XUL 教程</a> 中找到。</p>
+
+<dl>
+ <dt>Attributes</dt>
+ <dd><a href="#a-disabled">disabled</a>, <a href="#a-focused">focused</a>, <a href="#a-preference">preference</a>, <a href="#a-tabindex">tabindex</a>, <a href="#a-value">value</a></dd>
+</dl>
+
+<dl>
+ <dt>Properties</dt>
+ <dd><a href="#p-accessibleType">accessibleType</a>, <a href="#p-disabled">disabled</a>, <a href="#p-focusedItem">focusedItem</a>, <a href="#p-itemCount">itemCount</a>, <a href="#p-selectedIndex">selectedIndex</a>, <a href="#p-selectedItem">selectedItem</a>, <a href="#p-tabIndex">tabIndex</a>, <a href="#p-value">value</a></dd>
+</dl>
+
+<dl>
+ <dt>Methods</dt>
+ <dd><a href="#m-appendItem">appendItem</a>, <a href="#m-checkAdjacentElement">checkAdjacentElement</a>, <a href="#m-getIndexOfItem">getIndexOfItem</a>, <a href="#m-getItemAtIndex">getItemAtIndex</a>, <a href="#m-insertItemAt">insertItemAt</a>, <a href="#m-removeItemAt">removeItemAt</a></dd>
+</dl>
+
+<h3 id="Examples" name="Examples">范例</h3>
+
+<div class="float-right"><img alt="Image:XUL_ref_radios.png" class="internal" src="/@api/deki/files/469/=XUL_ref_radios.png"></div>
+
+<pre>&lt;radiogroup&gt;
+  &lt;radio id="orange" label="Red"/&gt;
+  &lt;radio id="violet" label="Green" selected="true"/&gt;
+  &lt;radio id="yellow" label="Blue"/&gt;
+&lt;/radiogroup&gt;
+</pre>
+
+<h3 id="Attributes" name="Attributes">Attributes</h3>
+
+<p> </p><div id="a-disabled">
+
+
+<dl>
+ <dt><code id="a-disabled"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code></dt>
+ <dd> </dd>
+ <dd>
+ <h5 id="类型boolean">类型:<em>boolean</em></h5>
+ </dd>
+ <dd>
+ <h5 id="表示元素是被禁用的。">表示元素是被禁用的。</h5>
+
+ <p>如果这个元素的disabled属性被设置为true，表示元素被禁用，被禁用的属性在页面上通常会显示灰色文本，它无法响应用户的操作，它也无法得到光标。</p>
+
+ <p>然而，这个元素仍然能够响应鼠标事件，如果要启用这个元素，把disabled设置为false</p>
+ </dd>
+</dl>
+
+<h4 id="示例：">示例：</h4>
+
+<div class="float-right"><img alt="Image:XUL_ref_attr_disabled.png" src="https://mdn.mozillademos.org/files/1742/XUL_ref_attr_disabled.png"></div>
+
+<pre><code>// Disabling an element
+document.getElementById('buttonRemove').setAttribute("disabled", "true");
+
+// Enabling back an element by removing the "disabled" attribute
+document.getElementById('buttonRemove').removeAttribute("disabled");</code></pre>
+
+<p></p><div class="blockIndicator standardNote">
+    <p><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Firefox/Releases/3.5">Firefox 3.5 note</a></p>
+    <p style="font-weight: 400;">For <a href="https://developer.mozilla.org/en-US/docs/XUL/keyset" title="en/XUL/Keyset"><code>keyset</code></a> elements, support for this attribute was added in Firefox 3.5.</p>
+</div><p></p>
+</div> <div id="a-focused">
+
+
+<dl>
+ <dt><code id="a-focused"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/focused">focused</a></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>This attribute is <code>true</code> if the element is focused.</dd>
+</dl>
+</div> <div id="a-preference">
+
+
+<dl>
+ <dt><code id="a-preference"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/preference">preference</a></code></dt>
+ <dd>Type: <em>id</em></dd>
+ <dd>Connects the element to a corresponding <code><a href="/en-US/docs/Mozilla/Tech/XUL/preference" title="preference">preference</a></code>. This attribute only has any effect when used inside a <code><a href="/en-US/docs/Mozilla/Tech/XUL/prefwindow" title="prefwindow">prefwindow</a></code>. More information is available in the <a href="../../../../en/Preferences_System" rel="internal">Preferences System</a> article.</dd>
+</dl>
+</div> <div id="a-tabindex">
+
+
+<dl>
+ <dt><code id="a-tabindex"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/tabindex">tabindex</a></code></dt>
+ <dd>Type:<em>integer</em></dd>
+ <dd>当用户按下 "<kbd>tab</kbd>" 键时焦点移动到元素上的顺序。<code>tabindex</code> 数字越大，顺序越靠后。</dd>
+</dl>
+
+
+
+<p></p>
+</div> <div id="a-value">
+
+<dl>
+ <dt>
+  <code id="a-value"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code></dt>
+ <dd>
+  Type:
+  <i>
+   string</i>
+ </dd>
+ <dd>
+  The string attribute allows you to associate a data value with an element. It is not used for any specific purpose, but you can access it with a script for your own use.</dd>
+</dl>
+
+<p></p>
+</div><p></p>
+
+<h3 id="Properties" name="Properties">Properties</h3>
+
+<p> </p><div id="p-accessibleType">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/accessibleType">accessibleType</a></span></code></dt>
+ <dd>
+  Type:
+  <i>
+   integer</i>
+ </dd>
+ <dd>
+  A value indicating the type of accessibility object for the element.</dd>
+</dl>
+
+<p></p></div> <div id="p-disabled">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/disabled">disabled</a></span></code></dt>
+ <dd>
+  Type:
+  <i>
+   boolean</i>
+ </dd>
+ <dd>
+  Gets and sets the value of the <code id="a-disabled"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code> attribute.</dd>
+</dl>
+
+<p></p></div> <div id="p-focusedItem">
+
+<dl>
+ <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/focusedItem">focusedItem</a></span></code></dt>
+ <dd>Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XUL/radio" title="radio">radio</a></code> element</em></dd>
+ <dd>Holds the currently focused item in the <code><a href="/en-US/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code>, which may or may not be the same as the selected item. You can change the focused item by setting this property.</dd>
+</dl></div> <div id="p-itemCount">
+<dl>
+  <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/itemCount">itemCount</a></span></code> </dt>
+  <dd>Type: <em>integer</em></dd>
+  <dd>Read only property holding the number of child items.</dd>
+</dl>
+</div> <div id="p-selectedIndex">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/selectedIndex">selectedIndex</a></span></code></dt>
+ <dd>
+  Type:
+  <i>
+   integer</i>
+ </dd>
+ <dd>
+  Returns the index of the currently selected item. You may select an item by assigning its index to this property. By assigning <code>-1</code> to this property, all items will be deselected.</dd>
+</dl>
+
+<p></p></div> <div id="p-selectedItem">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/selectedItem">selectedItem</a></span></code></dt>
+ <dd>
+  Type:
+  <i>
+   element</i>
+ </dd>
+ <dd>
+  Holds the currently selected item. If no item is currently selected, this value will be <code>null</code>. You can select an item by setting this value. A select event will be sent to the element when it is changed either via this property, the <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/selectedIndex">selectedIndex</a></span></code> property, or changed by the user.</dd>
+</dl>
+
+<p></p></div> <div id="p-tabIndex">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/tabIndex">tabIndex</a></span></code></dt>
+ <dd>
+  Type:
+  <i>
+   integer</i>
+ </dd>
+ <dd>
+  Gets and sets the value of the <code id="a-tabindex"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/tabindex">tabindex</a></code> attribute.</dd>
+</dl>
+
+<p></p></div> <div id="p-value">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/value">value</a></span></code></dt>
+ <dd>
+  Type:
+  <i>
+   string</i>
+ </dd>
+ <dd>
+  Gets and sets the value of the <code id="a-value"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code> attribute.</dd>
+</dl>
+
+<p></p></div><p></p>
+
+<h3 id="Methods" name="Methods">Methods</h3>
+
+<p></p><table style="border: 1px solid rgb(204, 204, 204); margin: 0 0 10px 10px; padding: 0 10px; background: rgb(238, 238, 238); float: right; width: 250px;">
+<tbody>
+<tr>
+<td>
+<p><strong>Inherited Methods</strong><br>
+<small><code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.addEventListener">addEventListener()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.appendChild">appendChild()</a></code>, <span id="m-blur"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/blur">blur</a></code></span>, <span id="m-click"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/click">click</a></code></span>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.cloneNode">cloneNode()</a></code>, <a href="/En/DOM/Node.compareDocumentPosition" title="En/DOM/Node.compareDocumentPosition">compareDocumentPosition</a>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.dispatchEvent">dispatchEvent()</a></code>, <span id="m-doCommand"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/doCommand">doCommand</a></code></span>, <span id="m-focus"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/focus">focus</a></code></span>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttribute">getAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttributeNode">getAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttributeNodeNS">getAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttributeNS">getAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getBoundingClientRect">getBoundingClientRect()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getClientRects">getClientRects()</a></code>, <span id="m-getElementsByAttribute"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/getElementsByAttribute">getElementsByAttribute</a></code></span>, <span id="m-getElementsByAttributeNS"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/getElementsByAttributeNS">getElementsByAttributeNS</a></code></span>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getElementsByClassName">getElementsByClassName()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getElementsByTagName">getElementsByTagName()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getElementsByTagNameNS">getElementsByTagNameNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getFeature">getFeature()</a></code>, <a href="/En/DOM/Node.getUserData" title="En/DOM/Node.getUserData">getUserData</a>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasAttribute">hasAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasAttributeNS">hasAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasAttributes">hasAttributes()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasChildNodes">hasChildNodes()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.insertBefore">insertBefore()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.isDefaultNamespace">isDefaultNamespace()</a></code>, <a href="/En/DOM/Node.isEqualNode" title="En/DOM/Node.isEqualNode">isEqualNode</a>, <a href="/En/DOM/Node.isSameNode" title="En/DOM/Node.isSameNode">isSameNode</a>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.isSupported">isSupported()</a></code>, <a href="/En/DOM/Node.lookupNamespaceURI" title="En/DOM/Node.lookupNamespaceURI">lookupNamespaceURI</a>, <a href="/En/DOM/Node.lookupPrefix" title="En/DOM/Node.lookupPrefix">lookupPrefix</a>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.normalize">normalize()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.querySelector">querySelector()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.querySelectorAll">querySelectorAll()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeAttribute">removeAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeAttributeNode">removeAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeAttributeNS">removeAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeChild">removeChild()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeEventListener">removeEventListener()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.replaceChild">replaceChild()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttribute">setAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttributeNode">setAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttributeNodeNS">setAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttributeNS">setAttributeNS()</a></code>, <a href="/En/DOM/Node.setUserData" title="En/DOM/Node.setUserData">setUserData</a></small></p>
+
+</td>
+</tr>
+</tbody>
+</table> <dl>
+  <dt>
+    <span id="m-appendItem"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/appendItem">appendItem( label, value )</a></code></span></dt>
+  <dd>
+    Return type: <em>element</em></dd>
+  <dd>
+    Creates a new item and adds it to the end of the existing list of items. You may optionally set a value. The function returns the newly created element.</dd>
+</dl> <dl>
+ <dt><span id="m-checkAdjacentElement"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/checkAdjacentElement">checkAdjacentElement( dir )</a></code></span></dt>
+ <dd>Return type: <em>no return value</em></dd>
+ <dd>Deselects the currently selected <code><a href="/en-US/docs/Mozilla/Tech/XUL/radio" title="radio">radio</a></code> button in the group and selects the one adjacent to it. If the argument <var>dir</var> is <code>true</code>, the next radio button is selected. If it is <code>false</code>, the previous radio button is selected.</dd>
+</dl> <dl>
+ <dt><span id="m-getIndexOfItem"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/getIndexOfItem">getIndexOfItem( item )</a></code></span></dt>
+ <dd>Return type: <em>integer</em></dd>
+ <dd>Returns the zero-based position of the specified item. Items are numbered starting at the first item displayed in the list.</dd>
+</dl> <dl>
+ <dt><span id="m-getItemAtIndex"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/getItemAtIndex">getItemAtIndex( index )</a></code></span></dt>
+ <dd>Return type: <em>element</em></dd>
+ <dd>Returns the element that is at the specified index.</dd>
+</dl> <dl>
+  <dt>
+    <span id="m-insertItemAt"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/insertItemAt">insertItemAt( index, label, value )</a></code></span></dt>
+  <dd>
+    Return type: <em>element</em></dd>
+  <dd>
+    This method creates a new item and inserts it at the specified position. You may optionally set a value. The new item element is returned.</dd>
+</dl> <dl>
+  <dt>
+    <span id="m-removeItemAt"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/removeItemAt">removeItemAt( index )</a></code></span></dt>
+  <dd>
+    Return type: <em>element</em></dd>
+  <dd>
+    Removes the child item in the element at the specified index. The method returns the removed item.</dd>
+</dl><p></p>
+
+<h3 id="Related" name="Related">Related</h3>
+
+<dl>
+ <dt>Interfaces</dt>
+ <dd><code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAccessibleProvider" title="">nsIAccessibleProvider</a></code>, <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMXULSelectControlElement" title="">nsIDOMXULSelectControlElement</a></code></dd>
+</dl>
+
+<p></p>

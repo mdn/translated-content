@@ -1,0 +1,38 @@
+---
+title: Download Manager improvements in Firefox 3
+slug: Download_Manager_improvements_in_Firefox_3
+tags:
+  - Download Manager
+  - Firefox 3
+translation_of: Archive/Mozilla/Download_Manager_improvements_in_Firefox_3
+---
+<p>
+Firefox 3 では、ダウンロードマネージャにも改良が行われ、複数進捗リスナーの設定、データ管理への <a href="ja/Storage">Storage</a> API の使用、ダウンロードの再開など、様々な機能が提供されます。さらに、新しい <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadManagerUI" title="">nsIDownloadManagerUI</a></code> インタフェースを実装することで、ダウンロードマネージャのユーザインタフェースに対して、機能の追加や置き換えが可能になりました。
+</p><p></p><div class="note"><strong>註:</strong> これらの変更によって、ダウンロードマネージャを使ったコードに多少の変更が必要となります。いくつかのメソッドに小幅な変更が行われています。</div>
+<p></p>
+<h3 id=".E3.83.80.E3.82.A6.E3.83.B3.E3.83.AD.E3.83.BC.E3.83.89.E3.83.9E.E3.83.8D.E3.83.BC.E3.82.B8.E3.83.A3.E3.81.AE.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.95.E3.82.A7.E3.83.BC.E3.82.B9" name=".E3.83.80.E3.82.A6.E3.83.B3.E3.83.AD.E3.83.BC.E3.83.89.E3.83.9E.E3.83.8D.E3.83.BC.E3.82.B8.E3.83.A3.E3.81.AE.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.95.E3.82.A7.E3.83.BC.E3.82.B9">ダウンロードマネージャのインタフェース</h3>
+<dl><dt><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadManager" title="">nsIDownloadManager</a></code>
+</dt><dd>アプリケーションと拡張機能に対して、ダウンロードマネージャへのアクセスを提供します。ダウンロードリストへのファイルの追加・削除、過去と現在のダウンロードに関する情報の取得、ダウンロードの進捗状況に応じた通知のリクエストなどを行うことができます。
+</dd><dt><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownload" title="">nsIDownload</a></code>
+</dt><dd>ダウンロードリストに含まれるファイルに関する情報を提供します。これらのファイルは、ダウンロード待機中、ダウンロード中、あるいはダウンロードが完了したものを指します。
+</dd><dt><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadProgressListener" title="">nsIDownloadProgressListener</a></code>
+</dt><dd>アプリケーションや拡張機能は、このインタフェースを実装することで、ダウンロードの進捗状況に変更があった際に通知を受け取ることができます。
+</dd><dt><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadManagerUI" title="">nsIDownloadManagerUI</a></code>
+</dt><dd>このインタフェースを実装することで、ダウンロードマネージャのユーザインタフェースの追加や変更が可能になります。
+</dd></dl>
+<h3 id=".E3.83.80.E3.82.A6.E3.83.B3.E3.83.AD.E3.83.BC.E3.83.89.E3.83.9E.E3.83.8D.E3.83.BC.E3.82.B8.E3.83.A3.E3.81.AB.E9.96.A2.E3.81.99.E3.82.8B.E4.BB.96.E3.81.AE.E3.83.89.E3.82.AD.E3.83.A5.E3.83.A1.E3.83.B3.E3.83.88" name=".E3.83.80.E3.82.A6.E3.83.B3.E3.83.AD.E3.83.BC.E3.83.89.E3.83.9E.E3.83.8D.E3.83.BC.E3.82.B8.E3.83.A3.E3.81.AB.E9.96.A2.E3.81.99.E3.82.8B.E4.BB.96.E3.81.AE.E3.83.89.E3.82.AD.E3.83.A5.E3.83.A1.E3.83.B3.E3.83.88">ダウンロードマネージャに関する他のドキュメント</h3>
+<dl><dt><a href="ja/Download_Manager_preferences">Download Manager preferences</a>
+</dt><dd>この記事では、ダウンロードマネージャで利用される設置項目と、それらの規定値の一覧を掲載しています。
+</dd><dt><a href="ja/The_Download_Manager_schema">The Download Manager schema</a>
+</dt><dd>この記事では、各ダウンロード項目に関する情報を保存、追跡するために利用されるデータベース形式について説明しています。
+</dd></dl>
+<h3 id=".E4.BE.8B" name=".E4.BE.8B">例</h3>
+<dl><dt><a href="ja/Monitoring_downloads">ダウンロードの監視</a>
+</dt><dd>新しいダウンロードマネージャ API を使って、過去と現在のダウンロードと、それらの状態を示した、ダウンロードログウィンドウを作成する方法を解説した例です。ダウンロードの開始時間と終了時間、ダウンロード速度などの実装例を参照できるほか、<a href="ja/Storage">Storage</a> API のデモも含まれています。
+</dd></dl>
+<p><br>
+</p><p><br>
+</p><p><br>
+</p>
+<div class="noinclude">
+</div>

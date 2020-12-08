@@ -1,0 +1,108 @@
+---
+title: transition
+slug: Web/CSS/transition
+tags:
+  - CSS
+  - CSS Property
+  - CSS Transitions
+  - CSS プロパティ
+  - CSS 遷移
+  - Reference
+translation_of: Web/CSS/transition
+---
+<div>{{CSSRef}}</div>
+
+<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>transition</code></strong> プロパティは、 {{cssxref("transition-property")}}、 {{cssxref("transition-duration")}}、 {{cssxref("transition-timing-function")}}、 {{cssxref("transition-delay")}} の<a href="/en-US/docs/Web/CSS/Shorthand_properties" title="/en-US/docs/CSS/Shorthand_properties">一括指定プロパティ</a>です。</p>
+
+<div>{{EmbedInteractiveExample("pages/css/transition.html")}}</div>
+
+<p class="hidden">この対話型サンプルのソースファイルは GitHub リポジトリに格納されています。対話型サンプルプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+
+<p>{{原語併記("遷移", "transition")}} によって、要素の2つの状態間の変化を定義することができます。それぞれの状態は {{cssxref(":hover")}} や {{cssxref(":active")}} のような<a href="/en-US/docs/Web/CSS/Pseudo-classes" title="/en-US/docs/CSS/Pseudo-classes">疑似クラス</a>で定義するか、 JavaScript を使用して動的に設定します。</p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="brush:css no-line-numbers">/* 1つのプロパティへの適用 */
+/* プロパティ名 | 時間 */
+transition: margin-right 4s;
+
+/* プロパティ名 | 時間 | 遅延 */
+transition: margin-right 4s 1s;
+
+/* プロパティ名 | 時間 | 時間関数 */
+transition: margin-right 4s ease-in-out;
+
+/* プロパティ名 | 時間 | 時間関数 | 遅延 */
+transition: margin-right 4s ease-in-out 1s;
+
+/* 2つのプロパティへの適用 */
+transition: margin-right 4s, color 1s;
+
+/* 変化するすべてのプロパティへの適用 */
+transition: all 0.5s ease-out;
+
+/* グローバル値 */
+transition: inherit;
+transition: initial;
+transition: unset;
+</pre>
+
+<p><code>transition</code> プロパティは、1つまたは複数の単体プロパティによる遷移を、コンマで区切って指定します。</p>
+
+<p>それぞれの単体プロパティの遷移では、単体のプロパティ（または特別な値である <code>all</code> および <code>none</code>）に適用される遷移を記述します。記述は以下の通りです。</p>
+
+<ul>
+ <li>遷移を適用するプロパティを表す0～1個の値。以下のうちの一つです。
+  <ul>
+   <li><code>none</code> キーワード</li>
+   <li><code>all</code> キーワード</li>
+   <li>CSS プロパティの名前である {{cssxref("&lt;custom-ident&gt;")}}</li>
+  </ul>
+ </li>
+ <li>使用するタイミング関数を表す0～1個の {{cssxref("&lt;single-transition-timing-function&gt;")}} の値</li>
+ <li>0～2個の {{cssxref("&lt;time&gt;")}} の値。1番目の値は {{cssxref("transition-duration")}} に割り当てられる時間として解釈され、2番目の値は {{cssxref("transition-delay")}} に割り当てられる時間として解釈されます。</li>
+</ul>
+
+<p>プロパティ値の一覧が同じ長さではない場合については、 <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions#When_property_value_lists_are_of_different_lengths" title="en/CSS/CSS transitions#When property value lists are of different lengths">how things are handled</a> を参照してください。 <span id="result_box" lang="ja"><span>つまり、実際にアニメーション化されているプロパティの数を超える余分な遷移の記述は無視されます。</span></span></p>
+
+<h3 id="Formal_syntax" name="Formal_syntax">構文形式</h3>
+
+<pre class="syntaxbox">{{csssyntax}}</pre>
+
+<h2 id="Examples" name="Examples">例</h2>
+
+<p><a href="/ja/docs/Web/CSS/CSS_transitions" title="ja/CSS/CSS transitions">CSS transitions</a> の記事に、トランジションの例がいくつかあります。</p>
+
+<h2 id="Specifications" name="Specifications">仕様書</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">策定状況</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('CSS3 Transitions', '#transition-shorthand-property', 'transition') }}</td>
+   <td>{{ Spec2('CSS3 Transitions') }}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>{{cssinfo}}</p>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+
+<div class="hidden">このページの互換性一覧表は構造化データから生成されます。データに協力したいのであれば、 <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
+
+<p>{{Compat("css.properties.transition")}}</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/CSS/Using_CSS_transitions">CSS transitions の利用</a></li>
+ <li>{{domxref("TransitionEvent")}}</li>
+</ul>

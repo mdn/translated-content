@@ -1,0 +1,67 @@
+---
+title: コンテンツキット
+slug: MDN/Tools/Content_kits
+translation_of: Archive/MDN/Content_kits
+---
+<div>{{MDNSidebar}}</div><div class="summary">
+<p><span class="seoSummary">MDN コンテンツキットはある題材について技術リソースを集めたもので、 地域の技術者の会合を開いたり、 イベント、会議、ワークショップなどで技術的なプレゼンテーションを行う時に役に立ちます。</span></p>
+</div>
+
+<p>Each MDN Content Kit offers relevant, up-to-date technical information for presenters and teachers on a particular topic related to web development or web app development, such as Web APIs, useful libraries, or developer tools. Content Kits may also be focused on Mozilla products, tools, or technologies such as Firefox Developer Tools or <a href="https://www.mozilla.org/en-US/research/">Mozilla Research</a> projects. Resources may include slides, demos, code samples, screencasts, video, exercises, etc.</p>
+
+<p>By providing MDN Content Kits, MDN aims to grow developer engagement with Mozilla in regional communities, and increase standards-based web development globally.</p>
+
+<h2 id="MDN_コンテンツキットを作成する_または_寄贈する">MDN コンテンツキットを作成する または 寄贈する</h2>
+
+<p>Kits can be built by anyone, and we encourage people to suggest and build kits! Individuals may also contribute to existing content kits by submitting a pull request on Github.  Get started with the <a href="https://github.com/mdn/content-kit-template">MDN Content Kit Template</a> on Github or read about the project on the <a href="https://wiki.mozilla.org/MDN/Projects/Content/MDN_Content_Kits">MDN wiki</a>.</p>
+
+<div class="note">
+<p><strong>Note</strong>: There is also a <a href="http://chrisdavidmills.github.io/content-kit-guide/">Content Kit Guide</a> available, to give you more guidance in creating content kits.</p>
+</div>
+
+<h2 id="現在のコンテンツキット">現在のコンテンツキット</h2>
+
+<ul>
+ <li><a href="http://mdn.github.io/beginning-programming-content-kit/">Beginners Programming</a>. This kit contains resources you can use to learn and teach general programming principles and the JavaScript language. The teacher will need to know HTML and JavaScript. The students will not need any previous web development knowledge but knowing how the web works and what web pages are will help. The Beginners Programming kit has 8 sections, each of which takes 1-1.5 hours to teach.</li>
+ <li><a href="http://end3r.github.io/Gamedev-Canvas-Content-Kit/">Beginners Game development with HTML5 Canvas</a>. In this kit you can learn the basics of game development using <a href="/en-US/docs/Web/JavaScript">JavaScript</a> and <a href="/en-US/docs/Web/API/Canvas_API">HTML5 Canvas</a>. All you need is a little prior experience with JavaScript basics.</li>
+ <li><a href="http://end3r.github.io/Gamedev-Phaser-Content-Kit/">Beginners Game development with Phaser</a>. In this kit you can learn the basics of game development using Phaser, a popular HTML5 game development framework. This differs from the above kit because it doesn't teach you any pure JavaScript, instead giving you expeience of working with a framework. All you need is a little prior experience with JavaScript basics.</li>
+ <li><a href="https://gist.github.com/callahad/1d0885dd70b157c3978e#file-valence-content-kit-md">Valence</a>.  Valence is the public-facing name for the Firefox Developer Tools Adapters, which extend the Firefox WebIDE to allow for remotely debugging pages in Chrome or Safari from within the Firefox Developer Tools. Valence is still in development and is experimental. Valence is distributed as an add-on, which is automatically downloaded and installed by Firefox Developer Edition, though the raw .xpi file is available on <a href="http://archive.mozilla.org/pub/labs/valence/">archive.mozilla.org</a> and its source code is on GitHub.  The Valance Content Kit is for an experienced web developer to give a presentation to a group of experienced web developers.</li>
+ <li><a href="https://github.com/sole/ck-node-firefox">node-firefox</a>. Node-firefox is a series of node.js modules for interacting with Firefox runtimes via the Developer Tools remote debugging protocol. The node-firefox Content Kit is for an experienced web developer to give a presentation to a group of experienced web developers.</li>
+ <li><a href="https://github.com/chrisdavidmills/html5-captions-and-subtitles-content-kit">Working with HTML5 Video: Adding captions and subtitles</a>. This kit contains everything you might need to present a one hour presentation on HTML5 video captions and subtitles. This includes using the {{htmlelement("track")}} element, WebVTT syntax, CSS extensions, and the difference between captions and subtitles.</li>
+ <li><a href="http://codingfree.github.io/l10n-content-kit">l10n.js</a>. JavaScript library that enables localization through the native JavaScript method intended for it. There is already a placeholder method for all API calls as specified in the ECMAScript specification and is present in all JavaScript engines.</li>
+ <li><a href="https://github.com/TatumCreative/mdn-matrix-math">Matrix Math for the Web</a>. This content kit is brief overview of manipulating 3d objects with matrices (a concept from linear algebra.) Matrix math is used heavily in WebGL, but web developers are more familiar with DOM manipulations. This intro divorces the explanation of matrices from the WebGL APIs by using the CSS3 matrix3d transform. It demonstrates translation, scale, and rotation transformations, as well as exploring how to compose a single matrix transform from multiple transforms through matrix multiplication.</li>
+ <li><a href="https://github.com/TatumCreative/mdn-model-view-projection">WebGL Model View Projection</a>. This content kit explores how to take data within a WebGL project, and project it into the proper spaces to display it on the screen. It assumes a knowledge of basic matrix math using translation, scale, and rotation matrices. It explains the three core matrices that are typically used to represent a 3d object: the model, view and projection matrices.</li>
+ <li><a href="https://github.com/TatumCreative/mdn-lighting-models">WebGL Lighting Models</a>. Getting a model projected onto the screen using WebGL is only the first step for working in 3d. The next is applying a shading or lighting model to it. This content kit walks through the steps on how to build the classic Lambertian lighting model and the Blinn Phong lighting model.</li>
+</ul>
+
+<h2 id="MDN_コンテンツキットを利用する">MDN コンテンツキットを利用する</h2>
+
+<p>Hints on using Content Kits before, during, and after a meetup. Note that these points are representative of a general Content Kit — not all points will necessarily apply to all kits.</p>
+
+<h3 id="会合の前に"><span class="mw-headline" id="Prior_to_a_meetup">会合の前に</span></h3>
+
+<ol>
+ <li>Review the content kit and all supporting materials, including relevant MDN articles.</li>
+ <li>Download the demo project and play with it until you feel comfortable demoing it.</li>
+ <li>Download the video, so you can play it locally if all else fails.</li>
+</ol>
+
+<h3 id="会合の中で"><span class="mw-headline" id="During_the_meetup">会合の中で</span></h3>
+
+<ol>
+ <li>Present the topic, including a live demo (or recorded, if necessary.)</li>
+ <li>Lead the group in a discussion of the topic, or an activity with the demo project.</li>
+</ol>
+
+<h3 id="会合の後で"><span class="mw-headline" id="After_the_meetup">会合の後で</span></h3>
+
+<ol>
+ <li>Submit issues for any problems you encountered with the kit.</li>
+ <li>Submit pull requests for any changes you made to the kit.</li>
+</ol>
+
+<h2 id="新しい_MDN_コンテンツキットを提案する">新しい MDN コンテンツキットを提案する</h2>
+
+<p>If you would like to propose a new topic for an MDN Content Kit, please add your topic to <a href="https://devengage.etherpad.mozilla.org/DevMeetupTopics">this etherpad</a> as well as on the <a href="https://lists.mozilla.org/listinfo/mdn">MDN mailing list</a>.</p>
+
+<p>If you propose a new Content Kit topic, please let us know how you will use the new MDN Content Kit and whether you will provide us feedback. We are looking for proposals for topics that will be used by groups that can provide us with feedback so that we can continue to improve and grow the collection of MDN Content Kits.</p>

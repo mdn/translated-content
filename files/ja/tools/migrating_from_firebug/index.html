@@ -1,0 +1,245 @@
+---
+title: Firebug から移行する
+slug: Tools/Migrating_from_Firebug
+tags:
+  - Firebug
+  - Migration
+translation_of: Tools/Migrating_from_Firebug
+---
+<div>{{ToolsSidebar}}</div><p>Firebug から Firefox 開発ツールへ移行する際に、Firebug で愛用していた機能が開発ツールのどこにあるかと考えるかもしれません。以下のリストは、Firebug のユーザーが開発ツールへ移行するための支援を目指しています。</p>
+
+<h2 id="General" name="General">一般</h2>
+
+<h3 id="Activation" name="Activation">アクティブ化</h3>
+
+<p><a href="https://getfirebug.com/wiki/index.php/Activation">Firebug のアクティブ化</a> は、URL に基づいて <a href="https://ja.wikipedia.org/wiki/%E5%90%8C%E4%B8%80%E7%94%9F%E6%88%90%E5%85%83%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC">同一生成元ポリシー</a> に従います。すなわち、生成元が同じページを別のタブで開くと、Firebug が自動的に開きます。また、生成元が異なるページを同じタブで開くと、Firebug は自動的に閉じます。一方、開発ツールのアクティブ化はタブに基づきます。すなわち、あるタブで開発ツールを開くと、ウェブサイトを切り替えてもツールは開いたままです。しかし、別のタブに切り替えるとツールが閉じます。</p>
+
+<h3 id="Open_the_tools" name="Open_the_tools">ツールを開く</h3>
+
+<p>F12 を押下して Firebug を開くことができます。また、要素を調査するために Firebug を開くには <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> / <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd>C</kbd> を押下します。開発ツールのキーボードショートカットも同じですが、<a href="/ja/docs/Tools/Keyboard_shortcuts#Opening_and_closing_tools">別のパネルを開くキーボードショートカット</a> もあります。例えば <a href="/ja/docs/Tools/Network_Monitor">ネットワークモニター</a> を <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Q</kbd> / <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd>Q</kbd>、<a href="/ja/docs/Tools/Web_Console">ウェブコンソール</a> を <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>K</kbd> / <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd>K</kbd>、デバッガーを <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd> / <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd>S</kbd> で開くことができます。</p>
+
+<h2 id="Web_Console" name="Web_Console">ウェブコンソール</h2>
+
+<p><a href="/ja/docs/Tools/Web_Console">ウェブコンソール</a> は Firebug の <a href="https://getfirebug.com/wiki/index.php/Console_Panel">コンソールパネル</a> と同等です。これは、ウェブページに関する情報を記録します。また、<a href="/ja/docs/Tools/Web_Console/The_command_line_interpreter">コマンドライン</a> を使用して JavaScript の式を実行することができます。両者の表示は若干異なっています。これは {{bug(1269730)}} で変更する予定です。</p>
+
+<h3 id="Filter_log_messages" name="Filter_log_messages">ログメッセージのフィルタリング</h3>
+
+<p>Firebug にはログメッセージのフィルタリング方法が 2 つあり、ひとつは <a href="https://getfirebug.com/wiki/index.php/Console_Panel#Options_Menu">オプションメニュー</a>、もう一つはツールバーの <a href="https://getfirebug.com/wiki/index.php/Console_Panel#Filter_buttons">フィルターボタン</a> です。開発ツールのコンソールは、<a href="/ja/docs/Tools/Web_Console/Console_messages#Filtering_by_category">ツールバー内のフィルターボタン</a> で同様の機能を提供しており、ひとつの方法にまとめられています。</p>
+
+<h3 id="Command_Line_API" name="Command_Line_API">コマンドライン API</h3>
+
+<p><a href="https://getfirebug.com/wiki/index.php/Command_Line_API">Firebug のコマンドライン API</a> は、利便性のための特別な機能を提供します。開発ツールのコマンドラインに <a href="/ja/docs/Tools/Web_Console/The_command_line_interpreter#Helper_commands">ある程度共通の機能</a> がありますが、異なる機能や欠けている機能があります。</p>
+
+<h3 id="Console_API" name="Console_API">コンソール API</h3>
+
+<p>ウェブページ内からコンソールに何かを記録するために Firebug は、ウェブページで使用できる <a href="https://getfirebug.com/wiki/index.php/Console_API">Console API</a> を作成しました。開発ツールも <a href="/ja/docs/Web/API/console">同じ API</a> を共有しており、<code>console.*</code> 文が引き続き動作します。</p>
+
+<h3 id="Persist_logs" name="Persist_logs">ログを残す</h3>
+
+<p>Firebug ではツールバーの <a href="https://getfirebug.com/wiki/index.php/Console_Panel#Persist"><em>持続</em> ボタン</a> を押すと、ページを移動したり再読み込みしたりしてもメッセージを残すことができます。開発ツールではこの設定が <em><a href="/ja/docs/Tools/Settings#Common_preferences">ログ出力を残す</a></em> という名称であり、ツールボックスのオプションパネル内にあります。</p>
+
+<h3 id="Server_logs" name="Server_logs">サーバーのログ</h3>
+
+<p><a href="https://addons.mozilla.org/firefox/addon/firephp/">FirePHP</a> のような Firebug 拡張で、サーバーサイドのメッセージを Firebug のコンソールに記録できます。この機能は <a href="https://craig.is/writing/chrome-logger">ChromeLogger</a> プロトコルを使用してすでに <a href="/ja/docs/Tools/Web_Console/Console_messages#Server">開発ツールに統合されており</a>、拡張機能のインストールは不要です。</p>
+
+<h3 id="Command_history" name="Command_history">コマンド履歴</h3>
+
+<p>Firebug のコマンドラインにあるボタンで使用できる <a href="https://getfirebug.com/wiki/index.php/Command_Line#Command_History">コマンド履歴</a> は、<a href="/ja/docs/Tools/Web_Console/The_command_line_interpreter#Command_history">開発ツールのコマンドラインで <kbd>↑</kbd>/<kbd>↓</kbd> を押下する</a> ことで使用できます。</p>
+
+<h3 id="Inspect_object_properties" name="Inspect_object_properties">オブジェクトの特性を調査する</h3>
+
+<p>コンソールに記録されたオブジェクトをクリックすると、<a href="https://getfirebug.com/wiki/index.php/DOM_Panel">DOM パネル</a> でオブジェクトのプロパティやメソッドを調査できます。Firefox 開発ツールでも、オブジェクトを調査できます。Firebug との違いは、<a href="/ja/docs/Tools/Web_Console/Rich_output#Examining_object_properties">ウェブコンソール内のサイドパネルにプロパティやメソッドを表示する</a> ことです。</p>
+
+<h3 id="Show_network_requests" name="Show_network_requests">ネットワークリクエストを表示する</h3>
+
+<p>Firebug のコンソールパネルで、({{Glossary("XMLHttpRequest", "XMLHttpRequests")}} による) {{Glossary("AJAX")}} リクエストを記録できます。この設定は開発ツールのウェブコンソールでも、<em>ネットワーク</em> &gt; <em>XHR</em> で使用できます。さらにウェブコンソールでは <em>ネットワーク</em> &gt; <em>ログ</em> で、ほかのネットワークリクエストもすべて表示できます。</p>
+
+<h3 id="View_JSON_and_XML_structures" name="View_JSON_and_XML_structures">JSON や XML 構造を表示する</h3>
+
+<p>JSON や {{Glossary("AJAX")}} リクエストの XML レスポンスを表示するために、Firebug にはコンソールパネル内でリクエストを展開する特別なタブがあります。開発ツールのウェブコンソールはこのような構造を、"応答" タブに直接表示します。</p>
+
+<h3 id="Multi-line_command_line" name="Multi-line_command_line">複数行のコマンドライン</h3>
+
+<p>Firebug のコンソールは <a href="https://getfirebug.com/wiki/index.php/Command_Editor">Command Editor</a> と呼ばれる、複数行のコマンドラインです。開発ツールには Command Editor のようなサイドパネルはありませんが (これは {{bug(1133849)}} で要望されています)、<a href="/ja/docs/Tools/Scratchpad">スクラッチパッド</a> と呼ばれる別のツールがあります。これは <a href="/ja/docs/Tools/Settings#Default_Firefox_Developer_Tools">パネルとしてツールボックスに追加する</a> か、Firefox メニュー &gt; <em>開発ツール</em> &gt; <em>スクラッチパッド</em> または <kbd>Shift</kbd> + <kbd>F4</kbd> で個別のウィンドウとして開くことができます。また通常のコマンドラインも、<code>document.</code> のような未完了のコマンドを認識した場合は、<kbd>Enter</kbd> を押下すると賢く改行を入力します。さらに、<kbd>Shift</kbd> + <kbd>Enter</kbd> を押下すれば手動で改行を入力できます。</p>
+
+<h3 id="Response_preview" name="Response_preview">レスポンスのプレビュー</h3>
+
+<p>Firebug でコンソールに記録されたネットワークリクエストを展開すると、<em>プレビュー</em> タブがあります。ウェブコンソールでは、<em>応答</em> タブでプレビューを表示します。現在は HTML、XML、SVG のプレビュー機能が欠けていますが、{{bug(1247392)}} および {{bug(1262796)}} で要望されています。ただし、リクエストの URL をクリックすると <a href="/ja/docs/Tools/Network_Monitor">ネットワークモニター</a> に切り替わり、こちらに <em>プレビュー</em> タブがあります。</p>
+
+<h2 id="Inspector" name="Inspector">インスペクター</h2>
+
+<p>Firebug には <a href="https://getfirebug.com/wiki/index.php/HTML_Panel">HTML パネル</a> があり、HTML/XML/SVG や、それらに関係する CSS を編集できます。開発ツールでは、<a href="/ja/docs/Tools/Page_Inspector">インスペクター</a> でこの機能を提供します。</p>
+
+<h3 id="Edit_HTML" name="Edit_HTML">HTML を編集する</h3>
+
+<p>インスペクターでは Firebug と同様に、タグの属性やコンテンツをインラインで編集できます。さらに、タグ名もインラインで編集できます。</p>
+
+<p>HTML を直接編集することもできます。Firebug ではノードを右クリックして、コンテキストメニューの [<a href="https://getfirebug.com/wiki/index.php/HTML_Panel#Edit">HTML を編集</a>] を選択します。開発ツールのコンテキストメニューにも、このメニュー項目があります。開発ツールでは [<a href="/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Editing_HTML_2">HTML として編集</a>] という名称です。変更箇所のライブプレビュー機能だけが現時点で欠けており、{{bug(1067318)}} および {{bug(815464)}} で扱っています。</p>
+
+<h3 id="Copy_HTML_and_related_information" name="Copy_HTML_and_related_information">HTML や関連情報をコピーする</h3>
+
+<p>Firebug の HTML パネルでは要素のコンテキストメニューで、要素の innerHTML や outerHTML、CSS、XPath をコピーできます。インスペクターは XPath のコピーを除く、同じ機能を提供します。XPath のコピーは {{bug(987877)}} で扱っています。</p>
+
+<h3 id="Edit_CSS" name="Edit_CSS">CSS を編集する</h3>
+
+<p>どちらのツールも、ノードビューで選択した要素に関係する CSS ルールを、同様の方法で閲覧および編集できます。Firebug には <a href="https://getfirebug.com/wiki/index.php/Style_Side_Panel">スタイル サイドパネル</a>、開発ツールには <a href="/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS">ルール サイドパネル</a> があります。</p>
+
+<p>Firebug では、右クリックしてコンテキストメニューの [<em><a href="https://getfirebug.com/wiki/index.php/Style_Side_Panel#Context_Menu">ルールを追加</a></em>] を選択すると、新しいルールを追加します。開発ツールでも新しいルールを作成するために、<a href="/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Add_rules">コンテキストメニューの [<em>新しいルールを追加</em>] という項目と、ルールパネルのツールバーの [+] ボタン</a> があります。</p>
+
+<p>要素のスタイルを編集する、すなわち要素の {{htmlattrxref("style")}} 属性の CSS プロパティを編集するために、Firebug ではスタイルパネルを右クリックして、コンテキストメニューの [<a href="https://getfirebug.com/wiki/index.php/Style_Side_Panel#Context_Menu">要素のスタイルを編集</a>] を選択しなければなりません。開発ツールでは、この目的で <a href="/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#element_rule">要素 {} ルール</a> があり、ここを 1 回クリックするだけでプロパティを編集できます。</p>
+
+<h3 id="Auto-completion_of_CSS" name="Auto-completion_of_CSS">CSS のオートコンプリート</h3>
+
+<p>Firebug と同様に、ルールビューで CSS プロパティの名称や値のオートコンプリートを提供します。一部のプロパティ値はまだオートコンプリートができず、{{bug(1337918)}} で扱っています。</p>
+
+<h3 id="Copy_paste_CSS" name="Copy_paste_CSS">CSS のコピーと貼り付け</h3>
+
+<p>Firebug の スタイル サイドパネルも開発ツールの ルール サイドパネルもコンテキストメニューに、CSS ルールやスタイル宣言をコピーするためのメニュー項目があります。さらに開発ツールには、ルールのセレクターをコピーするメニュー項目や、コメントアウトにより無効なプロパティ宣言をコピーする機能があります。スタイル宣言全体をコピーする項目が欠けていますが、パネル内でそれらを選択して <kbd>Ctrl</kbd>+<kbd>C</kbd> またはコンテキストメニューを使用してコピーすることにより実現できます。</p>
+
+<p>開発ツールの ルール サイドパネルは、CSS を貼り付けるときの動作がよりスマートです。コメントアウトされたプロパティ宣言を自動的に無効化して、スタイル宣言全体を既存のルールに貼り付けできます。</p>
+
+<h3 id="Toggle_pseudo-classes" name="Toggle_pseudo-classes">疑似クラスを切り替える</h3>
+
+<p>Firebug の <a href="https://getfirebug.com/wiki/index.php/Style_Side_Panel#Options_Menu">スタイル サイドパネルのオプションメニュー</a> で、要素の {{cssxref(":hover")}}、{{cssxref(":active")}}、{{cssxref(":focus")}} 疑似クラスを切り替えることができます。開発ツールでは、同じことを行う方法が 2 つあります。ひとつは <a href="/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Setting_hover_active_focus">ルール サイドパネル内の疑似クラスパネル</a> で切り替える方法です。もうひとつはノードビューで要素を右クリックして、<a href="/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Context_menu_reference">コンテキストメニュー</a> で疑似クラスを切り替える方法です。</p>
+
+<h3 id="Examine_CSS_shorthand_properties" name="Examine_CSS_shorthand_properties">CSS ショートハンドプロパティを調査する</h3>
+
+<p>スタイル サイドパネルで [<em><a href="https://getfirebug.com/wiki/index.php/Style_Side_Panel#Options_Menu">簡略プロパティを展開</a></em>] を設定すると、CSS <a href="/ja/docs/Web/CSS/Shorthand_properties">ショートハンドプロパティ</a> を、関係があるロングハンドプロパティに展開できます。開発ツールのルールパネルはよりスマートであり、プロパティのそばにある三角印をクリックすると、個々のショートハンドプロパティを展開できます。</p>
+
+<h3 id="Only_show_applied_styles" name="Only_show_applied_styles">適用されたスタイルのみ表示する</h3>
+
+<p><a href="https://getfirebug.com/wiki/index.php/Style_Side_Panel#Options_Menu">Firebug のスタイル サイドパネル</a> に、選択した要素に適用された CSS ルールのプロパティのみ表示して、上書きされたスタイルはすべて隠す設定があります。開発ツールの <a href="/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS">ルール サイドパネル</a> にそのような機能はありませんが、{{bug(1335327)}} で要望されています。</p>
+
+<h3 id="Inspect_box_model" name="Inspect_box_model">ボックスモデルを調査する</h3>
+
+<p>Firebug では、<a href="https://getfirebug.com/wiki/index.php/Layout_Side_Panel">レイアウト サイドパネル</a> で <a href="/ja/docs/Learn/CSS/Introduction_to_CSS/Box_model">ボックスモデル</a> を調査できます。開発ツールでは、<a href="/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model">ボックスモデルが 計算済み サイドパネルの一部になっています</a>。どちらのツールもボックスモデルビューにマウスポインタを載せると、ページ上でボックスモデルのさまざまな部分を強調表示します。また、どちらのツールもボックスモデルをクリックすると、さまざまな値をインラインで編集できます。</p>
+
+<h3 id="Inspect_computed_styles" name="Inspect_computed_styles">計算済みスタイルを調査する</h3>
+
+<p>Firebug の <a href="https://getfirebug.com/wiki/index.php/Computed_Side_Panel">累積 サイドパネル</a> と同様に、開発ツールの <a href="/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Examine_computed_CSS">計算済み サイドパネル</a> で CSS プロパティの計算済みの値を表示します。両者の違いは、開発ツールはプロパティを常にアルファベット順に並べておりグループ化しないこと ({{bug(977128)}} をご覧ください) と、Mozilla 特有のスタイルを隠すオプションがないことです。このため、開発ツールにはプロパティをフィルタリングするための入力フィールドがあります。</p>
+
+<h3 id="Inspect_events" name="Inspect_events">イベントを調査する</h3>
+
+<p>Firebug では、要素に割り当てられたイベントを <a href="https://getfirebug.com/wiki/index.php/Events_Side_Panel">イベント サイドパネル</a> に表示します。開発ツールでは、ノードビューで要素のそばにある小さな 'ev' アイコンをクリックすると、イベントを表示します。どちらのツールも、ラップされたイベントリスナー (例えば、 jQuery の関数でラップしたリスナー) を表示できます。開発ツールの UI を改善するため、Firebug のようなイベントサイドパネルを追加する要望が出ています ({{bug(1226640)}} をご覧ください)。</p>
+
+<h3 id="Stop_script_execution_on_DOM_mutation" name="Stop_script_execution_on_DOM_mutation">DOM が変化したときにスクリプトの実行を止める</h3>
+
+<p>Firebug は DOM が変化したとき、すなわち要素が変更されたときにブレークして、JavaScript ファイルの関連する行でスクリプトの実行を止めます。これは、DOM の変化を起こした場所です。この機能は <a href="https://getfirebug.com/wiki/index.php/HTML_Panel#Break_On_Mutate"><em>変化したらブレーク</em> ボタン</a> でグローバルに有効化するか、<a href="https://getfirebug.com/wiki/index.php/HTML_Panel#Context_Menu">要素ごと</a> および属性変化・内容の変化・要素削除といった種類ごとに有効化できます。残念ながら、開発ツールにはまだこの機能がありません ({{bug(1004678)}} をご覧ください)。スクリプトの実行を止めるには、変化させている行に <a href="/ja/docs/Tools/Debugger">デバッガー パネル</a> でブレークポイントを設定しなければなりません。</p>
+
+<h3 id="Search_for_elements_via_CSS_selectors_or_XPaths" name="Search_for_elements_via_CSS_selectors_or_XPaths">CSS セレクターや XPath で要素を検索する</h3>
+
+<p>Firebug は、<a href="https://getfirebug.com/wiki/index.php/HTML_Panel#Search">HTML パネルで CSS セレクターや XPath で要素を検索できます</a>。開発ツールの インスペクター パネルも、<a href="/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Searching">CSS セレクターで検索できます</a>。また、マッチする ID やクラスのリストを表示します。しかし、XPath による検索は未サポートです ({{bug(963933)}} をご覧ください)。</p>
+
+<h2 id="Debugger" name="Debugger">デバッガー</h2>
+
+<p>Firebug の <a href="https://getfirebug.com/wiki/index.php/Script_Panel">スクリプト パネル</a> に相当するものが、開発ツールの <a href="/ja/docs/Tools/Debugger">デバッガー パネル</a> です。どちらも、ウェブサイトで実行する JavaScript コードをデバッグできます。</p>
+
+<h3 id="Switch_between_sources" name="Switch_between_sources">ソースを切り替える</h3>
+
+<p>Firebug には、ウェブサイトに関係するすべての JavaScript ソースを表示する <a href="https://getfirebug.com/wiki/index.php/Script_Panel#Script_Location_Menu">スクリプトロケーションメニュー</a> があります。これらのソースは静的なもの (すなわち、ファイル) や、動的に生成されるもの (すなわち、イベントハンドラで実行するスクリプト、<code>eval()</code>、<code>new Function()</code> など) があり得ます。開発ツールの デバッガー パネルでは、スクリプトを左側の <a href="/ja/docs/Tools/Debugger/UI_Tour#Source_list_pane">ソース サイドパネル</a> に一覧表示します。動的に生成されるスクリプトは、<a href="/ja/docs/Tools/Debugger/How_to/Debug_eval_sources"><code>//# sourceURL</code> コメントで名前を付けた</a> 場合に限り表示します。</p>
+
+<h3 id="Managing_breakpoints" name="Managing_breakpoints">ブレークポイントを管理する</h3>
+
+<p>Firebug ではさまざまな種類のブレークポイントを設置でき、すべてのブレークポイントを <a href="https://getfirebug.com/wiki/index.php/Breakpoints_Side_Panel">ブレークポイント サイドパネル</a> に表示します。開発ツールでは、<a href="/ja/docs/Tools/Debugger/UI_Tour#Source_list_pane">ソース サイドパネル</a> でそれぞれのスクリプトソースの下にブレークポイントを表示します。このパネルで、ひとつあるいはすべてのブレークポイントを有効化または無効化する、およびブレークポイントを削除することができます。現在は、スクリプトのブレークポイントのみ設置できます。XHR、DOM、Cookie、エラーのブレークポイントは未サポートです ({{bug(821610)}}、{{bug(1004678)}}、{{bug(895893)}}、{{bug(1165010)}} をご覧ください)。単一の JavaScript エラーに対するブレークポイントはありませんが、<a href="/ja/docs/Tools/Debugger/Settings">デバッガー パネルのオプション</a> に、<em>例外発生で停止</em> する設定があります。</p>
+
+<h3 id="Step_through_code" name="Step_through_code">コードでステップ実行を行う</h3>
+
+<p>スクリプトの実行が停止すると、コンティニュー (<kbd>F8</kbd>)、ステップオーバー (<kbd>F10</kbd>)、ステップイン (<kbd>F11</kbd>)、ステップアウト (<kbd>Shift</kbd>+<kbd>F11</kbd>) を使用してコードをステップ実行できます。これらは、どちらのツールでも動作します。</p>
+
+<h3 id="Examine_call_stack" name="Examine_call_stack">コールスタックを調査する</h3>
+
+<p>スクリプトの実行が停止したとき、Firebug は <a href="https://getfirebug.com/wiki/index.php/Stack_Side_Panel">スタック サイドパネル</a> に、関数のコールスタックを表示します。ここでは、呼び出し時の引数とともに関数を一覧表示します。開発ツールでは、<a href="/ja/docs/Tools/Debugger/UI_Tour#Call_stack_pane">コールスタック サイドパネル</a> に関数のコールスタックを表示します。開発ツールで引数を確認するには、<a href="/ja/docs/Tools/Debugger/How_to/Examine,_modify,_and_watch_variables#Examine_variables">変数 サイドパネル</a> を見なければなりません。</p>
+
+<h3 id="Examine_variables" name="Examine_variables">変数を調査する</h3>
+
+<p>Firebug は <a href="https://getfirebug.com/wiki/index.php/Watch_Side_Panel">ウォッチ サイドパネル</a> に、既定で {{domxref("window")}} オブジェクト (グローバルスコープ) を表示します。スクリプトの実行が停止すると、現在のコールスタックフレームで使用できるさまざまな変数スコープを表示します。さらに、ウォッチ式を追加および操作できます。開発ツールには <a href="/ja/docs/Tools/Debugger/How_to/Examine,_modify,_and_watch_variables">変数 サイドパネル</a> があり、基本的な働きは同じです。大きな違いは、変数 サイドパネルはスクリプトの実行が停止していないときに空である、すなわち <code>window</code> オブジェクトを表示しないことです。ただし、<a href="/ja/docs/Tools/DOM_Property_Viewer">DOM プロパティビューア</a> または <a href="/ja/docs/Tools/Web_Console">ウェブコンソール</a> を使用してオブジェクトを調査できます。</p>
+
+<h2 id="Style_Editor" name="Style_Editor">スタイルエディター</h2>
+
+<p>Firefox 開発ツールの <a href="/ja/docs/Tools/Style_Editor">スタイルエディター</a> で、Firebug の <a href="https://getfirebug.com/wiki/index.php/CSS_Panel">CSS パネル</a> と同様に、さまざまな CSS スタイルシートを調査および編集できます。さらに、新しいスタイルシートの作成や、既存のスタイルシートをインポートしてページに適用することもできます。また、個々のスタイルシートの有効・無効を切り替えることができます。</p>
+
+<h3 id="Switch_between_sources_2" name="Switch_between_sources_2">ソースを切り替える</h3>
+
+<p>Firebug の CSS パネルでは <a href="https://getfirebug.com/wiki/index.php/CSS_Panel#CSS_Location_Menu">CSS ロケーションメニュー</a> を使用して、さまざまな CSS ソースを切り替えることができます。スタイルエディターでは <a href="/ja/docs/Tools/Style_Editor#The_style_sheet_pane">サイドバー</a> を使用します。</p>
+
+<h3 id="Edit_a_style_sheet" name="Edit_a_style_sheet">スタイルシートを編集する</h3>
+
+<p>Firebug の <a href="https://getfirebug.com/wiki/index.php/CSS_Panel">CSS パネル</a> は、3 つのスタイルシート編集方法を提供します。既定の方法は、<a href="https://getfirebug.com/wiki/index.php/Style_Side_Panel">スタイル サイドパネル</a> でのインライン編集です。このほかに <a href="https://getfirebug.com/wiki/index.php/CSS_Panel#Edit_Button">ソース編集モードとライブ編集モード</a> があり、選択したスタイルシートをテキストエディターで編集できます。開発ツールのスタイルエディターの編集方法は、Firebug のライブ編集モードに相当する 1 つだけです。</p>
+
+<h3 id="Try_out_CSS_selectors" name="Try_out_CSS_selectors">CSS セレクターを試用する</h3>
+
+<p>Firebug のセレクタ サイドパネルに、CSS セレクタを検証する機能があります。これは、入力したセレクタにマッチするすべての要素を表示します。開発ツールにこの機能はありませんが、{{bug(1323746)}} で要望されています。</p>
+
+<h3 id="Searching_within_the_style_sheets" name="Searching_within_the_style_sheets">スタイルシート内で検索する</h3>
+
+<p>Firebug では、検索フィールドでスタイルシート内を検索できます。開発ツールのスタイルエディターにもスタイルシート内を検索する機能がありますが、現在は複数のスタイルシートを検索する機能 ({{bug(889571)}} を参照) および正規表現で検索する機能 ({{bug(1362030)}} を参照) がありません。</p>
+
+<h2 id="Performance_Tool" name="Performance_Tool">パフォーマンスツール</h2>
+
+<p>Firebug では <a href="https://getfirebug.com/wiki/index.php/Console_Panel#Profile">コンソール パネルの "プロファイル" ボタン</a>、または <code><a href="https://getfirebug.com/wiki/index.php/Console.profile">console.profile()</a></code> および <code><a href="https://getfirebug.com/wiki/index.php/Console.profileEnd">console.profileEnd()</a></code> コマンドを使用して、JavaScript のパフォーマンスをプロファイリングできます。開発ツールでは、パフォーマンスのプロファイリングについて高度なツールを提供します。Firebug と同様に <code><a href="/ja/docs/Web/API/Console/profile">console.profile()</a></code> および <code><a href="/ja/docs/Web/API/Console/profileEnd">console.profileEnd()</a></code> を使用するか、<a href="/ja/docs/Tools/Performance">パフォーマンスツール</a> の "パフォーマンス記録の状態を切り替えます" ボタンを使用してプロファイルを作成できます。<a href="/ja/docs/Tools/Performance/Call_Tree">コールツリー</a> の出力が Firebug の出力にもっとも似ていますが、パフォーマンスパネルでは単なる JavaScript のパフォーマンスだけでなく、より多くの情報を提供します。例えば、HTML のパースやレイアウトに関する情報も提供します。</p>
+
+<p>これは Firebug と開発ツールで出力内容が完全に異なるため、もっとも違いが大きい部分です。Firebug は JavaScript のパフォーマンスに注目しており、プロファイリングセッション内の JavaScript 関数呼び出しに関する詳細情報を提供します。一方開発ツールは JavaScript の関数呼び出しに限らず、ウェブ際のパフォーマンスに関する広範な情報を提供します。</p>
+
+<h3 id="View_JavaScript_call_performance" name="View_JavaScript_call_performance">JavaScript の呼び出しパフォーマンスを表示する</h3>
+
+<p>Firebug の <a href="https://getfirebug.com/wiki/index.php/Profiler">プロファイラーの出力</a> にもっとも近いものが、パフォーマンス パネルの <a href="/ja/docs/Tools/Performance/Call_Tree">呼び出しツリービュー</a> です。これは Firebug と同様に、<em>合計時間</em> にそれぞれの関数呼び出しの総実行時間、<em>サンプル</em> に呼び出し回数、<em>時間</em> に関数内で費やした時間、そして総実行時間に対する関数の実行時間の割合を表示します。</p>
+
+<div class="note">
+<p><strong>注記:</strong> 開発ツールの呼び出しツリービューに表示する時間と割合は、Firebug が表示する値と同等ではありません。これは、JavaScript コードの実行状態をサンプリングするために使用する API が異なるためです。</p>
+</div>
+
+<h3 id="Jump_to_function_declaration" name="Jump_to_function_declaration">関数の宣言に移動する</h3>
+
+<p>Firebug のプロファイラーと同様に、開発ツールのパフォーマンスツールの <a href="/ja/docs/Tools/Performance/Call_Tree">呼び出しツリービュー</a> から、呼び出した JavaScript 関数が定義されているコードの行に移動できます。Firebug では関数へのリンクが <a href="https://getfirebug.com/wiki/index.php/Console_Panel">コンソールパネル</a> の出力の右側にありますが、開発ツールでは呼び出しツリービューの右側にリンクがあります。</p>
+
+<h2 id="Network_Monitor" name="Network_Monitor">ネットワークモニター</h2>
+
+<p>ネットワークリクエストを監視するために、Firebug には <a href="https://getfirebug.com/wiki/index.php/Net_Panel">ネット パネル</a> があります。Firefox 開発ツールでは <a href="/ja/docs/Tools/Network_Monitor">ネットワークモニター</a> を使用して、ネットワーク通信を調査できます。どちらのツールも、ネットワークリクエストの要求や応答を表すタイムラインなど、よく似た情報を提供します。</p>
+
+<h3 id="Inspect_request_information" name="Inspect_request_information">リクエストの情報を調査する</h3>
+
+<p>Firebug も Firefox 開発ツールのネットワークモニターも、リクエストをクリックすると、リクエストに関する情報を調査できます。唯一の違いは、Firebug はリクエストの下に情報を表示しますが、ネットワークモニターはサイドパネルに情報を表示することです。</p>
+
+<p>どちらのツールも、選択したリクエストのさまざまな情報を表示するタブがあります。<em>ヘッダー</em>、<em>パラメーター</em>、<em>応答</em>、<em>Cookie</em> のパネルがあります。レスポンスのプレビューは、<em>HTML</em> のように具体的な名称のパネルで表示します。ネットワークモニターでは、プレビュー用に <em>プレビュー</em> パネルがあります。キャッシュ済みデータの情報を提供する機能は未実装です ({{bug(859051)}})。一方、Firebug の情報に加えて <em>セキュリティ</em> の情報を表示します。また、ネットワークのタイミングに関する詳細情報を提供する <em>タイミング</em> タブもあります。</p>
+
+<h3 id="View_request_timings" name="View_request_timings">リクエストのタイミングを表示する</h3>
+
+<p>Firebug では <a href="https://getfirebug.com/wiki/index.php/Net_Panel#Timeline">ネットパネルのタイムライン列</a> にマウスポインターを載せると、リクエストに関するネットワークタイミングの詳細情報を表示します。ネットワークモニターはこの情報を、リクエストを選択したときに <a href="/ja/docs/Tools/Network_Monitor#Timings">タイムライン サイドパネル</a> で表示します。</p>
+
+<h3 id="View_remote_address" name="View_remote_address">リモートアドレスを表示する</h3>
+
+<p>Firebug では、リクエストのリモートアドレスを リモート IP 列に表示します。ネットワークモニターでは、リクエストを選択したときに <em>ヘッダー</em> タブの <em>リモートアドレス</em> に表示します。</p>
+
+<h3 id="Search_within_requests" name="Search_within_requests">リクエストを検索する</h3>
+
+<p>Firebug の検索フィールドで、リクエストを検索できます。Firefox の開発ツールの検索フィールドは、入力した文字列でリクエストをフィルタリングします。</p>
+
+<p>Firebug では <a href="https://getfirebug.com/wiki/index.php/Search_Field#Options">検索フィールドのオプション</a> で <em>レスポンス本文</em> にチェックを入れると、ネットワークリクエストのレスポンスボディを検索できます。ネットワークモニターではこの機能が未提供ですが、{{bug(1334408)}} で要望されています。レスポンスボディはまだ検索できませんが、ネットワークモニターでは <a href="/ja/docs/Tools/Network_Monitor#Filtering_by_properties">さまざまなリクエスト属性でフィルタリングする</a> ことができます。</p>
+
+<h2 id="Storage_Inspector" name="Storage_Inspector">ストレージインスペクター</h2>
+
+<p>Firebug の <a href="https://getfirebug.com/wiki/index.php/Cookies_Panel">Cookie パネル</a> はページが作成した Cookie に関する情報を表示しており、Cookie が保存している情報を操作できます。開発ツールでは、<a href="/ja/docs/Tools/Storage_Inspector">ストレージインスペクター</a> にこの機能があります。Firebug と比較すると、ストレージインスペクターは Cookie だけでなくローカルストレージ、セッションストレージ、キャッシュ、<a href="/ja/docs/Web/API/IndexedDB_API">IndexedDB</a> データベースといったストレージも調査できます。</p>
+
+<h3 id="Inspect_cookies" name="Inspect_cookies">Cookie を調査する</h3>
+
+<p>Firebug は、ウェブサイトに関係するすべての Cookie を <a href="https://getfirebug.com/wiki/index.php/Cookies_Panel">Cookie パネル</a> に表示します。開発ツールでは Cookie を、<a href="/ja/docs/Tools/Storage_Inspector">ストレージインスペクター</a> の Cookie セクションに、ドメインごとにグループ化して表示します。どちらも Cookie ごとに名前、値、ドメイン、パス、有効期限、Cookie が HttpOnly であるかといった、ほとんど同じ情報を表示します。</p>
+
+<p>開発ツールは Cookie が Secure であるかをデフォルトで表示しませんが、表の見出しを右クリックしてコンテキストメニューで <em>Secure</em> にチェックを入れると有効化できます。さらに開発ツールは、Cookie の作成日時、最終アクセス日時、HostOnly であるかの情報も表示できます。</p>
+
+<h3 id="Edit_cookies" name="Edit_cookies">Cookie を編集する</h3>
+
+<p>Firebug で Cookie を編集するには、Cookie を右クリックしてコンテキストメニューで <em>編集</em> を選択しなければなりません。ダイアログボックスがポップアップしますので、Cookie を編集して保存します。ストレージインスペクターでは、編集したいデータをダブルクリックするだけです。インラインエディターで、値を編集できます。</p>
+
+<h3 id="Delete_cookies" name="Delete_cookies">Cookie を削除する</h3>
+
+<p>Firebug の Cookie パネルでは、メニューの <em><a href="https://getfirebug.com/wiki/index.php/Cookies_Panel#Cookies">Cookie</a></em> &gt; <em>Cookie を削除</em> または <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>O</kbd> で、ウェブサイトのすべての Cookie を削除できます。また、<em>Cookie</em> &gt; <em>セッション Cookie を削除</em> でセッション Cookie のみ削除、Cookie を右クリックして <em>削除</em> を選択するとひとつの Cookie を削除できます。開発ツールのストレージインスペクターでは、Cookie を右クリックして <em>すべて削除</em> を選択するとすべての Cookie を削除、それぞれの <em>"&lt;Cookie 名&gt;" を削除</em> を選択するとひとつの Cookie を削除できます。さらに、コンテキストメニューの <em>"&lt;ドメイン名&gt;" のすべてのアイテムを削除</em> で、特定のドメインのすべての Cookie を削除できます。現在、セッション Cookie のみ削除することはできません ({{bug(1336934)}})。</p>
+
+<h2 id="Developer_Toolbar" name="Developer_Toolbar">開発ツールバー</h2>
+
+<h3 id="Display_of_error_count" name="Display_of_error_count">エラー数を表示する</h3>
+
+<p>ページで JavaScript エラーがあるとき、Firebug はその数を <a href="https://getfirebug.com/wiki/index.php/Start_Button#Error_info">スタートボタンにバッジで表示します</a>。開発ツールでは、<a href="/ja/docs/Tools/GCLI">開発ツールバー</a> にエラー数を表示します。</p>
+
+<h3 id="Command_API" name="Command_API">コマンド API</h3>
+
+<p>Firebug はさまざまな <a href="https://getfirebug.com/wiki/index.php/Command_Line_API">コマンド</a> を提供しており、コマンドラインで実行できます。開発ツールバーも、開発ツールを制御してさまざまなタスクを実行するための <a href="/ja/docs/Tools/GCLI#Commands">多種多様なコマンドとともに API</a> を提供します。</p>

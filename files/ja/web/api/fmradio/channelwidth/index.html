@@ -1,0 +1,31 @@
+---
+title: FMRadio.channelWidth
+slug: Web/API/FMRadio/channelWidth
+tags:
+  - API
+  - B2G
+  - Firefox OS
+  - Non Standard
+  - Property
+  - Reference
+  - WebAPI
+  - WebFM
+translation_of: Archive/B2G_OS/API/FMRadio/channelWidth
+---
+<div class="syntaxbox">
+ {{ non-standard_header() }}</div>
+<p>{{ B2GOnlyHeader2('installed') }}</p>
+<h2 id="概要">概要</h2>
+<p><code>channelWidth</code> プロパティの値は、周波数範囲のチャンネル幅を MHz 単位で示します。</p>
+<p>通常、この値は次のいずれかです: <code>0.05</code>, <code>0.1</code> (既定値) または <code>0.2</code>。</p>
+<p>周波数がラジオに割り当てられる時、<code>channelWidth</code> に与えられた最も近い周波数の値に丸められます。例えば、100MHz が正しい周波数であり、channelWidth の値が 0.2 である場合、100.2 や 99.8 は正しい周波数ですが、100.15 は 100.2 に丸められます。</p>
+<h2 id="構文">構文</h2>
+<pre class="syntaxbox">var width = <em>instanceOfFMRadio</em>.channelWidth</pre>
+<h2 id="値">値</h2>
+<p>真偽値を返します。</p>
+<h2 id="Specification" name="Specification">仕様書</h2>
+<p>仕様はありません。</p>
+<h2 id="参照">参照</h2>
+<ul>
+ <li>{{domxref("FMRadio")}}</li>
+</ul>

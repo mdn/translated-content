@@ -1,0 +1,156 @@
+---
+title: CSS プロパティのアニメーション
+slug: Tools/Performance/Scenarios/Animating_CSS_properties
+translation_of: Tools/Performance/Scenarios/Animating_CSS_properties
+---
+<div>{{ToolsSidebar}}</div><div class="summary">
+<p>CSS プロパティのアニメーションにかかるパフォーマンスのコストは、プロパティにより異なります。また、高コストな CSS プロパティのアニメーションは、ブラウザがスムーズなフレームレートを確保しようと努力するために <a href="/ja/docs/Glossary/Jank">jank</a> が発生する場合があります。</p>
+
+<p><a href="/ja/docs/Tools/Performance/Frame_rate">フレームレート</a>や<a href="/ja/docs/Tools/Performance/Waterfall">ウォーターフォール</a>は CSS アニメーションにおいてブラウザが何を行っているかを明らかにして、パフォーマンスの問題の診断を支援します。</p>
+</div>
+
+<p><a href="/ja/docs/Web/Guide/CSS/Using_CSS_animations">CSS アニメーション</a>では複数の<a href="/ja/docs/Web/CSS/@keyframes">キーフレーム</a>を指定して、それぞれのキーフレームではアニメーションの特定の段階における要素の外見を定義するために CSS を使用します。ブラウザは、それぞれのキーフレームから次のキーフレームへ遷移することでアニメーションを作成します。</p>
+
+<p>JavaScript を使用して要素のアニメーションを行うのに比べて、CSS アニメーションは簡単に作れます。またブラウザはいつフレームを描画するかをより制御でき、また必要に応じてフレームを破棄できますので、パフォーマンスが高くなります。</p>
+
+<p>しかし CSS プロパティを変更するためのパフォーマンスコストは、プロパティにより異なります。高コストな CSS プロパティのアニメーションは、ブラウザがスムーズなフレームレートを確保しようと努力するために <a href="/ja/docs/Glossary/Jank">jank</a> が発生する場合があります。</p>
+
+<h2 id="The_CSS_rendering_waterfall" name="The_CSS_rendering_waterfall">CSS レンダリングのウォーターフォール</h2>
+
+<p>CSS が変更されたときにブラウザがページを更新するためのプロセスは、以下のステップで構成されるウォーターフォールで説明できます:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10821/css-rendering-waterfall.png" style="display: block; height: 203px; margin-left: auto; margin-right: auto; width: 546px;"></p>
+
+<ol>
+ <li><strong>スタイルを再計算</strong>: 要素の CSS プロパティが変更されるたびに、ブラウザは算出スタイルを再計算しなければなりません。</li>
+ <li><strong>レイアウト</strong>: 続いて、要素の位置や形状を計算するために算出スタイルを使用します。この操作は "レイアウト" と名付けられていますが、"リフロー" とも呼ばれます。</li>
+ <li><strong>描画</strong>: そして、ブラウザはスクリーンに要素を再描画しなければなりません。最後のステップはこの流れで示していません。ページは複数のレイヤーに分割され、それぞれを独立して描画した後に、"コンポジション" と呼ばれるプロセスで合成されます。</li>
+</ol>
+
+<p>この流れが完了しなければスクリーンを更新できませんので、ひとつのフレーム内に一連の操作を収めなければなりません。毎秒 60 フレームが、アニメーションがスムーズに見えるレートとして広く受け入れられています。毎秒 60 フレームのレートのために、ブラウザが一連の操作を実行する時間として 16.7 ミリ秒が与えられます。</p>
+
+<h2 id="CSS_property_cost" name="CSS_property_cost">CSS プロパティのコスト</h2>
+
+<p>レンダリングのウォーターフォールにおいて、一部のプロパティは他のプロパティに比べて特にコストが高くなります:</p>
+
+<table class="fullwidth-table standard-table">
+ <thead>
+  <tr>
+   <th scope="col">プロパティの種類</th>
+   <th scope="col">コスト</th>
+   <th scope="col">例</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>要素の<em>形状</em>や<em>位置</em>に影響を与えるプロパティ。これらはスタイルの再計算、レイアウト、再描画を発生させる。</td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/10827/recalculate-style.png" style="height: 26px; width: 123px;"> <img alt="" src="https://mdn.mozillademos.org/files/10825/layout.png" style="height: 26px; width: 123px;"> <img alt="" src="https://mdn.mozillademos.org/files/10823/paint.png" style="height: 26px; width: 123px;"></td>
+   <td>
+    <p><code><a href="/ja/docs/Web/CSS/left">left</a></code><br>
+     <code><a href="/ja/docs/Web/CSS/max-width">max-width</a></code><br>
+     <code><a href="/ja/docs/Web/CSS/border-width">border-width</a></code><br>
+     <code><a href="/ja/docs/Web/CSS/margin-left">margin-left</a></code><br>
+     <code><a href="/ja/docs/Web/CSS/font-size">font-size</a></code></p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>形状や位置への影響はないが、個別のレイヤーでは描画されないプロパティ。レイアウトは発生しない。</p>
+   </td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/10827/recalculate-style.png" style="height: 26px; width: 123px;"> <img alt="" src="https://mdn.mozillademos.org/files/10835/layout-faint.png" style="height: 52px; width: 123px;"> <img alt="" src="https://mdn.mozillademos.org/files/10823/paint.png" style="height: 26px; width: 123px;"></td>
+   <td>
+    <p><code><a href="/ja/docs/Web/CSS/color">color</a></code></p>
+   </td>
+  </tr>
+  <tr>
+   <td>個別のレイヤーで描画されるプロパティは、再描画が発生しない。更新はコンポジションで制御される。</td>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/10827/recalculate-style.png" style="height: 26px; width: 123px;"> <img alt="" src="https://mdn.mozillademos.org/files/10835/layout-faint.png" style="height: 52px; width: 123px;"> <img alt="" src="https://mdn.mozillademos.org/files/10839/paint-faint.png" style="height: 26px; width: 123px;"></td>
+   <td><code><a href="/ja/docs/Web/CSS/transform">transform</a></code><br>
+    <code><a href="/ja/docs/Web/CSS/opacity">opacity</a></code></td>
+  </tr>
+ </tbody>
+</table>
+
+<div class="note">
+<p><a href="http://csstriggers.com/">CSS Triggers</a> の Web サイトで、各 CSS プロパティでどれだけのウォーターフォールが発生するかをまとめています。WebKit 固有の情報ですが、ほとんどはすべての最新ブラウザで同じです。</p>
+</div>
+
+<h2 id="An_example.3A_margin_versus_transform" name="An_example.3A_margin_versus_transform">例: margin と transform</h2>
+
+<p>本章では、<a href="/ja/docs/Tools/Performance/Waterfall">ウォーターフォール</a>が <code><a href="/ja/docs/Web/CSS/margin">margin</a></code> を使用したアニメーションと <code><a href="/ja/docs/Web/CSS/transform">transform</a></code> を使用したアニメーションの違いを、どのように明らかにできるかを示します。</p>
+
+<p>このシナリオは、<code>margin</code> を使用したアニメーションは例外なく悪いアイデアであると納得させる意図はありません。サイトを描画するためにブラウザが何を行っているかをツールがどのようにして明らかにするか、およびパフォーマンスの問題の診断や解決のためにその情報をどのように適用できるかを示すものです。</p>
+
+<p>自身でも試してみたい場合は、デモ Web サイトが<a href="http://mdn.github.io/performance-scenarios/animation-transform-margin/index.html">こちら</a>にあります。サンプルは以下のようなものです:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/11029/css-animations-demo.png" style="display: block; height: 677px; margin-left: auto; margin-right: auto; width: 1000px;">ここには 2 つのコントロールがあります。アニメーションを開始/停止するボタンと、<code>margin</code> のアニメーションまたは <code>transform</code> のアニメーションを選択するラジオボタンです。</p>
+
+<p>ページ上には複数の要素を置いており、それらに <code><a href="/ja/docs/Web/CSS/linear-gradient">linear-gradient</a></code> の背景と <code><a href="/ja/docs/Web/CSS/box-shadow">box-shadow</a></code> を追加しています。これは、双方のプロパティは描画のコストが比較的高いためです。</p>
+
+<p>動画版のウォークスルーも用意しています:</p>
+
+<p>{{EmbedYouTube("Tvu6_j8Qzfk")}}</p>
+
+<h3 id="Animating_using_margin" name="Animating_using_margin">margin を使用したアニメーション</h3>
+
+<p>"Use margin" を選択したままでアニメーションを開始して、パフォーマンスツールを開いて記録を始めましょう。記録時間は数秒だけでかまいません。</p>
+
+<p>最初の記録を開きます。どのような結果になるかはマシンやシステム負荷に大きく依存しますが、おそらく以下のようになるでしょう:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10853/margin-recording.png" style="display: block; height: 237px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+
+<p>ここでは 3 つの視点で示しています: (a) ウォーターフォールの概要、(b) フレームレート、(c) タイムラインの詳細 です。</p>
+
+<h4 id="Waterfall_overview" name="Waterfall_overview">ウォーターフォールの概要</h4>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10857/margin-timeline-overview.png" style="display: block; height: 58px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+
+<p>これは、<a href="/ja/docs/Tools/Performance/Waterfall">ウォーターフォール</a>をコンパクトに表示したビューです。</p>
+
+<p>緑色が圧倒的に多いことは、<a href="/ja/docs/Tools/Performance/Timeline#timeline-color-coding">描画に多くの時間を費やしている</a>ことを示しています。</p>
+
+<p> </p>
+
+<h4 id="Frame_rate" name="Frame_rate">フレームレート</h4>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10859/margin-frame-rate.png" style="display: block; height: 64px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+
+<p>これは、<a href="/ja/docs/Tools/Performance/Frame_rate">フレームレート</a>を表示します。ここでは平均フレームレートが 46.67fps であり、目標の 60fps をかなり下回っています。さらに悪いことにフレームレートが何度も 10 から 20 fps 台に低下しており、グラフがぎざぎざになっています。特にユーザとの対話が加わると、スムーズなアニメーションではなくなるでしょう。</p>
+
+<h4 id="Waterfall" name="Waterfall">ウォーターフォール</h4>
+
+<p>記録表示領域の残りの部分で、ウォーターフォールを表示します。ウォーターフォールをスクロールすると、以下のようなパターンが見られるでしょう:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10861/margin-timeline.png" style="display: block; height: 532px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+
+<p>これは<a href="/ja/docs/Tools/Performance/Scenarios/Animating_CSS_properties#The_CSS_rendering_waterfall">レンダリングのウォーターフォール</a>を表します。それぞれのアニメーションフレームで、すべての要素のスタイルを再計算してからレイアウト処理を 1 回実施して、再描画を行います。</p>
+
+<p>ここでは、描画が特にパフォーマンスへ悪影響を与えていることがわかります。前出のスクリーンショットでは描画処理をハイライトしており、この処理は 13.11 ミリ秒かかっていることが右側のボックスでわかります。すべての処理に割り当てられた時間は 16.7 ミリ秒しかありませんので、高いフレームレートを維持できないのは驚くことではありません。</p>
+
+<p>ここで<a href="/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS">インスペクタを使用して</a> box-shadow を削除すると、描画時間にどのような影響があるかを実験できます。しかし次は、<code><a href="/ja/docs/Web/CSS/margin">margin</a></code> の代わりに <code><a href="/ja/docs/Web/CSS/transform">transform</a></code> を使用して高コストな描画を完全になくす方法を見ていきます。</p>
+
+<h3 id="Animating_using_transform" name="Animating_using_transform">transform を使用したアニメーション</h3>
+
+<p>Web ページのラジオボタンを "Use transform" に切り替えて、新たに記録してみましょう。すると、以下のようになるでしょう:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10863/transform-recording.png" style="display: block; height: 234px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+
+<h4 id="Waterfall_overview_2" name="Waterfall_overview_2">ウォーターフォールの概要</h4>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10869/transform-timeline-overview.png" style="display: block; height: 57px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+
+<p><a href="/ja/docs/Tools/Performance/Scenarios/Animating_CSS_properties#Waterfall_overview">margin を使用した場合</a>と比べて緑色がとても少なく、また桃色がとても多くなっています。桃色は<a href="/ja/docs/Tools/Performance/Waterfall#timeline-color-coding">レイアウトやスタイルの再計算</a>でしょう。</p>
+
+<h4 id="Frame_rate_2" name="Frame_rate_2">フレームレート</h4>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10865/transform-frame-rate.png" style="display: block; height: 62px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+
+<p><a href="/ja/docs/Tools/Performance/Scenarios/Animating_CSS_properties#Frame_rate">margin を使用した場合</a>と比べて、良好であるように見えます。平均値は 60fps に近く、また開始付近で 1 回落ち込んでいることを除けば高いフレームレートを維持しています。</p>
+
+<h4 id="Waterfall_2" name="Waterfall_2">ウォーターフォール</h4>
+
+<p>タイムラインビューで、フレームレートが向上した理由が示されています。<a href="/ja/docs/Tools/Performance/Scenarios/Animating_CSS_properties#Waterfall">margin を使用した場合</a>と比べて、レイアウトや (この例ではさらに重要な) 描画に少しも時間を費やしていません:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10867/transform-timeline.png" style="display: block; height: 384px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+
+<p>この例では <code>transform</code> を使用することでサイトのパフォーマンスが著しく向上しており、またどのようにおよびなぜ向上したかを、パフォーマンスツールで示すことができました。</p>

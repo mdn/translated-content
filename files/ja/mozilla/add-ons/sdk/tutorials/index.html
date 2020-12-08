@@ -1,0 +1,146 @@
+---
+title: チュートリアル
+slug: Mozilla/Add-ons/SDK/Tutorials
+translation_of: Archive/Add-ons/Add-on_SDK/Tutorials
+---
+<p>{{AddonSidebar}}</p>
+
+<p>SDK を使用したアドオンの開発方法を実践的に説明したページの一覧です。</p>
+
+<hr>
+<h3 id="はじめに"><a name="getting-started">はじめに</a></h3>
+
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="/ja/Add-ons/SDK/Tools/jpm#Installation">インストール</a></dt>
+ <dd>Windows、OS X および Linux 上で、SDK をダウンロード、インストール、および初期化します。</dd>
+</dl>
+
+<dl>
+ <dt><a href="/en-US/Add-ons/SDK/Tutorials/Troubleshooting">トラブルシューティング</a></dt>
+ <dd>よくある問題を解決する場合や、支援を求める場合のヒントを説明します。</dd>
+</dl>
+</div>
+
+<div class="column-half">
+<dl>
+ <dt><a href="/ja/Add-ons/SDK/Tutorials/Getting_Started_(jpm)">入門</a></dt>
+ <dd>jpm を使用してシンプルなアドオンを作成を始めるための手順の概略です</dd>
+ <dt></dt>
+</dl>
+</div>
+</div>
+
+<hr>
+<h3 id="ユーザーインターフェイスの作成"><a name="create-user-interfaces">ユーザーインターフェイスの作成</a></h3>
+
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="/ja/Add-ons/SDK/Tutorials/Adding_a_Button_to_the_Toolbar">ツールバーボタンの追加</a></dt>
+ <dd>Firefox アドオンツールバーにボタンを追加します。</dd>
+ <dt><a href="/ja/Add-ons/SDK/Tutorials/Add_a_Menu_Item_to_Firefox">Firefoxへのメニュー項目の追加</a></dt>
+ <dd>Firefox のメインメニューにアイテムを追加します。</dd>
+</dl>
+</div>
+
+<div class="column-half">
+<dl>
+ <dt><a href="/ja/Add-ons/SDK/Tutorials/Display_a_Popup">ポップアップの表示</a></dt>
+ <dd>HTML および JavaScript を使用して実装したポップアップダイアログを表示します。</dd>
+ <dt><a href="/ja/Add-ons/SDK/Tutorials/Add_a_Context_Menu_Item">コンテキストメニュー項目の追加</a></dt>
+ <dd>Firefox のコンテキストメニューに項目を追加します。</dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h3 id="ブラウザの操作"><a name="interact-with-the-browser">ブラウザの操作</a></h3>
+
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="/ja/Add-ons/SDK/Tutorials/Open_a_Web_Page">Webページを開く</a></dt>
+ <dd>モジュールを用いて、新しいタブまたはウィンドウでWebページを開き、そのコンテンツにアクセスします。</dd>
+ <dt><a href="/ja/Add-ons/SDK/Tutorials/Listen_for_Page_Load">ページの読み込みを確認する</a></dt>
+ <dd>モジュールを用いて、新しい Web ページが読み込まれたときに通知を受け取り、それらの Web ページのコンテンツにアクセスします。</dd>
+</dl>
+</div>
+
+<div class="column-half">
+<dl>
+ <dt><a href="/ja/Add-ons/SDK/Tutorials/List_Open_Tabs">開いているタブの一覧を表示する</a></dt>
+ <dd>tabs モジュールを用いて、現在開いているすべてのタブに対して反復処理を行い、それらのコンテンツにアクセスします。</dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h3 id="Webページの変更"><a name="modify-web-pages">Webページの変更</a></h3>
+
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="/ja/Add-ons/SDK/Tutorials/Modifying_Web_Pages_Based_on_URL">URLに基づいたWebページの変更</a></dt>
+ <dd>URL に基づいて Web ページを検索するフィルタを作成します。フィルタに一致する URL の Web ページを読み込んだときに、フィルタ内の指定したスクリプトを実行します。</dd>
+</dl>
+</div>
+
+<div class="column-half">
+<dl>
+ <dt><a href="/ja/Add-ons/SDK/Tutorials/Modifying_the_Page_Hosted_by_a_Tab">アクティブなWebページの変更</a></dt>
+ <dd>現在アクティブな Web ページに、動的にスクリプトを読み込みます。</dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h3 id="開発テクニック"><a name="development-techniques">開発テクニック</a></h3>
+
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="/ja/Add-ons/SDK/Tutorials/Logging">ログの出力</a></dt>
+ <dd>診断を行うために、メッセージをコンソールにログとして出力します。</dd>
+ <dt><a href="/ja/Add-ons/SDK/Tutorials/Creating_reusable_modules">再利用可能なモジュールの作成</a></dt>
+ <dd>アドオンを別個のモジュールとして体系化し、開発、デバッグ、およびメンテナンスを容易にします。 また、作成したモジュールが入った再利用可能なパッケージを作成し、他の開発者もそのモジュールを使用できるようにします。</dd>
+ <dt><a href="/ja/Add-ons/SDK/Tutorials/Unit_testing">ユニットテスト</a></dt>
+ <dd>SDK のテストフレームワークを使用して、ユニットテストを作成し実行します。</dd>
+ <dt><a href="/ja/Add-ons/SDK/Tutorials/Chrome_authority">Chrome 権限</a></dt>
+ <dd>この権限を使用すると、アドオンが Components オブジェクトにアクセスできるので、どんな XPCOM オブジェクトでも読み込んで使用できるようになります。</dd>
+ <dt><a href="/ja/Add-ons/SDK/Tutorials/Creating_event_targets">イベントターゲットの作成</a></dt>
+ <dd>定義したオブジェクトがイベントを発生させられるようにします。</dd>
+</dl>
+</div>
+
+<div class="column-half">
+<dl>
+ <dt><a href="/ja/Add-ons/SDK/Tutorials/Listening_for_load_and_unload">読み込みと読み込み解除の確認</a></dt>
+ <dd>Firefox にアドオンが読み込まれたり、読み込み解除されたりしたときに通知を受け取ります。またコマンドラインからアドオンに引数を渡します。</dd>
+ <dt><a href="/ja/Add-ons/SDK/Tutorials/Using_third-party_modules_(jpm)">サードパーティーモジュールの使用</a></dt>
+ <dd>SDK 自体に含まれていない追加のモジュールをインストールして使用します。</dd>
+ <dt><a href="/ja/Add-ons/SDK/Tutorials/l10n">ローカライゼーション</a></dt>
+ <dd>ローカライズ可能なコードを作成します。</dd>
+ <dt><a href="/ja/Add-ons/SDK/Tutorials/Mobile_development">モバイル開発</a></dt>
+ <dd>Android 用 Firefox モバイルのアドオン開発を始める手順を説明します。</dd>
+</dl>
+
+<dl>
+ <dt><a href="/ja/Add-ons/SDK/Tutorials/Mobile_development">アドオン用のデバッガー</a></dt>
+ <dd>アドオン内のJavaScriptのデバッグを行います。</dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h3 id="応用"><a name="putting-it-together">応用 </a></h3>
+
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="/ja/Add-ons/SDK/Tutorials/Annotator">アノテーターアドオン</a></dt>
+ <dd>より複雑なアドオンの開発作業を順を追って説明します。</dd>
+</dl>
+</div>
+</div>

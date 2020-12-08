@@ -1,0 +1,49 @@
+---
+title: Système de préférences
+slug: Système_de_préférences
+tags:
+  - Système_de_préférences
+  - 'XUL:Références'
+translation_of: Mozilla/Preferences/Preferences_system
+---
+<p>Ce document décrit le nouveau système de préférences présent dans les versions récentes du toolkit. L'utilisation de ce système permet de créer des fenêtres de préferences s'affichant et fonctionnant de façon appropriée sur les différentes plateformes (Windows, Mac OS X et GNOME).</p>
+
+<p><strong>Note :</strong> Le nouveau système de préferences n'est disponible qu'à partir de Firefox/Thunderbird 1.5 (et leurs versions alpha et beta). Vous ne pourrez pas l'utiliser dans des applications ou extensions basées sur Firefox 1.0.</p>
+
+<p>Ce nouveau système est implémenté grâce à quelques éléments et attributs <a href="fr/XUL">XUL</a>. Les informations de référence sont disponibles en suivant les liens ci-dessous :</p>
+
+<div class="moreinfo">  <p><strong>Documentation sur le <a href="/fr/docs/Syst%c3%a8me_de_pr%c3%a9f%c3%a9rences">système de préférences</a> :</strong></p>  <ul>    <li>Introduction : <a href="/fr/docs/Syst%c3%a8me_de_pr%c3%a9f%c3%a9rences/Premiers_pas">Premiers pas</a> | <a href="/fr/docs/Syst%c3%a8me_de_pr%c3%a9f%c3%a9rences/Exemples">Exemples</a> | <a href="/en-US/docs/Preferences_System/Troubleshooting">Troubleshooting</a></li>    <li>Référence : <code><a href="/fr/docs/Mozilla/Tech/XUL/prefwindow" title="prefwindow">prefwindow</a></code> | <code><a href="/fr/docs/Mozilla/Tech/XUL/prefpane" title="prefpane">prefpane</a></code> | <code><a href="/fr/docs/Mozilla/Tech/XUL/preferences" title="preferences">preferences</a></code> | <code><a href="/fr/docs/Mozilla/Tech/XUL/preference" title="preference">preference</a></code> | <a href="/fr/docs/Syst%c3%a8me_de_pr%c3%a9f%c3%a9rences/Nouveaux_attributs">Nouveaux attributs</a></li>  </ul></div>
+
+<h3 id="Utilisation" name="Utilisation">Utilisation</h3>
+
+<p><span class="comment">this will eventually be moved from here</span></p>
+
+<p>Voici un code pour une fenêtre de préférences classique :</p>
+
+<pre>&lt;prefwindow id="appPreferences"
+            xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+  &lt;prefpane id="pane1" label="&amp;pane1.title;"&gt;
+    &lt;preferences&gt;
+      &lt;preference id="pref1" name="pref.name" type="bool"/&gt;
+    &lt;/preferences&gt;
+
+   .. Élements de l'interface faisant référence aux préférences ci-dessus, par ex. :
+    &lt;checkbox id="check1" preference="pref1"
+              label="&amp;check1.label;" accesskey="&amp;check1.accesskey;"/&gt;
+  &lt;/prefpane&gt;
+
+  &lt;prefpane id="pane2" label="&amp;pane2.title;" src="chrome://uri/to/pane.xul"/&gt;
+&lt;/prefwindow&gt;
+</pre>
+
+<p>Le contenu d'un panneau peut être défini en ligne ou par l'intermédiaire d'un lien chrome externe via un overlay dynamique. Vous devrez lire attentivement le guide d'interfaces homme-machine (HIG) des plateformes visées et utiliser le pré-processeur XUL lorsque c'est nécessaire pour définir des titres de fenêtres différents. Vous devrez également faire attention à définir la largeur de la fenêtre (en em) de manière adaptée en utilisant le pré-processeur pour chaque plateforme cible, ainsi que la hauteur (en em) pour les plateformes où la fenêtre ne change pas de taille selon le panneau sélectionné (comme sous Windows).</p>
+
+<h3 id="Bugzilla" name="Bugzilla">Bugzilla</h3>
+
+<p>Les bugs pour les liaisons des préférences (lorsqu'ils ne sont pas des bugs d'interface de Firefox/Thunderbird) sont répertoriés sous le composant<em>Toolkit:Preferences</em>(<a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Toolkit">créer un bug</a> <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?query_format=advanced&amp;product=Toolkit&amp;component=Preferences&amp;resolution=---&amp;chfieldto=Now">liste des bugs ouverts</a>).</p>
+
+<p> </p>
+
+<p> </p>
+
+<div class="noinclude"> </div>

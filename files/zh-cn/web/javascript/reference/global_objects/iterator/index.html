@@ -1,0 +1,188 @@
+---
+title: Iterator
+slug: Web/JavaScript/Reference/Global_Objects/Iterator
+tags:
+  - Deprecated
+translation_of: Archive/Web/Iterator
+---
+<div>{{jsSidebar("Objects")}}</div>
+
+<div class="warning"><strong>非标准。</strong> <code><strong>Iterator</strong></code> 函数是一个 SpiderMonkey 专有特性，并且会在某一时刻被删除。为将来使用的话，请考虑使用 {{jsxref("Statements/for...of", "for...of")}} 循环和  <a href="/zh-CN/docs/Web/JavaScript/Guide/The_Iterator_protocol">迭代协议</a>。</div>
+
+<p><code><strong>Iterator</strong></code> 函数返回一个对象，它实现了遗留的迭代协议，并且迭代了一个对象的可枚举属性。</p>
+
+<h2 id="语法">语法</h2>
+
+<pre class="syntaxbox">Iterator(<var>object</var>, [keyOnly])</pre>
+
+<h3 id="参数">参数</h3>
+
+<dl>
+ <dt><code>object</code></dt>
+ <dd>要迭代属性的对象。</dd>
+ <dt><code>keyOnly</code></dt>
+ <dd> 如果<code>keyOnly</code>是真值，<code>Iterator.prototype.next</code> <code>只返回property_name</code> 。</dd>
+</dl>
+
+<h2 id="描述">描述</h2>
+
+<p><code>返回迭代了object的Iterator</code> 实例。如果<code>keyOnly</code>为假值，则<code>Iterator</code> 实例返回每次迭代而生成的 <code>[property_name, property_value]</code> 数组，否则，如果<code>keyOnly</code>是真值，则它返回每次迭代的 <code>property_name</code>。如果<code>object</code> 是 <code>Iterator</code> 实例或 {{jsxref("Generator")}} 实例 ，则它返回 <code>object</code> 自身。</p>
+
+<h2 id="属性">属性</h2>
+
+<dl>
+ <dt><code><strong>Iterator.prototype[@@iterator]</strong></code></dt>
+ <dd>返回一个函数，它返回符合{{jsxref("Iteration_protocols", "迭代协议", "", 1)}}的迭代对象。</dd>
+</dl>
+
+<h2 id="方法">方法</h2>
+
+<dl>
+ <dt><code><strong>Iterator.prototype.next</strong></code></dt>
+ <dd>返回<code>[property_name, property_value]</code> 格式或<code>property_name</code> 的下一项。 如果没有更多项，抛出 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/StopIteration">StopIteration</a></code> 。</dd>
+</dl>
+
+<h2 id="示例">示例</h2>
+
+<h3 id="迭代一个对象的属性">迭代一个对象的属性</h3>
+
+<pre class="brush: js">var a = {
+  x: 10,
+  y: 20,
+};
+var iter = Iterator(a);
+console.log(iter.next()); // ["x", 10]
+console.log(iter.next()); // ["y", 20]
+console.log(iter.next()); // throws StopIteration
+</pre>
+
+<h3 id="使用遗留的解构for-in迭代对象的属性">使用遗留的<code>解构for-in迭代对象的属性</code></h3>
+
+<pre class="brush: js">var a = {
+  x: 10,
+  y: 20,
+};
+
+for (var [name, value] in Iterator(a)) {
+  console.log(name, value);   // x 10
+                              // y 20
+}
+</pre>
+
+<h3 id="使用for-of迭代">使用<code>for-of迭代</code></h3>
+
+<pre class="brush: js">var a = {
+  x: 10,
+  y: 20,
+};
+
+for (var [name, value] of Iterator(a)) {  // @@iterator is used
+  console.log(name, value);   // x 10
+                              // y 20
+}
+</pre>
+
+<h3 id="迭代属性名">迭代属性名</h3>
+
+<pre class="brush: js">var a = {
+  x: 10,
+  y: 20,
+};
+
+for (var name in Iterator(a, true)) {
+  console.log(name);   // x
+                       // y
+}
+</pre>
+
+<h3 id="传入_Generator_实例">传入 Generator 实例</h3>
+
+<pre class="brush: js">function* f() {
+  yield 'a';
+  yield 'b';
+}
+var g = f();
+
+console.log(g == Iterator(g)); // true
+
+for (var v in Iterator(g)) {
+  console.log(v);   // a
+                    // b
+}
+</pre>
+
+<h3 id="传入_Iterator_实例">传入 Iterator 实例</h3>
+
+<pre class="brush: js">var a = {
+  x: 10,
+  y: 20,
+};
+
+var i = Iterator(a);
+
+console.log(i == Iterator(i)); // true
+</pre>
+
+<h2 id="规范">规范</h2>
+
+<p>非标准。不是目前任何标准文档的一部分。</p>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="相关链接">相关链接</h2>
+
+<ul>
+ <li><a href="/zh-CN/docs/JavaScript/Guide/Iterators_and_Generators" title="/en-US/docs/JavaScript/Guide/Iterators_and_Generators">Iterators and Generators</a></li>
+ <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/StopIteration">StopIteration</a></code><br>
+   </li>
+</ul>

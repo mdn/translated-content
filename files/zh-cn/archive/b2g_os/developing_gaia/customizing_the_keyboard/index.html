@@ -1,0 +1,65 @@
+---
+title: 在 Firefox OS 中定制键盘
+slug: Archive/B2G_OS/Developing_Gaia/Customizing_the_keyboard
+translation_of: Archive/B2G_OS/Developing_Gaia/Customizing_the_keyboard
+---
+<div class="summary">
+ <p>This document explains how to add custom keyboard layouts containing their own languages/scripts to Firefox OS v1.2 and up.</p>
+</div>
+<h2 id="Gaia_内置键盘_app_状态_system_架构">Gaia 内置键盘 app 状态 &amp; system 架构</h2>
+<p>Two major features have been implemented in Firefox OS, as of October 2013.</p>
+<ul>
+ <li>A build flag to turn keyboard/spellcheck dictionaries to include in the build in the default Gaia Keyboard app on and off (see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=884752" title="FIXED: keyboard build-time customization">bug 884752</a>).</li>
+ <li>An OS-level feature that allows users to install third-party keyboard apps from the Firefox Marketplace. This will be available starting from Firefox OS v2.0. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=816869" title="FIXED: [Meta] Enable third-party keyboards">bug 816869</a> and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=964670" title="FIXED: [Keyboard][User Story] Enable 3rd party keyboard framework with OOP">bug 964670</a> for details.</li>
+</ul>
+<p>To come up with a new keyboard layout, you can put a layout file in Gaia, build the keyboard app using a build config, or come up with your own keyboard app and install it on the phone.</p>
+<h2 id="如何生成一个键盘应用_(keyboard_app)">如何生成一个键盘应用 (keyboard app)</h2>
+<p>You can use Gaia's built-in keyboard app as a template, or fork it. The basic ideas are:</p>
+<ul>
+ <li>In the manifest file, declare your app as <code>input</code> in the <code>role</code> property.</li>
+ <li>Make sure you have the <code>input</code> permission specified.</li>
+</ul>
+<p>After that, you can install your keyboard, and it will show up on the bottom half of the screen whenever the user is focused to an input field. The space issues that arise from this can be dealt with by:</p>
+<ul>
+ <li>Using the old, classic <code>window.resize</code> to update the area your app should occupy.</li>
+ <li>Using the new, shiny <code>navigator.mozInputMethod</code> API to mutate the content of the input given; see the Mozilla Wiki <a href="https://wiki.mozilla.org/WebAPI/KeboardIME">KeyboardIME API page</a> for details.</li>
+</ul>
+<div class="note">
+ <p>TBD: provide sample code and/or a small template app</p>
+</div>
+<h2 id="How_to_add_a_custom_layout_to_your_template_in_the_Gaia_keyboard_app">How to add a custom layout to your template in the Gaia keyboard app</h2>
+<ol>
+ <li>See the <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/keyboard/CONFIGURE">keyboard CONFIGURE details</a> for more information. Depending on the language you might want to add a dictionary, or include an interactive IME (for Asian languages).</li>
+ <li>If you add layouts for a newly supported language, you may want to add them as default layouts for that language in <a href="https://github.com/mozilla-b2g/gaia/blob/master/build/config/keyboard-layouts.json">build/config/keyboard-layouts.json</a>.</li>
+</ol>
+<h3 id="Spell_check_word_suggestion_dictionary">Spell check / word suggestion dictionary</h3>
+<div class="note">
+ <p>TBD</p>
+</div>
+<h3 id="Asian_IME">Asian IME</h3>
+<p>East Asian languages (<a href="https://en.wikipedia.org/wiki/CJK">Chinese, Japanese, and Korean</a>) use a fairly complex script that involves thousands of characters. As there is no way to put thousands of keys on a hardware or software keyboard, users rely on an indexing program called <a href="https://en.wikipedia.org/wiki/Input_method">input method</a>, or IME for short, to convert a series of symbols into selections of characters.<br>
+ <br>
+ How symbols should be converted and how "smart" the IME should be depends on the method chosen, implementation itself, and often <a href="https://en.wikipedia.org/wiki/Natural_language_processing">NLP science</a>, which is outside the scope of this document. Note that it is highly recommended to put the database part into <a href="/en-US/docs/IndexedDB">IndexedDB</a>, in order to conserve memory on a mobile device.</p>
+<h4 id="IM_Engine_interface_in_Gaia_keyboard_app">IM Engine interface in Gaia keyboard app</h4>
+<p>Assuming you have an IME library readily available for converting symbols into characters (''IM Engine'' in our terminology), you would need to use the defined interface within the Gaia Keyboard app to receive symbols from the layout and output the characters. <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/keyboard/js/keyboard.js#L32-L115">The current API is documented on Github</a>.</p>
+<p>We invite implementations in order to further refine this API within Gaia.</p>
+<h4 id="Make_your_IM_engine_work_with_your_layout">Make your IM engine work with your layout</h4>
+<p>To get your IM engine working with your keyboard layout:</p>
+<ol>
+ <li>Put a new layout in layout.js as described in the previous section.</li>
+ <li>Reference the IM engine with the <code>imEngine</code> property. When your layout is enabled, the keyboard app will start loading the script located at <code>keyboard/js/imes/&lt;imEngine&gt;/&lt;imEngine&gt;.js</code>.</li>
+ <li>Set up the APIs to receive and send the keys/characters when the script is loaded and <code>init</code>'d.</li>
+ <li>Do whatever you want in response to the user input. When the user taps any keys on the keyboard, it would typically get sent to the IM engine.</li>
+</ol>
+<h4 id="Known_implementations">Known implementations</h4>
+<ul>
+ <li><a href="https://github.com/timdream/jszhuyin">JSZhuyin</a> is the first implementation of Gaia Keyboard Asian IM engine, for Traditional Chinese incorporating Zhuyin IME.</li>
+ <li><a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/keyboard/js/imes/jskanji">JSKanji</a> is a prototype IM engine written for Japanese.</li>
+ <li><a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/keyboard/js/imes/jspinyin">JSPinyin</a> is written for Simplified Chinese and works by tapping Pinyin symbols.</li>
+ <li>As a demonstration, <a href="http://chewing.csie.net/">Chewing</a>, an C/C++ open-source Zhuyin IME for Traditional Chinese, was <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=845685">cross-compiled with emscripten</a> and linked with the Gaia keyboard.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=835261">JSHangul</a> is a prototype IM engine for Korean, and is currently in development.</li>
+</ul>
+<h2 id="讨论和问答">讨论和问答</h2>
+<p>Please come to the <a href="https://lists.mozilla.org/listinfo/dev-gaia">dev-gaia</a> mailing list or the #gaia channel on irc.mozilla.org. #mozilla-taiwan is the de-facto Chinese-language channel for this topic.<br>
+ <br>
+  </p>

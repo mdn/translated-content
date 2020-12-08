@@ -1,0 +1,40 @@
+---
+title: navigator.id.logout
+slug: Web/API/IdentityManager/logout
+tags:
+  - BrowserID
+  - DOM
+  - Gecko DOM Reference
+  - Persona
+  - Security
+translation_of: Archive/IdentityManager/logout
+---
+<div>
+ {{ ApiRef() }} {{ non-standard_header() }}</div>
+<div class="note">
+ <strong>注記:</strong> この機能は、まだどのブラウザでもサポートされていません。Persona を使用する Web サイトは、そのページに <a href="https://login.persona.org/include.js" title="https://login.persona.org/include.js">ポリフィルライブラリ</a> を含めなければなりません。</div>
+<h2 id="Summary" name="Summary">要約</h2>
+<p>この関数は、<a href="/ja/docs/Persona" title="Persona">Persona</a> で、Web サイトに対する自動的なログインの持続フラグをリセットするために使用します。この関数が呼び出された後、サイトに自動的にサインインされなくなるので、ユーザが明示的にログインしなおす必要があります。</p>
+<p>Web サイトは、この関数をサイトの "log out" ボタンの click ハンドラから呼び出さなければなりません。</p>
+<p>この関数は、ユーザの証明書や署名キーをブラウザに <strong>消去させません</strong>。そのため、<code>logout()</code> を呼び出した後、ユーザの ID プロバイダが与えた証明書の新しさに依存して、新たなログインの時に新しいパスワードをユーザに求めたり求めなかったりします。しかし、サインインに使用するメールアドレスの選択は求められます。</p>
+<h2 id="Syntax" name="Syntax">構文</h2>
+<pre class="syntaxbox">navigator.id.logout();</pre>
+<h2 id="Example" name="Example">コード例</h2>
+<pre class="brush: js">// ユーザが "Sign Out" をクリックした時に navigator.id.logout(); を実行する
+var signoutLink = document.getElementById('signout');
+
+if (signoutLink) {
+  signoutLink.onclick = function(event) {
+    event.preventDefault();
+    navigator.id.logout();
+  };
+};</pre>
+<h2 id="Specification" name="Specification">仕様</h2>
+<p>まだどの仕様書にも含まれていません。</p>
+<h2 id="See_also" name="See_also">関連情報</h2>
+<ul>
+ <li><a href="/ja/docs/Persona" title="Persona">BrowserID</a></li>
+ <li>{{domxref("navigator.id")}}</li>
+ <li>{{domxref("navigator.id.watch()")}}</li>
+ <li>{{domxref("navigator.id.logout()")}}</li>
+</ul>

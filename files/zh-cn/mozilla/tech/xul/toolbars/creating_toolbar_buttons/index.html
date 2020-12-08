@@ -1,0 +1,183 @@
+---
+title: 添加工具栏按钮 (定制工具栏)
+slug: Mozilla/Tech/XUL/Toolbars/Creating_toolbar_buttons
+translation_of: Archive/Mozilla/XUL/Toolbars/Creating_toolbar_buttons
+---
+<p>此文章解释如何使用 <a href="/en/XUL_Overlays" title="en/XUL_Overlays">overlays</a> 为工具包（firefox，Thunderbird 或 Kompozer) 添加工具栏按钮（就是浏览器右上方一系列按钮，home，下载之类的）。适用用户是拥有 <a href="/en/XUL" title="en/XUL">XUL</a> 和 <a href="/en/CSS" title="en/CSS">CSS</a> 基础知识的 <a href="/en/Extensions" title="en/Extensions">扩展</a> 开发人员。</p>
+<p>我们假设您已经会创建基础的火狐插件，并且已经成功创建了 <a href="/en/Building_an_Extension" title="en/Building_an_Extension">Hello World extension</a> ，另外，还有一份更加完全的初学者示例指南，请查看 <a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Toolbars/Custom_toolbar_button" title="en/Custom_Toolbar_Button">自定义工具栏按钮。</a></p>
+<h3 id="Creating_an_overlay" name="Creating_an_overlay">创建一个 overlay</h3>
+<p>The first step is to create an <a href="/en/XUL_Overlays" title="en/XUL_Overlays">overlay</a> for the document containing the toolbar you wish to enhance. Explaining overlays is beyond the scope of this tutorial -- you can read about them in the <a href="/en/XUL_Tutorial/Cross_Package_Overlays" title="en/XUL_Tutorial/Cross_Package_Overlays">XUL Tutorial</a>.</p>
+<p>To overlay a document, you need to know its URI. You can find a list of URIs for the most commonly overlaid documents at the <a href="#A_list_of_commonly_overlayed_windows_with_toolbars">bottom of this page</a>.</p>
+<div class="note">
+ <strong>Note:</strong> Some people overlay <span class="nowiki"><code>chrome://messenger/content/mailWindowOverlay.xul</code></span>. That should cause the button to appear on all windows that <code>mailWindowOverlay.xul</code> is applied to (i.e. Main window and View Message window). This needs to be looked into.</div>
+<h3 id="Adding_the_toolbar_button" name="Adding_the_toolbar_button">在工具栏添加按钮</h3>
+<p>Toolkit applications have customizable toolbars; therefore, it's common practice for extensions to add their toolbar buttons to the toolbar palette, rather than adding them directly to the toolbar. The latter is possible but is not recommended and is harder to implement.</p>
+<p>Adding a button to the toolbar palette is very easy. Just add code like this to your overlay:</p>
+<pre>&lt;toolbarpalette id="BrowserToolbarPalette"&gt;
+  &lt;toolbarbutton id="myextension-button" class="toolbarbutton-1"
+    label="&amp;toolbarbutton.label;" tooltiptext="&amp;toolbarbutton.tooltip;"
+    oncommand="MyExtension.onToolbarButtonCommand(event);"/&gt;
+&lt;/toolbarpalette&gt;
+</pre>
+<p>注意:</p>
+<ul>
+ <li>The <code>id</code> of the palette (<code>BrowserToolbarPalette</code> in the example) depends on the window whose toolbar you wish to insert a button into. See <a href="#A_list_of_commonly_overlayed_windows_with_toolbars"> below</a> for the list of common palette IDs.</li>
+ <li><code>class="toolbarbutton-1"</code> makes the toolbar button appear correctly in Icons and Text mode; it also adjusts padding.</li>
+ <li>If you need to handle middle-click, add this line after the oncommand line.</li>
+</ul>
+<pre class="prettyprint language-html"><span class="pln">onclick</span><span class="pun">=</span><span class="str">"checkForMiddleClick(this, event)"</span></pre>
+<ul>
+ <li>you can also handle middle-lick and right-click using <code>onclick</code> handler and check <code>event.button</code> in it. like this:</li>
+</ul>
+<pre class="language-html">&lt;toolbarpalette id="BrowserToolbarPalette"&gt;
+  &lt;toolbarbutton id="myextension-button" class="toolbarbutton-1"
+    label="&amp;toolbarbutton.label;" tooltiptext="&amp;toolbarbutton.tooltip;"
+    onclick="MyExtension.onclick(event);"/&gt;
+&lt;/toolbarpalette&gt;</pre>
+<pre>onclick: function(event) {
+  switch(event.button) {
+    case 0:
+      // Left click
+      break;
+    case 1:
+      // Middle click
+      break;
+    case 2:
+      // Right click
+      break;
+  }
+}
+</pre>
+<p>To add more buttons, put more <code>&lt;toolbarbutton&gt;</code> elements inside the <code>&lt;toolbarpalette&gt;</code> element. Wrap elements other than <code>&lt;toolbarbutton&gt;</code> in <code>&lt;toolbaritem&gt;</code>.</p>
+<h3 id="Styling_the_button" name="Styling_the_button">为按键应用风格</h3>
+<p>Most toolbar buttons have an icon. To attach an image to the button we use standard Mozilla skinning facilities. If you're unfamiliar with how that works, read the <a class="external" href="http://www.borngeek.com/firefox/toolbar-tutorial/" title="http://www.borngeek.com/firefox/toolbar-tutorial/">skinning section of Jonah Bishop's excellent Toolbar Tutorial</a>. Although the article covers creating an entire toolbar, rather than just a button, it has a great explanation of the techniques we'll use here.</p>
+<h4 id="Icon_size" name="Icon_size">图标大小</h4>
+<p>Toolbar buttons can have two different sizes -- big and small. This means you'll need to provide two icons for each of your toolbar buttons. The dimensions of the icons in various applications for both modes are summarized in the following table (feel free to add information about other applications):</p>
+<table>
+ <tbody>
+  <tr>
+   <th>Application (Theme name)</th>
+   <th>Big icon size</th>
+   <th>Small icon size</th>
+  </tr>
+  <tr>
+   <td>Firefox 1.0 (Winstripe)</td>
+   <td>24x24</td>
+   <td>16x16</td>
+  </tr>
+  <tr>
+   <td>Thunderbird 1.0 (Qute)</td>
+   <td>24x24</td>
+   <td>16x16</td>
+  </tr>
+ </tbody>
+</table>
+<h4 id="The_stylesheet" name="The_stylesheet">CSS 样式表</h4>
+<p>To set the image for your toolbar button, use the following CSS rules:</p>
+<pre>/*  skin/toolbar-button.css  */
+
+#myextension-button {
+  list-style-image: url("chrome://myextension/skin/btn_large.png");
+}
+
+toolbar[iconsize="small"] #myextension-button {
+  list-style-image: url("chrome://myextension/skin/btn_small.png");
+}
+</pre>
+<h4 id="Applying_the_stylesheet" name="Applying_the_stylesheet">应用样式表</h4>
+<p>Remember to attach the stylesheet you created to both the overlay file and the Customize Toolbar window. To attach it to the overlay, put this processing instruction (PI) at the top of the overlay file:</p>
+<pre class="eval">&lt;?xml-stylesheet href="<a class="external" rel="freelink">chrome://myextension/skin/toolbar-button.css</a>" type="text/css"?&gt;
+</pre>
+<div class="note">
+ <strong>Note:</strong> The CSS file with your toolbar styles needs to be included in the overlay file, as you would expect, but also in the <code>chrome.manifest</code> file. This is very important because the toolbar customization dialog won't work correctly without this.</div>
+<p>To include the style on your chrome.manifest file:</p>
+<pre class="eval">style <a class="external" rel="freelink">chrome://global/content/customizeToolbar.xul</a> <a class="external" rel="freelink">chrome://myextension/skin/toolbar-button.css</a>
+</pre>
+<p>If you are developing for Firefox 1.0, attach it to the Customize Toolbar window (<code><a class="external" rel="freelink">chrome://global/content/customizeToolbar.xul</a></code>) using <code>skin/contents.rdf</code>. The code looks like this:</p>
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:chrome="http://www.mozilla.org/rdf/chrome#"&gt;
+
+  &lt;Seq about="urn:mozilla:skin:root"&gt;
+    &lt;li resource="urn:mozilla:skin:classic/1.0"/&gt;
+  &lt;/Seq&gt;
+
+  &lt;Description about="urn:mozilla:skin:classic/1.0"&gt;
+    &lt;chrome:packages&gt;
+      &lt;Seq about="urn:mozilla:skin:classic/1.0:packages"&gt;
+        &lt;li resource="urn:mozilla:skin:classic/1.0:myextension"/&gt;
+      &lt;/Seq&gt;
+    &lt;/chrome:packages&gt;
+  &lt;/Description&gt;
+
+  &lt;Seq about="urn:mozilla:stylesheets"&gt;
+    &lt;li resource="chrome://global/content/customizeToolbar.xul"/&gt;
+  &lt;/Seq&gt;
+
+  &lt;Seq about="chrome://global/content/customizeToolbar.xul"&gt;
+    &lt;li&gt;chrome://myextension/skin/toolbar-button.css&lt;/li&gt;
+  &lt;/Seq&gt;
+&lt;/RDF&gt;
+</pre>
+<p>The <code>skin/contents.rdf</code> file is denigrated in developing for later releases of Firefox. Extensions for Firefox/Thunderbird 1.5 and above should instead use something like this in their <a href="/en/Chrome_Registration" title="en/Chrome_Registration">chrome.manifest</a>:</p>
+<pre class="eval">skin	myextension	classic/1.0	chrome/skin/
+style	<a class="external" rel="freelink">chrome://global/content/customizeToolbar.xul</a>	<a class="external" rel="freelink">chrome://myextension/skin/toolbar-button.css</a>
+ia</pre>
+<p>Take note of the <a class="external" href="http://kb.mozillazine.org/Getting_started_with_extension_development#Packaging">Packaging section</a> in this article; you may need to include .jar references if you are delivering your extension as a .xpi file.</p>
+<h3 id="Common_mistakes" name="Common_mistakes">常见错误</h3>
+<p>This is a list of the most common mistakes made by extension authors, including both symptoms and solutions.</p>
+<p><strong>Problem:</strong> The whole set of default buttons is painted on the toolbar or in the Customize Toolbars window, instead of your own icon.</p>
+<p><strong>Caused by:</strong> Malformed or not applied stylesheet.</p>
+<p><strong>Solution:</strong> Check to be sure your stylesheet is correct, make sure your <code>contents.rdf</code> (or <code>chrome.manifest</code>) is correct, and be sure you didn't forget to <a href="#Applying_the_stylesheet">apply the stylesheet</a> to <code>customizeToolbar.xul</code>.</p>
+<h3 id="A_list_of_commonly_overlayed_windows_with_toolbars" name="A_list_of_commonly_overlayed_windows_with_toolbars">常见工具栏的 overlayed windows</h3>
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>URL</th>
+   <th>Application and affected window(s)</th>
+   <th>Palette id</th>
+  </tr>
+  <tr>
+   <td><small><a class="external" rel="freelink">chrome://browser/content/browser.xul</a></small></td>
+   <td>Firefox - Main window</td>
+   <td>BrowserToolbarPalette</td>
+  </tr>
+  <tr>
+   <td><small><a class="external" rel="freelink">chrome://navigator/content/navigator.xul</a></small></td>
+   <td>SeaMonkey 2.0 - Browser window</td>
+   <td>BrowserToolbarPalette</td>
+  </tr>
+  <tr>
+   <td><small><a class="external" rel="freelink">chrome://messenger/content/messenger.xul</a></small></td>
+   <td>Thunderbird - Main window</td>
+   <td>MailToolbarPalette</td>
+  </tr>
+  <tr>
+   <td><small><a class="external" rel="freelink">chrome://messenger/content/messenger...gercompose.xul</a></small></td>
+   <td>Thunderbird - Compose window</td>
+   <td>MsgComposeToolbarPalette</td>
+  </tr>
+  <tr>
+   <td><small><a class="external" rel="freelink">chrome://messenger/content/addressbo...ddressbook.xul</a></small></td>
+   <td>Thunderbird - Address book</td>
+   <td>AddressBookToolbarPalette</td>
+  </tr>
+  <tr>
+   <td><small><a class="external" rel="freelink">chrome://editor/content/editor.xul</a></small></td>
+   <td>Kompozer - Main window</td>
+   <td>NvuToolbarPalette</td>
+  </tr>
+  <tr>
+   <td><small><a class="external" rel="freelink">chrome://calendar/content/calendar.xul</a></small></td>
+   <td>Sunbird - Main window</td>
+   <td>calendarToolbarPalette</td>
+  </tr>
+ </tbody>
+</table>
+<h3 id="More_information" name="More_information">更多信息</h3>
+<ul>
+ <li>XulPlanet.com references: <a class="external" href="/en/XUL/toolbarbutton" title="https://developer.mozilla.org/en/XUL/toolbarbutton"><code>&lt;toolbarbutton&gt;</code></a>, <a class="external" href="/en/XUL/toolbaritem" title="https://developer.mozilla.org/en/XUL/toolbaritem"><code>&lt;toolbaritem&gt;</code></a>.</li>
+ <li><a class="external" href="http://forums.mozillazine.org/viewtopic.php?t=220220">How to adjust toolbarbutton's label position</a></li>
+ <li><a class="external" href="http://forums.mozillazine.org/viewtopic.php?t=189667">A forum thread</a> about adding an item to the toolbar (instead of just adding it to palette) right after an extension is installed. Note that doing this is not recommended.</li>
+ <li>There is <a href="/en/XUL/Toolbars/Custom_toolbar_button/SeaMonkey" title="en/Custom_Toolbar_Button/SeaMonkey">another page</a> on mdc with information about adding buttons to various windows in SeaMonkey. Includes useful information about overlays for ChatZilla.</li>
+</ul>

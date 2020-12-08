@@ -1,0 +1,214 @@
+---
+title: Contenu anonyme
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Contenu_anonyme
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XBL
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Anonymous_Content
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Introduction_à_XBL" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Héritage_d'attributs_XBL">Suivant  »</a></p>
+</div>
+
+<p>Dans cette section, nous allons voir comment créer un contenu avec XBL (eXtended Binding Language).</p>
+
+<h3 id="Le_contenu_XBL" name="Le_contenu_XBL">Le contenu XBL</h3>
+
+<p>XBL peut être utilisé pour ajouter automatiquement un ensemble d'éléments à l'intérieur d'un autre élément. Le fichier XUL a uniquement besoin de spécifier l'élément externe tandis que l'élément interne est décrit dans un fichier XBL. C'est utile pour créer un élément graphique simple qui est construit à partir d'un ensemble d'autres éléments, mais qui peut être référencé comme un seul élément graphique. Des mécanismes sont fournis pour ajouter des attributs aux éléments internes qui étaient spécifiés dans l'élément externe.</p>
+
+<h4 id="Exemple_de_d.C3.A9claration_d.27une_barre_de_d.C3.A9filement" name="Exemple_de_d.C3.A9claration_d.27une_barre_de_d.C3.A9filement">Exemple de déclaration d'une barre de défilement</h4>
+
+<p>L'exemple ci-dessous montre comment une barre de défilement pourrait être déclarée (il a été un peu simplifié par rapport à la réalité) :</p>
+
+<pre>&lt;bindings xmlns="http://www.mozilla.org/xbl"
+          xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+  &lt;binding id="scrollbarBinding"&gt;
+    &lt;content&gt;
+      &lt;xul:scrollbarbutton type="decrement"/&gt;
+      &lt;xul:slider flex="1"&gt;
+        &lt;xul:thumb/&gt;
+      &lt;/xul:slider&gt;
+      &lt;xul:scrollbarbutton type="increment"/&gt;
+    &lt;/content&gt;
+  &lt;/binding&gt;
+&lt;/bindings&gt;
+</pre>
+
+<p>Ce fichier contient une seule liaison, déclarée avec l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/binding" title="binding">binding</a></code>. L'attribut <code id="a-id"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/id">id</a></code> doit être déclaré avec l'identifiant de la liaison. De cette façon il y est fait référence au travers de la propriété CSS <a href="/fr/docs/Web/CSS/-moz-binding" title="La propriété -moz-binding, utilisée par les applications Mozilla, permet d'attacher une liaison (binding) XBL à un élément DOM."><code>-moz-binding</code></a>.</p>
+
+<p>La balise <code><a href="/fr/docs/Mozilla/Tech/XUL/content" title="content">content</a></code> est utilisée pour déclarer le contenu anonyme qui sera ajouté à la barre de défilement. Tous les éléments à l'intérieur de la balise <code><a href="/fr/docs/Mozilla/Tech/XUL/content" title="content">content</a></code> seront ajoutés au sein de l'élément auquel la liaison est liée. Cette liaison sera vraisemblablement liée à une barre de défilement, bien qu'elle puisse ne pas l'être. Chaque élément dont la propriété CSS <a href="/fr/docs/Web/CSS/-moz-binding" title="La propriété -moz-binding, utilisée par les applications Mozilla, permet d'attacher une liaison (binding) XBL à un élément DOM."><code>-moz-binding</code></a> est déclarée avec l'URL de la liaison, va l'utiliser.</p>
+
+<p>L'utilisation de la liaison ci-dessus a pour résultat que la ligne de XUL ci-dessous soit interprétée comme suit, en supposant que la barre de défilement est liée au XBL ci-dessus :</p>
+
+<pre class="eval">&lt;scrollbar&gt;
+
+<strong>devient :</strong>
+
+&lt;scrollbar&gt;
+  &lt;xul:scrollbarbutton type="decrement"/&gt;
+    &lt;xul:slider flex="1"&gt;
+      &lt;xul:thumb/&gt;
+    &lt;/xul:slider&gt;
+  &lt;xul:scrollbarbutton type="increment"/&gt;
+&lt;/scrollbar&gt;
+</pre>
+
+<p>Les éléments au sein de la balise <code><a href="/fr/docs/Mozilla/Tech/XUL/content" title="content">content</a></code> sont ajoutés anonymement à la barre de défilement. Bien que le contenu anonyme soit affiché à l'écran, vous ne pouvez pas y accéder à l'aide d'un script par la voie normale. Dans XUL, c'est comme s'il n'y avait qu'un seul élément, bien qu'il se compose en réalité de plusieurs éléments.</p>
+
+<p>Si vous observez une barre de défilement dans une fenêtre Mozilla, vous verrez qu'elle est composée d'un bouton en forme de flèche, d'une zone de coulissement, d'une poignée à l'intérieur et d'un second bouton en forme de flèche à la fin, ce sont les éléments qui apparaissent dans le contenu XBL ci-dessus. Ces éléments pourraient à leur tour être liés à d'autres liaisons qui utilisent les éléments XUL de base. Notez que les éléments de contenu ont besoin de l'espace de nommage de XUL (ils apparaissent précédés de <code>xul:</code>), parce que ce sont des éléments de XUL et qu'ils ne sont pas valides dans XBL. Cet espace de nommage a été déclaré dans la balise <code><a href="/fr/docs/Mozilla/Tech/XUL/bindings" title="bindings">bindings</a></code>. Si vous n'utilisez pas l'espace de nommage sur les éléments de XUL, Mozilla supposera que ce sont des éléments XBL et il ne les comprendra pas, et vos éléments ne fonctionneront pas correctement.</p>
+
+<h4 id="Exemple_d.27un_champ_de_saisie_de_nom_de_fichier" name="Exemple_d.27un_champ_de_saisie_de_nom_de_fichier">Exemple d'un champ de saisie de nom de fichier</h4>
+
+<p>Un autre exemple, cette fois pour un champ dans lequel vous pourriez entrer un nom de fichier :</p>
+
+<pre>&lt;binding id="fileentry"&gt;
+  &lt;content&gt;
+    &lt;textbox/&gt;
+    &lt;button label="Parcourir..."/&gt;
+  &lt;/content&gt;
+&lt;/binding&gt;
+</pre>
+
+<p>L'attachement de cette liaison sur un élément lui fera contenir un champ de saisie de texte, suivi d'un bouton 'Parcourir...'. Ce contenu interne est créé anonymement et ne peut être vu en utilisant le DOM (Modèle Objet de Document).</p>
+
+<h3 id="Remplacement_de_l.27.C3.A9l.C3.A9ment_de_liaison" name="Remplacement_de_l.27.C3.A9l.C3.A9ment_de_liaison">Remplacement de l'élément de liaison</h3>
+
+<p>Le contenu anonyme est créé automatiquement chaque fois qu'une liaison est attachée à un élément. Si vous placez des éléments fils à l'intérieur du contenu XUL, ils vont écraser les éléments fournis par la liaison. Par exemple, prenez cet extrait XUL, en supposant qu'il soit lié à la barre de défilement XBL de tout à l'heure :</p>
+
+<pre>&lt;scrollbar/&gt;
+
+&lt;scrollbar&gt;
+  &lt;button label="Écraser"/&gt;
+&lt;/scrollbar&gt;
+</pre>
+
+<p>Puisque la première barre de défilement n'a pas de contenu qui lui est propre, celui-ci sera généré à partir de la définition de la liaison du fichier XBL. La seconde barre de défilement a son propre contenu donc elle l'utilisera à la place du contenu XBL, ce qui a pour résultat quelque chose qui ne ressemble plus à une barre de défilement. Notez que beaucoup d'éléments natifs de construction, comme les barres de défilement, ont leur définition XBL stockée dans des fichiers situés dans le répertoire "bindings" du paquetage toolkit.jar.</p>
+
+<p>Ce mécanisme s'applique seulement aux éléments définis à l'intérieur de la balise <code><a href="/fr/docs/Mozilla/Tech/XUL/content" title="content">content</a></code>. Les propriétés, les méthodes et d'autres aspects d'XBL restent disponibles, que le contenu provienne d'XBL ou que XUL fournisse son propre contenu.</p>
+
+<h3 id="Utilisation_de_l.27.C3.A9l.C3.A9ment_children" name="Utilisation_de_l.27.C3.A9l.C3.A9ment_children">Utilisation de l'élément <code>children</code></h3>
+
+<p>Il peut y avoir des fois où vous souhaitez que soient montrés à la fois le contenu XBL et celui fournit par le fichier XUL. Il vous suffit d'utiliser l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/children" title="children">children</a></code>. Les éléments fils dans XUL sont ajoutés en lieu et place de l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/children" title="children">children</a></code>. C'est pratique pour créer des éléments graphiques de menu personnalisés. Par exemple, une version simplifiée d'un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code> éditable, pourrait être créée comme ceci :</p>
+
+<pre class="eval"><strong>XUL:</strong>
+
+&lt;menu class="dropbox"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="1000"/&gt;
+    &lt;menuitem label="2000"/&gt;
+  &lt;/menupopup&gt;
+&lt;/menu&gt;
+
+<strong>CSS:</strong>
+
+menu.dropbox {
+    -moz-binding:  url('<a class="external" rel="freelink">chrome://example/skin/example.xml#dropbox'</a>);
+}
+
+<strong>XBL:</strong>
+
+&lt;binding id="dropbox"&gt;
+  &lt;content&gt;
+    &lt;children/&gt;
+    &lt;xul:textbox flex="1"/&gt;
+    &lt;xul:button src="<a class="external" rel="freelink">chrome://global/skin/images/dropbox.jpg</a>"/&gt;
+  &lt;/content&gt;
+&lt;/binding&gt;
+</pre>
+
+<p>Cet exemple crée un champ de saisie suivi d'un bouton. Le <code><a href="/fr/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> sera ajouté au contenu à l'emplacement spécifié par l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/children" title="children">children</a></code>. Notez que pour les fonctions du DOM, le contenu apparaîtra comme s'il était dans le fichier XUL, ainsi le menupopup sera un fils du menu. Le contenu XBL est caché ainsi le développeur d'une application sous XUL n'a même pas besoin de savoir qu'il est là.</p>
+
+<p>Le contenu résultant serait :</p>
+
+<pre>&lt;menu class="dropbox"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="1000"/&gt;
+    &lt;menuitem label="2000"/&gt;
+  &lt;/menupopup&gt;
+  &lt;textbox flex="1"/&gt;
+  &lt;button src="chrome://global/skin/images/dropbox.jpg"/&gt;
+&lt;/menu&gt;
+</pre>
+
+<h4 id="Attribut_XULAttrincludes" name="Attribut_XULAttrincludes">Attribut <code id="a-includes"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/includes">includes</a></code></h4>
+
+<p>Dans certains cas, vous souhaiterez n'inclure que des types de contenus spécifiques et non d'autres. Ou bien, vous souhaiterez placer différents types de contenus à différents endroits. L'attribut <code>includes</code> peut être utilisé pour n'autoriser que certains éléments à apparaître dans le contenu. Sa valeur doit être déclarée pour un simple nom de balise, ou pour une liste de balises séparées par des barres verticales (Le symbole <code>|</code>).</p>
+
+<pre>&lt;children includes="button"&gt;</pre>
+
+<p>Cette ligne va ajouter tous les boutons qui sont fils de l'élément lié en lieu et place de la balise <code><a href="/fr/docs/Mozilla/Tech/XUL/children" title="children">children</a></code>. Les autres éléments ne correspondront pas avec cette balise. Vous pouvez placer plusieurs éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/children" title="children">children</a></code> dans une liaison pour placer différents types de contenus à différents endroits. Si un élément dans XUL ne correspond pas aux éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/children" title="children">children</a></code>, cet élément (et les autres n'y correspondant pas) sera utilisé à la place du contenu lié.</p>
+
+<p>Voici un autre exemple. Disons que nous voulions créer un élément graphique qui affiche une image avec un bouton de zoom "Agrandir" et un bouton de zoom "Réduire" de part et d'autre. Il pourrait être créé avec une boîte qui contiendrait l'image et deux boutons. L'élément image doit être placé à l'extérieur du fichier XBL car il sera différent selon l'usage.</p>
+
+<pre class="eval"><strong>XUL:</strong>
+
+&lt;box class="zoombox"&gt;
+  &lt;image src="images/happy.jpg"/&gt;
+  &lt;image src="images/angry.jpg"/&gt;
+&lt;/box&gt;
+
+<strong>XBL:</strong>
+
+&lt;binding id="zoombox"&gt;
+  &lt;content&gt;
+    &lt;xul:box flex="1"&gt;
+      &lt;xul:button label="Agrandir"/&gt;
+      &lt;xul:box flex="1" style="border: 1px solid black"&gt;
+        &lt;children includes="image"/&gt;
+      &lt;/xul:box&gt;
+      &lt;xul:button label="Réduire"/&gt;
+    &lt;/xul:box&gt;
+  &lt;/content&gt;
+&lt;/binding&gt;
+</pre>
+
+<p>Les fils explicites dans le fichier XUL seront placés à l'endroit où se trouve la balise <code><a href="/fr/docs/Mozilla/Tech/XUL/children" title="children">children</a></code>. Il y a deux images, ainsi toutes les deux seront ajoutées à côté de l'une et l'autre. Cela a pour conséquence un affichage équivalent au code suivant :</p>
+
+<pre>&lt;binding id="zoombox"&gt;
+  &lt;content&gt;
+    &lt;xul:box flex="1"&gt;
+      &lt;xul:button label="Agrandir"/&gt;
+      &lt;xul:box flex="1" style="border: 1px solid black"&gt;
+        &lt;image src="images/happy.jpg"/&gt;
+        &lt;image src="images/angry.jpg"/&gt;
+      &lt;/xul:box&gt;
+      &lt;xul:button label="Réduire"/&gt;
+    &lt;/xul:box&gt;
+  &lt;/content&gt;
+&lt;/binding&gt;
+</pre>
+
+<p>D'un point de vue du DOM, les éléments fils sont toujours à leur emplacement original. En effet, la boîte XUL externe a deux fils qui sont les deux images. La boîte interne avec la bordure a un fils, la balise <code><a href="/fr/docs/Mozilla/Tech/XUL/children" title="children">children</a></code>. C'est une distinction importante lorsqu'on utilise le DOM avec XBL. Elle s'applique également aux règles du sélecteur CSS.</p>
+
+<h3 id="Les_.C3.A9l.C3.A9ments_fils_multiples" name="Les_.C3.A9l.C3.A9ments_fils_multiples">Les éléments fils multiples</h3>
+
+<p>Vous pouvez également utiliser plusieurs éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/children" title="children">children</a></code> et avoir certains éléments placés à un endroit et d'autres éléments placés à un autre. En ajoutant l'attribut <code id="a-includes"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/includes">includes</a></code> contenant une liste de nom de balises séparés par des barres verticales, vous pouvez placer uniquement les éléments correspondants à cet endroit. Par exemple, le fichier XBL suivant va faire apparaître des libellés et des boutons à un endroit différent des autres éléments :</p>
+
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_xblcontent_1.xml.txt">Source</a></p>
+
+<pre>&lt;binding id="navbox"&gt;
+  &lt;content&gt;
+    &lt;xul:vbox&gt;
+      &lt;xul:label value="Libellés et boutons"/&gt;
+      &lt;children includes="label|button"/&gt;
+    &lt;/xul:vbox&gt;
+    &lt;xul:vbox&gt;
+      &lt;xul:label value="Autres éléments"/&gt;
+      &lt;children/&gt;
+    &lt;/xul:vbox&gt;
+  &lt;/content&gt;
+&lt;/binding&gt;
+</pre>
+
+<p>Le premier élément <code><a href="/fr/docs/Mozilla/Tech/XUL/children" title="children">children</a></code> n'inclut que les éléments <code>label</code> et <code>button</code>, comme indiqué dans son attribut <code>includes</code>. Le second élément <code><a href="/fr/docs/Mozilla/Tech/XUL/children" title="children">children</a></code>, parce qu'il n'a pas d'attribut <code>includes</code>, ajoute tous les éléments restants.</p>
+
+<hr>
+<p>Dans la prochaine section, nous verrons comment des attributs peuvent être hérités dans le contenu anonyme.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Introduction_à_XBL" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Héritage_d'attributs_XBL">Suivant  »</a></p>
+</div>
+
+<p><span class="comment">Interwiki</span></p>

@@ -1,0 +1,107 @@
+---
+title: '-moz-window-dragging'
+slug: Mozilla/Gecko/Chrome/CSS/-moz-window-dragging
+tags:
+  - CSS
+  - Non-standard
+  - Propriété
+  - Reference
+  - XUL
+translation_of: Mozilla/Gecko/Chrome/CSS/-moz-window-dragging
+---
+<div>{{Non-standard_header}}{{CSSRef}}</div>
+
+<p>La propriété <strong><code>-moz-window-dragging</code></strong> indique si une fenêtre peut être déplacée. Elle ne peut être utilisée qu'à partir de code appelé pour l'interface utilisateur du navigateur et uniquement sur macOS X.</p>
+
+<p>Cette propriété a été ajoutée à Firefox 35 afin de résoudre certains problèmes liés à la fenêtre de Firefox qui ne pouvait pas être déplacé lorsque celui-ci était occupé ({{bug(944836)}}).</p>
+
+<p>{{cssinfo}}</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<p>La propriété <code>-moz-window-dragging</code> s'utilise avec un des mots-clés parmi ceux de la liste suivante.</p>
+
+<h3 id="Valeurs">Valeurs</h3>
+
+<dl>
+ <dt><code>drag</code></dt>
+ <dd>La fenêtre peut être déplacée.</dd>
+ <dt><code>no-drag</code></dt>
+ <dd>La fenêtre ne peut pas être déplacée.</dd>
+</dl>
+
+<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+
+<pre class="syntaxbox">{{csssyntax}}</pre>
+
+<h2 id="Exemple">Exemple</h2>
+
+<pre><code id="line-283">toolbarpaletteitem {
+</code><code id="line-284">  -moz-window-dragging: no-drag;
+</code><code id="line-285">}</code></pre>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<p>Cette propriété ne fait partie d'aucune spécification.</p>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Fonctionnalité</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Support simple</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>
+    <p>{{CompatGeckoDesktop(35)}}</p>
+   </td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Fonctionnalité</th>
+   <th>Android</th>
+   <th>Webview Android</th>
+   <th>Edge</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome pour Android</th>
+  </tr>
+  <tr>
+   <td>Support simple</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoMobile(35)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p> </p>

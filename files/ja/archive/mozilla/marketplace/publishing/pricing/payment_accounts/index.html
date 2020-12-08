@@ -1,0 +1,49 @@
+---
+title: 決済アカウント
+slug: Archive/Mozilla/Marketplace/Publishing/Pricing/Payment_Accounts
+tags:
+  - Apps
+  - Firefox OS
+  - Marketplace
+  - Payments
+translation_of: Archive/Marketplace/Publishing/Pricing/Payment_Accounts
+---
+<div class="summary">
+ <p>有料アプリまたはアプリ内課金を Firefox Marketplace でセットアップする最初のステップは、決済プロバイダから選択して決済アカウントを追加することです。<span class="seoSummary">このページでは、Firefox Maketplace が複数の決済プロバイダを利用する理由と、登録プロセスでセットアップを完了させるための説明、各決済プロバイダをセットアップするための詳細ページへのリンクを提供します。</span></p>
+</div>
+<h2 id="決済プロバイダ">決済プロバイダ</h2>
+<p>現在は、Firefox Marketplace で利用できる決済プロバイダは Bango のみですが、他の決済プロバイダも Firefox Marketplace でサポートされる予定です。他の決済プロバイダは、支払いの種類やネットワーク事業者経由の支払い、決済可能な国など、追加の決済手段も取り扱うでしょう。決済プロバイダの Boku は、この理由のためにまもなく追加される予定です。また、決済プロバイダは彼らのサービスを Marketplace を通して、そのプロバイダの選択肢と共にユーザに提供することも可能です。現在はまだこの選択オプションは提供されていません。</p>
+<div class="note">
+ <p>有料アプリのトランザクションは、常に Firefox Marketplace 内のいずれか一つの決済プロバイダを利用して行われます。あなたのアプリがアプリ内課金を行う場合でも、任意の決済プロバイダを利用することが可能です。ただし、この場合は必要な商用要件または技術的な要件をご自身でアプリに実装しなければなりません。</p>
+</div>
+<h2 id="決済プロバイダは何をするか">決済プロバイダは何をするか</h2>
+<p>各決済プロバイダは、次のことを行います:</p>
+<ul>
+ <li>クレジットカード情報またはネットワーク事業者経由の支払い情報を、アプリを購入またはアプリ内課金をしたユーザから収集します。</li>
+ <li>支払われた代金の分配を開発者と Mozilla (わずかな Marketplace の開発費用と管理コスト) に対して行い、決済プロバイダ自身はトランザクションのための手数料を保持します。</li>
+ <li>決済プロバイダは開発者への支払いを報告します。</li>
+</ul>
+<h2 id="決済アカウントのセットアップ">決済アカウントのセットアップ</h2>
+<p>決済プロバイダのアカウントは、Marketplace のアプリ登録処理をする <strong>互換性と決済情報</strong> のページの <strong>決済用アカウント</strong> セクションでセットアップしてください。</p>
+<p><img alt="The Payment Accounts section of the Compatibility and Pricing page" src="https://mdn.mozillademos.org/files/8031/Payment%20accounts.png" style="width: 1001px; height: 920px;"></p>
+<p>決済アカウントのセットアップに必要な情報は、決済プロバイダごとに異なります。一般的には、以下の情報が必要になるでしょう:</p>
+<ul>
+ <li>あなたの個人情報: お名前、住所、納税者番号、法人として登録する場合は法人の登記情報。</li>
+ <li>銀行口座のアカウント詳細: 銀行名、支店の住所、SWIFT または類似のコード、銀行口座の名義、銀行口座の番号。</li>
+</ul>
+<div class="note">
+ <p>多くの場合、ご利用の決済プロバイダは別の国で業務を行っています。そのため、あなたへの支払いは国際送金を通じて行われるでしょう。これらのトランザクションは、対象の銀行を識別するためのコードを必要とします。一般的に使用されるコードは以下です:</p>
+ <ul>
+  <li>SWIFT/BIC — このコードによって対象の銀行が識別されます。銀行支店の口座番号 (および支店番号) を分けて提示する必要があります。</li>
+  <li>IBAN — このコードによって対象の銀行と銀行のあなたのアカウントが同時に識別されます。</li>
+ </ul>
+ <p>銀行のコード情報は、銀行名と「SWIFT」(または BIC または IBAN) で Google 検索すると見つけられるでしょう。ご利用の銀行の Web サイトで「国際送金」「海外からの送金」などを検索してみてください。さらに、関連するコードの特定に使用できるツールもあります:</p>
+ <ul>
+  <li><a href="https://ipsosepaservice.sentenial.com/ipso/">Irish Payment Services Organisation (IPSO) BIC and IBAN conversion tool</a> (アイルランドの銀行のアカウントのみ).</li>
+ </ul>
+</div>
+<p>各決済プロバイダの決済アカウントをセットアップするための詳細情報は、以下のページを参照してください:</p>
+<ul>
+ <li><a href="/en-US/Marketplace/Publishing/Pricing/Providers/Bango">Bango</a></li>
+ <li><a href="/en-US/Marketplace/Publishing/Pricing/Providers/Boku">Boku</a> (非アクティブ)</li>
+</ul>

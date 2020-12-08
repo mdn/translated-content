@@ -1,0 +1,186 @@
+---
+title: Adding a new event
+slug: Mozilla/Adding_a_new_event
+translation_of: Mozilla/Adding_a_new_event
+---
+<div class="warning">
+<p>This document is a working draft.</p>
+</div>
+
+<h2 id="What_type_of_event_do_you_want">What type of event do you want?</h2>
+
+<p>大体上，有三种类型的事件。 First, you need to choose which type you need.</p>
+
+<p>Case 1: 简单DOM事件。通过WebIDL、<code>WidgetEvent等机制实现</code>. This type of event is useful if the event isn't handled by C++ code.</p>
+
+<p>Case 2: DOM事件。表达诸如键盘、鼠标等用户操作的本地事件。这种类型的事件能够方便的使用C++代码来处理。</p>
+
+<p>Case 3: 非DOM事件。However, C++ 代码需要分派事件到DOM树，然后在使用C++代码来处理。This is useful for widget notifying DOM tree of something or retrieving something from DOM tree.</p>
+
+<h2 id="How_to_implement_an_internal_event_class">How to implement an internal event class</h2>
+
+<div class="note">
+<p>If you're in the case 1, you can skip this section.</p>
+</div>
+
+<h3 id="Add_event_messages">Add event messages</h3>
+
+<p>You need to add event messages which are stored by <code>WidgetEvent::message</code>. All messages are defined by macro in "messages" section of <a href="http://mxr.mozilla.org/mozilla-central/source/widget/BasicEvents.h">BasicEvents.h</a>.</p>
+
+<h3 id="Define_event_class_name">Define event class name</h3>
+
+<p>You need to add an event class name in <a href="http://mxr.mozilla.org/mozilla-central/source/widget/EventClassList.h">EventClassList.h</a>.</p>
+
+<p>Use <code>NS_EVENT_CLASS</code> macro for adding it. The macro takes two arguments, <code>aPrefix</code> and <code>aName</code>.</p>
+
+<p><code>aPrefix</code> defines prefix of event class name which should be <code>Widget</code> or <code>Internal</code>. <code>Widget</code> should be used if the event class is dispatched from widget. Otherwise, i.e., the event class is just used for internal event class of a DOM event class, it should be <code>Internal</code>.</p>
+
+<p><code>aName</code> defines its event class specific name and it must end with "<code>Event</code>" or "<code>EventBase</code>". The latter is used only for abstruct super event class whose instance will never be created.</p>
+
+<p>Please note that <code>aName</code> must not be same as other event classes even if <code>aPrefix</code> is different. I.e., defining both <code>WidgetFooEvent</code> and <code>InternalFooEvent</code> is invalid.</p>
+
+<h3 id="Define_and_implement_an_event_class">Define and implement an event class</h3>
+
+<p>Then, you need to define and implement an event class. You should choose a good header file from what your event class represents.</p>
+
+<dl>
+ <dt><a href="http://mxr.mozilla.org/mozilla-central/source/widget/BasicEvents.h">BasicEvents.h</a></dt>
+ <dd>This header file should be used only for defining generic purpose event class such as a common super class of various event classes. Probably, you shouldn't use this for your class.</dd>
+ <dt><a href="http://mxr.mozilla.org/mozilla-central/source/widget/ContentEvents.h">ContentEvents.h</a></dt>
+ <dd>This header file should be used for defining internal event classes which are dispatched in content and do not represent user action. Typically, events in this header file never cross process boundary.</dd>
+ <dt><a href="http://mxr.mozilla.org/mozilla-central/source/widget/MouseEvents.h">MouseEvents.h</a></dt>
+ <dd>This header file should be used for defining input events from pointing devices such as mouse.</dd>
+ <dt><a href="http://mxr.mozilla.org/mozilla-central/source/widget/TextEvents.h">TextEvents.h</a></dt>
+ <dd>This header file should be used for defining input events from keyboard or IME and also other text edit related events like querying focused content information.</dd>
+ <dt><a href="http://mxr.mozilla.org/mozilla-central/source/widget/TouchEvents.h">TouchEvents.h</a></dt>
+ <dd>This header file should be used for defining input events from touch devices.</dd>
+ <dt><a href="http://mxr.mozilla.org/mozilla-central/source/widget/MiscEvents.h">MiscEvents.h</a></dt>
+ <dd>If the new event class isn't proper any header files above, you should use this.</dd>
+</dl>
+
+<p>Each event class should implement following methods manually.</p>
+
+<dl>
+ <dt><code>virtual <em>InternalFooEvent</em>* As<em>FooEvent</em>() MOZ_OVERRIDE</code></dt>
+ <dd>This method should just return <code>this</code>. This method is used for retrieving sub class pointer avoiding to use <code>static_cast</code>.</dd>
+ <dt><code>virtual WidgetEvent* Duplicate() const MOZ_OVERRIDE</code></dt>
+ <dd>This method should create a new instance with copying its members except <code>widget</code>. For copying the members, this should use <code>Assign<em>FooEvent</em>Data()</code> with <code>true</code> for <code>aCopyTargets</code>. And also, <code>mFlags</code> should be just copied since <code>Assign<em>FooEvent</em>Data()</code> doesn't copy <code>mFlags</code>. This method is basically used for duplicating an internal event class instance of a DOM event when the DOM event is stored by content.</dd>
+ <dt><code>void Assign<em>FooEvent</em>Data(const <em>InternalFooEvent</em>* aEvent, bool aCopyTargets)</code></dt>
+ <dd>This method should copy members from <code>aEvent</code>. First, this method should call its super class's this method. Then, copy the additional members which are defined in the class. If <code>aCopyTargets</code> is false, don't copy its event target related members.</dd>
+</dl>
+
+<p>All new member variables of event classes must be with "<code>m</code>" prefix. Although, a lot of existing members don't have "<code>m</code>" prefix, but you shouldn't use the legacy local rules.</p>
+
+<p>If you need to add methods, it's okay to implement them as inline methods. I.e., you can implement new methods in the header files directly.</p>
+
+<p>However, if implementing method isn't small and called from a lot of places, implementing it as inline causes to increase binary size. In this case, you should implement the method in <a href="http://mxr.mozilla.org/mozilla-central/source/widget/shared/WidgetEventImpl.cpp">WidgetEventImple.cpp</a>. And also, if implementing a method needs to include other header files, you should implement it in <a href="http://mxr.mozilla.org/mozilla-central/source/widget/shared/WidgetEventImpl.cpp">WidgetEventImple.cpp</a> too for avoiding include hell.</p>
+
+<h3 id="Make_new_event_class_IPC_aware">Make new event class IPC aware</h3>
+
+<p>For example, new class is caused by native user input event and needed to be dispatch to content, the class should be able to cross process boundary. In such cases, you may need to add new ParamTraits for the new event class in <a href="http://mxr.mozilla.org/mozilla-central/source/widget/nsGUIEventIPC.h">nsGUIEventIPC.h</a>.</p>
+
+<h3 id="Modify_utility_methods_of_WidgetEvent">Modify utility methods of <code>WidgetEvent</code></h3>
+
+<p><code>WidgetEvent</code> class has some utility mehtods and all of them are implemented in <a href="http://mxr.mozilla.org/mozilla-central/source/widget/shared/WidgetEventImpl.cpp">WidgetEventImple.cpp</a>. E.g., if your event shouldn't cause DOM event, you need to modify <code>WidgetEvent::IsAllowedToDispatchDOMEvent()</code>. If your event should be fired on focused node, you need to modify <code>WidgetEvent::IsTargetedAtFocusedContent()</code>.</p>
+
+<h2 id="How_to_implement_a_DOM_event_class">How to implement a DOM event class</h2>
+
+<div class="note">
+<p>If you're in the case 3, you can skip this section.</p>
+</div>
+
+<h3 id="Create_WebIDL_of_the_event">Create WebIDL of the event</h3>
+
+<p>Write a DOM event definition with WebIDL. It should be created under <a href="http://mxr.mozilla.org/mozilla-central/source/dom/webidl/">dom/webidl/</a>. See <a href="/docs/Mozilla/WebIDL_bindings">WebIDL bindings</a> for the detail.</p>
+
+<p>If your new event shouldn't be created with event constructor such as:</p>
+
+<pre class="brush: js">var event = new FooEvent("bar", { bubbles: true, cancelable: true, detail: 5 });</pre>
+
+<p>you shouldn't define construnctor in it.</p>
+
+<h3 id="Create_XPCOM_interface_for_the_DOM_event">Create XPCOM interface for the DOM event</h3>
+
+<p>If your event class should be accessible via XPCOM interface, you should create a new nsIDOMFooEvent interface in <a href="http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/events/">dom/interfaces/events/</a>. However, in these days, this is not necessary. If all information of the event is stored by its internal event, C++ event handlers can acess them with following code:</p>
+
+<pre class="brush: cpp">NS_IMETHODIMP
+AnEventListener::HandleEvent(nsIDOMEvent* aEvent)
+{
+  InternalFooEvent* internalEvent =
+    aEvent-&gt;GetInternalNSEvent()-&gt;AsFooEvent();
+  if (NS_WARN_IF(!internalEvent)) {
+    return NS_ERROR_UNEXPECTED;
+  }
+  DoSomethingWith(internalEvent-&gt;mBar);
+  aEvent-&gt;PreventDefault();
+  return NS_OK;
+}
+</pre>
+
+<h3 id="Implement_DOM_event_class">Implement DOM event class</h3>
+
+<h4 id="Generate_DOM_event_implementation_if_it's_possible">Generate DOM event implementation if it's possible</h4>
+
+<p>If you're creating simple DOM event class, it might be generated automatically. If it's possible, you just need to add an entry to GENERATED_EVENTS_WEBIDL_FILES in <a href="http://mxr.mozilla.org/mozilla-central/source/dom/webidl/moz.build">dom/webidl/moz.build</a>.</p>
+
+<h4 id="Define_and_create_DOM_event_class_manually">Define and create DOM event class manually</h4>
+
+<p>Otherwise, you need to implement a DOM event class yourself. The best place to create <code><em>Foo</em>Event.h</code> and <code><em>Foo</em>Event.cpp</code> is in <a href="http://mxr.mozilla.org/mozilla-central/source/dom/events/">dom/events/</a>. Otherwise, you need to specify the path to the header file in <a href="http://mxr.mozilla.org/mozilla-central/source/dom/bindings/Bindings.conf">dom/bindings/Bindings.conf</a>.</p>
+
+<p>When you create a DOM event class, its name should be same as the name defined in its standard specification. And it should be in <code>mozilla::dom</code> namespace. For example, <code>KeyboardEvent</code> which is defined in DOM Level 3 Events should be implemented as <code>mozilla::dom::KeyboardEvent</code>.</p>
+
+<p>And the header file should be exported as "mozilla/dom/<em>Foo</em>Event.h". Add the header file to EXPORTS.mozilla.dom in <a href="http://mxr.mozilla.org/mozilla-central/source/dom/events/moz.build">dom/events/moz.build</a>.</p>
+
+<p>You probably need to implement a lot of methods to the event class, but this document doesn't explain all of them. Please refer existing DOM event implementation for example.</p>
+
+<p>However, there are some hints:</p>
+
+<ol>
+ <li>Set mEventIsInternal in the constructor of the most descendant class because each constructor creates dummy internal event instance at calling constructors of its super class. Therefore, super classes always set it false.</li>
+ <li>Don't override methods of its super classes as far as possible since overriding the method may cause harder to maintain.</li>
+ <li>When you need to check if the caller content or chrome, you can use <code>implicitJSContext</code> attribute in <a href="http://mxr.mozilla.org/mozilla-central/source/dom/bindings/Bindings.conf">dom/bindings/Bindings.conf</a>. Then, the method can have a pointer of <code>JSContext</code> in its argument.</li>
+</ol>
+
+<h3 id="Create_DOM_event_factory_method">Create DOM event factory method</h3>
+
+<div class="note">
+<p>If your DOM event implementation is generatable, you can skip this section.</p>
+</div>
+
+<p>In <a href="http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/events/nsIDOMEvent.idl">nsIDOMEvent.idl</a>, you need to define <code>NS_NewDOM<em>Foo</em>Event()</code>. It's last argument should be the most subclass. Then, the implementation of the DOM event can access internal event class instance safer.</p>
+
+<p>Then, the factory method should be implemented at the bottom of <em>Foo</em>Event.cpp in the global namespace.</p>
+
+<h2 id="Modify_EventDispatcherCreateEvent()">Modify <code>EventDispatcher::CreateEvent()</code></h2>
+
+<div class="note">
+<p>If your DOM event implementation is generatable or you're in case 3, you can skip this section.</p>
+</div>
+
+<p>The first half of <code>EventDispatcher::CreateEvent()</code> is a factory to create a DOM event instance from internal event instance. You need to modify this.</p>
+
+<p>The last half of it is the implementation of legacy event creator of Javascript such as:</p>
+
+<pre class="brush: js">var event = document.createEvent("FooEvent");</pre>
+
+<p>If you support this feature, you need to modify here. However, this feature shouldn't be implemented for compabitility with other browsers since web applications should use event constructor.</p>
+
+<h2 id="Register_each_event_into_EventNameList.h">Register each event into EventNameList.h</h2>
+
+<div class="note">
+<p>If you're in case 3, you can skip this section.</p>
+</div>
+
+<p><a href="http://mxr.mozilla.org/mozilla-central/source/dom/events/EventNameList.h">EventNameList.h</a> defines mapping between DOM event name, internal event message, event handler attribute owner and internal event class. See the comments of the head of the file for the detail.</p>
+
+<h2 id="Modify_tests">Modify tests</h2>
+
+<div class="note">
+<p>If you're in case 3, you can skip this section.</p>
+</div>
+
+<p>You need to modify <a href="http://mxr.mozilla.org/mozilla-central/source/dom/events/test/test_all_synthetic_events.html?force=1">test_all_synthetic_events.html</a> which tests if calling <code>getModifierState()</code> doesn't cause crash.</p>
+
+<p>You need to modify <a href="http://mxr.mozilla.org/mozilla-central/source/widget/tests/test_assign_event_data.html?force=1">test_assign_event_data.html</a> which tests if each attribute of DOM event is copied by <code>Assign<em>Foo</em>EventData()</code> properly. If your event cannot be fired easy, you should add the test but <code>canRun</code> should return false and call <code>todo()</code>.</p>
+
+<p>If the new DOM event is creatable with constructor, you need to modify <a href="http://mxr.mozilla.org/mozilla-central/source/dom/events/test/test_eventctors.html?force=1">test_eventctors.html</a> or <a href="http://mxr.mozilla.org/mozilla-central/source/dom/events/test/test_eventctors.xul">test_eventctors.xul</a> which tests the behavior of event constructor.</p>

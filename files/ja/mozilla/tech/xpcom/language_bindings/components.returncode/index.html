@@ -1,0 +1,28 @@
+---
+title: Components.returnCode
+slug: Mozilla/Tech/XPCOM/Language_Bindings/Components.returnCode
+tags:
+  - 'XPCOM:Language Bindings'
+  - XPConnect
+translation_of: Mozilla/Tech/XPCOM/Language_Bindings/Components.returnCode
+---
+<p>
+</p><p><code>Components.returnCode</code> は、<code>return</code> 命令による戻り値に加えて <a href="ja/XPCOM">XPCOM</a> の結果コードを保持できるプロパティです。
+</p>
+<div class="warning">
+<p>Note that <code>Components.returnCode</code> is currently non-functional due to <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=287107" title='FIXED: xpcwrappedjsclass.cpp rev 1.73 regressed "return" of NS_COMFALSE (Components.returnCode)'>バグ 287107</a>. This problem was introduced in Mozilla 1.4.
+</p>
+</div>
+<h2 id=".E4.BD.BF.E3.81.84.E6.96.B9" name=".E4.BD.BF.E3.81.84.E6.96.B9"> 使い方 </h2>
+<p><code>Components.returnCode</code> は、JavaScript メソッドが特定の <code>nsresult</code> コードを返すことを、そのメソッドの XPCOM 呼び出し元へ示すのに利用できるプロパティです。
+</p><p>一般的には、<a href="ja/XPConnect">XPConnect</a> は JavaScript コードが <code>nsresult</code> コードを心配する必要のないようにうまく働きます。デフォルトでは、JavaScript メソッドの結果が成功だと、XPConnect は結果コード <code>NS_OK</code> を呼び出し元へ返します。もし JavaScript コードが失敗のシグナルを送る必要がある場合は、例外を投げることで果たします。しかし、成功コードの返り値を規定した XPCOM インターフェースがごくわずかに存在します。<code>Components.returnCode</code> はそれら稀なインターフェースを JavaScript で実装できるようにするために存在します。 </p>
+<h2 id=".E5.AE.9F.E4.BE.8B" name=".E5.AE.9F.E4.BE.8B"> 実例 </h2>
+<pre class="eval">var foo = {
+  bar: function(i) {
+    if (yada_yada)
+      Components.returnCode = 5;
+
+    return i * 2;
+  }
+};
+</pre>

@@ -1,0 +1,190 @@
+---
+title: スキンの作成
+slug: Archive/Mozilla/XUL/Tutorial/Creating_a_Skin
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Creating_a_Skin
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Modifying_the_Default_Skin" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Localization">次のページ  »</a></p>
+</div>
+
+<p>このセクションでは、単純なスキンの作成方法について説明します。 なお、ここで作成するスキンは、単純化のためにファイル検索ダイアログのみを対象とします。</p>
+
+<h3 id=".E5.8D.98.E7.B4.94.E3.81.AA.E3.82.B9.E3.82.AD.E3.83.B3" name=".E5.8D.98.E7.B4.94.E3.81.AA.E3.82.B9.E3.82.AD.E3.83.B3">単純なスキン</h3>
+
+<p>以下に示す画像は、現在のファイル検索ダイアログです。 ここでは、これに適用するスキンを作成してみることにします。 通常、スキンはアプリケーション全体に適用されますが、 ここでは簡単にするために、ファイル検索ダイアログのみに焦点を合わせることにします。 このため、<code>global.css</code> ファイルではなく <code>findfile.css</code> のみを変更します。 なお、このセクションの記述は Mozilla スイートの Classic スキンから開始することを前提とします。<span style="color: darkgreen; background: #ef9;">【訳注: つまり、このセクションの内容は、まだ Firefox 対応になっていないようなので注意してください】</span> また、ファイル検索ダイアログで利用しているファイルは、編集前にバックアップを取っておいた方が良いでしょう。</p>
+
+<p><img alt="画像:cskin1.jpg"></p>
+
+<p>今回のセクションでは、<code>findfile.css</code> ファイルを、カスタムスキンの中に作成する必要があります。 または、とりあえずコンテントディレクトリ (XUL ファイルを置くディレクトリ) に置いて、<code>xml-stylesheet</code> ディレクティブの URL を調整して参照する方法でも構いません。 後者の方法では、これまでに作成した <code>findfile.css</code> を直接変更して効果を確認することになり、 前者の方法は、カスタムスキンを作成して、その中に置いたファイルをリンクすることになります。</p>
+
+<h4 id=".E3.82.AB.E3.82.B9.E3.82.BF.E3.83.A0.E3.82.B9.E3.82.AD.E3.83.B3.E3.83.91.E3.83.83.E3.82.B1.E3.83.BC.E3.82.B8.E3.82.92.E4.BD.9C.E6.88.90.E3.81.99.E3.82.8B" name=".E3.82.AB.E3.82.B9.E3.82.BF.E3.83.A0.E3.82.B9.E3.82.AD.E3.83.B3.E3.83.91.E3.83.83.E3.82.B1.E3.83.BC.E3.82.B8.E3.82.92.E4.BD.9C.E6.88.90.E3.81.99.E3.82.8B">カスタムスキンパッケージを作成する</h4>
+
+<p>カスタムスキンの作成手順を以下に示します。(下記は古いバージョン向けの手順であり、Firefox 1.5 以降では異なっています。Firefox 1.5 以降での手順は <a href="ja/XUL_Tutorial/Manifest_Files">マニフェストファイル</a>にある「ファイル検索ダイアログの例」を参照してください)</p>
+
+<ol>
+ <li>適当な場所に、スキンのファイルを置くためのディレクトリを作成します。</li>
+ <li>マニフェストファイル (contents.rdf) を、Classic または Modern スキンから作成したディレクトリにコピーします。</li>
+ <li>マニフェストファイルの <code>references</code>を編集して、新しいカスタムスキンの名前に変更します。例えば、<code>references</code> が 「<code>classic/1.0</code>」なのを「<code>blueswayedshoes/1.0</code>」のように変更します。</li>
+ <li><code>chrome/installed-chrome.txt</code> に、次の形式の行を追記します。「<code>skin, install, url, <a class="external" rel="freelink">file:///stuff/blueswayedshoes/</a></code>」このとき、最後の部分は作成したディレクトリを示すようにします。最後にスラッシュを置くのを忘れないようにしてください。</li>
+</ol>
+
+<p>これまでの <code>findfile.css</code> を新しいディレクトリにコピーし、 これを元にして新しいスキンを作成していきます。 コピーしたファイルは、URL 「<code><a class="external" rel="freelink">chrome://findfile/skin/findfile.css</a></code>」で参照することが可能になります。 このため、XUL 側の <code>xml-stylesheet</code> の参照先をあわせて変更します。</p>
+
+<h4 id=".E3.82.B9.E3.82.BF.E3.82.A4.E3.83.AB.E3.83.AB.E3.83.BC.E3.83.AB.E3.82.92.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B" name=".E3.82.B9.E3.82.BF.E3.82.A4.E3.83.AB.E3.83.AB.E3.83.BC.E3.83.AB.E3.82.92.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B">スタイルルールを追加する</h4>
+
+<p>まず最初に、どのような変更を加えたいのかを決めておきたいと思います。 今回は、簡単な色の変更、ボタンのスタイルの変更、隙間の微調整を行ってみることにしましょう。 まずはメニュー、ツールバー、タブパネル全体から始めることにします。</p>
+
+<p>以下のスタイルルールを <code>findfile.css</code> に追加することで、その下の画像で示すように外観が変化するはずです。</p>
+
+<pre>window &gt; box {
+  background-color: #0088CC;
+}
+
+menubar,menupopup,toolbar,tabpanels {
+  background-color: lightblue;
+  border-top: 1px solid white;
+  border-bottom: 1px solid #666666;
+  border-left: 1px solid white;
+  border-right: 1px solid #666666;
+}
+
+caption {
+  background-color: lightblue;
+}
+</pre>
+
+<p><img alt="画像:cskin2.jpg"></p>
+
+<ul>
+ <li>ウィンドウのすぐ内側にあるボックス (ウィンドウのすべての内容を実際に囲んでいる) の色は、青色に変化しています。</li>
+ <li>この青色は、タブが置かれている部分の背景とウィンドウ下端に沿った部分で見ることができます。</li>
+ <li>4 つの要素 <code><code><a href="/ja/docs/Mozilla/Tech/XUL/menubar" title="menubar">menubar</a></code></code>、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code>、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code></code>、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabpanels" title="tabpanels">tabpanels</a></code></code> は空色で表示されまています。</li>
+ <li>また、良く見れば、これら 4 要素の境界線がより立体的になっていることも判ると思います。</li>
+ <li><code><code><a href="/ja/docs/Mozilla/Tech/XUL/caption" title="caption">caption</a></code></code> 要素の背景色も、背景にマッチする色になっています。</li>
+</ul>
+
+<p>上記の最初のルール (<code>window &gt; box</code> のもの) は、ウィンドウの子ボックスの色を変更することを指定しています。 しかしながら、この方法は最良ではなく、 本当ならスタイルクラスを使用するように変更するべきところです。 それでは、次にこれを行ってみることにしましょう。 スタイルクラスを使用するように変更しておけば、今後この XUL ファイルに変更を加える場合に、ウィンドウの最初の子要素をボックスにしておく必要がなくなります。</p>
+
+<pre class="eval"><strong>CSS:</strong>
+.findfilesbox {
+  background-color: #0088CC;
+}
+
+<strong>XUL:</strong>
+&lt;vbox <span class="highlightred">class="findfilesbox"</span> orient="vertical" flex="100%"&gt;
+&lt;toolbox&gt;
+</pre>
+
+<h4 id=".E3.82.BF.E3.83.96.E3.81.AE.E8.A7.92.E3.81.AB.E4.B8.B8.E3.81.BF.E3.82.92.E3.81.A4.E3.81.91.E3.82.8B" name=".E3.82.BF.E3.83.96.E3.81.AE.E8.A7.92.E3.81.AB.E4.B8.B8.E3.81.BF.E3.82.92.E3.81.A4.E3.81.91.E3.82.8B">タブの角に丸みをつける</h4>
+
+<p>次は、タブを変更してみましょう。 選択されているタブを太字にします。 また、タブの角に丸みをつけるように変更してみます。</p>
+
+<pre>tab:first-child {
+  -moz-border-radius: 4px 0px 0px 0px;
+}
+
+tab:last-child {
+  -moz-border-radius: 0px 4px 0px 0px;
+}
+
+tab[selected="true"] {
+  color: #000066;
+  font-weight: bold;
+  text-decoration: underline;
+}
+</pre>
+
+<div class="float-right"><img alt="画像:cskin3.jpg"></div>
+
+<p>2 つのルールによって、通常のタブの外観が変更されます。 1 つめのルールは最初のタブの、2 つめのルールは最後のタブの、それぞれ角の丸みを設定しています。 このために使用するのは Mozilla 固有のスタイルルール <code><a href="ja/CSS/-moz-border-radius">-moz-border-radius</a></code> で、これは境界線の角の丸みを設定します。 これにより、最初のタブの左上の角と、最後のタブの右上の角は 4 ピクセル分丸められ、残りの角は 0 ピクセル、つまりまったく丸めを行わない指定になっています。 この値を増やせば、より丸みを帯び、減らせばより角張った外観になります。</p>
+
+<p>3 つめのルールは、<code><code id="a-selected"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/selected">selected</a></code></code> 属性が <code>true</code> に設定されているタブに対してのみ適用されます。 これによって、選択されているタブのテキストは濃い青色の下線が引かれた太字になります。 画像から、このスタイルが最初のタブにのみ適用されていることと、そのタブは選択状態であることが確認できるはずです。</p>
+
+<h4 id=".E3.83.84.E3.83.BC.E3.83.AB.E3.83.90.E3.83.BC.E3.81.AB.E3.82.A2.E3.82.A4.E3.82.B3.E3.83.B3.E3.82.92.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B" name=".E3.83.84.E3.83.BC.E3.83.AB.E3.83.90.E3.83.BC.E3.81.AB.E3.82.A2.E3.82.A4.E3.82.B3.E3.83.B3.E3.82.92.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B">ツールバーにアイコンを追加する</h4>
+
+<p>また、現在のツールバーのボタンは、メニューの項目との違いが若干判別しにくいように思われます。 これを明確にするためには、ツールバーのボタンにアイコンを加えるのが良さそうです。 Mozilla スイートの Composer には、「開く」や「保存」ボタンなどのために、いくつかのアイコンが用意されています。 ここでは、これらのアイコンを利用して手間を省くことにします。 <span style="color: darkgreen; background: #ef9;">【訳注: Firefox の場合、Composer はないのでこれらのアイコンは利用できません】</span> ボタンに画像を設定するためには、CSS の <code><a href="ja/CSS/list-style-image">list-style-image</a></code> CSS プロパティを使用します。</p>
+
+<pre>#opensearch {
+  list-style-image: url("chrome://editor/skin/icons/btn1.gif");
+  -moz-image-region: rect(48px 16px 64px 0);
+  -moz-box-orient: vertical;
+}
+
+#savesearch {
+  list-style-image: url("chrome://editor/skin/icons/btn1.gif");
+  -moz-image-region: rect(80px 16px 96px 0);
+  -moz-box-orient: vertical;
+}
+</pre>
+
+<div class="float-right"><img alt="画像:cskin4.jpg"></div>
+
+<p>Mozilla では、要素から画像の一部分だけを利用できるようにするために、独自のスタイルプロパティ <code><a href="ja/CSS/-moz-image-region">-moz-image-region</a></code> を提供しています。 これは、画像をクリップする設定であると考えることも可能です。 このプロパティで画像上での位置とサイズを指定すると、ボタンには画像の指定領域のみが表示されるようになります。 これにより、複数のボタンで同じ画像ファイルを使用しつつ、それぞれには異なる領域を割り当てることが可能になります。 多数のボタンについて、ホバー (マウスが重なっている)、アクティブ (押下されている)、無効などの状態に応じて画像を変えるような場合には、通常の方法で複数の画像ファイルを用意して使用するよりもスペースを節約することができます。 上記のコードでも、複数のボタンで同じ画像を利用していますが、それぞれは異なる領域を表示するように設定されています。 この画像 (<code>btn1.gif</code>) の全体を表示させて見た場合には、 16 x 16 ピクセルの小さな画像が格子状に並んでいるのが確認できるはずです。</p>
+
+<p>また、<code><a href="ja/CSS/-moz-box-orient">-moz-box-orient</a></code> プロパティは、ボタン内を垂直配置にするために利用しています。 これは、画像がラベルより上に表示されるようにするために必要になります。 このプロパティは、<code><code id="a-orient"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code></code> 属性を指定するのと、意味的には同じですが、 スキンでは XUL の部分は変更できないので便利に使うことができます。 なお、ほとんどのボックス属性には、CSS プロパティが対応して存在します。</p>
+
+<h4 id=".E3.81.9D.E3.81.AE.E4.BB.96.E3.81.AE.E5.A4.89.E6.9B.B4" name=".E3.81.9D.E3.81.AE.E4.BB.96.E3.81.AE.E5.A4.89.E6.9B.B4">その他の変更</h4>
+
+<p>次に、下端にあるボタンについても若干の変更を行いますが、 ここでも手間を省くため、Mozilla のアイコンを再利用します。 なお、実際に独自のスキンを作成する場合には、新たにアイコンを作成するか、あるいは流用する場合であっても、アイコンはコピーしておく必要があります。 例えば、このセクションの例を、配布できるように変更していく場合には、アイコン用のファイルを作成するスキンの中にコピーして、URL もそれに応じて変更する必要があります。</p>
+
+<pre>#find-button {
+  list-style-image: url("chrome://global/skin/checkbox/images/cbox-check.jpg");
+  font-weight: bold;
+}
+
+#cancel-button {
+  list-style-image: url("chrome://global/skin/icons/images/close-button.jpg");
+}
+
+button:hover {
+  color: #000066;
+}
+</pre>
+
+<div class="float-right"><img alt="画像:cskin5.jpg"></div>
+
+<p>上の 2 つのルールによって、ボタンにも画像を設定し、 Find ボタンはデフォルトであることを示すために太字にします。 また、3 つめのルールは、ホバー (マウスがボタン上に重なっている) 状態のときに適用されて、テキストを濃い青色に変更します。 最後に、以下のルールによりマージンを設定して、項目の周囲の余白を若干調整します。</p>
+
+<pre>tabbox {
+  margin: 4px;
+}
+
+toolbarbutton {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+</pre>
+
+<p>ここまでの変更によって、ファイル検索ダイアログの外観は次のようになります。</p>
+
+<p><img alt="画像:cskin6.jpg"></p>
+
+<p>画像からわかるように、スタイルルールにいくつかの簡単な変更を加えるだけで、ファイル検索ダイアログは外観は完全に別物になりました。 また、さらに続けて、メニュー、ツールバーの<span style="border-bottom: 1px dashed green;" title="grippy">グリッピー</span>、入力欄、チェックボックスなどの要素に変更を加えることも可能です。</p>
+
+<h3 id=".E3.82.B0.E3.83.AD.E3.83.BC.E3.83.90.E3.83.AB.E3.82.B9.E3.82.AD.E3.83.B3.E3.81.AE.E4.BD.9C.E6.88.90" name=".E3.82.B0.E3.83.AD.E3.83.BC.E3.83.90.E3.83.AB.E3.82.B9.E3.82.AD.E3.83.B3.E3.81.AE.E4.BD.9C.E6.88.90">グローバルスキンの作成</h3>
+
+<p>ここで作成したスキンは単純なもので、かつファイル検索ダイアログのみに適用可能なものでした。 このスキンに対して行った変更のうちのいくつかは、グローバルスタイルシート (スキンの <code>global</code> ディレクトリに置かれているもの) に組み込んで、すべてのアプリケーションに適用されるようにすることも可能です。 例えば、チェックボックスの画像がファイル検索ダイアログだけ他と異なっていると、若干の違和感があると思います。 こういった変更は、グローバルスタイルシートの方に組み込むべきでしょう。</p>
+
+<p>それでは、 CSS スタイルを <code>findfile.css</code> から <code>global.css</code> に移し、Mozilla のいくつかのダイアログ (例えばクッキービューア) を表示して、 追加されたルールが反映されることを確認してみてください。 ただし、いくつかのルールは、グローバルスタイルシートに元から存在するルールと衝突してしまいます。 例えば、ボタンやタブなどには元からルールが定義されていますが、上でも追加のルールが定義されています。 グローバルスキンを変更する場合には、すでに存在するルールに、変更する内容を<span style="border-bottom: 1px dashed green;" title="merge">マージ</span>する必要があります。</p>
+
+<p><span style="border-bottom: 1px dashed green;" title="skinnability">スキンの有効性</span>を、最大限に引き出すには、外観に関連したスタイルルールの宣言を、個別のスタイルファイルではなく、グローバルディレクトリに置くようにします。 ここには、色やフォント、汎用ウィジェットの外観が含まれています。 そうせずに、例えば <code>findfile.css</code> のような、ローカルなスキンファイルで何かの色の変更を行っていた場合には、 利用者がグローバルスキンを変更したとき、ダイアログの外観がおかしくなる可能性があります。 利用者が、デフォルトのスキンを利用していることを期待してはいけません。</p>
+
+<div class="highlight">
+<p>ここまでのファイル検索ダイアログとスキンの例: <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-cskin.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-cskin.xul">View</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-cskin.css">Stylesheet</a></p>
+</div>
+
+<h3 id="関連ページ"><small>関連ページ</small></h3>
+
+<p><small><a href="ja/CSS_Reference/Mozilla_Extensions">Mozilla による CSS の拡張</a>、<a href="ja/CSS_Reference">CSS リファレンス</a></small></p>
+
+<p>次のセクションでは、XUL アプリケーションを地域化 (ローカライズ) する方法について説明します。</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Modifying_the_Default_Skin" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Localization">次のページ  »</a></p>
+</div>

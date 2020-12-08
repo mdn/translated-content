@@ -1,0 +1,37 @@
+---
+title: Apps.getInstalled
+slug: Archive/Marketplace/API/DOMApplicationsRegistry/getInstalled
+tags:
+  - API Apps
+  - Apps
+translation_of: Archive/Marketplace/API/DOMApplicationsRegistry/getInstalled
+---
+<p>{{ ApiRef() }}</p>
+<p>{{ non-standard_header() }}</p>
+<h2 id="Résumé">Résumé</h2>
+<p>Obtient la liste de toutes les applications installées pour cette origine. Par exemple, si appelé depuis le Firefox OS Marketplace, vous aurez la liste de toutes les application installées par le Firefox OS Marketplace.</p>
+<div class="note">
+ <p><strong>Note :</strong> Plusieurs applications pour une même origine ne sont pas supportées. Pour héberger plusieur applications depuis un domaine, <a href="/en-US/docs/Apps/Adding_a_subdomain" title="/en-US/docs/Apps/Adding_a_subdomain">créer un sous-domaine pour chaque application</a>. Par exemple : <code>monapp.mondomaine.com</code>, <code>autreapp.mondomaine.com</code>, et ainsi de suite.</p>
+</div>
+<h2 id="Syntaxe">Syntaxe</h2>
+<pre><code>var requete = window.navigator.mozApps.<code>getInstalled</code>()</code>;
+</pre>
+<h2 id="Paramètre">Paramètre</h2>
+<p>Aucun.</p>
+<h2 id="Exemple">Exemple</h2>
+<pre class="brush: js">var requete = window.navigator.mozApps.getInstalled();
+requete.onerror = function(e) {
+  alert("Erreur lors de l'appel de getInstalled : " + requete.error.name);
+};
+requete.onsuccess = function(e) {
+  alert("Succès, nombre d'applications : " + requete.result.length);
+  var appsRecord = requete.result;
+};</pre>
+<p>Il est nécessaire de définir des callbacks pour les propriétés <code>onsuccess</code> et <code>onerror</code>, tel que montré dans cet exemple. Si l'appel est réussi, un tableau d'<a href="/fr/docs/DOM/App" title="/fr/docs/DOM/App">objet <code>App</code></a> sera renvoyé dans la propriété <code>result</code> de l'objet renvoyé. Dans cette exemple, il s'agit de <code>requete.result</code>.</p>
+<h2 id="Erreurs">Erreurs</h2>
+<p>La chaîne de caractère <code>ERROR</code> peut être renvoyé dans<code> DOMRequest.error</code>.</p>
+<h2 id="Sujets_en_relation">Sujets en relation</h2>
+<ul>
+ <li><a href="/fr/docs/DOM/App">Objet <code>App</code></a></li>
+ <li><a href="/fr/docs/Applications/API_JavaScript_Apps">API JavaScript Apps</a></li>
+</ul>

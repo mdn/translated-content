@@ -1,0 +1,118 @@
+---
+title: XUL_教程/修改XUL界面
+slug: Mozilla/Tech/XUL/Tutorial/Modifying_a_XUL_Interface
+tags:
+  - DOM
+  - XUL_教程
+translation_of: Archive/Mozilla/XUL/Tutorial/Modifying_a_XUL_Interface
+---
+<p> </p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_教程：文档对象模型" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:Manipulating_Lists">下一页  »</a></p>
+</div><p></p>
+<p>    </p>
+<p>DOM 提供了一系列方法来修改文档。</p>
+<h3 id=".E5.88.9B.E5.BB.BA.E6.96.B0.E5.85.83.E7.B4.A0__Creating_New_Elements" name=".E5.88.9B.E5.BB.BA.E6.96.B0.E5.85.83.E7.B4.A0__Creating_New_Elements">创建新元素 </h3>
+<p>    你可以使用文档对象的 <code><a href="/cn/DOM/document.createElement" title="cn/DOM/document.createElement">createElement()</a></code> 方法创建新元素。它有一个参数，待创建元素的标签名。可以使用元素的 <code><a href="/cn/DOM/element.setAttribute" title="cn/DOM/element.setAttribute">setAttribute()</a></code> 方法设置属性，使用 <code><a href="/cn/DOM/element.appendChild" title="cn/DOM/element.appendChild">appendChild()</a></code> 方法将其加入到XUL文件之中。例如下面的例子将一个按钮加入的XUL窗口中。</p>
+<p><span id="Example_1"><a id="Example_1"></a><strong>Example 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_1.xul">View</a></p>
+<pre>&lt;script&gt;
+function addButton(){
+  var aBox = document.getElementById("aBox");
+  var button = document.createElement("button");
+  button.setAttribute("label","A new Button");
+  aBox.appendChild(button);
+}
+&lt;/script&gt;
+
+&lt;box id="aBox" width="200"&gt;
+  &lt;button label="Add" oncommand="addButton();"/&gt;
+&lt;/box&gt;
+</pre>
+<ul>
+ <li>脚本先用<code><a href="/cn/DOM/document.getElementById" title="cn/DOM/document.getElementById">getElementById()</a></code>获得 一个容纳按钮的box的引用。</li>
+ <li>用<code><a href="/cn/DOM/document.createElement" title="cn/DOM/document.createElement">createElement()</a></code>方法创建新按钮。</li>
+ <li>用 <code><a href="/cn/DOM/element.setAttribute" title="cn/DOM/element.setAttribute">setAttribute()</a></code> 方法设置按钮的标签属性。</li>
+ <li>用<code><a href="/cn/DOM/element.appendChild" title="cn/DOM/element.appendChild">box.appendChild()</a></code> 方法将按钮加入其中。</li>
+</ul>
+<p>    <code><a href="/cn/DOM/document.createElement" title="cn/DOM/document.createElement">createElement()</a></code> 方法将为文档创建一个默认类型的元素。对于XUL 文档，通常会创建一个XUL元素。对于 HTML 文档会创建一个HTML元素，它会包含HTML元素的功能及方法。 <code><a href="/cn/DOM/document.createElementNS" title="cn/DOM/document.createElementNS">createElementNS()</a></code> 方法用于在不同的名空间创建元素。</p>
+<p>     <code><a href="/cn/DOM/element.appendChild" title="cn/DOM/element.appendChild">appendChild()</a></code> 方法用于像一个元素添加另一个元素。有三个相关的方法： <code><a href="/cn/DOM/element.insertBefore" title="cn/DOM/element.insertBefore">insertBefore()</a></code>，<code><a href="/cn/DOM/element.replaceChild" title="cn/DOM/element.replaceChild">replaceChild()</a></code> ， <code><a href="/cn/DOM/element.removeChild" title="cn/DOM/element.removeChild">removeChild</a></code> 语法如下。</p>
+<pre>parent.appendChild(child);
+parent.insertBefore(child, referenceChild);
+parent.replaceChild(newChild, oldChild);
+parent.removeChild(child);
+</pre>
+<p>    下面是这桑函数的简单说明。</p>
+<ul>
+ <li>  <code><a href="/cn/DOM/element.insertBefore" title="cn/DOM/element.insertBefore">insertBefore()</a></code> 方法在存在的元素之前插入一个新的子节点。它可以在一些子元素之间插入元素，而不像 <code><a href="/cn/DOM/element.appendChild" title="cn/DOM/element.appendChild">appendChild()</a></code> 只在最后插入。</li>
+ <li><code><a href="/cn/DOM/element.replaceChild" title="cn/DOM/element.replaceChild">replaceChild()</a></code> 方法移除一个旧的元素并在相同的位置插入新元素。</li>
+ <li><code><a href="/cn/DOM/element.removeChild" title="cn/DOM/element.removeChild">removeChild()</a></code> 删除一个节点。</li>
+</ul>
+<p>    注意，以上所有的方法中的 referenceChild 及 child 必须是一个已经存在的节点否则会出错。</p>
+<p>    通常你会希望移除一个现有的节点，并把它放到其他的位置。那么你没有必要先删除它。因为一个节点在同一时间只能在一个位置，插入方法总是先将节点从当前位置删除再插入新位置。这是一个在文档中移动节点的好方法。</p>
+<h4 id=".E6.8B.B7.E8.B4.9D.E8.8A.82.E7.82.B9__Copying_Nodes" name=".E6.8B.B7.E8.B4.9D.E8.8A.82.E7.82.B9__Copying_Nodes">拷贝节点</h4>
+<p>    可以使用 <code><a href="/cn/DOM/element.cloneNode" title="cn/DOM/element.cloneNode">cloneNode()</a></code> 方法复制节点。这方法复制现有的节点，你可以将新的节点放置到任何位置（原始节点不动），此方法带一个 boolean 型参数确定是否复制此元素的全部子节点。如果‘否’只复制此节点，不包含任何子节点。如果‘是’，将复制全部子节点。此函数会递归调用，如需复制树结构请传递true给函数，如下例。</p>
+<p><span id="Example_2"><a id="Example_2"></a><strong>Example 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_2.xul">View</a></p>
+<pre>&lt;hbox height="400"&gt;
+  &lt;button label="Copy"
+          oncommand="this.parentNode.appendChild(this.nextSibling.cloneNode(true));"/&gt;
+
+  &lt;vbox&gt;
+    &lt;button label="First"/&gt;
+    &lt;button label="Second"/&gt;
+  &lt;/vbox&gt;
+&lt;/hbox&gt;
+</pre>
+<p>当 Copy 按钮按下：</p>
+<ul>
+ <li><code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/button" title="button">button</a></code>元素</code>的 <code><a href="/cn/DOM/element.nextSibling" title="cn/DOM/element.nextSibling">nextSibling</a></code> 是<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/vbox" title="vbox">vbox</a></code></code>元素。</li>
+ <li>用 <code><a href="/cn/DOM/element.cloneNode" title="cn/DOM/element.cloneNode">cloneNode()</a></code> 方法获得拷贝。</li>
+ <li>用 <code><a href="/cn/DOM/element.appendChild" title="cn/DOM/element.appendChild">appendChild()</a></code>加入。</li>
+</ul>
+<p>    注意：有些元素，如<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/listbox" title="listbox">listbox</a></code></code> 和 <code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code></code> 提供了一些其他的修改方法，可以使用他们来代替，下一章（ <a href="/cn/XUL_Tutorial/Manipulating_Lists" title="cn/XUL_Tutorial/Manipulating_Lists">next section</a>）会讨论。</p>
+<h3 id=".E5.A4.84.E7.90.86.E5.9F.BA.E6.9C.AC.E5.85.83.E7.B4.A0__Manipulating_Basic_Elements" name=".E5.A4.84.E7.90.86.E5.9F.BA.E6.9C.AC.E5.85.83.E7.B4.A0__Manipulating_Basic_Elements">处理基本元素</h3>
+<p>    像按钮，复选框，单选按钮这些XUL的注意元素可以通过脚本属性处理。这些属性列在 <a href="/cn/XUL_Reference" title="cn/XUL_Reference">element reference</a> 。一些公共的属性如 <code><code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/label">label</a></span></code></code>, <code><code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/value">value</a></span></code></code>, <code><code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/checked">checked</a></span></code></code> 及<code><code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/disabled">disabled</a></span></code></code> 。可以根据需要来设定他们。</p>
+<h4 id=".E4.BE.8B.EF.BC.9A.E6.A0.87.E7.AD.BE.E5.92.8C.E5.80.BC.E7.89.B9.E6.80.A7__Label_and_value_properties_examples" name=".E4.BE.8B.EF.BC.9A.E6.A0.87.E7.AD.BE.E5.92.8C.E5.80.BC.E7.89.B9.E6.80.A7__Label_and_value_properties_examples">例：标签和值特性</h4>
+<p>    这里有一个改变按钮标签的例子。</p>
+<p><span id="Example_3"><a id="Example_3"></a><strong>Example 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_3.xul">View</a></p>
+<pre>&lt;button label="Hello" oncommand="this.label = 'Goodbye';"/&gt;
+</pre>
+<p>    当按钮按下时<code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/label">label</a></span></code>会改变。对于有标签的元素这是通用的。比如文本框。同样的可以修改 <code><code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/value">value</a></span></code></code> 属性。</p>
+<p><span id="Example_4"><a id="Example_4"></a><strong>Example 4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_4.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_4.xul">View</a></p>
+<pre>&lt;button label="Add" oncommand="this.nextSibling.value += '1';"/&gt;
+&lt;textbox/&gt;
+</pre>
+<p>    当按钮按下时文本框中的内容每次加 '1' 。 <code><a href="/cn/DOM/element.nextSibling" title="cn/DOM/element.nextSibling">nextSibling</a></code> 重当前元素转移到下一个元素（textbox）。 += 用于像当前值加一个值，此处把 1 加到文本的末尾。注意此时你仍可以在文本框中输入，你也可以获取现在的标签和值属性的值，如下例。</p>
+<p><span id="Example_5"><a id="Example_5"></a><strong>Example 5</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_5.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_5.xul">View</a></p>
+<pre>&lt;button label="Hello" oncommand="alert(this.label);"/&gt;
+</pre>
+<h4 id="Toggling_a_checkbox" name="Toggling_a_checkbox">标记checkbox</h4>
+<p>    Checkboxes 有 <code><code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/checked">checked</a></span></code></code> 属性可以是 check 或 uncheck 。很容易知道怎么样。下一个例子，当按钮按下时把<code><code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/checked">checked</a></span></code>属性取反<span style="font-family: Verdana,Tahoma,sans-serif;">。</span></code> 注意 <code><code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/label">label</a></span></code></code> 和<code><code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/value">value</a></span></code></code> 属性是字符串，而 <code><code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/checked">checked</a></span></code></code> 属性是布尔值。</p>
+<p><span id="Example_6"><a id="Example_6"></a><strong>Example 6</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_6.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_6.xul">View</a></p>
+<pre>&lt;button label="Change" oncommand="this.nextSibling.checked = !this.nextSibling.checked;"/&gt;
+&lt;checkbox label="Check for messages"/&gt;
+</pre>
+<p>    单选按钮也可以用属性选中或取消，注意在一个组中一次只能选中一个，这无需手工操作。单选组的 <code><code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/selectedIndex">selectedIndex</a></span></code></code>属性用在这里 <code><code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/selectedIndex">selectedIndex</a></span></code></code> 属性用于获得被选中的单选按钮的序号，同样可改变它。</p>
+<h4 id=".E6.BF.80.E6.B4.BB.E6.88.96.E6.97.A0.E6.95.88.E4.B8.80.E4.B8.AA.E5.85.83.E7.B4.A0__Changing_a_element_disabled_or_enabled" name=".E6.BF.80.E6.B4.BB.E6.88.96.E6.97.A0.E6.95.88.E4.B8.80.E4.B8.AA.E5.85.83.E7.B4.A0__Changing_a_element_disabled_or_enabled">激活或无效一个元素</h4>
+<p>    在某些情况下一些操作将不被支持，有些内容将会无效。比如，在参数选择对话框中，能选择一系列参数但只有一项允许用户改变。下面的例子创建这样的一个界面。</p>
+<p><span id="Example_7"><a id="Example_7"></a><strong>Example 7</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_7.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_7.xul">View</a></p>
+<pre>&lt;script&gt;
+function updateState(){
+  var name = document.getElementById("name");
+  var sindex = document.getElementById("group").selectedIndex;
+  name.disabled = sindex == 0;
+}
+&lt;/script&gt;
+
+&lt;radiogroup id="group" onselect="updateState();"&gt;
+  &lt;radio label="Random name" selected="true"/&gt;
+  &lt;hbox&gt;
+    &lt;radio label="Specify a name:"/&gt;
+    &lt;textbox id="name" value="Jim" disabled="true"/&gt;
+  &lt;/hbox&gt;
+&lt;/radiogroup&gt;
+</pre>
+<p>    当单选组中的一个选择事件发生时会调用updateState() 方法。这个函数用<code><code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/selectedIndex">selectedIndex</a></span></code></code> 属性返回当前被选中的 <code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/radio" title="radio">radio</a></code></code> 元素。。注意<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/hbox" title="hbox">hbox</a></code></code>中的元素也被包含在单选组中。如果第一个按钮 (序0)被选中，通过设置文本框的 <code><code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/disabled">disabled</a></span></code> 属性，使文本框无效<span style="font-family: Verdana,Tahoma,sans-serif;">，第二个按钮被选中时，文本框又被激活了。</span></code></p>
+<p>下一章将提供关于单选框和列表的更多信息。</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Document_Object_Model" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:Manipulating_Lists">下一页  »</a></p>
+</div><p></p>

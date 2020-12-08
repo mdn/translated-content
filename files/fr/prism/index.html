@@ -1,0 +1,88 @@
+---
+title: Prism
+slug: Prism
+tags:
+  - prism
+translation_of: Archive/Mozilla/Prism
+---
+<p><img style="float: right;"> Prism est un navigateur simplifié basé sur XULRunner servant d'hôte à des applications web sans l'interface habituelle d'un navigateur web. Prism est basé sur un concept appelé<em>Site-Specific Browsers</em> (SSB). Un SSB est conçu pour fonctionner exclusivement avec une seule application web. Il n'a pas les menus, barres d'outils et autres accoutrements d'un navigateur traditionnel. Un SSB offre également une meilleure intégration dans le système d'exploitation et le bureau qu'une application web typique fonctionnant dans un navigateur. Les applications tournant dans un SSB peuvent par conséquent bénéficier des beaucoup des avantages des applications natives et des applications web en même temps.</p>
+
+<h3 id="Avantages" name="Avantages">Avantages</h3>
+
+<ul>
+ <li><strong>Processus séparés :</strong> les applications web peuvent monopoliser la mémoire ou les cycles processeur, ou même terrasser le navigateur entier dans des cas extrêmes. En lançant chaque application dans son propre processus, l'impact de tout faux-pas est réduit. On bénéficie également des outils du système d'exploitation permettant de voir la consommation mémoire/processeur d'une application particulière.</li>
+ <li><strong>Interface utilisateur minimale :</strong> une interface généraliste de navigateur n'est pas nécessaire ou même appropriée pour la plupart des applications web. Il peut être plus efficient de fournir une interface spécifique à l'application. Cela réduit également l'encombrement de l'interface, c'est pourquoi on peut le voir comme un <a class="external" href="http://www.hawkwings.net/2006/05/13/a-dedicated-distraction-free-browser-for-gmail/">navigateur sans distractions</a> (en).</li>
+ <li><strong>Intégration de base au bureau :</strong> la gestion de fonctionnalités du bureau peut rendre l'application plus naturelle et facile d'utilisation. On peut citer la possibilité de créer des raccourcis sur le bureau, de placer l'icône de l'application dans la barre des tâches ou le dock et d'afficher des notifications système.</li>
+ <li><strong>Personnalisation :</strong> les applications peuvent être exécutées dans un environnement de navigation partagé et personnalisées à l'aide de scripts côté client (du style de Greasemonkey). Des feuilles de style personnalisées peuvent être utilisées pour ajuster l'interface.</li>
+</ul>
+
+<h3 id="Aper.C3.A7u_de_l.27architecture" name="Aper.C3.A7u_de_l.27architecture">Aperçu de l'architecture</h3>
+
+<p>Prism est une <a href="fr/Cr%c3%a9ation_d'applications_XULRunner_avec_le_syst%c3%a8me_de_compilation_de_Mozilla">application XULRunner</a>. En plus du moteur de navigation inclus dans XULRunner, elle est constituée de :</p>
+
+<ul>
+ <li><strong>Gestion des bundles d'applications web</strong> : code permettant de créer de nouveaux bundles d'applications web et de charger des bundles existants.</li>
+ <li><strong>Interface de création de raccourcis </strong>: une boîte de dialogue permet à l'utilisateur de spécifier les attributs de l'application web (nom, URI, icône, emplacement des raccourcis).</li>
+ <li><strong>API JavaScript</strong> : une API qui peut être utilisée par des scripts dans le bundle pour personnaliser l'application. Cette approche est en cours d'affinage afin de rendre l'API applicable dans le plus d'environnements possible (par exemple elle pourrait servir même pour des applications lancées dans un navigateur normal). Il devrait être possible pour les développeurs d'inclure des extensions de style Prism directement dans leur application web. Nous aimerions harmoniser notre API avec celles de projets similaires comme <a class="external" href="http://livedocs.adobe.com/labs/air/1/jslr/">Adobe AIR</a> et <a class="external" href="http://code.google.com/apis/gears/">Google Gears</a>.</li>
+ <li><strong>Intégration dans le système d'exploitation</strong> : des composants binaires fournissant un accès aux fonctionnalités spécifiques du système comme la création de raccourcis et les icônes de zone de notification/dock. Nous aimerions proposer ces extensions dans de futures versions de XULRunner.</li>
+ <li><strong>Extension Firefox :</strong>: une extension de Firefox, appelée « Refractor », peut être utilsiée pour créer de nouvelles applications Prism depuis le navigateur web. Refractor ajoute un nouveau choix de menu pour appeler le dialogue de création de raccourci directement depuis Firefox. Les applications web peuvent également pointer vers un bundle complet ou certains éléments d'une application web (comme des icônes en haute résolution). Refractor prend automatiquement ces informations en compte.</li>
+</ul>
+
+<table class="topicpage-table">
+ <tbody>
+  <tr>
+   <td>
+    <h4 id="Documentation" name="Documentation"><a>Documentation</a></h4>
+
+    <dl>
+     <dt><a href="fr/Prism/FAQ">Foire aux questions</a></dt>
+     <dd> </dd>
+     <dt><a href="fr/Prism/Bundles">Bundles</a></dt>
+     <dd><small>A web application bundle is a zip archive that holds a configuration file, icons and an optional webapp JS script.</small></dd>
+     <dt><a href="fr/Prism/Configuration">Configuration</a></dt>
+     <dd><small>A webapp bundle should contain a webapp.ini configuration file. The configuration file is a simple, INI-style text file that specifies some parameters about a web application.</small></dd>
+     <dt><a href="fr/Prism/Styling">Styling</a></dt>
+     <dd><small>One of Prism's goals is to make web applications feel more like desktop applications. One way to make the illusion seem more real is to use styling (or theming). Prism supports a simple styling system that allows the user to add CSS files to the webapp bundle.</small></dd>
+     <dt><a href="fr/Prism/Scripting">Scripting</a></dt>
+     <dd><small>Prism allows for some client-side web application customization. Some simple objects and utilities are exposed to webapp scripts.</small></dd>
+     <dt><a href="fr/Prism/HostWindow">Host Window</a></dt>
+     <dd><small>Prism provides a simple, scaled down browser window for running web applications. Using configuration files and webapp scripting, the host window can be modified.</small></dd>
+     <dt><a href="fr/Prism/Installation">Installation</a></dt>
+     <dd><small>Installation de Prism.</small></dd>
+    </dl>
+
+    <p><span class="alllinks"><a>Afficher tout…</a></span></p>
+   </td>
+   <td>
+    <h4 id="Communaut.C3.A9" name="Communaut.C3.A9">Communauté</h4>
+
+    <ul>
+     <li><a href="fr/Prism/BlogPosts">Blog Posts</a></li>
+     <li><a class="link-https" href="https://labs.mozilla.com/forum/index.php/board,16.0.html">Prism forum at Mozilla Labs</a></li>
+     <li><a class="external" href="http://wiki.mozilla.org/Prism">Article Prism sur le wiki de Mozilla</a> (fournit les <a class="external" href="http://wiki.mozilla.org/Prism#Installs">instructions d'installation</a>)</li>
+     <li><a class="link-irc" href="irc://irc.mozilla.org/prism">#prism sur irc.mozilla.org</a></li>
+    </ul>
+
+    <h4 id="Goodies" name="Goodies">Goodies</h4>
+
+    <ul>
+     <li><a href="fr/Prism/BundleLibrary">Bundle Library</a></li>
+     <li><a href="fr/Prism/Extension">Refractor</a></li>
+    </ul>
+
+    <h4 id="Contribuer" name="Contribuer">Contribuer</h4>
+
+    <ul>
+     <li><a class="external" href="http://svn.mozilla.org/projects/webrunner/">Source code in SVN</a></li>
+     <li>Bugzilla (for bugs and suggestions) <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?query_format=advanced&amp;product=Mozilla+Labs&amp;component=Prism&amp;resolution=---&amp;chfieldto=Now">open bugs</a>, <a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Mozilla+Labs&amp;component=Prism">enter new bug</a></li>
+    </ul>
+
+    <h4 id="Sujets_li.C3.A9s" name="Sujets_li.C3.A9s">Sujets liés</h4>
+
+    <dl>
+     <dd><a href="fr/XULRunner">XULRunner</a></dd>
+    </dl>
+   </td>
+  </tr>
+ </tbody>
+</table>

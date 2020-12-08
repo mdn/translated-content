@@ -1,0 +1,667 @@
+---
+title: IME handling guide
+slug: Mozilla/IME_handling_guide
+tags:
+  - 入力メソッド
+translation_of: Mozilla/IME_handling_guide
+---
+<p>このドキュメントでは、GeckoがIMEをどのように扱うかを説明します。</p>
+
+<h2 id="はじめに">はじめに</h2>
+
+<p>IMEはInput Method Editorの略です。 これはWindowsの専門用語ですが、最近では他のプラットフォームでも使用されています。</p>
+
+<p>IMEは、ユーザーのテキスト入力を補助するアプリケーションです。 プラットフォームに応じ、フォーカスされているアプリケーションへのネイティブキーイベント前後に処理を行い、コンポジション文字列（別名：編集前文字列）を作成し、ユーザーが入力しようとしているもののリストを提案し、リストから選択された項目として、変換を行わないコンポジション文字列をコミットします。 IMEは、中国語、日本語、韓国語、および台湾のユーザーの文字を入力するために使用されています。 これらの言語では、使用される文字の数が数千を超えているため、IMEを介さずにキーボードから文字を直接入力することはできません。 また、最近のモバイルデバイスでは、ラテン語のオートコンプリートのような入力にもIMEは使用されます。 さらに、IMEは、いくつかのプラットフォーム上で手書きシステムや音声入力システムに使用されることもあります。</p>
+
+
+
+<p>IMEがフォーカスされた要素で利用できる場合は、その状態を"enabled"と呼びます。 IMEが利用可能ではない（例えば、ユーザがIMEを有効にできない）場合の状態を"disabled"と呼びます。</p>
+
+
+
+<p>IMEがenabledになっているがユーザーが直接入力モードを使用する場合（例えばラテン文字を入力するために）、それを"IME is closed"と呼びます。 それ以外の場合は、"IME is open"と呼びます。 （ちなみに："open"は"active"または"turned on"とも呼ばれます。 "close"は"inactive"または"truned off"とも呼ばれます）</p>
+
+<p>このドキュメントはGeckoのテキスト入力に関するバグを修正しようとしているときに役に立つでしょう。</p>
+
+<h2 id="Composition_string_and_clauses">Composition string and clauses</h2>
+
+<p>Typical Japanese IME can input two or more words into a composition string. When a user converts from Hiragana characters to Chinese characters the composition string, Japanese IME separates the composition string into multiple clauses. For example, if a user types "watasinonamaehanakanodesu", it's converted to Hiragana characters, "わたしのなまえはなかのです", automatically (In the following screenshots, the composition string has a wavy underline and the only one clause is called "raw input clause").</p>
+
+<p><img alt="Screenshot of raw composition string which is inputting Roman character mode of MS-IME (Japanese)" src="https://mdn.mozillademos.org/files/8703/inputting_composition_string.png" style="height: 33px; width: 540px;"></p>
+
+<p><img alt="Screenshot of raw composition string whose all characters are Hiragana character (MS-IME, Japanese)" src="https://mdn.mozillademos.org/files/8705/raw_composition_string.png" style="height: 33px; width: 540px;"></p>
+
+<p>When a user presses <code>Convert</code> key, Japanese IME separates the composition string as "わたしの" (my), "なまえは" (name is) and "なかのです" (Nakano). Then, converts each clause with Chinese characters: "私の", "名前は" and "中野です" (In the following screenshot each clause is underlined and not connected adjacently. These clauses are called "converted clause").</p>
+
+<p><img alt="Screenshot of converted composition string (MS-IME, Japanese)" src="https://mdn.mozillademos.org/files/8707/converted_composition_string.png" style="height: 33px; width: 540px;"></p>
+
+<p>If one or more clauses were not converted as expected, the user can choose one of the clauses with <code>Arrow</code> keys and look for the expected result form the list in the drop down menu (In the following screenshot, the clause with the thicker underline is called "selected clause").</p>
+
+<p><img alt="Screenshot of candidate window of MS-IME (Japanese) which converts the selected clause" src="https://mdn.mozillademos.org/files/8709/candidatewindow.png" style="height: 261px; width: 540px;"></p>
+
+<p>Basically, composition string and each clause style is rendered by Gecko. And the drop down menu is created by IME.</p>
+
+<p>Each clause is represented with selection in the editor. From chrome script, you can check it with <code>nsISelectionController</code>. In native code, you can access it with either <code>nsISelectionController</code> or <code>mozilla::SelectionType</code> (the latter is recommended because of type safer). And editor sets these IME selections from <code>mozilla::TextRangeType</code> which are sent by <code>mozilla::WidgetCompositionEvent</code> as <code>mozilla::TextRangeArray</code>. Following table explains the mapping between them.</p>
+
+<table class="standard-table">
+ <caption>Selection types of each clause of composition string or caret</caption>
+ <thead>
+  <tr>
+   <th scope="row"></th>
+   <th scope="col"><code><a href="https://dxr.mozilla.org/mozilla-central/source/dom/base/nsISelectionController.idl">nsISelectionController</a></code></th>
+   <th scope="col"><code><a href="https://dxr.mozilla.org/mozilla-central/source/dom/base/nsISelectionController.idl">mozilla::SelectionType</a></code></th>
+   <th scope="col"><code><a href="https://dxr.mozilla.org/mozilla-central/source/widget/TextRange.h">mozilla::TextRangeType</a></code></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">Caret</th>
+   <td><code>SELECTION_NORMAL</code></td>
+   <td><code>eNormal</code></td>
+   <td><code>eCaret</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Raw text typed by the user</th>
+   <td><code>SELECTION_IME_RAW_INPUT</code></td>
+   <td><code>eIMERawClause</code></td>
+   <td><code>eRawClause</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Selected clause of raw text typed by the user</th>
+   <td><code>SELECTION_IME_SELECTEDRAWTEXT</code></td>
+   <td><code>eIMESelectedRawClause</code></td>
+   <td><code>eSelectedRawClause</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Converted clause by IME</th>
+   <td><code>SELECTION_IME_CONVERTEDTEXT</code></td>
+   <td><code>eIMEConvertedClause</code></td>
+   <td><code>eConvertedClause</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Selected clause by the user or IME and also converted by IME</th>
+   <td><code>SELECTION_IME_SELECTEDCONVERTEDTEXT</code></td>
+   <td><code>eIMESelectedClause</code></td>
+   <td><code>eSelectedClause</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Note that typically, "Selected clause of raw text typed by the user" isn't used because when composition string is already separated to multiple clauses, that means that the composition string has already been converted by IME at least once.</p>
+
+<h2 id="Modules_handling_IME_composition">Modules handling IME composition</h2>
+
+<h3 id="widget*"><a href="http://mxr.mozilla.org/mozilla-central/source/widget/"><code>widget/*</code></a></h3>
+
+<p>Each widget handles native IME events and dispatches <code>WidgetCompositionEvent</code> with <code>mozilla::widget::TextEventDispatcher</code> to represent the behavior of IME in the focused editor.</p>
+
+<p>This is the only module that depends on the users platform. See also <a href="#Native_IME_handlers">Native IME handlers section</a> for the detail of each platform's implementation.</p>
+
+<div class="note">
+<p>Android widget still does not use <code>TextEventDispatcher</code> to dispatch <code>WidgetCompositionEvent</code>s, see {{Bug(1137567)}}.</p>
+</div>
+
+<h3 id="mozillawidgetTextEventDispatcher"><a href="https://dxr.mozilla.org/mozilla-central/source/widget/TextEventDispatcher.cpp">mozilla::widget::TextEventDispatcher</a></h3>
+
+<p>This class is used by native IME handler(s) on each platform. This capsules the logic to dispatch <code>WidgetCompositionEvent</code> and <code>WidgetKeyboardEvent</code> for making the behavior on each platform exactly same. For example, if <code>WidgetKeyboardEvent</code> should be dispatched when there is a composition is managed by this class in XP level. First of use, native IME handlers get the rights to use <code>TextEventDispatcher</code> with a call of <code>BeginNativeInputTransaction()</code>. Then, <code>StartComposition()</code>, <code>SetPendingComposition()</code>, <code>FlushPendingComposition()</code>, <code>CommitComposition()</code>, etc. are available if <code>BeginNativeInputTransaction()</code> return true. These methods automatically manage composition state and dispatch <code>WidgetCompositionEvent</code> properly.</p>
+
+<p>This is also used by <code>mozilla::TextInputProcessor</code> which can emulates (or implements) IME with chrome script. So, native IME handlers using this class means that the dispatching part is also tested by automated tests.</p>
+
+<h3 id="mozillaWidgetCompositionEvent"><a href="https://dxr.mozilla.org/mozilla-central/source/widget/TextEvents.h">mozilla::WidgetCompositionEvent</a></h3>
+
+<p>Internally, <code>WidgetCompositionEvent</code> represents native IME behavior. Its message is one of following values:</p>
+
+<h4 id="eCompositionStart"><code>eCompositionStart</code></h4>
+
+<p>This is dispatched at starting a composition. This represents a DOM <code>compositionstart</code> event. The <code>mData</code> value is a selected string at dispatching the DOM event and it's automatically set by <code>TextComposition</code>.</p>
+
+<h4 id="eCompositionUpdate"><code>eCompositionUpdate</code></h4>
+
+<p><em>This is dispatched by <code>TextComposition</code></em> when an <code>eCompoitionChange</code> will change the composition string. This represents a DOM <code>compositionupdate</code> event.</p>
+
+<h4 id="eCompositionEnd"><code>eCompositionEnd</code></h4>
+
+<p><em>This is dispatched by <code>TextComposition</code></em> when an <code>eCompositionCommitAsIs</code> or <code>eComposiitonCommit</code> event is dispatched. This represents a DOM <code>compositionend</code> event.</p>
+
+<h4 id="eCompositionChange"><code>eCompositionChange</code></h4>
+
+<p>This is used internally only. This is dispatched at modifying a composition string, committing a composition, changing caret position and/or changing ranges of clauses. This represents a DOM <code>text</code> event which is not in any standards. <code>mRanges</code> should not be empty only with this message.</p>
+
+<h4 id="eCompositionCommitAsIs"><code>eCompositionCommitAsIs</code></h4>
+
+<p>This is used internally only. This is dispatched when a composition is committed with the string. The <code>mData</code> value should be always be an empty string. This causes a DOM <code>text</code> event without clause information and a DOM <code>compositionend</code> event.</p>
+
+<h4 id="eCompositionCommit"><code>eCompositionCommit</code></h4>
+
+<p>This is used internally only. This is dispatched when a composition is committed with specific string. The <code>mData</code> value is the commit string. This causes a DOM <code>text</code> event without clause information and a DOM <code>compositionend</code> event.</p>
+
+<table class="standard-table">
+ <caption>Table of event messages</caption>
+ <thead>
+  <tr>
+   <th scope="row"></th>
+   <th scope="col">meaning of <code>mData</code></th>
+   <th scope="col">who sets <code>mData</code>?</th>
+   <th scope="col"><code>mRanges</code></th>
+   <th scope="col">representing DOM event</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row"><code>eCompositionStart</code></th>
+   <td>selected string before starting composition</td>
+   <td><code>TextComposition</code></td>
+   <td><code>nullptr</code></td>
+   <td><code>compositionstart</code></td>
+  </tr>
+  <tr>
+   <th scope="row"><code>eCompositionUpdate</code></th>
+   <td>new composition string</td>
+   <td><code>TextComposition</code></td>
+   <td><code>nullptr</code></td>
+   <td><code>compositionupdate</code></td>
+  </tr>
+  <tr>
+   <th scope="row"><code>eCompositionEnd</code></th>
+   <td>commit string</td>
+   <td><code>TextComposition</code></td>
+   <td><code>nullptr</code></td>
+   <td><code>compositionend</code></td>
+  </tr>
+  <tr>
+   <th scope="row"><code>eCompositionChange</code></th>
+   <td>new composition string</td>
+   <td>widget (or <code>TextComposition</code>)</td>
+   <td>must not be <code>nullptr</code></td>
+   <td><code>text</code></td>
+  </tr>
+  <tr>
+   <th scope="row"><code>eCompositionCommitAsIs</code></th>
+   <td><em>N/A</em> (must be empty)</td>
+   <td><em>nobody</em></td>
+   <td><code>nullptr</code></td>
+   <td><em>None</em></td>
+  </tr>
+  <tr>
+   <th scope="row"><code>eCompositionCommit</code></th>
+   <td>commit string</td>
+   <td>widget (or <code>TextComposition</code>)</td>
+   <td><code>nullptr</code></td>
+   <td><em>None</em></td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="PresShell"><a href="http://dxr.mozilla.org/mozilla-central/source/layout/base/nsPresShell.cpp"><code>PresShell</code></a></h3>
+
+<p><code>PresShell</code> receives the widget events and decides an event target from focused document and element. Then, it sends the events and the event target to <code>IMEStateManager</code>.</p>
+
+<h3 id="mozillaIMEStateManager"><code><a href="http://dxr.mozilla.org/mozilla-central/source/dom/events/IMEStateManager.cpp">mozilla::IMEStateManager</a></code></h3>
+
+<p><code>IMEStateManager</code> looks for a <code>TextComposition</code> instance whose native IME context is same as the widget' which dispatches the widget event. If there is no proper <code>TextComposition</code> instance, it creates the instance. And it sends the event to the <code>TextComposition</code> instance.</p>
+
+<p>Note that all instances of <code>TextComposition</code> are managed by <code>IMEStateManager</code>. When an instance is created, it's registered to the list. When composition completely ends, it's unregistered from the list (and released automatically).</p>
+
+<h3 id="mozillaTextComposition"><a href="http://dxr.mozilla.org/mozilla-central/source/dom/events/TextComposition.cpp"><code>mozilla::TextComposition</code></a></h3>
+
+<p><code>TextComposition</code> manages a composition and dispatches DOM <code>compositionupdate</code> events.</p>
+
+<p>When this receives an <code>eCompositionChange</code>, <code>eCompositionCommit</code> or <code>eCompositionCommitAsIs</code> event, it dispatches the event to the stored node which was the event target of <code>eCompositionStart</code> event. Therefore, this class guarantees that all composition events for a composition are fired on same element.</p>
+
+<p>When this receives <code>eCompositionChange</code> or <code>eCompositionCommit</code>, this checks if new composition string (or committing string) is different from the last data stored by the <code>TextComposition</code>. If the composition event is changing the composition string, the <code>TextComposition</code> instance dispatches <code>WidgetCompositionEvent</code> with <code>eCompositionUpdate</code> into the DOM tree directly and modifies the last data. The <code>eCompositionUpdate</code> event will cause a DOM <code>compositionupdate</code> event.</p>
+
+<p>When this receives <code>eCompositionCommitAsIs</code> or <code>eCompositionCommit</code>, this dispatches an eCompositionEnd event which will cause a DOM <code>compositionend</code> event after dispatching <code>eCompositionUpdate</code> event and/or <code>eCompositionChange</code> event if necessary.</p>
+
+<p>One of the other important jobs of this is, when a focused editor handles a dispatched <code>eCompositionChange</code> event, this modifies the stored composition string and its clause information. The editor refers the stored information for creating or modifying a text node representing a composition string.</p>
+
+<p>And before dispatching <code>eComposition*</code> events, this class removes ASCII control characters from dispatching composition event's data in the default settings. Although, this can be disabled with <code>"dom.compositionevent.allow_control_characters"</code> pref.</p>
+
+<p>Finally, this class guarantees that requesting to commit or cancel current composition to IME is perefored synchronously. See <a href="#Forcibly_committing_composition">Forcibly committing composition section</a> for the detail.</p>
+
+<h3 id="editorlibeditor"><a href="http://dxr.mozilla.org/mozilla-central/source/editor/"><code>editor/libeditor</code></a></h3>
+
+<p><a href="http://dxr.mozilla.org/mozilla-central/source/editor/libeditor/EditorEventListener.cpp"><code>mozilla::EditorEventListener</code></a> listens for trusted DOM <code>compositionstart</code>, <code>text</code> and <code>compositionend</code> events and notifies <a href="http://dxr.mozilla.org/mozilla-central/source/editor/libeditor/EditorBase.cpp"><code>mozilla::EditorBase</code></a> and <a href="http://dxr.mozilla.org/mozilla-central/source/editor/libeditor/TextEditor.cpp"><code>mozilla::TextEditor</code></a> of the events.</p>
+
+<p>When <code>EditorBase</code> receives an <code>eCompositionStart</code> (DOM <code>"compositionstart"</code>) event, it looks for a proper <code>TextComposition</code> instance and stores it.</p>
+
+<p>When <code>TextEditor</code> receives an <code>eCompositionChange</code> (DOM <code>"text"</code>) event, it creates or modifies a text node which includes the composition string and <a href="https://dxr.mozilla.org/mozilla-central/source/editor/libeditor/CompositionTransaction.cpp">mozilla::CompositionTransaction</a> (it was called <code>IMETextTxn</code>) sets IME selections for representing the clauses of the composition string.</p>
+
+<p>When <code>EditorBase</code> receives an <code>eCompositionEnd</code> (DOM <code>"compositionend"</code>) event, it releases the stored <code>TextComposition</code> instance.</p>
+
+<h3 id="nsTextFrame"><a href="http://dxr.mozilla.org/mozilla-central/source/layout/generic/nsTextFrame.cpp"><code>nsTextFrame</code></a></h3>
+
+<p><code>nsTextFrame</code> paints IME selections.</p>
+
+<h3 id="mozillaIMEContentObserver"><a href="http://dxr.mozilla.org/mozilla-central/source/dom/events/IMEContentObserver.cpp"><code>mozilla::IMEContentObserver</code></a></h3>
+
+<p><code>IMEContentObserver</code> observes various changes of a focused editor. When an editor or a windowless plugin gets focus, an instance is created, starts to observe and notifies <code>widget</code> of IME getting focus. When the editor or windowless plugin loses focus, it notifies <code>widget</code> of IME losing focus, stops observing everything and is released.</p>
+
+<p>This class observes selection changes (caret position changes), text changes of a focused editor and layout changes (by reflow or scroll) of everything in the document. It depends on the result of <code>nsIWidget::GetIMEUpdatePreference()</code> what is observed.</p>
+
+<p>When this notifies something of widget and/or IME, it needs to be safe to run script because notifying something may cause dispatching one or more DOM events and/or new reflow. Therefore, IMEContentObserver only stores which notification should be sent to widget and/or IME. Then, <code>mozilla::IMEContentObserver::IMENotificationSender</code> tries to send the pending notifications when it might become safe to do that. Currently, it's tried:</p>
+
+<ul>
+ <li>after a native event is dispatched from <code>PresShell::HandleEventInternal()</code></li>
+ <li>at changing focus from a windowless plugin</li>
+ <li>when new focused editor receives DOM <code>"focus"</code> event</li>
+</ul>
+
+<div class="note">
+<p>The 3rd timing may not be safe actually, but it causes a lot of oranges of automated tests.</p>
+</div>
+
+<p>See also <a href="#Notifications_to_IME">Notifications to IME section</a> for the detail of sending notifications.</p>
+
+<p>Currently, <code>WidgetQueryContentEvent</code> is handled via <code>IMEContentObserver</code> because if it has a cache of selection, it can set reply of <code>eQuerySelectedText</code> event only with the cache. That is much faster than using <code>ContentEventHandler</code>.</p>
+
+<h2 id="e10s_support">e10s support</h2>
+
+<p>Even when a remote process has focus, native IME handler in chrome process does its job. So, there is process boundary between native IME handler and focused editor. Unfortunately, it's not allowed to use syncronous communication from chrome process to a remote process. This means that chrome process (and also native IME and our native IME handler) cannot query the focused editor contents directly. For fixing this issue, we have <code>ContentCache</code> classes around process boundary.</p>
+
+<h3 id="mozillaContentCache"><code><a href="https://dxr.mozilla.org/mozilla-central/source/widget/ContentCache.cpp">mozilla::ContentCache</a></code></h3>
+
+<p>This is a base class of <code>ContentCacheInChild</code> and <code>ContentCacheInParent</code> and IPC-aware. This has common members of them including all cache data:</p>
+
+<dl>
+ <dt><code>mText</code></dt>
+ <dd>Whole text in focused editor. This may be too big but IME may request all text in the editor.</dd>
+ <dd>If we can separate editor contents per paragraph, moving selection between paragraphs generates pseudo focus move, we can reduce this size and runtime cost of <code>ContentEventHandler</code>. However, we've not had a plan to do that yet. Note that Microsoft Word uses this hack.</dd>
+ <dt><code>mCompositionStart</code></dt>
+ <dd>Offset of composition string in <code>mText</code>. When there is no composition, this is <code>UINT32_MAX</code>.</dd>
+ <dt><code>mSelection::mAnchor</code>, <code>mSelection::mFocus</code></dt>
+ <dd>Offset of selection anchor and focus in <code>mText</code>.</dd>
+ <dt><code>mSelection::mWritingMode</code></dt>
+ <dd>Writing mode at selection start.</dd>
+ <dt><code>mSelection::mAnchorCharRect</code>, <code>mSelection::mFocusCharRect</code></dt>
+ <dd>Next character rect of <code>mSelection::mAnchor</code> and <code>mSelection::mFocus</code>. If correspoinding offset is end of the editor contents, its rect should be caret rect.</dd>
+ <dd>These rects shouldn't be empty rect.</dd>
+ <dt><code>mSelection::mRect</code></dt>
+ <dd>Unifiied character rect in selection range. When the selection is collapsed, this should be caret rect.</dd>
+ <dt><code>mFirstRect</code></dt>
+ <dd>First character rect of <code>mText</code>. When <code>mText</code> is empty string, this should be caret rect.</dd>
+ <dt><code>mCaret::mOffset</code></dt>
+ <dd>Always same as selection start offset even when selection isn't collappsed.</dd>
+ <dt><code>mCaret::mRect</code></dt>
+ <dd>Caret rect at <code>mCaret::mOffset</code>. If caret isn't actually exists, it's computed with a character rect at the offset.</dd>
+ <dt><code>mTextRectArray::mStart</code></dt>
+ <dd>If there is composition, <code>mStart</code> is same as <code>mCompositionStart</code>. Otherwise, UINT32_MAX.</dd>
+ <dt><code>mTextRectArray::mRects</code></dt>
+ <dd>Each character rects of composition string.</dd>
+ <dt><code>mEditorRect</code></dt>
+ <dd>The rect of editor element.</dd>
+</dl>
+
+<h3 id="mozillaContentCacheInChild"><code><a href="https://dxr.mozilla.org/mozilla-central/source/widget/ContentCache.cpp">mozilla::ContentCacheInChild</a></code></h3>
+
+<p>This exists only in remote processes. This is created as a member of <code><a href="https://dxr.mozilla.org/mozilla-central/source/widget/PuppetWidget.cpp">PuppetWidget</a></code>. When <code>PuppetWidget</code> receives notifications to IME from <code>IMEContentObserver</code> in the remote process, it makes this class modify its cached content. Then, this class do that with <code>WidgetQueryContentEvent</code>s. Finally, <code>PuppetWidget</code> sends the notification and <code>ContentCacheInParent</code> instance as <code>ContentCache</code> to its parent process.</p>
+
+<h3 id="mozillaContentCacheInParent"><code><a href="https://dxr.mozilla.org/mozilla-central/source/widget/ContentCache.cpp">mozilla::ContentCacheInParent</a></code></h3>
+
+<p>This exists as a member of <code><a href="https://dxr.mozilla.org/mozilla-central/source/dom/ipc/TabParent.cpp">TabParent</a></code>. When TabParent receives notification from corresponding remote process, it assigns <code>ContentCacheInParent</code> new <code>ContentCache</code> and post the notification to <code>ContentCacheInParent</code>. If all sent <code>WidgetCompositionEvent</code>s and <code>WidgetSelectionEvent</code>s are already handled in the remote process, <code>ContentCacheInParent</code> sending the notifications to widget.</p>
+
+<p>And also this handles <code>WidgetQueryContentEvent</code>s with its cache. Supported event messages of them are:</p>
+
+<ul>
+ <li><code>eQuerySelectedText</code> (only with <code>SelectionType::eNormal</code>)</li>
+ <li><code>eQueryTextContent</code></li>
+ <li><code>eQueryTextRect</code></li>
+ <li><code>eQueryCaretRect</code></li>
+ <li><code>eQueryEditorRect</code></li>
+</ul>
+
+<p>Additionally, this does not support query content events with XP line breakers but this must not be any problem since native IME handlers query contents with native line breakers.</p>
+
+<p><code>ContentCacheInParent</code> also manages sent <code>WidgetCompositionEvent</code>s and <code>WidgetSelectionEvent</code>s. After these events are handled in the remote process, <code>TabParent</code> receives it with a call of <code>RecvOnEventNeedingAckHandled()</code>. Then, it calls <code>ContentCacheInParent::OnEventNeedingAckHandled()</code>. Finally, <code>ContentCacheInParent</code> flushes pending notifications.</p>
+
+<h3 id="How_do_mozillaTextComposition_and_mozillaIMEStateManager_work_in_e10s_mode">How do <code>mozilla::TextComposition</code> and <code>mozilla::IMEStateManager</code> work in e10s mode?</h3>
+
+<p>In remote process, they work as non-e10s mode. On the other hand, they work specially in parent process.</p>
+
+<p>When IMEStateManager in parent process receives  <code>eCompositionStart</code>, it creates <code>TextComposition</code> instance normally. However, if the event target has remote contents, <code>TextComposition::DispatchCompositionEvent()</code> directly sends the event to the remote process instead of dispatching the event into the target DOM tree in the process.</p>
+
+<p>That means that even in a parent process, anybody can retrieve <code>TextComposition</code> instance, but it just does nothing in parent process.</p>
+
+<p>IMEStateManager works more complicated because IMEStateManagers in each processe need to negotiate about owner ship of managing input context.</p>
+
+<p>When a remote process gets focus, temporarily, <code>IMEStateManager</code> in parent process disables IME in the widget. After that, <code>IMEStateManager</code> in the remote process will set proper input context for the focused editor. At this time, <code>IMEStateManager</code> in the parent process does nothing. Therefore, <code>IMEContentObserver</code> is never created while a remote process has focus.</p>
+
+<p>When a remote process loses focus, <code>IMEStateManager</code> in parent process notifies <code>IMEStateManager</code> in the remote process of "Stop IME state management". When <code>IMEStateManager::StopIMEStateManagement()</code> is called in the remote process by this, the <code>IMEStateManager</code> forgets all focus information (i.e., that indicates nobody has focus).</p>
+
+<p>When <code>IMEStateManager</code> in parent process is notified of pseudo focus move from or to menubar while a remote process has focus, it notifies the remote process of "Menu keyboard listener installed". Then, <code>TabChild</code> calls <code>IMEStateManager::OnInstalledMenuKeyboardListener()</code> in the remote process.</p>
+
+<h2 id="Style_of_each_clause">Style of each clause</h2>
+
+<p>The style of each IME selection is managed by <a href="http://dxr.mozilla.org/mozilla-central/source/widget/LookAndFeel.h"><code>LookAndFeel</code></a> class per platform. Therefore, it can be overridden by prefs.</p>
+
+<p>Background color, foreground color (text color) and underline color can be specified with following prefs. The values must be string of "<code>#rrggbb</code>" format.</p>
+
+<ul>
+ <li><code>ui.IMERawInputBackground</code></li>
+ <li><code>ui.IMERawInputForeground</code></li>
+ <li><code>ui.IMERawInputUnderline</code></li>
+ <li><code>ui.IMESelectedRawTextBackground</code></li>
+ <li><code>ui.IMESelectedRawTextForeground</code></li>
+ <li><code>ui.IMESelectedRawTextUnderline</code></li>
+ <li><code>ui.IMEConvertedTextBackground</code></li>
+ <li><code>ui.IMEConvertedTextForeground</code></li>
+ <li><code>ui.IMEConvertedTextUnderline</code></li>
+ <li><code>ui.IMESelectedConvertedTextBackground</code></li>
+ <li><code>ui.IMESelectedConvertedTextForeground</code></li>
+ <li><code>ui.IMESelectedConvertedTextUnderline</code></li>
+</ul>
+
+<p>Underline style can be specified with the following prefs. The values are integer,  <code>0</code>: none, <code>1</code>: dotted, <code>2</code>: dashed, 3: solid, 4: double, 5: wavy (The values same as <code>NS_STYLE_TEXT_DECORATION_STYLE_*</code> defined in <a href="http://dxr.mozilla.org/mozilla-central/source/layout/style/nsStyleConsts.h">nsStyleConsts.h</a>.</p>
+
+<ul>
+ <li><code>ui.IMERawInputUnderlineStyle</code></li>
+ <li><code>ui.IMESelectedRawTextUnderlineStyle</code></li>
+ <li><code>ui.IMEConvertedTextUnderlineStyle</code></li>
+ <li><code>ui.IMESelectedConvertedTextUnderlineStyle</code></li>
+</ul>
+
+<p>Underline width can be specified with "<code>ui.IMEUnderlineRelativeSize</code>" pref. This affects all types of clauses. The value should be <code>100</code> or <code>200</code>. <code>100</code> means normal width, <code>200</code> means double width.</p>
+
+<p>On some platforms, IME may support its own style for each clause. Currently, this feature is supported in TSF mode of Windows and on Linux. The style information is stored in <code>TextRangeStyle</code> which is defined in <a href="http://dxr.mozilla.org/mozilla-central/source/widget/TextRange.h">TextRange.h</a>. It's a member of <code>TextRange</code>. <code>TextRange</code> is stored in <code>mRanges</code> of <code>WidgetCompositionEvent</code> only when its message is <code>eCompositionChange</code>.</p>
+
+<h2 id="Lifetime_of_composition_string">Lifetime of composition string</h2>
+
+<p>When native IME notifies Gecko of starting a composition, a widget dispatches <code>WidgetCompositionEvent</code> with <code>eCompositionStart</code> which will cause a DOM <code>compositionstart</code> event.</p>
+
+<p>When native IME notifies Gecko of a composition string change, a caret position change and/or a change of length of clauses, a widget dispatches <code>WidgetCompositionEvent</code> with <code>eCompositionChange</code> event. It will cause a DOM <code>compositionupdate</code> event when composition string is changing. That is dispatched by <code>TextComposition</code> automatically. After that when the widget and <code>PresShell</code> of the focused editor have not been destroyed yet, the <code>eCompositionChange</code> will cause a DOM <code>text</code> event which is not in any web standards.</p>
+
+<p>When native IME notifies Gecko of the ending of a composition, a widget dispatches <code>WidgetCompositionEvent</code> with <code>eCompositionCommitAsIs</code> or <code>eCompositionCommit</code>. If the committing string is different from the last set of data (i.e., if the event message is <code>eCompositionCommit</code>), <code>TextComposition</code> dispatches a DOM <code>compositionupdate</code> event. After that, when the widget and <code>PresShell</code> of the focused editor have not been destroyed yet, an <code>eCompositionChange</code> event dispatched by <code>TextComposition, that</code> causes a DOM <code>text</code> event. Finally, if the widget and <code>PresShell</code> of the focused editor has not been destroyed yet too, <code>TextComposition</code> dispatches an <code>eCompositionEnd</code> event which will cause a DOM <code>compositionend</code> event.</p>
+
+<h2 id="Limitation_of_handling_composition">Limitation of handling composition</h2>
+
+<p>Currently, <code>EditorBase</code> touches undo stack at receiving every <code>WidgetCompositionEvent</code>. Therefore, <code>EditorBase</code> requests to commit composition when the following cases occur:</p>
+
+<ul>
+ <li>The editor loses focus</li>
+ <li>The caret is moved by mouse or Javascript</li>
+ <li>Value of the editor is changed by Javascript</li>
+ <li>Node of the editor is removed from DOM tree</li>
+ <li>Somethings object is modified in an HTML editor, e.g., resizing an image</li>
+ <li>Composition string is moved to a different position which is specified by native IME (e.g., only a part of composition is committed)</li>
+</ul>
+
+<p>In the future, we should fix this limitation. If we make <code>EditorBase</code> not touch undo stack until composition is committed, some of the cases must be fixed.</p>
+
+<h2 id="Notifications_to_IME">Notifications to IME</h2>
+
+<p>XP part of Gecko uses <code>nsIWidget::NotifyIME()</code> for notifying <code>widget</code> of something useful to handle IME. Note that some of them are notified only when <code>nsIWidget::GetIMEUpdatePreference()</code> returns flags which request the notifications.</p>
+
+<p><code>NOTIFY_IME_OF_TEXT_CHANGE</code>, <code>NOTIFY_IME_OF_SELECTION_CHANGE</code>, <code>NOTIFY_IME_OF_POSITION_CHANGE</code> and <code>NOTIFY_IME_OF_COMPOSITION_EVENT_HANDLED</code> are always sent by following order:</p>
+
+<ol>
+ <li><code>NOTIFY_IME_OF_TEXT_CHANGE</code></li>
+ <li><code>NOTIFY_IME_OF_SELECTION_CHANGE</code></li>
+ <li><code>NOTIFY_IME_OF_POSITION_CHANGE</code></li>
+ <li><code>NOTIFY_IME_OF_COMPOSITION_EVENT_HANDLED</code></li>
+</ol>
+
+<p>If sending one of above notifications causes higher priority notification, the sender should abort to send remaning notifications and restart from highet priority notification again.</p>
+
+<p>Additionally, all notifications except NOTIFY_IME_OF_BLUR should be sent only when it's safe to run script since the notification may cause querying content and/or dispatching composition events.</p>
+
+<h3 id="NOTIFY_IME_OF_FOCUS"><code>NOTIFY_IME_OF_FOCUS</code></h3>
+
+<p>When an editable editor gets focus and <code>IMEContentObserver</code> starts to observe it, this is sent to <code>widget</code>. This must be called after the previous <code>IMEContentObserver</code> notified widget of <code>NOTIFY_IME_OF_BLUR</code>.</p>
+
+<p>Note that even if there are pending notifications, they are canceled when <code>NOTIFY_IME_OF_FOCUS</code> is sent since querying content with following notifications immediately after getting focus does not make sense. The result is always same as the result of querying contents at receiving this notfication.</p>
+
+<h3 id="NOTIFY_IME_OF_BLUR"><code>NOTIFY_IME_OF_BLUR</code></h3>
+
+<p>When an <code>IMEContentObserver</code> instance ends observing the focused editor, this is sent to <code>widget</code> synchronously because assumed that this notification causes neither query content events nor composition events.</p>
+
+<p>If <code>widget</code> wants notifications even while all windows are deactive, <code>IMEContentObserver</code> doesn't end observing the focused editor. I.e., in this case, <code>NOTIFY_IME_OF_FOCUS</code> and <code>NOTIFY_IME_OF_BLUR</code> are not sent to <code>widget</code> when a window which has a composition is being activated or deactivated.</p>
+
+<p>When <code>widget</code> wants notifications during deactive, <code>widget</code> includes <code>NOTIFY_DURING_DEACTIVE</code> to the result of <code>nsIWidget::GetIMEUpdatePreference().</code></p>
+
+<p>If this notification is tried to sent before sending <code>NOTIFY_IME_OF_FOCUS</code>, all pending notifications and <code>NOTIFY_IME_OF_BLUR</code> itself are canceled.</p>
+
+<h3 id="NOTIFY_IME_OF_TEXT_CHANGE"><code>NOTIFY_IME_OF_TEXT_CHANGE</code></h3>
+
+<p>When text of focused editor is changed, this is sent to <code>widget</code> with a range of the change. But this is sent only when result of <code><code>nsIWidget::GetIMEUpdatePreference()</code></code> includes <code>NOTIFY_TEXT_CHANGE</code>.</p>
+
+<p>If two or more text changes occurred after previous <code>NOTIFY_IME_OF_TEXT_CHANGE</code> or <code>NOTIFY_IME_OF_FOCUS</code>, the ranges of all changes are merged. E.g., if first change is from <code>1</code> to <code>5</code> and second change is from <code>5</code> to <code>10</code>, the notified range is from <code>1</code> to <code>10</code>.</p>
+
+<p>If all merged text changes were caused by composition, <code>IMENotification::mTextChangeData::mCausedOnlyByComposition</code> is set to true. This is useful if native IME handler wants to ignore all text changes which are expected by native IME.</p>
+
+<p>If at least one text change of the merged text changes was caused by <em>current</em> composition, <code>IMENotification::mTextChangeData::mIncludingChangesDuringComposition</code> is set to true. This is useful if native IME handler wants to ignore delayed text change notifications.</p>
+
+<p>If at least one text change of the merged text changes was caused when there was no composition, <code>IMENotification::mTextChangeData::mIncludingChangesWithoutComposition</code> is set to true.</p>
+
+<h3 id="NOTIFY_IME_OF_SELECTION_CHANGE"><code>NOTIFY_IME_OF_SELECTION_CHANGE</code></h3>
+
+<p>When selection (or caret position) is changed in focused editor, <code>widget</code> is notified of this.</p>
+
+<p>If the last selection change was occurred by a composition event event handling, <code>IMENotification::mSelectionChangeData::mCausedByComposition</code> is set to true. This is useful if native IME handler wants to ignore the last selection change which is expected by native IME.</p>
+
+<p>If the last selection change was occurred by an <code>eSetSelection</code> event, <code>IMENotification::mSelectionChangeData::mCausedBySelectionEvent</code> is set to true. This is useful if native IME handler wants to ignore the last selection change which was requested by native IME.</p>
+
+<p>If the last selection is occurred during a composition, <code>IMENotification::mSelectionChangeData::mOccurredDuringComposition</code> is set to true. This is useful if native IME handler wants to ignore the last selection change which occurred by web application's <code>compositionstart</code> or <code>compositionupdate</code> event handler before inserting composition string.</p>
+
+<h3 id="NOTIFY_IME_OF_POSITION_CHANGE"><code>NOTIFY_IME_OF_POSITION_CHANGE</code></h3>
+
+<p>When reflow or scroll occurs in the document, this is sent to <code>widget</code>. But this is sent only when result of <code><code>nsIWidget::GetIMEUpdatePreference()</code></code> includes <code>NOTIFY_POSITION_CHANGE</code>.</p>
+
+<p>This might be useful to update a candidate window position or something.</p>
+
+<h3 id="NOTIFY_IME_OF_COMPOSITION_EVENT_HANDLED"><code>NOTIFY_IME_OF_COMPOSITION_EVENT_HANDLED</code></h3>
+
+<p>After <code>TextComposition</code> handles <code>eCompositionStart</code>, <code>eCompositionChange</code>, <code>eComposiitionCommit</code> or <code>eCompositionCommitAsIs</code>, this notification is sent to <code>widget</code>. This might be useful to update a candidate window position or something.</p>
+
+<h3 id="NOTIFY_IME_OF_MOUSE_BUTTON_EVENT"><code>NOTIFY_IME_OF_MOUSE_BUTTON_EVENT</code></h3>
+
+<p>When a <code>mousedown</code> event or a <code>mouseup</code> event is fired on a character in a focused editor, this is sent to <code>widget</code>. But this is sent only when result of <code><code>nsIWidget::GetIMEUpdatePreference()</code></code> includes <code>NOTIFY_MOUSE_BUTTON_EVENT_ON_CHAR</code>. This is sent with various information. See <code>IMENotification::mMouseButtonEventData</code> in <a href="http://dxr.mozilla.org/mozilla-central/source/widget/IMEData.h"><code>IMEData.h</code></a> for the detail.</p>
+
+<p>If native IME supports mouse button event handling, <code>widget</code> should notify IME of mouse button events with this. If IME consumes an event, <code>widget</code> should return <code>NS_SUCCESS_EVENT_CONSUMED</code> from <code>nsIWidget::NotifyIME()</code>. Then, <code>nsEditor</code> doesn't handle the mouse event.</p>
+
+<p>Note that if a <code>mousedown</code> event or a <code>mouseup</code> event is consumed by a web application (before a focused editor handles it), this notification is not sent to <code>widget</code>. This means that web applications can handle mouse button events before IME.</p>
+
+<h2 id="Requests_to_IME">Requests to IME</h2>
+
+<p>XP part of Gecko can request IME to commit or cancel composition. This must be requested via <code>IMEStateManager::NotifyIME()</code>. Then, <code>IMEStateManager</code> looks for a proper <code>TextComposition</code> instance. If it's found, <code>TextComposition::RequestToCommit()</code> for calling nsIWidget::NotifyIME() and handles some extra jobs.</p>
+
+<p><code>widget</code> should call the proper native API if it's available. Even if commit or canceling composition does not occur synchronously, <code>widget</code> doesn't need to emulate it since <code>TextComposition</code> will emulate it automatically. In other words, <code>widget</code> should only request to commit or cancel composition to IME.</p>
+
+<h3 id="REQUEST_TO_COMMIT_COMPOSITION"><code>REQUEST_TO_COMMIT_COMPOSITION</code></h3>
+
+<p>A request to commit current composition to IME. See also following "Forcibly committing composition" section for additional information.</p>
+
+<h3 id="REQUEST_TO_CANCEL_COMPOSITION"><code>REQUEST_TO_CANCEL_COMPOSITION</code></h3>
+
+<p>A request to cancel current composition to IME. In other words, a request to commit current composition with an empty string.</p>
+
+<h2 id="Forcibly_committing_composition">Forcibly committing composition</h2>
+
+<p>When <code>TextComposition::RequestToCommit()</code> calls <code>nsIWidget::NotifyIME()</code>, it guarantees synchronous commit or canceling composition.</p>
+
+<p>In order to put it into practice, we need to handle the following four scenarios:</p>
+
+<h3 id="The_composition_is_committed_with_non-empty_string_synchronously">The composition is committed with non-empty string synchronously</h3>
+
+<p>This is the most usual case. In this case, <code>TextComposition</code> handles <code>WidgetCompositionEvent</code> instances during a request normally. However, in a remote process in e10s mode, this case never occurs since requests to native IME is handled asynchronously.</p>
+
+<h3 id="The_composition_is_not_committed_synchronously_but_later">The composition is not committed synchronously but later</h3>
+
+<p>This is the only case in a remote process in e10s mode or occurs on Linux even in non-e10s mode if the native IME is iBus. The callers of <code>NotifyIME(REQUEST_TOCOMMIT_COMPOSITION)</code> may expect that composition string is committed immediately for their next job. For such a case, <code>TextComposition::RequestToCommit()</code> synthesizes DOM <code>composition</code> events and a DOM <code>text</code> event for emulating to commit composition synchronously. Additionally, <code>TextComposition</code> ignores comming events which are dispatched by widget when the widget receives native IME events.</p>
+
+<p>In this case, using the last composition string as commit string.</p>
+
+<p>However, if the last composition string is only an ideographic space (fullwidth space), the composition string may be a placeholder of some old Chinese IME on Windows.</p>
+
+<p><img alt="Screenshot of ChangJie (Traditional Chinese IME) which puts an ideographic space into composition string for placeholder" src="https://mdn.mozillademos.org/files/8713/ChangJie.png" style="height: 48px; width: 527px;"></p>
+
+<p>In this case, although, we should not commit the placeholder character because it's not a character which the user wanted to input but we commit it as is. The reason is, inputting an ideographic space causes a composition. Therefore, we cannot distinguish if committing composition is unexpected. If the user uses such old Chinese IME, <code>"intl.ime.remove_placeholder_character_at_commit"</code> pref may be useful but we don't support them anymore in default settings (except if somebody will find a good way to fix this issue).</p>
+
+<h3 id="The_composition_is_committed_synchronously_but_with_empty_string">The composition is committed synchronously but with empty string</h3>
+
+<p>This case may occur on Linux or with some IME on other platforms. If a web application implements autocomplete, committing with different strings especially an empty string it might cause confusion.</p>
+
+<p>In this case, <code>TextComposition</code> overwrites the commit string of <code>eCompositionChange</code> event dispatched by widget. However, if the last composition string is only an ideographic space, it shouldn't be committed. See the previous case</p>
+
+<p>Note that this case doesn't work as expected when composition is in a remote process in e10s mode.</p>
+
+<h3 id="The_composition_is_not_committed">The composition is not committed</h3>
+
+<p>On Linux, there is no API to request commit or canceling composition forcibly. Instead, Gecko uses <code>gtk_im_context_reset()</code> API for this purpose because most IME cancel composition with it. But there are some IMEs which do nothing when Gecko calls it.</p>
+
+<p>If this occurs, Gecko should restart composition with a DOM <code>compositionstart</code> event , a DOM <code>compositionupdate</code> event and a DOM <code>text</code> event at caret position.</p>
+
+<div class="note">
+<p>This issue hasn't been supported yet.</p>
+</div>
+
+<h2 id="IME_state_management">IME state management</h2>
+
+<p>IME is a text input system. It means that except when a user wants to input some text, IME shouldn't be avaliable. For example, pressing the space key to attempt scrolling a page may be consumed and prevented by IME. Additionally, password editors need to request special behavior with IME.</p>
+
+<p>For solving this issue, Gecko sets the proper IME state at DOM focus change.</p>
+
+<p>First, when a DOM node gets focus, <code>nsFocusManager</code> notifies <code>IMEStateManager</code> of the new focused node (calls <code>IMEStateManager::OnChangeFocus()</code>). <code>IMEStateManager</code> asks desired IME state by calling <code>nsIContent::GetDesiredIMEState()</code> of the node. If the node owns <code>nsEditor</code> instance, it asks for the desired IME state from the editor and returns the result.</p>
+
+<p>Next, <code>IMEStateManager</code> initializes <code>InputContext</code> (defined in <a href="http://dxr.mozilla.org/mozilla-central/source/widget/IMEData.h"><code>IMEData.h</code></a>) with the desired IME state and node information. Then, it calls <code>nsIWidget::SetInputContext()</code> with the <code>InputContext</code>.</p>
+
+<p>Finally, <code>widget</code> stores the <code>InputContext</code> and enables or disables IME if the platform has such an API.</p>
+
+<h3 id="InputContext"><code>InputContext</code></h3>
+
+<p><code>InputContext</code> is a struct. Its <code>mIMEState</code>, <code>mHTMLInputType</code>, <code>mHTMLInputInputMode</code> and <code>mActionHint</code> are set at <code>nsIWidget::SetInputContext()</code> called.</p>
+
+<h4 id="mIMEState"><code>mIMEState</code></h4>
+
+<p>IME state has two abilities. One is enabled state:</p>
+
+<h5 id="ENABLED"><code>ENABLED</code></h5>
+
+<p>This means IME is fully available. E.g., when an editable element such as <code>&lt;input type="text"&gt;</code>, <code>&lt;textarea&gt;</code> or <code>&lt;foo contentediable&gt;</code> has focus.</p>
+
+<h5 id="DISABLED"><code>DISABLED</code></h5>
+
+<p>This means IME is not available. E.g., when a non-editable element has focus or no element has focus, the desired IME state is <code>DISABLED</code>.</p>
+
+<h5 id="PASSWORD"><code>PASSWORD</code></h5>
+
+<p>This means IME state should be the same as the state when a native password field has focus. This state is set only when <code>&lt;input type="password"&gt;</code> (<code><a href="/en-US/docs/Web/CSS/ime-mode">ime-mode</a>: auto;</code>), <code>&lt;input type="text" style="ime-mode: disabled;"&gt;</code> or <code>&lt;textarea style="ime-mode: disabled;"&gt;</code>.</p>
+
+<h5 id="PLUGIN"><code>PLUGIN</code></h5>
+
+<p>This is set only when a windowless plugin has focus.</p>
+
+<div class="note">
+<p>Be careful, even if a password field has focus, <code>mIMEState</code> may be <code>ENABLED</code>. When you need to check if a password field has focus for security reasons, you should use <code>InputContext::IsPasswordEditor()</code>.</p>
+</div>
+
+<p>The other is IME open state:</p>
+
+<h5 id="DONT_CHANGE_OPEN_STATE"><code>DONT_CHANGE_OPEN_STATE</code></h5>
+
+<p>The open state of IME shouldn't be changed. I.e., Gecko should keep the last IME open state.</p>
+
+<h5 id="OPEN"><code>OPEN</code></h5>
+
+<p>Open IME. This is specified only when ime-mode of the new focused element is <code>active</code>.</p>
+
+<h5 id="CLOSE"><code>CLOSE</code></h5>
+
+<p>Close IME. This is specified only when ime-mode of the new focused element is <code>inactive</code>.</p>
+
+<div class="note">
+<p>E.g., on Linux, applications cannot manage IME open state. On such platforms, this is ignored.</p>
+</div>
+
+<div class="note">
+<p>IME open state should be changed only when <code>nsIWidget::SetInputContext()</code> is called at DOM focus change because changing IME open state while an editor has focus makes users confused. The reason why <code>nsIWidget::SetInputContext()</code> is called is stored in <code>InputContextAction::mCause</code>.</p>
+</div>
+
+<h5 id="How_does_Gecko_disable_IME_in_IMM_mode_on_Windows">How does Gecko disable IME in IMM mode on Windows</h5>
+
+<p>Every window on Windows is associated an <code>IMContext</code>. When Gecko disables IME, <a href="http://dxr.mozilla.org/mozilla-central/source/widget/windows/WinIMEHandler.cpp">mozilla::widget::IMEHandler</a>::SetInputContext() disasociates the context from the window.</p>
+
+<h5 id="How_does_Gecko_disable_IME_in_TSF_mode_on_Windows">How does Gecko disable IME in TSF mode on Windows</h5>
+
+<p><a href="http://dxr.mozilla.org/mozilla-central/source/widget/windows/TSFTextStore.cpp"><code>mozilla::widget::TSFTextStore</code></a> sets focus to a dummy context which disables the keyboard.</p>
+
+<h5 id="How_does_Gecko_disable_IME_on_Mac">How does Gecko disable IME on Mac</h5>
+
+<p><code><a href="http://dxr.mozilla.org/mozilla-central/source/widget/cocoa/TextInputHandler.mm">mozilla::widget::TextInputHandler</a>::HandleKeyDownEvent()</code> doesn't call focused view's <code>interpretKeyEvents</code>. This prevents native key events to be passed to IME.</p>
+
+<h5 id="How_does_Gecko_disable_IME_on_GTK">How does Gecko disable IME on GTK</h5>
+
+<p><a href="https://dxr.mozilla.org/mozilla-central/source/widget/gtk/IMContextWrapper.cpp">mozilla::widget::IMContextWrapper</a> sets focus to a dummy context which doesn't have IME composition.</p>
+
+<h5 id="How_does_Gecko_disable_IME_on_Android">How does Gecko disable IME on Android</h5>
+
+<dl>
+ <dt>?</dt>
+</dl>
+
+<h4 id="mHTMLInputType"><code>mHTMLInputType</code></h4>
+
+<p>The value is a string representing the focused editor.</p>
+
+<dl>
+ <dt><code>"text"</code>, <code>"password"</code>, <code>"number"</code>, etc.</dt>
+ <dd>When an <code>&lt;input&gt;</code> element gets focus, the value is the type of the input element.</dd>
+ <dt>"textarea"</dt>
+ <dd>When a <code>&lt;textarea&gt;</code> element gets focus, the value is <code>"textarea"</code>.</dd>
+ <dt>""</dt>
+ <dd>When an HTML editor (an element whose <code>contenteditable</code> attribute is <code>"true"</code> or document whose <code>designMode</code> is <code>"on"</code>) gets focus, the value is empty. And also, when the other elements get focus.</dd>
+</dl>
+
+<h4 id="mHTMLInputInputMode"><code>mHTMLInputInputMode</code></h4>
+
+<p>The value is <code>inputmode</code> attribute value of the focused editor. This is set only when <code>"dom.forms.inputmode"</code> pref is true.</p>
+
+<h4 id="mActionHint"><code>mActionHint</code></h4>
+
+<p>The value is <code>mozactionhint</code> attribute value of the focused editor. This is useful for deciding the caption for the submit button in virtual keyboard. E.g., the value could be <code>"Go"</code>, <code>"Next"</code> or <code>"Search"</code>.</p>
+
+<h2 id="Native_IME_handlers">Native IME handlers</h2>
+
+<p>Following classes handles IME on each platform:</p>
+
+<h3 id="Windows">Windows</h3>
+
+<h4 id="mozillawidgetIMEHandler"><code><a href="https://dxr.mozilla.org/mozilla-central/source/widget/windows/WinIMEHandler.cpp">mozilla::widget::IMEHandler</a></code></h4>
+
+<p>This class manages input mehtod context of each window and makes <code>IMMHandler</code> or <code>TSFTextStore</code> work with active IME and focused editor or windowless plugin. This class has only static members, i.e., never created its instance.</p>
+
+<h4 id="mozillawidgetIMMHandler"><a href="http://dxr.mozilla.org/mozilla-central/source/widget/windows/IMMHandler.cpp"><code>mozilla::widget::IMMHandler</code></a></h4>
+
+<p>This class is used when TSF mode is disabled by pref (<code>"intl.tsf.enable"</code>), focused content is a windowless plugin or active IME is for IMM (i.e., not TIP for TSF).</p>
+
+<p>This class handles <code>WM_IME_*</code>  messages and uses <code>Imm*()</code> API. This is a singleton class since Gecko supports only on IM context in a process. Typically, a process creates windows with default IM context. Therefore, this design is enough (ideally, an instance should be created per IM context, though). The singleton instance is created when it becomes necessary. So, if user doesn't meet a windowless plugin nor use IME on it, this instance is never created.</p>
+
+<h4 id="mozillawidgetTSFTextStore"><a href="http://dxr.mozilla.org/mozilla-central/source/widget/windows/TSFTextStore.cpp"><code>mozilla::widget::TSFTextStore</code></a></h4>
+
+<p>This class handles IME events in TSF mode and when TIP (IME implemented with TSF) is active. This instances are created when an editable element gets focus and released when it loses focus.</p>
+
+<p>TSFTextStore implements some COM interfaces which is necessary to work with TIP. And similarly, there is a singleton class, TSFStaticSink, to observe active TIP changes.</p>
+
+<p>TSF is the most complicated IME API on all platforms, therefore, design of this class is also very complicated.</p>
+
+<p>FIrst, TSF/TIP requests to lock the editor content for querying or modifying the content or selection. However, web standards don't have such mechanim. Therefore, when it's requested, TSFTextStore caches current content and selection with <code>WidgetQueryContentEvent</code>. Then, it uses the cache to reply to query requests, and modifies the cache as they requested. At this time, TSFTextStore saves the requests of modification into the queue called <code>PendingAction</code>. Finally, after unlocking the contents, it flushes the pending actions with dispatches <code>WidgetCompositionEvent</code>s via <code>TextEventDispatcher</code>.</p>
+
+<p>Then, <code>IMEContentObserver</code> will notify some changes caused by the dispatched <code>WidgetCompositionEvent</code>s (they are notified synchronously in chrome or non-e10s mode, but asynchronously from a remote process in e10s mode). At this time, <code>TSFTextStore</code> may receive notifications which indicates web application changes the content differently from cache in TSFTextStore. However, <code>TSFTextStore</code> ignores such fact temporarily until the composition is finished completely. The reason is that, notifying unexpected text or selection changes to TSF and/or TIP during composition may behave them odd.</p>
+
+<p>When a composition is committed and it receives <code>NOTIFY_IME_OF_COMPOSITION_EVENT_HANDLED</code>, <code>TSFTextStore</code> clears the cache of contents and notifying TSF of merged text changes and the last selection change if they are not caused by composition. By this step, TSF and TIP may sync its internal cache with actual contents.</p>
+
+<p>Note that if new composition is started before <code>NOTIFY_IME_OF_COMPOSITION_EVENT_HANDLED</code> notification, <code>TSFTextStore</code> handles the new composition with cached contents which may be different from actual contents. So, e.g., reconvertion around caret may not work as unexpectd in such case, but we don't have a good solution for this issue.</p>
+
+<p>On the other hand, <code>TSFTextStore</code> cannot cache character rects since if there are a lot of characters, caching the rects require a lot of CPU cost (to compute each rect) and memory. Therefore, <code>TSFTextStore</code> will use insertion point relative query for them {{Bug(1286157)}}. Then, it can retrieve expected character's rect even if the cache of <code>TSFTextStore</code> is different from the actual contents because TIP typically needs caret position's character rect (for a popup to indicate current input mode or next word suggestion list) or first character rect of the target clause of current composition (for a candidate list window of conversion).</p>
+
+<h3 id="Mac">Mac</h3>
+
+<p>Both IME and key events are handled in <a href="http://dxr.mozilla.org/mozilla-central/source/widget/cocoa/TextInputHandler.mm"><code>TextInputHandler.mm</code></a>.</p>
+
+<p><code>mozilla::widget::TextInputHandlerBase</code> is the most base class. <code>mozilla::widget::PluginTextInputHandler</code> inherits <code>TextInputHandlerBase</code> and handles key events and IME events on focused plugin. <code>mozilla::widget::IMEInputHandler</code> inherits <code>TextInputHandlerBase</code> and handles IME related events. <code>mozilla::widget::TextInputHandler</code> inherits <code>TextInputHandlerBase</code> and implements <code>NSTextInput</code> protocol of Cocoa. The instance is created per <a href="http://dxr.mozilla.org/mozilla-central/source/widget/cocoa/nsChildView.mm"><code>nsChildView</code></a> instance.</p>
+
+<h3 id="GTK">GTK</h3>
+
+<p><code><a href="http://dxr.mozilla.org/mozilla-central/source/widget/gtk/IMContextWrapper.cpp">mozilla::widget::IMContextWrapper</a></code> handles IME. The instance is created per top level window.</p>
+
+<h3 id="Android">Android</h3>
+
+<p><code><a href="https://dxr.mozilla.org/mozilla-central/source/widget/android/nsWindow.cpp">nsWindow::GeckoViewSupport</a></code> handles native IME events and just dispatches <code>Widget*Event</code>.</p>

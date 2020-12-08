@@ -1,0 +1,73 @@
+---
+title: Date.prototype.toLocaleFormat()
+slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleFormat
+tags:
+  - Date
+  - 非标准
+translation_of: Archive/Web/JavaScript/Date.toLocaleFormat
+---
+<div>{{JSRef}} {{non-standard_header}}</div>
+
+<p>非标准方法 <strong><code>toLocaleFormat()</code></strong> 按特定的格式将一个日期转换成一个字符串。 {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} 是符合标准的格式化日期的替代方法。另见更新的(newer)版本的 {{jsxref("Date.prototype.toLocaleDateString()")}}方法.</p>
+
+<h2 id="语法">语法</h2>
+
+<pre class="syntaxbox"><code><var>dateObj</var>.toLocaleFormat(<var>formatString</var>)</code></pre>
+
+<h3 id="参数">参数</h3>
+
+<dl>
+ <dt><code>formatString</code></dt>
+ <dd>与C语言中的 <a class="external" href="http://www.opengroup.org/onlinepubs/007908799/xsh/strftime.html"><code>strftime()</code></a> 方法的参数形式要求相同的格式字符串。</dd>
+</dl>
+
+<h2 id="描述">描述</h2>
+
+<p><code>toLocaleFormat()</code> 方法通过格式化生成的日期或时间提供了更好的软件层面的控制(provides greater software control over the formatting of the generated date and/or time)。用操作系统的地点来月份和星期几的名称本地化。然而，However, ordering of the day and month and other localization tasks are not handled automatically since you have control over the order in which they occur. You should take care that the format string is localized properly according to the user's system settings. Be aware that the locale used is not necessarily the same as the locale of the browser.</p>
+
+<p>Extension and XULRunner developers should know that just loading the format string from a <code>.dtd</code> or <code>.properties</code> file using a <code>chrome://<em>somedomain</em>/locale/<em>somefile.ext</em></code> URI should be <strong>avoided</strong>, as the <code>.dtd</code>/<code>.properties</code> file and the <code>toLocaleFormat()</code> method does not not necessarily use the same locale, which could result in odd looking or even ambiguous or unreadable dates.</p>
+
+<p>Also note that the behavior of the used locale depends on the platform, and the user might customize the locale used, so using the system locale the choose the format string might in some cases not even be adequate. You might consider using some of the more general <code>toLocale*</code> methods of the {{jsxref("Global_Objects/Date", "Date")}} object or doing your own custom localization of the date to be displayed using some of the <code>get*</code> methods of the {{jsxref("Global_Objects/Date", "Date")}} object instead of using this method.</p>
+
+<h2 id="示例">示例</h2>
+
+<h3 id="Using_toLocaleFormat()">Using <code>toLocaleFormat()</code></h3>
+
+<pre class="brush: js">var today = new Date();
+var date = today.toLocaleFormat('%A, %B %e, %Y'); // Bad example
+</pre>
+
+<p>In this example, <code>toLocaleFormat()</code> returns a string such as "Wednesday, October 3, 2007". Note that the format string in this example is not properly localized, which will result in the problems described above.</p>
+
+<h2 id="腻子(Polyfill)">腻子(Polyfill)</h2>
+
+<p>When using the <a href="https://github.com/abritinthebay/datejs/wiki/Format-Specifiers">DateJS</a> library you can polyfill {{jsxref("Date.prototype.toLocaleDateString()")}} like this:</p>
+
+<pre class="brush: js">if (!Date.prototype.toLocaleFormat) {
+    (function() {
+        Date.prototype.toLocaleFormat = function(formatString) {
+            return this.format(formatString);
+        };
+    }());
+}</pre>
+
+<h2 id="标准">标准</h2>
+
+<p>不属于任何标准。在JavaScript 1.6中被实现。</p>
+
+<h2 id="兼容性">兼容性</h2>
+
+<div>
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p>{{Compat("javascript.builtins.Date.toLocaleFormat")}}</p>
+</div>
+
+<h2 id="另见">另见</h2>
+
+<ul>
+ <li>{{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}</li>
+ <li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
+ <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
+ <li>{{jsxref("Date.prototype.toLocaleTimeString()")}}</li>
+</ul>

@@ -1,0 +1,71 @@
+---
+title: NPP_HandleEvent
+slug: NPP_HandleEvent
+tags:
+  - NPAPI
+  - Plugins
+translation_of: Archive/Plugins/Reference/NPP_HandleEvent
+---
+<p> « <a href="https://developer.mozilla.org/ja/docs/Gecko_Plugin_API_Reference">Gecko Plugin API Reference</a> « <a href="https://developer.mozilla.org/ja/docs/Gecko_Plugin_API_Reference/Plug-in_Side_Plug-in_API">Plug-in Side Plug-in API</a>
+</p>
+
+<h3 id=".E6.A6.82.E8.A6.81" name=".E6.A6.82.E8.A6.81">概要</h3>
+
+<p>インスタンスにプラットフォーム固有のウィンドウイベントを引き渡します。</p>
+
+<ul>
+ <li>ウィンドウを持つプラグインに対して: 現在 Mac OS でのみ使われています。</li>
+ <li>ウィンドウを持たないプラグインに対して: Windows と Mac OS。</li>
+</ul>
+
+<h3 id=".E6.96.87.E6.B3.95" name=".E6.96.87.E6.B3.95">文法</h3>
+
+<pre>#include &lt;npapi.h&gt;
+
+int16 NPP_HandleEvent(NPP instance, void* event);
+</pre>
+
+<h3 id=".E3.83.91.E3.83.A9.E3.83.A1.E3.83.BC.E3.82.BF" name=".E3.83.91.E3.83.A9.E3.83.A1.E3.83.BC.E3.82.BF">パラメータ</h3>
+
+<p>この関数は以下のパラメータを取ります:</p>
+
+<dl>
+ <dt>instance</dt>
+ <dd>現在のプラグインのインスタンスへのポインタ。</dd>
+</dl>
+
+<dl>
+ <dt>event</dt>
+ <dd>この関数によるイベント処理を表すプラットフォーム特有の値。値:
+ <ul>
+  <li>MS Windows: NPEvent 構造体へのポインタ</li>
+  <li>Mac OS: 標準 Mac OS EventRecord へのポインタ</li>
+ </ul>
+ </dd>
+ <dd>MS Windows や Mac OS に対して起こりうるイベントのリストについては、<a href="ja/NPEvent">NPEvent</a> を参照してください。</dd>
+</dl>
+
+<h3 id=".E6.88.BB.E3.82.8A.E5.80.A4" name=".E6.88.BB.E3.82.8A.E5.80.A4">戻り値</h3>
+
+<ul>
+ <li>プラグインがイベントを処理するならば、この関数は真を返すべきです。</li>
+ <li>プラグインがイベントを無視するならば、この関数は偽を返します。</li>
+</ul>
+
+<h3 id=".E8.AA.AC.E6.98.8E" name=".E8.AA.AC.E6.98.8E">説明</h3>
+
+<p>いつイベントがプラグインウィンドウや描画可能領域で起こったのかをプラグインに告知するために、ブラウザは <code>NPP_HandleEvent</code> を呼びます。この関数のイベントパラメータで与えられた値によって、プラグインはイベントを処理するか無視します。アプリケーションがプラグインへ引きわたす責任があるイベントの型のリストについては、<a href="ja/NPEvent">NPEvent</a> 構造体を参照してください。</p>
+
+<h4 id="MS_Windows" name="MS_Windows">MS Windows</h4>
+
+<p>ブラウザは個々のウィンドウを持つプラグインに対して、描画するためのネイティブなウィンドウ、しばしばブラウザウィンドウの子ウィンドウを与えます。 プラグインはそのウィンドウ内で描画やイベント処理を完全にコントロールします。</p>
+
+<h4 id="Mac_OS" name="Mac_OS">Mac OS</h4>
+
+<p>Mac OS プラットフォームは子ウィンドウをサポートしていないので、ブラウザはウィンドウを持つプラグインにネイティブなウィンドウを与えません。変わりに、ウィンドウを持つプラグインは、ブラウザの指定したオフセットで、ブラウザウィンドウに結びつけられたグラフィック部分を描画します。 このため、<code>NPP_HandleEvent</code> はプラグインが MacOS でホストアプリケーションからイベントを受け取る唯一の方法です。<code>NPP_HandleEvent</code> が呼ばれたとき、現在のポートはもとのポートがプラグインの左上の角に一致するように設定されます。プラグインはマウスの座標変換のために現在のポートを設定する必要はありません。</p>
+
+<h3 id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE" name=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE">関連項目</h3>
+
+<p><a href="ja/NPEvent">NPEvent</a></p>
+
+<p>{{ languages( { "en": "en/NPP_HandleEvent" } ) }}</p>

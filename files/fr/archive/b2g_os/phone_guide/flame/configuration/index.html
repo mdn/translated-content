@@ -1,0 +1,129 @@
+---
+title: Configuration initiale
+slug: Archive/B2G_OS/Phone_guide/Flame/configuration
+tags:
+  - B2G
+  - Firefox OS
+  - Flame
+  - Téléphone Développeur
+  - Téléphone Référence
+translation_of: Archive/B2G_OS/Phone_guide/Flame/Initial_setup
+---
+<div class="summary">
+<p>Après vous être procuré un téléphone Flame, vous devez suivre des étapes de configuration afin qu'il puisse communiquer correctement avec votre ordinateur et votre système d'exploitation. Ces étapes sont nécessaires pour pouvoir mettre à jour votre téléphone, le déboguer ou pousser des applications en cours de développement avec nos outils.</p>
+</div>
+
+<h2 id="Pour_tous_systèmes_d'exploitation">Pour tous systèmes d'exploitation</h2>
+
+<p>Vous devez installer les outils ADB et Fastboot sur votre ordinateur. Ces applications permettent notamment d'interagir avec votre téléphone lorsque ceux-ci sont connectés par USB. Ce sont elles qui vous permettront de "flasher" votre téléphone dans une version de Firefox OS, le rétablir si il est "briqué", pousser des applications, etc...</p>
+
+<div class="note">
+<p><strong>Note </strong>: Si vous êtes sous ubuntu ou debian, vous pouvez installer simplement ces applications avec la commande <code>sudo apt-get install android-tools-adb android-tools-fastboot</code>.</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong> : Si vous êtes sous Mac OS, vous pouvez installer ADB et Fastboot en utilisant Homebrew sur la ligne de commande. Voir <a href="/fr/Firefox_OS/deboguer/Installing_ADB">Installer et utiliser ADB</a>.</p>
+</div>
+
+<p>ADB et Fastboot sont disponibles sur <a class="external external-icon" href="http://developer.android.com/sdk/index.html" title="Android Developer Tookit">Android Developer Toolkit</a>:</p>
+
+<ol>
+ <li>Rendez-vous sur le site</li>
+ <li>Cliquez sur <em>Download Eclipse ADT</em> button.</li>
+ <li>Acceptez le contrat d'utilisation après l'avoir lu.</li>
+ <li>Sélectionnez la version 32-bits ou 64-bit suivant votre système d'exploitation courant (si vous ne savez pas laquelle prendre, utilisez la version 32-bit).</li>
+ <li>Cliquez sur le bouton <em>Download Eclipse ADT with the Android SDK...</em>.</li>
+ <li>Après téléchargement du fichier dézippez le dans le répertoire de votre choix.</li>
+ <li>Le nom du dossier étant assez compliqué, vous pouvez le renommer le dossier en <em>adt </em>si vous le souhaitez.</li>
+</ol>
+
+<p>ADB est un outil qui fonctione uniquement en ligne de commande. Ouvrez une invite de ligne de commande ou un terminal de votre système et rendez-vous dans le dossier que vous venez de dézipper puis dans <code>adt/sdk/platform-tools</code> et lancez la commande <code>adb</code>. Vous devriez voir apparaitre une liste d'informations en réponse. Exécuter la commande <code>adb devices</code> devrait retourner la liste des appareils reliés à votre ordinateur (la liste sera vide si votre téléphone n'est pas connecté.</p>
+
+<p>Afin que l'ensemble des outils fonctionnent, vous devez ajouter les outils ADB à la variable système <em>PATH</em>. Gràce à ça, la commande <code>adb </code>sera exécutable depuis n'importe quel dossier.</p>
+
+<p>Pour faire cela sous Windows 8 (pour Windows 7, ce sera identique mais le nom des menus peut différer) :</p>
+
+<ul>
+ <li>Effectuez un clic droit sur le bouton Windows qui est en bas à gauche de votre écran et sélectionnez button in the bottom left and select <em>Panneau de configuration</em> &gt; <em>Système et sécurité</em> &gt; <em>Système</em> &gt; <em>Paramètres système avancés</em> &gt; <em>Variables d'environnement</em>.</li>
+ <li>Dans les <em>variables système</em>, trouvez la variable appelée <em>Path</em>, sélectionnez là et cliquez sur <em>Editer...</em></li>
+ <li>Dans le champ texte <em>Valeur</em>, assurez-vous de vous positionner à la fin du texte (il peut être particulièrement long) et tapez un point-virgule (;) suivi par le chemin du dossier des outils ADB. Cela devrait ressembler à ça si vous avez laissé le dossier <em>adt</em> sur le bureau : <em>C:\Users\[votre nom d'utilisateur]\Desktop\adt\sdk\platform-tools</em>.<br>
+  <br>
+  Si votre nom d'utilisateur est <em>pierredupond</em> vous ajouterez à la fin ;<em>C:\Users\pierredupond\Desktop\adt\sdk\platform-tools</em>, ou pour ceux qui auraient une version datant d'aout 2016 du SDK sous windows 8.1, devraient le trouver à C:\Users\<em>[YOUR USER NAME]</em>\AppData\Local\Android\sdk\platform-tools (si ce n'est pas le cas faire la mise à jour depuis le SDK et retourner voir).</li>
+ <li>Appuyez sur <em>OK</em> sur l'ensemble des fenêtres ouvertes pour valider les modifications.</li>
+ <li>Fermez la ligne de commande précédemment ouverte et ouvrez en une nouvelle. Tapez ensuite directement <code>adb devices</code>. Si la réponse est <code>List of devices attached</code>, cela signifie que vous avez bien configuré les outils ADB. Rendez-vous maintenant à la section <a href="#extra_steps_windows">étapes supplémentaires pour windows</a>.</li>
+</ul>
+
+<div class="note">
+<p><strong>Note</strong> : Pour ouvrir une ligne de commande, effectuez un clic droit sur le bouton windows en bas à gauche de votre écran et sélectionner Ligne de commande.</p>
+</div>
+
+<p>Sous Mac/Linux:</p>
+
+<ul>
+ <li>Ouvrez votre répertoire personnel et éditez le fichier nommé<code> .bash_profile</code> <code>ou .bashrc</code> file avec un éditeur de texte simple comme VIM, Text Wrangler ou Sublime Text (n'utilisez pas d'éditeur de texte avancé comme Word ou Writer).</li>
+ <li>Ajoutez une nouvelle ligne à la fin du fichier qui précisera le chemin du dossier adt :
+  <ul>
+   <li>Mac : <code>PATH=/Users/<em>[votre nom d'utilisateur]</em>/Desktop/adt/sdk/platform-tools:$PATH</code></li>
+   <li>Linux : <code>PATH=/home/<em>[votre nom d'utilisateur]</em>/Desktop/adt/sdk/platform-tools:$PATH</code></li>
+  </ul>
+ </li>
+ <li>Sauvegardez et fermez le fichier.</li>
+ <li>Redémarrez un nouveau terminal et testez la configuration en tapant la commande <code>adb devices</code>. Si la commande répond <code>List of devices attached</code>, vous avez correctement configuré les outils ADB.</li>
+</ul>
+
+<div class="note">
+<p>Note : sous Mac OS, si vous ne voyez pas les fichiers cachés, ouvrez un terminal et exécutez la commande suivante : <code>defaults write com.apple.finder AppleShowAllFiles YES</code></p>
+</div>
+
+<h2 id="Enable_remote_debugging">Enable remote debugging</h2>
+
+<p>Assurez-vous que le débogage est activé sur votre Flame, en utilisant l'option <em>Débogage distant/Dégogage USB</em> de l'appareil <a href="/fr/Firefox_OS/Déboguer/Les_paramètres_développeurs">Paramètres développeurs</a> (L'option est nommée différemment, selon que vous ayez Firefox 1.3 et inférieur, ou Firefox 1.4+ installé).</p>
+
+<h2 id="Étapes_supplémentaires_pour_Linux">Étapes supplémentaires pour Linux</h2>
+
+<p>Suivant la distribution que vous utilisez, vous devrez peut-être ajouter une nouvelle règle <a href="/fr/Firefox_OS/Prerequis_pour_construire_Firefox_OS#Pour_Linux_.3A_configurer_la_r.C3.A8gle_udev_li.C3.A9e_au_t.C3.A9l.C3.A9phone">udev</a> pour votre téléphone.</p>
+
+<p>Afin de déterminer le <em>vendor ID</em> de votre téléphone, connectez-le via USB et exécutez la commande <code>lsusb</code> qui listera l'ensemble de vos périphériques USB. Trouvez votre téléphone dans la liste et notez les quatre derniers chiffres qui suivent le préfixe "ID". Un identifiant de Flame est habituellement <code>05c6</code>, donc la règle UDEV à ajouter serait :</p>
+
+<pre>SUBSYSTEM=="usb", ATTRS{idVendor}=="05c6", MODE="0666"
+</pre>
+
+<p>Si votre téléphone est listé avec un autre identifiant, utilisez le à la place. Par exemple :</p>
+
+<pre>SUBSYSTEM=="usb", ATTRS{idVendor}=="18d1", MODE="0666"
+</pre>
+
+<p>Après modification, exécutez la commande <code>udevadm control --reload-rules</code> pour recharger la configuration, débranchez puis rebranchez votre téléphone avant de continuer.</p>
+
+<h2 id="Étapes_supplémentaires_pour_Windows">Étapes supplémentaires pour Windows</h2>
+
+<p>Pour accéder à un téléphone Flame avec les outils <a href="/fr/Firefox_OS/deboguer/Installing_ADB">ADB</a> ainsi qu'avec les outils de développement de Mozilla comme <a href="/fr/Firefox_OS/Using_the_App_Manager">App Manager</a>/<a href="/fr/docs/Outils/WebIDE">WebIDE </a>, un driver USB est demandé. La suite de ce paragraphe va vous détailler les étapes d'installation de celui-ci.</p>
+
+<h3 id="Télécharger_le_driver">Télécharger le driver</h3>
+
+<p><a href="http://cds.w5v8t3u9.hwcdn.net/Alcatel_USB_Driver_Q_4.0.0_2013_11_11_noinstall.zip">Téléchargez le driver Windows</a>. Extrayez le fichier ZIP sur dans un répertoire.</p>
+
+<div class="note">
+<p><strong>Note</strong>: L'outils <a href="/fr/Firefox_OS/deboguer/Installing_ADB">ADB</a> doit être installé avant le driver : veuillez suivre les instructions fournies plus haut si vous ne l'avez pas encore fait.</p>
+</div>
+
+<h3 id="Installer_le_driver_USB">Installer le driver USB</h3>
+
+<p>Connectez votre téléphone Flame à votre ordinateur avec un câble USB.</p>
+
+<p>Pour installer le driver, ouvrer le répertoire <code>Alcatel_USB_Driver_Q_4.0.0_2013_11_11_noinstall</code> créé après extraction et exécutez le fichier <code>DriverInstaller.exe</code>. Vous pouvez recevoir un message d'avertissement de la part de Windows indiquant qu'il ne connait pas l'éditeur de l'application. Si c'est le cas, cliquez sur <em>oui</em> pour continuer.</p>
+
+<p><img alt="Simple dialog box showing a picture of a phone along with install and uninstall buttons." src="https://mdn.mozillademos.org/files/8079/driver-install.png" style="display: block; height: 523px; margin: 0px auto; width: 358px;"></p>
+
+<p>Cliquez sur le bouton <em>Install</em> pour installer le driver.</p>
+
+<p>Après installation, vous pouvez contrôler que tout fonctionne correctement en ouvrant un terminal et en exécutant la commande <code>adb devices</code>.</p>
+
+<p>Assurez-vous que le débogage à distance est activé sur votre téléphone en activant l'option <em>Remote debugging/Debugging via USB</em> dans les <a href="/fr/Firefox_OS/deboguer/parametres_developpeurs">paramètres pour développeur </a>(suivant la version que vous utilisez le nom de l'option et sa localisation dans les menus peut légèrement différer).</p>
+
+<p>Le résultat de la commande doit ressembler à ça :</p>
+
+<pre>List of devices attached
+3561d02a          device</pre>
+
+<p>Si votre téléphone n'apparait pas, contrôler le gestionnaire de périphériques de Windows. Le Flame devrait apparaitre sous le nom "ACER ADB Interface". Vous pouvez confirmer sa présence en débranchant le câble USB : il devrait alors disparaitre de liste des périphériques. Désinstallez le driver en effectuant un clic droit sur "ACER ADB Interface" et cliquez sur <em>désinstaller</em>. Assurez-vous de bien cocher la case pour désinstaller le driver.  Relancez l'installation. Il peut être utile de désactiver la mise en veille de votre téléphone durant l'installation : Windows peut vouloir utiliser un driver par défaut quand l'écran est éteint.</p>

@@ -1,0 +1,80 @@
+---
+title: Components.utils.evalInSandbox
+slug: Components.utils.evalInSandbox
+tags:
+  - Developing Mozilla
+  - Extensions
+  - JavaScript
+  - XPConnect
+translation_of: Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.evalInSandbox
+---
+<h3 id="Introduction" name="Introduction">Introduction</h3>
+
+<p>在某些情况下， 你希望将 <a href="cn/JavaScript">JavaScript</a>代码限定在可靠的执行环境 . 在<a href="cn/Firefox_1.5">Firefox 1.5</a> (Gecko 1.8) or 之后的版本, 有这么个API允许你去干这件事. 这里引入了“沙箱”的概念，你可以在沙箱中创建和执行代码. 这些代码的执行将会受到沙箱的限制,就像在一个普通的网页中一样。</p>
+
+<h3 id="Use" name="Use">Use</h3>
+
+<p>要使用 <code>evalInSandbox()</code>, 你得先使用构造函数创建一个沙箱对象。 <code><a href="cn/Components.utils.Sandbox">Components.utils.Sandbox</a></code>. 该沙箱必须使用origin URI 或者最好使用 DOM window (nsIDOMWindow, 就像网页中的 <code>window</code> 对象一样)来初始化. 在 <a href="cn/Firefox_3">Firefox 3</a> (Gecko 1.9) 及以后的版本, 你也可以通过 <code>nsIPrincipal</code> 对象来初始化. 使用 <code>nsIPrincipal</code> 比使用 origin URI更好。出于对安全的考虑， URI, window, or <code>nsIPrincipal</code> 会被当成"源"  (e.g. 就像同源安全检测)。比如，传入一个 URI  <code><span class="nowiki">http://www.example.com/</span></code> ，将允许沙箱中的代码从该地址创建AJAX请求。如果沙箱中的代码设置了 <code><a href="cn/DOM/document.domain">document.domain</a></code>, 那将会修改同源检测，你可以传递一个 DOM window 对象 or <code>nsIPrincipal</code> 给沙箱的构造函数，而不是URI。</p>
+
+<p>咱们看一个关于 URI的例子:</p>
+
+<pre class="notranslate">// 通过 URI 创建沙箱
+var s = Components.utils.Sandbox("http://www.example.com/");
+</pre>
+
+<p>这段代码创建了一个空的沙箱。 当你这么操作的时候 <code style="">evalInSandbox(text, sandbox)，</code>它将作为一个全局对象存在。</p>
+
+<p><span style="">如果想在其中添加其他对象，看下面这个例子：</span></p>
+
+<pre class="notranslate">s.y = 5;  // 添加属性 'y'值为 5 到全局范围
+var result = Components.utils.evalInSandbox("x = y + 2; x + 3", s);
+// result is 10, s.x is now 7
+</pre>
+
+<p> 这就是个普通操作，也干不了什么坏事:</p>
+
+<pre class="notranslate">s.foo = Components;
+// 报错 "Permission Denied"
+Components.utils.evalInSandbox("foo.classes", s);
+</pre>
+
+<p> 另一方面, 沙箱中的任何函数都能够像chrome中的代码一样执行。你可以在下一节看到好几种骚操作。</p>
+
+<p>Note <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=350558" title="FIXED: Arrays returned by evalInSandbox aren't instanceof Array">bug 350558</a>.</p>
+
+<h3 id="Security" name="Security">Security</h3>
+
+<div class="warning"><strong>安全警告:</strong> 当你使用<code>evalInSandbox()</code> 的时候，如果你依赖沙箱中执行代码返回的对象属性时，会冒出一些潜在的安全问题。</div>
+
+<p>比如 :</p>
+
+<pre class="eval notranslate">&lt;script src="prototype.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+var s = new Components.utils.Sandbox(url);
+var x = Components.utils.evalInSandbox(untrusted_code, s);
+if (x == 1) {
+  /* 调用x.valueOf() 不安全 */
+}
+
+if (x === 1) {
+  /* this code is safe */
+}
+
+var y = x.y; /* this is unsafe */
+var z = sandbox.z; /* unsafe */
+
+if (typeof x == "number") {
+  /* safe */
+}
+&lt;/script&gt;
+</pre>
+
+<p>我们来看看安全问题是怎么产生的, 上面例子 <code>(x == 1)</code> 。<code>x.valueOf()</code> 方法执行的时候会通过chrome code 来调用。这个时候，不安全的代码就可以在chrome code 全局范围创造一个String对象。</p>
+
+<p>如果该chrome code 已经添加了具有chrome 某些方法的控制权，比如：<code>String.prototype</code>, <code>Object.prototype</code>, or <code>Function.prototype</code>，不安全的代码就能够滥用这些。不安全代码能够做什么，取决于这些方法是什么。不管怎么样，不安全代码最终都能以chrome的权限来执行。</p>
+
+<p>想要避免潜在安全隐患，你需要非常小心避免使用从<code>evalInSandbox()</code> 返回的对象，还有，你需要确保那些不受信任的JSON串在使用 evalInSandbox() 的时候不包括任何方法和表达式。</p>
+
+<p><br>
+ See also: <a class="external" href="http://simile.mit.edu/wiki/Piggy_Bank_Scraper_Risk">PiggyBank analysis of sandbox</a></p>

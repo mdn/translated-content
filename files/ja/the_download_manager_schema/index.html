@@ -1,0 +1,108 @@
+---
+title: The Download Manager schema
+slug: The_Download_Manager_schema
+tags:
+  - Firefox 3
+translation_of: Archive/Mozilla/The_Download_Manager_schema
+---
+<p>
+ダウンロードマネージャは、進行中のダウンロードに加えて、保留、あるいは完了したダウンロード状況の把握に SQLite テーブルを使っています。
+</p><p>このテーブルは「downloads.sqlite」という名前のデータベースファイルに、「moz_downloads」というテーブル名で保存されています。現在のデータベーススキーマのバージョンは 8 です。
+</p><p>この情報は、各ダウンロード項目の <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownload" title="">nsIDownload</a></code> オブジェクトを取得するための <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadManager" title="">nsIDownloadManager</a></code> メソッドを使って利用できますが、直接テーブルを参照したい場合は、<a href="ja/Storage">Storage</a> API を使って行うことができます。
+</p>
+<h3 id=".E3.82.B9.E3.82.AD.E3.83.BC.E3.83.9E.E3.83.86.E3.83.BC.E3.83.96.E3.83.AB" name=".E3.82.B9.E3.82.AD.E3.83.BC.E3.83.9E.E3.83.86.E3.83.BC.E3.83.96.E3.83.AB">スキーマテーブル</h3>
+<table class="standard-table"> <tbody><tr>
+<th>項目名
+</th><th>型
+</th><th>説明
+</th></tr>
+<tr>
+<td>id
+</td><td>整数
+</td><td>ダウンロードの固有 ID。この項目はテーブルの主キーです。
+</td></tr>
+<tr>
+<td>name
+</td><td>文字列
+</td><td>ダウンロードのファイル名。
+</td></tr>
+<tr>
+<td>source
+</td><td>文字列
+</td><td>ダウンロードの取得元 URI。
+</td></tr>
+<tr>
+<td>target
+</td><td>文字列
+</td><td>ダウンロードの保存先 URI。
+</td></tr>
+<tr>
+<td>tempPath
+</td><td>文字列
+</td><td>ダウンロードに利用される一時ファイルのパス。
+</td></tr>
+<tr>
+<td>startTime
+</td><td>整数
+</td><td>ダウンロードの開始時刻。
+</td></tr>
+<tr>
+<td>endTime
+</td><td>整数
+</td><td>ダウンロードの終了時刻。
+</td></tr>
+<tr>
+<td>state
+</td><td>整数
+</td><td>ダウンロードの状況。<a href="ja/NsIDownloadManager#Constants"><code>nsIDownloadManager</code> ドキュメント内の定数一覧</a> を参照してください。
+</td></tr>
+<tr>
+<td>referrer
+</td><td>文字列
+</td><td>ダウンロードのリファラ。
+</td></tr>
+<tr>
+<td>entityID
+</td><td>文字列
+</td><td>ダウンロードチャネルを実装するために利用される <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIResumableChannel" title="">nsIResumableChannel</a></code> から提供された実体 ID。この情報はダウンロードが中止された後、再開するときに利用されます。
+</td></tr>
+<tr>
+<td>currBytes
+</td><td>整数
+</td><td>現時点でダウンロードが完了したバイト数。初期値は null でなく 0 です。
+<p>The current number of bytes that have been downloaded. Defaults to 0, may not be null.
+</p>
+</td></tr>
+<tr>
+<td>maxBytes
+</td><td>整数
+</td><td>ダウンロードが必要な合計バイト数。初期値は null でなく -1 です。
+</td></tr>
+<tr>
+<td>mimeType
+</td><td>文字列
+</td><td>ファイルの MIME タイプ。
+</td></tr>
+<tr>
+<td>preferredApplication
+</td><td>文字列
+</td><td>ダウンロード完了後にファイルを開くのに利用される推奨アプリケーション。
+</td></tr>
+<tr>
+<td>preferredAction
+</td><td>整数
+</td><td>ダウンロード完了時に行うアクションを示した、<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMIMEInfo" title="">nsIMIMEInfo</a></code> のアクション定数。初期値は null でなく 0 (ディスクに保存) です。
+</td></tr>
+<tr>
+<td>autoResume
+</td><td>整数
+</td><td>ダウンロードが自動的に再開できない場合は 0、再開できる場合は 1 です。初期値は null でなく 0 です。
+</td></tr>
+</tbody></table>
+<h3 id=".E9.96.A2.E9.80.A3.E8.A8.98.E4.BA.8B" name=".E9.96.A2.E9.80.A3.E8.A8.98.E4.BA.8B">関連記事</h3>
+<ul><li> <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadManager" title="">nsIDownloadManager</a></code>
+</li><li> <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadManagerUI" title="">nsIDownloadManagerUI</a></code>
+</li><li> <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadProgressListener" title="">nsIDownloadProgressListener</a></code>
+</li></ul>
+<div class="noinclude">
+</div>

@@ -1,0 +1,126 @@
+---
+title: JS_DefineObject
+slug: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_DefineObject
+tags:
+  - JSAPI Reference
+  - SpiderMonkey
+translation_of: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_DefineObject
+---
+<p>
+</p><div class="breadcrumbs"><a href="/ja" title="ja">メインページ</a> » <a href="/ja/docs/SpiderMonkey" title="SpiderMonkey">SpiderMonkey</a> »
+ <a href="/ja/docs/SpiderMonkey/JSAPI_Reference" title="JSAPI_Reference">JSAPI リファレンス</a> »
+ <code>JS_NewRuntime</code></div>
+<p></p>
+
+<p>あるオブジェクトのプロパティとなるオブジェクトを生成する関数です。 <span class="comment">Create an object that is a property of another object.</span> {{ 英語版章題("Syntax") }}</p>
+
+<h2 id=".E6.A7.8B.E6.96.87" name=".E6.A7.8B.E6.96.87">構文</h2>
+
+<pre class="eval">JSObject * JS_DefineObject(JSContext *cx, JSObject *obj,
+    const char *name, JSClass *clasp, JSObject *proto,
+    uintN flags);
+</pre>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Name</th>
+   <th>Type</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td><code>cx</code></td>
+   <td><code>JSContext *</code></td>
+   <td>エラー報告に用いるランタイム環境から派生したコンテキストへのポインタ<span class="comment">Pointer to a JS context from which to derive runtime information for error reporting.</span> {{ Jsapi-requires-request() }}</td>
+  </tr>
+  <tr>
+   <td><code>obj</code></td>
+   <td><code>JSObject *</code></td>
+   <td>生成したオブジェクトをプロパティとして持つオブジェクトへのポインタ<span class="comment">Object to which this new object belongs as a property.</span></td>
+  </tr>
+  <tr>
+   <td><code>name</code></td>
+   <td><code>const char *</code></td>
+   <td><code>obj</code>でのプロパティ名<span class="comment">Name of the property that encapsulates the new object in &lt;code&gt;obj&lt;/code&gt;.</span></td>
+  </tr>
+  <tr>
+   <td><code>clasp</code></td>
+   <td><code>JSClass *</code></td>
+   <td>オブジェクト生成に用いるクラス<span class="comment">Class to use for the new object.</span></td>
+  </tr>
+  <tr>
+   <td><code>proto</code></td>
+   <td><code>JSObject *</code></td>
+   <td>オブジェクト生成に用いるプロトタイプ<span class="comment">Prototype object to use for the new object.</span></td>
+  </tr>
+  <tr>
+   <td><code>flags</code></td>
+   <td><code>uintN</code></td>
+   <td>生成したオブジェクトの属性を指定するフラグ<span class="comment">Property flags for the new object.</span></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>{{ 英語版章題("Description") }}</p>
+
+<h2 id=".E8.AA.AC.E6.98.8E" name=".E8.AA.AC.E6.98.8E">説明</h2>
+
+<p><code>JS_DefineObject</code>は、オブジェクトのインスタンスを生成し、それを引数<code>obj</code>で指定した既存オブジェクトのプロパティとして設定する関数です。引数<code>name</code>で、<code>obj</code>でのプロパティ名を指定し、<code>flags</code>でそのプロパティの属性を指定します。以下の表で設定可能な<code>flags</code>の値を示します。これらの値は単一、あるいは複数の値の論理和として引数に与えることができます。 <span class="comment">&lt;code&gt;JS_DefineObject&lt;/code&gt; instantiates and names a new object for an existing object, &lt;code&gt;obj&lt;/code&gt;. &lt;code&gt;name&lt;/code&gt; is the property name to assign to &lt;code&gt;obj&lt;/code&gt; to hold the new object, and &lt;code&gt;flags&lt;/code&gt; contains the property flags to set for the newly created property. The following table lists possible values you can pass in &lt;code&gt;flags&lt;/code&gt;, either singly, or &lt;code&gt;OR&lt;/code&gt;'d together:</span></p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Flag</th>
+   <th>Purpose</th>
+  </tr>
+  <tr>
+   <td><code>JSPROP_ENUMERATE</code></td>
+   <td><code>for</code>と<code>in</code>ループを使ったアクセス(<a href="ja/Core_JavaScript_1.5_Guide/Object_Manipulation_Statements">Core JavaScript 1.5 Guide:Object Manipulation Statements</a>)を可能にします。<span class="comment">Property is visible to &lt;code&gt;for&lt;/code&gt; and &lt;code&gt;in&lt;/code&gt; loops.</span></td>
+  </tr>
+  <tr>
+   <td><code>JSPROP_READONLY</code></td>
+   <td>プロパティの値を読み取り専用にします。<span class="comment">Property is read only.</span></td>
+  </tr>
+  <tr>
+   <td><code>JSPROP_PERMANENT</code></td>
+   <td>プロパティの削除を不可能にします。<span class="comment">Property cannot be deleted.</span></td>
+  </tr>
+  <tr>
+   <td><code>JSPROP_EXPORTED</code></td>
+   <td>Property can be imported by other objects.</td>
+  </tr>
+  <tr>
+   <td><code>JSPROP_INDEX</code></td>
+   <td>Property is actually an index into an array of properties, and is cast to a const <code>char *</code>.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>引数<code>clasp</code>はオブジェクトの生成時に用いる基底クラスへのポインタ、引数<code>proto</code>はプロトタイプへのポインタをそれぞれとります。<code>proto</code>に<code>NULL</code>を指定した場合、JavaScriptは自分自身をプロトタイプとします。引数<code>obj</code>はオブジェクトの親オブジェクトになります。 <span class="comment">&lt;code&gt;clasp&lt;/code&gt; is a pointer to the base class to use when creating the new object, and &lt;code&gt;proto&lt;/code&gt; is an pointer to the prototype upon which to base the new object. If you set &lt;code&gt;proto&lt;/code&gt; to &lt;code&gt;NULL&lt;/code&gt;, JS sets the prototype object for you. The parent object for the new object is set to &lt;code&gt;obj&lt;/code&gt;.</span></p>
+
+<p><code>JS_DefineObject</code>が成功したとき、返値は新たに生成したプロパティオブジェクトへのポインタになります。もしすでにプロパティが設定されていた場合、オブジェクトは生成されず、返り値は<code>NULL</code>になります。 <span class="comment">&lt;code&gt;JS_DefineObject&lt;/code&gt; returns a pointer to the newly created property object if successful. If the property already exists, or cannot be created, &lt;code&gt;JS_DefineObject&lt;/code&gt; returns &lt;code&gt;NULL&lt;/code&gt;.</span> {{ 英語版章題("See Also") }}</p>
+
+<h3 id=".E5.8F.82.E7.85.A7" name=".E5.8F.82.E7.85.A7">参照</h3>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td>Groups</td>
+   <td><a href="ja/JSAPI_Reference#Functions">Functions</a></td>
+  </tr>
+  <tr>
+   <td>Documents</td>
+   <td>{{ LXRSearch("ident", "i", "JS_DefineObject", "LXR ID Search") }}</td>
+  </tr>
+  <tr>
+   <td>Entries</td>
+   <td>
+    <p><a href="ja/JSClass">JSClass</a>, <a href="ja/JS_DefineConstDoubles">JS_DefineConstDoubles</a>, <a href="ja/JS_DefineElement">JS_DefineElement</a>, <a href="ja/JS_DefineFunction">JS_DefineFunction</a>, <a href="ja/JS_DefineFunctions">JS_DefineFunctions</a>, <a href="ja/JS_DefineProperties">JS_DefineProperties</a>, <a href="ja/JS_DefineProperty">JS_DefineProperty</a>, <a href="ja/JS_DefinePropertyWithTinyId">JS_DefinePropertyWithTinyId</a>, <a href="ja/JS_NewObject">JS_NewObject</a>, <a href="ja/JS_ValueToObject">JS_ValueToObject</a></p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<div class="noinclude"> </div>
+
+<p>{{ languages( { "en": "en/JS_DefineObject" } ) }}</p>

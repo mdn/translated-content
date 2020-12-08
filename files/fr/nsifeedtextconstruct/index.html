@@ -1,0 +1,89 @@
+---
+title: nsIFeedTextConstruct
+slug: nsIFeedTextConstruct
+tags:
+  - Interfaces
+  - Référence_de_l'API_XPCOM
+  - 'XPCOM:Références'
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIFeedTextConstruct
+---
+<p>
+</p><p>L'interface <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFeedTextConstruct" title="">nsIFeedTextConstruct</a></code> représente les champs texte d'un flux RSS ou Atom qui peuvent contenir du texte, du HTML ou du XHTML. Certains éléments d'extensions incluent également des paramètres "type", et cette interface peut être utilisée pour les représenter.
+</p><p><br>
+</p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/feeds/public/nsIFeedTextConstruct.idl" rel="custom">toolkit/components/feeds/public/nsIFeedTextConstruct.idl</a></code><span style="text-align: right; float: right;"><a href="/fr/docs/Interfaces/À_propos_des_interfaces_scriptables" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">Last changed in Gecko 1.8.1 (Firefox 2 / Thunderbird 2 / SeaMonkey 1.1)</span></div>
+</div>
+<p></p><p>Hérité de : <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
+</p><p>Implémentée par : <code>@mozilla.org/feed-textconstruct;1</code>, mais les utilisateurs n'ont généralement pas besoin de créer des instances directement. D'autres interfaces relatives aux flux, telles que <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFeed" title="">nsIFeed</a></code>, <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFeedEntry" title="">nsIFeedEntry</a></code> et <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFeedContainer" title="">nsIFeedContainer</a></code> ont des attributs qui retournent des objets implémentant <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFeedTextConstruct" title="">nsIFeedTextConstruct</a></code>
+</p>
+<h2 id="Synoptique">Synoptique</h2>
+<table class="standard-table"> <tbody><tr>
+<td> <code>nsIDOMDocumentFragment <a href="#createDocumentFragment.28.29"> createDocumentFragment</a>(in nsIDOMElement element);</code>
+</td></tr>
+<tr>
+<td> <code>AString <a href="fr/T#plainText.28.29">plainText</a>();</code>
+</td></tr>
+</tbody></table>
+<h2 id="Attributs">Attributs</h2>
+<table class="standard-table"> <tbody><tr>
+<td class="header">Attribut
+</td><td class="header">Type
+</td><td class="header">Description
+</td></tr> <tr>
+<td> <code>base</code>
+</td><td> <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI" title="">nsIURI</a></code>
+</td><td> Si l'attribut text contient du HTML ou du XHTML, les références relatives dans le contenu doivent être résolues par rapport à cette URI.
+</td></tr>
+<tr>
+<td> <code>lang</code>
+</td><td> <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/AString" title="">AString</a></code>
+</td><td> La locale du texte (telle que « fr-FR » pour le français parlé en France).
+</td></tr>
+<tr>
+<td> <code>text</code>
+</td><td> <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/AString" title="">AString</a></code>
+</td><td> Le contenu effectif. Cette chaîne peut contenir des balises si le <code>type</code> est « html » ou « xhtml ».
+</td></tr>
+<tr>
+<td> <code>type</code>
+</td><td> <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/AString" title="">AString</a></code>
+</td><td> Le type du contenu décrit : « text », « html », ou « xhtml ».
+</td></tr>
+</tbody></table>
+<h2 id="Méthodes">Méthodes</h2>
+<h3 id="createDocumentFragment()">createDocumentFragment()</h3>
+<p>Crée un nouveau fragment de document sur un élément DOM donné, contenant le texte et, si l'attribut text contient du HTML ou du XHTML, son balisage.
+</p>
+<pre class="eval"> nsIDOMDocumentFragment createDocumentFragment(
+   in nsIDOMElement element
+ );
+</pre>
+<h6 id="Paramètres">Paramètres</h6>
+<dl><dt>&lt;tt&gt;element&lt;/tt&gt;
+</dt><dd> L'élément dans lequel créer le nouveau fragment de document.
+</dd></dl>
+<h6 id="Valeur_retournée">Valeur retournée</h6>
+<p>Un <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDocumentFragment" title="">nsIDocumentFragment</a></code> contenant le texte et le marquage.
+</p>
+<h3 id="plainText()">plainText()</h3>
+<p>Retourne la partie uniquement texte du contenu, avec les balises supprimées et les entités décodées.
+</p>
+<pre class="eval"> AString plainText();
+</pre>
+<h6 id="Valeur_retournée_2">Valeur retournée</h6>
+<p>La version « texte uniquement » du contenu de l'attribut text. Si l'attribut <code>type</code> est « text », cette méthode retourne la valeur de l'attribut <code>text</code> sans la modifier.
+</p>
+<h2 id="Remarques">Remarques</h2>
+<p>Si le <code>type</code> du document est « html » ou « xhtml », un caractère « &lt; » représente le balisage. Pour afficher ce caractère, il faut utiliser une séquence d'échappement telle que « <code>&amp;lt;</code> ». Si le type est « text », le caractère « &lt; » se représente lui-même.
+</p>
+<h2 id="Voir_également">Voir également</h2>
+<p><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>, <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMElement" title="">nsIDOMElement</a></code>, <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDocumentFragment" title="">nsIDocumentFragment</a></code>
+</p>

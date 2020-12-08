@@ -1,0 +1,122 @@
+---
+title: 'パート 7: 自分自身のテストを書く'
+slug: Archive/B2G_OS/Automated_testing/gaia-ui-tests/Part_7_Writing_your_own_tests
+tags:
+  - Automation
+  - Firefox OS
+  - Gaia
+  - Python
+  - gaia-ui-tests
+  - tests
+translation_of: Archive/B2G_OS/Automated_testing/gaia-ui-tests/Part_7_Writing_your_own_tests
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/ja/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/Mozilla/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_6_Marionette_By_class" style="float: left;">« 前のページ</a><a href="/ja/docs/Mozilla/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_8_Using_a_base_class">次のページ  »</a></p>
+</div><p></p>
+
+<div class="summary">
+<p><span class="seoSummary">これまでのところ、すばやく設定し、実行してフォローするのに十分な手順に沿って、FirefoxのOS上で、独自の自動テストを書き始めるために必要なツールや情報のほとんどを与えてくれました。この部分では、いくつかのリソースやアイデアをご提供し、人出がいらないつもりで、次に自身の方法を作るために奨励しています。ここでは、独自のテストを書くの方に移動を開始します - お楽しみください！</span></p>
+</div>
+
+<h2 id="リソース">リソース</h2>
+
+<p>自身のユニットテストを構築するために開始するように次のリソースが有用であろう。</p>
+
+<ul>
+ <li><a href="/Firefox_OS/Using_the_App_Manager">Firefox OS App Manager</a>はデバイス上で、またはシミュレータでの直接Gaiaのデバッグをするための素晴らしいツールです。これは、アクセスして要素を操作するために使用するロケーターを見つけるために下にあるコードを検査するための良い方法です。</li>
+ <li>より限定されたが、より低いオーバーヘッド検査機構として、<code>print self.marionette.page_source</code> コマンドを使用して、コンソールへのHTMLソースをダンプすることができます。</li>
+ <li>別のオプションは、<a href="https://github.com/mozilla-b2g/gaia/tree/master/apps">Gaia Git repo</a>で生のHTMLを見ることです。</li>
+ <li>Marionetteのコマンドの詳細については、<a href="https://marionette_client.readthedocs.org/en/latest/">Marionette docs</a>をご覧ください。</li>
+</ul>
+
+<h2 id="新規および変更されたテストのためのアイデア">新規および変更されたテストのためのアイデア</h2>
+
+<p>このセクションでは、始めるためにいくつかのアイデアを提供します。</p>
+
+<h3 id="test_add_contact.pyの変更">test_add_contact.pyの変更</h3>
+
+<p>すでに動作してきたテストを修正してみましょう:</p>
+
+<ol>
+ <li>テスト接点には一意の名前を毎回持っていることを確認します。</li>
+ <li><code>setUp()</code> ステップにおけるすべての連絡先を削除します。</li>
+ <li>ロック解除前に画面を復帰。</li>
+</ol>
+
+<p>今度は、別のテストメソッドの追加しましょう。これは、それが名前の最初に<code>test_</code>を持っている限り好きなものを呼び出すことができます。このテストでは、次の操作を行う必要があります。:</p>
+
+<ol>
+ <li>オープンコンタクト。</li>
+ <li>最初のテストで作成されたものと異なる名前で連絡先を作成します。</li>
+ <li>編集モードで連絡先を再入力します。</li>
+ <li><em>Company</em>を追加します。</li>
+ <li><em>Done</em>をタップします。</li>
+ <li>会社が表示されていることを主張しています。</li>
+</ol>
+
+<p>テストファイルを実行すると、今、両方のテストが実行されます。今、テスト自動化の強度に近づいています — 自動的に一連のテストを実行し、結果を報告する機能！</p>
+
+<h3 id="いくつかの新しいテストのアイデア">いくつかの新しいテストのアイデア</h3>
+
+<ul>
+ <li>連絡先を作成します。連絡先を編集し、名前を変更します。名前の変更が画面に反映されるべきです。</li>
+ <li>それが好きなようにそれを追加するためのコンタクトと 'star'を作成します。メイン画面には、* (スター) カテゴリの下に表示されているはずです。</li>
+ <li>電話番号と連絡先を作成します。連絡先のレコードを開いて、「メッセージ」アイコンをタップした後、メッセージアプリは、受信者フィールドに、連絡先で開く必要があります。</li>
+</ul>
+
+<p> </p>

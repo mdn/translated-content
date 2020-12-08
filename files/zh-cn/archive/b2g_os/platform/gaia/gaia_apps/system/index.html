@@ -1,0 +1,226 @@
+---
+title: System
+slug: Archive/B2G_OS/Platform/Gaia/Gaia_apps/System
+translation_of: Archive/B2G_OS/Platform/Gaia/Gaia_apps/System
+---
+<div class="summary">
+ <p><span class="seoSummary">System app 是在 <a href="https://developer.mozilla.org/en-US/Firefox_OS/Platform/Architecture#Firefox_OS_bootup_procedure">Firefox OS 启动过程</a> 中由Gecko装载的第一个 web 应用,  它会处理许多运行系统所需要的任务，因此不会局限于某一个单独的 web 应用。 这篇文档主要是讲解 Sytem如何工作。</span></p>
+</div>
+<blockquote>
+ <p>任何一个可以用 JavaScript 编写的应用， 会最终使用 JavaScript 构建的。 -- Atwood's Law</p>
+</blockquote>
+<div class="note">
+ <p><b>注意</b>: 您可以在 Gaia Github 仓库中获取到 <a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/system">source code for the System app</a></p>
+</div>
+<h2 id="system_app_是如何启动的">system app 是如何启动的</h2>
+<p>当 Gecko 试图启动System应用时, 它会解析System's manifest.webapp 文件，并根据 <code style="font-style: normal;">launch_path </code>参数（该参数在Gaia应用中一般是 /index.html) 装载 index.html 文件。 要管理整个的移动系统，Sytem app需要装载很多资源文件。  </p>
+<p>整个启动过程是从  <code>bootstrap.js </code>中的下面代码开始的： </p>
+<pre class="brush: js">window.addEventListener('load', function startup() {
+// define safelyLaunchFTU
+function safelyLaunchFTU() {
+  ...
+}
+
+if (Applications.ready) {
+  safelyLaunchFTU();
+} else {
+  ...
+}
+
+window.addEventListener('ftudone', function doneWithFTU() {
+  window.removeEventListener('ftudone', doneWithFTU);
+
+  var lock = window.navigator.mozSettings.createLock();
+  lock.set({
+    'gaia.system.checkForUpdates': true
+  });
+}
+
+  ...
+
+// With all important event handlers in place, we can now notify
+// Gecko that we're ready for certain system services to send us
+// messages (e.g. the radio).
+var evt = new CustomEvent('mozContentEvent',
+{ bubbles: true, cancelable: false,
+  detail: { type: 'system-message-listener-ready' } });
+  window.dispatchEvent(evt);
+}</pre>
+<p>这段代码是这样工作的:</p>
+<ol>
+ <li>System 是运行在浏览器引擎中真正的web应用， 并需要所有它依赖的资源都装载进去 — 包括 图片(images)和样式(styles)。 因此一旦 <a href="/zh-CN/docs/Web/API/Window/onload" title="此页面仍未被本地化, 期待您的翻译!"><code>window.onload</code></a> 事件触发， 我们就要开始这些工作。</li>
+ <li>首先，我们要使用 <span style="font-family: 'Courier New', 'Andale Mono', monospace;">safelyLaunchFTU() 函数</span>准备启动首次启动体验(FTU)  。顾名思义， 只有当用户首次启动 Firefox OS 时， FTU才会出现。</li>
+ <li>当用户在 FTU中点击 “完成” 时， 会启动 <span style="font-family: 'Courier New', 'Andale Mono', monospace;">ftudone </span>自定义事件，  <code>bootstrap.js</code> 会监听和处理这个事件。</li>
+ <li>下一步， 我们会使用 <a href="/zh-CN/docs/Web/API/Settings" title="此页面仍未被本地化, 期待您的翻译!"><code>Settings</code></a> API (<code>navigator.mozSettings</code>)  将  <code>gaia.system.checkForUpdates</code> 设置成 <code>true</code>,  表示系统会检查更新。</li>
+ <li>最后，我们会通过 <span style="font-family: 'Courier New', 'Andale Mono', monospace;">CustomEvent </span>运行自定义的 <code>window.dispatchEvent</code>。这是Gaia 使用的一个非常重要的设计模式， 用于系统消息的处理以及与Gecko层的通信。上面方法是指 Gaia System app 通知 Gecko层， 它已经准备好监听和处理事件了。 </li>
+</ol>
+<h2 id="实现模块化">实现模块化</h2>
+<p>为了实现更好的模块化和灵活性，system 应用本身也在不断的改进。 从1.4 版本开始， 专门发起了一个关于 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=912952">refactor the system module as instantiable object</a> 的倡议来讨论该问题。</p>
+<p>在所有上述代码运行后，每个对 <code style="font-style: normal;">bootstrap.js</code>  中的系统组件的引用都是是如下的形式：</p>
+<pre class="brush: js">window.telephonySettings = new TelephonySettings();
+window.telephonySettings.start();</pre>
+<p> <code>TelephonySettings()</code> 的源代码框架如下：</p>
+<pre class="brush: js">(function(exports) {
+  'use strict';
+  function TelephonySettings() {
+    this.init_param = false;
+  }
+
+  TelephonySettings.prototype = {
+    // Initialzes all settings.
+    start: function() {
+      ...
+    },
+
+    // Clean all settings.
+    stop: function() {
+      ...
+    },
+
+    1st_method: function ts_1st_method() {
+      ...
+    },
+
+    2nd_method: function ts_2nd_method() {
+      ...
+    }
+  };
+
+  exports.TelephonySettings = TelephonySettings;
+
+}(window));</pre>
+<p>这种模式可以帮助每个系统组件实现模块化，并使它们的可测性更强。</p>
+<h2 id="开机和关机动画">开机和关机动画</h2>
+<p>本部分会讲解 System app是如何控制开机动画和关机动画的。 <code>init_logo_handler.js</code> 和 <code>sleep_menu.js</code> 文件会对 system 开机动画和关机动画进行处理。</p>
+<h3 id="开机动画">开机动画</h3>
+<p>开机动画当前并没有包含在主引导程序中，而是要借助于检查 <code style="font-style: normal;">EventListeners。</code></p>
+<p>在 <code>init_logo_handler.js</code> 文件中的开机启动代码如下所示：</p>
+<p>一旦Gecko准备将一些东西画在屏幕上时， 会选择 logo或者是动画。当DOM装载完成时， 我们会运行合适的系统处理程序来完成log或动画。当 <span style="font-family: 'Courier New', 'Andale Mono', monospace;">ftudone 或者 </span><span style="font-family: 'Courier New', 'Andale Mono', monospace;">ftuskip </span>运行时会将logo隐藏。 包含在  <code>init_logo_handler.js 中的</code> <code style="font-style: normal;">_appendCarrierPowerOn</code> 方法表示了如何通过监听<span style="font-family: 'Courier New', 'Andale Mono', monospace;">DOMContentLoaded</span>事件来启动动画或启动logo。<code>logoLoader</code> 方法则在 <code>logo_loader.js 中定义。</code></p>
+<pre class="brush: js">var self = this;
+document.addEventListener('DOMContentLoaded', function() {
+  self.carrierLogo.appendChild(self.logoLoader.element);
+  self._setReady();
+});</pre>
+<p>一旦准备好 logo, 系统会调用 <code>_setReady()</code> 方法,  在方法中会建立一个监听器来监听特殊的 <code>mozChromeEvent事件，这个事件会带有</code> <code>system-first-paint</code> 类型，表示系统系统已经准备好向屏幕绘图。</p>
+<pre class="brush: js">var elem = this.logoLoader.element;
+  ...
+window.addEventListener('mozChromeEvent', function startVideo(e) {
+  if (e.detail.type == 'system-first-paint') {
+    window.removeEventListener('mozChromeEvent', startVideo);
+    if (elem &amp;amp;&amp;amp; elem.ended === false) {
+      elem.play();
+    }
+  }
+});</pre>
+<p>此时图形元素开始运行。一旦启动 <code>ftuopen</code> 或 <code>ftuskip</code> 事件，  <code>init_logo_handler.js</code> 会调用默认的 <code>handleEvent()</code> 方法反过来触发 <code>animate()</code> 方法来以淡出的效果隐藏动画。</p>
+<pre class="brush: js">init: function ilh_init(logoLoader) {
+  window.addEventListener('ftuopen', this);
+  window.addEventListener('ftuskip', this);
+    ...
+},
+
+handleEvent: function ilh_handleEvent() {
+  this.animate();
+},</pre>
+<h3 id="关机动画">关机动画</h3>
+<p>当系统准备就绪时，长按电源(power)按键，会触发定义在 <code style="font-style: normal;">hardware_button.js 文件中的 </code><code>holdsleep</code> 事件。 <code style="font-style: normal;">hardware_button.js 文件会处理所有“物理按键点击“的事件，包括电源（休眠）键，home键，音量增/减键等。</code></p>
+<pre class="brush: js">HardwareButtonsSleepState.prototype.enter = function() {
+  this.timer = setTimeout(function() {
+    / * When the user holds Sleep button more than HOLD_INTERVAL. */
+    this.hardwareButtons.publish('holdsleep');
+    this.hardwareButtons.setState('base');
+  }.bind(this), this.hardwareButtons.HOLD_INTERVAL);
+};</pre>
+<p>关机动画是由 <code>sleep_menu.js 处理的</code>;这个脚本文件会监听 <code>holdsleep</code> 事件，并且当它触发时会显示菜单对话框。</p>
+<pre class="brush: js">init: function sm_init() {
+    ...
+  window.addEventListener('holdsleep', this.show.bind(this));
+    ...
+}</pre>
+<p>如果用户通过重启和关机菜单选项选择关机，会触发 <code>startPowerOff()</code> 方法， 它反过来会触发 <code>LogoLoader()</code> 函数来对关机动画进行处理。</p>
+<pre class="brush: js">handleEvent: function sm_handleEvent(evt) {
+  switch (evt.type) {
+    case 'click':
+      ...
+    this.handler(action);
+    break;
+    ...
+  }
+}
+
+handler: function sm_handler(action) {
+  switch (action) {
+    ...
+    case 'restart':
+      this.startPowerOff(true);
+      break;
+
+    case 'power':
+      this.startPowerOff(false);
+      break;
+    ...
+  }
+}</pre>
+<h2 id="System_的功能">System 的功能</h2>
+<p> System app 会负责许多功能和任务, 你可能还会对能在其职权范围内找到而惊讶。系统应用负责的范围包括：状态栏（ statusbar）和 实用工具盘管理（utility tray management）， SIM卡锁（SIM lock）， 更新管理（update manager）， 主屏幕启动（homescreen launcher），webapp 窗口管理（webapp window） 等。 本节会对System 提供的一些最重要的功能进行探究。</p>
+<h3 id="状态栏（Statusbar）和实用工具盘（utility_tray）">状态栏（Statusbar）和实用工具盘（utility tray）</h3>
+<p>系统状态栏和下拉菜单 (Gaia 通常称之为 <em>utility tray</em>; Android 称之为<em> notification bar</em>) 是由 <code>statusbar.js</code> 和 <code>utility_tray.js </code>来处理的。 在应用的 <code>index.html 中，状态栏条目是在</code> <code>&lt;div id="statusbar" data-z-index-level="statusbar"&gt;</code>  中定义的，而实用工具盘条目在下面的结构中定义：</p>
+<pre class="brush: html">&lt;div id="utility-tray" data-z-index-level="utility-tray"&gt;
+  &lt;div id="notifications-container"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+<p>实用工具盘（utility tray）中会有一些特殊的面板，如更新管理器，紧急回调管理器，存储监视通知，媒体播放通知和控制，蓝牙传输状态，按键输入法(IME)切换。与之相关联的处理程序和样式放置在  <code>js</code>/ 和<code>style/</code> 文件夹中。</p>
+<h3 id="特殊的应用launcher">特殊的应用launcher</h3>
+<p>System app 有三个特殊的launchers,  在需要时会调用单独的web应用程序。</p>
+<ul>
+ <li>主屏幕启动器 : Homescreen 应用在运行时，当用户按下 Home 按钮，webapp 崩溃或者使用其他方式退出webapp时，都会显示主屏幕。</li>
+ <li>锁屏启动器: 运行 lockscreen 应用时， 每次当用户打开屏幕时都会显示锁屏界面。</li>
+ <li> FTU 启动器:  运行FTU 体验应用。这个应用只会在用户使用一个全新的 FirefoxOS设备（或者将设备恢复到出厂模式）时运行一次。而且 FTU webapp不会允许用户点击Home按键退出这个应用。</li>
+</ul>
+<h3 id="锁屏">锁屏</h3>
+<p>Lockscreen app 的主要入口文件是 <code>system/js/lockscreen.js</code>。用户可以在这个界面解锁，启动相机以及音乐播放器。</p>
+<h3 id="紧急拨号器">紧急拨号器</h3>
+<p>紧急拨号器的代码是在 <code>gaia/apps/system/emergency-call/</code> 文件夹下的。 它是拨号应用的简化版本，允许用户可以访问 <a href="#SIM_PIN_unlock_dialog">SIM PIN unlock dialog</a> 实现紧急拨号服务。</p>
+<h2 id="全系统（System-wide）UI">全系统（System-wide）UI</h2>
+<p>System应用会处理绝大多数的全系统（system-wide） UI， 其中大部分包括的是一些对话框，如音量警告对话框，SIM PIN解锁对话框，小区广播(cell broadcast)对话框，还包括一些影响窗口行为的UI元素，如 software home按键。</p>
+<h3 id="z-index_level">z-index level</h3>
+<p>在System 应用的 <code>index.html</code> 文件中,许多组件都带有 <code>data-z-index-level</code> 属性，例如</p>
+<pre class="brush: html">&lt;div id="sleep-menu" data-z-index-level="sleep-menu"&gt;
+  ...
+&lt;/div&gt;</pre>
+<p>对应 z-index-levels 定义在 <code>system/style/zindex.css 文件中，如</code></p>
+<pre class="brush: css">#screen &gt; [data-z-index-level="sleep-menu"] {
+  z-index: 65536;
+}
+
+...
+
+#screen &gt; [data-z-index-level="app"] &gt; .appWindow {
+  z-index: 3;
+}</pre>
+<p>z-index 设置是根据元素在屏幕上显示的顺序进行排列的 — 如果元素需要在视觉层次中比较高的元素数值也会较高。这就是System app在基本水平上窗口管理的方式。 </p>
+<h3 id="software_home_按键">software home 按键</h3>
+<p> software home 按键是 home按键的一种替代，会在缺少物理 home按键的情况下自动启动。例如在 Nexus 4 中。 要控制它的外观，Gecko提供了一个专有的媒体功能称为  <code>-moz-physical-home-button，</code> 它能够在媒体查询时使用基于硬件Home按键的外观。 如果需要，窗口管理会为 <code>software home</code>按键分配一些屏幕的空间。</p>
+<p>在 <code>system/style/window.css</code> (以及许多其他的系统样式文件中), 可以看到</p>
+<pre class="brush: css">@media not all and (-moz-physical-home-button) {
+  #screen:not(.software-button-disabled) &gt; #windows &gt; .appWindow {
+    bottom: 5rem;
+  }
+ }</pre>
+<h3 id="Home_手势_(从屏幕底部向上滑动)">Home 手势 (从屏幕底部向上滑动)</h3>
+<p>home 手势是另外一个硬件home按键的替代；它可以在 <a href="/en-US/Firefox_OS/Debugging/Developer_settings">开发者设置</a>  中使能，而控制代码在 <code>system/js/home_gesture.js 文件中。例如，这个手势涉及到从屏幕底部清扫，可以用来关闭应用。</code></p>
+<p>这个手势能够在 Firefox OS 平板设备中自动使能。 而 <code>gaia/shared/js/screen_layout.js</code> 是专门用于检测设备是否是平板的。</p>
+<h3 id="音量警告对话框">音量警告对话框</h3>
+<p>在 <code>system/js/sound_manager.js</code>. 中包含控制音量警告对话框的代码。如果下面所有条件都满足，则会弹出音量警告对话框：</p>
+<ul>
+ <li>耳机已插入设备</li>
+ <li>已超过最大音量限值  85dB </li>
+ <li>声道音频中有内容播放</li>
+</ul>
+<h3 id="SIM_PIN_解锁对话框">SIM PIN 解锁对话框</h3>
+<p>控制SIM PIN 解锁对话框的代码在 <code>system/js/simcard_dialog.js 中</code> — 当Passcode lock选项使能时，对话框会在锁屏界面显示。开放的应用必须要在  <code style="font-style: normal;">manifest.webapp</code> 中包含 telephony 权限中（System app中含有该权限）。</p>
+<div class="note">
+ <p><b>注意</b>:  当手机在飞行模式时，不会显示SIM PIN 解锁对话框</p>
+</div>
+<p> </p>

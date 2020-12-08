@@ -1,0 +1,20 @@
+---
+title: Changements dans XMLHttpRequest pour Gecko 1.8
+slug: Changements_dans_XMLHttpRequest_pour_Gecko_1.8
+tags:
+  - AJAX
+  - Extensions
+  - XMLHttpRequest
+translation_of: Mozilla/XMLHttpRequest_changes_for_Gecko_1.8
+---
+<p>Ce document décrit les quelques modifications subies par l'implémentation de <a href="fr/XMLHttpRequest">XMLHttpRequest</a> dans <a href="fr/Gecko">Gecko</a> depuis sa version 1.7 (c'est-à-dire la version de Gecko équipant Firefox 1.0). Ces modifications n'affectent que les extensions et applications XUL. Elles ne s'appliquent pas à vos applications Web.
+</p>
+<h3 id="Modifications_de_XMLHttpRequest.send" name="Modifications_de_XMLHttpRequest.send"> Modifications de XMLHttpRequest.send </h3>
+<p>Si vous passez une instance <a href="fr/NsIInputStream">nsIInputStream</a> à la méthode <code>send</code>, alors elle ne devra plus inclure les en-têtes &lt;tt&gt;Content-Length&lt;/tt&gt; et &lt;tt&gt;Content-Type&lt;/tt&gt; au début du flux de données. Au lieu de cela, l'en-tête &lt;tt&gt;Content-Length&lt;/tt&gt; sera déduit de la longueur du flux de données, et l'en-tête &lt;tt&gt;Content-Type&lt;/tt&gt; devra être spécifié manuellement par l'appel de la méthode <code>setRequestHeader</code>. Ces exigences sont décrites plus en détail dans <a class="external" href="http://lxr.mozilla.org/mozilla1.8/source/extensions/xmlextras/base/public/nsIXMLHttpRequest.idl#213">nsIXMLHttpRequest.idl</a>.
+</p>
+<h3 id="Modifications_de_XMLHttpRequest.onreadystatechange" name="Modifications_de_XMLHttpRequest.onreadystatechange"> Modifications de XMLHttpRequest.onreadystatechange </h3>
+<p>Cet attribut a maintenant un type <code>nsIOnReadyStateChangeHandler</code> plutôt que <code>nsIOnReadystatechangeHandler</code> (Le "S" et le "C" du nom du type ont été mis en majuscule).
+</p>
+<div class="noinclude">
+</div>
+{{ languages( { "en": "en/XMLHttpRequest_changes_for_Gecko1.8", "es": "es/XMLHttpRequest_cambios_en_Gecko1.8", "it": "it/Cambiamenti_di_XMLHttpRequest_in_Gecko1.8", "ja": "ja/XMLHttpRequest_changes_for_Gecko1.8", "ko": "ko/XMLHttpRequest_changes_for_Gecko1.8", "pl": "pl/Zmiany_w_obiekcie_XMLHttpRequest_w_Gecko_1.8" } ) }}

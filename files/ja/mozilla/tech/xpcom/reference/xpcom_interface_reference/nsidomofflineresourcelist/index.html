@@ -1,0 +1,184 @@
+---
+title: nsIDOMOfflineResourceList
+slug: >-
+  Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsIDOMOfflineResourceList
+tags:
+  - Interfaces
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMOfflineResourceList
+---
+<p>
+</p><p><code>nsIDOMOfflineResourceList</code> インタフェースは、アプリケーションキャッシュへのアクセスを提供します。これは、Web コンテンツのリソースをオフラインでも利用できるよう、ローカルにキャッシュできるようにする機能です。キャッシュにリソースを追加したり、キャッシュからリソースを削除したり、動的に管理されたリソースリストを列挙するためのメソッドが含まれます。
+</p><p><br>
+</p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/dom/public/idl/offline/nsIDOMOfflineResourceList.idl" rel="custom">dom/public/idl/offline/nsIDOMOfflineResourceList.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">最終更新: Gecko 1.9 (Firefox 3)</span></div>
+</div>
+<p>継承元: <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
+</p>
+<h2 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E6.A6.82.E8.A6.81" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E6.A6.82.E8.A6.81"> メソッドの概要 </h2>
+<table class="standard-table"> <tbody><tr>
+<td> <code>void <a href="#add.28.29">add</a>(in <a href="ja/DOMString">DOMString</a> uri);</code>
+</td></tr>
+<tr>
+<td> <code><a href="ja/DOMString">DOMString</a> <a href="#item.28.29">item</a>(in unsigned long index);</code>
+</td></tr>
+<tr>
+<td> <code>void <a href="#remove.28.29">remove</a>(in <a href="ja/DOMString">DOMString</a> uri);</code>
+</td></tr>
+<tr>
+<td> <code>void <a href="#swapCache.28.29">swapCache</a>();</code>
+</td></tr>
+<tr>
+<td> <code>void <a href="#update.28.29">update</a>();</code>
+</td></tr>
+</tbody></table>
+<h2 id=".E5.B1.9E.E6.80.A7" name=".E5.B1.9E.E6.80.A7"> 属性 </h2>
+<table class="standard-table"> <tbody><tr>
+<td class="header">属性
+</td><td class="header">型
+</td><td class="header">説明
+</td></tr> <tr>
+<td> <code>length</code>
+</td><td> <code>unsigned long</code>
+</td><td> 動的に管理されたオフラインリソースリスト内のエントリー数。<i>読み取り専用</i>。
+</td></tr>
+<tr>
+<td> <code>onchecking</code>
+</td><td> <code><a href="ja/NsIDOMEventListener">nsIDOMEventListener</a></code>
+</td><td> アプリケーションキャッシュマニフェストを取得したり、更新を確認する際に呼び出されるイベントリスナー。
+</td></tr>
+<tr>
+<td> <code>onerror</code>
+</td><td> <code><a href="ja/NsIDOMEventListener">nsIDOMEventListener</a></code>
+</td><td> キャッシュプロセスの途中でエラーが発生した場合に呼び出されるイベントリスナー。
+</td></tr>
+<tr>
+<td> <code>onnoupdate</code>
+</td><td> <code><a href="ja/NsIDOMEventListener">nsIDOMEventListener</a></code>
+</td><td> ダウンロードス売る更新がない場合に呼び出されるイベントリスナー。
+</td></tr>
+<tr>
+<td> <code>ondownloading</code>
+</td><td> <code><a href="ja/NsIDOMEventListener">nsIDOMEventListener</a></code>
+</td><td> リソースがキャッシュにダウンロードされる際に呼び出されるイベントリスナー。
+</td></tr>
+<tr>
+<td> <code>onprogress</code>
+</td><td> <code><a href="ja/NsIDOMEventListener">nsIDOMEventListener</a></code>
+</td><td> ダウンロードプロセスの途中で定期的に呼び出されるイベントリスナー。
+</td></tr>
+<tr>
+<td> <code>onupdateready</code>
+</td><td> <code><a href="ja/NsIDOMEventListener">nsIDOMEventListener</a></code>
+</td><td> リソースの更新が完了した際に呼び出されるイベントリスナー。バージョン管理されたアプリケーションキャッシュがサポートされていないため、このイベントはまだ使われていません。
+</td></tr>
+<tr>
+<td> <code>oncached</code>
+</td><td> <code><a href="ja/NsIDOMEventListener">nsIDOMEventListener</a></code>
+</td><td> キャッシュが完了した際に呼び出されるイベントリスナー。
+</td></tr>
+<tr>
+<td> <code>status</code>
+</td><td> <code>unsigned short</code>
+</td><td> アプリケーションキャッシュの状態を示す、いずれかの<a href="#constants">定数</a>。
+</td></tr>
+</tbody></table>
+<h2 id=".E5.AE.9A.E6.95.B0" name=".E5.AE.9A.E6.95.B0"> 定数 </h2>
+<table class="standard-table"> <tbody><tr>
+<td class="header">定数
+</td><td class="header">値
+</td><td class="header">説明
+</td></tr> <tr>
+<td> <code>UNCACHED</code>
+</td><td> 0
+</td><td> オブジェクトはアプリケーションキャッシュと関連付けられていません。
+</td></tr>
+<tr>
+<td> <code>IDLE</code>
+</td><td> 1
+</td><td> アプリケーションキャッシュは更新プロセスの途中ではありません。
+</td></tr>
+<tr>
+<td> <code>CHECKING</code>
+</td><td> 2
+</td><td> アプリケーションキャッシュマニフェストを取得して、更新を確認しています。
+</td></tr>
+<tr>
+<td> <code>DOWNLOADING</code>
+</td><td> 3
+</td><td> リソースをダウンロードしてキャッシュに追加しています。
+</td></tr>
+<tr>
+<td> <code>UPDATEREADY</code>
+</td><td> 4
+</td><td> 新しいバージョンのアプリケーションキャッシュが利用可能です。
+<div class="blockIndicator note"><strong>註:</strong> バージョン管理されたアプリケーションキャッシュはまだ実装されていません。このため、このステータス値は現時点では使われていません。</div>
+
+</td></tr>
+</tbody></table>
+<h2 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89"> メソッド </h2>
+<h3 id="add.28.29" name="add.28.29"> add() </h3>
+<p>動的に管理されたエントリーにアイテムを追加します。リソースは取得され、アプリケーションキャッシュに追加されます。
+</p>
+<pre class="eval"> void add(
+   in DOMString uri
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0" name=".E5.BC.95.E6.95.B0">引数</h6>
+<dl><dt> &lt;tt&gt;uri&lt;/tt&gt;
+</dt><dd> リストに追加するリソースの URI。
+</dd></dl>
+<h3 id="item.28.29" name="item.28.29"> item() </h3>
+<p>キャッシュされたリソースのリストから、特定のオフセットにあるアイテムの URI を返します。
+</p>
+<pre class="eval"> DOMString item(
+   in unsigned long index
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_2" name=".E5.BC.95.E6.95.B0_2">引数</h6>
+<dl><dt> &lt;tt&gt;index&lt;/tt&gt;
+</dt><dd> URI を取得する、キャッシュされたアイテムのインデックス。
+</dd></dl>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4" name=".E6.88.BB.E3.82.8A.E5.80.A4">戻り値</h6>
+<p>指定されたリソースの URI を含む <code><a href="ja/DOMString">DOMString</a></code>。
+</p>
+<h3 id="remove.28.29" name="remove.28.29"> remove() </h3>
+<p>動的に管理されたエントリーのリストからアイテムを削除します。アプリケーションキャッシュ内の指定された URI に対する最後の参照であった場合、キャッシュエントリーが削除されます。
+</p>
+<pre class="eval"> void remove(
+   in DOMString uri
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_3" name=".E5.BC.95.E6.95.B0_3">引数</h6>
+<dl><dt> &lt;tt&gt;uri&lt;/tt&gt;
+</dt><dd> リストから削除するアイテムの URI。
+</dd></dl>
+<h3 id="swapCache.28.29" name="swapCache.28.29"> swapCache() </h3>
+<p>アプリケーションキャッシュの最新版でやりとりを行います。
+</p><div class="blockIndicator note"><strong>註:</strong> バージョン管理されたアプリケーションキャッシュはまだサポートされていないため、このメソッドは例外を投げます。</div>
+
+<pre class="eval"> void swapCache();
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_4" name=".E5.BC.95.E6.95.B0_4">引数</h6>
+<p>なし。
+</p>
+<h3 id="update.28.29" name="update.28.29"> update() </h3>
+<p>アプリケーションキャッシュの更新プロセスを開始します。
+</p>
+<pre class="eval"> void update();
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_5" name=".E5.BC.95.E6.95.B0_5">引数</h6>
+<p>なし。
+</p>
+<h2 id=".E5.8F.82.E8.80.83.E8.B3.87.E6.96.99" name=".E5.8F.82.E8.80.83.E8.B3.87.E6.96.99"> 参考資料 </h2>
+<ul><li> <a href="ja/Offline_resources_in_Firefox">Offline resources in Firefox</a>
+</li></ul>

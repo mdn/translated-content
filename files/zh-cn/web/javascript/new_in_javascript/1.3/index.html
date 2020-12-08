@@ -1,0 +1,138 @@
+---
+title: JavaScript 1.3的新特性
+slug: Web/JavaScript/New_in_JavaScript/1.3
+translation_of: Archive/Web/JavaScript/New_in_JavaScript/1.3
+---
+<div>{{jsSidebar("New_in_JS")}}</div>
+
+<p>下面介绍的是JavaScript从Netscape Navigator 4.0到4.5的更新日志。旧的Netscape文档可以在<a href="https://web.archive.org/web/20000815081640/http://developer.netscape.com/docs/manuals/communicator/jsref/js13.html">archive.org</a>上面找到。Netscape Navigator 4.5是在1998年10月19日发布的。</p>
+
+<p>JavaScript 1.3 最显著的变化是通过消除JavaScript1.2和1997年6月发布的新ECMA标准的不一致性来遵守ECMA-262和Unicode。JavaScript 1.2附加的特性，在ECMA-262的规定外还保留在JavaScript语言（见下面的列表中的差异）。</p>
+
+<h2 id="JavaScript_版本">JavaScript 版本</h2>
+
+<p>Netscape Navigator 4.06 到 4.5 将JavaScript语言的版本升到1.3。需要注意的是，Netscape Navigator 4.0 到 4.05以及更早的版本忽略了设置为"JavaScript 1.3"和更高的版本的脚本语言属性。</p>
+
+<pre class="brush: html">&lt;SCRIPT LANGUAGE="JavaScript1.2"&gt; &lt;!-- JavaScript for Navigator 4.0. --&gt;
+&lt;SCRIPT LANGUAGE="JavaScript1.3"&gt; &lt;!-- JavaScript for Navigator 4.5. --&gt;</pre>
+
+<h2 id="JavaScript_1.3新特性">JavaScript 1.3新特性</h2>
+
+<h3 id="新增的全局变量">新增的全局变量</h3>
+
+<ul>
+ <li>{{jsxref("NaN")}}</li>
+ <li>{{jsxref("Infinity")}}</li>
+ <li>{{jsxref("undefined")}}</li>
+</ul>
+
+<h3 id="新增的方法">新增的方法</h3>
+
+<ul>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/isFinite"><code>isFinite()</code></a></li>
+ <li>{{jsxref("Function.prototype.call()")}}</li>
+ <li>{{jsxref("Function.prototype.apply()")}}</li>
+ <li>{{jsxref("Date.UTC()")}}</li>
+ <li>{{jsxref("Date.prototype.getFullYear()")}}</li>
+ <li>{{jsxref("Date.prototype.setFullYear()")}}</li>
+ <li>{{jsxref("Date.prototype.getMilliseconds()")}}</li>
+ <li>{{jsxref("Date.prototype.setMilliseconds()")}}</li>
+ <li>{{jsxref("Date.prototype.getUTCFullYear()")}}</li>
+ <li>{{jsxref("Date.prototype.getUTCMonth()")}}</li>
+ <li>{{jsxref("Date.prototype.getUTCDate()")}}</li>
+ <li>{{jsxref("Date.prototype.getUTCHours()")}}</li>
+ <li>{{jsxref("Date.prototype.getUTCMinutes()")}}</li>
+ <li>{{jsxref("Date.prototype.getUTCSeconds()")}}</li>
+ <li>{{jsxref("Date.prototype.getUTCMilliseconds()")}}</li>
+ <li>{{jsxref("Date.prototype.toUTCString()")}}</li>
+ <li>{{jsxref("Date.prototype.setUTCFullYear()")}}</li>
+ <li>{{jsxref("Date.prototype.setUTCMonth()")}}</li>
+ <li>{{jsxref("Date.prototype.setUTCDate()")}}</li>
+ <li>{{jsxref("Date.prototype.setUTCHours()")}}</li>
+ <li>{{jsxref("Date.prototype.setUTCMinutes()")}}</li>
+ <li>{{jsxref("Date.prototype.setUTCSeconds()")}}</li>
+ <li>{{jsxref("Date.prototype.setUTCMilliseconds()")}}</li>
+</ul>
+
+<h3 id="其他新特性">其他新特性</h3>
+
+<ul>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators" title="JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators">严格的相等运算符</a></li>
+ <li>支持Unicode</li>
+ <li>介绍了一种JavaScript的控制台</li>
+</ul>
+
+<h2 id="JavaScript_1.3_修改的功能">JavaScript 1.3 修改的功能</h2>
+
+<ul>
+ <li>修改 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" title="JavaScript/Reference/Global_Objects/Date"><code>Date</code></a> 使之符合 ECMA-262
+
+  <ul>
+   <li>新的构造函数： <code>Date(year, month, day, [,<em>hours</em> [<em>, minutes</em> [<em>, seconds</em> [<em>, milliseconds</em> ]]]])</code></li>
+   <li>附加的方法参数
+    <ul>
+     <li><code>setMonth(month[, date])</code></li>
+     <li><code>setHours(hours[, min[, sec[, ms]]])</code></li>
+     <li><code>setMinutes(min[, sec[, ms]])</code></li>
+     <li><code>setSeconds(sec[, ms])</code></li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li>数组的长度（属性的长度）现在类型为32位 unsigned 整型。</li>
+ <li>{{jsxref("Array.prototype.push()")}}: 在JavaScript 1.2中， <code>push</code> 方法返回最后一个被添加到数组的元素。在JavaScript 1.3下， <code>push</code> 返回数组新的长度。</li>
+ <li>{{jsxref("Array.prototype.slice()")}}: 在JavaScript 1.2中， 如果只有一个元素被移除（<code>howMany 参数为1<font face="Open Sans, Arial, sans-serif">，</font>splice方法返回被移除的元素。而在JavaScript 1.3，splice方法通常返回一个包含被删除的元素的数组。如果只有一个元素被移除，则返回一个只包含一个元素的数组。</code></li>
+ <li>{{jsxref("String.prototype.replace()")}}的<a href="https://web.archive.org/web/20000815081640/http://developer.netscape.com/docs/manuals/communicator/jsref/js13.html#replace">变化</a>。</li>
+ <li>{{jsxref("Boolean")}} 对象的<a href="https://web.archive.org/web/20000815081640/http://developer.netscape.com/docs/manuals/communicator/jsref/js13.html#Boolean">变化</a>。</li>
+ <li><code>toString()的</code><a href="https://web.archive.org/web/20000815081640/http://developer.netscape.com/docs/manuals/communicator/jsref/js13.html#toString">变化</a>。</li>
+</ul>
+
+<h2 id="非ECMA-262规范的JavaScript_1.3特性">非ECMA-262规范的JavaScript 1.3特性</h2>
+
+<p>下面是关于1998年6月的ECMA-262版本和JavaScript 1.3之间的比较。下面的特性不是当时的标准的一部分，但是在JavaScript 1.3里面实施了。</p>
+
+<h3 id="关键字和操作符">关键字和操作符</h3>
+
+<ul>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators" title="JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators">严格的相等运算符</a></li>
+ <li>垂直制表符(\ v或\ u000B)转义序列。</li>
+</ul>
+
+<h3 id="语句">语句</h3>
+
+<ul>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/label"><code>label</code></a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/switch"><code>switch</code></a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/do...while"><code>do...while</code></a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/export"><code>export</code></a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/import"><code>import</code></a></li>
+</ul>
+
+<h3 id="内置对象">内置对象</h3>
+
+<ul>
+ <li>{{jsxref("RegExp")}}</li>
+</ul>
+
+<h3 id="内置对象的方向">内置对象的方向</h3>
+
+<ul>
+ <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource">toSource()</a></code></li>
+ <li>{{jsxref("Object.prototype.watch()")}}</li>
+ <li>{{jsxref("Object.prototype.unwatch()")}}</li>
+ <li>{{jsxref("Function.arity")}}</li>
+ <li>{{jsxref("Function.prototype.apply()")}}</li>
+ <li>{{jsxref("Function.prototype.call()")}}</li>
+ <li>{{jsxref("Array.prototype.concat()")}}</li>
+ <li>{{jsxref("Array.prototype.pop()")}}</li>
+ <li>{{jsxref("Array.prototype.push()")}}</li>
+ <li>{{jsxref("Array.prototype.shift()")}}</li>
+ <li>{{jsxref("Array.prototype.slice()")}}</li>
+ <li>{{jsxref("Array.prototype.splice()")}}</li>
+ <li>{{jsxref("String.prototype.concat()")}}</li>
+ <li>{{jsxref("String.prototype.concat()")}}</li>
+ <li>{{jsxref("String.prototype.match()")}}</li>
+ <li>{{jsxref("String.prototype.search()")}}</li>
+ <li>{{jsxref("String.prototype.slice()")}}</li>
+ <li>{{jsxref("String.prototype.substr()")}}</li>
+</ul>

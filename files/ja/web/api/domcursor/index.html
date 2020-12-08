@@ -1,0 +1,102 @@
+---
+title: DOMCursor
+slug: Web/API/DOMCursor
+tags:
+  - API
+  - DOM
+  - DOM Reference
+  - Gecko DOM Reference
+  - Non-standard
+  - Reference
+  - WebAPI
+translation_of: Archive/B2G_OS/API/DOMCursor
+---
+<div>
+ {{Apiref}} {{non-standard_header}}</div>
+<h2 id="概要">概要</h2>
+<p><code>DOMCursor</code> オブジェクトは結果のリスト全体の継続的な操作を可能にしています。これは、結果のリストを非同期で反復することを許可した{{domxref("DOMRequest")}} を拡張したものです。{{domxref("DOMCursor.continue()","continue()")}}メソッドが呼ばれるたびに、DOMCurosr はリストの次の要素へ移動を試み、結果の成功または失敗を呼び出します。</p>
+<h2 id="属性">属性</h2>
+<dl>
+ <dt>
+  {{domxref("DOMCursor.done")}}</dt>
+ <dd>
+  最後の要素に達しているかを示します。</dd>
+</dl>
+<p>Inherited from {{domxref("DOMRequest")}}:</p>
+<p>{{page("/en-US/docs/Web/API/DOMRequest","Properties")}}</p>
+<h2 id="メソッド">メソッド</h2>
+<dl>
+ <dt>
+  {{domxref("DOMCursor.continue()")}}</dt>
+ <dd>
+  次のカーソルへと移動します。</dd>
+</dl>
+<h2 id="例">例</h2>
+<pre class="brush:js">var sdcard = navigator.getDeviceStorage('sdcard');
+var cursor = sdcard.enumerate();
+
+cursor.onsuccess = function () {
+  console.log("File found: " + this.result.name);
+
+  // Once we found a file we check if there is other results
+  if (!this.done) {
+    // Then we move to the next result, which call the
+    // cursor success with the next file as result.
+    this.continue();
+  }
+}</pre>
+<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+<div>
+ {{CompatibilityTable}}</div>
+<div id="compat-desktop">
+ <table class="compat-table">
+  <tbody>
+   <tr>
+    <th>Feature</th>
+    <th>Chrome</th>
+    <th>Firefox (Gecko)</th>
+    <th>Internet Explorer</th>
+    <th>Opera</th>
+    <th>Safari</th>
+   </tr>
+   <tr>
+    <td>Basic support</td>
+    <td>{{CompatUnknown}}</td>
+    <td>{{CompatGeckoDesktop("21.0")}}</td>
+    <td>{{CompatUnknown}}</td>
+    <td>{{CompatUnknown}}</td>
+    <td>{{CompatUnknown}}</td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+<div id="compat-mobile">
+ <table class="compat-table">
+  <tbody>
+   <tr>
+    <th>Feature</th>
+    <th>Android</th>
+    <th>Chrome for Android</th>
+    <th>Firefox Mobile (Gecko)</th>
+    <th>IE Mobile</th>
+    <th>Opera Mobile</th>
+    <th>Safari Mobile</th>
+   </tr>
+   <tr>
+    <td>Basic support</td>
+    <td>{{CompatUnknown}}</td>
+    <td>{{CompatUnknown}}</td>
+    <td>{{CompatGeckoMobile("21.0")}}</td>
+    <td>{{CompatUnknown}}</td>
+    <td>{{CompatUnknown}}</td>
+    <td>{{CompatUnknown}}</td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+<h2 id="Specification" name="Specification">仕様</h2>
+<p>Not currently part of any specification.</p>
+<h2 id="関連情報">関連情報</h2>
+<ul>
+ <li>{{domxref("DOMRequest")}}</li>
+</ul>

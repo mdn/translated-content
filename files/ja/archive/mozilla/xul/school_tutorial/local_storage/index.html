@@ -1,0 +1,101 @@
+---
+title: ローカルストレージ
+slug: Archive/Mozilla/XUL/School_tutorial/Local_Storage
+translation_of: Archive/Add-ons/Overlay_Extensions/XUL_School/Local_Storage
+---
+<div>
+  <div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/School_tutorial/Handling_Preferences" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/School_tutorial/Intercepting_Page_Loads">次のページ  »</a></p>
+</div></div>
+<p>拡張機能が何らかの永続的なローカルのストレージを必要とすることがよくあります。ローカルストレージを利用する場合は、少なくともエラーログを記録しておくことをお勧めします。デバッグが困難な問題に遭遇した時、ユーザにエラーデータを要求できます。このセクションでは、ログの記録について扱います。その前に、ローカルファイルを管理する正しい方法 (少なくとも一般的で応用できる方法) を見ていきましょう。</p>
+<p>ローカルファイルは、Firefox のプロファイルディレクトリ内に保存することを強くお勧めします。そうしておかないと、複数のプロファイルに同じ拡張機能がインストールされた場合に問題が起こるでしょう。あなたのプロジェクト名のディレクトリをプロファイルフォルダの直下に作成し、その中にファイルを保存することが慣習になっています。ディレクトリ構造は次のようになります:</p>
+<ul>
+  <li>s435L.default  (あなたのプロファイルディレクトリ)
+    <ul>
+      <li>XULSchool
+        <ul>
+          <li>log.txt</li>
+          <li>somedbfile.sqlite</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<p>ローカルディレクトリを作成するには、<a href="/ja/docs/nsDirectoryService" title="nsDirectoryService">Directory サービス</a>と <a href="/ja/docs/XPCOM_Interface_Reference/nsIFile" title="XPCOM Interface Reference/nsIFile">nsIFile</a> インタフェースを使用します。私たちは次のように行っています。ルートディレクトリへの参照を返す関数を持ち、必要であればディレクトリを作成します。</p>
+<pre class="brush: js">getLocalDirectory : function() {
+  let directoryService =
+    Cc["@mozilla.org/file/directory_service;1"].
+      getService(Ci.nsIProperties);
+  // プロファイルディレクトリへの参照 (ProfD) です
+  let localDir = directoryService.get("ProfD", Ci.nsIFile);
+
+  localDir.append("XULSchool");
+
+  if (!localDir.exists() || !localDir.isDirectory()) {
+    // 読み書き権限を所有者とグループに与え、読み込み専用の権限を他者に与えます
+    localDir.create(Ci.nsIFile.DIRECTORY_TYPE, 0774);
+  }
+
+  return localDir;
+},</pre>
+<p><em>ProfD</em> は、プロファイルディレクトリを表す特別な識別子です。プロファイルディレクトリの場所を探す必要はありません。一般的に、これはあなたが必要とするディレクトリのフラグでしかありませんが、時々、他のシステムディレクトリへアクセスする必要があるでしょう。拡張機能を実行しているオペレーティングシステムやシステムの言語を気にせずに、これらのディレクトリへアクセスしたいときは、Firefox のソースコードに定義された<a class="external" href="http://mxr.mozilla.org/mozilla/source/xpcom/io/nsDirectoryServiceDefs.h" title="http://mxr.mozilla.org/mozilla/source/xpcom/io/nsDirectoryServiceDefs.h">ディレクトリフラグのリスト</a>を参照してください。<br>
+  上記の関数を書いた場所で、次のように使用します:</p>
+<pre class="brush: js">let myFile = XULSchool.getLocalDirectory();
+
+myFile.append("someFile.txt");
+// ファイルに対する操作</pre>
+<p>ファイルは、<em>nsIFile</em> インタフェースで扱います。上記の例のように、<em>nsIFile</em> は、必ずしも既存のファイルを指し示すとは限りません。はじめに、<em>nsIFile</em> を使用してファイルを指定し、次に、 <a href="/ja/docs/XPCOM_Interface_Reference/nsIFile/create" title="XPCOM Interface Reference/nsIFile/create">create</a> メソッドを使用して実際にディスクに書き出します。また、<a href="/ja/docs/XPCOM_Interface_Reference/nsIFile/exists" title="XPCOM Interface Reference/nsIFile/exists">exists</a> メソッドを使用して、<em>nsIFile</em> が存在するか確認することもできます。</p>
+<p>ファイル内の情報を読み書きするには、ストリームオブジェクトを使用する必要があります。詳しくは、<a href="/ja/docs/Code_snippets/File_I//O" title="Code snippets/File I//O">File I/O についてのページ</a>をお読みください。通常はディレクトリに対して読み書きを行う必要はありませんが、ファイルの読み書きについて知っておくと、あとで役立ちます。</p>
+<p>最後に、拡張機能がアンインストールされた時にローカルファイルを削除する問題が残っています。これが必要であるかどうかは好みの問題です。拡張機能開発者によっては、ユーザが再びその拡張機能をインストールして以前の設定を復元したい時のために、設定を残しておくことを好む人もいます。これは、Firefox がアンインストールされた時のデフォルトの動作でもあります。プロファイル情報は、Firefox が再びインストールされるまで、そのまま残されます。他に、プライバシーに係わることやプライベートな情報が削除されずにローカルに保存されたままになることを懸念する人もいます。両者の議論が衝突してしまうため、この場合、どうすべきかを決めるのは開発者のあなた次第です。FUEL ライブラリには、アンインストール時の操作を行うときに使用できる <a href="/ja/docs/Toolkit_API/extIExtension" title="Toolkit API/extIExtension">uninstall イベント</a>があります。</p>
+<h2 id="Logging" name="Logging">ログの記録</h2>
+<p>ログを記録しておくことは、すべてのソフトウェアプロジェクトの基本です。Hello World よりさらに複雑な拡張機能は、エラーログを記録し、デバッガを起動せずにトレースを実行することを必要とします。</p>
+<p>以前はログを記録するカスタムの対策が必要でしたが、それに対して、Mozilla Labs が Java プロジェクトで使用される <a class="external" href="http://logging.apache.org/log4j/1.2/index.html">Log4J logger</a>に似た、<a class="link-https" href="https://wiki.mozilla.org/Labs/JS_Modules#Logging" title="https://wiki.mozilla.org/Labs/JS_Modules#Logging">Log4Moz</a> と呼ばれる JavaScript 実装のロガーを提供しています。このロガーは、JavaScript コードモジュールとして実装されているため、Firefox 3 以降でのみ動作します。</p>
+<p>このロガーを使用するには、<em>log4moz.js</em> ファイルを拡張機能の modules ディレクトリへコピーする必要があります。"共通" のスタートアップオブジェクトの初期化メソッド内に、次のコードを追加してください:</p>
+<pre class="brush: js">let formatter = new Log4Moz.BasicFormatter();
+let root = Log4Moz.repository.rootLogger;
+let logFile = this.getLocalDirectory(); // これは覚えていますね？
+let appender;
+
+logFile.append("log.txt");
+
+// ロガーは階層構造をしており、ログレベルを下げるとすべての出力に影響します
+root.level = Log4Moz.Level["All"];
+
+// この appender はファイルシステムに記録します
+appender = new Log4Moz.RotatingFileAppender(logFile, formatter);
+appender.level = Log4Moz.Level["All"];
+root.addAppender(appender);</pre>
+<p>次に、あなたのプロジェクト内のオブジェクトに対する logger オブジェクトを作成してください:</p>
+<pre class="brush: js">this._logger = Log4Moz.repository.getLogger("XULSchool.SomeObject");
+
+this._logger.level = Log4Moz.Level["All"];</pre>
+<div class="note">
+  すべてのオブジェクトのコンストラクタ内に logger インスタンスを作成し、それをプライベート変数に格納することをお勧めします。</div>
+<p>そして、記録するメッセージの種類によって、次のいずれかのメソッドでログが記録されます。</p>
+<pre class="brush: js">this._logger.fatal("This is a fatal message.");
+this._logger.error("This is an error message.");
+this._logger.warn("This is a warning message.");
+this._logger.info("This is an info message.");
+this._logger.config("This is a config message.");
+this._logger.debug("This is a debug message.");
+this._logger.trace("This is a trace message.");</pre>
+<p>グローバルロガーの出力を絞り込んだり特定のログインスタンスを <em>level</em> プロパティの設定によって絞り込んだりすることができます。開発中は "All" レベルを使用すべきですが、リリースバージョンでは "Warn" レベルへ上げるとよいでしょう。ログの量が少なくなり、実行の効率が上がります。</p>
+<div class="note">
+  すべての例外の <em>catch</em> ブロックに、error レベルや warn レベルでログを記録するコードを含めることをお勧めします。できるだけ多くの情報をログに記録し、バグの修正と何が起こっているかを知るために使用してください。<em>mouseover</em> イベントハンドラや特定の HTTP アクティビティリスナーなど、頻繁に呼び出される関数内でログを記録してはいけません。パフォーマンスに大きな影響を与え、ログが役に立たないメッセージで埋め尽くされてしまいます。私たちは通常、パフォーマンスに係わる理由から、そこではログが記録されないことを示すコメントを追加しています。</div>
+<h2 id="SQLite" name="SQLite">SQLite</h2>
+<p><a class="external" href="http://en.wikipedia.org/wiki/Sqlite">SQLite</a> ストレージは、Firefox 2 で導入されました。これは、Firefox における優先されたストレージ機構です。このストレージシステムは、ブックマークと履歴を管理する <a href="/ja/docs/Places" title="Places">Places API</a> のために使用されます。また、cookie の保存やフォームの入力履歴、その他の用途にも使用されます。</p>
+<p>SQLite は、軽量な SQL ベースのストレージシステムです。これは、プログラム内に組み込むためのもので、いくつかの有名なアプリケーションでも使用されています。また、拡張機能で使用されるお勧めのローカルストレージでもあります。</p>
+<p><a href="/ja/docs/Storage" title="Storage">Storage のページ</a>に、SQLite API を使用するための詳しい説明があるため、ここでは説明しません。SQL に詳しくない方や SQLite に使用される構文の制限に興味のある方は、<a class="external" href="http://www.sqlite.org/lang.html">SQLite のサイト</a>をご覧ください。</p>
+<p>将来のバージョンで機能を追加する予定のある場合は、データベースの構造に注意して設計してください。新しいバージョンでデータベースの項目を追加したり削除したりしてデータベース構造を変更すると、古いバージョンにおけるユーザデータを破壊する原因になることがあります。古いデータベースのフォーマットから新しいものへデータを移行するコードを注意深く追加する必要がでてくるでしょう。新しいバージョンでデータベースを新しい構造に変更するだけで、コードの複雑さが増してしまいます。そのため、将来のバージョンのために、はじめに注意しながらデータベース構造の計画を立ててください。</p>
+<p>拡張機能のために使用するローカルストレージを作成する方法は、2 通りあります。1 つは、ファイルとすべてのテーブル、初期データを拡張機能の初回起動時に生成することです。複雑なデータベースが必要な場合は、このために多くのコードと時間を費やさなければなりません。もう 1 つの選択肢は、初期データベースファイルを拡張機能の <em>defaults</em> ディレクトリに含めておき、ユーザのプロファイルにコピーできるようにしておくです。この方法は、ファイルをコピーするだけで済みます。defaults ディレクトリへは、<em>ProfD/extensions/YOUR_EXTENSION_ID/defaults</em> でアクセスできます。</p>
+<h2 id="RDF" name="RDF">RDF</h2>
+<p><a href="/ja/docs/RDF" title="RDF">RDF</a> は、Firefox で優先的に利用されるストレージメカニズムになっています。ほとんどのデータソースで利用されていたため、<em>install.rdf</em> など、どこでも見ることができるでしょう。しかし、SQLite が代わりに利用されるようになったため、その座を奪われています。RDF API は、簡単なタスクでも多くのコードを必要とするため、将来のバージョンで削除されるかもしれません。現在は、あまりメンテナンスされていないため、本当に必要でない限り RDF の利用はお勧めしません。</p>
+<p>少なくとも、テンプレートについてのドキュメントを読む場合は、RDF について理解しておく必要があります。</p>
+<h2 id="Templates" name="Templates">テンプレート</h2>
+<p>テンプレートは、Firefox におけるとても強力なツールです。データソースからの情報を使用して、XUL コンテンツを自動的に生成できます。これは、RDF データソースと共に設計されましたが、Firefox 3 以降のバージョンで SQLite データソースも同様にサポートするように拡張されました。</p>
+<p>テンプレートの扱いは面倒になりがちですが、長いリストや複雑なデータを伴うツリーを表示する必要のあるときは、努力して実装する価値があります。テンプレートを使用して表示するコードを管理すれば、多くのコードを書かずに済みます。テンプレートは、ほとんどの拡張機能が必要とせず、複雑な対象であるため、専門家の書いたドキュメントから読むとよいでしょう。<a href="/ja/docs/XUL/Template_Guide" title="XUL/Template Guide">XUL テンプレートガイド</a>に、とても詳しい説明があります。前述のように、テンプレートは RDF と共に作られたため、RDF がどのように動作するか理解する必要があります。ガイドには、<a href="/ja/docs/XUL/Template_Guide/SQLite_Templates" title="XUL/Template Guide/SQLite Templates">SQLite テンプレート</a>についてのセクションもありますが、これには、ガイドの残りを読んでおく必要のあるいくつかの概念が含まれています。</p>
+<div>
+  <div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/School_tutorial/Handling_Preferences" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/School_tutorial/Intercepting_Page_Loads">次のページ  »</a></p>
+</div></div>
+<p><small>This tutorial was kindly donated to Mozilla by Appcoast.</small></p>

@@ -1,0 +1,129 @@
+---
+title: notifications（通知）
+slug: Mozilla/Add-ons/SDK/High-Level_APIs/notifications
+tags:
+  - Add-on SDK
+  - 通知
+translation_of: Archive/Add-ons/Add-on_SDK/High-Level_APIs/notifications
+---
+<p>{{AddonSidebar}}</p>
+
+<div class="note">
+<p>Stable</p>
+</div>
+
+<p><span class="seoSummary">向用户展示短暂的 <a href="http://en.wikipedia.org/wiki/Toast_%28computing%29">toaster</a> 风格的桌面消息。</span></p>
+
+<h2 id="用法">用法</h2>
+
+<p>本 API 支持Windows、使用<a href="http://growl.info/">Growl</a>(或者像OS X 10.9 Mavericks那样的通知中心)的 OS X 的桌面通知，以及使用 libnotify 的Linux系统</p>
+
+<p>这儿有个典型的例子。当消息被点击，控制台上回记录一个字符串。</p>
+
+<pre class="brush: js">var notifications = require("sdk/notifications");
+notifications.notify({
+  title: "Jabberwocky",
+  text: "'Twas brillig, and the slithy toves",
+  data: "did gyre and gimble in the wabe",
+  onClick: function (data) {
+    console.log(data);
+    // console.log(this.data) would produce the same result.
+  }
+});
+</pre>
+
+<p>下面这个示例用来展示一个保存在 add-on 的 <code>data</code> 目录下的图标。参看 <a href="/en-US/Add-ons/SDK/High-Level_APIs/self"><code>self</code></a> 模块文档以获取更多信息。</p>
+
+<pre class="brush: js">var notifications = require("sdk/notifications");
+var self = require("sdk/self");
+var myIconURL = self.data.url("myIcon.png");
+
+notifications.notify({
+  text: "I have an icon!",
+  iconURL: myIconURL
+});</pre>
+
+<div class="note">
+<p>从 Firefox 34 起，你能使用 <code>"./myIcon.png"</code> 作为 <code>self.data.url("myIcon.png")</code> 的别名。所以你也可以把上面的代码重写成这样：</p>
+
+<pre class="brush: js">var notifications = require("sdk/notifications");
+var myIconURL = "./myIcon.png";
+
+notifications.notify({
+  text: "I have an icon!",
+  iconURL: myIconURL
+});</pre>
+</div>
+
+<p>本模块依赖于底层系统的通知服务。如果用户的系统不支持桌面通知或者通知服务没有运行：</p>
+
+<ul>
+ <li>如果 Firefox 正常运行，通知会记录在 Firefox 的错误控制台</li>
+ <li>如果用户从命令行启动 Firefox，通知会记录到终端。</li>
+</ul>
+
+<h2 id="Globals">Globals</h2>
+
+<h3 id="函数">函数</h3>
+
+<h4 class="addon-sdk-api-name" id="notify(options)"><code>notify(options)</code></h4>
+
+<p>向用户展示一个短暂的通知</p>
+
+<h5 id="参数">参数</h5>
+
+<p><strong>options : object</strong><br>
+ 可选项：</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Name</th>
+   <th scope="col">Type</th>
+   <th scope="col"> </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>title</td>
+   <td>string</td>
+   <td>
+    <p>作为消息标题的字符串。</p>
+   </td>
+  </tr>
+  <tr>
+   <td>text</td>
+   <td>作为消息体的字符串。</td>
+   <td>
+    <p> </p>
+   </td>
+  </tr>
+  <tr>
+   <td>iconURL</td>
+   <td>string</td>
+   <td>
+    <p>消息里的图标的 URL 。可以是个远程的、本地的或者使用 <a href="/en-US/Add-ons/SDK/High-Level_APIs/self"><code>self</code></a> 模块的 URL。</p>
+   </td>
+  </tr>
+  <tr>
+   <td>onClick</td>
+   <td>function</td>
+   <td>
+    <p>用户点击消息是调用的函数。它会传递一个 <code>data</code> 值。</p>
+   </td>
+  </tr>
+  <tr>
+   <td>data</td>
+   <td>string</td>
+   <td>
+    <p>传递给 <code>onClick</code> 的字符串。</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<div id="xunlei_com_thunder_helper_plugin_d462f475-c18e-46be-bd10-327458d045bd"> </div>
+
+<div id="xunlei_com_thunder_helper_plugin_d462f475-c18e-46be-bd10-327458d045bd"> </div>
+
+<div id="xunlei_com_thunder_helper_plugin_d462f475-c18e-46be-bd10-327458d045bd"> </div>

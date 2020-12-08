@@ -1,0 +1,57 @@
+---
+title: Components.utils.evalInSandbox
+slug: Components.utils.evalInSandbox
+translation_of: Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.evalInSandbox
+---
+<h3 id="Introduction" name="Introduction">Introduction</h3>
+<p>Il peut arriver que vous vouliez exécuter du code JavaScript avec des droits restreints. Depuis Firefox 1.5 (Gecko 1.8) vous pouvez faire cela en utilisant une API qui permet la création de "bacs à sables" à l'intérieur desquels le code sera interprété avec des droits restreints, comme le code exécuté dans une page web.</p>
+<h3 id="Usage" name="Usage">Usage</h3>
+<p>Il faut créer un objet au moyen du constructeur <code><a href="/fr/Components.utils.Sandbox" title="fr/Components.utils.Sandbox">Components.utils.Sandbox</a></code>, pour pouvoir ensuite utiliser la fonction <code>evalInSandbox()</code>. L'objet doit être initialisé soit avec une URI, soit, et c'est préférable, avec un objet <code>DOM window</code> (<code><a href="/fr/nsIDOMWindow" title="fr/nsIDOMWindow">nsIDOMWindow</a></code>). Depuis Firefox 3, il est également possible de l'initialiser avec un <code><a href="/fr/nsIPrincipal" title="fr/nsIPrincipal">nsIPrincipal</a></code>. Qu'il s'agisse d'une URI, d'une <code>nsIDOMWindow</code> ou d'un <code>nsIPrincipal, </code><span style="font-family: monospace;">l</span>'objet utilisé pour initialiser le bac à sable, servira d'origine pour le code interprété. Cette origine sera par exemple utilisée pour les contrôles de sécurité basés sur la "même origine". Par exemple, si le bac à sable est initialisé avec l'URI <code><span class="nowiki">http://www.example.com/</span></code>, les appels AJAX exécutés à l'intérieur seront limités au serveur <span class="nowiki">http://www.example.com</span>. Si le code interprété modifie la propriété <code><a href="/fr/DOM/document.domain" title="fr/DOM/document.domain">document.domain</a></code>, ce qui à un impact sur les contrôles de même origine, il faut initialiser le bac à sable avec une <code>nsIDOMWindow</code> ou un <code>nsIPrincipal</code></p>
+<p>Voici un exemple avec une URI:</p>
+<pre>// crée un bac à sable en précisant l'URI d'origine
+var s = Components.utils.Sandbox("http://www.example.com/");
+</pre>
+<p>Le bac à sable n'est qu'un objet JavaScript vide marqué comme créé avec des droits restreints. Il deviendra le contexte global d'exécution du code interprété au moyen de <code>evalInSandbox(text, sandbox)</code>. En ajoutant des propriétés à l'objet, elles seront accessibles dans ce contexte. Ainsi, en utilisant l'exemple précédent:</p>
+<pre>s.y = 5;  // ajoute la propriété 'y' valant 5 dans le contexte global du bac à sable
+var result = Components.utils.evalInSandbox("x = y + 2; x + 3", s);
+// le résultat vaut 10 et s.x 7
+</pre>
+<p>Les manipulations sur les objets mis à disposition dans le bac à sable ne transmettent pas de droits:</p>
+<pre>s.foo = Components;
+// l'instruction suivante déclenchera une erreur "Opération interdite"
+Components.utils.evalInSandbox("foo.classes", s);
+</pre>
+<p>Par contre, toute fonction réussissant à "sortir" du bac à sable s'exécutera avec les mêmes droits que le code dans le chrome. La section suivante décrit plusieurs situation où cela peut se produire.</p>
+<p>Note: du fait du <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=350558" title="FIXED: Arrays returned by evalInSandbox aren't instanceof Array">bug 350558</a>, les tableaux créés à l'intérieur du bac à sable ne sont pas des instance de l'objet <code>Array</code></p>
+<h3 id="Sécurité" name="Sécurité">Sécurité</h3>
+<div class="warning">
+ <strong>Attention:</strong> Des problèmes de sécurité peuvent survenir lorsque vous utilisez <code>evalInSandbox()</code> si vous accédez aux propriétés d'un objet créé dans le bac à sable.</div>
+<p>Exemples:</p>
+<pre class="eval">&lt;script src="prototype.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+var s = new Components.utils.Sandbox(url);
+var x = Components.utils.evalInSandbox(untrusted_code, s);
+if (x == 1) {
+  /* ce code n'est pas sûr car il fait appel à la fonction x.valueOf() */
+}
+
+if (x === 1) {
+  /* ce code est sûr */
+}
+
+/* les deux assignations suivantes ne sont pas sûres */
+var y = x.y;
+var z = sandbox.z;
+
+if (typeof x == "number") {
+  /* sûr */
+}
+&lt;/script&gt;
+</pre>
+<p>Lorsque le code <code>(x == 1)</code> est exécuté, la méthode <code>x.valueOf()</code> est appelée depuis le chrome, ce qui peut permettre à du code non sûr de créer un objet <code>String</code> dans le contexte global du chrome.</p>
+<p>Si du code dans le Chrome a ajouté une fonction privilégiée au prototype des objets <code>String</code>, <code>Object</code>, ou <code>Function</code>, du code non sûr pourrait utiliser cette fonction et s'en servir pour s'exécuter avec les droits du chrome.</p>
+<p>Pour éviter ce risque, il faut soit éviter d'utiliser des objets créés par <code>evalInSandbox()</code> de quelque manière qui pourrait faire qu'une fonction de cet objet serait appelée, ou vous devez vous assurer avant d'appeler <code>evalInSandbox()</code> pour exécuter une chaîne contenant un objet au format JSON que celle-ci ne contient aucune fonction.</p>
+<p><br>
+ Pour en savoir plus: <a class="external" href="http://simile.mit.edu/wiki/Piggy_Bank_Scraper_Risk">PiggyBank analysis of sandbox</a></p>
+<p></p>

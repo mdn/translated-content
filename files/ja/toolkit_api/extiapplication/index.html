@@ -1,0 +1,157 @@
+---
+title: extIApplication
+slug: Toolkit_API/extIApplication
+tags:
+  - FUEL
+  - Interfaces
+  - SMILE
+  - STEEL
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/Toolkit_API/extIApplication
+---
+<div> <div class="blockIndicator standardNote">
+<p>この記事は <a href="https://developer.mozilla.org/ja/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a>  の新機能について述べています</p>
+</div></div>
+<p><code>extIApplication</code> は <code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/exthelper/extIApplication.idl" rel="custom">toolkit/components/exthelper/extIApplication.idl</a></code> で定義されています。</p>
+<p>XPCOM サービスを通して実装された <a href="/ja/docs/Toolkit_API/extIApplication" title="Toolkit API/extIApplication"><code>extIApplication</code></a>: <a href="/ja/docs/Toolkit_API/FUEL" title="FUEL">FUEL</a> (Firefox) または <a href="/ja/docs/Toolkit_API/STEEL" title="Thunderbird/STEEL">STEEL</a> (Thunderbird), <a href="/ja/docs/Toolkit_API/SMILE" title="SeaMonkey/SMILE">SMILE</a> (SeaMonkey) のページの説明を参照してください。</p>
+
+
+<h2 id="Method_overview" name="Method_overview">メソッドの概要</h2>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <td><code>boolean <a href="#quit.28.29">quit</a>()</code> </td>
+    </tr>
+    <tr>
+      <td><code>boolean <a href="#restart.28.29">restart</a>()</code> </td>
+    </tr>
+    <tr>
+      <td><code>void getExtensions(extIExtensionsCallback aCallback)</code> </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h2 id="Attributes" name="Attributes">プロパティ</h2>
+<p>次のインタフェースは、すべてのアプリケーションで利用可能です:</p>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <td class="header">プロパティ</td>
+      <td class="header">型</td>
+      <td class="header">説明</td>
+    </tr>
+    <tr>
+      <td><code>id</code></td>
+      <td><code>readonly attribute AString</code></td>
+      <td>アプリケーションの id。</td>
+    </tr>
+    <tr>
+      <td><code>name</code></td>
+      <td><code>readonly attribute AString</code></td>
+      <td>アプリケーションの名前。</td>
+    </tr>
+    <tr>
+      <td><code>version</code></td>
+      <td><code>readonly attribute AString</code></td>
+      <td>アプリケーションのバージョン番号。</td>
+    </tr>
+    <tr>
+      <td><code>console</code></td>
+      <td><code>readonly attribute <a href="/ja/docs/Toolkit_API/extIConsole" title="FUEL/Console">extIConsole</a></code></td>
+      <td>アプリケーションのコンソールオブジェクト。</td>
+    </tr>
+    <tr>
+      <td><code>extensions</code></td>
+      <td><code>readonly attribute <a href="/ja/docs/Toolkit_API/extIExtensions" title="FUEL/Extensions">extIExtensions</a></code></td>
+      <td>アプリケーションの拡張機能オブジェクト。インストールされたすべての拡張機能のリストを含む。Gecko 2.0 以降は利用不可。(<a href="http://www.oxymoronical.com/blog/2010/03/How-were-breaking-some-extensions-in-the-near-future" title="http://www.oxymoronical.com/blog/2010/03/How-were-breaking-some-extensions-in-the-near-future">[1]</a> 参照)。代わりに getExtensions() を使用してください。<span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)">Gecko 2.0 で廃止</span></td>
+    </tr>
+    <tr>
+      <td><code>prefs</code></td>
+      <td><code>readonly attribute <a href="/ja/docs/Toolkit_API/extIPreferenceBranch" title="FUEL/PreferenceBranch">extIPreferenceBranch</a></code></td>
+      <td>アプリケーションの設定オブジェクト。デフォルトで空のルートブランチです。</td>
+    </tr>
+    <tr>
+      <td><code>storage</code></td>
+      <td><code>readonly attribute <a href="/ja/docs/Toolkit_API/extISessionStorage" title="FUEL/SessionStorage">extISessionStorage</a></code></td>
+      <td>アプリケーションのストレージオブジェクト。</td>
+    </tr>
+    <tr>
+      <td><code>events</code></td>
+      <td><code>readonly attribute <a href="/ja/docs/Toolkit_API/extIEvents" title="FUEL/Events">extIEvents</a></code></td>
+      <td>アプリケーションのイベントオブジェクト。 "load", "ready", "quit", "unload" をサポート。</td>
+    </tr>
+  </tbody>
+</table>
+<p>次のインタフェースは、Firefox でのみ利用可能です:</p>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <td class="header">プロパティ</td>
+      <td class="header">型</td>
+      <td class="header">説明</td>
+    </tr>
+    <tr>
+      <td><code>bookmarks</code></td>
+      <td><code>readonly attribute <a href="/ja/docs/Toolkit_API/FUEL/fuelIBookmarkRoots" title="Toolkit API/FUEL/fuelIBookmarkRoots">fuelIBookmarkRoots</a></code></td>
+      <td>アプリケーションのルートのブックマークフォルダオブジェクト。</td>
+    </tr>
+    <tr>
+      <td><code>windows</code></td>
+      <td><code>readonly attribute nsIVariant</code></td>
+      <td>アプリケーション内のブラウザウィンドウの配列。</td>
+    </tr>
+    <tr>
+      <td><code>activeWindow</code></td>
+      <td><code>readonly attribute <a href="/ja/docs/Toolkit_API/FUEL/fuelIWindow" title="FUEL/Window">fuelIWindow</a></code></td>
+      <td>現在アクティブなブラウザウィンドウ。</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h2 id="Methods" name="Methods">メソッド</h2>
+
+
+<h3 id="quit()" name="quit()">quit() </h3>
+<p>アプリケーションのシャットダウンを試みます。シャットダウンのキャンセルが可能です。</p>
+
+
+<pre>boolean quit()</pre>
+
+
+<h4 id="quit-Return_value" name="quit-Return_value">戻り値</h4>
+<p>シャットダウンが成功したかどうかを示す真偽値。</p>
+
+
+<h3 id="restart()" name="restart()">restart() </h3>
+<p>アプリケーションの再起動を試みます。再起動のキャンセルが可能です。</p>
+<pre>boolean restart()</pre>
+
+
+<h4 id="restart-Return_value" name="restart-Return_value">戻り値</h4>
+<p>再起動が成功したかどうかを示す真偽値。</p>
+
+
+<h3 id="getExtensions(aCallback)" name="getExtensions(aCallback)">getExtensions(aCallback) </h3>
+<p><code>aCallback</code> でインストールされた拡張機能のリストを呼び出します。</p>
+
+<pre>void getExtensions(<code>extIExtensionsCallback aCallback</code>)</pre>
+
+
+<h4 id="getExtensions-Return_value" name="getExtensions-Return_value">戻り値</h4>
+<p>なし。</p>
+
+
+<h2 id="XPCOM" name="XPCOM">XPCOM</h2>
+
+<p>Application オブジェクトは XUL スクリプトにプリロードされますが、JavaScript XPCOM コードにはプリロードされません。オブジェクトへは他の XPCOM サービスのようにアクセスする必要があります:</p>
+<pre>var Application = Components.classes["@mozilla.org/fuel/application;1"].getService(Components.interfaces.fuelIApplication);
+</pre>
+
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+<ul>
+  <li><a href="/ja/docs/Toolkit_API/FUEL" title="FUEL">FUEL</a> (Firefox), <a href="/ja/docs/Toolkit_API/STEEL" title="Thunderbird/STEEL">STEEL</a> (Thunderbird) and <a href="/ja/docs/Toolkit_API/SMILE" title="SeaMonkey/SMILE">SMILE</a> (SeaMonkey)</li>
+</ul>

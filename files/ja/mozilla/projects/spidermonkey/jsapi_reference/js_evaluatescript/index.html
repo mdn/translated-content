@@ -1,0 +1,93 @@
+---
+title: JS EvaluateScript
+slug: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_EvaluateScript
+tags:
+  - JSAPI Reference
+  - SpiderMonkey
+translation_of: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_EvaluateScript
+---
+<p>
+
+</p><div class="breadcrumbs"><a href="/ja" title="ja">メインページ</a> » <a href="/ja/docs/SpiderMonkey" title="SpiderMonkey">SpiderMonkey</a> »
+ <a href="/ja/docs/SpiderMonkey/JSAPI_Reference" title="JSAPI_Reference">JSAPI リファレンス</a> »
+ <code>JS_EvaluateScript</code></div>
+
+
+<p></p>
+
+<p>スクリプトのコンパイルおよび実行を行います。 <span class="comment">Compile and execute a script.</span></p>
+
+<h2 id=".E6.A7.8B.E6.96.87" name=".E6.A7.8B.E6.96.87">構文</h2>
+
+<pre class="eval"><a href="ja/JSBool">JSBool</a> <strong>JS_EvaluateScript</strong>(<a href="ja/JSContext">JSContext</a> *cx, <a href="ja/JSObject">JSObject</a> *obj,
+    const char *src, <a href="ja/UintN">uintN</a> length, const char *filename,
+    <a href="ja/UintN">uintN</a> lineno, <a href="ja/Jsval">jsval</a> *rval);
+
+<a href="ja/JSBool">JSBool</a> <strong>JS_EvaluateUCScript</strong>(<a href="ja/JSContext">JSContext</a> *cx, <a href="ja/JSObject">JSObject</a> *obj,
+    const <a href="ja/Jschar">jschar</a> *src, <a href="ja/UintN">uintN</a> length, const char *filename,
+    <a href="ja/UintN">uintN</a> lineno, <a href="ja/Jsval">jsval</a> *rval);
+</pre>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Name</th>
+   <th>Type</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td><code>cx</code></td>
+   <td><code><a href="ja/JSContext">JSContext</a> *</code></td>
+   <td>スクリプトを実行するコンテキスト<span class="comment">The context in which to run the script.</span> {{ Jsapi-requires-request() }}</td>
+  </tr>
+  <tr>
+   <td><code>obj</code></td>
+   <td><code><a href="ja/JSObject">JSObject</a> *</code></td>
+   <td>スクリプトと関連付けるオブジェクト<span class="comment">Object with which the script is associated.</span></td>
+  </tr>
+  <tr>
+   <td><code>src</code></td>
+   <td><code>const char *</code><em>or</em> <code>const <a href="ja/Jschar">jschar</a> *</code></td>
+   <td>コンパイル・実行対象となるスクリプト文字列<span class="comment">String containing the script to compile and execute.</span></td>
+  </tr>
+  <tr>
+   <td><code>length</code></td>
+   <td><code>size_t</code></td>
+   <td><code>src</code>の文字列長<span class="comment">The length of &lt;code&gt;src&lt;/code&gt;, in characters.</span></td>
+  </tr>
+  <tr>
+   <td><code>filename</code></td>
+   <td><code>const char *</code></td>
+   <td>エラーメッセージ出力に利用されるスクリプトのファイル名またはそのURLを示す文字列。<span class="comment">Name of file or URL containing the script. Used to report filename or URL in error messages.</span></td>
+  </tr>
+  <tr>
+   <td><code>lineno</code></td>
+   <td><code><a href="ja/UintN">uintN</a></code></td>
+   <td>エラー発生時に出力される行数<span class="comment">Line number. Used to report the offending line in the file or URL if an error occurs.</span></td>
+  </tr>
+  <tr>
+   <td><code>rval</code></td>
+   <td><code><a href="ja/Jsval">jsval</a> *</code></td>
+   <td>実行結果の出力先。実行に成功したとき、<code>*rval</code>にはスクリプトの最終行の実行結果の値が格納されます。<span class="comment">Out parameter. On success, &lt;code&gt;*rval&lt;/code&gt; receives the value of the last-executed expression statement processed in the script.</span></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id=".E8.AA.AC.E6.98.8E" name=".E8.AA.AC.E6.98.8E">説明</h2>
+
+<p><code>JS_EvaluateScript</code>は、オブジェクト<code>obj</code>に結合する形でスクリプトをコンパイル・実行する関数です。実行が成功したとき、<code>rval</code>にスクリプトの最終行の実行結果の値へのポインタが格納されています。この関数のUnicode版として、<code>JS_EvaluateUCScript</code>が用意されています。 <span class="comment">&lt;code&gt;JS_EvaluateScript&lt;/code&gt; compiles and executes a script associated with a JS object, &lt;code&gt;obj&lt;/code&gt;. On successful completion, &lt;code&gt;rval&lt;/code&gt; is a pointer to a variable that holds the value from the last executed expression statement processed in the script. &lt;code&gt;JS_EvaluateUCScript&lt;/code&gt; is the Unicode version of the function.</span></p>
+
+<p><code>src</code>はスクリプト文字列、<code>length</code>はその文字列の長さをそれぞれ引数として取ります。 <span class="comment">&lt;code&gt;src&lt;/code&gt; is the string containing the text of the script. &lt;code&gt;length&lt;/code&gt; indicates the size of the text version of the script in characters.</span></p>
+
+<p><code>filename</code>はスクリプトの位置を示すファイル名またはURLを引数として取ります。ここで指定した情報は、コンパイルエラーが発生したときのエラーメッセージに利用されます。<code>lineno</code>も同様にエラーメッセージとして出力される行番号として利用されます。 <span class="comment">&lt;code&gt;filename&lt;/code&gt; is the name of the file (or URL) containing the script. This information is used in messages if an error occurs during compilation. Similarly, &lt;code&gt;lineno&lt;/code&gt; is used to report the line number of the script or file where an error occurred during compilation.</span></p>
+
+<p>スクリプトのコンパイルと実行が成功したとき、<code>JS_EvaluateScript</code>および<code>JS_EvaluateUCScript</code>は<code>JS_TRUE</code>を、失敗したときは<code>JS_FALSE</code>をそれぞれ返します。コンパイル・実行に失敗したとき、<code>*rval</code>の値は未定義とみなす必要があります。 <span class="comment">If a script compiles and executes successfully, &lt;code&gt;JS_EvaluateScript&lt;/code&gt; or &lt;code&gt;JS_EvaluateUCScript&lt;/code&gt; returns &lt;code&gt;JS_TRUE&lt;/code&gt;. Otherwise it returns &lt;code&gt;JS_FALSE&lt;/code&gt;. On failure, your application should assume that &lt;code&gt;*rval&lt;/code&gt; is undefined.</span></p>
+
+<h2 id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE" name=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE">関連項目</h2>
+
+<p>{{ LXRSearch("ident", "i", "JS_EvaluateScript") }}<br>
+ {{ LXRSearch("ident", "i", "JS_EvaluateUCScript") }}</p>
+
+<p><a href="ja/JS_CompileFile">JS_CompileFile</a>, <a href="ja/JS_CompileScript">JS_CompileScript</a>, <a href="ja/JS_DecompileScript">JS_DecompileScript</a>, <a href="ja/JS_DestroyScript">JS_DestroyScript</a>, <a href="ja/JS_EvaluateScriptForPrincipals">JS_EvaluateScriptForPrincipals</a>, <a href="ja/JS_ExecuteScript">JS_ExecuteScript</a></p>
+
+<p>{{ languages( { "en": "en/JS_EvaluateScript" } ) }}</p>

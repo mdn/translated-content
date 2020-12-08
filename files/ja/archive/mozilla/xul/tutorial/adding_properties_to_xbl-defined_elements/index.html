@@ -1,0 +1,127 @@
+---
+title: XBL で定義した要素へのプロパティの追加
+slug: Archive/Mozilla/XUL/Tutorial/Adding_Properties_to_XBL-defined_Elements
+tags:
+  - Tutorials
+  - XBL
+  - XUL
+  - XUL_Tutorial
+  - 要更新
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_Properties_to_XBL-defined_Elements
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:XBL_Attribute_Inheritance" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Adding_Methods_to_XBL-defined_Elements">次のページ  »</a></p>
+</div>
+<p>続いては、XBL で定義された要素にカスタムプロパティを追加する方法を見ていきます。</p>
+<h3 id="XBL_.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.BC.E3.83.95.E3.82.A7.E3.82.A4.E3.82.B9" name="XBL_.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.BC.E3.83.95.E3.82.A7.E3.82.A4.E3.82.B9">XBL インタフェース</h3>
+<p><a href="/ja/docs/JavaScript" title="JavaScript">JavaScript</a> と <a href="/ja/docs/DOM" title="DOM">DOM</a> は、要素のプロパティを取得または設定するためのアクセス手段を提供しています。 XBL を利用すれば、作成した要素に独自のプロパティを定義することが可能です。 または、処理を呼び出すためのメソッドを追加することもできます。 これらを行っておけば、後は (<code><a href="/ja/docs/DOM/document.getElementById" title="DOM/document.getElementById">getElementById</a></code> のような関数を使って) 要素への参照の取得を行うだけで、 追加したプロパティの取得や設定、または追加したメソッドの呼び出しが可能になります。</p>
+<p>追加できる項目には 3 種類あります。</p>
+<ul>
+  <li>フィールド (<span style="color: green;">field</span>) は、単純な値を保持するのに使います。</li>
+  <li>プロパティ (<span style="color: green;">property</span>) も、値を保持するのに使いますが、値の取得や変更を行うときに、コードが実行される場合があります。</li>
+  <li>メソッド (<span style="color: green;">method</span>) は、実行可能な関数です。</li>
+</ul>
+<p>これらの 3 つは、すべて <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#binding">binding</a></code></code> 要素の子要素として置かれた <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#implementation">implementation</a></code></code> 要素の中に定義することになります。 <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#implementation">implementation</a></code></code> 要素の中では、 <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#field">field</a></code></code>、<code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#property">property</a></code></code>、<code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#method">method</a></code></code> の各要素を必要に応じて個別に定義していきます。 このための一般的な構文を以下に示します。</p>
+<pre>&lt;binding id="element-name"&gt;
+  &lt;content&gt;
+    -- content goes here --
+  &lt;/content&gt;
+  &lt;implementation&gt;
+    &lt;field name="field-name-1"/&gt;
+    &lt;field name="field-name-2"/&gt;
+    &lt;field name="field-name-3"/&gt;
+
+    &lt;property name="property-name-1"/&gt;
+    &lt;property name="property-name-2"/&gt;
+    &lt;property name="property-name-3"/&gt;
+    .
+    .
+    .
+    &lt;method name="method-name-1"&gt;
+      -- method content goes here --
+    &lt;/method&gt;
+    .
+    .
+    .
+  &lt;/implementation&gt;
+&lt;/binding&gt;
+</pre>
+<h3 id=".E3.83.95.E3.82.A3.E3.83.BC.E3.83.AB.E3.83.89" name=".E3.83.95.E3.82.A3.E3.83.BC.E3.83.AB.E3.83.89">フィールド</h3>
+<p>個々のフィールドは、 <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#field">field</a></code></code> 要素を使って定義します。 しばしば、フィールドは <code>label</code> や <code>disabled</code> のような、 要素に置かれた属性と対応していますが、そうしなければならないという訳ではありません。</p>
+<p><code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#field">field</a></code></code> 要素の <code>name</code> 属性は、フィールドの名前を指示するために使用します。 この名前を使用して、スクリプトからフィールドの値の取得と設定を行うことができます。 以下の例では、乱数を生成して保存するためのボタンを作成しています。 このボタンの <code>number</code> プロパティからは、(値を変更しない限り) 何回取得しても同じ値が取り出されることになります。 この例では、処理のほとんどを、 <code>oncommand</code> ハンドラで行っています。 これを XBL に移す方法については、もう少し後で見ることにします。</p>
+<pre><strong>XUL:</strong>
+
+&lt;box id="random-box" class="randomizer"/&gt;
+
+&lt;button label="Generate"
+           oncommand="document.getElementById('random-box').number=Math.random();"/&gt;
+&lt;button label="Show"
+           oncommand="alert(document.getElementById('random-box').number)"/&gt;
+
+<strong>XBL:</strong>
+
+&lt;binding id="randomizer"&gt;
+  &lt;implementation&gt;
+    &lt;field name="number"/&gt;
+  &lt;/implementation&gt;
+&lt;/binding&gt;
+</pre>
+<p>このバインディングの中では、乱数を保存するための <code>number</code> フィールドが定義されています。 このフィールドの値の設定と取得は、XUL の方に追加した 2 つのボタンを使って行ないます。 そのための構文は、HTML 要素のプロパティの取得や設定を行うためのものによく似ています。 なお、この例では、表示するべきコンテントが XUL ボックスの中にも、対応する XBL の定義の中にも置かれていませんが、そのことはまったく問題ではありません。</p>
+<p>といっても、この例のフィールドにはデフォルト値が設定されていないので、 この例には修正するべき点が 1 つもないという訳ではありません。 デフォルト値を設定するためには、<code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#field">field</a></code></code> タグの内側にコンテントとして、デフォルト値として設定したい値を置きます。 以下に例を示します。</p>
+<pre>&lt;field name="number"&gt;
+  25
+&lt;/field&gt;
+</pre>
+<p>これによって、<code>number</code> フィールドのデフォルト値として 25 が設定されます。 さらに、値を置く代わりに <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#field">field</a></code></code> タグの中に、デフォルト値を求めるためのスクリプトを置くことも可能です。 この方法は、デフォルト値を計算する必要がある場合に必要になるはずです。 例えば、以下のフィールドは、現在時刻と同じ値がデフォルト値になります。</p>
+<pre>&lt;field name="currentTime"&gt;
+  new Date().getTime();
+&lt;/field&gt;
+</pre>
+<h3 id=".E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3" name=".E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3">プロパティ</h3>
+<p>プロパティにデータを設定する際、値として正しいかを確認したいことはしばしばあると思います。 または、参照されるたびに動的に値を計算したい場合もあるかもしれません。 例えば、現在時刻を保持するプロパティが必要だとすると、その値は必要になるたびに生成したいはずです。 このような場合には、<code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#field">field</a></code></code> タグではなく <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#property">property</a></code></code> タグを使う必要があります。 <code>property</code> タグを使う場合も、前述の <code>field</code> タグの場合と、構文自体は似ていますが、機能が追加されています。</p>
+<h4 id="onget_.E5.B1.9E.E6.80.A7.E3.81.A8_onset_.E5.B1.9E.E6.80.A7" name="onget_.E5.B1.9E.E6.80.A7.E3.81.A8_onset_.E5.B1.9E.E6.80.A7">onget 属性と onset 属性</h4>
+<p>プロパティでは、<code>onget</code> と <code>onset</code> 属性によって、値の取得または変更する場合にコードを実行させることが可能になります。 これらの属性は、<code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#property">property</a></code></code> 要素に追加し、その値にはプロパティ値の取得、または設定を行なうためのスクリプトを設定します。</p>
+<p>例えば、現在時刻を計算するためのスクリプトを <code>onget</code> に設定するとします。 この <code>onget</code> のスクリプトは、他のスクリプトがプロパティ値にアクセスするたびに、その値を取得するため呼び出されることになり、 このスクリプトは、そのプロパティの値となるべき値を返す必要があります。</p>
+<p>また、<code>onset</code> ハンドラも似ていますが、こちらはスクリプトからプロパティに新しい値を設定しようとする場合に呼び出されることになります。 ここに設定するスクリプトは、値をどこかに保存するか、あるいは値が<span style="border-bottom: 1px dashed green;" title="validate">正しいかを確認</span>するためのものになるはずです。 例えば、プロパティによっては、数値だけを保存できるようにしたい場合があると思いますが、 このようなプロパティに英字のテキストの設定を行おうとした場合は、失敗する必要があるはずです。</p>
+<pre>&lt;property name="size"
+          onget="return 77;"
+          onset="alert('Changed to:'+val);"/&gt;
+</pre>
+<p>このプロパティを取得すると、常に 77 を返します。 また、設定した場合には、値がプロパティに設定されたことを示すアラートが表示されます。 <code>onset</code> ハンドラが呼び出されるときには、特別な変数 <code>val</code> によって、プロパティに設定するべき値が渡されます。 ハンドラのスクリプトでは、これを利用して値が正しいかの確認や保存処理を行うことが可能です。 なお、<code>onset</code> ハンドラは、実際に設定された新しい値を返す必要があります。</p>
+<p>続いては、スクリプトで「よくあるコード」が実行されたとき、 どのように処理されていくのかを見ていくことにします。</p>
+<p>まず、「banana」と「orange」という名前の 2 つの要素があり、 それぞれには、「size」という名前のカスタムプロパティがあるとします。 このときに、以下のスクリプトを実行します。</p>
+<pre>banana.size = orange.size;
+</pre>
+<ol>
+  <li>orange の size プロパティを取得するために、orange の <code>onget</code> スクリプトが呼び出されます。呼び出されたスクリプトは値を計算して返します。</li>
+  <li>banana の size プロパティの <code>onset</code> ハンドラが呼び出されます。<code>onset</code> のスクリプトでは <code>val</code> 変数を通して orange の <code>onget</code> スクリプトが返した値を受け取り、それを banana の size プロパティに<span style="border-bottom: 1px dashed green;" title="in some manner">必要な手順に従って</span>設定します。</li>
+</ol>
+<p>フィールドとは異なり、プロパティは値を保持しないことに注意してください。 <code>onset</code> ハンドラのないプロパティに値を設定しようとした場合は、エラーになります。 このため、しばしばプロパティの実際の値を保持するために、内部的に別のフィールドを利用します。 また、プロパティを XBL で定義された要素の属性に一致させる方法も、よく利用されます。 以下の例は、プロパティを要素の属性と対応させる方法を示しています。</p>
+<pre>&lt;property name="size"
+          onget="return this.getAttribute('size');"
+          onset="this.setAttribute('size',val);"
+/&gt;
+</pre>
+<p>この例で作成したプロパティの値を、スクリプトから取得しようとするたびに、その要素の同じ名前の属性が取得されます。 また、設定しようとするときには、その値は要素の属性に設定されます。 こうしておけば、プロパティと属性のどちらから取得、または変更しても、同じ値になるため便利です。</p>
+<h4 id="getter_.E8.A6.81.E7.B4.A0.E3.81.A8_setter_.E8.A6.81.E7.B4.A0" name="getter_.E8.A6.81.E7.B4.A0.E3.81.A8_setter_.E8.A6.81.E7.B4.A0">getter 要素と setter 要素</h4>
+<p>また、<code>onget</code> 属性と <code>onset</code> 属性に設定するスクリプトが長い場合には、別の構文を利用することも可能です。 具体的には、<code>onget</code> 属性は、<code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#getter">getter</a></code></code> という名前の子要素として置き換えることができ、 <code>onset</code> 属性は、<code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#setter">setter</a></code></code> 要素で置き換えることが可能です。 以下に例を示します。</p>
+<pre>&lt;property name="number"&gt;
+  &lt;getter&gt;
+    return this.getAttribute('number');
+  &lt;/getter&gt;
+  &lt;setter&gt;
+    var v = parseInt(val,10);
+    if (!isNaN(v)) {
+      this.setAttribute('number',''+v);
+    }
+  &lt;/setter&gt;
+&lt;/property&gt;
+</pre>
+<p>この例のプロパティでは、整数値だけを保持することが可能です。 それ以外の文字が入力された場合は取り除かれます。 また、入力が数値でない場合には、値は変更されません。 これらの処理は、<code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#setter">setter</a></code></code> 要素の中に置かれたコードで行っています。 なお、このプロパティの実際の値は、要素の <code>number</code> 属性に保存されることになります。</p>
+<p>プロパティ値の取得や設定を行なうハンドラを作成するためには、どちらの構文を利用しても構いません。</p>
+<h4 id="readonly_.E5.B1.9E.E6.80.A7" name="readonly_.E5.B1.9E.E6.80.A7">readonly 属性</h4>
+<p><code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#field">field</a></code></code> タグや <code><code><a href="/ja/docs/XBL/XBL_1.0_Reference/Elements#property">property</a></code></code> タグに <code>readonly</code> 属性を追加して <code>true</code> に設定することにより、 フィールドやプロパティを読み取り専用にすることが可能です。 このとき、読み取り専用になっているプロパティに値を設定しようとしても失敗します。</p>
+<p>次のセクションでは、XBL で定義された要素にメソッドを追加する方法を見ていきます。</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:XBL_Attribute_Inheritance" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Adding_Methods_to_XBL-defined_Elements">次のページ  »</a></p>
+</div>

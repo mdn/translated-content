@@ -1,0 +1,125 @@
+---
+title: XUL インターフェイスを変更する
+slug: Archive/Mozilla/XUL/Tutorial/Modifying_a_XUL_Interface
+tags:
+  - DOM
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Modifying_a_XUL_Interface
+---
+<p> </p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Document_Object_Model" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Manipulating_Lists">次のページ  »</a></p>
+</div>
+<p>DOM には文書を変更するために、色々な関数が用意されています。</p>
+<p><span id="Creating_New_Elements"></span></p>
+<h3 id=".E8.A6.81.E7.B4.A0.E3.81.AE.E6.96.B0.E8.A6.8F.E4.BD.9C.E6.88.90" name=".E8.A6.81.E7.B4.A0.E3.81.AE.E6.96.B0.E8.A6.8F.E4.BD.9C.E6.88.90">要素の新規作成</h3>
+<p>文書 (<code>document</code>) の <code><a href="ja/DOM/document.createElement">createElement()</a></code> 関数を使うことで、新規の要素を作成することが可能です。 この関数は、引数を 1 つ取り、そこに作成する要素のタグ名を渡します。 作成した後は、 その要素に対して、<code><a href="ja/DOM/element.setAttribute">setAttribute()</a></code> 関数を使用して属性の設定を行っていき、 完了したら、<code><a href="ja/DOM/element.appendChild">appendChild()</a></code> 関数を使用して XUL 文書に追加することができます。 XUL ウインドウにボタンを追加する例を、以下に示します。</p>
+<p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_1.xul">表示</a></p>
+<pre>&lt;script&gt;
+function addButton(){
+  var aBox = document.getElementById("aBox");
+  var button = document.createElement("button");
+  button.setAttribute("label","A new Button");
+  aBox.appendChild(button);
+}
+&lt;/script&gt;
+
+&lt;box id="aBox" width="200"&gt;
+  &lt;button label="Add" oncommand="addButton();"/&gt;
+&lt;/box&gt;
+</pre>
+<ul>
+ <li>このスクリプトでは、まず、新規ボタンを追加するためのコンテナとして使用するボックスへの参照を、<code><a href="ja/DOM/document.getElementById">getElementById()</a></code> 関数によって取得します。</li>
+ <li>次に、<code><a href="ja/DOM/document.createElement">createElement()</a></code> 関数で新規にボタンを作成します。</li>
+ <li>続いて、<code><a href="ja/DOM/element.setAttribute">setAttribute()</a></code> 関数でボタンのラベルに「A Button」を設定します。</li>
+ <li>最後に、ボックスに対して <code><a href="ja/DOM/element.appendChild">appendChild()</a></code> 関数を呼び出して、ボタンをボックスに追加します。</li>
+</ul>
+<p><code><a href="ja/DOM/document.createElement">createElement()</a></code> 関数は、その文書に応じたデフォルトの型の要素を作成します。 つまり、XUL 文書の場合は、一般に XUL 要素が作成されることを意味します。 また、HTML 文書の場合は、かわりに HTML 要素が作成されて HTML 要素の特徴と機能を持つことになります。 なお、異なる名前空間の要素を作成するには <code><a href="ja/DOM/document.createElementNS">createElementNS()</a></code> 関数が利用できます。</p>
+<p><code><a href="ja/DOM/element.appendChild">appendChild()</a></code> 関数は、要素を別の要素の子要素として追加するときに使用します。 これに関連する関数として、<code><a href="ja/DOM/element.insertBefore">insertBefore()</a></code>、<code><a href="ja/DOM/element.replaceChild">replaceChild()</a></code>、<code><a href="ja/DOM/element.removeChild">removeChild</a></code> の 3 つがあります。 この 3 つの関数の構文を、以下に示します。</p>
+<pre>parent.appendChild(child);
+parent.insertBefore(child, referenceChild);
+parent.replaceChild(newChild, oldChild);
+parent.removeChild(child);
+</pre>
+<p>これらの関数の機能は、その名前が示すままのものになります。</p>
+<ul>
+ <li><code><a href="ja/DOM/element.insertBefore">insertBefore()</a></code> 関数は、新しい子ノードを、既存の別の子ノードの前に挿入します。これは <code><a href="ja/DOM/element.appendChild">appendChild()</a></code> が、要素を一連の子要素の最後に追加するのに対し、間のどこかに挿入したい場合に使用します。</li>
+ <li><code><a href="ja/DOM/element.replaceChild">replaceChild()</a></code> 関数は、既存の子要素を削除して、その場所に新たな要素を追加します。</li>
+ <li>最後の <code><a href="ja/DOM/element.removeChild">removeChild()</a></code> 関数は、既存のノードを削除します。</li>
+</ul>
+<p>これらのどの関数においても、参照する子要素、あるいは取り除かれることになる子要素は、存在していないとエラーになる点に注意してください。</p>
+<p>既存の要素を、取り除いて別のどこかに追加したくなることはしばしばあります。 その場合は、要素を取り除く操作は必要はなく、単に追加するだけでかまいません。 ノードは、DOM 上には、同時に 1 つの場所にしか置くことができないため、挿入系の呼び出しでは、まず最初に、追加するノードを元の場所から取り除くことが常に行われます。 これは、文書内でノードの位置を動かすときに便利な方法です。</p>
+<p><span id="Copying_Nodes"></span></p>
+<h4 id=".E3.83.8E.E3.83.BC.E3.83.89.E3.81.AE.E3.82.B3.E3.83.94.E3.83.BC" name=".E3.83.8E.E3.83.BC.E3.83.89.E3.81.AE.E3.82.B3.E3.83.94.E3.83.BC">ノードのコピー</h4>
+<p>また、ノードをコピーするためには <code><a href="ja/DOM/element.cloneNode">cloneNode()</a></code> 関数を使用します。 この関数は、既存のノードのコピーを作成して、どこか別の場所に追加します。 このとき、元のノードは元の場所に残されます。 また、この関数は真偽値の引数を 1 つ取って、子ノードも全てコピーするかどうかを指示します。 この値が false の場合は、ノード自身のみがコピーされ、子ノードのコピーは行われません。 また、値が true の場合は、全ての子ノードが同じようにコピーされます。 この動作は再帰的に行われるので、大きなツリー構造を持つノードの場合は、<code><a href="ja/DOM/element.cloneNode">cloneNode()</a></code> 関数に true を渡す前に、本当に必要かどうかを確かめておくべきでしょう。 以下に例を示します。</p>
+<p><span id="%E4%BE%8B_2"><a id="%E4%BE%8B_2"></a><strong>例 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_2.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_2.xul">表示</a></p>
+<pre>&lt;hbox height="400"&gt;
+  &lt;button label="Copy"
+          oncommand="this.parentNode.appendChild(this.nextSibling.cloneNode(true));"/&gt;
+
+  &lt;vbox&gt;
+    &lt;button label="First"/&gt;
+    &lt;button label="Second"/&gt;
+  &lt;/vbox&gt;
+&lt;/hbox&gt;
+</pre>
+<p>Copy ボタンが押されると..</p>
+<ul>
+ <li><code><a href="ja/DOM/element.nextSibling">nextSibling</a></code> 関数によって、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code> に隣接する次の要素である <code><code><a href="/ja/docs/Mozilla/Tech/XUL/vbox" title="vbox">vbox</a></code></code> が取得されます。</li>
+ <li><code><a href="ja/DOM/element.cloneNode">cloneNode()</a></code> 関数によって、取得した要素のコピーが作成されます。</li>
+ <li><code><a href="ja/DOM/element.appendChild">appendChild()</a></code> 関数によって、作成したコピーを DOM に追加します。</li>
+</ul>
+<p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/listbox" title="listbox">listbox</a></code></code> や <code><code><a href="/ja/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code></code> などの一部の要素には、変更操作のために専用の関数が追加で用意されています。 これらの要素を変更する場合は、可能なら専用の関数の方を使うべきであることに注意してください。 これらについては、<a href="ja/XUL_Tutorial/Manipulating_Lists">次のセクション</a>で説明する予定です。</p>
+<p><span id="Manipulating_Basic_Elements"></span></p>
+<h3 id=".E5.9F.BA.E6.9C.AC.E7.9A.84.E3.81.AA.E8.A6.81.E7.B4.A0.E3.81.AE.E6.93.8D.E4.BD.9C" name=".E5.9F.BA.E6.9C.AC.E7.9A.84.E3.81.AA.E8.A6.81.E7.B4.A0.E3.81.AE.E6.93.8D.E4.BD.9C">基本的な要素の操作</h3>
+<p>ボタンやチェックボックス、ラジオボタンといった主要な XUL 要素は、いくつかのスクリプトプロパティを通して操作することが可能です。 利用できるプロパティは各要素で異なっているため、詳細は <a href="ja/XUL_Reference">XUL 要素リファレンス</a>の一覧で確認してください。 これらの要素を操作するための共通プロパティとしては、<code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/label">label</a></span></code></code>、<code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/value">value</a></span></code></code>、<code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/checked">checked</a></span></code></code>、<code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/disabled">disabled</a></span></code></code> などがあります。 これらのプロパティは、必要に応じて対応する属性の設定や消去を行います。</p>
+<p><span id="Label_and_value_properties_examples"></span></p>
+<h4 id="label_.E3.81.A8_value_.E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3.E3.81.AE.E4.BE.8B" name="label_.E3.81.A8_value_.E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3.E3.81.AE.E4.BE.8B">label と value プロパティの例</h4>
+<p>以下に、ボタンのラベルを変更するための簡単な例を示します。</p>
+<p><span id="%E4%BE%8B_3"><a id="%E4%BE%8B_3"></a><strong>例 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_3.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_3.xul">表示</a></p>
+<pre>&lt;button label="Hello" oncommand="this.label = 'Goodbye';"/&gt;
+</pre>
+<p>ボタンが押されたとき、そのボタンのラベルが変更されます。 この技法は、ラベルを持っている他のたくさんの要素に対しても有効です。 また、<span style="border-bottom: 1px dashed green;" title="textbox">テキスト入力欄</span>については、<code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/value">value</a></span></code></code> プロパティを使って類似のことが可能です。</p>
+<p><span id="%E4%BE%8B_4"><a id="%E4%BE%8B_4"></a><strong>例 4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_4.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_4.xul">表示</a></p>
+<pre>&lt;button label="Add" oncommand="this.nextSibling.value += '1';"/&gt;
+&lt;textbox/&gt;
+</pre>
+<p>この例では、ボタンが押される度にテキスト入力欄に<code>'1'</code> が追加されていきます。 <code><a href="ja/DOM/element.nextSibling">nextSibling</a></code> プロパティによって、ボタン (this) から次の隣接要素であるテキスト入力欄へ誘導しています。 そして、<code>+=</code> 演算子は、現在の値に加算するために使われるため、そのとき入力されているテキストの末尾に 1 が付加されることになります。 この場合も、依然としてテキスト入力欄へ入力することも可能であることを補足しておきます。 また、これらのプロパティを通して、現在のラベルや要素の値を取得することも可能です。 以下に、例を示します。</p>
+<p><span id="%E4%BE%8B_5"><a id="%E4%BE%8B_5"></a><strong>例 5</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_5.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_5.xul">表示</a></p>
+<pre>&lt;button label="Hello" oncommand="alert(this.label);"/&gt;
+</pre>
+<p><span id="Toggling_a_checkbox"></span></p>
+<h4 id=".E3.83.81.E3.82.A7.E3.83.83.E3.82.AF.E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9.E3.81.AE.E7.8A.B6.E6.85.8B.E5.A4.89.E6.9B.B4" name=".E3.83.81.E3.82.A7.E3.83.83.E3.82.AF.E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9.E3.81.AE.E7.8A.B6.E6.85.8B.E5.A4.89.E6.9B.B4">チェックボックスの状態変更</h4>
+<p>チェックボックスには <code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/checked">checked</a></span></code></code> プロパティがあり、チェックボックスをチェックしたり解除したりするために使用できます。 このプロパティの使い方は、あなたが考えている内容とおそらく同じです。 次の例では、ボタンが押されるごとに、<code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/checked">checked</a></span></code></code> プロパティの状態を反転させます。 なお、<code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/label">label</a></span></code></code> や <code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/value">value</a></span></code></code> が文字列プロパティであるのに対して、 <code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/checked">checked</a></span></code></code> は、true か false のみが設定可能な、真偽値プロパティであることに注意してください。</p>
+<p><span id="%E4%BE%8B_6"><a id="%E4%BE%8B_6"></a><strong>例 6</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_6.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_6.xul">表示</a></p>
+<pre>&lt;button label="Change" oncommand="this.nextSibling.checked = !this.nextSibling.checked;"/&gt;
+&lt;checkbox label="Check for messages"/&gt;
+</pre>
+<p>ラジオボタン (<code><code><a href="/ja/docs/Mozilla/Tech/XUL/radio" title="radio">radio</a></code></code>) もプロパティを用いて選択可能ですが、グループ内で選択できるのは、同時に 1 つだけなので、1 つがチェックされた場合、他のものはチェックされていないようにしなければなりません。 もちろん、この処理をアプリケーション開発者がいちいち行う必要はなく、ラジオグループ の <code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/selectedIndex">selectedIndex</a></span></code></code> プロパティを利用して、自動的に行わせることが可能です。 また、<code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/selectedIndex">selectedIndex</a></span></code></code> プロパティは、変更だけではなく、グループ内で何番目のラジオボタンが選択されているかを示すインデックスを取得するためにも利用できます。</p>
+<p><span id="Changing_a_element_disabled_or_enabled"></span></p>
+<h4 id=".E8.A6.81.E7.B4.A0.E3.81.AE.E7.84.A1.E5.8A.B9.E5.8C.96.E3.81.A8.E6.9C.89.E5.8A.B9.E5.8C.96" name=".E8.A6.81.E7.B4.A0.E3.81.AE.E7.84.A1.E5.8A.B9.E5.8C.96.E3.81.A8.E6.9C.89.E5.8A.B9.E5.8C.96">要素の無効化と有効化</h4>
+<p>状況に応じて、特定のフィールドが適用されないように無効にしておくのは、ありふれた手法だと思います。 例えば、いくつかの選択肢から 1 つを選ぶような入力があり、その中の 1 つを選んだ場合だけ、さらに詳細なカスタマイズが可能になるような設定ダイアログを作成する場合、この手法が使用できます。 以下に、このようなインターフェイスを作成する例を示します。</p>
+<p><span id="%E4%BE%8B_7"><a id="%E4%BE%8B_7"></a><strong>例 7</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_7.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_7.xul">表示</a></p>
+<pre>&lt;script&gt;
+function updateState(){
+  var name = document.getElementById("name");
+  var sindex = document.getElementById("group").selectedIndex;
+  name.disabled = sindex == 0;
+}
+&lt;/script&gt;
+
+&lt;radiogroup id="group" onselect="updateState();"&gt;
+  &lt;radio label="Random name" selected="true"/&gt;
+  &lt;hbox&gt;
+    &lt;radio label="Specify a name:"/&gt;
+    &lt;textbox id="name" value="Jim" disabled="true"/&gt;
+  &lt;/hbox&gt;
+&lt;/radiogroup&gt;
+</pre>
+<p>この例では、ラジオグループに対して select イベントが発生したときに <code>updateState()</code> 関数が呼び出されます。 (この呼び出しは、ラジオボタンが選択されるたびに発生します)。 この関数は、現在選択されている <code><code><a href="/ja/docs/Mozilla/Tech/XUL/radio" title="radio">radio</a></code></code> 要素を、<code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/selectedIndex">selectedIndex</a></span></code></code> プロパティから取得します。 このとき、ラジオボタンのうちの 1 つは、直接ラジオグループには置かれず、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/hbox" title="hbox">hbox</a></code></code> 内に置かれていますが、これも依然としてラジオグループに含まれていることを注記しておきます。 最初のラジオボタンが選択されると、(インデックスが 0) テキスト入力欄の <code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/disabled">disabled</a></span></code></code> プロパティは true にされるため、無効になります。 また、2 番目のラジオボタンが選択されると、テキスト入力欄は有効になります。</p>
+<p>次のセクションでは、ラジオグループとリストに対する操作の詳細について説明します。</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Document_Object_Model" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Manipulating_Lists">次のページ  »</a></p>
+</div>

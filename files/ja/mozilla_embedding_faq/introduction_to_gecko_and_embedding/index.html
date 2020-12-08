@@ -1,0 +1,32 @@
+---
+title: Introduction to Gecko and Embedding
+slug: Mozilla_Embedding_FAQ/Introduction_to_Gecko_and_Embedding
+tags:
+  - Embedding Mozilla
+  - Mozilla_Embedding_FAQ
+translation_of: Mozilla/Gecko/Embedding_Mozilla/FAQ/How_do_I...
+---
+<p> </p>
+<h2 id=".E7.AC.AC_1_.E7.AB.A0:_Gecko_.E3.81.A8.E7.B5.84.E3.81.BF.E8.BE.BC.E3.81.BF.E3.81.AB.E3.81.A4.E3.81.84.E3.81.A6" name=".E7.AC.AC_1_.E7.AB.A0:_Gecko_.E3.81.A8.E7.B5.84.E3.81.BF.E8.BE.BC.E3.81.BF.E3.81.AB.E3.81.A4.E3.81.84.E3.81.A6">第 1 章: Gecko と組み込みについて</h2>
+<h3 id="Gecko_.E3.81.A8.E3.81.AF.E4.BD.95.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F" name="Gecko_.E3.81.A8.E3.81.AF.E4.BD.95.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F">Gecko とは何ですか？</h3>
+<p>Gecko とは、ブラウザエンジン、ネットワーキング、パーサ、コンテンツモデル、chrome、その他の技術群であり、 Mozilla とそのほかのアプリケーションはこれらの技術群によって成り立っています。言い換えれば、Gecko とはそのアプリケーションに固有ではないもの全てを指します。</p>
+<p>少し古いですが <a href="ja/Gecko_FAQ">Gecko の FAQ</a> があります。</p>
+<h3 id="Mozilla_.E3.81.A8.E3.81.AF.E4.BD.95.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F" name="Mozilla_.E3.81.A8.E3.81.AF.E4.BD.95.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F">Mozilla とは何ですか？</h3>
+<p>Mozilla とは、クロスプラットフォームなオープンソースのウェブブラウザ、エディター、そしてメール/ニュースアプリケーションであり、 Gecko 上に作られています。</p>
+<h3 id="GRE_.E3.81.A8.E3.81.AF.E4.BD.95.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F" name="GRE_.E3.81.A8.E3.81.AF.E4.BD.95.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F">GRE とは何ですか？</h3>
+<p>GRE (以前は MRE) とは、<a href="ja/GRE">Gecko ランタイム環境</a> のことです。これは多くのアプリケーションで利用することのできる共有ランタイムです。これは現在、<a href="ja/XULRunner">XULRunner</a> という単独のプロジェクトとして開発が行われています。</p>
+<h3 id="XPCOM_.E3.81.A8.E3.81.AF.E4.BD.95.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F" name="XPCOM_.E3.81.A8.E3.81.AF.E4.BD.95.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F">XPCOM とは何ですか？</h3>
+<p>XPCOM とは、Mozilla じゅうのオブジェクトとその他のデータの作成、所有権、削除を一元管理するのに用いられる「オブジェクト技術」 (Microsoft Windows 上の COM に似ていますが、クロスプラットフォームです) のことです。XPCOM の核となるのは nsISupports インターフェースで、参照カウントと実行時の各種機能に対する問い合わせを請け負います。すべての XPCOM オブジェクトは、そのオブジェクト特有のインターフェースに加えて nsISupports インターフェースを実装しています。最後に、XPCOM は XPConnect と呼ばれる言語に依存しないレイヤーを提供します。これはオブジェクトの実装をサポートするどんな言語でも書くことができ、またサポートするどんな言語からでも呼び出すことを可能にします。</p>
+<p>詳細は <a href="ja/XPCOM">こちら</a> を参照してください。</p>
+<h3 id="Gecko_.E3.82.92.E3.80.8C.E7.B5.84.E3.81.BF.E8.BE.BC.E3.82.80.E3.80.8D.E3.81.A8.E3.81.AF.E3.81.A9.E3.81.86.E3.81.84.E3.81.86.E6.84.8F.E5.91.B3.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F" name="Gecko_.E3.82.92.E3.80.8C.E7.B5.84.E3.81.BF.E8.BE.BC.E3.82.80.E3.80.8D.E3.81.A8.E3.81.AF.E3.81.A9.E3.81.86.E3.81.84.E3.81.86.E6.84.8F.E5.91.B3.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F">Gecko を「組み込む」とはどういう意味ですか？</h3>
+<p>Gecko によって、サードパーティ開発者は Mozilla で使用されているものと同じ技術を利用することができます。これはつまり、サードパーティのアプリケーションの中にウェブブラウザを組み込んだり、ネッ トワークバックエンドを通じてチャンネルとストリームを開いたり、DOM やそのほかを探索したりすることができるということです。さらに chrome を利用してまったく新しいアプリケーションを構築することもできます。</p>
+<h3 id="Gecko_.E7.B5.84.E3.81.BF.E8.BE.BC.E3.81.BF.E3.81.AE.E3.83.A9.E3.82.A4.E3.82.BB.E3.83.B3.E3.82.B9.E6.9D.A1.E4.BB.B6.E3.81.AF.E3.81.A9.E3.81.AE.E3.82.88.E3.81.86.E3.81.AA.E3.82.82.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F" name="Gecko_.E7.B5.84.E3.81.BF.E8.BE.BC.E3.81.BF.E3.81.AE.E3.83.A9.E3.82.A4.E3.82.BB.E3.83.B3.E3.82.B9.E6.9D.A1.E4.BB.B6.E3.81.AF.E3.81.A9.E3.81.AE.E3.82.88.E3.81.86.E3.81.AA.E3.82.82.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F">Gecko 組み込みのライセンス条件はどのようなものですか？</h3>
+<p>Mozilla のそのほかの製品と同じです。詳細は <a class="external" href="http://www.mozilla-japan.org/MPL/">MPL のページ</a> を参照してください。</p>
+<h3 id="SDK_.E3.81.AF.E3.81.82.E3.82.8A.E3.81.BE.E3.81.99.E3.81.8B.EF.BC.9F" name="SDK_.E3.81.AF.E3.81.82.E3.82.8A.E3.81.BE.E3.81.99.E3.81.8B.EF.BC.9F">SDK はありますか？</h3>
+<p>今のところ私たちは SDK に向かってゆっくりとですが作業していて、インターフェースを固定してそのドキュメントを作成し、ビルドプロセスを作り変えているところです。今のところ、<a href="ja/Download_Mozilla_Source_Code">ソースを入手</a> し、そこからご自分でビルドするようにお勧めしています。</p>
+<p>Win32 向けの SDK ナイトリービルドは <a class="link-ftp" href="ftp://ftp.mozilla.org/pub/mozilla.org/mozilla/nightly/latest-trunk/gecko-sdk-i586-pc-msvc.zip">こちら</a> にあります。</p>
+<h3 id=".E6.9C.80.E6.96.B0.E3.81.AE.E3.83.90.E3.83.BC.E3.82.B8.E3.83.A7.E3.83.B3.E3.81.AF.E3.81.A9.E3.82.8C.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F_.E3.81.A9.E3.81.AE.E3.83.90.E3.83.BC.E3.82.B8.E3.83.A7.E3.83.B3.E3.82.92.E4.BD.BF.E3.81.86.E3.81.B9.E3.81.8D.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F" name=".E6.9C.80.E6.96.B0.E3.81.AE.E3.83.90.E3.83.BC.E3.82.B8.E3.83.A7.E3.83.B3.E3.81.AF.E3.81.A9.E3.82.8C.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F_.E3.81.A9.E3.81.AE.E3.83.90.E3.83.BC.E3.82.B8.E3.83.A7.E3.83.B3.E3.82.92.E4.BD.BF.E3.81.86.E3.81.B9.E3.81.8D.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F">最新のバージョンはどれですか？ どのバージョンを使うべきですか？</h3>
+<p>組み込みビルドとソースの tar ボールは毎夜作成されていて、<a class="link-ftp" href="ftp://ftp.mozilla.org/pub/mozilla.org/xulrunner/nightly/latest-trunk/">こちら</a> で入手できます。もし安定版を必要としているのでしたら、今のところは Mozilla 1.7.x ブランチをお勧めします。</p>
+<h3 id=".E3.81.A9.E3.81.AA.E3.81.9F.E3.81.8B_Gecko_.E3.82.92.E3.81.99.E3.81.A7.E3.81.AB.E4.BD.BF.E7.94.A8.E3.81.97.E3.81.A6.E3.81.84.E3.81.BE.E3.81.99.E3.81.8B.EF.BC.9F" name=".E3.81.A9.E3.81.AA.E3.81.9F.E3.81.8B_Gecko_.E3.82.92.E3.81.99.E3.81.A7.E3.81.AB.E4.BD.BF.E7.94.A8.E3.81.97.E3.81.A6.E3.81.84.E3.81.BE.E3.81.99.E3.81.8B.EF.BC.9F">どなたか Gecko をすでに使用していますか？</h3>
+<p><a href="ja/Roll_your_own_browser_-_An_embedding_HowTo">こちら</a> で増えつつある Gecko 組み込みソフトウェアの一覧を参照することができます。</p>
+<p> </p>

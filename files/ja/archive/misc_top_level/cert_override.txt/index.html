@@ -1,0 +1,35 @@
+---
+title: Cert override.txt
+slug: Archive/Misc_top_level/Cert_override.txt
+translation_of: Archive/Misc_top_level/Cert_override.txt
+---
+<p><code>cert_override.txt</code> はユーザプロファイルに作成されるテキストファイルで、ユーザによって指定された例外証明書を保存しています。このファイルは Firefox、Thunderbird、XUL ベースのアプリケーションが利用します。</p>
+<p>XULRunner 1.9 には簡単に例外を追加する方法が無いので、そのページを Firefox で開いて、証明書を受け入れ、<code><code>cert_override.txt</code></code> を XULRunner アプリケーションのプロファイルにコピーします。</p>
+<p>文法は<a class="external" href="http://boblord.livejournal.com/18402.html" title="http://boblord.livejournal.com/18402.html">このウェブサイト</a>に記載されています。</p>
+<h3 id="Example">Example</h3>
+<p>これは SHA1-256 ハッシュアルゴリズムの例です。鍵とウェブサイトはダミーです:</p>
+<pre># PSM Certificate Override Settings file
+# This is a generated file!  Do not edit.
+some.website.com:443	OID.2.16.840.1.101.3.4.2.1	00:11:22:33:44:55:66:77:88:99:AA:BB:CC:DD:EE:FF:FF:EE:DD:CC:BB:AA:99:88:77:66:55:44:33:22:11:00	U	AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA  AAAAAAAAAAAAAAAAAAAAAAAA    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA  AAAAAAAAAAAAAAAAAAAAAAAAAA==
+</pre>
+<h3 id="Fields">Fields</h3>
+<p>フィールドはタブで区切られます。各行はラインフィードで終了します（UNIX フォーマット）。</p>
+<ol>
+ <li>ドメイン名:ポート : port 443 for HTTPS (SSL)</li>
+ <li>ハッシュアルゴリズムの OID
+  <ul>
+   <li>SHA1-256: OID.2.16.840.1.101.3.4.2.1 (most used)</li>
+   <li>SHA-384: OID.2.16.840.1.101.3.4.2.2</li>
+   <li>SHA-512: OID.2.16.840.1.101.3.4.2.3</li>
+  </ul>
+ </li>
+ <li>前記ハッシュアルゴリズムを用いた証明書のフィンガープリント</li>
+ <li>オーバーライドのタイプを示す1個またはそれ以上の文字:
+  <ul>
+   <li>M : ホスト名の不一致を許可する</li>
+   <li>U : 認証されていない証明書を許可する（自己署名証明書や不明または不正な発行者の証明書）</li>
+   <li>T : 有効期限切れやまだ有効になっていない証明書など、有効期限に関するエラーを許可する</li>
+  </ul>
+ </li>
+ <li>base64 でエンコードされた証明書のシリアル番号とその発行者の名前をあらわす文字列</li>
+</ol>

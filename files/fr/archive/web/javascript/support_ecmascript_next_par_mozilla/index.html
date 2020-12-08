@@ -1,0 +1,75 @@
+---
+title: Support d'ECMAScript Next par Mozilla
+slug: Archive/Web/JavaScript/Support_ECMAScript_Next_par_Mozilla
+tags:
+  - Firefox
+  - JavaScript
+translation_of: Archive/Web/JavaScript/ECMAScript_Next_support_in_Mozilla
+---
+<div>{{jsSidebar("New_in_JS")}}</div>
+
+<p>ECMAScript Next fait référence aux fonctionnalités ajoutées au standard ECMA-262 depuis la version ECMAScript 6 (ES2015). Depuis ECMAScript 6, des versions du standard sont publiée chaque année. Cette année, la spécification ES2018 a vu le jour et ES2019 est actuellement en cours de rédaction. est la prochaine évolution du standard ECMA-262. Les nouvelles fonctionnalités du langage peuvent déjà être proposées dans ce brouillon (<em>draft</em>) car <a href="/fr/docs/Web/JavaScript/Nouveautés_et_historique_de_JavaScript/Support_ECMAScript_6_par_Mozilla">la sixième édition</a> n'accepte plus de nouvelles fonctionnalités et est en train d'être finalisée. L'état actuel des propositions peut être consulté sur le dépôt GitHub <a href="https://github.com/tc39/ecma262">tc39/ecma262</a>.<br>
+ La liste de diffusion <a href="https://mail.mozilla.org/listinfo/es-discuss">es-discuss</a> permet de discuter des standards ECMAScript.</p>
+
+<h2 id="ECMAScript_2016">ECMAScript 2016</h2>
+
+<p>Les fonctionnalités suivantes d'ES2016 sont implémentées :</p>
+
+<ul>
+ <li>{{jsxref("Array.prototype.includes()")}} (Firefox 43)</li>
+ <li>{{jsxref("TypedArray.prototype.includes()")}} (Firefox 43)</li>
+ <li><a href="/fr/docs/Web/JavaScript/Reference/Instructions/function*">Les générateurs</a> et <a href="/fr/docs/Web/JavaScript/Reference/Fonctions/Définition_de_méthode">les méthodes de générateur</a> ne sont plus constructibles (Firefox 43)</li>
+ <li>Le gestionnaire de proxy <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Proxy/handler/enumerate">enumerate</a> a été retiré (Firefox 47)</li>
+ <li><a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_arithmétiques#Exponentiation_(**)">L'opérateur d'exponentiation</a> (Firefox 52)</li>
+ <li>{{jsxref("Fonctions/paramètres_du_reste", "La décomposition pour les paramètres du reste", "#La_décomposition_sur_les_paramètres_du_reste", 1)}} (Firefox 52)</li>
+</ul>
+
+<h2 id="ECMAScript_2017">ECMAScript 2017</h2>
+
+<p>Les fonctionnalités d'ES2017 suivantes sont implémentées :</p>
+
+<ul>
+ <li>{{jsxref("Object.values()")}} and {{jsxref("Object.entries()")}} (Firefox 47)</li>
+ <li>{{jsxref("String.prototype.padEnd()")}} (Firefox 48)</li>
+ <li>{{jsxref("String.prototype.padStart()")}} (Firefox 48)</li>
+ <li>{{jsxref("Object.getOwnPropertyDescriptors()")}} (Firefox 50)</li>
+ <li>Async Functions
+  <ul>
+   <li>{{jsxref("Instructions/async_function", "Déclaration de fonction asynchrone")}} (Firefox 52)</li>
+   <li>{{jsxref("Opérateurs/async_function", "Expression de fonction asynchrone")}} (Firefox 52)</li>
+   <li>{{jsxref("AsyncFunction")}} (Firefox 52)</li>
+   <li>{{jsxref("Opérateurs/await", "await")}} (Firefox 52)</li>
+  </ul>
+ </li>
+ <li><a href="/fr/docs/Web/JavaScript/Reference/Virgules_en_fin_de_ligne">Les virgules en fin de ligne pour la liste des paramètres d'une fonction</a> (Firefox 52)</li>
+</ul>
+
+<h2 id="Nouvelles_fonctionnalités_expérimentales">Nouvelles fonctionnalités expérimentales</h2>
+
+<p>Les fonctionnalités suivantes sont d'ores et déjà implémentées mais ne sont disponibles que pour <a href="https://nightly.mozilla.org/">Firefox Nightly</a> et ne font pas encore partie d'un brouillon de la spécification ECMAScript.</p>
+
+<h3 id="Ajout_à_l'objet_ArrayBuffer">Ajout à l'objet <code>ArrayBuffer</code></h3>
+
+<ul>
+ <li>{{jsxref("ArrayBuffer.transfer()")}} (<a href="https://gist.github.com/lukewagner/2735af7eea411e18cf20">spécfication</a>)</li>
+</ul>
+
+<h3 id="Nouveaux_objets_typés">Nouveaux objets typés</h3>
+
+<ul>
+ <li>Basés sur <a href="https://github.com/dslomov-chromium/typed-objects-es7">le brouillon de spécification pour les objets types (<em>Typed Objects</em>)</a> et exposés via un objet global <code>TypedObject</code> (par exemple, on pourrait avoir : <code>TypedObject.StructType</code> &amp; <code>TypedObject.ArrayType</code>). Cette fonctionnalité est non-standard et n'est pas documentée.</li>
+</ul>
+
+<h3 id="Nouveaux_objets_pour_la_mémoire_partagée">Nouveaux objets pour la mémoire partagée</h3>
+
+<ul>
+ <li>{{jsxref("SharedArrayBuffer")}}</li>
+ <li>{{jsxref("Atomics")}}</li>
+</ul>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="https://www.ecmascript.org/">Le site web ECMAScript</a></li>
+ <li><a href="https://kangax.github.io/compat-table/esnext/">La prise en charge d'ECMAScript <em>next</em> parmi les différents navigateurs</a></li>
+</ul>

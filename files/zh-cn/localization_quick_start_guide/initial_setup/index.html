@@ -1,0 +1,83 @@
+---
+title: 最初的准备
+slug: Localization_Quick_Start_Guide/Initial_setup
+tags:
+  - bug-840092
+translation_of: Mozilla/Localization/Quick_start_guide/Initial_setup
+---
+<p>作为参与到本地化（L10n）项目的先决条件，你需要访问到源码，获取相关工具以及一个配置好的本地环境（也就是你的电脑）。你还需要确定在你的地区是否已经存在一个本地化成果。在参与之前，我们将在这里详述你需要的账户，工具以及这些工具配置的设置。</p>
+
+<h3 id="新的或现有的（本地化）">新的或现有的（本地化）</h3>
+
+<p>在其它事情开始之前，你需要了解你是否将创建一个新的本地化或者加入一个已存在的本地化。这将决定在这篇指南以下部分当中，什么信息对你是最适用的。</p>
+
+<p>以下是你要做的内容：</p>
+
+<p>浏览现有的<a class="link-https" href="https://wiki.mozilla.org/L10n:Teams" title="https://wiki.mozilla.org/L10n:Teams">本地化社区名录（localization community directory）</a>查看是否已经存在一个属于你本地的（本地化社区）。</p>
+
+<ol start="1" style="list-style-type: lower-alpha;">
+ <li><span style="color: #0000cd;">如果已经存在（这样的）一个社区，联系他们并询问你可以怎样提供帮助。</span></li>
+ <li><span style="color: #ff8c00;">如果（这样的）一个社区不存在，发送一封<a class="link-https" href="https://groups.google.com/forum/?fromgroups#!forum/mozilla.dev.l10n.new-locales" title="https://groups.google.com/forum/?fromgroups#!forum/mozilla.dev.l10n.new-locales">电子邮件给新本地化新闻组（new-locales newsgroup）</a>寻求额外的指引。</span></li>
+</ol>
+
+<h3 id="账户">账户</h3>
+
+<p>当你开始时，有少量的账户需要你注意。对于你开始做贡献，它们不是必须的，但当你准备生成一份正式的发布版时，将需要它们。现在，只需意识到这些（账户）将和你努力的进程一样重要。这些账户将存储你的代码，贡献，并帮你生成一份正式的本地化文档。</p>
+
+<dl>
+ <dt style="margin-left: 40px;">hg (Mercurial)</dt>
+ <dd style="">Mercurial 是一个版本控制环境，存放主要的 Mozilla 源代码和每个正式的 Mozilla 本地化代码。你将需要它来本地化 Mozilla 应用程序。For anyone to gain access to hg repos, you must visit the <a class="external" href="http://www.mozilla.org/hacking/committer/" title="http://www.mozilla.org/hacking/committer/">Mozilla Commiter page</a> and follow the process outlined there. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=741305" title="https://bugzilla.mozilla.org/show_bug.cgi?id=741305">Here is an example bug</a> that illustrates the process well. Use <a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=mozilla.org&amp;component=Repository%20Account%20Requests&amp;rep_platform=All&amp;op_sys=All&amp;cc=l10n%40mozilla.com&amp;short_desc=l10n%20hg%20account%20for%20John%20Doe%20(ab-CD)" title="https://bugzilla.mozilla.org/enter_bug.cgi?product=mozilla.org&amp;component=Repository%20Account%20Requests&amp;rep_platform=All&amp;op_sys=All&amp;cc=l10n%40mozilla.com&amp;short_desc=l10n%20hg%20account%20for%20John%20Doe%20(ab-CD)">this bug template</a> when filing your hg account registration bug. <span>Add a request about creating your locale's repository to the <a class="external" href="http://groups.google.com/group/mozilla.dev.l10n.new-locales/topics" title="http://groups.google.com/group/mozilla.dev.l10n.new-locales/topics">new locales newsgroup</a>.</span></dd>
+ <dt style="margin-left: 40px;">SVN</dt>
+ <dd style="margin-left: 40px;">SVN 是一个版本控制环境，Mozilla 用来存放 Mozilla 源网站和每一个正式的 Mozilla 本地化。See <a class="link-https" href="https://wiki.mozilla.org/SVN#SVN_account_for_localizers" title="https://wiki.mozilla.org/SVN#SVN_account_for_localizers">this wiki page</a> about how to gain access to SVN. <span>Add a request about creating your locale's repository to the <a class="external" href="http://groups.google.com/group/mozilla.dev.l10n.new-locales/topics" title="http://groups.google.com/group/mozilla.dev.l10n.new-locales/topics">new locales newsgroup</a>.</span></dd>
+</dl>
+
+<dl>
+ <dt style="margin-left: 40px;">Web-based L10n tools</dt>
+ <dd style="margin-left: 40px;">We'll talk about these in a little bit. For now, just be aware that should you choose to use them, you may need to create a personal account.</dd>
+ <dt style="margin-left: 40px;">Mozilla LDAP</dt>
+ <dd style="margin-left: 40px;">You will need a Mozilla LDAP account once you're ready to have your localization registered on the main Mozilla repositories. Add a request about creating your LDAP account to the<a class="external" href="http://groups.google.com/group/mozilla.dev.l10n.new-locales/topics" title="http://groups.google.com/group/mozilla.dev.l10n.new-locales/topics"> new locales newsgroup</a>.</dd>
+ <dt style="margin-left: 40px;"><span>Locale-specific Bugzilla component</span></dt>
+ <dd style="margin-left: 40px;"><span>Having a Bugzilla component specific to your locale will help us to track your localization's progress from first steps to official release. It will also notify us when you're having problems unique to your localization team's work. Add a request about creating your locale's Bugzilla component to the </span><a class="external" href="http://groups.google.com/group/mozilla.dev.l10n.new-locales/topics" title="http://groups.google.com/group/mozilla.dev.l10n.new-locales/topics"><span>new locales newsgroup</span></a><span>.</span></dd>
+</dl>
+
+<h3 id="Local_environment_tools">Local environment tools</h3>
+
+<p>Similar to accounts, there is a number of environment tools that you should install on your personal computer. These tools will help you to store your contributions, build Mozilla applications and language packs, and test your work.</p>
+
+<dl>
+ <dt style="margin-left: 40px;">Hg (Mercurial)</dt>
+ <dd style="margin-left: 40px;">As noted above, we use Mercurial for maintaining Mozilla source code and localized code. Not only will you need a localization repository to store your localizations, but you need to have it installed and configured on your personal computer as well. You can find everything you need to know about installing and configuring Mercurial for your localization work <a href="/en/Localizing_with_Mercurial#Install_Mercurial" title="https://developer.mozilla.org/en/L10n_on_Mercurial#Install_Mercurial">here</a>.</dd>
+</dl>
+
+<dl>
+ <dt style="margin-left: 40px;">compare-locales</dt>
+ <dd style="margin-left: 40px;">compare-locales is a Python script that helps you check your work without needing to run Firefox or another application. Install intructions are located <a href="/en/Compare-locales" title="https://developer.mozilla.org/en/Compare-locales">here</a>.</dd>
+ <dt style="margin-left: 40px;">L10n checks</dt>
+ <dd style="margin-left: 40px;">L10n checks is another Python script that helps you check your work without running an application. Install instructions are located <a href="/en/L10n_Checks" title="https://developer.mozilla.org/en/L10n_Checks">here</a>.</dd>
+ <dt style="margin-left: 40px;">autoconf 2.13</dt>
+ <dd style="margin-left: 40px;">autoconf is a utility that is vital to manually creating Mozilla application builds and language packs. We use version 2.13 and higher for these builds. You can find the source files and install instructions <a class="external" href="http://www.gnu.org/software/autoconf/" title="http://www.gnu.org/software/autoconf/">here</a>.</dd>
+ <dt style="margin-left: 40px;">wget</dt>
+ <dd style="margin-left: 40px;">wget is a command-line utility that allows you to retrieve files using internet protocols. We use it for retrieving files from repositories. You can find the source files and install instructions <a class="external" href="http://www.gnu.org/s/wget/" title="http://www.gnu.org/s/wget/">here</a>.</dd>
+ <dt style="margin-left: 40px;">Perl</dt>
+ <dd style="margin-left: 40px;">Perl is a programming language that will help you create Mozilla application builds and language packs. You can find the source files and install instructions <a class="external" href="http://www.perl.org/" title="http://www.perl.org/">here</a>.</dd>
+ <dt style="margin-left: 40px;">Python</dt>
+ <dd style="margin-left: 40px;">Python is a programming language in which many of our L10n testing scripts are written. You can find the source files and install instructions <a class="external" href="http://python.org/" title="http://python.org/">here</a>.</dd>
+ <dt style="margin-left: 40px;">Locale Switcher or Quick Locale Switcher</dt>
+ <dd style="margin-left: 40px;">Both Locale Switcher and Quick Locale Switcher are add-ons for Mozilla applications. Either one is necessary to enable you to see your work within a Mozilla application. You can install either by searching for them in Firefox's add-ons manager or following <a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/locale-switcher/" title="https://addons.mozilla.org/en-US/firefox/addon/locale-switcher/">these</a> <a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/quick-locale-switcher/" title="https://addons.mozilla.org/en-US/firefox/addon/quick-locale-switcher/">links</a>.</dd>
+ <dt style="margin-left: 40px;">A solid, Unicode-based, text editor</dt>
+ <dd style="margin-left: 40px;">Here are some suggestions:
+ <ul>
+  <li style="margin-left: 40px;">Windows: <a class="external" href="http://notepad-plus.sourceforge.net/uk/site.htm" rel="external nofollow" title="http://notepad-plus.sourceforge.net/uk/site.htm">Notepad++</a> or <a class="external" href="http://www.flos-freeware.ch/notepad2.html" rel="external nofollow" title="http://www.flos-freeware.ch/notepad2.html">Notepad2</a></li>
+  <li style="margin-left: 40px;">GNU/Linux: <a class="external" href="http://en.wikipedia.org/wiki/Vim_%28text_editor%29" rel="external nofollow" title="http://en.wikipedia.org/wiki/Vim_(text_editor)">vim</a>, <a class="external" href="http://projects.gnome.org/gedit/" rel="external nofollow" title="http://projects.gnome.org/gedit/">gedit</a> or <a class="external" href="http://www.kate-editor.org/kate" rel="external nofollow" title="http://www.kate-editor.org/kate">Kate</a></li>
+  <li style="margin-left: 40px;">Mac OS X: <a class="external" href="http://www.barebones.com/products/TextWrangler/" rel="external nofollow" title="http://www.barebones.com/products/TextWrangler/">TextWrangler</a></li>
+ </ul>
+ </dd>
+ <dt style="margin-left: 40px;">GNU make</dt>
+ <dd style="margin-left: 40px;"><span class="external">Make is a tool which controls the generation of executables. You can find version</span> 3.79.1 or higher <a class="external" href="http://www.gnu.org/software/make/" title="http://www.gnu.org/software/make/">here</a>. Unfortunately, other varieties of <code>make</code> won't do.</dd>
+</dl>
+
+<h2 id="结束">结束</h2>
+
+<p>现在你已经完成你的最初的准备，是时候开始最棒的部分：翻译！</p>
+
+<p>{{ PreviousNext("Localization_Quick_Start_Guide", "Localization_Quick_Start_Guide/Translation_phase") }}</p>

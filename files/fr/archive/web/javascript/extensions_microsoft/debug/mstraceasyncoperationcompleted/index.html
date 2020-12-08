@@ -1,0 +1,88 @@
+---
+title: Debug.msTraceAsyncOperationCompleted
+slug: >-
+  Archive/Web/JavaScript/Extensions_Microsoft/Debug/msTraceAsyncOperationCompleted
+tags:
+  - JavaScript
+  - Microsoft
+  - Méthode
+  - Non-standard
+  - Reference
+translation_of: >-
+  Archive/Web/JavaScript/Microsoft_Extensions/Debug/msTraceAsyncOperationCompleted
+---
+<div>{{JSRef}}{{Non-standard_header}}</div>
+
+<p>La méthode statique <strong><code>Debug.msTraceAsyncCallbackCompleted()</code></strong> indique si une opération asynchrone est terminée.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre>Debug.msTraceAsyncCallbackCompleted(asyncOperationId[, status])
+</pre>
+
+<h3 id="Paramètres">Paramètres</h3>
+
+<dl>
+ <dt><code>asyncOperationId</code></dt>
+ <dd>L'identifiant associé à l'opération asynchrone.</dd>
+ <dt><code>status</code> {{optional_inline}}</dt>
+ <dd>Le statut de l'opération asynchrone. Si cet argument n'est pas indiqué, c'est la constante <code>Debug.MS_ASYNC_OP_STATUS_SUCCESS</code> qui sera utilisée.</dd>
+</dl>
+
+<h3 id="Notes">Notes</h3>
+
+<p><code>asyncOperationId</code> doit correspondre à un identifiant d'une opération fourni par <code>Debug.msTraceAsyncOperationStarting()</code>.</p>
+
+<p>Les valeurs qui peuvent être utilisées pour l'argument <code>status</code> sont :</p>
+
+<ul>
+ <li>
+  <p><code>Debug.MS_ASYNC_OP_STATUS_SUCCESS</code></p>
+ </li>
+ <li>
+  <p><code>Debug.MS_ASYNC_OP_STATUS_CANCELED</code></p>
+ </li>
+ <li>
+  <p><code>Debug.MS_ASYNC_OP_STATUS_ERROR</code></p>
+ </li>
+</ul>
+
+<div class="note">
+<p><strong>Note : </strong>Certains outils de débogage n'affichent pas les informations envoyées au débogueur.</p>
+</div>
+
+<h2 id="Exemples">Exemples</h2>
+
+<p>Le fragment de code suivant permet de tracer un appel asynchrone dans une application Windows 8.x Store.</p>
+
+<pre class="brush: js">function asyncWrapperFunction() {
+  var opID = Debug.msTraceAsyncOperationStarting('async trace');
+  doSomethingAsync().then(function (result) {
+    Debug.msTraceAsyncOperationCompleted(opID, Debug.MS_ASYNC_OP_STATUS_SUCCESS);
+    Debug.msTraceAsyncCallbackStarting(opID);
+    // Traiter le résultat de l'opération asynchrone.
+  }, function (error) {
+    Debug.msTraceAsyncOperationCompleted(opID, Debug.MS_ASYNC_OP_STATUS_ERROR);
+    Debug.msTraceAsyncCallbackStarting(opID);
+  });
+  Debug.msTraceAsyncCallbackCompleted();
+}
+
+function doSomethingAsync() {
+  return WinJS.Promise.as(true);
+}
+
+asyncWrapperFunction();
+</pre>
+
+<h2 id="Prérequis">Prérequis</h2>
+
+<p>Cette fonctionnalité est prise en charge par le mode standard d'Internet Explorer 11 et par les applications Store (Windows 8.1 et Windows Phone 8.1).<br>
+ Elle n'est pas prise en charge par les modes suivants : Quirks, Internet Explorer 6 en mode standard, Internet Explorer 7 en mode standard, Internet Explorer 8 en mode standard, Internet Explorer 9 en mode standard, Internet Explorer 10 en mode standard. Elle n'est pas non plus prise en charge par Windows 8.</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>{{jsxref("Debug")}}</li>
+ <li><a href="/fr/docs/Web/JavaScript/Extensions_JavaScript_Microsoft">Les extensions JavaScript spécifiques de Microsoft</a></li>
+</ul>

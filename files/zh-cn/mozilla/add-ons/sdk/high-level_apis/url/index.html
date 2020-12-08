@@ -1,0 +1,191 @@
+---
+title: url
+slug: Mozilla/Add-ons/SDK/High-Level_APIs/url
+translation_of: Archive/Add-ons/Add-on_SDK/High-Level_APIs/url
+---
+<div class="note">
+<p>实验性的</p>
+</div>
+
+<p><span class="seoSummary">构建，验证，解析URL</span></p>
+
+<h2 id="Globals">Globals</h2>
+
+<h3 id="构造函数">构造函数</h3>
+
+<h4 class="addon-sdk-api-name" id="URL(source_base)"><code>URL(source, base)</code></h4>
+
+<p>URL构造函数可以创建一个URL对象，并验证提供的字符串是否是有效的URL。SDK中，任何接受URL参数的API，除非特殊说明，均接受的是此对象而不是字符串。</p>
+
+<h5 id="参数">参数</h5>
+
+<p><strong>source : string</strong><br>
+ 一个表示URL的字符串，如果接受的参数不是有效的URL字符串，此构造函数会抛出一个异常。</p>
+
+<p><strong>base : string</strong><br>
+ 一个设置的字符串，用来表示一个相对路径的源。</p>
+
+<h4 class="addon-sdk-api-name" id="DataURL(uri)"><code>DataURL(uri)</code></h4>
+
+<p>DataURL构造函数创建一个data: URL对象, 并验证提供的字符串是否是一个有效的data: URL。</p>
+
+<h5 id="参数_2">参数</h5>
+
+<p><strong>uri : string</strong><br>
+ 一个表示Data URL的字符串。如果它不是一个合法的URL字符串，此构造函数会抛出一个错误。</p>
+
+<h3 id="函数">函数</h3>
+
+<h4 class="addon-sdk-api-name" id="toFilename(url)"><code>toFilename(url)</code></h4>
+
+<p>尝试将给定的URL转换成本地文件路径。这个方法会自动尝试解决非文件协议, such as the <code>resource:</code> protocol, to their place on the file system. 除非URL无法转换，否则，本方法会将本地路径作为字符串返回。</p>
+
+<h5 id="参数_3">参数</h5>
+
+<p><strong>url : string</strong><br>
+ 字符串格式的URL。</p>
+
+<h5 id="返回">返回</h5>
+
+<p><strong>string</strong> : 转换后的本地路径字符串</p>
+
+<h4 class="addon-sdk-api-name" id="fromFilename(path)"><code>fromFilename(path)</code></h4>
+
+<p>讲一个给定的路径转换成 <code>file:</code> URL.</p>
+
+<h5 id="参数_4">参数</h5>
+
+<p><strong>path : string</strong><br>
+ 需要被转换的本地文件路径字符串。</p>
+
+<h5 id="Returns">Returns</h5>
+
+<p><strong>string</strong> : 转换后的字符串。</p>
+
+<h4 class="addon-sdk-api-name" id="isValidURI(uri)"><code>isValidURI(uri)</code></h4>
+
+<p>检查一个URL字符串是合法。 <code>isValidURI("http://mozilla.org")</code> 将返回 <code>true</code>, 而 <code>isValidURI("mozilla.org")</code> 将返回 <code>false</code>。</p>
+
+<h5 id="参数_5">参数</h5>
+
+<p><strong>uri : string</strong><br>
+ 需要被测试的URL。</p>
+
+<h5 id="Returns_2">Returns</h5>
+
+<p><strong>boolean</strong> : 代表字符串是否有效的布尔值。</p>
+
+<h4 class="addon-sdk-api-name" id="getTLD(url)"><code>getTLD(url)</code></h4>
+
+<p>返回给定域名的顶级域名： 内部使用的是 <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIEffectiveTLDService#getPublicSuffix()"><code>getPublicSuffix()</code></a> 。</p>
+
+<pre class="brush: js">var urls = require("sdk/url");
+console.log(urls.getTLD("http://www.bbc.co.uk/"));          // "co.uk"
+console.log(urls.getTLD("https://developer.mozilla.org/")); // "org"</pre>
+
+<h5 id="参数_6">参数</h5>
+
+<p><strong>url : string</strong><br>
+ 给定的URL字符串</p>
+
+<h5 id="返回_2">返回</h5>
+
+<p><strong>string</strong> : 对应的顶级域名。</p>
+
+<h2 id="URL">URL</h2>
+
+<h3 id="方法">方法</h3>
+
+<h4 class="addon-sdk-api-name" id="toString()"><code>toString()</code></h4>
+
+<p>返回URL的字符表示形式。</p>
+
+<h5 id="返回_3">返回</h5>
+
+<p><strong>string</strong> : 字符串格式的URL。</p>
+
+<h3 id="属性">属性</h3>
+
+<h4 class="addon-sdk-api-name" id="scheme"><code>scheme</code></h4>
+
+<p>URL使用的协议</p>
+
+<h4 class="addon-sdk-api-name" id="userPass"><code>userPass</code></h4>
+
+<p>URL中的username:password 部分，<code>null</code> 表示不存在。</p>
+
+<h4 class="addon-sdk-api-name" id="host"><code>host</code></h4>
+
+<p>URL的主机部分。 <code>null</code> 表示无此部分。例子：</p>
+
+<pre class="brush: js">var url = require("sdk/url").URL("https://developer.mozilla.org/en-US/Add-ons");
+console.log(url.host);  // developer.mozilla.org</pre>
+
+<h4 class="addon-sdk-api-name" id="port"><code>port</code></h4>
+
+<p>URL使用的端口。 <code>null</code> 表示不存在。</p>
+
+<h4 class="addon-sdk-api-name" id="path"><code>path</code></h4>
+
+<p>URL的路径部分，例子：</p>
+
+<pre class="brush: js">var url = require("sdk/url").URL("https://developer.mozilla.org/en-US/Add-ons");
+console.log(url.path);  // /en-US/Add-ons</pre>
+
+<h4 class="addon-sdk-api-name" id="hostname"><code>hostname</code></h4>
+
+<p>表示URL的域的字符串。参见 <a href="/en-US/docs/Web/API/URLUtils.hostname"><code>window.location.hostname</code></a>。</p>
+
+<h4 class="addon-sdk-api-name" id="pathname"><code>pathname</code></h4>
+
+<p>从 <code>'/'</code>开始的路径字符串。参见 <a href="/en-US/docs/Web/API/URLUtils.pathname"><code>window.location.pathname</code></a>。</p>
+
+<h4 class="addon-sdk-api-name" id="hash"><code>hash</code></h4>
+
+<p>从 <code>'#'</code> 开始的hash字符串，参见 <a href="/en-US/docs/Web/API/URLUtils.hash"><code>window.location.hash</code></a>。</p>
+
+<h4 class="addon-sdk-api-name" id="href"><code>href</code></h4>
+
+<p>整个URL字符串，参见 <a href="/en-US/docs/Web/API/URLUtils.href"><code>window.location.href</code></a>。</p>
+
+<h4 class="addon-sdk-api-name" id="origin"><code>origin</code></h4>
+
+<p>该URL的源的字符串，参见 <a href="/en-US/docs/Web/API/URLUtils.origin"><code>window.location.origin</code></a>。</p>
+
+<h4 class="addon-sdk-api-name" id="protocol"><code>protocol</code></h4>
+
+<p>该URL使用的协议字符串，包括最后的<code>':'，参见</code> <a href="/en-US/docs/Web/API/URLUtils.protocol"><code>window.location.protocol</code></a>。</p>
+
+<h4 class="addon-sdk-api-name" id="search"><code>search</code></h4>
+
+<p>以'?'开始的URL的参数段，包括最开始的<code>'?'</code>。 <code>参见</code><a href="/en-US/docs/Web/API/URLUtils.search"><code>window.location.search</code></a>.</p>
+
+<h2 id="DataURL">DataURL</h2>
+
+<h3 id="方法_2">方法</h3>
+
+<h4 class="addon-sdk-api-name" id="toString()_2"><code>toString()</code></h4>
+
+<p>返回数据的URL字符串形式。如果是 <code>base64</code> 的URL，数据会以base64编码方式编码。</p>
+
+<h5 id="返回_4">返回</h5>
+
+<p><strong>string</strong> : URL字符串</p>
+
+<h3 id="属性_2">属性</h3>
+
+<h4 class="addon-sdk-api-name" id="mimeType"><code>mimeType</code></h4>
+
+<p>数据的MIME类型，默认为空字符串。</p>
+
+<h4 class="addon-sdk-api-name" id="parameters"><code>parameters</code></h4>
+
+<p>一个HashMap的数据包含URL参数。默认情况下是一个空对象。</p>
+
+<h4 class="addon-sdk-api-name" id="base64"><code>base64</code></h4>
+
+<p><span>定义了</span><span>数据</span><span>属性</span><span>值</span><span>的编码。</span></p>
+
+<h4 class="addon-sdk-api-name" id="data"><code>data</code></h4>
+
+<p>包含数据的URL字符串。如果<code>URI</code>给构造函数包含<code>Base64</code>参数，这个字符串会被解码。</p>

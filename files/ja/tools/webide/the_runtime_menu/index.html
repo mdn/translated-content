@@ -1,0 +1,53 @@
+---
+title: ランタイムメニュー
+slug: Tools/WebIDE/The_runtime_menu
+translation_of: Archive/WebIDE/The_runtime_menu
+---
+<div>{{ToolsSidebar}}</div><p>ランタイムを選択すると、ランタイムの設定にアクセスできます:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/12161/webide-runtime-settings.png" style="display: block; height: 712px; margin-left: auto; margin-right: auto; width: 811px;">以下の作業に使用します:</p>
+
+<ul>
+ <li><a href="/ja/docs/Tools/WebIDE/The_runtime_menu#Runtime_info">ランタイムの情報を参照する</a></li>
+ <li><a href="/ja/docs/Tools/WebIDE/The_runtime_menu#Permissions_table">アプリの許可設定一覧を参照する</a></li>
+ <li><a href="/ja/docs/Tools/WebIDE/The_runtime_menu#Device_preferences">端末の設定を参照および変更する</a></li>
+ <li><a href="/ja/docs/Tools/WebIDE/The_runtime_menu#Device_settings">端末のオプションを参照および変更する</a></li>
+ <li><a href="/ja/docs/Tools/WebIDE/The_runtime_menu#Screenshot">スクリーンショットを撮影する</a></li>
+ <li>ランタイムを切断する</li>
+</ul>
+
+<h2 id="Runtime_info" name="Runtime_info">ランタイム情報</h2>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/12163/webide-runtime-info.png" style="display: block; height: 712px; margin-left: auto; margin-right: auto; width: 811px;"></p>
+
+<h2 id="Permissions_table" name="Permissions_table">許可設定一覧</h2>
+
+<p>現在のランタイムにおける<a href="/ja/Apps/Build/App_permissions">アプリの許可設定</a>をまとめた一覧表です。API および<a href="/ja/Marketplace/Options/Packaged_apps#Types_of_packaged_apps">アプリの種類</a>ごとにアクセスが許可 (✓)、拒否 (✗) またはユーザに問い合わせる (!) のいずれかを示します。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/12165/webide-permissions-table.png" style="display: block; height: 712px; margin-left: auto; margin-right: auto; width: 1013px;"></p>
+
+<h2 id="Device_preferences" name="Device_preferences">端末の設定</h2>
+
+<p><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPrefService">Preferences service</a> を通して使用可能な端末の設定項目を、編集可能な一覧表で表示します。Firefox の about:config と同じプラットフォームレベルの設定値のデータセットを公開していますが、これは端末向けの設定です。</p>
+
+<p>これらの設定はセキュリティ上とてもデリケートですので、変更できるようにするためには<a href="/ja/docs/Tools/WebIDE/Running_and_debugging_apps#Unrestricted_app_debugging_(including_certified_apps.2C_main_process.2C_etc.)">開発ツールの権限を制限する設定</a>を無効にしなければなりません。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/12167/webide-device-preferences.png" style="display: block; height: 712px; margin-left: auto; margin-right: auto; width: 1013px;"></p>
+
+<h2 id="Device_settings" name="Device_settings">端末オプション</h2>
+
+<div class="note">
+<p>Firefox OS 2.5 の新機能</p>
+</div>
+
+<p>Firefox OS の設定アプリで制御できる設定項目を、変更可能な一覧表で表示します。端末上に変更するための UI を持つ設定のほとんど (例えば音量やアラームなど) は、端末オプションの方にあります。</p>
+
+<p>このような設定項目は端末の設定よりデリケートではなく、権限を制限する設定を無効化しなくても変更できます。</p>
+
+<p>この機能を使用するには、Firefox 38 以降の WebIDE で Firefox OS 2.5 以降に接続しなければなりません。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/12169/webide-device-settings.png" style="display: block; height: 712px; margin-left: auto; margin-right: auto; width: 1013px;"></p>
+
+<h2 id="Screenshot" name="Screenshot"><strong>スクリーンショット</strong></h2>
+
+<p>ランタイムのスクリーンショットを撮影するコマンドです。</p>

@@ -1,0 +1,107 @@
+---
+title: Ajouter des feuilles de style
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Ajouter_des_feuilles_de_style
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_Style_Sheets
+---
+<p> </p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Données_persistantes" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Styler_un_arbre">Suivant  »</a></p>
+</div>
+<p>Jusqu'à présent, nous avons à peine modifier l'aspect visuel des éléments que nous avons créés. XUL utilise CSS (Cascading Style Sheets) pour personnaliser les éléments.</p>
+<h3 id="Feuilles_de_styles" name="Feuilles_de_styles">Feuilles de styles</h3>
+<p>Une feuille de styles est un fichier qui contient des informations de style pour les éléments. Les styles ont été conçus au départ pour des éléments HTML mais ils peuvent également être appliqués à <a href="/fr/Référence_XUL" title="fr/Référence_XUL">des éléments XUL</a> ou à n'importe quels éléments <a href="/fr/XML" title="fr/XML">XML</a>. La feuille de styles contient des informations telles que les polices, couleurs, bordures et taille des éléments.</p>
+<p>Mozilla applique une feuille de styles par défaut pour chaque fenêtre XUL. Dans la plupart des cas, il sera suffisant de laisser les valeurs par défaut telles quelles. Toutefois, vous pouvez fournir une feuille de styles personnalisée. En général vous associerez une seule feuille de styles à chaque fichier XUL.</p>
+<p>Vous pouvez placer une feuille de styles où vous le désirez. Si votre fichier XUL se trouve sur un serveur distant et doit être accédé via une URL HTTP, vous pouvez également stocker la feuille de styles à distance. Si vous créez un paquetage XUL destiné à faire partie du système chrome, vous avez deux choix. Premièrement, vous pouvez placer la feuille de styles dans le même répertoire que le fichier XUL. Cette méthode a l'inconvénient d'interdire le changement du thème graphique de votre application. La seconde méthode consiste à placer vos fichiers à l'intérieur d'un thème.</p>
+<div class="highlight">Imaginons que nous construisions la boîte de dialogue de recherche de fichiers pour permettre le choix d'un thème. Comme la fenêtre peut être appelée par l'URL '<a class=" external" rel="freelink">chrome://findfile/content/findfile.xul</a>', la feuille de styles sera enregistrée dans '<a class=" external" rel="freelink">chrome://findfile/skin/findfile.css</a>'.</div>
+<p>Tous les exemples XUL ont utilisé une feuille de styles jusqu'à présent. La seconde ligne a toujours été :</p>
+<pre>&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;</pre>
+<p>Cette ligne indique que nous voulons utiliser le style fourni par <code><a class=" external" rel="freelink">chrome://global/skin/</a></code>. Sous Mozilla, elle sera traduit par le fichier global.css qui contient les informations du style par défaut pour les éléments XUL. Si vous enlevez cette ligne, les éléments fonctionneront, toutefois ils apparaîtront dans un style plus simple. La feuille de styles utilise diverses polices, couleurs et bordures pour rendre l'apparence des éléments plus appropriée.</p>
+<h3 id="Modifier_les_styles" name="Modifier_les_styles">Modifier les styles</h3>
+<p>Il arrivera toutefois que l'apparence par défaut des éléments ne soit pas celle désirée. Dans ces cas, nous devons ajouter notre propre feuille de styles. Jusqu'à présent, nous avons appliqué différents styles en utilisant l'attribut <code id="a-style"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/style">style</a></code> sur des éléments. Bien que ce soit une technique fonctionnelle, elle n'est pas la meilleure. Il est de loin préférable de créer une feuille de styles séparée. La raison est que des styles ou des thèmes différents peuvent êtres appliqués très facilement.</p>
+<p>Il peut y avoir des cas où l'utilisation de l'attribut <code id="a-style"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/style">style</a></code> est acceptable. Un bon exemple serait lorsqu'un script modifie le style d'un élément, ou quand une différence d'agencement pourrait modifier la signification de l'élément. Cependant vous devriez l'éviter autant que possible.</p>
+<p>Pour des fichiers installés, vous aurez à créer ou à modifier un fichier manifeste et installer le thème.</p>
+<div class="highlight">
+<h4 id="Notre_exemple_de_recherche_de_fichiers" name="Notre_exemple_de_recherche_de_fichiers">Notre exemple de recherche de fichiers</h4>
+<p>Modifions la boîte de dialogue de recherche de fichiers pour que son style provienne d'un fichier style séparé. Tout d'abord, voici les lignes modifiées de findfile.xul  :</p>
+<pre class="eval"><span class="highlightred">&lt;?xml-stylesheet href="<a class=" external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;</span>
+&lt;?xml-stylesheet href="findfile.css" type="text/css"?&gt;
+  ...
+<span class="highlightred">&lt;spacer class="titlespace"/&gt;</span>
+  &lt;groupbox orient="horizontal"&gt;
+    <span class="nowiki">&lt;caption label="Critères de recherche"/&gt;</span>
+
+      &lt;menulist id="searchtype"&gt;
+        &lt;menupopup&gt;
+          &lt;menuitem label="Nom"/&gt;
+          &lt;menuitem label="Taille"/&gt;
+          &lt;menuitem label="Date de modification"/&gt;
+        &lt;/menupopup&gt;
+      &lt;/menulist&gt;
+      <span class="highlightred">&lt;spacer class="springspace"/&gt;</span>
+      &lt;menulist id="searchmode"&gt;
+        &lt;menupopup&gt;
+          &lt;menuitem label="Est"/&gt;
+          &lt;menuitem label="N'est pas"/&gt;
+        &lt;/menupopup&gt;
+      &lt;/menulist&gt;
+
+      <span class="highlightred">&lt;spacer class="springspace"/&gt;       &lt;menulist id="find-text" flex="1"</span>
+          editable="true"
+          datasources="<a class=" external" rel="freelink">file:///mozilla/recents.rdf</a>"
+          ref="<span class="nowiki">http://www.xulplanet.com/rdf/recent/all</span>"/&gt;
+  ...
+<span class="highlightred">&lt;spacer class="titlespace"/&gt; &lt;hbox&gt;    &lt;progressmeter id="progmeter" value="50%" style="display:none;"/&gt;</span>
+</pre>
+<p>La nouvelle ligne <code>xml-stylesheet</code> est utilisée afin d'importer la feuille de styles. Elle contiendra les styles au lieu de les avoir directement dans le fichier XUL. Vous pouvez inclure un nombre indéterminé de feuilles de styles de la même façon. Ici la feuille de styles est placée dans le même répertoire que findfile.xul.</p>
+<p>Certains des styles dans le code ci-dessus ont été enlevés. La propriété <code>display</code> du <code><a href="/fr/docs/Mozilla/Tech/XUL/progressmeter" title="progressmeter">progressmeter</a></code> ne l'a pas été. Elle sera modifiée par un script donc, le style a été maintenu, car la barre de progression n'a pas à être visible au lancement. Vous pouvez toujours mettre le style dans une feuille de styles séparée si vous le souhaitez vraiment. Une classe a été ajoutée aux éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code> pour qu'ils puissent être appelés.</p>
+<p>Une feuille de styles a également besoin d'être créée. Créez un fichier findfile.css dans le même répertoire que le fichier XUL (Il devrait normalement être mis dans un thème séparé). Dans ce fichier, nous allons ajouter la déclaration de styles, comme indiqué ci-dessous :</p>
+<pre>#find-text {
+  min-width: 15em;
+}
+
+#progmeter {
+  margin: 4px;
+}
+
+.springspace {
+  width: 10px;
+}
+
+.titlespace {
+  height: 10px;
+}
+</pre>
+<p>Remarquez que ces styles sont équivalents aux styles que nous avions précédemment. Cependant, il est beaucoup plus facile pour quelqu'un de changer l'apparence de la boîte de dialogue de recherche de fichiers maintenant car il est possible d'ajouter ou modifier la déclaration de styles en modifiant le fichier ou en changeant le thème. Si l'utilisateur change le thème, les fichiers dans un répertoire autre que celui par défaut seront utilisés.</p>
+</div>
+<h3 id="Importer_des_feuilles_de_styles" name="Importer_des_feuilles_de_styles">Importer des feuilles de styles</h3>
+<p>Nous avons déjà vu comment importer des feuilles de styles. Un exemple est montré ci-dessous :</p>
+<pre>&lt;?xml-stylesheet href="chrome://bookmarks/skin/" type="text/css"?&gt;</pre>
+<p>Cette ligne peut être la première d'une fenêtre 'bookmarks'. Elle importe la feuille de style bookmarks, qui est 'bookmarks.css'. Le système de thème de Mozilla est assez intelligent pour savoir quelle feuille de styles utiliser, car le nom spécifique du fichier n'a pas été indiqué ici. Nous avons fait une chose similaire avec la feuille de styles globale (<a class=" external" rel="freelink">chrome://global/skin</a>).</p>
+<p>Une feuille de styles peut importer des styles d'une autre feuille en utilisant la directive <code>import</code>. Normalement, vous n'importerez qu'une seule feuille de styles de chaque fichier XUL. La feuille de styles globale peut être importée à partir de celle associée avec le fichier XUL. Ceci peut être fait grâce au code ci-dessous, vous permettant de retirer l'import du fichier XUL :</p>
+<pre class="eval"><strong>Importation de styles à partir de XUL :</strong>
+&lt;?xml-stylesheet href="<a class=" external" rel="freelink">chrome://global/skin/</a>"  type="text/css"?&gt;
+
+<strong>Importation de styles à  partir de CSS :</strong>
+@import url(<a class=" external" rel="freelink">chrome://global/skin/</a>);
+</pre>
+<p>La seconde syntaxe est préférable car elle réduit le nombre de dépendances à l'intérieur du fichier XUL lui-même.</p>
+<div class="highlight">
+<p>Retirez l'importation de la feuille de styles globale dans findfile.xul et ajoutez l'importation dans findfile.css.</p>
+</div>
+<p>Tous les éléments peuvent être décorés à l'aide de <a href="/fr/CSS" title="fr/CSS">CSS</a>. Vous pouvez utiliser des sélecteurs pour sélectionner l'élément que vous souhaitez styler (Le sélecteur est la partie avant l'accolade dans une règle de style). La liste suivante résume quelques-uns des sélecteurs disponibles :</p>
+<dl> <dt><code>button</code> </dt> <dd>Désigne toutes les balises <code><a href="/fr/docs/Mozilla/Tech/XUL/button" title="button">button</a></code>.</dd> <dt><code>#special-button</code> </dt> <dd>Désigne les éléments avec un <code id="a-id"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/id">id</a></code> de 'special-button'</dd> <dt><code>.bigbuttons</code> </dt> <dd>Désigne tous les éléments avec une classe 'bigbuttons'</dd> <dt><code>button.bigbuttons</code> </dt> <dd>Désigne tous les éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/button" title="button">button</a></code> avec une classe à 'bigbuttons'</dd> <dt><code>toolbar &gt; button</code> </dt> <dd>Désigne tous les boutons directement insérés dans un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code>.</dd> <dt><code>toolbar &gt; button.bigbuttons</code> </dt> <dd>Désigne tous les éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/button" title="button">button</a></code> avec une classe 'bigbuttons', directement insérés dans un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code>.</dd> <dt><code>button.bugbuttons:hover</code> </dt> <dd>Désigne tous les éléments <code>button</code> avec une classe 'bigbuttons' mais seulement lorsque la souris se trouve au dessus d'eux.</dd> <dt><code>button#special-button:active</code> </dt> <dd>Désigne tous les éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/button" title="button">button</a></code> avec un <code id="a-id"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/id">id</a></code> 'special-button' mais seulement lorsqu'ils sont actifs (en train d'être cliqués).</dd> <dt><code>box[orient="horizontal"]</code> </dt> <dd>Désigne tous les éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/box" title="box">box</a></code> avec un attribut <code id="a-orient"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/orient">orient</a></code> réglé sur 'horizontal'.</dd>
+</dl>
+<p>Vous pouvez combiner ces règles comme vous le désirez. C'est toujours une bonne idée d'être aussi précis que possible lorsque vous spécifiez ce qui doit être décoré et comment. C'est bien plus efficace et réduit également les risques de décorer un mauvais élément.</p>
+<div class="highlight">
+<p><span id="La_bo%C3%AEte_de_dialogue_de_recherche_de_fichiers_%C3%A0_ce_stade"><a id="La_bo%C3%AEte_de_dialogue_de_recherche_de_fichiers_%C3%A0_ce_stade"></a><strong>La boîte de dialogue de recherche de fichiers à ce stade</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-style.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-style.xul">Voir</a></p>
+</div>
+<hr>
+<p>Dans la prochaine section, nous verrons comment appliquer des styles aux arbres.</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Données_persistantes" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Styler_un_arbre">Suivant  »</a></p>
+</div>
+<p><span class="comment">Interwiki</span></p>

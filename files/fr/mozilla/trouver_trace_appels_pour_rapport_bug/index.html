@@ -1,0 +1,97 @@
+---
+title: Comment trouver la trace d'appels pour envoyer un rapport de bug
+slug: Mozilla/Trouver_trace_appels_pour_rapport_bug
+tags:
+  - Bugzilla
+translation_of: Mozilla/How_to_get_a_stacktrace_for_a_bug_report
+---
+<p>Si vous envoyez un rapport de plantage sur le Bugzilla vous devriez joindre la trace d'appels (en anglais <em>stacktrace</em>). C'est grâce à elle que les développeurs de Mozilla sauront ce qui s'est mal passé et auront un point de départ pour mener leurs investigations. Cet article vous explique comment utiliser le rapporteur de plantage de Mozilla (le <em>Breakpad</em>, un bloc-notes des incidents) pour obtenir un identifiant de plantage que nos ingénieurs peuvent utiliser pour obtenir la trace d'appels. Vous apprendre également de quels autres moyens vous disposez pour obtenir une trace d'appels si vous ne connaissez pas l'identifiant de plantage.</p>
+
+<h2 id="Conditions_nécessaires">Conditions nécessaires</h2>
+
+<p>Vous avez besoin d'une version de Firefox téléchargée sur <a class="external external-icon" href="https://www.mozilla.org/fr/firefox/">Mozilla.org</a>. SeaMonkey et Thunderbird comportent également une assistance au rapport de plantage.</p>
+
+<p>Le serveur du rapporteur de bug de Mozilla ne dispose d'informations de débogage que pour les versions produites par Mozilla. Par conséquent le rapporteur de bug ne peut pas fonctionner si vous utilisez votre propre compilation du code source ou une version issue de certaines distributions Linux. Auquel cas vous devrez utiliser une des <a href="#Alternative_ways_to_get_a_stacktrace">méthodes alternatives</a> exposées ci-dessous.</p>
+
+<div class="note"><strong>Remarque : </strong>lorsqu'on traite un rapport de plantage, il est important se savoir si le plantage s'est produit avec <a class="external" href="http://support.mozilla.com/en-US/kb/Safe+Mode" title="http://support.mozilla.com/en-US/kb/Safe+Mode">Firefox en mode sans échec</a>. C'est ce qui aide les ingénieurs à déterminer si une <a class="external" href="http://support.mozilla.com/en-US/kb/Troubleshooting+extensions+and+themes" title="http://support.mozilla.com/en-US/kb/Troubleshooting+extensions+and+themes">extension</a> quelconque ou un <a class="external" href="http://support.mozilla.com/en-US/kb/Troubleshooting+plugins" title="http://support.mozilla.com/en-US/kb/Troubleshooting+plugins">plugin</a> particulier est à l'origine du problème.</div>
+
+<h2 id="Trouver_lidentifiant_de_plantage_avec_le_rapporteur_de_plantage_de_Mozilla">Trouver l'identifiant de plantage avec le rapporteur de plantage de Mozilla</h2>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td>
+    <p><strong>1. Le plantage et l'envoi d'un rapport au système.</strong></p>
+
+    <p>La fenêtre du rapporteur de plantage de Mozilla devrait apparaître automatiquement après un plantage de Firefox. Si vous disposez d'autres informations complémentaires sur le plantage, comme des détails sur ce que vous étiez en train de faire au moment critique et qui peut avoir déclenché le plantage, n'hésitez pas à l'écrire dans la zone de saisie des commentaires. Vérifiez que vous avez bien coché la case <strong>« </strong>Informer <span class="highlight">Firefox </span>de ce problème pour qu’il puisse être corrigé<strong> » </strong>et cliquez sur le bouton de redémarrag<strong>e</strong>. Le rapporteur de plantage devrait alors soumettre le rapport de plantage, puis Firefox va s'ouvrir à nouveau.</p>
+
+    <div class="note">Le bouton "Détails" permet d'accéder à des données supplémentaires sur l'incident, cependant elles ne sont pas très utiles dans un rapport de bug.</div>
+   </td>
+   <td>
+    <p style="text-align: center;"><img alt="reporter.jpg" class="internal lwrap" src="../../../../@api/deki/files/2854/=reporter.jpg?size=webview" style="float: left; height: 307px; width: 300px;"></p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td>
+    <p><strong>2. Communiquez-nous l'identifiant du rapport que vous avez soumis.</strong></p>
+
+    <p>Pour accéder à tous vos rapports de bug, saisissez<strong> "about:crashes" dans la barre d'adresse de Firefox</strong> et appuyez sur Entrée. Firefox should open a list of IDs for your submitted crash reports. Copy two or three of the IDs for the appropriate crashes and paste them into your Bugzilla report. Please check the listed times to avoid copying the ID of an unrelated crash report.</p>
+
+    <div class="note">You can prefix a "bp-" to the beginning of an ID to make Bugzilla turn it into a link: <strong>bp-</strong>a70759c6-1295-4160-aa30-bc4772090918</div>
+   </td>
+   <td>
+    <p style="text-align: center;"><img alt="crashlist.jpg" class="internal lwrap" src="../../../../@api/deki/files/2855/=crashlist.jpg?size=webview" style="float: left; height: 403px; width: 450px;"></p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Trouver_lidentifiant_dun_plantage_au_démarrage">Trouver l'identifiant d'un plantage au démarrage</h3>
+
+<p><span id="result_box" lang="fr"><span>Si Firefox tombe en panne au démarrage, vous pouvez toujours accéder à vos rapports d'incident soumis.</span></span> <span id="result_box" lang="fr"><span>Les rapports Crash sont accessibles depuis tous les profils de Firefox,</span></span> <a class="external external-icon" href="https://support.mozilla.org/fr/kb/utiliser-gestionnaire-profils-creer-supprimer-profils">new profile</a> <span id="result_box" lang="fr"><span>ne se bloque pas, vous pouvez l'utiliser pour y accéder par "about: crashes"</span></span> <a class="external" href="/En/How_to_get_a_stacktrace_for_a_bug_report#How_to_get_a_crash_ID_with_the_Mozilla_Crash_Reporter" title="https://developer.mozilla.org/En/How_to_get_a_stacktrace_for_a_bug_report#How_to_get_a_crash_ID_with_the_Mozilla_Crash_Reporter">as above</a>.</p>
+
+<h4 id="Accès_aux_ID_de_rapport_dincident_en_dehors_de_Firefox"><span id="result_box" lang="fr"><span>Accès aux ID de rapport d'incident en dehors de Firefox</span></span></h4>
+
+<p><span id="result_box" lang="fr"><span>Si vous ne pouvez pas charger Firefox du tout, vous pouvez trouver les fichiers de rapport d'incident à cet emplacement en fonction de votre système d'exploitation:</span></span></p>
+
+<p>Windows : <span class="filename">%APPDATA%\Mozilla\Firefox\Crash Reports\submitted\</span><br>
+ OS X : <span class="filename">~/Library/Application Support/Firefox/Crash Reports/submitted/</span><br>
+ Linux : <span class="filename">~/.mozilla/firefox/Crash Reports/submitted/</span></p>
+
+<p><span id="result_box" lang="fr"><span>Chaque fichier de ce dossier contient un ID de rapport d'incident envoyé.</span> <span>Vous pouvez vérifier l'heure modifiée ou la création pour chaque fichier afin de déterminer quels rapports d'incident sont pertinents pour votre rapport de bogue.</span></span></p>
+
+<h2 id="Dautres_moyens_de_trouver_la_trace_dappels">D'autres moyens de trouver la trace d'appels</h2>
+
+<p><span id="result_box" lang="fr"><span>Si le journal de crash Mozilla ne s'affiche pas ou n'est pas disponible, vous devrez obtenir manuellement une trace de pile:</span></span></p>
+
+<h4 id="Windows">Windows</h4>
+
+<p>Voir l'article <a class="internal" href="/en/How_to_get_a_stacktrace_with_WinDbg">Create a stacktrace with Windbg</a> pour plus d'information à ce propos.</p>
+
+<p>For a full process dump, see <a href="/en-US/docs/How_to_get_a_process_dump_with_Windows_Task_Manage">How to get a process dump with Windows Task Manager [en-US]</a></p>
+
+<h4 id="OS_X">OS X</h4>
+
+<p>Exécuter /Applications/Utilities/Console.app.  Ouvrir "~/Library/Logs" et "CrashReporter", et rechercher les logs pour "firefox-bin".</p>
+
+<h4 id="Linux">Linux</h4>
+
+<p>Note that for most distros the package you need to get symbols for will be something like "xulrunner", not "firefox".</p>
+
+<h2 id="Where_did_my_crash_get_submitted.3F" name="Where_did_my_crash_get_submitted.3F">Les fichiers de rapports de plantage dans votre ordinateur</h2>
+
+<p><span id="result_box" lang="fr"><span>Lorsque Breakpad initialement attrape un plantage, il écrit d'abord les fichiers de rapport d'incident (par exemple les fichiers .dump et .extra) dans le sous-répertoire «pending» de son annuaire «Crash Reports».</span><br>
+ <br>
+ <span>Si Breakpad envoie avec succès le rapport d'incident au serveur de rapports, par défaut, les fichiers ajoutés au sous-répertoire «en attente» de la panne sont supprimés et un fichier .txt est placé dans le répertoire «soumis» contenant l'ID d'incident</span> <span>Serveur de rapports a enregistré le crash sous.</span> <span>Si vous voulez que Breakpad quitte les fichiers .dump et .extra sur votre ordinateur pour pouvoir les examiner localement,</span></span> MOZ_CRASHREPORTER_NO_DELETE_DUMP <span class="short_text" id="result_box" lang="fr"><span>variable d'environnement à 1.</span></span></p>
+
+<ul>
+ <li>Ubuntu:  <a class="external external-icon" href="https://wiki.ubuntu.com/MozillaTeam/Bugs#Obtain%20a%20backtrace%20from%20an%20apport%20crash%20report%20(using%20gdb)">Instructions from the Ubuntu Team</a></li>
+ <li>openSUSE:  <a class="external external-icon" href="https://en.opensuse.org/openSUSE:Bugreport_application_crashed">General instructions from openSUSE</a></li>
+ <li>Fedora: <a class="external external-icon" href="https://fedoraproject.org/wiki/StackTraces">Capturing Stack Traces</a></li>
+ <li>Gentoo: <a class="external external-icon" href="https://wiki.gentoo.org/wiki/Debugging_with_GDB">Debugging using GDB</a></li>
+</ul>

@@ -1,0 +1,31 @@
+---
+title: MailNews Protocols
+slug: Mozilla/Thunderbird/MailNews_protocols
+translation_of: Mozilla/Thunderbird/MailNews_protocols
+---
+<ul>
+ <li><a href="en/IMAP">IMAP</a></li>
+ <li><a href="en/POP3">POP3</a></li>
+ <li><a href="en/NNTP">NNTP</a></li>
+ <li><a href="en/SMTP">SMTP</a></li>
+ <li><a href="en/Mailbox">Mailbox</a></li>
+ <li><a href="en/RSS">RSS</a></li>
+</ul>
+
+<p>除了RSS，这些协议以C++实现。 RSS以<a class="external" href="http://mxr.mozilla.org/mailnews/source/mail/extensions/newsblog/js/newsblog.js#1">JS</a> 实现，而且实现模式和其他以C++实现的协议不同。</p>
+
+<p>IMAP、POP3和NNTP 是 "incoming" 协议，即从服务器获取消息, 并以文件夹的形式展现给用户。这些协议在mailnews相应的协议子目录中定义（即 mailnews/imap, mailnews/local (for pop3), mailnews/news），均有如下的类组成：</p>
+
+<p>An <strong>incoming server</strong> class, which implements nsIMsgIncomingServer and inherits from mailnews/base/util/nsMsgIncomingServer, i.e.., nsPop3IncomingServer, nsImapIncomingServer, nsNNTPIncomingServer.</p>
+
+<p>A <strong>folder </strong>class, which implements nsIMsgFolder, and inherits from nsMsgDBFolder. Most commands/operations go through the folder object. nsImapMailFolder, <a class="external" href="http://mxr.mozilla.org/mozilla/source/mailnews/news/src/nsNewsFolder.cpp#116">nsNewsFolder</a>, nsLocalMailFolder (for POP3)</p>
+
+<p>A <strong>service </strong>class, which generally sits between the folder object or the server object, and the protocol object. The service class creates and initializes the url object for the operation, and hands that off to a protocol object to run. The service classes usually have their own interface, but they also implement nsIMsgMessageService.</p>
+
+<p>A <strong>url </strong>object. These implement nsIMsgMailNewsUrl, inherit from base/util/nsMsgMailNewsUrl, and implement their own protocol-specific interface (nsIImapUrl, nsINntpUrl, nsIPop3Url).</p>
+
+<p>A <strong>protocol </strong>object that takes a url and handles the network communications with the actual server required to run that url. These implement nsIMsgProtocol, inherit from nsMsgProtocol, and implement their own protocol-specific interface (nsIImapProtocol, nsIPop3Protocol, nsINntpProtocol)</p>
+
+<p>In addition, in mailnews/db/msgdb/public, we have protocol-specific msg db classes (and in the case of news, <a class="external" href="http://mxr.mozilla.org/mozilla/source/mailnews/db/msgdb/public/nsINewsDatabase.idl#49">a nsINewsDatabase interface</a>), so that we can use polymorphism when msg db operations need to be specialized for different kinds of folders.</p>
+
+<p>The <a class="external" href="http://bonsai.mozilla.org/rview.cgi?dir=mozilla%2Fmailnews%2Fbase%2Fsearch%2Fsrc&amp;rev=&amp;module=default&amp;cvsroot=%2Fcvsroot">message search code</a> also has protocol-specific code to handle searching on the server, or local mailbox. The search code also knows what the different search capabilities of the various protocols are.</p>

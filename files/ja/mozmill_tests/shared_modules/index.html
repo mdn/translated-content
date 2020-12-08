@@ -1,0 +1,158 @@
+---
+title: Shared Modules
+slug: Mozmill_Tests/Shared_Modules
+tags:
+  - Automated testing
+  - MozMill
+  - NeedsTranslation
+  - QA
+  - 'QA:Tools'
+  - TopicStub
+  - 要翻訳
+translation_of: Mozilla/QA/Mozmill_tests/Shared_Modules
+---
+<p>While creating <a href="/ja/docs/Mozmill_Tests" title="Mozmill Tests">Mozmill tests</a> for a given user interface the same elements have to be accessed probably over and over again, mostly in the same order. To make it easier to work with those elements and to reply a path of events, shared modules have been implemented which contain helper classes and helper functions with a focus to such an user interface. Some of them are special for Firefox while others can also be used in other applications which are based on the Gecko platform.</p>
+
+<p>Shared modules are part of our <a href="http://hg.mozilla.org/qa/mozmill-tests/file/default/lib" title="http://hg.mozilla.org/qa/mozmill-tests/file/default/lib">Mozmill test repository</a> for Firefox. They are still under permanent development. To stay on top of the development process and always use the latest revision the <a href="/ja/docs/Mozmill_Tests#The_test_repository" title="https://developer.mozilla.org/en/Mozmill_Tests#The_test_repository"><span>repository should be cloned</span></a> to the local disk. After cloning, be sure to read about the <a href="/ja/docs/Mozmill_Tests#Handling_branches" title="https://developer.mozilla.org/en/Mozmill_Tests#Handling_branches">proper handling of branches</a> to make sure that you are working with the shared modules that match the version of Firefox you are testing against.</p>
+
+<h2 id="List_of_available_Shared_Modules" name="List_of_available_Shared_Modules">List of available Shared Modules</h2>
+
+<p>The shared modules listed below are part of the <a href="http://hg.mozilla.org/qa/mozmill-tests/file/default/lib" title="http://hg.mozilla.org/qa/mozmill-tests/file/default/lib">mozmill-test repository</a> and can be used in any test:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Shared Module</th>
+   <th scope="col">Description</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><a href="/ja/docs/Mozmill_Tests/Shared_Modules/AddonsAPI" title="Mozmill Tests/Shared Modules/AddonsAPI">AddonsAPI</a></td>
+   <td>Handling the Addons Manager.</td>
+  </tr>
+  <tr>
+   <td><a href="/ja/docs/Mozmill_Tests/Shared_Modules/DomUtilsAPI" title="Mozmill Tests/Shared Modules/DomUtilsAPI">DomUtilsAPI</a></td>
+   <td>Several helper functions to work with the DOM.</td>
+  </tr>
+  <tr>
+   <td><a href="/ja/docs/Mozmill_Tests/Shared_Modules/DownloadsAPI" title="Mozmill Tests/Shared
+            Modules/DownloadsAPI">DownloadsAPI</a></td>
+   <td>Handling the Download Manager and other download related functions.</td>
+  </tr>
+  <tr>
+   <td><a href="/ja/docs/Mozmill_Tests/Shared_Modules/LocalizationAPI" title="Mozmill Tests/Shared Modules/LocalizationAPI">LocalizationAPI</a></td>
+   <td>Handling the L10n related functions.</td>
+  </tr>
+  <tr>
+   <td><a href="/ja/docs/Mozmill_Tests/Shared_Modules/ModalDialogAPI" title="Mozmill Tests/Shared
+            Modules/ModalDialogAPI">ModalDialogAPI</a></td>
+   <td>Handling of modal dialogs.</td>
+  </tr>
+  <tr>
+   <td><a href="/ja/docs/Mozmill_Tests/Shared_Modules/PlacesAPI" title="Mozmill
+            Tests/Shared Modules/PlacesAPI">PlacesAPI</a></td>
+   <td>Places related helper functions.</td>
+  </tr>
+  <tr>
+   <td><a href="/ja/docs/Mozmill_Tests/Shared_Modules/PrefsAPI" title="Mozmill Tests/Shared Modules/PrefsAPI">PrefsAPI</a></td>
+   <td>Handling the preferences dialog and the preferences system.</td>
+  </tr>
+  <tr>
+   <td><a href="/ja/docs/Mozmill_Tests/Shared_Modules/PrivateBrowsingAPI" title="Mozmill Tests/Shared Modules/PrivateBrowsingAPI">PrivateBrowsingAPI</a></td>
+   <td>Handling the Private Browsing mode.</td>
+  </tr>
+  <tr>
+   <td><a href="/ja/docs/Mozmill_Tests/Shared_Modules/ScreenshotAPI" title="Mozmill Tests/Shared Modules/ScreenshotAPI">ScreenshotAPI</a></td>
+   <td>Functions for taking screenshots.</td>
+  </tr>
+  <tr>
+   <td><a href="/ja/docs/Mozmill_Tests/Shared_Modules/SearchAPI" title="Mozmill Tests/Shared Modules/SearchAPI">SearchAPI</a></td>
+   <td>Handling the Search Engine Manager and search related functions.</td>
+  </tr>
+  <tr>
+   <td><a href="/ja/docs/Mozmill_Tests/Shared_Modules/SessionStoreAPI" title="Mozmill Tests/Shared Modules/SessionStoreAPI">SessionStoreAPI</a></td>
+   <td>Handling the Session Store elements and features</td>
+  </tr>
+  <tr>
+   <td><a href="/ja/docs/Mozmill_Tests/Shared_Modules/SoftwareUpdateAPI" title="Mozmill Tests/Shared
+            Modules/SoftwareUpdateAPI">SoftwareUpdateAPI</a></td>
+   <td>Handling the Software Update dialog and the complete update process.</td>
+  </tr>
+  <tr>
+   <td><a href="/ja/docs/Mozmill_Tests/Shared_Modules/TabbedBrowsingAPI" title="Mozmill Tests/Shared Modules/TabbedBrowsingAPI">TabbedBrowsingAPI</a></td>
+   <td>Handling the interaction with tab elements.</td>
+  </tr>
+  <tr>
+   <td><a href="/ja/docs/Mozmill_Tests/Shared_Modules/ToolbarAPI" title="Mozmill Tests/Shared Modules/ToolbarAPI">ToolbarAPI</a></td>
+   <td>Handling the interaction with toolbar elements.</td>
+  </tr>
+  <tr>
+   <td><a href="/ja/docs/Mozmill_Tests/Shared_Modules/UtilsAPI" title="Mozmill Tests/Shared Modules/UtilsAPI">UtilsAPI</a></td>
+   <td>Several helper functions which don't fit into the other categories.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="How_to_use_a_Shared_Module" name="How_to_use_a_Shared_Module">How to use a Shared Module</h2>
+
+<p>If a test has to be implemented which could take advantage of an already existing shared module, the module has to be included. Therefor the <code><code>RELATIVE_ROOT</code></code> folder which contains the shared modules has to be specified. The collector of Mozmill will search recursively in this folder and all its sub-folders for available modules. To access the helper classes and functions of a special module its name has to be added to the local scope of the test.<span style="font-family: monospace;"> This is done by adding it to the <code>MODULE_REQUIRES</code> array.</span></p>
+
+<p>The following example demonstrates the usage of the closeAllTabs function which is part of the TabbedBrowsingAPI.</p>
+
+<pre class="brush: js">// Include required modules
+var tabs = require("../../lib/tabs");
+
+function setupModule(module) {
+  module.controller = mozmill.getBrowserController();
+}
+
+function testCloseAllTabs() {
+  tabs.closeAllTabs(controller);
+}
+</pre>
+
+<h2 id="How_to_create_a_Shared_Module" name="How_to_create_a_Shared_Module">How to create a Shared Module</h2>
+
+<p>A module looks similar to any other Mozmill test, but contains an API for a specific component of Firefox.</p>
+
+<pre class="brush: js">/**
+ * Close all tabs and open about:blank
+ *
+ * @param {MozMillController} controller
+ *        MozMillController of the window to operate on
+ */
+function closeAllTabs(controller) {
+  var browser = new tabBrowser(controller);
+  browser.closeAllTabs();
+}
+
+/**
+ * Constructor
+ */
+function TabBrowser() {
+}
+
+/**
+ * Class definition
+ */
+var TabBrowser = {
+[...]
+};
+
+// Export of functions
+exports.closeAllTabs = closeAllTabs;
+
+// Export of classes
+exports.TabBrowser = TabBrowser;
+
+</pre>
+
+<p>Sometimes there are needs to use other modules directly from within a module. In such a situation simply include those modules.</p>
+
+<pre class="brush: js">// Include required modules
+var tabs = require("tabs");
+
+function prepare(controller) {
+  tabs.closeAllTabs(controller);
+}</pre>

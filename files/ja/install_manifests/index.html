@@ -1,0 +1,521 @@
+---
+title: Install Manifests
+slug: Install_Manifests
+tags:
+  - Add-ons
+  - Extensions
+  - Toolkit API
+translation_of: Archive/Add-ons/Install_Manifests
+---
+<h2 id="Introduction" name="Introduction">はじめに</h2>
+
+<p>インストールマニフェスト (Install Manifest) はアドオンの使えるXULアプリケーションで、アドオンがアプリケーションにインストールされる必要な情報を持っています。例えば、アドオンを特定するための ID や、作成者名などの情報、適合バージョン、アドオン自身のバージョンなどを含んでいます。</p>
+
+
+<div class="note">
+  <strong>警告</strong> このリファレンスは <a class="external" href="http://developer.mozilla.org/en/docs/Install_Manifests">en:Install Manifests</a> の翻訳文です。現在執筆中であるため不完全な部分があります。なお、校正は投稿時点で行われておりません。校正を行いましたらこの警告を削除するようにしてください。</div>
+
+<p>インストールマニフェストの形式は RDF/XML です。</p>
+<p>ファイル名は必ず <code>install.rdf</code> とし、XPIファイル(パッケージ)の最上位(直下)におきます。</p>
+
+
+
+
+<h2 id="Layout" name="Layout">レイアウト</h2>
+<p>基本的なインストールマニフェストは下記のようになってます:</p>
+
+<pre>&lt;?xml version="1.0"?&gt;
+
+&lt;RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:em="http://www.mozilla.org/2004/em-rdf#"&gt;
+  &lt;Description about="urn:mozilla:install-manifest"&gt;
+    &lt;!-- properties --&gt;
+  &lt;/Description&gt;
+&lt;/RDF&gt;</pre>
+
+<p>プロパティには必須項目とオプション項目があります。また、プロパティに設定する値には単純に文字列を配置するものと、決められたものを設定するものがあります。</p>
+
+
+
+<h2 id="Required_Property_Reference" name="Required_Property_Reference">必須のプロパティ</h2>
+
+<p>インストールマニフェストには以下の必ず設定しなくてはならないプロパティがあります。以下の項目を正しく設定しないと、アドオンがインストールされないので注意が必要です。</p>
+
+
+<h3 id="id" name="id">id</h3>
+<p>アドオンの id :</p>
+<ul>
+  <li><strong>Firefox 1.0:</strong> GUID (Windowsは guidgen で生成/ Unixは uuidgen で生成)</li>
+  <li><strong>Firefox 1.5 以降:</strong> <code><a class="link-mailto" href="mailto:extensionname@organization.tld" rel="freelink">extensionname@organization.tld</a></code> のようなフォーマット</li>
+</ul>
+
+<p>後者の id は作りやすく、扱いやすいです。Firefox 1.5は id が正しいかを判定し、不正なid（フォーマットに合致しない id ）の場合はインストールを行いません。</p>
+
+<p><strong>例</strong></p>
+
+<pre>&lt;em:id&gt;<a class="link-mailto" href="mailto:myextension@mysite.com" rel="freelink">myextension@mysite.com</a>&lt;/em:id&gt;
+
+&lt;em:id&gt;{daf44bf7-a45e-4450-979c-91cf07434c3d}&lt;/em:id&gt;
+</pre>
+
+<h3 id="version" name="version">version</h3>
+
+<p>アドオンのバージョン情報を記述します。</p>
+
+<p><strong>例</strong></p>
+
+<pre>&lt;em:version&gt;2.0&lt;/em:version&gt;
+
+&lt;em:version&gt;1.0.2&lt;/em:version&gt;
+
+&lt;em:version&gt;0.4.1.2005090112&lt;/em:version&gt;</pre>
+
+
+<p><strong>Firefox/Thunderbird 1.0</strong> - <a href="/ja/docs/Extension_Versioning,_Update_and_Compatibility" title="ja/Extension_Versioning,_Update_and_Compatibility">Extension Versioning, Update and Compatibility</a> で決められた形式に従わなくてはなりません。 <strong>Firefox/Thunderbird 1.5 / XULRunner 1.8</strong> - <a href="/ja/docs/Toolkit_version_format" title="ja/Toolkit_version_format">Toolkit version format</a> に沿うようにしてください。正しいバージョン名を記述しない場合はインストールされません。また、Firefox 1.0 などで用いた記述方式はサポートされていません。 <strong>addons.mozilla.org</strong> - Mozilla のアップデートサイトではアドオンを再パッケージするため、バージョン情報を校正したり、不正なバージョン情報を拒否したりするかもしれません。</p>
+
+
+<h3 id="type" name="type">type</h3>
+
+<p>追加機能の種類を下記の数値で表します。</p>
+<table>
+  <tbody>
+    <tr>
+      <td>2</td>
+      <td>拡張機能</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>テーマ</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>ロケール</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td><a href="/ja/docs/Multiple_Item_Packaging" title="ja/Multiple_Item_Packaging">Multiple Item Package</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>例(拡張機能の場合)</strong></p>
+<pre>&lt;em:type&gt;2&lt;/em:type&gt;
+</pre>
+
+
+<p>{{Fx_minversion_inline(1.5)}}このプロパティは Firefox 1.5 で追加されました。なお、拡張機能/テーマ以外の場合は必ず記述しなくてはなりません。</p>
+<p>{{Fx_minversion_inline(3)}} Firefox 2 およびそれ以前のバージョンは、「プラグイン」を示すために 16 という値をサポートしていました。Firefox 3 ではこの機能は取り除かれました。</p>
+
+
+<h3 id="targetApplication" name="targetApplication">targetApplication</h3>
+<p>拡張の対象となる(拡張も含む)アプリケーションを指定します。 アドオンが動くアプリケーション(ターゲットアプリケーション)を下記のプロパティにより限定します。</p>
+<ul>
+  <li>ターゲットアプリケーションのidプロパティ(<code>&lt;em:id&gt;</code>)</li>
+</ul>
+
+<p>包括的なアプリケーションIDのリストは <a class="link-https" href="https://addons.mozilla.org/faq.php">Mozilla Addons FAQ</a> の "Valid App Versions for Addon Developers" に記述されています。</p>
+
+<ul>
+  <li>特定のバージョン以降を指定するminVersionプロパティ (<code>&lt;em:minVersion&gt;</code>)</li>
+  <li>特定のバージョン以前を指定するmaxVersionプロパティ (<code>&lt;em:maxVersion&gt;</code>)</li>
+</ul>
+
+<p>minVersion および maxVersion の値は<a href="#version"><code>version</code> プロパティ</a>と同じフォーマットで記述します。アプリケーションはこれらの値を元にインストールできるかを判断されます。これにより、配布者はこのプロパティによりテストに適合したものを提供することができます。</p>
+
+
+<p>ノート: Firefox 1.0-1.0.6 では共通のバージョンが <code>1.0</code> となります。 Firefox 1.5 でのセキュリティアップデートや安定性向上のためのアップデートでのバージョンは 1.5.0.1, 1.5.0.2, などとなります。 アドオンの対応バージョンをFirefox/Thunderbird 1.5とする場合は maxVersion を 1.5.0.* とします。</p>
+
+<p>インストールマニフェストは上記のプロパティの最低1つを指定しなくてはなりません。(特にアドオンマネージャを搭載する Firefox / Thunderbird について)アドオンの対応するアプリケーションが複数ある場合はさらに指定しなくてはなりません。</p>
+
+<p><strong>例</strong></p>
+<pre>&lt;em:targetApplication&gt;
+ &lt;Description&gt;
+  &lt;em:id&gt;{ec8030f7-c20a-464f-9b0e-13a3a9e97384}&lt;/em:id&gt;
+  &lt;em:minVersion&gt;1.0&lt;/em:minVersion&gt;
+  &lt;em:maxVersion&gt;1.5.0.*&lt;/em:maxVersion&gt;
+ &lt;/Description&gt;
+&lt;/em:targetApplication&gt;</pre>
+
+<p>{{Fx_minversion_inline(3)}} Gecko 1.9 ベースのアプリケーションでは、ツールキットのバージョンが指定された minVersion と maxVersion にマッチしているすべてのツールキットアプリケーションに対して互換性があることを示すための特殊な targetApplication の id として、<code><a class="link-mailto" href="mailto:toolkit@mozilla.org" rel="freelink">toolkit@mozilla.org</a></code>が利用できます。</p>
+
+
+<h3 id="name" name="name">name</h3>
+<p>UI(アドオン一覧)に表示される名前。</p>
+<p><strong>例</strong></p>
+<pre>&lt;em:name&gt;My Extension&lt;/em:name&gt;
+</pre>
+
+
+<h2 id="Optional_Property_Reference" name="Optional_Property_Reference">オプションのプロパティ</h2>
+
+
+<p>必要であれば、下記のプロパティを記述します。</p>
+
+
+<h3 id="bootstrap" name="bootstrap">bootstrap</h3>
+<p>{{ Fx_minversion_inline(4) }} A Boolean value that tells the application whether the extension is boot-strappable. At the moment this only works for add-ons with em:type="2". The default value is <code>false</code>. For more information, see <a href="/ja/docs/Extensions/Bootstrapped_extensions" title="Extensions/Bootstrapped extensions">Bootstrapped extensions</a>.</p>
+
+
+<h3 id="unpack" name="unpack">unpack</h3>
+<p>{{ Fx_minversion_inline(4) }} A true or false value that tells the application whether the extension requires its files be unpacked into a directory in order to work or whether the extension can be loaded direct from the XPI. In versions before Gecko 2.0 all extensions were unpacked, in Gecko 2.0 and later the default is to not unpack. If an extension includes the following then it must request unpacking:</p>
+<ul>
+  <li>Binary <a href="/ja/docs/XPCOM" title="XPCOM">XPCOM</a> components</li>
+  <li><a href="/ja/docs/Shipping_a_plugin_as_a_Toolkit_bundle" title="Shipping a plugin as a Toolkit bundle">Plugins</a></li>
+  <li><a href="/ja/docs/Creating_MozSearch_plugins" title="Creating MozSearch plugins">Search plugins</a></li>
+  <li>DLLs loaded with <a href="/ja/docs/Mozilla/js-ctypes" title="js-ctypes">ctypes</a></li>
+  <li>Dictionaries</li>
+  <li>Window icons</li>
+</ul>
+<p><strong>Examples</strong></p>
+<pre class="brush:xml">&lt;Description about="urn:mozilla:install-manifest"&gt;
+   &lt;em:id&gt;extension@mysite.com&lt;/em:id&gt;
+   &lt;em:unpack&gt;true&lt;/em:unpack&gt;
+   ...
+&lt;/Description&gt;</pre>
+
+
+<h3 id="localized" name="localized">localized</h3>
+<p>{{Fx_minversion_inline(3)}} アドオンの名前、説明文、貢献者名、その他のメタデータをローカライズすることができます。ローカライズされた説明文は、どの言語においてその情報を使うのかを示す最低一つの <code>em:locale</code> を含んでいなければなりません。</p>
+
+<p><strong>例</strong></p>
+<p>この例は、アプリケーションが de-DE のロケール設定で起動している際に表示されるアドオンのメタデータのセットを示すものです。</p>
+
+<pre>&lt;em:localized&gt;
+  &lt;Description&gt;
+    &lt;em:locale&gt;de-DE&lt;/em:locale&gt;
+    &lt;em:name&gt;Tab Sidebar&lt;/em:name&gt;
+    &lt;em:description&gt;Zeigt in einer Sidebar Vorschaubilder der Inhalte aller offenen Tabs an.&lt;/em:description&gt;
+  &lt;/Description&gt;
+&lt;/em:localized&gt;</pre>
+
+<p>このページもしくは他の箇所で説明されている、以下のプロパティを、localized プロパティの中に含めることができます。</p>
+
+<ul>
+  <li>name</li>
+  <li>description</li>
+  <li>creator</li>
+  <li>homepageURL</li>
+  <li>developer</li>
+  <li>translator</li>
+  <li>contributor</li>
+</ul>
+
+<p>より詳しい情報については<a href="/ja/docs/Localizing_extension_descriptions" title="ja/Localizing_extension_descriptions">拡張機能のローカライズ</a>を参照してください。</p>
+
+
+<h3 id="description" name="description">description</h3>
+<p>UI (アドオン一覧)に表示される説明。持っている機能を説明するのに用いられます。表示領域が狭いため、短く記述したほうが良いでしょう。</p>
+<p><strong>例</strong></p>
+<pre>&lt;em:description&gt;Advanced foo tools.&lt;/em:description&gt;
+</pre>
+
+
+<h3 id="creator" name="creator">creator</h3>
+<p>作成者/メインプログラマの名前。アドオンの情報に表示されます。</p>
+
+<p><strong>例</strong></p>
+<pre>&lt;em:creator&gt;John Doe&lt;/em:creator&gt;
+</pre>
+
+<p>もしくは</p>
+
+<pre>&lt;em:creator&gt;CoolExtension Team&lt;/em:creator&gt;
+</pre>
+
+
+<h3 id="developer" name="developer">developer</h3>
+<p>開発者の名前。複数の名前を記述することができます。 <strong>Firefox 2.0での新機能です。</strong></p>
+<p><strong>例</strong></p>
+<pre>&lt;em:developer&gt;Jane Doe&lt;/em:developer&gt;
+&lt;em:developer&gt;Koos van der Merwe&lt;/em:developer&gt;
+</pre>
+
+
+<h3 id="translator" name="translator">translator</h3>
+<p>翻訳者(ロケール作成者)の名前。複数の名前を記述することができます。 <strong>Firefox 2.0 での新機能です。</strong></p>
+<p><strong>例</strong></p>
+<pre>&lt;em:translator&gt;Janez Novak&lt;/em:translator&gt;
+&lt;em:translator&gt;Kari Nordmann&lt;/em:translator&gt;
+</pre>
+
+
+<h3 id="contributor" name="contributor">contributor</h3>
+<p>寄付者/貢献者の名前。複数の名前を記述することができます。</p>
+<p><strong>例</strong></p>
+<pre>&lt;em:contributor&gt;John Doe&lt;/em:contributor&gt;
+
+&lt;em:contributor&gt;John Doe&lt;/em:contributor&gt;
+&lt;em:contributor&gt;Jane Doe&lt;/em:contributor&gt;
+&lt;em:contributor&gt;Elvis Presley&lt;/em:contributor&gt;
+</pre>
+<h3 id="homepageURL" name="homepageURL">homepageURL</h3>
+<p>アドオンのホームページアドレス。アドオンの情報からアクセスできます。</p>
+<p><strong>例</strong></p>
+<pre>&lt;em:homepageURL&gt;http://www.foo.com/&lt;/em:homepageURL&gt;
+</pre>
+
+
+
+
+<h3 id="updateURL" name="updateURL">updateURL</h3>
+<p>拡張を更新するためのアップデートマニフェストファイルへのリンク(URL)。このプロパティを定義した場合、拡張マネージャが定期的に更新がないかを自動的にチェックします。</p>
+
+<div class="warning">
+  <strong>警告:</strong> <code>updateURL</code> は HTTPS (安全な) リンクであることが強く推奨されます。安全ではない更新 URL は悪意のある <code>update.rdf</code> によって{{原語併記("乗っ取られる", "hijacked")}}可能性があります。これは{{原語併記("悪意のあるソフトウェア", "malware")}} がユーザのコンピュータへ侵入することを可能にします。代わりにあなたの拡張を AMO でホストし、<code>updateURL</code> を完全に取り除くことができます。これは自動的に安全な更新を提供します。</div>
+
+
+<p>{{Fx_minversion_inline(3)}} Gecko 1.9 ベースのアプリケーションではセキュリティ上の理由から、updateURL に https の URL を指定するか、もしくは <a href="#updateKey">updateKey</a> を含める必要があります。</p>
+
+<p>更新を提供するサーバは必ず <code>text/rdf</code> 形式で送信を行うようにしてください。<code>text/xml</code> 形式でも可能のようです(mozdev.org プロジェクトはそのように設定されている)</p>
+
+<p>アドオンマネージャは以下に示す部分に値を入れて、PHP や CGI で RDF を動的に生成する手助けをします。</p>
+
+
+
+<table>
+  <tbody>
+    <tr>
+      <td><code>%REQ_VERSION%</code></td>
+      <td>リクエストのバージョン。通常は 1</td>
+    </tr>
+    <tr>
+      <td><code>%ITEM_ID%</code></td>
+      <td>アドオンの <code>id</code></td>
+    </tr>
+    <tr>
+      <td><code>%ITEM_VERSION%</code></td>
+      <td>現在のアドオンの <code>version</code></td>
+    </tr>
+    <tr>
+      <td><code>%ITEM_MAXAPPVERSION%</code></td>
+      <td>現在のアドオンのサポートする <code>targetApplication</code> の <code>maxVersion</code></td>
+    </tr>
+    <tr>
+      <td><code>%APP_ID%</code></td>
+      <td>現在のアプリケーションの <code>id</code></td>
+    </tr>
+    <tr>
+      <td><code>%APP_VERSION%</code></td>
+      <td>現在のアプリケーションの <code>version</code></td>
+    </tr>
+    <tr>
+      <td><code>%APP_OS%</code></td>
+      <td>現在のアプリケーションの <code>OS_TARGET</code> の値。現在の OS のことを指す。<strong>Firefox 1.5 からの新機能</strong></td>
+    </tr>
+    <tr>
+      <td><code>%APP_ABI%</code></td>
+      <td>現在のアプリケーションがビルドされた環境(コンパイラおよびアーキテクチャ)を示す <code>TARGET_XPCOM_ABI</code> の値。 <strong>Firefox 1.5 からの新機能</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<p><strong>例</strong></p>
+
+<pre>&lt;em:updateURL&gt;<span class="nowiki">http://www.foo.com/update.cgi?id=%ITEM_ID%&amp;amp;version=%ITEM_VERSION%</span>&lt;/em:updateURL&gt;
+&lt;em:updateURL&gt;<span class="nowiki">http://www.foo.com/extension/windows.rdf</span>&lt;/em:updateURL&gt;
+</pre>
+
+<p><strong>addons.mozilla.org:</strong> Mozilla のアップデートサイトを利用する場合は updateURL プロパティを指定しなくてもいいでしょう。 アドオンマネージャを使っている Firefox や Thunderbird などの Mozilla アプリケーションはデフォルトで <code>addons.mozilla.org</code> に更新がないかを問い合わせます。新しいバージョンのアドオンをアップデートサイトにアップロードするたびに自動的にこのプロパティを更新/追加を行います。</p>
+
+<p><strong>アップデートマニフェストのフォーマット:</strong> アップデートマニフェスト <a href="/ja/docs/Update_Manifest" title="ja/Update_Manifest">Update Manifest</a> は RDF/XML 形式です。詳細は右のリンクを辿ってってください。アップデートマニフェストのサンプルは <a href="/ja/docs/Extension_Versioning,_Update_and_Compatibility#Custom_Update_RDF_Format" title="ja/Extension_Versioning,_Update_and_Compatibility#Custom_Update_RDF_Format">Extension Versioning, Update and Compatibility</a> / <a href="/ja/docs/Enabling_Extension_Updates_(external)" title="ja/Enabling_Extension_Updates_(external)">Enabling Extension Updates (external)</a> を参照してください。</p>
+
+
+
+
+<h3 id="updateKey" name="updateKey">updateKey</h3>
+
+<div>{{Gecko_minversion_header(1.9)}} {{Fx_minversion_header(3)}}</div>
+
+<p>通常の http 通信を通じて取得された更新情報の RDF データのセキュリティを保証するために、あなたはデータの内容を検証するための電子署名を使わなくてはなりません。そのため、あなたは暗号鍵の公開鍵をアドオンの install.rdf の updateKey エントリに含める必要があります。これは <a href="/ja/docs/McCoy" title="ja/McCoy">McCoy</a> というツールを使うことで生成できます。このエントリ中の改行や空白文字はすべて無視されます。</p>
+
+<p><strong>例</strong></p>
+<pre> &lt;em:updateKey&gt;MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDK426erD/H3XtsjvaB5+PJqbhj
+               Zc9EDI5OCJS8R3FIObJ9ZHJK1TXeaE7JWqt9WUmBWTEFvwS+FI9vWu8058N9CHhD
+               NyeP6i4LuUYjTURnn7Yw/IgzyIJ2oKsYa32RuxAyteqAWqPT/J63wBixIeCxmysf
+               awB/zH4KaPiY3vnrzQIDAQAB&lt;/em:updateKey&gt;
+</pre>
+
+
+
+<h3 id="optionsURL" name="optionsURL">optionsURL</h3>
+<p>オプションダイアログの <code>chrome://</code> URL を指定してください。このオプションは拡張機能のインストールマニフェストでしか有効になりません。このプロパティが設定されていると、拡張機能一覧のコンテキストメニュー(右クリックメニュー)から設定(オプション)ダイアログを開くことができるようになります。</p>
+
+<p><strong>例</strong></p>
+
+<pre>&lt;em:optionsURL&gt;<a class="external" rel="freelink">chrome://myext/content/options.xul</a>&lt;/em:optionsURL&gt;
+</pre>
+
+
+<h3 id="aboutURL" name="aboutURL">aboutURL</h3>
+<p>説明ダイアログの <code>chrome://</code> URL を指定してください。このオプションは拡張機能のインストールマニフェストでしか有効になりません。このプロパティが設定されていると、拡張機能一覧のコンテキストメニュー(右クリックメニュー)から説明ダイアログを開くことができるようになります。指定しない場合は、デフォルトのダイアログが表示されます。</p>
+<p><strong>例</strong></p>
+
+<pre>&lt;em:aboutURL&gt;<a class="external" rel="freelink">chrome://myext/content/about.xul</a>&lt;/em:aboutURL&gt;
+</pre>
+
+
+<div>{{ h3_gecko_minversion("optionsType", 7) }}</div>
+<p>The type of user-interface used for displaying the options. Accepted values are:</p>
+<table style="">
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Opens optionsURL in a dialog box</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><a href="/ja/docs/Extensions/Inline_Options" title="Extensions/Inline Options">Options are displayed inside the Add-on Manager</a></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Opens optionsURL in a new tab (if the application supports that), or a dialog box</td>
+    </tr>
+  </tbody>
+</table>
+<p>optionsType defaults to 1 if there is an optionsURL included in install.rdf or 2 if there is no optionsURL and the file <code>options.xul</code> exists in the root of the add-on.</p>
+<pre class="brush:xml">&lt;em:optionsType&gt;2&lt;/em:optionsType&gt;
+</pre>
+
+
+
+<h3 id="iconURL" name="iconURL">iconURL</h3>
+<p>アドオン一覧に表示するアイコン(32x32)の <code>chrome://</code> URL を指定します。指定しない場合はアプリケーションのデフォルトのアイコンが使われます。</p>
+
+<p><strong>例</strong></p>
+<pre>&lt;em:iconURL&gt;<a class="external" rel="freelink">chrome://myext/skin/icon.png</a>&lt;/em:iconURL&gt;
+</pre>
+
+
+
+
+
+<p>{{ h3_gecko_minversion("icon64URL", "2.0") }}</p>
+
+<p>A <code>chrome://</code> URL to a 64x64 pixel icon to display in the add-on's details view . If this property is not specified, the smaller icon above will be used.</p>
+
+<pre class="brush:xml">&lt;em:icon64URL&gt;<a class="external" rel="freelink">chrome://myext/skin/icon64.png</a>&lt;/em:icon64URL&gt;
+</pre>
+<div class="note">
+  <strong>Note:</strong> For the above example to work you will also have to add a <code>skin package</code> line to your <code>chrome.manifest</code> file. See <a href="/en-US/docs/Chrome_Registration#skin" title="Chrome_Registration#skin">Chrome Registration#skin</a>. Alternatively you can place your icon in the directory specified in your <code>content package</code> line.</div>
+
+
+
+
+
+
+
+<div>{{ h3_gecko_minversion("targetPlatform", "1.8") }}</div>
+
+<p>アドオンが対応する OS (プラットフォーム)を指定します。OS_TARGET の値のみ もしくは OS_TARGET の値 と <a href="/ja/docs/XPCOM_ABI" title="ja/XPCOM_ABI">TARGET_XPCOM_ABI</a> の値を _ (アンダーコア)で繋げた文字列を指定します。</p>
+<p>OS_TARGET の値は 普通コマンドライン上で 'uname -s' と入力し、帰ってきた値を記述します。例えば、以下のようになります:</p>
+
+<ul>
+  <li><code>WINNT</code> Windows NT, 2000, XP 以降</li>
+  <li><code>Linux</code> すべての Linux</li>
+  <li><code>Darwin</code> すべての MacOS X</li>
+</ul>
+
+
+<p>個々のマニフェストファイルにより複数の targetPlatform プロパティを指定することができます。複数のうちどれかの値が条件を満たす場合はアドオンがインストールされます。逆に、どれも条件を満たさない場合はインストールされません。インストールされない場合はその旨の警告が表示されます。</p>
+
+<p><strong>例</strong></p>
+<pre>&lt;em:targetPlatform&gt;WINNT_x86-msvc&lt;/em:targetPlatform&gt;
+
+&lt;em:targetPlatform&gt;Linux&lt;/em:targetPlatform&gt;
+
+&lt;em:targetPlatform&gt;Darwin_ppc-gcc3&lt;/em:targetPlatform&gt;
+</pre>
+
+<p>普通は、特定のOSにのみ対応しているテーマや拡張のためにこの属性のみを使うでしょう。(コンパイルされた)バイナリデータを含む拡張のために、この属性のみならず、コンパイルした <a href="/ja/docs/XPCOM_ABI" title="ja/XPCOM_ABI">ABI (s)</a> も含んでください。複数のバージョンのバイナリを同封したい場合は <a href="/ja/docs/Bundles#Platform-specific_Subdirectories" title="ja/Bundles#Platform-specific_Subdirectories">Platform-specific Subdirectories</a> も利用してください。</p>
+
+<p><strong>ノート</strong></p>
+
+<ul>
+  <li>同じマニフェストファイルで、ABIを含む値と含まない値を一緒に使うことができるかもしれません。あるアプリケーションのOSに対する値が特定のABIを含んだものにヒットした場合、ABIはOSとABIの組み合わせが一致しないときにアドオンをインストールしないことを重要だと判断します。</li>
+  <li>ABIがわからない Firefox / Thunderbird が存在することがあります。(希少なプラットフォームや正規版でないもの) そのような環境で、アドオンがプラットフォームについて詳細なABIを要求するときはインストールされません。</li>
+</ul>
+
+
+<p><strong>Firefox 1.5</strong> このプロパティは Firefox/Thunderbird 1.5 で追加されました。以前のバージョンではこれらの制限を無視し、どのOSに対してもインストールを行ってしまいます。</p>
+
+<div>{{ h3_gecko_minversion("strictCompatibility", "10.0") }}</div>
+<p>A Boolean value indicating if the add-on should be enabled when the version of the application is greater than its max version. By default, the value of this property is <code>false</code> meaning that the compatibility checking will not be performed against the max version.</p>
+<pre class="brush:xml">&lt;em:strictCompatibility&gt;true&lt;/em:strictCompatibility&gt;</pre>
+<p>Usually, there is no need to restrict the compatibility: not all new releases will break your extension and, if it is hosted on AMO, you'll get notice several weeks in advance if a potential risk has been detected. Moreover, an extension being disabled, even for a short period, leads to a bad experience for the user. About the only time you should need to set this if your add-on does things that are likely to be broken by Firefox updates. You <strong>do not</strong> need to set this flag if your add-on has a binary component, since add-ons with binary components are always subject to strict compatibility checking (because binary components need to be rebuilt for every major application release anyway).</p>
+<div class="note">
+  <strong>Note:</strong> If you want to restore the old behavior of strict compatibility checking of all add-ons, regardless of the value of this setting in their manifests, you can set the <code>extensions.strictCompatibility</code> preference to <code>true</code>.</div>
+<div class="geckoVersionNote" style="">
+  <p class="note">{{ gecko_callout_heading("11.0") }}</p>
+  <p class="note">Starting in Gecko 11.0 {{ geckoRelease("11.0") }}, applications such as Firefox will assume add-ons that have not been updated in a very long time are no longer compatible by default.</p>
+</div>
+
+
+
+
+<h2 id="Obsolete_Property_Reference" name="Obsolete_Property_Reference">廃止されたプロパティ リファレンス</h2>
+
+<p>以下のリファレンスはアドオンマネージャの古いバージョンで必須とされていたプロパティです。最新環境ではこれらのプロパティは一新されさらに良い構成となっています。</p>
+<h3 id="file" name="file">file</h3>
+<p><strong>Firefox 1.0</strong> This property pointed to a chrome <code>.jar</code> file that contains chrome packages that require registration with the Chrome Registry.</p>
+<p>The <code>&lt;em:file&gt;</code> property has a complex object value. The uri of the value is <code>urn:mozilla:extension:file:jarFile.jar</code> where <code>jarFile.jar</code> is the name of the jar file that contains the chrome package's files. This could also be the name of a directory that contains the chrome package's files, un-jarred (e.g. <code>urn:mozilla:extension:file:directory</code>).</p>
+<p>This object has a <code>package</code> property (with a path within the jar file or directory that leads to the location where the <code>contents.rdf</code> file responsible for registering that package is located), a <code>locale</code> property (ditto, but to register the locale) and a <code>skin</code> property (ditto, but to register the theme material).</p>
+<p>In extensions for Firefox 1.5, this property is no longer necessary: the <code><a href="/ja/docs/Chrome_Registration" title="ja/Chrome_Registration">chrome.manifest</a></code> at the top level of the XPI is used to locate chrome to register. If there is no chrome.manifest, this property is still read by the Addon Manager and a chrome.manifest is generated from old-style contents.rdf.</p>
+<p><strong>例</strong></p>
+<pre>&lt;em:file&gt;
+ &lt;Description about="urn:mozilla:extension:file:myext.jar"&gt;
+  &lt;em:package&gt;content/myext/&lt;/em:package&gt;
+  &lt;em:locale&gt;locale/en-US/myext/&lt;/em:locale&gt;
+  &lt;em:skin&gt;skin/classic/myext/&lt;/em:skin&gt;
+ &lt;/Description&gt;
+&lt;/em:file&gt;
+</pre>
+<p>An Install Manifest may specify multiple <code>file</code> properties, one for each jar file or subdirectory that contains chrome to register.</p>
+
+<h3 id="hidden" name="hidden">hidden</h3>
+<p><strong>Firefox 1.0</strong><strong> - 3.5</strong> A boolean value that when <code>true</code> makes the add-on not show up in the add-ons list, provided the add-on is installed in a {{ Anch("restricted access area") }} (so it does not work for add-ons installed in the profile). This is for bundling integration hooks to larger applications where having an entry in the Extensions list does not make sense.</p>
+<p>アドオン一覧に表示するかどうかを真偽値で設定します。値には true/false を設定します。true が設定されている場合はアドオン一覧に表示されません。アドオンが{{Anch("アクセスが制限された領域")}}にインストールされる場合に設定します。（よって、プロファイルにインストールされるアドオンに対しては効果がありません。）これは、アドオンが一覧に表示されては困る大きなアプリケーションのフックの統合のためにあります。指定しない場合はfalseが設定されます。</p>
+<p><strong>例</strong></p>
+<div class="note">
+  <strong>Note:</strong> This property is no longer supported under Gecko 1.9.2 (Firefox 3.6) or later, to prevent extensions from being installed in such a way that the user might not be able to tell they're installed.</div>
+<p><strong>Examples</strong></p>
+<pre class="brush:xml">&lt;em:hidden&gt;true&lt;/em:hidden&gt;
+</pre>
+
+<h3 id="requires" name="requires">requires</h3>
+<p><strong>Firefox 2.0 - 3.6.x</strong>. Other versions will ignore the restrictions and install the add-on regardless of the requirements.</p>
+<p>See <a class="link-https" href="https://groups.google.com/forum/#!topic/mozilla.dev.platform/u9QT2ZucV-c" title="https://groups.google.com/forum/#!topic/mozilla.dev.platform/u9QT2ZucV-c">Replacement for install.rdf property "requires"</a> discussion for rationale behind removing this feature and the suggested workaround.</p>
+<p><code>&lt;em:requires</code>&gt; has a similar syntax to the <code>&lt;em:targetApplication&gt;</code> tag (i.e. you must specify <code>&lt;em:id&gt;</code>, <code>&lt;em:minVersion&gt;</code>, <code>&lt;em:maxVersion&gt;</code> when using it). If the add-on specified by the <code>&lt;em:id&gt;</code> tag is not installed or has an incompatible version, the extension manager will disable your extension and show the message "Requires additional items". You can add as many <code>&lt;em:requires&gt;</code> tags as you like. Your extension will be disabled if any of the specified requirements fail. It is not possible to add dependencies that are specific to a <code>&lt;em:targetApplication&gt;</code>. See <a href="https://wiki.mozilla.org/Extension_Dependencies" title="https://wiki.mozilla.org/Extension_Dependencies">Extension Dependencies</a> for more details.</p>
+
+<p>{{Fx_minversion_inline(2)}} このタグは<code>&lt;em:targetApplication&gt;</code>と似た文法を持っています。もし<code>&lt;em:id&gt;</code>タグによって示されたアドオンがインストールされていないか、もしくは非対応のバージョンである場合、拡張機能マネージャはあなたの拡張機能を無効にし、「追加の項目が必要です」というメッセージを表示するでしょう。あなたは複数の<code>&lt;em:requires&gt;</code> タグを好きなだけ追加することができます。指定された条件が一つでも満たされていなければ、あなたの拡張機能は無効化されます。</p>
+
+<p><strong>例</strong></p>
+<pre>&lt;em:requires&gt;
+   &lt;Description&gt;
+     &lt;!-- Lightning --&gt;
+     &lt;em:id&gt;{e2fda1a4-762b-4020-b5ad-a41df1933103}&lt;/em:id&gt;
+     &lt;em:minVersion&gt;0.5pre&lt;/em:minVersion&gt;
+     &lt;em:maxVersion&gt;0.5pre&lt;/em:maxVersion&gt;
+   &lt;/Description&gt;
+ &lt;/em:requires&gt;
+</pre>
+
+<p><strong>註</strong></p>
+
+<ul>
+  <li>現在は、<code>&lt;em:requires&gt;</code>タグの中では<code>&lt;em:id&gt;</code>, <code>&lt;em:minVersion&gt;</code>, <code>&lt;em:maxVersion&gt;</code>だけが解釈されます。</li>
+  <li>今の所、<code>&lt;em:targetApplication&gt;</code>によって依存関係を表現することはできません。詳しい情報については{{interwiki('wikimo', 'Extension_Manager:Extension_Dependencies', '拡張機能の依存関係')}}を参照してください。</li>
+</ul>
+<p>このプロパティは Firefox / Thunderbird 2 のために追加されました。これらのアプリケーションの以前のバージョンは、制限事項を無視して、指定された条件とは無関係にアドオンをインストールするでしょう。</p>
+
+
+<h2 id="Glossary" name="Glossary">用語集</h2>
+
+<h2 id="restricted_access_area" name="restricted_access_area">アクセスが制限された領域</h2>
+<p><em>アクセスが制限された領域</em>とは、アクセスが制限されたアカウントにおいて、現在のユーザの特権（{{Source("toolkit/mozapps/extensions/public/nsIExtensionManager.idl#80", "nsIInstallLocation::restricted")}}を参照）によって制限されているかどうかにかかわらずその場所へアクセスできないかもしれないインストール場所のことです。 現在の所、<code>($APPDIR)/extensions</code>フォルダと、<code>HKEY_LOCAL_MACHINE</code>以下に登録されたインストール場所（詳細は<a href="/ja/docs/Adding_Extensions_using_the_Windows_Registry" title="ja/Adding_Extensions_using_the_Windows_Registry">Windowsのレジストリを使って拡張機能を追加する</a>を参照してください）が制限されます。</p>
+<p>他方で、<code>($PROFILE)/extensions</code>と<code>HKEY_CURRENT_USER</code>に登録されたインストール場所については制限されません。</p>
+
+<h2 id=".E8.BF.BD.E5.8A.A0.E6.83.85.E5.A0.B1" name=".E8.BF.BD.E5.8A.A0.E6.83.85.E5.A0.B1">追加情報</h2>
+<ul>
+  <li><a class="external" href="http://kb.mozillazine.org/Install.rdf">install.rdf page on the MozillaZine KB</a> を参照するとさらなる情報や、サンプルを入手することができます</li>
+</ul>

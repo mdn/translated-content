@@ -1,0 +1,64 @@
+---
+title: '-moz-binding'
+slug: Web/CSS/-moz-binding
+tags:
+  - CSS
+  - Déprécié
+  - Non-standard
+  - Propriété
+  - Reference
+  - XBL
+translation_of: Archive/Web/CSS/-moz-binding
+---
+<div>{{CSSRef}}{{Non-standard_header}}</div>
+
+<p>La propriété <strong><code>-moz-binding</code></strong>, utilisée par les applications Mozilla, permet d'attacher une liaison (<em>binding</em>) <a href="/fr/docs/XBL">XBL</a> à un élément DOM.</p>
+
+<p>{{cssinfo}}</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="brush:css">/* Valeur de type &lt;url&gt; */
+-moz-binding: url(http://www.exemple.org/xbl/htmlBindings.xml#checkbox);
+
+/* Valeurs globales */
+-moz-binding: inherited;
+-moz-binding: initial;
+-moz-binding: unset;
+</pre>
+
+<h3 id="Valeurs">Valeurs</h3>
+
+<dl>
+ <dt><code>&lt;url&gt;</code></dt>
+ <dd>L'URL (typ {{cssxref("&lt;url&gt;")}} depuis laquelle effectuer la liaison XBL (l'URL inclue le fragment d'identification)</dd>
+ <dt><code>none</code></dt>
+ <dd>Aucune liaison XBL n'est appliquée à l'élément.</dd>
+</dl>
+
+<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+
+<pre class="syntaxbox">{{csssyntax}}</pre>
+
+<h2 id="Exemples">Exemples</h2>
+
+<pre class="brush: css">.exemple {
+  -moz-binding: url(http://www.exemple.org/xbl/htmlBindings.xml#radiobutton);
+}</pre>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<p>Cette propriété est une propriété propriétaire liée à Mozilla/Gecko et ne fait partie d'aucune spécification.</p>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<div class="hidden">Le tableau de compatibilité de cette page a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à consulter <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> et à nous envoyer une <em>pull request</em>.</div>
+
+<p>{{Compat("css.properties.-moz-binding")}}</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="/fr/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Binding_Attachment_and_Detachment">La référence XBL : attacher et détacher des <em>bindings</em></a></li>
+ <li><a href="/fr/docs/Tutoriel_XUL/Introduction_à_XBL">Tutoriel XUL : Introduction à XBL</a></li>
+</ul>

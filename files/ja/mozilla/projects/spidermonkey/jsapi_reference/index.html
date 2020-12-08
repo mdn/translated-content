@@ -1,0 +1,926 @@
+---
+title: JSAPI リファレンス
+slug: Mozilla/Projects/SpiderMonkey/JSAPI_reference
+tags:
+  - JSAPI_Reference
+  - JavaScript
+  - SpiderMonkey
+translation_of: Mozilla/Projects/SpiderMonkey/JSAPI_reference
+---
+<section class="Quick_links" id="Quick_Links">
+ <ol>
+  <li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey"><strong><em>SpiderMonkey</em></strong></a></li>
+
+  <li><strong>References:</strong></li>
+  <li class="toggle">
+    <details>
+        <summary>JSAPI reference</summary>
+        <ol><li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/Alphabetical_List" title="参照: グループ別一覧, カテゴリ表示 (自動)."><code>Alphabetical List</code></a> <a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/Alphabetical_List$translate" style="opacity: 0.5;" title="まだボランティアによって日本語に翻訳されていない記事です。MDNに参加して、翻訳してみませんか？">[翻訳する]</a></li><li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_CompileFile" title=""><code>JS CompileFile</code></a> <a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_CompileFile$translate" style="opacity: 0.5;" title="まだボランティアによって日本語に翻訳されていない記事です。MDNに参加して、翻訳してみませんか？">[翻訳する]</a></li><li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_ConstructObject" title="新たにJavaScriptオブジェクトを生成し、コンストラクタを呼び出します。 Create a new JavaScript object and invoke its constructor."><code>JS ConstructObject</code></a> <a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_ConstructObject$translate" style="opacity: 0.5;" title="まだボランティアによって日本語に翻訳されていない記事です。MDNに参加して、翻訳してみませんか？">[翻訳する]</a></li><li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_DestroyContext" title=""><code>JS DestroyContext</code></a> <a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_DestroyContext$translate" style="opacity: 0.5;" title="まだボランティアによって日本語に翻訳されていない記事です。MDNに参加して、翻訳してみませんか？">[翻訳する]</a></li><li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_DestroyRuntime" title=""><code>JS DestroyRuntime</code></a> <a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_DestroyRuntime$translate" style="opacity: 0.5;" title="まだボランティアによって日本語に翻訳されていない記事です。MDNに参加して、翻訳してみませんか？">[翻訳する]</a></li><li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_EvaluateScript" title=""><code>JS EvaluateScript</code></a> <a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_EvaluateScript$translate" style="opacity: 0.5;" title="まだボランティアによって日本語に翻訳されていない記事です。MDNに参加して、翻訳してみませんか？">[翻訳する]</a></li><li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_GetRuntime" title=""><code>JS GetRuntime</code></a> <a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_GetRuntime$translate" style="opacity: 0.5;" title="まだボランティアによって日本語に翻訳されていない記事です。MDNに参加して、翻訳してみませんか？">[翻訳する]</a></li><li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_GetRuntimePrivate" title=""><code>JS GetRuntimePrivate</code></a> <a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_GetRuntimePrivate$translate" style="opacity: 0.5;" title="まだボランティアによって日本語に翻訳されていない記事です。MDNに参加して、翻訳してみませんか？">[翻訳する]</a></li><li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_NewContext" title=""><code>JS NewContext</code></a> <a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_NewContext$translate" style="opacity: 0.5;" title="まだボランティアによって日本語に翻訳されていない記事です。MDNに参加して、翻訳してみませんか？">[翻訳する]</a></li><li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_NewRuntime" title="JavaScript ランタイムの初期化を行います。 "><code>JS NewRuntime</code></a> <a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_NewRuntime$translate" style="opacity: 0.5;" title="まだボランティアによって日本語に翻訳されていない記事です。MDNに参加して、翻訳してみませんか？">[翻訳する]</a></li><li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_ShutDown" title=""><code>JS ShutDown</code></a> <a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_ShutDown$translate" style="opacity: 0.5;" title="まだボランティアによって日本語に翻訳されていない記事です。MDNに参加して、翻訳してみませんか？">[翻訳する]</a></li><li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JSRuntime" title=""><code>JSRuntime</code></a> <a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JSRuntime$translate" style="opacity: 0.5;" title="まだボランティアによって日本語に翻訳されていない記事です。MDNに参加して、翻訳してみませんか？">[翻訳する]</a></li><li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JSType" title="列挙型 JSType の値は、 JavaScript の値の型を表します。"><code>JSType</code></a> <a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JSType$translate" style="opacity: 0.5;" title="まだボランティアによって日本語に翻訳されていない記事です。MDNに参加して、翻訳してみませんか？">[翻訳する]</a></li><li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_DefineObject" title=""><code>JS_DefineObject</code></a> <a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_DefineObject$translate" style="opacity: 0.5;" title="まだボランティアによって日本語に翻訳されていない記事です。MDNに参加して、翻訳してみませんか？">[翻訳する]</a></li><li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_Init" title="JS_Init は廃止されました。替わりに JS_NewRuntime を使用して下さい。"><code>JS_Init</code></a> <a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_Init$translate" style="opacity: 0.5;" title="まだボランティアによって日本語に翻訳されていない記事です。MDNに参加して、翻訳してみませんか？">[翻訳する]</a></li><li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_Lock" title="JS ランタイム環境をロックします。"><code>JS_Lock</code></a> <a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_Lock$translate" style="opacity: 0.5;" title="まだボランティアによって日本語に翻訳されていない記事です。MDNに参加して、翻訳してみませんか？">[翻訳する]</a></li><li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_NewObject" title=""><code>JS_NewObject</code></a> <a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_NewObject$translate" style="opacity: 0.5;" title="まだボランティアによって日本語に翻訳されていない記事です。MDNに参加して、翻訳してみませんか？">[翻訳する]</a></li><li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/jsint" title="C 言語 / C++ の整数型のエイリアスです。"><code>jsint</code></a> <a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/jsint$translate" style="opacity: 0.5;" title="まだボランティアによって日本語に翻訳されていない記事です。MDNに参加して、翻訳してみませんか？">[翻訳する]</a></li></ol>
+    </details>
+  </li>
+  <li class="toggle">
+    <details>
+      <summary>Debugger-API</summary>
+      <ol><li><a href="/ja/docs/Tools/Debugger-API/Debugger">Debugger</a></li><li><a href="/ja/docs/Tools/Debugger-API/Debugger.Environment">Debugger.Environment</a></li><li><a href="/ja/docs/Tools/Debugger-API/Debugger.Frame">Debugger.Frame</a></li><li><a href="/ja/docs/Tools/Debugger-API/Debugger.Memory">Debugger.Memory</a></li><li><a href="/ja/docs/Tools/Debugger-API/Debugger.Object">Debugger.Object</a></li><li><a href="/ja/docs/Tools/Debugger-API/Debugger.Script">Debugger.Script</a></li><li><a href="/ja/docs/Tools/Debugger-API/Debugger.Source">Debugger.Source</a></li><li><a href="/ja/docs/Tools/Debugger-API/Tutorial-Debugger-Statement">Tools/Debugger-API/Tutorial-Debugger-Statement</a></li><li><a href="/ja/docs/Tools/Debugger-API/Tutorial-Breakpoint">チュートリアル: Debuggerを使用したブレークポイントの設定</a></li><li><a href="/ja/docs/Tools/Debugger-API/Tutorial-Allocation-Log-Tree">チュートリアル: コールパスごとの割り当てを表示する</a></li><li><a href="/ja/docs/Tools/Debugger-API/Conventions">一般的な規則</a></li></ol>
+    </details>
+  </li>
+  <li><strong>Guides:</strong></li>
+  <li class="toggle">
+    <details>
+      <summary>General</summary>
+      <ol>
+        <li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/Build_Documentation">Build documentation</a></li>
+        <li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/Introduction_to_the_JavaScript_shell">Introduction to the JavaScript shell</a></li>
+        <li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_User_Guide">JSAPI user guide</a></li>
+        <li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/JSAPI_Cookbook">JSAPI cookbook</a></li>
+        <li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/How_to_embed_the_JavaScript_engine">How to embed the JavaScript engine</a></li>
+        <li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/GC_Rooting_Guide">GC Rooting Guide</a></li>
+      </ol>
+    </details>
+  </li>
+  <li class="toggle">
+    <details>
+      <summary>SpiderMonkey internals</summary>
+      <ol><li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/Internals/Garbage_collection">Garbage collection</a></li><li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/Internals/Thread_Safety">Thread Safety</a></li></ol>
+    </details>
+  </li>
+
+  <li><strong>Contributing to SpiderMonkey:</strong></li>
+  <li class="toggle">
+    <details>
+      <summary>Getting started</summary>
+      <ol>
+        <li><a href="https://wiki.mozilla.org/JavaScript:New_to_SpiderMonkey">New to SpiderMonkey</a></li>
+        <li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/Setting_up_CDT_to_work_on_SpiderMonkey">Setting up CDT to work on SpiderMonkey</a></li>
+        <li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/Hacking_Tips">Hacking tips</a></li>
+      </ol>
+    </details>
+  </li>
+  <li class="toggle">
+    <details>
+      <summary>Tests</summary>
+      <ol>
+        <li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/Running_Automated_JavaScript_Tests">Running Automated JavaScript Tests</a></li>
+        <li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/Creating_JavaScript_tests">Creating JavaScript tests</a></li>
+        <li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/Running_Parsemark">Running Parsemark</a></li>
+       </ol>
+    </details>
+  </li>
+
+  <li><strong>Releases:</strong></li>
+  <li class="toggle">
+    <details>
+      <summary>Release notes</summary>
+      <ol><li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/Releases/52">SpiderMonkey 52</a></li></ol>
+    </details>
+  </li>
+  <li><strong><a href="/ja/docs/MDN">Documentation:</a></strong></li>
+  <li class="toggle">
+    <details>
+      <summary>Useful lists</summary>
+      <ol>
+        <li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/Index">All pages index</a></li>
+        <li><a href="/ja/docs/tag/SpiderMonkey">Pages tagged "SpiderMonkey"</a></li>
+      </ol>
+    </details>
+  </li>
+  <li class="toggle">
+    <details>
+      <summary>Contribute</summary>
+      <ol>
+        <li><a href="/ja/docs/MDN/Doc_status/SpiderMonkey">SpiderMonkey doc status</a></li>
+        <li><a href="/ja/docs/MDN">The MDN project</a></li>
+      </ol>
+    </details>
+  </li>
+ </ol>
+</section>
+
+<p><strong>JSAPI</strong> は、<a href="/ja/SpiderMonkey" title="ja/SpiderMonkey">SpiderMonkey</a> JavaScript エンジンのための C API です。JSAPI の使用方法を学ぶには、<a href="/ja/SpiderMonkey/Embedding_SpiderMonkey" title="ja/SpiderMonkey/Embedding_SpiderMonkey">JSAPI User Guide</a> および <a href="/ja/SpiderMonkey/JSAPI_Phrasebook" title="ja/SpiderMonkey/JSAPI_Phrasebook">JSAPI Phrasebook</a> をご覧ください。</p>
+
+<div class="note">補足: <a class="internal" href="/ja/SpiderMonkey/FOSS" title="ja/SpiderMonkey/FOSS">FOSS</a> のページに、Spidermonkey と JASPI の使用を助ける、他のライブラリやプログラムへのリンクがあります。</div>
+
+<p><a href="/ja/SpiderMonkey/JSAPI_Reference/Alphabetical_List" title="ja/SpiderMonkey/JSAPI_Reference/Alphabetical_List">アルファベット順一覧</a></p>
+
+<p><span id="Runtimes_and_contexts"></span></p>
+
+<h3 id="Runtimes_and_contexts" name="Runtimes_and_contexts">ランタイムとコンテキスト</h3>
+
+<ul>
+ <li>typedef <a href="/ja/JSRuntime" title="ja/JSRuntime">JSRuntime</a></li>
+ <li><a href="/ja/JS_NewRuntime" title="ja/JS_NewRuntime">JS_NewRuntime</a></li>
+ <li><a href="/ja/JS_DestroyRuntime" title="ja/JS_DestroyRuntime">JS_DestroyRuntime</a></li>
+ <li><a href="/ja/JS_ShutDown" title="ja/JS_ShutDown">JS_ShutDown</a></li>
+ <li><a href="/ja/JS_GetRuntimePrivate" title="ja/JS_GetRuntimePrivate">JS_GetRuntimePrivate</a></li>
+ <li><a href="/ja/JS_GetRuntimePrivate" title="ja/JS_GetRuntimePrivate">JS_SetRuntimePrivate</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_Init" title="ja/JS_Init">JS_Init</a> <span title="これは非推奨 API です。未だ動作しているかも知れませんが、将来的に削除される可能性があります。"><i class="icon-thumbs-down-alt"> </i></span></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_Finish" title="ja/JS_Finish">JS_Finish</a> <span title="これは非推奨 API です。未だ動作しているかも知れませんが、将来的に削除される可能性があります。"><i class="icon-thumbs-down-alt"> </i></span></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ContextIterator" title="ja/JS_ContextIterator">JS_ContextIterator</a></li>
+</ul>
+
+<ul>
+ <li>typedef <a href="/ja/JSRuntime" title="ja/JSRuntime">JSContext</a></li>
+ <li><a href="/ja/JS_NewContext" title="ja/JS_NewContext">JS_NewContext</a></li>
+ <li><a href="/ja/JS_DestroyContext" title="ja/JS_DestroyContext">JS_DestroyContext</a></li>
+ <li><a href="/ja/JS_DestroyContext" title="ja/JS_DestroyContext">JS_DestroyContextMaybeGC</a></li>
+ <li><a href="/ja/JS_DestroyContext" title="ja/JS_DestroyContext">JS_DestroyContextNoGC</a></li>
+ <li><a href="/ja/JS_GetRuntime" title="ja/JS_GetRuntime">JS_GetRuntime</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetContextPrivate" title="ja/JS_GetContextPrivate">JS_GetContextPrivate</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetContextPrivate" title="ja/JS_GetContextPrivate">JS_SetContextPrivate</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetOptions" title="ja/JS_GetOptions">JS_GetOptions</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetOptions" title="ja/JS_SetOptions">JS_SetOptions</a> – <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetOptions" title="ja/JS_SetOptions">JSOPTION_ATLINE</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetOptions" title="ja/JS_SetOptions">JSOPTION_COMPILE_N_GO</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetOptions" title="ja/JS_SetOptions">JSOPTION_DONT_REPORT_UNCAUGHT</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetOptions" title="ja/JS_SetOptions">JSOPTION_NATIVE_BRANCH_CALLBACK</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetOptions" title="ja/JSOPTION_RELIMIT">JSOPTION_RELIMIT</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetOptions" title="ja/JS_SetOptions">JSOPTION_STRICT</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetOptions" title="ja/JS_SetOptions">JSOPTION_VAROBJFIX</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetOptions" title="ja/JS_SetOptions">JSOPTION_WERROR</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetOptions" title="ja/JS_SetOptions">JSOPTION_XML</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetOptions" title="ja/JS_SetOptions">JSOPTION_ANONFUNFIX</a><span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8.1_(未リリース)">SpiderMonkey 1.8.1 (未リリース)</a> の新機能</span>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetOptions" title="ja/JS_SetOptions">JSOPTION_JIT</a><span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8.1_(未リリース)">SpiderMonkey 1.8.1 (未リリース)</a> の新機能</span>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetOptions" title="ja/JS_SetOptions">JSOPTION_NO_SCRIPT_RVAL</a><span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8.1_(未リリース)">SpiderMonkey 1.8.1 (未リリース)</a> の新機能</span>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetOptions" title="ja/JS_SetOptions">JSOPTION_UNROOTED_GLOBAL</a><span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8.1_(未リリース)">SpiderMonkey 1.8.1 (未リリース)</a> の新機能</span></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ToggleOptions" title="ja/JS_ToggleOptions">JS_ToggleOptions</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetBranchCallback" title="ja/JS_SetBranchCallback">JS_SetBranchCallback</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetOperationCallback" title="ja/JS_SetOperationCallback">JS_SetOperationCallback</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetOperationCallback" title="ja/JS_SetOperationCallback">JS_ClearOperationCallback</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetOperationCallback" title="ja/JS_SetOperationCallback">JS_GetOperationCallback</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetOperationCallback" title="ja/JS_SetOperationCallback">JS_GetOperationLimit</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetOperationCallback" title="ja/JS_SetOperationCallback">JS_SetOperationLimit</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetOperationCallback" title="ja/JS_SetOperationCallback">JS_MAX_OPERATION_LIMIT</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetOperationCallback" title="ja/JS_SetOperationCallback">JS_OPERATION_WEIGHT_BASE</a> <span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8_(未リリース)">SpiderMonkey 1.8 (未リリース)</a> の新機能</span></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetThreadStackLimit" title="ja/JS_SetThreadStackLimit">JS_SetThreadStackLimit</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetScriptStackQuota" title="ja/JS_SetScriptStackQuota">JS_SetScriptStackQuota</a></li>
+</ul>
+
+<ul>
+ <li>enum <a href="/ja/SpiderMonkey/JSAPI_Reference/JSVersion" title="ja/JSVersion">JSVersion</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JSVersion" title="ja/SpiderMonkey/JSAPI_Reference/JSVERSION_ECMA_3">JSVERSION_ECMA_3</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JSVERSION_DEFAULT" title="ja/JSVERSION_DEFAULT">JSVERSION_DEFAULT</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JSVERSION_LATEST" title="ja/JSVERSION_LATEST">JSVERSION_LATEST</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetImplementationVersion" title="ja/JS_GetImplementationVersion">JS_GetImplementationVersion</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetVersion" title="ja/JS_GetVersion">JS_GetVersion</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetVersion" title="ja/JS_SetVersion">JS_SetVersion</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_StringToVersion" title="ja/JS_StringToVersion">JS_StringToVersion</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_VersionToString" title="ja/JS_VersionToString">JS_VersionToString</a></li>
+</ul>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetGlobalObject" title="ja/JS_GetGlobalObject">JS_GetGlobalObject</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetGlobalObject" title="ja/JS_SetGlobalObject">JS_SetGlobalObject</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_InitClass" title="ja/JS_InitClass">JS_InitClass</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_InitStandardClasses" title="ja/JS_InitStandardClasses">JS_InitStandardClasses</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ResolveStandardClass" title="ja/JS_ResolveStandardClass">JS_ResolveStandardClass</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_EnumerateStandardClasses" title="ja/JS_EnumerateStandardClasses">JS_EnumerateStandardClasses</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_EnumerateResolvedStandardClasses" title="ja/JS_EnumerateResolvedStandardClasses">JS_EnumerateResolvedStandardClasses</a></li>
+</ul>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_IsAssigning" title="ja/JS_IsAssigning">JS_IsAssigning</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_IsConstructing" title="ja/JS_IsConstructing">JS_IsConstructing</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_IsRunning" title="ja/JS_IsRunning">JS_IsRunning</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetScopeChain" title="ja/JS_GetScopeChain">JS_GetScopeChain</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SaveFrameChain" title="ja/JS_SaveFrameChain">JS_SaveFrameChain</a>, <a href="/en/JS_RestoreFrameChain" title="en/JS_RestoreFrameChain">JS_RestoreFrameChain</a></li>
+</ul>
+
+<p>ロケールコールバック:</p>
+
+<ul>
+ <li>struct <a href="/ja/SpiderMonkey/JSAPI_Reference/JSLocaleCallbacks" title="ja/JSLocaleCallbacks">JSLocaleCallbacks</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetLocaleCallbacks" title="ja/JS_GetLocaleCallbacks">JS_GetLocaleCallbacks</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetLocaleCallbacks" title="ja/JS_SetLocaleCallbacks">JS_SetLocaleCallbacks</a></li>
+</ul>
+
+<p>ロケールコールバック型:</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSLocaleToUpperCase" title="ja/JSLocaleToUpperCase">JSLocaleToUpperCase</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSLocaleToLowerCase" title="ja/JSLocaleToLowerCase">JSLocaleToLowerCase</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSLocaleCompare" title="ja/JSLocaleCompare">JSLocaleCompare</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSLocaleToUnicode" title="ja/JSLocaleToUnicode">JSLocaleToUnicode</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ReportErrorNumber" title="ja/JS_ReportErrorNumber">JSErrorCallback</a></li>
+</ul>
+
+<p><span id="Scripts"></span></p>
+
+<h3 id="Scripts" name="Scripts">スクリプト</h3>
+
+<p>一部の JavaScript コードは直接実行されます:</p>
+
+<ul>
+ <li><a href="/ja/JS_EvaluateScript" title="ja/JS_EvaluateScript">JS_EvaluateScript</a></li>
+ <li><a href="/ja/JS_EvaluateScript" title="ja/JS_EvaluateScript">JS_EvaluateUCScript</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_EvaluateScriptForPrincipals" title="ja/JS_EvaluateScriptForPrincipals">JS_EvaluateScriptForPrincipals</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_EvaluateScriptForPrincipals" title="ja/JS_EvaluateScriptForPrincipals">JS_EvaluateUCScriptForPrincipals</a></li>
+</ul>
+
+<p>JavaScript コードを可能な <code>JSScript</code> へとコンパイルする代わりに、複数のアイテムを実行することができます。</p>
+
+<ul>
+ <li>typedef <a href="/ja/SpiderMonkey/JSAPI_Reference/JSScript" title="ja/JSScript">JSScript</a></li>
+ <li><a href="/ja/JS_CompileFile" title="ja/JS_CompileFile">JS_CompileFile</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_CompileFileHandle" title="ja/JS_CompileFileHandle">JS_CompileFileHandle</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_CompileFileHandle" title="ja/JS_CompileFileHandle">JS_CompileFileHandleForPrincipals</a></li>
+ <li><a href="/ja/JS_CompileScript" title="ja/JS_CompileScript">JS_CompileScript</a></li>
+ <li><a href="/ja/JS_CompileScript" title="ja/JS_CompileScript">JS_CompileUCScript</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_CompileScriptForPrincipals" title="ja/JS_CompileScriptForPrincipals">JS_CompileScriptForPrincipals</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_CompileScriptForPrincipals" title="ja/JS_CompileScriptForPrincipals">JS_CompileUCScriptForPrincipals</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_BufferIsCompilableUnit" title="ja/JS_BufferIsCompilableUnit">JS_BufferIsCompilableUnit</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetScriptObject" title="ja/JS_GetScriptObject">JS_GetScriptObject</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_NewScriptObject" title="ja/JS_NewScriptObject">JS_NewScriptObject</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ExecuteScript" title="ja/JS_ExecuteScript">JS_ExecuteScript</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ExecuteScriptPart" title="ja/JS_ExecuteScriptPart">JS_ExecuteScriptPart</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_DecompileScript" title="ja/JS_DecompileScript">JS_DecompileScript</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_DestroyScript" title="ja/JS_DestroyScript">JS_DestroyScript</a></li>
+</ul>
+
+<p>JavaScript コードを関数へとコンパイルすることもできます:</p>
+
+<ul>
+ <li>typedef <a href="/ja/SpiderMonkey/JSAPI_Reference/JSFunction" title="ja/JSFunction">JSFunction</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_CompileFunction" title="ja/JS_CompileFunction">JS_CompileFunction</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_CompileFunctionForPrincipals" title="ja/JS_CompileFunctionForPrincipals">JS_CompileFunctionForPrincipals</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_CompileFunction" title="ja/JS_CompileFunction">JS_CompileUCFunction</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_CompileFunctionForPrincipals" title="ja/JS_CompileFunctionForPrincipals">JS_CompileUCFunctionForPrincipals</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_DecompileFunction" title="ja/JS_DecompileFunction">JS_DecompileFunction</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_DecompileFunctionBody" title="ja/JS_DecompileFunctionBody">JS_DecompileFunctionBody</a></li>
+</ul>
+
+<p><span id="Error_handling"></span></p>
+
+<h3 id="Error_handling" name="Error_handling">エラーハンドリング</h3>
+
+<ul>
+ <li>struct <a href="/ja/SpiderMonkey/JSAPI_Reference/JSErrorReport" title="ja/JSErrorReport">JSErrorReport</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ReportError" title="ja/JS_ReportError">JS_ReportError</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ReportWarning" title="ja/JS_ReportWarning">JS_ReportWarning</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ReportErrorNumber" title="ja/JS_ReportErrorNumber">JS_ReportErrorNumber</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ReportErrorNumber" title="ja/JS_ReportErrorNumber">JS_ReportErrorNumberUC</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ReportErrorNumber" title="ja/JS_ReportErrorNumber">JS_ReportErrorFlagsAndNumber</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ReportErrorNumber" title="ja/JS_ReportErrorNumber">JS_ReportErrorFlagsAndNumberUC</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ReportOutOfMemory" title="ja/JS_ReportOutOfMemory">JS_ReportOutOfMemory</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetErrorReporter" title="ja/JS_SetErrorReporter">JS_SetErrorReporter</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSREPORT_IS_EXCEPTION" title="ja/JSREPORT_IS_EXCEPTION">JSREPORT_IS_EXCEPTION</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSREPORT_IS_STRICT" title="ja/JSREPORT_IS_STRICT">JSREPORT_IS_STRICT</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSREPORT_IS_WARNING" title="ja/JSREPORT_IS_WARNING">JSREPORT_IS_WARNING</a></li>
+</ul>
+
+<p>次の関数は、C/C++ 関数に JavaScript 例外のスローとキャッチを許可します。:</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_IsExceptionPending" title="ja/JS_IsExceptionPending">JS_IsExceptionPending</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetPendingException" title="ja/JS_GetPendingException">JS_GetPendingException</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetPendingException" title="ja/JS_SetPendingException">JS_SetPendingException</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ClearPendingException" title="ja/JS_ClearPendingException">JS_ClearPendingException</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ThrowStopIteration" title="ja/JS_ThrowStopIteration">JS_ThrowStopIteration</a> <span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8">SpiderMonkey 1.8</a> の新機能</span></li>
+</ul>
+
+<ul>
+ <li>typedef <a href="/ja/SpiderMonkey/JSAPI_Reference/JSExceptionState" title="ja/JSExceptionState">JSExceptionState</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SaveExceptionState" title="ja/JS_SaveExceptionState">JS_SaveExceptionState</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_RestoreExceptionState" title="ja/JS_RestoreExceptionState">JS_RestoreExceptionState</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_DropExceptionState" title="ja/JS_DropExceptionState">JS_DropExceptionState</a></li>
+</ul>
+
+<p>これらの関数は、エラーを例外に、例外をエラーに翻訳します:</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ReportPendingException" title="ja/JS_ReportPendingException">JS_ReportPendingException</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ErrorFromException" title="ja/JS_ErrorFromException">JS_ErrorFromException</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ThrowReportedError" title="ja/JS_ThrowReportedError">JS_ThrowReportedError</a></li>
+</ul>
+
+<p><span id="Values_and_types"></span></p>
+
+<h3 id="Values_and_types" name="Values_and_types">値と型</h3>
+
+<ul>
+ <li>typedef <a href="/ja/SpiderMonkey/JSAPI_Reference/Jsval" title="ja/jsval">jsval</a></li>
+</ul>
+
+<p><code>jsval</code> 定数:</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSVAL_NULL" title="ja/JSVAL_NULL">JSVAL_NULL</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSVAL_VOID" title="ja/JSVAL_VOID">JSVAL_VOID</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSVAL_TRUE" title="ja/JSVAL_TRUE">JSVAL_TRUE</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSVAL_TRUE" title="ja/JSVAL_TRUE">JSVAL_FALSE</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSVAL_ZERO" title="ja/JSVAL_ZERO">JSVAL_ZERO</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSVAL_ONE" title="ja/JSVAL_ONE">JSVAL_ONE</a></li>
+</ul>
+
+<p><code>jsval</code> の型をチェックする関数とマクロ:</p>
+
+<ul>
+ <li>enum <a href="/ja/SpiderMonkey/JSAPI_Reference/JSType" title="ja/JSType">JSType</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_TypeOfValue" title="ja/JS_TypeOfValue">JS_TypeOfValue</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSVAL_IS_NULL" title="ja/JSVAL_IS_NULL">JSVAL_IS_NULL</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSVAL_IS_VOID" title="ja/JSVAL_IS_VOID">JSVAL_IS_VOID</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSVAL_IS_BOOLEAN" title="ja/JSVAL_IS_BOOLEAN">JSVAL_IS_BOOLEAN</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSVAL_IS_NUMBER" title="ja/JSVAL_IS_NUMBER">JSVAL_IS_NUMBER</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSVAL_IS_INT" title="ja/JSVAL_IS_INT">JSVAL_IS_INT</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSVAL_IS_DOUBLE" title="ja/JSVAL_IS_DOUBLE">JSVAL_IS_DOUBLE</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSVAL_IS_STRING" title="ja/JSVAL_IS_STRING">JSVAL_IS_STRING</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSVAL_IS_OBJECT" title="ja/JSVAL_IS_OBJECT">JSVAL_IS_OBJECT</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSVAL_IS_PRIMITIVE" title="ja/JSVAL_IS_PRIMITIVE">JSVAL_IS_PRIMITIVE</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSVAL_IS_GCTHING" title="ja/JSVAL_IS_GCTHING">JSVAL_IS_GCTHING</a></li>
+</ul>
+
+<p>関数の引数を圧縮または展開する高レベル型変換ルーチン。</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_PushArguments" title="ja/JS_PushArguments">JS_PushArguments</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_PushArguments" title="ja/JS_PushArguments">JS_PushArgumentsVA</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_PopArguments" title="ja/JS_PopArguments">JS_PopArguments</a></li>
+</ul>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ConvertArguments" title="ja/JS_ConvertArguments">JS_ConvertArguments</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ConvertArgumentsVA" title="ja/JS_ConvertArgumentsVA">JS_ConvertArgumentsVA</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_AddArgumentFormatter" title="ja/JS_AddArgumentFormatter">JS_AddArgumentFormatter</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_AddArgumentFormatter" title="ja/JS_AddArgumentFormatter">JS_RemoveArgumentFormatter</a></li>
+</ul>
+
+<p>次の関数は JS 値を変数型に変換します。これらは任意の型の <code>jsval</code> に安全に適用することができます。これらは新しいオブジェクトを返します。例えば、<code>JS_ValueToObject(cx, s)</code> の <code>s</code> は新しい <code>String</code> ラッパーオブジェクトを作成する文字列です。これらの関数は JavaScript メソッドを呼び出します。例えば、<code>JS_ValueToString(cx, obj)</code> は <code>obj.toString()</code> を呼び出します。</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ValueToBoolean" title="ja/JS_ValueToBoolean">JS_ValueToBoolean</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ValueToConstructor" title="ja/JS_ValueToConstructor">JS_ValueToConstructor</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ValueToECMAInt32" title="ja/JS_ValueToECMAInt32">JS_ValueToECMAInt32</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ValueToECMAInt32" title="ja/JS_ValueToECMAInt32">JS_ValueToECMAUint32</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ValueToFunction" title="ja/JS_ValueToFunction">JS_ValueToFunction</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ValueToInt32" title="ja/JS_ValueToInt32">JS_ValueToInt32</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ValueToNumber" title="ja/JS_ValueToNumber">JS_ValueToNumber</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ValueToObject" title="ja/JS_ValueToObject">JS_ValueToObject</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ValueToString" title="ja/JS_ValueToString">JS_ValueToString</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ValueToECMAInt32" title="ja/JS_ValueToECMAInt32">JS_ValueToUint16</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ConvertValue" title="ja/JS_ConvertValue">JS_ConvertValue</a></li>
+</ul>
+
+<p>高速な未チェックの型キャストマクロ。これらのマクロは正しい型として知られていない値に適用してはいけません。C のキャストのように、正しくない値に適用するとクラッシュの原因となります。これらは新しいオブジェクトを作成したり JavaScript コード内に呼び出したりすることはありません。</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSVAL_TO_BOOLEAN" title="ja/JSVAL_TO_BOOLEAN">JSVAL_TO_BOOLEAN</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/BOOLEAN_TO_JSVAL" title="ja/BOOLEAN_TO_JSVAL">BOOLEAN_TO_JSVAL</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSVAL_TO_INT" title="ja/JSVAL_TO_INT">JSVAL_TO_INT</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/INT_TO_JSVAL" title="ja/INT_TO_JSVAL">INT_TO_JSVAL</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/INT_FITS_IN_JSVAL" title="ja/INT_FITS_IN_JSVAL">INT_FITS_IN_JSVAL</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSVAL_TO_DOUBLE" title="ja/JSVAL_TO_DOUBLE">JSVAL_TO_DOUBLE</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/DOUBLE_TO_JSVAL" title="ja/DOUBLE_TO_JSVAL">DOUBLE_TO_JSVAL</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSVAL_TO_OBJECT" title="ja/JSVAL_TO_OBJECT">JSVAL_TO_OBJECT</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/OBJECT_TO_JSVAL" title="ja/OBJECT_TO_JSVAL">OBJECT_TO_JSVAL</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSVAL_TO_STRING" title="ja/JSVAL_TO_STRING">JSVAL_TO_STRING</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/STRING_TO_JSVAL" title="ja/STRING_TO_JSVAL">STRING_TO_JSVAL</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSVAL_TO_GCTHING" title="ja/JSVAL_TO_GCTHING">JSVAL_TO_GCTHING</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/PRIVATE_TO_JSVAL" title="ja/PRIVATE_TO_JSVAL">JSVAL_TO_PRIVATE</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/PRIVATE_TO_JSVAL" title="ja/PRIVATE_TO_JSVAL">PRIVATE_TO_JSVAL</a></li>
+</ul>
+
+<p><code>typeof</code> のように振る舞う関数:</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetTypeName" title="ja/JS_GetTypeName">JS_GetTypeName</a></li>
+</ul>
+
+<p><code>===</code> のように振る舞う関数:</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_StrictlyEqual" title="ja/SpiderMonkey/JSAPI_Reference/JS_StrictlyEqual">JS_StrictlyEqual</a></li>
+</ul>
+
+<p><span id="Memory_management"></span></p>
+
+<h3 id="Memory_management" name="Memory_management">メモリ管理</h3>
+
+<p>これらの関数は、標準 C 関数の <code>malloc</code> 系のように動作します。ただし、エラーは <code>errno</code> ではなく、SpiderMonkey のエラー API を使用して報告されます:</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_malloc" title="ja/JS_malloc">JS_malloc</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_malloc" title="ja/JS_free">JS_free</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_malloc" title="ja/JS_realloc">JS_realloc</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_malloc" title="ja/JS_strdup">JS_strdup</a></li>
+</ul>
+
+<p>JavaScript オブジェクト、文字列、浮動小数点数はガーベッジコレクションの対象となります。これらの関数は、ガーベッジコレクタ(GC) へのアクセスを提供します:</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GC" title="ja/JS_GC">JS_GC</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_MaybeGC" title="ja/JS_MaybeGC">JS_MaybeGC</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetGCParameter" title="ja/JS_SetGCParameter">JS_GetGCParameter</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetGCParameter" title="ja/JS_SetGCParameter">JS_SetGCParameter</a>, enum <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetGCParameter" title="ja/JS_SetGCParameter">JSGCParamKey</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetGCParameter" title="ja/JS_SetGCParameter">JSGC_MAX_BYTES</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetGCParameter" title="ja/JS_SetGCParameter">JSGC_MAX_MALLOC_BYTES</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetGCParameter" title="ja/JS_SetGCParameter">JSGC_STACKPOOL_LIFESPAN</a>, <a class="internal" href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetGCParameter" title="ja/SpiderMonkey/JSAPI Reference/JSGC TRIGGER FACTOR">JSGC_TRIGGER_FACTOR</a>, <a class="internal" href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetGCParameter" title="ja/SpiderMonkey/JSAPI Reference/JSGC BYTES">JSGC_BYTES</a>, <a class="internal" href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetGCParameter" title="ja/SpiderMonkey/JSAPI Reference/JSGC NUMBER">JSGC_NUMBER</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetGCCallback" title="ja/JS_SetGCCallback">JS_SetGCCallback</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetGCCallback" title="ja/JS_SetGCCallback">JS_SetGCCallbackRT</a>, enum <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetGCCallback" title="ja/JS_SetGCCallback">JSGCStatus</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetGCCallback" title="ja/JS_SetGCCallback">JSGC_BEGIN</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetGCCallback" title="ja/JS_SetGCCallback">JSGC_MARK_END</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetGCCallback" title="ja/JS_SetGCCallback">JSGC_FINALIZE_END</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetGCCallback" title="ja/JS_SetGCCallback">JSGC_END</a></li>
+ <li><a href="/ja/JS_MarkGCThing" title="ja/JS_MarkGCThing">JS_MarkGCThing</a></li>
+ <li><a href="/ja/JS_IsAboutToBeFinalized" title="ja/JS_IsAboutToBeFinalized">JS_IsAboutToBeFinalized</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ClearNewbornRoots" title="ja/JS_ClearNewbornRoots">JS_ClearNewbornRoots</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetGCZeal" title="ja/JS_SetGCZeal">JS_SetGCZeal</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_DumpHeap" title="ja/JS_DumpHeap">JS_DumpHeap</a> <span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8_(未リリース)">SpiderMonkey 1.8 (未リリース)</a> の新機能</span></li>
+</ul>
+
+<p>これら残りの API は、アプリケーションがガーベッジコレクションを行う前に、オブジェクトをガーベッジコレクタによる破壊から保護します。</p>
+
+<p>変数が <em>root</em> の場合、その変数へのポインタはガーベッジコレクタによって開放されません。ルートオブジェクトに対しての失敗は、よくある奇妙なクラッシュの原因です。</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_AddRoot" title="ja/JS_AddRoot">JS_AddRoot</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_AddRoot" title="ja/JS_AddRoot">JS_AddNamedRoot</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_AddRoot" title="ja/JS_AddRoot">JS_AddNamedRootRT</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_RemoveRoot" title="ja/JS_RemoveRoot">JS_RemoveRoot</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_RemoveRootRT" title="ja/JS_RemoveRootRT">JS_RemoveRootRT</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_MapGCRoots" title="ja/JS_MapGCRoots">JS_MapGCRoots</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_MapGCRoots" title="ja/JSGCMapRootFun">JSGCMapRootFun</a> – <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_MapGCRoots" title="ja/JS_MAP_GCROOT_NEXT">JS_MAP_GCROOT_NEXT</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_MapGCRoots" title="ja/JS_MAP_GCROOT_REMOVE">JS_MAP_GCROOT_REMOVE</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_MapGCRoots" title="ja/JS_MAP_GCROOT_STOP">JS_MAP_GCROOT_STOP</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_DumpNamedRoots" title="ja/JS_DumpNamedRoots">JS_DumpNamedRoots</a></li>
+</ul>
+
+<p>ローカルのルートのスコープは、オブジェクトを別の方法でガーベッジコレクタから保護します。</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_EnterLocalRootScope" title="ja/JS_EnterLocalRootScope">JS_EnterLocalRootScope</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_LeaveLocalRootScope" title="ja/JS_LeaveLocalRootScope">JS_LeaveLocalRootScope</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_LeaveLocalRootScopeWithResult" title="ja/JS_LeaveLocalRootScopeWithResult">JS_LeaveLocalRootScopeWithResult</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ForgetLocalRoot" title="ja/JS_ForgetLocalRoot">JS_ForgetLocalRoot</a></li>
+</ul>
+
+<p><span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8_(未リリース)">SpiderMonkey 1.8 (未リリース)</a> の新機能</span> オブジェクトが、SpiderMonkey のデータ構造 ("slots") に格納されていない、他のガーベッジコレクタの対象への参照を含む場合、このオブジェクトは、ガーベッジコレクタのこれらの参照へのトラバース (<span style="color: green;">traverse</span>)を有効にするため、<code><a href="/ja/JSClass.mark" title="ja/JSClass.mark">JSTraceOp</a></code> フックを実装しなければなりません。しかし、ガーベッジコレクタは手の届く範囲のオブジェクトのみを整理しますが、すべてのオブジェクトを見つけることはできないため、クラッシュを引き起こします。(SpiderMonkey 1.7 以前のバージョンでは <code>JSMarkOp</code> フックが代わりに使用されます。これは SpiderMonkey 1.8 のリリース後は非推奨です。)</p>
+
+<p>トレース API は、ガーベッジコレクタと <code>JSTraceOp</code> フックによって使用されます。JSAPI アプリケーションもまた、これらの API をオブジェクトグラフを検査するために使用します。(例えば、これらの API は JS ガーベッジコレクタと他のガーベッジコレクタの、とても円滑な統合をサポートします。)</p>
+
+<ul>
+ <li><a href="/ja/JSVAL_IS_TRACEABLE" title="ja/JSVAL_IS_TRACEABLE">JSVAL_IS_TRACEABLE</a> <span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8_(未リリース)">SpiderMonkey 1.8 (未リリース)</a> の新機能</span></li>
+ <li><a href="/ja/JSVAL_TO_TRACEABLE" title="ja/JSVAL_TO_TRACEABLE">JSVAL_TO_TRACEABLE</a> <span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8_(未リリース)">SpiderMonkey 1.8 (未リリース)</a> の新機能</span></li>
+ <li><a href="/ja/JSVAL_TRACE_KIND" title="ja/JSVAL_TRACE_KIND">JSVAL_TRACE_KIND</a> <span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8_(未リリース)">SpiderMonkey 1.8 (未リリース)</a> の新機能</span></li>
+ <li>struct <a href="/ja/JSTracer" title="ja/JSTracer">JSTracer</a> <span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8_(未リリース)">SpiderMonkey 1.8 (未リリース)</a> の新機能</span></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_TRACER_INIT" title="ja/JS_TRACER_INIT">JS_TRACER_INIT</a> <span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8_(未リリース)">SpiderMonkey 1.8 (未リリース)</a> の新機能</span></li>
+ <li><a href="/ja/JS_CallTracer" title="ja/JS_CallTracer">JS_CallTracer</a> <span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8_(未リリース)">SpiderMonkey 1.8 (未リリース)</a> の新機能</span></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SET_TRACING_DETAILS" title="ja/JS_SET_TRACING_DETAILS">JS_SET_TRACING_DETAILS</a> <span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8_(未リリース)">SpiderMonkey 1.8 (未リリース)</a> の新機能</span></li>
+ <li><a href="/ja/JS_SET_TRACING_INDEX" title="ja/JS_SET_TRACING_INDEX">JS_SET_TRACING_INDEX</a> <span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8_(未リリース)">SpiderMonkey 1.8 (未リリース)</a> の新機能</span></li>
+ <li><a href="/ja/JS_SET_TRACING_NAME" title="ja/JS_SET_TRACING_NAME">JS_SET_TRACING_NAME</a> <span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8_(未リリース)">SpiderMonkey 1.8 (未リリース)</a> の新機能</span></li>
+ <li><a href="/ja/JS_CALL_TRACER" title="ja/JS_CALL_TRACER">JS_CALL_TRACER</a> <span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8_(未リリース)">SpiderMonkey 1.8 (未リリース)</a> の新機能</span></li>
+ <li><a href="/ja/JS_CALL_VALUE_TRACER" title="ja/JS_CALL_VALUE_TRACER">JS_CALL_VALUE_TRACER</a> <span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8_(未リリース)">SpiderMonkey 1.8 (未リリース)</a> の新機能</span></li>
+ <li><a href="/ja/JS_CALL_OBJECT_TRACER" title="ja/JS_CALL_OBJECT_TRACER">JS_CALL_OBJECT_TRACER</a> <span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8_(未リリース)">SpiderMonkey 1.8 (未リリース)</a> の新機能</span></li>
+ <li><a href="/ja/JS_CALL_STRING_TRACER" title="ja/JS_CALL_STRING_TRACER">JS_CALL_STRING_TRACER</a> <span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8_(未リリース)">SpiderMonkey 1.8 (未リリース)</a> の新機能</span></li>
+ <li><a href="/ja/JS_CALL_DOUBLE_TRACER" title="ja/JS_CALL_DOUBLE_TRACER">JS_CALL_DOUBLE_TRACER</a> <span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8_(未リリース)">SpiderMonkey 1.8 (未リリース)</a> の新機能</span></li>
+ <li><a href="/ja/JS_TraceChildren" title="ja/JS_TraceChildren">JS_TraceChildren</a> <span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8_(未リリース)">SpiderMonkey 1.8 (未リリース)</a> の新機能</span></li>
+ <li><a href="/ja/JS_TraceRuntime" title="ja/JS_TraceRuntime">JS_TraceRuntime</a> <span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8_(未リリース)">SpiderMonkey 1.8 (未リリース)</a> の新機能</span></li>
+ <li><a href="/ja/JS_PrintTraceThingInfo" title="ja/JS_PrintTraceThingInfo">JS_PrintTraceThingInfo</a> (DEBUG-only) <span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8_(未リリース)">SpiderMonkey 1.8 (未リリース)</a> の新機能</span></li>
+</ul>
+
+<p>その他の GC API:</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSVAL_LOCK" title="ja/JSVAL_LOCK">JSVAL_LOCK</a> <span title="これは非推奨 API です。未だ動作しているかも知れませんが、将来的に削除される可能性があります。"><i class="icon-thumbs-down-alt"> </i></span></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSVAL_UNLOCK" title="ja/JSVAL_UNLOCK">JSVAL_UNLOCK</a> <span title="これは非推奨 API です。未だ動作しているかも知れませんが、将来的に削除される可能性があります。"><i class="icon-thumbs-down-alt"> </i></span></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_LockGCThing" title="ja/JS_LockGCThing">JS_LockGCThing</a> <span title="これは非推奨 API です。未だ動作しているかも知れませんが、将来的に削除される可能性があります。"><i class="icon-thumbs-down-alt"> </i></span></li>
+ <li><a href="/ja/JS_LockGCThingRT" title="ja/JS_LockGCThingRT">JS_LockGCThingRT</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_LockGCThing" title="ja/JS_LockGCThing">JS_UnlockGCThing</a> <span title="これは非推奨 API です。未だ動作しているかも知れませんが、将来的に削除される可能性があります。"><i class="icon-thumbs-down-alt"> </i></span></li>
+ <li><a href="/ja/JS_UnlockGCThingRT" title="ja/JS_UnlockGCThingRT">JS_UnlockGCThingRT</a></li>
+</ul>
+
+<p><span id="Numbers"></span></p>
+
+<h3 id="Numbers" name="Numbers">数値</h3>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_NewNumberValue" title="ja/JS_NewNumberValue">JS_NewNumberValue</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_NewDoubleValue" title="ja/JS_NewDoubleValue">JS_NewDoubleValue</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_NewDouble" title="ja/JS_NewDouble">JS_NewDouble</a></li>
+ <li>struct <a href="/ja/SpiderMonkey/JSAPI_Reference/JSConstDoubleSpec" title="ja/JSConstDoubleSpec">JSConstDoubleSpec</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_DefineConstDoubles" title="ja/JS_DefineConstDoubles">JS_DefineConstDoubles</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetNaNValue" title="ja/JS_GetNaNValue">JS_GetNaNValue</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetPositiveInfinityValue" title="ja/JS_GetPositiveInfinityValue">JS_GetNegativeInfinityValue</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetPositiveInfinityValue" title="ja/JS_GetPositiveInfinityValue">JS_GetPositiveInfinityValue</a></li>
+</ul>
+
+<p><span id="Strings"></span></p>
+
+<h3 id="Strings" name="Strings">文字列</h3>
+
+<ul>
+ <li>typedef <a href="/ja/SpiderMonkey/JSAPI_Reference/JSString" title="ja/JSString">JSString</a></li>
+ <li>typedef <a href="/ja/SpiderMonkey/JSAPI_Reference/jschar" title="ja/jschar">jschar</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_NewString" title="ja/JS_NewString">JS_NewString</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_NewStringCopyN" title="ja/SpiderMonkey/JSAPI_Reference/JS_NewStringCopyN">JS_NewStringCopyN</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_NewStringCopyZ" title="ja/SpiderMonkey/JSAPI_Reference/JS_NewStringCopyZ">JS_NewStringCopyZ</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_NewString" title="ja/JS_NewString">JS_NewUCString</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_NewStringCopyN" title="ja/SpiderMonkey/JSAPI_Reference/JS_NewStringCopyN">JS_NewUCStringCopyN</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_NewStringCopyZ" title="ja/SpiderMonkey/JSAPI_Reference/JS_NewStringCopyZ">JS_NewUCStringCopyZ</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_NewGrowableString" title="ja/JS_NewGrowableString">JS_NewGrowableString</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_NewDependentString" title="ja/SpiderMonkey/JSAPI_Reference/JS_NewDependentString">JS_NewDependentString</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetEmptyStringValue" title="ja/SpiderMonkey/JSAPI_Reference/JS_GetEmptyStringValue">JS_GetEmptyStringValue</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_CompareStrings" title="ja/SpiderMonkey/JSAPI_Reference/JS_CompareStrings">JS_CompareStrings</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ConcatStrings" title="ja/JS_ConcatStrings">JS_ConcatStrings</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetStringBytes" title="ja/SpiderMonkey/JSAPI_Reference/JS_GetStringBytes">JS_GetStringBytes</a> <span class="icon-only-inline" title="これは廃止されたAPIであり、今後の動作は保障されていません。ご注意下さい。"><i class="icon-trash"> </i></span></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetStringBytes" title="ja/SpiderMonkey/JSAPI_Reference/JS_GetStringBytes">JS_GetStringBytesZ</a> <span class="icon-only-inline" title="これは廃止されたAPIであり、今後の動作は保障されていません。ご注意下さい。"><i class="icon-trash"> </i></span></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetStringChars" title="ja/SpiderMonkey/JSAPI_Reference/JS_GetStringChars">JS_GetStringChars</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetStringLength" title="ja/SpiderMonkey/JSAPI_Reference/JS_GetStringLength">JS_GetStringLength</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_MakeStringImmutable" title="ja/SpiderMonkey/JSAPI_Reference/JS_MakeStringImmutable">JS_MakeStringImmutable</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_UndependString" title="ja/SpiderMonkey/JSAPI_Reference/JS_UndependString">JS_UndependString</a></li>
+</ul>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_CStringsAreUTF8" title="ja/JS_CStringsAreUTF8">JS_CStringsAreUTF8</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_CStringsAreUTF8" title="ja/JS_SetCStringsAreUTF8">JS_SetCStringsAreUTF8</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_DecodeBytes" title="ja/JS_DecodeBytes">JS_DecodeBytes</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_EncodeCharacters" title="ja/JS_EncodeCharacters">JS_EncodeCharacters</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetStringBytes" title="ja/SpiderMonkey/JSAPI Reference/JS GetStringBytes">JS_EncodeString</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetStringBytes" title="ja/SpiderMonkey/JSAPI Reference/JS GetStringBytes">JS_EncodeStringToBuffer</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetStringBytes" title="ja/SpiderMonkey/JSAPI Reference/JS GetStringBytes">JS_GetStringEncodingLength</a></li>
+</ul>
+
+<p><em>Interning</em> 文字列は SpiderMonkey エンジンに、可能ならば既存の文字列オブジェクトを再使用するように伝えます。</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_InternString" title="ja/SpiderMonkey/JSAPI_Reference/JS_InternString">JS_InternString</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_InternString" title="ja/SpiderMonkey/JSAPI_Reference/JS_InternString">JS_InternUCString</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_InternString" title="ja/SpiderMonkey/JSAPI_Reference/JS_InternString">JS_InternUCStringN</a></li>
+</ul>
+
+<p><em>external strings</em> のための文字データはアプリケーションによって提供されるメモリに格納されます。アプリケーションはこれを、SpiderMonkey のヒープとアプリケーションのメモリの間で、<span style="border-bottom: 1px dashed green;" title="copying data back and forth">データを先や後へコピーする</span>ことを防止するために使用します。</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_AddExternalStringFinalizer" title="ja/JS_AddExternalStringFinalizer">JS_AddExternalStringFinalizer</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_RemoveExternalStringFinalizer" title="ja/JS_RemoveExternalStringFinalizer">JS_RemoveExternalStringFinalizer</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetExternalStringGCType" title="ja/JS_GetExternalStringGCType">JS_GetExternalStringGCType</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_NewExternalString" title="ja/JS_NewExternalString">JS_NewExternalString</a></li>
+</ul>
+
+<p><span id="Objects"></span></p>
+
+<h3 id="Objects" name="Objects">オブジェクト</h3>
+
+<ul>
+ <li>typedef <a href="/ja/SpiderMonkey/JSAPI_Reference/JSObject" title="ja/JSObject">JSObject</a></li>
+ <li><a href="/ja/JS_ConstructObject" title="ja/JS_ConstructObject">JS_ConstructObject</a></li>
+ <li><a href="/ja/JS_ConstructObject" title="ja/JS_ConstructObjectWithArguments">JS_ConstructObjectWithArguments</a></li>
+ <li><a href="/ja/JS_DefineObject" title="ja/JS_DefineObject">JS_DefineObject</a></li>
+ <li><a href="/ja/JS_NewObject" title="ja/JS_NewObject">JS_NewObject</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_NewGlobalObject" title="ja/SpiderMonkey/JSAPI Reference/JS NewGlobalObject">JS_NewGlobalObject</a> <span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8_(未リリース)">SpiderMonkey 1.8 (未リリース)</a> の新機能</span></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_NewObject" title="ja/JS_NewObject">JS_NewObjectWithGivenProto</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_New" title="ja/SpiderMonkey/JSAPI Reference/JS New">JS_New</a></li>
+</ul>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GET_CLASS" title="ja/JS_GET_CLASS">JS_GET_CLASS</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GET_CLASS" title="ja/JS_GET_CLASS">JS_GetClass</a></li>
+ <li><a href="/ja/JS_GetClassObject" title="ja/JS_GetClassObject">JS_GetClassObject</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetConstructor" title="ja/JS_GetConstructor">JS_GetConstructor</a></li>
+ <li><a href="/ja/JS_GetGlobalForObject" title="ja/JS_GetGlobalForObject">JS_GetGlobalForObject</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetInstancePrivate" title="ja/JS_GetInstancePrivate">JS_GetInstancePrivate</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetParent" title="ja/JS_GetParent">JS_GetParent</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetParent" title="ja/JS_SetParent">JS_SetParent</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetPrivate" title="ja/JS_GetPrivate">JS_GetPrivate</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetPrivate" title="ja/JS_SetPrivate">JS_SetPrivate</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetPrototype" title="ja/JS_GetPrototype">JS_GetPrototype</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetPrototype" title="ja/JS_SetPrototype">JS_SetPrototype</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetReservedSlot" title="ja/JS_GetReservedSlot">JS_GetReservedSlot</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetReservedSlot" title="ja/JS_GetReservedSlot">JS_SetReservedSlot</a></li>
+ <li><a href="/ja/JS_HasInstance" title="ja/JS_HasInstance">JS_HasInstance</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_InstanceOf" title="ja/JS_InstanceOf">JS_InstanceOf</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SealObject" title="ja/JS_SealObject">JS_SealObject</a></li>
+</ul>
+
+<p><span id="Properties"></span></p>
+
+<h3 id="Properties" name="Properties">プロパティ</h3>
+
+<p>これらの関数は、直接スクリプトがオブジェクトのプロパティにアクセスする方法に相当します:</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetProperty" title="ja/JS_GetProperty">JS_GetProperty</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetProperty" title="ja/JS_GetProperty">JS_GetUCProperty</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetProperty" title="ja/JS_GetProperty">JS_GetPropertyById</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetProperty" title="ja/JS_SetProperty">JS_SetProperty</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetProperty" title="ja/JS_SetProperty">JS_SetUCProperty</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetProperty" title="ja/JS_SetProperty">JS_SetPropertyById</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_HasProperty" title="ja/JS_HasProperty">JS_HasProperty</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_HasProperty" title="ja/JS_HasProperty">JS_HasUCProperty</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_HasProperty" title="ja/JS_HasProperty">JS_HasPropertyById</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_DeleteProperty" title="ja/JS_DeleteProperty">JS_DeleteProperty</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_DeleteProperty" title="ja/JS_DeleteProperty">JS_DeletePropertyById</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_DeleteProperty2" title="ja/JS_DeleteProperty2">JS_DeleteProperty2</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_DeleteProperty2" title="ja/JS_DeleteProperty2">JS_DeleteUCProperty2</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_DeleteProperty2" title="ja/JS_DeleteProperty2">JS_DeletePropertyById2</a></li>
+</ul>
+
+<p>次の低レベルの関数は、JSAPI アプリケーションが、プロパティの実装方法の詳細へのアクセスを許可します。"Define" は "set" の低レベル版であり、追加の設定へのアクセスを提供し、setter を呼び出しません。同様に、"lookup" は "get" の低レベル版であり、追加のオプションを与え、getter を呼び出しません。</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_AlreadyHasOwnProperty" title="ja/JS_AlreadyHasOwnElement">JS_AlreadyHasOwnElement</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_AlreadyHasOwnProperty" title="ja/JS_AlreadyHasOwnProperty">JS_AlreadyHasOwnProperty</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_AlreadyHasOwnProperty" title="ja/JS_AlreadyHasOwnProperty">JS_AlreadyHasOwnUCProperty</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_AlreadyHasOwnProperty" title="ja/JS_AlreadyHasOwnProperty">JS_AlreadyHasOwnPropertyById</a> <span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8_(未リリース)">SpiderMonkey 1.8 (未リリース)</a> の新機能</span></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ClearScope" title="ja/JS_ClearScope">JS_ClearScope</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_DefineProperties" title="ja/JS_DefineProperties">JS_DefineProperties</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_DefineProperty" title="ja/JS_DefineProperty">JS_DefineProperty</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_DefineProperty" title="ja/JS_DefineProperty">JS_DefineUCProperty</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_DefineProperty" title="ja/JS_DefineProperty">JS_DefinePropertyById</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_DefinePropertyWithTinyId" title="ja/JS_DefinePropertyWithTinyId">JS_DefinePropertyWithTinyId</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_DefinePropertyWithTinyId" title="ja/JS_DefinePropertyWithTinyId">JS_DefineUCPropertyWithTinyId</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_Enumerate" title="ja/JS_Enumerate">JS_Enumerate</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetPropertyAttributes" title="ja/JS_GetPropertyAttributes">JS_GetPropertyAttributes</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetPropertyAttributes" title="ja/JS_GetPropertyAttributes">JS_GetUCPropertyAttributes</a> – <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetPropertyAttributes" title="ja/JS_GetPropertyAttributes">JSPROP_ENUMERATE</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetPropertyAttributes" title="ja/JS_GetPropertyAttributes">JSPROP_EXPORTED</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetPropertyAttributes" title="ja/JS_GetPropertyAttributes">JSPROP_GETTER</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetPropertyAttributes" title="ja/JS_GetPropertyAttributes">JSPROP_INDEX</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetPropertyAttributes" title="ja/JS_GetPropertyAttributes">JSPROP_PERMANENT</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetPropertyAttributes" title="ja/JS_GetPropertyAttributes">JSPROP_READONLY</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetPropertyAttributes" title="ja/JS_GetPropertyAttributes">JSPROP_SETTER</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetPropertyAttributes" title="ja/JS_GetPropertyAttributes">JSPROP_SHARED</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetPropertyAttrsGetterAndSetter" title="ja/JS_GetPropertyAttrsGetterAndSetter">JS_GetPropertyAttrsGetterAndSetter</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetPropertyAttrsGetterAndSetter" title="ja/JS_GetPropertyAttrsGetterAndSetter">JS_GetUCPropertyAttrsGetterAndSetter</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetPropertyAttrsGetterAndSetter" title="ja/JS_GetPropertyAttrsGetterAndSetter">JS_GetPropertyAttrsGetterAndSetterById</a></li>
+ <li><a class="internal" href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetPropertyDescriptorById" title="ja/SpiderMonkey/JSAPI Reference/JS GetPropertyDescriptorById">JS_GetPropertyDescriptorById</a> <span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8_(未リリース)">SpiderMonkey 1.8 (未リリース)</a> の新機能</span></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_LookupProperty" title="ja/JS_LookupProperty">JS_LookupProperty</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_LookupProperty" title="ja/JS_LookupProperty">JS_LookupUCProperty</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_LookupProperty" title="ja/JS_LookupProperty">JS_LookupPropertyById</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_LookupProperty" title="ja/JS_LookupProperty">JS_LookupPropertyWithFlags</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_LookupProperty" title="ja/JS_LookupProperty">JS_LookupPropertyWithFlagsById</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_NewPropertyIterator" title="ja/JS_NewPropertyIterator">JS_NewPropertyIterator</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_NextProperty" title="ja/JS_NextProperty">JS_NextProperty</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetPropertyAttributes" title="ja/JS_SetPropertyAttributes">JS_SetPropertyAttributes</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetPropertyAttributes" title="ja/JS_SetPropertyAttributes">JS_SetUCPropertyAttributes</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_AliasProperty" title="ja/JS_AliasProperty">JS_AliasProperty</a> <span title="これは非推奨 API です。未だ動作しているかも知れませんが、将来的に削除される可能性があります。"><i class="icon-thumbs-down-alt"> </i></span></li>
+</ul>
+
+<p>次の関数は、<code>JS_GetProperty</code> および <code>JS_GetPropertyById</code> のように振る舞います。ただし、E4X XML オブジェクト上の操作は除きます。</p>
+
+<ul>
+ <li><a href="/ja/JS_GetMethod" title="ja/JS_GetMethod">JS_GetMethod</a>, <a href="/ja/JS_GetMethodById" title="ja/JS_GetMethodById">JS_GetMethodById</a></li>
+</ul>
+
+<p>SpiderMonkey 拡張は lvalue(オブジェクトのプロパティへの参照) を返すネイティブ関数を許可します:</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetCallReturnValue2" title="ja/JS_SetCallReturnValue2">JS_SetCallReturnValue2</a></li>
+</ul>
+
+<p><code><a href="/ja/SpiderMonkey/JSAPI_Reference/jsid" title="ja/jsid">jsid</a></code> は <code>jsval</code> の一種です。ごく少数の API が、<code>jsval</code> の代わりに <code>jsid</code> をプロパティ名に使用します: <code><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_CheckAccess" title="ja/JS_CheckAccess">JS_CheckAccess</a></code> および <code><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_Enumerate" title="ja/JS_Enumerate">JS_Enumerate</a></code>, <code><a href="/ja/JS_GetMethodById" title="ja/JS_GetMethodById">JS_GetMethodById</a></code>, <code><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_NextProperty" title="ja/JS_NextProperty">JS_NextProperty</a></code>。</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_IdToValue" title="ja/JS_IdToValue">JS_IdToValue</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ValueToId" title="ja/JS_ValueToId">JS_ValueToId</a></li>
+ <li><a href="/ja/JS_GetObjectId" title="ja/JS_GetObjectId">JS_GetObjectId</a></li>
+ <li>struct <a href="/ja/SpiderMonkey/JSAPI_Reference/JSIdArray" title="ja/JSIdArray">JSIdArray</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_DestroyIdArray" title="ja/JS_DestroyIdArray">JS_DestroyIdArray</a></li>
+</ul>
+
+<p><code>jsid</code> 定数:</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSID_VOID" title="ja/JSID_VOID">JSID_VOID</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSID_EMPTY" title="ja/JSID_EMPTY">JSID_EMPTY</a></li>
+</ul>
+
+<p><code>jsid</code> の型を調べる関数とマクロ:</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSID_IS_VOID" title="ja/JSID_IS_VOID">JSID_IS_VOID</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSID_IS_INT" title="ja/JSID_IS_INT">JSID_IS_INT</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSID_IS_STRING" title="ja/JSID_IS_STRING">JSID_IS_STRING</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSID_IS_OBJECT" title="ja/JSID_IS_OBJECT">JSID_IS_OBJECT</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSID_IS_GCTHING" title="ja/JSID_IS_GCTHING">JSID_IS_GCTHING</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSID_IS_ZERO" title="ja/JSID_IS_ZERO">JSID_IS_ZERO</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSID_IS_EMPTY" title="ja/JSID_IS_EMPTY">JSID_IS_EMPTY</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSID_IS_DEFAULT_XML_NAMESPACE" title="ja/JSID_IS_DEFAULT_XML_NAMESPACE">JSID_IS_DEFAULT_XML_NAMESPACE</a></li>
+</ul>
+
+<p><span id="Classes"></span></p>
+
+<h3 id="Classes" name="Classes">クラス</h3>
+
+<p>これらの API 機能は、C/C++ に実装された JavaScript からアクセス可能なカスタムクラス—オブジェクト型の定義に使用されます。</p>
+
+<ul>
+ <li>struct <a href="/ja/SpiderMonkey/JSAPI_Reference/JSClass" title="ja/SpiderMonkey/JSAPI_Reference/JSClass">JSClass</a></li>
+ <li>struct <a href="/ja/SpiderMonkey/JSAPI_Reference/JSExtendedClass" title="ja/SpiderMonkey/JSAPI_Reference/JSExtendedClass">JSExtendedClass</a></li>
+ <li>struct <a href="/ja/SpiderMonkey/JSAPI_Reference/JSObjectOps" title="ja/SpiderMonkey/JSAPI_Reference/JSObjectOps">JSObjectOps</a></li>
+ <li>struct <a href="/ja/SpiderMonkey/JSAPI_Reference/JSXMLObjectOps" title="ja/SpiderMonkey/JSAPI_Reference/JSXMLObjectOps">JSXMLObjectOps</a></li>
+ <li>struct <a href="/ja/SpiderMonkey/JSAPI_Reference/JSFunctionSpec" title="ja/SpiderMonkey/JSAPI_Reference/JSFunctionSpec">JSFunctionSpec</a></li>
+ <li>struct <a href="/ja/SpiderMonkey/JSAPI_Reference/JSProperty" title="ja/SpiderMonkey/JSAPI_Reference/JSProperty">JSProperty</a></li>
+ <li>struct <a href="/ja/SpiderMonkey/JSAPI_Reference/JSPropertySpec" title="ja/SpiderMonkey/JSAPI_Reference/JSPropertySpec">JSPropertySpec</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_InitClass" title="ja/SpiderMonkey/JSAPI_Reference/JS_InitClass">JS_InitClass</a></li>
+</ul>
+
+<p>ネイティブプロパティとメソッドをクラスに追加:</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSNative" title="ja/SpiderMonkey/JSAPI_Reference/JSNative">JSNative</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSFastNative" title="ja/SpiderMonkey/JSAPI_Reference/JSFastNative">JSFastNative</a> <span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8">SpiderMonkey 1.8</a> の新機能</span></li>
+ <li>struct <a href="/ja/SpiderMonkey/JSAPI_Reference/JSFunctionSpec" title="ja/SpiderMonkey/JSAPI_Reference/JSFunctionSpec">JSFunctionSpec</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_FS" title="ja/JS_FS">JS_FS</a> <span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8">SpiderMonkey 1.8</a> の新機能</span></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_FS" title="ja/JS_FN">JS_FN</a> <span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8">SpiderMonkey 1.8</a> の新機能</span></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_FS" title="ja/JS_FS_END">JS_FS_END</a> <span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8">SpiderMonkey 1.8</a> の新機能</span></li>
+ <li>struct <a href="/ja/SpiderMonkey/JSAPI_Reference/JSPropertySpec" title="ja/SpiderMonkey/JSAPI_Reference/JSPropertySpec">JSPropertySpec</a></li>
+</ul>
+
+<p><code>JSFastNative</code> メソッドはこれらのマクロを使用します: <span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8">SpiderMonkey 1.8</a> の新機能</span></p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSFastNative" title="ja/SpiderMonkey/JSAPI_Reference/JSFastNative">JS_CALLEE</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSFastNative" title="ja/SpiderMonkey/JSAPI_Reference/JSFastNative">JS_THIS</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSFastNative" title="ja/SpiderMonkey/JSAPI_Reference/JSFastNative">JS_THIS_OBJECT</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSFastNative" title="ja/SpiderMonkey/JSAPI_Reference/JSFastNative">JS_ARGV</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSFastNative" title="ja/SpiderMonkey/JSAPI_Reference/JSFastNative">JS_RVAL</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSFastNative" title="ja/SpiderMonkey/JSAPI_Reference/JSFastNative">JS_SET_RVAL</a></li>
+</ul>
+
+<p><code>JSClass</code> の振る舞いとそのインスタンスは、コールバック関数を使用して多くの方法でカスタマイズすることができます。</p>
+
+<p><a href="/ja/SpiderMonkey/JSAPI_Reference/JSClass" title="ja/SpiderMonkey/JSAPI_Reference/JSClass">JSClass</a> メソッド型:</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSPropertyOp" title="ja/SpiderMonkey/JSAPI_Reference/JSPropertyOp">JSPropertyOp</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSEnumerateOp" title="ja/SpiderMonkey/JSAPI_Reference/JSEnumerateOp">JSEnumerateOp</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSClass.enumerate" title="ja/SpiderMonkey/JSAPI_Reference/JSClass.enumerate">JSNewEnumerateOp</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSClass.resolve" title="ja/SpiderMonkey/JSAPI_Reference/JSClass.resolve">JSResolveOp</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSNewResolveOp" title="ja/SpiderMonkey/JSAPI_Reference/JSNewResolveOp">JSNewResolveOp</a> – <a href="/ja/SpiderMonkey/JSAPI_Reference/JSNewResolveOp" title="ja/SpiderMonkey/JSAPI_Reference/JSNewResolveOp">JSRESOLVE_ASSIGNING</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JSNewResolveOp" title="ja/SpiderMonkey/JSAPI_Reference/JSNewResolveOp">JSRESOLVE_CLASSNAME</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JSNewResolveOp" title="ja/SpiderMonkey/JSAPI_Reference/JSNewResolveOp">JSRESOLVE_DECLARING</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JSNewResolveOp" title="ja/SpiderMonkey/JSAPI_Reference/JSNewResolveOp">JSRESOLVE_DETECTING</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JSNewResolveOp" title="ja/SpiderMonkey/JSAPI_Reference/JSNewResolveOp">JSRESOLVE_QUALIFIED</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSObjectOps.defaultValue" title="ja/SpiderMonkey/JSAPI_Reference/JSObjectOps.defaultValue">JSConvertOp</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSClass.finalize" title="ja/SpiderMonkey/JSAPI_Reference/JSClass.finalize">JSFinalizeOp</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSClass.getObjectOps" title="ja/SpiderMonkey/JSAPI_Reference/JSClass.getObjectOps">JSGetObjectOps</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSClass.checkAccess" title="ja/SpiderMonkey/JSAPI_Reference/JSClass.checkAccess">JSCheckAccessOp</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSClass.xdrObject" title="ja/SpiderMonkey/JSAPI_Reference/JSClass.xdrObject">JSXDRObjectOp</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSClass.hasInstance" title="ja/SpiderMonkey/JSAPI_Reference/JSClass.hasInstance">JSHasInstanceOp</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSClass.mark" title="ja/SpiderMonkey/JSAPI_Reference/JSClass.mark">JSMarkOp</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSTraceOp" title="ja/SpiderMonkey/JSAPI_Reference/JSTraceOp">JSTraceOp</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSClass.reserveSlots" title="ja/SpiderMonkey/JSAPI_Reference/JSClass.reserveSlots">JSReserveSlotsOp</a></li>
+</ul>
+
+<p><a href="/ja/SpiderMonkey/JSAPI_Reference/JSExtendedClass" title="ja/SpiderMonkey/JSAPI_Reference/JSExtendedClass">JSExtendedClass</a> メソッド型:</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSIteratorOp" title="ja/SpiderMonkey/JSAPI_Reference/JSIteratorOp">JSIteratorOp</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSEqualityOp" title="ja/SpiderMonkey/JSAPI_Reference/JSEqualityOp">JSEqualityOp</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSObjectOp" title="ja/SpiderMonkey/JSAPI_Reference/JSObjectOp">JSObjectOp</a></li>
+</ul>
+
+<p><a href="/ja/SpiderMonkey/JSAPI_Reference/JSObjectOps" title="ja/SpiderMonkey/JSAPI_Reference/JSObjectOps">JSObjectOps</a> メソッド型:</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSObjectOps.newObjectMap" title="ja/SpiderMonkey/JSAPI_Reference/JSObjectOps.newObjectMap">JSNewObjectMapOp</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSObjectOps.destroyObjectMap" title="ja/SpiderMonkey/JSAPI_Reference/JSObjectOps.destroyObjectMap">JSObjectMapOp</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSObjectOps.lookupProperty" title="ja/SpiderMonkey/JSAPI_Reference/JSObjectOps.lookupProperty">JSLookupPropOp</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSObjectOps.defineProperty" title="ja/SpiderMonkey/JSAPI_Reference/JSObjectOps.defineProperty">JSDefinePropOp</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSObjectOps.getProperty" title="ja/SpiderMonkey/JSAPI_Reference/JSObjectOps.getProperty">JSPropertyIdOp</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSObjectOps.getAttributes" title="ja/SpiderMonkey/JSAPI_Reference/JSObjectOps.getAttributes">JSAttributesOp</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSObjectOps.defaultValue" title="ja/SpiderMonkey/JSAPI_Reference/JSObjectOps.defaultValue">JSConvertOp</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSClass.enumerate" title="ja/SpiderMonkey/JSAPI_Reference/JSClass.enumerate">JSNewEnumerateOp</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSObjectOps.checkAccess" title="ja/SpiderMonkey/JSAPI_Reference/JSObjectOps.checkAccess">JSCheckAccessIdOp</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSObjectOp" title="ja/SpiderMonkey/JSAPI_Reference/JSObjectOp">JSObjectOp</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSObjectOps.dropProperty" title="ja/SpiderMonkey/JSAPI_Reference/JSObjectOps.dropProperty">JSPropertyRefOp</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSClass.xdrObject" title="ja/SpiderMonkey/JSAPI_Reference/JSClass.xdrObject">JSXDRObjectOp</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSClass.hasInstance" title="ja/SpiderMonkey/JSAPI_Reference/JSClass.hasInstance">JSHasInstanceOp</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSObjectOps.setProto" title="ja/SpiderMonkey/JSAPI_Reference/JSObjectOps.setProto">JSSetObjectSlotOp</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSTraceOp" title="ja/SpiderMonkey/JSAPI_Reference/JSTraceOp">JSTraceOp</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSClass.finalize" title="ja/SpiderMonkey/JSAPI_Reference/JSClass.finalize">JSFinalizeOp</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSObjectOps.getRequiredSlot" title="ja/SpiderMonkey/JSAPI_Reference/JSObjectOps.getRequiredSlot">JSGetRequiredSlotOp</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSObjectOps.getRequiredSlot" title="ja/SpiderMonkey/JSAPI_Reference/JSObjectOps.getRequiredSlot">JSSetRequiredSlotOp</a></li>
+</ul>
+
+<p><a href="/ja/SpiderMonkey/JSAPI_Reference/JSXMLObjectOps" title="ja/SpiderMonkey/JSAPI_Reference/JSXMLObjectOps">JSXMLObjectOps</a> メソッド型:</p>
+
+<ul>
+ <li><a href="/ja/JSGetMethodOp" title="ja/JSGetMethodOp">JSGetMethodOp</a></li>
+ <li><a href="/ja/JSSetMethodOp" title="ja/JSSetMethodOp">JSSetMethodOp</a></li>
+ <li><a href="/ja/JSEnumerateValuesOp" title="ja/JSEnumerateValuesOp">JSEnumerateValuesOp</a></li>
+ <li><a href="/ja/JSEqualityOp" title="ja/JSEqualityOp">JSEqualityOp</a></li>
+ <li><a href="/ja/JSConcatenateOp" title="ja/JSConcatenateOp">JSConcatenateOp</a></li>
+</ul>
+
+<p>これらの stub 関数はカスタム <code>JSClass</code> の作成時に使用されます:</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_PropertyStub" title="ja/SpiderMonkey/JSAPI_Reference/JS_PropertyStub">JS_ConvertStub</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_PropertyStub" title="ja/SpiderMonkey/JSAPI_Reference/JS_PropertyStub">JS_EnumerateStub</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_PropertyStub" title="ja/SpiderMonkey/JSAPI_Reference/JS_PropertyStub">JS_FinalizeStub</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_PropertyStub" title="ja/SpiderMonkey/JSAPI_Reference/JS_PropertyStub">JS_PropertyStub</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_PropertyStub" title="ja/SpiderMonkey/JSAPI_Reference/JS_PropertyStub">JS_ResolveStub</a></li>
+</ul>
+
+<p><code>JSClass</code> の振る舞いは、これらのフラグを使用してカスタマイズできます:</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSClass.flags" title="ja/SpiderMonkey/JSAPI_Reference/JSClass.flags">JSClass.flags</a> – <a href="/ja/SpiderMonkey/JSAPI_Reference/JSClass.flags" title="ja/SpiderMonkey/JSAPI_Reference/JSClass.flags">JSCLASS_CONSTUCT_PROTOTYPE</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JSClass.flags" title="ja/SpiderMonkey/JSAPI_Reference/JSClass.flags">JSCLASS_GLOBAL_FLAGS</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JSClass.flags" title="ja/SpiderMonkey/JSAPI_Reference/JSClass.flags">JSCLASS_HAS_PRIVATE</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JSClass.flags" title="ja/SpiderMonkey/JSAPI_Reference/JSClass.flags">JSCLASS_HAS_RESERVED_SLOTS</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JSClass.flags" title="ja/SpiderMonkey/JSAPI_Reference/JSClass.flags">JSCLASS_IS_EXTENDED</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JSClass.flags" title="ja/SpiderMonkey/JSAPI_Reference/JSClass.flags">JSCLASS_MARK_IS_TRACE</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JSClass.flags" title="ja/SpiderMonkey/JSAPI_Reference/JSClass.flags">JSCLASS_NEW_ENUMERATE</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JSClass.flags" title="ja/SpiderMonkey/JSAPI_Reference/JSClass.flags">JSCLASS_NEW_RESOLVE</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JSClass.flags" title="ja/SpiderMonkey/JSAPI_Reference/JSClass.flags">JSCLASS_NEW_RESOLVE_GETS_START</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JSClass.flags" title="ja/SpiderMonkey/JSAPI_Reference/JSClass.flags">JSCLASS_PRIVATE_IS_NSISUPPORTS</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JSClass.flags" title="ja/SpiderMonkey/JSAPI_Reference/JSClass.flags">JSCLASS_SHARE_ALL_PROPERTIES</a></li>
+</ul>
+
+<p><span id="Arrays"></span></p>
+
+<h3 id="Arrays" name="Arrays">配列</h3>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_NewArrayObject" title="ja/JS_NewArrayObject">JS_NewArrayObject</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_IsArrayObject" title="ja/JS_IsArrayObject">JS_IsArrayObject</a></li>
+</ul>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_HasArrayLength" title="ja/JS_HasArrayLength">JS_HasArrayLength</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetArrayLength" title="ja/JS_GetArrayLength">JS_GetArrayLength</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetArrayLength" title="ja/JS_SetArrayLength">JS_SetArrayLength</a></li>
+</ul>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_AliasElement" title="ja/JS_AliasElement">JS_AliasElement</a> <span title="これは非推奨 API です。未だ動作しているかも知れませんが、将来的に削除される可能性があります。"><i class="icon-thumbs-down-alt"> </i></span></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_DefineElement" title="ja/JS_DefineElement">JS_DefineElement</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_DeleteElement" title="ja/JS_DeleteElement">JS_DeleteElement</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_DeleteElement2" title="ja/JS_DeleteElement2">JS_DeleteElement2</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetElement" title="ja/JS_GetElement">JS_GetElement</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_LookupElement" title="ja/JS_LookupElement">JS_LookupElement</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetElement" title="ja/JS_SetElement">JS_SetElement</a></li>
+</ul>
+
+<p><span id="Functions"></span></p>
+
+<h3 id="Functions" name="Functions">関数</h3>
+
+<p>関数またはオブジェクトのメソッドの呼び出し:</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_CallFunction" title="ja/JS_CallFunction">JS_CallFunction</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_CallFunctionName" title="ja/JS_CallFunctionName">JS_CallFunctionName</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_CallFunctionValue" title="ja/JS_CallFunctionValue">JS_CallFunctionValue</a></li>
+</ul>
+
+<p>関数アクセサリ:</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ObjectIsFunction" title="ja/JS_ObjectIsFunction">JS_ObjectIsFunction</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetFunctionArity" title="ja/JS_GetFunctionArity">JS_GetFunctionArity</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetFunctionFlags" title="ja/SpiderMonkey/JSAPI_Reference/JS_GetFunctionFlags">JS_GetFunctionFlags</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetFunctionId" title="ja/JS_GetFunctionId">JS_GetFunctionId</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetFunctionName" title="ja/JS_GetFunctionName">JS_GetFunctionName</a> <span title="これは非推奨 API です。未だ動作しているかも知れませんが、将来的に削除される可能性があります。"><i class="icon-thumbs-down-alt"> </i></span></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetFunctionObject" title="ja/JS_GetFunctionObject">JS_GetFunctionObject</a></li>
+</ul>
+
+<p>関数の生成:</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_CloneFunctionObject" title="ja/JS_CloneFunctionObject">JS_CloneFunctionObject</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_DefineFunction" title="ja/JS_DefineFunction">JS_DefineFunction</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_DefineFunction" title="ja/JS_DefineFunction">JS_DefineUCFunction</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_DefineFunctions" title="ja/JS_DefineFunctions">JS_DefineFunctions</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_NewFunction" title="ja/JS_NewFunction">JS_NewFunction</a></li>
+</ul>
+
+<p><span id="RegExps"></span></p>
+
+<h3 id="RegExps" name="RegExps">正規表現</h3>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_NewRegExpObject" title="ja/SpiderMonkey/JSAPI_Reference/JS_NewRegExpObject">JS_NewRegExpObject</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_NewRegExpObject" title="ja/SpiderMonkey/JSAPI_Reference/JS_NewRegExpObject">JS_NewUCRegExpObject</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetRegExpInput" title="ja/SpiderMonkey/JSAPI_Reference/JS_SetRegExpInput">JS_SetRegExpInput</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ClearRegExpRoots" title="ja/SpiderMonkey/JSAPI_Reference/JS_ClearRegExpRoots">JS_ClearRegExpRoots</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ClearRegExpStatics" title="ja/SpiderMonkey/JSAPI_Reference/JS_ClearRegExpStatics">JS_ClearRegExpStatics</a></li>
+</ul>
+
+<p><span id="Security"></span></p>
+
+<h3 id="Security" name="Security">セキュリティ</h3>
+
+<p><span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8.1">SpiderMonkey 1.8.1</a> の新機能</span> セキュリティのコールバックは、ランタイムごと、またはコンテキストごとに設定できます。</p>
+
+<ul>
+ <li>
+  <ul>
+   <li>struct <a href="/ja/SpiderMonkey/JSAPI_Reference/JSPrincipals" title="ja/JSPrincipals">JSPrincipals</a></li>
+   <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSPRINCIPALS_HOLD" title="ja/JSPRINCIPALS_HOLD">JSPRINCIPALS_HOLD</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JSPRINCIPALS_HOLD" title="ja/JSPRINCIPALS_HOLD">JSPRINCIPALS_DROP</a></li>
+   <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetObjectPrincipalsFinder" title="ja/JS_SetObjectPrincipalsFinder">JS_SetObjectPrincipalsFinder</a> <span class="inlineIndicator standardNote">JSAPI 1.8 まで</span></li>
+   <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetPrincipalsTranscoder" title="ja/JS_SetPrincipalsTranscoder">JS_SetPrincipalsTranscoder</a> <span class="inlineIndicator standardNote">JSAPI 1.8 まで</span></li>
+  </ul>
+
+  <ul>
+   <li>enum <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_CheckAccess" title="ja/JS_CheckAccess">JSAccessMode</a> – <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_CheckAccess" title="ja/JS_CheckAccess">JSACC_PROTO</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_CheckAccess" title="ja/JS_CheckAccess">JSACC_PARENT</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_CheckAccess" title="ja/JS_CheckAccess">JSACC_IMPORT</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_CheckAccess" title="ja/JS_CheckAccess">JSACC_WATCH</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_CheckAccess" title="ja/JS_CheckAccess">JSACC_READ</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_CheckAccess" title="ja/JS_CheckAccess">JSACC_WRITE</a></li>
+   <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_CheckAccess" title="ja/JS_CheckAccess">JS_CheckAccess</a></li>
+   <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSObjectOps.checkAccess" title="ja/JSObjectOps.checkAccess">JSObjectOps.checkAccess</a></li>
+   <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSClass.checkAccess" title="ja/JSClass.checkAccess">JSClass.checkAccess</a></li>
+   <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetCheckObjectAccessCallback" title="ja/JS_SetCheckObjectAccessCallback">JS_SetCheckObjectAccessCallback</a> <span class="inlineIndicator standardNote">JSAPI 1.8 まで</span></li>
+  </ul>
+
+  <ul>
+   <li><a class="internal" href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetSecurityCallbacks" title="ja/SpiderMonkey/JSAPI Reference/JS GetSecurityCallbacks">JS_GetSecurityCallbacks</a>, <a class="internal" href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetSecurityCallbacks" title="ja/SpiderMonkey/JSAPI Reference/JS GetSecurityCallbacks">JS_SetContextSecurityCallbacks</a>, <a class="internal" href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetSecurityCallbacks" title="ja/SpiderMonkey/JSAPI Reference/JS GetSecurityCallbacks">JS_GetRuntimeSecurityCallbacks</a>, <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetSecurityCallbacks" title="ja/SpiderMonkey/JSAPI_Reference/JS_GetSecurityCallbacks">JS_SetRuntimeSecurityCallbacks</a></li>
+  </ul>
+ </li>
+</ul>
+
+<p><span id="Threading"></span></p>
+
+<h3 id="Threading" name="Threading">スレッド</h3>
+
+<p>次の関数は SpiderMonkey のスレッドモデルをサポートしています。</p>
+
+<p><span class="inlineIndicator standardNote">JSAPI 1.7 まで</span> これらは <code><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_THREADSAFE" title="ja/SpiderMonkey/JSAPI_Reference/JS_THREADSAFE">JS_THREADSAFE</a></code> ビルドでのみ利用可能です。</p>
+
+<p><span style="border: 1px solid rgb(129, 129, 81); background: rgb(255, 255, 225); font-size: 9px; vertical-align: text-top;"><a href="https://developer.mozilla.org/ja/docs/SpiderMonkey/1.8">SpiderMonkey 1.8</a> の新機能</span> これらの関数はいつでも利用可能です。ただし、<code><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_THREADSAFE" title="ja/JS_THREADSAFE">JS_THREADSAFE</a></code> 無しのビルドでは何もしません</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_BeginRequest" title="ja/JS_BeginRequest">JS_BeginRequest</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_BeginRequest" title="ja/JS_BeginRequest">JS_EndRequest</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_YieldRequest" title="ja/JS_YieldRequest">JS_YieldRequest</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SuspendRequest" title="ja/JS_SuspendRequest">JS_SuspendRequest</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SuspendRequest" title="ja/JS_SuspendRequest">JS_ResumeRequest</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_GetContextThread" title="ja/JS_GetContextThread">JS_GetContextThread</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ClearContextThread" title="ja/JS_ClearContextThread">JS_SetContextThread</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ClearContextThread" title="ja/JS_ClearContextThread">JS_ClearContextThread</a></li>
+</ul>
+
+<p>次の関数はすべてのビルドに存在します。ただし、<code><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_THREADSAFE" title="ja/SpiderMonkey/JSAPI_Reference/JS_THREADSAFE">JS_THREADSAFE</a></code> 無しのビルドでは何もしません:</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_LockRuntime" title="ja/SpiderMonkey/JSAPI_Reference/JS_LockRuntime">JS_LockRuntime</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_UnlockRuntime" title="ja/SpiderMonkey/JSAPI_Reference/JS_UnlockRuntime">JS_UnlockRuntime</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_Lock" title="ja/JS_Lock">JS_Lock</a> <span title="これは非推奨 API です。未だ動作しているかも知れませんが、将来的に削除される可能性があります。"><i class="icon-thumbs-down-alt"> </i></span></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_Unlock" title="ja/JS_Unlock">JS_Unlock</a> <span title="これは非推奨 API です。未だ動作しているかも知れませんが、将来的に削除される可能性があります。"><i class="icon-thumbs-down-alt"> </i></span></li>
+</ul>
+
+<p><span id="Time"></span></p>
+
+<h3 id="Time" name="Time">時間</h3>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_Now" title="ja/SpiderMonkey/JSAPI_Reference/JS_Now">JS_Now</a></li>
+</ul>
+
+<p><span id="Callback_Types"></span></p>
+
+<h3 id="Callback_Types" name="Callback_Types">コールバック型</h3>
+
+<p>ネイティブ関数型:</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSNative" title="ja/JSNative">JSNative</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSFastNative" title="ja/JSFastNative">JSFastNative</a></li>
+</ul>
+
+<p>その他のコールバック型:</p>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_AddExternalStringFinalizer" title="ja/JS_AddExternalStringFinalizer">JSStringFinalizeOp</a> - used by <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_AddExternalStringFinalizer" title="ja/JS_AddExternalStringFinalizer">JS_AddExternalStringFinalizer</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_TRACER_INIT" title="ja/JS_TRACER_INIT">JSTraceCallback</a> - used by <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_TRACER_INIT" title="ja/JS_TRACER_INIT">JS_TRACER_INIT</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SET_TRACING_DETAILS" title="ja/JS_SET_TRACING_DETAILS">JSTraceNamePrinter</a> - used by <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SET_TRACING_DETAILS" title="ja/JS_SET_TRACING_DETAILS">JS_SET_TRACING_DETAILS</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetContextCallback" title="ja/JS_SetContextCallback">JSContextCallback</a> - used by <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetContextCallback" title="ja/JS_SetContextCallback">JS_SetContextCallback</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetGCCallback" title="ja/JS_SetGCCallback">JSGCCallback</a> - used by <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetGCCallback" title="ja/JS_SetGCCallback">JS_SetGCCallback</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetExtraGCRoots" title="ja/JS_SetExtraGCRoots">JSTraceDataOp</a> - used by <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetExtraGCRoots" title="ja/JS_SetExtraGCRoots">JS_SetExtraGCRoots</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetBranchCallback" title="ja/JS_SetBranchCallback">JSBranchCallback</a> - used by <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetBranchCallback" title="ja/JS_SetBranchCallback">JS_SetBranchCallback</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetErrorReporter" title="ja/JS_SetErrorReporter">JSErrorReporter</a> - used by <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetErrorReporter" title="ja/JS_SetErrorReporter">JS_SetErrorReporter</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ReportErrorNumber" title="ja/JS_ReportErrorNumber">JSErrorCallback</a> - used by <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_ReportErrorNumber" title="ja/JS_ReportErrorNumber">JS_ReportErrorNumber</a> and friends</li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_AddArgumentFormatter" title="ja/JS_AddArgumentFormatter">JSArgumentFormatter</a> - used by <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_AddArgumentFormatter" title="ja/JS_AddArgumentFormatter">JS_AddArgumentFormatter</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetPrincipalsTranscoder" title="ja/JS_SetPrincipalsTranscoder">JSPrincipalsTranscoder</a> - used by <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetPrincipalsTranscoder" title="ja/JS_SetPrincipalsTranscoder">JS_SetPrincipalsTranscoder</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetObjectPrincipalsFinder" title="ja/JS_SetObjectPrincipalsFinder">JSObjectPrincipalsFinder</a> - used by <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_SetObjectPrincipalsFinder" title="ja/JS_SetObjectPrincipalsFinder">JS_SetObjectPrincipalsFinder</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_MapGCRoots" title="ja/JS_MapGCRoots">JSGCRootMapFun</a> - used by <a href="/ja/SpiderMonkey/JSAPI_Reference/JS_MapGCRoots" title="ja/JS_MapGCRoots">JS_MapGCRoots</a></li>
+</ul>
+
+<p>上記の<a href="#Classes">クラス</a>も参照してください。</p>
+
+<p><span id="Macros"></span></p>
+
+<h3 id="Macros" name="Macros">マクロ</h3>
+
+<ul>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_DEFAULT_XML_NAMESPACE_ID" title="ja/JS_DEFAULT_XML_NAMESPACE_ID">JS_DEFAULT_XML_NAMESPACE_ID</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSFUN_BOUND_METHOD" title="ja/JSFUN_BOUND_METHOD">JSFUN_BOUND_METHOD</a> <span title="これは非推奨 API です。未だ動作しているかも知れませんが、将来的に削除される可能性があります。"><i class="icon-thumbs-down-alt"> </i></span></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSFUN_GETTER" title="ja/JSFUN_GETTER">JSFUN_GETTER</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSFUN_GLOBAL_PARENT" title="ja/JSFUN_GLOBAL_PARENT">JSFUN_GLOBAL_PARENT</a> <span title="これは非推奨 API です。未だ動作しているかも知れませんが、将来的に削除される可能性があります。"><i class="icon-thumbs-down-alt"> </i></span></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSFUN_HEAVYWEIGHT" title="ja/JSFUN_HEAVYWEIGHT">JSFUN_HEAVYWEIGHT</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSFUN_LAMBDA" title="ja/JSFUN_LAMBDA">JSFUN_LAMBDA</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JSFUN_SETTER" title="ja/JSFUN_SETTER">JSFUN_SETTER</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_NewRegExpObject" title="ja/JSREG_GLOB">JSREG_GLOB</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_NewRegExpObject" title="ja/JSREG_FOLD">JSREG_FOLD</a></li>
+ <li><a href="/ja/SpiderMonkey/JSAPI_Reference/JS_NewRegExpObject" title="ja/JSREG_MULTILINE">JSREG_MULTILINE</a></li>
+</ul>
+
+<p><span id="C++_features"></span></p>
+
+<h3 id="C.2B.2B_features" name="C.2B.2B_features">C++ の機能</h3>
+
+<ul>
+ <li>class <a href="/ja/JSAutoRequest" title="ja/JSAutoRequest">JSAutoRequest</a></li>
+ <li>class <a href="/ja/JSAutoLocalRootScope" title="ja/JSAutoLocalRootScope">JSAutoLocalRootScope</a></li>
+ <li>class <a href="/ja/JS::PerfMeasurement" title="ja/JS::PerfMeasurement">JS::PerfMeasurement</a> (in <code>jsperf.h</code>)</li>
+</ul>

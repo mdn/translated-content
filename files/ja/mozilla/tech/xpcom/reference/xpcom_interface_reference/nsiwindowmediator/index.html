@@ -1,0 +1,60 @@
+---
+title: nsIWindowMediator
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsIWindowMediator
+tags:
+  - Interfaces
+  - 'Interfaces:Scriptable'
+  - MDC Project
+  - NeedsEditorialReview
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIWindowMediator
+---
+<p> </p>
+<p>ウィンドウメディエータは開いているウィンドウを監視する Mozilla コンポーネントです。 <code>nsIWindowMediator</code> インターフェイスを通じてアクセスできます。 <code>nsIWindowMediator</code> の最も一般的な二つの用途は次のようなものです。</p>
+<ol>
+ <li>最前面にある (<span style="color: green;">most recent</span>)、もしくは任意の、指定された型のウィンドウを取得する。</li>
+ <li>指定された型の全てのウィンドウを列挙する。</li>
+</ol>
+<div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/xpfe/appshell/public/nsIWindowMediator.idl" rel="custom">xpfe/appshell/public/nsIWindowMediator.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">最終更新: Gecko 1.6 </span></div>
+</div>
+<p><br>
+ 下記の例で、<code>type</code> は検索したいウィンドウの型を示しています。ウィンドウに型を指定するには、<code>&lt;<code><a href="/ja/docs/Mozilla/Tech/XUL/window" title="window">window</a></code>&gt;</code> や <code>&lt;<code><a href="/ja/docs/Mozilla/Tech/XUL/dialog" title="dialog">dialog</a></code>&gt;</code> のようなトップレベルの要素に <code><code id="a-windowtype"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/windowtype">windowtype</a></code></code> 属性を付加します。</p>
+<p>ブラウザウィンドウは <code>navigator:browser</code> というウィンドウの型を持っています。ウィンドウの型に関わらず全てのウィンドウを検索するには、空文字列 <code>""</code> を渡して下さい。</p>
+<p><span id="Getting_most_recent_window"></span></p>
+<h3 id=".E6.9C.80.E5.89.8D.E9.9D.A2.E3.81.AB.E3.81.82.E3.82.8B.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.82.92.E5.8F.96.E5.BE.97.E3.81.99.E3.82.8B" name=".E6.9C.80.E5.89.8D.E9.9D.A2.E3.81.AB.E3.81.82.E3.82.8B.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.82.92.E5.8F.96.E5.BE.97.E3.81.99.E3.82.8B">最前面にあるウィンドウを取得する</h3>
+<p>次のコードは、指定した型のウィンドウのいずれかを取得したい時や、ある型のウィンドウ (例えばあなたの拡張機能の設定ダイアログ) がすでに開かれているかどうかを調べたい時に役立ちます。</p>
+<p><code>getMostRecentWindow</code> は、 <code>ChromeWindow</code> オブジェクト、もしくは指定された型のウィンドウが開かれていなければ、 <code>null</code> を返します。</p>
+<pre>var wm = Components.classes["@mozilla.org/appshell/window-mediator;1"]
+                   .getService(Components.interfaces.nsIWindowMediator);
+var win = wm.getMostRecentWindow(type);
+</pre>
+<p><span id="Enumerating_windows"></span></p>
+<h3 id=".E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.82.92.E5.88.97.E6.8C.99.E3.81.99.E3.82.8B" name=".E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.82.92.E5.88.97.E6.8C.99.E3.81.99.E3.82.8B">ウィンドウを列挙する</h3>
+<p>次のコードは、特定の型の開かれているウィンドウのそれぞれに何かをしなければならない時に使えます。例えば、設定ダイアログの "OK" ハンドラで、開かれているブラウザウィンドウのそれぞれに新しい設定を適用する時などです。</p>
+<pre>var wm = Components.classes["@mozilla.org/appshell/window-mediator;1"]
+                   .getService(Components.interfaces.nsIWindowMediator);
+var enumerator = wm.getEnumerator(type);
+while(enumerator.hasMoreElements()) {
+  var win = enumerator.getNext();
+  // |win| は [Object ChromeWindow] である(|window| と同等)。これに何かをする
+}
+</pre>
+<p>このコードでは特定の型のウィンドウ全てに対して反復処理を行っており、<var>type</var> で指定するのはウィンドウの型です。例えば、全てのブラウザウィンドウを列挙したければ、"navigator:browser" を指定します。型に関わらず全てのウィンドウを列挙したければ、<code>null</code> を指定します。</p>
+<div class="note">
+ <strong>注意:</strong> <code>nsIWindowMediator</code> のリファレンスページでは、 <code>getMostRecentWindow</code> の戻り値の型と、列挙された要素の型は、 <code>nsIDOMWindow</code>/<code>nsIDOMWindowInternal</code> とされています。実際には、JavaScript のコードから呼ばれる時には、これらのメソッドは普通 (常に？) <code>ChromeWindow</code> オブジェクトを返し、これは上記の両方と他の幾つかのインターフェイスを実装しています。あなたが恐らく慣れ親しんでいるであろう、グローバルオブジェクトの <code>window</code> は <code>ChromeWindow</code> 型です。</div>
+<p><span id="See_also"></span></p>
+<h3 id=".E5.8F.82.E8.80.83" name=".E5.8F.82.E8.80.83">参考</h3>
+<ul>
+ <li><a href="/ja/Working_with_windows_in_chrome_code" title="ja/Working_with_windows_in_chrome_code">chrome コードでウィンドウを動かす</a></li>
+</ul>
+<p><span class="comment">Interwiki Languages Links</span></p>

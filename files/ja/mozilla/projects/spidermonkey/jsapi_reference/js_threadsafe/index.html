@@ -1,0 +1,114 @@
+---
+title: JS_THREADSAFE
+slug: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_THREADSAFE
+translation_of: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_THREADSAFE
+---
+<p class="note">{{ note("JS_THREADSAFE は現在恒久的に有効です。") }}</p>
+
+<p><strong><code>JS_THREADSAFE</code></strong> は、オブジェクトや文字列が共有されていない限り、JavaScript コードの複数のスレッドを同時に実行するためのサポートを可能にするコンパイル時オプションです。</p>
+
+<p>最近この機能に大きな変更を加えました。最近まで、スレッド間でオブジェクトを共有することでうまくいくことが多かったのですが、スクリプトを使うとクラッシュすることがありました。この機能は完全に削除されました。JavaScript エンジンを使用する各スレッドは、本質的にまったく別のメモリ領域で動作する必要があります。</p>
+
+<h2 id="Requests" name="Requests">Requests</h2>
+
+<p>In a <code>JS_THREADSAFE</code> build, the application must separate code that uses the JSAPI from code that performs blocking I/O or time-consuming calculations.</p>
+
+<p>A <em>request</em> is a region of code that uses the JSAPI. Requests must be bracketed with calls to <code><a href="/en/SpiderMonkey/JSAPI_Reference/JS_BeginRequest" title="en/JS_BeginRequest">JS_BeginRequest</a>()</code> and <code><a href="/en/SpiderMonkey/JSAPI_Reference/JS_BeginRequest" title="en/JS_BeginRequest">JS_EndRequest</a>()</code>.</p>
+
+<pre class="eval"><a href="/en/SpiderMonkey/JSAPI_Reference/JS_BeginRequest" title="en/JS_BeginRequest">JS_BeginRequest</a>(cx);
+/* ... do JSAPI stuff ... */
+<a href="/en/SpiderMonkey/JSAPI_Reference/JS_BeginRequest" title="en/JS_BeginRequest">JS_EndRequest</a>(cx);
+</pre>
+
+<p>A request is always associated with a specific <code>JSContext</code> and runs from start to finish on a single thread.</p>
+
+<p>Most JSAPI functions require the caller to be in a request. In this reference, these JSAPI functions are marked with the words "Requires request", like this:</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Name</th>
+   <th>Type</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td><code>cx</code></td>
+   <td><code>JSContext *</code></td>
+   <td>The context to use. {{ Jsapi-requires-request() }}</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Most JSAPI callback functions are always called from within a request. These callbacks are (unreliably!) documented with the words "Provides request", like this:</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Name</th>
+   <th>Type</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td><code>cx</code></td>
+   <td><code>JSContext *</code></td>
+   <td>The context in which the event ocurred. Provides request. <em>In <code><a href="/en-US/docs/JS_THREADSAFE#Requests">JS_THREADSAFE</a></code> builds, the JavaScript engine calls this callback only from within an active request on <code>cx</code>.  The callback does not need to call <code>JS_BeginRequest()</code>).</em></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>In particular, <code><a href="/en/SpiderMonkey/JSAPI_Reference/JSNative" title="en/JSNative">JSNative</a></code> callbacks provide a request. This means that any potentially long-running operation in a native must be bracketed with calls to <code><a href="/en/SpiderMonkey/JSAPI_Reference/JS_SuspendRequest" title="en/JS_SuspendRequest">JS_SuspendRequest</a>()</code> and <code><a href="/en/SpiderMonkey/JSAPI_Reference/JS_SuspendRequest" title="en/JS_SuspendRequest">JS_ResumeRequest</a>()</code>.</p>
+
+<pre class="eval"><a href="/En/SpiderMonkey/JSAPI_Reference/JSBool" title="en/JSBool">JSBool</a> socket_recv(<a href="/en/SpiderMonkey/JSAPI_Reference/JSRuntime" title="en/JSRuntime">JSContext</a> *cx, <a href="/en/SpiderMonkey/JSAPI_Reference/jsint" title="en/jsint">unsigned int</a> argc, <a href="/En/SpiderMonkey/JSAPI_Reference/Jsval" title="en/jsval">jsval</a> *vp)
+{
+    ...
+    rc = <a href="/en/SpiderMonkey/JSAPI_Reference/JS_SuspendRequest" title="en/JS_SuspendRequest">JS_SuspendRequest</a>(cx);
+    read_size = recv(socket, buf, size, flags);
+    <a href="/en/SpiderMonkey/JSAPI_Reference/JS_SuspendRequest" title="en/JS_SuspendRequest">JS_ResumeRequest</a>(cx, rc);
+    ...
+}
+</pre>
+
+<h2 id="Garbage_collection" name="Garbage_collection">Garbage collection</h2>
+
+<p>Requests help make garbage collection safe when multiple threads are using the JSAPI. For each thread that is in a request:</p>
+
+<ul>
+ <li>Almost any call into the JSAPI may trigger garbage collection; but</li>
+ <li>Garbage collection does not happen at any other time (such as, for example, at the moment before the return value of <code><a href="/en/SpiderMonkey/JSAPI_Reference/JS_NewObject" title="en/JS_NewObject">JS_NewObject</a></code> is assigned to a rooted variable).</li>
+</ul>
+
+<p>These are actually the same rules that apply to single-threaded JSAPI programs. But in multithreaded programs, if you break the rules, your program is more likely to crash. This is because in single-threaded programs, a random call into the JSAPI is actually pretty unlikely to trigger GC, especially if the calling thread has not been using up a lot of memory. In a multithreaded program, even if the calling thread has been idle, other threads may be active or may call <code><a href="/en/SpiderMonkey/JSAPI_Reference/JS_GC" title="en/JS_GC">JS_GC</a>()</code>.</p>
+
+<p>The above rules mean that at any given moment, there can be either <strong>(a)</strong> multiple threads in active requests, or <strong>(b)</strong> one thread doing GC and all requests suspended. When one thread calls JS_GC or otherwise finds that garbage collection is necessary, it must wait for all other threads that are in requests to pause before garbage collection can occur. To keep this wait time to a minimum, <strong>applications must avoid long-running requests.</strong> The recommended technique in SpiderMonkey 1.8 and later is to periodically call <code><a href="/en/SpiderMonkey/JSAPI_Reference/JS_YieldRequest" title="en/JS_YieldRequest">JS_YieldRequest</a></code> from an <a href="/en/SpiderMonkey/JSAPI_Reference/JS_SetOperationCallback" title="en/JS_SetOperationCallback">operation callback</a>.</p>
+
+<h2 id="Sharing_strings_among_threads" name="Sharing_strings_among_threads">Sharing data among threads</h2>
+
+<p>"Data can be marshaled across the process boundary through a process known as <em>smuggling</em>." --<em>Mr. Bunny's Guide to ActiveX</em></p>
+
+<p>Even in JS_THREADSAFE builds, threads cannot safely share objects or strings.</p>
+
+<p>Instead, data must be copied when it is sent from one thread to another. Use <code>JS_WriteStructuredClone</code> to transform data into a flat array of bytes that can be safely written to disk, sent to another process or even another machine, or just passed to another thread. Then use <code>JS_ReadStructuredClone</code> on the other side to turn the serialized data back into JavaScript objects, strings, and so on.</p>
+
+<h2 id="Sharing_native_functions_and_private_data_among_threads" name="Sharing_native_functions_and_private_data_among_threads">Sharing native functions and private data among threads</h2>
+
+<p>In a <code>JS_THREADSAFE</code> build, SpiderMonkey's internal data structures that represent JavaScript values are single-thread-only. In a <code>DEBUG</code> build, this is enforced with assertions.</p>
+
+<p>However, SpiderMonkey does not protect the application's data structures. <code><a href="/en/SpiderMonkey/JSAPI_Reference/JSNative" title="en/JSNative">JSNative</a></code>s and other callback functions can be called concurrently by multiple threads. Multiple threads can end up accessing <a href="/en/SpiderMonkey/JSAPI_Reference/JS_SetPrivate" title="en/JS_SetPrivate">private data</a> or C/C++ global variables at the same time. It is up to the application to practice safe threading.</p>
+
+<h2 id="Sharing_contexts_among_threads" name="Sharing_contexts_among_threads">Sharing contexts among threads</h2>
+
+<p>Ordinarily, a <code>JSContext</code> is created, used, and destroyed by a single thread. This makes sense, as a context can only be used by one thread at a time. However, there are a few cases where an application might need to share contexts across threads. For example:</p>
+
+<ul>
+ <li>Many worker threads need to share a "pool" of reusable contexts, to avoid the performance cost of constantly creating and destroying contexts. (This is analogous to a database connection pool.)</li>
+</ul>
+
+<ul>
+ <li>The application has a <code>JSContext</code> that it needs to use each time some event happens. But the event could happen on any thread.</li>
+</ul>
+
+<p>For such cases, use <code><a href="/en/SpiderMonkey/JSAPI_Reference/JS_ClearContextThread" title="en/JS_ClearContextThread">JS_ClearContextThread</a></code> and <code><a href="/en/SpiderMonkey/JSAPI_Reference/JS_ClearContextThread" title="en/JS_ClearContextThread">JS_SetContextThread</a></code> to transfer the context safely from one thread to another.</p>
+
+<h2 id="Further_info" name="Further_info">Further info</h2>
+
+<p>Note: <a href="/En/SpiderMonkey/Internals/Thread_Safety" title="en/SpiderMonkey_Internals/Thread_Safety">SpiderMonkey Internals: Thread Safety</a> is mostly obsolete.</p>

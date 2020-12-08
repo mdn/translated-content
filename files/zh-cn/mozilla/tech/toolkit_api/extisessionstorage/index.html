@@ -1,0 +1,48 @@
+---
+title: extISessionStorage
+slug: Mozilla/Tech/Toolkit_API/extISessionStorage
+translation_of: Mozilla/Tech/Toolkit_API/extISessionStorage
+---
+<p></p>
+<p></p><div class="blockIndicator standardNote">
+<p>该条目记录了 <a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a> 引入的新特性</p>
+</div><p></p>
+<p><br> <code>extISessionStorage</code> 允许一个扩展程序存储数据,该数据会在应用程序的整个生命周期内可用(比如浏览器). <code>extISessionStorage</code> 被定义在 <code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/exthelper/extIApplication.idl" rel="custom">toolkit/components/exthelper/extIApplication.idl</a></code>.</p>
+<p>通过XPCOM服务实现的 <a class="internal" href="/zh-cn/Toolkit_API/extIApplication" title="zh-cn/Toolkit API/extIApplication"><code>extIApplication</code></a>: 查看相关指南在 <a class="internal" href="/zh-cn/Toolkit_API/FUEL" title="zh-cn/FUEL">FUEL</a> (Firefox), <a class="internal" href="/zh-cn/Thunderbird/STEEL" title="zh-cn/Thunderbird/STEEL">STEEL</a> (Thunderbird) 和 <a class="internal" href="/zh-cn/Toolkit_API/SMILE" title="zh-cn/SeaMonkey/SMILE">SMILE</a> (SeaMonkey) 页面.</p>
+<h2 id="Method_overview" name="Method_overview">方法概述</h2>
+<p>这些方法通常是通过Application.storage来访问的.</p>
+<table class="standard-table"> <tbody> <tr> <th>返回值类型</th> <th>方法</th> </tr> <tr> <td><code>boolean</code></td> <td><code><a href="#has.28.29">has</a>(in AString aName)</code></td> </tr> <tr> <td><code>void</code></td> <td><code><a href="#set.28.29">set</a>(in AString aName, in nsIVariant aValue)</code></td> </tr> <tr> <td><code>nsIVariant</code></td> <td><code><a href="#get.28.29">get</a>(in AString aName, in nsIVariant aDefaultValue)</code></td> </tr> </tbody>
+</table>
+<h2 id="Attributes" name="Attributes">属性</h2>
+<table class="standard-table"> <tbody> <tr> <td class="header">属性名</td> <td class="header">类型</td> <td class="header">描述</td> </tr> <tr> <td><code>events</code></td> <td><code>readonly attribute extIEvents</code></td> <td>The events object for the storage supports: "change"</td> </tr> </tbody>
+</table>
+<h2 id="Methods" name="Methods">方法</h2>
+<h3 id="has.28.29" name="has.28.29">has()</h3>
+<p>判断一个指定名称的存储项是否已经存在.</p>
+<pre class="eval">boolean has(in AString aName)
+</pre>
+<h6 id="Parameters" name="Parameters">参数</h6>
+<dl> <dt><code>aName</code></dt> <dd>存储项名称</dd>
+</dl>
+<h6 id="Return_value" name="Return_value">返回值</h6>
+<p>如果这个存储项已经存在,则返回true,否则返回false.</p>
+<h3 id="set.28.29" name="set.28.29">set()</h3>
+<p>为一个指定名称的存储项赋值.</p>
+<pre class="eval">void set(in AString aName, in nsIVariant aValue)
+</pre>
+<h6 id="Parameters_2" name="Parameters_2">参数</h6>
+<dl> <dt><code>aName</code></dt> <dd>存储项名称</dd> <dt><code>aValue</code></dt> <dd>任意类型的值</dd>
+</dl>
+<h6 id="Return_value_2" name="Return_value_2">返回值</h6>
+<p>无</p>
+<h3 id="get.28.29" name="get.28.29">get()</h3>
+<p>获取一个指定名称的存储项的值.如果该存储项不存在,则返回一个默认值.</p>
+<pre class="eval">nsIVariant get(in AString aName, in nsIVariant aDefaultValue)
+</pre>
+<h6 id="Parameters_3" name="Parameters_3">参数</h6>
+<dl> <dt><code>aName</code></dt> <dd>存储项名称</dd>
+</dl>
+<h6 id="Return_value_3" name="Return_value_3">返回值</h6>
+<p>指定存储项的值或者一个默认的返回值.</p><h2 id="See_also" name="See_also">相关链接</h2>
+<p> <a class="internal" href="/zh-cn/Toolkit_API/FUEL" title="zh-cn/FUEL">FUEL</a> (Firefox), <a class="internal" href="/zh-cn/Thunderbird/STEEL" title="zh-cn/Thunderbird/STEEL">STEEL</a> (Thunderbird) and <a class="internal" href="/zh-cn/Toolkit_API/SMILE" title="zh-cn/SeaMonkey/SMILE">SMILE</a> (SeaMonkey)</p>
+<p></p>

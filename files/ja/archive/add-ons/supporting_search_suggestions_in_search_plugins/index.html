@@ -1,0 +1,39 @@
+---
+title: Supporting search suggestions in search plugins
+slug: Archive/Add-ons/Supporting_search_suggestions_in_search_plugins
+tags:
+  - Add-ons
+  - Search plugins
+translation_of: Archive/Add-ons/Supporting_search_suggestions_in_search_plugins
+---
+<p>MozSearch は、サーチサジェスト (検索提案, <em>search suggestions</em>) をサポートします。 利用者が検索バーに入力することで、<a href="/ja/Firefox_2_for_developers" title="ja/Firefox_2_for_developers">Firefox 2</a> は検索プラグインに指定されたオンラインサーチサジェストの URL に問い合わせます。</p>
+<p>リストを取得すると、検索バーの下側にポップアップボックスを表示し、ユーザは提案された検索後から選択することができます。もし、ユーザが入力を続ければ、新しいサジェストをサーチエンジンに要求し、表示リストを更新します。</p>
+<p>Firefox 2 に含まれている Yahoo と Google 検索プラグインはサーチサジェストをサポートしています。</p>
+<p><span id="Implementing_suggestion_support_in_the_search_plugin"></span></p>
+<h2 id=".E6.A4.9C.E7.B4.A2.E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.AB.E3.82.B5.E3.83.BC.E3.83.81.E3.82.B5.E3.82.B8.E3.82.A7.E3.82.B9.E3.83.88.E3.82.92.E5.AE.9F.E8.A3.85.E3.81.99.E3.82.8B" name=".E6.A4.9C.E7.B4.A2.E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.AB.E3.82.B5.E3.83.BC.E3.83.81.E3.82.B5.E3.82.B8.E3.82.A7.E3.82.B9.E3.83.88.E3.82.92.E5.AE.9F.E8.A3.85.E3.81.99.E3.82.8B">検索プラグインにサーチサジェストを実装する</h2>
+<p>サーチサジェストをサポートするには、検索プラグインは <code>type</code> アトリビュートが <code>"application/x-suggestions+json"</code> である追加の <code>&lt;Url&gt;</code> エレメントを定義する必要があります。(これは、サジェストをサポートする検索プラグインは、二つの <code>&lt;Url&gt;</code> エレメントを持つことを意味します。もうひとつは、検索 URL を示す <code>text/html</code> のエレメントです。)</p>
+<p>たとえば、Yahoo 検索プラグインはこのような <code>&lt;Url&gt;</code> エントリを持ちます。</p>
+<pre>&lt;Url type="application/x-suggestions+json" template="http://ff.search.yahoo.com/gossip?output=fxjson&amp;command={searchTerms}"/&gt;
+</pre>
+<p>ユーザが "fir" を検索バーに入力し、一時休止すると、Firefox は "fir" を <code>{searchTerms}</code> へ挿入し URL へアクセスします。</p>
+<pre>&lt;Url type="application/x-suggestions+json" template="http://ff.search.yahoo.com/gossip?output=fxjson&amp;command=fir"/&gt;
+</pre>
+<p>応答は、リストボックスの提案を表示するのに利用されます。</p>
+<p>検索プラグインに実装する方法についての詳細は、<a href="/ja/Creating_MozSearch_plugins" title="ja/Creating_MozSearch_plugins">Creating MozSearch plugins</a> を参照してください。</p>
+<p><span id="Implementing_search_suggestion_support_on_the_server"></span></p>
+<h2 id=".E3.82.B5.E3.83.BC.E3.83.90.E3.81.AB.E3.82.B5.E3.83.BC.E3.83.81.E3.82.B5.E3.82.B8.E3.82.A7.E3.82.B9.E3.83.88.E3.82.B5.E3.83.9D.E3.83.BC.E3.83.88.E3.82.92.E5.AE.9F.E8.A3.85.E3.81.99.E3.82.8B" name=".E3.82.B5.E3.83.BC.E3.83.90.E3.81.AB.E3.82.B5.E3.83.BC.E3.83.81.E3.82.B5.E3.82.B8.E3.82.A7.E3.82.B9.E3.83.88.E3.82.B5.E3.83.9D.E3.83.BC.E3.83.88.E3.82.92.E5.AE.9F.E8.A3.85.E3.81.99.E3.82.8B">サーバにサーチサジェストサポートを実装する</h2>
+<p>実際のところ、サーチサジェストの大半の動作は、サーバ側に実装されています。もし、あなたがウェブサイトデザイナで、サーチサジェストをサポートしたいなら、与えられた検索語に対して <a class="external" href="http://www.json.org/">JavaScript Object Notation</a> (JSON) 形式でサジェスト内容を返すように実装する必要があります。</p>
+<p>ブラウザが検索語に合致するリストを要求しようとするとき、HTTP GET リクエストを <code>&lt;Url&gt;</code> エレメントで指定された URL に送ります。</p>
+<p>あなたのサーバは、与えられた文字列に当てはまるサジェストがなにであるかを決定し、最低でも二つ、最大で四つのエレメントを含む JSON 配列を構築する必要があります。</p>
+<dl><dt> <strong>検索語</strong> </dt><dd> 配列の最初のエレメントはオリジナルの検索語です。Firefox はこれを利用して現在の検索語と合致しているか確認します。 </dd></dl> <dl><dt> <strong>候補リスト</strong> </dt><dd> 提案される検索後の配列です。この配列は、角括弧で囲まれているべきです。たとえば、<code>["語 1", "語 2", "語 3", "語 4"]</code> </dd></dl> <dl><dt> <strong>説明</strong> </dt><dd> オプションのエレメントで、 <strong>候補リスト</strong> にある提案された検索語に対する解説の配列です。取得可能な検索件数などといった、検索エンジンがブラウザで表示させたい追加の情報です。 </dd></dl>
+<div class="note">説明は Firefox 2 ではサポートされておらず、指定されても無視されます。</div>
+<dl><dt> <strong>検索 URL</strong> </dt><dd> このオプションエレメントは、<em>候補リスト</em> での提案語の代替 URL の配列です。たとえば、もし、検索語に対して、検索結果のページではなく、マップリンクなどを提供したい場合に、この配列に URL を入れて返すことができます。 </dd></dl> <dl><dd> もし、検索 URL を指定しないなら、検索プラグインの XML で述べたように <code>&lt;Url&gt;</code> エレメントを元にしてクエリを作成します。 </dd></dl>
+<div class="note">検索 URL は Firefox 2 ではサポートされておらず、無視されます。<br>
+This enhancement request - the handling of a selected suggestion, namely calling of a full specified URL as <a class="external" href="http://www.opensearch.org/Specifications/OpenSearch/Extensions/Suggestions/1.0#Query_URLs">proposed in the opensearch standard</a> - is tracked in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=386591" title='Support "result URLs" for search suggestion results (OpenSearch)'>バグ 386591</a>.</div>
+<p>たとえば、"fir" が検索語で、説明も代替検索 URL も必要ないならば、返す JSON は次のようになります。</p>
+<pre class="eval">["fir", ["firefox", "first choice", "mozilla firefox"]]
+</pre>
+<p>このサンプルでは、検索語と候補リストのみが指定されて、オプションエレメントは入っていません。</p>
+<p>候補リストは、必要なだけ入れることが出来ますが、表示されるリストはユーザが検索文字列を入力するたびにアップデートされるため、扱いやすい数にとどめておくべきです。さらに言えば、サジェスト内容を決定する方法は、あなたが決定するところです。</p>
+
+<p></p>

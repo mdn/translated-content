@@ -1,0 +1,69 @@
+---
+title: NPP DestroyStream
+slug: NPP_DestroyStream
+tags:
+  - NPAPI
+  - Plugins
+translation_of: Archive/Plugins/Reference/NPP_DestroyStream
+---
+<p> </p>
+
+<p> « <a href="https://developer.mozilla.org/ja/docs/Gecko_Plugin_API_Reference">Gecko Plugin API Reference</a> « <a href="https://developer.mozilla.org/ja/docs/Gecko_Plugin_API_Reference/Plug-in_Side_Plug-in_API">Plug-in Side Plug-in API</a>
+</p>
+
+<h3 id=".E6.A6.82.E8.A6.81" name=".E6.A6.82.E8.A6.81">概要</h3>
+
+<p>ストリームが閉じられ、あるいは破棄されようとしているとプラグインに告知します。</p>
+
+<h3 id=".E6.96.87.E6.B3.95" name=".E6.96.87.E6.B3.95">文法</h3>
+
+<pre>#include &lt;npapi.h&gt;
+
+NPError NPP_DestroyStream(NPP       instance,
+                           NPStream* stream,
+                           NPReason  reason);
+</pre>
+
+<h3 id=".E3.83.91.E3.83.A9.E3.83.A1.E3.83.BC.E3.82.BF" name=".E3.83.91.E3.83.A9.E3.83.A1.E3.83.BC.E3.82.BF">パラメータ</h3>
+
+<p>この関数は以下のパラメータを取ります:</p>
+
+<dl>
+ <dt>instance</dt>
+ <dd>現在のインスタンスへのポインタ。</dd>
+</dl>
+
+<dl>
+ <dt>stream</dt>
+ <dd>現在のストリームへのポインタ。</dd>
+</dl>
+
+<dl>
+ <dt>reason</dt>
+ <dd>ストリームが破棄された理由。 値:
+ <ul>
+  <li>NPRES_DONE （最も一般的）: 正常終了; すべてのデータはインスタンスに送られました。</li>
+  <li>NPRES_USER_BREAK: 中止ボタンを押して直接的に、あるいはインスタンスを削除したり高優先度のネットワーク操作を初期化するなどして間接的に、ユーザがストリームを取り消しました。</li>
+  <li>NPRES_NETWORK_ERR: ネットワークやディスク I/O の問題、メモリ不足、その他の問題でストリームが失敗しました。</li>
+ </ul>
+ </dd>
+</dl>
+
+<h3 id=".E6.88.BB.E3.82.8A.E5.80.A4" name=".E6.88.BB.E3.82.8A.E5.80.A4">戻り値</h3>
+
+<ul>
+ <li>成功すれば、この関数は NPERR_NO_ERROR を返します。</li>
+ <li>失敗すれば、プラグインは読み込まれず、この関数はエラーコードを返します。取りうる値については、<a href="ja/NPAPI/Constants#Error_Codes">エラーコード</a>を参照してください。</li>
+</ul>
+
+<h3 id=".E8.AA.AC.E6.98.8E" name=".E8.AA.AC.E6.98.8E">説明</h3>
+
+<p>プラグインが正常終了するか不正終了するかしてプラグインが終了したときに、ブラウザは <code>NPP_DestroyStream</code> 関数を呼びます。この後に、ブラウザは <a href="ja/NPStream">NPStream</a> オブジェクトを削除します。</p>
+
+<p>このときに stream-&gt;pdata に割り当てたプライベートなデータをすべて削除すべきで、このストリームオブジェクトへのそれ以上の参照を作成するべきではありません。</p>
+
+<h3 id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE" name=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE">関連項目</h3>
+
+<p><a href="ja/NPP_NewStream">NPP_NewStream</a>, <a href="ja/NPStream">NPStream</a></p>
+
+<p>{{ languages( { "en": "en/NPP_DestroyStream" } ) }}</p>

@@ -1,0 +1,66 @@
+---
+title: StopIteration
+slug: Web/JavaScript/Reference/Global_Objects/StopIteration
+tags:
+  - JavaScript
+  - Legacy Iterator
+  - Non-standard
+  - Reference
+  - StopItaration
+translation_of: Archive/Web/StopIteration
+---
+<div>{{jsSidebar("Objects")}}</div>
+
+<div class="warning"><strong>非標準。</strong> <code><strong>StopIteration</strong></code> オブジェクトはSpiderMonkey特有の機能です。将来向きの用途に対して、<a href="/docs/Web/JavaScript/Reference/Statements/for...of" title="/docs/Web/JavaScript/Reference/Statements/for...of">for..of</a> ループと<a href="/docs/Web/JavaScript/Guide/The_Iterator_protocol">iterator protocol</a>を使用することを検討してください。</div>
+
+<h2 id="概要">概要</h2>
+
+<p><code><strong>StopIteration</strong></code> オブジェクトはレガシーイテレータプロトコルにおける反復の終了を通知するために使用します。</p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="syntaxbox">StopIteration</pre>
+
+<h2 id="説明">説明</h2>
+
+<p>使用法の概要は、<a href="/docs/JavaScript/Guide/Iterators_and_Generators" title="/docs/JavaScript/Guide/Iterators_and_Generators">Iterators and Generators</a> ページ上で利用可能です</p>
+
+<h2 id="例">例</h2>
+
+<p><code>StopIteration</code>は<a href="/docs/Web/JavaScript/Reference/Global_Objects/Iterator"><code>Iterator</code></a>によってスローされます。</p>
+
+<pre class="brush: js">var a = {
+  x: 10,
+  y: 20,
+};
+var iter = Iterator(a);
+console.log(iter.next()); // ["x", 10]
+console.log(iter.next()); // ["y", 20]
+console.log(iter.next()); // throws StopIteration
+</pre>
+
+<p><code>StopIteration</code>をスローする。</p>
+
+<pre class="brush: js">function f() {
+  yield 1;
+  yield 2;
+  throw StopIteration;
+  yield 3; // this is not executed.
+}
+
+for (var n in f()) {
+  console.log(n);   // 1
+                    // 2
+}
+</pre>
+
+<h2 id="仕様">仕様</h2>
+
+<p>非標準。すべての現在の標準仕様でサポートされていません。</p>
+
+<h2 id="関連情報">関連情報</h2>
+
+<ul>
+ <li><a href="/docs/JavaScript/Guide/Iterators_and_Generators" title="/en-US/docs/JavaScript/Guide/Iterators_and_Generators">Iterators and Generators</a></li>
+ <li><a href="/docs/Web/JavaScript/Reference/Global_Objects/Iterator">Iterator</a></li>
+</ul>

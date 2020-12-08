@@ -1,0 +1,303 @@
+---
+title: XUL ユーザ インターフェース
+slug: Web/Guide/CSS/Getting_started/XUL_user_interfaces
+translation_of: Archive/Beginner_tutorials/XUL_user_interfaces
+---
+<p>{{ CSSTutorialTOC() }}</p>
+<p>このページでは、ユーザ インターフェースを作成する言語を解説します。これは Mozilla 特有の言語です。</p>
+<p>簡単なデモを作り、Mozilla ブラウザで実行してみましょう。</p>
+<h3 id="Information:_User_interfaces" name="Information:_User_interfaces">ユーザ インターフェース</h3>
+<p>HTML ではユーザ インターフェースをある程度サポートしていますが、スタンドアローンのアプリケーションを作成するのに必要な機能は十分に備わっていません。</p>
+<p>Mozilla は、ユーザ インターフェイス作成用の言語 <em>XUL</em> (XML ユーザ インタフェース言語、"<em>ズール</em>" と読まれることが多い) を開発し、HTML の制約を解消しました。</p>
+<p>XUL では、よく使われるユーザ インターフェースの機能が最初から組み込まれています。例えば、ダイアログやウイザードといった特殊なウィンドウ、ステータス バー、メニュー、ツール バーなどです。ブラウザーさえも組み込まれています。</p>
+<p>XUL をこのチュートリアルで紹介されてきた CSS スタイル、JavaScript コードや XBL バインディングと組み合わせて使うと、高度な専用機能を部品から作成することができます。</p>
+<p>他の XML ベースの言語と同じように、XUL でも CSS スタイルシートを使用します。</p>
+<table style="border: 1px solid #36b; padding: 1em; background-color: #f4f4f4; margin-bottom: 1em; width: 100%;">
+ <caption>
+  さらに詳しく</caption>
+ <tbody>
+  <tr>
+   <td>XUL ユーザー インターフェースの詳細は、この wiki の <a href="/en/XUL" title="en/XUL">XUL</a> ページをご覧下さい。</td>
+  </tr>
+ </tbody>
+</table>
+<h3 id="Action:_A_XUL_demonstration" name="Action:_A_XUL_demonstration">実例: XUL デモ</h3>
+<p>XUL ドキュメント ファイルをプレーン テキスト ファイル (<code>doc7.xul</code>) で新規作成します。下記の内容を一番下までスクロールし、すべての行をコピー &amp; ペーストしてください。</p>
+<div style="width: 48em; height: 12em; overflow: auto;">
+ <pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet type="text/css" href="style7.css"?&gt;
+&lt;!DOCTYPE window&gt;
+
+&lt;window
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  title="CSS Getting Started - XUL demonstration"
+  onload="init();"&gt;
+
+&lt;script type="application/javascript" src="script7.js"/&gt;
+
+&lt;label class="head-1" value="XUL demonstration"/&gt;
+
+&lt;vbox&gt;
+
+  &lt;groupbox class="demo-group"&gt;
+    &lt;caption label="Day of week calculator"/&gt;
+    &lt;grid&gt;
+      &lt;columns&gt;
+        &lt;column/&gt;
+        &lt;column/&gt;
+        &lt;/columns&gt;
+      &lt;rows&gt;
+        &lt;row&gt;
+          &lt;label class="text-prompt" value="Date:"
+            accesskey="D" control="date-text"/&gt;
+          &lt;textbox id="date-text" type="timed"
+            timeout="750" oncommand="refresh();"/&gt;
+          &lt;/row&gt;
+        &lt;row&gt;
+          &lt;label value="Day:"/&gt;
+          &lt;hbox id="day-box"&gt;
+            &lt;label class="day" value="Sunday" disabled="true"/&gt;
+            &lt;label class="day" value="Monday" disabled="true"/&gt;
+            &lt;label class="day" value="Tuesday" disabled="true"/&gt;
+            &lt;label class="day" value="Wednesday" disabled="true"/&gt;
+            &lt;label class="day" value="Thursday" disabled="true"/&gt;
+            &lt;label class="day" value="Friday" disabled="true"/&gt;
+            &lt;label class="day" value="Saturday" disabled="true"/&gt;
+            &lt;/hbox&gt;
+          &lt;/row&gt;
+        &lt;/rows&gt;
+      &lt;/grid&gt;
+    &lt;hbox class="buttons"&gt;
+      &lt;button id="clear" label="Clear" accesskey="C"
+        oncommand="clearDate();"/&gt;
+      &lt;button id="today" label="Today" accesskey="T"
+        oncommand="setToday();"/&gt;
+      &lt;/hbox&gt;
+    &lt;/groupbox&gt;
+
+  &lt;statusbar&gt;
+    &lt;statusbarpanel id="status"/&gt;
+    &lt;/statusbar&gt;
+
+&lt;/vbox&gt;
+
+&lt;/window&gt;
+</pre>
+</div>
+<p>次に、CSS ファイルを <code>style7.css として新規作成します。下記の内容を一番下までスクロールし、すべての行をコピー &amp; ペーストしてください。</code></p>
+<div style="width: 48em; height: 12em; overflow: auto;">
+ <pre>/*** XUL demonstration ***/
+window {
+  -moz-box-align: start;
+  background-color: -moz-dialog;
+  font: -moz-dialog;
+  padding: 2em;
+  }
+
+.head-1 {
+  font-weight: bold;
+  font-size: 200%;
+  padding-left: 5px;
+  }
+
+
+/* the group box */
+.demo-group {
+  padding: 1em;
+  }
+
+.demo-group grid {
+  margin-bottom: 1em;
+  }
+
+.demo-group column {
+  margin-right: .5em;
+  }
+
+.demo-group row {
+  margin-bottom: .5em;
+  }
+
+.demo-group .buttons {
+  -moz-box-pack: end;
+  }
+
+
+/* the day-of-week labels */
+.day {
+  margin-left: 1em;
+  }
+
+.day[disabled] {
+  color: #777;
+  }
+
+.day:first-child {
+  margin-left: 4px;
+  }
+
+
+/* the left column labels */
+.text-prompt {
+  padding-top: .25em;
+  }
+
+
+/* the date input box */
+#date-text {
+  max-width: 8em;
+  }
+
+
+/* the status bar */
+statusbar {
+  width: 100%;
+  border: 1px inset -moz-dialog;
+  margin: 4px;
+  padding: 0px 4px;
+  }
+
+#status {
+  padding: 4px;
+  }
+
+#status[warning] {
+  color: red;
+  }
+</pre>
+</div>
+<p>テキストファイルを <code>script7.js</code> として新規作成します。<code>下記の内容を一番下までスクロールし、すべての行をコピー &amp; ペーストしてください。</code></p>
+<div style="width: 48em; height: 12em; overflow: auto;">
+ <pre>// XUL demonstration
+
+var dateBox, dayBox, currentDay, status; // elements
+
+// called by window onLoad
+function init() {
+  dateBox = document.getElementById("date-text")
+  dayBox = document.getElementById("day-box")
+  status = document.getElementById("status")
+  setToday();
+  }
+
+// called by Clear button
+function clearDate() {
+  dateBox.value = ""
+  refresh()
+  }
+
+// called by Today button
+function setToday() {
+  var d = new Date()
+  dateBox.value = (d.getMonth() + 1)
+    + "/" + d.getDate()
+    + "/" + d.getFullYear()
+  refresh()
+  }
+
+// called by Date textbox
+function refresh() {
+  var d = dateBox.value
+  var theDate = null
+
+  showStatus(null)
+  if (d != "") {
+    try {
+      var a = d.split("/")
+      var theDate = new Date(a[2], a[0] - 1, a[1])
+      showStatus(theDate)
+      }
+    catch (ex) {}
+    }
+  setDay(theDate)
+  }
+
+// internal
+function setDay(aDate) {
+  if (currentDay) currentDay.setAttribute("disabled", "true")
+  if (aDate == null) currentDay = null
+  else {
+    var d = aDate.getDay()
+    currentDay = dayBox.firstChild
+    while (d-- &gt; 0) currentDay = currentDay.nextSibling
+    currentDay.removeAttribute("disabled")
+    }
+  dateBox.focus();
+  }
+
+function showStatus(aDate) {
+  if (aDate == null) {
+    status.removeAttribute("warning")
+    status.setAttribute("label", "")
+    }
+  else if (aDate === false || isNaN(aDate.getTime())) {
+    status.setAttribute("warning", "true")
+    status.setAttribute("label", "Date is not valid")
+    }
+  else {
+    status.removeAttribute("warning")
+    status.setAttribute("label", aDate.toLocaleDateString())
+    }
+  }
+</pre>
+</div>
+<p>ここでは、ブラウザーのデフォルト テーマを使用してください。デモの結果が筆者の意図した通りになるようにするためです。もし他のテーマを使ってしまうと、ユーザー インターフェースの スタイルが違ったものになり、デモが変わった結果になるかもしれません。</p>
+<p>Mozilla ブラウザーで XUL ドキュメントを開きインターフェースを使ってみてください。</p>
+<p>この wiki は XUL とページ内 JavaScript に対応していないので、ここではデモをお見せできませんが下のようになるはずです。</p>
+<table style="border: 2px outset #36b; background-color: threedface; padding: 1em; cursor: default; white-space: nowrap; margin: .5em 0;">
+ <tbody>
+  <tr>
+   <td>
+    <p style="font-size: 150%; font-weight: bold; margin: 0; padding: 0;">XUL demonstration</p>
+    <div style="position: relative; border: 2px groove threedhighlight; margin-top: 1em;">
+     <p style="float: left; margin: -1em 0 0 .5em; padding: 0; background-color: threedface;">Day of week calculator</p>
+     <table style="background-color: threedface; margin: .5em; padding-right: .5em;">
+      <tbody>
+       <tr>
+        <td style="padding-right: .5em;"><u>D</u>ate:</td>
+        <td style="background-color: white; border: 1px solid #000; width: 8em; float: left; cursor: text; padding: .15em .25em;">6/27/2005</td>
+       </tr>
+       <tr>
+        <td>Day:</td>
+        <td style="color: graytext;">Sunday <span style="color: #000;">Monday</span> Tuesday Wednesday Thurdsay Friday Saturday</td>
+       </tr>
+       <tr>
+        <td> </td>
+        <td>
+         <div style="float: right; margin-top: .5em;">
+          <p><span style="border: 2px outset threedface; padding: .25em 1em;"><u>C</u>lear</span> <span style="border: 2px outset threedface; padding: .25em 1em;"><u>T</u>oday</span></p>
+         </div>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <div style="border: 1px inset threedface; margin-top: 1em;">
+     <p style="margin: 0; padding: .25em .5em;">June 27, 2005</p>
+    </div>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>このデモで注目すべき点は下記の通りです。</p>
+<ul>
+ <li>XUL ドキュメントは、良くあるようにスタイルシートにリンクし、スクリプトにもリンクしています。</li>
+ <li>このデモではスクリプトはそんなに重要ではありません。</li>
+ <li>ここで見られるスタイルの多くは、ブラウザーのテーマで決定されています。</li>
+</ul>
+<p>ドキュメントのスタイ-ルシートをよく見て、その中のルールをすべて理解しているか確認してください。もし分からないものがあったらコメント アウトして、ブラウザーでリロードしてください。するとそのルールが無効になることで、どのような変化があるかが分かります。</p>
+<table style="border: 1px solid #36b; padding: 1em; background-color: #fffff4; margin-bottom: 1em;">
+ <caption>
+  チャレンジ</caption>
+ <tbody>
+  <tr>
+   <td>Use the DOM Inspector tool to examine the Date textbox. It is made up of other elements that are generated by its XBL binding.
+    <p>Discover the <em>class</em> of its <code>html:input</code> element. This is the element that actually receives user input.</p>
+    <p>Using this knowledge, add a rule to the stylesheet that makes the background of the Date box pale blue when it has keyboard focus (but white when keyboard focus is somewhere else).</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h4 id="What_next.3F" name="What_next.3F">What next?</h4>
+<p>If you had difficulty understanding this page, or if you have other comments about it, please contribute to its <a href="/Talk:en/CSS/Getting_Started/XUL_user_interfaces" title="Talk:en/CSS/Getting_Started/XUL_user_interfaces">Discussion</a> page.</p>
+<p>In this demonstration, you see the standard rectangular shapes that are common to most user interfaces. Mozilla also supports a specialized graphics language for creating shapes, using CSS stylesheets to specify the style. The next page demonstrates this: <a href="/en/CSS/Getting_Started/SVG_and_CSS" title="en/CSS/Getting_Started/SVG_and_CSS"><strong>SVG and CSS</strong></a>.</p>

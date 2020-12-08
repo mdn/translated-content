@@ -1,0 +1,133 @@
+---
+title: Embarquer Gecko
+slug: Mozilla/Gecko/Mozilla_embarqué/FAQ_de_Mozilla_embarqué/Embarquer_Gecko
+tags:
+  - FAQ_de_Mozilla_embarqué
+translation_of: Mozilla/Gecko/Embedding_Mozilla/FAQ/Embedding_Gecko
+---
+<div class="blockIndicator obsolete obsoleteHeader"><p><strong><span class="icon-only-inline" title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span> Obsolète</strong><br>Cette fonctionnalité est obsolète. Bien qu'encore supportée par des navigateurs, son utilisation est découragée pour tout nouveau projet. Évitez de l'utiliser.</p></div>
+
+<div class="warning">Embedding of Gecko is no longer supported. If you currently embed Gecko, you should use an alternate solution, because you will not be able to pick up new security improvements. <strong>Do not use the techniques covered on this page; this material is retained for historical purposes only.</strong></div>
+
+<h2 id="Section_2__Embarquer_Gecko" name="Section_2_:_Embarquer_Gecko">Section 2 : Embarquer Gecko</h2>
+
+<h3 id="De_quels_fichiers_ai-je_besoin_pour_embarquer_.3F" name="De_quels_fichiers_ai-je_besoin_pour_embarquer_.3F">De quels fichiers ai-je besoin pour embarquer ?</h3>
+
+<p>Actuellement, vous devez télécharger et compiler toute l'arborescence des sources du navigateur Mozilla puis choisir les fichiers binaires que vous souhaitez embarquer dans votre application.<br>
+ Les<em>nightly builds</em> sont créées automatiquement depuis les manifests donc vous pouvez commencer à chercher de ce coté.</p>
+
+<p>Comment puis-je compiler les sources à embarquer ?</p>
+
+<p>Premièrement <a href="fr/Documentation_sur_la_compilation">compilez Mozilla</a>, puis saisissez :</p>
+
+<pre class="eval">cd mozilla/embedding/config
+make
+</pre>
+
+<p>Note : Si vous utilisez un <code>objdir</code>, placez-vous plutôt dans le répertoire <code>mozilla/&lt;objdir&gt;/embedding/config</code> puis lancez la compilation avec <code>make</code>.</p>
+
+<p>Un répertoire appelé <code>mozilla/dist/Embed</code> est créé, il contient les fichiers spécifiés par les manifests par défaut et chrome. Vous pouvez tester les compilations par défaut en exécutant les applications de test TestGtkEmbed sous Unix ou MFCEmbed sous Win32. Pour exécuter TestGtlEmbed sous Unix saisissez :</p>
+
+<pre class="eval">cd mozilla/dist/Embed
+./run-mozilla.sh ./TestGtkEmbed
+</pre>
+
+<h3 id="Comment_est_faite_la_distribution_embarqu.C3.A9e_.3F" name="Comment_est_faite_la_distribution_embarqu.C3.A9e_.3F">Comment est faite la distribution embarquée ?</h3>
+
+<p>Look in <code><a href="https://dxr.mozilla.org/mozilla-central/source/embedding/config/" rel="custom">embedding/config/</a></code> to see a the embedding build process. The basebrowser-win (or basebrowser-unix etc.) file determines which files need to be copied. The embed-jar.mn specifies what chrome is required.</p>
+
+<p>Note that this sample only contains a<em>typical</em> subset of files. You may wish to add or remove files from basebrowser-foo (where foo is win, unix or mach as appropriate) depending on the capabilities you need in your product, or supplement these files by writing your own client-foo file which will be read in addition to basebrowser-foo.</p>
+
+<p>For instance, you can remove the "necko2" library if you do not need FTP, but you will need to add the "appcomps" and "mork" libraries in order to use the Mozilla browser's global history implementation.</p>
+
+<p>The embedding distribution <a href="https://dxr.mozilla.org/mozilla-central/source/embedding/config/readme.html" rel="custom">readme file</a> provides more information.</p>
+
+<p><small>Todo: provide a more complete map of features &lt;-&gt; files</small></p>
+
+<h3 id="Pourquoi_ai-je_besoin_de_distribuer_des_fichiers_XPT_avec_mon_application_.3F" name="Pourquoi_ai-je_besoin_de_distribuer_des_fichiers_XPT_avec_mon_application_.3F">Pourquoi ai-je besoin de distribuer des fichiers XPT avec mon application ?</h3>
+
+<p>XPT files are XPCOM type libraries and contain binary definitions of interfaces used by cross-thread marshalling routines and JavaScript to call objects. In other words they are as vital as DLLs to ensure Gecko functions properly.</p>
+
+<p>XPT files can be concatenated together using the xpt_link tool to reduce clutter and improve startup performance. There is a special perl script for this purpose, that you can see <a href="https://dxr.mozilla.org/mozilla-central/source/xpinstall/packager/xptlink.pl" rel="custom">here</a>.</p>
+
+<h3 id="Comment_me_pr.C3.A9munir_des_changements_de_Gecko_.3F" name="Comment_me_pr.C3.A9munir_des_changements_de_Gecko_.3F">Comment me prémunir des changements de Gecko ?</h3>
+
+<p>If you want to be protected against changes in the Gecko, you should only use interfaces and API that are clearly marked FROZEN in their idl description. This query will find most of the frozen interfaces: <a href="http://mxr.mozilla.org/mozilla-central/search?string=us+FROZEN">Frozen Interface and APIs</a>. Interfaces are being reviewed and frozen all the time and cover most things embedders will want to do.</p>
+
+<p>You can still use unfrozen interfaces (hey it's open source and we can't stop you!) and even reach into the guts of the code but you do so at your own risk. Subsequent releases of Mozilla may well change these interfaces and your source and binary will break as a result.</p>
+
+<p>See the <a class="external" href="http://www.mozilla.org/projects/embedding/embedapiref/embedapiTOC.html">Embedding API Reference</a> for more information</p>
+
+<h3 id="Cela_veut-il_dire_que_mon_application_fonctionnera_avec_toutes_les_futures_versions_de_GRE.2FGecko.2FMozilla_.3F" name="Cela_veut-il_dire_que_mon_application_fonctionnera_avec_toutes_les_futures_versions_de_GRE.2FGecko.2FMozilla_.3F">Cela veut-il dire que mon application fonctionnera avec toutes les futures versions de GRE/Gecko/Mozilla ?</h3>
+
+<p>As long as you use frozen interfaces, the answer is: "Almost." Unfortunately vtable layout can vary from compiler to compiler. This mostly affects Linux compilers such as gcc which have changed their vtable layout more than once in the past few years. See the document on <a class="external" href="http://www.mozilla.org/projects/xpcom/binary-compatibility.html">binary compatibility</a>. <span class="comment">when ported too, this should be an internal link</span></p>
+
+<h3 id="Quelles_plate-formes_sont_support.C3.A9es_.3F" name="Quelles_plate-formes_sont_support.C3.A9es_.3F">Quelles plate-formes sont supportées ?</h3>
+
+<p>Short answer is anything Mozilla can run on, then Gecko can too. However, the embedding is concentrating on three primary platforms:</p>
+
+<ul>
+ <li>Windows (95? definitely 98 and later)</li>
+ <li>Linux (and probably most other X-windows based *nix variants)</li>
+ <li>Macintosh OS X. MacOS 8.6 and 9 support is now deprecated to the ports section of the Mozilla project and are not being actively worked on.</li>
+</ul>
+
+<h3 id="L.27embarquement_supporte-t-il_des_protocoles_s.C3.A9curis.C3.A9s_comme_HTTPS_.3F" name="L.27embarquement_supporte-t-il_des_protocoles_s.C3.A9curis.C3.A9s_comme_HTTPS_.3F">L'embarquement supporte-t-il des protocoles sécurisés comme HTTPS ?</h3>
+
+<p>Yes, psm is supported in embedding.</p>
+
+<h3 id="Comment_mes_applications_communiquent-elles_avec_Gecko_.3F" name="Comment_mes_applications_communiquent-elles_avec_Gecko_.3F">Comment mes applications communiquent-elles avec Gecko ?</h3>
+
+<p>The Embedding API provides a set of interfaces and to control the embedded application, and another set of interfaces that the containing application must implement in order to receive asynchronous notifications from the embedded browser.</p>
+
+<p><small>Todo: insert jud's picture here?</small></p>
+
+<h3 id="Puis-je_embarquer_sans..." name="Puis-je_embarquer_sans...">Puis-je embarquer sans...</h3>
+
+<p>(Some of the more common questions)</p>
+
+<ul>
+ <li>FTP support? Yes.</li>
+ <li>HTTPS support? Yes.</li>
+ <li>Network support? No, maybe someday</li>
+ <li>XUL support? No, but someday yes.</li>
+ <li>JavaScript support? No, maybe someday.</li>
+ <li>CSS support? No, never.</li>
+ <li>DOM support? No, probably never.</li>
+ <li>XML support? No, probably never.</li>
+ <li>International Characters Sets? Yes.</li>
+ <li>Java support? Yes.</li>
+</ul>
+
+<h3 id="Puis-je_embarquer_l.27.C3.A9diteur_HTML_de_Mozilla_.3F" name="Puis-je_embarquer_l.27.C3.A9diteur_HTML_de_Mozilla_.3F">Puis-je embarquer l'éditeur HTML de Mozilla ?</h3>
+
+<p>Sort of. The latest word is that you can embed an editor in a native app, and do command handling and updating via the command handling APIs. There is some lacking functionality (e.g. controlling editor types, inserting and extracting HTML). In addition, the command handling APIs are soon going to change, when Mike Judge lands a long-standing patch (which missed the 1.0 change, and bas been delayed way too long).</p>
+
+<p>Documentation is lacking, mostly because of pending API changes. Check out the <a class="external" href="http://www.mozilla.org/editor/editor-embedding.html">Embedding Editor</a> page for more info.</p>
+
+<h3 id="Quel_toolkit_de_widget_peut_utiliser_Mozilla_.3F" name="Quel_toolkit_de_widget_peut_utiliser_Mozilla_.3F">Quel toolkit de widget peut utiliser Mozilla ?</h3>
+
+<p>Mozilla makes its own cross-platform widgets for HTML forms, and does not use a 3rd-party cross platform toolkit, nor the native widgets that a platform provides. The widgets are drawn using GFX, Mozilla's abstraction of a drawing toolkit. They are styled with CSS, including minor per-platform tweaks to allow them to look like the native platform's native widgets. This allows full CSS and DOM support of all HTML widgets across all platforms, without requiring each platform to separately support every part of CSS and DOM.</p>
+
+<p>There have been a number of requests for native widget support but at this time there are no plans to support a second widget set beyond the cross-platform widgets.</p>
+
+<p>In the future, widgets may be defined with XBL.</p>
+
+<h3 id="Mozilla_embarqu.C3.A9_supporte-t-il_Java_.3F" name="Mozilla_embarqu.C3.A9_supporte-t-il_Java_.3F">Mozilla embarqué supporte-t-il Java ?</h3>
+
+<p>We provide Java support through the OJI plugin API. The Java plugin from Sun takes ~7Mb of disk space (Linux). If you want Java support you should edit the basebrowser-win / basebrowser-unix etc. file and uncomment the OJI section or copy those files manually after an embedding dist has been created.</p>
+
+<h3 id="Puis-je_embarquer_Mozilla_dans_n.27importe_quel_autre_cas_.3F" name="Puis-je_embarquer_Mozilla_dans_n.27importe_quel_autre_cas_.3F">Puis-je embarquer Mozilla dans n'importe quel autre cas ?</h3>
+
+<p>Aside from programming direct to the embedding API you may also embed Mozilla:</p>
+
+<ul>
+ <li>In GTK applications using the <a class="external" href="http://www.mozilla.org/unix/gtk-embedding.html">Gtk Mozilla Embedding Widget</a>.</li>
+ <li>In Win32 ActiveX applications using the <a class="external" href="http://www.iol.ie/%7Elocka/mozilla/mozilla.htm">Mozilla ActiveX Control</a>.</li>
+ <li>In Mac applications using <a href="https://dxr.mozilla.org/mozilla-central/source/embedding/browser/powerplant/" rel="custom">PPEmbed</a>.</li>
+ <li>In a Java Application using <a class="external" href="http://www.mozilla.org/projects/blackwood/webclient/">Webclient</a>.</li>
+</ul>
+
+<p><span class="comment">Interwiki Language Links</span></p>
+
+<div class="noinclude"> </div>

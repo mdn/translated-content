@@ -1,0 +1,107 @@
+---
+title: 定制 .userconfig 文件
+slug: Archive/B2G_OS/Customization_with_the_.userconfig_file
+tags:
+  - B2G
+  - Firefox OS
+  - build
+  - userconfig
+translation_of: Archive/B2G_OS/Customization_with_the_.userconfig_file
+---
+<div class="summary">
+ <p>通过将一些 bash 代码放在 B2G 源码 .userconfig 文件中， 您能够对编译过程的一些方面进行定制。 本文将对修改能达到的效果及如何修改进行介绍。</p>
+</div>
+<p> <code>.userconfig</code> 文件并没有被源代码控制，因此当您更新源码树时，您的更改不会被覆盖。它需要在   <a href="https://github.com/mozilla-b2g/B2G">B2G 根目录</a>下被创建; 也就是和 <code>flash.sh</code>, <code>build.sh</code>, 等在一个目录下。在运行您的配置和编译步骤时，需要添加该文件。</p>
+<p>The <code>.userconfig</code> file, if it exists, is sourced by the <code>load-config.sh</code> script, which is in turn sourced by these scripts: <code>flash.sh</code>, <code>build.sh</code> (through <code>setup.sh</code>), <code>run-gdb.sh</code>, <code>run-emulator.sh</code> and <code>tools/mach_b2g_bootstrap.py</code>. The <code>run-<em>*</em>.sh</code> scripts use it to determine where Gecko is for your build. The <code>mach_b2g_boostrap.py</code> script is used by every B2G related <a href="/en-US/docs/Developer_Guide/mach">mach</a> command.</p>
+<div class="warning">
+ <p><b>重要</b>: 您的 .userconfig 文件应该在 B2G 源码根目录下，而不是您的 home 目录！</p>
+</div>
+<h2 id="Changing_the_Gecko_source_tree">Changing the Gecko source tree</h2>
+<p>By default, the build uses the gecko tree, which is cloned from a tree in github. Some people like to use <a href="https://developer.mozilla.org/en-US/docs/Developer_Guide/Source_Code/Mercurial#mozilla-inbound_%28used_for_landing_your_patches%29" title="https://developer.mozilla.org/en-US/docs/Developer_Guide/Source_Code/Mercurial#mozilla-inbound_%28used_for_landing_your_patches%29">mozilla-inbound</a>, or <a href="https://developer.mozilla.org/en-US/docs/Developer_Guide/Source_Code/Mercurial#mozilla-central_%28main_development_tree%29" title="https://developer.mozilla.org/en-US/docs/Developer_Guide/Source_Code/Mercurial#mozilla-central_%28main_development_tree%29">mozilla-central</a>. To do this create your clone whereever you like and add a line to your <code>.userconfig</code> which sets <code>GECKO_PATH</code>, for example:</p>
+<pre>export B2G_DIR=${B2G_DIR:-$(cd $(dirname $0); pwd)}
+echo "B2G_DIR = ${B2G_DIR}"
+
+export GECKO_PATH=${B2G_DIR}/mozilla-inbound
+echo "GECKO_PATH = ${GECKO_PATH}"
+</pre>
+<div class="note">
+ <p><strong>Note</strong>: if building against a custom Gecko in Mac OS X, the <code>mozilla-central</code> directory must be in a case sensitive file system or else <code>GECKO_PATH</code> will be ignored. You can check whether the file system is case sensitive by running this in a Terminal window:</p>
+ <pre>echo -n This file system is case-&gt;tmp; echo -n in&gt;&gt;TMP; echo sensitive&gt;&gt;tmp; cat tmp</pre>
+ <p>Getting <code>B2G_DIR</code> the way it is above allows your <code>.userconfig</code> to work without having hard-coded paths.</p>
+</div>
+<h2 id="Changing_Gaia_settings">Changing Gaia settings</h2>
+<p>Sometimes, you'd like to be able to change gaia settings. For example, enabling adb in a user build. The gaia Makefile passes in <code>--override build/custom-settings.json</code> when calling <code>build/settings.py</code>, so we can write some bash which will write <code>{"devtools.debugger.remote-enabled": true}</code> into the <code>custom-settings.json</code> file. We try to avoid changing <code>custom-settings.json</code> if we don't need to, so we actually write into <code>custom-settings.json.new</code> and if the contents differ from <code>custom-settings.json</code> then we'll replace it.</p>
+<pre>export GAIA_PATH=${GAIA_PATH:-$(cd gaia; pwd)}
+export CUSTOM_SETTINGS="${GAIA_PATH}/build/config/custom-settings.json"
+cat &gt; "${CUSTOM_SETTINGS}.new" &lt;&lt;EOF
+{"devtools.debugger.remote-enabled": true}
+EOF
+if [[ -f ${CUSTOM_SETTINGS} ]] &amp;&amp; cmp "${CUSTOM_SETTINGS}" "${CUSTOM_SETTINGS}.new" &gt;&amp; /dev/null; then
+  rm "${CUSTOM_SETTINGS}.new"
+else
+  mv "${CUSTOM_SETTINGS}.new" "${CUSTOM_SETTINGS}"
+fi
+</pre>
+<p>Another easier way is to configure a <code>build/config/custom-prefs.js</code> file in the Gaia working directory, so that means in <code>gaia/build/config/custom-prefs.js</code> if you're in the B2G directory. See <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Gaia/Build_System_Primer#Customizing_the_preferences" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Gaia/Build_System_Primer#Customizing_the_preferences">Gaia Build System Primer, Customizing the preferences</a>.</p>
+<div class="note">
+ <p><strong>Note:</strong>  Currently the build is not smart enough to look in a different directory based on <code>GAIA_PATH</code>.  This is different from how <code>GECKO_PATH</code> behaves.  If you wish to use a separate Gaia clone you can <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Gaia/Build_System_Primer" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Gaia/Build_System_Primer">manually run make</a> from that directory.</p>
+</div>
+<h2 id="Create_a_debug_build">Create a debug build</h2>
+<p>To build a debug build, put the following line in your <code>.userconfig</code> file:</p>
+<pre>export B2G_DEBUG=1</pre>
+<h2 id="Profiling_build">Profiling build</h2>
+<p>To enable profiling (for best results with the built-in (SPS) platform profiler), add the following to your <code>.userconfig</code> file then rebuild:</p>
+<pre>export MOZ_PROFILING=1</pre>
+<div class="warning">
+ <p>Do NOT pair with B2G_NOOPT. The results will be meaningless!</p>
+</div>
+<h2 id="Disable_the_optimizer">Disable the optimizer</h2>
+<p>To disable the optimizer (which may create builds that are easier to debug), add the following to your <code>.userconfig</code> file then rebuild:</p>
+<pre>export B2G_NOOPT=1</pre>
+<h2 id="Disable_First_Time_User_experience">Disable First Time User experience</h2>
+<p>If you build and reflash a lot, going through the First Time User experience constantly can be annoying. You can disable this by adding the following to your .userconfig:</p>
+<pre>export NOFTU=1</pre>
+<h2 id="Enable_gaia_developer_mode">Enable gaia developer mode</h2>
+<p>If you plan to develop apps or hack gaia, you can automatically set various usefull settings and preferences to ease working with the device. For example, it will automatically enable the remote debugging feature and disable the prompt when an incoming debugging connection starts.</p>
+<p>What you need is the following export added to your .userconfig:</p>
+<pre>export DEVICE_DEBUG=1</pre>
+<h2 id="Enable_valgrind">Enable valgrind</h2>
+<p>Valgrind is useful for debugging memory or threading issues with your application. For more information on running valgrind, see <a href="/en-US/Firefox_OS/Debugging/Debugging_B2G_using_valgrind">Debugging B2G using valgrind [en-US]</a>.</p>
+<p>To use valgrind under B2G, add the following to your .userconfig:</p>
+<pre>export B2G_VALGRIND=1</pre>
+<h2 id="Changing_the_default_host_compiler">Changing the default host compiler</h2>
+<p>On some recent distributions which use GCC 4.7 as the default compiler you will need to specify an older version in order to be able to build, to do so add two lines to your <code>.userconfig</code> file setting the <code>CC</code> and <code>CXX</code> variables to set the alternate C and C++ compilers respectively. For example to set the GCC 4.6 compiler on Ubuntu 12.10 use:</p>
+<pre>export CC=gcc-4.6
+export CXX=g++-4.6
+</pre>
+<p>Or if you're using a version built from sources provide the full path to the exectuables:</p>
+<pre>export CC=/opt/gcc-4.6.4/bin/gcc
+export CXX=/opt/gcc-4.6.4/bin/g++
+</pre>
+<h2 id="Specify_a_custom_Gecko_object_tree_location">Specify a custom Gecko object tree location</h2>
+<p>Once you start changing gecko source trees and other build options, you may want to also modify where your objects get stored (so, for example, all of your debug objects go into a different tree from your non-debug objects). So you might do something like:</p>
+<pre>export GECKO_OBJDIR=${GECKO_PATH}/objdir-gonk-debug
+</pre>
+<p>Using <code>${GECKO_PATH}</code> makes it easy to switch between different gecko trees (eg: central, beta, aurora, etc).</p>
+<h2 id="Keeping_both_debug_and_non-debug_objects">Keeping both debug and non-debug objects</h2>
+<p>You can use your <code>.userconfig</code> file to switch back and forth between debug and release builds without having to rebuild everything each time!</p>
+<dl>
+</dl>
+<pre class="brush:bash;">export B2G_DIR=${B2G_DIR:-$(cd $(dirname $0); pwd)}
+echo "B2G_DIR = ${B2G_DIR}"
+
+export GECKO_PATH=${B2G_DIR}/mozilla-inbound
+echo "GECKO_PATH = ${GECKO_PATH}"
+
+export B2G_DEBUG=1
+echo "B2G_DEBUG = ${B2G_DEBUG}"
+
+export GECKO_OBJDIR=${GECKO_PATH}/objdir-gonk
+if [[ "${B2G_DEBUG}" != "0" ]]; then
+  export GECKO_OBJDIR=${GECKO_OBJDIR}-debug
+fi
+if [[ "${GECKO_PATH/*mozilla-inbound*/mozilla-inbound}" == "mozilla-inbound" ]]; then
+  export GECKO_OBJDIR=${GECKO_OBJDIR}-m-i
+fi
+echo "GECKO_OBJDIR = ${GECKO_OBJDIR}"</pre>
+<p>The <code>echo</code> commands help remind you what your current settings are. To switch between debug and release builds, simply change the value of <code>B2G_DEBUG</code> on line 7.</p>

@@ -1,0 +1,44 @@
+---
+title: 动机
+slug: Mozilla/Firefox/Multiprocess_Firefox/Motivation
+translation_of: Mozilla/Firefox/Multiprocess_Firefox/Motivation
+---
+<div>{{FirefoxSidebar}}</div><p>使 Firefox 在单独的进程中运行内容的主要原因：性能、安全和稳定性。</p>
+
+<h2 id="性能">性能</h2>
+
+<p>Mozilla 在过去两年对性能的工作重点是浏览器的响应速度。目标是减少 “<a href="/en-US/docs/Glossary/Jank">jank</a>”—在加载大的页面时、表单中输入、或者滚动时，浏览器暂时性失去响应。响应问题在当今较高吞吐量的网络上日益显著。这些工作大部分已被 <a href="https://wiki.mozilla.org/Performance/Snappy">Snappy 项目</a>完成。主要的重点在：</p>
+
+<ul>
+ <li>将运行时间长的操作移入单独的线程，使主线程可以继续向用户做出响应。</li>
+ <li>异步或者在其他线程进行 I/O，使主线程不必等待磁盘。</li>
+ <li>将运行时间长的代码拆分成较短片段，并且在事件循环之间运行。增量式垃圾收集就是一个例子。</li>
+</ul>
+
+<p>大部分能轻易做到的事情在这些领域已经完成。剩下的问题比较难以解决。举例来说，JavaScript 执行和布局都发生在主线程，并且阻挡着事件循环。在单独的线程中运行这些组件是困难的，因为它们访问数据，像是 DOM，它们不是线程安全的。作为替代方案，我们已经考虑让事件循环运行在 JavaScript 执行的中间，但这样做会毁掉大量 Firefox 其他地方做出的假设（更不用提附加组件）。</p>
+
+<p>在一个单独的进程中运行网络内容，是这些方法的一个不错的替代品。类似线程的方式，Firefox 可以在 JavaScript 和布局在内容进程中运行时运行事件循环。但是不同于线程，用户界面（UI）的代码不能访问内容 DOM 或者其他内容的数据结构，因此没有必要进行锁定或者线程安全。而不足之处是，理所当然的，任何在 Firefox UI 进程中运行的需要访问内容数据的代码，都必须明确的通过消息传递的方式来访问内容数据。</p>
+
+<p>我们觉得这种权衡有道理，有几个原因：</p>
+
+<ul>
+ <li>Firefox 代码访问内容 DOM 并不是很常见。</li>
+ <li>与 Firefox OS 共享的代码已经使用消息传递。</li>
+ <li>在多进程模型中，使用消息传递访问内容失败的 Firefox 代码将明显的失败，一致的方式。在线程模型中，没有适当锁定的访问内容的代码将以微妙的方式失败，很难调试。</li>
+</ul>
+
+<h2 id="安全">安全</h2>
+
+<p>目前来说，如果某人发现了一个 Firefox 中的可利用漏洞，他们能够接管用户的计算机。有很多种技术来缓解这种问题，但其中最强大的是<a href="http://en.wikipedia.org/wiki/Sandbox_%28computer_security%29">沙盒</a>。从技术上讲，沙盒不需要多个进程。但是，涵盖沙盒的单进程 Firefox 并不会很有用。沙盒能阻止进程执行，一个乖巧进程绝不会做的操作。遗憾的是，乖巧的 Firefox 进程（尤其是已安装附加组件的 Firefox）会访问很多网络和文件系统。因此，对单进程的 Firefox 沙盒不能限制太多。</p>
+
+<p>在多进程 Firefox 中，内容进程将被沙盒化。一个乖巧的内容进程不会直接访问文件系统；它必须询问主线程来执行请求。在那时，主进程可以验证请求是否安全和合理。因此，对内容进程的沙盒化可以是相当严格的。我们希望这样的布局可以使 Firefox 更难被安全漏洞所利用。</p>
+
+<h2 id="稳定性">稳定性</h2>
+
+<p>目前来说，在网页中运行的代码出现崩溃将导致整个浏览器崩溃。而多进程 Firefox 中，只有崩溃的内容进程会被终止。</p>
+
+<div class="note">
+<p>此页面整合了很多 Bill McCloskey 的有关多进程 Firefox 的文章： <a href="http://billmccloskey.wordpress.com/2013/12/05/multiprocess-firefox/">http://billmccloskey.wordpress.com/2013/12/05/multiprocess-firefox/</a></p>
+</div>
+
+<p> </p>

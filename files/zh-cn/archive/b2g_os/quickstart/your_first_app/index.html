@@ -1,0 +1,261 @@
+---
+title: 你的第一个应用
+slug: Archive/B2G_OS/Quickstart/Your_first_app
+translation_of: Archive/B2G_OS/Quickstart/Your_first_app
+---
+<article class="brush: js">
+<div class="summary">
+<p>开放式Web应用让开发人员实现了期盼多年的夙愿：通过Firefox OS这一首款开放式Web应用平台，可以仅仅使用Html、CSS和JavaScript在跨平台的环境中生成可部署的应用。本手册包含了基本的架构和应用构建指南，你能够迅速掌握这些内容并开始创造自己的下一个伟大的应用！</p>
+</div>
+
+<p>如果你想按照本指南开发，你可以下载我们的<a href="https://github.com/chrisdavidmills/mdn-app-template">快速入门应用模板</a>。还可以参阅<a href="/en-US/docs/Project:MDN/Style_guide/Sample_app_coding_guidelines#Apps_template">应用模板</a>指南找到更多有关其内容的介绍。</p>
+
+<h2 id="应用架构">应用架构</h2>
+
+<h3 id="打包型应用_VS._托管型应用">打包型应用 VS. 托管型应用</h3>
+
+<p>开放网络应用有两种类型：打包型和托管型。打包型应用本质上来说就是一个包含各种HTML、CSS、JavaScript、图像、清单（manifest）等应用资源的zip文件。托管型应用在一个给定域名的服务器上运行，就像是一个独立的网站。两种应用都需要有有效的清单。到了要在火狐市场中列出你的应用是，你要上传应用的zip文件或提供托管应用所在的URL</p>
+
+<div style="width: 480px; margin: 0 auto;">
+<p></p><div class="intrinsic-wrapper"><div class="intrinsic-container "><iframe src="https://www.youtube.com/embed/Q7x-B13y33Q?rel=0&amp;html5=1"></iframe></div></div><p></p>
+
+<div class="video-caption">
+<p>Made in partnership with Treehouse: <a class="button" href="http://teamtreehouse.com/?cid=1154">Check them out!</a></p>
+</div>
+</div>
+
+<p>在本指南结束时，你将创建一个寄宿于本机（localhost）地址上的托管型应用。一旦你的应用准备好进入火狐市场，你可以选择把它作为打包应用打包或作为托管应用启动。</p>
+
+<h3 id="应用清单">应用清单</h3>
+
+<p>每一个火狐应用都需要一个位于应用根目录下的manifest.webapp文件， 这个文件提供与应用有关的重要信息，如：版本、名称、描述、图标地址、本地字符串、指明应用可以从哪儿被安装等等。只有名称和描述是必须的。应用模板中的简单清单如下所示：</p>
+
+<pre class="brush: js">{
+  "version": "0.1",
+  "name": "Open Web App",
+  "description": "Your new awesome Open Web App",
+  "launch_path": "/app-template/index.html",
+  "icons": {
+    "16": "/app-template/app-icons/icon-16.png",
+    "48": "/app-template/app-icons/icon-48.png",
+    "128": "/app-template/app-icons/icon-128.png"
+  },
+  "developer": {
+    "name": "Your Name",
+    "url": "http://yourawesomeapp.com"
+  },
+  "locales": {
+    "es": {
+      "description": "Su nueva aplicación impresionante Open Web",
+      "developer": {
+        "url": "http://yourawesomeapp.com"
+      }
+    },
+    "it": {
+      "description": "La tua nuova fantastica Open Web App",
+      "developer": {
+        "url": "http://yourawesomeapp.com"
+      }
+    }
+  },
+  "default_locale": "en"
+}</pre>
+
+<div style="width: 480px; margin: 0 auto;">
+<p></p><div class="intrinsic-wrapper"><div class="intrinsic-container "><iframe src="https://www.youtube.com/embed/dgAUgHQOm8M#t?rel=0&amp;html5=1"></iframe></div></div><p></p>
+
+<div class="video-caption">
+<p>Made in partnership with Treehouse: <a class="button" href="http://teamtreehouse.com/?cid=1154">Check them out!</a></p>
+</div>
+</div>
+
+<p> </p>
+
+<p>一个基本的清单是你所需要最先上手的地方。关于清单的更多细节，见<a href="/en-US/docs/Web/Apps/Manifest">应用清单</a>。</p>
+
+<h2 id="应用布局设计">应用布局&amp;设计</h2>
+
+<p>随着不同设备上屏幕分辨率标准的增多，响应式设计已经变得越来越重要。即使你应用的主要目标平台是移动平台比如Firefox OS，其他设备很有可能也会访问它。<a href="https://developer.mozilla.org/docs/CSS/Media_queries">CSS媒体选择（CSS media queries）</a>使你可以根据设备调整布局，如下的CSS样例中所示的结构：</p>
+
+<pre class="brush: css">/* The following are examples of different CSS media queries */
+
+/* Basic desktop/screen width sniff */
+@media only screen and (min-width : 1224px) {
+  /* styles */
+}
+
+/* Traditional iPhone width */
+@media
+  only screen and (-webkit-min-device-pixel-ratio : 1.5),
+  only screen and (min-device-pixel-ratio : 1.5) {
+  /* styles */
+}
+
+/* Device settings at different orientations */
+@media screen and (orientation:portrait) {
+  /* styles */
+}
+@media screen and (orientation:landscape) {
+  /* styles */
+}</pre>
+
+<p>有许多JavaScript和CSS的框架可以用于协助响应式设计和移动应用发展（<a href="http://twitter.github.com/bootstrap">Bootstrap</a>等），选择最适合你的应用和开发样式的框架即可。</p>
+
+<h2 id="Web_APIs">Web APIs</h2>
+
+<p>JavaScript APIs正随着设备即时的被开发和增强。Mozilla的<a href="https://wiki.mozilla.org/WebAPI">WebAPI</a>致力于为JavaScript APIs引入许多标准的移动端特性。设备支持状态列表可以在<a href="https://wiki.mozilla.org/WebAPI">WebAPI</a>页面中查看。JavaScript的特征检测依旧是最好的做法，如下例所示：</p>
+
+<pre class="brush: js">// If this device supports the vibrate API...
+if('vibrate' in navigator) {
+    // ... vibrate for a second
+    navigator.vibrate(1000);
+}</pre>
+
+<p>在下面这个例子中，<code>&lt;div&gt;的显示样式会根据设备的电池状态的改变而改变：</code></p>
+
+<pre class="brush: java">// Create the battery indicator listeners
+(function() {
+  var battery = navigator.battery || navigator.mozBattery || navigator.webkitBattery,
+      indicator, indicatorPercentage;
+
+  if(battery) {
+    indicator = document.getElementById('indicator'),
+    indicatorPercentage = document.getElementById('indicator-percentage');
+
+    // Set listeners for changes
+    battery.addEventListener('chargingchange', updateBattery);
+    battery.addEventListener('levelchange', updateBattery);
+
+    // Update immediately
+    updateBattery();
+  }
+
+  function updateBattery() {
+    // Update percentage width and text
+    var level = (battery.level * 100) + '%';
+    indicatorPercentage.style.width = level;
+    indicatorPercentage.innerHTML = 'Battery: ' + level;
+    // Update charging status
+    indicator.className = battery.charging ? 'charging' : '';
+  }
+})();</pre>
+
+<p>在上面的示例代码中，一旦你确定设备支持<a href="https://developer.mozilla.org/en-US/docs/DOM/window.navigator.battery">Battery API</a>，你就可以为<code>chargingchange</code> 和 <code>levelchange</code>添加时间监听器来更新元素的样式。</p>
+
+<p>时常检查<a href="https://wiki.mozilla.org/WebAPI">WebAPI</a>页面以确保更新设备API的状态</p>
+
+<h3 id="Install_API功能">Install API功能</h3>
+
+<p>在我们的样例快速开始应用模板中，我们已经实现了一个安装按钮，可以在你把应用当作一个标准网页来浏览时可以单击它来把那个网站当作一个应用安装在Firefox OS上。按钮标签并没有什么特别的：</p>
+
+<pre class="brush: html">&lt;button id="install-btn"&gt;Install app&lt;/button&gt;</pre>
+
+<p>按钮的功能由Install API实现（见install.js）：</p>
+
+<pre class="brush: js">var manifest_url = location.href + 'manifest.webapp';
+
+function install(ev) {
+  ev.preventDefault();
+  // define the manifest URL
+  // install the app
+  var installLocFind = navigator.mozApps.install(manifest_url);
+  installLocFind.onsuccess = function(data) {
+    // App is installed, do something
+  };
+  installLocFind.onerror = function() {
+    // App wasn't installed, info is in
+    // installapp.error.name
+    alert(installLocFind.error.name);
+  };
+};
+
+// get a reference to the button and call install() on click if the app isn't already installed. If it is, hide the button.
+var button = document.getElementById('install-btn');
+
+var installCheck = navigator.mozApps.checkInstalled(manifest_url);
+
+installCheck.onsuccess = function() {
+  if(installCheck.result) {
+    button.style.display = "none";
+  } else {
+    button.addEventListener('click', install, false);
+  };
+};
+</pre>
+
+<p>我们来简要的看一下发生了什么：</p>
+
+<ol>
+ <li>我们得到一个安装按钮的引用并把它储存在<code>button变量中。</code></li>
+ <li>我们使用<code>navigator.mozApps.checkInstalled</code> 来检查这个由<code>http://people.mozilla.com/~cmills/location-finder/manifest.webapp这个清单来定义的应用是否已经安装在设备上。这个测试结果被储存在<code>installCheck这个变量中。</code></code></li>
+ <li>当测试成功完成时，它的成功完成事件被触发，因此<code>installCheck.onsuccess = function() { ... }会被执行。</code></li>
+ <li>然后我们用一个<code>if语句判断<code>installCheck.result是否存在。如果存在，以为着应用已经被安装了，隐藏安装按钮。</code></code>在应用已经被安装的情况下不需要安装按钮（废话&gt;_&lt;!）</li>
+ <li>如果应用没有被安装，为按钮添加一个单击事件监听器，所以在按钮被单击的时候<code>install()函数会被执行。</code></li>
+ <li>当单击按钮并且<code>install()函数执行时，我们把清单位置保存在一个叫<code>manifest_url的变量中，然后利用</code></code><code>navigator.mozApps.install(manifest_url)来安装应用，用一个<code>installLocFind变量来储存对那个安装的应用。你会注意到安装也会触发success和error事件，所以你可以根据应用是否成功安装来执行不同的动作。</code></code></li>
+</ol>
+
+<p>第一次遇到可安装网络应用时你可能想要核实<a href="/en-US/docs/Web/Apps/JavaScript_API">API的执行状态</a>。</p>
+
+<div class="note">
+<p>注意：可安装开放网络应用有一个“每个来源（origin，感觉就是URL的意思）一个应用”的安全策略；基本上， 你不可以在一个来源上托管多个可安装应用。这会让检测变得有一点复杂，但是仍有很多办法解决这个问题，比如为应用创建多个子域名、用Firefox OS模拟器测试应用、或者在Firefox Aurora/Nightly上安装测试功能，通过这种方式你可以在桌面环境上安装开发网络应用。关于来源的跟多信息详见<a href="/en-US/docs/Web/Apps/FAQs/About_app_manifests">应用清单FAQ</a></p>
+</div>
+
+<h2 id="WebRT_APIs_(基于权限的_APIs)">WebRT APIs (基于权限的 APIs)</h2>
+
+<p>有些WebAPI虽然可以使用但是需要特定的功能开启才具有使用的权限。应用可能会像下面这样在<code>manifest.webapp中</code>记录权限请求：</p>
+
+<pre class="brush: js">// New key in the manifest: "permissions"
+// Request access to any number of APIs
+// Here we request permissions to the systemXHR API
+"permissions": {
+    "systemXHR": {}
+}</pre>
+
+<p>权限分为下面三个等级：</p>
+
+<ul>
+ <li>一般权限——不需要任何特定访问权限的API。</li>
+ <li>特殊权限——只要开发者在应用清单文件中设置了访问权限就可以在应用中利用并通过可信任来源进行分发的API。</li>
+ <li>认证权限——控制力设备上关键功能的API，比如打电话和发短信的服务。这些一般不允许第三方开发者使用。</li>
+</ul>
+
+<p>关于应用权限等级的更多信息，请阅读<a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Packaged_apps#Types_of_packaged_apps" title="/en-US/docs/Web/Apps/Packaged_apps#Types_of_packaged_apps">打包型应用的类型</a>。你可以在<a href="/en-US/docs/Web/Apps/App_permissions">应用权限</a>中找到更多关于API要求权限和需要什么样的权限。</p>
+
+<div class="note">
+<p>有一点需要注意的很重要就是不是所有的Web API都在Firefox OS模拟器中实现了。</p>
+</div>
+
+<h2 id="工具测试">工具&amp;测试</h2>
+
+<p>测试在对移动应用的支持中是至关重要的。测试可安装开放网络应用有多种方式。</p>
+
+<h3 id="Firefox_OS_模拟器">Firefox OS 模拟器</h3>
+
+<p>安装和使用<a href="https://marketplace.firefox.com/developers/docs/firefox_os_simulator">Firefox OS模拟器 </a> 是启动和运行你的应用最简单的方式。在你安装模拟器之后，可以通过工具-&gt;web开发者-&gt;Firefox OS模拟器菜单来启动。模拟器启动时会有一个Javascript控制台，这样你就可以在模拟器中调试你的应用。</p>
+
+<h3 id="应用管理器">应用管理器</h3>
+
+<p>测试工具的新宠儿被称为<a href="/en-US/docs/Mozilla/Firefox_OS/Using_the_App_Manager">应用管理器</a>。这个工具允许你通过USB链接桌面火狐浏览器和一个可兼容性设备（或者一个Firefox OS模拟器），直接将应用推送到设备上，验证应用并且像运行在设备上一样的调试。</p>
+
+<h3 id="单元测试">单元测试</h3>
+
+<p>当在测试不同设备和版本时，单元测试就会非常有价值。jQuery的QUnit是一个流行的客户端测试工具，当然你也可以使用任何你喜欢的测试工具。</p>
+
+<h3 id="在设备上安装Firefox_OS">在设备上安装Firefox OS</h3>
+
+<p>既然Firefox OS是一个开源平台，代码和工具都可以用于在你自己的设备上构建和安装Firefox OS。构建和安装指南以及什么设备可以安装的注意事项可以在<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Platform">MDN</a>上发现。</p>
+
+<p>特定的Firefox OS开发者预览版设备可以在<a href="https://marketplace.firefox.com/developers/dev_phone">开发者预览版手机页面</a>找到更多信息。</p>
+
+<h2 id="应用提交和分发">应用提交和分发</h2>
+
+<p>一旦你的应用完成，你可以像标准网站或应用一样托管它（更多信息请阅读<a href="/en-US/docs/Web/Apps/Publishing/Self-publishing_Apps">发布应用</a>），或者可以<a href="https://marketplace.firefox.com/developers/submit/app/manifest">发布</a>到<a href="https://marketplace.firefox.com">火狐市场</a>。你的应用清单将被验证并且你可以选择你的应用将支持的设备（比如：Firefox OS、桌面版火狐浏览器、移动版火狐浏览器、平板班火狐浏览器）。一旦验证通过，你可以为你的应用添加更多细节（截屏、描述、价格等）并且正式在火狐市场应用列表中提交应用。提交成功后，你的应用可以被任何人购买和安装。</p>
+
+<h3 id="更多商场上市信息">更多商场&amp;上市信息</h3>
+
+<ol>
+ <li><a href="/en-US/docs/Web/Apps/Publishing/Submitting_an_app">向Firefox OS商场中提交应用</a></li>
+ <li><a href="/en-US/docs/Web/Apps/Publishing/Marketplace_review_criteria">市场审查标准 </a></li>
+ <li><a href="http://s.vid.ly/embeded.html?link=8k2n4w&amp;autoplay=false">应用提交演练视频 </a></li>
+</ol>
+</article>

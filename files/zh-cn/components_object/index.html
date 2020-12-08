@@ -1,0 +1,110 @@
+---
+title: Components
+slug: Components_object
+tags:
+  - DOM
+  - Gecko
+  - Gecko DOM Reference
+  - 'XPCOM:Language Bindings'
+  - XPConnect
+translation_of: Mozilla/Tech/XPCOM/Language_Bindings/Components_object
+---
+<p><code>Components</code> 对象是 <a href="https://developer.mozilla.org/en/XPConnect" title="en/XPConnect">XPConnect</a> 功能被映射到 <a href="https://developer.mozilla.org/en/JavaScript" title="en/JavaScript">JavaScript</a> 上的对象。<code>Components</code> 对象的 native 实现位置在   <a href="https://dxr.mozilla.org/mozilla-central/source/js/xpconnect/idl/xpccomponents.idl" rel="custom">nsIXPCComponents</a> , 这个接口会被映射成JavaScript 作为使用 XPConnect 的最高层级的对象。</p>
+
+<p>Components 的一些属性需要高级的全写，可能在 web 页面中不能正常工作。</p>
+
+<p> Components 对象包含下面的成员:</p>
+
+<dl>
+ <dt><code><a href="https://developer.mozilla.org/en/Components.classes" title="en/Components.classes">classes</a></code></dt>
+ <dd>array of classes by ContractID</dd>
+ <dt><code><a href="https://developer.mozilla.org/en/Components.classesByID" title="en/Components.classesByID">classesByID</a></code></dt>
+ <dd>array of classes by CID</dd>
+ <dt><code><a href="https://developer.mozilla.org/en/Components.Constructor" title="en/Components.Constructor">Constructor</a></code></dt>
+ <dd>constructor for constructor of components</dd>
+ <dt><code><a href="https://developer.mozilla.org/en/Components.Exception" title="en/Components.Exception">Exception</a></code></dt>
+ <dd>constructor for XPConnect exceptions</dd>
+ <dt><code><a href="https://developer.mozilla.org/en/Components.ID" title="en/Components.ID">ID</a></code></dt>
+ <dd>constructor for XPCOM nsIDs</dd>
+ <dt><code><a href="https://developer.mozilla.org/en/Components.interfaces" title="en/Components.interfaces">interfaces</a></code></dt>
+ <dd>array of interfaces by interface name</dd>
+ <dt><code><a href="https://developer.mozilla.org/en/Components.interfacesByID" title="en/Components.interfacesByID">interfacesByID</a></code></dt>
+ <dd>array of interfaces by IID</dd>
+ <dt><code><a href="https://developer.mozilla.org/en/Components.isSuccessCode" title="en/Components.isSuccessCode">isSuccessCode</a></code></dt>
+ <dd>function to determine if a given result code is a success code</dd>
+ <dt><code><a href="https://developer.mozilla.org/en/Components.lastResult" title="en/Components.lastResult">lastResult</a></code></dt>
+ <dd>result code of most recent XPConnect call</dd>
+ <dt><code><a href="https://developer.mozilla.org/en/Components.manager" title="en/Components.manager">manager</a></code></dt>
+ <dd>the global XPCOM component manager</dd>
+ <dt><code><a href="https://developer.mozilla.org/en/Components.results" title="en/Components.results">results</a></code></dt>
+ <dd>array of known result codes by name</dd>
+ <dt><code><a href="https://developer.mozilla.org/en/Components.returnCode" title="en/Components.returnCode">returnCode</a></code></dt>
+ <dd>pending result for current call</dd>
+ <dt><code><a href="https://developer.mozilla.org/en/Components.stack" title="en/Components.stack">stack</a></code></dt>
+ <dd>current JavaScript call stack</dd>
+ <dt><code><a href="https://developer.mozilla.org/en/Components.utils" title="en/Components.utils">utils</a></code></dt>
+ <dd>provides access to several useful features</dd>
+ <dd>
+ <dl>
+  <dt><code>utils.atline</code> </dt>
+  <dd>Provides access to the value of the <code>atline</code> property in the JavaScript environment.</dd>
+  <dt><a href="https://developer.mozilla.org/en/Components.utils.createObjectIn" title="en/Components.utils.createObjectIn"><code>utils.createObjectIn</code></a> </dt>
+  <dd>Creates a new object in the scope of the specified object's compartment. May only be called from JavaScript code.</dd>
+  <dt><code><a href="https://developer.mozilla.org/en/Components.utils.evalInSandbox" title="en/Components.utils.evalInSandbox">utils.evalInSandbox</a></code></dt>
+  <dd>Runs JavaScript code in a sandbox, usually used to run code with restricted privileges.</dd>
+  <dt><code><a href="https://developer.mozilla.org/en/Components.utils.forceGC" title="en/Components.utils.forceGC">utils.forceGC</a></code> </dt>
+  <dd>Forces a garbage collection cycle.</dd>
+  <dt><code><a href="https://developer.mozilla.org/en/Components.utils.getGlobalForObject" title="en/Components.utils.getGlobalForObject">utils.getGlobalForObject</a></code> </dt>
+  <dd>Returns the global object with which a given object is associated (through its prototype chain at birth, for example).</dd>
+  <dt><code><a href="https://developer.mozilla.org/en/Components.utils.getWeakReference" title="en/Components.utils.getWeakReference">utils.getWeakReference</a></code> </dt>
+  <dd>Gets a weak reference for the object passed in.</dd>
+  <dt><code><a href="https://developer.mozilla.org/en/Components.utils.import" title="en/Components.utils.import">utils.import</a></code> </dt>
+  <dd>Loads a JavaScript module into the current script, without sharing a scope.</dd>
+  <dt><code><a href="https://developer.mozilla.org/en/Components.utils.lookupMethod" title="en/Components.utils.lookupMethod">utils.lookupMethod</a></code></dt>
+  <dd>Looks up a native (i.e. declared in the interface) method or property of an XPCOM object. Serves the same purpose as <a href="https://developer.mozilla.org/en/XPCNativeWrapper" title="en/XPCNativeWrapper">XPCNativeWrapper</a>.</dd>
+  <dt><a href="https://developer.mozilla.org/en/Components.utils.makeObjectPropsNormal" title="en/Components.utils.makeObjectPropsNormal">utils.makeObjectPropsNormal</a> </dt>
+  <dd>Ensures that all functions come from the specified object's scope, and aren't cross-compartment wrappers. May only be called from JavaScript code.</dd>
+ </dl>
+
+ <dl>
+  <dt><code>utils.methodjit</code> <span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 24.0 / Thunderbird 24.0 / SeaMonkey 2.21)">已废弃 Gecko 24.0</span></dt>
+  <dd>Provides access to the value of the <code>methodjit</code> property in the JavaScript environment.</dd>
+ </dl>
+
+ <dl>
+  <dt><code>utils.methodjit_always</code> <span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 24.0 / Thunderbird 24.0 / SeaMonkey 2.21)">已废弃 Gecko 24.0</span></dt>
+  <dd>Provides access to the value of the <code>methodjit_always</code> property in the JavaScript environment.</dd>
+ </dl>
+
+ <dl>
+  <dt><code>utils.relimit</code> </dt>
+  <dd>Provides access to the value of the <code>relimit</code> property in the JavaScript environment.</dd>
+ </dl>
+
+ <dl>
+  <dt><code><a href="https://developer.mozilla.org/en/Components.utils.reportError" title="en/Components.utils.reportError">utils.reportError</a></code></dt>
+  <dd>Reports a JavaScript Error object to the <a href="https://developer.mozilla.org/en/Error_Console" title="en/Error_Console">Error Console</a>.</dd>
+  <dt><a href="https://developer.mozilla.org/en/Components.utils.schedulePreciseGC" title="en/Components.utils.schedulePreciseGC"><code>utils.schedulePreciseGC</code></a> </dt>
+  <dd>Requests that garbage collection occur sometime in the future when no JavaScript code is running; accepts a callback function to receive notification once collection is complete.</dd>
+  <dt><code><a href="https://developer.mozilla.org/en/Components.utils.setGCZeal" title="Components.utils.setGCZeal">utils.setGCZeal()</a></code> </dt>
+  <dd>Sets the GC zeal level for the context.</dd>
+ </dl>
+
+ <dl>
+  <dt><code>utils.strict</code> </dt>
+  <dd>Provides access to the value of the <code>strict</code> property in the JavaScript environment.</dd>
+ </dl>
+
+ <dl>
+  <dt><code>utils.werror</code> </dt>
+  <dd>Provides access to the value of the <code>werror</code> property in the JavaScript environment.</dd>
+ </dl>
+
+ <dl>
+  <dt><code><a href="https://developer.mozilla.org/en/Components.utils.Sandbox" title="en/Components.utils.Sandbox">utils.Sandbox</a></code></dt>
+  <dd>Creates sandbox objects for use with <code>evalInSandbox</code>.</dd>
+  <dt><code>utils.xml</code> </dt>
+  <dd>Provides access to the value of the <code>xml</code> property in the JavaScript environment.</dd>
+ </dl>
+ </dd>
+</dl>

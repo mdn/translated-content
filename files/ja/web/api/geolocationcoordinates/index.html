@@ -1,0 +1,73 @@
+---
+title: GeolocationCoordinates
+slug: Web/API/GeolocationCoordinates
+tags:
+  - API
+  - Coordinates
+  - Geolocation API
+  - Interface
+  - Secure context
+translation_of: Web/API/GeolocationCoordinates
+---
+<div>
+<div>{{securecontext_header}}{{APIRef("Geolocation API")}}</div>
+
+<div><strong>{{原語併記("GeolocationCoordinates", "座標")}}</strong> インターフェイスは地球上におけるデバイスの位置と高度、およびそれぞれの測位精度を表します。</div>
+</div>
+
+<h2 id="Properties" name="Properties">プロパティ</h2>
+
+<p><em><code>GeolocationCoordinates</code> インターフェイスが継承するプロパティはありません。</em></p>
+
+<dl>
+ <dt>{{domxref("GeolocationCoordinates.latitude")}} {{readonlyInline}} {{securecontext_inline}}</dt>
+ <dd>このオブジェクトが示す緯度を十進度で表す、<code>double</code> 型の値を返します。</dd>
+ <dt>{{domxref("GeolocationCoordinates.longitude")}} {{readonlyInline}} {{securecontext_inline}}</dt>
+ <dd>このオブジェクトが示す経度を十進度で表す、<code>double</code> 型の値で返します。</dd>
+ <dt>{{domxref("GeolocationCoordinates.altitude")}} {{readonlyInline}} {{securecontext_inline}}</dt>
+ <dd>このオブジェクトが示す高度 (海面からの距離) をメートル単位で表す、<code>double</code> 型の値を返します。この情報を取得できない場合は <code>null</code> が返ります。</dd>
+ <dt>{{domxref("GeolocationCoordinates.accuracy")}} {{readonlyInline}} {{securecontext_inline}}</dt>
+ <dd><code>latitude</code> および <code>longitude</code> プロパティの精度をメートル単位で表す、<code>double</code> 型の値を返します。</dd>
+ <dt>{{domxref("GeolocationCoordinates.altitudeAccuracy")}} {{readonlyInline}} {{securecontext_inline}}</dt>
+ <dd><code>altitude</code> プロパティの精度をメートル単位で表す、<code>double</code> 型の値を返します。このプロパティは <code>null</code> になることがあります。</dd>
+ <dt>{{domxref("GeolocationCoordinates.heading")}} {{readonlyInline}} {{securecontext_inline}}</dt>
+ <dd>デバイスの移動方向を真北から何度離れているかで表す、<code>double</code> 型の値を返します。真北を指す <code>0</code> 度から時計回りに、東が <code>90</code> 度、西は <code>270</code> 度となります。<code>speed</code> プロパティの値が <code>0</code> の時、 <code>heading</code> は常に <code><a href="/ja/docs/JavaScript/Reference/Global_Objects/NaN" title='/ja/docs/JavaScript/Reference/Global_Objects/NaN"'>NaN</a></code> になります。もし <code>heading</code> の情報を取得できない場合は <code>null</code> が返ります。</dd>
+ <dt>{{domxref("GeolocationCoordinates.speed")}} {{readonlyInline}} {{securecontext_inline}}</dt>
+ <dd>デバイスの移動速度をメートル毎秒で表す、<code>double</code> 型の値を返します。このプロパティは <code>null</code> になることがあります。</dd>
+</dl>
+
+<h2 id="Methods" name="Methods">メソッド</h2>
+
+<p><em><code>GeolocationCoordinates</code> インターフェイスが実装・継承するメソッドはありません。</em></p>
+
+<h2 id="Specifications" name="Specifications">仕様</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">策定状況</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Geolocation', '#coordinates_interface', 'GeolocationCoordinates')}}</td>
+   <td>{{Spec2('Geolocation')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+
+
+
+<p>{{Compat("api.GeolocationCoordinates")}}</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/Geolocation_API/Using">Geolocation API の利用</a></li>
+ <li>{{domxref("Geolocation")}} インターフェイス</li>
+</ul>

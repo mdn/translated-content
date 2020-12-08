@@ -1,0 +1,110 @@
+---
+title: スクロール連動エフェクト
+slug: Mozilla/Performance/Scroll-linked_effects
+tags:
+  - CSS
+  - JavaScript
+  - Performance
+  - Scroll
+  - Scroll-Linked Effects
+  - Web Animations
+  - compositor
+translation_of: Mozilla/Performance/Scroll-linked_effects
+---
+<p class="summary">スクロール連動エフェクトはスクロール位置に基づいて Web ページを変化させるエフェクト実装です。(例えば、スクロールによる視差エフェクトを生み出すために位置プロパティを更新させるなど) この記事はスクロール連動エフェクトについてパフォーマンス・関連するツール・移行技術の可能性について記載しています。</p>
+
+<h2 id="スクロールエフェクトとは">スクロールエフェクトとは</h2>
+
+<p>時々スクロールエフェクトは {{event("scroll")}} イベントを監視し、いくつかの手段(通常は CSS の {{cssxref("position")}} や {{cssxref("transform")}} プロパティ)でページ内の要素を更新して実装されます。このようなエフェクトは <a href="https://github.com/RByers/css-houdini-drafts/blob/master/css-scroll-api/UseCases.md">CSS Scroll API: Use Cases</a> でサンプルを見ることができます。</p>
+
+<p>これらのエフェクトは、スクロールがブラウザのメインスレッドで同期的に完了するブラウザの場合はうまく動作します。しかし、現在多くのブラウザはユーザに一貫した 60 FPS の体験を提供するために何らかの非同期スクロールを提供しています。非同期スクロールモデルでは、表示されているスクロールポジションはコンポジタースレッドで更新されて {{event("scroll")}} イベントが DOM 内で更新されメインスレッドで発火される以前にユーザーに表示されます。これは、実装されたエフェクトがユーザーが更新されたスクロール位置を見るよりも少し遅れることになります。これはエフェクトが遅延したり、カクカクしたり、ユーザーをイライラさせます。つまりできることなら避けたい事象です。</p>
+
+<p>以下は非同期スクロールでうまく動作しないエフェクト例と、適切に動作するサンプルです。</p>
+
+<h3 id="Example_1_Sticky_位置">Example 1: Sticky 位置</h3>
+
+<p>これはスクロールダウンしても "toolbar" div がスクリーンの上部に固定される sticky 位置エフェクトの実装です。</p>
+
+<pre class="brush: html">&lt;body style="height: 5000px" onscroll="document.getElementById('toolbar').style.top = Math.max(100, window.scrollY) + 'px'"&gt;
+ &lt;div id="toolbar" style="position: absolute; top: 100px; width: 100px; height: 20px; background-color: green"&gt;&lt;/div&gt;
+&lt;/body&gt;</pre>
+
+<p>この sticky 位置の実装は "toolbar" div の再配置を監視するスクロールイベントリスナーに基づいています。スクロールイベントリスナーがブラウザーのメインスレッドで動作する JavaScript で動く限り、ユーザーが見えているスクロールとは非同期処理になります。したがって非同期スクロールにおいて、イベントハンドラーはユーザーに見えているスクロールの動きとは相対的に遅延して、div は意図したとおり固定された表示になりません。代わりに、ユーザーのスクロールによって div は移動して、スクロールインベントハンドラーが実行されたときにスクリーンジョブに "すばやく戻ります"。この一連の動きと素早い動作はかくかくした視覚エフェクトになります。スクロールイベントリスナーを利用しない 1 つの実装は、これを目的とした CSS プロパティーを利用する方法です。</p>
+
+<pre class="brush: html">&lt;body style="height: 5000px"&gt;
+ &lt;div id="toolbar" style="position: sticky; top: 0px; margin-top: 100px; width: 100px; height: 20px; background-color: green"&gt;&lt;/div&gt;
+&lt;/body&gt;</pre>
+
+<p>このバージョンは、ユーザーのスクロールによる "toolbar" div の位置更新をブラウザ自身が行うため、非同期スクロールでもうまく動作します。</p>
+
+<h3 id="Example_2_スクロールスナップ">Example 2: スクロールスナップ</h3>
+
+<p class="summary">Thisこの機能は Web 標準から削除されています。いくつかのブラウザではまだサポートされていますが機能削除の最中です。可能ならば利用を避け既存コードを更新してください。<a href="https://developer.mozilla.org/ja-JP/docs/Web/CSS/scroll-snap-coordinate#Browser_compatibility">https://developer.mozilla.org/ja-JP/docs/Web/CSS/scroll-snap-coordinate#Browser_compatibility</a></p>
+
+<p>以下はスクロールスナップの実装で、目的の位置近くでスクロールをユーザーが止めたときに指定した目的のスクロールポジション目的位置に移動するものです。</p>
+
+<pre class="brush: html">&lt;body style="height: 5000px"&gt;
+ &lt;script&gt;
+    function snap(destination) {
+        if (Math.abs(destination - window.scrollY) &lt; 3) {
+            scrollTo(window.scrollX, destination);
+        } else if (Math.abs(destination - window.scrollY) &lt; 200) {
+            scrollTo(window.scrollX, window.scrollY + ((destination - window.scrollY) / 2));
+            setTimeout(snap, 20, destination);
+        }
+    }
+    var timeoutId = null;
+    addEventListener("scroll", function() {
+        if (timeoutId) clearTimeout(timeoutId);
+        timeoutId = setTimeout(snap, 200, parseInt(document.getElementById('snaptarget').style.top));
+    }, true);
+ &lt;/script&gt;
+ &lt;div id="snaptarget" class="snaptarget" style="position: relative; top: 200px; width: 100%; height: 200px; background-color: green"&gt;&lt;/div&gt;
+&lt;/body&gt;</pre>
+
+<p>このサンプルでは、スクロールしたときのポジションが "snaptarget" div の上部 200 ピクセルいないだった場合を検知するスクロールイベントリスナーが存在します。もしその条件だった場合、div の上部へスクロール位置を移動するアニメーションを動かします。アニメーションはブラウザのメインスレッド JavaScript で動作するため、他のタブやウィンドウで動作している JavaScript によって割り込まれるかもしれません。従って、期待通りにスムーズに動かなかったりカクカク動作するようになります。代わりに CSS sap-point プロパティを利用することで、アニメーションを非同期で動作させることをブラウザに許可し、ユーザーにスムーズな視覚エフェクトを提供します。</p>
+
+<pre class="brush: html">&lt;body style="height: 5000px"&gt;
+ &lt;style&gt;
+    body, /* blink currently has bug that requires declaration on `body` */
+    html {
+      scroll-snap-type: y proximity;
+    }
+    .snaptarget {
+      scroll-snap-align: start;
+      position: relative;
+      top: 200px;
+      height: 200px;
+      background-color: green;
+    }
+ &lt;/style&gt;
+ &lt;div class="snaptarget"&gt;&lt;/div&gt;
+&lt;/body&gt;</pre>
+
+<p>このバージョンはブラウザのメインスレッドで重たい JavaScript が動作していたとしてもスムーズにブラウザで動作することが可能です。</p>
+
+<h3 id="他のエフェクト">他のエフェクト</h3>
+
+<p>多くの場合、スクロール連動エフェクトは CSS を利用したりコンポジットスレッドで動作させることで再実装可能です。しかし、いくつかのケースにおいて現在ブラウザが提供している API では許可されない物が有ります。しかし全ての場合において Firefox はスクロール連動エフェクトをページ上で検知すると開発コンソールに警告を表示します。(バージョン 46 以降) JavaScript でスクロールイベントを使わない JavaScript を使ったスクロールエフェクトの場合は警告は表示されません。他の CSS を利用した実装でカクカクした動作を防ぐサンプルを知りたい場合は、<a href="https://staktrace.com/spout/entry.php?id=834">Firefox における非同期スクロール</a> というブログを見てください。</p>
+
+<h2 id="機能改善">機能改善</h2>
+
+<p>更に我々はコンポジターでのさらなるエフェクトをサポートする予定です。これを実現するために、あなたが実装しようとしているスクロール連動エフェクトの種類に関する情報提供を必要としており、それは実現するための手助けになります。現在そのようなエフェクトを許可するためのいくつかの提案があり、これらにはメリット／デメリットがあります。この提案は現在以下の仕様で議論されています。</p>
+
+<ul>
+ <li><a href="https://w3c.github.io/web-animations/">Web Animations</a>: JavaScript で Web アニメーションを正確にコントロールする新しい API です。その<a href="https://wiki.mozilla.org/Platform/Layout/Extended_Timelines">追加提案</a>はスクロール位置と時間をマッピングし、アニメーションのタイムラインとして扱います。</li>
+ <li><a href="https://docs.google.com/document/d/18GGuTRGnafai17PDWjCHHAvFRsCfYUDYsi720sVPkws/edit?pli=1#heading=h.iy9r1phg1ux4">CompositorWorker</a>: 小さい単位で JavaScript をコンポジタースレッドで動かすことを許容し、フレームレートを落とすことがなくなります。</li>
+ <li><a href="https://docs.google.com/document/d/1VnvAqeWFG9JFZfgG5evBqrLGDZYRE5w6G5jEDORekPY/edit?pli=1">Scroll Customization</a>: コンテンツ用の新しい API を利用することでスクロール差分の適用と利用を指定します。この記事を書いている時点で Mozilla はこの提案をサポートする予定はありませんが、この提案は未完成です。</li>
+</ul>
+
+<h3 id="Call_to_action実施要請">Call to action(実施要請)</h3>
+
+<p>以下の事を考えや意見がある場合、</p>
+
+<ul>
+ <li>スクロール連動エフェクトのコンテキストについて上記いずれかの提案</li>
+ <li>スクロール連動エフェクトを実装しようとしている</li>
+ <li>関連する問題やアイデアがある</li>
+</ul>
+
+<p>我々に情報提供してください。<a href="https://lists.w3.org/Archives/Public/public-houdini/">public-houdini</a> メーリングリスト上での議論に参加可能です。</p>

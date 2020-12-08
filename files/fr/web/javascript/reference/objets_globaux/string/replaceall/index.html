@@ -1,0 +1,170 @@
+---
+title: String.prototype.replaceAll()
+slug: Web/JavaScript/Reference/Objets_globaux/String/replaceAll
+translation_of: Web/JavaScript/Reference/Global_Objects/String/replaceAll
+---
+<div>{{JSRef}}</div>
+
+<p><span class="seoSummary">La méthode <strong><code>replaceAll()</code></strong> retourne une nouvelle chaîne de caractères dans la quelle toutes les occurences de <code>pattern</code> ont été remplacés par <code>replacement</code>.</span>L'argument <code>pattern</code> peut être de type chaîne de caractères ou {{jsxref("RegExp")}}, et l'argument <code>replacement</code> peut être une chaîne de caractères ou une fonction qui sera appelée pour trouver chaque correspondances.</p>
+
+<p>La chaîne de caractères initiale restera inchangée.</p>
+
+<div>{{EmbedInteractiveExample("pages/js/string-replaceall.html")}}</div>
+
+<p class="hidden">La source de cet exemple intéractif est stocké dans un dépôt GitHub. Si vous souhaitez y contribuer, s'il vous plait, clonez <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et envoyez nous un requête "pull".</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox notranslate">const newStr = <var>str</var>.replaceAll(<var>regexp</var>|<var>substr</var>, <var>newSubstr</var>|<var>function</var>)
+</pre>
+
+<div class="blockIndicator note">
+<p>Quand une `<var>regexp</var>` est utilisée, il est préférable d'utiliser le marqueur global ("g"); autrement, l'erreur <code>TypeError</code>: "replaceAll must be called with a global RegExp" sera retournée.</p>
+</div>
+
+<h3 id="Paramètres">Paramètres</h3>
+
+<dl>
+ <dt><code><var>regexp</var></code> (pattern)</dt>
+ <dd>Un objet ou litérale {{jsxref("RegExp")}} avec le marqueur global. Les correspondances sont remplacées par <code><var>newSubstr</var></code> ou la valeur retournée par la <code><var>function</var></code> spécifiée. Une RegExp sans le marqueur global ("g") renverra l'erreur <code>TypeError</code>: "replaceAll must be called with a global RegExp".</dd>
+ <dt><code><var>substr</var></code></dt>
+ <dd>Une {{jsxref("String")}} qui sera remplacée par <code><var>newSubstr</var></code>. Elle est traité comme une chaîne de caracère litéral et <em>non pas</em> comme une expression régulière.</dd>
+ <dt><code><var>newSubstr</var></code> (remplacement)</dt>
+ <dd>La {{jsxref("String")}} qui remplacera la sous-chaîne indiqué par la <code><var>regexp</var></code> ou <code><var>substr</var></code> donnée en paramètre. Un certain nombre de pattern sont supportés, voir la section "<a href="#Spécifier_une_chaîne_de_caractères_comme_paramètre">Spécifier une chaîne de caractères comme paramètre</a>" ci-dessous.</dd>
+ <dt><code><var>function</var></code> (remplacement)</dt>
+ <dd>Une fonction qui a pour but de créer la nouvelle sous-chaîne qui remplacera les occurences trouvés via la <code><var>regexp</var></code> ou <code><var>substr</var></code> donnée en paramètre. Les arguments passés à cette fonction sont détaillé dans la section "<a href="#Spécifier_une_fonction_comme_paramètre">Spécifier une fonction comme paramètre</a>" ci-dessous.</dd>
+</dl>
+
+<h3 id="Valeur_de_retour">Valeur de retour</h3>
+
+<p>Une nouvelle chaîne avec toutes les occurences trouvés remplacés par le pattern de remplacement.</p>
+
+<h2 id="Description">Description</h2>
+
+<p>Cette méthode ne remplace ni ne modifie l'objet {{jsxref("String")}} original. Elle retourne juste une nouvelle chaîne de caractères.</p>
+
+<h3 id="Spécifier_une_chaîne_de_caractères_comme_paramètre">Spécifier une chaîne de caractères comme paramètre</h3>
+
+<p>La chaîne de caractère de remplacement peut inclure les patterns de remplacement spéciaux suivant :</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th class="header" scope="col">Pattern</th>
+   <th class="header" scope="col">Insertion</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>$$</code></td>
+   <td>Insert un <code>"$"</code>.</td>
+  </tr>
+  <tr>
+   <td><code>$&amp;</code></td>
+   <td>Insert la chaîne de caracètre trouvée.</td>
+  </tr>
+  <tr>
+   <td><code>$`</code></td>
+   <td>Insert la portion de chaîne de caracètre qui précède celle trouvée.</td>
+  </tr>
+  <tr>
+   <td><code>$'</code></td>
+   <td>Inserts la portion de chaîne de caracètre qui suit celle trouvée.</td>
+  </tr>
+  <tr>
+   <td><code>$<var>n</var></code></td>
+   <td>Où <code><var>n</var></code> est un entier positif inférieur à 100. Insert la n-ième occurence trouvée, à condition que le premier argument un objet {{jsxref("RegExp")}} . Note that this is <code>1</code>-indexed.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Spécifier_une_fonction_comme_paramètre">Spécifier une fonction comme paramètre</h3>
+
+<p>Vous pouvez passer une fonction comlme second paramètre. Dans ce cas, la fonction sera appelée après qu'une occorence soit trouvée. Le résultat de la fonction (valeur de retour) sera utilisé comme chaîne de remplacement. (<strong>Note: </strong>Les remplacement spéciaux mentionner plus haut <em>ne s'appliqueront pas</em> dans ce cas.)</p>
+
+<p>A noter que la fonction sera utilisé à chaque fois qu'une occurence sera rencontrée, si l'expression régulière donné en paramètre est global.</p>
+
+<p>La fonction admet les argumetns suivants :</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th class="header" scope="col">Nom Possible</th>
+   <th class="header" scope="col">Valeur fournit</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>match</code></td>
+   <td>L'occurence trouvée. (Correspond au <code>$&amp;</code> du précédent tableau.)</td>
+  </tr>
+  <tr>
+   <td><code>p1, p2, ...</code></td>
+   <td>
+    <p>Le n-ième chaîne de caractères trouvée par une sous correspondance entre parenthèses, à condition que le premier paramètre soit un objet de type {{jsxref("RegExp")}} object.<br>
+     (Correspond aux <code>$1</code>, <code>$2</code>, ... précédents.) Par exemple, si  <code>/(\a+)(\b+)/</code> à été en paramètres, <code>p1</code> est la correspondance pour <code>\a+</code>, et <code>p2</code> pour <code>\b+</code>.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>offset</code></td>
+   <td>Le décalage de la sous-chaîne trouvée dans la chaîne d'entrée. (par exemple, si la chaîne complète d'entrée était <code>'abcd'</code> et la sous-chaîne <code>'bc'</code> alors, cet argument vaudra 1.)</td>
+  </tr>
+  <tr>
+   <td><code>string</code></td>
+   <td>La chaîne compète examinée.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>(Le nombre d'arguments exact dépend de si le premier arguments de <code>replaceAll()</code> est un objet de type {{jsxref("RegExp")}} et, si tel est le cas, du nombre le sous correspondance entre parenthèses qu'il spécifie.)</p>
+
+<h2 id="Exemples">Exemples</h2>
+
+<h3 id="Utiliser_replaceAll">Utiliser replaceAll</h3>
+
+<pre class="brush: js notranslate">'aabbcc'.replaceAll('b', '.');
+// 'aa..cc'</pre>
+
+<h3 id="Les_retour_de_regex_non_global">Les retour de regex non global</h3>
+
+<p>Quand on utilise une expression régulère pour chercher une valeur, elle doit être global. Cela ne marchera donc pas:</p>
+
+<pre class="brush: js; example-bad notranslate">'aabbcc'.replaceAll(/b/, '.');
+TypeError: replaceAll must be called with a global RegExp
+</pre>
+
+<p>Ceci marchera:</p>
+
+<pre class="brush: js; example-good notranslate">'aabbcc'.replaceAll(/b/g, '.');
+"aa..cc"
+</pre>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Spécification</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-string.prototype.replaceall', 'String.prototype.replaceAll')}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p class="hidden">La table de compatibilité de cette page est générée a partir d'une donnée structurée. Si vous souhaitez y contribuer, s'il vous plait, aller voir: <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> et envoyer une requête "pull".</p>
+
+<p>{{Compat("javascript.builtins.String.replaceAll")}}</p>
+
+<h2 id="A_voir_également">A voir également</h2>
+
+<ul>
+ <li>{{jsxref("String.prototype.replace", "String.prototype.replace()")}}</li>
+ <li>{{jsxref("String.prototype.match", "String.prototype.match()")}}</li>
+ <li>{{jsxref("RegExp.prototype.exec", "RegExp.prototype.exec()")}}</li>
+ <li>{{jsxref("RegExp.prototype.test", "RegExp.prototype.test()")}}</li>
+</ul>

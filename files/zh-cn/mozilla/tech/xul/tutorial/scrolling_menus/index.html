@@ -1,0 +1,45 @@
+---
+title: XUL_教程/滚动菜单
+slug: Mozilla/Tech/XUL/Tutorial/Scrolling_Menus
+tags:
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Scrolling_Menus
+---
+<p> </p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Popup_Menus" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:Adding_Event_Handlers">下一页  »</a></p>
+</div><p></p>
+<p>本节讲述滚动菜单并且将本机制运用到其它元素中。</p>
+<h3 id=".E5.88.9B.E5.BB.BA.E4.B8.80.E4.B8.AA.E5.A4.A7.E8.8F.9C.E5.8D.95" name=".E5.88.9B.E5.BB.BA.E4.B8.80.E4.B8.AA.E5.A4.A7.E8.8F.9C.E5.8D.95">创建一个大菜单</h3>
+<p>如果创建一个菜单，里面有很多的命令在里面，会发生什么呢？这样所有的项不会一次性在屏幕上显示完。Mozilla提供一种滚动机制允许滚动这些项。</p>
+<div class="float-right">
+ <img alt="Image:menuscroll1.png"></div>
+<p>如果可用空间太小，在每个菜单的末端会出现箭头。如果将鼠标移动到箭头上，菜单可以上翻或下翻。如果可用的空间足够大，箭头则不会显示。注意是否出现滚动行为完全依赖于当前的实际情况(theme)。</p>
+<p>该行为是完全自动的。你不必特意的去为得到滚动菜单而做些工作。它会应用于菜单栏上的菜单，滚动菜单或菜单列表中。执行它使用<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/arrowscrollbox" title="arrowscrollbox">arrowscrollbox</a></code></code>元素。该元素用来创建带箭头的滚动框。</p>
+<p><code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/arrowscrollbox" title="arrowscrollbox">arrowscrollbox</a></code></code>可以被用在任何使用规范框的地方。但不能用于菜单中。通常是用于垂直的框中，并且可能包括有很多元素在里面。可以将它用于下拉列表中，当你不想要它是一个下拉框的时候。</p>
+<h4 id=".E7.A4.BA.E4.BE.8B_-_.E6.8C.89.E9.92.AE.E7.9A.84.E6.BB.9A.E5.8A.A8.E5.88.97.E8.A1.A8" name=".E7.A4.BA.E4.BE.8B_-_.E6.8C.89.E9.92.AE.E7.9A.84.E6.BB.9A.E5.8A.A8.E5.88.97.E8.A1.A8">示例 - 按钮的滚动列表</h4>
+<p>下面的示例说明了如何创建多个按钮的一个滚动列表（需要改变窗口大小以查看箭头按钮）：</p>
+<p><span id="Example_1"><a id="Example_1"></a><strong>Example 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_menuscroll_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_menuscroll_1.xul">View</a></p>
+<pre>&lt;arrowscrollbox orient="vertical" flex="1"&gt;
+  &lt;button label="Red"/&gt;
+  &lt;button label="Blue"/&gt;
+  &lt;button label="Green"/&gt;
+  &lt;button label="Yellow"/&gt;
+  &lt;button label="Orange"/&gt;
+  &lt;button label="Silver"/&gt;
+  &lt;button label="Lavender"/&gt;
+  &lt;button label="Gold"/&gt;
+  &lt;button label="Turquoise"/&gt;
+  &lt;button label="Peach"/&gt;
+  &lt;button label="Maroon"/&gt;
+  &lt;button label="Black"/&gt;
+&lt;/arrowscrollbox&gt;
+</pre>
+<p>试一下这个示例，首先它会以完全大小打开。但是，如果缩小窗口的高度，滚动箭头就会出现。将窗口拉大则箭头会消失。</p>
+<p>可以设置CSS中<code>arrowscrollbox</code>的<code>max-height</code>属性来限制滚动框的大小，这样使箭头能够一直显示。</p>
+<p>因此，<code>arrowscrollbox</code>在菜单和弹出菜单中相当有用。</p>
+<p>下回，我们将学习如何添加一些<a href="cn/XUL_Tutorial/Adding_Event_Handlers">XUL元素的事件句柄</a>.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Popup_Menus" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:Adding_Event_Handlers">下一页  »</a></p>
+</div><p></p>
+<p></p>

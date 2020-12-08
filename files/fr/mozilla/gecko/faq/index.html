@@ -1,0 +1,201 @@
+---
+title: Gecko FAQ
+slug: Mozilla/Gecko/FAQ
+translation_of: Gecko/FAQ
+---
+<h3 id="What_is_Gecko.3F" name="What_is_Gecko.3F">Qu'est-ce que Gecko?</h3>
+
+<p>Gecko est un moteur open source de rendu web supportant différents standards d'internet comme le <a href="https://developer.mozilla.org/fr/docs/Web/HTML">HTML</a>, le <a href="https://developer.mozilla.org/fr/docs/Web/CSS">CSS</a>, le <a href="https://developer.mozilla.org/fr/docs/Web/API/R%C3%A9f%C3%A9rence_du_DOM_Gecko">DOM</a>, <a href="https://developer.mozilla.org/fr/docs/Glossaire/XML">XML</a>, <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript">javascript</a> et d'autres standards encore.</p>
+
+<p>Gecko est utilisé par de nombreux navigateurs internet, avec bien entendu Mozilla Firefox, mais aussi SeaMonkey, Camino. Gecko est en développement constant par les développeurs de Mozilla. Gecko est le nom final du moteur, il s'appelait aussi "Raptor" et "NGLayout"; mais le nom final du moteur a été choisi suite à un litige.</p>
+
+<p>Pour plus d'informations, visitez <a href="https://fr.wikipedia.org/wiki/Gecko_(moteur_de_rendu)">l'article Gecko (moteur de rendu) sur Wikipedia</a>.</p>
+
+<h3 id="What_is_a_layout_engine.3F" name="What_is_a_layout_engine.3F">Qu'est-ce qu'un moteur de rendu?</h3>
+
+<p>Un <a href="https://en.wikipedia.org/wiki/Layout_engine">moteur de rendu </a>va aller traduire le contenu des fichiers (les fichiers pouvant être une page internet en HTML, XML, des images...) et s'occupe de formater les informations contenus dans les fichiers, généralement le HTML, qui décrivent l'emplacement des textes, des images etc... afin de faire affiché l'information comme le voulait le webmaster. Il dessine la page web dans la zone de rendu de la fenêtre du navigateur.</p>
+
+<p>Ainsi officiellement, un moteur de rendu définie la politique de placement pour un docuement et fait la mise en page. Gecko est un moteur de rendu trés rapide. Il offre la possibilité de parser de nombreux types de docuements (HTML, XML, SVG, etc...). Il est capable de donné un rendu avancé en incluant les compositions et les transformations. Il supporte aussi le javascript et les <a href="/en/Plugins">plugins</a>.</p>
+
+<p>Gecko est si rapide et puissant qu'il peut être utiliser pour créer des interfaces utilisateurs pour certaines applications ("chrome").  En d'autres termes, Gecko ne fait pas seulement que affiché le contenu d'un document, il peut aussi être utiliser pour dessiner des barres de défilement, des menus à l'écran. Pour plus d'information, reportez-vous à la documentation sur <a href="https://developer.mozilla.org/fr/docs/Tutoriel_XUL">XUL</a>.</p>
+
+<h3 id="How_is_a_layout_engine_like_Gecko_different_from_a_Web_browser.3F" name="How_is_a_layout_engine_like_Gecko_different_from_a_Web_browser.3F">How is a layout engine like Gecko different from a Web browser?</h3>
+
+<p>Gecko fournit la base nécessaire pour afficher l'information à l'écran, en incluant un moteur de rendu ainsi qu'un ensemble complémentaire de composants du navigateur. Cependant, Gecko ne supporte pas tous les composants aux côtés d'autres modules d'interface dans une application cohérente (y compris les menus, les barres d'outils, etc...) tel que Firefox.</p>
+
+<p>La fondation Mozilla assemble les composants nécessaires dans ses logiciels, comme Firefox, Thunderbird, SeaMonkey, Camino, qui sont disponibles au téléchargement sur le site mozilla.org. Netscape a publié sa propre version du navigateur sous la marque Netscape Navigator. D'autres compagnies crée aussi leur propre logiciel et matériel qui utilisent Gecko. Voir <a href="https://developer.mozilla.org/fr/docs/Floril%C3%A8ge_des_applications_XULrunner">la page recensant une liste de logiciel </a>dans lequel Gecko est utilisé via XULRunner.</p>
+
+<p>Les éditeurs tiers comme les éditeurs de logiciels et fournisseurs de matériels vont choisir les composants qu'ils souhaitent utiliser dans leurs logiciels ou matériels. Certains composants du navigateur ne sont pas fournis dans les fonctionnalités de Gecko, comme les marque page, l'historique de navigation, les faboris.... Cependant, la source de tous ces composants sont disponibles au téléchargement sur le portail mozilla.org.</p>
+
+<h3 id="Why_was_Gecko_built.3F" name="Why_was_Gecko_built.3F">Why was Gecko built?</h3>
+
+<p>The original Mozilla browser, first released as Navigator 1.0, was developed rapidly by a small team that was passionate about creating the next killer app, and they succeeded. Now that the web has evolved, a new generation layout engine was needed upon which future products could be built. Gecko enables a pioneering new class of dynamic content that is more interactive and offers greater presentation control to Web developers, using open and recommended Internet standards instead of proprietary APIs. You are encouraged to join this team by getting involved.</p>
+
+<h3 id="How_is_mozilla.org_using_Gecko.3F" name="How_is_mozilla.org_using_Gecko.3F">How is mozilla.org using Gecko?</h3>
+
+<p>mozilla.org will assemble the Gecko layout engine and other browser components into the Mozilla browser application.</p>
+
+<h3 id="How_does_Mozilla_use_Gecko.3F" name="How_does_Mozilla_use_Gecko.3F">How does Mozilla use Gecko?</h3>
+
+<p>Gecko lies at the heart of Mozilla and Firefox browsers, as well as others, powering all of the individual components. Gecko technologies will also power the display of the mozilla.com portal site, speedily delivering more exciting content and services. Gecko's architecture will serve Mozilla well into the future, enabling faster time to market, more innovation, less costly development, easier distribution and updating, and better cross platform support.</p>
+
+<h3 id="How_can_other_companies_and_organizations_use_Gecko.3F" name="How_can_other_companies_and_organizations_use_Gecko.3F">How can other companies and organizations use Gecko?</h3>
+
+<p>Because Gecko is small, lightweight, and open source, other companies and organizations can easily reuse it. Many hardware vendors are creating devices with network access and wish to include web browsing functionality. Likewise, many software developers want to include Web browsing capability in their applications, but don't want to independently develop browser software. These developers can pick and choose the browser components they want from among those that Gecko offers, and package these components alongside their own within their finished products.</p>
+
+<h3 id="Which_open_standards_is_the_Gecko_development_project_working_to_support.2C_and_to_what_extent_does_it_support_them.3F" name="Which_open_standards_is_the_Gecko_development_project_working_to_support.2C_and_to_what_extent_does_it_support_them.3F">Which open standards is the Gecko development project working to support, and to what extent does it support them?</h3>
+
+<p>By the end of calendar year 2000, Gecko is expected to support the following recommended open Internet standards fully except for the areas noted below and open bugs documented in <a class="link-https" href="https://bugzilla.mozilla.org/">Bugzilla</a>:</p>
+
+<ul>
+ <li>HTML 4.0 - full support except for:
+  <ul>
+   <li>elements: BDO, BASEFONT</li>
+   <li>attributes: shape attribute on the A element, abbr, axis, headers, scope-row, scope-col, scope-rowgroup, scope-colgroup, charoff, datasrc, datafld, dataformat, datapagesize, summary, event, dir, align on table columns, label attribute of OPTION, alternate text of AREA elements, longdesc</li>
+   <li>various metadata attributes: cite, datetime, lang, hreflang</li>
+   <li>bidirectional text layout, which is only used in Hebrew and Arabic (IBM has begun work to add bidi support in a future release)</li>
+  </ul>
+ </li>
+ <li>Style Sheets
+  <ul>
+   <li>CSS 1 - full support, except for:
+    <ul>
+     <li>the application of styles to HTML column elements</li>
+     <li>the ability to turn off author styles</li>
+     <li>the names of certain Mozilla extension pseudo-classes lack the moz- prefix</li>
+    </ul>
+   </li>
+   <li>CSS 2 - partial support is expected and has already been built into Gecko, including support for CSS2 positioning, but no commitment has been made to achieve a specific level of support</li>
+  </ul>
+ </li>
+ <li>DOM
+  <ul>
+   <li>Level 0</li>
+   <li>Level 1 Core: full support
+    <ul>
+     <li>making EntityReferences available through DOM1; per a provision of the DOM1 spec for XML implementations, Entities will be automatically expanded inline and therefore not available through DOM1; our implementation extrapolates this provision to apply to EntityReferences as well</li>
+     <li>For more information, see the <a href="/en/DOM" title="en/DOM">DOM in Mozilla</a></li>
+    </ul>
+   </li>
+   <li>Level 1 HTML</li>
+   <li>DOM 2 - Most of it has already been implemented in Gecko, including support for DOM 2 events, the DOM 2 Style, and the DOM2 Core. DOM 3 support is also planned for a future release.</li>
+  </ul>
+ </li>
+ <li>XML 1.0: full support, except for processing to manipulate default attributes</li>
+ <li>RDF: full support, except for aboutEach, aboutEachPrefix, and parseType</li>
+ <li>JavaScript 1.5, including ECMA-262 Edition 3 (ECMAscript) compliance, except for Date.toDateString and Date.toTimeString, which are not implemented</li>
+ <li>Transfer protocols: HTTP 1.1 (including gzip compression), FTP</li>
+ <li>SSL</li>
+ <li>Unicode</li>
+ <li>OJI (Open Java Interface)</li>
+ <li>Image formats
+  <ul>
+   <li>PNG</li>
+   <li>GIF</li>
+   <li>JPEG, PJPEG</li>
+  </ul>
+ </li>
+</ul>
+
+<h3 id="Does_.22full_support.22_mean_that_Gecko_has_zero_bugs_today_or_will_have_zero_bugs_at_some_point_in_the_future.3F" name="Does_.22full_support.22_mean_that_Gecko_has_zero_bugs_today_or_will_have_zero_bugs_at_some_point_in_the_future.3F">Does "full support" mean that Gecko has zero bugs today or will have zero bugs at some point in the future?</h3>
+
+<p>Of course not. As Robert O'Callahan notes in {{ Bug(25707) }}, "Full HTML4/CSS1 compliance can't mean '100% bug free'. If it does, no-one will ever ship a fully compliant browser."</p>
+
+<p>Because web pages can be arbitrarily long and complex and have arbitrarily deeply nested markup, it will always be possible to construct web pages that do not display in a given browser the way the specifications would recommend. So long as QA testing and test case development continues, there will always be known bugs at any given point in time in the open-source Gecko codebase, and it follows that every commercial product that has ever shipped and ever will ship based on Gecko will have known bugs at the time of its release. (The same principle of course applies to other browser engine development projects and products based upon them as well.)</p>
+
+<p>Known bugs in the open-source Gecko codebase are documented in <a class="link-https" href="https://bugzilla.mozilla.org/">Bugzilla</a>. Here are some links to lists of reported bugs related to the standards mentioned above; be aware that these raw lists of open in-process bugs will inevitably include some duplicate, out of date, unreproducible, invalid, and incorrectly tagged reports:</p>
+
+<div class="note">The links themselves are probably outdated too.</div>
+
+<ul>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;email1=&amp;emailtype1=substring&amp;emailassigned_to1=1&amp;email2=&amp;emailtype2=substring&amp;emailreporter2=1&amp;bugidtype=include&amp;bug_id=&amp;changedin=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;component=Layout&amp;short_desc=&amp;short_desc_type=substring&amp;long_desc=&amp;long_desc_type=substring&amp;bug_file_loc=&amp;bug_file_loc_type=substring&amp;status_whiteboard=&amp;status_whiteboard_type=substring&amp;keywords=&amp;keywords_type=anywords&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=&amp;cmdtype=doit&amp;newqueryname=&amp;order=Reuse+same+sort+as+last+time">Layout</a> component tracks content layout bugs that may be related to a variety of specifications</li>
+ <li>HTML 4.0
+  <ul>
+   <li><a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;email1=&amp;emailtype1=substring&amp;emailassigned_to1=1&amp;email2=&amp;emailtype2=substring&amp;emailreporter2=1&amp;bugidtype=include&amp;bug_id=&amp;changedin=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;component=Form+Submission&amp;component=HTML+Element&amp;component=HTML+Form+Controls&amp;component=HTMLFrames&amp;component=HTMLTables&amp;short_desc=&amp;short_desc_type=substring&amp;long_desc=&amp;long_desc_type=substring&amp;bug_file_loc=&amp;bug_file_loc_type=substring&amp;status_whiteboard=&amp;status_whiteboard_type=substring&amp;keywords=&amp;keywords_type=anywords&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=&amp;cmdtype=doit&amp;newqueryname=&amp;order=Reuse+same+sort+as+last+time">Elements, Form Controls, Frames, Tables, and Form Submission</a></li>
+   <li>bug reports marked with the <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;email1=&amp;emailtype1=substring&amp;emailassigned_to1=1&amp;email2=&amp;emailtype2=substring&amp;emailreporter2=1&amp;bugidtype=include&amp;bug_id=&amp;changedin=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;short_desc=&amp;short_desc_type=substring&amp;long_desc=&amp;long_desc_type=substring&amp;bug_file_loc=&amp;bug_file_loc_type=substring&amp;status_whiteboard=&amp;status_whiteboard_type=substring&amp;keywords=html4&amp;keywords_type=anywords&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=&amp;cmdtype=doit&amp;newqueryname=&amp;order=Reuse+same+sort+as+last+time">html4 keyword</a></li>
+   <li>"meta bug" for tracking outstanding issues with <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=7954">HTML 4.01 compliance</a></li>
+  </ul>
+ </li>
+ <li>CSS: <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;email1=&amp;emailtype1=substring&amp;emailassigned_to1=1&amp;email2=&amp;emailtype2=substring&amp;emailreporter2=1&amp;bugidtype=include&amp;bug_id=&amp;changedin=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;component=Style+System&amp;short_desc=&amp;short_desc_type=substring&amp;long_desc=&amp;long_desc_type=substring&amp;bug_file_loc=&amp;bug_file_loc_type=substring&amp;status_whiteboard=&amp;status_whiteboard_type=substring&amp;keywords=&amp;keywords_type=anywords&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=&amp;cmdtype=doit&amp;newqueryname=&amp;order=Reuse+same+sort+as+last+time">Style System</a> component (see also bug reports marked with the <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;email1=&amp;emailtype1=substring&amp;emailassigned_to1=1&amp;email2=&amp;emailtype2=substring&amp;emailreporter2=1&amp;bugidtype=include&amp;bug_id=&amp;changedin=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;component=Style+System&amp;short_desc=&amp;short_desc_type=substring&amp;long_desc=&amp;long_desc_type=substring&amp;bug_file_loc=&amp;bug_file_loc_type=substring&amp;status_whiteboard=&amp;status_whiteboard_type=substring&amp;keywords=css1&amp;keywords_type=anywords&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=&amp;cmdtype=doit&amp;newqueryname=&amp;order=Reuse+same+sort+as+last+time">css1</a>, <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;email1=&amp;emailtype1=substring&amp;emailassigned_to1=1&amp;email2=&amp;emailtype2=substring&amp;emailreporter2=1&amp;bugidtype=include&amp;bug_id=&amp;changedin=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;component=Style+System&amp;short_desc=&amp;short_desc_type=substring&amp;long_desc=&amp;long_desc_type=substring&amp;bug_file_loc=&amp;bug_file_loc_type=substring&amp;status_whiteboard=&amp;status_whiteboard_type=substring&amp;keywords=css2&amp;keywords_type=anywords&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=&amp;cmdtype=doit&amp;newqueryname=&amp;order=Reuse+same+sort+as+last+time">css2</a>, and <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;email1=&amp;emailtype1=substring&amp;emailassigned_to1=1&amp;email2=&amp;emailtype2=substring&amp;emailreporter2=1&amp;bugidtype=include&amp;bug_id=&amp;changedin=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;component=Style+System&amp;short_desc=&amp;short_desc_type=substring&amp;long_desc=&amp;long_desc_type=substring&amp;bug_file_loc=&amp;bug_file_loc_type=substring&amp;status_whiteboard=&amp;status_whiteboard_type=substring&amp;keywords=css3&amp;keywords_type=anywords&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=&amp;cmdtype=doit&amp;newqueryname=&amp;order=Reuse+same+sort+as+last+time">css3</a> keywords)</li>
+ <li>DOM: see <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;email1=&amp;emailtype1=substring&amp;emailassigned_to1=1&amp;email2=&amp;emailtype2=substring&amp;emailreporter2=1&amp;bugidtype=include&amp;bug_id=&amp;changedin=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;component=DOM+Level+0&amp;short_desc=&amp;short_desc_type=substring&amp;long_desc=&amp;long_desc_type=substring&amp;bug_file_loc=&amp;bug_file_loc_type=substring&amp;status_whiteboard=&amp;status_whiteboard_type=substring&amp;keywords=&amp;keywords_type=anywords&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=&amp;cmdtype=doit&amp;newqueryname=&amp;order=Reuse+same+sort+as+last+time">DOM0</a>, <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;email1=&amp;emailtype1=substring&amp;emailassigned_to1=1&amp;email2=&amp;emailtype2=substring&amp;emailreporter2=1&amp;bugidtype=include&amp;bug_id=&amp;changedin=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;component=DOM+Level+1&amp;short_desc=&amp;short_desc_type=substring&amp;long_desc=&amp;long_desc_type=substring&amp;bug_file_loc=&amp;bug_file_loc_type=substring&amp;status_whiteboard=&amp;status_whiteboard_type=substring&amp;keywords=&amp;keywords_type=anywords&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=&amp;cmdtype=doit&amp;newqueryname=&amp;order=Reuse+same+sort+as+last+time">DOM1</a>, <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;email1=&amp;emailtype1=substring&amp;emailassigned_to1=1&amp;email2=&amp;emailtype2=substring&amp;emailreporter2=1&amp;bugidtype=include&amp;bug_id=&amp;changedin=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;component=DOM+Level+2&amp;short_desc=&amp;short_desc_type=substring&amp;long_desc=&amp;long_desc_type=substring&amp;bug_file_loc=&amp;bug_file_loc_type=substring&amp;status_whiteboard=&amp;status_whiteboard_type=substring&amp;keywords=&amp;keywords_type=anywords&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=&amp;cmdtype=doit&amp;newqueryname=&amp;order=Reuse+same+sort+as+last+time">DOM2</a> and <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;email1=&amp;emailtype1=substring&amp;emailassigned_to1=1&amp;email2=&amp;emailtype2=substring&amp;emailreporter2=1&amp;bugidtype=include&amp;bug_id=&amp;changedin=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;component=Event+Handling&amp;short_desc=&amp;short_desc_type=substring&amp;long_desc=&amp;long_desc_type=substring&amp;bug_file_loc=&amp;bug_file_loc_type=substring&amp;status_whiteboard=&amp;status_whiteboard_type=substring&amp;keywords=&amp;keywords_type=anywords&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=&amp;cmdtype=doit&amp;newqueryname=&amp;order=Reuse+same+sort+as+last+time">Event Handling</a> components</li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;email1=&amp;emailtype1=substring&amp;emailassigned_to1=1&amp;email2=&amp;emailtype2=substring&amp;emailreporter2=1&amp;bugidtype=include&amp;bug_id=&amp;changedin=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;component=XML&amp;short_desc=&amp;short_desc_type=substring&amp;long_desc=&amp;long_desc_type=substring&amp;bug_file_loc=&amp;bug_file_loc_type=substring&amp;status_whiteboard=&amp;status_whiteboard_type=substring&amp;keywords=&amp;keywords_type=anywords&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=&amp;cmdtype=doit&amp;newqueryname=&amp;order=Reuse+same+sort+as+last+time">XML</a></li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;email1=&amp;emailtype1=substring&amp;emailassigned_to1=1&amp;email2=&amp;emailtype2=substring&amp;emailreporter2=1&amp;bugidtype=include&amp;bug_id=&amp;changedin=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;component=RDF&amp;short_desc=&amp;short_desc_type=substring&amp;long_desc=&amp;long_desc_type=substring&amp;bug_file_loc=&amp;bug_file_loc_type=substring&amp;status_whiteboard=&amp;status_whiteboard_type=substring&amp;keywords=&amp;keywords_type=anywords&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=&amp;cmdtype=doit&amp;newqueryname=&amp;order=Reuse+same+sort+as+last+time">RDF</a></li>
+ <li>core JavaScript language interpreter (<a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;email1=&amp;emailtype1=substring&amp;emailassigned_to1=1&amp;email2=&amp;emailtype2=substring&amp;emailreporter2=1&amp;bugidtype=include&amp;bug_id=&amp;changedin=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;component=Javascript+Engine&amp;short_desc=&amp;short_desc_type=substring&amp;long_desc=&amp;long_desc_type=substring&amp;bug_file_loc=&amp;bug_file_loc_type=substring&amp;status_whiteboard=&amp;status_whiteboard_type=substring&amp;keywords=&amp;keywords_type=anywords&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=&amp;cmdtype=doit&amp;newqueryname=&amp;order=Reuse+same+sort+as+last+time">JavaScript engine</a>)</li>
+ <li>HTTP 1.1 compliance bugs should generally be found on the <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;email1=&amp;emailtype1=substring&amp;emailassigned_to1=1&amp;email2=&amp;emailtype2=substring&amp;emailreporter2=1&amp;bugidtype=include&amp;bug_id=&amp;changedin=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;component=Necko&amp;short_desc=&amp;short_desc_type=substring&amp;long_desc=&amp;long_desc_type=substring&amp;bug_file_loc=&amp;bug_file_loc_type=substring&amp;status_whiteboard=&amp;status_whiteboard_type=substring&amp;keywords=&amp;keywords_type=anywords&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=&amp;cmdtype=doit&amp;newqueryname=&amp;order=Reuse+same+sort+as+last+time">Networking, Networking - General, and Networking: Cache</a> components</li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;email1=&amp;emailtype1=substring&amp;emailassigned_to1=1&amp;email2=&amp;emailtype2=substring&amp;emailreporter2=1&amp;bugidtype=include&amp;bug_id=&amp;changedin=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;component=OJI&amp;short_desc=&amp;short_desc_type=substring&amp;long_desc=&amp;long_desc_type=substring&amp;bug_file_loc=&amp;bug_file_loc_type=substring&amp;status_whiteboard=&amp;status_whiteboard_type=substring&amp;keywords=&amp;keywords_type=anywords&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=&amp;cmdtype=doit&amp;newqueryname=&amp;order=Reuse+same+sort+as+last+time">OJI</a></li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;email1=&amp;emailtype1=substring&amp;emailassigned_to1=1&amp;email2=&amp;emailtype2=substring&amp;emailreporter2=1&amp;bugidtype=include&amp;bug_id=&amp;changedin=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;component=ImageLib&amp;short_desc=&amp;short_desc_type=substring&amp;long_desc=&amp;long_desc_type=substring&amp;bug_file_loc=&amp;bug_file_loc_type=substring&amp;status_whiteboard=&amp;status_whiteboard_type=substring&amp;keywords=&amp;keywords_type=anywords&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=&amp;cmdtype=doit&amp;newqueryname=&amp;order=Reuse+same+sort+as+last+time">Imagelib</a> image library (see also <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;email1=&amp;emailtype1=substring&amp;emailassigned_to1=1&amp;email2=&amp;emailtype2=substring&amp;emailreporter2=1&amp;bugidtype=include&amp;bug_id=&amp;changedin=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;component=JPEG+Image+Handling&amp;short_desc=&amp;short_desc_type=substring&amp;long_desc=&amp;long_desc_type=substring&amp;bug_file_loc=&amp;bug_file_loc_type=substring&amp;status_whiteboard=&amp;status_whiteboard_type=substring&amp;keywords=&amp;keywords_type=anywords&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=&amp;cmdtype=doit&amp;newqueryname=&amp;order=Reuse+same+sort+as+last+time">JPEG Image Handling</a> and <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;email1=&amp;emailtype1=substring&amp;emailassigned_to1=1&amp;email2=&amp;emailtype2=substring&amp;emailreporter2=1&amp;bugidtype=include&amp;bug_id=&amp;changedin=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;component=PNG+Image+Handling&amp;short_desc=&amp;short_desc_type=substring&amp;long_desc=&amp;long_desc_type=substring&amp;bug_file_loc=&amp;bug_file_loc_type=substring&amp;status_whiteboard=&amp;status_whiteboard_type=substring&amp;keywords=&amp;keywords_type=anywords&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=&amp;cmdtype=doit&amp;newqueryname=&amp;order=Reuse+same+sort+as+last+time">PNG Image Handling</a>)</li>
+ <li>SSL-related bugs are filed on the <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;email1=&amp;emailtype1=substring&amp;emailassigned_to1=1&amp;email2=&amp;emailtype2=substring&amp;emailreporter2=1&amp;bugidtype=include&amp;bug_id=&amp;changedin=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;component=Security%3A+Crypto&amp;short_desc=&amp;short_desc_type=substring&amp;long_desc=&amp;long_desc_type=substring&amp;bug_file_loc=&amp;bug_file_loc_type=substring&amp;status_whiteboard=&amp;status_whiteboard_type=substring&amp;keywords=&amp;keywords_type=anywords&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=&amp;cmdtype=doit&amp;newqueryname=&amp;order=Reuse+same+sort+as+last+time">Crypto</a> component</li>
+</ul>
+
+<p>For information about the known bugs of a specific commercial product based on Gecko, see that product's release notes.</p>
+
+<h3 id="How_does_Gecko_format_XML_documents.3F" name="How_does_Gecko_format_XML_documents.3F">How does Gecko format XML documents?</h3>
+
+<p>Gecko supports the use of CSS and <a href="/en/XSLT" title="en/XSLT">XSLT</a> to format XML documents.</p>
+
+<p>For XML documents without associated CSS or XSLT, Gecko displays the pretty-printed source of the document.</p>
+
+<h3 id="How_does_Gecko_help_content_developers.3F" name="How_does_Gecko_help_content_developers.3F">How does Gecko help content developers?</h3>
+
+<p>Content developers are sick and tired of developing and testing every single web page multiple times in order to support the different, incompatible, proprietary DOMs of browsers from different vendors. They have been demanding that all vendors fully support the open standards listed above so that they can</p>
+
+<ol>
+ <li>have a rich, powerful formatting system and object model at their disposal, and</li>
+ <li>"write once, view anywhere."</li>
+</ol>
+
+<p>Gecko's robust support for these standards makes Gecko the platform of choice for web content and web application developers worldwide.</p>
+
+<h3 id="Are_Gecko.27s_APIs_based_on_ActiveX.3F_COM.3F_JavaBeans.3F" name="Are_Gecko.27s_APIs_based_on_ActiveX.3F_COM.3F_JavaBeans.3F">Are Gecko's APIs based on ActiveX? COM? JavaBeans?</h3>
+
+<p>Gecko is reusable on all platforms thanks to <a href="/en/XPCOM" title="en/XPCOM">XPCOM</a>, a subset of COM that works across platforms. COM, developed by Digital and later adopted by Microsoft, is the de facto standard for modular interfaces on Windows platforms.</p>
+
+<p>Additionally, on the Windows platform, Gecko's XPCOM interfaces are wrapped in an ActiveX control that VB developers can utilize (ActiveX wrappers are not available on other platforms because ActiveX is a Windows-only technology).</p>
+
+<p>A JavaBean wrapper is not currently under development, but there is nothing in Gecko's architecture that precludes such development in the future. Source code and documentation for these interfaces are available through mozilla.org.</p>
+
+<p>For future embedding API plans, see {{ interwiki('wikimo', 'Mozilla_2:Embedding_APIs', 'wikimo:Mozilla 2:Embedding APIs') }}.</p>
+
+<h3 id="Are_Gecko.27s_APIs_compatible_with_Microsoft.27s_Trident_APIs.3F" name="Are_Gecko.27s_APIs_compatible_with_Microsoft.27s_Trident_APIs.3F">Are Gecko's APIs compatible with Microsoft's Trident APIs?</h3>
+
+<p>Gecko's XPCOM interfaces are different than Microsoft's. The most important differences between the two models involve reflection of the Document Object Model (DOM) in the interfaces.</p>
+
+<p>Microsoft's Trident interfaces reflect the DOM in a proprietary API, whereas Gecko exposes the DOM according to the W3C's recommended standard. Other incompatibilities exist. Adam Lock created a partial compatibility layer that may enable developers to more easily migrate from Microsoft's engine to the Gecko engine.</p>
+
+<h3 id="Which_platforms_does_Gecko_run_on.3F" name="Which_platforms_does_Gecko_run_on.3F">Which platforms does Gecko run on?</h3>
+
+<p>Gecko runs today on Win32 (Windows XP Service Pack 2, Windows Vista, Windows 7, Windows 8, Windows 8.1), Mac OS X 10.5 and later, and Linux. OEMs and contributors from the Net participating in mozilla.org are porting Gecko to other platforms. Such porting efforts are underway for Solaris, HP/UX, AIX, Irix, OS/2, OpenVMS, BeOS, and Amiga, among others.</p>
+
+<p>Older versions of Gecko supported earlier versions of Win32 and Mac OS X.</p>
+
+<h3 id="What_are_the_components_of_Gecko.3F" name="What_are_the_components_of_Gecko.3F">What are the components of Gecko?</h3>
+
+<p>Gecko includes the following components:</p>
+
+<ul>
+ <li>Document parser (handles HTML and XML)</li>
+ <li>Layout engine with content model</li>
+ <li>Style system (handles CSS, etc.)</li>
+ <li>JavaScript runtime (<a href="/en/SpiderMonkey" title="en/SpiderMonkey">SpiderMonkey</a>)</li>
+ <li>Image library</li>
+ <li>Networking library (<a href="/en/Necko" title="en/Necko">Necko</a>)</li>
+ <li>Platform-specific graphics rendering and widget sets for Win32, X, and Mac</li>
+ <li>User preferences library</li>
+ <li>Mozilla Plug-in API (<a href="/en/Plugins" title="en/Plugins">NPAPI</a>) to support the Navigator plug-in interface</li>
+ <li>Open Java Interface (OJI), with Sun Java 1.2 JVM</li>
+ <li><a href="/en/RDF" title="en/RDF">RDF</a> back end</li>
+ <li>Font library</li>
+ <li>Security library (<a href="/en/NSS" title="en/NSS">NSS</a>)</li>
+</ul>
+
+<div class="originaldocinfo">
+<h2 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h2>
+
+<ul>
+ <li>Author(s): Angus</li>
+ <li>Other Contributors: Ekrock, Vidur, Hidday, Drunclear</li>
+ <li>Copyright Information: Portions of this content are © 1998–2006 by individual mozilla.org contributors; content available under a Creative Commons license</li>
+</ul>
+</div>
+
+<p>{{ languages( { "ja": "ja/Gecko_FAQ", "zh-cn": "cn/Gecko_FAQ" } ) }}</p>

@@ -1,0 +1,46 @@
+---
+title: Écriture de code localisable
+slug: Écriture_de_code_localisable
+tags:
+  - Localisation
+translation_of: Mozilla/Localization/Writing_localizable_code
+---
+<p>Cette page présente les bonnes pratiques et des recommandations à suivre en ce qui concerne la localisation lorsqu'on touche à l'interface utilisateur. Elle est destinée aux développeurs de Mozilla et d'extensions.</p>
+
+<p>Pour des détails techniques, veuillez également consulter la <a class="external" href="http://xulfr.org/xulplanet/xultu/locale.html">section Localisation du tutoriel XUL</a>.</p>
+
+<h3 id=".C3.80_propos_des_localisateurs" name=".C3.80_propos_des_localisateurs">À propos des localisateurs</h3>
+
+<p>Quelques notes au sujet des localisateurs pour les développeurs qui traitent rarement avec eux :</p>
+
+<ul>
+ <li>les localisateurs aiment les outils et n'aiment pas les éditeurs,</li>
+ <li>les outils de localisation sont souvent basés sur des paires clé-valeur,</li>
+ <li>un certain nombre d'entre eux concentrent leurs talents sur la traduction et la langue, et ne sont pas doués pour programmer ou empaqueter des applications.</li>
+</ul>
+
+<h3 id="Recommandations" name="Recommandations">Recommandations</h3>
+
+<p>Par conséquent, voici quelques recommandations à suivre pour rendre la localisation de votre code plus aisée :</p>
+
+<dl>
+ <dt>Choisissez de bons noms de clés </dt>
+ <dd>Les noms choisis pour vos clés (que ce soit pour un fichier .DTD ou .properties) doivent être descriptifs. Considérez que ce sont de longs noms de variables. Si vous changez la sémantique d'une clé localisée, renommez la clé. Ce sera sans doute un meilleur nom pour la clé, et cela aidera les divers outils à repérer que le changement que vous avez fait n'est pas juste une coquille.</dd>
+ <dt>Faites attention de ne pas faire de suppositions basées sur la grammaire dans vos chaînes </dt>
+ <dd>Couper des phrases en plusieurs clés suppose souvent par inadvertance une grammaire particulière, une structure de phrase, et de telles chaînes composites sont souvent très difficiles à traduire. Lorsque c'est vraiment nécessaire, essayez de laisser de la place aux traducteurs. Un exemple d'une chaîne composite bien utilisée est l'option de Firefox pour les pages visités : le traducteur peut (implicitement) positionner le champ de texte comme il lui convient.</dd>
+ <dt>N'utilisez pas de macros de pré-traitement </dt>
+ <dd>L'utilisation de <code>#if #else #endif</code> ou <code>#expand</code> est fortement déconseillée. Il y a quelques exceptions à cette règle, mais en général, le fichier localisé doit se conformer aux standards et ne doit pas nécessiter d'outils d'empaquetage pour être transformé. Si vous voulez ajouter un traitement pour compiler des fichiers localisés, assurez-vous d'obtenir l'avis de <a href="/User:AxelHecht" title="User:AxelHecht">l10n@</a>. Dans la plupart des cas, vous pouvez aussi juste ajouter le traitement dans le code contenu et référencer les différentes paires clé-valeur dans <code>l10n</code>.</dd>
+ <dt>Utilisez une bonne structure du répertoire des sources </dt>
+ <dd>Assurez-vous de placer les fichiers localisables au bon endroit. L'ajout de nouveaux répertoires racines est un compromis entre la propriété du module dans le référentiel <code>cvsroot</code> et la facilité de localisation.</dd>
+ <dt>Utilisez une bonne structure du répertoire chrome</dt>
+ <dd>Pour un module <code>mod</code> particulier, un chemin tel que <code>jar:ab-CD.jar!/locale/ab-CD/mod/foo.dtd</code> a été largement testé et constitue un bon emplacement pour vos fichiers référencés ainsi : <code>chrome://mod/locale/foo.dtd</code>. Utiliser une telle structure de répertoire facilite la localisation sans le code source et c'est particulièrement recommandé pour les auteurs d'extensions. Les Manifestes JAR peuvent faciliter ceci.</dd>
+</dl>
+
+<h3 id="Impact_l10n" name="Impact_l10n">Impact l10n</h3>
+
+<p>Sur les arbres <em>gelés</em>, la règle est de ne pas appliquer de changements impliquant la localisation. Qu'est-ce à dire ? Un impact sur la localisation est :</p>
+
+<ul>
+ <li>tout changement sur <code>mozilla/@mod@/locales</code> ; que les localisateurs découvrent quand ils surveillent les changement sur le référentiel à l'aide de requêtes sur Bonsai, comme tout un chacun. Aucun changement signifie que le résultat des requêtes doit être vide.</li>
+ <li>toute chaîne localisée modifiée ou ayant un nouvel usage; Tout ce qui provoque un cycle d'assurance qualité sur nos quelques 80 localisations a un impact sur la localisation.</li>
+</ul>

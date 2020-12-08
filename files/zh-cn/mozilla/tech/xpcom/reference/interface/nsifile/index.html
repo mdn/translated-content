@@ -1,0 +1,828 @@
+---
+title: nsIFile
+slug: Mozilla/Tech/XPCOM/Reference/Interface/nsIFile
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIFile
+---
+<p></p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/xpcom/io/nsIFile.idl" rel="custom">xpcom/io/nsIFile.idl</a></code><span style="text-align: right; float: right;"><a href="/zh-CN/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">脚本化</a></span></div>
+<span style="padding: 4px 2px;">
+
+An instance of this interface is a cross-platform representation of a location in the filesystem.
+</span>
+
+<div style="background: #eee; padding: 2px;">
+继承于: <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
+<span style="text-align: right; float: right;">最后修改于Gecko 1.0 </span></div>
+</div><p></p>
+<p><code>nsIFile</code> is the correct platform-agnostic way to specify a file; you should always use this instead of a string to ensure compatibility.</p>
+<p>With an <code>nsIFile</code> you can navigate to ancestors or descendants without having to deal with the different path separators used on different platforms, query the state of any file or directory at the position represented by the <code>nsIFile</code> and create, move or copy items in the filesystem.</p>
+<p>An <code>nsIFile</code> can be retrieved by either instantiating an <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILocalFile" title="">nsILocalFile</a></code> using a platform specific path string or by using cross-platform locations retrieved from the <a href="/en/Code_snippets/File_I//O#Getting_special_files" title="en/Code_snippets/File_I//O#Getting_special_files">directory service</a>.</p>
+<p>All methods with string parameters have two forms. The preferred form operates on UTF-16 encoded characters strings. An alternate form operates on characters strings encoded in the "native" charset. A string containing characters encoded in the native charset cannot be safely passed to javascript via xpconnect. Therefore, the UTF-16 forms are scriptable, but the "native methods" are not. In addition, the native form <strong>cannot</strong> deal with files whose name contains characters outside the default system code page on Windows. Using the native form limits the ability of your code to deal with the full Unicode support on Windows 2000 or later where the OS itself does not have such a limitation. Therefore, you <strong>must not</strong> use the native form unless it is <strong>guaranteed</strong> that the path passed to a native form function is <strong>always</strong> ASCII.</p>
+<div class="note">
+  <strong>Note:</strong> <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILocalFile" title="">nsILocalFile</a></code> was merged with this interface in Gecko 14. Much of the documentation has not been updated to reflect this change.</div>
+<h2 id="Method_overview" name="Method_overview">Method overview</h2>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <td><code>void <a href="#append()">append</a>(in AString node);</code></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#appendNative()">appendNative</a>(in ACString node);</code> <span class="inlineIndicator noscript noscriptInline" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="/en/XPCOM_Interface_Reference/nsILocalFile#appendRelativeNativePath()" title="/en/XPCOM_Interface_Reference/nsILocalFile#appendRelativeNativePath()">appendRelativeNativePath</a>(in ACString relativeFilePath);</code> <span class="inlineIndicator noscript noscriptInline" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="/en/XPCOM_Interface_Reference/nsILocalFile#appendRelativePath()" title="/en/XPCOM_Interface_Reference/nsILocalFile#appendRelativePath()">appendRelativePath</a>(in AString relativeFilePath);</code> </td>
+    </tr>
+    <tr>
+      <td><code>nsIFile <a href="#clone()">clone</a>();</code></td>
+    </tr>
+    <tr>
+      <td><code>boolean <a href="#contains()">contains</a>(in nsIFile inFile, in boolean recur);</code></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#copyTo()">copyTo</a>(in nsIFile newParentDir, in AString newName);</code></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#copyToFollowingLinks()">copyToFollowingLinks</a>(in nsIFile newParentDir, in AString newName);</code></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#copyToFollowingLinksNative()">copyToFollowingLinksNative</a>(in nsIFile newParentDir, in ACString newName);</code> <span class="inlineIndicator noscript noscriptInline" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#CopyToNative()">CopyToNative</a>(in nsIFile newParentDir, in ACString newName);</code> <span class="inlineIndicator noscript noscriptInline" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#create()">create</a>(in unsigned long type, in unsigned long permissions);</code></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#createUnique()">createUnique</a>(in unsigned long type, in unsigned long permissions);</code></td>
+    </tr>
+    <tr>
+      <td><code>boolean <a href="#equals()">equals</a>(in nsIFile inFile);</code></td>
+    </tr>
+    <tr>
+      <td><code>boolean <a href="#exists()">exists</a>();</code></td>
+    </tr>
+    <tr>
+      <td><code>ACString <a href="/en/XPCOM_Interface_Reference/nsILocalFile#getRelativeDescriptor()" title="/en/XPCOM_Interface_Reference/nsILocalFile#getRelativeDescriptor()">getRelativeDescriptor</a>(in nsIFile fromFile);</code> </td>
+    </tr>
+    <tr>
+      <td><code>void <a href="/en/XPCOM_Interface_Reference/nsILocalFile#initWithFile()" title="/en/XPCOM_Interface_Reference/nsILocalFile#initWithFile()">initWithFile</a>(in nsIFile aFile);</code> </td>
+    </tr>
+    <tr>
+      <td><code>void <a href="/en/XPCOM_Interface_Reference/nsILocalFile#initWithNativePath()" title="/en/XPCOM_Interface_Reference/nsILocalFile#initWithNativePath()">initWithNativePath</a>(in ACString filePath);</code> <span class="inlineIndicator noscript noscriptInline" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="/en/XPCOM_Interface_Reference/nsILocalFile#initWithPath()" title="/en/XPCOM_Interface_Reference/nsILocalFile#initWithPath()">initWithPath</a>(in AString filePath);</code> </td>
+    </tr>
+    <tr>
+      <td><code>boolean <a href="#isDirectory()">isDirectory</a>();</code></td>
+    </tr>
+    <tr>
+      <td><code>boolean <a href="#isExecutable()">isExecutable</a>();</code></td>
+    </tr>
+    <tr>
+      <td><code>boolean <a href="#isFile()">isFile</a>();</code></td>
+    </tr>
+    <tr>
+      <td><code>boolean <a href="#isHidden()">isHidden</a>();</code></td>
+    </tr>
+    <tr>
+      <td><code>boolean <a href="#isReadable()">isReadable</a>();</code></td>
+    </tr>
+    <tr>
+      <td><code>boolean <a href="#isSpecial()">isSpecial</a>();</code></td>
+    </tr>
+    <tr>
+      <td><code>boolean <a href="#isSymlink()">isSymlink</a>();</code></td>
+    </tr>
+    <tr>
+      <td><code>boolean <a href="#isWritable()">isWritable</a>();</code></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="/en/XPCOM_Interface_Reference/nsILocalFile#launch()" title="/en/XPCOM_Interface_Reference/nsILocalFile#launch()">launch</a>();</code> </td>
+    </tr>
+    <tr>
+      <td><code>PRLibraryStar <a href="/en/XPCOM_Interface_Reference/nsILocalFile#load()" title="/en/XPCOM_Interface_Reference/nsILocalFile#load()">load</a>();</code> <span class="inlineIndicator noscript noscriptInline" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#moveTo()">moveTo</a>(in nsIFile newParentDir, in AString newName);</code></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#moveToNative()">moveToNative</a>(in nsIFile newParentDir, in ACString newName);</code> <span class="inlineIndicator noscript noscriptInline" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#normalize()">normalize</a>();</code></td>
+    </tr>
+    <tr>
+      <td><code>FILE <a href="/en/XPCOM_Interface_Reference/nsILocalFile#openANSIFileDesc()" title="/en/XPCOM_Interface_Reference/nsILocalFile#openANSIFileDesc()">openANSIFileDesc</a>(in string mode);</code> <span class="inlineIndicator noscript noscriptInline" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span></td>
+    </tr>
+    <tr>
+      <td><code>PRFileDescStar <a href="/en/XPCOM_Interface_Reference/nsILocalFile#openNSPRFileDesc()" title="/en/XPCOM_Interface_Reference/nsILocalFile#openNSPRFileDesc()">openNSPRFileDesc</a>(in long flags, in long mode);</code> <span class="inlineIndicator noscript noscriptInline" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="#remove()">remove</a>(in boolean recursive);</code></td>
+    </tr>
+    <tr>
+      <td><code>void <a href="/en/XPCOM_Interface_Reference/nsILocalFile#reveal()" title="/en/XPCOM_Interface_Reference/nsILocalFile#reveal()">reveal</a>();</code> </td>
+    </tr>
+    <tr>
+      <td><code>void <a href="/en/XPCOM_Interface_Reference/nsILocalFile#setRelativeDescriptor()" title="/en/XPCOM_Interface_Reference/nsILocalFile#setRelativeDescriptor()">setRelativeDescriptor</a>(in nsIFile fromFile, in ACString relativeDesc);</code> </td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="Attributes" name="Attributes">Attributes</h2>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <td class="header">Attribute</td>
+      <td class="header">Type</td>
+      <td class="header">Description</td>
+    </tr>
+    <tr>
+      <td><code>directoryEntries</code></td>
+      <td><code><code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISimpleEnumerator" title="">nsISimpleEnumerator</a></code></code></td>
+      <td>Returns an enumeration of the elements in a directory. Each element in the enumeration is an <code>nsIFile</code>. <strong>Read only.</strong>
+        <h6 id="Exceptions_thrown" name="Exceptions_thrown">Exceptions thrown</h6>
+        <dl>
+          <dt>
+            <code>NS_ERROR_FILE_NOT_DIRECTORY</code></dt>
+          <dd>
+            Indicates that this <code>nsIFile</code> does not reference a directory.</dd>
+        </dl>
+      </td>
+    </tr>
+    <tr>
+      <td><code>diskSpaceAvailable</code> </td>
+      <td><code><a href="/en/PRInt64" title="en/PRInt64">PRInt64</a></code></td>
+      <td>The number of bytes available to non-superuser on the disk volume containing the <code>nsIFile</code>. <strong>Read only.</strong></td>
+    </tr>
+    <tr>
+      <td><code>fileSize</code></td>
+      <td><code><a href="/en/PRInt64" title="en/PRInt64">PRInt64</a></code></td>
+      <td>
+        <p>The value of this attribute is the number of bytes corresponding to the data represented by the file.</p>
+        <p>On the Mac, getting/setting the file size with <code>nsIFile</code> only deals with the size of the data fork. If you need to know the size of the combined data and resource forks use <code><a href="https://developer.mozilla.org/zh-CN/docs/XPCOM_Interface_Reference/nsILocalFileMac#GetFileSizeWithResFork()">nsILocalFileMac.GetFileSizeWithResFork()</a></code>.</p>
+        Changing the size of a <code>nsIFile</code> operates on the underlying filesystem, possibly truncating the existing file to specified size.</td>
+    </tr>
+    <tr>
+      <td><code>fileSizeOfLink</code></td>
+      <td><code><a href="/en/PRInt64" title="en/PRInt64">PRInt64</a></code></td>
+      <td>
+        <p>This attribute exposes the size of the symbolic link referenced by this <code>nsIFile</code>.</p>
+        <p>Unlike <code>fileSize</code>, this attribute corresponds to the size of the symbolic link referenced by this <code>nsIFile</code>. If this <code>nsIFile</code> does not reference a symbolic link, then the value of this attribute is undefined.</p>
+        The value of this attribute is the number of bytes corresponding to the data represented by the symbolic link. Any meta data, such as a resource fork on the Mac, is not included in the measurement of the file size. <strong>Read only.</strong></td>
+    </tr>
+    <tr>
+      <td><code>followLinks</code> </td>
+      <td><code><a href="/en/PRBool" title="en/PRBool">PRBool</a></code></td>
+      <td>
+        <p>Determines whether or not the <code>nsIFile</code> will automatically resolve symbolic links.</p>
+        By default, this value is <code>false</code> on all non-UNIX systems. As of Mozilla 1.7, this attribute is ignored on UNIX systems.</td>
+    </tr>
+    <tr>
+      <td><code>lastModifiedTime</code></td>
+      <td><code><a href="/en/PRInt64" title="en/PRInt64">PRInt64</a></code></td>
+      <td>
+        <p>This attribute exposes the time when the file referenced by this <code>nsIFile</code> was last modified.</p>
+        <p>The value of this attribute is milliseconds since midnight (00:00:00), January 1, 1970 Greenwich Mean Time (GMT).</p>
+        Changing the last modified time of a <code>nsIFile</code> operates on the underlying filesystem. As of <span title="">Gecko 1.7</span>, changing the last modified time of a non-existent file has undefined behavior.</td>
+    </tr>
+    <tr>
+      <td><code>lastModifiedTimeOfLink</code></td>
+      <td><code><a href="/en/PRInt64" title="en/PRInt64">PRInt64</a></code></td>
+      <td>
+        <p>This attribute exposes the time when the symbolic link referenced by this <code>nsIFile</code> was last modified.</p>
+        <p>Unlike <code>lastModifiedTime</code>, this attribute corresponds to the last modified time of the symbolic link referenced by this <code>nsIFile</code>. If this <code>nsIFile</code> does not reference a symbolic link, then the value of this attribute is undefined.</p>
+        <p>The value of this attribute is milliseconds since midnight (00:00:00), January 1, 1970 Greenwich Mean Time (GMT).</p>
+        Changing the last modified time of a <code>nsIFile</code> operates on the underlying filesystem. As of <span title="">Gecko 1.7</span>, changing the last modified time of a non-existent file has undefined behavior.</td>
+    </tr>
+    <tr>
+      <td><code>leafName</code></td>
+      <td><code><a href="/en/AString" title="en/AString">AString</a></code></td>
+      <td>
+        <p>This attribute exposes the name of the <code>nsIFile</code> without any directory components.</p>
+        Changing the leaf name of a <code>nsIFile</code> does not affect the underlying filesystem. It only changes what this <code>nsIFile</code> references.</td>
+    </tr>
+    <tr>
+      <td><code>nativeLeafName</code></td>
+      <td><code><a href="/en/ACString" title="en/ACString">ACString</a></code></td>
+      <td>
+        <p>This attribute exposes the name of the <code>nsIFile</code> without any directory components. [native character encoding variant]</p>
+        Changing the leaf name of a <code>nsIFile</code> does not affect the underlying filesystem. It only changes what this <code>nsIFile</code> references. <span class="inlineIndicator noscript noscriptInline" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span></td>
+    </tr>
+    <tr>
+      <td><code>nativePath</code></td>
+      <td><code><a href="/en/ACString" title="en/ACString">ACString</a></code></td>
+      <td>
+        <p>This attribute exposes the full path of the <code>nsIFile</code>. [native character encoding variant]</p>
+        The value of this attribute is a platform-specific file path. <strong>Read only.</strong> <span class="inlineIndicator noscript noscriptInline" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span></td>
+    </tr>
+    <tr>
+      <td><code>nativeTarget</code></td>
+      <td><code><a href="/en/ACString" title="en/ACString">ACString</a></code></td>
+      <td>
+        <p>This attribute exposes the full target of the <code>nsIFile</code> - the full path with any symbolic links dereferenced. [native character encoding variant]</p>
+        The value of this attribute is a platform-specific file path. <strong>Read only.</strong> <span class="inlineIndicator noscript noscriptInline" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span></td>
+    </tr>
+    <tr>
+      <td><code>parent</code></td>
+      <td><code><code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile" title="">nsIFile</a></code></code></td>
+      <td>
+        <p>This attribute returns the parent <code>nsIFile</code> for this <code>nsIFile</code>.</p>
+        The parent will be <code>null</code> when this <code>nsIFile</code> references the top of the volume. For example, C:\ does not have a parent. <strong>Read only.</strong></td>
+    </tr>
+    <tr>
+      <td><code>path</code></td>
+      <td><code><a href="/en/AString" title="en/AString">AString</a></code></td>
+      <td>
+        <p>This attribute exposes the full platform-specific path of the <code>nsIFile</code> (including the <code>leafName</code>). <strong>Read only.</strong></p>
+        Example, this could return "/home/user/foo.txt" or "C:\Images\my.jpeg"</td>
+    </tr>
+    <tr>
+      <td><code>permissions</code></td>
+      <td><code><a href="/en/unsigned_long" title="en/unsigned long">unsigned long</a></code></td>
+      <td>
+        <p>The value of this attribute is a UNIX-style file permission mask for this <code>nsIFile</code>.</p>
+        Changing the permissions of a <code>nsIFile</code> operates on the underlying filesystem. As of <span title="">Gecko 1.7</span>, changing the permissions of a non-existent file has undefined behavior.</td>
+    </tr>
+    <tr>
+      <td><code>permissionsOfLink</code></td>
+      <td><code><a href="/en/unsigned_long" title="en/unsigned long">unsigned long</a></code></td>
+      <td>
+        <p>The value of this attribute is a UNIX-style file permission mask for this <code>nsIFile</code>.</p>
+        <p>Unlike <code>permissions</code>, this attribute corresponds to the permissions of the symbolic link referenced by this <code>nsIFile</code>. If this <code>nsIFile</code> does not reference a symbolic link, then the value of this attribute is undefined.</p>
+        Changing the permissions of a <code>nsIFile</code> operates on the underlying filesystem. As of <span title="">Gecko 1.7</span>, changing the permissions of a non-existent file has undefined behavior.</td>
+    </tr>
+    <tr>
+      <td><code>persistentDescriptor</code> </td>
+      <td><code><a href="/en/ACString" title="en/ACString">ACString</a></code></td>
+      <td>
+        <p>On some platforms, the value of <a href="https://developer.mozilla.org/zh-CN/docs/XPCOM_Interface_Reference/nsIFile#path">nsIFile.path</a> may be insufficient to uniquely identify the file on the local file system. The persistent descriptor is intended to be used whenever a <code>nsIFile</code> needs to be serialized to disk and later recovered. This string is not intended for display to users.</p>
+        <div class="blockIndicator note"><strong>Note:</strong> The value of the <code>followLinks</code> attribute is not encoded in the persistent descriptor.</div></td>
+    </tr>
+    <tr>
+      <td><code>target</code></td>
+      <td><code><a href="/en/AString" title="en/AString">AString</a></code></td>
+      <td>
+        <p>This attribute exposes the full target of the <code>nsIFile</code> - the full path with any symbolic links dereferenced.</p>
+        <p>Accessor to the string <code>path</code>. The native version of these strings are not guaranteed to be a usable <code>path</code> to pass to NSPR or the C stdlib. There are problems that affect platforms on which a <code>path</code> does not fully specify a file because two volumes can have the same name (For example Mac). This is solved by holding "private", native data in the <code>nsIFile</code> implementation. This native data is lost when you convert to a string. DO NOT PASS TO USE WITH NSPR OR STDLIB! <strong>Read only.</strong></p>
+        <h6 id="Exceptions_thrown" name="Exceptions_thrown">Exceptions thrown</h6>
+        <dl>
+          <dt>
+            <code>NS_ERROR_FILE_INVALID_PATH</code></dt>
+          <dd>
+            Indicates that this <code>nsIFile</code> does not reference a symbolic links.</dd>
+        </dl>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="Constants" name="Constants">Constants</h2>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <td class="header">Constant</td>
+      <td class="header">Value</td>
+      <td class="header">Description</td>
+    </tr>
+    <tr>
+      <td><code>NORMAL_FILE_TYPE</code></td>
+      <td><code>0</code></td>
+      <td>A normal file.</td>
+    </tr>
+    <tr>
+      <td><code>DIRECTORY_TYPE</code></td>
+      <td><code>1</code></td>
+      <td>A directory/folder.</td>
+    </tr>
+    <tr>
+      <td><code>DELETE_ON_CLOSE</code> </td>
+      <td><code>0x80000000</code></td>
+      <td>Optional parameter used by <a href="/en/XPCOM_Interface_Reference/nsILocalFile#openNSPRFileDesc()" title="/en/XPCOM_Interface_Reference/nsILocalFile#openNSPRFileDesc()">openNSPRFileDesc</a></td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="Methods" name="Methods">Methods</h2>
+<h3 id="append()" name="append()">append()</h3>
+<p>This function is used for constructing a descendant of the current <code>nsIFile</code>.</p>
+<div class="note style-wrap">
+  <p><strong>Note:</strong> This method does not return a new <code>nsIFile</code>; it modifies the object it was called on. If the old <code>nsIFile</code> should be retained, use <code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile#clone()">clone()</a></code>.</p>
+</div>
+<pre class="eval">void append(
+  in AString node
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>node</code></dt>
+  <dd>
+    A string which is intended to be a child node of the <code>nsIFile</code>. This string must not contain a path separator character.</dd>
+</dl>
+<h6 id="Exceptions_thrown" name="Exceptions_thrown">Exceptions thrown</h6>
+<dl>
+  <dt>
+    <code>NS_ERROR_FILE_UNRECOGNIZED_PATH</code></dt>
+  <dd>
+    Indicates that aNode incorrectly contains a path separator character.</dd>
+</dl>
+<p></p><div><span class="indicatorInHeadline noscript noscriptMethod" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span><h3 id="appendNative">appendNative</h3></div><p></p>
+<p>This method is used for constructing a descendant of the current <code>nsIFile</code>. [native character encoding variant]</p>
+<pre class="eval">void appendNative(
+  in ACString node
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>node</code></dt>
+  <dd>
+    A string that is intended to be a child node of the current <code>nsIFile</code>. This string must not contain a path separator character. This string must be encoded using the native character encoding.</dd>
+</dl>
+<h6 id="Exceptions_thrown" name="Exceptions_thrown">Exceptions thrown</h6>
+<dl>
+  <dt>
+    <code>NS_ERROR_FILE_UNRECOGNIZED_PATH</code></dt>
+  <dd>
+    Indicates that aNode incorrectly contains a path separator character.</dd>
+</dl>
+<h3 id="clone()" name="clone()">clone()</h3>
+<p>This method creates a clone of the <code>nsIFile</code>. (It does NOT clone the file itself; see the copy methods.)</p>
+<pre class="eval">nsIFile clone();
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<p>None.</p>
+<h6 id="Return_value" name="Return_value">Return value</h6>
+<p>A new <code>nsIFile</code> instance that corresponds to the same file or directory as this <code>nsIFile</code>.</p>
+<h3 id="contains()" name="contains()">contains()</h3>
+<p>This method tests whether or not a <code>nsIFile</code> instance is a descendant of the this <code>nsIFile</code>.</p>
+<pre class="eval">boolean contains(
+  in nsIFile inFile,
+  in boolean recur
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>inFile</code></dt>
+  <dd>
+    The <code>nsIFile</code> to test.</dd>
+  <dt>
+    <code>recur</code></dt>
+  <dd>
+    This parameter specifies whether or not subdirectories should be inspected. As of <span title="">Gecko 1.7</span>, this parameter is ignored and always treated as false by the canonical Local File implementation.</dd>
+</dl>
+<h6 id="Return_value" name="Return_value">Return value</h6>
+<p><code>true</code> if inFile is a descendant of this <code>nsIFile</code>.</p>
+<h3 id="copyTo()" name="copyTo()">copyTo()</h3>
+<p>This method copies a source file to a new location if it does not already exist.</p>
+<p>This method will NOT resolve aliases/shortcuts during the copy.</p>
+<pre class="eval">void copyTo(
+  in nsIFile newParentDir,
+  in AString newName
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>newParentDir</code></dt>
+  <dd>
+    This parameter specifies the parent directory to copy the file into. If this parameter is <code>null</code>, then the parent directory of the file will be used.</dd>
+  <dt>
+    <code>newName</code></dt>
+  <dd>
+    This parameter allows you to specify a new leaf name for the file to be copied. This parameter may be empty, in which case the current leaf name will be used.</dd>
+</dl>
+<h6 id="Exceptions_thrown" name="Exceptions_thrown">Exceptions thrown</h6>
+<dl>
+  <dt>
+    <code>NS_ERROR_FILE_DESTINATION_NOT_DIR</code></dt>
+  <dd>
+    If the "newParentDir" is not a directory.</dd>
+  <dt>
+    <code>NS_ERROR_FILE_TARGET_DOES_NOT_EXIST</code></dt>
+  <dd>
+    Indicates that the current file path does not exist. It is not possible to copy a file that does not exist.</dd>
+  <dt>
+    <code>NS_ERROR_FILE_ALREADY_EXISTS</code></dt>
+  <dd>
+    Indicates that there is already a file named "newName" in the destination directory.</dd>
+</dl>
+<h3 id="copyToFollowingLinks()" name="copyToFollowingLinks()">copyToFollowingLinks()</h3>
+<p>This method copies a source file to a new location if it does not already exist.</p>
+<p>This method is identical to <code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile#copyTo()">copyTo()</a></code> except that any symbolic links will be followed as the name suggests.</p>
+<pre class="eval">void copyToFollowingLinks(
+  in nsIFile newParentDir,
+  in AString newName
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>newParentDir</code></dt>
+  <dd>
+    This parameter specifies the parent directory to copy the file into. If this parameter is <code>null</code>, then the parent directory of the file will be used.</dd>
+  <dt>
+    <code>newName</code></dt>
+  <dd>
+    This parameter allows you to specify a new leaf name for the file to be copied. This parameter may be empty, in which case the current leaf name will be used.</dd>
+</dl>
+<h6 id="Exceptions_thrown" name="Exceptions_thrown">Exceptions thrown</h6>
+<dl>
+  <dt>
+    <code>NS_ERROR_FILE_DESTINATION_NOT_DIR</code></dt>
+  <dd>
+    If the "newParentDir" is not a directory.</dd>
+  <dt>
+    <code>NS_ERROR_FILE_TARGET_DOES_NOT_EXIST</code></dt>
+  <dd>
+    Indicates that the current file path does not exist. It is not possible to copy a file that does not exist.</dd>
+  <dt>
+    <code>NS_ERROR_FILE_ALREADY_EXISTS</code></dt>
+  <dd>
+    Indicates that there is already a file named "newName" in the destination directory.</dd>
+</dl>
+<p></p><div><span class="indicatorInHeadline noscript noscriptMethod" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span><h3 id="copyToFollowingLinksNative">copyToFollowingLinksNative</h3></div><p></p>
+<p>This method copies this file to a new location. [native character encoding variant]</p>
+<p>This method is identical to <code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile#copyToNative()">copyToNative()</a></code> except that any symbolic links will be followed as the name suggests.</p>
+<pre class="eval">void copyToFollowingLinksNative(
+  in nsIFile newParentDir,
+  in ACString newName
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>newParentDir</code></dt>
+  <dd>
+    This parameter specifies the parent directory to copy the file into. If this parameter is <code>null</code>, then the parent directory of the file will be used.</dd>
+  <dt>
+    <code>newName</code></dt>
+  <dd>
+    This parameter allows you to specify a new leaf name for the file to be copied. This parameter may be empty, in which case the current leaf name will be used. This string must be encoded using the native character encoding.</dd>
+</dl>
+<h6 id="Exceptions_thrown" name="Exceptions_thrown">Exceptions thrown</h6>
+<dl>
+  <dt>
+    <code>NS_ERROR_FILE_DESTINATION_NOT_DIR</code></dt>
+  <dd>
+    If the "newParentDir" is not a directory.</dd>
+  <dt>
+    <code>NS_ERROR_FILE_TARGET_DOES_NOT_EXIST</code></dt>
+  <dd>
+    Indicates that the current file path does not exist. It is not possible to copy a file that does not exist.</dd>
+  <dt>
+    <code>NS_ERROR_FILE_ALREADY_EXISTS</code></dt>
+  <dd>
+    Indicates that there is already a file named "newName" in the destination directory.</dd>
+</dl>
+<p></p><div><span class="indicatorInHeadline noscript noscriptMethod" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span><h3 id="CopyToNative">CopyToNative</h3></div><p></p>
+<p>This method copies this file to a new location. [native character encoding variant]</p>
+<pre class="eval">void CopyToNative(
+  in nsIFile newParentDir,
+  in ACString newName
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>newParentDir</code></dt>
+  <dd>
+    This parameter specifies the parent directory to copy the file into. If this parameter is <code>null</code>, then the parent directory of the file will be used.</dd>
+  <dt>
+    <code>newName</code></dt>
+  <dd>
+    This parameter allows you to specify a new leaf name for the file to be copied. This parameter may be empty, in which case the current leaf name will be used. This string must be encoded using the native character encoding.</dd>
+</dl>
+<h6 id="Exceptions_thrown" name="Exceptions_thrown">Exceptions thrown</h6>
+<dl>
+  <dt>
+    <code>NS_ERROR_FILE_DESTINATION_NOT_DIR</code></dt>
+  <dd>
+    If the "newParentDir" is not a directory.</dd>
+  <dt>
+    <code>NS_ERROR_FILE_TARGET_DOES_NOT_EXIST</code></dt>
+  <dd>
+    Indicates that the current file path does not exist. It is not possible to copy a file that does not exist.</dd>
+  <dt>
+    <code>NS_ERROR_FILE_ALREADY_EXISTS</code></dt>
+  <dd>
+    Indicates that there is already a file named "newName" in the destination directory.</dd>
+</dl>
+<h3 id="create()" name="create()">create()</h3>
+<p>This method creates a new file or directory in the file system corresponding to the file path represented by this <code>nsIFile</code>. This method will create any path segments that do not already exist.</p>
+<pre class="eval">void create(
+  in unsigned long type,
+  in unsigned long permissions
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>type</code></dt>
+  <dd>
+    This specifies the type of file system object to be made. The only two types at this time are file and directory which are defined above.</dd>
+  <dt>
+    <code>permissions</code></dt>
+  <dd>
+    A UNIX-style file permissions value. For example, the octal value 0600 may be used to limit read and write access to the current user of the system. This parameter may be ignored on systems that do not support file permissions.</dd>
+</dl>
+<h6 id="Exceptions_thrown" name="Exceptions_thrown">Exceptions thrown</h6>
+<dl>
+  <dt>
+    <code>NS_ERROR_FILE_ALREADY_EXISTS</code></dt>
+  <dd>
+    Indicates that the file or directory already exists.</dd>
+  <dt>
+    <code>NS_ERROR_FILE_UNKNOWN_TYPE</code></dt>
+  <dd>
+    Indicates that the value of "type" does not correspond to a known type.</dd>
+</dl>
+<h3 id="createUnique()" name="createUnique()">createUnique()</h3>
+<p>This function will create a new file or directory in the file system. Any nodes that have not been created or resolved, will be. If this file already exists, we try variations on the leaf name "suggestedName" until we find one that did not already exist. This method will create any path segments that do not already exist.</p>
+<pre class="eval">void createUnique(
+  in unsigned long type,
+  in unsigned long permissions
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>type</code></dt>
+  <dd>
+    This specifies the type of file system object to be made. The only two types at this time are file and directory which are defined above.</dd>
+  <dt>
+    <code>permissions</code></dt>
+  <dd>
+    A UNIX-style file permissions value. For example, the octal value 0600 may be used to limit read and write access to the current user of the system. This parameter may be ignored on systems that do not support file permissions.</dd>
+</dl>
+<h6 id="Exceptions_thrown" name="Exceptions_thrown">Exceptions thrown</h6>
+<dl>
+  <dt>
+    <code>NS_ERROR_FILE_UNKNOWN_TYPE</code></dt>
+  <dd>
+    Indicates that the value of "type" does not correspond to a known type.</dd>
+  <dt>
+    <code>NS_ERROR_FILE_TOO_BIG</code></dt>
+  <dd>
+    Indicates that the search for nonexistent files was unsuccessful because all of the attempted leaf name variants already exist.</dd>
+</dl>
+<h3 id="equals()" name="equals()">equals()</h3>
+<p>This method tests whether or not two <code>nsIFile</code> instances correspond to the same file or directory.</p>
+<pre class="eval">boolean equals(
+  in nsIFile inFile
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>inFile</code></dt>
+  <dd>
+    The <code>nsIFile</code> to compare this <code>nsIFile</code> against.</dd>
+</dl>
+<h6 id="Return_value" name="Return_value">Return value</h6>
+<p><code>true</code> if "inFile" is equivalent to this <code>nsIFile</code>.</p>
+<h3 id="exists()" name="exists()">exists()</h3>
+<p>This method tests whether or not this <code>nsIFile</code> exists.</p>
+<pre class="eval">boolean exists()
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<p>None.</p>
+<h6 id="Return_value" name="Return_value">Return value</h6>
+<p><code>true</code> if the file or directory exists. Otherwise it returns <code>false</code>.</p>
+<h3 id="isDirectory()" name="isDirectory()">isDirectory()</h3>
+<p>This method tests whether or not this <code>nsIFile</code> corresponds to a directory.</p>
+<pre class="eval">boolean isDirectory();
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<p>None.</p>
+<h6 id="Return_value" name="Return_value">Return value</h6>
+<p><code>true</code> if this <code>nsIFile</code> corresponds to a directory. Otherwise it returns <code>false</code>.</p>
+<h3 id="isExecutable()" name="isExecutable()">isExecutable()</h3>
+<p>This method tests whether or not this <code>nsIFile</code> corresponds to a file that may be executed.</p>
+<div class="note style-wrap">
+  <p><strong>Note:</strong> This method does not work on all platforms due to <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=322865" title="isExecutable method of nsILocalFile reports false for executable files on OSX">bug 322865</a>.</p>
+</div>
+<pre class="eval">boolean isExecutable();
+</pre>
+<div class="note style-wrap">
+  <p><strong>Note:</strong> Use <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIProcess" title="">nsIProcess</a></code> to then execute/run this file.</p>
+</div>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<p>None.</p>
+<h6 id="Return_value" name="Return_value">Return value</h6>
+<p><code>true</code> if the <code>nsIFile</code> may be executed by the user. Otherwise it returns <code>false</code>.</p>
+<h3 id="isFile()" name="isFile()">isFile()</h3>
+<p>This method tests whether or not this <code>nsIFile</code> corresponds to a normal file.</p>
+<pre class="eval">boolean isFile();
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<p>None.</p>
+<h6 id="Return_value" name="Return_value">Return value</h6>
+<p><code>true</code> if this <code>nsIFile</code> corresponds to a normal file. Otherwise it returns <code>false</code>.</p>
+<h3 id="isHidden()" name="isHidden()">isHidden()</h3>
+<p>This method tests whether or not this <code>nsIFile</code> corresponds to a file or directory that is hidden. In Unix, hidden files start with a period. On Mac and Windows, they have an attribute bit set.</p>
+<pre class="eval">boolean isHidden();
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<p>None.</p>
+<h6 id="Return_value" name="Return_value">Return value</h6>
+<p><code>true</code> if the file or directory is hidden. Otherwise it returns <code>false</code>.</p>
+<h3 id="isReadable()" name="isReadable()">isReadable()</h3>
+<p>This method tests whether or not this <code>nsIFile</code> corresponds to a file or directory that may be read by the user.</p>
+<pre class="eval">boolean isReadable();
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<p>None.</p>
+<h6 id="Return_value" name="Return_value">Return value</h6>
+<p><code>true</code> if the file or directory may be read by the user. Otherwise it returns <code>false</code>.</p>
+<h3 id="isSpecial()" name="isSpecial()">isSpecial()</h3>
+<p>This method tests whether or not this <code>nsIFile</code> corresponds to a special system file.</p>
+<p></p><div class="blockIndicator note"><strong>Note:</strong> The definition of a special system file is platform dependent. For example, under UNIX platforms this might correspond to a device file, socket, or fifo.</div><p></p>
+<pre class="eval">boolean isSpecial();
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<p>None.</p>
+<h6 id="Return_value" name="Return_value">Return value</h6>
+<p><code>true</code> if this <code>nsIFile</code> corresponds to a special system file. Otherwise it returns <code>false</code>.</p>
+<h3 id="isSymlink()" name="isSymlink()">isSymlink()</h3>
+<p>This method tests whether or not this <code>nsIFile</code> corresponds to a symbolic link, shortcut, or alias.</p>
+<pre class="eval">boolean isSymlink();
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<p>None.</p>
+<h6 id="Return_value" name="Return_value">Return value</h6>
+<p><code>true</code> if this <code>nsIFile</code> corresponds to a symbolic link. Otherwise it returns <code>false</code>.</p>
+<h3 id="isWritable()" name="isWritable()">isWritable()</h3>
+<p>This method tests whether or not this <code>nsIFile</code> corresponds to a file or directory that may be modified by the user.  As of Gecko 9, files on read only shares will return false.  Files that are exclusively opened on Win32 will return true if they are normally writable, and files that don't have write permissions will return false. For specific handling before Gecko 9 (Firefox 9.0 / Thunderbird 9.0 / SeaMonkey 2.6), please see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=682571" title="FIXED: nsLocalFile::isWritable behaves wrongly on Windows">bug 682571</a>.</p>
+<pre class="eval">boolean isWritable();
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<p>None.</p>
+<h6 id="Return_value" name="Return_value">Return value</h6>
+<p><code>true</code> if the file or directory may be modified by the user. Otherwise it returns <code>false</code>.</p>
+<h3 id="moveTo()" name="moveTo()">moveTo()</h3>
+<p>This method moves this file to a new location.</p>
+<div class="note">
+  <strong>Note:</strong> If this method succeeds, this instance will be updated to point to the new file.</div>
+<p>If the current file path corresponds to a regular file (for storage of bytes), and if the new leaf name identifies a regular file that already exists, then this method will overwrite the destination file.</p>
+<p>Usually, "move" means to relocate the file to a different directory without changing the file's contents or properties, or in fact the file's serial number (inode). That is a very fast operation because it just changes directory information. The actual data doesn't move.</p>
+<p>Unfortunately, an actual "move" is impossible between different volumes (disks or partitions). This method attempts to do the "right thing" when moving files across volumes. That is, it will copy the old file to the new location, try to assign the file attributes as the old file had them, and then delete the old file. You should be aware of these possible problems:</p>
+<ul>
+  <li>This process may take a long time if the file is large and/or the bandwidth is narrow.</li>
+  <li>If the <code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile#copyTo()">copyTo()</a></code> method loses data, such as Mac resource data, then so will such a move.</li>
+  <li>If attribute data cannot be recreated (like the file owner if you don't have enough privileges, or ACL data if moving to a non-ACL volume), then those attributes will be lost.</li>
+  <li>The new file's serial number will almost certainly be different, because it is a different file, probably stored in a different physical location.</li>
+</ul>
+<pre class="eval">void moveTo(
+  in nsIFile newParentDir,
+  in AString newName
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>newParentDir</code></dt>
+  <dd>
+    This parameter specifies the parent directory to move the file into. If this parameter is <code>null</code>, then the parent directory of the file will be used.</dd>
+  <dt>
+    <code>newName</code></dt>
+  <dd>
+    This parameter allows you to specify a new leaf name for the file to be moved. This parameter may be empty, in which case the current leaf name will be used.</dd>
+</dl>
+<h6 id="Exceptions_thrown" name="Exceptions_thrown">Exceptions thrown</h6>
+<dl>
+  <dt>
+    <code>NS_ERROR_FILE_TARGET_DOES_NOT_EXIST</code></dt>
+  <dd>
+    Indicates that the current file path does not exist. It is not possible to move a file that does not exist.</dd>
+  <dt>
+    <code>NS_ERROR_FILE_DIR_NOT_EMPTY</code></dt>
+  <dd>
+    Indicates that an attempt was made to move a directory to the location of an existing directory that is not empty.</dd>
+  <dt>
+    <code>NS_ERROR_FILE_ACCESS_DENIED</code></dt>
+  <dd>
+    Indicates that an attempt was made to move a directory to the location of an existing directory that is not writable.</dd>
+  <dt>
+    <code>NS_ERROR_FILE_DESTINATION_NOT_DIR</code></dt>
+  <dd>
+    Indicates that "newParentDir" exists and is not a directory.</dd>
+</dl>
+<p></p><div><span class="indicatorInHeadline noscript noscriptMethod" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span><h3 id="moveToNative">moveToNative</h3></div><p></p>
+<p>This method moves this file to a new location. [native character encoding variant]</p>
+<div class="note">
+  <strong>Note:</strong> If this method succeeds, this instance will be updated to point to the new file.</div>
+<p>If the current file path corresponds to a regular file (for storage of bytes), and if the new leaf name identifies a regular file that already exists, then this method will overwrite the destination file.</p>
+<p>Usually, "move" means to relocate the file to a different directory without changing the file's contents or properties, or in fact the file's serial number (inode). That is a very fast operation because it just changes directory information. The actual data doesn't move.</p>
+<p>Unfortunately, an actual "move" is impossible between different volumes (disks or partitions). This method attempts to do the "right thing" when moving files across volumes. That is, it will copy the old file to the new location, try to assign the file attributes as the old file had them, and then delete the old file. You should be aware of these possible problems:</p>
+<ul>
+  <li>This process may take a long time if the file is large and/or the bandwidth is narrow.</li>
+  <li>If the <code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile#copyTo()">copyTo()</a></code> method loses data, such as Mac resource data, then so will such a move.</li>
+  <li>If attribute data cannot be recreated (like the file owner if you don't have enough privileges, or ACL data if moving to a non-ACL volume), then those attributes will be lost.</li>
+  <li>The new file's serial number will almost certainly be different, because it is a different file, probably stored in a different physical location.</li>
+</ul>
+<pre class="eval">void moveToNative(
+  in nsIFile newParentDir,
+  in ACString newName
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<p> </p>
+<dl>
+  <dt>
+    <code>newParentDir</code></dt>
+  <dd>
+    This parameter specifies the parent directory to copy the file into. If this parameter is <code>null</code>, then the parent directory of the file will be used.</dd>
+  <dt>
+    <code>newName</code></dt>
+  <dd>
+    This parameter allows you to specify a new leaf name for the file to be copied. This parameter may be empty, in which case the current leaf name will be used. This string must be encoded using the native character encoding.</dd>
+</dl>
+<h6 id="Exceptions_thrown" name="Exceptions_thrown">Exceptions thrown</h6>
+<dl>
+  <dt>
+    <code>NS_ERROR_FILE_TARGET_DOES_NOT_EXIST</code></dt>
+  <dd>
+    Indicates that the current file path does not exist. It is not possible to move a file that does not exist.</dd>
+  <dt>
+    <code>NS_ERROR_FILE_DIR_NOT_EMPTY</code></dt>
+  <dd>
+    Indicates that an attempt was made to move a directory to the location of an existing directory that is not empty.</dd>
+  <dt>
+    <code>NS_ERROR_FILE_ACCESS_DENIED</code></dt>
+  <dd>
+    Indicates that an attempt was made to move a directory to the location of an existing directory that is not writable.</dd>
+  <dt>
+    <code>NS_ERROR_FILE_DESTINATION_NOT_DIR</code></dt>
+  <dd>
+    Indicates that "newParentDir" exists and is not a directory.</dd>
+</dl>
+<h3 id="normalize()" name="normalize()">normalize()</h3>
+<p>This method is used to canonicalize the path represented by this <code>nsIFile</code>. (for example removing .. and . components on Unix).</p>
+<p>As of <span title="">Gecko 1.7</span>, this method is only implemented under UNIX builds (except for Mac OSX). This method will fail if the path does not exist.</p>
+<pre class="eval">void normalize();
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<p>None.</p>
+<h6 id="Exceptions_thrown" name="Exceptions_thrown">Exceptions thrown</h6>
+<dl>
+  <dt>
+    <code>NS_ERROR_FILE_TARGET_DOES_NOT_EXIST</code></dt>
+  <dd>
+    Indicates that the file path does not exist.</dd>
+  <dt>
+    <code>NS_ERROR_FILE_DESTINATION_NOT_DIR</code></dt>
+  <dd>
+    Indicates that a component of the path prefix is not a directory.</dd>
+  <dt>
+    <code>NS_ERROR_FILE_ACCESS_DENIED</code></dt>
+  <dd>
+    Read or search permission was denied for a component of the path prefix.</dd>
+</dl>
+<h3 id="remove()" name="remove()">remove()</h3>
+<p>This method removes the file or directory corresponding to the file path represented by this <code>nsIFile</code>.</p>
+<p>This method will not resolve any symlinks.</p>
+<pre class="eval">void remove(
+  in boolean recursive
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+  <dt>
+    <code>recursive</code></dt>
+  <dd>
+    If this <code>nsIFile</code> corresponds to a directory that is not empty, then this parameter must be <code>true</code> in order for the directory to be deleted. Otherwise, this parameter is ignored.</dd>
+</dl>
+<h6 id="Exceptions_thrown" name="Exceptions_thrown">Exceptions thrown</h6>
+<dl>
+  <dt>
+    <code>NS_ERROR_FILE_TARGET_DOES_NOT_EXIST</code></dt>
+  <dd>
+    Indicates that the current file path does not exist. It is not possible to remove a file that does not exist.</dd>
+  <dt>
+    <code>NS_ERROR_FILE_DIR_NOT_EMPTY</code></dt>
+  <dd>
+    Indicates that an attempt was made to remove a directory that is not empty.</dd>
+  <dt>
+    <code>NS_ERROR_FILE_ACCESS_DENIED</code></dt>
+  <dd>
+    Indicates that an attempt was made to remove a file in a way that exceeded your permissions. Details depend on your file system and how its permissions work.</dd>
+</dl>
+<h2 id="Remarks" name="Remarks">Remarks</h2>
+<p>All string-valued methods and attributes have two forms. The preferred form operates on UTF-16 (Unicode) encoded character strings. The alternate form operates on character strings encoded in the "native" multibyte character set. The native character encoding is defined as the single-byte character encoding used with the standard fopen function on the host system.</p>
+<p>The native character encoding is determined using platform specific methods. As of <span title="">Gecko 1.7</span>, it is UTF-8 on Mac OS X. On Linux and other UNIX platforms, it is the value returned from nl_langinfo (CODESET), which usually corresponds to the value of the LC_ALL, LC_CTYPE and LANG environment variables (with the precedence the same as the order they're enumerated). On Win32 platforms, it is the currently selected ANSI codepage (specified by CP_ACP).</p>
+<p>The word "Native" appears in the name of methods that operate on or return strings encoded in the native character set.</p>
+<p>A string containing characters encoded in the native character set cannot be safely passed to JavaScript via XPConnect. Therefore, the "native" methods and attributes are not scriptable.</p>
+<p>XPCOM provides the string conversion functions <a href="/en/NS_CStringToUTF16" title="en/NS_CStringToUTF16">NS_CStringToUTF16</a> and <a href="/en/NS_UTF16ToCString" title="en/NS_UTF16ToCString">NS_UTF16ToCString</a>, which can be used to convert a string between UTF-16 and the native character encoding.</p>
+<p>This interface was frozen for <span title="">Gecko 1.0</span>. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=129279" title="FIXED: nsIFile unicode/utf8/ascii task">bug 129279</a> for details. From <span title="(Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)">Gecko 2.0</span> interfaces are no longer frozen.</p>
+<h2 id="See_also" name="See_also">See also</h2>
+<ul>
+  <li><code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILocalFile" title="">nsILocalFile</a></code></li>
+  <li><a href="/en/NS_CStringToUTF16" title="en/NS_CStringToUTF16">NS_CStringToUTF16</a></li>
+  <li><a href="/en/NS_UTF16ToCString" title="en/NS_UTF16ToCString">NS_UTF16ToCString</a></li>
+</ul>
+<p></p>

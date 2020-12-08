@@ -1,0 +1,176 @@
+---
+title: XPCOM の利用例
+slug: Archive/Mozilla/XUL/Tutorial/XPCOM_Examples
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/XPCOM_Examples
+---
+<p>
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:XPCOM_Interfaces" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Trees">次のページ  »</a></p>
+</div>
+<p>このセクションでは、XPCOM の利用例を、いくつかの新しいインターフェイスを用いて紹介します。
+</p><p><span id="Window_Management"></span>
+</p>
+<h3 id=".E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.81.AE.E7.AE.A1.E7.90.86" name=".E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.81.AE.E7.AE.A1.E7.90.86"> ウィンドウの管理 </h3>
+<div class="note">
+この例には、<a href="ja/XUL_Tutorial/Templates">もう少しあとのセクション</a>で説明する RDF データソースが使用されています。既にこれに関する知識を持っているのでなければ、とりあえずこの例はスキップして、後にまわした方がよいかもしれません。</div>
+<p><span id="Creating_a_Window_menu"></span>
+</p>
+<h4 id="Window_.E3.83.A1.E3.83.8B.E3.83.A5.E3.83.BC.E3.81.AE.E7.94.9F.E6.88.90" name="Window_.E3.83.A1.E3.83.8B.E3.83.A5.E3.83.BC.E3.81.AE.E7.94.9F.E6.88.90"> Window メニューの生成 </h4>
+<p>Mozilla では、そのときに開いているウィンドウのリストを RDF データソースとして利用できます。
+これによって、アプリケーションで開いているウィンドウのリストを表示する Window メニューを作成することが可能です。
+このためのデータソースは、<code>rdf:window-mediator</code> になります。
+<span style="color: darkgreen; background: #ef9;">【訳注: Mediator は、GoF による 23 のデザインパターンの 1 つで「仲介者」といった意味】</span>
+以下に使用例を示します。
+</p><p><span id="%E4%BE%8B1"><a id="%E4%BE%8B1"></a><strong>例1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_xpcomex_1.xul.txt">ソース</a>
+</p>
+<pre>&lt;toolbox&gt;
+ &lt;menubar id="windowlist-menubar"&gt;
+  &lt;menu label="Window"&gt;
+   &lt;menupopup id="window-menu" datasources="rdf:window-mediator" ref="NC:WindowMediatorRoot"&gt;
+    &lt;template&gt;
+     &lt;rule&gt;
+      &lt;menuitem uri="rdf:*" label="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+     &lt;/rule&gt;
+    &lt;/template&gt;
+   &lt;/menupopup&gt;
+  &lt;/menu&gt;
+ &lt;/menubar&gt;
+&lt;/toolbox&gt;
+</pre>
+<p>これによって、Window メニューが作成され、開いている全てのウィンドウの一覧を表示することが可能になります。
+たくさんのブラウザウィンドウを開いてからこの例を試して、それらのウィンドウがメニューに現れることを確かめてみてください。
+</p><p><span id="Window_mediator_component"></span>
+</p>
+<h4 id=".E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.83.A1.E3.83.87.E3.82.A3.E3.82.A8.E3.83.BC.E3.82.BF_.E3.82.B3.E3.83.B3.E3.83.9D.E3.83.BC.E3.83.8D.E3.83.B3.E3.83.88" name=".E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.83.A1.E3.83.87.E3.82.A3.E3.82.A8.E3.83.BC.E3.82.BF_.E3.82.B3.E3.83.B3.E3.83.9D.E3.83.BC.E3.83.8D.E3.83.B3.E3.83.88"> ウィンドウメディエータ コンポーネント </h4>
+<p>これでウィンドウの一覧表示は十分なので、
+次にメニュー項目をクリックすることでウィンドウを切り替えられるように拡張することを考えます。
+これは、ウィンドウメディエータ コンポーネントを利用することで実現できます。
+このコンポーネントは、<code>nsIWindowDataSource</code> インターフェイスを実装しています。
+以下に、コンポーネントを取得する例を示します。
+</p>
+<pre>var wmdata = Components.classes["@mozilla.org/rdf/datasource;1?name=window-mediator"].getService();
+wmdata.QueryInterface(Components.interfaces.nsIWindowDataSource);
+</pre>
+<p>このコードは、<a class="external" href="http://xulplanet.com/references/xpcomref/comps/c_rdfdatasource1namewindowmediator.html">ウィンドウメディエータのデータソースのコンポーネント</a>を取得します。
+ここで利用するコンポーネントは、最初の例で (内部的に) window-mediator RDF データソースを処理しているものと同じです。
+なお、このコンポーネントは、RDF サービス (RDF データソースを管理する別のサービス) から取得することも可能です。
+</p><p><a class="external" href="http://www.xulplanet.com/references/xpcomref/ifaces/nsIWindowDataSource.html">nsIWindowDataSource</a> インターフェイスには、<code>getWindowForResource</code> 関数があり、これを利用してリソースに対応するウィンドウオブジェクトを取得することができます。
+最初の例で、ウィンドウのリストを生成し、テンプレート経由でメニューに加えています。
+このときテンプレートは、各 <code><code><a href="/ja/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></code> 要素に対して、それぞれ <code><code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> 属性を生成します。
+この id 属性に設定される値がリソースとして利用できます。
+まとめると、ウィンドウのフォーカスを切り替えるためには、以下のことを行う必要があります。
+</p>
+<ol><li> ユーザがクリックした要素を特定する。
+</li><li> その要素から <code><code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> 属性の値を取得する。
+</li><li> その値を <code>getWindowFromResource()</code> に渡して、ウィンドウオブジェクトを取得する。
+</li><li> 取得したウィンドウにフォーカスを切り替える。
+</li></ol>
+<p>以下に、これを行った例を示します。
+</p>
+<pre>&lt;toolbox&gt;
+ &lt;menubar id="windowlist-menubar"&gt;
+  &lt;menu label="Window" oncommand="switchFocus(event.target);"&gt;
+   &lt;menupopup id="window-menu" datasources="rdf:window-mediator" ref="NC:WindowMediatorRoot"&gt;
+    &lt;template&gt;
+     &lt;rule&gt;
+      &lt;menuitem uri="rdf:*" label="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+     &lt;/rule&gt;
+    &lt;/template&gt;
+   &lt;/menupopup&gt;
+  &lt;/menu&gt;
+ &lt;/menubar&gt;
+&lt;/toolbox&gt;
+
+&lt;script&gt;
+function switchFocus(elem)
+{
+  var mediator = Components.classes["@mozilla.org/rdf/datasource;1?name=window-mediator"].getService();
+  mediator.QueryInterface(Components.interfaces.nsIWindowDataSource);
+
+  var resource = elem.getAttribute('id');
+  switchwindow = mediator.getWindowForResource(resource);
+
+  if (switchwindow){
+    switchwindow.focus();
+  }
+}
+&lt;/script&gt;
+</pre>
+<p>この例では、メニュー要素に対してコマンドハンドラが設定され、メニュー項目が選択されたときに選択された要素を引数として関数 <code>switchFocus()</code> を呼び出すようになっています。
+</p><p>関数 <code>switchFocus()</code> は、以下の動作を行います。
+</p>
+<ul><li> 最初に、ウィンドウメディエータのデータソースのインターフェイスを実装するコンポーネントを取得します。
+</li><li> 次に、要素の <code><code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> 属性を取得します。ここには、リソースとして利用可能な値が設定されています。
+</li><li> 関数 <code>getWindowForResource()</code> は、渡されたリソースに対応するウィンドウを返します。これによって取得され <code>switchwindow</code> 変数に格納されたウィンドウは、JavaScript のウィンドウオブジェクトと同様に扱うことができます。
+</li><li> ここでは <code><span id="m-focus"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/focus">focus()</a></code></span></code> 関数を呼び出していますが、そのオブジェクトが提供する関数であれば任意のものを呼び出すことが可能です。
+</li></ul>
+<p><span id="Cookies"></span>
+</p>
+<h3 id=".E3.82.AF.E3.83.83.E3.82.AD.E3.83.BC" name=".E3.82.AF.E3.83.83.E3.82.AD.E3.83.BC"> クッキー </h3>
+<p>次の例として、ブラウザに保存されているクッキーのリストを取得してみます。
+これは、クッキーサービスを利用することで実現できます。
+クッキーサービスは、<code><a class="external" href="http://xulplanet.com/references/xpcomref/ifaces/nsICookieManager.html">nsICookieManager</a></code> インターフェイス実装しており、これを利用してすべてのクッキーを列挙することが可能です。
+ここでは、例として MozillaZine から設定されたすべてのクッキーの名前を表示するメニューリストを構築してみます。
+</p>
+<pre>&lt;script&gt;
+
+function getCookies()
+{
+  var menu = document.getElementById("cookieMenu");
+  menu.removeAllItems();
+
+  var cookieManager = Components.classes["@mozilla.org/cookiemanager;1"]
+                        .getService(Components.interfaces.nsICookieManager);
+
+  var iter = cookieManager.enumerator;
+  while (iter.hasMoreElements()){
+    var cookie = iter.getNext();
+    if (cookie instanceof Components.interfaces.nsICookie){
+      if (cookie.host == "www.mozillazine.org")
+        menu.appendItem(cookie.name,cookie.value);
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;hbox&gt;
+  &lt;menulist id="cookieMenu" onpopupshowing="getCookies();"/&gt;
+&lt;/hbox&gt;
+</pre>
+<p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code></code> 要素に <code><code id="a-onpopupshowing"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/onpopupshowing">onpopupshowing</a></code></code> 属性を設定することで、
+<code>getCookies()</code> 関数がメニューが開かれるたびごとに呼び出されるようにしています。
+<code>getCookies()</code> の最初の 2 行は、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code></code> 要素を取得して、すべての項目をメニューから削除しています。
+<code>getCookies()</code> は、メニューが開かれるたびに繰り返し呼び出されることになるので、
+以前の項目が残ったままにならないように最初に削除する必要があるわけです。
+</p><p>次に、クッキーマネージャを取得します。
+このクッキーマネージャには <code>enumerator</code> メソッドがあり、
+このメソッドは <code><a href="ja/NsISimpleEnumerator">nsISimpleEnumerator</a></code> を実装した<span style="border-bottom: 1px dashed green;" title="enumerator">列挙</span>オブジェクトを返します。
+このオブジェクトを使用することで、全てのクッキーに対して反復処理が行えます。
+列挙オブジェクトには <code>hasMoreElements()</code> メソッドがあり、これは最後のクッキーが得られるまで true を返し続けます。
+また、<code>getNext()</code> メソッドは、クッキーを取得して、列挙オブジェクトのインデックスを次のクッキーに進めます。
+このメソッドは、単に<span style="border-bottom: 1px dashed green;" title="generic">汎用</span>オブジェクトを返すため、
+使用する前に <code>QueryInterface()</code> を使って <code><a class="external" href="http://xulplanet.com/references/xpcomref/ifaces/nsICookie.html">nsICookie</a></code> にする必要がありますが、
+ここでは <code>instanceof</code> 演算子を使っているため、このとき同様の効果が得られています。
+</p><p>最後に、クッキーのメニューに項目を追加します。
+このためにクッキーの <code>host</code>、<code>name</code>、<code>value</code> プロパティを利用します。
+メニューには、項目を追加する <code><span id="m-appendItem"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/appendItem">appendItem()</a></code></span></code> 関数があるので、これにラベルと値を与えて項目を追加します。
+</p><p><span id="See_also"></span>
+</p>
+<h3 id=".E3.81.9D.E3.82.8C.E4.BB.A5.E5.A4.96.E3.81.AE.E4.BE.8B" name=".E3.81.9D.E3.82.8C.E4.BB.A5.E5.A4.96.E3.81.AE.E4.BE.8B"> それ以外の例 </h3>
+<p>以下のページでは、さらにたくさんの例が紹介されています。
+</p>
+<ul><li> <a href="ja/Code_snippets">Code snippets</a>
+</li><li> <a class=" external" href="http://kb.mozillazine.org/Category:XPCOM_example_code" rel="freelink">http://kb.mozillazine.org/Category:XPCOM_example_code</a>
+</li></ul>
+<p>次のセクションでは、ツリーの作成について見ていきます。
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:XPCOM_Interfaces" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Trees">次のページ  »</a></p>
+</div>
+<p><br>
+</p>
+<div class="noinclude">
+</div>

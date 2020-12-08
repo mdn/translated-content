@@ -1,0 +1,118 @@
+---
+title: Components.utils.import
+slug: Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.import
+tags:
+  - NeedsContent
+  - 'XPCOM:Language Bindings'
+  - XPConnect
+translation_of: Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.import
+---
+<p>このメソッドは <a href="/ja/Firefox_3_for_developers" title="ja/Firefox_3_for_developers">Firefox 3</a> で導入され、異なるスコープ間でコードを簡単に共有するのに使われます。例えば、自分のコンポーネントの中で、コンポーネント登録の長い定型文をコピー＆ペーストすることを避けるために <a href="/ja/XPCOMUtils.jsm" title="ja/XPCOMUtils.jsm">XPCOMUtils.jsm</a> をインポートすることができます。</p>
+
+<p>詳細は、<a href="/ja/JavaScript_code_modules/Using" title="ja/Using_JavaScript_code_modules">JavaScript コードモジュールの利用</a> を参照してください。</p>
+
+<div class="note">
+<p><strong>注記:</strong> <span title="(Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)">Gecko 2.0</span> 以前、JavaScript コードモジュールは <strong>file:</strong> URL または <strong>resource:</strong> URL のみでしか読み込めませんでした。<span title="(Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)">Gecko 2.0</span> で <strong>chrome:</strong> URL からの読み込みに対応しました。JAR アーカイブ内にあっても使用できます。</p>
+</div>
+
+<p><span id="Syntax"></span></p>
+
+<h3 id="Syntax" name="Syntax">構文</h3>
+
+<pre class="eval">Components.utils.import<em>(url</em> [, <em>scope</em>]);
+
+// 上記のコードでは jslint などの構文チェックツールコンパイラエラーが報告される場合は以下のように書けます。
+
+Components.utils["import"](<em>url </em>[, <em>scope</em>]);</pre>
+
+<p><span id="Parameters"></span></p>
+
+<h3 id="Parameters" name="Parameters">引数</h3>
+
+<dl>
+ <dt><code>url</code></dt>
+ <dd>読み込まれるスクリプトの URL の文字列。URL は、ディスク上のファイルを指さなくてはなりません。JAR ファイル内を指すことがあります。</dd>
+ <dt><code>scope</code></dt>
+ <dd>スクリプト上にインポートされる任意のオブジェクト。省略した場合、グローバルオブジェクトが使用されます。</dd>
+ <dd>
+ <div class="warning">
+ <p>Under Boot2Gecko, the scope is not optional. If your code is meant to work on all platforms, you should always provide a scope.</p>
+
+ <p>In case of doubt, <code>this</code> is generally a good scope.</p>
+ </div>
+ </dd>
+ <dt>return value</dt>
+ <dd>the module's global object.<br>
+ use of the return value is discouraged since it grants access to the module's internal properties which are not part of its public API.</dd>
+</dl>
+
+<p>読み込んだファイル内でエラー (構文エラーなど) が発生した場合、import が例外を投げます。</p>
+
+<p><span id="Example"></span></p>
+
+<h3 id="Example" name="Example">例</h3>
+
+<pre class="eval">Components.utils.import("resource://gre/modules/XPCOMUtils.jsm");
+</pre>
+
+<p><span id="Difference_from_mozIJSSubScriptLoader"></span></p>
+
+<h3 id="Difference_from_mozIJSSubScriptLoader" name="Difference_from_mozIJSSubScriptLoader">mozIJSSubScriptLoader との違い</h3>
+
+<p><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIJSSubScriptLoader" title="">mozIJSSubScriptLoader</a></code> との違い:</p>
+
+<ul>
+ <li>異なる場所から同じコードをインポート/読み込みした時の挙動
+  <ul>
+   <li>サブスクリプトローダ (<span style="color: green;">subscript loader</span>) は、特定のコードが実行される度毎に 呼び出し元 (<span style="color: green;">caller</span>) のグローバルオブジェクトで評価します。</li>
+   <li><code>Components.utils.import</code> はそれぞれのモジュールのコードを一度だけ、自分自身のスコープの中で評価します</li>
+  </ul>
+
+  <p>例:</p>
+
+  <pre class="eval">var scope1 = {}, scope2 = {};
+Components.utils.import("resource://gre/modules/JSON.jsm", scope1);
+Components.utils.import("resource://gre/modules/JSON.jsm", scope2);
+assert(scope2.XPCOMUtils === scope1.XPCOMUtils);
+</pre>
+
+  <p>...<code>true</code> を返します。対して:</p>
+
+  <pre class="eval">var someURL = "resource://gre/modules/JSON.jsm";
+var obj1 = {}, obj2 = {};
+var loader = Components.classes["@mozilla.org/moz/jssubscript-loader;1"]
+                       .getService(Components.interfaces.mozIJSSubScriptLoader);
+loader.loadSubScript(someURL, obj1);
+loader.loadSubScript(someURL, obj2);
+assert(obj2 === obj1);
+</pre>
+
+  <p>..<code>false</code> を返します。</p>
+
+  <p>これは、異なるスコープで実行している JS 間での効果的なコード (とデータ?) の共有に <code>Components.utils.import</code> がより適している事を意味しています。</p>
+ </li>
+</ul>
+
+<p><span id="Additional_Resources"></span></p>
+
+<h3 id="Additional_Resources" name="Additional_Resources">追加リソース</h3>
+
+<article class="approved text-content">
+<div class="boxed translate-rendered">
+<ul>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Components.utils">Components.utils</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=238324" title="FIXED: Implement JavaScript code-sharing module system">バグ 238324</a></li>
+ <li>The documentation in <a href="https://dxr.mozilla.org/mozilla-central/source/js/xpconnect/idl/xpccomponents.idl" rel="custom">xpccomponents.idl</a></li>
+ <li>The tests in <code><a href="https://dxr.mozilla.org/mozilla-central/source/js/xpconnect/tests/unit/" rel="custom">js/xpconnect/tests/unit/</a></code></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Using#Importing_CommonJS_modules">Importing SDK/CommonJS modules into other code</a></li>
+</ul>
+</div>
+</article>
+
+<div class="ckeditor-container editor-container dirty">
+<div class="editor">
+<div style="height: 168px;">
+<div style="border: 1px solid rgb(182, 182, 182); width: 503px; position: fixed; top: 0px;"> </div>
+</div>
+</div>
+</div>

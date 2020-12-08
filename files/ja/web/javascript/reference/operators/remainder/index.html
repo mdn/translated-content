@@ -1,0 +1,78 @@
+---
+title: 剰余 (%)
+slug: Web/JavaScript/Reference/Operators/Remainder
+tags:
+  - JavaScript
+  - Language feature
+  - Operator
+  - Reference
+translation_of: Web/JavaScript/Reference/Operators/Remainder
+---
+<div>{{jsSidebar("Operators")}}</div>
+
+<p>剰余演算子 (<code>%</code>) は、1つ目のオペランドが2つ目のオペランドで除算されたときに残った剰余を返します。 これは常に配当のサインを取ります。</p>
+
+<div>{{EmbedInteractiveExample("pages/js/expressions-remainder.html")}}</div>
+
+<div></div>
+
+
+
+<h2 id="構文">構文</h2>
+
+<pre class="syntaxbox notranslate"><strong>Operator:</strong> <var>var1</var> % <var>var2</var>
+</pre>
+
+<h2 id="例">例</h2>
+
+<h3 id="正の値の剰余">正の値の剰余</h3>
+
+<pre class="brush: js notranslate"> 12 % 5  //  2
+ 1 % -2 //  1
+ 1 % 2  //  1
+ 2 % 3  //  2
+5.5 % 2 // 1.5
+</pre>
+
+<h3 id="負の値の剰余">負の値の剰余</h3>
+
+<pre class="brush: js notranslate">-12 % 5 // -2
+-1 % 2  // -1
+-4 % 2  // -0</pre>
+
+<h3 id="NaNの剰余">NaNの剰余</h3>
+
+<pre class="brush: js notranslate">NaN % 2 // NaN</pre>
+
+<h2 id="仕様">仕様</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-multiplicative-operators', 'Remainder operator')}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="ブラウザーの互換性">ブラウザーの互換性</h2>
+
+
+
+<p>{{Compat("javascript.operators.remainder")}}</p>
+
+<h2 id="関連項目">関連項目</h2>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Addition">加算演算子</a></li>
+ <li><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Subtraction">減算演算子</a></li>
+ <li><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Multiplication">乗算演算子</a></li>
+ <li><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Division">除算演算子</a></li>
+ <li><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Exponentiation">べき乗演算子</a></li>
+ <li><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Increment">インクリメント演算子</a></li>
+ <li><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Decrement">デクリメント演算子</a></li>
+ <li><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Unary_negation">単項マイナス演算子</a></li>
+ <li><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Unary_plus">単項プラス演算子</a></li>
+</ul>

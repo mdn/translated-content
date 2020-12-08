@@ -1,0 +1,62 @@
+---
+title: 'Thunderbird 拡張機能のビルド その３: インストールマニフェスト'
+slug: 'Extensions/Thunderbird/Building_a_Thunderbird_extension_3:_install_manifest'
+translation_of: >-
+  Mozilla/Thunderbird/Thunderbird_extensions/Building_a_Thunderbird_extension_3:_install_manifest
+---
+<p><code>install.rdf</code> は拡張機能についての一般的な情報を提供するXMLファイルです。</p>
+<p><br>
+ もし<a href="/ja/docs/Extensions/Thunderbird/Building_a_Thunderbird_extension_2:_extension_filesystem">前のステップ</a>にて記述にアドオンビルダーを使用した場合、圧縮パッケージ内にある  <code>install.rdf</code> をテキストエディタで開いてください。<br>
+ 以下に記述された要素内の値は、 あなたがフォーム上で供給した値を元に挿入されます。<br>
+ このファイルはまた、いくつかの付加的な無視することが出来るオプション値を含みます。</p>
+<p>もしファイルを手動で作成した場合、以下の手順に従ってください:<br>
+ あなたの拡張機能のトップディレクトリ階層にある  <code>install.rdf</code> を開き、以下のテキストを貼り付けてください。</p>
+<pre class="brush: xml">&lt;?xml version="1.0"?&gt;
+
+&lt;RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#"&gt;
+
+  &lt;Description about="urn:mozilla:install-manifest"&gt;
+    &lt;em:id&gt;myfirstext@jen.zed&lt;/em:id&gt;
+    &lt;em:name&gt;My First Extension&lt;/em:name&gt;
+    &lt;em:version&gt;1.0&lt;/em:version&gt;
+    &lt;em:creator&gt;jenzed&lt;/em:creator&gt;
+
+    &lt;em:targetApplication&gt;
+      &lt;Description&gt;
+        &lt;em:id&gt;{3550f703-e582-4d05-9a08-453d09bdfdc6}&lt;/em:id&gt;
+        &lt;em:minVersion&gt;1.5&lt;/em:minVersion&gt;
+        &lt;em:maxVersion&gt;5.0.*&lt;/em:maxVersion&gt;
+      &lt;/Description&gt;
+    &lt;/em:targetApplication&gt;
+
+  &lt;/Description&gt;
+&lt;/RDF&gt;
+</pre>
+<p>以下のアイテムはあなたのアプリケーションに合わせて、カスタマイズされるべきです:</p>
+<ul>
+ <li><code><strong>&lt;em:id&gt;<a class="link-mailto" href="mailto:myfirstext@jen.zed" rel="freelink">myfirstext@jen.zed</a>&lt;/em:id&gt;</strong></code>: 拡張機能のIDです。<br>
+  前半は拡張機能の短い名前で、英数小文字で無ければなりません。<br>
+  後半はあなたのファーストネームとラストネーム、もしくはあなたの web サイトのトップレベルドメインなどのピリオドで区切られた2つのパートからなる値です。<br>
+  この値は E メールアドレス形式ですが、 E メールアドレスではありません。<br>
+  他の拡張機能と衝突しないように一意の値であるべきです。</li>
+ <li><code><strong>&lt;em:name&gt;My First Extension&lt;/em:name&gt;</strong></code>: 拡張機能の名前です。Thunderbirdのアドオンマネージャに表示されます。</li>
+ <li><code><strong>&lt;em:version&gt;1.0&lt;/em:version&gt;</strong></code>: 拡張機能のバージョン番号です。<br>
+  拡張機能の新しいバージョンをリリースするたびに更新しなければなりません。<br>
+  それは Thunderbird のバージョン番号ではありません。（ Thunderbird のバージョン番号は <code>minVersion</code> 、 <code>maxVersion</code> に保存されます。）</li>
+ <li><code><strong>&lt;em:creator&gt;jenzed&lt;/em:creator&gt;</strong></code>: このオプション値は拡張機能の作者名を保存するのに使われます。</li>
+ <li><code><strong>&lt;em:id&gt;{3550f703-e582-4d05-9a08-453d09bdfdc6}&lt;/em:id&gt;</strong></code>: アドオンが開発対象としているアプリケーション ID です。これは Mozilla によって定義されます。<br>
+  正しいアプリケーション ID は<a class="link-https" href="https://addons.mozilla.org/ja/firefox/pages/appversions" title="https://addons.mozilla.org/ja/firefox/pages/appversions">ここで</a>見つけることが出来ます。<br>
+  通常、 ID は変更されず、異なるバージョンの Thunderbird においても常に同じです。</li>
+ <li><strong><code>&lt;em:minVersion&gt;1.5&lt;/em:minVersion&gt;</code></strong>: 拡張機能が動作することを意図している Thunderbird の初期のバージョンです。<br>
+  ワイルドカード（"*"）は使用できません。<br>
+  サポートしているバージョン番号とフォーマットの一覧は、『<a class="external" href="https://addons.mozilla.org/ja/firefox/pages/appversions/" title="http://addons.mozilla.org/ja/firefox/pages/appversions">正しいアプリケーションのバージョン</a>』を見てください。</li>
+ <li><strong><code>&lt;em:maxVersion&gt;5.0.*&lt;/em:maxVersion&gt;</code></strong>: 拡張機能が動作することを意図している Thunderbird の最新のバージョンです。<br>
+  現在使用可能なバージョンよりも高くすることが出来ません。<br>
+  "5.0.*" は拡張機能が Thunderbird 5.0 と任意のマイナーバージョン 5.0.x のリリースにて機能することを示します。<br>
+  サポートしているバージョン番号とフォーマットの一覧は、『<a class="external" href="https://addons.mozilla.org/ja/firefox/pages/appversions/" title="http://addons.mozilla.org/ja/firefox/pages/appversions">正しいアプリケーションのバージョン</a>』を見てください。</li>
+</ul>
+<p><code>install.rdf に記述することが出来るオプション値はもっとあります。それらは</code> 『<a class="internal" href="/ja/docs/Install_Manifests" title="ja/Install Manifests">Install Manifests</a>』に記載されています。<br>
+ Description 要素の子要素である限り、任意の順番で指定できます。</p>
+<p>{{ Previous("Extensions/Thunderbird/Building_a_Thunderbird_extension_2:_extension_filesystem") }}</p>
+<p>{{ Next("Extensions/Thunderbird/Building_a_Thunderbird_extension_4:_chrome_manifest") }}</p>

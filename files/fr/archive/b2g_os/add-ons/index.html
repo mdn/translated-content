@@ -1,0 +1,108 @@
+---
+title: Modules B2G OS
+slug: Archive/B2G_OS/Add-ons
+tags:
+  - Add-ons
+  - Apps
+  - Extensions
+  - Firefox OS
+  - customizations
+translation_of: Archive/B2G_OS/Add-ons
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/fr/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/fr/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<div class="note">
+<p dir="ltr"><strong>Note </strong>: Les modules B2G OS sont basés sur l'<a href="/fr/docs/Mozilla/Add-ons/WebExtensions">API WebExtensions</a> qui est également prise en charge par Firefox pour ordinateur à partir de la version 42 et qui se base sur les APIs des extensions utilisées dans Chrome et Opera.</p>
+</div>
+
+<h2 id="Prérequis">Prérequis</h2>
+
+<p>Pour commencer à développer des extensions, vous devez suivre les étapes ci-dessous pour effectuer la configuration.</p>
+
+<p> </p>
+
+<h3 id="1._Activer_le_débogage_USB">1. Activer le débogage USB</h3>
+
+<p> </p>
+
+<p>Dans l'application <em>Paramètres</em> de l'appareil, sélectionnez <em>Développeurs &gt; Débogage via USB &gt; ADB et outils de développement</em>.  Vous devriez maintenant pouvoir déboguer les applications installées avec WebIDE, soit via un câble USB, soit <a href="/fr/docs/Outils/Débogage_distant/Debugging_Firefox_OS_over_Wifi">en Wifi</a> (câble USB non requis.)</p>
+
+<h3 id="3._Configurer_WebIDE">3. Configurer WebIDE</h3>
+
+<p>L'outil <a href="/fr/docs/Outils/WebIDE">WebIDE</a> est un composant de Firefox et peut être utilisé pendant le développement pour installer des modules sur votre téléphone — voir <a href="/fr/Firefox_OS/Add-ons/Développer_des_add-ons_pour_Firefox_OS#Testing_your_add-on_using_WebIDE">Tester votre module avec WebIDE</a> pour plus d'informations.</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<h3 id="Développer">Développer</h3>
+
+<ul>
+ <li dir="ltr"><strong>Tutorial </strong>: <a href="https://developer.mozilla.org/fr/Firefox_OS/Add-ons/D%C3%A9velopper_des_add-ons_pour_Firefox_OS">https://developer.mozilla.org/fr/Firefox_OS/Add-ons/D%C3%A9velopper_des_add-ons_pour_Firefox_OS</a></li>
+ <li dir="ltr"><strong>Exemple détaillé </strong>: <a href="https://hacks.mozilla.org/2015/11/building-an-ios-style-unread-notifications-add-on-for-firefox-os/">https://hacks.mozilla.org/2015/11/building-an-ios-style-unread-notifications-add-on-for-firefox-os/</a></li>
+ <li dir="ltr"><strong>Référence de l'API </strong>: <a href="https://developer.mozilla.org/fr/docs/Mozilla/Add-ons/WebExtensions">https://developer.mozilla.org/fr/docs/Mozilla/Add-ons/WebExtensions</a></li>
+</ul>
+
+<h3 dir="ltr" id="sect1"> </h3>
+
+<h3 dir="ltr" id="Contribuer">Contribuer</h3>
+
+<ul>
+ <li dir="ltr"><strong>Liste de diffusion </strong>: <a href="https://mail.mozilla.org/listinfo/dev-addons">https://mail.mozilla.org/listinfo/dev-fxos</a></li>
+ <li dir="ltr"><strong>Forum Discourse </strong>: <a href="https://discourse.mozilla-community.org/c/add-ons/development">https://discourse.mozilla-community.org/c/add-ons/development</a></li>
+ <li dir="ltr"><strong>IRC</strong> :  irc.mozilla.org, #webextensions et #fxos</li>
+ <li dir="ltr"><strong>Rejoindre le groupe Telegram non-officiel </strong>: <a href="https://telegram.me/joinchat/BTLPMAC90O9n8cpgsZ03_A">https://telegram.me/joinchat/BTLPMAC90O9n8cpgsZ03_A</a></li>
+ <li dir="ltr"><strong>Signalez-nous les nouvelles APIs auxquelles nous devrions donner la priorité </strong>: <a href="https://webextensions.uservoice.com/forums/315663-webextension-api-ideas">https://webextensions.uservoice.com/forums/315663-webextension-api-ideas</a></li>
+ <li dir="ltr"><strong>Suivez-nous sur Twitter </strong>: <a href="https://twitter.com/MozWebExt">@MozWebExt</a></li>
+</ul>

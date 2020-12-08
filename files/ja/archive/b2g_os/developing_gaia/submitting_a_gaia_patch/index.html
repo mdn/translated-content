@@ -1,0 +1,119 @@
+---
+title: Gaia のパッチを提出する
+slug: Archive/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch
+tags:
+  - Bugzilla
+  - Firefox OS
+  - Gaia
+  - コントリビュート
+  - パッチ
+translation_of: Archive/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch
+---
+<div class="summary">
+<p>これまでに、コード変更を完了し、それがGaiaを壊していないか検証しているはずです。次のステップは中心リポジトリにパッチを提出する事で、この記事ではその説明を意図しています。</p>
+</div>
+
+<p>Gaia にパッチを送るのは、慣れるまでややトリッキーでしょう、なぜなら Bugzilla <strong>と</strong> Github と、正しいシーケンスとするために特殊なフラグを使用することが含まれているためです。</p>
+
+<h2 id="Autolanderを使った容易なパッチ提出">Autolanderを使った容易なパッチ提出</h2>
+
+<p><a href="https://github.com/mozilla/autolander">Autolander</a> はGaia (と、一緒に使用されるその他のプロジェクト) にパッチを送るのに要する、多くのステップを自動的に扱うツールであり、その過程の時間短縮とエラー削減になります。Autolander は、プルリクエストとバグを自動で添付したりして、Bugzilla から Github へのワークフローを統合します。Autolander を使用するには:</p>
+
+<ol>
+ <li>最初に、bugzilla にバグを登録して、まだ誰もコード変更していない場合に、何を行なっているのかを示します。これは <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox%20OS">Firefox OS product </a>の下に投稿すべきで、かつあなたのコードが何をするのかについて良い説明を付けます。</li>
+ <li>今度はパッチの <a href="https://help.github.com/articles/creating-a-pull-request">プルリクエストを作成する</a> 時間です。最初から我々のガイドに従ってきている場合、Gaiaリポジトリをローカルにフォークして一意に名づけたブランチに対して変更を加えているはずです。次に変更を <code>「git add .」</code> して、<code>「git commit -m 'コミットメッセージ'</code>」とします。</li>
+ <li><code>'<code>コミットメッセージ</code>'</code>にはBugzilla のバグ番号とバグのタイトルを含める必要があります。それに加え、パッチが何を行うのか、誰がコミットしたのかを記述します。例えばこう:
+  <pre class="brush: bash">Bug 9999999 - Fix that annoying bug R=johndoe</pre>
+ </li>
+ <li>github上の、あなたのGaiaフォークにコードをプッシュして、次にコードを含めてもらうためにPR(プルリクエスト)を作成します。</li>
+ <li>プルリクエストが開かれたら、PR のタイトル内に見つかるバグに対して、自動的に添付されます。</li>
+ <li>将来的には、添付ファイルが推奨レビューワーから r+ を与えられた時、キーワード項目に <code>autoland</code> キーワードを追加して、Gaia master にコードをランドできるようになります(つまりAutolander はコードをランドするでしょう: PR をマージして、バグに対してコミットを置き、バグが解決済みだとマークするまで) <strong>しかしながら</strong>、現在ここの部分はまだ作業中なので、いまのところは <code>checkin-needed</code> キーワードを追加して、他の適切な人があなたの代わりにランドしてくれるのを待たねばなりません。</li>
+</ol>
+
+<div class="note">
+<p><strong>記</strong>: Autolander はmasterにランドする前に統合テストを実行します。統合テストがパスしない場合、Autolander はコードをランドするのを拒否します。プルリクエストとコミットメッセージにバグ番号が入っているかといった基本的なバリデーションが実行されます。</p>
+</div>
+
+<div class="note">
+<p><strong>記</strong>: プルリクエストは、ランドするのを要求されるためにランドされます。プルリクエストは統合ブランチにマージされ、このブランチ内で並行して統合テストが実行されます。PRが統合テストに失敗した場合、統合ブランチからも拒否されて、残っているコミットから統合ブランチが再度ビルドされます。コミットがパスした場合はmasterをそのコミットまで fast-forward します。</p>
+</div>
+
+<h2 id="手動でのパッチ提出">手動でのパッチ提出</h2>
+
+<p>何らかの理由で、Autolander に頼りたくない場合、下記の手順に従って、手動でGaiaにパッチを提出します。</p>
+
+<ol>
+ <li>最初に、bugzilla にバグを登録して、まだ誰もコード変更していない場合に、何を行なっているのかを示します。これは <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox%20OS">Firefox OS product </a>の下に投稿すべきで、かつあなたのコードが何をするのかについて良い説明を付けます。</li>
+ <li>今度はパッチの <a href="https://help.github.com/articles/creating-a-pull-request">プルリクエストを作成する</a> 時間です。最初から我々のガイドに従ってきている場合、Gaiaリポジトリをローカルにフォークして一意に名づけたブランチに対して変更を加えているはずです。次に変更を <code>「git add .」</code> して、<code>「git commit -m 'コミットメッセージ'</code>」とします。</li>
+ <li><code>'<code>コミットメッセージ</code>'</code>にはBugzilla のバグ番号とバグのタイトルを含める必要があります。それに加え、パッチが何を行うのか、誰がコミットしたのかを記述します。例えばこう:
+  <pre class="brush: bash">Bug 9999999 - Fix that annoying bug R=johndoe</pre>
+ </li>
+ <li>github上の、あなたのGaiaフォークにコードをプッシュして、次にコードを含めてもらうためにPR(プルリクエスト)を作成します。</li>
+ <li>PR の URL を bugzilla のバグに添付します (<em>Add an attachment</em> のリンクに従い、ファイル入力モードにて添付としてペーストするテキストを選び、PR の URL を添付の内容として入力し、簡単な説明を入力します)。</li>
+ <li>Bugzilla バグへの PR の添付上に、レビューを依頼します。<code>review: ?</code> フラグを添付物に加えて依頼できるでしょう。次に、あなたのコードが適用されるモジュールのオーナーを入れます(詳細は <a href="https://wiki.mozilla.org/Modules/FirefoxOS">モジュールオーナーのページ</a> を見て下さい。)</li>
+ <li>パッチをレビューするレビューアが割り当てられるのを待ちます。この時点で、多分レビューアは Github の PR に 変更/修正 を要求するようコメントして、Bugzilla にリンクするでしょう。</li>
+ <li>レビューアのコメントに対応して、前と同様に PR に更なる変更をプッシュして、 <code>review: ?</code> フラグを外します。</li>
+ <li>いったんレビューアのコメントが向けられて <code>r+</code> フラグ (レビュー/承認済みを意味します) が付けられると、<a href="https://github.com/ginatrapani/todo.txt-android/wiki/Squash-All-Commits-Related-to-a-Single-Issue-into-a-Single-Commit">全コミットを1つにつぶし(squash)</a><a href="https://github.com/ginatrapani/todo.txt-android/wiki/Squash-All-Commits-Related-to-a-Single-Issue-into-a-Single-Commit">ます</a> (下記の <a href="#Tips_on_Gaia_Rebasing">Tips_on_Gaia_Rebasing</a> の節も読んで下さい。)。</li>
+ <li>キーワード項目に <code>checkin-needed</code> キーワードを加えます。この時点で誰かがあなたのパッチを Gaia のソースに定着させる (PR をマージするなど) のを待つ必要があります。</li>
+ <li>おめでとうございます! あなたのコードは Firefox OS の一部になりました!</li>
+</ol>
+
+<div class="note">
+<p><strong>記</strong>: レビュー毎に1つのコミットを突き出すのをお勧めします。</p>
+</div>
+
+<div class="note">
+<p><strong>記</strong>: これ以上のパッチ投稿手順は<a href="https://github.com/mozilla-b2g/gaia/blob/master/CONTRIBUTING.md">contributing.md</a>で見つけられます。</p>
+</div>
+
+<h2 id="GaiaのRebaseについてのTips">GaiaのRebaseについてのTips</h2>
+
+<p>Gaia の master ブランチは常に(1日に何度も何度も)変更されています。2時間かかるパッチ作成をした後、master ブランチがあなたの下で変わっている事に気づくかもしれません。<br>
+ <br>
+ あなたの作業ブランチ (例. <code>my-code-fix</code>) から、最初に rebase を試すのはこのようになります:</p>
+
+<pre class="brush: bash">git checkout -b my-code-fix-r1
+git pull --rebase upstream master</pre>
+
+<p>衝突がなければ、このように続けます:</p>
+
+<pre class="brush: bash">git checkout my-code-fix
+git pull --rebase upstream master
+git branch -D my-code-fix-r1</pre>
+
+<p>衝突のある場合、衝突した変更の開発者と一緒に解決して、上記の rebase プロセスを繰り返します。</p>
+
+<h2 id="エンジニアリングバグに対してステータスを_トラッキングする">エンジニアリングバグに対してステータスを トラッキングする</h2>
+
+<p>Mozillaは <a href="/en-US/docs/Developer_Guide/Committing_Rules_and_Responsibilities">Sheriff</a>(保安官) という特別権限を持っています。 Sheriff にはコードをマージしたり、ブランチ状態をメンテする責任があります。Firefox OS チーム内にいるテストの失敗を調査するsheriffの数は限られているため、sheriff が不完全なパッチの全てを元に戻すのは困難です。</p>
+
+<p>Firefox OS では、ゆえに、パッチが動作するか否かの検証で失敗した場合、問題を解決する新しいパッチを定着させるための新しいバグを開くのが好まれます。これはQAとプロマネのチームにトラッキングステータスの問題を引き起こします。</p>
+
+<p>ゆえに、我々はステータストラッキングバグとエンジニアリングバグを分けています。</p>
+
+<ul>
+ <li>ステータストラッキングバグは "meta" キーワードで識別されます。ステータスバグは受容可能な条件を満たさない場合や、再現手順に失敗する場合にも、再度開かれる事があります。</li>
+ <li>エンジニアリングバグは自動テストに失敗したり、全く動作しない時<strong>だけに</strong>開かれるべきです。あるパッチでエンジニアリングバグの一部分が修正された場合、バグを複製して "see also" 項目にオリジナルのバグへの参照を記し、失敗するポイントを記述します。</li>
+</ul>
+
+<div class="note">
+<p><strong>記</strong>: これはユーザストーリーバグでもあります。プロマネはユーザストーリーの項目にユーザストーリーと需要可能な条件をうめます。</p>
+</div>
+
+<h3 id="たまたまステータストラッキング中のバグを定着させた場合に回復する">たまたまステータストラッキング中のバグを定着させた場合に回復する</h3>
+
+<p>こうなった場合、パニックにならないで下さい。たまたまパッチを定着させたり、レビューを得たり、トランクに定着させたり、何も修正されていないと報告されたりした場合、なすべきことはここにあります:</p>
+
+<ol>
+ <li>Bugzilla の UI の右下隅の "Clone this bug" を押して新規バグを作成し、オリジナルの項目の大半をそこにコピーします。ホワイトボード、キーワード、STR/ユーザのストーリーが新しいバグにコピーされているのを確認します。</li>
+ <li>新規のバグが古いバグにブロックされるようセットします。新規バグは、新しいステータストラッキングバグになるでしょう。</li>
+ <li><em>needinfo</em> フラグを使って、適切なプロマネステータストラッキングバグが変更されたのが知れ渡るように警告します。Wiki上にて <a href="https://wiki.mozilla.org/FirefoxOS/Teams">Firefox OSの別のプロマネのメールアドレスを発見</a> できます。</li>
+ <li>新規のエンジニアリングバグを作成して、故障手順や受容可能な条件を記述します。また、この新規バグを使ってステータストラッキングバグをブロックします。</li>
+ <li>新規バグの解決法を提供するよう試みます。楽しくハックしましょう!!!</li>
+</ol>
+
+<h2 id="パッチを別のブランチに取り込むには">パッチを別のブランチに取り込むには</h2>
+
+<p>バグの別バージョンのタグが見られる事もあるでしょう。Firefox OSの古めのブランチにパッチを持ち上げたい場合、パッチを定着させる規約を満たすかどうか確認します。詳細は<a href="https://wiki.mozilla.org/Release_Management/B2G_Landing">B2G Landing page</a>で見つかります。</p>
+
+<div style="background-color: transparent; color: #000000; position: absolute; top: 1914px; left: 277px; padding: 0px; border-radius: 2px;" id="divLookup"><img></div>

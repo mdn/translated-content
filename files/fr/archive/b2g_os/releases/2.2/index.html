@@ -1,0 +1,125 @@
+---
+title: Firefox OS 2.2 pour les développeurs
+slug: Archive/B2G_OS/Releases/2.2
+tags:
+  - '2.2'
+  - Firefox OS
+  - Notes de version
+translation_of: Archive/B2G_OS/Releases/2.2
+---
+<div>
+<p class="summary">Cette page détaille les fonctionnalités développeurs nouvellement implémentées dans Gecko et qui sont spécifiques à Firefox OS 2.2, ainsi que les fonctionnalités du produit et des outils de développement, et d'autres points notables de cette nouvelle version.</p>
+</div>
+
+<div class="note">
+<p><strong>Note </strong>: Le composant Gecko de Firefox OS 2.2 est basé sur <strong>Firefox 35/36/37</strong>.</p>
+</div>
+
+<h2 id="Fonctionnalités_du_produit">Fonctionnalités du produit</h2>
+
+<p>Cette section énumère différentes catégories de fonctionnalités nouvelles ou améliorées.</p>
+
+<h3 id="Fonctionnalités_systèmes">Fonctionnalités systèmes</h3>
+
+<dl>
+ <dt>Bluetooth</dt>
+ <dd>Bluedroid a été déplacé dans un processus distinct pour accroître la sécurité (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1005934" title="FIXED: Move bluedroid to a separate process">bug 1005934</a>.)</dd>
+ <dt>Sélection de texte</dt>
+ <dd>Pour prendre en charge le Copier/Coller, des possibilités de sélection de texte ont été ajoutées au système.</dd>
+ <dt>WebRTC</dt>
+ <dd>Le rendu matériel a été ajouté sur WebRTC pour améliorer la gestion de l'alimentation et économiser l'autonomie de la batterie (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1043558" title="FIXED: Use gralloc buffers for WebRTC local camera preview">bug 1043558</a>.)</dd>
+ <dt>SIM Tool Kit (STK)</dt>
+ <dd>Le support STK a été ajouté pour lire les numéros d'urgence (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1061130" title="FIXED: [STK] 3GPP TS 22.030 6.6.4 An abbreviated dialling code shall be able to be read using the following procedure: N(N)(N)#">bug 1061130</a>.)</dd>
+ <dd>Les icônes STK sont maintenant affichées sur les pages des services SIM (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1016807" title="FIXED: B2G STK: Support for STK icon display (GAIA work for Bug 824145)">bug 1016807</a>.)</dd>
+ <dt>Recherche</dt>
+ <dd>L'expérience utilisateur pour la recherche a été améliorée pour faciliter le choix du moteur de recherche par l'utilisateur (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1099157" title="FIXED: [Meta] Refactor search results layout">bug 1099157</a>.)</dd>
+ <dd>Les suggestions de recherche basées sur du texte sont à présent obtenues depuis le moteur de recherche par défaut, ce qui permet de trouver plus facilement ce que l'utilisateur recherche (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1098494" title="FIXED: [User Story] Support search suggestion based on provider">bug 1098494</a>.)</dd>
+ <dt>Vie privée</dt>
+ <dd>Les utilisateurs peuvent désormais naviguer sans enregistrer d'historique grâce à la navigation privée (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1081731" title="FIXED: Add private browsing to Firefox OS in Gaia">bug 1081731</a>.)</dd>
+ <dd>La prise en charge a été ajoutée pour ajuster la précision de la position vers une position approximative d'après différents types basiques de détection de position (désactivé par défaut) (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1073419" title="[ALA] All gecko code needed to support adjustable location accuracy">bug 1073419</a>.)</dd>
+ <dt>Plate-forme</dt>
+ <dd>Le démarrage des applications et les performances générales ont été améliorés (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1074783" title="[META] SMS app launch latency is higher than LA in v2.1">bug 1074783</a>, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1082262" title="[meta] Contact app launch latency is worse compared to Android on quad core 1 GB device">bug 1082262</a>, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1082268" title="[meta] Music app launch latency is worse compared to Android on quad core 1 GB device">bug 1082268</a> et <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1086963" title="[meta] Gallery app launch latency is worse than Android on quad core device">bug 1086963</a>.)</dd>
+ <dd>Sur les appareils disposant de peu de RAM, les utilisateurs pourront constater de meilleures performances (le support des Cgroup réduisant le swapping des processus de haute priorité) (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1082290" title="FIXED: Implement cgroup swappiness feature for low memory target (256 MB)">bug 1082290</a>.)</dd>
+ <dd>Le support d'Android L a été ajouté (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1094121" title="FIXED: [meta] Android L 5.0 Porting for B2G">bug 1094121</a>.)</dd>
+ <dd>Le support des extensions est maintenant disponible pour étendre les fonctionnalités de Firefox OS (désactivé par défaut) (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=923897" title="FIXED: Extensibility support for b2g">bug 923897</a>.)</dd>
+ <dt>Langue/Localisation</dt>
+ <dd>Les langues qui se lisent de droite à gauche sont maintenant gérées par Firefox OS (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=906270" title="Support RTL language for B2G (tracker bug)">bug 906270</a>.)</dd>
+ <dt>Métriques</dt>
+ <dd>L'ajout de la possibilité d'avoir des rapports sur les utilisateurs actifs chaque mois permet de meilleures métriques (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1109422" title="FIXED: AppUsage Metric collection enhancements for MonthlyActiveUsers computation">bug 1109422</a>.)</dd>
+ <dt>NFC</dt>
+ <dd>Les applications tierces peuvent à présent employer les APIs NFC (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1102019" title="FIXED: [User Story] [NFC] Making NFC APIs privileged so 3rd party apps can use them">bug 1102019</a>.)</dd>
+</dl>
+
+<h3 id="Applications_système">Applications système</h3>
+
+<dl>
+ <dt>Téléphone (Composeur)</dt>
+ <dd>Les appels téléphoniques peuvent être mis en attente depuis l'écran d'appel actif (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=977588" title="FIXED: [Dialer] The Active call screen does not have the option to place calls on hold.">bug 977588</a>.)</dd>
+ <dt>SMS/MMS</dt>
+ <dd>Les messages MMS peuvent maintenant être envoyés vers des adresses de messagerie électronique (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=997547" title="FIXED: [MMS]Text to email from Contact details">bug 997547</a> et <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1091486" title="FIXED: [SMS] Switch to MMS when entering a email recipient thread">bug 1091486</a>.)</dd>
+ <dd>Les contacts peuvent à présent être partagés au format VCF/vCard via courriel, messages, et Bluetooth (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1007932" title="FIXED: Allow to enclose a contact (serialized as vCard) as a message attachment">bug 1007932</a>.)</dd>
+ <dt>Courriel</dt>
+ <dd>Il est maintenant possible de joindre aux courriels des fichiers téléchargés présents dans le gestionnaire de téléchargement. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1113152" title="FIXED: Make the files in download manager available for attachments in mail application">bug 1113152</a>.)</dd>
+ <dd>Les comptes de courriel peuvent maintenant être configurés manuellement soit en texte clair soit avec SSL (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1046799" title="FIXED: Include an option to manually configure email accounts without SSL">bug 1046799</a>.)</dd>
+ <dd>Il n'y a plus de contraintes sur les types de fichiers que l'utilisateur peut télécharger pour les pièces-jointes reçues (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=825318" title="FIXED: [B2G][Email] Unable to view a non-image attachment (ex: PDF)">bug 825318</a>.)</dd>
+ <dt>Écran d'accueil</dt>
+ <dd>Il est encore plus simple d'organiser et grouper du contenu sur l'écran d'accueil grâce à la nouvelle possibilité de grouper des applications (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1067435" title="FIXED: [meta] Home-screen grouping">bug 1067435</a>.)</dd>
+ <dt>Clavier</dt>
+ <dd>Les utilisateurs ont maintenant la possibilité de sélectionner du texte (appuyez et maintenez enfoncé pour sélectionner un mot, puis éditez la sélection avec les poignées fournies), coupez ou copiez le texte sélectionné vers le presse-papiers, et collez-en le contenu dans le texte affiché à la position actuelle.</dd>
+</dl>
+
+<h3 id="Paramètres">Paramètres</h3>
+
+<dl>
+ <dt>Paramètres</dt>
+ <dd>Un nouveau menu  pour le filtrage d'appels a été ajouté aux paramètres (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=910552" title="FIXED: [zffos1.1][P2][Call Setting]Call Barring menu not implemented">bug 910552</a>.)</dd>
+ <dt>Vie privée</dt>
+ <dd>De nouveaux paramètres ont été ajoutés pour permettre à l'utilisateur d'ajuster les paramètres de confidentialité qui contrôlent le partage des données stockées sur le téléphone (désactivé par défaut) (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1083953" title="FIXED: [META] Privacy Panel move from dev_apps to apps">bug 1083953</a>.) Quand l'option est activée, voir <em>Paramètres &gt; Confidentialité navigation</em>.</dd>
+</dl>
+
+<h2 id="Nouvelles_fonctionnalités_des_DevTools">Nouvelles fonctionnalités des DevTools</h2>
+
+<p>Nous avons ajouté un bouton "Réinitialiser et activer les outils de développement" aux <a href="/en-US/Firefox_OS/Debugging/Developer_settings#Reset_and_enable_full_DevTools">Paramètres Développeurs de Firefox OS</a> pour donner de plus grandes permissions sur votre appareil — cela est important pour ceux d'entre-vous qui ne peuvent pas rooter leur appareil — cette option ne nécessite pas les privilèges root.</p>
+
+<div class="note">
+<p><strong>Note</strong> : Vous pouvez toujours trouver des détails sur les nouveaux outils de développement Firefox et sur ceux à venir en regardant dans la <a href="https://hacks.mozilla.org/category/developer-tools/">catégorie Mozilla Hacks Developer Tools</a>.</p>
+</div>
+
+<h2 id="Modifications_de_la_plate-forme_et_ajouts_en_détail">Modifications de la plate-forme et ajouts en détail</h2>
+
+<div class="note">
+<p><strong>Note</strong> : Notre présente liste comporte les fonctionnalités les plus importantes de Firefox OS. Pour une liste plus complète des ajouts aux caractéristiques générales de Gecko (qui sont en général également présentes dans Firefox OS 2.2), consultez les <a href="/en-US/docs/Mozilla/Firefox/Releases/35" title="/en-US/docs/Mozilla/Firefox/Releases/28">notes de version Firefox 35 pour développeurs</a>, les <a href="/en-US/docs/Mozilla/Firefox/Releases/36" title="/en-US/docs/Mozilla/Firefox/Releases/28">notes de version Firefox 36 pour développeurs</a> et les <a href="/en-US/docs/Mozilla/Firefox/Releases/37" title="/en-US/docs/Mozilla/Firefox/Releases/28">notes de version Firefox 37 pour développeurs</a>.</p>
+</div>
+
+<h3 id="Changements_de_l'API_Web">Changements de l'API Web</h3>
+
+<ul>
+ <li>La méthode <code>app.getLocalizedValue()</code> a été ajoutée pour retourner le nom localisé de l'application (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1118946" title="FIXED: API to provide localized App name">bug 1118946</a>.)</li>
+ <li>Un important travail de factorisation de code relatif à la téléphonie a été fait ; en particulier, les fonctions <a href="/fr/docs/Web/API/MozMobileConnection/sendMMI" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>MozMobileConnection.sendMMI</code></a> et <a href="/fr/docs/Web/API/Telephony/dial" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>Telephony.dial</code></a> ont été fusionnées (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1031175" title="FIXED: [Gaia] Unify both sendMMI() and dial() functions">bug 1031175</a>.)</li>
+ <li>Suite aux modifications ci-dessus, <a href="/fr/docs/Web/API/MozMobileConnection/sendMMI" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>MozMobileConnection.sendMMI</code></a>, <a href="/fr/docs/Web/API/MozMobileConnection/cancelMMI" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>MozMobileConnection.cancelMMI</code></a>, <a href="/fr/docs/Web/API/MozMobileConnection/onussdreceived" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>MozMobileConnection.onussdreceived</code></a>, et <a href="/fr/docs/Web/API/USSDReceivedEvent/sessionEnded" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>USSDReceivedEvent.sessionEnded</code></a> ont été dépréciées.</li>
+ <li>La promesse de <a href="/fr/docs/Web/API/Telephony/dial" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>Telephony.dial</code></a> est tenue directement par le résultat de l'appel, et non par un <a href="/fr/docs/Web/API/DOMRequest" title="Un objet DOMRequest représente une opération en cours. Il fournit des callbacks qui sont appelés quand l'operation est finit, ainsi qu'une reférence au résultat de l'opération. Une méthode DOM qui initie une opération se poursuivant au cours du temps, retounera un objet DOMRequest que vous pouvez surveiller pour connaitre le déroulement de l'opération"><code>DOMRequest</code></a> pour le résultat (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1080883" title="FIXED: Telephony.dial returning a Promise that resolves to a DOMRequest makes no sense">bug 1080883</a>.)</li>
+ <li><a href="/fr/docs/Web/API/DOMApplicationsManager/setEnabled" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>mozApps.mgmt.setEnabled</code></a> et <a href="/fr/docs/Web/API/DOMApplicationsManager/onenabledstatechange" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>mozApps.mgmt.onenabledstatechange</code></a> ajoutés pour activer et désactiver une application (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1072090" title="FIXED: Add a way to enable and disable an app.">bug 1072090</a>)</li>
+ <li><code>mozApps.mgmt.import</code> et <code>mozApps.mgmt.export</code> ajoutés pour contrôler les imports et exports d'applications (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=982874" title="FIXED: Import / export API for apps">bug 982874</a>.)</li>
+ <li><a href="/fr/docs/Web/API/HTMLIFrameElement/setNfcFocus" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>HTMLIFrameElement.setNfcFocus()</code></a> ajouté à l'API browser pour indiquer si un iframe peut recevoir un événement NFC (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1105666" title="FIXED: [BrowserAPI] Add an API to indicate this iframe could receive NFC event.">bug 1105666</a>.)</li>
+ <li>Des valeurs par défaut utiles sont définies pour l'interface <a href="/fr/docs/Web/API/CameraControl" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>CameraControl</code></a> — caméra avant sélectionnée, sélection du profil pour le meilleur enregistrement possible, dimensions de fenêtre interne sélectionnées pour la taille de prévisualisation, et largeur/hauteur de l'enregistrement actuel fixées en plein écran, lorsque <a href="/fr/docs/Web/API/CameraControl/getCamera" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>CameraControl.getCamera()</code></a> est appelé (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1104913" title="FIXED: [Camera][Gecko] Provide sane defaults to the CameraControl API">bug 1104913</a>.)</li>
+ <li>L'<a href="/en-US/docs/Web/API/NFC_API">API NFC</a> est rendue accessible aux applications privilégiées (elle ne l'était avant que pour celles internes ou certifiées) (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1091356" title="FIXED: Change AvailableIn to PrivilegedApps for NFC API">bug 1091356</a>.)</li>
+ <li>Deux nouvelles permissions de manifeste relatives à l'<a href="/en-US/docs/Web/API/NFC_API">API NFC</a> ont été ajoutées — <code>nfc</code> et <code>nfc-share</code> — pour rendre les permissions NFC plus granulaires et plus simples à migrer vers un état privilégié (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1048676" title='FIXED: B2G NFC: Add "nfc" and  "nfc-share" permissions.'>bug 1048676</a>.)</li>
+ <li><a href="/fr/docs/Web/API/NdefReceivedEvent" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>NdefReceivedEvent</code></a> a été ajouté à l'API NFC pour notifier le système lorsqu'un NDEF est reçu depuis un autre appareil NFC (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1127735" title="FIXED: Update TechDiscoveredNotication">bug 1127735</a>.)</li>
+ <li>Un certain nombre de modifications de l'<a href="/en-US/docs/Web/API/NFC_API">API NFC</a> a été fait pour prendre en charge différents formats de tags (comme les tags ISO 14443-4.) En particulier, la méthode <a href="/fr/docs/Web/API/MozNFCTag/transceive" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>MozNFCTag.transceive()</code></a> a été ajoutée pour lire différent formats, et <a href="/fr/docs/Web/API/MozNFCTag/format" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>MozNFCTag.format()</code></a> pour formater les cartes dans un format que Firefox OS peut utiliser (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=916428" title="FIXED: [NFC] APIs for ISO 14443-4 tags (IsoDep Support)">bug 916428</a>.)</li>
+ <li>La méthode <a href="/fr/docs/Web/API/MozNFCTag/makeReadOnly" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>MozNFCTag.makeReadOnly()</code></a> a été ajoutée pour mettre un tag en lecture seule.</li>
+ <li>La propriété <a href="/fr/docs/Web/API/MozNFCTag/id" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>MozNFCTag.id</code></a> a été ajoutée pour qu'un ID unique puisse être attribué à tous les tags (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1115465" title="FIXED: Add id attribute to NFCTag">bug 1115465</a>.)</li>
+ <li>Les propriétés de gestion d'événements <a href="/fr/docs/Web/API/MozNFC/onpeerfound" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>MozNFC.onpeerfound</code></a>, <a href="/fr/docs/Web/API/MozNFC/ontagfound" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>MozNFC.ontagfound</code></a>, et <a href="/fr/docs/Web/API/MozNFC/ontaglost" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>MozNFC.ontaglost</code></a> ont été ajoutées en remplacement des <a href="/en-US/docs/Web/API/Web_Activities">web activities</a> qui géraient auparavant les mêmes fonctionnalités (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=991970" title="FIXED: [B2G][NFC] Support W3C compliant ontagfound, ontaglost">bug 991970</a>.)</li>
+ <li>Le support des éléments sécurisés NFC a été ajouté (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=879861" title="FIXED: NFC Secure Element Support">bug 879861</a>.)</li>
+ <li>Les événements <code>KeyboardEvent</code> (DOM Level 3 Events pour les boutons physiques, e.g power, volume haut, volume bas) sont maintenant envoyés aux éléments du navigateur (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=989198" title="FIXED: [Stingray] Dispatch KeyboardEvent across BrowserElements">bug 989198</a>.)</li>
+</ul>
+
+<h2 id="Annonces_de_sécurité">Annonces de sécurité</h2>
+
+<p>Une <a href="https://www.mozilla.org/en-US/security/known-vulnerabilities/firefox-os/#firefoxos2.2">liste complète des annonces de sécurité de Firefox OS 2.2</a> est disponible.</p>
+
+<h2 id="Anciennes_versions">Anciennes versions</h2>
+
+<p></p><div class="multiColumnList">
+<ul>
+<li><a href="/fr/docs/Mozilla/Firefox_OS/Versions/2.0">Firefox OS 2.0 pour les développeurs</a></li><li><a href="/fr/docs/Mozilla/Firefox_OS/Versions/1.4">Firefox OS 1.4 pour les développeurs</a></li><li><a href="/fr/docs/Mozilla/Firefox_OS/Versions/1.3">Firefox OS 1.3 pour les développeurs</a></li><li><a href="/fr/docs/Mozilla/Firefox_OS/Versions/1.2">Firefox OS 1.2 pour les développeurs</a></li><li><a href="/fr/docs/Mozilla/Firefox_OS/Versions/1.1">Firefox OS 1.1 pour les développeurs</a></li><li><a href="/fr/docs/Mozilla/Firefox_OS/Versions/1.0.1">Firefox OS 1.0.1 pour les développeurs</a></li></ul>
+</div><p></p>

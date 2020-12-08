@@ -1,0 +1,36 @@
+---
+title: Using Web Standards in your Web Pages
+slug: Archive/Using_Web_Standards_in_your_Web_Pages
+tags:
+  - Web Development
+  - Web Standards
+translation_of: Archive/Using_Web_Standards_in_your_Web_Pages
+---
+<p>
+</p>
+<blockquote>「ブラウザメーカーはもはや問題ではありません。問題は、1990 年代に頻繁に利用され、ブラウザの気まぐれに依存したマークアップに今でも縛られているデザイナーや開発者にあるのです。彼らは、古いブラウザに対応しつつ最新の標準をサポートできることに気付いていないのです。」<div style="text-align: right;"><a class="external" href="http://webstandards.org/about/history/">-Web Standards Project</a></div></blockquote>
+<p><br>
+この文書では、あなたの Web ページのコンテンツを修正して <a class="external" href="http://www.w3.org/">World Wide Web Consortium (W3C)</a> の Web 標準に準拠させるプロセスの概要を説明します。最初の 2 つの章では、検証エラー、検証の利点、廃止された要素や属性に的を絞って問題に対処します。Web ページのマークアップコードを修正して検証をパスする方法や、CSS を実装する方法は、勧告書、チュートリアル、参考文献を示して解説します。
+</p><p>続きの章では、<abbr title="World Wide Web Consortium">W3C</abbr> の Web 標準に反する <abbr title="Document Object Model">DOM</abbr> や <abbr title="Dynamic HyperText Markup Language">DHTML</abbr> のコーディング手法について取り上げ、代替策を提案します。<strong>この文書で提案している W3C の Web 標準による代替策はすべて、IE 7、Firefox 2、Opera 9、Safari 2、Konqueror 3.5 以降、Icab 3 といったモダンブラウザで問題なく動作します</strong>。
+</p><p>最後から 2 番目の章、<a href="ja/Using_Web_Standards_in_your_Web_Pages/Summary_of_Changes">変更点の要約</a> では、この文書で説明したすべての変更点の要点をまとめています。<a href="ja/Using_Web_Standards_in_your_Web_Pages/References">最後の章</a> では、この記事でご紹介したテクニックをさらに磨きたい方や、自分の Web ページを完全なものにしたいと考えている方のための、優れた最高の参考資料を挙げています。
+</p>
+<h2 id=".E7.9B.AE.E6.AC.A1" name=".E7.9B.AE.E6.AC.A1"> 目次 </h2>
+<ol><li> <a href="ja/Using_Web_Standards_in_your_Web_Pages/Benefits_of_using_web_standards">Web 標準を利用することの利点</a>
+</li><li> <a href="ja/Using_Web_Standards_in_your_Web_Pages/Making_your_page_using_web_standards_-_how_to">あなたの Web ページで Web 標準を利用するには</a>
+</li><li> <a href="ja/Using_Web_Standards_in_your_Web_Pages/Using_the_W3C_DOM">W3C DOM を利用する</a>
+</li><li> <a href="ja/Using_Web_Standards_in_your_Web_Pages/Developing_Cross_Browser%2f%2fCross_Platform_Pages">クロスブラウザ、クロスプラットフォームを考慮したページを作成する</a>
+</li><li> <a href="ja/Using_Web_Standards_in_your_Web_Pages/Using_XMLHttpRequest">XMLHttpRequest を利用する</a>
+</li><li> <a href="ja/Using_Web_Standards_in_your_Web_Pages/Summary_of_Changes">変更点の要約</a>
+</li><li> <a href="ja/Using_Web_Standards_in_your_Web_Pages/References">参考資料</a>
+</li></ol>
+<p><span class="comment">* 1 Web 標準を利用することの利点 o 1.1 正しいマークアップコードの利点 o 1.2 CSS の実装による、コンテンツを視覚表現 (font、color、padding、margin、border など) から明確に分離することの利点 o 1.3 正しい CSS コードを利用することの利点 o 1.4 ブラウザ非互換性の軽減 o 1.5 WYSIWYG 形式の HTML エディタで編集することの 2 つのリスク o 1.6 Web 標準を利用することの利点に関する参考文献 * 2 あなたの Web ページで Web 標準を利用するには o 2.1 ステップ 1: 厳格な DTD を指す DOCTYPE 宣言を選択する + 2.1.1 「DOCTYPE スイッチ」 o 2.2 ステップ 2: HTML 4 コードを検証する + 2.2.1 Web ページを検証するためのツールと方法 + 2.2.2 最も頻繁に遭遇する検証エラー 5 つと、それらを修正する方法 + 2.2.3 いくつかのよくあるケースについてマークアップコードを修正する方法: &lt;font&gt;、&lt;center&gt;、bgcolor # 2.2.3.1 &lt;font&gt; を CSS で定義あるいは置き換える方法 # 2.2.3.2 &lt;center&gt; あるいは align="center" を CSS で置き換える方法 # 2.2.3.3 bgcolor を CSS で置き換える方法 + 2.2.4 特定のケースについてマークアップコードを修正する方法: &lt;embed&gt;、&lt;applet&gt;、&lt;marquee&gt;、&lt;bgsound&gt; # 2.2.4.1 Flash やビデオの再生に &lt;embed&gt; を利用している場合 # 2.2.4.2 &lt;applet&gt; を利用している場合 # 2.2.4.3 &lt;marquee&gt; を利用している場合 # 2.2.4.4 &lt;bgsound&gt; を利用している場合 o 2.3 ステップ 3: CSS コードを検証する + 2.3.1 CSS コードを検証するためのツール * 3 W3C DOM を利用する o 3.1 サポートされていない DOM 関連のプロパティ o 3.2 W3C DOM で要素にアクセスする o 3.3 文書のスタイルとコンテンツを操作する + 3.3.1 DOM を利用して要素のスタイルを変更する # 3.3.1.1 ある要素の CSS プロパティの W3C DOM2 への反映 # 3.3.1.2 ある要素の CSS ポジショニングプロパティの W3C DOM2 への反映 + 3.3.2 DOM を利用して要素のテキストを変更する * 4 クロスブラウザ、クロスプラットフォームを考慮したページを作成する o 4.1 ブラウザを特定する (「ブラウザ判別」): あまり良くない、信頼性の低い方法 o 4.2 オブジェクトや機能のサポートを判別する: 最適な、最も信頼性の高い方法 * 5 XMLHttpRequest を利用する * 6 変更点の要約 * 7 原文書の情報</span>
+</p>
+<div class="originaldocinfo">
+<h2 id=".E5.8E.9F.E6.96.87.E6.9B.B8.E3.81.AE.E6.83.85.E5.A0.B1" name=".E5.8E.9F.E6.96.87.E6.9B.B8.E3.81.AE.E6.83.85.E5.A0.B1"> 原文書の情報 </h2>
+<ul><li> 著者: Mike Cowperthwaite, Marcio Galli, Jim Ley, Ian Oeschger, Simon Paquet, Gérard Talbot
+</li><li> 最終更新日: April 30, 2007
+</li><li> 著作権: Portions of this content are © 1998–2006 by individual mozilla.org contributors; content available under a Creative Commons license | <a class="external" href="http://www.mozilla.org/foundation/licensing/website-content.html">詳細</a>
+</li></ul>
+</div>
+<div class="noinclude">
+</div>

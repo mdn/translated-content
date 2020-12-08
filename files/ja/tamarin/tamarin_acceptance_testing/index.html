@@ -1,0 +1,56 @@
+---
+title: Tamarin Acceptance Testing
+slug: Tamarin/Tamarin_Acceptance_Testing
+tags:
+  - NeedsTranslation
+  - TopicStub
+  - 要翻訳
+translation_of: Archive/Mozilla/Tamarin/Tamarin_Acceptance_Testing
+---
+<p>In order to ensure that changes to the Tamarin code base are high quality before submitting, all developers are required to complete the following steps.</p>
+
+<ol>
+ <li>Successfully build release and debug versions of the shell with the debugger enabled [<a href="/ja/docs/Tamarin/Tamarin_Build_Documentation#Building_Tamarin" title="Tamarin/Tamarin Build Documentation#Building Tamarin">info</a>]</li>
+ <li>Successfully run the following test suites:
+  <ol>
+   <li>acceptance test suite [<a href="/ja/docs/Tamarin/Tamarin_Acceptance_Testing/Running_Tamarin_acceptance_tests" title="Tamarin/Tamarin Tests/Running Tamarin acceptance tests">info</a>]</li>
+   <li>self tests [<a href="http://hg.mozilla.org/tamarin-redux/raw-file/tip/doc/selftest.html" title="http://hg.mozilla.org/tamarin-redux/raw-file/tip/doc/selftest.html">info</a>]</li>
+  </ol>
+ </li>
+ <li>Submit a sandbox build request to test against platforms that you may not have locally [<a href="/ja/docs/Tamarin/Tamarin_Build_Documentation#Tamarin_BuildBot_TryServer" title="Tamarin/Tamarin Build Documentation#Tamarin BuildBot TryServer">info</a>]</li>
+</ol>
+
+<h2 id="Available_Tamarin_Acceptance_Test_Suites" name="Available_Tamarin_Acceptance_Test_Suites">Available Tamarin Acceptance Test Suites</h2>
+
+<ul>
+ <li>Actionscript Acceptance Tests:
+  <ul>
+   <li><a href="/ja/docs/Tamarin/Tamarin_Acceptance_Testing/Actionscript_Acceptance_Tests" title="Tamarin/Tamarin Tests/Actionscript Acceptance Tests">Actionscript Acceptance Tests</a></li>
+   <li><a href="/ja/docs/Tamarin/Tamarin_Acceptance_Testing/Running_Tamarin_acceptance_tests" title="Tamarin/Tamarin Tests/Running Tamarin compliance tests">Running Tamarin acceptance tests</a></li>
+  </ul>
+ </li>
+ <li><a href="/ja/docs/Tamarin/Tamarin_Acceptance_Testing/Abc_Assembler_Tests" title="Tamarin/Creating Tamarin Tests/Abc Assembler Tests">Abc Assembler Tests</a></li>
+ <li><a href="/ja/docs/Tamarin/Tamarin_Acceptance_Testing/Cmdline_tests" title="Tamarin/Creating Tamarin Tests/Cmdline tests">Cmdline tests</a></li>
+ <li>Performance Tests
+  <ul>
+   <li><a href="/ja/docs/Tamarin/Tamarin_Acceptance_Testing/Actionscript_Performance_Tests" title="Tamarin/Tamarin Tests/Actionscript Performance Tests">Actionscript Performance Tests</a></li>
+   <li><a href="/ja/docs/Tamarin/Tamarin_Acceptance_Testing/Running_Tamarin_performance_tests" title="Tamarin/Tamarin Tests/Running Tamarin performance tests">Running Tamarin performance tests</a></li>
+  </ul>
+ </li>
+ <li>Built-in self tests
+  <ul>
+   <li><a href="http://hg.mozilla.org/tamarin-redux/raw-file/tip/doc/selftest.html">See instructions in doc/selftest.html in the tamarin repository.</a></li>
+  </ul>
+ </li>
+ <li>AvmDiff
+  <ul>
+   <li><a href="http://hg.mozilla.org/tamarin-redux/raw-file/tip/doc/avmdiff.txt" title="http://hg.mozilla.org/tamarin-redux/raw-file/tip/doc/avmdiff.txt">See instruction in doc/avmdiff.txt in the tamarin repository.</a></li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Misc" name="Misc">Misc</h2>
+
+<ul>
+ <li>The acceptance and performance tests can be run on windows mobile devices connected to Windows desktop machine with ActiveSync.  To build and setup the tools see <a href="/ja/docs/Tamarin/Tamarin_Build_Documentation" title="Tamarin/Tamarin Build Documentation">Building_Tamarin_Windows_Mobile_utilities</a>.</li>
+</ul>

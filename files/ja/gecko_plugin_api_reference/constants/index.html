@@ -1,0 +1,231 @@
+---
+title: Constants
+slug: Gecko_Plugin_API_Reference/Constants
+tags:
+  - Gecko Plugin API Reference
+  - NPAPI
+  - Plugins
+translation_of: Plugins/Guide/Constants
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/Gecko_Plugin_API_Reference:Structures" style="float: left;">« 前のページ</a><br></p>
+</div>
+
+<p> </p>
+
+<p>このセクションはプラグイン API によって使用されるプログラム定義へのリファレンスです。すべてのプログラム定義は <a href="https://dxr.mozilla.org/mozilla-central/source/modules/plugin/base/public/npapi.h" rel="custom">npapi.h</a> にあります。 <span id="Error_Codes"></span></p>
+
+<h5 id=".E3.82.A8.E3.83.A9.E3.83.BC.E3.82.B3.E3.83.BC.E3.83.89" name=".E3.82.A8.E3.83.A9.E3.83.BC.E3.82.B3.E3.83.BC.E3.83.89">エラーコード</h5>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">コード</td>
+   <td class="header">値</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code>NPERR_NO_ERROR</code></td>
+   <td>0</td>
+   <td>エラーは起こりませんでした。</td>
+  </tr>
+  <tr>
+   <td><code>NPERR_GENERIC_ERROR</code></td>
+   <td>1</td>
+   <td>特定のエラーコードを持たないエラーが起こりました。</td>
+  </tr>
+  <tr>
+   <td><code>NPERR_INVALID_INSTANCE_ERROR</code></td>
+   <td>2</td>
+   <td>プラグインへ無効なインスタンスが渡されました。</td>
+  </tr>
+  <tr>
+   <td><code>NPERR_INVALID_FUNCTABLE_ERROR</code></td>
+   <td>3</td>
+   <td>関数表が無効です。</td>
+  </tr>
+  <tr>
+   <td><code>NPERR_MODULE_LOAD_FAILED_ERROR</code></td>
+   <td>4</td>
+   <td>プラグインの読み込みに失敗しました。</td>
+  </tr>
+  <tr>
+   <td><code>NPERR_OUT_OF_MEMORY_ERROR</code></td>
+   <td>5</td>
+   <td>メモリの割り当てに失敗しました。</td>
+  </tr>
+  <tr>
+   <td><code>NPERR_INVALID_PLUGIN_ERROR</code></td>
+   <td>6</td>
+   <td>プラグインが見つからないか無効です。</td>
+  </tr>
+  <tr>
+   <td><code>NPERR_INVALID_PLUGIN_DIR_ERROR</code></td>
+   <td>7</td>
+   <td>プラグインディレクトリが見つからないか無効です。</td>
+  </tr>
+  <tr>
+   <td><code>NPERR_INCOMPATIBLE_VERSION_ERROR</code></td>
+   <td>8</td>
+   <td>プラグインと Communicator のバージョンが一致しません。</td>
+  </tr>
+  <tr>
+   <td><code>NPERR_INVALID_PARAM</code></td>
+   <td>9</td>
+   <td>パラメータが無いか無効です。</td>
+  </tr>
+  <tr>
+   <td><code>NPERR_INVALID_URL</code></td>
+   <td>10</td>
+   <td>URL が見つからないか無効です。</td>
+  </tr>
+  <tr>
+   <td><code>NPERR_FILE_NOT_FOUND</code></td>
+   <td>11</td>
+   <td>ファイルが見つからないか無効です。</td>
+  </tr>
+  <tr>
+   <td><code>NPERR_NO_DATA</code></td>
+   <td>12</td>
+   <td>ストリームにデータが含まれていません。</td>
+  </tr>
+  <tr>
+   <td><code>NPERR_STREAM_NOT_SEEKABLE</code></td>
+   <td>13</td>
+   <td>シークできるストリームが期待されます。</td>
+  </tr>
+ </tbody>
+</table>
+
+<p><span id="Result_Codes"></span></p>
+
+<h5 id=".E3.83.AA.E3.82.B6.E3.83.AB.E3.83.88.E3.82.B3.E3.83.BC.E3.83.89" name=".E3.83.AA.E3.82.B6.E3.83.AB.E3.83.88.E3.82.B3.E3.83.BC.E3.83.89">リザルトコード</h5>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">定数</td>
+   <td class="header">値</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code>NPRES_DONE</code></td>
+   <td>0</td>
+   <td>（最も一般的）: 正常終了; すべてのデータはインスタンスに送られました。</td>
+  </tr>
+  <tr>
+   <td><code>NPRES_NETWORK_ERR</code></td>
+   <td>1</td>
+   <td>ネットワークやディスク I/O の問題、メモリ不足、その他の問題でストリームが失敗しました。</td>
+  </tr>
+  <tr>
+   <td><code>NPRES_USER_BREAK</code></td>
+   <td>2</td>
+   <td>中止ボタンを押して直接的に、あるいはインスタンスを削除したり高優先度のネットワーク操作を初期化するなどして間接的に、ユーザがストリームを取り消しました。</td>
+  </tr>
+ </tbody>
+</table>
+
+<p><span id="Plug-in_Version_Constants"></span></p>
+
+<h5 id=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.83.90.E3.83.BC.E3.82.B8.E3.83.A7.E3.83.B3.E5.AE.9A.E6.95.B0" name=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.83.90.E3.83.BC.E3.82.B8.E3.83.A7.E3.83.B3.E5.AE.9A.E6.95.B0">プラグインバージョン定数</h5>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">定数</td>
+   <td class="header">値</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code>NP_VERSION_MAJOR</code></td>
+   <td>0</td>
+   <td>メジャーバージョンナンバー; メジャーコードリリースナンバーでの変化。</td>
+  </tr>
+  <tr>
+   <td><code>NP_VERSION_MINOR</code></td>
+   <td>11</td>
+   <td>マイナーバージョンナンバー; 小数点リリースナンバーでの変化。</td>
+  </tr>
+ </tbody>
+</table>
+
+<p><span id="Version_Feature_Constants"></span></p>
+
+<h5 id=".E3.83.90.E3.83.BC.E3.82.B8.E3.83.A7.E3.83.B3.E6.A9.9F.E8.83.BD.E5.AE.9A.E6.95.B0" name=".E3.83.90.E3.83.BC.E3.82.B8.E3.83.A7.E3.83.B3.E6.A9.9F.E8.83.BD.E5.AE.9A.E6.95.B0">バージョン機能定数</h5>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">NPVERS 定数: バージョン機能定数</td>
+   <td class="header">値</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code>NPVERS_HAS_STREAMOUTPUT</code></td>
+   <td>8</td>
+   <td>ストリーミングデータ。</td>
+  </tr>
+  <tr>
+   <td><code>NPVERS_HAS_NOTIFICATION</code></td>
+   <td>9</td>
+   <td>完了の通知。</td>
+  </tr>
+  <tr>
+   <td><code>NPVERS_HAS_LIVECONNECT</code></td>
+   <td>9</td>
+   <td>LiveConnect。</td>
+  </tr>
+  <tr>
+   <td><code>NPVERS_WIN16_HAS_LIVECONNECT</code></td>
+   <td>9</td>
+   <td>LiveConnect (Win16)。</td>
+  </tr>
+  <tr>
+   <td><code>NPVERS_68K_HAS_LIVECONNECT</code></td>
+   <td>11</td>
+   <td>LiveConnect (68K)。</td>
+  </tr>
+  <tr>
+   <td><code>NPVERS_HAS_WINDOWLESS</code></td>
+   <td>11</td>
+   <td>ウィンドウを持たないプラグイン。</td>
+  </tr>
+  <tr>
+   <td><code>NPVERS_HAS_XPCONNECT_SCRIPTING</code></td>
+   <td>13</td>
+   <td>XPConnect を使用してスクリプト化可能なプラグイン。</td>
+  </tr>
+  <tr>
+   <td><code>NPVERS_HAS_NPRUNTIME_SCRIPTING</code></td>
+   <td>14</td>
+   <td>NPRuntime を使用してスクリプト化可能なプラグイン。</td>
+  </tr>
+  <tr>
+   <td><code>NPVERS_HAS_FORM_VALUES</code></td>
+   <td>15</td>
+   <td><code>NPPVformValue</code> <code>NPPVariable</code> がサポートされています。</td>
+  </tr>
+  <tr>
+   <td><code>NPVERS_HAS_POPUPS_ENABLED_STATE</code></td>
+   <td>16</td>
+   <td><code>NPN_PushPopupsEnabledState()</code> 関数および <code>NPN_PopPopupsEnabledState()</code> 関数がサポートされています。</td>
+  </tr>
+  <tr>
+   <td><code>NPVERS_HAS_RESPONSE_HEADERS</code></td>
+   <td>17</td>
+   <td>NPStreams は HTTP ストリームのためのレスポンスヘッダを持ちます。</td>
+  </tr>
+  <tr>
+   <td><code>NPVERS_HAS_NPOBJECT_ENUM</code></td>
+   <td>18</td>
+   <td>該当の <code><a href="ja/NPClass">NPClass</a></code> は <code>enumerate</code> フィールドを持ち、このクラスの <code><a href="ja/NPObject">NPObject</a></code> のプロパティを列挙します。</td>
+  </tr>
+ </tbody>
+</table>
+
+<div class="noinclude">
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/Gecko_Plugin_API_Reference:Structures" style="float: left;">« 前のページ</a><br></p>
+</div>
+</div>

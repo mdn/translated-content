@@ -1,0 +1,120 @@
+---
+title: 远程验证 API
+slug: Mozilla/Persona/Remote_Verification_API
+translation_of: Archive/Mozilla/Persona/Remote_Verification_API
+---
+<h3 id="Summary" name="Summary">概述</h3>
+<p>当用户试图登入一个网站，他们的浏览器会生成一个名为<em>断言</em>的数据结构，这实质上是一个加密签名的邮件地址。浏览器把这个断言发送给网站，网站必须在登入用户前检验断言是否有效。</p>
+<p>断言可以本地验证，或使用托管在 <span class="link-https"><code>https://verifier.login.persona.org/verify</code></span> 的 API。本页面描述如何使用这个 API。</p>
+<h3 id="Methods" name="Methods">方法</h3>
+<p>把 HTTP POST 请求发送至 <code>https://verifier.login.persona.org/verify</code>。</p>
+<h3 id="参数">参数</h3>
+<p><code>assertion</code>: 断言由用户提供。作为传给  {{ domxref("navigator.id.watch()") }} 中 <code>onlogin</code>  函数的第一个参数。<br>
+  <code>audience</code>: 你的站点的协议、域名和端口。 例如， "<code>https://example.com:443</code>"。</p>
+<h3 id="返回值">返回值</h3>
+<p>调用会返回一个包含 <code>status</code> 元素的 JSON 结构，这个元素值会是 "okay" 或是" failure" 。取决于 <code>status</code> 的值，这个结构包含下面列出的额外元素。</p>
+<h4 id="okay">"okay"</h4>
+<p>断言是有效的。</p>
+<p>在这种情况下 JSON 结构包含下面的额外元素：</p>
+<table style="width: 80%;">
+  <tbody>
+    <tr>
+      <td><code>"email"</code></td>
+      <td>断言中包含欲登录人的邮件地址。</td>
+    </tr>
+    <tr>
+      <td><code>"audience"</code></td>
+      <td>断言中包含 audience 值。 期望值为你的网站 URL。</td>
+    </tr>
+    <tr>
+      <td>"<code>expires"</code></td>
+      <td>断言过期的日期，表示为<a href="/en/JavaScript/Reference/Global_Objects/Date/valueOf" title="en/JavaScript/Reference/Global_Objects/Date/valueOf">Date 对象的原始值</a>: 即从 UTC 1970 年 1 月 1 日午夜至今的毫秒数。</td>
+    </tr>
+    <tr>
+      <td><code>"issuer"</code></td>
+      <td>发出断言的身份提供者的主机名。</td>
+    </tr>
+  </tbody>
+</table>
+<h4 id="failure">"failure"</h4>
+<p>断言是无效的。这种情况下，JSON 结构包含一个额外元素：</p>
+<table>
+  <tbody>
+    <tr>
+      <td><code>"reason"</code></td>
+      <td>一个解释验证失败原因的字符串。</td>
+    </tr>
+  </tbody>
+</table>
+<h3 id="示例">示例</h3>
+<h4 id="node.js">node.js</h4>
+<p>例中使用了一个采用 express.js 的 node.js 服务器</p>
+<pre class="brush: js">var express = require("express"),
+    app = express.createServer(),
+    https = require("https"),
+    querystring = require("querystring");
+/* ... */
+
+// audience 值必须匹配你浏览器地址栏显示的值，
+// 包括协议、主机名、端口
+var audience = "http://localhost:8888";
+
+app.post("/authenticate", function(req, res) {
+  var vreq = https.request({
+    host: "verifier.login.persona.org",
+    path: "/verify",
+    method: "POST"
+  }, function(vres) {
+    var body = "";
+    vres.on('data', function(chunk) { body+=chunk; } )
+        .on('end', function() {
+          try {
+            var verifierResp = JSON.parse(body);
+            var valid = verifierResp &amp;&amp; verifierResp.status === "okay";
+            var email = valid ? verifierResp.email : null;
+            req.session.email = email;
+            if (valid) {
+              console.log("assertion verified successfully for email:", email);
+            } else {
+              console.log("failed to verify assertion:", verifierResp.reason);
+            }
+            res.json(email);
+          } catch(e) {
+            console.log("non-JSON response from verifier");
+            // bogus response from verifier! return null
+            res.json(null);
+          }
+        });
+  });
+  vreq.setHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+  var data = querystring.stringify({
+    assertion: req.body.assertion,
+    audience: audience
+  });
+  vreq.setHeader('Content-Length', data.length);
+  vreq.write(data);
+  vreq.end();
+  console.log("verifying assertion!");
+});
+
+</pre>
+<p>via <a class="link-https" href="https://github.com/lloyd/myfavoritebeer.org/blob/06255b960e1f9078bc935c1c7af0662f33c88818/server/main.js#L112" title="https://github.com/lloyd/myfavoritebeer.org/blob/06255b960e1f9078bc935c1c7af0662f33c88818/server/main.js#L112">Lloyd Hilaiel</a></p>
+<h4 id="PHP">PHP</h4>
+<pre class="brush: php">$url = 'https://verifier.login.persona.org/verify';
+$assert = $_POST['assert'];
+$params = 'assertion='.$assert.'&amp;audience=' .
+           urlencode('http://example.com:80');
+$ch = curl_init();
+$options = array(
+    CURLOPT_URL =&gt; $url,
+    CURLOPT_RETURNTRANSFER =&gt; TRUE,
+    CURLOPT_POST =&gt; 2,
+    CURLOPT_POSTFIELDS =&gt; $params
+);
+curl_setopt_array($ch, $options);
+$result = curl_exec($ch);
+curl_close($ch);
+echo $result;
+</pre>
+<p>Via <a class="link-https" href="https://github.com/codepo8/BrowserID-login-with-PHP/blob/184fdb74c8a554461c262875859968154d09288e/verify.php">Christian Heilmann</a></p>

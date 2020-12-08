@@ -1,0 +1,370 @@
+---
+title: menu
+slug: Mozilla/Tech/XUL/menu
+tags:
+  - XUL Elements
+  - XUL Reference
+translation_of: Archive/Mozilla/XUL/menu
+---
+<div class="noinclude">
+ <span class="breadcrumbs XULRef_breadcrumbs">
+ « <a href="/zh-CN/docs/XUL_Reference">XUL Reference home</a>    [
+ <a href="#Examples">示例</a> |
+ <a href="#Attributes">属性</a> |
+ <a href="#Properties">特性</a> |
+ <a href="#Methods">方法</a> |
+ <a href="#Related">相关</a> ]
+</span></div>
+<p>An element, much like a <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/button" title="button">button</a></code>, that is placed on a <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menubar" title="menubar">menubar</a></code>. When the user clicks the <code>menu</code> element, the child <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> of the menu will be displayed. This element is also used to create submenus.</p>
+<p>More information is available in the <a href="cn/XUL_Tutorial/Simple_Menu_Bars">XUL tutorial</a>.</p>
+<dl>
+ <dt>
+  Attributes</dt>
+ <dd>
+  <a href="#a-acceltext">acceltext</a>, <a href="#a-accesskey">accesskey</a>, <a href="#a-allowevents">allowevents</a>, <a href="#a-command">command</a>, <a href="#a-crop">crop</a>, <a href="#a-disabled">disabled</a>, <a href="#a-image">image</a>, <a href="#a-label">label</a>, <a href="#a-menuactive">menuactive</a>, <a href="#a-open">open</a>, <a href="#a-sizetopopup">sizetopopup</a>, <a href="#a-tabindex">tabindex</a>, <a href="#a-value">value</a></dd>
+</dl>
+<dl>
+ <dt>
+  Properties</dt>
+ <dd>
+  <a href="#p-accessibleType">accessibleType</a>, <a href="#p-accessKey">accessKey</a>, <a href="#p-command">command</a>, <a href="#p-menuitem.control">control</a>, <a href="#p-crop">crop</a>, <a href="#p-disabled">disabled</a>, <a href="#p-image">image</a>, <a href="#p-itemCount">itemCount</a>, <a href="#p-label">label</a>, <a href="#p-labelElement">labelElement</a>, <a href="#p-menupopup">menupopup</a>, <a href="#p-menu.open">open</a>, <a href="#p-parentContainer">parentContainer</a>, <a href="#p-selected">selected</a>, <a href="#p-tabIndex">tabIndex</a>, <a href="#p-value">value</a></dd>
+</dl>
+<dl>
+ <dt>
+  Methods</dt>
+ <dd>
+  <a href="#m-appendItem">appendItem</a>, <a href="#m-getIndexOfItem">getIndexOfItem</a>, <a href="#m-getItemAtIndex">getItemAtIndex</a>, <a href="#m-insertItemAt">insertItemAt</a>, <a href="#m-removeItemAt">removeItemAt</a></dd>
+</dl>
+<h3 id="Example" name="Example">Example</h3>
+<pre>  &lt;menubar id="sample-menubar"&gt;
+    &lt;menu id="file-menu" label="File"&gt;
+      &lt;menupopup id="file-popup"&gt;
+        &lt;menuitem label="New"/&gt;
+        &lt;menuitem label="Open"/&gt;
+        &lt;menuitem label="Save"/&gt;
+        &lt;menuseparator/&gt;
+        &lt;menuitem label="Exit"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+    &lt;menu id="edit-menu" label="Edit"&gt;
+      &lt;menupopup id="edit-popup"&gt;
+        &lt;menuitem label="Undo"/&gt;
+        &lt;menuitem label="Redo"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+  &lt;/menubar&gt;
+</pre>
+<h3 id="Attributes" name="Attributes">Attributes</h3>
+<p> </p><div id="a-acceltext">
+
+<dl>
+ <dt>
+  <code id="a-acceltext"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/acceltext">acceltext</a></code></dt>
+ <dd>
+  Type:
+  <i>
+   string</i>
+ </dd>
+ <dd>
+  Text that appears beside beside the <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code> label to indicate the shortcut key (accelerator key) to use to invoke the command. If this value is set, it overrides an assigned key set in the key attribute. This attribute does not apply to menus directly on the menubar.</dd>
+</dl>
+
+<p></p>
+</div> <div id="a-accesskey">
+
+
+
+
+<dl>
+ <dt><code id="a-accesskey"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/accesskey">accesskey</a></code></dt>
+ <dd>类型:
+ <i>character【字符】</i>
+ </dd>
+ <dd>本属性允许为控件（元素）设定一个字符作为快捷键，这个字符应该是 <code><code id="a-label"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> 属性文本中的一个字符。该字符将会被加下划线以重点强调，平台和主体的变换并不影响这一表现行为。 当用户点击 ALT (在其他平台上具有类似功能的键) 和这个字符对应的按键时， 控件（元素）将立刻被从窗口中的某处激活或/并且获得焦点 <b>。虽说字符不分大小写，但是当label中存在大写字符和小写字符时，快捷键的字符将首先选择与之完全匹配的那一个，如果label中存在两个或更多的与accesskey字符相同的字符，其中的第一个字符将被加下划线。</b></dd>
+ <dt>      *(有些键在监听按键事件时，分别对应event.ctrlKey和event.metaKey。)</dt>
+</dl>
+
+<p> </p>
+
+<h4 id="Example" name="Example">Example</h4>
+
+<div class="float-right"><img alt="Image:XUL_ref_accesskey_attr.png"></div>
+
+<pre>&lt;vbox&gt;
+  &lt;label value="Enter Name" accesskey="e" control="myName"/&gt;
+  &lt;textbox id="myName"/&gt;
+  &lt;button label="Cancel" accesskey="n"/&gt;
+  &lt;button label="Ok" accesskey="O"/&gt;
+&lt;/vbox&gt;
+</pre>
+
+<h4 id="See_also" name="See_also">See also</h4>
+
+<p><code id="a-label"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code> attribute, <code id="a-acceltext"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/acceltext">acceltext</a></code> attribute</p>
+
+<p></p>
+</div> <div id="a-allowevents">
+
+
+<dl>
+ <dt><code id="a-allowevents"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/allowevents">allowevents</a></code></dt>
+ <dd>Type:
+ <i>boolean<br>
+ </i>
+ 类型：boolean</dd>
+ <dd>If true, events are passed to children of the element. Otherwise, events are passed to the element only.<br>
+ 如果为真，事件向子元素传递。否则，事件只传递到当前元素。</dd>
+</dl>
+
+
+
+<p></p>
+</div> <div id="a-crop">
+
+<dl>
+ <dt>
+  <code id="a-crop"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/crop">crop</a></code></dt>
+ <dd>
+  Type:
+  <i>
+   one of the values below</i>
+ </dd>
+ <dd>
+  If the label of the element is too big to fit in its given space, the text will be cropped on the side specified by the <code>crop</code> attribute. An ellipsis will be used in place of the cropped text. If the box direction is reversed, the cropping is reversed.</dd>
+</dl>
+<ul>
+ <li><code>start</code>: The text will be cropped on its left side.</li>
+ <li><code>end</code>: The text will be cropped on its right side.</li>
+ <li><code>left</code>: <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span> The text will be cropped on its left side.</li>
+ <li><code>right</code>: <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span> The text will be cropped on its right side.</li>
+ <li><code>center</code>: The text will be cropped in the middle, showing both the start and end of the text normally.</li>
+ <li><code>none</code>: The text will be not be cropped using an ellipsis. However, the text will simply be cut off if it is too large. The side depends on the CSS text alignment.</li>
+</ul>
+
+<p></p>
+</div> <div id="a-disabled">
+
+
+<dl>
+ <dt><code id="a-disabled"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code></dt>
+ <dd> </dd>
+ <dd>
+ <h5 id="类型boolean">类型:<em>boolean</em></h5>
+ </dd>
+ <dd>
+ <h5 id="表示元素是被禁用的。">表示元素是被禁用的。</h5>
+
+ <p>如果这个元素的disabled属性被设置为true，表示元素被禁用，被禁用的属性在页面上通常会显示灰色文本，它无法响应用户的操作，它也无法得到光标。</p>
+
+ <p>然而，这个元素仍然能够响应鼠标事件，如果要启用这个元素，把disabled设置为false</p>
+ </dd>
+</dl>
+
+<h4 id="示例：">示例：</h4>
+
+<div class="float-right"><img alt="Image:XUL_ref_attr_disabled.png" src="https://mdn.mozillademos.org/files/1742/XUL_ref_attr_disabled.png"></div>
+
+<pre><code>// Disabling an element
+document.getElementById('buttonRemove').setAttribute("disabled", "true");
+
+// Enabling back an element by removing the "disabled" attribute
+document.getElementById('buttonRemove').removeAttribute("disabled");</code></pre>
+
+<p></p><div class="blockIndicator standardNote standardNoteBlock">
+    <p><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Firefox/Releases/3.5">Firefox 3.5 note</a></p>
+    <p style="font-weight: 400;">For <a href="https://developer.mozilla.org/en-US/docs/XUL/keyset" title="en/XUL/Keyset"><code>keyset</code></a> elements, support for this attribute was added in Firefox 3.5.</p>
+</div><p></p>
+</div> <div id="a-label">
+
+<dl>
+ <dt>
+  <code id="a-label"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></dt>
+ <dd>
+  Type: <em>string</em></dd>
+ <dd>
+  The label that will appear on the element. If this is left out, no text appears.<br>
+  label 在元素上显示。如果左侧出界，则不显示任何文字。</dd>
+</dl>
+
+<p></p>
+</div> <div id="a-menuactive">
+
+
+<dl>
+ <dt><code id="a-menuactive"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/menuactive">menuactive</a></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>This attribute is set on an item in a menu when it is being hovered over. Typcially, the theme will use this to highlight the item. A <code>DOMMenuItemActive</code> event will be sent to the item when the item is hovered over, and a <code>DOMMenuItemInactive</code> event will be sent to the item when the selection moves away.</dd>
+</dl>
+</div> <div id="a-open">
+
+
+<dl>
+ <dt><code id="a-open"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/open">open</a></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>For the <code>menu</code> <code id="a-type"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/type">type</a></code> buttons, the <code>open</code> attribute is set to <code>true</code> when the menu is open. The <code>open</code> attribute is not present if the menu is closed.</dd>
+</dl>
+</div> <div id="a-sizetopopup">
+
+
+<dl>
+ <dt><code id="a-sizetopopup"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/sizetopopup">sizetopopup</a></code></dt>
+ <dd>Type: <em>one of the values below</em></dd>
+ <dd>Indicates how the menu width and the <code><a href="/en-US/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> width are determined. If the <code>sizetopopup</code> attribute is left out or set to <code>none</code>, the menu will be its preferred width and the popup may extend outside of this width, unaffected by the maximum width of the menu itself. Otherwise, the menu will size itself to at least the size of the popup. If the menu has a maximum width, the popup will also be this width.</dd>
+ <dd>
+ <dl>
+  <dt><code>none</code></dt>
+  <dd>The width of the popup will not be constrained to the size of the menu.</dd>
+  <dt><code>pref</code></dt>
+  <dd>The preferred width of the menu label or button will be the size needed for the popup contents. This is the default value for menulists.</dd>
+  <dt><code>always</code></dt>
+  <dd>Both the preferred and minimum width of the menu label or button will be the same as that necessary for the <code><a href="/en-US/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code>.</dd>
+ </dl>
+ </dd>
+</dl>
+</div> <div id="a-value">
+
+<dl>
+ <dt>
+  <code id="a-value"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code></dt>
+ <dd>
+  Type:
+  <i>
+   string</i>
+ </dd>
+ <dd>
+  The string attribute allows you to associate a data value with an element. It is not used for any specific purpose, but you can access it with a script for your own use.</dd>
+</dl>
+
+<p></p>
+</div><p></p>
+<h3 id="Properties" name="Properties">Properties</h3>
+<p> </p><div id="p-accessibleType">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/accessibleType">accessibleType</a></span></code></dt>
+ <dd>
+  Type:
+  <i>
+   integer</i>
+ </dd>
+ <dd>
+  A value indicating the type of accessibility object for the element.</dd>
+</dl>
+
+<p></p></div> <div id="p-menuitem.control">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/menuitem.control">control</a></span></code></dt>
+ <dd>
+  Type:
+  <i>
+   <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code> element</i>
+ </dd>
+ <dd>
+  Returns the enclosing <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code> that the item is inside, if any, or <code>null</code> if there is no enclosing menu.</dd>
+</dl>
+
+<p></p></div> <div id="p-itemCount">
+<dl>
+  <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/itemCount">itemCount</a></span></code> </dt>
+  <dd>Type: <em>integer</em></dd>
+  <dd>Read only property holding the number of child items.</dd>
+</dl>
+</div> <div id="p-menupopup">
+
+<dl>
+ <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/menupopup">menupopup</a></span></code></dt>
+ <dd>Type: <em>menupopup element</em></dd>
+ <dd>A reference to the <code><a href="/en-US/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> used by the <code><a href="/en-US/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code> or <code><a href="/en-US/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code>. This property is read-only.</dd>
+</dl></div> <div id="p-menu.open">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/menu.open">open</a></span></code> </dt>
+  <dd>
+    Type: <em>boolean</em></dd>
+  <dd>
+    This property will be set to true when the menu is open. The menu may be opened by setting the open property to true and closed by setting it to false.</dd>
+</dl></div> <div id="p-parentContainer">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/parentContainer">parentContainer</a></span></code> </dt>
+ <dd>
+  Type:
+  <i>
+   <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code> element</i>
+ </dd>
+ <dd>
+  Read only property that returns the containing <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code> element, or <code>null</code> if there isn't a containing menu.</dd>
+</dl>
+
+<p></p></div> <div id="p-value">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/value">value</a></span></code></dt>
+ <dd>
+  Type:
+  <i>
+   string</i>
+ </dd>
+ <dd>
+  Gets and sets the value of the <code id="a-value"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code> attribute.</dd>
+</dl>
+
+<p></p></div><p></p>
+<h3 id="Methods" name="Methods">Methods</h3>
+<p></p><table style="border: 1px solid rgb(204, 204, 204); margin: 0 0 10px 10px; padding: 0 10px; background: rgb(238, 238, 238); float: right; width: 250px;">
+<tbody>
+<tr>
+<td>
+<p><strong>Inherited Methods</strong><br>
+<small><code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.addEventListener">addEventListener()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.appendChild">appendChild()</a></code>, <span id="m-blur"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/blur">blur</a></code></span>, <span id="m-click"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/click">click</a></code></span>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.cloneNode">cloneNode()</a></code>, <a href="/En/DOM/Node.compareDocumentPosition" title="En/DOM/Node.compareDocumentPosition">compareDocumentPosition</a>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.dispatchEvent">dispatchEvent()</a></code>, <span id="m-doCommand"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/doCommand">doCommand</a></code></span>, <span id="m-focus"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/focus">focus</a></code></span>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttribute">getAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttributeNode">getAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttributeNodeNS">getAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttributeNS">getAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getBoundingClientRect">getBoundingClientRect()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getClientRects">getClientRects()</a></code>, <span id="m-getElementsByAttribute"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/getElementsByAttribute">getElementsByAttribute</a></code></span>, <span id="m-getElementsByAttributeNS"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/getElementsByAttributeNS">getElementsByAttributeNS</a></code></span>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getElementsByClassName">getElementsByClassName()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getElementsByTagName">getElementsByTagName()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getElementsByTagNameNS">getElementsByTagNameNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getFeature">getFeature()</a></code>, <a href="/En/DOM/Node.getUserData" title="En/DOM/Node.getUserData">getUserData</a>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasAttribute">hasAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasAttributeNS">hasAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasAttributes">hasAttributes()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasChildNodes">hasChildNodes()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.insertBefore">insertBefore()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.isDefaultNamespace">isDefaultNamespace()</a></code>, <a href="/En/DOM/Node.isEqualNode" title="En/DOM/Node.isEqualNode">isEqualNode</a>, <a href="/En/DOM/Node.isSameNode" title="En/DOM/Node.isSameNode">isSameNode</a>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.isSupported">isSupported()</a></code>, <a href="/En/DOM/Node.lookupNamespaceURI" title="En/DOM/Node.lookupNamespaceURI">lookupNamespaceURI</a>, <a href="/En/DOM/Node.lookupPrefix" title="En/DOM/Node.lookupPrefix">lookupPrefix</a>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.normalize">normalize()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.querySelector">querySelector()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.querySelectorAll">querySelectorAll()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeAttribute">removeAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeAttributeNode">removeAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeAttributeNS">removeAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeChild">removeChild()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeEventListener">removeEventListener()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.replaceChild">replaceChild()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttribute">setAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttributeNode">setAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttributeNodeNS">setAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttributeNS">setAttributeNS()</a></code>, <a href="/En/DOM/Node.setUserData" title="En/DOM/Node.setUserData">setUserData</a></small></p>
+
+</td>
+</tr>
+</tbody>
+</table> <dl>
+  <dt>
+    <span id="m-appendItem"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/appendItem">appendItem( label, value )</a></code></span></dt>
+  <dd>
+    Return type: <em>element</em></dd>
+  <dd>
+    Creates a new item and adds it to the end of the existing list of items. You may optionally set a value. The function returns the newly created element.</dd>
+</dl> <dl>
+ <dt><span id="m-getIndexOfItem"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/getIndexOfItem">getIndexOfItem( item )</a></code></span></dt>
+ <dd>Return type: <em>integer</em></dd>
+ <dd>Returns the zero-based position of the specified item. Items are numbered starting at the first item displayed in the list.</dd>
+</dl> <dl>
+ <dt><span id="m-getItemAtIndex"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/getItemAtIndex">getItemAtIndex( index )</a></code></span></dt>
+ <dd>Return type: <em>element</em></dd>
+ <dd>Returns the element that is at the specified index.</dd>
+</dl> <dl>
+  <dt>
+    <span id="m-insertItemAt"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/insertItemAt">insertItemAt( index, label, value )</a></code></span></dt>
+  <dd>
+    Return type: <em>element</em></dd>
+  <dd>
+    This method creates a new item and inserts it at the specified position. You may optionally set a value. The new item element is returned.</dd>
+</dl> <dl>
+  <dt>
+    <span id="m-removeItemAt"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/removeItemAt">removeItemAt( index )</a></code></span></dt>
+  <dd>
+    Return type: <em>element</em></dd>
+  <dd>
+    Removes the child item in the element at the specified index. The method returns the removed item.</dd>
+</dl><p></p>
+<h3 id="Related" name="Related">Related</h3>
+<dl>
+ <dt>
+  Elements</dt>
+ <dd>
+  <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menubar" title="menubar">menubar</a></code>, <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code>, <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code>, <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code>, <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menuseparator" title="menuseparator">menuseparator</a></code></dd>
+</dl>
+<dl>
+ <dt>
+  Interfaces</dt>
+ <dd>
+  <a href="cn/NsIAccessibleProvider">nsIAccessibleProvider</a>, <a href="cn/NsIDOMXULContainerElement">nsIDOMXULContainerElement</a>, <a href="cn/NsIDOMXULContainerItemElement">nsIDOMXULContainerItemElement</a>, <a href="cn/NsIDOMXULSelectControlItemElement">nsIDOMXULSelectControlItemElement</a></dd>
+</dl>
+<div class="noinclude">
+  </div>
+<p></p>

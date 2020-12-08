@@ -1,0 +1,89 @@
+---
+title: Expect-CT
+slug: Web/HTTP/Headers/Expect-CT
+tags:
+  - HTTP
+  - Reference
+  - ヘッダー
+  - レスポンスヘッダー
+translation_of: Web/HTTP/Headers/Expect-CT
+---
+<p>{{HTTPSidebar}}</p>
+
+<p><code>Expect-CT</code> ヘッダーは、サイトが認証透過性の要件の報告や強制に参加して、サイトの不正な認証情報が通知されない状態を防ぐことができます。</p>
+
+<div class="note">
+<p>サイトが <code>Expect-CT</code> ヘッダーを有効にすると、ブラウザーが<strong><a href="https://www.certificate-transparency.org/known-logs">公開 CT ログ</a></strong>に現れるサイトのすべての認証情報をチェックするよう要求します。</p>
+</div>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">ヘッダー種別</th>
+   <td>{{Glossary("Response header", "レスポンスヘッダー")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+   <td>はい</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre>Expect-CT: report-uri="&lt;uri&gt;",
+           enforce,
+           max-age=&lt;age&gt;</pre>
+
+<h2 id="Directives" name="Directives">ディレクティブ</h2>
+
+<dl>
+ <dt>max-age</dt>
+ <dd>
+ <p><code>Expect-CT</code> ヘッダーフィールドを受信した後で、ユーザーエージェントがメッセージを受信したホストを、既知の Expect-CT ホストと見なすべき時間を秒数で指定します。</p>
+
+ <p>キャッシュが表現可能な値よりも大きな値を受信した場合や、計算でオーバーフローが発生した場合、キャッシュは値を 2147483648 (2^31) または使用している表現方法で最も大きな整数値とみなします。</p>
+ </dd>
+ <dt>report-uri="&lt;uri&gt;" {{optional_inline}}</dt>
+ <dd>
+ <p>ユーザーエージェントが Expect-CT の失敗を報告する URI を指定します。</p>
+ <code>enforce</code> ディレクティブと <code>report-uri</code> ディレクティブが両方ともある場合、設定は "enforce-and-report" の設定と呼ばれ、ユーザーエージェントに認証透過性ポリシーに従い、違反を報告することを指示します。
+
+ <p> </p>
+ </dd>
+ <dt>enforce {{optional_inline}}</dt>
+ <dd>
+ <p>ユーザーエージェントに (報告するだけでなく) 認証透過性ポリシーに従い、ユーザーエージェントが認証透過性ポリシーに違反するコネクションを拒否するよう指示します。</p>
+
+ <p><code>enforce</code> ディレクティブと <code>report-uri</code> ディレクティブが両方ともある場合、設定は "enforce-and-report" の設定と呼ばれ、ユーザーエージェントに認証透過性ポリシーに従い、違反を報告することを指示します。</p>
+ </dd>
+</dl>
+
+<h2 id="Example" name="Example">例</h2>
+
+<p>以下の例は認証透過性を24時間強制し、違反を foo.example に報告することを示します。</p>
+
+<pre>Expect-CT: max-age=86400, enforce, report-uri="https://foo.example/report"</pre>
+
+<h2 id="Specifications" name="Specifications">仕様書</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">題名</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><a href="https://tools.ietf.org/html/draft-ietf-httpbis-expect-ct-07">Internet Draft</a></td>
+   <td>Expect-CT Extension for HTTP</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+
+<p class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</p>
+
+<p>{{Compat("http.headers.Expect-CT")}}</p>

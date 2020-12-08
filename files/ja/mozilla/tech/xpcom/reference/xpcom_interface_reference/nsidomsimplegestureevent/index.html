@@ -1,0 +1,61 @@
+---
+title: nsIDOMSimpleGestureEvent
+slug: >-
+  Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/NsIDOMSimpleGestureEvent
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/NsIDOMSimpleGestureEvent
+---
+<p><code>nsIDOMSimpleGestureEvent</code> インターフェースはマウスやトラックパッドによるジェスチャイベントを表現します。</p>
+<div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/dom/public/idl/events/nsIDOMSimpleGestureEvent.idl" rel="custom">dom/public/idl/events/nsIDOMSimpleGestureEvent.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">最終更新: Gecko 1.9.1 (Firefox 3.5 / Thunderbird 3.0 / SeaMonkey 2.0)</span></div>
+</div>
+<p>継承元: <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMMouseEvent" title="">nsIDOMMouseEvent</a></code></p>
+<h2 id="メソッドの概要">メソッドの概要</h2>
+<table class="standard-table"> <tbody> <tr> <td><code>void initSimpleGestureEvent(in DOMString typeArg,<br>                             in boolean canBubbleArg,<br>                             in boolean cancelableArg,<br>                             in nsIDOMAbstractView viewArg,<br>                             in long detailArg,<br>                             in long screenXArg,<br>                             in long screenYArg,<br>                             in long clientXArg,<br>                             in long clientYArg,<br>                             in boolean ctrlKeyArg,<br>                             in boolean altKeyArg,<br>                             in boolean shiftKeyArg,<br>                             in boolean metaKeyArg,<br>                             in unsigned short buttonArg,<br>                             in nsIDOMEventTarget relatedTargetArg,<br>                             in unsigned long directionArg,<br>                             in double deltaArg);</code></td> </tr> </tbody>
+</table>
+<h2 id="属性">属性</h2>
+<table class="standard-table"> <tbody> <tr> <td class="header">属性</td> <td class="header">型</td> <td class="header">説明</td> </tr> <tr> <td><code>direction</code></td> <td><code>unsigned long</code></td> <td>ジェスチャの移動方向。このページの <a href="#Direction_constants">Direction constants</a> と <a href="#Rotation_constants">Rotation constants</a> を参照。<strong>読み取り専用。</strong></td> </tr> <tr> <td><code>delta</code></td> <td><code>double</code></td> <td> <p>ジェスチャがどれほど移動したかを示す変化量。Update イベント (MozXxxGestureUpdate イベント) では前回の更新からの変化を示します。<code>MozRotateGesture</code> と <code>MozMagnifyGesture</code> イベントでは、これはイベントが処理されてからの総変化量を表します。</p> <p>回転イベントでは、この値は度で指定されます (正の値は時計回りの回転を表し、負の値は反時計回りの回転を表します)。拡大ジェスチャでは、単位は実装独自ですが、正の値は拡大を表し、負の値は縮小を表します。</p> <div class="note"><strong>注意:</strong> 現時点において Mac OS X では拡大ジェスチャでつかわれる単位が文書化されていません。典型的な値は 0.0 から 100.0 の範囲のようです。しかし、現在信頼できるのは、値が正になるか負になるかのみです。Windows では、今回とその直前における、2 つのタッチ点間の幅の変化をピクセル単位で表します。</div> </td> </tr> </tbody>
+</table>
+<h2 id="方向についての定数">方向についての定数</h2>
+<table class="standard-table"> <tbody> <tr> <td class="header">定数</td> <td class="header">値</td> <td class="header">説明</td> </tr> <tr> <td><code>DIRECTION_UP</code></td> <td>1</td> <td>上向きスワイプ。</td> </tr> <tr> <td><code>DIRECTION_DOWN</code></td> <td>2</td> <td>下向きスワイプ。</td> </tr> <tr> <td><code>DIRECTION_LEFT</code></td> <td>4</td> <td>左向きスワイプ。</td> </tr> <tr> <td><code>DIRECTION_RIGHT</code></td> <td>8</td> <td>右向きスワイプ。</td> </tr> </tbody>
+</table>
+<h2 id="回転についての定数">回転についての定数</h2>
+<table class="standard-table"> <tbody> <tr> <td class="header">定数</td> <td class="header">値</td> <td class="header">説明</td> </tr> <tr> <td><code>ROTATION_COUNTERCLOCKWISE</code></td> <td>1</td> <td>反時計回りの回転。</td> </tr> <tr> <td><code>ROTATION_CLOCKWISE</code></td> <td>2</td> <td>時計回りの回転。</td> </tr> </tbody>
+</table>
+<h2 id="メソッド">メソッド</h2>
+<h3 id="initSimpleGestureEvent">initSimpleGestureEvent()</h3>
+<p>ジェスチャイベントの初期化</p>
+<pre class="eval">void initSimpleGestureEvent(
+  in DOMString typeArg,
+  in boolean canBubbleArg,
+  in boolean cancelableArg,
+  in nsIDOMAbstractView viewArg,
+  in long detailArg,
+  in long screenXArg,
+  in long screenYArg,
+  in long clientXArg,
+  in long clientYArg,
+  in boolean ctrlKeyArg,
+  in boolean altKeyArg,
+  in boolean shiftKeyArg,
+  in boolean metaKeyArg,
+  in unsigned short buttonArg,
+  in nsIDOMEventTarget relatedTargetArg,
+  in unsigned long directionArg,
+  in double deltaArg
+);
+</pre>
+<h6 id="パラメータ">パラメータ</h6>
+<dl> <dt><code>directionArg</code></dt> <dd><code>direction</code> 属性に代入する値。</dd> <dt><code>deltaArg</code></dt> <dd><code>delta</code> 属性に代入する値。</dd> </dl>
+<h1 id="参照">参照</h1>
+<ul> <li><a class="internal" href="/Ja/DOM/Mouse_gesture_events" title="Ja/DOM/Mouse gesture events">マウスジェスチャイベント</a></li> <li><a class="internal" href="/ja/DOM/event" title="Ja/DOM/Event"><code>event</code></a></li>
+</ul>
+
+<p> </p>

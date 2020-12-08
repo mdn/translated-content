@@ -1,0 +1,22 @@
+---
+title: Window icons
+slug: Archive/Mozilla/XUL/Window_icons
+tags:
+  - Add-ons
+  - Extensions
+  - Toolkit API
+  - XPInstall
+  - XUL
+translation_of: Archive/Mozilla/XUL/Window_icons
+---
+<div class="note">
+<p><strong>注意:</strong> この機能はFirefox 67で削除されました。詳細は<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1531836" title="Each new xul window does a stat call to look for non-existant window specific icons">bug 1531836</a>を参照して下さい。</p>
+</div>
+
+<p><a href="ja/Firefox_1.5">Firefox 1.5</a>、Thunderbird 1.5、および XULRunner 1.8から、XULウインドウのアイコンを&lt;tt&gt;mywindow.ico&lt;/tt&gt; (Windowsの場合) および &lt;tt&gt;mywindow.xpm&lt;/tt&gt; (Linuxの場合)として指定することができるようになりました。<code>mywindow</code>は<a href="ja/Bundles">bundle</a>の &lt;tt&gt;chrome/icons/default&lt;/tt&gt; サブフォルダ内でアイコンを付けたい<code>&lt;window&gt;</code>の<code>id</code>です。</p>
+
+<p>これらのアイコンは、&lt;tt&gt;<em>add_dir</em>/chrome/icons/default&lt;/tt&gt;にあるグローバルアイコンファイルを上書きします。</p>
+
+<h3 id="Older_versions">Older versions</h3>
+
+<p>To support older applications, such as Firefox 1.0, you need to copy the icons to &lt;tt&gt;<em>app_dir</em>/chrome/icons/default&lt;/tt&gt; manually on the first start (<a class="external" href="http://forums.mozillazine.org/viewtopic.php?p=1243796#1243796">example code</a>).</p>

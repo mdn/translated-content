@@ -1,0 +1,239 @@
+---
+title: String.prototype.split()
+slug: Web/JavaScript/Reference/Objets_globaux/String/split
+tags:
+  - Expressions rationnelles
+  - JavaScript
+  - Méthode
+  - Prototype
+  - Reference
+  - String
+translation_of: Web/JavaScript/Reference/Global_Objects/String/split
+---
+<div>{{JSRef}}</div>
+
+<p>La méthode <code><strong>split()</strong></code> permet de diviser une chaîne de caractères à partir d'un séparateur pour fournir un tableau de sous-chaînes.</p>
+
+<div>{{EmbedInteractiveExample("pages/js/string-split.html")}}</div>
+
+<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox notranslate"><var>str</var>.split([<var>séparateur</var>[, qtéMax]])</pre>
+
+<h3 id="Paramètres">Paramètres</h3>
+
+<dl>
+ <dt><code>séparateur</code> {{optional_inline}}</dt>
+ <dd>
+ <p>Paramètre optionnel qui définit le ou les caractères à utiliser pour scinder la chaîne. Le <code>séparateur</code> est considéré comme une chaîne ou une {{jsxref("RegExp", "expression rationnelle", "", 1)}}. Si le <code>séparateur</code> est omis ou qu'il n'apparaît pas dans la chaîne, le tableau retourné contiendra un unique élément contenant la chaîne entière. Si le <code>séparateur</code> est une chaîne vide, la chaîne <code>str</code> sera convertie en un tableau dont les éléments seront les caractères de la chaîne. Si le <code>séparateur</code> contient un ou plusieurs caractères, la chaîne de caractères entière doit être trouvée pour effectuer une césure.</p>
+
+ <p class="warning"><strong>Attention !</strong> Si c'est la chaîne vide qui est utilisée comme séparateur, la chaîne ne sera pas découpée entre chaque caractère visible (<a href="https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries">grapheme cluster</a>) mais entre chaque codet UTF-16 et les paires de <em><a href="http://unicode.org/faq/utf_bom.html#utf16-2">surrogates</a></em> seront détruites.</p>
+ </dd>
+ <dt><code>qtéMax</code> {{optional_inline}}</dt>
+ <dd>Paramètre optionnel. Un entier définissant la limite sur le nombre de sous-chaînes à retourner. La méthode <code>split</code> scindera toujours la chaîne à partir du <code>séparateur</code>, mais le tableau retourné contiendra au plus <code>qtéMax</code> sous-chaînes.</dd>
+</dl>
+
+<h3 id="Valeur_de_retour">Valeur de retour</h3>
+
+<p>Un tableau ({{jsxref("Array")}}) qui contient les fragments de la chaîne appelante, découpée en fonction du séparateur indiqué.</p>
+
+<h2 id="Description">Description</h2>
+
+<p>Lorsqu'il est trouvé, le <code>séparateur</code> est supprimé de la chaîne et les sous-chaînes sont retournées dans un tableau. Si le <code>séparateur</code> est omis, le tableau contiendra un élément correspondant à la chaîne courante. Si le <code>séparateur</code> est une chaîne vide, la chaîne courante est convertie en un tableau composé des caractères de la chaîne. Si le séparateur est uniquement présent au début et/ou à la fin de la chaîne, le tableau contiendra une chaîne vide comme premier et/ou dernier élément (si on utilise cette méthode sur une chaîne qui ne contient que le séparateur, le tableau obtenu aura deux éléments qui seront chacun une chaîne vide).</p>
+
+<p>Si le <code>séparateur</code> est une expression rationnelle qui contient des parenthèses groupantes, les résultats (incluant tout résultat indéfini) des groupes iront alors dans le tableau retourné à chaque fois qu'une correspondance du <code>séparateur</code> sera trouvée. Cependant, tous les navigateurs ne supportent pas cette possibilité.</p>
+
+<p>La méthode <code>split()</code> ne modifie pas le tableau courant, elle renvoie un nouveau tableau.</p>
+
+<p>Lorsque le séparateur fourni est un tableau, le tableau est automatiquement converti en une chaîne de caractères et c'est cette chaîne qui est utilisée comme séparateur.</p>
+
+<p>{{Note("Quand la chaîne est vide, <code>split()</code> retourne un tableau contenant une chaîne vide, plutôt qu'un tableau vide. Si la chaîne et le séparateur sont tous les deux des chaînes vides, un tableau vide sera renvoyé.")}}</p>
+
+<h2 id="Exemples">Exemples</h2>
+
+<h3 id="Utiliser_split">Utiliser <code>split()</code></h3>
+
+<p>L'exemple suivant définit une fonction qui divise une chaîne en un tableau de chaînes selon un délimiteur spécifié. Après la coupe de la chaîne, la fonction affiche des messages indiquant la chaîne initiale (avant la coupe), le délimiteur utilisé, le nombre d'éléments dans le tableau, et les éléments du tableau retourné.</p>
+
+<pre class="brush: js notranslate">function splitString(stringToSplit, separator) {
+  var arrayOfStrings = stringToSplit.split(separator);
+
+  console.log('La chaine d\'origine est : "' + stringToSplit + '"');
+  console.log('Le délimiteur est : "' + separator + '"');
+  console.log("Le tableau comporte " + arrayOfStrings.length + " elements : ");
+
+  for (var i=0; i &lt; arrayOfStrings.length; i++)
+    print(arrayOfStrings[i] + " / ");
+}
+
+var tempestString = "Oh brave new world that has such people in it.";
+var monthString = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec";
+
+var espace = " ";
+var virgule = ",";
+
+splitString(tempestString, espace);
+splitString(tempestString);
+splitString(monthString, virgule);
+</pre>
+
+<p>Cet exemple produira la sortie suivante :</p>
+
+<pre class="brush: js notranslate">La chaine d'origine est : "Oh brave new world that has such people in it."
+Le délimiteur est : " "
+Le tableau comporte 10 elements : Oh / brave / new / world / that / has / such / people / in / it. /
+
+La chaine d'origine est : "Oh brave new world that has such people in it."
+Le délimiteur est : "undefined"
+Le tableau comporte 1 elements : Oh brave new world that has such people in it. /
+
+La chaine d'origine est : "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec"
+Le délimiteur est : ","
+Le tableau comporte 12 elements : Jan / Feb / Mar / Apr / May / Jun / Jul / Aug / Sep / Oct / Nov / Dec /
+</pre>
+
+<h3 id="Supprimer_les_espaces_dune_chaîne">Supprimer les espaces d'une chaîne</h3>
+
+<p>Dans l'exemple suivant, <code>split</code> recherche zéro ou plusieurs espaces suivis d'un point-virgule, lui-même suivi par zéro ou plus espaces. Lorsque ce « motif » est trouvé, cela supprime celui-ci de la chaîne. <code>nameList</code> est le tableau retourné du résultat de <code>split</code>.</p>
+
+<pre class="brush: js notranslate">var names = "Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand ";
+
+console.log(names);
+
+var re = /\s*(;|$)\s*/;
+var nameList = names.split(re);
+
+console.log(nameList);
+</pre>
+
+<p>Ceci affichera deux lignes dans la console ; la première ligne correspondant à la chaîne d'origine, et la seconde au tableau de résultats.</p>
+
+<pre class="brush: js notranslate">Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand
+["Harry Trump","Fred Barney","Helen Rigby","Bill Abel","Chris Hand"]
+</pre>
+
+<h3 id="Retourner_un_nombre_limité_de_sous-chaînes">Retourner un nombre limité de sous-chaînes</h3>
+
+<p>Dans l'exemple suivant, <code>split()</code> recherche des espaces dans une chaîne et retourne les 3 premières sous-chaînes qui correspondent.</p>
+
+<pre class="brush: js notranslate">var myString = "Hello World. How are you doing?";
+var splits = myString.split(" ", 3);
+
+console.log(splits);
+</pre>
+
+<p>Ce script affichera :</p>
+
+<pre class="brush: js notranslate">["Hello", "World.", "How"]
+</pre>
+
+<h3 id="Découper_une_expression_rationnelle_-_Parenthèses_capturantes">Découper une expression rationnelle - Parenthèses capturantes</h3>
+
+<p>Si le paramètre <code>séparateur</code> est une expression rationnelle qui contient des parenthèses de capture, les résultats seront retournés dans le tableau.</p>
+
+<pre class="brush: js notranslate">var myString = "Hello 1 word. Sentence number 2.";
+var splits = myString.split(/(\d)/); /* Ce motif correspond à un chiffre et est équivalent à [0-9] */
+
+console.log(splits);
+</pre>
+
+<p>Ce script affichera :</p>
+
+<pre class="brush: js notranslate">Hello ,1, word. Sentence number ,2,.
+</pre>
+
+<h3 id="Découper_une_chaîne_avec_un_tableau_comme_séparateur">Découper une chaîne avec un tableau comme séparateur</h3>
+
+<pre class="brush: js notranslate">var maChaine = "Ceci|est|un|test";
+var morceaux = maChaine.split(['|']);
+
+console.log(morceaux); // ["Ceci", "est", "un", "test"]
+
+var maChaine2 = "ca,bc,a,bca,bca,bc";
+var morceaux2 = maChaine2.split(["a", "b"]);
+
+console.log(morceaux2); // ["c", "c,", "c", "c", "c"]
+</pre>
+
+<h3 id="Inverser_une_chaîne_en_utilisant_split">Inverser une chaîne en utilisant <code>split()</code></h3>
+
+<pre class="brush: js notranslate">var str = 'asdfghjkl';
+var strReverse = str.split('').reverse().join(''); // 'lkjhgfdsa'
+// split renvoie un tableau sur lequel on peut appliquer reverse
+// enfin on utilise join pour assembler le tout.</pre>
+
+<div class="note">
+<p><strong>Note :</strong> Si on souhaite tester si la chaîne courante est un palindrome, on pourra utiliser l'opérateur {{jsxref("Opérateurs/Opérateurs_de_comparaison","===","#.C3.89galit.C3.A9_stricte_(.3D.3D.3D)")}}.</p>
+</div>
+
+<p>Attention, cela ne fonctionne pas si la chaîne de caractères contient des groupes de graphèmes, même lorsqu'on utilise une méthode de découpage sensible à Unicode.</p>
+
+<pre class="brush: js notranslate">var str = 'résumé';
+var strReverse = str.split(/(?:)/u).reverse().join('');
+// =&gt; "émusér"
+</pre>
+
+<p>On pourra utiliser une bibliothèque (cf. <a href="https://github.com/mathiasbynens/esrever">esrever</a>) si besoin.</p>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Spécification</th>
+   <th scope="col">État</th>
+   <th scope="col">Commentaires</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES3')}}</td>
+   <td>{{Spec2('ES3')}}</td>
+   <td>Définition initiale. Implémentée avec JavaScript 1.1.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.5.4.14', 'String.prototype.split')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-string.prototype.split', 'String.prototype.split')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-string.prototype.split', 'String.prototype.split')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<p class="hidden">Le tableau de compatibilité de cette page a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à envoyer une <em>pull request</em> sur <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>.</p>
+
+<p>{{Compat("javascript.builtins.String.split")}}</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>{{jsxref("String.prototype.charAt()")}}</li>
+ <li>{{jsxref("String.prototype.indexOf()")}}</li>
+ <li>{{jsxref("String.prototype.lastIndexOf()")}}</li>
+ <li>{{jsxref("Array.prototype.join()")}}</li>
+</ul>
+
+<p>{{SpecName('ES6', '#sec-arraybuffer-constructor', 'ArrayBuffer')}} {{Spec2('ES6')}} Définition initiale au sein d'un standard ECMA.</p>
+
+<h2 id="Compatibilité_des_navigateurs_2">Compatibilité des navigateurs</h2>
+
+<div class="hidden">Le tableau de compatibilité de cette page a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à consulter <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> et à nous envoyer une <em>pull request</em>.</div>
+
+<p>{{Compat("javascript.builtins.String.split")}}</p>
+
+<h2 id="Voir_aussi_2">Voir aussi</h2>
+
+<ul>
+ <li><a href="/fr/docs/Web/JavaScript/Tableaux_typés">Les tableaux typés JavaScript</a></li>
+</ul>

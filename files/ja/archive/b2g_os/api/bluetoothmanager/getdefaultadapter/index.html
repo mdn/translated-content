@@ -1,0 +1,48 @@
+---
+title: BluetoothManager.getDefaultAdapter()
+slug: Archive/B2G_OS/API/BluetoothManager/getDefaultAdapter
+tags:
+  - API
+  - Method
+  - Non Standard
+  - Reference
+  - Web Bluetooth
+  - WebAPI
+translation_of: Archive/B2G_OS/API/BluetoothManager/getDefaultAdapter
+---
+<p></p><section class="Quick_links" id="Quick_Links"><ol><li><strong><a href="/ja/docs/Web/API/Web_Bluetooth_API">Web Bluetooth API</a></strong></li><li><strong><a href="/ja/docs/Web/API/Archive"><code>Archive</code></a></strong></li><li class="toggle"><details open><summary>Bluetooth API に関連するページ</summary><ol><li><a href="/ja/docs/Web/API/BluetoothAdvertisingData"><code>BluetoothAdvertisingData</code></a></li><li><a href="/ja/docs/Web/API/BluetoothDevice"><code>BluetoothDevice</code></a></li><li><a href="/ja/docs/Web/API/BluetoothGATTCharacteristic"><code>BluetoothGATTCharacteristic</code></a></li><li><a href="/ja/docs/Web/API/BluetoothGATTDescriptor"><code>BluetoothGATTDescriptor</code></a></li><li><a href="/ja/docs/Web/API/BluetoothGATTRemoteServer"><code>BluetoothGATTRemoteServer</code></a></li></ol></details></li></ol></section><p></p>
+
+<p></p><div class="overheadIndicator nonStandard nonStandardHeader">
+      <p><strong><span title="この API は標準化されていません。"><i class="icon-warning-sign"> </i></span> 非標準</strong><br>
+      この機能は標準ではなく、標準化の予定もありません。公開されているウェブサイトには使用しないでください。ユーザーによっては使用できないことがあります。実装ごとに大きな差があることもあり、将来は振る舞いが変わるかもしれません。</p>
+      </div><p></p>
+
+<p></p><div class="warning">
+    <p style="text-align: center;">この API は <a href="/ja/docs/Mozilla/Firefox_OS/Security/Application_security">認定済みアプリ</a>のみ、 <a href="/ja/docs/Mozilla/Firefox_OS">Firefox OS</a> で有効になります。</p>
+</div><p></p>
+
+<h2 id="概要">概要</h2>
+
+<p><code>getDefaultAdapter</code> メソッドは、デバイスをサードパーティー製のBluetooth デバイスと接続するためのデフォルトアダプタを取得するのに使われます。</p>
+
+<p>新しいアダプタがデバイスに接続される毎に、そのデバイスがデフォルトのアダプタになります。通常Firefox OSはアダプタを一つだけ有します。.</p>
+
+<h2 id="構文">構文</h2>
+
+<pre>var request = navigator.mozBluetooth.getDefaultAdapter();</pre>
+
+<h3 id="返値">返値</h3>
+
+<p>オペレーションの成功または失敗を取得するための <a href="/ja/docs/Web/API/DOMRequest" title="DOMRequest オブジェクトは、進行中の操作を表します。操作の完了時に呼び出されるコールバックと、操作結果への参照を提供します。 進行中の操作を開始する DOM メソッドは、その操作の進行状況の監視に使用できる DOMRequest オブジェクトを返すことがあります。"><code>DOMRequest</code></a> オブジェクトを返します。成功した場合、リクエストの結果は <a href="/ja/docs/Web/API/BluetoothAdapter" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>BluetoothAdapter</code></a> オブジェクトです。</p>
+
+<h2 id="Specification" name="Specification">仕様</h2>
+
+<p>正式な仕様の一部ではありません。<a href="http://www.w3.org/2012/sysapps/">W3C's System Applications Working Group</a> で協議される必要があります。</p>
+
+<h2 id="参考">参考</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/API/BluetoothManager_(Firefox_OS)" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>BluetoothManager_(Firefox_OS)</code></a></li>
+ <li><a href="/ja/docs/Web/API/BluetoothAdapter" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>BluetoothAdapter</code></a></li>
+ <li><a href="/docs/WebAPI/WebBluetooth">Web Bluetooth</a></li>
+</ul>

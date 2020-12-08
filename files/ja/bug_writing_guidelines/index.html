@@ -1,0 +1,107 @@
+---
+title: Bug writing guidelines
+slug: Bug_writing_guidelines
+tags:
+  - QA
+translation_of: Mozilla/QA/Bug_writing_guidelines
+---
+<div class="note">
+  <p><strong>Mozilla 製品 (Firefox や Thunderbird など) に関するサポートが必要なら、提供されているいずれかの <a class="external" href="http://mozilla.jp/support/">サポートオプション</a> をご利用ください。このページを編集しないようお願いします。</strong></p>
+  <p>Mozilla の QA に初めて参加される場合は、より経験を積んだ貢献者の助けを借りてみましょう。<a href="/ja/QA" title="ja/QA">QA</a> ページの「コミュニティ」という項目に、他の貢献者と出会える場所が書かれています。 Firefox のバグを報告されるなら、irc.mozilla.org の <code><a class="link-irc" href="irc://irc.mozilla.org/firefox">#firefox</a></code> チャンネルで協力を求めることもできます。</p>
+</div>
+<h2 id=".E5.8E.9F.E5.89.87" name=".E5.8E.9F.E5.89.87">原則</h2>
+<p>有用なバグ報告ほど修正される可能性が上がります。このガイドラインではそうした報告の書き方について説明します。</p>
+<ul>
+  <li>正確に</li>
+  <li>明確に - 他の人もバグを再現できるよう、状況をはっきりと説明してください</li>
+  <li>報告 1 件につきバグ 1 件です</li>
+  <li>どんな些細なバグでも報告してください - 小さなバグの裏に大きなバグが潜んでいる可能性があります</li>
+  <li>事実と推測をしっかり区別してください</li>
+</ul>
+<h2 id=".E4.BA.8B.E5.89.8D.E6.BA.96.E5.82.99" name=".E4.BA.8B.E5.89.8D.E6.BA.96.E5.82.99">事前準備</h2>
+<ol>
+  <li>該当する製品の <a class="external" href="http://www.mozilla.org/developer/#builds">最新のビルド</a> を使ってバグを再現し、すでに修正されていないかどうか確認してください。</li>
+  <li>Bugzilla を検索し、バグがすでに報告されていないかどうか確認してください。(<a href="/en/Screening_duplicate_bugs">チュートリアル</a>)</li>
+</ol>
+<h2 id=".E6.96.B0.E3.81.97.E3.81.84.E3.83.90.E3.82.B0.E3.82.92.E5.A0.B1.E5.91.8A.E3.81.99.E3.82.8B" name=".E6.96.B0.E3.81.97.E3.81.84.E3.83.90.E3.82.B0.E3.82.92.E5.A0.B1.E5.91.8A.E3.81.99.E3.82.8B">新しいバグを報告する</h2>
+<p>最新のビルドでバグが再現し、誰もまだ報告していないようなら、次のステップへ進んでください。</p>
+<ol>
+  <li>「<a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?format=guided">Enter a new bug</a>」を選びます (このフォームはこのガイドラインの一部を組み込んだものです)</li>
+  <li>あなたがバグを見つけた製品を選びます。</li>
+  <li>フォームに記入します。以下はフォームの各項目の意味です。</li>
+</ol>
+<p><strong>Component:</strong> 製品のどの部分そのバグを見つけましたか？</p>
+<p>この項目は必須です。「Component」のリンクをクリックすると、各コンポーネントの説明を見ることができます。もしどれにも当てはまらないと思ったら「General」を選択してください。</p>
+<p><strong>OS:</strong> どのオペレーティングシステム (OS) でそのバグを見つけましたか？ (Linux、Windows XP、Mac OS X など)</p>
+<p>複数の OS でそのバグが見られることが分かっている場合は「All」を選択してください。お使いの OS がリストにない場合は「Other」を選択してください。</p>
+<p><strong>Summary:</strong> そのバグについて、およそ 60 文字以内で説明してください。</p>
+<p>良い要約を書けば、すばやく、そして間違いなくそのバグ報告を特定できます。解決策を提示するのではなく、問題そのものを説明してください。</p>
+<ul>
+  <li>良い例: "Cancelling a File Copy dialog crashes File Manager"</li>
+  <li>Bad: "Software crashes"</li>
+  <li>Bad: "Browser should work with my web site"</li>
+</ul>
+<p><strong>Description:</strong> バグ報告の詳細です。以下の項目を含めてください。</p>
+<div class="highlight">
+  <p><strong>Overview:</strong> より詳細な要約。</p>
+  <pre class="eval">Drag-selecting any page crashes Mac builds in the NSGetFactory function.
+</pre>
+  <p><strong>Steps to Reproduce:</strong> バグを引き起こすのに必要な、最小限の、簡単に実行できる手順。特別な条件があればそれも書いてください。</p>
+  <pre class="eval">1) View any web page. (I used the default sample page,
+resource:/res/samples/test0.html)
+
+2) Drag-select the page. (Specifically, while holding down
+the mouse button, drag the mouse pointer downwards from any
+point in the browser's content region to the bottom of the
+browser's content region.)
+</pre>
+  <p><strong>Actual Results:</strong> 上記の手順を実行するとどのような結果が見られるかを書いてください。</p>
+  <pre class="eval">The application crashed.
+</pre>
+  <p><strong>Expected Results:</strong> バグがない場合、どのような結果になるべきかを書いてください。</p>
+  <pre class="eval">The window should scroll downwards. Scrolled content should be selected.
+(Or, at least, the application should not crash.)
+</pre>
+  <p><strong>Build Date &amp; Platform:</strong> 初めてそのバグを見つけたビルドの日付とプラットフォーム。</p>
+  <pre class="eval">Build 2006-08-10 on Mac OS 10.4.3
+</pre>
+  <p><strong>Additional Builds and Platforms:</strong> そのバグが他のプラットフォーム (場合によってはブラウザ) でも見られるかどうか。</p>
+  <pre class="eval">Doesn't Occur On Build 2006-08-10 on Windows XP Home (Service Pack 2)
+</pre>
+  <p><strong>Additional Information:</strong> その他の役に立つ情報。</p>
+  <p>クラッシュバグについては、以下の内容を報告してください。</p>
+  <ul>
+    <li>Win32: ワトソン博士 {{ 訳注("Windows に付属するクラッシュ報告ツール") }} のエラーが表示された場合は、クラッシュの種類や、アプリケーションのどのモジュールでクラッシュしたかを書いてください。 (例: access violation in mozilla.exe)</li>
+    <li>Mac OS X: アプリケーションがクラッシュした場合は、表示された通知ウィンドウで {{ mediawiki.external('Report') }} ボタンをクリックします。{{ mediawiki.external('Problem and system information') }} の下にあるテキストボックスからテキスト全文をコピーして、フォームに貼り付けてください。バグを Apple に送る必要はありません。ウィンドウの左上にある赤い閉じるボタンを押してください。</li>
+    <li>Unix: シェルプロンプトに <code>gdb mozilla core</code> と入力して得られる最小限のスタックトレースを提供してください。</li>
+  </ul>
+  <pre>Date/Time:      2006-12-26 12:15:20.089 -0500
+OS Version:     10.4.8 (Build 8L2127)
+Report Version: 4
+
+Command: firefox-bin
+Path:    /Applications/Firefox.app/Contents/MacOS/firefox-bin
+Parent:  WindowServer [71]
+
+Version: 2.0.0.1 (2.0.0.1)
+
+PID:    114
+Thread: 0
+
+Exception:  EXC_BAD_ACCESS (0x0001)
+Codes:      KERN_PROTECTION_FAILURE (0x0002) at 0x000000ca
+
+Thread 0 Crashed:
+0   libxpcom_core.dylib 	0x0186329b AppendUTF8toUTF16(char const*, nsAString_internal&amp;) + 31
+1   libxpcom_core.dylib 	0x01822916 nsTextFormatter::smprintf_free(unsigned short*) + 3248
+... (many many more lines like this) ...</pre>
+</div>
+<p><strong>Add an attachment:</strong> 関連ファイルをバグ報告に添付することができます。20 行以上のデバッグ情報は添付ファイルの形で提供してください。また、バグを実証する HTML ファイルをお持ちの場合は、それを添付してください。最初の送信時には 1 つしかファイルを添付できませんので、複数ファイルがある場合は、一度バグを登録してから改めて添付してください。付属のファイル (画像など) がある場合はまずそれを添付して、HTML ファイルをアップロードする前に画像の URL を書き換えてください。そうすることでデモを「自己完結」できます。5 つ以上のファイルを添付する場合は事前に担当者に相談してください。</p>
+<p>内容に間違いや記入漏れがないことを再度確認してから「Commit」ボタンを押してください。これであなたのバグ報告は Bugzilla のデータベースに入りました。</p>
+<div class="originaldocinfo">
+  <h2 id=".E5.8E.9F.E6.96.87.E6.9B.B8.E3.81.AE.E6.83.85.E5.A0.B1" name=".E5.8E.9F.E6.96.87.E6.9B.B8.E3.81.AE.E6.83.85.E5.A0.B1">原文書の情報</h2>
+  <ul>
+    <li>著者: Gervase Markham, based on an original by Eli Goldberg</li>
+    <li>貢献者: Claudius Gayle, Jan Leger, Felix Miata, Peter Mock, Chris Pratt, Chris Yeh, and others.</li>
+  </ul>
+</div>

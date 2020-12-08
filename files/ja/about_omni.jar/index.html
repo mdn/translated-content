@@ -1,0 +1,66 @@
+---
+title: omni.ja （かつてのomni.jar）について
+slug: About_omni.jar
+tags:
+  - Firefox 4
+  - Gecko 2.0
+translation_of: Mozilla/About_omni.ja_(formerly_omni.jar)
+---
+<p>{{ gecko_minversion_header("2.0") }}</p>
+
+<p><span class="seoSummary">Firefox と Thunderbird は内部的なパーツをスタンドアローンファイルや omni.ja と呼ばれる単一の JAR ファイルに移動することによって、パフォーマンスの改善をしています。omni.ja はアプリケーションのロードに必要となる大量の I/O を軽減させています。この記事は、このアーカイブの内容と、その内容を調べるテクニックを説明します。</span></p>
+
+<div class="note">
+<p><strong>Note: </strong> Firefox 10 と Thunderbird 10 から、ファイルの拡張子で .ja を使うようになりました。 Windows のシステム復元で .jar 拡張子がバックアップされず、.ja 拡張子だとバックアップされるからです。この変更は Firefox の破損を防ぐために必要でした。</p>
+</div>
+
+<h2 id="omni.ja_の調査">omni.ja の調査</h2>
+
+<div class="note"><strong>Note:</strong> <code>omni.jar</code> ファイルの展開時に、一部のウイルス対策ソフトウェアが誤った警告を表示することがあります。</div>
+
+<p>いくつかの unzip ツールと (7-Zip を含む) アーカイブツールは、<code>omni.ja</code> ファイルにデータの最適化が行われているため、今のところは、これを読むことができません。Windows 7 のユーザの場合は、ファイル名を <code>omni.zip</code> に変更し、Windows エクスプローラーを使用してすべてのファイルを展開することができます。これより古い Windows のユーザは、<a class="link-ftp external external-icon" href="ftp://ftp.info-zip.org/pub/infozip/win32/unz552dn.zip" title="ftp://ftp.info-zip.org/pub/infozip/win32/unz552dn.zip">InfoZip の UnZip ツール</a>を使用してファイルを展開できます (<code>omni.jar</code> のコピーを作成し、<code>unzip.exe</code> にドラッグ＆ドロップしてください)。Linux のユーザは <strong>unzip </strong>コマンドを使用して omni.ja の中身を取り出すことができます。</p>
+
+<p><code>omni.ja は他の面でも Zip ファイルと互換性がありません。展開後のファイルを編集するだけでは Firefox に影響を与えませんが、正しい方法で圧縮されていないファイルは Firefox を破損させることがあります。正しいパッケージ方法は以下の通りです。</code></p>
+
+<pre>zip -qr9XD omni.ja *</pre>
+
+<div class="note"><strong>Note:</strong> Firefox 10 と Thunderbird 10 より前のバージョンでは、omni.ja は omni.jar と呼ばれていました。</div>
+
+<h2 id="omni.ja_の内容">omni.ja の内容</h2>
+
+<p><code>omni.ja</code> ファイルには、アプリケーションのリソースが分類され含まれています:</p>
+
+<dl>
+ <dt>chrome.manifest</dt>
+ <dd><a href="https://developer.mozilla.org/ja/Chrome_Registration" title="ja/Chrome Registration">chrome manifest</a> ファイル。</dd>
+ <dt>/chrome/</dt>
+ <dd>アプリケーションのユーザインタフェース関連のファイル</dd>
+ <dt>/chrome/localized.manifest</dt>
+ <dd>ローカライズされたコンテンツの Manifest ファイル。メインの chrome.manifest ファイルから参照されます。</dd>
+ <dt>/chrome/nonlocalized.manifest</dt>
+ <dd>ローカライズされないコンテンツの Manifest ファイル。メインの chrome.manifest ファイルから参照されます。</dd>
+ <dt>/components/</dt>
+ <dd>アプリケーションが依存する XPCOM コンポーネント。</dd>
+ <dt>/defaults/</dt>
+ <dd>デフォルトの設定ファイル。</dd>
+ <dt>/modules</dt>
+ <dd><a href="https://developer.mozilla.org/ja/JavaScript_code_modules" title="ja/JavaScript code modules">JavaScript コードモジュール</a>。</dd>
+ <dt>/res/</dt>
+ <dd>その他のリソースファイル。</dd>
+</dl>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/Firefox_4_for_developers" title="en/Firefox 4 for developers">Firefox 4 for developers</a></li>
+ <li><a href="/Thunderbird_5_for_developers" title="en/Thunderbird 3.3 for developers">Thunderbird 3.3 for developers</a></li>
+ <li><a href="/Theme_changes_in_Firefox_4" title="en/Theme changes in Firefox 4">Theme changes in Firefox 4</a></li>
+ <li><a class="external" href="http://blog.mozilla.com/tglek/2010/09/14/firefox-4-jar-jar-jar/" title="http://blog.mozilla.com/tglek/2010/09/14/firefox-4-jar-jar-jar/">Firefox 4: jar jar jar</a> (ブログ投稿)</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=701875">Bug 701875 - Rename omni.jar to omni.ja</a></li>
+</ul>
+
+<div class="noinclude">
+<p>{{ languages( { "ja": "ja/About_omni.jar" } ) }}</p>
+</div>
+
+<p> </p>

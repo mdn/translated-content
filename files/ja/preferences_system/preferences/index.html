@@ -1,0 +1,34 @@
+---
+title: '&lt;preferences&gt; 要素リファレンス'
+slug: Preferences_System/preferences
+tags:
+  - Preferences system
+  - XUL
+---
+<p> </p>
+<h3 id=".E6.A6.82.E8.AA.AC"> 概説 </h3>
+<p><b><code>&lt;preferences&gt;</code></b> は <code><a href="ja/Preferences_System/preference">&lt;preference&gt;</a></code> 要素のためのコンテナ要素です。この要素は <code><a href="ja/Preferences_System/prefpane">&lt;prefpane&gt;</a></code> 要素の子要素であることが想定されます。
+</p><p><code>&lt;preferences&gt;</code> 要素は一つ以上の <code>&lt;preference&gt;</code> 要素を含んでいるべきです。
+</p><p><i>注意: 以下のメソッドとプロパティのうちどれが公開のものであるかは、明らかになっていません。</i>
+</p>
+<h3 id="XUL.E6.A7.8B.E6.96.87"> XUL構文 </h3>
+<pre class="eval">&lt;preferences&gt;
+  &lt;preference id="pref_one" name="extensions.myextension.one" type="bool"/&gt;
+  &lt;preference id="pref_two" name="extensions.myextension.two" type="string"/&gt;
+    ... などなど ...
+&lt;/preferences&gt;
+</pre>
+<h3 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89"> メソッド </h3>
+<dl><dt> <code>void fireChangedEvent(in DOMElement preference);</code> </dt><dd> 渡された <code>preference</code> 要素のための（バブリングしない） <code>changed</code> イベントを生成して発行します。また、その要素の <code>onchanged</code> 属性で指定されたコードを実行します。<a href="ja/Preferences_System/preference#change">&lt;preference&gt; の change イベント</a>の説明も参照してください。
+</dd><dt> <code>void observe(in nsISupports aSubject, in string aTopic, in wstring aData);</code> </dt><dd> <a href="ja/NsIObserver">nsIObserver</a> のメソッドは、この要素の子要素としてリストされたpreference要素の変更を反映するために、内部的に使用されます。
+</dd></dl>
+<h3 id=".E3.83.95.E3.82.A3.E3.83.BC.E3.83.AB.E3.83.89"> フィールド </h3>
+<p><span>これらは読み取り専用であることが期待されます; これらのうち3つは一つのメンバに統合されることができました。</span>
+</p>
+<dl><dt> <code>attribute <a href="ja/NsIPrefService">nsIPrefService</a> service;</code> </dt><dd> 設定サービス。
+</dd><dt> <code>attribute <a href="ja/NsIPrefBranch">nsIPrefBranch</a> rootBranch;</code> </dt><dd> 設定の枝のルート（The root prefs branch）。
+</dd><dt> <code>attribute <a href="ja/NsIPrefBranch">nsIPrefBranch</a> defaultBranch;</code> </dt><dd> 既定の値を示す、設定のツリーの枝のルート（The root prefs branch of the tree with default values）。
+</dd><dt> <code>attribute <a href="ja/NsIPrefBranch2">nsIPrefBranch2</a> rootBranchInternal;</code> </dt><dd> <code><a href="ja/NsIPrefBranch2">nsIPrefBranch2</a></code>インターフェイスによる、設定の枝のルート。
+</dd></dl>
+<p>{{ Preferences_System_TOC() }}
+</p>{{ languages( { "en": "en/Preferences_System/preferences" } ) }}

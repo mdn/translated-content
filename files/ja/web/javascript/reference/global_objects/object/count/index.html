@@ -1,0 +1,44 @@
+---
+title: Object.prototype.__count__
+slug: Web/JavaScript/Reference/Global_Objects/Object/count
+tags:
+  - JavaScript
+  - Object
+  - Obsolute
+  - Property
+  - Prototype
+translation_of: Archive/Web/JavaScript/Object.count
+---
+<div>{{JSRef}}{{Non-standard_Header}}{{obsolete_header("gecko2")}}</div>
+
+<p><strong><code>__count__</code></strong> プロパティはオブジェクトの列挙可能なプロパティの数を保存するために使用されていましたが、削除されました。</p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="syntaxbox"><code><var>obj</var>.__count__</code></pre>
+
+<h2 id="Examples" name="Examples">例</h2>
+
+<pre class="brush: js">{ 1: 1 }.__count__              // 1
+[].__count__                    // 0
+[1].__count__                   // 1
+[1, /* hole */, 2, 3].__count__ // 3
+</pre>
+
+<h2 id="Specifications" name="Specifications">仕様書</h2>
+
+<p>どの仕様書でも定義されていません。</p>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+
+<div>
+<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
+
+<p>{{Compat("javascript.builtins.Object.count")}}</p>
+</div>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><a class="external" href="http://whereswalden.com/2010/04/06/more-changes-coming-to-spidermonkey-the-magical-__count__-property-of-objects-is-being-removed/">[Blog post] More changes coming to SpiderMonkey: the magical __count__ property is being removed</a></li>
+</ul>

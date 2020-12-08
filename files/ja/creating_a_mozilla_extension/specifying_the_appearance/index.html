@@ -1,0 +1,43 @@
+---
+title: Specifying the appearance
+slug: Creating_a_Mozilla_Extension/Specifying_the_appearance
+tags:
+  - Add-ons
+  - Extensions
+translation_of: Archive/Mozilla/Creating_a_Mozilla_extension/Specifying_the_appearance
+---
+<p>
+</p><p>では、CSS を使って表示するアイコンを定義しましょう。まずは Tinderbox の状態 (none、success、test failed、and busted) を示すアイコンを作成し、Tinderbox の状態に対応するアイコンを表示する CSS のルールを作ります。
+</p>
+<pre class="eval">statusbarpanel#tinderbox-status {
+  list-style-image: url("<a class=" external">chrome://navigator/content/tb-nostatus.png</a>");
+}
+
+statusbarpanel#tinderbox-status[status="success"] {
+  list-style-image: url("<a class=" external">chrome://navigator/content/tb-success.png</a>");
+}
+
+statusbarpanel#tinderbox-status[status="testfailed"] {
+  list-style-image: url("<a class=" external">chrome://navigator/content/tb-testfailed.png</a>");
+}
+
+statusbarpanel#tinderbox-status[status="busted"] {
+  list-style-image: url("<a class=" external">chrome://navigator/content/tb-busted.png</a>");
+}
+</pre>
+<p>Mozilla は外観を管理するスタイルシートの組み合わせを複数持つことができますが、それらの既存のスタイルシートの組み合わせすべてにいちいちルールを追加するのは面倒です (そして、新しいスタイルシートがインストールされた時にこの拡張機能が <span style="color: darkgreen; background: #ef9;">【訳注: 上書きされて？】</span> 壊れてしまうことも避けなければなりません)。そのために、このスタイルシートを <code>tinderstatus.css</code> という名前で <code>navigator.xul</code> と同じディレクトリに配置し、<code>navigator.xul</code> の先頭のグローバルスタイルシート参照のすぐ下で <code>tinderstatus.css</code> を参照するようにします。
+</p>
+<pre class="eval">&lt;?xml-stylesheet href="<a class=" external">chrome://navigator/skin/</a>" type="text/css"?&gt;
+<span>&lt;?xml-stylesheet
+      href="<a class=" external">chrome://navigator/content/tinderstatus.css</a>"
+      type="text/css"?&gt;</span>
+</pre>
+<p>我々のステータスパネル の <code>status</code> 属性に値が設定されたときに表示される画像を、CSS ルールの <code><a href="ja/CSS/list-style-image">list-style-image</a></code> プロパティを使って定義します。Tinderbox の状態ひとつごとに <code>id</code> 属性を定義し、ルールを作ります。
+</p><p>4 つの状態を示すアイコンを作るか、次のアイコンを使ってください。no status <img alt="Image:tb-nostatus.png">、success <img alt="Image:tb-success.png">、test failed <img alt="Image:tb-testfailed.png">、busted <img alt="Image:tb-busted.png">
+</p><p>もし今 Mozilla を再起動したら、「no status」アイコンが ブラウザのステータスバーに表示されているでしょう。<span style="color: darkgreen; background: #ef9;">【訳注: Mozilla を一旦終了した後、プロファイルディレクトリの XUL.mfl (Windows) XUL FastLoad File (Mac) もしくは XUL.mfasl (Unix) を削除する必要があるかもしれません】</span>
+</p><p></p><div style="text-align: right;" class="prevnext">
+    <p><a style="float: left;" href="/ja/docs/Creating_a_Mozilla_Extension:Adding_the_structure">« 前のページ</a><a href="/ja/docs/Creating_a_Mozilla_Extension:Enabling_the_behavior_-_retrieving_tinderbox_status">次のページ  »</a></p>
+</div>
+<p></p>
+<div class="noinclude">
+</div>

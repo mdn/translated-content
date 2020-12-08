@@ -1,0 +1,542 @@
+---
+title: textbox (XPFE autocomplete)
+slug: Archive/Mozilla/XUL/textbox_(Mozilla_autocomplete)
+tags:
+  - XUL Elements
+  - XUL Reference
+translation_of: Archive/Mozilla/XUL/Textbox_(XPFE_autocomplete)
+---
+<div class="noinclude"><span class="breadcrumbs XULRef_breadcrumbs">
+ « <a href="/ja/docs/XUL/XUL_Reference">XUL リファレンス HOME</a>    [
+ <a href="#Examples">例</a> |
+ <a href="#Attributes">属性</a> |
+ <a href="#Properties">プロパティ</a> |
+ <a href="#Methods">メソッド</a> |
+ <a href="#Related">関連項目</a> ]
+</span></div>
+<p>この要素は、<code><a href="/ja/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code> の <a href="/ja/XUL/Attribute/textbox.type" title="ja/XUL/Attribute/textbox.type">type</a> 属性を <code>autocomplete</code> に設定することによって作成されます。これは、ユーザが入力しはじめると可能な補完リストが含まれるポップアップを表示する textbox を作成します。</p>
+<p>自動補完 (<span style="color: green;">autocomplete</span>)機能は、一つ以上のセッションオブジェクトを通して扱われます。各セッションオブジェクトは textbox の現在の値に与えられた候補の一覧を返します。セッションは <code id="a-searchSessions"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/searchSessions">searchSessions</a></code> 属性を使用するか、<span id="m-addSession"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/addSession">addSession</a></code></span> メソッドを呼び出して設定することができます。</p>
+<dl> <dt>属性</dt> <dd><a href="#a-alwaysopenpopup">alwaysopenpopup</a>, <a href="#a-autocompletesearch">autocompletesearch</a>, <a href="#a-autoFill">autoFill</a>, <a href="#a-autoFillAfterMatch">autoFillAfterMatch</a>, <a href="#a-autofill">autofill</a>, <a href="#a-completedefaultindex">completedefaultindex</a>, <a href="#a-crop">crop</a>, <a href="#a-disableAutocomplete">disableAutocomplete</a>, <a href="#a-disableautocomplete">disableautocomplete</a>, <a href="#a-disabled">disabled</a>, <a href="#a-disablehistory">disablehistory</a>, <a href="#a-focused">focused</a>, <a href="#a-forceComplete">forceComplete</a>, <a href="#a-forcecomplete">forcecomplete</a>, <a href="#a-ignoreBlurWhileSearching">ignoreBlurWhileSearching</a>, <a href="#a-ignoreblurwhilesearching">ignoreblurwhilesearching</a>, <a href="#a-inputtooltiptext">inputtooltiptext</a>, <a href="#a-label">label</a>, <a href="#a-maxlength">maxlength</a>, <a href="#a-maxrows">maxrows</a>, <a href="#a-minResultsForPopup">minResultsForPopup</a>, <a href="#a-minresultsforpopup">minresultsforpopup</a>, <a href="#a-nomatch">nomatch</a>, <a href="#a-onerrorcommand">onerrorcommand</a>, <a href="#a-ontextcommand">ontextcommand</a>, <a href="#a-ontextentered">ontextentered</a>, <a href="#a-ontextrevert">ontextrevert</a>, <a href="#a-ontextreverted">ontextreverted</a>, <a href="#a-open">open</a>, <a href="#a-searchSessions">searchSessions</a>, <a href="#a-showCommentColumn">showCommentColumn</a>, <a href="#a-showcommentcolumn">showcommentcolumn</a>, <a href="#a-showpopup">showpopup</a>, <a href="#a-size">size</a>, <a href="#a-tabScrolling">tabScrolling</a>, <a href="#a-tabscrolling">tabscrolling</a>, <a href="#a-tabindex">tabindex</a>, <a href="#a-timeout">timeout</a>, <a href="#a-textbox.type">type</a>, <a href="#a-userAction">userAction</a>, <a href="#a-value">value</a></dd>
+</dl>
+<dl> <dt>プロパティ</dt> <dd><a href="#p-accessible">accessible</a>, <a href="#p-alwaysOpenPopup">alwaysOpenPopup</a>, <a href="#p-autoFill">autoFill</a>, <a href="#p-autoFillAfterMatch">autoFillAfterMatch</a>, <a href="#p-completeDefaultIndex">completeDefaultIndex</a>, <a href="#p-crop">crop</a>, <a href="#p-disableAutocomplete">disableAutocomplete</a>, <a href="#p-disabled">disabled</a>, <a href="#p-editable">editable</a>, <a href="#p-focused">focused</a>, <a href="#p-forceComplete">forceComplete</a>, <a href="#p-ignoreBlurWhileSearching">ignoreBlurWhileSearching</a>, <a href="#p-inputField">inputField</a>, <a href="#p-isSearching">isSearching</a>, <a href="#p-isWaiting">isWaiting</a>, <a href="#p-label">label</a>, <a href="#p-maxLength">maxLength</a>, <a href="#p-maxRows">maxRows</a>, <a href="#p-minResultsForPopup">minResultsForPopup</a>, <a href="#p-noMatch">noMatch</a>, <a href="#p-open">open</a>, <a href="#p-resultsPopup">resultsPopup</a>, <a href="#p-searchSessions">searchSessions</a>, <a href="#p-selectionEnd">selectionEnd</a>, <a href="#p-selectionStart">selectionStart</a>, <a href="#p-sessionCount">sessionCount</a>, <a href="#p-showCommentColumn">showCommentColumn</a>, <a href="#p-showPopup">showPopup</a>, <a href="#p-size">size</a>, <a href="#p-tabIndex">tabIndex</a>, <a href="#p-tabScrolling">tabScrolling</a>, <a href="#p-textLength">textLength</a>, <a href="#p-timeout">timeout</a>, <a href="#p-type">type</a>, <a href="#p-userAction">userAction</a>, <a href="#p-value">value</a></dd>
+</dl>
+<dl> <dt>メソッド</dt> <dd><a href="#m-addSession">addSession</a>, <a href="#m-clearResults">clearResults</a>, <a href="#m-getDefaultSession">getDefaultSession</a>, <a href="#m-getResultAt">getResultAt</a>, <a href="#m-getResultCount">getResultCount</a>, <a href="#m-getResultValueAt">getResultValueAt</a>, <a href="#m-getSession">getSession</a>, <a href="#m-getSessionByName">getSessionByName</a>, <a href="#m-getSessionResultAt">getSessionResultAt</a>, <a href="#m-getSessionStatusAt">getSessionStatusAt</a>, <a href="#m-getSessionValueAt">getSessionValueAt</a>, <a href="#m-removeSession">removeSession</a>, <a href="#m-select">select</a>, <a href="#m-setSelectionRange">setSelectionRange</a>, <a href="#m-syncSessions">syncSessions</a></dd>
+</dl>
+<h3 id="Examples" name="Examples">例</h3>
+<p>(例が必要)</p>
+<h3 id="Attributes" name="Attributes">属性</h3>
+<p> </p><div id="a-accesskey">
+
+
+
+
+<dl>
+ <dt><code id="a-accesskey"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/accesskey">accesskey</a></code></dt>
+ <dd>型: <em>文字型</em></dd>
+ <dd>ショートカットキーとして使用される文字を設定します。この文字はその要素の <code><code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> 属性のテキストに現れる文字の一つでなければいけません。
+
+ </dd>
+</dl>
+
+
+</div> <div id="a-alwaysopenpopup">
+
+
+<dl>
+ <dt><code id="a-alwaysopenpopup"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/alwaysopenpopup">alwaysopenpopup</a></code> <span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 3.5 / Thunderbird 3.0 / SeaMonkey 2.0)">Gecko 1.9.1 で廃止</span></dt>
+ <dd>型: <em>論理型</em></dd>
+ <dd><div class="note"><strong>註:</strong> 適用対象: Thunderbird 及び SeaMonkey</div> <code>true</code> の場合、マッチするものがない時でも自動補完 popup が表示されます。デフォルト値の <code>false</code> の場合、popup は隠れます。この属性は Gecko1.9.1 で廃止されています。ポップアップの表示の制御には、代わりに <code id="a-minresultsforpopup"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/minresultsforpopup">minresultsforpopup</a></code> 属性を使用します。</dd>
+</dl>
+</div> <div id="a-autocompletesearch">
+<div><span class="breadcrumbs xulRefAttr_breadcrumbs">« <a href="/ja/docs/XUL/XUL_Reference">XUL リファレンス HOME</a></span></div>
+
+<dl>
+  <dt>
+    <code id="a-autocompletesearch"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/autocompletesearch">autocompletesearch</a></code> <span class="inlineIndicator standardNote standardNoteInline">New in <a href="https://developer.mozilla.org/ja/docs/Mozilla/Thunderbird/Releases/2">Thunderbird 2</a></span><span class="inlineIndicator standardNote standardNoteInline">要 SeaMonkey 1.1</span></dt>
+  <dd>
+    Type: <em>space-separated list of values</em></dd>
+  <dd>
+    A space-separated list of search component names, each of which implements the <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAutoCompleteSearch" title="">nsIAutoCompleteSearch</a></code> interface. The components are created using the name <code>@mozilla.org/autocomplete/search;1?name=</code> where <var>name</var> is listed in this attribute.</dd>
+</dl>
+
+<dl>
+  <dt>
+    <code>search-autocomplete</code>  <span class="inlineIndicator standardNote standardNoteInline">要 SeaMonkey 2.1</span></dt>
+  <dd>
+    The user's default search engine's suggestions are searched.</dd>
+  <dt>
+    <code>places-tag-autocomplete</code>  <span class="inlineIndicator standardNote standardNoteInline">要 SeaMonkey 2.1</span></dt>
+  <dd>
+    The user's Places tags are searched.</dd>
+  <dt>
+    <code>mydomain</code> <span class="inlineIndicator standardNote standardNoteInline">New in <a href="https://developer.mozilla.org/ja/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a></span> <span class="inlineIndicator standardNote standardNoteInline">要 SeaMonkey 2.0</span></dt>
+  <dd>
+    The user's email domain is suggested.</dd>
+  <dt>
+    <code>history</code>  <span class="inlineIndicator standardNote standardNoteInline">要 SeaMonkey 2.0</span></dt>
+  <dd>
+    The user's URL history is searched.</dd>
+  <dt>
+    <code>form-history</code> <span class="inlineIndicator standardNote standardNoteInline">要 SeaMonkey 2.0</span></dt>
+  <dd>
+    Search the values that the user has entered into form fields.</dd>
+  <dt>
+    <code>file</code>  (Linux only)</dt>
+  <dd>
+    The local file system is searched.</dd>
+  <dt>
+    <code>gloda</code> <span class="inlineIndicator standardNote standardNoteInline">New in <a href="https://developer.mozilla.org/ja/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a></span></dt>
+  <dd>
+     </dd>
+  <dt>
+    <code>addrbook</code> <span class="inlineIndicator standardNote standardNoteInline">New in <a href="https://developer.mozilla.org/ja/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a></span> <span class="inlineIndicator standardNote standardNoteInline">要 SeaMonkey 2.0</span></dt>
+  <dd>
+    The user's address book is searched.</dd>
+</dl>
+</div> <div id="a-autocompletesearchparam">
+
+<dl>
+  <dt>
+    <code id="a-autocompletesearchparam"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/autocompletesearchparam">autocompletesearchparam</a></code>  <span class="inlineIndicator standardNote standardNoteInline">New in <a href="https://developer.mozilla.org/ja/docs/Mozilla/Thunderbird/Releases/2">Thunderbird 2</a></span> <span class="inlineIndicator standardNote standardNoteInline">要 SeaMonkey 1.1</span></dt>
+  <dd>
+    型: <em>文字列型</em></dd>
+  <dd>
+    検索コンポーネントに渡される文字列。</dd>
+</dl>
+</div> <div id="a-textbox.autoFill">
+
+<dl>
+  <dt>
+    <code id="a-textbox.autoFill"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/textbox.autoFill">autoFill</a></code> <span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 3.5 / Thunderbird 3.0 / SeaMonkey 2.0)">Obsolete since Gecko 1.9.1</span></dt>
+  <dd>
+    Type: <em>boolean</em></dd>
+  <dd>
+    <div class="note"><strong>Note:</strong> Applies to: Thunderbird and SeaMonkey</div>If set to <code>true</code>, the best match will be filled into the textbox as the user types. If <code>false</code>, the default, the value will not be filled in until the user selects an item. As of Gecko 1.9.1, this attribute is now always specified in lower case.</dd>
+</dl>
+</div> <div id="a-autoFillAfterMatch">
+
+<dl>
+  <dt><code id="a-autoFillAfterMatch"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/autoFillAfterMatch">autoFillAfterMatch</a></code> <span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 3.5 / Thunderbird 3.0 / SeaMonkey 2.0)">廃止 Gecko 1.9.1</span></dt>
+  <dd>型: <em>論理型</em></dd>
+  <dd><code>true</code> に設定した場合、最もマッチするテキスト全体が入力したものの後に表示されます。<code>false</code> の場合、まだ入力していない部分のテキストのみが入力されます。この機能を使用するには <code id="a-textbox.autoFill"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/textbox.autoFill">textbox.autoFill</a></code> 属性が <code>true</code> に設定されていなければなりません。Gecko1.9.1 より、この属性は <code id="a-completedefaultindex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/completedefaultindex">completedefaultindex</a></code> 属性に置き換わっています。</dd>
+</dl>
+</div> <div id="a-autofill">
+<div>
+  <span class="breadcrumbs xulRefAttr_breadcrumbs">« <a href="/ja/docs/XUL/XUL_Reference">XUL リファレンス HOME</a></span></div>
+<dl>
+  <dt>
+    <code id="a-autofill"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/autofill">autofill</a></code> <span class="inlineIndicator standardNote standardNoteInline">New in <a href="https://developer.mozilla.org/ja/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a></span> <span class="inlineIndicator standardNote standardNoteInline">要 SeaMonkey 2.0</span></dt>
+  <dd>
+    型: <em>論理型</em></dd>
+  <dd>
+    <code>true</code> に設定した場合、ユーザが入力したものに最もマッチする値が textbox に入力されます。デフォルト値の <code>false</code> の場合、ユーザが項目を選択するまで値は入力されません。</dd>
+</dl>
+</div> <div id="a-completedefaultindex">
+
+<dl><dt> <code id="a-completedefaultindex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/completedefaultindex">completedefaultindex</a></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code>true</code> の場合、ユーザが入力した値に最もマッチする値が textbox に入力されます。<code>false</code> に設定するか省略すると、値をリストから選択しなければなりません。 </dd></dl>
+
+</div> <div id="a-textbox.crop">
+
+<dl> <dt><code id="a-textbox.crop"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/textbox.crop">crop</a></code></dt> <dd>型: <em>論理型</em></dd> <dd>この属性は使用されません。<code><a href="/ja/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code> 要素との互換性のためにのみ提供されています。</dd>
+</dl>
+
+</div> <div id="a-textbox.disableAutocomplete">
+
+<dl>
+  <dt>
+    <code id="a-textbox.disableAutocomplete"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/textbox.disableAutocomplete">disableAutocomplete</a></code> <span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 3.5 / Thunderbird 3.0 / SeaMonkey 2.0)">Obsolete since Gecko 1.9.1</span></dt>
+  <dd>
+    Type: <em>boolean</em></dd>
+  <dd>
+    If <code>true</code>, the autocomplete behavior will be disabled. You might use a script to change this attribute. If <code>false</code>, the default, autocomplete is enabled. As of Gecko 1.9.1, this attribute is now always specified in lower case.</dd>
+</dl>
+</div> <div id="a-disableautocomplete">
+
+<dl><dt> <code id="a-disableAutocomplete"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/disableAutocomplete">disableAutocomplete</a></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code>true</code> の場合、自動補完が無効になります。この属性を変更するにはスクリプトを使用します。デフォルト値の <code>false</code> の場合、自動補完は有効になります。 </dd></dl>
+
+</div> <div id="a-disabled">
+
+<dl>
+  <dt>
+    <code id="a-disabled"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code></dt>
+  <dd>
+    型: <em>論理型</em></dd>
+  <dd>
+    要素が無効化されているかどうかを示します。ある要素が <code>true</code> に設定されていたら、その要素は無効化されています。無効化された要素は通常グレイ表示のテキストで描画されます。要素が無効化されていると、ユーザのアクションには応答せず、フォーカスもあてられず、<code>command</code> イベントも発生しません。
+
+  </dd>
+</dl>
+
+<p> </p>
+</div> <div id="a-disablehistory">
+
+<dl><dt> <code id="a-disablehistory"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/disablehistory">disablehistory</a></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code>false</code> の場合、すべての利用可能な候補のドロップダウンメニューを開く矢印ボタンが textbox の末尾に表示されます。デフォルト値は、ドロップダウンボタンが隠れている <code>true</code> です。 </dd></dl>
+
+</div> <div id="a-enablehistory">
+
+<dl><dt> <code id="a-enablehistory"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/enablehistory">enablehistory</a></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code>true</code> の場合、矢印ボタンが textbox の末尾に現れます。この矢印が押されると、すべての使用可能な候補のドロップダウンメニューが開きます。 </dd></dl>
+
+</div> <div id="a-focused">
+
+<dl><dt> <code id="a-focused"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/focused">focused</a></code> </dt><dd> 型: <em>論理型</em> </dd><dd> 要素がフォーカスされているとき、この属性値は <code>true</code> です。 </dd></dl>
+
+</div> <div id="a-textbox.forceComplete">
+
+<dl>
+  <dt>
+    <code id="a-textbox.forceComplete"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/textbox.forceComplete">forceComplete</a></code> <span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 3.5 / Thunderbird 3.0 / SeaMonkey 2.0)">Obsolete since Gecko 1.9.1</span></dt>
+  <dd>
+    Type: <em>boolean</em></dd>
+  <dd>
+    If <code>true</code>, the textbox will be filled in with the best match when it loses the focus. If <code>false</code>, it will only be filled in when the user selects an item. As of Gecko 1.9.1, this attribute is now always specified in lower case.</dd>
+</dl>
+</div> <div id="a-forcecomplete">
+
+<dl><dt> <code id="a-forceComplete"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/forceComplete">forceComplete</a></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code>true</code> の場合、textbox がフォーカスを失った時、最もマッチするものが入力されます。<code>false</code> の場合、ユーザが項目を選択した時のみ入力されます。 </dd></dl>
+
+</div> <div id="a-textbox.ignoreBlurWhileSearching">
+
+<dl>
+  <dt>
+    <code id="a-textbox.ignoreBlurWhileSearching"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/textbox.ignoreBlurWhileSearching">ignoreBlurWhileSearching</a></code> <span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 3.5 / Thunderbird 3.0 / SeaMonkey 2.0)">Obsolete since Gecko 1.9.1</span></dt>
+  <dd>
+    Type: <em>boolean</em></dd>
+  <dd>
+    If <code>true</code>, blur events are ignored while searching, which means that the autocomplete popup will not disappear. As of Gecko 1.9.1, this attribute is now always specified in lower case.</dd>
+</dl>
+</div> <div id="a-ignoreblurwhilesearching">
+
+<dl><dt> <code id="a-ignoreblurwhilesearching"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/ignoreblurwhilesearching">ignoreblurwhilesearching</a></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code>true</code> の場合、検索中は blur イベントが無視され、自動補完 popup は表示されません。 </dd></dl>
+
+</div> <div id="a-inputtooltiptext">
+
+<dl><dt> <code id="a-inputtooltiptext"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/inputtooltiptext">inputtooltiptext</a></code> </dt><dd> 型: <em>文字列型</em> </dd><dd> textbox の tooltip テキスト。 </dd></dl>
+
+</div> <div id="a-label">
+
+<dl><dt> <code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code> </dt><dd> 型: <em>文字列型</em> </dd><dd> 要素上に表示するlabel。 省略された場合、テキストは表示されない。 </dd></dl>
+
+
+</div> <div id="a-maxlength">
+
+<dl><dt> <code id="a-maxlength"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/maxlength">maxlength</a></code> </dt><dd> 型: <em>整数型</em> </dd><dd> textbox に入力することができる最大文字数。 </dd></dl>
+
+</div> <div id="a-maxrows">
+
+<dl><dt> <code id="a-maxrows"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/maxrows">maxrows</a></code> </dt><dd> 型: <em>整数型</em> </dd><dd> 候補リストに一度に表示する行数。scrollbar が現れるので、ユーザは残りの項目を見渡すことができます。 </dd></dl>
+
+</div> <div id="a-textbox.minResultsForPopup">
+
+<dl>
+  <dt>
+    <code id="a-textbox.minResultsForPopup"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/textbox.minResultsForPopup">minResultsForPopup</a></code> <span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 3.5 / Thunderbird 3.0 / SeaMonkey 2.0)">Obsolete since Gecko 1.9.1</span></dt>
+  <dd>
+    Type: <em>integer</em></dd>
+  <dd>
+    The minimum number of results that must be returned for the popup to be displayed. The default value is 1. A zero value will always open the popup unless the textbox is empty. This can be used to display additional items that are not autocomplete results. As of Gecko 1.9.1, this attribute is now always specified in lower case.</dd>
+</dl>
+</div> <div id="a-minresultsforpopup">
+
+<dl><dt> <code id="a-minresultsforpopup"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/minresultsforpopup">minresultsforpopup</a></code> </dt><dd> 型: <em>整数型</em> </dd><dd> 表示される popup に返す候補の数の最小値。 </dd></dl>
+
+</div> <div id="a-nomatch">
+
+<dl><dt> <code id="a-nomatch"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/nomatch">nomatch</a></code> </dt><dd> 型: <em>論理型</em> </dd><dd> この属性は、最後まで検索した結果一致しなかった時、<code>true</code> に設定されます。 </dd></dl>
+
+</div> <div id="a-onerrorcommand">
+
+<dl><dt> <code id="a-onerrorcommand"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/onerrorcommand">onerrorcommand</a></code> </dt><dd> 型: <em>スクリプトコード</em> </dd><dd> このイベントハンドラは、popup から候補を選択してエラーが発生した時、呼び出されます。 </dd></dl>
+
+</div> <div id="a-ontextcommand">
+
+<dl><dt> <code id="a-ontextcommand"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/ontextcommand">ontextcommand</a></code> </dt><dd> 型: <em>スクリプトコード</em> </dd><dd> このイベントハンドラは、textbox のための候補が選択された時、呼び出されます。 </dd></dl>
+
+</div> <div id="a-ontextentered">
+
+<dl><dt> <code id="a-ontextentered"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/ontextentered">ontextentered</a></code> </dt><dd> 型: <em>スクリプトコード</em> </dd><dd> このイベントハンドラは、textbox のための候補が選択された時、呼び出されます。 </dd></dl>
+
+</div> <div id="a-ontextrevert">
+
+<dl><dt> <code id="a-ontextrevert"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/ontextrevert">ontextrevert</a></code> </dt><dd> 型: <em>スクリプトコード</em> </dd><dd> このイベントハンドラは、ユーザが Escape キーを押して textbox の値を元の補完されていない値に戻した時、呼び出されます。 </dd></dl>
+
+</div> <div id="a-ontextreverted">
+
+<dl><dt> <code id="a-ontextreverted"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/ontextreverted">ontextreverted</a></code> </dt><dd> 型: <em>スクリプトコード</em> </dd><dd> このイベントハンドラは、ユーザが Esc を押して textbox を元の補完されていない値に戻した時、呼び出されます。 </dd></dl>
+
+</div> <div id="a-open">
+
+<dl>
+  <dt><code id="a-open"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/open">open</a></code></dt>
+  <dd>型: <em>論理型</em></dd>
+  <dd><code>menu</code> の <code id="a-type"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/type">type</a></code> ボタンについて、メニューが開かれたとき、<code>open</code> 属性が <code>true</code> に設定されます。メニューが閉じられると <code>open</code> 属性は提供されません。</dd>
+</dl>
+</div> <div id="a-searchSessions">
+
+<dl><dt> <code id="a-searchSessions"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/searchSessions">searchSessions</a></code> </dt><dd> 型: <em>スペースで区切られたセッション名のリスト</em> </dd><dd> キーボードで指示する、自動補完のために探すデータ形式を設定します。複数の形式を設定するには、これらの名前をスペースで区切ります。次の値が利用可能ですが、他の値を追加するカスタムコンポーネントがインストールされているかもしれません。 </dd></dl>
+<ul> <li><code>history</code>: ユーザの URL 訪問履歴が検索されます。</li> <li><code>addrbook</code>: ユーザのアドレス帳が検索されます。</li> <li><code>ldap</code>: ユーザの LDAP ディレクトリが検索されます。</li>
+</ul>
+
+</div> <div id="a-textbox.showCommentColumn">
+
+<dl>
+  <dt>
+    <code id="a-textbox.showCommentColumn"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/textbox.showCommentColumn">showCommentColumn</a></code> <span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 3.5 / Thunderbird 3.0 / SeaMonkey 2.0)">Obsolete since Gecko 1.9.1</span></dt>
+  <dd>
+    Type: <em>boolean</em></dd>
+  <dd>
+    If <code>true</code>, a comment column appears in the popup. For the URL history, the comment column will contain the page titles associated with each URL. If this attribute is not specified, the comment column doesn't appear. As of Gecko 1.9.1, this attribute is now always specified in lower case.</dd>
+</dl>
+</div> <div id="a-showcommentcolumn">
+
+<dl><dt> <code id="a-showCommentColumn"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/showCommentColumn">showCommentColumn</a></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code>true</code> の場合、コメント列が popup 内に表示されます。URL 訪問履歴では、コメント列に各 URL に関連付けられたページタイトルが含まれます。この属性が指定されていない場合、コメント列は表示されません。 </dd></dl>
+
+</div> <div id="a-showpopup">
+
+<dl><dt> <code id="a-showpopup"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/showpopup">showpopup</a></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code>true</code> の場合 popup が表示されます。<code>false</code> の場合 popup は表示されませんが、自動補完の候補が利用可能です。この属性を <code>false</code> に設定して <code id="a-autoFill"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/autoFill">autoFill</a></code> 属性を <code>true</code> に設定すると、Communicator 4.x スタイルの自動補完 textbox をエミュレートすることができます。デフォルト値は <code>true</code> です。 </dd></dl>
+
+</div> <div id="a-size">
+
+<dl><dt> <code id="a-size"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/size">size</a></code> </dt><dd> 型: <em>整数型</em> </dd><dd> textbox に表示することのできる文字数。 </dd></dl>
+
+</div> <div id="a-textbox.tabScrolling">
+
+<dl>
+  <dt>
+    <code id="a-textbox.tabScrolling"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/textbox.tabScrolling">tabScrolling</a></code> <span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 3.5 / Thunderbird 3.0 / SeaMonkey 2.0)">Obsolete since Gecko 1.9.1</span></dt>
+  <dd>
+    Type: <em>boolean</em></dd>
+  <dd>
+    If <code>true</code>, the user may cycle through the results list by pressing the Tab key. If <code>false</code>, the default, the Tab key moves the focus to the next element.As of Gecko 1.9.1, this attribute is now always specified in lower case.</dd>
+</dl>
+</div> <div id="a-tabscrolling">
+
+<dl><dt> <code id="a-tabScrolling"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/tabScrolling">tabScrolling</a></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code>true</code> の場合、ユーザが Tab キーを押すことによって候補リストを上から繰り返すことができます。デフォルト値の <code>false</code> の場合、Tab キーはフォーカスを次の要素に移動します。 </dd></dl>
+
+</div> <div id="a-tabindex">
+
+<dl><dt> <code id="a-tabindex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/tabindex">tabindex</a></code> </dt><dd> 型: <em>整数型</em> </dd><dd> 要素のタブの順番。タブの順番は <code>tab</code> キーが押下されたときにフォーカスが移動する順番です。より大きな <code>tabindex</code> の値をもつ要素は、タブの遷移が後になります。 </dd></dl>
+
+</div> <div id="a-timeout">
+
+<dl><dt> <code id="a-timeout"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/timeout">timeout</a></code> </dt><dd> 型: <em>整数型</em> </dd><dd> 時間制限付きの textbox のための、command イベント発生までのミリ秒数。タイマーはユーザが文字を入力すると開始します。ユーザが他の文字を入力するとタイマーがリセットされます。 </dd></dl>
+
+</div> <div id="a-textbox.type">
+
+
+<dl>
+ <dt><code id="a-textbox.type"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/textbox.type">type</a></code></dt>
+ <dd>型: <em>下記の値のいずれか一つ</em></dd>
+ <dd>特別な形式の textbox を使用するには、下記の値のいずれか一つを type 属性に設定します。</dd>
+</dl>
+
+<ul>
+ <li><code>autocomplete</code>: 自動補完をサポートする textbox。自動補完 textbox についての詳しい情報は、自動補完 (autocomplete)のドキュメントをご覧ください。(<a href="/ja/XUL/textbox_(Mozilla_autocomplete)" title="ja/XUL/textbox_(Mozilla_autocomplete)">Mozilla</a>) (<a href="/ja/XUL/textbox_(Firefox_autocomplete)" title="ja/XUL/textbox_(Firefox_autocomplete)">Firefox</a>)</li>
+ <li><code>number</code>: 数字のみを入力することができる textbox。さらに、値を増減するための矢印ボタンが textbox の次に現れます。number textbox を設定するための属性は次のものがあります <code id="a-min"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/min">min</a></code> および <code id="a-max"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/max">max</a></code>, <code id="a-increment"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/increment">increment</a></code>, <code id="a-wraparound"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/wraparound">wraparound</a></code>, <code id="a-hidespinbuttons"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/hidespinbuttons">hidespinbuttons</a></code>。 </li>
+ <li><code>password</code>: 入力した内容を隠す textbox。パスワードの入力に使用されます。</li>
+ <li><code>timed</code>: この textbox は、ユーザが文字を入力して時間が経つと command イベントを発生させます。遅延時間は <code id="a-timeout"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/timeout">timeout</a></code> 属性で設定します。この形式は例えば、ユーザが入力した window の情報を更新するために使用します。ユーザが時間内にさらにキーを入力すれば、タイマーを発動させないために継続的に更新する必要はありません。ユーザが Enter キーを押下した場合にも command イベントが発生します。</li>
+</ul>
+
+
+</div> <div id="a-userAction">
+
+<dl><dt> <code id="a-userAction"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/userAction">userAction</a></code> </dt><dd> 型: <em>以下の値のいずれか一つ</em> </dd><dd> この属性にはユーザが現在行っている操作が設定されます。利用可能な値は: </dd></dl>
+<ul> <li><code>none</code>: ユーザは textbox に対して何もしていません。</li> <li><code>typing</code>: ユーザは textbox に入力しています。</li> <li><code>scrolling</code>: ユーザは textbox 内をスクロールしています。</li>
+</ul>
+
+</div> <div id="a-value">
+
+<dl><dt> <code id="a-value"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code> </dt><dd> 型: <em>文字列型</em> </dd><dd> 文字列の属性はデータ値を要素に関連付けます。特定の目的のために使われるわけではありませんが、スクリプトからあなた自身の用途のためにアクセスできます。 </dd></dl>
+
+
+</div>
+<h3 id="Properties" name="Properties">プロパティ</h3>
+<p> </p><div id="p-accessible">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/accessible">accessible</a></span></code> </dt><dd> 型: <em><a href="/ja/nsIAccessible" title="ja/nsIAccessible">nsIAccessible</a></em> </dd><dd> 要素の accessibility object を返す。 </dd></dl>
+</div> <div id="p-alwaysOpenPopup">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/alwaysOpenPopup">alwaysOpenPopup</a></span></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code id="a-alwaysopenpopup"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/alwaysopenpopup">alwaysopenpopup</a></code> 属性の値の取得と設定。 </dd></dl>
+</div> <div id="p-autoFill">
+<dl><dt> <code><span><a href="http://api/ja/docs/XUL/Property/autoFill">autoFill</a></span></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code id="a-autoFill"><a href="http://api/ja/docs/Mozilla/Tech/XUL/Attribute/autoFill">autoFill</a></code> 属性の値の取得と設定。 </dd></dl>
+</div> <div id="p-autoFillAfterMatch"><div><span class="breadcrumbs XULRefProp_breadcrumbs">« <a href="/ja/docs/XUL_Reference" title="XUL_Reference">XUL リファレンス</a></span></div>
+
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/autoFillAfterMatch">autoFillAfterMatch</a></span></code> <span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 3.5 / Thunderbird 3.0 / SeaMonkey 2.0)">廃止 Gecko 1.9.1</span></dt>
+  <dd>
+    型: <em>論理型</em></dd>
+  <dd>
+    <code id="a-autoFillAfterMatch"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/autoFillAfterMatch">autoFillAfterMatch</a></code> 属性の値の取得と設定。</dd>
+</dl></div> <div id="p-completeDefaultIndex">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/completeDefaultIndex">completeDefaultIndex</a></span></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code id="a-completedefaultindex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/completedefaultindex">completedefaultindex</a></code> 属性の値の取得と設定。 </dd></dl>
+</div> <div id="p-crop">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/crop">crop</a></span></code> </dt><dd> 型: <em>文字列型</em> </dd><dd> <code id="a-crop"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/crop">crop</a></code> 属性の値の取得と設定。 </dd></dl>
+</div> <div id="p-disableAutocomplete">
+<dl><dt> <code><span><a href="http://api/ja/docs/XUL/Property/disableAutocomplete">disableAutocomplete</a></span></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code id="a-disableAutocomplete"><a href="http://api/ja/docs/Mozilla/Tech/XUL/Attribute/disableAutocomplete">disableAutocomplete</a></code> 属性の値の取得と設定。 </dd></dl>
+</div> <div id="p-disabled">
+<dl><dt> <code><span><a href="http://api/ja/docs/XUL/Property/disabled">disabled</a></span></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code id="a-disabled"><a href="http://api/ja/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code> 属性の値の取得と設定。 </dd></dl>
+</div> <div id="p-editable">
+<dl>
+ <dt>
+  <code><span><a href="http://api/ja/docs/XUL/Property/editable">editable</a></span></code> </dt>
+ <dd>
+  型: <em>論理型</em></dd>
+ <dd>
+  Returns <code>true</code> if the element is editable. Autocomplete fields are editable so this property always returns <code>true</code> for those.</dd>
+</dl>
+</div> <div id="p-focused">
+<dl><dt> <code><span><a href="http://api/ja/docs/XUL/Property/focused">focused</a></span></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code id="a-focused"><a href="http://api/ja/docs/Mozilla/Tech/XUL/Attribute/focused">focused</a></code> 属性の値の取得と設定。 </dd></dl>
+</div> <div id="p-forceComplete">
+<dl><dt> <code><span><a href="http://api/ja/docs/XUL/Property/forceComplete">forceComplete</a></span></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code id="a-forcecomplete"><a href="http://api/ja/docs/Mozilla/Tech/XUL/Attribute/forcecomplete">forcecomplete</a></code> 属性の値の取得と設定。 </dd></dl>
+</div> <div id="p-ignoreBlurWhileSearching">
+<dl> <dt><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/ignoreBlurWhileSearching">ignoreBlurWhileSearching</a></span></code></dt> <dd>型: <em>論理型</em></dd> <dd><code id="a-ignoreblurwhilesearching"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/ignoreblurwhilesearching">ignoreblurwhilesearching</a></code> 属性の値の取得と設定。</dd>
+</dl>
+</div> <div id="p-inputField">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/inputField">inputField</a></span></code> </dt><dd> 型: <em>textbox 要素</em> </dd><dd> Mozilla では、XUL textbox は HTML の input 要素のラッパとして実装されています。この読み取り専用のプロパティは、この内部 input 要素への参照を保持します。 </dd></dl>
+</div> <div id="p-isSearching">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/isSearching">isSearching</a></span></code> </dt><dd> 型: <em>論理型</em> </dd><dd> このプロパティは検索が行われている間、<code>true</code> に設定されます。 </dd></dl>
+</div> <div id="p-isWaiting">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/isWaiting">isWaiting</a></span></code> </dt><dd> 型: <em>論理型</em> </dd><dd> このプロパティは、ユーザがキーを押して検索が実行されてから timeout まで待機している間 <code>true</code> に設定されます。 </dd></dl>
+</div> <div id="p-textbox.label">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/textbox.label">label</a></span></code>  </dt><dd> 型: <em>文字列型</em> </dd><dd> <a href="/ja/XUL/Attribute/textbox.label" title="ja/XUL/Attribute/textbox.label">label</a> 属性を設定します。<a href="/ja/XUL/Attribute/textbox.label" title="ja/XUL/Attribute/textbox.label">label</a> 属性が設定されており空でなければ、これを取得します。そうでなければ、関連付けられた <a href="/ja/XUL/label" title="ja/XUL/label">label</a> 要素の適用可能な <a href="/ja/XUL/Attribute/label.value" title="ja/XUL/Attribute/label.value">value</a> を返します。それ以外は <a href="/ja/XUL/Property/emptyText" title="ja/XUL/Property/emptyText">emptyText</a> プロパティを返します。属性値の取得はスクリーンリーダにとって最も役立ちます。 </dd></dl>
+</div> <div id="p-maxLength">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/maxLength">maxLength</a></span></code> </dt><dd> 型: <em>整数型</em> </dd><dd> textbox に入力することができる文字数の最大値。 </dd></dl>
+</div> <div id="p-maxRows">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/maxRows">maxRows</a></span></code> </dt><dd> 型: <em>整数型</em> </dd><dd> <code id="a-maxrows"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/maxrows">maxrows</a></code> 属性の値の取得と設定。 </dd></dl>
+</div> <div id="p-minResultsForPopup">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/minResultsForPopup">minResultsForPopup</a></span></code> </dt><dd> 型: <em>整数型</em> </dd><dd> <code id="a-minresultsforpopup"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/minresultsforpopup">minresultsforpopup</a></code> 属性の値の取得と設定。 </dd></dl>
+</div> <div id="p-noMatch">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/noMatch">noMatch</a></span></code> </dt><dd> 型: <em>論理型</em> </dd><dd> このプロパティは、最後の検索結果がマッチしない場合、<code>true</code> に設定されます。 </dd></dl>
+</div> <div id="p-open">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/open">open</a></span></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code id="a-open"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/open">open</a></code> 属性の値の取得と設定。 </dd></dl>
+
+</div> <div id="p-resultsPopup">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/resultsPopup">resultsPopup</a></span></code> </dt><dd> 型: <em>popup 要素</em> </dd><dd> このプロパティには候補を表示する popup 要素が設定されます。 </dd></dl>
+</div> <div id="p-searchSessions">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/searchSessions">searchSessions</a></span></code> </dt><dd> 型: <em>スペースで区切られたセッション名のリスト</em> </dd><dd> キーボードで指示する、自動補完のために探すデータ形式を設定します。複数の形式を設定するには、これらの名前をスペースで区切ります。次の値が利用可能ですが、他の値を追加するカスタムコンポーネントがインストールされているかもしれません。 </dd></dl>
+<ul> <li><code>history</code>: ユーザの URL 訪問履歴が検索されます。</li> <li><code>addrbook</code>: ユーザのアドレス帳が検索されます。</li> <li><code>ldap</code>: ユーザの LDAP ディレクトリが検索されます。</li>
+</ul>
+</div> <div id="p-selectionEnd">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/selectionEnd">selectionEnd</a></span></code> </dt><dd> 型: <em>整数型</em> </dd><dd> フィールドのテキストの選択部分の末尾の取得または設定。<code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/selectionStart">selectionStart</a></span></code> プロパティと共に使用します。この値は選択後の文字の index を指定します。この値が <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/selectionStart">selectionStart</a></span></code> プロパティの値と等しいときは text が選択されませんが、値は textbox 内のキャレット(カーソル) の位置を示します。 </dd></dl>
+</div> <div id="p-selectionStart">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/selectionStart">selectionStart</a></span></code> </dt><dd> 型: <em>整数型</em> </dd><dd> フィールドのテキストの選択部分の先頭の取得または設定。<code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/selectionEnd">selectionEnd</a></span></code> プロパティと共に使用します。値は選択された最初の文字の index を指定します。 </dd></dl>
+</div> <div id="p-sessionCount">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/sessionCount">sessionCount</a></span></code> </dt><dd> 型: <em>整数型</em> </dd><dd> セッション数を保持します。 </dd></dl>
+</div> <div id="p-showCommentColumn">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/showCommentColumn">showCommentColumn</a></span></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code id="a-showcommentcolumn"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/showcommentcolumn">showcommentcolumn</a></code> 属性の値の取得と設定。 </dd></dl>
+</div> <div id="p-showPopup">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/showPopup">showPopup</a></span></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code id="a-showpopup"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/showpopup">showpopup</a></code> 属性の値の取得と設定。 </dd></dl>
+</div> <div id="p-size">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/size">size</a></span></code> </dt><dd> 型: <em>整数型</em> </dd><dd> <code id="a-size"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/size">size</a></code> 属性の値の取得と設定。 </dd></dl>
+</div> <div id="p-tabIndex">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/tabIndex">tabIndex</a></span></code> </dt><dd> 型: <em>整数型</em> </dd><dd> <code id="a-tabindex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/tabindex">tabindex</a></code> 属性の値の取得と設定。 </dd></dl>
+</div> <div id="p-tabScrolling">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/tabScrolling">tabScrolling</a></span></code> </dt><dd> 型: <em>論理型</em> </dd><dd> <code id="a-tabscrolling"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/tabscrolling">tabscrolling</a></code> 属性の値の取得と設定。 </dd></dl>
+</div> <div id="p-textLength">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/textLength">textLength</a></span></code> </dt><dd> 型: <em>整数型</em> </dd><dd> textbox に入力されたテキストの長さを保持。このプロパティは読み取り専用です。 </dd></dl>
+</div> <div id="p-timeout">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/timeout">timeout</a></span></code> </dt><dd> 型: <em>整数型</em> </dd><dd> <code id="a-timeout"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/timeout">timeout</a></code> 属性の値の取得と設定。 </dd></dl>
+</div> <div id="p-type">
+
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/type">type</a></span></code></dt>
+  <dd>
+    型: <em>文字列型</em></dd>
+  <dd>
+    <code id="a-type"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/type">type</a></code> 属性の値の取得と設定。</dd>
+</dl>
+
+</div> <div id="p-userAction">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/userAction">userAction</a></span></code> </dt><dd> 型: <em>文字列型</em> </dd><dd> <code id="a-userAction"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/userAction">userAction</a></code> 属性の値の取得と設定。 </dd></dl>
+</div> <div id="p-value">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/value">value</a></span></code></dt>
+  <dd>
+    型: <em>文字列型</em></dd>
+  <dd>
+    <code id="a-value"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code> 属性の値の取得と設定。</dd>
+</dl>
+</div>
+<h3 id="Methods" name="Methods">メソッド</h3>
+<table style="border: 1px solid rgb(204, 204, 204); margin: 0 0 10px 10px; padding: 0 10px; background: rgb(238, 238, 238); float: right; width: 250px;">
+<tbody>
+<tr>
+<td>
+<p><strong>XUL 要素からの継承</strong><br>
+<small> <span id="m-blur"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/blur">blur</a></code></span>, <span id="m-click"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/click">click</a></code></span>, <span id="m-doCommand"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/doCommand">doCommand</a></code></span>, <span id="m-focus"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/focus">focus</a></code></span>, <span id="m-getElementsByAttribute"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getElementsByAttribute">getElementsByAttribute</a></code></span> <span id="m-getElementsByAttributeNS"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getElementsByAttributeNS">getElementsByAttributeNS</a></code></span></small></p> <p><strong>DOM 要素からの継承</strong><br>
+<small> <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.addEventListener">addEventListener()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.appendChild">appendChild()</a></code>, <a href="/ja/DOM/Node.compareDocumentPosition" title="ja/DOM/Node.compareDocumentPosition">compareDocumentPosition</a>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.dispatchEvent">dispatchEvent()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getAttribute">getAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getAttributeNode">getAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getAttributeNodeNS">getAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getAttributeNS">getAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getElementsByTagName">getElementsByTagName()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getElementsByTagNameNS">getElementsByTagNameNS()</a></code>, <a href="/ja/DOM/Node.getFeature" title="ja/DOM/Node.getFeature">getFeature</a>, <a href="/ja/DOM/Node.getUserData" title="ja/DOM/Node.getUserData">getUserData</a>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.hasAttribute">hasAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.hasAttributeNS">hasAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.hasAttributes">hasAttributes()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.hasChildNodes">hasChildNodes()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.insertBefore">insertBefore()</a></code>, <a href="/ja/DOM/Node.isEqualNode" title="ja/DOM/Node.isEqualNode">isEqualNode</a>, <a href="/ja/DOM/Node.isSameNode" title="ja/DOM/Node.isSameNode">isSameNode</a>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.isSupported">isSupported()</a></code>, <a href="/ja/DOM/Node.lookupNamespaceURI" title="ja/DOM/Node.lookupNamespaceURI">lookupNamespaceURI</a>, <a href="/ja/DOM/Node.lookupPrefix" title="ja/DOM/Node.lookupPrefix">lookupPrefix</a>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.normalize">normalize()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeAttribute">removeAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeAttributeNode">removeAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeAttributeNS">removeAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeChild">removeChild()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeEventListener">removeEventListener()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.replaceChild">replaceChild()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.setAttribute">setAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.setAttributeNode">setAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.setAttributeNodeNS">setAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.setAttributeNS">setAttributeNS()</a></code>, <a href="/ja/DOM/Node.setUserData" title="ja/DOM/Node.setUserData">setUserData</a></small></p>
+
+</td>
+</tr>
+</tbody>
+</table> <dl>
+  <dt><span id="m-addSession"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/addSession">addSession( session )</a></code></span></dt>
+  <dd>戻り値の型: <em><a href="/ja/docs/NsIAutoCompleteSession">nsIAutoCompleteSession</a></em></dd>
+  <dd>新しいセッションオブジェクトを autocomplete ウィジェットに追加します。これは、カスタマイズされた自動補完の候補リストの作成に使用することができます。引数は <a href="/ja/docs/NsIAutoCompleteSession">nsIAutoCompleteSession</a> インタフェースを実装するオブジェクトでなければなりません。このメソッドは渡されたオブジェクトを返します。</dd>
+</dl> <dl>
+  <dt><span id="m-clearResults"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/clearResults">clearResults()</a></code></span></dt>
+  <dd>戻り値の型: <em>???</em></dd>
+  <dd>候補リストを消去します。</dd>
+</dl> <dl>
+  <dt><span id="m-getDefaultSession"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getDefaultSession">getDefaultSession</a></code></span></dt>
+  <dd>戻り値の型: <em>セッション名</em></dd>
+  <dd>利用可能な候補を持つ最初のセッションの名前を返します。</dd>
+</dl> <dl>
+  <dt>
+    <span id="m-getResultAt"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getResultAt">getResultAt( index )</a></code></span></dt>
+  <dd>
+    戻り値の型: <em><a href="/ja/docs/XPCOM_Interface_Reference/nsIAutoCompleteItem">nsIAutoCompleteItem</a></em></dd>
+  <dd>
+    指定した <var>index</var> の位置の候補項目を返します。項目は <a href="/ja/docs/XPCOM_Interface_Reference/nsIAutoCompleteItem">nsIAutoCompleteItem</a> 形式の値になります。</dd>
+</dl> <dl>
+  <dt><span id="m-getResultCount"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getResultCount">getResultCount( session )</a></code></span></dt>
+  <dd>戻り値の型: <em>???</em></dd>
+  <dd>候補数を返します。(現在、<var>session</var> 引数は無視されます。)</dd>
+</dl> <dl>
+  <dt><span id="m-getResultValueAt"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getResultValueAt">getResultValueAt( index )</a></code></span></dt>
+  <dd>戻り値の型: <em>候補の値</em></dd>
+  <dd>指定した <var>index</var> の位置の候補の値を返します。項目は popup 内に表示されたテキストに相当します。</dd>
+</dl> <dl>
+  <dt><span id="m-getSession"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getSession">getSession( index )</a></code></span></dt>
+  <dd>戻り値の型: <em><a href="/ja/docs/NsIAutoCompleteSession">nsIAutoCompleteSession</a></em></dd>
+  <dd>与えられた index のセッションオブジェクトを返します。これは <a href="/ja/docs/NsIAutoCompleteSession">nsIAutoCompleteSession</a> 形式のオブジェクトを返します。</dd>
+</dl> <dl>
+  <dt><span id="m-getSessionByName"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getSessionByName">getSessionByName( name )</a></code></span></dt>
+  <dd>戻り値の型: <em><a href="/ja/docs/NsIAutoCompleteSession">nsIAutoCompleteSession</a></em></dd>
+  <dd>与えられた name のセッションオブジェクトを返します。これは <a href="/ja/docs/NsIAutoCompleteSession"><code>nsIAutoCompleteSession</code></a> 形式のオブジェクトを返します。</dd>
+</dl> <dl>
+  <dt><span id="m-getSessionResultAt"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getSessionResultAt">getSessionResultAt( session, index )</a></code></span></dt>
+  <dd>戻り値の型: <em>候補項目</em></dd>
+  <dd>指定した <var>session</var> について、指定した <var>index</var> の位置の候補項目を返します。</dd>
+</dl> <dl>
+  <dt>
+    <span id="m-getSessionStatusAt"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getSessionStatusAt">getSessionStatusAt( index )</a></code></span></dt>
+  <dd>
+    戻り値の型: <em>???</em></dd>
+  <dd>
+    与えられた index のセッションオブジェクトの status を返します。</dd>
+</dl> <dl>
+  <dt><span id="m-getSessionValueAt"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getSessionValueAt">getSessionValueAt( session, index )</a></code></span></dt>
+  <dd>戻り値の型: <em>候補の値</em></dd>
+  <dd>指定した <var>session</var> について、指定した <var>index</var> の位置の候補の値を返します。</dd>
+</dl> <dl>
+  <dt><span id="m-removeSession"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/removeSession">removeSession( session )</a></code></span></dt>
+  <dd>戻り値の型: <em>???</em></dd>
+  <dd><code>autocomplete</code> ウィジェットからセッションオブジェクトを削除します。引数は <a href="/ja/docs/NsIAutoCompleteSession"><code>nsIAutoCompleteSession</code></a> インタフェースを実装するオブジェクトでなければなりません。</dd>
+</dl> <dl>
+  <dt><span id="m-select"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/select">select()</a></code></span></dt>
+  <dd>戻り値の型: <em>戻り値無し</em></dd>
+  <dd>textbox 内のすべてのテキストを選択します。</dd>
+</dl> <dl>
+  <dt><span id="m-setSelectionRange"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/setSelectionRange">setSelectionRange( start, end )</a></code></span></dt>
+  <dd>
+    戻り値の型: <em>戻り値無し</em></dd>
+  <dd>textbox の選択部分を設定します。<var>start</var> 引数は選択範囲の最初の文字の index です。<var>end</var> 引数は選択範囲の直後の文字の index です。テキストを選択せずに指定の位置へカーソルを移動するには、両方の引数を同じ値に設定してください。</dd>
+</dl> <dl>
+ <dt><span id="m-syncSessions"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/syncSessions">syncSessions( autoCompleteElement )</a></code></span></dt>
+ <dd>戻り値の型: <em>???</em></dd>
+ <dd>他の 自動補完要素 (autocomplete element) からセッションをコピーします。</dd>
+</dl>
+<h3 id="Related" name="Related">関連項目</h3>
+<dl> <dt>インタフェース</dt> <dd><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAccessibleProvider" title="">nsIAccessibleProvider</a></code>, <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMXULMenuListElement" title="">nsIDOMXULMenuListElement</a></code></dd>
+</dl>

@@ -1,0 +1,76 @@
+---
+title: Browser Side Plug-in API
+slug: Gecko_Plugin_API_Reference/Browser_Side_Plug-in_API
+tags:
+  - Gecko Plugin API Reference
+  - NPAPI
+  - NeedsEditorialReview
+  - Plugins
+translation_of: Plugins/Guide/Browser_Side_Plug-in_API
+---
+<div class="noinclude">
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/Gecko_Plugin_API_Reference:Plug-in_Side_Plug-in_API" style="float: left;">« 前のページ</a><a href="/ja/docs/Gecko_Plugin_API_Reference:Scripting_plugins">次のページ  »</a></p>
+</div>
+</div>
+
+<p>この章ではブラウザに対して利用できるプラグイン API 内のメソッドを説明しています。ブラウザによって実装されプラグインによって呼ばれることを示すために、これらすべてのメソッド名は <code>NPN_</code> で始まっています。どのようにこれら二つのプラグイン API が相互作用するのかを概観するには、イントロダクションの <a href="ja/Gecko_Plugin_API_Reference/Plug-in_Basics#How_Plug-ins_Work">How Plug-ins Work</a> や <a href="ja/Gecko_Plugin_API_Reference/Plug-in_Basics#Overview_of_Plug-in_Structure">Overview of Plug-in Structure</a> セクションを参照してください。</p>
+
+<div class="noinclude"><span id="Netscape_Plug-in_Method_Summary"></span>
+<h3 id="Netscape_.E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E6.A6.82.E8.A6.81" name="Netscape_.E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E6.A6.82.E8.A6.81">Netscape プラグインメソッド概要</h3>
+</div>
+
+<dl>
+ <dt><code><a href="/ja/docs/NPN_DestroyStream">NPN_DestroyStream</a></code></dt>
+ <dd>ストリームを閉じて削除します。</dd>
+ <dt><code><a href="/ja/docs/NPN_ForceRedraw">NPN_ForceRedraw</a></code></dt>
+ <dd>ウィンドウを持たないプラグインに対する描画メッセージを強制します。</dd>
+ <dt><code><a href="/ja/docs/NPN_GetURL">NPN_GetURL</a></code></dt>
+ <dd>指定された URL に対するストリームを作成するようにブラウザに要求します。</dd>
+ <dt><code><a href="/ja/docs/NPN_GetURLNotify">NPN_GetURLNotify</a></code></dt>
+ <dd>指定した URL の内容を持った新しいストリームの作成を要求します; 結果の通知を取得します。</dd>
+ <dt><code><a href="/ja/docs/NPN_GetValue">NPN_GetValue</a></code></dt>
+ <dd>プラグインが情報をブラウザに問い合わせられるようにします。</dd>
+ <dt><code><a href="/ja/docs/NPN_InvalidateRect">NPN_InvalidateRect</a></code></dt>
+ <dd>ウィンドウを持たないプラグインの再描画や再読み込みの前に指定された描画領域を無効化します。</dd>
+ <dt><code><a href="/ja/docs/NPN_InvalidateRegion">NPN_InvalidateRegion</a></code></dt>
+ <dd>ウィンドウを持たないプラグインの再描画や再読み込みの前に指定された範囲を無効化します。</dd>
+ <dt><code><a href="/ja/docs/NPN_MemAlloc">NPN_MemAlloc</a></code></dt>
+ <dd>ブラウザのメモリ空間からメモリを割り当てます。</dd>
+ <dt><code><a href="/ja/docs/NPN_MemFlush">NPN_MemFlush</a></code></dt>
+ <dd>ブラウザが指定された量のメモリを解放することを要求します。</dd>
+ <dt><code><a href="/ja/docs/NPN_MemFree">NPN_MemFree</a></code></dt>
+ <dd>割り当てられたメモリのブロックを再度割り当てます。</dd>
+ <dt><code><a href="/ja/docs/NPN_NewStream">NPN_NewStream</a></code></dt>
+ <dd>プラグインによって作り出されブラウザによって消費される新しいデータストリームの作成を要求します。</dd>
+ <dt><code><a href="/ja/docs/NPN_PluginThreadAsyncCall">NPN_PluginThreadAsyncCall</a></code></dt>
+ <dd> スレッドセーフな方法で、ブラウザまたはプラグインスレッド上のプラグイン関数のブラウザからの呼び出しを要求します。(プラグイン上のスレッドは初期化されます。)</dd>
+ <dt><code><a href="/ja/docs/NPN_PopPopupsEnabledState">NPN_PopPopupsEnabledState</a></code></dt>
+ <dd> ポップアップ有効状態をポップします。</dd>
+ <dt><code><a href="/ja/docs/NPN_PostURL">NPN_PostURL</a></code></dt>
+ <dd>URL にデータを送信します。</dd>
+ <dt><code><a href="/ja/docs/NPN_PostURLNotify">NPN_PostURLNotify</a></code></dt>
+ <dd>URL にデータを送信し、結果の通知を受信します。</dd>
+ <dt><code><a href="/ja/docs/NPN_PushPopupsEnabledState">NPN_PushPopupsEnabledState</a></code></dt>
+ <dd> ポップアップの有効状態をプッシュします。</dd>
+ <dt><code><a href="/ja/docs/NPN_ReloadPlugins">NPN_ReloadPlugins</a></code></dt>
+ <dd>プラグインディレクトリ内のすべてのプラグインを再読み込みします。</dd>
+ <dt><code><a href="/ja/docs/NPN_RequestRead">NPN_RequestRead</a></code></dt>
+ <dd>シークできるストリームに対して一連のバイトを要求します。</dd>
+ <dt><code><a href="/ja/docs/NPN_SetValue">NPN_SetValue</a></code></dt>
+ <dd>ウィンドウを持たないプラグインを透明か不透明に設定します。</dd>
+ <dt><code><a href="/ja/docs/NPN_Status">NPN_Status</a></code></dt>
+ <dd>ブラウザウィンドウのステータス行にメッセージを表示します。</dd>
+ <dt><code><a href="/ja/docs/NPN_UserAgent">NPN_UserAgent</a></code></dt>
+ <dd>ブラウザのユーザエージェントフィールドを返します。</dd>
+ <dt><code><a href="/ja/docs/NPN_Version">NPN_Version</a></code></dt>
+ <dd>プラグイン API に対するバージョン情報を返します。</dd>
+ <dt><code><a href="/ja/docs/NPN_Write">NPN_Write</a></code></dt>
+ <dd>プラグインによって作り出されブラウザによって消費されるストリームにデータをプッシュします。</dd>
+</dl>
+
+<div class="noinclude">
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/Gecko_Plugin_API_Reference:Plug-in_Side_Plug-in_API" style="float: left;">« 前のページ</a><a href="/ja/docs/Gecko_Plugin_API_Reference:Scripting_plugins">次のページ  »</a></p>
+</div>
+</div>

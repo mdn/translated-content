@@ -1,0 +1,127 @@
+---
+title: getFolder
+slug: >-
+  Archive/Mozilla/XPInstall/Référence_de_l_API_XPInstall/Objet_Install/Méthodes/getFolder
+translation_of: Archive/Mozilla/XPInstall/Reference/Install_Object/Methods/getFolder
+---
+<p> </p>
+<h3 id="getFolder" name="getFolder">getFolder</h3>
+<p>Retourne un objet représentant l'un des répertoires standard.</p>
+<h4 id="M.C3.A9thode_de" name="M.C3.A9thode_de">Méthode de</h4>
+<p>Objet <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install">Install</a></p>
+<h4 id="Syntaxe" name="Syntaxe">Syntaxe</h4>
+<pre class="eval">FileSpecObject getFolder (
+   Chaîne FolderName);
+</pre>
+<pre class="eval">FileSpecObject getFolder (
+   Chaîne folderName,
+   Chaîne subDirectory);
+</pre>
+<pre class="eval">FileSpecObject getFolder (
+   Objet localDirSpec,
+   Chaîne subDirectory);
+</pre>
+<h4 id="Param.C3.A8tres" name="Param.C3.A8tres">Paramètres</h4>
+<p>La méthode <code>getFolder</code> a les paramètres suivants :</p>
+<dl>
+ <dt>
+  <code>folderName</code></dt>
+ <dd>
+  Une chaîne représentant l'un des répertoires standard de Netscape. Il y a deux ensembles de valeurs possibles pour ce paramètre. Le premier ensemble contient tous les emplacements indépendants de la plate-forme. Le second ensemble contient les emplacements spécifiques à une plate-forme donnée. Vous êtes encouragés à utiliser des emplacements indépendants à la plate-forme. Voir la liste des emplacements des deux ensembles dans la section <a href="#Description">Description</a>.</dd>
+ <dt>
+  <code>subDirectory</code></dt>
+ <dd>
+  Une chaîne qui définit le nom d'un sous-répertoire. Si ce dernier n'existe pas, il est créé. Ce paramètre est disponible dans Netscape 6 et ultérieur et peut être sensible à la casse (en fonction du système d'exploitation).</dd>
+ <dt>
+  <code>localDirSpec</code></dt>
+ <dd>
+  Un objet <code>FileSpecObject</code> représentant un répertoire obtenu par les méthodes <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/getComponentFolder">getComponentFolder</a> ou <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/getFolder">getFolder</a>.</dd>
+</dl>
+<h4 id="Retour" name="Retour">Retour</h4>
+<p>Un code d'erreur entier. Pour la liste des valeurs possibles, voir <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Codes_retourn%c3%a9s">Codes retournés</a>.</p>
+<h4 id="Description" name="Description">Description</h4>
+<p>La méthode <code>getFolder</code> obtient un objet représentant l'un des répertoires standard de Netscape, qui sera utilisé avec les méthodes <code><a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/addFile">addFile</a></code> et <code><a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/getWinProfile">getWinProfile</a></code>. La valeur de <code>folderName</code> doit être l'une des valeurs suivantes (informations basées sur la branche stable Mozilla 1.7, peuvent également être valables pour d'autres versions) :</p>
+<table style="margin-left: 2em;">
+ <tbody>
+  <tr>
+   <td>
+    <p><code>"Chrome" </code><br>
+     <code>"Components" </code><br>
+     <code>"Current User" </code><br>
+     <code>"Defaults" </code><br>
+     <code>"<a class="external" rel="freelink">file:///</a>" </code><br>
+     <code>"OS Drive" </code><br>
+     <code>"Plugins" </code><br>
+     <code>"Preferences" </code><br>
+     <code>"Profile" </code><br>
+     <code>"Program" </code><br>
+     <code>"Temporary" </code></p>
+   </td>
+   <td>
+    <p><code>"Mac Apple Menu" </code><br>
+     <code>"Mac Control Panel" </code><br>
+     <code>"Mac Desktop"</code><br>
+     <code>"Mac Documents"</code><br>
+     <code>"Mac Extension"</code><br>
+     <code>"Mac Fonts"</code><br>
+     <code>"Mac Shutdown"</code><br>
+     <code>"Mac Startup"</code><br>
+     <code>"Mac System"</code><br>
+     <code>"Mac Trash"</code><br>
+     <code>"Mac Preferences"</code></p>
+   </td>
+   <td>
+    <p><code>"MacOSX Default Download" </code><br>
+     <code>"MacOSX Home" </code><br>
+     <code>"MacOSX Internet Sites" </code><br>
+     <code>"MacOSX Local Applications" </code><br>
+     <code>"MacOSX Local Desktop" </code><br>
+     <code>"MacOSX Local Documents" </code><br>
+     <code>"MacOSX Local Frameworks" </code><br>
+     <code>"MacOSX Local Internet PlugIn" </code><br>
+     <code>"MacOSX Local Preferences" </code><br>
+     <code>"MacOSX Movie Documents" </code><br>
+     <code>"MacOSX Music Documents" </code><br>
+     <code>"MacOSX Picture Documents" </code><br>
+     <code>"MacOSX User Applications" </code><br>
+     <code>"MacOSX User Desktop" </code><br>
+     <code>"MacOSX User Documents" </code><br>
+     <code>"MacOSX User Frameworks" </code><br>
+     <code>"MacOSX User Internet PlugIn" </code><br>
+     <code>"MacOSX User Preferences" </code></p>
+   </td>
+   <td>
+    <p><code>"Unix Lib" </code><br>
+     <code>"Unix Local" </code></p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><code>"Windows" </code><br>
+     <code>"Win AppData" </code><br>
+     <code>"Win Common Files" </code><br>
+     <code>"Win Desktop" </code><br>
+     <code>"Win Desktop Common" </code><br>
+     <code>"Win Program Files" </code><br>
+     <code>"Win Programs" </code><br>
+     <code>"Win Programs Common" </code><br>
+     <code>"Win StartMenu" </code><br>
+     <code>"Win StartMenu Common" </code><br>
+     <code>"Win Startup" </code><br>
+     <code>"Win Startup Common" </code><br>
+     <code>"Win System" </code></p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>La forme <code><a class="external" rel="freelink">file:///</a></code> n'est valide que lorsque le paramètre <code>subDirectory</code> est utilisé. Elle doit être au format URL <code>file:</code> amputée de la partie <code><a class="external" rel="freelink">file:///</a></code>. Par exemple :</p>
+<pre class="eval">mydir = getFolder("<a class="external" rel="freelink">file:///</a>", "c|/mysoftco/somedir");
+</pre>
+<p>Remarquez l'utilisation de barre oblique (/), quelque soit la plate-forme.</p>
+<p>Les dossiers dont les noms commencent par &lt;tt&gt;Win&lt;/tt&gt;, &lt;tt&gt;Mac&lt;/tt&gt; ou &lt;tt&gt;Unix&lt;/tt&gt; sont spécifiques à leur plate-forme respective. Il faut donc faire attention à leur utilisation, car ils rendent l'installation spécifique à une plate-forme.</p>
+<h4 id="Exemple" name="Exemple">Exemple</h4>
+<p>Pour récupérer un objet représentant le répertoire standard des plugins, on peut utiliser l'appel suivant :</p>
+<pre class="eval">plugindir = getFolder("Plugins");
+</pre>
+<p><span class="comment">Interwiki Language Links</span></p>
+<p>{{ languages( { "en": "en/XPInstall_API_Reference/Install_Object/Methods/getFolder" } ) }}</p>

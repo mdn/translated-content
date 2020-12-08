@@ -1,0 +1,142 @@
+---
+title: ポップアップを表示する
+slug: Mozilla/Add-ons/SDK/Tutorials/Display_a_Popup
+translation_of: Archive/Add-ons/Add-on_SDK/Tutorials/Display_a_Popup
+---
+<div class="note">
+ <p>このチュートリアルを行うには <a href="/ja/docs/Mozilla/Add-ons/SDK/Tutorials/Installation">SDK をインストール</a> し、<a href="/ja/docs/Mozilla/Add-ons/SDK/Tutorials/Getting_started"><code>cfx</code> の基本</a> について学んでいる必要があります。</p>
+ <p>このチュートリアルは、Firefox 29 以降で使用可能な <a href="/ja/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_button_action">アクションボタン</a> API を使用しています。</p>
+</div>
+<p>ポップアップダイアログを表示するには、<a href="/ja/docs/Mozilla/Add-ons/SDK/High-Level_APIs/panel"><code>panel</code></a> モジュールを使用します。パネルのコンテンツは HTML を使用して定義されます。パネル内でコンテンツのスクリプトを実行できます: パネル内で実行されるスクリプトは、アドオンのメインコードには直接アクセスできませんが、パネルのスクリプトとアドオンのコードの間でメッセージを交換できます。</p>
+<p>このチュートリアルでは、クリックした際にパネルを表示する <a href="/ja/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_button_action">アクションボタン</a> をツールバーに追加したアドオンを作成します。パネルには、<code>&lt;textarea&gt;</code> 要素のみが含まれています: <code>return</code> キーを押すと、<code>&lt;textarea&gt;</code> 内のコンテンツがメインのアドオンコードに送信されます。メインのアドオンコードでは、<a href="/ja/docs/Mozilla/Add-ons/SDK/Tutorials/Logging">メッセージをコンソールログに表示</a> します。</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/7647/panel.png" style="display: block; margin-left: auto; margin-right: auto;">アドオンは 6 つのファイルで構成されています:</p>
+<ul>
+ <li><code>main.js</code>: アドオンのメインコードで、ボタンとパネルを生成します</li>
+ <li><code>get-text.js</code>: パネルのコンテンツとインタラクティブなコンテンツスクリプトです</li>
+ <li><code>text-entry.html</code>: パネルのコンテンツそのもので、HTML で記述されます</li>
+ <li><code>icon-16.png</code>、<code>icon-32.png</code>、<code>icon-64.png</code>: 3 つの異なるサイズのボタン用アイコンです</li>
+</ul>
+<p>"main.js" は以下のようになっています:</p>
+<pre class="brush: js">var data = require("sdk/self").data;
+// Construct a panel, loading its content from the "text-entry.html"
+// file in the "data" directory, and loading the "get-text.js" script
+// into it.
+var text_entry = require("sdk/panel").Panel({
+  contentURL: data.url("text-entry.html"),
+  contentScriptFile: data.url("get-text.js")
+});
+
+// Create a button
+require("sdk/ui/button/action").ActionButton({
+  id: "show-panel",
+  label: "Show Panel",
+  icon: {
+    "16": "./icon-16.png",
+    "32": "./icon-32.png",
+    "64": "./icon-64.png"
+  },
+  onClick: handleClick
+});
+
+// Show the panel when the user clicks the button.
+function handleClick(state) {
+  text_entry.show();
+}
+
+// When the panel is displayed it generated an event called
+// "show": we will listen for that event and when it happens,
+// send our own "show" event to the panel's script, so the
+// script can prepare the panel for display.
+text_entry.on("show", function() {
+  text_entry.port.emit("show");
+});
+
+// Listen for messages called "text-entered" coming from
+// the content script. The message payload is the text the user
+// entered.
+// In this implementation we'll just log the text to the console.
+text_entry.port.on("text-entered", function (text) {
+  console.log(text);
+  text_entry.hide();
+});</pre>
+<p>コンテンツスクリプト "get-text.js" は、以下のようになっています:</p>
+<div>
+ <pre class="brush: js">// When the user hits return, send the "text-entered"
+// message to main.js.
+// The message payload is the contents of the edit box.
+var textArea = document.getElementById("edit-box");
+textArea.addEventListener('keyup', function onkeyup(event) {
+  if (event.keyCode == 13) {
+    // Remove the newline.
+    text = textArea.value.replace(/(\r\n|\n|\r)/gm,"");
+    self.port.emit("text-entered", text);
+    textArea.value = '';
+  }
+}, false);
+// Listen for the "show" event being sent from the
+// main add-on code. It means that the panel's about
+// to be shown.
+//
+// Set the focus to the text area so the user can
+// just start typing.
+self.port.on("show", function onShow() {
+  textArea.focus();
+});</pre>
+ <div>
+   </div>
+</div>
+<p>そして、"text-entry.html" ファイルで <code>&lt;textarea&gt;</code> 要素を定義します:</p>
+<div>
+ <div>
+  <pre class="brush: html">&lt;html&gt;
+&lt;head&gt;
+    &lt;style type="text/css" media="all"&gt;
+      textarea {
+        margin: 10px;
+      }
+      body {
+        background-color: gray;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+&lt;body&gt;
+    &lt;textarea rows="13" cols="33" id="edit-box"&gt;&lt;/textarea&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+  <div>
+    </div>
+ </div>
+</div>
+<p>3 種類のアイコンファイルを "data" ディレクトリに保存します:</p>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/7635/icon-16.png" style="width: 16px; height: 16px;"></td>
+   <td>icon-16.png</td>
+  </tr>
+  <tr>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/7637/icon-32.png" style="width: 32px; height: 32px;"></td>
+   <td>icon-32.png</td>
+  </tr>
+  <tr>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/7639/icon-64.png" style="width: 64px; height: 64px;"></td>
+   <td>icon-64.png</td>
+  </tr>
+ </tbody>
+</table>
+<p>試してください: "main.js" をアドオン内の <code>lib</code> ディレクトリに保存し、他の 5 つのファイルをアドオン内の<code>data</code> ディレクトリに保存してください:</p>
+<pre>my-addon/
+         data/
+              get-text.js
+              icon-16.png
+              icon-32.png
+              icon-64.png
+              text-entry.html
+         lib/
+             main.js
+</pre>
+<p>アドオンを実行し、ボタンをクリックすると、パネルが表示されます。テキストを入力し、"return" を押すと、コンソールに出力されます。</p>
+<p>Firefox 30 以降では、<a href="/ja/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_button_toggle">トグルボタン</a> を使用すると、<a href="/ja/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_button_toggle#Attaching_panels_to_buttons"> ボタンからパネルを呼び出せます</a>。</p>
+<h2 id="詳しく学ぶ">詳しく学ぶ</h2>
+<p><code>panel</code> モジュールについてさらに学ぶには、<a href="/ja/docs/Mozilla/Add-ons/SDK/High-Level_APIs/panel"><code>panel</code> API リファレンス</a> をご覧ください。</p>
+<p>ボタンについてさらに学ぶには、<a href="/ja/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_button_action">アクションボタン</a> と <a href="/ja/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_button_toggle">トグルボタン</a> API リファレンスをご覧ください。</p>

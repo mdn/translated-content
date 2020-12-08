@@ -1,0 +1,37 @@
+---
+title: Architecture des applications Firefox OS
+slug: Archive/B2G_OS/Platform/Apps_architecture
+tags:
+  - Applications
+  - Firefox OS
+  - Guide
+translation_of: Archive/B2G_OS/Platform/Apps_architecture
+---
+<div class="summary">
+<p>Cet article explique les fonctionnements internes du démarrage et de la gestion des applications dans Firefox OS. Ces informations seront utiles aux développeurs de la plate-forme Firefox OS, aussi bien qu'aux équipes portant le système d'exploitation sur un nouveau matériel. Ce n'est pas indispensable si vous êtes un développeur d'applications, mais cela pourrait quand même vous intéresser.</p>
+</div>
+
+<h2 id="Processus_de_démarrage_d'une_application">Processus de démarrage d'une application</h2>
+
+<p>Quand l'utilisateur sélectionne une application qu'il aimerait lancer, ou qu'une application doit être lancée d'une autre manière, l'application écran d'accueil commence par récupérer une référence d'application depuis l'API <a href="/fr/docs/Web/API/App" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>App</code></a>, puis appelle la méthode <a href="/fr/docs/Web/API/App/launch" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>App.launch()</code></a> pour lancer l'application.</p>
+
+<p>Gecko reçoit cette requête et envoie le <a href="/fr/docs/Web/API/MozChromeEvent" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>mozChromeEvent</code></a> à l'application System avec les détails de l'application. L'application System traite cet événement en insérant un nouvel <a href="/fr/docs/Web/HTML/Element/iframe" title="Cet élément prend en charge les attributs universels."><code>&lt;iframe&gt;</code></a> dans son arborescence DOM et en chargeant l'application dans le nouvel <a href="/fr/docs/Web/HTML/Element/iframe" title="Cet élément prend en charge les attributs universels."><code>&lt;iframe&gt;</code></a>. Ce conteneur sera l'hébergeur de l'application jusqu'à ce qu'elle se termine.</p>
+
+<p>Chaque application a besoin d'un manifeste qui la décrit et possède une hiérarchie de fichiers spécifique au sein de son package. Pour plus de détails, voir l'article <a href="/en-US/docs/Web/Apps/App_Manifest">Manifeste d'application</a>.</p>
+
+<h2 id="Communication_avec_Gecko">Communication avec Gecko</h2>
+
+<p>La communication entre Gecko et l'application System Gaia est faite via <a href="/fr/docs/Web/API/MozChromeEvent" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>mozChromeEvent</code></a> et <a href="/fr/docs/Web/API/MozContentEvent" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>mozContentEvent</code></a>. Les événements <code>mozChromeEvent</code> sont diffusés depuis Chrome jusqu'au contenu et les événements<code> mozContentEvent</code> sont diffusés depuis le contenu jusqu'à Chrome. Cette communication est utilisée pour contrôler la création et la fermeture de l'interface de confiance et pour injecter les fonctions requises pour les notifications et autres tâches, incluant l'ordre pour l'application System, de démarrer une application.</p>
+
+<div class="note">
+<p><strong>Note:</strong> Vous trouverez plus d'informations sur le fonctionnement de ces événements en lisant notre <a href="/en-US/Firefox_OS/Platform/Gaia/Gaia_apps/System">documentation de l'application System</a>. Vous pouvez aussi en découvrir beaucoup plus en regardant le code de <code><a href="https://dxr.mozilla.org/mozilla-central/source/b2g/chrome/content/shell.js" rel="custom">b2g/chrome/content/shell.js</a></code>.</p>
+</div>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/Apps">Applications</a></li>
+ <li><a href="/fr/docs/Web/API/App" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>App</code></a></li>
+ <li><a href="/en-US/Firefox_OS/Platform/Gaia/Gaia_apps/System">Application System</a></li>
+ <li><a href="/en-US/Firefox_OS/Platform/Architecture">Architecture de Firefox OS</a></li>
+</ul>

@@ -1,0 +1,242 @@
+---
+title: クイックセットアップ
+slug: Mozilla/Persona/Quick_Setup
+tags:
+  - Persona
+translation_of: Archive/Mozilla/Persona/Quick_Setup
+---
+<p>たった 5 つの手順であなたのサイトに Persona のログインシステムを追加できます:</p>
+
+<ol>
+ <li>Persona の JavaScript ライブラリをページに含める。</li>
+ <li>ログインボタンとログアウトボタンを追加する。</li>
+ <li>ログインとログアウトの操作を監視する。</li>
+ <li>ユーザの信用情報を検証する。</li>
+ <li>ベストプラクティスを見直す。</li>
+</ol>
+
+<p>Persona は、半日もあればあなたのサイトに追加できます。ただし、重要なものから順番に行ってください: Persona をあなたのサイトで利用しようとするときは、その前に <a href="https://mail.mozilla.org/listinfo/persona-notices">Persona notices</a> メーリングリストを購読してください。メールのやりとりはとても少ないですが、あなたのサイトに悪影響を及ぼす可能性のある変更をアナウンスするために使われます。</p>
+
+<h2 id="Step_1.3A_Include_the_Persona_library" name="Step_1.3A_Include_the_Persona_library">ステップ 1: Persona ライブラリを含める</h2>
+
+<p>Persona は、ブラウザ中立で設計されており、<a href="/ja/docs/persona/Browser_compatibility">すべての主要なデスクトップ版とモバイル版</a><a href="/ja/docs/persona/Browser_compatibility">のブラウザ</a> で動作します。</p>
+
+<p>私たちは将来、ブラウザ群がPersonaに母国語の支援を提供するだろうと考えていますが、その間、私たちはユーザーインターフェースとクライアント側のプロトコルを全て備えたJavascriptのライブラリを提供します。</p>
+
+<p>このライブラリが一度ページに読み込まれれば、必要な Persona 関数 ({{domxref("navigator.id.watch()", "watch()")}} および {{domxref("navigator.id.request()", "request()")}}, {{domxref("navigator.id.logout()", "logout()")}}) がグローバルな <code>navigator.id</code> オブジェクトで利用可能になります。</p>
+
+<p>Persona JavaScript ライブラリをページに含めるには、以下の <code>script</code> タグをページのヘッダ（page bodyの末尾）に置いてください:</p>
+
+<pre class="brush: html;">&lt;script src="https://login.persona.org/include.js"&gt;&lt;/script&gt;
+</pre>
+
+<p>このコードは、{{domxref("navigator.id")}} 関数を使用するすべてのページに <strong>含めなければなりません</strong>。なぜならPersona はまだ開発段階であり、<code>include.js</code> ファイルをあなた自身でホストすべきではないからです。</p>
+
+<h3 id="Suppressing_Compatibility_Mode" name="Suppressing_Compatibility_Mode">互換性モードの制限</h3>
+
+<p>Personaを破綻させるため、Internet Explorerのユーザーが互換性モードを使用できないことも確認すべきです。以下をしてください。</p>
+
+<ul>
+ <li><code>すべてscript elementsの前に&lt;meta http-equiv="X-UA-Compatible" content="IE=Edge"&gt;</code> をあなたのページに含める。</li>
+ <li>もしくはあなたのページに以下のHTTP ヘッダを設定する。 <code>X-UA-Compatible: IE=Edge</code>.</li>
+</ul>
+
+<p>For more information, see the notes in <a href="/ja/docs/persona/Browser_compatibility#Internet_Explorer_.22Compatibility_Mode.22" title="persona/Browser_compatibility#Internet_Explorer_.22Compatibility_Mode.22">IE Compatibility Mode</a> and <a href="http://hsivonen.iki.fi/doctype/index.html#ie8" title="http://hsivonen.iki.fi/doctype/index.html#ie8">"IE8 and IE9 Complications"</a>.</p>
+
+<h2 id="Step_2.3A_Add_login_and_logout_buttons" name="Step_2.3A_Add_login_and_logout_buttons">ステップ 2: ログインとログアウトのボタンを追加する</h2>
+
+<p>Persona は DOM API として設計されているため、ユーザがサイト上のログインまたはログアウトボタンをクリックした時に関数を呼び出さなければなりません。Persona ダイアログを開いてユーザがログインできるようにするには、{{domxref("navigator.id.request()")}} を呼び出します。ログアウトする時は {{domxref("navigator.id.logout()")}} を呼び出します。</p>
+
+<p>Note, the call to {{ domxref("navigator.id.logout()", "logout()") }} <em>must</em> be made in the click handler of the logout button.</p>
+
+<p>コード例:</p>
+
+<pre class="brush: js;">var signinLink = document.getElementById('signin');
+if (signinLink) {
+  signinLink.onclick = function() { navigator.id.request(); };
+};
+
+var signoutLink = document.getElementById('signout');
+if (signoutLink) {
+  signoutLink.onclick = function() { navigator.id.logout(); };
+};
+</pre>
+
+<p>これらのボタンの外観については、<a href="/ja/docs/persona/branding">ブランドリソース</a> ページのボタン画像や CSS ベースのボタンをご利用ください。</p>
+
+<h2 id="Step_3.3A_Watch_for_login_and_logout_actions" name="Step_3.3A_Watch_for_login_and_logout_actions">ステップ 3: ログインとログアウトの操作を監視する</h2>
+
+<p>Persona を機能させるために、ユーザがログインまたはログアウトした時に何を行うかを知らせる必要があります。これは、{{domxref("navigator.id.watch()")}} 関数に 3 個の引数を与えて呼び出すことにより行えます:</p>
+
+<ol>
+ <li>コンピューターから現在あなたのサイトにログインしているユーザーのemailアドレス。ユーザがいない場合は <code>null</code> です。例えば、誰がサインインしているのか確かめるためにブラウザのCookieを調べることでしょう。</li>
+ <li><code>onlogin</code> 操作のトリガーが引かれた時に呼び出す関数。この関数には、検証された「ID アサーション」の引数を 1 個渡します。</li>
+ <li><code>onlogout</code> 操作のトリガーが引かれた時に呼び出す関数。この関数には引数を渡しません。</li>
+</ol>
+
+<div class="note style-wrap">
+<p><strong>注意:</strong> {{domxref("navigator.id.watch()")}} を呼び出した時は、常に <code>onlogin</code> と <code>onlogout</code> の両方を含めなければなりません。</p>
+</div>
+
+<p>例えば、あなたが"Bob"で現在あなたのサイトにログインしていると考える場合、次のように書きます:</p>
+
+<pre class="brush: js;">var currentUser = 'bob@example.com';
+
+navigator.id.watch({
+  loggedInUser: currentUser,
+  onlogin: function(assertion) {
+    // ユーザがログインしました！ ここで必要なことは:
+    // 1. 検証してセッションを作成するため、アサーションをバックエンドに送信する。
+    // 2. UI を更新する。
+    $.ajax({ /* &lt;-- この例では jQuery を使いますが、他のものも使えます */
+      type: 'POST',
+      url: '/auth/login', // これは、あなたの Web サイト上の URL です。
+      data: {assertion: assertion},
+      success: function(res, status, xhr) { window.location.reload(); },
+      error: function(res, status, xhr) { alert("login failure" + res); }
+    });
+  },
+  onlogout: function() {
+    // ユーザがログアウトしました！ ここで必要なことは:
+    // リダイレクトするかバックエンドの呼び出しを行って、ユーザのセッションを破棄する。
+    $.ajax({
+      type: 'POST',
+      url: '/auth/logout', // これは、あなたの Web サイト上の URL です。
+      success: function(res, status, xhr) { window.location.reload(); },
+      error: function(res, status, xhr) { alert("logout failure" + res); }
+    });
+  }
+});
+</pre>
+
+<p>このコード例では、非同期の <code>POST</code> リクエストをサイトのバックエンドで行う <code>onlogin</code> と <code>onlogout</code> の両方が実装されています。バックエンドでは、セッション Cookie 内の情報を設定または削除することによりユーザのログインまたはログインが記録されます。そして、すべてが正しく一致したら、ページが再読み込みしてアカウントを新しいログイン状態にします。</p>
+
+<p>もちろん、AJAX を用いて再読み込みやリダイレクトなしでこれを実装することもできますが、このチュートリアルでは扱いません。</p>
+
+<p>もしID assertionが証明できなかったとき、{{ domxref("navigator.id.logout()") }}を呼びだすべきことに注意してください。これはPersonaに現在誰もログインしていないことを教える働きがあり、それをしないと、Personaは同じassertionでonloginをまた直ちに呼び出し、それが<a href="https://developer.mozilla.org/en-US/docs/Persona/The_implementor_s_guide/Call_logout%28%29_after_a_failed_login" title="/en-US/docs/Persona/The_implementor_s_guide/Call_logout()_after_a_failed_login">endless loop of failed logins</a>につながるかもしれません。</p>
+
+<p>次の例を示します。今度はjQueryをつかいません。</p>
+
+<pre class="brush: js;  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">simpleXhrSentinel<span class="punctuation token">(</span></span>xhr<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+    <span class="keyword token">return</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+        <span class="keyword token">if</span> <span class="punctuation token">(</span>xhr<span class="punctuation token">.</span>readyState <span class="operator token">==</span> <span class="number token">4</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+            <span class="keyword token">if</span> <span class="punctuation token">(</span>xhr<span class="punctuation token">.</span>status <span class="operator token">==</span> <span class="number token">200</span><span class="punctuation token">)</span><span class="punctuation token">{</span>
+               <span class="comment token"> // reload page to reflect new login state
+</span>                window<span class="punctuation token">.</span>location<span class="punctuation token">.</span><span class="function token">reload<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+              <span class="punctuation token">}</span>
+            <span class="keyword token">else</span> <span class="punctuation token">{</span>
+                navigator<span class="punctuation token">.</span>id<span class="punctuation token">.</span><span class="function token">logout<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+                <span class="function token">alert<span class="punctuation token">(</span></span><span class="string token">"XMLHttpRequest error: "</span> <span class="operator token">+</span> xhr<span class="punctuation token">.</span>status<span class="punctuation token">)</span><span class="punctuation token">;</span>
+              <span class="punctuation token">}</span>
+            <span class="punctuation token">}</span>
+          <span class="punctuation token">}</span>
+        <span class="punctuation token">}</span>
+
+<span class="keyword token">function</span> <span class="function token">verifyAssertion<span class="punctuation token">(</span></span>assertion<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+   <span class="comment token"> // Your backend must return HTTP status code 200 to indicate successful
+</span>   <span class="comment token"> // verification of user's email address and it must arrange for the binding
+</span>   <span class="comment token"> // of currentUser to said address when the page is reloaded
+</span>    <span class="keyword token">var</span> xhr <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">XMLHttpRequest</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    xhr<span class="punctuation token">.</span><span class="function token">open<span class="punctuation token">(</span></span><span class="string token">"POST"</span><span class="punctuation token">,</span> <span class="string token">"/xhr/sign-in"</span><span class="punctuation token">,</span> <span class="keyword token">true</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+   <span class="comment token"> // see http://www.openjs.com/articles/ajax_xmlhttp_using_post.php
+</span>    <span class="keyword token">var</span> param <span class="operator token">=</span> <span class="string token">"assertion="</span><span class="operator token">+</span>assertion<span class="punctuation token">;</span>
+    xhr<span class="punctuation token">.</span><span class="function token">setRequestHeader<span class="punctuation token">(</span></span><span class="string token">"Content-type"</span><span class="punctuation token">,</span> <span class="string token">"application/x-www-form-urlencoded"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    xhr<span class="punctuation token">.</span><span class="function token">setRequestHeader<span class="punctuation token">(</span></span><span class="string token">"Content-length"</span><span class="punctuation token">,</span> param<span class="punctuation token">.</span>length<span class="punctuation token">)</span><span class="punctuation token">;</span>
+    xhr<span class="punctuation token">.</span><span class="function token">setRequestHeader<span class="punctuation token">(</span></span><span class="string token">"Connection"</span><span class="punctuation token">,</span> <span class="string token">"close"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    xhr<span class="punctuation token">.</span><span class="function token">send<span class="punctuation token">(</span></span>param<span class="punctuation token">)</span><span class="punctuation token">;</span><span class="comment token"> // for verification by your backend
+</span>
+    xhr<span class="punctuation token">.</span>onreadystatechange <span class="operator token">=</span> <span class="function token">simpleXhrSentinel<span class="punctuation token">(</span></span>xhr<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="punctuation token">}</span>
+
+<span class="keyword token">function</span> <span class="function token">signoutUser<span class="punctuation token">(</span></span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+   <span class="comment token"> // Your backend must return HTTP status code 200 to indicate successful
+</span>   <span class="comment token"> // sign out (usually the resetting of one or more session variables) and
+</span>   <span class="comment token"> // it must arrange for the binding of currentUser to 'null' when the page
+</span>   <span class="comment token"> // is reloaded
+</span>    <span class="keyword token">var</span> xhr <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">XMLHttpRequest</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    xhr<span class="punctuation token">.</span><span class="function token">open<span class="punctuation token">(</span></span><span class="string token">"GET"</span><span class="punctuation token">,</span> <span class="string token">"/xhr/sign-out"</span><span class="punctuation token">,</span> <span class="keyword token">true</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    xhr<span class="punctuation token">.</span><span class="function token">send<span class="punctuation token">(</span></span><span class="keyword token">null</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    xhr<span class="punctuation token">.</span>onreadystatechange <span class="operator token">=</span> <span class="function token">simpleXhrSentinel<span class="punctuation token">(</span></span>xhr<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="punctuation token">}</span>
+<span class="comment token">
+// Go!
+</span>navigator<span class="punctuation token">.</span>id<span class="punctuation token">.</span><span class="function token">watch<span class="punctuation token">(</span></span> <span class="punctuation token">{</span>
+    loggedInUser<span class="punctuation token">:</span> currentUser<span class="punctuation token">,</span>
+         onlogin<span class="punctuation token">:</span> verifyAssertion<span class="punctuation token">,</span>
+        onlogout<span class="punctuation token">:</span> signoutUser <span class="punctuation token">}</span> <span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+
+<p> </p>
+
+<p>すべてのページ上のログインボタンまたはログアウトボタンで<code>navigator.id.watch()を</code> <strong>呼び出さなければなりません</strong>。サイトのユーザのための、自動ログインやグローバルログアウトのような Persona の機能をサポートするには、この関数をあなたのサイトのすべてのページ上で <strong>呼び出してください</strong>。</p>
+
+<h2 id="Step_4.3A_Verify_the_user.E2.80.99s_credentials" name="Step_4.3A_Verify_the_user.E2.80.99s_credentials">ステップ 4: ユーザの信用情報を検証する</h2>
+
+<p>Persona は、パスワードの代わりに「ID アサーション」を使います。これは、ユーザのメールアドレスに結び付けられた、一つのサイトで一回だけ使えるパスワードのようなものです。ユーザがログインしようとする時、このユーザからのアサーションと共に <code>onlogin</code> コールバックが呼びされます。彼らをログインさせる前に、アサーションが正しいか検証しなければなりません。</p>
+
+<p>アサーションを、ユーザのブラウザ上で実行している JavaScript ではなく、あなたのサーバ上で検証することは <em>とても重要</em> です。ユーザのブラウザ上では簡単に偽造できてしまうからです。上記の例では、jQuery の <code>$.ajax()</code> ヘルパーを使ってアサーションをサイトのバックエンドに手放し、<code>/auth/login</code> に <code>POST</code> しました。</p>
+
+<p>あなたのサーバにアサーションが渡ったら、それをどのように検証したらよいでしょうか？ 最も簡単な方法は、Mozilla が提供するヘルパーサービスを使うことです。単純にアサーションを 2 個の引数と共に <code>https://verifier.login.persona.org/verify</code> に <code>POST</code> するだけです:</p>
+
+<ol>
+ <li><code>assertion</code>: ユーザにより提供された ID アサーション。</li>
+ <li><code>audience</code>: あなたの Web サイトのホスト名とポート番号。この値はバックエンドに直接記述してください。ユーザから与えられたいかなるデータも、この引数に渡してはいけません。</li>
+</ol>
+
+<p>例えば、<code>example.com</code> というサイトの場合、コマンドラインで次のようにアサーションをテストできます:</p>
+
+<pre class="brush: bash;">$ curl -d "assertion=&lt;ASSERTION&gt;&amp;audience=https://example.com:443" "https://verifier.login.persona.org/verify"
+</pre>
+
+<p>値が正しければ、次のような JSON レスポンスが返ります:</p>
+
+<pre class="brush: js;">{
+  "status": "okay",
+  "email": "bob@eyedee.me",
+  "audience": "https://example.com:443",
+  "expires": 1308859352261,
+  "issuer": "eyedee.me"
+}
+</pre>
+
+<p>検証サービスについては、<a href="/ja/docs/Persona/Remote_Verification_API">Verification Service API</a> をお読みください。<code>/auth/login</code> の実装例と <a href="http://python.org/">Python</a> を使った <a href="http://flask.pocoo.org/">Flask</a> Web フレームワーク、<a href="http://python-requests.org">Requests</a> HTTP ライブラリは次のようになります:</p>
+
+<pre class="brush: python;">@app.route('auth/login/', methods=['POST'])
+def login():
+    # The request has to have an assertion for us to verify
+    if 'assertion' not in request.form:
+        abort(400)
+
+    # Send the assertion to Mozilla's verifier service.
+    data = {'assertion': request.form['assertion'], 'audience': 'https://example.com:443'}
+    resp = requests.post('https://verifier.login.persona.org/verify', data=data)
+
+    # Did the verifier respond?
+    if resp.ok:
+        # Parse the response
+        verification_data = json.loads(resp.content)
+
+        # Check if the assertion was valid
+        if verification_data['status'] == 'okay':
+            # Log the user in by setting a secure session cookie
+            session.update({'email': verification_data['email']})
+            return resp.content
+
+    # Oops, something failed. Abort.
+    abort(500)
+</pre>
+
+<p>他の言語でPersonaを使う例は<a href="https://github.com/mozilla/browserid-cookbook" title="https://github.com/mozilla/browserid-cookbook">cookbook</a>.を参照してください。</p>
+
+<p>セッション管理は、既存のログインシステムとよく似ているでしょう。最初の大きな変更は、パスワードを確認する代わりにアサーションを確認してユーザの ID を検証することです。他の大きな変更は、ユーザのメールアドレスが利用可能であることを、{{domxref("navigator.id.watch()")}} に <code>loggedInUser</code> 引数を渡して確認することです。</p>
+
+<p>ログアウトは簡単です: 必要なことは、ユーザのセッション Cookie を削除するだけです。</p>
+
+<h2 id="Step_5.3A_Review_best_practices" name="Step_5.3A_Review_best_practices">ステップ 5: ベストプラクティスを見直す</h2>
+
+<p>すべての動作が確認でき、あなたのサイトへのログインとログアウトが成功したら、Persona を安全に安心して使うための <a href="/ja/docs/Persona/Security_Considerations">ベストプラクティス</a> を見直してください。</p>
+
+<p>製品レベルのサイトを制作している場合は、Persona を使ったユーザのログインとログアウトをシミュレートするインテグレーションテストを書きたいでしょう。これを Selenium で容易に行うために、<a href="https://github.com/mozilla/bidpom">bidpom</a> ライブラリの使用を考慮してください。<a href="https://mockmyid.com/">mockmyid.com</a> と <a href="http://personatestuser.org">personatestuser.org</a> のサイトも役立つでしょう。</p>
+
+<p>最後に、セキュリティの問題や Persona API の後方互換性に関わる変更を知るために、<a href="https://mail.mozilla.org/listinfo/persona-notices">Persona notices</a> メーリングリストにサインアップすることを忘れないでください。このメーリングリストのやりとりはとても少ないですが、あなたのサイトに悪影響を及ぼす可能性のある変更をアナウンスするために使われます。</p>
+
+<p> </p>
+
+<p> </p>

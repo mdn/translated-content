@@ -1,0 +1,274 @@
+---
+title: PWA 结构
+slug: Web/Progressive_web_apps/App_structure
+translation_of: Web/Progressive_web_apps/App_structure
+---
+<div>{{PreviousMenuNext("Web/Apps/Progressive/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}</div>
+
+<p class="summary">现在，我们已经知道了 PWAs 背后的原理， 让我们来看一个推荐的 PWA 结构，这来自一个真实的应用 。我们从分析 <a href="https://mdn.github.io/pwa-examples/js13kpwa/">js13kPWA</a> 这个应用开始：为什么它要这样构建？这样做有什么好处？</p>
+
+<h2 id="应用架构">应用架构</h2>
+
+<p>渲染网站主要有两种方法 - 在服务器上或在客户端上。它们都有其优点和缺点，你可以适当地混合使用这两种方法</p>
+
+<ul>
+ <li>服务器端渲染（SSR）意思是在服务器上渲染网页，因此首次加载会更快，但是在不同页面之间导航都需要下载新的HTML内容。 它在浏览器中运行良好，但它受到加载速度的制约，因而带来可以感知的性能延迟——加载一个页面就需要和服务器之间一次往返。（原文：but it suffers in terms of loading speed and therefore general perceived performance — loading every single page requires a new round trip to the server.）</li>
+ <li>客户端渲染（CSR）允许在导航到不同页面时几乎立即在浏览器中更新网站，但在开始时需要更多的初始下载和客户端上的额外渲染。 首次访问时网站速度较慢，但后续访问速度要快得多。</li>
+</ul>
+
+<p>将SSR与CSR混合可以获得最佳结果 - 您可以在服务器上渲染网站，缓存其内容，然后在客户端需要时更新渲染。 由于SSR，第一页加载很快，并且页面之间的导航是平滑的，因为客户端可以仅使用已更改的部分重新渲染页面。</p>
+
+<p>PWA可以使用您喜欢的任何方法构建，但有些方法会更适合。最流行的方法是“app shell”概念，它完全按照上述方式混合SSR和CSR，此外还遵循“离线优先”方法，我们将在后续文章中详细解释并在我们的示例应用程序中使用。还有一种涉及<a href="/en-US/docs/Web/API/Streams_API">Streams API</a>的新方法，我们将简要提及。</p>
+
+<h2 id="App_shell（可以理解为程序的外壳）">App shell（可以理解为程序的外壳）</h2>
+
+<p>App shell意图尽快加载最小的用户界面，然后缓存它，以便在后续访问时可以离线使用，然后加载应用程序的所有内容。这样，下次有人从设备访问应用程序时，UI立即从缓存加载，并从服务器请求新内容（如果它已在缓存中不可用）。</p>
+
+<p>这种结构很快，并且当用户立即看到内容而不是加载动画或空白页时也感觉很快。如果网络连接不可用，它还允许离线访问网站。</p>
+
+<p>我们可以通过<a href="/en-US/docs/Web/API/Service_Worker_API">service worker</a>控制从服务器请求的内容以及从缓存中检索的内容，这将在下一篇文章中详细解释 - 现在让我们关注结构本身。</p>
+
+<h3 id="我为什么要用它？">我为什么要用它？</h3>
+
+<p><span class="tlid-translation translation" lang="zh-CN"><span class="alt-edited">这种架构允许网站从所有 PWA 功能中获益最多 - 它可以缓存应用</span><span title=""> app shell</span><span class="alt-edited"> 并以极大地提高性能的方式管理动态内容。 除了基本 shell 之外，您还可以添加其他功能，例如</span></span><a href="/en-US/docs/Web/Apps/Progressive/Add_to_home_screen">添加到主屏幕</a><span class="tlid-translation translation" lang="zh-CN"><span class="alt-edited">或</span></span><a href="/en-US/docs/Web/API/Push_API">推送通知</a><span class="tlid-translation translation" lang="zh-CN"><span class="alt-edited">，你可以放心如果用户的浏览器不支持应用程序仍然可以正常工作 - 这是渐进增强的美妙之处。</span></span></p>
+
+<p><span class="tlid-translation translation" lang="zh-CN"><span title="">该网站感觉就像一个原生应用，具有即时交互和可靠的性能，同时保留了网络的所有好处。</span></span></p>
+
+<h3 id="可链接、渐进式和响应式">可链接、渐进式和响应式</h3>
+
+<p><span class="tlid-translation translation" lang="zh-CN"><span title="">记住 PWA 的优点并在设计应用程序时牢记这一点非常重要。</span> <span title="">app shell 方法允许网站：</span></span></p>
+
+<ul>
+ <li>可链接：即使它的行为类似于原生应用，它仍然是一个网站 - 您可以单击页面中的链接和当您想共享它时向某人发送URL。</li>
+ <li>渐进式：从“好用的旧的基本网站”开始，逐步添加新功能，同时记住检测它们是否在浏览器中可用，并优雅地处理在没有支持的情况下出现的任何错误。例如，离线模式下 service workers 的帮助只是一个额外的特性使网站体验更好，但没有它网站应仍然是完全可用的。</li>
+ <li>响应式：响应式网页设计也适用于渐进式网络应用程序，因为它们主要用于移动设备。 有许多不同的设备与浏览器 - 使您的网站适用于不同的屏幕尺寸，视口或像素密度，使用 <a href="/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">viewport meta tag</a>，<a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">CSS media queries</a>，<a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexbox</a>，和 <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid</a> 等技术是很重要的。</li>
+</ul>
+
+<h2 id="不同的概念：流">不同的概念：流</h2>
+
+<p>使用 <a href="/zh-CN/docs/Web/API/Streams_API">Streams API</a> 可以实现完全不同的服务器端或客户端渲染方法。在service worker帮助下，流可以极大改进我们解析内容的方式。 </p>
+
+<p>应用程序外壳模型要求在网站开始呈现之前可以使用所有资源。 它与HTML不同，因为浏览器实际上已经流式传输数据，您可以看到元素在网站上加载和呈现的时间。 但是，为了使JavaScript“可操作”，必须完整地下载它。</p>
+
+<p>Streams API允许开发人员直接访问来自服务器的数据流 - 如果您想对数据执行操作（例如，向视频添加过滤器），则不再需要等待所有数据流 下载并转换为blob（或其他） - 您可以立即开始。 它提供细粒度控制 - 流可以启动，与另一个流链接，取消，检查错误等等。</p>
+
+<p>从理论上讲，流媒体是一种更好的模型，但它也更复杂，在撰写本文时（2018年3月），Streams API仍然是一项正在进行的工作，并且尚未在任何主流浏览器中完全可用。 当它可用时，它将是提供内容的最快方式 - 在性能方面的好处将是巨大的。</p>
+
+<p>有关工作示例和更多信息，请参阅 <a href="/zh-CN/docs/Web/API/Streams_API">Streams API documentation</a>.</p>
+
+<h2 id="示例应用的结构">示例应用的结构</h2>
+
+<p><a href="https://mdn.github.io/pwa-examples/js13kpwa/">js13kPWA</a> 这个网站的结构比较简单: 他包含一个HTML页面（index.heml），一个CSS样式表（style.css）,一些图片，js脚本和字体，它的文件结构如下所示：</p>
+
+<p><img alt="Folder structure of js13kPWA." src="https://mdn.mozillademos.org/files/15925/js13kpwa-directory.png" style="border-style: solid; border-width: 1px; display: block; height: 356px; margin: 0px auto; width: 320px;"></p>
+
+<h3 id="HTML页面">HTML页面</h3>
+
+<p>从HTML页面的角度，有一个id为content的标签，这个标签外部的所有内容，都是app shell（程序外壳）</p>
+
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+	&lt;meta charset="utf-8"&gt;
+	&lt;title&gt;js13kGames A-Frame entries&lt;/title&gt;
+	&lt;meta name="description" content="A list of A-Frame entries submitted to the js13kGames 2017 competition, used as an example for the MDN articles about Progressive Web Apps."&gt;
+	&lt;meta name="author" content="end3r"&gt;
+	&lt;meta name="theme-color" content="#B12A34"&gt;
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+	&lt;meta property="og:image" content="icons/icon-512.png"&gt;
+	&lt;link rel="shortcut icon" href="favicon.ico"&gt;
+	&lt;link rel="stylesheet" href="style.css"&gt;
+	&lt;link rel="manifest" href="js13kpwa.webmanifest"&gt;
+	&lt;script src="data/games.js" defer&gt;&lt;/script&gt;
+	&lt;script src="app.js" defer&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header&gt;
+	&lt;p&gt;&lt;a class="logo" href="http://js13kgames.com"&gt;&lt;img src="img/js13kgames.png" alt="js13kGames"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/header&gt;
+&lt;main&gt;
+	&lt;h1&gt;js13kGames A-Frame entries&lt;/h1&gt;
+	&lt;p class="description"&gt;List of games submitted to the &lt;a href="http://js13kgames.com/aframe"&gt;A-Frame category&lt;/a&gt; in the &lt;a href="http://2017.js13kgames.com"&gt;js13kGames 2017&lt;/a&gt; competition. You can &lt;a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa"&gt;fork js13kPWA on GitHub&lt;/a&gt; to check its source code.&lt;/p&gt;
+	&lt;button id="notifications"&gt;Request dummy notifications&lt;/button&gt;
+	&lt;section id="content"&gt;
+		// Content inserted in here
+	&lt;/section&gt;
+&lt;/main&gt;
+&lt;footer&gt;
+	&lt;p&gt;© js13kGames 2012-2018, created and maintained by &lt;a href="http://end3r.com"&gt;Andrzej Mazur&lt;/a&gt; from &lt;a href="http://enclavegames.com"&gt;Enclave Games&lt;/a&gt;.&lt;/p&gt;
+&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+<p>head标签包含了一些基本的内容，例如标题，网页描述，CSS引用，web manifest文件，game.js和app.js，整个程序的初始化工作，会在app.js中完成。body标签中包括header，main和footer三个部分，header中包含了一张图片，main标签包含了网页标题、描述和一个区域，用来放置网页的主体，我们称之为content，footer内部则放置作者信息和链接（原文：copy and links）</p>
+
+<p>这个应用的唯一工作就是列出js13kGames 2017年比赛中的A-Frame（一个用来构建虚拟现实（VR）应用的网页开发框架，译者注） 项目列表。如你所见，这是一个很普通的单页应用，目的是用一个简单的东西来展示PWA的真实功能。</p>
+
+<h3 id="CSS部分">CSS部分</h3>
+
+<p>CSS部分也是尽可能的简单：运用@font-face来加载和使用自定义字体以及给HTML元素提供简单的样式，总体的目标是让页面在移动端和桌面设备上运行（通过使用响应式布局）</p>
+
+<h3 id="主要的JavaScript代码">主要的JavaScript代码</h3>
+
+<p>app.js所做的一些工作我们会在下一篇文章中详细分析，首先它用下面的模板生成了content中的内容</p>
+
+<pre class="brush: js">var template = "&lt;article&gt;\n\
+    &lt;img src='data/img/SLUG.jpg' alt='NAME'&gt;\n\
+    &lt;h3&gt;#POS. NAME&lt;/h3&gt;\n\
+    &lt;ul&gt;\n\
+    &lt;li&gt;&lt;span&gt;Author:&lt;/span&gt; &lt;strong&gt;AUTHOR&lt;/strong&gt;&lt;/li&gt;\n\
+    &lt;li&gt;&lt;span&gt;Twitter:&lt;/span&gt; &lt;a href='https://twitter.com/TWITTER'&gt;@TWITTER&lt;/a&gt;&lt;/li&gt;\n\
+    &lt;li&gt;&lt;span&gt;Website:&lt;/span&gt; &lt;a href='http://WEBSITE/'&gt;WEBSITE&lt;/a&gt;&lt;/li&gt;\n\
+    &lt;li&gt;&lt;span&gt;GitHub:&lt;/span&gt; &lt;a href='https://GITHUB'&gt;GITHUB&lt;/a&gt;&lt;/li&gt;\n\
+    &lt;li&gt;&lt;span&gt;More:&lt;/span&gt; &lt;a href='http://js13kgames.com/entries/SLUG'&gt;js13kgames.com/entries/SLUG&lt;/a&gt;&lt;/li&gt;\n\
+    &lt;/ul&gt;\n\
+&lt;/article&gt;";
+var content = '';
+for(var i=0; i&lt;games.length; i++) {
+    var entry = template.replace(/POS/g,(i+1))
+        .replace(/SLUG/g,games[i].slug)
+        .replace(/NAME/g,games[i].name)
+        .replace(/AUTHOR/g,games[i].author)
+        .replace(/TWITTER/g,games[i].twitter)
+        .replace(/WEBSITE/g,games[i].website)
+        .replace(/GITHUB/g,games[i].github);
+    entry = entry.replace('&lt;a href=\'http:///\'&gt;&lt;/a&gt;','-');
+    content += entry;
+};
+document.getElementById('content').innerHTML = content;</pre>
+
+<p>接着，它注册了一个service worker：</p>
+
+<pre class="brush: js">if('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/pwa-examples/js13kpwa/sw.js');
+};</pre>
+
+<p>下面这部分代码实现了一个功能：点击按钮时请求用户授权，用来向用户推送通知</p>
+
+<pre class="brush: js">var button = document.getElementById("notifications");
+button.addEventListener('click', function(e) {
+    Notification.requestPermission().then(function(result) {
+        if(result === 'granted') {
+            randomNotification();
+        }
+    });
+});</pre>
+
+<p>最后这部分是创建通知的代码，它会随机展示游戏列表中的一个项目</p>
+
+<pre class="brush: js">function randomNotification() {
+    var randomItem = Math.floor(Math.random()*games.length);
+    var notifTitle = games[randomItem].name;
+    var notifBody = 'Created by '+games[randomItem].author+'.';
+    var notifImg = 'data/img/'+games[randomItem].slug+'.jpg';
+    var options = {
+        body: notifBody,
+        icon: notifImg
+    }
+    var notif = new Notification(notifTitle, options);
+    setTimeout(randomNotification, 30000);
+}</pre>
+
+<h3 id="service_worker">service worker</h3>
+
+<p>最后我们来快速浏览一下 service worker相关的文件sw.js，他首先映入game.js这个文件file:</p>
+
+<pre class="brush: js">self.importScripts('data/games.js');</pre>
+
+<p>接着，程序会对app shell和主体内容（content）里面的数据创建一个缓存列表</p>
+
+<pre class="brush: js">var cacheName = 'js13kPWA-v1';
+var appShellFiles = [
+  '/pwa-examples/js13kpwa/',
+  '/pwa-examples/js13kpwa/index.html',
+  '/pwa-examples/js13kpwa/app.js',
+  '/pwa-examples/js13kpwa/style.css',
+  '/pwa-examples/js13kpwa/fonts/graduate.eot',
+  '/pwa-examples/js13kpwa/fonts/graduate.ttf',
+  '/pwa-examples/js13kpwa/fonts/graduate.woff',
+  '/pwa-examples/js13kpwa/favicon.ico',
+  '/pwa-examples/js13kpwa/img/js13kgames.png',
+  '/pwa-examples/js13kpwa/img/bg.png',
+  '/pwa-examples/js13kpwa/icons/icon-32.png',
+  '/pwa-examples/js13kpwa/icons/icon-64.png',
+  '/pwa-examples/js13kpwa/icons/icon-96.png',
+  '/pwa-examples/js13kpwa/icons/icon-128.png',
+  '/pwa-examples/js13kpwa/icons/icon-168.png',
+  '/pwa-examples/js13kpwa/icons/icon-192.png',
+  '/pwa-examples/js13kpwa/icons/icon-256.png',
+  '/pwa-examples/js13kpwa/icons/icon-512.png'
+];
+var gamesImages = [];
+for(var i=0; i&lt;games.length; i++) {
+  gamesImages.push('data/img/'+games[i].slug+'.jpg');
+}
+var contentToCache = appShellFiles.concat(gamesImages);</pre>
+
+<p>下面的代码用来配置service worker，缓存上述列表的工作就在这里发生</p>
+
+<pre class="brush: js">self.addEventListener('install', function(e) {
+  console.log('[Service Worker] Install');
+  e.waitUntil(
+    caches.open(cacheName).then(function(cache) {
+      console.log('[Service Worker] Caching all: app shell and content');
+      return cache.addAll(contentToCache);
+    })
+  );
+});</pre>
+
+<p>最后，如果条件允许，service worker将从缓存中请求content中所需的数据，从而提供离线应用功能</p>
+
+<pre class="brush: js">self.addEventListener('fetch', function(e) {
+  e.respondWith(
+    caches.match(e.request).then(function(r) {
+      console.log('[Service Worker] Fetching resource: '+e.request.url);
+      return r || fetch(e.request).then(function(response) {
+        return caches.open(cacheName).then(function(cache) {
+          console.log('[Service Worker] Caching new resource: '+e.request.url);
+          cache.put(e.request, response.clone());
+          return response;
+        });
+      });
+    })
+  );
+});</pre>
+
+<h3 id="JavaScript_数据">JavaScript 数据</h3>
+
+<p>项目中所用的游戏数据放置在data文件夹下面，以JavaScript对象的形式提供(<a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa/data/games.js">games.js</a>):</p>
+
+<pre class="brush: js">var games = [
+    {
+        slug: 'lost-in-cyberspace',
+        name: 'Lost in Cyberspace',
+        author: 'Zosia and Bartek',
+        twitter: 'bartaz',
+        website: '',
+        github: 'github.com/bartaz/lost-in-cyberspace'
+    },
+    {
+        slug: 'vernissage',
+        name: 'Vernissage',
+        author: 'Platane',
+        twitter: 'platane_',
+        website: 'github.com/Platane',
+        github: 'github.com/Platane/js13k-2017'
+    },
+// ...
+    {
+        slug: 'emma-3d',
+        name: 'Emma-3D',
+        author: 'Prateek Roushan',
+        twitter: '',
+        website: '',
+        github: 'github.com/coderprateek/Emma-3D'
+    }
+];</pre>
+
+<p>每一个入口在data/img文件夹下面都有属于它自己的图片。这些就是我们的内容数据，我们通过js将这些数据加载到主体内容中</p>
+
+<h2 id="下一步">下一步</h2>
+
+<p>下一篇文章我们会探讨更多的细节，关于service worker.如何帮助我们缓存app shell 和内容，从而让我们实现离线功能</p>
+
+<p>{{PreviousMenuNext("Web/Apps/Progressive/Introduction", "Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive")}}</p>

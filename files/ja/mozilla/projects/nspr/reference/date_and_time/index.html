@@ -1,0 +1,64 @@
+---
+title: Date and Time
+slug: Mozilla/Projects/NSPR/Reference/Date_and_Time
+tags:
+  - NSPR
+  - NSPR_API_Reference
+translation_of: Mozilla/Projects/NSPR/Reference/Date_and_Time
+---
+<p>
+{{ PreviousNext("NSPR API Reference:Interval Timing", "NSPR API Reference:Memory Management Operations") }}
+</p><p>この章では、NSPR にある日時関数について解説します。
+</p><p>NSPR は時を二つの方法で表します。絶対時間と時計・カレンダー時間です。NSPR は両方の表記法における型と定数や、二つの間での時間変換の関数も提供します。
+</p>
+<ul><li> 絶対時間による表現は、時間軸に沿った中での点として時間を表現します。時間はエポックと呼ばれる時間軸の原点に対する相対量としてあらわされます。NSPR はエポックを 1970 年 1 月 1 日真夜中 (00:00:00) UTC (Coordinated Universal Time / 協定世界時) をエポックとして採用しています。この形式では、時間はこの時間軸上の点になります。タイムゾーンの概念はありません。
+</li></ul>
+<ul><li> 人間向けに使われる、時計・カレンダー時間では、時間をよりわかりやすい年月日時分秒であらわします。この形式では、タイムゾーンが非常に重要となります。たとえば、タイムゾーンを指定しなければ、1998 年 5 月 1 日 午前 8:00 はあいまいです。NSPR のこのデータ型、分解された時間 (exploded time) では、タイムゾーンの情報も含みますので、絶対時間における位置は特定されます。
+</li></ul>
+<p>絶対時間とカレンダー方式はタイミング制御の中では通常は利用されません。経過時間を測定する方法やタイムアウトにて利用される関数については、<a href="ja/NSPR_API_Reference/Interval_Timing">13 章 "時間間隔"</a> を参照してください。
+</p>
+<ul><li> {{ Anch("Macros for Time Unit Conversion") }}
+</li><li> {{ Anch("Types and Constants") }}
+</li><li> {{ Anch("Time Parameter Callback Functions") }}
+</li><li> {{ Anch("Functions") }}
+</li></ul>
+<p>{{ 英語版章題("Macros for Time Unit Conversion") }}
+</p>
+<h3 name=".E6.99.82.E8.A8.88.E5.8D.98.E4.BD.8D.E5.A4.89.E6.8F.9B.E3.83.9E.E3.82.AF.E3.83.AD" id=".E6.99.82.E8.A8.88.E5.8D.98.E4.BD.8D.E5.A4.89.E6.8F.9B.E3.83.9E.E3.82.AF.E3.83.AD">時計単位変換マクロ</h3>
+<p>秒、ミリ秒、マイクロ秒、ナノ秒同士の変換マクロです。
+</p>
+<ul><li> <a href="ja/PR_MSEC_PER_SEC">PR_MSEC_PER_SEC</a>
+</li><li> <a href="ja/PR_USEC_PER_SEC">PR_USEC_PER_SEC</a>
+</li><li> <a href="ja/PR_NSEC_PER_SEC">PR_NSEC_PER_SEC</a>
+</li><li> <a href="ja/PR_USEC_PER_MSEC">PR_USEC_PER_MSEC</a>
+</li><li> <a href="ja/PR_NSEC_PER_MSEC">PR_NSEC_PER_MSEC</a>
+</li></ul>
+<p>{{ 英語版章題("Types and Constants") }}
+</p>
+<h3 name=".E5.9E.8B.E3.81.A8.E5.AE.9A.E6.95.B0" id=".E5.9E.8B.E3.81.A8.E5.AE.9A.E6.95.B0">型と定数</h3>
+<p>NSPR の時計関数のために定義されている型と定数は以下のものです。
+</p>
+<ul><li> <a href="ja/PRTime">PRTime</a>
+</li><li> <a href="ja/PRTimeParameters">PRTimeParameters</a>
+</li><li> <a href="ja/PRExplodedTime">PRExplodedTime</a>
+</li></ul>
+<p>{{ 英語版章題("Time Parameter Callback Functions") }}
+</p>
+<h3 name=".E3.82.BF.E3.82.A4.E3.83.A0.E3.83.91.E3.83.A9.E3.83.A1.E3.83.BC.E3.82.BF.E3.81.AE.E3.82.B3.E3.83.BC.E3.83.AB.E3.83.90.E3.83.83.E3.82.AF.E9.96.A2.E6.95.B0" id=".E3.82.BF.E3.82.A4.E3.83.A0.E3.83.91.E3.83.A9.E3.83.A1.E3.83.BC.E3.82.BF.E3.81.AE.E3.82.B3.E3.83.BC.E3.83.AB.E3.83.90.E3.83.83.E3.82.AF.E9.96.A2.E6.95.B0">タイムパラメータのコールバック関数</h3>
+<p>いくつかの地理的場所においては、夏時間 (Daylight Saving Time / DST) の適用と DST が開始もしくは終了する日付の取り扱い方法は何度か変更されています。このため、タイムゾーン情報を決定するにはコールバック関数が用いられています。
+</p><p><code><a href="ja/PRTimeParamFn">PRTimeParamFn</a></code> の定義に従った形式で、自分自身のこのコールバック関数を定義することもできます。NSPR で提供されるこのタイプのよく利用されるコールバック関数には二つあります :
+</p>
+<ul><li> <a href="ja/PRTimeParamFn">PRTimeParamFn</a>
+</li><li> <a href="ja/PR_LocalTimeParameters">PR_LocalTimeParameters</a> と <a href="ja/PR_GMTParameters">PR_GMTParameters</a>
+</li></ul>
+<p>{{ 英語版章題("Functions") }}
+</p>
+<h3 name=".E9.96.A2.E6.95.B0" id=".E9.96.A2.E6.95.B0">関数</h3>
+<p>日時を作成、取り扱うための関数は :
+</p>
+<ul><li> <a href="ja/PR_Now">PR_Now</a>
+</li><li> <a href="ja/PR_ExplodeTime">PR_ExplodeTime</a>
+</li><li> <a href="ja/PR_ImplodeTime">PR_ImplodeTime</a>
+</li><li> <a href="ja/PR_NormalizeTime">PR_NormalizeTime</a>
+</li></ul>
+{{ languages( { "en": "en/NSPR_API_Reference/Date_and_Time" } ) }}

@@ -1,0 +1,54 @@
+---
+title: Issues Arising From Arbitrary-Element hover
+slug: Archive/Web_Standards/Issues_Arising_From_Arbitrary-Element_hover
+translation_of: Archive/Web_Standards/Issues_Arising_From_Arbitrary-Element_hover
+---
+<p><span class="comment">Summary: Thanks to long-standing limitations, we're used to thinking of hover styles as applying only to hyperlinks, which has led to some sloppy authoring practices that are now causing problems for some Web sites. This technote explains the source of the problems and how to avoid encountering them.</span> 多くの Web ページ作者は、CSS2 の <code>:hover</code> 疑似クラスをリンクのスタイル付けに利用しています。始めに Microsoft Internet Explorer で導入され、その後 CSS 仕様書に採用されたこの新機能は、リンク文字列に対して (特に JavaScript による "ロールオーバー" のような外観や動作をもたらす) スタイルを設定するものとして一般的です。しかしブラウザの CSS サポートが進歩して、一部のページでは hover が想定外の積極的な動作をするようになりました。</p>
+<h3 id="Hover_and_Non-Link_Elements" name="Hover_and_Non-Link_Elements">hover とリンクではない要素</h3>
+<p><a class="external" href="http://www.w3.org/TR/CSS2/selector.html#dynamic-pseudo-classes">CSS2 のセクション 5.11.3</a> では 3 種類の疑似クラス (<code>:hover</code>, <code>:active</code>, <code>:focus</code>) を定義し、それらは以下のように動作するとしています:</p>
+<blockquote>CSS doesn't define which elements may be in the above states, or how the states are entered and left. Scripting may change whether elements react to user events or not, and different devices and UAs may have different ways of pointing to, or activating elements.</blockquote>
+<p>Web ページ作者はこれらの疑似クラスがハイパーリンクにのみ適用されるという考えに慣れていますが、CSS2 ではそのような制限を行っていません。理論上はどの要素も 3 つの疑似クラスの状態になることができ、また同様にそれらの状態へスタイルを適用することができます。この考えは、伝統的に事実ではないとされていました。</p>
+<h3 id="Bare_Pseudo-Classes" name="Bare_Pseudo-Classes">単独の疑似クラス</h3>
+<p>"単独の" 疑似クラスをセレクタとして用いた結果について考えると、第 2 の問題点が見えてきます。例えば:</p>
+<pre>:hover {color: red;}</pre>
+<p>これは以下の CSS2 規則と同等です:</p>
+<pre>*:hover {color: red;}</pre>
+<p>これは "すべての要素について、hover 状態であるときに前景色を赤色にする" と解釈されます。従って段落・表・見出しなど文書内の全要素は、hover 状態の時に文字列が赤色になるでしょう。</p>
+<p>単独のクラスセレクタと hover 疑似クラスを合わせて用いたときにも同様の相違点があります:</p>
+<pre>.nav:hover {color: red;}</pre>
+<p><code>class</code> 属性の値が <code>nav</code> であるものの実体がハイパーリンクのみである状況では、この規則は正常に動作します。 しかし、このような規則は通常、以下のようなマークアップとの組み合わせで見られます:</p>
+<pre>&lt;td class="nav"&gt;
+&lt;a href="one.html" class="nav"&gt;one&lt;/a&gt; |
+&lt;a href="two.html" class="nav"&gt;two&lt;/a&gt; |
+&lt;a href="thr.html" class="nav"&gt;three&lt;/a&gt; |
+&lt;a href="fou.html" class="nav"&gt;four&lt;/a&gt;
+&lt;/td&gt;</pre>
+<p>表のセルの <code>class</code> 属性の値が <code>nav</code> であるため、ユーザがマウスポインタを表のセル内に動かすと縦線の記号が赤色になります。このとき、リンクも同様に赤色になります。</p>
+<h3 id="Gecko_Behavior" name="Gecko_Behavior">Gecko の動作</h3>
+<p>Netscape Gecko のビルド 20020410 以降を基にしたブラウザ (Netscape 6.1+) は、<code>:hover</code> のスタイルを文書内のすべての要素に適用することができます。従って Web ページ作者が単独の疑似クラスまたは単独のクラスセレクタと疑似クラスを使用している場合は、hover のスタイルがリンク以外の部分にも適用されるおそれがあります。もっとも確実な修正法は、以下のようにセレクタへアンカー要素を追加することです:</p>
+<pre>a:hover {color: red;}
+a.nav:hover {color: red;}</pre>
+<p>過去の文書で問題が発生することを防ぐために、Mozilla 1.0 以降を基にしたブラウザ (Netscape 7+) では文書が "quirks" モードで表示されるときに、単独の疑似クラスの適用先をリンクのみに制限する機能を備えています。Mozilla 1.3b 以降を基にしたブラウザでは、同モードでの調整が単独のクラスセレクタと <code>:hover</code> 疑似クラスの組み合わせも含むよう拡張されました (詳細は <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=169078" title="FIXED: .class:hover should be ignored for non-links in quirks mode">バグ 169078</a> を参照)。</p>
+<h3 id="Named_Anchor_Problems" name="Named_Anchor_Problems">name 属性を持つアンカーの問題</h3>
+<p>これまでに述べた問題点に加えて、同様に Web ページの作者が予期しない形でスタイルが適用される状況が 2 点あります。ひとつは妥当性確認により簡単に修正されますが、もう一つはやや複雑です。</p>
+<p>始めに、Web ページ作者が name 属性つきのアンカータグを置いたが閉じるタグがない場合の問題です。例えば:</p>
+<pre>&lt;a name="pagetop"&gt;
+&lt;h2&gt;My Page&lt;/h2&gt;</pre>
+<p><code>&lt;/a&gt;</code> タグがないと、実質的にこの名前付けは文書の残りすべてを包含します。これは通常、文書の残りすべてが hover スタイルを採ることを意味します。この状況で以下の規則の効果を考えてみます:</p>
+<pre>a:hover {color: red;}</pre>
+<p>name 属性を持つ閉じられていないアンカーを含む文書では、アンカー以降の文字列すべてが赤色になります (他に影響する CSS 規則がある場合を除く)。</p>
+<p>また以上の点から、name 属性を持つアンカーが hover スタイルを受け入れてしまうという第 2 の問題が見えてきます。Web ページ作者は <code>a:hover</code> セレクタがハイパーリンクにのみ適用されると考えているでしょう、しかしこのセレクタは単純に hover 状態であるすべての <code>a</code> 要素にスタイルを設定するものですから、スタイルは name 属性を持つアンカーにも適用されます。この問題を回避するために、Web ページ作者は CSS2 で説明されている複合的な疑似クラスを使用するとよいでしょう:</p>
+<pre>a:link:hover {color: red;}
+a:visited:hover {color: maroon;}</pre>
+<p>この構文では未訪問のリンクと訪問済みのリンクそれぞれに、異なる hover 状態のスタイルを設定できることに注意してください。これは、単に <code>a:hover</code> とするだけでは不可能でした。また、<code>a:link:hover</code> というセレクタは未訪問のリンクにのみ適用されますので、未訪問と訪問済みの両方に同じ hover 状態のスタイルを設定したい場合は、1 つの規則に対して上記 2 つのセレクタを指定してください。</p>
+<h3 id="Recommendation" name="Recommendation">推奨事項</h3>
+<p>予期しない問題を避けるために Web ページ作者は、ハイパーリンクに適用しようとする動的状態を示す疑似クラスに、要素名も含めることを<strong>強く</strong>推奨します。加えて、複合的な疑似クラスは hover 状態のスタイルがハイパーリンクではないアンカーに適用されてしまうことを防ぎます。従って、単に <code>:hover</code> とするのではなく <code>a:hover</code> を常に使うようにしてください。また、<code>a:hover</code> よりも <code>a:link:hover</code> (および <code>a:visited:hover</code>) が好ましいです。</p>
+<h3 id="Related_Links" name="Related_Links">関連リンク</h3>
+<ul> <li><a class="external" href="http://www.w3.org/TR/CSS2/selector.html#dynamic-pseudo-classes">The dynamic pseudo-classes: :hover, :active, and :focus</a></li> <li><a class="external" href="http://msdn.microsoft.com/en-us/library/ms530766.aspx">:hover Pseudo-class (MSDN)</a></li>
+</ul>
+<div class="originaldocinfo">
+<h3 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h3>
+<ul> <li>Author(s): Eric A. Meyer, Netscape Communications</li> <li>Last Updated Date: Published 07 Mar 2003; Revised 21 Mar 2003</li> <li>Copyright Information: Copyright ﾂｩ 2001-2003 Netscape. All rights reserved.</li> <li>Note: This reprinted article was originally part of the DevEdge site.</li>
+</ul>
+</div>
+<p></p>

@@ -1,0 +1,104 @@
+---
+title: Intl.ListFormat
+slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
+tags:
+  - Class
+  - Experimental
+  - Internationalization
+  - Intl
+  - JavaScript
+  - ListFormat
+  - 国際化
+translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
+---
+<div>{{JSRef}}</div>
+
+<p><strong><code>Intl.ListFormat</code></strong> オブジェクトは、言語特有のリストを利用可能にするコンストラクターです。</p>
+
+<div>{{EmbedInteractiveExample("pages/js/intl-listformat.html", "taller")}}</div>
+
+<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+
+<h2 id="Constructor" name="Constructor">コンストラクター</h2>
+
+<dl>
+ <dt>{{jsxref("Intl/ListFormat/ListFormat", "Intl.ListFormat()")}}</dt>
+ <dd>新しい <code>ListFormat</code> オブジェクトを作成します。</dd>
+</dl>
+
+<h2 id="Static_methods" name="Static_methods">静的メソッド</h2>
+
+<dl>
+ <dt>{{jsxref("ListFormat.supportedLocalesOf", "Intl.ListFormat.supportedLocalesOf()")}}</dt>
+ <dd>指定したロケールのうち、ランタイムの既定のロケールに代替されることなく対応しているものを含む配列を返します。</dd>
+</dl>
+
+<h2 id="Instance_methods" name="Instance_methods">インスタンスメソッド</h2>
+
+<dl>
+ <dt>{{jsxref("ListFormat.prototype.format", "Intl.ListFormat.prototype.format()")}}</dt>
+ <dd>言語固有の形式の文字列を返して，列挙要素を表示します。</dd>
+ <dt>{{jsxref("ListFormat.prototype.formatToParts", "Intl.ListFormat.prototype.formatToParts()")}}</dt>
+ <dd>ロケールを考慮した方法で値のリストを整形するために使用できる、さまざまな部分を表すオブジェクトの配列を返します。</dd>
+</dl>
+
+<h2 id="Examples" name="Examples">例</h2>
+
+<h3 id="format_の使用">format の使用</h3>
+
+<p>次の例では、英語を使用するリストのフォーマッターを生成する方法を示します。</p>
+
+<pre class="brush: js notranslate">const list = ['Motorcycle', 'Bus', 'Car'];
+
+ console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).format(list));
+// &gt; Motorcycle, Bus and Car
+
+ console.log(new Intl.ListFormat('en-GB', { style: 'short', type: 'disjunction' }).format(list));
+// &gt; Motorcycle, Bus or Car
+
+ console.log(new Intl.ListFormat('en-GB', { style: 'narrow', type: 'unit' }).format(list));
+// &gt; Motorcycle Bus Car
+</pre>
+
+<h3 id="Using_formatToParts" name="Using_formatToParts">formatToParts の使用</h3>
+
+<p>次の例では、整形済みの部分を返すリストフォーマッターを生成する方法を示します。</p>
+
+<pre class="brush: js notranslate">const list = ['Motorcycle', 'Bus', 'Car'];
+console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).formatToParts(list));
+
+// [ { "type": "element", "value": "Motorcycle" },
+//   { "type": "literal", "value": ", " },
+//   { "type": "element", "value": "Bus" },
+//   { "type": "literal", "value": ", and " },
+//   { "type": "element", "value": "Car" } ];
+</pre>
+
+<h2 id="Specifications" name="Specifications">仕様書</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Intl.ListFormat', '#listformat-objects', 'ListFormat')}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+
+<div>
+<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
+
+<p>{{Compat("javascript.builtins.Intl.ListFormat")}}</p>
+</div>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>{{jsxref("Intl")}}</li>
+</ul>

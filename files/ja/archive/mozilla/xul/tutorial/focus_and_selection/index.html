@@ -1,0 +1,224 @@
+---
+title: フォーカスと選択
+slug: Archive/Mozilla/XUL/Tutorial/Focus_and_Selection
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Focus_and_Selection
+---
+<p>
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Keyboard_Shortcuts" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Commands">次のページ  »</a></p>
+</div>
+<p>このセクションでは、要素のフォーカスと選択を取り扱う方法について説明します。
+</p><p><span id="Focused_Elements"></span>
+</p>
+<h3 id=".E3.83.95.E3.82.A9.E3.83.BC.E3.82.AB.E3.82.B9.E3.82.92.E5.BE.97.E3.81.A6.E3.81.84.E3.82.8B.E8.A6.81.E7.B4.A0" name=".E3.83.95.E3.82.A9.E3.83.BC.E3.82.AB.E3.82.B9.E3.82.92.E5.BE.97.E3.81.A6.E3.81.84.E3.82.8B.E8.A6.81.E7.B4.A0"> フォーカスを得ている要素 </h3>
+<p>「フォーカスを得ている要素」とは、そのとき入力イベントを受け取っている要素のことです。
+ウィンドウに 3 つの<span style="border-bottom: 1px dashed green;" title="textbox">テキスト入力欄</span>がある場合、そのときフォーカスを得ているテキスト入力欄だけが、利用者によるテキスト入力を受け付けることができます。
+1 つのウィンドウについて、1 つの要素だけがフォーカスを得ることが可能です。
+</p><p>利用者は、要素をマウスでクリックするか TAB キーを押すことにより、フォーカスを移動することができます。
+TAB キーを押すと、次の要素にフォーカスが移ります。
+また、前の要素に戻るには、Shift キーを押しながら TAB キーを押します。
+</p><p><span id="Rearranging_the_tab_order"></span>
+</p>
+<h4 id="TAB_.E9.A0.86.E5.BA.8F.E3.82.92.E5.A4.89.E6.9B.B4.E3.81.99.E3.82.8B" name="TAB_.E9.A0.86.E5.BA.8F.E3.82.92.E5.A4.89.E6.9B.B4.E3.81.99.E3.82.8B"> TAB 順序を変更する </h4>
+<p><code><code id="a-tabindex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/tabindex">tabindex</a></code></code> 属性を要素に付加することにより、 TAB キーが押されたときにフォーカスが移る順序 (TAB インデックス) を変更することができます。
+この属性には数値を設定する必要があります。
+TAB キーが押されたとき、その要素の次に大きい TAB インデックス値を持つ要素にフォーカスが移ります。
+つまり、要素にフォーカスを移動したい順に、一連のインデックスを与えていくことによって、任意の順序に変更できます。
+とはいっても、たいていの場合、<code><code id="a-tabindex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/tabindex">tabindex</a></code></code> 属性は設定しないと思います。
+その場合は、 TAB キーによって、フォーカスは次に表示されている要素に移ります。
+順番を変えたい場合のみ TAB インデックス値を設定すればよいわけです。
+以下に例を示します。
+</p><p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_1.xul">表示</a>
+</p>
+<pre>&lt;button label="Button 1" tabindex="2"/&gt;
+&lt;button label="Button 2" tabindex="1"/&gt;
+&lt;button label="Button 3" tabindex="3"/&gt;
+</pre>
+<p><span id="The_focus_event"></span>
+</p>
+<h4 id=".E3.83.95.E3.82.A9.E3.83.BC.E3.82.AB.E3.82.B9.E3.82.A4.E3.83.99.E3.83.B3.E3.83.88" name=".E3.83.95.E3.82.A9.E3.83.BC.E3.82.AB.E3.82.B9.E3.82.A4.E3.83.99.E3.83.B3.E3.83.88"> フォーカスイベント </h4>
+<p>focus イベントは、要素がフォーカスを得たことに応じるために利用されます。
+blur イベントは、要素がフォーカスを失うことに応じるために利用されます。
+要素に <code><a href="ja/DOM/element.onfocus">onfocus</a></code> や <code><a href="ja/DOM/element.onblur">onblur</a></code> 属性を与えることによって、フォーカス状態の変化に対する反応が可能になります。
+これらの属性は、HTML における同名の属性と同様に機能します。
+これらのイベントハンドラは、要素のハイライトやステータスバーへのテキストの表示などに利用できると思います。
+以下に、focus イベントを処理するために、関数を設定する例を示します。
+</p><p><span id="%E4%BE%8B_2"><a id="%E4%BE%8B_2"></a><strong>例 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_2.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_2.xul">表示</a>
+</p>
+<pre>&lt;script&gt;
+
+function displayFocus(){
+  var elem=document.getElementById('sbar');
+  elem.setAttribute('value','Enter your phone number.');
+}
+
+&lt;/script&gt;
+
+&lt;textbox id="tbox1"/&gt;
+&lt;textbox id="tbox2" onfocus="displayFocus();"/&gt;
+&lt;description id="sbar" value=""/&gt;
+</pre>
+<p>この例で focus イベントが発生したとき、<code>displayFocus</code> 関数が呼び出され、
+この関数によって、テキストラベルの値が変更されます。
+この例を拡張して、blur イベントが発生したときに、テキストを取り除くようにすることも可能です。
+focus と blur イベントは、典型的には、利用者が選択した要素に応じてインターフェイスの一部を更新するために使われています。
+例えば、利用者によって、フィールドへの数値の入力が行われたときに、合計表示のフィールドを更新したり、入力された値を検証するために focus イベントを使うことができます。
+focus や blur イベントの処理中に、アラートダイアログを出してはいけません。
+この挙動は、利用者にとってわずらわしいため、ユーザーインターフェイス設計として劣悪です。
+</p><p>DOM 関数の <code><a href="ja/DOM/element.addEventListener">addEventListener</a></code> を使うことでも、要素にイベントハンドラを動的に追加できます。
+この方法は、どんな要素やイベント型に対しても使用できます。
+この関数は、3 つの引数、
+「イベント型」、「イベントが発生したときに実行される関数」、「イベントを<span style="border-bottom: 1px dashed green;" title="capturing">捕捉</span>フェーズで捉えるかどうかを指示する真偽値」、をとります。
+</p><p><span id="Getting_the_currently_focused_element"></span>
+</p>
+<h4 id=".E3.83.95.E3.82.A9.E3.83.BC.E3.82.AB.E3.82.B9.E3.82.92.E5.BE.97.E3.81.A6.E3.81.84.E3.82.8B.E8.A6.81.E7.B4.A0.E3.81.AE.E5.8F.96.E5.BE.97" name=".E3.83.95.E3.82.A9.E3.83.BC.E3.82.AB.E3.82.B9.E3.82.92.E5.BE.97.E3.81.A6.E3.81.84.E3.82.8B.E8.A6.81.E7.B4.A0.E3.81.AE.E5.8F.96.E5.BE.97"> フォーカスを得ている要素の取得 </h4>
+<p>現在フォーカスを得ている要素は、ウインドウごとに 1 つだけ存在する、<span style="border-bottom: 1px dashed green;" title="command dispatcher">コマンドディスパッチャ</span>と呼ばれるオブジェクトに保持されています。
+コマンドディスパッチャは、利用者がインターフェイスを利用中にフォーカスを得ている要素を変更しても見失わないように追跡する役割を担っています。
+また、コマンドディスパッチャは、それ以外の役割も持っていますが、それについては後の<a href="ja/XUL_Tutorial/Commands">コマンドのセクション</a>で述べます。
+今回は、コマンドディスパッチャの機能のうち、フォーカスに関連したものについて見ていくことにします。
+</p><p>ウインドウのコマンドディスパッチャは、<span style="border-bottom: 1px dashed green;" title="document">文書</span>オブジェクトの <code>commandDispatcher</code> プロパティから取得できます。
+また、フォーカスを得ている要素は、コマンドディスパッチャの <code>focusedElement</code> プロパティから取得できます。
+以下にその例を示します。
+</p><p><span id="%E4%BE%8B_3"><a id="%E4%BE%8B_3"></a><strong>例 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_3.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_3.xul">表示</a>
+</p>
+<pre>&lt;window id="focus-example" title="Focus Example"
+        onload="init();"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;script&gt;
+function init(){
+  addEventListener("focus",setFocusedElement,true);
+}
+
+function setFocusedElement(){
+  var focused = document.commandDispatcher.focusedElement;
+  document.getElementById("focused").value = focused.tagName;
+}
+&lt;/script&gt;
+
+&lt;hbox&gt;
+  &lt;label control="username" value="User Name:"/&gt;
+  &lt;textbox id="username"/&gt;
+&lt;/hbox&gt;
+
+&lt;button label="Hello"/&gt;
+&lt;checkbox label="Remember This Decision"/&gt;
+
+&lt;label id="focused" value="-No focus-"/&gt;
+
+&lt;/window&gt;
+</pre>
+<p>この例では、フォーカスイベントハンドラをウインドウに設定しています。
+<span style="border-bottom: 1px dashed green;" title="capturing">捕捉</span>フェーズ用のイベントハンドラを利用したいので、<code><a href="ja/DOM/element.addEventListener">addEventListener</a></code> メソッドを使う必要があります。
+このメソッドによって、ウインドウに <code>setFocusedElement</code> メソッドを呼び出す、捕捉イベントハンドラを登録しています。
+<code>setFocusedElement</code> メソッドは、フォーカスを得ている要素をコマンドディスパッチャから取得して、タグ名表示用ラベルの値として、その要素のタグ名を設定します。
+これらによって、フォーカスを得た要素が変更されるごとに、ラベルにはその要素のタグ名が表示されることになります。
+</p><p>注意点がいくつかあります。
+</p>
+<ul><li> まず、 テキスト入力欄にフォーカスを与えたとき、タグ名の表示は「html:input」になり、期待される「textbox」にはなりません。これは、 XUL のテキスト入力欄が、HTML の input ウィジェットを使用して実装されており、フォーカスイベントは実装元の要素の方が受け取ることになるためです。
+</li><li> 次に、テキスト入力欄のラベルをクリックすると、フォーカスはテキスト入力欄に移ります。これは、ラベルにテキスト入力欄の id を指す <code><code id="a-control"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/control">control</a></code></code> 属性が与えられているためです。
+</li><li> 最後に、タグ名を表示するラベルには <code><code id="a-control"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/control">control</a></code></code> 属性が設定されていないため、クリックしても、フォーカスを得ている要素は変更されません。フォーカスは、フォーカス可能な要素のみが取得できます。
+</li></ul>
+<p><span id="Making_a_label_focusable"></span>
+</p>
+<h4 id=".E3.83.A9.E3.83.99.E3.83.AB.E3.82.92.E3.83.95.E3.82.A9.E3.83.BC.E3.82.AB.E3.82.B9.E5.8F.AF.E8.83.BD.E3.81.AB.E3.81.99.E3.82.8B" name=".E3.83.A9.E3.83.99.E3.83.AB.E3.82.92.E3.83.95.E3.82.A9.E3.83.BC.E3.82.AB.E3.82.B9.E5.8F.AF.E8.83.BD.E3.81.AB.E3.81.99.E3.82.8B"> ラベルをフォーカス可能にする </h4>
+<p><a href="ja/XUL_Tutorial/Introduction_to_XBL">カスタム要素の作成</a>を行おうとしたときに、その要素がフォーカス可能か否かを変更する必要があるかもしれません。
+そのためには、特殊なスタイルプロパティ <a href="/ja/docs/Web/CSS/-moz-user-focus" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>-moz-user-focus</code></a> を利用します。
+このプロパティは、要素がフォーカス可能かどうかを制御します。
+これにより、以下に例を示すように、ラベルをフォーカス可能にすることもできます。
+</p><p><span id="%E4%BE%8B_4"><a id="%E4%BE%8B_4"></a><strong>例 4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_4.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_4.xul">表示</a>
+</p>
+<pre>&lt;label id="focused" style="-moz-user-focus: normal;"
+          onkeypress="alert('Label Focused');" value="Focus Me"/&gt;
+</pre>
+<p>この例では、フォーカス可能にするために、スタイルプロパティに <code>normal</code> を設定しています。
+また、これを <code>ignore</code> に設定した場合、その要素はフォーカス不能になります。
+ただし、この挙動を要素を無効化するために利用すべきではありません。
+そのためには、要素を無効化するために設計されている <code>disabled</code> 属性か、プロパティの方を利用すべきです。
+上の例のラベルがフォーカスを得ると、キー入力に反応できるようになります。
+当然ですが、通常、ラベルはフォーカスを得ることを期待されていないため、ラベルがフォーカスを得ても、それを示すような表示は行いません。
+</p><p><span id="Changing_the_focus"></span>
+</p>
+<h4 id=".E3.82.B9.E3.82.AF.E3.83.AA.E3.83.97.E3.83.88.E3.81.8B.E3.82.89.E3.83.95.E3.82.A9.E3.83.BC.E3.82.AB.E3.82.B9.E3.82.92.E5.88.B6.E5.BE.A1.E3.81.99.E3.82.8B" name=".E3.82.B9.E3.82.AF.E3.83.AA.E3.83.97.E3.83.88.E3.81.8B.E3.82.89.E3.83.95.E3.82.A9.E3.83.BC.E3.82.AB.E3.82.B9.E3.82.92.E5.88.B6.E5.BE.A1.E3.81.99.E3.82.8B"> スクリプトからフォーカスを制御する </h4>
+<p>スクリプトを使用して、フォーカスを別の要素に移動する方法はいくつかあります。
+最も単純な方法はフォーカスを与えたい XUL 要素に対して、<code><a href="ja/DOM/element.focus">focus</a></code> メソッドを呼び出すことです。
+または、<code><a href="ja/DOM/element.blur">blur</a></code> メソッドを使用して、要素からフォーカスを外すことも可能です。
+以下に例を示します。
+</p><p><span id="%E4%BE%8B_5"><a id="%E4%BE%8B_5"></a><strong>例 5</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_5.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_5.xul">表示</a>
+</p>
+<pre>&lt;textbox id="addr"/&gt;
+
+&lt;button label="Focus" oncommand="document.getElementById('addr').focus()"/&gt;
+</pre>
+<p>もしくは、コマンドディスパッチャの、<code>advanceFocus</code> と <code>rewindFocus</code> メソッドを利用することもできます。
+これらのメソッドは、それぞれ、規定の順序に従って、フォーカスを次の要素あるいは前の要素へと移動します。
+</p><p>テキスト入力欄 (<code><code><a href="/ja/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code></code>) には、フォーカスを得ている間、それを示すために専用の属性 <code>focused</code> が追加されます。
+この属性の有無をチェックすることにより、スクリプトあるいはスタイルシートから要素がフォーカスを得ているかどうかを知ることができます。
+テキスト入力欄がフォーカスを得ているときは、値として <code>true</code> をとり、
+テキスト入力欄がフォーカスを得ていないときは、この属性は存在しません。
+</p><p>フォーカスを、現在フォーカスを得ている場所から、ブラウザが次に移動させるはずの場所に移動させたいと考えているとします。
+利用者は、このために、通常 TAB キーを押します。
+スクリプトから実行する場合、どこからでも参照可能な、XUL ブラウザの<span style="border-bottom: 1px dashed green;" title="document">文書</span>オブジェクトを使用して、簡単に行うことが可能です。
+</p>
+<pre>      document.commandDispatcher.advanceFocus();
+</pre>
+<p>実際には、commandDispatcher は、単純に <a href="ja/Interfaces">nsIDOMXULCommandDispatcher インターフェイス</a>を実装しています。
+なお、このインターフェイスでは、これ以外にも便利なメソッドをいくつか提供しています。
+</p><p><span id="Platform_Specific_Behaviors"></span>
+</p>
+<h4 id=".E3.83.97.E3.83.A9.E3.83.83.E3.83.88.E3.83.95.E3.82.A9.E3.83.BC.E3.83.A0.E5.9B.BA.E6.9C.89.E3.81.AE.E6.8C.99.E5.8B.95" name=".E3.83.97.E3.83.A9.E3.83.83.E3.83.88.E3.83.95.E3.82.A9.E3.83.BC.E3.83.A0.E5.9B.BA.E6.9C.89.E3.81.AE.E6.8C.99.E5.8B.95"> プラットフォーム固有の挙動 </h4>
+<dl><dt>Mac OS X</dt><dd> Mac OS X には「Full Keyboard Access」(FKA) と呼ばれる<span style="border-bottom: 1px dashed green;" title="preference">設定</span>があります。 XUL が、この設定の影響を強く受けることに注意してください。 具体的には、FKA の設定が「off」である場合、テキスト入力欄とリスト、及びツリーだけが、キーボードから (コードから focus() を呼び出すように) フォーカスを与えることが可能であることを意味しています。
+</dd></dl>
+<p><span id="Handling_Text_Changes"></span>
+</p>
+<h3 id=".E3.83.86.E3.82.AD.E3.82.B9.E3.83.88.E3.81.B8.E3.81.AE.E5.A4.89.E6.9B.B4.E3.81.AB.E5.AF.BE.E3.81.99.E3.82.8B.E5.87.A6.E7.90.86" name=".E3.83.86.E3.82.AD.E3.82.B9.E3.83.88.E3.81.B8.E3.81.AE.E5.A4.89.E6.9B.B4.E3.81.AB.E5.AF.BE.E3.81.99.E3.82.8B.E5.87.A6.E7.90.86"> テキストへの変更に対する処理 </h3>
+<p>利用者が、テキスト入力欄の値を変更したことを検出するために、2 つのイベントを利用することができます。
+当然ですが、これらのイベントは、テキスト入力欄がフォーカスを得ている場合のみ送信されます。
+</p>
+<ul><li> input イベントは、テキストがフィールド内で編集されるごとに発生します。つまり、このイベントの前後では、フィールドの値に差異があります。値の変更の監視には、キーイベントではなく、このイベントを利用する方が良いと思います。なぜなら、シフトキーなど、いくつかの値を変更しないキー操作や、テキスト入力欄に、上限まで文字が入力された以降に、文字キーが押された場合には、input イベントは発生しないからです。
+</li><li> change イベントは、フィールドへの変更が加えられたときに発生するという点では、input イベントと同じですが、このイベントは、テキスト入力欄がフォーカスを失うとき、つまり一連の変更が完了した場合にのみ、発生する点が異なります。
+</li></ul>
+<p><span id="Text_Selection"></span>
+</p>
+<h3 id=".E3.83.86.E3.82.AD.E3.82.B9.E3.83.88.E9.81.B8.E6.8A.9E" name=".E3.83.86.E3.82.AD.E3.82.B9.E3.83.88.E9.81.B8.E6.8A.9E"> テキスト選択 </h3>
+<p>テキスト入力欄の処理では、入力されたテキスト全部ではなく、利用者が選択した部分のみを取り出したいときがあります。
+あるいは、選択されている領域を変更したい場合もあるかもしれません。
+</p><p>XUL のテキスト入力欄は、選択部分の読み出しや選択領域の変更をサポートしています。
+最も単純なものは、テキスト入力欄が持っている、全てのテキストの選択です。
+これは <code><code><a href="/ja/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code></code> オブジェクトの、<code><span id="m-select"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/select">select</a></code></span></code> メソッドを利用することで可能です。
+</p>
+<pre>tbox.select();
+</pre>
+<p>また、一部のみを選択させたい場合もあると思います。
+そのためには、<code><span id="m-setSelectionRange"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/setSelectionRange">setSelectionRange</a></code></span></code> 関数を利用します。
+この関数は、2 つの引数、選択範囲の先頭の文字の位置と、末尾の直後の文字の位置をとります。
+位置は 0 を基点に数えます。すなわち、最初の文字が 0 、2 番目が 1 といった具合に数えていきます。
+</p>
+<pre>tbox.setSelectionRange(4,8);
+</pre>
+<p>この例では、表示されている 5 番目から 8 番目の文字を選択します。
+もしフィールド内に 6 文字しか入力されていない場合、 5 番目と 6 番目の文字のみが選択されます。このときエラーは発生しません。
+</p><p>２つの引数に同じ値を与えた場合、選択範囲の先頭と末尾は同じ位置を指すことになり、
+その場合は、結果としてテキスト入力欄のカーソル位置だけが変更されます。
+以下の例を使用して、カーソルをテキストの先頭に移動させることができます。
+</p>
+<pre>tbox.setSelectionRange(0,0);
+</pre>
+<p>また、選択されている範囲は、<code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/selectionStart">selectionStart</a></span></code></code> と <code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/selectionEnd">selectionEnd</a></span></code></code> プロパティから取得できます。
+これらのプロパティは、それぞれ選択範囲の先頭位置と末尾位置に設定されます。
+両方とも同じ値に設定されている場合は、テキストが選択されていないことを示しています。
+このとき、値としては現在のカーソル位置が設定されています。
+これらのプロパティを利用して、先頭と末尾の位置が得られれば、テキスト全体から該当する部分を <code>substring</code> で取り出すことが可能です。
+</p><p>なお、テキスト入力欄全体の内容は、<code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/value">value</a></span></code></code> プロパティによって、取得および設定することが可能です。
+</p><p>このとき、テキスト入力欄にある全文字数は、 <code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/textLength">textLength</a></span></code></code> プロパティから取得することが可能です。
+</p><p>次のセクションでは、コマンドの使い方について見ていきます。
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Keyboard_Shortcuts" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Commands">次のページ  »</a></p>
+</div>
+
+<div class="noinclude">
+</div>

@@ -1,0 +1,157 @@
+---
+title: 为 Firefox OS 提交 Bug
+slug: Archive/B2G_OS/Developing_Firefox_OS/Filing_bugs_against_Firefox_OS
+translation_of: Archive/B2G_OS/Developing_Firefox_OS/Filing_bugs_against_Firefox_OS
+---
+<div class="summary">
+<p><span class="seoSummary">本文是对 Firefox OS 项目提交 Bug 的指南， 包括 Gaia 和 B2G。</span></p>
+</div>
+
+<h2 id="Bugzilla">Bugzilla</h2>
+
+<p>与 Mozilla 中的大多数项目一样，我们用 <a href="/zh-CN/docs/Mozilla/Bugzilla">Bugzilla</a> 作为软件缺陷的追踪管理。当你发现程序错误时，你可以向 <a href="https://bugzilla.mozilla.org/">bugzilla</a> 中的 <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox%20OS">Firefox OS 产品</a>提交 bug 报告，其中包含 <a href="/zh-CN/Firefox_OS/Platform/Gaia">Gaia</a>、<a href="/zh-CN/Firefox_OS/Platform/Gonk">Gonk</a> 以及 Firefox OS <a href="/zh-CN/docs/Mozilla/Gecko">Gecko</a> 等组件。你可以从这里报告关于Firefox OS、B2G、Gaia 等组件的 bug。</p>
+
+<div class="note">
+<p><strong>注意</strong>： The Mozilla <a href="https://wiki.mozilla.org/B2G/QA">B2G QA Wiki</a> page also has some useful resources on handling Firefox OS bugs; the most useful pages are <a href="https://wiki.mozilla.org/B2G/QA/Bugzilla">Bugzilla Usage</a> and <a href="https://wiki.mozilla.org/Bugmasters/Projects/FirefoxOS">Incoming bug triage for Firefox OS</a>.</p>
+</div>
+
+<h3 id="提交_Bug">提交 Bug </h3>
+
+<p>你可以依照 <a href="/zh-CN/docs/Mozilla/QA/Bug_writing_guidelines">bug 报告撰写指南</a>中的内容来报告优秀的 bug，你也可以在下面发现更多的细节。</p>
+
+<h3 id="强制和可选字段">强制和可选字段</h3>
+
+<p>在报告新 bug 时，有一些必填域：</p>
+
+<table style="height: 235px; width: 625px;" class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">字段</th>
+   <th scope="col"><strong>描述</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>类别</td>
+   <td>选择这个bug所属的类型，如果你不清楚这个问题所属的类型，你可以将它放到"常规"问题当中。</td>
+  </tr>
+  <tr>
+   <td>概要</td>
+   <td>简要描述这个bug的概要。</td>
+  </tr>
+  <tr>
+   <td>描述</td>
+   <td>
+    <p>清楚地描述情况，一个好的bug报告应该包含有:1.重现的步骤(STR), 2.预期结果(程序本应该出现的结果)和实际结果(因为bug产生的结果), 3.顺便说明出现bug的频率(即:您多次重复这样的步骤后这个bug出现次数)。</p>
+   </td>
+  </tr>
+  <tr>
+   <td>版本信息</td>
+   <td>进入 设置&gt;设备信息&gt;更多信息 并且将下列信息与bug一并提交:操作系统版本，内部版本号，平台版本，构建标识，更新方式。(如果你有一台带安装了adb功能的运行Mac或者Linux的电脑，你可以直接运行<a href="https://github.com/Mozilla-TWQA/B2G-flash-tool/blob/master/check_versions.py">这个脚本</a>，并且黏贴这个脚本的输出结果到bug报告中)。</td>
+  </tr>
+  <tr>
+   <td>截图</td>
+   <td>请抓取一个截图方便我们分析这个bug。(在Flame设备上，可以同时按住电源键和音量下键两秒直至设备显示截屏通知，然后通过USB线传输到电脑上以便提交)。</td>
+  </tr>
+  <tr>
+   <td>录制视频</td>
+   <td>如果这个bug的截图不方便传输或者难以通过截图来捕获，请录制一段关于这个bug的视频，你可以将视频文件上传作为bug报告的附件，也可以上传至YouTube网站并且复制视频链接至报告中。</td>
+  </tr>
+  <tr>
+   <td>ADB 运行日志</td>
+   <td>如果你的电脑安装了ADB工具，请将你的设备连接到电脑并且在ADB中运行以下命令|adb logcat|。请将这个命令的输出信息复制到一个文本文档中并且附到bug报告中。</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>以下是可选域：</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">字段</th>
+   <th scope="col"><strong>描述</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>依赖/块</td>
+   <td>列出多个bug之间的联系。</td>
+  </tr>
+  <tr>
+   <td>关键词</td>
+   <td>为bugzilla列出关键词. 特殊的团队将用它们来追踪。</td>
+  </tr>
+  <tr>
+   <td>白板</td>
+   <td>包含标签，为追踪bug添加标签，你不能未经许可就擦除其他的标签。</td>
+  </tr>
+  <tr>
+   <td>看点别的</td>
+   <td>有时候，两个问题是相互有关联的，你可以指定它们。</td>
+  </tr>
+  <tr>
+   <td>旗子</td>
+   <td>用于追踪的旗子; the most used flag in Firefox OS bugs is blocking-b2g. If a bug is set as blocking-b2g, it means we should pay more attention to it as it threatens to block a release.</td>
+  </tr>
+  <tr>
+   <td>Security</td>
+   <td>If a bug is related to personal data security, loss of earnings, and other such issues, you should check the checkbox and it will only be visiable to involved employees.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>To find more information on bugzilla fields, you can view the <a href="https://bugzilla.mozilla.org/page.cgi?id=fields.html">Bugzilla Fields</a> page on Bugzilla.</p>
+
+<h3 id="常见关键字">常见关键字</h3>
+
+<p>下面的表格提供了你将在 Firefox OS 的 bug 报告中经常见到的关键字。</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">关键字</th>
+   <th scope="col"><strong>描述</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>meta</td>
+   <td>Indicates that the bug is a status tracking bug. Mozilla uses this tag to tracking multiple bug or user story implementation statuses. Once marked like this, developers should not land patches on top of such bugs. Please be reminded that project managers and QA staff will use meta bugs for tracking.</td>
+  </tr>
+  <tr>
+   <td>qablocker</td>
+   <td>Use this keyword for bugs that are blocking testing (manual or automated testing of a feature) and need to be fixed by the next Beta or RC milestone.</td>
+  </tr>
+  <tr>
+   <td>qawanted</td>
+   <td>Use this keyword for bugs that need more info, require reproducing or testcasing, or are duplicates (but you can't find the original bug being duplicated). Required QA work progress is recorded in the whiteboard; you should remove this keyword when the required QA work has been completed.</td>
+  </tr>
+  <tr>
+   <td>regression</td>
+   <td>This keyword means that the problem was fixed, but then it came back (regressed) and the bug in question is a new bug, filed to track the regression. It can also refer to problems outside those identified in pre-check in and smoke tests, which were found in current builds and that were known to be working in previous builds. Tracking these bugs helps us to identify areas that are fragile, prone to breakage and are good candidates for adding to smoke and pre-check in tests.</td>
+  </tr>
+  <tr>
+   <td>regressionwindow-wanted</td>
+   <td>Indicates that the bug is a regression, and would strongly benefit from someone identifying the time period in which it happened, ideally to a specific check in.</td>
+  </tr>
+  <tr>
+   <td>steps-wanted</td>
+   <td>Highlights a bug that would greatly benefit from someone identifying the steps to reproduce it.</td>
+  </tr>
+  <tr>
+   <td>verifyme</td>
+   <td>Means that this bug is ok to verify with the latest B2G build by someone other than the QA Contact indicated. The bug has specific machine configuration details indicated for verifying the fix. You should try to reproduce the failure, and, if you agree that the resolution of <em>Fixed</em> is correct, mark the <em>Status</em> as <em>Verified</em>.<br>
+    <br>
+    You should always indicate the build/OS/platform(s) used to verify the bug in the bug comments, before you change the <em>Status</em> to <em>Verified</em>. If the bug is reported on all three platforms and you only have one platform to verify the fix on, go ahead and do so and note it in the bug, but do not mark the bug as <em>Verified</em>. All platforms must be checked before moving <em>Status</em> to <em>Verified</em>.<br>
+    <br>
+    Finally, if other bugs have been marked as a duplicate of the bug you're verifying, be sure to check and mention those as well. Often developers mark related — but not identical — bugs as duplicates, and these can be overlooked if not checked.</td>
+  </tr>
+ </tbody>
+</table>
+
+<div class="note">
+<p><strong>注意</strong>：有关 Gaia 开发中对 bug 的处理的更多信息，请见<a href="/zh-CN/Firefox_OS/Developing_Gaia/Submitting_a_Gaia_patch">向 Gaia 提交补丁</a>。</p>
+</div>
+
+<p> </p>

@@ -1,0 +1,132 @@
+---
+title: Localiser Firefox OS
+slug: Archive/B2G_OS/Developing_Gaia/Localiser_Firefox_OS
+translation_of: Archive/B2G_OS/Developing_Gaia/Localizing_B2G_OS
+---
+<div class="summary">
+<p><span class="seoSummary">Dans ce guide, nous vous montrerons qu'il est très facile de localiser Firefox OS et plus spécifiquement l'interface Gaia et les applications. Nous commencerons par vous aider à paramétrer votre ordinateur, puis comment traduire les chaines de Gaia et enfin comment effectuer des tests l10n sur votre travail.</span></p>
+</div>
+
+<div class="note">
+ <p><strong>A Noter</strong>: Ceci est un guide pour traducteurs voulant aider à traduire Firefox OS. Les développeurs voulant écrire des application traduisibles doivent débuter avec <a href="/en-US/Apps/Build/Localization/Localizing_Firefox_OS_Apps">Traduire des application Firefox OS</a>(en anglais), et ensuite regarder <a href="/en-US/Firefox_OS/Developing_Gaia/L10n_Best_Practices">Bonnes pratiques L10n</a>(en anglais).</p>
+</div>
+
+<h2 id="Récupérer_les_outils">Récupérer les outils</h2>
+
+<p>Afin de pouvoir récupérer les fichiers sources de Gaia et tester votre localisation sur votre ordinateur, vous devrez vous assurer d'avoir les outils et langages de programmation installés dessus :</p>
+
+<dl>
+ <dt>GNU make</dt>
+ <dd>make est un petit outil très pratique pour créer des compilations à partir de code source. Il sera pratique quand vous serez prêt à tester votre travail de l10n sur votre ordinateur. Télécharger et installer make est facile et peut se faire <a href="http://www.gnu.org/software/make/" title="http://www.gnu.org/software/make/">directement à partir du site de GNU</a>. Si vous utilisez Mac OS X, vous aurez besoin d'installer XCode et les outils de ligne de commande d'XCode à partir de l'<a href="https://itunes.apple.com/us/app/xcode/id497799835?mt=12" title="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=7&amp;cad=rja&amp;ved=0CFQQFjAG&amp;url=https%3A%2F%2Fitunes.apple.com%2Fus%2Fapp%2Fxcode%2Fid497799835%3Fmt%3D12&amp;ei=6ZItUeDqDeejiAK90IDYCA&amp;usg=AFQjCNGrxKmVtXUdvUU3MhqZhP4MHT6Gtg&amp;bvm=bv.42965579,d.cGE">App Store</a>.</dd>
+ <dt>git</dt>
+ <dd>git est un système de gestion de versions décentralisé utilisé pour stocker le code source de Gaia activement développé. Télécharger et installer git est facile et peut se faire <a href="http://git-scm.com/" title="http://git-scm.com/">directement via leur site web</a>.</dd>
+ <dt>Python</dt>
+ <dd>Python est un langage de programmation qui vous aidera aussi à créer des compilations de Firefox OS pour tester la localisation. Télécharger et installer Python est facile et peut se faire <a href="http://www.python.org/getit/" title="http://www.python.org/getit/">directement via leur site web.</a></dd>
+ <dt>Mercurial (hg)</dt>
+ <dd>Mercurial (hg) est un autre système de gestion de version qui contient les versions stables de Gaia utilisées pour la l10n, ainsi que les dépôts de locale. Télécharger et installer Mercurial est facile et peut se faire <a href="http://mercurial.selenic.com/downloads/" title="http://mercurial.selenic.com/downloads/">directement via leur site web.</a></dd>
+ <dt>compare-locales</dt>
+ <dd>compare-locales est un script Python qui aide les traducteurs à évaluer leur travail et à séparer le nouveau contenu à localiser du contenu déjà localisé (C'est un diff). Télécharger et installer compare-locales est facile et peut se faire<a href="https://developer.mozilla.org/en-US/docs/Compare-locales" title="https://developer.mozilla.org/en-US/docs/Compare-locales"> directement à partir de la page wiki compare-locales</a>. Cela est nécessaire seulement si vous localisez Gaia en utilisant seulement la ligne de commande ou un éditeur de texte. Si vous utilisez un outil comme Pootle, Transifex, ou Pontoon, vous n'avez pas besoin de cet outil.</dd>
+</dl>
+
+<h2 id="Mis_en_place_d'un_dépôt_local">Mis en place d'un dépôt local</h2>
+
+<p>Après avoir téléchargé et installé les logiciels de la liste ci-dessus, il est temps d'obtenir les sources et les chaines localisées sur votre ordinateur.</p>
+
+<ol>
+ <li>Dans votre outil de ligne de commande, naviguez vers l'emplacement où vous stockerez les sources de Gaia et les chaines localisées.</li>
+ <li>En utilisant hg, clonez le dépôt en-US dans l'emplacement par défaut en entrant la première commande ci-dessous.
+  <pre>hg clone https://hg.mozilla.org/gaia-l10n/en-US
+</pre>
+ </li>
+ <li>Ensuite clonez le dépot de votre locale en utilisant une commande avec la structure ci-dessous. Par exemple, la deuxième ligne permet de cloner le dépot de Chinois traditionnel dans un dossier approprié.
+  <pre>hg clone https://hg.mozilla.org/gaia-l10n/votre-code-de-locale
+hg clone https://hg.mozilla.org/gaia-l10n/zh-TW/ B2G/gaia/locales/zh-TW</pre>
+ </li>
+ <li>Ensuite tapez la commande suivante :
+  <pre class="brush: json">LOCALE_BASEDIR=locales/ LOCALES_FILE=locales/languages_mine.json make</pre>
+ </li>
+</ol>
+
+<p>Les fichiers de locale devraient être listés dans le fichier <code>languages_mine.json</code>, qui aura une structure ressemblant à ça :</p>
+
+<pre class="brush: json">{
+  "en-US" : "English (US)",
+  "fr" : "Français (fr)"
+}</pre>
+
+<p>Dans ce fichier vous devriez avoir une liste des chaines prête à traduire ! Veuillez noter que si vous commencez une nouvelle localisation de Firefox OS, vous n'avez pas besoin de créer un diff car toutes les chaines sont de nouvelles chaines à traduire.</p>
+
+<div class="note">
+<p><strong>Note </strong>: Reportez-vous à <a href="https://gist.github.com/timdream/7716684">ce gist</a> pour un script de compilation automatique de locale.</p>
+</div>
+
+<p> </p>
+
+<h2 id="Traduire_des_chaines_Gaia">Traduire des chaines Gaia</h2>
+
+<div class="almost_half_cell" id="gt-res-content">
+<div dir="ltr" style="zoom: 1;"><span id="result_box" lang="fr"><span class="hps">Le flux de travail</span> <span class="hps">pour traduire</span> <span class="hps">les chaînes</span> <span class="hps">Gaia</span> <span class="hps">dépend en grande partie</span> <span class="hps">des outils</span> <span class="hps">que vous utilisez pour</span> <span class="hps">traduire</span><span>.</span></span> Cette partie du processus est similaire à la phase habituelle de traduction des autres produits Mozilla. La <a href="https://developer.mozilla.org/en-US/docs/Localization_Quick_Start_Guide/Translation_phase" title="https://developer.mozilla.org/en-US/docs/Localization_Quick_Start_Guide/Translation_phase">page de phase de traduction du guide rapide de localisation</a> contient une liste de tous les outils utilisés pour traduire des chaines dans les produits Mozilla ainsi que des tutoriels sur comment traduire avec ces outils. Cette page vous sera utile si vous faites partie d'une équipe l10n. Elle vous aidera à choisir quel outil utiliser pour traduire les chaines de Gaia et vous proposera des tutoriels sur ces outils.</div>
+
+<div dir="ltr" style="zoom: 1;"> </div>
+</div>
+
+<h2 id="Tester_la_localisation_pour_Firefox_OS">Tester la localisation pour Firefox OS</h2>
+
+<p>Il existe deux méthodes principales pour effectuer des tests L10n sur Firefox OS : les compilations desktop et les compilations mobiles. Actuellement, la méthode desktop est la plus utilisée pour les test L10n.</p>
+
+<h3 id="Tester_la_l10n_sur_desktop">Tester la l10n sur desktop</h3>
+
+<ol>
+ <li>Téléchargez et installez la <a href="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-central/">dernière compilation nocture de boot2gecko pour desktop</a> — téléchargez le package qui correspond à votre système d'exploitation. Recherchez les paquets qui contiennent le mot <em>localizer</em> à l'intérieur. Cela indique que cette compilation possède toutes les locales activées listées dans <a href="https://github.com/mozilla-b2g/gaia/blob/master/locales/languages_all.json" title="https://github.com/mozilla-b2g/gaia/blob/master/locales/languages_all.json"><code>languages-all.json</code></a>.</li>
+ <li>Clonez la dernière version de Gaia en naviguant dans le dossier sur votre ordinateur où vous souhaiter là télécharger et entrez cette commande dans votre utilitaire de ligne de commande : <code>git clone git://github.com/mozilla-b2g/gaia.git</code></li>
+ <li>Si votre équipe localise Firefox OS pour la première fois, vous aurez besoin d'activer la locale. Si non prenez un verre, pendant que tout le monde active sa locale.
+  <ol>
+   <li>Dans votre terminal, naviguez à l'intérieur de votre clone de Gaia et exécutez cette commande pour cloner le dépôt de votre locale  : <code>hg clone ssh://hg.mozilla.org/gaia-l10n/votre-code-de-locale</code></li>
+   <li>Ouvrez le fichier <code>languages.json</code> situé dans le dossier <code>shared/resources</code> dans le dépôt gaia que vous venez juste de cloner.</li>
+   <li>Ajoutez l'information de votre locale correspondant à ce format : "en-US" : "English (US)", et enregistrez votre fichier.</li>
+   <li>Pour finir, exécutez la commande : <code>make multilocale</code>. Cela active votre locale sur votre build desktop.</li>
+  </ol>
+ </li>
+ <li>Create your Gaia profile by running this command: <code>DEBUG=1 make -C gaia profile</code></li>
+ <li>Finally, you can run Firefox OS with your locale profile and begin testing. Do this by entering this command: <code>b2g/b2g -profile gaia/profile</code>. If you're using OS X, run this command: <code>/Applications/B2G.app/Contents/MacOS/b2g -profile gaia/profile</code></li>
+ <li>To update your desktop builds, simply navigate to your Gaia repo clone and enter this command: <code>git pull</code></li>
+</ol>
+
+<h3 id="Mobile_l10n_testing">Mobile l10n testing</h3>
+
+<p><em>This section will grow as more devices that support Firefox OS become available to localizers.</em></p>
+
+<h3 id="What_to_look_for_when_l10n_testing">What to look for when l10n testing</h3>
+
+<p>Localization testing for a mobile operating system has some similarites to localization testing for a desktop application. Here are some guidelines on what to look for when performing localization testing on your work:</p>
+
+<ol>
+ <li>See if your translations fit inside UI text elements.</li>
+ <li>Ensure that the tone, style, and terminology are consistant throughout the entire product.</li>
+ <li>Look for untranslated English strings in the UI. These may be hard-coded into Gaia or they may caused by element ID errors.</li>
+ <li>Make sure that time and dates display according your regions standards.</li>
+</ol>
+
+<h2 id="Finding_localization-specific_bugs">Finding localization-specific bugs</h2>
+
+<p>Here are some links to bugzilla in order to give you examples of bugs that have been encountered while using the phones. This will give you an idea of where to look at for bugs as well as an example in filing these kinds of bugs.</p>
+
+<ul>
+ <li><a class="moz-txt-link-freetext" href="http://bit.ly/100bcsC">http://bit.ly/100bcsC</a> - this is a general list of l10n B2G bugs</li>
+ <li><a class="moz-txt-link-freetext" href="https://bugzilla.mozilla.org/show_bug.cgi?id=846060">https://bugzilla.mozilla.org/show_bug.cgi?id=846060</a></li>
+ <li><a class="moz-txt-link-freetext" href="https://bugzilla.mozilla.org/show_bug.cgi?id=852739">https://bugzilla.mozilla.org/show_bug.cgi?id=852739</a></li>
+</ul>
+
+<p>General rules when filing a Localization bug:</p>
+
+<ul>
+ <li>if the bug is specific to the language, then file under the Mozilla Localization (under Other Products) and cc the localizer. Don't forget to flag your bug with the appropriate tracking flag</li>
+ <li>if it's not specific to the language, file under FirefoxOS Product, and cc the localizer. Don't forget to flag your bug with the appropriate tracking flag</li>
+ <li>If you are in doubt, file under FirefoxOS Product, and cc the localizer. Don't forget to flag your bug with the appropriate tracking flag</li>
+</ul>
+
+<p>For those of you who use <a href="http://moztrap.mozilla.org/" title="http://moztrap.mozilla.org/">Moztrap</a>, looking at the existing test cases under the FirefoxOS "localization" tags and seeing if you can pass the tests on your device is also a good way to test Firefox OS localizations.</p>
+
+<h2 id="What's_next">What's next?</h2>
+
+<p>Now you're ready to start localizing! So open up your favorite l10n tool and go for it! As always, if you have questions that are not covered in this document, please send them to the <a href="http://www.mozilla.org/about/forums/#dev-l10n" title="http://mailto:_dev-l10n@lists.mozilla.org">mozilla.dev.l10n newsgroup</a>.</p>

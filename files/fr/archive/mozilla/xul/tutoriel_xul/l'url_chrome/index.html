@@ -1,0 +1,45 @@
+---
+title: L'URL Chrome
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/L'URL_Chrome
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/The_Chrome_URL
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL/La_structure_XUL" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL/Les_fichiers_manifest">Suivant  »</a></p>
+</div>
+<p>Cette section décrit comment faire référence à des documents XUL et d'autres fichiers chrome.</p>
+<h3 id="L.27URL_Chrome" name="L.27URL_Chrome">L'URL Chrome</h3>
+<p>Les fichiers XUL peuvent être référencés par une URL HTTP habituelle tout comme les fichiers HTML (ou tout autre type d'URL). En revanche, les paquetages qui sont installés sur le système chrome de Mozilla doivent être référencés avec des URLs spéciales appelées « chrome ». Les paquetages livrés avec Mozilla seront déjà installés mais vous pouvez déclarer les votres.</p>
+<p>Les paquetages installés ont l'avantage de ne pas avoir de restrictions de sécurité, ce qui est nécessaire pour de nombreuses applications. Un autre avantage comparé aux autres types d'URLs est qu'ils manipulent automatiquement les thèmes graphiques (<abbr title="Note du Traducteur">NdT</abbr> : skins) et les localisations (<abbr title="Note du Traducteur">NdT</abbr> : locales). Par exemple, une URL chrome vous permet d'adresser un fichier dans le thème, comme une image, sans avoir besoin de connaître le thème utilisé par l'utilisateur. Tant que les noms de fichiers sont identiques dans chaque thème, vous pouvez vous y faire référence via une URL chrome. Mozilla déterminera où le fichier est situé et renverra la bonne donnée. Cela signifie aussi que l'emplacement où le paquetage est installé n'est pas important pour être capable d'y accéder. Les URLs chrome sont indépendantes du lieu où les fichiers sont stockés physiquement. Il est donc simple d'écrire des applications contenant beaucoup de fichiers sans vous soucier des détails concernant leurs chemins d'accès.</p>
+<p>La syntaxe de base d'une URL chrome est la suivante :</p>
+<pre class="eval">chrome://<em>&lt;paquetage&gt;</em>/<em>&lt;partie&gt;</em>/<em>&lt;fichier.xul&gt;</em>
+</pre>
+<p>Le texte <code>&lt;paquetage&gt;</code> est le nom du paquetage, tel que messenger ou editor. Le texte <code>&lt;partie&gt;</code> vaut soit 'content', soit 'skin', soit 'locale', selon la partie que vous voulez. <code>&lt;fichier.xul&gt;</code> est simplement le nom du fichier.</p>
+<p><strong>Exemple :</strong> <a class="external" rel="freelink">chrome://messenger/content/messenger.xul</a></p>
+<p>Ici, l'exemple se réfère à la fenêtre de messagerie. Vous pouvez pointer vers un fichier qui fait partie d'un thème en remplaçant 'content' par 'skin' et en changeant le nom du fichier. De même, vous pouvez pointer vers un fichier qui fait partie de la localisation en utilisant 'locale' au lieu de 'content'.</p>
+<p>Quand vous ouvrez une URL chrome, Mozilla consulte sa liste de paquetages installés et essaie de trouver le fichier JAR qui correspond au nom et à la partie recherchés. Le lien entre des URLs et des fichiers JAR est précisé dans les fichiers manifest situés dans le répertoire chrome. Si vous déplaciez le fichier messenger.jar autre part et que vous modifiez le fichier manifest en conséquence, Thunderbird fonctionnerait encore puisque ce fichier n'est pas dépendant de l'emplacement de son installation. En utilisant des URLs chrome, ce genre de détails est secondaire pour Mozilla. De même, si les utilisateurs changent leur thème graphique, la partie 'skin' de l'URL chrome va pointer vers une autre série de fichiers sans que le XUL et les scripts en soient affectés.</p>
+<p>Voici quelques exemples. Notez qu'aucunes URLs ne précisent un thème, une langue ou bien des répertoires spécifiques.</p>
+<pre class="eval"><a class="external" rel="freelink">chrome://messenger/content/messenger.xul</a>
+<a class="external" rel="freelink">chrome://messenger/content/attach.js</a>
+<a class="external" rel="freelink">chrome://messenger/skin/icons/images/folder-inbox.gif</a>
+<a class="external" rel="freelink">chrome://messenger/locale/messenger.dtd</a>
+</pre>
+<p>Pour des sous-répertoires, vous pouvez simplement les ajouter à la fin des URLs chrome. Les URLs suivantes font référence à la fenêtre des marque-pages, aussi bien pour la suite Mozilla que pour Firefox, puisque les noms des paquetages sont différents :</p>
+<pre class="eval"><a class="external" rel="freelink">chrome://communicator/content/bookma...rksManager.xul</a> (Mozilla)
+<a class="external" rel="freelink">chrome://browser/content/bookmarks/b...rksManager.xul</a> (Firefox)
+</pre>
+<p>Vous pouvez entrer des URLs chrome partout où des URLs normales peuvent être utilisées. Vous pouvez même les entrer directement dans la barre d'adresse d'une fenêtre du navigateur Mozilla. Si vous entrez une des URLs mentionnées ci-dessus dans la barre d'adresse du navigateur, vous devriez voir cette fenêtre apparaître comme une page Web le ferait et, dans la plupart des cas, elle sera fonctionnelle comme si elle était dans une fenêtre séparée. Cependant, quelques boîtes de dialogue pourraient ne pas bien fonctionner, si elles nécessitent des arguments fournis par la fenêtre qui les a ouvertes.</p>
+<p>Vous pourriez voir également des URLs chrome sans noms de fichiers spécifiés, tel que :</p>
+<pre class="eval"><a class="external" rel="freelink">chrome://navigator/content/</a>
+</pre>
+<p>Dans le cas présent, seul le nom du paquetage et la partie sont spécifiés. Ce type de référence sélectionnera automatiquement un fichier approprié depuis le bon répertoire. Pour le contenu, un fichier avec le même nom que le paquetage et une extension xul sont choisis. Dans l'exemple ci-dessus, le fichier browser.xul est choisi. Pour messenger, messenger.xul serait sélectionné. Lorsque vous créez vos propres applications, vous devriez créer un fichier pour votre fenêtre principale avec le même nom que votre paquetage. Ainsi, elle pourra être appelée en utilisant cette syntaxe plus courte. C'est commode car alors, tout ce qu'a besoin de connaître un utilisateur pour pouvoir ouvrir l'application, c'est le nom du paquetage. Bien sûr, pour les extensions qui modifient l'interface du navigateur, l'utilisateur n'aura pas besoin de connaître l'URL car l'extension sera présente elle-même dans l'interface utilisateur.</p>
+<p>Pour un thème, le fichier <em>&lt;paquetage&gt;</em>.css est choisi ; pour une localisation, le fichier <em>&lt;paquetage&gt;</em>.dtd est choisi.</p>
+<p>Souvenez-vous, l'URL chrome n'est pas dépendante à un emplacement sur le disque. Les deux premières pièces sont le nom du paquetage et la partie ('content', 'skin', ou 'locale'). Bien qu'il soit courant de mettre les fichiers de contenu dans un répertoire appelé 'content', c'est une simple convention, et ces fichiers peuvent être placés dans une structure totalement différente.</p>
+<hr>
+<p>Dans la section suivante, nous verrons comment créer des fichiers .manifest et des paquetages.</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL/La_structure_XUL" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL/Les_fichiers_manifest">Suivant  »</a></p>
+</div>

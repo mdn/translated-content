@@ -1,0 +1,57 @@
+---
+title: extIEventItem
+slug: Toolkit_API/extIEventItem
+tags:
+  - FUEL
+  - Interfaces
+  - SMILE
+  - STEEL
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/Toolkit_API/extIEventItem
+---
+<p></p>
+<p></p><div class="blockIndicator standardNote">
+<p>この記事は <a href="https://developer.mozilla.org/ja/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a>  の新機能について述べています</p>
+</div><p></p>
+<p><code>extEventItem</code> インタフェースは、イベントについての情報を保持します。<code>extIEventItem</code> は <code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/exthelper/extIApplication.idl" rel="custom">toolkit/components/exthelper/extIApplication.idl</a></code> で定義されています。</p>
+<p>XPCOM サービスを通して実装された <a class="internal" href="/ja/Toolkit_API/extIApplication" title="ja/Toolkit API/extIApplication"><code>extIApplication</code></a>: <a class="internal" href="/ja/Toolkit_API/FUEL" title="ja/Toolkit_API/FUEL">FUEL</a> (Firefox) または <a class="internal" href="/ja/Toolkit_API/STEEL" title="ja/Toolkit_API/STEEL">STEEL</a> (Thunderbird), <a class="internal" href="/ja/Toolkit_API/SMILE" title="ja/Toolkit_API/SMILE">SMILE</a> (SeaMonkey) のページの説明を参照してください。</p>
+<h2 id="Method_overview" name="Method_overview">メソッドの概要</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="#preventDefault.28.29">preventDefault</a>()</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Attributes" name="Attributes">プロパティ</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">プロパティ</td>
+   <td class="header">型</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code>type</code></td>
+   <td><code>readonly attribute AString</code></td>
+   <td>イベントの名前</td>
+  </tr>
+  <tr>
+   <td><code>data</code></td>
+   <td><code>readonly attribute nsIVariant</code></td>
+   <td>イベントに関連付けられた特殊な詳細情報やデータを保持できる。このプロパティは任意であり、イベント固有である。もしイベントが特殊な詳細情報を持たなければ、このプロパティは null となる。</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Methods" name="Methods">メソッド</h2>
+<h3 id="preventDefault.28.29" name="preventDefault.28.29">preventDefault()</h3>
+<p>もしキャンセル可能であれば、イベントをキャンセルする。</p>
+<pre class="eval">void preventDefault()
+</pre>
+<h6 id="Parameters" name="Parameters">引数</h6>
+<h6 id="Return_value" name="Return_value">戻り値</h6>
+<p> </p>
+<h2 id="See_also" name="See_also">参照</h2>
+<p><a class="internal" href="/ja/Toolkit_API/FUEL" title="ja/Toolkit_API/FUEL">FUEL</a> (Firefox), <a class="internal" href="/ja/Toolkit_API/STEEL" title="ja/Toolkit_API/STEEL">STEEL</a> (Thunderbird), <a class="internal" href="/ja/Toolkit_API/SMILE" title="ja/Toolkit_API/SMILE">SMILE</a> (SeaMonkey)</p>
+<p></p>

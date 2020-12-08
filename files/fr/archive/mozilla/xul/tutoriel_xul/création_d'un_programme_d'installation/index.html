@@ -1,0 +1,115 @@
+---
+title: Création d'un programme d'installation
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Création_d'un_programme_d'installation
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Creating_an_Installer
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Overlays_inter-paquetage" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Les_scripts_d'installation">Suivant  »</a></p>
+</div>
+
+<div class="note">NdT : Attention, cette section décrit le mécanisme XPInstall propre à la suite Mozilla et à des versions anciennes de Mozilla Firefox. Pour les versions récentes de Mozilla Firefox, ce mode d'installation n'est plus le même, mais il n'est pas encore décrit dans ce tutoriel. Voir <a class="external" href="http://xulfr.org/wiki/ExtensionsFirefox">comment faire des extensions pour firefox</a> sur xulfr.org.</div>
+
+<p>Cette section va décrire le paquetage d'une application XUL dans un programme d'installation.</p>
+
+<h3 id="Paquetages_d.27installation_XPI" name="Paquetages_d.27installation_XPI">Paquetages d'installation XPI</h3>
+
+<p>Mozilla propose un mécanisme qui peut être utilisé pour empaqueter des fenêtres XUL, des scripts, des thèmes graphiques et d'autres fichiers dans un seul installateur. Il suffit de placer le fichier d'installation quelque part où les utilisateurs pourront le télécharger. Un simple script peut être utilisé pour assurer le téléchargement et l'installation du paquetage. Ce mécanisme est appelé <a href="/fr/XPInstall" title="fr/XPInstall">XPInstall</a> (Cross Platform Install).</p>
+
+<p>Les installateurs XPI sont empaquetés dans des fichiers JAR. À l'intérieur d'un fichier JAR, vous pouvez ajouter toutes sortes de fichiers que vous voulez voir installés. De plus, les installateurs doivent contenir un script (un fichier nommé install.js) qui décrit le processus d'installation. Ce script a accès à quelques fonctions d'installation qui peuvent être employées pour installer des fichiers et des composants.</p>
+
+<p>Les fichiers d'installation JAR ont typiquement l'extension .xpi (prononcez zippy) pour les distinguer des autres fichiers d'archives. Les installateurs seront habituellement utilisés pour installer des composants Mozilla tels que des thèmes graphiques, des extensions et d'autres paquetages.</p>
+
+<p>Il y a plusieurs étapes pour démarrer et installer les composants. Elles sont décrites pas à pas ci dessous :</p>
+
+<ol>
+ <li>Créer une page Web à partir de laquelle l'utilisateur peut charger l'application à installer. La page doit contenir un déclencheur d'installation qui est un petit script lançant l'installation.</li>
+ <li>Une boîte de dialogue présente à l'utilisateur le paquetage qui doit être installé. Il est possible pour le déclencheur de lancer de multiples installations. Dans ce cas, elles seront présentées dans une liste. L'utilisateur doit choisir de continuer ou d'annuler.</li>
+ <li>Si l'utilisateur choisit de continuer, le fichier d'installation XPI est téléchargé. Une barre de progression est affichée durant le processus.</li>
+ <li>Le fichier install.js est extrait de l'archive et exécuté. Le script va appeler les fonctions d'installation qui indiqueront quels fichiers de l'archive doivent être installés.</li>
+ <li>Une fois le script terminé, le nouveau paquetage a été installé. Si de multiples paquetages doivent être installés, leurs scripts se lanceront l'un après l'autre.</li>
+</ol>
+
+<h3 id="D.C3.A9clencheurs_d.27installation" name="D.C3.A9clencheurs_d.27installation">Déclencheurs d'installation</h3>
+
+<p>Comme indiqué ci-dessus, le processus d'installation est lancé par un déclencheur d'installation. Il requiert l'utilisation de l'objet global spécial <code>InstallTrigger</code>. Il contient un certain nombre de méthodes qui peuvent être utilisées pour démarrer une installation. Vous pouvez utiliser cet objet dans un contenu local ou à distance, ce qui signifie qu'il est adapté pour un téléchargement à partir d'un site Web.</p>
+
+<p>Créons un exemple de déclencheur d'installation. Il nécessite l'utilisation de la fonction <code>InstallTrigger.install()</code>. Cette fonction a deux arguments, le premier est la liste des paquetages à installer, et le second est la référence à une fonction de rappel qui sera appelée lorsque l'installation est terminée. Voici un exemple :</p>
+
+<pre>function doneFn ( name , result ){
+  alert("Le paquetage " + name + " a été installé avec un résultat de " + result);
+}
+
+var xpi = new Object();
+xpi["Calendar"] = "calendar.xpi";
+InstallTrigger.install(xpi,doneFn);
+</pre>
+
+<p>Premièrement, nous définissons la fonction <code>doneFn()</code> qui sera appelée lorsque l'installation est terminée. Bien entendu, vous pouvez nommer cette fonction comme vous le souhaitez. Cette fonction a deux arguments. Le premier argument est le nom du paquetage qui vient juste d'être installé. Celui ci est important si vous installez de multiples composants. Le second argument est un code de résultat. Un code de valeur '0' signifie que l'installation s'est terminée avec succès. Si le code de résultat n'est pas nul, une erreur a eu lieu et la valeur représente un code d'erreur. Ici, la fonction <code>doneFn()</code> affiche simplement une boîte d'alerte à l'utilisateur.</p>
+
+<p>Ensuite, nous créons un tableau xpi qui contient le nom ('Calendar') et l'URL ('calendar.xpi') du programme d'installation. Vous pouvez ajouter une ligne similaire pour chaque paquetage que vous souhaitez installer. Finalement, nous appelons la fonction d'installation.</p>
+
+<p>Lorsque cette portion de script sera exécutée, le fichier calendar.xpi sera installé.</p>
+
+<div class="highlight">
+<h4 id="Notre_exemple_de_recherche_de_fichiers" name="Notre_exemple_de_recherche_de_fichiers">Notre exemple de recherche de fichiers</h4>
+
+<p>Essayons ce script avec notre exemple de recherche de fichiers.</p>
+
+<pre>function doneFn ( name , result ){
+  if (result) alert("L'erreur suivante a eu lieu: " + result);
+}
+
+var xpi = new Object();
+xpi["Find Files"] = "findfile.xpi";
+InstallTrigger.install(xpi,doneFn);
+</pre>
+</div>
+
+<h3 id="L.27archive_XPI" name="L.27archive_XPI">L'archive XPI</h3>
+
+<div class="note"><strong>Note</strong> : Si vous créez une nouvelle <a href="/fr/XULRunner" title="fr/XULRunner">application XULRunner</a>, <a href="/fr/Extensions" title="fr/Extensions">extension</a>, ou <a href="/fr/Thèmes" title="fr/Thèmes">thème</a>, consultez la page <a href="/fr/Bundles" title="fr/Bundles">Bundles</a>.</div>
+
+<p>Le fichier d'installation XPI doit obligatoirement contenir au minimum un fichier appelé install.js qui est un fichier <a href="/fr/JavaScript" title="fr/JavaScript">JavaScript</a> exécuté lors de l'installation. Les autres fichiers sont les fichiers à installer. Ces derniers sont typiquement placés dans des répertoires de l'archive mais ils n'ont pas lieu de l'être. Pour des fichiers chrome, ils devraient être structurés comme le répertoire chrome.</p>
+
+<p>Souvent, les seuls fichiers trouvés dans une archive XPI sont le script d'installation (install.js) et un fichier JAR. Ce fichier JAR contient tous les fichiers utilisés par votre application. Les composants de Mozilla sont installés de cette manière.</p>
+
+<p>Parce que les fichiers XPI ne sont rien d'autres que des fichiers ZIP, vous pouvez les créer en utilisant un utilitaire zip (NdT : les fichiers JAR sont également des fichiers ZIP).</p>
+
+<div class="highlight">
+<h4 id="Notre_exemple_de_recherche_de_fichiers_2" name="Notre_exemple_de_recherche_de_fichiers_2">Notre exemple de recherche de fichiers</h4>
+
+<p>Pour notre exemple de recherche de fichiers, nous créerons une structure dans l'archive comme ce qui suit :</p>
+
+<pre>install.js
+findfile
+  content
+    contents.rdf
+    findfile.xul
+    findfile.js
+  skin
+    contents.rdf
+    findfile.css
+  locale
+    contents.rdf
+    findfile.dtd
+</pre>
+
+<p>Un répertoire a été ajouté pour chaque partie du paquetage, pour le contenu, pour le thème graphique et pour la localisation. Des fichiers 'contents.rdf' ont également été ajoutés car ils sont nécessaires pour l'enregistrement des fichiers chrome.</p>
+</div>
+
+<hr>
+<p>Dans la section suivante, nous aborderons le script d'installation.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Overlays_inter-paquetage" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Les_scripts_d'installation">Suivant  »</a></p>
+</div>
+
+<p><span class="comment">Interwiki</span></p>
+
+<p> </p>

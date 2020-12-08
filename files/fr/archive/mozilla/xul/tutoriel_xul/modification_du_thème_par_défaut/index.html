@@ -1,0 +1,50 @@
+---
+title: Modification du thème par défaut
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Modification_du_thème_par_défaut
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Modifying_the_Default_Skin
+---
+<p> </p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Styler_un_arbre" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Créer_un_thème">Suivant  »</a></p>
+</div>
+<p>Cette section décrit comment modifier le thème graphique d'une fenêtre.</p>
+<h3 id="Les_bases_d.27un_th.C3.A8me" name="Les_bases_d.27un_th.C3.A8me">Les bases d'un thème</h3>
+<p><a href="/fr/Créer_un_thème_pour_Firefox//Premiers_pas" title="fr/Créer_un_thème_pour_Firefox//Premiers_pas">Un thème</a> est un ensemble de feuilles de styles, d'images et de comportements qui est appliqué à un fichier XUL. En appliquant un thème différent, vous pouvez changer l'apparence d'une fenêtre sans changer ses fonctionnalités. Firefox fournit un thème par défaut, et vous pouvez en télécharger d'autres. Le XUL pour les deux est le même. En revanche, les feuilles de styles et les images utilisées sont différentes.</p>
+<p>Pour une simple personnalisation de l'apparence d'une fenêtre Mozilla, vous pouvez facilement changer les feuilles de styles qui lui sont associées. Des modifications plus importants peuvent être faits en créant un thème complètement nouveau. La fenêtre des préférences de Mozilla comporte un panneau pour changer le thème par défaut. (Bien que Mozilla appelle le code sous jacent les appelle 'skins' et que l'inteface utilisateur les appelle des thèmes, il s'agit de la même chose).</p>
+<p>Un thème est décrit en utilisant des <a href="/fr/CSS" title="fr/CSS">CSS</a>, ce qui vous permet de définir <a href="/fr/CSS/Premiers_pas/Couleurs" title="fr/CSS/Premiers_pas/Couleurs">les couleurs</a>, <a href="/fr/CSS/Premiers_pas/Boîtes" title="fr/CSS/Premiers_pas/Boîtes">les bordures</a> et les images utilisées pour dessiner des éléments. Le fichier 'classic.jar' contient les définitions des thèmes. Le répertoire "global" inclus dans ces archives contient les définitions principales des styles concernant la manière d'afficher les différents éléments XUL. En modifiant ces fichiers, vous pouvez modifier l'apparence des applications XUL.</p>
+<h3 id="Personnalisation_avec_userChrome.css" name="Personnalisation_avec_userChrome.css">Personnalisation avec userChrome.css</h3>
+<p>Si vous placez un fichier appelé 'userChrome.css' dans le répertoire "chrome" dans le répertoire de votre profil utilisateur, vous pouvez remplacer des paramètres sans changer les archives elles-mêmes. Ce répertoire devrait être créé quand vous créez un profil et quelques exemples y figurer. Le fichier 'userContent.css' permet de personnaliser les pages Web, tandis que 'userChrome.css' permet de personnaliser les fichiers chrome.</p>
+<p>Par exemple, en ajoutant ce qui suit à la fin de ce fichier, vous pouvez changer tous les éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/menubar" title="menubar">menubar</a></code> pour leur appliquer un fond rouge.</p>
+<pre>menubar {
+  background-color: red;
+}
+</pre>
+<p>Si vous ouvrez une fenêtre Mozilla après avoir effectué ce changement, les barres de menu seront rouges. Comme ce changement a été appliqué à la feuille de styles utilisateur, il affecte toutes les fenêtres. Cela signifie que la barre de menus du navigateur, la barre de menus des marque-pages et même la barre de menus du dialogue de recherche de fichiers seront rouges.</p>
+<h3 id="Paquetages_de_th.C3.A8mes" name="Paquetages_de_th.C3.A8mes">Paquetages de thèmes</h3>
+<p>Pour que le changement n'affecte qu'une fenêtre, modifiez la feuille de styles associée à ce fichier XUL. Par exemple, pour ajouter une bordure rouge autour des commandes de menu dans la fenêtre du carnet d'adresses, ajoutez ce qui suit au fichier 'bookmarksManager.css' dans l'archive 'classic.jar' ou de votre thème préféré.</p>
+<pre>menuitem {
+  border: 1px solid red;
+}
+</pre>
+<p>Si vous regardez dans les archives des thèmes, vous remarquerez que chacune contient un certain nombre de feuilles de styles et d'images. Les feuilles de styles font référence aux images. Vous devriez éviter de faire directement référence aux images dans les fichiers XUL si vous voulez que votre contenu puisse être modifié par un thème, parce qu'un certain thème peut ne pas utiliser d'images et avoir besoin d'un design plus complexe. En faisant référence aux images seulement dans les fichiers CSS, on peut facilement les enlever. Cela évite aussi la dépendance avec les noms de fichier spécifiques des images.</p>
+<p>Vous pouvez attribuer des images à un bouton, à une case à cocher et à d'autres éléments en utilisant la propriété <code>list-style-image</code> comme suit :</p>
+<pre>checkbox {
+  list-style-image: url("chrome://findfile/skin/images/check-off.jpg");
+}
+
+checkbox[checked="true"] {
+  list-style-image: url("chrome://findfile/skin/images/check-on.jpg");
+}
+</pre>
+<p>Ce code modifie l'image associée à une case à cocher. Le premier style applique une certaine image pour une case à cocher décochée et le second style pour une case à cocher cochée. Le modificateur 'checked=true' n'applique le style qu'aux éléments qui ont leur attribut <code id="a-checked"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/checked">checked</a></code> à 'true'.</p>
+<p><small> Consultez <a href="/fr/Créer_un_thème_pour_Firefox" title="fr/Créer_un_thème_pour_Firefox">Créer un thème pour Firefox</a> et <a href="/fr/CSS/Premiers_pas" title="fr/CSS/Premiers_pas">CSS:Premiers pas</a> pour plus de détails. </small></p>
+<hr>
+<p>Dans la prochaine section, nous allons voir comment créer un nouveau thème.</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Styler_un_arbre" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Créer_un_thème">Suivant  »</a></p>
+</div>
+<p><span class="comment">Interwiki</span></p>

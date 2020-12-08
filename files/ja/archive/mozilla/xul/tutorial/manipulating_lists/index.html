@@ -1,0 +1,202 @@
+---
+title: リストを操作する
+slug: Archive/Mozilla/XUL/Tutorial/Manipulating_Lists
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Manipulating_Lists
+---
+<p>
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Modifying_a_XUL_Interface" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Box_Objects">次のページ  »</a></p>
+</div>
+<p>XUL では、リストボックスを操作するために、いくつか専用のメソッドが用意されています。
+</p><p><span id="List_Manipulation"></span>
+</p>
+<h3 id=".E3.83.AA.E3.82.B9.E3.83.88.E3.81.AE.E6.93.8D.E4.BD.9C" name=".E3.83.AA.E3.82.B9.E3.83.88.E3.81.AE.E6.93.8D.E4.BD.9C"> リストの操作 </h3>
+<p>リストボックス (<code><code><a href="/ja/docs/Mozilla/Tech/XUL/listbox" title="listbox">listbox</a></code></code>) 要素には、中の項目を取得したり操作したりするメソッドがいくつか用意されています。
+これらを使わず、標準の <a href="ja/DOM">DOM</a> 関数の方を使用して、<a href="ja/XUL_Tutorial/List_Controls">リストボックス</a>を操作しても問題はないのですが、
+専用関数の方が若干簡単で、かつ (意識しなくても) 正しい操作を行うことができるため、
+可能な限り、リストボックス専用関数の方を利用することを推奨します。
+</p><p>リストの末尾に、新たに項目を追加するには、<code><span id="m-appendItem"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/appendItem">appendItem()</a></code></span></code> 関数を使用します。
+この関数は、文字列ラベルを引数にとることを除いて、<a href="ja/DOM/element.appendChild">DOM の appendChild()</a> 関数と類似していますが、リストを構成する要素のどれに追加すればよいのかについて悩まずに済みます。
+以下に例を示します。
+</p><p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_1.xul">表示</a>
+</p>
+<pre>&lt;script&gt;
+function addItem(){
+  document.getElementById('thelist').appendItem("Thursday", "thu");
+}
+&lt;/script&gt;
+
+&lt;listbox id="thelist"/&gt;
+
+&lt;button label="Add" oncommand="addItem();"/&gt;
+</pre>
+<p><code><span id="m-appendItem"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/appendItem">appendItem()</a></code></span></code> は、2 つの引数をとり、1 つめの <code>label</code> には「Thursday」を、 2 つめの <code>value</code> には「thu」を渡しています。
+この 2 つの引数は、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/listitem" title="listitem">listitem</a></code></code> 要素の、<code><code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> 属性と <code><code id="a-value"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code></code> 属性に対応しています。
+この <code>value</code> はオプションで、項目にスクリプトからアクセスするときのみに使用する専用の値を結びつけたいときに使用します。
+</p><p>また、同様に新たな項目を挿入するための <code><span id="m-insertItemAt"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/insertItemAt">insertItemAt()</a></code></span></code> 関数と、既存の項目を削除する <code><span id="m-removeItemAt"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/removeItemAt">removeItemAt()</a></code></span></code> 関数も存在します。
+これらの構文は以下のようになります。
+</p>
+<pre>list.insertItemAt(3, "Thursday", "thu");
+list.removeItemAt(3);
+</pre>
+<p><code><span id="m-insertItemAt"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/insertItemAt">insertItemAt()</a></code></span></code> 関数には、新規の項目を挿入する位置を示す引数が追加で必要です。
+新規の項目は、インデックスとして指定された位置に挿入されます。
+つまり、この例では、新規項目は、位置「3」に挿入され、元々あった項目は位置「4」にずれることになります。
+最初の項目は、位置「0」であることに留意してください。
+また、<code><span id="m-removeItemAt"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/removeItemAt">removeItemAt()</a></code></span></code> 関数は、インデックスとして指定された項目を取り除きます。
+</p><p>これらの 3 つのメソッドは、リスト以外のいくつかの XUL 要素でも利用可能で、同じ流儀で項目を扱うことができます。
+実は、これらのメソッドは、<a class="external" href="http://www.xulplanet.com/references/xpcomref/ifaces/nsIDOMXULSelectControlElement.html">nsIDOMXULSelectControlElement</a> インターフェイスに含まれているため、
+このインターフェイスを実装している全ての XUL 要素が、これらのメソッドを持っていることになります。
+そこに含まれる要素としては、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code></code>、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code></code>、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code></code> があります。
+例えば、<a href="ja/XUL_Tutorial/Simple_Menu_Bars">メニューリスト</a>に新規項目を追加する場合も、<a href="ja/XUL_Tutorial/List_Controls">リストボックス</a>と同じ構文を使うことが可能です。
+また、これらの関数を利用した場合は、状況に応じて、適切な種類の要素が追加されます。
+</p><p><span id="List_Selection"></span>
+</p>
+<h3 id=".E3.83.AA.E3.82.B9.E3.83.88.E9.A0.85.E7.9B.AE.E3.81.AE.E9.81.B8.E6.8A.9E" name=".E3.83.AA.E3.82.B9.E3.83.88.E9.A0.85.E7.9B.AE.E3.81.AE.E9.81.B8.E6.8A.9E"> リスト項目の選択 </h3>
+<p><code>nsIDOMXULSelectControlElement</code> インターフェイスには、他にも 2 つのプロパティ <code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/selectedIndex">selectedIndex</a></span></code></code> と <code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/selectedItem">selectedItem</a></span></code></code> が用意されています。
+前者は、選択されている項目のインデックスを返し、後者は選択されている要素を返します。
+具体的には、メニューリストに対して <code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/selectedItem">selectedItem</a></span></code></code> を呼び出した場合、選択された <code><code><a href="/ja/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></code> が返ります。
+また、選択されている項目が無い場合は、<code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/selectedIndex">selectedIndex</a></span></code></code> は -1 を返し、 <code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/selectedItem">selectedItem</a></span></code></code> は null を返します。
+</p><p><span id="Getting_the_selected_item"></span>
+</p>
+<h4 id=".E9.81.B8.E6.8A.9E.E3.81.95.E3.82.8C.E3.81.9F.E9.A0.85.E7.9B.AE.E3.82.92.E5.8F.96.E5.BE.97.E3.81.99.E3.82.8B" name=".E9.81.B8.E6.8A.9E.E3.81.95.E3.82.8C.E3.81.9F.E9.A0.85.E7.9B.AE.E3.82.92.E5.8F.96.E5.BE.97.E3.81.99.E3.82.8B"> 選択された項目を取得する </h4>
+<p>この 2 つのプロパティは、主として select イベントの処理から参照されます。
+以下に、例を示します。
+</p><p><span id="%E4%BE%8B_2"><a id="%E4%BE%8B_2"></a><strong>例 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_2.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_2.xul">表示</a>
+</p>
+<pre>&lt;listbox id="thelist" onselect="alert(this.selectedItem.label);"&gt;
+  &lt;listitem label="Short"/&gt;
+  &lt;listitem label="Medium"/&gt;
+  &lt;listitem label="Tall"/&gt;
+&lt;/listbox&gt;
+</pre>
+<p>リスト内の項目が選択されたときに、リストボックスに対して、select イベントが発生します。
+このとき、select ハンドラは、リスト内で選択された項目のラベルを含んだアラートを表示します。 なお、ハンドラの処理では、select イベントが発生したことを契機に呼び出されるため、呼び出されたときには、必ず項目は選択されているものと見なしてもかまいませんが、
+それ以外の処理では、まず <code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/selectedItem">selectedItem</a></span></code></code> が null でないことを確認してから、処理を続けるようにする必要があります。
+</p><p>また、select イベントは、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code></code> 要素内のラジオボタンが選択された場合や、
+<code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code></code> 要素内のタブが選択された場合にも発生します。
+しかしながら、メニューリストでは select イベントは発生しません。
+そのかわり、項目が選択されたときの処理のために command イベントを利用することが可能です。
+</p><p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code></code> 要素を処理する場合は、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code></code> 要素の関数を利用する方が便利な場合がしばしばあります。
+具体的には、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code></code> 要素にも <code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/selectedIndex">selectedIndex</a></span></code></code> プロパティがあり、選択されているタブのインデックスを返しますが、
+選択項目を取得する場合は、通常タブボックスの <code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/selectedTab">selectedTab</a></span></code></code> プロパティの方を利用します。
+あるいは、<code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/selectedPanel">selectedPanel</a></span></code></code> プロパティによって、選択されているパネル、つまりタブに結びつけられている内容を取得することも可能です。
+</p><p><span id="Changing_the_selection"></span>
+</p>
+<h4 id=".E9.81.B8.E6.8A.9E.E7.AF.84.E5.9B.B2.E3.82.92.E5.A4.89.E6.9B.B4.E3.81.99.E3.82.8B" name=".E9.81.B8.E6.8A.9E.E7.AF.84.E5.9B.B2.E3.82.92.E5.A4.89.E6.9B.B4.E3.81.99.E3.82.8B"> 選択範囲を変更する </h4>
+<p>上記の選択に関するプロパティは、すべて選択を変更するために新たな値を代入することが可能です。
+次の例では、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code></code> 要素の <code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/selectedIndex">selectedIndex</a></span></code></code> プロパティを、テキスト入力欄に入力された値で変更します。
+このコードは、UI をフールプルーフにするために必要な、入力値が範囲外でないかをチェックするような処理は行っていません。
+この手のエラーチェックは、実際のアプリケーションを作成するときには、確実に追加しておくべきだと思います。
+</p><p><span id="%E4%BE%8B_3"><a id="%E4%BE%8B_3"></a><strong>例 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_3.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_3.xul">表示</a>
+</p>
+<pre>&lt;script&gt;
+function doSelect(){
+  var val = document.getElementById('number').value;
+  val = Number(val);
+  if (val != null)
+    document.getElementById('level').selectedIndex = val - 1;
+}
+&lt;/script&gt;
+
+&lt;hbox align="center"&gt;
+  &lt;label value="Enter a number from 1 to 3:"/&gt;
+  &lt;textbox id="number"/&gt;
+  &lt;button label="Select" oncommand="doSelect();"/&gt;
+&lt;/hbox&gt;
+
+&lt;radiogroup id="level"&gt;
+  &lt;radio label="Excellent"/&gt;
+  &lt;radio label="Good"/&gt;
+  &lt;radio label="Poor"/&gt;
+&lt;/radiogroup&gt;
+</pre>
+<p>リストボックスは、複数項目の選択のために <a class="external" href="http://www.xulplanet.com/references/xpcomref/ifaces/nsIDOMXULMultiSelectControlElement.html">nsIDOMXULMultiSelectControlElement</a> インターフェイスもサポートします。
+このインターフェイスには、複数項目の選択を取り扱うための専用関数がいくつか用意されています。
+例えば、 <code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/selectedItems">selectedItems</a></span></code></code> プロパティは、選択状態の項目のリストを保持し、 <code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/selectedCount">selectedCount</a></span></code></code> プロパティはその項目数を保持しています。
+これらのプロパティは、リストの内容を繰り返し、各項目に対して何らかの処理を行ためによく利用されます。
+選択項目のリストに対して繰り返し処理を行うときには注意が必要です。
+処理中にリスト内の項目を変更した場合、リストの内容は変更され、選択を取り扱うプロパティは異なる値を返すようになるかもしれません。
+リストを操作する場合、項目を使用する方が、インデックスを使用するよりも便利な理由の 1 つはここにあります。
+</p><p><span id="Deleting_selected_items"></span>
+</p>
+<h4 id=".E9.81.B8.E6.8A.9E.E9.A0.85.E7.9B.AE.E3.82.92.E5.89.8A.E9.99.A4.E3.81.99.E3.82.8B" name=".E9.81.B8.E6.8A.9E.E9.A0.85.E7.9B.AE.E3.82.92.E5.89.8A.E9.99.A4.E3.81.99.E3.82.8B"> 選択項目を削除する </h4>
+<p>選択項目を正しく削除する方法を、以下の例に示します。
+</p><p><span id="%E4%BE%8B_4"><a id="%E4%BE%8B_4"></a><strong>例 4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_4.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_4.xul">表示</a>
+</p>
+<pre>&lt;script&gt;
+function deleteSelection(){
+  var list = document.getElementById('thelist');
+  var count = list.selectedCount;
+  while (count--){
+    var item = list.selectedItems[0];
+    list.removeItemAt(list.getIndexOfItem(item));
+  }
+}
+&lt;/script&gt;
+
+&lt;button label="Delete" oncommand="deleteSelection();"/&gt;
+
+&lt;listbox id="thelist" seltype="multiple"&gt;
+  &lt;listitem label="Cheddar"/&gt;
+  &lt;listitem label="Cheshire"/&gt;
+  &lt;listitem label="Edam"/&gt;
+  &lt;listitem label="Gouda"/&gt;
+  &lt;listitem label="Havartie"/&gt;
+&lt;/listbox&gt;
+</pre>
+<p>while ループ内では...
+</p>
+<ul><li> 最初に選択項目 (selectedItem) のインデックス 0 の値を取得しています。項目が削除されて、配列のサイズが小さくなっても、最初の選択項目は常に取得可能だからです。
+</li><li> 次に、<code><span id="m-removeItemAt"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/removeItemAt">removeItemAt()</a></code></span></code> 関数を使用して、取得した項目を削除しますが、この関数にはインデックスを渡す必要があります。
+</li><li> このため、<code><span id="m-getIndexOfItem"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getIndexOfItem">getIndexOfItem()</a></code></span></code> 関数を利用して、項目からインデックスへの変換を行います。なお、逆にインデックスから項目を求めるには、<code><span id="m-getItemAtIndex"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getItemAtIndex">getItemAtIndex()</a></code></span></code> 関数を用います。
+</li></ul>
+<p><br>
+<a class="external" href="http://www.xulplanet.com/references/xpcomref/ifaces/nsIDOMXULMultiSelectControlElement.html">nsIDOMXULMultiSelectControlElement</a> インターフェイスには、項目の選択状態を変更するためのメソッドも用意されています。
+具体的には、<code><span id="m-addItemToSelection"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/addItemToSelection">addItemToSelection()</a></code></span></code> 関数は、そのとき選択されている項目は残したまま、項目を 1 つ選択されている状態に追加します。
+また、<code><span id="m-removeItemFromSelection"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/removeItemFromSelection">removeItemFromSelection()</a></code></span></code> 関数は、選択されている項目群から 1 項目を除外します。
+</p><p><span id="List_Scrolling"></span>
+</p>
+<h3 id=".E3.83.AA.E3.82.B9.E3.83.88.E3.81.AE.E3.82.B9.E3.82.AF.E3.83.AD.E3.83.BC.E3.83.AB" name=".E3.83.AA.E3.82.B9.E3.83.88.E3.81.AE.E3.82.B9.E3.82.AF.E3.83.AD.E3.83.BC.E3.83.AB"> リストのスクロール </h3>
+<p>リストボックス (<code><code><a href="/ja/docs/Mozilla/Tech/XUL/listbox" title="listbox">listbox</a></code></code>) の行数が表示枠を超えるような場合、利用者がリストのスクロールを行えるようにスクロールバーが表示されます。
+このときスクロール位置は、リストボックスの 2 つのメソッドによって調整することが可能です。
+</p><p><code><span id="m-scrollToIndex"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/scrollToIndex">scrollToIndex()</a></code></span></code> メソッドは、指定された行へスクロールを行います。
+このときスクロールは、対象行が項目リストの末尾近くにあるときを除いて、その行が表示枠の上端に位置するように行われます。
+<code><span id="m-ensureIndexIsVisible"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/ensureIndexIsVisible">ensureIndexIsVisible()</a></code></span></code> メソッドも、同様に指定された行を表示するようにスクロールを行いますが、項目がすでに表示されている場合は何もしません。
+つまり、前者の関数は特定の行へのスクロールに、後者は行が見えるようにするために利用します。
+また、インデックスの代わりに項目を引数にとる <code><span id="m-ensureItemIsVisible"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/ensureItemIsVisible">ensureItemIsVisible()</a></code></span></code> メソッドもあります。
+以下の例で、スクロール位置をいろいろ変えながら、2 つの関数の効果の違いを比べてみてください。
+</p><p><span id="%E4%BE%8B_5"><a id="%E4%BE%8B_5"></a><strong>例 5</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_5.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_5.xul">表示</a>
+</p>
+<pre>&lt;button label="scrollToIndex"
+           oncommand="document.getElementById('thelist').scrollToIndex(4);"/&gt;
+&lt;button label="ensureIndexIsVisible"
+           oncommand="document.getElementById('thelist').ensureIndexIsVisible(4);"/&gt;
+
+&lt;listbox id="thelist" rows="5"&gt;
+  &lt;listitem label="1"/&gt;
+  &lt;listitem label="2"/&gt;
+  &lt;listitem label="3"/&gt;
+  &lt;listitem label="4"/&gt;
+  &lt;listitem label="5"/&gt;
+  &lt;listitem label="6"/&gt;
+  &lt;listitem label="7"/&gt;
+  &lt;listitem label="8"/&gt;
+  &lt;listitem label="9"/&gt;
+  &lt;listitem label="10"/&gt;
+  &lt;listitem label="11"/&gt;
+  &lt;listitem label="12"/&gt;
+&lt;/listbox&gt;
+</pre>
+<p>次のセクションでは、XUL ボックスオブジェクトについて見ていきます。
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Modifying_a_XUL_Interface" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Box_Objects">次のページ  »</a></p>
+</div>
+<p><br>
+</p>
+<div class="noinclude">
+</div>

@@ -1,0 +1,48 @@
+---
+title: Finding Window Handles
+slug: Code_snippets/Finding_Window_Handles
+tags:
+  - Add-ons
+  - Extensions
+  - XPCOM
+translation_of: Archive/Add-ons/Code_snippets/Finding_Window_Handles
+---
+<p>Windows プラットフォーム上での開発では、さまざまな API やフレームワークが、ウィンドウハンドル (HWND 型) を要求します。Mozilla は出来る限りクロスプラットフォームになるように努力していますが、必要なハンドルを取得するのは難しいです。</p>
+<div class="geckoVersionNote">
+<p>{{ gecko_callout_heading("2.0") }}</p>
+<p>Gecko 2.0 {{ geckoRelease("2.0") }} から、最上位のブラウザウィンドウだけが HWND をもつようになりました。（タブの中の）Web コンテンツウィンドウは、それ自身の HWND を持つことはありません。一般に最上位のブラウザウィンドウの HWND は子供を持ちませんが、(Flash のような) ウィンドウモードのプラグインは、最上位のブラウザウィンドウの HWND を親とする HWND を持ちます。</p>
+</div>
+<p>Mozilla のウィンドウハンドルへアクセスするためのいくつかの簡単なコードを紹介します。このコードは外部アプリケーションや拡張で利用されている XPCOM コンポーネントからのためのものです。</p>
+<p>{{ 英語版章題("Finding the content window handle") }}</p>
+<h3 id=".E3.82.B3.E3.83.B3.E3.83.86.E3.83.B3.E3.83.88.E3.81.AE.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.83.8F.E3.83.B3.E3.83.89.E3.83.AB.E3.82.92.E5.8F.96.E5.BE.97.E3.81.99.E3.82.8B">コンテントのウィンドウハンドルを取得する</h3>
+<pre> HWND hContent = 0;
+
+ // メインのブラウザウィンドウを探す必要があります
+ HWND hFF = ::FindWindowEx(0, 0, "MozillaUIWindowClass", 0);
+ if (hFF) {
+    // 次に固定された構造にしたがって降りて行きます
+    HWND hTemp;
+    hTemp = ::FindWindowEx(hFF, 0, "MozillaWindowClass", 0);
+    hTemp = ::FindWindowEx(hTemp, 0, "MozillaWindowClass", 0);
+
+    // このレベルにあるうち一つのウィンドウだけが子を持つと仮定します
+    // そしてその一つの子がわれわれが必要なものです
+    HWND hChild = ::GetWindow(hTemp, GW_CHILD);
+    while (hTemp &amp;&amp; !hChild) {
+      hTemp = ::GetWindow(hTemp, GW_HWNDNEXT);
+      hChild = ::GetWindow(hTemp, GW_CHILD);
+    }
+
+    // 子を持つウィンドウを発見したか？
+    // その子はコンテントウィンドウのはず
+    if (hTemp) {
+      hTemp = ::GetWindow(hTemp, GW_CHILD);
+      hContent = ::FindWindowEx(hTemp, 0, "MozillaContentWindowClass", 0);
+    }
+ }
+
+ // この時点で hContent は NULL もしくは、コンテントウィンドウの HWND です
+
+</pre>
+<p>ウィンドウ構造に関する仮定がどの程度危険かは分かりませんが、SPY++ で得た値とは一致しました。</p>
+<p>{{ languages( { "en": "en/Code_snippets/Finding_Window_Handles", "fr": "fr/Extraits_de_code/Trouver_les_gestionnaires_de_fen\u00eatres" } ) }}</p>

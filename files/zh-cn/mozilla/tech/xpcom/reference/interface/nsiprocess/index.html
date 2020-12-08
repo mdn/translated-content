@@ -1,0 +1,283 @@
+---
+title: nsIProcess
+slug: Mozilla/Tech/XPCOM/Reference/Interface/nsIProcess
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIProcess
+---
+<p></p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/xpcom/threads/nsIProcess.idl" rel="custom">xpcom/threads/nsIProcess.idl</a></code><span style="text-align: right; float: right;"><a href="/zh-CN/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">脚本化</a></span></div>
+<span style="padding: 4px 2px;">
+
+This interface represents an executable process.
+</span>
+
+<div style="background: #eee; padding: 2px;">
+继承于: <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
+<span style="text-align: right; float: right;">最后修改于Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)</span></div>
+</div><p></p>
+<p>Implemented by: <code>@mozilla.org/process/util;1</code>. To create an instance, use:</p>
+<pre class="eval">var process = Components.classes["@mozilla.org/process/util;1"]
+              .createInstance(Components.interfaces.nsIProcess);
+</pre>
+<h2 id="Method_overview" name="Method_overview">Method overview</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="#init()">init</a>(in nsIFile executable);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#initWithPid()">initWithPid</a>(in unsigned long pid);</code> <span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 3.6 / Thunderbird 3.1 / Fennec 1.0)">已废弃 Gecko 1.9.2</span></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#kill()">kill</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#run()">run</a>(in boolean blocking, [array, size_is(count)] in string args, in unsigned long count);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#runAsync()">runAsync</a>([array, size_is(count)] in string args, in unsigned long count, [optional] in nsIObserver observer, [optional] in boolean holdWeak);</code> </td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#runw()">runw</a>(in boolean blocking, [array, size_is(count)] in wstring args, in unsigned long count);</code> </td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#runwAsync()">runwAsync</a>([array, size_is(count)] in wstring args, in unsigned long count, [optional] in nsIObserver observer, [optional] in boolean holdWeak);</code> </td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Attributes" name="Attributes">属性</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">属性名称</td>
+   <td class="header">属性类型</td>
+   <td class="header">属性描述</td>
+  </tr>
+  <tr>
+   <td><code>exitValue</code></td>
+   <td><code><a href="/zh-cn/long" title="zh-cn/long">long</a></code></td>
+   <td>The value returned by the process upon exit. This is only valid after the process has exited. <strong>Read only.</strong></td>
+  </tr>
+  <tr>
+   <td><code>isRunning</code></td>
+   <td><code><a href="/zh-cn/boolean" title="zh-cn/boolean">boolean</a></code></td>
+   <td><code>true</code> if the process is running, otherwise <code>false</code>. Only accurate if the process was run with blocking disabled. <strong>Read only.</strong> </td>
+  </tr>
+  <tr>
+   <td><code>location</code></td>
+   <td><code><code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile" title="">nsIFile</a></code></code></td>
+   <td>
+    <p>The location of the executable file on disk. <strong>Read only.</strong></p>
+    <p></p><div class="blockIndicator geckoMinVer standardNote">
+  <div style="text-align: center; font-weight: bold; padding-bottom: 0.5em;">Gecko 1.9.1 note</div>
+  <div>This attribute is no longer implemented as of Gecko 1.9.1, and is removed entirely in Gecko 1.9.2.</div>
+</div><p></p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>pid</code></td>
+   <td><code><a href="/zh-cn/unsigned_long" title="zh-cn/unsigned long">unsigned long</a></code></td>
+   <td>The process ID of the process. This value is only available after the process has started; in addition, some platforms may not offer this value at all. <strong>Read only.</strong></td>
+  </tr>
+  <tr>
+   <td><code>processName</code></td>
+   <td><code><a href="/zh-cn/string" title="zh-cn/string">string</a></code></td>
+   <td>
+    <p>The name of the process. <strong>Read only.</strong></p>
+    <p></p><div class="blockIndicator geckoMinVer standardNote">
+  <div style="text-align: center; font-weight: bold; padding-bottom: 0.5em;">Gecko 1.9.1 note</div>
+  <div>This attribute is no longer implemented as of Gecko 1.9.1, and is removed entirely in Gecko 1.9.2.</div>
+</div><p></p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>processSignature</code></td>
+   <td><code><a href="/zh-cn/unsigned_long" title="zh-cn/unsigned long">unsigned long</a></code></td>
+   <td>
+    <p>The process signature. <strong>Read only.</strong></p>
+    <p></p><div class="blockIndicator geckoMinVer standardNote">
+  <div style="text-align: center; font-weight: bold; padding-bottom: 0.5em;">Gecko 1.9.1 note</div>
+  <div>This attribute is no longer implemented as of Gecko 1.9.1, and is removed entirely in Gecko 1.9.2.</div>
+</div><p></p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Methods" name="Methods">方法</h2>
+<h3 id="init()" name="init()">init()</h3>
+<p>Initializes the <code>nsIProcess</code> with the specified executable file. Once initialized, you can start the process executing by calling <code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIProcess#run()">run()</a></code>.</p>
+<p></p><div class="blockIndicator note"><strong>Note:</strong> This function does not work with application bundles on Mac OS X, see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=307463" title="nsProcess::init fails for Mac OS X application bundles (foo.app)">bug 307463</a> for details.</div><p></p>
+<pre class="eval">void init(
+  in nsIFile executable
+);
+</pre>
+<h6 id="Parameters" name="Parameters">参数</h6>
+<dl>
+ <dt>
+  <code>executable</code></dt>
+ <dd>
+  The <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile" title="">nsIFile</a></code> executable file to be represented by the <code>nsIProcess</code> object.</dd>
+</dl>
+<p></p><div class="headingWithIndicator">
+        <h3 id="initWithPid()">initWithPid()</h3>
+        <span class="indicatorInHeadline obsolete obsoleteMethod">已废弃 Gecko 1.9.2 (Firefox 3.6 / Thunderbird 3.1 / Fennec 1.0)</span>
+        </div><p></p>
+<p>Initializes the <code>nsIProcess</code> to represent an existing process, given that process's ID.</p>
+<p></p><div class="blockIndicator geckoMinVer standardNote">
+  <div style="text-align: center; font-weight: bold; padding-bottom: 0.5em;">Gecko 1.9.1 note</div>
+  <div>This method is no longer implemented as of Gecko 1.9.1, and is removed entirely in Gecko 1.9.2.</div>
+</div><p></p>
+<pre class="eval">void initWithPid(
+  in unsigned long pid
+);
+</pre>
+<h6 id="Parameters" name="Parameters">参数</h6>
+<dl>
+ <dt>
+  <code>pid</code></dt>
+ <dd>
+  The process ID to begin to represent.</dd>
+</dl>
+<h3 id="kill()" name="kill()">kill()</h3>
+<p>立即终止该<code>nsIProcess对象所代表的进程</code>,只在该进程是非阻塞方式启动的情况下才有效.</p>
+<p></p><div class="blockIndicator geckoMinVer standardNote">
+  <div style="text-align: center; font-weight: bold; padding-bottom: 0.5em;">Gecko 1.9.1 note</div>
+  <div>在Gecko 1.9.1 (Firefox 3.5)之前版本中, 该方法在Windows和Mac OS X下无效.目前此bug已经修复.</div>
+</div><p></p>
+<pre class="eval">void kill();
+</pre>
+<h6 id="Parameters" name="Parameters">参数</h6>
+<p>无.</p>
+<h3 id="run()" name="run()">run()</h3>
+<p>开始执行进程.</p>
+<p></p><div class="blockIndicator geckoMinVer standardNote">
+  <div style="text-align: center; font-weight: bold; padding-bottom: 0.5em;">Gecko 1.9.1 note</div>
+  <div>在Gecko 1.9.1 (Firefox 3.5)之前版本中,该方法会返回一个新执行进程的进程ID,目前已经不会返回任何值.</div>
+</div><p></p>
+<pre class="eval">void run(
+  in boolean blocking,
+  [array, size_is(count)] in string args,
+  in unsigned long count
+);
+</pre>
+<h6 id="Parameters" name="Parameters">参数</h6>
+<dl>
+ <dt>
+  <code>blocking</code></dt>
+ <dd>
+  如果为<code>true</code>,则该方法会阻塞,直到所打开的进程关闭为止,如果为<code>false</code>,则该方法会立即返回.</dd>
+ <dt>
+  <code>args</code></dt>
+ <dd>
+  An array of <code>count</code> arguments, using the native character set, to be passed to the executable on its command line.</dd>
+ <dt>
+  <code>count</code></dt>
+ <dd>
+  参数<code>args中的参数个数</code>.</dd>
+</dl>
+<p></p><h3 id="runAsync()">runAsync()</h3><p></p>
+<p>Asynchronously runs the process with which the object was initialized, optionally calling an observer when the process finishes running.</p>
+<pre class="eval">void runAsync(
+  [array, size_is(count)] in string args,
+  in unsigned long count,
+  in nsIObserver observer, <span class="inlineIndicator optional optionalInline">可选</span>
+  in boolean holdWeak <span class="inlineIndicator optional optionalInline">可选</span>
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+ <dt>
+  <code>args</code></dt>
+ <dd>
+  An array of arguments to pass into the process, using the native character set. This array must have <code>count</code> entries.</dd>
+ <dt>
+  <code>count</code></dt>
+ <dd>
+  The number of arguments passed in the <code>args</code> array.</dd>
+ <dt>
+  <code>observer</code> <span class="inlineIndicator optional optionalInline">可选</span></dt>
+ <dd>
+  An observer that will be notified when the process exits. The observer will receive this <code>nsIProcess</code> instance as the subject and "process-finished" or "process-failed" as the topic. The observer will be notified on the main thread.</dd>
+ <dt>
+  <code>holdWeak</code> <span class="inlineIndicator optional optionalInline">可选</span></dt>
+ <dd>
+  If <code>true</code>, a <a class="internal" href="/zh-cn/Weak_reference" title="zh-cn/Weak reference">weak reference</a> is used to hold the observer.</dd>
+ <dd>
+   </dd>
+</dl>
+<p></p><h3 id="runw()">runw()</h3><p></p>
+<p>Executes the file this object was initialized with.</p>
+<pre class="eval">void runw(
+  in boolean blocking,
+  [array, size_is(count)] in wstring args,
+  in unsigned long count
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+ <dt>
+  <code>blocking</code></dt>
+ <dd>
+  If <code>true</code>, this method will block until the process terminates; if <code>false</code>, the method returns immediately.</dd>
+ <dt>
+  <code>args</code></dt>
+ <dd>
+  An array of <code>count</code> arguments, using UTF-16, to be passed to the executable on its command line.</dd>
+ <dt>
+  <code>count</code></dt>
+ <dd>
+  The number of arguments in the <code>args</code> array.</dd>
+</dl>
+<p></p><h3 id="runwAsync()">runwAsync()</h3><p></p>
+<p>Asynchronously runs the process with which the object was initialized, optionally calling an observer when the process finishes running.</p>
+<pre class="eval">void runwAsync(
+  [array, size_is(count)] in wstring args,
+  in unsigned long count,
+  in nsIObserver observer, <span class="inlineIndicator optional optionalInline">可选</span>
+  in boolean holdWeak <span class="inlineIndicator optional optionalInline">可选</span>
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+ <dt>
+  <code>args</code></dt>
+ <dd>
+  An array of arguments to pass into the process, using UTF-16. This array must have <code>count</code> entries.</dd>
+ <dt>
+  <code>count</code></dt>
+ <dd>
+  The number of arguments passed in the <code>args</code> array.</dd>
+ <dt>
+  <code>observer</code> <span class="inlineIndicator optional optionalInline">可选</span></dt>
+ <dd>
+  An observer that will be notified when the process exits. The observer will receive this <code>nsIProcess</code> instance as the subject and "process-finished" or "process-failed" as the topic. The observer will be notified on the main thread.</dd>
+ <dt>
+  <code>holdWeak</code> <span class="inlineIndicator optional optionalInline">可选</span></dt>
+ <dd>
+  If <code>true</code>, a <a class="internal" href="/zh-cn/Weak_reference" title="zh-cn/Weak reference">weak reference</a> is used to hold the observer.</dd>
+</dl>
+<h2 id="See_also" name="See_also">Example</h2>
+<pre class="brush: js">// create an nsILocalFile for the executable
+var file = Components.classes["@mozilla.org/file/local;1"]
+                     .createInstance(Components.interfaces.nsILocalFile);
+file.initWithPath("c:\\myapp.exe");
+
+// create an nsIProcess
+var process = Components.classes["@mozilla.org/process/util;1"]
+                        .createInstance(Components.interfaces.nsIProcess);
+process.init(file);
+
+// Run the process.
+// If first param is true, calling thread will be blocked until
+// called process terminates.
+// Second and third params are used to pass command-line arguments
+// to the process.
+var args = ["argument1", "argument2"];
+process.run(false, args, args.length);
+</pre>
+<h2 id="See_also" name="See_also">See also</h2>
+<ul>
+ <li><code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile" title="">nsIFile</a></code></li>
+ <li><code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILocalFile" title="">nsILocalFile</a></code></li>
+ <li><code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIProcess2" title="">nsIProcess2</a></code> <span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 3.6 / Thunderbird 3.1 / Fennec 1.0)">已废弃 Gecko 1.9.2</span></li>
+</ul>
+<p></p>

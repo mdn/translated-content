@@ -1,0 +1,83 @@
+---
+title: Garder la main sur la géolocalisation même si l'application n'est plus visible
+slug: >-
+  Archive/B2G_OS/API/Wake_Lock_API/Keeping_the_geolocation_on_when_the_application_is_invisible
+tags:
+  - Firefox OS
+  - Guide
+  - Non-standard
+  - Wake Lock API
+  - Web
+translation_of: >-
+  Archive/B2G_OS/API/Wake_Lock_API/Keeping_the_geolocation_on_when_the_application_is_invisible
+---
+<p></p><section class="Quick_links" id="Quick_Links"><ol><li><strong><a href="/fr/docs/Web/API/Wake_Lock_API">Wake Lock API</a></strong></li><li class="toggle"><details open><summary>Interfaces</summary><ol><li><a href="/fr/docs/Web/API/MozWakeLock"><code>MozWakeLock</code></a></li></ol></details></li><li class="toggle"><details open><summary>Méthodes</summary><ol><li><a href="/fr/docs/Web/API/Navigator/requestWakeLock"><code>Navigator.requestWakeLock()</code></a></li></ol></details></li></ol></section><p></p>
+
+<p></p><div class="overheadIndicator nonStandard nonStandardHeader">
+      <p><strong><span title="Cette API n'a pas été standardisée."><i class="icon-warning-sign"> </i></span> Non standard</strong><br>
+      Cette fonctionnalité n'est pas en voie de standardisation au W3C, mais elle est supportée par la plateforme Firefox OS. Bien que son implémentation puisse changer dans le futur et qu'elle n'est pas largement supportée par les différents navigateurs, elle est utilisable pour du code dédié aux applications Firefox OS.</p>
+      </div><p></p>
+
+<p></p><div class="warning">
+    <p style="text-align: center;">Cette API est disponible sur <a href="/fr/docs/Mozilla/Firefox_OS">Firefox OS</a> pour <a href="/fr/docs/Mozilla/Firefox_OS/Security/Application_security#App_Types">des applications internes</a> seulement.</p>
+</div><p></p>
+
+<p>Une application Firefox OS peut continuer à utiliser le service de géolocalisation alors même qu'elle n'est plus visible. Ceci peut être obtenu via un appel à <a href="/fr/docs/Web/API/MozWakeLock" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>MozWakeLock</code></a> conjointement avec <a href="/fr/docs/Web/API/Geolocation/watchPosition" title="La méthode Geolocation.watchPosition() permet de manipuler une fonction appelée automatiquement à chaque fois que la position de l'appareil change. Vous pouvez de même, en option, manipuler une autre fonction appelée automatiquement pour gérer les erreurs."><code>watchPosition()</code></a> de cette façon, l'application pourra continuer à utiliser le GPS bien que n'étant plus au premier plan.</p>
+
+<div class="note">
+<p>Toute application désirant conserver l'accès au service de géolocalisation alors que l'écran est éteint ou que cette application se retrouve en arrière plan, doit obtenir un verrou spécial avant de ne plus être visible.</p>
+</div>
+
+<p>Pour obtenir un tel verrou, il suffit d'appeler la méthode <a href="/fr/docs/Web/API/Navigator/requestWakeLock" title="Cette méthode est utilisée pour faire une requête de blocage de mise en veille de n'importe quelle ressource de l'appareil. Elle renvoie un objet MozWakeLock utilisable pour garder une trace ou libérer le verrou de blocage."><code>Navigator.requestWakeLock()</code></a> avec l'argument <code>'gps'</code>.</p>
+
+<pre class="brush: js">var lock = window.navigator.requestWakeLock('gps');
+</pre>
+
+<p>Ici, les développeurs d'applications portent une lourde responsabilté. Ils doivent être certains des raisons pour lesquelles ils ont besoin du service de géolocalisation et surtout savoir quand l'arrêter. Le risque, avec ce verrou, vient de ce que les utilisateurs de votre application peuvent très bien oublier de fermer l'appli lorsqu'ils ont fini de l'utiliser - ce qui se soldera par une diminution importante de la charge de la batterie, inutilement. Si vous n'êtes pas certain à 100 % que l'obtention d'un verrou de géolocalisation est gérable dans tous les cas de figure, alors vous devez proposer une option pour activer ou désactiver ce<em> verrou de géolocalisation </em>dans les paramètres de votre appli.</p>
+
+<p>Si vous ne libérez pas du tout votre <em>verrou de géolocalisation</em>, il sera automatiquement libéré lorsque votre appli se terminera. Cependant il y a de nombreux cas où vous pouvez libérer ce verrou vous-même - notamment lorsque l'utilisateur désactive cette option dans vos paramètres applicatifs, ou encore lorsque votre appli ne requiert plus d'utiliser la géolocalisation. Pour libérer le verrou, vous appelez <a href="/fr/docs/Web/API/Lock/unlock" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>unlock()</code></a> qui est la méthode prévue :</p>
+
+<pre class="brush: js">lock.unlock();</pre>
+
+<p>Les verrous de géolocalisation sont disponibles, à la fois dans les applis hébergées et les applis packagées - au sens de la plateforme Firefox.</p>
+
+<h2 id="Example">Example</h2>
+
+<pre class="brush: js">var id, target, options;
+<strong>var wakeLock;
+</strong>
+function success(pos) {
+  var crd = pos.coords;
+
+  if (target.latitude === crd.latitude &amp;&amp; target.longitude === crd.longitude) {
+    console.log('Congratulations, you reached the target');
+    navigator.geolocation.clearWatch(id);
+    <strong>wakeLock.unlock();</strong>
+  }
+}
+
+function error(err) {
+  console.warn('ERROR(' + err.code + '): ' + err.message);
+}
+
+target = {
+  latitude : 0,
+  longitude: 0
+};
+
+options = {
+  enableHighAccuracy: false,
+  timeout: 5000,
+  maximumAge: 0
+};
+
+<strong>wakeLock = window.navigator.requestWakeLock('gps');</strong>
+id = navigator.geolocation.watchPosition(success, error, options);
+</pre>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="/fr/docs/Web/API/Navigator/requestWakeLock" title="Cette méthode est utilisée pour faire une requête de blocage de mise en veille de n'importe quelle ressource de l'appareil. Elle renvoie un objet MozWakeLock utilisable pour garder une trace ou libérer le verrou de blocage."><code>Navigator.requestWakeLock()</code></a>, pour poser un verrou sur une ressource.</li>
+ <li><a href="/fr/docs/Web/API/MozWakeLock" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>MozWakeLock</code></a>, l'interface représentant un verrou et permettant sa gestion, depuis sa création en passant par sa conservation en mémoire, et pour finir en le libérant.</li>
+</ul>

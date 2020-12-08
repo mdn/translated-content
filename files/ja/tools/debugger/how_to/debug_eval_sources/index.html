@@ -1,0 +1,29 @@
+---
+title: eval ソースをデバッグする
+slug: Tools/Debugger/How_to/Debug_eval_sources
+translation_of: Tools/Debugger/How_to/Debug_eval_sources
+---
+<p>{{ToolsSidebar}}</p>
+
+<p><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/eval"><code>eval()</code></a> に渡される文字列や <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a> コンストラクターに渡される文字列といった、動的に評価される JavaScript コードをデバッグできます。</p>
+
+<p>以下の動画では、このようなソースを含むページを読み込んでいます:</p>
+
+<pre class="brush: js">var script = `function foo() {
+               console.log('called foo');
+             }
+             //# sourceURL=my-foo.js`;
+
+eval(script);
+
+var button = document.getElementById("foo");
+button.addEventListener("click", foo, false);
+</pre>
+
+<p>評価された文字列は、<code>//# sourceURL</code> ディレクティブを使用して "my-foo.js" という名称が与えられます。このソースは <a href="/ja/docs/Tools/Debugger/UI_Tour#Source_list_pane">ソースリストペイン</a> に表示されて、他のソースと同様に開いたりデバッグしたりできます。</p>
+
+<p>{{EmbedYouTube("AkvN40-y1NE")}}</p>
+
+<p>ソースの名称は、<a href="/ja/docs/Tools/Web_Console#Error_messages">ウェブコンソール</a> に現れるスタックトレースでも表示されます。</p>
+
+<p>また、無名の eval ソース内にある <code><a href="/ja/docs/Web/JavaScript/Reference/Statements/debugger">debugger;</a></code> 文でもデバッガーが停止します。</p>

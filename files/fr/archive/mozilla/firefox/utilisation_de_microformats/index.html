@@ -1,0 +1,197 @@
+---
+title: Utilisation de microformats
+slug: Archive/Mozilla/Firefox/Utilisation_de_microformats
+tags:
+  - Firefox 3
+  - Microformats
+translation_of: Archive/Mozilla/Firefox/Using_microformats
+---
+<div></div>
+
+<p>Les microformats permettent aux sites Web de fournir des données sémantiques au navigateur afin que celui-ci puisse présenter un résumé des informations présentes sur une page sans avoir à connaître de manière particulière d'analyser son contenu. Firefox 3 implémente un objet global <code>Microformats</code> permettant d'accéder aux microformats. Cet objet et l'API associée facilitent la recherche et la lecture de microformats.</p>
+
+<h2 id="Chargement_de_l.27API_des_microformats" name="Chargement_de_l.27API_des_microformats">Chargement de l'API des microformats</h2>
+
+<p>L'objet <code>Microformats</code> est créé à l'aide du nouveau chargeur de scripts JavaScript ajouté à Firefox 3. Pour utiliser l'API, il faut d'abord charger cet objet :</p>
+
+<pre>Components.utils.import("resource://gre/modules/Microformats.js");
+</pre>
+
+<p>Une fois l'API des microformats chargée, il est possible de gérer des microformats à l'aide des méthodes listées ici. Pour plus d'information sur l'analyse de microformats, consultez <a href="/fr/docs/Analyse_de_microformats_en_JavaScript">Analyse de microformats en JavaScript</a>.</p>
+
+<h2 id="Microformats_pr.C3.A9d.C3.A9finis" name="Microformats_pr.C3.A9d.C3.A9finis">Microformats prédéfinis</h2>
+
+<p>Firefox 3 fournit des définitions implémentant divers microformats répandus :</p>
+
+<dl>
+ <dt><code><a href="/fr/docs/Le_microformat_adr">adr</a></code></dt>
+ <dd>Représente une adresse (comme une adresse de destination ou une adresse postale).</dd>
+ <dt><code><a href="/fr/docs/Le_microformat_geo">geo</a></code></dt>
+ <dd>Représente un emplacement géographique en utilisant sa latitude et sa longitude.</dd>
+ <dt><code><a href="/fr/docs/Le_microformat_hCard">hCard</a></code></dt>
+ <dd>Représente les informations de contact d'une personne.</dd>
+ <dt><code><a href="/fr/docs/Le_microformat_hCalendar">hCalendar</a></code></dt>
+ <dd>Représente une entrée de rendez-vous d'un agenda.</dd>
+ <dt><code><a href="/fr/docs/Le_microformat_tag">tag</a></code></dt>
+ <dd>Utilisé pour ajouter des balises à d'autres microformats.</dd>
+</dl>
+
+<h2 id="M.C3.A9thodes" name="M.C3.A9thodes">Méthodes</h2>
+
+<h3 id="add.28.29" name="add.28.29">add()</h3>
+
+<p>Ajoute un nouveau microformat au module des microformats.</p>
+
+<p></p><div class="note"><strong>Note :</strong> Si un microformat du nom spécifié existe déjà, il sera remplacé par le nouveau.</div><p></p>
+
+<pre>add(nom, définition);
+</pre>
+
+<h5 id="add-Param.C3.A8tres" name="add-Param.C3.A8tres">Paramètres</h5>
+
+<dl>
+ <dt><code>nom</code></dt>
+ <dd>Le nom du microformat à ajouter au module des microformats.</dd>
+ <dt><code>définition</code></dt>
+ <dd>Une structure JavaScript décrivant le microformat. Consultez <a href="/fr/docs/Description_de_microformats_en_JavaScript">Description de microformats en JavaScript</a> pour plus de détails.</dd>
+</dl>
+
+<h3 id="count.28.29" name="count.28.29">count()</h3>
+
+<p>Compte le nombre de microformats dans un document qui correspondent à des critères spécifiés.</p>
+
+<pre>nbMicroformats = Microformats.count(nom, élémentRacine, options);
+</pre>
+
+<h5 id="count-Param.C3.A8tres_2" name="count-Param.C3.A8tres_2">Paramètres</h5>
+
+<dl>
+ <dt><code>nom</code></dt>
+ <dd>Le nom du microformat à compter.</dd>
+ <dt><code>élémentRacine</code></dt>
+ <dd>Obligatoire. L'élément DOM où doit commencer la recherche. Pour rechercher dans le document entier, utiliser <code>content.document</code>.</dd>
+ <dt><code>options</code></dt>
+ <dd>Facultatif. Si ce paramètre est fourni, il s'agit d'un objet JavaScript contenant une série de drapeaux parmi les suivants :
+ <dl>
+  <dt><code>recurseExternalFrames</code></dt>
+  <dd>Si à <code>true</code>, les cadres enfants font partie de la recherche. La valeur par défaut est <code>true</code>.</dd>
+  <dt><code>showHidden</code></dt>
+  <dd>Si à <code>true</code>, les microformats cachés seront ajoutés ; autrement ils sont ignorés. La valeur par défaut est <code>false</code>.</dd>
+  <dt><code>debug</code></dt>
+  <dd>Spécifiez <code>true</code> si le mode debug est utilisé ; sinon indiquez <code>false</code>. La valeur par défaut est <code>false</code>.</dd>
+ </dl>
+ </dd>
+</dl>
+
+<h5 id="count-Valeur_de_retour" name="count-Valeur_de_retour">Valeur de retour</h5>
+
+<p>Une valeur entière indiquant le nombre de microformats correspondant aux critères spécifiés.</p>
+
+<h3 id="debug.28.29" name="debug.28.29">debug()</h3>
+
+<p>Renvoie une chaîne qui décrit un objet de microformat.</p>
+
+<p></p><div class="note"><strong>Note :</strong> Il est possible d'appeler simplement <code>debug()</code> sur un objet de microformat : <code>objetMicroformat.debug()</code> au lieu d'utiliser cette méthode, si cela vous convient mieux.</div><p></p>
+
+<pre>dumpString = debug(objetMicroformat);
+</pre>
+
+<h5 id="debug-Param.C3.A8tres" name="debug-Param.C3.A8tres">Paramètres</h5>
+
+<dl>
+ <dt><code>objetMicroformat</code></dt>
+ <dd>L'objet de microformat à afficher.</dd>
+</dl>
+
+<h5 id="debug-Valeur_de_retour_2" name="debug-Valeur_de_retour_2">Valeur de retour</h5>
+
+<p>Une chaîne décrivant le contenu de l'objet de microformat spécifié.</p>
+
+<h3 id="get.28.29" name="get.28.29">get()</h3>
+
+<p>Renvoie un tableau d'objets de microformat correspondant aux critères spécifiés.</p>
+
+<pre>microformats = Microformats.get(nom, élémentRacine, options, tableauCible);
+</pre>
+
+<h5 id="get-Param.C3.A8tres" name="get-Param.C3.A8tres">Paramètres</h5>
+
+<dl>
+ <dt><code>nom</code></dt>
+ <dd>Le nom du microformat recherché.</dd>
+ <dt><code>élémentRacine</code></dt>
+ <dd>Obligatoire. L'élément DOM d'où sera lancée la recherche. Pour rechercher dans le document entier, indiquer <code>content.document</code>.</dd>
+ <dt><code>options</code></dt>
+ <dd>Facultatif. Si fourni, il s'agit d'un objet JavaScript contenant une série éventuellement vide des drapeaux suivants :
+ <dl>
+  <dt><code>recurseExternalFrames</code></dt>
+  <dd>Si défini à <code>true</code>, les cadres enfants référençant du contenu externe feront partie de la recherche. La valeur par défaut est <code>true</code>.</dd>
+  <dt><code>showHidden</code></dt>
+  <dd>Si défini à <code>true</code>, les microformats masqués seront ajoutés ; dans le cas contraire ils seront ignorés. La valeur par défaut est <code>false</code>.</dd>
+  <dt><code>debug</code></dt>
+  <dd>Indique d'utiliser le mode<em>debug</em> si à <code>true</code>. La valeur par défaut est <code>false</code>.</dd>
+ </dl>
+ </dd>
+ <dt><code>tableauCible</code></dt>
+ <dd>Facultatif. Si fourni, il s'agir d'un tableau d'objets microformat auquel ajouter les résultats de la recherche.</dd>
+</dl>
+
+<h5 id="get-Valeur_de_retour" name="get-Valeur_de_retour">Valeur de retour</h5>
+
+<p>Un nouveau tableau d'objets microformat correspondant aux critères de recherche, ou le tableau spécifié par le paramètre <code>microformats</code> auquel les nouveaux objets microformat trouvés auront été ajoutés.</p>
+
+<h3 id="getNamesFromNode.28.29" name="getNamesFromNode.28.29">getNamesFromNode()</h3>
+
+<p>Renvoie une liste de noms de microformats séparés par des espaces qui correspondent au nœud de microformat spécifié.</p>
+
+<pre>liste = Microformats.getNamesFromNode(nœud);
+</pre>
+
+<h5 id="getNamesFromNode-Param.C3.A8tres" name="getNamesFromNode-Param.C3.A8tres">Paramètres</h5>
+
+<dl>
+ <dt><code>nœud</code></dt>
+ <dd>Le nœud pour lequel une liste de noms de microformats doit être obtenue.</dd>
+</dl>
+
+<h5 id="getNamesFromNode-Valeur_de_retour" name="getNamesFromNode-Valeur_de_retour">Valeur de retour</h5>
+
+<p>Si le <code>nœud</code> spécifié est un microformat, le résultat est une chaîne listant tous les noms de microformats, séparés par des espaces, qui correspondent à ce nœud. Si le nœud n'est pas un microformat, rien ne sera renvoyé.</p>
+
+<h3 id="getParent.28.29" name="getParent.28.29">getParent()</h3>
+
+<p>Renvoie le nœud parent du microformat ou enfant de microformat spécifié.</p>
+
+<pre>nœudParent = Microformats.getParent(nœud);
+</pre>
+
+<h5 id="getParent-Param.C3.A8tres" name="getParent-Param.C3.A8tres">Paramètres</h5>
+
+<dl>
+ <dt><code>nœud</code></dt>
+ <dd>Le nœud dont le parent doit être retrouvé.</dd>
+</dl>
+
+<h5 id="getParent-Valeur_de_retour" name="getParent-Valeur_de_retour">Valeur de retour</h5>
+
+<p>Le parent du nœud spécifié. Ne renvoie rien si le <code>nœud</code> spécifié n'est pas un microformat ou l'enfant d'un microformat.</p>
+
+<h3 id="isMicroformat.28.29" name="isMicroformat.28.29">isMicroformat()</h3>
+
+<p>Détermine si le nœud DOM spécifié est un microformat.</p>
+
+<pre>valeur = Microformats.isMicroformat(nœud);
+</pre>
+
+<h5 id="isMicroformat-Param.C3.A8tres" name="isMicroformat-Param.C3.A8tres">Paramètres</h5>
+
+<dl>
+ <dt><code>nœud</code></dt>
+ <dd>Le nœud DOM dont on veut savoir s'il est un microformat.</dd>
+</dl>
+
+<h5 id="isMicroformat-Valeur_de_retour" name="isMicroformat-Valeur_de_retour">Valeur de retour</h5>
+
+<p><code>true</code> si le nœud est un microformat, <code>false</code> sinon.</p>
+
+<p></p><div class="note"><strong>Note :</strong> Cette méthode ne renvoie<em>pas</em> <code>true</code> si le nœud est l'enfant d'un microformat.</div><p></p>

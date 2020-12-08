@@ -1,0 +1,67 @@
+---
+title: PyXPCOM
+slug: Mozilla/Tech/XPCOM/Language_bindings/PyXPCOM
+translation_of: Mozilla/Tech/XPCOM/Language_bindings/PyXPCOM
+---
+<p> </p>
+<div>
+  <p><strong>PyXPCOM</strong>允许在<a href="http://www.python.org/" title="http://www.python.org/">Python</a>和<a href="/en/XPCOM" title="/en/XPCOM">XPCOM</a>之间进行通信，例如Python应用能够访问XPCOM对象，XPCOM能够访问任何实现了XPCOM接口的Python类。使用PyXPCOM一个开发者可以与XPCOM交互或者从一个Python应用中嵌入<a href="/en/Gecko" title="/en/Gecko">Gecko</a>。PyXPCOM就类似于<a href="/en/JavaXPCOM" title="/en/JavaXPCOM">JavaXPCOM</a>（Java-XPCOM桥）或者是<a href="/en/XPConnect" title="/en/XPConnect">XPConnect</a>（JavaScript-XPCOM桥）。</p>
+  <p>Python类和接口：Mozilla定义了许多外部接口并允许用于嵌入使用和组件开发。PyXPCOM提供了方法以像Python语言接口那样来访问这些接口。PyXPCOM同时也包含了几个用于提供从Python访问那些初始化及关闭XPCOM和Gecko功能的类，以及一些XPCOM的帮助函数。</p>
+</div>
+<table class="topicpage-table">
+  <tbody>
+    <tr>
+      <td>
+        <h4 id="Documentation" name="Documentation"><a href="/Special:Tags?tag=PyXPCOM&amp;language=en" title="Special:Tags?tag=PyXPCOM&amp;language=en">文档</a></h4>
+        <dl>
+          <dt>
+            <a href="/zh-CN/docs/Building_PyXPCOM" title="en/Building_PyXPCOM">构建 PyXPCOM</a></dt>
+          <dd>
+            <small>PyXPCOM</small>构建指导。</dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="/zh-CN/docs/Creating_a_Python_XPCOM_component" title="en/Creating_a_Python_XPCOM_component">创建 Python XPCOM 组件</a></dt>
+          <dd>
+            如何使用Python创建简单的<a href="/en/XPCOM" title="/en/XPCOM">XPCOM</a>组件的例子。</dd>
+        </dl>
+        <dl>
+          <dt>
+            <a class="external" href="http://www-128.ibm.com/developerworks/webservices/library/co-pyxp1/">PyXPCOM 入门</a></dt>
+          <dd>
+            PyXPCOM是XPCOM与Python之间的一种桥接技术。本节带给你的是PyXPCOM入门级的向导。</dd>
+        </dl>
+        <p><span class="comment">NOTE: The links to Part II and III of this series are broken and I cannot find them on the IBM site. Please update this page if/when the links can be found.</span></p>
+        <p><span class="alllinks"><a href="/Special:Tags?tag=PyXPCOM&amp;language=en" title="Special:Tags?tag=PyXPCOM&amp;language=en">View All...</a></span></p>
+        <h4 id="History" name="History">历史</h4>
+        <p>PyXPCOM was initially developed by <a class="external" href="http://www.activestate.com/">ActiveState Tool Corporation</a>, and <a class="external" href="http://aspn.activestate.com/ASPN/Downloads/Komodo/index/PyXPCOM/">came out</a> of their <a class="external" href="http://www.activestate.com/Products/Komodo">Komodo project</a>. Current releases are now <a class="external" href="http://public.activestate.com/pyxpcom/">integrated</a> with the Mozilla build system.</p>
+        <p>Other Resources<br>
+          <a class="external" href="http://pyxpcomext.mozdev.org/" title="http://pyxpcomext.mozdev.org/">PythonExt</a> - extension that provides PyXPCOM<br>
+          <a class="external" href="http://pyxpcomext.mozdev.org/samples.html" title="http://pyxpcomext.mozdev.org/samples.html">Samples</a> - demo applications using PyXPCOM</p>
+      </td>
+      <td>
+        <h4 id="Community" name="Community">交流</h4>
+        <br>
+        <ul>
+          <li><a class="external" href="http://listserv.activestate.com/mailman/listinfo/pyxpcom">Python-XPCOM bindings mailing list (ActiveState)</a></li>
+          <li><a class="link-irc" href="irc://irc.mozilla.org:6667/pyxpcom">#pyxpcom on irc.mozilla.org</a></li>
+        </ul>
+        <h4 id="Source_Code" name="Source_Code">源代码</h4>
+        <ul>
+          <li>The PyXPCOM code is available here: <a class="external" href="http://hg.mozilla.org/pyxpcom/">http://hg.mozilla.org/pyxpcom/</a></li>
+          <li>To build PyXPCOM, see <a href="/en/Building_PyXPCOM" title="en/Building_PyXPCOM">Building PyXPCOM</a>.</li>
+        </ul>
+        <h4 id="Related_Topics" name="Related_Topics">相关主题</h4>
+        <dl>
+          <dd>
+            <a href="/en/XPCOM" title="en/XPCOM">XPCOM</a></dd>
+          <dd>
+            <a href="/en/PyDOM" title="en/PyDOM">PyDOM</a>: replace JavaScript with Python</dd>
+          <dd>
+            <a class="external" href="http://code.google.com/p/python-spidermonkey/">Python-SpiderMonkey</a></dd>
+        </dl>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p> </p>

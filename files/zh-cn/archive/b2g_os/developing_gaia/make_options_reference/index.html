@@ -1,0 +1,186 @@
+---
+title: make 选项参考
+slug: Archive/B2G_OS/Developing_Gaia/make_options_reference
+translation_of: Archive/B2G_OS/Developing_Gaia/make_options_reference
+---
+<div class="summary">
+ <p>在Gaia仓库下的执行make命令会创建一个Gaia配置文件，继而装载到您的设备端或运行在 <a style="text-decoration: underline;" href="/en-US/Firefox_OS/Using_the_B2G_desktop_client">B2G Desktop</a> 中。本文会对make不同的选项详细探究。</p>
+</div>
+<div class="note">
+ <p><b>注意</b>: 在Makefile文件中有许多环境变量，不要太依赖它们，因为在将来可能会去掉。</p>
+</div>
+<p>创建的配置文件一般存放在gaia的根目录下，例如 <code>/gaia/profile </code>文件夹，其中包括下面的条目： </p>
+<ul>
+ <li><code>defaults/</code>: 文件夹中会包含默认的配置信息，也就是重启手机后装载的信息。</li>
+ <li><code>extensions/</code>: 文件夹下包含的是扩展项。</li>
+ <li><code>settings.json</code>: Settings 文件</li>
+ <li><code>user.js</code>: 文件中包含更多的设置/配置信息</li>
+ <li><code>webapps/</code>: 文件夹中包含所有需要安装到手机上的web 应用。</li>
+</ul>
+<div class="note">
+ <p><b>注意：</b> 当您已经生成了一个配置文件而且想要构建一个新的文件，就必须在构建新的配置文件前，将原有的删除。</p>
+</div>
+<h2 id="默认命令">默认命令</h2>
+<pre class="brush: bash">make</pre>
+<p>该命令只是给您一个非调试下的默认编译。 对于一个带有品牌的构建，您需要使用<a href="#Official_Mozilla_branding_make">Official Mozilla branding make</a>命令; 对于调试构建，您需要使用 <a href="#Debug_make">Debug make</a>命令。</p>
+<h2 id="推送到设备端">推送到设备端</h2>
+<pre class="brush: bash">make install-gaia
+
+make reset-gaia
+</pre>
+<p>使用 <a href="/en-US/Firefox_OS/Debugging/Installing_ADB">ADB</a> (Android Debug Bridge) 安装工具，上面的make命令会将Gaia推送到设备端。  <code>install-gaia</code> 会将Gaia更新从您工作的文件夹推送到设备端。 <code>reset-gaia</code> 在将Gaia推送到手机前会清除所有现存的配置，配置文件，web 应用以及数据库信息。</p>
+<h2 id="编译特定的应用">编译特定的应用</h2>
+<pre class="brush: bash">APP=system make
+
+APP=system make install-gaia</pre>
+<p>当一个配置文件已存在时， <code>APP</code> 参数允许您指定特定的app重新打包，而不是对所有的Gaia应用重新打包和重新发布。</p>
+<h2 id="指定自定义的profile文件夹">指定自定义的profile文件夹</h2>
+<p>您可以指定一个自定义的文件夹来构建您的profile文件。例如使用 <code>PROFILE_FOLDER：</code></p>
+<pre class="brush: bash">PROFILE_FOLDER=profile-b2g-desktop make</pre>
+<h2 id="不同设备的编译">不同设备的编译</h2>
+<p>下面几个 make 选项是不同的设备进行编译，其用途也会不同。</p>
+<h3 id="创建Gaia的手机端编译">创建Gaia的手机端编译</h3>
+<pre class="brush: bash">GAIA_DEVICE_TYPE=phone make</pre>
+<p>此次编译是从 <code>/gaia/build/config/phone/apps-engineering.list 文件</code>获取app的。</p>
+<h3 id="创建Gaia的平板端编译">创建Gaia的平板端编译</h3>
+<pre class="brush: bash">GAIA_DEVICE_TYPE=tablet make</pre>
+<p>此次编译是从 <code>/gaia/build/config/tablet/apps-engineering.list </code>文件获取app的。</p>
+<h2 id="不同的编译类型">不同的编译类型</h2>
+<p>有些选项可以创建出不同的编译类型，其目的也有所不同。</p>
+<h3 id="Production_make">Production make</h3>
+<pre class="brush: bash">PRODUCTION=1 make</pre>
+<p>它会创建 Gaia 的生产型编译版本</p>
+<ul>
+ <li>Gaia is run as packaged apps, which are harder to debug, but are the best available state for apps in terms of available API permissions, etc.</li>
+ <li>Test app 不会包含在其中</li>
+ <li>默认情况下，远程调试是关闭的</li>
+ <li>锁屏功能是开启的（反过来会切断 USB 连接）</li>
+ <li>Marionette is turned off</li>
+ <li>初次用户体验时开启的</li>
+ <li>Offline cache is used.</li>
+</ul>
+<div class="note">
+ <p><b>注意</b>: 您也可以使用  <code>make production 替换该命令。</code></p>
+</div>
+<h3 id="Debug_make">Debug make</h3>
+<pre class="brush: bash">DEBUG=1 make</pre>
+<p>The <code>DEBUG</code> variable runs Gaia as hosted apps on a built-in web server on a specific <code>GAIA_PORT</code>, rather than the default of packaged apps which have to be re-packaged after every change; this makes things easier to test. Launching the profile with the latest Firefox Nightly will also give you nice B2G specific panels on the Firefox Developer Tools.</p>
+<p>In addition:</p>
+<ul>
+ <li>Test apps are included in the build.</li>
+ <li>Remote debugging is turned on by default.</li>
+ <li>Lock screen is turned off (USB connections won't be interrupted.)</li>
+ <li><a href="/en-US/docs/Mozilla/QA/Marionette">Marionette</a> is turned on, which is needed when running Gaia <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Gaia_unit_tests" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Gaia_unit_tests">unit tests</a>.</li>
+ <li>First time user experience is turned off.</li>
+ <li>Offline cache is not used, even if it is generated.</li>
+</ul>
+<h3 id="Device_debug_make">Device debug make</h3>
+<pre class="brush: bash">DEVICE_DEBUG=1 make</pre>
+<p>它可以禁用设备的锁屏， 并且启用 ADB 工具，因此在设备调试时是非常有用的。</p>
+<p>在 Firefox OS version &gt; 1.2 以上版本，当想要使用 <a style="text-decoration: underline;" href="/en-US/Firefox_OS/Using_the_App_Manager">App Manager</a> 调试 Firefox OS webapps 时指定这个参数。</p>
+<h3 id="Debug_desktop_make">Debug desktop make</h3>
+<pre class="brush: bash">DEBUG=1 DESKTOP=0 make</pre>
+<p>这个选项可以创建一个 desktop 调试版本， 在 <a href="/en-US/Firefox_OS/Using_the_B2G_desktop_client">B2G desktop</a> 中运行。</p>
+<h3 id="官方_Mozilla_分支_make">官方 Mozilla 分支 make</h3>
+<pre class="brush: bash">MOZILLA_OFFICIAL=1 make</pre>
+<p>Use this to make an official Mozilla-branded build.</p>
+<h3 id="Dogfood_make">Dogfood make</h3>
+<pre class="brush: bash">DOGFOOD=1 make</pre>
+<p>Dogfooding options and utilities are turned on, for example the Feedback app, which allows doog fooders to easily submit feedback on the OS.</p>
+<h3 id="System_apps_make">System apps make</h3>
+<pre class="brush: bash">B2G_SYSTEM_APPS=1 make</pre>
+<p>这个环境变量能将 app 推送到 <code>/system/b2g</code> 而不是 <code>/data/local</code>。当进行 user 编译时应使用这个命令。 当运行  <code>make production 这个命令会自动设置。可用作</code><code>install-gaia</code> 或 <code>reset-gaia</code>。</p>
+<h3 id="发布和市场化定制编译">发布和市场化定制编译</h3>
+<pre class="brush: bash">GAIA_DISTRIBUTION_DIR=./dir</pre>
+<div class="note">
+ <p><b>注意</b>: Read <a href="/en-US/Firefox_OS/Hacking_Firefox_OS/Market_customizations_guide">Market Customizations</a> for more details.</p>
+</div>
+<h2 id="开发者调试选项">开发者/调试选项</h2>
+<p>There are also make options for adding/removing features or changing settings, for debugging purposes.</p>
+<h3 id="使能远程调试">使能远程调试</h3>
+<pre class="brush: bash">REMOTE_DEBUGGER=1</pre>
+<p>This enables remote debugging on the device, the same as using the option in the <a href="/en-US/Firefox_OS/Debugging/Developer_settings#Remote_debugging">developer settings</a>.</p>
+<h3 id="JavaScript_优化_make">JavaScript 优化 make</h3>
+<pre class="brush: bash">GAIA_OPTIMIZE=1 make</pre>
+<p>This triggers an optimization pass on Gaia's JavaScript, concatenating/compressing the files. This is automatically set when running <code>make production</code>. This can be used for <code>install-gaia</code> or <code>reset-gaia</code> too.</p>
+<h3 id="高分辨率图片资源">高分辨率图片资源</h3>
+<pre class="brush: bash">GAIA_DEV_PIXELS_PER_PX=1.5 make</pre>
+<p>When packaging the app, this option replaces images with their <code>*@1.5x.(gif|jpg|png)</code> equivalents if such images exist. You need to use the above option as part of a standard <code>make</code> command, for example:</p>
+<pre class="brush: bash">GAIA_DEV_PIXELS_PER_PX=1.5 make reset-gaia
+
+GAIA_DEV_PIXELS_PER_PX=1.5 make install-gaia</pre>
+<p>Gaia is currently targetting the following screen resolutions:</p>
+<ul>
+ <li>qHD: ~540×960; device pixel ratio = 1.6875</li>
+ <li>WVGA: ~480×800; device pixel ratio = 1.5</li>
+ <li>HBGA (320x240); device pixel ratio = 1</li>
+</ul>
+<p>use <code>GAIA_DEV_PIXELS_PER_PX</code> to make sure the images looks sharp on qHD and WVGA devices. see <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag#A_pixel_is_not_a_pixel" title="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag#A_pixel_is_not_a_pixel">A pixel is not a pixel</a> for more information about device pixels per css pixels.</p>
+<h3 id="低内存_profile_编译">低内存 profile 编译</h3>
+<pre class="brush: bash">GAIA_MEMORY_PROFILE=low make</pre>
+<p>This variable generates a low memory profile version of Gaia, aimed at low memory devices like the Tarako.</p>
+<h3 id="Haida_features">Haida features</h3>
+<pre class="brush: bash">HAIDA=1 make reset-gaia</pre>
+<p>This build enables the Haida feature set, which is currently limited to <a href="https://wiki.mozilla.org/FirefoxOS/systemsfe/epm#Rocketbar_Results">rocketbar</a> and <a href="https://wiki.mozilla.org/FirefoxOS/Haida#Edge_Gestures_Between_Open_Content">edge</a> gestures, but will likely include other features in the near future.</p>
+<h3 id="禁用初次用户体验_(FTU)">禁用初次用户体验 (FTU)</h3>
+<pre class="brush: bash">NOFTU=1
+</pre>
+<p>使用这个环境变量可以禁用 FTU。</p>
+<h3 id="禁用锁屏">禁用锁屏</h3>
+<p>您可以使用 NO_LOCK_SCREEN 选项禁用 Firefox OS 的锁屏功能，例如：</p>
+<pre class="brush: bash">NO_LOCK_SCREEN=1 make</pre>
+<h3 id="参考工作负载_Reference_Workloads">参考工作负载 Reference Workloads</h3>
+<p>参考工作负载（Reference workloads）能够使开发者在一些应用中快速装载大量的数据，尤其是对新烧的机器。 </p>
+<p>在 Gaia 目录下可执行下面命令：</p>
+<pre class="brush: bash">make reference-workload-light</pre>
+<ul>
+ <li>200 contacts</li>
+ <li>200 sms messages</li>
+ <li>50 dialer history entries</li>
+ <li>20 gallery images</li>
+ <li>20 songs</li>
+ <li>5 videos</li>
+</ul>
+<pre class="brush: bash">make reference-workload-medium</pre>
+<ul>
+ <li>500 contacts</li>
+ <li>500 sms messages</li>
+ <li>100 dialer history entries</li>
+ <li>50 gallery images</li>
+ <li>50 songs</li>
+ <li>10 videos</li>
+</ul>
+<pre class="brush: bash">make reference-workload-heavy</pre>
+<ul>
+ <li>1000 contacts</li>
+ <li>1000 sms messages</li>
+ <li>200 dialer history entries</li>
+ <li>100 gallery images</li>
+ <li>100 songs</li>
+ <li>20 videos</li>
+</ul>
+<pre class="brush: bash">make reference-workload-x-heavy</pre>
+<ul>
+ <li>2000 contacts</li>
+ <li>2000 sms messages</li>
+ <li>500 dialer history entries</li>
+ <li>250 gallery images</li>
+ <li>250 songs</li>
+ <li>50 videos</li>
+</ul>
+<p>这些命令可以接受 <code>APP</code> 环境变量或者是 <code>APPS</code> 环境变量（需要使用空格将各 app 名称分开）。例如：</p>
+<pre class="brush: bash">APP=sms make reference-workload-light
+APPS="sms communications/contacts" make reference-workload-heavy
+</pre>
+<p>The apps available are:</p>
+<pre class="brush: bash">APPS="gallery music video communications/contacts sms communications/dialer"</pre>
+<p>为了能够使用参考工作负载 （reference workloads）， 必须安装 mid3v2 工具。 这个工具可以使用下面命令安装： </p>
+<pre class="brush: bash">sudo apt-get install python-mutagen</pre>
+<p>如果您使用的是 Fedora 或 RHEL 操作系统，请使用下面命令：</p>
+<pre class="brush: bash">sudo yum install python-mutagen</pre>
+<h3 id="make_文档">make 文档</h3>
+<p>Gaia 文档可以通过 jsdoc3 进行编译。要产生文档，可以使用下面的命令：</p>
+<pre class="brush: bash">make docs</pre>
+<h3 id="启用_IME_布局和词典">启用 IME 布局和词典</h3>
+<p>要启用键盘 IME 布局和词典, 请使用下面的命令结构:</p>
+<pre class="brush: bash">GAIA_KEYBOARD_LAYOUTS=en,zh-Hant-Zhuyin,el,de,fr,zh-Hans-Pinyin make</pre>

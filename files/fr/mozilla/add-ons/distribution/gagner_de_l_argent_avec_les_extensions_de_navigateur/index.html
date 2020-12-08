@@ -1,0 +1,213 @@
+---
+title: Gagner de l'argent avec les extensions de navigateur
+slug: >-
+  Mozilla/Add-ons/Distribution/gagner_de_l_argent_avec_les_extensions_de_navigateur
+tags:
+  - Guide
+  - Monétisation
+  - WebExtensions
+  - distribution
+translation_of: Mozilla/Add-ons/Distribution/Make_money_from_browser_extensions
+---
+<p>{{AddonSidebar}}</p>
+
+<p>Alors que les utilisateurs peuvent télécharger des extensions de navigateur pour Firefox gratuitement depuis addons.mozilla.org (AMO), cela ne signifie pas que vous ne pouvez pas faire de l'argent avec des extensions de navigateur, et dans une mesure plus limitée thèmes.</p>
+
+<p>Cet article passe en revue vos options pour générer des revenus à partir des extensions de navigateur en ajoutant des fonctions payantes, en faisant de la publicité ou en demandant des dons. L'article conclut ensuite en suggérant certaines choses que vous pouvez faire pour maximiser la production de revenus. Mais, tout d'abord, l'article se penche sur l'AMO et les limites des mécanismes de revenu dans les extensions de navigateur..</p>
+
+<h2 id="Est-ce_que_je_pourrai_un_jour_vendre_par_l'entremise_d'AMO">Est-ce que je pourrai un jour vendre par l'entremise d'AMO ?</h2>
+
+<p>Mozilla a l'intention de maintenir AMO en tant que source gratuite à télécharger d'extensions de navigateur et de thèmes. Mozilla n'a pas non plus l'intention de fournir des mécanismes pour les achats d'applications dans les extensions.</p>
+
+<h2 id="Qu'est-ce_que_tu_ne_peux_pas_faire">Qu'est-ce que tu ne peux pas faire ?</h2>
+
+<p>Mozilla place peu de restrictions sur la façon dont vous pouvez monétiser votre extension de navigateur. Les restrictions en place visent généralement à assurer un bon comportement lors de l'interaction avec vos utilisateurs tout en générant des revenus. Donc, avant d'envisager de faire de l'argent, sachez que vous devez le faire :</p>
+
+<ul>
+ <li>Divulguez quand le paiement est requis pour activer n'importe quelle fonctionnalité dans votre poste.</li>
+ <li>Fournissez une description facile à lire de toute information recueillie par votre extension.</li>
+ <li>S'assurer que tous les mécanismes de monétisation sont conformes aux politiques de divulgation, de collecte et de gestion des données.</li>
+ <li>Fournir un mécanisme clair de contrôle de l'utilisateur (et opt-in pour les données personnelles) pour toutes les fonctions de monétisation lors de l'installation ou de la mise à jour de l'extension.</li>
+ <li>Collecte uniquement les données essentielles nécessaires au fonctionnement du mécanisme de monétisation.</li>
+ <li>Identifiez toute publicité injectée dans une page Web comme provenant de l'extension.</li>
+ <li>Ne pas inclure les mineurs de cryptocurrency ou des fonctionnalités similaires.</li>
+ <li>Identifier les promotions d'affiliation comme faisant partie de l'extension. Toutefois, il est interdit de modifier le contenu du site Web ou de faciliter les redirections afin d'inclure des balises promotionnelles d'affiliation.</li>
+</ul>
+
+<p>Pour plus de détails, consultez les sections <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/AMO/Policy/Reviews#Content">contenu</a> et <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/AMO/Policy/Reviews#Monetization">monétisation</a> des politiques complémentaires.</p>
+
+<h2 id="Que_pouvez-vous_faire">Que pouvez-vous faire ?</h2>
+
+<p>Il y a trois approches que vous pouvez adopter pour monétiser l'extension de votre navigateur :</p>
+
+<ul>
+ <li>Facturation des fonctions</li>
+ <li>Affichage d'annonces</li>
+ <li>Demander des dons</li>
+</ul>
+
+<h3 id="Facturation_des_fonctions">Facturation des fonctions</h3>
+
+<p>Il existe de nombreuses approches que vous pouvez prendre pour facturer les fonctionnalités de votre extension de navigateur, vous pouvez par exemple :</p>
+
+<ul>
+ <li>Placez toutes vos fonctions derrière un mur payant.</li>
+ <li>Offrez des fonctions de base gratuitement et placez des fonctions améliorées derrière un mur payant.</li>
+ <li>Offrir un certain nombre d'utilisations gratuites d'une fonction ou l'utilisation gratuite de cette fonction pendant un certain temps avant de la placer derrière un mur payant.</li>
+</ul>
+
+<p>À moins que vous ne fournissiez une fonctionnalité ayant une valeur intrinsèque très élevée, l'approche la plus efficace consistera probablement à fournir aux utilisateurs certaines fonctionnalités gratuites moyennant des frais supplémentaires. Si vous êtes réticent à offrir des fonctionnalités gratuites, considérez que les développeurs qui ont essayé de commercialiser des extensions sans fonctionnalités gratuites rapportent qu'il est difficile d'attirer un public vers un produit entièrement commercial. Un avantage supplémentaire de fournir une partie ou la totalité de vos fonctionnalités sous une forme ou une autre gratuitement est que les utilisateurs peuvent confirmer que votre extension répond à leurs attentes. Si vous demandez aux utilisateurs de payer d'avance, certains demanderont un remboursement parce que l'extension n'avait pas les fonctionnalités qu'ils attendaient.</p>
+
+<h4 id="Choisir_un_fournisseur_de_paiement">Choisir un fournisseur de paiement</h4>
+
+<p>La clé pour implémenter des fonctions payantes dans votre navigateur est de choisir un fournisseur de traitement des paiements. Il existe de nombreux fournisseurs auxquels vous pouvez faire appel, mais celui qui répond le mieux à vos besoins et celui de vos utilisateurs n'est pas nécessairement le plus connu. Lorsque vous choisissez votre fournisseur de paiement, voici quelques points à prendre en considération :</p>
+
+<ul>
+ <li>Offrent-ils à la fois des paiements uniques et des abonnements ?</li>
+ <li>Offrent-ils des mécanismes pour générer des clés de licence ou émettre des clés de licence à partir d'une liste ?</li>
+ <li>Est-ce qu'ils traitent dans les devises les plus populaires parmi mes utilisateurs ?</li>
+ <li>Quels sont les types de paiement pris en charge ? (N'oubliez pas que les cartes de crédit ne sont pas nécessairement courantes dans tous les marchés du monde.)</li>
+ <li>Est-ce qu'ils s'occupent de toutes les questions relatives à la taxe d'achat pour moi ?</li>
+</ul>
+
+<h4 id="Choix_de_la_fréquence_de_paiement">Choix de la fréquence de paiement</h4>
+
+<p>De nombreux fournisseurs de paiement vous permettront de proposer des achats ponctuels ou par abonnement. Les achats uniques offrent l'approche la plus simple, car vous n'avez pas à vous soucier de surveiller les paiements d'abonnement et d'annuler la licence si elle expire. D'autre part, avec l'abonnement, vous pouvez offrir des fonctions à un prix de transaction plus bas, réduisant ainsi l'obstacle au paiement. Les abonnements peuvent également créer une source de revenus fiable et récurrente.</p>
+
+<h4 id="Mise_en_œuvre_d'un_mécanisme_de_paiement_et_d'octroi_de_licences">Mise en œuvre d'un mécanisme de paiement et d'octroi de licences</h4>
+
+<p>Si vous rendez l'extension de votre navigateur disponible sur Chrome, vous pouvez profiter de l'API de paiement Google in-app pour gérer les transactions.</p>
+
+<p>Pour Firefox, et la plupart des autres navigateurs majeurs, vous aurez besoin d'installer un système de paiement. Une approche simple et raisonnablement robuste consiste à faire ce qui suit :</p>
+
+<ul>
+ <li>Vendre aux utilisateurs une licence à vie avec une clé de licence privée.</li>
+ <li>Sur un serveur approprié, stockez les détails de la clé de licence et une adresse e-mail associée.</li>
+ <li>Dans le navigateur, stockez la clé de licence avec un code de hachage de la clé et certaines données privées de l'utilisateur, telles qu'un code PIN.</li>
+ <li>Lorsque la fonction payante est utilisée, vérifiez si le code de hachage est valide. Si le code de hachage n'est pas valide, demandez au serveur d'envoyer un e-mail à l'adresse enregistrée avec la clé de licence afin de revalider (c'est-à-dire recalculer et enregistrer) le code de hachage. Cela empêche que la clé de licence soit largement partagée.</li>
+</ul>
+
+<p>En plus d'avoir un moyen pour l'utilisateur d'entrer la clé de licence manuellement, il est important de gérer les interactions avec la page d'achat afin que la licence soit installée automatiquement. Cela permet d'économiser beaucoup de travail d'assistance en expliquant comment installer la licence.</p>
+
+<p>Conseil du développeur : Ne passez pas trop de temps à protéger votre système de licence contre les pirates informatiques, car les utilisateurs qui sont enclins à utiliser une licence piratée sont peu susceptibles d'en payer le prix. Votre temps est mieux employé à développer de nouvelles fonctions d'extension qui attirent plus d'utilisateurs payants.</p>
+
+<h4 id="Conversion_de_la_gratuité_en_paiement">Conversion de la gratuité en paiement</h4>
+
+<p>Si vous avez initialement lancé votre extension de navigateur en tant que produit gratuit, votre meilleure approche pour générer des revenus est d'ajouter de nouvelles fonctionnalités commerciales. La conversion d'un produit gratuit en un produit payant n'est pas susceptible de plaire à vos utilisateurs. Même l'ajout de caractéristiques commerciales doit être fait avec soin. Vous devriez vous préparer à une réaction négative, du genre "il était gratuit", même si vous ne modifiez pas ou ne limitez pas l'accès aux fonctions gratuites.</p>
+
+<h3 id="Affichage_d'annonces">Affichage d'annonces</h3>
+
+<p>Si vous pensez que la base d'utilisateurs de votre navigateur est peu susceptible d'être réceptive aux fonctions payantes, les publicités peuvent être une option viable pour générer des revenus. Cependant, sachez que les publicités ne sont susceptibles de générer des revenus importants que si votre extension dispose d'une large base d'utilisateurs.</p>
+
+<p>Il y a trois façons d'afficher techniquement des publicités, mais toutes ne sont pas acceptables pour les canaux publicitaires et les utilisateurs. Les options sont :</p>
+
+<ul>
+ <li>Injection d'annonces dans des pages Web. Dans ce cas d'utilisation, vous modifiez une page Web consultée pour injecter des annonces ou modifier des cibles publicitaires existantes. Il peut s'agir à la fois de pages générées par l'extension de votre navigateur et de pages provenant de sites Web tiers dont l'extension de navigateur est installée. La pratique consistant à modifier les pages Web de tiers est autorisée par la plupart des magasins d'extension de navigateur, y compris AMO et le Chrome Web Store. Cependant, la résistance de l'utilisateur aux extensions de navigateur qui modifient les pages de tiers peut être élevée et peut entraîner des critiques négatives et des désinstallations.</li>
+ <li>La plupart des programmes publicitaires n'autorisent pas cette méthode (ils vérifient le référent au niveau de la cible du lien) en raison du risque de fraude, à travers l'extension générant des clics publicitaires. Lorsqu'un fournisseur de publicité autorise ce mécanisme, il est probable qu'il vous demandera d'examiner votre extension. Si vous pouvez trouver un fournisseur, l'avantage de ce mécanisme, en particulier lorsque vous indiquez clairement que vous financez le développement de votre extension de navigateur, est qu'il est relativement bien toléré par les utilisateurs.</li>
+ <li>Afficher des annonces dans les pages Web à partir du site d'extension. Dans ce cas, vous incluriez de la publicité dans le site Web de votre extension et afficheriez ensuite ces pages déclenchées par des événements appropriés dans l'extension du navigateur. Des exemples de déclencheurs appropriés incluent l'installation, la mise à jour ou la désinstallation de l'extension du navigateur, ainsi que l'aide, les meilleures pratiques, des trucs et astuces ou des pages similaires ouvertes depuis l'extension du navigateur. Vous devriez pouvoir utiliser n'importe quel programme publicitaire avec cette méthode.</li>
+</ul>
+
+<h4 id="Choisir_un_programme_publicitaire">Choisir un programme publicitaire</h4>
+
+<p>Il existe de nombreux fournisseurs d'ajouts allant des grands fournisseurs mondiaux bien connus, comme Google AdSense, jusqu'aux petits services régionaux. Trouver le bon fournisseur dépendra beaucoup de l'extension de votre navigateur, mais voici quelques points à considérer :</p>
+
+<ul>
+ <li>Le service dispose-t-il d'un bon inventaire publicitaire pour les pays où vivent mes utilisateurs ?</li>
+ <li>Le service jouit-il d'une bonne réputation en matière de paiement rapide et régulier ?</li>
+ <li>Est-ce que le service me permet d'inclure des annonces dans l'interface d'extension de mon navigateur ?</li>
+ <li>Quelles options le service offre-t-il pour générer des revenus, par exemple des impressions publicitaires, des clics ou autres ?</li>
+ <li>Le service me permet-il de filtrer les annonces pour qu'elles soient pertinentes pour mes utilisateurs ?</li>
+ <li>Quelles sont les tailles et les modes d'affichage des publicités proposées par le service ?</li>
+</ul>
+
+<p>Vous pouvez toujours chercher à vendre de l'espace publicitaire vous-même. Toutefois, cela ne sera probablement viable que si vous disposez de ressources importantes que vous pouvez mobiliser pour vendre de l'espace publicitaire et que vous avez le trafic nécessaire pour soutenir cette approche. Cependant, vous pourriez être en mesure d'identifier un fournisseur d'un produit ou d'un service complémentaire qui serait intéressé par votre base d'utilisateurs et être en mesure de faire une vente en gros de votre espace publicitaire.</p>
+
+<h4 id="Meilleures_pratiques_pour_l'affichage_des_annonces">Meilleures pratiques pour l'affichage des annonces</h4>
+
+<p>Les publicités représentent un défi intéressant, la nécessité de trouver un compromis entre elles étant suffisamment visible pour générer des revenus, mais pas assez visible pour décourager les utilisateurs. Il n'y a pas de règles strictes et rapides pour une bonne conception de l'incorporation de publicités, mais ce sont certaines des choses que vous devriez considérer.</p>
+
+<ul>
+ <li>Précisez clairement que l'extension de votre navigateur est financée par la publicité, par exemple dans sa description AMO. Les utilisateurs sont plus enclins à tolérer les publicités s'ils savent qu'ils s'y attendent.</li>
+ <li>Utilisez les annonces interstitielles (publicités qui s'emparent d'une page entière et interrompent le flux de l'extension) avec précaution. Recherchez les événements où le flux est naturellement interrompu, comme les transitions entre les niveaux dans les jeux ou au début du téléchargement d'un fichier. Pensez également à rejeter automatiquement ces annonces.</li>
+ <li>Là où votre réseau publicitaire le permet, ciblez l'audience de votre extension.</li>
+ <li>Ne rendez pas les publicités trop intrusives.</li>
+</ul>
+
+<h3 id="Demander_des_dons">Demander des dons</h3>
+
+<p>Si la mise en place d'un accès payant aux fonctionnalités de l'extension de votre navigateur ou la navigation dans les méandres de la mise en œuvre d'annonces publicitaires semble inappropriée pour votre extension, demander des dons peut être la voie à suivre.</p>
+
+<p>Cependant, sachez que la plupart des développeurs rapportent que les dons ne génèrent des revenus importants que lorsque l'extension du navigateur a une large base d'utilisateurs.</p>
+
+<p>Les dons peuvent également être une bonne option par rapport au passage à un modèle payant où vous pourriez rencontrer des résistances de la part des utilisateurs, où l'extension de votre navigateur est déjà disponible gratuitement et avec toutes ses fonctionnalités.</p>
+
+<p>Il existe un certain nombre de plates-formes que vous pouvez utiliser pour fournir des services de paiement pour les dons, y compris :</p>
+
+<ul>
+ <li><a href="http://liberapay.com">liberapay.com</a>—une plateforme open source, financée par des dons, conçue pour gérer les contributions récurrentes aux créateurs de Commons.</li>
+ <li><a href="http://micropayment.de">micropayment.de</a>—un fournisseur de paiement commercial offrant des fonctionnalités pour les dons uniques et récurrents.</li>
+ <li><a href="http://opencollective.com">opencollective.com</a>—une plateforme open source, financée par les sponsors, conçue pour gérer le remboursement des dépenses au sein des collectifs.</li>
+ <li><a href="http://patreon.com">patreon.com</a>—une plateforme commerciale axée sur la génération de revenus pour les créateurs à partir d'abonnements réguliers.</li>
+ <li><a href="http://paypal.com">paypal.com</a>—une plateforme commerciale supportant les dons uniques et récurrents.</li>
+ <li><a href="http://paypal.me">paypal.me</a>—un add-on à PayPal qui fournit un lien simple vers une page de paiement où les utilisateurs peuvent faire des dons uniques.</li>
+</ul>
+
+<p>Lorsque vous choisissez un fournisseur de plateforme de dons, tenez compte de ce qui suit  :</p>
+
+<ul>
+ <li>Prévoit-il des paiements dans les devises les plus susceptibles d'être utilisées par vos utilisateurs ?</li>
+ <li>Quel pourcentage de vos dons le site retient-il comme frais de gestion ?</li>
+ <li>Est-ce que le fournisseur me protège contre la fraude au paiement ?</li>
+ <li>Est-ce que le suivi de l'activité du fournisseur a entraîné l'annulation des abonnements ?</li>
+</ul>
+
+<p>Avec les extensions de navigateur pour Firefox, vous avez deux façons de demander des dons : par AMO et par votre extension.</p>
+
+<h4 id="Demande_de_dons_par_l'entremise_de_l'AMO">Demande de dons par l'entremise de l'AMO</h4>
+
+<p>Vous pouvez ajouter un bouton "contributions" à la page AMO de votre extension qui renvoie à votre page de paiement à partir d'un des fournisseurs supportés. Pour ajouter le bouton :</p>
+
+<ul>
+ <li>Créez un compte auprès d'un des fournisseurs pris en charge : <a href="http://liberapay.com">liberapay.com</a>,<a href="http://micropayment.de"> micropayment.de</a>,<a href="http://opencollective.com"> opencollective.com</a>,<a href="http://patreon.com"> patreon.com</a>,<a href="http://paypal.com"> paypal.com</a>,<a href="http://paypal.me"> or paypal.me</a>.</li>
+ <li>Obtenez le lien vers votre page de dons.</li>
+ <li>Dans le hub du développeur AMO, pour l'extension web ou le thème auquel vous voulez ajouter un bouton de contributions, cliquez sur Modifier les détails.</li>
+ <li>Dans la section Informations de base, ajoutez le lien de votre page de dons à l'URL Contributions.<br>
+  <img alt="The field in an extension's or theme's Basic information section where the URL of a donations page is entered." src="https://mdn.mozillademos.org/files/16252/Contributions_URL.png" style="height: 340px; width: 2174px;"></li>
+</ul>
+
+<p>Une section de contribution est alors ajoutée à la page AMO de votre poste.</p>
+
+<p><img alt="Example extension page on AMO highlighting the contribution next section" src="https://mdn.mozillademos.org/files/16251/Contribute_now.png" style="height: 643px; width: 723px;"></p>
+
+<h4 id="Demander_des_dons_à_partir_de_l'extension_de_votre_navigateur">Demander des dons à partir de l'extension de votre navigateur</h4>
+
+<p>Pour ce faire, vous ajoutez un bouton de don ou un lien vers un endroit approprié dans votre extension.</p>
+
+<h4 id="Bonnes_pratiques">Bonnes pratiques</h4>
+
+<p>Vous n'obtiendrez pas de don si vous ne le demandez pas, mais les demandes excessives de dons peuvent être déconcertantes pour vos utilisateurs et peuvent les encourager à supprimer votre extension de navigateur.  Cependant, trouver la bonne méthode et la bonne fréquence pour les demandes de dons sera une question d'essais et d'erreurs. Lorsque vous ajoutez des demandes de dons, tenez compte de ce qui suit :</p>
+
+<ul>
+ <li>Lier les demandes de dons aux caractéristiques que l'utilisateur est susceptible d'utiliser régulièrement ou leur donner une "valeur" significative.</li>
+ <li>Donner à l'utilisateur une option claire pour fermer une demande de don.</li>
+ <li>Si possible, désactivez les demandes de dons une fois que l'utilisateur a donné.</li>
+ <li>Si vous demandez des dons uniques, ne redémarrez les demandes de dons qu'après une mise à niveau majeure, et identifiez les caractéristiques nouvelles ou améliorées dans la demande.</li>
+</ul>
+
+<p>N'oubliez pas non plus que si vous demandez des dons réguliers, vous devrez également fournir régulièrement du nouveau contenu ou de nouvelles fonctionnalités.</p>
+
+<h2 id="Offres_non_sollicitées">Offres non sollicitées</h2>
+
+<p>Au fur et à mesure que votre extension gagnera en popularité, il est fort probable que vous serez contacté par des agences qui vous proposeront de vous transformer en millionnaire en un rien de temps, sans grand effort de votre part ; quelque chose du genre : "Insérez juste une ligne dans le code de votre add-on et devenez riche en ne faisant rien !"</p>
+
+<p>Traitez ces offres avec la plus grande prudence. Il est probable que le système cherchera à capturer les données privées de vos utilisateurs pour les vendre. Et, si vous obtenez de l'argent, il est probable qu'il soit beaucoup moins élevé que ce qui vous avait été promis à l'origine. Mais pire encore, vous pourriez vous retrouver avec votre extension bloquée et votre réputation ternie.</p>
+
+<h2 id="Comment_puis-je_maximiser_mon_revenu">Comment puis-je maximiser mon revenu ?</h2>
+
+<p>La création d'une base d'utilisateurs large et fidèle est essentielle pour maximiser les revenus que vous générez, quel que soit le mécanisme que vous choisissez. Pour construire votre base d'utilisateurs :</p>
+
+<ul>
+ <li>implémenter l'extension de votre navigateur sur autant de plateformes que possible, au minimum Firefox et Chrome.</li>
+ <li>se concentrer sur les fonctionnalités et la qualité de l'extension de votre navigateur, les extensions de mauvaise qualité retiennent rarement un nombre significatif d'utilisateurs.</li>
+ <li>engagez autant que possible le dialogue avec vos utilisateurs par le biais des médias sociaux, des forums et en répondant aux demandes d'assistance et aux retours d'information.</li>
+</ul>

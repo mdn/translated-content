@@ -1,0 +1,44 @@
+---
+title: BluetoothManager.onadapteradded
+slug: Archive/B2G_OS/API/BluetoothManager/onadapteradded
+tags:
+  - API
+  - Firefox OS
+  - Non Standard
+  - Property
+  - Reference
+  - Web Bluetooth
+  - WebAPI
+translation_of: Archive/B2G_OS/API/BluetoothManager/onadapteradded
+---
+<p></p><section class="Quick_links" id="Quick_Links"><ol><li><strong><a href="/ja/docs/Web/API/Web_Bluetooth_API">Web Bluetooth API</a></strong></li><li><strong><a href="/ja/docs/Web/API/Archive"><code>Archive</code></a></strong></li><li class="toggle"><details open><summary>Bluetooth API に関連するページ</summary><ol><li><a href="/ja/docs/Web/API/BluetoothAdvertisingData"><code>BluetoothAdvertisingData</code></a></li><li><a href="/ja/docs/Web/API/BluetoothDevice"><code>BluetoothDevice</code></a></li><li><a href="/ja/docs/Web/API/BluetoothGATTCharacteristic"><code>BluetoothGATTCharacteristic</code></a></li><li><a href="/ja/docs/Web/API/BluetoothGATTDescriptor"><code>BluetoothGATTDescriptor</code></a></li><li><a href="/ja/docs/Web/API/BluetoothGATTRemoteServer"><code>BluetoothGATTRemoteServer</code></a></li></ol></details></li></ol></section><p></p>
+
+<p></p><div class="overheadIndicator nonStandard nonStandardHeader">
+      <p><strong><span title="この API は標準化されていません。"><i class="icon-warning-sign"> </i></span> 非標準</strong><br>
+      この機能は現在 W3C の標準化のプロセスに乗っていませんが、Firefox OS プラットフォームではサポートされています。将来は動作が変わるかもしれませんし、他のブラウザーで広くサポートされているわけでもありませんが、Firefox OS アプリ専用のコードで使うには適しています。</p>
+      </div><p></p>
+
+<p></p><div class="warning">
+    <p style="text-align: center;">この API は <a href="/ja/docs/Mozilla/Firefox_OS/Security/Application_security">認定済みアプリ</a>のみ、 <a href="/ja/docs/Mozilla/Firefox_OS">Firefox OS</a> で有効になります。</p>
+</div><p></p>
+
+<h2 id="Summary" name="Summary">概要</h2>
+
+<p><code><a href="/ja/docs/Web/Reference/Events/adapteradded" title="/ja/docs/Web/Reference/Events/adapteradded">adapteradded</a></code> イベントを受け取るためのイベントリスナを指定します。このイベントは Bluetooth アダプタがデバイス上で有効になった際に発生します。このイベントが発生すると <a href="/ja/docs/Web/API/BluetoothManager/getDefaultAdapter" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>BluetoothManager.getDefaultAdapter()</code></a> メソッドは直近で有効になったアダプタにアクセスすることが可能になります。</p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="syntaxbox">navigator.mozBluetooth.onadapteradded = funcRef</pre>
+
+<p><code><em>funcRef</em></code> は <code><a href="/ja/docs/Web/Reference/Events/adapteradded" title="/ja/docs/Web/Reference/Events/adapteradded">adapteradded</a></code> イベントが発生した際に呼び出される関数です。</p>
+
+<h2 id="Specification" name="Specification">仕様</h2>
+
+<p>正式な仕様の一部ではありません。<a href="http://www.w3.org/2012/sysapps/">W3C's System Applications Working Group</a> で協議される必要があります。</p>
+
+<h2 id="参考">参考</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/API/BluetoothManager_(Firefox_OS)" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>BluetoothManager_(Firefox_OS)</code></a></li>
+ <li><a href="/docs/WebAPI/WebBluetooth">Web Bluetooth</a></li>
+</ul>

@@ -1,0 +1,49 @@
+---
+title: Firefox OS 2.1 for developers
+slug: Archive/B2G_OS/Releases/2.1
+tags:
+  - '2.1'
+  - B2G
+  - Firefox OS
+  - Release Notes
+translation_of: Archive/B2G_OS/Releases/2.1
+---
+<div class="summary">
+<p><strong>Firefox OS 2.1</strong> は、現在プレリリース段階です。Gecko コンポーネントは <strong>Firefox 33/34</strong> をベースにしています。<span class="seoSummary">このページは、Firefox OS 2.1 で新しく実装された開発者向け機能について解説します。</span></p>
+</div>
+
+<div class="note">
+<p><strong>注記</strong>: Firefox OS Gecko 内にある Gecko 全般の機能については、<a href="/ja/docs/Mozilla/Firefox/Releases/33" title="/ja/docs/Mozilla/Firefox/Releases/33">Firefox 33 release notes for developers</a> や <a href="/ja/docs/Mozilla/Firefox/Releases/34" title="/ja/docs/Mozilla/Firefox/Releases/34">Firefox 34 release notes for developers</a> を参照してください。</p>
+</div>
+
+<h2 id="プラットフォームの変更">プラットフォームの変更</h2>
+
+<p>Firefox OS は "オリジン毎に単一のアプリ" のセキュリティポリシーを持っていました、しかしFirefox 34/Firefox OS 2.1 では (詳細情報は <a href="https://developer.mozilla.org/en-US/Apps/Build/installable_apps_for_Firefox_OS/App_manifest_FAQ#Can_I_have_more_than_one_app_at_my_origin.3F">この FAQ</a> を見て下さい。) 撤廃されました。古いバージョンをサポートする必要がある場合、別のオリジンでアプリをホストする事を考えて下さい; つまりひとつの戦略はアプリに<a href="https://developer.mozilla.org/en-US/Marketplace/Publishing/Adding_a_subdomain">別のサブドメインを生成する</a>事です。</p>
+
+<h2 id="Web_API_の変更点">Web API の変更点</h2>
+
+<ul>
+ <li><a href="/ja/docs/WebAPI/WebBluetooth">Web Bluetooth API</a> のペアリングイベントハンドラ — <a href="/ja/docs/Web/API/BluetoothAdapter/ondevicepaired" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>BluetoothAdapter.ondevicepaired</code></a> および <a href="/ja/docs/Web/API/BluetoothAdapter/ondeviceunpaired" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>BluetoothAdapter.ondeviceunpaired</code></a> — が追加されました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1036234" title="FIXED: Implement pairing in BluetoothAdapter (event handlers)">バグ 1036234</a> 参照)。</li>
+ <li><a href="/ja/docs/WebAPI/WebBluetooth">Web Bluetooth API</a> のペアリングメソッドが更新されました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1036233" title="FIXED: Implement pairing in BluetoothAdapter (methods)">バグ 1036233</a> 参照):
+  <ul>
+   <li>Promise&lt;void&gt; <a href="/ja/docs/Web/API/BluetoothAdapter/pair" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>BluetoothAdapter.pair</code></a>(DOMString aAddress)</li>
+   <li>Promise&lt;void&gt; <a href="/ja/docs/Web/API/BluetoothAdapter/unpair" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>BluetoothAdapter.unpair</code></a>(DOMString aAddress)</li>
+   <li>sequence&lt;BluetoothDevice&gt; <a href="/ja/docs/Web/API/BluetoothAdapter/getPairedDevices" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>BluetoothAdapter.getPairedDevices</code></a></li>
+  </ul>
+ </li>
+ <li><a href="https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html">Web Speech API</a> のサポートが保留になりました: パッチは提出されています (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1032964" title="[B2G][SpeechRTC][User Story]: Enabling Voice input in Firefox OS">バグ 1032964</a> 参照)。</li>
+ <li><span class="author-g-41mtsa1hor7b107c i">FileHandle API を MutableFile にリネームし、LockedFile を FileHandle にリネームしました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1006485" title="FIXED: FileHandle: Rename FileHandle to MutableFile and LockedFile to FileHandle">バグ 1006485</a> 参照)。</span></li>
+</ul>
+
+<h2 id="関連情報">関連情報</h2>
+
+<ul>
+ <li>Firefox OS 2.1 Notes (発行後にリンクされます。)</li>
+</ul>
+
+<h2 id="以前のバージョン">以前のバージョン</h2>
+
+<p></p><div class="multiColumnList">
+<ul>
+<li><a href="/ja/docs/Mozilla/Firefox_OS/Releases/2.0">Firefox OS 2.0 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox_OS/Releases/1.4">Firefox OS 1.4 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox_OS/Releases/1.3">Firefox OS 1.3 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox_OS/Releases/1.2">Firefox OS 1.2 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox_OS/Releases/1.1">Firefox OS 1.1 for developers</a></li><li><a href="/ja/docs/Mozilla/Firefox_OS/Releases/1.0.1">Firefox OS 1.0.1 for developers</a></li></ul>
+</div><p></p>

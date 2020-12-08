@@ -1,0 +1,534 @@
+---
+title: Firefox OS 1.x building blocks
+slug: Archive/B2G_OS/Firefox_OS_apps/Building_blocks/1.x
+tags:
+  - Apps
+  - B2G
+  - Firefox OS
+  - Firefox OS UX
+  - NeedsTranslation
+  - TopicStub
+  - UX
+translation_of: Archive/B2G_OS/Firefox_OS_apps/Building_blocks/1.x
+---
+<div class="warning">
+<p><strong>Important</strong>: The descriptions on this page and its subpages are old descriptions written around the first few versions of Firefox OS (1.0.1–1.3), so are out of date. You'll only find these useful if you are writing an app specifically aimed at an old version of Firefox OS, or fixing a bug on an old branch of Gaia. If you want to find more up to date building block information, go to our main <a href="/en-US/Apps/Design/Firefox_OS_building_blocks">Firefox OS building blocks</a> landing page.</p>
+</div>
+
+<div class="summary">
+<p>This page provides links to the Firefox OS 1.x building blocks.</p>
+</div>
+
+<table class="withoutBorder">
+ <tbody>
+  <tr>
+   <td colspan="2">
+    <h2 id="Action_menu">Action menu</h2>
+   </td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top; width: 180px;">
+    <p style="text-align: center;"><img alt="" src="https://mdn.mozillademos.org/files/4635/action-menu.png" style="height: 240px; width: 160px;"><br>
+      <a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Action_menu">Details</a><br>
+     <a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Action_menu/Coding">Coding guide</a></p>
+   </td>
+   <td style="vertical-align: top;">
+    <p>An action menu presents a list of actions, related to the app's content, from which the user may make a selection. See the <a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Action_menu/Coding" title="/en-US/docs/Mozilla/Firefox_OS/UX/Building_blocks/Action_menu/Coding">Coding guide</a> for details on how to implement an action menu in your app.</p>
+
+    <p> </p>
+
+    <h3 id="Characteristics">Characteristics</h3>
+
+    <ul>
+     <li>Opened from buttons within app content; these buttons are often inside toolbars (for example, the Browser app's "Share" button).</li>
+     <li>Action menus contain one or more items.</li>
+     <li>These menus expand in height to accomodate their items, to a maximum of the screen's height. Once that maximum height is reached, the content becomes scrollable vertically. Generally, the best practice is to try to include no more than five items plus a menu title.</li>
+     <li>The title string is optional.</li>
+     <li>The menu is closed by one of:
+      <ul>
+       <li>Selecting one of the actions.</li>
+       <li>Tapping the "Cancel" button.</li>
+      </ul>
+     </li>
+    </ul>
+
+    <p> </p>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2" style="vertical-align: top;">
+    <h2 id="Button">Button</h2>
+   </td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">
+    <p style="text-align: center;"><img alt="" src="https://mdn.mozillademos.org/files/4639/secondary-buttons.png" style="height: 139px; width: 140px;"></p>
+
+    <p style="text-align: center;"><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Button">Details</a><br>
+     <a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Button/Coding">Coding guide</a></p>
+   </td>
+   <td style="vertical-align: top;">
+    <p>Performs an action when tapped by the user. These are highly flexible user interface objects that have a wide variety of styles. See the <a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Button/Coding" title="/en-US/docs/Mozilla/Firefox_OS/UX/Building_blocks/Button/Coding">Coding guide</a> for information on how to implement buttons that look like those described here.</p>
+
+    <p> </p>
+
+    <h3 id="Characteristics_2">Characteristics</h3>
+
+    <ul>
+     <li>Buttons have two components: a visual target and a hit target. The hit target is always larger, in order to reduce targeting errors by making the button easier to tap.</li>
+     <li>Buttons have two states: normal and pressed.</li>
+     <li>Buttons can also be <strong>disabled</strong>, which means they can't be activated by the user, and are displayed dimmed to indicate that they're disabled.</li>
+    </ul>
+
+    <p>There are several types of buttons:</p>
+
+    <dl>
+     <dt>Action buttons</dt>
+     <dd>Used when there are only a few actions and a list isn't needed. The main action button uses a special highlight color to indicate that it's the primary option.</dd>
+     <dt>List buttons</dt>
+     <dd>Used when displaying a list of actions, or to trigger the display of a value selector.</dd>
+     <dt>Input field buttons</dt>
+     <dd>Used to perform actions with input fields.</dd>
+     <dt>Special/custom buttons</dt>
+     <dd>These are used to provide specific actions including recording, dialing, and the like.</dd>
+    </dl>
+
+    <p> </p>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2" style="vertical-align: top;">
+    <h2 id="Confirmation">Confirmation</h2>
+   </td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">
+    <p><img alt="" src="https://mdn.mozillademos.org/files/4803/confirmation-example.png" style="height: 240px; width: 160px;"></p>
+
+    <p style="text-align: center;"><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Confirmation">Details</a><br>
+     <a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Confirmation/Coding">Coding guide</a><br>
+      </p>
+   </td>
+   <td style="vertical-align: top;">
+    <p>A confirmation prompt asks the user to take or confirm an action, such as responding to a system event such as asking the user to restart the device after swapping SIM cards, or to ask the user to grant or deny permission to perform a task. See the <a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Confirmation/Coding" title="/en-US/docs/Mozilla/Firefox_OS/UX/Building_blocks/Confirmation/Coding">Coding guide</a> for information about how to implement these prompts in your app.</p>
+
+    <p> </p>
+
+    <h3 id="Characteristics_3">Characteristics</h3>
+
+    <ul>
+     <li>Confirmation prompts are modal; they occupy the entire screen, and require user input to close them.</li>
+     <li>Confirmation prompts consist of:
+      <ul>
+       <li>Title (optional)</li>
+       <li>Body</li>
+       <li>Icon (optional)</li>
+       <li>A Confirmation input button, whose label can be customized</li>
+       <li>An optional Cancel input button, whose label can be customized</li>
+      </ul>
+     </li>
+    </ul>
+
+    <p> </p>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2" style="vertical-align: top;">
+    <h2 id="Filter">Filter</h2>
+   </td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">
+    <p style="text-align: center;"><img alt="" src="https://mdn.mozillademos.org/files/4825/filter-visual-bottom" style="height: 241px; width: 161px;"></p>
+
+    <p style="text-align: center;"><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Filter">Details</a></p>
+   </td>
+   <td style="vertical-align: top;">
+    <p>Filters can be used for two purposes: data filtering, in which the user can view a single set of data in different ways (for example, the Calendar app uses filters to select the time scale to use when viewing data (that is, by day, week, or month); and secondary navigation (presenting a second set of tabs when tabs are already present in your user interface).</p>
+
+    <p> </p>
+
+    <h3 id="Characteristics_4">Characteristics</h3>
+
+    <ul>
+     <li>Filters are presented as a horizontal sequence of buttons.</li>
+     <li>Only one button is focused at a time.</li>
+     <li>The best practice is to place filters within <a href="/en-US/docs/Mozilla/Firefox_OS/UX/Building_blocks/Toolbar" title="/en-US/docs/Mozilla/Firefox_OS/UX/Building_blocks/Toolbar">toolbars</a>, so that they don't flow with content.</li>
+     <li>Left, middle, and right buttons can be styled uniquely. This lets you make, for example, the left and right ends of your bar take on a "sheen," or to make the bar rounded on the ends.</li>
+     <li>Filter buttons' widths vary depending on the number of filters in a single set.</li>
+     <li>You must have at least two and no more than five filters in a set.</li>
+     <li>A given set of filters may be labeled with either text or icons, but not both. Because filters' heights are relatively small compared to tabs, text is typically the best practice.</li>
+    </ul>
+
+    <p> </p>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2" style="vertical-align: top;">
+    <h2 id="Header">Header</h2>
+   </td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">
+    <p style="text-align: center;"><img alt="" src="https://mdn.mozillademos.org/files/4845/header-default.png" style="height: 27px; width: 160px;"></p>
+
+    <p style="text-align: center;"><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Header">Details</a><br>
+     <a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Header/Coding">Coding guide</a></p>
+   </td>
+   <td style="vertical-align: top;">
+    <p>A header labels the active view. In addition, it can contain top-level navigation and inputs for the active view. See the <a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Header/Coding" title="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/UX/Building_blocks/Header/Coding">Coding guide</a> for information on implementing headers in your apps.</p>
+
+    <p> </p>
+
+    <h3 id="Characteristics_5">Characteristics</h3>
+
+    <ul>
+     <li>A header is a horizontal bar the full width of the screen, which appears at the top of the screen in most apps.</li>
+     <li>Headers float above content, with the option of flowing with content in special instances, such as in the Browser app.</li>
+     <li>The heading's text provides the name of the current view.</li>
+     <li>The heading may optionally include additional text; for example, in an email app, the number of unread messages may be displayed.</li>
+     <li>Headers may include inputs for navigating and manipulating the current view.</li>
+     <li>Most apps (full-screen games being an obvious exception) have a header.</li>
+    </ul>
+
+    <p> </p>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2" style="vertical-align: top;">
+    <h2 id="Input_area">Input area</h2>
+   </td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">
+    <p style="text-align: center;"><img alt="" src="https://mdn.mozillademos.org/files/4859/sample-sms-bottom-input.png" style="height: 241px; width: 161px;"></p>
+
+    <p style="text-align: center;"><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Input_area">Details</a></p>
+   </td>
+   <td style="vertical-align: top;">
+    <p>An input area is a data entry field. There are many variations on what an input area can look like; they can be as simple as a text entry field, and as complex as a multi-part entry field with text entry, value selectors, and buttons.</p>
+
+    <p><strong>Details coming soon.</strong></p>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2" style="vertical-align: top;">
+    <h2 id="List">List</h2>
+   </td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">
+    <p style="text-align: center;"><img alt="" src="https://mdn.mozillademos.org/files/4889/list-example" style="height: 119px; width: 160px;"></p>
+
+    <p style="text-align: center;"><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/List">Details</a></p>
+   </td>
+   <td style="vertical-align: top;">
+    <p>Lists are used to display a set of consecutive items, such as a list of contacts or a list of messages.</p>
+
+    <p> </p>
+
+    <h3 id="Characteristics_6">Characteristics</h3>
+
+    <ul>
+     <li>List items may vary in height (from one to three rows in a single item).</li>
+     <li>List items may be as simple as just a text string, to including images, text, and buttons.</li>
+     <li>Lists are comprised of rows, with optional section headers.</li>
+    </ul>
+
+    <p>There are several types of list rows:</p>
+
+    <dl>
+     <dt>Action row</dt>
+     <dd>An action row is one in which a tap anywhere in the row triggers the row.</dd>
+     <dt>Status indicator row</dt>
+     <dd><span style="color: #ffff00;"><span style="background-color: #ff0000;">Need details.</span></span></dd>
+     <dt>Button row</dt>
+     <dd><span style="color: #ffff00;"><span style="background-color: #ff0000;">Need details.</span></span></dd>
+     <dt>Link row</dt>
+     <dd><span style="color: #ffff00;"><span style="background-color: #ff0000;">Need details.</span></span></dd>
+    </dl>
+
+    <p> </p>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2" style="vertical-align: top;">
+    <h2 id="Object_menu">Object menu</h2>
+   </td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">
+    <p style="text-align: center;"><img alt="" src="https://mdn.mozillademos.org/files/4891/object-menu-idle.png" style="height: 240px; width: 160px;"></p>
+
+    <p style="text-align: center;"><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Object_menu">Details</a></p>
+   </td>
+   <td style="vertical-align: top;">
+    <p> </p>
+
+    <p>An object menu is a menu that lets the user directly manipulate objects without having to open them and navigate deeper into a view hierarchy.</p>
+
+    <ul>
+     <li>Deleting a photo by selecting its thumbnail, instead of by opening the full image first.</li>
+     <li>Flagging an email by selecting its preview instead of by first opening the email.</li>
+     <li>Calling a contact by selecting their name, instead of by opening their detailed contact information then pressing a "Call" button.</li>
+    </ul>
+
+    <p>Object menus are currently implemented as a special case of action menu; this will evolve over time. For now, see the <a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Action_menu/Coding" title="/en-US/docs/Mozilla/Firefox_OS/UX/Building_blocks/Action_menu/Coding">action menu coding guide</a> for information on how to implement an object menu.</p>
+
+    <p> </p>
+
+    <h3 id="Characteristics_7">Characteristics</h3>
+
+    <ul>
+     <li>Object menus are accessed using a "press-and-hold" gesture on a selectable object, such as a list row, phone number, URL, or the like.</li>
+     <li>An object menu contains one or more items.</li>
+     <li>Object menus expand in height to accomodate their contents, to a maximum of the height of the screen; at that point, the contents of the menu scroll. As a rule of thumb, you should try to avoid having more than five items in the menu.</li>
+     <li>Unlike <a href="/en-US/docs/Mozilla/Firefox_OS/UX/Building_blocks/Action_menu" title="/en-US/docs/Mozilla/Firefox_OS/UX/Building_blocks/Action_menu">action menus</a>, object menus do not have titles.</li>
+     <li>You implement object menus using the same <a href="/en-US/docs/Mozilla/Firefox_OS/UX/Building_blocks/Action_menu/Coding" title="/en-US/docs/Mozilla/Firefox_OS/UX/Building_blocks/Action_menu/Coding">code and style as for action menus</a>.</li>
+    </ul>
+
+    <p> </p>
+
+    <p> </p>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2" style="vertical-align: top;">
+    <h2 id="Progress_and_activity_indicator">Progress and activity indicator</h2>
+   </td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">
+    <p style="text-align: center;"><img alt="" src="https://mdn.mozillademos.org/files/4897/progress-bar-example.png" style="height: 240px; width: 160px;"></p>
+
+    <p style="text-align: center;"><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Progress_and_activity">Details</a></p>
+   </td>
+   <td style="vertical-align: top;">
+    <p>Progress and activity indicators are used to provide visual feedback that a process is active.</p>
+
+    <p> </p>
+
+    <h3 id="Characteristics_8">Characteristics</h3>
+
+    <ul>
+     <li>May include an animated visual element, a text label, or both.</li>
+     <li>Progress and activity indicators may be used in modal windows, or inline either with content or adjacent to content.</li>
+     <li>An activity indicator is used to show that an activity is ongoing without indicating how long the task is expected to take; these can be "barberpole" style indicators, or spinners.</li>
+     <li>A progress indicator is used to show how much out of 100% of an activity has been completed.</li>
+    </ul>
+
+    <p> </p>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2" style="vertical-align: top;">
+    <h2 id="Scrolling">Scrolling</h2>
+   </td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">
+    <p style="text-align: center;"><img alt="" src="https://mdn.mozillademos.org/files/4917/scrolling-index-scroll-dark.png" style="height: 240px; width: 160px;"></p>
+
+    <p style="text-align: center;"><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Scrolling">Details</a></p>
+   </td>
+   <td style="vertical-align: top;">
+    <p>Scrolling areas are used to let the user move text and/or images across the device's display.</p>
+
+    <p> </p>
+
+    <h3 id="Characteristics_9">Characteristics</h3>
+
+    <p>There are two types of scrolling areas: scrollbars and index scrolling.</p>
+
+    <p> </p>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2" style="vertical-align: top;">
+    <h2 id="Seek_bar">Seek bar</h2>
+   </td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">
+    <p style="text-align: center;"><img alt="" src="https://mdn.mozillademos.org/files/4923/seekbar-sample.png" style="height: 240px; width: 160px;"></p>
+
+    <p style="text-align: center;"><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Seek_bar">Details</a></p>
+   </td>
+   <td style="vertical-align: top;">
+    <p>Seek bars have a draggable thumb the user can touch and drag back and forth to scroll through content (such as to set playback position in a media file) or to set a new value for a given control, such as sound volume or display brightness.</p>
+
+    <p> </p>
+
+    <h3 id="Characteristics_10">Characteristics</h3>
+
+    <ul>
+     <li>A seek bar consists of a track with a knob that indicates the current playback position.</li>
+     <li>The knob has both normal and "pressed" states.</li>
+     <li>The values for the ends of the seek bar can be specified as either text or images.</li>
+     <li>Seek bars may be oriented either horizontally or vertically.</li>
+    </ul>
+
+    <p> </p>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <h2 id="Status">Status</h2>
+   </td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">
+    <p style="text-align: center;"><img alt="" src="https://mdn.mozillademos.org/files/4637/banner.png" style="height: 240px; width: 160px;"><br>
+     <a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Status">Details</a><br>
+     <a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Status/Coding">Coding guide</a></p>
+   </td>
+   <td style="vertical-align: top;">
+    <p>Relays information to the user in a transitory fashion, typically to confirm a user action or to alert the user to a system event. See the <a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Status/Coding" title="/en-US/docs/Mozilla/Firefox_OS/UX/Building_blocks/Banner/Coding">Coding guide</a> for details on how to implement a status bar. Sometimes status bars are referred to as "banners."</p>
+
+    <p> </p>
+
+    <h3 id="Characteristics_11">Characteristics</h3>
+
+    <ul>
+     <li>Examples include deleting multiple photos in Gallery, or deleting or moving multiple emails.</li>
+     <li>Positioned at the bottom of the screen, covering underlying content.</li>
+     <li>Closing: Status bars automatically disappear, typically after a few seconds for short messages. This can be longer, though, depending on the message and context.</li>
+     <li>Can include an input, such as an "Undo" option; this is optional.</li>
+     <li>Can optionally include an image.</li>
+     <li>Can either be part of an app (such as a "Photos deleted" banner in the Gallery app) or in the System (such as a "Low battery" alert).</li>
+     <li>Avoid displaying more than one status bar at the same time. If two status bars appear at the same time, the newer status bar replaces the older one.</li>
+    </ul>
+
+    <p> </p>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2" style="vertical-align: top;">
+    <h2 id="Switch">Switch</h2>
+   </td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">
+    <p style="text-align: center;"><img alt="" src="https://mdn.mozillademos.org/files/4925/switch-settings-sample.png" style="height: 240px; width: 160px;"></p>
+
+    <p style="text-align: center;"><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Switch">Details</a><br>
+     <a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Switch/Coding">Coding guide</a></p>
+   </td>
+   <td style="vertical-align: top;">
+    <p>A switch is any control which presents two mutually exclusive options or states. Switches are also used to select items within <a href="/en-US/docs/Mozilla/Firefox_OS/UX/Building_blocks/List" title="/en-US/docs/Mozilla/Firefox_OS/UX/Building_blocks/List">lists</a>. See the <a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Switch/Coding" title="/en-US/docs/Mozilla/Firefox_OS/UX/Building_blocks/Switch/Coding">Coding guide</a> for details on implementing switches in your apps.</p>
+
+    <p> </p>
+
+    <h3 id="Characteristics_12">Characteristics</h3>
+
+    <ul>
+     <li>A switch presents two mutually exclusive choices or states.</li>
+     <li>There are three types of switch:
+      <ul>
+       <li>On/Off toggle switches</li>
+       <li>Checkboxes</li>
+       <li>Radio buttons</li>
+      </ul>
+     </li>
+    </ul>
+
+    <p> </p>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2" style="vertical-align: top;">
+    <h2 id="Tabs">Tabs</h2>
+   </td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">
+    <p style="text-align: center;"><img alt="" src="https://mdn.mozillademos.org/files/4955/tab-screenshot.png" style="height: 240px; width: 160px;"></p>
+
+    <p style="text-align: center;"><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Tabs">Details</a><br>
+     <a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Tabs/Coding">Coding guide</a></p>
+   </td>
+   <td style="vertical-align: top;">
+    <p>Tabs are used as a navigational widget that let the user switch among sets of views. This way, a window may contain multiple views. See the <a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Tabs/Coding" title="/en-US/docs/Mozilla/Firefox_OS/UX/Building_blocks/Tabs/Coding">Coding guide</a> for details on how to implement tabs in your apps.</p>
+
+    <p> </p>
+
+    <h3 id="Characteristics_13">Characteristics</h3>
+
+    <ul>
+     <li>Tab bars always fill the full horizontal width of the screen.</li>
+     <li>You may have up to (but no more than) five tabs in a tab bar.</li>
+     <li>Tab bars should be positioned at the very bottom of the screen, unless doing so would result in excessive clutter due to multiple bars of controls at the bottom of the screen.</li>
+     <li>Tabs can contain a variety of elements, such as buttons, filters, indicators, and the like.</li>
+     <li>Tabs' labels may be text, text with an icon, or just an icon.</li>
+    </ul>
+
+    <p> </p>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2" style="vertical-align: top;">
+    <h2 id="Toolbar">Toolbar</h2>
+   </td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">
+    <p style="text-align: center;"><img alt="" src="https://mdn.mozillademos.org/files/4967/toolbar-sample.png" style="height: 240px; width: 160px;"></p>
+
+    <p style="text-align: center;"><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Toolbar">Details</a><br>
+     <a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Toolbar/Coding">Coding guide</a></p>
+   </td>
+   <td style="vertical-align: top;">
+    <p>Toolbars contain actions, indicators, and navigation elements associated with the current view. These may include things such as buttons to delete the currently selected items, a filter to enter edit mode, or a filter to show only "favorite" contacts. See the <a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Toolbar/Coding" title="/en-US/docs/Mozilla/Firefox_OS/UX/Building_blocks/Toolbar/Coding">Coding guide</a> for details on how to implement toolbars in your apps.</p>
+
+    <p> </p>
+
+    <h3 id="Characteristics_14">Characteristics</h3>
+
+    <ul>
+     <li>Toolbars are always the full width of the screen, and are always the same height.</li>
+     <li>Toolbars never scroll with content; instead, they float above content.</li>
+     <li>Toolbars should always be positioned at the very bottom edge of the screen <strong>unless</strong> tabs are also present, in which case the toolbar is positioned at the top of the screen instead.</li>
+     <li>Toolbars may contain a wide variety of elements, including buttons, filters, progress/activity indicators, and so forth.</li>
+    </ul>
+
+    <p> </p>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2" style="vertical-align: top;">
+    <h2 id="Value_selector">Value selector</h2>
+   </td>
+  </tr>
+  <tr>
+   <td style="vertical-align: top;">
+    <p style="text-align: center;"><img alt="" src="https://mdn.mozillademos.org/files/4975/selector-nested.png" style="height: 240px; width: 160px;"></p>
+
+    <p style="text-align: center;"><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Value_selector">Details</a><br>
+     <a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x/Value_selector/Coding" title="/en-US/docs/Mozilla/Firefox_OS/UX/Building_blocks/Value_selector/Coding">Coding Guide</a></p>
+   </td>
+   <td style="vertical-align: top;">
+    <p>Value selectors let the user choose one of a number of possible values, and are typically used from a form interface. For example, value selectors could be used to choose the month or day for a calendar event. These are presented automatically for the values of the <a href="/en-US/docs/Web/HTML/Element/input" title="The HTML &lt;input> element is used to create interactive controls for web-based forms in order to accept data from the user."><code>&lt;input&gt;</code></a> element's <code><a href="/en-US/docs/Web/HTML/Element/input#attr-type">type</a></code> attribute.</p>
+
+    <p> </p>
+
+    <h3 id="Characteristics_15">Characteristics</h3>
+
+    <ul>
+     <li>Value selectors may have an optional title.</li>
+     <li>The following types of value selectors are provided:
+      <ul>
+       <li>Date</li>
+       <li>Time</li>
+       <li>SIngle-select list</li>
+       <li>Multiple-select list</li>
+      </ul>
+     </li>
+    </ul>
+
+    <p> </p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p> </p>

@@ -1,0 +1,41 @@
+---
+title: writeString
+slug: >-
+  Archive/Mozilla/XPInstall/Référence_de_l_API_XPInstall/Objet_WinProfile/Méthodes/writeString
+translation_of: Archive/Mozilla/XPInstall/Reference/WinProfile_Object/Methods/writeString
+---
+<p> </p>
+<h3 id="writeString" name="writeString">writeString</h3>
+<p>Changes a value in a .<code>ini</code> file.</p>
+<h4 id="M.C3.A9thode_de" name="M.C3.A9thode_de">Méthode de</h4>
+<p>Objet <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_WinProfile">WinProfile</a></p>
+<h4 id="Syntaxe" name="Syntaxe">Syntaxe</h4>
+<pre class="eval">Boolean writeString ( String section, String key, String value);
+</pre>
+<h4 id="Param.C3.A8tres" name="Param.C3.A8tres">Paramètres</h4>
+<p>Cette méthode a les paramètres suivants :</p>
+<dl>
+ <dt>
+  <code>section</code></dt>
+ <dd>
+  Le nom d'une section du fichier, telle que <code>boot</code> ou <code>drivers</code>.</dd>
+ <dt>
+  <code>key</code></dt>
+ <dd>
+  La clef dans cette section dont on veut modifier la valeur.</dd>
+ <dt>
+  <code>value</code></dt>
+ <dd>
+  La nouvelle valeur.</dd>
+</dl>
+<h4 id="Retour" name="Retour">Retour</h4>
+<p><code>True</code> si correctement programmé, autrement, <code>false</code>.</p>
+<h4 id="Description" name="Description">Description</h4>
+<p>La méthode <code>writeString</code> est similaire à la fonction <code>WritePrivateProfileString</code> de l'API de Windows. Pour effacer une valeur existante, fournissez une valeur vide pour le paramètre <code>value</code>. Contrairement à la fonction <code>WritePrivateProfileString</code>, cette méthode ne supporte pas l'utilisation d'une clef vide pour effacer une section entière. Les valeurs ne seront écrites qu'après l'appel de la méthode <code>performInstall</code>.</p>
+<h4 id="Exemple" name="Exemple">Exemple</h4>
+<p>Pour définir le nom du fichier de fond d'écran depuis la section <code>Desktop</code> du fichier <code>win.ini</code>, on utilise cet appel :</p>
+<pre class="eval">ini = getWinProfile (getFolder("Windows"), "win.ini");
+ini.writeString ("Desktop", "Wallpaper", "newpathname");
+</pre>
+<p><span class="comment">Interwiki Languages Links</span></p>
+<p>{{ languages( { "en": "en/XPInstall_API_Reference/WinProfile_Object/Methods/writeString" } ) }}</p>

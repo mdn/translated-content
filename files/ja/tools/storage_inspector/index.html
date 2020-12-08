@@ -1,0 +1,206 @@
+---
+title: ストレージインスペクター
+slug: Tools/Storage_Inspector
+tags:
+  - Cookies
+  - Dev Tools
+  - Firefox
+  - Guide
+  - IndexedDB
+  - Local Storage
+  - Session Storage
+  - Storage
+  - Tools
+translation_of: Tools/Storage_Inspector
+---
+<p>{{ToolsSidebar}}</p>
+
+<div class="geckoVersionNote">
+<p>ストレージインスペクターはデフォルトで無効です。<a href="/ja/docs/Tools/Tools_Toolbox#Settings">開発ツールのオプション</a> で有効化できます。</p>
+</div>
+
+<p>ストレージインスペクターで、ウェブページが使用できるさまざまな種類のストレージを調査できます。現在は、以下の種類のストレージの調査に使用できます:</p>
+
+<ul>
+ <li><em>キャッシュストレージ</em> - <a href="/ja/docs/Web/API/Cache">Cache API</a> を使用して作成した DOM キャッシュ</li>
+ <li><em>Cookie</em> - ページ自身およびページ内の iframe が作成したすべての <a href="/ja/docs/Web/API/Document/cookie">Cookie</a> を確認できます。ネットワーク呼び出しの応答の一部として作成された Cookie も表示しますが、ツールを開いている間に発生した呼び出しによるものだけが対象です。</li>
+ <li><em>IndexedDB</em> - ページ自身およびページ内の iframe が作成したすべての <a href="/ja/docs/Web/API/IndexedDB_API">IndexedDB</a> データベースで、データベースのオブジェクトストアおよびオブジェクトストア内に保存しているアイテムを確認できます。</li>
+ <li><em>ローカルストレージ</em> - ページ自身およびページ内の iframe が作成したすべての <a href="/ja/docs/Web/API/Window/localStorage">ローカルストレージ</a> アイテムを確認できます。</li>
+ <li><em>セッションストレージ</em> - ページ自身およびページ内の iframe が作成したすべての <a href="/ja/docs/Web/API/Window/sessionStorage">セッションストレージ</a> アイテムを確認できます。</li>
+</ul>
+
+<p>ストレージインスペクターは当分の間、読み取り専用のビューのみでストレージを表示します。将来のリリースでストレージコンテンツの編集を可能にするよう、作業しています。</p>
+
+<h2 id="Opening_the_Storage_Inspector" name="Opening_the_Storage_Inspector">ストレージインスペクターを開く</h2>
+
+<p>ストレージインスペクターを有効化すると、Firefox メニューパネル (メニューバーを表示している場合や Mac OS X では [ツール] メニュー) 内の [ウェブ開発] サブメニューで [ストレージインスペクター] を選択して開くことができます。または、キーボードショートカット Shift + F9 も使用できます。</p>
+
+<p>ストレージインスペクターがアクティブな状態で、<a href="/ja/docs/Tools/Tools_Toolbox" title="Tools/Tools_Toolbox">ツールボックス</a> がブラウザウィンドウの下部に現れます。開発ツールボックスでは "ストレージ" という名称です。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14247/1-storage-inspector-open.png" style="display: block; height: 846px; margin-left: auto; margin-right: auto; width: 1311px;"></p>
+
+<h2 id="Storage_Inspector_User_Interface" name="Storage_Inspector_User_Interface">ストレージインスペクターのユーザーインターフェイス</h2>
+
+<p>ストレージインスペクターの UI は 3 つの主要コンポーネントに分かれます:</p>
+
+<ul>
+ <li><a href="#storage-tree">ストレージツリー</a></li>
+ <li><a href="#table-widget">テーブルウィジェット</a></li>
+ <li><a href="#sidebar">サイドバー</a></li>
+</ul>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14249/2-storage-inspector-annotated.png" style="display: block; height: 858px; margin-left: auto; margin-right: auto; width: 1323px;"></p>
+
+<h3 id="Storage_tree" name="Storage_tree"><a name="storage-tree">ストレージツリー</a></h3>
+
+<p>ストレージツリーは、ストレージインスペクターが調査可能なすべてのストレージタイプを一覧表示します:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14251/3-storage-types.png" style="display: block; height: 166px; margin-left: auto; margin-right: auto; width: 386px;"></p>
+
+<p>ストレージの種類の配下で、オブジェクトは生成元で分類します。Cookie では、生成元の区別にプロトコルを使用しません。IndexedDB やローカルストレージでは、生成元がプロトコルとホスト名の組み合わせになります。例えば "http://mozilla.org" と "https://mozilla.org" は異なる 2 つの生成元になりますので、ローカルストレージのアイテムは双方で共有できません。</p>
+
+<p>"キャッシュストレージ" では、オブジェクトを生成元とキャッシュ名で分類します:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14253/4-cachestorage.png" style="display: block; height: 210px; margin-left: auto; margin-right: auto; width: 350px;"></p>
+
+<p>IndexedDB のオブジェクトは生成元、データベース名、さらにオブジェクトストア名で分類します:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14255/5-indexeddb.png" style="display: block; height: 360px; margin-left: auto; margin-right: auto; width: 350px;"></p>
+
+<p>Cookie、ローカルストレージ、セッションストレージは階層が 1 つだけであり、保存されているアイテムは各生成元の直下に表示します:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14257/6-cookies.png" style="display: block; height: 598px; margin-left: auto; margin-right: auto; width: 350px;"></p>
+
+<p>ツリー内の各項目をクリックすると、子項目を展開または折りたたみできます。ツリーは最新の状況を表示しますので、新たな生成元が追加される (例えば iframe を追加するなど) と、自動的に各ストレージタイプに追加されます。</p>
+
+<p>ツリーでアイテムをクリックすると、アイテムの詳細情報を表形式で右側に表示します。例えばストレージタイプ Cookie 配下の生成元をクリックすると、そのドメインに属するすべての Cookie を表示します。</p>
+
+<h3 id="Table_Widget" name="Table_Widget"><a name="table-widget">テーブルウィジェット</a></h3>
+
+<p>テーブルウィジェットは、選択したツリー項目 (生成元やデータベース) に関するすべてのアイテムを表示する場所です。ストレージタイプやツリー項目に応じて、テーブルの列の数が変わります。</p>
+
+<p>テーブルのすべての列がリサイズ可能です。テーブルのヘッダーをコンテキストクリックして列名を選択すると、列を隠したり表示したりすることができます:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14259/7-col-selection.png" style="display: block; height: 594px; margin-left: auto; margin-right: auto; width: 900px;"></p>
+
+<h3 id="Search" name="Search">検索</h3>
+
+<p>テーブルウィジェットの上部に検索ボックスがあります:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14261/8-search.png" style="display: block; height: 646px; margin-left: auto; margin-right: auto; width: 912px;"></p>
+
+<p>これは、検索文字列にマッチするアイテムのみテーブルに表示するようフィルタリングします。検索文字列にマッチするアイテムは、いずれかのフィールド (列を非表示にしているフィールドを含む) に検索文字列を含むアイテムです。</p>
+
+<p>Firefox 50 より、<kbd>Ctrl</kbd> + <kbd>F</kbd> (Mac では <kbd>Cmd</kbd> + <kbd>F</kbd>) を使用して検索ボックスにフォーカスを当てることができます。</p>
+
+<h3 id="Add_and_refresh_storage" name="Add_and_refresh_storage">ストレージの追加と更新</h3>
+
+<p>新しいバージョンの Firefox では、現在表示しているストレージ種別のビューを最新の情報に更新するボタンと、可能であれば新しいストレージアイテムを追加するボタンがあります (IndexedDB や キャッシュストレージでは新しいアイテムを追加できません):</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/15812/add-refresh-storage.png" style="display: block; margin: 0 auto;"></p>
+
+<h3 id="Sidebar" name="Sidebar"><a name="sidebar">サイドバー</a></h3>
+
+<p>テーブルウィジェットで任意の行を選択すると、その行の詳細情報を表示するサイドバーが開きます。Cookie を選択すると、その Cookie に関するすべての詳細情報を表示します。</p>
+
+<p>サイドバーでは Cookie、ローカルストレージ、IndexedDB のアイテムの値を解析して、単なる文字列を有意義なものに変換します。例えば:</p>
+
+<ul>
+ <li><code>'{"foo": "bar"}'</code> のように stringify 処理が施された JSON を、<code>{foo: "bar"}</code> のように元の JSON として表示します。</li>
+ <li><code>"1~2~3~4"</code> や <code>"1=2=3=4"</code> のようにキーで区切られた値を、<code>[1, 2, 3, 4]</code> のように配列として表示します。</li>
+ <li><code>"ID=1234:foo=bar"</code> のようにキーと値のペアを含む文字列を、<code>{ID:1234, foo: "bar"}</code> のように JSON として表示します。</li>
+</ul>
+
+<p>サイドバーの上部にある検索ボックスを使用して、表示された値をフィルタリングすることもできます。</p>
+
+<h2 id="Cache_Storage" name="Cache_Storage">キャッシュストレージ</h2>
+
+<p>キャッシュストレージの配下で、<a href="/ja/docs/Web/API/Cache">Cache API</a> を使用して作成した DOM キャッシュの内容を確認できます。キャッシュを選択すると、キャッシュに含まれているリソースの一覧を表示します。各リソースについて、以下の情報を表示します:</p>
+
+<ul>
+ <li>リソースの URL</li>
+ <li>リソースを取り出したリクエストに対するステータスコード</li>
+</ul>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14263/9-cachedstorage-details.png" style="display: block; height: 213px; margin-left: auto; margin-right: auto; width: 900px;"></p>
+
+<h2 id="Cookies" name="Cookies">Cookie</h2>
+
+<p>ストレージツリーで Cookie ストレージ内の生成元を選択すると、その生成元向けの Cookie をテーブルウィジェットに表示します。Cookie のテーブルには以下の列があります:</p>
+
+<ul>
+ <li><em>名前</em> - Cookie の名称</li>
+ <li><em>パス</em> - Cookie の path プロパティ</li>
+ <li><em>ドメイン</em> - Cookie のドメイン</li>
+ <li><em>有効期限</em> - Cookie の有効期限。セッション Cookie である場合は、この値は "セッション" になります。</li>
+ <li><em>アクセス日時</em> - Cookie が最後に読み取られた日時</li>
+ <li><em>作成日時</em> — Cookie が作成された日時</li>
+ <li><em>値</em> - Cookie の値</li>
+ <li><em>HostOnly</em> - ドメイン Cookie であるか。ドメイン Cookie である場合は、ドメインの値が "." から始まります。</li>
+ <li><em>Secure</em> - セキュア Cookie であるか</li>
+ <li><em>HttpOnly</em> - HTTP Only の Cookie であるか</li>
+ <li><em>sameSite</em> — same-site Cookie であるかsame-site Cookie は、同一の registrable domain によって開始されたリクエストに伴う場合に限って特定の Cookie を送信するべきであると宣言することによって、CSRF や情報漏えい攻撃の危険性を緩和できます。</li>
+</ul>
+
+<div class="note">
+<p><strong>注記</strong>: 一部の列は、デフォルトで表示されていません。表示する列を変更するには、表示中のテーブルの見出しを右クリックまたは <kbd>Ctrl</kbd> を押しながらクリックして、コンテキストメニューで表示・非表示を選択します。</p>
+</div>
+
+<div class="note">
+<p><strong>注記:</strong> Firefox 51 より前のバージョンでは <em>HostOnly</em>、<em>Secure</em>、<em>HttpOnly</em> の列がそれぞれ <em>isDomain</em>、<em>isSecure</em>、<em>isHttpOnly</em> という名称でした。</p>
+</div>
+
+<p><a href="/ja/docs/Tools/Storage_Inspector#Table_Widget">テーブルウィジェット</a> 内のセルをダブルクリックして値を編集することで、Cookie を編集できます。また、"プラス" (+) ボタンをクリックして追加された行の値を希望する値に変更することで、新しい Cookie を追加できます:</p>
+
+<p>それぞれの行のコンテキストメニューを使用して、Cookie を削除することもできます:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14273/delete-cookies.png" style="display: block; height: 208px; margin-left: auto; margin-right: auto; width: 900px;"></p>
+
+<h2 id="Local_storage_Session_storage" name="Local_storage_Session_storage">ローカルストレージ / セッションストレージ</h2>
+
+<p>ローカルストレージおよびセッションストレージの生成元を選択すると、ローカルストレージおよびセッションストレージに関するすべてのアイテムの名称と値をテーブルに表示します。</p>
+
+<p><a href="/ja/docs/Tools/Storage_Inspector#Table_Widget">テーブルウィジェット</a>内のセルをダブルクリックして値を編集することで、ローカルストレージやセッションストレージのアイテムを編集できます:</p>
+
+<p>{{EmbedYouTube("oeQzhpoMByw")}}</p>
+
+<p>コンテキストメニューを使用して、ローカルストレージやセッションストレージの項目を削除することもできます:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14275/14-delete-localstorage.png" style="display: block; height: 444px; margin-left: auto; margin-right: auto; width: 900px;"></p>
+
+<p>また、"プラス" (+) ボタンをクリックして追加された行の値を希望する値に変更することで、新しいストレージアイテムを追加できます。</p>
+
+<h2 id="IndexedDB" name="IndexedDB">IndexedDB</h2>
+
+<p>ストレージツリーで IndexedDB ストレージ内の生成元を選択すると、その生成元向けのすべてのデータベースの詳細情報をテーブルに表示します。データベースの詳細情報は以下のとおりです:</p>
+
+<ul>
+ <li><em>データベース名</em> - データベースの名称</li>
+ <li><em>Storage</em> - データベースに対して指定した、<a href="/ja/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria#Different_types_of_data_storage">ストレージの種類</a> (Firefox 53 の新機能)</li>
+ <li><em>オリジン</em> - データベースの生成元</li>
+ <li><em>バージョン</em> - データベースのバージョン</li>
+ <li><em>オブジェクトストア</em> - データベース内にあるオブジェクトストアの数</li>
+</ul>
+
+<p>ストレージツリーで IndexedDB のデータベースを選択すると、保存されているすべてのオブジェクトストアの詳細情報をテーブルに表示します。オブジェクトストアの詳細情報は以下のとおりです:</p>
+
+<ul>
+ <li><em>オブジェクトストア名</em> - オブジェクトストアの名称</li>
+ <li><em>キー</em> - オブジェクトストアの keyPath プロパティ</li>
+ <li><em>自動インクリメント</em> - 自動インクリメントが有効であるか</li>
+ <li><em>インデックス</em> - オブジェクトストアのインデックスの配列を下図のように表示する</li>
+</ul>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14265/10-indexeddb-details.png" style="display: block; height: 205px; margin-left: auto; margin-right: auto; width: 900px;"></p>
+
+<p>ストレージツリーでオブジェクトストアを選択すると、オブジェクトストア内のすべてのアイテムをテーブルに表示します。すべてのアイテムは、キーとキーに関連づけられた値があります。</p>
+
+<p>Firefox 49 よりストレージツリービューのコンテキストメニューを使用して、IndexedDB データベースを削除できます:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14277/15-delete-database.png" style="display: block; height: 194px; margin-left: auto; margin-right: auto; width: 900px;"></p>
+
+<p>データベースを削除できない (もっとも多い理由は、データベースへのアクティブな接続が存在するため) 場合は、ストレージインスペクターで警告メッセージを表示します:<img alt="" src="https://mdn.mozillademos.org/files/14267/11-indexeddb-delete-warning.png" style="display: block; height: 255px; margin: 0px auto; width: 900px;"></p>
+
+<p>Firefox 50 よりテーブルウィジェットのコンテキストメニューを使用して、オブジェクトストア内のすべてのアイテムあるいは特定のアイテムを削除できます:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14279/16-delete-database-entries.png" style="display: block; height: 195px; margin-left: auto; margin-right: auto; width: 900px;"></p>

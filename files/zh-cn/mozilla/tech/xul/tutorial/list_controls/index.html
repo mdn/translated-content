@@ -1,0 +1,133 @@
+---
+title: XUL_教程/列表控件
+slug: Mozilla/Tech/XUL/Tutorial/List_Controls
+tags:
+  - XUL_教程
+translation_of: Archive/Mozilla/XUL/Tutorial/List_Controls
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Numeric_Controls" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:Progress_Meters">下一页  »</a></p>
+</div><p></p>
+<p> </p>
+<h3 id=".E5.88.97.E8.A1.A8.E6.8E.A7.E4.BB.B6" name=".E5.88.97.E8.A1.A8.E6.8E.A7.E4.BB.B6">列表控件</h3>
+<p>列表控件用来在列表中显示许多的项目。用户可以从列表中选择一个项。</p>
+<p>XUL提供两种类型的元素去创建列表，<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/listbox" title="listbox">listbox</a></code></code>元素用于创建多行的列表框，和<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code></code>元素用于创建下拉列表框。它们的工作方法类似于在HTML中的 <code>select</code>元素，它们执行的功能相同，但XUL的元素包括更多的特性。</p>
+<p>简单列表框使用<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/listbox" title="listbox">listbox</a></code></code>元素创建列表框，和使用<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/listitem" title="listitem">listitem</a></code></code>元素创建每个项目。例如，这个列表框有四行，每个项目使用一行。</p>
+<p><span id="%E4%BE%8B1"><a id="%E4%BE%8B1"></a><strong>例1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_1.xul">View</a></p>
+<div class="float-right">
+ <img alt="图像:lists1.png" class="internal" src="/@api/deki/files/2628/=Lists1.png"></div>
+<pre>&lt;listbox&gt;
+  &lt;listitem label="Butter Pecan"/&gt;
+  &lt;listitem label="Chocolate Chip"/&gt;
+  &lt;listitem label="Raspberry Ripple"/&gt;
+  &lt;listitem label="Squash Swirl"/&gt;
+&lt;/listbox&gt;
+</pre>
+<p>如HTML中的<code>option</code>元素，你可以使用<code><code id="a-value"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code></code>为每个项指定一个值。你也可以在脚本中使用这个值。列表框会默认设置一个合适的尺寸，但你可以通过<code><code id="a-rows"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/rows">rows</a></code></code>属性来控制尺寸。通过设置它来确定在列表框中显示的行数。如果列表包括的项超出这个值，在显示时将会出现滚动条。</p>
+<p>下面这个例子演示这些不同的特性：</p>
+<p><span id="%E4%BE%8B2"><a id="%E4%BE%8B2"></a><strong>例2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_2.xul">View</a></p>
+<pre>&lt;listbox rows="3"&gt;
+  &lt;listitem label="Butter Pecan" value="bpecan"/&gt;
+  &lt;listitem label="Chocolate Chip" value="chocchip"/&gt;
+  &lt;listitem label="Raspberry Ripple" value="raspripple"/&gt;
+  &lt;listitem label="Squash Swirl" value="squash"/&gt;
+&lt;/listbox&gt;
+</pre>
+<p>这个例子已改成一次只显示3行。已经为列表中的每个项目添加了值。列表框还有其他的一些特性，将在后面进行描述。</p>
+<h3 id=".E5.A4.9A.E5.88.97.E5.88.97.E8.A1.A8.E6.A1.86" name=".E5.A4.9A.E5.88.97.E5.88.97.E8.A1.A8.E6.A1.86">多列列表框</h3>
+<p>列表框也支持多列。每个单元格可以有独有的内容，即使只使用文本。当用户选择列表中的一个项目时，当前的行将被选中。你不能只选中其中的一个单元格。</p>
+<p>在列表框中有两个标签可以使用。<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/listcols" title="listcols">listcols</a></code></code>元素用来对列信息进行控制，每个列指定一个<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/listcol" title="listcol">listcol</a></code></code>元素。在列表框中你将需要为每个列指定一个<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/listcol" title="listcol">listcol</a></code></code>元素。</p>
+<p><code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/listcell" title="listcell">listcell</a></code></code>元素用于一行中的每个单元格。 如果你需要3列，你就需要增加3个<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/listcell" title="listcell">listcell</a></code></code>元素到每个<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/listitem" title="listitem">listitem</a></code></code>里面。要给单元格指定文本内容，替换<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/listcell" title="listcell">listcell</a></code></code>元素里面的<code><code id="a-label"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code>属性。</p>
+<p>一个简单的例子，如果只有一个列，你也需要将 <code><code id="a-label"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code>属性直接地填充在<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/listitem" title="listitem">listitem</a></code></code>元素里面的<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/listcell" title="listcell">listcell</a></code></code>元素中, 看起来像前面的例子里一样。</p>
+<p>下面是一个有2列和3行的列表框的例子：</p>
+<p><span id="%E4%BE%8B3"><a id="%E4%BE%8B3"></a><strong>例3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_3.xul">View</a></p>
+<pre>&lt;listbox&gt;
+  &lt;listcols&gt;
+    &lt;listcol/&gt;
+    &lt;listcol/&gt;
+  &lt;/listcols&gt;
+  &lt;listitem&gt;
+    &lt;listcell label="George"/&gt;
+    &lt;listcell label="House Painter"/&gt;
+  &lt;/listitem&gt;
+  &lt;listitem&gt;
+    &lt;listcell label="Mary Ellen"/&gt;
+    &lt;listcell label="Candle Maker"/&gt;
+  &lt;/listitem&gt;
+  &lt;listitem&gt;
+    &lt;listcell label="Roger"/&gt;
+    &lt;listcell label="Swashbuckler"/&gt;
+  &lt;/listitem&gt;
+&lt;/listbox&gt;
+</pre>
+<h3 id=".E8.A1.A8.E5.A4.B4.E8.A1.8C" name=".E8.A1.A8.E5.A4.B4.E8.A1.8C">表头行</h3>
+<p>列表框一直允许使用一个特殊的表头行。 这和正常的行显示有很大不同。你可以使用它来创建列头。有两个新的元素可以使用。</p>
+<p><code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/listhead" title="listhead">listhead</a></code></code>元素用于表头行，就像<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/listitem" title="listitem">listitem</a></code></code>元素用于普通行。表头行不是普通行，因此使用脚本去获取列表的首行时获得的将是表头行的下一行。</p>
+<p><code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/listheader" title="listheader">listheader</a></code></code>元素用于表头行里的单元格。使用 <code><code id="a-label"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code>属性设置表头行单元格的标签。</p>
+<p>这是一个带表头行的简单例子:</p>
+<p><span id="%E4%BE%8B4"><a id="%E4%BE%8B4"></a><strong>例4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_4.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_4.xul">View</a></p>
+<div class="float-right">
+ <img alt="Image:morelists1.png" class="internal" src="/@api/deki/files/2629/=Morelists1.png"></div>
+<pre>&lt;listbox&gt;
+
+  &lt;listhead&gt;
+    &lt;listheader label="Name"/&gt;
+    &lt;listheader label="Occupation"/&gt;
+  &lt;/listhead&gt;
+
+  &lt;listcols&gt;
+    &lt;listcol/&gt;
+    &lt;listcol flex="1"/&gt;
+  &lt;/listcols&gt;
+
+  &lt;listitem&gt;
+    &lt;listcell label="George"/&gt;
+    &lt;listcell label="House Painter"/&gt;
+  &lt;/listitem&gt;
+  &lt;listitem&gt;
+    &lt;listcell label="Mary Ellen"/&gt;
+    &lt;listcell label="Candle Maker"/&gt;
+  &lt;/listitem&gt;
+  &lt;listitem&gt;
+    &lt;listcell label="Roger"/&gt;
+    &lt;listcell label="Swashbuckler"/&gt;
+  &lt;/listitem&gt;
+
+&lt;/listbox&gt;
+</pre>
+<p>在这个例子中，<code><code id="a-flex"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code>属性用于制作灵活的列。这个属性将在最后一节中说明，这里它允许列进行水平扩展。你可以调整窗口的大小去查看列根据窗口而进行伸缩的效果。如果你水平缩小，表格中的标签会自动截成带省略号(...)的样子。你可以在表格或项中使用<code><code id="a-crop"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/crop">crop</a></code></code>属性的值为<code>none</code>去禁止标签被截。</p>
+<h3 id=".E4.B8.8B.E6.8B.89.E5.88.97.E8.A1.A8" name=".E4.B8.8B.E6.8B.89.E5.88.97.E8.A1.A8">下拉列表</h3>
+<p>在HTML里可以使用<code>select</code>元素创建下拉列表。用户可以在文本框内看到一个单选并且点击箭头或其他类似按钮文本制做成不同的选项。其他的选择将会显示在一个弹出的窗口中。 XUL有一个<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code></code>元素可以实现这种效果。它是使用在一个文本框的旁边加一个按钮。选中这个名字是因为当它被选中时会弹出一个菜单。</p>
+<p>描述一个下拉列表需要三个元素。第一个是<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code></code> 元素， 在按钮的旁边创建一个文本输入框。第二，<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code>，当按钮被点击时创建并显示弹出窗口。第三，<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></code>，创建单独的选择。</p>
+<p>下面的范例很好地描述了它的语法：</p>
+<p><span id="Example_5"><a id="Example_5"></a><strong>Example 5</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_5.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_5.xul">View</a></p>
+<div class="float-right">
+ <img alt="Image:inputs2.png" class="internal" src="/@api/deki/files/2627/=Inputs2.png"></div>
+<pre>&lt;menulist label="Bus"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="Car"/&gt;
+    &lt;menuitem label="Taxi"/&gt;
+    &lt;menuitem label="Bus" selected="true"/&gt;
+    &lt;menuitem label="Train"/&gt;
+  &lt;/menupopup&gt;
+&lt;/menulist&gt;
+</pre>
+<p>这个菜单列表包括了四个项，全部都使用一个<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code></code> 元素。要显示菜单里的项，点击菜单列表中的箭头按钮。当一个被选中，它会在菜单列表中显示为选中。<code><code id="a-selected"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/selected">selected</a></code></code>属性用于设置哪个被默认选中。</p>
+<h4 id=".E5.8F.AF.E7.BC.96.E8.BE.91.E7.9A.84.E8.8F.9C.E5.8D.95.E5.88.97.E8.A1.A8" name=".E5.8F.AF.E7.BC.96.E8.BE.91.E7.9A.84.E8.8F.9C.E5.8D.95.E5.88.97.E8.A1.A8">可编辑的菜单列表</h4>
+<p>默认情况，你只可以从列表中进行选择。你不能在它上面输入你自己的文本。一个特别的菜单列表允许编辑文件框中的文本。例如，浏览器的地址输入框有一个下拉列表去选择以前输入过的地址，但你也可以输入你自己的地址。</p>
+<p>创建一个可编辑的菜单列表，像下面这样添加<code><code id="a-editable"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/editable">editable</a></code></code> 属性:</p>
+<p><span id="%E4%BE%8B6"><a id="%E4%BE%8B6"></a><strong>例6</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_6.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_6.xul">View</a></p>
+<pre>&lt;menulist editable="true"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="www.mozilla.org"/&gt;
+    &lt;menuitem label="www.xulplanet.com"/&gt;
+    &lt;menuitem label="www.dmoz.org"/&gt;
+  &lt;/menupopup&gt;
+&lt;/menulist&gt;
+</pre>
+<p>这里创建的地址输入框由三个预设的选择，用户可以从中选择或者他们可以在文本框内输入一个他们自己的地址。用户输入的文本不会添加到新的选择中。因为<code><code id="a-label"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code>属性没有用在这个例子中，默认是空的。</p>
+<p>在下一节我们将会学习<a href="/cn/XUL_教程/Progress_Meters" title="cn/XUL_教程/Progress_Meters">creating progress meters</a>。</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Numeric_Controls" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:Progress_Meters">下一页  »</a></p>
+</div><p></p>
+<p></p>

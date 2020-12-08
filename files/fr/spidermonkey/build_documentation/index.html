@@ -1,0 +1,235 @@
+---
+title: Documentation pour Build SpiderMonkey
+slug: SpiderMonkey/Build_Documentation
+tags:
+  - Documentation de build
+  - Guide
+  - SpiderMonkey
+translation_of: Mozilla/Projects/SpiderMonkey/Build_Documentation
+---
+<div>{{SpiderMonkeySidebar("General")}}</div>
+
+<h2 id="sect1"> </h2>
+
+<p>Utilisez ces instructions pour build la dernière version du code source de SpiderMonkey.</p>
+
+<p>Avant de commencer, soyez certain d'avoir les bons outils de build pour votre ordinateur: <a href="/En/Developer_Guide/Build_Instructions/Linux_Prerequisites" title="en/Linux_Build_Prerequisites">Linux</a>, <a href="/En/Developer_Guide/Build_Instructions/Windows_Prerequisites" title="en/Windows_Build_Prerequisites">Windows</a>, <a href="/En/Developer_Guide/Build_Instructions/Mac_OS_X_Prerequisites" title="en/Mac_OS_X_Build_Prerequisites">Mac</a>, <a href="/En/Developer_Guide/Build_Instructions">autres</a>. Lorsque vous buildez une version plus ancienne que le version 28, vous aurez en plus besoin de <a href="/en/NSPR" title="en/NSPR">NSPR</a>.</p>
+
+<p style="margin: 0px 0px 1.7em; padding: 0px;">Et évidemment, vous aurez besoin du <a href="/En/SpiderMonkey/Getting_SpiderMonkey_source_code#Getting_the_latest_SpiderMonkey_source_code">code source de SpiderMonkey</a>.</p>
+
+<h3 id="Build_(optimisé)_pour_les_non-développeur">Build (optimisé) pour les non-développeur</h3>
+
+<p>Utilisez ces étapes si vous désirez juste installer SpiderMonkey ou l'utiliser comme une librairie. Si vous voulez travailler à améliorer SpiderMonkey, vous devriez en plus faire le build de développeur/debug décrit un peu plus bas dans cet article.</p>
+
+<pre class="eval">cd js/src
+autoconf-2.13
+
+# Ce nom devrait se terminer par "_OPT.OBJ" pour que le système de contrôle de version l'ignore.
+mkdir build_OPT.OBJ
+cd build_OPT.OBJ
+../configure
+# Utilisez "mozmake" sur Windows
+make
+</pre>
+
+<p>Notez que la  version 2.13 d'autoconf est requise. Une version postérieure ne marchera pas. Le package <a href="/En/Developer_Guide/Build_Instructions/Windows_Prerequisites#mozillabuild" title="https://developer.mozilla.org/en/Windows_Build_Prerequisites#mozillabuild">MozillaBuild</a> pour Windows inclut autoconf 2.13.</p>
+
+<div class="note">
+<p><strong>Note</strong>: Si vous sur Mac et que vous rencontrez une erreur similaire à :</p>
+
+<p>"<code>checking whether the C compiler (gcc-4.2  ) works... no<br>
+ configure: error: installation or configuration problem: C compiler cannot create executables.</code>"</p>
+
+<p>Vous pouvez essayer de configurer ainsi:</p>
+
+<pre><code>CC=clang CXX=clang++  ../configure</code></pre>
+</div>
+
+<p>Cela build un exécutable nommé <code>js</code> dans le dossier <code>build-release/dist/bin</code>. Vous pourrez tester avec <code>dist/bin/js --help</code>, ce qui affiche une page d'aide. À ce stade, vous êtes prêt à <a href="/En/SpiderMonkey/Introduction_to_the_JavaScript_shell">lancer et essayer le shell</a>.</p>
+
+<p>Sur Mac, Linux ou Unix, vous pouvez installer SpiderMonkey sur votre système avec la commande additionnelle <code>make install</code>. Cette commande installe la librairie partagée dans <code>/usr/local/lib</code>, les fichiers hearder de C dans<code> /usr/local/include</code>, et l'exécutable js dans <code>/usr/local/bin</code>.</p>
+
+<h3 id="Build_pour_développeur_(debug)">Build pour développeur (debug)</h3>
+
+<p>Pour développer ou debug SpiderMonkey, c'est mieux d'avoir aussi bien un build de debug( pour du debug de tous les jours) qu'une version optimisée du build (pour des tests de performance), dans des dossiers de build séparés. Pour ce faire, un plus des étapes au dessus, vous devriez céer un build de debug en suivant les instructions ci-après:</p>
+
+<pre class="eval">cd js/src
+autoconf-2.13
+
+# Ce nom devrait se terminer par "_DBG.OBJ" pour que le système de gestion de version l'ignore.
+mkdir build_DBG.OBJ
+cd build_DBG.OBJ
+../configure --enable-debug --disable-optimize
+# Utilisez "mozmake" sur Windows
+make
+</pre>
+
+<p>Vous pouvez aussi build des versions de debug avec l'option <code>JS_GC_ZEAL</code>, ce qui ajoute une nouvelle fonction incorporée à SpiderMonkey qui vous permet de configurer zealous garbage collection. Cette fonction vous permet de debug les fuites de mémoire et autres problèmes liés à la mémoire. Voir <a class="internal" href="/en/SpiderMonkey/JSAPI_Reference/JS_SetGCZeal" title="En/SpiderMonkey/JSAPI Reference/JS SetGCZeal"><code>JS_SetGCZeal()</code></a> pour plus de détails.</p>
+
+<p>Pour la liste des autres options de build disponible, tapez (considérant que le dossier courant est un des dossiers de build créés plus haut):</p>
+
+<pre class="eval">../configure --help
+</pre>
+
+<h3 id="Building" name="Building">Les Builds de Windows</h3>
+
+<div class="note">
+<p>Depuis la version 28, les builds <strong>threadsafe sont les builds par défaut,</strong> et devraient fonctionner tels quels sur toutes les platformes POSIX. De fait, les instructions suivantes devraient fonctionner si vous êtes sur Windows ou que vous compilez une ancienne version de SpiderMonkey.</p>
+</div>
+
+<p>Le fichier batch <a href="https://wiki.mozilla.org/MozillaBuild">MozillaBuild</a> que vous utiliserai pour ouvrir le shell (ex. <code>start-shell-msvc2013.bat</code> ou <code>start-shell-msvc2013-x64.bat</code>) détermine si le compilateur ciblera un build 32-bit ou 64-bit builds. Pour créer un build 64-bits, notez qu'il faudra configurer avec <code>--target=x86_64-pc-mingw32 --host=x86_64-pc-mingw32</code>.</p>
+
+<p>Puisque l'émulation de POSIX NSPR n'est pas disponible pour Windows, une version fonctionnelle de NSPR doit être disponible pour votre build. <strong>L'option la plus simple est de configurer avec <code>--enable-nspr-build.</code></strong> Cette option de configuration permet de build la version in-tree de NSPR qui est probablement ce que vous recherchez. Parce que SpiderMonkey utilise des symboles récents, le NSPR livré avec votre système d'expoloitation ne fonctionnera probablement pas.</p>
+
+<p>Si <code>--enable-nspr-build</code> ne marche pas, dites explcitement à <code>configure</code> où trouver NSPR en utilisant les options de configuration<code> --with-nspr-cflags</code> et <code>--with-nspr-libs</code>. Par exemple, considérant que votre NSPR local a été installé à <code>C:/mozilla-build/msys/local</code>:</p>
+
+<pre><span style="line-height: normal;"><code><span style="line-height: normal;"><code><code>./configure<code> --with-nspr-cflags="-IC:/mozilla-build/msys/local/include" \
+            --with-nspr-libs="<span style="line-height: normal;"><code><span style="line-height: normal;"><code><code><code>C:/mozilla-build/msys/local</code></code></code></span></code></span>/lib/libnspr4.a \
+                              <span style="line-height: normal;"><code><span style="line-height: normal;"><code><code><code>C:/mozilla-build/msys/local</code></code></code></span></code></span>/lib/libplds4.a \
+                              <span style="line-height: normal;"><code><span style="line-height: normal;"><code><code><code>C:/mozilla-build/msys/local</code></code></code></span></code></span>/lib/libplc4.a"</code>
+</code></code></span></code></span></pre>
+
+<p>Si vous avez des erreurs de chargement de symbole ou librairie dynamique, vous pourrez forcer le NSPR correct à charger avec :</p>
+
+<pre><span style="line-height: normal;">PATH="$PATH;<span style="line-height: normal;">C:/mozilla-build/msys/local/lib/</span><span style="line-height: normal;">" ./js</span></span></pre>
+
+<h2 id="Spécifier_les_dossiers_d'installation">Spécifier les dossiers d'installation</h2>
+
+<p><code>make install</code> met par défaut les fichiers dans les dossiers suivants. Vous pouvez modifier ce comportement en passant des options au script <code>configure</code> :</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Types de fichiers</th>
+   <th>Localisation</th>
+   <th>option de <code>configure</code></th>
+  </tr>
+  <tr>
+   <td>exécutables, scripts shell</td>
+   <td><code>/usr/local/bin</code></td>
+   <td><code>--bindir</code></td>
+  </tr>
+  <tr>
+   <td>librairies, données</td>
+   <td><code>/usr/local/lib</code></td>
+   <td><code>--libdir</code></td>
+  </tr>
+  <tr>
+   <td>données communes, indépendantes d'une architecture</td>
+   <td><code>/usr/local/share</code></td>
+   <td><code>--sharedir</code></td>
+  </tr>
+  <tr>
+   <td>header des fichiers C</td>
+   <td><code>/usr/local/include</code></td>
+   <td><code>--includedir</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Vous pouvez aussi passer au script <code>configure</code> une option de la forme <code>--prefix=&lt;PREFIXDIR&gt;</code>, ce qui remplace <code>&lt;PREFIXDIR&gt;</code> par <code>/usr/local</code> dans toutes les configuration au dessus, en une étape. C'est souvent la solution la plus simple à faire puisqu'il préserve l'arrangement de base de <code>lib</code>, <code>bin</code>, et du reste.</p>
+
+<div class="note"><strong>Note:</strong> Tous les dossiers que vous passez au script <code>configure</code> sont enregistrés dans le makefile généré, alors vous n'aurez pas à les spécifiés à nouveau that que vous ne relancez pas <code>configure</code>.</div>
+
+<h2 id="Building_SpiderMonkey_as_a_static_library">Building SpiderMonkey as a static library</h2>
+
+<p>By default, SpiderMonkey builds as a shared library. However, you can build SpiderMonkey as a static library by specifying the <code>--disable-shared-js</code> flag when you run <code>configure</code>.</p>
+
+<h2 id="Specifying_compilers_and_compiler_flags">Specifying compilers and compiler flags</h2>
+
+<p>If you want to use a compiler other than the one the <code>configure</code> script chooses for you by default, you can set the <code>CXX</code> variable in the environment when you run <code>configure</code>. This will save the values you specify in the generated makefile, so once you've set it, you don't need to do so again until you re-run <code>configure</code>.</p>
+
+<p>If you'd like to pass certain flags to the compiler, you can set the <code>CXXFLAGS</code> environment variable when you run <code>configure</code>. For example, if you're using the GNU toolchain, the following will pass the <code>-g3</code> flag to the compiler, causing it to emit debug information about macros. Then you can use those macros in <code>gdb</code> commands:</p>
+
+<pre class="eval">$ <strong>CXXFLAGS=-g3 $SRC/configure</strong>
+<em>...</em>
+checking whether the C++ compiler (c++ -g3 ) works... yes
+<em>...</em>
+$
+</pre>
+
+<p>To build a 32-bit version on a 64-bit Linux system, you can use the following:</p>
+
+<pre class="eval">PKG_CONFIG_LIBDIR=/usr/lib/pkgconfig CC="gcc -m32" CXX="g++ -m32" AR=ar $SRC/configure --target=i686-pc-linux
+</pre>
+
+<p>To build a 64-bit version on a 32-bit Mac system (e.g. Mac OS X 10.5), you can use the following:</p>
+
+<pre class="eval">AR=ar CC="gcc -m64" CXX="g++ -m64" ../configure --target=x86_64-apple-darwin10.0.0
+</pre>
+
+<p>To build a 64-bit Windows version, you can use the following:</p>
+
+<pre class="eval">$SRC/configure --host=x86_64-pc-mingw32 --target=x86_64-pc-mingw32
+</pre>
+
+<div class="note"><strong>Note:</strong> You must have started your MozillaBuild shell with the proper -x64.bat script in order for the 64-bit compilers to be in your PATH.</div>
+
+<p>Whatever compiler and flags you pass to <code>configure</code> are recorded in the generated makefile, so you don't need to specify them again until you re-run <code>configure</code>.</p>
+
+<h2 id="Building_your_application">Building your application</h2>
+
+<p>While "How to build your complete application" is clearly out of scope for this document, here are some tips that will help get you on your way:</p>
+
+<ul>
+ <li>The SpiderMonkey developers frequently and deliberately change the JSAPI ABI. You cannot use headers built for one version/configuration of JSAPI to create object files which will be linked against another.</li>
+ <li>Support for JS_THREADSAFE was recently removed, and threadsafe builds are now enabled by default.</li>
+ <li>The <code>js-config</code> script, described below, is the recommended way to determine correct include paths, required libraries, etc. for your embedding to use during compilation. We highly recommend calling the <code>js-config</code> script from your embedding's makefile to set your CFLAGS, LDFLAGS, and so forth.</li>
+ <li>To install SpiderMonkey somewhere other than the default, you must use the <code>configure</code> <code>--prefix</code> option, as described above. Failure to do so may break your <code>js-config.h</code> header or <code>js-config</code> script.</li>
+ <li>Some features detected by the <code>configure</code> script do not work for cross-compilation.</li>
+</ul>
+
+<h3 id="Using_the_js-config_script">Using the js-config script</h3>
+
+<p>In addition to the SpiderMonkey libraries, header files, and shell, the SpiderMonkey build also produces a shell script named <code>js-config</code> which other build systems can use to find out how to compile code using the SpiderMonkey APIs, and how to link with the SpiderMonkey libraries.</p>
+
+<div class="note"><strong>Note:</strong> In SpiderMonkey 1.8.5, the js-config script is not generated properly on many platforms. If the instructions below do not work, you can try this <a href="/en/SpiderMonkey/1.8.5#js-config" title="https://developer.mozilla.org/en/SpiderMonkey/1.8.5#js-config">workaround</a>.</div>
+
+<p>When invoked with the <code>--cflags</code> option, <code>js-config</code> prints the flags that you should pass to the C compiler when compiling files that use the SpiderMonkey API. These flags ensure the compiler will find the SpiderMonkey header files.</p>
+
+<pre class="eval">$ ./js-config --cflags # Example output: -I/usr/local/include/js -I/usr/include/nspr
+</pre>
+
+<p>When invoked with the <code>--libs</code> option, <code>js-config</code> prints the flags that you should pass to the C compiler when linking an executable or shared library that uses SpiderMonkey. These flags ensure the compiler will find the SpiderMonkey libraries, along with any libraries that SpiderMonkey itself depends upon (like NSPR).</p>
+
+<pre class="eval">$ ./js-config --libs # Example output: -L/usr/local/lib -lmozjs -L/usr/lib -lplds4 -lplc4 -lnspr4 -lpthread -ldl -ldl -lm  -lm -ldl</pre>
+
+<h2 id="Test" name="Test">Testing SpiderMonkey</h2>
+
+<ul>
+ <li>
+  <p>Run <code>${BUILDDIR}/dist/bin/js </code><code>Y.js</code> and check if appropriate output is printed. (It should say: <code>5! is 120</code>.)</p>
+ </li>
+ <li>
+  <p>Run the main test suite by running <code>./tests/jstests.py ${BUILDDIR}/dist/bin/js</code></p>
+ </li>
+ <li>
+  <p>Run JIT-specific tests by running: <code>./jit-test/jit_test.py ${BUILDDIR}/dist/bin/js</code></p>
+ </li>
+</ul>
+
+<h2 id="Building_SpiderMonkey_1.8_or_earlier">Building SpiderMonkey 1.8 or earlier</h2>
+
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 1.286em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;">Use these instructions to build SpiderMonkey from an official source release or from the old CVS repository. To build the latest SpiderMonkey sources from Mercurial, see <a href="#Building_SpiderMonkey_tip" style="text-decoration: none; color: rgb(51, 102, 153) !important; cursor: default;">Building SpiderMonkey </a>above.</p>
+
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 1.286em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;"><a href="/en/SpiderMonkey" style="text-decoration: none; color: rgb(51, 102, 153) !important; cursor: default;" title="en/SpiderMonkey">SpiderMonkey</a> is easy to build from source if you have the usual Mozilla build prerequisites installed. Before you begin, make sure you have right build tools for your computer: <a href="/En/Developer_Guide/Build_Instructions/Linux_Prerequisites" style="text-decoration: none; color: rgb(51, 102, 153) !important; cursor: default;" title="en/Linux_Build_Prerequisites">Linux</a>, <a href="/En/Developer_Guide/Build_Instructions/Windows_Prerequisites" style="text-decoration: none; color: rgb(51, 102, 153) !important; cursor: default;" title="en/Windows_Build_Prerequisites">Windows</a>, <a href="/En/Developer_Guide/Build_Instructions/Mac_OS_X_Prerequisites" style="text-decoration: none; color: rgb(51, 102, 153) !important; cursor: default;" title="en/Mac_OS_X_Build_Prerequisites">Mac</a>, <a href="/En/Developer_Guide/Build_Instructions" style="text-decoration: none; color: rgb(51, 102, 153) !important; cursor: default;" title="en/Build_Documentation">others</a>.</p>
+
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 1.286em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;">First, download a SpiderMonkey source distribution, such as <a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/js/js-1.8.0-rc1.tar.gz" style="text-decoration: none; color: rgb(51, 102, 153) !important; cursor: default;">SpiderMonkey 1.8 Release Candidate 1</a>.</p>
+
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 1.286em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;">To build, use these commands:</p>
+
+<pre class="eval" style="margin-top: 0px; margin-right: 0px; margin-bottom: 1.286em; margin-left: 0px; padding-top: 15px; padding-right: 15px; padding-bottom: 15px; padding-left: 15px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: dotted; border-right-style: dotted; border-bottom-style: dotted; border-left-style: dotted; background-clip: initial; background-color: rgb(246, 246, 242); font: normal normal normal 100%/normal 'Courier New', 'Andale Mono', monospace;">tar xvzf js-1.8.0-rc1.tar.gz
+cd js/src
+make -f Makefile.ref
+</pre>
+
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 1.286em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;">This builds a debug version of SpiderMonkey. All build files are created in a subdirectory named depending on your system (for example,<code style="font: normal normal normal 100%/normal 'Courier New', 'Andale Mono', monospace; color: inherit; font-weight: inherit;">Linux_All_DBG.OBJ</code> if you are on Linux). To install this build on your system, see <a class="external" href="http://ebixio.com/blog/2010/07/31/how-to-install-libjs-spidermonkey/" style="text-decoration: none; color: rgb(51, 102, 153) !important; cursor: default;" title="http://ebixio.com/blog/2010/07/31/how-to-install-libjs-spidermonkey/">SpiderMonkey installation instructions</a>.</p>
+
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 1.286em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;">To build an optimized (non-debug) version of SpiderMonkey:</p>
+
+<pre class="eval" style="margin-top: 0px; margin-right: 0px; margin-bottom: 1.286em; margin-left: 0px; padding-top: 15px; padding-right: 15px; padding-bottom: 15px; padding-left: 15px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: dotted; border-right-style: dotted; border-bottom-style: dotted; border-left-style: dotted; background-clip: initial; background-color: rgb(246, 246, 242); font: normal normal normal 100%/normal 'Courier New', 'Andale Mono', monospace;">make BUILD_OPT=1 -f Makefile.ref</pre>
+
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 1.286em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;">To build a <a href="/en/SpiderMonkey/JSAPI_Reference/JS_THREADSAFE" style="text-decoration: none; color: rgb(51, 102, 153) !important; cursor: default;" title="JS_THREADSAFE">thread-safe</a> version of SpiderMonkey:</p>
+
+<pre class="eval" style="margin-top: 0px; margin-right: 0px; margin-bottom: 1.286em; margin-left: 0px; padding-top: 15px; padding-right: 15px; padding-bottom: 15px; padding-left: 15px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: dotted; border-right-style: dotted; border-bottom-style: dotted; border-left-style: dotted; background-clip: initial; background-color: rgb(246, 246, 242); font: normal normal normal 100%/normal 'Courier New', 'Andale Mono', monospace;">make JS_DIST=/full/path/to/directory/containing/nspr JS_THREADSAFE=1 -f Makefile.ref
+</pre>

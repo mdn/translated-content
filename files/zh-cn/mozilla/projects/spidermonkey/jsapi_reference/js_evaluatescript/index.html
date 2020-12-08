@@ -1,0 +1,69 @@
+---
+title: SpiderMonkey/JSAPI_参考/JS_EvaluateScript
+slug: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_EvaluateScript
+translation_of: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_EvaluateScript
+---
+<p>编译并执行一个脚本。</p>
+<h2 id="Syntax" name="Syntax">语法</h2>
+<pre class="eval"><a href="/En/SpiderMonkey/JSAPI_Reference/JSBool" title="en/JSBool">JSBool</a> <strong>JS_EvaluateScript</strong>(<a href="/en/SpiderMonkey/JSAPI_Reference/JSRuntime" title="en/JSRuntime">JSContext</a> *cx, <a href="/en/SpiderMonkey/JSAPI_Reference/JSObject" title="en/JSObject">JSObject</a> *obj,
+    const char *src, <a href="/en/SpiderMonkey/JSAPI_Reference/jsint" title="en/jsint">uintN</a> length, const char *filename,
+    <a href="/en/SpiderMonkey/JSAPI_Reference/jsint" title="en/jsint">uintN</a> lineno, <a href="/En/SpiderMonkey/JSAPI_Reference/Jsval" title="en/jsval">jsval</a> *rval);
+
+<a href="/En/SpiderMonkey/JSAPI_Reference/JSBool" title="en/JSBool">JSBool</a> <strong>JS_EvaluateUCScript</strong>(<a href="/en/SpiderMonkey/JSAPI_Reference/JSRuntime" title="en/JSRuntime">JSContext</a> *cx, <a href="/en/SpiderMonkey/JSAPI_Reference/JSObject" title="en/JSObject">JSObject</a> *obj,
+    const <a href="/en/SpiderMonkey/JSAPI_Reference/jschar" title="en/jschar">jschar</a> *src, <a href="/en/SpiderMonkey/JSAPI_Reference/jsint" title="en/jsint">uintN</a> length, const char *filename,
+    <a href="/en/SpiderMonkey/JSAPI_Reference/jsint" title="en/jsint">uintN</a> lineno, <a href="/En/SpiderMonkey/JSAPI_Reference/Jsval" title="en/jsval">jsval</a> *rval);
+</pre>
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>名称</th>
+   <th>数据类型</th>
+   <th>描述</th>
+  </tr>
+  <tr>
+   <td><code>cx</code></td>
+   <td><code><a href="/en/SpiderMonkey/JSAPI_Reference/JSRuntime" title="en/JSRuntime">JSContext</a> *</code></td>
+   <td>脚本运行的上下文. {{ Jsapi-requires-request() }}</td>
+  </tr>
+  <tr>
+   <td><code>obj</code></td>
+   <td><code><a href="/en/SpiderMonkey/JSAPI_Reference/JSObject" title="en/JSObject">JSObject</a> *</code></td>
+   <td>The scope in which to execute the script. This parameter is documented in detail at <code><a href="/en/SpiderMonkey/JSAPI_Reference/JS_ExecuteScript" title="en/JS_ExecuteScript">JS_ExecuteScript</a></code>.</td>
+  </tr>
+  <tr>
+   <td><code>src</code></td>
+   <td><code>const char *</code> <em>or</em> <code>const <a href="/en/SpiderMonkey/JSAPI_Reference/jschar" title="en/jschar">jschar</a> *</code></td>
+   <td>包含要编译和执行的脚本的字符串.</td>
+  </tr>
+  <tr>
+   <td><code>length</code></td>
+   <td><code><a href="/en/SpiderMonkey/JSAPI_Reference/jsint" title="en/jsint">uintN</a></code></td>
+   <td><code>src的长度</code>, in characters.</td>
+  </tr>
+  <tr>
+   <td><code>filename</code></td>
+   <td><code>const char *</code></td>
+   <td>Name of file or URL containing the script. Used to report filename or URL in error messages.</td>
+  </tr>
+  <tr>
+   <td><code>lineno</code></td>
+   <td><code><a href="/en/SpiderMonkey/JSAPI_Reference/jsint" title="en/jsint">uintN</a></code></td>
+   <td>Line number. Used to report the offending line in the file or URL if an error occurs.</td>
+  </tr>
+  <tr>
+   <td><code>rval</code></td>
+   <td><code><a href="/En/SpiderMonkey/JSAPI_Reference/Jsval" title="en/jsval">jsval</a> *</code></td>
+   <td>Out parameter. On success, <code>*rval</code> receives the value of the last-executed expression statement processed in the script.</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Description" name="Description">描述</h2>
+<p><code>JS_EvaluateScript</code> compiles and executes a script in the specified scope, <code>obj</code>. On successful completion, <code>rval</code> is a pointer to a variable that holds the value from the last executed expression statement processed in the script. <code>JS_EvaluateUCScript</code> is the Unicode version of the function.</p>
+<p><code>src</code> is the string containing the text of the script. <code>length</code> indicates the size of the text version of the script in characters.</p>
+<p><code>filename</code> is the name of the file (or URL) containing the script. This information is used in messages if an error occurs during compilation. Similarly, <code>lineno</code> is used to report the line number of the script or file where an error occurred during compilation.</p>
+<p>If a script compiles and executes successfully, <code>*rval</code> receives the value from the last-executed expression statement in the script, and <code>JS_EvaluateScript</code> or <code>JS_EvaluateUCScript</code> returns <code>JS_TRUE</code>. Otherwise it returns <code>JS_FALSE</code> and the value left in <code>*rval</code> is undefined.</p>
+<h2 id="See_Also" name="See_Also">See Also</h2>
+<p>{{ LXRSearch("ident", "i", "JS_EvaluateScript") }}<br>
+ {{ LXRSearch("ident", "i", "JS_EvaluateUCScript") }}</p>
+<p><a href="/en/SpiderMonkey/JSAPI_Reference/JS_CompileFile" title="en/JS_CompileFile">JS_CompileFile</a>, <a href="/en/SpiderMonkey/JSAPI_Reference/JS_CompileScript" title="en/JS_CompileScript">JS_CompileScript</a>, <a href="/en/SpiderMonkey/JSAPI_Reference/JS_DecompileScript" title="en/JS_DecompileScript">JS_DecompileScript</a>, <a href="/en/SpiderMonkey/JSAPI_Reference/JS_DestroyScript" title="en/JS_DestroyScript">JS_DestroyScript</a>, <a href="/en/SpiderMonkey/JSAPI_Reference/JS_EvaluateScriptForPrincipals" title="en/JS_EvaluateScriptForPrincipals">JS_EvaluateScriptForPrincipals</a></p>
+<p>{{ languages( { "ja": "ja/JS_EvaluateScript" } ) }}</p>

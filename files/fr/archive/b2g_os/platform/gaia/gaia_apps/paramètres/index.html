@@ -1,0 +1,112 @@
+---
+title: Paramètres
+slug: Archive/B2G_OS/Platform/Gaia/Gaia_apps/Paramètres
+tags:
+  - Applications
+  - B2G
+  - Firefox OS
+  - Gaia
+  - JavaScript
+  - Paramètres
+translation_of: Archive/B2G_OS/Platform/Gaia/Gaia_apps/Settings
+---
+<div class="summary">
+<p><span class="seoSummary">L'application Paramètres permet aux utilisateurs de configurer les paramètres de leur appareil et répond aux activités entrantes qui autorisent les développeurs à afficher des vues spécifiques de paramètres (par exemple afficher le panneau des paramètres wifi si aucune connexion réseau n'est disponible). Cet article explique comment cela fonctionne.</span></p>
+</div>
+
+<h2 id="mozSettings_API_et_association_de_données">mozSettings API et association de données</h2>
+
+<p>Techniquement, l'application Paramètres est l'interface utilisateur qui leur fournit l'accès certifié à <a href="/en-US/docs/Web/API/Navigator.mozSettings">l'API window.navigator.mozSettings</a>.</p>
+
+<p>L'application Paramètres gère automatiquement les opérations de paramétrage basique comme les champs d'association de données et les valeurs mozSettings — toutes les opérations basiques comme basculer un paramètre ou changer une valeur d'entrée vont aussi modifier la valeur mozSettings associée.</p>
+
+<p>L'API <code>window.navigator.mozSettings</code> accède depuis Gecko aux données paramètres. L'utilisation ressemble à ceci pour mettre à jour les données :</p>
+
+<pre class="brush: js">navigator.mozSettings.createLock().set(values);</pre>
+
+<div class="note">
+<p><strong>Note</strong>: Il faut utiliser <code>createLock()</code> pour verrouiller les paramètres avant de lire ou écrire des valeurs <code>mozSettings</code>.</p>
+</div>
+
+<p>Pour récupérer les données, il est possible d'utiliser un appel de fonction get et set pour effectuer des opérations sur les données :</p>
+
+<pre class="brush: js">var reqTimerGoBack =
+window.navigator.mozSettings.createLock().get('icc.goBackTimeout');
+reqTimerGoBack.onsuccess = function icc_getTimerGoBackSuccess() {
+  goBackTimer.timeout = reqTimerGoBack.result['icc.goBackTimeout'];
+    ...
+};</pre>
+
+<p>La donnée est stockée dans un emplacement <code>instance.result</code>.</p>
+
+<p>Depuis Firefox OS 2.0, une seule instance <code>mozSettings</code> peut être réutilisée via <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/settings/js/modules/settings_cache.js">js/modules/settings_cache.js </a>:</p>
+
+<pre class="brush: js">var SettingsCache = require('modules/settings_cache');
+
+SettingsCache.getSettings(function(result){
+  var onlineSupportTitle = result['support.onlinesupport.title'];
+    ...
+});</pre>
+
+<h2 id="Navigation">Navigation</h2>
+
+<p>Quand les utilisateurs ouvrent l'application Paramètres, ils voient plusieurs panneaux sur la page de vue d'ensemble, qui sont des pages indépendantes fonctionnellement. <code>SettingsService.navigate</code> (<a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/settings/js/modules/settings_service.js">js/module/settings_service.js</a>) contrôle la navigation entre ces pages.</p>
+
+<div class="note">
+<p><strong>Note</strong>: Pour les panneaux légaux (qui ne sont pas portés par la nouvelle structure), settings.currentPanel est utilisé à la place de SettingsService.navigate pour naviguer entre les panneaux.</p>
+</div>
+
+<p>Puisque Firefox OS sera supporté sur les tablettes et appareils mobiles, l'application Paramètres possède deux types d'implémentation de modèle de navigation :</p>
+
+<ul>
+ <li>Une colonne (pour les mobiles)</li>
+ <li>Deux colonnes (pour les tablettes)</li>
+</ul>
+
+<p>Tant qu'il est appelé, <code>SettingsService.navigate</code> détermine quel modèle de navigation utiliser grâce au code suivant :</p>
+
+<pre class="brush: js">if (_isTabletAndLandscape()) {
+  PageTransitions.twoColumn(oldPanel, newPanel, callback);
+} else {
+  PageTransitions.oneColumn(oldPanel, newPanel, callback);
+}</pre>
+
+<h2 id="Panneaux">Panneaux</h2>
+
+<p>Depuis bien avant Firefox OS 2.0, la structure basique d'un panneau est définie dans <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/settings/js/modules/panel.js">js/modules/panel.js</a>. Il définit six statistiques de cycle de vie :</p>
+
+<ul>
+ <li><code>init</code></li>
+ <li><code>beforeShow</code></li>
+ <li><code>show</code></li>
+ <li><code>hide</code></li>
+ <li><code>beforeHide</code></li>
+ <li><code>uninit</code></li>
+</ul>
+
+<p>Tous les nouveaux panneaux de paramètres héritent de <code>SettingsPanel</code>, qui étend les fonctionnalités de <code>Panel</code>. Le code est contenu dans <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/settings/js/modules/settings_panel.js">js/modules/settings_panel.js</a>:</p>
+
+<pre class="brush: js">onInit: function(panel, initOptions) {
+  ...
+
+  PanelUtils.activate(panel);
+},
+
+onBeforeShow: function(panel, beforeShowOptions) {
+  // Preset the panel every time when it is presented.
+  PanelUtils.preset(panel);
+  _addListeners(panel);
+  ...
+},</pre>
+
+<p><code>PanelUtils.activate</code> — défini dans <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/settings/js/modules/panel_utils.js">js/modules/panel_utils.js</a> — est utilisé pour parser tous les liens dans le panneau et ajoute les handlers corresponsants dans la statistique <code>onInit</code>, et <code>PanelUtils.preset</code> est utilisé pour prérégler les éléments avec les valeurs de paramétrage dans la statistique <code>onBeforeShow</code>.</p>
+
+<p>Tous les nouveaux paramètres sont définis dans le dossier <a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/settings/js/panels">js/panels</a>.</p>
+
+<h2 id="Module_AMD_et_optimisation_du_temps_de_compilation">Module AMD et optimisation du temps de compilation</h2>
+
+<p>Depuis bien avant Firefox OS 2.0, l'application Paramètres utilise le <a href="http://en.wikipedia.org/wiki/Asynchronous_module_definition">AMD modules pattern</a> pour implémenter chaque panneau. Les modules AMD modules sont chargés via <a href="https://github.com/requirejs/alameda">Alemeda</a> (une version plus légère de <a href="http://requirejs.org/">RequireJS</a>) et compilés/optimisés avec <code>r.js</code> (l'optimiseur RequireJS). L'application Paramètres a toujours des dépendances sur des fichiers (<a href="https://github.com/mozilla-b2g/gaia/tree/master/shared/js">shared/js</a>) qui ne sont pas des modules AMD. Pour ces derniers, il faut utiliser les options <code>shim</code> définies dans <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/settings/js/config/require.js">settings/js/config/require.js</a>.</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<p>Le <a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/settings">README Settings app has a build-in</a> qui est utile pour aller plus loin sur les Paramètres (principalement écrit par Arthur Chen et Fred Lin).</p>

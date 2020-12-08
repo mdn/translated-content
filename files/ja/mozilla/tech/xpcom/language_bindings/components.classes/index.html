@@ -1,0 +1,109 @@
+---
+title: Components.classes
+slug: Mozilla/Tech/XPCOM/Language_Bindings/Components.classes
+tags:
+  - 'XPCOM:Language Bindings'
+  - XPConnect
+translation_of: Mozilla/Tech/XPCOM/Language_Bindings/Components.classes
+---
+<p> </p>
+
+<p><code>Components.classes</code> は、プロパティが <a href="ja/ContractID">ContractID</a> によって索引付けされたクラスである、読み出し専用オブジェクトです。</p>
+
+<h2 id=".E3.81.AF.E3.81.98.E3.82.81.E3.81.AB" name=".E3.81.AF.E3.81.98.E3.82.81.E3.81.AB">はじめに</h2>
+
+<p><code>Components.classes</code> は、<a href="ja/NsIJSCID">nsIJSCID</a> インターフェースを実装した読み出し専用オブジェクトです。それぞれのオブジェクトは、<a href="ja/XPCOM">XPCOM</a> サービスとして構築またはアクセスされうる XPCOM コンポーネントのクラスのひとつを表します。</p>
+
+<p>このオブジェクトのプロパティは、コンポーネントクラスの ContractID (または人間が読める形式の名前) で索引付けされています。</p>
+
+<p>All of the properties and methods of the nsIJSCID and its ancestor interface <a href="ja/NsIJSID">nsIJSID</a> are available for use on the objects contained in this object.</p>
+
+<p><strong>Note</strong> that <code>Components.classes</code> reflects only those component classes that have been previously installed and registered with the component manager using ContractIDs. If you want to use a class which was only registered with their <a href="ja/CID">CID</a>, use <code><a href="ja/Components.classesByID">Components.classesByID</a></code> instead of <code>Components.classes</code> to retrieve it.</p>
+
+<p>あるマシンには ContractID を指定されたアドオンコンポーネントが存在し、別のマシンにはインストールされていないこともあり得ます。Components.classes は、以前にインストールされ ProgId を用いてコンポーネントマネージャに登録されたコンポーネントクラスのみを反映します。ですから、あるマシンには ProgID を指定されたアドオンコンポーネントが存在し、別のマシンにはインストールされていないこともあり得ます。<code>Components.classes</code> オブジェクトに与えられた要素がそのマシンに登録されていない場合、その要素にアクセスを試みると、ストリクトモードでは JavaScript の警告が生成され、戻り値は JavaScript の <code><a href="ja/Core_JavaScript_1.5_Reference/Global_Properties/undefined">undefined</a></code> になります。要素にアクセスする際は、あらかじめ <code><a href="ja/Core_JavaScript_1.5_Reference/Operators/Special_Operators/in_Operator">in</a></code> オペレータを使って、その要素をテストするべきです。</p>
+
+<pre class="eval">if (!("@some/bogus/class;1" in Components.classes))
+  // do something...
+</pre>
+
+<p><code>Components.classes</code> オブジェクトのプロパティは <code><a href="ja/Core_JavaScript_1.5_Reference/Statements/for...in">for...in</a></code> ループを使って列挙できます。</p>
+
+<h2 id=".E4.BD.BF.E3.81.84.E6.96.B9" name=".E4.BD.BF.E3.81.84.E6.96.B9">使い方</h2>
+
+<h3 id=".E4.B8.8E.E3.81.88.E3.82.89.E3.82.8C.E3.81.9F_ContractID_.E3.81.AE.E3.81.9F.E3.82.81.E3.81.AE.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E3.82.92.E5.8F.96.E5.BE.97.E3.81.99.E3.82.8B" name=".E4.B8.8E.E3.81.88.E3.82.89.E3.82.8C.E3.81.9F_ContractID_.E3.81.AE.E3.81.9F.E3.82.81.E3.81.AE.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E3.82.92.E5.8F.96.E5.BE.97.E3.81.99.E3.82.8B">与えられた ContractID のためのオブジェクトを取得する</h3>
+
+<p>In order to retrieve the object for a given ContractID, you can query the <code>Components.classes</code> array as follows:</p>
+
+<pre class="eval">var clazz0 = Components.classes["@mozilla.org/preferences;1"];
+var clazz1 = Components.classes["@mozilla.org/messenger;1"];
+</pre>
+
+<p>The first line will return you the class object for the ContractID <code>@mozilla.org/preferences;1</code>, the second line will return you the class object for the ContractID <code>@mozilla.org/messenger;1</code>.</p>
+
+<div class="note">
+<p>It may be helpful to abbreviate <code>Components.classes</code> by storing a reference to the object as a constant:</p>
+
+<pre class="eval">// use whatever name suits your fancy -- Cc is probably the most common abbreviation
+const Cc = Components.classes;
+const C = Components.classes;
+
+var clazz0 = Cc["@mozilla.org/preferences;1"];
+var clazz1 = C["@mozilla.org/messenger;1"];
+</pre>
+</div>
+
+<h3 id="XPCOM_.E3.82.B3.E3.83.B3.E3.83.9D.E3.83.BC.E3.83.8D.E3.83.B3.E3.83.88.E3.81.AE.E3.82.A4.E3.83.B3.E3.82.B9.E3.82.BF.E3.83.B3.E3.82.B9.E3.82.92.E4.BD.9C.E6.88.90.E3.81.99.E3.82.8B" name="XPCOM_.E3.82.B3.E3.83.B3.E3.83.9D.E3.83.BC.E3.83.8D.E3.83.B3.E3.83.88.E3.81.AE.E3.82.A4.E3.83.B3.E3.82.B9.E3.82.BF.E3.83.B3.E3.82.B9.E3.82.92.E4.BD.9C.E6.88.90.E3.81.99.E3.82.8B">XPCOM コンポーネントのインスタンスを作成する</h3>
+
+<p>An XPCOM component instance can be created from the returned class object as follows:</p>
+
+<pre class="eval">var clazz = Components.classes["@mozilla.org/messenger;1"];
+var obj   = clazz.createInstance();
+</pre>
+
+<p><code>createInstance()</code> calls will return <a href="ja/XPConnect">XPConnect</a> wrappers for these native objects which only expose the methods of the <a href="ja/NsISupports">nsISupports</a> interface. This is because the specific interface on the component that the caller desires has not been specified. Specifying that interface is done using the properties of the <code><a href="ja/Components.interfaces">Components.interfaces</a></code> object:</p>
+
+<pre class="eval">var obj = Components.classes["@mozilla.org/supports-array;1"]
+                    .createInstance(Components.interfaces.nsISupportsArray);
+</pre>
+
+<p>which is equivalent to:</p>
+
+<pre class="eval">var obj = Components.classes["@mozilla.org/supports-array;1"];
+                    .createInstance()
+                    .QueryInterface(Components.interfaces.nsISupportsArray);
+</pre>
+
+<p>Alternatively, you can use the <code><a href="ja/Core_JavaScript_1.5_Reference/Operators/Special_Operators/new_Operator">new</a></code> operator on the class object to create a new instance of that class:</p>
+
+<pre class="eval">var clazz = Components.classes["@mozilla.org/supports-array;1"];
+var inst  = new clazz(Components.interfaces.nsISupportsArray);
+</pre>
+
+<p>This implicitly calls the <code>createInstance()</code> method for you.</p>
+
+<h3 id="XPCOM_.E3.82.B5.E3.83.BC.E3.83.93.E3.82.B9.E3.82.B3.E3.83.B3.E3.83.9D.E3.83.BC.E3.83.8D.E3.83.B3.E3.83.88.E3.81.B8.E3.81.AE.E3.82.A2.E3.82.AF.E3.82.BB.E3.82.B9" name="XPCOM_.E3.82.B5.E3.83.BC.E3.83.93.E3.82.B9.E3.82.B3.E3.83.B3.E3.83.9D.E3.83.BC.E3.83.8D.E3.83.B3.E3.83.88.E3.81.B8.E3.81.AE.E3.82.A2.E3.82.AF.E3.82.BB.E3.82.B9">XPCOM サービスコンポーネントへのアクセス</h3>
+
+<p>既存のインスタンスは、以下のように、サービスとしてアクセスできます。</p>
+
+<pre class="eval">var clazz = Components.classes["@mozilla.org/preferences;1"];
+var obj   = clazz.getService();
+</pre>
+
+<p><code>getService()</code> は、<code>createInstance()</code> のように、ネイティブオブジェクトへの <a href="ja/XPConnect">XPConnect</a> ラッパーを返し、<a href="ja/NsISupports">nsISupports</a> インターフェースのメソッドのみを見せます。これは、呼び出し側の求めるコンポーネント上の特殊なインターフェースが特定されないようにするためです。このインターフェースの指定は、<code><a href="ja/Components.interfaces">Components.interfaces</a></code> オブジェクトの要素を使って行います。</p>
+
+<pre class="eval">var clazz = Components.classes["@mozilla.org/preferences;1"]
+var srv   = clazz.getService(Components.interfaces.nsIPref);
+</pre>
+
+<p>これは以下と同等です。</p>
+
+<pre class="eval">var clazz = Components.classes["@mozilla.org/preferences;1"]
+var obj   = clazz.getService();
+var srv   = obj.QueryInterface(Components.interfaces.nsIPref);
+</pre>
+
+<h2 id=".E3.81.82.E3.82.8B.E3.82.B3.E3.83.B3.E3.83.9D.E3.83.BC.E3.83.8D.E3.83.B3.E3.83.88.E3.81.AB.E3.81.A4.E3.81.84.E3.81.A6.E3.80.81.E3.82.A4.E3.83.B3.E3.82.B9.E3.82.BF.E3.83.B3.E3.82.B9.E3.81.AE.E4.BD.9C.E6.88.90.E3.81.8C.E5.BF.85.E8.A6.81.E3.81.8B.E3.80.81.E3.82.B5.E3.83.BC.E3.83.93.E3.82.B9.E3.81.A8.E3.81.97.E3.81.A6.E5.88.A9.E7.94.A8.E5.8F.AF.E8.83.BD.E3.81.8B.E3.82.92.E8.AA.BF.E3.81.B9.E3.82.8B" name=".E3.81.82.E3.82.8B.E3.82.B3.E3.83.B3.E3.83.9D.E3.83.BC.E3.83.8D.E3.83.B3.E3.83.88.E3.81.AB.E3.81.A4.E3.81.84.E3.81.A6.E3.80.81.E3.82.A4.E3.83.B3.E3.82.B9.E3.82.BF.E3.83.B3.E3.82.B9.E3.81.AE.E4.BD.9C.E6.88.90.E3.81.8C.E5.BF.85.E8.A6.81.E3.81.8B.E3.80.81.E3.82.B5.E3.83.BC.E3.83.93.E3.82.B9.E3.81.A8.E3.81.97.E3.81.A6.E5.88.A9.E7.94.A8.E5.8F.AF.E8.83.BD.E3.81.8B.E3.82.92.E8.AA.BF.E3.81.B9.E3.82.8B">あるコンポーネントについて、インスタンスの作成が必要か、サービスとして利用可能かを調べる</h2>
+
+<p>It is not possible to programmatically determine if a given component has to be instantiated or used as a service.</p>
+
+<p>Often, this is stated in the documentation of the component you want to use. If this is not the case, you might want to try and find example usages of that component within <a class="external" href="http://lxr.mozilla.org/mozilla/search">LXR</a>.</p>

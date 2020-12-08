@@ -1,0 +1,120 @@
+---
+title: 将B2G（Firefox OS）移植到你的手机上
+slug: Archive/B2G_OS/Porting
+translation_of: Archive/B2G_OS/Porting_B2G_OS/basics
+---
+<p>Boot to Gecko (Firefox OS)使用 <a href="http://www.android.com/" title="http://www.android.com/">Android</a>的核心驱动, 在之上加上一个基于 <a href="/en-US/docs/Gecko" title="Gecko">Gecko</a>的用户界面，这篇文章提供了移植操作系统到新设备上的一个基本流程。</p>
+<p>这个指南假设你要移植的新设备上运行的是安卓；如果你要移植到其他设备上，会需要做更多的工作。</p>
+<h2 id="设置你的编译系统">设置你的编译系统</h2>
+<p>第一步是配置你的编译系统；你可以使用这个指南<a href="/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites" title="en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites">Firefox OS build prerequisites</a>。</p>
+<h2 id="克隆B2G仓库">克隆B2G仓库</h2>
+<p>然后就是克隆B2G仓库</p>
+<pre>git clone https://github.com/mozilla-b2g/B2G.git</pre>
+<h2 id="创建原安卓系统的本地备份">创建原安卓系统的本地备份</h2>
+<p>接下来，在你尝试编译B2G之前，应该备份你的安卓系统，另外，这些东西在编译和安装过程中也能用的到。</p>
+<pre>mkdir my_device_backup
+cd my_device_backup
+adb pull /system system</pre>
+<h2 id="在config.sh中添加一个新设备">在config.sh中添加一个新设备</h2>
+<p>下一步是向<a href="https://github.com/mozilla-b2g/B2G/blob/master/config.sh" title="https://github.com/mozilla-b2g/B2G/blob/master/config.sh"><code>config.sh</code></a>文件中添加一个新设备；你可以使用已存在的设备作为模板，这仅仅是提供编译时获取正确文件的指南。</p>
+<h2 id="为新设备创建清单文件">为新设备创建清单文件</h2>
+<p>现在你需要为新设备在称为default.xml的清单文件中添加必须的仓库（repos）；在github上的<a href="https://github.com/mozilla-b2g/b2g-manifest" title="https://github.com/mozilla-b2g/b2g-manifest"><code>b2g-manifest</code></a>文件作为一个模板，每一个设备都有它自己的分支，你可以使用<a href="https://github.com/mozilla-b2g/b2g-manifest/tree/galaxy-s2" title="https://github.com/mozilla-b2g/b2g-manifest/tree/galaxy-s2"><code>galaxy-s2</code></a>作为一个例子。</p>
+<h2 id="为新设备创建配置树">为新设备创建配置树</h2>
+<p>为新设备创建配置树，这应该在<code>device/<em>&lt;manufacturer&gt;</em>/<em>&lt;device_id&gt;</em></code>中，这个树中应该至少包括：</p>
+<ul>
+ <li><code>AndroidBoard.mk</code></li>
+ <li><code>AndroidProducts.mk</code></li>
+ <li><code>BoardConfig.mk</code></li>
+ <li><code>extract-files.sh</code></li>
+ <li><code>full_&lt;device_id&gt;.mk</code></li>
+ <li>idc files for touchscreen</li>
+ <li>init files (<code>init.rc</code>, <code>init.&lt;target&gt;.rc</code>, <code>uevent.rc</code>, ...)</li>
+</ul>
+<p>不同设备的这些内容可能会有很大的差别。尤其是BoardConfig.mk 和 extract-files.sh，这部分需要大量的研究，测试和调试才能得到哪些二进制对象应该被提取出来。</p>
+<div class="note">
+ <p><strong>注意:</strong> 如果你可以在 <a href="http://www.cyanogenmod.com/" title="http://www.cyanogenmod.com/">CyanogenMod</a> 上为你的设备找到一个已存在的引用，这些信息会加速你的移植过程， <a href="http://forum.xda-developers.com/" title="http://forum.xda-developers.com/">XDA Forum</a> 是另一个讨论和寻找资源的好地方.</p>
+</div>
+<h2 id="重新编译_boot.img">重新编译 boot.img</h2>
+<p>一旦你完成了上面所有步骤，你需要重新编译引导镜像，通常情况下，内核本身并不需要它，但是为适应init.rc的变化需要重新编译。</p>
+<h3 id="init.rc的变化">init.rc的变化</h3>
+<p>你使用的 init.rc 并不是B2G提供的；而是从你的设备上拷贝下来的。</p>
+<p>你主要需要修改的是：</p>
+<h4 id="导入_init.b2g.rc">导入 init.b2g.rc</h4>
+<p>加入下面这些行来导入 <code>init.b2g.rc</code>:</p>
+<pre>on early-init
+    start ueventd
+    import /init.b2g.rc</pre>
+<h4 id="解决权限问题">解决权限问题</h4>
+<p>更正文件 <code>/system/b2g/b2g</code>, <code>/system/b2g/updater</code>, <code>/system/b2g/plugin-container 的权限</code>；这些行执行后挂载的系统应该可以读写：</p>
+<pre>chmod 0755 /system/b2g/b2g
+chmod 0755 /system/b2g/updater
+chmod 0755 /system/b2g/plugin-container</pre>
+<p>你可能想要从修改新设备的<code>init.rc开始，而不是使用编译系统提供的<code>init.rc，如果是这样，你要记得设置</code></code> <code>BoardConfig.mk中的<code>TARGET_PROVIDES_INIT_RC.</code></code></p>
+<h3 id="预编译核心_vs._从源代码编译核心">预编译核心 vs. 从源代码编译核心</h3>
+<p>你可以使用一个预编译的核心，或者你可以从源代码编译核心，要从源代码编译核心，在设备配置树中添加AndroidKernel.mk和核心配置。</p>
+<p>旧编译系统 <a href="https://github.com/andreasgal/B2G/tree/master/glue/gonk/device/toro/maguro" title="https://github.com/andreasgal/B2G/tree/master/glue/gonk/device/toro/maguro">maguro</a> 就是一个从源代码编译系统的例子。</p>
+<h3 id="提取并修改现存引导镜像">提取并修改现存引导镜像</h3>
+<p>通过转存<code>/dev/mtd/mtd1或</code> <code>/dev/mtd/mtd2设备来恢复手机的引导镜像是可能的，成果镜像文件可以很容易的恢复：</code></p>
+<pre>adb shell 'cat /dev/mtd/mtd1 &gt; /sdcard/boot.img'
+adb pull /sdcard/boot.img
+</pre>
+<p> </p>
+<p>获得了引导镜像文件之后你就可以通过帮助工具像<a href="http://whiteboard.ping.se/Android/Unmkbootimg" title="Unmkbootimg">unmkbootimg</a>来解压，这个工具会解压出核心镜像（zImage）和虚拟磁盘（initramfs.cpio.gz），而且还会输出一个用于将原镜像带一些参数重新编译的命令，如：</p>
+<pre>$ unmkbootimg boot.img
+Kernel size 3872576
+Kernel address 0x208000
+Ramdisk size 265102
+Ramdisk address 0x1500000
+Secondary size 0
+Secondary address 0x1100000
+Kernel tags address 0x200100
+Flash page size 2048
+Board name is ""
+Command line "androidboot.hardware=aphone"
+Extracting kernel to file zImage ...
+Extracting root filesystem to file initramfs.cpio.gz ...
+All done.
+---------------
+To recompile this image, use:
+  mkbootimg --kernel zImage --ramdisk initramfs.cpio.gz --base 0x200000 --cmdline 'androidboot.hardware=aphone' -o new_boot.img
+---------------
+</pre>
+<p> </p>
+<p>要修改虚拟磁盘文件，创建一个输出文件夹并解压到此：</p>
+<pre>mkdir initramfs_dir
+cd initramfs_dir
+gunzip -c /path/to/your/boot.img | cpio -i
+</pre>
+<p> </p>
+<p>完成所有改变（如修改init.rc）并用<code>mkbootfs重新打包虚拟磁盘，确保使用B2G主机工具的版本：</code></p>
+<pre>/path/to/your/B2G/out/host/linux-x86/bin/mkbootfs initramfs_dir | cpio -o -H newc | gzip &gt; ../newinitramfs.cpio.gz
+</pre>
+<p> </p>
+<p>最后使用<code>mkbootimg重新打包引导镜像，也要确保使用的是B2G主机工具的版本：</code></p>
+<pre>/path/to/your/B2G/out/host/linux-x86/bin/mkbootimg --kernel zImage --ramdisk newinitramfs.cpio.gz --base 0x200000 --cmdline 'androidboot.hardware=aphone' -o new_boot.img
+</pre>
+<p> </p>
+<p>如果你现在把新的引导镜像拷贝到 <code>out/target/product/$DEVICE/boot.img</code> ($DEVICE 是你的设备名称)下，它将会在调用 <code>flash.sh时自动写入，或者你可以用下面的命令手动写入手机中：</code></p>
+<pre>adb reboot bootloader
+fastboot flash boot newboot.img
+fastboot reboot
+</pre>
+<p> </p>
+<h2 id="在_flash.sh中添加新设备">在 flash.sh中添加新设备</h2>
+<p>添加新设备到 <code>flash.sh</code>中，具体细节将取决于写入新设备时所用的工具。</p>
+<h2 id="配置、编译和写入设备">配置、编译和写入设备</h2>
+<p>现在你可以尝试编译并写入你的新设备了：</p>
+<pre>ANDROIDFS_DIR=my_device_backup ./config.sh &lt;device_id&gt; default.xml
+./build.sh
+./flash.sh</pre>
+<h2 id="测试和调试">测试和调试</h2>
+<p>待续</p>
+<h2 id="FAQ">FAQ</h2>
+<p>Forthcoming</p>
+<h2 id="See_also">See also</h2>
+<ul>
+ <li><a href="/en-US/docs/Mozilla/Firefox_OS" title="en-US/docs/Mozilla/Firefox_OS">Firefox OS</a></li>
+ <li><a href="https://github.com/mozilla-b2g/B2G" title="https://github.com/mozilla-b2g/B2G">B2G source code on Github</a></li>
+ <li><a href="http://www.android.com/" title="http://www.android.com/">Android web site</a></li>
+ <li><a href="https://autonome.wordpress.com/2013/01/15/firefox-os-devices-and-dark-matter/" title="https://autonome.wordpress.com/2013/01/15/firefox-os-devices-and-dark-matter/">A list of existing projects on Dietrich Ayala's blog</a> to port Firefox OS on some devices</li>
+</ul>

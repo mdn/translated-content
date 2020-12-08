@@ -1,0 +1,87 @@
+---
+title: nsIRegistry
+slug: XPConnect/nsIRegistry
+tags:
+  - 'XPCOM:Language Bindings'
+  - XPConnect
+translation_of: Mozilla/Tech/XPCOM/Language_bindings/XPConnect/nsIRegistry
+---
+<div class="blockIndicator obsolete obsoleteHeader">
+<p><strong>廃止</strong><br>
+ この機能は廃止されました。一部のブラウザーでは引き続き機能する可能性がありますが、いつでも削除できるため使用は推奨されません。使用はしないようにして下さい。</p>
+</div>
+
+
+
+<p>MXR の <a class="external" href="http://mxr.mozilla.org/mozilla-central/source/xpcom/obsolete/nsIRegistry.idl#45" title="http://mxr.mozilla.org/mozilla-central/source/xpcom/obsolete/nsIRegistry.idl#45">nsIRegistry</a></p>
+
+<p>その他のドキュメント: <a class="external" href="http://lxr.mozilla.org/mozilla/source/modules/libreg">libreg source</a>, <a class="external" href="http://lxr.mozilla.org/mozilla/source/modules/libreg/src/reg.h">reg.h in particular</a></p>
+
+<p>はい!</p>
+
+<p><a href="/en/Appreg" title="en/Appreg">appreg</a>.</p>
+
+<p>それはこのように動作します。</p>
+
+<pre class="eval notranslate">var Cc = Components.classes;
+var Ci = Components.interfaces;
+var rc = Cc["@mozilla.org/registry;1"];
+var rs = rc.getService(Ci.nsIRegistry);
+</pre>
+
+<p>これでレジストリサービスが作成されました。</p>
+
+<pre class="eval notranslate">rs.openWellKnownRegistry(2);  // 2 signifies the ApplicationRegistry, if I understand right
+var st = rs.enumerateAllSubtrees(2);  // 2 signifies "common", see libreg source (reg.h) for info
+</pre>
+
+<p>これでサブツリーを報告できる <a href="/en/XPCOM_Interface_Reference/nsIEnumerator" title="en/nsIEnumerator">nsIEnumerator</a> ができました。</p>
+
+<pre class="eval notranslate">try {
+  st.first();
+  do {
+    var data = st.currentItem();
+    if( data instanceof Ci.nsIRegistryNode )
+      print("nsIRegistryNode: " + data.nameUTF8 + " (" + data.key + ")");
+    st.next();
+  } while( Components.lastResult == 0 );
+} catch(e) {}
+</pre>
+
+<p>これで、出力は次のようになります:</p>
+
+<pre class="eval notranslate">Profiles (344)
+Profiles/default (530)
+Profiles/foo (1046)
+Profiles/bar (1518)
+</pre>
+
+<p>カッコ内の数字は "Key" です。この Key は、残りの nsIRegistry API で使用できます( <a class="external" href="http://mxr.mozilla.org/mozilla-central/source/xpcom/obsolete/nsIRegistry.idl#45" title="http://mxr.mozilla.org/mozilla-central/source/xpcom/obsolete/nsIRegistry.idl#45">MXR</a> を参照)。</p>
+
+<p>今、私は外観検査から、各プロファイルに "directory" と呼ばれる Key があることを知っています。他の Key を自動的に取得する方法は分かりませんが、特定のプロファイルの directory を検索する方法は分かり<em>ます</em>。</p>
+
+<pre class="eval notranslate">js&gt; rs.getStringUTF8(530, "directory")  // 530: Profiles/default に対応する key
+</pre>
+
+<p>出力は次のようになります:</p>
+
+<pre class="eval notranslate">/home/lion/.mozilla/default/awp83kud.slt
+</pre>
+
+<p>やったー!</p>
+
+<p>これを変更するには?</p>
+
+<pre class="eval notranslate">js&gt; rs.setStringUTF8(530, "directory", "/home/lion/somewhere/else")
+js&gt; rs.getStringUTF8(530, "directory")
+/home/lion/somewhere/else
+</pre>
+
+<p>はい!</p>
+
+<p>さて、唯一の問題は:<em>どう保存するのでしょうか?</em></p>
+
+<pre class="eval notranslate">js&gt; rs.flush()  // これは足りない...
+</pre>
+
+<p>おそらく、 <a href="/en/XPConnect/appShellService" title="en/XPConnect/appShellService">XPConnect:appShellService</a> で終了すると機能します。</p>

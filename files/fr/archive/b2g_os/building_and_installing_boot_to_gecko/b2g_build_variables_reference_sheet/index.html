@@ -1,0 +1,261 @@
+---
+title: Variable de référence pour les builds B2G
+slug: >-
+  Archive/B2G_OS/Building_and_installing_Boot_to_Gecko/B2G_Build_Variables_Reference_Sheet
+tags:
+  - B2G
+  - Commandes
+  - Compilation
+  - Firefox OS
+  - Gaia
+  - Gecko
+  - Références(2)
+  - Variables
+translation_of: >-
+  Archive/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet
+---
+<p class="summary">Cet article fournit une référence pour toutes les variables des builds B2G, les builds Gaia et les builds Gecko et les commandes dont vous pouvez avoir besoin durant des opérations relative à la compilation de Firefox OS.</p>
+
+<h2 id="B2G_build">B2G build</h2>
+
+<h3 id="Variables">Variables</h3>
+
+<dl>
+ <dt>Example</dt>
+ <dd>xxx</dd>
+</dl>
+
+<h3 id="Commandes">Commandes</h3>
+
+<dl>
+ <dt><code>./repo sync</code></dt>
+ <dd>xxx</dd>
+ <dt><code>./config.sh</code></dt>
+ <dd>xxx</dd>
+</dl>
+
+<h2 id="Gaia_build">Gaia build</h2>
+
+<h3 id="Variables_2">Variables</h3>
+
+<p>Voir le <a href="https://github.com/mozilla-b2g/gaia/blob/master/Makefile#L497">Gaia MakeFile</a> pour la définition de toutes ces variables.</p>
+
+<dl>
+ <dt><code>ADB</code></dt>
+ <dd><code>xxx</code></dd>
+ <dt><code>APP</code></dt>
+ <dd>Certaines commandes peuvent agir sur tout gaia ou seulement sur une seule application. Cette variable d'environnement défini si l'on veut qu'une commande agisse sur une app seulement, et si c'est le cas, sur laquelle.</dd>
+ <dt><code>GAIA_DIR</code></dt>
+ <dd><code>xxx</code></dd>
+ <dt><code>PROFILE_DIR</code></dt>
+ <dd><code>xxx</code></dd>
+ <dt><code>PROFILE_FOLDER</code></dt>
+ <dd>Cela défini le dossier où le profil sera généré. Par défaut il est défini à <code>gaia/profile</code> pour les profils normaux et <code>gaia/profile-debug</code> pour les profils <code>DEBUG=1</code> profils (voir plus loin.)</dd>
+ <dt><code>COREWEBAPPS_DIR</code></dt>
+ <dd><code>xxx</code></dd>
+ <dt><code>SCHEME</code></dt>
+ <dd><code>xxx</code></dd>
+ <dt><code>GAIA_DOMAIN</code></dt>
+ <dd><code>xxx</code></dd>
+ <dt><code>DEBUG</code></dt>
+ <dd>Lorsque la valeur est à 1, les profils généreés peuvent être utilisés avec Firefox desktop ou le simulator Firefox OS (B2G Desktop): <code>DEBUG=1 DESKTOP=0 make</code>.<br>
+ Il inclut l'extension <code>httpd.js</code> et les préférences de configurations pour accèder aux applications en utilisant <code>app://&lt;appname&gt;.gaiamobile.org/</code>. Quelques applications sont connues pour fonctionner ainsi, notamment l'application SMS.</dd>
+ <dt><code>LOCAL_DOMAINS</code></dt>
+ <dd><code>xxx</code></dd>
+ <dt><code>DESKTOP</code></dt>
+ <dd>Cela inclus un set d'extensions dans le profil <code>DEBUG</code> pour permettre aux applications systèmes de Gaia d'être chargées dans Firefox. Cela ne fonctionne plus bien et est <span class="short_text" id="result_box" lang="fr"><span class="hps">obsolète en faveur de Mulet</span></span>. La valeur par defaut est mise à 1 lorsque <code>DEBUG=1</code> est utilisé, mais vous pouvez vouloir le désactiver du fait de son non fonctionnement.<br>
+ Prenez des précautions car cela ne fonctionne pas aussi avec le Simulator Firefox OS (B2G Desktop).</dd>
+ <dt><code>DEVICE_DEBUG</code></dt>
+ <dd>Active une expérience plus developer-friendly : active le debuggage adb avec les devtools, désactive le lock screen et active les préférences pour permettre de debugger les applications certifiées.</dd>
+ <dt><code>NO_LOCK_SCREEN</code></dt>
+ <dd><code>xxx</code></dd>
+ <dt><code>SCREEN_TIMEOUT</code></dt>
+ <dd>Lorsque la valeur est à 0, cette préférence désactive le timeout de l'écran.</dd>
+ <dt><code>SYSTEM</code></dt>
+ <dd><code>xxx</code></dd>
+ <dt><code>GAIA_PORT</code></dt>
+ <dd><code>xxx</code></dd>
+ <dt><code>GAIA_LOCALES_PATH</code></dt>
+ <dd><code>xxx</code></dd>
+ <dt><code>GAIA_INSTALL_PARENT</code></dt>
+ <dd><code>xxx</code></dd>
+ <dt><code>LOCALES_FILE</code></dt>
+ <dd><code>xxx</code></dd>
+ <dt><code>GAIA_KEYBOARD_LAYOUTS</code></dt>
+ <dd><code>xxx</code></dd>
+ <dt><code>GAIA_KEYBOARD_DOWNLOADABLE_LAYOUTS</code></dt>
+ <dd><code>xxx</code></dd>
+ <dt><code>GAIA_KEYBOARD_ENABLE_USER_DICT</code></dt>
+ <dd><code>xxx</code></dd>
+ <dt><code>LOCALE_BASEDIR</code></dt>
+ <dd><code>xxx</code></dd>
+ <dt><code>BUILD_APP_NAME</code></dt>
+ <dd>Essentiellement un alias pour <code>APP</code> (voir plus haut).</dd>
+ <dt><code>PRODUCTION</code></dt>
+ <dd>Crée des builds productions (à la place d'une build ingénieur); L'id de l'app Facebook et d'autres id d'applications productions sont utilisées dedans. Sinon <code>make production</code> fonctionnera</dd>
+ <dt><code>GAIA_OPTIMIZE</code></dt>
+ <dd>Lorsque la valeur est mise à 1 cela active les étapes d'optimisations lorsqu'on compile Gaia comme la minification du code JS. Toutes les applications gaia ne sont pas affectées par cela, tant que la fonction est opt-in.</dd>
+ <dt><code>GAIA_DEVICE_TYPE</code></dt>
+ <dd><code>xxx</code></dd>
+ <dt><code>G</code><code>AIA_DEV_PIXELS_PER_PX</code></dt>
+ <dd>Définis la densité de pixels pour l'appareil visé. Cela affecte les images et/ou les vidéos qui sont copiées dans la build. La valeur par défaut est à 1, mais les appareils avec des spécifications plus haute - par exemple le  <a href="/en-US/Firefox_OS/Phone_guide/Flame">Flame</a> doivent utiliser une valeur de 1.5. C'est aliasé comme <code>GAIA_DPPX</code>.</dd>
+ <dt><code>DOGFOOD</code></dt>
+ <dd>Active les build Dogfood gaia.</dd>
+ <dt><code><span class="pl-s"><span class="pl-smi">MOZILLA_OFFICIAL</span></span></code></dt>
+ <dd><span class="pl-s"><span class="pl-smi">Lorsque la valeur n'est pas à 0, une build Mozilla-branded sera produite. La valeur par défaut est</span></span> à 0.</dd>
+ <dt><code><span class="pl-s"><span class="pl-smi">GAIA_DEFAULT_LOCALE</span></span></code></dt>
+ <dd>xxx</dd>
+ <dt><code><span class="pl-s"><span class="pl-smi">GAIA_PRETRANSLATE</span></span></code></dt>
+ <dd><code><span class="pl-s"><span class="pl-smi">xxx</span></span></code></dd>
+ <dt><code><span class="pl-s"><span class="pl-smi">GAIA_CONCAT_LOCALES</span></span></code></dt>
+ <dd><code><span class="pl-s"><span class="pl-smi">xxx</span></span></code></dd>
+ <dt><code><span class="pl-s"><span class="pl-smi">GAIA_DISTRIBUTION_DIR</span></span></code></dt>
+ <dd>Utilisez cela pour spéficier une Gaia customisée; voir le <a href="/en-US/Firefox_OS/Developing_Gaia/Market_customizations_guide">Market customizations guide</a> pour plus détails.</dd>
+ <dt><code><span class="pl-s"><span class="pl-smi">GAIA_APPDIRS</span></span></code></dt>
+ <dd><code>xxx</code></dd>
+ <dt><code><span class="pl-s"><span class="pl-smi">GAIA_ALLAPPDIRS</span></span></code></dt>
+ <dd><code><span class="pl-s"><span class="pl-smi">xxx</span></span></code></dd>
+ <dt><code><span class="pl-s"><span class="pl-smi">GAIA_MEMORY_PROFILE</span></span></code></dt>
+ <dd>xxx</dd>
+ <dt><code><span class="pl-s"><span class="pl-smi">NOFTU</span></span></code></dt>
+ <dd>Lorsque la valeur est à 1, cela met la préférence pour déactiver le FTU.</dd>
+ <dt><code><span class="pl-s"><span class="pl-smi">REMOTE_DEBUGGER</span></span></code></dt>
+ <dd><code><span class="pl-s"><span class="pl-smi">xxx</span></span></code></dd>
+ <dt><code><span class="pl-s"><span class="pl-smi">TARGET_BUILD_VARIANT</span></span></code></dt>
+ <dd><code><span class="pl-s"><span class="pl-smi">xxx</span></span></code></dd>
+ <dt><code><span class="pl-s"><span class="pl-s"><span class="pl-smi">SETTINGS_PATH</span></span></span></code></dt>
+ <dd><code><span class="pl-s"><span class="pl-s"><span class="pl-smi">xxx</span></span></span></code></dd>
+ <dt><code><span class="pl-s"><span class="pl-smi">FTU_PING_URL</span></span></code></dt>
+ <dd><code><span class="pl-s"><span class="pl-smi">xxx</span></span></code></dd>
+ <dt><code><span class="pl-s"><span class="pl-smi">KEYBOARD_LAYOUTS_PATH</span></span></code></dt>
+ <dd><code><span class="pl-s"><span class="pl-smi">xxx</span></span></code></dd>
+ <dt><code><span class="pl-s"><span class="pl-smi">CONTACTS_IMPORT_SERVICES_PATH</span></span></code></dt>
+ <dd><code><span class="pl-s"><span class="pl-smi">xxx</span></span></code></dd>
+ <dt><code><span class="pl-s"><span class="pl-smi">EMAIL_SERVICES_PATH</span></span></code></dt>
+ <dd><code><span class="pl-s"><span class="pl-smi">xxx</span></span></code></dd>
+ <dt><code><span class="pl-s"><span class="pl-smi">STAGE_DIR</span></span></code></dt>
+ <dd><code><span class="pl-s"><span class="pl-smi">xxx</span></span></code></dd>
+ <dt><code><span class="pl-s"><span class="pl-smi">GAIA_APP_TARGET</span></span></code></dt>
+ <dd><code><span class="pl-s"><span class="pl-smi">xxx</span></span></code></dd>
+ <dt><code><span class="pl-s"><span class="pl-smi">BUILD_DEBUG</span></span></code></dt>
+ <dd>xxx</dd>
+ <dt><code><span class="pl-s"><span class="pl-smi">VARIANT_PATH</span></span></code></dt>
+ <dd>xxx</dd>
+ <dt><code><span class="pl-s"><span class="pl-smi">REBUILD</span></span></code></dt>
+ <dd>xxx</dd>
+ <dt><code><span class="pl-s"><span class="pl-smi">P</span></span></code></dt>
+ <dd>xxx</dd>
+ <dt><code><span class="pl-s"><span class="pl-smi">VERBOSE</span></span></code></dt>
+ <dd>xxx</dd>
+ <dt><code><span class="pl-s"><span class="pl-smi">RAPTOR</span></span></code></dt>
+ <dd>Active les marques de performances en mesurant et sortant les meta-données dans le logcat. Utilisation : <code>RAPTOR=1 make reset-gaia</code></dd>
+ <dt><code><span class="pl-s"><span class="pl-smi">SHARE_PERF_USAGE</span></span></code></dt>
+ <dd>xxx</dd>
+ <dt><code><span class="pl-s"><span class="pl-smi">DEFAULT_KEYBOAD_SYMBOLS_FONT</span></span></code></dt>
+ <dd>xxx</dd>
+ <dt><code><span class="pl-s"><span class="pl-smi">DEFAULT_GAIA_ICONS_FONT</span></span></code></dt>
+ <dd>xxx</dd>
+ <dt><code>MOZ_APPROX_LOCATION</code></dt>
+ <dd>Utilisez cela pour activer le panneau vie privée, par défaut la valeur est à off sauf dans les build ingénieur.</dd>
+</dl>
+
+<h3 id="Commandes_2">Commandes</h3>
+
+<p>La suite est une liste d'abreviations des commandes les plus utilisées dont vous aurez besoin. Une liste plus détaillée peut être trouvée dans <a href="/en-US/Firefox_OS/Developing_Gaia/make_options_reference">Gaia make options reference</a>.</p>
+
+<dl>
+ <dt><code>make</code></dt>
+ <dd>Construit uniquement le profil.</dd>
+ <dt><code>make reset-gaia</code></dt>
+ <dd>Supprime le profil précédent et installe un nouveau profil Gaia.</dd>
+ <dt><code>make install-gaia</code></dt>
+ <dd>Install Gaia par dessus sans rien supprimer.</dd>
+ <dt><code>make production</code></dt>
+ <dd>Fait la même chose que <code>PRODUCTION=1 make reset-gaia</code>.</dd>
+ <dt><code>make clean</code></dt>
+ <dd>Supprime le profil généré.</dd>
+ <dt><code>make really-clean</code></dt>
+ <dd>Supprime le profil généré et le dossier de xul-runner; vous devez utiliser cela seulement quand tout est cassé.</dd>
+</dl>
+
+<h2 id="Gecko_build">Gecko build</h2>
+
+<h3 id="Variables_3">Variables</h3>
+
+<dl>
+ <dt><code>B2G_DEBUG</code></dt>
+ <dd>xxx</dd>
+ <dt><code>VARIANT</code></dt>
+ <dd>Spéficie les variantes de gecko que vous voulez compiler. Les types valides sont listés ci-dessous:</dd>
+</dl>
+
+<table>
+ <tbody>
+  <tr>
+   <th scope="row"><code>eng<code> </code></code></th>
+   <td>
+    <p>Ceci est le flag par défaut. Un <code>make</code> est la même chose que <code>make eng</code>.</p>
+
+    <ul>
+     <li>Installe les modules tagger avec: <code>eng</code>, <code>debug</code>, <code>user</code>, et/ou <code>development</code>.</li>
+     <li>Installe les modules non-APK qui n'ont pas de tags spéficiés.</li>
+     <li>Installe les APK selon les fichiers de définition du produit, en plus des tagger APK.</li>
+     <li><code>ro.secure=0</code></li>
+     <li><code>ro.debuggable=1</code></li>
+     <li><code>ro.kernel.android.checkjni=1</code></li>
+     <li><code>adb</code> est activé par defaut.</li>
+     <li>marionette est activé</li>
+     <li>Ne possède pas les notifications de mise à jour par défaut ( B2G_UPDATER=1 est activé )</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <th scope="row"><code>user<code> </code></code></th>
+   <td>
+    <p>Ceci est le flag attendu pour une release final.</p>
+
+    <ul>
+     <li>Installe les modules tagger avec <code>user</code>.</li>
+     <li>Installe les modules non-APK qui n'ont pas de tags spéficiés.</li>
+     <li>Installe les APK selon les fichiers de définition du produit, les tags sont ignorés pour les modules APK.</li>
+     <li><code>ro.secure=1</code></li>
+     <li><code>ro.debuggable=0</code></li>
+     <li><code>adb</code> est désactivé par défaut.</li>
+     <li>Optimise par défaut</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <th scope="row"><code>userdebug<code> </code></code></th>
+   <td><code>make userdebug</code>
+    <p>La même chose que <code>user</code>, excepté:</p>
+
+    <ul>
+     <li>Installe aussi les modules tagger avec <code>debug</code>.</li>
+     <li><code>ro.debuggable=1</code></li>
+     <li><code>adb</code> est activé par défaut.</li>
+     <li>marionette est activé</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<div class="note">
+<p><strong>Note</strong>: Cette table est inspirée par la table <a href="http://www.kandroid.org/online-pdk/guide/build_system.html#androidBuildVariants">Android Build Variants</a> .</p>
+</div>
+
+<h3 id="Commandse">Commandse</h3>
+
+<dl>
+ <dt><code>./build.sh buildsymbols</code></dt>
+ <dd>Crée une build symbols pour debugger; voir <a href="/en-US/docs/Uploading_symbols_to_Mozillas_symbol_server">Uploading symbols to Mozilla's symbol server</a>.</dd>
+ <dt><code>./build.sh gecko-update-full</code></dt>
+ <dd>Crée un fichier mar OTA; voir <a href="/en-US/Firefox_OS/Building_and_installing_Firefox_OS/Firefox_OS_update_packages">Firefox OS update packages</a>.</dd>
+ <dt><code>./build.sh gecko-update-fota</code></dt>
+ <dd>Crée un mar/zip FOTA basé sur des fichiers qui contiennent seulement un sous-ensemble de fichiers et de dossiers; see <a href="/en-US/Firefox_OS/Building_and_installing_Firefox_OS/Firefox_OS_update_packages">Firefox OS update packages</a>.</dd>
+ <dt><code>./build.sh gecko-update-fota-full</code></dt>
+ <dd>Crée un mar/zip FOTA basé sur les fichiers; voir <a href="/en-US/Firefox_OS/Building_and_installing_Firefox_OS/Firefox_OS_update_packages">Firefox OS update packages</a>.</dd>
+ <dt><code>./build.sh gecko-update-fota-fullimg</code></dt>
+ <dd>Crée un mar/zip FOTA basé sur les partitions; voir <a href="/en-US/Firefox_OS/Building_and_installing_Firefox_OS/Firefox_OS_update_packages">Firefox OS update packages</a>.</dd>
+</dl>

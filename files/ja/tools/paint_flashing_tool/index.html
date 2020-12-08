@@ -1,0 +1,93 @@
+---
+title: Paint Flashing Tool
+slug: Tools/Paint_Flashing_Tool
+translation_of: Tools/Paint_Flashing_Tool
+---
+<div>{{ToolsSidebar}}</div><p>Paint Flashing Tool はアクティブ時に、何らかの入力 (例えばユーザーがマウスを動かしたりスクロールしたりするなど) への応答としてブラウザーが再描画を行わなければならない部分を強調表示します。このツールにより、ウェブサイトがブラウザーに過剰な再描画を行わせていないかを明らかにできます。再描画はパフォーマンスへの影響が大きい処理になりえるため、不必要な再描画をなくすことでウェブサイトの応答性を改善できます。</p>
+
+<h2 id="Repaints_and_responsiveness" name="Repaints_and_responsiveness">再描画と応答性</h2>
+
+<p>ブラウザーはウェブページをレンダリングするときに、HTML や CSS の解析、どのようにレイアウトするかの決定、そして実際に画面へコンテンツを表示するために描画を行います。ウェブページで見えている部分が変更するイベントが発生するたびに、ブラウザーはページの一部分を再描画しなければなりません。例えばユーザーがページをスクロールしたり、要素のスタイルを変更する <a href="/ja/docs/Web/CSS/:hover" title="Web/CSS/:hover"><code>:hover</code></a> 疑似クラスを持つ要素にマウスポインターを載せたりすると、再描画が必要です。</p>
+
+<p>再描画は高コストな処理であるため、ブラウザーは必要な再描画量の最小化を図ります。ブラウザーは画面上のどの部分が "損傷" しているかを解析して、そこだけを再描画しようとします。また、互いに独立して更新されると考えられるレイヤーに、ページのモデルを分割します。レイヤーは独立して描画された後に合成されますので、ひとつのレイヤーで外観が変更しても他のレイヤーでの再描画を引き起こしません。また 2 つのレイヤーの関係が変化するだけ (例えばアニメーションで) では、再描画はまったく必要ありません。</p>
+
+<p>ウェブ開発者によってなされた選択がブラウザーの上記動作を妨げる場合があり、必要以上の画面領域に対してより多くの再描画を引き起こします。これにより、ユーザーの入力に対するサイトの応答が遅くなるかもしれません ("janky" とも言われます)。Paint Flashing Tool はここで役立ちます。イベントへの応答としてブラウザーが再描画した領域を示すことで、過剰な再描画ではないかを確認できます。</p>
+
+<h2 id="Using_the_paint_flashing_tool" name="Using_the_paint_flashing_tool">Paint Flashing Tool を使用する</h2>
+
+<p>Paint Flashing を有効にする方法は 2 つあります:</p>
+
+<ul>
+ <li><a href="/ja/docs/Tools_Toolbox" title="Tools_Toolbox">ツールボックス</a> を開いて、[描画された領域を強調表示します] というラベルのアイコンをクリックします:</li>
+</ul>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/5929/paint-flashing-open-from-toolbox.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+
+<ul>
+ <li><a href="/ja/docs/Tools/GCLI" title="Tools/GCLI">開発ツールバー</a> を起動して、"paintflashing on" と入力して Enter キーを押下します:</li>
+</ul>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/5931/paint-flashing-open-from-toolbar.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+
+<p>ページを使用してみましょう。マウスを動かしたり少しスクロールしたりすると、上図のページが下図のようになります:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/5935/paint-flashing-activated.png" style="display: block; margin-left: auto; margin-right: auto;">この例では、再描画の主な原因が 2 つあります:</p>
+
+<ul>
+ <li>リンクに <a href="/ja/docs/Web/CSS/:hover" title="Web/CSS/:hover"><code>:hover</code></a> 疑似クラスが適用されたスタイルがあるため、リンク上でマウスを動かすと、ブラウザーが再描画を行います。</li>
+ <li>スクロールを行うと、画面の下部に現れるページの新たな一部分をブラウザーが再描画します。また、右上でスクロールバーも再描画します。</li>
+</ul>
+
+<p>Paint Flashing を無効にするには、ツールバーで [描画された領域を強調表示します] のアイコンを再度クリックするか、開発ツールバーに "paintflashing off" と入力して Enter キーを押下します。</p>
+
+<h2 id="Example_CSS_transitions" name="Example_CSS_transitions">例: CSS トランジション</h2>
+
+<p>実装の選択が再描画の効率に影響を与える可能性がある分野のひとつが、<a href="/ja/docs/Web/Guide/CSS/Using_CSS_transitions" title="Web/Guide/CSS/Using_CSS_transitions">CSS トランジション</a> です。以下の例は、CSS トランジションを使用して要素を動かすための、2 つの異なる方法を示しています。第一の方法は要素の <a href="/ja/docs/Web/CSS/margin-left" title="Web/CSS/margin-left"><code>margin-left</code></a> に対してトランジションを適用する、第二の方法は <a href="/ja/docs/Web/CSS/transform" title="Web/CSS/transform"><code>transform</code></a> プロパティを使用して要素を動かします。</p>
+
+<pre class="brush: html">&lt;body&gt;
+    &lt;div id="container"&gt;
+      &lt;div class="moving-box" id="moving-box-left-margin"&gt;Transition using margin-left&lt;/div&gt;
+      &lt;div class="moving-box" id="moving-box-transform"&gt;Transition using transform&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+</pre>
+
+<pre class="brush: css">#container {
+  border: 1px solid;
+}
+
+.moving-box {
+  height: 20%;
+  width:20%;
+  margin: 2%;
+  padding: 2%;
+  background-color: blue;
+  color: white;
+  font-size: 24px;
+}
+
+#moving-box-left-margin {
+  transition: margin-left 4s;
+}
+
+#moving-box-transform {
+  transition: transform 4s;
+}
+
+body:hover #moving-box-left-margin{
+  margin-left: 74%;
+}
+
+body:hover #moving-box-transform {
+  transform: translate(300%);
+}</pre>
+
+<p>以下の領域にマウスポインターを動かすと、トランジションをご覧いただけます:</p>
+
+<p>{{EmbedLiveSample('Example_CSS_transitions', 600, 300)}}</p>
+
+<p>ここで Paint Flashing を有効にして、もう一度試してみましょう。<code>margin-left</code> 版では要素が動くにつれて一連の再描画が発生するのに対して、<code>transform</code> 版では始点と終点だけで再描画が発生します。</p>
+
+<p>なぜでしょう? <code>transform</code> を使用するとき、ブラウザーは要素のために別のレイヤーを生成します。よって要素が移動するときは、すべての変更点が 2 つのレイヤー相互の関係であり、合成処理によって対処されます: どちらのレイヤーも再描画が不要です。</p>
+
+<p>シンプルなスタイルである本ケースでは、追加の再描画は大きな違いにはなりません。しかしスタイルが描画処理的に高コストなものになると、大きな違いになるでしょう。ブラウザーの再描画を最小化する最適化は何かを知るのは難しく、またバージョンが変わると最適化の方法が変わる可能性があります。よって Paint Flashing Tool でウェブサイトのテストを行うと、最適な動作であることを確かめるのに役立ちます。</p>

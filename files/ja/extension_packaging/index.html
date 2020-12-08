@@ -1,0 +1,42 @@
+---
+title: Extension Packaging
+slug: Extension_Packaging
+tags:
+  - Add-ons
+  - Extensions
+  - Toolkit API
+translation_of: Archive/Add-ons/Extension_Packaging
+---
+<p>拡張機能は、利用者がダウンロードやインストールできる <a href="/ja/docs/Bundles">Installable Bundle</a>の形式または、pre-パッケージされてアプリケーションまたは拡張プログラムと共に提供されます。拡張機能はXULプログラムの機能を拡張するための chrome、コンポーネント、およびその他のファイルを提供するのに <a href="/ja/docs/Bundles">ディレクトリ構造</a>を使っています。</p>
+<p>すべての拡張は、拡張機能についてのメタデータ（ユニーク ID、バージョン、制作者、および互換性情報など）を含む <a href="/ja/docs/Install.rdf">install.rdf</a> ファイルを備えなければなりません。</p>
+<p>拡張機能のファイルと install.rdf の用意ができたら、いくつかの方法で拡張機能のインストーラを作ります: 拡張機能ディレクトリをユーザがインストールできる <a href="/ja/docs/XPI">XPI</a> (xpinstall) ファイルに ZIP 圧縮、ユーザのアプリケーション profile ディレクトリに拡張機能ディレクトリを解凍するか、拡張機能を Windows レジストリに登録する。</p>
+
+<div class="geckoVersionNote">
+  <div>{{gecko_callout_heading("2.0")}}</div>
+  <p>Starting in Gecko 2.0 {{ geckoRelease("2.0") }}, XPI files are no longer unpacked when extensions are installed. Instead, the XPI itself is placed in the extensions directory, and files are loaded directly out of the package. See <a href="/en/Extensions/Updating_extensions_for_Firefox_4" title="en/Extensions/Updating extensions for Firefox 4">Updating extensions for Firefox 4</a> for details.</p>
+</div>
+
+<h2 id="Making_an_extension_XPI" name="Making_an_extension_XPI">拡張機能 XPI の作り方</h2>
+
+<p><a href="/ja/docs/XPI">XPI</a> (XPInstall) ファイルは単純な ZIP ファイルで、拡張機能ファイルと ZIP の root には <a href="/ja/docs/Install.rdf">install.rdf</a> を含んでいます。ユーザは XPI ファイルを Web サイトからダウンロードしたりローカルファイルを拡張マネージャウインドウにドロップしてインストールできます。</p>
+<p>Firefox が識別する XPI ファイルの MIME typeは、<i>application/x-xpinstall</i> です。たいていの HTTP サーバはデフォルトで .xpi 拡張機能に対してこの MIME type を返すようになっておらず、大抵、HTTP サーバに設定が必要です。 Apache HTTP Server では、次の指示を設定ファイルまたは .htaccess に追加します。</p>
+
+<pre>AddType application/x-xpinstall .xpi</pre>
+
+<h2 id="Install_Extension_Files_Directly" name="Install_Extension_Files_Directly">Install Extension Files Directly</h2>
+
+<p>もし、アプリケーションの位置を知っていれば (アプリケーションの一部として拡張機能をインストールする場合など)、拡張機能ファイルディレクトリを &lt;appdir&gt;/extensions/&lt;extensionID&gt; にインストールできます。拡張機能は次回アプリケーションを起動したときに自動的に拡張マネージャーに現れます。</p>
+
+<p>When using this method you must verify that the file system permissions for the directories and files for the extension are set properly. Otherwise, the Extension Manager may not function properly with the extension or the extension itself may not work properly.</p>
+
+<h2 id="Register_an_extension_location_using_the_Windows_Registry" name="Register_an_extension_location_using_the_Windows_Registry">Windows レジストリを使って拡張機能の場所を登録する</h2>
+
+<p>External installers (such as the Java runtime) may wish to install application integration points as extension even if the application is not yet installed. This can be accomplished on Windows <a href="/ja/docs/Adding_Extensions_using_the_Windows_Registry">using the registry</a>.</p>
+
+<h2 id="Multi-item_extension_XPIs" name="Multi-item_extension_XPIs">マルチアイテム拡張 XPI</h2>
+
+<p>いくつかの場合、単一 XPI ファイルで複数の拡張/テーマをインストールすることがあります。 A special kind of extension XPI called the <a href="/ja/docs/Multiple_Item_Packaging">Multiple Item Package</a> explains how to create this kind of package. (Firefox 1.5/XULRunner 1.8 required.)</p>
+
+<h2 id="Official_References_for_Toolkit_API" name="Official_References_for_Toolkit_API">Official References for <a href="/ja/docs/Toolkit_API">Toolkit API</a></h2>
+
+<div>{{page("/ja/docs/Toolkit_API/Official_References")}}</div>

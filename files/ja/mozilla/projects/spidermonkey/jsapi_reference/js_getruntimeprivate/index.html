@@ -1,0 +1,59 @@
+---
+title: JS GetRuntimePrivate
+slug: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_GetRuntimePrivate
+tags:
+  - JSAPI Reference
+  - SpiderMonkey
+translation_of: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_GetRuntimePrivate
+---
+<p>
+
+</p><div class="breadcrumbs"><a href="/ja" title="ja">メインページ</a> » <a href="/ja/docs/SpiderMonkey" title="SpiderMonkey">SpiderMonkey</a> »
+ <a href="/ja/docs/SpiderMonkey/JSAPI_Reference" title="JSAPI_Reference">JSAPI リファレンス</a> »
+ <code>JS_GetRuntimePrivate</code></div>
+
+
+<p></p>
+
+<p><code>JSRuntime</code>オブジェクトと関連付けられたアプリケーション固有のフィールドにアクセスします。 <span class="comment">Access a &lt;code&gt;JSRuntime&lt;/code&gt; field for application-specific data.</span></p>
+
+<h2 id=".E6.A7.8B.E6.96.87" name=".E6.A7.8B.E6.96.87">構文</h2>
+
+<pre class="eval">void * <strong>JS_GetRuntimePrivate</strong>(<a href="ja/JSRuntime">JSRuntime</a> *rt);
+
+void <strong>JS_SetRuntimePrivate</strong>(<a href="ja/JSRuntime">JSRuntime</a> *rt, void *data);
+</pre>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Name</th>
+   <th>Type</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td><code>rt</code></td>
+   <td><code><a href="ja/JSRuntime">JSRuntime</a> *</code></td>
+   <td>JavaScriptランタイム環境<span class="comment">Any JS runtime.</span></td>
+  </tr>
+  <tr>
+   <td><code>data</code></td>
+   <td><code>void *</code></td>
+   <td><em>(<code>JS_SetRuntimePrivate</code>のみ)</em>ランタイム<code>rt</code>と関連付けるアプリケーション固有のデータへのポインタ <span class="comment">''(in &lt;code&gt;JS_SetRuntimePrivate&lt;/code&gt;)'' Pointer to application-defined data to be associated with the runtime &lt;code&gt;rt&lt;/code&gt;.</span></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id=".E8.AA.AC.E6.98.8E" name=".E8.AA.AC.E6.98.8E">説明</h2>
+
+<p>各<code>JSRuntime</code>内には、アプリケーション内で用いる任意のデータを指し示す<code>void *</code>型のフィールドが存在します。このフィールドは、コールバック関数が容易にアクセスできる領域であるため、その中でのデータ格納に有用に使えます。<code>JS_GetRuntimePrivate</code>でフィールドの値を取得し、<code>JS_SetRuntimePrivate</code>で値を設定します。フィールドの初期値は<code>NULL</code>に設定されています。 <span class="comment">Each &lt;code&gt;JSRuntime&lt;/code&gt; has a field of type &lt;code&gt;void *&lt;/code&gt; which the application may use for any purpose. It is especially useful for storing data which callbacks may then easily access. &lt;code&gt;JS_GetRuntimePrivate&lt;/code&gt; gets the value of this field and &lt;code&gt;JS_SetRuntimePrivate&lt;/code&gt; sets it. The field is initially &lt;code&gt;NULL&lt;/code&gt;.</span></p>
+
+<p>このプライベートなデータのメモリ管理はアプリケーション側の責任になります。JavaScriptエンジン自体がこの領域を利用することはありません。 <span class="comment">Memory management for this private data is the application's responsibility. The JavaScript engine itself never uses it.</span></p>
+
+<h2 id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE" name=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE">関連項目</h2>
+
+<p>{{ LXRSearch("ident", "i", "JS_GetRuntimePrivate") }}</p>
+
+<p><a href="ja/JS_GetContextPrivate">JS_GetContextPrivate</a>, <a href="ja/JS_SetContextPrivate">JS_SetContextPrivate</a>, <a href="ja/JS_GetPrivate">JS_GetPrivate</a>, <a href="ja/JS_SetPrivate">JS_SetPrivate</a>, <a href="ja/JS_GetInstancePrivate">JS_GetInstancePrivate</a></p>
+
+<p>{{ languages( { "en": "en/JS_GetRuntimePrivate" } ) }}</p>

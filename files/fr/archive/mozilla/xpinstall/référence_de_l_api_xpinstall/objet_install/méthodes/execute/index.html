@@ -1,0 +1,71 @@
+---
+title: execute
+slug: >-
+  Archive/Mozilla/XPInstall/Référence_de_l_API_XPInstall/Objet_Install/Méthodes/execute
+translation_of: Archive/Mozilla/XPInstall/Reference/Install_Object/Methods/execute
+---
+<p> </p>
+<h3 id="execute" name="execute">execute</h3>
+<p>Lance un fichier dans l'archive d'installation.</p>
+<h4 id="M.C3.A9thode_de" name="M.C3.A9thode_de">Méthode de</h4>
+<p>Objet <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install">Install</a></p>
+<h4 id="Syntaxe" name="Syntaxe">Syntaxe</h4>
+<pre class="eval">int execute (
+   Chaîne xpiSourcePath [, Booléen blocking]);
+</pre>
+<pre class="eval">int execute (
+   Chaîne xpiSourcePath,
+   Chaîne args [, Booléen blocking]);
+</pre>
+<h4 id="Param.C3.A8tres" name="Param.C3.A8tres">Paramètres</h4>
+<p>La méthode <code>execute</code> a les paramètres suivants :</p>
+<dl>
+ <dt>
+  <code>xpiSourcePath</code></dt>
+ <dd>
+  Le chemin du fichier à extraire et à exécuter. Notez que ce chemin pointe dans l'archive &lt;tt&gt;xpi&lt;/tt&gt; elle-même.</dd>
+ <dt>
+  <code>args</code></dt>
+ <dd>
+  Un paramètre chaîne passé à l'exécutable. Ignoré sous Mac OS. Voir les notes ci-dessous.</dd>
+ <dt>
+  <code>blocking</code></dt>
+ <dd>
+  Une valeur booléenne qui spécifie si l'installation doit ou non attendre la fin de l'exécution du fichier avant de continuer. La valeur par défaut est <code>false</code>. Voir les notes ci-dessous. Le paramètre <code>blocking</code> n'est pas disponible comme partie de cette méthode dans les versions antérieures de Netscape 6.1/Mozilla 0.9.3.</dd>
+</dl>
+<h4 id="Retour" name="Retour">Retour</h4>
+<p>Un code d'erreur entier. Pour la liste des valeurs possibles, voir <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Codes_retourn%c3%a9s">Codes retournés</a>.</p>
+<h4 id="Description" name="Description">Description</h4>
+<p>La méthode <code>execute</code> extrait le fichier spécifié depuis l'archive &lt;tt&gt;xpi&lt;/tt&gt; vers un fichier temporaire.</p>
+<p>Le code doit appeler la méthode <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/performInstall">performInstall</a> pour réellement exécuter le fichier. Cette méthode peut être utilisée pour lancer un installeur
+ <i>
+  InstallShield</i>
+ ou tout autre exécutable d'installation stocké dans l'archive &lt;tt&gt;xpi&lt;/tt&gt;.</p>
+<h5 id="Ex.C3.A9cution_des_fichiers_install.C3.A9s" name="Ex.C3.A9cution_des_fichiers_install.C3.A9s">Exécution des fichiers installés</h5>
+<div class="note">
+ <b>Note :</b> Si le fichier qu'on veut exécuter est l'un de ceux à installer (contrairement à un installeur exécutable qui sera effacé après utilisation), alors, il faut utiliser la méthode <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/execute">execute</a> de l'<a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_File">objet File</a>. <code>File.execute()</code> exécute un fichier installé (tel que le navigateur) après son installation et est généralement placé à la fin du script d'installation et en dehors du bloc principal.</div>
+<p>La méthode <code>execute</code> de l'<a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install">objet Install</a>, d'un autre côté, efface l'exécutable de son emplacement temporaire une fois son exécution achevée. L'argument optionnel <code>blocking</code>, lorsqu'il est défini à <code>true</code>, spécifie que l'installation doit attendre que l'exécutable finisse avant de procéder à la prochaine commande d'installation mise en file d'attente. Si ce paramètre n'est pas défini et qu'un exécutable ne faisant pas partie de l'installation est lancé, une erreur survient lors du redémarrage du navigateur.</p>
+<h5 id="Passage_d.27arguments_.C3.A0_l.27ex.C3.A9cutable" name="Passage_d.27arguments_.C3.A0_l.27ex.C3.A9cutable">Passage d'arguments à l'exécutable</h5>
+<p>Le paramètre <code>args</code>, lorsqu'il est présent, passe une chaîne à l'exécutable comme paramètres de ligne de commande. La ligne suivante, par exemple, passe le paramètre de ligne de commande <code>-c</code> à l'exécutable :</p>
+<pre class="eval">err = file.execute(myfile, "-c", true);
+</pre>
+<p>Lorsqu'on désire passer plus d'un paramètre à l'exécutable, il est nécessaire de formater la chaîne <code>args</code> de façon particulière afin que les paramètres puissent être cassés et passés séparément comme requis. En général, il est possible d'utiliser les guillemets uniques pour la chaîne <code>args</code> et les doubles guillemets pour délimiter les arguments de ligne de commande dans la chaîne. Les règles d'analyse suivantes s'appliquent :</p>
+<ul>
+ <li>Les doubles guillemets sont traités comme des guillemets simples, les guillemets simples sont ignorés par l'exécutable mais valides dans la méthode <code>execute()</code>.</li>
+ <li>Les guillemets simples extérieurs encadrant la chaîne <code>args</code> sont éliminés lorsque la chaîne est passée à l'exécutable.</li>
+ <li>Les guillemets échappés, ou
+  <i>
+   inversés</i>
+  , sont passés à l'exécutable. Tous les autres cas d'inversion sont ignorés.</li>
+</ul>
+<p>Cela signifie qu'afin de passer trois arguments en ligne de commande (-c, -d et -s) à l'exécutable, il est nécessaire de formater la chaîne <code>args</code> comme suit :</p>
+<pre class="eval">err = file.execute(myfile, '"-c""-d""-s"', true);
+</pre>
+<p>Techniquement, en considérant les règles ci-dessus, il est possible de passer les mêmes arguments avec la ligne suivante, mais le résultat sera moins lisible :</p>
+<pre class="eval">err = file.execute(myfile, "\"-c\"\"-d\"\"-s\"", true);
+</pre>
+<p>Voir également la note sur les binaires Macintosh dans <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_Install/M%c3%a9thodes/addFile">addFile</a>.</p>
+<p><span class="comment">Interwiki Language Links</span></p>
+<div class="noinclude">
+  </div>
+<p>{{ languages( { "en": "en/XPInstall_API_Reference/Install_Object/Methods/execute" } ) }}</p>

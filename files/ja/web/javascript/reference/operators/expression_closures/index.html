@@ -1,0 +1,76 @@
+---
+title: 式クロージャ
+slug: Web/JavaScript/Reference/Operators/Expression_closures
+tags:
+  - Functions
+  - JavaScript
+  - Reference
+translation_of: Archive/Web/JavaScript/Expression_closures
+---
+<div class="warning"><strong>非標準。使用しないでください！</strong><br>
+式クロージャの構文は、非推奨とされた Firefox 固有の機能であり、Firefox Firefox 60 で削除されました。将来向きの用途には、<a href="/docs/Web/JavaScript/Reference/Functions/Arrow_functions">アロー関数</a> の使用を検討してください。</div>
+
+<div>{{jsSidebar("Operators")}}</div>
+
+<p>式クロージャは、単純な関数を書くための短縮された関数構文です。</p>
+
+<h2 id="構文">構文</h2>
+
+<pre class="syntaxbox">function [<em>name</em>]([<em>param1</em>[, <em>param2[</em>, ..., <em>paramN</em>]]])
+   <em>expression</em>
+</pre>
+
+<h3 id="引数">引数</h3>
+
+<dl>
+ <dt><code>name</code></dt>
+ <dd>関数名。関数が <em>匿名</em> の場合、省略できます。名前は関数本体だけのローカルです。</dd>
+ <dt><code>paramN</code></dt>
+ <dd>関数に渡される引数の名前。関数は、最大 255 個の引数を持つことができます。</dd>
+ <dt><code>expression</code></dt>
+ <dd>関数本体を構成する式。</dd>
+</dl>
+
+<h2 id="説明">説明</h2>
+
+<p>これは、単純な関数を書くための短縮された関数構文にすぎません。典型的な <a class="external" href="http://en.wikipedia.org/wiki/Lambda_calculus#Lambda_calculus_and_programming_languages">Lambda 表記</a> に似た言語で書くためのものです。</p>
+
+<p>JavaScript 1.7 およびそれ以前:</p>
+
+<pre class="brush: js">function(x) { return x * x; }</pre>
+
+<p>JavaScript 1.8:</p>
+
+<pre class="brush: js">function(x) x * x</pre>
+
+<p>この構文により、中括弧と 'return' 文をなくします (それらは暗黙的に宣言されています)。構文が短くなること以外に、このようにコードを書くことへの付加的な利点はありません。</p>
+
+<h2 id="例">例</h2>
+
+<p>イベントリスナをバインドする短縮表現:</p>
+
+<pre class="brush: js">document.addEventListener("click", function() false, true);
+</pre>
+
+<p>JavaScript 1.6 から、配列関数の一部でこの表記法を用います:</p>
+
+<pre class="brush: js">elems.some(function(elem) elem.type == "text");
+</pre>
+
+<h2 id="ブラウザの実装状況">ブラウザの実装状況</h2>
+
+
+
+<p>{{Compat("javascript.operators.expression_closures")}}</p>
+
+<h2 id="関連情報">関連情報</h2>
+
+<ul>
+ <li>{{jsxref("Functions_and_function_scope", "関数と関数のスコープ")}}</li>
+ <li>{{jsxref("Function")}}</li>
+ <li>{{jsxref("Statements/function", "function statement")}}</li>
+ <li>{{jsxref("Operators/function", "function expression")}}</li>
+ <li>{{jsxref("Statements/function*", "function* statement")}}</li>
+ <li>{{jsxref("Operators/function*", "function* expression")}}</li>
+ <li>{{jsxref("GeneratorFunction")}}</li>
+</ul>

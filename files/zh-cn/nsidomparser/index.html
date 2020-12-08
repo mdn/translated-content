@@ -1,0 +1,56 @@
+---
+title: nsIDOMParser
+slug: nsIDOMParser
+tags:
+  - DOMParser
+  - nsIDOMParser
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMParser
+---
+<div class="note">
+  <strong>注意：</strong> 如果你是一名 Web 开发者, 请参考 <a href="/en/DOM/DOMParser" title="en/DOM/DOMParser">DOMParser</a> 文档。</div>
+<h2 id="创建_DOMParser">创建 DOMParser</h2>
+<p>To create a <code>DOMParser</code> object from a web page or a chrome script running in a window, simply use <code>new DOMParser()</code>. When you create a <code>DOMParser</code> from a privileged script, you can pass parameters to the constructor, more on that below.</p>
+<p>To create a <code>DOMParser</code> when the constructor is not available (e.g., from a JS XPCOM component, a JS module, or an xpcshell test), use:</p>
+<pre class="eval deki-transform">var parser = Components.classes["@mozilla.org/xmlextras/domparser;1"]
+             .createInstance(Components.interfaces.nsIDOMParser);
+// optionally, call parser.init(principal, documentURI, baseURI);
+</pre>
+<h2 id="Principals_document_and_base_URI">Principals, document and base URI</h2>
+<p></p><div class="blockIndicator note"><strong>Note:</strong> This section covers changes introduced to <code>DOMParser</code> in Gecko 1.9.</div><p></p>
+<p>(This section is only relevant to Firefox extensions--not to Web content.)</p>
+<p>To create a document, the parser needs to specify a principal (see <a href="/en/Security_check_basics" title="en/Security check basics">Security check basics</a>), a base URI (see <a href="/en/DOM/document.baseURIObject" title="en/DOM/document.baseURIObject">document.baseURIObject</a>), and a <a href="/en/DOM/document.documentURI" title="en/DOM/document.documentURI">documentURI</a>.</p>
+<p>These values are automatically determined as defined below, but if you work with <code>DOMParser</code> from privileged code, you can override the defaults by providing arguments to the DOMParser constructor or calling <code>parser.init()</code>. Usually you don't need to do that. If you come across a situation when these matter, feel free to ask questions in <a class="external" href="http://groups.google.com/group/mozilla.dev.tech.dom/topics">mozilla.dev.tech.dom</a> and update this documentation to mention these cases.</p>
+<ul>
+  <li>When a <code>DOMParser</code> is instantiated by calling <code>new DOMParser()</code>, it inherits the calling code's principal (except that for chrome callers the principal is set to the null principal) and the <code>documentURI</code> and <code>baseURI</code> of the window the constructor came from.</li>
+  <li>If the caller has UniversalXPConnect privileges, it can pass parameters to <code>new DOMParser()</code>. If fewer than three parameters are passed, the remaining parameters will default to <code>null</code>.
+    <ul>
+      <li>The first parameter is the principal to use; this overrides the default principal normally inherited.</li>
+      <li>The second parameter is the <code>documentURI</code> to use.</li>
+      <li>The third parameter is the <code>baseURI</code> to use.</li>
+    </ul>
+  </li>
+  <li>If you instantiate a <code>DOMParser</code> by calling <code>createInstance()</code>, and you don't call the <code>DOMParser</code>'s <code>init()</code> method, attempting to initiate a parsing operation will automatically call <code>init()</code> on the <code>DOMParser</code> with a null principal and <code>null</code> pointers for <code>documentURI</code> and <code>baseURI</code>.</li>
+</ul>
+<p>Cases where these values matter:</p>
+<ul>
+  <li>If you don't specify the document URI by calling init() after creating the parser via <code>createInstance()</code> the created documents will use a moz-nullprincipal:{&lt;guid&gt;} URI, which will show in the Error Console in parsing errors, in particular.</li>
+  <li>Supposedly, if you want to create objects that some particular set of unprivileged code will be able to access (see discussion in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=565480" title='XML parsing errors are reported with URL=moz-nullprincipal:{...} when using Components.classes ["@mozilla.org/xmlextras/domparser;1"].createInstance (Components.interfaces.nsIDOMParser), correct URL with the DOMParser constructor'>bug 565480</a>).</li>
+</ul>
+<h2 id="Example" name="Example">解析字符串</h2>
+<p>如 <a href="/en/DOM/DOMParser" title="en/DOM/DOMParser">Web platform documentation </a>中所述的，一旦你已创建了一个 <code>DOMParser</code> 对象，你可以使用它的 <code>parseFromString</code> 方法来解析 XML 或 HTML。</p>
+<h2 id="Example" name="Example">示例</h2>
+<p>Within the context of a window:</p>
+<pre class="eval deki-transform">var parser = new DOMParser();
+var doc = parser.parseFromString(aStr, "application/xml");
+</pre>
+<p>Outside of a window (e.g., a JS XPCOM component, a JS module, or an xpcshell test):</p>
+<pre class="eval deki-transform">var parser = Components.classes["@mozilla.org/xmlextras/domparser;1"]
+             .createInstance(Components.interfaces.nsIDOMParser);
+var doc = parser.parseFromString(aStr, "application/xml");
+</pre>
+<p>Using <code>Components.Constructor()</code>:</p>
+<pre class="eval deki-transform">const DOMParser = new Components.Constructor("@mozilla.org/xmlextras/domparser;1", "nsIDOMParser");
+var parser = new DOMParser();
+parser.init(principal, documentURI, baseURI);
+var doc = parser.parseFromString(aStr, "application/xml");
+</pre>

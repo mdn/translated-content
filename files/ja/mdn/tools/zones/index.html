@@ -1,0 +1,203 @@
+---
+title: ゾーン
+slug: MDN/Tools/Zones
+tags:
+  - Deprecated
+  - Guide
+  - MDN Meta
+  - Site-wide
+  - Tools
+translation_of: Archive/MDN/Zones
+---
+<div>{{MDNSidebar}}</div><p><span class="seoSummary"><strong>ゾーン</strong>は MDN の特別なエリアで、そのコンテンツは特別ゾーンナビゲーションボックス、ページのヘッダにおける強調された視覚要素のような追加ユーザインタフェースと共に提供されます。</span> このガイドはゾーンの構築と維持について取り扱います。</p>
+
+<div class="warning">
+<p><strong>ゾーンの使用は廃止されました</strong><br>
+ Due to an unsatisfactory user experience and the performance costs of its implementation, we are in the process of deprecating zones. <em>Please only create a new zone if you absolutely must</em>; generally, this should only be done to fix problems related to content which is a zone in English but not in other locales.  Please drop into #mdn on IRC to ask questions about anything you read here, especially if you're considering creating a zone or turning any existing material into a zone.</p>
+</div>
+
+<h2 id="ゾーンの特徴">ゾーンの特徴</h2>
+
+<p>Once you've created a zone, as covered below, you have various special features and abilities that you can, and should, take advantage of:</p>
+
+<ul>
+ <li>A colored header area with a color that uniquely identifies your zone.</li>
+ <li>A "hero image" representing the zone in the header area.</li>
+ <li>A zone landing page, at the base of the zone's navigation hierarchy, which presents a larger than usual banner area with the hero image in a large size and space for a short blurb describing the zone.</li>
+ <li>A special navigation sidebar; zones may include content from anywhere on MDN in this navigation, even if they're not actually contained within the zone's direct hierarchy.</li>
+ <li>Subpages of the zone's landing page — that is, pages actually physically located beneath the landing page — inherit the zone's color and hero image, with a smaller banner area at the top of the page.</li>
+</ul>
+
+<p>There are basically two types of zone: the <strong>in-wiki zone</strong>, and the <strong>mini-site zone</strong>.</p>
+
+<h3 id="Wiki_内のゾーン">Wiki 内のゾーン</h3>
+
+<p>An <strong>in-wiki zone</strong> is a zone which takes advantage of zone functionality while remaining part of the main flow of MDN's documentation content.  These are sort of semi-zones, in that they generally don't include content from outside their own hierarchy.</p>
+
+<p>An in-wiki zone allows a segment of MDN to add the additional visuals and, probably more importantly, the zone navigation sidebar, without removing the user from the main flow of MDN content.</p>
+
+<div class="note">
+<p><strong>Note:</strong> In-wiki zones do not typically appear in the "Zones" list on the MDN home page, since they're treated as part of the main body of MDN's documentation content.</p>
+</div>
+
+<h3 id="ミニサイト_ゾーン">ミニサイト ゾーン</h3>
+
+<p>A <strong>mini-site zone</strong> is a zone which, while edited and managed using the same interface as any wiki page on MDN, is presented outside the main flow of documentation content. In all functional respects, it supports all the standard wiki functionality provided by the <a href="/en-US/docs/MDN/Kuma">Kuma</a> platform on which MDN is built. A good example is the <a href="/en-US/Apps">App Center</a>.</p>
+
+<p>When a mini-site zone is created, it is given a new URL outside the "/docs/" tree on MDN, typically at the URL <code>https://developer.mozilla.org/<em>&lt;locale&gt;</em>/zone/<em>&lt;your_zone_name&gt;</em></code>.</p>
+
+<div class="note">
+<p><strong>Note:</strong> In general, only very high-profile, special-purpose content should be moved out of the wiki hierarchy; these zones are intended primarily for setting up special-purpose promotional and/or program-related content.</p>
+</div>
+
+<h2 id="何をゾーンにするべきか">何をゾーンにするべきか?</h2>
+
+<p>This is an interesting question, and to be honest, the answer is likely to change over time. Zones are a new concept for MDN, and we're still learning exactly how we'll use them.</p>
+
+<p>There are basically two reasons to create a zone:</p>
+
+<ol>
+ <li>You need to set up a <strong>mini-site</strong> for a promotional campaign or a specific product.</li>
+ <li>You want to create a one-stop shop, so to speak, for a topic that spans multiple technology areas.</li>
+</ol>
+
+<h2 id="ゾーンを作成する">ゾーンを作成する</h2>
+
+<p>The first step is to create the content. At a minimum, you need to create the initial landing page that will become the root page for your zone. Once you have at least the root page, and possibly even your sub-content, you can then have the pages turned into a zone.</p>
+
+<p>In order to turn a section of MDN into a zone requires MDN administrator privileges, so you'll need to ask an MDN administrator to do it for you. There are a few things you'll need to provide to the admin as part of your request:</p>
+
+<ul>
+ <li>What page on MDN should be turned into the root page for the new zone. Keep in mind that all pages below it in the site's hierarchy will become part of the zone.</li>
+ <li>Is your zone an {{anch("In-wiki zones", "in-wiki zone")}} or a {{anch("Mini-site zones", "mini-site zone")}}?</li>
+ <li>You'll need to provide style information and artwork for the customization of the header area in the new zone. See {{anch("Customizing the appearance")}} for details.</li>
+</ul>
+
+<div class="note">
+<p><strong>Note:</strong> Because zones are a special-purpose construct, you will likely be asked to justify why the content should be a zone at all. Refer to {{anch("What should be a zone.3F", "What should be a zone?")}} for insight.</p>
+</div>
+
+<h2 id="ゾーンのアクセスポリシーを変更する">ゾーンのアクセスポリシーを変更する</h2>
+
+<p>At this time, there's no functional support for access control for zones. This functionality is coming in the future. If you need access control for your zone, please let us know, so we can adjust the priority of that work.</p>
+
+<h2 id="表示をカスタマイズする">表示をカスタマイズする</h2>
+
+<p>Part of what makes a zone a zone is the ability to customize its visual identity. Minimally, this means a special color and image used as the background in the header area of the zone's pages to help the user know that they're in a specific zone. It's also possible to make other basic adjustments to the appearance of the page, as long as the overall feeling of being on MDN is retained.</p>
+
+<div class="note">
+<p><strong>Note:</strong> It's important to keep in mind that the instructions below are <strong>suggestions</strong>. You can try to tinker further with the CSS for your zone. Just keep in mind that your changes may be reviewed by our UX and/or design teams, and will be expected to blend in well with the rest of MDN.</p>
+</div>
+
+<h3 id="基本的なカスタマイズ">基本的なカスタマイズ</h3>
+
+<p>The basic, required customizations for each zone are the background color and image for the header area of the pages in the zone. When requesting that a zone be created, you'll be asked to provide these. Here are basic guidelines to what you need to provide.</p>
+
+<ul>
+ <li>The background color should be reasonably distinctive from other zones' backgrounds, while being relevant to the topic area covered by the zone. You should specify this to the MDN administrator setting up your zone as a {{cssxref("&lt;color&gt;")}}.</li>
+ <li>The background image is, by default, presented near the right side of the header area (or the left side in a right-to-left locale). This image may be in any Web-compatible format, although PNG is generally best. It should either blend into your specified background color or (preferably) have a transparent background. As a general rule, the background image should be about 468 pixels wide and 400 pixels tall, although the CSS on the page can be set to use {{cssxref("overflow")}} to crop it if necessary. That said, making the image too large increases page size, so that should be avoided.</li>
+ <li>The image may be sent to the MDN admin with your zone creation request, or may be one that's already been uploaded to MDN as an attachment to an appropriate page.</li>
+</ul>
+
+<p>With this information, the MDN admin team can set up the basic CSS for your zone for you. If you'd like, however, you can go a step farther and provide the CSS yourself. By following the guidelines in {{anch("Additional customizations")}}, you can experiment with other changes to the appearance of your zone.</p>
+
+<h3 id="さらなるカスタマイズ">さらなるカスタマイズ</h3>
+
+<p>If you'd like to investigate additional customization options, take a look at the CSS/stylus template located <a href="https://github.com/mozilla/kuma/blob/master/media/redesign/stylus/zones.styl">in github</a>. This lists all the Stylus CSS for the styles you're allowed to alter using your zone's custom CSS.</p>
+
+<p>If you wish to perform additional customizations, you may do so, with one major caveat: your customizations must not be so drastic that they make the pages in the zone no longer "feel" like part of MDN.</p>
+
+<p>When customizing the zone's stylesheet, it's your job to sort out from the template which styles you want to alter and to put together the CSS to do so. Once you've done so, provide that CSS to the MDN admin team, and they'll install it for you.</p>
+
+<p>All zone-related content has the class <code>zone</code> on it.</p>
+
+<div class="note">
+<p><strong>Note:</strong> Please note that because the site is actively undergoing development, anything about specific classes and styles discussed here is subject to change without notice.</p>
+</div>
+
+<h4 id="背景色">背景色</h4>
+
+<p>As mentioned previously, the first thing you're likely to customize is the background color for your zone's header area. The CSS looks something like this:</p>
+
+<pre class="brush: css notranslate">.zone #main-header, .zone .zone-article-header, .zone .zone-landing-header {
+    background-color: <strong><em>zone-color</em></strong>;
+}
+</pre>
+
+<p>The ID <code>main-header</code> refers to the site navigation area at the very top of the page. This includes the "Mozilla" cross-site navigation tab, search box, and other global navigation functionality.</p>
+
+<p>The class <code>zone-article-header</code> represents the appearance of the header area on article pages within the zone. That is, all pages other than the base landing page within the zone will have this class on their heading area.</p>
+
+<p>The class <code>zone-landing-header</code> is used for the header area on the zone's landing page. This is the taller heading area on the landing page, with the larger image in it.</p>
+
+<p>As a general rule, you want all of these areas to have the same color; indeed, the article and landing page header colors should be the same. The only reason you might configure them differently is if they were gradients and you wanted to adjust them to have the same overall "average" color despite the different height of the space.</p>
+
+<p><strong>In short:</strong> Replace <strong><em>zone-color</em></strong> in the CSS snippet above with the {{cssxref("&lt;color&gt;")}} you've selected for your zone color.</p>
+
+<h4 id="ランディングページのヘッダ画像">ランディングページのヘッダ画像</h4>
+
+<p>You will also want to change the image that represents your zone on the zone's landing page. This page has a larger header box to accomodate a larger image to represent your zone. The CSS looks like this:</p>
+
+<pre class="brush: css notranslate">.zone .zone-landing-header .zone-image {
+    background-image: url(<strong><em>zone-image-url</em></strong>);
+}
+</pre>
+
+<p>The <code>zone-image</code> class is used to specify and style the image for your zone's landing page header. This image should be no wider than 468 pixels, although you can override this by using additional CSS here. Simply replace <em><strong>zone-image-url</strong></em> with the URL of the image to use.</p>
+
+<div class="note">
+<p><strong>Note:</strong> The easiest way to provide the image is to simply attach it to an appropriate page on MDN and use the resulting URL.</p>
+</div>
+
+<h4 id="記事ページのヘッダ画像">記事ページのヘッダ画像</h4>
+
+<p>Additionally, you should set the image that represents your zone on its subpages. By default, this image is constrained to 200 pixels wide by 400 pixels tall, but, again, that can be overridden.</p>
+
+<pre class="brush: css notranslate">.zone .zone-article-header .zone-image {
+    background-image: url(<strong><em>zone-image-url</em></strong>);
+}
+</pre>
+
+<p>Just replace <em><strong>zone-image-url</strong></em> with the URL of the image to use.</p>
+
+<div class="note">
+<p><strong>Note:</strong> The easiest way to provide the image is to simply attach it to an appropriate page on MDN and use the resulting URL. You can choose to use the same image as you do for the landing page header image, with some scaling or cropping applied, or you can use a different image.</p>
+</div>
+
+<h4 id="ヘッダボタンの下の境界">ヘッダボタンの下の境界</h4>
+
+<p>The last thing you're generally advised to change is the appearance of the bottom border of the buttons in the zone header area. This is the CSS:</p>
+
+<pre class="brush: css notranslate">.zone .zone-landing-header a.button {
+    box-shadow: inset 0 -1px <strong><em>color</em></strong>;
+}
+</pre>
+
+<p>Here, replace <strong><em>color</em></strong> with a {{cssxref("&lt;color&gt;")}} that is very similar to your background color, but slightly darker.</p>
+
+<h2 id="ゾーンナビゲーション">ゾーンナビゲーション</h2>
+
+<h3 id="ゾーンナビゲーションサイドバー">ゾーンナビゲーションサイドバー</h3>
+
+<p>The sidebar appearing on every page in a zone is defined in the zone's landing page content, in a section called "Subnav" (visible only when editing the page). This section may contain a manually curated list of pages or use a macro, such as {{TemplateLink("ListSubpages")}}. In the latter case you will need to <a href="/en-US/docs/MDN/Kuma/Introduction_to_KumaScript#Caching">force-reload</a> (shift+refresh) the zone's landing page in order to update the sidebar.</p>
+
+<h3 id="クイックリンク">クイックリンク</h3>
+
+<p>As is the case with any page on MDN, pages within zones may use the <a href="/en-US/docs/MDN/Contribute/Content/Quicklinks">quicklinks</a> feature. Quicklinks are a navigation box, presented in the left sidebar area, offering links the user may follow to related material. These links may be within MDN or off-site, and may be nested up to two total levels deep, using folders.</p>
+
+<p>To aid in generating common types of quicklinks for zones, we have some macros you can use.</p>
+
+<h4 id="QuickLinksWithSubpages">QuickLinksWithSubpages</h4>
+
+<p>The {{TemplateLink("QuickLinksWithSubpages")}} macro generates all of the HTML required to present a quicklinks box on the page with the links corresponding to the pages in a specified hierarchy. You can also use it with no parameters at all to present quicklinks of subpages of the current page, although this is not commonly as useful in a zone since the zone navigation will generally present this for you.</p>
+
+<h2 id="ゾーンのスタイルガイド">ゾーンのスタイルガイド</h2>
+
+<h2 id="注記">注記</h2>
+
+<p>This section offers some notes that are worth keeping in mind when creating, working with, and using zones.</p>
+
+<ul>
+ <li>Every page in a zone automatically inherits the navigation sidebar provided on their zone's root page.</li>
+ <li>If a page in a zone has a quicklinks section, the quicklinks are displayed below the zone's navigation in the sidebar. Toggling off the quicklinks makes both the quicklinks and the navigation bar disappear, allowing more room for the page content.</li>
+</ul>

@@ -1,0 +1,130 @@
+---
+title: MozNFC
+slug: Web/API/MozNFC
+tags:
+  - API
+  - Firefox OS
+  - Interface
+  - MozNFC
+  - NFC
+  - Reference
+translation_of: Archive/B2G_OS/API/MozNFC
+---
+<p></p><section class="Quick_links" id="Quick_Links"><ol><li><strong><a href="/ja/docs/Mozilla/Firefox_OS/API/NFC_API">NFC API</a></strong></li><li><strong><a href="/ja/docs/Mozilla/Firefox_OS/API/Web"><code>Web</code></a></strong></li><li class="toggle"><details open><summary>NFC API に関連するページ</summary><ol><li><a href="/ja/docs/Mozilla/Firefox_OS/API/MozNDEFRecord"><code>MozNDEFRecord</code></a></li><li><a href="/ja/docs/Mozilla/Firefox_OS/API/MozNFC"><code>MozNFC</code></a></li><li><a href="/ja/docs/Mozilla/Firefox_OS/API/MozNFCPeer"><code>MozNFCPeer</code></a></li><li><a href="/ja/docs/Mozilla/Firefox_OS/API/MozNFCTag"><code>MozNFCTag</code></a></li></ol></details></li></ol></section><p></p>
+
+<p><code>MozNFC</code> は、NFC の Reader/Writer モード、P2P モード、カードエミュレーションモードを操作するトップレベル API です。</p>
+
+<div class="note">
+<p><strong>注記</strong>: このインターフェイスは <a href="/ja/docs/Web/API/Navigator/mozNfc" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>Navigator.mozNfc</code></a> 属性を経由してアクセスされます。</p>
+</div>
+
+<h2 id="イベントハンドラ">イベントハンドラ</h2>
+
+<dl>
+</dl>
+
+<dl>
+ <dt><a href="/ja/docs/Web/API/MozNFC/onpeerfound" title="MozNFC インターフェースの onpeerfound イベントハンドラは、MozNFCPeer が検出された時にの呼び出されます 。"><code>MozNFC.onpeerfound</code></a></dt>
+ <dd>NFC デバイスが検出された場合、<code>onpeerfound</code> イベントのコールバック関数が呼び出されます。<strong> Firefox OS 2.2 以上で利用可能</strong>です。</dd>
+</dl>
+
+<dl>
+ <dt><a href="/ja/docs/Web/API/MozNFC/onpeerlost" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>MozNFC.onpeerlost</code></a></dt>
+ <dd>onpeerfound で検出された peer オブジェクトがアプリケーションから参照できなくなった場合、<code>onpeerlost</code> イベントのコールバック関数が呼び出されます。(peer デバイスが通信範囲外へ移動した場合など)</dd>
+</dl>
+
+<dl>
+ <dt><a href="/ja/docs/Web/API/MozNFC/ontagfound" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>MozNFC.ontagfound</code></a></dt>
+ <dd>NFCタグが発見された場合、<code>ontagfound</code> イベントがコールバックされます。<strong>Firefox OS 2.2 以上で利用可能</strong>です。</dd>
+</dl>
+
+<dl>
+ <dt><a href="/ja/docs/Web/API/MozNFC/ontaglost" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>MozNFC.ontaglost</code></a></dt>
+ <dd>ontagfound 中の tag object がアプリケーションから参照できなくなった場合、<code>ontaglost</code> イベントがコールバックされます。(タグが領域外へ移動した場合など) <strong>Firefox OS 2.2 以上で利用可能</strong>です。</dd>
+</dl>
+
+<h2 id="仕様">仕様</h2>
+
+<p>Gecko の NFC の実装は <a href="http://members.nfc-forum.org/specs/">NFC Forum specifications</a> に準拠しています。</p>
+
+<dl>
+</dl>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+
+<p></p><p class="warning"><strong><a href="https://github.com/mdn/browser-compat-data">現在、互換性データを可読形式の JSON フォーマットに置き換えているところです。</a></strong>
+            この互換性一覧は古い形式を使っており、これに含まれるデータの置き換えが済んでいません。
+            <strong><a href="/ja/docs/MDN/Contribute/Structures/Compatibility_tables">手助けしていただける場合は、こちらから！</a></strong></p>
+
+<div class="htab">
+    <a id="AutoCompatibilityTable" name="AutoCompatibilityTable"></a>
+    <ul>
+        <li class="selected"><a>デスクトップ</a></li>
+        <li><a>モバイル</a></li>
+    </ul>
+</div><p></p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>機能</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>基本サポート</td>
+   <td>
+    <p><span style="color: #f00;">未サポート</span></p>
+   </td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>機能</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>基本サポート</td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td>2.0 <span class="inlineIndicator prefixBox prefixBoxInline" title="prefix"><a href="/ja/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with 'moz' as this browser considers it experimental">moz</a></span> [1]</td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Firefox OS 2.2 の特権アプリで利用可能です。以前は認証アプリでのみ利用可能でした。</p>
+
+<h2 id="関連情報">関連情報</h2>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/docs/Web/API/NFC_API/Using_the_NFC_API">NFC API の使い方</a></li>
+ <li><a href="https://developer.mozilla.org/docs/Web/API/NFC_API/Using_the_NFC_emulator">NFC エミュレータの使い方</a></li>
+ <li>W3C API 関連:
+  <ul>
+   <li><a href="http://www.w3.org/TR/2014/WD-nfc-20140114/#idl-def-NFCPeer">NFCPeer spec </a></li>
+   <li><a href="http://www.w3.org/TR/2014/WD-nfc-20140114/#nfctag-interface">NFCTag spec</a></li>
+  </ul>
+ </li>
+</ul>

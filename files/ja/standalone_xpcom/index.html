@@ -1,0 +1,97 @@
+---
+title: Standalone XPCOM
+slug: Standalone_XPCOM
+tags:
+  - XPCOM
+  - 移行予定
+translation_of: Archive/Mozilla/Standalone_XPCOM
+---
+<p><strong>Standalone XPCOM</strong> is a tree configuration that builds a minimal set of libraries (shared mostly) that can be used to get all features of XPCOM. The contents of this standalone XPCOM in general are:</p>
+
+<ul>
+ <li>NSPR : mozilla/nsprpub</li>
+ <li>XPCOM : mozilla/xpcom</li>
+</ul>
+
+<p><em>NOTE 1: XPCOM APIs are not frozen yet. By XPCOM 1.0 release they will be.</em></p>
+
+<p><em>NOTE 2: XPCOM Standalone differs from the XPCOM built with Mozilla. Hence cannot be used with the Mozilla browser.</em></p>
+
+<h4 id="Building_Standalone_XPCOM" name="Building_Standalone_XPCOM">Building Standalone XPCOM</h4>
+
+<p>Here are the instructions for building the Standalone XPCOM on Unix or Windows:</p>
+
+<p><strong>Step 1 : Pull the sources</strong></p>
+
+<ol>
+ <li>cvs -z 3 co mozilla/client.mk</li>
+ <li>cd mozilla</li>
+ <li>gmake -f client.mk pull_all BUILD_MODULES=xpcom</li>
+</ol>
+
+<p><strong>Step 2 : Build XPCOM Standalone</strong></p>
+
+<ol>
+ <li>./configure --enable-standalone-modules=xpcom --enable-application=standalone</li>
+ <li>gmake</li>
+</ol>
+
+<h4 id="Testing_Standalone_XPCOM" name="Testing_Standalone_XPCOM">Testing Standalone XPCOM</h4>
+
+<p>xpcom/sample contains a sample application and a component. This should get built by default.</p>
+
+<ul>
+ <li>nsTestSample is the sample application. This should have been installed in your bin/ directory.</li>
+ <li>libsample.so (unix) is the sample component implementation that the sample application will try to instantiate. This should have been installed in your bin/components directory</li>
+</ul>
+
+<p>To run the test,</p>
+
+<ol>
+ <li>cd to your bin/ directory</li>
+ <li>setenv LD_LIBRARY_PATH .</li>
+ <li>./nsTestSample<br>
+  Warning: MOZILLA_FIVE_HOME not set.<br>
+  nsNativeComponentLoader: autoregistering begins.<br>
+  nsNativeComponentLoader: autoregistering succeeded<br>
+  Inital print: initial value<br>
+  Set value to: XPCOM defies gravity<br>
+  Final print : XPCOM defies gravity<br>
+  <strong>Test passed.</strong></li>
+</ol>
+
+<h4 id="Test_FAILED:_What_went_wrong.3F" name="Test_FAILED:_What_went_wrong.3F">Test FAILED: What went wrong?</h4>
+
+<p>The most common case of why the sample would have failed if you didn't run it from the bin directory. Here are some error messsages and possible ways of fixing them.</p>
+
+<dl>
+ <dt>./nsTestSample: error in loading shared libraries: libxpcom.so: cannot open shared object file: No such file or directory</dt>
+ <dd>LD_LIBRARY_PATH not set. To fix, setenv LD_LIBRARY_PATH . (note the dot).</dd>
+ <dt>Link errors when building XPCOM standalone</dt>
+ <dd>This is usually due to XPCOM not being built standalone. Make sure you did configure --enable-standalone-modules=xpcom.</dd>
+</dl>
+
+<h4 id="What.27s_the_difference_between_Standalone_and_non-Standalone_XPCOM.3F" name="What.27s_the_difference_between_Standalone_and_non-Standalone_XPCOM.3F">What's the difference between Standalone and non-Standalone XPCOM?</h4>
+
+<p>There is no binary difference between standalone XPCOM and the XPCOM that ships with the Mozilla browser. The one functional difference is that XPT files cannot be read from .zip files in standalone XPCOM.</p>
+
+<h4 id="TODO_for_v_1.0" name="TODO_for_v_1.0">TODO for v 1.0</h4>
+
+<ol>
+ <li>Optional exclusion of specific features into standalone XPCOM like registry, xpconnect. Tweeking these options will cause reduction in memory requirements and size.</li>
+ <li>Get xpcom/tests directory upto date and documented.</li>
+ <li>Update this document for Mac.</li>
+ <li>API freeze and documentation</li>
+</ol>
+
+<p> </p>
+
+<div class="originaldocinfo">
+<h2 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h2>
+
+<ul>
+ <li>Author: <a class="link-mailto" href="mailto:dp@netscape.com">Suresh Duddi</a></li>
+ <li>Last Updated Date: 15 May 2000</li>
+ <li>Copyright Information: Portions of this content are © 1998–2007 by individual mozilla.org contributors; content available under a Creative Commons license | <a class="external" href="http://www.mozilla.org/foundation/licensing/website-content.html">Details</a>.</li>
+</ul>
+</div>

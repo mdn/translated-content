@@ -1,0 +1,49 @@
+---
+title: 添加菜单项
+slug: Mozilla/Add-ons/SDK/Tutorials/添加一个菜单项
+translation_of: Archive/Add-ons/Add-on_SDK/Tutorials/Add_a_Context_Menu_Item
+---
+<div class="note">
+ <p>学习本章前，您要先 <a href="/en-US/Add-ons/SDK/Installation">安装SDK</a> 和学习 <a href="/en-US/Add-ons/SDK/Getting_Started_With_cfx"><code>cfx</code>的基本用法 </a></p>
+</div>
+<p>用<a href="/en-US/Add-ons/SDK/High-Level_APIs/context-menu"><code>右键菜单</code></a>模块添加右键菜单项或子菜单</p>
+<p>下面的例子是增加了一个新的上下文菜单项。当页面被选中时才会显示该菜单项，选择的部分会被发送到main.js的add-on代码中，它只是记录：</p>
+<pre class="brush: js">var contextMenu = require("sdk/context-menu");
+ var menuItem = contextMenu.Item({
+  label: "Log Selection",
+  context: contextMenu.SelectionContext(),
+  contentScript: 'self.on("click", function () {' +
+                 '  var text = window.getSelection().toString();' +
+                 '  self.postMessage(text);' +
+                 '});',
+  onMessage: function (selectionText) {
+    console.log(selectionText);
+  }
+});</pre>
+<p>Try it: run the add-on, load a web page, select some text and right-click. You should see the new item appear:</p>
+<p>试一试：运行该扩展，加载一个网页，选中一些文本并右键单击。你应该能看到新的项目出现：</p>
+<p><img src="https://mdn.mozillademos.org/files/6513/context-menu-selection.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p>点击，选中的文本<a href="/en-US/Add-ons/SDK/Tutorials/Logging">记录到控制台</a>:</p>
+<pre>info: elephantine lizard
+</pre>
+<h2 id="细节">细节</h2>
+<p><br>
+ 这个add-on所有的操作是构建一个上下文菜单项。你不需要添加它：一旦你已经建立了项目，它会自动添加在正确的上下文。在这种情况下，构造函数接受四个选项：<code>label</code>，<code>context</code>，和contentscript，onMessage。</p>
+<h3 id="label">label</h3>
+<p><br>
+ 标签是字符串的显示。</p>
+<h3 id="context">context</h3>
+<p><br>
+ 上下文应该在不同的情境中显示它该做的显示。上下文菜单模块提供了一些简单的内置的上下文，包括selectioncontext()，这意味着：当页面被选中的时候将会显示菜单项。<br>
+ 如果这些简单的背景是不够的，你可以使用脚本定义更复杂的环境。</p>
+<h3 id="contentScript">contentScript</h3>
+<p>这将一个脚本项目。在这种情况下，脚本侦听用户点击该项目，然后选定文本用消息发送到add-on。</p>
+<h3 id="onMessage">onMessage</h3>
+<p>onMessage属性提供附加的代码来响应来自连接到上下文菜单项脚本报文的一种方法。在这种情况下，它只是记录选定的文本。</p>
+<p>所以：<br>
+ 用户点击项目<br>
+ 内容脚本的点击事件触发，和内容脚本检索选定的文本和发送邮件的附件<br>
+ 附加的消息事件触发，并附加代码的处理函数是通过选定的文本，它的日志<br>
+  </p>
+<h2 id="获取更多">获取更多</h2>
+<p>如果想获取更多信息关于<code>context-menu</code>模块，查看<a href="/en-US/Add-ons/SDK/High-Level_APIs/context-menu"><code>context-menu</code> API reference</a>.</p>

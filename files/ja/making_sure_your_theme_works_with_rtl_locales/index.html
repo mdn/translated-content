@@ -1,0 +1,68 @@
+---
+title: Making Sure Your Theme Works with RTL Locales
+slug: Making_Sure_Your_Theme_Works_with_RTL_Locales
+tags:
+  - Add-ons
+  - Right-to-left
+  - Themes
+translation_of: Archive/Themes/Making_sure_your_theme_works_with_RTL_locales
+---
+<p>いくつかの言語は右から左に書かれています。Firefox と Thunderbird でリリースされている言語にはアラビア語とヘブライ語があり、さらにペルシャ語の<a class="external" href="http://www.mozilla.com/en-US/firefox/all.html#beta_versions">ベータ版が利用可能</a>です。これらの言語は 1 億人の潜在的な利用者がいます。これらのロケールについて理解するために重要なことは、すべてのインタフェースが右から左へ反対向きになっていることです。つまり左マージンを持つテキストは、代わりに右マージン (または -moz-start マージン) を持ち、右を指し示す矢印は左を指し示します。またその逆も反対向きになります。</p>
+<div style=""><img align="none" alt="ヘブライ語の Firefox 2 のスクリーンショット" class="internal" src="/@api/deki/files/214/=Firefox_2_RTL-header.png"><br>
+ヘブライ語の Firefox 2 のスクリーンショット</div>
+<h2 id="あなたがなすべきこと">あなたがなすべきこと</h2>
+<p>この段階であなたは自身に次のように問いかけるでしょう、「わたしのテーマがどの言語にインストールされるのか、どうやって知ることができる？ これらのロケールのために特別なバージョンを作るべき？」 落ち込まないでください。RTL 互換のテーマはとても簡単に作成できます。</p>
+<h3 id="Gecko_1.9.2_以降">Gecko 1.9.2 以降</h3>
+<p>Gecko 1.9.2 では <code>:-moz-locale-dir</code> CSS 擬似クラスが導入されました。このクラスは、左から右または右から左のユーザインタフェースの描画される向きにマッチします:</p>
+<ul> <li><a href="/ja/docs/Web/CSS/:-moz-locale-dir(ltr)" title=':-moz-locale-dir(ltr) CSS 擬似クラスは、ユーザインタフェースが左から右方向に表示される場合に、要素にマッチします。これは intl.uidirection.locale（locale の部分は現在のロケール）設定が "ltr" に設定されているかによって決定されます。'><code>:-moz-locale-dir(ltr)</code></a> は、ユーザインタフェースが左から右向きに描画される場合にマッチします。</li> <li><a href="/ja/docs/Web/CSS/:-moz-locale-dir(rtl)" title=':-moz-locale-dir(rtl) CSS 擬似クラスは、ユーザインタフェースが右から左方向に表示される場合に、要素にマッチします。これは intl.uidirection.locale（locale の部分は現在のロケール）設定が "rtl" に設定されているかによって決定されます。'><code>:-moz-locale-dir(rtl)</code></a> は、ユーザインタフェースが右から左向きに描画される場合にマッチします。</li>
+</ul>
+<h4 id="例">例</h4>
+<pre class="brush: css">toolbar[iconsize="large"][mode="icons"] #back-button {
+  -moz-image-region: rect(0px 396px 34px 360px);
+}
+
+toolbar[iconsize="large"][mode="icons"] #back-button:-moz-locale-dir(rtl) {
+  -moz-image-region: rect(0px 516px 34px 480px);
+}
+</pre>
+<p>この例では、デフォルトで左から右向きのボタンを指定します。ユーザインタフェースが右から左向きに描画されるモードの場合は、下の CSS の指定 (:-moz-locale-dir(rtl)) で上書きされます。</p>
+<h3 id="Gecko_1.9.1_(Firefox_3.5)_とそれ以前">Gecko 1.9.1 (Firefox 3.5) とそれ以前</h3>
+<h4 id="chromedir_属性"><code>chromedir</code> 属性</h4>
+<p>Firefox や Thunderbird, SeaMonkey はいくつかの要素に <code>chromedir</code> 属性を持っています。あなたがすべきことは、この属性の値をテストするテーマに CSS 規則を追加し、RTL 特有の規則を適用する部分に使用するだけです。以下はデフォルトテーマでの例です。この例のように使用してください。</p>
+<pre>toolbar[iconsize="large"][mode="icons"] #back-button {
+  -moz-image-region: rect(0px 398px 34px 360px);
+}
+
+toolbar[iconsize="large"][mode="icons"] #back-button[chromedir="rtl"] {
+  -moz-image-region: rect(0px 516px 34px 478px);
+}
+</pre>
+<p>この方法では、<code>chromedir</code> が "rtl" の場合、2 番目の規則が最初の規則を上書きし、テーマが RTL で動作します。</p>
+<p>すべての要素が <code>chromedir</code> 属性を持っているわけではないので注意してください。そのため、これを行う子孫要素が規則を継承する必要があります。例えば:</p>
+<pre>/* ここでは #c に RTL 規則を適用しようとしています。
+ * しかし、#c も親要素の #b も chromedir 属性を持っていませんが、
+ * その親要素の #a にはこの属性があります。
+ */
+
+#a &gt; #b &gt; #c {
+  /* 通常の規則 */
+}
+
+#a[chromedir="rtl"] &gt; #b &gt; #c {
+  /* RTL 規則 */
+}
+</pre>
+<p><strong>ヒント:</strong> 時々、<em>戻る</em> や <em>進む</em> 矢印のように、画像の新しいバージョンを必要としないものがあります。代わりに、RTL のコンテキストでは反対向きの矢印を使用してください。</p>
+<h4 id="leftright_規則の代わりに_startend_規則を使用する">left/right 規則の代わりに start/end 規則を使用する</h4>
+<p>RTL モードでは方向が逆になるため、左のものが右に、右のものが左になります。結果的に、left/right 規則を padding，border, margin などに使用することがなくなります。代わりに、RTL 互換性を確保するため、以下の start/end 規則を使用してください:</p>
+<ul> <li><a href="/ja/docs/Web/CSS/-moz-padding-start" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>-moz-padding-start</code></a></li> <li><a href="/ja/docs/Web/CSS/-moz-padding-end" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>-moz-padding-end</code></a></li> <li><a href="/ja/docs/Web/CSS/-moz-margin-start" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>-moz-margin-start</code></a></li> <li><a href="/ja/docs/Web/CSS/-moz-margin-end" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>-moz-margin-end</code></a></li> <li><a href="/ja/docs/Web/CSS/-moz-border-start" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>-moz-border-start</code></a></li> <li><a href="/ja/docs/Web/CSS/-moz-border-start-color" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>-moz-border-start-color</code></a></li> <li><a href="/ja/docs/Web/CSS/-moz-border-start-style" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>-moz-border-start-style</code></a></li> <li><a href="/ja/docs/Web/CSS/-moz-border-start-width" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>-moz-border-start-width</code></a></li> <li><a href="/ja/docs/Web/CSS/-moz-border-end" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>-moz-border-end</code></a></li> <li><a href="/ja/docs/Web/CSS/-moz-border-end-color" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>-moz-border-end-color</code></a></li> <li><a href="/ja/docs/Web/CSS/-moz-border-end-style" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>-moz-border-end-style</code></a></li> <li><a href="/ja/docs/Web/CSS/-moz-border-end-width" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>-moz-border-end-width</code></a></li>
+</ul>
+<pre>#urlbar-search-splitter {
+  min-width: 8px;
+  -moz-margin-start: -4px;
+  border: none;
+  background: transparent;
+}</pre>
+<h3 id="あなたのテーマをテストする">あなたのテーマをテストする</h3>
+<p>あなたのテーマの RTL での互換性については簡単にテストできます。RTL ロケールをダウンロードして面倒なことする必要はありません。<a class="link-https" href="https://addons.mozilla.org/firefox/7438">Force RTL</a> 拡張を有効にすると、Firefox のインタフェースを LTR から RTL に切り替わります。メニュー項目から動的に切り替えることもできます。</p>
+<p></p>

@@ -1,0 +1,26 @@
+---
+title: button.type
+slug: Archive/Mozilla/XUL/Attribute/button.type
+tags:
+  - XUL Attributes
+  - XUL Reference
+  - 要更新
+translation_of: Archive/Mozilla/XUL/Attribute/button.type
+---
+<div class="noinclude">
+  <span class="breadcrumbs xulRefAttr_breadcrumbs">« <a href="/ja/docs/XUL/XUL_Reference">XUL リファレンス HOME</a></span></div>
+<dl>
+  <dt>
+    <code id="a-button.type"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/button.type">type</a></code></dt>
+  <dd>
+    型: <em>下記の値のいずれか一つ</em></dd>
+  <dd>
+    button の形式。この属性が提供されていないときは通常のボタンが作成されます。通常のボタンではこの属性を取り除いてください。</dd>
+</dl>
+<ul>
+  <li><code>checkbox</code>: この button の形式には二つの状態があります。ユーザが button をクリックして状態を切り替えることができます。これは button のように見えるため、checkbox とは異なります。</li>
+  <li><code>menu</code>: メニューポップアップを持つ button を作成するには <code>type</code> 属性の値を <code>menu</code> に設定します。この場合、button 内に <code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> 要素を置きます。ユーザがメニューを開いたり閉じたりするには button 上のどこかをクリックします。</li>
+  <li><code>menu-button</code>: 値を <code>menu-button</code> に設定してメニューを持つ button を作成することもできます。<code>menu</code> 形式とは異なり、ユーザがメニューを開くのに矢印を押す必要がありますが、button の主要部分が押された場合、異なるコマンドが起こります。</li>
+  <li><code>radio</code>: button は radio ボタンのように動作します。グループ内の button は一度に一つのボタンのみを on にすることができます。</li>
+  <li><code>repeat</code>: この button は、マウスボタンが押されている間、button が持つコマンドイベントを繰り返し発生させます。</li>
+</ul>

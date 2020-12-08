@@ -1,0 +1,21 @@
+---
+title: 多进程 Firefox 中的标签选择
+slug: Mozilla/Firefox/Multiprocess_Firefox/Tab_selection_in_multiprocess_Firefox
+translation_of: Mozilla/Firefox/Multiprocess_Firefox/Tab_selection_in_multiprocess_Firefox
+---
+<div>{{FirefoxSidebar}}</div><p>在单进程的 Firefox 中，当用户切换标签页时，这是同步操作。当浏览器加载新选择的标签页时，浏览器会阻塞，然后切换到该标签页。这表示标签页选定是通过设置 XUL 的 tab 对象的 <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/selected">selected</a></code> 属性。代码（包括浏览器代码、扩展或主题）想要更改选定标签页的外观时，可以使用 <code>selected</code>  属性来应用 CSS 到该标签页。</p>
+
+<p>在多进程的 Firefox 中，标签页切换是异步的。在用户切换标签页时，chrome 进程发送一个请求到内容进程来加载该页面到新选择的标签页。chrome 进程中的函数会立即返回，以便其他代码可以运行。一旦内容进程准备就绪，它发回一个消息到 chrome 进程，然后在用户界面中切换标签页。</p>
+
+<p>还有 chrome 进程中的计时器：如果内容进程在计时器到期前没有响应，那么浏览器虽然继续切换标签页，但也显示一个包含标识的空标签页，直到目前的内容进程完成页面的加载。目前的计时器被设定为300毫秒。</p>
+
+<p>还有，相应的，两个属性用于指示标签页选择：</p>
+
+<ul>
+ <li>旧的 <code><a href="/en-US/docs/XUL/Attribute/selected">selected</a></code> 属性是同步设置，在进程的开始。它表示标签页选择已经开始，但在用户界面还没有被更新。</li>
+ <li>新的属性 <code><a href="/en-US/docs/Mozilla/Tech/XUL/Attribute/visuallyselected">visuallyselected</a></code> 现在表示浏览器在用户界面已实际更新（显示）的标签页，包括内容进程已就绪或者计时器已过期这两种情况。</li>
+</ul>
+
+<p>这意味着想要对当前选中标签页应用的样式需要使用 <code>visuallyselected</code> 属性。如果使用 <code>selected</code> 属性，那么在新选择的标签页的样式被更新时会有一个短暂的断层，浏览器仍然在显示旧的标签页的内容。</p>
+
+<footer class="entry-meta"> </footer>

@@ -1,0 +1,96 @@
+---
+title: Settings API
+slug: Web/API/Settings_API
+tags:
+  - API
+  - Firefox OS
+  - Non-standard
+  - Reference
+  - Settings API
+translation_of: Archive/B2G_OS/API/Settings_API
+---
+<p>{{DefaultAPISidebar("Settings API")}}{{ non-standard_header() }}</p>
+
+<p>{{ B2GOnlyHeader2('certified') }}</p>
+
+<p class="summary"><strong>Settings API</strong> はデバイス設定へのアクセス、監視、変更を行うための手段です。デバイス設定にはシステムを危険に晒す可能性のある、慎重に取り扱うべき情報が含まれるため、認定アプリのみこのAPIを利用することができます。</p>
+
+<h2 id="デバイス設定の利用">デバイス設定の利用</h2>
+
+<p>デバイス設定は {{domxref("SettingsManager")}} インターフェースのインスタンスである {{domxref("navigator.mozSettings")}} オブジェクトを経由して操作することができます。</p>
+
+<h3 id="デバイス設定へのアクセス">デバイス設定へのアクセス</h3>
+
+<p>デバイス設定にアクセスするには、まず {{domxref("SettingsManager.createLock()","createLock()")}} メソッドを呼び出して "lock" を作成する必要があります。これは複数のアプリがデバイス設定を同時に呼び出して設定の変更を行う可能性があるため、他のアプリに干渉しないようにする必要があるからです。"lock" 作成することで、特定の期間内にひとつのアプリのみがデバイス設定にアクセスできることを保証します。</p>
+
+<p>"lock" を作成したら、アプリは {{domxref("SettingsLock.get()","get()")}} 関数を利用して様々な設定情報を取得することができます。この関数はリクエストの成功または失敗を示す {{domxref("DOMRequest")}} オブジェクトを返します。リクエストが完了すると、（結果の成功または失敗にかかわらず）"lock" は例外なく自動的に解放されて他のアプリにデバイス設定へのアクセスを譲ります。必要に応じて "lock" の {{domxref("SettingsLock.closed","closed")}} プロパティを参照し "lock" が解放されたかどうか確認することもできます。</p>
+
+<p>以下のコードは "lock" を作成してシステムの wifi.enabled 設定を取得しています。取得結果は {{domxref("console.log()")}} によりコンソールに出力されます。</p>
+
+<pre class="brush: js">var lock    = navigator.mozSettings.createLock();
+var setting = lock.get('wifi.enabled');
+
+setting.onsuccess = function () {
+  console.log('wifi.enabled: ' + setting.result);
+}
+
+setting.onerror = function () {
+  console.warn('An error occured: ' + setting.error);
+}
+</pre>
+
+<h3 id="デバイス設定の変更">デバイス設定の変更</h3>
+
+<p>設定値の変更手順は、{{domxref("SettingsLock.set()","set()")}} 関数を呼び出す以外は設定値の取得と全く同じです。この関数は設定変更の成功または失敗を示す {{domxref("DOMRequest")}} オブジェクトを返します。</p>
+
+<p>{{domxref("SettingsLock.set()","set()")}} は引数としてオブジェクトを渡す必要があります。オブジェクトは設定名称をキーとし、変更後の値を対とするキーペアの集合です。設定可能な値については <a href="/docs/Mozilla/Firefox_OS/Platform/Settings_list" title="/docs/Mozilla/Firefox_OS/Platform/Settings_list">Firefox OS settings list</a> を参照して下さい（ただし設定できる項目がデバイス毎に異なる場合があることに注意して下さい）。</p>
+
+<p>以下のコードは "lock" を作成してシステムの wifi.enabled 設定を変更し、その結果をコンソールに出力します。</p>
+
+<pre class="brush: js">var lock = navigator.mozSettings.createLock();
+var result = lock.set({
+  'wifi.enabled': true
+});
+
+result.onsuccess = function () {
+  console.log("the settings has been changed");
+}
+
+result.onerror = function () {
+  console.log("An error occure, the settings remain unchanged");
+}</pre>
+
+<h3 id="デバイス設定の変更を監視する">デバイス設定の変更を監視する</h3>
+
+<p>設定の取得や変更だけでなく、アプリはデバイス設定への変更を監視することもできます。システムは設定が変更される毎に {{event("settingchange")}} イベントを発火します。. これは {{domxref("MozSettingsEvent")}} イベントの一つで、通常のイベントに加えて以下の追加プロパティを保持します。</p>
+
+<ul>
+ <li>{{domxref("MozSettingsEvent.settingName","settingName")}} 変更された設定の名称</li>
+ <li>{{domxref("MozSettingsEvent.settingValue","settingValue")}} 変更後の値</li>
+</ul>
+
+<p>{{event("settingchange")}} イベントを監視するには、設定の変更毎に呼び出される {{domxref("SettingsManager.onsettingchange")}} にコールバック関数を渡します。また、{{domxref("SettingsManager.addObserver()")}} 関数を利用すると、特定の設定に限定して変更を監視する事もできます。</p>
+
+<pre class="brush: js">function handleWifi(event) {
+  if (event.settingValue === true) {
+    console.log("Hey! I can download that crazy heavy 4GB file")
+  } else {
+    console.log("Oh! I should stop downloading that crazy 4GB file")
+  }
+}
+
+navigator.mozSettings.addObserver('wifi.enabled', handleWifi);
+</pre>
+
+<h2 id="仕様">仕様</h2>
+
+<p>草案。これは正式な仕様ではありませんが、W3Cにおいて <a class="external" href="http://www.w3.org/2012/sysapps/" rel="external" title="http://www.w3.org/2012/sysapps/">System Applications Working Group</a> の一部として協議される予定です。</p>
+
+<h2 id="参考">参考</h2>
+
+<ul>
+ <li>{{domxref("Navigator.mozSettings")}}</li>
+ <li>{{domxref("SettingsManager")}}</li>
+ <li>{{domxref("SettingsLock")}}</li>
+ <li>{{domxref("MozSettingsEvent")}}</li>
+</ul>

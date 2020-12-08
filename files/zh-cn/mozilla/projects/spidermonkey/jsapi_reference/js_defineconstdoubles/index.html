@@ -1,0 +1,59 @@
+---
+title: JS DefineConstDoubles
+slug: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_DefineConstDoubles
+translation_of: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_DefineConstDoubles
+---
+<h3 id=".E6.91.98.E8.A6.81" name=".E6.91.98.E8.A6.81">摘要</h3>
+<p>为对象创建一个或多个包含双浮点值的属性。</p>
+<h3 id=".E8.AF.AD.E6.B3.95" name=".E8.AF.AD.E6.B3.95">语法</h3>
+<pre>  JSBool JS_DefineConstDoubles(JSContext *cx, JSObject *obj,
+    JSConstDoubleSpec *cds);
+</pre>
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>名称</th>
+   <th>类型</th>
+   <th>描述</th>
+  </tr>
+  <tr>
+   <td>cx</td>
+   <td>JSContext *</td>
+   <td>指向JS运行时信息内容的指针。</td>
+  </tr>
+  <tr>
+   <td>obj</td>
+   <td>JSObject *</td>
+   <td>指向新建的属性的对象指针。</td>
+  </tr>
+  <tr>
+   <td>cds</td>
+   <td>JSConstDoubleSpec *</td>
+   <td>指向创建的包含双浮点属性值和属性名的结构化数组的指针。最后一个数组元素必须包含一个为零值的成员。</td>
+  </tr>
+ </tbody>
+</table>
+<h3 id=".E6.8F.8F.E8.BF.B0" name=".E6.8F.8F.E8.BF.B0">描述</h3>
+<p><code>JS_DefineConstDoubles</code>为特定的对象创建一个或多个成员变量，<code>obj</code>, 每个成员变量包含一个双浮点类型的值。每个成员变量在<code>JSConstDoubleSpec</code>结构中的<code>flags</code>字段被自动声名并由<code>cds</code>传递指针。 如果<code>flags</code>被设为<code>0</code>值, 成员变量的属性会自动被设为<code>JSPROP_PERMANENT 或 JSPROP_READONLY</code>。</p>
+<p><code>cds</code> 是一个指向具有<code>JSConstDoubleSpec</code>结构的数组的第一个元素的指针。每个数组元素定义独立的变量名和变量值。数组的最后一个元素的<code>name</code>字段必须是0。<code>JS_DefineConstDoubles</code>为数组中的每一个名称字段不为零的元素建立一个成员变量。</p>
+<p>通常情况下, <code>JS_DefineConstDoubles</code> 返回 <code>JS_TRUE</code>, 表明它在数组中已经建立了所有的属性列表。除此之外的情况下它返回<code>JS_FALSE</code>。</p>
+<h2 id=".E6.9B.B4.E5.A4.9A.E5.8F.82.E8.80.83" name=".E6.9B.B4.E5.A4.9A.E5.8F.82.E8.80.83">更多参考</h2>
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td>新闻组</td>
+   <td><a href="cn/JSAPI_%e5%8f%82%e8%80%83#Functions">Functions</a></td>
+  </tr>
+  <tr>
+   <td>文档</td>
+   <td><a class="external" href="http://lxr.mozilla.org/mozilla/ident?i=JS_DefineConstDoubles">LXRSearch</a></td>
+  </tr>
+  <tr>
+   <td>章节</td>
+   <td>
+    <p><a href="cn/JSConstDoubleSpec">JSConstDoubleSpec</a>, <a href="cn/JS_DefineElement">JS_DefineElement</a>, <a href="cn/JS_DefineFunction">JS_DefineFunction</a>, <a href="cn/JS_DefineFunctions">JS_DefineFunctions</a>, <a href="cn/JS_DefineObject">JS_DefineObject</a>, <a href="cn/JS_DefineProperties">JS_DefineProperties</a>, <a href="cn/JS_DefineProperty">JS_DefineProperty</a>, <a href="cn/JS_DefinePropertyWithTinyId">JS_DefinePropertyWithTinyId</a></p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p> </p>

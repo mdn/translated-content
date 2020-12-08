@@ -1,0 +1,180 @@
+---
+title: リストコントロール
+slug: Archive/Mozilla/XUL/Tutorial/List_Controls
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/List_Controls
+---
+<div><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/Tutorial/Numeric_Controls" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/Tutorial/Progress_Meters">次のページ  »</a></p>
+</div></div>
+
+<p>XUL には、リストボックスを作成するための要素が何種類かあります。</p>
+
+
+
+
+
+
+
+<h2 id="List_Boxes" name="List_Boxes">リストボックス</h2>
+
+<p>リストボックスは、複数の項目をリストとして表示するために使用されます。 利用者はリストから項目を 1 つ選択できます。</p>
+
+<p>XUL には、リストを作成する要素が 2 種類用意されています。 <code><a href="/ja/docs/Mozilla/Tech/XUL/listbox" title="listbox">listbox</a></code> 要素は、複数行のリストボックスを作成するために、また <code><a href="/ja/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code> 要素は、ドロップダウン・リストボックスを作成するのに使用されます。 これらは、両方の機能を持つ、HTML の <code>select</code> 要素と同様に動作しますが、 XUL 要素には、さらに機能が追加されています。</p>
+<p>最も単純なリストボックスは、<code><a href="/ja/docs/Mozilla/Tech/XUL/listbox" title="listbox">listbox</a></code> 要素を使用してボックスを作成し、リストのそれぞれの項目は <code><a href="/ja/docs/Mozilla/Tech/XUL/listitem" title="listitem">listitem</a></code> 要素を使用して作成します。 例えば、下に示すリストボックスには 4 つの行があり、各行は 1 つの項目を持っています。</p>
+
+<p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_1.xul">表示</a></p>
+
+<div class="float-right"><img src="/@api/deki/files/743/=Lists1.png"></div>
+
+<pre class="brush:xml">&lt;listbox&gt;
+  &lt;listitem label="Butter Pecan" /&gt;
+  &lt;listitem label="Chocolate Chip" /&gt;
+  &lt;listitem label="Raspberry Ripple" /&gt;
+  &lt;listitem label="Squash Swirl" /&gt;
+&lt;/listbox&gt;
+</pre>
+
+
+<p>HTML の <code>option</code> 要素と同様に、<code id="a-value"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code> 属性を使用してそれぞれの項目に値を設定することができます。 設定した値はスクリプトで使用できます。 リストボックスは、デフォルトでは適切な大きさになりますが、<code id="a-rows"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/rows">rows</a></code> 属性を使用して、大きさを制御することも可能です。 この属性には、リストボックスに表示させたい行数を設定します。 利用者が表示しきれない行を表示できるように、スクロールバーが表示されるはずです。</p>
+
+<p>次の例は、これらの追加機能を示します。</p>
+<p><span id="%E4%BE%8B_2"><a id="%E4%BE%8B_2"></a><strong>例 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_2.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_2.xul">表示</a></p>
+
+<pre class="brush:xml">&lt;listbox rows="3"&gt;
+  &lt;listitem label="Butter Pecan" value="bpecan" /&gt;
+  &lt;listitem label="Chocolate Chip" value="chocchip" /&gt;
+  &lt;listitem label="Raspberry Ripple" value="raspripple" /&gt;
+  &lt;listitem label="Squash Swirl" value="squash" /&gt;
+&lt;/listbox&gt;
+</pre>
+
+
+<p>この例では、一度に 3 行しか表示されないように変更が加えられました。 また、リストのそれぞれの項目に対して値を設定しています。 リストボックスには多くの追加機能がありますが、それについては後述します。</p>
+
+
+
+
+
+
+<h2 id="Multi-Column_List_Boxes" name="Multi-Column_List_Boxes">複数列を持つリストボックス</h2>
+
+<p>リストボックスは複数列表示もサポートします。 各セルの内容は通常テキストのみが使用されますが、任意のものを含めてもかまいません。 利用者がリスト内の項目を選択すると行全体が選択されます。 セル 1 つだけを選択することはできません。</p>
+
+<p>リストボックスの列の指定には 2 種類のタグが用いられます。 <code><a href="/ja/docs/Mozilla/Tech/XUL/listcols" title="listcols">listcols</a></code> 要素は、列についての情報を保持するために使用され、 個々の列単位に指定する <code><a href="/ja/docs/Mozilla/Tech/XUL/listcol" title="listcol">listcol</a></code> 要素を囲います。 なお、一つの列に対して、一つの <code><a href="/ja/docs/Mozilla/Tech/XUL/listcol" title="listcol">listcol</a></code> 要素が必要になります。</p>
+
+<p>行内の個々のセルには、<code><a href="/ja/docs/Mozilla/Tech/XUL/listcell" title="listcell">listcell</a></code> 要素を用います。 もし、3 列作りたい場合は、各 <code><a href="/ja/docs/Mozilla/Tech/XUL/listitem" title="listitem">listitem</a></code> 内に、3 つずつ <code><a href="/ja/docs/Mozilla/Tech/XUL/listcell" title="listcell">listcell</a></code> 要素が必要になります。 セルにテキストの内容を指定するには、<code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code> 属性を <code><a href="/ja/docs/Mozilla/Tech/XUL/listcell" title="listcell">listcell</a></code> 要素に設定します。 1 列しか無い単純な場合は、前に示したリストボックスの例のように、<code><a href="/ja/docs/Mozilla/Tech/XUL/listcell" title="listcell">listcell</a></code> 要素を全く用いないで、 <code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code> 属性を直接 <code><a href="/ja/docs/Mozilla/Tech/XUL/listitem" title="listitem">listitem</a></code> 要素に設定してもかまいません。</p>
+
+<p>次の例は 3 行 2 列のリストボックスです。</p>
+<p><span id="%E4%BE%8B_3"><a id="%E4%BE%8B_3"></a><strong>例 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_3.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_3.xul">表示</a></p>
+
+
+<pre class="brush:xml">&lt;listbox&gt;
+  &lt;listcols&gt;
+    &lt;listcol/&gt;
+    &lt;listcol/&gt;
+  &lt;/listcols&gt;
+  &lt;listitem&gt;
+    &lt;listcell label="George" /&gt;
+    &lt;listcell label="House Painter" /&gt;
+  &lt;/listitem&gt;
+  &lt;listitem&gt;
+    &lt;listcell label="Mary Ellen" /&gt;
+    &lt;listcell label="Candle Maker" /&gt;
+  &lt;/listitem&gt;
+  &lt;listitem&gt;
+    &lt;listcell label="Roger" /&gt;
+    &lt;listcell label="Swashbuckler" /&gt;
+  &lt;/listitem&gt;
+&lt;/listbox&gt;
+</pre>
+
+
+
+
+
+
+<h2 id="Header_Rows" name="Header_Rows">見出し行</h2>
+<p>リストボックスには、見出しとして特別な行を与えることができます。 これは通常の行と類似していますが、表示のされ方が異なります。 これを、列の見出しとして使うことが可能です。 このために 2 種類の新しい要素を使用します。</p>
+<p>普通の行を表すのに <code><a href="/ja/docs/Mozilla/Tech/XUL/listitem" title="listitem">listitem</a></code> 要素を利用するのと同じ要領で、見出し行には <code><a href="/ja/docs/Mozilla/Tech/XUL/listhead" title="listhead">listhead</a></code> 要素を用いることが出来ます。 ただし、見出し行は普通の行とは異なるため、スクリプトから 1 行目を取得する際には無視されます。</p>
+<p>見出し行の各セルには <code><a href="/ja/docs/Mozilla/Tech/XUL/listheader" title="listheader">listheader</a></code> 要素が利用されます。 セルに対するラベルは <code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code> 属性で設定します。</p>
+<p>前の例に見出し行を付加したものを示します。</p>
+<p><span id="%E4%BE%8B_4"><a id="%E4%BE%8B_4"></a><strong>例 4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_4.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_4.xul">表示</a></p>
+<pre class="brush:xml">&lt;listbox&gt;
+  &lt;listhead&gt;
+    &lt;listheader label="Name" /&gt;
+    &lt;listheader label="Occupation" /&gt;
+  &lt;/listhead&gt;
+
+  &lt;listcols&gt;
+    &lt;listcol/&gt;
+    &lt;listcol flex="1" /&gt;
+  &lt;/listcols&gt;
+  &lt;listitem&gt;
+    &lt;listcell label="George" /&gt;
+    &lt;listcell label="House Painter" /&gt;
+  &lt;/listitem&gt;
+  &lt;listitem&gt;
+    &lt;listcell label="Mary Ellen" /&gt;
+    &lt;listcell label="Candle Maker" /&gt;
+  &lt;/listitem&gt;
+  &lt;listitem&gt;
+    &lt;listcell label="Roger" /&gt;
+    &lt;listcell label="Swashbuckler" /&gt;
+  &lt;/listitem&gt;
+&lt;/listbox&gt;
+</pre>
+<div class="float-right">
+  <img src="/@api/deki/files/772/=Morelists1.png"></div>
+<p>この例では、列を伸縮可能 (<span style="color: green;">flexible</span>) にするため <code id="a-flex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code> 属性が利用されています。 この属性については、<a href="/ja/docs/XUL/Tutorial/Using_Spacers">後のセクション</a>で述べますが、ここでは水平方向の余った空間を、この列が占めるようにするために指定しています。 ウィンドウをリサイズすることで、ウィンドウの幅に追随して、列が伸縮するのを見ることが出来ます。 幅を狭めるとラベルが自動的に短縮されて、一部が省略符号 (...) にされます。 この省略符号化を無効にしたい場合は、セルや項目の <code id="a-crop"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/crop">crop</a></code> 属性を <code>none</code> に設定します。</p>
+
+
+
+
+
+
+<h2 id="Drop-down_Lists" name="Drop-down_Lists">ドロップダウンリスト</h2>
+<p>HTML では、<code>select</code> 要素を使用してドロップダウンリストを作成できます。 利用者はテキストボックスに単一の選択された内容を見ることができ、テキストボックスの横にある矢印か、それと類似のボタンをクリックすることで、別の選択肢を選ぶことができます。 このとき選択肢はポップアップウィンドウに表示されます。 XUL にも、この目的で使用可能な <code><a href="/ja/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code> 要素があります。 この要素は、テキストボックスとその横のボタンから構成されています。 <code>menulist</code> の名称は、それが選択肢を含んだメニューをポップアップする事から来ています。</p>
+<p>ドロップダウンボックスを記述するには、3 つの要素が必要です。 最初は、<code><a href="/ja/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code> 要素で、これはボタンが横にあるテキストボックスを作成します。 2 番目は <code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> で、ボタンがクリックされたときに表示されるポップアップウィンドウを作成します。3 番目は <code><a href="/ja/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code> で、個々の選択肢を作成します。</p>
+<p>構文を以下の例で示します。</p>
+<p><span id="%E4%BE%8B_5"><a id="%E4%BE%8B_5"></a><strong>例 5</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_5.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_5.xul">表示</a></p>
+<div class="float-right">
+  <img src="/@api/deki/files/732/=Inputs2.png"></div>
+<pre class="brush:xml">&lt;menulist label="Bus"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="Car" /&gt;
+    &lt;menuitem label="Taxi" /&gt;
+    &lt;menuitem label="Bus" selected="true" /&gt;
+    &lt;menuitem label="Train" /&gt;
+  &lt;/menupopup&gt;
+&lt;/menulist&gt;
+</pre>
+<p>このメニューリストには、それぞれの <code><a href="/ja/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code> 要素で規定された、4 つの選択肢があります。 選択肢を表示するには、メニューリストの矢印ボタンをクリックします。 どれか 1 つが選択されると、選択されたものがメニューリストに表示されます。 <code id="a-selected"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/selected">selected</a></code> 属性は、デフォルトで選択される値を指定するのに使用されます。</p>
+
+
+
+
+
+
+<h3 id="Editable_menulist" name="Editable_menulist">編集可能なメニューリスト</h3>
+<p>デフォルトでは、リストからの選択しかできないため、選択肢以外の値を直接入力する事はできません。 メニューリストの変種には、入力欄の編集が可能なものもあります。 例えば、ブラウザの URL 欄は以前に入力した URL を選択するドロップダウンが表示されますが、それを自分で直接入力することもできます。</p>
+<p>編集可能なメニューリストを作成するには、次の例のように <code id="a-editable"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/editable">editable</a></code> 属性を追加します。</p>
+<p><span id="%E4%BE%8B_6"><a id="%E4%BE%8B_6"></a><strong>例 6</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_6.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_6.xul">表示</a></p>
+<pre class="brush:xml">&lt;menulist editable="true"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="www.mozilla.org" /&gt;
+    &lt;menuitem label="www.xulplanet.com" /&gt;
+    &lt;menuitem label="www.dmoz.org" /&gt;
+  &lt;/menupopup&gt;
+&lt;/menulist&gt;
+</pre>
+
+<p>ここで作成された URL 欄は、<span style="border-bottom: 1px dashed green;" title="pre-populated">既登録</span>の選択肢 3 つがあるため、利用者はこれらから選択することが出来ますが、自分が設定したい値を欄に直接入力する事も可能です。 なお利用者が入力した値は、新しい選択肢としては追加されません。 この例では <code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code> 属性が使用されていないので、デフォルト値は空白です。</p>
+<p>次のセクションでは、プログレスメーターの作成について学びます。</p>
+
+<div><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/Tutorial/Numeric_Controls" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/Tutorial/Progress_Meters">次のページ  »</a></p>
+</div></div>

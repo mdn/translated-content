@@ -1,0 +1,48 @@
+---
+title: 怎样在任务管理器中获取进程的dump
+slug: Mozilla/How_to_get_a_process_dump_with_Windows_Task_Manager
+translation_of: Mozilla/How_to_get_a_process_dump_with_Windows_Task_Manager
+---
+<h2 id="介绍">介绍</h2>
+
+<p>当追踪进程为何挂起的时候，获取运行进程的dump是很有用的。这篇文章描述怎样从任务管理器中提取进程dump。 (为了获取thunderbird或者其他产品的dump，用一些指令替换火狐中的一些名称)</p>
+
+<h2 id="起因">起因</h2>
+
+<p>一个内存dump被创建代表了创建者文件时的火狐状态的快照，它包含了，活动tab的URL，历史信息，可能甚至包含密码，依赖于你获取快照的时机，当重现问题的时候，适当创建一个新的说明文件，并且抓取dump。请帮忙做这些。</p>
+
+<h2 id="Requirements" name="Requirements">要求</h2>
+
+<dl>
+ <dt></dt>
+ <dt id="Debugging_Tools_for_Windows">Windows</dt>
+ <dd>为了获取进程度dump，你需要Wndows Vista及以上系统</dd>
+ <dt></dt>
+ <dt id="A_Firefox_nightly_or_release">一个火狐日构建版本或发布版</dt>
+ <dd>你需要火狐的符号表 <a href="/en-US/docs/Using_the_Mozilla_symbol_server" title="Using_the_Mozilla_symbol_server">Mozilla symbol server</a>. 你可以用 <a class="external external-icon" href="https://ftp.mozilla.org/pub/firefox/nightly/">官方日构建版本</a> 或者发布版本. 你可以获取最新的日构建版本在 <a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-trunk/" rel="freelink">http://ftp.mozilla.org/pub/mozilla.o.../latest-trunk/</a>.</dd>
+</dl>
+
+<h2 id="Debugging" name="Debugging">创建dump文件</h2>
+
+<p>确保火狐没有在运行.</p>
+
+<p>运行火狐，重现问题</p>
+
+<p>打开火狐，重现引起问题的步骤.  一旦出现，继续以下步骤</p>
+
+<h3 id="挂起之后">挂起之后</h3>
+
+<ol>
+ <li>打开任务管理器 (CTRL+SHIFT+ESC).</li>
+ <li>在进程列表中查找 Firefox.exe</li>
+ <li>右键 Firefox.exe 选择 "创建dump文件". 任务管理器需要dump写的位置.</li>
+</ol>
+
+<h2 id="See_also" name="See_also">其他</h2>
+
+<ul>
+ <li><a href="/en-US/docs/How_to_get_a_stacktrace_for_a_bug_report" title="/en-US/docs/How_to_get_a_stacktrace_for_a_bug_report">怎样获取一个bug的堆栈 [en-US]</a></li>
+ <li><a class="external external-icon" href="https://docs.microsoft.com/en-us/windows/client-management/generate-kernel-or-complete-crash-dump#manually-generate-a-memory-dump-file">怎样在 Windows Vista 和 in Windows 7 创建一个用户模式下的dump(MSDN)</a></li>
+</ul>
+
+<div id="divCleekiAttrib" style="display: none;"></div>

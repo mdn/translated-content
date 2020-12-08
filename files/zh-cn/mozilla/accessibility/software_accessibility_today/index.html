@@ -1,0 +1,133 @@
+---
+title: 软件无障碍：我们前进到哪里了？
+slug: Mozilla/Accessibility/Software_accessibility_today
+tags:
+  - Accessibility
+  - 可访问性
+  - 无障碍
+translation_of: Mozilla/Accessibility/Software_accessibility_today
+---
+<p id="Where_Are_We_Today.3F">在过去的二十年内，计算机软件的无障碍辅助功能已经出现了大幅改善。本文综述了这一方面的发展进度和技术。</p>
+
+<h2 id="我们前进到哪里了？">我们前进到哪里了？</h2>
+
+<p>到目前为止，桌面计算机环境背后最大的驱动力来自微软公司，首先，他们开发出了 MS DOS，随后是一代又一代的 Microsoft Windows。在设计时，这些操作系统并没有考虑到残疾人的需要。许多人，包括那些失明或有其他身体残疾的人，无法使用一些为微软操作系统编写的应用程序。这些应用程序假设计算机用户可以：</p>
+
+<ul>
+ <li>浏览屏幕上的文字与图片并对其做出响应。</li>
+ <li>在标准键盘上打字。</li>
+ <li>使用鼠标选择文本、图片和其他元素</li>
+ <li>对播放的音效做出响应。This tends to be somewhat less of a limitation in that most software doesn't rely exclusively on audio to relay feedback.</li>
+</ul>
+
+<p>如果一个人不能做到完成上面列出的项目中的任何一条，他就会发现自己无法使用许多流行的计算机应用程序。以下是一些在执行这些任务时会遇到问题的人群：</p>
+
+<ul>
+ <li>Print disabled: blind, deaf-blind, low vision, obstructed vision, dyslexic, cognitively disabled and illiterate individuals.</li>
+ <li>Physically disabled: users have amputations, paralysis, repetitive stress, cerebral palsy, muscular dystrophy, Parkinson's or other problems limiting mobility.</li>
+ <li>Hearing impaired</li>
+</ul>
+
+<p>我们还必须考虑到，有越来越多的上了年纪的 50 后、60 后，还有 70 后开始出现视觉、视力或者灵活性方面的问题。当您将所有可能的用户群体加在一起时，就会发现，无障碍功能其实有很多潜在的用户！</p>
+
+<p>In answer to this problem, many small accessibility hardware and software vendors created products and software which helped people who could not perform one of the four basic tasks to use common computer applications. Some examples of these assistive devices and software include:</p>
+
+<ul>
+ <li>Screen reading software, which speaks text displayed on the screen using hardware or software text-to-speech, and which allows a blind person to use the keyboard to simulate mouse actions</li>
+ <li>Alternate input devices, which allow people with physical disabilities to use alternatives to a keyboard and mouse</li>
+ <li>Voice recognition software, which allows a person to simulate typing on a keyboard or selecting with a mouse by speaking into the computer</li>
+ <li>Screen magnification software, which allows a low-vision computer user to more easily read portions of the screen</li>
+ <li>Comprehension software, which allows a dyslexic or learning disabled computer user to see and hear text as it is manipulated on the computer screen</li>
+</ul>
+
+<p>In fact, the entire adaptive technology industry has grown up around these issues. One great place to go and learn about this industry is the <a class="ex-ref" href="http://www.csun.edu/cod/">CSUN conference</a> in Los Angeles, which takes place every year in mid-late March.</p>
+
+<h2 id="访问屏幕内容的替代方法">访问屏幕内容的替代方法</h2>
+
+<p>大多数计算机程序都是图形化的，对于有视力障碍的人来说，其中一些程序难以使用或者根本无法使用。好在，这种情况不一定就无法挽回。以下是一些现在的视力障碍读者使用桌面软件的方式：</p>
+
+<dl>
+ <dt>Text-to-speech (TTS)</dt>
+ <dd>Makes the computer talk to the user: Those who can't read print at all usually use talking programs (text-to-speech). Talking programs are also useful for print disabilities other than visual impairments, such as dyslexia. Additionally, text-to-speech is used by those who cannot speak, in place of their own voice. Finally, this technology could be useful to mainstream users, on portable information appliances, or to access information when the eyes are busy elsewhere.</dd>
+ <dt>放大</dt>
+ <dd>Enlarges the screen's contents: For those with low vision, it may suffice to use a larger font, a built-in high contrast theme, or even just an an extra large screen. Otherwise, screen magnification programs may be used, which allow zooming in to portions of the screen, while following the mouse or the current focus. Screen magnifiers also have some built-in text-to-speech and the ability to filter text and images through various color palettes, such as black on yellow for high contrast, or green on blue for low contrast.</dd>
+ <dt>The Optacon</dt>
+ <dd>Provides access to printed words, graphics and on-screen information by means of an array vibrating pins the size of an index finger. The user uses one hand to read the vibrating pins, and the other hand moves a mini-camera over the material to be read. Unfortunately, the unit is not currently produced, although there is occasional talk of resurrecting this useful device.</dd>
+ <dt>Braille</dt>
+ <dd>A solution used for quiet reading, for detailed work, and by deaf-blind users. This can come in the form of hard copy braille printed on braille embossers, or from a refreshable braille display (see below). These technologies requires special drivers, braille formatting routines and software based text-to-braille translation. The importance of braille itself must be emphasized. For those that read it, braille can offer higher levels of employment and life fulfillment.</dd>
+</dl>
+
+<table>
+ <tbody>
+  <tr>
+   <td style="vertical-align: top;"><img alt="" src="https://mdn.mozillademos.org/files/6145/powerbraille.jpg" style="border-style: solid; border-width: 1px; height: 189px; width: 303px;"></td>
+   <td style="vertical-align: top;"><img alt="" src="https://mdn.mozillademos.org/files/6147/vpduo2.jpg" style="border-style: solid; border-width: 1px; height: 171px; width: 184px;"></td>
+  </tr>
+  <tr>
+   <td>Refreshable braille displays of various sizes</td>
+   <td>A braille embosser</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Audio- and braille- based user interfaces are concepts that software designers are historically untrained for. The basic concept is easy - dealing with information when you're blind is like seeing everything through a mail slot - sequentially and methodically. Only small pieces of sequential, non-graphical information can be conveyed - via text-to-speech or a refreshable braille display. Whatever the user does, the software needs to respond with small, bite sized pieces of information that are as short and to the point as possible. Ideally, intelligent decisions are made, so the user does not have to wade through as much non-relevant data.</p>
+
+<h2 id="操作计算机、输入数据的替代方法">操作计算机、输入数据的替代方法</h2>
+
+<p>Another problem is how people with disabilities get information into the computer. If you're physically disabled, you may not be able to type on a regular keyboard or use a mouse. Here are some of the alternative ways physically disabled people enter information:</p>
+
+<dl>
+ <dt>粘滞键</dt>
+ <dd>Make entering key combinations easy. For example to make a capital letter, first press the shift key, release it, then press the letter to be capitalized. The sticky key technique is utilized by people who have only one usable hand, or who have no use of their hands and type using a stick in their mouth.</dd>
+ <dt>Single switch</dt>
+ <dd>Technologies enable persons with severe physical disabilities. Some, like Stephen Hawking, enter information by choosing among lists of options. They might press a switch down to begin moving a highlight bar through the list, and release the switch when the desired option is highlighted.</dd>
+ <dt>特种键盘</dt>
+ <dd>Exist to make data entry easier. However, any special features are generally handled in the keyboard itself, so that no special programming is required.</dd>
+ <dt>语音识别</dt>
+ <dd>Technology lets people talk to the computer. This technology has come a long way, but still needs to be more integrated into mainstream software.</dd>
+ <dt>Consistent keyboard support and hotkeys</dt>
+ <dd>Many people can't use a mouse. Extremely consistent keystroke support is a very important consideration. Blind testers have knack for finding ways to improve keystroke support in almost any given piece of software. Testing with people that have disabilities generally benefits everyone. Use the <a href="/en-US/docs/Mozilla/Accessibility/What_needs_to_be_done_when_building_new_toolkits">accessible toolkit checklist</a> to make sure your UI controls adhere to standards.</dd>
+</dl>
+
+<h2 id="一大主要限制——上下文缺失">一大主要限制——上下文缺失</h2>
+
+<p>这些无障碍软件厂商开发的解决方案大大增加了几十万残障人士的就业率和幸福指数，这些工作的重要性绝不能被轻视。然而，这些解决方案都没能为残障人士提供一个完全可访问、高度易用的工作环境。这是由于一个和上下文有关的简单问题——用户与计算机间的交互是由交互的上下文决定的。当用户在键盘上输入一些东西，或者一个应用程序在屏幕上显示了一些文本或图像，在不同的上下文中，这些交互行为的具体含义也可以是截然不同的。举个例子，一个应用程序可能在处理任务时显示一个电灯泡，而另一个程序可能是在完成任务后显示电灯泡。如果盲人不能得知显示是哪个程序显示了电灯泡，就无法理解这个电灯泡代表什么意思，只能靠猜。类似地，语音识别软件常常需要用户补充交互的上下文信息，来保证用户的语音输入作用到正确的上下文中。这个上下文的问题依然困扰着现代的辅助功能解决方案。</p>
+
+<p>The most recent noteable attempt at solving this problem was put forth by Microsoft in 1997, and is called <dfn>Microsoft Active Accessibility (MSAA)</dfn>. Realizing that complete accessibility was not possible without cooperation between applications and accessibility aids such as screen reading software or voice recognition software, Microsoft Active Accessibility defines a Windows-based standard by which applications can communicate context and other pertanent information to accessibility aids. This solution has seen only partial success, largely due to the fact that it requires significant changes to applications which are made accessible. Because most popular desktop and productivity applications are not open source, this forced disabled people to rely on the companies which produce this software to make it accessible. These companies were often reluctant for various reasons including the large amount of time required to do so. On a positive note, recent federal purchasing rules such as Section 508 have caused many companies to pay attention and implement MSAA support.</p>
+
+<h2 id="步入开源软件之门">步入开源软件之门</h2>
+
+<p>Microsoft was on the right track with Microsoft Active Accessibility, but because the source code to most popular desktop applications which are used in large corporations is not publicly available, they were never made fully accessible. In open source, however, making the necessary modifications to make them accessible is very possible.</p>
+
+<p>Open source software is an ideal way to the needs of disabled users, because accessibility can be fully integrated into the core designs, rather than tacked onto as an afterthought. It also gives disabled programmers a chance to control their own destiny, by giving them the opportunity and the right to directly fix the innaccessible software themselves.</p>
+
+<p>Furthermore, any software solution that can enable equality should by all rights be free of charge - an integral part of society's infrastructure. If no special hardware is required, why should a disabled person pay extra money to use the same software as everyone else? That said, there is still an important role for adaptive technology vendors in creating special services and hardware, or even proprietary software on platforms where that is appropriate. . The ideal situation would be for adaptive technology professionals to make money on rehab, trainingand support - something there is currently not enough of. Each end user has a unique set problems, and in the open source world, providing highly customized solutions can be a business in itself.</p>
+
+<p>Right now, GUI's on Linux are mostly not accessible. Microsoft Windows is still far more accesible. Gnome, KDE, StarOffice, KOffice, Mozilla and all other GUI software packages in Linux are unuseable by large numbers of disabled users. There has been some progress with the support of Gnome's ATK APIs in many of these packages, and the development of GOK (Gnome Onscreen Keyboard) and Gnopernicus (screenreader and magnifier). However, these solutions are not yet truly usable for real disabled end users.</p>
+
+<h2 id="我需要做什么？">我需要做什么？</h2>
+
+<h3 id="Mozilla_开发者">Mozilla 开发者</h3>
+
+<ul>
+ <li>Follow the general front-end accessibility requirements:<br>
+  There are a number of potential "gotchas" when developing XUL UI. Please follow the practical techniques put forth listed in the <a href="/en-US/Accessible_XUL_Authoring_Guidelines">Accessible XUL Authoring Guidelines</a>. These guidelines cover many possible scenarios. If you take a little time to learn them, they will become an unconscious improvement to your design and engineering technique.<br>
+   </li>
+ <li><span>Ensure correct keyboard accessibility when developing new controls:</span><br>
+  Mozilla's XUL and HTML widgets already support proper keyboard accessibility, so let's not regress in that area. Make sure that every new UI control that's developed provides the correct keyboard support.<br>
+  Follow the <a href="/en-US/docs/Mozilla/Accessibility/What_needs_to_be_done_when_building_new_toolkits">Accessible toolkit checklist</a> whenever using XBL to create a new widget.<br>
+   </li>
+ <li><span>Support MSAA and ATK via nsIAccessible when developing new controls</span>:<br>
+  Mozilla is a great position to provide context so that custom controls can be made accessible. Engineers can provide context simply by creating an nsIAccessible for each custom control. The infrastructure to do this is straightforward.</li>
+</ul>
+
+<h3 id="其他开发者">其他开发者</h3>
+
+<p>无论您从事何种工作，可访问性的基础是要了解每一个用户都是不同的。在此之后，具体需要采用的技术可能会随工程环境的不同而变化。下面的{{anch("参见")}}含有分别适用于 Web 开发者和桌面应用程序开发者的各种信息与工具。</p>
+
+<h2 id="参见">参见</h2>
+
+<ul>
+ <li><a href="/zh-CN/docs/Accessibility">Mozilla 无障碍项目页面</a></li>
+ <li>对于感兴趣的读者，一些含有 Web 可访问性、开源无障碍或者通用的无障碍资源的<a href="/en-US/docs/Mozilla/Accessibility/Links_and_Resources">实用链接</a></li>
+</ul>

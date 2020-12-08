@@ -1,0 +1,39 @@
+---
+title: WifiManager.enabled
+slug: Web/API/WifiManager/enabled
+tags:
+  - API
+  - B2G
+  - Non Standard
+  - WebAPI
+translation_of: Archive/B2G_OS/API/WifiManager/enabled
+---
+<div>{{APIRef("Firefox OS")}}{{non-standard_header}}</div>
+
+<div>{{ B2GOnlyHeader2('certified') }}</div>
+
+<p>La valeur de la propriété <strong><code>enabled</code></strong> indique si le wifi est activé ( <code>true</code> ) ou désactivé (<code>false</code>).</p>
+
+<div class="note">
+<p><strong>Note :</strong> Activer ou désactiver le WiFi ne peut être fait en utilisant les <a href="https://developer.mozilla.org/fr/docs/WebAPI/Settings">paramètres API</a> pour changer le <code>wifi.enabled</code> réglage. Chaque fois que ce réglage change, l'objet<code> </code>{{domxref("WifiManager")}} enverra un événement<em> </em>{{event("enabled")}}<em> ou </em>{{event("disabled")}} Ces événements peuvent être traitées en utilisant les gestionnaires d'événements {{domxref("WifiManager.onenabled")}} et {{domxref("WifiManager.ondisabled")}}.</p>
+</div>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox">var enabled = navigator.mozWifiManager.enabled</pre>
+
+<h2 id="Valeur">Valeur</h2>
+
+<p>Retourne un booléen.</p>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<p>Ne fait partie d'aucune spécification.</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>{{domxref("WifiManager")}}</li>
+ <li><a href="/fr/docs/WebAPI/WiFi_Information">WifI Information API</a></li>
+ <li><a href="/fr/docs/WebAPI/Settings">Settings API</a></li>
+</ul>

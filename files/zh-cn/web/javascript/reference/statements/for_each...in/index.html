@@ -1,0 +1,69 @@
+---
+title: for each...in
+slug: Web/JavaScript/Reference/Statements/for_each...in
+translation_of: Archive/Web/JavaScript/for_each...in
+---
+<div>{{jsSidebar("Statements")}}</div>
+
+<p>使用一个变量迭代一个对象的所有属性值，对于每一个属性值，有一个指定的语句块被执行。</p>
+
+<div class="noinclude">
+<div class="warning">
+<p>作为ECMA-357(<a href="/zh-CN/docs/E4X" title="/zh-CN/docs/E4X">E4X</a>)标准的一部分，for each...in语句已被废弃，E4X中的大部分特性已被删除，但考虑到向后兼容，for each...in只会被禁用而不会被删除，可以使用ES6中新的<a href="/zh-CN/docs/JavaScript/Reference/Statements/for...of" title="/zh-CN/docs/JavaScript/Reference/Statements/for...of">for...of</a>语句来代替。({{ bug("791343")}}.)</p>
+</div>
+
+<div class="note"><code>for each...in</code> 是 <a class="external" href="http://www.ecma-international.org/publications/standards/Ecma-357.htm" title="http://www.ecma-international.org/publications/standards/Ecma-357.htm">ECMA-357 (E4X)</a> 标准的一部分，大部分非Mozilla浏览器都没有实现该标准，E4X并不是 ECMAScript 标准的一部分。</div>
+</div>
+
+<h2 id="Syntax" name="Syntax">语法</h2>
+
+<pre class="syntaxbox"><code>for each (<em>variable</em> in <em>object</em>) {
+  <em>statement</em>
+}</code></pre>
+
+<h2 id="Parameters" name="Parameters">参数</h2>
+
+<dl>
+ <dt><code>variable</code></dt>
+ <dd>用来遍历属性值的变量，前面的<code>var</code>关键字是可选的。该变量是函数的局部变量而不是语句块的局部变量。</dd>
+</dl>
+
+<dl>
+ <dt><code>object</code></dt>
+ <dd>属性值会被遍历的对象。</dd>
+</dl>
+
+<dl>
+ <dt><code>statement</code></dt>
+ <dd>遍历属性时执行的语句。如果想要执行多条语句，请用<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/block">块语句</a>(<code>{ ... }</code>) 将多条语句括住。</dd>
+</dl>
+
+<h2 id="Description" name="Description">描述</h2>
+
+<p>一些对象的内置属性是无法被遍历到的，包括所有的内置方法，例如String对象的<code>indexOf</code>方法。不过，大部分的用户自定义属性都是可遍历的.</p>
+
+<h2 id="Examples" name="Examples">示例</h2>
+
+<h3 id="Example:_Using_for_each...in" name="Example:_Using_for_each...in">例子: 使用<code>for each...in</code></h3>
+
+<p><strong>警告：</strong>永远不要使用for each...in语句遍历数组，仅用来遍历常规对象。<a href="/zh-CN/docs/JavaScript/Reference/Statements/for...in#Description" title="JavaScript/Reference/Statements/for...in#Description">这里讲解了为什么这么说</a>。</p>
+
+<p>下面的代码片段演示如何遍历一个对象的属性值，并计算它们的和：</p>
+
+<pre class="brush:js">var sum = 0;
+var obj = {prop1: 5, prop2: 13, prop3: 8};
+
+for each (var item in obj) {
+  sum += item;
+}
+
+print(sum); // 输出"26",也就是5+13+8的值</pre>
+
+<h2 id="See_also" name="See_also">参见</h2>
+
+<ul>
+ <li><a href="/zh-CN/docs/JavaScript/Reference/Statements/for...in" title="JavaScript/Reference/Statements/for...in">for...in</a> - 一个相似的语法,用来遍历对象的属性名称而非属性值.</li>
+ <li><a href="/zh-CN/docs/JavaScript/Reference/Statements/for...of" title="/zh-CN/docs/JavaScript/Reference/Statements/for...of">for...of</a> - 一个相似的语法,用来遍历可迭代对象,有时候效果等同于<code>for each</code>...<code>in</code>语句.</li>
+ <li><a href="/zh-CN/docs/JavaScript/Reference/Statements/for" title="JavaScript/Reference/Statements/for">for</a></li>
+ <li><a href="/zh-CN/docs/JavaScript/Guide/Predefined_Core_Objects#Array_Object">数组推导式</a> (该语句中可以使用for...in<code>,</code><code>for each</code>...<code>in,</code><code>for</code>...<code>of多种语法</code>)</li>
+</ul>

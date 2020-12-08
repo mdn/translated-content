@@ -1,0 +1,139 @@
+---
+title: 開発者モード
+slug: Archive/B2G_OS/Developer_Mode
+translation_of: Archive/B2G_OS/Developer_Mode
+---
+<div class="warning">
+<p><span style="font-size: 14px; line-height: 21px;"><strong>重要</strong></span>: Developer Mode basically removes most of the security checks associated with using sensitive APIs on Firefox OS; it is a useful testing tool, but it is not recommended to have it activated on your everyday device for any period of time.</p>
+</div>
+
+<p class="summary">The current Firefox OS permissions model precludes modification and installation of certified/internal apps, which makes some device APIs completely unavailable to Marketplace and web apps. <strong>Developer Mode (DM)</strong> allows the user to indicate that they would like to relax the permissions model and expose all device APIs to content, as well as setting a group of related preferences. This article provides a high-level overview.</p>
+
+<div class="note">
+<p><strong>記</strong>: Developer Mode is only supported on Firefox OS 3.0+, including Spark.</p>
+</div>
+
+<h2 id="Features">Features</h2>
+
+<p>Once DM has been enabled on a device, the user receives the following benefits:</p>
+
+<ul>
+ <li>Certified/internal apps can be installed from anywhere.</li>
+ <li>All developer-related prefs and settings are enabled, such as certified app debugging, web components, etc.</li>
+ <li>Apps can install add-ons for themselves using the "import-app" activity.</li>
+</ul>
+
+<h3 id="Certified_apps_can_be_installed">Certified apps can be installed</h3>
+
+<p>Normally, certified/internal apps must be shipped with a Firefox OS distribution. With DM enabled, any app with the <code>certified</code> type can be installed, and can request any certified permissions. Thus, all device API's are unlocked with DM enabled.</p>
+
+<h3 id="Developer_prefs_and_settings_enabled">Developer prefs and settings enabled</h3>
+
+<p>As of this writing, the following preferences are set when DM is enabled:</p>
+
+<ul>
+ <li><code>dom.apps.developer_mode: true</code></li>
+ <li><code>devtools.debugger.forbid-certified-apps: false</code></li>
+ <li><code>network.disable.ipc.security: true</code></li>
+ <li><code>dom.webcomponents.enabled: true</code></li>
+</ul>
+
+<p>This also sets the following settings:</p>
+
+<ul>
+ <li><code>developer.menu.enabled: true</code></li>
+</ul>
+
+<h3 id="Add-on_import_activity">Add-on import activity</h3>
+
+<p>Apps can normally not install apps or add-ons without requesting the <code>webapps-manage</code> permission, which is available to certified/internal apps only. With DM enabled, apps can create add-ons for themselves using the "import-app" activity. The imported app must meet the following criteria:</p>
+
+<ul>
+ <li>It must be an add-on.</li>
+ <li>Its filter(s) must only match the app initiating the activity.</li>
+</ul>
+
+<p>The following example demonstrates this:</p>
+
+<pre class="brush: js">var activity = new MozActivity({
+  name: 'import-app',
+  data: {
+    blob: blob /* app blob */
+  }
+});
+
+activity.onsuccess = function() {
+  // The Settings app has imported the app blob.
+};
+
+activity.onerror = function(e) {
+  // The Settings app failed to import the app for some reason.
+};
+</pre>
+
+<h2 id="Enabling_and_disabling">Enabling and disabling</h2>
+
+<p>DM can be toggled using the Settings app, WebIDE, or an activity. All have the same net effect, but enabling it through WebIDE is the only method that doesn't require a factory reset.</p>
+
+<h3 id="Settings_app">Settings app</h3>
+
+<div class="note">
+<p><strong>Note</strong>: Enabling DM via the Settings app or activity will factory reset your device. Use the WebIDE method if you'd like to avoid this.</p>
+</div>
+
+<p>To enable or disable DM via the Settings app:</p>
+
+<ol>
+ <li>Open the Settings app.</li>
+ <li>If you see a "Developer" panel near the end, skip to #6.</li>
+ <li>Tap on the "Device Information" panel near the end.</li>
+ <li>Tap on the "More Information" panel.</li>
+ <li>Enable "Developer Menu."</li>
+ <li>Tap on "Factory Reset and Enable Full DevTools" near the end to toggle it.</li>
+ <li>Your device will reboot and go into recovery mode. It'll reboot again in a minute or so into Firefox OS with developer mode toggled.</li>
+</ol>
+
+<h3 id="WebIDE">WebIDE</h3>
+
+<div class="note">
+<p><strong>Note</strong>: DM cannot currently be disabled via WebIDE.</p>
+</div>
+
+<p>To enable DM via <a href="/en-US/docs/Tools/WebIDE">WebIDE</a>:</p>
+
+<ol>
+ <li>Open WebIDE.</li>
+ <li>Connect to your device using the "Select Runtime" menu.</li>
+ <li>Open "Runtime Info" from the device menu.</li>
+ <li>Look at "ADB is root." If there's a button next to it, press it. If it says "maybe", or "no", or anything like that, there's a problem. If it says "yes," it's already set, and you can skip to step 5.
+  <ol>
+   <li>When WebIDE is disconnected from the device, reconnect it.</li>
+   <li>Re-open the "Runtime Info" menu.</li>
+  </ol>
+ </li>
+ <li>Look at "Unrestricted DevTools privileges." If there's a button next to it, press it. If not, it should say "yes." If it says "maybe", or "no", or anything like that, there's a problem.</li>
+ <li>Developer mode is now enabled.</li>
+</ol>
+
+<h3 id="Activity">Activity</h3>
+
+<div class="note">
+<p><strong>Note</strong>: Enabling DM via the Settings app or activity will factory reset your device. Use the WebIDE method if you'd like to avoid this.</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: The user's Developer Menu must already be enabled for this to work.</p>
+</div>
+
+<p>The activity to dispatch to enable or disable developer mode is "full-developer-mode". Here is an example:</p>
+
+<pre class="brush: js">var activity = new MozActivity({
+  name: 'configure',
+  data: {
+    target: 'device',
+    section: 'full-developer-mode'
+  }
+});
+</pre>
+
+<p>This will take the user to the Settings app, where they will be prompted to toggle developer mode, with a lot of warnings about the consequences.</p>

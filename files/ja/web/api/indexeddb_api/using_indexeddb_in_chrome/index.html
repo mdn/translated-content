@@ -1,0 +1,33 @@
+---
+title: chrome(ブラウザー内部) で IndexedDB を使う
+slug: Web/API/IndexedDB_API/Using_IndexedDB_in_chrome
+translation_of: Mozilla/Tech/XPCOM/Using_IndexedDB_in_chrome
+---
+<div>{{DefaultAPISidebar("IndexedDB")}}</div>
+
+<p><code>IndexedDB</code> API は、通常、コンテンツ JavaScript からユーザーのブラウザーにデータを格納するために使用されます(概要については <a href="/ja/docs/IndexedDB/Using_IndexedDB" title='/ja/docs/IndexedDB/Using_IndexedDB""'>IndexedDB の使用</a>を参照してください) 。ただし、この API には、システム特権の JavaScript から、<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.importGlobalProperties">Components.utils.importGlobalProperties()</a> </code>関数を使用してアクセスすることもできます:</p>
+
+<pre class="brush: js">Components.utils.importGlobalProperties(["indexedDB"]);
+
+// ここからは、コンテンツから IndexedDB を使うのと同様
+var req = indexedDB.open("my-database");
+// ...</pre>
+
+<p>サンドボックスを作成していて、その中で <code>indexedDB</code> を使用できるようにするには、<code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.Sandbox">Sandbox</a></code> コンストラクタで <code>wantGlobalProperties</code> オプションを使用します:</p>
+
+<pre class="brush: js">var options = {
+  "wantGlobalProperties": ["indexedDB"]
+}
+var principal = Cc["@mozilla.org/systemprincipal;1"].createInstance(Ci.nsIPrincipal);
+var sandbox = Components.utils.Sandbox(principal, options);
+
+// サンドボックスから indexedDB にアクセスできるようになる
+var sandboxScript = 'var req = indexedDB.open("my-database");';
+Components.utils.evalInSandbox(sandboxScript, sandbox);
+</pre>
+
+<p>Firefox 33以前では、<code>nsIIndexedDatabaseManager</code> サービスの <code>initWindowless</code> メソッドを使用して chrome コードから <code>indexedDB</code> にアクセスしました。このメソッドは Firefox 33 で削除されました。</p>
+
+<div class="note">
+<p><strong>訳注:</strong> ここでの chrome コードとは、Google chrome ではなく、<span class="st"><em>chrome特権付きのコードを指しています</em></span></p>
+</div>

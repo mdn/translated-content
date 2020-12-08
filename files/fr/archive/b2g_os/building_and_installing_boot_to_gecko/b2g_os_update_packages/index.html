@@ -1,0 +1,534 @@
+---
+title: Créer et appliquer des paquets de mise à jour B2G OS
+slug: Archive/B2G_OS/Building_and_installing_Boot_to_Gecko/B2G_OS_update_packages
+tags:
+  - B2G OS
+  - FOTA
+  - Firefox OS
+  - Gaia
+  - Mise à jour
+  - OTA
+  - Paquets
+translation_of: Archive/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/fr/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/fr/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<div class="summary">
+<p>Si vous souhaitez permettre aux utilisateurs de B2G OS de mettre à jour facilement la version de leur système sur leurs appareils, vous devez leur créer un paquet de mise à jour qu'ils puissent utiliser. Cet article décrit les différents types de paquets disponibles pour les mises à jour et détaille la construction du paquet, l'hébergement des mises à jour (et comment le système scrute les mises à jour disponibles), ainsi que l'application et la vérification de ces mises à jour.</p>
+</div>
+
+<p>Créer et appliquer une mise à jour se divise en quatre étapes :</p>
+
+<ol>
+ <li>Construire des paquets de mise à jour incrémentale à partir d'ancienne(s) version(s) vers une nouvelle version compilée sur un hôte.</li>
+ <li>Rechercher le bon paquet de mise à jour à télécharger sur le client.</li>
+ <li>Télécharger la mise à jour.</li>
+ <li>Appliquer la mise à jour aux fichiers existants sur l'appareil.</li>
+</ol>
+
+<p>Chacune de ces étapes est abordée ci-dessous.</p>
+
+<div class="note">
+<p><strong>Note</strong> : Il existe un certain nombre d'outils pratiques pour construire et tester les mises à jour système de Firefox OS, disponibles dans <a href="https://github.com/mozilla-b2g/B2G/tree/master/tools/update-tools">b2g/tools/update-tools</a>.</p>
+</div>
+
+<h2 id="Prérequis"><span class="mw-headline" id="Prerequisites">Prérequis</span></h2>
+
+<p>Pour construire et appliquer des mises à jour, vous devez vous assurer que votre build dispose de l'updater et des outils de mise à jour associés. Par défaut, ceux-ci ne sont présents que dans les variantes <strong>userdebug</strong> et <strong>user</strong>. Vous pouvez néanmoins forcer leur construction en ajoutant la ligne suivante dans votre <a href="/fr/Firefox_OS/Customisation_avec_le_fichier_.userconfig">fichier .userconfig </a>:</p>
+
+<pre>export B2G_UPDATER=1</pre>
+
+<p>Pour signer les paquets de mise à jour, vous aurez besoin d'installer un environnement d'exécution Java (JRE) ou le kit de développement logiciel Java (JDK), et d'avoir la commande <strong>java</strong> accessible via le path par défaut.</p>
+
+<h2 id="Types_de_mise_à_jour"><span class="mw-headline" id="Types_of_updates">Types de mise à jour</span></h2>
+
+<p>Il existe deux types de mise à jour à connaître : FOTA (Firmware Over-The-Air) et OTA Gecko/Gaia (Over-The-Air). Voyons les différences qu'il y a entre les deux.</p>
+
+<h3 id="Mises_à_jour_FOTA"><span class="mw-headline" id="FOTA_updates">Mises à jour FOTA</span></h3>
+
+<p><span class="mw-headline">Le système B2G OS entier peut être actualisé via les <strong>mises à jour FOTA</strong>, la technologie sous-jacente qui est commune avec le projet Android. Parmi les emplacements du disque dur du téléphone qui peuvent être modifiés par les mises à jour FOTA figurent la partition système, le noyau, le modem en bande de base, l'image de recovery utilisée pour la mise à jour, ou tout autre fichier présent sur l'appareil.</span></p>
+
+<p>B2G OS ne dépend pas d'un client FOTA en particulier, une API que nous appelons <a class="externallink" href="http://git.mozilla.org/?p=b2g/librecovery.git;a=blob;f=librecovery.h;h=a6e13374f9bffcf947a39d6f3348290d67113321;hb=HEAD" rel="nofollow" title="http://git.mozilla.org/?p=b2g/librecovery.git;a=blob;f=librecovery.h;h=a6e13374f9bffcf947a39d6f3348290d67113321;hb=HEAD">librecovery</a> constituant une interface d'abstraction. Néanmoins, nous recommandons l'utilisation du client de recovery GOTA (voir plus bas pour plus de détails), et le texte présent se base sur le fait que GOTA est utilisé.</p>
+
+<p>Les paquets de mise à jour FOTA consistent essentiellement en un fichier nommé <code>update.zip</code>. Ce paquet est constitué des éléments suivants</p>
+
+<ul>
+ <li>Un ensemble de diffs binaires et de nouveaux fichiers requis pour mettre à jour le client vers la nouvelle version du logiciel</li>
+ <li>Un "script de mise à jour" qui contrôle la façon dont les diffs et les nouveaux fichiers sont chargés sur le client</li>
+ <li>Une signature interne servant à vérifier le paquet de mise à jour</li>
+</ul>
+
+<p>Ce format et l'ensemble des fichiers sont identiques à ceux utilisés pour les mises à jour Android normales, excepté que B2G OS encapsule en plus le paquet <code>update.zip</code> dans un wrapper <code>mar</code> (MAR signifie <strong>Mozilla ARchive</strong>). Ce wrapper <code>mar</code> offre un degré supplémentaire de vérification, ce qui est expliqué plus bas.</p>
+
+<h3 id="Mises_à_jour_OTA_GeckoGaia"><span class="mw-headline" id="Gecko.2FGaia_OTA_updates">Mises à jour OTA Gecko/Gaia</span></h3>
+
+<p><span class="mw-headline">Autrement, il est possible de ne mettre à jour sur un appareil B2G OS</span> <em>que</em> l<span class="mw-headline">es fichiers de Gecko et Gaia, à travers un mécanisme que nous appelons <strong>mises à jour OTA Gecko/Gaia</strong>. L'ensemble des fichiers de Gecko et Gaia — ce qui comprend le cœur exécutif de Gecko et l'interface utilisateur de l'appareil — se trouve dans le répertoire <code>/system/b2g</code> de l'appareil.</span> Il s'agit du seul répertoire auquel les mises à jour OTA peuvent apporter des modifications.</p>
+
+<p>Les mises à jour OTA Gecko/Gaia utilisent la même technologie que celle mise en œuvre pour mettre à jour le navigateur web Firefox pour ordinateur de bureau. Un peu comme les paquets FOTA <code>update.zip</code> abordés plus haut, les mises à jour OTA consistent en un fichier MAR contenant un ensemble de diffs binaires et de nouveaux fichiers nécessaires à la mise à jour du client vers une version plus récente du logiciel.</p>
+
+<p>Le client Gecko vérifie l'intégrité des <code>MARs</code> qu'il a téléchargés, ces derniers pouvant être signés par plusieurs parties.</p>
+
+<h2 id="Pourquoi_avoir_deux_technologies_de_mise_à_jour"><span class="mw-headline" id="Why_have_two_update_technologies.3F">Pourquoi avoir deux technologies de mise à jour ?</span></h2>
+
+<p>Les mises à jour OTA ne sont pas aussi complètes que les FOTA, mais elles sont beaucoup plus ergonomiques et simples à appliquer, et elles correspondront mieux à vos besoins concernant les mises à jour :</p>
+
+<ul>
+ <li>Les mises à jour OTA Gecko/Gaia peut être appliquées "en arrière-plan" pendant que B2G OS continue à fonctionner normalement. Cela apporte une meilleure expérience utilisateur car les utilisateurs n'ont pas besoin de redémarrer leur téléphone ni d'attendre pendant que la mise à jour se fait. Au lieu de ça, la mise à jour est appliquée pendant que l'utilisateur continue à utiliser le téléphone, puis, une fois la mise à jour terminée, l'utilisateur a juste à accepter de redémarrer le processus <code>b2g</code> principal. Cela ne prend que quelques secondes, au lieu des minutes qu'il faut généralement attendre pour l'application des mises à jour FOTA.</li>
+ <li>Les paquets de mise à jour OTA Gecko/Gaia peuvent parfois être plus petits que ceux des mises à jour FOTA, bien que ce ne soit pas toujours le cas ; ils ne seront par contre jamais plus gros. Cela signifie que les utilisateurs pourront quelquefois avoir moins de données à télécharger.</li>
+</ul>
+
+<p>Bien sûr, s'il vous faut actualiser des fichiers autres que ceux de Gecko/Gaia, vous n'aurez pas d'autre choix que de passer par un paquet FOTA complet.</p>
+
+<p>Voyons à présent la suite avec l'examen du processus de construction du paquet.</p>
+
+<h2 id="Construire_des_paquets_de_mise_à_jour"><span class="mw-headline" id="Building_updates_for_multiple_software_versions">Construire des paquets de mise à jour</span></h2>
+
+<p>La construction des mises à jour est le processus consistant à générer les fichiers nécessaires à la mise à jour des clients B2G OS d'une <em>version X</em> du logiciel vers une nouvelle <em>version Y</em>. Le paquet de mise à jour requis pour le client dépend des fichiers qui ont été modifiés entre la <em>version X</em> et la <em>version Y</em>.</p>
+
+<ul>
+ <li>Si <strong>seuls</strong> des fichiers présents dans <code>/system/b2g</code> ont été modifiés, il faudra générer une mise à jour OTA Gecko/Gaia</li>
+ <li>Si un fichier situé ailleurs que dans <code>/system/b2g</code> a été changé, une mise à jour FOTA devra être générée</li>
+</ul>
+
+<p>Pour générer un paquet de mise à jour incrémentale (que ce soit pour des mises à jour FOTA ou OTA Gecko/Gaia), nos outils nécessitent la construction complète de la <em>version X</em> et de la <em>version Y</em>. Une <strong>construction complète</strong> signifie que le paquet intègre tous les fichiers nécessaires au flashage d'un client. Lorsque nous produisons une construction complète pour la <em>version X</em>, nous ne savons pas quelle sera la future version vers laquelle il faudra effectuer la mise à jour de la version <em>X</em> . C'est pour cette raison que les paquets FOTA et les paquets Gecko/Gaia complets doivent être construits pour chaque version. Cela permet de générer aussi bien une mise à jour OTA Gecko/Gaia incrémentale qu'une mise à jour FOTA incrémentale si besoin, entre la <em>version X </em>et toutes les versions futures.</p>
+
+<p>Schématiquement, le processus de construction d'un mise à jour ressemble à ceci :</p>
+
+<ol>
+ <li>Avec le logiciel <em>version X</em>
+
+  <ul>
+   <li>Générer un fichier <code>MAR</code> OTA Gecko/Gaia complet du contenu de <code>/system/b2g</code>.</li>
+   <li>Générer une archive zip des fichiers cibles pour la mise à jour FOTA complète, éventuellement signée, pour les partitions de l'appareil. Le zip des fichiers cibles est référencé plus bas sous le nom <code>DEVICE-target_files-$VARIANT.$USER.zip</code>, c'est un zip contenant les fichiers pour mettre à jour les répertoires du téléphone, dont <code>SYSTEM/</code>, <code>BOOT/</code>, etc. Un fichier FOTA complet <code>update.zip</code> peut être produit à partir du zip des fichiers cibles.</li>
+  </ul>
+ </li>
+ <li>Avec le logiciel <em>version Y</em>
+  <ul>
+   <li>Générer un fichier <code>MAR</code> OTA Gecko/Gaia complet du contenu de <code>/system/b2g</code>.</li>
+   <li>Générer une archive zip des fichiers cibles pour la mise à jour FOTA complète, éventuellement signée, pour les partitions de l'appareil. Le zip des fichiers cibles est référencé plus bas sous le nom <code>DEVICE-target_files-$VARIANT.$USER.zip</code>, c'est un zip contenant les fichiers pour mettre à jour les répertoires du téléphone, dont <code>SYSTEM/</code>, <code>BOOT/</code>, etc. Un fichier FOTA complet <code style="font-style: normal;">update.zip</code> peut être produit à partir du zip des fichiers cibles.</li>
+  </ul>
+ </li>
+ <li>Si seuls des fichiers de <code>/system/b2g</code> ont changé, générer un fichier <code>MAR</code> pour une mise à jour OTA Gecko/Gaia incrémentale de la <em>version X</em> vers la <em>version Y</em>.</li>
+ <li>Sinon, générer un fichier FOTA incrémental <code>update.zip</code> de la <em>version X </em>vers la <em>version Y</em>. Intégrer cette mise à jour FOTA incrémentale <code>update.zip</code> dans un fichier <code>MAR</code> pour le distribuer auprès du client B2G.</li>
+ <li>Signer les paquets comme cela est requis pour les autorisations de distribution.</li>
+</ol>
+
+<p>Les sous-sections ci-dessous décrivent comment utiliser les outils de B2G pour implémenter chacune de ces étapes.</p>
+
+<div class="note">
+<p><strong>Note </strong>: les étapes ci-après supposent que vous avez déjà mis en place un environnement de compilation b2g à l'emplacement <code>$b2g</code>. Les commandes ci-dessous font référence au script <code>$b2g/build.sh</code> mais <code>make</code> peut tout aussi bien être utilisé.</p>
+</div>
+
+<h3 id="Générer_un_fichier_MAR_complet_de_mise_à_jour_OTA_GeckoGaia"><span class="mw-headline" id="Generating_a_complete_Gecko.2FGaia_OTA_update_MAR">Générer un fichier MAR complet de mise à jour OTA Gecko/Gaia</span></h3>
+
+<p>Pour générer un MAR de mise à jour OTA complète à partir de la dernière compilation de <code>b2g</code> réussie (e.g. que vous avez <a href="/fr/Firefox_OS/Compiler">compilée</a> vous-même), vous devez invoquer la cible <code>gecko-update-full</code>. Pour placer le MAR dans <code>$b2g/objdir-gecko/dist/b2g-update/b2g-gecko-update.mar</code>, utilisez les commandes suivantes :</p>
+
+<pre class="brush: bash">$ cd $b2g
+$ ./build.sh gecko-update-full
+$ cp objdir-gecko/dist/b2g-update/b2g-gecko-update.mar &lt;destination&gt;
+</pre>
+
+<h3 id="Générer_un_fichier_MAR_de_mise_à_jour_FOTA_complète"><span class="mw-headline" id="Generating_a_complete_Gecko.2FGaia_OTA_update_MAR">Générer un fichier MAR de mise à jour FOTA complète</span></h3>
+
+<p>Pour générer un MAR de mise à jour FOTA complète à partir de la dernière compilation de <code>b2g</code> réussie (e.g. que vous avez <a href="/fr/Firefox_OS/Compiler">compilée</a> vous-même), vous devez invoquer la cible <code>gecko-update-fota-full</code>. Cela intègre le contenu de la partition <code>/system</code> dans sa totalité. Voici les commandes dont vous avez besoin :</p>
+
+<pre class="brush: bash">$ cd $b2g
+$ ./build.sh gecko-update-fota-full
+</pre>
+
+<p>Un fichier ZIP sera généré (<code>$PRODUCT_OUT/fota/full/update.zip</code>) ainsi qu'un fichier MAR (<code>$PRODUCT_OUT/fota-$TARGET_DEVICE-update-full.mar</code>). Le fichier ZIP peut être utilisé directement avec <code>adb sideload</code>, tandis que le MAR est prévu pour être distribué de la même manière que tout autre paquet de mise à jour.</p>
+
+<h3 id="Générer_un_fichier_MAR_de_mise_à_jour_FOTA_plus_un_paquet_de_recovery">Générer un fichier MAR de mise à jour FOTA plus un paquet de recovery</h3>
+
+<p>Depuis Firefox OS 2.2 (mi-avril et après) nous avons ajouté une nouvelle cible pour make, elle peut être appelée ainsi :</p>
+
+<pre class="brush: bash">$ cd $b2g
+$ ./build.sh gecko-update-fota-fullimg</pre>
+
+<p>Elle est utilisée pour produire un paquet de recovery constituant un dump du jeu d'images de partitions. Le jeu par défaut est contrôlé par la variable <code>B2G_FOTA_FULLIMG_PARTS</code>, définie dans <code>gonk-misc/Android.mk</code> (parmi la plupart des autres nouvelles fonctionnalités vues plus bas.) Il s'agit d'une chaîne de caractères utilisant l'espace comme séparateur, listant les instances <code>mountpoint:image</code> à inclure. La valeur par défaut est <code>"/boot:boot.img /system:system.img /recovery:recovery.img /cache:cache.img"</code>.</p>
+
+<p>Avec tout ça, nous avons également introduit quelques nouvelles variables d'environnement pour contrôler la production de deux autres cibles make — <code>gecko-update-fota</code> et <code>gecko-update-fota-full</code> :</p>
+
+<ul>
+ <li>La première est <code>B2G_FOTA_PARTS</code>, elle suit le même modèle de syntaxe que <code>B2G_FOTA_FULLIMG_PARTS</code>. Cela nous permet de produire ces paquets de mise à jour et de faire un dump des images de partitions avec ceux-ci, p.ex. la partition de boot, le firmware du modem, etc.</li>
+ <li><code>B2G_FOTA_PARTS_FORMAT</code> offre un moyen de décrire un jeu de partitions dont le formatage est souhaité durant l'installation du paquet de recovery. C'est une liste de points de montage, séparés par des espaces, à utiliser lors du formatage.</li>
+ <li>Deux nouvelles variables permettent d'effacer (wipe) les caches et/ou les données pendant la procédure de construction :
+  <ul>
+   <li><code>B2G_FOTA_WIPE_DATA</code></li>
+   <li><code>B2G_FOTA_WIPE_CACHE</code></li>
+  </ul>
+ </li>
+</ul>
+
+<div class="note">
+<p><strong>Note</strong> : Toutes ces nouvelles fonctionnalités reposent fortement sur la disponibilité d'un fichier <code>recovery.fstab</code> correct fourni pour l'appareil concerné.</p>
+</div>
+
+<h3 id="Générer_un_fichier_MAR_de_mise_à_jour_FOTA_GeckoGaia_partielle"><span class="mw-headline" id="Generating_a_complete_Gecko.2FGaia_OTA_update_MAR">Générer un fichier MAR de mise à jour FOTA Gecko/Gaia partielle</span></h3>
+
+<p>Une mise à jour FOTA partielle utilise le même mécanisme que pour celles complètes, mais par défaut, seuls sont inclues les mises à jour Gecko/Gaia, tout comme une mise à jour OTA normale. Des fichiers supplémentaires autres que ceux de Gecko/Gaia peuvent aussi être intégrés (tels que des polices de caractères).</p>
+
+<p>La logique derrière la génération d'un paquet de mise à jour FOTA partielle est principalement conditionnée par des problèmes de licence : lors de la construction d'un paquet de mise à jour FOTA complet, la partition système entière (au moins) sera intégrée. Elle peut comporter des blobs que vous n'êtes pas autorisé à redistribuer. Cependant, comme la distribution de MAR est utile et que Gecko/Gaia eux-mêmes sont des logiciels libres, il n'y a aucune raison pour que nous ne puissions pas être en mesure de les distribuer de cette façon. Une FOTA partielle permet de ne mettre à jour qu'un sous-ensemble du système. Dans un tel scénario, une mise à jour OTA pourrait être employée à la place, mais cela aurait un coût : les mises à jour OTA ont besoin d'assez d'espace sur la partition système pour contenir à la fois les fichiers Gecko/Gaia existants et les fichiers de mise à jour décompressés. Une mise à jour FOTA partielle ne possède pas cette contrainte car elle écrase les fichiers existants par ceux de la mise à jour.</p>
+
+<p>Pour créer une mise à jour FOTA partielle à partir de la dernère compilation de <code>b2g</code> réussie (e.g. que vous avez <a href="/fr/Firefox_OS/Compiler">compilée</a> vous-même), invoquez la cible <code>gecko-update-fota</code> avec les commandes suivantes :</p>
+
+<pre class="brush: bash">$ cd $b2g
+$ ./build.sh gecko-update-fota
+</pre>
+
+<p>Elles vont générer un fichier ZIP (<code>$PRODUCT_OUT/fota/partial/update.zip</code>) et un fichier MAR (<code>$PRODUCT_OUT/fota-$TARGET_DEVICE-update.mar</code>). Le fichier ZIP peut être utilisé directement avec <code>adb sideload</code>, tandis que le fichier MAR est destiné à être distribué de la même manière que tout autre paquet de mise à jour.</p>
+
+<p>La construction peut être contrôlée par un certain nombre de variables d'environnement, les plus utiles d'entre-elles sont documentées ci-dessous :</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">Variable</th>
+   <th scope="col">Signification</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>$B2G_FOTA_DIRS</code></td>
+   <td>Liste des répertoires à inclure dans la mise à jour, séparés par des espaces. <code>system/b2g</code> par défaut.</td>
+  </tr>
+  <tr>
+   <td><code>$TARGET_UPDATE_BINARY</code></td>
+   <td>Binaire utilisé pour exécuter le script Edify à l'intérieur du paquet. Si aucun binaire n'est spécifié, un updater binaire pré-construit issu de ICS sera utilisé.</td>
+  </tr>
+  <tr>
+   <td><code>$FOTA_FINGERPRINTS</code></td>
+   <td>Liste d'empreintes Android, séparées par des virgules, avec lesquelles faire les contrôles. Le cas pratique est la possibilité de distribuer des paquets de mise à jour Gecko/Gaia par-dessus un système de base Gonk sous contrôle qu'il ne nous est pas possible de distribuer légalement. Par exemple, les builds communautaires de l'Open C les utilisent.</td>
+  </tr>
+ </tbody>
+</table>
+
+<div class="note">
+<p><strong>Note</strong> : Un ensemble complet de ces variables est défini dans le <a href="https://github.com/mozilla-b2g/gonk-misc/blob/master/Android.mk">fichier Android.mk du répertoire gonk-misc</a> ; remarquez que <code>$FOTA_FINGERPRINTS</code> est utilisé dans notre outil <a href="https://github.com/mozilla-b2g/B2G/blob/d75c2351fb32216c78a1f6c50835796af8756068/tools/update-tools/update_tools.py#L837">update_tools.py</a>.</p>
+</div>
+
+<h3 id="Générer_une_archive_zip_des_fichiers_cibles_pour_une_mise_à_jour_FOTA_complète"><span class="mw-headline" id="Generating_a_complete_FOTA_update_zip_and_target_files_zip">Générer une archive zip des fichiers cibles pour une mise à jour FOTA complète</span></h3>
+
+<p>Invoquez la cible <code>target-files-package</code> pour construire un zip des fichiers cibles qui pourra servir à générer des mises à jour FOTA tant complète qu'incrémentale. Le zip des fichiers cibles peut aussi être signé avec des clés personnalisées pour garantir que seules les mises à jour FOTA en provenance de sources connues  puissent être installées. Après signature des fichiers cibles, toutes les images et mises à jour (OTA aussi) doivent à nouveau être générées pour obtenir les clés insérées.</p>
+
+<div class="note">
+<p><strong>Note</strong> : Le zip des fichiers cibles est généré à l'emplacement <code>out/target/product/$DEVICE/obj/PACKAGING/target_files_intermediates/$DEVICE-target_files-$VARIANT.$USER.zip</code></p>
+</div>
+
+<p>Cette étape est réalisée par les commandes suivantes :</p>
+
+<pre class="brush: bash">$ cd $b2g
+$ ./build.sh target-files-package
+$ cp out/target/product/$DEVICE/obj/PACKAGING/target_files_intermediates/$DEVICE-target_files-$VARIANT.$USER.zip &lt;destination&gt;
+</pre>
+
+<p>Les valeurs des variables dans les commandes listées ci-dessus doivent être remplies comme suit :</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">Variable</th>
+   <th scope="col">Signification</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>$DEVICE</code></td>
+   <td>Nom de l'appareil pour le produit AOSP</td>
+  </tr>
+  <tr>
+   <td><code>$VARIANT</code></td>
+   <td><code>eng</code>, <code>user</code>, ou <code>userdebug</code></td>
+  </tr>
+  <tr>
+   <td><code>$USER</code></td>
+   <td>Le nom d'utilisateur du build</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Signer_le_zip_des_fichiers_cibles_d'une_FOTA_complète"><a name="signing-target-files-package"></a>Signer le zip des fichiers cibles d'une FOTA complète</h3>
+
+<p>Les distributions correctes devraient en principe être signées par des clés personnalisées connues uniquement du vendeur. Grâce à l'introduction de cette couche de sécurité supplémentaire, le fait de posséder de telles clés empêchera l'installation de mises à jour FOTA dont la source est inconnue. Pour que cela fonctionne, les images flashées sur un appareil doivent inclure les clés publiques tandis que les mises à jour doivent être signées avec les clés privées correspondantes. </p>
+
+<p>La première étape consiste à générer des clés personnalisées et à les stocker en lieu sûr. Android Open Source Project dispose d'un script pour générer ces clés. Pour une compatibilité totale, récupérez ce script depuis la branche correspondant à la version de Gonk présente sur l'appareil en question. <a href="https://android.googlesource.com/platform/development/+/master/tools/make_key">La version pour la branche master se trouve ici</a>.</p>
+
+<p>Plusieurs clés sont requises — créez-les avec les commandes suivantes. <code>releasekey</code> est la clé à utiliser pour signer les paquets de mise à jour FOTA.</p>
+
+<pre class="brush: bash">$ development/tools/make_key releasekey '/C=US/ST=California/L=Mountain View/O=Android/OU=Android/CN=Android/emailAddress=android@android.com'
+$ development/tools/make_key platform '/C=US/ST=California/L=Mountain View/O=Android/OU=Android/CN=Android/emailAddress=android@android.com'
+$ development/tools/make_key shared '/C=US/ST=California/L=Mountain View/O=Android/OU=Android/CN=Android/emailAddress=android@android.com'
+$ development/tools/make_key media '/C=US/ST=California/L=Mountain View/O=Android/OU=Android/CN=Android/emailAddress=android@android.com'
+</pre>
+
+<p>Une fois les clés présentes, le fichier zip des fichiers cibles peut être signé par l'emploi des commandes suivantes. Elles vont insérer les clés publiques et modifier les propriétés du build pour refléter le fait qu'il ait été signé.</p>
+
+<pre class="brush: bash">$ cd $b2g
+$ ./build/tools/releasetools/sign_target_files_apks \
+<span style="font-size: 1rem;">  --default_key_mappings $RELEASEKEY_FOLDER \</span>
+<span style="font-size: 1rem;">  --replace_ota_keys \</span>
+<span style="font-size: 1rem;">  --signapk_path prebuilts/sdk/tools/lib/signapk.jar \</span>
+<span style="font-size: 1rem;">  $UNSIGNED_TARGET_FILES_ZIP \</span>
+<span style="font-size: 1rem;">  $SIGNED_TARGET_FILES_ZIP</span></pre>
+
+<p><span style="font-size: 1rem;">Les valeurs des variables présentes dans les commandes listées plus haut doivent être remplies de la manière qui suit :</span></p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Variable</th>
+   <th scope="col">Signification</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>$RELEASEKEY_FOLDER</code></td>
+   <td>Le chemin du dossier contenant les clés personnalisées</td>
+  </tr>
+  <tr>
+   <td><code>$UNSIGNED_TARGET_FILES_ZIP</code></td>
+   <td>Le zip des fichiers cibles FOTA à signer.</td>
+  </tr>
+  <tr>
+   <td><code>$SIGNED_TARGET_FILES_ZIP</code></td>
+   <td>Le zip des fichiers cibles FOTA qui doit être généré</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Générer_un_fichier_MAR_de_mise_à_jour_OTA_incrémentale"><span class="mw-headline" id="Generating_an_incremental_OTA_update_MAR">Générer un fichier MAR de mise à jour OTA incrémentale</span></h3>
+
+<p>Dans cet exemple, nous supposons générer une mise à jour du logiciel <em>version X</em> vers la <em>version Y</em>. L'emplacement du fichier <code>MAR</code> de l'OTA Gecko/Gaia complète compilé à partir du logiciel <em>version X</em> en suivant les instructions ci-dessus sera appelé <code>$MAR_X</code> par la suite. ll peut s'agir d'un chemin sur le serveur de compilation comme <code>/home/build/b2g/versions/X/update.mar</code>. De manière similaire, l'emplacement du <code>MAR</code> complet compilé à partir de la <em>version Y</em> sera appelé <code>$MAR_Y</code>.</p>
+
+<p>L'outil <code>build-gecko-mar.py</code> va générer un fichier MAR de mise à jour OTA Gecko/Gaia incrémental en utilisant <code>$MAR_X</code> et <code>$MAR_Y</code>. La destination du fichier généré sera appelée <code>$GENERATED_INCREMENTAL_MAR_X_Y</code>. Utilisez les commandes suivantes pour cette étape :</p>
+
+<pre class="brush: bash">$ cd $b2g
+$ ./tools/update-tools/build-gecko-mar.py --from $MAR_X --to $MAR_Y $GENERATED_INCREMENTAL_MAR_X_Y
+</pre>
+
+<h3 id="Générer_une_archive_zip_de_mise_à_jour_FOTA_incrémentale"><span class="mw-headline" id="Generating_an_incremental_FOTA_update_zip">Générer une archive zip de mise à jour FOTA incrémentale</span></h3>
+
+<p>Dans cet exemple, nous supposons générer une mise à jour du logiciel <em>version X</em> vers la <em>version Y</em>. L'emplacement du zip cible pour la FOTA complète construite à partir du logiciel <em>version X </em>en utilisant les instructions ci-dessus sera appelé <code>$TARGET_FILES_X</code> par la suite. Il peut s'agir d'un chemin sur un serveur de compilation comme <code>/home/build/b2g/versions/X/target_files.zip</code>. De manière similaire, l'emplacement du zip cible pour la FOTA complète construite à partir de la <em>version Y </em>sera appelé <code>$TARGET_FILES_Y</code>.</p>
+
+<p>L'outil <code>build/tools/releasetools/ota_from_target_files</code> va générer un fichier FOTA update.zip incrémental en se servant de <code>$TARGET_FILES_X</code> et de <code>$TARGET_FILES_Y</code>. La destination de ce fichier intermédiaire sera appelée <code>$INTERMEDIATE_FOTA_UPDATE_FOTA_X_Y</code>.</p>
+
+<p>Après la génération de ce <code>update.zip</code>, la dernière étape sera de l'encapsuler dans un <code>MAR</code> pour le livrer au client B2G. L'outil <code>tools/update-tools/build-fota-mar.p</code> effectue cette opération. La destination où générer le fichier sera appelée <code>$GENERATED_INCREMENTAL_FOTA_X_Y</code>.</p>
+
+<p>Utilisez les commandes suivantes pour achever cette étape  :</p>
+
+<pre class="brush: bash">$ cd $b2g
+$ ./build/tools/releasetools/ota_from_target_files -v \
+    --incremental_from $TARGET_FILES_X \
+    --signapk_path prebuilts/sdk/tools/lib/signapk.jar \
+    --package_key $FOTA_SIGNING_KEY \
+    $TARGET_FILES_Y \
+    $INTERMEDIATE_FOTA_UPDATE_FOTA_X_Y
+$ ./tools/update-tools/build-fota-mar.py $INTERMEDIATE_FOTA_UPDATE_FOTA_X_Y --output=$GENERATED_INCREMENTAL_FOTA_X_Y
+</pre>
+
+<p>Les valeurs des variables employées dans les commandes listées ci-dessus devraient être remplies de la manière suivante :</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">Variable</th>
+   <th scope="col">Meaning</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>$TARGET_FILES_X</code></td>
+   <td>Le zip des fichiers cibles FOTA pour la <em>version X</em></td>
+  </tr>
+  <tr>
+   <td><code>$TARGET_FILES_Y</code></td>
+   <td>Le zip des fichers cibles FOTA pour la <em>version Y</em></td>
+  </tr>
+  <tr>
+   <td><code>$INTERMEDIATE_FOTA_UPDATE_FOTA_X_Y</code></td>
+   <td>Un fichier update.zip temporaire à partir duquel générer un <span style="font-family: courier new,andale mono,monospace;">MAR</span></td>
+  </tr>
+  <tr>
+   <td><code>$GENERATED_INCREMENTAL_FOTA_X_Y</code></td>
+   <td>Le zip destination de la mise à jour incrémentale encapsulé dans un fichier <code>MAR</code> pour être livré aux clients</td>
+  </tr>
+  <tr>
+   <td><code>$FOTA_SIGNING_KEY</code></td>
+   <td>Chemin vers le préfixe d'une clé privée et d'un certificat public destinés à signer le fichier update zip. <code>$FOTA_SIGNING_ZIP.pk8</code> et <code>$FOTA_SIGNING_ZIP.x509.pem</code> doivent tous deux être présents sur le système de fichiers. Si <code>$TARGET_FILES_X</code> n'est pas signé, cette option peut être omise ; la clé de test par défaut sera alors récupérée. Dans le cas où <code>$TARGET_FILES_X</code> est une clé personnalisée, se référer à la <a href="#signing-target-files-package">section pour la signature du zip des fichiers cibles</a> pour savoir comment la créer, et ne pas oublier de signer <code>$TARGET_FILES_Y</code>.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Hébergement_des_mises_à_jour_et_recherche_de_nouvelles_versions_côté_client"><span class="mw-headline" id="Hosting_updates_.28respectively.2C_polling_for_updates_on_the_client_side.29">Hébergement des mises à jour et recherche de nouvelles versions côté client</span></h2>
+
+<p>Les clients B2G OS scrutent les mises à jour en récupérant et analysant un <strong>manifeste de mise à jour </strong>: <code>update.xml</code>. Les clients B2G OS sont configurés pour rechercher des mises à jour sur des serveurs spécifiques — ils interrogent un chemin construit spécialement sur le serveur. HTTPS est le protocole recommandé pour être utilisé par le client pour interroger le serveur, cependant, HTTP est aussi pris en charge. Le serveur et le chemin consultés par les clients peuvent être modifiés par la livraison aux clients existants d'une mise à jour qui change le code de scrutation.</p>
+
+<p>Dans les exemples ci-dessous, nous estimerons que les mises à jour sont hébergées sur le serveur <code>updates.b2g.com</code>.</p>
+
+<p>L'URL scrutée par le client contient habituellement les paramètres suivants :</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">Paramètre</th>
+   <th scope="col">Explication</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>PRODUCT_MODEL</code></td>
+   <td>Le nom du modèle d'appareil. C'est la valeur <code>ro.product.model</code> de la base de données des propriétés de B2G.</td>
+  </tr>
+  <tr>
+   <td><code>CHANNEL</code></td>
+   <td>Le "canal" de mise à jour. Il est utile pour les tests : les serveurs peuvent être configurés pour héberger, par exemple, les canaux "nightly", "beta", et "release".</td>
+  </tr>
+  <tr>
+   <td><code>VERSION</code></td>
+   <td>La version du logiciel du client. Par exemple, "18.0.2".</td>
+  </tr>
+  <tr>
+   <td><code>BUILD_ID</code></td>
+   <td>Un ID unique, comme un horodatage, configuré pour une compilation en particulier.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Le client Firefox utilise les valeurs de son hôte de mise à jour configuré et de ces valeurs pour construire une URL à interroger pendant l'exécution. La structure est la suivante :</p>
+
+<pre>https://aus4.mozilla.org/update/3/%PRODUCT%/%VERSION%/%BUILD_ID%/%PRODUCT_DEVICE%/%LOCALE%/%CHANNEL%/%OS_VERSION%/%DISTRIBUTION%/%DISTRIBUTION_VERSION%/update.xml</pre>
+
+<p>Un exemple réel d'une telle URL est comme ceci :</p>
+
+<pre class="brush: xml">https://aus4.mozilla.org/update/3/B2G/37.0a1/20141214040212/flame/en-US/nightly-b2g37/Boot2Gecko%202.2.0.0-prerelease%20%28SDK%2019%29/default/default/update.xml?force=1</pre>
+
+<p>Si le serveur renvoie "404 Not Found" en réponse à la requête du client, cela signifie qu'aucune mise à jour n'est disponible. S'il renvoie "200" et un fichier de manifeste, alors c'est qu'une mise à jour peut être disponible. Le manifeste décrit la version nouvellement disponible ; autrement dit, celle <strong>vers laquelle le client peut être mis à jour</strong>. Voici un exemple de manifeste :</p>
+
+<pre class="brush: xml">&lt;?xml version="1.0"?&gt;
+&lt;updates&gt;
+  &lt;update type="major" appVersion="19.0" version="19.0" extensionVersion="19.0" buildID="20121210123456"
+          licenseURL="http://www.mozilla.com/test/sample-eula.html"
+          detailsURL="http://www.mozilla.com/test/sample-details.html"
+          isOSUpdate="true"&gt;
+    &lt;patch type="partial" URL="https://updates.b2g.com/release/unagi1/18.0/20121203123456/update.mar"
+           hashFunction="SHA512" hashValue="5111e033875752b7d9b32b4795152dea5ef954cb8a9d4a602dd19a923b464c43521287dcb5781faf3af76e6dc5e8a3dd9c13edea18c1f2c8f3bd89e17d103d6f"
+           size="41901319"/&gt;
+  &lt;/update&gt;
+&lt;/updates&gt;
+</pre>
+
+<p>Il suit le même schéma que le manifeste de compilation B2G (voir le <a href="https://wiki.mozilla.org/Software_Update:updates.xml_Format">format updates.xml</a> pour plus de détails). Les champs du manifeste décrivent :</p>
+
+<ul>
+ <li>Métadonnées utilisées pour afficher une interface utilisateur sur le client.</li>
+ <li>Métadonnées sur la version nouvellement disponible.</li>
+ <li>L'emplacement du paquet de mise à jour.</li>
+ <li>Métadonnées utilisées pour vérifier le téléchargement du paquet de mise à jour.</li>
+</ul>
+
+<div class="note">
+<p><strong>Note</strong> : Il existe un script utile de mise à jour disponible sur <a href="https://github.com/mozilla-b2g/B2G/blob/master/tools/update-tools/build-update-xml.py">build-update-xml.py</a>, lequel, à partir d'un fichier MAR donné, construit un fichier B2G OS update.xml pour test.</p>
+</div>
+
+<div class="note">
+<p><strong>Note </strong>: L'appareil du client ou l'utilisateur peut choisir de refuser une mise à jour.</p>
+</div>
+
+<div class="note">
+<p><strong>Note :</strong>  <code>isOSUpdate="true"</code> est requis pour les mises à jour FOTA mais pas pour les OTA.</p>
+</div>
+
+<p>En utilisant le mécanisme décrit plus haut, les serveurs peuvent héberger des paquets de mise à jour pour que tout client avec une ancienne version puisse passer à une nouvelle version. Ou alors, ils peuvent héberger uniquement un "historique linéaire de mises à jour" à partir duquel les clients peuvent se mettre à jour via un chemin unique.</p>
+
+<p>Les détails de l'interaction entre les serveurs de compilation et l'hôte de mise à jour dépassent pour l'instant la portée de ce document. Elle est très grandement dépendante de l'environnement de production. Vous pouvez trouver quelques détails supplémentaires sur notre page de wiki <a href="https://wiki.mozilla.org/Software_Update">Software Update</a>.</p>
+
+<h2 id="Vérifier_et_appliquer_les_mises_à_jour"><span class="mw-headline" id="Verifying_and_applying_updates">Vérifier et appliquer les mises à jour</span></h2>
+
+<p>Après qu'un client B2G OS ait détecté avec succès une mise à jour (<a href="https://support.mozilla.org/fr/kb/comment-verifier-installer-mises-jour-firefox-os?redirectlocale=en-US&amp;redirectslug=how-do-i-check-firefox-os-updates-and-install-them">ce qui est fait depuis le système lui-même</a>), téléchargé celle-ci et vérifié l'intégrité du paquet de mise à jour téléchargé, l'étape finale est d'appliquer la mise à jour.</p>
+
+<p>La première chose dans l'application d'une mise à jour est la vérification de la signature embarquée dans les paquets <code>MAR</code> (voir <a href="#Generating_an_incremental_FOTA_update_zip">Generating an incremental FOTA update zip</a> sur la façon dont elles sont créées). Cela est réalisé par le client B2G OS lui-même après le contrôle de l'intégrité du paquet téléchargé. Le code utilisé pour cette tâche est le même que ce soit pour les mises à jour FOTA ou pour celles OTA Gecko/Gaia.</p>
+
+<div class="note">
+<p><strong>Note</strong> : Ce n'est pas le fichier MAR qui est signé : c'est le fichier zip FOTA empaqueté dans le MAR qui est signé par <code>build/tools/releasetools/ota_from_target_file</code>. La signature de la mise à jour FOTA fonctionne de la même manière que sur Android ; si vous lancez simplement le script sans spécifier de clé, il utilisera les clés développeurs <code>build/target/product/security/testkeys.*</code>. Ça ne pose pas de problème pour des tests, mais lorsque vous créez une véritable mise à jour vous aurez besoin d'une clé sécurisée — i.e. une que personne d'autre ne connaît. Comme l'appareil va également vérifier cette signature avant d'appliquer le patch, les images initiales de l'appareil doivent elles aussi contenir la clé.</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong> : Les clés mentionnées plus haut se trouvent dans les systèmes de compilation d'Android ; nous les avons dupliquées sur notre <a href="https://github.com/mozilla-b2g/platform_build">dépot platform_build</a>.</p>
+</div>
+
+<p>Après la vérification des signatures, le processus d'application d'une mise à jour diverge selon le type de mise à jour, OTA Gecko/Gaia ou FOTA. À ce stade, voyons les différences entre les deux.</p>
+
+<h3 id="Appliquer_des_mises_à_jour_OTA_GeckoGaia"><span class="mw-headline" id="Applying_Gecko.2FGaia_OTA_updates">Appliquer des mises à jour OTA Gecko/Gaia</span></h3>
+
+<p>Le client B2G OS applique celles-ci grâce à l'utilisation du binaire <code>updater</code>. Il fait partie de la distribution Gecko et son code est le même que celui utilisé pour mettre à jour la version de bureau de Firefox. Comme cela a été décrit précédemment, la mise à jour est appliquée pendant que le client B2G OS continue de fonctionner normalement. Pendant l'application des mises à jour, les utilisateurs sont toujours en mesure de passer des appels ou d'en recevoir, de lancer des applications, de naviguer sur le web etc.</p>
+
+<p>Les détails spécifiques au binaire <code>updater</code> dépassent le cadre de ce document mais il fonctionne approximativement de cette manière :</p>
+
+<ul>
+ <li>Il réalise une copie des fichiers présents dans <code>/system/b2g</code>.</li>
+ <li>Il applique les patches binaires, supprime les anciens fichiers et ajoute les nouveaux comme cela est spécifié dans le fichier <code>MAR</code>.</li>
+ <li>Il redémarre le processus principal <code>b2g</code> afin que celui-ci utilise tous les nouveaux fichiers.</li>
+</ul>
+
+<p>Après le redémarrage du processus <code>b2g</code>, l'utilisateur bénéficiera de la nouvelle version du logiciel client B2G.</p>
+
+<h3 id="Appliquer_des_mises_à_jour_FOTA"><span class="mw-headline" id="Applying_FOTA_updates">Appliquer des mises à jour FOTA</span></h3>
+
+<p>Elles sont appliquées par le client FOTA. Le client Gecko se "débarrasse" de la mise à jour en appelant l'API <a class="externallink" href="http://git.mozilla.org/?p=b2g/librecovery.git;a=blob;f=librecovery.h;h=a6e13374f9bffcf947a39d6f3348290d67113321;hb=HEAD" rel="nofollow" title="http://git.mozilla.org/?p=b2g/librecovery.git;a=blob;f=librecovery.h;h=a6e13374f9bffcf947a39d6f3348290d67113321;hb=HEAD">librecovery</a> qui se chargera de l'appliquer. Ce qui arrive après cette étape est spécifique à chaque client FOTA.</p>
+
+<p>Dans l'implémentation de librecovery utilisée par le client GOTA, l'application du paquet de mise à jour téléchargé est planifiée et des commandes particulières sont mises en file d'attente pour le client de recovery. librecovery redémarre ensuite l'appareil en mode recovery. Le client recovery lance ensuite le script de mise à jour situé dans le fichier <code>update.zip</code> pour mettre à jour les fichiers et les partitions si nécessaire. Le client de recovery peut avoir besoin de redémarrer plusieurs fois afin de mettre à jour tous les fichiers.</p>
+
+<p>Après le redémarrage final, l'appareil fonctionnera avec la nouvelle version du logiciel client B2G OS.</p>

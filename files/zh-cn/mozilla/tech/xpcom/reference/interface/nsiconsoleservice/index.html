@@ -1,0 +1,215 @@
+---
+title: nsIConsoleService
+slug: Mozilla/Tech/XPCOM/Reference/Interface/nsIConsoleService
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIConsoleService
+---
+<div class="warning">
+ <p>Error Console在Firefox中已经过期,只有将<code>devtools.errorconsole.enabled<font face="Open Sans, sans-serif"><span style="line-height: 23.33333396911621px;">
+  <i>
+   设为</i>
+  </span></font></code><code>true<em>才能使用</em></code>. 对于web应用使用 <a href="/en-US/docs/Tools/Web_Console" title="/en-US/docs/Tools/Web_Console">Web Console </a>代替, 对于浏览器中的chrome应用，使用 <a href="/en-US/docs/Tools/Browser_Console" title="/en-US/docs/Tools/Browser_Console">Browser Console</a> 代替 .</p>
+</div>
+<p></p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/xpcom/base/nsIConsoleService.idl" rel="custom">xpcom/base/nsIConsoleService.idl</a></code><span style="text-align: right; float: right;"><a href="/zh-CN/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">脚本化</a></span></div>
+<span style="padding: 4px 2px;">
+
+console service是<a title="en/Error_Console">Error Console</a> 后端的一部分, 与每一个Mozilla应用绑定在一起. 它用来记录各种消息、警告以及错误,同时可获取所有已经记录的消息
+</span>
+
+<div style="background: #eee; padding: 2px;">
+继承于: <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
+<span style="text-align: right; float: right;">最后修改于Gecko 1.9 (Firefox 3)</span></div>
+</div><p></p>
+<p>实现方式: <code>@mozilla.org/consoleservice;1</code> as a service:</p>
+<pre class="eval">var consoleService = Components.classes["@mozilla.org/consoleservice;1"]
+                     .getService(Components.interfaces.nsIConsoleService);
+</pre>
+<h2 id="Method_overview" name="Method_overview">Method overview</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="#getMessageArray()">getMessageArray</a>([array, size_is(count)] out nsIConsoleMessage messages, out uint32_t count);</code><span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 19 / Thunderbird 19 / SeaMonkey 2.16)">已废弃 Gecko 19</span><br>
+    <code>void <a href="#getMessageArray()">getMessageArray</a>(</code><code>[optional] out uint32_t count, </code><code>[retval, array, size_is(count)] out nsIConsoleMessage messages);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#logMessage()">logMessage</a>(in nsIConsoleMessage message);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#logStringMessage()">logStringMessage</a>(in wstring message);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#registerListener()">registerListener</a>(in nsIConsoleListener listener);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#reset()">reset</a>();</code> </td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#unregisterListener()">unregisterListener</a>(in nsIConsoleListener listener);</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Methods" name="Methods">Methods</h2>
+<h3 id="getMessageArray()" name="getMessageArray()">getMessageArray()</h3>
+<p>获取有关目前所有控制台记录的信息的数组</p>
+<p></p><div class="blockIndicator obsolete obsoleteHeader"><p><strong><span class="icon-only-inline" title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span> 已废弃 Gecko 19 (Firefox 19 / Thunderbird 19 / SeaMonkey 2.16)</strong><br>This feature is obsolete. Although it may still work in some browsers, its use is discouraged since it could be removed at any time. Try to avoid using it.</p></div><p></p>
+<pre class="eval">void getMessageArray(
+  [array, size_is(count)] out nsIConsoleMessage messages,
+  out PRUint32 count
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+ <dt>
+  <code>messages</code></dt>
+ <dd>
+  已经记录的消息数组</dd>
+ <dt>
+  <code>count</code></dt>
+ <dd>
+  数组中消息的数。如果没有消息被记录，函数会返回0，但同时仍会为message分配一个标记，在从脚本调用时，表示返回的一个长度为0的消息。</dd>
+</dl>
+<p></p>
+<pre class="eval">void getMessageArray(
+  [optional] out PRUint32 count,
+  [retval, array, size_is(count)] out nsIConsoleMessage messages
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+ <dt>
+  <code>count</code></dt>
+ <dd>
+  The number of messages in the array. If no messages are logged, this function will return a count of 0 but still will allocate one word for messages, so as to show up as a 0-length array when called from script.</dd>
+</dl>
+<p></p><div class="blockIndicator note"><strong>Note:</strong> See the code samples below for how to call getMessageArray.</div><p></p>
+<h3 id="logMessage()" name="logMessage()">logMessage()</h3>
+<pre class="eval">void logMessage(
+  in nsIConsoleMessage message
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+ <dt>
+  <code>message</code></dt>
+ <dd>
+  An <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIConsoleMessage" title="">nsIConsoleMessage</a></code> to log.</dd>
+</dl>
+<h3 id="logStringMessage()" name="logStringMessage()">logStringMessage()</h3>
+<p>Convenience method for logging simple messages.</p>
+<pre class="eval">void logStringMessage(
+  in wstring message
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+ <dt>
+  <code>message</code></dt>
+ <dd>
+  The string to log.</dd>
+</dl>
+<h3 id="registerListener()" name="registerListener()">registerListener()</h3>
+<p>Registers a listener for notification when an error is logged.</p>
+<p></p><div class="blockIndicator note"><strong>Note:</strong> To guard against stack overflows from listeners that could log messages (it is easy to do this inadvertently from listeners implemented in JavaScript), we do not call any listeners when another error is already being logged.</div><p></p>
+<pre class="eval">void registerListener(
+  in nsIConsoleListener listener
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+ <dt>
+  <code>listener</code></dt>
+ <dd>
+  The <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIConsoleListener" title="">nsIConsoleListener</a></code> to add.</dd>
+</dl>
+<p></p><h3 id="reset()">reset()</h3><p></p>
+<p>Clear the message buffer (For example, for privacy reasons).</p>
+<pre class="eval">void reset();
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<p>None.</p>
+<p></p><div class="blockIndicator note"><strong>Note:</strong> Console listeners expect you to log an empty string message before calling <code>reset</code> so that they can clear their message buffers too. (This works before Gecko 1.9 too of course.)</div><p></p>
+<h3 id="unregisterListener()" name="unregisterListener()">unregisterListener()</h3>
+<p>Unregisters a listener.</p>
+<pre class="eval">void unregisterListener(
+  in nsIConsoleListener listener
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+ <dt>
+  <code>listener</code></dt>
+ <dd>
+  The <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIConsoleListener" title="">nsIConsoleListener</a></code> to remove.</dd>
+</dl>
+<h2 id="Examples" name="Examples">Examples</h2>
+<h4 id="Retrieving_the_message_array" name="Retrieving_the_message_array">Retrieving the message array</h4>
+<p>To retrieve the message array in Gecko prior to version 19:</p>
+<pre class="brush: js">function getConsoleMessageArray() {
+  var consoleService = Components.classes["@mozilla.org/consoleservice;1"]
+                                 .getService(Components.interfaces.nsIConsoleService);
+  var array = {};
+  consoleService.getMessageArray(array, {});
+  return array.value;
+}
+</pre>
+<p>To retrieve the message array in Gecko 19 or later:</p>
+<pre class="brush: js">function getConsoleMessageArray() {
+  var consoleService = Components.classes["@mozilla.org/consoleservice;1"]
+                                 .getService(Components.interfaces.nsIConsoleService);
+  return consoleService.getMessageArray();
+}
+</pre>
+<p>To retrieve the message array in a compatible way:</p>
+<pre class="brush: js">function getConsoleMessageArray() {
+  var consoleService = Components.classes["@mozilla.org/consoleservice;1"]
+                                 .getService(Components.interfaces.nsIConsoleService);
+  var array = {};
+  return consoleService.getMessageArray(array, {}) || array.value;
+}
+</pre>
+<h4 id="Logging_a_simple_message" name="Logging_a_simple_message">Logging a simple message</h4>
+<p>A common usage is to log a string message to console:</p>
+<pre class="brush: js">function LOG(msg) {
+  var consoleService = Components.classes["@mozilla.org/consoleservice;1"]
+                                 .getService(Components.interfaces.nsIConsoleService);
+  consoleService.logStringMessage(msg);
+}
+</pre>
+<p>Alternative logging methods include <a href="/en/Components.utils.reportError" title="en/Components.utils.reportError">Components.utils.reportError</a> and <a href="/en/DOM/window.dump" title="en/DOM/window.dump">dump()</a>.</p>
+<h4 id="Logging_a_message_with_additional_information" name="Logging_a_message_with_additional_information">Logging a message with additional information</h4>
+<p>To include other information an <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIConsoleMessage" title="">nsIConsoleMessage</a></code> object must be used. In this example <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIScriptError" title="">nsIScriptError</a></code>, which implements <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIConsoleMessage" title="">nsIConsoleMessage</a></code>, is used to include information about the source file and line number of the error.</p>
+<pre class="brush: js">function myLogToConsole(aMessage, aSourceName, aSourceLine, aLineNumber,
+                        aColumnNumber, aFlags, aCategory)
+{
+  var consoleService = Components.classes["@mozilla.org/consoleservice;1"]
+                                 .getService(Components.interfaces.nsIConsoleService);
+  var scriptError = Components.classes["@mozilla.org/scripterror;1"]
+                              .createInstance(Components.interfaces.nsIScriptError);
+  scriptError.init(aMessage, aSourceName, aSourceLine, aLineNumber,
+                   aColumnNumber, aFlags, aCategory);
+  consoleService.logMessage(scriptError);
+}
+</pre>
+<ul>
+ <li><code>aMessage</code> — the string to be logged. You must provide this.</li>
+ <li><code>aSourceName</code> — the URL of file with error. This will be a hyperlink in the Error Console, so you'd better use real URL. You may pass <code>null</code> if it's not applicable.</li>
+ <li><code>aSourceLine</code> — the line #<code>aLineNumber</code> from <code>aSourceName</code> file. You are responsible for providing that line. You may pass <code>null</code> if you are lazy; that will prevent showing the source line in Error Console.</li>
+ <li><code>aLineNumber</code> and <code>aColumnNumber</code> — specify the exact location of error. <code>aColumnNumber</code> is used to draw the arrow pointing to the problem character.</li>
+ <li><code>aFlags</code> — one of flags declared in <code>nsIScriptError</code>. At the time of writing, possible values are:
+  <ul>
+   <li><code>nsIScriptError.errorFlag = 0</code></li>
+   <li><code>nsIScriptError.warningFlag = 1</code></li>
+   <li><code>nsIScriptError.exceptionFlag = 2</code> and</li>
+   <li><code>nsIScriptError.strictFlag = 4</code>.</li>
+  </ul>
+ </li>
+ <li><code>aCategory</code> — a string indicating what kind of code caused the message. There are quite a few category strings and they do not seem to be listed in a single place. Hopefully, they will all be listed in <code>nsIScriptError.idl</code> eventually.</li>
+</ul>
+<h2 id="See_also" name="See_also">See also</h2>
+<ul>
+ <li><a href="/en/Error_Console" title="en/Error_Console">Error Console</a></li>
+ <li><code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIConsoleMessage" title="">nsIConsoleMessage</a></code></li>
+</ul>
+<p></p>
+<div id="cke_pastebin" style="position: absolute; top: 894.333px; width: 1px; height: 1px; overflow: hidden; left: -1000px;">
+  </div>

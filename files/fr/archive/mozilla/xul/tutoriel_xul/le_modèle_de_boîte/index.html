@@ -1,0 +1,146 @@
+---
+title: Le modèle de boîte
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Le_modèle_de_boîte
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/The_Box_Model
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Plus_de_caractéristiques_sur_les_boutons" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Positionnement_des_éléments">Suivant  »</a></p>
+</div>
+
+<p>Dans cette section, nous allons voir comment XUL gère la mise en page.</p>
+
+<h3 id="Introduction_aux_bo.C3.AEtes" name="Introduction_aux_bo.C3.AEtes">Introduction aux boîtes</h3>
+
+<p>La forme principale de mise en page dans XUL s'appelle le « Modèle de Boîte ». Ce modèle vous permet de diviser une fenêtre en une série de boîtes. Les éléments à l'intérieur d'une boîte se placeront horizontalement ou verticalement. En combinant une série de boîtes, d'éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code> et d'éléments avec des attributs <code id="a-flex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/flex">flex</a></code>, vous pouvez contrôler la mise en page d'une fenêtre.</p>
+
+<p>Bien qu'une boîte soit la partie fondamentale de la disposition d'éléments dans XUL, elle suit quelques règles très simples. Une boîte peut présenter ses enfants dans une des deux orientations, soit horizontalement, soit verticalement. Une boîte horizontale aligne ses éléments horizontalement et une boîte verticale place ses éléments verticalement. Vous pouvez vous représenter une boîte comme étant une rangée ou une colonne d'un tableau HTML. Divers attributs placés sur les éléments enfants, en plus de certaines propriétés de style CSS, contrôlent la position et la taille exactes des enfants.</p>
+
+<h4 id=".C3.89l.C3.A9ments_de_bo.C3.AEte" name=".C3.89l.C3.A9ments_de_bo.C3.AEte">Éléments de boîte</h4>
+
+<p>La syntaxe de base d'une boîte est la suivante :</p>
+
+<pre>&lt;hbox&gt;
+   &lt;!-- éléments horizontaux --&gt;
+&lt;/hbox&gt;
+
+&lt;vbox&gt;
+   &lt;!-- éléments verticaux --&gt;
+&lt;/vbox&gt;
+</pre>
+
+<p>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/hbox" title="hbox">hbox</a></code> est utilisé pour créer une boîte orientée horizontalement. Chaque élément placé dans la <code><a href="/fr/docs/Mozilla/Tech/XUL/hbox" title="hbox">hbox</a></code> sera placé horizontalement sur une rangée. L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/vbox" title="vbox">vbox</a></code> est utilisé pour créer une boîte orientée verticalement. Les éléments ajoutés seront placés les uns en dessous des autres en colonne.</p>
+
+<p>Il existe également un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/box" title="box">box</a></code> générique qui s'oriente horizontalement par défaut, ce qui veut dire qu'il est similaire à l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/hbox" title="hbox">hbox</a></code>. Cependant, vous pouvez utiliser l'attribut <code id="a-orient"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/orient">orient</a></code> pour contrôler l'orientation dans la boîte. Vous pouvez positionner cet attribut à la valeur 'horizontal' pour créer une boîte horizontale et à la valeur 'vertical' pour créer une boîte verticale.</p>
+
+<p>Ainsi, les deux lignes ci-dessous sont équivalentes :</p>
+
+<pre>&lt;vbox&gt;&lt;/vbox&gt;
+
+&lt;box orient="vertical"&gt;&lt;/box&gt;
+</pre>
+
+<p>L'exemple suivant montre comment placer trois boutons verticalement.</p>
+
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxes_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxes_1.xul">Voir</a></p>
+
+<div class="float-right"><img alt="Image:xultu_boxes-ex1.png" class="internal" src="/@api/deki/files/1498/=Xultu_boxes-ex1.png"></div>
+
+<pre>&lt;vbox&gt;
+   &lt;button id="yes" label="Oui"/&gt;
+   &lt;button id="no" label="Non"/&gt;
+   &lt;button id="maybe" label="Peut-être"/&gt;
+&lt;/vbox&gt;
+</pre>
+
+<p>Ces trois boutons sont orientés verticalement comme le spécifie la boîte. Pour faire en sorte que les boutons soient orientés horizontalement, tout ce que vous avez à faire est de remplacer l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/vbox" title="vbox">vbox</a></code> par l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/hbox" title="hbox">hbox</a></code>.</p>
+
+<h4 id="Exemple_d.27invite_de_login" name="Exemple_d.27invite_de_login">Exemple d'invite de login</h4>
+
+<p>Vous pouvez ajouter autant d'éléments que vous le souhaitez à l'intérieur de la boîte, y compris d'autres boîtes. Dans le cas d'une boîte horizontale, chaque élément additionnel sera placé à la droite du précédent. Les éléments ne se chevauchent pas, donc plus vous ajoutez d'éléments, plus large est la fenêtre. De même, chaque élément ajouté dans une boîte verticale sera placé sous le précédent. L'exemple ci-dessous montre une simple demande de login :</p>
+
+<p><span id="Exemple_2"><a id="Exemple_2"></a><strong>Exemple 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxes_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxes_2.xul">Voir</a></p>
+
+<div class="float-right"><img alt="Image:xultu_boxes-ex2.png" class="internal" src="/@api/deki/files/1499/=Xultu_boxes-ex2.png"></div>
+
+<pre>&lt;vbox&gt;
+   &lt;hbox&gt;
+     &lt;label control="login" value="Login :"/&gt;
+     &lt;textbox id="login"/&gt;
+   &lt;/hbox&gt;
+   &lt;hbox&gt;
+     &lt;label control="pass" value="Mot de passe :"/&gt;
+     &lt;textbox id="pass"/&gt;
+   &lt;/hbox&gt;
+   &lt;button id="ok" label="OK"/&gt;
+   &lt;button id="cancel" label="Annuler"/&gt;
+&lt;/vbox&gt;
+</pre>
+
+<p>Ici quatre éléments ont été orientés verticalement, deux balises <code><a href="/fr/docs/Mozilla/Tech/XUL/hbox" title="hbox">hbox</a></code> internes et deux éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/button" title="button">button</a></code>. Notez que seuls les éléments qui sont des descendants directs de la boîte sont orientés verticalement. Les libellés et les boîtes de texte sont à l'intérieur d'éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/hbox" title="hbox">hbox</a></code>, donc ils sont orientés suivant ces boîtes, lesquelles sont horizontales. Vous pouvez voir sur l'image que chaque libellé et leur champ de saisie est orienté horizontalement.</p>
+
+<h4 id="Alignement_des_champs_de_saisie" name="Alignement_des_champs_de_saisie">Alignement des champs de saisie</h4>
+
+<p>Si vous regardez attentivement l'image de la boîte de dialogue de login, vous verrez que les deux champs de saisie ne sont pas alignés horizontalement. Ce serait certainement mieux s'ils l'étaient. Pour y parvenir, nous devons ajouter quelques boîtes supplémentaires.</p>
+
+<p><span id="Exemple_3"><a id="Exemple_3"></a><strong>Exemple 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxes_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxes_3.xul">Voir</a></p>
+
+<div class="float-right"><img alt="Image:xultu_boxes-ex3.png" class="internal" src="/@api/deki/files/1500/=Xultu_boxes-ex3.png"></div>
+
+<pre>&lt;vbox&gt;
+   &lt;hbox&gt;
+     &lt;vbox&gt;
+       &lt;label control="login" value="Login :"/&gt;
+       &lt;label control="pass" value="Mot de passe :"/&gt;
+     &lt;/vbox&gt;
+     &lt;vbox&gt;
+       &lt;textbox id="login"/&gt;
+       &lt;textbox id="pass"/&gt;
+     &lt;/vbox&gt;
+   &lt;/hbox&gt;
+   &lt;button id="ok" label="OK"/&gt;
+   &lt;button id="cancel" label="Annuler"/&gt;
+&lt;/vbox&gt;
+</pre>
+
+<p>Notez que les champs de saisie sont maintenant alignés l'un avec l'autre. Pour cela, il nous a fallu ajouter des boîtes à l'intérieur de la boîte principale. Les deux libellés et les champs de saisie sont placés à l'intérieur d'une boîte horizontale. Ensuite, les libellés sont placés à l'intérieur d'une autre boîte, une verticale cette fois, de même que les champs de saisie. C'est cette boîte interne qui oriente verticalement les éléments. La boîte horizontale est nécessaire puisque nous voulons que la <code><a href="/fr/docs/Mozilla/Tech/XUL/vbox" title="vbox">vbox</a></code> des libellés et que la <code><a href="/fr/docs/Mozilla/Tech/XUL/vbox" title="vbox">vbox</a></code> des champs de saisie soient placées l'une à côté de l'autre. Si cette boîte était enlevée, les champs de saisie apparaîtraient sous les libellés.</p>
+
+<p>L'ennui est que le libellé « Mot de passe » est désormais trop haut. Il nous faudra utiliser l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/grid" title="grid">grid</a></code> pour résoudre ce phénomène, ce que nous verrons dans <a href="/fr/Tutoriel_XUL/Grilles" title="fr/Tutoriel_XUL/Grilles">une prochaine section</a>.</p>
+
+<div class="highlight">
+<h3 id="Des_bo.C3.AEtes_dans_la_bo.C3.AEte_de_dialogue_de_recherche_de_fichiers" name="Des_bo.C3.AEtes_dans_la_bo.C3.AEte_de_dialogue_de_recherche_de_fichiers">Des boîtes dans la boîte de dialogue de recherche de fichiers</h3>
+
+<p>Ajoutons quelques boîtes à la boîte de dialogue de recherche de fichiers. Une boîte verticale sera ajoutée autour de tous les éléments, et une boîte horizontale sera ajoutée autour du champ de saisie et des boutons. Le résultat sera que les boutons apparaîtront sous le champ de saisie.</p>
+
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxes.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxes.xul">Voir</a></p>
+
+<pre class="eval"><span class="highlightred">&lt;vbox flex="1"&gt;    &lt;description&gt;     Entrez votre critère de recherche ci-dessous et sélectionnez le bouton      Rechercher pour démarrer la recherche.   &lt;/description&gt;      &lt;hbox&gt;</span>
+    &lt;label value="Rechercher :" control="find-text"/&gt;
+    &lt;textbox id="find-text"/&gt;
+  <span class="highlightred">&lt;/hbox&gt;    &lt;hbox&gt;     &lt;spacer flex="1"/&gt;</span>
+
+    &lt;button id="find-button" label="Rechercher"/&gt;
+    &lt;button id="cancel-button" label="Annuler"/&gt;
+  <span class="highlightred">&lt;/hbox&gt; &lt;/vbox&gt;</span>
+</pre>
+
+<div class="float-right"><img alt="Image:xultu_boxes1.png" class="internal" src="/@api/deki/files/1501/=Xultu_boxes1.png"></div>
+
+<p>La boîte verticale entraîne l'orientation verticale du texte principal, de la boîte contenant le champ de saisie ainsi que de la boîte avec les deux boutons. Les boîtes internes orientent leurs éléments horizontalement. Comme vous pouvez le voir sur l'image, le libellé et le champ de saisie de texte sont placés côte à côte. L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code> et les deux boutons sont aussi placés horizontalement dans leur boîte.</p>
+
+<div class="note">Notez que l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code>, parce qu'il est flexible, force les boutons à apparaître sur le côté droit.</div>
+</div>
+
+<hr>
+<p>Dans la prochaîne section, nous verrons comment spécifier les tailles des éléments individuellement et comment contraindre leurs tailles.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Plus_de_caractéristiques_sur_les_boutons" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Positionnement_des_éléments">Suivant  »</a></p>
+</div>
+
+<p><span class="comment">Interwiki</span></p>

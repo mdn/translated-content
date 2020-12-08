@@ -1,0 +1,82 @@
+---
+title: Mozilla对下一代ECMAScript 的支持
+slug: Web/JavaScript/ECMAScript_7_support_in_Mozilla
+tags:
+  - ECMAScript 2015
+  - ECMAScript 2016
+  - ECMAScript 2017
+  - ECMAScript 2018
+  - new features
+translation_of: Archive/Web/JavaScript/ECMAScript_Next_support_in_Mozilla
+---
+<div>{{jsSidebar("New_in_JS")}}</div>
+
+<p>下一代 ECMAScript 是指在 ECMAScript 2015 被推出后的 ECMA-262 标准（通常被称为 <a href="/en-US/docs/Web/JavaScript">JavaScript</a>）的新特性。新版本的 ECMAScript 规范会每年发布。</p>
+
+<p>你可以在 <a href="https://github.com/tc39/ecma262">tc39/ecma262</a> 这个仓库中看见当前的规范草案。</p>
+
+<p><a href="https://mail.mozilla.org/listinfo/es-discuss">es-discuss</a> 是一个关于 ECMAScript 标准有关反馈的渠道。</p>
+
+<h2 id="ECMAScript_2016">ECMAScript 2016</h2>
+
+<p>下面的 ECMAScript 2016 特性已实现：</p>
+
+<p> </p>
+
+<ul>
+ <li>{{jsxref("Array.prototype.includes()")}} (Firefox 43)</li>
+ <li>{{jsxref("TypedArray.prototype.includes()")}} (Firefox 43)</li>
+</ul>
+
+<h2 id="ECMAScript_2017">ECMAScript 2017</h2>
+
+<p>下面的 ECMAScript 2017 特性已实现：</p>
+
+<p> </p>
+
+<ul>
+ <li>{{jsxref("Object.values()")}} 和 {{jsxref("Object.entries()")}} (Firefox 47)</li>
+ <li>{{jsxref("String.prototype.padEnd()")}} (Firefox 48)</li>
+ <li>{{jsxref("String.prototype.padStart()")}} (Firefox 48)</li>
+ <li>{{jsxref("Object.getOwnPropertyDescriptors()")}} (Firefox 50)</li>
+ <li>异步函数
+  <ul>
+   <li>{{jsxref("Statements/async_function", "异步函数语句")}} (Firefox 52)</li>
+   <li>{{jsxref("Operators/async_function", "异步函数表达式")}} (Firefox 52)</li>
+   <li>{{jsxref("AsyncFunction")}} (Firefox 52)</li>
+   <li>{{jsxref("Operators/await", "await 语句")}} (Firefox 52)</li>
+  </ul>
+ </li>
+ <li>{{jsxref("Trailing_commas", "函数参数列表的尾后逗号")}} (Firefox 52)</li>
+</ul>
+
+<h2 id="实验性的新特性">实验性的新特性</h2>
+
+<p>以下特性已经实现，但可能仅在 Firefox Nightly 中可用、或者需要浏览器 flags 开启；且此提案的标准可能尚未正式进入 ECMAScript 规范，请小心使用。</p>
+
+<h3 id="ArrayBuffer_对象的新方法"><code>ArrayBuffer</code> 对象的新方法</h3>
+
+<ul>
+ <li>{{jsxref("ArrayBuffer.transfer()")}} (<a href="https://gist.github.com/lukewagner/2735af7eea411e18cf20">spec</a>)</li>
+</ul>
+
+<h3 id="新的_TypedObject_对象">新的 TypedObject 对象</h3>
+
+<ul>
+ <li><a href="https://github.com/dslomov-chromium/typed-objects-es7">Typed Objects draft</a></li>
+</ul>
+
+<h3 id="新的_Shared_Memory_对象">新的 Shared Memory 对象</h3>
+
+<ul>
+ <li>{{jsxref("SharedArrayBuffer")}}</li>
+ <li>{{jsxref("Atomics")}}</li>
+</ul>
+
+<h2 id="相关链接">相关链接</h2>
+
+<ul>
+ <li><a href="http://www.ecmascript.org/">ECMAScript 官网</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1021376">Mozilla ES2016 tracking bug</a></li>
+ <li><a href="http://kangax.github.io/compat-table/es7/" title="http://kangax.github.io/es5-compat-table">ECMAScript 2015 support across browsers</a></li>
+</ul>

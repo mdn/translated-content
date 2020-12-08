@@ -1,0 +1,158 @@
+---
+title: ボックスオブジェクト
+slug: Archive/Mozilla/XUL/Tutorial/Box_Objects
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+  - 要更新
+translation_of: Archive/Mozilla/XUL/Tutorial/Box_Objects
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Manipulating_Lists" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:XPCOM_Interfaces">次のページ  »</a></p>
+</div>
+
+<p>このセクションでは、ボックスオブジェクトについて説明します。 このオブジェクトは、XUL ボックスの表示とレイアウトに関する情報、 言い換えれば XUL のレイアウトに関するいくつかの詳細な情報を保持しています。</p>
+
+<h3 id="Mozilla_.E3.81.AE.E3.83.AC.E3.82.A4.E3.82.A2.E3.82.A6.E3.83.88.E5.87.A6.E7.90.86" name="Mozilla_.E3.81.AE.E3.83.AC.E3.82.A4.E3.82.A2.E3.82.A6.E3.83.88.E5.87.A6.E7.90.86">Mozilla のレイアウト処理</h3>
+
+<p>Mozilla は、対象をコンテントツリーとレイアウトツリーの 2 つのツリーに分けて処理します。 コンテントツリーは、ソースコードで見つかった内容をノードとして保持するツリーです。 レイアウトツリーは、それとは別のノードからなるツリーで、そのノードは個々の表示可能なコンポーネントに対応しています。 レイアウトツリーは、表示が期待されているものをノードとするような構造を保持しています。 このため、コンテントツリーとレイアウトツリーのノードが 1 対 1 に対応しているとは限りません。 一部のコンテントノードに対しては、複数のレイアウトオブジェクトが存在することがあります。 例えば、段落"の場合、レイアウトオブジェクトは、含まれる個々の行ごとに存在することになります。 逆に、一部のコンテントノードには、レイアウトオブジェクトが全く存在しません。 例えば、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/key" title="key">key</a></code></code> 要素は、いかなる場合でも表示されることはないので、レイアウトオブジェクトは存在しません。 同様に、<code><code id="a-hidden"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/hidden">hidden</a></code></code> によって隠されている要素についても、レイアウトオブジェクトは存在しません。</p>
+
+<p>一般に <a href="ja/DOM">DOM</a> は、文書の内容、あるいは構造に関係する情報の取得と変更についてのみ用いられます。 このため、与えられた要素から、どのような種類のコンテントツリーのノードが作成されるかは、比較的簡単に決定されます。 例えば、XUL 要素は、XULElement 型のコンテントノードを持つことになります。</p>
+
+<p>一方、どのレイアウトオブジェクトが作成されるかは、より複雑な手法で決定されます。 このために、「タグ名」「要素の属性」「数々の <a href="ja/CSS">CSS</a> プロパティ」「周囲の要素とレイアウトオブジェクト」「要素に結びつけられた XBL (XBL については<a href="ja/XUL_Tutorial/Introduction_to_XBL">後のセクション</a>で記述します) 」といった様々な情報が、組み合わされて利用されます。 要素に対してスタイルを変更していなければ、通常、ほとんどの XUL 要素は、ボックスレイアウトオブジェクトあるいはその派生型を利用します。 すべての XUL 要素はボックスの一種であること、つまりボックスは表示されるすべての XUL 要素の基本であることを思い出してください。 なお、ボックスには、個々の XUL 要素の種類に応じて特化された 25 以上の派生型があります。 これらの派生型の中でも、スタック (<code><code><a href="/ja/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code></code>) やリストボックス (<code><code><a href="/ja/docs/Mozilla/Tech/XUL/listbox" title="listbox">listbox</a></code></code>) などは、基本的なボックスよりも複雑なレイアウトを行うために必要になりますが、 ボタンなどそれ以外のものは、独自のマウスとキーイベントの処理を追加するためのみに利用されています。</p>
+
+<p>単に CSS の <a href="/ja/docs/Web/CSS/display" title="CSS の display プロパティは、要素の表示種別を指定し、これは要素がボックスを生成する方法の二つの基本的な品質から成ります。 — 外部表示種別はボックスがフローレイアウトにどのように加わるのかを定義し、内部表示種別はボックスの子がどのように配置されるのかを定義します。"><code>display</code></a> プロパティが別のものに変更されるだけでも、要素に結びつけられたレイアウトオブジェクトは取り除かれて、代わりに全く異なる種類のオブジェクトが作成されることがあります。 例えば、ボタン要素の <a href="/ja/docs/Web/CSS/display" title="CSS の display プロパティは、要素の表示種別を指定し、これは要素がボックスを生成する方法の二つの基本的な品質から成ります。 — 外部表示種別はボックスがフローレイアウトにどのように加わるのかを定義し、内部表示種別はボックスの子がどのように配置されるのかを定義します。"><code>display</code></a> プロパティの値を、デフォルトの <code>-moz-box</code> から、HTML のブロック要素で使用される <code>block</code> に変更した場合、ボタンのレイアウトオブジェクトは削除され、代わりにブロックオブジェクトが作成されることになります。 また、これに従って要素の外観と機能も変更されます。</p>
+
+<p>XUL アプリケーションを開発するためだけであれば、レイアウトオブジェクトの構築方法について詳細を知る必要はありませんが、 少なくとも、上で述べた XUL レイアウトについての知識は、さらに高度な XUL 開発のために、非常に役に立つと思います。</p>
+
+<h3 id=".E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88" name=".E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88">ボックスオブジェクト</h3>
+
+<p>レイアウトオブジェクトは、XUL のレイアウトコンポーネントが内部的に使用するものなので、 開発者が操作を行うためにアクセスすることはできません。 しかしながら、XUL ではその代わりにレイアウトを操作するためのヘルパーオブジェクトを提供しています。 これらはボックスオブジェクトと呼ばれており、レイアウトに関係する情報にアクセスすることを可能にします。 また、その名が示しているように、全てのボックスを基本とする要素で利用することが可能です。</p>
+
+<p>ボックスオブジェクトにはいくつかの派生型がありますが、普段はそのうちの 1 組だけが利用されます。 それ以外のものは、全て特定の要素とともに利用されることが前提になっています。 このため、いくつか関数は持っているものの、直接要素にマップされたメソッドの方が簡単にアクセスできるため、ボックスオブジェクトの方は利用されません。 しかしながら、基本ボックスオブジェクト、あるいは (派生型が実装する) <a class="external" href="http://www.xulplanet.com/references/objref/BoxObject.html">BoxObject</a> インターフェイスには、XUL で開発する上で非常に有用なプロパティがいくつかあります。</p>
+
+<p>この基本ボックスオブジェクトには、2 つの便利な機能があります。 1 つめは、XUL 要素が表示されている位置とサイズを取得する機能で、 2 つめは、ボックスの中に表示される要素の並び順序を調べる機能になります。 なお、この順番は、要素が DOM に格納されている順番とは異なる場合があります。</p>
+
+<h4 id=".E8.A6.81.E7.B4.A0.E3.81.AE.E4.BD.8D.E7.BD.AE.E3.81.A8.E3.82.B5.E3.82.A4.E3.82.BA.E3.82.92.E5.8F.96.E5.BE.97.E3.81.99.E3.82.8B" name=".E8.A6.81.E7.B4.A0.E3.81.AE.E4.BD.8D.E7.BD.AE.E3.81.A8.E3.82.B5.E3.82.A4.E3.82.BA.E3.82.92.E5.8F.96.E5.BE.97.E3.81.99.E3.82.8B">要素の位置とサイズを取得する</h4>
+
+<p>ボックスオブジェクトには、要素の位置とサイズを知るための 4 つのプロパティ <code>x</code>、<code>y</code>、<code>width</code>、<code>height</code> があります。 <code>x</code> と <code>y</code> は、ウインドウ内に置かれた文書の左上隅 (ウインドウの枠とタイトルバーを除いたところ) からの相対的な画素数による座標を表します。 <code>width</code> と <code>height</code> プロパティも、単位は画素数で CSS の <code>padding</code> と <code>border</code> を、(もしあれば) 含めた上での要素の幅と高さを返します。</p>
+
+<p>これらの値は、常にそのときの表示位置と表示サイズになるため、要素の移動やリサイズを行った場合、それに応じて変更されます。 例えば、<span style="border-bottom: 1px dashed green;" title="flexible">伸縮可能</span>な要素のサイズを変更した場合、ボックスオブジェクトの寸法もそれに伴って更新されます。 この挙動は、以下の例で確認できます。</p>
+
+<p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxobject_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxobject_1.xul">表示</a></p>
+
+<pre>&lt;button label="Click Me"
+        oncommand="alert('The width is ' + this.boxObject.width);"/&gt;
+</pre>
+
+<p><br>
+ 普通は、要素自身が内容に合わせて適切なサイズを定めるため、あまり利用しませんが、 要素に対して <code>width</code> と <code>height</code> 属性を設定することで、個別に幅と高さを指定することが可能です。 これらの属性は、デフォルトのサイズを指定されたサイズで上書きするため、 要素を特定のサイズで表示させたいのであれば、 属性に対応する、<code>width</code> と <code>height</code> プロパティを利用して、 いつでも要素の寸法を調整することができます。 明示的にサイズを設定した要素に対してこれらのプロパティの値を取得した場合、設定されているサイズが戻ります。 <code>width</code> または <code>height</code> 属性 (またはプロパティ) が設定されていない場合は、空文字列が戻ることに注意してください。 これは、これらのプロパティから、そのときのサイズを取得することはできないということを意味しています。 そのときのサイズが必要な場合は、ボックスオブジェクトのプロパティを利用しなければなりません。</p>
+
+<p>少しばかり混乱させたかもしれませんが、要約すると、要素の width と height プロパティが XUL で設定されたサイズを返すのに対して、ボックスオブジェクトの width と height プロパティは現在の表示サイズを返すということになります。</p>
+
+<h4 id=".E9.9A.A0.E3.81.95.E3.82.8C.E3.81.9F.E8.A6.81.E7.B4.A0.E3.81.A8.E6.8A.98.E3.82.8A.E7.95.B3.E3.81.BE.E3.82.8C.E3.81.9F.E8.A6.81.E7.B4.A0" name=".E9.9A.A0.E3.81.95.E3.82.8C.E3.81.9F.E8.A6.81.E7.B4.A0.E3.81.A8.E6.8A.98.E3.82.8A.E7.95.B3.E3.81.BE.E3.82.8C.E3.81.9F.E8.A6.81.E7.B4.A0">隠された要素と折り畳まれた要素</h4>
+
+<p><code><code id="a-hidden"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/hidden">hidden</a></code></code> 属性を指定すると、要素は表示されないように隠されます。 表示がされないために、ボックスオブジェクトの位置とサイズを表す 4 つのプロパティの値は、すべて 0 になります。 要素が隠されると、表示から取り除かれてレイアウトオブジェクトも削除されます。 どこにも表示されていないので位置もサイズも持っていません。</p>
+
+<p>また、<code><code id="a-collapsed"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/collapsed">collapsed</a></code></code> 属性を指定した場合は、要素は表示されないように折り畳まれます。 この属性も利用者に対しては、要素の表示という点で <code><code id="a-hidden"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/hidden">hidden</a></code></code>と同じ効果を与えますが、 内部的には、要素のサイズが 0 に変更されるだけで、要素自体は画面に残り、レイアウトオブジェクトも完全に保持されます。 まとめると、<code><code id="a-hidden"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/hidden">hidden</a></code></code> によって隠されても、<code><code id="a-collapsed"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/collapsed">collapsed</a></code></code> によって折畳まれても、要素の幅と高さは 0 になります。 また、隠されている要素の位置 x と y は 0 である一方、折り畳まれている要素では、ウインドウ内の位置が維持されます。</p>
+
+<p><code><code id="a-hidden"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/hidden">hidden</a></code></code> と <code><code id="a-collapsed"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/collapsed">collapsed</a></code></code> の状態の取得と設定は、対応するプロパティを利用することで可能です。 以下に例を示します。</p>
+
+<p><span id="%E4%BE%8B_2"><a id="%E4%BE%8B_2"></a><strong>例 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxobject_2.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxobject_2.xul">表示</a></p>
+
+<pre>&lt;script&gt;
+function showPositionAndSize()
+{
+  var labelbox = document.getElementById('thelabel').boxObject;
+
+  alert("Position is (" + labelbox.x + "," + labelbox.y +
+        ") and size is (" + labelbox.width + "," +
+        labelbox.height + ")");
+}
+&lt;/script&gt;
+
+&lt;button label="Hide"
+        oncommand="document.getElementById('thelabel').hidden = true;"/&gt;
+&lt;button label="Show"
+        oncommand="document.getElementById('thelabel').hidden = false;"/&gt;
+&lt;button label="Collapse"
+        oncommand="document.getElementById('thelabel').collapsed = true;"/&gt;
+&lt;button label="Uncollapse"
+        oncommand="document.getElementById('thelabel').collapsed = false;"/&gt;
+&lt;button label="Show Position/Size"
+        oncommand="showPositionAndSize();"/&gt;
+&lt;label id="thelabel" value="I am a label"/&gt;
+</pre>
+
+<p>この例で、ラベルを隠して、かつ折り畳んだ場合、隠されたものとして扱われることに注意してください。 といっても、この場合も折り畳み状態が解除されたわけではないので、ラベルを再び表示させるためには、隠した状態と折り畳んだ状態の両方を解除する必要があります。</p>
+
+<h3 id="XUL_.E8.A6.81.E7.B4.A0.E3.81.AE.E4.B8.A6.E3.81.B3.E6.96.B9" name="XUL_.E8.A6.81.E7.B4.A0.E3.81.AE.E4.B8.A6.E3.81.B3.E6.96.B9">XUL 要素の並び方</h3>
+
+<p>ボックスオブジェクトは、要素の表示上の並び順を特定するために利用できます。 この並び順は、ソース内での順序と異なっている可能性があります。 <code><a href="ja/DOM/element.childNodes">childNodes</a></code>、<code><a href="ja/DOM/element.firstChild">firstChild</a></code>、<code><a href="ja/DOM/element.nextSibling">nextSibling</a></code> といった DOM プロパティが、文書ツリー内での要素のナビゲーションに利用できることを思い出してください。 ボックスオブジェクトでも、同じような処理が可能ですが、要素は表示上の並びに従って取得されます。</p>
+
+<p>ボックスオブジェクトには、このためにプロパティとして <code>firstChild</code>、<code>lastChild</code>、<code>nextSibling</code>、<code>previousSibling</code>、<code>parentBox</code> が用意されています。 これらは、それぞれの名前が示すままの機能を持ち、戻り値として要素を返します。 例えば、<code>firstChild</code> プロパティは、ボックス内の最初の位置に表示されている子要素を返します。 なお、ボックスには DOM の <code>childNodes</code> プロパティに対応するものが存在しません。 このため、同様の処理を行うには、<code>nextSibling</code>、あるいは <code>previousSibling</code> プロパティを利用して、隣接ノードを取得していくことで次の処理対象を選択していく必要があります。</p>
+
+<p>ボックスオブジェクトのナビゲーションでは、<code><code id="a-hidden"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/hidden">hidden</a></code></code> によって隠された要素が除外される点が、DOM ツリーのナビゲーションとは異なっています。 つまり、6 つの子要素を持つボックスで、最初の 2 つが隠されていた場合、<code>firstChild</code> プロパティは 3 番目の要素を返します。 一方、<code>collapsed</code> によって折り畳まれた要素は、サイズは 0 であるものの、依然として表示はされているため、ボックスオブジェクトのナビゲーションにも含まれることになります。 例えば、以下のボックスでは、「Button 2」は隠されているため、「Button 1」の隣接要素は「Button 3」になります。 また、「Button 4」は折り畳まれているだけなので、「Button 3」の隣接要素は、「Button 4」になります。</p>
+
+<p><span id="%E4%BE%8B_3"><a id="%E4%BE%8B_3"></a><strong>例 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxobject_3.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxobject_3.xul">表示</a></p>
+
+<pre>&lt;hbox&gt;
+  &lt;button label="Button 1"
+          oncommand="alert('Next is: ' + this.boxObject.nextSibling.label);"/&gt;
+  &lt;button label="Button 2" hidden="true"/&gt;
+  &lt;button label="Button 3"
+          oncommand="alert('Next is: ' + this.boxObject.nextSibling.label);"/&gt;
+  &lt;button label="Button 4" collapsed="true"/&gt;
+&lt;/hbox&gt;
+</pre>
+
+<h4 id=".E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9.E3.81.AE.E4.B8.A6.E3.81.B3.E5.88.B6.E5.BE.A1.E5.B1.9E.E6.80.A7" name=".E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9.E3.81.AE.E4.B8.A6.E3.81.B3.E5.88.B6.E5.BE.A1.E5.B1.9E.E6.80.A7">ボックスの並び制御属性</h4>
+
+<p>XUL ボックスがウインドウ上で配置されるとき、子要素はいくつかのプロパティ、 具体的には、縦か横かを示すための「方向 」「並びグループ」正順か逆順かを示す「順序 」を元にして並べられます。</p>
+
+<h5 id="orient_.E5.B1.9E.E6.80.A7" name="orient_.E5.B1.9E.E6.80.A7">orient 属性</h5>
+
+<p>通常、方向は <code><code id="a-orient"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code></code> 属性により変更されます。 また、状況に応じて対応する CSS プロパティ <a href="/ja/docs/Web/CSS/-moz-box-orient" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>-moz-box-orient</code></a> を代わりに利用することも可能です。 この属性については、以前の<a href="ja/XUL_Tutorial/The_Box_Model">ボックスについてのセクション</a>で説明されています。</p>
+
+<h5 id="ordinal_.E5.B1.9E.E6.80.A7" name="ordinal_.E5.B1.9E.E6.80.A7">ordinal 属性</h5>
+
+<p><code><code id="a-ordinal"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/ordinal">ordinal</a></code></code> 属性は、要素の並びグループの指定に利用します。 これは、CSS プロパティ <a href="/ja/docs/Web/CSS/-moz-box-ordinal-group" title="要素が属する序数グループを示します。低い序数グループを持つ要素は、より高い序数を有するものの前に表示されます。"><code>-moz-box-ordinal-group</code></a> を利用することでも指定可能です。</p>
+
+<p><code>ordinal</code> によって、より小さな並びに設定された要素は、より大きな並びに設定された要素よりも、ボックス内で前に配置されます。 例えば、<code>ordinal</code> が 2 の要素は、<code>ordinal</code> が 3 以上の要素より前に位置し、<code>ordinal</code> 1 の要素の後に位置することになります。 <code>ordinal</code> のデフォルト値は 1 です。 このため、要素の並び順を変えたい場合、たくさんの要素の <code>ordinal</code> を変更する必要があるときがしばしばあると思います。</p>
+
+<p>通常は、要素の並び順を変えたい場合、単にソース内に記述する順番を変えれば済むため、 <code>ordinal</code> で要素の並びを調整することは、あまり一般的なことではありません。 しかし、この操作は DOM を変更せずに、後から項目の並び替えを行うために利用できます。 以下に例を示します。</p>
+
+<p><span id="%E4%BE%8B_4"><a id="%E4%BE%8B_4"></a><strong>例 4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxobject_4.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxobject_4.xul">表示</a></p>
+
+<pre>&lt;hbox&gt;
+  &lt;button label="One" oncommand="this.ordinal++;"/&gt;
+  &lt;button label="Two" oncommand="this.ordinal++;"/&gt;
+  &lt;button label="Three" oncommand="this.ordinal++;"/&gt;
+&lt;/hbox&gt;
+</pre>
+
+<p>最初に、ボタン「One」を押した場合、<code>ordinal</code> が 1 から 2 に加算されます。 他のボタンの <code>ordinal</code> は 1 のままなので、ボタン「One」は最後に表示されるようになります。 次に、ボタン「Two」を押すと、 <code>ordinal</code> が 1 増えて、ボタンは行末へ移動します。 これは、<code>ordinal</code> が同じ項目は、ソース内と同じ順序で表示されるためです。 更にもう一度、ボタン「One」を押すと、<code>ordinal</code> が 3 に増えて、末尾に移動します。 最後に、ボタン「Three」を押すと、<code>ordinal</code> は 2 に増え、他の 2 つのボタンの間に表示されます。</p>
+
+<h5 id="dir_.E5.B1.9E.E6.80.A7" name="dir_.E5.B1.9E.E6.80.A7">dir 属性</h5>
+
+<p>ボックスの並び制御属性の最後は <code><code id="a-dir"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/dir">dir</a></code></code> 属性で、対応する CSS プロパティは <a href="/ja/docs/Web/CSS/-moz-box-direction" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>-moz-box-direction</code></a> になります。 この値が <code>reverse</code> に設定されると、ボックス内のすべての子要素は逆順に並んで表示されます。 つまり、水平ボックスでは右から左へ、垂直ボックスでは下から上へ要素が配置されていくことになります。 以下に例を示します。</p>
+
+<p><span id="%E4%BE%8B_5"><a id="%E4%BE%8B_5"></a><strong>例 5</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxobject_5.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxobject_5.xul">表示</a></p>
+
+<pre>&lt;hbox dir="reverse"&gt;
+  &lt;button label="Left"/&gt;
+  &lt;button label="Center"/&gt;
+  &lt;button label="Right"/&gt;
+&lt;/hbox&gt;
+</pre>
+
+<p>ボックスオブジェクトの並び順によるノードのナビゲーションでは、<code><code id="a-ordinal"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/ordinal">ordinal</a></code></code> によって調整された順番で要素が返されます。 このため、要素の <code><code id="a-ordinal"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/ordinal">ordinal</a></code></code> を変更した場合は、ボックス内の並び順も変更されます。 一方、<code><code id="a-dir"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/dir">dir</a></code></code> によって順序を逆にしたとしても、ボックス内の並び順は変更されません。</p>
+
+<p>次のセクションでは、 XUL とスクリプトから XPCOM オブジェクトを利用する方法について見ていきます。</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Manipulating_Lists" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:XPCOM_Interfaces">次のページ  »</a></p>
+</div>

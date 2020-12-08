@@ -1,0 +1,63 @@
+---
+title: チェックボックスロールの使用
+slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_checkbox_role
+tags:
+  - ARIA
+  - Accessibility
+  - NeedsContent
+  - Role(2)
+  - Rôle
+translation_of: Web/Accessibility/ARIA/Roles/checkbox_role
+---
+<p><span class="seoSummary"><a class="external" href="http://www.w3.org/TR/wai-aria/roles#checkbox" title="http://www.w3.org/TR/wai-aria/roles#checkbox">チェックボックス</a>ロールはチェック可能なインタラクティブなコントロールに使用されます。もし要素が <code>role="checkbox"</code> を使っていたら 、支援技術へチェックボックスのステートを公開するために<code>aria-checked</code> 属性も持つ必要があります。ネイティブHTMLのチェックボックスフォームコントロールが２つののみ（ "checked" もしくは "not checked" ）をもてる一方で、<code>role=checkbox</code> 要素は <code>aria-checked</code> を通して３つのステートを公開できます:</span></p>
+
+<ul>
+ <li>aria-checked="true": チェックボックスはチェックされています</li>
+ <li>aria-checked="false": チェックボックスはチェックされていません</li>
+ <li>aria-checked="mixed": チェックボックスは部分的にチェックされています</li>
+</ul>
+
+<p>開発者はチェックボックスが作動した際に、 <code>aria-checked</code> 属性を動的に変更する必要があります。</p>
+
+<p>チェックボックスはインタラクティブなコントロールなので、フォーカス可能かつキーボードからアクセス可能でなければなりません。 ロールがフォーカス可能ではない要素に適応されたとしたら、フォーカスを可能にするために tabindex 要素が使用されなければなりません。チェックボックスを動作させるために期待されるキーボードショートカットはスペースキーです。</p>
+
+<h3 id="ユーザーエージェントと支援技術への影響">ユーザーエージェントと支援技術への影響 </h3>
+
+<p><code>チェックボックス</code>ロールが要素に付与されたときに、ユーザーエージェントは次のように振る舞わなければなりません:</p>
+
+<ul>
+ <li>チェックボックスを持っている要素を、オペレーティングシステムのアクセシビリティAPIへ公開します。</li>
+ <li>aria-checked の値が変わった際に、アクセシブルなす～手との変更イベントを送信します。</li>
+</ul>
+
+<p>支援技術製品は次のように振る舞わなければなりません:</p>
+
+<ul>
+ <li>スクリーンリーダーは要素をチェックボックスとしてアナウンスしなければなりません。またオプションでチェックボックスを動作させる方法を提供します。</li>
+</ul>
+
+<div class="note"><strong>注記:</strong> 支援技術がこの技術をどう扱うべきかについて、意見は分かれています。上記の情報はこれらの意見の一つであり、標準的なものではありません。</div>
+
+<h3 id="例">例</h3>
+
+<h4 id="例1_ARIA_によるチェックボックスロールの追加">例1: ARIA によるチェックボックスロールの追加</h4>
+
+<pre class="brush: html">&lt;span role="checkbox" aria-checked="false" tabindex="0" id="chk1"&gt;&lt;/span&gt;
+&lt;label for="chk1"&gt;Remember my preferences&lt;/label&gt;</pre>
+
+<h3 id="注記">注記 </h3>
+
+<h3 id="使用された_ARIA_属性">使用された ARIA 属性</h3>
+
+<ul>
+ <li><a class="external" href="http://www.w3.org/TR/wai-aria/roles#checkbox" title="http://www.w3.org/TR/wai-aria/roles#checkbox">checkbox</a></li>
+ <li><a class="external" href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-checked" title="http://www.w3.org/TR/wai-aria/states_and_properties#aria-checked">aria-checked</a></li>
+</ul>
+
+<h3 id="関連する_ARIA_技術">関連する ARIA 技術</h3>
+
+<h3 id="互換性">互換性</h3>
+
+<p class="comment">TBD: 一般的なUAとAT製品の組み合わせサポート情報の追加</p>
+
+<h3 id="その他のリソース">その他のリソース</h3>

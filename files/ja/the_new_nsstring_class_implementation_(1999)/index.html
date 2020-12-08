@@ -1,0 +1,148 @@
+---
+title: The new nsString class implementation (1999)
+slug: The_new_nsString_class_implementation_(1999)
+tags:
+  - XPCOM
+translation_of: Archive/Mozilla/The_new_nsString_class_implementation_(1999)
+---
+<p></p><div class="warning warningHeader">
+    <p><strong>警告:</strong> <strong>この記事の内容は古くなっている可能性があります。</strong> 実際、このページの内容は、あなたが求めているものとは異なる可能性が大いにあります。David Baron (dbaron) がどこかでゴロゴロしているのを見かけたら、彼にこのページを見せてください。彼ならこのメッセージを直せるでしょう。当面は <b><a href='"ja/XPCOM_string_guide"'>XPCOM string guide</a></b> をご覧ください。ただしこのドキュメントにも同じように警告が付いていることに気を付けてください。</p>
+</div><p></p>
+<p>このドキュメントでは、新しい nsString クラスの構造を手短に記し、メモリ管理上のインプリメント、最適化、国際化、使用パターン、を明確にすることを意図しています。</p>
+<p>おことわり: 私は、絶対的に string クラスを嫌っています。だれも 2 人以上のプログラマが納得するものを発明していません。そう、ならばなぜ私はこれを提案しているのか？ いいでしょう、nsString は私たちにいまのところよく仕えていますが、手直しを必要としています。そして、XPCOM は実際に一人前になっています。そのため、nsString もそこに加らなくてはなりません。</p>
+<h3 id=".E6.AD.A3.E5.BD.93.E5.8C.96" name=".E6.AD.A3.E5.BD.93.E5.8C.96">正当化</h3>
+<p>nsString クラスは、デフォルトのインプリメンテーションとして Gecko (とその他のモジュール) のすべてを通して使われる wide character の文字列です。しかし、処理すべきインプリメンテーションの細部がいくつかある、という問題を抱えており、それはこのドキュメントの主題でもあります。現在のインプリメントで欠けているものは、</p>
+<ol>
+  <li>クラスの基本的問題 -- もろさのために、複数の DLL にまたがった使用ができない</li>
+  <li>内在する国際化サポートの不足</li>
+  <li>効率が低い、特に narrow (1 バイト) character 文字列サポートがない</li>
+  <li>外部メモリ管理方針をサポートしないこと</li>
+  <li>XPCOM インタフェースの欠如</li>
+</ol>
+<p>新しい nsStrImpl インプリメンテーションの顕著な特徴は</p>
+<ol>
+  <li>1 バイトと 2 バイトのサイズの character の内在的なサポート</li>
+  <li>異なった character サイズの間の自動的な変換の提供</li>
+  <li>耐久性のある基本構造がクラスの脆さの問題を減らす: DLL の垣根をこえても安全</li>
+  <li>nsStrImpl を操作するための C スタイルの関数の提供</li>
+  <li>メモリ方針に特化した単純なメモリ割り当て API の提供</li>
+  <li>BString とのバイナリフォーマットの共有</li>
+  <li>もうすぐ実装予定：新しい XPCOM (nsIString) インタフェース</li>
+  <li>テンプレート化されていない: これは Gecko のために必要です。</li>
+  <li>とても効率的なバッファ操作</li>
+</ol>
+<h3 id=".E6.A7.8B.E9.80.A0" name=".E6.A7.8B.E9.80.A0">構造</h3>
+<p>新しい構造の基礎となるデータタイプは、以下に示す <code>struct nsStrImpl</code> です。</p>
+<pre class="eval">struct nsStrImpl {
+  PRInt32 mLength;
+  void*   mBuffer;
+  PRInt32 mCapacity;
+  char    mCharSize;
+  char    mUnused;
+
+  // そして今は、nsStrImpl API のための...
+  static void EnsureCapacity(nsStrImpl&amp; aString,PRUint32 aNewLength);
+  static void GrowCapacity(nsStrImpl&amp; aString,PRUint32 aNewLength);
+
+  static void Append(nsStrImpl&amp; aDest,const nsStrImpl&amp; aSource,PRUint32 anOffset,PRInt32 aCount);
+  static void AppendCString(nsStrImpl&amp; aDest,const char* aSource,PRUint32 anOffset,PRInt32 aCount);
+
+  static void Assign(nsStrImpl&amp; aDest,const nsStrImpl&amp; aSource,PRUint32 anOffset,PRInt32 aCount);
+  static void AssignCString(nsStrImpl&amp; aDest,const char* aSource,PRUint32 anOffset,PRInt32 aCount);
+
+  // char もしくは、既存文字列の部分の代入...
+  static void Insert(nsStrImpl&amp; aDest,PRUint32 aDestOffset,
+                     const nsStrImpl&amp; aSource,PRUint32 aSrcOffset,PRInt32 aCount);
+
+  static void InsertCString(nsStrImpl&amp; aDest,PRUint32 aDestOffset,
+                            const char* aSource,PRUint32 aSrcOffset,PRInt32 aCount);
+
+  static void InsertChar(nsStrImpl&amp; aDest,PRUint32 aDestOffset,char theChar);
+  static void InsertChar(nsStrImpl&amp; aDest,PRUint32 aDestOffset,PRUnichar theUnichar);
+  static void InsertChar(nsStrImpl&amp; aDest,PRUint32 aDestOffset,PRInt32 theQuadChar);
+
+  static void Delete(nsStrImpl&amp; aDest,PRUint32 aDestOffset,PRUint32 aCount);
+  static void Truncate(nsStrImpl&amp; aDest,PRUint32 aDestOffset);
+
+  static PRInt32 Compare(const nsStrImpl&amp; aDest,const nsStrImpl&amp; aSource,
+                         PRInt32 aCount,PRBool aIgnoreCase);
+};
+</pre>
+<h5 id="nsString" name="nsString">nsString</h5>
+<p>nsString クラスは今でも nsStrImpl クラスのサブクラス (ラッパー) として私たちとともにあります。デフォルトで、nsStrings は 2 バイト UCS2 文字格納モデルを使います。 nsString クラスは機能性を nsStrImpl スタティックライブラリから得ているため、とても軽量です。上記した nsStrImpl の API に加えて、nsString、nsAutoString、nsCString はいずれも、構築、検索、比較のための追加の API (それらはすべて、nsStrImpl の API よりグレードの低いものです) を提供します。また、新しい nsString インタフェースは、mozilla/base/src/nsString.h で築かれた既存の nsString クラスにあるインタフェースをまったく真似ていることも記しておきます。</p>
+<h5 id="nsAutoString" name="nsAutoString">nsAutoString</h5>
+<p>私たちは、独自のものであるスタックベースのバッファを提供する nsAutoString をいまだに提供しています。このとても有用なクラスはプログラマに、ヒープベースのアロケーションを減らす上に、 nsString/nsStrImpl インプリメンテーションをうまく利用することを許しています。 nsAutoString に改善が加えられ、独自の内部バッファではなく、任意サイズのスタックベースバッファが使用できるようになりました。これは、文字列格納のために効率的な (一時) スタックバッファを使いつづけながら、特に必要のあるときは、おまけの格納エリアを使用できる、ということを意味します (複雑に聞こえますが、実際には簡単なことです)。このクラスは nsString や nsStrImpl と完全に共同で使うことが出来ます。</p>
+<h5 id="nsCString" name="nsCString">nsCString</h5>
+<p>新しい nsCString クラスは、nsString と同じ API を共有しています。しかし、1 バイト ASCII 文字格納モデルを使用しています。これにより、プログラマは、1 文字あたり 2 バイトというオーバーヘッドを被ることなしに nsString API を標準の char* のように使用する事ができます。このクラスは完全に nsString、nsAutoString、nsStrImpl に共同で使うことが出来ます。</p>
+<h5 id="nsIString" name="nsIString">nsIString</h5>
+<p>当然のことながら、私たちは nsStrImpl/nsString クラスの上に nsIString インタフェースを含むことが必要です。これが基本的に nsString インタフェースの (XPCOM 表現の中の) 再表現であるために、そのインタフェースをここで繰り返したくありません。</p>
+<h3 id=".E4.BD.BF.E7.94.A8.E3.83.91.E3.82.BF.E3.83.BC.E3.83.B3" name=".E4.BD.BF.E7.94.A8.E3.83.91.E3.82.BF.E3.83.BC.E3.83.B3">使用パターン</h3>
+<h5 id=".E3.81.A9.E3.81.AE.E3.82.88.E3.81.86.E3.81.AB.E3.81.93.E3.82.8C.E3.82.89.E3.81.AE.E3.82.AF.E3.83.A9.E3.82.B9.E3.82.92.E4.BD.BF.E3.81.86.E3.81.8B" name=".E3.81.A9.E3.81.AE.E3.82.88.E3.81.86.E3.81.AB.E3.81.93.E3.82.8C.E3.82.89.E3.81.AE.E3.82.AF.E3.83.A9.E3.82.B9.E3.82.92.E4.BD.BF.E3.81.86.E3.81.8B">どのようにこれらのクラスを使うか</h5>
+<p>軽便さ、スレッド、Gecko の安全性プロセスを増すために、私は私たちの文字列クラスの派生物それぞれの使用に関して以下のルールを勧めます。</p>
+<table>
+  <tbody>
+    <tr>
+      <th>
+        &lt;center&gt;
+          String Class&lt;/center&gt;
+      </th>
+      <th>
+        &lt;center&gt;
+          使う場所&lt;/center&gt;
+      </th>
+    </tr>
+    <tr>
+      <td>nsStrImpl</td>
+      <td>nsStrImpl 関数ライブラリとリンクされたモジュールの間を文字列を通すときに使ってください。</td>
+    </tr>
+    <tr>
+      <td>nsString</td>
+      <td>管理範囲があなたのプロセスの中に限って生存するとわかっているオブジェクトの中だけローカルにこれらを使ってください。これらは、たいがい他のモジュールの中のオブジェクトには露出しないのがいいでしょう。</td>
+    </tr>
+    <tr>
+      <td>nsAutoString</td>
+      <td>絶対に必要なのでなければ、ヒープのアロケーションを被りたくない場合だけ限定的にこれらを使ってください。</td>
+    </tr>
+    <tr>
+      <td>nsCString</td>
+      <td>nsString と同じですが、地域化を考えるために慎重に使われるべきです。</td>
+    </tr>
+    <tr>
+      <td>nsIString</td>
+      <td>nsStrImpl インプリメンテーションを使わないだろうモジュールの間を文字列を通すときに使ってください。これは最も一般的なアプローチです。しかし、参照をカウントした文字列を提供します。</td>
+    </tr>
+  </tbody>
+</table>
+<p>このインプリメンテーションに関して、密接に関連するものがあります。特に、Gecko 全体にわたる API の変化です。中でも、public な API で、 API 中に nsStrings を使用することは推奨されなくなるでしょう。これら API のものは nsStrImpl 参照を代わりに使って書き直される必要があるでしょう。別の方法として、プログラマはモジュールの間を nsIStrings を通すことができます。</p>
+<h5 id=".E5.9B.BD.E9.9A.9B.E5.8C.96_.28i18n.29_.E3.81.AE.E5.95.8F.E9.A1.8C" name=".E5.9B.BD.E9.9A.9B.E5.8C.96_.28i18n.29_.E3.81.AE.E5.95.8F.E9.A1.8C">国際化 (i18n) の問題</h5>
+<p>その他の (主に国際化チームの) 関心は、少しだけでもの 1 バイト (ASCII) nsCString 使用法に関するものです。国際化チームは、もしその使用法に適切な制限がなされなければ、収拾の付かない状態になるだろう、と正しい意見を述べました。問題は、プログラマが ASCII 文字列に関して行なう推測に起因します。典型的な推測は、文字列を UCS2 文字列と仮定するようなコードと相互にかかわる必要はないだろう、というものです。この仮定は、たいてい間違っています。そして、ソースを各国化する私たちの能力を妨げるでしょう。</p>
+<p>(ASCII) nsCString のものは以下の文脈で有用だと認識されています。</p>
+<ol>
+  <li>char* 変数が予想されるライブラリを呼ぶときはいつでも</li>
+  <li>最大メモリ効率が求められるときはいつでも</li>
+</ol>
+<p>私は、最初のケースだけが、規範の面から見て正当であると主張したいと思います。国際化チームの人々は、パフォーマンス上は不利な場合でも、wide 文字列を使って、1 バイト型が必要なら変換するのがよりよいと、と言うでしょう。私は慣習法を認めなければならないため、私は nsCString を利用可能としましたが、慎重に使われるべきであるということを注意しておきます。</p>
+<h3 id=".E3.83.A1.E3.83.A2.E3.83.AA.E7.AE.A1.E7.90.86" name=".E3.83.A1.E3.83.A2.E3.83.AA.E7.AE.A1.E7.90.86">メモリ管理</h3>
+<p>新しい構造の主要な機能拡張は、差込可能なメモリアロケータです。すべての nsString のサブクラスは、自身のデフォルトのアロケートのインプリメンテーションを提供しています。しかし、プログラマがそれを使うかどうかは自由です。新しいプロトタイプ nsStrImpl、nsString クラスでは、アロケータは文字列の構築の間に組み込まれる備えつけのメンバです (デフォルトでグローバルのアロケータに共有されます)。</p>
+<p>メモ: COM ルールはだれでも同じアロケータを使う必要があることを意味します。そのアロケータは CoGetMalloc() と呼ばれるグローバル COM サービス経由で取得します。プログラマは彼ら自身の方針を組み込むことができるため、私たちの nsStrImpl はアロケータパターンを使います。しかし、これはマルチプロセス環境でアロケーションをシンプルにもします。 string がそれ自身の (共有の) アロケータをこの目的で返すことができることがすなわち十分であるかどうか疑っています。</p>
+<p>私たちの最小限の nsIMemoryAgent インタフェースはちょうど nsString の慣習をサポートするのに十分であり、一般的メモリアロケーション慣習を提供するように拡張されるでしょう。これがその API です。</p>
+<pre class="eval">class nsIMemoryAgent : nsISupports {
+  void* New(nsInt32 aSize)=0;  // alloc と realloc 両方のために使われます
+  void* Delete(void* aPtr)=0;
+};
+</pre>
+<h5 id=".E5.9B.BD.E9.9A.9B.E5.8C.96" name=".E5.9B.BD.E9.9A.9B.E5.8C.96">国際化</h5>
+<p>新しい nsStrImpl/nsString インプリメンテーションは私たちの国際化チームの主要な関心の最低 2 つを扱っています。まず、nsStrImpl は、構築、比較、代入の間に使うための文字セット変換機構を提供します。(これらは、国際化チームのレビューと移植を待つために、今日はずされました)。次に、プログラマがさまざまな方法で文字クラスを誤用することを防ぐことに関心があります。すなわち、</p>
+<ol>
+  <li>もとになっているバッファが誤って改悪されたり変更されたりできないようにすることを確信したいのです。</li>
+  <li>適切な変換セット関数が適用されることを確信したいのです。</li>
+  <li>2バイト (UCS2) 型が可能な限りいつでも使われ、いくつかの制限事項が 1 バイト (ASCII) nsCStrings を使うときに適用される、といった文字列の使い方のパターンをコントロールしたいのです。</li>
+</ol>
+<div class="originaldocinfo">
+  <h2 id=".E5.8E.9F.E6.96.87.E6.9B.B8.E3.81.AE.E6.83.85.E5.A0.B1" name=".E5.8E.9F.E6.96.87.E6.9B.B8.E3.81.AE.E6.83.85.E5.A0.B1">原文書の情報</h2>
+  <ul>
+    <li>著者: <a class="link-mailto" href="mailto:rickg@netscape.com">Rick Gessner</a></li>
+    <li>最終更新日: January 20, 1999</li>
+    <li>著作権: Portions of this content are © 1998–2007 by individual mozilla.org contributors; content available under a Creative Commons license | <a class="external" href="http://www.mozilla.org/foundation/licensing/website-content.html">詳細</a></li>
+  </ul>
+</div>

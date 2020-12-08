@@ -1,0 +1,422 @@
+---
+title: Vue d'ensemble des APIS embarquées de Mozilla
+slug: Mozilla/Gecko/Mozilla_embarqué/API_overview
+translation_of: Mozilla/Gecko/Embedding_Mozilla/API_overview
+---
+<h2 id="Introduction" name="Introduction">Introduction</h2>
+<p>The Mozilla Public API consists of a collection of services and components which are accessed via XPCOM interfaces. Mozilla's XPCOM layer consists of a component model (called XPCOM) and the infrastructure necessary to support dynamic registration, instantiation and manipulation of XPCOM components.</p>
+<p>At the heart of XPCOM's implementation is the Service Manager and the Component Manager. Together, these two services provide a centralized point for gaining access to all of the public Mozilla interfaces.</p>
+<p>The Service Manager exposes all of the available XPCOM services - each service represents a global object which provides some piece of functionality. The Component Manager allows new instances of registered XPCOM components to be instantiated.</p>
+<p><img alt="Image:public-apis-image2.gif" class="internal" src="/@api/deki/files/819/=Public-apis-image2.gif"></p>
+<p>The embedding layer consists of several components built on top of XPCOM and its services. Much of the Gecko functionality is exposed through a component called the nsWebBrowser. Embedding applications can leverage this component to easily access many of Gecko's features. Each WebBrowser instance represents the "client-area" of a typical browser window. The WebBrowser exposes a set of interfaces which allow the embedding application to control activity and respond to changes within this client area. Using these interfaces an embedding application can build up its own user interface around a WebBrowser instance.</p>
+<p><img alt="Image:public-apis-image1.gif" class="internal" src="/@api/deki/files/818/=Public-apis-image1.gif"></p>
+<h2 id="Public_Classes" name="Public_Classes">Public Classes</h2>
+<p>The following utility classes are available from the XPCOM DLL. They provide some basic functionality which should be leveraged when building new XPCOM components.</p>
+<ul>
+ <li>nsCOMPtr&lt;interface-type&gt;</li>
+</ul>
+<p>These are templatized smart pointers which transparently deal with XPCOM reference counting issues. See the nsCOMPtr User's Manual for more information.</p>
+<ul>
+ <li>nsString</li>
+</ul>
+<p>There are a collection of string classes which support both unicode and ASCII strings. These classes provide a variety of string operations as well as dealing with the memory management issues of storing the underlying data. See the String Guide for more details.</p>
+<ul>
+ <li>nsWeakPtr</li>
+</ul>
+<p>This is an nsCOMPtr which encapsulates XPCOM weak reference support. See the nsIWeakReference document for more information.</p>
+<h2 id="Public_Return_Codes" name="Public_Return_Codes">Public Return Codes</h2>
+<ul>
+ <li>NS_SUCCEEDED</li>
+ <li>NS_ERROR_FAILURE</li>
+ <li>NS_ERROR_NOT_IMPLEMENTED</li>
+</ul>
+<h2 id="Public_Functions" name="Public_Functions">Public Functions</h2>
+<p>The following functions are available from the XPCOM DLL.</p>
+<ul>
+ <li>NS_InitEmbedding</li>
+</ul>
+<p>This function initializes the Gecko embedding support. This must be the first function call made into Gecko.</p>
+<ul>
+ <li>NS_TermEmbedding</li>
+</ul>
+<p>This function shuts down Gecko and cleans up any remaining resources... Currently, once Gecko has been shutdown, it cannot be restarted in the same process space... This should change in the future.</p>
+<ul>
+ <li>nsMemory
+  <ul>
+   <li>nsMemory::Alloc</li>
+   <li>nsMemory::Realloc</li>
+   <li>nsMemory::Free</li>
+  </ul>
+ </li>
+</ul>
+<p>This helper class provides static accessors to the global nsMemory Service.</p>
+<ul>
+ <li>NS_GetGlobalComponentManager</li>
+</ul>
+<p>This function returns an instance of the Component Manager service.</p>
+<ul>
+ <li>NS_ConvertASCIItoUCS2</li>
+</ul>
+<p>This is a helper class which converts an ASCII string into a UCS2 string. Typically, instances of this class are stack allocated, and wrap ASCII arguments which must be converted into UCS2.</p>
+<ul>
+ <li>do_QueryInterface</li>
+</ul>
+<p>This is a helper class which works in conjunction with nsCOMPtr to perform a simplified call to nsISupports::QueryInterface(...) with a typesafe assignment.</p>
+<ul>
+ <li>do_GetInterface</li>
+</ul>
+<p>This function simplfies retrieving interfaces via the nsIInterfaceRequestor::GetInterface(...) method. Using this function, one can use nsISupports instances and still easily access other interfaces via nsIInterfaceRequestor.</p>
+<p>Internally, this function tries to convert the nsISupports argument into an nsIInterfaceRequestor and then calls GetInterface(...) to retrieve the requested interface.</p>
+<ul>
+ <li>do_QueryReferent</li>
+</ul>
+<p>This function is the equivilent of do_QueryInterface except that it performs the QI through a weak reference.</p>
+<ul>
+ <li>do_GetService</li>
+</ul>
+<p>This function simplifies accessing services from the Service Manager.</p>
+<ul>
+ <li>do_CreateInstance</li>
+</ul>
+<p>This function simplifies creating new component instances.</p>
+<ul>
+ <li>nsCOMTypeInfo&lt;interface-type&gt;::GetIID()</li>
+</ul>
+<p>This template helper class allows easy access to an interface's nsIID. Typically the NS_GET_IID(...) macro is used instead of using the nsCOMTypeInfo template directly.</p>
+<ul>
+ <li>NS_GetWeakReference</li>
+</ul>
+<p>This function creates a weak reference to a component which implements the nsIWeakReference interface.</p>
+<h2 id="Global_Services" name="Global_Services">Global Services</h2>
+<p><strong>nsServiceManager</strong></p>
+<p>The Service Manager is the central repository for accessing instances of the various XPCOM services. Each service is represented by a singleton object which is instantiated the first time it is requested and remains alive until the Service Manager is shut down, or the service is explicitly unloaded.</p>
+<p>Through the Service Manager, individual services can be loaded, unloaded and accessed.</p>
+<p><em>Implemented Interfaces:</em></p>
+<ul>
+ <li>nsIServiceManager</li>
+</ul>
+<p><em>Related Interfaces:</em></p>
+<ul>
+ <li>nsIShutdownListener</li>
+</ul>
+<p><strong>nsMemory</strong></p>
+<p>The nsMemory service provides the global memory manager implementation for XPCOM. In addition to memory allocation and release, this service provides low memory notifications, called a memory pressure observers, which are notified when memory is low - thus allowing cached resources to be freed.</p>
+<p>All heap access should be done via the nsMemory service. To facilitate this, a set of global functions are available to access the nsMemory methods without requiring an instance of the nsMemory service (see nsMemory.h).</p>
+<p><em>Contract-id:</em> NS_MEMORY_CONTRACTID</p>
+<p><em>Implemented Interfaces:</em></p>
+<ul>
+ <li>nsIMemory</li>
+</ul>
+<p><em>Related Interfaces:</em></p>
+<ul>
+ <li>nsIObserver</li>
+</ul>
+<p><strong>nsComponentManager</strong></p>
+<p>The nsComponentManager service is responsible for creating new instances of XPCOM components. The Component Manager is also responsible for registering and managing the class factories used for component creation...</p>
+<p><em>Contract-id:</em> NS_COMPONENTMANAGER_CONTRACTID</p>
+<p><em>Implemented Interfaces:</em></p>
+<ul>
+ <li>nsIComponentManager</li>
+ <li>nsIInterfaceRequestor</li>
+</ul>
+<p><em>Requestor Interfaces:</em></p>
+<ul>
+ <li>nsIServiceManager</li>
+</ul>
+<p><em>Related Interfaces:</em></p>
+<ul>
+ <li>nsIFactory</li>
+</ul>
+<p><strong>nsURILoader</strong></p>
+<p>The nsURILoader service is responsible for targeting a URI at an appropriate content handler. A content handler may be an existing or new window, a helper application or the Unknown Content Handler - if no other handler can be found for the content-type.</p>
+<p><em>Contract-id:</em> NS_URI_LOADER_CONTRACTID</p>
+<p><em>Implemented Interfaces:</em></p>
+<ul>
+ <li>nsIURILoader</li>
+</ul>
+<p><em>Related Interfaces:</em></p>
+<ul>
+ <li>nsIURIContentListener</li>
+</ul>
+<p><strong>nsUnknownContentTypeHandler</strong></p>
+<p>The UnknownContentTypeHandler service is the last resort of the URILoader when no other content handler can be located. If no registered content handlers are available, the UnknownContentTypeHandler is notified.</p>
+<p>The default implementation of this service displays a dialog box asking the user if the content should be saved to disk...</p>
+<p><em>Contract-id:</em> NS_IUNKNOWNCONTENTTYPEHANDLER_CONTRACTID</p>
+<p><em>Implemented Interfaces:</em></p>
+<ul>
+ <li>nsIUnknownContentTypeHandler</li>
+</ul>
+<p><strong>HelperApp Launch Dialog</strong></p>
+<p><em>Contract-id:</em> NS_EXTERNALHELPERAPPSERVICE_CONTRACTID</p>
+<p><em>Implemented Interfaces:</em></p>
+<ul>
+ <li>nsIExternalHelperAppService</li>
+</ul>
+<p><strong>Preferences Service</strong></p>
+<p>The Preferences service provides access to persistent data stored within a user's profile directory.</p>
+<p><em>Contract-id:</em> NS_PREF_CONTRACTID</p>
+<p><em>Implemented Interfaces:</em></p>
+<ul>
+ <li>nsIPrefService</li>
+ <li>nsIPrefBranch</li>
+</ul>
+<p><em>Related Interfaces:</em></p>
+<ul>
+ <li>nsIPrefListener</li>
+</ul>
+<p><strong>Profile Manager Service</strong></p>
+<p><em>Contract-id:</em></p>
+<p><em>Implemented Interfaces:</em></p>
+<p><strong>Document Loader Service (WebProgress)</strong></p>
+<p>Eventually, this service will be replaced by theWebProgress service...</p>
+<p><em>Contract-id:</em> NS_DOCUMENT_LOADER_SERVICE_CONTRACTID</p>
+<p><em>Implemented Interfaces:</em></p>
+<ul>
+ <li>nsIWebProgress</li>
+ <li>nsIDocumentLoader</li>
+</ul>
+<p><em>Related Interfaces:</em></p>
+<ul>
+ <li>nsIWebProgressListener</li>
+</ul>
+<h2 id="Public_Components" name="Public_Components">Public Components</h2>
+<h3 id="nsWebBrowser" name="nsWebBrowser">nsWebBrowser</h3>
+<p>The nsWebBrowser is the main embedding component which Gecko exposes. Conceptually, each nsWebBrowser instance represents a HTML content area.</p>
+<p>Conceptually, for each document being rendered, Gecko creates a container called a DOMWindow. Each WebBrowser exposes a tree of DOMWindows - representing the frame hierarchy for the current document. As such, access to individual document frames is done via the DOMWindow interfaces. Manipulation of the entire document structure is done via the various WebBrowser interfaces.</p>
+<p><em>Contract-id:</em> NS_WEBBROWSER_CONTRACTID</p>
+<p><em>Implemented Interfaces:</em></p>
+<ul>
+ <li>nsIWebBrowser</li>
+ <li>nsIWebNavigation</li>
+ <li>nsIWebBrowserSetup</li>
+ <li>nsIWebBrowserPersist</li>
+ <li>nsIWebBrowserFind</li>
+ <li>nsIWebBrowserPrint</li>
+ <li>nsIWebBrowserFocus</li>
+ <li>nsIBaseWindow</li>
+</ul>
+<p><em>Requestor Interfaces:</em></p>
+<ul>
+ <li>nsIDOMWindow</li>
+ <li>nsIDOMDocument</li>
+ <li>nsIWebProgress</li>
+ <li>nsIClipboardCommands</li>
+ <li>nsIPrompt</li>
+</ul>
+<p><em>Related Interfaces:</em></p>
+<ul>
+ <li>nsIPrompt</li>
+ <li>nsIWebBrowserChrome</li>
+ <li>nsIWebBrowserSiteWindow</li>
+ <li>nsIWebProgressListener</li>
+ <li>nsIContextMenuListener</li>
+ <li>nsIPrintOptions</li>
+</ul>
+<p><strong>Overview:</strong></p>
+<p>Most of Gecko's functionality is exposed through the nsWebBrowser component. The WebBrowser provides a simple mechanism for other applications to leverage Gecko functionality. Each instance of a WebBrowser encapsulates a full featured HTML content area.</p>
+<p>The embedding application receives notifications from Gecko through a set of callback interfaces it may choose to implement.</p>
+<p><img alt="Image:public-apis-image3.gif" class="internal" src="/@api/deki/files/820/=Public-apis-image3.gif"></p>
+<p>Below is a code snippet which an embedding application can use to create and initialize a WebBrowser:</p>
+<pre>      nsresult rv;
+      nsCOMPtr&lt;nsIBaseWindow&gt; baseWindow;
+      nsCOMPtr&lt;nsIWebBrowser&gt; webBrowser;
+
+      // Create a nsWebBrowser instance...
+      webBrowser = do_CreateInstance(NS_WEBBROWSER_CONTRACTID, &amp;rv);
+      if (NS_FAILED(rv)) return rv;
+
+      // Give the WebBrowser a pointer to the embedding component which
+      // implements the callback interfaces.  Replace 'this' with
+      // an appropriate object...
+      rv = webBrowser-&gt;SetContainerWindow((nsIWebBrowserChrome*)this);
+      if (NS_FAILED(rv)) return rv;
+
+      baseWindow = do_QueryInterface(webBrowser);
+
+      // Initialize the WebBrowser with a native parent window
+      // (ie. HWND on Win32).  Replace 'nativeWindow' with a
+      // reference to an appropriate native resource...
+      rv = baseWindow-&gt;InitWindow(nativeWindow,   // Native window
+                                  nsnull,         // Always nsnull.
+                                  x, y, cx, cy);  // Initial dimensions...
+      if (NS_FAILED(rv)) return rv;
+
+      // Create the child window for the WebBrowser.
+      rv = baseWindow-&gt;Create();
+      if (NS_FAILED(rv)) return rv;
+
+      // At this point webBrowser contains the new initialized instance
+      // of the nsWebBrowser component...
+      // Save webBrowser before it goes out of scope :-)
+
+</pre>
+<p><strong>Web Navigation</strong></p>
+<p>The nsIWebNavigation interface is used to load URIs into the WebBrowser and provide access to session history capabilities - such as back and forward.</p>
+<p><strong>Clipboard</strong></p>
+<p>The WebBrowser exposes access to the system clipboard via the nsIClipboardCommands interface. This interface supports cut/copy/paste operations on the current selection within the WebBrowser window.</p>
+<p><strong>Printing (not yet implemented)</strong></p>
+<p>Printing the contents of a DOMWindow within a WebBrowser is a two step process. First, the printer and page options are collected via the nsIPrintOptions interface. On most platforms this involves displaying a native Print dialog box. Once all of the options have been set, the nsIWebBrowserPrint interface is used to print the contents of the desired DOMWindow.</p>
+<p><strong>Searching</strong></p>
+<p>Searching within a nsWebBrowser is controlled via the nsIWebBrowserFind interface. The search is always performed within the DOMWindow which currently has the focus.</p>
+<p><strong>Focus Management</strong></p>
+<p>Focus managment within the WebBrowser is accessed via the nsIWebBrowserFocus interface.</p>
+<p>This interface serves two purposes. First, it provides methods for the embedding application to notify a WebBrowser of activation/deactivation and to control tabbing order... This interface also allows access to the currently focused DOMWindow and DOMElement.</p>
+<p><strong>Context Menu notifications</strong></p>
+<p>Right-click context menu notifications are passed up to the embedding application through the nsIContextMenuListener interface. These notifications allow the embedding application to display context menus based on user activity within the WebBrowser (such as a right-click on a hypertext link).</p>
+<p><strong>Saving Documents</strong></p>
+<p><strong>Notification Interfaces which the embedding application should implement</strong></p>
+<h3 id="nsFile" name="nsFile">nsFile</h3>
+<h2 id="Public_Interfaces" name="Public_Interfaces">Public Interfaces</h2>
+<p><strong>nsISupports</strong></p>
+<p>Base Component Object Model interface. This interface provides runtime interface discovery and a reference counted memory model fashioned after the Microsoft COM IUnknown interface.</p>
+<p><em>Interface status...</em> none</p>
+<p><em>Interface definition:</em> nsISupportsUtils.h</p>
+<p><br>
+ <strong>nsIInterfaceRequestor</strong></p>
+<p>This Interface provides an interface discovery mechanism which does not imply aggregation. <em>Interface status...</em> none</p>
+<p><em>Interface definition:</em> nsIInterfaceRequestor.idl</p>
+<p><strong>nsIWeakReference</strong></p>
+<p>This interface is used to retern a proxy reference to a component.</p>
+<p><em>Interface status...</em> <a class="external" href="http://www.mozilla.org/projects/embedding/apiReviewNotes.html#nsIWeakReference">being reviewed</a></p>
+<p><em>Interface definition:</em> nsIWeakReference.idl</p>
+<p><strong>nsISimpleEmunerator</strong></p>
+<p>This interface provides a simple enumeration abstraction.</p>
+<p><em>Interface status...</em> <a class="external" href="http://www.mozilla.org/projects/embedding/apiReviewNotes.html#nsISimpleEmunerator">being reviewed</a></p>
+<p><em>Interface definition:</em> nsISimpleEnumerator.idl</p>
+<p><strong>nsIServiceManager</strong></p>
+<p>This interface allows access to global services within mozilla.</p>
+<p><em>Interface status...</em> none</p>
+<p><em>Interface definition:</em> nsIServiceManager.h</p>
+<p><br>
+ <strong>nsIShutdownListener</strong></p>
+<p>This interface is used to receive notifications when the Service Manager is being shutdown.</p>
+<p><em>Interface status...</em> none</p>
+<p><em>Interface definition:</em> nsIServiceManager.h</p>
+<p><br>
+ <strong>nsIComponentManager</strong></p>
+<p>This interface allows new instances of registered XPCOM components to be instantiated.</p>
+<p><em>Interface status...</em> none</p>
+<p><em>Interface definition:</em> nsIComponentManager.idl</p>
+<p><br>
+ <strong>nsIFactory</strong></p>
+<p>This interface is used by the Component Manager to create new instances of a particular XPCOM component. Each component must provide a factory implementation for creating new instances.</p>
+<p><em>Interface status...</em> none</p>
+<p><em>Interface definition:</em> nsIFactory.idl</p>
+<p><br>
+ <strong>nsIMemory</strong></p>
+<p>This interface provides access to the global memory management functionality.</p>
+<p><em>Interface status...</em> <a class="external" href="http://www.mozilla.org/projects/embedding/apiReviewNotes.html#nsIMemory">being reviewed</a></p>
+<p><em>Interface definition:</em> nsIMemory.idl</p>
+<p><br>
+ <strong>nsIDOMWindow</strong></p>
+<p>This interface is used to represent the window containing a specific document.</p>
+<p><em>Interface status...</em> <a class="external" href="http://www.mozilla.org/projects/embedding/apiReviewNotes.html#nsIDOMWindow">being reviewed</a></p>
+<p><em>Interface definition:</em> nsIDOMWindow.idl</p>
+<p><br>
+ <strong>nsIBaseWindow</strong></p>
+<p>This interface provides access to various window operations.</p>
+<p><em>Interface status...</em> <a class="external" href="http://www.mozilla.org/projects/embedding/apiReviewNotes.html#nsIBaseWindow">being reviewed</a></p>
+<p><em>Interface definition:</em> nsIBaseWindow.idl</p>
+<p><br>
+ <strong>nsIRequest</strong></p>
+<p>This interface provides a means to control various operations.</p>
+<p><em>Interface status...</em> <a class="external" href="http://www.mozilla.org/projects/embedding/apiReviewNotes.html#nsIRequest">being reviewed</a></p>
+<p><em>Interface definition:</em> nsIRequest.idl</p>
+<p><br>
+ <strong>nsIWebBrowser</strong></p>
+<p>This is the primary interface to the WebBrowser component.</p>
+<p><em>Interface status...</em> <a class="external" href="http://www.mozilla.org/projects/embedding/apiReviewNotes.html#nsIWebBrowser">being reviewed</a></p>
+<p><em>Interface definition:</em> nsIWebBrowser.idl</p>
+<p><br>
+ <strong>nsIWebBrowserSetup</strong></p>
+<p>This interface is used to enable or disable various capabilities of a nsWebBrowser instance.</p>
+<p><em>Interface status...</em> <a class="external" href="http://www.mozilla.org/projects/embedding/apiReviewNotes.html#nsIWebBrowserSetup">being reviewed</a></p>
+<p><em>Interface definition:</em> nsIWebBrowserSetup.idl</p>
+<p><br>
+ <strong>nsIWebBrowserChrome</strong></p>
+<p>This interface provides access to the window containing an nsWebBrowser instance.</p>
+<p><em>Interface status...</em> <a class="external" href="http://www.mozilla.org/projects/embedding/apiReviewNotes.html#nsIWebBrowserChrome">being reviewed</a></p>
+<p><em>Interface definition:</em> nsIWebBrowserChrome.idl</p>
+<p><br>
+ <strong>nsIWebNavigation</strong></p>
+<p>This interface exposes the web navigation functionality of the nsWebBrowser component.</p>
+<p><em>Interface status...</em> <a class="external" href="http://www.mozilla.org/projects/embedding/apiReviewNotes.html#nsIWebNavigation">being reviewed</a></p>
+<p><em>Interface definition:</em> nsIWebNavigation.idl</p>
+<p><br>
+ <strong>nsIWebBrowserPersist</strong></p>
+<p>This interface exposes the save-as functionality of the nsWebBrowser component.</p>
+<p><em>Interface status...</em> <a class="external" href="http://www.mozilla.org/projects/embedding/apiReviewNotes.html#nsIWebBrowserPersist">being reviewed</a></p>
+<p><em>Interface definition:</em> nsIWebBrowserPersist.idl</p>
+<p><br>
+ <strong>nsIWebBrowserPrint</strong></p>
+<p>This interface allows printing of individual (or a collection of) DOM Windows within a nsWebBrowser component.</p>
+<p><em>Interface status...</em> <a class="external" href="http://www.mozilla.org/projects/embedding/apiReviewNotes.html#nsIWebBrowserPrint">being reviewed</a></p>
+<p><em>Interface definition:</em> nsIWebBrowserPrint.idl</p>
+<p><br>
+ <strong>nsIWebBrowserFind</strong></p>
+<p>This interface exposes the searching capabilities of the nsWebBrowser component.</p>
+<p><em>Interface status...</em> none</p>
+<p><em>Interface definition:</em> nsIWebBrowserFind.idl</p>
+<p><br>
+ <strong>nsIWebBrowserFocus</strong></p>
+<p>This interface provides access to the focus information of a nsWebBrowser instance.</p>
+<p><em>Interface status...</em> <a class="external" href="http://www.mozilla.org/projects/embedding/apiReviewNotes.html#nsIWebBrowserFocus">being reviewed</a></p>
+<p><em>Interface definition:</em> nsIWebBrowserFocus.idl</p>
+<p><br>
+ <strong>nsIWebProgress</strong></p>
+<p><em>Interface status...</em></p>
+<p><em>Interface definition:</em></p>
+<p><br>
+ <strong>nsIWebProgressListener</strong></p>
+<p><em>Interface status...</em></p>
+<p><em>Interface definition:</em></p>
+<p><br>
+ <strong>nsIPrompt</strong></p>
+<p><em>Interface status...</em></p>
+<p><em>Interface definition:</em></p>
+<p><br>
+ <strong>nsIPrefs</strong></p>
+<p><em>Interface status...</em></p>
+<p><em>Interface definition:</em></p>
+<p><br>
+ <strong>{{ interface("nsIProfile") }}</strong></p>
+<p>The Profile Manager creates and manages user profiles; each profile is essentially a complete configuration of the application, including preferences, installed extensions, and so forth.</p>
+<p><br>
+ <strong>nsIDirectoryServiceProvider</strong></p>
+<p><em>Interface status...</em></p>
+<p><em>Interface definition:</em></p>
+<p><br>
+ <strong>nsILocalFile</strong></p>
+<p><em>Interface status...</em></p>
+<p><em>Interface definition:</em></p>
+<p><br>
+ <strong>nsIFile</strong></p>
+<p><em>Interface status...</em></p>
+<p><em>Interface definition:</em></p>
+<p><br>
+ <strong>nsIClipboardCommands</strong></p>
+<p><em>Interface status...</em></p>
+<p><em>Interface definition:</em></p>
+<p><br>
+ <strong>nsISelection</strong></p>
+<p><em>Interface status...</em></p>
+<p><em>Interface definition:</em></p>
+<p><br>
+ <strong>nsIURILoader</strong></p>
+<p><em>Interface status...</em></p>
+<p><em>Interface definition:</em></p>
+<p><br>
+ <strong>nsIURIContentListener</strong></p>
+<p><em>Interface status...</em></p>
+<p><em>Interface definition:</em></p>
+<p> </p>
+<h2 id="Defining_New_XPCOM_Components" name="Defining_New_XPCOM_Components">Defining New XPCOM Components</h2>
+<div class="originaldocinfo">
+ <h2 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h2>
+ <ul>
+  <li>Author(s): rpotts, alecf, oeschger at netscape.com</li>
+  <li>Last Updated Date: March 5, 2003</li>
+  <li>Copyright Information: Creative Commons</li>
+ </ul>
+</div>
+<p> </p>

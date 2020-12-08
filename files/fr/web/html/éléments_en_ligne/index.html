@@ -1,0 +1,169 @@
+---
+title: Éléments en-ligne
+slug: Web/HTML/Éléments_en_ligne
+tags:
+  - Débutant
+  - Elements en ligne
+  - Guide
+  - HTML
+  - Reference
+translation_of: Web/HTML/Inline_elements
+---
+<div>{{HTMLSidebar}}</div>
+
+<p><span class="seoSummary">En HTML, les éléments en ligne (<em>inline elements</em> en anglais) sont ceux qui occupent l'espace délimités par leurs balises plutôt que d'interrompre le flux du contenu.</span> Dans cet article, nous étudierons ces éléments en ligne et également leurs différences quant <a href="/fr/docs/Web/HTML/Éléments_en_bloc">aux éléments de bloc (<em>block-level elements</em>)</a>.</p>
+
+<div class="note">
+<p><strong>Note :</strong> Un élément en ligne ne commence pas sur une nouvelle ligne et prend uniquement la largeur qui lui est nécessaire.</p>
+</div>
+
+<h2 id="Éléments_en_ligne_et_éléments_de_bloc_un_exemple">Éléments en ligne et éléments de bloc : un exemple</h2>
+
+<p>Un exemple vaut mieux qu'une longue explication. Voici pour commencer la feuille de style CSS que nous utiliserons :</p>
+
+<pre class="brush: css">.highlight {
+  background-color:#ee3;
+}</pre>
+
+<h3 id="Élément_en_ligne">Élément en ligne</h3>
+
+<p>Le fragment de code HTML qui suit utilise un élément en ligne avec la classe <code>highlight</code> :</p>
+
+<pre class="brush: html">&lt;p&gt;The following span is an &lt;span class="highlight"&gt;inline element&lt;/span&gt;;
+its background has been colored to display both the beginning and end of
+the inline element's influence.&lt;/p&gt;</pre>
+
+<p>Dans cet exemple, l'élément {{HTMLElement("p")}} (le paragraphe) est un élément de bloc qui contient du texte. Dans ce texte, on a un élément {{HTMLElement("span")}} qui est un élément en ligne. L'élément <code>&lt;span&gt;</code> étant un élément en ligne, le paragraphe est bien affiché sous la forme d'un flux de texte sans rupture :</p>
+
+<p>{{EmbedLiveSample("Élément_en_ligne", 600, 80)}}</p>
+
+<div class="hidden">
+<p>Contenu masqué pour la lecture : cette feuille de style CSS est également utilisée :</p>
+
+<pre class="brush: css">body {
+  margin: 0;
+  padding: 4px;
+  border: 1px solid #333;
+}
+
+.highlight {
+  background-color:#ee3;
+}</pre>
+</div>
+
+<h3 id="Élément_de_bloc">Élément de bloc</h3>
+
+<p>Transformons l'exemple précédent pour passer d'un élément <code>&lt;span&gt;</code> à un élément {{HTMLElement("div")}} qui est un élément de bloc :</p>
+
+<pre class="brush: html">&lt;p&gt;The following div is an &lt;div class="highlight"&gt;block-level element;&lt;/div&gt;
+its background has been colored to display both the beginning and end of
+the block-level element's influence.&lt;/p&gt;</pre>
+
+<div class="hidden">
+<p>Contenu masqué pour la lecture : cette feuille de style CSS est également utilisée :</p>
+
+<pre class="brush: css">body {
+  margin: 0;
+  padding: 4px;
+  border: 1px solid #333;
+}
+
+.highlight {
+  background-color:#ee3;
+}</pre>
+</div>
+
+<p>Et voici le résultat qu'on obtient :</p>
+
+<p>{{EmbedLiveSample("Élément_de_bloc", 600, 150)}}</p>
+
+<p>On voit ici que l'élément <code>&lt;div&gt;</code> modifie complètement la disposition du texte et le découpe en trois partie : une partie avant le <code>&lt;div&gt;</code>, une partie constituée avec le texte de l'élément <code>&lt;div&gt;</code> et une dernière partie ensuite.</p>
+
+<h3 id="Modifier_le_type_d'un_d'élément">Modifier le type d'un d'élément</h3>
+
+<p>Il est possible de choisir le mode d'affichage d'un élément afin de modifier son comportement par défaut grâce à la propriété CSS {{cssxref("display")}}. En passant la valeur de <code>display</code> de <code>"inline"</code> à <code>"block"</code>, on peut indiquer au navigateur d'afficher l'élément comme une boîte de bloc plutôt que comme une boîte en ligne. Attention, l'élément ne sera plus affiché de la même façon, vérifiez le résultat obtenu. De plus, ce changement n'impactera pas la catégorie et le modèle de contenu de l'élément : utiliser <code>display:block</code> sur un élément {{HTMLElement("span")}} ne permettra toujours pas de lui imbriquer un élément {{HTMLElement("div")}} à l'intérieur.</p>
+
+<h2 id="Différences_conceptuelles">Différences conceptuelles</h2>
+
+<p>Voici, en résumé, les différences conceptuelles entre les éléments en ligne et les éléments de bloc :</p>
+
+<dl>
+ <dt>Modèle de contenu</dt>
+ <dd>En général, les éléments en ligne ne peuvent contenir que des données ou d'autres éléments en ligne. Il n'est pas possible de placer des éléments de bloc à l'intérieur d'éléments en ligne.</dd>
+ <dt>Formatage</dt>
+ <dd>Par défaut, les éléments en ligne n'introduisent pas de saut de ligne dans le flux du document. En revanche, les éléments de bloc provoquent un saut de ligne (ce comportement peut être modifié grâce au CSS).</dd>
+</dl>
+
+<h2 id="Liste_des_éléments_en_ligne">Liste des éléments en ligne</h2>
+
+<p>Les éléments HTML suivants sont, par défaut, des éléments en ligne :</p>
+
+<div class="threecolumns">
+<dl>
+ <dt>{{HTMLElement("a")}}</dt>
+ <dt>{{HTMLElement("abbr")}}</dt>
+ <dt>{{HTMLElement("acronym")}}</dt>
+ <dt>{{HTMLElement("audio")}} (if has visible controls)</dt>
+ <dt>{{HTMLElement("b")}}</dt>
+ <dt>{{HTMLElement("bdi")}}</dt>
+ <dt>{{HTMLElement("bdo")}}</dt>
+ <dt>{{HTMLElement("big")}}</dt>
+ <dt>{{HTMLElement("br")}}</dt>
+ <dt>{{HTMLElement("button")}}</dt>
+ <dt>{{HTMLElement("canvas")}}</dt>
+ <dt>{{HTMLElement("cite")}}</dt>
+ <dt>{{HTMLElement("code")}}</dt>
+ <dt>{{HTMLElement("data")}}</dt>
+ <dt>{{HTMLElement("datalist")}}</dt>
+ <dt>{{HTMLElement("del")}}</dt>
+ <dt>{{HTMLElement("dfn")}}</dt>
+ <dt>{{HTMLElement("em")}}</dt>
+ <dt>{{HTMLElement("embed")}}</dt>
+ <dt>{{HTMLElement("i")}}</dt>
+ <dt>{{HTMLElement("iframe")}}</dt>
+ <dt>{{HTMLElement("img")}}</dt>
+ <dt>{{HTMLElement("input")}}</dt>
+ <dt>{{HTMLElement("ins")}}</dt>
+ <dt>{{HTMLElement("kbd")}}</dt>
+ <dt>{{HTMLElement("label")}}</dt>
+ <dt>{{HTMLElement("map")}}</dt>
+ <dt>{{HTMLElement("mark")}}</dt>
+ <dt>{{HTMLElement("meter")}}</dt>
+ <dt>{{HTMLElement("noscript")}}</dt>
+ <dt>{{HTMLElement("object")}}</dt>
+ <dt>{{HTMLElement("output")}}</dt>
+ <dt>{{HTMLElement("picture")}}</dt>
+ <dt>{{HTMLElement("progress")}}</dt>
+ <dt>{{HTMLElement("q")}}</dt>
+ <dt>{{HTMLElement("ruby")}}</dt>
+ <dt>{{HTMLElement("s")}}</dt>
+ <dt>{{HTMLElement("samp")}}</dt>
+ <dt>{{HTMLElement("script")}}</dt>
+ <dt>{{HTMLElement("select")}}</dt>
+ <dt>{{HTMLElement("slot")}}</dt>
+ <dt>{{HTMLElement("small")}}</dt>
+ <dt>{{HTMLElement("span")}}</dt>
+ <dt>{{HTMLElement("strong")}}</dt>
+ <dt>{{HTMLElement("sub")}}</dt>
+ <dt>{{HTMLElement("sup")}}</dt>
+ <dt>{{HTMLElement("svg")}}</dt>
+ <dt>{{HTMLElement("template")}}</dt>
+ <dt>{{HTMLElement("textarea")}}</dt>
+ <dt>{{HTMLElement("time")}}</dt>
+ <dt>{{HTMLElement("u")}}</dt>
+ <dt>{{HTMLElement("tt")}}</dt>
+ <dt>{{HTMLElement("var")}}</dt>
+ <dt>{{HTMLElement("video")}}</dt>
+ <dt>{{HTMLElement("wbr")}}</dt>
+</dl>
+</div>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="/fr/docs/Web/HTML/Éléments_en_bloc">Les éléments de bloc</a></li>
+ <li><a href="/fr/docs/Web/HTML/Element">Référence des éléments HTML</a></li>
+ <li>{{cssxref("display")}}</li>
+ <li><a href="/fr/docs/Web/Guide/HTML/Cat%C3%A9gories_de_contenu">Les catégories de contenu</a></li>
+ <li><a href="/fr/docs/Web/CSS/CSS_Flow_Layout/Disposition_de_bloc_en_ligne_avec_flux_normal">Les éléments de bloc et les éléments en ligne dans le flux normal</a></li>
+</ul>

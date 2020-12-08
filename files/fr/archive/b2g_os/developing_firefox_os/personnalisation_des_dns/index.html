@@ -1,0 +1,65 @@
+---
+title: Personnalisation des DNS
+slug: Archive/B2G_OS/Developing_Firefox_OS/Personnalisation_des_DNS
+tags:
+  - DNS
+  - Firefox OS
+translation_of: Archive/B2G_OS/Developing_Firefox_OS/Customizing_DNS
+---
+<p class="summary">Cet article décrit une brève procédure pour modifier les serveurs DNS de toutes les interfaces (wifi, cellulaire, etc.) d'un appareil Firefox OS.</p>
+
+<h2 id="Préparation_de_votre_environnement">Préparation de votre environnement</h2>
+
+<ol>
+ <li>Sur votre téléphone, allez dans les <a href="/fr/Firefox_OS/Déboguer/Les_paramètres_développeurs">Paramètres Développeurs</a> et activer les réglages suivants :
+
+  <ul>
+   <li><em>Débogage distant</em> (dans Firefox OS 1.4 et au-delà, sélectionnez <em>ADB et outils de développement</em> dans le menu déroulant.)</li>
+   <li><em>Activer la console</em></li>
+  </ul>
+ </li>
+ <li>Assurez-vous d'avoir <a href="/fr/Firefox_OS/Déboguer/Installer_ADB">ADB/Fastboot installés</a> sur votre ordinateur.</li>
+ <li>Une fois ces étapes terminées, branchez votre téléphone sur votre ordinateur via l'USB.</li>
+</ol>
+
+<h2 id="Étapes_pour_actualiser_les_DNS">Étapes pour actualiser les DNS</h2>
+
+<ol>
+ <li>Ouvrez une fenêtre de terminal.</li>
+ <li>Récupérez le fichier de configuration DNS sur votre ordinateur avec la commande ci-dessous :
+  <pre class="brush: bash">adb pull /system/etc/dhcpcd/dhcpcd-hooks/20-dns.conf 20-dns.conf</pre>
+ </li>
+ <li>Recherchez les lignes 22 à 26 dans le fichier :
+  <pre class="brush: bash">    count=1
+    for dnsaddr in ${new_domain_name_servers}; do
+        setprop dhcp.${intf}.dns${count} ${dnsaddr}
+        count=$(($count + 1))
+    done</pre>
+ </li>
+ <li>Dans cette section, remplacez la ligne <code>setprop</code> par des lignes selon ce modèle (vous pouvez spécifier jusqu'à 4 serveurs DNS) :
+  <pre class="brush: bash">    setprop dhcp.${intf}.dns1 &lt;adresse ip du serveur DNS 1&gt;
+    setprop dhcp.${intf}.dns2 &lt;adresse ip du serveur DNS 2&gt;
+    setprop dhcp.${intf}.dns3 &lt;adresse ip du serveur DNS 3&gt;
+    setprop dhcp.${intf}.dns4 &lt;adresse ip du serveur DNS 4&gt;
+</pre>
+ </li>
+ <li>Remontez la partition <code>/system</code> sur l'appareil pour obtenir des permissions en lecture-écriture, de cette manière :
+  <pre class="brush: bash">adb remount</pre>
+ </li>
+ <li>Juste au cas où, faites une sauvegarde du fichier original :
+  <pre class="brush: bash">adb shell mv /system/etc/dhcpcd/dhcpcd-hooks/20-dns.conf /system/etc/dhcpcd/dhcpcd-hooks/20-dns.bak.conf</pre>
+ </li>
+ <li>Envoyez le fichier édité et appliquez-lui les permissions correctes, comme ceci :
+  <pre class="brush: bash">adb push 20-dns.conf /system/etc/dhcpcd/dhcpcd-hooks/20-dns.conf
+adb shell chmod 644 /system/etc/dhcpcd/dhcpcd-hooks/20-dns.conf</pre>
+ </li>
+ <li>Redémarrez l'appareil et vos paramètres de serveurs DNS seront actualisés.</li>
+</ol>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<div>
+<ul>
+ <li><a href="http://developer.android.com/tools/help/adb.html" title="http://developer.android.com/tools/help/adb.html">Documentation ADB</a></li>
+</ul>
+</div>

@@ -1,0 +1,158 @@
+---
+title: モニタ
+slug: Tools/WebIDE/Monitor
+translation_of: Archive/WebIDE/Monitor
+---
+<div>{{ToolsSidebar}}</div><div class="summary">
+<p>WebIDE のモニタは、<a href="/ja/Firefox_OS">Firefox OS</a> アプリや端末のパフォーマンスの追跡を支援するように設計された汎用データツールです。</p>
+</div>
+
+<p><img alt="The WebIDE Monitor" src="https://thefiletree.com/jan/shots/monitor/monitor.png" style="height: 464px; width: 800px;"></p>
+
+<p>モニタは時系列を可視化するため、リアルタイムにインタラクティブなグラフを表示できます。</p>
+
+<h2 id="Available_graphs" name="Available_graphs">使用可能なグラフ</h2>
+
+<p>モニタは、さまざまなグラフを提供します。これらは通常、WebIDE を Firefox OS のランタイムに接続したときから表示します。</p>
+
+<h3 id="Unique_Set_Size" name="Unique_Set_Size">Unique Set Size</h3>
+
+<p><img alt="Unique Set Size" src="https://thefiletree.com/jan/shots/monitor/uniquesetsize.png" style="height: 310px; width: 879px;"></p>
+
+<p>このグラフは、すべての Firefox OS プロセスのメモリフットプリントを時系列で表示します。Firefox OS アプリのメモリ消費に関心がある場合はこのグラフを表示すれば、アプリのプロセスが使用するプライベートメモリが表示されます。</p>
+
+<h2 id="Displaying_your_own_data" name="Displaying_your_own_data">独自データを表示する</h2>
+
+<p>モニタは多くのさまざまな発信元から自由な形式のデータを受け入れますので、どのような種類のデータでも比較的容易に表示できます。</p>
+
+<h3 id="From_a_Firefox_OS_device" name="From_a_Firefox_OS_device">Firefox OS デバイスから</h3>
+
+<p>Observer 通知の送信により、接続した端末からデータを送信できます。</p>
+
+<p>注記: <a href="/Marketplace/Options/Packaged_apps#Certified_app" title="Certified app">認定アプリ</a>でこれを行いたい場合は、<a href="/ja/docs/Tools/WebIDE/Running_and_debugging_apps#Unrestricted_app_debugging_(including_certified_apps_main_process_etc.)" title="Debugging certified apps">こちらの手順</a>に従ってください。</p>
+
+<p><code>Services.obs.notifyObservers(null, 'devtools-monitor-update', data);</code></p>
+
+<p>chrome 権限を持つ JS コードから、データを送信できます。ある JS コードの実行時間を測定する例を示します:</p>
+
+<h4 id="JavaScript" name="JavaScript">JavaScript</h4>
+
+<pre class="brush: js">const Services = require('Services');
+
+var start = Date.now();
+// code to benchmark
+var stop = Date.now();
+
+var data = { graph: 'Performance', myFeature: stop-start, time: stop };
+Services.obs.notifyObservers(null, 'devtools-monitor-update', JSON.stringify(data));</pre>
+
+<h4 id="C" name="C">C++</h4>
+
+<pre class="brush: cpp">observerService-&gt;NotifyObservers(nullptr, "devtools-monitor-update", data);</pre>
+
+<p>Gecko のどこからでもデータを送信できます。あるコードの実行時間を測定する例を示します:</p>
+
+<pre class="brush: cpp">#include &lt;time.h&gt;
+#include "nsPrintfCString.h"
+#include "nsIObserverService.h"
+
+clock_t start = clock();
+// code to benchmark
+clock_t stop = clock();
+double time = (double)(stop - start) / (CLOCKS_PER_SEC / 1000);
+
+nsCOMPtr&lt;nsIObserverService&gt; observerService = services::GetObserverService();
+if (observerService) {
+  nsPrintfCString str("{\"graph\":\"Performance\",\"myFeature\":%f}", time);
+  nsAutoString data = NS_ConvertUTF8toUTF16(str);
+  observerService-&gt;NotifyObservers(nullptr, "devtools-monitor-update", data.get());
+}</pre>
+
+<h3 id="From_your_computer" name="From_your_computer">コンピュータから</h3>
+
+<p>WebSocket サーバを通して、簡単にモニタへデータを送信できます。Firefox の拡張機能、コマンドラインツール、Web サービスを作成する場合に役立つでしょう。</p>
+
+<p>デフォルトでは、モニタはコンピュータの 9000 番ポートで実行するサーバを見ています。これは、設定項目 <code>devtools.webide.monitorWebSocketURL</code> で変更できます。</p>
+
+<p>モニタはローカルネットワーク内だけでなく、インターネットのどこからでもデータを受け入れるようにすることができます。</p>
+
+<h4 id="Node.js" name="Node.js">Node.js</h4>
+
+<pre class="brush: js">TODO</pre>
+
+<h4 id="Python" name="Python">Python</h4>
+
+<pre class="brush: python">TODO</pre>
+
+<h3 id="Supported_formats" name="Supported_formats">サポートする形式</h3>
+
+<p>モニタは、概ね以下のような JSON オブジェクト形式のデータを受け入れます:</p>
+
+<pre class="brush: json">{
+  "graph": "myGraph",
+  "curve": "myCurve",
+  "value": 42,
+  "time": 1234567890
+}</pre>
+
+<p>この形式は高い柔軟性を持たせようとするものです。指定されたグラフが存在しない場合は、自動的に作成します。</p>
+
+<h4 id="Arbitrary_names" name="Arbitrary_names">任意の名称</h4>
+
+<p>認識できない項目は、グラフの名称と値であるとみなします。</p>
+
+<p>送信可能な最小のパケットは以下のようなものです:</p>
+
+<pre class="brush: json">{ "myCurve": 42 }</pre>
+
+<p>これは無名のグラフの "myCurve" に、データポイントを追加します。<code>time</code> がない場合の既定値は、モニタがパケットを受け取った時刻です。</p>
+
+<p>精度を高めるため、データで常に <code>timestamp</code> を指定するとよいでしょう:</p>
+
+<pre class="brush: json">{
+  "current": 60,
+  "voltage": 500,
+  "time": 1234567890
+}</pre>
+
+<h4 id="Multiple_values" name="Multiple_values">複数の値</h4>
+
+<p>1 回の更新で、複数のグラフのデータを送信できます:</p>
+
+<pre class="brush: json">{
+  "graph": "myGraph",
+  "myCurve1": 50,
+  "myCurve2": 300,
+  "myCurve3": 9000,
+  "time": 1234567890
+}</pre>
+
+<p>または、ひとつのグラフに複数のデータポイントを示すことができます:</p>
+
+<pre class="brush: json">{
+  "graph": "myGraph",
+  "curve": "myCurve",
+  "values": [
+    { "time": 1234567890, "value": 42 },
+    { "time": 1234567981, "value": 51 }
+  ]
+}</pre>
+
+<h4 id="Multiple_updates" name="Multiple_updates">複数の更新</h4>
+
+<p>配列形式で、複数の更新データを送信することもできます:</p>
+
+<pre class="brush: json">[
+  { "graph": "Memory", "time": 1234567890, "System": 2600, "My App": 1000 },
+  { "graph": "Power", "time": 1234567890, "current": 60, "voltage": 500 }
+]</pre>
+
+<h4 id="Punctual_events" name="Punctual_events">時間指定のイベント</h4>
+
+<p>グラフ内の垂直線で特定のイベントを示すため、更新データに <code>event</code> キーを付加します:</p>
+
+<pre class="brush: json">{
+  "graph": "myGraph",
+  "event": "myEvent",
+  "time": 1234567980
+}</pre>

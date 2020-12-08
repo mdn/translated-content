@@ -1,0 +1,101 @@
+---
+title: nsIFeedContainer
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsIFeedContainer
+tags:
+  - Interfaces
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIFeedContainer
+---
+<p><code>nsIFeedContainer</code> インタフェースはフィード(<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFeed" title="">nsIFeed</a></code>) とフィードエントリ(<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFeedEntry" title="">nsIFeedEntry</a></code>) の両方で使われる標準的なフィールドを提供します。</p>
+<p><br>
+ </p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/feeds/public/nsIFeedContainer.idl" rel="custom">toolkit/components/feeds/public/nsIFeedContainer.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">最終更新: Gecko 1.8.1 (Firefox 2 / Thunderbird 2 / SeaMonkey 1.1)</span></div>
+</div>
+<p>継承元: <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFeedElementBase" title="">nsIFeedElementBase</a></code></p>
+<h2 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E6.A6.82.E8.A6.81" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E6.A6.82.E8.A6.81">メソッドの概要</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code><a href="#normalize.28.29">normalize</a>();</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id=".E5.B1.9E.E6.80.A7" name=".E5.B1.9E.E6.80.A7">属性</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">属性</td>
+   <td class="header">型</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code>authors</code></td>
+   <td><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIArray" title="">nsIArray</a></code></td>
+   <td>フィードあるいはエントリの著者を記述する <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFeedPerson" title="">nsIFeedPerson</a></code> オブジェクトの配列。</td>
+  </tr>
+  <tr>
+   <td><code>categories</code></td>
+   <td><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIArray" title="">nsIArray</a></code></td>
+   <td>フィードあるいはエントリで見付かったカテゴリの配列。
+    <div class="note">
+     <b>注意:</b> 返される配列は <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFeedCategory" title="">nsIFeedCategory</a></code> オブジェクトを含むでしょう。ただしそのインタフェースはまだ実装されていません。</div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>contributors</code></td>
+   <td><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIArray" title="">nsIArray</a></code></td>
+   <td>フィードあるいはエントリの貢献者を記述する <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFeedPerson" title="">nsIFeedPerson</a></code> オブジェクトの配列。</td>
+  </tr>
+  <tr>
+   <td><code>fields</code></td>
+   <td><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWritablePropertyBag2" title="">nsIWritablePropertyBag2</a></code></td>
+   <td>ドキュメントで見つかったすべてのフィールドへのアクセスを提供します。一般的な Atom 及び RSS フィールドは "dc:subject" や "content:encoded" のようないくつかの名前空間づけられた拡張を含めてノーマライズされます。フィードの種類をチェックし特定のフィールドにアクセスすることによって消費者はノーマライズを避けることができます。
+    <p>一般的な名前空間は接頭辞を使うことで <code>get("dc:subject");</code> のようにアクセスできます。接頭辞に関する更なる情報は <code><a href="https://developer.mozilla.org/ja/docs/XPCOM_Interface_Reference/nsIFeedResult#registerExtensionPrefix()">nsIFeedResult.registerExtensionPrefix()</a></code> を参照してください。</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>id</code></td>
+   <td><code><a href="ja/AString">AString</a></code></td>
+   <td>フィードあるいはエントリの識別する文字列。フィード全てがこれらを持つわけでは無いですがメジャーなフィードフォーマットはそれぞれのエントリに ID を持っています。</td>
+  </tr>
+  <tr>
+   <td><code>link</code></td>
+   <td><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI" title="">nsIURI</a></code></td>
+   <td>フィードあるいはエントリの第一のリンクを含む URI。</td>
+  </tr>
+  <tr>
+   <td><code>rights</code></td>
+   <td><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFeedTextConstruct" title="">nsIFeedTextConstruct</a></code></td>
+   <td>フィードあるいはエントリの権利あるいはライセンスのテキスト。</td>
+  </tr>
+  <tr>
+   <td><code>title</code></td>
+   <td><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFeedTextConstruct" title="">nsIFeedTextConstruct</a></code></td>
+   <td>フィードあるいはエントリのタイトルいくつかのフィードはタイトルがないことに覚えておいてください。またいくつかはタイトルにマークアップを使っており、この属性をデコードするときには注意してください。</td>
+  </tr>
+  <tr>
+   <td><code>updated</code></td>
+   <td><code><a href="ja/AString">AString</a></code></td>
+   <td><a class="external" href="http://www.ietf.org/rfc/rfc0822.txt">RFC822</a> フォーマットでのフィードあるいはエントリが最後に更新された日付を含む文字列。この文字列は JavaScript と mail コードでパース可能です。</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89">メソッド</h2>
+<h3 id="normalize.28.29" name="normalize.28.29">normalize()</h3>
+<p>コンテナのフィールドを便利な属性とを同期させます。</p>
+<pre class="eval"> void normalize();
+</pre>
+<h2 id=".E5.8F.82.E7.85.A7" name=".E5.8F.82.E7.85.A7">参照</h2>
+<p><a href="ja/NsIURI">nsIURI</a>, <a href="ja/NsIFeedTextConstruct">nsIFeedTextConstruct</a></p>
+<p><span class="comment">Interwiki link</span></p>
+<div class="noinclude">
+  </div>

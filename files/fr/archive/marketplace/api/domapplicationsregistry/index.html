@@ -1,0 +1,51 @@
+---
+title: Apps
+slug: Archive/Marketplace/API/DOMApplicationsRegistry
+tags:
+  - API Apps
+  - Apps
+  - B2G
+  - Firefox OS
+  - Interface
+  - Non-standard
+translation_of: Archive/Marketplace/API/DOMApplicationsRegistry
+---
+<p>{{APIRef("Apps")}}</p>
+
+<div class="blockIndicator deprecated">
+<p><strong>Retrait du marketplace</strong><br>
+ La fonctionnalité décrite ici ne fonctionne plus.  Firefox Marketplace a été décommisionné pour Android, les ordinateurs de bureau, les tablettes et les paiement. Voir <a href="https://wiki.mozilla.org/Marketplace/FutureofMarketplaceFAQ">Future of Marketplace FAQ</a> pour plus d'informations.</p>
+</div>
+
+<p><span class="seoSummary">Permet d'installer, de gérer et de contrôler des applications Web depuis un navigateur pour une installation dans Firefox OS. Implémentée par <a href="/fr/docs/Archive/B2G_OS/API/Navigator/mozApps" title="The documentation about this has not yet been written; please consider contributing!"><code>navigator.mozApps</code></a>.</span></p>
+
+<h2 id="Propriétés">Propriétés</h2>
+
+<dl>
+ <dt><a href="/fr/docs/Archive/Marketplace/API/DOMApplicationsRegistry/mgmt" title="The documentation about this has not yet been written; please consider contributing!"><code>DOMApplicationsRegistry.mgmt</code></a></dt>
+ <dd>Un objet <code>mgmt</code> qui expose les fonctions pour la gestion du tableau de bord et le lancement d'applications au nom de l'utilisateur.</dd>
+</dl>
+
+<h2 id="Méthodes">Méthodes</h2>
+
+<dl>
+ <dt><a href="/fr/docs/Archive/Marketplace/API/DOMApplicationsRegistry/checkInstalled" title="The documentation about this has not yet been written; please consider contributing!"><code>DOMApplicationsRegistry.checkInstalled()</code></a></dt>
+ <dd>Vérifie si une application a déjà été installée avec le manifeste passé en paramètre.</dd>
+ <dt><a href="/fr/docs/Archive/Marketplace/API/DOMApplicationsRegistry/install" title="The documentation about this has not yet been written; please consider contributing!"><code>DOMApplicationsRegistry.install()</code></a></dt>
+ <dd>Déclenche l'installation de l'application. Lors de l'installation, l'application est validée et l'utilisateur doit approuver l'installation.</dd>
+ <dt><a href="/fr/docs/Archive/Marketplace/API/DOMApplicationsRegistry/installPackage" title="The documentation about this has not yet been written; please consider contributing!"><code>DOMApplicationsRegistry.installPackage()</code></a></dt>
+ <dd>Installe une application <a href="https://developer.mozilla.org/fr/docs/Apps/Packaged_apps">empaquetée</a>.</dd>
+ <dt><a href="/fr/docs/Archive/Marketplace/API/DOMApplicationsRegistry/getSelf" title="The documentation about this has not yet been written; please consider contributing!"><code>DOMApplicationsRegistry.getSelf()</code></a></dt>
+ <dd>Renvoie un objet contenant l'objet <a href="/fr/docs/Archive/B2G_OS/API/DOMApplication" title="The documentation about this has not yet been written; please consider contributing!"><code>app</code></a> de l'application.</dd>
+ <dt><a href="/fr/docs/Archive/Marketplace/API/DOMApplicationsRegistry/getInstalled" title="The documentation about this has not yet been written; please consider contributing!"><code>DOMApplicationsRegistry.getInstalled()</code></a></dt>
+ <dd>Fournit une liste des applications installées.</dd>
+</dl>
+
+<h3 id="Méthodes_obsolètes">Méthodes obsolètes</h3>
+
+<dl>
+ <dt><a href="/fr/docs/Archive/Marketplace/API/DOMApplicationsRegistry/amInstalled" title="Provides a means for an app to check whether it is installed. This function is typically called from an origin that hosts an app."><code>DOMApplicationsRegistry.amInstalled()</code></a> {{Obsolete_Inline}}</dt>
+ <dd>Permet de vérifier si une application est installée.</dd>
+ <dt><a href="/fr/docs/Archive/Marketplace/API/DOMApplicationsRegistry/getInstalledBy" title="Returns, through the callback function, the apps that were installed by the calling domain. This allows an app directory or store to determine which app it has installed on behalf of the current user."><code>DOMApplicationsRegistry.getInstalledBy()</code></a> {{Obsolete_Inline}}</dt>
+ <dd>Renvoie les applications installées depuis le domaine appelant. Cela permet à un registre d'application de déterminer quelle application a été installée au nom de l'utilisateur.</dd>
+</dl>

@@ -1,0 +1,43 @@
+---
+title: Mozilla における ECMAScript 5 のサポート
+slug: Web/JavaScript/ECMAScript_5_support_in_Mozilla
+tags:
+  - ECMAScript5
+  - JavaScript
+translation_of: Archive/Web/JavaScript/New_in_JavaScript/ECMAScript_5_support_in_Mozilla
+---
+<p>{{jsSidebar("New_in_JS")}}</p>
+
+<p>ECMAScript 5.1 は、JavaScript を元とした標準の最新版であり、2011年の6月に承認されました。</p>
+
+<p>Firefox や Thunderbird の両方に含まれており、Mozilla プロジェクトで使用されている JavaScript ランタイムでは、 ECMAScript 5.1 の機能が完全にサポートされています。この記事では、Mozilla の JavaScript ランタイムの異なるバージョン毎にサポートされている機能について取り扱います。</p>
+
+<h2 id="Supported_features" name="Supported_features">すでにサポートされている機能</h2>
+
+<h3 id="Added_in_JavaScript_1.8.5_(Gecko_2.2C_Firefox_4_and_later)" name="Added_in_JavaScript_1.8.5_(Gecko_2.2C_Firefox_4_and_later)">JavaScript 1.8.5 (Gecko 2, Firefox 4) で追加された機能</h3>
+
+<p>Firefox 4 では、<code>Object.*</code> に追加されたメソッドおよび strict mode が完全にサポートされています。<a href="/ja/docs/JavaScript/New_in_JavaScript/1.8.5" title="JavaScript/New in JavaScript/1.8.5">New in JavaScript 1.8.5</a> を参照してください。</p>
+
+<h3 id="Added_in_JavaScript_1.8.1_(Gecko_1.9.1.2C_Firefox_3.5)" name="Added_in_JavaScript_1.8.1_(Gecko_1.9.1.2C_Firefox_3.5)">JavaScript 1.8.1 (Gecko 1.9.1, Firefox 3.5) で追加された機能</h3>
+
+<ul>
+ <li><a class="internal" href="/ja/docs/Using_native_JSON" title="Using native JSON">ネイティブ JSON</a> のサポート</li>
+ <li><a class="internal" href="/ja/docs/JavaScript/Reference/Global_Objects/Object/GetPrototypeOf" title="JavaScript/Reference/Global Objects/Object/GetPrototypeOf"><code>Object.getPrototypeOf()</code></a>メソッドのサポート。</li>
+ <li>文字列の両端の空白文字を切り調える <a class="internal" href="/ja/docs/JavaScript/Reference/Global_Objects/String/Trim" title="JavaScript/Reference/Global Objects/String/Trim"><code>String.trim()</code></a> メソッドのサポート。</li>
+ <li>Gecko 1.9.1.4 でのアップデートにより、<a href="/ja/docs/Using_native_JSON#Converting_objects_into_JSON" title="Using native JSON#Converting objects into JSON"><code>JSON.stringify()</code></a> の実装は ECMAScript 5 仕様に準じるものになりました。</li>
+</ul>
+
+<p>ECMAScript 5 によるレイアウトの改良は、特定の状況下において、JavaScript のコードをXHTMLとして評価するのを妨げる解析アルゴリズムとなりました。</p>
+
+<h3 id="Added_in_JavaScript_1.6_(Gecko_1.8.2C_Firefox_1.5)" name="Added_in_JavaScript_1.6_(Gecko_1.8.2C_Firefox_1.5)">JavaScript 1.6 (Gecko 1.8, Firefox 1.5) で追加された機能</h3>
+
+<p><a class="internal" href="/ja/docs/JavaScript/New_in_JavaScript/1.6#Array_extras" title="New in JavaScript 1.6#Array extras">Array の拡張</a> -- JavaScript 1.6 より Javascript の一部として、配列操作の方法の幾らか改良を提供するメソッドが追加されています。現在、それらのメソッドは ECMAScript 5 の一部として標準化されています。</p>
+
+<h2 id="See_also" name="See_also">参考</h2>
+
+<ul>
+ <li><a class="external" href="http://www.ecmascript.org/" title="http://www.ecmascript.org/">ECMAScript web site</a></li>
+ <li><a class="external" href="http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf" title="http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf">ECMAScript 5.1 specification</a></li>
+ <li>John Resig による <a class="external" href="http://ejohn.org/blog/objectgetprototypeof/" title="http://ejohn.org/blog/objectgetprototypeof/">Object.getPrototypeOf</a> についての投稿</li>
+ <li>Michael J. Ryan による <a class="external" href="http://frugalcoder.us/post/2010/01/07/EcmaScript-5s-Date-Extensions.aspx" title="http://frugalcoder.us/post/2010/01/07/EcmaScript-5s-Date-Extensions.aspx">JavaScript における ECMAScript5 Dates</a> の実装について</li>
+</ul>

@@ -1,0 +1,117 @@
+---
+title: Progress Listeners
+slug: Code_snippets/Progress_Listeners
+tags:
+  - Add-ons
+  - Extensions
+translation_of: Archive/Add-ons/Code_snippets/Progress_Listeners
+---
+<h3 id="Progress_Listeners" name="Progress_Listeners">Progress Listeners</h3>
+<p>Progress listeners を使うことで拡張機能にドキュメントの読み込みやタブの切替イベントなどを通知することができます。 Progress listeners は <code><a href="/ja/nsIWebProgressListener" title="ja/nsIWebProgressListener">nsIWebProgressListener</a></code> インターフェースを実装しています。</p>
+<p>メモ: 単にページをロードするごとにコードを実行したいだけなら、 <a href="/Ja/Code_snippets/On_page_load" title="ja/Code_snippets/On_page_load">もっと簡単な関数 (<code>onPageLoad()</code>)</a> でできます。</p>
+<h3 id="Example" name="Example">例</h3>
+<ol>
+  <li><code>nsIWebProgressListener</code> を実装するオブジェクトを作ります。
+    <pre>const STATE_START = Components.interfaces.nsIWebProgressListener.STATE_START;
+const STATE_STOP = Components.interfaces.nsIWebProgressListener.STATE_STOP;
+var myListener =
+{
+  QueryInterface: function(aIID)
+  {
+   if (aIID.equals(Components.interfaces.nsIWebProgressListener) ||
+       aIID.equals(Components.interfaces.nsISupportsWeakReference) ||
+       aIID.equals(Components.interfaces.nsISupports))
+     return this;
+   throw Components.results.NS_NOINTERFACE;
+  },
+
+  onStateChange: function(aWebProgress, aRequest, aFlag, aStatus)
+  {
+   // myListener を二つ以上のタブ/ブラウザで使うなら、onStateChangeイベントを起こした
+   // タブ/ウインドウを取得するのに aWebProgress.DOMWindow を使用してください。
+   if(aFlag &amp; STATE_START)
+   {
+     // ここはロードイベントが始まったときに実行されます。
+   }
+   if(aFlag &amp; STATE_STOP)
+   {
+     // ここはロードが終わったときに実行されます。
+   }
+   return 0;
+  },
+
+  onLocationChange: function(aProgress, aRequest, aURI)
+  {
+   // これはロケーションバーが変更されたとき実行されます。例: ロードイベントが完了したとき、ユーザーがタブを切り替えたとき。
+   // myListener を二つ以上のタブ/ウインドウで使うなら、
+   // イベントを起こしたタブ/ウインドウを取得するのに aProgress.DOMWindow を使用してください。
+
+   return 0;
+  },
+
+  // 残りの関数の定義については XULPlanet.com を見てください。
+  onProgressChange: function() {return 0;},
+  onStatusChange: function() {return 0;},
+  onSecurityChange: function() {return 0;},
+  onLinkIconAvailable: function() {return 0;}
+}</pre>
+  </li>
+  <li> progress listener を &lt;browser&gt; か &lt;tabbrowser&gt; 要素に追加してください。例: Firefox の場合は、次のコードをメインウインドウの <code>load</code> listener に追加してください{{ 訳注(' 詳しくは次の節のコードを参考にしてください') }}。
+    <pre>gBrowser.addProgressListener(myListener,
+  Components.interfaces.nsIWebProgress.NOTIFY_STATE_DOCUMENT);</pre>
+    <p>二番目の引数は受け取るイベントのタイプを決める <a class="external" href="http://www.xulplanet.com/references/xpcomref/comps/c_appshellcomponentbrowserstatusfilter1.html">status filter</a> です。例えフィルターが使われていても、 六つ全ての progress handler 関数が定義されなければなりません。</p>
+  </li>
+  <li><code>unload</code> イベントハンドラか、あるいはもっと早くに <code>removeProgressListener</code> を呼ぶことを忘れないでください。</li>
+</ol>
+<p><code>myListener</code> を独自の識別子（名前）に変更すること忘れないでください{{ 訳注('他の拡張機能と名前がかぶらないようにするため') }}。Also remember that if you're adding listeners inside a function, make sure to have a reference to your listener object that stays in memory (this is due to the required nsISupportsWeakReference interface). That is, the listener object shouldn't be declared solely in the temporal function. </p>
+<h3 id="Example:_Notification_when_the_value_in_Address_Bar_changes" name="Example:_Notification_when_the_value_in_Address_Bar_changes">例:アドレスバーの値の変更を検出する</h3>
+<p>よく聞かれる質問にアドレスバー（ロケーションバーとも言う）のURLの変更を、どうやって検出するのかというのがあります。次のコードを使うことで、ユーザーが他のページへ移動する操作を行ったとき（リンクをクリックしたり、戻る/進むボタンを使ったり、ロケーションバーにアドレスを打ち込んだときなど）あるいはタブを切り替えたときを検出することができます。</p>
+<pre>var myExt_urlBarListener = {
+  QueryInterface: function(aIID)
+  {
+   if (aIID.equals(Components.interfaces.nsIWebProgressListener) ||
+       aIID.equals(Components.interfaces.nsISupportsWeakReference) ||
+       aIID.equals(Components.interfaces.nsISupports))
+     return this;
+   throw Components.results.NS_NOINTERFACE;
+  },
+
+  onLocationChange: function(aProgress, aRequest, aURI)
+  {
+    myExtension.processNewURL(aURI);
+  },
+
+  onStateChange: function() {},
+  onProgressChange: function() {},
+  onStatusChange: function() {},
+  onSecurityChange: function() {},
+  onLinkIconAvailable: function() {}
+};
+
+var myExtension = {
+  oldURL: null,
+
+  init: function() {
+    // ウェブページのロードをリスンする。
+    gBrowser.addProgressListener(myExt_urlBarListener,
+        Components.interfaces.nsIWebProgress.NOTIFY_STATE_DOCUMENT);
+  },
+
+  uninit: function() {
+    gBrowser.removeProgressListener(myExt_urlBarListener);
+  },
+
+  processNewURL: function(aURI) {
+    if (aURI.spec == this.oldURL)
+      return;
+
+    //これでurlが新しく更新されたことを知る
+    alert(aURI.spec);
+    this.oldURL = aURI.spec;
+  }
+};
+
+window.addEventListener("load", function() {myExtension.init()}, false);
+window.addEventListener("unload", function() {myExtension.uninit()}, false);
+</pre>
+<p>メモ : もし二つ以上のタブ/ウインドウで同じリスナーを使っているなら、コールバックメソッドにおいて state change イベントを起こしたタブ/ウインドウを取得するのに aWebProgress.DOMWindow を使用してください。</p>

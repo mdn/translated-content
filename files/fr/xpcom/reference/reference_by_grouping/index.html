@@ -1,0 +1,981 @@
+---
+title: Interfaces XPCOM par groupe
+slug: XPCOM/Reference/Reference_by_grouping
+translation_of: Mozilla/Tech/XPCOM/Reference/Reference_by_grouping
+---
+<h2 id="Utilisation_de_ce_guide">Utilisation de ce guide</h2>
+
+<p>Cette page présente l'actuel (à partir de 1 décembre 2010) liste des interfaces de Mozilla comme indiqué sur <a href="/fr/XPCOM_Interface_Reference" title="fr/XPCOM_Interface_Reference ">Page d'interface XPCOM de référence</a> qui répertorie les éléments par ordre alphabétique, cette page est une tentatives de les regrouper par fonction. Noms de Regroupement et de catégorie ont été faites par décision quelque peu arbitraire.</p>
+
+<p>Les sections principales sont:</p>
+
+<ul>
+ <li><strong>Navigateur </strong><br>
+  Cette section contient des éléments associés au volet d'affichage ou au contenu de la "fenêtre du navigateur". Il est dépendant du <strong>Système</strong>.</li>
+ <li><strong>Données</strong><br>
+  Cette section contient des wrappers de données et des définitions d'objets de base.</li>
+ <li><strong>Sécurité </strong><br>
+  Cette section contient des API pour les communications des canaux sécurisés.</li>
+ <li><strong>Système </strong><br>
+  Cette section contient les interfaces de niveau d'application, y compris les appels vers des éléments de soutien extérieurs (tels que les appels machine). C'est l'élément racine qui peut contenir certaines fonctions définies dans d'autres groupes.</li>
+ <li><strong>utilisateur </strong><br>
+  Cette section contient des éléments spécifiques au stockage de données d'un utilisateur donné.</li>
+</ul>
+
+<div>
+<h1 id="Browser">Browser</h1>
+
+<h2 id="Autocomplete">Autocomplete</h2>
+
+<ul class="secondary Autocomplete">
+ <li><a href="/en/XPCOM_Interface_Reference/nsIAutoCompleteController" title="en/XPCOM_Interface_Reference/nsIAutoCompleteController">nsIAutoCompleteController</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIAutoCompleteInput" title="en/XPCOM_Interface_Reference/nsIAutoCompleteInput">nsIAutoCompleteInput</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIAutoCompleteSearch" title="en/XPCOM_Interface_Reference/nsIAutoCompleteSearch">nsIAutoCompleteSearch</a></li>
+</ul>
+
+<h2 id="Console">Console</h2>
+
+<ul class="secondary Console">
+ <li><a href="/en/XPCOM_Interface_Reference/nsIConsoleListener" title="en/XPCOM_Interface_Reference/nsIConsoleListener">nsIConsoleListener</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIConsoleMessage" title="en/XPCOM_Interface_Reference/nsIConsoleMessage">nsIConsoleMessage</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIConsoleService" title="en/XPCOM_Interface_Reference/nsIConsoleService">nsIConsoleService</a></li>
+</ul>
+
+<h2 id="Document">Document</h2>
+
+<ul class="secondary Document">
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDocShell" title="en/XPCOM_Interface_Reference/nsIDocShell">nsIDocShell</a></li>
+</ul>
+
+<h2 id="DOM">DOM</h2>
+
+<h3 id="Device">Device</h3>
+
+<ul class="tercerary Device">
+ <li><a href="/en/XPCOM_Interface_Reference/NsIDOMGeoGeolocation" title="en/XPCOM_Interface_Reference/NsIDOMGeoGeolocation">nsIDOMGeoGeolocation</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/NsIDOMGeoPosition" title="en/XPCOM_Interface_Reference/NsIDOMGeoPosition">nsIDOMGeoPosition</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDOMGeoPositionAddress" title="en/XPCOM_Interface_Reference/nsIDOMGeoPositionAddress">nsIDOMGeoPositionAddress</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/NsIDOMGeoPositionCallback" title="en/XPCOM_Interface_Reference/NsIDOMGeoPositionCallback">nsIDOMGeoPositionCallback</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/NsIDOMGeoPositionCoords" title="en/XPCOM_Interface_Reference/NsIDOMGeoPositionCoords">nsIDOMGeoPositionCoords</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/NsIDOMGeoPositionError" title="en/XPCOM_Interface_Reference/NsIDOMGeoPositionError">nsIDOMGeoPositionError</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/NsIDOMGeoPositionErrorCallback" title="en/XPCOM_Interface_Reference/NsIDOMGeoPositionErrorCallback">nsIDOMGeoPositionErrorCallback</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/NsIDOMGeoPositionOptions" title="en/XPCOM_Interface_Reference/NsIDOMGeoPositionOptions">nsIDOMGeoPositionOptions</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDOMGlobalPropertyInitializer" title="en/XPCOM_Interface_Reference/nsIDOMGlobalPropertyInitializer">nsIDOMGlobalPropertyInitializer</a></li>
+</ul>
+
+<h3 id="Element">Element</h3>
+
+<ul class="tercerary Element">
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDOMChromeWindow" title="en/XPCOM_Interface_Reference/nsIDOMChromeWindow">nsIDOMChromeWindow</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDOMClientRect" title="en/XPCOM_Interface_Reference/nsIDOMClientRect">nsIDOMClientRect</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDOMElement" title="en/XPCOM_Interface_Reference/nsIDOMElement">nsIDOMElement</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDOMHTMLAudioElement" title="en/XPCOM_Interface_Reference/nsIDOMHTMLAudioElement">nsIDOMHTMLAudioElement</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDOMHTMLFormElement" title="en/XPCOM_Interface_Reference/nsIDOMHTMLFormElement">nsIDOMHTMLFormElement</a></li>
+ <li><a href="/En/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement" title="En/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement">nsIDOMHTMLMediaElement</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDOMHTMLSourceElement" title="en/XPCOM_Interface_Reference/nsIDOMHTMLSourceElement">nsIDOMHTMLSourceElement</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDOMHTMLTimeRanges" title="en/XPCOM_Interface_Reference/nsIDOMHTMLTimeRanges">nsIDOMHTMLTimeRanges</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDOMJSWindow" title="en/XPCOM_Interface_Reference/nsIDOMJSWindow">nsIDOMJSWindow</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDOMNode" title="en/XPCOM_Interface_Reference/nsIDOMNode">nsIDOMNode</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDOMNSHTMLDocument" title="en/XPCOM_Interface_Reference/nsIDOMNSHTMLDocument">nsIDOMNSHTMLDocument</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/NsIDOMStorageItem" title="en/XPCOM_Interface_Reference/NsIDOMStorageItem">nsIDOMStorageItem</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/NsIDOMStorageManager" title="en/XPCOM_Interface_Reference/NsIDOMStorageManager">nsIDOMStorageManager</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDOMWindow" title="en/XPCOM_Interface_Reference/nsIDOMWindow">nsIDOMWindow</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDOMWindow2" title="en/XPCOM_Interface_Reference/nsIDOMWindow2">nsIDOMWindow2</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDOMWindowInternal" title="en/XPCOM_Interface_Reference/nsIDOMWindowInternal">nsIDOMWindowInternal</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDOMWindowUtils" title="en/XPCOM_Interface_Reference/nsIDOMWindowUtils">nsIDOMWindowUtils</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDynamicContainer" title="en/XPCOM_Interface_Reference/nsIDynamicContainer">nsIDynamicContainer</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/NsIEditor" title="en/XPCOM_Interface_Reference/NsIEditor">nsIEditor</a></li>
+</ul>
+
+<h3 id="Event">Event</h3>
+
+<ul class="tercerary Event">
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDOMEvent" title="en/XPCOM_Interface_Reference/nsIDOMEvent">nsIDOMEvent</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDOMEventGroup" title="en/XPCOM_Interface_Reference/nsIDOMEventGroup">nsIDOMEventGroup</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDOMEventListener" title="en/XPCOM_Interface_Reference/nsIDOMEventListener">nsIDOMEventListener</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDOMEventTarget" title="en/XPCOM_Interface_Reference/nsIDOMEventTarget">nsIDOMEventTarget</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDOMMouseScrollEvent" title="en/XPCOM_Interface_Reference/nsIDOMMouseScrollEvent">nsIDOMMouseScrollEvent</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDOMMozTouchEvent" title="en/XPCOM_Interface_Reference/nsIDOMMozTouchEvent">nsIDOMMozTouchEvent</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDOMOrientationEvent" title="en/XPCOM_Interface_Reference/nsIDOMOrientationEvent">nsIDOMOrientationEvent</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/NsIDOMProgressEvent" title="en/XPCOM_Interface_Reference/NsIDOMProgressEvent">nsIDOMProgressEvent</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/NsIDOMSimpleGestureEvent" title="en/XPCOM_Interface_Reference/NsIDOMSimpleGestureEvent">nsIDOMSimpleGestureEvent</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDragDropHandler" title="en/XPCOM_Interface_Reference/nsIDragDropHandler">nsIDragDropHandler</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDragService" title="en/XPCOM_Interface_Reference/nsIDragService">nsIDragService</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDragSession" title="en/XPCOM_Interface_Reference/nsIDragSession">nsIDragSession</a></li>
+</ul>
+
+<h3 id="HTML">HTML</h3>
+
+<ul class="tercerary HTML">
+ <li><a href="/en/XPCOM_Interface_Reference/nsIAccessibilityService" title="en/XPCOM_Interface_Reference/nsIAccessibilityService">nsIAccessibilityService</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIAccessibleCoordinateType" title="en/XPCOM_Interface_Reference/nsIAccessibleCoordinateType">nsIAccessibleCoordinateType</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIAccessibleDocument" title="en/XPCOM_Interface_Reference/nsIAccessibleDocument">nsIAccessibleDocument</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIAccessibleEditableText" title="en/XPCOM_Interface_Reference/nsIAccessibleEditableText">nsIAccessibleEditableText</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIAccessibleEvent" title="en/XPCOM_Interface_Reference/nsIAccessibleEvent">nsIAccessibleEvent</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIAccessibleHyperLink" title="en/XPCOM_Interface_Reference/nsIAccessibleHyperLink">nsIAccessibleHyperLink</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIAccessibleHyperText" title="en/XPCOM_Interface_Reference/nsIAccessibleHyperText">nsIAccessibleHyperText</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/NsIAccessibleImage" title="en/XPCOM_Interface_Reference/NsIAccessibleImage">nsIAccessibleImage</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIAccessibleProvider" title="en/XPCOM_Interface_Reference/nsIAccessibleProvider">nsIAccessibleProvider </a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIAccessibleRetrieval" title="en/XPCOM_Interface_Reference/nsIAccessibleRetrieval">nsIAccessibleRetrieval</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIAccessibleRole" title="en/XPCOM_Interface_Reference/nsIAccessibleRole">nsIAccessibleRole</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIAccessibleScrollType" title="en/XPCOM_Interface_Reference/nsIAccessibleScrollType">nsIAccessibleScrollType</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIAccessibleSelectable" title="en/XPCOM_Interface_Reference/nsIAccessibleSelectable">nsIAccessibleSelectable</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIAccessibleStates" title="en/XPCOM_Interface_Reference/nsIAccessibleStates">nsIAccessibleStates</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIAccessibleTable" title="en/XPCOM_Interface_Reference/nsIAccessibleTable">nsIAccessibleTable</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIAccessibleText" title="en/XPCOM_Interface_Reference/nsIAccessibleText">nsIAccessibleText</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIAccessibleTreeCache" title="en/XPCOM_Interface_Reference/nsIAccessibleTreeCache">nsIAccessibleTreeCache</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIAccessibleValue" title="en/XPCOM_Interface_Reference/nsIAccessibleValue">nsIAccessibleValue</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/NsIAccessNode" title="en/XPCOM_Interface_Reference/NsIAccessNode">nsIAccessNode</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsISyncMessageSender" title="en/XPCOM_Interface_Reference/nsISyncMessageSender">nsISyncMessageSender</a></li>
+</ul>
+
+<h3 id="Script">Script</h3>
+
+<ul class="tercerary Script">
+ <li><a href="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsIScriptableUnescapeHTML">nsIScriptableUnescapeHTML</a></li>
+ <li><a href="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsIScriptableUnicodeConverter">nsIScriptableUnicodeConverter</a></li>
+ <li><a href="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsIScriptError">nsIScriptError</a></li>
+ <li><a href="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsIScriptError2">nsIScriptError2</a></li>
+</ul>
+
+<h3 id="StyleSheet">StyleSheet</h3>
+
+<ul class="tercerary StyleSheet">
+ <li><a href="/en/XPCOM_Interface_Reference/nsIStyleSheetService" title="en/XPCOM_Interface_Reference/nsIStyleSheetService">nsIStyleSheetService</a></li>
+</ul>
+
+<h3 id="URL">URL</h3>
+
+<ul class="tercerary URL">
+ <li><a href="/en/XPCOM_Interface_Reference/nsIURI" title="en/XPCOM_Interface_Reference/nsIURI">nsIURI</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIURL" title="en/XPCOM_Interface_Reference/nsIURL">nsIURL</a></li>
+</ul>
+
+<h3 id="Util">Util</h3>
+
+<ul class="tercerary Util">
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDOMSerializer" title="en/XPCOM_Interface_Reference/nsIDOMSerializer">nsIDOMSerializer</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDOMXPathEvaluator" title="en/XPCOM_Interface_Reference/nsIDOMXPathEvaluator">nsIDOMXPathEvaluator</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDOMXPathException" title="en/XPCOM_Interface_Reference/nsIDOMXPathException">nsIDOMXPathException</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDOMXPathExpression" title="en/XPCOM_Interface_Reference/nsIDOMXPathExpression">nsIDOMXPathExpression</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDOMXPathResult" title="en/XPCOM_Interface_Reference/nsIDOMXPathResult">nsIDOMXPathResult</a></li>
+</ul>
+
+<h3 id="XSLT">XSLT</h3>
+
+<ul class="tercerary XSLT">
+ <li><a href="/en/XPCOM_Interface_Reference/nsIXSLTException" title="en/XPCOM_Interface_Reference/nsIXSLTException">nsIXSLTException</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIXSLTProcessor" title="en/XPCOM_Interface_Reference/nsIXSLTProcessor">nsIXSLTProcessor</a></li>
+</ul>
+
+<h2 id="Download">Download</h2>
+
+<ul class="secondary Download">
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDownload" title="en/XPCOM_Interface_Reference/nsIDownload">nsIDownload</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDownloadManager" title="en/XPCOM_Interface_Reference/nsIDownloadManager">nsIDownloadManager</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDownloadProgressListener" title="en/XPCOM_Interface_Reference/nsIDownloadProgressListener">nsIDownloadProgressListener</a></li>
+</ul>
+
+<h2 id="Element_2">Element</h2>
+
+<h3 id="Internal">Internal</h3>
+
+<ul class="tercerary Internal">
+ <li><a href="/en/XPCOM_Interface_Reference/NsIWorker" title="en/XPCOM_Interface_Reference/NsIWorker">nsIWorker</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/NsIWorkerGlobalScope" title="en/XPCOM_Interface_Reference/NsIWorkerGlobalScope">nsIWorkerGlobalScope</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/NsIWorkerMessageEvent" title="en/XPCOM_Interface_Reference/NsIWorkerMessageEvent">nsIWorkerMessageEvent</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/NsIWorkerMessagePort" title="en/XPCOM_Interface_Reference/NsIWorkerMessagePort">nsIWorkerMessagePort</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/NsIWorkerScope" title="en/XPCOM_Interface_Reference/NsIWorkerScope">nsIWorkerScope</a></li>
+</ul>
+
+<h3 id="Tree">Tree</h3>
+
+<ul class="tercerary Tree">
+ <li><a href="/en/XPCOM_Interface_Reference/nsITreeBoxObject" title="en/XPCOM_Interface_Reference/nsITreeBoxObject">nsITreeBoxObject</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsITreeColumn" title="en/XPCOM_Interface_Reference/nsITreeColumn">nsITreeColumn</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/NsITreeColumns" title="en/XPCOM_Interface_Reference/NsITreeColumns">nsITreeColumns</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/NsITreeContentView" title="en/XPCOM_Interface_Reference/NsITreeContentView">nsITreeContentView</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsITreeSelection" title="en/XPCOM_Interface_Reference/nsITreeSelection">nsITreeSelection</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsITreeView" title="en/XPCOM_Interface_Reference/nsITreeView">nsITreeView</a></li>
+</ul>
+
+<h3 id="Xform">Xform</h3>
+
+<ul class="tercerary Xform">
+ <li><a href="/en/XPCOM_Interface_Reference/nsIXFormsModelElement" title="en/XPCOM_Interface_Reference/nsIXFormsModelElement">nsIXFormsModelElement</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIXFormsNSInstanceElement" title="en/XPCOM_Interface_Reference/nsIXFormsNSInstanceElement">nsIXFormsNSInstanceElement</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIXFormsNSModelElement" title="en/XPCOM_Interface_Reference/nsIXFormsNSModelElement">nsIXFormsNSModelElement</a></li>
+</ul>
+
+<h3 id="XMLHttpRequest">XMLHttpRequest</h3>
+
+<ul class="tercerary XMLHttpRequest">
+ <li><a href="/en/XPCOM_Interface_Reference/NsIXMLHttpRequestEventTarget" title="en/XPCOM_Interface_Reference/NsIXMLHttpRequestEventTarget">nsIXMLHttpRequestEventTarget</a></li>
+</ul>
+
+<h2 id="FavIcon">FavIcon</h2>
+
+<ul class="secondary FavIcon">
+ <li><a href="/en/XPCOM_Interface_Reference/nsIFaviconDataCallback" title="en/XPCOM_Interface_Reference/nsIFaviconDataCallback">nsIFaviconDataCallback</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIFaviconService" title="en/XPCOM_Interface_Reference/nsIFaviconService">nsIFaviconService</a></li>
+</ul>
+
+<h2 id="Frame">Frame</h2>
+
+<ul class="secondary Frame">
+ <li><a href="/en/XPCOM_Interface_Reference/nsIChromeFrameMessageManager" title="en/XPCOM_Interface_Reference/nsIChromeFrameMessageManager">nsIChromeFrameMessageManager</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIFrameLoader" title="en/XPCOM_Interface_Reference/nsIFrameLoader">nsIFrameLoader</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIFrameLoaderOwner" title="en/XPCOM_Interface_Reference/nsIFrameLoaderOwner">nsIFrameLoaderOwner</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIFrameMessageListener" title="en/XPCOM_Interface_Reference/nsIFrameMessageListener">nsIFrameMessageListener</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIFrameMessageManager" title="en/XPCOM_Interface_Reference/nsIFrameMessageManager">nsIFrameMessageManager</a></li>
+</ul>
+
+<h2 id="Interface">Interface</h2>
+
+<ul class="secondary Interface">
+ <li><a href="/en/XPCOM_Interface_Reference/nsIJSXMLHttpRequest" title="en/XPCOM_Interface_Reference/nsIJSXMLHttpRequest">nsIJSXMLHttpRequest</a></li>
+</ul>
+
+<h2 id="Jetpack">Jetpack</h2>
+
+<ul class="secondary Jetpack">
+ <li><a href="/en/XPCOM_Interface_Reference/nsIJetpack" title="en/XPCOM_Interface_Reference/nsIJetpack">nsIJetpack</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIJetpackService" title="en/XPCOM_Interface_Reference/nsIJetpackService">nsIJetpackService</a></li>
+</ul>
+
+<h2 id="offlineStorage">offlineStorage</h2>
+
+<ul class="secondary offlineStorage">
+ <li><a href="/en/XPCOM_Interface_Reference/NsIApplicationCache" title="en/XPCOM_Interface_Reference/NsIApplicationCache">nsIApplicationCache</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/NsIApplicationCacheChannel" title="en/XPCOM_Interface_Reference/NsIApplicationCacheChannel">nsIApplicationCacheChannel</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/NsIApplicationCacheContainer" title="en/XPCOM_Interface_Reference/NsIApplicationCacheContainer">nsIApplicationCacheContainer</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/NsIApplicationCacheNamespace" title="en/XPCOM_Interface_Reference/NsIApplicationCacheNamespace">nsIApplicationCacheNamespace</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/NsIApplicationCacheService" title="en/XPCOM_Interface_Reference/NsIApplicationCacheService">nsIApplicationCacheService</a></li>
+</ul>
+
+<h2 id="Places">Places</h2>
+
+<ul class="secondary Places">
+ <li><a href="/en/XPCOM_Interface_Reference/nsIAnnotationObserver" title="en/XPCOM_Interface_Reference/nsIAnnotationObserver">nsIAnnotationObserver</a></li>
+</ul>
+
+<h2 id="RSS_Feed">RSS Feed</h2>
+
+<ul class="secondary RSS Feed">
+ <li><a href="/en/XPCOM_Interface_Reference/nsIFeed" title="en/XPCOM_Interface_Reference/nsIFeed">nsIFeed</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIFeedContainer" title="en/XPCOM_Interface_Reference/nsIFeedContainer">nsIFeedContainer</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIFeedElementBase" title="en/XPCOM_Interface_Reference/nsIFeedElementBase">nsIFeedElementBase</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIFeedEntry" title="en/XPCOM_Interface_Reference/nsIFeedEntry">nsIFeedEntry</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIFeedGenerator" title="en/XPCOM_Interface_Reference/nsIFeedGenerator">nsIFeedGenerator</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIFeedPerson" title="en/XPCOM_Interface_Reference/nsIFeedPerson">nsIFeedPerson</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIFeedProcessor" title="en/XPCOM_Interface_Reference/nsIFeedProcessor">nsIFeedProcessor</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIFeedProgressListener" title="en/XPCOM_Interface_Reference/nsIFeedProgressListener">nsIFeedProgressListener</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIFeedResult" title="en/XPCOM_Interface_Reference/nsIFeedResult">nsIFeedResult</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIFeedResultListener" title="en/XPCOM_Interface_Reference/nsIFeedResultListener">nsIFeedResultListener</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIFeedTextConstruct" title="en/XPCOM_Interface_Reference/nsIFeedTextConstruct">nsIFeedTextConstruct</a></li>
+</ul>
+
+<h2 id="script">script</h2>
+
+<ul class="secondary script">
+ <li><a href="https://developer.mozilla.org/en/XPCOM_Interface_Reference/mozIJSSubScriptLoader">mozIJSSubScriptLoader</a></li>
+</ul>
+
+<h2 id="storage">storage</h2>
+
+<ul class="secondary storage">
+ <li><a href="/en/XPCOM_Interface_Reference/mozIStorageVacuumParticipant" title="en/XPCOM_Interface_Reference/mozIStorageVacuumParticipant">mozIStorageVacuumParticipant</a></li>
+</ul>
+
+<h2 id="Util_2">Util</h2>
+
+<ul class="secondary Util">
+ <li><a href="/en/XPCOM_Interface_Reference/nsIEffectiveTLDService" title="en/XPCOM_Interface_Reference/nsIEffectiveTLDService">nsIEffectiveTLDService</a></li>
+</ul>
+
+<h2 id="Worker">Worker</h2>
+
+<ul class="secondary Worker">
+ <li><a href="/en/XPCOM_Interface_Reference/NsIAbstractWorker" title="en/XPCOM_Interface_Reference/NsIAbstractWorker">nsIAbstractWorker</a></li>
+</ul>
+
+<h1 id="Data">Data</h1>
+
+<ul class="primary Data">
+ <li><a href="/en/XPCOM_Interface_Reference/nsIArray" title="en/XPCOM_Interface_Reference/nsIArray">nsIArray</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsICategoryManager" title="en/XPCOM_Interface_Reference/nsICategoryManager">nsICategoryManager</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsICollection" title="en/XPCOM_Interface_Reference/nsICollection">nsICollection</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIDictionary" title="en/XPCOM_Interface_Reference/nsIDictionary">nsIDictionary</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIMutableArray" title="en/XPCOM_Interface_Reference/nsIMutableArray">nsIMutableArray</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsISimpleEnumerator" title="en/XPCOM_Interface_Reference/nsISimpleEnumerator">nsISimpleEnumerator</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsISupportsChar" title="en/XPCOM_Interface_Reference/nsISupportsChar">nsISupportsChar</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsISupportsDouble" title="en/XPCOM_Interface_Reference/nsISupportsDouble">nsISupportsDouble</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsISupportsFloat" title="en/XPCOM_Interface_Reference/nsISupportsFloat">nsISupportsFloat</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsISupportsID" title="en/XPCOM_Interface_Reference/nsISupportsID">nsISupportsID</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsISupportsInterfacePointer" title="en/XPCOM_Interface_Reference/nsISupportsInterfacePointer">nsISupportsInterfacePointer</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsISupportsPRBool" title="en/XPCOM_Interface_Reference/nsISupportsPRBool">nsISupportsPRBool</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsISupportsPrimitive" title="en/XPCOM_Interface_Reference/nsISupportsPrimitive">nsISupportsPrimitive</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsISupportsPRInt16" title="en/XPCOM_Interface_Reference/nsISupportsPRInt16">nsISupportsPRInt16</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsISupportsPRInt32" title="en/XPCOM_Interface_Reference/nsISupportsPRInt32">nsISupportsPRInt32</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsISupportsPRInt64" title="en/XPCOM_Interface_Reference/nsISupportsPRInt64">nsISupportsPRInt64</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsISupportsPriority" title="en/XPCOM_Interface_Reference/nsISupportsPriority">nsISupportsPriority</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsISupportsPRTime" title="en/XPCOM_Interface_Reference/nsISupportsPRTime">nsISupportsPRTime</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsISupportsPRUint16" title="en/XPCOM_Interface_Reference/nsISupportsPRUint16">nsISupportsPRUint16</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsISupportsPRUint32" title="en/XPCOM_Interface_Reference/nsISupportsPRUint32">nsISupportsPRUint32</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsISupportsPRUint64" title="en/XPCOM_Interface_Reference/nsISupportsPRUint64">nsISupportsPRUint64</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsISupportsPRUint8" title="en/XPCOM_Interface_Reference/nsISupportsPRUint8">nsISupportsPRUint8</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsISupportsString" title="en/XPCOM_Interface_Reference/nsISupportsString">nsISupportsString</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsISupportsVoid" title="en/XPCOM_Interface_Reference/nsISupportsVoid">nsISupportsVoid</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsISupportsWeakReference" title="en/XPCOM_Interface_Reference/nsISupportsWeakReference">nsISupportsWeakReference</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/NsIVariant" title="en/XPCOM_Interface_Reference/NsIVariant">nsIVariant</a></li>
+</ul>
+
+<h1 id="DO_NOT_USE">DO NOT USE</h1>
+
+<ul class="primary ignore">
+ <li><a href="/en/XPCOM_Interface_Reference/nsIEnumerator" title="en/XPCOM_Interface_Reference/nsIEnumerator">nsIEnumerator</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIInProcessContentFrameMessageManager" title="en/XPCOM_Interface_Reference/nsIInProcessContentFrameMessageManager">nsIInProcessContentFrameMessageManager</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIScriptableIO" title="en/XPCOM_Interface_Reference/nsIScriptableIO">nsIScriptableIO</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIXPCScriptable" title="en/XPCOM_Interface_Reference/nsIXPCScriptable">nsIXPCScriptable</a></li>
+</ul>
+
+<h1 id="Future">Future</h1>
+
+<ul class="primary ignore">
+ <li><a href="/en/XPCOM_Interface_Reference/NsIXMLHttpRequestUpload" title="en/XPCOM_Interface_Reference/NsIXMLHttpRequestUpload">nsIXMLHttpRequestUpload</a></li>
+</ul>
+
+<h1 id="Obsolete">Obsolete</h1>
+
+<ul class="primary ignore">
+ <li><a href="/en/XPCOM_Interface_Reference/nsIXmlRpcClient" title="en/XPCOM_Interface_Reference/nsIXmlRpcClient">nsIXmlRpcClient</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIXmlRpcFault" title="en/XPCOM_Interface_Reference/nsIXmlRpcFault">nsIXmlRpcFault</a></li>
+</ul>
+
+<h1 id="Security">Security</h1>
+
+<ul class="primary Security">
+ <li>
+  <h2 id="Auth">Auth</h2>
+
+  <ul class="secondary Auth">
+   <li><a href="/en/XPCOM_Interface_Reference/nsIAuthModule" title="en/XPCOM_Interface_Reference/nsIAuthModule">nsIAuthModule</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIAuthPrompt" title="en/XPCOM_Interface_Reference/nsIAuthPrompt">nsIAuthPrompt</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIAuthPromptProvider" title="en/XPCOM_Interface_Reference/nsIAuthPromptProvider">nsIAuthPromptProvider</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIAuthPromptWrapper" title="en/XPCOM_Interface_Reference/nsIAuthPromptWrapper">nsIAuthPromptWrapper</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIAsyncVerifyRedirectCallback" title="en/XPCOM_Interface_Reference/nsIAsyncVerifyRedirectCallback">nsIAsyncVerifyRedirectCallback</a></li>
+  </ul>
+
+  <h2 id="Content">Content</h2>
+
+  <ul class="secondary Content">
+   <li><a href="/en/XPCOM_Interface_Reference/nsIContentPolicy" title="en/XPCOM_Interface_Reference/nsIContentPolicy">nsIContentPolicy</a></li>
+  </ul>
+
+  <h2 id="Credentials">Credentials</h2>
+
+  <ul class="secondary Credentials">
+   <li><a href="/en/XPCOM_Interface_Reference/nsILoginInfo" title="en/XPCOM_Interface_Reference/nsILoginInfo">nsILoginInfo</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsILoginManager" title="en/XPCOM_Interface_Reference/nsILoginManager">nsILoginManager</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsILoginManager/Using_nsILoginManager" title="en/XPCOM_Interface_Reference/nsILoginManager/Using_nsILoginManager">Using nsILoginManager</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsILoginManagerStorage" title="en/XPCOM_Interface_Reference/nsILoginManagerStorage">nsILoginManagerStorage</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/NsILoginMetaInfo" title="en/XPCOM_Interface_Reference/NsILoginMetaInfo">nsILoginMetaInfo</a></li>
+  </ul>
+
+  <h2 id="History">History</h2>
+
+  <ul class="secondary History">
+   <li><a href="/en/XPCOM_Interface_Reference/nsIGlobalHistory" title="en/XPCOM_Interface_Reference/nsIGlobalHistory">nsIGlobalHistory</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIGlobalHistory2" title="en/XPCOM_Interface_Reference/nsIGlobalHistory2">nsIGlobalHistory2</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIGlobalHistory3" title="en/XPCOM_Interface_Reference/nsIGlobalHistory3">nsIGlobalHistory3</a></li>
+  </ul>
+
+  <h2 id="SSL">SSL</h2>
+
+  <ul class="secondary SSL">
+   <li><a href="/en/XPCOM_Interface_Reference/nsIBadCertListener2" title="en/XPCOM_Interface_Reference/nsIBadCertListener2">nsIBadCertListener2</a></li>
+  </ul>
+ </li>
+</ul>
+
+<h1 id="System">System</h1>
+
+<ul class="primary System">
+ <li>
+  <h2 id="Action">Action</h2>
+
+  <ul class="secondary Action">
+   <li><a href="/en/XPCOM_Interface_Reference/nsICancelable" title="en/XPCOM_Interface_Reference/nsICancelable">nsICancelable</a></li>
+  </ul>
+
+  <h2 id="Application">Application</h2>
+
+  <ul class="secondary Application">
+   <li>
+    <h3 id="Application_2">Application</h3>
+
+    <ul class="tercerary Application">
+     <li><a href="/en/XPCOM_Interface_Reference/nsIApplicationUpdateService" title="en/XPCOM_Interface_Reference/nsIApplicationUpdateService">nsIApplicationUpdateService</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIAppShell" title="en/XPCOM_Interface_Reference/nsIAppShell">nsIAppShell</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIAppShellService" title="en/XPCOM_Interface_Reference/nsIAppShellService">nsIAppShellService</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIAppStartup" title="en/XPCOM_Interface_Reference/nsIAppStartup">nsIAppStartup</a></li>
+    </ul>
+
+    <h3 id="XUL">XUL</h3>
+
+    <ul class="tercerary XUL">
+     <li><a href="/en/XPCOM_Interface_Reference/nsIXULAppInfo" title="en/XPCOM_Interface_Reference/nsIXULAppInfo">nsIXULAppInfo</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIXULRuntime" title="en/XPCOM_Interface_Reference/nsIXULRuntime">nsIXULRuntime</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIXULTemplateBuilder" title="en/XPCOM_Interface_Reference/nsIXULTemplateBuilder">nsIXULTemplateBuilder</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIXULTemplateQueryProcessor" title="en/XPCOM_Interface_Reference/nsIXULTemplateQueryProcessor">nsIXULTemplateQueryProcessor</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIXULTemplateResult" title="en/XPCOM_Interface_Reference/nsIXULTemplateResult">nsIXULTemplateResult</a></li>
+    </ul>
+   </li>
+  </ul>
+
+  <h2 id="Bookmark">Bookmark</h2>
+
+  <ul class="secondary Bookmark">
+   <li>
+    <h3 id="LiveMark">LiveMark</h3>
+
+    <ul class="tercerary LiveMark">
+     <li><a href="/en/XPCOM_Interface_Reference/nsILivemarkService" title="en/XPCOM_Interface_Reference/nsILivemarkService">nsILivemarkService</a></li>
+    </ul>
+   </li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsINavBookmarkObserver" title="en/XPCOM_Interface_Reference/nsINavBookmarkObserver">nsINavBookmarkObserver</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsINavBookmarksService" title="en/XPCOM_Interface_Reference/nsINavBookmarksService">nsINavBookmarksService</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsINavHistoryService" title="en/XPCOM_Interface_Reference/nsINavHistoryService">nsINavHistoryService</a></li>
+  </ul>
+
+  <h2 id="Browser_2">Browser</h2>
+
+  <ul class="secondary Browser">
+   <li>
+    <h3 id="DOM_2">DOM</h3>
+
+    <ul class="tercerary DOM">
+     <li><a href="/en/XPCOM_Interface_Reference/nsIWebBrowser" title="en/XPCOM_Interface_Reference/nsIWebBrowser">nsIWebBrowser</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIWebBrowserPersist" title="en/XPCOM_Interface_Reference/nsIWebBrowserPersist">nsIWebBrowserPersist</a></li>
+    </ul>
+   </li>
+  </ul>
+
+  <h2 id="Cache">Cache</h2>
+
+  <ul class="secondary Cache">
+   <li><a href="/en/XPCOM_Interface_Reference/nsICache" title="en/XPCOM_Interface_Reference/nsICache">nsICache</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsICacheDeviceInfo" title="en/XPCOM_Interface_Reference/nsICacheDeviceInfo">nsICacheDeviceInfo</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsICacheEntryDescriptor" title="en/XPCOM_Interface_Reference/nsICacheEntryDescriptor">nsICacheEntryDescriptor</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsICacheEntryInfo" title="en/XPCOM_Interface_Reference/nsICacheEntryInfo">nsICacheEntryInfo</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsICacheListener" title="en/XPCOM_Interface_Reference/nsICacheListener">nsICacheListener</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsICacheMetaDataVisitor" title="en/XPCOM_Interface_Reference/nsICacheMetaDataVisitor">nsICacheMetaDataVisitor</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsICacheService" title="en/XPCOM_Interface_Reference/nsICacheService">nsICacheService</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsICacheSession" title="en/XPCOM_Interface_Reference/nsICacheSession">nsICacheSession</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsICacheVisitor" title="en/XPCOM_Interface_Reference/nsICacheVisitor">nsICacheVisitor</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsICachingChannel" title="en/XPCOM_Interface_Reference/nsICachingChannel">nsICachingChannel</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsISelectionImageService" title="en/XPCOM_Interface_Reference/nsISelectionImageService">nsISelectionImageService</a></li>
+  </ul>
+
+  <h2 id="Chrome">Chrome</h2>
+
+  <ul class="secondary Chrome">
+   <li><a href="/en/XPCOM_Interface_Reference/nsISearchEngine" title="en/XPCOM_Interface_Reference/nsISearchEngine">nsISearchEngine</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsISearchSubmission" title="en/XPCOM_Interface_Reference/nsISearchSubmission">nsISearchSubmission</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIWebBrowserChrome" title="en/XPCOM_Interface_Reference/nsIWebBrowserChrome">nsIWebBrowserChrome</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIWindowCreator" title="en/XPCOM_Interface_Reference/nsIWindowCreator">nsIWindowCreator</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIWindowMediator" title="en/XPCOM_Interface_Reference/nsIWindowMediator">nsIWindowMediator</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIWindowWatcher" title="en/XPCOM_Interface_Reference/nsIWindowWatcher">nsIWindowWatcher</a></li>
+  </ul>
+
+  <h2 id="Clipboard">Clipboard</h2>
+
+  <ul class="secondary Clipboard">
+   <li><a href="/en/XPCOM_Interface_Reference/nsIClipboard" title="en/XPCOM_Interface_Reference/nsIClipboard">nsIClipboard</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIClipboardCommands" title="en/XPCOM_Interface_Reference/nsIClipboardCommands">nsIClipboardCommands</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIClipboardDragDropHookList" title="en/XPCOM_Interface_Reference/nsIClipboardDragDropHookList">nsIClipboardDragDropHookList</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIClipboardDragDropHooks" title="en/XPCOM_Interface_Reference/nsIClipboardDragDropHooks">nsIClipboardDragDropHooks</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIClipboardHelper" title="en/XPCOM_Interface_Reference/nsIClipboardHelper">nsIClipboardHelper</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIClipboardOwner" title="en/XPCOM_Interface_Reference/nsIClipboardOwner">nsIClipboardOwner</a></li>
+  </ul>
+
+  <h2 id="Core">Core</h2>
+
+  <ul class="secondary Core">
+   <li>
+    <h3 id="Action_2">Action</h3>
+
+    <ul class="tercerary Action">
+     <li><a href="/en/XPCOM_Interface_Reference/nsITransactionManager" title="en/XPCOM_Interface_Reference/nsITransactionManager">nsITransactionManager</a></li>
+    </ul>
+
+    <h2 id="Process">Process</h2>
+
+    <ul class="tercerary Process">
+     <li><a href="/en/XPCOM_Interface_Reference/nsIProcess" title="en/XPCOM_Interface_Reference/nsIProcess">nsIProcess</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/NsIProcess2" title="en/XPCOM_Interface_Reference/NsIProcess2">nsIProcess2</a></li>
+    </ul>
+
+    <h3 id="Thread">Thread</h3>
+
+    <ul class="tercerary Thread">
+     <li><a href="/en/XPCOM_Interface_Reference/nsIThread" title="en/XPCOM_Interface_Reference/nsIThread">nsIThread</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIThreadEventFilter" title="en/XPCOM_Interface_Reference/nsIThreadEventFilter">nsIThreadEventFilter</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIThreadInternal" title="en/XPCOM_Interface_Reference/nsIThreadInternal">nsIThreadInternal</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIThreadManager" title="en/XPCOM_Interface_Reference/nsIThreadManager">nsIThreadManager</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIThreadObserver" title="en/XPCOM_Interface_Reference/nsIThreadObserver">nsIThreadObserver</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIThreadPool" title="en/XPCOM_Interface_Reference/nsIThreadPool">nsIThreadPool</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/NsIThreadPoolListener" title="en/XPCOM_Interface_Reference/NsIThreadPoolListener">nsIThreadPoolListener</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIToolkit" title="en/XPCOM_Interface_Reference/nsIToolkit">nsIToolkit</a></li>
+    </ul>
+
+    <h3 id="Util_3">Util</h3>
+
+    <ul class="tercerary Util">
+     <li><a href="/en/XPCOM_Interface_Reference/nsIVersionComparator" title="en/XPCOM_Interface_Reference/nsIVersionComparator">nsIVersionComparator</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIWeakReference" title="en/XPCOM_Interface_Reference/nsIWeakReference">nsIWeakReference</a></li>
+    </ul>
+   </li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIFactory" title="en/XPCOM_Interface_Reference/nsIFactory">nsIFactory</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIInterfaceRequestor" title="en/XPCOM_Interface_Reference/nsIInterfaceRequestor">nsIInterfaceRequestor</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIJSCID" title="en/XPCOM_Interface_Reference/nsIJSCID">nsIJSCID</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIJSID" title="en/XPCOM_Interface_Reference/nsIJSID">nsIJSID</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIJSIID" title="en/XPCOM_Interface_Reference/nsIJSIID">nsIJSIID</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIModule" title="en/XPCOM_Interface_Reference/nsIModule">nsIModule</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIObserver" title="en/XPCOM_Interface_Reference/nsIObserver">nsIObserver</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIObserverService" title="en/XPCOM_Interface_Reference/nsIObserverService">nsIObserverService</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIProperties" title="en/XPCOM_Interface_Reference/nsIProperties">nsIProperties</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIProperty" title="en/XPCOM_Interface_Reference/nsIProperty">nsIProperty</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/NsIPropertyBag" title="en/XPCOM_Interface_Reference/NsIPropertyBag">nsIPropertyBag</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIPropertyBag2" title="en/XPCOM_Interface_Reference/nsIPropertyBag2">nsIPropertyBag2</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIPropertyElement" title="en/XPCOM_Interface_Reference/nsIPropertyElement">nsIPropertyElement</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIServerSocket" title="en/XPCOM_Interface_Reference/nsIServerSocket">nsIServerSocket</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIServerSocketListener" title="en/XPCOM_Interface_Reference/nsIServerSocketListener">nsIServerSocketListener</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIServiceManager" title="en/XPCOM_Interface_Reference/nsIServiceManager">nsIServiceManager</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsISocketProvider" title="en/XPCOM_Interface_Reference/nsISocketProvider">nsISocketProvider</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsISocketProviderService" title="en/XPCOM_Interface_Reference/nsISocketProviderService">nsISocketProviderService</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsISocketTransport" title="en/XPCOM_Interface_Reference/nsISocketTransport">nsISocketTransport</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsISocketTransportService" title="en/XPCOM_Interface_Reference/nsISocketTransportService">nsISocketTransportService</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsISupports" title="en/XPCOM_Interface_Reference/nsISupports">nsISupports</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIUUIDGenerator" title="en/XPCOM_Interface_Reference/nsIUUIDGenerator">nsIUUIDGenerator</a></li>
+  </ul>
+
+  <h2 id="Debug">Debug</h2>
+
+  <ul class="secondary Debug">
+   <li><a href="/en/XPCOM_Interface_Reference/nsIStackFrame" title="en/XPCOM_Interface_Reference/nsIStackFrame">nsIStackFrame</a></li>
+  </ul>
+
+  <h2 id="Device_2">Device</h2>
+
+  <ul class="secondary Device">
+   <li>
+    <h3 id="Display">Display</h3>
+
+    <ul class="tercerary Display">
+     <li><a href="/en/XPCOM_Interface_Reference/nsIScreen" title="en/XPCOM_Interface_Reference/nsIScreen">nsIScreen</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIScreenManager" title="en/XPCOM_Interface_Reference/nsIScreenManager">nsIScreenManager</a></li>
+    </ul>
+
+    <h3 id="Geolocation">Geolocation</h3>
+
+    <ul class="tercerary Geolocation">
+     <li><a href="/en/XPCOM_Interface_Reference/NsIGeolocationProvider" title="en/XPCOM_Interface_Reference/NsIGeolocationProvider">nsIGeolocationProvider</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/NsIGeolocationUpdate" title="en/XPCOM_Interface_Reference/NsIGeolocationUpdate">nsIGeolocationUpdate</a></li>
+    </ul>
+
+    <h3 id="orientation">orientation</h3>
+
+    <ul class="tercerary orientation">
+     <li><a href="/en/XPCOM_Interface_Reference/nsIAcceleration" title="en/XPCOM_Interface_Reference/nsIAcceleration">nsIAcceleration</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIAccelerationListener" title="en/XPCOM_Interface_Reference/nsIAccelerationListener">nsIAccelerationListener</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIAccelerometer" title="en/XPCOM_Interface_Reference/nsIAccelerometer">nsIAccelerometer</a></li>
+    </ul>
+
+    <h2 id="Misc">Misc</h2>
+
+    <ul class="tercerary Misc">
+     <li><a href="/en/XPCOM_Interface_Reference/nsISound" title="en/XPCOM_Interface_Reference/nsISound">nsISound</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIWifiMonitor" title="en/XPCOM_Interface_Reference/nsIWifiMonitor">nsIWifiMonitor</a></li>
+    </ul>
+   </li>
+  </ul>
+
+  <h2 id="Document_2">Document</h2>
+
+  <ul class="secondary Document">
+   <li><a href="/en/XPCOM_Interface_Reference/nsIWebNavigation" title="en/XPCOM_Interface_Reference/nsIWebNavigation">nsIWebNavigation</a></li>
+  </ul>
+
+  <h2 id="Environment">Environment</h2>
+
+  <ul class="secondary Environment">
+   <li><a href="/en/XPCOM_Interface_Reference/nsIEnvironment" title="en/XPCOM_Interface_Reference/nsIEnvironment">nsIEnvironment</a></li>
+  </ul>
+
+  <h2 id="Event_2">Event</h2>
+
+  <ul class="secondary Event">
+   <li><a href="/en/XPCOM_Interface_Reference/nsIEventListenerInfo" title="en/XPCOM_Interface_Reference/nsIEventListenerInfo">nsIEventListenerInfo</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIEventListenerService" title="en/XPCOM_Interface_Reference/nsIEventListenerService">nsIEventListenerService</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIEventTarget" title="en/XPCOM_Interface_Reference/nsIEventTarget">nsIEventTarget</a></li>
+  </ul>
+
+  <h2 id="Exception">Exception</h2>
+
+  <ul class="secondary Exception">
+   <li><a href="/en/XPCOM_Interface_Reference/nsIException" title="en/XPCOM_Interface_Reference/nsIException">nsIException</a></li>
+  </ul>
+
+  <h2 id="Extention">Extention</h2>
+
+  <ul class="secondary Extention">
+   <li><a href="/en/XPCOM_Interface_Reference/nsIExtensionManager" title="en/XPCOM_Interface_Reference/nsIExtensionManager">nsIExtensionManager</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIInstallLocation" title="en/XPCOM_Interface_Reference/nsIInstallLocation">nsIInstallLocation</a></li>
+  </ul>
+
+  <h2 id="External">External</h2>
+
+  <ul class="secondary External">
+   <li><a href="/en/XPCOM_Interface_Reference/nsIExternalProtocolService" title="en/XPCOM_Interface_Reference/nsIExternalProtocolService">nsIExternalProtocolService</a></li>
+  </ul>
+
+  <h2 id="Frame_2">Frame</h2>
+
+  <ul class="secondary Frame">
+   <li><a href="/en/XPCOM_Interface_Reference/nsIContentFrameMessageManager" title="en/XPCOM_Interface_Reference/nsIContentFrameMessageManager">nsIContentFrameMessageManager</a></li>
+  </ul>
+
+  <h2 id="History_2">History</h2>
+
+  <ul class="secondary History">
+   <li><a href="/en/XPCOM_Interface_Reference/nsISHEntry" title="en/XPCOM_Interface_Reference/nsISHEntry">nsISHEntry</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsISHistory" title="en/XPCOM_Interface_Reference/nsISHistory">nsISHistory</a></li>
+  </ul>
+
+  <h2 id="Idle">Idle</h2>
+
+  <ul class="secondary Idle">
+   <li><a href="/en/XPCOM_Interface_Reference/nsIIdleService" title="en/XPCOM_Interface_Reference/nsIIdleService">nsIIdleService</a></li>
+  </ul>
+
+  <h2 id="Internal_2">Internal</h2>
+
+  <ul class="secondary Internal">
+   <li>
+    <h3 id="Command">Command</h3>
+
+    <ul class="tercerary Command">
+     <li><a href="/en/XPCOM_Interface_Reference/nsICommandLine" title="en/XPCOM_Interface_Reference/nsICommandLine">nsICommandLine</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsICommandLineHandler" title="en/XPCOM_Interface_Reference/nsICommandLineHandler">nsICommandLineHandler</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsICommandLineRunner" title="en/XPCOM_Interface_Reference/nsICommandLineRunner">nsICommandLineRunner</a></li>
+    </ul>
+
+    <h3 id="Component">Component</h3>
+
+    <ul class="tercerary Component">
+     <li><a href="/en/XPCOM_Interface_Reference/nsIComponentManager" title="en/XPCOM_Interface_Reference/nsIComponentManager">nsIComponentManager</a></li>
+    </ul>
+
+    <h3 id="Preferences">Preferences</h3>
+
+    <ul class="tercerary Preferences">
+     <li><a href="/en/XPCOM_Interface_Reference/nsIContentPrefObserver" title="en/XPCOM_Interface_Reference/nsIContentPrefObserver">nsIContentPrefObserver</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIContentPrefService" title="en/XPCOM_Interface_Reference/nsIContentPrefService">nsIContentPrefService</a></li>
+    </ul>
+   </li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIComponentRegistrar" title="en/XPCOM_Interface_Reference/nsIComponentRegistrar">nsIComponentRegistrar</a></li>
+  </ul>
+
+  <h2 id="Internationalization">Internationalization</h2>
+
+  <ul class="secondary Internationalization">
+   <li><a href="/en/XPCOM_Interface_Reference/nsIBidiKeyboard" title="en/XPCOM_Interface_Reference/nsIBidiKeyboard">nsIBidiKeyboard</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsILocale" title="en/XPCOM_Interface_Reference/nsILocale">nsILocale</a></li>
+  </ul>
+
+  <h2 id="IO">IO</h2>
+
+  <ul class="secondary IO">
+   <li>
+    <h3 id="FileSystem">FileSystem</h3>
+
+    <ul class="tercerary FileSystem">
+     <li><a href="/en/XPCOM_Interface_Reference/nsIDirectoryEnumerator" title="en/XPCOM_Interface_Reference/nsIDirectoryEnumerator">nsIDirectoryEnumerator</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIDirectoryIterator" title="en/XPCOM_Interface_Reference/nsIDirectoryIterator">nsIDirectoryIterator</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIDirectoryService" title="en/XPCOM_Interface_Reference/nsIDirectoryService">nsIDirectoryService</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIDirectoryServiceProvider" title="en/XPCOM_Interface_Reference/nsIDirectoryServiceProvider">nsIDirectoryServiceProvider</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIDirectoryServiceProvider2" title="en/XPCOM_Interface_Reference/nsIDirectoryServiceProvider2">nsIDirectoryServiceProvider2</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIDirIndex" title="en/XPCOM_Interface_Reference/nsIDirIndex">nsIDirIndex</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIDirIndexListener" title="en/XPCOM_Interface_Reference/nsIDirIndexListener">nsIDirIndexListener</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIDirIndexParser" title="en/XPCOM_Interface_Reference/nsIDirIndexParser">nsIDirIndexParser</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIFile" title="en/XPCOM_Interface_Reference/nsIFile">nsIFile</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsILocalFile" title="en/XPCOM_Interface_Reference/nsILocalFile">nsILocalFile</a></li>
+    </ul>
+
+    <h3 id="Stream">Stream</h3>
+
+    <ul class="tercerary Stream">
+     <li><a href="/en/XPCOM_Interface_Reference/nsIAsyncInputStream" title="en/XPCOM_Interface_Reference/nsIAsyncInputStream">nsIAsyncInputStream</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIAsyncOutputStream" title="en/XPCOM_Interface_Reference/nsIAsyncOutputStream">nsIAsyncOutputStream</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIAsyncStreamCopier" title="en/XPCOM_Interface_Reference/nsIAsyncStreamCopier">nsIAsyncStreamCopier</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIBinaryInputStream" title="en/XPCOM_Interface_Reference/nsIBinaryInputStream">nsIBinaryInputStream</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIBinaryOutputStream" title="en/XPCOM_Interface_Reference/nsIBinaryOutputStream">nsIBinaryOutputStream</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIContentSniffer" title="en/XPCOM_Interface_Reference/nsIContentSniffer">nsIContentSniffer</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIConverterInputStream" title="en/XPCOM_Interface_Reference/nsIConverterInputStream">nsIConverterInputStream</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIFileInputStream" title="en/XPCOM_Interface_Reference/nsIFileInputStream">nsIFileInputStream</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIFileOutputStream" title="en/XPCOM_Interface_Reference/nsIFileOutputStream">nsIFileOutputStream</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIInputStream" title="en/XPCOM_Interface_Reference/nsIInputStream">nsIInputStream</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIInputStreamCallback" title="en/XPCOM_Interface_Reference/nsIInputStreamCallback">nsIInputStreamCallback</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIOutputStream" title="en/XPCOM_Interface_Reference/nsIOutputStream">nsIOutputStream</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIOutputStreamCallback" title="en/XPCOM_Interface_Reference/nsIOutputStreamCallback">nsIOutputStreamCallback</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIScriptableInputStream" title="en/XPCOM_Interface_Reference/nsIScriptableInputStream">nsIScriptableInputStream</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/NsIStreamListener" title="en/XPCOM_Interface_Reference/NsIStreamListener">nsIStreamListener</a></li>
+    </ul>
+
+    <h3 id="URL_2">URL</h3>
+
+    <ul class="tercerary URL">
+     <li><a href="/en/XPCOM_Interface_Reference/nsIIOService" title="en/XPCOM_Interface_Reference/nsIIOService">nsIIOService</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIStandardURL" title="en/XPCOM_Interface_Reference/nsIStandardURL">nsIStandardURL</a></li>
+    </ul>
+
+    <h3 id="User">User</h3>
+
+    <ul class="tercerary User">
+     <li><a href="/en/XPCOM_Interface_Reference/nsIPrompt" title="en/XPCOM_Interface_Reference/nsIPrompt">nsIPrompt</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIPromptService" title="en/XPCOM_Interface_Reference/nsIPromptService">nsIPromptService</a></li>
+    </ul>
+
+    <h3 id="Zipfile">Zipfile</h3>
+
+    <ul class="tercerary Zipfile">
+     <li><a href="/en/XPCOM_Interface_Reference/nsIZipEntry" title="en/XPCOM_Interface_Reference/nsIZipEntry">nsIZipEntry</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIZipReader" title="en/XPCOM_Interface_Reference/nsIZipReader">nsIZipReader</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIZipReaderCache" title="en/XPCOM_Interface_Reference/nsIZipReaderCache">nsIZipReaderCache</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIZipWriter" title="en/XPCOM_Interface_Reference/nsIZipWriter">nsIZipWriter</a></li>
+    </ul>
+
+    <h3 id="File">File</h3>
+
+    <ul class="tercerary File">
+     <li><a href="/en/XPCOM_Interface_Reference/nsIFilePicker" title="en/XPCOM_Interface_Reference/nsIFilePicker">nsIFilePicker</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIFileProtocolHandler" title="en/XPCOM_Interface_Reference/nsIFileProtocolHandler">nsIFileProtocolHandler</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIFileSpec" title="en/XPCOM_Interface_Reference/nsIFileSpec">nsIFileSpec</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIFileStreams" title="en/XPCOM_Interface_Reference/nsIFileStreams">nsIFileStreams</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIFileUtilities" title="en/XPCOM_Interface_Reference/nsIFileUtilities">nsIFileUtilities</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIFileView" title="en/XPCOM_Interface_Reference/nsIFileView">nsIFileView</a></li>
+    </ul>
+   </li>
+  </ul>
+
+  <h2 id="Memory">Memory</h2>
+
+  <ul class="secondary Memory">
+   <li><a href="/en/XPCOM_Interface_Reference/nsIMemory" title="en/XPCOM_Interface_Reference/nsIMemory">nsIMemory</a></li>
+  </ul>
+
+  <h2 id="Network">Network</h2>
+
+  <ul class="secondary Network">
+   <li>
+    <h3 id="Channel">Channel</h3>
+
+    <ul class="tercerary Channel">
+     <li><a href="/en/XPCOM_Interface_Reference/nsIChannel" title="en/XPCOM_Interface_Reference/nsIChannel">nsIChannel</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIChannelEventSink" title="en/XPCOM_Interface_Reference/nsIChannelEventSink">nsIChannelEventSink</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/NsIRequest" title="en/XPCOM_Interface_Reference/NsIRequest">nsIRequest</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/NsIRequestObserver" title="en/XPCOM_Interface_Reference/NsIRequestObserver">nsIRequestObserver</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIResumableChannel" title="en/XPCOM_Interface_Reference/nsIResumableChannel">nsIResumableChannel</a></li>
+    </ul>
+   </li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIDNSService" title="en/XPCOM_Interface_Reference/nsIDNSService">nsIDNSService</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIFTPChannel" title="en/XPCOM_Interface_Reference/nsIFTPChannel">nsIFTPChannel</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIFTPEventSink" title="en/XPCOM_Interface_Reference/nsIFTPEventSink">nsIFTPEventSink</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIHttpChannel" title="en/XPCOM_Interface_Reference/nsIHttpChannel">nsIHttpChannel</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIHttpChannelInternal" title="en/XPCOM_Interface_Reference/nsIHttpChannelInternal">nsIHttpChannelInternal</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIHttpHeaderVisitor" title="en/XPCOM_Interface_Reference/nsIHttpHeaderVisitor">nsIHttpHeaderVisitor</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIIDNService" title="en/XPCOM_Interface_Reference/nsIIDNService">nsIIDNService</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIProtocolHandler" title="en/XPCOM_Interface_Reference/nsIProtocolHandler">nsIProtocolHandler</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIProtocolProxyCallback" title="en/XPCOM_Interface_Reference/nsIProtocolProxyCallback">nsIProtocolProxyCallback</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIProtocolProxyFilter" title="en/XPCOM_Interface_Reference/nsIProtocolProxyFilter">nsIProtocolProxyFilter</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIProtocolProxyService" title="en/XPCOM_Interface_Reference/nsIProtocolProxyService">nsIProtocolProxyService</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIProxyInfo" title="en/XPCOM_Interface_Reference/nsIProxyInfo">nsIProxyInfo</a></li>
+  </ul>
+
+  <h2 id="Preferences_2">Preferences</h2>
+
+  <ul class="secondary Preferences">
+   <li><a href="/en/XPCOM_Interface_Reference/nsIINIParser" title="en/XPCOM_Interface_Reference/nsIINIParser">nsIINIParser</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIINIParserFactory" title="en/XPCOM_Interface_Reference/nsIINIParserFactory">nsIINIParserFactory</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIPrefBranch" title="en/XPCOM_Interface_Reference/nsIPrefBranch">nsIPrefBranch</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIPrefBranch2" title="en/XPCOM_Interface_Reference/nsIPrefBranch2">nsIPrefBranch2</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIPrefLocalizedString" title="en/XPCOM_Interface_Reference/nsIPrefLocalizedString">nsIPrefLocalizedString</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIPrefService" title="en/XPCOM_Interface_Reference/nsIPrefService">nsIPrefService</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIStringBundle" title="en/XPCOM_Interface_Reference/nsIStringBundle">nsIStringBundle</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIStringBundleService" title="en/XPCOM_Interface_Reference/nsIStringBundleService">nsIStringBundleService</a></li>
+  </ul>
+
+  <h2 id="Security_2">Security</h2>
+
+  <ul class="secondary Security">
+   <li>
+    <h3 id="Cookies">Cookies</h3>
+
+    <ul class="tercerary Cookies">
+     <li><a href="/en/XPCOM_Interface_Reference/nsICookie" title="en/XPCOM_Interface_Reference/nsICookie">nsICookie</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsICookie2" title="en/XPCOM_Interface_Reference/nsICookie2">nsICookie2</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsICookieAcceptDialog" title="en/XPCOM_Interface_Reference/nsICookieAcceptDialog">nsICookieAcceptDialog</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsICookieConsent" title="en/XPCOM_Interface_Reference/nsICookieConsent">nsICookieConsent</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsICookieManager" title="en/XPCOM_Interface_Reference/nsICookieManager">nsICookieManager</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsICookieManager2" title="en/XPCOM_Interface_Reference/nsICookieManager2">nsICookieManager2</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsICookiePermission" title="en/XPCOM_Interface_Reference/nsICookiePermission">nsICookiePermission</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsICookiePromptService" title="en/XPCOM_Interface_Reference/nsICookiePromptService">nsICookiePromptService</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsICookieService" title="en/XPCOM_Interface_Reference/nsICookieService">nsICookieService</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsICookieStorage" title="en/XPCOM_Interface_Reference/nsICookieStorage">nsICookieStorage</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsISessionStore" title="en/XPCOM_Interface_Reference/nsISessionStore">nsISessionStore</a></li>
+    </ul>
+
+    <h3 id="Crypto">Crypto</h3>
+
+    <ul class="tercerary Crypto">
+     <li><a href="/en/XPCOM_Interface_Reference/nsICryptoHash" title="en/XPCOM_Interface_Reference/nsICryptoHash">nsICryptoHash</a></li>
+    </ul>
+
+    <h3 id="Filter">Filter</h3>
+
+    <ul class="tercerary Filter">
+     <li><a href="/en/XPCOM_Interface_Reference/nsIParentalControlsService" title="en/XPCOM_Interface_Reference/nsIParentalControlsService">nsIParentalControlsService</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIPermission" title="en/XPCOM_Interface_Reference/nsIPermission">nsIPermission</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIPermissionManager" title="en/XPCOM_Interface_Reference/nsIPermissionManager">nsIPermissionManager</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsISecurityCheckedComponent" title="en/XPCOM_Interface_Reference/nsISecurityCheckedComponent">nsISecurityCheckedComponent</a></li>
+    </ul>
+
+    <h3 id="SSL_2">SSL</h3>
+
+    <ul class="tercerary SSL">
+     <li><a href="/en/XPCOM_Interface_Reference/nsISSLErrorListener" title="en/XPCOM_Interface_Reference/nsISSLErrorListener">nsISSLErrorListener</a></li>
+    </ul>
+   </li>
+  </ul>
+
+  <h2 id="Stream_2">Stream</h2>
+
+  <ul class="secondary Stream">
+   <li>
+    <h3 id="Stream_3">Stream</h3>
+
+    <ul class="tercerary Stream">
+     <li><a href="/en/XPCOM_Interface_Reference/nsIPipe" title="en/XPCOM_Interface_Reference/nsIPipe">nsIPipe</a></li>
+    </ul>
+   </li>
+   <li><a href="/en/XPCOM_Interface_Reference/NsITraceableChannel" title="en/XPCOM_Interface_Reference/NsITraceableChannel">nsITraceableChannel</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsITransport" title="en/XPCOM_Interface_Reference/nsITransport">nsITransport</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsITransportEventSink" title="en/XPCOM_Interface_Reference/nsITransportEventSink">nsITransportEventSink</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/NsITransportSecurityInfo" title="en/XPCOM_Interface_Reference/NsITransportSecurityInfo">nsITransportSecurityInfo</a></li>
+  </ul>
+
+  <h2 id="Timer">Timer</h2>
+
+  <ul class="secondary Timer">
+   <li><a href="/en/XPCOM_Interface_Reference/nsITimer" title="en/XPCOM_Interface_Reference/nsITimer">nsITimer</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsITimerCallback" title="en/XPCOM_Interface_Reference/nsITimerCallback">nsITimerCallback</a></li>
+  </ul>
+
+  <h2 id="UI">UI</h2>
+
+  <ul class="secondary UI">
+   <li>
+    <h3 id="Windows">Windows</h3>
+
+    <ul class="tercerary Windows">
+     <li><a href="/en/XPCOM_Interface_Reference/nsITaskbarPreview" title="en/XPCOM_Interface_Reference/nsITaskbarPreview">nsITaskbarPreview</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsITaskbarPreviewButton" title="en/XPCOM_Interface_Reference/nsITaskbarPreviewButton">nsITaskbarPreviewButton</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsITaskbarPreviewController" title="en/XPCOM_Interface_Reference/nsITaskbarPreviewController">nsITaskbarPreviewController</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsITaskbarProgress" title="en/XPCOM_Interface_Reference/nsITaskbarProgress">nsITaskbarProgress</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsITaskbarTabPreview" title="en/XPCOM_Interface_Reference/nsITaskbarTabPreview">nsITaskbarTabPreview</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsITaskbarWindowPreview" title="en/XPCOM_Interface_Reference/nsITaskbarWindowPreview">nsITaskbarWindowPreview</a></li>
+     <li><a href="/en/XPCOM_Interface_Reference/nsIWinTaskbar" title="en/XPCOM_Interface_Reference/nsIWinTaskbar">nsIWinTaskbar</a></li>
+    </ul>
+   </li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIAlertsService" title="en/XPCOM_Interface_Reference/nsIAlertsService">nsIAlertsService</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIWebProgress" title="en/XPCOM_Interface_Reference/nsIWebProgress">nsIWebProgress</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIWebProgressListener" title="en/XPCOM_Interface_Reference/nsIWebProgressListener">nsIWebProgressListener</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/NsIWebProgressListener2" title="en/XPCOM_Interface_Reference/NsIWebProgressListener2">nsIWebProgressListener2</a></li>
+  </ul>
+
+  <h2 id="Update">Update</h2>
+
+  <ul class="secondary Update">
+   <li><a href="/en/XPCOM_Interface_Reference/nsIUpdate" title="en/XPCOM_Interface_Reference/nsIUpdate">nsIUpdate</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIUpdateChecker" title="en/XPCOM_Interface_Reference/nsIUpdateChecker">nsIUpdateChecker</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIUpdateCheckListener" title="en/XPCOM_Interface_Reference/nsIUpdateCheckListener">nsIUpdateCheckListener</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIUpdateItem" title="en/XPCOM_Interface_Reference/nsIUpdateItem">nsIUpdateItem</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIUpdateManager" title="en/XPCOM_Interface_Reference/nsIUpdateManager">nsIUpdateManager</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIUpdatePatch" title="en/XPCOM_Interface_Reference/nsIUpdatePatch">nsIUpdatePatch</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIUpdatePrompt" title="en/XPCOM_Interface_Reference/nsIUpdatePrompt">nsIUpdatePrompt</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIUpdateTimerManager" title="en/XPCOM_Interface_Reference/nsIUpdateTimerManager">nsIUpdateTimerManager</a></li>
+  </ul>
+ </li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIProgrammingLanguage" title="en/XPCOM_Interface_Reference/nsIProgrammingLanguage">nsIProgrammingLanguage</a></li>
+</ul>
+
+<h1 id="Thunderbird">Thunderbird</h1>
+
+<ul class="primary Thunderbird">
+ <li>
+  <h2 id="Credentials_2">Credentials</h2>
+
+  <ul class="secondary Credentials">
+   <li><a href="/en/XPCOM_Interface_Reference/NsIMsgAccountManagerExtension" title="en/XPCOM_Interface_Reference/NsIMsgAccountManagerExtension">nsIMsgAccountManagerExtension</a></li>
+  </ul>
+
+  <h2 id="Element_3">Element</h2>
+
+  <ul class="secondary Element">
+   <li><a href="/en/XPCOM_Interface_Reference/nsIEditorMailSupport" title="en/XPCOM_Interface_Reference/nsIEditorMailSupport">nsIEditorMailSupport</a></li>
+  </ul>
+
+  <h2 id="Message">Message</h2>
+
+  <ul class="secondary Message">
+   <li><a href="/en/XPCOM_Interface_Reference/NsIDBChangeAnnouncer" title="en/XPCOM_Interface_Reference/NsIDBChangeAnnouncer">nsIDBChangeAnnouncer</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIDBChangeListener" title="en/XPCOM_Interface_Reference/nsIDBChangeListener">nsIDBChangeListener</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIMessenger" title="en/XPCOM_Interface_Reference/nsIMessenger">nsIMessenger</a></li>
+  </ul>
+ </li>
+ <li><a href="/en/XPCOM_Interface_Reference/NsIMsgCompFields" title="en/XPCOM_Interface_Reference/NsIMsgCompFields">nsIMsgCompFields</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIMsgCustomColumnHandler" title="en/XPCOM_Interface_Reference/nsIMsgCustomColumnHandler">nsIMsgCustomColumnHandler</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIMsgDatabase" title="en/XPCOM_Interface_Reference/nsIMsgDatabase">nsIMsgDatabase</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIMsgDBHdr" title="en/XPCOM_Interface_Reference/nsIMsgDBHdr">nsIMsgDBHdr</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIMsgDBView" title="en/XPCOM_Interface_Reference/nsIMsgDBView">nsIMsgDBView</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIMsgDBViewCommandUpdater" title="en/XPCOM_Interface_Reference/nsIMsgDBViewCommandUpdater">nsIMsgDBViewCommandUpdater</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIMsgFolder" title="en/XPCOM_Interface_Reference/nsIMsgFolder">nsIMsgFolder</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIMsgIdentity" title="en/XPCOM_Interface_Reference/nsIMsgIdentity">nsIMsgIdentity</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIMsgMessageService" title="en/XPCOM_Interface_Reference/nsIMsgMessageService">nsIMsgMessageService</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/NsIMsgSendLater" title="en/XPCOM_Interface_Reference/NsIMsgSendLater">nsIMsgSendLater</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIMsgThread" title="en/XPCOM_Interface_Reference/nsIMsgThread">nsIMsgThread</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIMsgWindow" title="en/XPCOM_Interface_Reference/nsIMsgWindow">nsIMsgWindow</a></li>
+ <li><a href="/en/XPCOM_Interface_Reference/nsIMsgWindowCommands" title="en/XPCOM_Interface_Reference/nsIMsgWindowCommands">nsIMsgWindowCommands</a></li>
+</ul>
+
+<h1 id="User_2">User</h1>
+
+<ul class="primary User">
+ <li>
+  <h2 id="History_3">History</h2>
+
+  <ul class="secondary History">
+   <li><a href="/en/XPCOM_Interface_Reference/nsIBrowserHistory" title="en/XPCOM_Interface_Reference/nsIBrowserHistory">nsIBrowserHistory</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIBrowserSearchService" title="en/XPCOM_Interface_Reference/nsIBrowserSearchService">nsIBrowserSearchService</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIMicrosummary" title="en/XPCOM_Interface_Reference/nsIMicrosummary">nsIMicrosummary</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIMicrosummaryGenerator" title="en/XPCOM_Interface_Reference/nsIMicrosummaryGenerator">nsIMicrosummaryGenerator</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIMicrosummaryObserver" title="en/XPCOM_Interface_Reference/nsIMicrosummaryObserver">nsIMicrosummaryObserver</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIMicrosummaryService" title="en/XPCOM_Interface_Reference/nsIMicrosummaryService">nsIMicrosummaryService</a></li>
+   <li><a href="/en/XPCOM_Interface_Reference/nsIMicrosummarySet" title="en/XPCOM_Interface_Reference/nsIMicrosummarySet">nsIMicrosummarySet</a></li>
+  </ul>
+ </li>
+</ul>
+</div>
+
+<p> </p>

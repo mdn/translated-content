@@ -1,0 +1,52 @@
+---
+title: WifiManager.connectionInformation
+slug: Web/API/WifiManager/connectionInformation
+tags:
+  - API
+  - B2G
+  - Firefox OS
+  - Non-standard
+  - Propriété
+  - Reference
+  - WebAPI
+  - Wi-Fi
+translation_of: Archive/B2G_OS/API/WifiManager/connectionInformation
+---
+<div>{{APIRef("Firefox OS")}}{{non-standard_header}}</div>
+
+<div>{{B2GOnlyHeader2('certified')}}</div>
+
+<p>La valeur de la propriété <strong><code>connectionInformation</code></strong> fournit des informations supplémentaires sur la connexion en cours.</p>
+
+<p>La valeur de cette propriété est mise à jour chaque fois que l'événement {{event("connectionInfoUpdate")}} est déclenché.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox">var info = navigator.mozWifiManager.connectionInformation</pre>
+
+<h2 id="Valeur">Valeur</h2>
+
+<p>Retourne un objet avec les propriétés suivantes:</p>
+
+<dl>
+ <dt><code>signalStrength</code>{{readonlyinline}}</dt>
+ <dd>Un nombre indiquant la force absolue du signal en <a href="https://fr.wikipedia.org/wiki/DBm">dBm</a> .</dd>
+ <dt><code>relSignalStrength</code>{{readonlyinline}}</dt>
+ <dd>Un certain nombre dans l'intervalle [0, 100] indiquant la force relative du signal.</dd>
+ <dt><code>LinkSpeed</code>{{readonlyinline}}</dt>
+ <dd>Un nombre représentant la vitesse de liaison en <code>Mb/s.</code></dd>
+ <dt><code>ipAddress</code>{{readonlyinline}}</dt>
+ <dd>Une chaîne représentant l'adresse IP de l'appareil dans la <a href="https://fr.wikipedia.org/wiki/Notation_d%C3%A9cimale_%C3%A0_point">notation décimale à point</a>.</dd>
+</dl>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<p>Ne fait partie d'aucune spécification.</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>{{domxref("WifiManager")}}</li>
+ <li>{{domxref("MozWifiConnectionInfoEvent")}}</li>
+ <li><a href="/fr/docs/WebAPI/WiFi_Information">WifI Information API</a></li>
+</ul>

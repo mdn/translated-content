@@ -1,0 +1,93 @@
+---
+title: コマンドの更新
+slug: Archive/Mozilla/XUL/Tutorial/Updating_Commands
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Updating_Commands
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Commands" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Broadcasters_and_Observers">次のページ  »</a></p>
+</div>
+
+<p>このセクションでは、コマンドの状態を、タイムリーに更新する方法について見ていきます。</p>
+
+<h3 id=".E3.82.B3.E3.83.9E.E3.83.B3.E3.83.89.E3.81.AE.E8.B5.B7.E5.8B.95" name=".E3.82.B3.E3.83.9E.E3.83.B3.E3.83.89.E3.81.AE.E8.B5.B7.E5.8B.95">コマンドの起動</h3>
+
+<p>コマンド (<code><code><a href="/ja/docs/Mozilla/Tech/XUL/command" title="command">command</a></code></code>) に <code><code id="a-oncommand"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/oncommand">oncommand</a></code></code> 属性が与えられている場合は、コマンドか、そのコマンドに結びつけられた要素に対して <code><span id="m-doCommand"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/doCommand">doCommand</a></code></span></code> メソッドを呼び出すことによりコマンドを起動できますが、 それ以外の場合は、起動するために数行のコードが必要になります。 コントローラとして実装されたコマンドを起動するためには、この追加の手順を踏む必要があります。 具体的には、独自のメニューコマンドを作成する場合、 例えば、実際のアプリケーションを開発するときに、編集メニュー用のコマンドを実装するような場面で、この手順が必要になると思います。</p>
+
+<p>幸い、この追加コードは非常に簡単です。 必要なことは、使用するコントローラを取得してコマンドを呼び出すだけです。 簡単に記述した例を以下に示します。</p>
+
+<pre>var controller = document.commandDispatcher.getControllerForCommand("cmd_paste");
+if (controller &amp;&amp; controller.isCommandEnabled("cmd_paste")){
+  controller.doCommand(command);
+}
+</pre>
+
+<p>上のコードでは、まず、コマンドディスパッチャから「cmd_paste」コマンドに対するコントローラを取得しています。 次に、コマンドが有効かどうかをチェックし、有効な場合は、コントローラの <code>doCommand</code> メソッドを使って、コマンドを実行します。 このとき、どの要素、あるいは、どのコントローラを利用すべきかについては、コマンドディスパッチャの方で考慮しているため、呼び出し側では意識する必要がないことを補足しておきます。 また、ほとんどの場合でするべきではないことですが、 コマンドが有効かどうかをチェックせずに、単に <code>doCommand</code> を呼び出しても、かまわないことになっています。</p>
+
+<p>上のコードを、コマンドを引数として渡せば、そのコマンドを実行するように関数化すれば、十分な汎用性を持たせることができます。 関数化しておけば、どんなコマンドを起動する場合にも、そのまま再利用が可能です。 実際、この関数は共通コードとして十分な機能なので、同じものが Mozilla のライブラリにも含まれています。 ライブラリの方の関数を使うためには、XUL ファイルから、スクリプト「<a class="external" rel="freelink">chrome://global/content/globalOverlay.js</a>」を読み込んでおき、 実行したいコマンドを引数で渡して、<code>goDoCommand</code> メソッドを呼び出します。 この関数のコードは、上記のものより若干長いだけなので、何かの理由でライブラリ全体を読み込みたくない場合は、このコードだけを直接、開発中のコードに取り込んでもかまわないと思います。</p>
+
+<pre>&lt;script src="chrome://global/content/globalOverlay.js"/&gt;
+
+&lt;command id="cmd_paste" oncommand="goDoCommand('cmd_paste');"/&gt;
+&lt;button label="Paste" command="cmd_paste"/&gt;
+</pre>
+
+<p>上の例では「貼り付け」ボタンを実装しています。 このボタンはコマンド要素に結びつけられています。 このコマンド要素は、ボタンから呼び出されたときに、必要なコントローラを探して、そこに実装されたコマンドを起動することになります。 上記のコードは、アプリケーションに「貼り付け」コマンドを作る場合に、機能面で実装するべきの内容の全てになります。 それ以外に必要なことは、「貼り付け」コマンドつまりボタンについても、有効か無効かを、以下に示すような方法によって、タイムリーに更新されるようにするだけです。</p>
+
+<h3 id=".E3.82.B3.E3.83.9E.E3.83.B3.E3.83.89.E3.82.A2.E3.83.83.E3.83.97.E3.83.87.E3.83.BC.E3.82.BF" name=".E3.82.B3.E3.83.9E.E3.83.B3.E3.83.89.E3.82.A2.E3.83.83.E3.83.97.E3.83.87.E3.83.BC.E3.82.BF">コマンドアップデータ</h3>
+
+<p>コマンドアップデータは <code><code><a href="/ja/docs/Mozilla/Tech/XUL/commandset" title="commandset">commandset</a></code></code> 要素に追加された機能で、指定されたイベントが発生したときに、1 つ、もしくは複数のコマンドの、有効かどうかの状態を更新します。 この機能を使用する場合、開発者は、コマンドがいつ有効になり、いつ無効になるのかを考えておく必要があります。 つまり、状態が変更されるタイミングと、コマンドを更新するべきタイミングを検討する必要があります。</p>
+
+<p>例えば、貼り付けコマンドは、テキスト入力欄がフォーカスを得ていて、かつ、クリップボード内に、貼り付け可能なものがあるときにのみ有効です。 このため、コマンドは、テキスト入力欄がフォーカスを得ている間に、クリップボードの内容が変化したときに有効 (または無効) になる可能性があります。 コマンドアップデータは、上記の状況が満たされるタイミングを監視しており、 状況が満たされたときに、コマンドの有効状態を更新するために必要なコードを実行させることが可能です。</p>
+
+<p>以下に、単純なコマンドアップデータの例を示します。</p>
+
+<pre>&lt;commandset id="updatePasteItem"
+            commandupdater="true"
+            events="focus"
+            oncommandupdate="goUpdateCommand('cmd_paste');"/&gt;
+</pre>
+
+<p>コマンドアップデータは、<code><code id="a-commandupdater"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/commandupdater">commandupdater</a></code></code> 属性を使用して指示されます。 このとき、属性値としては <code>true</code> を設定する必要があります。 <code><code id="a-events"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/events">events</a></code></code> 属性は、コマンドアップデータが監視するイベントのリストを設定するために使用されます。 イベントが複数の場合、コンマで区切って指定できます。 上の例では、コマンドアップデータは フォーカスイベントを監視しています。 これによって、要素がフォーカスを得たときにコマンドが更新されることになります。</p>
+
+<p>フォーカスイベントが発生したとき、 <code><code id="a-oncommandupdate"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/oncommandupdate">oncommandupdate</a></code></code> 属性に指定されたコードが呼び出されます。 この例では、前に述べたスクリプト globalOverlay.js に含まれている <code>goUpdateCommand</code> メソッドが呼び出されます。 このメソッドは、コマンドを更新し、コマンドと結び付けられたボタンやメニュー項目は、それに応じて有効または無効になります。 このメソッドのコードは単純なものです。 必要なコントローラを得て、その <code>isCommandEnabled</code> メソッドを呼び出し、その結果からコマンドを有効化または無効化します。 複数のコマンドを更新したい場合は、それぞれのコマンドに対して、<code>goUpdateCommand</code> メソッドを呼び出すようにします。</p>
+
+<p>コマンドアップデータは、すべての要素に対する、すべてのフォーカスイベントについて、他のイベントハンドラが応答した場合でさえも、通知を受けることに注意して下さい。 本質的に、コマンドアップデータは、大域的なイベントハンドラと類似しています。</p>
+
+<p>コマンドアップデータが反応することが可能なイベントを以下に示します。 必要なら、独自に作成することも可能です。</p>
+
+<ul>
+ <li><strong>focus</strong>: フォーカスを得ている要素が変更されたとき発生</li>
+ <li><strong>select</strong>: テキストの選択が変更されたとき発生</li>
+ <li><strong>undo</strong>: アンドゥ用のバッファが変更されたとき発生</li>
+ <li><strong>clipboard</strong>: クリップボードの内容が変更されたとき発生</li>
+</ul>
+
+<p>以下の例は、Mozilla ブラウザで利用されている、編集メニューコマンドを更新するための、コマンドアップデータです。 使われている関数は、「<a class="external" rel="freelink">chrome://communicator/content/utilityOverlay.js</a>」で定義されています。</p>
+
+<pre>&lt;commandset id="globalEditMenuItems"
+            commandupdater="true"
+            events="focus"
+            oncommandupdate="goUpdateGlobalEditMenuItems()"/&gt;
+&lt;commandset id="selectEditMenuItems"
+            commandupdater="true"
+            events="select"
+            oncommandupdate="goUpdateSelectEditMenuItems()"/&gt;
+&lt;commandset id="undoEditMenuItems"
+            commandupdater="true"
+            events="undo"
+            oncommandupdate="goUpdateUndoEditMenuItems()"/&gt;
+&lt;commandset id="clipboardEditMenuItems"
+            commandupdater="true"
+            events="clipboard"
+            oncommandupdate="goUpdatePasteMenuItems()"/&gt;
+</pre>
+
+<p>次のセクションでは、オブザーバについて見ていきます。</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Commands" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Broadcasters_and_Observers">次のページ  »</a></p>
+</div>

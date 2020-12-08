@@ -1,0 +1,825 @@
+---
+title: C++ Portability Guide
+slug: C++_Portability_Guide
+tags:
+  - Developing Mozilla
+translation_of: Mozilla/C++_Portability_Guide
+---
+<p><span style="line-height: 1.5;">この後に、多くのマシンやコンパイラを横断して移植可能な C++ のコードを作る上で役に立つ規則・ガイドライン・TIPS の集まりが続きます。</span></p>
+
+<p>この情報は、25 にものぼる異なるマシンと１ダース分以上の C++ コンパイラを横断して多くのコードを移植した結果として生まれたものです。これらのうちいくつかはあなたを苛立たせ、もうお手上げだと感じて「えい、&lt;<em>愛用の C++ 機能を追加</em>&gt;できないのはヘボコンパイラだ」と叫びたくなるかもしれません。しかし、これが移植性の高いコードの現実です。あなたがルールを守るなら、あなたのコードはすべての Mozilla プラットフォーム上でシームレスに動作し、新しいマシンへの移植も容易となるでしょう。</p>
+
+<p>私たちは情報を最新に保つよう努力しています（例えば、ときどきコンパイラの改定で制約が取り除かれるかもしれません）。これらの tips に関する最新情報や、追加の情報、追加のアイディアなどがあれば、それを <a class="link-mailto" href="mailto:blizzard@mozilla.org">Christopher Blizzard</a>、<a class="link-mailto" href="mailto:scc@mozilla.org">Scott Collins</a> か <a class="link-mailto" href="mailto:dbaron@dbaron.org">David Baron</a> に知らせてください。</p>
+
+<p>もし、以下のルールのいずれかを破っているようなコードが Mozilla の中に見つかったら、<a href="ja/Bug_writing_guidelines">バグ</a> として登録してください。作者を見つけるのに <a class="external" href="http://www.mozilla.org/bonsai.html">bonsai</a> を使うことも出来ます。</p>
+
+<p>これらのルールのどれ一つとして絶対的なものではありません。やりたいことが私たちのサポートするすべてのコンパイラで正しく動作するということをパッチの製作者が示せるならば、自由にこれらのルールを破って、改訂してもいいです。しかし、これにはたくさんの作業が必要で、それを行いたいと思う非常に良い理由がなければ推奨されません。</p>
+
+<h3 id="C.2B.2B_.E7.A7.BB.E6.A4.8D.E6.80.A7.E4.B8.8A.E3.81.AE.E8.A6.8F.E5.89.87" name="C.2B.2B_.E7.A7.BB.E6.A4.8D.E6.80.A7.E4.B8.8A.E3.81.AE.E8.A6.8F.E5.89.87">C++ 移植性上の規則</h3>
+
+<h4 id="C.2B.2B_.E3.83.86.E3.83.B3.E3.83.97.E3.83.AC.E3.83.BC.E3.83.88.E3.82.92.E6.9B.B8.E3.81.8F.E3.81.A8.E3.81.8D.E3.81.AB.E7.B4.B0.E5.BF.83.E3.81.AE.E6.B3.A8.E6.84.8F.E3.82.92.E6.89.95.E3.81.86" name="C.2B.2B_.E3.83.86.E3.83.B3.E3.83.97.E3.83.AC.E3.83.BC.E3.83.88.E3.82.92.E6.9B.B8.E3.81.8F.E3.81.A8.E3.81.8D.E3.81.AB.E7.B4.B0.E5.BF.83.E3.81.AE.E6.B3.A8.E6.84.8F.E3.82.92.E6.89.95.E3.81.86">C++ テンプレートを書くときに<em>細心の</em>注意を払う</h4>
+
+<p>（<code>nsCOMPtr</code> や <code>CallQueryInterface</code> によって使われているパターンのような）Mozilla で既に使われているために移植性があるということがすでにわかっているものだけを使うか、私たちのサポートするコンパイラ上で注意深くコードをテストすることをいとわず、壊れたときにそれを戻すことをいとわないのでなければ、C++ テンプレートを使わないでください。</p>
+
+<h4 id="static_.E3.81.AA.E3.82.B3.E3.83.B3.E3.82.B9.E3.83.88.E3.83.A9.E3.82.AF.E3.82.BF.E3.82.92.E4.BD.BF.E3.82.8F.E3.81.AA.E3.81.84" name="static_.E3.81.AA.E3.82.B3.E3.83.B3.E3.82.B9.E3.83.88.E3.83.A9.E3.82.AF.E3.82.BF.E3.82.92.E4.BD.BF.E3.82.8F.E3.81.AA.E3.81.84">static なコンストラクタを使わない</h4>
+
+<p>移植性の低い例：</p>
+
+<pre class="code">FooBarClass static_object(87, 92);
+
+void
+bar()
+{
+  if (static_object.count &gt; 15) {
+     ...
+  }
+}
+</pre>
+
+<p>static なコンストラクタは確実な動作が期待できません。static に初期化されたオブジェクトは起動時（<code>main()</code> が呼び出される直前）にインスタンス化されるオブジェクトです。たいていは、これらのオブジェクトには２つの部品があります。一つ目は、プログラムのグローバルなデータ部分へ読み込まれる静的なデータであるデータ部分です。二つ目の部分は、<code>main()</code> が呼び出される前にローダによって呼び出される初期化関数です。今までに、多くのコンパイラが初期化関数について信頼できる実装をしていないのを目にしてきました。そのとき、オブジェクトのデータを得るとき、それは決して初期化されないものなのです。この制限に対する一つの代替案として、オブジェクトの単独のインスタンスを作り、すべての参照を静的なラッパー関数への呼び出しをともなう初期化されたオブジェクトに入れ替えるラッパー関数を書くことが挙げられます：</p>
+
+<p>移植性の高い例：</p>
+
+<pre class="code">static FooBarClass* static_object;
+
+FooBarClass*
+getStaticObject()
+{
+  if (!static_object)
+    static_object =
+      new FooBarClass(87, 92);
+  return static_object;
+}
+
+void
+bar()
+{
+  if (getStaticObject()-&gt;count &gt; 15) {
+    ...
+  }
+}
+</pre>
+
+<h4 id=".E4.BE.8B.E5.A4.96.E3.82.92.E4.BD.BF.E3.82.8F.E3.81.AA.E3.81.84" name=".E4.BE.8B.E5.A4.96.E3.82.92.E4.BD.BF.E3.82.8F.E3.81.AA.E3.81.84">例外を使わない</h4>
+
+<p>例外は、幅広くは実装されていない C++ の次なる一例です。そのため、それらの使用は C++ の移植性を低下させます。例外を使ってはいけません。運悪く、同じような機能をもったよい代替案はありません。</p>
+
+<p>この規則の例外が一つあり（ここではそれについて言わないが）、それは多分大丈夫でしょう。ただし、いくつかのマシンに限定されたコードでだけ例外を使う必要性があるでしょう。もし、特定のマシン限定のコードの中で例外を使うなら、すべての例外をそこでキャッチしなくてはなりません。なぜならば、XP（クロスプラットフォーム）なコードにまたがって例外を飛ばすことは許されないからです。</p>
+
+<h4 id=".E5.AE.9F.E8.A1.8C.E6.99.82.E5.9E.8B.E6.83.85.E5.A0.B1.E3.82.92.E4.BD.BF.E3.82.8F.E3.81.AA.E3.81.84" name=".E5.AE.9F.E8.A1.8C.E6.99.82.E5.9E.8B.E6.83.85.E5.A0.B1.E3.82.92.E4.BD.BF.E3.82.8F.E3.81.AA.E3.81.84">実行時型情報を使わない</h4>
+
+<p>実行時型情報（RTTI:Run-time type information）は比較的新しい C++ の機能で、多くのコンパイラではサポートされていません。使わないで下さい。</p>
+
+<p>もし、実行時の型が必要なら、継承の階層のベースクラスへの <code>classOf()</code> virtual メンバ関数の追加と、それぞれのサブクラスのメンバ関数をオーバーライドすることによって類似の結果を作り上げることができます。<code>classOf()</code> が階層のそれぞれのクラスについて固有の値を返すなら、実行時の型比較をすることが出来るでしょう。</p>
+
+<h4 id="iostream_.E3.82.92.E5.90.AB.E3.82.80.E3.80.81C.2B.2B_.E6.A8.99.E6.BA.96.E3.83.A9.E3.82.A4.E3.83.96.E3.83.A9.E3.83.AA.E3.81.AE.E6.A9.9F.E8.83.BD.E3.82.92.E4.BD.BF.E3.82.8F.E3.81.AA.E3.81.84" name="iostream_.E3.82.92.E5.90.AB.E3.82.80.E3.80.81C.2B.2B_.E6.A8.99.E6.BA.96.E3.83.A9.E3.82.A4.E3.83.96.E3.83.A9.E3.83.AA.E3.81.AE.E6.A9.9F.E8.83.BD.E3.82.92.E4.BD.BF.E3.82.8F.E3.81.AA.E3.81.84">iostream を含む、C++ 標準ライブラリの機能を使わない</h4>
+
+<p>比較的新しいコンパイラは名前空間や <code>.h</code> のないヘッダの使用を必要とするのに対して、比較的古いコンパイラは使用できないので、C++ 標準ライブラリの機能を使うことで移植性に関する重大な問題を引き起こします。これには <code>cin</code> や <code>cout</code> のような、iostream 機能を含んでいます。</p>
+
+<p>さらに、C++ 標準ライブラリを使うことで、小さなデバイス上で Mozilla を使おうとしている人たちが使うのが難しくなります。</p>
+
+<p>この規則には一つの例外があります：配置 new を使うことは受け入れられています。それを使うには、 <code>#include NEW_H</code> を書くことで標準ヘッダ <code>&lt;new&gt;</code> をインクルードしてください。</p>
+
+<h4 id="namespace_.E6.A9.9F.E8.83.BD.E3.82.92.E4.BD.BF.E3.82.8F.E3.81.AA.E3.81.84" name="namespace_.E6.A9.9F.E8.83.BD.E3.82.92.E4.BD.BF.E3.82.8F.E3.81.AA.E3.81.84">namespace 機能を使わない</h4>
+
+<p>（<code>namespace</code> と <code>using</code> キーワードを使った）namespace のサポートは、比較的新しい C++ の機能で、多くのコンパイラではサポートされていません。使わないでください。</p>
+
+<h4 id="main.28.29_.E3.82.92.E5.BF.85.E3.81.9A_C.2B.2B_.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AB.E5.85.A5.E3.82.8C.E3.82.8B" name="main.28.29_.E3.82.92.E5.BF.85.E3.81.9A_C.2B.2B_.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AB.E5.85.A5.E3.82.8C.E3.82.8B"><code>main()</code> を必ず C++ ファイルに入れる</h4>
+
+<p>最初の C++ コンパイラである Cfront は実は C コンパイラにとってのとても気の利いたプリプロセッサでした。Cfront は C++ のコードを読み、同じ機能を持つ C のコードを生成しました。C++ とC の起動順序は、 少々異なっています（例えば、静的なコンストラクタは C++ のためには呼ばれなくてはならない）。そして、Cfront はこの特殊は実装を "<code>main()</code>" と呼ばれる関数の呼び出しに注目し、それを別のもの（"<code>__cpp__main()</code>" など）に変換し、C++ 特別の起動時動作をしないで元の関数を呼ぶ新たな <code>main()</code> を追加することによって実装しています。これをすべてうまく働かせるためにはもちろん、Cfront は <code>main()</code> 関数を<em>見る</em>必要があります。そのため、<code>main()</code> は C++ ファイルの中になければなりません。ほとんどのコンパイラはこの制限を何年か前に解除していて、C++ 特有の初期化実行をリンカ（Linker）の問題として扱っています。しかし、いくつかの商用コンパイラは未だに Cfront をベースに出荷されています。HP や SCO などがそれに該当します。</p>
+
+<p>このため、代替案はきわめて単純です。<code>main()</code> を C++ ファイルの中に入れることに注意してください。Unix バージョンの Mozilla では、ほんの数行のコードを含む新しい C++ ファイルを加えるという形でこれを行っています。そして実際には C ファイルにある主たる <code>main()</code> を読んでいます。</p>
+
+<h4 id=".E3.81.9F.E3.81.8F.E3.81.95.E3.82.93.E3.81.82.E3.82.8B_C.2FC.2B.2B_.E3.81.AE.E3.82.B3.E3.83.B3.E3.83.91.E3.82.A4.E3.83.A9.E3.81.AE.E4.B8.AD.E3.81.A7.E5.85.B1.E9.80.9A.E3.81.AE.E6.A9.9F.E8.83.BD.E3.81.A0.E3.81.91.E4.BD.BF.E3.81.86" name=".E3.81.9F.E3.81.8F.E3.81.95.E3.82.93.E3.81.82.E3.82.8B_C.2FC.2B.2B_.E3.81.AE.E3.82.B3.E3.83.B3.E3.83.91.E3.82.A4.E3.83.A9.E3.81.AE.E4.B8.AD.E3.81.A7.E5.85.B1.E9.80.9A.E3.81.AE.E6.A9.9F.E8.83.BD.E3.81.A0.E3.81.91.E4.BD.BF.E3.81.86">たくさんある C/C++ のコンパイラの中で共通の機能だけ使う</h4>
+
+<p>私たちが使うことの出来る数々のコンパイラでは、C と C++ コンパイラの実装はまったく異なっています。これは同じマシン上で C 言語でできることが C++ ではできないことがときどきあるということです。例の一つが long long型です。いくつかのシステム（IBM のコンパイラはその一つでした。しかし、今はよくなったと考えます）では、C コンパイラは long long型をサポートしていますが、C++ コンパイラはサポートしていません。これは移植上の障害になりえます。それは、ときどきこれらの型が C と C++ のファイルで共有されるヘッダファイルに出てくるからです。それに対する唯一の対策は、両方のコンパイラでサポートしている共通要素だけを使うことです。long long型についての特別なケースでは、long long型が利用できないために、64ビットの整数型をサポートするためのマクロのセットを開発しました。C か C++ コンパイラが特別に 64ビットの型をサポートしない場合にこれらのマクロを使います。</p>
+
+<h4 id="C_.E3.81.AE.E3.82.B3.E3.83.BC.E3.83.89.E3.81.AB_C.2B.2B_.E5.BC.8F.E3.82.B3.E3.83.A1.E3.83.B3.E3.83.88.E3.82.92.E5.85.A5.E3.82.8C.E3.81.AA.E3.81.84" name="C_.E3.81.AE.E3.82.B3.E3.83.BC.E3.83.89.E3.81.AB_C.2B.2B_.E5.BC.8F.E3.82.B3.E3.83.A1.E3.83.B3.E3.83.88.E3.82.92.E5.85.A5.E3.82.8C.E3.81.AA.E3.81.84">C のコードに C++ 式コメントを入れない</h4>
+
+<p>Netscape の Unix エンジニアの血圧を上げるもっとも簡単な方法は、C ファイルの中に C++式コメント（<strong><code>//</code></strong>コメント）を入れることです。そうです。これは Microsoft Visual C++ の Cコンパイラの上では動くでしょう。しかし、間違った方法です。世界の圧倒的多数の C コンパイラではサポートされていません。<strong>とにかくそんなことはやめなさい。</strong></p>
+
+<p>多くのヘッダファイルは C のファイルと C++ のファイルから include されます。これらのヘッダにも同じルールを適用するのは良い考えだと思います。C ファイルから include されるヘッダファイルの中に C++式コメントを入れないでください。もしかすると <code>#ifdef __cplusplus</code> ブロックの中だけは、C++ スタイルのコメントを使ってもよいと考えるかもしれません。しかし、それがいつでもうまくいくとは確信できません（いくつかのコンパイラはコメント抽出とプリプロセッシングの間で奇妙な挙動をします）し、そこまでするに見合う価値があるとはとても思えません。とにかく、C ファイルから include されるかもしれないすべてのヘッダファイルのために、C スタイルの <code>/**/</code>式コメントを貫いてください。</p>
+
+<h4 id="XP.EF.BC.88.E3.82.AF.E3.83.AD.E3.82.B9.E3.83.97.E3.83.A9.E3.83.83.E3.83.88.E3.83.95.E3.82.A9.E3.83.BC.E3.83.A0.EF.BC.89.E3.81.AA.E3.82.B3.E3.83.BC.E3.83.89.E3.81.AB_CR.EF.BC.88.E3.82.AD.E3.83.A3.E3.83.AA.E3.83.83.E3.82.B8.E3.83.AA.E3.82.BF.E3.83.BC.E3.83.B3.EF.BC.89.E3.82.92.E5.85.A5.E3.82.8C.E3.81.AA.E3.81.84" name="XP.EF.BC.88.E3.82.AF.E3.83.AD.E3.82.B9.E3.83.97.E3.83.A9.E3.83.83.E3.83.88.E3.83.95.E3.82.A9.E3.83.BC.E3.83.A0.EF.BC.89.E3.81.AA.E3.82.B3.E3.83.BC.E3.83.89.E3.81.AB_CR.EF.BC.88.E3.82.AD.E3.83.A3.E3.83.AA.E3.83.83.E3.82.B8.E3.83.AA.E3.82.BF.E3.83.BC.E3.83.B3.EF.BC.89.E3.82.92.E5.85.A5.E3.82.8C.E3.81.AA.E3.81.84">XP（クロスプラットフォーム）なコードに CR（キャリッジリターン）を入れない</h4>
+
+<p>これは C++ 特有のことではないため、C++ コンパイラだけ以上の問題に見えます。<a href="#.E3.81.9F.E3.81.8F.E3.81.95.E3.82.93.E3.81.82.E3.82.8B_C.2FC.2B.2B_.E3.81.AE.E3.82.B3.E3.83.B3.E3.83.91.E3.82.A4.E3.83.A9.E3.81.AE.E4.B8.AD.E3.81.A7.E5.85.B1.E9.80.9A.E3.81.AE.E6.A9.9F.E8.83.BD.E3.81.A0.E3.81.91.E4.BD.BF.E3.81.86">たくさんある C/C++ のコンパイラの中で共通の機能だけ使う</a> を参照してください。</p>
+
+<p>Unix システムでは、標準的な行端文字はニューライン（new line）(<code>'\n'</code>) です。多くの PC のエディタの標準はキャリッジリターン（carriage return）(<code>'\r'</code>)です。PC のコンパイラはどちらにせよ、何も問題がないようです。しかし、いくつかの Unix コンパイラではキャリッジリターンを見つけるとつっかえてしまいます（ホワイトスペースとしてそれを認識できないのです）。そのため、いかなるクロスプラットフォームなコードにも、キャリッジリターンをチェックインしないというルールを作っています。このルールは Windows のフロントエンドコードには強制されません。そのコードは PC上でしかコンパイルされないためです。Mac のコンパイラはどちらにせよ、何も問題がないようです。しかし同じルールはすべての PC のために適用されます。クロスプラットフォームなコードにはキャリッジリターンは入れてはいけません。</p>
+
+<p>MacCVSやWinCVS、DOSの改行を使用するよう設定されたcgwin上のcvsを使用する場合は、(リポジトリとワーキングコピーとの間で)自動的にプラットホームに適合した行端文字に変換されるので、行端文字について悩む必要はありません。ただ、Unixシステムの改行を使用するよう設定されたcygwin上のCVSを使用したり、Mac OS X付属のコマンドライン版cvsを使用する際は、行端文字に注意が必要です。 <span class="comment">MacCVS, WinCVS, and cygwin CVS when configured to use DOS line endings automatically convert to and from platform line endings, so you don't need to worry. However, if you use cygwin CVS configured for Unix line endings, or command line cvs on Mac OS X, you need to be somewhat careful.</span></p>
+
+<h4 id=".E3.83.8B.E3.83.A5.E3.83.BC.E3.83.A9.E3.82.A4.E3.83.B3.EF.BC.88new_line.EF.BC.89.E3.82.B3.E3.83.BC.E3.83.89.E3.82.92.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AE.E7.B5.82.E7.AB.AF.E3.81.AB.E5.85.A5.E3.82.8C.E3.82.8B" name=".E3.83.8B.E3.83.A5.E3.83.BC.E3.83.A9.E3.82.A4.E3.83.B3.EF.BC.88new_line.EF.BC.89.E3.82.B3.E3.83.BC.E3.83.89.E3.82.92.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AE.E7.B5.82.E7.AB.AF.E3.81.AB.E5.85.A5.E3.82.8C.E3.82.8B">ニューライン（new line）コードをファイルの終端に入れる</h4>
+
+<p>ニューラインコードがファイルの終端にない場合、Sun の WorkShop コンパイラでは .h ファイルで、HP上では .cpp ファイルでトラブルを起こします。</p>
+
+<h4 id=".E3.82.B3.E3.83.BC.E3.83.89.E3.81.AB.E4.BD.99.E8.A8.88.E3.81.AA.E3.83.88.E3.83.83.E3.83.97.E3.83.AC.E3.83.99.E3.83.AB.E3.82.BB.E3.83.9F.E3.82.B3.E3.83.AD.E3.83.B3.E3.82.92.E5.85.A5.E3.82.8C.E3.81.AA.E3.81.84" name=".E3.82.B3.E3.83.BC.E3.83.89.E3.81.AB.E4.BD.99.E8.A8.88.E3.81.AA.E3.83.88.E3.83.83.E3.83.97.E3.83.AC.E3.83.99.E3.83.AB.E3.82.BB.E3.83.9F.E3.82.B3.E3.83.AD.E3.83.B3.E3.82.92.E5.85.A5.E3.82.8C.E3.81.AA.E3.81.84">コードに余計なトップレベルセミコロンを入れない</h4>
+
+<p>移植性が低い例:</p>
+
+<pre class="code">int
+A::foo()
+{
+};
+</pre>
+
+<p>これは C よりも C++ のコードで姿を見せるように見えるまた一つの問題です。この問題はちょっとした厄介者です。関数の終わりにあるちょっと余計なセミコロンは、ほとんどのコンパイラで無視されます。しかし、いくつかのコンパイラではとても問題なのです（IBM の AIX コンパイラは余計なトップレベルセミコロンを嫌います）。余計なセミコロンをつけないでください。</p>
+
+<p>移植可能な例:</p>
+
+<pre class="code">int
+A::foo()
+{
+}
+</pre>
+
+<h4 id="C.2B.2B_.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E5.90.8D.E3.81.AE.E6.8B.A1.E5.BC.B5.E5.AD.90.E3.81.AF_.cpp" name="C.2B.2B_.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E5.90.8D.E3.81.AE.E6.8B.A1.E5.BC.B5.E5.AD.90.E3.81.AF_.cpp">C++ ファイル名の拡張子は <code>.cpp</code></h4>
+
+<p>これは、ただ面倒な問題です。C++ のファイル名は何？ <code>file.cpp</code>、<code>file.cc</code>、<code>file.C</code>、<code>file.cxx</code>、<code>file.c++</code>、<code>file.C++</code>？ ほとんどのコンパイラでは問題になりません。しかし、いくつかのコンパイラはとても選り好みします。Mozilla を移植するすべてのプラットフォーム上で使うことのできる一つのファイル拡張子を決めることができませんでした。たいした理由もなく、<code>file.cpp</code> に決めました。たぶん、Mozilla の最初の C++ ソースコードがその拡張子でチェックインされたからでしょう。まぁ、そうなりました。私たちが使う拡張子は <code>.cpp</code> です。この拡張子はほとんどのコンパイラで問題ないようです。しかし、いくつかのコンパイラはそうではありません。それらのシステム上では、私たちはコンパイラのためのラッパーを作りました（<code>ns/config/rules.mk</code> と <code>ns/build/*</code> の中の <code>STRICT_CPLUSPLUS_SUFFIX</code> をみてください）。これは、実際には <code>file.cpp</code> を適切な拡張子を持つ別のファイルとしてコピーして、そのファイルをコンパイルし、削除するものです。新しいシステムに移植するとき、次のようなことをする必要があります。オリジナルの <code>.cpp</code> ファイルに対するデバッグ情報を生成するために、<code>#line</code> ディレクティブを使うことを忘れないでください。</p>
+
+<h4 id="varargs.EF.BC.88.E5.8F.AF.E5.A4.89.E5.80.8B.E5.BC.95.E6.95.B0.E3.83.AA.E3.82.B9.E3.83.88.EF.BC.89.E3.81.A8.E3.82.A4.E3.83.B3.E3.83.A9.E3.82.A4.E3.83.B3.E3.82.92.E6.B7.B7.E3.81.9C.E3.81.AA.E3.81.84" name="varargs.EF.BC.88.E5.8F.AF.E5.A4.89.E5.80.8B.E5.BC.95.E6.95.B0.E3.83.AA.E3.82.B9.E3.83.88.EF.BC.89.E3.81.A8.E3.82.A4.E3.83.B3.E3.83.A9.E3.82.A4.E3.83.B3.E3.82.92.E6.B7.B7.E3.81.9C.E3.81.AA.E3.81.84">varargs（可変個引数リスト）とインラインを混ぜない</h4>
+
+<p><span class="comment">XXXldb: Is this still relevant? Where was it a problem? Do we have any examples of this in the tree?</span></p>
+
+<p>移植性の低い例:</p>
+
+<pre class="code">class FooBar {
+  void va_inline(char* p, ...) {
+    // &lt;span class="remark"&gt;コードがいろいろ&lt;/span&gt;
+  }
+};
+</pre>
+
+<p>タイトルですべてを語っています。varargs とインライン関数を合わせるのはよくはみえません。もし、（それ自身で移植性の問題を引き起こしかねない）varargs を使わなければならないなら、可変個引数リストをもつメンバ関数はインラインでない関数にするよう注意してください。</p>
+
+<p>移植可能な例:</p>
+
+<pre class="code">// &lt;span class="remark"&gt;foobar.h&lt;/span&gt;
+class FooBar {
+    void
+      va_non_inline(char* p, ...);
+};
+
+// &lt;span class="remark"&gt;foobar.cpp&lt;/span&gt;
+void
+FooBar::va_non_inline(char* p, ...)
+{
+       // &lt;span class="remark"&gt;コードがいろいろ&lt;/span&gt;
+}
+</pre>
+
+
+
+<h4 id=".E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E3.81.B8.E3.81.AE.E3.83.AA.E3.82.B9.E3.83.88.E3.81.AB.E3.82.88.E3.82.8B.E5.88.9D.E6.9C.9F.E5.8C.96.E3.82.92.E4.BD.BF.E3.82.8F.E3.81.AA.E3.81.84" name=".E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E3.81.B8.E3.81.AE.E3.83.AA.E3.82.B9.E3.83.88.E3.81.AB.E3.82.88.E3.82.8B.E5.88.9D.E6.9C.9F.E5.8C.96.E3.82.92.E4.BD.BF.E3.82.8F.E3.81.AA.E3.81.84">オブジェクトへのリストによる初期化を使わない</h4>
+
+<p>移植性の低い例:</p>
+
+<pre class="code">FooClass myFoo = {10, 20};
+</pre>
+
+<p>いくつかのコンパイラはオブジェクトに対するこの構文を許していません（HP-UX が認めていません）。実際のところ、いくつかのものが許しているにすぎません。このため、この構文を用いないでください。繰り返しますが、ラッパー関数を使ってください。詳細は <a href="#static_.E3.81.AA.E3.82.B3.E3.83.B3.E3.82.B9.E3.83.88.E3.83.A9.E3.82.AF.E3.82.BF.E3.82.92.E4.BD.BF.E3.82.8F.E3.81.AA.E3.81.84">static なコンストラクタを使わない</a> を参照してください。</p>
+
+<h4 id=".E3.83.87.E3.83.95.E3.82.A9.E3.83.AB.E3.83.88.E3.81.AE.E3.82.B3.E3.83.B3.E3.82.B9.E3.83.88.E3.83.A9.E3.82.AF.E3.82.BF.E3.81.AF.E5.BF.85.E3.81.9A.E6.8C.81.E3.81.9F.E3.81.9B.E3.82.8B" name=".E3.83.87.E3.83.95.E3.82.A9.E3.83.AB.E3.83.88.E3.81.AE.E3.82.B3.E3.83.B3.E3.82.B9.E3.83.88.E3.83.A9.E3.82.AF.E3.82.BF.E3.81.AF.E5.BF.85.E3.81.9A.E6.8C.81.E3.81.9F.E3.81.9B.E3.82.8B">デフォルトのコンストラクタは必ず持たせる</h4>
+
+<p><span class="comment">XXXldb: This is probably wrong, but there are a bunch of interesting points to be made related to default constructors - perhaps relating to nsAutoPtr.</span></p>
+
+<p>たとえオブジェクトの構造・継承上意味を持たない場合であっても、必ずデフォルトのコンストラクタを持たせてください。HP-UX のコンパイラは、デフォルトのコンストラクタを持たない静的に初期化されたオブジェクトにクレームをつけるでしょう。</p>
+
+<h4 id=".E3.82.A4.E3.83.B3.E3.83.8A.E3.83.BC_.28.E3.83.8D.E3.82.B9.E3.83.88.E3.81.95.E3.82.8C.E3.81.9F.29_.E3.82.AF.E3.83.A9.E3.82.B9.E3.81.AB.E3.81.AF.E6.B3.A8.E6.84.8F.E3.81.99.E3.82.8B" name=".E3.82.A4.E3.83.B3.E3.83.8A.E3.83.BC_.28.E3.83.8D.E3.82.B9.E3.83.88.E3.81.95.E3.82.8C.E3.81.9F.29_.E3.82.AF.E3.83.A9.E3.82.B9.E3.81.AB.E3.81.AF.E6.B3.A8.E6.84.8F.E3.81.99.E3.82.8B">インナー (ネストされた) クラスには注意する</h4>
+
+<p>インナークラスを使用する場合は、アクセス制御に注意してください。 インナークラスのアクセス制御について、大半のコンパイラは(意図してかどうかはともかく)2003年版のC++標準に従っています。この標準では、インナークラスは、取り囲むクラスのメンバーに対して特別なアクセス権を持っています。しかしながら、一部のコンパイラは1998年版のC++標準に従っています。この標準では、インナークラスは、取り囲むクラスのメンバーに対して特別なアクセス権を持っていません。 <span class="comment">When using nested classes, be careful with access control. While most compilers implement (whether intentionally or not) the rules in the 2003 version of the C++ standard that give nested classes special access to the members of their enclosing class, some compilers implement what is described in the 1998 version of the standard, which is that nested classes have no special access to members of their enclosing class.</span></p>
+
+<p>移植性の低い例:</p>
+
+<pre class="code">class Enclosing {
+  private:
+    int x;
+  public:
+    struct Nested {
+      void do_something(Enclosing *E) {
+        ++E-&gt;x;
+      }
+    };
+};
+</pre>
+
+<p>移植性の高い例：</p>
+
+<pre class="code">class Enclosing {
+  private:
+    int x;
+  public:
+    struct Nested; // forward declare |Nested| so the |friend|
+                   // declaration knows what scope it's in.
+    friend struct Nested; // make |Nested| a friend of its enclosing
+                          // class
+    struct Nested {
+      void do_something(Enclosing *E) {
+        ++E-&gt;x;
+      }
+    };
+};
+</pre>
+
+<p>二番目の移植性の低い例：</p>
+
+<pre class="code">class Enclosing {
+  private:
+    struct B;
+    struct A {
+      B *mB;
+    };
+    struct B {
+      A *mA;
+    };
+};
+</pre>
+
+<p>そして同等の機能を持つ移植性の高い例：</p>
+
+<pre class="code">class Enclosing {
+  private:
+    struct A;
+    friend struct A;
+    struct B;
+    friend struct B;
+    struct A {
+      B *mB;
+    };
+    struct B {
+      A *mA;
+    };
+};
+</pre>
+
+<h4 id=".E3.82.B3.E3.83.B3.E3.82.B9.E3.83.88.E3.83.A9.E3.82.AF.E3.82.BF.E3.82.84.E5.88.9D.E6.9C.9F.E5.8C.96.E3.82.92.E5.BF.85.E8.A6.81.E3.81.A8.E3.81.99.E3.82.8B.E5.A4.89.E6.95.B0.E5.AE.A3.E8.A8.80.E3.81.AB.E3.81.AF.E6.B3.A8.E6.84.8F.E3.81.99.E3.82.8B" name=".E3.82.B3.E3.83.B3.E3.82.B9.E3.83.88.E3.83.A9.E3.82.AF.E3.82.BF.E3.82.84.E5.88.9D.E6.9C.9F.E5.8C.96.E3.82.92.E5.BF.85.E8.A6.81.E3.81.A8.E3.81.99.E3.82.8B.E5.A4.89.E6.95.B0.E5.AE.A3.E8.A8.80.E3.81.AB.E3.81.AF.E6.B3.A8.E6.84.8F.E3.81.99.E3.82.8B">コンストラクタや初期化を必要とする変数宣言には注意する</h4>
+
+<p>移植性の低い例:</p>
+
+<pre class="code">void
+A::foo(int c)
+{
+  switch(c) {
+  case FOOBAR_1:
+    XyzClass buf(100);
+    // &lt;span class="remark"&gt;stuff&lt;/span&gt;
+    break;
+  }
+}
+</pre>
+
+<p>ブロックや switch 構文の周辺では、変数の配置には気をつけてください。いくつかのコンパイラ（HP-UX）は実行するためにコンストラクタや初期化子を必要とするどの変数もメソッドの最初に置くことを要求します。-- 変数が switch 文の内部で宣言され、デフォルトのコンストラクタを実行する必要があるため、これはコンパイルできないコードです。</p>
+
+<p>移植可能な例:</p>
+
+<pre class="code">void
+A::foo(int c)
+{
+  XyzClass buf(100);
+
+  switch(c) {
+  case FOOBAR_1:
+    // &lt;span class="remark"&gt;stuff&lt;/span&gt;
+    break;
+  }
+}
+</pre>
+
+<h4 id="C_.E3.81.A8_C.2B.2B_.E3.81.A7.E4.BA.92.E6.8F.9B.E6.80.A7.E3.81.AE.E3.81.82.E3.82.8B.E3.83.98.E3.83.83.E3.83.80.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.92.E4.BD.9C.E3.82.8B" name="C_.E3.81.A8_C.2B.2B_.E3.81.A7.E4.BA.92.E6.8F.9B.E6.80.A7.E3.81.AE.E3.81.82.E3.82.8B.E3.83.98.E3.83.83.E3.83.80.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.92.E4.BD.9C.E3.82.8B">C と C++ で互換性のあるヘッダファイルを作る</h4>
+
+<p>移植性の低い例:</p>
+
+<pre class="code">/*&lt;span class="remark"&gt;oldCheader.h&lt;/span&gt;*/
+int existingCfunction(char*);
+int anotherExistingCfunction(char*);
+
+/*&lt;span class="remark"&gt; oldCfile.c &lt;/span&gt;*/
+#include "oldCheader.h"
+...
+
+// &lt;span class="remark"&gt;new file.cpp&lt;/span&gt;
+extern "C" {
+#include "oldCheader.h"
+};
+...
+</pre>
+
+<p>C へのインタフェースが露出している新しいヘッダファイルを作るときは、C と C++ ファイルの両方からインクルードされた時に正しく動くように作る必要があります。新しい C++ ファイルの中で既存の C ヘッダをインクルードし始めると、C ヘッダファイルを（C と同様に）C++ もサポートするよう修正する必要があります。ただ単に古いヘッダファイルに <code>extern "C" {}</code> と入れるだけではだめです。このようにしてください:</p>
+
+<p>移植可能な例:</p>
+
+<pre class="code">/*&lt;span class="remark"&gt;oldCheader.h&lt;/span&gt;*/
+PR_BEGIN_EXTERN_C
+int existingCfunction(char*);
+int anotherExistingCfunction(char*);
+PR_END_EXTERN_C
+
+/*&lt;span class="remark"&gt; oldCfile.c &lt;/span&gt;*/
+#include "oldCheader.h"
+...
+
+// &lt;span class="remark"&gt;new file.cpp&lt;/span&gt;
+#include "oldCheader.h"
+...
+</pre>
+
+<p>このようにするのには、見栄え上よいという以上にいくつかの理由があります。一つには、これをインクルードするすべての C++ ファイルの代わりに一つの共用空間（ヘッダファイル）で仕事をすることで、他の人にとって快適にするのです。また、C++ でも安全な C ヘッダを作ることで、「あのー、このファイルは今、 C++ からも呼び出されていますよ」と文書化したことになります。これはよいことです。そしてまた、修正がやっかいな大きな移植上の大きな悪夢を防ぐことができるのです。。。</p>
+
+<p>いくつかのシステムでは C または C++ でインクルードされるべきシステムヘッダファイルの中で C++ を include します。ただ単に <code>extern "C" {}</code> で守るだけではだめで、通常だと"最適化"として提供されるインライン関数の形で用いられる実際の C++ コードでなくてはなりません。わたしたちは、ヴェンダがそのようにするという知恵に疑問を持っていますが、私たちに出来ることはありません。システムヘッダファイルを変更することは、できれば望みたくない方法です。どっちにしろ、これがそんなに問題でしょうか？以下のコードの一部分を例に取りましょう:</p>
+
+<p>移植性の低い例:</p>
+
+<pre class="code">/*&lt;span class="remark"&gt;system.h&lt;/span&gt;*/
+#ifdef __cplusplus
+  /*&lt;span class="remark"&gt; optimization &lt;/span&gt;*/
+inline int sqr(int x) {return(x*x);}
+#endif
+
+/*&lt;span class="remark"&gt;header.h&lt;/span&gt;*/
+#include &lt;system.h&gt;
+int existingCfunction(char*);
+
+// &lt;span class="remark"&gt;file.cpp&lt;/span&gt;
+extern "C" {
+#include "header.h"
+}
+</pre>
+
+<p>何が起きそうなのか？C++ コンパイラは <code>extern "C"</code> 宣言を <code>file.cpp</code> に見つけたとき、言語を C に変更するでしょう。なぜならば、内部のコードはすべて C と仮定されるからです。C 型の自由な命名規則が適用されます。しかし、（これはコンパイラにではなく、プリプロセッサに見つけられる）__cplusplus プリプロセッサマクロがすでに定義されています。システムヘッダファイルの中で、<code>#ifdef __cplusplus</code> ブロックの内部の C++ コードは（すでにC モードで実行している）コンパイラに見つけられるでしょう。文法エラー（Syntax Error）が大量に出ます！もし、代わりに<code>extern "C"</code> がヘッダファイルの中でなされていれば、C 関数は正しく守られ、システムヘッダファイルを均衡の外に離します。これは動作します：</p>
+
+<p>移植性の高い例:</p>
+
+<pre class="code">/*&lt;span class="remark"&gt;system.h&lt;/span&gt;*/
+#ifdef __cplusplus
+  /*&lt;span class="remark"&gt; optimization &lt;/span&gt;*/
+inline int sqr(int x) {return(x*x);}
+#endif
+
+/*&lt;span class="remark"&gt;header.h&lt;/span&gt;*/
+#include &lt;system.h&gt;
+extern "C" {
+int existingCfunction(char*);
+}
+
+// &lt;span class="remark"&gt;file.cpp&lt;/span&gt;
+#include "header.h"
+</pre>
+
+<p>プログラムの <code>extern "C"</code> セグメントから離れる前のもう一つの問題があります。ときどき、システムファイルで <code>extern "C"</code> すべきと感じるでしょう。これは <code>extern "C"</code> による保護を自身でもたない C システムヘッダファイルをインクルードする必要があるからです。多くのヴェンダはすべてのヘッダで C++ をサポートするように更新していますが、C++ を十分に理解しないものがまだいくつかあります。他の大多数ではなく、ほんのいくつかのプラットフォームのためにそうしなければならないでしょう(そういう場合には <code>#ifdef SYSTEM_X</code> を使います)。（実はシステムヘッダファイルをインクルードするのにもっとも安全な場所である）システムヘッダファイルで <code>extern "C"</code> するためのもっとも安全な場所は、ヘッダファイルのインクルード階層のなかでできる限り低い場所です。言い換えます。このフレーズをシステムコードにより近い低位置のヘッダファイルへ入れてください。mail のヘッダファイルの中に入れてはいけません。理想を言えば、もっとも良い場所は直接的にシステムコードが入っている NSPR や XP のヘッダファイルの中です。</p>
+
+<h4 id="for.28.29_.E6.A7.8B.E6.96.87.E3.81.AE.E5.86.85.E9.83.A8.E3.81.A7.E5.AE.A3.E8.A8.80.E3.81.95.E3.82.8C.E3.82.8B.E5.A4.89.E6.95.B0.E3.81.AE.E3.82.B9.E3.82.B3.E3.83.BC.E3.83.97.E3.81.AB.E6.B0.97.E3.82.92.E3.81.A4.E3.81.91.E3.82.8B" name="for.28.29_.E6.A7.8B.E6.96.87.E3.81.AE.E5.86.85.E9.83.A8.E3.81.A7.E5.AE.A3.E8.A8.80.E3.81.95.E3.82.8C.E3.82.8B.E5.A4.89.E6.95.B0.E3.81.AE.E3.82.B9.E3.82.B3.E3.83.BC.E3.83.97.E3.81.AB.E6.B0.97.E3.82.92.E3.81.A4.E3.81.91.E3.82.8B"><code>for()</code> 構文の内部で宣言される変数のスコープに気をつける</h4>
+
+<p>移植性の低い例:</p>
+
+<pre class="code">void
+A::foo()
+{
+  for (int i = 0; i &lt; 10; i++) {
+    // &lt;span class="remark"&gt;do something&lt;/span&gt;
+  }
+  // &lt;span class="remark"&gt;&lt;strong&gt;i&lt;/strong&gt; might get referenced&lt;/span&gt;
+  // &lt;span class="remark"&gt; after the loop.&lt;/span&gt;
+  ...
+}
+</pre>
+
+<p>これは実のところ C++ 標準が時間をかけて変更されているため生じた問題です。もともとの C++ の規格では <strong>i</strong> のスコープは外のブロックと同様（この場合は関数 <code>A::foo()</code>）です。標準は変更され、ゆえに今では <strong>i</strong> のスコープは <code>for() {}</code> ブロック内部です。ほとんどのコンパイラはこの新しい標準を用います。いくつかのコンパイラ（例えば、HP-UX）は未だに古い標準を使っています。いくつかのほかのコンパイラ（例えば、gcc）は新しいルールを使っていますが、古いものも許容しています。もし、<strong>i</strong> が <code>for() {}</code> ブロックの中の後ろで参照されたとき、gcc は構築を許すでしょうが、"obsolete binding"（もう使われない結びつき） を使っていると警告を出すでしょう。そのため、上記のコードが有効な一方で <strong>i</strong> が関数の後に使われた場合に不明瞭となるでしょう。おそらくは大事を取り、巡回変数の宣言を <code>for()</code> ループの外側で行うことが望ましいでしょう。そうすることにより、すべてのプラットフォームでの動作を把握することが出来るのです:</p>
+
+<p>移植性の高い例:</p>
+
+<pre class="code">  void
+  A::foo()
+  {
+    int i;
+    for (i = 0; i &lt; 10; i++) {
+      // &lt;span class="remark"&gt;do something&lt;/span&gt;
+    }
+    // &lt;span class="remark"&gt;&lt;strong&gt;i&lt;/strong&gt; might get referenced&lt;/span&gt;
+    // &lt;span class="remark"&gt; after the loop.&lt;/span&gt;
+    ...
+  }
+</pre>
+
+<p>また、ループのための変数をその後ろで再利用しても、かわりに別の方法で変数を再宣言してもいけません。これは現在の標準で許容されていますが、多くのコンパイラはエラーとして扱います。以下の例を参照ください:</p>
+
+<p>移植性の低い例:</p>
+
+<pre class="code">void
+A::foo()
+{
+  for (int &lt;strong&gt;i&lt;/strong&gt;; 0;) {
+    // &lt;span class="remark"&gt;do something&lt;/span&gt;
+  }
+  for (int &lt;strong&gt;i&lt;/strong&gt;; 0;) {
+    // &lt;span class="remark"&gt;do something else&lt;/span&gt;
+  }
+}
+</pre>
+
+<p>移植性の高い例:</p>
+
+<pre class="code">void
+A::foo()
+{
+  for (int &lt;strong&gt;i&lt;/strong&gt;; 0;) {
+    // &lt;span class="remark"&gt;do something&lt;/span&gt;
+  }
+  for (int &lt;strong&gt;j&lt;/strong&gt;; 0;) {
+    // &lt;span class="remark"&gt;do something else&lt;/span&gt;
+  }
+}
+</pre>
+
+<h4 id=".E3.83.AD.E3.83.BC.E3.82.AB.E3.83.AB.E3.81.AA.E9.9B.86.E5.90.88.E3.81.AE.E5.88.9D.E6.9C.9F.E5.8C.96.E3.81.AF_static_.E3.81.AB.E5.AE.A3.E8.A8.80.E3.81.99.E3.82.8B" name=".E3.83.AD.E3.83.BC.E3.82.AB.E3.83.AB.E3.81.AA.E9.9B.86.E5.90.88.E3.81.AE.E5.88.9D.E6.9C.9F.E5.8C.96.E3.81.AF_static_.E3.81.AB.E5.AE.A3.E8.A8.80.E3.81.99.E3.82.8B">ローカルな集合の初期化は static に宣言する</h4>
+
+<p>移植性の低い例:</p>
+
+<pre class="code">void
+A:: func_foo()
+{
+  char* foo_int[] = {"1", "2", "C"};
+  ...
+}
+</pre>
+
+<p>この一見無害なコード断片は HP-UX のコンパイラとリンカを使うと "loader error" を生成します。もし、配列を static なデータとしたいのなら、このように:</p>
+
+<p>移植性の高い例:</p>
+
+<pre class="code">void
+A:: func_foo()
+{
+  static char *foo_int[] = {"1", "2", "C"};
+  ...
+}
+</pre>
+
+<p>さもなければ、自動的な配列を保持することもできます。その場合初期化は手動で行います:</p>
+
+<p>移植性の高い例:</p>
+
+<pre class="code">void
+A:: func_foo()
+{
+  char *foo_int[3];
+
+  foo_int[0] = XP_STRDUP("1");
+  foo_int[1] = XP_STRDUP("2");
+  foo_int[2] = XP_STRDUP("C");
+  // &lt;span class="remark"&gt;or something equally Byzantine...&lt;/span&gt;
+  ...
+}
+</pre>
+
+<h4 id=".E7.A7.BB.E6.A4.8D.E6.80.A7.E3.82.92.E4.B8.8B.E3.81.92.E3.82.8B.E8.A4.87.E9.9B.91.E3.81.AA.E3.82.A4.E3.83.B3.E3.83.A9.E3.82.A4.E3.83.B3.E3.81.AF.E9.99.A4.E3.81.8F" name=".E7.A7.BB.E6.A4.8D.E6.80.A7.E3.82.92.E4.B8.8B.E3.81.92.E3.82.8B.E8.A4.87.E9.9B.91.E3.81.AA.E3.82.A4.E3.83.B3.E3.83.A9.E3.82.A4.E3.83.B3.E3.81.AF.E9.99.A4.E3.81.8F">移植性を下げる複雑なインラインは除く</h4>
+
+<p>移植性の低い例:</p>
+
+<pre class="code">class FooClass {
+  ...
+  int fooMethod(char* p) {
+    if (p[0] == '\0')
+      return -1;
+
+    doSomething();
+    return 0;
+  }
+  ...
+};
+</pre>
+
+<p>これは驚きです。しかし、多くの C++ コンパイラはインラインメンバ関数のハンドリングでとても悪い挙動をします。Cfront ベースのコンパイラ（SCO や HP-UX 上のそれらなど）はぜんぶではなくともほとんどの単純なインライン関数でも、"sorry, unimplemented（ごめんなさい、実装されていません）"とエラーメッセージを出して音を上げがちです。多くの場合、この問題を起こすソースは、複数の return 文を持つインラインです。これを修正するためには、関数の最後の単独の箇所に return を持ってくることです。しかし、ほかにも "not implemented（実装されていません）" という結果に終わらせてしまうだろう要素があります。こういった理由のため、Mozilla の C++ コードのほとんどはインライン関数を使っていないことがわかるでしょう。インライン関数をすべて追い払うことをルール化したくはありませんが、インライン関数の仕様が一定の危険をともなうことに注意する必要があります。そのため、（ただパフォーマンス上のメリットがあるかもしれないという行き当たりばったりの望みではなく）目に見えるメリットがあるときだけ使うと良いでしょう。<strong>まぁ、そんなことはするなということです。</strong></p>
+
+<p>移植性の高い例:</p>
+
+<pre class="code">class FooClass {
+  ...
+  int fooMethod(char* p) {
+    int return_value;
+
+      if (p[0] == '\0') {
+         return_value = -1;
+      } else {
+         doSomething();
+         return_value = 0;
+      }
+      return return_value;
+  }
+  ...
+};
+</pre>
+
+<p>もしくは</p>
+
+<pre class="code">class FooClass {
+  ...
+  int fooMethod(char* p);
+  ...
+};
+
+int FooClass::fooMethod(char* p)
+{
+  if (p[0] == '\0')
+    return -1;
+
+  doSomething();
+  return 0;
+}
+</pre>
+
+<h4 id=".E3.82.A4.E3.83.B3.E3.83.A9.E3.82.A4.E3.83.B3.E9.96.A2.E6.95.B0.E3.82.92.E5.91.BC.E3.81.B6_return_.E6.96.87.E3.82.92.E4.BD.BF.E3.82.8F.E3.81.AA.E3.81.84" name=".E3.82.A4.E3.83.B3.E3.83.A9.E3.82.A4.E3.83.B3.E9.96.A2.E6.95.B0.E3.82.92.E5.91.BC.E3.81.B6_return_.E6.96.87.E3.82.92.E4.BD.BF.E3.82.8F.E3.81.AA.E3.81.84">インライン関数を呼ぶ return 文を使わない</h4>
+
+<p>前のティップと同じ理由で、インライン関数を呼ぶ return 文を使ってはいけません。同様に "not implemented（実装されていません）" というエラーが得られるでしょう。戻り値は一時的に保存し、そして戻してやりましょう。</p>
+
+<h4 id="include_.E3.81.AE.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E9.9A.8E.E5.B1.A4.E3.81.A8.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.B5.E3.82.A4.E3.82.BA.E3.81.AB.E6.B0.97.E3.82.92.E3.81.A4.E3.81.91.E3.82.8B" name="include_.E3.81.AE.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E9.9A.8E.E5.B1.A4.E3.81.A8.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.B5.E3.82.A4.E3.82.BA.E3.81.AB.E6.B0.97.E3.82.92.E3.81.A4.E3.81.91.E3.82.8B">include のファイル階層とファイルサイズに気をつける</h4>
+
+<p>include のファイル階層とファイルサイズに気をつけてください。Microsoft Visual C++ 1.5 は、深いファイル階層や大きなファイルサイズの include をすると、インターナルコンパイラエラーを出します。ヘッダファイルのファイルサイズと同様にヘッダファイルの階層も上限に気をつけてください。</p>
+
+<h4 id=".E3.81.99.E3.81.B9.E3.81.A6.E3.81.AE.E3.82.B5.E3.83.96.E3.82.AF.E3.83.A9.E3.82.B9.E3.81.AE_virtual_.E3.83.A1.E3.83.B3.E3.83.90.E9.96.A2.E6.95.B0.E4.B8.8A.E3.81.A7_virtual_.E5.AE.A3.E8.A8.80.E3.82.92.E4.BD.BF.E3.81.86" name=".E3.81.99.E3.81.B9.E3.81.A6.E3.81.AE.E3.82.B5.E3.83.96.E3.82.AF.E3.83.A9.E3.82.B9.E3.81.AE_virtual_.E3.83.A1.E3.83.B3.E3.83.90.E9.96.A2.E6.95.B0.E4.B8.8A.E3.81.A7_virtual_.E5.AE.A3.E8.A8.80.E3.82.92.E4.BD.BF.E3.81.86">すべてのサブクラスの virtual メンバ関数上で virtual 宣言を使う</h4>
+
+<p>移植性の低い例:</p>
+
+<pre class="code">class A {
+  virtual void foobar(char*);
+};
+
+class B : public A {
+  void foobar(char*);
+};
+</pre>
+
+<p>また一つの足手まといです。上記のクラス宣言の中で、<code>A::foobar()</code> は virtual として宣言されています。C++ ではサブクラスの void <code>foobar(char*)</code> のすべての実装もまた virtual（一度 virtual なら、いつも virtual）であると言っています。このコードは本当に問題ないのですが、いくつかのコンパイラはサブクラスの中で virtual の関数のオーバーロードでも virtual 宣言を求めます。あなたがそうしなければ、警告が返ってきます。これはハードエラーではない一方、この要素はヘッダファイルにありがちであるため、あなたを苛立たせるほどに多くの警告を表示するでしょう。サブクラスで virtual 宣言を含むことによってコンパイラの警告を黙らせるのがよりよいです。これもまた、よりよい文書です:</p>
+
+<p>移植性の高い例:</p>
+
+<pre class="code">class A {
+  virtual void foobar(char*);
+};
+
+class B : public A {
+  virtual void foobar(char*);
+};
+</pre>
+
+<h4 id=".E3.82.B3.E3.83.94.E3.83.BC.E3.82.B3.E3.83.B3.E3.82.B9.E3.83.88.E3.83.A9.E3.82.AF.E3.82.BF.E3.81.A8.E4.BB.A3.E5.85.A5.E6.BC.94.E7.AE.97.E5.AD.90.E3.81.AF.E3.81.84.E3.81.A4.E3.82.82.E5.AE.9A.E7.BE.A9.E3.81.99.E3.82.8B" name=".E3.82.B3.E3.83.94.E3.83.BC.E3.82.B3.E3.83.B3.E3.82.B9.E3.83.88.E3.83.A9.E3.82.AF.E3.82.BF.E3.81.A8.E4.BB.A3.E5.85.A5.E6.BC.94.E7.AE.97.E5.AD.90.E3.81.AF.E3.81.84.E3.81.A4.E3.82.82.E5.AE.9A.E7.BE.A9.E3.81.99.E3.82.8B">コピーコンストラクタと代入演算子はいつも定義する</h4>
+
+<p>C++ を疑わしくする機能の一つが、コピーコンストラクタの使用です。クラスのコピーコストラクタはオブジェクトの引渡しや戻りでオブジェクトを値渡しすることを意味します（あなたがお望みなら、値渡しがコピーコンストラクタの読み出しを意味します）。これをはっきりさせることは重要なことです。あなたが望まないかもしれなくても、コンパイラが暗黙にコピーコンストラクタへの呼び出しを生成することがあります。例えば、関数の引数としてオブジェクトを値渡ししたとき、一時コピーが作られ、そのコピーが渡され、関数から戻るときに破棄されます。こうしたくないこともあるかもしれませんし、いつもあなたのクラスのインスタンスを参照渡ししたいこともあるかもしれません。コピーコンストラクタをあなたが作らなければ、C++ コンパイラは（デフォルトのコピーコンストラクタ）を一つあなたのために作るでしょう。そしてこれの自動的に生成されたコピーコンストラクタは、そう、大抵低品質です。それによって、コンパイラが暗黙で（多分間違った）動作のためにすばらしいコードでないだろうコード断片の呼び出しを生成する場面に出くわします。</p>
+
+<p>ええ、「問題ない、私はコピーコンストラクタをいつ呼んでいるかわかっている、そんなことはしない」と思うでしょう。しかし、あなたのクラスを他の人が使う場合はどうでしょう？安全な方策としては、二つのうちいずれかです：もし、あなたがあなたのクラスを値渡しをサポートさせようとするなら、クラスによいコピーコンストラクタを書いてください。もし、クラスに値渡しをサポートする理由が見当たらないなら、明示的にそれを禁止すべきです。コンパイラのデフォルトのコピーコンストラクタにそれを任せてはいけません。その方針を強制する方法は、private でコピーコンストラクタを宣言して、定義させないことです。そういう状況では、同じクラスのオブジェクトの代入のために使われた代入演算子と同じようにしてください。例:</p>
+
+<pre class="code">class foo {
+  ...
+  private:
+  // &lt;span class="remark"&gt;These are not supported&lt;/span&gt;
+  // &lt;span class="remark"&gt;and are not implemented!&lt;/span&gt;
+  foo(const foo&amp; x);
+  foo&amp; operator=(const foo&amp; x);
+};
+</pre>
+
+<p>このようにしたとき、コピーコンストラクタを暗黙で呼ぶコードがコンパイルもリンクもされないことを確信できるでしょう。このように、知らないうちには何も起きません。ユーザのコードがコンパイルできないとき、参照渡しをしたかったところで（おっと！）値渡しされていることに気づくでしょう。</p>
+
+<h4 id=".E3.82.B7.E3.82.B0.E3.83.8B.E3.83.81.E3.83.A3.EF.BC.88.E5.BC.95.E6.95.B0.E3.81.A8.E6.88.BB.E3.82.8A.E5.80.A4.EF.BC.89.E3.81.AE.E4.BC.BC.E3.81.9F.E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E3.82.AA.E3.83.BC.E3.83.90.E3.83.BC.E3.83.AD.E3.83.BC.E3.83.89.E3.81.AB.E3.81.AF.E6.B0.97.E3.82.92.E3.81.A4.E3.81.91.E3.82.8B" name=".E3.82.B7.E3.82.B0.E3.83.8B.E3.83.81.E3.83.A3.EF.BC.88.E5.BC.95.E6.95.B0.E3.81.A8.E6.88.BB.E3.82.8A.E5.80.A4.EF.BC.89.E3.81.AE.E4.BC.BC.E3.81.9F.E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E3.82.AA.E3.83.BC.E3.83.90.E3.83.BC.E3.83.AD.E3.83.BC.E3.83.89.E3.81.AB.E3.81.AF.E6.B0.97.E3.82.92.E3.81.A4.E3.81.91.E3.82.8B">シグニチャ（引数と戻り値）の似たメソッドのオーバーロードには気をつける</h4>
+
+<p>メソッドの型仕様（型のシグニチャ）がたった一つ "abstract" 型かどうかによって区別されるとき、メソッドのオーバーロードをしないのが最善です（例：<code>PR_Int32</code> と <code>int32</code>）。そのコードを他のプラットフォームに持っていったときに、突然とある Foo2000 といったコンパイラ上ではオーバーロードしたメソッドと同じ型仕様を持っていることが見られるでしょう。</p>
+
+<h4 id=".E6.80.9D.E3.81.84.E3.81.8C.E3.81.91.E3.81.AA.E3.81.84.E6.9B.96.E6.98.A7.E3.81.95.E3.82.92.E9.98.B2.E3.81.90.E3.81.9F.E3.82.81.E3.81.AB.E3.82.B9.E3.82.AB.E3.83.A9.E5.AE.9A.E6.95.B0.E3.81.A7.E3.82.BF.E3.82.A4.E3.83.97.E3.81.99.E3.82.8B" name=".E6.80.9D.E3.81.84.E3.81.8C.E3.81.91.E3.81.AA.E3.81.84.E6.9B.96.E6.98.A7.E3.81.95.E3.82.92.E9.98.B2.E3.81.90.E3.81.9F.E3.82.81.E3.81.AB.E3.82.B9.E3.82.AB.E3.83.A9.E5.AE.9A.E6.95.B0.E3.81.A7.E3.82.BF.E3.82.A4.E3.83.97.E3.81.99.E3.82.8B">思いがけない曖昧さを防ぐためにスカラ定数でタイプする</h4>
+
+<p>移植性の低い例:</p>
+
+<pre class="code">class FooClass {
+  // &lt;span class="remark"&gt;having such similar signatures&lt;/span&gt;
+  // &lt;span class="remark"&gt;is a bad idea in the first place.&lt;/span&gt;
+  void doit(long);
+  void doit(short);
+};
+
+void
+B::foo(FooClass* xyz)
+{
+  xyz-&gt;doit(45);
+}
+</pre>
+
+<p>スカラ定数（例：PR_INT32(10) や 10L）で記述することに気をつけてください。でなければ、特に上記の２つの関数のような複数の関数の呼び出しの解決を潜在的にともなう曖昧関数呼び出しを行うことになります。すべてのコンパイラではないですが、曖昧な関数呼び出しに警告を出すものがあります。</p>
+
+<p>移植性の高い例:</p>
+
+<pre class="code">class FooClass {
+  // &lt;span class="remark"&gt;having such similar signatures&lt;/span&gt;
+  // &lt;span class="remark"&gt;is a bad idea in the first place.&lt;/span&gt;
+  void doit(long);
+  void doit(short);
+};
+
+void
+B::foo(FooClass* xyz)
+{
+  xyz-&gt;doit(45L);
+}
+</pre>
+
+<h4 id=".E4.BA.88.E6.9C.9F.E3.81.97.E3.81.AA.E3.81.84.E6.9B.96.E6.98.A7.E3.81.95.E3.82.92.E9.81.BF.E3.81.91.E3.82.8B.E3.81.9F.E3.82.81.E3.81.AB.E3.82.B9.E3.82.AB.E3.83.A9.E3.83.BC.E5.AE.9A.E6.95.B0.E3.82.92.E6.9B.B8.E3.81.8F" name=".E4.BA.88.E6.9C.9F.E3.81.97.E3.81.AA.E3.81.84.E6.9B.96.E6.98.A7.E3.81.95.E3.82.92.E9.81.BF.E3.81.91.E3.82.8B.E3.81.9F.E3.82.81.E3.81.AB.E3.82.B9.E3.82.AB.E3.83.A9.E3.83.BC.E5.AE.9A.E6.95.B0.E3.82.92.E6.9B.B8.E3.81.8F">予期しない曖昧さを避けるためにスカラー定数を書く</h4>
+
+<p>（Linux などの）いくつかのプラットフォームでは、ときおりクロスプラットフォームなコードの中の定義と衝突するようなブールのような型宣言をネイティブに持っています。いつでも、PRBool (PR_TRUE, PR_FALSE) か XP_Bool (TRUE, FALSE) を使ってください。</p>
+
+<h4 id="mutable_.E3.82.92.E4.BD.BF.E3.82.8F.E3.81.AA.E3.81.84" name="mutable_.E3.82.92.E4.BD.BF.E3.82.8F.E3.81.AA.E3.81.84">mutable を使わない</h4>
+
+<p>すべての C++ コンパイラが <code>mutable</code> キーワードをサポートしているわけではありません:</p>
+
+<p>データメンバの const 性を除去するための "fake this" 手法を使う必要があるでしょう:</p>
+
+<pre class="code">void MyClass::MyConstMethod() const
+{
+  MyClass * mutable_this = NS_CONST_CAST(MyClass *,this);
+
+  // Treat mFoo as mutable
+  mutable_this-&gt;mFoo = 99;
+}
+</pre>
+
+<h4 id="XPCOM_.E3.81.AE.E3.82.B3.E3.83.BC.E3.83.89.E3.81.A7.E3.81.AF_nsCOMPtr_.E3.82.92.E4.BD.BF.E3.81.86" name="XPCOM_.E3.81.AE.E3.82.B3.E3.83.BC.E3.83.89.E3.81.A7.E3.81.AF_nsCOMPtr_.E3.82.92.E4.BD.BF.E3.81.86">XPCOM のコードでは nsCOMPtr を使う</h4>
+
+<p>Mozilla は最近、<a href="ja/XPCOM">XPCOM</a> コードで <a href="ja/NsCOMPtr">nsCOMPtr</a> を採用しました。</p>
+
+<p>使用法の詳細は、nsCOMPtr <a href="ja/Using_nsCOMPtr">ユーザーマニュアル</a> を参照ください。</p>
+
+<h4 id=".E8.AD.98.E5.88.A5.E5.AD.90.E3.81.A8.E3.81.97.E3.81.A6.E4.BA.88.E7.B4.84.E8.AA.9E.E3.82.92.E4.BD.BF.E3.82.8F.E3.81.AA.E3.81.84" name=".E8.AD.98.E5.88.A5.E5.AD.90.E3.81.A8.E3.81.97.E3.81.A6.E4.BA.88.E7.B4.84.E8.AA.9E.E3.82.92.E4.BD.BF.E3.82.8F.E3.81.AA.E3.81.84">識別子として予約語を使わない</h4>
+
+<p>C++ 標準規格 17.4.3.1.2 節 グローバル名 {{ mediawiki.external('lib.global.names') }} 第1パラグラフによると:</p>
+
+<p>名前と関数シグネチャのある特定の組は、実装によって常に予約されています:</p>
+
+<ul>
+ <li>二重のアンダースコア（__）が含まれる名前、または後ろに大文字 (2.11) が付くアンダースコアで始まる名前は、ある目的のために実装によって予約されています。</li>
+ <li>アンダースコアで始まる名前は、グローバルな名前空間で使う名前として実装によって予約されています。</li>
+</ul>
+
+<h3 id="C_.E3.81.A7.E3.82.82_C.2B.2B_.E3.81.A7.E3.82.82.E5.BD.B9.E3.81.AB.E7.AB.8B.E3.81.A4.E8.A6.81.E7.B4.A0" name="C_.E3.81.A7.E3.82.82_C.2B.2B_.E3.81.A7.E3.82.82.E5.BD.B9.E3.81.AB.E7.AB.8B.E3.81.A4.E8.A6.81.E7.B4.A0">C でも C++ でも役に立つ要素</h3>
+
+<h4 id=".E6.9C.AC.E8.B3.AA.E7.9A.84.E3.81.AA.E5.9E.8B.E3.81.AB.E3.81.AF_nspr_.E5.9E.8B.E3.82.92.E3.81.84.E3.81.A4.E3.81.A7.E3.82.82.E4.BD.BF.E3.81.86" name=".E6.9C.AC.E8.B3.AA.E7.9A.84.E3.81.AA.E5.9E.8B.E3.81.AB.E3.81.AF_nspr_.E5.9E.8B.E3.82.92.E3.81.84.E3.81.A4.E3.81.A7.E3.82.82.E4.BD.BF.E3.81.86">本質的な型には nspr 型をいつでも使う</h4>
+
+<p>本質的な型には nspr 型をいつでも使う。この規則の唯一の例外は、クロスプラットフォームなコードから呼ばれる機種依存のコードを書いているときです。この場合、たぶん型システムに橋渡しをし、nspr 型からネイティブの型へのキャストが必要でしょう。</p>
+
+<h4 id="include_.E6.96.87.E3.82.92_.23ifdef_.E3.81.A7.E5.9B.B2.E3.82.93.E3.81.A7.E3.81.AF.E3.81.84.E3.81.91.E3.81.AA.E3.81.84" name="include_.E6.96.87.E3.82.92_.23ifdef_.E3.81.A7.E5.9B.B2.E3.82.93.E3.81.A7.E3.81.AF.E3.81.84.E3.81.91.E3.81.AA.E3.81.84">include 文を <code>#ifdef</code> で囲んではいけない</h4>
+
+<p>include 文を <code>#ifdef</code> で囲んではいけません。その理由は、そのシンボルが未定義だったとき、ほかのコンパイラのシンボルも未定義になって、すべてのプラットフォーム上でコードをテストするのが困難になるでしょう。そのようにしなかった例:</p>
+
+<p>悪いコード:</p>
+
+<pre class="code">// don't do this
+#ifdef X
+#include "foo.h"
+#endif
+</pre>
+
+<p>この規則の例外は、異なったマシンに対する異なったシステムファイルの include をするときです。この場合、<code>#ifdef SYSTEM_X</code> のような include をする必要があるでしょう。</p>
+
+<h4 id=".23include_.E6.96.87.E3.81.AB.E3.81.AF.E5.8D.98.E7.B4.94.E3.81.AB.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E5.90.8D.E3.81.AE.E3.81.BF.E8.A8.98.E8.BF.B0.E3.81.99.E3.82.8B" name=".23include_.E6.96.87.E3.81.AB.E3.81.AF.E5.8D.98.E7.B4.94.E3.81.AB.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E5.90.8D.E3.81.AE.E3.81.BF.E8.A8.98.E8.BF.B0.E3.81.99.E3.82.8B"><code>#include</code> 文には単純にファイル名のみ記述する</h4>
+
+<p>移植性の低い例:</p>
+
+<pre class="code">#include "directory/filename.h"
+</pre>
+
+<p>Mac のコンパイラは <code>#include</code> のパス名を他のシステムと異なる基準で扱います。結果として、<code>#include</code> 文は単にファイル名だけを含むものでなくてはなりません。必要な結果が得られるようコンパイラが探せるディレクトリに変更してください。しかし、Mozilla モジュールとディレクトリ体系にしたがっていたのなら、変更の必要はないのです。</p>
+
+<p>移植性の高い例:</p>
+
+<pre class="code">#include "filename.h"
+</pre>
+
+<h4 id="Mac_.E3.81.A7.E3.81.AF_boolean_.E5.BC.8F.E3.81.A7.E3.81.AE.E4.BB.A3.E5.85.A5.E3.81.AB.E3.81.A4.E3.81.84.E3.81.A6.E5.95.8F.E9.A1.8C.E3.81.8C.E3.81.82.E3.82.8B" name="Mac_.E3.81.A7.E3.81.AF_boolean_.E5.BC.8F.E3.81.A7.E3.81.AE.E4.BB.A3.E5.85.A5.E3.81.AB.E3.81.A4.E3.81.84.E3.81.A6.E5.95.8F.E9.A1.8C.E3.81.8C.E3.81.82.E3.82.8B">Mac では boolean 式での代入について問題がある</h4>
+
+<p>Mac で警告を引き起こすまた一つのコードの例を示します:</p>
+
+<p>警告を出す例:</p>
+
+<pre class="code">if ((a = b) == c) ...
+</pre>
+
+<p>Mac は <strong>if</strong> 文での代入を好みません。たとえ括弧で正しくくくられていたとしてもです。</p>
+
+<p>より移植性の高い例:</p>
+
+<pre class="code">a=b;
+if (a == c) ...
+</pre>
+
+<h4 id=".E3.81.A9.E3.81.AE.E3.82.BD.E3.83.BC.E3.82.B9.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E5.90.8D.E3.82.82.E9.87.8D.E8.A4.87.E3.81.97.E3.81.A6.E3.81.AF.E3.81.AA.E3.82.89.E3.81.AA.E3.81.84" name=".E3.81.A9.E3.81.AE.E3.82.BD.E3.83.BC.E3.82.B9.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E5.90.8D.E3.82.82.E9.87.8D.E8.A4.87.E3.81.97.E3.81.A6.E3.81.AF.E3.81.AA.E3.82.89.E3.81.AA.E3.81.84">どのソースファイル名も重複してはならない</h4>
+
+<p>移植性の低いファイルツリー:</p>
+
+<pre class="code">feature_x
+    private.h
+    x.cpp
+feature_y
+    private.h
+    y.cpp
+</pre>
+
+<p>Mac コンパイラでは、どのファイル名も重複してはいけません。あるファイルが場所限定的にのみ使われるからといって、他の場所のヘッダファイルと同じ名前を使ってもいいと考えてはいけません。よくないのです。すべてのファイル名は異なっている必要があります。</p>
+
+<p>移植性の高いファイルツリー:</p>
+
+<pre class="code">  feature_x
+      xprivate.h
+      x.cpp
+  feature_y
+      yprivate.h
+      y.cpp
+</pre>
+
+<h4 id=".E4.B8.80.E6.99.82.E7.9A.84.E3.81.AB.E3.82.B3.E3.83.BC.E3.83.89.E3.81.AE.E5.A1.8A.E3.82.92.E7.84.A1.E5.8A.B9.E3.81.AB.E3.81.99.E3.82.8B.E3.81.9F.E3.82.81.E3.81.AB.E3.81.AF.E3.82.B3.E3.83.A1.E3.83.B3.E3.83.88.E3.82.88.E3.82.8A.E3.82.82_.23if_0_.E3.82.92.E4.BD.BF.E3.81.86" name=".E4.B8.80.E6.99.82.E7.9A.84.E3.81.AB.E3.82.B3.E3.83.BC.E3.83.89.E3.81.AE.E5.A1.8A.E3.82.92.E7.84.A1.E5.8A.B9.E3.81.AB.E3.81.99.E3.82.8B.E3.81.9F.E3.82.81.E3.81.AB.E3.81.AF.E3.82.B3.E3.83.A1.E3.83.B3.E3.83.88.E3.82.88.E3.82.8A.E3.82.82_.23if_0_.E3.82.92.E4.BD.BF.E3.81.86">一時的にコードの塊を無効にするためにはコメントよりも <code>#if 0</code> を使う</h4>
+
+<p>移植性の低い例:</p>
+
+<pre class="code">int
+foo()
+{
+  ...
+  a = b + c;
+  /*
+   * Not doing this right now.
+  a += 87;
+  if (a &gt; b) (* have to check for the
+                candy factor *)
+    c++;
+   */
+  ...
+}
+</pre>
+
+<p>すでにコメントを含むコードの塊を無効にしたくなってしまうのはしょっちゅうであるので、悪いアイディアなのです。コメントのネストが適切になっていることをあてにはできません。これは移植性から程遠いものです。例えば、<code>/**/</code> の組を <code>(**)</code> の組に変えるなどの変な変更をする必要があります。そんなことは忘れてしまうでしょう。また、<code>#ifdef NOTUSED</code> を使うのもやめてください。使った日はいいとして、次の日に誰かが何の連絡もなくどこかで <code>NOTUSED</code> を定義するかもしれません。コードの塊を無効にするためのよりよい方法は <code>#if 0</code> と <code>#endif</code> の組を使い、先頭にコメントを入れておくことです。もちろん、この類のことは、いつでも一時的なことで、ドキュメント目的にコードの塊を無効にするのはばかげたことです。</p>
+
+<p>移植性の高い例:</p>
+
+<pre class="code">int
+foo()
+{
+  ...
+  a = b + c;
+#if 0
+  /*&lt;span class="remark"&gt; Not doing this right now. &lt;/span&gt;*/
+  a += 87;
+  if (a &gt; b) /*&lt;span class="remark"&gt; have to check for the
+                candy factor &lt;/span&gt;*/
+    c++;
+#endif
+  ...
+}
+</pre>
+
+
+
+<h4 id=".E3.82.B3.E3.83.B3.E3.83.91.E3.82.A4.E3.83.A9.E3.81.AE.E8.AD.A6.E5.91.8A.E3.82.92.E6.9C.89.E5.8A.B9.E3.81.AB.E3.81.97.E3.81.A6.E3.80.81.E8.AD.A6.E5.91.8A.E3.81.AE.E3.81.AA.E3.81.84.E3.82.B3.E3.83.BC.E3.83.89.E3.82.92.E6.9B.B8.E3.81.8F" name=".E3.82.B3.E3.83.B3.E3.83.91.E3.82.A4.E3.83.A9.E3.81.AE.E8.AD.A6.E5.91.8A.E3.82.92.E6.9C.89.E5.8A.B9.E3.81.AB.E3.81.97.E3.81.A6.E3.80.81.E8.AD.A6.E5.91.8A.E3.81.AE.E3.81.AA.E3.81.84.E3.82.B3.E3.83.BC.E3.83.89.E3.82.92.E6.9B.B8.E3.81.8F">コンパイラの警告を有効にして、警告のないコードを書く</h4>
+
+<p>これはもっとも重要な Tip かもしれません。寛大なコンパイラには気をつけろ！あるプラットフォームで警告を発生させるものは、他のプラットフォームではエラーとなりうるものです。警告を有効にしてください。警告のないコードを書いてください。それはあなたのためになります。</p>
+
+<h4 id="struct_.28.E3.81.BE.E3.81.9F.E3.81.AF_C.2B.2B_.E3.81.A7.E3.81.AE_class_.29_.E5.86.85.E3.81.A7.E3.83.93.E3.83.83.E3.83.88.E3.83.95.E3.82.A3.E3.83.BC.E3.83.AB.E3.83.89.E3.82.92.E4.BD.BF.E3.81.86.E5.A0.B4.E5.90.88.E3.80.81.E5.90.8C.E3.81.98.E5.9E.8B.E3.82.92.E7.94.A8.E3.81.84.E3.82.8B" name="struct_.28.E3.81.BE.E3.81.9F.E3.81.AF_C.2B.2B_.E3.81.A7.E3.81.AE_class_.29_.E5.86.85.E3.81.A7.E3.83.93.E3.83.83.E3.83.88.E3.83.95.E3.82.A3.E3.83.BC.E3.83.AB.E3.83.89.E3.82.92.E4.BD.BF.E3.81.86.E5.A0.B4.E5.90.88.E3.80.81.E5.90.8C.E3.81.98.E5.9E.8B.E3.82.92.E7.94.A8.E3.81.84.E3.82.8B"><code>struct</code> (または C++ での <code>class</code> ) 内でビットフィールドを使う場合、同じ型を用いる</h4>
+
+<p>(MSVC++ 8といった最近のコンパイラも含め)いくつかのコンパイラは、異なった型のビットフィールドを一緒に使用した場合、構造体を正確にパック出来ません。例えば、以下に示す構造体はサイズを1バイトとしてコンパイルされるべきですが、8バイトとしてコンパイルされてしまいます。 <span class="comment">Some compilers (even recent ones like MSVC++ 8) mishandle code which uses different types for bitfields and fail to properly pack the bits, even when they should be packed. For example, the following struct might be miscompiled to have a size of 8 bytes, even though it fits in 1:</span></p>
+
+<pre class="code">struct {
+  char ch : 1;
+  int i : 1;
+};
+</pre>
+
+<h4 id=".E3.83.96.E3.83.BC.E3.83.AB.E5.80.A4.E3.82.92.E8.A1.A8.E3.81.99.E3.83.93.E3.83.83.E3.83.88.E3.83.95.E3.82.A3.E3.83.BC.E3.83.AB.E3.83.89.E3.81.AB.E5.AF.BE.E3.81.97.E3.81.A6.EF.BC.88PRBool_.E3.81.A7.E3.81.AF.E3.81.AA.E3.81.8F.EF.BC.89.E7.AC.A6.E5.8F.B7.E3.81.AA.E3.81.97.E5.9E.8B.E3.82.92.E4.BD.BF.E3.81.86" name=".E3.83.96.E3.83.BC.E3.83.AB.E5.80.A4.E3.82.92.E8.A1.A8.E3.81.99.E3.83.93.E3.83.83.E3.83.88.E3.83.95.E3.82.A3.E3.83.BC.E3.83.AB.E3.83.89.E3.81.AB.E5.AF.BE.E3.81.97.E3.81.A6.EF.BC.88PRBool_.E3.81.A7.E3.81.AF.E3.81.AA.E3.81.8F.EF.BC.89.E7.AC.A6.E5.8F.B7.E3.81.AA.E3.81.97.E5.9E.8B.E3.82.92.E4.BD.BF.E3.81.86">ブール値を表すビットフィールドに対して（<code>PRBool</code> ではなく）符号なし型を使う</h4>
+
+<p>単一のビットでブール値を表したいならば、それを行うために符合なし型を使ってください。符合あり型を使うと（これには <code>PRBool</code> が含まれます）、設定されたとき値は +1 の代わりに -1 となり、これは XPCOM の慣習に反します。</p>
+
+<h3 id=".E6.94.B9.E5.AE.9A.E5.B1.A5.E6.AD.B4" name=".E6.94.B9.E5.AE.9A.E5.B1.A5.E6.AD.B4">改定履歴</h3>
+
+<ul>
+ <li>0.5 初期バージョン。 1998/3/27 <a class="link-mailto" href="mailto:djw@djw.org">David Williams</a></li>
+ <li>0.6 "C++ 型のキャスト" と "mutable" の項目を追加。 1998/12/24 <a class="link-mailto" href="mailto:ramiro@netscape.com">Ramiro Estrugo</a></li>
+ <li>0.7 "nsCOMPtr" 項目と mozillaZine リソースへのリンクの追加。 1999/12/2 <a class="link-mailto" href="mailto:ramiro@netscape.com">Ramiro Estrugo</a></li>
+ <li>0.8 "予約語" の項目の追加。 2001/2/1 <a class="link-mailto" href="mailto:scc@mozilla.org">Scott Collins</a></li>
+</ul>
+
+<h3 id=".E6.9B.B4.E3.81.AA.E3.82.8B.E8.AA.AD.E3.81.BF.E7.89.A9" name=".E6.9B.B4.E3.81.AA.E3.82.8B.E8.AA.AD.E3.81.BF.E7.89.A9">更なる読み物</h3>
+
+<p>移植性の高い C++ のコードを書くために更なる助言を与えてくれる書籍とページをいくつか挙げておきます。</p>
+
+<ul>
+ <li><em>Scott Meyers,</em> <a class="external" href="http://www.amazon.com/exec/obidos/ISBN=0201924889">Effective C++ : 50 Specific Ways to Improve Your Programs and Designs</a></li>
+ <li><em>Robert B. Murray,</em> <a class="external" href="http://www.amazon.com/exec/obidos/ISBN=0201563827">C++ Strategies and Tactics</a></li>
+ <li><a class="external" href="http://www.mozillazine.org/resources/recommendations1.html">mozillaZine</a> には C++、アンチ C++、OOP（その他の専門用語）についての本のリストがあります。Mozilla 開発者からの助言から編纂されたリストです。</li>
+ <li>そのほか？</li>
+</ul>
+
+<div class="originaldocinfo">
+<h2 id=".E5.8E.9F.E6.96.87.E6.9B.B8.E3.81.AE.E6.83.85.E5.A0.B1" name=".E5.8E.9F.E6.96.87.E6.9B.B8.E3.81.AE.E6.83.85.E5.A0.B1">原文書の情報</h2>
+
+<ul>
+ <li>著者: <a class="link-mailto" href="mailto:djw@djw.org">David Williams</a></li>
+ <li>貢献者: <a class="link-mailto" href="mailto:scc@mozilla.org">Scott Collins</a>, <a class="link-mailto" href="mailto:blizzard@mozilla.org">Christopher Blizzard</a>, and <a class="link-mailto" href="mailto:dbaron@dbaron.org">David Baron</a></li>
+ <li>最終更新日: August 10, 2007</li>
+ <li>著作権: Portions of this content are © 1998–2007 by individual mozilla.org contributors; content available under a Creative Commons license | <a class="external" href="http://www.mozilla.org/foundation/licensing/website-content.html">詳細</a></li>
+</ul>
+</div>
+
+<div class="noinclude"></div>
+
+<p>{{ languages( { "en": "en/C___Portability_Guide" } ) }}</p>

@@ -1,0 +1,120 @@
+---
+title: 数値コントロール
+slug: Archive/Mozilla/XUL/Tutorial/Numeric_Controls
+tags:
+  - Firefox 3
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Numeric_Controls
+---
+<p>
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Adding_Labels_and_Images" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:List_Controls">次のページ  »</a></p>
+</div>
+
+<p>XUL には、数値や数の範囲の入力に使用するための要素が 2 つあり、
+日付や時刻の入力に使用する要素も 2 つあります。
+これらの要素は、Firefox 3 かそれ以降でのみ利用できます。
+</p><p><span id="Number_Fields"></span>
+</p>
+<h3 id=".E6.95.B0.E5.80.A4.E5.85.A5.E5.8A.9B.E6.AC.84" name=".E6.95.B0.E5.80.A4.E5.85.A5.E5.8A.9B.E6.AC.84"> 数値入力欄 </h3>
+<p>テキスト入力欄 (<span style="color: green;">textbox</span>)の <code id="a-type"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/type">type</a></code> 属性に、値 <code>number</code> を設定することで、数値を入力するために利用できるようになります。
+このタイプのテキスト入力欄は、数値の入力だけに使用することができます。
+それ以外の文字は許可されないため、入力しようした場合は単純に無視されます。
+加えて、利用者が<span style="border-bottom: 1px dashed green;" title="cycle through the values">選択可能な値を循環させる</span>ことができるように、矢印ボタンが入力欄の横に表示されます。
+</p>
+<div class="float-right"><img alt="Image:Controlguide-textbox-number.gif"></div>
+<p>これ以外のテキスト入力欄と同様に、<code id="a-value"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code> 属性によってデフォルト値を指定することが可能です。
+当然ではありますが、ここに指定する値は数値である必要があります。
+また、<code id="a-min"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/min">min</a></code> と <code id="a-max"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/max">max</a></code> 属性によって、最大値と最小値を指定することも可能です。
+これらの値を設定することで、欄に入力可能な値の範囲を制御することが可能になります。
+もしも利用者が範囲よりも大きいか小さい値を入力しようとした場合は、必要に応じて最大値か最小値にリセットされることになるはずです。
+例えば、以下の数値入力欄は 1 から 20 の間の範囲を持ちます。
+</p>
+<pre>&lt;textbox type="number" min="1" max="20"/&gt;
+</pre>
+<p>上例では、デフォルト値が指定されていないため、デフォルト値は選択範囲の最小の値である 1 になります。
+また、<code id="a-min"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/min">min</a></code> 属性に <code>1</code> を設定することで、設定できる値の下限が 1 であることを示し、
+<code id="a-max"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/max">max</a></code> 属性に <code>20</code> を設定することで、値の上限が 20 であることを示しています。
+なお、最小値を指定しない場合、デフォルトの最小値は 0 になり、最大値を指定しない場合は、制限がないことを示す特殊な値である <code>Infinity</code> がデフォルトになります。
+</p><p><span id="Other_numeric_textbox_attributes"></span>
+</p>
+<h4 id=".E3.81.9D.E3.81.AE.E4.BB.96.E3.81.AE.E6.95.B0.E5.80.A4.E5.85.A5.E5.8A.9B.E6.AC.84.E3.81.AE.E5.B1.9E.E6.80.A7" name=".E3.81.9D.E3.81.AE.E4.BB.96.E3.81.AE.E6.95.B0.E5.80.A4.E5.85.A5.E5.8A.9B.E6.AC.84.E3.81.AE.E5.B1.9E.E6.80.A7">その他の数値入力欄の属性</h4>
+<p><code id="a-increment"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/increment">increment</a></code> 属性は、矢印を押した場合に値を変化させる量を指定するために使用されます。
+この値のデフォルトは 1 であるため、それ以外の値を指定すれば、より大きな量で数値を変化させることが可能になります。
+例えば、以下の例は 10 の倍数単位で増減します。
+</p>
+<pre>&lt;textbox type="number" increment="10" max="100"/&gt;
+</pre>
+<p>この入力欄は、0 から 100 までを 10 の倍数単位で増減します。
+<code id="a-min"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/min">min</a></code> 属性が設定されていないため、デフォルトの 0 になっています。 この例のような場合でも、利用者が直接キーボードから入力すれば、それ以外の値も入力可能であることに注意してください。
+<code id="a-increment"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/increment">increment</a></code> 属性は、矢印ボタンに対してのみ影響を与えます。
+もしくは、利用者がカーソルキーの上下を、入力欄にフォーカスがあるときに使用する場合には、increment の値単位で値が増加または減少します。
+</p><p>また、<code id="a-decimalplaces"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/decimalplaces">decimalplaces</a></code> 属性によって、小数点以下を何桁表示するかを示すことができます。
+デフォルト値は 0 で、これは整数のみを表示することを意味します。
+0 以外の値を指定すれば、小数を表示することができるようになります。
+</p>
+<pre>&lt;textbox type="number" decimalplaces="2"/&gt;
+</pre>
+<p>この例では、小数点以下は、2 桁まで表示されます。
+小数点以下の桁数がそれより多い場合には、2 桁で丸められます。
+</p><p><span id="Scales"></span>
+</p>
+<h3 id=".E3.82.B9.E3.82.B1.E3.83.BC.E3.83.AB" name=".E3.82.B9.E3.82.B1.E3.83.BC.E3.83.AB"> スケール </h3>
+<p><code><a href="/ja/docs/Mozilla/Tech/XUL/scale" title="scale">scale</a></code> 要素も、値を範囲の中から選択するのに使用できます。
+この要素では、入力欄の代わりにスライドするスケールが使用されます。
+利用者は、スケールの<span style="border-bottom: 1px dashed green;" title="thumb">つまみ</span>をドラッグすることで、値を調整できます。
+</p>
+<div class="float-right"><img alt="Image:Controlguide-scale.gif"></div>
+<p>多数の数値入力欄と同じ属性が、スケールに対しても使用できます。
+<code id="a-value"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code>、 <code id="a-min"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/min">min</a></code>、 <code id="a-max"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/max">max</a></code> と <code id="a-increment"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/increment">increment</a></code> は、すべて類似の流儀で利用可能です。
+スケールは、実際には数値として値を表示しませんが、値はスクリプトから使用できます。
+スケールの値が変更された場合には、常に <code>change</code> イベントがスケールから送出されることになります。 </p>
+<pre>&lt;scale value="40" min="1" max="50"/&gt;
+</pre>
+<p>このスケールのデフォルトは 40 で、範囲は 1 から 50 です。
+</p><p>通常、数値入力欄は利用者にとって値が重要である場合、
+例えば、日数を入力する欄や、ファイルの最大サイズといったものに対して使用します。
+対して、スケールは、スケールのスライド操作に応じて状態が増加または減少しさえすれば、実際の値は重要でない場合、
+例えば、ボリュームスライダーや、ズームレベルといったものに対して使用します。
+</p><p>デフォルトでは、スケールは水平 (<span style="color: green;">horizontal</span>)に、左側が小さく、右側が大きくなるように配置されますが、
+方向 (縦横) は、<code id="a-orient"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code> 属性で、大小の向きは <code id="a-dir"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/dir">dir</a></code> 属性で変更することが可能です。
+</p>
+<pre>&lt;scale orient="vertical" dir="reverse"/&gt;
+</pre>
+<p>このスケールは、垂直 (<span style="color: green;">vertical</span>)で、低い値が下に、高い値が上になるように表示されることになるはずです。
+</p><p><span id="Date_and_Time_Entry_Fields"></span>
+</p>
+<h3 id=".E6.97.A5.E4.BB.98.E3.81.A8.E6.99.82.E5.88.BB.E3.81.AE.E5.85.A5.E5.8A.9B.E6.AC.84" name=".E6.97.A5.E4.BB.98.E3.81.A8.E6.99.82.E5.88.BB.E3.81.AE.E5.85.A5.E5.8A.9B.E6.AC.84"> 日付と時刻の入力欄 </h3>
+<p><code><a href="/ja/docs/Mozilla/Tech/XUL/datepicker" title="datepicker">datepicker</a></code> と、<code><a href="/ja/docs/Mozilla/Tech/XUL/timepicker" title="timepicker">timepicker</a></code> 要素は、利用者に日付と時刻を入力させるために使用できます。
+利用者に対しては、日付と時刻を構成する数値を入力するために、それぞれに対する数値入力欄が表示されます。
+</p>
+<pre>&lt;datepicker value="2004/3/24"/&gt;
+&lt;timepicker value="15:30:00"/&gt;
+</pre>
+<div class="float-right"><img alt="Image:Controlguide-timepicker.gif"></div>
+<p><code>value</code> 属性は、デフォルト値を設定するために使用されます。
+この属性が省略された場合は、欄は現在の日付か時刻で初期化されることになります。
+なお、この属性の書式は、厳密に上記のようにする必要があります。
+つまり、日付は YYYY/MM/DD の形式で、時刻は HH:MM:SS の形式です。(ただし、秒とその直前のコロンは省略可能です)
+</p><p>これらの 2 つの要素により、利用者に対して日付や時刻の入力を確実に行わせることができます。
+これらを利用する場合には、アプリケーション側での日付の妥当性確認は行う必要がありません。
+この要素では、確実に日付がその月の日数を越えないことや、うるう年の取り扱いなどが行われます。
+</p><p>現時点では、<code><a href="/ja/docs/Mozilla/Tech/XUL/timepicker" title="timepicker">timepicker</a></code> は 1 つのスタイルしかありませんが、<code><a href="/ja/docs/Mozilla/Tech/XUL/datepicker" title="datepicker">datepicker</a></code> は 3 つのバリエーションがあります。
+デフォルトのスタイルは、年と月および日を入力するための 3 つの欄を表示します。
+それ以外の 2 つを選択するためには <code id="a-type"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/type">type</a></code> 属性を使用します。
+ここに、値 <code>grid</code> を指定すると、以下のイメージで示すようなグリッド形式のカレンダーが使用されます。
+</p><p><img alt="Image:Controlsguide-datepicker-grid.png">
+</p><p>また、値 <code>popup</code> を使用すれば、先述の 2 つのタイプを組み合わせたようなスタイルになります。
+このタイプは、日付を選択するためのグリッド形式のカレンダーをドロップダウンボタンでポップアップ表示させるだけでなく、
+年と月および日を入力するための 3 つの欄も持っています。
+</p>
+<pre>&lt;datepicker type="popup"/&gt;
+</pre>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Adding_Labels_and_Images" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:List_Controls">次のページ  »</a></p>
+</div>
+
+<div class="noinclude">
+</div>

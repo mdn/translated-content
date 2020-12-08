@@ -1,0 +1,57 @@
+---
+title: '-moz-stack-sizing'
+slug: Web/CSS/-moz-stack-sizing
+tags:
+  - CSS
+  - CSS Property
+  - NeedsCompatTable
+  - Non-standard
+  - Reference
+  - XUL
+translation_of: Archive/Web/CSS/-moz-stack-sizing
+---
+<div>{{CSSRef}}{{Non-standard_header}}{{gecko_minversion_header("1.9.1")}}</div>
+
+<p><strong><code>-moz-stack-sizing</code></strong> は拡張された <a href="/ja/docs/Web/CSS">CSS</a> プロパティです。通常、{{XULElem("stack")}} はすべての子要素が完全に表示できるように自身のサイズを変更します。例えば、スタックの子要素を右側に離すように移動するとスタックは幅を広げ、子要素は表示され続けます。</p>
+
+<pre class="brush:css notranslate">/* キーワード値 */
+-moz-stack-sizing: auto;
+-moz-stack-sizing: ignore;
+
+/* グローバル値 */
+-moz-stack-sizing: inherit;
+-moz-stack-sizing: initial;
+-moz-stack-sizing: unset;
+</pre>
+
+<p>スタックが子要素を収容しようと自動的にリサイズをしないようにするには、子要素の<code>-moz-stack-sizing</code> に<code>無視する (ignore)</code> を設定します。プロパティはスタック自身でなく、スタックの子要素に設定します。これにより特定の子要素を他の要素と区別して無視できます。</p>
+
+<p class="note"><strong>メモ:</strong> Gecko の以前のバージョンではスタック要素に非常に大きい負の下と右のマージンを、サイズを無視したくない子要素に同じように非常に大きな下と右のマージンを設定することで問題を回避することができました。(この問題はスタックの上や左に移動する子要素には影響を与えません。)</p>
+
+<p>{{cssinfo}}</p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<h3 id="Values" name="Values">値</h3>
+
+<dl>
+ <dt><code>stretch-to-fit</code></dt>
+ <dd>子要素がスタックのサイズに影響する。</dd>
+ <dt><code>ignore</code></dt>
+ <dd>スタックはサイズを計算する時に、この子要素を考慮しない。</dd>
+</dl>
+
+<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+
+<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+
+<h2 id="Examples" name="Examples">例</h2>
+
+<pre class="brush:css notranslate">.mainsheet {
+  -moz-stack-sizing: ignore;
+}
+</pre>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<p>{{bug("346189")}}</p>

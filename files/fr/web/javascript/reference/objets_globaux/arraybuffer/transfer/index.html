@@ -1,0 +1,100 @@
+---
+title: ArrayBuffer.transfer()
+slug: Web/JavaScript/Reference/Objets_globaux/ArrayBuffer/transfer
+tags:
+  - ArrayBuffer
+  - Experimental
+  - JavaScript
+  - Méthode
+  - Reference
+  - TypedArrays
+  - polyfill
+translation_of: Archive/Web/JavaScript/ArrayBuffer.transfer
+---
+<div>{{JSRef}}{{SeeCompatTable}}</div>
+
+<p>La méthode statique <code><strong>ArrayBuffer.transfer()</strong></code> renvoie un nouvel objet <code>ArrayBuffer</code> dont le contenu a été transféré depuis les données d'<code>ancienBuffer</code> et qui est soit tronqué soit complété avec des zéros pour que la longueur du nouvel objet soit égale à <code>nouvelleLongueur</code>. Si <code>nouvelleLongueur</code> vaut <code>undefined</code>, on utilisera la propriété <code>byteLength</code> de l'<code>ancienBuffer</code>. Cette opération fait que <code>ancienBuffer</code> sera dans un état détaché.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox">ArrayBuffer.transfer(ancienBuffer [, nouvelleLongueur]);</pre>
+
+<h3 id="Paramètres">Paramètres</h3>
+
+<dl>
+ <dt><code>ancienBuffer</code></dt>
+ <dd>Un objet {{jsxref("ArrayBuffer")}} à partir duquel on souhaite transférer des données.</dd>
+ <dt><code>nouvelleLongueur</code></dt>
+ <dd>La longueur, exprimée en octets, du nouvel objet <code>ArrayBuffer</code>.</dd>
+</dl>
+
+<h3 id="Valeur_de_retour">Valeur de retour</h3>
+
+<p>Un nouvel objet <code>ArrayBuffer</code>.</p>
+
+<h2 id="Description">Description</h2>
+
+<p>La méthode <code>ArrayBuffer.transfer()</code> permet d'agrandir et de détacher des objets <code>ArrayBuffer</code>. Le fait de pouvoir agrandir un <code>ArrayBuffer</code> sans effectuer de copie permet d'être beaucoup plus efficace sur les grands buffers (comme pour <code>realloc</code>). Le fait de pouvoir détacher un <code>ArrayBuffer</code> permet au développeur d'avoir un contrôle explicite sur la mémoire sous-jacente et sa libération. Cela permet d'éviter d'avoir à libérer toutes les références et d'attendre le travail du ramasse-miettes.</p>
+
+<h2 id="Exemples">Exemples</h2>
+
+<pre class="brush: js">var buf1 = new ArrayBuffer(40);
+new Int32Array(buf1)[0] = 42;
+
+var buf2 = ArrayBuffer.transfer(buf1, 80);
+buf1.byteLength; // 0 (attention, avec la prothèse, la valeur sera toujours 40)
+buf2.byteLength; // 80
+new Int32Array(buf2)[0]; // 42
+
+var buf3 = ArrayBuffer.transfer(buf2, 0);
+buf2.byteLength; // 0 (attention, avec la prothèse, la valeur sera toujours 80)
+buf3.byteLength; // 0
+</pre>
+
+<h2 id="Prothèse_d'émulation_(polyfill)">Prothèse d'émulation (<em>polyfill</em>)</h2>
+
+<p>Ce fragment de code permet d'obtenir la plupart des fonctionnalités de <code>transfer()</code> dans un environnement qui ne le prend pas en charge nativement. Attention, cela ne correspond pas exactement à l'API mais permet de transférer des données d'un <code>ArrayBuffer</code> vers un autre.</p>
+
+<pre class="brush: js">if (!ArrayBuffer.transfer) {
+    ArrayBuffer.transfer = function(source, length) {
+        if (!(source instanceof ArrayBuffer))
+            throw new TypeError('Source must be an instance of ArrayBuffer');
+        if (length &lt;= source.byteLength)
+            return source.slice(0, length);
+        var sourceView = new Uint8Array(source),
+            destView = new Uint8Array(new ArrayBuffer(length));
+        destView.set(sourceView);
+        return dest.buffer;
+    };
+}</pre>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Spécification</th>
+   <th scope="col">État</th>
+   <th scope="col">Commentaires</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><a href="https://github.com/domenic/proposal-arraybuffer-transfer/#arraybufferprototypetransfer">Proposition pour <code>ArrayBuffer.prototype.transfer</code></a></td>
+   <td>Brouillon</td>
+   <td>Brouillon de niveau 2</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<div class="hidden">Ce tableau de compatibilité a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à envoyer une <em>pull request</em> sur <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>.</div>
+
+<p>{{Compat("javascript.builtins.ArrayBuffer.transfer")}}</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="/fr/docs/Web/JavaScript/Tableaux_typ%C3%A9s">Les tableaux typés en JavaScript</a></li>
+</ul>

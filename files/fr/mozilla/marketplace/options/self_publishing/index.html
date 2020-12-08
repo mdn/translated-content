@@ -1,0 +1,144 @@
+---
+title: Auto-publication d'application
+slug: Mozilla/Marketplace/Options/Self_publishing
+translation_of: Archive/Mozilla/Marketplace/Options/Self_publishing
+---
+<div class="summary">
+ <p><span class="seoSummary">Il y a des circonstances où il n'est pas souhaitable de rendre une application disponible sur le Firefox Marketplace. C'est le cas, lorsque l'on veut distribuer l'application uniquement au membre d'une organisation ou bien lorsque l'application est encore en phase de test privé. Cette page explique comment publier sa propre application en dehors du Marketplace.</span></p>
+</div>
+<p>Les Open Web Apps sont installables sous Firefox OS, Firefox pour android et Firefox pour desktop en utilisant {{ domxref("Apps.install") }} ou {{ domxref("Apps.installPackage") }}. Dans les deux cas, ces APIs envoient l'URL du manifeste décrivant l'application à installer. Ainsi afin de publier soi-même son application, les pré-requis minimaux sont:</p>
+<ol>
+ <li>Un serveur où le manifest de l'application est accessible.</li>
+ <li>Un serveur où l'application est accessible pour les applications hébergées et pour les applications empaquetées le fichier ZIP contenant l'application.</li>
+ <li>Un code sur un site web appelant {{ domxref("Apps.install") }} ou {{ domxref("Apps.installPackage") }} selon la situation.</li>
+</ol>
+<h2 id="Limitations">Limitations</h2>
+<p>Avant de publier vous-même votre Open Web Apps, vous devriez garder en mémoires les limitations suivantes:</p>
+<ul>
+ <li>Les applications auto-publiées ne peuvent pas avoir accés aux <a href="/fr/Apps/Build/App_permissions">APIs privilégiées</a>. Pour utiliser ces APIs, l'application doit être une application empaquetée et avoir son fichier ZIP signé en utilisant le systéme de soumission du Firefox Marketplace.</li>
+ <li> L'application ne peut pas utiliser les achats intégrés du Firefox MarketPlace.</li>
+ <li>Vous devrez faire connaitre votre application vous-même car elle ne sera pas visible sur le Firefox marketplace.</li>
+</ul>
+<h2 id="Auto-publication_d'applications_empaquetées">Auto-publication d'applications empaquetées</h2>
+<p>Vous pouvez auto-publier votre application empaquetée en hébergeant son fichier ZIP ainsi qu'un mini-manifeste associé sur un serveur. Le mini-manifeste doit être dans le même dossier que le fichier ZIP car il permet d'identifier l'application lors de l'installation. Une fois le mini-manifeste créé, il ne reste plus qu'à créer un script invoquant {{ domxref("Apps.installPackage") }} avec l'url du mini-manifeste pour installer l'application. Voyons maintenant en détails les différentes étapes:</p>
+<ol>
+ <li>
+  <p>Empaquetez le contenu de votre application dans une archive ZIP et donnez lui le nom <code>package.zip</code>.  L'archive doit contenir toutes les ressources de l'application ainsi que que le <a href="/fr/Apps/Manifeste" title="Manifest documentation">manifeste</a> principal.</p>
+  <div class="warning">
+   <p>Attention: Le manifeste doit être à la racine de l'archive.</p>
+  </div>
+ </li>
+ <li>Créez un fichier appelé <code>manifest.webapp</code> et ajoutez le contenu ci-dessous. Ce fichier est connu sous le nom de mini-manifeste, car il s'agit d'une version simplifiée du fichier manifeste contenu dans l'archive de l'application. Il est utilisé par {{ domxref("Apps.installPackage") }} pour entreprendre l'installation de l'application. Pour plus de détails, référez-vous à la documentation sur les <a href="#Champs du mini-manifeste">champs du mini-manifeste</a> ci-dessous.
+  <pre class="brush: js">{
+    "name": "Le nom de mon application",
+    "package_path" : "<code class="language-js"><span class="token string">&lt;a class="</span>LinkyMobile<span class="token operator">-</span>ext<span class="token string">" href="</span>http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>my<span class="token operator">-</span>server<span class="token punctuation">.</span>com<span class="token operator">/</span>my<span class="token operator">-</span>app<span class="token operator">-</span>directory<span class="token operator">/</span>my<span class="token operator">-</span>app<span class="token punctuation">.</span>zip<span class="token string">" title="</span>Linkification<span class="token punctuation">:</span> http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>my<span class="token operator">-</span>server<span class="token punctuation">.</span>com<span class="token operator">/</span>my<span class="token operator">-</span>app<span class="token operator">-</span>directory<span class="token operator">/</span>my<span class="token operator">-</span>app<span class="token punctuation">.</span>zip<span class="token string">"&gt;http://my-server.com/my-app-directory/package.zip&lt;/a&gt;</span></code>",
+    "version": "1",
+    "developer": {
+        "name": "A. Developpeur",
+        "url": "<code class="language-js"><span class="token string">&lt;a class="</span>LinkyMobile<span class="token operator">-</span>ext<span class="token string">" href="</span>http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>my<span class="token operator">-</span>server<span class="token punctuation">.</span>com<span class="token string">" title="</span>Linkification<span class="token punctuation">:</span> http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>my<span class="token operator">-</span>server<span class="token punctuation">.</span>com<span class="token string">"&gt;http://my-server.com&lt;/a&gt;</span></code>"
+    }
+}</pre>
+ </li>
+ <li>Créez le script qui installera l'application. Pour cela, l'exemple ci-dessous utilise une simple page HTML nommée<code> index.html</code> ,  mais vous pouvez invoquer le script dans n'importe qu'elle méthode de votre site web. Le javaScript de cette page appelle l'API d'installation d'application empaquetée ({{ domxref("Apps.installPackage") }}) et inclut des notifications indiquant si l'installation a réussi ou non.
+  <pre class="brush: html">&lt;html&gt;
+  &lt;body&gt;
+    &lt;p&gt;Page d'installation de l'application empaquetée&lt;/p&gt;
+    &lt;script&gt;
+      // Cette URL doit être une URL compléte
+      var manifestUrl = '<code class="language-html"><span class="token script"><span class="token string">&lt;a class="LinkyMobile-ext" href="http://my-server.com/my-app-directory/package.manifest" title="Linkification: http://my-server.com/my-app-directory/package.manifest"&gt;http://my-server.com/my-app-directory/manifest.webapp&lt;/a&gt;</span></span></code>';
+      var req = navigator.mozApps.installPackage(manifestUrl);
+      req.onsuccess = function() {
+        alert(this.result.origin);
+      };
+      req.onerror = function() {
+        alert(this.error.name);
+      };
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+ </li>
+ <li>Copiez les fichiers <code>package.zip</code>, <code>package.manifest</code>, et <code>index.html</code> sur votre serveur dans le dossier choisi (<code>my-app-directory</code> dans cet exemple).</li>
+ <li>Maintenant vous pouvez installer l'application sur un appareil compatible. Ouvrez le fichier <code>index.html</code> (dans cet exemple le chemin de ce fichier est <code> <a class="LinkyMobile-ext" href="http://my-server.com/my-app-directory/package.manifest" title="Linkification: http://my-server.com/my-app-directory/package.manifest">http://mon-serveur.com/App-directory/index.html</a></code>)  et vous aurez une fenêtre demandant une confirmation avant d'installer l'application. Une fois l'installation terminée, vous aurez une indication sur le résultat de l'installation.</li>
+</ol>
+<div class="note">
+ <p>Astuce: Vous pouvez héberger localement une application empaquetée et le tester sur un appareil. Le serveur et l'appareil doivent pouvoir communiquer sur le réseau local. N'oubliez pas d'indiquer le numéro port si vous n'utilisez pas le port standard, par exemple: <code><a class="LinkyMobile-ext" href="http://10.10.12.1:8080/package.zip" title="Linkification: http://10.10.12.1:8080/package.zip">http://10.10.12.1:8080/package.zip</a></code>.</p>
+</div>
+<h3 id="Champs_du_mini-manifeste"><a name="Champs du mini-manifeste">Champs du mini-manifeste</a></h3>
+<p>Dans le cas d'auto-publication, il est nécessaire de créer un mini-manifeste. Si l'application est est publiée sur le Firefox Marketplace, le mini-manifeste est généré automatiquement à partir du <a href="/fr/Apps/Build/Manifest">manifeste</a> de l'application.</p>
+<p>Le meilleur moyen de créer le mini-manifeste est de copier le manifeste de l'application et de le modifer de maniére apropriée. Ainsi les champs<strong> <code>name</code>, <code>version</code>, <code>developer</code> et <code>locales</code> fields seront exactement les mêmes dans les deux manifestes</strong>. Il ne vous reste plus qu'à ajouter les champs <code>package_path</code>, <code>release_notes</code> et <code>size</code>:</p>
+<dl>
+ <dt>
+  <code>package_path</code> (requis)</dt>
+ <dd>
+  Le chemin absolu (URL compléte:  <code> <a class="LinkyMobile-ext" href="http://my-server.com/my-app-directory/package.manifest" title="Linkification: http://my-server.com/my-app-directory/package.manifest">http://mon-serveur.com/App-directory/manifest.webapp</a></code>) vers l'archive de l'application.</dd>
+ <dt>
+  <code>release_notes</code> (optionel)</dt>
+ <dd>
+  Notes de version de l'application. Sur le Firefox Marketplace cette information est fournie lors du processus de soumission.</dd>
+</dl>
+<dl>
+ <dt>
+  <code>size</code> (optionel)</dt>
+ <dd>
+  La taille de l'archive en octets. Cette information est utilisée par {{ domxref("Apps.installPackage") }} pour fournir une barre de progression lors de l'installation.</dd>
+</dl>
+<p>Voici un exemple d'un mini-manifeste:</p>
+<pre class="brush: js">{
+  "name": "My app",
+  "package_path": "<code class="language-js"><span class="token string">&lt;a class="</span>LinkyMobile<span class="token operator">-</span>ext<span class="token string">" href="</span>http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>thisdomaindoesnotexist<span class="token punctuation">.</span>org<span class="token operator">/</span>myapp<span class="token punctuation">.</span>zip<span class="token string">" title="</span>Linkification<span class="token punctuation">:</span> http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>thisdomaindoesnotexist<span class="token punctuation">.</span>org<span class="token operator">/</span>myapp<span class="token punctuation">.</span>zip<span class="token string">"&gt;http://thisdomaindoesnotexist.org/myapp.zip&lt;/a&gt;</span></code>",
+  "version": "1.0",
+  "size": 172496,
+  "release_notes": "Première publication",
+  "developer": {
+    "name": "Dupont Michel",
+    "url": "<code class="language-js"><span class="token string">&lt;a class="</span>LinkyMobile<span class="token operator">-</span>ext<span class="token string">" href="</span>http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>thisdomaindoesnotexist<span class="token punctuation">.</span>org<span class="token operator">/</span><span class="token string">" title="</span>Linkification<span class="token punctuation">:</span> http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>thisdomaindoesnotexist<span class="token punctuation">.</span>org<span class="token operator">/</span><span class="token string">"&gt;http://thisdomaindoesnotexist.org/&lt;/a&gt;</span></code>"
+  },
+  "locales": {
+    "fr-FR": {
+      "name": "Mon application"
+    },
+    "se-SE": {
+      "name": "Min balla app"
+    }
+  },
+  "icons": {
+    "16": "/icons/16.png",
+    "32": "/icons/32.png",
+    "256": "/icons/256.png"
+  }
+}
+</pre>
+<p>Les autres champs de cet exemple sont:</p>
+<dl>
+ <dt>
+  <code>name</code> (requis)</dt>
+ <dd>
+  Le nom de l'application. La longueur maximale est de 128 caractères.</dd>
+ <dt>
+  <code>version</code> (optionel)</dt>
+ <dd>
+  Le numéro de version de cette application.</dd>
+ <dt>
+  <code>developer</code>  (optionel)</dt>
+ <dd>
+  Information sur le développeur, contenant les champs <code>name</code> (nom) et <code>url</code> (adresse). Les informations saisies doivent correspondre avec celles du fichier manifest dans l'archive ZIP.</dd>
+ <dt>
+  <code>locales</code> (optionel)</dt>
+ <dd>
+  Information sur le langage, au format <code>xx-YY</code>.</dd>
+ <dt>
+  <code>icons</code> (optionel)</dt>
+ <dd>
+  Les icones utilisés par cette application.</dd>
+</dl>
+<p>Les autres champs de l'exemple proviennent du manifeste de l'application voir la <a href="/fr/Apps/Build/Manifest" title="Manifest documentation">page associée</a> pour plus d'information.</p>
+<h2 id="Auto-publication_d'application_hébergée">Auto-publication d'application hébergée</h2>
+<p>L'auto-publication d'applications hébergé est similaire à celle des applications empaquetées. Il faut toujours créer un manifeste pour l'application voir la <a href="/fr/Apps/Build/Manifest" title="Manifest documentation">page associée</a>. Le code pour installer l'application hébergé est le même que les applications hébergées. La seule différence est que le manifeste peut utiliser des URLs relatives</p>
+<h2 id="Voir_aussi">Voir aussi</h2>
+<ul>
+ <li><a href="/fr/Apps/Build/JavaScript_API">Installation d'application et gestion des APIs</a></li>
+ <li>{{ domxref("Apps.install") }}</li>
+ <li>{{ domxref("Apps.installPackage") }}</li>
+ <li><a href="/fr/Apps/Build/Manifest" title="Manifest documentation">Manifeste de l'application</a></li>
+ <li><a href="/fr/Apps/Build/App_permissions">Permissions d'application</a></li>
+</ul>

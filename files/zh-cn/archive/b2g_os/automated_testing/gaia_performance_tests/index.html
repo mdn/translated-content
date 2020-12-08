@@ -1,0 +1,109 @@
+---
+title: Gaia 性能测试
+slug: Archive/B2G_OS/Automated_testing/Gaia_performance_tests
+translation_of: Archive/B2G_OS/Automated_testing/Gaia_performance_tests
+---
+<div class="summary">
+ <p><span class="seoSummary">本文主要讲述了有关在 Gaia 上运行性能测试以及如何创建新的测试。</span></p>
+</div>
+<h2 id="运行测试">运行测试</h2>
+<p>The tests are run on a regular basis on <a href="https://datazilla.mozilla.org/b2g/" title="https://datazilla.mozilla.org/b2g/">Datazilla</a>; however, you can also run them yourself. To do so, you'll need an engineer build with <a href="/en-US/docs/Marionette" title="/en-US/docs/Marionette">Marionette</a> enabled and remote debugging <strong>disabled</strong>. See <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Gaia/Build_System_Primer#Customizing_the_preferences" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Gaia/Build_System_Primer#Customizing_the_preferences">Gaia Build System Primer, Customizing the preferences</a> for more information on how doing this.</p>
+<h3 id="测试需求">测试需求</h3>
+<p>Since <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=915156" title="FIXED: Port the performance testing framework to the new marionette runner">bug 915156</a> landed on December 6th 2013, <code>make test-perf</code> requires Node.js on the host to run the tests. The relevant modules should be installed automatically with <code>npm</code>.</p>
+<p>Prior to running the test, you need to configure a runner host. The runner host is a module that will either run the test in <a href="/en-US/Firefox_OS/Using_the_B2G_desktop_client">B2G desktop</a> or on a device (real or virtual — like an <a href="/en-US/Firefox_OS/Using_the_B2G_emulators">emulator</a>). By default it runs in B2G desktop, which is not very relevant for performance. To configure the runner just edit the file <code>local.mk</code> in the Gaia top level directory (create it if it doesn't already exist) and put the following line:</p>
+<pre class="brush: bash">MARIONETTE_RUNNER_HOST=marionette-device-host</pre>
+<p>This will use the device host runner. The default value is <code>marionette-b2gdesktop-host</code>.</p>
+<p>The alternative to this is to do:</p>
+<pre class="brush: bash">MARIONETTE_RUNNER_HOST=marionette-device-host make test-perf </pre>
+<div class="note">
+ <p><strong>Note:</strong> only one device at a time is supported, either an emulator or real device. Make sure you have an <a href="/en-US/Firefox_OS/Platform/Gaia/Hacking">up-to-date Gaia version running on it</a>.</p>
+</div>
+<h3 id="输出">输出</h3>
+<p>By default the test output the data in JSON format. By default it is output to <code>stdout</code> and might be mixed with error message from other commands like <code>npm</code>. This is not a very good idea for automation. So you can redirect this JSON output to a file. Just define <code>MOZPERFOUT</code> for the host runner, either on the command line as an option or in the <code>local.mk</code> file as shown above.</p>
+<pre class="brush: bash">MOZPERFOUT=myfile.json</pre>
+<p>There is a "spec" reporter that allow reporting the output in a more human readable format. To use it, set the environment as follow:</p>
+<pre class="brush: bash">REPORTER=ConsoleMozPerf</pre>
+<p>This will make the test output something easier to read. Not easier to parse. There is no real syntax.</p>
+<p>For now, any other value will use the JSON reporter.</p>
+<div class="note">
+ <p><strong>Note:</strong> <code>MOZPERFOUT</code> will be honoured whichever reporter you select.</p>
+</div>
+<h3 id="对所有_app_运行测试">对所有 app 运行测试</h3>
+<p>In general you can run these test on 1.4 and up from Gaia master. 1.3 might no longer be able to have the tests runs. There is an exception for 1.3t (Tarako). since <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1006064" title="FIXED: Port make test-perf to 1.3T">bug 1006064</a> landed, if you want to run the tests against Tarako (1.3t), you should run it from the Gaia 1.3t.</p>
+<p>From 2.0 and onwards, we consider that you should run the test from the same Gaia tree.</p>
+<pre class="brush: bash">make test-perf<span style="display: none;" id="cke_bm_264C"> </span></pre>
+<h3 id="对指定的_app_运行测试">对指定的 app 运行测试</h3>
+<pre class="brush: bash">APP=browser make test-perf</pre>
+<h3 id="对多个_app_运行测试">对多个 app 运行测试</h3>
+<pre class="brush: bash">APPS="browser communications/contacts" make test-perf</pre>
+<h3 id="Setting_the_number_of_runs">Setting the number of runs</h3>
+<p>By default, each test is run five times. You can change that by setting the value of <code>RUNS</code> before running the tests. For example, to run each test three times you'd use this option:</p>
+<pre class="brush: bash">RUNS=3 make test-perf</pre>
+<h3 id="已知问题">已知问题</h3>
+<p>When running test on Buri/Hamachi (Alcatel one touch fire), you get:</p>
+<pre>Not enough fields given the number of keys.</pre>
+<p>You can safely ignore the warning. It is just that <code>b2g-info</code> on the device is too old as it comes from 1.2 and we only change Gecko and Gaia on these.</p>
+<h2 id="Writing_new_tests">Writing new tests</h2>
+<p>With the details of running the test suite out the way, let's now look at how you can write your own performance tests for Gaia.</p>
+<h3 id="Startup_event_tests">Startup event tests</h3>
+<p>We have setup a standard for app startup events. If you want to test the app startup, please follow the <a href="https://developer.mozilla.org/en-US/Apps/Build/Performance/Firefox_OS_app_responsiveness_guidelines">responsiveness guidelines</a>. The <code>startup_event_test.js</code> test will drive it. Make sure to whitelist your app in <code>/tests/performance/startup_events_test.js</code>, by adding it to the list specified by <code>whitelistedApps</code>. Also as a transition measure, you should add it to  <code>whitelistedUnifiedApps</code> which list the apps that use that new method. Once all the apps will be migrated, then we this will disappear - if you can't find it that mean it is not needed anymore.</p>
+<div class="note">
+ <p><strong>Note:</strong> this is only implemented in 2.0 and later. If you code use <code>startup-path-done</code> events then it is using the old style and should be updated.</p>
+</div>
+<p>If you want to measure intermediate launch stages that are not part of the reponsiveness standard, you can dispatch these using the method described below. Dispatching performance events is all you need, they will be collected automatically.</p>
+<h3 id="其他的_event_基础测试">其他的 event 基础测试</h3>
+<p>Now if you want to test specific features in your app you can do so by sending events. The test will be in two part. The instrumentation part that lives in the app itself, and the control part that will use marionette to control the app to perform actions.</p>
+<h4 id="Instrumentation">Instrumentation</h4>
+<p>To record the events, all you have to do is dispatch them.</p>
+<p>First, include our helper in your app:</p>
+<pre class="brush: html">&lt;script defer src='/shared/js/performance_testing_helper.js'&gt;&lt;/script&gt;
+</pre>
+<div class="note">
+ <p><strong>Note</strong>: If you use a module loader like RequireJS or Alameda, you might prefer to use that, which is perfectly fine.</p>
+</div>
+<p>You need to be cautious and make sure you adjust the <a href="/en-US/Firefox_OS/Platform/Automated_testing/Gaia_unit_tests">unit tests</a> so that the <code>PerformaceTestingHelper</code> is either loaded or shimmed. A simple shim is to put this in the unit test source file:</p>
+<pre class="brush: js">var PerformanceTestingHelper = {
+  dispatch: function() { }
+};
+</pre>
+<p>The Travis CI jobs we run out of Github will error if you don't do that properly.</p>
+<p>Having done that, you can use the helper to dispatch events when it seems appropriate to do so. First you should dispatch a start event. It is important as the '<code>start</code>' event is sent when we register the listeners, so for your feature you likely want to do this much later. So choose where the feature start and add the proper event dispatch.</p>
+<pre class="brush: js">PerformanceTestingHelper.dispatch('my-feature-start');
+</pre>
+<p>When you're ready to stop collecting data and to report the numbers, you need to send the <code>my-feature-done</code> event, also called the last event, to tell the helper to finish:</p>
+<pre class="brush: js">PerformanceTestingHelper.dispatch('my-feature-done');</pre>
+<p>Also you might want to send intermediate events as appropriate.</p>
+<div class="note">
+ <p><strong>Note:</strong> Here we use "my-feature-" as a prefix for the performance event. This is just an example. Please use an obvious name and try to use it consistently.</p>
+</div>
+<h4 id="Controlling_the_app">Controlling the app</h4>
+<p>The second part is writing a JavaScript to the test framework to perform the test. The filename must end with <code>_test.js</code> and live in <code>apps/&lt;myapp&gt;/test/performance/</code>.</p>
+<p>It is a lot like a marionette integration test (based on mocha), but with a few twists: in the <code>setup()</code> function you must inject the helper atom that is being used to collect the performance events.</p>
+<pre class="brush: js">PerformanceHelper.injectHelperAtom(client);</pre>
+<p>You must pass a <code>lastEvent</code> parameter to the <code>PerformanceHelper</code> constructor. This will be the last event on which to wait to test your feature.</p>
+<p>When calling <code>performanceHelper.reportRunDurations()</code> toward the end you must pass the name of the start event you dispatched, otherwise the measurement will be from the start, ie when we inject the helper atom. An easy to figure out the error is if you see the start event in the results. And in that case you'll the the startup events as well as these will be dispatched too.</p>
+<div class="note">
+ <p><strong>Note:</strong> you may want to look at existing test to get a better idea.</p>
+</div>
+<h3 id="Collecting_memory_statistics">Collecting memory statistics</h3>
+<p>You can collect the memory usage for both the b2g process and the current app. Just do</p>
+<pre class="brush: js">var memUsage = performanceHelper.getMemoryUsage(app);</pre>
+<p><code>app</code> is the application object. <code>memusage</code> will contain several objects enumerating the memory statistics.</p>
+<h2 id="Running_tests_from_a_non-engineering_device">Running tests from a non-engineering device</h2>
+<p>If you don't have an engineering build on your phone you'll have to do some additional steps:</p>
+<ol>
+ <li>Clone B2G, and build with <code>./config.sh DEVICE-NAME</code> (e.g. <code>./config.sh keon</code>)</li>
+ <li>Build the Gecko part via <code>./build.sh gecko</code></li>
+ <li>Connect the phone and flash gecko via <code>./flash.sh gecko</code></li>
+ <li>Clone Gaia, and create a file <code>build/custom-prefs.js</code> with content <code>user_pref("marionette.defaultPrefs.enabled", true);</code></li>
+ <li>Enable <a href="/en-US/Firefox_OS/Debugging/Developer_settings#Remote_debugging">Remote Debugging</a> on the phone and run <code>make reset-gaia</code> to reset the phone (or <code>make install-gaia</code> if you trust yourself)</li>
+ <li>Disable Remote Debugging and verify that everything is OK by running <code>adb devices</code>. The device should show up.</li>
+ <li>Now running a perf test should work. Verify via <code>RUNS=1 APP=browser make test-perf</code></li>
+</ol>
+<h2 id="提交_bug">提交 bug</h2>
+<p>Please <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox%20OS">file bugs in Bugzilla</a>, product "Firefox OS", component "Gaia::PerformanceTest".</p>
+<h2 id="参考">参考</h2>
+<ul>
+ <li><a href="/en-US/docs/Marionette" title="/en-US/docs/Marionette">Marionette</a></li>
+ <li><a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing">Testing Firefox OS</a></li>
+</ul>

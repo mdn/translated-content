@@ -1,0 +1,97 @@
+---
+title: JS XPCOM
+slug: Mozilla/Add-ons/Code_snippets/JS_XPCOM
+translation_of: Archive/Add-ons/Code_snippets/JS_XPCOM
+---
+<p><span style="color: #000000; display: inline !important; float: none; font-family: Cantarell; font-size: 14.666666984558105px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal;">{{LegacyAddonsNotice}}</span></p>
+
+<p>这是一些解决XPCOM组件相关的有用的JavaScript代码。</p>
+
+<h3 id="Contract_IDs" name="Contract_IDs">Contract IDs</h3>
+
+<p>契约ID是XPCOM对象独一无二的名字。它们用于创建或者获得XPCOM中的对象。</p>
+
+<h3 id="Interfaces" name="Interfaces">Interfaces</h3>
+
+<p>Every XPCOM object implements one or more interfaces. An interface is simply a list of constants and methods that can be called on the object, an example is <code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile" title="nsIFile is the correct platform-agnostic way to specify a file; you should always use this instead of a string to ensure compatibility.">nsIFile</a></code>. Every XPCOM object must implement the <code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/Code_snippets/JS_XPCOM" title="">nsISupports</a></code> interface.</p>
+
+<h3 id="Accessing_XPCOM_components_from_JavaScript" name="Accessing_XPCOM_components_from_JavaScript">Accessing XPCOM components from JavaScript</h3>
+
+<p>XPCOM objects are either created as new instances (each creation gives you a completely new COM object) or as services (each access gives you the same COM object, often called a singleton). Whether you must create a new instance or access as a service depends on the contract. In order to get an XPCOM object you need to know the contract ID of the object and the interface that you wish to use on it.</p>
+
+<h4 id="Creating_an_instance_of_a_component" name="Creating_an_instance_of_a_component">Creating an instance of a component</h4>
+
+<p>The preferred method of creating XPCOM instances is via the <code><a href="/en-US/docs/Components.Constructor">Components.Constructor</a></code> helper. For example,</p>
+
+<pre class="brush: js">var nsFile = Components.Constructor("@mozilla.org/file/local;1", "nsIFile", "initWithPath");
+
+var file = new nsFile(filePath);
+</pre>
+
+<p>They can also be created and initialized manually:</p>
+
+<pre class="brush: js">var file = Components.classes["@mozilla.org/file/local;1"]
+                     .createInstance(Components.interfaces.nsIFile);
+file.initWithPath(filePath);
+</pre>
+
+<p>This creates a new instance of the object with contract ID <code>@mozilla.org/file/local;1</code> and allows you to call methods from the <code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile" title="nsIFile is the correct platform-agnostic way to specify a file; you should always use this instead of a string to ensure compatibility.">nsIFile</a></code> interface on it.</p>
+
+<h4 id="Getting_an_XPCOM_service" name="Getting_an_XPCOM_service">Getting an XPCOM service</h4>
+
+<pre class="brush: js">var preferences = Components.classes["@mozilla.org/preferences-service;1"]
+                            .getService(Components.interfaces.nsIPrefService);
+</pre>
+
+<p>You can then call any methods in the <code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/Code_snippets/JS_XPCOM" title="">nsIPrefService</a></code> interface on the preferences object.</p>
+
+<h4 id="Getting_a_different_interface_for_a_component" name="Getting_a_different_interface_for_a_component">Getting a different interface for a component</h4>
+
+<p>Some components implement more than one interface. Sometimes JavaScript is clever enough to know all the interfaces available on a component, but in most cases you will have to explicitly check for an interface. With the preferences service from the previous example we can do the following:</p>
+
+<pre class="brush: js">var preferences = preferences.QueryInterface(Components.interfaces.nsIPrefBranch2);
+</pre>
+
+<p>This allows you to use the methods in the <code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/Code_snippets/JS_XPCOM" title="">nsIPrefBranch2</a></code> interface.</p>
+
+<h4 id="Determining_which_interfaces_an_XPCOM_component_supports" name="Determining_which_interfaces_an_XPCOM_component_supports">Determining which interfaces an XPCOM component supports</h4>
+
+<p>To display a list of all interfaces that an XPCOM component supports, do the following:</p>
+
+<pre class="brush: js">// |c| is the XPCOM component instance
+for each (i in Components.interfaces) { if (c instanceof i) { alert(i); } }
+</pre>
+
+<p>In this context, <code>instanceof</code> is the same as <code>QueryInterface</code> except that it returns false instead of throwing an exception when <code>|c|</code> doesn't support interface <code>|i|</code>. Another difference is that <code>QueryInterface</code> returns an object, where as <code>instanceof</code> returns a <code>boolean</code>.</p>
+
+<h3 id="XPCOMUtils_-_About_protocol_handler" name="XPCOMUtils_-_About_protocol_handler">XPCOMUtils - About protocol handler</h3>
+
+<p>{{ Fx_minversion_inline(3) }}This example implements a quick about protocol handler in JS using <a href="/en/XPCOMUtils.jsm" title="en/XPCOMUtils.jsm">XPCOMUtils.jsm</a>.</p>
+
+<pre class="brush: js">Components.utils.import("resource://gre/modules/Services.jsm");
+Components.utils.import("resource://gre/modules/XPCOMUtils.jsm");
+const Cc = Components.classes;
+const Ci = Components.interfaces;
+
+function AboutHandler() {}
+AboutHandler.prototype = {
+    newChannel: function(uri) {
+        var channel = Services.io.newChannel("chrome://mystuff/content/mystuff.xul", null, null);
+        channel.originalURI = uri;
+        return channel;
+    },
+    getURIFlags: function(uri) {
+        // Do NOT return Ci.nsIAboutModule.URI_SAFE_FOR_UNTRUSTED_CONTENT unless
+        // you make sure to set a non-system principal in newChannel.
+        return 0;
+    },
+
+    classDescription: "About MyStuff Page",
+    classID: Components.ID("xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"),
+    contractID: "@mozilla.org/network/protocol/about;1?what=mystuff",
+    QueryInterface: XPCOMUtils.generateQI([Ci.nsIAboutModule])
+}
+
+var NSGetModule = XPCOMUtils.generateNSGetModule([AboutHandler]);
+}
+</pre>

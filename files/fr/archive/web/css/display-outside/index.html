@@ -1,0 +1,145 @@
+---
+title: display-outside
+slug: Archive/Web/CSS/display-outside
+tags:
+  - CSS
+  - Experimental
+  - Propriété
+  - Reference
+  - Web
+translation_of: Archive/Web/CSS/display-outside
+---
+<div>{{CSSRef}}{{SeeCompatTable}}</div>
+
+<p>La propriété <strong><code>display-outside</code></strong> définit le type d'affichage (<em>display type</em>) à l'extérieur de la boîte générée par un élément et indique la façon dont l'élément s'inscrit dans le contexte de formatage de l'élément parent.</p>
+
+<pre class="brush: css no-line-numbers">/* Valeurs avec un mot-clé */
+display-outside: block-level;
+display-outside: inline-level;
+display-outside: run-in;
+display-outside: contents;
+display-outside: none;
+display-outside: table-row-group;
+display-outside: table-header-group;
+display-outside: table-footer-group;
+display-outside: table-row;
+display-outside: table-cell;
+display-outside: table-column-group;
+display-outside: table-column;
+display-outside: table-caption;
+display-outside: ruby-base;
+display-outside: ruby-text;
+display-outside: ruby-base-container;
+display-outside: ruby-text-container;
+
+/* Valeurs globales */
+display-outside: inherit;
+display-outside: initial;
+display-outside: unset;
+</pre>
+
+<p>{{cssinfo}}</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<p>Cette propriété est définie grâce à l'un des mots-clés définis ci-après.</p>
+
+<h3 id="Valeurs">Valeurs</h3>
+
+<dl>
+ <dt><code>block-level</code></dt>
+ <dd>L'élément génère une boîte en bloc (<em>block-level</em>) et s'inscrit dans un contexte de formatage en bloc. D'autres contextes de mise en forme (comme les contextes flexibles) peuvent fonctionner avec les éléments en bloc.</dd>
+ <dt><code>inline-level</code></dt>
+ <dd>L'élément génère une boîte de type <em>inline-level</em> et s'inscrit dans un contexte de mise en forme en ligne (<em>inline</em>).</dd>
+ <dt><code>run-in</code></dt>
+ <dd>L'élément génère une boîte de type <em>run-in</em>. Les éléments de ce type agissent comme des éléments en ligne ou comme des éléments en bloc selon les éléments qui les entourent.</dd>
+ <dt><code>contents</code></dt>
+ <dd>L'élément dispose son contenu grâce à la disposition flexible.</dd>
+ <dt><code>none</code></dt>
+ <dd>L'élément ne génère aucune boîte et ne s'inscrit dans aucun contexte de mise en forme.</dd>
+ <dt><code>table-row-group, table-header-group, table-footer-group, table-row, table-cell, table-column-group, table-column, table-caption</code></dt>
+ <dd>L'élément est un élément interne à un tableau et s'inscrit dans un contexte de mise en forme au sein d'un tableau.<br>
+ <br>
+ <code>table-cell</code> et <code>table-caption</code> sont des dispositions spécifiques de feuille (<em>leaf type</em>) et les autres sont des types de disposition spécifiques internes (cf. ci-après).</dd>
+ <dt><code>ruby-base, ruby-text, ruby-base-container, ruby-text-container</code></dt>
+ <dd>L'élément est un élément ruby interne et s'inscrit dans un contexte de disposition ruby.<br>
+ <br>
+ <code>ruby-base</code> et <code>ruby-text</code> sont des types de disposition de feuilles et <code>ruby-base-container</code> et <code>ruby-text-container</code> sont des types de disposition spécifiques internes (cf. ci-après).</dd>
+ <dt>Types de disposition spécifiques internes</dt>
+ <dd>Pour ces types d'affichage, il est nécessaire que l'élément parent et les éléments fils soient d'un type d'affichage particulier. Ainsi, pour une boîte <code>table-row</code>, il faudra que l'élément parent soit un groupe de ligne d'un tableau et il faudra que ses éléments fils soient des boîtes <code>table-cell</code>.</dd>
+ <dt>Types de disposition de feuille</dt>
+ <dd>Pour ces types d'affichage, il est nécessaire que l'élément parent soit d'un type d'affichage donné mais ils peuvent accepter n'importe quelle valeur pour <code>display-inside</code>. Ainsi, pour une boîte <code>table-caption</code>, il faut que le parent soit <code>table</code> mais l'élément peut établir n'importe quel type de contexte de mise en forme pour ses fils.</dd>
+</dl>
+
+<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+
+<pre class="syntaxbox">{{csssyntax}}</pre>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Spécification</th>
+   <th scope="col">État</th>
+   <th scope="col">Commentaires</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Display', '#the-display-outside', 'display-outside')}}</td>
+   <td>{{Spec2('CSS3 Display')}}</td>
+   <td>Définition initiale.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Fonctionnalité</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Support simple</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Fonctionnalité</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Support simple</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>

@@ -1,0 +1,33 @@
+---
+title: WifiManager.onstatuschange
+slug: Web/API/WifiManager/onstatuschange
+tags:
+  - API
+  - B2G
+  - Non Standard
+  - WebAPI
+translation_of: Archive/B2G_OS/API/WifiManager/onstatuschange
+---
+<div>{{APIRef("Firefox OS")}}{{non-standard_header}}</div>
+
+<div>{{B2GOnlyHeader2('certified')}}</div>
+
+<p>Pointe sur un écouteur d'événement pour recevoir l'événement {{event("statuschange")}}. Cet événement se produit lorsque la connexion WiFi change d'état.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox">navigator.mozWifiManager.onstatuschange = funcRef</pre>
+
+<p>Où <code><em>funcRef</em></code> est une fonction à appeler lorsque l'événement {{event("statuschange")}} se produit. Cette fonction de rappel reçoit un objet {{domxref("MozWifiStatusChangeEvent")}} comme premier paramètre.</p>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<p>Ne fait partie d'aucune spécification.</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>{{domxref("WifiManager")}}</li>
+ <li>{{domxref("MozWifiStatusChangeEvent")}}</li>
+ <li><a href="/fr/docs/WebAPI/WiFi_Information">WifI Information API</a></li>
+</ul>

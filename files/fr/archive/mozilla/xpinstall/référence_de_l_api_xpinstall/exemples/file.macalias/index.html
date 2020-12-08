@@ -1,0 +1,33 @@
+---
+title: File.macAlias
+slug: Archive/Mozilla/XPInstall/Référence_de_l_API_XPInstall/Exemples/File.macAlias
+translation_of: Archive/Mozilla/XPInstall/Reference/Examples/File.macAlias
+---
+<p> </p>
+<h3 id="File.macAlias" name="File.macAlias">File.macAlias</h3>
+<p>Dans cet exemple, on crée un alias mac pour le logiciel (AppleCD Audio Player) installé en local.</p>
+<pre class="eval">xpiSrc = "Miscellaneous Program";
+var vi = "1.1.1.1";
+initInstall(
+  "Macintosh Alias",
+  "misc",
+  vi,
+  0);
+f = getFolder("Program");
+g = getFolder("Mac Desktop");
+addFile(
+  "filemacalias",
+  "2.2.2.2",
+  xpiSrc,
+  f,
+  xpiSrc,
+  true);
+err = File.macAlias(f, xpiSrc, g, xpiSrc + " alias");
+logComment("File.macAlias returns: " + err);
+if (0 == getLastError())
+   performInstall();
+else
+   cancelInstall();
+</pre>
+<p><span class="comment">Interwiki Languages Links</span></p>
+<p>{{ languages( { "en": "en/XPInstall_API_Reference/Examples/File.macAlias" } ) }}</p>

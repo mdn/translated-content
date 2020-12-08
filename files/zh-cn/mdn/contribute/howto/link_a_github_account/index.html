@@ -1,0 +1,89 @@
+---
+title: 如何在您的MDN账户中关联一个GitHub账户
+slug: MDN/Contribute/Howto/Link_a_GitHub_account
+tags:
+  - MDN
+  - 文档
+translation_of: Archive/MDN/Howto_Link_a_Github_account
+---
+<div>{{MDNSidebar}}</div>
+
+<div>{{IncludeSubnav("/zh-CN/docs/MDN")}}</div>
+
+<div class="note">
+<p><strong>Note: </strong>Support for Persona logins on MDN was disabled on November 1, 2016. The method for adding a Github account to your profile therefore no longer works. If you didn't add a GitHub login to your MDN account before we disabled Persona logins, please <strong>file an <a class="external external-icon" href="https://mzl.la/accounthelp">"Account Help" bug</a> </strong>on Bugzilla. For further reading about the end of life of Persona, see: <a href="https://wiki.mozilla.org/Identity/Persona_Shutdown_Guidelines_for_Reliers">Persona shutdown guidelines</a>.</p>
+</div>
+
+
+<p><span class="seoSummary">由于Mozilla的 <a href="https://login.persona.org/">Persona</a> 身份认证系统将会于2016年11月30日起关闭，所有希望为MDN做贡献的用户都需要用其他手段来登录到 MDN。当前，我们支持的唯一选择就是 GitHub，所以您需要在截止日期过后使用 <a href="https://github.com/">GitHub</a> 账户登入并编辑 MDN。这篇文章讲述了如何将 GitHub 身份认证添加到您的MDN账户中。</span></p>
+
+<div class="warning">
+<p>您必须在2016年11月30日前完成此操作，否则您将再也无法登录 MDN！</p>
+</div>
+
+<h2 id="概述">概述</h2>
+
+<p>将GitHub身份认证添加到您的账户中并不难。下面我们将进一步讨论细节，但首先，先看一下步骤概述：</p>
+
+<ol>
+ <li><a href="/zh-CN/docs/MDN/Signing_in">登录您的 MDN 账户</a></li>
+ <li>转到 <a href="https://developer.mozilla.org/en-US/users/account/connections">账户关联</a> 页面</li>
+ <li>添加 GitHub 身份认证。</li>
+</ol>
+
+<h2 id="详细指南">详细指南</h2>
+
+<p>下面是一个手把手的教程，教您如何完成您需要知道的事情。</p>
+
+<h3 id="登入您的_MDN_账户">登入您的 MDN 账户</h3>
+
+<ol>
+ <li>在任意MDN页面的顶端，将鼠标悬浮于或点击登录框。它会显示可用的身份认证方式：<strong>Persona</strong> 或 <strong>GitHub </strong>。<br>
+  <img alt="Sign in box on MDN, showing Persona and Github." src="https://mdn.mozillademos.org/files/13426/Mozilla_Developer_Network_-__Private_Browsing_.png" style="border-style: solid; border-width: 1px; height: 140px; width: 425px;"></li>
+ <li>选择 <strong>Persona </strong>，然后用您常用的登录凭据登入。</li>
+</ol>
+
+<h3 id="转到账户关联页面">转到账户关联页面</h3>
+
+<p>有两种方法转到账户关联页面。</p>
+
+<p>一种方法就是点击下面的链接。</p>
+
+
+<p>还有一种方法就是完成下列步骤：</p>
+
+<ol>
+ <li>在任意 MDN 的页面顶端单击您的用户名（就是您未登录时登入框的位置）。这将带您到您的资料页面。</li>
+ <li>点击“齿轮”菜单，然后单击 <strong>Account connections </strong>（账户关联）。<br>
+  <img alt='Gear menu in profile, showing the "Account connections" option' src="https://mdn.mozillademos.org/files/13428/SheppyWork___MDN_-__Private_Browsing_.png" style="height: 217px; width: 219px;"></li>
+</ol>
+
+<h3 id="添加_GitHub_身份认证">添加 GitHub 身份认证</h3>
+
+<p>您现在位于"Account connections"（账户关联）页面，它罗列了您已连接到您的 MDN 个人资料的外部账户。如果 GitHub 账户已经列出，那么恭喜你！您已经完成了！但为了测试一下您是否牢记您的密码，可以登出 MDN，再使用您的 GitHub 身份凭证登入。</p>
+
+<p>如果 Github 没有列出，请看看页面底部的已连接账户列表。您可以看到<strong>连接一个新的账号</strong>小节，这里列出了您可以与您的 MDN 个人资料建立连接的账户。如下图：</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13430/Account_Connections___MDN_-__Private_Browsing_.png" style="height: 79px; width: 476px;"></p>
+
+<p>要想添加 GitHub：</p>
+
+<ol>
+ <li>点击 <strong>连接 Github</strong>。MDN 将会向 Github 请求权限连接这两个账户。如果您还未登录 Github，登录页面将会显示出来：<br>
+  <img alt="Screenshot of GitHub sign in window." src="https://mdn.mozillademos.org/files/13444/GitHub_Sign_In.png" style="height: 447px; width: 356px;"></li>
+ <li>如果您为您的 Github 账户开通了两步验证，您须要输入您的验证码：<br>
+  <img alt="Screenshot of GitHub's Two-factor authentication window." src="https://mdn.mozillademos.org/files/13460/GitHub_-_Where_software_is_built.png" style="height: 448px; width: 361px;"></li>
+ <li>现在您登录您的 Github 账户了。您可以进行授权，以连接 Github 与 MDN 账户（除非您曾经因某些原因授权过）。此页面如下图：<br>
+  <img alt='Screenshot of GitHub "Authorize application" window.' src="https://mdn.mozillademos.org/files/13456/Authorize_Mozilla_Developer_Network.png" style="height: 420px; width: 766px;"><br>
+  点击绿色的 <strong>Authorize application</strong>（授权应用） 按钮授予您的 MDN 账户访问您的 Github 账户的权限。当您的 Github 账户成功与 MDN 账户建立连接时，您将看到这一信息：<br>
+  <img alt="Account successfully created." src="https://mdn.mozillademos.org/files/13454/Edit_Your_Profile___MDN.png" style="height: 57px; width: 646px;"></li>
+</ol>
+
+<p>现在您不仅可用 GitHub 登录 MDN，还已经使用 GitHub 身份认证登入了！您已经准备好应对 Persona 关闭了。如有必要，您应该确定已经更新了安装的所有密码管理器。</p>
+
+<h2 id="相关链接">相关链接</h2>
+
+<ul>
+ <li><a href="/zh-CN/docs/MDN/Contribute/Howto/Create_an_MDN_account">如何创建一个MDN账户</a></li>
+ <li><a href="/zh-CN/docs/MDN/Getting_started">初入MDN</a></li>
+</ul>

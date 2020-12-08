@@ -1,0 +1,180 @@
+---
+title: アニメーションを扱う
+slug: Tools/Page_Inspector/How_to/Work_with_animations
+tags:
+  - Guide
+  - Inspector
+  - Tools
+translation_of: Tools/Page_Inspector/How_to/Work_with_animations
+---
+<div>{{ToolsSidebar}}</div><p>本記事では、アニメーションの視覚化と編集が可能な 3 つのツールを扱います:</p>
+
+<ul>
+ <li><a href="/ja/docs/Tools/Page_Inspector/How_to/Work_with_animations#Animation_inspector">アニメーションインスペクター</a></li>
+ <li><a href="/ja/docs/Tools/Page_Inspector/How_to/Work_with_animations#Edit_keyframes">@keyframes の編集</a></li>
+ <li><a href="/ja/docs/Tools/Page_Inspector/How_to/Work_with_animations#Edit_timing_functions">タイミング関数の編集</a></li>
+</ul>
+
+<h2 id="Animation_inspector" name="Animation_inspector">アニメーションインスペクター</h2>
+
+<p>ページインスペクターの <a href="/ja/docs/Tools/Page_Inspector/UI_Tour#Animations_view">アニメーションビュー</a> では、ページ内のアニメーションを時間の時系列に沿って表示します。また、時系列上の任意の位置に移動するために使用する、ドラッグ可能なウィジェットがあり、ある時点のページの状態を確認できます。</p>
+
+<p>このビューでは <a href="/ja/docs/Web/CSS/CSS_Transitions">CSS トランジション</a>、<a href="/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations">CSS @keyframes 規則</a>、<a href="/ja/docs/Web/API/Web_Animations_API">Web Animations API</a> を使用して作成したアニメーションを表示します。Firefox 48 より、<code><a href="/ja/docs/Web/CSS/::before">::before</a></code> および <code><a href="/ja/docs/Web/CSS/::after">::after</a></code> 疑似要素に適用したアニメーションも表示します。</p>
+
+<p>ビューの動作を知るために、サンプルを使用してひととおり見ていきましょう。以下のボックス内に、<a href="/ja/docs/Mozilla/Firefox/Developer_Edition">Firefox Developer Edition</a> を表すグレースケールのアイコンがあります。アイコンをクリックすると膨張して色がつき、ブラウザ名が現れます。もう一度アイコンをクリックすると、元に戻ります。</p>
+
+<p>{{EmbedLiveSample('firefox-logo-animation', 500, 200, "", "Tools/Page_Inspector/How_to/Work_with_animations/Animation_inspector_example:_Web_Animations_API")}}</p>
+
+<p>これらのアニメーションは、<a href="/ja/docs/Web/API/Web_Animations_API">Web Animations API</a> を使用して作成しました。</p>
+
+<p>このサンプルで何が起きているかを、アニメーションインスペクターで見ていきましょう。</p>
+
+<ol>
+ <li>ボックス内を右クリックして [要素を調査] を選択します。</li>
+ <li><code>&lt;div class="channel"&gt;</code> 要素が選択されていることを確認します。</li>
+ <li>[アニメーション] タブに切り替えます。</li>
+ <li>アニメーションを再生します。</li>
+</ol>
+
+<p>{{EmbedYouTube("3f_vtdHqt9o")}}</p>
+
+<p>ここで、アニメーションインスペクターの内容を詳しく見ていきましょう:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14508/animation-inspector-1.png" style="display: block; height: 216px; margin-left: auto; margin-right: auto; width: 738px;"></p>
+
+<p>これは、選択中の要素や子要素に適用されているすべてのアニメーションをひとつの時系列に表示したタイムラインです。時系列は最初のアニメーションの開始時点から始まり、最後のアニメーションの終了時点で終わります。また、250 ミリ秒ごとにマーカーがついています (表示しているアニメーションの時間規模に依存します)。</p>
+
+<h3 id="Animation_bars" name="Animation_bars">アニメーションバー</h3>
+
+<p>それぞれのアニメーションやトランジションは、時系列に沿って水平方向に並ぶバーとして表示します。また、バーは以下のように表示します:</p>
+
+<ul>
+ <li>プロパティを変化させる <code><a href="/ja/docs/Web/CSS/transition">transition</a></code> を使用している場合は青色で表示</li>
+ <li><a href="/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations"><code>@keyframes</code> アニメーション</a> を使用している場合は橙色で表示</li>
+ <li><a href="/ja/docs/Web/API/Web_Animations_API">Web Animations API</a> を使用している場合は緑色で表示</li>
+</ul>
+
+<p>Compositor スレッドを使用してプロパティのアニメーションを行っている場合は稲妻のアイコン (<img alt="" src="https://mdn.mozillademos.org/files/13106/compositor.png" style="width: 15px;">) を表示します (詳しくは <a href="/ja/docs/Tools/Performance/Scenarios/Animating_CSS_properties#CSS_property_cost">さまざまな CSS プロパティでアニメーションを行うコスト</a> をご覧ください)。</p>
+
+<p>Firefox 52 よりバーの形状が、アニメーションで使用するイージング効果を反映するようになりました。前出の例では 1 番目のバーが凹型で ease-in、2番目のバーが凸型で ease-out を表していることがわかります。</p>
+
+<p>CSS トランジションのアニメーションでは、それぞれのプロパティのトランジションをひとつのバーで表し、トランジションを行うプロパティの名称を記載します。CSS <code>@keyframes</code> のアニメーションでは、それぞれのアニメーションをひとつのバーで表し、キーフレームの名前を記載します。</p>
+
+<p>アニメーションやトランジションに遅延がある場合は、その部分を斜線で網掛け表示します。<a href="/ja/docs/Web/API/Web_Animations_API/Animation_timing_options"><code>delay</code> および <code>endDelay</code></a> の両方を表します。</p>
+
+<p>バーにマウスポインターを載せると以下の情報を含む、アニメーションやトランジションの詳細情報を記載したツールチップを表示します:</p>
+
+<ul>
+ <li>アニメーションの種類: CSS トランジション、CSS アニメーション、Web Animations API</li>
+ <li>アニメーションの再生時間</li>
+ <li>アニメーションの開始および終了時の遅延</li>
+ <li>アニメーションのイージング (またはタイミング関数)</li>
+</ul>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14510/animation-inspector-2.png" style="display: block; height: 291px; margin-left: auto; margin-right: auto; width: 738px;"></p>
+
+<h3 id="Information_about_the_animated_element" name="Information_about_the_animated_element">アニメーションする要素の情報</h3>
+
+<p>バーの左側に、アニメーションを適用した要素のセレクターがあります。セレクターにマウスポインターを載せると、ページ上で要素をハイライト表示します。セレクターをクリックすると、要素をインスペクターで選択します。</p>
+
+<p>{{EmbedYouTube("ygATdrzQz0I")}}</p>
+
+<p>セレクターの左側に、"標的" のアイコン (<img alt="" src="https://mdn.mozillademos.org/files/11919/target-icon.png" style="height: 16px; width: 15px;">) があります。このアイコンをクリックすると、要素をハイライト表示したままにします。</p>
+
+<h3 id="Animation_details" name="Animation_details">アニメーションの詳細情報</h3>
+
+<p>バーをクリックすると、アニメーションで変化するすべてのプロパティについて詳細情報を表示します。例えば、<code>img#icon</code> のアニメーションのバーをクリックしてみましょう:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14512/animation-inspector-3.png" style="display: block; height: 260px; margin-left: auto; margin-right: auto; width: 738px;"></p>
+
+<p><code><a href="/ja/docs/Web/CSS/filter">filter</a></code> と <code><a href="/ja/docs/Web/CSS/transform">transform</a></code> の、2 つのプロパティが変化していることがわかります。それぞれのドットは、アニメーションで使用しているキーフレームのセット内にある、プロパティの項目を示します。どちらのプロパティも 0ms で開始、750ms で終了しています。<code>filter</code> は 250ms で、<code>transform</code> は 500ms で値が与えられています。ドットにマウスポインターを載せると、タイムライン上の特定の時点でプロパティに与えられた値を確認できます:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14514/animation-inspector-4.png" style="display: block; height: 260px; margin-left: auto; margin-right: auto; width: 738px;"></p>
+
+<p>これは要するに、アニメーションの <a href="/ja/docs/Tools/Page_Inspector/How_to/Work_with_animations/Animation_inspector_example:_Web_Animations_API#JavaScript_Content">キーフレーム</a> を視覚化したものです:</p>
+
+<pre class="brush: js line-numbers  language-js">var iconKeyframeSet = [
+  { transform: 'scale(1)',   filter: 'grayscale(100%)'                },
+  {                          filter: 'grayscale(100%)', offset: 0.333 },
+  { transform: 'scale(1.5)',                            offset: 0.666 },
+  { transform: 'scale(1.5)', filter: 'grayscale(0%)'                  }
+];</pre>
+
+<h3 id="Application_to_the_example" name="Application_to_the_example">サンプルに応用する</h3>
+
+<p>これらすべてをサンプルに適用すると、以下のことがわかります:</p>
+
+<ul>
+ <li>アニメーションは <code>span#note</code> および <code>img#icon</code> の、2 つの要素で行っています。これらのセレクターにマウスポインターを載せると、それぞれブラウザー名 "Firefox Developer Edition" とブラウザーのアイコンであることがわかります。</li>
+ <li><code>img#icon</code> のアニメーションについて:
+  <ul>
+   <li>アイコンのサイズ変更と着色のため、<code><a href="/ja/docs/Web/CSS/filter">filter</a></code> および <code><a href="/ja/docs/Web/CSS/transform">transform</a></code> プロパティでアニメーションを行っています。</li>
+   <li>終端は 750ms で、100ms の <code>endDelay</code> があります。</li>
+   <li>Compositor スレッドを使用します。</li>
+   <li><code><a href="/ja/docs/Web/API/AnimationEffectTimingProperties/easing">easing</a></code> の値 <code>ease-in</code> が指定されました。緑色のバーが凹型形状であることからわかります。</li>
+  </ul>
+ </li>
+ <li><code>span#note</code> のアニメーションについて:
+  <ul>
+   <li>名称を徐々に表示するため、<code><a href="/ja/docs/Web/CSS/width">width</a></code> および <code><a href="/ja/docs/Web/CSS/opacity">opacity</a></code> プロパティでアニメーションを行っています。</li>
+   <li>終端は 500ms で、150ms の <code>delay</code> があります。</li>
+   <li><code><a href="/ja/docs/Web/API/AnimationEffectTimingProperties/easing">easing</a></code> の値 <code>ease-out</code> が指定されました。緑色のバーが凸型形状であることからわかります。</li>
+  </ul>
+ </li>
+</ul>
+
+<h3 id="Animation_playback" name="Animation_playback">アニメーションを再生する</h3>
+
+<p>アニメーションインスペクターの上部に、以下のウィジェットがあります:</p>
+
+<ul>
+ <li>アニメーションの再生/一時停止および再実行するボタン</li>
+ <li>アニメーションの再生速度を変更するドロップダウンリスト</li>
+ <li>アニメーションの経過時間を表示する</li>
+</ul>
+
+<p>最後に、時系列の上部にあるバーの内部をクリックすると、左右にドラッグしてアニメーションを前後に遷移させることが可能なスクラバーを使用できます。これにより、いつ何が起きているかを正確に把握できます:</p>
+
+<p>{{EmbedYouTube("9fxRm3i_aDQ")}}</p>
+
+<h3 id="Further_information_about_animation_compositing" name="Further_information_about_animation_compositing">アニメーションの合成に関する詳細情報</h3>
+
+<p>Firefox 49 よりアニメーションインスペクターで、アニメーションのパフォーマンスや合成に関する情報を提供する機能が向上しました。これを説明するために、サンプルを 2 つ作成しました。<a href="https://mdn.github.io/devtools-examples/animation-inspector/animation-inspector-compositing.html">animation-inspector-compositing.html</a> を開いて赤色の長方形をクリックすると、シンプルな {{cssxref("opacity")}} のアニメーションが始まります。Firefox 49 以降でこれをアニメーションインスペクターで見ると、以下のことがわかります:</p>
+
+<ul>
+ <li>白色の稲妻アイコンは、すべてのアニメーションプロパティが Compositor を使用して実行するよう最適化されているかを示しており、有効になっています。</li>
+ <li>バーのツールチップにも、リマインダーとしてこの情報が含まれています。"すべてのアニメーションのプロパティが最適化されています" というメッセージがあります。</li>
+ <li>アニメーション情報を展開すると、Compositor によってアニメーションが最適化されているプロパティ名の隣に稲妻のアイコンを表示します。</li>
+</ul>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13589/compositing-information-1.png" style="display: block; height: 349px; margin: 0px auto; width: 1065px;"></p>
+
+<p>次に <a href="https://mdn.github.io/devtools-examples/animation-inspector/animation-inspector-compositing-silly.html">animation-inspector-compositing-silly.html</a> を見てみましょう。こちらも同様のサンプルですが、赤色の長方形をクリックすると {{cssxref("opacity")}} と同時に、{{cssxref("left")}} や {{cssxref("transform")}} (translation なし) プロパティもアニメーションする点が異なります。位置プロパティと translation を同時に実行することにはあまり意味がありません (2 つの効果は同期しません) ので、<code>transform</code> プロパティは意図的に Compositor で扱われません。Firefox 49 以降、アニメーションインスペクターはこれをより役に立つように伝えます。アニメーションインスペクターで見ると、以下のことがわかります:</p>
+
+<ul>
+ <li>バーにあった白色の稲妻アイコンが灰色の稲妻アイコンに変わっており、関連プロパティの一部しか Compositor によって最適化されていないことを示します。</li>
+ <li>バーのツールチップにも、リマインダーとしてこの情報が含まれています。"一部のアニメーションのプロパティが最適化されています" というメッセージがあります。</li>
+ <li>アニメーションが<strong>最適化されていない</strong>プロパティで、コードを改良すれば最適化できるものに、点線の下線を表示します。以下のスクリーンショットで transform をご覧ください。プロパティ名にマウスポインターを載せると、理由を説明するツールチップを表示します。この例では、"同一要素上の位置プロパティを同時にアニメーションする場合、このコンポジタでは ‘transform’ のアニメーションを実行できません。" というメッセージです。</li>
+</ul>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13591/compositing-information-2.png" style="display: block; height: 394px; margin: 0px auto; width: 1158px;"></p>
+
+<h2 id="Edit_keyframes" name="Edit_keyframes">@keyframes の編集</h2>
+
+<p>選択中の要素に関連付けられた <a href="/ja/docs/Web/Guide/CSS/Using_CSS_animations">@keyframes 規則</a> を <a href="/ja/docs/Tools/Page_Inspector/UI_Tour#Rules_view">ルールビュー</a> に表示します。また、編集も可能です:</p>
+
+<p>{{EmbedYouTube("mDHtLK88ZW4")}}</p>
+
+<h2 id="Edit_timing_functions" name="Edit_timing_functions">タイミング関数の編集</h2>
+
+<p><a href="/ja/docs/Web/Guide/CSS/Using_CSS_animations">CSS アニメーション</a> を作成する際に、<a href="/ja/docs/Web/CSS/animation-timing-function">タイミング関数</a> を指定できます。これはアニメーションが進むペースを定義します。タイミング関数の指定方法のひとつが、3 次ベジェ曲線による指定です。</p>
+
+<p>ルールビューで、3 次ベジェ曲線で定義したタイミング関数の隣にアイコンを表示します。このアイコンをクリックすると視覚的な曲線エディターを表示します。<a href="/ja/docs/Web/CSS/timing-function#The_cubic-bezier()_class_of_timing-functions">P1 および P2</a> をドラッグして、その結果をページ上で確認できます。</p>
+
+<p>{{EmbedYouTube("GW5-R2ewaqA")}}</p>
+
+<p>この機能は、<a href="http://cubic-bezier.com">Lea Verou の cubic-bezier.com</a> 由来のオープンソースコードを使用しています。</p>
+
+<p>3 次ベジェ曲線エディターに多くのプリセットを用意しました。これらは "Ease-in"、"Ease-out"、"Ease-in-out" にグループ化されています:</p>
+
+<p>{{EmbedYouTube("Jx-J2Yy0aSg")}}</p>

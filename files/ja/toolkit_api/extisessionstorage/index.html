@@ -1,0 +1,106 @@
+---
+title: extISessionStorage
+slug: Toolkit_API/extISessionStorage
+tags:
+  - FUEL
+  - Interfaces
+  - SMILE
+  - STEEL
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/Toolkit_API/extISessionStorage
+---
+<p></p>
+<p></p><div class="blockIndicator standardNote">
+<p>この記事は <a href="https://developer.mozilla.org/ja/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a>  の新機能について述べています</p>
+</div><p></p>
+<p><code>extISessionStorage</code> は、アプリケーション (ブラウザ) を起動している間のデータを拡張機能が格納できるようにします。<code>extISessionStorage</code> は <code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/exthelper/extIApplication.idl" rel="custom">toolkit/components/exthelper/extIApplication.idl</a></code> で定義されています。</p>
+<p>XPCOM サービスを通して実装された <a class="internal" href="/ja/Toolkit_API/extIApplication" title="ja/Toolkit API/extIApplication"><code>extIApplication</code></a>: <a class="internal" href="/ja/Toolkit_API/FUEL" title="ja/Toolkit_API/FUEL">FUEL</a> (Firefox) または <a class="internal" href="/ja/Toolkit_API/STEEL" title="ja/Toolkit_API/STEEL">STEEL</a> (Thunderbird), <a class="internal" href="/ja/Toolkit_API/SMILE" title="ja/Toolkit_API/SMILE">SMILE</a> (SeaMonkey) のページの説明を参照してください。</p>
+<h2 id="Method_overview" name="Method_overview">メソッドの概要</h2>
+<p>これらのメソッドは通常、<code>Application.storage</code> を通してアクセスされます。</p>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>戻り値の型</th>
+   <th>メソッド</th>
+  </tr>
+  <tr>
+   <td><code>boolean</code></td>
+   <td><code><a href="#has.28.29">has</a>(in AString aName)</code></td>
+  </tr>
+  <tr>
+   <td><code>void</code></td>
+   <td><code><a href="#set.28.29">set</a>(in AString aName, in nsIVariant aValue)</code></td>
+  </tr>
+  <tr>
+   <td><code>nsIVariant</code></td>
+   <td><code><a href="#get.28.29">get</a>(in AString aName, in nsIVariant aDefaultValue)</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Attributes" name="Attributes">プロパティ</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">プロパティ</td>
+   <td class="header">型</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code>events</code></td>
+   <td><code>readonly attribute extIEvents</code></td>
+   <td>ストレージのイベントオブジェクト。"change" をサポート。</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Methods" name="Methods">メソッド</h2>
+<h3 id="has.28.29" name="has.28.29">has()</h3>
+<p>指定した名前のストレージアイテムが存在するかどうかを調べる。</p>
+<pre class="eval">boolean has(in AString aName)
+</pre>
+<h6 id="Parameters" name="Parameters">引数</h6>
+<dl>
+ <dt>
+  <code>aName</code></dt>
+ <dd>
+  アイテムの名前。</dd>
+</dl>
+<h6 id="Return_value" name="Return_value">戻り値</h6>
+<p>指定した名前のアイテムが存在すれば <code>true</code>、さもなくば <code>false</code>。</p>
+<h3 id="set.28.29" name="set.28.29">set()</h3>
+<p>指定した名前のストレージアイテムの値を変更する。</p>
+<pre class="eval">void set(in AString aName, in nsIVariant aValue)
+</pre>
+<h6 id="Parameters_2" name="Parameters_2">引数</h6>
+<dl>
+ <dt>
+  <code>aName</code></dt>
+ <dd>
+  アイテムの名前。</dd>
+ <dt>
+  <code>aValue</code></dt>
+ <dd>
+  アイテムの値。</dd>
+</dl>
+<h6 id="Return_value_2" name="Return_value_2">戻り値</h6>
+<p> </p>
+<h3 id="get.28.29" name="get.28.29">get()</h3>
+<p>指定した名前のストレージアイテムの値を取得する。そのアイテムが存在しない場合、デフォルト値を返す。</p>
+<pre class="eval">nsIVariant get(in AString aName, in nsIVariant aDefaultValue)
+</pre>
+<h6 id="Parameters_3" name="Parameters_3">引数</h6>
+<dl>
+ <dt>
+  <code>aName</code></dt>
+ <dd>
+  アイテムの名前。</dd>
+ <dt>
+  <code>aDefaultValue</code></dt>
+ <dd>
+  デフォルト値。</dd>
+</dl>
+<h6 id="Return_value_3" name="Return_value_3">戻り値</h6>
+<p>アイテムの値。指定した名前のアイテムが存在しない場合、指定したデフォルト値を返す。</p>
+<h2 id="See_also" name="See_also">参照</h2>
+<p><a class="internal" href="/ja/Toolkit_API/FUEL" title="ja/Toolkit_API/FUEL">FUEL</a> (Firefox), <a class="internal" href="/ja/Toolkit_API/STEEL" title="ja/Toolkit_API/STEEL">STEEL</a> (Thunderbird), <a class="internal" href="/ja/Toolkit_API/SMILE" title="ja/Toolkit_API/SMILE">SMILE</a> (SeaMonkey)</p>
+<p></p>

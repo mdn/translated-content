@@ -1,0 +1,135 @@
+---
+title: fuelIBookmarkFolder
+slug: Toolkit_API/FUEL/fuelIBookmarkFolder
+tags:
+  - FUEL
+  - Interfaces
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/Toolkit_API/FUEL/fuelIBookmarkFolder
+---
+<div>
+ </div>
+<h2 id="Method_overview" name="Method_overview">メソッドの概要</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>fuelIBookmark <a href="#addBookmark.28.29">addBookmark</a>(in AString aTitle, in nsIURI aURI)</code></td>
+  </tr>
+  <tr>
+   <td><code>fuelIBookmark <a href="#addSeparator.28.29">addSeparator</a>()</code></td>
+  </tr>
+  <tr>
+   <td><code>fuelIBookmarkFolder <a href="#addFolder.28.29">addFolder</a>(in AString aTitle)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#remove.28.29">remove</a>()</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Attributes" name="Attributes">プロパティ</h2>
+<table class="standard-table">
+ <thead>
+  <tr>
+   <td class="header">プロパティ</td>
+   <td class="header">型</td>
+   <td class="header">説明</td>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>id</code></td>
+   <td><code>readonly attribute long long</code></td>
+   <td>フォルダの id。</td>
+  </tr>
+  <tr>
+   <td><code>title</code></td>
+   <td><code>attribute AString</code></td>
+   <td>フォルダのタイトル。</td>
+  </tr>
+  <tr>
+   <td><code>description</code></td>
+   <td><code>attribute AString</code></td>
+   <td>フォルダの説明。</td>
+  </tr>
+  <tr>
+   <td><code>type</code></td>
+   <td><code>readonly attribute AString</code></td>
+   <td>フォルダの種類。値は "folder"。</td>
+  </tr>
+  <tr>
+   <td><code>parent</code></td>
+   <td><code>attribute fuelIBookmarkFolder</code></td>
+   <td>フォルダの親フォルダ。</td>
+  </tr>
+  <tr>
+   <td><code>annotations</code></td>
+   <td><code>readonly attribute fuelIAnnotations</code></td>
+   <td>フォルダに対する注釈オブジェクト。</td>
+  </tr>
+  <tr>
+   <td><code>events</code></td>
+   <td><code>readonly attribute fuelIEvents</code></td>
+   <td>フォルダに対するイベントオブジェクト。"add", "addchild", "remove", "removechild", "change", "move" をサポート。</td>
+  </tr>
+  <tr>
+   <td><code>children</code></td>
+   <td><code>readonly attribute nsIVariant</code></td>
+   <td>このフォルダに含まれるすべてのブックマーク、区切り、フォルダの配列。</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Methods" name="Methods">メソッド</h2>
+<h3 id="addBookmark.28.29" name="addBookmark.28.29">addBookmark()</h3>
+<p>このフォルダに新しい子のブックマークを追加する。</p>
+<pre class="eval">fuelIBookmark addBookmark(in AString aTitle, in nsIURI aURI)
+</pre>
+<h4 id="Parameters" name="Parameters">引数</h4>
+<dl>
+ <dt>
+  <code>aTitle</code></dt>
+ <dd>
+  ブックマークのタイトル。</dd>
+</dl>
+<h4 id="Return_value" name="Return_value">戻り値</h4>
+<p>-</p>
+<h3 id="addSeparator.28.29" name="addSeparator.28.29">addSeparator()</h3>
+<p>このフォルダに新しい子の区切りを追加する。</p>
+<pre class="eval">fuelIBookmark addSeparator()
+</pre>
+<h4 id="Parameters_2" name="Parameters_2">引数</h4>
+<p>-</p>
+<h4 id="Return_value_2" name="Return_value_2">戻り値</h4>
+<p>-</p>
+<h3 id="addFolder.28.29" name="addFolder.28.29">addFolder()</h3>
+<p>このフォルダに新しい子のフォルダを追加する。</p>
+<pre class="eval">fuelIBookmarkFolder addFolder(in AString aTitle)
+</pre>
+<h4 id="Parameters_3" name="Parameters_3">引数</h4>
+<dl>
+ <dt>
+  <code>aTitle</code></dt>
+ <dd>
+  The title of folder.</dd>
+</dl>
+<h4 id="Return_value_3" name="Return_value_3">戻り値</h4>
+<p>-</p>
+<h3 id="remove.28.29" name="remove.28.29">remove()</h3>
+<p>親フォルダからフォルダを削除する。</p>
+<pre class="eval">void remove()
+</pre>
+<h4 id="Parameters_4" name="Parameters_4">引数</h4>
+<p>-</p>
+<h4 id="Return_value_4" name="Return_value_4">戻り値</h4>
+<p>-</p>
+<h2 id="例">例</h2>
+<pre class="brush:js">function url(spec) {
+  var ios = Cc["@mozilla.org/network/io-service;1"].getService( Ci.nsIIOService );
+  return ios.newURI( spec, null, null );
+}
+
+var bookmark = Application.bookmarks.toolbar.addBookmark( "Mozilla", url("http://www.mozilla.com") );</pre>
+<h2 id="See_also" name="See_also">参照</h2>
+<ul>
+ <li><a href="/ja/docs/Toolkit_API/FUEL/fuelIBookmark" title="FUEL/Bookmark">Bookmark</a></li>
+</ul>

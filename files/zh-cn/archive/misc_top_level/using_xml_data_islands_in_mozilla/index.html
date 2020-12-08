@@ -1,0 +1,192 @@
+---
+title: Using XML Data Islands in Mozilla
+slug: Archive/Misc_top_level/Using_XML_Data_Islands_in_Mozilla
+tags:
+  - XML
+translation_of: Archive/Misc_top_level/Using_XML_Data_Islands_in_Mozilla
+---
+<p>One handy feature of Internet Explorer is the ability to use data islands to link data to html controls on a page. This feature is not readily built into Mozilla, but one can easily mimic this behaviour to build cross-browser web applications.</p>
+<p>The basic data island we are going to use is a simple xml element either linked to the page or explicitly coding the xml into the page. For instance, let us illustrate a simple example:</p>
+<pre class="eval">&lt;xml id="xmlDataIsland"&gt;
+   &lt;loaninfo&gt;
+       &lt;borrower id="1"&gt;
+           &lt;firstname&gt;Brian&lt;/firstname&gt;
+           &lt;middlename&gt;Ellis&lt;/middlename&gt;
+           &lt;lastname&gt;Johnson&lt;/lastname&gt;
+       &lt;/borrower&gt;
+   &lt;/loaninfo&gt;
+&lt;/xml&gt;
+</pre>
+<p>With this data island, we can populate any number of controls on a page simply by linking the data island to the controls via some JavaScript and the DOM.</p>
+<p>To link this, all we need to do is have a function to handle populating the controls such as:</p>
+<pre class="eval">function loadFields()
+{
+   var xmlNode = window.document.getElementsByTagName('xml');
+   var borrowerNode = xmlNode[0].childNodes[1];
+   if(borrowerNode.hasChildNodes())
+   {
+       var i = 0;
+       var xmlChildNode, nodeVal=<i>;</i>
+       while(borrowerNode.childNodes[i])
+       {
+           // get node
+           xmlChildNode = borrowerNode.childNodes[i];
+           // check nodetype
+           if(xmlChildNode.nodeType != 3) // #text == 3
+           {
+               // get nodeValue (aka text)
+               nodeVal += xmlChildNode.firstChild.nodeValue + ' ';
+           }
+           i++;
+       }
+       // set control value to nodeValue
+       window.document.getElementById('txtBorrowerName').value = nodeVal;
+   }
+}
+</pre>
+<p><a class="external" href="http://www.mozilla.org/xmlextras/xmldataislands/example1.html">Example 1</a></p>
+<p>Here is another example of an XML DataIsland for use in Mozilla or IE:</p>
+<pre class="eval">&lt;xml id="mxxdataisland"&gt;
+   &lt;mxxdataisland&gt;
+       &lt;rowset tagid="DATES"&gt;&lt;/rowset&gt;
+       &lt;rowset tagid="SUBJPRP"&gt;&lt;/rowset&gt;
+       &lt;rowset tagid="PRODUCT"&gt;&lt;/rowset&gt;
+   &lt;/mxxdataisland&gt;
+&lt;/xml&gt;
+</pre>
+<p>This dataisland's purpose is to inform the Application Server what tables this page is going to need access to or be requesting information from.</p>
+<p>The controls on the page are then linked by way of custom attributes MXXOBJECT and MXXPROPERTY, much like the DATASRC and DATAFLD attributes used by IE. This allows the XML data returned to be parsed and linked or "bound" to the controls.</p>
+<p>Note: MXXOBJECT and MXXPROPERTY are just attributes that I made up, these actually could be any attribute.</p>
+<p>Binding the controls:</p>
+<pre class="eval">&lt;input
+    type="text"
+    id="PropertyStAddr1"
+    name="PropertyStAddr1"
+    style="height:21px;width:302px;text-align:left;"
+    maxlength="35"
+    class="fldDefault"
+    <span style="color: #CC0000;">mxxobject="SUBJPRP" mxxproperty="PropertyStAddr1"</span> &lt;-- here are our "binding" tags
+&gt;
+
+&lt;input
+    type="text"
+    class="fldZipCode"
+    name="PropertyZip"
+    id="PropertyZip"
+    size="10"
+    style="height:21px;width:69px;"
+    <span style="color: #CC0000;">mxxobject="SUBJPRP" mxxproperty="PropertyZip"</span> &lt;-- here are our "binding" tags
+    <span style="color: #CC0000;">mxxxmlnode="xmldef_PropertyZip"</span> &lt;-- this links to a control-level data island
+    <span style="color: #CC0000;">mxxtype="MXXZipCodeAutoLoadEdit"</span> &lt;-- optional custom type for control handling
+&gt;
+</pre>
+<p>Since we are passing XML to the server, we can also send the server some additional info that a particular control may need, or alert the server of other controls on the page related to or driven by a control. The following is an example of a custom dataisland for a specific control type:</p>
+<pre class="eval">&lt;select
+    id="PropertyState"
+    name="PropertyState"
+    style="height:20px;width:48px;"
+    class="cmbDefault"
+    mxxtype="GFXStateList"
+    <span style="color: #CC0000;">mxxxmlnode="xmldef_PropertyState"</span>
+    mxxobject="GOXSUBJPRP" mxxproperty="PropertyState"
+&gt;
+&lt;/select&gt;
+
+&lt;div style="width:0px; height:0px; visibility:hidden;z-index:1"&gt;
+    &lt;xml <span style="color: #CC0000;">id="xmldef_PropertyState"</span>&gt;
+        &lt;mxxstatelist&gt;
+            &lt;status value="initialize"&gt;&lt;/status&gt;
+            &lt;contenttype value="abbrev"&gt;&lt;/contenttype&gt;
+            &lt;controls&gt;
+                &lt;control type="countylist" tagid="PropertyCounty" contenttype="name"
+                         valuetype ="name"&gt;&lt;/control&gt;
+            &lt;/controls&gt;
+        &lt;/mxxstatelist&gt;
+    &lt;/xml&gt;
+&lt;/div&gt;
+</pre>
+<p>These XMLDataIslands don't do us any good just like this. In order for them to work we need to do 2 things.</p>
+<p>1. Build control handlers to handle the updating and rendering of different control types.</p>
+<p>(Note: Control types can be anything. Form objects, tables, spans, divs, iFrames, anything that you can access via the DOM and an ID is eligible)</p>
+<p>2. Build a handler to build a dom to send to the server and parse the return back out to the controls.</p>
+<p>All a control handler has to do is be able to updata a control value. This means all Text Inputs can share a handler, selects another, and so on. One way to do this is to scrape the controls on a given page into an associative array. Then, when a response is returned, we can parse out the xml via an id attribute to match up the xml payload with a control.</p>
+<pre class="eval">&lt;input type="text" id="FirstName" ...&gt;
+</pre>
+<p>Sample Object collector function:</p>
+<pre class="eval">   // grab all the elements for parsing
+   var tags = window.document.body.getElementsByTagName("*");
+   var pPrevElem = null;
+   var pNextElem = null;
+   for (var i = 0; i &lt; tags.length; i++)
+   {
+       pHTMLElement = tags[i];
+
+       switch (pHTMLElement.tagName.toLowerCase())
+       {
+           case "span":
+           case "table":
+               // this indexes by controlID and stores the elementObject
+               m_MXXPageObjectsArray[pHTMLElement.id] = pHTMLElement;
+               break;
+           case "input":
+           case "select":
+           case "textarea":
+           case "button":
+               // this indexes by controlID and stores the elementObject
+               m_MXXPageObjectsArray[pHTMLElement.id] = pHTMLElement;
+               break;
+           case "div":
+               // this indexes by controlID and stores the elementObject
+               m_MXXPageObjectsArray[pHTMLElement.id] = pHTMLElement;
+               break;
+       }
+   }
+</pre>
+<p>The xml payload going out might be:</p>
+<pre class="eval">&lt;page id="NewUser"&gt;
+    &lt;formcontrols&gt;
+        &lt;control id="FirstName"&gt;
+            &lt;value /&gt;
+        &lt;/control&gt;
+    &lt;/formcontrols&gt;
+&lt;/page&gt;
+</pre>
+<p>The return would then be:</p>
+<pre class="eval">&lt;page id="NewUser"&gt;
+    &lt;formcontrols&gt;
+        &lt;control id="FirstName"&gt;
+            &lt;value&gt;Dennis&lt;/value&gt;
+        &lt;/control&gt;
+    &lt;/formcontrols&gt;
+&lt;/page&gt;
+</pre>
+<p>The parsing handler would then take the response, load it into an XML DOM, then pass out each node to the appropriate control handler.</p>
+<pre class="eval">   processTextControl(control, xmlNode);
+</pre>
+<p>Sample parsing of returned xml:</p>
+<pre class="eval">   // parseout to controls
+   var formControlNodes = xmlDoc.getElementsByTagName('formcontrols');
+   for(i=0; i&lt;formControlNodes.length;++i)
+   {
+       var pFormControlNode = formControlNodes[i];
+       var pPageObject = m_MXXPageObjectsArray[pFormControlNode.getAttribute('id')];
+       if(!pPageObject)
+           continue;
+       processTextControl(pPageObject, pBoundControlNode);
+   }
+</pre>
+<p>The control handler would then rip out the necessary data to populate the control. In this case the value nodevalue would be used to set control.value. A select could have the options to loop through and create new Options() with or even just replace the node or innerHTML with the new payload.</p>
+<p><a class="external" href="http://www.mozilla.org/xmlextras/xmldataislands/MXX_Info.html">Here is a sample page.</a></p>
+<p>Finally here is a <a class="external" href="http://www.mozilla.org/xmlextras/xmldataislands/table.html">small table sample</a> using XML Data Islands that works in both IE6 and Mozilla.</p>
+<p>For any of the above to do us any good, we need to get this info to the server. We can do this a number of ways, including ASP, JSP, and CGI. I'm going to use XMLHTTP since it allows for me to update a page without having to reload it and it allows for the controls to update other controls and act like a regular 2 tier applicationa by providing instant updates and event handling.</p>
+<p>Author: <a class="link-mailto" href="mailto:phiori@mindspring.com">Thad Hoffman</a></p>
+<div class="originaldocinfo">
+ <h2 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h2>
+ <ul>
+  <li>Author(s): Thad Hoffman (<a class="link-mailto" href="mailto:phiori@mindspring.com">phiori@mindspring.com</a>, <a class="link-mailto" href="mailto:phiori@mac.com">phiori@mac.com</a>)</li>
+  <li>Other Contributors: Heikki Toivonen (<a class="link-mailto" href="mailto:heikki@netscape.com">heikki@netscape.com</a>)</li>
+  <li>Last Updated Date: June 21, 2005</li>
+  <li>Copyright Information: Copyright (C) <a class="link-mailto" href="mailto:phiori@mindspring.com">Thad Hoffman</a>, <a class="link-mailto" href="mailto:heikki@netscape.com">Heikki Toivonen</a></li>
+ </ul>
+</div>
+<p> </p>

@@ -1,0 +1,421 @@
+---
+title: Paramètres pour développeurs sur Firefox OS
+slug: Archive/B2G_OS/Debugging/Les_paramètres_développeurs
+tags:
+  - Déboguer
+  - Firefox OS
+translation_of: Archive/B2G_OS/Debugging/Developer_settings
+---
+<div class="summary">
+<p>Caché au fond de l'application Paramètres de Firefox OS, se trouve le panneau Développeurs. Ce panneau offre de nombreuses options qui vous simplifieront le débogage de votre application Open Web et de Firefox OS. Cet article présente les options disponibles et explique comment les utiliser.</p>
+</div>
+
+<p>Le panneau de paramétrage à destination des développeurs est intentionnellement difficile d'accès afin d'éviter aux utilisateurs courants d'activer par erreur des options qui pourraient ralentir leur appareil ou modifier l'affichage.</p>
+
+<p>Dans les versions de Firefox OS 1.4 et suivantes, pour atteindre ce panneau, il faut d'abord l'activer via <em>Paramètres &gt; Informations &gt; Plus d'informations &gt; Cocher "Menu Développeurs"</em>. Ensuite ouvrez l'application "Paramètres", et touchez le bouton "Développeurs" (dans la section "Appareil") :</p>
+
+<p><img alt="capture d'écran de l'application Paramètres" src="https://mdn.mozillademos.org/files/11393/parameters_menu.png" style="display: block; height: 533px; margin: 0px auto; width: 320px;"></p>
+
+<p>Ce panneau "Développeurs" ressemble à ceci (Capture d'écran prise sur un ZTE Open C, avec Firefox OS 2.2) :</p>
+
+<p><img alt="Capture d'écran du contenu du menu Développeurs" src="https://mdn.mozillademos.org/files/11395/developpeurs_menu.png" style="display: block; height: 533px; margin: 0px auto; width: 320px;"></p>
+
+<p>Dans les versions de Firefox OS antérieures à la 1.4, c'est via <em>Paramètres &gt; Informations &gt; Plus d'informations &gt; Développeurs</em>.</p>
+
+<div class="warning">
+<p><strong>Important</strong>: Ces outils sont puissants mais peuvent provoquer des bugs au cours d'une utilisation classique. Les fonctionnalités connues pour en provoquer ont été désactivées par défaut. Si vous rencontrez des problèmes, essayez de désactiver les fonctionnalités développeur que vous avez activées.</p>
+</div>
+
+<h2 id="Options_du_panneau_Développeurs">Options du panneau Développeurs</h2>
+
+<h3 id="Débogage_via_USB">Débogage via USB</h3>
+
+<p>L'option "Débogage USB" permet le <a href="https://developer.mozilla.org/fr/docs/Tools/Debugger">débogage à distance</a> de votre appareil Firefox OS. Ceci permet aussi l'utilisation des commandes <a href="https://developer.mozilla.org/fr/Firefox_OS/Debugging/Installing_ADB">ADB</a>. Dans les versions antérieures à la 1.4, il n'y a qu'une case à cocher, à partir de la version 1.4, il y a 3 options disponibles :</p>
+
+<ul>
+ <li>Désactivé: le débogage distant est désactivé (choix par défaut).</li>
+ <li>ADB uniquement: accorde l'accès à l'appareil par ADB.</li>
+ <li>ADB et outils de développement: accorde l'accès à l'appareil par ADB et par des outils de développement Firefox tel que <a href="https://developer.mozilla.org/fr/docs/Tools/WebIDE">WebIDE</a>.</li>
+</ul>
+
+<h3 id="Outils_de_développement_via_Wi-Fi">Outils de développement via Wi-Fi</h3>
+
+<div class="note">
+<p><strong>Note</strong>: Introduit dans Firefox OS 3.0 et Firefox 39.0 (27 Mars 2015 et ultérieur)</p>
+</div>
+
+<p>Cocher cette case permet de connecter l'appareil Firefox OS à <a href="https://developer.mozilla.org/fr/docs/Tools/WebIDE">WebIDE</a> -que vous trouverez sur Firefox Bureau- via un réseau Wi-Fi local. Cela vous permettra d'envoyer vos applications sur votre appareil Firefox OS pour les tester facilement. Pour plus de détails, voir <a href="http://convolv.es/blog/2015/03/25/wifi-debug-fxos/">Débogage Wi-Fi de  Firefox OS</a> de J. Ryan Stinnett (en anglais).</p>
+
+<h3 id="Nom_d'appareil_Wi-Fi_pour_DevTools">Nom d'appareil Wi-Fi pour DevTools</h3>
+
+<div class="note">
+<p><strong>Note</strong>: Introduit dans Firefox OS 3.0 et Firefox 39.0 (27 Mars 2015 et ultérieur)</p>
+</div>
+
+<p>Ce champ texte vous permet de définir le nom sous lequel votre appareil sera identifié par votre réseau Wi-Fi, lorsqu'il sera connecté aux outils de développement (voir paragraphe précédent).</p>
+
+<h3 id="Informations_Développeurs">Informations Développeurs</h3>
+
+<p>À partir de la version 1.4 de Firefox OS, toucher cette section vous amène dans le panneau "Informations Développeurs":</p>
+
+<p><img alt="Contenu du panneau Informations Développeurs" src="https://mdn.mozillademos.org/files/11397/InformationsDeveloppeurs.png" style="display: block; height: 533px; margin: 0px auto; width: 320px;"></p>
+
+<p>Les 2 premières cases à cocher (toujours actives) sont:</p>
+
+<ul>
+ <li><strong>Images par seconde</strong>: affiche le nombre d'images par seconde, comme expliqué dans la section <a href="#Images_par_seconde">Images_par_seconde</a> ci-dessous.</li>
+ <li><strong>Durée de chargement</strong>: affiche les durées de chargement, comme expliqué dans la section <a href="#Durée_de_chargement">Durée_de_chargement</a> ci-dessous.</li>
+</ul>
+
+<p>Ensuite, il y a l'option "Outils de développement" qui gère l'accès aux options qui se trouvent dessous, chacune contrôlable par une case à cocher:</p>
+
+<ul>
+ <li><strong>Outils de développement</strong>
+
+  <ul>
+   <li><strong>Changement dans ADB</strong>: active l'enregistrement de changements sur l'appareil par adb logcat.</li>
+   <li><strong>Informations système:</strong> permet de superposer sur l'affichage, différentes informations de différents types.</li>
+  </ul>
+ </li>
+ <li><strong>Problèmes</strong>
+  <ul>
+   <li><strong>Avertissements:</strong> affiche les avertissements de la console.</li>
+   <li><strong>Erreurs</strong>: affiche les erreurs de la console.</li>
+   <li><strong>Problèmes de sécurité:</strong> affiche les problèmes potentiels de sécurité.</li>
+  </ul>
+ </li>
+ <li><strong>Performances</strong>
+  <ul>
+   <li><strong>Reflows</strong>: displays reflows as they occur.</li>
+   <li><strong><a href="https://developer.mozilla.org/fr/Firefox_OS/Platform/Architecture#Jank">Blocages</a></strong>: prévient l'utilisateur des blocages dépassant une durée inacceptable (durée paramétrable).</li>
+  </ul>
+ </li>
+ <li><strong>Mémoire</strong>
+  <ul>
+   <li><strong>Unique set size</strong>: mesure de la mémoire utilisée par une application et dédiée à celle-ci. C'est une mesure importante pour faire des optimisations d'utilisation mémoire, mais il y en a d'autres. Voir la section <a href="https://developer.mozilla.org/fr/Firefox_OS/Developing_Gaia/Testing_Gaia_code_changes#Performance_tests">Tests de Performance</a> pour plus d'informations.</li>
+   <li><strong>Mémoire application</strong>: affiche des informations concernant la quantité de mémoire utilisée par l'application et permet d'activer ou désactiver différents facteurs d'utilisation. Voir <a href="#Mémoire_application">Mémoire_application</a> ci-dessous pour plus de détails.</li>
+   <li><strong>Objets JS</strong>: mesure de la quantité de mémoire utilisée par l'application en objets JS.</li>
+   <li><strong>Chaînes JS</strong>: mesure de la quantité de mémoire utilisée par l'application en chaînes JS.</li>
+   <li><strong>JS (autre)</strong>: mesure de la quantité de mémoire utilisée par l'application avec d'autres fonctionnalités JS.</li>
+   <li><strong>DOM</strong>: mesure de la quantité de mémoire utilisée par l'application avec son DOM.</li>
+   <li><strong>Style</strong>: mesure de la quantité de mémoire utilisée par l'application avec son CSS.</li>
+   <li><strong>Autre</strong>: mesure de la quantité de mémoire utilisée par l'application par des éléments non pris en compte par les catégories précédentes.</li>
+  </ul>
+ </li>
+</ul>
+
+<h4 id="Images_par_seconde">Images par seconde</h4>
+
+<p>Activer cette option affiche 3 nombres dans le coin en haut à gauche de l'affichage Firefox OS (voir capture d'écran précédente). Ces valeurs sont une moyenne des résultats récents au sein d'une fenêtre défilant. Ces valeurs sont voulues "instantanées" mais assez précises. Ces nombres sont donc des "déductions":</p>
+
+<ul>
+ <li>Le nombre de gauche est la <strong>fréquence de composition</strong>: l'estimation du nombre de fois par seconde que Firefox OS dessine les trames pour le framebuffer matériel. Ceci est une estimation de la vitesse de rafraîchissement perçue par l'utilisateur (et bien uniquement une estimation). Par exemple, le compteur peut afficher 60 compositions par seconde même si l'écran ne change pas. Dans ce cas le taux de rafraîchissement perçu par l'utilisateur serait 0. Cependant cette mesure peut s'avérer être un outil simple et utile, si l'on n'oublie pas cette particularité et si on la compare avec d'autres mesures.</li>
+ <li>Le nombre du milieu est la <strong>fréquence de la couche de transaction</strong>: l'estimation du nombre de fois par seconde que les processus repeignent et le notifient au compositeur. Cette estimation est principalement utile pour les développeurs de Gecko. Ce nombre devrait être inférieur ou égal à la fréquence de composition.</li>
+ <li>Le nombre de droite est une mesure du nombre de pixels dessinés exprimés en pourcentage de la taille de l'écran. Une valeur de 317 signifie que l'écran a été dessiné 3,17 fois. Idéalement ce nombre devrait s'approcher le plus possible de 100.</li>
+</ul>
+
+<h4 id="Durée_de_chargement">Durée de chargement</h4>
+
+<p>Firefox OS possède un outil aidant à la mesure de la durée de chargement, particulièrement la durée du "premier affichage". Les valeurs fournies par l'outil — dans le coin en haut à droite de l'écran (voir capture d'écran précédente) — représentent la durée écoulée entre l'instant de lancement de l'application par l'utilisateur et une estimation du premier instant où l'application s'affiche à l'écran, en millisecondes. Ce nombre est uniquement une estimation de la durée réelle d'affichage et a tendance à la sous estimer. Cependant, faire baisser cette valeur se traduit quasiment toujours par une amélioration de la durée de chargement. Cette valeur peut donc être utile pour mesurer rapidement l'efficacité de travaux d'optimisation.</p>
+
+<h4 id="Mémoire_application">Mémoire application</h4>
+
+<p>Affiche la quantité de mémoire que les différentes catégories sélectionnées utilisent au sein de l'application courante. Par exemple, la capture d'écran ci-dessous n'a que les options <em>Mémoire application</em> et <em>Objets JS</em> de cochées, donc l'indicateur en bas à droite de l'écran montre que l'application Paramètres utilise 1,15MB en objets JS.</p>
+
+<p><img alt="Exemple d'activation de l'option Mémoire Application" src="https://mdn.mozillademos.org/files/11399/MemoireApplication.png" style="display: block; height: 533px; margin: 0px auto; width: 320px;"></p>
+
+<h2 id="Accélération_graphique">Accélération graphique</h2>
+
+<h3 id="Zones_repeintes">Zones repeintes</h3>
+
+<p>Dans ce mode, chaque fois qu'une région de l'écran est peinte par Gecko, Gecko ajoute une couche translucide de couleur aléatoire sur la région. Idéalement, seules les régions de l'écran qui changent visuellement "flasheront" avec une nouvelle couleur. Mais il arrive qu'il y ait plus de régions repeintes que nécessaire, faisant "flasher" de grosses parties de l'écran. Ce symptôme peut indiquer une trop forte mise à jour de l'écran de la part de l'application, ou être le reflet de bogues de Gecko lui-même.</p>
+
+<p><img alt="Capture d'écran montrant l'option Zones repeintes en action" src="https://mdn.mozillademos.org/files/11401/ZonesRepeintes.png" style="display: block; height: 533px; margin: 0px auto; width: 320px;"></p>
+
+<h3 id="Overscrolling">Overscrolling</h3>
+
+<p>Active ou désactive le comportement des versions 2.1 et ultérieures de Firefox OS qui consiste a étirer l'affichage lorsque l'utilisateur tente de faire défiler la page au delà de la fin puis remet l'affichage à sa taille normale une fois le défilement arrêté, un peu comme le ferait un élastique. Le nom complet de ce comportement est <em>elastic overscroll</em>.</p>
+
+<h3 id="Tuilage_(was_Layers_Enable_tiles)">Tuilage (was Layers: Enable tiles)</h3>
+
+<p>Introduite à partir de la version 1.4 de Firefox OS, cette fonctionnalité active l'affichage de contenu sur l'écran en petites parties ("tuiles") plutôt que d'afficher tout l'écran d'un seul coup. Ceci est principalement utile pour le travail du service QA impliquant la réduction de l'effet damier et la recherche de fenêtres de régression.</p>
+
+<h3 id="Painting_basse_précision">Painting basse précision</h3>
+
+<p>Activer cette option fait dessiner à Gecko une version basse précision (floue) du contenu lors d'un défilement vraiment rapide. Ceci est utile parce que plus rapide à dessiner et aide donc à éviter d'afficher des zones blanches (effet damier) lors d'un défilement rapide. Cela ne devrait être visible que temporairement pour l'utilisateur, car le contenu basse précision sera remplacé par le contenu haute précision dès que le défilement s'arrêtera.</p>
+
+<h3 id="Transparence_basse_précision">Transparence basse précision</h3>
+
+<p>Ceci est une option supplémentaire pour le "painting" basse précision qui rend le contenu basse précision à moitié transparent. Ceci rend l'effet un peu plus subtile et moins déroutant pour l'utilisateur.</p>
+
+<h3 id="Composition_matérielle_(was_Enable_hardware_compositing)">Composition matérielle (was Enable hardware compositing)</h3>
+
+<p>Lorsque cette option est activée, l'appareil utilise son <a href="https://source.android.com/devices/graphics/index.html#hardware_composer">Composeur matériel</a> pour composer les éléments visuels (surfaces) de l'écran.</p>
+
+<h3 id="Dessiner_bords_du_tuilage_(was_Layers_Draw_tile_borders)">Dessiner bords du tuilage (was Layers: Draw tile borders)</h3>
+
+<p>Ceci est similaire à l'option <a href="#Dessiner_bords_du_calque">Dessiner_bords_du_calque</a>, mis à part qu'elle dessine les bords des tuiles individuelles en plus des bords des calques.</p>
+
+<h3 id="Dessiner_bords_du_calque">Dessiner bords du calque</h3>
+
+<p>Lorsque cette option est activée, un bord de couleur vive est ajouté autour des différentes calques affichés à l'écran — très pratique pour investiguer les problèmes de calques.</p>
+
+<p><img alt="Une capture d'écran montrant l'effet de l'option Dessiner bord du calque" src="https://mdn.mozillademos.org/files/11411/DessinerBordsCalques.png" style="display: block; height: 533px; margin: 0px auto; width: 320px;"></p>
+
+<h3 id="Informations_arbres_de_calques">Informations arbres de calques</h3>
+
+<p>Cette option active <code>layers.dump</code>, qui copie l'arbre de calque du composeur dans logcat à chaque image composée à l'écran. Ceci est principalement utile pour travailler sur les performances graphiques de la plate-forme, plutôt que pour du développement web classique.</p>
+
+<h3 id="Information_layerscope">Information layerscope</h3>
+
+<p>Active les traces du layerscope permettant de voir des informations concernant les calques des applications installées sur un PC. Lire <a href="https://wiki.mozilla.org/Platform/GFX/LayerScope">Layerscope sur le wiki Mozilla (en anglais)</a> pour avoir plus de détails et savoir comment l'utiliser.</p>
+
+<h3 id="Miniatures_captures_d'écran">Miniatures: captures d'écran</h3>
+
+<p>Dans la vue miniature, active l'affichage de capture d'écran des applications lancées. Sinon, les icônes des applications seront affichés au centre de miniatures vides.</p>
+
+<h2 id="Gestion_de_la_fenêtre">Gestion de la fenêtre</h2>
+
+<h3 id="Émuler_le_bouton_Accueil">Émuler le bouton Accueil</h3>
+
+<p>Crée un bouton Accueil logiciel offrant les mêmes fonctionnalités que son équivalent matériel s'il n'est pas disponible. Cette option existe pour une utilisation future par des appareils qui n'auront probablement pas de bouton Accueil matériel, comme les tablettes.</p>
+
+<h3 id="Geste_de_retour_à_l'accueil">Geste de retour à l'accueil</h3>
+
+<p>Permet de faire un geste (partir hors de l'écran et monter vers le centre de l'écran) pour revenir à l'accueil. Encore une fois cette option propose une fonctionnalité du bouton Accueil matériel et existe pour une utilisation future par des appareils qui n'auront probablement pas de bouton Accueil matériel, comme les tablettes.</p>
+
+<h3 id="Transition_continue">Transition continue</h3>
+
+<p>Cette option permet de contrôler si l'application clavier s'ouvre immédiatement ou de manière continue (avec une transition). Désactiver une telle transition peut être utile sur des appareils bas de gamme qui souffrent de mauvaises performances.</p>
+
+<h3 id="Transition_d'application">Transition d'application</h3>
+
+<p>Active et désactive toutes les transitions d'ouverture et de fermeture d'applications: toutes les applications s'afficheront immédiatement -sans douce animation- et les claviers apparaîtront et disparaîtront sans animation non plus. Comme l'option "Transition continue", elle a pour but d'améliorer les performances sur des appareils bas de gamme, avec des effets plus notables.</p>
+
+<h3 id="Suspension_d'application">Suspension d'application</h3>
+
+<p>Cette option activée fait qu'une application fermée en tâche de fond sera gardée dans l'historique et ré-ouverte lorsque vous la sélectionnerez depuis l'écran d'accueil ou la vue miniature. L'option désactivée, une telle application ne sera pas gardée dans l'historique ou la vue miniature.</p>
+
+<h3 id="Copier-coller">Copier-coller</h3>
+
+<p>Active la fonctionnalité, encore expérimentale, de copier-coller en cours d'implémentation dans Firefox OS.</p>
+
+<h2 id="Débogage">Débogage</h2>
+
+<h3 id="Pseudo-localisation">Pseudo-localisation</h3>
+
+<p>Cette option activée, pseudo-langues comme <em>l'anglais accentué </em>et <em>l'anglais miroir</em> sont sélectionnables dans <em>Paramètres &gt; Langue</em>. Avec les pseudo-localisations, vous pouvez tester le support de la localisation de votre code sur une compilation classique de Gaia, sans avoir à ajouter les ressources d'une langue réelle ou devoir parler une autre langue que l'anglais. Par exemple, vous pouvez vous assurer que les calques se redimensionnent bien avec du texte plus long, prévisualiser l'application dans une fausse langue RTL, ou repérer les éléments HTML sans l'attribut <code>data-l10n-id</code> (ils seront affichés en anglais).</p>
+
+<p><img alt="Screenshot of pseudolocales" src="http://informationisart.com/images/qps.png" style="display: block; height: 440px; margin: 0px auto; width: 600px;"></p>
+
+<p>Lors de la compilation de Gaia, vous pouvez ajouter les pseudo-langues dans la liste des langues par défaut en ajoutant la ligne suivante dans <a href="https://github.com/mozilla-b2g/gaia/blob/master/build/config/common-settings.json">gaia/build/config/common-settings.json</a>:</p>
+
+<pre class="brush: json  language-json"><code class="language-json"><span class="key token">"devtools.qps.enabled":</span> <span class="keyword token">true</span></code></pre>
+
+<p>Selon la configuration de la compilation, les pseudo-localisations sont soit construites au moment de la compilation (ce qui prend de l'espace disque), soit générées dynamiquement au moment de l'exécution (modifiant les performances et l'empreinte mémoire).</p>
+
+<ul>
+ <li>
+  <p><strong>À la compilation</strong>: vous pouvez ajouter les codes des pseudo-langues (<code>qps-ploc</code> et <code>qps-plocm</code>) à <a href="https://github.com/mozilla-b2g/gaia/blob/master/shared/resources/languages.json">shared/resources/languages.json</a> ou n'importe quel autre fichier JSON que vous utilisez comme <code>LOCALES_FILE</code> (voir <a href="https://developer.mozilla.org/fr/Firefox_OS/Compiler#Compiler_une_version_multilocales">building multilocale Gaia</a>). Ceci est pratique pour tester la performance des autres langues que l'anglais. Par exemple:</p>
+
+  <pre class="brush: json  language-json"><code class="language-json"><span class="punctuation token">{</span>
+  <span class="key token">"en-US" :</span> <span class="string token">"English (US)"</span><span class="punctuation token">,</span>
+  <span class="key token">"qps-ploc" :</span> <span class="string token">"Ȧȧƈƈḗḗƞŧḗḗḓ Ḗḗƞɠŀīīşħ"</span><span class="punctuation token">,</span>
+  <span class="key token">"qps-plocm" :</span> <span class="string token">"ɥsıʅƃuƎ pǝɹoɹɹıW"</span>
+<span class="punctuation token">}</span></code></pre>
+ </li>
+ <li><strong>À l'exécution:</strong> si la pseudo-localisation n'est pas construite à la compilation, il est encore possible d'avoir recours à la génération dynamique. Ceci permet de tester le support de la localisation même sur une version compilée existante, sans avoir besoin de flasher une nouvelle compilation. Il faut cependant garder en tête que la pseudo-localisation à l'exécution possède différentes caractéristiques de performance et de mémoire et ne devrait donc pas être utilisée pour mesurer et comparer les performances de langues autre que l'anglais.</li>
+</ul>
+
+<h3 id="Enregistrer_les_animations_lentes">Enregistrer les animations lentes</h3>
+
+<p>Cet outil a pour but d'aider les développeurs à comprendre pourquoi les animations ne sont pas déléguées au composeur pour être jouées le plus efficacement possible. Il rapporte des "problèmes" comme essayer d'animer des éléments trop gros, ou d'animer des propriétés CSS qui ne peuvent pas être déléguées. Les messages obtenus ressembleront à ceci:</p>
+
+<pre class="language-html"><code class="language-html">I/Gecko   ( 5644): Performance warning: Async animation disabled because frame size (1280, 410) is bigger than the viewport (360, 518) [div with id 'views']</code></pre>
+
+<div class="line-number" style="top: 0px;"> </div>
+
+<h3 id="Sortie_géolocalisation_dans_ADB">Sortie géolocalisation dans ADB</h3>
+
+<p>Active l'enregistrement des données de géolocalisation vers adb logcat. Ceci aide à déboguer à la fois la partie GPS (à savoir les appels NMEA) et l'utilisation MLS.</p>
+
+<h3 id="Ignorer_les_positions_GPS">Ignorer les positions GPS</h3>
+
+<p>Activer cette option oblige l'API de géolocalisation à ignorer les informations de localisation provenant du GPS (l'API n'obtiendra d'information que les services de localisation basés sur le réseau). Ceci est utile pour déboguer des problèmes en rapport avec le fournisseur de géolocalisation GPS de Gonk. voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1056857" title="FIXED: Developer Settings: add checkbox to disable GPS Locations">bug 1056857</a> pour plus d'informations.</p>
+
+<h3 id="Sortie_Wi-Fi_dans_ADB">Sortie Wi-Fi dans ADB</h3>
+
+<p>Activer cette option ajoute des informations à propos du Wi-Fi aux log adb (les log d'erreur de la console sont accessibles via la commande <code>adb logcat | grep "Error"</code> dans un Terminal).</p>
+
+<h3 id="Sortie_Bluetooth_dans_ADB">Sortie Bluetooth dans ADB</h3>
+
+<p>Activer cette option ajoute des informations à propos du Bluetooth aux log adb (les log d'erreur de la console sont accessibles via la commande <code>adb logcat | grep "Error"</code> dans un Terminal).</p>
+
+<h3 id="Bluetooth_HCI_Sniffing_Logs_to_SDCard">Bluetooth HCI Sniffing Logs to SDCard</h3>
+
+<p>Enabling this option causes the device's HCI sniffing logs to be recorded to its SDCard.</p>
+
+<h3 id="Sortie_NFC_dans_ADB">Sortie NFC dans ADB</h3>
+
+<p>Activer cette option ajoute des informations à propos du NFC aux log adb (les log d'erreur de la console sont accessibles via la commande <code>adb logcat | grep "Error"</code> dans un Terminal).</p>
+
+<h3 id="Sortie_RIL_dans_ADB">Sortie RIL dans ADB</h3>
+
+<p>Activer cette option ajoute des informations à propos du RIL aux log adb (les log d'erreur de la console sont accessibles via la commande <code>adb logcat | grep "Error"</code> dans un Terminal).</p>
+
+<h3 id="Sortie_réseau_dans_ADB">Sortie réseau dans ADB</h3>
+
+<p>Activer cette option ajoute des informations à propos du réseau aux log adb (les log d'erreur de la console sont accessibles via la commande <code>adb logcat | grep "Error"</code> dans un Terminal).</p>
+
+<h3 id="Activer_la_console">Activer la console</h3>
+
+<p>Activer cette option vous permet d'utiliser la <a href="https://developer.mozilla.org/fr/docs/Mozilla/Firefox_OS/Debugging/Using_the_Remote_Web_Console" title="/fr/docs/Mozilla/Firefox_OS/Debugging/Using_the_Remote_Web_Console">console Web</a> de Firefox pour accéder à distance à la sortie console de l'appareil. Sans cette option activée, la fonction <a href="/fr/docs/Web/API/Console/log" title="Affiche un message dans la Console Web."><code>console.log()</code></a> ne fait rien.</p>
+
+<h3 id="Trace_de_débogage_de_Gaia">Trace de débogage de Gaia</h3>
+
+<p>Active les traces DEBUG de Gaia. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=881672" title="FIXED: Enabling a DUMP function for all Gaia apps">bug 881672</a> pour plus de détails.</p>
+
+<div class="note">
+<p><strong>Note</strong>:  Malheureusement, toutes les applications ne supportent pas ce mécanisme pour leur trace de débug. Au lieu de ça, ces dernières gèrent un booléen "DEBUG" qui leur sont propre. Activer cette option n'assure donc PAS que vous aurez l'ensemble des log debug.</p>
+</div>
+
+<h3 id="Paramètres_du_lecteur_d'écran">Paramètres du lecteur d'écran</h3>
+
+<p>Cette option active les paramètres du <em>Lecteur d'écran</em>, qui se trouve ensuite sous <em>Paramètres &gt; Accessibilité</em>. Activer cette nouvelle option active le lecteur d'écran de Firefox OS. Cette technologie permet à un non voyant d'utiliser un appareil Firefox OS. Actuellement en cours de développement, le lecteur d'écran modifie la façon dont les touches de l'écran fonctionnent. Lorsque le lecteur d'écran est activé, vous devez interagir avec l'écran de la manière suivante:</p>
+
+<ul>
+ <li>Toucher quelque part pour sélectionner une application (ou autre) et être prévenu de ce sur quoi vous avez appuyé. Le retour fait par le téléphone est double: il est vocal, d'une part et un rectangle entoure l'objet sélectionné, d'autre part. Une double-touche (deux touches rapidement successives) n'importe où sur l'écran active l'objet qui est entouré par le rectangle.</li>
+ <li>Un glissement de gauche à droite pour parcourir séquentiellement la liste des objets présents à l'écran. Les objets sont parcouru de gauche à droite, de haut en bas, en incluant le défilement de l'écran s'il y a plus d'objets à afficher. Vous serez prévenu pour chaque objet par une explication orale et un rectangle. Un glissement de droite à gauche parcours les objets dans l'ordre inverse. Une double touche permet toujours d'exécuter l'élément sélectionné.</li>
+ <li>Un glissement à 2 doigts — à gauche, droite, haut ou bas — pour faire défiler l'écran dans cette direction. Ceci est l'équivalent d'un glissement à 1 doigt avec le lecteur d'écran désactivé. Par exemple un glissement à 2 doigts sur le premier écran d'accueil fera basculer sur le second et un glissement à 2 doigts vers le haut provoquera un défilement vers le bas pour afficher plus de contenu.</li>
+</ul>
+
+<div class="note">
+<p><strong>Note</strong>: Si vous avez activé le lecteur d'écran et que vous souhaitez le désactiver, vous devez revenir jusqu'au panneau de paramétrage à l'aide de ces nouveaux gestes et faire une double-touche sur la case à cocher une fois qu'elle est sélectionnée. Cela restaurera le comportement par défaut.</p>
+</div>
+
+<p>À partir de la version 1.4 de Firefox OS, il y a un moyen plus rapide de changer l'état du lecteur d'écran. Appuyez sur la touche volume plus puis volume moins, et recommencez 3 fois (plus, moins, plus, moins, plus, moins). Le lecteur d'écran vous demandera de refaire cette action (plus, moins, plus, moins, plus, moins) pour l'activer s'il ne l'était pas, ou le désactiver dans l'autre cas. Si vous ne souhaitez pas modifier l'état du lecteur d'écran, faites simplement autre chose. De cette manière, vous pouvez facilement l'activer pour tester l'accessibilité de votre application Web puis le désactiver sans retourner dans le menu à chaque fois.</p>
+
+<h4 id="Volume_de_lecture">Volume de lecture</h4>
+
+<p>Un curseur contrôlant le volume de la voix.</p>
+
+<h4 id="Vitesse_de_lecture">Vitesse de lecture</h4>
+
+<p>Un curseur contrôlant la vitesse de lecture de la voix.</p>
+
+<h3 id="Certificats_relecteur_Marketplace">Certificats relecteur Marketplace</h3>
+
+<p>Les certificats de relecteur Marketplace sont utilisés au cours de processus de revue du <a href="https://marketplace.firefox.com/">Firefox Marketplace</a>, pour permettre aux relecteurs d'installer des applications provenant d'autres sources que le Marketplace (e.g. les pages des relecteurs). Cette option permet à l'appareil d'utiliser ces certificats.</p>
+
+<h3 id="Secouer_pour_enregistrer_les_journaux_système">Secouer pour enregistrer les journaux système</h3>
+
+<div class="note">
+<p><strong>Note</strong>: Introduit dans la version 2.2 de Firefox OS</p>
+</div>
+
+<p>Active Logshake, qui attend que l'appareil fasse des mouvements de forte accélération. Lorsqu'un tel mouvement est détecté — c'est à dire lorsque vous secouez votre appareil — il sauvegarde les journaux système présents de log/logcat sur la carte SD, dans un dossier <em>logs/&lt;datetime&gt;</em>. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1019816" title="FIXED: Developer option to store logcat to sdcard by shaking the phone">bug 1019816</a> pour plus de détails.</p>
+
+<h3 id="Permissions_d'applications_détaillées">Permissions d'applications détaillées</h3>
+
+<div class="note">
+<p><strong>Note</strong>: Introduit dans la version 2.1 de Firefox OS</p>
+</div>
+
+<p>Cette option activée, les développeurs (ainsi que les amateurs de vie privée) peuvent modifier n'importe quelle permission donnée à une application. Le panneau "Permissions applications" dans l'application Paramètres, proposera plus de choix qu'un simple sous-ensemble compréhensible par les non-développeurs (comme géolocalisation). Par exemple, "Schedule Alarms" apparaît avec les choix <em>Demander, Refuser</em> et <em>Autoriser</em>. Notez que certaines applications peuvent ne pas supporter les changements de permissions. Si vous remarquez un comportement anormal veuillez essayer de réinitialiser les permissions, ou réinstaller l'application.</p>
+
+<h2 id="Tutoriel_de_prise_en_main">Tutoriel de prise en main</h2>
+
+<p>Ce bouton lance le programme "First-Time Use" (FTU), qui relance la procédure de configuration initiale ainsi que le tutoriel. C'est utile pour déboguer cette procédure, ou si vous souhaitez reconfigurer votre appareil depuis le début.</p>
+
+<h2 id="Déverrouillage_des_privilèges">Déverrouillage des privilèges</h2>
+
+<h3 id="Réinitialiser_et_activer_les_outils_de_développement_non_restreints">Réinitialiser et activer les outils de développement non restreints</h3>
+
+<div class="note">
+<p><strong>Note</strong>: Introduit dans la version 2.2 de Firefox OS</p>
+</div>
+
+<p>Ce bouton vous permet d'activer le <a href="https://developer.mozilla.org/fr/docs/Tools/WebIDE/Running_and_debugging_apps#Unrestricted_app_debugging_%28including_certified_apps.2C_main_process.2C_etc.%29">mode de développement non restreint</a> dans lequel vous pouvez déboguer et surcharger des applications système depuis le <a href="https://developer.mozilla.org/fr/docs/Tools/WebIDE">WebIDE</a>. Pour des raisons de sécurité, activer ce mode supprime les données de l'appareil. Notez qu'une fois ce mode activé, il est hautement suggéré d'ajouter un code PIN pour déverrouiller votre appareil puisque ce mode permet facilement d'accéder aux données internes et aux applications système (informations privées, mots de passe, ...).</p>
+
+<h2 id="Mises_à_jour_logicielles">Mises à jour logicielles</h2>
+
+<h3 id="Canal_de_mise_à_jour">Canal de mise à jour</h3>
+
+<p>Vous permet de définir différents canaux pour recevoir les mises à jour logicielles lors de mises à jour OTA. Les canaux sont <code>nightly</code>, <code>aurora</code>, et <code>others</code>.</p>
+
+<h3 id="Adresse_de_mise_à_jour">Adresse de mise à jour</h3>
+
+<p>Vous permet de définir différentes adresses (URL) desquelles recevoir vos mises à jour.</p>
+
+<h2 id="Options_obsolètes">Options obsolètes</h2>
+
+<p>Ce chapitre liste les options qui ne sont plus proposées ou qui n'existent plus en l'état, mais qui peuvent être intéressantes pour ceux qui utilisent une ancienne version de Firefox OS.</p>
+
+<h3 id="Accessibilité">Accessibilité</h3>
+
+<p>Dans les versions de Firefox OS qui précèdent la 1.4, ceci contrôle les options d'accessibilité, comme expliqué dans la section <a href="#Paramètres_du_lecteur_d'écran">Paramètres_du_lecteur_d'écran</a>.</p>
+
+<h3 id="Grille">Grille</h3>
+
+<p>L'option "Grille", une fois activée, ajoute au-dessus de l'affichage de Firefox OS, un motif de grille qui vous aidera à positionner et aligner des éléments. Par exemple, vous pouvez voir ci-dessous l'application navigateur fonctionnant avec l'option Grille d'activée :</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/5071/Grid.png" style="height: 480px; width: 320px;"></p>
+
+<p>Les lignes les plus épaisses de la grille sont séparées de 32 pixels, horizontalement et verticalement.</p>
+
+<h3 id="Images_par_seconde_2">Images par seconde</h3>
+
+<p>Activer cette option ajoute deux indicateurs en haut de l'affichage de Firefox OS, indiquant la fréquence à laquelle l'écran est redessiné, en images par seconde.</p>
+
+<h3 id="Show_time_to_load">Show time to load</h3>
+
+<p>In Firefox OS versions older than newer 1.4, enabling this displays time to load information, as explained in the <a href="#Time_to_load">Time_to_load</a> section above.</p>
+
+<h3 id="Rocketbar_enabled">Rocketbar enabled</h3>
+
+<p>In Firefox OS versions older than newer 1.4, this option enables the new <a href="https://groups.google.com/forum/#%21topic/mozilla.dev.gaia/Nlfbrq1KMP0">Firefox Rocketbar</a> on your device, which provides a useful new way to switch between apps, search, and more. When enabled, you'll find a search icon at the top left of the device, and the RocketBar can be brought up by swiping from the top left of the device towards the bottom left.</p>
+
+<div class="note">
+<p><strong>Note</strong>: In newer versions of Firefox OS, Rocketbar is enabled automatically and cannot be turned off.</p>
+</div>
+
+<h3 id="Contacts_debugging_output_in_adb">Contacts debugging output in adb</h3>
+
+<p>Enabling this option adds debugging information about contacts to the adb logs (error logs from the console can be accessed using <code>adb logcat | grep "Error"</code> in the Terminal.)</p>
+
+<h3 id="Progressive_paint_(was_Layers_Progressive_paint)">Progressive paint (was Layers: Progressive paint)</h3>
+
+<p>This was introduced to help with debugging of the <a href="https://wiki.mozilla.org/Platform/GFX/APZ">Async Panning/Zoom module</a> (APZ) during its implementation. Now APZ implementation is complete, this option is deprecated, and will be removed from future versions (see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1003228" title="FIXED: Remove unnecessary APZ-related settings and menu items">bug 1003228</a>).</p>
+
+<h3 id="Displayport_Heuristics">Displayport Heuristics</h3>
+
+<ul>
+ <li>Default</li>
+ <li>Center displayport</li>
+ <li>Assume perfect paints</li>
+ <li>Taller displayport</li>
+ <li>Faster paints</li>
+ <li>No checkerboarding</li>
+</ul>
+
+<p>These options were introduced to help with debugging of the <a href="https://wiki.mozilla.org/Platform/GFX/APZ">Async Panning/Zoom module</a> (APZ) during its implementation, specifically to allow QA to experiment with different repainting heuristics to see which resulted in the least amount of checkboarding. Now APZ implementation is complete, these options are deprecated, and will be removed from future versions (see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1003228" title="FIXED: Remove unnecessary APZ-related settings and menu items">bug 1003228</a>).</p>
+
+<h3 id="Enable_APZ_for_all_content_(Async_PanZoom)">Enable APZ for all content (Async Pan/Zoom)</h3>
+
+<p>When enabled, the Async Pan/Zoom module allows panning and zooming to be performed on asynchronously, on another thread, with some noticeable differences to rendering behaviour. To find out more, read the <a href="https://wiki.mozilla.org/Platform/GFX/APZ">MozillaWiki APZ</a> article. Now APZ implementation is complete, this option is deprecated, and will be removed from future versions (see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1003228" title="FIXED: Remove unnecessary APZ-related settings and menu items">bug 1003228</a>).</p>
+
+<h3 id="Edges_gesture">Edges gesture</h3>
+
+<p>Enabling this option allows you to swipe left and right from outside the screen towards the center, to navigate to the next and previous sheets (either web pages in the browser, or views inside another app.) This basically works like the browser navigator bar in Firefox, but is enabled by default in Firefox 2.1+.</p>
+
+<h2 id="Keyboard_layouts">Keyboard layouts</h2>
+
+<p>In addition to the developer-specific options listed above, Firefox OS &lt; 1.4's developer settings featured keyboard layout options. These let you toggle on and off the then-experimental Chinese input methods:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/5079/InputMethods.png"></p>
+
+<p>As of Firefox 1.4, these options have been removed. This is because the Chinese keyboard layout implementations (zhuyin and pinyin) have now been completed.</p>
+
+<div class="note">
+<p><strong>Note</strong>: For other keyboard layouts still under development, such as Japanese, we now have a build-time config to opt them in.</p>
+</div>

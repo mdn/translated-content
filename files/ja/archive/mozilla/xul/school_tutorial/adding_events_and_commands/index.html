@@ -1,0 +1,96 @@
+---
+title: Adding Events and Commands
+slug: Archive/Mozilla/XUL/School_tutorial/Adding_Events_and_Commands
+tags:
+  - XUL
+translation_of: Archive/Add-ons/Overlay_Extensions/XUL_School/Adding_Events_and_Commands
+---
+<div>
+ {{PreviousNext("XUL/School_tutorial/Adding_Toolbars_and_Toolbar_Buttons", "XUL/School_tutorial/The_Box_Model")}}</div>
+<h2 id="Event_handlers" name="Event_handlers">イベントハンドラ</h2>
+<p>HTML の場合と同様に、ほとんどの JavaScript コードは、DOM 要素に取り付けられたイベントハンドラによって実行が開始されます。最も一般的に使用されるイベントは、<a href="/ja/docs/DOM/window.onload" title="DOM/window.onload">onload イベント</a>です。これは、オーバーレイや他のウィンドウでウィンドウが読み込まれたことを検出し、初期化コードを実行するために使用されます:</p>
+<pre class="brush: js">// オーバーレイコードの最後尾に記述します。
+window.addEventListener(
+  "load", function() { XulSchoolChrome.BrowserOverlay.init(); }, false);
+</pre>
+<p>似たイベントに <a href="/ja/docs/DOM/window.onunload" title="DOM/window.onunload">onunload イベント</a>があります。これは、コードの後始末をする時に必要になります。</p>
+<div class="note">
+ <a href="/ja/docs/XUL_School/Appendix_A:_Add-on_Performance" title="XUL School/Appendix A: Add-on Performance">付録 A</a> をよく読んでください。Firefox のパフォーマンスを下げずに load イベントを使用してアドオンを初期化する方法が書かれています。</div>
+<p>HTML の場合と同様にイベントハンドラを取り付けるもう一つの方法は、ハンドラを XUL コード内に置くことです:</p>
+<pre class="brush:xml">&lt;overlay id="xulschoolhello-browser-overlay"
+  onload="XulSchoolChrome.BrowserOverlay.init();"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+</pre>
+<p>コンテンツと振る舞いを分けられるため、私たちは最初の方法を好んで使用します。また、要素の属性には "on" プレフィックスが付きますが、<a href="/ja/docs/DOM/element.addEventListener" title="DOM/element.addEventListener">addEventListener</a> メソッドは、プレフィックスなしのイベント名を受け取ることに注意してください。リッスンできる<a href="/ja/docs/XUL/Events" title="XUL/Events">イベントのリスト</a>を参照して、状況に合ったものを使用してください。要素には、その要素に関連するイベントのみが実装されていますが、ほとんどの要素に実装されているイベントもいくつかあります。特に、下記のイベントを覚えておくとよいでしょう:</p>
+<ul>
+ <li><a href="/ja/docs/XUL/Attribute/oncommand" title="XUL/Attribute/oncommand">oncommand</a> イベント。これは、XUL で一般的に使用されるイベントの中で最も重要なものです。メニューアイテムやボタン、チェックボックスなどの入力コントロールのための動作を提供する、とても役立つイベントです。ボタンの場合は、ユーザがクリックした時やキーボードでフォーカスして Enter キーを押した時の動作を提供します。このイベントを使用することにより、コントロール要素に対する操作方法を抽象化できます。</li>
+ <li><a href="/ja/docs/XUL/Attribute/onselect" title="XUL/Attribute/onselect">onselect</a> イベント。ツリーやリストボックスで選択が変更された時に発生します。</li>
+ <li><a href="/ja/docs/XUL/Attribute/onclick" title="XUL/Attribute/onclick">onclick</a> イベント。ユーザが要素をクリック (右クリックを含む) した時に発生します。通常は、このイベントをボタンなどの入力要素上で動作の引き金に使用してはいけません。代わりに oncommand イベントを使用してください。</li>
+ <li><a href="/ja/docs/DOM/element.onfocus" title="DOM/element.onfocus">onfocus</a> と <a href="/ja/docs/DOM/element.onblur" title="DOM/element.onblur">onblur</a> イベント。ユーザがキーボードで操作して要素がフォーカスを受け取った時や外された時に使用されます。フォーカス時の通常とは異なる動作を要素に追加するため、これらのイベントを <a href="/ja/docs/CSS/-moz-user-focus" title="CSS/-moz-user-focus">-moz-user-focus</a> と組み合わせることができます。</li>
+ <li><a href="/ja/docs/DragDrop/Drag_and_Drop" title="DragDrop/Drag and Drop">ドラッグ＆ドロップ</a>。ドラッグ＆ドロップ操作は、いくつかのイベントを発生させます。ドラッグ＆ドロップの管理は複雑なため、その作業を楽にする高レベルのラッパーが用意されています。また、ドラッグ＆ドロップには 2 つの API が有り、お勧めの新しい方は Firefox 3.5 で導入されました。</li>
+</ul>
+<p>イベントハンドラは、<em>event</em> 引数を取ることができます。これは、イベント上の情報を保持する <a href="/ja/docs/DOM/event" title="DOM/event">Event</a> オブジェクトです。修飾キー (イベント中にユーザが Alt キーなどの修飾キーを押したままにしている場合) の情報やマウスイベントのためのスクリーン座標、そして最も重要なイベントのターゲット要素の情報を得ることができます。例えば、次のように記述します:</p>
+<pre class="brush:xml">&lt;button label="&amp;xulschoolhello.defaultGreeting.label;"
+  oncommand="XulSchoolChrome.BrowserOverlay.changeGreeting(event);" /&gt;
+</pre>
+<p>そして、JavaScript コードでは次のようにします:</p>
+<pre class="brush: js">changeGreeting : function(aEvent) {
+  // more stuff
+  aEvent.target.setAttribute("label", someNewGreeting);
+}
+</pre>
+<p>この例のターゲットは button 要素です。クリックすると、このボタンのテキストが変更されます。<em>event</em> 引数を使用する利点は、メソッドが特定のボタンに依存しないことです。そのため、このメソッドを他の要素にも使用することができます。</p>
+<p>さらに詳しいイベントの扱い方については、<a href="/ja/docs/XUL_Event_Propagation" title="XUL Event Propagation">Event Propagation</a> についてのページをお読みください。簡単に説明すると、イベントの伝達は、キャプチャフェーズで DOM ツリーのルートから目的の要素まで降り、次のバブルフェーズでルートへと戻ります。これらのフェーズ中に、いつでもイベントをキャプチャまたはキャンセルできます。これらのイベントがキャプチャされる地点に到達する前にキャンセルされることはありません。<em>addEventListener</em> メソッドで関数の最後の引数を与えると、イベントを扱うフェーズの制御ができます。</p>
+<div class="note">
+ 一般的に、キャプチャフェーズ中やイベントのキャンセル中にイベントハンドラを追加することは避けなければなりません。ほとんどのイベントには関連付けられたデフォルトの動作があるため、ユーザにとって予期できない動作を引き起こします。</div>
+<h3 id="Custom_events" name="Custom_events">カスタムイベント</h3>
+<p>これは、あまり使わなくても知っておくべき、とてもパワフルなツールです。DOM <a href="/ja/docs/DOM/document.createEvent" title="DOM/document.createEvent">createEvent</a> は、ディスパッチとキャプチャが可能なカスタムイベントを作成できる関数です。</p>
+<p>カスタムイベントは、役立つコミュニケーション機構として利用できます。特に、XUL ウィンドウとウェブページのコンテンツの間でコミュニケーションを取りたい場合など、一般的な問題に対処する時に役立ちます。ページの読み込み中や表示中に、そのコンテンツを XUL コードで制御することは難しくありません (後で取り上げます) が、あなたの拡張機能の XUL コードが安全な方法でページから情報を受け取ることは難しくなります。ウェブサイトの JavaScript が Firefox や実行中の JavaScript を chrome 特権で制御できてしまい、全く安全でなくなるからです。</p>
+<p>例えば、あなたの拡張機能がウェブサイトのページと対話し、このサイト上の何らかの引き金によってあなたの拡張機能に行動を起こさせたいとします。これを解決する一つの方法は、あなたの拡張機能が簡単に認識できるカスタムイベントをサイト上で生成することです。この発生したイベントを、XUL オーバーレイ内でキャプチャしてください:</p>
+<pre class="brush: js">// オーバーレイのコード内
+document.addEventListener(
+  "XSHelloGreetingEvent", function(aEvent) { /* do stuff*/ }, false);
+</pre>
+<p>これを行う時は注意してください！ 少なくとも、カスタムイベントが生成されたページの URL が正しいか検証すべきです。また、この種類のイベントから起こる動作によって、ユーザのデータが破壊されないようにすべきです。悪意のあるサイトは、これらのイベントによってユーザに損害を与えようとします。ここに、リモートコンテンツとローカルの chrome を分けておく理由があります。必ず守ってください。</p>
+<p>さらに後の Intercepting Page Loads セクションで、このセクションを補い、ウェブコンテンツと XUL の間の対話を扱うための基礎固めができます。カスタムイベントについての追加の情報と、ウェブコンテンツと XUL の間のコミュニケーションに使用する方法は、<a href="/ja/docs/Code_snippets/Interaction_between_privileged_and_non-privileged_pages" title="Code snippets/Interaction between privileged and non-privileged pages">Interaction between privileged and non-privileged pages</a> のコードの例を参照してください。この種類のコミュニケーションについての説明があります。</p>
+<h2 id="Broadcasters" name="Broadcasters">ブロードキャスタ</h2>
+<p>一貫性のある UI を保つことも、拡張機能の動作にとって重要な側面です。場合によって、あなたの拡張機能は、ユーザがサービスへログインまたはログアウトした時、あるいは Firefox の状態が<a href="/ja/docs/Online_and_offline_events" title="Online and offline events">オンラインまたはオフライン</a>へ切り替わった時、これらの制御を有効または無効にする必要があります。同時にいくつかの要素を変更する必要があるケースがありますが、これは、JavaScript から管理することは困難です。このようなケースでは、<a href="/ja/docs/XUL/broadcaster" title="XUL/broadcaster">broadcaster</a> 要素を利用してください。</p>
+<p>はじめに、<em>broadcaster</em> 要素を <a href="/ja/docs/XUL/broadcasterset" title="XUL/broadcasterset">broadcasterset</a> 要素の子要素として XUL コードに追加する必要があります。</p>
+<pre class="brush:xml">&lt;broadcasterset id="xulschoolhello-broadcasterset"&gt;
+  &lt;broadcaster id="xulschoolhello-online-broadcaster" /&gt;
+&lt;/broadcasterset&gt;
+</pre>
+<p>これらの要素は、完全に不可視なため XUL コード内のどこにでも記述することができますが、他の <em>popupset</em> や <em>commandset</em> などの不可視の要素と共に XUL コードの最上部に記述することをお勧めします。</p>
+<p>次に、<a href="/ja/docs/XUL/Attribute/observes" title="XUL/Attribute/observes">observes 属性</a> を使用して、このブロードキャスタとリンクされる XUL 要素を指定する必要があります:</p>
+<pre class="brush:xml">&lt;menuitem id="xulschoolhello-hello-menu-item"
+  label="&amp;xulschoolhello.hello.label;"
+  accesskey="&amp;xulschoolhello.helloItem.accesskey;"
+  <strong>observes="xulschoolhello</strong><strong>-online-broadcaster"</strong>
+  oncommand="XULSchoolChrome.BrowserOverlay.sayHello(event);" /&gt;
+</pre>
+<p>この属性の値には、<em>broadcaster</em> 要素の <em>id</em> を設定します。これは、この要素が <em>broadcaster</em> に起こるすべての属性の変化を観察することを示します。<em>broadcaster</em> を観察する要素は、いくつでも増やせます。</p>
+<p>次に必要なことは、JavaScript を使用して <em>broadcaster</em> 要素内の属性を設定または削除することだけです。これらの属性値は、これを観察するすべてのノードによって自動的に設定または削除されます。また、次の例の <em>label</em> のように既存の値を上書きすることもできます。</p>
+<pre class="brush: js">let onlineBroadcaster = document.getElementById("xulschoolhello-online-broadcaster");
+
+onlineBroadcaster.setAttribute("label", "Something");
+</pre>
+<p>また、<a href="/ja/docs/XUL/observes" title="XUL/observes">observes</a> 要素を観察ノードの子要素として追加することにより、この動作をきめ細やかに制御できます。この要素で観察したい属性を選択できます。</p>
+<p>ブロードキャスタは、多くのコードを追加することなく、数多くの要素の一貫性を簡単に管理できるようにします。また、与えられた要素が DOM 内のものかどうか知っておく必要もありません。例えば、カスタマイズ可能なツールバーに与えられたボタンが配置されているかどうか分からない場合、<em>broadcaster</em> を使えば簡単に知ることができます。この方法では、ボタンが配置されているか確認する代わりに、broadcaster に値を設定するだけで済みます。</p>
+<h2 id="Commands" name="Commands">コマンド</h2>
+<p><a href="/ja/docs/XUL/Attribute/command" title="XUL/Attribute/command">command</a> 要素は、<em>oncommand</em> イベントと共に使用される、コマンドに特化した <em>broadcaster</em> の一種です。これは、Firefox や拡張機能で共通の UI 動作にするための推奨された方式です。<em>command</em> 要素は Firefox で数多く使用されています。DOM Inspector で確認してみてください。</p>
+<p>これらの動作は <em>broadcaster</em> 要素と全く同じですが、これらは共有された属性に <em>oncommand</em> がある時に使用されます。私たちのメニューの例に、コマンドの良い実装例があります。</p>
+<pre class="brush:xml">&lt;commandset id="xulschoolhello-commandset"&gt;
+  &lt;command id="xulschoolhello-hello-command"
+    oncommand="XULSchoolChrome.BrowserOverlay.sayHello(event);" /&gt;
+  &lt;!-- More commands. --&gt;
+&lt;/commandset&gt;
+&lt;!-- More code here... --&gt;
+&lt;menuitem id="xulschoolhello-hello-menu-item"
+  label="&amp;xulschoolhello.hello.label;"
+  accesskey="&amp;xulschoolhello.helloItem.accesskey;"
+  command="xulschoolhello-hello-command" /&gt;
+</pre>
+<p>コマンドを <em>command</em> 要素を使用することで、JavaScript の呼び出しを一か所まとめ、コードの重複やバグを避けることができます。また、UI を簡単に調整できます。XUL コードをいくつも繰り返し記述することなく、同じ動作のツールバーボタンやステータスバーボタン、メニューアイテムを追加する拡張機能を作成できます。コマンドとブロードキャスタは、複雑なフォームを持つウィンドウやダイアログの作成を楽にしてくれます。イベント駆動型のコードを拡張機能に追加する時は、これらのことを常に心に留めておいてください。</p>
+<div>
+ {{PreviousNext("XUL/School_tutorial/Adding_Toolbars_and_Toolbar_Buttons", "XUL/School_tutorial/The_Box_Model")}}</div>
+<p><span style="font-size: small;">This tutorial was kindly donated to Mozilla by Appcoast.</span></p>

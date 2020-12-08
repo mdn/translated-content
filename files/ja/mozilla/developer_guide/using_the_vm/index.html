@@ -1,0 +1,80 @@
+---
+title: Mozilla build用VMを使用する
+slug: Mozilla/Developer_Guide/Using_the_VM
+translation_of: Archive/Mozilla/Using_the_VM
+---
+<p>If you ever wondered what contributing to Firefox feels like but you never had the time to read and follow through our <a href="/en-US/docs/Simple_Firefox_build">instructions to setup a build environment</a> or wanted to avoid making changes to your standard tools and configuration, then this might be for you. Mozilla provides a virtual machine (VM) which is compatible with the free <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a> virtualization software (as well as others, including VMWare/VMWare Fusion).</p>
+
+<p>This article provides simple instructions for downloading, installing, and setting up this build environment build machine; once you've finished following the steps below, you'll have a VM ready for you to modify and tweak Firefox.</p>
+
+<p>Hopefully this VM will especially help developers or potential developers who don't have a full C++ development environment available to them, as well as to experienced developers without the time to set up a build system following the usual instructions.</p>
+
+<h2 id="Installing_VirtualBox">Installing VirtualBox</h2>
+
+<p>Visit the <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox downloads page</a> and download the latest version of the software for your operating system.</p>
+
+<div class="note">
+<p><strong>Note:</strong> If you already have a virtualization product installed, such as VirtualBox, VMWare, or VMWare Fusion, you can use that instead of downloading a new copy of VirtualBox. Just make sure you have the latest version of the software. Note that Parallels Desktop does <strong>not</strong> support the OVF format.</p>
+</div>
+
+<h2 id="VMのダウンロード">VMのダウンロード</h2>
+
+<p>Next, download the Firefox development environment VM.</p>
+
+<p><a class="download-button external ignore-external" href="http://vmimages.mozilla.net/ovf/FirefoxBuildEnv.ova" rel="noopener">Download the VM</a></p>
+
+<p>SHA-256: 67698e6dfe54582b4fc23221a8b8f3a9062ffa0bce11523823ccb26a8f8bce2b</p>
+
+<div class="note">
+<p><strong>Note:</strong> This file is about 3.6 GB, so it may take a while to download.</p>
+</div>
+
+<h2 id="Setting_up_the_VM">Setting up the VM</h2>
+
+<p>After getting the virtual machines' .ova file has downloaded, double-click on it; this will start the process of importing the VM into VirtualBox. Please give the VM a minimum of 4096 MB of RAM (8192 MB or more if you can), and set it to have the same number of processors as your host computer. Building Firefox uses a lot of system resources, and you want it to build as quickly as possible.</p>
+
+<p><img alt="Screen shot of the Import Virtual Appliance window" src="https://mdn.mozillademos.org/files/8665/firefoxdev3.png" style="height: 447px; width: 600px;"></p>
+
+<p>Once you've finished importing the VM, you can perform additional customizations if you wish, or just boot the VM and wait for the Ubuntu desktop to appear. A terminal window will pop up automatically and perform some final setup activities. Once those are finished running, Sublime Text will start up, and you can get to work!</p>
+
+<p><img alt="Screen shot of the Sublime Text editor running in the VM" src="https://mdn.mozillademos.org/files/8667/firefoxdev1.png" style="height: 317px; width: 600px;"></p>
+
+<div class="note">
+<p><strong>Note:</strong> <strong>もしrootのパスワードが必要になった場合、 "firefox-dev" をパスワードとして使用することができます。</strong> If you wish to change your language and keyboard settings, follow the instructions in <a href="http://www.howtogeek.com/howto/17528/change-the-user-interface-language-in-ubuntu/">How to change the UI language in Ubuntu</a>.</p>
+</div>
+
+<h2 id="Firefoxをビルドする">Firefoxをビルドする</h2>
+
+<p>VMを使用してFirefoxをビルドするためには、(sublimetextを開いた状態で上のバーから)Toolsメニューを開きBuildオプションを選びます。ビルドの処理が開始するので、お茶や美味しい食事でもして休憩しましょう。休憩の長さはあなたのコンピューターの処理速度によります。</p>
+
+<p>もしビルドが終了(完了)した場合、Tools内のRunオプションを選び、あなたがカスタムビルドしたfirefoxを起動させることができます。想定した動作をしているかどうか確認してみてください。</p>
+
+<p>デフォルトではこのVMはFirefoxのビルドに最適化された設定になっています。デバッグ用ビルドに変更することもかんたんにできます。Toolsメニューを開き、Build Systemサブメニューを開いて、"Firefox (Debug)"を選ぶだけです。次にあなたがビルドするときはデバッグ用のビルドになっているでしょう！</p>
+
+<p><img alt="Screen shot showing how to switch between debug; and optimized builds" src="https://mdn.mozillademos.org/files/8669/firefoxdev2.png" style="height: 317px; width: 600px;"></p>
+
+<h2 id="VMでcontributeする">VMでcontributeする</h2>
+
+<p>今後はあなたがどこにいてもVMを使ってcontributeすることができます。最新のソースコードを <a href="/en-US/docs/mozilla-central">mozilla-central</a>, 内から持ってくるには、いつものようにMercurialのコマンドを打つだけで済みます:</p>
+
+<pre>hg pull</pre>
+
+<p>そしていつもと同じように <a href="/en-US/docs/Mozilla/Developer_guide/How_to_Submit_a_Patch">作成したパッチを提出する</a> こともできます。</p>
+
+<h2 id="Now_what">Now what?</h2>
+
+<p>Now that you've successfully built Firefox in your brand-new VM, you might be wondering what to do next.  A great way to start is to pick a small, easy-to-fix bug and contribute code that patches it. Imagine how awesome it is to have code you wrote shipped to half a billion users all over the world!</p>
+
+<p>Here are some links to help you find something you can do to make Firefox better:</p>
+
+<ul>
+ <li><a href="http://codefirefox.com/">Code Firefox Lessons</a> provides a number of video tutorials for new Firefox contributors.</li>
+ <li><a href="http://www.joshmatthews.net/bugsahoy/">Bugs Ahoy!</a> (a tool to help you find bugs that might interest you).</li>
+ <li><a href="http://firefox-dev.tools/">firefox-dev.tools</a> (a tool to help you find bugs related to the <a href="/en-US/docs/Tools">Firefox Developer Tools</a> that might interest you).</li>
+ <li><a href="/en-US/docs/Mozilla/Developer_guide">Developer guide</a> (documentation about developing on and for Mozilla projects).</li>
+ <li><a class="external" href="http://www.joshmatthews.net/bugsahoy/" title="http://www.joshmatthews.net/bugsahoy/">Mentored bugs</a> have a mentor who commits to helping you every step of the way. Generally, there should be enough information in the bug to get started. Whenever you need help, contact the mentor over Matrix, in the bug itself, or by email. When you've completed the bug, they will help you get your code into the tree.</li>
+ <li><a class="link-https" href="https://bugzil.la/sw:%22[good%20first%20bug]%22" title='https://bugzil.la/sw:"[good first bug]"'>"Good" first bugs</a> may be a little stale, but at some point in their lives we considered that they would be a good first step for newcomers to Mozilla. We are in the process of migrating these bugs to mentored bugs, but more recent "good first bugs" may be good starting points if there are no appropriate mentored bugs.</li>
+ <li><a href="/en-US/docs/Mozilla/Developer_guide/How_to_Submit_a_Patch">How to submit a patch</a> (information about how to create a patch file and get it submitted into the source code).</li>
+</ul>
+
+<p>You can also ask your getting-started questions in {{IRCLink("introduction")}}, and any Firefox development questions in {{IRCLink("developers")}}.</p>

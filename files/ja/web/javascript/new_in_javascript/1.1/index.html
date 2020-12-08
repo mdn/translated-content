@@ -1,0 +1,74 @@
+---
+title: JavaScript 1.1 の新機能
+slug: Web/JavaScript/New_in_JavaScript/1.1
+tags:
+  - JavaScript
+  - JavaScript_version_overviews
+translation_of: Archive/Web/JavaScript/New_in_JavaScript/1.1
+---
+<div>{{jsSidebar("New_in_JS")}}</div>
+
+<p>The following is a changelog for JavaScript from Netscape Navigator 2.0 to 3.0. The old Netscape documentation references this as <a href="http://web.archive.org/web/20060318153542/wp.netscape.com/eng/mozilla/3.0/handbook/javascript/index.html">"Features added after version 1"</a>. Netscape Navigator 3.0 was released on August 19, 1996. Netscape Navigator 3.0 was the second major version of the browser with JavaScript support.</p>
+
+<h2 id="JavaScript_versions">JavaScript versions</h2>
+
+<p>Netscape Navigator 3.0 also introduced JavaScript language versions.</p>
+
+<pre class="brush: html">&lt;script language="JavaScript"&gt;    &lt;!-- JavaScript for Navigator 2.0. --&gt;
+&lt;SCRIPT LANGUAGE="JavaScript1.1"&gt; &lt;!-- JavaScript for Navigator 3.0. --&gt;&lt;/pre&gt;
+
+&lt;h2 id="New_features_in_JavaScript_1.1"&gt;New features in JavaScript 1.1&lt;/h2&gt;
+
+&lt;h3 id="New_objects"&gt;New objects&lt;/h3&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;&lt;code&gt;&lt;a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"&gt;Array&lt;/a&gt;&lt;/code&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;code&gt;&lt;a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean"&gt;Boolean&lt;/a&gt;&lt;/code&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;code&gt;&lt;a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"&gt;Function&lt;/a&gt;&lt;/code&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;code&gt;&lt;a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"&gt;Number&lt;/a&gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="New_properties"&gt;New properties&lt;/h3&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;&lt;code&gt;&lt;a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE"&gt;Number.MAX_VALUE&lt;/a&gt;&lt;/code&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;code&gt;&lt;a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE"&gt;Number.MIN_VALUE&lt;/a&gt;&lt;/code&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;code&gt;&lt;a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN"&gt;NaN&lt;/a&gt;&lt;/code&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;code&gt;&lt;a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY"&gt;Number.NEGATIVE_INFINITY&lt;/a&gt;&lt;/code&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;code&gt;&lt;a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY"&gt;Number.POSITIVE_INFINITY&lt;/a&gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="New_methods"&gt;New methods&lt;/h3&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;&lt;code&gt;&lt;a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join"&gt;Array.prototype.join()&lt;/a&gt;&lt;/code&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;code&gt;&lt;a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse"&gt;Array.prototype.reverse()&lt;/a&gt;&lt;/code&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;code&gt;&lt;a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort"&gt;Array.prototype.sort()&lt;/a&gt;&lt;/code&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;code&gt;&lt;a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split"&gt;String.prototype.split()&lt;/a&gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="New_operators"&gt;New operators&lt;/h3&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;&lt;code&gt;&lt;a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof"&gt;typeof&lt;/a&gt;&lt;/code&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;code&gt;&lt;a href="/en-US/docs/Web/JavaScript/Reference/Operators/void"&gt;void&lt;/a&gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="Other_new_features"&gt;Other new features&lt;/h3&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;&lt;code&gt;&lt;a href="/en-US/docs/Web/HTML/Element/noscript"&gt;&lt;noscript&gt;&lt;/a&gt;&lt;/code&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="/en-US/docs/Archive/Web/LiveConnect"&gt;LiveConnect&lt;/a&gt;. Communication between Java and JavaScript.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="Changed_functionality_in_JavaScript_1.1"&gt;Changed functionality in JavaScript 1.1&lt;/h2&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;"Object deletion". You can remove an object by setting its object reference to &lt;code&gt;null&lt;/code&gt;.&lt;/li&gt;
+ &lt;li&gt;&lt;code&gt;constructor&lt;/code&gt; and &lt;code&gt;prototype&lt;/code&gt; properties on objects added.&lt;/li&gt;
+ &lt;li&gt;&lt;code&gt;&lt;a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval"&gt;eval()&lt;/a&gt;&lt;/code&gt; is now a method of every object (was previously a built-in function); it evaluates a string of JavaScript code in the context of the specified object.&lt;/li&gt;
+ &lt;li&gt;&lt;code&gt;&lt;a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random"&gt;Math.random()&lt;/a&gt;&lt;/code&gt; now works on every platform.&lt;/li&gt;
+ &lt;li&gt;&lt;code&gt;&lt;a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString"&gt;toString()&lt;/a&gt;&lt;/code&gt;: Added radix parameter, which specifies the base to use for representing numeric values.&lt;/li&gt;
+ &lt;li&gt;&lt;code&gt;&lt;a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN"&gt;isNaN()&lt;/a&gt;&lt;/code&gt; now works on every platform (not only Unix anymore)&lt;/li&gt;
+ &lt;li&gt;&lt;code&gt;&lt;a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat"&gt;parseFloat()&lt;/a&gt;&lt;/code&gt; and &lt;code&gt;&lt;a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt"&gt;parseint()&lt;/a&gt;&lt;/code&gt; now return &lt;code&gt;NaN&lt;/code&gt; on all platforms, if the first character of the specified string cannot be converted to a number; in previous releases, it returned &lt;code&gt;NaN&lt;/code&gt; on Solaris and Irix and zero on all other platforms.&lt;/li&gt;
+&lt;/ul&gt;&lt;/script&gt;</pre>

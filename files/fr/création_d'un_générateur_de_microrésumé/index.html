@@ -1,0 +1,227 @@
+---
+title: Création d'un générateur de microrésumé
+slug: Création_d'un_générateur_de_microrésumé
+tags:
+  - Microrésumés
+translation_of: Archive/Mozilla/Creating_a_microsummary
+---
+<p>
+	Un générateur de microrésumé est un ensemble d'instructions permettant de créer un microrésumé à partir du contenu d'une page. Les pages Web peuvent faire référence à de tels générateurs à l'aide d'éléments <code>&lt;link rel="microsummary"&gt;</code> au sein de leur section <code>&lt;head&gt;</code>. Il est également possible pour les utilisateurs de télécharger et d'installer des générateurs indépendamment si ceux-ci comprennent une liste de pages auxquelles ils s'appliquent.</p>
+<p>
+	Dans ce tutoriel, nous créerons un générateur de microrésumé pour <a class="external" href="http://www.spreadfirefox.com/">la page d'accueil de Spread Firefox</a> qui affichera le compteur de téléchargements de Firefox entouré d'un peu de texte ; par exemple <cite>Fx : 195728643 téléchargements</cite>.</p>
+<p>
+	Nous construirons la feuille de transformation XSLT convertissant la page en son microrésumé, apprendrons comment indiquer que le générateur s'applique à cette page et découvrirons comment rendre ce générateur téléchargeable et installable.</p>
+<p>
+	À chaque étape de construction de la feuille de transformation et des autres codes dans ce tutoriel, les ajouts seront affichés <b>en caractères gras</b> pour faciliter la lecture.</p>
+<p>
+	Note : si vous êtes développeur de sites et que vous voulez créer des microrésumés, vous pouvez écrire des générateurs, mais il est plus simple et plus efficace de créer les microrésumés du côté serveur en utilisant les mêmes outils et langages que ceux utilisés pour générer les pages.</p>
+<p>
+	Par exemple, si vous utilisez des scripts PHP pour générer les pages de votre site, vous pourriez écrire du code PHP pour créer un microrésumé lorsque le paramètre view=microsummary se trouve dans l'adresse, puis renseigner le générateur au sein de la page à l'aide d'une balise <code>&lt;link rel="microsummary"&gt;</code> :</p>
+<pre class="eval">&lt;head&gt;
+  <b>&lt;link rel="microsummary" href="index.php?view=microsummary"&gt;</b>
+&lt;/head&gt;
+</pre>
+<p>
+	Lorsque Firefox rencontre une balise <code>&lt;link rel="microsummary"&gt;</code>, il charge l'adresse renseignée dans l'attribut href. Si celle-ci pointe vers un générateur, il l'utilise pour générer un microrésumé pour la page. Par contre, si le lien renvoie un fichier texte (ou du contenu HTML pouvant être converti en texte simple), Firefox utilise son contenu comme microrésumé pour la page.</p>
+<p>
+	 </p>
+<h3 id="Pour_commencer" name="Pour_commencer">
+	Pour commencer</h3>
+<p>
+	Les générateurs s'expriment sous la forme de documents XML dont l'élément racine est <code>&lt;generator&gt;</code> dans l'espace de nommage <cite><a class="external" href="http://www.mozilla.org/microsummaries/0.1" rel="freelink">http://www.mozilla.org/microsummaries/0.1</a></cite>. Pour commencer à construire le générateur, créez un nouveau fichier texte vide, ajoutez une déclaration XML et une balise <code>&lt;generator&gt;</code> vide :</p>
+<pre class="eval"><b>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</b>
+<b>&lt;generator xmlns="<span class="nowiki">http://www.mozilla.org/microsummaries/0.1</span>"&gt;</b>
+<b>&lt;/generator&gt;</b>
+</pre>
+<h3 id="Baptiser_un_g.C3.A9n.C3.A9rateur" name="Baptiser_un_g.C3.A9n.C3.A9rateur">
+	Baptiser un générateur</h3>
+<p>
+	Les générateurs doivent être dotés d'attributs <code>name</code> qui sont des descriptions arbitraires des microrésumés créés. Ces noms doivent être suffisamment descriptifs pour donner aux utilisateurs une bonne idée de l'information fournie par les microrésumés. Comme notre générateur créera des microrésumés affichant le compteur de téléchargements de Firefox, appelons-le « Compteur de téléchargements de Firefox » :</p>
+<pre class="eval">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;generator xmlns="<span class="nowiki">http://www.mozilla.org/microsummaries/0.1</span>"
+           <b>name="Compteur de téléchargements de Firefox"</b>&gt;
+&lt;/generator&gt;
+</pre>
+<h3 id="Ajout_d.27une_feuille_de_transformation_XSLT" name="Ajout_d.27une_feuille_de_transformation_XSLT">
+	Ajout d'une feuille de transformation XSLT</h3>
+<p>
+	Les générateurs doivent fournir une feuille de transformation XSLT (également appelée feuille de style XSLT) qui transformera le contenu de la page en son microrésumé. XSLT est un puissant langage de transformation de documents en d'autres représentations de la même information.</p>
+<p>
+	Ajoutez la feuille de transformation XSLT au générateur en la déclarant au sein d'un élément <code>&lt;template&gt;</code> :</p>
+<pre class="eval">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;generator xmlns="<span class="nowiki">http://www.mozilla.org/microsummaries/0.1</span>"
+           name="Compteur de téléchargements de Firefox"&gt;
+  <b>&lt;template&gt;</b>
+    <b>&lt;transform xmlns="<span class="nowiki">http://www.w3.org/1999/XSL/Transform</span>" version="1.0"&gt;</b>
+    <b>&lt;/transform&gt;</b>
+  <b>&lt;/template&gt;</b>
+&lt;/generator&gt;
+</pre>
+<p>
+	Notez que si les générateurs de microrésumés peuvent contenir n'importe quel code XSLT, même un code contenant des instructions de formatage, Firefox n'affiche pour l'instant que la version texte de la sortie XSLT.</p>
+<h3 id="Sp.C3.A9cification_du_type_de_sortie" name="Sp.C3.A9cification_du_type_de_sortie">
+	Spécification du type de sortie</h3>
+<p>
+	Puisque la feuille de transformation XSLT va générer un microrésumé texte, il faut l'indiquer dans l'élément XSLT <code>&lt;output&gt;</code> :</p>
+<pre class="eval">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;generator xmlns="<span class="nowiki">http://www.mozilla.org/microsummaries/0.1</span>"
+           name="Compteur de téléchargements de Firefox"&gt;
+  &lt;template&gt;
+    &lt;transform xmlns="<span class="nowiki">http://www.w3.org/1999/XSL/Transform</span>" version="1.0"&gt;
+      <b>&lt;output method="text"/&gt;</b>
+    &lt;/transform&gt;
+  &lt;/template&gt;
+&lt;/generator&gt;
+</pre>
+<h3 id="Utilisation_d.27un_.3Ctemplate.3E_XSLT_simple" name="Utilisation_d.27un_.3Ctemplate.3E_XSLT_simple">
+	Utilisation d'un <code>&lt;template&gt;</code> XSLT simple</h3>
+<p>
+	Le processeur XSLT transforme les documents en comparant chaque élément XSLT <code>&lt;template&gt;</code> de la feuille de transformation en un ensemble de nœuds dans le document. Lorsque l'attribut <code>match</code> d'un élément <code>&lt;template&gt;</code> correspond à un nœud, le processeur effectue la transformation spécifiée au sein de l'élément.</p>
+<p>
+	Ce mécanisme est très puissant, car il permet de traverser l'arbre des nœuds d'un document, en générant récursivement une sortie basée sur le contenu du document. Mais dans le cas d'un microrésumé pour la page de Spread Firefox, nous aurons juste besoin d'un seul élément <code>&lt;template&gt;</code> correspondant au nœud racine du document et qui sera traité une seule fois :</p>
+<pre class="eval">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;generator xmlns="<span class="nowiki">http://www.mozilla.org/microsummaries/0.1</span>"
+           name="Compteur de téléchargements de Firefox"&gt;
+  &lt;template&gt;
+    &lt;transform xmlns="<span class="nowiki">http://www.w3.org/1999/XSL/Transform</span>" version="1.0"&gt;
+      &lt;output method="text"/&gt;
+      <b>&lt;template match="/"&gt;</b>
+      <b>&lt;/template&gt;</b>
+    &lt;/transform&gt;
+  &lt;/template&gt;
+&lt;/generator&gt;
+</pre>
+<h3 id="Inclusion_du_compteur_de_t.C3.A9l.C3.A9chargements" name="Inclusion_du_compteur_de_t.C3.A9l.C3.A9chargements">
+	Inclusion du compteur de téléchargements</h3>
+<p>
+	Pour inclure le compteur de téléchargements dans la sortie de la feuille de transformation XSLT, il est nécessaire d'ajouter un élément XSLT <code>&lt;value-of&gt;</code> au template dont l'attribut <code>select</code> contient une expression XPath pointant vers le nœud contenant le compteur.</p>
+<p>
+	XPath est un langage permettant d'identifier des nœuds dans des documents HTML/XML. Il fournit également quelques fonctions basiques permettant de manipuler ces nœuds et leur contenu. La manière la plus simple d'obtenir une expression XPath pointant vers le nœud désiré est d'utiliser l'<a class="link-https" href="https://addons.mozilla.org/firefox/1095/">extension XPath Checker</a>.</p>
+<p>
+	Installez l'extension (en redémarrant Firefox pour terminer l'installation) et rendez-vous ensuite sur <a class="external" href="http://www.spreadfirefox.com/">la page d'accueil de Spread Firefox</a>, trouvez le compteur de téléchargements de Firefox (un grand nombre en bas de la colonne de droite), cliquez avec le bouton de droite sur ce nombre et choisissez <cite>View XPath</cite> dans le menu contextuel.</p>
+<p>
+	XPath Checker ouvrira une nouvelle fenêtre. Celle-ci contiendra un champ <cite>XPath</cite> contenant l'expression XPath qui pointe vers le nœud du compteur de téléchargements : <cite>id('download-count')</cite>.</p>
+<p>
+	Ajoutez un élément <code>&lt;value-of&gt;</code> dont l'attribut <code>select</code> contient cette expression XPath à l'élément <code>&lt;template&gt;</code> :</p>
+<pre class="eval">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;generator xmlns="<span class="nowiki">http://www.mozilla.org/microsummaries/0.1</span>"
+           name="Compteur de téléchargements de Firefox"&gt;
+  &lt;template&gt;
+    &lt;transform xmlns="<span class="nowiki">http://www.w3.org/1999/XSL/Transform</span>" version="1.0"&gt;
+      &lt;output method="text"/&gt;
+      &lt;template match="/"&gt;
+        <b>&lt;value-of select="id('download-count')"/&gt;</b>
+      &lt;/template&gt;
+    &lt;/transform&gt;
+  &lt;/template&gt;
+&lt;/generator&gt;
+</pre>
+<h3 id="Ajout_de_texte" name="Ajout_de_texte">
+	Ajout de texte</h3>
+<p>
+	Pour ajouter du texte dans le microrésumé, nous devrons ajouter des éléments XSLT <code>&lt;text&gt;</code> contenant le texte désiré à l'élément <code>&lt;template&gt;</code>.</p>
+<p>
+	Ajoutez des éléments <code>&lt;text&gt;</code> au template XSLT contenant <cite>Fx :</cite> et <cite>téléchargements</cite>:</p>
+<pre class="eval">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;generator xmlns="<span class="nowiki">http://www.mozilla.org/microsummaries/0.1</span>"
+           name="Compteur de téléchargements de Firefox"&gt;
+  &lt;template&gt;
+    &lt;transform xmlns="<span class="nowiki">http://www.w3.org/1999/XSL/Transform</span>" version="1.0"&gt;
+      &lt;output method="text"/&gt;
+      &lt;template match="/"&gt;
+        <b>&lt;text&gt;Fx : &lt;/text&gt;</b>
+        &lt;value-of select="id('download-count')"/&gt;
+        <b>&lt;text&gt; téléchargements&lt;/text&gt;</b>
+      &lt;/template&gt;
+    &lt;/transform&gt;
+  &lt;/template&gt;
+&lt;/generator&gt;
+</pre>
+<p>
+	Notez que les espaces blancs entre les balises XSLT ne sont pas repris dans la sortie XSLT, contrairement au HTML où les espaces sont condensés en un seul caractère espace, assurez-vous donc d'ajouter un espace devant le mot <cite>téléchargements</cite> pour qu'il ne soit pas collé au nombre de téléchargements.</p>
+<p>
+	Avec cet ajout, nous avons terminé d'écrire la feuille de transformation XSLT qui convertira la page d'accueil de Spread Firefox en un microrésumé.</p>
+<h3 id="Sp.C3.A9cifier_.C3.A0_quelle_page_s.27applique_le_g.C3.A9n.C3.A9rateur" name="Sp.C3.A9cifier_.C3.A0_quelle_page_s.27applique_le_g.C3.A9n.C3.A9rateur">
+	Spécifier à quelle page s'applique le générateur</h3>
+<p>
+	Maintenant que nous avons la feuille de transformation, il nous faut spécifier à quelle page elle s'applique. Si nous étions les webmestres de Spread Firefox, nous pourrions simplement renseigner le générateur au sein de la page à l'aide d'une balise <code>&lt;link rel="microsummary"&gt;</code> dans son élément <code>&lt;head&gt;</code> :</p>
+<pre class="eval">&lt;head&gt;
+  <b>&lt;link rel="microsummary" href="chemin/vers/notre/generateur.xml"&gt;</b>
+&lt;/head&gt;
+</pre>
+<p>
+	Comme ce n'est pas le cas, nous allons devoir spécifier à quelle page s'applique le générateur dans le code du générateur lui-même, et permettre ensuite de télécharger celui-ci. Pour spécifier les pages auxquelles un générateur s'applique, on utilise un élément <code>&lt;pages&gt;</code> au sein de l'élément <code>&lt;generator&gt;</code> :</p>
+<pre class="eval">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;generator xmlns="<span class="nowiki">http://www.mozilla.org/microsummaries/0.1</span>"
+           name="Compteur de téléchargements de Firefox"&gt;
+  &lt;template&gt;
+    &lt;transform xmlns="<span class="nowiki">http://www.w3.org/1999/XSL/Transform</span>" version="1.0"&gt;
+      &lt;output method="text"/&gt;
+      &lt;template match="/"&gt;
+        &lt;text&gt;Fx : &lt;/text&gt;
+        &lt;value-of select="id('download-count')"/&gt;
+        &lt;text&gt; téléchargements&lt;/text&gt;
+      &lt;/template&gt;
+    &lt;/transform&gt;
+  &lt;/template&gt;
+  <b>&lt;pages&gt;</b>
+  <b>&lt;/pages&gt;</b>
+&lt;/generator&gt;
+</pre>
+<p>
+	L'élément <code>&lt;pages&gt;</code> peut contenir une séquence d'éléments <code>&lt;include&gt;</code> et <code>&lt;exclude&gt;</code> spécifiant respectivement les pages auxquelles le générateur s'applique ou ne s'applique pas.</p>
+<p>
+	Pour que le générateur s'applique à une page, ajoutez un élément <code>&lt;include&gt;</code> dont le contenu est une expression rationelle s'appliquant à la page. Pour qu'il ne s'applique pas à une page, ajoutez un élément <code>&lt;exclude&gt;</code> à la place.</p>
+<p>
+	Par défaut, les générateurs ne s'appliquent à aucune page. Vous devrez donc explicitement lister les pages auxquelles ils s'appliquent sans avoir à exclure aucune page, à moins de les avoir inclues auparavant.</p>
+<p>
+	Ajoutez un élément <code>&lt;include&gt;</code> correspondant à la page d'accueil de Spread Firefox :</p>
+<pre class="eval">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;generator xmlns="<span class="nowiki">http://www.mozilla.org/microsummaries/0.1</span>" name="Compteur de téléchargements de Firefox"&gt;
+  &lt;template&gt;
+    &lt;transform xmlns="<span class="nowiki">http://www.w3.org/1999/XSL/Transform</span>" version="1.0"&gt;
+      &lt;output method="text"/&gt;
+      &lt;template match="/"&gt;
+        &lt;text&gt;Fx : &lt;/text&gt;
+        &lt;value-of select="id('download-count')"/&gt;
+        &lt;text&gt; téléchargements&lt;/text&gt;
+      &lt;/template&gt;
+    &lt;/transform&gt;
+  &lt;/template&gt;
+  &lt;pages&gt;
+    <b>&lt;include&gt;<span class="nowiki">http://(www\.)?spreadfirefox\.com/(index\.php)?</span>&lt;/include&gt;</b>
+  &lt;/pages&gt;
+&lt;/generator&gt;
+</pre>
+<p>
+	Si vous n'êtes pas expérimenté avec les expressions régulières, consultez <a href="fr/Cr%c3%a9ation_d'expression_r%c3%a9guli%c3%a8res_pour_les_g%c3%a9n%c3%a9rateurs_de_micror%c3%a9sum%c3%a9s">Création d'expression régulières pour les générateurs de microrésumés</a>, un tutoriel pour l'écriture de ceux-ci.</p>
+<h3 id="Rendre_le_g.C3.A9n.C3.A9rateur_t.C3.A9l.C3.A9chargeable" name="Rendre_le_g.C3.A9n.C3.A9rateur_t.C3.A9l.C3.A9chargeable">
+	Rendre le générateur téléchargeable</h3>
+<p>
+	Maintenant que le générateur s'applique à la page d'accueil de Spread Firefox, la seule chose qui reste à faire est de le rendre téléchargeable. Pour ce faire, il faut le placer quelque part en ligne et ensuite créer un lien JavaScript sur une page Web appelant la méthode <cite>window.sidebar.addMicrosummaryGenerator()</cite> de Firefox pour télécharger et installer le générateur.</p>
+<p>
+	Par exemple, si l'on place le fichier du générateur sur le Web à l'adresse <a class="external" href="http://people.mozilla.com/~myk/microsummaries/tutorial/sfx-generator.xml" rel="freelink">http://people.mozilla.com/~myk/micro...-generator.xml</a>, et que l'on veut permettre au visiteurs de l'installer depuis <a class="external" href="http://people.mozilla.com/~myk/microsummaries/tutorial/index.html" rel="freelink">http://people.mozilla.com/~myk/micro...ial/index.html</a>, on peut ajouter le code suivant à la page <cite>index.html</cite> :</p>
+<pre class="eval"><b>&lt;button onclick="window.sidebar.addMicrosummaryGenerator('<span class="nowiki">http://people.mozilla.com/~myk/microsummaries/tutorial/sfx-generator.xml</span>')"&gt;Installer le microrésumé pour la page d'accueil de Spread Firefox&lt;/button&gt;</b>
+</pre>
+<p>
+	Un clic sur ce bouton génèrera cependant une erreur JavaScript sur les navigateurs ne gérant pas les microrésumés. Pour être plus sympathique avec ceux-ci, nous devrions vérifier si le visiteur utilise un navigateur gérant les microrésumés et afficher un message explicatif dans le cas contraire. Cela peut se faire avec le code suivant :</p>
+<pre class="eval"><b>&lt;script&gt;</b>
+<b>  const warning = "Désolé, vous devez disposer d'un navigateur acceptant les microrésumés comme Firefox 2 pour installer et utiliser des générateurs de microrésumés.";</b>
+<b>  function addGenerator(url) {</b>
+<b>    if (typeof window.sidebar == "object" &amp;&amp;</b>
+<b>        typeof window.sidebar.addMicrosummaryGenerator == "function")</b>
+<b>      window.sidebar.addMicrosummaryGenerator(url);</b>
+<b>    else</b>
+<b>     alert(warning);</b>
+<b>  }</b>
+<b>&lt;/script&gt;</b>
+<b>&lt;button onclick="addGenerator('<span class="nowiki">http://people.mozilla.com/~myk/microsummaries/tutorial/sfx-generator.xml</span>')"&gt;Installer le microrésumé pour la page d'accueil de Spread Firefox&lt;/button&gt;</b>
+</pre>
+<p>
+	Note: à cause du {{ Bug(341283) }}, <code>addMicrosummaryGenerator()</code> n'accepte pas d'URL relative.</p>
+<h3 id="Conclusion" name="Conclusion">
+	Conclusion</h3>
+<p>
+	Vous devriez à présent disposer d'un générateur de microrésumé affichant le compteur de téléchargements de Firefox. Lorsqu'il est installé, Placez la page d'accueil de Spread Firefox dans vos marque-pages, et sélectionnez le microrésumé depuis le menu déroulant <cite>Nom</cite> de la fenêtre <cite>Ajouter un marque-page</cite>.</p>
+<p>
+	Pour plus d'informations sur les microrésumés, consultez <a class="external" href="http://wiki.mozilla.org/Microsummaries">Microsummaries home page</a> sur le wiki de Mozilla.</p>

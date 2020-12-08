@@ -1,0 +1,82 @@
+---
+title: 使用应用程式模板
+slug: Archive/Apps/Tools_and_frameworks/App_templates
+tags:
+  - 使用应用程式模板
+translation_of: Archive/Apps/Tools_and_frameworks/App_templates
+---
+<div class="summary">
+<p>为了帮助您快速开始编写Web应用程序，我们提供了一些已经设置好的模板。 每个模板都是一个静态Web项目，其中包含有助于构建和部署的工具。</p>
+</div>
+
+<p>What you get:</p>
+
+<ul>
+ <li>A minimal and well-formed HTML structure</li>
+ <li>Prebuilt <code>manifest.webapp</code></li>
+ <li>JavaScript libraries for interacting with the Marketplace</li>
+ <li>require.js for structuring your JavaScript code</li>
+ <li>volo for automating local development and deployment</li>
+ <li>pre-built layouts (from some of the templates)</li>
+</ul>
+
+<p>You can view all of the available templates in the <a href="https://github.com/mozilla/mortar">mortar</a> repo. The following are available:</p>
+
+<ul>
+ <li><a href="https://github.com/mozilla/mortar-app-stub">mortar-app-stub</a>: a blank template that comes only with the basic things required to get started</li>
+ <li><a href="https://github.com/mozilla/mortar-list-detail">mortar-list-detail</a>: comes with a layouts library and sets up a list-detail layout for you</li>
+ <li><a href="https://github.com/mozilla/mortar-game-stub">mortar-game-stub</a>: a minimal web game template that handles input and a render loop</li>
+</ul>
+
+<h2 id="Starting_with_the_App_Stub_Template">Starting with the App Stub Template</h2>
+
+<p>You could simply use git to get the template from <a href="https://github.com/mozilla/mortar-app-stub">this repo</a>:</p>
+
+<pre>git clone https://github.com/mozilla/mortar-app-stub.git myapp</pre>
+
+<p>Using volo is recommended, however. volo is a tool for automating projects, and you'll be able to use it with good effect with this template, so go ahead and install it. You first need node.js, which you can download from <a href="http://nodejs.org/">here</a>. Once you have node, install volo (you might need to prefix the command with <code>sudo</code> if it fails due to insufficient permissions):</p>
+
+<pre>npm install -g volo
+</pre>
+
+<p>Now you can just use the volo <code>create</code> command, followed a name for the folder you want your app created in, then <code>mozilla/</code> followed by the name of the mortar template you want to use:</p>
+
+<pre>volo create myapp mozilla/mortar-app-stub</pre>
+
+<p>When future templates are available, you can use the same <code>create</code> command with different template URLs.</p>
+
+<h2 id="What_Now">What Now?</h2>
+
+<p>All your HTML, CSS, and JavaScript are under the <code>www</code> directory, so start coding! You'll see a bunch of stuff in there, but feel free to remove anything you don't need.</p>
+
+<p>The template uses <a href="http://requirejs.org/">require.js</a> to manage JavaScript. If you look in <code>www/js/app.js</code> you'll see that it defines the main module and loads a few libraries like <a href="http://zeptojs.com/">zepto</a>. The Marketplace JavaScript library is also included, which enables <a href="/en-US/docs/Web/Apps/Publishing/In-app_payments">in-app payments</a> and <a href="/en-US/docs/Web/Apps/Publishing/Validating_a_receipt">receipt verification</a>. You don't need this if you're a free app without in-app payments.</p>
+
+<p>Below that, you'll see the line:</p>
+
+<pre>define(function(require) {</pre>
+
+<p>That defines the main module for your app, and you should start coding within the function. You can use <code>require</code> to load in other modules, the same way zepto is loaded. Check out the <a href="http://requirejs.org/docs/api.html">require.js API</a> to learn more about modules.</p>
+
+<div class="note">
+<p><strong>Note</strong>: By default, modules are loaded from <code>www/js/lib</code>. If you want to load something from <code>www/js</code>, which is your working directory, use the syntax <code>require('./mylib')</code> instead of just <code>require('mylib')</code></p>
+</div>
+
+<p>You can edit CSS in <code>www/css/app.css</code>. Typically you should <code>@import</code> additional CSS files at the top of this file instead of using the <code>&lt;link&gt;</code> tag to include them. This allows the volo optimizer to inline all the CSS when building for deploying.</p>
+
+<p>Finally, volo provides several helpful commands that you can use:</p>
+
+<pre>$ volo serve         # Fire up a local development server
+$ volo add &lt;library&gt; # Add the JavaScript library
+$ volo build         # Build an optimized version of the app into www-built
+$ volo ghdeploy      # Deploy the built version to github (need to build first)
+</pre>
+
+<p>All of these must be run at the root of your project. There are a few other commands and you can view the full list by simply typing <code>volo</code>.</p>
+
+<div class="note">
+<p><strong>Note:</strong> volo itself only has a few built-in commands. The app template provides the <code>serve</code>, <code>build</code>, <code>ghdeploy</code>, and other commands.</p>
+</div>
+
+<h2 id="Tutorial">Tutorial</h2>
+
+<p>For more information about this template, see the <a href="/en-US/docs/Web/Apps/Tutorials/Weather_app_tutorial">Weather App Tutorial</a> which shows you step-by-step how to build a weather app with this template. It dives into the volo commands more specifically and explains the template in more detail.</p>

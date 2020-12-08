@@ -1,0 +1,324 @@
+---
+title: menupopup
+slug: Mozilla/Tech/XUL/menupopup
+tags:
+  - XUL Elements
+  - XUL Reference
+translation_of: Archive/Mozilla/XUL/menupopup
+---
+<div class="noinclude">
+ <span class="breadcrumbs XULRef_breadcrumbs">
+ « <a href="/zh-CN/docs/XUL_Reference">XUL Reference home</a>    [
+ <a href="#Examples">示例</a> |
+ <a href="#Attributes">属性</a> |
+ <a href="#Properties">特性</a> |
+ <a href="#Methods">方法</a> |
+ <a href="#Related">相关</a> ]
+</span></div>
+<p>A container used to display the contents of a popup menu. When a menupopup is open, it floats above the window and may extend outside the window border. There are several ways in which a menupopup may be used:</p>
+<ol>
+ <li>It may be placed inside a <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code>, <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code>, <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/toolbarbutton" title="toolbarbutton">toolbarbutton</a></code>, or a <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/button" title="button">button</a></code> with the <a href="#a-type">type</a> attribute set to "menu" to create a popup that will open when the menu or button is pressed.</li>
+ <li>It may be attached to any element using the <code id="a-popup"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/popup">popup</a></code> attribute. When the element is clicked with the left mouse button, the menupopup will be displayed.</li>
+ <li>It may be attached to any element using the <code id="a-context"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/context">context</a></code> attribute. When a context menu is opened, the menupopup will be displayed. A context menu may be opened by right-clicking the element, or by pressing the menu key on the keyboard.</li>
+</ol>
+<p>More information is available in the <a href="cn/XUL_Tutorial/Simple_Menu_Bars">XUL tutorial</a>.</p>
+<dl>
+ <dt>
+  Attributes</dt>
+ <dd>
+  <a href="#a-ignorekeys">ignorekeys</a>, <a href="#a-popup.left">left</a>, <a href="#a-onpopuphidden">onpopuphidden</a>, <a href="#a-onpopuphiding">onpopuphiding</a>, <a href="#a-onpopupshowing">onpopupshowing</a>, <a href="#a-onpopupshown">onpopupshown</a>, <a href="#a-popup.position">position</a>, <a href="#a-popup.top">top</a></dd>
+</dl>
+<dl>
+ <dt>
+  Properties</dt>
+ <dd>
+  <a href="#p-accessibleType">accessibleType</a>, <a href="#p-popupBoxObject">popupBoxObject</a>, <a href="#p-popup">popup</a>, <a href="#p-state">state</a></dd>
+</dl>
+<dl>
+ <dt>
+  Methods</dt>
+ <dd>
+  <a href="#m-hidePopup">hidePopup</a>, <a href="#m-moveTo">moveTo</a>, <a href="#m-openPopup">openPopup</a>, <a href="#m-openPopupAtScreen">openPopupAtScreen</a>, <a href="#m-showPopup">showPopup</a>, <a href="#m-sizeTo">sizeTo</a></dd>
+</dl>
+<h3 id="Examples" name="Examples">Examples</h3>
+<p>The following example shows how a menupopup may be attached to a <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code>.</p>
+<pre>&lt;menulist&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="Mozilla" value="http://mozilla.org"/&gt;
+    &lt;menuitem label="Slashdot" value="http://slashdot.org"/&gt;
+    &lt;menuitem label="Sourceforge" value="http://sf.net"/&gt;
+    &lt;menuitem label="Freshmeat" value="http://freshmeat.net"/&gt;
+  &lt;/menupopup&gt;
+&lt;/menulist&gt;
+</pre>
+<p>The following example shows how a menupopup can be used a context menu for an element. When the label is right-clicked, the menu will be displayed.</p>
+<div class="float-right">
+ <img alt="Image:XUL_ref_popup.png"></div>
+<pre>&lt;menupopup id="clipmenu"&gt;
+  &lt;menuitem label="Cut"/&gt;
+  &lt;menuitem label="Copy"/&gt;
+  &lt;menuitem label="Paste"/&gt;
+&lt;/menupopup&gt;
+&lt;label value="Right click for popup" context="clipmenu"/&gt;
+</pre>
+<h3 id="Attributes" name="Attributes">Attributes</h3>
+<p> </p><div id="a-ignorekeys">
+
+
+<dl>
+ <dt><code id="a-ignorekeys"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/ignorekeys">ignorekeys</a></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>If <code>true</code>, keyboard navigation between items in the popup is disabled.</dd>
+</dl>
+</div> <div id="a-popup.left">
+
+
+<dl>
+ <dt><code id="a-popup.left"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/popup.left">left</a></code></dt>
+ <dd>Type: <em>integer</em></dd>
+ <dd>Overrides the horizontal position of the popup specified by the <span id="m-showPopup"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/showPopup">showPopup</a></code></span> method.</dd>
+</dl>
+</div> <div id="a-onpopuphidden">
+
+
+<dl>
+ <dt><code id="a-onpopuphidden"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/onpopuphidden">onpopuphidden</a></code></dt>
+ <dd>Type: <em>script code</em></dd>
+ <dd>This event is sent to a popup after it has been hidden.</dd>
+ <dd>This event may also be received while the popup is still open, but when sub-menus contained within this popup are hidden.</dd>
+ <dt>
+ <h4 id="Example">Example:</h4>
+ </dt>
+</dl>
+
+<pre>&lt;menupopup id="top" onpopuphidden="console.log('The onpopuphidden method of id=top was called.');"&gt;
+    &lt;menuitem label="item 1"/&gt;
+    &lt;menuitem label="item 2"/&gt;
+    &lt;menu id="submenu1" label="submenu 1"&gt;
+        &lt;menupopup id="submenu1-popup"&gt;
+            &lt;menuitem label="submenu1 item 1"/&gt;
+            &lt;menuitem label="submenu1 item 2"/&gt;
+        &lt;/menupopup&gt;
+    &lt;/menu&gt;
+    &lt;menu id="submenu2" label="submenu 1"&gt;
+        &lt;menupopup id="submenu2-popup"&gt;
+            &lt;menuitem label="submenu2 item 1"/&gt;
+            &lt;menuitem label="submenu2 item 2"/&gt;
+        &lt;/menupopup&gt;
+    &lt;/menu&gt;
+&lt;menupopup/&gt;
+</pre>
+
+
+</div> <div id="a-onpopuphiding">
+
+
+<dl>
+ <dt><code id="a-onpopuphiding"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/onpopuphiding">onpopuphiding</a></code></dt>
+ <dd>Type: <em>script code</em></dd>
+ <dd>This event is sent to a popup when it is about to be hidden.</dd>
+</dl>
+</div> <div id="a-onpopupshowing">
+
+<dl>
+ <dt>
+  <code id="a-onpopupshowing"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/onpopupshowing">onpopupshowing</a></code></dt>
+ <dd>
+  Type: <em>script code</em></dd>
+ <dd>
+  This event is sent to a popup just before it is opened. This handler is usually used to dynamically set the contents when the user requests to display it. Returning <code>false</code> from this event handler prevents the popup from appearing.</dd>
+ <dd>
+  该事件在 popup 打开之前传给它。它用于动态生成菜单项。如果返回 false 值，则 popup 将不会显示菜单项。</dd>
+</dl>
+
+<p> </p>
+</div> <div id="a-onpopupshown">
+
+<dl>
+ <dt>
+  <code id="a-onpopupshown"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/onpopupshown">onpopupshown</a></code></dt>
+ <dd>
+  Type: <em>script code</em></dd>
+ <dd>
+  This event is sent to a popup after it has been opened, much like the <code>onload</code> event is sent to a window when it is opened.</dd>
+ <dd>
+  该事件在 popup 打开之后触发，与 window 的 onload 事件比较类似。</dd>
+</dl>
+
+<p> </p>
+</div> <div id="a-popup.position">
+
+
+<dl>
+ <dt><code id="a-popup.position"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/popup.position">position</a></code></dt>
+ <dd>Type: <em>string</em></dd>
+ <dd>The <code>position</code> attribute determines where the popup appears relative to the element the user clicked to invoke the popup. This allows you to place the popup on one side of a button.  Note that a context menu will never respect this attribute, always appearing relative to the mouse cursor.</dd>
+ <dd><br>
+ This value can be specified either as a single word offering pre-defined alignment positions, or as 2 words specifying exactly which part of the anchor and popup should be aligned.</dd>
+ <dd><br>
+ If specified as 2 words, the value indicates which corner or edge of the anchor (the first word) is aligned which which corner of the popup (the second word).  The anchor value (ie, the first word) can be one of <code>topleft</code>, <code>topright</code>, <code>bottomleft</code>, <code>bottomright</code>, <code>leftcenter</code>, <code>rightcenter</code>, <code>topcenter</code> or <code>bottomcenter</code>.  The popup value (ie, the second word) can be one of <code>topleft</code>, <code>topright</code>, <code>bottomleft</code> or <code>bottomright</code>.</dd>
+ <dd><br>
+ Positions specified as a single word string are shortcuts for the values above.  Valid single-word values are <code>after_start</code>, <code>after_end</code>, <code>before_start</code>, <code>before_end</code>, <code>end_after</code>, <code>end_before</code>, <code>start_after</code>, <code>start_before</code>, <code>overlap</code>, <code>at_pointer</code> or <code>after_pointer</code>.</dd>
+ <dd>For more details, including examples, please see <a href="/en-US/docs/XUL/PopupGuide/Positioning" title="/en-US/docs/XUL/PopupGuide/Positioning">popup positioning</a></dd>
+</dl>
+
+
+</div> <div id="a-popup.top">
+
+
+<dl>
+ <dt><code id="a-popup.top"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/popup.top">top</a></code></dt>
+ <dd>Type: <em>integer</em></dd>
+ <dd>Overrides the vertical position of the popup specified by the <span id="m-showPopup"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/showPopup">showPopup</a></code></span> method.</dd>
+</dl>
+</div><p></p>
+<h3 id="Properties" name="Properties">Properties</h3>
+<p> </p><div id="p-accessibleType">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/accessibleType">accessibleType</a></span></code></dt>
+ <dd>
+  Type:
+  <i>
+   integer</i>
+ </dd>
+ <dd>
+  A value indicating the type of accessibility object for the element.</dd>
+</dl>
+
+<p></p></div> <div id="p-popupBoxObject">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/popupBoxObject">popupBoxObject</a></span></code></dt>
+  <dd>
+    Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPopupBoxObject" title="">nsIPopupBoxObject</a></code></em></dd>
+  <dd>
+    This read-only property holds the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPopupBoxObject" title="">nsIPopupBoxObject</a></code> that implements the popup. You wouldn't normally need to use this property as all of its functions are available via the popup itself.</dd>
+</dl></div> <div id="p-position">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/position">position</a></span></code></dt>
+  <dd>
+    Type: <em>string</em></dd>
+  <dd>
+    Gets and sets the value of the <a href="/en/XUL/Attribute/popup.position" title="en/XUL/Attribute/popup.position">position</a> attribute.</dd>
+</dl></div> <div id="p-state">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/state">state</a></span></code> </dt>
+  <dd>
+    Type: <em>string</em></dd>
+  <dd>
+    This read only property indicates whether the popup is open or not. Four values are possible:
+    <ul>
+      <li><code>closed</code>: The popup is closed and not visible.</li>
+      <li><code>open</code>: The popup is open and visible on screen.</li>
+      <li><code>showing</code>: A request has been made to open the popup, but it has not yet been shown. This state will occur during the popupshowing event.</li>
+      <li><code>hiding</code>: The popup is about to be hidden. This state will occur during the popuphiding event.</li>
+    </ul>
+  </dd>
+</dl></div><p></p>
+<h3 id="Methods" name="Methods">Methods</h3>
+<p></p><table style="border: 1px solid rgb(204, 204, 204); margin: 0 0 10px 10px; padding: 0 10px; background: rgb(238, 238, 238); float: right; width: 250px;">
+<tbody>
+<tr>
+<td>
+<p><strong>Inherited Methods</strong><br>
+<small><code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.addEventListener">addEventListener()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.appendChild">appendChild()</a></code>, <span id="m-blur"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/blur">blur</a></code></span>, <span id="m-click"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/click">click</a></code></span>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.cloneNode">cloneNode()</a></code>, <a href="/En/DOM/Node.compareDocumentPosition" title="En/DOM/Node.compareDocumentPosition">compareDocumentPosition</a>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.dispatchEvent">dispatchEvent()</a></code>, <span id="m-doCommand"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/doCommand">doCommand</a></code></span>, <span id="m-focus"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/focus">focus</a></code></span>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttribute">getAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttributeNode">getAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttributeNodeNS">getAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttributeNS">getAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getBoundingClientRect">getBoundingClientRect()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getClientRects">getClientRects()</a></code>, <span id="m-getElementsByAttribute"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/getElementsByAttribute">getElementsByAttribute</a></code></span>, <span id="m-getElementsByAttributeNS"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/getElementsByAttributeNS">getElementsByAttributeNS</a></code></span>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getElementsByClassName">getElementsByClassName()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getElementsByTagName">getElementsByTagName()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getElementsByTagNameNS">getElementsByTagNameNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getFeature">getFeature()</a></code>, <a href="/En/DOM/Node.getUserData" title="En/DOM/Node.getUserData">getUserData</a>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasAttribute">hasAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasAttributeNS">hasAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasAttributes">hasAttributes()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasChildNodes">hasChildNodes()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.insertBefore">insertBefore()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.isDefaultNamespace">isDefaultNamespace()</a></code>, <a href="/En/DOM/Node.isEqualNode" title="En/DOM/Node.isEqualNode">isEqualNode</a>, <a href="/En/DOM/Node.isSameNode" title="En/DOM/Node.isSameNode">isSameNode</a>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.isSupported">isSupported()</a></code>, <a href="/En/DOM/Node.lookupNamespaceURI" title="En/DOM/Node.lookupNamespaceURI">lookupNamespaceURI</a>, <a href="/En/DOM/Node.lookupPrefix" title="En/DOM/Node.lookupPrefix">lookupPrefix</a>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.normalize">normalize()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.querySelector">querySelector()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.querySelectorAll">querySelectorAll()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeAttribute">removeAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeAttributeNode">removeAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeAttributeNS">removeAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeChild">removeChild()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeEventListener">removeEventListener()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.replaceChild">replaceChild()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttribute">setAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttributeNode">setAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttributeNodeNS">setAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttributeNS">setAttributeNS()</a></code>, <a href="/En/DOM/Node.setUserData" title="En/DOM/Node.setUserData">setUserData</a></small></p>
+
+</td>
+</tr>
+</tbody>
+</table> <dl>
+  <dt>
+    <span id="m-hidePopup"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/hidePopup">hidePopup()</a></code></span></dt>
+  <dd>
+    Return type: <em>no return value</em></dd>
+  <dd>
+    Closes the popup immediately.</dd>
+</dl> <dl>
+  <dt>
+    <span id="m-moveTo"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/moveTo">moveTo( x, y )</a></code></span></dt>
+  <dd>
+    Return type: <em>no return value</em></dd>
+  <dd>
+    Moves the popup to a new location defined by screen coordinates (and not client coordinates).</dd>
+  <dd>
+     If both x and y have the value -1 the call will realign the popup with its anchor node.</dd>
+</dl> <dl>
+  <dt>
+    <span id="m-openPopup"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/openPopup">openPopup( anchor , position , x , y , isContextMenu, attributesOverride, triggerEvent )</a></code></span> </dt>
+  <dd>
+    Return type: <em>no return value</em></dd>
+</dl>
+<p>Opens the popup relative to a specified node at a specific location.</p>
+<dl>
+  <dt>
+    anchor</dt>
+  <dd>
+    The popup may be either anchored to another node or opened freely. To anchor a popup to a node, supply an anchor node and set the position to a string indicating the manner in which the popup should be anchored. The anchor node does not need to be in the same document as the popup. Unanchored popups may be created by supplying <code>null</code> as the anchor node. The direction in which the popup is oriented depends on the direction of the anchor.</dd>
+  <dt>
+    position</dt>
+  <dd>
+    Possible values for position are: <code>before_start</code>, <code>before_end</code>, <code>after_start</code>, <code>after_end</code>, <code>start_before</code>, <code>start_after</code>, <code>end_before</code>, <code>end_after</code>, <code>overlap</code>, and <code>after_pointer</code>. Check <a href="/en/XUL/PopupGuide/Positioning" title="https://developer.mozilla.org/en/XUL/PopupGuide/Positioning">Positioning of the Popup Guide</a> for a precise description of the effect of the different values.</dd>
+  <dt>
+    x, y</dt>
+  <dd>
+    For an anchored popup, the <code>x</code> and <code>y</code> arguments may be used to offset the popup from its anchored position by some number, measured in CSS pixels. An unanchored popup appears at the position specified by x and y, relative to the viewport of the document containing the popup node. In this case, the <code>position</code> and <code>attributesOverride</code> arguments are ignored.</dd>
+  <dt>
+    isContextMenu</dt>
+  <dd>
+    The <code>isContextMenu</code> argument should be <code>true</code> for context menus and <code>false</code> for all other types of popups. It affects menu item highlighting; that is, while a context menu is open, menus opened earlier do not highlight or execute their items.</dd>
+  <dt>
+    attributesOverride</dt>
+  <dd>
+    If the <code>attributesOverride</code> argument is <code>true</code>, the position attribute on the popup node overrides the <code>position</code> value argument. If <code>attributesOverride</code> is <code>false</code>, the attribute is only used if the <code>position</code> argument is empty.</dd>
+  <dt>
+    triggerEvent</dt>
+  <dd>
+    The event that triggered the popup (such as a mouse click, if the user clicked something to open the popup).</dd>
+</dl> <dl>
+  <dt>
+    <span id="m-openPopupAtScreen"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/openPopupAtScreen">openPopupAtScreen( x, y, isContextMenu )</a></code></span> </dt>
+  <dd>
+    Return type: <em>no return value</em></dd>
+  <dd>
+    Open the popup at a specific screen position specified by x and y. This position may be adjusted if it would cause the popup to be off of the screen. The x and y coordinates are measured in CSS pixels.</dd>
+</dl> <dl>
+ <dt><span id="m-showPopup"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/showPopup">showPopup( element, x, y, popupType, anchor, align )</a></code></span> <span class="inlineIndicator deprecated deprecatedInline" title="(Firefox 3)">Deprecated since Gecko 1.9</span></dt>
+ <dd>Return type: <em>no return value</em><br>
+ <em>Deprecated in favor of openPopup and <span>openPopupAtScreen</span></em></dd>
+ <dd>Opens a popup element. There are two ways of specifying where the popup appears, either at a specific screen position, or relative to some element in the window. If either <var>x</var> or <var>y</var> are set to values, the popup will appear at the screen coordinate (<var>x</var>,<var>y</var>). If <var>x</var> and <var>y</var> are <code>-1</code>, the popup will be positioned relative to the <var>element</var> specified as the first argument. This is what you might do to show a popup below a button, for example. In this latter case, the <var>anchor</var> and <var>align</var> arguments may be used to further control where the popup appears relative to the element. The <var>anchor</var> argument corresponds to the <code id="a-popupanchor"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/popupanchor">popupanchor</a></code> attribute on the element. The <var>align</var> argument corresponds to the <code id="a-popupalign"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/popupalign">popupalign</a></code> attribute on the element. The <var>anchor</var> and <var>align</var> arguments are ignored if either <var>x</var> or <var>y</var> are not <code>-1</code>.</dd>
+</dl>
+
+<dl>
+ <dd>To have a popup appear relative to another element yet still offset by some number of pixels, determine the actual screen position of the element using the <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/boxObject">boxObject</a></span></code>.screenX and <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/boxObject">boxObject</a></span></code>.screenY properties of the element, and use those as the <var>x</var> and <var>y</var> arguments offset by the desired values.</dd>
+</dl>
+
+<dl>
+ <dd>The <var>popupType</var> should be one of the strings <code>popup</code>, <code>context</code>, or <code>tooltip</code>. Each type of popup is intended to be displayed only temporarily; they are not expected to be displayed permanently.</dd>
+</dl> <dl>
+  <dt>
+    <span id="m-sizeTo"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/sizeTo">sizeTo( width, height )</a></code></span></dt>
+  <dd>
+    Return type: <em>no return value</em></dd>
+  <dd>
+    Changes the current size of the popup to the new <var>width</var> and <var>height</var>.</dd>
+</dl><p></p>
+<h3 id="Related" name="Related">Related</h3>
+<dl>
+ <dt>
+  Elements</dt>
+ <dd>
+  <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menu" title="menu">menu</a></code>, <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menubar" title="menubar">menubar</a></code>, <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code>, <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code>, <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menuseparator" title="menuseparator">menuseparator</a></code></dd>
+</dl>
+<dl>
+ <dt>
+  Interfaces</dt>
+ <dd>
+  <a href="cn/NsIAccessibleProvider">nsIAccessibleProvider</a>, <a href="cn/NsIDOMXULPopupElement">nsIDOMXULPopupElement</a></dd>
+</dl>
+<p> </p>
+<div class="noinclude">
+  </div>
+<p></p>

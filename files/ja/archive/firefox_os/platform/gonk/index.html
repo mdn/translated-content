@@ -1,0 +1,23 @@
+---
+title: Gonk
+slug: Archive/Firefox_OS/Platform/Gonk
+tags:
+  - B2G
+  - Firefox OS
+  - Gonk
+  - NeedsContent
+translation_of: Archive/B2G_OS/Platform/Gonk
+---
+<div class="summary">
+ <p>Gonkは<a href="/en-US/docs/Mozilla/Firefox_OS" title="/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a>プラットフォームのための、<a class="external" href="http://source.android.com/">Android Open Source Project</a> のLinux Kernelベースと、Userspace Hardware Abstraction Lyaer(HAL)から構成される低レベルオペレーティングシステムです。この記事では、Gonkの構成を説明することに的を絞っています。Firefox OSの全般的なアーキテクチャやGonkがどのようにFirefox OSに最適化されているかは、<a href="/en-US/Firefox_OS/Platform/Architecture" style="line-height: 1.5;">Firefox OS architecture</a><span style="line-height: 1.5;"> を読んでください。</span></p>
+</div>
+<h2 id="Gonkの概要">Gonkの概要</h2>
+<p>Geckoのソースコードの中にはb2g/フォルダがあり、モバイルハードウェア機能をウェブ用にアンロックするための、Gonkポートが含まれます。それらにはLinux KernelとHAL、そしてOEMライブラリが含まれます。数種類のGonkのライブラリはcommonオープンソースプロジェクトです。(libusb, bluezなど)　いくつかのHALの一部はAndroid プロジェクトと共有しています。(GPS, Cameraなど)</p>
+<p>Gonkはデバイスを移植するレイヤー(ハードウェアとGecko間をつなぐアダプター役)です。GonkはGeckポーティングレイヤーとペアをなしているGeckoポートを扱うことができる比較的シンプルなLinuxディストリビューションです。(だから、GeckoをOS XやWindows, Androidにポーティングするように、Gonkは<a href="/ja/docs/Gecko" style="line-height: 1.5;" title="/ja/docs/Gecko">Gecko</a>をポーティングターゲットとしています。)</p>
+<div class="note">
+ <p><strong style="line-height: 1.5;">Note</strong><span style="line-height: 1.5;">:モバイルデバイスはそれぞれ異なるチップセット、異なるハードウェア仕様になります。そのためデバイス毎に異なるGonkディストリビューションが存在します。 </span></p>
+</div>
+<p>Firefox OSプロジェクトがGonk全てコントロールするようになって以来、他のオペレーティングシステムでは見せることができないインターフェイスを見せることができています。例えばGeckoは直接テレフォニースタックの全てにアクセスしたり、Gonkのバッファーフレームに描画することができます。</p>
+<h2 id="Gonk_ソースコード">Gonk ソースコード</h2>
+<p><a href="https://github.com/mozilla-b2g/B2G">B2G repo on Github</a>には複数のデバイスにポーティングされた公式サポートのGonkをが含まれ、Gonkレポジトリを自身で扱うことができます。サポートしているデバイスリストは B2G/config.shから入手できます。 </p>
+<p>Gonk作業の日々の大半では、異なるボード上への移植や、異なるデバイス上でGeckoがうまく動作することを確認することです。</p>

@@ -1,0 +1,127 @@
+---
+title: MozNDEFRecord
+slug: Archive/B2G_OS/API/MozNDEFRecord
+tags:
+  - API
+  - Firefox OS
+  - Interface
+  - MozNDEFRecord
+  - NDEFRecord
+  - NFC
+  - Reference
+translation_of: Archive/B2G_OS/API/MozNDEFRecord
+---
+<p></p><section class="Quick_links" id="Quick_Links"><ol><li><strong><a href="/ja/docs/Mozilla/Firefox_OS/API/NFC_API">NFC API</a></strong></li><li><strong><a href="/ja/docs/Mozilla/Firefox_OS/API/Archive"><code>Archive</code></a></strong></li><li class="toggle"><details open><summary>NFC API に関連するページ</summary><ol><li><a href="/ja/docs/Mozilla/Firefox_OS/API/MozNDEFRecord"><code>MozNDEFRecord</code></a></li><li><a href="/ja/docs/Mozilla/Firefox_OS/API/MozNFC"><code>MozNFC</code></a></li><li><a href="/ja/docs/Mozilla/Firefox_OS/API/MozNFCPeer"><code>MozNFCPeer</code></a></li><li><a href="/ja/docs/Mozilla/Firefox_OS/API/MozNFCTag"><code>MozNFCTag</code></a></li></ol></details></li></ol></section> <div class="warning">
+    <p style="text-align: center;">この API は <a href="/ja/docs/Mozilla/Firefox_OS">Firefox OS</a> 上の<a href="/ja/docs/Mozilla/Firefox_OS/Security/Application_security#App_Types">特権付きアプリ、または認定済みアプリ</a>からのみ有効になります。</p>
+</div><p></p>
+
+<p><code>MozNDEFRecord</code> はNFC データ交換フォーマット (NDEF) を実装するデータ構造です。これはアプリ、NFCタグ、デバイスの間で NFC関連のデータ通信をするための標準的な共通フォーマットです。</p>
+
+<h2 id="文法">文法</h2>
+
+<pre class="syntaxbox">MozNDEFRecord(optional MozNDEFRecordOptions options);
+dictionary MozNDEFRecordOptions {
+  TNF tnf = "empty";
+  Uint8Array type;
+  Uint8Array id;
+  Uint8Array payload;
+};
+</pre>
+
+<h2 id="プロパティ">プロパティ</h2>
+
+<dl>
+ <dt><a href="/ja/docs/Web/API/MozNDEFRecord/tnf" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>MozNDEFRecord.tnf</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">読取専用 </span></dt>
+ <dd><span class="st"><code>tnf</code> は、レコードのタイプ名フォーマット (3-bit フィールド) を含みます。この項目は必須です。</span></dd>
+ <dt><a href="/ja/docs/Web/API/MozNDEFRecord/type" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>MozNDEFRecord.type</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">読取専用 </span></dt>
+ <dd><code>type</code> はペイロードのコンテンツを記述したオプションのフィールドです。通常はMIMEタイプになります。</dd>
+</dl>
+
+<dl>
+ <dt><a href="/ja/docs/Web/API/MozNDEFRecord/id" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>MozNDEFRecord.id</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">読取専用 </span></dt>
+ <dd><code>id</code> は <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array" title='Uint8Array タイプは、8 ビット符号なし整数値の配列を表します。各要素は0で初期化されます。生成された Uint8Array オブジェクトのメソッドあるいは配列のような表記法 ("[]") を用いて、要素を参照することができます。'><code>Uint8Array</code></a> を表すオプションのフィールドです。このフィールドの意味はアプリケーション依存です (機能性によって、適切なidが使用できます)</dd>
+ <dt><a href="/ja/docs/Web/API/MozNDEFRecord/payload" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>MozNDEFRecord.payload</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">読取専用 </span></dt>
+ <dd><code>payload</code> は <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array" title='Uint8Array タイプは、8 ビット符号なし整数値の配列を表します。各要素は0で初期化されます。生成された Uint8Array オブジェクトのメソッドあるいは配列のような表記法 ("[]") を用いて、要素を参照することができます。'><code>Uint8Array</code></a> を表すオプションのフィールドです。。このフィールドの意味はアプリケーション依存です (例えば、連絡帳アプリでは、URLや、MIMEタイプや、住所などを含みます)</dd>
+</dl>
+
+<h2 id="仕様">仕様</h2>
+
+<p>Gecko での NFC の実装は、<a href="http://members.nfc-forum.org/specs/">NFC フォーラムの仕様</a>に従っています。</p>
+
+<dl>
+</dl>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ互換性</h2>
+
+<p></p><p class="warning"><strong><a href="https://github.com/mdn/browser-compat-data">現在、互換性データを可読形式の JSON フォーマットに置き換えているところです。</a></strong>
+            この互換性一覧は古い形式を使っており、これに含まれるデータの置き換えが済んでいません。
+            <strong><a href="/ja/docs/MDN/Contribute/Structures/Compatibility_tables">手助けしていただける場合は、こちらから！</a></strong></p>
+
+<div class="htab">
+    <a id="AutoCompatibilityTable" name="AutoCompatibilityTable"></a>
+    <ul>
+        <li class="selected"><a>デスクトップ</a></li>
+        <li><a>モバイル</a></li>
+    </ul>
+</div><p></p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>機能</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>基本部分</td>
+   <td>
+    <p><span style="color: #f00;">未サポート</span></p>
+   </td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>機能</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>基本部分</td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td>2.0 <span class="inlineIndicator prefixBox prefixBoxInline" title="prefix"><a href="/ja/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with 'moz' as this browser considers it experimental">moz</a></span> [1]</td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Firefox OS 2.2 以降では、特権付きアプリから利用可能; それより前のバージョンでは、認定アプリでのみ利用可能。</p>
+
+<h2 id="こちらも見よ">こちらも見よ</h2>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/ja/docs/Web/API/NFC_API/Using_the_NFC_API">Using the NFC API</a></li>
+ <li><a href="https://developer.mozilla.org/ja/docs/Web/API/NFC_API/Using_the_NFC_emulator">Using the NFC emulator</a></li>
+ <li>NFC Forum <a href="http://members.nfc-forum.org/specs/spec_list/#ndefts">Data Exchange Format Technical Specification</a></li>
+ <li><a href="http://www.w3.org/TR/2014/WD-nfc-20140114/#idl-def-NDEFRecord">Draft W3C NDEF-related formats</a></li>
+</ul>

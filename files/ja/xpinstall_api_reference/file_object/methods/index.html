@@ -1,0 +1,51 @@
+---
+title: メソッド
+slug: XPInstall_API_Reference/File_Object/Methods
+translation_of: Archive/Mozilla/XPInstall/Reference/File_Object/Methods
+---
+<div><div class="warning"><p>このページは <a href="https://developer.mozilla.org/ja/docs/XPInstall_API_Reference">XPInstall API Reference</a> の一部です。もしあなたが <a href="https://developer.mozilla.org/ja/docs/Extensions">拡張機能</a>や<a href="https://developer.mozilla.org/ja/docs/Themes">テーマ</a>、<a href="https://developer.mozilla.org/ja/docs/Plugins">プラグイン</a>の開発者であるならば、この API のほとんどが必要ないことに注意してください。特に、XPI のコンテンツをインストールし、登録するために使用される <code>install.js</code> スクリプトは、新たに宣言される <code><a href="https://developer.mozilla.org/ja/docs/Install_Manifests">install.rdf</a></code> マニフェストや新しい <a href="https://developer.mozilla.org/ja/docs/Bundles">パッケージング体系</a> のために非推奨です。</p></div></div>
+
+<h2 id="Methods" name="Methods">メソッド</h2>
+
+<dl>
+ <dt><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/dirCreate" title="XPInstall_API_Reference/File_Object/Methods/dirCreate"><code>dirCreate</code></a></dt>
+ <dd>新規ディレクトリを作成</dd>
+ <dt><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/dirGetParent" title="XPInstall_API_Reference/File_Object/Methods/dirGetParent"><code>dirGetParent</code></a></dt>
+ <dd>親ディレクトリを示すオブジェクトを返す</dd>
+ <dt><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/dirRemove" title="XPInstall_API_Reference/File_Object/Methods/dirRemove"><code>dirRemove</code></a></dt>
+ <dd>ディレクトリを削除</dd>
+ <dt><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/dirRename" title="XPInstall_API_Reference/File_Object/Methods/dirRename"><code>dirRename</code></a></dt>
+ <dd>指定ディレクトリをリネーム</dd>
+ <dt><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/copy" title="XPInstall_API_Reference/File_Object/Methods/copy"><code>copy</code></a></dt>
+ <dd>指定ファイルのコピーを作成</dd>
+ <dt><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/diskSpaceAvailable" title="XPInstall_API_Reference/File_Object/Methods/diskSpaceAvailable"><code>diskSpaceAvailable</code></a></dt>
+ <dd>使用可能ディスク領域量を返す (bytes)</dd>
+ <dt><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/exists" title="XPInstall_API_Reference/File_Object/Methods/exists"><code>exists</code></a></dt>
+ <dd>ファイルが存在するかどうかを示す真偽値を返す</dd>
+ <dt><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/execute" title="XPInstall_API_Reference/File_Object/Methods/execute"><code>execute</code></a></dt>
+ <dd>インストールプロセスの一部として実行するファイルをキュー</dd>
+ <dt><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/isDirectory" title="XPInstall_API_Reference/File_Object/Methods/isDirectory"><code>isDirectory</code></a></dt>
+ <dd>オブジェクトがディレクトリであるかどうかを示す真偽値を返す</dd>
+ <dt><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/isFile" title="XPInstall_API_Reference/File_Object/Methods/isFile"><code>isFile</code></a></dt>
+ <dd>オブジェクトがファイルであるかどうかを示す真偽値を返す</dd>
+ <dt><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/modDate" title="XPInstall_API_Reference/File_Object/Methods/modDate"><code>modDate</code></a></dt>
+ <dd>指定ファイルの最終更新日時を表す数値を返す</dd>
+ <dt><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/modDateChanged" title="XPInstall_API_Reference/File_Object/Methods/modDateChanged"><code>modDateChanged</code></a></dt>
+ <dd>ファイルの最終更新日時が指定された日付よりも古いかどうかを示す真偽値を返す</dd>
+ <dt><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/move" title="XPInstall_API_Reference/File_Object/Methods/move"><code>move</code></a></dt>
+ <dd>別の場所にファイルを移動</dd>
+ <dt><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/remove" title="XPInstall_API_Reference/File_Object/Methods/remove"><code>remove</code></a></dt>
+ <dd>ファイルを削除</dd>
+ <dt><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/rename" title="XPInstall_API_Reference/File_Object/Methods/rename"><code>rename</code></a></dt>
+ <dd>指定ファイルのファイル名を変更</dd>
+ <dt><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/size" title="XPInstall_API_Reference/File_Object/Methods/size"><code>size</code></a></dt>
+ <dd>ファイルのファイルサイズを返す (bytes)</dd>
+ <dt><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/windowsShortcut" title="XPInstall_API_Reference/File_Object/Methods/windowsShortcut"><code>windowsShortcut</code></a></dt>
+ <dd>ファイル用の Windows ショートカットを作成</dd>
+ <dt><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/macAlias" title="XPInstall_API_Reference/File_Object/Methods/macAlias"><code>macAlias</code></a></dt>
+ <dd>ファイルの Macintosh エイリアスを作成</dd>
+ <dt><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/windowsGetShortName" title="XPInstall_API_Reference/File_Object/Methods/windowsGetShortName"><code>windowsGetShortName</code></a></dt>
+ <dd>指定パスの Windows ショートネームを返す</dd>
+ <dt><a href="/ja/docs/XPInstall_API_Reference/File_Object/Methods/windowsRegisterServer" title="XPInstall_API_Reference/File_Object/Methods/windowsRegisterServer"><code>windowsRegisterServer</code></a></dt>
+ <dd>レジストリに DLL を登録</dd>
+</dl>

@@ -1,0 +1,186 @@
+---
+title: nsIObserverService
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsIObserverService
+tags:
+  - Interfaces
+  - 'Interfaces:Frozen'
+  - 'Interfaces:Scriptable'
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIObserverService
+---
+<div>« <a href="/ja/docs/XPCOM_API_Reference">XPCOM API Reference</a></div>
+
+<h2 id="Summary" name="Summary">概要</h2>
+
+<p><code>nsIObserverService</code> インタフェースは、様々な通知を受けるオブザーバを追加、削除、通知、列挙するためのメソッドを提供します。 </p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/xpcom/ds/nsIObserverService.idl" rel="custom">xpcom/ds/nsIObserverService.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">最終更新: Gecko 0.9.6 </span></div>
+</div> 詳しくは <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=99163" title="FIXED: Freeze  nsIObserver">バグ 99163</a> をご覧ください
+
+<pre> #include "nsIObserverService.h"
+ [scriptable, uuid=(D07F5192-E3D1-11d2-8ACD-00105A1B8860)]
+ interface nsIObserverService : nsISupports { ... };
+</pre>
+
+<p>XPCOM の <a href="ja/NsObserverService">nsObserverService</a> はこのインタフェースを実装して、様々なサブシステムのためのグローバル通知を提供しています。</p>
+
+<h2 id="Method_overview" name="Method_overview">メソッドの概要</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="#addObserver.28.29">addObserver</a>(in <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIObserver" title="">nsIObserver</a></code> anObserver, in string aTopic, in boolean ownsWeak);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#removeObserver.28.29">removeObserver</a>( in <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIObserver" title="">nsIObserver</a></code> anObserver, in string aTopic );</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#notifyObservers.28.29">notifyObservers</a>( in <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code> aSubject, in string aTopic, in wstring someData );</code></td>
+  </tr>
+  <tr>
+   <td><code><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISimpleEnumerator" title="">nsISimpleEnumerator</a></code> enumerateObservers( in string aTopic );</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Methods" name="Methods">メソッド</h2>
+
+<h2 id="addObserver.28.29" name="addObserver.28.29">addObserver()</h2>
+
+<p>特定のトピックに関する通知を受けるために指定したリスナーの登録を行います。</p>
+
+<pre> void addObserver( in nsIObserver anObserver,
+                   in string aTopic,
+                   in boolean ownsWeak);
+</pre>
+
+<h6 id="addObserver-Parameters" name="addObserver-Parameters">引数</h6>
+
+<dl>
+ <dt><code>anObserver</code></dt>
+ <dd>通知を受けるインタフェースポインタ。</dd>
+ <dt><code>aTopic</code></dt>
+ <dd>通知のトピックまたはサブジェクト。</dd>
+ <dt><code>ownsWeak</code></dt>
+ <dd><code>false</code> に設定した場合、<code>nsIObserverService</code> は <code>anObserver</code> に対する強力な参照を保持します。<code>true</code> に設定し、なおかつ <code>anObserver</code> が <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWeakReference" title="">nsIWeakReference</a></code> インタフェースをサポートしている場合、弱い参照が保持されます。そうでない場合、エラーが返されます。</dd>
+</dl>
+
+<h2 id="removeObserver.28.29" name="removeObserver.28.29">removeObserver()</h2>
+
+<p>特定のトピックに関する通知を受けるために指定したリスナーの登録を解除します。</p>
+
+<pre> void removeObserver( in nsIObserver anObserver,
+                      in string aTopic );
+</pre>
+
+<h6 id="removeObserver-Parameters" name="removeObserver-Parameters">引数</h6>
+
+<dl>
+ <dt><code>anObserver</code></dt>
+ <dd>通知を受けるのを停止するインタフェースポインタ。</dd>
+ <dt><code>aTopic</code></dt>
+ <dd>通知のトピックまたはサブジェクト。</dd>
+</dl>
+
+<h2 id="notifyObservers.28.29" name="notifyObservers.28.29">notifyObservers()</h2>
+
+<p>指定されたトピックについて登録されたすべてのリスナーに通知を行います。</p>
+
+<pre> void notifyObservers( in nsISupports aSubject,
+                       in string aTopic,
+                       in wstring someData );
+</pre>
+
+<h6 id="notifyObservers-Parameters" name="notifyObservers-Parameters">引数</h6>
+
+<dl>
+ <dt><code>aSubject</code></dt>
+ <dd>通知固有のインタフェースポインタ。</dd>
+ <dt><code>aTopic</code></dt>
+ <dd>通知のトピックまたはサブジェクト。</dd>
+ <dt><code>someData</code></dt>
+ <dd>通知固有のワイド文字列。</dd>
+</dl>
+
+<h2 id="enumerateObservers.28.29" name="enumerateObservers.28.29">enumerateObservers()</h2>
+
+<p>登録されたすべてのリスナの列挙を返します。</p>
+
+<pre> nsISimpleEnumerator enumerateObservers( in string aTopic );
+</pre>
+
+<h6 id="enumerateObservers-Parameters" name="enumerateObservers-Parameters">引数</h6>
+
+<dl>
+ <dt><code>aTopic</code></dt>
+ <dd>通知のトピックまたはサブジェクト。</dd>
+</dl>
+
+<h6 id="enumerateObservers-Return_value" name="enumerateObservers-Return_value">戻り値</h6>
+
+<p>登録されたすべてのリスナの列挙を返します。</p>
+
+<h2 id="notifyObservers" name="notifyObservers()">notifyObservers()</h2>
+
+<p>This method is called to notify all observers for a particular topic. See <a href="#Example">Example</a>.</p>
+
+<pre>void notifyObservers(
+  in nsISupports aSubject,
+  in string aTopic,
+  in wstring someData
+);
+</pre>
+
+<h6 id="notifyObservers-Parameters" name="notifyObservers-Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>aSubject</code></dt>
+ <dd>A notification specific interface pointer. This usually corresponds to the source of the notification, but could be defined differently depending on the notification topic and may even be <code>null</code>.</dd>
+ <dt><code>aTopic</code></dt>
+ <dd>The notification topic. This string-valued key uniquely identifies the notification. This parameter must not be <code>null</code>.</dd>
+ <dt><code>someData</code></dt>
+ <dd>A notification specific string value. The meaning of this parameter is dependent on the topic. It may be <code>null</code>.</dd>
+</dl>
+
+<h2 id="removeObserver" name="removeObserver()">removeObserver()</h2>
+
+<p>This method is called to unregister an observer for a particular topic.</p>
+
+<pre>void removeObserver(
+  in nsIObserver anObserver,
+  in string aTopic
+);
+</pre>
+
+<h6 id="removeObserver-Parameters" name="removeObserver-Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>anObserver</code></dt>
+ <dd>The <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIObserver" title="">nsIObserver</a></code> instance to remove.</dd>
+ <dt><code>aTopic</code></dt>
+ <dd>The notification topic or subject. This string-valued key uniquely identifies the notification. This parameter must not be <code>null</code>.</dd>
+</dl>
+
+<h2 id="Example" name="Example">Example</h2>
+
+<p>This notifies all <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIObserver" title="">nsIObserver</a></code>s watching the "myTopicID" topic with an additional data parameter.</p>
+
+<pre class="brush: js">Components.classes["@mozilla.org/observer-service;1"]
+          .getService(Components.interfaces.nsIObserverService)
+          .notifyObservers(null, "myTopicID", "someAdditionalInformationPassedAs'Data'Parameter");
+</pre>
+
+<h2 id="See_also" name="See_also">関連記事</h2>
+
+<ul>
+ <li><a href="/ja/docs/NsObserverService">nsObserverService</a></li>
+ <li><a href="/ja/docs/Observer_Notifications">Observer Notifications</a>: オブザーバの概要と、Mozilla によって行われる組み込みの通知の一覧が掲載されています。</li>
+</ul>

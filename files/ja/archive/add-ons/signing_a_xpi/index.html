@@ -1,0 +1,254 @@
+---
+title: Signing a XPI
+slug: Archive/Add-ons/Signing_a_XPI
+tags:
+  - Add-ons
+  - Extensions
+  - MDC Project
+  - NeedsMarkupWork
+  - XPInstall
+translation_of: Archive/Add-ons/Signing_an_XPI
+---
+<div class="note">
+  注: このページには、自己署名証明書によるテスト方法も書かれています。実践的な手順は <a href="/ja/Signing_an_extension" title="ja/Signing_an_extension">拡張機能への署名</a> をご覧ください。</div>
+<p>この文書は <a class="external" href="http://forums.tjworld.net/viewtopic.php?p=210">オリジナル文書</a> の細かな整形を加えたミラーです。 (<a class="external" href="http://web.archive.org/web/20060529005859/forums.tjworld.net/viewtopic.php?p=210">Wayback Machine アーカイブ</a>)</p>
+<p>この文書では、Firefox 拡張に Windows 上でコード署名をする方法を解説しています。<strong>MozDev グループの Pete Collins</strong> による linux での解説 <a class="link-https" href="https://www.mozdevgroup.com/docs/pete/Signing-an-XPI.html">So you want to sign your XPI package?</a> を元にしています。</p>
+<p>1. 最新の <a class="external" href="http://www.mozilla.org/projects/security/pki/nss/index.html#Documentation">Network Security Services (NSS)</a> パッケージを Mozilla FTP サイト <code><a class="link-ftp" href="ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/" rel="freelink">ftp://ftp.mozilla.org/pub/mozilla.or.../nss/releases/</a></code> からダウンロードする。Windows 向けには、<code><strong>NSS_3_9_RTM/WINNT5.0_OPT.OBJ/</strong></code> フォルダの <code><strong>nss-3.9.zip</strong></code> パッケージが利用できます。</p>
+<p>2. アーカイブをローカルのフォルダーに解凍する。たとえば、<code>C:\Apps\nss-3.9\</code> へ。</p>
+<p>3. 最新の <a class="external" href="/http://http://www.mozilla.org/projects/nspr" title="http://http://www.mozilla.org/projects/nspr">Netscape Portable Runtime</a> パッケージ を Mozilla FTP サイト <code><a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/nspr/releases/" rel="freelink">http://ftp.mozilla.org/pub/mozilla.org/nspr/releases/</a></code> からダウンロードする。Windows 向けには、<code><strong>v4.6/WINNT5.0_OPT.OBJ/</strong></code> フォルダの <strong>nspr-4.6.zip</strong> パッケージです。</p>
+<p>4. アーカイブをローカルのフォルダーに解凍する。たとえば、<code>C:\Apps\nspr-4.6\</code> へ。</p>
+<p>5. NSS ツールの <strong>bin/</strong> と <strong>lib/</strong>、そして NSPR <strong>lib</strong> ディレクトリをシステムパスに追加します。この設定は、コントロールパネル -&gt; システム -&gt; 詳細設定 -&gt; 環境変数 -&gt; システム環境変数、の画面で、もしくは (バッチファイル用と思われる) コマンドラインツールを実行することで設定できます。Windows はシステムディレクトリに certutil.exe といった同じ名前のファイルを持ちますので、追加するディレクトリは PATH の先頭に加えることを忘れないでください。</p>
+<pre>C:\&gt; set PATH=&lt;b&gt;C:\Apps\nss-3.9\bin\;C:\Apps\nss-3.9\lib\;C:\Apps\nspr-4.6\lib\;&lt;/b&gt;%PATH%
+</pre>
+<p>6. <a class="external" href="http://www.mozilla.org/projects/security/pki/nss/tools/">NSS Tools の文書</a> を読んでください</p>
+<p>7. 証明書データベースを初期化します。証明書データベースをどのディレクトリに作成するかを決めて、そのディレクトリで次のコマンドを実行してください。(<strong>注</strong> 最後のドットを忘れないように)</p>
+<pre>C:\Projects\CodeSigning\&gt; certutil -N -d .
+</pre>
+<p>最後の <strong>ドット</strong> はデータベースを <strong>現在のディレクトリ</strong> に作成することを意味します。</p>
+<p><em>NSS 証明書データベースのパスワード</em> を聞かれますが、<strong>忘れないように！</strong></p>
+<pre>C:\Projects\CodeSigning\&gt; certutil -N -d .
+Enter a password which will be used to encrypt your keys.
+The password should be at least 8 characters long,
+and should contain at least one non-alphabetic character.
+
+Enter new password:
+Re-enter password:
+</pre>
+<p>8. テスト証明書を作成します。-p オプションで証明書のパスワードを設定できます。</p>
+<pre>C:\Projects\CodeSigning\&gt; signtool -G myTestCert -d . -p"password"
+using certificate directory: .
+
+WARNING: Performing this operation while the browser is running could cause
+corruption of your security databases. If the browser is currently running,
+you should exit the browser before continuing this operation. Enter
+"y" to continue, or anything else to abort: y
+
+
+Enter certificate information.  All fields are optional. Acceptable
+characters are numbers, letters, spaces, and apostrophes.
+certificate common name: XPI Test
+organization: TJworld
+organization unit: Software
+state or province: Nottingham
+country (must be exactly 2 characters): GB
+username: tj
+email address: certificates@lan.tjworld.net
+generated public/private key pair
+certificate request generated
+certificate has been signed
+certificate "myTestCert" added to database
+Exported certificate to x509.raw and x509.cacert.
+</pre>
+<p><strong>x509.cacert</strong> は XPI パッケージに署名するために利用します。ファイルシステムと証明書データベースに存在するかを確認しましょう。</p>
+<pre>C:\Projects\CodeSigning\&gt; dir x509*
+
+14/12/2005  15:13             1,031 x509.cacert
+14/12/2005  15:13               798 x509.raw
+
+C:\Projects\CodeSigning\&gt; certutil -d . -L
+myTestCert                                                   u,u,Cu
+</pre>
+<p>8. 署名する XPI ファイルを準備する</p>
+<p>署名するためのフォルダーを準備し、XPI をそこにコピーし、unzip<sup>*</sup> してください。そして、XPI を削除し、証明書データベースフォルダーに戻ります。</p>
+<p><sup>*</sup>zip ユーティリティーがシステムパスにあると想定しています。このサンプルでは、<strong>CygWin bin/zip.exe</strong> ツールを利用しています。内部のサブディレクトリ構造をきちんと取り扱えるグラフィカルな Zip ツールも利用可能です。ただし、<font color="red"><strong>7-Zip は正常に動作しません</strong></font>。これは、ディレクトリをアルファベット順に並べ替えるからで、<font color="red"><strong><em>Mozilla は最初のエントリが META-INF/zigbert.rsa</em></strong></font> であることを要求します。</p>
+<pre>C:\Projects\CodeSigning\&gt; md signed
+
+C:\Projects\CodeSigning\&gt; copy C:\Projects\fsb\fsb.xpi signed
+        1 file(s) copied.
+
+C:\Projects\CodeSigning\&gt; cd signed
+
+C:\Projects\CodeSigning\signed&gt; unzip fsb.xpi
+Archive:  fsb.xpi
+   creating: chrome/
+  inflating: chrome.manifest
+  inflating: chrome/fsb.jar
+  inflating: install.rdf
+
+C:\Projects\CodeSigning\signed&gt; del fsb.xpi
+
+C:\Projects\CodeSigning\signed&gt; cd ..
+</pre>
+<p>9. XPI に署名する</p>
+<pre>C:\Projects\CodeSigning\&gt; signtool -d . -k myTestCert -p "password" signed/
+using certificate directory: .
+Generating signed//META-INF/manifest.mf file..
+--&gt; chrome/fsb.jar
+--&gt; chrome.manifest
+--&gt; install.rdf
+Generating zigbert.sf file..
+tree "signed/" signed successfully
+</pre>
+<p>10. XPI を再パッケージする</p>
+<p><strong>signed/</strong> フォルダーへ移動し、新しい zip アーカイブを <strong>META-INF/zigbert.rsa</strong> ファイルが先頭になるように作成し、他のファイルを追加します。</p>
+<pre>C:\Projects\Certs\&gt; cd signed
+
+C:\Projects\CodeSigning\signed\&gt; zip fsb.xpi META-INF/zigbert.rsa
+  adding: META-INF/zigbert.rsa (deflated 35%)
+
+C:\Projects\CodeSigning\signed&gt; zip -r -D fsb.xpi * -x META-INF/zigbert.rsa
+  adding: META-INF/manifest.mf (deflated 37%)
+  adding: META-INF/zigbert.sf (deflated 40%)
+  adding: chrome/fsb.jar (deflated 74%)
+  adding: chrome.manifest (deflated 69%)
+  adding: install.rdf (deflated 62%)
+</pre>
+<p>11. あなたの Mozilla ブラウザにテスト証明書を一時的にインストールします</p>
+<p>先に作った <strong>x509.cacert</strong> ファイルを <strong>x509.<font color="red">cert</font></strong> に変更します。</p>
+<p>Mozilla Firefox にソフト開発証明書発行者としてインポートします。<font color="red">試験が終わったら、必ず Mozilla Firefox から証明書を削除してください</font></p>
+<p>Firefox 1.5: From the Tools menu choose Options-&gt;Advanced-&gt;Security-&gt;View Certificates-&gt;Authorities</p>
+<p>Firefox 1.0: From the Tools menu choose Options-&gt;Advanced-&gt;Certificates-&gt;Manage Certificates-&gt;Authorities</p>
+<p>そして、<strong>インポート</strong> ボタンをクリックしてください。</p>
+<p><strong>x509.cert</strong> を含むフォルダーへ移動し、選択してください。</p>
+<p><strong>証明書のダウンロード</strong> ダイアログでは、<strong>ソフトウェア開発のためにこの認証局を承認する</strong> を選択し、必要があれば <strong>View</strong> ボタンでより詳細に証明書を確認してください。</p>
+<p><strong>OK</strong> ボタンをクリックすれば、あなたの新しい証明書が認証局リストにはいります。</p>
+<p>12. 署名済み拡張をインストールする</p>
+<p>署名済みの XPI をブラウザにドラッグ・ドロップするか、ダウンロードしてください。Mozilla Firefox <strong>ソフトウェアインストール</strong> ダイアログに、署名に利用した証明書の <strong>組織名</strong> が、通常 <strong><em><font color="red">署名無し</font></em></strong> と表示されるところに表示されます。</p>
+<p><a class="external" href="http://forums.tjworld.net/files/topic-130-install-signed-xpi.png">画像</a></p>
+<p>13. 有効なソフトウェア開発者の証明書を取得する</p>
+<p>ここまでで全ての手順がうまく行くことが確認できましたので、NSS 証明書データベースに本物のソフトウェア開発者証明書を導入して、XPI の署名に利用します。キーとなる 3 つの違い - 可用性、値段、同一性確認 - のあるソフトウェア開発者向け証明書の発行者がいくつかあります。</p>
+<p>ばかげたことに、ほとんどの発行者はソフトウェア開発者証明書を個人には発行していませんので、Mozilla Firefox に CA ルート証明書が組み込まれている発行者を発見するのは困難かもしれません。証明書発行者の CA ルート証明書が Mozilla Firefox になければ、拡張を導入しようとしているユーザにおいてあなたの証明書の有効性は検証されません。理想としてあなたが全ての主要なプラットフォーム (Microsoft Windows, Sun Java, Mozilla/Netscape Firefox/Navigator, Opera) にインストールされているルート CA を持つ証明書があれば、あなたのソフトウェアへの署名に一つの証明書だけで可能になり、プラットフォームは関係なくなります。</p>
+<p>もっとも安価な、広くサポートされている (Mozilla, Java, Microsoft) 証明書は、Comodo Instant-SSL が提供していると思われます。<strong>オープンソース開発者向けに無料の証明書</strong> が Unizeto Certum から提供されていますが、ルート証明書は Mozilla Firefox と Opera にしかありません。(Java や Microsoft にはありません。)</p>
+<p>次にあげるものが現在利用可能と思われる発行者です</p>
+<ul>
+  <li>Comodo Instant-SSL Code Signing</li>
+  <li>Digi-Sign Digi-Code</li>
+  <li>GeoTrust Code Signing</li>
+  <li>Thawte Code Signing (owned by Verisign)</li>
+  <li>Unizeto Certum Code-signing (<strong>オープンソース開発者向けの無料証明書</strong>) <font color="red">* 2005/12/14 では Mozilla Firefox と Opera でのみ</font></li>
+  <li>Verisign Code Signing</li>
+</ul>
+<p><strong>コード署名証明書</strong> に申し込みをし、発行者の発行対象確認手続きを経る必要があります。その後、書名付きの証明書が発行されます。書名付き証明書を受け取ったら、あなたの証明書データベースにインポートしなければなりません。</p>
+<p><font color="red">あなたのブラウザは新しい秘密鍵と <strong>CSR - コード署名要求</strong> をバックグラウンドで生成しますが、あなたが気づくとは限りません。CSR は発行者に送信されます。後で、鍵と証明書をペアにする必要があるので、新しい証明書を同じブラウザにインストールする <strong>必要があります&lt;b&gt; 。 </strong></font></p>
+<p>&lt;b&gt;Hint: 証明書発行者に要請する際には、<strong>Organization (O)</strong> があなたの名前になっており、発行者の既定の文字列で無いことを確認してください。この文字列がユーザに表示されます。</p>
+<p>このガイドでは、Unizeto Certum の無料証明書を利用しました。要請手順が終わったあと、自分についての詳細をオンラインで送信しました。そして、photo-ID かそれに似た形態の ID を文書証明として要求する自動メールを受け取りました。これに対して、自分のパスポートと運転免許証の高解像度のスキャン画像をこういった目的について持っていたので、自分のウェブサーバの非公開の場所において、Unizeto Certum に詳細とともに連絡しました。数時間の後、人間が読める ID の画像と証明書ダウンロードの URL が送られてきました。</p>
+<p><font color="red"><strong>Mozilla Firefox に証明書をインストールし</strong> (先に作成した秘密鍵と一緒に)</font>、表示される <strong>認証文字列</strong> を新しいファイルにコピー・ペーストしてください。ファイル名は <strong><code>C:\Projects\CodeSigning\Certum Code Signing.cer</code></strong> です。</p>
+<p>14. あなたの実際の証明書をインストールする</p>
+<p>コード署名 NSS 証明書データベースに新しい証明書をインストールするには2段階の手順が必要です。</p>
+<pre class="eval"> 1. 発行者の CA ルート証明書をインストールする
+ 2. あなたの鍵と証明書をインストールする
+</pre>
+<p>ルート CA はあなたの証明書の認証に必要です。多くの発行者は複数のルート CA をさまざまな認証レベルに対して持っています。あなたがダウンロードした証明書がそのうちのどれを利用しているか確認してください。証明書を Mozilla Firefox で表示することで詳細をみることができますので、<strong>発行者 CN</strong> から情報を得てください。(Unizeto Certum の無料証明書の場合は、Certum Level I です)</p>
+<p>ルート CA とあなたの証明書に署名するのに発行者が利用した中間証明書をダウンロードします。発行者のウェブサイトにルート CA と公開証明書へのリンクがあるでしょう。(<a class="link-https" href="https://www.certum.pl/english/eng/products/keys/index.html">Certum の公開鍵ページ</a>) <strong>Certum Root CA</strong> と <strong>Certum Level I Digital ID for WWW and SLS/TLS Servers</strong> をダウンロードし、その文字列を <code><strong>C:\Projects\CodeSigning\Certum Root CA.cer</strong></code> と <code><strong>C:\Projects\CodeSigning\Certum Level I.cer</strong></code> に保存しました。</p>
+<p>コード署名用フォルダーでコマンドプロンプトを開き (手順 5 での NSS ツールへのパスがちゃんと通っているかを確認してください)、正しく追加されているかを確認してください。</p>
+<pre>C:\Projects\CodeSigning&gt; certutil -A -n "Certum Root CA" -t "TC,TC,TC" -d . -i "Certum Root CA.cer"
+
+C:\Projects\CodeSigning&gt; certutil -A -n "Certum Level I" -t "c,c,C" -d . -i "Certum Level I.cer"
+
+C:\Projects\CodeSigning&gt; certutil -L -d .
+myTestCert                                                   u,u,Cu
+Certum Root CA                                               CT,C,C
+Certum Level I                                               CT,C,C
+</pre>
+<p>Mozilla Firefox の証明書ストアでの新しく発行された証明書の名前は覚えるのに簡単で無いエイリアスを示すので、ここで名前を変更するための追加の手順を示します。(残念なことに、変更手順は簡単なものではありません。)</p>
+<p>名前をみるには、手順 II で述べた Mozilla Firefox の証明書マネージャーを表示し、<strong>あなたの証明書</strong> を選びます。そして、新しい証明書を選択し、<strong>表示</strong> で <strong>詳細</strong> を選択し、<strong>証明書のフィールド</strong> のツリービューの先頭を見てください。</p>
+<p>わたしの Unizeto Certum の証明書では "TJ's Unizeto Sp. z o.o. ID" となっていますが、"Code Signing (Certum)" としたいと思います。</p>
+<p>このトリックは、証明書を鍵無しでインストールしニックネームを設定します。その後 Mozilla Firefox から鍵と証明書のペアをインポートしたとき、秘密鍵が証明書に追加されますが、名前はそのままになります。</p>
+<pre>C:\Projects\CodeSigning&gt; certutil -A -n "Code Signing (Certum)" -t "u,u,u" -d . -i "Certum Code Signing.cer"
+
+C:\Projects\CodeSigning&gt; certutil -L -d .
+myTestCert                                                   u,u,Cu
+Certum Root CA                                               CT,C,C
+Certum Level I                                               CT,C,C
+Code Signing (Certum)                                        ,,
+
+C:\Projects\CodeSigning&gt; signtool -l -d .
+using certificate directory: .
+
+Object signing certificates
+---------------------------------------
+myTestCert
+    Issued by: myTestCert (XPI Test)
+    Expires: Tue Mar 14, 2006
+Code Signing (Certum)
+    Issued by: Certum Level I (Certum Level I)
+    Expires: Tue Mar 14, 2006
+---------------------------------------
+For a list including CA's, use "signtool -L"
+</pre>
+<p>ここで、新しい鍵と証明書のペアを Mozilla Firefox の証明書データベースからエクスポートし、NSS 証明書データベースへ入れます。</p>
+<p>もっとも困難な部分は、Mozilla の鍵データベースの場所です。<strong>key3.db</strong> と <strong>cert8.db</strong> の二つのファイルからなります。通常、Mozilla Firefox の <strong>ユーザプロファイルフォルダー</strong> にあり、わたしのところでは <code><strong>C:\Documents and Settings\TJ\Application Data\Mozilla\Firefox\Profiles\xxxxxxxx.default\</strong></code> でした。(xxxxxxxx はランダム文字列)</p>
+<p><font color="red">この手順は、手順 13 で、新しい証明書を Mozilla Firefox にインストールしているものと仮定しています。</font></p>
+<p>ファイルへエクスポート、コード署名データベースへインポート、そして署名属性 (u,u,u) を確認するコマンドが必要です。以下では証明書のニックネームと Mozilla Firefox の鍵データベースの場所にわたしのではなく自分のものを利用しなければならないことに気をつけてください。</p>
+<pre>C:\Projects\CodeSigning&gt; pk12util -o "Certum Code Signing.pkcs12" -n "TJ's Unizeto Sp. z o.o. ID" -d "C:\Documents and Settings\TJ\Application Data\Mozilla\Firefox\Profiles\xxxxxxxx.default"
+Enter password for PKCS12 file:
+Re-enter password:
+pk12util: PKCS12 EXPORT SUCCESSFUL
+
+C:\Projects\CodeSigning&gt; pk12util -i "Certum Code Signing.pkcs12" -d .
+Enter Password or Pin for "NSS Certificate DB":
+Enter password for PKCS12 file:
+pk12util: PKCS12 IMPORT SUCCESSFUL
+
+C:\Projects\CodeSigning&gt; certutil -L -d .
+myTestCert                                                   u,u,Cu
+Certum Root CA                                               CT,C,C
+Certum Level I                                               c,c,C
+Code Signing (Certum)                                        u,u,u
+</pre>
+<p>既存の証明書がアップデートされたという通知を見るはずです。</p>
+<p>15. あなたの実際の証明書に署名する</p>
+<p>これは、手順 8, 9, 10 を実際の証明書で繰り返すときの詳細です。試験ディレクトリでの出力は以下のとおり</p>
+<pre>C:\Projects\CodeSigning&gt;signtool -d . -k "Code Signing (Certum)" -p ******* test
+using certificate directory: .
+Generating test/META-INF/manifest.mf file..
+--&gt; test.txt
+Generating zigbert.sf file..
+tree "test" signed successfully
+</pre>
+<p><font color="red"><strong>警告:</strong> 現在の NSS signtool では署名した証明書 (zigbert.rsa) には証明書チェーンを<strong>含みません</strong>。これは、Firefox は <strong>Certum Level I</strong> のような中間認証局で署名された証明書による署名されたコードのインストールを、先に中間証明書を Firefox にインストールしておかなければ拒否することを意味します。<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=322603" title="FIXED: Support easy linking to bugs from the wiki.">バグ 322603</a> にて NSS チームはコード署名に利用する証明書チェーンを利用する方法を探しています。さまざまな人が望むこの機能を NSS チームが実装できるように、何かコメントがありましたら投稿してください。</font></p>
+<p>16. ビルドプロセスで署名を行う</p>
+<p>これらの手順を拡張のビルドプロセス中で行おうと考えるでしょう。<strong>build.bat</strong> ファイルを jar や xpi ファイルを作成する手順の自動化に利用しています。このサンプルは CygWin の bin/zip.exe を必要とします。</p>
+<p><strong>build.bat</strong> は拡張のルートフォルダーに保存されます。たとえば</p>
+<pre class="eval">/dev/fsb/<strong>build.bat</strong>
+/dev/fsb/install.rdf
+/dev/fsb/chrome.manifest
+/dev/fsb/chrome/
+/dev/fsb/chrome/content/
+/dev/fsb/chrome/locale/
+/dev/fsb/chrome/skin/
+</pre>
+<p>コード署名の手順 (バッチファイル) は以下のとおりです</p>
+<pre>@echo off
+set x=%cd%
+echo Building %x%.xpi ...
+echo Started at %DATE% %TIME% &gt; %x%\build.log
+md build\chrome
+cd chrome
+zip  -r -0 "%x%.jar" * &gt;&gt; %x%\build.log
+move "%x%.jar" ..\build\chrome &gt;&gt; %x%\build.log
+cd ..
+copy install.rdf build &gt;&gt; %x%\build.log
+copy chrome.manifest build &gt;&gt;%x%\build.log
+signtool.exe -d C:\Projects\CodeSigning -k "Code Signing (Certum)" -p "password" build/ &gt;&gt; %x%\build.log
+cd build
+zip "%x%.xpi" META-INF/zigbert.rsa &gt;&gt; %x%\build.log
+zip -r -D "%x%.xpi" * -x META-INF/zigbert.rsa &gt;&gt; %x%\build.log
+rem copy "%x%.xpi" ..\..\..\http\fsb.xpi &gt;&gt; %x%\build.log
+move "%x%.xpi" ..\ &gt;&gt; %x%\build.log
+cd ..
+rd build /s/q
+echo Done.
+
+&lt;b&gt;password&lt;/b&gt; をあなたの NSS 証明書データベースのパスワードに変更するのを忘れないでください。
+</pre>

@@ -1,0 +1,115 @@
+---
+title: Making it into a dynamic overlay and packaging it up for distribution
+slug: >-
+  Creating_a_Mozilla_Extension/Making_it_into_a_dynamic_overlay_and_packaging_it_up_for_distribution
+tags:
+  - Add-ons
+  - Extensions
+translation_of: >-
+  Archive/Mozilla/Creating_a_Mozilla_extension/Making_it_into_a_dynamic_overlay_and_packaging_it_up_for_distribution
+---
+<p>
+</p><p>これで静的なオーバーレイができました。次に XPI パッケージを作成します。XPI パッケージによって、拡張機能は動的オーバーレイとして Mozilla にインストールされます。XPI は UI レイヤーを別々に切り分けることができるように設計されています。まず、XPI に含めるファイルを入れるディレクトリを作ります。次に、ファイル中の URL を変更して、XPI を使ってインストールしたときにファイルが置かれる場所を指すようにします。次に、tinderstatus コンポーネントについて記述した <code>contents.rdf</code> と、インストールを実行する <code>install.js</code> スクリプトを作成します。最後に、構成ファイルを zip アーカイブへ圧縮します。
+</p><p>まず、適当な場所に <code>tinderstatus-installer</code> ディレクトリを作成します。次に <code>tinderstatus</code> サブディレクトリをその中に作成し、さらにその中に <code>content</code> サブ-サブディレクトリを作成してください。作成したら、次のファイルを <code>content</code> ディレクトリにコピーしてください。
+</p>
+<ul><li> tinderstatusOverlay.xul
+</li><li> tinderstatus.js
+</li><li> tinderstatus.css
+</li><li> tb-busted.png
+</li><li> tb-nostatus.png
+</li><li> tb-success.png
+</li><li> tb-testfailed.png
+</li></ul>
+<p>これらは XPI に入れるファイルです。次に、コピーした <code>tinderstatusOverlay.xul</code> 中の URL を、XPI を使ってインストールしたときにファイルが置かれる場所を指すように変更します。
+</p>
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+
+&lt;?xml-stylesheet
+      href="<span><a class=" external">chrome://tinderstatus/content/tinderstatus.css</a></span>"
+      type="text/css"?&gt;
+
+&lt;overlay id="tinderstatusOverlay"
+      xmlns="<span>http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+
+&lt;script type="application/x-javascript"
+        src="<span><a class=" external">chrome://tinderstatus/content/tinderstatus.js</a></span>" /&gt;
+
+&lt;statusbar id="status-bar"&gt;
+  &lt;statusbarpanel class="statusbarpanel-iconic"
+          id="tinderbox-status"
+          insertbefore="offline-status"
+          status="none"/&gt;
+&lt;/statusbar&gt;
+
+&lt;/overlay&gt;
+</pre>
+<p><code>tinderstatus.css</code> も同様に URL を変更します。
+</p>
+<pre class="eval">statusbarpanel#tinderbox-status {
+  list-style-image: url("<span><a class=" external">chrome://tinderstatus/content/tb-nostatus.png</a></span>");
+}
+
+statusbarpanel#tinderbox-status[status="success"] {
+  list-style-image: url("<span><a class=" external">chrome://tinderstatus/content/tb-success.png</a></span>");
+}
+
+statusbarpanel#tinderbox-status[status="testfailed"] {
+  list-style-image: url("<span><a class=" external">chrome://tinderstatus/content/tb-testfailed.png</a></span>");
+}
+
+statusbarpanel#tinderbox-status[status="busted"] {
+  list-style-image: url("<span><a class=" external">chrome://tinderstatus/content/tb-busted.png</a></span>");
+}
+</pre>
+<p>次に、2 つのファイルを作成します。1 つは <code>contents.rdf</code> という名前で、インストールするコンポーネントの情報が記述されており、chrome レジストリにインストールされます。もう 1 つは <code>install.js</code> という名前で、コンポーネントをインストールするためのコードです。<code>contents.rdf</code> は <code>content</code> ディレクトリに入れます。
+</p>
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+&lt;RDF:RDF xmlns:RDF="<span>http://www.w3.org/1999/02/22-rdf-syntax-ns#</span>"
+          xmlns:chrome="<span>http://www.mozilla.org/rdf/chrome#</span>"&gt;
+
+&lt;RDF:Seq about="urn:mozilla:package:root"&gt;
+  &lt;RDF:li resource="urn:mozilla:package:tinderstatus"/&gt;
+&lt;/RDF:Seq&gt;
+
+&lt;RDF:Description about="urn:mozilla:package:tinderstatus"
+      chrome:displayName="Mozilla Tinderstatus Extension"
+      chrome:author="Myk Melez"
+      chrome:name="tinderstatus"
+      chrome:extension="true"
+      chrome:description="Displays tinderbox status for the Mozilla codebase."&gt;
+&lt;/RDF:Description&gt;
+
+&lt;RDF:Seq about="urn:mozilla:overlays"&gt;
+  &lt;RDF:li resource="<a class=" external">chrome://navigator/content/navigator.xul</a>"/&gt;
+&lt;/RDF:Seq&gt;
+
+&lt;RDF:Seq about="<a class=" external">chrome://navigator/content/navigator.xul</a>"&gt;
+  &lt;RDF:li&gt;<a class=" external">chrome://tinderstatus/content/tinderstatusOverlay.xul</a>&lt;/RDF:li&gt;
+&lt;/RDF:Seq&gt;
+
+&lt;/RDF:RDF&gt;
+</pre>
+<p><code>install.js</code> は <code>tinderstatus-installer</code> ディレクトリに入れます。
+</p>
+<pre class="eval">initInstall(
+      "Mozilla Tinderstatus Extension",
+      "/mozdev/tinderstatus",
+      "0.1");
+var installDir = getFolder("Chrome","tinderstatus");
+setPackageFolder(installDir);
+
+addDirectory("tinderstatus");
+registerChrome(
+      CONTENT | DELAYED_CHROME,
+      getFolder(installDir, "content"));
+var result = performInstall();
+
+if ( result != SUCCESS ) cancelInstall(result);
+</pre>
+<p>すべてのファイルの配置が終わったら、<code>tinderstatus-installer</code> ディレクトリで zip を使い、<code>install.js</code> と <code>tinderstatus/</code> ディレクトリの内容をすべて含んだ ZIP アーカイブを作り、その名前を <code>tinderstatus.xpi</code> にします。アーカイブのトップレベルにファイルとディレクトリがあることを確かめてください。
+</p><p></p><div style="text-align: right;" class="prevnext">
+    <p><a style="float: left;" href="/ja/docs/Creating_a_Mozilla_Extension:Making_it_into_a_static_overlay">« 前のページ</a><a href="/ja/docs/Creating_a_Mozilla_Extension:Conclusion">次のページ  »</a></p>
+</div>
+<p></p>
+<div class="noinclude">
+</div>

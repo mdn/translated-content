@@ -1,0 +1,880 @@
+---
+title: Observer Notifications
+slug: Mozilla/Tech/XPCOM/Observer_Notifications
+translation_of: Mozilla/Tech/XPCOM/Observer_Notifications
+---
+<h2 id="Observer_topics" name="Observer_topics">Observer topics</h2>
+
+<p>The following are topics that you can observe during the course of an application. Unless otherwise noted you register for the topics using the <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIObserverService" title="">nsIObserverService</a></code>.</p>
+
+<h3 id="Application_startup" name="Application_startup">Application startup</h3>
+
+<p>These are the topics that you can observe on startup, in order of appearance.</p>
+
+<p>If your component requires access to the user profile, or any services which require access to the profile (preferences, bookmarks, and so on) then a common pattern is to register with the <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsICategoryManager" title="">nsICategoryManager</a></code> for the app-startup topic which can be done in the component's registration code, and then in that notification register with the observer service for the profile-after-change notification. See <a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Guide/Receiving_startup_notifications" title="zh-CN/XPCOM/Receiving startup notifications">Receiving startup notifications</a> for more information about how this works.</p>
+
+<p>Starting in Firefox 3.5 components can simply register for the profile-after-change notification in <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsICategoryManager" title="">nsICategoryManager</a></code>.</p>
+
+<table class="standard-table" style="width: 846px;">
+ <tbody>
+  <tr>
+   <th>Topic</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>*</td>
+   <td>
+    <p>Everything.  [<a class="external" href="http://mxr.mozilla.org/mozilla-central/source/xpcom/ds/nsObserverService.cpp#152" title="http://mxr.mozilla.org/mozilla-central/source/xpcom/ds/nsObserverService.cpp#184">nsObserverService.cpp</a>]</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="standard-table" style="height: 880px; width: 846px;">
+ <tbody>
+  <tr>
+   <th>Topic</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>xpcom-startup</td>
+   <td>
+    <p></p><div class="blockIndicator note"><strong>Note:</strong> An extension can no longer be registered to receive this notification in Firefox 4 and later. See <a href="zh-CN/XPCOM/XPCOM_changes_in_Gecko_2.0#Category_registration">XPCOM changes in Gecko 2.0</a> for details.</div><p></p>
+
+    <p>Called when xpcom is initialized. Many things are not available for use at this point. To receive this notification you have to register with <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsICategoryManager" title="">nsICategoryManager</a></code>. The registered component is always retrieved as a singleton (That is getService() will be used to instantiate it).</p>
+   </td>
+  </tr>
+  <tr>
+   <td>app-startup</td>
+   <td>
+    <p></p><div class="blockIndicator note"><strong>Note:</strong> An extension can no longer be registered to receive this notification in Firefox 4 and later. See <a href="zh-CN/XPCOM/XPCOM_changes_in_Gecko_2.0#Category_registration">XPCOM changes in Gecko 2.0</a> for details.</div><p></p>
+
+    <p>General event for application startup. To receive this notification you have to register with <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsICategoryManager" title="">nsICategoryManager</a></code>. Prepend "service," to the contract ID in the category registration to be invoked via getService() instead of createInstance().</p>
+   </td>
+  </tr>
+  <tr>
+   <td>profile-do-change</td>
+   <td>This is fired after the profile has been selected. You will not be able to access user preferences, bookmarks, or anything that uses the profile folder until this event occurs. This occurs after any profile migration.</td>
+  </tr>
+  <tr>
+   <td>profile-after-change</td>
+   <td>
+    <p>This is fired after all the observers for profile-do-change have been notified.</p>
+
+    <p>You can register with <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsICategoryManager" title="">nsICategoryManager</a></code> to receive this notification. Prior to Firefox 3.5, this was available to observers observing the app-startup/xpcom-startup notification.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>final-ui-startup</td>
+   <td>
+    <p>Triggered just before the first window for the application is displayed.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>sessionstore-windows-restored </td>
+   <td>
+    <p>Sent by the session restore process to indicate that all initial browser windows have opened. Note that while the window are open and the chrome loaded the tabs in the windows may still be being restored after this notification.</p>
+
+    <p></p><div class="blockIndicator note"><strong>Note:</strong> This notification is specific to Firefox and SeaMonkey 2.0 applications</div><p></p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Application_shutdown" name="Application_shutdown">Application shutdown</h3>
+
+<p>These are the topics that you can observe on shutdown, in order of appearance.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Topic</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>quit-application-requested</td>
+   <td>Something has requested that the application be shutdown. You can cancel the shutdown from here by setting <code>aSubject.data</code> to <code>true</code> (<code>aSubject</code> is the first parameter to your observer, the data value is an <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupportsPRBool" title="">nsISupportsPRBool</a></code>).</td>
+  </tr>
+  <tr>
+   <td>quit-application-granted</td>
+   <td>All observers have agreed to the shutdown.</td>
+  </tr>
+  <tr>
+   <td>quit-application</td>
+   <td>The application is about to quit. This can be in response to a normal shutdown, or a restart. <div class="blockIndicator note"><strong>Note:</strong> The data value for this notification is either 'shutdown' or 'restart'.</div></td>
+  </tr>
+  <tr>
+   <td>profile-change-net-teardown</td>
+   <td>The network connection is going offline at this point. <div class="blockIndicator note"><strong>Note:</strong> The data value for this notification is either 'shutdown-persist' or 'shutdown-cleanse'.</div></td>
+  </tr>
+  <tr>
+   <td>profile-change-teardown</td>
+   <td>Part of the shutdown, profile data is still available at this point. <div class="blockIndicator note"><strong>Note:</strong> The data value for this notification is either 'shutdown-persist' or 'shutdown-cleanse'.</div></td>
+  </tr>
+  <tr>
+   <td>profile-before-change</td>
+   <td>Called just before the profile is lost. <div class="blockIndicator note"><strong>Note:</strong> The data value for this notification is either 'shutdown-persist' or 'shutdown-cleanse'.</div></td>
+  </tr>
+  <tr>
+   <td>xpcom-will-shutdown </td>
+   <td>Called just before xpcom-shutdown. Observer must not spin event loop.</td>
+  </tr>
+  <tr>
+   <td>xpcom-shutdown</td>
+   <td>This is the end. Many things will not be available here.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Browser" name="Browser">Browser</h3>
+
+<p>These topics indicate interesting things that happen that the browser alerts you to.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Topic</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>browser:purge-session-history</td>
+   <td>Sent when the sanitizer runs to purge all history and other information.</td>
+  </tr>
+  <tr>
+   <td>browser:purge-domain-data</td>
+   <td>Sent after domain-specific history and other information have been purged. The data value is a string form of the domain. </td>
+  </tr>
+  <tr>
+   <td>browser-lastwindow-close-requested</td>
+   <td>Sent when the browser wishes to close the last open browser window. When this is sent, it is possible that other windows may still be open, such as the download manager or preferences. The data value is an <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupportsPRBool" title="">nsISupportsPRBool</a></code>. Recipients may set this to <code>true</code> to abort the close. </td>
+  </tr>
+  <tr>
+   <td>browser-lastwindow-close-granted</td>
+   <td>Sent when all interested parties have responded to the browser-lastwindow-close-requested notification and none of them requested that the close be aborted. After this is sent and handled, the browser window will close. </td>
+  </tr>
+  <tr>
+   <td>browser-delayed-startup-finished</td>
+   <td>Sent when the browser window and all its components have been loaded and initialized.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Documents" name="Documents">Documents</h3>
+
+<p>These topics indicate notifications you can monitor related to DOM documents.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Topic</th>
+   <th>Subject</th>
+   <th>Data</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>chrome-document-global-created </td>
+   <td><code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindow" title="">nsIDOMWindow</a></code></td>
+   <td>null</td>
+   <td>Sent immediately after a chrome document window has been set up, but before any script code has been executed. This lets extensions inject API into chrome windows as needed (see <a href="/zh-CN/XPCOM_Interface_Reference/nsIDOMGlobalPropertyInitializer" title="zh-CN/XPCOM_Interface_Reference/nsIDOMGlobalPropertyInitializer">nsIDOMGlobalPropertyInitializer</a> for an alternative method of doing this, which uses significantly less memory).<br>
+    <code>data</code> is intentionally left blank.</td>
+  </tr>
+  <tr>
+   <td>content-document-global-created </td>
+   <td><code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindow" title="">nsIDOMWindow</a></code></td>
+   <td>origin</td>
+   <td>Sent immediately after a web content document window has been set up, but before any script code has been executed. This lets extensions inject API into content windows as needed (see <a href="/zh-CN/XPCOM_Interface_Reference/nsIDOMGlobalPropertyInitializer" title="zh-CN/XPCOM_Interface_Reference/nsIDOMGlobalPropertyInitializer">nsIDOMGlobalPropertyInitializer</a> for an alternative method of doing this).<br>
+    <code>data</code> is a string form of the origin (for use in security checks), eg "http://developer.mozilla.org".</td>
+  </tr>
+  <tr>
+   <td>document-element-inserted </td>
+   <td><a href="/zh-CN/docs/Web/API/Document" title="Document接口表示任何在浏览器中已经加载好的网页，并作为一个入口去操作网页内容（也就是DOM tree）。DOM tree包括像 &lt;body> 、&lt;table>这样的还有其他的元素。它提供了全局操作document的功能，像获取网页的URL和在document里创建一个新的元素。"><code>Document</code></a></td>
+   <td>null</td>
+   <td>Sent immediately after the root element of a document has been created, but before executing any script on it.</td>
+  </tr>
+  <tr>
+   <td>user-interaction-active </td>
+   <td><code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindow" title="">nsIDOMWindow</a></code></td>
+   <td>null</td>
+   <td>
+    <p>Sent once every 5000ms while this chrome document sees some kind of user activity (for example, keyboard or mouse events), <em>and</em> at the exact moment of the state transition from idle to active.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>user-interaction-inactive </td>
+   <td><code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindow" title="">nsIDOMWindow</a></code></td>
+   <td>null</td>
+   <td>
+    <p>Sent when the chrome document has seen no user activity for a while. The notification is not repeated during a continuous inactivity period.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Windows" name="Windows">Windows</h3>
+
+<p>These topics indicate points of interest during the lifetime of a window.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Topic</th>
+   <th>Data</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>dom-window-destroyed </td>
+   <td> </td>
+   <td>Called just before a DOM window is destroyed.</td>
+  </tr>
+  <tr>
+   <td>inner-window-destroyed </td>
+   <td> <code>null</code></td>
+   <td>Called when an inner window is removed from the backward/forward cache. See <a href="/zh-CN/Working_with_BFCache" title="zh-CN/Working with BFCache">Working With BFCache</a> for information about the bfcache, and <a href="/zh-CN/Inner_and_outer_windows" title="zh-CN/Inner and outer windows">Inner and outer windows</a> for details about how the window hierarchy works. Extensions that cache information about windows may wish to observe this so they can release information when the window is destroyed.  The <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=534149" title="https://bugzilla.mozilla.org/show_bug.cgi?id=534149">window id</a> can be obtained from subject.QueryInterface(Components.interfaces.nsISupportsPRUint64).data</td>
+  </tr>
+  <tr>
+   <td>outer-window-destroyed </td>
+   <td><code>null</code></td>
+   <td>Called when an outer window is disconnected from its docshell.  See <a href="/zh-CN/Inner_and_outer_windows" title="zh-CN/Inner and outer windows">Inner and outer windows</a> for details about how the window hierarchy works. Extensions that cache information about windows may wish to observe this so they can release information when the window is destroyed.  The<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=534149" title="https://bugzilla.mozilla.org/show_bug.cgi?id=534149"> window id</a> can be obtained from subject.QueryInterface(Components.interfaces.nsISupportsPRUint64).data</td>
+  </tr>
+  <tr>
+   <td>toplevel-window-ready</td>
+   <td> </td>
+   <td>Called just after a new top level window has been opened and is ready, but has not yet loaded a document.</td>
+  </tr>
+  <tr>
+   <td>xul-window-destroyed</td>
+   <td> </td>
+   <td>Called just before a XUL window is destroyed.</td>
+  </tr>
+  <tr>
+   <td>xul-window-registered</td>
+   <td> </td>
+   <td>Called just after a top level XUL window is registered with the window mediator service.</td>
+  </tr>
+  <tr>
+   <td>xul-window-visible</td>
+   <td> </td>
+   <td>Called just after a XUL window is made visible.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Spelling checker" name="Spelling checker">Spelling checker </h3>
+
+<p>These topics indicate activities that have occurred related to the spelling checker.</p>
+
+<table class="standard-table" style="width: auto;">
+ <tbody>
+  <tr>
+   <td class="header">Topic</td>
+   <td class="header">Data</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td>spellcheck-dictionary-update</td>
+   <td> </td>
+   <td>Sent by a spell checker implemented by the <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozISpellingChecker" title="">mozISpellingChecker</a></code> interface when something has happened that causes a change that may interest the editor; these are received primarily by <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIEditor" title="">nsIEditor</a></code>.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="IO_Notifications" name="IO_Notifications">IO Notifications</h3>
+
+<p>These topics can be used to watch the IO service for useful information.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Topic</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>offline-requested</td>
+   <td>Called to query whether the application can go offline. The attempt to go offline can be canceled.
+    <p></p><div class="blockIndicator note"><strong>Note:</strong> If your code chooses to cancel the attempt to go offline, it <strong>must</strong> notify the user.</div><p></p>
+   </td>
+  </tr>
+  <tr>
+   <td>network:offline-about-to-go-offline</td>
+   <td>Called just before all network IO is taken offline.</td>
+  </tr>
+  <tr>
+   <td>network:offline-status-changed</td>
+   <td>Called when the offline state has changed. <div class="blockIndicator note"><strong>Note:</strong> The data value for this notification 'offline' or 'online' to indicate the new state.</div></td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="HTTP_requests" name="HTTP_requests">HTTP requests</h3>
+
+<p>These are the topics that you can observe during a HTTP request (see <a href="/zh-CN/Setting_HTTP_request_headers" title="zh-CN/Setting_HTTP_request_headers">Setting HTTP request headers</a> and <a href="/zh-CN/Creating_Sandboxed_HTTP_Connections#HTTP_notifications" title="zh-CN/Creating_Sandboxed_HTTP_Connections#HTTP_notifications"> Creating Sandboxed HTTP Connections</a>). Both are passed an <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIHttpChannel" title="">nsIHttpChannel</a></code> as the subject parameter.</p>
+
+<table class="standard-table" style="height: 221px; width: 1106px;">
+ <tbody>
+  <tr>
+   <th>Topic</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>http-on-modify-request</td>
+   <td>Called as a http request is made. The channel is available to allow you to modify headers and such. See <a class="internal" href="/zh-CN/Code_snippets/Tabbed_browser#Getting_the_tab_that_fires_the_http-on-modify-request_notification" title="zh-CN/Code snippets/Tabbed browser#Getting the tab that fires the http-on-modify-request notification">this code snippet</a> to learn how to get the tab that issued the request.</td>
+  </tr>
+  <tr>
+   <td>http-on-opening-request </td>
+   <td>Similar to http-on-modify-request, but called earlier (synchronously during the channel's asyncOpen() call), and some channel atttributes (proxyInfo) may be missing.  Use only if your observer must be called before asyncOpen returns.</td>
+  </tr>
+  <tr>
+   <td>http-on-examine-response</td>
+   <td>Called after a response has been received from the web server. Headers are available on the channel. The response can be accessed and modified via <a href="XPCOM_Interface_Reference/NsITraceableChannel" rel="internal" title="nsITraceableChannel">nsITraceableChannel</a>.</td>
+  </tr>
+  <tr>
+   <td>http-on-examine-cached-response </td>
+   <td>Called instead of http-on-examine-response when a response will be read completely from the cache. Headers are available on the channel.</td>
+  </tr>
+  <tr>
+   <td>http-on-examine-merged-response</td>
+   <td>Called instead of http-on-examine-response when a response will be read partially from cache, and partially from the network (HTTP 206 or 304 response). Headers are available on the channel.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Cookies" name="Cookies">Cookies</h3>
+
+<p>These topics indicate whenever a cookie has been changed (added, changed, cleared, or deleted) or its setting rejected by the browser. See <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsICookieService" title="">nsICookieService</a></code> for details.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Topic</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>cookie-changed</td>
+   <td>Called upon a cookie change (added, changed, cleared, or deleted)</td>
+  </tr>
+  <tr>
+   <td>cookie-rejected</td>
+   <td>Called when the setting of a cookie was rejected by the browser (per the user's preferences)</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Download_Manager" name="Download_Manager">Download Manager</h3>
+
+<p>These topics indicate that events related to the Download Manager have occurred.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Topic</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>download-manager-ui-done</td>
+   <td>Called when the list of downloads in the Download Manager windows finishes updating.  This can happen multiple times, such as when the window first opens, when multiple items are removed, and when entering private browsing mode.</td>
+  </tr>
+  <tr>
+   <td>download-manager-remove-download </td>
+   <td>Called when a download of the list is removed or all the list is cleared. The subject will be the download id wrapped in <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupportsPRUint32" title="">nsISupportsPRUint32</a></code>, for one download removed, or null for multi download remove, for example when the download list is cleared.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Extension_Manager" name="Extension_Manager">Extension Manager</h3>
+
+<div class="note">
+<p><strong>Note:</strong> These notifications are no longer available starting with <span title="(Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)">Gecko 2.0</span>, instead use <code><a href="/zh-CN/Addons/Add-on_Manager/AddonManager#addAddonListener()" title="https://developer.mozilla.org/zh-CN/Addons/Add-on_Manager/AddonManager#addAddonListener()">AddonManager.addAddonListener()</a></code> to receive similar events.</p>
+</div>
+
+<p>This topic indicates when the extension manager performs some action. Note that any action will be taken the next time the application starts. See <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIExtensionManager" title="">nsIExtensionManager</a></code> for details.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Topic</th>
+   <th>Data</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>em-action-requested</td>
+   <td>item-installed</td>
+   <td>A new extension has been installed.</td>
+  </tr>
+  <tr>
+   <td>em-action-requested</td>
+   <td>item-upgraded</td>
+   <td>A different version of an existing extension has been installed.</td>
+  </tr>
+  <tr>
+   <td>em-action-requested</td>
+   <td>item-uninstalled</td>
+   <td>An addon has been marked to be uninstalled.</td>
+  </tr>
+  <tr>
+   <td>em-action-requested</td>
+   <td>item-enabled</td>
+   <td>An addon has been enabled.</td>
+  </tr>
+  <tr>
+   <td>em-action-requested</td>
+   <td>item-disabled</td>
+   <td>An addon has been disabled.</td>
+  </tr>
+  <tr>
+   <td>em-action-requested</td>
+   <td>item-cancel-action</td>
+   <td>A previous action has been cancelled.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Idle_Service" name="Idle_Service">Idle Service</h3>
+
+<p>This topic indicates when actions related to the Idle Service, provided by the <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIIdleService" title="">nsIIdleService</a></code> interface. Unlike the user-interaction-active and user-interaction-inactive topics listed above, the Idle Service monitors user activity in general, whether related to the Mozilla application or not (acting somewhat like the user activity/inactivity events a screen saver would be interested in).</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Topic</th>
+   <th>Data</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>idle</td>
+   <td>The length of time the user has been idle, in milliseconds.</td>
+   <td>Sent when the user becomes idle.</td>
+  </tr>
+  <tr>
+   <td>idle-daily</td>
+   <td>The length of time the user has been idle, in milliseconds.</td>
+   <td>Sent once a day while the user is idle. </td>
+  </tr>
+  <tr>
+   <td>back</td>
+   <td>The length of time the user has been idle, in milliseconds.</td>
+   <td>Sent when the user returns from being idle.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Computer_sleep_and_wake" name="Computer_sleep_and_wake">Computer sleep and wake</h3>
+
+<p>This topic indicates when actions related to the computer going to sleep or waking up occur.  (Note: these notifications are not currently available on Linux.  <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=758848" title="https://bugzilla.mozilla.org/show_bug.cgi?id=758848">See bug 758848</a>.)</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Topic</th>
+   <th>Data</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>sleep_notification</td>
+   <td>null</td>
+   <td>Sent when the computer is going to sleep.</td>
+  </tr>
+  <tr>
+   <td>wake_notification</td>
+   <td>null</td>
+   <td>Sent when the computer is waking up.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Login_Manage" name="Login_Manage">Login Manager</h3>
+
+<p>This topic indicates when actions related to the Login Manager occur.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Topic</th>
+   <th>Data</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>passwordmgr-found-form</td>
+   <td>noAutofillForms</td>
+   <td>A login is available for this form, but autofill of forms is disabled, so the form was not automatically filled out.  </td>
+  </tr>
+  <tr>
+   <td>passwordmgr-found-form</td>
+   <td>autocompleteOff</td>
+   <td>A login is available for this form, but autocomplete is disabled.</td>
+  </tr>
+  <tr>
+   <td>passwordmgr-storage-changed</td>
+   <td>addLogin</td>
+   <td>A login has been added to the Login Manager's database. The notification's subject is the login that was added to the database. </td>
+  </tr>
+  <tr>
+   <td>passwordmgr-storage-changed</td>
+   <td>removeLogin</td>
+   <td>A login was removed from the Login Manager's database. The notification's subject is the login that was removed from the database. </td>
+  </tr>
+  <tr>
+   <td>passwordmgr-storage-changed</td>
+   <td>modifyLogin</td>
+   <td>A login in the Login Manager's database was modified. The notification's subject is an array whose first entry is the old login and whose second entry is the new one. </td>
+  </tr>
+  <tr>
+   <td>passwordmgr-storage-changed</td>
+   <td>removeAllLogins</td>
+   <td>All logins have been removed from the Login Manager's database. </td>
+  </tr>
+  <tr>
+   <td>passwordmgr-storage-changed</td>
+   <td>hostSavingEnabled</td>
+   <td>Host saving has been enabled. </td>
+  </tr>
+  <tr>
+   <td>passwordmgr-storage-changed</td>
+   <td>hostSavingDisabled</td>
+   <td>Host saving has been disabled. </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Places" name="Places">Places</h3>
+
+<p>This topic indicates when actions related to Places (the history and bookmarks database) occur.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Topic</th>
+   <th>Data</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>places-autocomplete-feedback-updated</td>
+   <td> </td>
+   <td>Sent when Places updates the location bar's autocompletion display.</td>
+  </tr>
+  <tr>
+   <td>places-connection-closed</td>
+   <td> </td>
+   <td>Sent after Places has closed its database connection. Once this has been sent, no Places features will work. </td>
+  </tr>
+  <tr>
+   <td>places-connection-closing</td>
+   <td> </td>
+   <td>
+    <p>Sent as the last notification before the Places service closes its database connection. </p>
+
+    <div class="warning"><strong>Warning:</strong> This is for internal use only.</div>
+   </td>
+  </tr>
+  <tr>
+   <td>places-database-locked</td>
+   <td> </td>
+   <td>The Places database is currently locked by a third-party process and cannot be opened.</td>
+  </tr>
+  <tr>
+   <td>places-favicons-expired</td>
+   <td> </td>
+   <td>Sent when all favicons have been expired. </td>
+  </tr>
+  <tr>
+   <td>places-init-complete</td>
+   <td> </td>
+   <td>The Places database has been successfully initialized. You should wait until this notification occurs before querying the places database.</td>
+  </tr>
+  <tr>
+   <td>places-maintenance-finished</td>
+   <td> </td>
+   <td>Sent when maintenance of the Places database is complete; this is done periodically in the background to keep the Places database tidy.</td>
+  </tr>
+  <tr>
+   <td>places-shutdown</td>
+   <td> </td>
+   <td>Sent when Places shuts down. If you are referencing instances of <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageStatement" title="">mozIStorageStatement</a></code> referencing Places databases when this notification occurs, you should call their <code><a href="https://developer.mozilla.org/zh-CN/docs/XPCOM_Interface_Reference/mozIStorageStatement#finalize()">mozIStorageStatement.finalize()</a></code> method </td>
+  </tr>
+  <tr>
+   <td>places-sync-finished</td>
+   <td> </td>
+   <td>Sent when the Places database has been successfully flushed to disk.</td>
+  </tr>
+  <tr>
+   <td>places-will-close-connection</td>
+   <td> </td>
+   <td>
+    <p>Sent when the Places service is about to close its database connection. Only necessary cleanup tasks should run at this point, and nothing should be added to the database. In addition, after this has been sent, no Places APIs should be called. </p>
+
+    <div class="warning"><strong>Warning:</strong> This is for internal use only.</div>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Session_Store" name="Session_Store">Session Store</h3>
+
+<p>These topics are used when actions related to Session Store occur.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Topic</th>
+   <th>Data</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>sessionstore-state-read</td>
+   <td> </td>
+   <td>Sent immediately after session store data is read and before it's used. </td>
+  </tr>
+  <tr>
+   <td>sessionstore-state-finalized</td>
+   <td> </td>
+   <td>Sent immediately after the session is restored.</td>
+  </tr>
+  <tr>
+   <td>sessionstore-state-write</td>
+   <td> </td>
+   <td>Sent immediately before the session store data is written to disk. </td>
+  </tr>
+  <tr>
+   <td>sessionstore-state-write-complete</td>
+   <td> </td>
+   <td>Sent immediately after the session store data is written to disk.</td>
+  </tr>
+  <tr>
+   <td>sessionstore-state-purge-complete</td>
+   <td> </td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Private_browsing" name="Private_browsing">Private browsing</h3>
+
+<p>These topics indicate when actions related to private browsing occur.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Topic</th>
+   <th>Data</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>private-browsing</td>
+   <td>enter</td>
+   <td>Sent when private browsing mode is activated. </td>
+  </tr>
+  <tr>
+   <td>private-browsing</td>
+   <td>exit</td>
+   <td>Sent when private browsing mode is deactivated. </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Bookmarks" name="Bookmarks">Bookmarks</h3>
+
+<p>These topics indicate when actions related to bookmarks occur.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Topic</th>
+   <th>Data</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>bookmarks-restore-begin</td>
+   <td>json</td>
+   <td>Sent just before bookmarks are restored from JSON. </td>
+  </tr>
+  <tr>
+   <td>bookmarks-restore-begin</td>
+   <td>html</td>
+   <td>Sent just before bookmarks are restored from HTML. If bookmarks will be restored into a specific folder, observers will be passed an <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupportsPRInt64" title="">nsISupportsPRInt64</a></code> through their subject parameters indicating the ID of the folder. The subject is null otherwise. </td>
+  </tr>
+  <tr>
+   <td>bookmarks-restore-begin</td>
+   <td>html-initial</td>
+   <td>Sent just before bookmarks are restored from HTML on initial import. If bookmarks are restored into a specific folder, observers will be passed an <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupportsPRInt64" title="">nsISupportsPRInt64</a></code> through their subject parameters indicating the ID of the folder. The subject is null otherwise. </td>
+  </tr>
+  <tr>
+   <td>bookmarks-restore-success</td>
+   <td>json</td>
+   <td>Sent just after bookmarks are restored from JSON. </td>
+  </tr>
+  <tr>
+   <td>bookmarks-restore-success</td>
+   <td>html</td>
+   <td>Sent just after bookmarks are restored from HTML. If bookmarks were restored into a specific folder, observers will be passed an <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupportsPRInt64" title="">nsISupportsPRInt64</a></code> through their subject parameters indicating the ID of the folder. The subject is null otherwise. </td>
+  </tr>
+  <tr>
+   <td>bookmarks-restore-success</td>
+   <td>html-initial</td>
+   <td>Sent just after bookmarks are restored from HTML on initial import. If bookmarks were restored into a specific folder, observers will be passed an <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupportsPRInt64" title="">nsISupportsPRInt64</a></code> through their subject parameters indicating the ID of the folder. The subject is null otherwise. </td>
+  </tr>
+  <tr>
+   <td>bookmarks-restore-failed</td>
+   <td>json</td>
+   <td>Sent when bookmarks could not be sucessfully restored from JSON. </td>
+  </tr>
+  <tr>
+   <td>bookmarks-restore-failed</td>
+   <td>html</td>
+   <td>Sent when bookmarks could not be successfully restored from HTML. If bookmarks were to have been restored into a specific folder, observers will be passed an <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupportsPRInt64" title="">nsISupportsPRInt64</a></code> through their subject parameters indicating the ID of the folder. The subject is null otherwise. </td>
+  </tr>
+  <tr>
+   <td>bookmarks-restore-failed</td>
+   <td>html-initial</td>
+   <td>Sent when bookmarks could not be successfully restored from HTML on intial import. If bookmarks were to have been restored into a specific folder, observers will be passed an <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupportsPRInt64" title="">nsISupportsPRInt64</a></code> through their subject parameters indicating the ID of the folder. The subject is null otherwise. </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Themes" name="Themes">Themes</h3>
+
+<p>These topics indicate when actions related to themes occur.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Topic</th>
+   <th>Data</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>lightweight-theme-preview-requested </td>
+   <td>json</td>
+   <td>Sent when the user requests to preview a lightweight theme, but before existing windows are styled with the new theme.</td>
+  </tr>
+  <tr>
+   <td>lightweight-theme-change-requested </td>
+   <td>json</td>
+   <td>Sent to indicate that the user has chosen a new theme in the add-ons manager, but before the change takes effect.</td>
+  </tr>
+  <tr>
+   <td>lightweight-theme-changed </td>
+   <td>-</td>
+   <td>Sent after the current theme is changed.</td>
+  </tr>
+  <tr>
+   <td>lightweight-theme-styling-update </td>
+   <td>json</td>
+   <td>Sent when the current theme being used is changed; this is sent even when the user is previewing a theme, not just when the theme is actually selected.</td>
+  </tr>
+  <tr>
+   <td>lightweight-theme-list-changed </td>
+   <td>-</td>
+   <td>The list of available lightweight themes has changed.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Developer_tools">Developer tools</h3>
+
+<p>These topics let you know about things that have happened related to Firefox's built-in developer tools.</p>
+
+<p> </p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Topic</th>
+   <th>Data</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>highlighter-ready </td>
+   <td>-</td>
+   <td>
+    <p>Sent when the highlighter component is initialized.</p>
+
+    <div class="note"><strong>Note:</strong> This is used by the Inspector to detect when it should begin its initialization process.</div>
+   </td>
+  </tr>
+  <tr>
+   <td>inspector-closed </td>
+   <td>-</td>
+   <td>Sent when the Inspector tool is closed.</td>
+  </tr>
+  <tr>
+   <td>inspector-editor-closed </td>
+   <td>-</td>
+   <td>Sent after the attribute-value editor has been closed.</td>
+  </tr>
+  <tr>
+   <td>inspector-editor-opened </td>
+   <td>-</td>
+   <td>Sent after the attribute-value editor has been opened and initialized.</td>
+  </tr>
+  <tr>
+   <td>inspector-editor-saved </td>
+   <td>-</td>
+   <td>Sent when changes have been saved in the attribute-value editor.</td>
+  </tr>
+  <tr>
+   <td>inspector-highlighting </td>
+   <td>-</td>
+   <td>Sent every time a different node in the page gets highlighted.</td>
+  </tr>
+  <tr>
+   <td>inspector-opened </td>
+   <td>-</td>
+   <td>Sent after the Inspector tool has finished its initialization.</td>
+  </tr>
+  <tr>
+   <td>inspector-ruleview-ready </td>
+   <td>-</td>
+   <td>Sent when the inspector's CSS Rule View is opened and initialized.</td>
+  </tr>
+  <tr>
+   <td>inspector-state-restored </td>
+   <td>-</td>
+   <td>Sent when the Inspector is re-opened after a tab switch.</td>
+  </tr>
+  <tr>
+   <td>inspector-treepanel-ready </td>
+   <td>-</td>
+   <td>Sent when the Inspector's Tree Panel is opened and initialized.</td>
+  </tr>
+  <tr>
+   <td>inspector-unhighlighting </td>
+   <td>-</td>
+   <td>Sent every time the highlighter stops highlighting a node.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Telemetry">Telemetry</h3>
+
+<table class="standard-table" style="width: auto;">
+ <tbody>
+  <tr>
+   <td class="header">Topic</td>
+   <td class="header">Data</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td>gather-telemetry </td>
+   <td>-</td>
+   <td>Sent by the telemetry service when it's time to start gathering telemetry data, since the telemetry ping is coming soon.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Plugins">Plugins</h3>
+
+<table class="standard-table" style="width: auto;">
+ <tbody>
+  <tr>
+   <td class="header">Topic</td>
+   <td class="header">Data</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td>plugin-crashed</td>
+   <td>-</td>
+   <td>Sent when a plugin has crashed.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p> </p>

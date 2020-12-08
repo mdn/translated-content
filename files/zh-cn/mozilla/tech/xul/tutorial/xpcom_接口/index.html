@@ -1,0 +1,179 @@
+---
+title: XPCOM 接口
+slug: Mozilla/Tech/XUL/Tutorial/XPCOM_接口
+translation_of: Archive/Mozilla/XUL/Tutorial/XPCOM_Interfaces
+---
+<p> </p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Box_Objects" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:XPCOM_Examples">下一页  »</a></p>
+</div><p></p>
+
+<p>    本章简单的看看 <a href="/en/XPCOM" title="en/XPCOM">XPCOM</a> (跨平台组件对象模型)——Mozilla 使用的对象系统。</p>
+
+<h3 id="Calling_Native_Objects" name="Calling_Native_Objects">调用本地对象</h3>
+
+<p>    通过XUL我们可以建立一个复杂的用户界面，我们可以通过脚本来修改界面及处理任务。然而有很多事件是不能有JavaScript直接完成的，比如，我们像创建一个邮件程序，我们需要写一个脚本来连接到服务器发送好接收邮件，而JavaScript没有这个能力。</p>
+
+<p>    处理这种事情的唯一手段就是用本地代码写一个获得邮件的模块，同时也需要一个用脚本调用本地对象的简单方法。 Mozilla 通过了这样的模型—— <a href="/en/XPCOM" title="en/XPCOM">XPCOM</a> (Cross-platform Component Object Model)。</p>
+
+<div class="note">Mozilla 提供了不少XPCOM 组件及接口，并且大多数情况下，你不需要自己完成他们。通过学习本章，你可以在 <a class="external" href="http://xulplanet.com/references/xpcomref/">XULPlanet XPCOM Reference</a> 寻找合适的。</div>
+
+<h3 id="About_XPCOM" name="About_XPCOM">关于XPCOM</h3>
+
+<p>    Mozilla 是有一系列组件构成的。每一个组件都处理特定的任务。比如，有一个处理菜单，按钮及元素的组件。组件又建立在一系列定义（接口）上。</p>
+
+<p>    Mozilla 中的接口定义了在一个组件中需要实现的功能，组件是它的代码实现，每一个组件都要实现接口描述的功能。一个组件可以时多个接口，多个组件也可以实现同一个接口。</p>
+
+<p>    让我们来以‘文件’组件为例，需要创建一个描述‘文件’属性及功能的接口文件。文件需要有文件名、数据、大小等属性；删除、移动、复制等方法。</p>
+
+<p>    文件接口用字符文件描述而无需实现。实现的工作留给组件来完成，组件需要返回文件名、数据、大小的代码，以及复制、删除等代码。</p>
+
+<p>    我们不关心组件如何实现，只要它实现了接口。当然我们有不同的实现方法，并且对于不同的平台也会不同。然而，他们必须实现同样的接口，这样我们就可以利用从接口中得到的信息使用组件。</p>
+
+<p>    Mozilla中接口通常以'nsI'或 'mozI'开头，这样就很容易找出接口。比如 <code>nsIAddressBook</code> 用于地址表， <code>nsISound</code> 用于声音文件 ， <code>nsILocalFile</code> 用于本地文件，Mozilla中的接口参见 <a href="/en/Interfaces" title="en/Interfaces">Interfaces</a>.</p>
+
+<p>    XPCOM 组件是一种本地实现，也就是说他们可以做 JavaScript 不能做的事情。我们可以调用接口定义的由组件属性的任意方法，比如，如果我们有一个组件，它实现了 <code>nsISound</code> 接口我们就可以用它来放声音。</p>
+
+<h3 id="Creating_XPCOM_Objects" name="Creating_XPCOM_Objects">创建XPCOM 对象</h3>
+
+<p>调用 XPCOM 组件分三步</p>
+
+<ol>
+ <li>获取组件</li>
+ <li>获取组件实现的接口</li>
+ <li>调用所需函数</li>
+</ol>
+
+<p>    如果我们做了前两步，最后一步可以无限制的使用，例如，我们想要重命名文件，这个方法定义在nsILocalFile 接口中。第一步得到文件组件。第二步，我们获取它实现了的nsILocalFile 接口，最后，调用接口通过的方法。这个接口用于代表单个文件。</p>
+
+<p>    我们知道接口长椅 'nsI' 或 'mozI'开头。组件通常像使用URI一样来引用，Mozilla 储存了当前注册的组件列表。像插件一样，用户可以添加新的组件。</p>
+
+<p>    Mozilla 通过了一个文件组件，它实现了 <code><a href="/en/nsILocalFile" title="en/nsILocalFile">nsILocalFile</a></code>。可以通过<code><a class="link-mailto" href="mailto:'@mozilla.org" rel="freelink">'@mozilla.org</a>/file/local;1'</code>引用，这个字符串称作协议ID，语法如下：</p>
+
+<pre class="eval">@&lt;internetdomain&gt;/module[/submodule[...]];&lt;version&gt;[?&lt;name&gt;=&lt;value&gt;[&amp;&lt;name&gt;=&lt;value&gt;[...]]]
+</pre>
+
+<p>    其他组件也按相似的方法引用。</p>
+
+<p>    组件的协议 ID 用于获取组件，可以用下面的脚本得到组件。</p>
+
+<pre>var aFile = Components.classes["@mozilla.org/file/local;1"].createInstance();
+</pre>
+
+<p>    一个文件组件返回并储存在变量 <em>aFile</em> 中，上例中的 <code><a href="/en/Components_object" title="en/Components_object">Components</a></code> 引用一个提供相关功能的全局对象。 这里，使用 <code>classes</code> 方法获得组件组，<code>classes</code> 方法返回可用组件的数组。得到不同的组件只需把双引号中的需要ID换成你需要的<span style="font-family: monospace;">，最后用</span><code>createInstance()</code>方法创建实例。</p>
+
+<p>    你需要检查 <code>createInstance()</code> 的返回值以确保非空，如果为空则表示所需组件不存在。</p>
+
+<p>    当然，到此为止，我们只引用了文件组件本身，为了使用它的函数，我们需要得到它的接口，本例为 <code><a href="/en/nsILocalFile" title="en/nsILocalFile">nsILocalFile</a></code>。我们再加一行。</p>
+
+<pre>var aFile = Components.classes["@mozilla.org/file/local;1"].createInstance();
+if (aFile) aFile.QueryInterface(Components.interfaces.nsILocalFile);
+</pre>
+
+<p>     <code>QueryInterface()</code> 是一个所以组件都通过的函数来返回特定的接口。函数有一个参数，你想得到的接口<code>Components</code>的 <code>interfaces</code> 方法包含一个可用接口的数组，这里把 nsILocalFile 作为参数传给 <code>QueryInterface()。结果是</code>aFile会引用它所实现了 nsILocalFile 接口的那部分。</p>
+
+<p>    上面的两行脚本可以用于获取任何组件及接口，只需更换组件名及接口名。下例，获得一个 sound 接口。</p>
+
+<pre>var sound = Components.classes["@mozilla.org/sound;1"].createInstance();
+if (sound) sound.QueryInterface(Components.interfaces.nsISound);
+</pre>
+
+<p>    XPCOM 接口可以继承其它的接口。这种接口拥有它自己的功能及它所继承的接口的功能<span style="font-family: monospace;">所有的接口都继承自顶级接口</span><code>nsISupports，它有一个函数由于支持</code>JavaScript—— <code>QueryInterface()</code>。因为所以的组件都实现 nsISupports 接口所以<code>QueryInterface()</code>对每个组件都有效。</p>
+
+<p>    一些组件可能会实现相同的接口。他们可能是原件的子类但不是必须的。组件可能都会实现 nsILocalFile接口，另外一个组件可能会实现多个接口。因为这个原因我们在调用函数之前需要得到定义函数的接口。</p>
+
+<p>    这里有一个简写形式，不过一般的我们把它分成多行。</p>
+
+<pre>var aLocalFile = Components.classes["@mozilla.org/file/local;1"].createInstance(Components.interfaces.nsILocalFile);
+</pre>
+
+<p>    这一行代码完成了上面两行所做的事。</p>
+
+<p>    如果你使用 <code>QueryInterface()</code> 引用一个本组件没有实现的接口，会抛出一个异常。如果不确定组件支持哪个接口请使用 <code><a href="/en/Core_JavaScript_1.5_Reference/Operators/Special_Operators/instanceof_Operator" title="en/Core_JavaScript_1.5_Reference/Operators/Special_Operators/instanceof_Operator">instanceof</a></code> 操作符检查。</p>
+
+<pre>var aFile = Components.classes["@mozilla.org/file/local;1"].createInstance();
+if (aFile instanceof Components.interfaces.nsILocalFile){
+  // do something
+}
+</pre>
+
+<p>    如果aFile实现nsILocalFile 接口 <code><a href="/en/Core_JavaScript_1.5_Reference/Operators/Special_Operators/instanceof_Operator" title="en/Core_JavaScript_1.5_Reference/Operators/Special_Operators/instanceof_Operator">instanceof</a></code>返回真，在块中就可以调用 <code>QueryInterface()</code>。</p>
+
+<h3 id="Calling_the_Functions_of_an_Interface" name="Calling_the_Functions_of_an_Interface">调用接口函数</h3>
+
+<p>    现在你有了一个关联到 nsILocalFile 接口组件的一个引用，你就可以调用nsILocalFile通过的函数。下面列出了 nsILocalFile提供的属性及方法。</p>
+
+<dl>
+ <dt>initWithPath </dt>
+ <dd>此方法用于初始化文件名及路径，第一个参数是文件路径如 '/usr/local/mozilla'.</dd>
+ <dt>leafName </dt>
+ <dd>除去文件路径的文件名。</dd>
+ <dt>fileSize </dt>
+ <dd>文件尺寸。</dd>
+ <dt>isDirectory() </dt>
+ <dd> nsILocalFile 代表目录返回真。</dd>
+ <dt>remove(recursive) </dt>
+ <dd>删除一个文件。如果recursive 参数为true，一个目录及其中的所以文件包括子目录均被删除。</dd>
+ <dt>copyTo(directory,newname) </dt>
+ <dd>把文件复制到新目录，并随意更改文件名。目录应保存在 nsILocalFile对象中。</dd>
+ <dt>moveTo(directory,newname) </dt>
+ <dd>把文件移到新目录或重命名。 目录应保存在 nsILocalFile对象中。</dd>
+</dl>
+
+<p>    为了删除文件，需要将其赋值给 nsILocalFile。我们可以使用<code>initWithPath()</code> 方法指明所需文件，然后调用 <code>remove()</code> 函数，它带一个参数；是否递归删除，如下例。</p>
+
+<pre>var aFile = Components.classes["@mozilla.org/file/local;1"].createInstance();
+if (aFile instanceof Components.interfaces.nsILocalFile){
+  aFile.initWithPath("/mozilla/testfile.txt");
+  aFile.remove(false);
+}
+</pre>
+
+<p>    以上代码会定位 /mozilla/testfile.txt 并删除它。试着把它与事件处理相连。你可以把文件名改为一个需要删除的文件并把它删除。</p>
+
+<p>    上面的函数中 copyTo() 及moveTo()可以用于复制及移动文件。注意他们移动的目标目录不是保存在字符串中而是nsILocalFile，也就是说你需要两个文件字节，下面是一个复制文件的例子。</p>
+
+<pre>function copyFile(sourcefile,destdir)
+{
+  // get a component for the file to copy
+  var aFile = Components.classes["@mozilla.org/file/local;1"]
+    .createInstance(Components.interfaces.nsILocalFile);
+  if (!aFile) return false;
+
+  // get a component for the directory to copy to
+  var aDir = Components.classes["@mozilla.org/file/local;1"]
+    .createInstance(Components.interfaces.nsILocalFile);
+  if (!aDir) return false;
+
+  // next, assign URLs to the file components
+  aFile.initWithPath(sourcefile);
+  aDir.initWithPath(destdir);
+
+  // finally, copy the file, without renaming it
+  aFile.copyTo(aDir,null);
+}
+
+copyFile("/mozilla/testfile.txt","/etc");
+</pre>
+
+<h3 id="XPCOM_Services" name="XPCOM_Services">XPCOM 服务器</h3>
+
+<p>    一些 XPCOM 组件是被称为服务器的特殊组件，你无需创建他们因为他们只能存在一个副本。服务器提供了类似于读取，设置全局数据或操作其他对象的方法。我们使用<code>getService()代替</code> <code>createInstance()</code>方法来获取服务器组件，除此以外，服务器并没有与其他组件相异之处。</p>
+
+<p>    如Mozilla通过了一个书签服务器，它允许你向当前用户的书签列表中添加书签。如下例。</p>
+
+<pre>var bmarks = Components.classes["@mozilla.org/browser/bookmarks-service;1"].getService();
+bmarks.QueryInterface(Components.interfaces.nsIBookmarksService);
+bmarks.addBookmarkImmediately("http://www.mozilla.org","Mozilla",0,null);
+</pre>
+
+<p>    首先组件 "@mozilla.org/browser/bookmarks-service;1"被返回，并保存在变量 <code>bmarks</code>中，我们使用 <code>QueryInterface()</code> 得到 nsIBookmarksService 接口。这个接口通过的<code>addBookmarkImmediately()</code> 函数用于添加书签。函数的前两个参数是书签的 URL 和标题。第三个参数是书签类型通常是 0 ，最后一个参数是书签页的字符集，可为空。</p>
+
+<p>    下一章看看Mozilla为我们通过的接口。 <a href="/en/XUL_Tutorial/XPCOM_Examples" title="en/XUL_Tutorial/XPCOM_Examples">interfaces provided with Mozilla that we can use</a>.</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Box_Objects" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:XPCOM_Examples">下一页  »</a></p>
+</div><p></p>
+
+<p>。</p>

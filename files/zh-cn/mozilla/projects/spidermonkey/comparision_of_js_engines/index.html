@@ -1,0 +1,105 @@
+---
+title: JS 引擎比较
+slug: Mozilla/Projects/SpiderMonkey/Comparision_of_JS_engines
+---
+<h2 id="概述">概述</h2>
+<p>本页用来纪录各个开源 JS 引擎（SpiderMonkey、V8、JavaScriptCore）在算法、未来趋势上的比较。除非额外说明，内存相关的数据<strong>假设系统为 32 位</strong>。</p>
+<h2 id="类、函数、词汇比较表">类、函数、词汇比较表</h2>
+<p>为了让懂得其中一个 JS 引擎的程序员迅速了解另外一个引擎，以下整理这些引擎共同概念的实现比较（把鼠标放在类／函数上面可以找到定义该类／函数的文件）：</p>
+<h3 id="常见">常见</h3>
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">SpiderMonkey</th>
+   <th scope="col">V8</th>
+   <th scope="col">备注</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><a href="http://hg.mozilla.org/mozilla-central/file/73eefb421e2a/js/public/Value.h#l872" title="public/Value.h:JS::Value"><code>Value</code></a></td>
+   <td><a href="http://code.google.com/p/v8/source/browse/branches/bleeding_edge/src/objects.h?r=19048#930" title="src/objects.h:v8::internal::MaybeObject *"><code style="white-space: nowrap;">MaybeObject *</code></a></td>
+   <td>代表一个 JS 值（数值、字符串、对象……）的类。SpiderMonkey 是用 <a href="http://wingolog.org/archives/2011/05/18/value-representation-in-javascript-implementations">nun-boxing</a>，总是一个 <code>double</code> 的大小（因此在 32 位的系统下，传值需要<a href="http://hg.mozilla.org/mozilla-central/file/73eefb421e2a/js/src/jit/RegisterSets.h#l88">两个 cycle</a>）。V8 是用 <a href="https://github.com/oupengsoftware/v8/wiki/Memory-Layout#wiki-tagged-pointer">tagged pointer</a>，总是一个指针的大小，浮点数存在堆上。<code>MaybeObject</code> 还是很多非 JS 语言对象（代码块等等）的<a href="http://sphinx.oupeng.com/wp-content/uploads/2013/07/v8-class-hierarchy.html">父类</a>。</td>
+  </tr>
+  <tr>
+   <td> <a href="http://hg.mozilla.org/mozilla-central/file/f550b112a19b/js/src/vm/ObjectImpl.h#l685" title="src/vm/ObjectImpl.h:js::ObjectImpl"><code>ObjectImpl</code></a></td>
+   <td><a href="http://code.google.com/p/v8/source/browse/branches/bleeding_edge/src/objects.h?r=19048#2089" title="src/objects.h:v8::internal::JSObject"><code>JSObject</code></a></td>
+   <td>JS 对象（<code>obj instanceof Object</code>）的实现类。SpiderMonkey 与 V8 皆是把部分属性存放在对象行内，部分用外链的一个数组储存的模式。SpiderMonkey 也将小数组的数据存在行内（但是<a href="http://hg.mozilla.org/mozilla-central/file/f550b112a19b/js/src/jsgc.h#l258">不会分两半</a>），而 V8 的 JS 数组对象（貌似）都是将数据存在外链的数组上。在 SpiderMonkey 中，只有在 new space 的 JS 对象的外链数组的空间由虚拟机分配，其他情况的外链数组的空间<a href="http://hg.mozilla.org/mozilla-central/file/f550b112a19b/js/src/gc/Nursery.cpp#l582">由 <code>malloc</code> 分配</a>（因此内存会比较分裂？）。<code>ObjectImpl</code> 除了有连接到 <code>Shape</code> 的指针之外，还有一个链到 <code>TypeObject</code> 的指针：16 B（<code>ObjectImpl</code>）vs. 12 B（<code>JSObject</code>）。在 SpiderMonkey 中，数据用 <code>Value</code> 存，也就是说，对于一个有 <em>k</em> 个行内属性的 JS 对象来说，内存占用是：16 B + <em>k</em> * 8 B（<code>ObjectImpl</code>）vs. 12 B + <em>k</em> * 4 B（<code>JSObject</code>），行外的情形 V8 则会再多用 8 B（<code>FixedArray</code> 的标头）。</td>
+  </tr>
+  <tr>
+   <td><span style="white-space: nowrap;"><a href="http://hg.mozilla.org/mozilla-central/file/f550b112a19b/js/src/vm/Shape.h#l37" title="src/vm/Shape.h:js::Shape"><code>Shape</code></a>、<code><a href="http://hg.mozilla.org/mozilla-central/file/f550b112a19b/js/src/jsinfer.h#l868" title="src/jsinfer.h:js::types::TypeObject">TypeObject</a>、</code><a href="http://hg.mozilla.org/mozilla-central/file/73eefb421e2a/js/public/Class.h#l590" title="public/Class.h::js::Class"><code>Class</code></a></span></td>
+   <td><a href="http://code.google.com/p/v8/source/browse/branches/bleeding_edge/src/objects.h?r=19048#5769" title="src/objects.h:v8::internal::Map"><code>Map</code></a></td>
+   <td>隐藏类的实现类。在 SpiderMonkey 中，属性名存在 <code>Shape</code> 上（因此带有 V8 的 <code>DescriptorArray</code> 的作用），JS 对象的原型存在 <code>TypeObject</code> 上，特殊属性的处理方法存在 <code>Class</code> 上（<code>Class</code> 对象不是 JS 堆里的对象，大部分都共用：<code>JSObject::class_</code>、<code>JSFunction::class_……</code>）。由于 V8 的 <code>Map</code> 有 SM 三个类的作用，因此占用内存也比较多：24 B（<code>Shape</code>）vs. 40 B（<code>Map</code>）。</td>
+  </tr>
+ </tbody>
+</table>
+<h3 id="内存布局与对象创建">内存布局与对象创建</h3>
+<h3 id="运行时">运行时</h3>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">SpiderMonkey</th>
+   <th scope="col">V8</th>
+   <th scope="col">备注</th>
+  </tr>
+  <tr>
+   <td><code>Interpret</code></td>
+   <td><code style="white-space: nowrap;">（无）</code></td>
+   <td>解释器的主回圈。V8 没有字节码与解释器。</td>
+  </tr>
+ </tbody>
+</table>
+<h3 id="堆与_GC">堆与 GC</h3>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">SpiderMonkey</th>
+   <th scope="col">V8</th>
+   <th scope="col">备注</th>
+  </tr>
+  <tr>
+   <td><code>Nursery</code></td>
+   <td><code style="white-space: nowrap;">NewSpace</code></td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="调优">调优</h2>
+<p>一个容易调优的 JS 引擎应该具备有以下条件（从重要的到不重要的）：</p>
+<ul>
+ <li>能透过 profiler 够找到应用的热点函数（当前内联过的函数是怎么处理的？）。</li>
+ <li>调整各个常量方便。</li>
+ <li>能（透过内置函数扩展等等）得到以下影响性能的数据：
+  <ul>
+   <li>内联缓存（inline cache）中缓存的隐藏类个数。</li>
+   <li>函数运行状态（哪个阶段的 JIT？）与机械码。</li>
+   <li>一个 JS 函数已内联的函数。</li>
+   <li>一个 JS 函数调用运行时 C++ 函数的个数。</li>
+   <li>一段时间中 CPU 运行的指令个数与种类（SpiderMonkey 里有个 <code>PerfMeasurement</code>，这个好用么？）。</li>
+  </ul>
+ </li>
+ <li>能得到 bailout 的原因。</li>
+ <li>代码易读，容易调试。</li>
+</ul>
+<h2 id="参见">参见</h2>
+<ul>
+ <li><a href="http://arewefastyet.com/">ARE WE FAST YET</a> — 每天更新的 JS 引擎性能比较（使用 kraken、sunspider、octane 三个 benchmark）。</li>
+ <li><a href="http://openaphid.github.io/blog/2013/01/17/part-i-how-to-choose-a-javascript-engine-for-ios-and-android-apps/">How to Choose a JavaScript Engine for iOS and Android Development</a> — 不太具有技术分析的文章，不过有一个各类似 Phonegap 的产品用什么 JS 引擎的列表。</li>
+ <li><a href="http://hllvm.group.iteye.com/group/topic/37596">各JavaScript引擎的简介，及相关资料/博客收集帖</a> — R 大经典的整理帖，下面有一个比较高层级的各引擎比较表。</li>
+</ul>
+<p>跟 “JS 引擎” 比较无关，但是中文的 JS 引擎相关的博文也比较少，这里搜集一下：</p>
+<ul>
+ <li><a href="http://hellocompiler.com/">编译路慢慢</a> — SpiderMonkey 相关的比较多。</li>
+</ul>
+<h2 id="代码美观">代码美观</h2>
+<p><em>这件事实在</em><em>不应该是决定使用哪个 JS 引擎的因素，不过……</em></p>
+<p>如果（不幸的）需要以 SpiderMonkey 作为基础调优则会碰到以下问题：</p>
+<ol>
+ <li>C 与 C++ 代码混用。SpiderMonkey 原先是 C 写成的，后来大规模的以 C++ 改进，但是留下了很多残骸：宏、不是宏但是名称是大写的函数。（参见 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_Reference/JS::Value"><code>JS::Value</code></a> 的说明。）</li>
+ <li>成员变量、方法命名缺乏规则<code>。ObjectImpl::slots</code> 与 <code>ObjectImpl::shape_</code> 同时存在（前面那个应该加底线）。这个或许是可以修复的 bug。</li>
+ <li>混入 JavaScriptCore、V8 代码。SpiderMonkey 的组译器是 JavaScriptCore 的，那些类的成员变量是 <code>m_buffer</code> 等等，又增加了成员变量命名的。另外还有 <code>WTF_*</code> 宏，真是 WTF。再批。妈的，<a href="http://hg.mozilla.org/mozilla-central/file/262e73a6b7cd/js/src/assembler/wtf/Platform.h#l344"><code>WTF_CPU_ARM_THUMB2</code> 跟本不可能为真</a>，这里有大量的死代码（所有代码完全没有用到 <code>JSC::</code><code>MacroAssembler</code>，用到的是 <code>js::jit::</code><code><code>MacroAssembler</code></code>）。另外，</li>
+ <li>混乱的名称空间。</li>
+ <li><code>struct</code>、<code>class</code> 混用。</li>
+ <li>文档命名缺少规则。C 时代的档名是 <code>jsobj.h</code>，C++ 时代的档名是 <code>Value.h</code> 。请自重。</li>
+ <li>过渡滥用宏。</li>
+</ol>

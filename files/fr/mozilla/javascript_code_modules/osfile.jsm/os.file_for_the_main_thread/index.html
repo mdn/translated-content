@@ -1,0 +1,1159 @@
+---
+title: OS.File pour le thread principal
+slug: Mozilla/JavaScript_code_modules/OSFile.jsm/OS.File_for_the_main_thread
+translation_of: Mozilla/JavaScript_code_modules/OSFile.jsm/OS.File_for_the_main_thread
+---
+<p>Cette page explique comment utiliser File I/O depuis le thread principal. Pour d'autres utilisations de OS.File, voir <a href="/fr/docs/JavaScript_OS.File" title="/fr/docs/JavaScript_OS.File">OS.File</a>.</p>
+
+<h2 id="Utilisation_d'OS.File_depuis_le_thread_principal">Utilisation d'OS.File depuis le thread principal</h2>
+
+<p>Pour importer OS.File dans votre code chrome, ajoutez les ligne suivante au début de votre script:</p>
+
+<pre><code class="brush: js">Components.utils.import("<a rel="freelink">resource://gre/modules/osfile.jsm"</a>);</code></pre>
+
+<p>Pour importer OS.File dans votre code main.js, ajoutez les lignes suivantes au début de votre script:</p>
+
+<pre><code class="brush: js"><code><span class="kwd">const</span><span class="pln"> </span><span class="pun">{</span><span class="typ">Cu</span><span class="pun">}</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">require</span><span class="pun">(</span><span class="str">"chrome"</span><span class="pun">);
+
+// To read content from file</span><span class="pln">
+</span><span class="kwd">const</span><span class="pln"> </span><span class="pun">{</span><span class="typ">TextDecoder</span><span class="pun">,</span><span class="pln"> OS</span><span class="pun">}</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Cu</span><span class="pun">.</span><span class="kwd">import</span><span class="pun">(</span><span class="str">"resource://gre/modules/osfile.jsm"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{});
+
+<code class="brush: js"><code><span class="kwd">// To read &amp; write content to file
+const</span><span class="pln"> </span><span class="pun">{</span><span class="typ"><code class="brush: js"><code><span class="typ">TextDecoder</span><span class="pun">,</span><span class="pln"> </span></code></code>TextEncoder</span><span class="pun">,</span><span class="pln"> OS</span><span class="pun">}</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Cu</span><span class="pun">.</span><span class="kwd">import</span><span class="pun">(</span><span class="str">"resource://gre/modules/osfile.jsm"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{});</span></code></code></span></code></code></pre>
+
+<h3 id="Promises">Promises</h3>
+
+<p>Avant d'utiliser OS.File depuis le thread principal, vous avez besoin d'une certaine compréhension de la bibliothèque <a href="https://developer.mozilla.org/fr/Add-ons/SDK/Low-Level_APIs/core_promise" title="https://developer.mozilla.org/fr/Add-ons/SDK/Low-Level_APIs/core_promise">Promise</a>.</p>
+
+<p>Voir la <a href="/fr/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="/fr/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise"> documentation object <code>Promise</code></a> pour plus de détails.</p>
+
+<p>OS.File fonctionne très bien avec <a href="/fr/docs/Mozilla/JavaScript_code_modules/Task.jsm" title="/fr/docs/Mozilla/JavaScript_code_modules/Task.jsm">Task.jsm</a>.</p>
+
+<h3 id="Exemple_Lire_le_contenu_d'un_fichier_sous_forme_de_texte">Exemple: Lire le contenu d'un fichier sous forme de texte</h3>
+
+<p>L'extrait suivant ouvre un fichier "file.txt" et lit son contenu sous forme de chaîne, en utilisant l'encodage par défaut (utf-8).</p>
+
+<p>Le contenu est lu de manière asynchrone. Le résultat est une <a href="/fr/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="/fr/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise">Promise</a>.</p>
+
+<pre class="brush: js">let decoder = new TextDecoder();        // This decoder can be reused for several reads
+let promise = OS.File.read("file.txt"); // Read the complete file as an array
+promise = promise.then(
+  function onSuccess(array) {
+    return decoder.decode(array);        // Convert this array to a text
+  }
+);
+</pre>
+
+<div class="note">Cet exemple nécessite Firefox 18 ou une version plus récente.</div>
+
+<h3 id="Exemple_Ecrire_une_chaîne_dans_un_fichier">Exemple: Ecrire une chaîne dans un fichier</h3>
+
+<p>L'extrait suivant écrit le texte "Ceci est un texte" sous forme de chaîne dans "file.txt", en utilisant l'encodage par défaut (utf-8). Il utilise une écriture atomique pour veiller à ce que le fichier ne soit pas modifiée si, pour une raison quelconque, l'écriture ne peut pas se réaliser complètement (généralement parce que l'ordinateur est éteint, la batterie est épuisée, ou l'application est arrêtée.)</p>
+
+<pre class="brush: js">let encoder = new TextEncoder();                                   // This encoder can be reused for several writes
+let array = encoder.encode("This is some text");                   // Convert the text to an array
+let promise = OS.File.writeAtomic("file.txt", array,               // Write the array atomically to "file.txt", using as temporary
+    {tmpPath: "file.txt.tmp"});                                    // buffer "file.txt.tmp".
+
+</pre>
+
+<p>La variante suivante fait la même chose, mais échouera si "file.txt" existe déjà:</p>
+
+<pre class="brush: js">let encoder = new TextEncoder();                                   // This encoder can be reused for several writes
+let array = encoder.encode("This is some text");                   // Convert the text to an array
+let promise = OS.File.writeAtomic("file.txt", array,               // Write the array atomically to "file.txt", using as temporary
+    {tmpPath: "file.txt.tmp", noOverwrite: true});                 // buffer "file.txt.tmp".
+
+</pre>
+
+<div class="note">Ces exemples nécessitent Firefox 19 ou une version plus récente.</div>
+
+<h3 id="Exemple_Renommer_un_fichier">Exemple: Renommer un fichier</h3>
+
+<p>Vous pouvez utiliser <code>OS.File.move</code> pour renommer un fichier:</p>
+
+<pre class="brush: js">let promise = OS.File.move("oldname.txt", "newname.txt", {noOverwrite:true});</pre>
+
+<p>Voici un exemple qui a rebaptise <code>test.txt</code> en <code>testRenamed.txt</code> si le fichier se trouve dans le répertoire <code>C:\Jean\</code></p>
+
+<pre class="brush: js">var promise = OS.File.move(OS.Path.join('C:', 'Jean', 'test.txt'), OS.Path.join('C:', 'Jean', 'testRenamed.txt'));
+promise.then(
+    function() {
+       console.log('rename successful')
+    },
+    function(aRejectReason) {
+       console.log('rename failed, aRejectReason = ', aRejectReason)
+    }
+)</pre>
+
+<p><code>noOverwrite: true</code> est important, (par défaut <code>false</code>) si un fichier avec le même nom existe déjà dans le répertoire, il ne sera plus là après cette opération "renommer", qui est un "mouvement".</p>
+
+<h3 id="Exemple_Copier_un_fichier">Exemple: Copier un fichier</h3>
+
+<p>The following snippet copies file "oldname.txt" to "newname.txt". On most operating systems, this operation is handled directly by the operating system itself, which makes it as fast as possible.</p>
+
+<pre class="brush: js">let promise = OS.File.copy("oldname.txt", "newname.txt");</pre>
+
+<div class="note">This example requires Firefox 16 or a more recent version.</div>
+
+<h3 id="Exemple_Manipulation_de_chemin">Exemple: Manipulation de chemin</h3>
+
+<p>The following snippet obtains the path to file "sessionstore.js", contained in the user's profile directory.</p>
+
+<pre class="brush: js">let sessionstore = OS.Path.join(OS.Constants.Path.profileDir, "sessionstore.js");
+   // Under Linux, this is generally "$HOME/.firefox/Profiles/$PROFILENAME/sessionstore.js"
+   // Under MacOS, this is generally "$HOME/Library/Application Support/Firefox/$PROFILENAME/sessionstore.js"
+   // Under Windows, this is generally "%APPDATA%\Local\temp\%PROFILENAME%"\sessionstore.js
+   // etc.
+
+</pre>
+
+<h3 id="Exemple_Déterminer_si_un_fichier_est_un_répertoire">Exemple: Déterminer si un fichier est un répertoire</h3>
+
+<p>The following snippet determines if some path represents a file or a directory:</p>
+
+<pre class="brush: js">let promise = OS.File.stat(somePath);
+promise = promise.then(
+  function onSuccess(stat) {
+    if (stat.isDir) {
+      // The path represents a directory
+    } else {
+      // The path represents a file, not a directory
+    }
+  },
+  function onFailure(reason) {
+    if (reason instanceof OS.File.Error &amp;&amp; reason.becauseNoSuchFile) {
+      // The file does not exist
+    } else {
+      // Some other error
+      throw reason;
+    }
+  }
+);
+</pre>
+
+<h3 id="Exemple_copier_un_fichier_par_morceaux">Exemple: copier un fichier par morceaux</h3>
+
+<p>The following snippet writes a (presumably large) buffer by chunks. Note that this snippet is useful as a demonstration of complex asynchronous programming with OS.File – in most cases, function <code>OS.File.writeAtomic</code> is a better choice.</p>
+
+<pre class="brush: js">let writeStream = function writeStream(data, outFile, chunkSize) {
+  let view = new Uint8Array(data);
+
+  let loop = function loop(pos) {                                         // Define a recursive asynchronous loop.
+    if (pos &lt;= view.byteLength) {  // Note: Should this be pos &gt;= view.byteLength ?
+      return Promise.resolve(true);                                       // Loop end.
+    }
+    let promise = file.write(view.subarray(pos, chunkSize));              // Write a subset of |data|
+    return promise.then(function onSuccess(bytes) {
+      return loop(pos + bytes);                                           // ... and loop.
+    });
+  };
+
+  let promise = loop(0);                                                  // Enter the loop.
+
+  promise = promise.then(function onSuccess() {                           // Once loop is complete, finalize.
+    file.close();
+  }, function onError(reason) {
+    file.close();
+    throw reason;
+  });
+  return promise;
+}
+</pre>
+
+<p>Or a variant using <a class="external" href="http://taskjs.org/" title="http://taskjs.org/">Task.js</a> (or at least <a class="external" href="http://dxr.mozilla.org/mozilla-central/source/toolkit/modules/Task.jsm" title="http://dxr.mozilla.org/mozilla-central/toolkit/content/Task.jsm.html">the subset already present on mozilla-central</a>):</p>
+
+<pre class="brush: js">let writeStream = function writeStream(data, outFile, chunkSize) {
+  return Task.spawn(function() {
+    let view = new Uint8Array(data);
+    let pos = 0;
+    while (pos &lt; view.byteLength) {
+      pos += yield outFile.write(view.subarray(pos, chunkSize));
+    }
+    outFile.close();
+  }).then(
+    null,
+    function onFailure(reason) {
+      outFile.close();
+      throw reason;
+    }
+  );
+}
+</pre>
+
+<h3 id="Exemple_Enregistrer_un_canvas_sur_le_disque">Exemple: Enregistrer un canvas sur le disque</h3>
+
+<p>This exmaple uses <code>Image </code>to load an image from a path (note: if your path is a file on disk you must use local file; this is accomplished with <code>OS.Path.toFileURI</code>, which accepts a string). After image loads it then draws it to <code>canvas</code>, makes it a <code>blob</code>, and uses <code>FileReader</code> to turn it into <code>ArrayBuffer(View)</code>, then uses OS.File.writeAtomic to save to disk.</p>
+
+<pre class="brush: js">var img = new Image();
+img.onload = function() {
+    var canvas = document.createElementNS('http://www.w3.org/1999/xhtml', 'canvas');
+    canvas.width = img.naturalWidth;
+    canvas.height = img.naturalHeight;
+    var ctx = canvas.getContext('2d');
+    ctx.drawImage(img, 0, 0);
+    (canvas.toBlobHD || canvas.toBlob).call(canvas, function(b) {
+        var r = <code class="language-html">Cc['@mozilla.org/files/filereader;1'].createInstance(Ci.nsIDOMFileReader); </code>//new FileReader();
+        r.onloadend = function() {
+            // r.result contains the ArrayBuffer.
+            var writePath = OS.Path.join(OS.Constants.Path.desktopDir, 'savedImage.png');
+            var promise = OS.File.writeAtomic(writePath, new Uint8Array(r.result), { tmpPath: writePath + '.tmp' });
+            promise.then(
+                function(aVal) {
+                    console.log('successfully saved image to disk');
+                },
+                function(aReason) {
+                    console.log('writeAtomic failed for reason:', aReason);
+                }
+            );
+        };
+        r.readAsArrayBuffer(b);
+    }, 'image/png');
+};
+//var path = OS.Path.toFileURI(OS.Path.join(OS.Contants.Path.desktopDir, 'my.png')); //do it like this for images on disk
+var path = 'https://mozorg.cdn.mozilla.net/media/img/firefox/channel/toggler-beta.png?2013-06'; //do like this for images online
+img.src = path;
+</pre>
+
+<h3 id="Exemple_Ajouter_au_fichier">Exemple: Ajouter au fichier</h3>
+
+<p>This example shows how to use <code>open</code>, <code>write</code>, and <code>close</code> to append to a file. If the file does not exist, it is created. At the time of this writing, <code>write</code> does not support <code>encoding</code> option so the text to be written has to be encoded with <code>TextEncoder</code>. This example also shows the resolve value of open (an instance of OS.File, this is a file, so you can do any of the methods on it found <a href="#OS.File.prototype.close">here</a>), <code>write</code> (a number indicating bytes written), and <code>close</code> (<code>undefined</code>, meaning there is no resolve value).</p>
+
+<pre class="brush: js"><code>var pth = OS.Path.join(OS.Constants.Path.desktopDir, 'app.txt');
+OS.File.open(pth, {write: true, append: true}).then(valOpen =&gt; {
+    console.log('valOpen:', valOpen);
+    var txtToAppend = '</code>append some text <code>\n';
+    var txtEncoded = TextEncoder().encode(txtToAppend);
+    valOpen.write(txtEncoded).then(valWrite =&gt; {
+        console.log('valWrite:', valWrite);
+        valOpen.close().then(valClose =&gt; {
+            console.log('valClose:', valClose);
+            console.log('successfully appended');
+        });
+    });
+});</code></pre>
+
+<h2 id="Objet_Global_OS.File">Objet Global OS.File</h2>
+
+<h3 id="Aperçu_des_Méthodes">Aperçu des Méthodes</h3>
+
+<table>
+ <tbody>
+  <tr>
+   <td><code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise">Promise</a>&lt;File&gt; <a href="#OS.File.open" title="#OS.File.open">open</a>(in string path, [optional] in object mode, [optional] in object options);</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise">Promise</a>&lt;object&gt; <a href="#OS.File.openUnique" title="#OS.File.openUnique">openUnique</a>(in string path, [optional] in object options);</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise">Promise</a>&lt;void&gt; <a href="#OS.File.copy" title="#OS.File.copy">copy</a>(in string sourcePath, in string destPath, [optional] in object options);</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise">Promise</a>&lt;bool&gt; <a href="#OS.File.exists" title="#OS.File.exists">exists</a>(in string path);</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise">Promise</a>&lt;string&gt; <a href="#OS.File.getCurrentDirectory" title="#OS.File.getCurrentDirectory">getCurrentDirectory</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise">Promise</a>&lt;void&gt; <a href="#OS.File.makeDir" title="#OS.File.makeDir">makeDir</a>(in string path, [optional] in object options);</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise">Promise</a>&lt;void&gt; <a href="#OS.File.move" title="#OS.File.move">move</a>(in string sourcePath, in string destPath);</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise">Promise</a>&lt;<a href="/en-US/docs/Web/API/Uint8Array">Uint8Array</a>&gt; <a href="#OS.File.read" title="#OS.File.read">read</a>(in string path, [optional] in object options);</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise">Promise</a>&lt;void&gt; <a href="#OS.File.remove" title="#OS.File.remove">remove</a>(in string path, [optional] in object options);</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise">Promise</a>&lt;void&gt; <a href="#OS.File.removeEmptyDir" title="#OS.File.removeEmptyDir">removeEmptyDir</a>(in string path, [optional] in object options);</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise">Promise</a>&lt;void&gt; <a href="#OS.File.removeDir" title="#OS.File.removeDir">removeDir</a>(in string path, [optional] in object options);</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise">Promise</a>&lt;void&gt; <a href="#OS.File.setCurrentDirectory" title="#OS.File.setCurrentDirectory">setCurrentDirectory</a>(in string path);</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise">Promise</a>&lt;void&gt; <a href="#OS.File.setDates">setDates</a>(in string path, in Date|number accessDate, in Date|number modificationDate);</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise">Promise</a>&lt;void&gt; <a href="#OS.File.setPermissions">setPermissions</a>(in string path, </code> <code>in object options</code> <code>);</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise">Promise</a>&lt;<a href="/en-US/docs/JavaScript_OS.File/OS.File.Info" title="/en-US/docs/JavaScript_OS.File/OS.File.Info">File.Info</a>&gt; <a href="#OS.File.stat" title="#OS.File.stat">stat</a>(in string path, [optional] in object options);</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise">Promise</a>&lt;void&gt; <a href="#OS.File.unixSymLink" title="#OS.File.unixSymLink">unixSymLink</a>(in string targetPath, in string createPath);</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise">Promise</a>&lt;void&gt; <a href="#OS.File.writeAtomic" title="#OS.File.writeAtomic">writeAtomic</a>(in string path, in ArrayView data, in object options);</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Methods">Methods</h3>
+
+<h4 id="OS.File.open()">OS.File.open()<a name="OS.File.open"></a></h4>
+
+<p>Use method <code>OS.File.open()</code> to open a file.</p>
+
+<pre class="brush:js;">Promise&lt;File&gt; open(
+  in string path,
+  [optional] in object mode,
+  [optional] in object options
+)
+</pre>
+
+<h5 id="Arguments">Arguments</h5>
+
+<dl>
+ <dt><code>path</code></dt>
+ <dd>The full native name of the file to open.</dd>
+ <dt><code>mode</code> {{optional_inline()}}</dt>
+ <dd>The opening mode for the file, as an object that may contain a subset of the following fields:
+ <dl>
+  <dt><code>read</code></dt>
+  <dd>If <code>true</code>, the file will be opened for reading. Depending on other fields, it may also be opened for writing.</dd>
+  <dt><code>write</code></dt>
+  <dd>If <code>true</code>, the file will be opened for writing. Depending on other fields, it may also be opened for reading.</dd>
+  <dd>
+  <div class="note">Prior to Gecko 27, unless <code>create</code> or <code>truncate</code> are set or explicit <code>unixFlags</code> are given, the file will be opened for appending on Unix/Linux. However, the file is not opened for appending on Windows. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=924858">bug 924858</a>. Starting with Gecko 27, you may use the <code>append</code> flag instead. For an example using append see <a href="#Example: Append to File">here</a>.</div>
+  </dd>
+  <dt><code>truncate</code> | <code>trunc</code></dt>
+  <dd>If <code>true</code>, the file will be opened for writing. If the file does not exist, it will be created. If the file exists, its contents will be removed. Cannot be used with <code>create</code>.</dd>
+  <dt><code>create</code></dt>
+  <dd>If <code>true</code>, file will be opened for writing. The file must not exist. If the file already exists, throw an error. Cannot be used with <code>truncate</code> or <code>existing</code>.</dd>
+  <dt><code>existing</code></dt>
+  <dd>If <code>true</code>, the file must already exist. If the file does not exist, throw an error. Cannot be used with <code>create</code>.</dd>
+  <dt><code>append</code></dt>
+  <dd>If<code> true</code>, the file will be opened for appending, meaning the equivalent of <code>.setPosition(0, POS_END)</code> is executed before each write. The default is <code>true</code>, i.e. opening a file for appending. Specify <code>append: false</code> to open the file in regular mode.</dd>
+ </dl>
+ </dd>
+ <dt><code>options</code> {{optional_inline()}}</dt>
+ <dd>Platform-specific options for opening the file. <strong>For advanced users only. Most users will never have need of these options.</strong> To specify options, pass an object that may contain some of the following flags:
+ <dl>
+  <dt><code>unixFlags</code></dt>
+  <dd>(ignored under non-Unix platforms) If specified, file opening flags, as per libc function <code>open</code>. If unspecified, build these flags from the contents of <code>mode</code>. You can build these flags from values <a href="/en/JavaScript_OS.Constants#libc_opening_files" title="en/JavaScript_OS.Constants#libc_opening_files">OS.Constants.libc.O_*</a>.</dd>
+  <dt><code>unixMode</code></dt>
+  <dd>(ignored under non-Unix platforms) If specified, file creation mode, as per libc function <code>open</code>. If unspecified, files are created with a default mode of 0600 (file is private to the user, the user can read and write). You can build this mode from values <a href="/en/JavaScript_OS.Constants#libc_opening_files" title="en/JavaScript_OS.Constants#libc_opening_files"><code>OS.Constants.libc.S_I*</code></a>.</dd>
+  <dt><code>winShare</code></dt>
+  <dd>(ignored under non-Windows platforms) If specified, a sharing policy, as per Windows function <code>CreateFile</code>. If unspecified, files are opened with a default sharing policy (file is not protected against being read/written/removed by another process or another use in the same process). You can build this policy from constants OS.Constants.Win.FILE_SHARE_*.</dd>
+  <dt><code>winSecurity</code></dt>
+  <dd>(ignored under non-Windows platforms) If specified, a security policy, as per Windows function <code>CreateFile</code>. If unspecified, no security attributes.</dd>
+  <dt><code>winAccess</code></dt>
+  <dd>(ignored under non-Windows platforms) If specified, access mode, as per Windows function <code>CreateFile</code>. This also requires option <code>winDisposition</code> and this replaces argument <code>mode</code>. If unspecified, value is built from <code>mode</code>.</dd>
+  <dt><code>winDisposition</code></dt>
+  <dd>(ignored under non-Windows platforms) If specified, disposition mode, as per Windows function <code>CreateFile</code>. This also requires option <code>winAccess</code> and this replaces argument <code>mode</code>. If unspecified, value is built from <code>mode</code>.</dd>
+ </dl>
+ </dd>
+</dl>
+
+<h5 id="Promise_resolves_to">Promise resolves to</h5>
+
+<p>An instance of <code>OS.File</code> representing the expected file.</p>
+
+<div class="warning">Note that the operating system limits the number of files that can be opened simultaneously by one process, so do not forget to <a href="/OS.File.prototype.close" title="OS.File.prototype.close"><code>close</code></a> that file once you have finished it, to ensure that you are not blocking the rest of the process.</div>
+
+<p>When opening files for writing, they will be opened for appending unless you specify <code>append: false</code> in Gecko 27 and later. In Gecko 26 and earlier, on platforms other than Windows, the files will be opened for appending unless you specify explicit <code>unixFlags</code> or open the file with either <code>create</code> or <code>truncate</code> flags. In Gecko 26 and earlier on Windows, files will never be opened for appending.</p>
+
+<p>To open an existing file for writing <em>without</em> appending in a compatible way on all platforms in both Gecko 27 and later and Gecko 26 and earlier, you should specify both the <code>append</code> flag and <code>unixFlags</code>.</p>
+
+<pre class="brush:js;  language-js">// Open a file for writing without appending to it.
+
+Task.spawn(function() {
+  // Under Unix, you'll have to specify your own unixFlags for Gecko &lt; 27 to avoid append mode.
+  var options = {};
+  if (OS.Constants.libc) {
+    // Own flags omitting O_APPEND, e.g.
+    options.unixFlags = OS.Constants.libc.O_CREAT | OS.Constants.libc.O_WRONLY;
+  }
+  // For Gecko &gt;= 27, it is enough, but crucial, to set the correct append flag.
+  var outfile = yield OS.File.open("file.tmp", {write: true, append: false}, options);
+  try {
+    // ... do something with that file
+  } finally {
+    yield outfile.close();
+  }
+});</pre>
+
+<h5 id="Example_of_opening_file_and_keeping_it_locked">Example of opening file and keeping it locked</h5>
+
+<p>This uses Tasks.jsm to open a file and keep it open. When you are done with it, like in shutdown of restartless add-on, you should close the file so it becomes editable again.</p>
+
+<pre class="brush:js;  language-js">let options = {
+  winShare: 0 // Exclusive lock on Windows
+};
+if (OS.Constants.libc.O_EXLOCK) {
+  // Exclusive lock on *nix
+  options.unixFlags = OS.Constants.libc.O_EXLOCK;
+}
+let file = yield OS.File.open(..., options);</pre>
+
+<p>Then when you want to unlock the file so it can be edited from other places, close the file.</p>
+
+<pre class="brush:js;  language-js">file.close();</pre>
+
+<p>This example is from Stackoverflow: <a href="http://stackoverflow.com/questions/24462115/os-file-check-last-modified-date-before-os-read#24463662">OS.File check last modified date before OS.read</a></p>
+
+<h4 id="OS.File.openUnique()">OS.File.openUnique()<a name="OS.File.openUnique"></a></h4>
+
+<p>Creates and opens a file with a unique name. By default, generate a random hex number and use it to create a unique new file name.</p>
+
+<pre>Promise&lt;object&gt; openUnique(
+  in string path,
+  [optional] in object options
+) throws <a href="/en-US/docs/JavaScript_OS.File/OS.File.Error" title="/en-US/docs/JavaScript_OS.File/OS.File.Error">OS.File.Error</a></pre>
+
+<h5 id="Arguments_2">Arguments</h5>
+
+<dl>
+ <dt><code>path</code></dt>
+ <dd>The full native name of the file to open.</dd>
+ <dt><code>options</code> {{optional_inline()}}</dt>
+ <dd>Additional options for file opening. This implementation interprets the following fields:
+ <dl>
+  <dt><code>humanReadable</code></dt>
+  <dd>If <code>true</code>, create a new filename appending a decimal number, e.g., filename-1.ext, filename-2.ext. If <code>false</code> use hex numbers, e.g., filename-A65BC0.ext.</dd>
+  <dt><code>maxAttempts</code></dt>
+  <dd>Used to limit the amount of tries after a failed file creation. Default is 99.</dd>
+ </dl>
+ </dd>
+</dl>
+
+<h5 id="Promise_resolves_to_2">Promise resolves to</h5>
+
+<p>An object contains a file object{file} and the path{path}.</p>
+
+<h5 id="Promise_can_be_rejected_with">Promise can be rejected with</h5>
+
+<dl>
+ <dt><code><a href="/en-US/docs/JavaScript_OS.File/OS.File.Error" title="/en-US/docs/JavaScript_OS.File/OS.File.Error">OS.File.Error</a></code></dt>
+ <dd>If the file could not be opened.</dd>
+</dl>
+
+<h4 id="OS.File.copy()">OS.File.copy()<a name="OS.File.copy"></a></h4>
+
+<p>Copy a file.</p>
+
+<pre>void copy(
+  in string sourcePath,
+  in string destPath
+  [optional] in object options)
+throws <a href="/en-US/docs/JavaScript_OS.File/OS.File.Error" title="/en-US/docs/JavaScript_OS.File/OS.File.Error">OS.File.Error</a>
+</pre>
+
+<h5 id="Arguments_3">Arguments</h5>
+
+<dl>
+ <dt><code>sourcePath</code></dt>
+ <dd>The full path of the file to copy. At the time of this writing, this function does <strong>not</strong> copy directories.</dd>
+ <dt><code>destPath</code></dt>
+ <dd>The full path of the destination. Note that this is not a directory but a file.</dd>
+ <dt><code>options</code> {{optional_inline()}}</dt>
+ <dd>An optional object used to control the behavior of this function. You may pass an object with a subset of the following fields:</dd>
+ <dt style="margin-left: 40px;"><code>noOverwrite</code></dt>
+ <dd style="margin-left: 40px;">If <code>destPath</code> already exists, do not overwrite it, but rather launch an exception.</dd>
+</dl>
+
+<h5 id="Promise_can_be_rejected_with_2">Promise can be rejected with</h5>
+
+<dl>
+ <dt><code><a href="/en-US/docs/JavaScript_OS.File/OS.File.Error" title="/en-US/docs/JavaScript_OS.File/OS.File.Error">OS.File.Error</a></code></dt>
+ <dd>In case of any error, in particular if the file does not exist.</dd>
+</dl>
+
+<div class="note"><strong>Performance notes</strong>
+
+<ul>
+ <li>To avoid erasing the destination file, it is much faster to use option <code>noOverwrite</code> than to check manually whether the file exists.</li>
+ <li>This operation is OS-optimized under OS X (native operation <code>copyfile</code>), Linux/Android (native operation <code>splice</code>), and Windows (native operation <code>CopyFile</code>).</li>
+</ul>
+</div>
+
+<h4 id="OS.File.exists()">OS.File.exists()<a name="OS.File.exists"></a></h4>
+
+<p>Determine whether a file exists</p>
+
+<pre class="brush: js">Promise&lt;bool&gt; exists(
+  in string path
+)
+</pre>
+
+<h5 id="Arguments_4">Arguments</h5>
+
+<dl>
+ <dt><code>path</code></dt>
+ <dd>The name of the file</dd>
+</dl>
+
+<h5 id="Promise_resolves_to_3">Promise resolves to</h5>
+
+<p>true if the file exists, false otherwise</p>
+
+<div class="note"><strong>Performance note: </strong>For the sake of performance, you should avoid this function whenever possible. For instance, rather than calling exists() to determine if a directory should be created with makeDir, you should rather create the directory with makeDir and catch the error if the directory exists. This will ensure that you only need to perform one I/O operation rather than two.</div>
+
+<h4 id="OS.File.getCurrentDirectory()">OS.File.getCurrentDirectory()<a name="OS.File.getCurrentDirectory"></a></h4>
+
+<p>Return the current directory</p>
+
+<pre class="brush: js">Promise&lt;string&gt; getCurrentDirectory()</pre>
+
+<h5 id="Promise_resolves_to_4">Promise resolves to</h5>
+
+<p>The path to the current directory.</p>
+
+<div class="note">
+<p><strong>Safety note:</strong> Recall that the current directory can change during the execution of the process. Therefore, the information returned by this function may be false by the time you receive it.</p>
+</div>
+
+<h4 id="OS.File.makeDir()">OS.File.makeDir()<a name="OS.File.makeDir"></a></h4>
+
+<p>Create a new directory</p>
+
+<pre>Promise&lt;void&gt; makeDir(
+  in string path,
+  [optional] in object options
+) throws <a href="/en-US/docs/JavaScript_OS.File/OS.File.Error" title="/en-US/docs/JavaScript_OS.File/OS.File.Error">OS.File.Error</a></pre>
+
+<h5 id="Arguments_5">Arguments</h5>
+
+<dl>
+ <dt><code>path</code></dt>
+ <dd>The full name of the directory to create.</dd>
+ <dt><code>options</code> {{optional_inline()}}</dt>
+ <dd>Options for creating the directory. To specify options, pass an object that may contain some of the following flags:</dd>
+ <dt style="margin-left: 40px;"><code>ignoreExisting</code></dt>
+ <dd style="margin-left: 40px;">If <code>true</code>, succeed even if the directory already exists (default behavior). Otherwise, fail if the directory already exists. NOTE: If <code>from</code> is specified then even if <code>ignoreExisting</code> is specified as <code>false</code>, it will not fail due to pre-existence of directories, because the <code>from</code> option tells <code>makeDir</code> to make the folders if not found.</dd>
+ <dt style="margin-left: 40px;"><code>unixMode</code></dt>
+ <dd style="margin-left: 40px;">(ignored under non-Unix platforms) If specified, file creation mode, as per libc function mkdir. If unspecified, directories are created with a default mode of 0600 (file is private to the user, the user can read and write). You can build this mode from values <a href="/en/JavaScript_OS.Constants#libc_opening_files" title="en/JavaScript_OS.Constants#libc_opening_files"><code>OS.Constants.libc.S_I*</code></a>.</dd>
+ <dt style="margin-left: 40px;"><code>winSecurity</code></dt>
+ <dd style="margin-left: 40px;">(ignored under non-Windows platforms) If specified, a security policy, as per Windows function <code>CreateDirectory</code>. If unspecified, no security attributes.</dd>
+ <dt style="margin-left: 40px;"><code>from</code></dt>
+ <dd style="margin-left: 40px;">If specified, the call to <code>makeDir</code> creates all the ancestors of <code>path</code> that are descendents of <code>from</code>. Note that <code>from</code> and its existing descendents must be user-writeable and that <code>path</code> must be a descendent of <code>from</code>.</dd>
+</dl>
+
+<h4 id="OS.File.move()">OS.File.move()<a name="OS.File.move"></a></h4>
+
+<p>Move a file.</p>
+
+<pre>Promise&lt;void&gt; move(
+  in string sourcePath,
+  in string destPath
+  [optional] in object options
+)</pre>
+
+<h5 id="Arguments_6"><span>Arguments</span></h5>
+
+<dl>
+ <dt><code>sourcePath</code></dt>
+ <dd>The full path of the file to move. At the time of this writing, the behavior of this function is unspecified if <code>sourcePath</code> is a directory.</dd>
+ <dt><code>destPath</code></dt>
+ <dd>The full path of the destination. At the time of this writing, the behavior of this function is unspecified if <code>destPath</code> is a directory.</dd>
+ <dt><code>options</code> {{optional_inline()}}</dt>
+ <dd>An optional object used to control the behavior of this function. You may pass an object with a subset of the following fields:
+ <dl>
+  <dt><code>noOverwrite</code></dt>
+  <dd>If <code>destPath</code> already exists, do not overwrite it, but rather launch an exception.</dd>
+  <dt><code>noCopy</code></dt>
+  <dd>If moving the file would require a copy (i.e. if the destination path resides on another drive/device/file system as the source path), fail.</dd>
+ </dl>
+ </dd>
+</dl>
+
+<h5 id="Promise_can_be_rejected_with_3">Promise can be rejected with</h5>
+
+<dl>
+ <dt><code><a href="/en-US/docs/JavaScript_OS.File/OS.File.Error" title="/en-US/docs/JavaScript_OS.File/OS.File.Error">OS.File.Error</a></code></dt>
+ <dd>In case of any error, in particular if the file does not exist.</dd>
+</dl>
+
+<div class="note"><strong>Performance note</strong>: This operation is OS-optimized under OS X, Linux/Android, and Windows.</div>
+
+<h4 id="OS.File.read()">OS.File.read()<a name="OS.File.read"></a></h4>
+
+<p>Read the contents of a file</p>
+
+<pre class="brush: js">Promise&lt;Uint8Array&gt; read(
+  in string path,
+  [optional] in number bytes
+)
+</pre>
+
+<h5 id="Arguments_7">Arguments</h5>
+
+<dl>
+ <dt><code>path</code></dt>
+ <dd>The full path to the file to read.</dd>
+ <dt><code>bytes</code> {{optional_inline()}}</dt>
+ <dd>The number of bytes to read. If unspecified, read the complete file.</dd>
+</dl>
+
+<h5 id="Promise_resolves_to_5">Promise resolves to</h5>
+
+<p>An array holding bytes bytes (or less if the file did not contain as many bytes).</p>
+
+<h5 id="Promise_can_be_rejected_with_4">Promise can be rejected with</h5>
+
+<dl>
+ <dt><code><a href="/en-US/docs/JavaScript_OS.File/OS.File.Error" title="/en-US/docs/JavaScript_OS.File/OS.File.Error">OS.File.Error</a></code></dt>
+ <dd>In case of any error, in particular if the file does not exist or if the process does not have the authorization to read it.</dd>
+</dl>
+
+<div class="note">
+<dl>
+ <dt>As of Firefox 30, OS.File.read() takes an options object as second argument.</dt>
+</dl>
+
+<pre class="brush: js">Promise&lt;Uint8Array&gt; read(
+  in string path,
+  [optional] in object options
+)</pre>
+
+<h5 id="Arguments_8">Arguments</h5>
+
+<dl>
+ <dt><code>path</code></dt>
+ <dd>The full path to the file to read.</dd>
+</dl>
+
+<dl>
+ <dt><code>options</code> {{optional_inline()}}</dt>
+ <dd>An optional object used to control the behavior of this function. You may pass an object with a subset of the following fields:
+ <dl>
+  <dt><code>bytes</code></dt>
+  <dd>The number of bytes to read. If unspecified, read the complete file.</dd>
+  <dt><code>encoding</code></dt>
+  <dd>Instead of using <code>TextDecoder</code>, you can supply a string to this option. For example, instead of:
+  <pre class="brush: js">let decoder = new TextDecoder();
+let promise = OS.File.read("file.txt");
+promise = promise.then(
+  function onSuccess(array) {
+    return decoder.decode(array);        // Convert this array to a text
+  }
+);</pre>
+  You can simply do:
+
+  <pre class="brush: js">let promise = OS.File.read("file.txt", { encoding: "utf-8" });
+promise = promise.then(
+  function onSuccess(text) {
+    return text;        // text is a string
+  }
+);</pre>
+  </dd>
+ </dl>
+ </dd>
+</dl>
+</div>
+
+<h4 id="OS.File.remove()">OS.File.remove()<a name="OS.File.remove"></a></h4>
+
+<p>Remove an existing file.</p>
+
+<pre>Promise&lt;void&gt; remove(
+  in string path,
+  [optional] in object options
+)
+</pre>
+
+<h5 id="Arguments_9">Arguments</h5>
+
+<dl>
+ <dt><code>path</code></dt>
+ <dd>A string representing the path of the file to remove. At the time of this writing, this function does <strong>not</strong> remove directories.</dd>
+ <dt>options {{optional_inline()}}</dt>
+ <dd>An optional object used to control the behavior of this function. You may pass an object with a subset of the following fields:</dd>
+ <dt style="margin-left: 40px;"><code>ignoreAbsent</code></dt>
+ <dd style="margin-left: 40px;">Succeed if the file doesn't exist.</dd>
+</dl>
+
+<h5 id="Promise_can_be_rejected_with_5">Promise can be rejected with</h5>
+
+<dl>
+ <dt><code><a href="/en-US/docs/JavaScript_OS.File/OS.File.Error" title="/en-US/docs/JavaScript_OS.File/OS.File.Error">OS.File.Error</a></code></dt>
+ <dd>In case of any error, in particular if the file does not exist.</dd>
+</dl>
+
+<h4 id="OS.File.removeEmptyDir()">OS.File.removeEmptyDir()<a name="OS.File.removeEmptyDir"></a></h4>
+
+<p>Remove an empty directory</p>
+
+<pre class="brush: js">Promise&lt;void&gt; removeEmptyDir(
+  in string path,
+  [optional] in object options
+)
+</pre>
+
+<h5 id="Arguments_10">Arguments</h5>
+
+<dl>
+ <dt><code>path</code></dt>
+ <dd>The complete path to the directory.</dd>
+ <dt>options {{optional_inline()}}</dt>
+ <dd>An optional object used to control the behavior of this function. You may pass an object with a subset of the following fields:</dd>
+ <dt style="margin-left: 40px;"><code>ignoreAbsent</code></dt>
+ <dd style="margin-left: 40px;">Succeed if the directory doesn't exist.</dd>
+</dl>
+
+<h5 id="Promise_can_be_rejected_with_6">Promise can be rejected with</h5>
+
+<dl>
+ <dt><code><a href="/en-US/docs/JavaScript_OS.File/OS.File.Error" title="/en-US/docs/JavaScript_OS.File/OS.File.Error">OS.File.Error</a></code></dt>
+ <dd>In case of any error, in particular if the file does not exist.</dd>
+</dl>
+
+<h4 id="OS.File.removeDir()">OS.File.removeDir()<a name="OS.File.removeDir"></a></h4>
+
+<p>Remove an existing directory and its contents.</p>
+
+<pre>Promise&lt;void&gt; removeDir(
+  in string path,
+  [optional] in object options
+)
+</pre>
+
+<h5 id="Arguments_11">Arguments</h5>
+
+<dl>
+ <dt><code>path</code></dt>
+ <dd>A string representing the name of the file to remove.</dd>
+ <dt><code>options</code></dt>
+ <dd>An object that may contain the following fields</dd>
+ <dt style="margin-left: 40px;"><code>ignoreAbsent</code></dt>
+ <dd style="margin-left: 40px;">If false, this function will throw an error if the directory doesn't exist.</dd>
+ <dt style="margin-left: 40px;"><code>ignorePermissions</code></dt>
+ <dd style="margin-left: 40px;">If true, this function will remove the directory even when lacking write permissions.</dd>
+</dl>
+
+<h5 id="Promise_can_be_rejected_with_7">Promise can be rejected with</h5>
+
+<dl>
+ <dt><code><a href="/en-US/docs/JavaScript_OS.File/OS.File.Error" title="/en-US/docs/JavaScript_OS.File/OS.File.Error">OS.File.Error</a></code></dt>
+ <dd>In case of any error, in particular if path isn't a directory.</dd>
+</dl>
+
+<h4 id="OS.File.setCurrentDirectory()">OS.File.setCurrentDirectory()<a name="OS.File.setCurrentDirectory"></a></h4>
+
+<p>Change the current directory of the process.</p>
+
+<div class="warning"><strong>Use with extreme caution</strong>: This API may be useful for application developers but must not be used by add-ons, as it changes the state of the complete application.</div>
+
+<pre class="brush: js">Promise&lt;void&gt; setCurrentDirectory(
+  in string path
+)</pre>
+
+<h5 id="Arguments_12">Arguments</h5>
+
+<dl>
+ <dt><code>path</code></dt>
+ <dd>The complete path to use as current directory.</dd>
+</dl>
+
+<h5 id="Promise_can_be_rejected_with_8">Promise can be rejected with</h5>
+
+<dl>
+ <dt><code><a href="/en-US/docs/JavaScript_OS.File/OS.File.Error" title="/en-US/docs/JavaScript_OS.File/OS.File.Error">OS.File.Error</a></code></dt>
+ <dd>In case of any error, in particular if the path does not represent an existing directory.</dd>
+</dl>
+
+<h4 id="OS.File.setDates()">OS.File.setDates()<a name="OS.File.setDates"></a></h4>
+
+<p>Set the last access and modification date of the file.</p>
+
+<p>The time stamp resolution is one second at best, but might be worse depending on the platform, file system, etc.</p>
+
+<pre class="brush: js">Promise&lt;void&gt; setDates(
+  in string path,
+  in Date|number accessDate,
+  in Date|number modificationDate
+)</pre>
+
+<h5 id="Arguments_13">Arguments</h5>
+
+<dl>
+ <dt>path</dt>
+ <dd>The complete path to the file.</dd>
+ <dt>accessDate</dt>
+ <dd>The last access date. If numeric, milliseconds since epoch. If omitted or null, the current date will be used.</dd>
+ <dt>modificationDate</dt>
+ <dd>The last modification date. If numeric, milliseconds since epoch. If omitted or null, the current date will be used.</dd>
+</dl>
+
+<h5 id="Promise_can_be_rejected_with_9">Promise can be rejected with</h5>
+
+<dl>
+ <dt><code><a href="/en-US/docs/JavaScript_OS.File/OS.File.Error" title="/en-US/docs/JavaScript_OS.File/OS.File.Error">OS.File.Error</a></code></dt>
+ <dd>In case of any error, in particular if the path does not represent an existing file.</dd>
+</dl>
+
+<dl>
+ <dt>
+ <h4 id="OS.File.setPermissions()">OS.File.setPermissions()<a name="OS.File.setPermissions"></a></h4>
+
+ <p>Sets the file's access permission bits.</p>
+
+ <pre class="brush: js">Promise&lt;void&gt; setPermissions(
+  in string path,
+  in object options
+)</pre>
+
+ <h5 id="Arguments_14">Arguments</h5>
+ </dt>
+ <dt>path</dt>
+ <dd>The complete path to the file.</dd>
+ <dt>options</dt>
+ <dd>The new attributes to set</dd>
+ <dt style="margin-left: 40px;"><code>winAttributes</code></dt>
+ <dd style="margin-left: 40px;">This is an object with following optional keys. Ignored under non-Windows platforms.</dd>
+ <dt style="margin-left: 80px;"><code>hidden</code></dt>
+ <dd style="margin-left: 80px;">Boolean. Set to true to make the target hidden, or false to make it visible.</dd>
+ <dt style="margin-left: 80px;"><code>readOnly</code></dt>
+ <dd style="margin-left: 80px;">Boolean. Set to true to make the target "read only".</dd>
+ <dt style="margin-left: 80px;"><code>system</code></dt>
+ <dd style="margin-left: 80px;">Boolean. Toggles the "system" attribute, this is equivalent .</dd>
+ <dt style="margin-left: 40px;"><code>unixMode</code></dt>
+ <dd style="margin-left: 40px;">Number. This is an number can be created with the constants available in <code>OS.Constants.libc.S_I*</code> or <code>OS.Constants.libc.S_O*</code>. Ignored under non-Unix platforms. To make a file hidden on Unix based platforms, including Mac, simply rename the file with <code>OS.File.move</code> to have "." at the start of the file name.</dd>
+ <dt style="margin-left: 40px;"><code>unixHonorUmask</code></dt>
+ <dd style="margin-left: 40px;">Toggles the <code>OS.Constants.Sys.umask</code> flag. Ignored under non-Unix platforms..</dd>
+ <dt>
+ <h5 id="Promise_can_be_rejected_with_10">Promise can be rejected with</h5>
+ </dt>
+ <dt><code><a href="/en-US/docs/JavaScript_OS.File/OS.File.Error" title="/en-US/docs/JavaScript_OS.File/OS.File.Error">OS.File.Error</a></code></dt>
+ <dd>In case of any error, in particular if the path does not represent an existing file.</dd>
+</dl>
+
+<h4 id="OS.File.stat()">OS.File.stat()<a name="OS.File.stat"></a></h4>
+
+<p>Obtain information about a file, such as size, creation date, etc.</p>
+
+<pre class="brush: js">Promise&lt;File.Info&gt; stat(
+  in string path
+)</pre>
+
+<h5 id="Arguments_15">Arguments</h5>
+
+<dl>
+ <dt><code>path</code></dt>
+ <dd>The complete path to the file.</dd>
+</dl>
+
+<h5 id="Promise_resolves_to_6">Promise resolves to</h5>
+
+<p class="brush: js">An instance of <a href="/en-US/docs/JavaScript_OS.File/OS.File.Info" title="/en-US/docs/JavaScript_OS.File/OS.File.Info">File.Info</a> holding information about a file.</p>
+
+<h5 id="Promise_can_be_rejected_with_11">Promise can be rejected with</h5>
+
+<dl>
+ <dt><code><a href="/en-US/docs/JavaScript_OS.File/OS.File.Error" title="/en-US/docs/JavaScript_OS.File/OS.File.Error">OS.File.Error</a></code></dt>
+ <dd>In case of any error, in particular if the path does not represent an existing file.</dd>
+</dl>
+
+<div class="note"><strong>Performance Note:</strong> If the file is already opened, calling <em>method</em> <a href="#OS.File.prototype.stat" title="#OS.File.prototype.stat"><code>stat()</code></a> is much faster than calling <em>function</em> <a href="#OS.File.stat" title="#OS.File.stat">OS.File.stat()</a>.</div>
+
+<h4 id="OS.File.unixSymLink()">OS.File.unixSymLink()<a id="OS.File.unixSymLink" name="OS.File.unixSymLink"></a></h4>
+
+<p>Create a symoblic link file, also known as "Alias" files on Mac OS. This is similar to "Shortcut" files on Windows systems. This function is specific to UNIX baed systems such as Linux and Mac OS X.</p>
+
+<pre class="brush: js">Promise&lt;undefined&gt; unixSymLink(
+  in string pathTarget,
+  in string pathCreate
+)</pre>
+
+<h5 id="Arguments_16">Arguments</h5>
+
+<dl>
+ <dt><code>pathTarget</code></dt>
+ <dd>The complete path to the file that should be launced by the symbolic link.</dd>
+</dl>
+
+<dl>
+ <dt><code>pathCreate</code></dt>
+ <dd>The complete path to the file that should launch target. The file extension should be <code>.link.</code></dd>
+</dl>
+
+<h5 id="Promise_resolves_to_7">Promise resolves to</h5>
+
+<p class="brush: js">undefined</p>
+
+<h5 id="Promise_can_be_rejected_with_12">Promise can be rejected with</h5>
+
+<dl>
+ <dt><code><a href="/en-US/docs/JavaScript_OS.File/OS.File.Error" title="/en-US/docs/JavaScript_OS.File/OS.File.Error">OS.File.Error</a></code></dt>
+ <dd>In case of any error. If the file exists already, unixErrorco of 17 will be returned.</dd>
+</dl>
+
+<h4 id="OS.File.writeAtomic()">OS.File.writeAtomic()<a name="OS.File.writeAtomic"></a></h4>
+
+<p>Write data to a file, atomically.</p>
+
+<p>Unlike a regular <code>write</code>, this operation ensures that, until the contents are fully written, the destination file is not modified.</p>
+
+<pre class="brush: js">Promise&lt;void&gt; writeAtomic(
+  in string path,
+  in ArrayBufferView data,
+  in object options
+)</pre>
+
+<h5 id="Arguments_17">Arguments</h5>
+
+<dl>
+ <dt><code>path</code></dt>
+ <dd>The full path to the destination file.</dd>
+ <dt><code>data</code></dt>
+ <dd>An <a href="/en-US/docs/JavaScript_typed_arrays/ArrayBufferView" title="/en-US/docs/JavaScript_typed_arrays/ArrayBufferView">ArrayBufferView</a> holding the data to write.</dd>
+ <dd>{{ Fx_minversion_note("37.0", "As of Firefox 37, this method will neuter the array buffer.") }}</dd>
+ <dt> </dt>
+ <dt><code>options</code></dt>
+ <dd>An object that may contain the following fields</dd>
+ <dt style="margin-left: 40px;"><code>tmpPath</code></dt>
+ <dd style="margin-left: 40px;">If <code>null</code> or unspecified, write the data directly to <code>path</code>. If specified, write the data to a temporary file called <code>tmpPath</code> and, once the write is complete, rename the file to replace <code>path</code>. Performing this operation is a little slower but also a little safer. {{ Fx_minversion_note("25.0", "tmpPath is required in Firefox 24 or lower version, but optional in Firefox 25 or higher version") }}</dd>
+ <dt style="margin-left: 40px;"><code>noOverwrite</code></dt>
+ <dd style="margin-left: 40px;">If specified and true, and if <code>path</code> already exists, this function will throw an error without overwriting <code>path</code>.</dd>
+ <dt style="margin-left: 40px;"><code>flush</code></dt>
+ <dd style="margin-left: 40px;">If <code>false</code> or unspecified, return immediately once the write is complete. If <code>true</code>, before writing, force the operating system to write its internal disk buffers to the disk. This is considerably slower (not just for the application but for the whole system) and more battery expensive but also safer: if the system shuts down improperly (typically due to a kernel freeze or a power failure) or if the device is disconnected before the buffer is flushed, the file has more chances of not being corrupted.</dd>
+ <dt style="margin-left: 40px;"><code>backupTo</code></dt>
+ <dd style="margin-left: 40px;">Available since Firefox 30. If specified, backup the destination file as <code>backupTo</code>. Note that this function renames the destination file before overwriting it. If the process or the operating system freezes or crashes during the short window between these operations, the destination file will have been moved to its backup.</dd>
+ <dt style="margin-left: 40px;"><code>encoding</code></dt>
+ <dd style="margin-left: 40px;">Available since Firefox 22. Instead of using <code>TextEncoder</code>, you can supply a string to this option. For example, instead of:
+ <pre class="brush: js">let encoder = new TextEncoder();
+let array = encoder.encode("This is some text");
+let promise = OS.File.writeAtomic("file.txt", array, {tmpPath: "file.txt.tmp"});</pre>
+ You can simply do:
+
+ <pre class="brush: js">let promise = OS.File.writeAtomic("file.txt", "This is some text", { encoding: "utf-8", tmpPath: "file.txt.tmp" })</pre>
+ </dd>
+</dl>
+
+<div class="warning"><strong>Limitations</strong><br>
+In a few extreme cases (hardware failure during the write, user unplugging disk during the write, etc.), data may be corrupted. If your data is user-critical (e.g., preferences, application data), you may wish to consider adding options <code>tmpPath</code> and/or <code>flush</code> to reduce the likelihood of corruption, as detailed above. Note that no combination of options can be guaranteed to totally eliminate the risk of corruption.<br>
+ </div>
+
+<div class="warning"><strong>Use with caution:</strong> Modifying the contents of <code>data</code> before the operation is complete is a <strong>very bad idea</strong>.</div>
+
+<h5 id="Promise_can_be_rejected_with_13">Promise can be rejected with</h5>
+
+<dl>
+ <dt><a href="/en-US/docs/JavaScript_OS.File/OS.File.Error" title="/en-US/docs/JavaScript_OS.File/OS.File.Error">OS.File.Error</a></dt>
+ <dd>In case of any error, in particular if the destination file cannot be overwritten, or if <code>tmpPath</code> is not on the same device as <code>path</code>.</dd>
+</dl>
+
+<h2 id="Instances_of_OS.File">Instances of OS.File</h2>
+
+<p>To obtain an instance of OS.File, use function <a href="#OS.File.open" title="#OS.File.open">OS.File.open</a>.</p>
+
+<h3 id="Methods_overview">Methods overview</h3>
+
+<table style="height: 321px; width: 942px;">
+ <tbody>
+  <tr>
+   <td><code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise">Promise</a>&lt;void&gt; <a href="#OS.File.prototype.close" title="#OS.File.prototype.close">close</a>()</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise">Promise</a>&lt;void&gt; <a href="#OS.File.prototype.flush" title="#OS.File.prototype.flush">flush</a>()</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise">Promise</a>&lt;number&gt; <a href="#OS.File.prototype.getPosition" title="#OS.File.prototype.getPosition">getPosition</a>()</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise">Promise</a>&lt;number&gt; <a href="#OS.File.prototype.read" title="#OS.File.prototype.read">read</a>([optional] in number bytes)</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise">Promise</a>&lt;void&gt; <a href="#OS.File.prototype.setDates">setDates</a>(in Date|number accessDate, in Date|number modificationDate);</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise">Promise</a>&lt;void&gt; <a href="#OS.File.prototype.setPosition" title="#OS.File.prototype.setPosition">setPosition</a>(in number bytes)</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise">Promise</a>&lt;<a href="/en-US/docs/JavaScript_OS.File/OS.File.Info" title="/en-US/docs/JavaScript_OS.File/OS.File.Info">File.Info</a>&gt; <a href="#OS.File.prototype.stat" title="#OS.File.prototype.stat">stat</a>()</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise">Promise</a>&lt;number&gt; <a href="#OS.File.prototype.write" title="#OS.File.prototype.write">write</a>(in <a href="/en-US/docs/JavaScript_typed_arrays/ArrayBufferView" title="/en-US/docs/JavaScript_typed_arrays/ArrayBufferView">ArrayBufferView</a> source, [optional] in object options)</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Methods_2">Methods</h3>
+
+<h4 id="close()">close()<a name="OS.File.prototype.close"></a></h4>
+
+<p>Close a file and release any associated resource.</p>
+
+<p>Once the file is closed, any attempt to call methods of the file object will raise an error.</p>
+
+<p>An example is seen <a href="#Example: Append to File">here</a>. In this example the contents is not written to file until .close is called.</p>
+
+<div class="warning">Note that the operating system limits the number of files that can be opened simultaneously by one process, so do not forget to <a href="/#OS.File.prototype.close" title="#OS.File.prototype.close"><code>close</code></a> that file once you have finished it to make sure that you are not blocking the rest of the process.</div>
+
+<pre class="brush: js">Promise&lt;void&gt; close()</pre>
+
+<h3 id="flush()">flush()</h3>
+
+<p>Flushes the file's internal buffers, ensuring that all data still in these buffers is now written to disk.</p>
+
+<p>Disk flushes are very expensive and therefore should be used carefully, sparingly, and only in scenarios where it is vital that data survives<span class="difflineplus"> system crashes. Even though the function will be executed off the main-thread, it might still affect the overall performance of any running application.</span></p>
+
+<pre class="brush: js">Promise&lt;void&gt; flush()</pre>
+
+<h4 id="getPosition()"><a name="OS.File.prototype.getPosition">getPosition</a>()</h4>
+
+<p>Return the current position in the file.</p>
+
+<pre>Promise&lt;number&gt; getPosition()
+</pre>
+
+<h5 id="Promise_resolves_to_8">Promise resolves to</h5>
+
+<p>The current position in the file, as a number of bytes from the start.</p>
+
+<h5 id="Promise_can_be_rejected_with_14">Promise can be rejected with</h5>
+
+<dl>
+ <dt><code><a href="/en-US/docs/JavaScript_OS.File/OS.File.Error" title="/en-US/docs/JavaScript_OS.File/OS.File.Error">OS.File.Error</a></code></dt>
+ <dd>If the file is closed.</dd>
+</dl>
+
+<h4 id="read()">read()<a name="OS.File.prototype.read"></a></h4>
+
+<p>Read bytes from this file to a new buffer. Bytes are read from the current position in the file and the position is advanced accordingly.</p>
+
+<pre>Promise&lt;Uint8Array&gt; read(
+  [optional] in number bytes
+)</pre>
+
+<h5 id="Arguments_18">Arguments</h5>
+
+<dl>
+ <dt><code>bytes</code></dt>
+ <dd>If specified, read <code>bytes</code> bytes, or less if the file does not contain that many bytes. If unspecified, read all the remaining bytes from this file.</dd>
+</dl>
+
+<h5 id="Promise_resolves_to_9">Promise resolves to</h5>
+
+<p>An array containing the bytes read.</p>
+
+<div class="note">If you need to convert the result of this function to a string, you may do so by using the <a href="http://wiki.whatwg.org/wiki/StringEncoding" title="http://wiki.whatwg.org/wiki/StringEncoding">StringEncoding API</a>.</div>
+
+<h5 id="Promise_can_be_rejected_with_15">Promise can be rejected with</h5>
+
+<dl>
+ <dt><code><a href="/en-US/docs/JavaScript_OS.File/OS.File.Error" title="/en-US/docs/JavaScript_OS.File/OS.File.Error">OS.File.Error</a></code></dt>
+ <dd>In case of I/O error.</dd>
+</dl>
+
+<h4 id="setDates()">setDates()<a name="OS.File.prototype.setDates"></a></h4>
+
+<p>Set the last access and modification date of the file.</p>
+
+<p>The time stamp resolution is one second at best, but might be worse depending on the platform, file system, etc.</p>
+
+<pre class="brush: js">Promise&lt;void&gt; setDates(
+  in Date|number accessDate,
+  in Date|number modificationDate
+)</pre>
+
+<h5 id="Arguments_19">Arguments</h5>
+
+<dl>
+ <dt>accessDate</dt>
+ <dd>The last access date. If numeric, milliseconds since epoch. If omitted or null, the current date will be used.</dd>
+ <dt>modificationDate</dt>
+ <dd>The last modification date. If numeric, milliseconds since epoch. If omitted or null, the current date will be used.</dd>
+</dl>
+
+<h5 id="Promise_can_be_rejected_with_16">Promise can be rejected with</h5>
+
+<dl>
+ <dt><code><a href="/en-US/docs/JavaScript_OS.File/OS.File.Error" title="/en-US/docs/JavaScript_OS.File/OS.File.Error">OS.File.Error</a></code></dt>
+ <dd>In case of any error, in particular if the path does not represent an existing file.</dd>
+</dl>
+
+<h4 id="setPosition()">setPosition()<a name="OS.File.prototype.setPosition"></a></h4>
+
+<p>Change the current position in the file.</p>
+
+<pre>Promise&lt;void&gt; setPosition(
+  in number offset,
+  in object origin
+)
+</pre>
+
+<h5 id="Arguments_20">Arguments</h5>
+
+<dl>
+ <dt><code>offset</code></dt>
+</dl>
+
+<dl>
+ <dd>The new position, as a number of bytes from the origin.</dd>
+ <dt><code>origin</code></dt>
+ <dd>One of the following:
+ <ul>
+  <li><code>OS.File.POS_START</code> (bytes are counted from the start of the file)</li>
+  <li><code>OS.File.POS_CUR</code> (bytes are counted from the current position in the file)</li>
+  <li><code>OS.File.POS_END</code> (bytes are counted from the end of the file)</li>
+ </ul>
+ </dd>
+</dl>
+
+<h5 id="Promise_can_be_rejected_with_17">Promise can be rejected with</h5>
+
+<dl>
+ <dt><code><a href="/en-US/docs/JavaScript_OS.File/OS.File.Error" title="/en-US/docs/JavaScript_OS.File/OS.File.Error">OS.File.Error</a></code></dt>
+ <dd>In case of any error, in particular if the new position is before the start of the file, or if the file is closed.</dd>
+</dl>
+
+<h4 id="stat()">stat()<a name="OS.File.prototype.stat"></a></h4>
+
+<p>Obtain information about the file, such as size, creation date, etc.</p>
+
+<pre class="brush: js">Promise&lt;<a href="/en-US/docs/JavaScript_OS.File/OS.File.Info" title="/en-US/docs/JavaScript_OS.File/OS.File.Info">File.Info</a>&gt; stat()</pre>
+
+<h5 id="Promise_resolves_to_10">Promise resolves to</h5>
+
+<p class="brush: js">An instance of <a href="/en-US/docs/JavaScript_OS.File/OS.File.Info" title="/en-US/docs/JavaScript_OS.File/OS.File.Info">File.Info</a> holding information about the file.</p>
+
+<h5 id="Promise_can_be_rejected_with_18">Promise can be rejected with</h5>
+
+<dl>
+ <dt><code><a href="/en-US/docs/JavaScript_OS.File/OS.File.Error" title="/en-US/docs/JavaScript_OS.File/OS.File.Error">OS.File.Error</a></code></dt>
+ <dd>In case of any error, in particular if the file is closed.</dd>
+</dl>
+
+<h4 id="write()">write()<a name="OS.File.prototype.write"></a></h4>
+
+<p>Write bytes from a buffer to this file.</p>
+
+<p>Note that, by default, this function may perform several I/O operations to ensure that the buffer is fully written.</p>
+
+<p>An example is seen <a href="#Example: Append to File">here</a>.</p>
+
+<pre>Promise&lt;number&gt; write(
+  in <a href="/en-US/docs/JavaScript_typed_arrays/ArrayBufferView" title="/en-US/docs/JavaScript_typed_arrays/ArrayBufferView">ArrayBufferView</a> source
+  [optional] in object options
+)</pre>
+
+<h5 id="Arguments_21">Arguments</h5>
+
+<dl>
+ <dt><code>source</code></dt>
+ <dd>The array in which the the bytes are stored.</dd>
+ <dd>{{ Fx_minversion_note("37.0", "As of Firefox 37, this method will neuter the array buffer.") }}</dd>
+ <dt><code>options</code> {{optional_inline()}}</dt>
+ <dd>An object that may contain some of the following fields:</dd>
+ <dt style="margin-left: 40px;"><code>bytes</code></dt>
+ <dd style="margin-left: 40px;">An upper bound to the number of bytes to write to the file. If unspecified, write up to <code>source.byteLength</code> bytes. If specified, this must be less than <code>source.byteLength</code>.</dd>
+</dl>
+
+<h5 id="Promise_resolves_to_11">Promise resolves to</h5>
+
+<p>The number of bytes effectively written to the file.</p>
+
+<h5 id="Promise_can_be_rejected_with_19">Promise can be rejected with</h5>
+
+<dl>
+ <dt><code><a href="/en-US/docs/JavaScript_OS.File/OS.File.Error" title="/en-US/docs/JavaScript_OS.File/OS.File.Error">OS.File.Error</a></code></dt>
+ <dd>In case of any I/O error.</dd>
+ <dt><code>TypeError</code></dt>
+ <dd>If <code>options.bytes</code> is specified and is larger than <code>source.byteLength</code>.</dd>
+</dl>

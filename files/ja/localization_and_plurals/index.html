@@ -1,0 +1,372 @@
+---
+title: ローカライゼイションと複数形
+slug: Localization_and_Plurals
+tags:
+  - Internationalization
+  - Localization
+translation_of: Mozilla/Localization/Localization_and_Plurals
+---
+<p>.properties ファイルをローカライズしていて、このページへのリンクがあるので、ここにいる可能性が高いです。このページは、正しい複数形がユーザに表示されるように、これらの文字列をローカライズする方法を説明するのに役立ちます。たとえば、「1ページ」と「2ページ」といった感じです。</p>
+
+<p>もしあなたが拡張機能などのコードを複数形を考慮してローカライズ可能にしたいなら、<a href="#Developing_with_PluralForm">PluralForm を使った開発</a>の節に飛んでも結構です。ただコードの初期文字列をローカライズする必要があるでしょうから、少なくとも「使用方法」の節は読んでおくと良いでしょう。</p>
+
+<h2 id=".E4.BD.BF.E7.94.A8.E6.96.B9.E6.B3.95" name=".E4.BD.BF.E7.94.A8.E6.96.B9.E6.B3.95">使用方法</h2>
+
+<p>このページでは、説明をわかりやすくするために 2 つの用語を使用しています。</p>
+
+<ul>
+ <li><strong>{{ 原語併記("複数規則", "plural rule") }}</strong>: 言語には、単語を修飾する数字に応じて単語を変更する文法規則があります。言語が違えば規則も異なることがあります。</li>
+ <li><strong>{{ 原語併記("複数形", "plural form") }}</strong>: それぞれの複数規則には、"page" と "pages" のように複数の単語の形式があり得ます。この場合は 2 つの形式がありますが、他の言語では 1 つだったり、もっと多くの形式がある場合もあります。</li>
+</ul>
+
+<p>もしあなたが <code>chrome/global/intl.properties</code> ファイルの <code>pluralRule</code> を見てこのページに来たなら、あなたのローカライゼーションでどの <em> 複数規則</em> を選ぶべきなのかを知る必要があるでしょう。複数規則は、複数形を考慮する必要がある単語をローカライズするときに、 <em> 複数形</em> がいくつ必要なのかを知るために使用します。</p>
+
+<p>その他の properties ファイルに書かれていたリンクからこのページに来たのなら、ローカライズする単語に対して、必要な分の複数形をセミコロン (;) 区切りで与える必要があるでしょう。複数形がいくつ必要なのかわからなければ、<code>chrome/global/intl.properties</code> の <code>pluralRule</code> の数値を調べ、以下の複数規則の一覧でその数値に対応するエントリを探してください。</p>
+
+<p>{{ 英語版章題("List of Plural Rules") }}</p>
+
+<h2 id=".E8.A4.87.E6.95.B0.E8.A6.8F.E5.89.87.E3.81.AE.E4.B8.80.E8.A6.A7" name=".E8.A4.87.E6.95.B0.E8.A6.8F.E5.89.87.E3.81.AE.E4.B8.80.E8.A6.A7">複数規則の一覧</h2>
+
+<p>この節では、複数規則をその番号順にリストアップします。各エントリには、単語をローカライズする際に必要な複数形の数が示されています。また、<code>pluralRule</code> にどの番号を入力すればいいのかがわかりやすいように、語族およびそれに属する言語の一覧も載せています。さらに、それぞれの複数形の簡単な説明と、その形式に分類される数の例も掲載しています。</p>
+
+<p>それぞれの複数規則において、複数形がリストされている順番は単語をローカライズする際にセミコロン区切りで入力する順番と同じです。例えば、英語では複数規則 1 を使用します。したがって、<code>plurals</code> という単語をローカライズするときには、"plural;plurals" のようにして、一つめの単語に単数形を、二つめには汎用の複数形を入力する必要があるでしょう。</p>
+
+<h3 id=".E8.A4.87.E6.95.B0.E8.A6.8F.E5.89.87_.230_.281_.E5.BD.A2.E5.BC.8F.29" name=".E8.A4.87.E6.95.B0.E8.A6.8F.E5.89.87_.230_.281_.E5.BD.A2.E5.BC.8F.29">複数規則 #<em><strong>0</strong></em> (1 形式)</h3>
+
+<p><strong>語族</strong>: アジア (中国語, 日本語, 韓国語, ベトナム語), チュルク/アルタイ諸語 (トルコ語)<br>
+ <strong>すべて</strong>: <small>0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, …</small></p>
+
+<h3 id=".E8.A4.87.E6.95.B0.E8.A6.8F.E5.89.87_.231_.282_.E5.BD.A2.E5.BC.8F.29" name=".E8.A4.87.E6.95.B0.E8.A6.8F.E5.89.87_.231_.282_.E5.BD.A2.E5.BC.8F.29">複数規則 #<em><strong>1</strong></em> (2 形式)</h3>
+
+<p><strong>語族</strong>: ゲルマン語派 (デンマーク語, オランダ語, 英語, フェロー語, フリジア語, ドイツ語, ノルウェー語, スウェーデン語), フィン・ウゴル語派 (エストニア語, フィンランド語, ハンガリー語), 孤独語 (バスク語), ラテン/ギリシャ (ギリシャ語), セム語派 (ヘブライ語), ロマンス諸語 (イタリア語, ポルトガル語, スペイン語, カタルーニャ語)<br>
+ <strong>1 である</strong>: <small>1</small><br>
+ <strong>それ以外</strong>: <small>0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, …</small></p>
+
+<h3 id=".E8.A4.87.E6.95.B0.E8.A6.8F.E5.89.87_.232_.282_.E5.BD.A2.E5.BC.8F.29" name=".E8.A4.87.E6.95.B0.E8.A6.8F.E5.89.87_.232_.282_.E5.BD.A2.E5.BC.8F.29">複数規則 #<em><strong>2</strong></em> (2 形式)</h3>
+
+<p><strong>語族</strong>: ロマンス諸語 (フランス語, ブラジルポルトガル語)<br>
+ <strong>0 か 1 である</strong>: <small>0, 1</small><br>
+ <strong>それ以外</strong>: <small>2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, …</small></p>
+
+<h3 id=".E8.A4.87.E6.95.B0.E8.A6.8F.E5.89.87_.233_.283_.E5.BD.A2.E5.BC.8F.29" name=".E8.A4.87.E6.95.B0.E8.A6.8F.E5.89.87_.233_.283_.E5.BD.A2.E5.BC.8F.29">複数規則 #<em><strong>3</strong></em> (3 形式)</h3>
+
+<p><strong>語族</strong>: バルト語派 (ラトビア語)<br>
+ <strong>0 である</strong>: <small>0</small><br>
+ <strong>1 で終わり、11 で終わらない</strong>: <small>1, 21, 31, 41, 51, 61, 71, 81, 91, 101, 121, 131, 141, 151, 161, 171, 181, 191, 201, 221, 231, 241, 251, 261, 271, 281, 291, …</small><br>
+ <strong>それ以外</strong>: <small>2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27, 28, 29, 30, 32, 33, 34, 35, 36, 37, 38, 39, 40, 42, 43, 44, 45, 46, 47, 48, 49, 50, 52, 53, 54, 55, …</small></p>
+
+<h3 id=".E8.A4.87.E6.95.B0.E8.A6.8F.E5.89.87_.234_.283_.E5.BD.A2.E5.BC.8F.29" name=".E8.A4.87.E6.95.B0.E8.A6.8F.E5.89.87_.234_.283_.E5.BD.A2.E5.BC.8F.29">複数規則 #<em><strong>4</strong></em> (4 形式)</h3>
+
+<p><strong>語族</strong>: ケルト語派 (スコットランド・ゲール語)<br>
+ <strong>1 か 11 である</strong>: <small>1, 11</small><br>
+ <strong>2 か 12 である</strong>: <small>2, 12</small><br>
+ <strong>3-10 か 13-19 である</strong>: <small>3, 4, 5, 6, 7, 8, 9, 10, 13, 14, 15, 16, 17, 18, 19</small><br>
+ <strong>それ以外</strong>: <small>0, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, …</small></p>
+
+<h3 id=".E8.A4.87.E6.95.B0.E8.A6.8F.E5.89.87_.235_.283_.E5.BD.A2.E5.BC.8F.29" name=".E8.A4.87.E6.95.B0.E8.A6.8F.E5.89.87_.235_.283_.E5.BD.A2.E5.BC.8F.29">複数規則 #<em><strong>5</strong></em> (3 形式)</h3>
+
+<p><strong>語族</strong>: ロマンス諸語 (ルーマニア語)<br>
+ <strong>1 である</strong>: <small>1</small><br>
+ <strong>0 であるか、01-19 で終わる</strong>: <small>0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, …</small><br>
+ <strong>それ以外</strong>: <small>20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, …</small></p>
+
+<h3 id=".E8.A4.87.E6.95.B0.E8.A6.8F.E5.89.87_.236_.283_.E5.BD.A2.E5.BC.8F.29" name=".E8.A4.87.E6.95.B0.E8.A6.8F.E5.89.87_.236_.283_.E5.BD.A2.E5.BC.8F.29">複数規則 #<em><strong>6</strong></em> (3 形式)</h3>
+
+<p><strong>語族</strong>: バルト語派 (リトアニア語)<br>
+ <strong>1 で終わり、11 で終わらない</strong>: <small>1, 21, 31, 41, 51, 61, 71, 81, 91, 101, 121, 131, 141, 151, 161, 171, 181, 191, 201, 221, 231, 241, 251, 261, 271, 281, 291, …</small><br>
+ <strong>0 で終わるか、11-19 で終わる</strong>: <small>0, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, …</small><br>
+ <strong>それ以外</strong>: <small>2, 3, 4, 5, 6, 7, 8, 9, 22, 23, 24, 25, 26, 27, 28, 29, 32, 33, 34, 35, 36, 37, 38, 39, 42, 43, 44, 45, 46, 47, 48, 49, 52, 53, 54, 55, 56, 57, 58, 59, 62, 63, 64, 65, 66, 67, 68, 69, 72, 73, …</small></p>
+
+<h3 id=".E8.A4.87.E6.95.B0.E8.A6.8F.E5.89.87_.237_.283_.E5.BD.A2.E5.BC.8F.29" name=".E8.A4.87.E6.95.B0.E8.A6.8F.E5.89.87_.237_.283_.E5.BD.A2.E5.BC.8F.29">複数規則 #<em><strong>7</strong></em> (3 形式)</h3>
+
+<p><strong>語族</strong>: スラヴ語派 (クロアチア語, セルビア語, ロシア語, ウクライナ語)<br>
+ <strong>1 で終わり、11 で終わらない</strong>: <small>1, 21, 31, 41, 51, 61, 71, 81, 91, 101, 121, 131, 141, 151, 161, 171, 181, 191, 201, 221, 231, 241, 251, 261, 271, 281, 291, …</small><br>
+ <strong>2-4 で終わり、12-14 で終わらない</strong>: <small>2, 3, 4, 22, 23, 24, 32, 33, 34, 42, 43, 44, 52, 53, 54, 62, 63, 64, 72, 73, 74, 82, 83, 84, 92, 93, 94, 102, 103, 104, 122, 123, 124, 132, 133, 134, 142, 143, 144, 152, 153, 154, 162, 163, 164, 172, 173, 174, 182, 183, …</small><br>
+ <strong>それ以外</strong>: <small>0, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 25, 26, 27, 28, 29, 30, 35, 36, 37, 38, 39, 40, 45, 46, 47, 48, 49, 50, 55, 56, 57, 58, 59, 60, 65, 66, 67, 68, 69, 70, 75, 76, 77, …</small></p>
+
+<h3 id=".E8.A4.87.E6.95.B0.E8.A6.8F.E5.89.87_.238_.283_.E5.BD.A2.E5.BC.8F.29" name=".E8.A4.87.E6.95.B0.E8.A6.8F.E5.89.87_.238_.283_.E5.BD.A2.E5.BC.8F.29">複数規則 #<em><strong>8</strong></em> (3 形式)</h3>
+
+<p><strong>語族</strong>: スラヴ語派 (スロバキア語, チェコ語)<br>
+ <strong>1 である</strong>: <small>1</small><br>
+ <strong>2-4 である</strong>: <small>2, 3, 4</small><br>
+ <strong>それ以外</strong>: <small>0, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, …</small></p>
+
+<h3 id=".E8.A4.87.E6.95.B0.E8.A6.8F.E5.89.87_.239_.283_.E5.BD.A2.E5.BC.8F.29" name=".E8.A4.87.E6.95.B0.E8.A6.8F.E5.89.87_.239_.283_.E5.BD.A2.E5.BC.8F.29">複数規則 #<em><strong>9</strong></em> (3 形式)</h3>
+
+<p><strong>語族</strong>: スラヴ語派 (ポーランド語)<br>
+ <strong>1 である</strong>: <small>1</small><br>
+ <strong>2-4 で終わり、12-14 で終わらない</strong>: <small>2, 3, 4, 22, 23, 24, 32, 33, 34, 42, 43, 44, 52, 53, 54, 62, 63, 64, 72, 73, 74, 82, 83, 84, 92, 93, 94, 102, 103, 104, 122, 123, 124, 132, 133, 134, 142, 143, 144, 152, 153, 154, 162, 163, 164, 172, 173, 174, 182, 183, …</small><br>
+ <strong>それ以外</strong>: <small>0, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 25, 26, 27, 28, 29, 30, 31, 35, 36, 37, 38, 39, 40, 41, 45, 46, 47, 48, 49, 50, 51, 55, 56, 57, 58, 59, 60, 61, 65, 66, 67, 68, …</small></p>
+
+<h3 id=".E8.A4.87.E6.95.B0.E8.A6.8F.E5.89.87_.2310_.284_.E5.BD.A2.E5.BC.8F.29" name=".E8.A4.87.E6.95.B0.E8.A6.8F.E5.89.87_.2310_.284_.E5.BD.A2.E5.BC.8F.29">複数規則 #<em><strong>10</strong></em> (4 形式)</h3>
+
+<p><strong>語族</strong>: スラヴ語派 (スロベニア語, ソルブ語)<br>
+ <strong>01 で終わる</strong>: <small>1, 101, 201, …</small><br>
+ <strong>02 で終わる</strong>: <small>2, 102, 202, …</small><br>
+ <strong>03-04 で終わる</strong>: <small>3, 4, 103, 104, 203, 204, …</small><br>
+ <strong>それ以外</strong>: <small>0, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, …</small></p>
+
+<h3 id=".E8.A4.87.E6.95.B0.E8.A6.8F.E5.89.87_.2311_.285_.E5.BD.A2.E5.BC.8F.29" name=".E8.A4.87.E6.95.B0.E8.A6.8F.E5.89.87_.2311_.285_.E5.BD.A2.E5.BC.8F.29">複数規則 #<em><strong>11</strong></em> (5 形式)</h3>
+
+<p><strong>語族</strong>: ケルト語派 (アイルランド・ゲール語)<br>
+ <strong>1 である</strong>: <small>1</small><br>
+ <strong>2 である</strong>: <small>2</small><br>
+ <strong>3-6 である</strong>: <small>3, 4, 5, 6</small><br>
+ <strong>7-10 である</strong>: <small>7, 8, 9, 10</small><br>
+ <strong>それ以外</strong>: <small>0, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, …</small></p>
+
+<h3 id=".E8.A4.87.E6.95.B0.E8.A6.8F.E5.89.87_.2312_.284_.E5.BD.A2.E5.BC.8F.29" name=".E8.A4.87.E6.95.B0.E8.A6.8F.E5.89.87_.2312_.284_.E5.BD.A2.E5.BC.8F.29">複数規則 #<em><strong>12</strong></em> (6 形式)</h3>
+
+<p><strong>語族</strong>: セム語派 (アラビア語)<br>
+ <strong>1 である</strong>: <small>1</small><br>
+ <strong>2 である</strong>: <small>2</small><br>
+ <strong>03-10 で終わる</strong>: <small>3, 4, 5, 6, 7, 8, 9, 10, 103, 104, 105, 106, 107, 108, 109, 110, 2</small><small>03, 204, 205, 206, 207, 208, 209, 210, </small><small>…</small><br>
+ <strong>それ以外で、0 でなく、00-02 で終わらない</strong>: <small>11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, …</small><br>
+ <strong>0 でなく、00-02 で終わる</strong>: <small>100, 101, 102, 200, 201, 202,</small><small> …</small><br>
+ <strong>0 である</strong>: <span style="font-size: 13.3333px;">0</span></p>
+
+<h3 id=".E8.A4.87.E6.95.B0.E8.A6.8F.E5.89.87_.2313_.284_.E5.BD.A2.E5.BC.8F.29" name=".E8.A4.87.E6.95.B0.E8.A6.8F.E5.89.87_.2313_.284_.E5.BD.A2.E5.BC.8F.29">複数規則 #<em><strong>13</strong></em> (4 形式)</h3>
+
+<p><strong>語族</strong>: セム語派 (マルタ語)<br>
+ <strong>1 である</strong>: <small>1</small><br>
+ <strong>0 であるか、01-10 で終わる</strong>: <small>0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, …</small><br>
+ <strong>11-19 で終わる</strong>: <small>11, 12, 13, 14, 15, 16, 17, 18, 19, 111, 112, 113, 114, 115, 116, 117, 118, 119, 211, 212, 213, 214, 215, 216, 217, 218, 219, …</small><br>
+ <strong>それ以外</strong>: <small>20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, …</small></p>
+
+<h3 id=".E8.A4.87.E6.95.B0.E8.A6.8F.E5.89.87_.2314_.283_.E5.BD.A2.E5.BC.8F.29" name=".E8.A4.87.E6.95.B0.E8.A6.8F.E5.89.87_.2314_.283_.E5.BD.A2.E5.BC.8F.29">複数規則 #<em><strong>14</strong></em> (3 形式)</h3>
+
+<p><strong>語族</strong>: 使われていません<br>
+ <strong>1 で終わる</strong>: <small>1, 11, 21, 31, 41, 51, 61, 71, 81, 91, 101, 111, 121, 131, 141, 151, 161, 171, 181, 191, 201, 211, 221, 231, 241, 251, 261, 271, 281, 291, …</small><br>
+ <strong>2 で終わる</strong>: <small>2, 12, 22, 32, 42, 52, 62, 72, 82, 92, 102, 112, 122, 132, 142, 152, 162, 172, 182, 192, 202, 212, 222, 232, 242, 252, 262, 272, 282, 292, …</small><br>
+ <strong>それ以外</strong>: <small>0, 3, 4, 5, 6, 7, 8, 9, 10, 13, 14, 15, 16, 17, 18, 19, 20, 23, 24, 25, 26, 27, 28, 29, 30, 33, 34, 35, 36, 37, 38, 39, 40, 43, 44, 45, 46, 47, 48, 49, 50, 53, 54, 55, 56, 57, 58, 59, 60, 63, …</small></p>
+
+<h3 id="複数規則_15_(2_形式)">複数規則 #<em><strong>15</strong></em> (2 形式)</h3>
+
+<p><strong>語族</strong>: アイスランド語, マケドニア語<br>
+ <strong>1 で終わり, 11 で終わらない</strong>: <small>1, 21, 31, 41, 51, 61, 71, 81, 91, 101, 121, 131, 141, 151, 161, 171, 181, 191, 201, 221, 231, 241, 251, 261, 271, 281, 291, …</small><br>
+ <strong>それ以外</strong>: <small>0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27, 28, 29, 30, 32, 33, 34, 35, 36, 37, 38, 39, 40, 42, 43, 44, 45, 46, 47, 48, 49, 50, 52, 53, 54, …</small></p>
+
+<h3 id="複数規則_16_(6_形式)">複数規則 #<em><strong>16</strong></em> (6 形式)</h3>
+
+<p><strong>語族</strong>: ケルト語派 (ブルトン語)<br>
+ <strong>1 で終わり、1, 11, 71, 91 で終わらない</strong>: <small>1, 21, 31, 41, 51, 61, 81, 101, 121, 131, 141, 151, 161, 181, 201, 221, 231, 241, 251, 261, 281, ...</small><br>
+ <strong>2 で終わり, 12, 72, 92 で終わらない</strong>: <small>2, 22, 32, 42, 52, 62, 82, 102, 122, 132, 142, 152, 162, 182, 202, 222, 232, 242, 252, 262, 282, ...</small><br>
+ <strong>3, 4, 9 で終わり、13, 14, 19, 73, 74, 79, 93, 94, 99 で終わらない</strong>: <small>3, 4, 9, 23, 24, 29, 33, 34, 39, 43, 44, 49, 53, 54, 59, ...</small><br>
+ <strong>1000000 で終わる</strong>: <small>1000000: 1000000, 2000000, 3000000, 4000000, 5000000, 6000000, 7000000, 8000000, 9000000, 10000000, ...</small><br>
+ <strong>それ以外</strong>: <small>0, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 25, 26, 27, 28, 30, 35, 36, 37, 38, 40, ...</small></p>
+
+<h3 id="複数規則_17_(2_形式)">複数規則 #17 (2 形式)</h3>
+
+<p><strong>語族</strong>: エクアドル先住民諸語 (シュアール語)<br>
+ <strong>0 である</strong>: <small>0</small><br>
+ <strong>それ以外</strong>: <small>1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, …</small></p>
+
+<h2 id=".E4.BE.8B" name=".E4.BE.8B">例</h2>
+
+<p>以下ではいくつかの言語を例に取り、大まかな思考プロセスを解説します。</p>
+
+<h3 id=".E3.83.95.E3.83.A9.E3.83.B3.E3.82.B9.E8.AA.9E" name=".E3.83.95.E3.83.A9.E3.83.B3.E3.82.B9.E8.AA.9E">フランス語</h3>
+
+<p>フランス語では通常 0 を単数として扱いますが、フランス語圏の中には複数として扱う地域もあります。その他の単数は 1 だけで、残りはすべて複数です。したがって、複数規則 #1 または #2 を選択します。</p>
+
+<p><code>pluralRule=2<br>
+ seconds=seconde;secondes<br>
+ minutes=minute;minutes<br>
+ hours=heure;heures<br>
+ days=jour;jours </code></p>
+
+<p>他の単語をローカライズする時と同様に、常に性が一致するように単語を調整する必要があるかもしれません。(secode と jour のように)</p>
+
+<h3 id=".E4.B8.AD.E5.9B.BD.E8.AA.9E" name=".E4.B8.AD.E5.9B.BD.E8.AA.9E">中国語</h3>
+
+<p>前にどんな数字があっても単語は変化せず、すべての数字に対して同じ複数形が使用されます。複数形が 1 つだけの言語では、複数規則 #0 を適用します。各単語をローカライズする際にはセミコロンは必要なく、単一の単語と同様にローカライズします。</p>
+
+<p><code>pluralRule=0<br>
+ seconds=秒<br>
+ minutes=分<br>
+ hours=時<br>
+ days=日 </code></p>
+
+<h3 id=".E3.83.9D.E3.83.BC.E3.83.A9.E3.83.B3.E3.83.89.E8.AA.9E" name=".E3.83.9D.E3.83.BC.E3.83.A9.E3.83.B3.E3.83.89.E8.AA.9E">ポーランド語</h3>
+
+<p>1 には単数形を使い、2-4 には複数形を、5-21 にはまた別の複数形を使い、22 になると 2 と同じに戻ります。複数規則 #7 には「2-4 で終わり、12-14 で終わらない」複数形がありますが、単数形を使用する数字に 1 で終わり 11 で終わらない数字すべてが含まれます。複数規則 #9 の単数形は 1 のみなので、これを使うのが適切です。</p>
+
+<p><code>pluralRule=9<br>
+ seconds=sekunda;sekundy;sekund<br>
+ minutes=minuta;minuty;minut<br>
+ hours=godzina;godziny;godzin<br>
+ days=dzień;dni;dni </code></p>
+
+<p>"day" の複数形の最後の 2 つは同じものですが、各単語に対して 3 つの複数形を記入する必要があるので、両方を記入しなければなりません。</p>
+
+<h3 id=".E3.82.BD.E3.83.AB.E3.83.96.E8.AA.9E" name=".E3.82.BD.E3.83.AB.E3.83.96.E8.AA.9E">ソルブ語</h3>
+
+<p>主格単数、主格双数、主格複数、属格複数という 4 つの複数形があります。これらは複数規則 #10 に調和します。</p>
+
+<p><code>pluralRule=10<br>
+ seconds=sekunda;sekundźe;sekundy;sekundow<br>
+ minutes=mjeńšina;mjeńšinje;mjeńšiny;mjeńšin<br>
+ hours=hodźina;hodźinje;hodźiny;hodźin<br>
+ days=dźeń;dnjej;dny;dnjow </code></p>
+
+<h2 id=".E3.83.86.E3.82.B9.E3.83.88.E7.94.A8.E3.81.AE.E6.8B.A1.E5.BC.B5.E6.A9.9F.E8.83.BD" name=".E3.83.86.E3.82.B9.E3.83.88.E7.94.A8.E3.81.AE.E6.8B.A1.E5.BC.B5.E6.A9.9F.E8.83.BD">テスト用の拡張機能</h2>
+
+<p>正しい複数規則を選び、文字列に対して十分な複数形を与えられるようにするには、拡張機能 pluralForm Checker を使用するのがいいでしょう。拡張機能をインストールしたら、{{ mediawiki.external('ツール')}} メニューから使用できます。</p>
+
+<p>使用するには、プロパティファイルとチェックしたいプロパティを列挙し、ボタンを押します。すると拡張機能が各プロパティを読み込み、表に複数形を表示します。表のエントリを選択すると、下部のボックスにいくつかの数字に対する単語の使用例が表示されます。</p>
+
+<p><img alt="Image:pluralForm-checker.0.3.png" class="internal" src="https://developer.mozilla.org/@api/deki/files/804/=PluralForm-checker.0.3.png"></p>
+
+<p> </p>
+
+<p><a class="external" href="http://ed.agadak.net/firefox/pluralForm-checker.xpi">拡張機能 pluralForm Checker v0.3 をインストール</a></p>
+
+<h3 id=".E6.8B.A1.E5.BC.B5.E6.A9.9F.E8.83.BD.E3.81.B8.E3.81.AE.E5.85.A5.E5.8A.9B" name=".E6.8B.A1.E5.BC.B5.E6.A9.9F.E8.83.BD.E3.81.B8.E3.81.AE.E5.85.A5.E5.8A.9B">拡張機能への入力</h3>
+
+<p>拡張機能を使う人たちがコピー&amp;ペーストして入力できるように、複数形が必要な単語をここにリストアップして更新し続けるのが良いでしょう。</p>
+
+<p><code><small><a class="external" rel="freelink">chrome://mozapps/locale/downloads/do...tes,hours,days</a><br>
+ <a class="external" rel="freelink">chrome://mozapps/locale/downloads/do...dsTitlePercent</a><br>
+ <a class="external" rel="freelink">chrome://browser/locale/browser.prop...ausedDownloads</a></small></code></p>
+
+<h3 id=".E6.9B.B4.E6.96.B0.E5.B1.A5.E6.AD.B4" name=".E6.9B.B4.E6.96.B0.E5.B1.A5.E6.AD.B4">更新履歴</h3>
+
+<p>0.1: 最初のバージョン。pluralRule のチェック、入力されたプロパティの読み込み、表の生成、例を出力して表示<br>
+ 0.2: 将来の規則に対応するため、形式の数を得るのにローカルに計算するのではなく PluralForm.numForms() を使用するように - <strong>2007/01/27 以降のビルドが必要</strong><br>
+ 0.3: どの数字がどの複数形に分類されるかを示すリストを生成する際、例の出力を各形式ごとに最大 3 つに縮小した</p>
+
+<h2 id="PluralForm_.E3.82.92.E4.BD.BF.E3.81.A3.E3.81.9F.E9.96.8B.E7.99.BA" name="PluralForm_.E3.82.92.E4.BD.BF.E3.81.A3.E3.81.9F.E9.96.8B.E7.99.BA">PluralForm を使った開発</h2>
+
+<p>正しい複数形を得る機能は、JavaScript モジュール <code>PluralForm.jsm</code> によって提供されます。このモジュールにはブラウザの現在のロケールに合わせてローカライズするためのメソッドと、指定された複数規則に合わせてローカライズするためのメソッドが用意されています。後者の複数規則を指定する機能は、拡張機能で使用するのが便利です。なぜなら拡張機能は必ずしもブラウザのロケールに合わせてローカライズする必要はないからです。</p>
+
+<h3 id="PluralForm.jsm_.E3.81.AE.E8.AA.AD.E3.81.BF.E8.BE.BC.E3.81.BF" name="PluralForm.jsm_.E3.81.AE.E8.AA.AD.E3.81.BF.E8.BE.BC.E3.81.BF"><code>PluralForm.jsm</code> の読み込み</h3>
+
+<p>PluralForm モジュールは、<a href="ja/Components.utils.import">Components.utils.import</a> を使って JavaScript から簡単に読み込めます。以下の行を、PluralForm を使用したい部分よりも前に評価される場所に設置するだけです。JavaScript ファイルの先頭が良いでしょう。</p>
+
+<pre>Components.utils.import("resource://gre/modules/PluralForm.jsm");</pre>
+
+<h3 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89:_get_.E3.81.A8_numForms" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89:_get_.E3.81.A8_numForms">メソッド: <code>get</code> と <code>numForms</code></h3>
+
+<p>これらのメソッドは、<code><a class="external" rel="freelink">chrome://global/locale/intl.properties</a></code> にある <code>pluralRule</code> の値で指定されているブラウザの現在のロケールを使用します。</p>
+
+<pre>/**
+ * 数値をもとにして単語の正しい複数形を得る
+ *
+ * @param aNum
+ *        どの複数形を使用するかを決定する数値
+ * @param aWords
+ *        複数形を取り出すための、単語をセミコロン (;) で区切った文字列
+ * @return 単語の適切な複数形
+ */
+string pluralForm
+get(int aNum, string aWords)</pre>
+
+<pre>/**
+ * 現在の複数規則の形式の数を得る
+ *
+ * @return 形式の数
+ */
+int numForms
+numForms()</pre>
+
+<p>以下はこれらのメソッドの使用例です。</p>
+
+<pre>// PluralForm を読み込む。この例では英語を想定している
+Components.utils.import("resource://gre/modules/PluralForm.jsm");
+
+// PluralForm.get はセミコロン区切りの単語のリストを要求する
+let forms = "form;forms";
+// この数値をもとに正しい複数形を取り出そうとしている
+let numForms = PluralForm.numForms();
+
+// "forms" に対しての正しい複数形を表示する
+print("This locale has " + numForms + " " + PluralForm.get(numForms, forms) + ".");
+</pre>
+
+<p>上の例は機能しますが、特定の文法構造を想定して文字列を連結しているので、ローカライズが難しくなります。次のようにするのがいいでしょう。</p>
+
+<pre>Components.utils.import("resource://gre/modules/PluralForm.jsm");
+
+let forms = "This locale has one form.;This locale has #1 forms.";
+let numForms = PluralForm.numForms();
+
+// 英語の場合、"This locale has 2 forms." と表示される
+print(PluralForm.get(numForms, forms).replace("#1", numForms);</pre>
+
+<p>この例ではプレースホルダに対応したコードを書け、また文字列の形式によってはプレースホルダを使用しないこともできるということに注目してください。それに加え、ローカライザーがテキストのほかの部分に合わせてプレースホルダの位置を調整できるようになります。</p>
+
+<p>もちろん、ローカライズする文字列は JavaScript ファイルにハードコードするのではなく、 yourextension.properties のような別のファイルに置かれることのほうが多いでしょう。</p>
+
+<p>以下の 3 つのファイル片は、<code>.xul</code>、 <code>.properties</code>、 <code>.js</code> で PluralForm を使用する方法を示しています。</p>
+
+<p><code>downloads.xul</code>:</p>
+
+<pre>&lt;stringbundleset&gt;
+  &lt;stringbundle id="strings" src="chrome://downloads.properties"/&gt;
+&lt;/stringbundleset&gt;</pre>
+
+<p><code>downloads.properties</code>:</p>
+
+<pre># LOCALIZATION NOTE (downloadsTitleFiles): セミコロン区切りの複数形のリスト
+# 参照: http://developer.mozilla.org/en/docs/Localization_and_Plurals
+# #1 ファイルの数
+# 例: 111 files - Downloads
+downloadsTitleFiles=#1 file - Downloads;#1 files - Downloads
+
+# LOCALIZATION NOTE (timePair): #1 時間の数値; #2 時間の単位
+# 例: 1 second; 11 seconds
+timePair=#1 #2
+seconds=second;seconds</pre>
+
+<p><code>downloads.js</code>:</p>
+
+<pre>Components.utils.import("resource://gre/modules/PluralForm.jsm");
+let getStr = function(string) document.getElementById("strings").getString(string);
+
+// タイトル用に正しい複数形を得る
+let numDownloads = 3;
+let title = PluralForm.get(numDownloads, getStr("downloadsTitleFiles"));
+// 正しいダウンロード数を挿入する
+print(title.replace("#1", numDownloads));
+
+// 秒数の正しい複数形を得る
+let timeLeft = 55;
+let seconds = PluralForm.get(timeLeft, getStr("seconds"));
+// ローカライズされた文字列 "55 seconds" を出力する
+print(getStr("timePair").replace("#1", timeLeft).replace("#2", seconds));</pre>
+
+<h3 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89:_makeGetter" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89:_makeGetter">メソッド: <code>makeGetter</code></h3>
+
+<p>拡張機能を書いているのなら、<code>PluralForm.get()</code> または <code>PluralForm.numForms()</code> ではなく <code>makeGetter</code> を使うのがいいでしょう。なぜなら、異なるロケールに拡張機能をインストールする人は、拡張機能のデフォルトのロケールが提供する文字列を使用することになるからです。例えば、拡張機能が複数規則 #1 (2 つの複数形を要求する) に属する英語にローカライズされており、それが複数規則 #4 (3 つの複数形を要求する) に属する言語にローカライズされたバージョンの Firefox にインストールされた場合などです。</p>
+
+<pre>/**
+ * 与えられた複数規則番号に対応する複数形関数のペアを生成する
+ *
+ * @param aRuleNum
+ *        関数を生成するための複数規則番号
+ * @return ペア: [正しい複数形を得るための関数,
+ *                複数形の数を返す関数]
+ */
+[string pluralForm get(int aNum, string aWords), int numForms numForms()]
+makeGetter(int aRuleNum)</pre>
+
+<p>以下は <code>makeGetter</code> の使用例です。</p>
+
+<pre>Components.utils.import("resource://gre/modules/PluralForm.jsm");
+
+// アイルランド語 (複数規則 #11) を取得しよう
+let [get, numForms] = PluralForm.makeGetter(11);
+
+// "get" に使用する値を作成する
+let dummyText = "form 1;form 2;form 3;form 4;form 5";
+let dummyNum = 10;
+
+// アイルランド語の場合 10 という数値は複数形 #4 を使用するので、"form 4" が出力される
+print(get(dummyNum, dummyText));</pre>
+
+<p>この例ではアイルランド語の複数規則をハードコードしていますが、これには .properties ファイルに指定された値を使用できます。よって拡張機能では、.properties 内の pluralRule の値を指定し、<code>PluralForm.makeGetter(pluralRuleFromProperties)</code> を呼び出して、返される 2 つの関数が保存されるようにしてください (JavaScript 1.7 の <a href="ja/New_in_JavaScript_1.7#Destructuring_assignment">分割代入</a>を使うときれいに書けます。)。 返される関数は <code>PluralForm.get()</code> および <code>PluralForm.numForms()</code> と同じ働きをしますが、デフォルトの複数規則ではなく指定された複数規則を使用する点が異なります。</p>
+
+<h2 id=".E3.82.AF.E3.83.AC.E3.82.B8.E3.83.83.E3.83.88" name=".E3.82.AF.E3.83.AC.E3.82.B8.E3.83.83.E3.83.88">クレジット</h2>
+
+<p>Plural Form のコードは最初に {{ Bug(394516) }} -<em>残り時間を分から時間/日に丸める仕組みを考案する</em> のために実装されました。<br>
+ 複数規則と語族の一覧は <a class="external" href="http://www.gnu.org/software/gettext/manual/html_node/gettext_150.html#Plural-forms">GNU <code>gettext</code> のドキュメント</a>から引用しました。</p>

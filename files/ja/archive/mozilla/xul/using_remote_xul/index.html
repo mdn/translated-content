@@ -1,0 +1,274 @@
+---
+title: XUL をリモートで使用する
+slug: Archive/Mozilla/XUL/Using_Remote_XUL
+translation_of: Archive/Mozilla/XUL/Using_Remote_XUL
+---
+<h2 id="Introduction" name="Introduction">イントロダクション</h2>
+
+<div class="note">
+<p><strong>Note:</strong> Support for remote XUL has long been a potential security concern; support for it was disabled in <span title="(Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)">Gecko 2.0</span>. This also means you can't load XUL using <span class="nowiki"><code>file://</code></span> URLs unless you set the preference <code>dom.allow_XUL_XBL_for_file</code> to <code>true</code>. However, there is a whitelist that lets you specify sites that can still use remote XUL. The <a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/235281/" title="https://addons.mozilla.org/en-US/firefox/addon/235281/">Remote XUL Manager extension</a> lets you manage this whitelist, which is maintained using <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPermissionManager" title="">nsIPermissionManager</a></code>, by creating entries of type "allowXULXBL", like this:</p>
+
+<pre>Components.classes["@mozilla.org/permissionmanager;1"]
+                    .getService(Components.interfaces.nsIPermissionManager)
+                    .add(uri, 'allowXULXBL', Components.interfaces.nsIPermissionManager.ALLOW_ACTION);
+</pre>
+</div>
+
+<p><a href="/en/XUL" title="en/XUL">XUL</a> (pronounced like "zool"), which is short for XML-based User Interface Language, is an XML-based language for describing application interfaces. It contains elements for all common UI widgets (menus, buttons, toolbars, etc.) and many sophisticated ones (trees, browsers, color pickers).</p>
+
+<p>XUL is often used by desktop applications like Mozilla but can also be loaded from a web server and rendered inside the content pane of a compatible browser. XUL loaded and rendered in this way is called <em>remote XUL</em> and can be used for basic functions like web site navigation as well as to build sophisticated web-based applications. <span class="comment">[***aw: we should have a screenshot here of a xul document loaded in a content window***]</span></p>
+
+<p>This tutorial walks you through the process of building XUL-based navigation for the mozilla.org web site. After completing the tutorial you should understand how to:</p>
+
+<ul>
+ <li>create XUL documents;</li>
+ <li>serve them from a web server;</li>
+ <li>use Cascading Style Sheets (<a href="/en/CSS" title="en/CSS">CSS</a>) to change their appearance;</li>
+ <li>use <a href="/en/JavaScript" title="en/JavaScript">JavaScript</a> to define their behavior.</li>
+</ul>
+
+<h2 id="Global_Web_Site_Navigation" name="Global_Web_Site_Navigation">Global Web Site Navigation</h2>
+
+<p>Most web sites today have poor global navigation (features for locating and visiting pages across the entire site). It is difficult to discern the site's basic structure and available resources, which makes it hard to locate a particular page or find the one with the information you want.</p>
+
+<p>Part of the problem is that HTML has limited features for navigation. Its primary mechanism--the hyperlink--was designed to be interspersed in content. HTML-based navigation bars take up too much space, DHTML menus are slow and buggy, and site maps make you go to an intermediate page to find the information you want.</p>
+
+<p>XUL's navigation-oriented widgets, like toolbars, menus, and trees, are a better way to provide web site navigation because they can fit a lot of navigation into a small space, render quickly, and work well.</p>
+
+<p>Note: The downside to using XUL is that it only works with browsers that understand it. This isn't a problem inside an organization that uses Mozilla-based browsers exclusively, but for other sites you may need to provide another form of navigation as well.</p>
+
+<h2 id="Prerequisites" name="Prerequisites">Prerequisites</h2>
+
+<p>To understand this tutorial you should have experience with tag-based languages like HTML along with basic JavaScript, CSS, and the DOM. Knowledge of XML and its syntax is useful but not required. You also need a text editor and a web browser that can render XUL, like <a class="external" href="http://www.mozilla.org/products/mozilla1.x/">Mozilla</a>, or <a class="external" href="http://www.mozilla.com/firefox/">Firefox</a>.</p>
+
+<p>If you build a XUL file along with this tutorial and put it onto a web server, you need to configure your web server to specify the content type of XUL files as <code>application/vnd.mozilla.xul+xml</code>. For Apache, you can do this by adding the following line to your <code>mime.types</code> file:</p>
+
+<pre class="eval">application/vnd.mozilla.xul+xml .xul
+</pre>
+
+<p>Alternately, add this line to your <code>httpd.conf</code> file or, if the Apache server is configured to allow it, to the <code>.htaccess</code> file in the directory from which the XUL file is served:</p>
+
+<pre class="eval">AddType application/vnd.mozilla.xul+xml .xul
+</pre>
+
+<p>Then restart your web server. With <a class="external" href="http://php.net">PHP</a> you can send the mime-type with the <a class="external" href="http://php.net/manual/en/function.header.php">header()</a> function.</p>
+
+<pre>&lt;?php
+header('Content-type: application/vnd.mozilla.xul+xml');
+?&gt;
+&lt;!-- XUL markup starts here --&gt;
+</pre>
+
+<p>Note that you don't need a web server for this tutorial; you can load the document you create on your computer via a "file" URL or the "Open File" function of your browser.</p>
+
+<h2 id="Step_1_a_basic_XUL_document" name="Step_1:_a_basic_XUL_document">Step 1: a basic XUL document</h2>
+
+<p>The first thing we need to do is create a basic XUL document.</p>
+
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+
+&lt;window xmlns="<a class="external" href="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" rel="freelink">http://www.mozilla.org/keymaster/gat...re.is.only.xul</a>" /&gt;
+</pre>
+
+<p>A XUL document requires only two entities to be valid, an XML processing instruction on the first line that identifies the file as XML, and a window element that defines a XUL application window (or in this case web page).</p>
+
+<p>The processing instruction is required because XUL is an XML-based language, and this instruction tells browsers how to parse the document. The window element is the root (outermost) element in a XUL document and encompasses all other elements. It is analogous to the &lt;html&gt; element in HTML.</p>
+
+<p>These two elements give us a valid XUL document we can load and display in our web browser, even though there's nothing to see yet.</p>
+
+<p><a class="external" href="http://www.mozilla.org/docs/tutorials/sitenav/1.txt">Source</a> | <a class="external" href="http://www.mozilla.org/docs/tutorials/sitenav/1.xul">Rendered</a></p>
+
+<p><img alt="Screenshot" class="internal" src="/@api/deki/files/409/=Using_Remote_Xul_Step1.png"></p>
+
+<h2 id="Step_2_an_iframe_for_displaying_the_web_site_content" name="Step_2:_an_iframe_for_displaying_the_web_site_content">Step 2: an iframe for displaying the web site content</h2>
+
+<p>Now that we have a basic XUL document, we need a way to display pages from the mozilla.org web site. For that we'll use a XUL <var>iframe</var> element.</p>
+
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+
+&lt;window xmlns="<a class="external" href="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" rel="freelink">http://www.mozilla.org/keymaster/gat...re.is.only.xul</a>"&gt;
+
+<span class="highlightgreen">  &lt;iframe src="<a class="external" href="http://www.mozilla.org/" rel="freelink">http://www.mozilla.org/</a>" flex="1" /&gt;</span>
+
+&lt;/window&gt;
+</pre>
+
+<p>The XUL <var>iframe</var> element is just like its HTML counterpart: it defines an area within which web content can be displayed. Its <var>src</var> attribute contains the URL of the page being displayed in the iframe. We set this value to the mozilla.org home page by default so that page loads into the iframe when we first load the XUL document.</p>
+
+<p>The iframe's <var>flex</var> attribute tells the browser to stretch the iframe to fill the space available to it. Without it, the iframe's size would be a fixed default and wouldn't change when the user resized their window. <span class="comment">[optionally show what this looks like]</span></p>
+
+<p>The value of the <var>flex</var> attribute determines the extent to which the element will stretch relative to other flexible elements. An element with a flex of "2" is twice as flexible as an element with a flex of "1", so the first element might show up as twice as wide as the second. In our case, the iframe will be the only flexible element in our document, so we don't have to worry about its value and give it a standard value of <var>1</var>. <span class="comment">[optionally add something about how "flex" only applies to one axis]</span></p>
+
+<p>Note that for remote XUL documents you can see changes you make to the UI by reloading the document with your browser's "Reload" function, just as with a typical HTML page.</p>
+
+<p><a class="external" href="http://www.mozilla.org/docs/tutorials/sitenav/2.txt">Source</a> | <a class="external" href="http://www.mozilla.org/docs/tutorials/sitenav/2.xul">Rendered</a></p>
+
+<p><img alt="Screenshot" class="internal" src="/@api/deki/files/410/=Using_Remote_Xul_Step2.png"></p>
+
+<h2 id="Step_3_menus_and_buttons" name="Step_3:_menus_and_buttons">Step 3: menus and buttons</h2>
+
+<p>The mozilla.org web site uses an HTML navigation bar on the left-hand side of its pages to provide site navigation. The bar consists of a set of links organized into four main categories: The Mozilla Organization, Developer Docs, Testing, and Tools. The bar also contains two links that are independent of any category: FAQ and Search.</p>
+
+<p>The categorized links are analogous to menu items organized into menus, where clicking the link/selecting the menu item performs some function, so we'll use XUL menu elements to implement them in our document. The independent links, on the other hand, are similar to XUL buttons, which perform a function when pressed, so we'll use the button element for those.</p>
+
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+
+&lt;window xmlns="<a class="external" href="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" rel="freelink">http://www.mozilla.org/keymaster/gat...re.is.only.xul</a>"&gt;
+
+<span class="highlightgreen">  &lt;menubar&gt;
+    &lt;menu label="The Mozilla Organization" /&gt;
+    &lt;menu label="Developer Docs" /&gt;
+    &lt;menu label="Testing" /&gt;
+    &lt;menu label="Tools" /&gt;
+    &lt;button label="Faq" /&gt;
+    &lt;button label="Search" /&gt;
+  &lt;/menubar&gt;</span>
+
+  &lt;iframe src="<a class="external" href="http://www.mozilla.org/" rel="freelink">http://www.mozilla.org/</a>" flex="1" /&gt;
+
+&lt;/window&gt;
+</pre>
+
+<p>The <var>menubar</var> element is a container for a series of menus. It can also contain other elements. It serves to group menus together into a single horizontal bar like the one you see at the top of many desktop applications. The <var>menu</var> element defines a pull-down menu, and the <var>button</var> element defines a pressable button. Both menus and buttons take a <var>label</var> attribute whose value is the text to display in the element.</p>
+
+<p><a class="external" href="http://www.mozilla.org/docs/tutorials/sitenav/3.txt">Source</a> | <a class="external" href="http://www.mozilla.org/docs/tutorials/sitenav/3.xul">Rendered</a></p>
+
+<p><img alt="Screenshot" class="internal" src="/@api/deki/files/411/=Using_Remote_Xul_Step3.png"></p>
+
+<h2 id="Step_4_menu_items" name="Step_4:_menu_items">Step 4: menu items</h2>
+
+<p>Menus aren't terribly useful unless they contain selectable items. To add items to a menu, we need to first add a <var>menupopup</var> element and then put <var>menuitem</var> elements within it for each item we want to appear on the menu.</p>
+
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+
+&lt;window xmlns="<a class="external" href="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" rel="freelink">http://www.mozilla.org/keymaster/gat...re.is.only.xul</a>"&gt;
+
+  &lt;menubar&gt;
+    &lt;menu label="The Mozilla Organization"&gt;
+<span class="highlightgreen">      &lt;menupopup&gt;
+        &lt;menuitem label="At a Glance"     value="<a class="external" href="http://www.mozilla.org/mozorg.html" rel="freelink">http://www.mozilla.org/mozorg.html</a>" /&gt;
+        &lt;menuitem label="Feedback"        value="<a class="external" href="http://www.mozilla.org/feedback.html" rel="freelink">http://www.mozilla.org/feedback.html</a>" /&gt;
+        &lt;menuitem label="Get Involved"    value="<a class="external" href="http://www.mozilla.org/get-involved.html" rel="freelink">http://www.mozilla.org/get-involved.html</a>" /&gt;
+        &lt;menuitem label="Newsgroups"      value="<a class="external" href="http://www.mozilla.org/community.html" rel="freelink">http://www.mozilla.org/community.html</a>" /&gt;
+        &lt;menuitem label="License Terms"   value="<a class="external" href="http://www.mozilla.org/MPL/" rel="freelink">http://www.mozilla.org/MPL/</a>" /&gt;
+        &lt;menuitem label="Newsbot"         value="<a class="external" href="http://www.mozilla.org/newsbot/" rel="freelink">http://www.mozilla.org/newsbot/</a>" /&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;</span>
+    &lt;menu label="Developer Docs"&gt;
+<span class="highlightgreen">      &lt;menupopup&gt;
+        &lt;menuitem label="Roadmap"         value="<a class="external" href="http://www.mozilla.org/roadmap.html" rel="freelink">http://www.mozilla.org/roadmap.html</a>" /&gt;
+        &lt;menuitem label="Projects"        value="<a class="external" href="http://www.mozilla.org/projects/" rel="freelink">http://www.mozilla.org/projects/</a>" /&gt;
+        &lt;menuitem label="Ports"           value="<a class="external" href="http://www.mozilla.org/ports/" rel="freelink">http://www.mozilla.org/ports/</a>" /&gt;
+        &lt;menuitem label="Module Owners"   value="<a class="external" href="http://www.mozilla.org/owners.html" rel="freelink">http://www.mozilla.org/owners.html</a>" /&gt;
+        &lt;menuitem label="Hacking"         value="<a class="external" href="http://www.mozilla.org/hacking/" rel="freelink">http://www.mozilla.org/hacking/</a>" /&gt;
+        &lt;menuitem label="Get the Source"  value="<a class="external" href="http://www.mozilla.org/source.html" rel="freelink">http://www.mozilla.org/source.html</a>" /&gt;
+        &lt;menuitem label="Build It"        value="<a class="external" href="http://www.mozilla.org/build/" rel="freelink">http://www.mozilla.org/build/</a>" /&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;</span>
+    &lt;menu label="Testing"&gt;
+<span class="highlightgreen">      &lt;menupopup&gt;
+        &lt;menuitem label="Download"        value="<a class="external" href="http://www.mozilla.org/releases/" rel="freelink">http://www.mozilla.org/releases/</a>" /&gt;
+        &lt;menuitem label="Report a Bug"    value="<a class="external" href="http://bugzilla.mozilla.org/enter_bug.cgi?format=guided" rel="freelink">http://bugzilla.mozilla.org/enter_bu...?format=guided</a>" /&gt;
+        &lt;menuitem label="Bugzilla"        value="<a class="external" href="http://www.mozilla.org/bugs/" rel="freelink">http://www.mozilla.org/bugs/</a>" /&gt;
+        &lt;menuitem label="Bug Writing"     value="<a class="external" href="http://www.mozilla.org/quality/bug-writing-guidelines.html" rel="freelink">http://www.mozilla.org/quality/bug-w...uidelines.html</a>" /&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;</span>
+    &lt;menu label="Tools"&gt;
+<span class="highlightgreen">      &lt;menupopup&gt;
+        &lt;menuitem label="View Source"     value="<a class="external" href="http://lxr.mozilla.org/seamonkey/" rel="freelink">http://lxr.mozilla.org/seamonkey/</a>" /&gt;
+        &lt;menuitem label="Tree Status"     value="<a class="external" href="http://tinderbox.mozilla.org/showbuilds.cgi?tree=SeaMonkey" rel="freelink">http://tinderbox.mozilla.org/showbui...tree=SeaMonkey</a>" /&gt;
+        &lt;menuitem label="New Checkins"    value="<a class="external" href="http://bonsai.mozilla.org/cvsquery.cgi?treeid=default&amp;amp" rel="freelink">http://bonsai.mozilla.org/cvsquery.c...id=default&amp;amp</a>;..." /&gt;
+        &lt;menuitem label="Submit a Bug"    value="<a class="external" href="http://bugzilla.mozilla.org/" rel="freelink">http://bugzilla.mozilla.org/</a>" /&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;</span>
+    &lt;button label="Faq"                   value="<a class="external" href="http://www.mozilla.org/faq.html" rel="freelink">http://www.mozilla.org/faq.html</a>" /&gt;
+    &lt;button label="Search"                value="<a class="external" href="http://www.mozilla.org/search.html" rel="freelink">http://www.mozilla.org/search.html</a>" /&gt;
+  &lt;/menubar&gt;
+
+  &lt;iframe src="<a class="external" href="http://www.mozilla.org/" rel="freelink">http://www.mozilla.org/</a>" flex="1" /&gt;
+
+&lt;/window&gt;
+</pre>
+
+<p>The <var>menupopup</var> element is a container for menu items. It represents the rectangular box that appears when you click a menu title. The <var>menuitem</var> element represents a selectable item within the popup. Its <var>label</var> attribute contains the text to display in the item. Its <var>value</var> attribute, while defined in the XUL specification, has no specific function in XUL; it can store any data associated with the item. In our case we use it to store the URL of the page to load when the user selects the item from the menu.</p>
+
+<p><a class="external" href="http://www.mozilla.org/docs/tutorials/sitenav/4.txt">Source</a> | <a class="external" href="http://www.mozilla.org/docs/tutorials/sitenav/4.xul">Rendered</a></p>
+
+<p><img alt="Screenshot" class="internal" src="/@api/deki/files/412/=Using_Remote_Xul_Step4.png"></p>
+
+<h2 id="Step_5_appearance" name="Step_5:_appearance">Step 5: appearance</h2>
+
+<p>There's an obvious problem with the menus: their labels look plain. This makes them ugly and not like menus at all. In order to give them style we have to reference a stylesheet with rules for styling menus. We could write one ourselves, but we'll make our lives easier and use one of the stylesheets that comes with Mozilla-based browsers. In this case, we'll reference the default application stylesheet--the one used by the browser to style its own interface.</p>
+
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+
+<span class="highlightgreen">&lt;?xml-stylesheet href="<a class="external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;</span>
+
+&lt;window xmlns="<a class="external" href="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" rel="freelink">http://www.mozilla.org/keymaster/gat...re.is.only.xul</a>"&gt;
+
+  ...
+
+&lt;/window&gt;
+</pre>
+
+<p>The <var>xml-stylesheet</var> processing instruction references a stylesheet, applying its rules to the widgets in the XUL document into which it is placed. It is similar to the <var>link ref="stylesheet"</var> element in HTML. The URL we use, <var><a class="external" rel="freelink">chrome://global/skin/</a></var>, is a reference to the default application stylesheet (a.k.a. <a href="/en/XUL_Tutorial/Creating_a_Skin" title="en/XUL_Tutorial/Creating_a_Skin">skin</a>). If we were to switch the browser to a different skin, the style of our menus would also change. If we want our site to have the same look no matter what skin the user is using, we would need to write our own stylesheet to style the elements.</p>
+
+<p>In case you're wondering, the reason the buttons and menu items had style before we added the stylesheet reference is that some XUL elements are defined in Mozilla using another XML-based language called XBL which provides building blocks for creating UI widgets. XBL files sometimes contain references to the default application stylesheet, and when they do their widgets inherit that style even if we don't specify a stylesheet. You can't count on this behavior, however, so you should always specify a stylesheet.</p>
+
+<p><a class="external" href="http://www.mozilla.org/docs/tutorials/sitenav/5.txt">Source</a> | <a class="external" href="http://www.mozilla.org/docs/tutorials/sitenav/5.xul">Rendered</a></p>
+
+<p><img alt="Screenshot" class="internal" src="/@api/deki/files/413/=Using_Remote_Xul_Step5.png"></p>
+
+<h2 id="Step_6_behavior" name="Step_6:_behavior">Step 6: behavior</h2>
+
+<p>So far, so good. We have a menu bar with menus and buttons, and we can press the buttons, open the menus, and select their items. The interface is in place, but it doesn't do anything. We want it to load URLs in the iframe when we press the buttons or select the menu items. For that we need to add JavaScript code.</p>
+
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+
+&lt;?xml-stylesheet href="<a class="external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;
+
+&lt;window xmlns="<a class="external" href="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" rel="freelink">http://www.mozilla.org/keymaster/gat...re.is.only.xul</a>"&gt;
+
+<span class="highlightgreen">  &lt;script type="</span>application/javascript<span class="highlightgreen">"&gt;
+    function loadURL(event) {
+      var contentFrame = document.getElementById('contentFrame');
+      var url = event.target.getAttribute('value');
+
+      if (url) contentFrame.setAttribute('src', url);
+    }
+  &lt;/script&gt;</span>
+
+  ...
+
+&lt;/window&gt;
+</pre>
+
+<p>The code to load the URLs is simple. First we write an event handler function that receives an event, extracts a URL from the <var>value</var> attribute of the element where the event occurred (a.k.a. the target element), and loads the URL in the iframe. We add an <var>id</var> attribute to the <var>iframe</var> element so we can reference it from our function, and we add an <var>oncommand</var> event listener to the <var>menubar</var> element that calls the function every time the user clicks a button or selects a menu item.</p>
+
+<p>The <var>oncommand</var> event listener is a generic listener that fires whenever the user manipulates an element in some conclusive way. Because we added it to the <var>menubar</var> item, and events "bubble up" from child element to parent element, it'll fire any time the user manipulates an element inside the menu bar, so we don't have to add it to each menu item and button.</p>
+
+<p><a class="external" href="http://www.mozilla.org/docs/tutorials/sitenav/6.txt">Source</a> | <a class="external" href="http://www.mozilla.org/docs/tutorials/sitenav/6.xul">Rendered</a></p>
+
+<p><img alt="Screenshot" class="internal" src="/@api/deki/files/414/=Using_Remote_Xul_Step6.png"></p>
+
+<h2 id="Conclusion" name="Conclusion">Conclusion</h2>
+
+<p>It works! Basic global web site navigation. What we've built is just a start, however. There are many more enhancements we could add, including:</p>
+
+<ul>
+ <li>hierarchical menus for more comprehensive navigation; (Since additional menus and menu items don't take up any more space on the page, we could add links to many more parts of the site without harming usability.)</li>
+ <li>embedding the menu bar into the pages; (we can use <a href="/en/XBL" title="en/XBL">XBL</a> to embed XUL into HTML pages to get around the limitations of iframes.)</li>
+ <li>integrating the search function into the menu bar so you don't have to go to a separate page to use it;</li>
+ <li>hiding the HTML-based navigation for users who can see the XUL-based navigation;</li>
+ <li>storing the menu structure and items in a remote <a href="/en/RDF" title="en/RDF">RDF</a> datasource to make them easier to update and reuse.</li>
+</ul>
+
+<div class="originaldocinfo">
+<h2 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h2>
+
+<ul>
+ <li>Last Updated Date: December 7, 2002</li>
+</ul>
+</div>
+
+<p> </p>

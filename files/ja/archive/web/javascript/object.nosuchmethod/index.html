@@ -1,0 +1,162 @@
+---
+title: Object.prototype.__noSuchMethod__
+slug: Archive/Web/JavaScript/Object.noSuchMethod
+tags:
+  - JavaScript
+  - Object
+  - Obsolete
+  - Property
+  - Prototype
+translation_of: Archive/Web/JavaScript/Object.noSuchMethod
+---
+<div>{{JSRef}}{{Non-standard_Header}}{{Obsolete_Header("gecko43")}}</div>
+
+<p><strong><code>__noSuchMethod__</code></strong> プロパティは、オブジェクトで存在しないメソッドが呼び出されたときに実行される関数を参照するために使用されていましたが、この機能は利用できなくなりました。</p>
+
+<p><code><strong>__noSuchMethod__</strong></code> は廃止されしたが、 ECMAScript 2015 (ES6) 仕様には {{JSxRef("Proxy")}} オブジェクトがあり、以下のようなことを (それ以上のことも) 実現できます。</p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="syntaxbox"><code><var>obj</var>.__noSuchMethod__ = <var>fun</var></code></pre>
+
+<h3 id="Parameters" name="Parameters">引数</h3>
+
+<dl>
+ <dt><code>fun</code></dt>
+ <dd>以下の引数をとる関数</dd>
+ <dd>
+ <pre class="brush: js"><code>function (<var>id</var>, <var>args</var>) { . . . }</code></pre>
+
+ <dl>
+  <dt><code>id</code></dt>
+  <dd>呼び出された未定義のメソッドの名前</dd>
+  <dt><code>args</code></dt>
+  <dd>そのメソッドへ渡された引数の配列</dd>
+ </dl>
+ </dd>
+</dl>
+
+<h2 id="Description" name="Description">解説</h2>
+
+<p>オブジェクトで定義されていない関数の呼び出しを試みても、標準の挙動では {{JSxRef("TypeError")}} 例外が投げられるだけです。オブジェクトのメンバー関数として <code>__noSuchMethod__</code> を定義しておく事でこの挙動を回避できます。 <code>__noSuchMethod__</code> として定義される関数は 2 つの引数をとります。 1 つ目の引数は呼び出しが試みられたメソッドの名前を表し、 2 つ目の引数はそのメソッドへ渡された引数の配列を表します。この 2 つ目の引数は実配列です。配列を模したオブジェクトである <a href="/ja/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments"><code>arguments</code> オブジェクト</a>ではありません。</p>
+
+<p>このメソッドが呼び出せない場合、つまり既定値の <code>undefined</code> であるか削除されていた場合、または関数以外が手動で設定されていた場合は、JavaScript エンジンは <code>TypeError</code> を投げる動作に戻ります。</p>
+
+<h2 id="Examples" name="Examples">例</h2>
+
+<h3 id="Simple_test_of___noSuchMethod__" name="Simple_test_of___noSuchMethod__"><code>__noSuchMethod__</code> の基本的な使い方</h3>
+
+<pre class="brush: js">var o = {
+  __noSuchMethod__: function(id, args) {
+                      console.log(id, '(' + args.join(', ') + ')');
+                    }
+};
+
+o.foo(1, 2, 3);
+o.bar(4, 5);
+o.baz();
+
+// 出力
+// foo (1, 2, 3)
+// bar (4, 5)
+// baz ()
+</pre>
+
+<h3 id="Using___noSuchMethod___to_simulate_multiple_inheritance" name="Using___noSuchMethod___to_simulate_multiple_inheritance"><code>__noSuchMethod__</code> を使用して多重継承をシミュレートする</h3>
+
+<p>多重継承の基本形を実装するコードの例を以下に示します。</p>
+
+<pre class="brush: js">// Doesn't work with multiple inheritance objects as parents
+function noMethod(name, args) {
+  var parents = this.__parents_;
+
+  // Go through all parents
+  for (var i = 0; i &lt; parents.length; i++) {
+    // If we find a function on the parent, we call it
+    if (typeof parents[i][name] == 'function') {
+      return parents[i][name].apply(this, args);
+    }
+  }
+
+  // If we get here, the method hasn't been found
+  throw new TypeError;
+}
+
+// Used to add a parent for multiple inheritance
+function addParent(obj, parent) {
+  // If the object isn't initialized, initialize it
+  if (!obj.__parents_) {
+    obj.__parents_ = [];
+    obj.__noSuchMethod__ = noMethod;
+  }
+
+  // Add the parent
+  obj.__parents_.push(parent);
+}
+</pre>
+
+<p>使用例を以下に示します。</p>
+
+<pre class="brush: js">// Example base class 1
+function NamedThing(name) {
+  this.name = name;
+}
+
+NamedThing.prototype = {
+  getName: function() { return this.name; },
+  setName: function(newName) { this.name = newName; }
+}
+
+// Example base class 2
+function AgedThing(age) {
+  this.age = age;
+}
+
+AgedThing.prototype = {
+  getAge: function() { return this.age; },
+  setAge: function(age) { this.age = age; }
+}
+
+// Child class. inherits from NamedThing and AgedThing
+// as well as defining address
+function Person(name, age, address){
+  addParent(this, NamedThing.prototype);
+  NamedThing.call(this, name);
+  addParent(this, AgedThing.prototype);
+  AgedThing.call(this, age);
+  this.address = address;
+}
+
+Person.prototype = {
+  getAddr: function() { return this.address; },
+  setAddr: function(addr) { this.address = addr; }
+}
+
+var bob = new Person('bob', 25, 'New York');
+
+console.log('getAge is ' + (('getAge' in bob) ? 'in' : 'not in') + ' bob');
+// getAge is not in bob
+
+console.log("bob's age is: " + bob.getAge());
+// bob's age is: 25
+
+console.log('getName is ' + (('getName' in bob) ? 'in' : 'not in') + ' bob');
+// getName is not in bob
+
+console.log("bob's name is: " + bob.getName());
+// bob's name is: bob
+
+console.log('getAddr is ' + (('getAddr' in bob) ? 'in' : 'not in') + ' bob');
+// getAddr is in bob
+
+console.log("bob's address is: " + bob.getAddr());
+// bob's address is: New York
+</pre>
+
+<h2 id="Specifications" name="Specifications">仕様書</h2>
+
+<p>どの標準にも含まれていません。</p>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+
+<p>どこでも対応されていません。歴史的には Firefox 42 までが対応していました。</p>

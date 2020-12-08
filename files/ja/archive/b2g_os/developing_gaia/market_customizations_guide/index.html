@@ -1,0 +1,1313 @@
+---
+title: Market customizations guide
+slug: Archive/B2G_OS/Developing_Gaia/Market_customizations_guide
+tags:
+  - B2G
+  - Customization
+  - Firefox OS
+  - Gaia
+  - Marketplace
+  - build
+translation_of: Archive/B2G_OS/Developing_Gaia/Market_customizations_guide
+---
+<div class="summary">
+<p>マーケットカスタマイズ機能を使うとコアの Gaia リポジトリを書き換えることなく独立したディレクトリでビルド時のカスタマイズを指定 (例えば、ビルド二度のアプリを含めるかなど) することができます。独自のカスタマイズを独立したディレクトリで用意することもできるし、事前に用意されたソースの入ったディレクトリを使うこともできます。カスタマイズはビルドオプションで指定します。ここではカスタマイズのしかたや使い方を紹介します。</p>
+</div>
+
+<h2 id="カスタマイズ概要">カスタマイズ概要</h2>
+
+<p>Firefox OS は 1.0.1 以降、Firefox 同様のカスタマイズシステムを使っています。この記事に書かれている機能は特に明記されない限り Firefox OS 1.0.1 以降で動作します。</p>
+
+<p>フルセットの <a href="https://github.com/mozilla-b2g/gaia/tree/master/customization">Gaia ディストリビューションカスタマイズサンプル</a>を Gaia リポジトリの中に用意しています。ビルド時のカスタマイズで何が出来るかするにはまずこれを直接触ってみるのが良いでしょう。この記事でもあとで言及します。</p>
+
+<div class="note">
+<p><strong>メモ</strong>: カスタマイズサンプルをより良くするための提案があったり、この記事で更新されているがコードが古くなっているような場合は上記の Github リポジトリにプルリクエストを送ってください。</p>
+</div>
+
+<p>カスタマイズサンプルのディレクトリ構造は次の通りです:</p>
+
+<pre>  customize-sample
+  ├── power
+  │   ├── carrier_power_on.png
+  │   └── carrier_power_off.png
+  ├── ringtones
+  │   ├── list.json
+  │   └── ringer_dream_theme.ogg
+  ├── wallpapers
+  │   ├── customize.png
+  │   └── list.json
+  ├── browser.json
+  ├── calendar.json
+  ├── contacts.json
+  ├── costcontrol.json
+  ├── device-features.json
+<span style="font-size: 1rem;">  ├── eu-roaming.json</span>
+  ├── homescreens.json
+  ├── network.json
+  ├── settings.json
+  ├── sms-blacklist.json
+  ├── support.json
+  ├── wapuaprof.json
+  └── apps.list</pre>
+
+<div class="note">
+<p><strong>メモ</strong>: すべてのファイルは必須ではありません。ファイルを含めなければシステムのデフォルト設定でビルドされます。</p>
+</div>
+
+<p>後に個々のカスタマイズについて説明しますが、まずはどのように Gaia にカスタマイズを適用するか説明します。</p>
+
+<h2 id="カスタマイズの適用手順">カスタマイズの適用手順</h2>
+
+<p>カスタマイズサンプルを Gaia に適用するには次のようにしてください:</p>
+
+<ol>
+ <li>Gaia のソースコードを <a href="https://github.com/mozilla-b2g/gaia">https://github.com/mozilla-b2g/gaia</a> からクローンしてください。</li>
+ <li><code>gaia/customization/</code> ディレクトリを別のディレクトリにコピーして自分でカスタマイズすることもできますし <code>gaia/customization/</code> ディレクトリを直接書き換えることもできます。カスタマイズファイルを収めるディレクトリへのパスは下記の <code>&lt;DISTRIBUTION_PATH&gt;</code> で指定できます。任意のディレクトリパスを指定してください。</li>
+ <li>必要に応じてサンプルを編集してください。</li>
+ <li>Firefox OS デバイスを USB ケーブルでコンピュータに接続し、<a href="/en-US/Firefox_OS/Debugging/Installing_ADB">ADB</a> で接続できることを確認してください。</li>
+ <li>次のように <code>GAIA_DISTRIBUTION_DIR</code> 環境変数を指定して Gaia をビルドしてください:</li>
+ <li>
+  <pre class="brush: bash">make production GAIA_DISTRIBUTION_DIR=&lt;DISTRIBUTION_PATH&gt;</pre>
+ </li>
+ <li>カスタマイズが適用された Gaia を Firefox OS デバイスにインストールできます。</li>
+</ol>
+
+<p>カスタマイズサンプルディレクトリを <code>gaia/distribution/</code> ディレクトリにコピーした場合、環境変数を指定する必要はありません:</p>
+
+<pre class="brush: bash">make production</pre>
+
+<div class="note">
+<p><strong>メモ</strong>: 一部のカスタマイズは Gaia ビルドスクリプト中で行えます。ビルドスクリプトのカスタマイズについては <a href="/en-US/Firefox_OS/Developing_Gaia/make_options_reference">make オプションリファレンス</a>をご覧ください。</p>
+</div>
+
+<div class="note">
+<p><strong>メモ</strong>: SIM カード固有のカスタマイズはビルド時に含められますが、初回起動時のセットアップ中、実行時に適用されます。</p>
+</div>
+
+<h2 id="ビルド時のカスタマイズ">ビルド時のカスタマイズ</h2>
+
+<p>それではサンプルに含まれているさまざまなカスタマイズ例を見ていきましょう。</p>
+
+<h3 id="power">power/</h3>
+
+<p>電源オン・オフ時のアニメーション (あるいは静止画) を含められます。ファイルは MP4 のアニメーションか PNG の静止画です。</p>
+
+<p>次のような名前のファイルを用意してください:</p>
+
+<ul>
+ <li><code>carrier_power_on.png</code></li>
+ <li><code>carrier_power_on.mp4</code></li>
+ <li><code>carrier_power_off.png</code></li>
+ <li><code>carrier_power_off.mp4</code></li>
+</ul>
+
+<h3 id="ringtones">ringtones/</h3>
+
+<p>カスタム着信音を含められます。次のように <code>list.json</code> ファイルで着信音ファイルのリストを指定します:</p>
+
+<pre class="brush: js">  {
+    "ringer_classic_courier.opus": "",
+    "ringer_dream_theme.ogg": "",
+    "ringer_loud_windchimes.opus": "",
+    "ringer_bitbounce.opus": ""
+  }</pre>
+
+<p>カスタム着信音は Firefox OS の環境設定アプリの <em>サウンド &gt; 着信</em> で指定できます。 デフォルトの着信音は DataURI を用いて <code>settings.json</code> で設定します。DataURI は node/npm の <strong>datauri</strong> コマンドで生成できます:</p>
+
+<ol>
+ <li><strong>npm install datauri -g</strong> コマンドでインストールしてください。</li>
+ <li><strong>datauri &lt;FILE&gt;</strong> コマンドでファイルを DataURI に変換してください。</li>
+</ol>
+
+<h3 id="wallpapers">wallpapers/</h3>
+
+<p>カスタム壁紙 (PNG ファイル) を <code>list.json</code> ファイルで指定すると、Firefox OS の環境設定アプリの <em>画面表示 &gt; 壁紙</em> で指定できるようになります。</p>
+
+<p>デフォルトの壁紙は次のように <code>settings.json</code> で指定してください:</p>
+
+<pre class="brush: js">"wallpaper.image": "image location"</pre>
+
+<div class="note">
+<p><strong>メモ</strong>: 画像はファイルパスまたは dataURI で指定できます。</p>
+</div>
+
+<h3 id="browser.json">browser.json</h3>
+
+<p>このファイルではブックマークやデフォルト検索エンジンなど、ブラウザアプリをカスタマイズできます。このファイルの書き方は <a href="/en-US/Firefox_OS/Hacking_Firefox_OS/Market_customizations_guide#Browser_bookmarks_.26_default_search_engine">ブラウザのブックマークとデフォルト検索エンジン</a> をご覧ください。</p>
+
+<h3 id="calendar.json">calendar.json</h3>
+
+<p>このファイルでは Firefox OS のカレンダーアプリに独自のカレンダーを指定できます。Google OAuth credentials を指定する必要があります。加えて、カレンダーの CalDav API アクセスが必要になります。API キーとシークレットを生成するには、Google の <a href="https://developers.google.com/google-apps/calendar/caldav/v2/guide#creating_your_client_id">creating your client ID</a> ページに記載の通り、次の手順で操作してください:</p>
+
+<ol>
+ <li><a href="https://code.google.com/apis/console/b/0">API console</a> を開いてください。</li>
+ <li>プロジェクトを開き <em>APIs &amp; auth &gt; APIs で Calendar CalDav API</em> <em>を有効化してください。</em></li>
+ <li><em>Credentials</em> をクリックしてください。</li>
+ <li><em>Create new client ID</em> をクリックしてください。</li>
+ <li><em>Application type</em> を Installed application に設定し、<em>Installed application type</em> を <em>Other</em> に設定し、<em>Create Client ID</em>. ボタンを押してください。<em>Client ID</em> と <em>Client secret</em> が表示されます。</li>
+ <li><code>calendar.json</code> ファイルを開き <code>client_id</code> と <code>client_secret</code> に Google API コンソールで表示された <em>Client ID</em> と <em>Client secret</em> を入力して保存してください。</li>
+</ol>
+
+<div class="note">
+<p><strong>メモ</strong>: API の利用回数は 1 日 1,000,000 リクエストに制限されています。</p>
+</div>
+
+<h3 id="camera-config.js_(Gallery_and_Camera_app_image_sizes)">camera-config.js (Gallery and Camera app image sizes)</h3>
+
+<div class="code-body highlight">
+<pre class="line"><span class="p">{</span>
+  <span class="nt">"maxImagePixelSize"</span><span class="p">:</span> <span class="mi">6000000</span><span class="p">,</span>
+  <span class="nt">"maxSnapshotPixelSize"</span><span class="p">:</span> <span class="mi">4000000</span><span class="p">,</span>
+  <span class="nt">"requiredEXIFPreviewSize"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">"width"</span><span class="p">:</span> <span class="mi">1200</span><span class="p">,</span>
+    <span class="nt">"height"</span><span class="p">:</span> <span class="mi">1222</span>
+  <span class="p">}</span>
+<span class="p">}</span></pre>
+</div>
+
+<p><code>maxImagePixelSize</code> と <code>maxSnapshotPixelSize</code> はギャラリーとカメラアプリで表示する画像の最大ピクセルサイズです。デフォルトは 5 メガピクセル (5*2<sup>20</sup> ピクセル) になっています。</p>
+
+<p><code>requiredEXIFPreviewSize </code>プロパティを追加すればフルスクリーンプレビューで表示されるための最小 EXIF プレビューサイズも指定できます。これを指定しなければ EXIF プレビューはランドスケープとポートレイト (横と縦) モード両方で (高さまたは幅が) 画面サイズ以上になる場合にのみ EXIF プレビューが使用されます。</p>
+
+<h3 id="contacts.json">contacts.json</h3>
+
+<p>Gaia ビルド時の連絡帳データベースに含める連絡先のリストを指定できます。</p>
+
+<p><code>contacts.json</code> ファイルのサンプルは次の通りです:</p>
+
+<pre class="brush: js">[
+   {
+     "name": ["John Doe"],
+     "givenName": ["John"],
+     "familyName": ["Doe"],
+     "nickname": ["Johnny"],
+     "category": ["Work", "Racing Team"],
+     "email": [
+       {
+         "type": ["personal"],
+         "value": "john.doe@example.org",
+         "pref": true
+       },
+       {
+         "type": ["work"],
+         "value": "jdoe@example.com"
+       }
+     ],
+     "adr": [
+       {
+         "type": ["personal"],
+         "streetAddress": "123 Foopy St.",
+         "locality": "San Francisco",
+         "region": "Downtown",
+         "postalCode": "94030",
+         "countryName": "US"
+       }
+     ]
+   },
+   {
+     "name": ["CarrierX"],
+     "email": [
+       {
+         "type": ["work"],
+         "value": "support@carrierx.com"
+       }
+     ],
+     "url": [
+       {
+         "type": ["work"],
+         "value": "https://www.carrierx.com"
+       }
+     ]
+   }
+ ]</pre>
+
+<div class="note">
+<p><strong>メモ</strong>: Contacts オブジェクトのレイアウト詳細は <a href="/en-US/docs/WebAPI/Contacts">Contacts API ページ</a> をご覧ください。</p>
+</div>
+
+<div class="note">
+<p><strong>メモ</strong>: SIM カード依存のカスタマイズについては <a href="#Browser_bookmarks_and_default_search_engine">Browser bookmarks and default search engine</a> 節をご覧ください。</p>
+</div>
+
+<h3 id="device-features.json">device-features.json</h3>
+
+<p>ハードウェアでサポートする機能を指定します。デフォルトは次の通りです:</p>
+
+<pre class="brush: js">{
+  "ambientLight": true,
+  "vibration": true
+}</pre>
+
+<p>各機能を無効化するには <code>false</code> を指定してください。</p>
+
+<h3 style="line-height: 24px; font-size: 1.71428571428571rem;" id="eu-roaming.json">eu-roaming.json</h3>
+
+<p>EU のローミング規制に従うべきオペレーターのリストとその APN 設定が含められます。このファイルは 3 つの部分からなり、最初の <code>home</code> では規制に従うべきオペレーターのオペレーターコードを指定します。次の<span style="line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">foreign</code><span style="line-height: 1.5;"> </span>ではローミング前に EU ローミング通知が表示されるべき海外オペレーターのオペレーターコードを指定します。最後の部分では EU ローミングの APN 設定を含めます。デフォルトファイルは次のようになります:</p>
+
+<pre style="font-size: 14px;" class="brush: js">{
+  "home": null,
+  "foreign": null,
+  "defaultApns": []
+}
+</pre>
+
+<p>OS にローミング通知を表示させたい場合、次のような形でファイルを用意してください。この例では、ユーザがオペレーターコードが "001, 01" の SIM カードを使っていてオペレーターコード "002, 02" の海外ネットワークにローミング接続するときに  EU ローミング通知が表示されます:</p>
+
+<pre style="font-size: 14px;" class="brush: js">{
+  "home": {
+    "001": {
+      "01": true
+    }
+  },
+  "foreign": {
+    "002": {
+      "02": true
+    }
+  },
+  "defaultApns": [{
+    "apn": "eu.apn",
+    "types": ["default"]
+  ]}
+}
+</pre>
+
+<div class="note">
+<p><strong>メモ</strong>: <span style="font-family: courier new,andale mono,monospace;">defaultApns</span> フィールドにリストされる APN 設定はすべて環境設定アプリにデフォルトでリスト表示されます。</p>
+</div>
+
+<h3 id="homescreens.json">homescreens.json</h3>
+
+<p><a href="https://github.com/mozilla-b2g/gaia/blob/master/customization/homescreens.json">homescreens.json</a> では Firefox OS のドックとホームスクリーンに表示するアプリとその順序を定義します。デフォルトでは次のような感じです:</p>
+
+<pre class="brush: js">{"homescreens": [
+   [
+     ["apps", "communications", "dialer"],
+     ["apps", "sms"],
+     ["apps", "browser"],
+     ["apps", "camera"]
+   ]
+ ]}</pre>
+
+<p>この設定ではドックに表示される 4 つのアプリを指定しています。配列を追加すると、ホームスクリーンの 1 ページ目に表示されるアプリ、次を追加すると 2 ページ目のものと順次設定できます。</p>
+
+<pre class="brush: js">{"homescreens": [
+   [ // We're in the dock!
+     ["apps", "communications", "dialer"],
+     ["apps", "sms"],
+     ["apps", "browser"],
+     ["apps", "camera"]
+   ],
+   [ // We're on Page 1 of the homescreen
+     ["apps", "email"],
+     ["apps", "settings"],
+     ["apps", "clock"],
+     ["apps", "calendar"]
+   ],
+   [ // We're on Page 2 of the homescreen
+     ["external-apps", "customapp1"],
+     ["external-apps", "customapp2"],
+     ["external-apps", "customapp3"],
+     ["external-apps", "customapp4"]
+   ]
+ ]}</pre>
+
+<p>内側の配列の 1 つめの要素にはアプリが入っているフォルダ名 ("apps" や "external-apps" を、2 つめの要素にはアプリのディレクトリ名 ("email" や "browser" など) を指定してください。</p>
+
+<h4 id="コレクション">コレクション</h4>
+
+<div class="note">
+<p><strong>メモ</strong>: Fierfox 2.0 では <code>collections</code> ディレクトリは <code>homescreen</code> アプリの中の <code>collections</code>  アプリに移動しました。マニフェストの値も一部変更されている事に注意してください (例えば <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/collection/collections/funny/manifest.collection">funny コレクションのマニフェスト</a> をご覧ください)。<code>provider_id</code> は <code>categoryId</code> に、<code>apps</code> は <code>pinned</code> に変更されています。</p>
+</div>
+
+<p>コレクションはホームスクリーンに独自のアイコンで表示されるアプリのグループです。そのアイコンをタップすると、コレクションに含まれるアプリのアイコン一覧を含む新しい画面が表示されます。デフォルトでどのようなコレクションが用意されているかは <a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/collection/collections">ソースコードの collections ディレクトリ</a> をご覧ください:</p>
+
+<ul>
+ <li><code>funny</code>: 最新のオモシロアプリ</li>
+ <li><code>games</code>: オンラインゲームで遊ぶ</li>
+ <li><code>local</code>: あなたのいる場所に関するアプリ</li>
+ <li><code>music</code>: 好きな音楽を聴こう</li>
+ <li><code>news</code>: 世界の最新ニュースに注目</li>
+ <li><code>shopping</code>: お買い物を楽しもう</li>
+ <li><code>showbiz</code>: エンタメアプリを見つけよう</li>
+ <li><code>social</code>: どこでもソーシャルネットワーク</li>
+ <li><code>sports</code>: スポーツのベストアプリ</li>
+ <li><code>tv</code>: メディア関連アプリ</li>
+</ul>
+
+<p>個別のディレクトリではいろいろな解像度のアイコンファイルと、名前や役割とアイコンへのパスなどコレクションのメタデータが定義されています。</p>
+
+<div class="note">
+<p><strong>メモ</strong>: E.me のサーバでは追加のコレクションが定義されており、合計 19 のコレクションがあります (上記の 10 に加えて 9 あります)。これらのリストについてはホームスクリーンをロングタップして「スマートコレクションを追加」を選択すると表示されます。</p>
+</div>
+
+<p><a href="https://github.com/mozilla-b2g/gaia/blob/master/customization/homescreens.json"><code>homescreens.json</code></a> ではコレクションをどのページでどの順番で読み込むか定義できます。例えば、<code>shopping</code>, <code>social</code>, <code>sports</code> および <code>tv</code> コレクションを表示したければ次のように指定します:</p>
+
+<pre class="brush: js">{"homescreens": [
+   [
+     ["apps/collection/collections", "shopping"],
+     ["apps/collection/collections", "social"],
+     ["apps/collection/collections", "sports"],
+     ["apps/collection/collections", "tv"]
+   ], [
+     ["apps", "communications", "dialer"],
+     ["apps", "sms"],
+     ["apps", "browser"],
+     ["apps", "camera"]
+   ]
+ ]}</pre>
+
+<p>最上部の配列はそれぞれホームスクリーンのページに対応しており、この場合はコレクションのドックに表示され、個別のアプリがホームスクリーンの 1 ページ目に表示されます。</p>
+
+<div class="note">
+<p><strong>メモ</strong>: 初期設定では、Gaia ホームスクリーンの最初のページに次の 4 つのコレクションが表示されます: <em>Social</em>, <em>Games</em>, <em>Music</em>, <em>Entertainment</em>.</p>
+</div>
+
+<div class="note">
+<p><strong>メモ</strong>: コレクション名は小文字で指定します。</p>
+</div>
+
+<h5 id="コレクションには何が含まれるか">コレクションには何が含まれるか</h5>
+
+<p>コレクションには 2 つの種類のアプリがあります。<br>
+ <br>
+ <strong>Local apps</strong> は <code>/apps/collection/collections/&lt;collectionName&gt;/manifest.collection</code> のマニフェストファイルでビルド時に定義される物です。各コレクションに含まれるローカルアプリはマニフェストファイルで定義します。例えば、social コレクション (電話、SMS、連絡帳、メールアプリを含む) のマニフェストは次のようになります:</p>
+
+<pre class="brush: js">{
+  "name": "Social",
+  "role": "collection",
+  "provider_id": "289", // adaptive search identifier
+  "apps": [
+    ["apps", "communications", "dialer"],
+    ["apps", "sms"],
+    ["apps", "communications", "contacts"],
+    ["apps", "email"]
+  ],
+  "default_locale": "en-US",
+  "icons": {
+    "60": "/collections/social/icon.png",
+    "90": "/collections/social/icon@1.5x.png",
+    "120": "/collections/social/icon@2x.png"
+  }
+ }</pre>
+
+<p><strong>Remote apps</strong> は適応検索のプロバイダにより実行時に、デバイスがオンライン状態の時に提供されます。</p>
+
+<h5 id="コレクションの翻訳方法">コレクションの翻訳方法</h5>
+
+<p>コレクションの翻訳はホームスクリーンアプリの <code>apps/collection/locales/</code>  ディレクトリにあるローカルファイルで定義します。各ロケールのファイルは <code>collections.&lt;言語コード&gt;.properties</code> のような名前規則になっており、<code>&lt;言語コード&gt; </code>は例えばフランス語なら fr、日本語なら ja などになります。内容はデフォルトの英語文字列と翻訳バージョンを書いた行が含まれる単純なファイルです。例えばフランス語のロケールファイルは次のようになります:</p>
+
+<pre><span class="c1"># Add bookmark to homescreen</span><span class="na">
+add-to-home-screen</span><span class="o">=</span><span class="s">Ajouter à l’écran d’accueil</span><span class="na">
+add-to-home-screen-header</span><span class="o">=</span><span class="s">Ajouter un lien</span><span class="na">
+website-name</span><span class="o">=</span><span class="s">Nom du site web</span><span class="na">
+address</span><span class="o">=</span><span class="s">Adresse</span><span class="na">
+added-to-home-screen</span><span class="o">=</span><span class="s">Ajouté à l’écran d’accueil</span></pre>
+
+<h5 id="カスタムコレクション">カスタムコレクション</h5>
+
+<p>Firefox OS 1.3 からは独自のカスタムコレクションを定義できます。単に <a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/collection/collections">collections ディレクトリ</a> の中に追加し、上記のように <code>collections.json </code>でそれを指定してください。</p>
+
+<h4 id="垂直ホームスクリーンの設定">垂直ホームスクリーンの設定</h4>
+
+<p>Firefox OS 2.0 以降では、従来の水平にページめくりするホームスクリーンではなく縦スクロールする垂直ホームスクリーン (vertical homescreen) を選択できます。垂直ホームスクリーンの設定は <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/verticalhome/build/default-homescreens.json">default-homescreens.json</a> で、表示するアプリやコレクション、ホームスクリーンにアイコンを並べる列の数、ブックマークなどを指定できます。</p>
+
+<h3 id="network.json_(カスタマイズフォルダにはありません)">network.json (カスタマイズフォルダにはありません)</h3>
+
+<div class="warning">
+<p><strong>重要</strong>: Firefox OS 1.4 以降ではサポートされていません</p>
+</div>
+
+<p>In Firefox OS &lt; 1.4, this file can be created in <code>gaia/apps/settings/resources</code>, and it allows you to set the network types supported by the device. Firefox OS supports the following types:</p>
+
+<ul>
+ <li>'wcdma/gsm' (WCDMA preferred)</li>
+ <li>'gsm'</li>
+ <li>'wcdma'</li>
+ <li>'wcdma/gsm-auto' (GSM preferred)</li>
+ <li>'cdma/evdo' (CDMA preferred)</li>
+ <li>'cdma'</li>
+ <li>'evdo'</li>
+ <li>'wcdma/gsm/cdma/evdo' (Automatic)</li>
+</ul>
+
+<p>An example is as follows:</p>
+
+<pre class="brush: js">{
+  "types":  [
+    "cdma/evdo",
+    "cdma", "evdo"
+  ]
+}</pre>
+
+<h3 id="settings.json">settings.json</h3>
+
+<ul>
+ <li>一般的な設定: 1.0.1</li>
+ <li>ロケットバーのデフォルト検索エンジン: 2.0</li>
+</ul>
+
+<p>このファイルではデフォルトの壁紙、着信音、ロックスクリーンの有効無効、Bluetooth の有効無効などを指定できます。<a href="https://github.com/mozilla-b2g/gaia/blob/master/build/config/common-settings.json">build/config/common-settings.json</a> を見るとどのような設定が可能か分かります。例えば、WiFi をデフォルトで無効にするには <code><span class="nt">"wifi.enabled"</span><span class="p">:</span> <span class="kc">false</span></code> などと設定できます。</p>
+
+<p>カスタム設定は <a href="https://github.com/mozilla-b2g/gaia/blob/master/customization/settings.json">customization/settings.json</a> で指定できます。</p>
+
+<h4 id="ロケットバーのデフォルト検索エンジン">ロケットバーのデフォルト検索エンジン</h4>
+
+<p>Firefox OS 2.0 以降では、<code>settings.json</code> で次のような設定でロケットバーのデフォルト検索エンジンが指定できるようになります:</p>
+
+<pre>"search.urlTemplate": "https://www.google.com/search?q={searchTerms}",
+"search.suggestionsUrlTemplate": "https://www.google.com/complete/search?client=firefox&amp;q={searchTerms}",
+"search.iconUrl": "data:image/x-icon;base64,AAABAAIAEBAAAAAAAAB9AQAAJ [TRUNCATED FOR BREVITY]
+</pre>
+
+<h3 id="検索プロバイダのカスタマイズ">検索プロバイダのカスタマイズ</h3>
+
+<p>Firefox OS 2.0 以降ではデフォルトの <a href="/en-US/docs/https://github.com/mozilla-b2g/gaia/blob/master/apps/settings/resources/search/providers.json">apps/settings/resources/search/providers.json</a> ファイルで検索プロバイダとアイコンファイルのリストを指定できます。ビルド時に <a href="https://github.com/mozilla-b2g/gaia/blob/master/customization/search/providers.json">customization/search/providers.json</a> ファイルを書き換え、適切なアイコンファイルを同じディレクトリに含めることで変更できます。このディレクトリが存在するとビルド時に <code>app/settings/resources/search</code> の中身を上書きします。</p>
+
+<h3 id="デフォルトホームスクリーンアプリのカスタマイズ">デフォルトホームスクリーンアプリのカスタマイズ</h3>
+
+<p><code>homescreen.appName</code> ではデフォルトのホームスクリーンアプリを指定できます。</p>
+
+<div class="code-body highlight">
+<pre class="line"><span class="p">{</span> <span class="nt">"homescreen.appName"</span><span class="p">:</span> <span class="s2">"homescreen-stingray"</span> <span class="p">}</span></pre>
+</div>
+
+<h3 id="sms-blacklist.json">sms-blacklist.json</h3>
+
+<p>このファイルには SMS のブラックリストを記載します: このファイルに書かれた番号には SMS メッセージを送信できません。このリストは SMS アプリ <code>blacklist.json </code>ファイルを上書きします。番号は次のように配列で指定します:</p>
+
+<pre>["11223344", "55667788"]</pre>
+
+<h3 id="cellbroadcast">cellbroadcast</h3>
+
+<p>Listen するチャンネルを指定できます:</p>
+
+<ul>
+ <li>利用可能時: 実行時: Settings — <code>ril.cellbroadcast.searchlist</code></li>
+ <li>型: 文字列</li>
+ <li>有効な書式: <code>\d(-\d)?(,\d(-\d))*</code></li>
+</ul>
+
+<p>イベントレポートを無効化できます:</p>
+
+<ul>
+ <li>利用可能時:
+  <ul>
+   <li>実行時: Settings — <code>ril.cellbroadcast.disabled</code></li>
+   <li>ビルド時: Preference — <code>ril.cellbroadcast.disabled</code></li>
+  </ul>
+ </li>
+ <li>型: 真偽値</li>
+ <li>意味: true にするとセルブロードキャストレポートが完全に無効化されます。</li>
+</ul>
+
+<div class="note">
+<p><strong>Note</strong>: デフォルト設定は <a href="https://mxr.mozilla.org/gaia/source/shared/resources/apn/operator_variant.xml">operator_variant.xml</a> に記載されています。</p>
+</div>
+
+<h3 id="support.json">support.json</h3>
+
+<p>このファイルにはオンラインサポートや電話サポートなどのサポート先情報を記載します。このファイルがある場合、Settings アプリの <code>support.json</code> を上書きします。このカスタマイズファイルではデフォルト設定を上書きするため、デフォルト設定を残しつつサポートリソースを追加したい場合、組み込みのアプリからコピーして、それを元にカスタマイズをしてください。</p>
+
+<p>JSON ファイルは次のようなものになります:</p>
+
+<pre class="brush: js">{
+   "onlinesupport": {
+     "href": "http://support.mozilla.org/",
+     "title": "Mozilla Support"
+   },
+   "callsupport": [
+     {
+       "href": "tel:12345678",
+       "title": "Call Support 1"
+     },
+     {
+       "href": "tel:87654321",
+       "title": "Call Support 2"
+     }
+   ]
+ }</pre>
+
+<h3 id="WAP_ユーザエージェントプロファイル_(wapuaprof.json)">WAP ユーザエージェントプロファイル (wapuaprof.json)</h3>
+
+<p>WAP ユーザエージェントプロファイルでは WAP パケット送信時のユーザエージェント情報を上書きできます。デフォルトの WAP ユーザエージェントプロファイルを MCC/MNC を元に歌が期したい場合などに利用できます (より詳しくは <a href="#runtime_customization">runtime customization</a> をご覧ください)。</p>
+
+<h3 id="apps.list">apps.list</h3>
+
+<p>このリストファイルでは実行時にどのアプリを読み込みたいか指定できます (後述する <a href="#Applications">Applications</a> セクションで説明している  <code>variant.json</code> と同様の形式です)。アプリケーションを次のようにして指定します:</p>
+
+<pre class="brush: bash">apps/*
+external-apps/*
+outoftree_apps/*</pre>
+
+<p>フォルダ内のアプリ全部ではなく個別のアプリを次のように指定することもできます:</p>
+
+<pre class="brush: bash">apps/email
+apps/settings</pre>
+
+<div class="note">
+<p><strong>Note</strong>: 独自の外部アプリを自分の Gaia ビルドに含めたい場合、決まった方法でビルドして、 <code>gaia/external-apps/</code> ディレクトリに入れる必要があります。手順については Read <a href="#Building_Prebundled_web_apps">Building Prebundled web apps</a> をご覧ください。</p>
+</div>
+
+<div class="warning">
+<p><strong>重要</strong>: Firefox OS のカスタムビルドに追加で含めるアプリについては Mozilla との Distribution Agreement で指定されている必要があります。</p>
+</div>
+
+<h2 id="その他のカスタマイズ設定">その他のカスタマイズ設定</h2>
+
+<p>他にもカスタマイズできる項目が多くあるので紹介します。</p>
+
+<div class="note">
+<p><strong>Note</strong>: 以下の節で使われているビルドスクリプトの多くは <a href="https://github.com/mozilla-b2g/gaia/blob/master/build/applications-data.js">gaia/build/applications-data.js</a> にあります。これはビルド時にブラウザアプリの <code>init.json</code> ファイルにコピーされます。</p>
+</div>
+
+<h3 id="ブラウザブックマークとデフォルト検索エンジン">ブラウザブックマークとデフォルト検索エンジン</h3>
+
+<ul>
+ <li>ブックマーク: 1.0.1</li>
+ <li>デフォルト検索エンジン: 1.2</li>
+</ul>
+
+<p>デフォルトのブックマークと検索エンジンはビルド時にカスタマイズ可能で、一つのビルドでも国やネットワーク (回線、キャリア) によって異なります。カスタマイズされたデータはブラウザアプリの初回起動時に、デバイスに挿入されている SIM カードの <a href="http://en.wikipedia.org/wiki/Mobile_country_code">MCC と MNC</a> に応じて読み込まれます。</p>
+
+<div class="note">
+<p><strong>Note</strong>: ブックマークは Firefox OS 1.0.1 以降でカスタマイズ可能ですが、 <a href="#Other_single_variant_customizations"><span style="line-height: 1.5;">Other single variant customizations</span></a> 節で記載の通り、2.1 以降ではカスタマイズ方法が変わります。デフォルト検索エンジンは Firefox OS 1.2 以降でカスタマイズ可能です。</p>
+</div>
+
+<p>下の例 (<code>browser.json</code>) ではブラジルの Vivo (724006 という値は 724 がブラジルを、006 が Vivo を MMC/MNC コードで表しています) での設定例です。SIM カードの値にマッチするものが無い場合や SIM カードが挿入されていない場合はデフォルトのフォールバック (000000) が使用されます。</p>
+
+<pre class="brush: js">content = {
+   '000000': {
+     'bookmarks': [
+       { 'title': 'Mozilla',
+         'uri': 'https://mozilla.org',
+         'iconUri':
+           'data:image/png;base64,AAABAAIAEBAAAAEAIABo[truncated]'
+       },
+       { 'title': 'Firefox OS',
+         'uri': 'https://mozilla.org/firefoxos',
+         'iconUri':
+           'data:image/png;base64,AAABAAIAEBAAAAEA[truncated]'
+       }
+     ],
+     'searchEngines' : [
+        {
+          'title': 'Google',
+          'uri': 'https://www.google.com/search?q={searchTerms}',
+          'iconUri':
+            'data:image/png;base64,AAABAAIAEBAAAAEAIABoBAA[truncated]'
+        }
+      ],
+      'settings' : {
+        'defaultSearchEngine': 'https://www.google.com/search?q={searchTerms}'
+      }
+   },
+
+   '724006': {
+     "bookmarks": [
+       { "title": "Vivo Busca",
+         "uri": "https://www.google.com.br/m/search",
+         "iconUri": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC[truncated]"
+       },
+       { "title": "Serviços e Downloads",
+         "uri": "http://vds.vivo.com.br",
+         "iconUri": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACA[truncated]"
+       },
+       {
+         "title": "Site Vivo",
+         "uri": "http://www.vivo.com.br/conteudosmartphone",
+         "iconUri": "data:image/jpg;base64,/9j/4AAQSkZJRg[truncated]"
+       }
+     ],
+     'searchEngines' : [
+        {
+          'title': 'Yahoo',
+          'uri': 'https://search.yahoo.com/search?q={searchTerms}',
+          'iconUri':
+            'data:image/png;base64,AAABAAIAEBAAAAEAIABoBAA[truncated]'
+        }
+      ],
+      'settings' : {
+        'defaultSearchEngine': 'https://search.yahoo.com/search?q={searchTerms}'
+      }
+   }
+ };</pre>
+
+<p>この例では、ブラウザ初回起動時にブラジルの Vivo の SIM カードが挿入されている場合、Vivo のブックマークが使用され、デフォルト検索エンジンは Yahoo になります。初回起動時に他の SIM カードが挿入されていたり、SIM カードが無い場合は Mozilla のブックマークが使用され、デフォルト検索エンジンは Google になります。以下の点については注意してください:</p>
+
+<ul>
+ <li><code>defaultSearchEngine </code>プロパティは指定の検索エンジンの <code>uri </code>プロパティと一致する必要があります。この文字列は <code>{searchTerms}</code> プレースホルダのテンプレートとして扱われ、実行時にユーザの検索クエリ文字列で置き換えられます。検索文字列など他の値が URL テンプレート末尾にクエリ文字列として追加されることもあります。</li>
+ <li>上に示す favicon URL は HTTP URL ではなく画像データを Base64 でエンコードした dataURI (長すぎるので省略しています) になります。 ブラウザの初回起動時、ユーザがインターネットに繋がっていなくともアイコンを表示するため、HTTP URL ではなく dataURL にすることが推奨されています。</li>
+ <li>単一のビルドでも複数のカスタマイズを 6 桁の数字のコードで指定されるネットワークや国に応じて適用できます。6 桁コードは MCC コードと MNC コードの組み合わせで、それぞれ桁数が少ない場合は 0 で埋めて 3 桁とします。</li>
+ <li>最初にデフォルト設定を適用するとき、ブラウザはまず MCC と MNC コードに正確に一致するものを探しますが、一致するものが無い場合は MCC+000 のものを探し、それもなければ 000+000 にフォールバックします。</li>
+ <li>Gaia をバージョン間でアップグレードする場合、新しいカスタマイズはそのカスタマイズがアップグレード対象となる新バージョンの Gaia での新機能である場合にのみ適用されます。以前のバージョンで指定済みのカスタマイズは上書きされません。</li>
+</ul>
+
+<div class="note">
+<p><strong>Note</strong>: ブラウザアプリではブックマークを逆順で表示するため、JSON ファイルで最初のブックマークは最後に表示されます。</p>
+</div>
+
+<h3 id="Single_variant_customization_to_override_list_of_providers_and_Rocketbar_search_provider">Single variant customization to override list of providers and Rocketbar search provider</h3>
+
+<ol>
+ <li>The default Rocketbar search provider and list of providers can also be customized per MCC/MNC — data added the first time the relevant SIM card is inserted into the phone — by specifying them in JSON files in your distribution directory:
+  <ul>
+   <li>The list of providers per MCC/MNC is specified in <a href="https://github.com/mozilla-b2g/gaia/blob/master/customization/mobizilla/mobizilla_search.json">mobizilla_search.json</a> in our customization sample:</li>
+   <li>The default Rocketbar search provider is specified in <a href="https://github.com/mozilla-b2g/gaia/blob/master/customization/mobizilla/mobizilla_default_search.json">mobizilla_default_search.json</a> in our customization sample.</li>
+  </ul>
+ </li>
+ <li><a href="https://github.com/mozilla-b2g/gaia/blob/master/customization/variant.json">variant.json</a> then defines which <code>.json</code> file is used to specify the settings for each MCC/MNC pair; see <a href="https://github.com/mozilla-b2g/gaia/blob/master/customization/variant.json#L47-L48">lines 47–48</a> in our sample:
+  <pre class="brush: json">"search": "mobizilla/mobizilla_search.json",
+"default_search": "mobizilla/mobizilla_default_search.json",</pre>
+ </li>
+ <li><code>variant.json</code> is placed in the root of your distribution directory.</li>
+ <li>In order to apply the single variant configuration you have to set the <code>GAIA_DISTRIBUTION_DIR</code> variable to the path of your distribution directory when building Gaia.</li>
+</ol>
+
+<h3 id="Data_and_messaging_settings">Data and messaging settings</h3>
+
+<p>Device data and messaging settings are runtime-customizable.</p>
+
+<p>To apply specific settings, change <code>gaia/shared/resources/apn/apns_conf_local.xml</code>, simply adding or editing carrier blocks as required:</p>
+
+<pre class="brush: xml"> &lt;apn carrier="Test Network"
+      mcc="001"
+      mnc="01"
+      apn="internet"
+      user="user"
+      password="password"
+      proxy="127.0.0.1"
+      port="8080"
+      mmsc="http://127.0.0.1"
+      mmsproxy="127.0.0.1"
+      mmsport="8080"
+      authtype="0"
+      type="default,supl,mms"
+  /&gt;</pre>
+
+<h3 id="Voicemail_and_cell_broadcast_settings">Voicemail and cell broadcast settings</h3>
+
+<p>To apply specific voicemail and cell broadcast settings, change <code>gaia/shared/resources/apn/operator_variant.xml</code>. Add or edit a carrier block, changing attributes as needed:</p>
+
+<pre class="brush: xml">   &lt;operator carrier="Test Network with Operator Variant Settings"
+       mcc="001"
+       mnc="01"
+       cellBroadcastSearchList="0,1,2,3"
+       voicemail="999999"
+   /&gt;</pre>
+
+<h3 id="WAP_user_agent_profile">WAP user agent profile</h3>
+
+<p>The WAP user agent profile is another app that supports runtime customization. It overrides the user agent information when sending WAP packets, based on MCC/MNC. The profile overriding has <code>url</code> and <code>tagname</code> parts, but we only support <code>url</code> in our current implementation.</p>
+
+<p>The WAP user agent profile uses the same coding style for its key as the browser app, although "000000" is used as the default profile. An example follows:</p>
+
+<pre class="brush: js">   {
+     "000000": {
+       "url": "http://example.url/default.xml"
+     },
+     "123001": {
+       "url": "http://example.url/custom123001.xml"
+     }
+   }</pre>
+
+<p>In this example, the <code>url</code> of the default profile is <code>http://example.url/default.xml</code>; for MCC = 123 and MNC = 001, the <code>url</code> <code>is http://example.url/custom123001.xml</code>. If there was another ic card with MCC = 123 and MNC = 100, its <code>url</code> would be <code>http://example.url/default.xml</code>.</p>
+
+<p>If the 000000 is removed from this example, like so:</p>
+
+<pre class="brush: js">  {
+     "123001": {
+       "url": "http://example.url/custom123001.xml"
+     }
+   }</pre>
+
+<p>the UA profile <code>url</code> of the ic card with MCC = 123 and MNC = 001 is now overridden as <code>http://example.url/custom123001.xml</code>. No others will be overridden.</p>
+
+<p>If we have the "000000" as before, but we also have a "123001" case with no <code>url</code> inside it, like so:</p>
+
+<pre class="brush: js">   {
+     "000000": {
+       "url": "http://example.url/default.xml"
+     },
+     "123001": {}
+   }</pre>
+
+<p>All UA profile urls will now be overridden as <code>http://example.url/default.xml</code></p>
+
+<h3 id="Applications">Applications</h3>
+
+<p>Applications installed in Firefox OS can be customized at runtime, in a number of ways (see also <a href="/en-US/Firefox_OS/Platform/Gaia/Hacking#Customizing_the_build-time_apps">Customizing the build-time apps</a>). Perhaps the most powerful way is to edit the <code>variant.json</code> configuration file, which allows apps to be selectively installed and placed in the desired position in the homescreen, depending on the MCC/MNC. The customized applications will be added to the standard applications list.</p>
+
+<p>The relevant part of the <code>variant.json</code> file typically looks like so.</p>
+
+<pre class="brush: js">   {
+     "apps": {
+       "puzzle":
+         {
+           "manifestURL": "https://owd.tid.es/store/packages/fe8e4a866c518a42db9d2041568684c1.webapp"
+         },
+       "store":
+         {
+           "manifestURL": "https://owd.tid.es/store/manifest.webapp",
+           "installOrigin": "https://www.openwebdevice.com"
+         }
+     },
+     "operators": [
+       {
+         "id": "movistar-co",
+         "mcc-mnc": [
+           "214-01",
+           "214-02"
+         ],
+         "apps": [
+           {
+             "id": "store",
+             "screen": 0,
+             "location": 2
+           }
+         ]
+       },
+       {
+         "id": "movistar-mx",
+         "mcc-mnc": [
+           "215-23"
+         ],
+         "apps": [
+           {
+             "id": "store",
+             "screen": 0,
+             "location": 2
+           },
+           {
+             "id": "puzzle"
+           }
+         ]
+       }
+     ]
+   }</pre>
+
+<ul>
+ <li>The first object of the JSON is called <code>apps</code>, and defines the custom applications to be copied at buildtime. The example uses two applications, one hosted (store) and one packaged (puzzle). Notice that while packaged apps only require the <code>manifestURL</code>, hosted ones also need the <code>installOrigin</code> in order to download them.</li>
+ <li>The second object, called <code>operators</code>, is responsible of the configuration based on MCC/MNC. The object contains an array of objects for each MCC/MNC pair. These objects define the <code>id</code> of the operator, a MCC/MNC list for the configuration and a list of <code>apps</code> objects defining which applications are going to be installed at runtime in each case.</li>
+ <li>Each <code>apps</code> object requires an <code>id</code> property and has two optional arguments to set the position in the homescreen:
+  <ul>
+   <li>The <code>screen</code> property sets the screen number.</li>
+   <li>The <code>location</code> property sets the position on that screen.</li>
+  </ul>
+ </li>
+</ul>
+
+<h3 id="Other_single_variant_customizations">Other single variant customizations</h3>
+
+<p>The same file <code>variant.json</code> file — used to configure applications at runtime depending on the MCC/MNC — also allows you to configure specific resources by adding some attributes under each operator object. Thus, an operator can have the following settings:</p>
+
+<pre class="brush: js">   {
+     "apps": {
+       ...
+     },
+     "operators": [
+       {
+         "id": "movistar-co",
+           "mcc-mnc": [
+             "214-01",
+             "214-02"
+           ],
+         "apps": [
+           {
+             "id": "store",
+             "screen": 0,
+             "location": 2
+           }
+         ],
+         "support_contacts": "resources/support_contacts_movistar.json",
+         "default_contacts": "resources/contacts_movistar.json",
+         "ringtone": {
+           "path": "resources/Movistar_Mid_ABR_128kbps.ogg",
+           "name": "Tono Movistar"
+         },
+         "wallpaper": "resources/customize.jpg",
+         "keyboard": "resources/keyboard_movistar.json",
+         "network_type": "resources/network_type_movistar.json",
+         "known_networks": "resources/known_networks_movistar.json",
+         "data_ftu": true,
+         "sms": "resources/sms_movistar.json",
+         "topsites": "resources/topsites_movistar.json",
+         "bookmarks": "resources/bookmarks_movistar.json",
+         "data_roaming": true,
+         "power": {
+           "poweron": {
+             "video": "app://operatorresources/resources/power/latam_power_on.mp4"
+           },
+           "poweroff": {
+             "video": "resources/latam_power_off.mp4"
+           }
+         },
+         "nfc": true
+       }
+       ...
+     ]
+   }
+</pre>
+
+<p><span style="line-height: 1.5;">And here are the details of the specific resources for each operator.</span></p>
+
+<h4 id="Support_contacts">Support contacts</h4>
+
+<p><code>support_contacts</code> specifies a path to a file containing contacts to be shown on the help screen (<code>Settings &gt; Help</code>), offering the same functionality as <a href="#support.json">support.json</a>. The file format is:</p>
+
+<pre class="brush: js">   {
+     "onlinesupport": {
+       "title": "Mozilla Support",
+       "href": "http://test.mozilla.org/support"
+     },
+     "callsupport1": {
+       "title": "Call Support (Primary)",
+       "href": "tel:14155550001"
+     },
+     "callsupport2": {
+       "title": "Call Support (Secondary)",
+       "href": "tel:14155550002"
+     }
+   }</pre>
+
+<h4 id="Default_contacts">Default contacts</h4>
+
+<p><code>default_contacts</code> contains the path to a file containing contacts that will be preloaded to the Contacts application, depending on the MCC/MNC pair present at run time. The section names are the MCC/MNC pair, and section contents should be an array of contacts following the same format as <a href="#contacts.json">contacts.json</a>. For example:</p>
+
+<pre class="brush: js">    {
+        "123123":
+        [
+            {name: ["John Doe"]},
+            // etc
+        ],
+    }
+</pre>
+
+<h4 id="Ringtone">Ringtone</h4>
+
+<p><code>ringtone</code> sets the default ringtone and contains two attributes, both mandatory:</p>
+
+<ul>
+ <li><code>path</code>: The path to the ringtone audio file.</li>
+ <li><code>name</code>: The name to display when the ringtone is shown in settings.</li>
+</ul>
+
+<h4 id="Wallpaper">Wallpaper</h4>
+
+<p><code>wallpaper</code> contains the path to the image file (PNG) that will be set as the default wallpaper.</p>
+
+<h4 id="Keyboard_settings">Keyboard settings</h4>
+
+<p><code>keyboard</code> contains the path to a file containing keyboard settings configuration information. The file format is as follows:</p>
+
+<pre class="brush: js"> {
+   "keyboard.vibration": true,
+   "keyboard.autocorrect": false,
+   "keyboard.clicksound": true,
+   "keyboard.wordsuggestion": false
+ }</pre>
+
+<h4 id="Network_Display_Indicator">Network Display Indicator</h4>
+
+<p><code>network_type</code> contains the path to a file that will hold an associated text that will be shown to the user when that network is being used by the device — for each of the network types supported by the device. The text will be shown on the Settings app, status bar, and quick settings.</p>
+
+<p>The status bar and all the occurrences on the Settings app will use the text value indicated in the file. For quick settings the file must contain a <code>data_sprite</code> key that will point to a css sprite holding the icons for all the supported network types.</p>
+
+<p>The <code>data_sprite</code> key must always be a URL pointing to a preinstalled app on the device. A file format example follows:</p>
+
+<pre class="brush: js"> {
+  "lte": "4G",
+  "ehrpd": "4G",
+  "hspa+": "H+",
+  "hsdpa": "H",
+  "hsupa": "H",
+  "hspa": "H",
+  "evdo0": "E",
+  "evdoa": "E",
+  "evdob": "E",
+  "1xrtt": "1x",
+  "umts": "3G",
+  "edge": "E",
+  "is95a": "2G",
+  "is95b": "2G",
+  "gprs": "2G",
+  "wcdma/gsm": "2G/3G GSM auto",
+  "gsm": "2G GSM",
+  "wcdma": "3G GSM",
+  "wcdma/gsm-auto": "2G GSM Preferred",
+  "cdma/evdo": "2G/3G CDMA auto",
+  "cdma": "2G CDMA",
+  "evdo": "3G CDMA",
+  "wcdma/gsm/cdma/evdo": "2G-3G GSM/CDMA auto",
+  "data_sprite": "app://operatorresources/resources/quick_settings/images/data-sprite-latam.png"
+ }</pre>
+
+<h4 id="Pre-populate_WiFi_SSIDs">Pre-populate WiFi SSIDs</h4>
+
+<p><code>known_networks</code> contains the path to a file containing descriptions of known wifi networks. Here is a file format example:</p>
+
+<pre class="brush: js"> {
+  "OPEN": {
+    "ssid": "OPEN"
+  },
+  "WEP-WITHOUTKEY": {
+    "ssid": "wifi-WEP-WITHOUTKEY",
+    "keyType": "WEP"
+  },
+  "WEP_KEY": {
+    "ssid": "WEP-KEYOK",
+    "keyType": "WEP",
+    "capabilities": "",
+    "password": "constrasenya1"
+  },
+  "WEP_KEYOK_WPS": {
+    "ssid": "WEP-KEYOK-WPS",
+    "keyType": "WEP",
+    "capabilities":"WPS",
+    "password": "constrasenya1"
+  },
+  "wpa": {
+    "ssid": "macaFirefoxHotspot",
+    "keyType": "WPA-PSK"
+  },
+  "WPA-PSK_KEY": {
+    "ssid": "WPA-PSK-KEYOK",
+    "keyType": "WPA-PSK",
+    "capabilities":"",
+    "password": "constrasenya1"
+  },
+  "WPA-PSK_KEY_WPS": {
+    "ssid": "WPA-PSK-KEYOK-WPS",
+    "keyType": "WPA-PSK",
+    "capabilities":"WPS",
+    "password": "constrasenya1"
+  },
+  "WPA-EAP-PSK_WITHOUTEAP": {
+    "ssid": "WPA-EAP-WITHOUTKEY",
+    "keyType": "WPA-EAP"
+  },
+  "WPA-EAP_SIM": {
+    "ssid": "WPA-EAP-SIM",
+    "keyType": "WPA-EAP",
+    "eap": "SIM",
+    "password": "constrasenya1"
+  },
+  "WPA-EAP-KEYOK-WPS": {
+    "ssid": "WPA-EAP-KEYOK-WPS",
+    "keyType": "WPA-EAP",
+    "eap": "PEAP",
+    "capabilities": "WPS",
+    "password": "constrasenya1",
+    "identity": "HI\\usr"
+  },
+  "WPA-EAP-KEYOK-CAPOK-PHASE2-OK": {
+    "ssid": "WPA-EAP-KEYOK-CAPOK-PHASE2",
+    "keyType": "WPA-EAP",
+    "eap": "PEAP",
+    "capabilities":"WPS",
+    "phase2": "PAP",
+    "password": "constrasenya1",
+    "identity": "HI\\usr"
+  }
+ }</pre>
+
+<h4 id="Data_enableddisabled_by_default_during_FTU">Data enabled/disabled by default during FTU</h4>
+
+<p>The <code>data_ftu</code> attribute defines if the data setting is enabled or disabled by default during FTU. This is a boolean value (true or false).</p>
+
+<h4 id="Maximum_number_of_SMS_to_convert_to_MMS">Maximum number of SMS to convert to MMS</h4>
+
+<p><code>sms</code> contains the path to a file holding some customization details for SMS. Currently the only attribute that can be set is the maximum number of SMS messages that can be converted to MMS. A file format example follows:</p>
+
+<pre class="brush: js"> {
+  "smsMaxConcat": 9
+ }</pre>
+
+<h4 id="Pre-populate_browser_top_sites">Pre-populate browser top sites</h4>
+
+<p> </p>
+
+<p><code>topsites</code> contains the path to a file containing an array of topsite objects. A topsite object has three parameters: the <code>title</code> (string), the <code>uri</code> (url) and the <code>iconPath</code>. Here is a file format example:</p>
+
+<pre class="brush: js">{
+  "topsites": [
+    {
+      "title": "Movistar",
+      "uri": "http://www.movistar.es",
+      "iconPath": "resources/movistar.ico"
+    }
+  ]
+}</pre>
+
+<h4 id="Bookmarks">Bookmarks</h4>
+
+<div class="note">
+<p><strong>Note</strong>: For information about customizing bookmarks on earlier versions of Firefox OS see the <a href="#Browser_bookmarks_and_default_search_engines">Browser bookmarks and default search engines</a> section.</p>
+</div>
+
+<p><code>bookmarks</code> contains the path to a file containing an array of bookmark objects. The bookmark object has three parameters: the <code>title</code> (string), the <code>uri</code> (url) and the <code>iconPath</code>. File format example:</p>
+
+<pre class="brush: js">{
+  "bookmarks": [
+    {
+      "title": "Google",
+      "uri": "http://www.google.es",
+      "iconPath": "resources/google.ico"
+    }
+  ]
+}</pre>
+
+<h4 id="Data_roaming_onoff_by_default">Data roaming on/off by default</h4>
+
+<p>The <code>data_roaming</code> attribute defines if data roaming is enabled by default; its value is a boolean (<code>true</code> or <code>false</code>).</p>
+
+<h4 id="Power_onoff_operator_animation">Power on/off operator animation</h4>
+
+<p>Custom power on/off animations are configured using an object as a value for the <code>power</code> attribute. The object contains two attributes, one for the boot animation when the device is switched on (<code>poweron</code>) and the other one for the animation when the device shuts down. Both attributes are configured with a key value identifying the resource to be loaded — the resource key should be <code>video</code> and the value is a path to the resource. Note that the path can be a local path to the resource in the build machine filesystem (for example <code>resource/afile.png</code>) or a URI to file inside a Gaia application that will be installed in the device (for example <code>app://name.domain/path/to/video.mp4</code>).</p>
+
+<p>Here is an example of the full structure of a power object:</p>
+
+<pre class="brush: js">"power": {
+  "poweron": {
+    "video": "app://operatorresources/resources/power/latam_power_on.mp4"
+  },
+  "poweroff": {
+    "video": "resources/Power_off_test.mp4"
+  }
+}</pre>
+
+<h4 id="NFC_enableddisabled_by_default">NFC enabled/disabled by default</h4>
+
+<p>The <code>nfc</code> attribute defines if Near Field Communication is enabled by default; its value is a boolean (<code>true</code> or <code>false</code>).</p>
+
+<h2 id="Building_Prebundled_web_apps">Building Prebundled web apps</h2>
+
+<p>Earlier on, we discussed the <a href="#apps.list">apps.list</a> file, and how this can be used to add built-in apps to your build. These apps need to be built in a certain way, then added to the <code>gaia/external-apps</code> directory.<br>
+ <br>
+ To build Prebundled web apps, you can utilize our <a href="https://github.com/mozilla-b2g/preload-app-toolkit">preload-app-toolkit</a> script, which builds a prebundled webapp from a given <code>.webapp</code> URL. It can accept hosted web app manifests, or packaged app mini-manifests.</p>
+
+<h3 id="To_bundle_a_single_web_app">To bundle a single web app</h3>
+
+<p>Find a <code>.webapp</code> URL that want to bundle, and run the command to bundle it, as follows:</p>
+
+<pre>python preload.py http://&lt;webapp url&gt;</pre>
+
+<p>This will generate a directory with the same name as the target webapp's name, e.g. <code>accuweather</code>.</p>
+
+<h3 id="Batch_process_to_bundle_multiple_web_apps">Batch process to bundle multiple web apps</h3>
+
+<p>You can create a file called <code>list</code>, containing all the app names and <code>.webapp</code> locations you want to bundle all together in a batch. The format is:</p>
+
+<pre>myFirstApp,https://www.firstapp.com/manifest.webapp
+mySecondApp,https://www.secondapp.com/manifest.webapp
+etc.</pre>
+
+<p>You need to save this <code>list</code> file in the same directory as our <code>preload.py</code> script, then run the following command:</p>
+
+<pre>$ python preload.py</pre>
+
+<p>The <code>preload.py</code> script will parse the list file and do the batch conversion for you.</p>
+
+<h3 id="Prebundled_web_app_metadata.json">Prebundled web app metadata.json</h3>
+
+<p>Every Prebundled webapp should have a <code>metadata.json</code> file contained within its root directory. The <a href="https://marketplace.firefox.com/">Firefox Marketplace</a> counts on this <code>metadata.json</code> file for auto-updating. This file is auto-generated by the <code>preload.py</code> script.<br>
+ <br>
+ For a hosted webapp, the properties of <code>metadata.json</code> are:</p>
+
+<ul>
+ <li><code>origin</code>: The domain name of the webapp url.</li>
+ <li><code>manifestURL</code>: The location of the web app manifest for a hosted app.</li>
+ <li><code>installOrigin(hosted)</code>: The location the app was installed from in the customization. For customizations, this should always be <code>https://marketplace.firefox.com</code>.</li>
+ <li><code>etag</code>: This is the webapp manifest <code>etag</code> used for checking for updates. The <code>etag</code> value is retrieved by the <code>parse</code> <code>html</code> header when downloading the <code>.webapp</code> file from the server.</li>
+ <li><code>external</code>: This is a required field in Firefox OS 2.1+. The value is <code>true</code> for prebundled apps, and <code>false</code> for non-external apps. This is used for checking if fine tuning the file order in the application.zip is necessary (fine tuning will occur if the value is set to <code>true</code>).</li>
+</ul>
+
+<p>For a packaged webapp, the properties of <code>metadata.json</code> are:</p>
+
+<ul>
+ <li><code>manifestURL</code>: This should be the location of the mini-manifest. For customizations right now, the <code>manifestURL</code> will always be a mini-manifest from <code>marketplace.firefox.com</code>.</li>
+ <li><code>installOrigin(hosted)</code>: The location the app was installed from in the customization. For customizations, this should always be <code>https://marketplace.firefox.com</code>.</li>
+ <li><code>etag</code>: This is the webapp manifest <code>etag</code> used for checking for updates. The <code>etag</code> value is retrieved by the <code>parse html</code> header when downloading the <code>.webapp</code> file from the server.</li>
+ <li><code>external</code>: This is a required field in Firefox OS 2.1+. The value is <code>true</code> for prebundled apps, and false for For non-external apps it should be false. Use for checking if fine tunining file order in the application.zip is needed ( fine tune if the value is true ).</li>
+ <li><code>packageEtag</code>: This is the app package's <code>etag,</code> retrieved by the <code>parse html</code> header when downloading the package from the server once an update has been detected.</li>
+</ul>
+
+<h3 id="Packaged_web_app_auto-updates_update.webapp_format">Packaged web app auto-updates: update.webapp format</h3>
+
+<p>Packaged webapps have an <code>update.webapp</code> file, which is used for auto-updates. The format is similar to <a href="https://developer.mozilla.org/en-US/Apps/Build/Manifest"><code>manifest.webapp</code></a>, but you have to include additional attributes:</p>
+
+<ul>
+ <li><code>package_path</code> is the path to the packaged (zip) file.</li>
+ <li><code>size</code> is the package size, in bytes.</li>
+</ul>
+
+<pre class="brush: js">  {
+    "name": "Game Pack",
+    "icons": {
+      "60": "/icon-60.png",
+      "128": "/icon-128.png"
+    },
+    "version": "1.1.2",
+    "package_path": "/application.zip",
+    "developer": {
+      "url": "http://abc.com",
+      "name": "abc Inc."
+    },
+    "release_notes": "2nd release",
+    "locales": {
+      "es": {
+        "launch_path": "/index-es.html",
+        "description": "show me customization."
+      }
+    },
+    "size": 5460141
+  }</pre>
+
+<h3 id="Pre-bundled_web_app_AppCache_format">Pre-bundled web app AppCache format</h3>
+
+<p>If your web app's <a href="https://developer.mozilla.org/en-US/Apps/Build/Manifest"><code>manifest.webapp</code></a> has an <a href="https://developer.mozilla.org/en-US/Apps/Build/Manifest#appcache_path"><code>appcache_path</code></a> included in it, the <code>preload.py</code> script will fetch the AppCache file pointed to, and pre-fetch all the resources described in the AppCache file. The Pre-bundled webapp AppCache is a bit different, as Gecko recognizes a different format, but this is auto-generated by the <code>preload.py</code> script.</p>
+
+<p>The translated file structure is:</p>
+
+<pre>    &lt;app name&gt;
+       ├── manifest.webapp
+       ├── metadata.json
+       └── cache
+             ├── manifest.appcache
+             └── &lt;resources&gt;
+</pre>
+
+<div class="note">
+<p><strong>Note</strong>: If a different name is given to the AppCache file in the <code>appcache_path</code>, it needs to be renamed to <code>manifest.appcache</code> and saved in the <code>cache</code> folder.</p>
+</div>
+
+<h2 id="FAQ">FAQ</h2>
+
+<p>The following is a list of common questions and answers about market customizations.</p>
+
+<h3 id="What_can_be_customized">What can be customized?</h3>
+
+<ul>
+ <li>Brand
+  <ul>
+   <li>Start up &amp; Power off animations</li>
+   <li>Network name on Lock screen and in Utility Tray</li>
+   <li>First Run Experience logos</li>
+  </ul>
+ </li>
+ <li>Localization
+  <ul>
+   <li>Installed locales (shared/locales)</li>
+   <li>Default locale (<code>GAIA_DEFAULT_LOCALE</code>)</li>
+   <li>Default keyboard layouts (Multiple keyboards can be enabled, not tied to locale)</li>
+  </ul>
+ </li>
+ <li>Apps
+  <ul>
+   <li>Preinstalled third party apps</li>
+   <li>Home grid app placement</li>
+   <li>Licensing</li>
+   <li>In-app payment provider configuration</li>
+  </ul>
+ </li>
+ <li>Settings
+  <ul>
+   <li>Default screen brightness</li>
+   <li>Device Information — Model (name or #)</li>
+   <li>Device Information — Legal Information link or content</li>
+   <li>Help — Online support link</li>
+   <li>Help — Call support phone number</li>
+   <li>Help — User guide link</li>
+   <li>APN</li>
+   <li>MMS message size limitation</li>
+   <li>MMS message retrieval mode</li>
+  </ul>
+ </li>
+ <li>Media preloads
+  <ul>
+   <li>Wallpapers</li>
+   <li>Music</li>
+   <li>Videos</li>
+   <li>Gallery</li>
+  </ul>
+ </li>
+ <li>Sounds
+  <ul>
+   <li>Start up &amp; Power off</li>
+   <li>Ring tone</li>
+   <li>Message tone</li>
+  </ul>
+ </li>
+ <li>Everything.me
+  <ul>
+   <li>Option to enable or disable the feature</li>
+   <li>Set of default categories and apps</li>
+  </ul>
+ </li>
+ <li>Browser
+  <ul>
+   <li>Default bookmarks</li>
+   <li>Default search engine</li>
+  </ul>
+ </li>
+</ul>
+
+<h3 id="How_and_where_do_you_define_a_customized_app_grid_layout">How and where do you define a customized app grid layout?</h3>
+
+<p>This is currently defined in <code>gaia/apps/homescreen/js/init.json</code>. <code>customize.py</code> takes care of building this in the correct format.</p>
+
+<h3 id="Is_it_possible_to_define_whether_an_app_is_removable_in_the_homescreen_configuration">Is it possible to define whether an app is removable in the homescreen configuration?</h3>
+
+<p>No. All apps in <code>/system/b2g</code> are non-removable; those in <code>/data</code> are removable. Since all preloaded apps come from <code>/system</code>, we need to move them to <code>/data</code> if we want them to be removable.</p>
+
+<h3 id="How_do_you_add_a_preloaded_packaged_or_hosted_app_to_the_build">How do you add a preloaded packaged or hosted app to the build?</h3>
+
+<p>These should both be added to <code>gaia/external-apps</code>. <code>customize.py</code> will allow entry of the URL to a packaged app or a hosted app manifest, and will download it into the correct place and create <code>metadata.json</code>. This will serve as the "build step".</p>
+
+<p>We have different metadata for packaged and hosted apps to distinguish them.</p>
+
+<p>See <a href="#Building_Prebundled_web_apps">Building Prebundled web apps</a> for more details.</p>
+
+<h3 id="How_do_you_prepare_a_preloaded_hosted_app_for_initial_offline_support">How do you prepare a preloaded hosted app for initial offline support?</h3>
+
+<p>You need to provide all the files to cache in the directory <code>external-apps/MY_APP/cache</code>, along with the AppCache manifest.</p>
+
+<p>See <a href="#Building_Prebundled_web_apps">Building Prebundled web apps</a> for more details.</p>
+
+<h3 id="What_Marketplace_Customizations_Are_Possible">What Marketplace Customizations Are Possible?</h3>
+
+<ul>
+ <li>On-device
+  <ul>
+   <li>The customization on the device regarding payments is limited to populating a whitelist of payment providers. There are a couple prefs for this, documented on <a href="https://wiki.mozilla.org/WebAPI/WebPayment#Testing">Web Payments</a>.</li>
+   <li>For example, Mozilla B2G phones will ship with <a href="https://github.com/mozilla/webpay#readme">our implementation of the payment provider</a> in a whitelist so that it is accessible to the Marketplace and third party apps for in-app purchases via <a href="/ja/docs/Web/API/Navigator/mozPay" title="mozPay 関数は決済の実行に使用され、アプリ内課金を実現します。"><code>navigator.mozPay</code></a>. Some more info on providers is available at <a href="https://wiki.mozilla.org/WebAPI/WebPaymentProvider">Web Payment Providers</a>.</li>
+   <li>If any carrier wants to implement their own payment processor and whitelist it, they are free to do so. However, the <a href="https://marketplace.firefox.com/">Firefox Marketplace</a> is only configured to enable purchases through Mozilla's payment provider at this time.</li>
+  </ul>
+ </li>
+ <li>On-server
+  <ul>
+   <li>The merchant app sets a price point for the product and Mozilla's backend payment processor chooses the currency based on the user's network. None of currency, regional taxation, or l10n can be controlled by device configs (yet).</li>
+   <li>Category in the Firefox Marketplace specific to the carrier with your operator logo/name in the region.</li>
+   <li>Featured apps / promotions in the Firefox Marketplace, specified by the Carrier.</li>
+  </ul>
+ </li>
+</ul>
+
+<p>There are many other considerations when adding a region or carrier.  See <a href="https://wiki.mozilla.org/Marketplace/AddingRegionsAndCarriers">Adding Regions and Carriers</a> for more details.</p>
+
+<h3 id="How_do_I_package_and_store_per-market_customization_changes">How do I package and store per-market customization changes?</h3>
+
+<p>Store only the files changed; currently these are in various locations in the filesystem. In B2G v2, we are considering consolidating these into a single location, similar to the branding directories we have for Gecko.</p>
+
+<h3 id="How_do_you_build_the_product_with_a_specific_market's_configuration">How do you build the product with a specific market's configuration?</h3>
+
+<p>Copy your changed files into a checkout of Gaia, and build using that modified Gaia. <code>customize.py</code> will provide a UI for setting relevant switches, create the appropriate files in the appropriate places in the gaia checkout, and then build the profile from that Gaia.</p>
+
+<h3 id="How_to_customize_power_on_off_animation">How to customize power on / off animation?</h3>
+
+<ul>
+ <li>This animation uses <a href="http://www.droidforums.net/forum/droid-hacks/33932-bootanimation-zip-file-explained.html">Android's <code>bootanimation.zip</code>/<code>desc.txt</code> format</a>.</li>
+ <li>This lets us create multi-part animation sequences where we can specify things like size, framerate, and number of times an animation sequence loops for each part.</li>
+ <li>There is also an animated PNG transition animation that bridges the gap between this <code>bootanimation.zip</code> sequence and the transition to the lockscreen, which is performed by Gaia.</li>
+ <li>The size on disk of the default animation is 8.2MB (looping) + 3.6MB (frame 18 transition) = 11.8MB total.</li>
+ <li>Currently, the shutdown animation is a custom css animation based on a design specified in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=809342" title="FIXED: [System] Need a shutdown animation implementation">バグ 809342</a>.</li>
+</ul>

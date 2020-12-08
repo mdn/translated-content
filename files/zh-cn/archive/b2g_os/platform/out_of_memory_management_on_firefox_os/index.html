@@ -1,0 +1,80 @@
+---
+title: Firefox OS 中的内存溢出管理
+slug: Archive/B2G_OS/Platform/Out_of_memory_management_on_Firefox_OS
+tags:
+  - B2G
+  - Firefox OS
+  - Gaia
+  - LMK
+  - OOM
+  - Out of memory
+  - oom_adj
+  - 低内存管理器
+  - 低内存通知器
+translation_of: Archive/B2G_OS/Platform/Out_of_memory_management_on_Firefox_OS
+---
+<div class="summary">
+<p><span class="seoSummary">Firefox OS 运行在一些严重内存受限的设备上时，</span>就会很容易出现app在运行时将内存耗尽的情况。当一个进程将系统上可用的内存耗尽时， 为了能够释放内存，kernel 层必须要 kill 掉其他的进程。本文则描述了低内存 killer和 低内存通知器是如何工作的 。</p>
+</div>
+
+<p>FxOS 的操作会涉及到多进程问题—一个“主进程”运行基本的系统服务和潜在众多的“子进程”。FxOS 环境下应用很少会由用户主动关闭，因此当新的 app需要空间或已存在的 app需要额外的内存时， system会自动对应用程序的生命周期进行管理。</p>
+
+<p>有两个子系统负责这方面的管理：  低内存管理器 <strong>Low memory killer (LMK)</strong> 和低内存通知器<strong>Low memory notifications</strong>.</p>
+
+<h2 id="低内存管理器_Low_memory_killer">低内存管理器 Low memory killer</h2>
+
+<p><a href="https://android.googlesource.com/kernel/common.git/+/edd540ea92954f896bfb7ee0ebf5dfdde6e6cb41/drivers/staging/android/lowmemorykiller.txt"> LMK</a> 是 Android 内核的子系统，当有获取内存空间的需求时，能够自动的对进程进行查杀。为了能够选择出哪一个进程需要第一个查杀，每个进程都要通过 <a href="https://www.kernel.org/doc/Documentation/filesystems/proc.txt">/proc/&lt;pid&gt;/oom_adj or /proc/&lt;pid&gt;/oom_score_adj files</a> 来设定一个优先级。 每个进程的优先级也可称为调整分数或 <code>oom_adj</code>.  <code>oom_adj</code> ，值越小则表示器进程优先级越高。</p>
+
+<p>一般来说，进程的调整得分越高，越可能被查杀。 LMK 提供了多个等级，每一个都与一定程度的闲置内存和最小调整分数对应。当闲置内存的数量低于某个特定等级时，所有高于该等级指定的最小调整分数的进程都具有被查杀的可能。LMK会开始查杀这些进程，分数高的会被先杀掉，直到闲置内存再次高于临界值为止。</p>
+
+<p><strong>Note</strong>: When a background app is killed by the LMK, it is made available in the task manager/through edge swipes as a "zombie app": next time you browse to that app, it will be revived. The maximum number of apps that can be kept in this state is currently 10.</p>
+
+<div class="note">
+<p><b>注意</b>: 当设备存储器不足(oom) 时杀掉的进程并不一定是导致存储器不足(oom)的原因。</p>
+</div>
+
+<h3 id="进程优先级">进程优先级</h3>
+
+<p>Firefox OS 中的 app 是以下面的优先级次序策略来管理的，这种策略是根据每个应用的优先级等级和这些等级相关的 OOM 调整分数 (<a style="text-decoration: underline;" href="http://hg.mozilla.org/mozilla-central/file/545c35907eff/b2g/app/b2g.js#l661">the current values are set in prefs</a>)而制定的： </p>
+
+<ol>
+ <li>后台应用会首先被干掉，先从使用最少的应用开始</li>
+ <li>之后会干掉 homescreen 应用程序</li>
+ <li>可由用户感知的后台应用会被干掉 (例如， 在后台播放音频的音乐播放器或者持有  <code>high-priority</code> 或 <code>cpu</code> wakelock，并且注册系统消息的处理程序)</li>
+ <li>如果 keyboard 应用正在运行，会被干掉</li>
+ <li>前台应用被干掉</li>
+ <li>最后，已请求  <code>high-priority</code> 或 <code>cpu</code> wakelocks 的前台应用会最后被干掉</li>
+</ol>
+
+<div class="note">
+<p><b>注意</b>: 当子进程在前台时，会以  <span style="font-family: 'Courier New', 'Andale Mono', monospace;">oom_adj 2 </span>运行。后台的子进程运行时，其 <code>oom_adj</code> 会在 <code>3</code> 和 <code>6</code> (包括6) 之间。后台运行的子进程  <code>oom_adj</code> 数值要取决于许多因素，如是否播放音乐，是否是homescreen 等。</p>
+</div>
+
+<p>也有两个例外的情况：</p>
+
+<ul>
+ <li>主进程是不会被 LMK 干掉的，否则就会干掉所有的子进程并且重启操作系统。主进程运行时 <code>oom_adj 0</code>.</li>
+ <li>我们会保持一个名为 <strong>preallocated process 的进程</strong>以加速新应用的启动<strong>。</strong>这个进程通常需要一直存在，因为它消耗很有限的内存，而且能够明显提高应用程序的启动速度。它只在一种情况下被干掉，就是主线程需要内存保持运行，杀掉其他进程后， 内存空间还不够时。</li>
+</ul>
+
+<h2 id="低内存通知器_Low_memory_notifications">低内存通知器 Low memory notifications</h2>
+
+<p>释放内存的第二种机制就是低内存通知器。 LMK 提供一个<a href="https://www.codeaurora.org/cgit/quic/la//kernel/msm/commit/?id=b3f986cba580b14438b77b42070ebbc77b69d4c4">特定的门限值</a>，当超出该值时，会通知用户当前系统已运行在低内存状态。system 应用和常规的用户应用都会持续的等待这个条件，并通过 observer service 发送一个 <code style="font-style: normal;">memory-pressure</code> 方法来响应它。 这个事件只对 C++ 和 chrome JS 代码可见，并非由应用直接发送。通过Gecko 代码库，我们使用该事件可以释放尽可能多的内存— 一般会通过清除内部缓存（图片，DNS，数据库等），丢弃可重新创建的资源（例如， WebGL contexts）以及运行垃圾回收器，生命周期回收器等方式实现。</p>
+
+<p>当低内存情况发生时， 触发的第一个 <code>memory-pressure</code> 事件会有一个<code> low-memory </code>负载。 如果在预订时间(5s) 后， 还处在低内存状态， 会触发另一个 <code>memory-pressure</code> 事件，但此次负载值变为 <code>low-memory-onging</code> 。当一直处在低内存条件下，并且要清除缓存以及做其他简单的内存削减时，该负载会被使用，但应当知道一些繁重的工作，如 GC ， 是不能成功的。（此段翻译可能不是太贴切，要深入理解，还请参考英文原文）</p>
+
+<h2 id="LMK_和低内存通知器是如何配合工作的"> LMK 和低内存通知器是如何配合工作的</h2>
+
+<p>当前<a href="http://hg.mozilla.org/mozilla-central/file/545c35907eff/b2g/app/b2g.js#l722">低内存限值设定在后台进程 LMK 等级和 homescreen 之间。</a> 因此当设备在低内存状态下运行时， LMK 和 低内存通知器联合作出的反应如下：</p>
+
+<ol>
+ <li>以最不经常使用的次序 kill 掉 后台 app</li>
+ <li>如果我们没有释放足够的内存, 向所有现存的应用发送 <code>memory-pressure</code> 事件</li>
+ <li>如果低内存情况还在，每个 5 秒重发一次 <code>memory-pressure</code> 事件，但将它们标记为 ongoing , 使 GC/CC 不会对它们动作。</li>
+ <li>Kill 掉 homescreen.</li>
+ <li>Kill 掉可感知的或高优先级的后台应用</li>
+ <li>如果 keyboard app 正在运行，Kill 掉</li>
+ <li>Kill 掉前台应用</li>
+ <li>Kill 掉高优先级的前台应用</li>
+ <li>Kill 掉 preallocated process</li>
+</ol>

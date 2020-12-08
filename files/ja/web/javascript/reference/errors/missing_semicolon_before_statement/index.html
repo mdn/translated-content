@@ -1,0 +1,67 @@
+---
+title: 'SyntaxError: missing ; before statement'
+slug: Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
+tags:
+  - Errors
+  - JavaScript
+  - SyntaxError
+translation_of: Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
+---
+<div>{{jsSidebar("Errors")}}</div>
+
+<h2 id="Message" name="Message">メッセージ</h2>
+
+<pre class="syntaxbox">SyntaxError: missing ; before statement
+</pre>
+
+<h2 id="Error_type" name="Error_type">エラータイプ</h2>
+
+<p>{{jsxref("SyntaxError")}}.</p>
+
+<h2 id="What_went_wrong" name="What_went_wrong">何がうまくいかなかったのか？</h2>
+
+<p>どこかでセミコロン（<code>;</code>）を忘れています。<a href="/ja/docs/Web/JavaScript/Reference/Statements">JavaScript 文</a>はセミコロンで終えなければなりません。これらのいくつかは、<a href="/ja/docs/Web/JavaScript/Reference/Lexical_grammar#.E8.87.AA.E5.8B.95.E3.82.BB.E3.83.9F.E3.82.B3.E3.83.AD.E3.83.B3.E6.8C.BF.E5.85.A5">自動セミコロン挿入（ASI）</a>の影響を受けますが、この場合JavaScript がソースコードを正確に解析するためには、セミコロンを提供する必要があります。</p>
+
+<p>しかし、多くの場合、このエラーは、文字列の不適切なエスケープや <code>var</code> の誤った使用などのその他のエラーの結果として発生します。また、どこかで括弧が多すぎるかもしれません。このエラーがスローされた場合、注意深く構文をチェックしなければなりません。</p>
+
+<h2 id="Examples" name="Examples">例</h2>
+
+<h3 id="Unescaped_strings" name="Unescaped_strings">エスケープしていない文字列</h3>
+
+<p>このエラーは、適切に文字列をエスケープしておらず、JavaScript エンジンが文字列がすでに終了していると予測するときにしばしば発生します。たとえば：</p>
+
+<pre class="brush: js example-bad">var foo = 'Tom's bar';
+// SyntaxError: missing ; before statement</pre>
+
+<p>ダブルクオートを使用するか、アポストロフィをエスケープします：</p>
+
+<pre class="brush: js example-good">var foo = "Tom's bar";
+var foo = 'Tom\'s bar';
+</pre>
+
+<h3 id="Declaring_properties_with_var" name="Declaring_properties_with_var">var を使用したプロパティ宣言</h3>
+
+<p>オブジェクトや配列のプロパティを、<code>var</code> を使って宣言することは<strong>できません</strong>。</p>
+
+<pre class="brush: js example-bad">var obj = {};
+var obj.foo = 'hi'; // SyntaxError missing ; before statement
+
+var array = [];
+var array[0] = 'there'; // SyntaxError missing ; before statement
+</pre>
+
+<p>替わりに、<code>var</code> キーワードを省略します：</p>
+
+<pre class="brush: js example-good">var obj = {};
+obj.foo = 'hi';
+
+var array = [];
+array[0] = 'there';
+</pre>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/JavaScript/Reference/Lexical_grammar#.E8.87.AA.E5.8B.95.E3.82.BB.E3.83.9F.E3.82.B3.E3.83.AD.E3.83.B3.E6.8C.BF.E5.85.A5">自動セミコロン挿入（ASI）</a></li>
+ <li><a href="/ja/docs/Web/JavaScript/Reference/Statements">JavaScript 文</a></li>
+</ul>

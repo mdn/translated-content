@@ -1,0 +1,186 @@
+---
+title: 'about:memory'
+slug: 'Performance/about:memory'
+translation_of: 'Mozilla/Performance/about:memory'
+---
+<p>about:memory est une page spécifique de Firefox qui vous permet de visualiser, sauvegarder, charger et suivre l'évolution de l'usage de la mémoire par Firefox. Elle offre aussi d'autres opérations concernant la mémoire, comme le démarrage et l'effacement des traces du Gabarge Collector (GC) et du Cycle Collector (CC) ou encore les rapports DMD ("Dark Matter Detector"). about:memory est disponible dans toutes les versions et ne requiert aucune préparation pour être utilisé.</p>
+
+<h2 id="Comment_générer_des_rapports_sur_la_mémoire">Comment générer des rapports sur la mémoire</h2>
+
+<p>Nous supposons ici que vous souhaitez étudier l'utilisation de la mémoire par Firefox, peut-être pour vos besoins personnels, ou peut-être parce que quelqu'un vous a demandé de générer des "rapports mémoire" afin d'investiguer un de vos problèmes. Suivez alors les étapes suivantes :</p>
+
+<ul>
+ <li>Lors d'un événement intéressant (par ex. lorsque la mémoire consommée par Firefox devient importante), ouvrir un nouvel onglet et entrer "about:memory" dans la barre d'adresse, puis appuyer sur "Entrée"</li>
+ <li>Si vous disposez d'un moyen de communication permettant d'envoyer des fichiers (comme Bugzilla ou un email), cliquer sur bouton "Measure and save..." (mesurer et sauvegarder). Ceci ouvrira une fenêtre de dialogue afin d'enregistrer le rapport sur la mémoire dans un fichier (le fichier généré aura une extension en <code>.json.gz</code>). Vous pourrez alors utiliser ce fichier comme pièce jointe ou le téléverser ("uploader") quelque part. Le destinataire aura alors la possibilité de visualiser le contenu de ce fichier sur l'onglet about:memory de leur propre Firefox.</li>
+ <li>Si votre moyen de communication ne vous permet que d'envoyer du texte simple (par ex. une zone de texte sur la page Internet d'un service d'assistance), cliquer sur le bouton "Measure..." (mesurer). Ceci générera une structure arborescente textuelle sur la page about:memory. Cette structure n'est que du texte, ce qui vous permet alors de copier puis coller tout ou partie de ce texte dans n'importe quel champ texte, vous évitant de devoir faire une copie d'écran. Ce texte contient moins d'informations qu'un rapport sur la mémoire sous forme de fichier, mais est la plupart du temps suffisant pour diagnostiquer la cause des problèmes. Il est inutile de cliquer sur le bouton "Measure..." de façon répétée, car cela ferait augmenter la consommation de mémoire par la page about:memory, en raison de la suppression et de la régénération d'un grand nombre d'éléments du DOM.</li>
+</ul>
+
+<p>Il est important de noter que les deux formes d'information générée (fichier ou texte) peivent contenir des données relevant de votre vie privée, comme la liste complète des pages Internet ouvertes dans vos différents onglets. Si vous ne souhaitez pas partager de telles informations, vous pouvez cocher la case "anonymize" (anonymiser) avant de cliquer sur "Measure and save..." ou "Measure...". Ceci entraînera la suppression des données sensibles, mais cela rendra aussi l'investigation de la mémoire plus difficile.</p>
+
+<h2 id="Charger_des_rapport_sur_la_mémoire_à_partir_d'un_fichier">Charger des rapport sur la mémoire à partir d'un fichier</h2>
+
+<p>Le plus simple pour charger (et afficher) un rapport à partir d'un fichier est d'utiliser le bouton "Load..." (charger). Vous pouvez aussi utiliser le bouton "Load and diff..." (charger et comparer) pour afficher un comparatif entre deux rapports sur la mémoire.</p>
+
+<p>Lorsque vous souhaitez visualiser un unique fichier, il est aussi possible de le charger automatiquement lors de l'affichage de la page about:memory, en ajoutant une référence au fichier dans le nom de la page, sous la forme :</p>
+
+<pre>about:memory?file=/home/username/reports.json.gz
+</pre>
+
+<p>Cette possibilité trouve sa pleine utilité lors de l'affichage d'un rapport sur la mémoire obtenu sur un dispositif fonctionnant avec Firefox OS.</p>
+
+<p>Les rapport contiennent des données au format JSON et sont compressés comme des archives gz. Ces fichiers peuvent être chargés tels quels, mais peuvent aussi être décompressés avant chargement.</p>
+
+<h2 id="Interpréter_les_rapport_sur_la_mémoire">Interpréter les rapport sur la mémoire</h2>
+
+<p>Pratiquement tout ce que vous pouvez consulter dans about:memory dispose d'un tool-tip explicatif. Le survol de n'importe quel bouton permet de voir une description de son effet. Le survol d'une mesure affichée permet de voir une explication sur son sens.</p>
+
+<h3 id="Quelques_bases_sur_les_mesures"><span class="mw-headline" id="Basics">Quelques bases sur les mesures</span></h3>
+
+<p>La pluspart des mesures sont exprimées en octets, mais certaines sont exprimées en pourcentages ou en nombres.</p>
+
+<p>La plupart des mesures sont présentées comme des arborescence, comme :</p>
+
+<pre> 585 (100.0%) -- preference-service
+ └──585 (100.0%) -- referent
+    ├──493 (84.27%) ── strong
+    └───92 (15.73%) -- weak
+        ├──92 (15.73%) ── alive
+        └───0 (00.00%) ── dead
+</pre>
+
+<p>Les feuilles de l'arbre représentent les mesures réelles, tandis que les branches (qui regroupent des sous-branches et/ou des feuilles) présentent la somme des valeurs des feuilles ou des sous-branches qu'elle contiennent.</p>
+
+<p>Cette structure arborescente permet de décomposer une mesure en catégories, sous-catégories, sous-sous-catégories etc. avec autant de niveaux que nécessaire. Aucune mesure d'un arbre ne recoupe d'autres mesures du même arbre (autrement dit, aucune valeur n'est utilisée dans deux branches d'un même arbre).</p>
+
+<p>Les chemins au sein d'un arbre peuvent être décrits en séparants les différents niveaux par un '/'. Ainsi, <code>preference-service/referent/weak/dead</code> représente le chein jusqu'à la feuille 'dead' dans la figure ci-dessus.</p>
+
+<p>Les sous-arbres peuvent être déployés ou repliés en cliquant dessus. Si vous êtes confronté à un arbre présentant une très grande consommation de mémoire, il peut être intéressant de replier tous les sous-arbres immédiatement en dessous de la racine, puis de déployer uniquement les sous-arbres intéressants.</p>
+
+<h3 id="Sections_2"><span class="mw-headline" id="Sections">Sections</span></h3>
+
+<p>Les rapports sur la mémoire sont structurés par processus, avec un processus par section. Chaque section concernant un processus comporte les sous-sections décrites ci-dessous.</p>
+
+<h4 id="Section_Allocations_explicites">Section Allocations explicites</h4>
+
+<p>Cette sous-section contient un seul arbre, nommé "explicit", qui présente les volumes de mémoire alloués par des appels explicites aux fonctions d'allocation de blocs (comme <code>malloc</code> ou <code>new</code>) ou non-blocs (comme <code>mmap</code> <code>ou VirtualAlloc</code>).</p>
+
+<p>L'exemple ci-dessous présente un rapport pour session dans laquelle des onglets ont été ouverts sur cnn.com, techcrunch.com, and arstechnica.com. Différents sous-arbres ont été déployés, d'autres repliés, pour améliorer la présentation.</p>
+
+<pre>191.89 MB (100.0%) -- explicit
+├───63.15 MB (32.91%) -- window-objects
+│   ├──24.57 MB (12.80%) -- top(http://edition.cnn.com/, id=8)
+│   │  ├──20.18 MB (10.52%) -- active
+│   │  │  ├──10.57 MB (05.51%) -- window(http://edition.cnn.com/)
+│   │  │  │  ├───4.55 MB (02.37%) ++ js-compartment(http://edition.cnn.com/)
+│   │  │  │  ├───2.60 MB (01.36%) ++ layout
+│   │  │  │  ├───1.94 MB (01.01%) ── style-sheets
+│   │  │  │  └───1.48 MB (00.77%) -- (2 tiny)
+│   │  │  │      ├──1.43 MB (00.75%) ++ dom
+│   │  │  │      └──0.05 MB (00.02%) ── property-tables
+│   │  │  └───9.61 MB (05.01%) ++ (18 tiny)
+│   │  └───4.39 MB (02.29%) -- js-zone(0x7f69425b5800)
+│   ├──15.75 MB (08.21%) ++ top(http://techcrunch.com/, id=20)
+│   ├──12.85 MB (06.69%) ++ top(http://arstechnica.com/, id=14)
+│   ├───6.40 MB (03.33%) ++ top(chrome://browser/content/browser.xul, id=3)
+│   └───3.59 MB (01.87%) ++ (4 tiny)
+├───45.74 MB (23.84%) ++ js-non-window
+├───33.73 MB (17.58%) ── heap-unclassified
+├───22.51 MB (11.73%) ++ heap-overhead
+├────6.62 MB (03.45%) ++ images
+├────5.82 MB (03.03%) ++ workers/workers(chrome)
+├────5.36 MB (02.80%) ++ (16 tiny)
+├────4.07 MB (02.12%) ++ storage
+├────2.74 MB (01.43%) ++ startup-cache
+└────2.16 MB (01.12%) ++ xpconnect</pre>
+
+<p>Un certain niveau d'expertise est nécessaire pour comprendre tous les détails. Cependant, quelques éléments méritent d'être soulignés :</p>
+
+<ul>
+ <li>La valeur "explicite" à la racine de l'arbre représente l'ensemble de la mémoire allouée par les appels explicites aux fonctions d'allocation.</li>
+ <li>Le sous-arbre nommé "window-objects" représente tous les objets de type Window de Javascript, y compris les onglets du navigateur et les fenêtres d'interaction. Par exemple, le sous-arbre"top(http://edition.cnn.com/, id=8)" représente l'onglet ouvert sur cnn.com, et le sous-arbre "top(chrome://browser/content/browser.xul, id=3)" représente la fenêtre principale du navigateur.</li>
+ <li>Parmi les mesures de chaque fenêtre, on trouve des sous-arbres pour JavaScript ("js-compartment(...)" and "js-zone(...)"), les feuilles de style, le DOM etc.</li>
+ <li>Il est clair que l'onglet sur cnn.com consomme plus de mémoire que celui sur techcrunch.com, qui à son tour en utilise plus que l'onglet sur arstechnica.com.</li>
+ <li>Les sous-arbres avec des noms comme "(2 tiny)" sont des noeuds artificiels insérés pour regrouper et replier par défaut des sous-arbres peu intéressants. Si vous cochez la case "verbose" (verbeux) avant de lancer les mesures, tous les arbres seront présentés dépliés, et aucun noeud articiel ne sera inséré.</li>
+ <li>Le sous-arbre "js-non-window" représente la mémoire consommée par  JavaScript et qui ne provient pas des fenêtres mais du noyau du navigateur.</li>
+ <li>La valeur "heap-unclassified" représente la mémoire allouée par bloc qui n'est mesurée par aucun rapporteur de mémoire. Cette valeur représente habituellement 10 à 20% de la valeur de "explicit". Lorsqu'elle dépasse ces ratios, cela indique que des rapporteurs de mémoire spécifiques devraient être ajoutés. <a href="/en-US/docs/Mozilla/Performance/DMD" title="Performance/MemShrink/DMD">DMD</a> peut alors être utilisé pour déterminer quels rapporteurs doivent être utilisés..</li>
+ <li>D'autres mesures concernent les autres types de contenus (comme les images) ou les sous-systèmes du navigateur (comme les cache de démarrage ou XPConnect).</li>
+</ul>
+
+<p>La consommation de mémoire par les modules complémentaires ajoutés à Firefox est aussi déterminée, comme le montre l'exemple ci-dessous.</p>
+
+<pre>├───40,214,384 B (04.17%) -- add-ons
+│   ├──21,184,320 B (02.20%) ++ {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}/js-non-window/zones/zone(0x100496800)/compartment([System Principal], jar:file:///Users/njn/Library/Application%20Support/Firefox/Profiles/puna0zr8.new/extensions/%7Bd10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d%7D.xpi!/bootstrap.js (from: resource://gre/modules/addons/XPIProvider.jsm:4307))
+│   ├──11,583,312 B (01.20%) ++ jid1-xUfzOsOFlzSOXg@jetpack/js-non-window/zones/zone(0x100496800)
+│   ├───5,574,608 B (00.58%) -- {59c81df5-4b7a-477b-912d-4e0fdf64e5f2}
+│   │   ├──5,529,280 B (00.57%) -- window-objects
+│   │   │  ├──4,175,584 B (00.43%) ++ top(chrome://chatzilla/content/chatzilla.xul, id=4293)
+│   │   │  └──1,353,696 B (00.14%) ++ top(chrome://chatzilla/content/output-window.html, id=4298)
+│   │   └─────45,328 B (00.00%) ++ js-non-window/zones/zone(0x100496800)/compartment([System Principal], file:///Users/njn/Library/Application%20Support/Firefox/Profiles/puna0zr8.new/extensions/%7B59c81df5-4b7a-477b-912d-4e0fdf64e5f2%7D/components/chatzilla-service.js)
+│   └───1,872,144 B (00.19%) ++ treestyletab@piro.sakura.ne.jp/js-non-window/zones/zone(0x100496800)</pre>
+
+<p>Plusieurs élément de cet exemple méritent d'être expliqués :</p>
+
+<ul>
+ <li>Certains modules complémentaires sont identifiés par un nom, comme Tree Style Tab. D'autres ne sont identifiés que par un nombre hexadécimal. Vous pouvez regarder sur la page about:support pour retrouver le module identifié par un tel nombre. Ainsi, <code>59c81df5-4b7a-477b-912d-4e0fdf64e5f2</code> correspond à Chatzilla.</li>
+ <li>La consommation de mémoire d'un module complémentaire est mesurée séparément et présentée dans un sous-arbre dédié.</li>
+ <li>Pour les modules complémentaires qui utilisent une fenêtre dédiée, comme Chatzilla, la consommation de mémoire de ces fenêtres sera présentée dans le sous-arbre dédié au module concerné.</li>
+ <li>Par contre, la consommation de mémoire des overlays (par les modules qui mettent en oeuvre les overlays XUL, comme AdBlock Plus) n'est pas présentée dans le sous-arbre dédié au module. Elle est présentée dans les sous-arbres classiques (hors modules complémentaires) et ne pourra pas être reconnue comme causée les modules.</li>
+</ul>
+
+<h4 id="Section_des_Autrres_Mesures">Section des Autrres Mesures</h4>
+
+<p>Cette section comporte de nombreuses arborescences, dont certaines reprennent  les mesures indiquées dans l'arbre "explicit" sous une autre forme. Par exemple, dans l'arbre "explicit", toutes les mesures concernant le DOM et les agencements (layouts) sont agrégées fenêtre par fenêtre, tandis que dans l'arbre "Other Measurements", ces mêmes mesures sont agrégées pour l'ensemble du navigateur, comme dans les exemples ci-dessous.</p>
+
+<pre>26.77 MB (100.0%) -- window-objects
+├──14.59 MB (54.52%) -- layout
+│  ├───6.22 MB (23.24%) ── style-sets
+│  ├───4.00 MB (14.95%) ── pres-shell
+│  ├───1.79 MB (06.68%) ── frames
+│  ├───0.89 MB (03.33%) ── style-contexts
+│  ├───0.62 MB (02.33%) ── rule-nodes
+│  ├───0.56 MB (02.10%) ── pres-contexts
+│  ├───0.47 MB (01.75%) ── line-boxes
+│  └───0.04 MB (00.14%) ── text-runs
+├───6.53 MB (24.39%) ── style-sheets
+├───5.59 MB (20.89%) -- dom
+│   ├──3.39 MB (12.66%) ── element-nodes
+│   ├──1.56 MB (05.84%) ── text-nodes
+│   ├──0.54 MB (02.03%) ── other
+│   └──0.10 MB (00.36%) ++ (4 tiny)
+└───0.06 MB (00.21%) ── property-tables</pre>
+
+<p>Tous les arbres de la section "Other Measurements" ne reprennent cependant pas des mesures déjà indiquées dans l'arbre "explicit" : les mesures d'utilisation de mémoire par le services de gestion des préférences ("preference-service") n'existe pas dans l'arbre "explicit".</p>
+
+<p>Certaines mesures sont aussi présentées sans structure arborescente dans le bas de la section des autres mesures, comme sur l'exemple ci-dessous.</p>
+
+<pre>    0.00 MB ── canvas-2d-pixels
+    5.38 MB ── gfx-surface-xlib
+    0.00 MB ── gfx-textures
+    0.00 MB ── gfx-tiles-waste
+          0 ── ghost-windows
+  109.22 MB ── heap-allocated
+        164 ── heap-chunks
+    1.00 MB ── heap-chunksize
+  114.51 MB ── heap-committed
+  164.00 MB ── heap-mapped
+      4.84% ── heap-overhead-ratio
+          1 ── host-object-urls
+    0.00 MB ── imagelib-surface-cache
+    5.27 MB ── js-main-runtime-temporary-peak
+          0 ── page-faults-hard
+    203,349 ── page-faults-soft
+  274.99 MB ── resident
+  251.47 MB ── resident-unique
+1,103.64 MB ── vsize</pre>
+
+<p>Quelques détails sur certaines mesures :</p>
+
+<ul>
+ <li>"resident". Il s'agit de la consommation de mémoire physique. Si vous cherchez une valeur résumant la consommation de mémoire, c'est probablement la valeur la plus pertinente.</li>
+ <li>"vsize". Consommation de mémoire virtuelle, qui est habituellement la valeur la plus élevée (en particulier sur Mac). Elle n'a vraiment d'intérêt que sur les machines 32 bits, comme Win32. Il y a aussi la valeur "vsize-max-contiguous" (qui n'est mesurée que sur certaines plateformes, et n'est pas présentée dans l'exemple ci-dessus), qui indique la taille du plus grand bloc contigu d'adresses virtuelles. Lorsque ce nombre est petit, il est probable que l'allocation de mémoire dysfonctionnera bientôt en raison du trop petit espace d'adresses virtuelles.</li>
+ <li>Différentes mesures liées à la gestion des graphiques ("gfx-*"), qui varient selon les plateformes. Les graphiques sont souvent une des raisons d'une importante consommation de mémoire, et ces mesures sont utiles pour détecter de telles situations.</li>
+</ul>
+
+<h4 id="Section_sur_le_Système">Section sur le Système</h4>
+
+<p>Cette section n'apparait que sur les dispositifs équipés de Firefox OS. Elle contient des mesures sur l'ensemble du dispositif obtenues auprès du système d'exploitation. Entre autres, cette section aide à comprendre précisément l'utilisation de mémoire sur l'ensemble du dispositif.</p>

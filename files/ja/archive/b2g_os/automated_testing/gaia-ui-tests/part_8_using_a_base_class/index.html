@@ -1,0 +1,153 @@
+---
+title: 'パート 8: ベースクラスを使用する'
+slug: Archive/B2G_OS/Automated_testing/gaia-ui-tests/Part_8_Using_a_base_class
+tags:
+  - Automation
+  - Firefox OS
+  - Gaia
+  - Python
+  - gaia-ui-tests
+  - tests
+translation_of: Archive/B2G_OS/Automated_testing/gaia-ui-tests/Part_8_Using_a_base_class
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/ja/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/Mozilla/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_7_Writing_your_own_tests" style="float: left;">« 前のページ</a><a href="/ja/docs/Mozilla/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_9_app_objects">次のページ  »</a></p>
+</div><p></p>
+
+<div class="summary">
+<p><span class="seoSummary">今、おそらく、進捗状況についてのかなり良く感じている複数のテストを持っています。しかし、さらなるコード効率を向上させる他の方法があります — これまでに、各テストファイルにおいて <code>setUp()</code> と <code>tearDown()</code> メソッドが含まれるように持っていたことがあります。 このシリーズで見てきた現在のコンストラクトで行きます。数十のテストを持っている場合、それはコードの重複がたくさんです！ この記事では、<code>TestBase</code> クラスのすべてのテストに共通な<code>setUp()</code>/<code>tearDown()</code> コードを配置する方法を見てみましょう。これは、各個々のテストファイルにインポートすることができます。</span></p>
+</div>
+
+<h2 id="test_base.py">test_base.py</h2>
+
+<p>開始するには、既存のテストケースと同じディレクトリに <code>test_base.py</code> と呼ばれる新しいファイルを作成します。</p>
+
+<p>次に、<code>setUp()</code> と <code>tearDown()</code> メソッドを含む<code>TestBase</code> クラスに加えて、ファイルに共通の設定(<code>unittest</code>, <code>Marionette</code> and <code>time</code>)に関連するあなたの大切な書類を移動します。そして、共通ヘルパー関数(<code>unlock_screen()</code> のような)と関連付けられています。 ファイルには、次のようになります:</p>
+
+<pre class="brush: python">import time
+import unittest
+from marionette import Marionette
+
+
+class TestBase(unittest.TestCase):
+
+    def unlock_screen(self):
+        self.marionette.execute_script('window.wrappedJSObject.lockScreen.unlock();')
+
+    def kill_all(self):
+        self.marionette.switch_to_frame()
+        self.marionette.execute_async_script("""
+             // Kills all running apps, except the homescreen.
+             function killAll() {
+               let manager = window.wrappedJSObject.AppWindowManager;
+
+               let apps = manager.getApps();
+               for (let id in apps) {
+                 let origin = apps[id].origin;
+                 if (origin.indexOf('verticalhome') == -1) {
+                   manager.kill(origin);
+                 }
+               }
+             };
+             killAll();
+             // return true so execute_async_script knows the script is complete
+             marionetteScriptFinished(true);
+            """)
+
+    def setUp(self):
+         # Create the client for this session. Assuming you're using the default port on a Marionette instance running locally
+        self.marionette = Marionette()
+        self.marionette.start_session()
+
+        # Unlock the screen
+        self.unlock_screen()
+
+        # kill all open apps
+        self.kill_all()
+
+        # Switch context to the homescreen iframe and tap on the contacts icon
+        time.sleep(2)
+        home_frame = self.marionette.find_element('css selector', 'div.homescreen iframe')
+        self.marionette.switch_to_frame(home_frame)
+
+
+    def tearDown(self):
+        # Close the Marionette session now that the test is finished
+        self.marionette.delete_session()
+</pre>
+
+<h2 id="テストファイルの更新">テストファイルの更新</h2>
+
+<p>作成された <code>test_base.py</code> ファイルを使用して、<code>TestBase</code>をテストファイルにインポートする必要があります。そして、テストクラスは、<code>TestBase</code>クラスを拡張するために変更される必要があります。:</p>
+
+<pre class="brush: python">import unittest
+from marionette import Wait
+from marionette import By
+from test_base import TestBase
+
+class TestContacts(TestBase):
+
+    def test(self):
+        # Tests in here
+
+if __name__ == '__main__':
+    unittest.main()</pre>
+
+<p>もう一度テストファイルを実行してみてください。</p>
+
+<p>今は多くのように見えないかもしれないが、あなたは数十または数百のテストがある場合、これは実際に重複したコードの多くを保存します。</p>

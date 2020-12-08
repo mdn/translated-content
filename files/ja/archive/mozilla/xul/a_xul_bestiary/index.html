@@ -1,0 +1,170 @@
+---
+title: A XUL Bestiary
+slug: Archive/Mozilla/XUL/A_XUL_Bestiary
+tags:
+  - Add-ons
+  - Extensions
+  - XUL
+  - 移行
+translation_of: Archive/Mozilla/XUL/A_XUL_Bestiary
+---
+<h2 id="XULNotes_A_XUL_Bestiary" name="XULNotes:_A_XUL_Bestiary">XULNotes: A XUL Bestiary</h2>
+
+<p>この XULNote では、XUL開発環境のキーとなる概念や用語のいくつかを紹介します。この記事の目的はこれらの用語を詳しく述べることではなく、それらがどういうものであるのかを簡単なことばで定義することです。 このグループのために要素を選択しました。というのは、これらの要素は謎に包まれていたり、概念や用語の誤用していたり、XUL・クラスプラットフォーム開発での役割が過小評価されていたりするように思われるからです。 この記事は、<em><a class="external" href="http://www.mozilla.org/docs/jargon.html">Mozilla Jargon File</a></em>とは対照的に、context を確立して Mozillaの新たな技術 ―― 特に XMLベースのユーザーインターフェース言語、XUL ―― を理解したい webやコンテンツのディベロッパーが特に興味のある事項について述べています。</p>
+
+<h3 id=".E3.82.AF.E3.83.AD.E3.83.A0_.28Chrome.29" name=".E3.82.AF.E3.83.AD.E3.83.A0_.28Chrome.29">クロム (Chrome)</h3>
+
+<p>XUL と Mozillaブラウザの最も強力であり、かつよく誤解されている特徴のいくつかは chrome に関係しています。chromeという用語は、異なった文脈で異なったものを意味するように使用されます。一般的には、chrome は XUL インターフェースとそのサポートする全てのファイルに関係します。chrome は、XUL の内容と構造を、さらに CSS スキンを、さらに XULインターフェースの一部である地域化やプラットフォーム固有のどのファイルをも意味します。 対照的に、スキンとは単に、CSS と XULファイルに参照されるグラフィクスのことですし、地域化文字列とは DTD ですし、コンテンツとは XUL のことです。</p>
+
+<h3 id="The_Chrome_URL" name="The_Chrome_URL">The Chrome URL</h3>
+
+<p>あるやり方の場合に「アプリケーションコア」から分離される、統合された動的なものとしての chrome というコンセプトは、XULとその関連ファイルの集りを chrome url で指し示す際に実感されます。 chrome url は、以下に示すグローバルスキン処理指示のようなポインタ中で http url のかわりに現れ、Geckoレンダリングエンジンにロードされる chrome を指定します:</p>
+
+<pre class="eval">&lt;?xml-stylesheet href="<a class="external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;
+</pre>
+
+<p>上の例では chrome は単純に XUL ファイルにロードされるスキンファイルですが、あるウィンドウのメニューアイテムが新しい chrome をもたらすというように、chrome は chrome 全体をロードすることができます:</p>
+
+<pre class="eval">&lt;menuitem
+  value="Mozilla Help"
+  oncommand="window.openDialog('<a class="external" rel="freelink">chrome://help/content/help.xul</a>',
+                               '_blank',
+                               'chrome,all,dialog=no')" /&gt;
+</pre>
+
+<p>この例では、chrome url は Mozillaアプリケーションのパッケージ階層中の chrome を指すために使用されています。mozilla/bin/chrome/help で定義される Help chrome は Helpメニューから呼び出されます。chromeディレクトリパスの後にファイル名が指定されなかった場合は、パッケージ名と同じファイル名が仮定されることに注意してください。言い換えれば、上の globalポインタのような chrome url は global.css を呼び出しますし、上の helpポインタはパッケージ名自身が "help" ですから、'<a class="external" rel="freelink">chrome://help/content</a>' と書き直すことができます。</p>
+
+<h2 id="Mozilla.E3.81.AE.E4.BB.A5.E5.A4.96.E3.81.AE_chrome_.E3.82.92.E8.A1.A8.E7.A4.BA.E3.81.99.E3.82.8B" name="Mozilla.E3.81.AE.E4.BB.A5.E5.A4.96.E3.81.AE_chrome_.E3.82.92.E8.A1.A8.E7.A4.BA.E3.81.99.E3.82.8B">Mozillaの以外の chrome を表示する</h2>
+
+<p>デフォルト以外の chrome で Mozilla をスタートすることができる特別なフラグがあります。Mozilla をコマンドラインから起動するときに、-chrome フラグを一緒に付けると、前の例で行いたかった chrome を指定することができます:</p>
+
+<pre class="eval">mozilla -chrome <a class="external" rel="freelink">chrome://help/content/help.xul</a>
+</pre>
+
+<p>これは前の例で話に出した helpパッケージを「スタンドアロン」な chrome としてもたらします。この特別なオプションは Mozillaブラウザと独立して chrome を作りアクセスすることを可能にし、XULプラットフォームに単なるブラウザのスタイル変更を越えた可能性を提案します。</p>
+
+<h2 id="Package" name="Package">Package</h2>
+
+<p>パッケージはある場合には chrome に似ていますが、Mozillaアーキテクチャに特有のものです。パッケージは Mozillaパッケージ階層中の特別の場所に位置するインターフェースコードの集りです。chrome のように、このかたまりは通常、XULコンテンツ、CSSとグラフィクスといったスキン情報、地域化文字列、そしておそらくプラットフォーム固有のコードを含みます。navigatorは mozilla/bin/chrome/navigator で定義されるパッケージですし、mail/newsコンポーネントは mozilla/bin/chrome/mailnews/ にあるパッケージで…などなど。それぞれのパッケージディレクトリは典型的には 3つのサブディレクトリを持ちます。その 3つは content, skin, locale で、それぞれでは XUL, CSS, 地域化情報が定義されます。</p>
+
+<pre class="eval">navigator/
+  content/
+    default/
+      navigator.xul
+      ...
+  skin/
+    default/
+      navigator.css
+      nav-icon.gif
+      ...
+  locale/
+    US-en/
+      navigator.dtd
+</pre>
+
+<p>これら主要なパッケージサブディレクトリの下の defaultディレクトリは chrome url とみなされます (<a class="external" rel="freelink">chrome://help/content/help.xul</a> は url の一部として defaultディレクトリを含んでいません。しかし、これらのディレクトリは実際の構造中には存在しています)。あるパッケージに別の chrome を作成したら、defaultの代わりにロードされるコンテンツの属するディレクトリの下にサブディレクトリを作ります。例えば、navigatorパッケージに別のスキンを作りたいならば、デフォルトに代わってロードされるコンテンツをもつ navigator/skin の下にサブディレクトリを作ります。ゆえに、以下の構造が獲得されます。</p>
+
+<pre class="eval">navigator/
+  content/
+    default/
+      navigator.xul
+      ...
+  skin/
+    default/
+      navigator.css
+      nav-icon.gif
+      ...
+      <strong>myNewSkin/</strong>
+        newskin.css
+        newgifs.gif
+        ...
+  locale/
+    US-en/
+      navigator.dtd
+</pre>
+
+<p>このような新しいパッケージディレクトリに格納された chrome情報をロードするために、次の chrome url を使用することができます:</p>
+
+<pre class="eval"><a class="external" rel="freelink">chrome://navigator/skin/myNewSkin/newskin.css</a>
+</pre>
+
+<p>この url はこのサブディレクトリにあるグラフィクスを必要に従って順にロードします。</p>
+
+<h2 id="Skin" name="Skin">Skin</h2>
+
+<p>スキンは、XUL の外見や表出を作りあげる CSS とグラフィクスです。XULそれ自身は、ウィジェットがどのようなインターフェースで表出されるのかについてほんのわずかの規定しか含みません。 Mozillaに見られるほとんど全ての XULファイルでロードされるグローバルスキン (XULファイルにグローバルスキンが含まれていないと、奇妙な、無意味な、あるいは全く見えない外見になるでしょう) のスキニングにさえも先行し、このツールキットのウィジェットにいくつかのとても基本的な表現情報を提供する xul.cssファイルがロードされます。 それゆえ、CSS は XUL を XUL たらしめている主要なものであり、特に CSS2とその位置指定能力の到来とともにさらに比重は高まるでしょう (訳注: ちょっと意訳)。</p>
+
+<p>スキニングはほとんどの場合にアプリケーションの全体的な外観を動的に変更する状況をもたらします。これはブラウザだけのことではありません、かなり近い将来にアプリケーション全体の外観を変更することができるようになるでしょう、ですがその対象は、<em>global.css</em>かグローバルスキンの中で実際にスキンが定義されている範囲だけになるでしょう。&lt;style&gt;タグ、エレメントのstyle属性、またはカスタムCSSファイルでスタイルを作ると、あなたの作ったXULが属するアプリケーションをスキンするGecko の能力を壊すことになります。</p>
+
+<h2 id="Widgets" name="Widgets">Widgets</h2>
+
+<p>ウィジェットとは、インターフェースを作るために組み合わせる部品です。メニュー、ツールバー、ボタン、スクロールバーなどはウィジェットですし、ボックスやスプリングほど一般的な目的の部品です (?)。これらのウィジェットは作って XULファイル中に単純なエレメントとして置かれます: &lt;menu&gt;, &lt;toolbar&gt;, などなど。これらのエレメントの構文は大部分を XML に基礎をおいています。併せて、これらのウィジェットはまた XPToolkit としても知られています。</p>
+
+<h2 id="Object_Models_DOM_and_AOM" name="Object_Models:_DOM_and_AOM">Object Models: DOM and AOM</h2>
+
+<p><strong>Document</strong> <strong>O</strong>bject <strong>M</strong>odel はスクリプト可能なオブジェクトの連なりとしてドキュメントを表現したものです。JavaScriptのようなスクリプト言語で HTMLドキュメントの様々な部分にアクセスするのは、すなわちそれ DOM によってです。 ヘッド、リンク、ボディ、あらゆるタグ、などといったドキュメントの部分部分は、属性を取得・設定できるノードとして利用可能です。残念なことに、ドキュメントの異なった型や、同様にドキュメント中で何がプログラム的に公開されるべきかについての異なったプロプライエタリな概念に対応した、異なった document object model が存在しています。 {{ mediawiki.external('www.w3c.org W3C') }}は特定の Document ObjectModel の標準化を行っており、既に更新版のための勧告候補 (candidate recommendation) を持っています。これが XUL 及び Mozillaブラウザで反映される DOM です。 ノードツリーの最上位階層では、それはウィンドウオブジェクトそれ自身を置いてある DOM です。ウィンドウは、ドキュメントそれ自身、ユーザーが見たページを記録した履歴オブジェクト、フレームノード、などといった子ノードを持ち、これら全てはプログラム的にアクセス可能です。</p>
+
+<p>オブジェクトモデルにおける劇的な改善と W3C DOM2 の力があれば、DOMの概念は抽象的なDHTMLの概念にとってかわるでしょう。あらゆる動的Web開発は webドキュメント (やXULインターフェース) へのプログラム的なアクセスに依存しています。また、DOM は標準ですが、Dynamic HTMLの初期の意向はそうではありませんでした。ですので、"DOM"という単語は "Dynamic HTML" や "DHTML" のような単語の代わりに、もしくは同意語として使用されます。</p>
+
+<p>AOM とは Application Object Model のことで、DOM を XUL で定義されるインターフェースへ拡張したものです。HTML が DOM において<em>link, layer, img</em> のようなノードとして映し出される (reflect) ように、XUL は browser, menu, menuitebm などといった XULウィジェットの階層での AOM において映し出されます。 DOM と AOM は連続体を形づくり、それは XUL が基礎を置いている標準から操作可能です。</p>
+
+<h2 id="Near_Synonyms_for_XUL" name="Near_Synonyms_for_XUL">Near Synonyms for XUL</h2>
+
+<p>Mozillaオープンソースプロジェクトでは、"X"で始まる単語についてかなりの混乱があります。下の方にある {{ mediawiki.external('#connections moz architecture') }} の項で、XPCOM, XPIDL, XPConnect について説明します。これら 3つはインターフェースからアプリケーションコードにアクセスする技術に少し関連します。 この節では、XUL, XPToolkit, XPFE について述べます。これらは意味が似ているところもあり、全く異なってもいるところもあります。</p>
+
+<p>簡潔に表すと、XUL はインターフェースを作るための XMLベースの言語です。また、XPToolkit は実際にその目的のために組み立てられる XULウィジェット (メニュー、ツールバー、他) の集合 ―― 元々はインターフェースの基本要素 ―― であり、XPFE (Cross Platform Front End) は XPToolkit から作られるフロントエンドです。</p>
+
+<p>ここでの違いは重要です: XUL は、要素、属性、構文、ルール、関係といったものの宇宙です。一方、XPToolkit は現実に XULで作られるインターフェース固有のエレメントの有限の集りです。XPFE は XPToolkit の外部で作られるものです。 XUL, XPToolkit, XPFE の関係は、おおまかにいって HTML, 実際の HTML タグ、HTML web ページの関係に類比しています。</p>
+
+<h2 id="XUL_Parts" name="XUL_Parts">XUL Parts</h2>
+
+<p>ウィジェットの部分を記述するための構文に混乱する人が時々います。 以下の例のように現れるメニューのようなウィジェットでは、menu がウィジェットであり、 value と id は属性です。</p>
+
+<pre class="eval"><strong>&lt;menu id="file" value="File" &gt;</strong>
+  &lt;popup&gt;
+    &lt;menuitem value="New" onclick="CreateNewDoc () " /&gt;
+    &lt;menuitem value="Open" onclick="OpenDoc () " /&gt;
+    &lt;menuitem value="Close" onclick="CloseDoc () " /&gt;
+  &lt;/popup&gt;
+<strong>&lt;/menu&gt;</strong>
+</pre>
+
+<p>エレメントはアイテムやウィジェットを名前付けますが、属性はその名前やスタイルなどといった、要素の機能を記述します。オブジェクト指向の用語を使うと、エレメントはオブジェクト自身と似ていますが、属性はプロパティに似ています。属性はそれに関連した値を持ち (上の例の id属性の "file" という文字列など)。menuエレメントはサンプルの先頭の開始タグと最後の閉じタグの両方を含むことに注意してください。ある意味では、menuエレメントは menuエレメント自身とその子供たち、popup と menuitems、を構成します。</p>
+
+<h2 id="Events" name="Events">Events</h2>
+
+<p>イベントもまた、それほど鍛えられていないディベロッパーにとっては混乱の元です。事実、わたしもそれらを正しく理解しているか確信していません。しかし、ここではイベントと、それらが基本的に XUL で作られるようなイベントベースのインターフェースの中でどのように利用されるかの簡単な説明をしようとおもいます。イベントは、オブジェクトが何らかの動作をするときに、そのオブジェクトから送られるメッセージです。例えば、ブラウザに読み込まれたときに、ドキュメントは "load" イベントを発火 (または生起) させます。ボタンがクリックされたとき、そのボタンは "click" イベントを発火します。</p>
+
+<p>もしあなたがこれらのイベントについて何も行わないならば、たぶんそれらについて何も知りえないでしょう。ドキュメントがロードされる、ボタンがクリックされる、リンクの上をさまよわれる、するとイベントは閉じたドアに隠れながらそれらの動作全てについて生起します。しかし、これから簡潔に記述するように、もし<em>イベントリスナ</em>の内に<em>イベントハンドラ</em>を記すならば、あなたはそれらのイベントを他の動作を誘発するために利用できます。この、他のより細かな動作を促すイベントの利用が、おおまかにいってイベントモデルの意味することです。</p>
+
+<p>正確には、どこでこれらのイベントは発火するのでしょうか? 誰のところで? あるオブジェクトで発火されたイベントは、DOM (またはAOM) の階層を「昇って」いきます。それらのイベントは、その階層のどこででも「取り扱か (handle) 」われ得ます ―― これはイベントの発生したのと同じノードも含みます。階層のあるレベルでは誰も関心を示さなければ、イベントはその階層の頂上を出て次の頂上へ昇ります。</p>
+
+<p>「イベントリスナ」という用語はそれほど頻繁には使用されませんが、自身のイベントに耳をすますオブジェクトの特別な属性です。例えば、document は自身の "load"イベントを傾聴するための "onload"イベントリスナを持っています。XULボタンは "onclick"イベントリスナを持っています。イベントリスナは本当に便利なもので、それを用いる代わりに、いつオブジェクトがイベントを発火させるか、そのイベントは何かを見定めて、そのイベントに反応するようなイベントハンドラのコードをいくつか書くこともできるでしょう。しかし、イベントリスナは、特定の、一般的なイベントのハンドラを書くための容易なメカニズムを提供します。</p>
+
+<p>イベントハンドラはイベントへの反応を書いたごく少量のコードです。実際に、"onload"イベントハンドラは、ドキュメントがロードされたときに、これが起こるように言います。そして、イベントリスナ属性はイベントハンドラを記述するとても便利な場所を提供します ―― 事実、とても便利なので「イベントハンドラ」という用語はしばしばイベントリスナ属性とそこに書くイベントハンドラコードの両者を述べるために使用されます。イベントハンドラを作成するために、単純に実行したいコードを適切なイベントリスナの中に置きます。</p>
+
+<pre class="eval">&lt;menuitem value="Click Me" onclick="alert ('Event Handled.') " /&gt;
+</pre>
+
+<p>上に述べたことに従い、階層の下層のどこかで発火されるイベントのためのハンドラを書くことができます。例えば、XUL中の menubar はその子供の menuitem が発火するイベントのハンドラを含むことができます。</p>
+
+<h2 id="Mozilla_XPArchitecture" name="Mozilla_XPArchitecture">Mozilla XPArchitecture</h2>
+
+<p>Mozilla は明らかに単なるインターフェース以上のものです。 それはクロスプラットフォームの、標準に基礎を置いたものです。 さらにある点では、ひとたび JavaScript で書かれ、XULインターフェース中に生きるイベントハンドラは、アプリケーションコアの下でとてもシリアスなことが為されるようにします。 ソケットインターフェース、エディタ、mail/news、セキュリティといった技術、これを可能にするそれらの技術は、おそらくほとんど理解されていない革新の方陣であり、すなわちそれが Mozilla です。 これらシリアスなことを C++ でプログラミングし、プラットフォームへとコンパイルする些細な事柄に加えて、コアとインターフェースを繋ぐために、Mozilla の設計者と開発者は 3つの "XP" 技術を使います。</p>
+
+<p>XPCOM はプログラム言語ではなく、真にクロスプラットフォームな Component Object Model を提供する (たとえば C++ での) プログラミングのアプローチであるので、この名前にがあります。 COMを基礎として、XPCOM は 他のオブジェクトがそのサービスにアクセスするのに用いることのできる、言語とプラットフォームに中立のインターフェースを提供するコードの塊を要求します。 XPCOM は実装の一切の知識為しにオブジェクトのサービスを用いることを可能にするために、設計と編集に規則を強制します。 XPIDL, Cross-Platform Interface Definition Language (クロスプラットフォームなインターフェース定義言語)、は XPCOM の要求するインターフェースが記述されるようにできる言語です。XPIDL が XPCOM のインターフェースを記述するために用いられるときは、それらのインターフェースが特別なヘッダファイル中で利用できるようになります。最後に XPConnect は、 XPCOM/XPIDL インターフェースと、XUL の用いるスクリプト言語である JavaScript を接続する技術です。これら 3つのクロスプラットフォームの糊の技術はこのアーキテクチャの中間にフィットし、次のように見えます: <img alt="Bridging C++ and JavaScript"></p>
+
+<p>Author: <a class="link-mailto" href="mailto:oeschger@netscape.com">Ian Oeschger</a><br>
+ Other Documents: <a class="external" href="http://www.mozilla.org/docs/jargon.html">Mozilla Jargon File</a> and <a href="ja/Introduction_to_XUL">Introduction to XUL</a></p>
+
+<div class="originaldocinfo">
+<h2 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h2>
+
+<ul>
+ <li>Author(s): <a class="link-mailto" href="mailto:oeschger@netscape.com">Ian Oeschger</a></li>
+ <li>Last Updated Date: April 16, 2000</li>
+ <li>Copyright Information: Copyright (C) <a class="link-mailto" href="mailto:oeschger@netscape.com">Ian Oeschger</a></li>
+</ul>
+</div>
+
+<div class="noinclude"> </div>

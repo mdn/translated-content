@@ -1,0 +1,313 @@
+---
+title: Localisation et pluriels
+slug: Localisation_et_pluriels
+tags:
+  - Localisation
+translation_of: Mozilla/Localization/Localization_and_Plurals
+---
+<p>{{ Fx_minversion_header(3) }}
+Vous vous trouvez probablement ici parce que vous localisez un fichier &lt;tt&gt;.properties&lt;/tt&gt; et que celui-ci liait vers cette page. Celle-ci a pour objet d'expliquer comment localiser ces chaînes afin que la forme plurielle correcte soit affichée pour l'utilisateur. Par exemple, on aura « 1 page », mais « 2 pages ».
+</p><p>Si vous êtes ici pour rendre votre code (par exemple une extension) localisable avec des formes plurielles, vous pouvez passer directement au paragraphe <a href="#D.C3.A9veloppement_avec_PluralForm">Développement avec PluralForm</a>, mais vous aurez probablement besoin de définir les chaînes initiales pour votre code de la même manière, il vaudrait donc mieux parcourir également au moins la section Utilisation.
+</p>
+<h3 id="Utilisation" name="Utilisation"> Utilisation </h3>
+<p>Les termes suivants sont utilisés dans cette page pour que les choses soient les plus claires possibles :
+</p>
+<ul><li> <b>règle de pluriel</b> : pour une langue donnée, il existe une règle grammaticale sur la forme des mots selon leur nombre qualificatif. Chaque langue peut avoir ses propres règles.
+</li><li> <b>forme plurielle</b> : pour une règle de pluriel particulière, différentes formes d'un mot peuvent exister comme « page » et « pages ». Dans ce cas, on a simplement deux formes, mais d'autre langues peuvent n'en avoir qu'une seule ou beaucoup plus.
+</li></ul>
+<p>Si vous êtes ici pour traiter &lt;tt&gt;pluralRule&lt;/tt&gt; dans le fichier &lt;tt&gt;chrome/global/intl.properties&lt;/tt&gt;, vous devrez d'abord établir quelle <i>règle de pluriel</i> choisir pour votre localisation. Cette règle de pluriel est utilisée pour déterminer le nombre de <i>formes plurielles</i> nécessaires pour chaque mot qui doit être localisé en tenant compte des pluriels.
+</p><p>Pour tous les autres fichiers properties qui lient vers cette page, vous devrez fournir autant de formes plurielles que nécessaire du mot désiré et les séparer par des points-virgules (;). Si vous ne savez pas combien vous en avez besoin, vérifiez le nombre &lt;tt&gt;pluralRule&lt;/tt&gt; dans &lt;tt&gt;chrome/global/intl.properties&lt;/tt&gt; et vérifiez l'entrée correspondante dans la liste suivante de règles de pluriel.
+</p>
+<h3 id="Liste_de_r.C3.A8gles_de_pluriel" name="Liste_de_r.C3.A8gles_de_pluriel"> Liste de règles de pluriel </h3>
+<p>Cette section contient une liste de règles de pluriel triées par leur nombre de règle. Chaque entrée indique combien de formes plurielles sont nécessaires pour localiser un mot. Pour chacune d'entre-elles, une liste de familles et de langues correspondantes est fournie afin de vous aider à déterminer s'il s'agit de la règle à choisir pour &lt;tt&gt;pluralRule&lt;/tt&gt;. En outre, vous y trouverez une brève description de chaque forme plurielle suivie de quelques exemples de nombres entrant dans cette forme particulière.
+</p><p>Pour une règle de pluriel donnée, l'ordre dans lequel les formes de pluriels sont données est le même que celui dans lequel vous devrez localiser un mot en les séparant par des points-virgules. Par exemple, le français utilise la règle plurielle 2 et la localisation de &lt;tt&gt;pluriels&lt;/tt&gt; nécessiterait une chaîne de type « pluriel;pluriels » où le premier mot est la forme au singulier et le second la forme plurielle générique.
+</p>
+<h4 id="R.C3.A8gle_de_pluriel_n.C2.B00_.281_forme.29" name="R.C3.A8gle_de_pluriel_n.C2.B00_.281_forme.29"> Règle de pluriel n°<i><b>0</b></i> (1 forme) </h4>
+<p><b>Familles</b> : asiatiques (chinois, japonais, coréen, vietnamien), turques/altaïques (turc), thaïes<br>
+<b>tout</b> : <small>0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, …</small><br>
+</p>
+<h4 id="R.C3.A8gle_de_pluriel_n.C2.B01_.282_formes.29" name="R.C3.A8gle_de_pluriel_n.C2.B01_.282_formes.29"> Règle de pluriel n°<i><b>1</b></i> (2 formes) </h4>
+<p><b>Familles</b> : germaniques (danois, néerlandais, anglais, féroïen, frison, allemand, norvégien, suédois), finno-ougriennes (estonien, finnois, hongrois), isolats (basque), latines/grecques (grec), sémitiques (hébreu), romanes (italien, portugais, espagnol, catalan)<br>
+<b>pour 1</b> : <small>1</small><br>
+<b>tout le reste</b> : <small>0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, …</small><br>
+</p>
+<h4 id="R.C3.A8gle_de_pluriel_n.C2.B02_.282_formes.29" name="R.C3.A8gle_de_pluriel_n.C2.B02_.282_formes.29"> Règle de pluriel n°<i><b>2</b></i> (2 formes) </h4>
+<p><b>Familles</b>: romanes (français, portugais brésilien)<br>
+<b>pour 0 ou 1</b> : <small>0, 1</small><br>
+<b>tout le reste</b>: <small>2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, …</small><br>
+</p>
+<h4 id="R.C3.A8gle_de_pluriel_n.C2.B03_.283_formes.29" name="R.C3.A8gle_de_pluriel_n.C2.B03_.283_formes.29"> Règle de pluriel n°<i><b>3</b></i> (3 formes) </h4>
+<p><b>Familles</b> : baltes (letton)<br>
+<b>pour 0</b> : <small>0</small><br>
+<b>se termine par 1, sauf 11</b>: <small>1, 21, 31, 41, 51, 61, 71, 81, 91, 101, 121, 131, 141, 151, 161, 171, 181, 191, 201, 221, 231, 241, 251, 261, 271, 281, 291, …</small><br>
+<b>tout le reste</b> : <small>2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27, 28, 29, 30, 32, 33, 34, 35, 36, 37, 38, 39, 40, 42, 43, 44, 45, 46, 47, 48, 49, 50, 52, 53, 54, 55, …</small><br>
+</p>
+<h4 id="R.C3.A8gle_de_pluriel_n.C2.B04_.283_formes.29" name="R.C3.A8gle_de_pluriel_n.C2.B04_.283_formes.29"> Règle de pluriel n°<i><b>4</b></i> (3 formes) </h4>
+<p><b>Familles</b> : celtiques (gaélique écossais)<br>
+<b>pour 1</b> : <small>1</small><br>
+<b>pour 2</b> : <small>2</small><br>
+<b>tout le reste</b> : <small>0, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, …</small><br>
+</p>
+<h4 id="R.C3.A8gle_de_pluriel_n.C2.B05_.283_formes.29" name="R.C3.A8gle_de_pluriel_n.C2.B05_.283_formes.29"> Règle de pluriel n°<i><b>5</b></i> (3 formes) </h4>
+<p><b>Familles</b> : romanes (roumain)<br>
+<b>pour 1</b> : <small>1</small><br>
+<b>pour 0 ou se terminant par 01-19</b> : <small>0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, …</small><br>
+<b>tout le reste</b> : <small>20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, …</small><br>
+</p>
+<h4 id="R.C3.A8gle_de_pluriel_n.C2.B06_.283_formes.29" name="R.C3.A8gle_de_pluriel_n.C2.B06_.283_formes.29"> Règle de pluriel n°<i><b>6</b></i> (3 formes) </h4>
+<p><b>Familles</b> : baltes (lituanien)<br>
+<b>se termine par 1, sauf 11</b> : <small>1, 21, 31, 41, 51, 61, 71, 81, 91, 101, 121, 131, 141, 151, 161, 171, 181, 191, 201, 221, 231, 241, 251, 261, 271, 281, 291, …</small><br>
+<b>se termine par 0 ou par 10-20</b> : <small>0, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, …</small><br>
+<b>tout le reste</b> : <small>2, 3, 4, 5, 6, 7, 8, 9, 22, 23, 24, 25, 26, 27, 28, 29, 32, 33, 34, 35, 36, 37, 38, 39, 42, 43, 44, 45, 46, 47, 48, 49, 52, 53, 54, 55, 56, 57, 58, 59, 62, 63, 64, 65, 66, 67, 68, 69, 72, 73, …</small><br>
+</p>
+<h4 id="R.C3.A8gle_de_pluriel_n.C2.B07_.283_formes.29" name="R.C3.A8gle_de_pluriel_n.C2.B07_.283_formes.29"> Règle de pluriel n°<i><b>7</b></i> (3 formes) </h4>
+<p><b>Familles</b> : slaves (croate, serbe, russe, ukrainien)<br>
+<b>se termine par 1, sauf 11</b> : <small>1, 21, 31, 41, 51, 61, 71, 81, 91, 101, 121, 131, 141, 151, 161, 171, 181, 191, 201, 221, 231, 241, 251, 261, 271, 281, 291, …</small><br>
+<b>se termine par 2-4, sauf 12-14</b> : <small>2, 3, 4, 22, 23, 24, 32, 33, 34, 42, 43, 44, 52, 53, 54, 62, 63, 64, 72, 73, 74, 82, 83, 84, 92, 93, 94, 102, 103, 104, 122, 123, 124, 132, 133, 134, 142, 143, 144, 152, 153, 154, 162, 163, 164, 172, 173, 174, 182, 183, …</small><br>
+<b>tout le reste</b> : <small>0, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 25, 26, 27, 28, 29, 30, 35, 36, 37, 38, 39, 40, 45, 46, 47, 48, 49, 50, 55, 56, 57, 58, 59, 60, 65, 66, 67, 68, 69, 70, 75, 76, 77, …</small><br>
+</p>
+<h4 id="R.C3.A8gle_de_pluriel_n.C2.B08_.283_formes.29" name="R.C3.A8gle_de_pluriel_n.C2.B08_.283_formes.29"> Règle de pluriel n°<i><b>8</b></i> (3 formes) </h4>
+<p><b>Familles</b> : slaves (slovaque, tchèque)<br>
+<b>pour 1</b> : <small>1</small><br>
+<b>pour 2-4</b> : <small>2, 3, 4</small><br>
+<b>tout le reste</b> : <small>0, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, …</small><br>
+</p>
+<h4 id="R.C3.A8gle_de_pluriel_n.C2.B09_.283_formes.29" name="R.C3.A8gle_de_pluriel_n.C2.B09_.283_formes.29"> Règle de pluriel n°<i><b>9</b></i> (3 formes) </h4>
+<p><b>Familles</b> : slaves (polonais)<br>
+<b>pour 1</b> : <small>1</small><br>
+<b>se termine par 2-4, sauf 12-14</b> : <small>2, 3, 4, 22, 23, 24, 32, 33, 34, 42, 43, 44, 52, 53, 54, 62, 63, 64, 72, 73, 74, 82, 83, 84, 92, 93, 94, 102, 103, 104, 122, 123, 124, 132, 133, 134, 142, 143, 144, 152, 153, 154, 162, 163, 164, 172, 173, 174, 182, 183, …</small><br>
+<b>tout le reste</b> : <small>0, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 25, 26, 27, 28, 29, 30, 31, 35, 36, 37, 38, 39, 40, 41, 45, 46, 47, 48, 49, 50, 51, 55, 56, 57, 58, 59, 60, 61, 65, 66, 67, 68, …</small><br>
+</p>
+<h4 id="R.C3.A8gle_de_pluriel_n.C2.B010_.284_formes.29" name="R.C3.A8gle_de_pluriel_n.C2.B010_.284_formes.29"> Règle de pluriel n°<i><b>10</b></i> (4 formes) </h4>
+<p><b>Familles</b> : slaves (slovène, sorabe)<br>
+<b>se termine par 01</b> : <small>1, 101, 201, …</small><br>
+<b>se termine par 02</b> : <small>2, 102, 202, …</small><br>
+<b>se termine par 03-04</b> : <small>3, 4, 103, 104, 203, 204, …</small><br>
+<b>tout le reste</b> : <small>0, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, …</small><br>
+</p>
+<h4 id="R.C3.A8gle_de_pluriel_n.C2.B011_.285_formes.29" name="R.C3.A8gle_de_pluriel_n.C2.B011_.285_formes.29"> Règle de pluriel n°<i><b>11</b></i> (5 formes) </h4>
+<p><b>Familles</b> : celtiques (gaélique irlandais)<br>
+<b>pour 1</b> : <small>1</small><br>
+<b>pour 2</b> : <small>2</small><br>
+<b>pour 3-6</b> : <small>3, 4, 5, 6</small><br>
+<b>pour 7-10</b> : <small>7, 8, 9, 10</small><br>
+<b>tout le reste</b> : <small>0, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, …</small><br>
+</p>
+<h4 id="R.C3.A8gle_de_pluriel_n.C2.B012_.284_formes.29" name="R.C3.A8gle_de_pluriel_n.C2.B012_.284_formes.29"> Règle de pluriel n°<i><b>12</b></i> (4 formes) </h4>
+<p><b>Familles</b> : sémitiques (arabe)<br>
+<b>pour 1</b> : <small>1</small><br>
+<b>pour 2</b> : <small>2</small><br>
+<b>pour 0 ou 3-10</b> : <small>0, 3, 4, 5, 6, 7, 8, 9, 10</small><br>
+<b>tout le reste</b> : <small>11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, …</small><br>
+</p>
+<h4 id="R.C3.A8gle_de_pluriel_n.C2.B013_.284_formes.29" name="R.C3.A8gle_de_pluriel_n.C2.B013_.284_formes.29"> Règle de pluriel n°<i><b>13</b></i> (4 formes) </h4>
+<p><b>Familles</b> : sémitiques (maltais)<br>
+<b>pour 1</b>: <small>1</small><br>
+<b>pour 0 ou se termine par 01-10</b> : <small>0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, …</small><br>
+<b>se termine par 11-19</b> : <small>11, 12, 13, 14, 15, 16, 17, 18, 19, 111, 112, 113, 114, 115, 116, 117, 118, 119, 211, 212, 213, 214, 215, 216, 217, 218, 219, …</small><br>
+<b>tout le reste</b> : <small>20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, …</small><br>
+</p>
+<h4 id="R.C3.A8gle_de_pluriel_n.C2.B014_.283_formes.29" name="R.C3.A8gle_de_pluriel_n.C2.B014_.283_formes.29"> Règle de pluriel n°<i><b>14</b></i> (3 formes) </h4>
+<p><b>Familles</b> : slaves (macédonien)<br>
+<b>se termine par 1</b> : <small>1, 11, 21, 31, 41, 51, 61, 71, 81, 91, 101, 111, 121, 131, 141, 151, 161, 171, 181, 191, 201, 211, 221, 231, 241, 251, 261, 271, 281, 291, …</small><br>
+<b>se termine par 2</b> : <small>2, 12, 22, 32, 42, 52, 62, 72, 82, 92, 102, 112, 122, 132, 142, 152, 162, 172, 182, 192, 202, 212, 222, 232, 242, 252, 262, 272, 282, 292, …</small><br>
+<b>tout le reste</b> : <small>0, 3, 4, 5, 6, 7, 8, 9, 10, 13, 14, 15, 16, 17, 18, 19, 20, 23, 24, 25, 26, 27, 28, 29, 30, 33, 34, 35, 36, 37, 38, 39, 40, 43, 44, 45, 46, 47, 48, 49, 50, 53, 54, 55, 56, 57, 58, 59, 60, 63, …</small><br>
+</p>
+<h3 id="Exemples" name="Exemples"> Exemples </h3>
+<p>Suivent quelques exemples pour diverses langues et une brève explication du processus.
+</p>
+<h4 id="Fran.C3.A7ais" name="Fran.C3.A7ais"> Français </h4>
+<p>Dans certaines régions francophones, le zéro est traité comme un pluriel alors que dans d'autres c'est un singulier. Le seul autre singulier est 1 alors que tout le reste est au pluriel. Choisissez donc la règle de pluriel n°1 ou n°2.
+</p><p><code>
+pluralRule=2<br>
+seconds=seconde;secondes<br>
+minutes=minute;minutes<br>
+hours=heure;heures<br>
+days=jour;jours
+</code>
+</p><p>Comme souvent lorsque vous localisez des mots, l'accord en genre peut vous forcer à réarranger les mots de manière à ce que le genre soit toujours identique (<i>seconde</i> est féminin alors que <i>jour</i> est masculin).
+</p>
+<h4 id="Chinois" name="Chinois"> Chinois </h4>
+<p>Un mot ne change pas s'il est précédé d'un nombre, donc tous les nombres utilisent la même forme plurielle. Comme il n'y a qu'une seule forme il s'agit de la règle de pluriel n°0. Pour chaque mot à localiser, il n'y a que ce mot à préciser, sans qu'il soit nécessaire d'ajouter des points-virgules.
+</p><p><code>
+pluralRule=0<br>
+seconds=秒<br>
+minutes=分<br>
+hours=時<br>
+days=日
+</code>
+</p>
+<h4 id="Polonais" name="Polonais"> Polonais </h4>
+<p>Il existe une forme de singulier pour 1, une forme plurielle pour 2-4, et une autre pour 5-21. À partir de là, 22 est la même forme que 2. La règle de pluriel n°7 a bien « se termine par 2-4, sauf 12-14 », mais la forme du singulier comprend tout ce qui se termine par 1 à part 11. La règle n°9 est donc préférable puisqu'elle a correctement la forme au singulier pour 1 uniquement.
+</p><p><code>
+pluralRule=9<br>
+seconds=sekunda;sekundy;sekund<br>
+minutes=minuta;minuty;minut<br>
+hours=godzina;godziny;godzin<br>
+days=dzień;dni;dni
+</code>
+</p><p>Bien que les deux dernières formes plurielles de « days » soient les mêmes, elles sont toutes deux nécessaires car il doit y avoir trois formes plurielles pour chaque mot.
+</p>
+<h4 id="Sorabe" name="Sorabe"> Sorabe </h4>
+<p>Quatre formes plurielles existent : nominatif singulier, nominatif double, nominatif pluriel, génitif pluriel. Ceci correspond à la règle de pluriel n°10.
+</p><p><code>
+pluralRule=10<br>
+seconds=sekunda;sekundźe;sekundy;sekundow<br>
+minutes=mjeńšina;mjeńšinje;mjeńšiny;mjeńšin<br>
+hours=hodźina;hodźinje;hodźiny;hodźin<br>
+days=dźeń;dnjej;dny;dnjow
+</code>
+</p>
+<h3 id="Extension_de_test" name="Extension_de_test"> Extension de test </h3>
+<p>Pour vous assurer de choisir la bonne règle de pluriel et fournir suffisamment de formes plurielles pour une chaîne, utilisez l'extension pluralForm Checker. Après son installation, elle devrait être accessible depuis le menu Outils.
+</p><p>Pour l'utiliser, remplissez la liste des fichiers properties et des chaînes à vérifier et cliquez sur le bouton. L'extension chargera chaque chaîne et affichera les formes plurielles dans un tableau. La sélection d'une entrée du tableau remplira la boîte inférieure avec des exemples d'utilisation du mot pour certains nombres.
+</p><p><img alt="Image:pluralForm-checker.0.3.png">
+</p><p><a class="external" href="http://ed.agadak.net/firefox/pluralForm-checker.xpi">Installation de l'extension pluralForm Checker v0.3</a>
+</p>
+<h4 id="Entr.C3.A9es_pour_l.27extension" name="Entr.C3.A9es_pour_l.27extension"> Entrées pour l'extension </h4>
+<p>Cette liste devrait être maintenue pour contenir tous les mots nécessitant des formes plurielles. Les utilisateurs de l'extension pourront alors copier-coller cette entrée.
+</p><p><code><small>
+<a class=" external" rel="freelink">chrome://mozapps/locale/downloads/do...tes,hours,days</a><br>
+<a class=" external" rel="freelink">chrome://mozapps/locale/downloads/do...dsTitlePercent</a><br>
+<a class=" external" rel="freelink">chrome://browser/locale/browser.prop...ausedDownloads</a>
+</small></code>
+</p>
+<h4 id="Historique_des_versions" name="Historique_des_versions"> Historique des versions </h4>
+<p>0.1 : Version initiale avec vérification de pluralRule, chargement de properties en entrée, génération de tableaux, exemple d'affichage en sortie<br>
+0.2 : Utilisation de PluralForm.numForms() pour obtenir le nombre de formes au lieu d'essayer de le déterminer localement afin de mieux gérer les futures règles — <b>nécessite une compilation ultérieure à 2007-01-27</b><br>
+0.3 : Génération d'une liste des nombres tombant dans chaque forme plurielle afin de réduire la sortie d'exemples à 3 par forme tout au plus
+</p>
+<h3 id="D.C3.A9veloppement_avec_PluralForm" name="D.C3.A9veloppement_avec_PluralForm"> Développement avec PluralForm </h3>
+<p>La fonctionnalité permettant d'obtenir les formes plurielles correctes est fournie par un module JavaScript, &lt;tt&gt;PluralForm.jsm&lt;/tt&gt;. Ce module fournit un ensemble de méthodes pour la localisation vers la locale courante du navigateur ainsi que pour localiser en utilisant la règle de pluriel désirée. Cette dernière possibilité de spécifier une règle de pluriel est utile pour les extensions car celles-ci ne devront pas nécessairement être localisées dans la même locale que le navigateur.
+</p>
+<h4 id="Chargement_de_PluralForm.jsm" name="Chargement_de_PluralForm.jsm"> Chargement de &lt;tt&gt;PluralForm.jsm&lt;/tt&gt; </h4>
+<p>Le chargement du module PluralForm depuis JavaScript est simple avec <a href="fr/Components.utils.import">Components.utils.import</a>. Placez simplement la ligue qui suit à un endroit quelconque qui sera évalué avant d'utiliser PluralForm. Par exemple en haut de votre fichier JavaScript.
+</p>
+<pre>Components.utils.import("resource://gre/modules/PluralForm.jsm");</pre>
+<h4 id="Les_m.C3.A9thodes_get_et_numForms" name="Les_m.C3.A9thodes_get_et_numForms"> Les méthodes &lt;tt&gt;get&lt;/tt&gt; et &lt;tt&gt;numForms&lt;/tt&gt; </h4>
+<p>Ces méthodes utilisent la locale courante du navigateur spécifiée par la valeur &lt;tt&gt;pluralRule&lt;/tt&gt; de &lt;tt&gt;<a class=" external" rel="freelink">chrome://global/locale/intl.properties</a>&lt;/tt&gt;.
+</p>
+<pre>/**
+ * Obtient la forme plurielle correcte d'un mot basée sur le nombre
+ *
+ * @param aNum
+ *        Le nombre pour lequel décider de la forme plurielle à utiliser
+ * @param aWords
+ *        Une chaîne séparée par des points-virgules (;) composée des mots pour lesquels obtenir la forme plurielle
+ * @return La forme plurielle appropriée pour le mot
+ */
+string pluralForm
+get(int aNum, string aWords)</pre>
+<pre>/**
+ * Obtient le nombre de formes pour la règle de pluriel courante
+ *
+ * @return The number of forms
+ */
+int numForms
+numForms()</pre>
+<p>Voici un exemple d'utilisation de ces méthodes :
+</p>
+<pre>// Chargement de PluralForm et pour cet exemple, utilisation du français
+Components.utils.import("resource://gre/modules/PluralForm.jsm");
+
+// PluralForm.get attend une liste de mots séparés par des points-virgules
+let forms = "forme;formes";
+// On va choisir la forme plurielle correcte selon le nombre suivant
+let numForms = PluralForm.numForms();
+
+// Affiche la forme plurielle correcte pour « formes »
+print("Cette locale a " + numForms + " " + PluralForm.get(numForms, forms) + ".");
+</pre>
+<p>L'exemple ci-dessus fonctionne, mais est toujours difficile à localiser parce qu'on concatène des chaînes en présupposant une structure grammaticale particulière. Le code suivant serait préférable :
+</p>
+<pre>Components.utils.import("resource://gre/modules/PluralForm.jsm");
+
+let forms = "Cette locale a une forme.;Cette locale a #1 formes.";
+let numForms = PluralForm.numForms();
+
+// Pour le français, ceci afficherait « Cette locale a 2 formes. »
+print(PluralForm.get(numForms, forms).replace("#1", numForms);</pre>
+<p>Remarquez dans l'exemple qui précède que le code peut être écrit pour gérer des remplacements ou non dans certaines formes de la chaîne. De plus, le localiseur a le contrôle sur la position du remplacement par rapport au reste du texte.
+</p><p>Bien sûr, les chaînes à localiser seront placées dans un fichier séparé comme monextension.properties au lieu d'être codées en dur dans le fichier de code JavaScript.
+</p><p>Les trois extraits de fichiers suivants montrent comment utiliser PluralForm avec des fichiers &lt;tt&gt;.xul&lt;/tt&gt;, &lt;tt&gt;.properties&lt;/tt&gt; et &lt;tt&gt;.js&lt;/tt&gt;.
+</p><p>&lt;tt&gt;downloads.xul&lt;/tt&gt; :
+</p>
+<pre>&lt;stringbundleset&gt;
+  &lt;stringbundle id="strings" src="chrome://downloads.properties"/&gt;
+&lt;/stringbundleset&gt;</pre>
+<p>&lt;tt&gt;downloads.properties&lt;/tt&gt; en anglais :
+</p>
+<pre># LOCALIZATION NOTE (downloadsTitleFiles): Semi-colon list of plural forms.
+# See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
+# #1 number of files
+# example: 111 files - Downloads
+downloadsTitleFiles=#1 file - Downloads;#1 files - Downloads
+
+# LOCALIZATION NOTE (timePair): #1 time number; #2 time unit
+# example: 1 second; 11 seconds
+timePair=#1 #2
+seconds=second;seconds</pre>
+<p>&lt;tt&gt;downloads.properties&lt;/tt&gt; en français :
+</p>
+<pre># LOCALIZATION NOTE (downloadsTitleFiles): Semi-colon list of plural forms.
+# See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
+# #1 number of files
+# example: 111 files - Downloads
+downloadsTitleFiles=#1 fichier - Téléchargements;#1 fichiers - Téléchargements
+
+# LOCALIZATION NOTE (timePair): #1 time number; #2 time unit
+# example: 1 second; 11 seconds
+timePair=#1 #2
+seconds=seconde;secondes</pre>
+<p>&lt;tt&gt;downloads.js&lt;/tt&gt; :
+</p>
+<pre>Components.utils.import("resource://gre/modules/PluralForm.jsm");
+let getStr = function(string) document.getElementById("strings").getString(string);
+
+// Get the correct plural form for the title
+let numDownloads = 3;
+let title = PluralForm.get(numDownloads, getStr("downloadsTitleFiles"));
+// Put in the correct number of downloads
+print(title.replace("#1", numDownloads));
+
+// Get the correct plural form of seconds
+let timeLeft = 55;
+let seconds = PluralForm.get(timeLeft, getStr("seconds"));
+// Print the localized string for "55 seconds"
+print(getStr("timePair").replace("#1", timeLeft).replace("#2", seconds));</pre>
+<h4 id="La_m.C3.A9thode_makeGetter" name="La_m.C3.A9thode_makeGetter"> La méthode &lt;tt&gt;makeGetter&lt;/tt&gt; </h4>
+<p>Si vous écrivez une extension, vous voudrez utiliser &lt;tt&gt;makeGetter&lt;/tt&gt; au lieu de &lt;tt&gt;PluralForm.get()&lt;/tt&gt; ou &lt;tt&gt;PluralForm.numForms()&lt;/tt&gt; parce qu'il utilisateur installant l'extension dans une locale différente utiliserait les chaînes fournies par la locale par défaut de votre extension. Par exemple, votre extension localisée pour l'anglais avec la règle de pluriel #1, qui attend deux formes plurielles, est installée sur une version de Firefox avec la règle de pluriel #4, qui attend trois formes.
+</p>
+<pre>/**
+ * Crée une paire de fonctions de formes plurielles pour le numéro de règle de pluriel donné.
+ *
+ * @param aRuleNum
+ *        Le numéro de règle de pluriel pour lequel créer des fonctions
+ * @return Une paire : [fonction qui récupère la forme plurielle correcte,
+ *                  fonction qui renvoie le nombre de formes plurielles]
+ */
+[string pluralForm get(int aNum, string aWords), int numForms numForms()]
+makeGetter(int aRuleNum)</pre>
+<p>Voici un exemple d'utilisation de &lt;tt&gt;makeGetter&lt;/tt&gt; :
+</p>
+<pre>Components.utils.import("resource://gre/modules/PluralForm.jsm");
+
+// Utilisons le gaélique irlandais (règle de pluriel #11)
+let [get, numForms] = PluralForm.makeGetter(11);
+
+// Fabriquons quelques valeurs à utiliser avec « get »
+let dummyText = "form 1;form 2;form 3;form 4;form 5";
+let dummyNum = 10;
+
+// Dans le cas du gaélique irlandais, la valeur 10 utilise la forme plurielle #4, ainsi « form 4 » est affiché
+print(get(dummyNum, dummyText));</pre>
+<p>Dans cet exemple, la règle de pluriel du gaélique irlandais était codée en dur, mais elle pourrait être une valeur spécifiée dans le fichier .properties. Donc, pour votre extension, spécifiez une valeur de pluralRule dans le fichier .properties et appelez &lt;tt&gt;PluralForm.makeGetter(pluralRuleFromProperties)&lt;/tt&gt; en vous assurant de sauvegarder les deux fonctions renvoyées. (Vous pouvez utiliser <a href="fr/Nouveaut%c3%a9s_dans_JavaScript_1.7#Assignation_d.C3.A9structurante">l'assignation déstructurante</a> de JavaScript 1.7 pour plus de clarté.) Les fonctions renvoyées se comportent tout à fait comme &lt;tt&gt;PluralForm.get()&lt;/tt&gt; et &lt;tt&gt;PluralForm.numForms()&lt;/tt&gt; sauf qu'elles utilisent la règle de pluriel spécifiée plutôt que la règle de pluriel par défaut.
+</p>
+<h3 id="Cr.C3.A9dits" name="Cr.C3.A9dits"> Crédits </h3>
+<p>Le code de formes plurielles a été implémenté pour la première fois pour le {{ Bug(394516) }} — <i>Figure out a remaining-time rounding scheme for minutes -&gt; hours/days</i><br>
+Les règles de pluriel et leurs familles sont dérivées de la <a class="external" href="http://www.gnu.org/software/gettext/manual/html_node/gettext_150.html#Plural-forms">documentation de GNU &lt;tt&gt;gettext&lt;/tt&gt;</a>.
+</p><p><br>
+</p>
+<div class="noinclude">
+</div>
+{{ languages( { "en": "en/Localization_and_Plurals", "es": "es/Localizaci\u00f3n_y_Plurales", "ja": "ja/Localization_and_Plurals", "pl": "pl/Lokalizacja_i_liczba_mnoga" } ) }}

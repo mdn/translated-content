@@ -1,0 +1,126 @@
+---
+title: L20n
+slug: Mozilla/Projects/L20n
+translation_of: Mozilla/Projects/L20n
+---
+<div class="note">
+<p><strong>注記</strong>: このドキュメントは草稿段階または古くなっています。現在のドキュメントについては <a href="https://github.com/l20n/l20n.js/tree/master/docs">GitHub 上のドキュメント</a>を読んでください。</p>
+</div>
+
+<div class="summary">自然言語の力をシンプルなコードで表現できる JavaScript ローカライズフレームワーク</div>
+
+<div class="column-container">
+<div class="column-half">
+<h2 id="L20n_の紹介">L20n の紹介</h2>
+
+<p>L20n ソフトウェアのローカライズを革新します。ユーザーは自然言語の完全な表現力に恩恵を受けることができます。L20n はシンプルなことをシンプルなままに、同時に複雑なことも可能にします。</p>
+
+<p>L20n によって、Mozilla は新しい世代の技術を作り、ローカライズする人の手に更なる力を与え用としています。<span class="seoSummary">L20n は、ローカライゼーションとアプリケーションのロジックを分離することで、ローカライズする人に高度で自由な言語表現ができるようにします。</span>L20n を使用すれば、Web アプリケーションを、言語や文化だけでなく、文脈データ、ユーザーのジェンダー、スクリーンの大きさなどにも対応できるようになります。<strong> </strong></p>
+</div>
+
+<div class="column-half">
+<h2 id="L20n_の一例">L20n の一例</h2>
+
+<p>英語の文字列を提供する、シンプルで直感的な例を示します。</p>
+
+<pre class="brush: html notranslate">&lt;brandName "Firefox"&gt;
+&lt;about "About \{{ brandName }}"&gt;</pre>
+
+<p>次は、同じ文字列をスロベニア語で提供した例です。</p>
+
+<pre class="brush: html notranslate">&lt;brandName {
+  nominative: "Firefox",
+  genitive: "Firefoxa",
+  dative: "Firefoxu",
+  accusative: "Firefox",
+  locative: "Firefoxu",
+  instrumental: "Firefoxom"
+}&gt;
+&lt;about "O \{{ brandName.locative }}"&gt;</pre>
+</div>
+</div>
+
+
+
+<div class="column-container">
+<div class="column-third">
+<h2 class="Documentation" id="開発者向け">開発者向け</h2>
+
+<p><strong>Documentation for developers wanting to implement localization functionality on their web apps using L20n.</strong></p>
+
+<dl>
+ <dt>Internationalization for your web app</dt>
+ <dd>L20n インフラストラクチャの使用を検討している開発者向けのはじめに読む説明書。</dd>
+ <dt><a href="/en-US/docs/L20n/HTML_Bindings">L20n's HTML bindings</a></dt>
+ <dd>HTML コードに L20n を実装するためのチュートリアル。</dd>
+ <dt><a href="/en-US/docs/L20n/Javascript_API">L20n JavaScript API</a></dt>
+ <dd>l20n.js の API 。</dd>
+ <dt>L20n syntax cheatsheet for developers</dt>
+ <dd>A simple cheatsheet to help developers as they add L20n to their localization infrastructure.</dd>
+</dl>
+</div>
+
+<div class="column-third">
+<h2 class="Documentation" id="ローカライズする人向け">ローカライズする人向け</h2>
+
+<p><strong>Documentation for Localizers creating localized content for a project that uses L20n.</strong></p>
+
+<dl>
+ <dt><a href="http://l20n.org/learn/">Learn the L20n syntax</a></dt>
+ <dd>How to naturally localize applications using L20n. Complete with use cases and examples of L20n in action.</dd>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/L20n/Localization_Use_Cases">Localization use-cases</a></dt>
+ <dd>How to naturally localize applications using L20n. Complete with use cases and examples of L20n in action.</dd>
+ <dt>L20n and Translation Memory eXchange (TMX)</dt>
+ <dd>How L20n impacts the Translation Memory eXchange standard for translation memory data.</dd>
+ <dt>L20n syntax cheatsheet for localizers</dt>
+ <dd>A simple cheatsheet to help localizers as they localize projects with L20n.</dd>
+</dl>
+</div>
+
+<div class="column-third">
+<h2 class="Related_Topics" id="Related_Topics" name="Related_Topics">追加リソース</h2>
+
+<p><strong>L20n に関わる開発者とローカライズする人向けの追加リソースです。</strong></p>
+
+<dl>
+ <dt><a href="http://www.l20n.org" title="http://www.l20n.org">L20n.org</a></dt>
+ <dd>L20n live をブラウザ上で試すことができます。</dd>
+ <dt><a href="http://l20n.github.io/tinker/" title="http://l20n.github.io/tinker/">L20n Tinker</a></dt>
+ <dd>自分が書いた L20n コードを L20n Tinker でテストできます。</dd>
+ <dt><a href="https://github.com/l20n" title="https://github.com/l20n/l20n.js">GitHub</a></dt>
+ <dd>L20n インフラと生きたデザイン仕様のメインコードが置かれている場所です。</dd>
+ <dt><a href="https://wiki.mozilla.org/L20n" title="https://wiki.mozilla.org/L20n">Wiki ページ</a></dt>
+ <dd>L20n の開発プロジェクトの情報があります。</dd>
+</dl>
+</div>
+</div>
+
+<h2 id="Subnav">Subnav</h2>
+
+<ol>
+ <li><a href="#" title="Documentation for developers wanting to implement localization functionality on their web apps using L20n">For Developers</a>
+
+  <ol>
+   <li><a href="#" title="First read for developers looking to use the L20n infrastructure">Internationalization for your web app</a></li>
+   <li><a href="/en-US/docs/Mozilla/Projects/L20n/HTML_Bindings" title="Tutorial on implementing L20n in your HTML code">L20n's HTML bindings</a></li>
+   <li><a href="#" title="A complete description of the use, function, and role of L20n's .lol format.">.lol file format</a></li>
+   <li><a href="#" title="A simple cheatsheet to help developers as they add L20n to their localization infrastructure.">L20n syntax cheatsheet for developers</a></li>
+  </ol>
+ </li>
+ <li><a href="#" title="Documentation for Localizers creating localized content for a project that uses L20n.">For Localizers</a>
+  <ol>
+   <li><a href="#" title="How to naturally localize applications using L20n. Complete with use cases and examples of L20n in action.">Learn the L20n syntax</a></li>
+   <li><a href="/en-US/docs/L20n/Localization_Use_Cases">Localization use cases</a></li>
+   <li><a href="#" title="How L20n impacts the Translation Memory eXchange standard for translation memory data.">L20n and Translation Memory eXchange (TMX)</a></li>
+   <li><a href="#" title="A simple cheatsheet to help localizers as they localize projects with L20n.">L20n syntax cheatsheet for localizers</a></li>
+  </ol>
+ </li>
+ <li><a href="#" title="Some additional resources for developers and localizers involved with L20n.">Additional resources</a>
+  <ol>
+   <li><a href="http://www.l20n.org" title="You can try L20n live in your browser on the project page">L20n.org</a></li>
+   <li><a href="http://l20n.github.io/tinker/" title="Test out your own L20n code in L20n Tinker">L20n Tinker</a></li>
+   <li><a href="https://github.com/l20n/l20n.js" title="Where the main code for the L20n infrastructure and language lives">L20n GitHub repo</a></li>
+   <li><a href="https://wiki.mozilla.org/L20n" title="Info about the project to develop L20n">Mozilla Wiki</a></li>
+  </ol>
+ </li>
+</ol>

@@ -1,0 +1,48 @@
+---
+title: Indicateurs de progression
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Indicateurs_de_progression
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Progress_Meters
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Les_contrôles_de_listes" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Ajout_d'éléments_HTML">Suivant  »</a></p>
+</div>
+<p>Dans cette section, nous étudierons la création d'indicateurs de progression.</p>
+<h3 id="Ajout_d.27un_indicateur_de_progression" name="Ajout_d.27un_indicateur_de_progression">Ajout d'un indicateur de progression</h3>
+<p>Un indicateur de progression est une barre qui indique l'état d'avancement d'une tâche. Typiquement, vous la voyez lors du téléchargement de fichiers ou quand une longue opération s'exécute. XUL a un élément qui peut être utilisé pour la création d'un indicateur de progression (NdT : <code><a href="/fr/docs/Mozilla/Tech/XUL/progressmeter" title="progressmeter">progressmeter</a></code>). Il y a deux types d'état pour un indicateur : déterminé et indéterminé.</p>
+<p>Les indicateurs de progression déterminés sont utilisés quand vous connaissez la durée d'une opération. L'indicateur de progression va se remplir, et une fois plein, l'opération doit être terminée. Il peut être utilisé pour une boîte de dialogue de téléchargement lorsque la taille des fichiers est connue.</p>
+<p>Les indicateurs de progression indéterminés sont utilisés quand vous ne connaissez pas la durée d'une opération. Une animation visuelle représentera cet indicateur, sous la forme d'un rectangle zébré ou un cylindre hachuré tournant, et elle sera dépendante de votre système d'exploitation et du thème graphique utilisé.</p>
+<p>Indicateur de progression déterminé : </p>
+<div class="float-right"><img alt="Image:xultu_prog-det.jpg" class=" internal" src="/@api/deki/files/1539/=Xultu_prog-det.jpg"></div>
+<p>Indicateur de progression indéterminé : </p>
+<div class="float-right"><img alt="Image:xultu_prog-udet.jpg" class=" internal" src="/@api/deki/files/1540/=Xultu_prog-udet.jpg"></div>
+<p>Un indicateur de progression a la syntaxe suivante :</p>
+<pre>&lt;progressmeter
+   id="identifier"
+   mode="determined"
+   value="0%"/&gt;
+</pre>
+<p>Ses attributs sont les suivants :</p>
+<dl> <dt><code id="a-id"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/id">id</a></code> </dt> <dd>L'identifiant unique de l'indicateur de progression.</dd> <dt><code id="a-mode"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/mode">mode</a></code> </dt> <dd>Le type d'indicateur de progression. Si sa valeur est 'determined', l'indicateur de progression est déterminé et se remplit au fur et à mesure de la tâche en cours. Si sa valeur est 'undetermined', l'indicateur de progression est indéterminé et vous ne connaissez pas la durée de la tâche en cours. La valeur par défaut est 'determined' si vous n'avez pas spécifié cet attribut.</dd> <dt><code id="a-value"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/value">value</a></code> </dt> <dd>La valeur courante de l'indicateur de progression. Vous ne devez utiliser cet attribut que pour un indicateur de progression déterminé. La valeur doit être un pourcentage compris entre '0%' et '100%'. La valeur sera changée par un script selon l'avancement de la tâche.</dd>
+</dl>
+<div class="highlight">
+<p>Ajoutons maintenant un indicateur de progression à notre boîte de dialogue 'Recherche de fichiers'. Nous devrions normalement mettre un indicateur de progression indéterminé car nous ne connaissons pas le nombre de fichiers recherchés ou combien de temps prendra la recherche. Toutefois, nous ajouterons un indicateur normal pour l'instant car un indicateur animé risque d'être perturbant lors du développement. L'indicateur de progression devrait normalement n'apparaître que lorsque la recherche est lancée. Nous ajouterons plus tard un script pour l'afficher ou non.</p>
+<pre class="eval">&lt;hbox&gt;
+
+  <span class="highlightred">&lt;progressmeter value="50%" style="margin: 4px;"&gt;</span>
+
+  &lt;spacer flex="1"/&gt;
+&lt;/hbox&gt;
+</pre>
+<div class="float-right"><img alt="Image:xultu_progress1.png" class=" internal" src="/@api/deki/files/1541/=Xultu_progress1.png"></div>
+<p>La valeur a été mise à '50%' afin que vous puissiez voir la barre de progression dans la fenêtre. Une marge de 4 pixels a été définie pour séparer l'indicateur du bord de la fenêtre. Comme nous l'avons mentionné précédemment, nous voulons simplement que la barre de progression soit affichée pendant la recherche. Un script l'affichera et la masquera si nécéssaire.</p>
+Exemple 'Recherche de fichiers' : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_find_progress.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_find_progress.xul">Voir</a></div>
+<hr>
+<p>Nous allons voir dans la prochaine section comment ajouter des éléments additionnels à une fenêtre en utilisant HTML.</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Les_contrôles_de_listes" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Ajout_d'éléments_HTML">Suivant  »</a></p>
+</div>
+<p><span class="comment">Interwiki</span></p>

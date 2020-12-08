@@ -1,0 +1,111 @@
+---
+title: Building XULRunner with Python
+slug: Archive/Mozilla/XULRunner/Building_XULRunner_with_Python
+tags:
+  - Accessibility
+  - Build documentation
+  - Developing Mozilla
+  - XUL
+  - XULRunner
+translation_of: Archive/Mozilla/XULRunner/Building_XULRunner_with_Python
+---
+<p>このページでは、Python拡張をXULRunnerで使えるようにビルドする方法について述べており、これは大抵の場合 accessibility プロジェクトの経験に基づいとても使いやすい記述が可能になります。 <a href="/ja/docs/XULRunner">XULRunner</a> を参照の事。</p>
+<p>Python 拡張が有効な XULRunner ではいつもの JavaScript に加えて python スクリプトでも DOM や XPCOM にアクセスする事が可能です。これは Python の機能やモジュールにアクセスを提供し、Active State で pyXPCOM の仕事をしている Mark Hammond氏 のビルドがあります。XPCOM コンポーネントも Python で作れるようになります。</p>
+<p>(2007年5月)現在、Python は標準では有効ではないため、そのためカスタムビルドの Mozilla が必要です。このページでは余計な挑戦やエラーがない事を期待した紹介を提供します。また、開発者向けドキュメントの <a href="/ja/docs/Download_Mozilla_Source_Code">source code</a> や <a href="/ja/docs/Build_Documentation">building</a> 、また <a href="/ja/docs/PyXPCOM">PyXPCOM</a> を読んでおきましょう。</p>
+<p>XULRunner と Python の組み合わせは accessibility プロジェクト にとって良いプラットフォームとなる事を約束し、 <a class="external" href="http://www.oatsoft.org/trac/jambu/wiki">Jambu Alternative Input</a> と IAccessible2 テストツールの両方で利用しています。特に興味深いのはPython の comtypes パッケージを通して MSAA や IAccessible2 にアクセスする事です。</p>
+<h2 id="Development_Machine_Setup" name="Development_Machine_Setup">Development Machine Setup</h2>
+<p>最初の警告としては、ZoneAlarm がメモリリークを起こして、かなりの誤ったエラーによってビルドマシンがクラッシュします。これが問題だと疑うようであれば、アンインストールするべきでしょう。また、ウイルススキャンソフトの常駐モニタリングもオフにしておかないとビルドが遅くなるでしょう。</p>
+<p>もちろん XP が動いているPCでは最終のサービスパック及びパッチを当てておきます。</p>
+<p>Microsoft C++ コンパイラは必須ですが、しかしながら現在フリーなバージョンである Visual Studio 8 Express (MSVC8) ではなく、正式には長く存在しないであろう Visual Studio .NET 2003 (MSVC71) を使うべきでしょう。これは XULRunner は Python と同じ C のバージョンでビルドされなければならず、また Python 2.5 では MSVC71 が使われているからです。それぞれで同じC ランタイムライブラリ MSVCRT?.DLL を使わなければならず、そうでなければクラッシュしてしまうでしょう。他の手段としては Mozilla と同様に MSVC8 で Python をビルドするという方法がありますが、これは問題があるでしょう。また オープンソースの MinGW を正しい MSVC ランタイムと一緒に使う事も可能ですが、これはあまり推奨されません。全てのサービスパックを当ててください、MSVC71 <a class="external" href="http://www.microsoft.com/downloads/details.aspx?familyid=69d2219f-ce82-46a5-8aec-072bd4bb955e&amp;displaylang=en">SP 1</a> が現在利用可能です。適用したプラットフォームSDKも必要です、MSVC71 には <a class="external" href="http://www.microsoft.com/downloads/details.aspx?FamilyID=9b3a2ca6-3647-4070-9f41-a333c6b9181d&amp;DisplayLang=en">.NET Framework SDK 1.1</a> が相当します。</p>
+<p>最終の <a href="/ja/docs/Windows_Build_Prerequisites"> Mozilla Build system</a> が簡単に使えます。Python のディストリビューションを含んだ <i>python25\python-2.5.msi</i> をインストールします。これはビルドには必要ありませんが、Python パッケージをインストールしたときの Windows のレジストリのエントリを探すので後で便利になります。</p>
+<h2 id="Building" name="Building">Building</h2>
+<p>バッチファイル <i>start-msvc71.bat</i> はビルドコンソール(MinGW プロジェクトの MSys)を起動するのに使います。もし空のフォルダにチェックアウトしようと考えているなら、CVSROOT 環境変数を設定して反映する必要があります。</p>
+<pre>set CVSROOT=:pserver:anonymous@cvs-mirror.mozilla.org:/cvsroot
+</pre>
+<p><i>mozilla</i> プロジェクトのディレクトリ (例えば <i>C:\projects\mozilla</i> もしくは msys では <i>/c/projects/mozilla</i> ) を作成したら、 次のような .mozconfig ファイルを作成します。注意として、これは完結していて、.mozconfig ファイルに示しているもの以外のプロジェクトのチェックアウトは要求しないという事です。これはリリースビルドを指定するのに適していて、これ自体で XULRunner をデバッグするのはほとんど適していません。これは trunk (もしくは最終)のコードをCVS から使うため、たぶん不安定でしょう。</p>
+<pre>mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/../obj-xulrunner
+mk_add_options MOZ_CO_PROJECT=xulrunner
+ac_add_options --enable-application=xulrunner
+ac_add_options --enable-extensions=python,default
+ac_add_options --disable-javaxpcom
+ac_add_options --disable-activex
+ac_add_options --disable-activex-scripting
+ac_add_options --disable-tests
+ac_add_options --enable-optimize
+</pre>
+<p>最初に必要なソースコードを全てチェックアウトしてビルドするには、存在していない client.mk ファイルを実行します。</p>
+<pre>cd /c/projects
+cvs -d :pserver:anonymous@cvs-mirror.mozilla.org:/cvsroot co mozilla/client.mk
+cd mozilla
+make -f client.mk
+</pre>
+<p>次に CVS からアップデートしてからビルドするには、次を使います</p>
+<pre>cd /c/projects/mozilla
+make -f client.mk
+</pre>
+<p>client.mk 自身をチェックアウトもできます</p>
+<p>ビルドするだけなら、チェックアウトをせずに次を使います。</p>
+<pre>make -f client.mk build
+</pre>
+<p>また、client.mk の他のオプションを確認してください。</p>
+<p>ビルドされた XULRunner は <i>c:\projects\obj-xulrunner\dist\bin\xulrunner.exe</i> に見つかるでしょう。</p>
+<h2 id="Using_Python_in_XUL_applications" name="Using_Python_in_XUL_applications">Using Python in XUL applications</h2>
+<p>開発中は次の文字列を <i>prefs.js</i> に追加します。</p>
+<pre>pref("browser.dom.window.dump.enabled", true);
+pref("javascript.options.showInConsole", true);
+pref("javascript.options.strict", true);
+pref("nglayout.debug.disable_xul_cache", true);
+pref("nglayout.debug.disable_xul_fastload", true);
+</pre>
+<p>Python を HTML の &lt;script&gt; タグでは <i>type="application/x-python"</i> 属性を使います。DOM のスクリプティングは JavaScript ととてもよく似ています。例えば</p>
+<pre>def onLoad():
+    btnTest = document.getElementById("btnTest")
+    btnTest.addEventListener('command', onTest, False)
+
+def onTest():
+    window.alert('Button activated')
+
+window.addEventListener('load', onLoad, False)
+</pre>
+<p>一つ分かった事はモジュールを検索する標準の Python のパスに xulrunner の実行ディレクトリを <i>import</i> して明確にインクルードしており、そのディレクトリは XULRunner を起動した現在のディレクトリとなります。しかしながら、動作しているXULアプリケーションの他のどのパスもインクルードしません。いくつかの回避方法を見つける必要があります。</p>
+<p>未処理例外は <i>xulrunner -jsconsole</i> を使って開ける JavaScript Error Console で表示されます。一つのソリューションは <i>try .... except: print_exc()</i> を任意のイベントハンドラの周りにおいて traceback を stdout に吐き出し、python console を使ってその出力を捕まえる事です。JSconsole はコードからも開けます、(Javascriptの)例として</p>
+<pre>function openJavaScriptConsole() {
+   var wwatch = Components.classes["@mozilla.org/embedcomp/window-watcher;1"]
+                         .getService(Components.interfaces.nsIWindowWatcher);
+   wwatch.openWindow(null, "chrome://global/content/console.xul", "_blank",
+                    "chrome,dialog=no,all", null);
+}
+
+
+// dump to the js console (xulrunner -jsconsole)
+function jsdump(str)
+{
+  Components.classes['@mozilla.org/consoleservice;1']
+            .getService(Components.interfaces.nsIConsoleService)
+            .logStringMessage(str);
+}
+
+function jserror(str)
+{
+    Components.utils.reportError(str);
+}
+</pre>
+<p>最後のヒントとしてはタスクマネージャーを使ってクラッシュした後の xulrunner のゾンビプロセスをチェックする事です。そのゾンビプロセスは開いた古いコードや問題点が残っており、変更を加えた後に xulrunner を再度起動させます。</p>
+<h2 id="Deploying" name="Deploying">Deploying</h2>
+<p>ターゲットとするマシンにはPythonがインストールされていなければなりません。たぶん最終的には XULRunner は <a class="external" href="http://www.py2exe.org/">py2exe</a> や <a class="external" href="http://pyinstaller.python-hosting.com/">pyInstaller</a> のようなもので作られる最小の Python のインストーラと一緒になるでしょう。それまでは単に <i>dist\bin</i> フォルダと XUL アプリケーションを配布する事になります。決してアプリケーションの python モジュールにある <i>.pyo</i> をコピーしないでください。これはターゲットマシン上でエラーを引き起こすでしょう。</p>
+<p>これは python のテストをするバッチファイルはこんな風になります</p>
+<pre>rem Check Python 2.5 installed
+reg query "HKLM\SOFTWARE\Python\PythonCore\2.5" &gt; nul 2&gt;&amp;1 || reg query "HKCU\SOFTWARE\Python\PythonCore\2.5" &gt; nul 2&gt;&amp;1
+if errorlevel 1 (
+    echo Python 2.5 was not found. Please install it.
+    echo Exiting...
+    pause
+    exit /b 1
+    )
+
+start "XULRunner with Python" "%moz_bin%\xulrunner.exe" -app application.ini %opts%
+exit /b 0
+</pre>
+<p>主な情報は <a href="/ja/docs/XULRunner/Deploying_XULRunner_1.8">XULRunner:Deploying_XULRunner_1.8</a> をご覧ください。</p>
+<h2 id="Sample" name="Sample">Sample</h2>
+<p>Python 機能を含む XULRunner アプリケーションのサンプルが<a class="external" href="http://fullmeasure.co.uk/mozilla/XRPySample.zip">こちらにあります</a>。これには pyXPCOM のテストと <a class="external" href="http://vamposdecampos.googlepages.com/pyxpcom">Alex Badea</a> による基本的な Python console を含みます。</p>

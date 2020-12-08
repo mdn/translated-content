@@ -1,0 +1,98 @@
+---
+title: XUL_教程/增加一些按钮
+slug: Mozilla/Tech/XUL/Tutorial/Adding_Buttons
+tags:
+  - XUL_教程
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_Buttons
+---
+<p> </p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Creating_a_Window" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:Adding_Labels_and_Images">下一页  »</a></p>
+</div><p></p>
+<p> </p>
+<p>在本章，我们将学习如何向window添加button。</p>
+<h3 id=".E6.B7.BB.E5.8A.A0.E5.A4.9A.E4.B8.AA.E6.8C.89.E9.92.AE.E5.88.B0.E4.B8.80.E4.B8.AA.E7.AA.97.E5.8F.A3" name=".E6.B7.BB.E5.8A.A0.E5.A4.9A.E4.B8.AA.E6.8C.89.E9.92.AE.E5.88.B0.E4.B8.80.E4.B8.AA.E7.AA.97.E5.8F.A3">添加多个按钮到一个窗口</h3>
+<p>到目前为止我们创建的这个窗口里面什么也没有,因此还不算非常有趣. 在这一节中,我们将添加两个按钮, 一个“查找”按钮和一个“取消”按钮.我们还将学到一个简单的方法在窗口上来定位它们.</p>
+<p>像HTML, XUL也有许多标记，它们被用来当作创建用户接口的元素. 最基本的一个 <code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code> 标记. 这个元素被用来创建简单的按钮。</p>
+<p>按钮元素有两个主要的属性，一个<code>label</code>和一个<code>image</code>。你可以要一个或两个都要。因此，按钮可以只有一个标签，一个图片或标签和图片都有。通常在对话框中会使用“确定”和“取消”按钮。</p>
+<h4 id=".E6.8C.89.E9.92.AE.E7.9A.84.E8.AF.AD.E6.B3.95" name=".E6.8C.89.E9.92.AE.E7.9A.84.E8.AF.AD.E6.B3.95">按钮的语法</h4>
+<p><code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code>标签有下面的语法要求：</p>
+<pre>&lt;button
+    id="identifier"
+    class="dialog"
+    label="OK"
+    image="images/image.jpg"
+    disabled="true"
+    accesskey="t"/&gt;
+</pre>
+<p>可用的属性如下，有一些是可选的:</p>
+<dl>
+ <dt>
+  <code id="a-id"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code> </dt>
+ <dd>
+  你用来标识按钮的唯一标识。你会在所有的元素中看到此属性。你可以在样式表(style)或脚本(script)中通过它来引用按钮。因此，你几乎可以在所有的元素中添加这个属性。在这个教程中它不是一直都出现在元素中（It isn't always placed on elements in this tutorial for simplicity）。</dd>
+ <dt>
+  <code id="a-class"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/class">class</a></code> </dt>
+ <dd>
+  按钮的样式表。在这里的用法和在HTML中是一样的。它是使用在显示按钮里面的样式。在这节中的<code>dialog</code>值就使用了。多数情况下，你不用在按钮上使用此属性。</dd>
+ <dt>
+  <code id="a-label"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code> </dt>
+ <dd>
+  标签会显示在按钮上。例如，“确定”或者“取消”。如果没人设置这个参数，在按钮上就不会显示文字。</dd>
+ <dt>
+  <code id="a-image"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/image">image</a></code> </dt>
+ <dd>
+  在按钮上显示指定路径的图片。如果没有给出此属性，则不会显示图片。你通常可以使用如下的样式表属性<code><a href="/cn/CSS/list-style-image" title="cn/CSS/list-style-image">list-style-image</a></code>来指定要显示的图片。</dd>
+ <dt>
+  <code id="a-disabled"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code> </dt>
+ <dd>
+  如果这个属性被设置为<code>true</code>，按钮就会被禁用。这样通常按钮上的文字将会显示为灰色（grey）。如果按钮被禁用，按钮上的功能就不可以被执行。如果这个属性没有设置，按钮就是启用的。你可以用<a href="/cn/JavaScript" title="cn/JavaScript">JavaScript</a>来对按钮的可用状态进行控制。</dd>
+ <dt>
+  <code id="a-accesskey"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/accesskey">accesskey</a></code> </dt>
+ <dd>
+  这个属性让你可以设置一个字母它的功能就像是一个快捷键。这个字母会被划上下划线并显示在标签里。当用户按ALT键(或者在每个平台中一个功能类似的键)的同时按下这里设置的键时，不论按钮在窗口的任何地方都能取得到焦点。</dd>
+</dl>
+<p>注释：按钮支持比上面列出的更多的属性。其他的属性可以参考 <a href="/cn/XUL_教程/More_Button_Features" title="cn/XUL_教程/More_Button_Features">discussed later</a>.</p>
+<h4 id=".E6.9B.B4.E5.A4.9A.E7.9A.84.E6.8C.89.E9.92.AE.E4.BE.8B.E5.AD.90" name=".E6.9B.B4.E5.A4.9A.E7.9A.84.E6.8C.89.E9.92.AE.E4.BE.8B.E5.AD.90">更多的按钮例子</h4>
+<p><span id="Example_1"><a id="Example_1"></a><strong>Example 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_buttons_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_buttons_1.xul">View</a></p>
+<div class="float-right">
+ <img alt="image:Buttons1.png" class="internal" src="/@api/deki/files/2609/=Buttons1.png"></div>
+<pre>&lt;button label="Normal"/&gt;
+&lt;button label="Disabled" disabled="true"/&gt;
+</pre>
+<p>上面的这些例子是在图片里面生成按钮。第一个按钮是一个标准的按钮。第二个按钮是禁用的，所以它整个显示为灰色。</p>
+<p>注：label属性不应该指定中文名称，否则解析xul时会报错。对于本地化，应该通过locale包来完成。</p>
+<p>我们将从为查找文件工具创建一个简单的查找按钮开始。下面这个例子的源码显示怎么去做这件事。</p>
+<pre>&lt;button id="find-button" label="Find"/&gt;
+</pre>
+<div class="note">
+ 注释：Firefox不允许你从网页上打开chrome，因此查看教程中的链接时会显示在一个标准的浏览器窗口中。至此，按钮会显示在窗口中间并自动伸展。你可以增加align="start"到window标签阻止其自动伸展。</div>
+<div class="highlight">
+ <h5 id=".E4.BE.8B.E5.AD.90_findfile.xul" name=".E4.BE.8B.E5.AD.90_findfile.xul">例子 findfile.xul</h5>
+ <p>请添加我们在前面章节创建的这些代码到findfile.xul文件。这些代码必须插入到 <code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> 标签里面。代码是下面红色显示的部份:</p>
+ <pre class="eval">&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="<a class="external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;
+&lt;window
+    id="findfile-window"
+    title="Find Files"
+    orient="horizontal"
+     xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+
+  <span class="highlightred">&lt;button id="find-button" label="Find"/&gt;</span>
+  <span class="highlightred">&lt;button id="cancel-button" label="Cancel"/&gt;</span>
+
+&lt;/window&gt;
+</pre>
+ <div class="float-right">
+  <img alt="Image:buttons2.png" class="internal" src="/@api/deki/files/2652/=Buttons2.png"></div>
+ <p>你也可以注释掉“取消”按钮。窗口提供水平对齐地显示两个按钮。如果你在Mozilla中打开这个文件，你就可以获得和这里显示的图片一样的效果。</p>
+</div>
+<p> </p>
+<div class="note">
+ 注解：我们不能直接在XUL文件中写文本标签。我们可以使用 <a href="/Cn/XUL_教程/本地化" title="Cn/XUL_教程/本地化">实体替换这样文本可以很容易地进行翻译</a>.</div>
+<p>在下一节，我们将会学会怎么<a href="/cn/XUL_教程/增加标签和图像" title="cn/XUL_教程/增加标签和图像">向窗口中增加标签和图片</a>。</p>
+<p><small>查看更多参考 <a href="/cn/XUL_教程/更多的按钮特性" title="cn/XUL_教程/更多的按钮特性">更多按钮特性</a></small></p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Creating_a_Window" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:Adding_Labels_and_Images">下一页  »</a></p>
+</div><p></p>
+<p></p>

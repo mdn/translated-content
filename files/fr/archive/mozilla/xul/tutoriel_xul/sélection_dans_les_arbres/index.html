@@ -1,0 +1,60 @@
+---
+title: Sélection dans les arbres
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Sélection_dans_les_arbres
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Tree_Selection
+---
+<p> </p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Autres_caractéristiques_des_arbres" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Vues_d'arbre_personnalisées">Suivant  »</a></p>
+</div>
+<p>Cette section décrit comment obtenir et modifier les items sélectionnés dans un arbre.</p>
+<h3 id="R.C3.A9cup.C3.A9rer_les_items_s.C3.A9lectionn.C3.A9s_d.27un_arbre" name="R.C3.A9cup.C3.A9rer_les_items_s.C3.A9lectionn.C3.A9s_d.27un_arbre">Récupérer les items sélectionnés d'un arbre</h3>
+<p>Chaque item dans un arbre (qui correspond à un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code> en utilisant un arbre de contenu) peut être sélectionné individuellement. Si vous ajoutez l'attribut <code id="a-seltype"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/seltype">seltype</a></code> à l'arbre en lui attribuant la valeur 'single' , l'utilisateur ne pourra sélectionner qu'une ligne à la fois. Sinon, l'utilisateur pourra sélectionner plusieurs lignes qui ne seront pas nécessairement contiguës. L'arbre fournit plusieurs fonctions qui peuvent être utilisées pour déterminer si un item est sélectionné.</p>
+<h4 id="Gestion_de_l.27.C3.A9v.C3.A9nement_de_s.C3.A9lection" name="Gestion_de_l.27.C3.A9v.C3.A9nement_de_s.C3.A9lection">Gestion de l'événement de sélection</h4>
+<p>Voyons d'abord comment nous pouvons déterminer qu'un item est sélectionné. Le gestionnaire d'événement <code id="a-onselect"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/onselect">onselect</a></code> peut être ajouté à l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code>. Lorsque l'utilisateur sélectionne un item de l'arbre, le gestionnaire d'événement est appelé. L'utilisateur peut également modifier la sélection en utilisant les touches de déplacement. Si l'utilisateur appuie en continu sur une touche de déplacement afin de se déplacer rapidement dans les items, le gestionnaire d'événement n'est pas appelé jusqu'à ce que l'utilisateur relâche la touche. Ce mode de fonctionnement améliore les performances. Il signifie également que la surbrillance du texte apparaîtra sur plusieurs items même si l'événement de sélection n'est pas déclenché pour ces items.</p>
+<p>La syntaxe du gestionnaire d'événement <code id="a-onselect"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/onselect">onselect</a></code> est présentée ci-dessous.</p>
+<pre>&lt;tree id="treeset" onselect="alert('Vous avez sélectionné quelque chose !');"&gt;</pre>
+<h4 id="Indices_d.27arbre" name="Indices_d.27arbre">Indices d'arbre</h4>
+<p>L'arbre possède une propriété <code id="a-currentIndex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/currentIndex">currentIndex</a></code> (index courant, en commençant à '0' pour la première ligne) qui peut être utilisée pour obtenir l'item sélectionné.</p>
+<p>Les éléments fils sont inclus dans le comptage juste après leurs parents. Ainsi, s'il y a trois items racines et que chacun a deux items fils, il y aura un total de six objets. Le premier item (d'index '0') sera le premier item racine. L'item suivant, d'index '1', sera son premier fils. Le second fils aura l'index '2', le second item parent sera à la position '3' et ainsi de suite.</p>
+<div class="float-right"><img alt="Image:xultu_seltree1.png" class=" internal" src="/@api/deki/files/1544/=Xultu_seltree1.png"></div>
+<p>Dans l'image ci-contre, il y a huit lignes affichées, dont deux sont sélectionnées. La première ligne sélectionnée a un index de '4' et la seconde, un index de '7'. Les lignes qui ne sont pas affichées ne sont pas incluses dans le comptage d'index.</p>
+<h4 id="S.C3.A9lection_multiple" name="S.C3.A9lection_multiple">Sélection multiple</h4>
+<p>Pour les arbres qui permettent une sélection multiple, obtenir la liste des lignes sélectionnées est un peu plus compliqué. La vue de l'arbre a une propriété de sélection qui contient l'information sur les lignes sélectionnées. Cette sélection sera un objet <a class="external" href="http://xulplanet.com/references/objref/TreeSelection.html">TreeSelection</a>. La vue n'a pas besoin d'implémenter cet objet elle-même, car l'arbre aura assigné un objet de sélection à la propriété de sélection de la vue lorsque celle-ci a été attachée à l'arbre. À partir de l'arbre, vous pouvez obtenir la sélection en utilisant la propriété <code>view</code> de l'arbre et ensuite la propriété <code>selection</code> de la vue. Vous pouvez utiliser les méthodes de l'objet de sélection pour récupérer l'ensemble des items sélectionnés ou pour modifier la sélection.</p>
+<p>Comme les items sélectionnés dans une sélection multiple ne sont pas nécessairement contigus, vous pouvez récupérer chaque bloc de sélection contiguë en utilisant les fonctions <code>getRangeCount()</code> et <code>getRangeAt()</code>. La première fonction retourne le nombre de plages de sélection effectuées. Si seule une valeur a été sélectionnée, la valeur retournée sera '1'. Vous pourrez alors écrire une boucle sur le nombre de plages, en appelant <code>getRangeAt()</code> pour obtenir les bons index du début et de la fin d'une plage.</p>
+<p>La fonction <code>getRangeAt()</code> comporte trois arguments.</p>
+<ul> <li>Le premier est la plage d'index.</li> <li>Le deuxième est un objet qui sera rempli par la fonction avec l'index du premier item sélectionné.</li> <li>Le troisième argument est un objet qui sera rempli avec l'index du dernier item sélectionné.</li>
+</ul>
+<h4 id="Exemple_getRangeAt" name="Exemple_getRangeAt">Exemple <code>getRangeAt</code></h4>
+<pre>var start = new Object();
+var end = new Object();
+var numRanges = tree.view.selection.getRangeCount();
+
+for (var t = 0; t &lt; numRanges; t++){
+  tree.view.selection.getRangeAt(t,start,end);
+  for (var v = start.value; v &lt;= end.value; v++){
+    alert("Item " + v + " sélectionné.");
+  }
+}
+</pre>
+<p>Nous avons créé deux objets appelés <code>start</code> et <code>end</code>. Ensuite, nous lançons une boucle sur les plages de la sélection dont le nombre a été retourné par la fonction <code>getRangeCount()</code>. La fonction <code>getRangeAt()</code> est appelée avec l'index de la plage, et les objets <code>start</code> et <code>end</code>. Cette fonction renseignera les index <code>start</code> et <code>end</code> en leur attribuant la propriété 'value'. Donc, si la première plage commence au troisième item et se termine au septième, <code>start.value</code> vaudra '2' (souvenez-vous que les index commencent à 0, donc nous en décrémentons de un) et <code>end.value</code> vaudra '6'. Un message d'alerte est affichée pour chaque index.</p>
+<p>Si vous souhaitez seulement savoir si une ligne précise a été sélectionnée, vous pouvez utiliser la fonction <code>isSelected()</code>. Elle prend l'index de la ligne en argument et retourne 'true' si la ligne est sélectionnée.</p>
+<pre>alert(tree.view.selection.isSelected(3));</pre>
+<h3 id="Modifier_la_s.C3.A9lection_dans_un_arbre" name="Modifier_la_s.C3.A9lection_dans_un_arbre">Modifier la sélection dans un arbre</h3>
+<p>L'objet de sélection dispose de plusieurs fonctions qui peuvent être utilisées pour changer une sélection. La fonction la plus simple est <code>select()</code> qui dé-sélectionne toutes les lignes actuellement sélectionnées et en sélectionne une spécifique. Par exemple, le code suivant sélectionnera la ligne d'index '5' :</p>
+<pre>tree.view.selection.select(5);</pre>
+<p>Notez que vous ne devez pas modifier la propriété <code>currentIndex</code> pour changer la sélection. Vous devez plutôt utiliser la fonction de sélection <code>select()</code> comme indiqué dans l'exemple précédent. Vous pouvez sélectionner toutes les lignes avec la fonction <code>selectAll()</code>. Notez que les lignes imbriquées à l'intérieur de containers qui n'ont pas été ouverts ne seront pas sélectionnées. Naturellement, cette fonction n'est valable que pour des arbres à sélections multiples. Il y a aussi les fonctions <code>clearSelection()</code> pour effacer la sélection et <code>invertSelection()</code> pour inverser la sélection, c'est-à-dire dé-sélectionner toutes les lignes sélectionnées et sélectionner les autres.</p>
+<p>Pour sélectionner des lignes spécifiques, utiliser la fonction <code>rangedSelect()</code> qui sélectionne toutes les lignes entre deux indices. Voici un exemple de sélection des lignes comprises entre les index '2' et '7'. Notez que les lignes '2' et '7' seront incluses dans la sélection.</p>
+<pre>tree.view.selection.rangedSelect(2,7,true);</pre>
+<p>L'argument final indique s'il s'agit d'un ajout à la sélection courante. Si la valeur est 'true', la plage sera ajoutée à la sélection courante. Si la valeur est 'false', toutes les lignes préalablement sélectionnées seront préalablement dé-sélectionnées. Finalement, la fonction <code>clearRange()</code> peut être utilisée pour dé-sélectionner une plage de lignes, les lignes en dehors de cette plage n'étant pas affectées.</p>
+<pre>tree.view.selection.clearRange(2,7);</pre>
+<hr>
+<p>Nous allons maintenant apprendre comment créer une vue personnalisée pour un arbre.</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Autres_caractéristiques_des_arbres" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Vues_d'arbre_personnalisées">Suivant  »</a></p>
+</div>
+<p><span class="comment">Interwiki</span></p>

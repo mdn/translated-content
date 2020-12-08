@@ -1,0 +1,416 @@
+---
+title: Tamarin 编译文档
+slug: Archive/Mozilla/Tamarin/Tamarin_Build_Documentation
+translation_of: Archive/Mozilla/Tamarin/Tamarin_Build_Documentation
+---
+<h2 id="Tamarin_Source_Versions" name="Tamarin_Source_Versions">Tamarin 源码版本</h2>
+
+<p>以下说明用于获取和构建 Tamarin Central 源码.</p>
+
+<p>Tamarin Tracing 的相关说明, 请查看 <a href="/en/Tamarin_Tracing_Build_Documentation" title="en/Tamarin_Tracing_Build_Documentation">Tamarin Tracing Build Documentation</a>.</p>
+
+<h2 id="Supported_platforms" name="Supported_platforms">支持平台</h2>
+
+<p>Tamarin 目前支持以下操作系统/架构.</p>
+
+<ul>
+ <li>Windows 32 and 64 bit</li>
+ <li>Mac OSX 10.4, 10.5 on PPC</li>
+ <li>Mac OSX 10.5, 10.6 on Intel</li>
+ <li>Linux 32 and 64 bit</li>
+ <li>Solaris 10 on SPARC</li>
+ <li>Android 2.2 on ARM</li>
+ <li>Windows Mobile 6.5</li>
+ <li>MIPS (Linux)</li>
+ <li>SH4 (Linux)</li>
+</ul>
+
+<h2 id="Getting_the_Tamarin_source" name="Getting_the_Tamarin_source">获取 Tamarin 源码</h2>
+
+<p>Tamarin 源码位于 <a class="external" href="http://hg.mozilla.org/tamarin-central">Tamarin Central</a> 的 <a class="external" href="http://www.selenic.com/mercurial/wiki/">Mercurial</a> .  目前开发中的源码位于 <a class="external" href="http://hg.mozilla.org/tamarin-redux" title="http://hg.mozilla.org/tamarin-redux">Tamarin Redux</a>.  在本文中 replace instances of tamarin-central with tamarin-redux to operate in the redux repository.  使用以下命令克隆一个 Tamarin 仓库:</p>
+
+<pre class="eval"><span class="nowiki">$ hg clone http://hg.mozilla.org/tamarin-central tamarin-central</span>
+</pre>
+
+<p>Tips for working with Mercurial can be found <a href="/en/Mercurial_FAQ" title="en/Mercurial_FAQ">here.</a></p>
+
+<h2 id="Building_Tamarin" name="Building_Tamarin">构建 Tamarin</h2>
+
+<p>构建 Tamarin 将创建 AVMPlus 和 garbage collector (MMgc) 的所有库, 并创建一个独立的可执行文件(shell)，用于以ABC文件格式执行文件. 不附加任何参数运行shell将列出可用的选项. 注意其他的命令行参数仅在调试配置中可用.</p>
+
+<p><a href="/en/Tamarin" title="en/Tamarin">Tamarin</a> 的代码库包含一个Mozilla开发者的跨平台构建系统. 该跨平台构建系统用于日常自动化构建测试, 因此是非常可靠的系统.</p>
+
+<p>The Tamarin codebase has the ability to build additional code which supports debugging hooks. 在 XCode 项目中, 这是 <code>Debug_Debugger</code> 和 <code>Release_Debugger</code> 配置. The Flash Player builds Tamarin with the debugging hooks off for codesize reasons, but the Mozilla client will build Tamarin with the debugging hooks on.</p>
+
+<h3 id="Cross-platform_build" name="Cross-platform_build">跨平台构建 (general instructions - 非安卓)</h3>
+
+<p><strong>预备条件(环境):</strong> 你需要 Python 2.5 或更高版本和 GNU <code>make</code> 3.81 或更高版本. (<strong>GNU <code>make</code> 3.80 does not work.</strong> Nor does any other brand of <code>make</code>.)</p>
+
+<p>预备条件达成后, 使用这些命令构建 Tamarin:</p>
+
+<pre class="eval"> $ hg clone <a class="external" href="http://hg.mozilla.org/tamarin-redux/" rel="freelink">http://hg.mozilla.org/tamarin-redux/</a>
+ $ cd tamarin-redux
+ $ mkdir objdir-release
+ $ cd objdir-release
+ $ python ../configure.py
+ $ make
+ ...
+ $ shell/avmshell
+ shell 1.0 build cyclone
+ ...
+</pre>
+
+<p>AVMPlus 的可执行文件是 <code>avmshell</code>.</p>
+
+<p>可选项:</p>
+
+<ul>
+ <li><code>--enable-debugger</code> - 调试器构建</li>
+ <li><code>--enable-debug</code> - 调试构建</li>
+</ul>
+
+<p>对于详细的构建Tamarin, 你可以通过 CPPFLAGS 进行.</p>
+
+<pre class="eval"> $ make CPPFLAGS=-DAVMPLUS_VERBOSE
+</pre>
+
+<h4 id="在_OSX_10.6_(Snow_Leopard)_构建的非安卓跨平台_Tamarin-redux_的其他说明">在 OSX 10.6 (Snow Leopard) 构建的非安卓跨平台 Tamarin-redux 的其他说明</h4>
+
+<p>(要在Mac上构建 Tamarin-central 请参阅此处的跨平台说明: <a href="/En/Tamarin/Tamarin_Build_Documentation?revision=21" title="https://developer.mozilla.org/index.php?title=En/Tamarin/Tamarin_Build_Documentation&amp;revision=21">https://developer.mozilla.org/index.php?title=En/Tamarin/Tamarin_Build_Documentation&amp;revision=21</a></p>
+
+<p>The bug when building on Snow Leopard (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=537817" title="https://bugzilla.mozilla.org/show_bug.cgi?id=537817">Bug 537817</a>) has been fixed in the Tamarin-redux repo. The work for that fix also included some changes to the configure.py default behavior to decouple the --target switch from sdk choice: </p>
+
+<ul>
+ <li>There is a new switch, --mac-sdk, that selects the 10.4u, 10.5 or 10.6 sdk. Its options are '104u', '105' or '106' (Note: no '.')</li>
+ <li>If you don't pass the --mac-sdk switch you will get no sdk in your build.</li>
+ <li>If you pass '--mac-sdk=104u' you will also get gcc/g++ 4.0.</li>
+ <li>If you pass '--mac-sdk=105' or '--mac-sdk=106' you will get the gcc/g++ default for the machine you're building on.</li>
+</ul>
+
+<p>Example call to build on an x86_64 machine with the 10.5 sdk:</p>
+
+<pre>$ ../configure.py --mac-sdk=105 --target=x86_64-darwin
+</pre>
+
+<p>If ASC is not set, you will need to add ASC.jar to the utils directory in Tamarin-redux (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=631641" title="https://bugzilla.mozilla.org/show_bug.cgi?id=631641">Bug 631641</a>).</p>
+
+<ul>
+ <li>下载<a class="link-ftp" href="ftp://ftp.mozilla.org/pub/js/tamarin/builds/asc/latest/asc.jar " title="ftp://ftp.mozilla.org/pub/js/tamarin/builds/asc/latest/asc.jar">ftp://ftp.mozilla.org/pub/js/tamarin/builds/asc/latest/asc.jar </a></li>
+ <li>把它放到 utils/</li>
+</ul>
+
+<p> </p>
+
+<h3 id="在Mac上构建_Tamarin_的安卓_2.3.3_版本">在Mac上构建 Tamarin 的安卓 2.3.3 版本</h3>
+
+<h4 id="公共_sdkndk_安装">公共 sdk/ndk 安装</h4>
+
+<p>To build Tamarin for Android you will need an sdk/ndk. The setup procedure below creates an android sdk/ndk entirely from publicly available sources. This sdk/ndk *must* be used if you've cloned tamarin at changeset 5844:92ad3ca84a0b or later <strong>and</strong> will be using the cross-compile build method.</p>
+
+<p>Steps to create a public sdk/ndk tree on a Mac:</p>
+
+<p>- Create an sdk/ndk top folder under your main volume named /android-public.</p>
+
+<p>- 下载 Android 2.3.3 的Mac sdk zip 文件自 <a class="external" href="http://developer.android.com/sdk/index.html" title="http://developer.android.com/sdk/index.html">http://developer.android.com/sdk/index.html</a>. 解压到你的 sdk/ndk 顶级文件夹. Make sure it's named 'android-sdk-mac_86'.</p>
+
+<p>- Download the r5b Mac ndk zip file from <a class="external" href="http://developer.android.com/sdk/ndk/index.html" title="http://developer.android.com/sdk/ndk/index.html">http://developer.android.com/sdk/ndk/index.html</a>. Unzip to your sdk/ndk top folder. Rename this folder to 'android-ndk'.</p>
+
+<p>- Run the Android SDK/AVD Manager at /android-public/android-sdk-mac_86/tools/android and add Android SDK Platform-tools (to get adb), SDK Platform Android 2.3.3, and API 10 (samples and docs are optional). If you have trouble starting the app try this:</p>
+
+<p><code>$ export ANDROID_SWT=$ANDROID_BUILD_TOP/android-sdk-mac_86/tools/lib/x86_64</code></p>
+
+<p>where $ANDROID_BUILD_TOP is the full path to your sdk/ndk top folder</p>
+
+<p>- Get the openssl-0.9.8r.tar (openssl-1.0.0c.tar.gz won't work) openssl files from <a class="external" href="http://www.openssl.org" title="http://www.openssl.org/">http://www.openssl.org</a> (use the Source link on the left). Unzip the file and put the /openssl main folder under your sdk/ndk top folder. Make sure its name is just "openssl".  Then build as follows:</p>
+
+<p>- Replace the Makefile in the main folder with the one attached to this page.</p>
+
+<p>- Change the variable ANDROID_DEVICE in the makefile (near line 65) to point to your sdk/ndk top folder.</p>
+
+<p>- Find the two instances of "android-ndk" and make sure they match your ndk's name (they should already).</p>
+
+<p>- In a terminal window change to your /openssl folder and run <code>make build_libs</code> to create the necessary '<code>libcrypto.a</code>' and '<code>libssl.a</code>' static libraries.</p>
+
+<p>Alternatively, run make, in which case the process will complete with errors when it tries to create the shared lib crt0.o:</p>
+
+<pre>$ /android-public/android-ndk/toolchains/arm-eabi-4.4.0/prebuilt/darwin-x86/bin/../lib/gcc/arm-eabi/4.4.0/../../../../arm-eabi/bin/ld: crt0.o:
+No such file: No such file or directory collect2: ld returned 1 exit status
+make[2]: *** [link_app.] Error 1
+make[1]: *** [openssl] Error 2
+make: *** [build_apps] Error 1</pre>
+
+<p>You can ignore these errors. The necessary static files 'libcrypto.a' and 'libssl.a' are made correctly and are present in the /openssl folder. More information on why this happens on Mac OS is here: <a class="external" href="http://developer.apple.com/library/mac/#qa/qa2001/qa1118.html" title="http://developer.apple.com/library/mac/#qa/qa2001/qa1118.html">http://developer.apple.com/library/mac/#qa/qa2001/qa1118.html</a></p>
+
+<p>- Create a /frameworks/base/opengl/include/EGL folder under your sdk/ndk top folder. Get the ersion 1.4 EGL header files (egl.h, eglext.h and eglplatform.h) from <a class="external" href="http://www.khronos.org/registry/egl/" title="http://www.khronos.org/registry/egl/">http://www.khronos.org/registry/egl/</a> and save or copy them there. </p>
+
+<h4 id="构建_Tamarin_Release_Shell">构建 Tamarin Release Shell</h4>
+
+<p>- Get tamarin-redux</p>
+
+<p>- Export the following variables into the environment</p>
+
+<p> </p>
+
+<pre>$ export ANDROID_TOOLCHAIN=&lt;full path to your android sdk/ndk top folder&gt;
+$ export ANDROID_NDK=$ANDROID_TOOLCHAIN/android-ndk
+$ export ANDROID_NDK_BIN=$ANDROID_NDK/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin
+$ export ANDROID_SDK=$ANDROID_TOOLCHAIN/android-sdk-mac_86
+$ export PATH=$PATH:$ANDROID_SDK/platform-tools:$ANDROID_NDK_BIN</pre>
+
+<div>- Example commands to build Tamarin: </div>
+
+<pre>$ hg clone http://hg.mozilla.org/tamarin-redux
+$ cd tamarin-redux
+$ mkdir objdir-release
+$ cd objdir-release
+$ ../configure.py --arm-arch=armv7-a --target=arm-android
+$ make</pre>
+
+<p>使用此命令制作一个调试shell:</p>
+
+<p><code>../configure.py --enable-debug --arm-arch=armv7-a --target=arm-android</code></p>
+
+<p> </p>
+
+<h3 id="在Windows上使用CYGWIN的跨平台脚本">在Windows上使用CYGWIN的跨平台脚本:</h3>
+
+<p><strong>预备条件(环境):</strong> 你需要 Python 2.5 或更高版本和 GNU <code>make</code> 3.81 或更高版本. (<strong>GNU <code>make</code> 3.80 does not work.</strong> Nor does any other brand of <code>make</code>.)</p>
+
+<p><strong>设置:</strong></p>
+
+<ul>
+ <li>If you normally work in a cygwin mounted place (eg /home/user/...) then you must cd around to the cygdrive path equivalent (eg /cygdrive/c/cygwin/home/user/).</li>
+ <li>使用以下环境变量设置shell环境:</li>
+</ul>
+
+<pre style="margin-left: 40px;"># NOTE: The INCLUDE, LIB and LIBPATH must contain windows path information and separator and not cygwin paths.
+VS_HOME_PATH="/cygdrive/c/Program Files/Microsoft Visual Studio 9.0"
+VS_HOME="c:\Program Files\Microsoft Visual Studio 9.0"
+
+export PATH="$VS_HOME_PATH/Common7/IDE:$VS_HOME_PATH/VC/bin:$VS_HOME_PATH/Common7/Tools:$VS_HOME_PATH/VC/VCPackages:$PATH"
+export INCLUDE="$VS_HOME\VC\atlmfc\include;$VS_HOME\VC\include;C:\Program Files\Microsoft SDKs\Windows\v6.0A\Include;"
+export LIB="$VS_HOME\VC\atlmfc\lib;$VS_HOME\VC\lib;C:\Program Files\Microsoft SDKs\Windows\v6.0A\Lib"
+export LIBPATH="$VS_HOME\VC\atlmfc\lib;$VS_HOME\VC\lib;C:\Program Files\Microsoft SDKs\Windows\v6.0A\Lib"
+</pre>
+
+<p>完成上方的条件后, 你现在应该可以通过这些命令进行构建:</p>
+
+<pre style="margin-left: 40px;">$ hg clone http://hg.mozilla.org/tamarin-central/
+$ cd tamarin-central
+$ mkdir objdir-release
+$ cd objdir-release
+$ python ../configure.py
+$ make
+...
+$ shell/avmshell.exe
+shell 1.0 build cyclone
+...
+</pre>
+
+<p> </p>
+
+<h3 id="Microsoft_Visual_Studio" name="Microsoft_Visual_Studio">微软 Visual Studio</h3>
+
+<p>Visual Studio 2008 (VS2008) 是首选的Windows构建环境. Visual Studio 2003 和 2005 不再被支持. 构建 Tamarin:</p>
+
+<ol>
+ <li>copy tamarin/platform/win32/armasm.rules to c:/Program Files/Microsoft Visual Studio 9.0/VC/VCProjectDefaults</li>
+ <li>Build "builtin.h" following the instructions below in the section "Compiling and running applications"</li>
+ <li>Do the same for shell_toplevel.h, starting in avmplus/shell, using the command "python shell_toplevel.py"</li>
+ <li>open the Tamarin project file "platform/win32/avmplus2008.sln".</li>
+ <li>Choose your desired configuration and target, and build.</li>
+ <li>Note: now that bug 478714 has been fixed, the name of the (shell) executable will always be "avm.exe" no matter which build configuration you select. The avm.exe file will be found in a directory reflecting your configuration choice. For example, if you chose the win32 Debug_Debugger configuration your build will be under \tamarin-redux\platform\win32\obj_9\shell\Debug_Debugger by default. Building the x64 Release_Debugger configuration will create avm.exe under \tamarin-redux\platform\win32\x64\Release_Debugger. Note the "\obj9" directory under \platform\win32 for the win32 builds and "\x64" directory under \platform\win32 for 64-bit builds; this looks a little odd but preserves previous behavior as much as possible to avoid initial disruption from the shell rename fix.</li>
+</ol>
+
+<p>你必须安装支持x64的VS2008才能构建64位配置. </p>
+
+<p>如果你安装了 Windows Mobile 6 SDK, 你还可以用 Windows Mobile (ARM) 为目标构建.</p>
+
+<h3 id="Apple_XCode" name="Apple_XCode">Apple XCode</h3>
+
+<p>The project files are designed for XCode 3.0. Se "platform/mac/avmplus/avmplus.xcodeproj". XCode 2.2, 2.3, and 2.4 will not work.</p>
+
+<p>There are two targets in the XCode IDE, 'avm' for 32-bit builds and 'avm64' for 64-bit builds. There is also an aggregate target that will build both targets. Note that, whereas before when you selected the aggregate target you got a 'shell' 32-bit executable and a 'shell64' 64-bit executable in the same folder, now because of the fix to bug 478714 you will get an 'avm' executable in two separate folders, /Debug and /Debug64 respectively.</p>
+
+<p>The command to build from the Terminal is:</p>
+
+<pre class="eval">   $ cd tamarin-redux
+   $ xcodebuild ARCHS=ppc -project platform/mac/avmshell/avmshell.xcodeproj
+</pre>
+
+<p>For a debug build, add '-configuration Debug' (note the capital D and no "="). Additional configurations are: Debug_Debugger, Release and Release_Debugger.</p>
+
+<p>The resulting Debug executable for the command above would be built at /platform/mac/avmshell/build/Debug/avm.</p>
+
+<p>Intel Macs build correctly by setting ARCHS=i386.</p>
+
+<h3 id="Eclipse_(目前只有Mac)">Eclipse (目前只有Mac)</h3>
+
+<p>Eclipse (Galileo) / CDT (6.0) project for Tamarin (also works with Helios).</p>
+
+<p>The configurations in this initial version cover 32- and 64-bit builds for Mac OS with the GCC 4.0 toolchain (installed with Xcode 3.x).</p>
+
+<h4 id="Preparing_your_Eclipse_workspace_and_perspective">Preparing your Eclipse workspace and perspective</h4>
+
+<ul>
+ <li>Open the C/C++ perspective</li>
+ <li>Open the 'C/C++ Projects' view (Window &gt;&gt; Show View &gt;&gt; C/C++ Projects)</li>
+ <li>Add view filter 'Non-C Elements' (In the top-right of the 'C/C++ Projects' view, click the down-arrow, click 'Filters...', check 'Non-C elements')</li>
+ <li>Increase the threshold for 'editor scalability mode' to 20000 lines. As some Tamarin source files have more than the Eclipse standard threshold of 5000, they do not appear as indexed. The threshold can be adjusted in Eclipse preferences &gt;&gt; C/C++ &gt;&gt; Editor &gt;&gt; Scalability.</li>
+ <li>*IMPORTANT*  Project-specific settings for the CDT Indexer do not appear to work (it looks like a bug in Eclipse), so you have to set these manually/globally. What we want is to have the indexer track the currently selected build config (so the correct conditional compiles are highlighted in the editor). To enable this go to Eclipse preferences &gt;&gt; C/C++ &gt;&gt; Indexer, then select 'Use active build configuration' in the 'Build configuration for the indexer' section.</li>
+</ul>
+
+<h4 id="将项目导入到_Eclipse">将项目导入到 Eclipse</h4>
+
+<ul>
+ <li>File &gt;&gt; Import &gt;&gt; General &gt;&gt; Existing Projects into Workspace</li>
+ <li>Click next</li>
+ <li>The root directory should be the full path to your top-level tamarin-redux directory</li>
+ <li>Ensure the 'avmshell-project' project is checked in the 'Projects' list</li>
+ <li>Uncheck 'Copy projects into workspace'</li>
+ <li>Click finish</li>
+</ul>
+
+<h4 id="在_Eclipse_构建">在 Eclipse 构建</h4>
+
+<p>8 build configurations are included for MacOS with the GCC 4.0 toolchain:</p>
+
+<ul>
+ <li>Mac-32-Release</li>
+ <li>Mac-64-Release</li>
+ <li>Mac-32-Debug</li>
+ <li>Mac-64-Debug</li>
+ <li>Mac-32-Release-Debugger</li>
+ <li>Mac-64-Release-Debugger</li>
+ <li>Mac-32-Debug-Debugger</li>
+ <li>Mac-64-Debug-Debugger</li>
+</ul>
+
+<p>The build location will be PROJECT_ROOT/BUILD_NAME/avm</p>
+
+<p>Note: As discussed above, the C++ indexer has been setup to track the current build config, so the correct conditional compiles are highlighted in the editor</p>
+
+<h4 id="从_Eclipse_运行调试">从 Eclipse 运行/调试</h4>
+
+<p>For test purposes, a launch config (running the HelloWorld test from esc) has been included for each of the build configs. All are available from the Run menu.</p>
+
+<p>Note: if you receive an error when trying to run/debug a newly imported project, try opening a file in the project first - Eclipse can sometimes get confused as to what the 'current project' actually is. Additional things to try are clicking on the project name then refreshing it (File/Refresh or right-click/Refresh) and/or quitting and restarting Eclipse.</p>
+
+<h3 id="Linux_and_Unix" name="Linux_and_Unix">Linux 和 Unix</h3>
+
+<p>Tamarin is tested on Linux but not on other Unix flavors. Nonetheless, it is possible to build Tamarin on Unix. </p>
+
+<p>Execute the following commands to build:</p>
+
+<pre class="eval">   $ cd tamarin-central/platform/unix
+   $ make
+</pre>
+
+<p>The resulting executable "shell" is built in the current directory.</p>
+
+<h2 id="Compiling_and_running_applications" name="Compiling_and_running_applications">编译和运行应用程序</h2>
+
+<p>Currently the only compiler for Tamarin is the Adobe ActionScript compiler. The source code for the ActionScript compiler, <code>asc</code>, has been open sourced as part of Adobe Flex®. This compiler is written in Java and will require the installation of a Java™ 1.4 or later JDK.</p>
+
+<p>A prototype self-hosting ECMAScript Edition 4 compiler, <code>esc</code>, is provided with Tamarin but it is not yet capable of bootstrapping itself or building applications. <code>esc</code> is under active development and will be able to generate Tamarin applications later this year.</p>
+
+<p>Use the following steps to build and install the ActionScript compiler.</p>
+
+<ol>
+ <li>Download and build the asc source code using the subversion client</li>
+</ol>
+
+<pre class="eval"> $ svn co <a class="external" href="http://opensource.adobe.com/svn/opensource/flex/sdk/sandbox/asc-redux/" rel="freelink">http://opensource.adobe.com/svn/open...box/asc-redux/</a> asc
+ $ cd asc/build/java
+ $ ant
+ ...
+ jar:
+ [jar] Building jar asc\lib\asc.jar
+ $ cd ../..
+ $ java -jar lib/asc.jar   # shows usage
+</pre>
+
+<p>You may also download the latest asc.jar from <a class="link-ftp" href="ftp://ftp.mozilla.org/pub/js/tamarin/builds/asc/latest/asc.jar" rel="external nofollow" title="ftp://ftp.mozilla.org/pub/js/tamarin/builds/asc/latest/asc.jar">ftp://ftp.mozilla.org/pub/js/tamarin...latest/asc.jar</a> .</p>
+
+<p>You should now copy asc.jar into tamarin-central/utils.</p>
+
+<p><code>asc.jar</code> can be used to compile the <code>builtin.abc</code> file. The <code>builtin.abc</code> file provides internal information about the built-in classes (Object, Array, etc). This file is located in the <code>core</code> directory; you shouldn't normally need to rebuild it, unless you edit any of the ActionScript source for the built-in classes. To rebuild it, use the <code>builtin.py</code> script:</p>
+
+<pre class="eval"> $ cd tamarin-central/core
+ $ export ASC=../utils/asc.jar       # builtin.py uses this to find asc.jar
+ $ python builtin.py
+ building builtin.abc, builtin.cpp, builtin.h
+ builtin: 26795
+ Files: 6 Time: 1709ms
+</pre>
+
+<p>You can now use</p>
+
+<p><code>asc.jar</code> to compile applications.</p>
+
+<pre class="eval"> $ cd tamarin-central
+ $ echo 'print("hello, world")' &gt; hello.as
+ $ java -jar ./utils/asc.jar -import ./core/builtin.abc hello.as
+ hello.abc, 86 bytes written
+</pre>
+
+<p>Use the AVMPlus standalone executable (<code>avmshell</code>) built previously to run the application:</p>
+
+<pre class="eval"> $ avmshell hello.abc
+ hello, world
+</pre>
+
+<p>Use the <code>-help</code> options of <code>asc.jar</code> and <code>avmshell</code> for more details.</p>
+
+<h2 id="Running_Tamarin_compliance_tests" name="Running_Tamarin_compliance_tests">对 Tamarin 进行测试</h2>
+
+<p>See <a href="/En/Tamarin/Tamarin_Acceptance_Testing/Running_Tamarin_acceptance_tests" title="En/Tamarin/Tamarin Tests/Running Tamarin acceptance tests">Running Tamarin acceptance tests</a> and <a href="/En/Tamarin/Tamarin_Acceptance_Testing/Running_Tamarin_performance_tests" title="En/Tamarin/Tamarin Tests/Running Tamarin performance tests">Running Tamarin performance tests</a></p>
+
+<h2 id="Running_Tamarin_compliance_tests" name="Running_Tamarin_compliance_tests">构建 Tamarin Windows Mobile utilities</h2>
+
+<p>The Tamarin Windows Mobile utilities allows the existing acceptance and performance testsuites to be run on a Windows Mobile device connected to a Windows desktop machine by ActiveSync or Windows Mobile Device Center (for Windows Vista and Windows 7).  </p>
+
+<ol>
+ <li>Setup and run ActiveSync or Windows Mobile Device Center.  You should be connected and able to see the devices file system in Windows Explorer</li>
+ <li>in tamarin repository go to the utils/wmremote directory,  open the ceremoteshell2008.sln file in Visual Studio 2008</li>
+ <li>Build all targets in Release mode (for more information see utils/wmremote/readme.txt)</li>
+ <li>copy Release/avmremote.dll to the device in the \Windows directory</li>
+ <li>export AVM=Release/ceremoteshell.exe, the ceremoteshell.exe behaves as a proxy copying and running abc files on the windows mobile device</li>
+ <li>build a windows mobile tamarin shell,  copy the shell to the windows mobile device in \Program Files\shell\avmshell.exe</li>
+ <li>(optional) Can sanity check the windows mobile shell is functioning by running $AVM hello.abc (where hello.abc is a simple abc to print a string, or can substitute with any test abc)</li>
+ <li>Now any acceptance or performance tests can be run as on desktop using test/acceptance/runtests.py or tests/performance/runtests.py</li>
+</ol>
+
+<h2 id="Running_Tamarin_compliance_tests" name="Running_Tamarin_compliance_tests">Tamarin BuildBot</h2>
+
+<p>Adobe maintains a <a class="external" href="http://tamarin-builds.mozilla.org/tamarin-redux/" title="http://tamarin-builds.mozilla.org/tamarin-redux/">continuous build and test system</a> for Tamarin Redux, similar to TinderBox.</p>
+
+<h2 id="Tamarin_BuildBot_TryServer" name="Tamarin_BuildBot_TryServer">Tamarin BuildBot TryServer</h2>
+
+<p>The TryServer/Sandbox is setup to allow users to push any code changes that they would like to have tested in the automated build/test process prior to actually pushing the changes. The Sandbox is setup so that it is able to build and test branches that are based on either tamarin-central or tamarin-tracing.</p>
+
+<p>Any comments, questions or problems can be directed to</p>
+
+<p><a class="link-mailto" href="mailto:actionscriptqe@adobe.com" title="mailto:actionscriptqe@adobe.com">ActionScript QE</a></p>
+
+<h3 id="How_To" name="How_To">How to</h3>
+
+<ol>
+ <li>Setup a user repository with the source and patches that will be compiled. Documentation on how to setup a user repository <a href="/../../../../En/Publishing_Mercurial_Clones" title="../../../../En/Publishing_Mercurial_Clones">http://developer.mozilla.org/En/Publishing_Mercurial_Clones</a>. Push any changes that you want to test into this repository.</li>
+ <li>Request a build via the form at <a class="external" href="http://tamarin-builds.mozilla.org/build_trigger/requestbuild.cfm" title="http://tamarin-builds.mozilla.org/build_trigger/requestbuild.cfm">http://tamarin-builds.mozilla.org/build_trigger/requestbuild.cfm</a>
+  <ul>
+   <li><strong>User Email:</strong> Your email address. An email with the build status will be sent to this address when a builder completes whether it is passes or fails.</li>
+   <li><strong>Mercurial Repository:</strong> Give the location of the repository that will be used for the build. NOTE: Only repositories hosted on <a class="external" href="http://hg.mozilla.org/" rel="freelink">http://hg.mozilla.org/</a> are accepted.</li>
+   <li><strong>Revision:</strong> Specify the revision number that will be built. Currently this only accepts the change number and not the hash.</li>
+   <li><strong>Branch:</strong> Which branch of tamarin the repository is based on, Tamarin-Central or Tamarin-Tracing.</li>
+   <li><strong>Description:</strong> Self explanatory</li>
+  </ul>
+ </li>
+ <li>Check the status of the build @ <a class="external" href="http://tamarin-builds.mozilla.org/tamarin-redux/" title="http://tamarin-builds.mozilla.org/tamarin-redux/">http://tamarin-builds.mozilla.org/tamarin-redux/</a> , you can also see your build request in the queue at <a class="external" href="http://tamarin-builds.mozilla.org/build_trigger/requestbuild.cfm" title="http://tamarin-builds.mozilla.org/build_trigger/requestbuild.cfm">http://tamarin-builds.mozilla.org/build_trigger/requestbuild.cfm</a>. If you no longer want you sandbox to build and it has not started yet, you can delete the build request from the queue from the request page.</li>
+</ol>
+
+<h3 id="TryServer_Etiquette" name="TryServer_Etiquette">TryServer etiquette</h3>
+
+<p>The sandbox is not a good substitute for running the regression tests locally to catch obvious problems.</p>
+
+<p>This is a shared resource, each request takes approximately 2+ hours to run so please use wisely.</p>

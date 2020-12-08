@@ -1,0 +1,110 @@
+---
+title: UI ツアー
+slug: Tools/Debugger/UI_Tour
+translation_of: Tools/Debugger/UI_Tour
+---
+<p>{{ToolsSidebar}}</p>
+
+<p>本記事は、JavaScript デバッガーのユーザーインターフェイスの主要部を紹介するクイックツアーです。UI は、縦に 3 つのパネルへ分かれています。</p>
+
+<ul>
+ <li><a href="/ja/docs/Tools/Debugger/UI_Tour#Source_list_pane">ソースリストペイン</a></li>
+ <li><a href="/ja/docs/Tools/Debugger/UI_Tour#Source_pane">ソースペイン</a></li>
+ <li>3 番目のペインは、さらに 4 つのセクションに分かれます:
+  <ul>
+   <li><a href="/ja/docs/Tools/Debugger/UI_Tour#Toolbar">ツールバー</a></li>
+   <li><a href="/ja/docs/Tools/Debugger/UI_Tour#Breakpoints_list">ブレークポイント一覧</a></li>
+   <li><a href="/ja/docs/Tools/Debugger/UI_Tour#Call_stack">コールスタック</a></li>
+   <li><a href="/ja/docs/Tools/Debugger/UI_Tour#Scopes">スコープ</a></li>
+  </ul>
+ </li>
+</ul>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14977/debugger-screen-main-2.png" style="display: block; height: 758px; margin-left: auto; margin-right: auto; width: 1113px;"></p>
+
+<h2 id="Source_list_pane" name="Source_list_pane">ソースリストペイン</h2>
+
+<p>ソースリストペインでは、ページに読み込まれたすべての JavaScript ソースファイルを一覧表示しており、デバッグするファイルを選択できます。ソースはトップレベルでオリジン別に分類しており、またその配下では、ソースを提供するディレクトリーの構造別に分類しています。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14975/debugger-source-list-2.png" style="display: block; height: 758px; margin-left: auto; margin-right: auto; width: 1113px;"></p>
+
+<p><kbd>Ctrl</kbd> + <kbd>P</kbd> (Mac では <kbd>Cmd</kbd> + <kbd>P</kbd>) を使用して <a href="/ja/docs/Tools/Debugger/How_to/Search#Searching_for_files">ファイルを検索</a> できます。</p>
+
+<p> </p>
+
+<p>興味のあるディレクトリを右クリックし、[Set directory root] を選択すると、[Source] リストペインのファイルリストが簡素化されます。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/16122/directory-root.png" style="border-style: solid; border-width: 1px; height: 408px; width: 480px;"></p>
+
+<p>これでソースリストペインのルートがプロジェクトのルートになり、よりクリーンで簡単に表示をナビゲートできます。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/16123/directory-root-02.png" style="border-style: solid; border-width: 1px; height: 408px; width: 480px;"></p>
+
+<h3 id="アウトラインビュー">アウトラインビュー</h3>
+
+<p>アウトラインビューには、現在開いているファイルをナビゲートするためのツリーが表示されます。それを使用して、関数、クラスまたはメソッド定義に直接ジャンプします。</p>
+
+<p> </p>
+
+<h2 id="Source_pane" name="Source_pane">ソースペイン</h2>
+
+<p>これは、現在読み込んでいる JavaScript ファイルを表示します。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14973/debugger-source-2.png" style="display: block; height: 758px; margin-left: auto; margin-right: auto; width: 1113px;"></p>
+
+<p>ソースペインにフォーカスがあるときに、<kbd>Ctrl</kbd> + <kbd>F</kbd> (Mac では <kbd>Cmd</kbd> + <kbd>F</kbd>) を使用して <a href="/ja/docs/Tools/Debugger/How_to/Search#Searching_within_a_file">ファイル内の文字列を検索</a> できます。</p>
+
+<p><a href="/ja/docs/Tools/Debugger/How_to/Set_a_breakpoint">ブレークポイント</a> は、青色の矢印を行番号に重ねて表示します。<a href="/ja/docs/Tools/Debugger/How_to/Set_a_conditional_breakpoint">条件付きブレークポイント</a> は、橙色の矢印です。ブレークポイントで停止すると、行全体が緑色になります。以下のスクリーンショットには、ブレークポイントが 3 か所あります:</p>
+
+<ul>
+ <li>19 行目は通常のブレークポイントです。</li>
+ <li>40 行目は通常のブレークポイントであり、デバッガーはここで停止しています。</li>
+ <li>22 行目は条件付きブレークポイントです。</li>
+</ul>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14981/debugger-main-2.png" style="display: block; height: 758px; margin-left: auto; margin-right: auto; width: 1113px;"></p>
+
+<h2 id="Toolbar" name="Toolbar"><a name="toolbar">ツールバー</a></h2>
+
+<p>右側のペインの上部にツールバーがあります:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14971/debugger-toolbar-2.png" style="display: block; height: 758px; margin-left: auto; margin-right: auto; width: 1113px;"></p>
+
+<p>ツールバーの構成は以下のとおりです:</p>
+
+<ul>
+ <li><a href="/ja/docs/Tools/Debugger/How_to/Step_through_code">スクリプト内でデバッガーの動作を制御する</a> 4 つのボタン:
+
+  <ul>
+   <li><strong>復帰/停止</strong> (F8): デバッグ中のスクリプトの実行を停止および再開します。[復帰] アイコンが表示されているときは、このボタンを使用して停止したかブレークポイントに当たったためにスクリプトが停止しています。</li>
+   <li><strong>ステップオーバー</strong> (F10): JavaScript コードで現在の行をステップ実行します。</li>
+   <li><strong>ステップイン</strong> (F11): JavaScript で現在の行にある関数呼び出しにスキップします。</li>
+   <li><strong>ステップアウト</strong> (Shift-F11): 現在の関数を抜けるまで、スクリプトを実行します。</li>
+  </ul>
+ </li>
+ <li><a href="/ja/docs/Tools/Debugger/How_to/Breaking_on_exceptions">(1) すべての例外を無視する、(2) キャッチしていない例外で停止する、(3) すべての例外で停止する</a> を切り替えるボタン</li>
+</ul>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14979/debugger-toolbar-zoom-2.png" style="display: block; height: 231px; margin-left: auto; margin-right: auto; width: 536px;"></p>
+
+<h2 id="Breakpoints_list" name="Breakpoints_list">ブレークポイント一覧</h2>
+
+<p>ツールバーの下に、設定したすべてのブレークポイントを表示します。それぞれのブレークポイントの隣に、<a href="/ja/docs/Tools/Debugger/How_to/Disable_breakpoints">ブレークポイントの有効/無効を切り替える</a> チェックボックスがあります:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14969/debugger-breakpoints-2.png" style="display: block; height: 758px; margin-left: auto; margin-right: auto; width: 1113px;"></p>
+
+<h2 id="Call_stack" name="Call_stack">コールスタック</h2>
+
+<p>デバッガーが停止したときに、コールスタックを表示します:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14967/debugger-call-stack-2.png" style="display: block; height: 1138px; margin-left: auto; margin-right: auto; width: 1113px;"></p>
+
+<p>コールスタックはそれぞれのレベルに 1 行ずつ割り当てており、関数名・ファイル名・行番号を表示します。行をクリックすると、ソースペインでソースを開きます。</p>
+
+<h2 id="Scopes" name="Scopes">スコープ</h2>
+
+<p>右側のペインに、展開用の三角印がついている "スコープ" というラベルがあります。デバッガーが停止したときにこのセクションを展開すると、プログラムのその時点でスコープ内に存在するすべてのオブジェクトを確認できます:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14965/debugger-scopes-2.png" style="display: block; height: 758px; margin-left: auto; margin-right: auto; width: 1113px;"></p>
+
+<p>オブジェクトはスコープ別に分類します。もっともローカル性が高いオブジェクトを最初に、またグローバルスコープ (ページのスクリプトでは Window) を最後に表示します。</p>

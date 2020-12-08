@@ -1,0 +1,249 @@
+---
+title: Comment intégrer le moteur Javascript
+slug: Comment_integrer_le_moteur_Javascript
+tags:
+  - Intégrer Mozilla
+  - JavaScript
+  - SpiderMonkey
+  - Tutoriel
+translation_of: Mozilla/Projects/SpiderMonkey/How_to_embed_the_JavaScript_engine
+---
+<p>Voir aussi le <a href="/En/SpiderMonkey/JSAPI_User_Guide" title="En/SpiderMonkey/JSAPI_User_Guide">guide utilisateur JSAPI</a>. Il possède de meilleurs et plus nombreux exemples de code!</p>
+<h2 id="A_Bare_Bones_Tutorial" name="A_Bare_Bones_Tutorial">Un Tutoriel Couvrant l'Essentiel</h2>
+<h3 id="Exemple_d'intégration_dans_une_application">Exemple d'intégration dans une application</h3>
+<p>Le code suivant est une simple application montrant comment intégrer SpiderMonkey et exécuter un script Javascript simple. Voir les instructions concernant la compilation et l'exécution en dessous du code.</p>
+<pre class="brush: cpp">/*
+ * Uniquement sur Windows, il s'agit d'un fix pour le bug 661663.
+ */
+#ifdef _MSC_VER
+# define XP_WIN
+#endif
+
+/* Inclusion du header JSAPI afin d'accéder à SpiderMonkey. */
+#include "jsapi.h"
+
+/* La classe de l'objet global. */
+static JSClass global_class = {
+    "global", JSCLASS_GLOBAL_FLAGS,
+    JS_PropertyStub, JS_PropertyStub, JS_PropertyStub, JS_StrictPropertyStub,
+    JS_EnumerateStub, JS_ResolveStub, JS_ConvertStub, JS_FinalizeStub,
+    JSCLASS_NO_OPTIONAL_MEMBERS
+};
+
+/* Callback du rapporteur d'erreurs. */
+void reportError(JSContext *cx, const char *message, JSErrorReport *report)
+{
+    fprintf(stderr, "%s:%u:%s\n",
+            report-&gt;filename ? report-&gt;filename : "&lt;no filename=\"filename\"&gt;",
+            (unsigned int) report-&gt;lineno,
+            message);
+}
+
+int main(int argc, const char *argv[])
+{
+    /* Variables JSAPI. */
+    JSRuntime *rt;
+    JSContext *cx;
+    JSObject  *global;
+
+    /* Créer un runtime JS. Il faut toujours un runtime par processus. */
+    rt = JS_NewRuntime(8 * 1024 * 1024);
+    if (rt == NULL)
+        return 1;
+
+    /*
+     * Créée un contexte. Il faut toujours un contexte par thread.
+     * Notez que ce programme n'est pas multi-threadé.
+     */
+    cx = JS_NewContext(rt, 8192);
+    if (cx == NULL)
+        return 1;
+    JS_SetOptions(cx, JSOPTION_VAROBJFIX | JSOPTION_JIT | JSOPTION_METHODJIT);
+    JS_SetVersion(cx, JSVERSION_LATEST);
+    JS_SetErrorReporter(cx, reportError);
+
+    /*
+     * Créée l'objet global dans un nouveau compartiment.
+     * Il faut toujours un objet global par contexte.
+     */
+    global = JS_NewCompartmentAndGlobalObject(cx, &amp;global_class, NULL);
+    if (global == NULL)
+        return 1;
+
+    /*
+     * On peuple l'objet global avec les fonctions et les objets
+     * Javascript standard, tels que Object, Array ou Date.
+     */
+    if (!JS_InitStandardClasses(cx, global))
+        return 1;
+
+    /* Le code de votre application est ici. Ceci inclue la création de
+     * vos propres objets Javascript ou l'exécution de scripts via JSAPI.
+     *
+     * L'exemple suivant créée un script Javascript littéral,
+     * l'évalue, et affiche le résultat dans stdout.
+     *
+     * Par convention les erreurs sont stockées dans la variable JSBool ok.
+     */
+    const char *script = "'Hello ' + 'World!'";
+    jsval rval;
+    JSString *str;
+    JSBool ok;
+    const char *filename = "noname";
+    uintN lineno = 0;
+
+    ok = JS_EvaluateScript(cx, global, script, strlen(script),
+                           filename, lineno, &amp;rval);
+    if (rval == JS_NULL | rval == JS_FALSE)
+        return 1;
+
+    str = JS_ValueToString(cx, rval);
+    printf("%s\n", JS_EncodeString(cx, str));
+
+    /* Fin de votre code d'application */
+
+    /* Nettoyage et fermeture de SpiderMonkey. */
+    JS_DestroyContext(cx);
+    JS_DestroyRuntime(rt);
+    JS_ShutDown();
+    return 0;
+}</pre>
+<p>L'exemple Hello World mis à jour pour SpiderMonkey24:</p>
+<pre><span style="font-family: 'Courier New', 'Andale Mono', monospace; font-weight: inherit; line-height: normal;">#include "jsapi.h"</span>
+
+<code>/* Classe de l'objet global. */</code>
+<code>static JSClass global_class = {</code>
+<code>    "global", </code>
+<code>    JSCLASS_GLOBAL_FLAGS,</code>
+<code>    JS_PropertyStub, </code>
+<code>    JS_DeletePropertyStub, </code>
+<code>    JS_PropertyStub, </code>
+<code>    JS_StrictPropertyStub,</code>
+<code>    JS_EnumerateStub,  </code>
+<code>    JS_ResolveStub, </code>
+<code>    JS_ConvertStub</code>
+<code>};</code>
+
+
+<code>int main(int argc, const char *argv[])</code>
+<code>{</code>
+<code>    JS_Init();</code>
+
+<code>    JSRuntime *rt = JS_NewRuntime(8L * 1024 * 1024, JS_NO_HELPER_THREADS);</code>
+<code>    if (!rt)</code>
+<code>        return 1;</code>
+
+<code>    JSContext *cx = JS_NewContext(rt, 8192);</code>
+<code>    if (!cx)</code>
+<code>        return 1;</code>
+
+<code>    JS::RootedObject global(cx, JS_NewGlobalObject(cx, &amp;global_class, nullptr, JS::DontFireOnNewGlobalHook));</code>
+<code>    if (!global)</code>
+<code>        return 1;</code>
+
+<code>    JS::Value rval;</code>
+<code>    bool ok;</code>
+<code>    {</code>
+<code>      JSAutoCompartment ac(cx, *global); </code>
+<code>      JS_InitStandardClasses(cx, *global);</code>
+
+<code><code>      const char *script = "'hello'+'world, it is '+new Date()";</code>
+<code>      const char *filename = "noname";</code>
+<code>      int lineno = 0;</code>
+      ok = JS_EvaluateScript(cx, *global, script, strlen(script), filename, lineno, &amp;rval);</code>
+<code>      if (rval.isNull() | rval.isFalse() )</code>
+<code>        return 1;</code>
+<code>    }</code>
+
+<code>    JSString *str = rval.toString();</code>
+<code>    printf("%s\n", JS_EncodeString(cx, str));</code>
+
+<code>    JS_DestroyContext(cx);</code>
+<code>    JS_DestroyRuntime(rt);</code>
+<code>    JS_ShutDown();</code>
+<code>    return 0;</code>
+<code>}</code></pre>
+<div>
+  </div>
+<h3 id="Compiler_et_exécuter_l'exemple_Hello_World">Compiler et exécuter l'exemple Hello World</h3>
+<div>
+ Voici un exemple en ligne de commande Linux (où &lt;objdir&gt; est le dossier dans lequel SpiderMonkey a été compilé):</div>
+<div>
+ <code style="font: normal normal normal 100%/normal 'Courier New', 'Andale Mono', monospace; color: inherit; font-weight: inherit;">    g++ -I&lt;objdir&gt;/dist/include -L&lt;objdir&gt;/dist/bin -lmozjs185  helloworld.cpp -O helloworld</code><br>
+    </div>
+<div>
+ Voici un exemple en ligne de commande Windows avec le shell MozillaBuildHere:</div>
+<div>
+ <code>    cl helloworld.cpp -link dist/lib/mozjs185-1.0.lib<br>
+     </code></div>
+<div>
+ Ceci devrait afficher <code style="font: normal normal normal 100%/normal 'Courier New', 'Andale Mono', monospace; color: inherit; font-weight: inherit;">Hello World!</code><br>
+    </div>
+<ol style="margin-top: 0px; margin-right: 0px; margin-bottom: 1.286em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 22px; color: rgb(51, 51, 51); font-family: 'Lucida Grande', 'Lucida Sans Unicode', Lucida, Arial, Helvetica, sans-serif; font-size: 14px; line-height: 22px;">
+ <li>Assurez-vous que l'ordinateur sur lequel vous effectuez la compilation remplit les prérequis pour compiler SpiderMonkey: <a href="/En/Developer_Guide/Build_Instructions/Linux_Prerequisites" title="https://developer.mozilla.org/En/Developer_Guide/Build_Instructions/Linux_Prerequisites">Linux</a>, <a href="/En/Developer_Guide/Build_Instructions/Windows_Prerequisites" title="https://developer.mozilla.org/En/Developer_Guide/Build_Instructions/Windows_Prerequisites">Windows</a>, <a href="/En/Developer_Guide/Build_Instructions/Mac_OS_X_Prerequisites" title="https://developer.mozilla.org/En/Developer_Guide/Build_Instructions/Mac_OS_X_Prerequisites">Mac OS X</a>, <a href="/En/Developer_Guide/Build_Instructions" title="https://developer.mozilla.org/En/Developer_Guide/Build_Instructions">autres</a>. Pour Windows, les étapes suivantes permettent de s'assurer que le package <a href="/En/Developer_Guide/Build_Instructions/Windows_Prerequisites#mozillabuild" title="https://developer.mozilla.org/En/Developer_Guide/Build_Instructions/Windows_Prerequisites#mozillabuild">MozillaBuild</a> est bien installé.</li>
+ <li>Récupérez le code source de SpiderMonkey. Vous pouvez <a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/js/" title="http://ftp.mozilla.org/pub/mozilla.org/js/">télécharger un archive contenant les sources</a> ou utiliser Mercurial (hg) pour <a title="https://developer.mozilla.org/En/SpiderMonkey/Getting_SpiderMonkey_source_code#Getting_the_latest_SpiderMonkey_source_code">cloner le dépôt SpiderMonkey</a>. Sur Windows, n'installez pas les sources de SpiderMonkey sous le dossier racine MSYS (qui est en général <code>c:\mozilla-build\msys</code>). Utilisez plutôt par exemple <code>c:\js-1.8.5</code>.</li>
+ <li>Compilez SpiderMonkey en utilisant les instructions se trouvant dans <a href="/En/SpiderMonkey/Build_Documentation" title="https://developer.mozilla.org/En/SpiderMonkey/Build_Documentation">Documentation de la compilation de SpiderMonkey</a>. Par défaut une bibliothèque partagée de SpiderMonkey sera compilée que vous pourrez lier à votre application dans une prochaine étape.</li>
+ <li>Copiez l'exemple de code plus haut dans un éditeur de texte et enregistrer le fichier en tant que <code style="font: normal normal normal 100%/normal 'Courier New', 'Andale Mono', monospace; color: inherit; font-weight: inherit;">helloworld.cpp</code> dans le dossier de SpiderMonkey <code style="font: normal normal normal 100%/normal 'Courier New', 'Andale Mono', monospace; color: inherit; font-weight: inherit;">js\src</code>. Pour copier le code sans les numéros de lignes, placez la souris au dessus de l'exemple près du haut et attendez l'apparition des boutons. Cliquez ensuite sur le bouton <strong>voir source</strong>, et copiez le code depuis la fenêtre qui apparaît.</li>
+ <li>Compilez l'application HelloWorld and liez avec la bibliothèque SpiderMonkey.</li>
+ <li>cl helloworld.cpp -link dist/lib/mozjs185-1.0.lib</li>
+ <li>Exécutez le programme <code style="font: normal normal normal 100%/normal 'Courier New', 'Andale Mono', monospace; color: inherit; font-weight: inherit;">helloworld</code> à l'aide de la ligne de commande:<br>
+      ./helloworld</li>
+</ol>
+<h3 id="Appeler_des_fonctions_C_depuis_Javascript">Appeler des fonctions C depuis Javascript</h3>
+<p>Mettons que la fonction C est nommée <code>doit</code> et demande au moins deux paramètres lors de l'appel (si l'appelant en fournit moins, le moteur JS doit s'assurer que undefined est passé pour ceux manquants) :</p>
+<pre class="eval">#define DOIT_MINARGS 2
+
+static JSBool
+doit(JSContext *cx, unsigned argc, jsval *vp)
+{
+<span id="the-code"><a class="d external" href="http://mxr.mozilla.org/mozilla-central/ident?i=jsval">    jsval</a> *<a class="d external" href="http://mxr.mozilla.org/mozilla-central/ident?i=argv">argv</a> = <a class="d external" href="http://mxr.mozilla.org/mozilla-central/ident?i=JS_ARGV">JS_ARGV</a>(<a class="d external" href="http://mxr.mozilla.org/mozilla-central/ident?i=cx">cx</a>, <a class="d external" href="http://mxr.mozilla.org/mozilla-central/ident?i=vp">vp</a>);</span>
+    /*
+     * Cherche dans argv les paramètres, et assigne *rval pour
+     * retourner une valeur à l'appelant.
+     */
+    ...
+}
+</pre>
+<p>Pour faire le lien avec JS, vous pouvez écrire :</p>
+<pre class="eval">ok = <a href="/en/SpiderMonkey/JSAPI_Reference/JS_DefineFunction" title="en/SpiderMonkey/JSAPI_Reference/JS_DefineFunction">JS_DefineFunction</a>(cx, global, "doit", doit, DOIT_MINARGS, 0);
+</pre>
+<p>Si vous avez plusieurs fonction natives à définir, vous pouvez les mettre dans un tableau :</p>
+<pre class="eval">static <a href="/En/SpiderMonkey/JSAPI_Reference/JSFunctionSpec" title="En/SpiderMonkey/JSAPI_Reference/JSFunctionSpec">JSFunctionSpec</a> my_functions[] = {
+    {"doit", doit, DOIT_MINARGS, 0, 0},
+    etc...
+    {0,0,0,0,0},
+};
+</pre>
+<p>(la spécification de fonction comportant uniquement des zéros délimite la fin du tableau) et effectuer :</p>
+<pre class="eval">ok = <a href="/en/SpiderMonkey/JSAPI_Reference/JS_DefineFunctions" title="en/SpiderMonkey/JSAPI_Reference/JS_DefineFunctions">JS_DefineFunctions</a>(cx, global, my_functions);
+</pre>
+<h3 id="Appeler_des_fonctions_Javascript_depuis_C">Appeler des fonctions Javascript depuis C</h3>
+<p>Considérons qu'un évènement de clic concerne l'élément d'interface utilisateur le plus à l'avant ou qui a le focus à une position donnée (x, y) :</p>
+<pre class="eval">JSObject *target, *event;
+jsval argv[1], rval;
+
+/*
+ * On trouve la cible de l'évènement et créée un object d'évènement
+ * représentant le clic.
+ * On passe cx à NewEventObject pour que JS_NewObject puisse être appelé.
+ */
+target = FindEventTargetAt(cx, global, x, y);
+event = NewEventObject(cx, "click", x, y);
+argv[0] = <a href="/en/SpiderMonkey/JSAPI_Reference/OBJECT_TO_JSVAL" title="en/SpiderMonkey/JSAPI_Reference/OBJECT_TO_JSVAL">OBJECT_TO_JSVAL</a>(event);
+
+/* Pour émuler le DOM, vous pouvez aussi essayer "onclick". */
+ok = <a href="/en/SpiderMonkey/JSAPI_Reference/JS_CallFunctionName" title="en/SpiderMonkey/JSAPI_Reference/JS_CallFunctionName">JS_CallFunctionName</a>(cx, target, "onClick", 1, argv, &amp;rval);
+
+/* On teste rval pour voir si l'évènement doit être annulé. */
+if (<a href="/en/SpiderMonkey/JSAPI_Reference/JSVAL_IS_BOOLEAN" title="en/SpiderMonkey/JSAPI_Reference/JSVAL_IS_BOOLEAN">JSVAL_IS_BOOLEAN</a>(rval) &amp;&amp; !<a href="/en/SpiderMonkey/JSAPI_Reference/JSVAL_TO_BOOLEAN" title="en/SpiderMonkey/JSAPI_Reference/JSVAL_TO_BOOLEAN">JSVAL_TO_BOOLEAN</a>(rval))
+    CancelEvent(event);
+</pre>
+<p>Une fois de plus, les tests d'erreurs ont été omis (tel que tester <code>!ok</code> après l'appel), et quelques comportements dans la gestion des évènements C pour annuler un évènement si le handler retourne false ont été simulés.</p>
+<div class="originaldocinfo">
+ <h2 id="Original_Document_Information" name="Original_Document_Information">Informations sur le document original</h2>
+ <ul>
+  <li>Auteur : Brendan Eich</li>
+  <li>Dernière mise à jour : 21 Février 2000</li>
+ </ul>
+</div>
+<p> </p>

@@ -1,0 +1,278 @@
+---
+title: 创建_XPCOM_组件
+slug: Mozilla/Tech/XPCOM/Guide/Creating_components
+tags:
+  - XPCOM
+  - 'XPCOM:索引'
+  - 所有分类
+translation_of: Mozilla/Tech/XPCOM/Guide/Creating_components
+---
+<p> </p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/创建_XPCOM_组件:前言">下一页  »</a></p>
+</div><p></p>
+
+<h3 id=".E5.89.8D.E8.A8.80" name=".E5.89.8D.E8.A8.80"><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%89%8D%E8%A8%80" title="cn/创建_XPCOM_组件/前言">前言</a></h3>
+
+<dl>
+ <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%89%8D%E8%A8%80#.E8.B0.81.E8.AF.A5.E8.AF.BB.E8.BF.99.E6.9C.AC.E4.B9.A6" title="cn/创建_XPCOM_组件/前言#.E8.B0.81.E8.AF.A5.E8.AF.BB.E8.BF.99.E6.9C.AC.E4.B9.A6">谁该读这本书</a></dd>
+ <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%89%8D%E8%A8%80#.E6.9C.AC.E6.95.99.E7.A8.8B.E7.9A.84.E7.BB.84.E7.BB.87" title="cn/创建_XPCOM_组件/前言#.E6.9C.AC.E6.95.99.E7.A8.8B.E7.9A.84.E7.BB.84.E7.BB.87">本教程的组织</a></dd>
+ <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%89%8D%E8%A8%80#.E6.8C.89.E7.85.A7.E4.BE.8B.E5.AD.90.E6.9D.A5.E5.AD.A6.E4.B9.A0" title="cn/创建_XPCOM_组件/前言#.E6.8C.89.E7.85.A7.E4.BE.8B.E5.AD.90.E6.9D.A5.E5.AD.A6.E4.B9.A0">按照例子来学习</a></dd>
+ <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%89%8D%E8%A8%80#.E6.9C.AC.E4.B9.A6.E7.9A.84.E4.BD.93.E4.BE.8B" title="cn/创建_XPCOM_组件/前言#.E6.9C.AC.E4.B9.A6.E7.9A.84.E4.BD.93.E4.BE.8B">本书的体例</a></dd>
+ <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%89%8D%E8%A8%80#.E8.87.B4.E8.B0.A2" title="cn/创建_XPCOM_组件/前言#.E8.87.B4.E8.B0.A2">致谢</a></dd>
+</dl>
+
+<h3 id="XPCOM_.E7.AE.80.E4.BB.8B" name="XPCOM_.E7.AE.80.E4.BB.8B"><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/XPCOM_%E7%AE%80%E4%BB%8B" title="cn/创建_XPCOM_组件/XPCOM_简介">XPCOM 简介</a></h3>
+
+<dl>
+ <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/XPCOM_%E7%AE%80%E4%BB%8B#XPCOM_.E8.A7.A3.E5.86.B3.E6.96.B9.E6.A1.88" title="cn/创建_XPCOM_组件/XPCOM_简介#XPCOM_.E8.A7.A3.E5.86.B3.E6.96.B9.E6.A1.88">XPCOM 解决方案</a></dd>
+ <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/XPCOM_%E7%AE%80%E4%BB%8B#Gecko" title="cn/创建_XPCOM_组件/XPCOM_简介#Gecko">Gecko</a></dd>
+ <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/XPCOM_%E7%AE%80%E4%BB%8B#.E7.BB.84.E4.BB.B6" title="cn/创建_XPCOM_组件/XPCOM_简介#.E7.BB.84.E4.BB.B6">组件</a></dd>
+ <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/XPCOM_%E7%AE%80%E4%BB%8B#.E6.8E.A5.E5.8F.A3" title="cn/创建_XPCOM_组件/XPCOM_简介#.E6.8E.A5.E5.8F.A3">接口</a>
+ <dl>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/XPCOM_%E7%AE%80%E4%BB%8B#.E6.8E.A5.E5.8F.A3.E4.B8.8E.E5.B0.81.E8.A3.85" title="cn/创建_XPCOM_组件/XPCOM_简介#.E6.8E.A5.E5.8F.A3.E4.B8.8E.E5.B0.81.E8.A3.85">接口与封装</a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/XPCOM_%E7%AE%80%E4%BB%8B#nsISupports_.E5.9F.BA.E6.8E.A5.E5.8F.A3" title="cn/创建_XPCOM_组件/XPCOM_简介#nsISupports_.E5.9F.BA.E6.8E.A5.E5.8F.A3"><code>nsISupports</code> 基接口</a></dd>
+ </dl>
+ </dd>
+ <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/XPCOM_%E7%AE%80%E4%BB%8B#XPCOM_.E7.9A.84ID" title="cn/创建_XPCOM_组件/XPCOM_简介#XPCOM_.E7.9A.84ID">XPCOM 的ID</a>
+ <dl>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/XPCOM_%E7%AE%80%E4%BB%8B#CID" title="cn/创建_XPCOM_组件/XPCOM_简介#CID">CID</a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/XPCOM_%E7%AE%80%E4%BB%8B#.E5.A5.91.E7.BA.A6_ID" title="cn/创建_XPCOM_组件/XPCOM_简介#.E5.A5.91.E7.BA.A6_ID">契约 ID</a></dd>
+ </dl>
+ </dd>
+ <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/XPCOM_%E7%AE%80%E4%BB%8B#.E7.B1.BB.E5.8E.82" title="cn/创建_XPCOM_组件/XPCOM_简介#.E7.B1.BB.E5.8E.82">类厂</a>
+ <dl>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/XPCOM_%E7%AE%80%E4%BB%8B#XPIDL_.E4.B8.8E.E7.B1.BB.E5.9E.8B.E5.BA.93" title="cn/创建_XPCOM_组件/XPCOM_简介#XPIDL_.E4.B8.8E.E7.B1.BB.E5.9E.8B.E5.BA.93">XPIDL 与类型库</a></dd>
+ </dl>
+ </dd>
+ <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/XPCOM_%E7%AE%80%E4%BB%8B#XPCOM_.E6.9C.8D.E5.8A.A1" title="cn/创建_XPCOM_组件/XPCOM_简介#XPCOM_.E6.9C.8D.E5.8A.A1">XPCOM 服务</a></dd>
+ <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/XPCOM_%E7%AE%80%E4%BB%8B#XPCOM_.E7.B1.BB.E5.9E.8B" title="cn/创建_XPCOM_组件/XPCOM_简介#XPCOM_.E7.B1.BB.E5.9E.8B">XPCOM 类型</a>
+ <dl>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/XPCOM_%E7%AE%80%E4%BB%8B#.E6.96.B9.E6.B3.95.E7.B1.BB.E5.9E.8B" title="cn/创建_XPCOM_组件/XPCOM_简介#.E6.96.B9.E6.B3.95.E7.B1.BB.E5.9E.8B">方法类型</a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/XPCOM_%E7%AE%80%E4%BB%8B#.E5.BC.95.E7.94.A8.E8.AE.A1.E6.95.B0" title="cn/创建_XPCOM_组件/XPCOM_简介#.E5.BC.95.E7.94.A8.E8.AE.A1.E6.95.B0">引用计数</a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/XPCOM_%E7%AE%80%E4%BB%8B#.E7.8A.B6.E6.80.81.E7.A0.81" title="cn/创建_XPCOM_组件/XPCOM_简介#.E7.8A.B6.E6.80.81.E7.A0.81">状态码</a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/XPCOM_%E7%AE%80%E4%BB%8B#.E5.8F.98.E9.87.8F.E6.98.A0.E5.B0.84" title="cn/创建_XPCOM_组件/XPCOM_简介#.E5.8F.98.E9.87.8F.E6.98.A0.E5.B0.84">变量映射</a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/XPCOM_%E7%AE%80%E4%BB%8B#.E9.80.9A.E7.94.A8_XPCOM_.E9.94.99.E8.AF.AF.E7.A0.81" title="cn/创建_XPCOM_组件/XPCOM_简介#.E9.80.9A.E7.94.A8_XPCOM_.E9.94.99.E8.AF.AF.E7.A0.81">通用 XPCOM 错误码</a></dd>
+ </dl>
+ </dd>
+</dl>
+
+<h3 id=".E4.BD.BF.E7.94.A8_XPCOM_.E7.BB.84.E4.BB.B6" name=".E4.BD.BF.E7.94.A8_XPCOM_.E7.BB.84.E4.BB.B6"><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E4%BD%BF%E7%94%A8_XPCOM_%E7%BB%84%E4%BB%B6" title="cn/创建_XPCOM_组件/使用_XPCOM_组件">使用 XPCOM 组件</a></h3>
+
+<dl>
+ <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E4%BD%BF%E7%94%A8_XPCOM_%E7%BB%84%E4%BB%B6#.E7.BB.84.E4.BB.B6.E7.9A.84.E4.BE.8B.E5.AD.90" title="cn/创建_XPCOM_组件/使用_XPCOM_组件#.E7.BB.84.E4.BB.B6.E7.9A.84.E4.BE.8B.E5.AD.90">组件的例子</a>
+
+ <dl>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E4%BD%BF%E7%94%A8_XPCOM_%E7%BB%84%E4%BB%B6#Cookie_.E7.AE.A1.E7.90.86.E5.99.A8" title="cn/创建_XPCOM_组件/使用_XPCOM_组件#Cookie_.E7.AE.A1.E7.90.86.E5.99.A8">Cookie 管理器</a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E4%BD%BF%E7%94%A8_XPCOM_%E7%BB%84%E4%BB%B6#WebBrowserFind_.E7.BB.84.E4.BB.B6" title="cn/创建_XPCOM_组件/使用_XPCOM_组件#WebBrowserFind_.E7.BB.84.E4.BB.B6"><strong>WebBrowserFind</strong> 组件</a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E4%BD%BF%E7%94%A8_XPCOM_%E7%BB%84%E4%BB%B6#WebLock_.E7.BB.84.E4.BB.B6" title="cn/创建_XPCOM_组件/使用_XPCOM_组件#WebLock_.E7.BB.84.E4.BB.B6"><strong>WebLock</strong> 组件</a></dd>
+ </dl>
+ </dd>
+ <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E4%BD%BF%E7%94%A8_XPCOM_%E7%BB%84%E4%BB%B6#Mozilla_.E4.B8.AD.E4.BD.BF.E7.94.A8.E7.9A.84.E7.BB.84.E4.BB.B6" title="cn/创建_XPCOM_组件/使用_XPCOM_组件#Mozilla_.E4.B8.AD.E4.BD.BF.E7.94.A8.E7.9A.84.E7.BB.84.E4.BB.B6">Mozilla 中使用的组件</a>
+ <dl>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E4%BD%BF%E7%94%A8_XPCOM_%E7%BB%84%E4%BB%B6#.E6.9F.A5.E6.89.BE_Mozilla_.E7.BB.84.E4.BB.B6" title="cn/创建_XPCOM_组件/使用_XPCOM_组件#.E6.9F.A5.E6.89.BE_Mozilla_.E7.BB.84.E4.BB.B6">查找 Mozilla 组件</a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E4%BD%BF%E7%94%A8_XPCOM_%E7%BB%84%E4%BB%B6#.E5.9C.A8_Cpp_.E4.BB.A3.E7.A0.81.E4.B8.AD.E4.BD.BF.E7.94.A8_XPCOM_.E7.BB.84.E4.BB.B6" title="cn/创建_XPCOM_组件/使用_XPCOM_组件#.E5.9C.A8_Cpp_.E4.BB.A3.E7.A0.81.E4.B8.AD.E4.BD.BF.E7.94.A8_XPCOM_.E7.BB.84.E4.BB.B6">在 Cpp 代码中使用 XPCOM 组件</a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E4%BD%BF%E7%94%A8_XPCOM_%E7%BB%84%E4%BB%B6#XPConnect:_.E5.9C.A8.E8.84.9A.E6.9C.AC.E4.B8.AD.E4.BD.BF.E7.94.A8_XPCOM_.E7.BB.84.E4.BB.B6" title="cn/创建_XPCOM_组件/使用_XPCOM_组件#XPConnect:_.E5.9C.A8.E8.84.9A.E6.9C.AC.E4.B8.AD.E4.BD.BF.E7.94.A8_XPCOM_.E7.BB.84.E4.BB.B6">XPConnect: 在脚本中使用 XPCOM 组件</a></dd>
+ </dl>
+ </dd>
+</dl>
+
+<h3 id=".E7.BB.84.E4.BB.B6.E5.86.85.E5.B9.95" name=".E7.BB.84.E4.BB.B6.E5.86.85.E5.B9.95"><a href="/cn/Creating_XPCOM_Components/Component_Internals" title="cn/Creating_XPCOM_Components/Component_Internals">组件内幕</a></h3>
+
+<dl>
+ <dd><a href="/cn/Creating_XPCOM_Components/Component_Internals#.E7.94.A8Cpp.E4.B9.A6.E5.86.99.E7.BB.84.E4.BB.B6" title="cn/Creating_XPCOM_Components/Component_Internals#.E7.94.A8Cpp.E4.B9.A6.E5.86.99.E7.BB.84.E4.BB.B6">用Cpp书写组件</a></dd>
+ <dd><a href="/cn/Creating_XPCOM_Components/Component_Internals#XPCOM.E5.88.9D.E5.A7.8B.E5.8C.96" title="cn/Creating_XPCOM_Components/Component_Internals#XPCOM.E5.88.9D.E5.A7.8B.E5.8C.96">XPCOM初始化</a>
+ <dl>
+  <dd><a href="/cn/Creating_XPCOM_Components/Component_Internals#XPCOM.E6.B3.A8.E5.86.8C.E6.8F.8F.E8.BF.B0" title="cn/Creating_XPCOM_Components/Component_Internals#XPCOM.E6.B3.A8.E5.86.8C.E6.8F.8F.E8.BF.B0">XPCOM注册描述</a></dd>
+  <dd><a href="/cn/Creating_XPCOM_Components/Component_Internals#XPCOM.E6.B3.A8.E5.86.8C.E7.9A.84.E6.96.B9.E6.B3.95" title="cn/Creating_XPCOM_Components/Component_Internals#XPCOM.E6.B3.A8.E5.86.8C.E7.9A.84.E6.96.B9.E6.B3.95">XPCOM注册的方法</a></dd>
+  <dd><a href="/cn/Creating_XPCOM_Components/Component_Internals#.E8.87.AA.E5.8A.A8.E6.B3.A8.E5.86.8C" title="cn/Creating_XPCOM_Components/Component_Internals#.E8.87.AA.E5.8A.A8.E6.B3.A8.E5.86.8C">自动注册</a></dd>
+  <dd><a href="/cn/Creating_XPCOM_Components/Component_Internals#The_Shutdown_Process" title="cn/Creating_XPCOM_Components/Component_Internals#The_Shutdown_Process">The Shutdown Process</a></dd>
+  <dd><a href="/cn/Creating_XPCOM_Components/Component_Internals#XPCOM.E7.BB.84.E4.BB.B6.E5.BA.93.E7.9A.84.E4.B8.89.E4.B8.AA.E9.83.A8.E5.88.86" title="cn/Creating_XPCOM_Components/Component_Internals#XPCOM.E7.BB.84.E4.BB.B6.E5.BA.93.E7.9A.84.E4.B8.89.E4.B8.AA.E9.83.A8.E5.88.86">XPCOM组件库的三个部分</a></dd>
+ </dl>
+ </dd>
+ <dd><a href="/cn/Creating_XPCOM_Components/Component_Internals#XPCOM_Glue" title="cn/Creating_XPCOM_Components/Component_Internals#XPCOM_Glue">XPCOM Glue</a>
+ <dl>
+  <dd><a href="/cn/Creating_XPCOM_Components/Component_Internals#The_Glue_Library" title="cn/Creating_XPCOM_Components/Component_Internals#The_Glue_Library">The Glue Library</a></dd>
+  <dd><a href="/cn/Creating_XPCOM_Components/Component_Internals#XPCOM_String_Classes" title="cn/Creating_XPCOM_Components/Component_Internals#XPCOM_String_Classes">XPCOM String Classes</a></dd>
+ </dl>
+ </dd>
+</dl>
+
+<h3 id=".E5.BB.BA.E7.AB.8B.E7.BB.84.E4.BB.B6.E4.BB.A3.E7.A0.81" name=".E5.BB.BA.E7.AB.8B.E7.BB.84.E4.BB.B6.E4.BB.A3.E7.A0.81"><a href="/cn/Creating_XPCOM_Components/Creating_the_Component_Code" title="cn/Creating_XPCOM_Components/Creating_the_Component_Code">建立组件代码</a></h3>
+
+<dl>
+ <dd><a href="/cn/Creating_XPCOM_Components/Creating_the_Component_Code#.E6.88.91.E4.BB.AC.E5.B0.86.E5.81.9A.E4.BB.80.E4.B9.88" title="cn/Creating_XPCOM_Components/Creating_the_Component_Code#.E6.88.91.E4.BB.AC.E5.B0.86.E5.81.9A.E4.BB.80.E4.B9.88">我们将做什么</a></dd>
+ <dd><a href="/cn/Creating_XPCOM_Components/Creating_the_Component_Code#.E7.BB.84.E4.BB.B6.E6.B3.A8.E5.86.8C" title="cn/Creating_XPCOM_Components/Creating_the_Component_Code#.E7.BB.84.E4.BB.B6.E6.B3.A8.E5.86.8C">组件注册</a>
+ <dl>
+  <dd><a href="/cn/Creating_XPCOM_Components/Creating_the_Component_Code#The_regxpcom_Program" title="cn/Creating_XPCOM_Components/Creating_the_Component_Code#The_regxpcom_Program">The <code>regxpcom</code> Program</a></dd>
+  <dd><a href="/cn/Creating_XPCOM_Components/Creating_the_Component_Code#.E5.85.B6.E4.BB.96.E7.9A.84.E6.B3.A8.E5.86.8C.E9.80.94.E5.BE.84" title="cn/Creating_XPCOM_Components/Creating_the_Component_Code#.E5.85.B6.E4.BB.96.E7.9A.84.E6.B3.A8.E5.86.8C.E9.80.94.E5.BE.84">其他的注册途径</a></dd>
+ </dl>
+ </dd>
+ <dd><a href="/cn/Creating_XPCOM_Components/Creating_the_Component_Code#.E6.A6.82.E8.A7.88WebLock_Module_Source" title="cn/Creating_XPCOM_Components/Creating_the_Component_Code#.E6.A6.82.E8.A7.88WebLock_Module_Source">概览<strong>WebLock</strong> Module Source</a></dd>
+ <dd><a href="/cn/Creating_XPCOM_Components/Creating_the_Component_Code#.E6.B7.B1.E5.BA.A6.E6.8C.96.E6.8E.98:_.E9.9C.80.E8.A6.81.E7.9A.84Includes.E5.92.8C.E5.B8.B8.E9.87.8F" title="cn/Creating_XPCOM_Components/Creating_the_Component_Code#.E6.B7.B1.E5.BA.A6.E6.8C.96.E6.8E.98:_.E9.9C.80.E8.A6.81.E7.9A.84Includes.E5.92.8C.E5.B8.B8.E9.87.8F">深度挖掘: 需要的Includes和常量</a>
+ <dl>
+  <dd><a href="/cn/Creating_XPCOM_Components/Creating_the_Component_Code#XPCOM.E4.B8.AD.E7.9A.84.E6.A0.87.E8.AF.86.E7.AC.A6" title="cn/Creating_XPCOM_Components/Creating_the_Component_Code#XPCOM.E4.B8.AD.E7.9A.84.E6.A0.87.E8.AF.86.E7.AC.A6">XPCOM中的标识符</a></dd>
+  <dd><a href="/cn/Creating_XPCOM_Components/Creating_the_Component_Code#.E6.B3.A8.E5.86.8C.E8.BF.87.E7.A8.8B.E7.9A.84.E4.BB.A3.E7.A0.81" title="cn/Creating_XPCOM_Components/Creating_the_Component_Code#.E6.B3.A8.E5.86.8C.E8.BF.87.E7.A8.8B.E7.9A.84.E4.BB.A3.E7.A0.81">注册过程的代码</a></dd>
+  <dd><a href="/cn/Creating_XPCOM_Components/Creating_the_Component_Code#.E6.B3.A8.E5.86.8C.E7.94.A8.E7.9A.84.E6.96.B9.E6.B3.95" title="cn/Creating_XPCOM_Components/Creating_the_Component_Code#.E6.B3.A8.E5.86.8C.E7.94.A8.E7.9A.84.E6.96.B9.E6.B3.95">注册用的方法</a></dd>
+  <dd><a href="/cn/Creating_XPCOM_Components/Creating_the_Component_Code#.E5.BB.BA.E7.AB.8B.E4.BD.A0.E7.9A.84.E7.BB.84.E4.BB.B6.E7.9A.84.E6.8E.A5.E5.8F.A3" title="cn/Creating_XPCOM_Components/Creating_the_Component_Code#.E5.BB.BA.E7.AB.8B.E4.BD.A0.E7.9A.84.E7.BB.84.E4.BB.B6.E7.9A.84.E6.8E.A5.E5.8F.A3">建立你的组件的接口</a></dd>
+ </dl>
+ </dd>
+ <dd><a href="/cn/Creating_XPCOM_Components/%E5%BB%BA%E7%AB%8B%E7%BB%84%E4%BB%B6%E4%BB%A3%E7%A0%81#webLock1.cpp" title="cn/Creating_XPCOM_Components/建立组件代码#webLock1.cpp"><code>webLock1.cpp</code></a></dd>
+</dl>
+
+<h3 id=".E4.BD.BF.E7.94.A8XPCOM.E5.B7.A5.E5.85.B7.E7.B1.BB.E8.AE.A9.E4.BA.8B.E6.83.85.E5.8F.98.E5.BE.97.E7.AE.80.E5.8D.95" name=".E4.BD.BF.E7.94.A8XPCOM.E5.B7.A5.E5.85.B7.E7.B1.BB.E8.AE.A9.E4.BA.8B.E6.83.85.E5.8F.98.E5.BE.97.E7.AE.80.E5.8D.95"><a href="/cn/%E5%88%9B%E5%BB%BAXPCOM%E7%BB%84%E4%BB%B6/%E4%BD%BF%E7%94%A8XPCOM%E5%B7%A5%E5%85%B7%E7%B1%BB%E8%AE%A9%E4%BA%8B%E6%83%85%E5%8F%98%E5%BE%97%E7%AE%80%E5%8D%95" title="cn/创建XPCOM组件/使用XPCOM工具类让事情变得简单">使用XPCOM工具类让事情变得简单</a></h3>
+
+<dl>
+ <dd><a href="/cn/%E5%88%9B%E5%BB%BAXPCOM%E7%BB%84%E4%BB%B6/%E4%BD%BF%E7%94%A8XPCOM%E5%B7%A5%E5%85%B7%E7%B1%BB%E8%AE%A9%E4%BA%8B%E6%83%85%E5%8F%98%E5%BE%97%E7%AE%80%E5%8D%95#XPCOM_.E5.AE.8F" title="cn/创建XPCOM组件/使用XPCOM工具类让事情变得简单#XPCOM_.E5.AE.8F">XPCOM 宏</a>
+
+ <dl>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BAXPCOM%E7%BB%84%E4%BB%B6/%E4%BD%BF%E7%94%A8XPCOM%E5%B7%A5%E5%85%B7%E7%B1%BB%E8%AE%A9%E4%BA%8B%E6%83%85%E5%8F%98%E5%BE%97%E7%AE%80%E5%8D%95#.E9.80.9A.E7.94.A8XPCOM.E6.A8.A1.E5.9D.97.E5.AE.8F" title="cn/创建XPCOM组件/使用XPCOM工具类让事情变得简单#.E9.80.9A.E7.94.A8XPCOM.E6.A8.A1.E5.9D.97.E5.AE.8F">通用XPCOM模块宏</a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BAXPCOM%E7%BB%84%E4%BB%B6/%E4%BD%BF%E7%94%A8XPCOM%E5%B7%A5%E5%85%B7%E7%B1%BB%E8%AE%A9%E4%BA%8B%E6%83%85%E5%8F%98%E5%BE%97%E7%AE%80%E5%8D%95#.E5.9F.BA.E6.9C.AC.E5.AE.9E.E7.8E.B0.E5.AE.8F" title="cn/创建XPCOM组件/使用XPCOM工具类让事情变得简单#.E5.9F.BA.E6.9C.AC.E5.AE.9E.E7.8E.B0.E5.AE.8F">基本实现宏</a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BAXPCOM%E7%BB%84%E4%BB%B6/%E4%BD%BF%E7%94%A8XPCOM%E5%B7%A5%E5%85%B7%E7%B1%BB%E8%AE%A9%E4%BA%8B%E6%83%85%E5%8F%98%E5%BE%97%E7%AE%80%E5%8D%95#.E5.A3.B0.E6.98.8E.E5.AE.8F" title="cn/创建XPCOM组件/使用XPCOM工具类让事情变得简单#.E5.A3.B0.E6.98.8E.E5.AE.8F">声明宏</a></dd>
+ </dl>
+ </dd>
+ <dd><a href="/cn/%E5%88%9B%E5%BB%BAXPCOM%E7%BB%84%E4%BB%B6/%E4%BD%BF%E7%94%A8XPCOM%E5%B7%A5%E5%85%B7%E7%B1%BB%E8%AE%A9%E4%BA%8B%E6%83%85%E5%8F%98%E5%BE%97%E7%AE%80%E5%8D%95#webLock2.cpp" title="cn/创建XPCOM组件/使用XPCOM工具类让事情变得简单#webLock2.cpp"><code>webLock2.cpp</code></a></dd>
+ <dd><a href="/cn/%E5%88%9B%E5%BB%BAXPCOM%E7%BB%84%E4%BB%B6/%E4%BD%BF%E7%94%A8XPCOM%E5%B7%A5%E5%85%B7%E7%B1%BB%E8%AE%A9%E4%BA%8B%E6%83%85%E5%8F%98%E5%BE%97%E7%AE%80%E5%8D%95#XPCOM.E4.B8.AD.E7.9A.84.E5.AD.97.E7.AC.A6.E4.B8.B2.E7.B1.BB" title="cn/创建XPCOM组件/使用XPCOM工具类让事情变得简单#XPCOM.E4.B8.AD.E7.9A.84.E5.AD.97.E7.AC.A6.E4.B8.B2.E7.B1.BB">XPCOM中的字符串类</a>
+ <dl>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BAXPCOM%E7%BB%84%E4%BB%B6/%E4%BD%BF%E7%94%A8XPCOM%E5%B7%A5%E5%85%B7%E7%B1%BB%E8%AE%A9%E4%BA%8B%E6%83%85%E5%8F%98%E5%BE%97%E7%AE%80%E5%8D%95#.E4.BD.BF.E7.94.A8.E5.AD.97.E7.AC.A6.E4.B8.B2" title="cn/创建XPCOM组件/使用XPCOM工具类让事情变得简单#.E4.BD.BF.E7.94.A8.E5.AD.97.E7.AC.A6.E4.B8.B2">使用字符串</a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BAXPCOM%E7%BB%84%E4%BB%B6/%E4%BD%BF%E7%94%A8XPCOM%E5%B7%A5%E5%85%B7%E7%B1%BB%E8%AE%A9%E4%BA%8B%E6%83%85%E5%8F%98%E5%BE%97%E7%AE%80%E5%8D%95#nsEmbedString_.E5.92.8C_nsEmbedCString" title="cn/创建XPCOM组件/使用XPCOM工具类让事情变得简单#nsEmbedString_.E5.92.8C_nsEmbedCString"><code>nsEmbedString</code> 和 <code>nsEmbedCString</code></a></dd>
+ </dl>
+ </dd>
+ <dd><a href="/cn/%E5%88%9B%E5%BB%BAXPCOM%E7%BB%84%E4%BB%B6/%E4%BD%BF%E7%94%A8XPCOM%E5%B7%A5%E5%85%B7%E7%B1%BB%E8%AE%A9%E4%BA%8B%E6%83%85%E5%8F%98%E5%BE%97%E7%AE%80%E5%8D%95#.E6.99.BA.E8.83.BD.E6.8C.87.E9.92.88" title="cn/创建XPCOM组件/使用XPCOM工具类让事情变得简单#.E6.99.BA.E8.83.BD.E6.8C.87.E9.92.88">智能指针</a></dd>
+</dl>
+
+<h3 id=".E5.BC.80.E5.A7.8BWebLock" name=".E5.BC.80.E5.A7.8BWebLock"><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BC%80%E5%A7%8BWebLock" title="cn/创建_XPCOM_组件/开始WebLock">开始<strong>WebLock</strong></a></h3>
+
+<dl>
+ <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BC%80%E5%A7%8BWebLock#.E5.90.AF.E5.8A.A8.E6.97.B6.E8.A2.AB.E8.B0.83.E7.94.A8" title="cn/创建_XPCOM_组件/开始WebLock#.E5.90.AF.E5.8A.A8.E6.97.B6.E8.A2.AB.E8.B0.83.E7.94.A8">启动时被调用</a>
+
+ <dl>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BC%80%E5%A7%8BWebLock#.E6.B3.A8.E5.86.8C.E5.88.B0.E6.B6.88.E6.81.AF" title="cn/创建_XPCOM_组件/开始WebLock#.E6.B3.A8.E5.86.8C.E5.88.B0.E6.B6.88.E6.81.AF">注册到消息</a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BC%80%E5%A7%8BWebLock#.E8.AE.BF.E9.97.AECategory_Manager" title="cn/创建_XPCOM_组件/开始WebLock#.E8.AE.BF.E9.97.AECategory_Manager">访问Category Manager</a></dd>
+ </dl>
+ </dd>
+ <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BC%80%E5%A7%8BWebLock#.E6.8F.90.E4.BE.9BWebLock.E8.AE.BF.E9.97.AE" title="cn/创建_XPCOM_组件/开始WebLock#.E6.8F.90.E4.BE.9BWebLock.E8.AE.BF.E9.97.AE">提供<strong>WebLock</strong>访问</a></dd>
+ <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BC%80%E5%A7%8BWebLock#.E5.BB.BA.E7.AB.8BWebLock.E7.BC.96.E7.A8.8B.E6.8E.A5.E5.8F.A3" title="cn/创建_XPCOM_组件/开始WebLock#.E5.BB.BA.E7.AB.8BWebLock.E7.BC.96.E7.A8.8B.E6.8E.A5.E5.8F.A3">建立<strong>WebLock</strong>编程接口</a></dd>
+ <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BC%80%E5%A7%8BWebLock#.E5.9C.A8XPIDL.E4.B8.AD.E5.AE.9A.E4.B9.89WebLock.E6.8E.A5.E5.8F.A3" title="cn/创建_XPCOM_组件/开始WebLock#.E5.9C.A8XPIDL.E4.B8.AD.E5.AE.9A.E4.B9.89WebLock.E6.8E.A5.E5.8F.A3">在XPIDL中定义<strong>WebLock</strong>接口</a>
+ <dl>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BC%80%E5%A7%8BWebLock#XPIDL.E4.B9.A6.E5.86.99.E6.A0.BC.E5.BC.8F" title="cn/创建_XPCOM_组件/开始WebLock#XPIDL.E4.B9.A6.E5.86.99.E6.A0.BC.E5.BC.8F">XPIDL书写格式</a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BC%80%E5%A7%8BWebLock#.E8.84.9A.E6.9C.AC.E5.8C.96.E6.8E.A5.E5.8F.A3" title="cn/创建_XPCOM_组件/开始WebLock#.E8.84.9A.E6.9C.AC.E5.8C.96.E6.8E.A5.E5.8F.A3">脚本化接口</a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BC%80%E5%A7%8BWebLock#.E5.AE.9E.E7.8E.B0nsISupports" title="cn/创建_XPCOM_组件/开始WebLock#.E5.AE.9E.E7.8E.B0nsISupports">实现<code>nsISupports</code></a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BC%80%E5%A7%8BWebLock#Web_Locking_.E6.8E.A5.E5.8F.A3" title="cn/创建_XPCOM_组件/开始WebLock#Web_Locking_.E6.8E.A5.E5.8F.A3">Web Locking 接口</a></dd>
+ </dl>
+ </dd>
+ <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BC%80%E5%A7%8BWebLock#.E5.AE.9E.E7.8E.B0WebLock" title="cn/创建_XPCOM_组件/开始WebLock#.E5.AE.9E.E7.8E.B0WebLock">实现<strong>WebLock</strong></a>
+ <dl>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BC%80%E5%A7%8BWebLock#.E5.A3.B0.E6.98.8E.E5.AE.8F" title="cn/创建_XPCOM_组件/开始WebLock#.E5.A3.B0.E6.98.8E.E5.AE.8F">声明宏</a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BC%80%E5%A7%8BWebLock#.E5.9C.A8XPCOM.E4.B8.AD.E8.A1.A8.E8.BE.BE.E8.BF.94.E5.9B.9E.E5.80.BC" title="cn/创建_XPCOM_组件/开始WebLock#.E5.9C.A8XPCOM.E4.B8.AD.E8.A1.A8.E8.BE.BE.E8.BF.94.E5.9B.9E.E5.80.BC">在XPCOM中表达返回值</a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BC%80%E5%A7%8BWebLock#XPIDL.E4.BB.A3.E7.A0.81.E7.94.9F.E6.88.90" title="cn/创建_XPCOM_组件/开始WebLock#XPIDL.E4.BB.A3.E7.A0.81.E7.94.9F.E6.88.90">XPIDL代码生成</a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BC%80%E5%A7%8BWebLock#.E4.BB.8E.E5.AE.A2.E6.88.B7.E7.AB.AF.E8.8E.B7.E5.8F.96WebLock_Service" title="cn/创建_XPCOM_组件/开始WebLock#.E4.BB.8E.E5.AE.A2.E6.88.B7.E7.AB.AF.E8.8E.B7.E5.8F.96WebLock_Service">从客户端获取WebLock Service</a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BC%80%E5%A7%8BWebLock#.E5.AE.9E.E7.8E.B0iWebLock.E6.8E.A5.E5.8F.A3" title="cn/创建_XPCOM_组件/开始WebLock#.E5.AE.9E.E7.8E.B0iWebLock.E6.8E.A5.E5.8F.A3">实现<code>iWebLock</code>接口</a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BC%80%E5%A7%8BWebLock#The_Directory_Service" title="cn/创建_XPCOM_组件/开始WebLock#The_Directory_Service">The Directory Service</a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BC%80%E5%A7%8BWebLock#.E7.94.A8nsIFile.E6.94.B9.E5.8F.98.E8.B7.AF.E5.BE.84" title="cn/创建_XPCOM_组件/开始WebLock#.E7.94.A8nsIFile.E6.94.B9.E5.8F.98.E8.B7.AF.E5.BE.84">用<code>nsIFile</code>改变路径</a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BC%80%E5%A7%8BWebLock#.E7.94.A8nsIFile.E6.93.8D.E4.BD.9C.E6.96.87.E4.BB.B6" title="cn/创建_XPCOM_组件/开始WebLock#.E7.94.A8nsIFile.E6.93.8D.E4.BD.9C.E6.96.87.E4.BB.B6">用<code>nsIFile</code>操作文件</a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BC%80%E5%A7%8BWebLock#.E7.94.A8nsILocalFile.E8.AF.BB.E5.8F.96.E6.95.B0.E6.8D.AE" title="cn/创建_XPCOM_组件/开始WebLock#.E7.94.A8nsILocalFile.E8.AF.BB.E5.8F.96.E6.95.B0.E6.8D.AE">用<code>nsILocalFile</code>读取数据</a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BC%80%E5%A7%8BWebLock#.E5.A4.84.E7.90.86White_List_Data" title="cn/创建_XPCOM_组件/开始WebLock#.E5.A4.84.E7.90.86White_List_Data">处理White List Data</a></dd>
+ </dl>
+ </dd>
+ <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BC%80%E5%A7%8BWebLock#iWebLock.E6.96.B9.E6.B3.95.E5.88.97.E4.B8.BE" title="cn/创建_XPCOM_组件/开始WebLock#iWebLock.E6.96.B9.E6.B3.95.E5.88.97.E4.B8.BE"><code>iWebLock</code>方法列举</a>
+ <dl>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BC%80%E5%A7%8BWebLock#Lock_.E5.92.8C_Unlock" title="cn/创建_XPCOM_组件/开始WebLock#Lock_.E5.92.8C_Unlock"><code>Lock</code> and <code>Unlock</code></a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BC%80%E5%A7%8BWebLock#AddSite" title="cn/创建_XPCOM_组件/开始WebLock#AddSite"><code>AddSite</code></a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BC%80%E5%A7%8BWebLock#RemoveSite" title="cn/创建_XPCOM_组件/开始WebLock#RemoveSite"><code>RemoveSite</code></a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BC%80%E5%A7%8BWebLock#SetSites" title="cn/创建_XPCOM_组件/开始WebLock#SetSites"><code>SetSites</code></a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BC%80%E5%A7%8BWebLock#GetNext" title="cn/创建_XPCOM_组件/开始WebLock#GetNext"><code>GetNext</code></a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BC%80%E5%A7%8BWebLock#GetSites" title="cn/创建_XPCOM_组件/开始WebLock#GetSites"><code>GetSites</code></a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BC%80%E5%A7%8BWebLock#HasMoreElements" title="cn/创建_XPCOM_组件/开始WebLock#HasMoreElements"><code>HasMoreElements</code></a></dd>
+ </dl>
+ </dd>
+</dl>
+
+<h3 id="Finishing_the_Component" name="Finishing_the_Component"><a href="/cn/Creating_XPCOM_Components/Finishing_the_Component" title="cn/Creating_XPCOM_Components/Finishing_the_Component">Finishing the Component</a></h3>
+
+<dl>
+ <dd><a href="/cn/Creating_XPCOM_Components/Finishing_the_Component#Using_Frozen_Interfaces" title="cn/Creating_XPCOM_Components/Finishing_the_Component#Using_Frozen_Interfaces">Using Frozen Interfaces</a>
+
+ <dl>
+  <dd><a href="/cn/Creating_XPCOM_Components/Finishing_the_Component#Copying_Interfaces_Into_Your_Build_Environment" title="cn/Creating_XPCOM_Components/Finishing_the_Component#Copying_Interfaces_Into_Your_Build_Environment">Copying Interfaces Into Your Build Environment</a></dd>
+  <dd><a href="/cn/Creating_XPCOM_Components/Finishing_the_Component#Implementing_the_nsIContentPolicy_Interface" title="cn/Creating_XPCOM_Components/Finishing_the_Component#Implementing_the_nsIContentPolicy_Interface">Implementing the <code>nsIContentPolicy</code> Interface</a></dd>
+  <dd><a href="/cn/Creating_XPCOM_Components/Finishing_the_Component#Receiving_Notifications" title="cn/Creating_XPCOM_Components/Finishing_the_Component#Receiving_Notifications">Receiving Notifications</a></dd>
+ </dl>
+ </dd>
+ <dd><a href="/cn/Creating_XPCOM_Components/Finishing_the_Component#Implementing_the_nsIContentPolicy" title="cn/Creating_XPCOM_Components/Finishing_the_Component#Implementing_the_nsIContentPolicy">Implementing the <code>nsIContentPolicy</code></a>
+ <dl>
+  <dd><a href="/cn/Creating_XPCOM_Components/Finishing_the_Component#Uniform_Resource_Locators" title="cn/Creating_XPCOM_Components/Finishing_the_Component#Uniform_Resource_Locators">Uniform Resource Locators</a></dd>
+  <dd><a href="/cn/Creating_XPCOM_Components/Finishing_the_Component#Checking_the_White_List" title="cn/Creating_XPCOM_Components/Finishing_the_Component#Checking_the_White_List">Checking the White List</a></dd>
+  <dd><a href="/cn/Creating_XPCOM_Components/Finishing_the_Component#Creating_nsIURI_Objects" title="cn/Creating_XPCOM_Components/Finishing_the_Component#Creating_nsIURI_Objects">Creating <code>nsIURI</code> Objects</a></dd>
+ </dl>
+ </dd>
+</dl>
+
+<h3 id="Building_the_WebLock_UI" name="Building_the_WebLock_UI"><a href="/cn/Creating_XPCOM_Components/Building_the_WebLock_UI" title="cn/Creating_XPCOM_Components/Building_the_WebLock_UI">Building the <strong>WebLock</strong> UI</a></h3>
+
+<dl>
+ <dd><a href="/cn/Creating_XPCOM_Components/Building_the_WebLock_UI#User_Interface_Package_List" title="cn/Creating_XPCOM_Components/Building_the_WebLock_UI#User_Interface_Package_List">User Interface Package List</a></dd>
+ <dd><a href="/cn/Creating_XPCOM_Components/Building_the_WebLock_UI#Client_Code_Overview" title="cn/Creating_XPCOM_Components/Building_the_WebLock_UI#Client_Code_Overview">Client Code Overview</a></dd>
+ <dd><a href="/cn/Creating_XPCOM_Components/Building_the_WebLock_UI#XUL" title="cn/Creating_XPCOM_Components/Building_the_WebLock_UI#XUL">XUL</a>
+ <dl>
+  <dd><a href="/cn/Creating_XPCOM_Components/Building_the_WebLock_UI#The_XUL_Document" title="cn/Creating_XPCOM_Components/Building_the_WebLock_UI#The_XUL_Document">The XUL Document</a></dd>
+  <dd><a href="/cn/Creating_XPCOM_Components/Building_the_WebLock_UI#The_Locking_UI" title="cn/Creating_XPCOM_Components/Building_the_WebLock_UI#The_Locking_UI">The Locking UI</a></dd>
+  <dd><a href="/cn/Creating_XPCOM_Components/Building_the_WebLock_UI#Site_Adding_UI" title="cn/Creating_XPCOM_Components/Building_the_WebLock_UI#Site_Adding_UI">Site Adding UI</a></dd>
+  <dd><a href="/cn/Creating_XPCOM_Components/Building_the_WebLock_UI#weblock.xul" title="cn/Creating_XPCOM_Components/Building_the_WebLock_UI#weblock.xul"><code>weblock.xul</code></a></dd>
+ </dl>
+ </dd>
+ <dd><a href="/cn/Creating_XPCOM_Components/Building_the_WebLock_UI#Overlaying_New_User_Interface_Into_Mozilla" title="cn/Creating_XPCOM_Components/Building_the_WebLock_UI#Overlaying_New_User_Interface_Into_Mozilla">Overlaying New User Interface Into Mozilla</a>
+ <dl>
+  <dd><a href="/cn/Creating_XPCOM_Components/Building_the_WebLock_UI#webLockOverlay.xul" title="cn/Creating_XPCOM_Components/Building_the_WebLock_UI#webLockOverlay.xul"><code>webLockOverlay.xul</code></a></dd>
+ </dl>
+ </dd>
+ <dd><a href="/cn/Creating_XPCOM_Components/Building_the_WebLock_UI#Other_Resources" title="cn/Creating_XPCOM_Components/Building_the_WebLock_UI#Other_Resources">Other Resources</a>
+ <dl>
+  <dd><a href="/cn/Creating_XPCOM_Components/Building_the_WebLock_UI#weblock.css" title="cn/Creating_XPCOM_Components/Building_the_WebLock_UI#weblock.css"><code>weblock.css</code></a></dd>
+  <dd><a href="/cn/Creating_XPCOM_Components/Building_the_WebLock_UI#Image_Resources" title="cn/Creating_XPCOM_Components/Building_the_WebLock_UI#Image_Resources">Image Resources</a></dd>
+ </dl>
+ </dd>
+</dl>
+
+<h3 id=".E6.89.93.E5.8C.85_WebLock" name=".E6.89.93.E5.8C.85_WebLock"><a href="/cn/Creating_XPCOM_Components/Packaging_WebLock" title="cn/Creating_XPCOM_Components/Packaging_WebLock">打包 WebLock</a></h3>
+
+<dl>
+ <dd><a href="/cn/Creating_XPCOM_Components/Packaging_WebLock#Component_Installation_Overview" title="cn/Creating_XPCOM_Components/Packaging_WebLock#Component_Installation_Overview">组件安装预览</a></dd>
+ <dd><a href="/cn/Creating_XPCOM_Components/Packaging_WebLock#Archiving_Resources" title="cn/Creating_XPCOM_Components/Packaging_WebLock#Archiving_Resources">资源归档</a></dd>
+ <dd><a href="/cn/Creating_XPCOM_Components/Packaging_WebLock#The_WebLock_Installation_Script" title="cn/Creating_XPCOM_Components/Packaging_WebLock#The_WebLock_Installation_Script"><strong>WebLock</strong> 安装脚本</a></dd>
+ <dd><a href="/cn/Creating_XPCOM_Components/Packaging_WebLock#The_WebLock_Trigger_Script" title="cn/Creating_XPCOM_Components/Packaging_WebLock#The_WebLock_Trigger_Script"><strong>WebLock</strong> 跟踪脚本</a></dd>
+ <dd><a href="/cn/Creating_XPCOM_Components/Packaging_WebLock#Distributing_Your_Component" title="cn/Creating_XPCOM_Components/Packaging_WebLock#Distributing_Your_Component">分发你的组件</a></dd>
+</dl>
+
+<h3 id=".E9.99.84.E5.BD.95_A_-_.E5.BB.BA.E7.AB.8B_Gecko_SDK" name=".E9.99.84.E5.BD.95_A_-_.E5.BB.BA.E7.AB.8B_Gecko_SDK"><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BB%BA%E7%AB%8B_Gecko_SDK" title="cn/创建_XPCOM_组件/建立_Gecko_SDK">附录 A - 建立 Gecko SDK</a></h3>
+
+<dl>
+ <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BB%BA%E7%AB%8B_Gecko_SDK#.E4.B8.8B.E8.BD.BD.E5.92.8C.E5.BB.BA.E7.AB.8B_SDK" title="cn/创建_XPCOM_组件/建立_Gecko_SDK#.E4.B8.8B.E8.BD.BD.E5.92.8C.E5.BB.BA.E7.AB.8B_SDK">下载和建立 SDK</a></dd>
+ <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BB%BA%E7%AB%8B_Gecko_SDK#.E7.BC.96.E8.AF.91.E4.B8.80.E4.B8.AA_Microsoft_Visual_Cpp_.E5.B7.A5.E7.A8.8B" title="cn/创建_XPCOM_组件/建立_Gecko_SDK#.E7.BC.96.E8.AF.91.E4.B8.80.E4.B8.AA_Microsoft_Visual_Cpp_.E5.B7.A5.E7.A8.8B">编译一个 Microsoft Visual Cpp 工程</a>
+ <dl>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BB%BA%E7%AB%8B_Gecko_SDK#.E5.88.9B.E5.BB.BA.E4.B8.80.E4.B8.AA.E6.96.B0.E7.9A.84.E5.B7.A5.E7.A8.8B" title="cn/创建_XPCOM_组件/建立_Gecko_SDK#.E5.88.9B.E5.BB.BA.E4.B8.80.E4.B8.AA.E6.96.B0.E7.9A.84.E5.B7.A5.E7.A8.8B">创建一个新的工程</a></dd>
+  <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BB%BA%E7%AB%8B_Gecko_SDK#.E6.8A.8A_Gecko_SDK_.E6.B7.BB.E5.8A.A0.E5.88.B0.E5.B7.A5.E7.A8.8B.E8.AE.BE.E7.BD.AE" title="cn/创建_XPCOM_组件/建立_Gecko_SDK#.E6.8A.8A_Gecko_SDK_.E6.B7.BB.E5.8A.A0.E5.88.B0.E5.B7.A5.E7.A8.8B.E8.AE.BE.E7.BD.AE">把 Gecko SDK 添加到工程设置</a></dd>
+ </dl>
+ </dd>
+ <dd><a href="/cn/%E5%88%9B%E5%BB%BA_XPCOM_%E7%BB%84%E4%BB%B6/%E5%BB%BA%E7%AB%8B_Gecko_SDK#Unix_.E4.B8.8B.E7.9A.84.E4.B8.80.E4.B8.AA_Makefile" title="cn/创建_XPCOM_组件/建立_Gecko_SDK#Unix_.E4.B8.8B.E7.9A.84.E4.B8.80.E4.B8.AA_Makefile">Unix 下的一个 Makefile</a></dd>
+</dl>
+
+<h3 id=".E9.99.84.E5.BD.95B_-_.E8.B5.84.E6.BA.90" name=".E9.99.84.E5.BD.95B_-_.E8.B5.84.E6.BA.90"><a href="/cn/Creating_XPCOM_Components/Resources" title="cn/Creating_XPCOM_Components/Resources">附录B - 资源</a></h3>
+
+<dl>
+ <dd><a href="/cn/Creating_XPCOM_Components/Resources#WebLock_Resources" title="cn/Creating_XPCOM_Components/Resources#WebLock_Resources">WebLock 资源</a></dd>
+ <dd><a href="/cn/Creating_XPCOM_Components/Resources#Gecko_Resources" title="cn/Creating_XPCOM_Components/Resources#Gecko_Resources">Gecko 资源</a></dd>
+ <dd><a href="/cn/Creating_XPCOM_Components/Resources#XPCOM_Resources" title="cn/Creating_XPCOM_Components/Resources#XPCOM_Resources">XPCOM 资源</a></dd>
+ <dd><a href="/cn/Creating_XPCOM_Components/Resources#General_Development_Resources" title="cn/Creating_XPCOM_Components/Resources#General_Development_Resources">General Development 资源</a></dd>
+</dl>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/创建_XPCOM_组件:前言">下一页  »</a></p>
+</div> <p></p><div class="licenseblock">
+<p>Copyright (c) 2003 by Doug Turner and Ian Oeschger. This material may be distributed only subject to the terms and conditions set forth in the <a class="external" href="http://www.opencontent.org/openpub/" rel="noopener">Open Publication License</a>, v1.02 or later. Distribution of substantively modified versions of this document is prohibited without the explicit permission of the copyright holder. Distribution of the work or derivative of the work in any standard (paper) book form is prohibited unless prior permission is obtained from the copyright holder.</p>
+</div><p></p>
+
+<p> </p>
+
+<p></p>

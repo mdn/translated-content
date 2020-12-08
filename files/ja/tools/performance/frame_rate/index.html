@@ -1,0 +1,58 @@
+---
+title: フレームレート
+slug: Tools/Performance/Frame_rate
+translation_of: Tools/Performance/Frame_rate
+---
+<div>{{ToolsSidebar}}</div><div class="summary">
+<p>フレームレートは、Web サイトの応答性を測定したものです。低い、あるいは不安定なフレームレートによりサイトの応答性が低い、あるいはジャンキーな状態になり、ユーザエクスペリエンスを損ないます。</p>
+
+<p><strong>60fps のフレームレートがなめらかなパフォーマンスの目標値であり、あるイベントに対して必要なすべての更新に与えられた時間は 16.7 ミリ秒です。</strong></p>
+
+<p>パフォーマンスツールでフレームレートのグラフは、記録していた間のフレームレートを表示します。サイトのどこに問題があると思われるかを迅速に示して、より深く分析するために他のツールを使用できるようにします。</p>
+</div>
+
+<h2 id="Frame_rate_and_responsiveness" name="Frame_rate_and_responsiveness">フレームレートと応答性</h2>
+
+<p>フレームレートは、ビデオデバイスが生成できる画像 (またはフレーム) のペースです。これは映画やゲームで特に知られていますが、現在は Web サイトや Web アプリのパフォーマンス測定として広く使用されます。</p>
+
+<p>Web のパフォーマンスにおいて、フレームにはブラウザがスクリーンを更新および再描画するために必要な作業が含まれます。フレームレートは、アニメーションに対してもっとも明らかな効用があります。フレームレートが低すぎるとアニメーションがぎこちない動きになり、フレームレートが高ければスムーズになります。一方でユーザと対話することから、サイトの応答性の一般的な指標としてもフレームレートは有用です。</p>
+
+<p>例えばページ上のある要素にマウスポインタを動かすと要素の外見を変える JavaScript が実行されてリフローや再描画が発生する場合、すべての作業をフレーム内で完了させることが必要です。ブラウザがフレームを処理するのにかかる時間が長すぎると、ブラウザが一時的に応答しなくなった (ジャンキー) ように見えるでしょう。</p>
+
+<p>同様に、ページをスクロールすると多くの複雑なページ更新が発生して、許容できるフレームレートをブラウザが維持できない場合、スクロールが遅くなったりときどきフリーズするように見えたりするかもしれません。</p>
+
+<p>一般的に高く安定したフレームレートにより、ユーザとサイトの対話はより快適かつ魅力的になるでしょう。</p>
+
+<div class="note">
+<p>60fps のフレームレートがなめらかなパフォーマンスの目標値と考えられており、あるイベントに対して同時に必要なすべての更新に与えられた時間は 16.7 ミリ秒です。</p>
+
+<p>しかし、安定性は特に重要です。60fps を実現できない場合は低いフレームレートを安定的に実現して、サイトのフリーズをもたらすフレームレートの急な落ち込みを避けるとよいでしょう。</p>
+</div>
+
+<h2 id="Frame_rate_graph" name="Frame_rate_graph">フレームレートのグラフ</h2>
+
+<p>フレームレートのグラフは、パフォーマンスツールの<a href="/ja/docs/Tools/Performance/UI_Tour#Recording_overview">記録の概要</a>の部分にあります。これはブラウザがフレームの処理を終えたときのタイムスタンプを取得して、記録していた期間のフレームレートを追跡するために使用します。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/11025/perf-frame-rate.png" style="display: block; height: 66px; margin-left: auto; margin-right: auto; width: 900px;">X 軸はプロファイルを採取した期間の経過時間です。また最大フレームレート、平均フレームレート、最小フレームレートを注釈として表示します。</p>
+
+<h2 id="Using_the_frame_rate_graph" name="Using_the_frame_rate_graph">フレームレートのグラフを使用する</h2>
+
+<p>フレームレートのグラフの大きな価値は、<a href="/ja/docs/Tools/Web_Console">Web コンソール</a>と同様に、サイトのどこに問題があると思われるかを迅速に示して、より深く分析するために他のツールを使用できるようにすることです。例えば、以下にパフォーマンスツールのスクリーンショットを示します:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/11023/perf-fr-waterfall.png" style="display: block; height: 413px; margin-left: auto; margin-right: auto; width: 900px;"></p>
+
+<p>平均フレームレートはおおむね良好な値ですが、フレームレートが数十ミリ秒間落ち込むときが 3 か所あります。これはきっと、ページで実行しているアニメーションが目立ってぎこちない状況を引き起こすでしょう。</p>
+
+<p>フレームレートのグラフは、上部にある<a href="/ja/docs/Tools/Performance/UI_Tour#Waterfall_overview">ウォーターフォールの概要</a>と直接的に関連性があります。フレームレートが落ち込んでいる始めの 2 か所は橙色のバーと関連性があり、これは JavaScript の実行に時間をかけていることを示します。</p>
+
+<p>落ち込んでいる部分のひとつを選択すると、下部にあるメインの<a href="/ja/docs/Tools/Performance/Waterfall">ウォーターフォールビュー</a>をその部分だけに拡大表示して、問題を起こしている機能を知ることができます:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/11027/perf-zoom.png" style="display: block; height: 504px; margin-left: auto; margin-right: auto; width: 900px;"></p>
+
+<p>click イベントで実行される JavaScript 関数が、メインスレッドを 170 ミリ秒間ブロックしています。</p>
+
+<p>どの関数でしょう? この時点のコールスタックを見るため、<a href="/ja/docs/Tools/Performance/Flame_Chart">フレームチャート</a>に切り替えてください:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/11021/perf-fr-flame-chart.png" style="display: block; height: 413px; margin-left: auto; margin-right: auto; width: 900px;"></p>
+
+<p>問題を起こしている関数は <code>doPointlessComputations()</code> であり、"main.js" で定義されています。これを修正するには、関数を分割して部品を <code><a href="/ja/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame</a></code> で実行するか、関数全体を <a href="/ja/docs/Web/API/Web_Workers_API/Using_web_workers">Worker</a> で実行します。<a href="/ja/docs/Tools/Performance/Scenarios/Intensive_JavaScript">集約的な JavaScript</a> の記事では、長く実行される同期式の JavaScript が引き起こす応答性の問題を解決するために、本記事のような手段をどのように利用できるかを説明します。</p>

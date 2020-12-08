@@ -1,0 +1,106 @@
+---
+title: App
+slug: Archive/B2G_OS/API/DOMApplication
+tags:
+  - API Apps
+  - Apps
+translation_of: Archive/B2G_OS/API/DOMApplication
+---
+<p></p><section class="Quick_links" id="Quick_Links"><ol><li><strong><a href="/fr/docs/Web/API/Archive"><code>Archive</code></a></strong></li><li class="toggle"><details open><summary>Pages liées à Apps</summary><ol><li><a href="/fr/docs/Web/API/DOMApplication"><code>DOMApplication</code></a></li><li><a href="/fr/docs/Web/API/DOMApplicationsManager"><code>DOMApplicationsManager</code></a></li><li><a href="/fr/docs/Web/API/DOMApplicationsRegistry"><code>DOMApplicationsRegistry</code></a></li><li><a href="/fr/docs/Web/API/InstallTrigger"><code>InstallTrigger</code></a></li></ol></details></li></ol></section><div class="overheadIndicator nonStandard nonStandardHeader">
+      <p><strong><span title="Cette API n'a pas été standardisée."><i class="icon-warning-sign"> </i></span> Non standard</strong><br>
+      Cette fonctionnalité n'est ni standard, ni en voie de standardisation. Ne l'utilisez pas pour des sites accessibles sur le Web : elle ne fonctionnera pas pour tout utilisateur. Il peut également y avoir d'importantes incompatibilités entre les implémentations et son comportement peut être modifié dans le futur.</p>
+      </div><p></p>
+
+<p>Dans l'API JavaScript Open Web Apps, un objet <code>App</code> est un objet JavaScript qui représente une application qui a été, ou pourrait être, installée par l'utilisateur.</p>
+
+<h2 id="Propriétés">Propriétés</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Nom</th>
+   <th scope="col">Description</th>
+   <th scope="col">Type</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>manifest</code></td>
+   <td>L'instance actuellement stockée du <a href="/fr/docs/Applications/Manifeste" title="/fr/docs/Applications/Manifeste">manifeste</a> de l'application.</td>
+   <td><code>object</code></td>
+  </tr>
+  <tr>
+   <td><code>manifestURL</code></td>
+   <td>Où le manifeste a été trouvé.</td>
+   <td><code>string</code></td>
+  </tr>
+  <tr>
+   <td><code>origin</code></td>
+   <td>L'origine de l'application (protocole, hôte, et numéro du port facultatif). Par exemple : http://example.com</td>
+   <td><code>string</code></td>
+  </tr>
+  <tr>
+   <td><code>installOrigin</code></td>
+   <td>L'origine du site qui a déclenché l'installation de l'application.</td>
+   <td><code>string</code></td>
+  </tr>
+  <tr>
+   <td><code>installTime</code></td>
+   <td>Quand a été installée l'application. Généré à partir de <code>Date().getTime()</code>, représentant le nombre de millisecondes depuis le 1er janvier 1970 à minuit.</td>
+   <td><code>integer</code></td>
+  </tr>
+  <tr>
+   <td><code>receipts</code></td>
+   <td>Un objet contenant un tableau d'un ou plusieurs reçus. Chaque reçu est une chaîne de caractères. Si il n'y a aucun reçu, sa valeur est <code>null</code>.</td>
+   <td><code>object</code> ou <code>null</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Méthodes">Méthodes</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Méthode</th>
+   <th scope="col">Description</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>launch()</code></td>
+   <td>Lance l'application. Ne renvoie aucune valeur.</td>
+  </tr>
+  <tr>
+   <td><code>uninstall()</code></td>
+   <td>Désinstalle l'application, inclus la suppression des ressources locales. Une confirmation par l'utilisateur peut être nécessaire. Renvoie un objet <code>pendingUninstall</code>.</td>
+  </tr>
+  <tr>
+   <td><code>checkForUpdate()</code></td>
+   <td>Pour les <a href="/en-US/docs/Apps/Packaged_apps" title="/en-US/docs/Apps/Packaged_apps">applications empaquetées</a>. Vérifie si l'application empaquetée a été mise à jour. Renvoie un objet <a href="/fr/docs/Web/API/DOMRequest" title="Un objet DOMRequest représente une opération en cours. Il fournit des callbacks qui sont appelés quand l'operation est finit, ainsi qu'une reférence au résultat de l'opération. Une méthode DOM qui initie une opération se poursuivant au cours du temps, retounera un objet DOMRequest que vous pouvez surveiller pour connaitre le déroulement de l'opération"><code>DOMRequest</code></a>.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Exemple_d'un_objet_App">Exemple d'un objet <code>App</code></h2>
+
+<pre class="brush: js">{
+  manifest: {
+    name: "Add-on Builder",
+    default_locale: "en",
+    installs_allowed_from: [
+      "https://apps-preview-dev.example.com/",
+      "https://apps-preview.example.com/"
+    ],
+    description: "Add-on Builder makes it easy to write, build and test Firefox extensions using common web technologies.",
+    version: "0.9.16.1",
+    developer: {
+      url: "https://builder.addons.mozilla.org/",
+      name: "Mozilla Flightdeck Team"
+    }
+  },
+  origin: "https://builder-addons-dev.example.com",
+  installTime: 1321986882773,
+  installOrigin: "https://apps-preview-dev.example.com",
+  receipts: ["h0dHBzOi8v <em>(la majorité du reçu a été supprimée)</em> Tg2ODtkUp"]
+}</pre>

@@ -1,0 +1,53 @@
+---
+title: WebIDE 问题排除
+slug: Tools/WebIDE/问题排除
+translation_of: Archive/WebIDE/Troubleshooting
+---
+<div>{{ToolsSidebar}}</div><h2 id="使用USB连接Firefox_for_Android">使用USB连接Firefox for Android</h2>
+
+<p>如果你试着连接一个Android设备上的Firefox实例，但并没有成功。你可以尝试下面的解决方法：</p>
+
+<ul>
+ <li>检查你设备上Firefox的版本，确认你的设备运行的是Firefox  36或更高，因为低于此版本的话，WebIDE将不能自动侦测到设备。当然，如果你当前运行的版本确实低于要求的最低版本，你可以选择更新你的浏览器（推荐），你也可以选择手动开启端口转发并且连接到这个设备开启的端口（参考文档：<a href="https://developer.mozilla.org/en-US/docs/Tools/Remote_Debugging/Firefox_for_Android">Remote debugging on Firefox for Android</a>）</li>
+ <li>确认你是否在设备的Firefox中开启了远程调试功能，<code>Firefox &gt; Menu &gt; Settings &gt; Advanced &gt; Remote debugging via USB</code></li>
+ <li>确认设备是否开启USB调试（因为不同的机型设置方式不同，此处不予详细步骤）</li>
+ <li>如果你在WebIDE内仍然没有看到你的设备，尝试以下操作
+  <ul>
+   <li>拔下USB数据线并关闭<code>Remote debugging via USB</code>选项</li>
+   <li>重新插上USB数据线，重新打开Firefox并开启<code>Remote debugging via USB</code>选项</li>
+   <li>再次连接WebIDE</li>
+  </ul>
+ </li>
+ <li>确认你连接你的Firefox OS设备到你的电脑上的同时没有其他Android电话设备也连接到电脑上面。</li>
+ <li>使用你电脑上不同的USB接口。</li>
+ <li>更换USB线， 电话附带的USB线通常质量比较差，可能导致连接失败。</li>
+ <li>尝试使用更短的USB线。</li>
+ <li>在Settings中重复禁用和启用 Remote Debugging 功能，并且尝试多次插拔USB线。</li>
+ <li>如果你禁用 <a href="/en-US/docs/Tools/WebIDE#Custom_runtimes"> ADB Addon Helper</a>, 看看你还是否能成功地运行命令 adb forward ？</li>
+ <li>如果你使用的是Linux系统，确认你已经增加了udev规则文件。在<a class="external external-icon" href="http://developer.android.com/tools/device.html#setting-up">安装设置Android设备指南</a>中的第3步有记录说明。Geeksphone分配使用的idVendor是05c6， 并且在<a class="external external-icon" href="http://developer.android.com/tools/device.html#VendorIds">这一页</a>中有列出其他厂商的idVendor值。</li>
+ <li>如果你电脑使用的是Windows系统:
+  <ul>
+   <li>你需要根据<a class="external external-icon" href="http://developer.android.com/tools/device.html#setting-up">安装设置Android设备指南</a>中的第三步来安装驱动程序，可以在<a class="external external-icon" href="http://downloads.geeksphone.com/">Geeksphone </a>网站上找到Geeksphone设备的驱动程序。Windows 8在默认情况下不能够安装未签名的驱动程序，可以参考 <a class="external-icon external" href="http://www.craftedge.com/tutorials/driver_install_windows8/driver_install_win8.html" title="http://www.craftedge.com/tutorials/driver_install_windows8/driver_install_win8.html">"如何在Windows 8上安装未签名的驱动"</a>。</li>
+   <li>如果上面所有的方法都不能让WebIDE找到你的设备的话，你或许不得不编辑<a class="external-icon external" href="http://blog.fh-kaernten.at/wehr/?p=1182"> adb_usb.ini</a>.</li>
+  </ul>
+ </li>
+ <li>如果你是EasyTether的用户，尝试卸载或者禁用EasyTether： <code>sudo kextunload /System/Library/Extensions/EasyTetherUSBEthernet.kext</code></li>
+</ul>
+
+<h2 id="调试认证的应用">调试认证的应用</h2>
+
+<p>如果你想要调试认证的app，包括内建的app，请参考：<a href="/en-US/docs/Tools/WebIDE#Debugging_certified_apps">调试认证的app</a>。</p>
+
+<h2 id="启用日志功能">启用日志功能</h2>
+
+<p>你也可以启用详细日志功能来收集诊断信息：</p>
+
+<ol start="1" style="list-style-type: decimal;">
+ <li>访问 <a class="external external-icon" href="http://kb.mozillazine.org/About:config">about:config</a>, 增加一个新的配置： <span class="message"><span class="content"><code><span class="email">extensions.adbhelper@mozilla.org.sdk</span>.console.logLevel</code>, 将其值设置为a<code>ll,</code></span></span><span class="message"><span class="content"><code>并设置</code></span></span>extensions.adbhelper@mozilla.org.debug<span class="message"><span class="content"><code>为True。</code></span></span></li>
+ <li>在<a class="external external-icon" href="https://support.mozilla.org/en-US/kb/disable-or-remove-add-ons">插件管理器</a>中禁用 ADB Helper add-on，然后在启用。</li>
+ <li>打开<a href="https://developer.mozilla.org/en-US/docs/Tools/Browser_Console">浏览器控制台</a> 现在你可以看到带adb前缀的控制台信息，如果这个信息对你来说没有任何用处，<a href="/en-US/docs/Tools/WebIDE/Troubleshooting#Get_help">请寻求帮助</a> 。</li>
+</ol>
+
+<h2 id="获取帮助">获取帮助</h2>
+
+<p>你也可以去 <a class="external external-icon" href="https://wiki.mozilla.org/DevTools/GetInvolved#Communication">IRC的devtools房间</a> ， 我们会尝试提供帮助。</p>

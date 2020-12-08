@@ -1,0 +1,61 @@
+---
+title: 'RangeError: radix must be an integer'
+slug: Web/JavaScript/Reference/Errors/Bad_radix
+tags:
+  - Errors
+  - JavaScript
+  - RangeError
+translation_of: Web/JavaScript/Reference/Errors/Bad_radix
+---
+<div>{{jsSidebar("Errors")}}</div>
+
+<h2 id="メッセージ">メッセージ</h2>
+
+<pre class="syntaxbox">RangeError: radix must be an integer at least 2 and no greater than 36 (Firefox)
+RangeError: toString() radix argument must be between 2 and 36 (Chrome)
+</pre>
+
+<h2 id="エラータイプ">エラータイプ</h2>
+
+<p>{{jsxref("RangeError")}}</p>
+
+<h2 id="何がうまくいかなかったのか？">何がうまくいかなかったのか？</h2>
+
+<p>{{jsxref("Number.prototype.toString()")}} メソッドで、オプションの <code>radix</code> パラメーターを使用しています。このパラメーターは、数値を表すために使用するナンバーシステムを指定する 2 から 36 の整数（数）でなければなりません。</p>
+
+<p>なぜ上限が 36 なのでしょうか？10 よりも大きい基数には、アルファベットが数値として用いられます。ラテンアルファベットは 26 文字しかないため、基数は 36 以上にはできません。</p>
+
+<p>一般的な基数として、以下のものを使用します：</p>
+
+<ul>
+ <li><a href="https://ja.wikipedia.org/wiki/%E4%BA%8C%E9%80%B2%E6%B3%95">二進法</a>のための 2、</li>
+ <li><a href="https://ja.wikipedia.org/wiki/%E5%85%AB%E9%80%B2%E6%B3%95">八進法</a>のための 8、</li>
+ <li><a href="https://ja.wikipedia.org/wiki/%E5%8D%81%E9%80%B2%E6%B3%95">十進法</a>のための 10、</li>
+ <li><a href="https://ja.wikipedia.org/wiki/%E5%8D%81%E5%85%AD%E9%80%B2%E6%B3%95">十六進法</a>のための 16。</li>
+</ul>
+
+<h2 id="例">例</h2>
+
+<h3 id="無効なケース">無効なケース</h3>
+
+<pre class="brush: js example-bad">(42).toString(0);
+(42).toString(1);
+(42).toString(37);
+(42).toString(150);
+// フォーマットのために、このような文字列は使用できません：
+(12071989).toString("MM-dd-yyyy");
+</pre>
+
+<h3 id="有効なケース">有効なケース</h3>
+
+<pre class="brush: js example-good">(42).toString(2);     // "101010" (二進数)
+(13).toString(8);     // "15"     (八進数)
+(0x42).toString(10);  // "66"     (十進数)
+(100000).toString(16) // "186a0"  (十六進数)
+</pre>
+
+<h2 id="関連項目">関連項目</h2>
+
+<ul>
+ <li>{{jsxref("Number.prototype.toString()")}}</li>
+</ul>

@@ -1,0 +1,174 @@
+---
+title: Getting Started (jpm)
+slug: Mozilla/Add-ons/SDK/Tutorials/Getting_Started_(jpm)
+translation_of: Archive/Add-ons/Add-on_SDK/Tutorials/Getting_Started_(jpm)
+---
+<p>{{AddonSidebar}}</p>
+
+<div class="blockIndicator warning">
+<p dir="ltr" id="docs-internal-guid-02db9a93-7fff-3bd4-b03f-ecfeb67b25c5">Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 57, released November 2017. As there is no supported version of Firefox enabling these technologies, this page will be removed by December 2020.</p>
+</div>
+
+<p>{{LegacyAddonsNotice}}</p>
+
+<p> </p>
+
+<div class="note">
+<p>Add-on SDK は開発環境の作成, 実行, テスト, アドオンのパッケージング等を行うことができるコマンドラインツールを含みます. <a href="http://nodejs.org/">Node.js </a> を元に作成された jpm と呼ばれるクライアントツールは古い cfx tool を置き換えるものです.</p>
+jpm は Firefox 38 以上で使用可能です.
+
+<p>この記事では jpm を使ってどのように開発を行うのかを説明します.</p>
+</div>
+
+<p><span class="seoSummary">このチュートリアルでは SDK を使ってシンプルなアドオンを作成していきます.</span></p>
+
+<h2 id="前提条件">前提条件</h2>
+
+<p>SDK を使って Firefox のアドオンを作成するには, 以下の環境が必要です:</p>
+
+<ul>
+ <li>Firefox version 38 以上. それ以前の Firefox を使用する場合, 従来の cfx tool が必要です. <a href="/en-US/Add-ons/SDK/Tutorials/Getting_started_(cfx)">getting started with cfx</a> のインストラクションを参照してください.</li>
+ <li>コマンドラインツール jpm. <a href="/en-US/Add-ons/SDK/Tools/jpm#Installation">installing jpm</a> のインストラクションを参照してください. 導入が終了したらコマンドプロンプトを開いてください.</li>
+ <li>作成したアドオンのテストのために <a href="https://www.mozilla.org/en-US/firefox/developer/">Firefox Developer Version</a> をインストールしてください.</li>
+</ul>
+
+<h2 id="最初のアドオンの初期化">最初のアドオンの初期化</h2>
+
+<p>コマンドプロンプト上で, 新規ディレクトリを作成します. そのディレクトリに移動し <code>jpm init</code> , と入力し, エンターを押します:</p>
+
+<pre>mkdir my-addon
+cd my-addon
+jpm init
+</pre>
+
+<p>作成するアドオンに関する情報を入力するように求められます: この情報はこれから作成するアドオンの <a href="/en-US/Add-ons/SDK/Tools/package_json">package.json</a> ファイルを 生成するために使用されます. 今回は, それぞれのプロパティをデフォルトにするため, ただ Enter を押していきます. <code>jpm init</code> に関する詳細な情報は, <a href="/en-US/Add-ons/SDK/Tools/jpm#Command_reference">jpm command reference</a> を参照してください.</p>
+
+<p>これらのプロパティの,値を入力, または デフォルト値に設定した後に "package.json" の完全な内容が表示され、それを受け入れるように求められます.</p>
+
+<h2 id="アドオンの実装">アドオンの実装</h2>
+
+<p>それでは, アドオンのコードを書いて行きましょう. "entry point" の値 (これは package.json の "<a href="/en-US/Add-ons/SDK/Tools/package_json#main">main</a>" にあります) を変更していない限り, アドオンの root 直下の "index.js" です. このファイルは前のステップで作成されたものです. このファイルを開き以下のコードを追加します:</p>
+
+<pre class="brush: js">var buttons = require('sdk/ui/button/action');
+var tabs = require("sdk/tabs");
+
+var button = buttons.ActionButton({
+  id: "mozilla-link",
+  label: "Visit Mozilla",
+  icon: {
+    "16": "./icon-16.png",
+    "32": "./icon-32.png",
+    "64": "./icon-64.png"
+  },
+  onClick: handleClick
+});
+
+function handleClick(state) {
+  tabs.open("http://www.mozilla.org/");
+}
+</pre>
+
+<div class="note">
+<p>jpm では "entry point" のデフォルト値は "index.js" であることに注意してください. これは, アドオンの主要なファイルが "index.js" であることを意味しています. また, これはアドオンの root ディレクトリを検索します. and it is found directly in your add-on's root.</p>
+
+<p>cfx では, entry point はデフォルトに "main.js" になります. これは, アドオンの root 直下の "lib" ディレクトリに置かれています.</p>
+</div>
+
+<p>ファイルをセーブします.</p>
+
+<p>続いて, <strong>"data"</strong> という名前のディレクトリをアドオンの root 直下に作成し,</p>
+
+<pre>mkdir data
+</pre>
+
+<p>そして以下の 3 つのアイコンファイルを <strong>"data"</strong> ディレクトリに保存します:</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/7635/icon-16.png" style="height: 16px; width: 16px;"></td>
+   <td>icon-16.png</td>
+  </tr>
+  <tr>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/7637/icon-32.png" style="height: 32px; width: 32px;"></td>
+   <td>icon-32.png</td>
+  </tr>
+  <tr>
+   <td><img alt="" src="https://mdn.mozillademos.org/files/7639/icon-64.png" style="height: 64px; width: 64px;"></td>
+   <td>icon-64.png</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>コマンドプロンプトに戻り, 以下のコマンドを入力します:</p>
+
+<pre>jpm run</pre>
+
+<p>この jpm コマンドは作成したアドオンをインストールした状態の新規 Firefox インスタンスを実行します.</p>
+
+<p>Firefox は見つからない場合や, Firefox Developer を代理のブラウザとしてインストールしている場合には, そこまでの path を渡す必要があるかもしれません. 例えば Ubuntu の場合:</p>
+
+<pre>jpm run -b /usr/bin/firefox</pre>
+
+<p>Firefox が起動すると, ブラウザの右上端に Firefox のロゴにアイコンが見えるはずです. このアイコンをクリックすると, 新しいタブが開き, <a href="http://www.mozilla.org/" rel="noreferrer">http://www.mozilla.org/</a> が読み込まれます.</p>
+
+<p>これでこのアドオンでやることは終了です. ここでは, 二つの SDK モジュール を使っています: <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action">action button</a> モジュール, これはブラウザにボタンを追加することができるモジュールです, <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs" rel="noreferrer">tabs</a> モジュール, これはタブの基本的な操作を行うことができるモジュールです. 今回のケースでは, 我々は Firefox アイコンのボタンを作成しました. また, 新規タブに Mozilla のホームページを読み込むクリックハンドラを追加しました.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7643/mozilla-button.png" style="display: block; height: 221px; margin-left: auto; margin-right: auto; width: 382px;"> このファイルを編集してみましょう. 例えば, 読み込むページを変更することができます.</p>
+
+<pre class="brush: js">var buttons = require('sdk/ui/button/action');
+var tabs = require("sdk/tabs");
+
+var button = buttons.ActionButton({
+  id: "mozilla-link",
+  label: "Visit Mozilla",
+  icon: {
+    "16": "./icon-16.png",
+    "32": "./icon-32.png",
+    "64": "./icon-64.png"
+  },
+  onClick: handleClick
+});
+
+function handleClick(state) {
+  tabs.open("https://developer.mozilla.org/");
+}</pre>
+
+<p>コマンドプロンプトで, <code>jpm run</code> を再度実行します. この時に, ボタンをクリックすると <a href="https://developer.mozilla.org/">https://developer.mozilla.org/</a> に移動します.</p>
+
+<h2 id="アドオンのパッケージング">アドオンのパッケージング</h2>
+
+<p>アドオンを作成し終え, 配布準備をする際には, アドオンを XPI にパッケージングする必要があります. これは Firefox アドオンをインストールするためのファイルフォーマットです. XPI を自分で配布したり, 他のユーザーがアドオンをダウンロードまたは, インストールできるようにするために, <a href="https://addons.mozilla.org" rel="noreferrer">https://addons.mozilla.org</a> に 公開することが可能です.</p>
+
+<p>XPIをビルドするためには, <code>jpm xpi</code> コマンドをアドオンのディレクトリで実行するだけです:</p>
+
+<pre>jpm xpi</pre>
+
+<p>次のようなメッセージを見ることができます:</p>
+
+<pre>JPM info Successfully created xpi at /path/to/my-addon/@my-addon-0.0.1.xpi
+</pre>
+
+<p>これが機能することをテストするために, XPI ファイルを自身がインストールしている Firefox にインストールしてみましょう. これは Firefox から Ctrl+O (Mac では Cmd+O)キーで行うことができます. もしくは, Firefox の "File" メニューから, "Open" を選択してもよいです. するとファイル選択ダイアログが開きます: "@my-addon.xpi" ファイルを選択すると アドオンインストールプロンプトが開きます.</p>
+
+<p>Firefoxでは, 基本的にローカルで開発されたアドオンでも署名が必要であることに注意してください. インストールが終了した後で, インストールされたアドオンのリストで disabled が示されている場合, 署名の不足を確認してください.注意してください。 開発中や, 公開する予定がない場合, 署名の無いアドオンを実行できるように <a>about:config</a> を開き, <em>xpinstall.signatures.required</em> を <em>false</em> に設定してください. この設定を全てのアドオンに適応されてしまうため, 他の場所から悪意のあるものを誤ってインストールしないように特別な注意を払ってください.</p>
+
+<p>アドオンを配布するために, <a href="https://addons.mozilla.org/en-US/developers/addon/submit/2"> XPI を addons.mozilla.org に提出</a> します. また自身のサーバーにアドオンを配布したい場合, <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm#jpm_sign">jpm sign</a> を 実行します.</p>
+
+<h2 id="結論">結論</h2>
+
+<p>このチュートリアルでは, 3 つのコマンドを使いアドオンのビルドやパッケージングを行いました:</p>
+
+<ul>
+ <li><code>jpm init</code> 空のアドオンテンプレートを初期化する</li>
+ <li><code>jpm run</code> アドオンがインストールされた Firefox インスタンスを実行する. 作成したアドオンを試すことができる</li>
+ <li><code>jpm xpi</code> 配布用にアドオンをXPIファイルにパッケージングする</li>
+</ul>
+
+<p>これらは, SDK アドオン開発している時に使用する 3 つの主要なコマンドです. これらがとれるオプションや利用できるすべてのコマンドをカバーした包括的な <a href="/en-US/Add-ons/SDK/Tools/jpm" rel="noreferrer">リファレンス</a> があります.</p>
+
+<p>アドオンコードでは 二つの SDK モジュール, <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action">action button</a> や <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs" rel="noreferrer">tabs</a> を使用しました. SDK における 全てのAPIs, <a href="/en-US/Add-ons/SDK/High-Level_APIs" rel="noreferrer">high-level</a> や <a href="/en-US/Add-ons/SDK/Low-Level_APIs" rel="noreferrer">low-level</a> に関するレファレンスは存在します.</p>
+
+<h2 id="What's_next">What's next?</h2>
+
+<p>SDK APIs を使ってできるいくつかのことを把握するために, <a href="/en-US/Add-ons/SDK/Tutorials" rel="noreferrer">tutorials</a> に挑戦してみてください.</p>

@@ -1,0 +1,102 @@
+---
+title: nsIFeedProgressListener
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsIFeedProgressListener
+tags:
+  - Interfaces
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIFeedProgressListener
+---
+<p><code>nsIFeedProgressListener</code> インタフェースは、RSS あるいは Atom フィードの処理中に使われるコールバックを定義します。フィードコンテントアクセス API を使うプログラムはこれらのコールバックのいずれも実装する必要はありません。それらは任意ですが、パース処理中にフィードバックを提供することができます。</p>
+<p><br>
+ </p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/feeds/public/nsiFeedListener.idl" rel="custom">toolkit/components/feeds/public/nsiFeedListener.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">最終更新: Gecko 1.8.1 (Firefox 2 / Thunderbird 2 / SeaMonkey 1.1)</span></div>
+</div>
+<p>継承元: <code><a href="ja/NsIFeedResultListener">nsIFeedResultListener</a></code></p>
+<h2 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E6.A6.82.E8.A6.81" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E6.A6.82.E8.A6.81">メソッドの概要</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="#handleEntry.28.29">handleEntry</a>(in nsIFeedEntry entry, in nsIFeedResult result);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#handleFeedAtFirstEntry.28.29">handleFeedAtFirstEntry</a>(in nsIFeedResult result);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#handleStartFeed.28.29">handleStartFeed</a>(in nsIFeedResult result);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#reportError.28.29">reportError</a>(in AString errorText, in long lineNumber, in boolean bozo);</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89">メソッド</h2>
+<h3 id="handleEntry.28.29" name="handleEntry.28.29">handleEntry()</h3>
+<p>エントリあるいはアイテムが処理された後に呼ばれます。もしドキュメントが単独のアイテムあるいはエントリなら、 <code><a href="#handleFeedAtFirstEntry.28.29">handleFeedAtFirstEntry()</a></code> メソッドが呼ばれることなく、<code><a href="ja/NsIFeedEntry">nsIFeedEntry</a></code> が <code>parent</code> の値に <code>null</code> を持つでしょう。</p>
+<pre class="eval"> void handleEntry(
+   in nsIFeedEntry entry,
+   in nsIFeedResult result
+ );
+</pre>
+<h6 id=".E3.83.91.E3.83.A9.E3.83.A1.E3.83.BC.E3.82.BF" name=".E3.83.91.E3.83.A9.E3.83.A1.E3.83.BC.E3.82.BF">パラメータ</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;entry&lt;/tt&gt;</dt>
+ <dd>
+  ちょうど処理されたエントリに関する情報を含んでいる <code><a href="ja/NsIFeedEntry">nsIFeedEntry</a></code> のポインタ。</dd>
+ <dt>
+  &lt;tt&gt;result&lt;/tt&gt;</dt>
+ <dd>
+  処理されているフィードに関する現在の情報を含む <code><a href="ja/NsIFeedResult">nsIFeedResult</a></code> のポインタ。</dd>
+</dl>
+<h3 id="handleFeedAtFirstEntry.28.29" name="handleFeedAtFirstEntry.28.29">handleFeedAtFirstEntry()</h3>
+<p>そのフィードで最初にエントリあるいはアイテムに出会った時に呼ばれます。Atomでは全てのフィードデータがエントリーに先行する必要があります; RSSではこれは必要ではありませんが通常はそうです。言い替えるとこのメソッドが呼ばれるとき、十中八九、ほとんどあるいは全てのフィードレベルのメタデータが処理され、受け取った <code><a href="ja/NsIFeedResult">nsIFeedResult</a></code> オブジェクトで利用できるでしょう。</p>
+<pre class="eval"> void handleFeedAtFirstEntry(
+   in nsIFeedResult result
+ );
+</pre>
+<h6 id=".E3.83.91.E3.83.A9.E3.83.A1.E3.83.BC.E3.82.BF_2" name=".E3.83.91.E3.83.A9.E3.83.A1.E3.83.BC.E3.82.BF_2">パラメータ</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;result&lt;/tt&gt;</dt>
+ <dd>
+  最初のエントリが見付かったが、処理される前の時点のフィードを表す <code><a href="ja/NsIFeedResult">nsIFeedResult</a></code>。</dd>
+</dl>
+<div class="note">
+ <b>注意:</b> もしフィードのタイプがエントリのみあるいはアイテムのみのタイプの場合、このイベントが呼ばれることはありません。</div>
+<h3 id="handleStartFeed.28.29" name="handleStartFeed.28.29">handleStartFeed()</h3>
+<p>フィードで妥当な先頭部分が検出されるとただちに呼ばれます; これはあなたのコードにそのフィードが他の種類のドキュメントではなく実際のフィードであるように見えることを知らせてくれます。</p>
+<p> </p>
+<pre class="eval"> void handleStartFeed(
+   in nsIFeedResult result
+ );
+</pre>
+<h6 id=".E3.83.91.E3.83.A9.E3.83.A1.E3.83.BC.E3.82.BF_3" name=".E3.83.91.E3.83.A9.E3.83.A1.E3.83.BC.E3.82.BF_3">パラメータ</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;result&lt;/tt&gt;</dt>
+ <dd>
+  フィードがパースされ始めた時点での状態を表す <code><a href="ja/NsIFeedResult">nsIFeedResult</a></code>。</dd>
+</dl>
+<h3 id="reportError.28.29" name="reportError.28.29">reportError()</h3>
+<p>致命的な XML パースエラーが発生したときや、ドキュメントがフィードではなかったときにフィードプロセッサによって呼ばれます。</p>
+<pre class="eval"> void reportError(
+   in AString errorText,
+   in long lineNumber,
+   in boolean bozo
+ );
+</pre>
+<p>それぞれのメソッドは少なくとも処理の時点での状態を表す <code><a href="ja/NsIFeedResult">nsIFeedResult</a></code> を入力として受け取ります。</p>
+<h2 id=".E5.8F.82.E7.85.A7" name=".E5.8F.82.E7.85.A7">参照</h2>
+<p><a href="ja/NsIFeedResultListener">nsIFeedResultListener</a></p>
+<p><span class="comment">Interwiki link</span></p>
+<div class="noinclude">
+  </div>

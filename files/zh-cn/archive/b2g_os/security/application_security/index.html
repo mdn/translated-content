@@ -1,0 +1,126 @@
+---
+title: 应用安全
+slug: Archive/B2G_OS/Security/Application_security
+translation_of: Archive/B2G_OS/Security/Application_security
+---
+<div class="summary">
+ <p>本文对Firefox OS 应用安全进行了详细阐述。</p>
+</div>
+<p>由Firefox OS 引入的关键性Web应用控制包含如下几个方面： </p>
+<ul>
+ <li>Web应用需要真正的安装和启动，而不是在浏览器中随意的导航而转到对应页面。应用在使用之前必须预安装到手机上，安全控制系统会对应用的更新和删除进行管理以保护用户的安全。</li>
+ <li>是否允许访问新的web API 是由权限系统控制的，即应用程序必须声明它打算使用之前安装的权限。为了获取对功能更强的API的使用权限，这些应用需要满足一定的要求，还要被Marketplace审查，批准，并签名通过。</li>
+ <li>Web应用是一个沙箱，在其中只能看到它们自己的资源（包括cookies, 离线存储IndexedDB 数据库等).即便两个应用从相同的URL装载页面，这两个页面也不会看作是同源的，因为它们是运行在单独的应用中的。</li>
+</ul>
+<h3 id="应用安全">应用安全</h3>
+<p>FirefoxOS 支持三种类型的web应用: "<strong>web</strong>", "<strong>privileged</strong>" 以及 "<strong>certified</strong>".一个应用的类型是在它的  <a href="/en-US/docs/Apps/Manifest" title="/en-US/docs/Apps/Manifest">manifest</a> 中声明的,同时也就决定了它能请求的权限列表。 </p>
+<ul>
+ <li><strong>Web Apps:</strong> 绝大多数第三方应用程序都是 "web" apps,  而且它也是一种默认类型。除了已经暴露给Web的权限外，它不会授予应用程序任何其他的权限。Web应用可以从任何网站上安装，而且不会进行任何进一步的验证。它们也可以被<a href="/en-US/docs/Web/Apps/Packaged_apps">打包</a>，但打包时不会允许应用具有任何其他的权限。</li>
+ <li><strong>Privileged Apps</strong>: 这些应用会被允许增加权限，而且它们必须要被Marketplace认证通过。</li>
+ <li><strong>Certified Apps: </strong>Certified apps 是指由OEM选定并预安装在设备上的应用。</li>
+</ul>
+<div class="note">
+ <p><b>注意</b>: 要进一步的了解这三种类型，可以参考 <a href="/en-US/docs/Apps/Manifest#type" title="/en-US/docs/Apps/Manifest#type">App Manifest</a> 文档。</p>
+</div>
+<h3 id="应用交付">应用交付</h3>
+<p>在Firefox OS 中，应用可以通过托管和打包这两种不同的机制交付。常规的web应用可以使用任何一种方式交付，而 privileged 和 certified 应用则必须要打包才能交付。</p>
+<h4 id="托管的应用">托管的应用</h4>
+<p>托管的应用程序中在开发者web服务器中只包含一个<a href="/en-US/docs/Apps/Manifest">应用程序manifest</a>文件,而这个文件会指向应用的index文件(通常会被称作安装路径)。通常manifest文件也会指向一个appcache manifest文件：这个文件会将应用的信息缓存起来，从而使应用启动时更加快速而且能够离线使用；同时这个文件在其他方面则不会对应用造成任何影响。 从安全的角度来看，托管的应用更像是通常的web站点。当托管应用加载时，加载页面的URL其实就是这些页面在它们web服务器的一般的URL地址。因此要链接应用中一个特定的页面或资源， 使用的URL地址与在web站点链接到那个页面的URL地址是相同的。</p>
+<h4 id="打包的应用">打包的应用</h4>
+<p><b>一个打包的应用</b> 是一个开放的Web应用，会在本地zip文件中存放有关应用的所有资源（包括  HTML, CSS, JavaScript, app manifest 等) contained in a zip file, 而不是将资源存放在web服务器上。要了解更多的细节，可参考<a href="/en-US/docs/Apps/Packaged_apps" title="Apps/Packaged_apps"> Packaged apps</a>. </p>
+<h3 id="应用安装"><b>应用安装</b></h3>
+<p>应用是通过 <a href="/en-US/docs/JavaScript_API" title="/en-US/docs/JavaScript_API">Apps Javascript API</a> 来安装的:</p>
+<ul>
+ <li>托管的应用 : 托管的应用是通过调用 <code>navigator.mozApps.<a href="/en-US/docs/Web/API/Apps.install" title="/en-US/docs/Web/API/Apps.install">install</a>(manifestURL)方法来安装的</code>, 其中 manifestURL 是一个URL用来指定应用位置的。要了解更多的细节，可参考 <a href="/en-US/docs/DOM/Apps.install">Installing Apps</a>.</li>
+ <li>打包的应用: 打包的应用是用过调用<code>navigator.mozApps.<a href="/en-US/docs/Web/API/Apps.installPackage" title="/en-US/docs/Web/API/Apps.installPackage">installPackage</a>(packageURL)方法来安装的。对打包的应用而言，应用程序的manifest文件存放在它自身的包内，因此是已经认证过的。</code> 还有第二个"mini-manifest"用来启动和安装应用。可参考  <a href="/en-US/docs/DOM/Apps.installPackage">Installing Packaged Apps</a> 和<a href="/en-US/docs/Apps/Packaged_apps" title="Apps/Packaged_apps"> Packaged apps</a> 来获取更多的信息。</li>
+</ul>
+<p>为了能保证一个应用能够想要作为一个web应用来安装，我们必须确保不能使一个网站假冒托管的应用程序清单。 我们会要求manifest要提供一个具体的mime-type <code>application/x-web-app-manifest+json。当manifest应用和和应用 manifest请求的页面相同，都是请求应用安装的页面时，这种限制才是放开的。</code></p>
+<h3 id="更新">更新</h3>
+<p>有关应用更新的过程是在 <a href="/en-US/docs/Apps/Updating_apps" title="Apps/Updating_apps">Updating apps</a> 有详细描述。</p>
+<h2 id="权限">权限</h2>
+<p>应用可以被授予在正常的网页最高权限之外的权限。默认情况下，应用会和正常的web页面拥有同样的权限，为了能够得到额外的权限，第一步就是在应用程序maifest文件中列出它想要的额外权限。 </p>
+<h3 id="Manifest_声明">Manifest 声明</h3>
+<p>对每一个应用需要的额外权限，manifest文件必须要在manifest中列出该权限，并且以人类可阅读的描述解释为什么应用需要访问这个权限。例如，如果应用需要使用 <a href="/en-US/docs/Web/API/window.navigator.geolocation" title="/en-US/docs/Web/API/window.navigator.geolocation">navigator.geolocation</a> API, 它就必须在manifest中如下声明：</p>
+<pre class="brush: html">"permissions": {
+  "geolocation":{
+<code class="language-js"><span class="token string">    "description"</span><span class="token punctuation">:</span> <span class="token string">"Required for autocompletion in the share screen"</span><span class="token punctuation">,</span></code>
+  }
+},
+</pre>
+<p>This allows the app to then prompt for the geolocation permission, in the same way that a web page normally would. For further detail on manifests, see <a href="/en-US/docs/Apps/Manifest" title="Apps/Manifest">App manifest</a>.</p>
+<div class="note">
+ <p><strong>Note</strong>: Currently permissions usage intentions are not exposed to the user — see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=823385" title="https://bugzilla.mozilla.org/show_bug.cgi?id=823385">bug 823385</a>.</p>
+</div>
+<h3 id="授予权限">授予权限</h3>
+<p>When permissions are requested in the manifest, the permission is either set to <em>allow</em> or <em>prompt</em>, depending on the permissions. Allow permissions are granted by virtue of being declared in the manifest with no further approval needed. For prompt permissions, the user is prompted the first time the user accesses the related API, and has to make a choice prior to the API being granted. In general, Firefox OS only prompts users for permissions that have a privacy impact, and it is reasonable for the user to understand what they are being asked. For example, access to contacts is prompted, but access to make a raw TCP connection is implicitly granted since it is not reasonable for a user to understand the security implications of allowing this permission. Use of allow permissions is reviewed as part of Marketplace security review processes to ensure users are protected.</p>
+<h3 id="撤销权限">撤销权限</h3>
+<p>Users are allowed to change their mind about prompt permissions at any time, and can revoke these permissions via the Firefox OS settings app. Allow permissions are not user configurable, however.</p>
+<h2 id="Web_应用沙箱">Web 应用沙箱</h2>
+<h3 id="Data_stored_per_app_2"><span class="mw-headline" id="Data_stored_per_app">Data stored per app </span></h3>
+<p>Each app runs in as a separate sandbox, meaning that all data stored by an app is separate from all data stored by another app. This includes things like cookie data, localStorage data, indexedDB data, and site permissions.</p>
+<p><img alt="A diagram showing three Firefox OS apps all open is separate sandboxes, so none of them can affect each other." src="https://mdn.mozillademos.org/files/7091/sandbox.png" style="width: 1040px; height: 437px; display: block; margin: 0px auto;"></p>
+<p>This means that if the user has two apps installed, App A and App B, these apps will have a completely different set of cookies, different local data, and different permissions. This even applies if both of these apps open an <a href="/zh-CN/docs/Web/HTML/Element/iframe" title="HTML内联框架元素 &lt;iframe> 表示嵌套的浏览上下文，有效地将另一个HTML页面嵌入到当前页面中。在HTML 4.01中，文档可能包含头部和正文，或头部和框架集，但不能包含正文和框架集。但是，&lt;iframe>可以在正常的文档主体中使用。每个浏览上下文都有自己的会话历史记录和活动文档。包含嵌入内容的浏览上下文称为父浏览上下文。顶级浏览上下文（没有父级）通常是浏览器窗口。"><code>&lt;iframe&gt;</code></a> that points to the same origin. i.e. if both App A and App B open an <code>&lt;iframe&gt;</code> pointing to "<a class="external free" href="http://www.mozilla.org" rel="nofollow">http://www.mozilla.org</a>", they will both render the website, however the website will be fetched and rendered with different cookies in the two apps.</p>
+<p>A result of this is that if the user logs in to, for example, Facebook while using App A, this in no way affects App B's ability to interact with the user's account on Facebook. The login cookie that Facebook sets when the user logs in using App A is only available in App A. If App B opens an <code>&lt;iframe&gt;</code> to Facebook, the cookie wouldn't be there and so when App B opens Facebook, it receives the Facebook login page rather than the user's account.</p>
+<h3 id="Apps_can't_open_each_other"><span class="mw-headline" id="Apps_can.27t_open_each_other">Apps can't open each other </span></h3>
+<p>This means that apps can't open other apps by using iframes. If App A creates an <code>&lt;iframe&gt;</code> with the <code>src</code> set to the URL of App B, this won't actually open App B in the <code>&lt;iframe&gt;</code>. It will simply open the website located at that URL. It will not use any of App B's cookies and so it will behave no differently than if App B wasn't installed on the user's device.</p>
+<p>This applies even for packaged apps (more about them below). If App A tries to open the packaged App B using an <code>&lt;iframe&gt;</code> pointing to the <code>app://</code> URL of App B, this will simply fail to load. If this results in a 404 or some other type of error is still to be determined, but it will definitely fail to load. And it will fail in the same way no matter if App B is installed on the user's device or not, as to make it impossible for App A to determine if App B is installed.</p>
+<p>The same thing happens if the top-level frame of App A is navigated to a URL for App B. We always know for a given frame which app is opened in it, therefore when attempting to load the App B URL in the App A frame, this will behave exactly like the two situations described above, i.e. in no way will App B's resources, like cookies or other local data, be used.</p>
+<h3 id="Motivation_2"><span class="mw-headline" id="Motivation">Motivation</span></h3>
+<p>There are both benefits and downsides to this approach. The downside is that if the user interacts with the same web site through several apps, he/she will have to log in to every app. Likewise, if a web site wants to store data locally, and the user interacts with this web site in several apps, the data will end up getting duplicated in each app, which could be a problem if it's a large amount of data.</p>
+<p>The main benefit of this approach is that it's a more stable model. There is no way that several apps could interact with each other through a third-party website in unexpected ways such that installing an app causes another app to stop working. When an app is uninstalled there is no way that data for another app could be lost, or that another app will stop working due to functional dependence on the uninstalled app.</p>
+<p>There are also large security benefits. A user can safely use his AwesomeSocial app to log in to Facebook without having to worry that the SketchGame app can mount any type of attack for getting at the user's Facebook data by exploiting bugs or other shortcomings in the Facebook web site.</p>
+<p>There are also good privacy benefits. The user can safely install the PoliticalPartyPlus app without having to worry that MegaCorpEmployeeApp will be able to detect that the app was installed or what data it has created.</p>
+<h3 id="Sandboxed_权限"><span class="mw-headline" id="Sandboxed_Permissions">Sandboxed 权限</span></h3>
+<p>In the same way that web site data is sandboxed per app, so is permission data. If App A loads a page from <a class="external free" href="http://maps.google.com" rel="nofollow">http://maps.google.com</a> and that page requests to use geolocation and the user says "yes, and remember this decision for all times", this only means that <a class="external free" href="http://maps.google.com" rel="nofollow">http://maps.google.com</a> has access to geolocation within App A. If App B then opens <a class="external free" href="http://maps.google.com" rel="nofollow">http://maps.google.com</a>, that page won't have access to geolocation unless the user grants that permission again.</p>
+<p>And just like in the normal browser, permissions are separated by origin. If App A is granted permission to use Geolocation, this does not mean that all origins running in App A have the permission to use Geolocation. If App A opens an <code>&lt;iframe&gt;</code> to <a class="external free" href="http://maps.google.com" rel="nofollow">http://maps.google.com</a>, then <a href="http://docs.google.com"><span class="external free">http://docs.google.com</span></a> still has to ask the user for permission before geolocation access is granted.</p>
+<h3 id="浏览器_API_沙箱">浏览器 API 沙箱</h3>
+<p>To additionally secure applications that open a large set of URLs, such as browsers, we have added a <em>browserContent flag</em>. The browserContent flag allows each app to have not one, but two sandboxes: one for the app itself, and one for any "web content" that it opens. For example:</p>
+<p>Say that the MyBrowser app is loaded from the <a class="external free" href="https://mybrowser.com" rel="nofollow">https://mybrowser.com</a> domain. This is the domain the scripts and resources are loaded within. The scripts and resources
+ <i>
+  belong</i>
+ to this domain.</p>
+<p>Now, if a page in this app creates an <code>&lt;iframe mozbrowser&gt;</code>, a different sandbox is created and used for this <code>&lt;iframe&gt;</code>, which is different from the sandbox used by the app. So for example if this <code>&lt;iframe&gt;</code> is navigated to <a class="external free" href="https://mybrowser.com" rel="nofollow">https://mybrowser.com</a>, it will result in different cookies being used inside the <code>&lt;iframe mozbrowser&gt;</code>. Likewise, the contents inside the <code>&lt;iframe mozbrowser&gt;</code> will see different IndexedDB and localStorage databases from the ones opened by the app.</p>
+<p>This also applies if the MyBrowser app wants to create integration with, for example, Google Maps to implement location-based browsing. If the app opens an <code>&lt;iframe&gt;</code> to <a class="external free" href="http://maps.google.com" rel="nofollow">http://maps.google.com</a>, it will receive a set of cookies for the <a class="external free" href="http://maps.google.com" rel="nofollow">http://maps.google.com</a> website. If the user then navigates inside the <code>&lt;iframe mozbrowser&gt;</code> containing <a class="external free" href="http://maps.google.com" rel="nofollow">http://maps.google.com</a>, this will use different cookies and different permissions to the top level app.</p>
+<p>Another example where this is useful is in a Yelp-like app. Yelp has the ability to visit a restaurant's website directly in the app. By using <code>&lt;iframe mozbrowser&gt;</code> to open the restaurant website, the Yelp app ensures that the restaurant website can't contain an <code>&lt;iframe&gt;</code> pointing back to Yelp's app (which points to <a class="external free" href="http://yelp.com" rel="nofollow">http://yelp.com</a>). If it does, the website will only receive the Yelp website, rather than the Yelp app. So there is no way that the restaurant website can mount an attack against the app since the contained Yelp website won't share any permissions or data with the Yelp app.</p>
+<h2 id="应用安全小结">应用安全小结</h2>
+<p>The table below summarizes the different types of Firefox OS apps, and describes the format, installation, and update processes for open web apps running on Firefox OS.</p>
+<table>
+ <caption>
+  Web App Types</caption>
+ <thead>
+  <tr>
+   <th scope="col">Type</th>
+   <th scope="col">Delivery</th>
+   <th scope="col">Permission Model</th>
+   <th scope="col">Installation</th>
+   <th scope="col">Updates</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Web</td>
+   <td>Hosted or Packaged</td>
+   <td>Less sensitive permissions, which are not dangerous to expose to unvalidated web content.</td>
+   <td>Installed from anywhere</td>
+   <td>Can be updated transparently to user or explicitly via a marketplace, depending on where the app was installed from, and the delivery mechanism.</td>
+  </tr>
+  <tr>
+   <td>Privileged</td>
+   <td>Packaged &amp; Signed</td>
+   <td>Privileged APIs requiring validation and authentication of the app.</td>
+   <td>Installed from a trusted marketplace</td>
+   <td>Updated via a trusted marketplace, user prompted to approve download and installation of updates.</td>
+  </tr>
+  <tr>
+   <td>Certified</td>
+   <td>Packaged</td>
+   <td>Powerful and dangerous APIs not available to third-party apps.</td>
+   <td>Pre-installed on the device</td>
+   <td>Updated only as part of system level updates.</td>
+  </tr>
+ </tbody>
+</table>
+<div class="note">
+ <p><strong>Note</strong>: For version 1.0 of Firefox OS, although web apps can be installed from any website/marketplace, privileged apps can only be installed from the Mozilla Marketplace, as support for multiple trusted marketplaces is not yet complete.</p>
+</div>
+<p> </p>

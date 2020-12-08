@@ -1,0 +1,1625 @@
+---
+title: Parser API
+slug: Mozilla/Projects/SpiderMonkey/Parser_API
+translation_of: Mozilla/Projects/SpiderMonkey/Parser_API
+---
+<p>{{ jsapi_minversion_header("1.8.5") }}</p>
+
+<p>最近构建的<a href="/En/SpiderMonkey/Build_Documentation" title="https://developer.mozilla.org/en/SpiderMonkey/Build_Documentation">独立的SpiderMonkey shell</a>包含了SpiderMonkey解析器的反射,可以通过JavaScript API来访问. 这使得我们更容易的用JavaScript写出处理JavaScript源代码的工具, 比如语法高亮工具,静态分析工具, 翻译器,编译器,混淆器等等.</p>
+
+<p>例子:</p>
+
+<pre>&gt; var expr = Reflect.parse("obj.foo + 42").body[0].expression
+&gt; expr.left.property
+({loc:null, type:"Identifier", name:"foo"})
+&gt; expr.right
+({loc:{source:null, start:{line:1, column:10}, end:{line:1, column:12}}, type:"Literal", value:42})
+</pre>
+
+<p>Reflect也可以使用在Firefox 7及以上版本中,但必须要导入一个模块:</p>
+
+<pre>Components.utils.import("resource://gre/modules/reflect.jsm")
+</pre>
+
+<p>如果不想用<code>Reflect</code>全局对象,也可以指定一个对象名称:</p>
+
+<pre>Components.utils.import("resource://gre/modules/reflect.jsm", obj)
+</pre>
+
+<h2 id="内置对象">内置对象</h2>
+
+<p>无论是SpiderMonkey shell还是Firefox (导入模块之后),全局对象<code>Reflect</code>目前都只有一个<code>parse</code>方法.</p>
+
+<h2 id="Reflect对象的属性"><code>Reflect</code>对象的属性</h2>
+
+<p><code>Reflect</code>对象目前只有一个方法.</p>
+
+<h4 id="Reflect.parse(src_options)"><code>Reflect.parse(src[, options])</code></h4>
+
+<p>将SRC强制转为字符串，并将结果作为javascript程序进行分析。默认情况下，解析返回一个表示被解析的抽象语法树（AST）的程序对象（见下文）</p>
+
+<p>可通过<strong>options</strong>对象提供其他选项, 可以使用的属性如下:</p>
+
+<table style="border: 1px solid #edf2f7; width: 67%;">
+ <tbody>
+  <tr style="background-color: rgb(241, 246, 251);">
+   <td><strong><span style="font-family: Courier New;">loc</span></strong></td>
+   <td>Boolean</td>
+   <td>Default: <span style="font-family: Courier New;">true</span></td>
+  </tr>
+  <tr>
+   <td colspan="3">如果<strong><span style="font-family: Courier New;">loc</span></strong>为<span style="font-family: Courier New;">true</span>,则解析器会在返回的AST节点中包含上源码的位置信息.</td>
+  </tr>
+  <tr style="background-color: rgb(241, 246, 251);">
+   <td><strong><span style="font-family: Courier New;">source</span></strong></td>
+   <td>String</td>
+   <td>Default: <span style="font-family: Courier New;">null</span></td>
+  </tr>
+  <tr>
+   <td colspan="3">A description of the input source; typically a filename, path, or URL. This string is not meaningful to the parsing process, but is produced as part of the source location information in the returned AST nodes.</td>
+  </tr>
+  <tr style="background-color: rgb(241, 246, 251);">
+   <td><strong><span style="font-family: Courier New;">line</span></strong></td>
+   <td>Number</td>
+   <td>Default: <span style="font-family: Courier New;">1</span></td>
+  </tr>
+  <tr>
+   <td colspan="3">初始行号,用在源码位置信息上.</td>
+  </tr>
+  <tr style="background-color: rgb(241, 246, 251);">
+   <td><strong><span style="font-family: Courier New;">builder</span></strong></td>
+   <td>Builder</td>
+   <td>Default: <span style="font-family: Courier New;">null</span></td>
+  </tr>
+  <tr>
+   <td colspan="3">
+    <p>A builder object, which can be used to produce AST nodes in custom data formats. The expected callback methods are described under <a href="/en/SpiderMonkey/Parser_API#Builder_objects" title="en/SpiderMonkey/Parser API#Builder objects">Builder Objects</a>.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>If parsing fails due to a syntax error, an instance of <code>SyntaxError</code> is thrown. The syntax error object thrown by <code>Reflect.parse()</code> has the same <code>message</code> property as the syntax error that would be thrown by <code>eval(src)</code>. The <code>lineNumber</code> and <code>fileName</code> properties of the syntax error object indicate the source location of the syntax error.</p>
+
+<h2 id="节点对象">节点对象</h2>
+
+<p>默认情况下, <code>Reflect.parse()</code> 生成Node对象, 即普通的JavaScript对象 (i.e., 它们的原型来自标准的<code>Object原型</code>). 所有的节点类型都实现了以下的接口:</p>
+
+<pre>interface Node {
+    type: string;
+    loc: SourceLocation | null;
+}
+</pre>
+
+<p><code>type</code> 字段是一个字符串，代表AST变量类型.节点的每个子类型在下面的文档中都用其  <code>type</code> 字段特定的字符串标注出来了. 你可以使用这个字段去决定一个节点要实现的接口.</p>
+
+<p><code>loc</code> 字段代表节点的源位置信息. 如果解析器未生成有关节点的源位置信息,  <code>null</code> 字段为空；否则它是一个对象， 包括一个起始位置 (the position of the first character of the parsed source region) 和一个结束位置 (the position of the first character <em>after</em> the parsed source region):ss</p>
+
+<pre>interface SourceLocation {
+    source: string | null;
+    start: Position;
+    end: Position;
+}
+</pre>
+
+<p>每个 <code>Position</code> 包括一个 <code>line</code> 数字 (1-indexed) 和 <code>column</code> 数字 (0-indexed):</p>
+
+<pre>interface Position {
+    line: uint32 &gt;= 1;
+    column: uint32 &gt;= 0;
+}</pre>
+
+<h3 id="Programs">Programs</h3>
+
+<pre>interface Program &lt;: Node {
+    type: "Program";
+    body: [ Statement ];
+}
+</pre>
+
+<p>A complete program source tree.</p>
+
+<h3 id="函数">函数</h3>
+
+<pre>interface Function &lt;: Node {
+    id: Identifier | null;
+    params: [ Pattern ];
+    defaults: [ Expression ];
+    rest: Identifier | null;
+    body: BlockStatement | Expression;
+    generator: boolean;
+    expression: boolean;
+}
+</pre>
+
+<p>A function declaration or expression. The <code>body</code> of the function may be a block statement, or in the case of an <a href="/en/JavaScript/New_in_JavaScript/1.8#Expression_closures_%28Merge_into_own_page.2fsection%29" title="https://developer.mozilla.org/en/new_in_javascript_1.8#Expression_closures_(Merge_into_own_page.2fsection)">expression closure</a>, an expression.</p>
+
+<div class="note"><strong>注:</strong> Expression closures 是SpiderMonkey特有的.</div>
+
+<p>If the <code>generator</code> flag is <code>true</code>, the function is a <a href="/en/JavaScript/Guide/Iterators_and_Generators" title="https://developer.mozilla.org/en/Core_JavaScript_1.5_Guide/Iterators_and_Generators">generator function</a>, i.e., contains a <code>yield</code> expression in its body (other than in a nested function).</p>
+
+<div class="note"><strong>注:</strong> Generators 是SpiderMonkey特有的.</div>
+
+<p>If the <code>expression</code> flag is <code>true</code>, the function is an expression closure and the <code>body</code> field is an expression.</p>
+
+<h3 id="语句">语句</h3>
+
+<pre>interface Statement &lt;: Node { }
+</pre>
+
+<p>任意语句.</p>
+
+<pre>interface EmptyStatement &lt;: Statement {
+    type: "EmptyStatement";
+}
+</pre>
+
+<p>一个空语句,也就是,一个孤立的分号.</p>
+
+<pre>interface BlockStatement &lt;: Statement {
+    type: "BlockStatement";
+    body: [ Statement ];
+}
+</pre>
+
+<p>一个语句块,也就是由大括号包围的语句序列.</p>
+
+<pre>interface ExpressionStatement &lt;: Statement {
+    type: "ExpressionStatement";
+    expression: Expression;
+}
+</pre>
+
+<p>一个表达式语句,也就是,仅有一个表达式组成的语句.</p>
+
+<pre>interface IfStatement &lt;: Statement {
+    type: "IfStatement";
+    test: Expression;
+    consequent: Statement;
+    alternate: Statement | null;
+}
+</pre>
+
+<p>一个<code>if</code>语句.</p>
+
+<pre>interface LabeledStatement &lt;: Statement {
+    type: "LabeledStatement";
+    label: Identifier;
+    body: Statement;
+}
+</pre>
+
+<p>一个标签语句,也就是, a statement prefixed by a <code>break</code>/<code>continue</code> label.</p>
+
+<pre>interface BreakStatement &lt;: Statement {
+    type: "BreakStatement";
+    label: Identifier | null;
+}
+</pre>
+
+<p>一个<code>break</code>语句.</p>
+
+<pre>interface ContinueStatement &lt;: Statement {
+    type: "ContinueStatement";
+    label: Identifier | null;
+}
+</pre>
+
+<p>一个<code>continue语句</code>.</p>
+
+<pre>interface WithStatement &lt;: Statement {
+    type: "WithStatement";
+    object: Expression;
+    body: Statement;
+}
+</pre>
+
+<p>A <code>with</code> statement.</p>
+
+<pre>interface SwitchStatement &lt;: Statement {
+    type: "SwitchStatement";
+    discriminant: Expression;
+    cases: [ SwitchCase ];
+    lexical: boolean;
+}
+</pre>
+
+<p>一个<code>switch</code>语句. The lexical flag is metadata indicating whether the <code>switch</code> statement contains any unnested <code>let</code> declarations (and therefore introduces a new lexical scope).</p>
+
+<pre>interface ReturnStatement &lt;: Statement {
+    type: "ReturnStatement";
+    argument: Expression | null;
+}
+</pre>
+
+<p>一个<code>return</code>语句.</p>
+
+<pre>interface ThrowStatement &lt;: Statement {
+    type: "ThrowStatement";
+    argument: Expression;
+}
+</pre>
+
+<p>一个<code>throw</code>语句.</p>
+
+<pre>interface TryStatement &lt;: Statement {
+    type: "TryStatement";
+    block: BlockStatement;
+    handlers: [ CatchClause ];
+    finalizer: BlockStatement | null;
+}
+</pre>
+
+<p>一个<code>try</code>语句.</p>
+
+<div class="note"><strong>注:</strong> 多个<code>catch</code>子句是SpiderMonkey特有的.</div>
+
+<pre>interface WhileStatement &lt;: Statement {
+    type: "WhileStatement";
+    test: Expression;
+    body: Statement;
+}
+</pre>
+
+<p>一个<code>while</code>语句.</p>
+
+<pre>interface DoWhileStatement &lt;: Statement {
+    type: "DoWhileStatement";
+    body: Statement;
+    test: Expression;
+}
+</pre>
+
+<p>一个<code>do</code>/<code>while</code>语句.</p>
+
+<pre>interface ForStatement &lt;: Statement {
+    type: "ForStatement";
+    init: VariableDeclaration | Expression | null;
+    test: Expression | null;
+    update: Expression | null;
+    body: Statement;
+}
+</pre>
+
+<p>一个<code>for</code>语句.</p>
+
+<pre>interface ForInStatement &lt;: Statement {
+    type: "ForInStatement";
+    left: VariableDeclaration |  Expression;
+    right: Expression;
+    body: Statement;
+    each: boolean;
+}
+</pre>
+
+<p>一个<code>for</code>/<code>in</code>语句, or, if <code>each</code> is <code>true</code>, a <code>for each</code>/<code>in</code> statement.</p>
+
+<div class="note"><strong>注:</strong> <code>for each</code>语法是SpiderMonkey特有的.</div>
+
+<pre>interface LetStatement &lt;: Statement {
+    type: "LetStatement";
+    head: [ { id: Pattern, init: Expression | null } ];
+    body: Statement;
+}
+</pre>
+
+<p>一个<code>let语句</code>.</p>
+
+<div class="note"><strong>注:</strong> <code>let</code>语句形式是SpiderMonkey特有的.</div>
+
+<pre>interface DebuggerStatement &lt;: Statement {
+    type: "DebuggerStatement";
+}
+</pre>
+
+<p>一个<code>debugger</code>语句.</p>
+
+<div class="note"><strong>注:</strong> <code>debugger</code>语句是ECMAScript 5中的新语法,尽管SpiderMonkey已经支持它很多年了.</div>
+
+<h3 id="声明">声明</h3>
+
+<pre>interface Declaration &lt;: Statement { }
+</pre>
+
+<p>Any declaration node. Note that declarations are considered statements; this is because declarations can appear in any statement context in the language recognized by the SpiderMonkey parser.</p>
+
+<div class="note"><strong>注:</strong> 任意嵌套作用域下的声明是SpiderMonkey特有的.</div>
+
+<pre>interface FunctionDeclaration &lt;: Function, Declaration {
+    type: "FunctionDeclaration";
+    id: Identifier;
+    params: [ Pattern ];
+    defaults: [ Expression ];
+    rest: Identifier | null;
+    body: BlockStatement | Expression;
+    generator: boolean;
+    expression: boolean;
+}
+</pre>
+
+<p>一个函数声明.</p>
+
+<div class="note"><strong>注:</strong> <code>id</code>字段不能为<code>null</code>.</div>
+
+<pre>interface VariableDeclaration &lt;: Declaration {
+    type: "VariableDeclaration";
+    declarations: [ VariableDeclarator ];
+    kind: "var" | "let" | "const";
+}
+</pre>
+
+<p>一个变量声明,可以通过<code>var</code>, <code>let</code>, 或<code>const</code>.</p>
+
+<pre>interface VariableDeclarator &lt;: Node {
+    type: "VariableDeclarator";
+    id: Pattern;
+    init: Expression | null;
+}
+</pre>
+
+<p>一个变量<span class="st">声明符</span>.</p>
+
+<div class="note"><strong>注:</strong> <code>id</code>字段不能为<code>null</code>.</div>
+
+<div class="note"><strong>注:</strong> <code>let</code>和<code>const是</code>SpiderMonkey特有的.</div>
+
+<h3 id="表达式">表达式</h3>
+
+<pre>interface Expression &lt;: Node, Pattern { }</pre>
+
+<p>任意表达式节点. Since the left-hand side of an assignment may be any expression in general, an expression can also be a pattern.</p>
+
+<pre>interface ThisExpression &lt;: Expression {
+    type: "ThisExpression";
+}
+</pre>
+
+<p>一个<code>this</code>表达式.</p>
+
+<pre>interface ArrayExpression &lt;: Expression {
+    type: "ArrayExpression";
+    elements: [ Expression | null ];
+}</pre>
+
+<p>一个数组表达式.</p>
+
+<pre>interface ObjectExpression &lt;: Expression {
+    type: "ObjectExpression";
+    properties: [ { key: Literal | Identifier,
+                    value: Expression,
+                    kind: "init" | "get" | "set" } ];
+}</pre>
+
+<p>一个对象表达式. A literal property in an object expression can have either a string or number as its <code>value</code>. Ordinary property initializers have a <code>kind</code> value <code>"init"</code>; getters and setters have the <code>kind</code> values <code>"get"</code> and <code>"set"</code>, respectively.</p>
+
+<pre>interface FunctionExpression &lt;: Function, Expression {
+    type: "FunctionExpression";
+    id: Identifier | null;
+    params: [ Pattern ];
+    defaults: [ Expression ];
+    rest: Identifier | null;
+    body: BlockStatement | Expression;
+    generator: boolean;
+    expression: boolean;
+}
+</pre>
+
+<p>一个函数表达式.</p>
+
+<pre>interface SequenceExpression &lt;: Expression {
+    type: "SequenceExpression";
+    expressions: [ Expression ];
+}</pre>
+
+<p>一个序列表达式,也就是一个由逗号分割的表达式序列.</p>
+
+<pre>interface UnaryExpression &lt;: Expression {
+    type: "UnaryExpression";
+    operator: UnaryOperator;
+    prefix: boolean;
+    argument: Expression;
+}</pre>
+
+<p>A unary operator expression.</p>
+
+<pre>interface BinaryExpression &lt;: Expression {
+    type: "BinaryExpression";
+    operator: BinaryOperator;
+    left: Expression;
+    right: Expression;
+}</pre>
+
+<p>一个二元运算符表达式.</p>
+
+<pre>interface AssignmentExpression &lt;: Expression {
+    type: "AssignmentExpression";
+    operator: AssignmentOperator;
+    left: Expression;
+    right: Expression;
+}</pre>
+
+<p>An assignment operator expression.</p>
+
+<pre>interface UpdateExpression &lt;: Expression {
+    type: "UpdateExpression";
+    operator: UpdateOperator;
+    argument: Expression;
+    prefix: boolean;
+}</pre>
+
+<p>An update (increment or decrement) operator expression.</p>
+
+<pre>interface LogicalExpression &lt;: Expression {
+    type: "LogicalExpression";
+    operator: LogicalOperator;
+    left: Expression;
+    right: Expression;
+}</pre>
+
+<p>一个逻辑运算符表达式.</p>
+
+<pre>interface ConditionalExpression &lt;: Expression {
+    type: "ConditionalExpression";
+    test: Expression;
+    alternate: Expression;
+    consequent: Expression;
+}</pre>
+
+<p>一个条件运算符表达式, i.e., a ternary <code>?</code>/<code>:</code> expression.</p>
+
+<pre>interface NewExpression &lt;: Expression {
+    type: "NewExpression";
+    callee: Expression;
+    arguments: [ Expression ] | null;
+}</pre>
+
+<p>A <code>new</code> expression.</p>
+
+<pre>interface CallExpression &lt;: Expression {
+    type: "CallExpression";
+    callee: Expression;
+    arguments: [ Expression ];
+}</pre>
+
+<p>A function or method call expression.</p>
+
+<pre>interface MemberExpression &lt;: Expression {
+    type: "MemberExpression";
+    object: Expression;
+    property: Identifier | Expression;
+    computed : boolean;
+}</pre>
+
+<p>一个member表达式. If <code>computed === true</code>, the node corresponds to a computed <code>e1[e2]</code> expression and property is an <code>Expression</code>. If <code>computed === false</code>, the node corresponds to a static <code>e1.x</code> expression and property is an <code>Identifier</code>.</p>
+
+<pre>interface YieldExpression &lt;: Expression {
+    argument: Expression | null;
+}
+</pre>
+
+<p>A <code>yield</code> expression.</p>
+
+<div class="note"><strong>注:</strong> <code>yield</code> expressions 是SpiderMonkey特有的.</div>
+
+<pre>interface ComprehensionExpression &lt;: Expression {
+    body: Expression;
+    blocks: [ ComprehensionBlock ];
+    filter: Expression | null;
+}
+</pre>
+
+<p>An <a href="/en/JavaScript/Guide/Obsolete_Pages/Working_with_Arrays#Array_comprehensions" title="https://developer.mozilla.org/en/Core_JavaScript_1.5_Guide/Working_with_Arrays#Array_comprehensions">array comprehension</a>. The <code>blocks</code> array corresponds to the sequence of <code>for</code> and <code>for each</code> blocks. The optional <code>filter</code> expression corresponds to the final <code>if</code> clause, if present.</p>
+
+<div class="note"><strong>注:</strong> Array comprehensions 是SpiderMonkey特有的.</div>
+
+<pre>interface GeneratorExpression &lt;: Expression {
+    body: Expression;
+    blocks: [ ComprehensionBlock ];
+    filter: Expression | null;
+}
+</pre>
+
+<p>A <a href="/en/JavaScript/Guide/Iterators_and_Generators#Generator_expressions" title="https://developer.mozilla.org/en/Core_JavaScript_1.5_Guide/Iterators_and_Generators#Generator_expressions">generator expression</a>. As with array comprehensions, the <code>blocks</code> array corresponds to the sequence of <code>for</code> and <code>for each</code> blocks, and the optional <code>filter</code> expression corresponds to the final <code>if</code> clause, if present.</p>
+
+<div class="note"><strong>注:</strong> Generator expressions 是SpiderMonkey特有的.</div>
+
+<pre>interface GraphExpression &lt;: Expression {
+    index: uint32;
+    expression: Literal;
+}
+</pre>
+
+<p>A <a href="/en/JavaScript/Sharp_variables_in_JavaScript" title="https://developer.mozilla.org/en/Sharp_variables_in_JavaScript">graph expression</a>, aka "sharp literal," such as <code>#1={ self: #1# }</code>.</p>
+
+<div class="note"><strong>注:</strong> Graph expressions 是SpiderMonkey特有的.</div>
+
+<pre>interface GraphIndexExpression &lt;: Expression {
+    index: uint32;
+}
+</pre>
+
+<p>一个<a href="/en/JavaScript/Sharp_variables_in_JavaScript" title="https://developer.mozilla.org/en/Sharp_variables_in_JavaScript">graph索引表达式</a>,又称为"井号变量",比如<code>#1#</code>.</p>
+
+<div class="note"><strong>注:</strong> Graph索引表达式</div>
+
+<div class="note">Graph索引表达式是SpiderMonkey特有的.</div>
+
+<pre>interface LetExpression &lt;: Expression {
+    type: "LetExpression";
+    head: [ { id: Pattern, init: Expression | null } ];
+    body: Expression;
+}
+</pre>
+
+<p>一个<code>let表达式</code>.</p>
+
+<div class="note"><strong>注:</strong> <code>let</code>表达式是SpiderMonkey特有的.</div>
+
+<h3 id="模式">模式</h3>
+
+<pre>interface Pattern &lt;: Node { }
+</pre>
+
+<p>JavaScript 1.7 introduced <a href="/en/JavaScript/New_in_JavaScript/1.7#Destructuring_assignment_%28Merge_into_own_page.2fsection%29" title="https://developer.mozilla.org/en/new_in_javascript_1.7#Destructuring_assignment_(Merge_into_own_page.2fsection)">destructuring assignment and binding</a> forms. All binding forms (such as function parameters, variable declarations, and <code>catch</code> block headers), accept array and object destructuring patterns in addition to plain identifiers. The left-hand sides of assignment expressions can be arbitrary expressions, but in the case where the expression is an object or array literal, it is interpreted by SpiderMonkey as a destructuring pattern.</p>
+
+<p>Since the left-hand side of an assignment can in general be any expression, in an assignment context, a pattern can be any expression. In binding positions (such as function parameters, variable declarations, and <code>catch</code> headers), patterns can only be identifiers in the base case, not arbitrary expressions.</p>
+
+<pre>interface ObjectPattern &lt;: Pattern {
+    type: "ObjectPattern";
+    properties: [ { key: Literal | Identifier, value: Pattern } ];
+}
+</pre>
+
+<p>An object-destructuring pattern. A literal property in an object pattern can have either a string or number as its <code>value</code>.</p>
+
+<pre>interface ArrayPattern &lt;: Pattern {
+    type: "ArrayPattern";
+    elements: [ Pattern | null ];
+}
+</pre>
+
+<p>An array-destructuring pattern.</p>
+
+<h3 id="子句">子句</h3>
+
+<pre>interface SwitchCase &lt;: Node {
+    type: "SwitchCase";
+    test: Expression | null;
+    consequent: [ Statement ];
+}
+</pre>
+
+<p>一个<code>case</code> (if <code>test</code> is an <code>Expression</code>) or <code>default</code> (if <code>test === null</code>) clause in the body of a <code>switch</code>语句.</p>
+
+<pre>interface CatchClause &lt;: Node {
+    type: "CatchClause";
+    param: Pattern;
+    guard: Expression | null;
+    body: BlockStatement;
+}
+</pre>
+
+<p>A <code>catch</code> clause following a <code>try</code> block. The optional <code>guard</code> property corresponds to the optional expression guard on the bound variable.</p>
+
+<div class="note"><strong>注:</strong> The guard expression is SpiderMonkey-specific.</div>
+
+<pre>interface ComprehensionBlock &lt;: Node {
+    left: Pattern;
+    right: Expression;
+    each: boolean;
+}
+</pre>
+
+<p>A <code>for</code> or <code>for each</code> block in an array comprehension or generator expression.</p>
+
+<div class="note"><strong>注:</strong> Array comprehensions and generator expressions 是SpiderMonkey特有的.</div>
+
+<h3 class="r" id="杂项"><nobr>杂项</nobr></h3>
+
+<pre>interface Identifier &lt;: Node, Expression, Pattern {
+    type: "Identifier";
+    name: string;
+}
+</pre>
+
+<p>An identifier. Note that an identifier may be an expression or a destructuring pattern.</p>
+
+<pre>interface Literal &lt;: Node, Expression {
+    type: "Literal";
+    value: string | boolean | null | number | RegExp;
+}
+</pre>
+
+<p>A literal token. Note that a literal can be an expression.</p>
+
+<pre>enum UnaryOperator {
+    "-" | "+" | "!" | "~" | "typeof" | "void" | "delete"
+}
+</pre>
+
+<p>A unary operator token.</p>
+
+<pre>enum BinaryOperator {
+    "==" | "!=" | "===" | "!=="
+         | "&lt;" | "&lt;=" | "&gt;" | "&gt;="
+         | "&lt;&lt;" | "&gt;&gt;" | "&gt;&gt;&gt;"
+         | "+" | "-" | "*" | "/" | "%"
+         | "|" | "^" | "in"
+         | "instanceof" | ".."
+}
+</pre>
+
+<p>A binary operator token.</p>
+
+<div class="note"><strong>注:</strong> The <code>..</code> operator is E4X-specific.</div>
+
+<pre>enum LogicalOperator {
+    "||" | "&amp;&amp;"
+}
+</pre>
+
+<p>A logical operator token.</p>
+
+<pre>enum AssignmentOperator {
+    "=" | "+=" | "-=" | "*=" | "/=" | "%="
+        | "&lt;&lt;=" | "&gt;&gt;=" | "&gt;&gt;&gt;="
+        | "|=" | "^=" | "&amp;="
+}
+</pre>
+
+<p>An assignment operator token.</p>
+
+<pre>enum UpdateOperator {
+    "++" | "--"
+}
+</pre>
+
+<p>An update (increment or decrement) operator token.</p>
+
+<h3 id="E4X">E4X</h3>
+
+<p>下面介绍一下为E4X提供支持的节点类型.</p>
+
+<div class="note"><strong>注:</strong> E4X不是ECMAScript规范(<a class="external" href="http://www.ecma-international.org/publications/standards/Ecma-262.htm" title="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMA-262</a>)的一部分,它是一个单独的标准(<a class="external" href="http://www.ecma-international.org/publications/standards/Ecma-357.htm" title="http://www.ecma-international.org/publications/standards/Ecma-357.htm">ECMA-357</a>).</div>
+
+<h4 id="声明_2">声明</h4>
+
+<pre>interface XMLDefaultDeclaration &lt;: Declaration {
+    type: "XMLDefaultDeclaration";
+    namespace: Expression;
+}
+</pre>
+
+<p>一个默认<code>xml命名空间</code>声明</p>
+
+<h4 id="表达式_2">表达式</h4>
+
+<pre>interface XMLAnyName &lt;: Expression {
+    type: "XMLAnyName";
+}
+</pre>
+
+<p>The special E4X wildcard pseudo-identifier <code>*</code>.</p>
+
+<pre>interface XMLQualifiedIdentifier &lt;: Expression {
+    type: "XMLQualifiedIdentifier";
+    left: Identifier | XMLAnyName;
+    right: Identifier | Expression;
+    computed: boolean;
+}
+</pre>
+
+<p>An E4X qualified identifier, i.e., a pseudo-identifier using the namespace separator <code>::</code>. If the qualified identifier has a computed name (i.e., the <code>id::[expr]</code> form), then <code>computed</code> is <code>true</code> and the <code>right</code> property is an expression.</p>
+
+<pre>interface XMLFunctionQualifiedIdentifier &lt;: Expression {
+    type: "XMLFunctionQualifiedIdentifier";
+    right: Identifier | Expression;
+    computed: boolean;
+}
+</pre>
+
+<p>An E4X identifier qualified by the <code>function</code> keyword, e.g. <code>function::id</code>.</p>
+
+<div class="note"><strong>注:</strong> <code>function</code>-qualified identifiers 是SpiderMonkey特有的.</div>
+
+<pre>interface XMLAttributeSelector &lt;: Expression {
+    type: "XMLAttributeSelector";
+    attribute: Expression;
+}
+</pre>
+
+<p>An E4X attribute selector expression, i.e., an <code>@</code> expression.</p>
+
+<pre>interface XMLFilterExpression &lt;: Expression {
+    type: "XMLFilterExpression";
+    left: Expression;
+    right: Expression;
+}
+</pre>
+
+<p>An E4X list filter expression, i.e., an expression of the form <code>expr.(expr)</code>.</p>
+
+<pre>interface XMLElement &lt;: XML, Expression {
+    type: "XMLElement";
+    contents: [ XML ];
+}
+</pre>
+
+<p>An E4X literal representing a single XML element.</p>
+
+<pre>interface XMLList &lt;: XML, Expression {
+    type: "XMLList";
+    contents: [ XML ];
+}
+</pre>
+
+<p>An E4X literal representing a list of XML elements.</p>
+
+<h4 id="XML">XML</h4>
+
+<pre>interface XML &lt;: Node { }
+</pre>
+
+<p>XML data.</p>
+
+<pre>interface XMLEscape &lt;: XML {
+    type "XMLEscape";
+    expression: Expression;
+}
+</pre>
+
+<p>XML data with an escaped JavaScript expression.</p>
+
+<pre>interface XMLText &lt;: XML {
+    type: "XMLText";
+    text: string;
+}
+</pre>
+
+<p>Literal XML text.</p>
+
+<pre>interface XMLStartTag &lt;: XML {
+    type: "XMLStartTag";
+    contents: [ XML ];
+}
+</pre>
+
+<p>An XML start tag.</p>
+
+<pre>interface XMLEndTag &lt;: XML {
+    type: "XMLEndTag";
+    contents: [ XML ];
+}
+</pre>
+
+<p>An XML end tag.</p>
+
+<pre>interface XMLPointTag &lt;: XML {
+    type: "XMLPointTag";
+    contents: [ XML ];
+}
+</pre>
+
+<p>An XML point tag.</p>
+
+<pre>interface XMLName &lt;: XML {
+    type: "XMLName";
+    contents: string | [ XML ];
+}
+</pre>
+
+<p>An XML name.</p>
+
+<pre>interface XMLAttribute &lt;: XML {
+    type: "XMLAttribute";
+    value: string;
+}
+</pre>
+
+<p>An XML attribute value.</p>
+
+<pre>interface XMLCdata &lt;: XML {
+    type: "XMLCdata";
+    contents: string;
+}
+</pre>
+
+<p>An XML CDATA node.</p>
+
+<pre>interface XMLComment &lt;: XML {
+    type: "XMLComment";
+    contents: string;
+}
+</pre>
+
+<p>An XML comment.</p>
+
+<pre>interface XMLProcessingInstruction &lt;: XML {
+    type: "XMLProcessingInstruction";
+    target: string;
+    contents: string | null;
+}
+</pre>
+
+<p>An XML processing instruction.</p>
+
+<h2 id="Builder_objects">Builder objects</h2>
+
+<p>The optional <strong><code>builder</code></strong> parameter to <code>Reflect.parse()</code> makes it possible to construct user-specified data from the parser, rather than the default <code>Node</code> objects. Builder objects may contain any of the callback methods described in this section.</p>
+
+<p>Each callback can produce any custom, user-defined datatype; these are referred to below as <code>CustomExpression</code>, <code>CustomStatement</code>, etc.</p>
+
+<div class="note"><strong>注:</strong> Because this library uses <code>null</code> for optional nodes, it is recommended that user-defined datatypes <strong>not</strong> use <code>null</code> as a representation of an AST node.</div>
+
+<p>If the <strong><code>loc</code></strong> option is enabled (see the <a href="/en/SpiderMonkey/Parser_API#Reflect.parse(src.5b.2c_options.5d)" title="en/SpiderMonkey/Parser API#Reflect.parse(src.5b.2c options.5d)">Reflect.parse() options</a> above), then each callback is provided with the source location information of the parsed node as an extra parameter.</p>
+
+<p>All builder callbacks are optional. When a callback is missing, the default format is used, but the provided builder methods are still used recursively for sub-nodes.</p>
+
+<h3 id="Programs_2">Programs</h3>
+
+<h5 id="program(body_loc)"><code>program(body[, loc])</code></h5>
+
+<pre>body: [ CustomStatement ]
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomProgram</p>
+
+<p>Callback to produce a custom program node.</p>
+
+<h3 id="Statements">Statements</h3>
+
+<h5 id="emptyStatement(loc)"><code>emptyStatement([loc])</code></h5>
+
+<pre>loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom empty statement node.</p>
+
+<h5 id="blockStatement(body_loc)"><code>blockStatement(body[, loc])</code></h5>
+
+<pre>body: CustomStatement
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom block statement node.</p>
+
+<h5 id="expressionStatement(expr_loc)"><code>expressionStatement(expr[, loc])</code></h5>
+
+<pre>expr: CustomExpression
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom expression statement node.</p>
+
+<h5 id="labeledStatement(label_body_loc)"><code>labeledStatement(label, body[, loc])</code></h5>
+
+<pre>label: CustomIdentifier
+body: CustomStatement
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom labeled statement node.</p>
+
+<h5 id="ifStatement(test_cons_alt_loc)"><code>ifStatement(test, cons, alt[, loc])</code></h5>
+
+<pre>test: CustomExpression
+cons: CustomStatement
+alt: CustomStatement | null
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom <code>if</code> statement node.</p>
+
+<h5 id="switchStatement(disc_cases_isLexical_loc)"><code>switchStatement(disc, cases, isLexical[, loc])</code></h5>
+
+<pre>disc: CustomExpression
+cases: [ CustomSwitchCase ]
+isLexical: boolean
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom <code>switch</code> statement node. The <strong><code>isLexical</code></strong> flag is metadata indicating whether the <code>switch</code> statement contains any unnested <code>let</code> declarations (and therefore introduces a new lexical scope).</p>
+
+<h5 id="whileStatement(test_body_loc)"><code>whileStatement(test, body[, loc])</code></h5>
+
+<pre>test: CustomExpression
+body: CustomStatement
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom <code>while</code> statement node.</p>
+
+<h5 id="doWhileStatement(body_test_loc)"><code>doWhileStatement(body, test[, loc])</code></h5>
+
+<pre>body: CustomStatement
+test: CustomExpression
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom <code>do</code>-<code>while</code> statement node.</p>
+
+<h5 id="forStatement(init_test_update_body_loc)"><code>forStatement(init, test, update, body[, loc])</code></h5>
+
+<pre>init: CustomVariableDeclaration | CustomExpression | null
+test: CustomExpression | null
+update: CustomExpression | null
+body: CustomStatement
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom <code>for</code> statement node.</p>
+
+<h5 id="forInStatement(left_right_body_isForEach_loc)"><code>forInStatement(left, right, body, isForEach[, loc])</code></h5>
+
+<pre>left: CustomVariableDeclaration | CustomExpression
+right: CustomExpression
+body: CustomStatement
+isForEach: boolean
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom <code>for</code>-<code>in</code> statement node. The <strong><code>isForEach</code></strong> flag indicates whether the node is a <code>for each</code> statement.</p>
+
+<h5 id="breakStatement(label_loc)"><code>breakStatement(label[, loc])</code></h5>
+
+<pre>label: CustomIdentifier | null
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom <code>break</code> statement node.</p>
+
+<h5 id="continueStatement(label_loc)"><code>continueStatement(label[, loc])</code></h5>
+
+<pre>label: CustomIdentifier | null
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom <code>continue</code> statement node.</p>
+
+<h5 id="withStatement(obj_body_loc)"><code>withStatement(obj, body[, loc])</code></h5>
+
+<pre>obj: CustomExpression
+body: CustomStatement
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom <code>with</code> statement node.</p>
+
+<h5 id="returnStatement(arg_loc)"><code>returnStatement(arg[, loc])</code></h5>
+
+<pre>arg: CustomExpression | null
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom <code>return</code> statement node.</p>
+
+<h5 id="tryStatement(body_handlers_fin_loc)"><code>tryStatement(body, handlers, fin[, loc])</code></h5>
+
+<pre>body: CustomStatement
+handlers: [ CustomCatchClause ]
+fin: CustomStatement | null
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom <code>try</code> statement node.</p>
+
+<h5 id="throwStatement(arg_loc)"><code>throwStatement(arg[, loc])</code></h5>
+
+<pre>arg: CustomExpression
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom <code>throw</code> statement node.</p>
+
+<h5 id="debuggerStatement(loc)"><code>debuggerStatement([loc])</code></h5>
+
+<pre>loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom <code>debugger</code> statement node.</p>
+
+<h5 id="letStatement(head_body_loc)"><code>letStatement(head, body[, loc])</code></h5>
+
+<pre>head: [ CustomDeclarator ]
+body: CustomStatement
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom <code>let</code> statement node.</p>
+
+<h3 id="声明_3">声明</h3>
+
+<h5 id="functionDeclaration(name_args_body_isGenerator_isExpression_loc)"><code>functionDeclaration(name, args, body, isGenerator, isExpression[, loc])</code></h5>
+
+<pre>name: string
+args: [ CustomPattern ]
+body: CustomStatement | CustomExpression
+isGenerator: boolean
+isExpression: boolean
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomDeclaration</p>
+
+<p>Callback to produce a custom function declaration node.</p>
+
+<h5 id="variableDeclaration(kind_dtors_loc)"><code>variableDeclaration(kind, dtors[, loc])</code></h5>
+
+<pre>kind: "const" | "let" | "var"
+dtors: [ CustomDeclarator ]
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomDeclaration</p>
+
+<p>Callback to produce a custom variable declaration node.</p>
+
+<h5 id="variableDeclarator(patt_init_loc)"><code>variableDeclarator(patt, init[, loc])</code></h5>
+
+<pre>patt: CustomPattern
+init: CustomExpression | null
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomDeclarator</p>
+
+<p>Callback to produce a custom variable declarator node.</p>
+
+<h3 id="表达式_3">表达式</h3>
+
+<h5 id="sequenceExpression(exprs_loc)"><code>sequenceExpression(exprs[, loc])</code></h5>
+
+<pre>exprs: [ CustomExpression ]
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom sequence expression node.</p>
+
+<h5 id="conditionalExpression(test_cons_alt_loc)"><code>conditionalExpression(test, cons, alt[, loc])</code></h5>
+
+<pre>test: CustomExpression
+cons: CustomExpression
+alt: CustomExpression
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom conditional expression node.</p>
+
+<h5 id="unaryExpression(op_arg_isPrefix_loc)"><code>unaryExpression(op, arg, isPrefix[, loc])</code></h5>
+
+<pre>op: UnaryOperator
+arg: CustomExpression
+isPrefix: boolean
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom unary expression node.</p>
+
+<h5 id="binaryExpression(op_left_right_loc)"><code>binaryExpression(op, left, right[, loc])</code></h5>
+
+<pre>op: BinaryOperator
+left: CustomExpression
+right: CustomExpression
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom binary expression node.</p>
+
+<h5 id="assignmentExpression(op_left_right_loc)"><code>assignmentExpression(op, left, right[, loc])</code></h5>
+
+<pre>op: AssignmentOperator
+left: CustomExpression
+right: CustomExpression
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom assignment expression node.</p>
+
+<h5 id="logicalExpression(op_left_right_loc)"><code>logicalExpression(op, left, right[, loc])</code></h5>
+
+<pre>op: LogicalOperator
+left: CustomExpression
+right: CustomExpression
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom logical expression node.</p>
+
+<h5 id="updateExpression(op_arg_isPrefix_loc)"><code>updateExpression(op, arg, isPrefix[, loc])</code></h5>
+
+<pre>op: UpdateOperator
+arg: CustomExpression
+isPrefix: boolean
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom update expression node.</p>
+
+<h5 id="newExpression(callee_args_loc)"><code>newExpression(callee, args[, loc])</code></h5>
+
+<pre>callee: CustomExpression
+args: [ CustomExpression ]
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom <code>new</code>-expression node.</p>
+
+<h5 id="callExpression(callee_args_loc)"><code>callExpression(callee, args[, loc])</code></h5>
+
+<pre>callee: CustomExpression
+args: [ CustomExpression ]
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom function call node.</p>
+
+<h5 id="memberExpression(obj_prop_isComputed_loc)"><code>memberExpression(obj, prop, isComputed[, loc])</code></h5>
+
+<pre>obj: CustomExpression
+prop: CustomIdentifier | CustomExpression
+isComputed: boolean
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom member expression node.</p>
+
+<h5 id="functionExpression(name_args_body_isGenerator_isExpression_loc)"><code>functionExpression(name, args, body, isGenerator, isExpression[, loc])</code></h5>
+
+<pre>name: CustomIdentifier | null
+args: [ CustomPattern ]
+body: CustomStatement | CustomExpression
+isGenerator: boolean
+isExpression: boolean
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom function expression node.</p>
+
+<h5 id="arrayExpression(elts_loc)"><code>arrayExpression(elts[, loc])</code></h5>
+
+<pre>elts: [ CustomExpression | null ]
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom array expression node.</p>
+
+<h5 id="objectExpression(props_loc)"><code>objectExpression(props[, loc])</code></h5>
+
+<pre>props: [ CustomObjectProperty ]
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom object expression node.</p>
+
+<h5 id="thisExpression(loc)"><code>thisExpression([loc])</code></h5>
+
+<pre>loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom <code>this</code> expression node.</p>
+
+<h5 id="graphExpression(index_expr_loc)"><code>graphExpression(index, expr[, loc])</code></h5>
+
+<pre>index: uint32 &gt;= 1
+expr: CustomExpression
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom <code>graph</code> expression node.</p>
+
+<h5 id="graphIndexExpression(index_loc)"><code>graphIndexExpression(index[, loc])</code></h5>
+
+<pre>index: uint32 &gt;= 1
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom <code>graph index</code> expression node.</p>
+
+<h5 id="comprehensionExpression(body_blocks_filter_loc)"><code>comprehensionExpression(body, blocks, filter[, loc])</code></h5>
+
+<pre>body: CustomExpression
+blocks: [ CustomComprehensionBlock ]
+filter: CustomExpression | null
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom <code>comprehension</code> expression node.</p>
+
+<h5 id="generatorExpression(body_blocks_filter_loc)"><code>generatorExpression(body, blocks, filter[, loc])</code></h5>
+
+<pre>body: CustomExpression
+blocks: [ CustomComprehensionBlock ]
+filter: CustomExpression | null
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom <code>generator</code> expression node.</p>
+
+<h5 id="yieldExpression(arg_loc)"><code>yieldExpression(arg[, loc])</code></h5>
+
+<pre>arg: CustomExpression
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom <code>yield</code> expression node.</p>
+
+<h5 id="letExpression(head_body_loc)"><code>letExpression(head, body[, loc])</code></h5>
+
+<pre>head: [ CustomDeclarator ]
+body: CustomExpression
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom <code>let</code> expression node.</p>
+
+<h3 id="Patterns">Patterns</h3>
+
+<h5 id="arrayPattern(elts_loc)"><code>arrayPattern(elts[, loc])</code></h5>
+
+<pre>elts: [ CustomPattern | null ]
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomPattern</p>
+
+<p>Callback to produce a custom array destructuring pattern node.</p>
+
+<h5 id="objectPattern(props_loc)"><code>objectPattern(props[, loc])</code></h5>
+
+<pre>props: [ CustomPropertyPattern ]
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomPattern</p>
+
+<p>Callback to produce a custom object destructuring pattern node.</p>
+
+<h5 id="propertyPattern(key_patt_loc)"><code>propertyPattern(key, patt[, loc])</code></h5>
+
+<pre>key: CustomLiteral | CustomIdentifier
+patt: CustomPattern
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomPropertyPattern</p>
+
+<p>Callback to produce a custom object property destructuring pattern node.</p>
+
+<h3 id="Clauses">Clauses</h3>
+
+<h5 id="switchCase(test_cons_loc)"><code>switchCase(test, cons[, loc])</code></h5>
+
+<pre>test: CustomExpression | null
+cons: [ CustomStatement ]
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomSwitchCase</p>
+
+<p>Callback to produce a custom <code>case</code> or <code>default</code> clause node. The <strong><code>test</code></strong> argument is <code>null</code> if and only if the node is a <code>default</code> clause.</p>
+
+<h5 id="catchClause(arg_guard_body_loc)"><code>catchClause(arg, guard, body[, loc])</code></h5>
+
+<pre>arg: CustomPattern
+guard: CustomExpression
+body: CustomStatement
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomCatchClause</p>
+
+<p>Callback to produce a custom <code>catch</code> clause node.</p>
+
+<h5 id="comprehensionBlock(left_right_isForEach_loc)"><code>comprehensionBlock(left, right, isForEach[, loc])</code></h5>
+
+<pre>left: CustomPattern
+right: CustomExpression
+isForEach: boolean
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomComprehensionBlock</p>
+
+<p>Callback to produce a custom comprehension block node. The <strong><code>isForEach</code></strong> flag indicates whether the node is a <code>for each</code> block.</p>
+
+<h3 id="Miscellaneous">Miscellaneous</h3>
+
+<h5 id="identifier(name_loc)"><code>identifier(name[, loc])</code></h5>
+
+<pre>name: string
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomIdentifier/CustomPattern/CustomExpression</p>
+
+<p>Callback to produce a custom identifier node.</p>
+
+<h5 id="literal(val_loc)"><code>literal(val[, loc])</code></h5>
+
+<pre>val: string | boolean | null | number | RegExp
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomLiteral / CustomExpression</p>
+
+<p>Callback to produce a custom literal node.</p>
+
+<h5 id="property(kind_key_val_loc)"><code>property(kind, key, val[, loc])</code></h5>
+
+<pre>kind: "init" | "get" | "set"
+key: CustomLiteral | CustomIdentifier
+val: CustomExpression
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomObjectProperty</p>
+
+<p>Callback to produce a custom object property initializer node.</p>
+
+<h3 id="E4X_2">E4X</h3>
+
+<h4 id="Declarations">Declarations</h4>
+
+<h5 id="xmlDefaultDeclaration(ns_loc)"><code>xmlDefaultDeclaration(ns[, loc])</code></h5>
+
+<pre>loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomDeclaration</p>
+
+<p>Callback to produce a custom XML default namespace declaration node.</p>
+
+<h4 id="Expressions">Expressions</h4>
+
+<h5 id="xmlAnyName(loc)"><code>xmlAnyName([loc])</code></h5>
+
+<pre>loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomXMLAnyName/CustomXML/CustomExpression</p>
+
+<p>Callback to produce a custom XML node for the wildcard pseudo-identifier <code>*</code>.</p>
+
+<h5 id="xmlAttributeSelector(expr_loc)"><code>xmlAttributeSelector(expr[, loc])</code></h5>
+
+<pre>expr: CustomExpression
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomXML/CustomExpression</p>
+
+<p>Callback to produce a custom XML attribute selector node.</p>
+
+<h5 id="xmlFilterExpression(left_right_loc)"><code>xmlFilterExpression(left, right[, loc])</code></h5>
+
+<pre>left: CustomExpression
+right: CustomExpression
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomXML/CustomExpression</p>
+
+<p>Callback to produce a custom XML filter expression node.</p>
+
+<h5 id="xmlQualifiedIdentifier(left_right_isComputed_loc)"><code>xmlQualifiedIdentifier(left, right, isComputed[, loc])</code></h5>
+
+<pre>left: CustomIdentifier | CustomXMLAnyName
+right: CustomIdentifier | CustomExpression
+isComputed: boolean
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomXML/CustomExpression</p>
+
+<p>Callback to produce a custom qualified identifier node.</p>
+
+<h5 id="xmlFunctionQualifiedIdentifier(right_isComputed_loc)"><code>xmlFunctionQualifiedIdentifier(right, isComputed[, loc])</code></h5>
+
+<pre>right: CustomIdentifier | CustomExpression
+isComputed: boolean
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomXML/CustomExpression</p>
+
+<p>Callback to produce a custom XML <code>function</code>-qualified identifier node.</p>
+
+<h5 id="xmlElement(contents_loc)"><code>xmlElement(contents[, loc])</code></h5>
+
+<pre>contents: [ CustomXML ]
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomXML / CustomExpression</p>
+
+<p>Callback to produce a custom XML element node.</p>
+
+<h5 id="xmlList(contents_loc)"><code>xmlList(contents[, loc])</code></h5>
+
+<pre>contents: [ CustomXML ]
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomXML/CustomExpression</p>
+
+<p>Callback to produce a custom XML list node.</p>
+
+<h4 id="XML_2">XML</h4>
+
+<h5 id="xmlEscape(expr_loc)"><code>xmlEscape(expr[, loc])</code></h5>
+
+<pre>expr: CustomExpression
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomXML</p>
+
+<p>Callback to produce a custom XML escape node.</p>
+
+<h5 id="xmlText(text_loc)"><code>xmlText(text[, loc])</code></h5>
+
+<pre>text: string
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomXML</p>
+
+<p>Callback to produce a custom XML text node.</p>
+
+<h5 id="xmlStartTag(contents_loc)"><code>xmlStartTag(contents[, loc])</code></h5>
+
+<pre>contents: [ CustomXML ]
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomXML</p>
+
+<p>Callback to produce a custom XML start-tag node.</p>
+
+<h5 id="xmlEndTag(contents_loc)"><code>xmlEndTag(contents[, loc])</code></h5>
+
+<pre>contents: [ CustomXML ]
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomXML</p>
+
+<p>Callback to produce a custom XML end-tag node.</p>
+
+<h5 id="xmlPointTag(contents_loc)"><code>xmlPointTag(contents[, loc])</code></h5>
+
+<pre>contents: [ CustomXML ]
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomXML</p>
+
+<p>Callback to produce a custom XML point tag node.</p>
+
+<h5 id="xmlName(contents_loc)"><code>xmlName(contents[, loc])</code></h5>
+
+<pre>contents: string | [ CustomXML ]
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomXML</p>
+
+<p>Callback to produce a custom XML name node.</p>
+
+<h5 id="xmlAttribute(value_loc)"><code>xmlAttribute(value[, loc])</code></h5>
+
+<pre>value: string
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomXML</p>
+
+<p>Callback to produce a custom XML attribute node.</p>
+
+<h5 id="xmlCdata(contents_loc)"><code>xmlCdata(contents[, loc])</code></h5>
+
+<pre>contents: string
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomXML</p>
+
+<p>Callback to produce a custom XML <code>CDATA</code> node.</p>
+
+<h5 id="xmlComment(contents_loc)"><code>xmlComment(contents[, loc])</code></h5>
+
+<pre>contents: string
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomXML</p>
+
+<p>Callback to produce a custom XML comment node.</p>
+
+<h5 id="xmlProcessingInstruction(target_contents_loc)"><code>xmlProcessingInstruction(target, contents[, loc])</code></h5>
+
+<pre>target: string
+contents: string | null
+loc: SourceLocation
+</pre>
+
+<p><strong>返回:</strong> CustomXML</p>
+
+<p>Callback to produce a custom XML processing instruction node.</p>

@@ -1,0 +1,56 @@
+---
+title: 'SyntaxError: missing ] after element list'
+slug: Web/JavaScript/Reference/Errors/Missing_bracket_after_list
+tags:
+  - Errors
+  - JavaScript
+  - SyntaxError
+translation_of: Web/JavaScript/Reference/Errors/Missing_bracket_after_list
+---
+<div>{{jsSidebar("Errors")}}</div>
+
+<h2 id="メッセージ">メッセージ</h2>
+
+<pre class="syntaxbox">SyntaxError: missing ] after element list
+</pre>
+
+<h2 id="エラータイプ">エラータイプ</h2>
+
+<p>{{jsxref("SyntaxError")}}。</p>
+
+<h2 id="何がうまくいかなかったのか？">何がうまくいかなかったのか？</h2>
+
+<p>どこかで配列初期化構文のエラーがあります。閉じ括弧（"<code>]</code>"）かカンマ（"<code>,</code>"）が不足している可能性があります。</p>
+
+<h2 id="例">例</h2>
+
+<h3 id="不完全な配列初期化">不完全な配列初期化</h3>
+
+<pre class="brush: js example-bad">var list = [1, 2,
+
+var instruments = [
+  "Ukulele",
+  "Guitar",
+  "Piano"
+};
+
+var data = [{foo: "bar"} {bar: "foo"}];
+</pre>
+
+<p>次のように修正できます：</p>
+
+<pre class="brush: js example-good">var list = [1, 2];
+
+var instruments = [
+ "Ukulele",
+ "Guitar",
+ "Piano"
+];
+
+var data = [{foo: "bar"}, {bar: "foo"}];</pre>
+
+<h2 id="関連項目">関連項目</h2>
+
+<ul>
+ <li>{{jsxref("Array")}}</li>
+</ul>

@@ -1,0 +1,109 @@
+---
+title: Autres caractéristiques des arbres
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Autres_caractéristiques_des_arbres
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/More_Tree_Features
+---
+<p> </p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Arbres" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Sélection_dans_les_arbres">Suivant  »</a></p>
+</div>
+<p>Nous allons voir ici des caractéristiques supplémentaires sur les arbres.</p>
+<h3 id="Arbres_hi.C3.A9rarchiques" name="Arbres_hi.C3.A9rarchiques">Arbres hiérarchiques</h3>
+<p>L'élement <code><a href="/fr/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code> est aussi utilisé pour créer des listes hiérarchiques, comme on en trouve dans un gestionnaire de fichiers ou dans les listes de marque-pages d'un navigateur. La vue d'arbre a plusieurs fonctions qui spécifient la hiérarchie des éléments dans un arbre. Chaque élément dans l'arbre possède un niveau commençant à 0. Les éléments les plus élevés dans l'arbre auront un niveau à 0, Les fils de ces éléments auront un niveau à 1, les fils en dessous auront un niveau à 2, et ainsi de suite. L'arbre demandera l'affichage pour le niveau de chaque élément afin de déterminer comment dessiner les rangées.</p>
+<p>L'arbre dessinera les flèches d'ouverture et de fermeture pour ouvrir et fermer un élément parent ainsi que les lignes reliant les fils à leurs parents. L'arbre se chargera aussi de dessiner les rangées avec le niveau correct d'indentation. Cependant, la vue devra s'assurer de conserver l'état des niveaux de chaque ligne si nécessaire. Ce travail peut parfois être un peu délicat, mais heureusement, le module natif de vue d'arbre réalise tout le travail difficile pour nous.</p>
+<p>Pour créer un ensemble de rangées imbriquées, tout ce que nous devons faire est d'ajouter un second <code><a href="/fr/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code> élément à l'intérieur du parent <code><a href="/fr/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code>. Vous pouvez ensuite ajouter des éléments à l'intérieur pour spécifier les rangées filles d'un élément. Ne mettez pas d'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code> à l'intérieur de <code><a href="/fr/docs/Mozilla/Tech/XUL/treerow" title="treerow">treerow</a></code> car ceci ne marchera pas.</p>
+<p>Vous pouvez répéter ce processus pour créer les arbres profondément imbriqués. Essentiellement, un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code> peut contenir soit une simple ligne déclarée avec l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/treerow" title="treerow">treerow</a></code>, soit un ensemble de lignes déclarées avec l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code>.</p>
+<p>Il y a deux autres choses à faire pour vous assurer que la hiérarchie fonctionne correctement. Premièrement, vous devez marquer l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code> possédant des fils comme conteneur. Il vous suffit d'ajouter l'attribut <code id="a-container"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/container">container</a></code> comme ceci :</p>
+<pre>&lt;treeitem container="true"/&gt;</pre>
+<p>Cet attribut permet à l'utilisateur de double-cliquer sur le <code><a href="/fr/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code> pour déplier ou replier les lignes intérieures. Vous pouvez faire que les lignes filles soient initialement affichées en ajoutant l'attribut <code id="a-open"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/open">open</a></code>. Quand l'utilisateur déplie ou replie le parent, la fonction <code>toggleOpenState</code> de la vue est appelée pour basculer l'item de l'état ouvert vers l'état fermé. Pour une vue d'arbre de type contenu, il sera ajouté un attribut <code id="a-open"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/open">open</a></code> pour refleter l'état courant.</p>
+<p>Le second changement vous impose de mettre l'attribut <code id="a-primary"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/primary">primary</a></code> sur la première colonne. Il fait apparaître un petit triangle ou un signe + devant les cellules dans cette colonne pour indiquer les cellules pouvant être dépliées. De plus, les lignes filles sont indentées. Notez aussi que l'utilisateur ne peut pas cacher cette colonne via le petit menu déroulant à droite des colonnes.</p>
+<h4 id="Exemple_d.27arbre_hi.C3.A9rarchique" name="Exemple_d.27arbre_hi.C3.A9rarchique">Exemple d'arbre hiérarchique</h4>
+<p>Voici un exemple simple :</p>
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advtrees_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advtrees_1.xul">Voir</a></p>
+<div class="float-right"><img alt="Image:xultu_advtrees1.png" class=" internal" src="/@api/deki/files/1494/=Xultu_advtrees1.png"></div>
+<pre>&lt;tree rows="6"&gt;
+  &lt;treecols&gt;
+      &lt;treecol id="firstname" label="Prénoms" primary="true" flex="3"/&gt;
+      &lt;treecol id="lastname" label="Noms" flex="7"/&gt;
+  &lt;/treecols&gt;
+
+  &lt;treechildren&gt;
+    &lt;treeitem container="true" open="true"&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Personnes"/&gt;
+      &lt;/treerow&gt;
+
+      &lt;treechildren&gt;
+        &lt;treeitem&gt;
+          &lt;treerow&gt;
+            &lt;treecell label="Bob"/&gt;
+            &lt;treecell label="Carpenter"/&gt;
+          &lt;/treerow&gt;
+        &lt;/treeitem&gt;
+        &lt;treeitem&gt;
+          &lt;treerow&gt;
+            &lt;treecell label="Jerry"/&gt;
+            &lt;treecell label="Hodge"/&gt;
+          &lt;/treerow&gt;
+        &lt;/treeitem&gt;
+      &lt;/treechildren&gt;
+    &lt;/treeitem&gt;
+  &lt;/treechildren&gt;
+&lt;/tree&gt;
+</pre>
+<p>Cet exemple crée un arbre hiérarchique. Comme on peut le voir sur l'image, un petit signe plus ou moins (souvent appelé « twisty ») est apparu sur la première ligne, indiquant qu'elle contient des lignes filles. En double-cliquant sur la ligne, l'utilisateur ouvre ou ferme la liste. Les lignes filles sont indentées. Notez comment la ligne « Personnes » n'a besoin que d'une colonne.</p>
+<p>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code> externe contient un seul élément <code><a href="/fr/docs/Mozilla/Tech/XUL/treerow" title="treerow">treerow</a></code> et un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code>. Le premier crée la donnée pour la ligne parente et le deuxième contient les items fils.</p>
+<p>Vous pouvez imbriquer autant de lignes que vous le désirez. Souvenez-vous que vous devez utiliser l'attribut <code id="a-container"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/container">container</a></code> sur les lignes qui ont des lignes filles. La simple présence de lignes filles n'est pas suffisante pour l'indiquer, car vous pourriez avoir un conteneur sans enfants mais qui devrait quand même être traité comme un conteneur. Par exemple, un répertoire sans fichier devrait être traité comme un conteneur alors qu'un fichier ne le devrait pas.</p>
+<h3 id="Plus_sur_les_colonnes_d.27arbres" name="Plus_sur_les_colonnes_d.27arbres">Plus sur les colonnes d'arbres</h3>
+<p><code id="a-enableColumnDrag"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/enableColumnDrag">enableColumnDrag</a></code> est un attribut supplémentaire que vous pouvez ajouter à l'arbre. S'il est mis à 'true', l'utilisateur peut alors déplacer les en-têtes de colonne afin de réarranger l'ordre des colonnes.</p>
+<p>Un utilisateur peut également vouloir modifier la largeur des colonnes. Il vous suffit de placer un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/splitter" title="splitter">splitter</a></code> entre chaque élément <code><a href="/fr/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code>. Une petite encoche apparaissant entre chaque en-tête de colonne pourra être déplacée par l'utilisateur pour changer la largeur d'une colonne. Vous pouvez utiliser la classe de style 'tree-splitter' pour masquer l'encoche bien que la colonne puisse encore être retaillée.</p>
+<p>Vous pouvez affecter une largeur minimale ou maximale à une colonne, en utilisant les attributs <code id="a-minwidth"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/minwidth">minwidth</a></code> et <code id="a-maxwidth"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/maxwidth">maxwidth</a></code> sur les en-têtes de colonnes.</p>
+<p>Vous pouvez mettre l'attribut <code id="a-hidden"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/hidden">hidden</a></code> à 'true' pour cacher par défaut une colonne. L'utilisateur pourra afficher la colonne en la sélectionnant dans la liste déroulante au bout de la ligne des en-têtes de colonne.</p>
+<h4 id="m.C3.A9morisation_de_l.27.C3.A9tat_des_colonnes" name="m.C3.A9morisation_de_l.27.C3.A9tat_des_colonnes">mémorisation de l'état des colonnes</h4>
+<div class="float-right"><img alt="Image:xultu_advtrees2.png" class=" internal" src="/@api/deki/files/1495/=Xultu_advtrees2.png"></div>
+<p>Comme avec tous les éléments XUL, l'attribut <code id="a-persist"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/persist">persist</a></code> peut être utilisé pour sauvegarder l'état des colonnes entre chaque session. Ainsi, la façon dont l'utilisateur aura choisi l'affichage des colonnes sera automatiquement sauvegardé pour sa prochaine session. Vous pouvez sauvegarder plusieurs attributs, comme indiqué dans l'exemple ci-dessous :</p>
+<p><span id="Exemple_2"><a id="Exemple_2"></a><strong>Exemple 2</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advtrees_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advtrees_2.xul">Voir</a></p>
+<pre>&lt;tree enableColumnDrag="true" flex="1"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="runner" label="Coureur" flex="2" persist="width ordinal hidden"/&gt;
+    &lt;splitter class="tree-splitter"/&gt;
+    &lt;treecol id="city" label="Ville" flex="2" persist="width ordinal hidden"/&gt;
+    &lt;splitter class="tree-splitter"/&gt;
+    &lt;treecol id="starttime" label="Heure de départ" flex="1" persist="width ordinal hidden"/&gt;
+    &lt;splitter class="tree-splitter"/&gt;
+    &lt;treecol id="endtime" label="Heure d'arrivée" flex="1" persist="width ordinal hidden"/&gt;
+  &lt;/treecols&gt;
+
+  &lt;treechildren&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Joshua Granville"/&gt;
+        &lt;treecell label="Vancouver"/&gt;
+        &lt;treecell label="7:06:00"/&gt;
+        &lt;treecell label="9:10:26"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Robert Valhalla"/&gt;
+        &lt;treecell label="Seattle"/&gt;
+        &lt;treecell label="7:08:00"/&gt;
+        &lt;treecell label="9:15:51"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+  &lt;/treechildren&gt;
+&lt;/tree&gt;
+</pre>
+<p>Trois attributs des colonnes doivent être persistants,</p>
+<ul> <li>l'attribut <code id="a-width"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/width">width</a></code> pour sauver les largeurs de colonnes,</li> <li>l'attribut <code id="a-ordinal"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/ordinal">ordinal</a></code> contenant la position de la colonne,</li> <li>et l'attribut <code id="a-hidden"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/hidden">hidden</a></code> indiquant si la colonne est visible ou invisible.</li>
+</ul>
+<hr>
+<p>Dans la prochaine section, nous allons voir comment récupérer ou spécifier une sélection sur un arbre.</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Arbres" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Sélection_dans_les_arbres">Suivant  »</a></p>
+</div>
+<p><span class="comment">Interwiki</span></p>

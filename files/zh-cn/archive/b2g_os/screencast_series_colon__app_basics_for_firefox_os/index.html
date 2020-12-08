@@ -1,0 +1,219 @@
+---
+title: 'Screencast series: App Basics for Firefox OS'
+slug: 'Archive/B2G_OS/Screencast_series:_App_Basics_for_Firefox_OS'
+translation_of: 'Archive/B2G_OS/Firefox_OS_apps/Screencast_series:_App_Basics_for_Firefox_OS'
+---
+<div class="summary">
+<p><span class="seoSummary"><a href="http://www.mozilla.org/en-US/firefox/os/">Firefox OS</a> is an operating system that brings the Web to mobile devices. Instead of being a new OS with new technologies and development environments it builds on standardised web technologies that have been in use for years now. If you are a web developer and you want to build a mobile app, Firefox OS gives you the tools to do so, without having to change your workflow or learn a totally new development environment. In this collection of short videos, developers from Mozilla and Telenor met in Oslo, Norway to explain in a few steps how you can get started to build applications for Firefox OS.</span></p>
+</div>
+
+<p>In this series you’ll learn:</p>
+
+<ul>
+ <li>How to build your first application for Firefox OS.</li>
+ <li>How to debug and test your application both on your desktop and a real device.</li>
+ <li>How to get it listed in the <a href="/en-US/Marketplace">Firefox Marketplace</a>.</li>
+ <li>How to use the APIs and special interfaces Firefox OS offers a JavaScript developer to take advantage of the hardware available in smartphones.</li>
+</ul>
+
+<div class="note">
+<p><strong>Note</strong>: Each of the screencasts is short enough to get through in a short break; the whole series should not take more than an hour to watch.</p>
+</div>
+
+<h2 id="Code_and_development_environment">Code and development environment</h2>
+
+<p>In addition to the screencasts, you can download the accompanying <a href="https://github.com/comoyo/fxos-video-script/">code samples from GitHub</a>. If you want to try the code examples out for yourself, you will need to set up a very simple development environment. All you need is:</p>
+
+<ul>
+ <li>A current version of <a href="https://www.mozilla.org/en-US/firefox/">Firefox</a>, which comes out of the box with the developer tools you need — we recommend getting <a href="http://www.mozilla.org/en-US/firefox/aurora/">Firefox Aurora</a> or <a href="https://nightly.mozilla.org/">Nightly</a> if you really want to play with the state-of-the-art technology.</li>
+ <li>A text editor — in the screencasts we used <a href="http://www.sublimetext.com/">Sublime Text</a>, but any will do. If you want to be really web native, you can try <a href="http://brackets.io/">Adobe Brackets</a>.</li>
+ <li>A local server or a server to push your demo files to. A few of the demo apps need HTTP connections instead of local ones.</li>
+</ul>
+
+<h2 id="Introducing_the_series">Introducing the series</h2>
+
+<p>The series features <a href="http://twitter.com/janjongboom">Jan Jongboom (@janjongboom)</a> and <a href="http://twitter.com/sergimansilla">Sergi Mansilla (@sergimansilla)</a> of Telenor Digital, and <a href="http://twitter.com/codepo8">Chris Heilmann (@codepo8)</a> of Mozilla; it was shot in three days in Oslo, Norway at the Telenor head office in February 2014.</p>
+
+<p>Here are the three of us telling you about the series and what to expect:</p>
+
+<p></p><div class="intrinsic-wrapper"><div class="intrinsic-container "><iframe src="https://www.youtube.com/embed/bp87xaLI0h4?rel=0&amp;html5=1"></iframe></div></div><p></p>
+
+<h2 id="Section_1_Building_your_first_Firefox_OS_app_and_getting_it_published">Section 1: Building your first Firefox OS app and getting it published</h2>
+
+<p>In Section 1's five screencasts we show you how to build a Firefox OS application, how to debug and test it on your computer — and on a real device, and how to get it listed in the <a href="https://marketplace.firefox.com/">Firefox Marketplace</a>. This may sound like a lot of work, but you will soon find out that if you already know how to build a website, you are 90% of the way there already.</p>
+
+<h3 id="More_than_a_website">More than a website</h3>
+
+<p>Firefox OS applications are HTML5 applications. In essence, these use the same technologies as websites do. You can start writing a website and turn it into an app simply by giving it a manifest file (see <a href="#The_app_manifest">The app manifest</a> for more details). This tells Firefox OS that you are writing an app and allows you to:</p>
+
+<ul>
+ <li>List the app in the marketplace.</li>
+ <li>Get access to the hardware of the device it runs on, to gather information such as <a href="/en-US/docs/Web/API/Geolocation">Geolocation</a> and <a href="/en-US/Apps/Build/gather_and_modify_data/Keep_it_level_responding_to_device_orientation_changes">Device Orientation</a>.</li>
+ <li>Much more!</li>
+</ul>
+
+<p>In essence, HTML5 applications are supercharged websites and should follow the same rules, such as:</p>
+
+<ul>
+ <li>Progressive enhancement: Test to see if what you want to use is really available before trying to access it.</li>
+ <li>Adapting to their environment: For example using <a href="/en-US/docs/Web/Guide/CSS/Media_queries">media queries</a> and <a href="/en-US/Apps/app_layout/responsive_design_building_blocks#Responsive_images.2Fvideo">responsive images</a> to optimize apps for different screen sizes, resolutions and available network speeds.</li>
+ <li>Using <a href="/en-US/docs/Web/HTML">HTML</a>, <a href="/en-US/docs/Web/CSS">CSS</a> and <a href="/en-US/docs/Web/JavaScript">JavaScript</a> as the core technologies.</li>
+</ul>
+
+<p>The main difference is that for a web page to become a great application, you should very much consider mobile users. This means first and foremost that your application should:</p>
+
+<ul dir="ltr">
+ <li><a href="/en-US/Apps/Build/Offline">Work offline</a>.</li>
+ <li>Allow your users to do one thing and have an interface that makes that easy.</li>
+ <li>Play nicely with the battery life, and processor speed.</li>
+</ul>
+
+<p>In many cases, this means you need to slim your web page down a bit and simplify the interface. The good news is that all your users will benefit from that.</p>
+
+<p></p><div class="intrinsic-wrapper"><div class="intrinsic-container "><iframe src="https://www.youtube.com/embed/fBJmUreevRU?rel=0&amp;html5=1"></iframe></div></div><p></p>
+
+<div class="note">
+<p><strong>Note</strong>: To find out more about how to design a good HTML5 App, check out the <a href="/en-US/Apps">App Center on MDN</a>.</p>
+</div>
+
+<h3 id="The_app_manifest">The app manifest</h3>
+
+<p>The <a href="/en-US/Apps/Build/Manifest">App Manifest in Firefox OS</a> is a simple JSON file that tells the operating system about your app. In essence, this is what turns a web page into an <a href="https://developer.mozilla.org/en-US/Apps/Quickstart/Build/Intro_to_open_web_apps">Open Web App</a>. In it, you define the name in different locales and you ask the operating system to get access to various services and hardware. You can also define the preferred orientation of your app and — if needed — lock it.</p>
+
+<p></p><div class="intrinsic-wrapper"><div class="intrinsic-container "><iframe src="https://www.youtube.com/embed/txyux8RZrxY?rel=0&amp;html5=1"></iframe></div></div><p></p>
+
+<p>More information about the manifest and tools that can help you:</p>
+
+<ul>
+ <li>The <a href="https://marketplace.firefox.com/developers/validator">Open Web Apps Manifest Validator</a> — also available as an <a href="http://firefox-marketplace-api.readthedocs.org/en/latest/">API</a>.</li>
+ <li>The <a href="/en-US/Apps/Build/Manifest">MDN documentation on the Open Web Apps Manifest</a> — includes information on how to serve a manifest from your own server.</li>
+</ul>
+
+<h3 id="The_App_Manager">The App Manager</h3>
+
+<p>The simplest way to get started with Firefox OS is to try out the <a href="https://developer.mozilla.org/en-US/Firefox_OS/Using_the_App_Manager">App Manager</a>. This tool stands alongside the <a href="https://developer.mozilla.org/en-US/docs/Tools/">Firefox developer tools for desktop</a> and allows you to connect to a Firefox OS simulator running on your computer, or a real Firefox OS device if you have one available. From there, you can play with Firefox OS, install apps straight onto the simulator or real device, and debug them as they are running on Firefox OS — seeing the live changes immediately without needing to uninstall or update apps.</p>
+
+<p>The following video provides first steps with using the App Manager along with the simulator:</p>
+
+<p></p><div class="intrinsic-wrapper"><div class="intrinsic-container "><iframe src="https://www.youtube.com/embed/wiROpnExj-A?rel=0&amp;html5=1"></iframe></div></div><p></p>
+
+<div class="note">
+<p><strong>Note</strong>: The App Manager allows you to debug your own applications even when you're offline, without any hassle.</p>
+</div>
+
+<p>More information about the App Manager:</p>
+
+<ul>
+ <li>The <a href="https://developer.mozilla.org/en-US/Firefox_OS/Using_the_App_Manager">App Manager documentation on MDN.</a></li>
+ <li>Introductory <a href="https://hacks.mozilla.org/2013/10/introducing-the-firefox-os-app-manager/">blog post on Mozilla Hacks.</a></li>
+</ul>
+
+<h3 id="Testing_on_a_Real_Device">Testing on a Real Device</h3>
+
+<p>Testing your applications in the simulator is nice, but it only gets you as far as a simulated environment can. If you want to test the performance of the app interaction, or react to things like device orientation, you need a real device. Together with the developer tools and the App Manager, you can use the device and get detailed insight into what happens to your application as you use it.</p>
+
+<p></p><div class="intrinsic-wrapper"><div class="intrinsic-container "><iframe src="https://www.youtube.com/embed/OIUQwqQMVZM?rel=0&amp;html5=1"></iframe></div></div><p></p>
+
+<h3 id="Publishing_to_Marketplace">Publishing to Marketplace</h3>
+
+<p>The <a href="http://marketplace.firefox.com/">Firefox OS Marketplace</a> is the most convenient place to list your application and make it available to people on their devices and the Web. The Marketplace also allows you to list your app for other platforms like Firefox Desktop and Firefox for Android. You can also allow users to rate your app, give you feedback, and buy your application using a simple checkout process. Getting your app listed is simple:</p>
+
+<ul>
+ <li>Submit the marketplace URL to your manifest file.</li>
+ <li>Add a description of your app (which also helps people to find it amongst the many other available apps.)</li>
+ <li>Provide screenshots or videos to demonstrate your app's functionality.</li>
+ <li>Pick a category for your application.</li>
+ <li>Provide us with an email address to contact you on.</li>
+ <li>Provide end users with a link to your privacy policy and a support web site.</li>
+ <li>Provide a <a href="/en-US/Marketplace/Submission/Rating_Your_Content">content rating</a> for your application.</li>
+</ul>
+
+<p></p><div class="intrinsic-wrapper"><div class="intrinsic-container "><iframe src="https://www.youtube.com/embed/gipaEJTM3TU?rel=0&amp;html5=1"></iframe></div></div><p></p>
+
+<p>Applications submitted to the Marketplace are reviewed by Mozilla's app review team and you will be notified of the state of your submission within a few days. If there are issues with your application you will get a validation message during the submission but you might also get a human readable explanation of what is wrong and how to fix it.</p>
+
+<div class="note">
+<p><strong>Note</strong>: Read <a href="/en-US/Marketplace/Submission/Submitting_an_app">Submitting an application to the Firefox Marketplace</a> for more information about the submittion process.</p>
+</div>
+
+<h2 id="Section_2_Advanced_Firefox_OS_topics">Section 2: Advanced Firefox OS topics</h2>
+
+<p>In the first few videos we introduced you to Firefox OS and how to build your first app. We also covered how to debug your application on desktop — and on a real device — and how to get your app listed in the Firefox Marketplace. In the remaining five videos we’ll deep-dive into the technologies that enable Firefox OS apps to go that extra mile and give you access to the functionality that makes developing for a smartphone or tablet interesting to developers. Whilst some of these technologies are currently only working in Firefox OS, they are all open source and submitting as standards proposals. Working with these APIs today will mean you are ready for other devices and platforms emerging in the near future.</p>
+
+<h3 id="Web_APIs">Web APIs</h3>
+
+<p>Smartphones are full of great technology — cameras, accelerometer, and GPS to name but a few. The problem was that all of these were not accessible by web technologies — if you wanted to access them, you needed to write native applications. To fix this, Mozilla and partners defined a set of APIs to allow developers to reach deep into the hardware of a mobile devices using JavaScript in a secure manner. These are called <a href="https://wiki.mozilla.org/WebAPI">Web APIs</a> and are defined in the open and available for others to implement. Firefox OS is the first platform that uses them; the below screencast explains more:</p>
+
+<p></p><div class="intrinsic-wrapper"><div class="intrinsic-container "><iframe src="https://www.youtube.com/embed/p0DWpWNTd7w?rel=0&amp;html5=1"></iframe></div></div><p></p>
+
+<p>More information about Web APIs:</p>
+
+<ul>
+ <li>The <a href="https://wiki.mozilla.org/WebAPI">Wiki Page describing the ongoing work and state of implementation</a> — also includes links to standards they are based on.</li>
+ <li><a href="https://hacks.mozilla.org/category/webapi/">Posts on Mozilla Hacks</a> dealing with the subject of WebAPIs.</li>
+</ul>
+
+<h3 id="Web_Activities">Web Activities</h3>
+
+<p><a href="https://wiki.mozilla.org/WebAPI/WebActivities">Web Activities</a> are an alternative way to access the hardware of a device. Instead of getting an API to speak to the device directly, Web Activities allow you to create an ecosystem of applications on the device that talk to each other and share capabilities. For example, instead of trying to access the camera directly, your app can use a Web Activity to ask for an image and the user of the device can use their favourite application to take a photo, which is then returned to the app that requested it.</p>
+
+<p>Instead of asking the users for access to their hardware (which is important in terms of security), you allow them to use applications they already trust to carry out such functions. Furthermore, you can register your application as the go-to application for certain tasks in the operating system. You can think of Web Activities as being equivalent to right/Ctrl + clicking on a file in a Desktop OS and choosing which application to open the file with. You are given several choices, plus on option to tell the OS to always use this app to open this file type from now on.</p>
+
+<p>Web Activities allow apps to talk to each other — on the device, without any need for a server in between. All they transmit from one app to the other is the final data.</p>
+
+<p></p><div class="intrinsic-wrapper"><div class="intrinsic-container "><iframe src="https://www.youtube.com/embed/CQODL9AGKv0?rel=0&amp;html5=1"></iframe></div></div><p></p>
+
+<p>More information about Web Actitivies:</p>
+
+<ul>
+ <li>The <a href="https://wiki.mozilla.org/WebAPI/WebActivities">Web Activities Wiki Page</a></li>
+ <li><a href="/en-US/docs/WebAPI/Web_Activities">Web activities reference on MDN</a></li>
+ <li>An <a href="https://hacks.mozilla.org/2013/01/introducing-web-activities/">Introduction to Web Activities</a> on Mozilla Hacks</li>
+</ul>
+
+<h3 id="Push_Notifications">Push Notifications</h3>
+
+<p>Push Notifications — invoked using the <a href="https://wiki.mozilla.org/WebAPI/SimplePush">SimplePush Web API</a> — are a way to make applications wake up when a device receives a certain message. This allows you to build applications that can stay closed — thus saving battery — until they are needed. Notifications created this way also have the benefit of carrying no data, thus Mozilla will never get the information of your app and attackers won't be able to listen in.</p>
+
+<p></p><div class="intrinsic-wrapper"><div class="intrinsic-container "><iframe src="https://www.youtube.com/embed/qpgNIsJ2pg4?rel=0&amp;html5=1"></iframe></div></div><p></p>
+
+<p>More information about Push Notifcations using SimplePush:</p>
+
+<ul>
+ <li>The <a href="https://wiki.mozilla.org/WebAPI/SimplePush">SimplePush Wiki Page </a></li>
+ <li><a href="/en-US/docs/WebAPI/Simple_Push">Simple Push guide on MDN</a></li>
+ <li>An<a href="https://hacks.mozilla.org/2013/07/dont-miss-out-on-the-real-time-fun-use-firefox-os-push-notifications/"> introduction to SimplePush</a> on Mozilla Hacks</li>
+</ul>
+
+<h3 id="Offline_functionality">Offline functionality</h3>
+
+<p>Apps are not much use if they don't work offline. That's partly why users prefer installed apps to just opening a browser and looking for content on their device's web browser; the term "web application" even sounds like it needs a web connection to be usable. Our users <strong>will</strong> be offline sometimes — on a plane, underground or with no data left on their SIM — and we need to ensure that our apps are still usable when this happens. HTML5 offers a few technologies that allow for offline functionality, mainly <a href="https://developer.mozilla.org/en-US/docs/HTML/Using_the_application_cache">AppCache</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Storage">DOMStorage</a>.</p>
+
+<p></p><div class="intrinsic-wrapper"><div class="intrinsic-container "><iframe src="https://www.youtube.com/embed/dnuoUM_bIQM?rel=0&amp;html5=1"></iframe></div></div><p></p>
+
+<p>More information about offline functionality:</p>
+
+<ul>
+ <li>The <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Storage">DOMStorage Wiki page</a>.</li>
+ <li>The <a href="https://developer.mozilla.org/en-US/docs/HTML/Using_the_application_cache">AppCache Wiki page</a>.</li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/IndexedDB/Using_IndexedDB">Using IndexedDB</a> — for advanced storage on the client.</li>
+ <li><a href="https://github.com/mozilla/localForage">LocalForage</a> is a wrapper used in Firefox OS to provide the simplicity of DOMStorage along with the power of IndexedDB (explained in detail in <a href="https://hacks.mozilla.org/2014/02/localforage-offline-storage-improved/">this Mozilla Hacks post</a>.)</li>
+</ul>
+
+<h2 id="Where_to_find_more">Where to find more</h2>
+
+<p>We hope that this video series gave you a clear introduction to building your first open web apps. If you are interested in learning more, there are a few resources and channels you can use:</p>
+
+<p></p><div class="intrinsic-wrapper"><div class="intrinsic-container "><iframe src="https://www.youtube.com/embed/Z2yVFXEYnnc?rel=0&amp;html5=1"></iframe></div></div><p></p>
+
+<ul>
+ <li>The <a href="https://developer.mozilla.org/en-US/docs/Apps/">MDN App Center</a> features information on how to design and build good open web apps.</li>
+ <li>The <a href="/en-US/Marketplace">MDN Marketplace zone</a> contains detailed instructions how to get your app listed in the Firefox Marketplace, different publishing options, and handling payments.</li>
+ <li>The <a href="https://hacks.mozilla.org">Hacks Blog</a> features weekly articles on Firefox OS apps (featuring Mozilla staff and third party developers like you), and cutting edge technologies — this is a great place to get an insight into what will come in the next versions of Firefox and Firefox OS.</li>
+ <li>The <a href="/en-US/Firefox_OS">MDN Firefox OS zone</a> and <a href="https://wiki.mozilla.org/B2G">B2G Wiki</a> have in-depth information about the Firefox OS operating system.</li>
+ <li>We are on IRC a lot — simply use <a href="http://irc.mozilla.org">irc.mozilla.org</a> and find us in #devrel, #b2g, #openwebapps or #marketplace.</li>
+</ul>
+
+<p>Hope to see you there,</p>
+
+<p>Chris, Sergi and Jan</p>

@@ -1,0 +1,153 @@
+---
+title: DeferredTask.jsm
+slug: Mozilla/JavaScript_code_modules/DeferredTask.jsm
+tags:
+  - JavaScript
+  - Modules
+translation_of: Mozilla/JavaScript_code_modules/DeferredTask.jsm
+---
+<p>{{ gecko_minversion_header("18.0") }}</p>
+<p>{{ Fx_minversion_note("28.0", "Firefox 28 でインターフェースの変更があり、古いメソッドは削除されました。") }}</p>
+<p><code>{{ Source("toolkit/modules/DeferredTask.jsm", "DeferredTask.jsm") }}</code> JavaScript コードモジュールは、遅延後に実行するタスクのためのユーティリティルーチンを提供します。遅延前に実行が試みられる複数の同じタスクは一本化されます。このモジュールを使用するには、先にコードモジュールをあなたの JavaScript スコープにインポートしておく必要があります:</p>
+<pre>Components.utils.import("resource://gre/modules/DeferredTask.jsm");
+</pre>
+<p>このモジュールは、例えば、ファイルにデータを書き込み、そのすぐ後に再びデータを書き込む可能性がある場合に使用できます。<code>DeferredTask</code> でタスクに数ミリ秒間の遅延を起こし、データへの新しい変更をその間に行ってください。</p>
+<ul>
+ <li>データの最終バージョンのみが実際に書き込まれます。</li>
+ <li>他の変更を考慮していくらかの猶予の遅延が追加されます。</li>
+</ul>
+<p>{{ h1_gecko_minversion("DeferredTask コンストラクタ", "18.0") }}</p>
+<p>2 秒間遅らせたい関数呼び出しがある場合、<code>DeferredTask</code> コンストラクタを使用して次のようにしてください:</p>
+<pre>var task = new DeferredTask(myFunction, 2000);
+</pre>
+<p>{{ fx_minversion_inline("28.0") }} 第一引数にはジェネレータ関数を渡す事もできます。</p>
+<h2 id="Method_overview" name="Method_overview">メソッドの概要</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>bool <a href="#isPending()">isPending</a>();</code> {{ obsolete_inline("28.0") }}</td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#start()">start</a>();</code> {{ obsolete_inline("28.0") }}</td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#flush()">flush</a>();</code> {{ obsolete_inline("28.0") }}</td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#cancel()">cancel</a>();</code> {{ obsolete_inline("28.0") }}</td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#arm()">arm</a>();</code> {{ gecko_minversion_inline("28.0") }}</td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#disarm()">disarm</a>();</code> {{ gecko_minversion_inline("28.0") }}</td>
+  </tr>
+  <tr>
+   <td><code>Promise <a href="#finalize()">finalize</a>();</code> {{ gecko_minversion_inline("28.0") }}</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Attributes" name="Attributes">属性</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>isArmed</code></td>
+   <td><code><a href="/en/boolean" title="en/boolean">boolean</a></code></td>
+   <td>このタスクが開始を要求されているかどうかを表します。この値はタスクが現在実行中であるかどうかとは関係ありません。 {{ gecko_minversion_inline("28.0") }}</td>
+  </tr>
+  <tr>
+   <td><code>isRunning</code></td>
+   <td><code><a href="/en/boolean" title="en/boolean">boolean</a></code></td>
+   <td>このタスクが現在実行中であるかどうかを表します。タスクの関数内からこの値を取得した場合常に true ですが、タスクが非同期のジェネレータ関数の場合、外部のコードから取得しても true です。 {{ gecko_minversion_inline("28.0") }}</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Methods" name="Methods">メソッド</h2>
+<h3 id="isPending()" name="isPending()">isPending</h3>
+<p>{{ obsolete_inline("28.0") }}</p>
+<p>現在のタスク状態を確認します。</p>
+<pre class="eval">bool isPending();
+</pre>
+<h6 id="Return_value" name="Return_value">戻り値</h6>
+<p>未実行の場合は <code>true</code>、そうでない場合は <code>false</code> を返します。</p>
+<h3 id="start()" name="start()">start</h3>
+<p>{{ obsolete_inline("28.0") }}</p>
+<p>タスクを開始 (または延期) します。</p>
+<pre class="eval">void start();
+</pre>
+<h3 id="flush()" name="flush()">flush</h3>
+<p>{{ obsolete_inline("28.0") }}</p>
+<p>延期したタスクをすぐに実行します。</p>
+<pre class="eval">void flush();
+</pre>
+<h3 id="cancel()" name="cancel()">cancel</h3>
+<p>{{ obsolete_inline("28.0") }}</p>
+<p>未実行のタスクをキャンセルします。</p>
+<pre class="eval">void cancel();
+</pre>
+<h3 id="arm()" name="arm()">arm</h3>
+<p>{{ gecko_minversion_inline("28.0") }}</p>
+<p>タスク構築時に指定した遅延の後、タスクを実行する事を要求します。複数回の呼び出しは追加の遅延を引き起こしません。タスクが実行中である場合、現在の実行の終了後から遅延が開始されます。</p>
+<p>タスク構築時に遅延が 0 に指定されていたとしても、タスクは常にイベントループの異なる瞬間に実行されます。イベントループ中の同じ瞬間における複数回の "arm" の呼び出しは、一回のタスクの実行となる事が保証されます。</p>
+<p>設計では、このメソッドは呼び出し側に対し、次の実行がいつ終了するかを検出する手段や結果を取得する手段を提供しません。実際、これを行う事は往々にして重複処理やログ取得となります。タスクの完了時に特殊な処理やエラーログが必要であれば、タスク中で try/catch/finally 節等を用いてタスク自身が行う方が良いでしょう。"finalize" メソッドは一般的にはシャットダウン時に完了を待つ時に使われます。</p>
+<pre class="eval">void arm();
+</pre>
+<h3 id="disarm()" name="disarm()">disarm</h3>
+<p>{{ gecko_minversion_inline("28.0") }}</p>
+<p>このタスクの遅延された実行の要求をキャンセルします。ただし既に実行中のタスクはキャンセルできません。</p>
+<p>このメソッドは現在実行中のタイマーを停止させます。このため、再度 "arm" メソッドを呼び出した場合、遅延はタスク構築時に指定された元の値から開始されます。</p>
+<pre class="eval">void disarm();
+</pre>
+<h3 id="finalize()" name="finalize()">finalize</h3>
+<p>{{ gecko_minversion_inline("28.0") }}</p>
+<p>保留中のタスクを即座に実行し、最後まで実行される事を保証します。これ以降のタイマーの arm は阻止されます。</p>
+<ul>
+ <li>もしタスクが実行中で、タイマーが arm されている場合、現在のタスクの実行が完了した直後、即座にもう一度タスクが実行され、この後に返り値の promise が解決します。</li>
+ <li>もしタスクが実行中で、タイマーが arm されていない場合、返り値の promise は現在の実行が完了した時に解決されます。</li>
+ <li>もしタスクが実行中ではなく、タイマーが arm されている場合、タスクが即座に開始され、返り値の promise はこの新しい実行が完了した時に解決されます。</li>
+ <li>もしタスクが実行中ではなく、タイマーが arm されていない場合、このメソッドは解決済みの promise を返します。</li>
+</ul>
+<pre class="eval">Promise finalize();
+</pre>
+<h2 id="Example" name="Example">例</h2>
+<p>{{ Fx_minversion_note("28.0", "この節は Firefox 28.0 以降の DeferredTask.jsm について書かれています。") }}</p>
+<p>指定された遅延の後に実行される関数または非同期のタスクを作成します。遅延が経過する前の複数回の "arm" メソッド呼び出しは結合されます。タスクは実行中に再入する事はできませんが、前回の実行が完了した後で再度実行する事はできます。</p>
+<p> </p>
+<p>一般的な使用例は、短期間における複数回の非同期呼び出しによってデータが変更され、その度にファイルに保存しなければいけない場合です。</p>
+<pre class="eval">let saveDeferredTask = new DeferredTask(function* () {
+  yield OS.File.writeAtomic(...);
+  // 補足されない例外は報告されます
+}, 2000);
+
+// このタスクは準備完了ですが、要求されるまで実行はされません
+</pre>
+<p>"arm" メソッドは、タスクを実行する内部タイマーを開始するのに使用します。複数回のタイマーの arm は追加の遅延を引き起こしません。</p>
+<pre class="eval">saveDeferredTask.arm();
+
+// タスクはこの時点から 2 秒後に実行されます
+
+yield waitOneSecond();
+saveDeferredTask.arm();
+
+// タスクはこの時点から 1 秒後に実行されます
+</pre>
+<p>タイマーは遅延をリセットするため、もしくは単純に実行をキャンセルするために arm を解除できます。</p>
+<pre class="eval">saveDeferredTask.disarm();
+saveDeferredTask.arm();
+
+// タスクはこの時点から 2 秒後に実行されます
+</pre>
+<p>指定時間が経過し内部タイマーが発動するとタスクの実行が開始され、このタスクはこれ以降キャンセルできなくなります。しかし、タスクの実行中にタイマーを再び arm する事は可能であり、この場合タイマーが実際に開始するには前のタスクが完了する必要があります。このため、タスクの実行と実行の間の休止時間は指定された遅延以上である事が保証されます。</p>
+<p>"finalize" メソッドはタスクが確実に終了する事を保証するために使用できます。このメソッドが返した promise はタスクの最後の実行が完了した時に解決されます。タスクの実行が最後である事を保証するために、このメソッドは以降再びタイマーを arm する事を拒否します。</p>
+<p>"finalize" メソッドが呼び出された時点でタイマーが既に arm されていた場合、タスクは即座に実行されます。この時点でタスクが既に実行されていた場合、現在の実行が終了し次第、即座に最後の実行が始めから終わりまで再び行なわれます。もしタイマーが arm されていなかった場合、"finalize" メソッドは実行中のタスクが完了する事を保証します。</p>
+<p>例えばシャットダウン中に、もしタイマーが arm されていた場合、最新バージョンのデータを用いた保留中の書き込みが処理される事を保証したいでしょう。</p>
+<pre class="eval">AsyncShutdown.profileBeforeChange.addBlocker(
+  "Example service: shutting down",
+  () =&gt; saveDeferredTask.finalize()
+);
+</pre>
+<p>しかし、どのみち保存されたデータをディスクから削除しようとしている場合、むしろ保留されている書き込みの開始を抑制した方が良いでしょう。ただし、削除しようとしているファイルが使用中ではなくなるように、現在処理中の書き込みが終了する事は保証した上で。</p>
+<pre class="eval">saveDeferredTask.disarm();
+saveDeferredTask.finalize().then(() =&gt; OS.File.remove(...))
+                           .then(null, Components.utils.reportError);
+</pre>

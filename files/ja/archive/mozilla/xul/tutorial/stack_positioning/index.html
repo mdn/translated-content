@@ -1,0 +1,60 @@
+---
+title: スタックの配置
+slug: Archive/Mozilla/XUL/Tutorial/Stack_Positioning
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Stack_Positioning
+---
+<p>
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Stacks_and_Decks" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Tabboxes">次のページ  »</a></p>
+</div>
+<p>このセクションでは、スタック内への要素の配置方法について説明します。
+</p><p><span id="Placement_of_Stack_Children"></span>
+</p>
+<h3 id=".E3.82.B9.E3.82.BF.E3.83.83.E3.82.AF.E3.81.AE.E5.AD.90.E8.A6.81.E7.B4.A0.E3.81.AE.E9.85.8D.E7.BD.AE" name=".E3.82.B9.E3.82.BF.E3.83.83.E3.82.AF.E3.81.AE.E5.AD.90.E8.A6.81.E7.B4.A0.E3.81.AE.E9.85.8D.E7.BD.AE"> スタックの子要素の配置 </h3>
+<p>スタック (<code><code><a href="/ja/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code></code>) の子要素は、スタックのサイズに応じて伸縮する動作がデフォルトですが、
+指定の座標に明示的に配置することも可能です。
+例えば、スタックの子要素として 2 つのボタンがある場合、
+1 番目のボタンを、左端から 20 ピクセル、上端から 50 ピクセルの位置に置き、
+2 番目を、左端から 100 ピクセル、上端から 5 ピクセルの位置に置くといった具合です。
+</p><p>子要素の位置は、要素に 2 つの属性を設定することによって指示します。
+水平方向の位置には <code><code id="a-left"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/left">left</a></code></code> 属性を、垂直方向の位置には <code><code id="a-top"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/top">top</a></code></code> 属性を使用します。
+スタックの子要素にこれらの属性を指定しない場合、子要素はスタックのサイズに応じて伸縮します。
+</p><p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_bulletins_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_bulletins_1.xul">表示</a>
+</p>
+<div class="float-right"><img alt="Image:bulletins1.png"></div>
+<pre>&lt;stack&gt;
+  &lt;button label="Goblins" left="5" top="5"/&gt;
+  &lt;button label="Trolls" left="60" top="20"/&gt;
+  &lt;button label="Vampires" left="10" top="60"/&gt;
+&lt;/stack&gt;
+</pre>
+<p>この <code><code><a href="/ja/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code></code> には、3 つの要素があり、
+それぞれは、<code><code id="a-left"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/left">left</a></code></code> と <code><code id="a-top"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/top">top</a></code></code> 属性によって与えられた座標に位置しています。
+この例では、3 つの子要素はすべてボタンですが、同じ型である必要はありません。
+子要素として任意の要素を置くことが可能です。
+ボックスやスタックを、入れ子に置いても構いません。
+</p><p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code></code> のサイズは、常に全ての子要素が表示可能になるような大きさに調整されるため、子要素の位置によって決定されることになります。
+具体的には、<code><code id="a-left"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/left">left</a></code></code> 属性を 400 に設定すると、スタックは 400 ピクセルに要素の幅を加えた幅になります。
+このサイズは、 <a href="/ja/docs/Web/CSS/width" title="CSS の width プロパティは、要素の幅を設定します。既定では、このプロパティはコンテンツ領域の幅を設定しますが、 box-sizing を border-box に設定すると、境界領域の幅を設定します。"><code>width</code></a> や <a href="/ja/docs/Web/CSS/max-width" title="max-width は要素に与えられる幅の上限を指定する為に用いる CSS プロパティです。このプロパティは、 width プロパティの値が max-width で指定された値より大きくなることを防ぎます。"><code>max-width</code></a> などの色々なスタイルプロパティによって上書きすることが可能です。
+</p><p>スクリプトを使用して、<code><code id="a-left"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/left">left</a></code></code> と <code><code id="a-top"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/top">top</a></code></code> 属性の値を変更していくことで、要素を動き回らせることが可能です。
+スタックには、1 つの要素の絶対位置を変えても、他の要素の位置は影響を受けないという利点があります。
+通常のボックスで要素を動かそうとすると、周囲にある要素の配置が乱れてしまうかもしれません。
+</p><p>子要素を重ね合わせるように置くことも可能です。
+子要素は、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code></code> 内に現われる順番で描画されていきます。
+つまり、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code></code> の最初の子要素が最背面に表示され、次の子要素がその手前に表示されるという具合です。
+最後の要素が最前面に表示されます。
+DOM 関数を使用することによって、要素の表示順を変更することが可能です。
+</p><p>マウスイベントに応答するとき、一番上にある要素が最初にイベントを捉えます。
+つまり、2 つのボタンが重なっている場合、重なっている場所でのマウスクリックは、上にあるボタンの方が捉えるということになります。
+</p><p>次のセクションでは、タブボックスを説明します。
+これはデッキに似ていますが、要素単体でナビゲーション機能を提供しています。
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Stacks_and_Decks" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Tabboxes">次のページ  »</a></p>
+</div>
+
+<div class="noinclude">
+</div>

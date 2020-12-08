@@ -1,0 +1,68 @@
+---
+title: XUL_教程/更多的按钮特性
+slug: Mozilla/Tech/XUL/Tutorial/更多的按钮特性
+tags:
+  - XUL_教程
+translation_of: Archive/Mozilla/XUL/Tutorial/More_Button_Features
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Using_Spacers" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:The_Box_Model">下一页  »</a></p>
+</div><p></p>
+<p> </p>
+<h3 id=".E6.B7.BB.E5.8A.A0.E5.9B.BE.E5.83.8F" name=".E6.B7.BB.E5.8A.A0.E5.9B.BE.E5.83.8F">添加图像</h3>
+<p>你可以使用<code><code id="a-image"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/image">image</a></code></code>属性通过指定URL为按钮添加一个图像。图像从URL进行加载，可以是一个相对或绝对的URL路径，然后在按钮上显示图像。 下面的按钮有<code><code id="a-label"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> 和 <code><code id="a-image"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/image">image</a></code></code> 'happy.png'。图像显示在标签的左边。你可以使用其它两个属性去改变这个位置。这将会在后面进行解释。</p>
+<p><span id="%E4%BE%8B1"><a id="%E4%BE%8B1"></a><strong>例1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_1.xul">View</a></p>
+<pre>&lt;button label="help" image="happy.png"/&gt;
+</pre>
+<h4 id=".E4.BD.BF.E7.94.A8CSS.E5.9B.BE.E5.83.8F.E7.9A.84.E6.8C.89.E9.92.AE" name=".E4.BD.BF.E7.94.A8CSS.E5.9B.BE.E5.83.8F.E7.9A.84.E6.8C.89.E9.92.AE">使用CSS图像的按钮</h4>
+<p>在按钮上指定图像的另一个方法是使用样式表(CSS <a href="/zh-CN/docs/Web/CSS/list-style-image" title="list-style-image 属性用来指定一个能用来作为列表元素标记的图片。"><code>list-style-image</code></a> )属性。这将计划允许不改变XUL文件去改变"外观"(在这个例子，外观指按钮的图片)。</p>
+<p><span id="%E4%BE%8B2"><a id="%E4%BE%8B2"></a><strong>例2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_2.xul">View</a></p>
+<pre>&lt;button id="find-button"
+  label="Find" style="list-style-image: url('happy.png')"/&gt;
+</pre>
+<p>在这个例子，在按钮上显示图像 'happy.png'。 <code><code id="a-style"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/style">style</a></code></code>属性的功能类似于在HTML中一样。通常，它可以使用在所有的XUL元素。注意你确实应该在一个分离的样式表里定义样式。</p>
+<h3 id=".E5.9B.BE.E5.83.8F.E5.AE.9A.E4.BD.8D" name=".E5.9B.BE.E5.83.8F.E5.AE.9A.E4.BD.8D">图像定位</h3>
+<p>默认情况下，按钮上的图像会放置在文本标签的左边。有两个属性可以用来控制定位。</p>
+<p><code><code id="a-dir"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/dir">dir</a></code></code>属性控制图像和文本的方向。设置这个属性的值为<code>reverse</code>，图像将会放在文本的右边。使用<code>normal</code>值，或者删除这个属性，图像将会放在文本的左边。</p>
+<p><code><code id="a-orient"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code></code>属性用于在将图片放在文本的上面或下面。默认值是<code>horizontal</code>用于将用于将图像放在文本的左或右。你也可以使用值<code>vertical</code>将图像放在上方或下方。在这个例子，dir属性控制放置在上方或下方。相同的值被使用时，如果用在<code>normal</code>的意思是将图像放在文本的上方，而用在<code>reverse</code>的意思是将图像放在文本的下方。</p>
+<p><span id="%E4%BE%8B3"><a id="%E4%BE%8B3"></a><strong>例3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_3.xul">View</a></p>
+<div class="float-right">
+ <img alt="Image:advbtns1.png" class="internal" src="/@api/deki/files/2642/=Advbtns1.png"></div>
+<pre>&lt;button label="Left" image="happy.png"/&gt;
+&lt;button label="Right" image="happy.png" dir="reverse"/&gt;
+&lt;button label="Above" image="happy.png" orient="vertical"/&gt;
+&lt;button label="Below" image="happy.png" orient="vertical" dir="reverse"/&gt;
+</pre>
+<p><br>
+ 这个例子展示了四个连续的不同类型的按钮。注意两个属性都没有指定说明使用的是默认值。</p>
+<h3 id=".E7.89.B9.E6.AE.8A.E5.86.85.E5.AE.B9.E6.8C.89.E9.92.AE" name=".E7.89.B9.E6.AE.8A.E5.86.85.E5.AE.B9.E6.8C.89.E9.92.AE">特殊内容按钮</h3>
+<p>按钮可以在内部包含任意的标记元素，这些元素将会被渲染在按钮内部。你或许不会经常使用这个，但你可以在创建自定义元素时使用它。</p>
+<p>例如，下面将创建一个有两个红字的按钮：</p>
+<p><span id="%E4%BE%8B4"><a id="%E4%BE%8B4"></a><strong>例4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_4.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_4.xul">View</a></p>
+<pre>&lt;button&gt;
+  &lt;description value="This is a"/&gt;
+  &lt;description value="rather strange" style="color: red;"/&gt;
+  &lt;description value="button"/&gt;
+&lt;/button&gt;
+</pre>
+<p>任何XUL元素都可以放在<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code>里面。HTML元素将被忽略，因此你需要使用<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/description" title="description">description</a></code></code>元素来包装它来达到换行的目的。如果你在按钮上指定<code><code id="a-label"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code>属性，它将会覆盖按钮内的所有内容。</p>
+<h4 id=".E5.BC.B9.E5.87.BA.E8.8F.9C.E5.8D.95.E6.8C.89.E9.92.AE" name=".E5.BC.B9.E5.87.BA.E8.8F.9C.E5.8D.95.E6.8C.89.E9.92.AE">弹出菜单按钮</h4>
+<p>你可以在按钮里面放置一个<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code>去促使在按钮被按下时向下弹出一个菜单，就像使用 <code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code></code>。然而，在这个例子你必须设置<code><a href="/cn/XUL/Attribute/button.type" title="cn/XUL/Attribute/button.type">type</a></code> 属性的值为<code>menu</code>。</p>
+<p><span id="%E4%BE%8B5"><a id="%E4%BE%8B5"></a><strong>例5</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_5.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_5.xul">View</a></p>
+<div class="float-right">
+ <img alt="Image:advbtns2.png" class="internal" src="/@api/deki/files/2643/=Advbtns2.png"></div>
+<pre>&lt;button type="menu" label="Device"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="Printer"/&gt;
+    &lt;menuitem label="Mouse"/&gt;
+    &lt;menuitem label="Keyboard"/&gt;
+  &lt;/menupopup&gt;
+&lt;/button&gt;
+</pre>
+<p>在这个例子中，用户可以点击按钮去弹出一个包括三个项目的菜单。注意在选择这些菜单项之中的一个时不会改变按钮的标签，不像<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code></code>那样。这种按钮类型是有意做成类似于菜单的，在每个项目上附上脚本去执行任务。我们将会在后面看到更多的菜单。</p>
+<p>你也可以设置 <code><a href="/cn/XUL/Attribute/button.type" title="cn/XUL/Attribute/button.type">type</a></code> 属性的值为<code>menu-button</code>。这也可以创建一个像菜单的按钮，但显示会有所不同，右边的图像显示它们的区别。左边是一个'menu'而第二个是'menu-button'。 它有一个箭头标记菜单的存在。 在'menu'上，用户可以点击按钮的任何地方去显示菜单。在 'menu-button'上，用户点击箭头去显示菜单。</p>
+<p>接下来，我们将要学习更多关于 <a href="/cn/XUL_教程/盒状模型" title="cn/XUL_教程/盒状模型">在窗口中放置元素</a>.</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Using_Spacers" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:The_Box_Model">下一页  »</a></p>
+</div><p></p>
+<p></p>

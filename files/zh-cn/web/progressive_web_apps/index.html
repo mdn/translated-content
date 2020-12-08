@@ -1,0 +1,81 @@
+---
+title: 渐进式 Web 应用（PWA）
+slug: Web/Progressive_web_apps
+tags:
+  - Apps
+  - Modern web apps
+  - PWA
+  - Progressive web apps
+  - web app manifest
+  - 渐进式增强
+  - 渐进式增强的Web应用程序
+translation_of: Web/Progressive_web_apps
+---
+<p class="summary">PWA（Progressive web apps，渐进式 Web 应用）运用现代的 Web API 以及传统的渐进式增强策略来创建跨平台 Web 应用程序。这些应用无处不在、功能丰富，使其具有与原生应用相同的用户体验优势。 这组文档和指南告诉您有关 PWA 的所有信息。</p>
+
+<h2 id="PWA_的优势">PWA 的优势</h2>
+
+<p>PWA 是可被发现、易安装、可链接、独立于网络、渐进式、可重用、响应性和安全的。关于这些含义的细节，请参阅 <a href="/zh-CN/docs/Web/Apps/Progressive/Advantages">PWA的优势</a>。关于如何实施PWA，请参阅下面列出的指南。</p>
+
+<h2 id="核心_PWA_指南">核心 PWA 指南</h2>
+
+<p>以下指南通过简单的示例和工作原理，展示了实施PWA需要做什么。</p>
+
+<ol>
+ <li><a href="/zh-CN/docs/Web/Apps/Progressive/Introduction">PWA 介绍</a></li>
+ <li><a href="/zh-CN/docs/Web/Apps/Progressive/App_structure">PWA 结构</a></li>
+ <li><a href="/zh-CN/docs/Web/Progressive_web_apps/Offline_Service_workers">通过 Service workers 让 PWA 离线工作</a></li>
+ <li><a href="/zh-CN/docs/Web/Progressive_web_apps/Installable_PWAs">让 PWA 易于安装</a></li>
+ <li><a href="/zh-CN/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push">通过通知推送让 PWA 可重用</a></li>
+ <li><a href="/zh-CN/docs/Web/Progressive_web_apps/Loading">渐进式加载</a></li>
+</ol>
+
+<div class="column-container">
+<div class="column-half">
+<h2 id="技术指南">技术指南</h2>
+
+<ul>
+ <li><a href="/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage">用户端存储</a> — 关于如何使用 Web 存储、IndexedDB 和 Service workers 的指南。</li>
+ <li><a href="/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers">使用 Service workers</a> — 关于 Service Worker API 的深入指南。</li>
+ <li><a href="/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB">使用 IndexedDB</a> — 有关 IndexedDB 的知识与细节。</li>
+ <li><a href="/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">使用 Web 存储 API</a> — Web 存储 API 简化了工作。</li>
+ <li><a class="external external-icon" href="https://developers.google.com/web/updates/2015/11/app-shell" rel="noopener">使用应用 Shell 架构的快速加载的 Web 应用</a> — 使用 App Shell 编码模式创建快速加载的应用的指南。</li>
+ <li><a href="/zh-CN/docs/Web/API/Push_API/Using_the_Push_API">使用推送 API</a> — 了解 Web Push API 背后的知识。</li>
+ <li><a href="/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API">使用通知 API</a> — 换言之，Web 通知。</li>
+ <li><a href="/zh-CN/docs/Web/Apps/Modern/Responsive/responsive_design_building_blocks">响应式设计的构建模块</a> — 学习响应式设计的基础知识，也是现代应用布局的基本话题。</li>
+ <li><a href="/zh-CN/docs/Web/Apps/Modern/Responsive/Mobile_first">移动优先</a> — 在创建响应式应用程序布局时，通常将移动布局创建为默认并在顶部构建更宽的布局。</li>
+ <li><a href="/zh-CN/docs/Web/Progressive_web_apps/Add_to_home_screen">“添加到主屏幕”指南</a> — 了解如何利用添加到主屏幕（A2HS）。</li>
+</ul>
+</div>
+
+<div class="column-half">
+<h2 id="工具">工具</h2>
+
+<ul>
+ <li><a class="external external-icon" href="https://localforage.github.io/localForage/" rel="noopener">localForage</a> — a nice simple JavaScript library for making client-side data storage really simple; it uses IndexedDB by default, and falls back to Web SQL/Web Storage if necessary.</li>
+ <li><a class="external external-icon" href="https://github.com/fxos-components/serviceworkerware" rel="noopener">ServiceWorkerWare</a> — an <em>Express-like</em> microframework for easy Service Worker development.</li>
+ <li><a class="external external-icon" href="https://github.com/mozilla/oghliner" rel="noopener">oghliner</a> — not only a template but a tool for deploying Offline Web Apps to GitHub Pages.</li>
+ <li><a class="external external-icon" href="https://github.com/GoogleChrome/sw-precache" rel="noopener">sw-precache</a> — a node module to generate service worker code that will precache specific resources.</li>
+ <li><a class="external external-icon" href="https://github.com/GoogleChrome/workbox" rel="noopener">workbox</a> — spiritual successor to sw-precache with more advanced caching strategies and easy precaching.</li>
+ <li><a class="external external-icon" href="https://www.talater.com/upup/" rel="noopener">upup</a> — a tiny script that makes sure your site is always there for your users.</li>
+ <li><a class="external external-icon" href="https://serviceworke.rs/" rel="noopener">The service worker cookbook</a> — A series of excellent service worker/push recipes, showing how to implement an offline app, but also much more.</li>
+</ul>
+</div>
+</div>
+
+<h2 id="相关链接">相关链接</h2>
+
+<ul>
+ <li>Google Developers 上的<a href="https://developers.google.com/web/progressive-web-apps">Progressive web apps</a></li>
+ <li><a href="https://medium.com/@slightlylate/progressive-apps-escaping-tabs-without-losing-our-soul-3b93a8561955#.6czgj0myh">Progressive Web Apps: Escaping Tabs Without Losing Our Soul</a> by Alex Russell</li>
+ <li><a href="https://developers.google.com/web/progressive-web-apps/checklist">Progressive Web Apps 清单</a></li>
+ <li>来自 Google 的<a href="https://developers.google.com/web/tools/lighthouse">Lighthouse Tool</a></li>
+ <li><a href="https://github.com/angular/mobile-toolkit">Tools for building progressive web apps with Angular</a></li>
+ <li><a href="https://github.com/codebusking/react-pwa-guide-kit">React PWA Guide Kit</a></li>
+ <li><a href="https://www.pokedex.org/">Offline-capable Pokédex web site</a></li>
+ <li>
+  <p><a href="https://hnpwa.com/">Hacker News readers as Progressive Web Apps</a></p>
+ </li>
+</ul>
+
+<div>{{QuickLinksWithSubpages("/zh-CN/docs/Web/Apps/Progressive/")}}</div>

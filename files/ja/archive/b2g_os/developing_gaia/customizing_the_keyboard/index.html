@@ -1,0 +1,234 @@
+---
+title: Firefox OS 内でキーボードをカスタマイズする
+slug: Archive/B2G_OS/Developing_Gaia/Customizing_the_keyboard
+tags:
+  - Firefox OS
+  - ガイド
+  - キーボード
+translation_of: Archive/B2G_OS/Developing_Gaia/Customizing_the_keyboard
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details open>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/ja/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<div class="summary">
+<p>この文書では Firefox OS v1.2 以上で、独自の言語/スクリプトを含んだカスタムキーボードレイアウトをどうやって追加するのかを説明します。</p>
+</div>
+
+<h2 id="Gaiaビルトインのキーボードアプリと、システム構造の状況">Gaiaビルトインのキーボードアプリと、システム構造の状況</h2>
+
+<p>Firefox OSには、2013年10月以降、2つの主流なキーボード機能が実装されています。</p>
+
+<ul>
+ <li>キーボード/スペルチェック辞書をビルトインのデフォルトGaiaキーボードアプリに含めるかを切り替えるビルドフラグ (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=884752" title="FIXED: keyboard build-time customization">バグ 884752</a>を見よ)。</li>
+ <li>Firefox Marketplaceからユーザにサードパーティ製キーボードアプリをインストール可能にするOSレベルの機能。これはFirefox OS v2.0で提供を開始します。詳細は<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=816869" title="FIXED: [Meta] Enable third-party keyboards">バグ 816869</a> と <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=964670" title="FIXED: [Keyboard][User Story] Enable 3rd party keyboard framework with OOP">バグ 964670</a>を見よ。</li>
+</ul>
+
+<p>電話機に新しいキーボードレイアウトを含めるには、Gaiaの中にカスタムレイアウトのファイルを置いてからビルドコンフィグを用いてキーボードアプリをビルドするか、自分自身のキーボードアプリを開発して電話機にインストールすることができます。それぞれの方法を見て行きましょう。</p>
+
+<h2 id="独自のキーボードアプリを開発する">独自のキーボードアプリを開発する</h2>
+
+<p>Gaiaのビルトインアプリをテンプレートに使うか、フォークできます。 基本的な考え方は:</p>
+
+<ul>
+ <li>マニフェストファイルにて、<a href="/ja/Apps/Build/Manifest#role"><code>role</code></a> プロパティ内に <code>input</code> のrole(役割)付きで宣言します。</li>
+ <li><a href="/ja/Apps/Build/Manifest#permissions"><code>permissions</code></a> プロパティ内で指定する<code> input パーミッションを持っているか確認します。</code></li>
+</ul>
+
+<p>その後に、キーボードをインストールできて、ユーザが入力フィールドにフォーカスさせる度にスクリーンの下端側にキーボードが出るようになります。 これによって起きるスペースの問題は、下記のように処理できます:</p>
+
+<ul>
+ <li>古く、古典的な <code>window.resizeTo</code> を使って、アプリが占める領域を更新する。</li>
+ <li>新しく、輝かしい <code>navigator.mozInputMethod</code> APIを使って、所与の入力内容を変化させる; 詳しくは<a href="http://dxr.mozilla.org/mozilla-central/source/dom/webidl/InputMethod.webidl"> WebIDL of the API </a>を見て下さい。これらのメソッドの多くは同じ文字列を出力しますが、異なるイベント(<a href="/ja/docs/Web/API/KeyboardEvent">KeyboardEvent</a>、<a href="/ja/docs/Web/API/CompositionEvent">CompositionEvent</a>など)を生成します、このため<a href="https://wiki.mozilla.org/WebAPI/KeboardIME#Use_cases_for_each_of_the_methods">ユースケースに合うメソッドを使っているか</a>確認して下さい。</li>
+</ul>
+
+<div class="note">
+<p><strong>記</strong>: <a href="https://github.com/mozilla-b2g/gaia/tree/master/dev_apps/test-keyboard-app">LOL キーボード</a> のデモは、キーボードアプリがどう構築されるのかをより良く理解する助けになり、かつあなた自身のキーボードアプリのテンプレートになるでしょう。</p>
+</div>
+
+<h2 id="Gaiaキーボードアプリにカスタムレイアウトを含める">Gaiaキーボードアプリにカスタムレイアウトを含める</h2>
+
+<ol>
+ <li>詳細情報は <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/keyboard/CONFIGURE">keyboard CONFIGURE details</a> を見ます。辞書を追加したり、(アジア言語用の)双方向なIMEを入れたりしたい言語に依存します。</li>
+ <li>新規サポート言語のレイアウトを追加したい場合、それを <a href="https://github.com/mozilla-b2g/gaia/blob/master/build/config/keyboard-layouts.json">build/config/keyboard-layouts.json</a> 内の、言語のデフォルトレイアウトに追加したいかもしれません。</li>
+</ol>
+
+<h3 id="アジアのIME">アジアのIME</h3>
+
+<p>東アジア言語 (<a href="https://en.wikipedia.org/wiki/CJK">中国語、日本語、韓国語</a>) は幾千の文字を含んだ、遥かに複雑な活字を使っています。ハードウェア・ソフトウェアキーボード上に数千のキーを配置する方法はないので、ユーザは一連のシンボルを文字選択に変換するため、<a href="https://en.wikipedia.org/wiki/Input_method">input method editor</a>、略してIMEに頼っています。<br>
+ <br>
+ シンボル変換の方法やIMEが "スマート" であるかは、選んだIMEや、実装自体や、またしばしば、この文書の範囲外の<a href="https://en.wikipedia.org/wiki/Natural_language_processing">NLP science</a>に依存します。メモリを節約するため、データをバイナリブロブにコンパイルしてアレイバッファとして読み込むのが推奨されます; 複雑なJSON構造は実端末では動作しないでしょう。</p>
+
+<h4 id="Gaiaキーボードアプリ内のIMEインターフェイス">Gaiaキーボードアプリ内のIMEインターフェイス</h4>
+
+<p>シンボルを文字列に変換するIMEライブラリ(専門用語で''IM エンジン''という) がすぐ使える場合、レイアウトからシンボルを受け取って文字列を出力する定義済みインターフェイスが、Gaiaキーボードアプリ内に必要になるでしょう。<a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/keyboard/js/keyboard/input_method_manager.js">今のAPIはGithub上に文書化されています</a>。</p>
+
+<p>我々は更にGaia内でAPIを洗練させるため、実装を促しています。</p>
+
+<h4 id="IMエンジンをあなたのレイアウトで動作させる">IMエンジンをあなたのレイアウトで動作させる</h4>
+
+<p>IMエンジンがあなたのキーボードレイアウトで動作するようにするには:</p>
+
+<ol>
+ <li>IMエンジンに新規レイアウトを導入する、下記記載の通りに。</li>
+ <li><code>imEngine</code> プロパティでIMエンジンを参照する。レイアウトが有効な時、キーボードアプリは<code>keyboard/js/imes/&lt;imEngine&gt;/&lt;imEngine&gt;.js</code>にあるスクリプトをロードするでしょう。</li>
+ <li>スクリプトがロードされて初期化された時、キー/文字を送受信するためにAPIをセットアップします。</li>
+ <li>ユーザ入力に応答を望むあらゆることをします。ユーザがキーボードのキーをタップした時、典型的にはIMエンジンに送られます。</li>
+</ol>
+
+<h4 id="知られている実装">知られている実装</h4>
+
+<ul>
+ <li><a href="https://github.com/timdream/jszhuyin">JSZhuyin</a> は繁体字向けの最初のGaiaキーボードのアジアIMエンジン実装でZhuyin IMEを組み入れています。</li>
+ <li><a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/keyboard/js/imes/jskanji">JSKanji</a> は日本語用のプロトタイプIM エンジンです。</li>
+ <li><a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/keyboard/js/imes/jspinyin">JSPinyin</a> は簡体字向けに書かれていてピンイン記号で動作します。</li>
+ <li>デモとして<a href="http://chewing.csie.net/">Chewing</a> (C/C++ の繁体字用オープンソースZhuyin IME) は<a href="/en-US/docs/Mozilla/Projects/Emscripten">Emscripten</a>でクロスコンパイルされてGaiaキーボードにリンクされています。</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=835261">JSHangul</a> は韓国語用のプロトタイプIM エンジンで、現在開発中です。</li>
+</ul>
+
+<h3 id="ローカライズ担当者の視点からの新規ロケール">ローカライズ担当者の視点からの新規ロケール</h3>
+
+<div class="note">
+<p><strong>記</strong>: この節は主にアルファベットの言葉について当てはまります; (アムハラ語のような)アブギダ や、(中国語のような)象形文字システムはもっと複雑です。</p>
+</div>
+
+<p>一般的に、新規ロケール追加には2つの事が必要です: <strong>キーボードレイアウト </strong>と <strong>辞書</strong>(テキスト予想機能用に)です。</p>
+
+<h4 id="キーボードレイアウトを作成する">キーボードレイアウトを作成する</h4>
+
+<p>キーボードレイアウトファイルはJavaScriptファイルに含まれていて、どのキーがキーボードにあるかと、どのキーがどの文字とシンボルになるかを、長押しで使える2つ目のオプションを含めて定義します。最も率直な方法は、既存のキーボード <a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/keyboard/js/layouts">GitHub</a> から取って、名前を変更して調整する事です。</p>
+
+<p>最初にヘッダを変更する必要があります。キーボードが en-US に近く、ロケールをスコットランド ゲール語 (gd)としてみましょう。こうなっているのを:</p>
+
+<pre>Keyboards.en = {
+ label: 'English',
+ shortLabel: 'En',
+ imEngine: 'latin',
+ types: ['text', 'url', 'email', 'number', 'password'],
+ autoCorrectLanguage: 'en_us',
+ menuLabel: 'English',</pre>
+
+<p>こう変更します:</p>
+
+<pre>Keyboards.gd = {
+ label: 'Scottish Gaelic',
+ shortLabel: 'gd',
+ imEngine: 'latin',
+ types: ['text', 'url', 'email', 'number', 'password'],
+ autoCorrectLanguage: 'gd_gb',
+ menuLabel: 'Gàidhlig',</pre>
+
+<p><code>label 欄は</code>英語でのあなたの言語で、<code>shortLabel</code> 欄は最大3文字です; これは画面上のキーボードに表示される省略形で、ユーザが現在使っている言語がわかるようになっています。ISOコードも使えますが、その他の適切なものも使えます。<code>menuLabel</code> 欄はあなたの言語での言語名です: これはユーザがメニューオプションで見るものです。</p>
+
+<p>レイアウトが終わった場合、唯一調整が必要となる事は、(UIでは長押しでアクセスできる) 代替文字です:</p>
+
+<pre>alt: {
+  a: 'áàâäåãāæ',
+  c: 'çćč',
+  e: 'éèêëēę€ɛ',
+  i: 'ïíìîīį',
+  o: 'öõóòôōœøɵ',
+  u: 'üúùûū',
+  s: 'ßśš$',
+  S: 'ŚŠ$',
+  n: 'ñń',
+  l: 'ł£',
+  y: 'ÿ¥',
+  z: 'žźż',
+  '.': ',?!;:'
+},</pre>
+
+<p>長押し時の文字の順番と文字数の両方を変更できます。この場合、ゲール語のユーザは "鋭アクセント" よりも "重アクセント" をよく使うため、順番をこう変更します:</p>
+
+<pre>a: 'àáâäåãāæ',</pre>
+
+<p>ドットつき子音のオプションを与えたいため、このような新規行を追加します:</p>
+
+<pre><span class="nx">b</span><span class="o">:</span> <span class="s1">'ḃ'</span><span class="p">,</span></pre>
+
+<p>たぶん代わりのレイアウト(数字や句読点など用) や、通貨シンボルが正しく表示されているかを確認したくなるでしょう。</p>
+
+<h4 id="辞書を作成する">辞書を作成する</h4>
+
+<p>変換辞書もあると良いでしょう、ない場合はユーザは各単語毎にタイプしなければならず、単語予想を使えなくなります。</p>
+
+<p>この用途で (理想的には) なんらかの形の、頻度で単語をランクづけるコーパスが必要になるでしょう。例えば <em>there</em> という単語は <em>thespian より遥かによく出る</em>ので、ユーザが the とタイプした時に、 <em>there</em> は <em>thespian</em> より前にサジェストされるべきです。</p>
+
+<p>これは辞書 (XML ファイル; 既存のものは<a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/keyboard/js/imes/latin/dictionaries">ここ</a>で見られます)の中で、1 (最小頻度) から 255 (最大頻度) を各単語 (または 行) に割当てることで完了します。次が作成を要するものです:</p>
+
+<pre>&lt;wordlist locale="gd" description="Gàidhlig" date="1401554807" version="1"&gt;
+ &lt;w f="255" flags=""&gt;a&lt;/w&gt;
+ &lt;w f="254" flags=""&gt;an&lt;/w&gt;
+ &lt;w f="247" flags=""&gt;agus&lt;/w&gt;</pre>
+
+<p>素早く汚い辞書 (例えば大きなテキストを取ってきて頻度を数えたもの) でも役立つでしょう。あなたのロケールでそんなデータが全くなく、デジタルテキストが多くない場合には、言語の知識を使って、共通経験を元に手動で単語のランクづけをします。</p>
+
+<h4 id="ファイルをビルドする">ファイルをビルドする</h4>
+
+<p>いったん js と 辞書ファイルができたら、<a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/keyboard/js/imes/latin/dictionaries">ここのgaiaディレクトリ</a> に移動して<em>Makefile<em> </em></em>を開きます。辞書の名前をリスト (例えば <em>gd_wordlist.xml</em> と言う場合) に追加して、置きます:</p>
+
+<pre>ga.dict \
+gd.dict \</pre>
+
+<p><code>gd_worldlist.xml</code> ファイルがフォルダに入っているのを確認して、次を実行します <code>$ make gd.dict</code></p>
+
+<p>ここまで来たけども、<em>.dict</em> ファイルをビルドする最終ステップで詰まった場合、<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox%20OS">バグ登録して</a> (<strong>Componentは: Gaia Keyboard</strong>) ファイルを添付して何が問題なのかを説明して下さい。誰かが助ける事ができるでしょう<strong>。パッチをプルリクエストとして投稿するのを確認して <em>for review to someone(だれかのレビュー用)のフラグを立てます</em>、そうしないとバグは気づかれないでしょう。</strong></p>
+
+<h4 id="あなたの新ロケールをテストする">あなたの新ロケールをテストする</h4>
+
+<p>新規ロケールのビルドとコミットを終えたら、新キーボードと事象をテストする最速の手順は、キーボードアプリを走らせる我々の<a href="https://github.com/timdream/gaia-keyboard-demo">webベースのデモページ </a>です。En をクリックしてロケールを循環させて下さい。あなたのぶんが見えない場合、(右上の)スパナのシンボルをクリックして、テストしたいキーボードを tick/untick します。</p>
+
+<h2 id="議論と質疑">議論と質疑</h2>
+
+<p><a href="https://lists.mozilla.org/listinfo/dev-gaia">dev-gaia</a> メーリングリストに来るか、 irc.mozilla.org の #gaia チャンネルに来て下さい(詳しくは <a href="https://wiki.mozilla.org/IRC">Mozilla IRC</a> へ)。#mozilla-taiwan はこのトピック向けの、中国語のデファクトのチャンネルです。</p>

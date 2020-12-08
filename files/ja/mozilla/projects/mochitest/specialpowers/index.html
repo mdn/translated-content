@@ -1,0 +1,471 @@
+---
+title: SpecialPowers
+slug: Mozilla/Projects/Mochitest/SpecialPowers
+tags:
+  - Mochistest
+  - NeedsContent
+  - QA
+  - 'QA:Tools'
+  - Reference
+translation_of: Mozilla/Projects/Mochitest/SpecialPowers
+---
+<p>SpecialPowers は <a href="/en/Mochitest" title="en/Mochitest">Mochitest</a> のテストで利用可能な API 群の 1 つです。Mochitest は通常の Web ページとしてかけるようにする予定です。しかし、セキュリティ的な理由から権限の無い通常の Web ページではテストできないものもあります。そういった場合に SpecialPowers API を使う事で通常の Web ページでは触れることのできない操作をすることができます。</p>
+
+<div class="note">もし Mochitest で幅広い権限を必要とするテストをする場合は、変りに <a href="/en/Chrome_tests" title="en/Chrome tests">Chrome Mochitest</a> を使う方が良いでしょう。</div>
+
+<h2 id="Method_overview">Method overview</h2>
+
+<h3 id="Preference_APIs">Preference APIs</h3>
+
+<table class="standard-table" style="height: 415px; width: 460px;">
+ <tbody>
+  <tr>
+   <td><code>void pushPrefEnv(inPrefs, callback);</code></td>
+  </tr>
+  <tr>
+   <td><code>void popPrefEnv(callback);</code></td>
+  </tr>
+  <tr>
+   <td><code>void flushPrefEnv(callback);</code></td>
+  </tr>
+  <tr>
+   <td><code>bool getBoolPref(aPrefName);</code></td>
+  </tr>
+  <tr>
+   <td><code>int getIntPref(aPrefName);</code></td>
+  </tr>
+  <tr>
+   <td><code>string getCharPref(aPrefName);</code></td>
+  </tr>
+  <tr>
+   <td><code>any getComplexValue(aPrefName);</code></td>
+  </tr>
+  <tr>
+   <td><code>void setBoolPref(aPrefName, aValue);</code></td>
+  </tr>
+  <tr>
+   <td><code>void setIntPref(aPrefName, aValue);</code></td>
+  </tr>
+  <tr>
+   <td><code>void setCharPref(aPrefName, aValue);</code></td>
+  </tr>
+  <tr>
+   <td><code>void setComplexValue(aPrefName, aValue);</code></td>
+  </tr>
+  <tr>
+   <td><code>void clearUserPref(aPrefName);</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Permission_APIs">Permission APIs</h3>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void pushPermissions(inPermissions, callback);</code></td>
+  </tr>
+  <tr>
+   <td><code>void popPermissions(callback);</code></td>
+  </tr>
+  <tr>
+   <td><code>void flushPermissions(callback);</code></td>
+  </tr>
+  <tr>
+   <td><code>void addPermission(type, allow, arg);</code></td>
+  </tr>
+  <tr>
+   <td><code>void removePermission(type, arg);</code></td>
+  </tr>
+  <tr>
+   <td><code>bool hasPermission(type, arg);</code></td>
+  </tr>
+  <tr>
+   <td><code>bool testPermission(type, value, arg);</code></td>
+  </tr>
+  <tr>
+   <td><code>void setFullscreenAllowed(document);</code></td>
+  </tr>
+  <tr>
+   <td><code>void removeFullscreenAllowed(document);</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Event_Listener_Observer_APIs">Event Listener / Observer APIs</h3>
+
+<p>TBD</p>
+
+<h3 id="Garbage_Collection_APIs">Garbage Collection APIs</h3>
+
+<p>TBD</p>
+
+<h3 id="Privilege_Wrapper_APIs">Privilege Wrapper APIs</h3>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code><a href="#wrap">Object wrap(Object);</a></code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="XPCOM_Components_APIs">XPCOM Components APIs</h3>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code><a href="#Cc">Cc</a></code></td>
+  </tr>
+  <tr>
+   <td><code><a href="#Ci">Ci</a></code></td>
+  </tr>
+  <tr>
+   <td><code><a href="#Cr">Cr</a></code></td>
+  </tr>
+  <tr>
+   <td><code><a href="#Cu">Cu</a></code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Log_APIs">Log APIs</h3>
+
+<p>TBD</p>
+
+<h3 id="Environment_APIs">Environment APIs</h3>
+
+<table class="standard-table" style="height: 250px; width: 463px;">
+ <tbody>
+  <tr>
+   <td><code>bool isMainProcess();</code></td>
+  </tr>
+  <tr>
+   <td><code>string getMozFullPath(file);</code></td>
+  </tr>
+  <tr>
+   <td><code>bool isWindowPrivate(aWindow);</code></td>
+  </tr>
+  <tr>
+   <td><code>bool isBackButtonEnabled(aWindow);</code></td>
+  </tr>
+  <tr>
+   <td><code>int assertionCount();</code></td>
+  </tr>
+  <tr>
+   <td><code>void removeExpectedCrashDumpFiles(aExpectingProcessCrash);</code></td>
+  </tr>
+  <tr>
+   <td><code>string[] findUnexpectedCrashDumpFiles();</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Focus_Management_APIs">Focus Management APIs</h3>
+
+<p>TBD</p>
+
+<h3 id="Mock_APIs">Mock APIs</h3>
+
+<p>TBD</p>
+
+<h3 id="Form_History_APIs">Form History APIs</h3>
+
+<p>TBD</p>
+
+<h3 id="Snapshot_APIs">Snapshot APIs</h3>
+
+<p>TBD</p>
+
+<h3 id="Clipboard_APIs">Clipboard APIs</h3>
+
+<p>TBD</p>
+
+<h3 id="Console_APIs">Console APIs</h3>
+
+<p>TBD</p>
+
+<h3 id="Layout_APIs">Layout APIs</h3>
+
+<p>TBD</p>
+
+<h3 id="Frame_Message_APIs">Frame Message APIs</h3>
+
+<p>TBD</p>
+
+<h3 id="Apps_APIs">Apps APIs</h3>
+
+<p>TBD</p>
+
+<h3 id="Other_APIs">Other APIs</h3>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>XMLHttpRequest createSystemXHR();</code></td>
+  </tr>
+  <tr>
+   <td><code>void quit();</code></td>
+  </tr>
+  <tr>
+   <td><code>DOMWindowUtils getDOMWindowUtils(window);</code></td>
+  </tr>
+  <tr>
+   <td><code>void executeSoon(aFun, aWindow);</code></td>
+  </tr>
+  <tr>
+   <td><code>object getDOMRequestService();</code></td>
+  </tr>
+  <tr>
+   <td><code>void openDialog(aWindow, aArg);</code></td>
+  </tr>
+  <tr>
+   <td><code>string sanityCheck();</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Attributes">Attributes</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Attribute</th>
+   <th scope="col">Type</th>
+   <th scope="col">Description</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>DOMWindowUtils</code></td>
+   <td> </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td><code>Services</code></td>
+   <td> </td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Methods">Methods</h2>
+
+<h3 id="Preference_APIs_2">Preference APIs</h3>
+
+<p>内部的に、このメソッドがどのように使われているかは {{ interface("nsIPrefBranch") }} のドキュメントを参照してください。</p>
+
+<h4 id="getBoolPref(aPrefName)"><code>getBoolPref(aPrefName)</code></h4>
+
+<p>boolean 型として aPrefName のプリファレンス値を取得します。</p>
+
+<h4 id="getIntPref(aPrefName)"><code>getIntPref(aPrefName)</code></h4>
+
+<p>integer 型として aPrefName のプリファレンス値を取得します。</p>
+
+<h4 id="getCharPref(aPrefName)"><code>getCharPref(aPrefName)</code></h4>
+
+<p>string 型として aPrefName のプリファレンス値を取得します。</p>
+
+<h4 id="getComplexValue(aPrefName)"><code>getComplexValue(aPrefName)</code></h4>
+
+<p>XPCOM オブジェクトとして aPrefName のプリファレンス値を取得します。</p>
+
+<h4 id="setBoolPref(aPrefName_aValue)"><code>setBoolPref(aPrefName, aValue)</code></h4>
+
+<p>boolean 型の aValue を aPrefName をキーとしてプリファレンスへ設定します。</p>
+
+<h4 id="setIntPref(aPrefName_aValue)"><code>setIntPref(aPrefName, aValue)</code></h4>
+
+<p>integer 型の aValue を aPrefName をキーとしてプリファレンスへ設定します。</p>
+
+<h4 id="setCharPref(aPrefName_aValue)"><code>setCharPref(aPrefName, aValue)</code></h4>
+
+<p>string 型の aValue を aPrefName をキーとしてプリファレンスへ設定します。</p>
+
+<h4 id="setComplexValue(aPrefName_aValue)"><code>setComplexValue(aPrefName, aValue)</code></h4>
+
+<p>XPCOM オブジェクトの aValue を aPrefName をキーとしてプリファレンスへ設定します。</p>
+
+<h4 id="clearUserPref(aPrefName)"><code>clearUserPref(aPrefName)</code></h4>
+
+<p>aPrefName のプリファレンス値を初期値に戻します。</p>
+
+<h3 id="Permission_APIs_2">Permission APIs</h3>
+
+<p>TBD</p>
+
+<h3 id="Event_Listener_Observer_APIs_2">Event Listener / Observer APIs</h3>
+
+<h4 id="addChromeEventListener(type_listener_capture_allowUntrusted)"><code>addChromeEventListener(type, listener, capture, allowUntrusted)</code></h4>
+
+<p>TabChildGlobal オブジェクトにイベントリスナーを登録します。</p>
+
+<h4 id="removeChromeEventListener(type_listener_capture)"><code>removeChromeEventListener(type, listener, capture)</code></h4>
+
+<p>TabChildGlobal オブジェクトからイベントリスナーを除去します。</p>
+
+<h3 id="Garbage_Collection_APIs_2">Garbage Collection APIs</h3>
+
+<h4 id="gc()"><code>gc()</code></h4>
+
+<p>強制的にガベージコレクションを発生させます。</p>
+
+<h3 id="Privilege_Wrapper_APIs_2">Privilege Wrapper APIs</h3>
+
+<h4 id="Object_wrap(Object)"><code>Object wrap(Object)</code></h4>
+
+<p>chrome オブジェクトにアクセスするために chrome オブジェクトをラップします。(例えば) XPCOM コンポーネントを返すメソッドの戻り値にアクセスするためには必要です。</p>
+
+<h3 id="XPCOM_Components_APIs_2">XPCOM Components APIs</h3>
+
+<h4 id="Cc"><code>Cc</code></h4>
+
+<p><code>Components.classes</code> の値を取得できます。これは chrome コード内で取得できるものと同じです。</p>
+
+<h4 id="Ci"><code>Ci</code></h4>
+
+<p><code>Components.interfaces</code> の値を取得できます。これは chrome コード内で取得できるものと同じです。</p>
+
+<h4 id="Cr"><code>Cr</code></h4>
+
+<p><code>Components.results </code>の値を取得できます。これは chrome コード内で取得できるものと同じです。</p>
+
+<h4 id="Cu"><code>Cu</code></h4>
+
+<p><code>Components.utils </code>の値を取得できます。これは chrome コード内で取得できるものと同じです。</p>
+
+<h3 id="Log_APIs_2">Log APIs</h3>
+
+<p>TBD</p>
+
+<h3 id="Environment_APIs_2">Environment APIs</h3>
+
+<p>TBD</p>
+
+<h3 id="Focus_Management_APIs_2">Focus Management APIs</h3>
+
+<p>TBD</p>
+
+<h3 id="Mock_APIs_2">Mock APIs</h3>
+
+<h4 id="MockFilePicker"><code>MockFilePicker</code></h4>
+
+<p>これは読み込み・保存のコードをテストするために、標準 File Picker をスクリプトで制御可能にするものに置換します。これを使うと、以下のコードをテストすることができます。</p>
+
+<pre class="brush:js;">var MockFilePicker = SpecialPowers.MockFilePicker;
+MockFilePicker.reset(); // You must call reset before each test
+</pre>
+
+<p><a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=544963&amp;action=diff" title="https://bugzilla.mozilla.org/attachment.cgi?id=544963&amp;action=diff">このパッチ</a> ではMockFilePicker の使い方と XPCShell テストの使い方の良い例です。<code> testing/mochitest/MockFilePicker.jsm</code> のコードが参考になるでしょう。</p>
+
+<h3 id="Form_History_APIs_2">Form History APIs</h3>
+
+<p>TBD</p>
+
+<h3 id="Snapshot_APIs_2">Snapshot APIs</h3>
+
+<p>TBD</p>
+
+<h3 id="Clipboard_APIs_2">Clipboard APIs</h3>
+
+<p>TBD</p>
+
+<h3 id="Console_APIs_2">Console APIs</h3>
+
+<p>TBD</p>
+
+<h3 id="Layout_APIs_2">Layout APIs</h3>
+
+<p>TBD</p>
+
+<h3 id="Frame_Message_APIs_2">Frame Message APIs</h3>
+
+<h4 id="loadChromeScript()"><code>loadChromeScript()</code></h4>
+
+<p>TBD</p>
+
+<h3 id="Apps_APIs_2">Apps APIs</h3>
+
+<p>TBD</p>
+
+<h3 id="Other_APIs_2">Other APIs</h3>
+
+<h4 id="createSystemXHR()"><code>createSystemXHR()</code></h4>
+
+<p>完全な "system privileges"  を持った XMLHttpRequest を生成して返します。言い換えれば以下の事が可能になります。</p>
+
+<ul>
+ <li>制限なくクロスサイトリクエスト (cross-site requests) を要求できます。すなわちターゲットとなるサーバーは CORS をサポートする必要がありません。</li>
+ <li>xhr.setRequestHeader を使ってどんなヘッダーでも追加することができます。</li>
+ <li>xhr.getResponseHeader と xhr.getAllResponseHedaders を使ってすべてのレスポンスにアクセスできます。</li>
+ <li>xhr.responseXML のプロパティを使って XUL コンテンツの読み込み・パースができます。</li>
+ <li><code>referer</code> (sic) ヘッダー無しでリクエストを要求できます。もし <code>referer</code> ヘッダーを設定したい場合は、xhr.setRequestHeader を使って手動で設定する必要があります。</li>
+</ul>
+
+<p>しかし、xhr オブジェクトをパースしたドキュメントや xhr.responseXML からアクセスしたドキュメントは null principal として生成されています。そのため、ドキュメントでできることに制限があります。</p>
+
+<h4 id="sanityCheck()"><code>sanityCheck()</code></h4>
+
+<p>"foo" という文字列を返します。</p>
+
+<h2 id="Adding_new_APIs">Adding new APIs</h2>
+
+<p>もし現在定義されていない権限が必要な関数をテストしたい場合、SpecialPowers オブジェクトに新しい API を追加することができます。</p>
+
+<div class="note">SpecialPowers API は Electrolysis(e10s) プロジェクトでは前方互換として設計されています。そのためコンテンツは別プロセスとして動作します。(Firefox Mobile と同様)。変更したもの全てについてこれを考慮しなくてはいけません。考慮しない場合は許可されることは無いでしょう。</div>
+
+<p>プロセス外 (out-of-process) のコンテンツをサポートするために、SpecialPowers の実装は以下の 2 つのファイルに分離されています。</p>
+
+<ul>
+ <li>親プロセスで常に動作する {{ Source("testing/specialpowers/components/SpecialPowersObserver.js", "SpecialPowersObserver.js") }}</li>
+ <li>コンテンツプロセスで動作し、<a href="/en/The_message_manager#The_content_script" title="en/The message manager#The content script">コンテンツスクリプト</a> である{{ Source("testing/specialpowers/content/specialpowers.js", "specialpowers.js") }}</li>
+</ul>
+
+<p>両方のファイルは chrome 権限で実行されます。しかし XPCOM API は恐らくコンテンツプロセスでは利用できないでそう。もし特殊な API でそれを利用する場合は Electrolysis や Mobile チームに相談するべきです。プロセス間メッセージの仕組みについての情報を知りたい場合、 <a href="/en/The_message_manager" title="en/The message manager">Message Manager</a> のドキュメントを参照してください。</p>
+
+<p>{{ interface("nsIScreenManager") }} インターフェイスの <code>numberOfScreens</code>  をアクセス可能にする修正を例にしてみましょう。このインターフェイスはコンテンツアプリではアクセス不可能ですので、サンプルコードでそれを可能にしてみましょう。まず初めに、コンテンツで利用できるように SpecialPowers に新しい API を定義した方が良いでしょう。このオブジェクトは {{ Source("testing/specialpowers/content/specialpowers.js", "the content script") }} に定義します。</p>
+
+<div class="note">SpecialPowers は標準の JavaScript オブジェクトです。そのため、関数・属性・セッター・ゲッターを自由に追加することができます。特殊な <span id="the-code"><span class="a"><code>__exposedProps__</code> property のようにアンダースコア("_") から始まるプロパティを定義することでプロパティを隠すことができます。アンダースコアから始まる関数もプライベートになります。</span></span></div>
+
+<p>最初に<code>SpecialPowers</code> に <code>numberOfScreens</code> のゲッターを追加しましょう。単純に chrome プロセスにブロッキングメッセージを送信し、応答として値を返すだけです。</p>
+
+<pre class="brush:js;" lang="en"><span id="the-code"><span class="v">var </span><a class="d" href="http://mxr.mozilla.org/mozilla-central/ident?i=SpecialPowers">SpecialPowers</a> = {
+  // existing APIs
+  //...
+
+</span><span id="the-code">  // Provide nsIScreenManager.numberOfScreens
+  get numberOfScreens() {
+    // You could pass additional parameters in the second parameter, consult the <a title="en/The message manager">message manager</a> documentation for more details.
+    // Ideally this would be a memoizing getter, that's somewhat out of scope for this document.
+    return sendSyncMessage("SPNumberOfScreens", {})[0];
+  }</span>
+<span id="the-code">};
+</span></pre>
+
+<p>このとき、対応するメッセージのハンドラーを {{ Source("testing/specialpowers/components/SpecialPowersObserver.js", "chrome observer script") }} に定義する必要があります。<span id="the-code"><code>SpecialPowersObserver.observe</code> </span>関数の中で、以下の実在するメッセージを登録します。</p>
+
+<pre class="brush:js;" lang="en"><span id="the-code"><span class="c">// Register for any messages our API needs us to handle
+</span></span><span id="the-code"><a class="d" href="http://mxr.mozilla.org/mozilla-central/ident?i=messageManager">messageManager</a>.<a class="d" href="http://mxr.mozilla.org/mozilla-central/ident?i=addMessageListener">addMessageListener</a>(<span class="s">"SPPrefService"</span>, <span class="v">this)</span>;
+</span><span id="the-code"><a class="d" href="http://mxr.mozilla.org/mozilla-central/ident?i=messageManager">messageManager</a>.<a class="d" href="http://mxr.mozilla.org/mozilla-central/ident?i=addMessageListener">addMessageListener</a>(<span class="s">"SPNumberOfScreens"</span>, <span class="v">this)</span>;</span>
+</pre>
+
+<p>そして、<code><span id="the-code">SpecialPowersObserver.receiveMessage</span></code> 関数の中で、新しいメッセージの分岐を追加し結果を返します。</p>
+
+<pre class="brush:js;" lang="en"><span id="the-code">receiveMessage: <span class="v">function(</span>aMessage) {
+</span><span id="the-code"><span class="v">  switch(aMessage.name) </span>{
+    <span class="v">case </span><span class="s">"SPPrefService"</span>:</span>
+    // existing code...
+
+    case "SPNumberOfScreens":
+      var screenManager = Components.classes["@mozilla.org/gfx/screenmanager;1"]
+                    .getService(Components.interfaces.nsIScreenManager);<span id="the-code">}
+      return screenManager.numberOfScreens;
+
+    default:
+</span></pre>
+
+<p>これで終わりです。<br>
+ この修正を反映させるために、testing/mochitest ディレクトリを再ビルドする必要があるでしょう。これで Mochitest で<code>SpecialPowers.numberOfScreens</code> を利用することができるようになります。</p>
+
+<div class="note">新しい API を追加後に、このドキュメントに新 API の説明を書くことを忘れないで下さい。</div>

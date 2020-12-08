@@ -1,0 +1,57 @@
+---
+title: Firefox OSコードをデバッグするためにセットアップする
+slug: Archive/B2G_OS/Debugging/Setting_up
+tags:
+  - B2G
+  - Firefox OS
+  - デバッグ
+translation_of: Archive/B2G_OS/Debugging/Setting_up
+---
+<div class="summary">
+<p>Firefox OS はAndroidのモバイル版Firefoxがサポートするのと同じデバッグプロトコルをサポートします。つまりFirefox OS 端末やエミュレータ上で実行するGaiaアプリケーションをデバッグするのにFirefox開発ツールを使用できます。端末上のFirefox OS やFirefox OS Simulatorをデバッグするためには、Firefox 18以降が必要で、加えて設定変更が、ブラウザのコンフィグレーションと、Firefox OS端末やsimulatorの両方で必要となります。</p>
+</div>
+
+<div class="note">
+<p><strong>記</strong>: Firefox OS 端末でアプリをデバッグしたい場合、Firefox OS 1.2以上を使っているなら代わりに<a href="/ja/docs/Tools/WebIDE">WebIDE</a>を使うのがベストな選択肢です。</p>
+</div>
+
+<h2 id="デスクトップ版Firefox">デスクトップ版Firefox</h2>
+
+<p>リモートデバッグのサポートには、Firefox 18かそれ以降のビルドがあるのを確認する必要があります。Firefoxの最近のコピーをまだ持っていない場合、最新の<a href="http://nightly.mozilla.org/" title="http://nightly.mozilla.org/">Nightly</a> ビルドをダウンロードして全ての最新機能にアクセスできるようにします。</p>
+
+<p>いったんコンピュータ上で Firefox の適切なバージョンを実行し、URLバー内で <code>about:config</code> とタイプして、<code>devtools.debugger.remote-enabled</code> の値を <code>true に変更します。次に</code>リモートデバッグを有効にするため、 Firefox を再起動する必要があります。Firefoxを再起動後に、Web開発メニューには新しいオプションがあるでしょう、 <em>Tools &gt; Connect...</em></p>
+
+<h2 id="デバッグを有効にする">デバッグを有効にする</h2>
+
+<p><a href="/ja/docs/Tools/Firefox_OS_Simulator" title="Tools/Firefox OS Simulator">Firefox OS Simulator</a> (かB2Gデスクトップ) を使っている時、デバッグ用セットアップはとても簡単です。物理端末のデバッグする時のようなポート転送の必要はありません。ただ端末で <a href="/ja/Firefox_OS/Debugging/Developer_settings">Developer settings</a> を開いて <em>Remote Debugging</em> を有効化します。</p>
+
+<div class="warning">
+<p>記: 2013年1月10日以後のFirefox OS端末ではもはや動作しません。この日以降のFirefox OS端末用ビルドはデバッグが無効になっています。結局は再度有効化したビルドを作る道はできるでしょうが、まだ存在していません。この文書はそうなった時に更新されるでしょう。加えて、out-of-processサポートを切る設定は削除されました。これからはFirefox OS Simulatorでデバッグを行う必要があるでしょう。</p>
+</div>
+
+<p>実際の Firefox OS 端末を使っている場合、 <a href="/ja/Firefox_OS/Debugging/Developer_settings">Developer settings</a> を開いて:</p>
+
+<ul>
+ <li><em>Remote Debugging</em> をオンにします。</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=797627" title="Remote Debugging Protocol needs a way to contact B2G subprocesses">バグ 797627</a> が修正されるまでは <em>Out-of-process</em> サポートをオフにします。それをしないと、ただシステムスクリプトだけをデバッグできます。</li>
+</ul>
+
+<div class="note">
+<p><strong>記:</strong> 端末に書き込む時、これらの設定変更をし直す必要があるでしょう。</p>
+</div>
+
+<p><a href="/ja/docs/Tools/Debugger" title="/en-US/docs/Tools/Debugger">デバッガを使用</a>する準備ができました!</p>
+
+<h2 id="Firefox端末でコンソールログを有効にする">Firefox端末でコンソールログを有効にする</h2>
+
+<p>Firefox OSの製品版ビルドでは、コンソールログ (例えば <a href="/ja/docs/Web/API/Console/log" title="デバッガの Web コンソールにメッセージを出力します。"><code>console.log()</code></a>) はデフォルトで無効です。それを有効化するには、端末の<a href="/ja/Firefox_OS/Debugging/Developer_settings">Developer settings</a> に移動して<em> Console Enabled</em> を有効にします。</p>
+
+<p>記: Firefox OSのコンソールログを使用する詳細については、<a href="/ja/docs/Mozilla/Firefox_OS/Debugging/On-device_console_logging">端末上のコンソールログ</a> を読んで下さい。</p>
+
+<h2 id="参考情報">参考情報</h2>
+
+<ul>
+ <li><a href="/ja/docs/Mozilla/Firefox_OS/Debugging" title="/en-US/docs/Mozilla/Firefox_OS/Debugging">Firefox OSをデバッグする</a></li>
+ <li><a href="/ja/docs/Tools/Debugger" title="/en-US/docs/Tools/Debugger">デバッガ</a></li>
+ <li><a href="/ja/docs/Mozilla/Firefox_OS/Debugging/Developer_settings" title="/en-US/docs/Mozilla/Firefox_OS/Debugging/Developer_settings">Firefox OSの開発者設定</a></li>
+</ul>

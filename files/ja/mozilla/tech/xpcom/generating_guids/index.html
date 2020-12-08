@@ -1,0 +1,79 @@
+---
+title: Generating GUIDs
+slug: Mozilla/Tech/XPCOM/Generating_GUIDs
+tags:
+  - Add-ons
+  - Developing Mozilla
+  - 'Developing_Mozilla:Tools'
+  - Extensions
+  - Tools
+  - XPCOM
+  - 要更新
+translation_of: Mozilla/Tech/XPCOM/Generating_GUIDs
+---
+<p><b>GUID</b> は、Mozilla プログラミングで、XPCOM <a href="/ja/docs/Interfaces">インタフェース</a> (このタイプの GUID は IID と呼ばれています) やコンポーネント (CID) 、<a href="/ja/docs/Extension">拡張機能</a>や<a href="/ja/docs/Themes">テーマ</a>を含むアドオンなどの実体のそれぞれの型を識別するために使われます。とはいえ、<a href="/ja/docs/Firefox_1.5">Firefox 1.5</a> からは、アドオンでは <code><a class="link-mailto" href="mailto:extensionname@organization.tld" rel="freelink">extensionname@organization.tld</a></code> 形式の ID で<a href="/ja/docs/Install_Manifests#id">識別することができます(また、そうするべきです)</a>。</p>
+
+<div class="blockIndicator warning">
+    <p><strong>警告:</strong> If you just want an ID for your add-on, generating a GUID is almost definitely not what you want to do. Using the <code><var>extensionname</var>@<var>organization</var>.<var>tld</var></code> form is approximately one thousand times easier for everyone involved. Don't have a domain name? Do you have a blog on a subdomain? Use that. If all else fails, using <code><var>extensionname</var>@<var>yourusername</var>.addons.mozilla.org</code> should be fine; no one will care. Remember, these are identifiers, not e-mail addresses, and they're never resolved.</p>
+</div>
+
+<h2 id="Canonical_form" name="Canonical_form">標準形式</h2>
+<p>GUID の共通のフォームは <code>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx</code> です。各 <code>x</code> には 16 進数が入ります。ここには、標準形式の GUID の生成に利用できるツールが数多くあります。</p>
+
+<div class="note">
+  <p><strong>Note:</strong> If you do choose to use an email-style ID for your add-on, you probably don't want it to be a real email address, since it might attract spam.</p>
+</div>
+
+<h3 id="Online_tools" name="Online_tools">オンラインツール</h3>
+<ul>
+  <li><a href="http://www.somacon.com/p113.php">Generate GUID Online</a></li>
+  <li><a href="http://www.famkruithof.net/uuid/uuidgen">UUID (GUID) Generator on the WEB</a></li>
+  <li><a href="http://mozilla.pettay.fi/cgi-bin/mozuuid.pl">UUID Generator for Mozilla Code</a> (both IDL and C++.h forms)</li>
+  <li><a class="link-irc" href="irc://irc.mozilla.org/firefox">#firefox</a> IRC チャンネル上の (botbot や firebot のような) ボットのひとつで、それらに "uuid" とメッセージを送る (<code>/msg</code>) ことで GUID を取得できます。</li>
+
+</ul>
+<h3 id="Windows" name="Windows">Windows</h3>
+<p>Windows ユーザは GUID を得るために Microsoft の<a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=94551F58-484F-4A8C-BB39-ADB270833AFC&amp;displaylang=en">GuidGen</a> ツールを使用することができます。 (このツールは MS Visual C++ の一部でもあります)</p>
+<h3 id="Linux" name="Linux">Linux</h3>
+<p><code>/usr/bin/uuidgen</code> を使用します。これは、<code>libuuid1</code> パッケージ (Debian) にあります。</p>
+<h3 id="Perl" name="Perl">Perl</h3>
+<p><a href="http://www.johnkeiser.com/mozilla/mozilla_tools.html">jkeiser's Mozilla tools</a> に C++ および IDL の両方のスタイルの出力ができる UUID generator が含まれています。</p>
+<h2 id="COM.2FXPCOM_format" name="COM.2FXPCOM_format">COM/XPCOM 形式</h2>
+<p>Mozilla C++ コード内で IID および CID を 定義する(<code>#define</code>) 場合は、一般的に次の書式を使用します。</p>
+<pre class="brush:cpp">// xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx
+#define NS_...ID \
+{ 0xXXXXXXXX, 0xXXXX, 0xXXXX, \
+  { 0xXX, 0xXX, 0xXX, 0xXX, 0xXX, 0xXX, 0xXX, 0xXX } }
+</pre>
+<p>以下のツールを使用すると、この形式でコードを生成することができます。</p>
+<h3 id="Online_tools" name="Online_tools">オンラインツール</h3>
+<ul>
+  <li><a href="http://mozilla.pettay.fi/cgi-bin/mozuuid.pl" rel="freelink">http://mozilla.pettay.fi/cgi-bin/mozuuid.pl</a></li>
+</ul>
+<h3 id="guidgen" name="guidgen">guidgen</h3>
+<p><code>guidgen.exe</code> は UUID をこの形式で生成できます。これは Microsoft Visual Studio の一部です。</p>
+<h3 id="bash" name="bash">bash</h3>
+<p>以下をあなたの <code>.bashrc</code> ファイルに追加します:</p>
+<pre class="brush:cpp">uuidgen-c++()
+{
+    local UUID=$(uuidgen)
+    echo "// $UUID"
+    echo "#define NS__IID \\"
+    echo "{ 0x${UUID:0:8}, 0x${UUID:9:4}, 0x${UUID:14:4}, \\"
+    echo -n "  { 0x${UUID:19:2}, 0x${UUID:21:2}, 0x${UUID:24:2}, "
+    echo -n "0x${UUID:26:2}, 0x${UUID:28:2}, 0x${UUID:30:2}, "
+    echo "0x${UUID:32:2}, 0x${UUID:34:2} } }"
+}
+</pre>
+<h3 id="Perl_2" name="Perl_2">Perl</h3>
+<pre class="brush:text">#!/usr/bin/perl
+$uuid = `uuidgen`;
+chomp $uuid;
+print $uuid, "\n";
+@parts = ($uuid =~ /^(.{8})-(.{4})-(.{4})-(..)(..)-(..)(..)(..)(..)(..)(..)$/);
+print "{ 0x$parts[0], 0x$parts[1], 0x$parts[2], \\", "\n", " { ";
+for (3 .. 9) {
+  print "0x$parts[$_], ";
+}
+print "0x$parts[10] } }", "\n";
+</pre>

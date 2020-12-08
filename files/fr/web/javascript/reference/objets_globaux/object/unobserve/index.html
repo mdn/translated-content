@@ -1,0 +1,103 @@
+---
+title: Object.unobserve()
+slug: Web/JavaScript/Reference/Objets_globaux/Object/unobserve
+tags:
+  - JavaScript
+  - Méthode
+  - Object
+  - Obsolete
+  - Reference
+translation_of: Archive/Web/JavaScript/Object.unobserve
+---
+<div>{{JSRef}} {{obsolete_header}}</div>
+
+<p>La méthode <code><strong>Object.unobserve()</strong></code> est utilisée pour retirer des observateurs placés avec {{jsxref("Object.observe()")}}. Cette méthode et l'API à laquelle elle appartient ont été dépréciées et retirées des navigateurs. À la place, il est préférable d'utiliser l'objet {{jsxref("Proxy")}}.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox">Object.unobserve(<var>obj</var>, <var>callback</var>)</pre>
+
+<h3 id="Paramètres">Paramètres</h3>
+
+<dl>
+ <dt><code>obj</code></dt>
+ <dd>L'objet qu'on souhaite arrêter d'observer.</dd>
+ <dt><code>callback</code></dt>
+ <dd>La référence vers l'observateur qu'on souhaite arrêter d'appeler à chaque fois qu'une modification est apportée à <code><strong>obj</strong></code>.</dd>
+</dl>
+
+<h3 id="Valeur_de_retour">Valeur de retour</h3>
+
+<p>L'objet qui n'est plus observé.</p>
+
+<h2 id="Description">Description</h2>
+
+<p><code>Object.unobserve()</code> doit être appelé après {{jsxref("Object.observe()")}} afin de retirer un observateur d'un objet.</p>
+
+<p>La fonction de rappel (<em>callback</em>) doit être une référence à la fonction et non une fonction anonyme. En effet, c'est cette référence qui sera utilisée pour retirer l'observateur précédemment placé. Appeler <strong>Object.unobserve()</strong> avec une fonction anonyme n'aura aucun effet, cela ne retirera aucun observateur.</p>
+
+<h2 id="Exemples">Exemples</h2>
+
+<h3 id="Arrêter_l'observation_un_objet">Arrêter l'observation un objet</h3>
+
+<pre class="brush: js">var obj = {
+  toto: 0,
+  truc: 1
+};
+
+var observer = function(changements) {
+  console.log(changements);
+}
+
+Object.observe(obj, observer);
+​
+obj.nouvelleProp = 2;
+// [{name: 'nouvelleProp', object: &lt;obj&gt;, type: 'add'}]
+
+Object.unobserve(obj, observer);
+
+obj.toto = 1;
+// La fonction callback n'a pas été appelée</pre>
+
+<h3 id="Utiliser_une_fonction_anonyme">Utiliser une fonction anonyme</h3>
+
+<pre class="brush: js">var personne = {
+  name : 'Ahmed',
+  age : 25
+};
+
+Object.observe(personne, function (changements) {
+  console.log(changements);
+});
+
+personne.age = 40;
+// [{name: 'age', object: &lt;obj&gt;, oldValue: 25, type: 'update'}]
+
+Object.unobserve(personne, function (changements) {
+  console.log(changements);
+});
+
+personne.age = 63;
+// [{name: 'age', object: &lt;obj&gt;, oldValue: 40, type: 'update'}]
+// La fonction callback est toujours appelée
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p><a href="https://github.com/arv/ecmascript-object-observe">Proposition de spécification (<em>strawman proposal</em>)</a>.</p>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<div>
+<div class="hidden">Le tableau de compatibilité de cette page a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à consulter <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> et à nous envoyer une <em>pull request</em>.</div>
+
+<p>{{Compat("javascript.builtins.Object.unobserve")}}</p>
+</div>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>{{jsxref("Object.observe()")}}{{obsolete_inline}}</li>
+ <li>{{jsxref("Array.observe()")}}{{obsolete_inline}}</li>
+ <li>{{jsxref("Array.unobserve()")}}{{obsolete_inline}}</li>
+</ul>

@@ -1,0 +1,51 @@
+---
+title: fuelIBookmarkRoots
+slug: Toolkit_API/FUEL/fuelIBookmarkRoots
+tags:
+  - FUEL
+  - Interfaces
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/Toolkit_API/FUEL/fuelIBookmarkRoots
+---
+<div>
+ </div>
+<h2 id="Attributes" name="Attributes">プロパティ</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">プロパティ</td>
+   <td class="header">型</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code>menu</code></td>
+   <td><code>readonly attribute fuelIBookmarkFolder</code></td>
+   <td>ブックマークメニューのルート</td>
+  </tr>
+  <tr>
+   <td><code>toolbar</code></td>
+   <td><code>readonly attribute fuelIBookmarkFolder</code></td>
+   <td>パーソナルツールバーのルート</td>
+  </tr>
+  <tr>
+   <td><code>tags</code></td>
+   <td><code>readonly attribute fuelIBookmarkFolder</code></td>
+   <td>タグのルート</td>
+  </tr>
+  <tr>
+   <td><code>unfiled</code></td>
+   <td><code>readonly attribute fuelIBookmarkFolder</code></td>
+   <td>未整理のブックマークのルート</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Examples" name="Examples">例</h2>
+<pre class="brush:js">var bookmark = Application.bookmarks.unfiled.addBookmark("Test", testURI);
+</pre>
+<h2 id="See_also" name="See_also">関連情報</h2>
+<ul>
+ <li><a href="/ja/docs/Toolkit_API/FUEL/fuelIBookmark" title="Toolkit_API/FUEL/fuelIBookmark">Bookmark</a></li>
+ <li><a href="/ja/docs/Toolkit_API/FUEL/fuelIBookmarkFolder" title="Toolkit_API/FUEL/fuelIBookmarkFolder">BookmarkFolder</a></li>
+ <li><a href="/ja/docs/Toolkit_API/FUEL" title="Toolkit_API/FUEL">FUEL</a></li>
+</ul>

@@ -1,0 +1,553 @@
+---
+title: B2G OSのビルド
+slug: Archive/B2G_OS/Building_Boot_to_Gecko
+tags:
+  - B2G
+  - Boot
+  - Build documentation
+  - Firefox OS
+  - Gecko
+  - Guide
+translation_of: Archive/B2G_OS/Building
+---
+<div>
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/ja/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+</div>
+
+<div class="summary">
+<p><span class="seoSummary">一度 <a href="/ja/docs/Mozilla/Boot_to_Gecko/B2G_build_prerequisites" title="ja/docs/Mozilla/Boot_to_Gecko/B2G_build_prerequisites">ビルド環境のセットアップ</a> が完了して、コードの <a href="/ja/docs/Mozilla/Boot_to_Gecko/Preparing_for_your_first_B2G_build" title="ja/docs/Mozilla/Boot_to_Gecko/Preparing_for_your_first_B2G_build">最初の pull と configure</a> を実行すれば、Boot to Gecko をビルドすることができます。このガイドで方法を説明します。</span></p>
+</div>
+
+<h2 id="コードを更新する">コードを更新する</h2>
+
+<p>B2G をビルドするのが初めてでない方は、ビルドを始める前に最新のコードを pull したいかもしれません。これを行うには、B2G ツール群と、それに依存関係があるものを両方とも更新する必要があります。次のコマンドを実行してください:</p>
+
+<pre>git pull
+./repo sync -d
+</pre>
+
+<p>"-d" オプションは、様々なプロジェクトの HEAD を Android マニフェストのリビジョン (つまり、デフォルトのメインストリームリポジトリのバージョン) に切り替えます。これは、リポジトリ (および関連ソース) に変更を加えているが、master バージョンに一時的に戻す必要のある時に有用です。途中段階や作業中のディレクトリの変更はそのまま残ります (すべての説明は <a href="http://stackoverflow.com/questions/11448864/what-is-the-usage-for-repo-sync-d-in-android-source-repository">SO の質問</a> を参照してください)。ソースコードに触れていない場合は、次の通常のコマンドを実行してください:</p>
+
+<pre>git pull
+./repo sync</pre>
+
+<p>ターゲット名を指定すると、指定したターゲットのリポジトリを更新できます:</p>
+
+<pre>./repo sync gaia
+</pre>
+
+<p>repo コマンドには、興味深い、その他のオプションも利用可能です。<code>repo help</code> で多くの情報を得られます。</p>
+
+<h2 id="Boot_to_Gecko_のビルド">Boot to Gecko のビルド</h2>
+
+<div class="note">
+<p><strong>注記:</strong> ビルドする前に、<code>.userconfig</code> ファイルをセットアップしてビルドをカスタマイズしたいでしょう。詳細は、<a href="/docs/Mozilla/Firefox_OS/Customization_with_the_.userconfig_file" title="Mozilla/Firefox_OS/Customization_with_the_.userconfig_file">.userconfig ファイルでカスタマイズ</a> を参照してください。</p>
+</div>
+
+<p>Boot to Gecko のビルドは、<code>build.sh</code> ツールを使用するだけです:</p>
+
+<pre>cd B2G
+./build.sh
+</pre>
+
+<p>コーヒーブレークの時間がやってきました。昼寝もできるかもしれません (特にこれが初回のビルドなら、Core i7 と 8GB RAM を搭載した PC なら 30 分くらいかかります)。前回のページの設定手順で、事前に展開された Android システムファイルのディレクトリを使っている場合、<code>build.sh<code> を実行する前に </code>ANDROIDFS_DIR</code> を設定すべきです。</p>
+
+<div class="note">
+<p><strong>補足:</strong> 新しいビルドを端末にフラッシュするための詳しい説明は、<a href="/ja/docs/Mozilla/Boot_to_Gecko/Installing_Boot_to_Gecko_on_a_mobile_device">B2G OS をモバイル端末にインストールする</a> をお読みください。</p>
+</div>
+
+<h3 id="特定モジュールのビルド">特定モジュールのビルド</h3>
+
+<p>Gecko など、特定のモジュールだけをビルドしたいときは、その名前を指定してください:</p>
+
+<pre>./build.sh gecko
+</pre>
+
+<p>一個のアプリケーションだけを更新するには、<code>BUILD_APP_NAME</code> 環境変数を使用すると、<code>gaia</code> モジュールのみをビルドできます :</p>
+
+<pre>BUILD_APP_NAME=calendar ./build.sh gaia</pre>
+
+<p>ビルド可能なモジュールのリストを取得するには、継ぎのコマンドを実行してください:</p>
+
+<pre>./build.sh modules
+</pre>
+
+<h3 id="使用するプロセッサコアの数の設定">使用するプロセッサコアの数の設定</h3>
+
+<p>デフォルトで、B2G ビルドスクリプトがビルドに使用するコア数は、搭載されたシステムのコア数に、実行する並列タスク数の 2 倍を足した数になります。これは、<code>build.sh</code> 実行時に <code>-j</code> パラメータを指定すると変更できます。この変更は、バックグラウンドでのビルド中に、他のことでシステムを使うため CPU 負荷を少し減らす必要のあるときに有効です。また、ビルドに問題がある場合も、実行しているのが一度に 1 つのタスクだけなら、ビルドプロセスからのエラー出力を読むのが楽ですよね！</p>
+
+<p>例えば、2 つの並行処理でビルドするには:</p>
+
+<pre>./build.sh -j2
+</pre>
+
+<p>しかし、この設定の最も一般的な使い方は、ビルドが並列で実行されないようにすることです。処理の出力が大変読みやすくなり、ビルドの問題が整理しやすくなります。これを実行するには:</p>
+
+<pre>./build.sh -j1
+</pre>
+
+<h3 id="複数ロケールのビルド">複数ロケールのビルド</h3>
+
+<p>複数ロケールのビルドを作成するには、以下の手順に従ってください:</p>
+
+<ol>
+ <li>どの Gaia 言語ファイルを使うかを決定します。現在、<a href="https://github.com/mozilla-b2g/gaia/blob/master/locales/languages_dev.json"><code>locales/languages_dev.json</code></a> と <a href="https://github.com/mozilla-b2g/gaia/blob/master/locales/languages_all.json"><code>locales/languages_all.json</code></a> が Gaia 言語ファイルとして使用しています。</li>
+ <li><a href="http://hg.mozilla.org/gaia-l10n">http://hg.mozilla.org/gaia-l10n</a> から適切なロケールを <code>gaia-l10n/</code> ディレクトリへ clone してください。<code>locales/</code> ディレクトリを使うこともできます。言語ファイルに記載されたロケールごとのリポジトリを clone する必要があります。</li>
+ <li>あなたの環境で、ステップ 2 のディレクトリの絶対パスを <code>LOCALE_BASEDIR</code> 環境変数に設定し、ステップ 1 の .json ファイルの絶対パスを LOCALES_FILE 環境変数に設定してください。</li>
+ <li>その他、デフォルトロケールを設定したい場合は、<code>GAIA_DEFAULT_LOCALE</code> にロケールコードを設定します。</li>
+</ol>
+
+<pre style="font-size: 12px;">cd gaia/locales/
+hg clone https://hg.mozilla.org/releases/gaia-l10n/v2_5/ja</pre>
+
+<p>環境変数を設定します:</p>
+
+<pre>export LOCALE_BASEDIR=$PWD/locales
+export LOCALES_FILE=$PWD/locales/languages_dev.json
+export GAIA_DEFAULT_LOCALE=ja
+</pre>
+
+<p><code>languages-dev.json</code> を独自の <code>languages-own.json</code> のパスに置き換えられます。それは次のようなものになります。locales ディレクトリに clone されたリポジトリ毎にエントリを追加する必要があるでしょう:</p>
+
+<pre>{
+  "en-US"     : "English (US)",
+  "ja"        : "日本語"
+}
+</pre>
+
+<p>バグ 884752 が修正 (2013年11月) されたため、(Gaia 内で入手可能なら) キーボードレイアウトを追加するのに、<code>GAIA_KEYBOARD_LAYOUTS</code> 環境変数が使用できます。</p>
+
+<p>バグ: https://bugzilla.mozilla.org/show_bug.cgi?id=884752</p>
+
+<p>レイアウト: https://github.com/mozilla-b2g/gaia/tree/v2.5/apps/keyboard/js/layouts</p>
+
+<p>例えば、スペイン語と日本語のキーボードレイアウトを追加するには、次のキーボードレイアウト名を追加します。</p>
+
+<pre>GAIA_KEYBOARD_LAYOUTS=en,es,jp-kanji</pre>
+
+<p>この時点で、初めて Gaia を端末にフラッシュする準備ができました。端末を接続し、リモートデバッグが有効かどうか、[Settings] &gt; [Device Information] &gt; [More Information] &gt; [Developer] の設定で確認してください。これは、一度だけする必要があります、REMOTE_DEBUGGER=1 のおかげで、Gaia の独自ビルドでこの設定をオンにできます:</p>
+
+<pre> make clean &amp;&amp; make production LOCALES_FILE=locales/languages-own.json</pre>
+
+<p>または</p>
+
+<pre> rm -rf out objdir-gecko &amp;&amp; LOCALES_FILE=locales/languages-dev.json ./build.sh</pre>
+
+<div class="note">
+<p>特定のブランチ向けのサポートされたすべてのロケールを clone または update したい場合は、<a href="https://raw.githubusercontent.com/dattaz/build-firefoxos/master/langs.sh">このスクリプト</a> が使えます。</p>
+</div>
+
+<h3 id="公式スタイルのエンジニアリングビルドをビルドする">公式スタイルのエンジニアリングビルドをビルドする</h3>
+
+<div class="note">
+<p>このセクションが古い場合は、<strong>Be </strong>job <a href="https://treeherder.mozilla.org/#/jobs?repo=mozilla-central">in Treeherder</a> のログを参照して最新の変数セットを得てください。</p>
+</div>
+
+<p><a href="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-central-flame-kk-eng/">Mozilla により配布</a> されているような "公式" スタイルのエンジニアリングビルドをビルドするには、コマンドラインで次のオプションを使用する必要があります:</p>
+
+<pre>VARIANT=eng MOZILLA_OFFICIAL=1 B2G_SYSTEM_APPS=1 GAIA_OPTIMIZE=1 B2G_UPDATER=1 B2G_UPDATE_CHANNEL=default MOZ_TELEMETRY_REPORTING=1 MOZ_CRASHREPORTER_NO_REPORT=1 LOCALES_FILE=locales/languages_all.json GAIA_KEYBOARD_LAYOUTS=en,pt-BR,es,de,fr,pl,zh-Hans-Pinyin,zh-Hant-Zhuyin,en-Dvorak,jp-kanji ./build.sh</pre>
+
+<p>以下は、引数の説明です:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">変数</th>
+   <th scope="col">説明</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>VARIANT=eng</td>
+   <td>That's how you usually define an engineering build. This is also the default value.</td>
+  </tr>
+  <tr>
+   <td>MOZILLA_OFFICIAL=1</td>
+   <td>Published build are Mozilla officials. This shows the B2G OS logo and <a href="https://github.com/mozilla-b2g/gaia/blob/master/shared/locales/branding/official/branding.en-US.properties">the branding</a>. Do not use it to publish your own.</td>
+  </tr>
+  <tr>
+   <td>B2G_SYSTEM_APPS=1</td>
+   <td>Sets the apps in the /system/b2g/webapps folder (instead of /data/local/webapps).</td>
+  </tr>
+  <tr>
+   <td>GAIA_OPTIMIZE=1</td>
+   <td>concatenate the Gaia sources.</td>
+  </tr>
+  <tr>
+   <td>B2G_UPDATER=1</td>
+   <td>Enables the nightly updates.</td>
+  </tr>
+  <tr>
+   <td>B2G_UPDATE_CHANNEL=default</td>
+   <td>The <a href="/Firefox_OS/Phone_guide/Flame/Updating_your_Flame#Switch_to_nightly_update_channel">B2G OS update channel</a>. "Default" points to mozilla-central.</td>
+  </tr>
+  <tr>
+   <td>MOZ_TELEMETRY_REPORTING=1</td>
+   <td>Enables <a href="https://wiki.mozilla.org/Telemetry">Telemetry</a> for submitting usage data.</td>
+  </tr>
+  <tr>
+   <td>MOZ_CRASHREPORTER_NO_REPORT=1</td>
+   <td>Disables the <a href="/docs/Environment_variables_affecting_crash_reporting">B2G Desktop UI when a crash occurs</a>, so the Gaia reporter only is used.</td>
+  </tr>
+  <tr>
+   <td>LOCALES_FILE=locales/languages_all.json</td>
+   <td>Sets the languages available in Gaia (the relative path starts from the gaia folder).</td>
+  </tr>
+  <tr>
+   <td>GAIA_KEYBOARD_LAYOUTS=en,pt-BR,es,de,fr,pl,zh-Hans-Pinyin,zh-Hant-Zhuyin,en-Dvorak,jp-kanji</td>
+   <td>Keyboards included in Gaia.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Blob_フリーの完全システム_zip_をビルドする">Blob フリーの完全システム zip をビルドする</h3>
+
+<p>すでに Android が動作しているサポートされた端末を B2G 端末へ変換するために使用できる Blob-free のシステム zip をビルドできます。これは、著作権保護された blob が原因でビルドを配布できないという、長く続いた問題を解決します。私たちは、"端末から端末" を根拠としてこれを可能にしており、まずは Flame と Z3/Z3 Compact 端末のみがサポートされます。</p>
+
+<div class="note">
+<p><strong>注記</strong>: すでにビルドできているあらゆる端末に展開すべきですが、それぞれの端末でリリース前に確認が必要です。</p>
+</div>
+
+<p>このような zip は、次のオプションでビルドできます:</p>
+
+<pre class="bz_comment_text">./build.sh blobfree</pre>
+
+<p>これで、次のもので構成される zip ファイルが生成されます:</p>
+
+<ul>
+ <li>配布する zip で、パーティションの準備はできているが、イメージファイルではないもの (<code>BOOT</code>、<code>RECOVERY</code>、<code>SYSTEM</code> ディレクトリ)</li>
+ <li>サポート端末が adb プロパティと fastboot 変数で記述された <code>devices.json</code> ファイル。サポートが自明な実端末から読まれます。</li>
+ <li>リカバリ fstab。パーティションとイメージ間のファイル配置を対応付けます</li>
+ <li><code>dt.img</code>。必要に応じて。</li>
+ <li><code>extract-files.sh</code> からの生成物をベースとした、Blob からシステムへの対応付け。</li>
+</ul>
+
+<p>作成された zip は、B2G インストーラアドオンで使用される予定です (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1166276" title="[meta] Getting a B2G Installer Addon">バグ 1166276</a> 参照)。</p>
+
+<h2 id="既知のエラー">既知のエラー</h2>
+
+<h3 id="Build_failed!">"Build failed!"</h3>
+
+<p>全般的な "Build failed" というメッセージが表示された時は、いつも端末をコンピュータに接続し直すべきです。様々な理由で端末がアンマウントされていることがあります。</p>
+
+<div class="note">
+<p><strong>Keon 用の B2G の configure やビルドは Mac で "実行できない" ので注意してください。</strong>この端末用には Linux を使用する必要があります。</p>
+</div>
+
+<h3 id="Mountain_Lion_固有のビルドエラー">Mountain Lion 固有のビルドエラー</h3>
+
+<p>1. OS X 10.8 "Mountain Lion" (Xcode 4.4.1 以降) をビルドに使用して、下記のエラーが起こった場合:</p>
+
+<pre style="font-size: 14px;">external/qemu/android/skin/trackball.c:130:25: error: 'M_PI' undeclared (first use in this function)</pre>
+
+<p><code>B2G/external/qemu/Makefile.android</code> ファイルを編集し、78 行目に次を追加してください:</p>
+
+<pre>MY_CFLAGS += -DM_PI=3.14159265358979323846264338327950288   #/* B2G_fix: not finding M_PI constant */
+</pre>
+
+<p>2. "Mountain Lion" 上で ./build.sh の実行中に、下記のエラーが起こった場合:</p>
+
+<pre>/System/Library/Frameworks/IOKit.framework/Headers/usb/USB.h:797:9: error: too many #pragma options align=reset</pre>
+
+<p><code>/System/Library/Frameworks/IOKit.framework/Headers/usb/USB.h</code> ファイル内の全ての '#pragma options align=reset' を '#pragma pack()' に置き換えてください。</p>
+
+<h3 id="Undefined_symbols__sqlite3_androidopt_handle_pragma_and__sqlite3_androidopt_open">Undefined symbols "_sqlite3_androidopt_handle_pragma" and "_sqlite3_androidopt_open"</h3>
+
+<p>このエラーは、OS X 10.7 以降で Xcode 4.5 以降を使用してビルドしている時に発生します。これを直すには、<code>external/sqlite/dist/Android.mk</code> ファイルに <a href="https://groups.google.com/forum/#%21msg/android-building/yAfPyUqCsiQ/7zvICk4GWjYJ">https://groups.google.com/forum/#!msg/android-building/yAfPyUqCsiQ/7zvICk4GWjYJ</a> のパッチを適用してください。</p>
+
+<h3 id="KeyedVector.h19331_error_indexOfKey_was_not_declared_in_this_scope">KeyedVector.h:193:31: error: indexOfKey was not declared in this scope</h3>
+
+<p>このエラーは、gcc のバージョンが新しすぎる場合に発生します。ただし、私たちがシステムをビルドするのに新しいバージョンの GCC を使うようアップグレードすれば、問題ではなくなります。詳しい情報は、<a href="/docs/Mozilla/Firefox_OS/Customization_with_the_.userconfig_file" title="Mozilla/Firefox_OS/Customization_with_the_.userconfig_file">.userconfig ファイルでカスタマイズ</a> を参照してください。</p>
+
+<h3 id="arm-linux-androideabi-g_Internal_error_Killed_(program_cc1plus)">arm-linux-androideabi-g++: Internal error: Killed (program cc1plus)</h3>
+
+<p>このエラーが表示されたら、おそらく空きメモリが不足しています。<code>./build.sh</code> を実行する前に十分な空きメモリを確保してください。4GB の RAM があればうまく実行できるでしょう。</p>
+
+<h3 id="...is_referenced_by_DSO_error">"...is referenced by DSO" error</h3>
+
+<p>エミュレータのビルド時に、このようなエラーが発生した場合:<br>
+ /usr/bin/ld: out/host/linux-x86/obj/EXECUTABLES/triangleCM_intermediates/triangleCM: hidden symbol `_XGetRequest' in out/host/linux-x86/obj/STATIC_LIBRARIES/libSDL_intermediates/libSDL.a(SDL_x11dyn.o) is referenced by DSO.</p>
+
+<p>binutils のいくつかのバージョンでこのエラーが発生します。Debian 安定版では、<code>binutils-gold</code> パッケージをインストールして <em>gold</em> リンカを使用してください。注意点として、<em>gold</em> リンカは <code>binutils</code> によりインストールされますが、デフォルトでは使用されません。ただ <code>binutils-gold</code> が実行します。</p>
+
+<h3 id="error_device_not_found">error: device not found</h3>
+
+<p>./build.sh の開始時に、例えば次のように "error: device not found" エラーのメッセージが表示された場合:</p>
+
+<pre>Blob setup script has changed, re-running
+Backing up system partition to backup-flame
+error: device not found
+Pulling files from ../../../backup-flame
+cat: ../../../backup-flame/system/build.prop: No such file or directory
+cat: ../../../backup-flame/system/build.prop: No such file or directory
+Invalid system backup - Wrong base version found.
+
+Do this:
+1. Delete backup-flame
+2. Flash your device with KK based images from the vendor
+3. Try building again
+
+&gt; Build failed! &lt;</pre>
+
+<p>この場合、<code>adb devices</code> コマンドを実行して、端末が adb でアクセス可能か確かめてください。端末が接続されていれば、adb デバッグが端末の開発者メニューで有効になっているか確認し、端末がロックされていてもアクセスできるようするため、画面ロックをオフにしてください。環境設定アプリで "Screen Lock" セクションの "Lock Screen" のチェックを外してください。</p>
+
+<h3 id="ビルドシステムのテスト中にビルドエラーが発生した場合">ビルドシステムのテスト中にビルドエラーが発生した場合</h3>
+
+<p>ビルドシステムのビルド後のテスト中に、時々 (特にビルドツールやオペレーティングシステムの更新後に) このような奇妙なエラーが発生することがあります:</p>
+
+<pre>Generating permissions.sqlite...
+test -d profile || mkdir -p profile
+run-js-command  permissions
+WARNING: permission unknown:offline-app
+WARNING: permission unknown:indexedDB-unlimited
+build/permissions.js:122: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsIPermissionManager.add]
+make[1]: *** [permissions] Error 3
+make: *** [gaia/profile.tar.gz] Error 2</pre>
+
+<p>このような状況になったら、<code>gaia/xulrunner-sdk</code> ディレクトリを削除し、コードを再度 pull してみてください:</p>
+
+<pre>rm -r gaia/xulrunner-sdk
+</pre>
+
+<p>これで、ビルドシステムが自動的にダウンロードしたコンパイル済みの <a href="/ja/docs/XULRunner" title="/ja/docs/XULRunner">XULRunner</a> のコピーが削除されます。次回のビルド時に、XULRunner の新しいコピーが自動的に取得されます。</p>
+
+<h3 id="Cannot_fetch_platformlibcore">Cannot fetch platform/libcore</h3>
+
+<p>Nexus S 用の B2G ビルド (<code>./config.sh nexus-s</code>) を設定しようとして libcore 関連のエラーが発生する場合、これは、提供者である linaro git の問題です。これを修正するには、下記のように B2G マニフェストを checkout してください:</p>
+
+<pre class="brush: bash">git clone https://github.com/mozilla-b2g/b2g-manifest.git</pre>
+
+<p>リポジトリ内の <code>nexus-s.xml</code> ファイルを修正し、linaro git エントリを asop エントリーに置き換え、下記のようにします:</p>
+
+<pre class="brush: xml"> </pre>
+
+<p>変更をコミット (<code>git commit -a</code>) し、次にチェックアウトしたメイン B2G リポジトリのマスターブランチ内の <code>config.sh</code> ファイルを変更して、Mozilla マニフェストの代わりにあなたが修正したローカルのマニフェストを指すようにします:</p>
+
+<pre class="brush: bash">GITREPO=${GITREPO:-"file:///home/path/to/my/b2g-manifest"}</pre>
+
+<h3 id="Mac_で_Xcode_5_を使用してビルドする時の_clang_エラー">Mac で Xcode 5 を使用してビルドする時の clang エラー</h3>
+
+<p>Mac OS X 10.8 上の Xcode 5 でビルドする場合、下記の様なエラーを見ることがあります:</p>
+
+<pre class="brush: bash">clang: error: argument unused during compilation: '-include system/core/include/arch/darwin-x86/AndroidConfig.h'
+clang: error: argument unused during compilation: '-U DEBUG'
+clang: error: argument unused during compilation: '-U DEBUG'
+clang: error: argument unused during compilation: '-MF out/host/darwin-x86/obj/EXECUTABLES/obbtool_intermediates/Main.d'
+make: *** [out/host/darwin-x86/obj/EXECUTABLES/obbtool_intermediates/Main.o] Error 1</pre>
+
+<p>これは、Xcode 5 が g++ コンパイラを <code>/usr/bin</code> に変更しているのが原因で、コンパイル時にそれを使おうとする時にビルドプロセスが停止します。この問題を回避するには、<code>build/core/combo/HOST_darwin-x86.mk</code> の次の行を編集してください:</p>
+
+<pre class="brush: bash">HOST_CXX := g++</pre>
+
+<p>から</p>
+
+<pre class="brush: bash">HOST_CXX := g++-4.7
+ifeq (,$(wildcard /usr/local/bin/g++-4.7))
+ HOST_CXX := g++
+endif</pre>
+
+<p>に書き換えます。次に、gcc をアンインストールするため、brewを 使います(すでに <a href="https://developer.mozilla.org/ja/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites#Run_Firefox_OS_Mac_Bootstrap">Mac OS bootstrap script</a> を使っていることを想定しています。そうでない場合は、そのステップを完了しておく必要があります):</p>
+
+<pre class="brush: bash">brew uninstall gcc-4.7</pre>
+
+<p>ここで c++ と multilib をサポートした gcc を再インストールします:</p>
+
+<pre class="brush: bash">brew install --enable-cxx https://gist.github.com/artlogic/6988658/raw/aeb9d1ea098274ad3f3fe2637b9df7f308a8a120/gcc-4.7.rb</pre>
+
+<p>PATH に <code>/usr/local/bin</code> の記載があることを確認してください。次のコマンドで、この環境変数を一時的に設定できます:</p>
+
+<pre class="brush: bash">export PATH=/usr/local/bin:$PATH</pre>
+
+<p>上記をホームディレクトリの <code>.bash_profile</code> に追加しておけば、この変更を永続的にできます。</p>
+
+<p>PATH の設定後、下記コマンドを両方実行してください:</p>
+
+<pre class="brush: bash">gcc-4.7 -v
+
+g++-4.7 -v</pre>
+
+<p>上記のコマンドのいずれかが失敗する場合、次のコマンドのように brew で GCC を再リンクしてください:</p>
+
+<pre class="brush: bash">brew link --overwrite gcc-4.7</pre>
+
+<p><code>/usr/bin/c++</code> が Xcode 5 インストール時のように clang++ を指していない場合もありえます。次のコマンドで確認できます:</p>
+
+<pre class="brush: bash">ls -l /usr/bin/c++</pre>
+
+<p>このようなものが返ってくるはずです:</p>
+
+<pre class="brush: bash">lrwxr-xr-x 1 root admin 7 Sep 19 11:40 /usr/bin/c++ -&gt; clang++
+</pre>
+
+<p>c++ が clang++ 以外を指してる場合は、次のコマンドで更新してください:</p>
+
+<pre class="brush: bash">sudo rm /usr/bin/c++
+
+sudo ln -s /usr/bin/clang++ /usr/bin/c++</pre>
+
+<h3 id="systemcoreincludeloglog.h3820_error_stdarg.h_No_such_file_or_directory">"system/core/include/log/log.h:38:20: error: stdarg.h: No such file or directory"</h3>
+
+<p>このエラーは、Mac OSX 10.10 上で 10.6 SDK を使用してビルドする場合に起こります。または、ビルドしようとしているものがビルドコンフィグでサポートされていない他の SDK 設定でも起こります。詳細は、<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1071266" title="FIXED: [flame] XCode 6 only provides 10.9 SDK causing flame builds to fail">バグ 1071266</a> を参照してください。</p>
+
+<h3 id="cp_cannot_stat_'......backup-flamesystemliblibalsa-intf.so'_No_such_file_or_directory">cp: cannot stat '../../../backup-flame/system/lib/libalsa-intf.so': No such file or directory</h3>
+
+<p>このエラーは、ビルドシステムがバックアップディレクトリからのファイルを使おうとしてファイルが見つからないときに起こります。このような問題はいくつかの原因が考えられます。</p>
+
+<ol>
+ <li>スクリプトが端末からコンピュータへデータを取得している間に USB 接続が壊れた。</li>
+ <li>誤ったターゲットをビルドしている (誤った端末または誤ったベースの Android バージョン)。</li>
+ <li>スクリプトが想定するベースビルドを持っていない。</li>
+</ol>
+
+<p>下記のサブセクションで、詳細な原因を探ります。</p>
+
+<div class="note">
+<p><strong>Note</strong>: The backup directory is a copy of some files from your target device so that the build system can produce a full image, including binary files that we don't have the source for. Usually we can't distribute these files — that's why you need to fetch them from an existing device containing a base build obtained from the vendor.</p>
+</div>
+
+<h4 id="The_USB_connection_is_broken_while_pulling_data">The USB connection is broken while pulling data</h4>
+
+<p>When building, if the backup directory doesn't exist, the script will automatically start fetching the files from your attached device. At the end of this process you should see lines similar to the following:</p>
+
+<pre class="brush: bash">143 files pulled. 0 files skipped.
+3003 KB/s (512036044 bytes in 30.662s)</pre>
+
+<p>If you see pulling messages from adb (lines starting with <code>pull</code>) but don't see this, this means the connection was broken before completion. In this case you should delete your backup directory and try building again.</p>
+
+<p>Note: Some base builds will disable adb when the phone is locked. If that's the case for you, you'll need to disable screenlock so that it doesn't lock itself.</p>
+
+<h4 id="You're_building_for_the_wrong_target">You're building for the wrong target</h4>
+
+<p>The target is the parameter you gave to the config.sh script in the previous step. To check your configured target, just run:</p>
+
+<pre class="brush: bash">$ cat .config</pre>
+
+<p>And you should get an output like the following:</p>
+
+<pre class="brush: bash">...
+DEVICE_NAME=flame-kk
+PRODUCT_NAME=flame</pre>
+
+<p>The <code>DEVICE_NAME</code> is what you're looking for. For example, current <code>flame</code> builds should use <code>flame-kk</code>, not <code>flame</code>.</p>
+
+<p>If the <code>DEVICE_NAME</code> is wrong, then you need to <a href="/en-US/docs/Mozilla/Firefox_OS/Preparing_for_your_first_B2G_build">reconfigure using config.sh</a>, delete your current backup directory (<code>backup-flame</code> for the flame), and rerun the build script.</p>
+
+<h3 id="エミュレータのビルドの問題">エミュレータのビルドの問題</h3>
+
+<p><strong>emulator</strong> ビルドを作成する時は、下記の問題に注意してください:</p>
+
+<div class="warning">
+<p><strong>重要</strong>: x86 エミュレータを使用すべきではありません。インストールが困難であまりサポートされていません。</p>
+</div>
+
+<p>エミュレータ用のビルドシステムは、32bit と 64bit の両方をビルドします。エミュレータは OpenGL に依存しているため、32bit/64bit 両方の OpenGL ライブラリをシステムにインストールする必要があります (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=897727" title="B2G emulator build requires both 32-bit and 64-bit libgl, but Debian's libgl1-mesa-dev package is not multilib compatible">バグ 897727</a> の議論を参照)。</p>
+
+<p>この問題を解決するには、2 通りの方法があります:</p>
+
+<h4 id="解決策_1_32bit_と_64bit_両方の_OpenGL_ライブラリをインストールして正しいシンボリックリンクを保つ">解決策 #1: 32bit と 64bit 両方の OpenGL ライブラリをインストールして正しいシンボリックリンクを保つ</h4>
+
+<p>ご使用の linux ディストリビューションに OpenGL ライブラリの <code>multilib</code> パッケージがあれば、それをインストールしてみてください。シンボリックリンクは手動で作ることになるでしょう。</p>
+
+<p>例えば、以下は Ubuntu 12.04 LTS x86-64 の場合です。このディストリビューションでは、<code> libgl1-mesa-dev</code> パッケージの x86-64 版と i386 版を同時にインストールできません。しかし、下記組み合わせのパッケージを同時インストールできます:</p>
+
+<pre class="brush: bash">sudo apt-get install libgl1-mesa-dev libglapi-mesa:i386 libgl1-mesa-glx:i386</pre>
+
+<p>このコマンドを実行後、エミュレータのビルドを成功させるには、まだ手動でシンボリックリンクを作る必要があります:</p>
+
+<pre class="brush: bash">sudo ln -s /usr/lib/i386-linux-gnu/libX11.so.6 /usr/lib/i386-linux-gnu/libX11.so
+sudo ln -s /usr/lib/i386-linux-gnu/mesa/libGL.so.1 /usr/lib/i386-linux-gnu/libGL.so</pre>
+
+<h4 id="解決策_2_エミュレータにパッチを当てて_64bit_版だけをビルドする">解決策 #2: エミュレータにパッチを当てて 64bit 版だけをビルドする</h4>
+
+<p>単に <a href="https://bug897727.bugzilla.mozilla.org/attachment.cgi?id=786280" title="https://bug897727.bugzilla.mozilla.org/attachment.cgi?id=786280">このパッチ</a> を B2G リポジトリ下の <code>sdk/</code> Git リポジトリに適用します。これは、64bit システムでは、B2G エミュレータが 64bit のエミュレータだけをビルドするようにします。 これで、multilib のいかなる問題も回避できます。64bit システムでは、いずれにせよ 32bit エミュレータを使用しません。これは、このパッチが最終的にゴミクズ化（原語:bit-rot）するまでは最もシンプルな解決策です。</p>
+
+<h3 id="Android_can_only_be_built_by_versions_3.81_and_3.82">Android can only be built by versions 3.81 and 3.82</h3>
+
+<p>For Ubuntu you can compile an older version by <a href="http://packages.ubuntu.com/trusty/make">downloading this version</a>.</p>
+
+<p>Install using the following:</p>
+
+<pre class="brush: bash">tar xvzf make-dfsg_3.81.orig.tar.gz
+cd make-dfsg-3.81.orig/
+./configure
+make
+make check
+make install
+echo alias make=\'$(pwd)\' &gt;&gt; B2G/.userconfig</pre>
+
+<h2 id="次のステップへ">次のステップへ</h2>
+
+<p>ビルド後の次のステップは、Boot to Gecko をエミュレータ用にビルドしたのか、もしくは実際のモバイル端末用なのかによって異なります。詳細は以下の記事を参照してください:</p>
+
+<ul>
+ <li><a href="/ja/docs/Mozilla/Boot_to_Gecko/Using_the_B2G_emulators" title="ja/docs/Mozilla/Boot_to_Gecko/Using_the_B2G_emulators">B2G エミュレータを使用する</a></li>
+ <li><a href="/ja/docs/Mozilla/Boot_to_Gecko/Using_the_B2G_desktop_client" title="ja/docs/Mozilla/Boot_to_Gecko/Using_the_B2G_desktop_client">B2G デスクトップクライアントを使用する</a></li>
+ <li><a href="/ja/docs/Mozilla/Boot_to_Gecko/Installing_Boot_to_Gecko_on_a_mobile_device" title="ja/docs/Mozilla/Boot_to_Gecko/Installing_Boot_to_Gecko_on_a_mobile_device">Boot to Gecko をモバイル端末にインストールする</a></li>
+ <li><a href="/ja/docs/Mozilla/Boot_to_Gecko/Pandaboard" title="/ja/docs/Mozilla/Boot_to_Gecko/Pandaboard">Boot to Gecko を pandaboard にインストールする</a></li>
+</ul>
+
+<h3 id="B2GB2G_OSGaia_のバグ登録">B2G/B2G OS/Gaia のバグ登録</h3>
+
+<p>いったん B2G/B2G OS のビルドを終えて実行できるようになったら、特定バージョンのバグを登録したくなるでしょう。B2G OS コミュニティは可能な限り効率的な改善ができます。<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox%20OS">Bugzilla でバグを報告</a> したいときは、"B2G OS" プロジェクトの下に、バージョン情報を含めて報告してください:</p>
+
+<ol>
+ <li>最初に、メジャーバージョン番号、例えば <em>2.5.0.0-prerelease</em> を教えてください。端末では <em>Settings &gt; Device Information</em> から確認できます。</li>
+ <li>gaia と gecko リポジトリから現在のハッシュを取得することで、もっと詳細なバージョン ID を報告できます。このようにして:
+  <pre class="brush: bash">#!/bin/bash
+(cd gaia;  echo "gaia  $(git rev-parse HEAD)")
+(cd gecko; echo "gecko $(git rev-parse HEAD)")</pre>
+ </li>
+</ol>

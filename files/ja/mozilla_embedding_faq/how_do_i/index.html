@@ -1,0 +1,166 @@
+---
+title: How do I...
+slug: Mozilla_Embedding_FAQ/How_do_I...
+tags:
+  - Embedding Mozilla
+  - Mozilla_Embedding_FAQ
+translation_of: Mozilla/Gecko/Embedding_Mozilla/FAQ/How_do_I...
+---
+<p>
+</p>
+<h2 id=".E7.AC.AC_3_.E7.AB.A0:_.E3.81.A9.E3.81.AE.E3.82.88.E3.81.86.E3.81.AB.E3.81.99.E3.82.8C.E3.81.B0..._.28.E3.83.97.E3.83.AD.E3.82.B0.E3.83.A9.E3.83.9F.E3.83.B3.E3.82.B0.E3.81.AE.E3.83.92.E3.83.B3.E3.83.88.29"> 第 3 章: どのようにすれば... (プログラミングのヒント) </h2>
+<h3 id=".E3.81.A9.E3.81.AE.E3.82.88.E3.81.86.E3.81.AB.E3.81.97.E3.81.A6_Gecko_.E3.82.92.E7.B5.84.E3.81.BF.E8.BE.BC.E3.82.80.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> どのようにして Gecko を組み込むのですか？ </h3>
+<p>組み込みプロジェクトのページに戻り、<a href="ja/Roll_your_own_browser_-_An_embedding_HowTo">自分のブラウザへの組み込み方</a> を読んでください。 mozilla/embedding/tests にあるいろいろなサンプルアプリケーションをビルドし、動かし、試験して、自分のブラウザにどの機能を入れるのか調べてください。
+</p>
+<h3 id="service_.E3.81.A8.E3.81.AF.E4.BD.95.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> service とは何ですか？ </h3>
+<p>service とはひとつかそれ以上の XPCOM インターフェースを実装する単独のオブジェクトであり、起動時に Gecko に登録されます。通常は、多くの場所から要求されるいくつかの機能を提供します。この場所とは、環境設定の参照、新規ウインドウの作成、ファイルの配置、 プロンプトやパスワードダイアログの表示などの場所です。
+</p><p>組み込み開発者はデフォルトの service 実装のいくつかを独自のもので上書きすることもできます。例えば、デフォルトのプロンプト service は XUL を使用してプロンプトダイアログを描画していて、組み込み開発者は自分のアプリケーションやプラットフォームにより適した方法でこれらを描画させることが できます。
+</p>
+<h3 id=".E3.81.A9.E3.81.AE.E3.82.88.E3.81.86.E3.81.AB.E3.81.97.E3.81.A6.E3.83.9A.E3.83.BC.E3.82.B8.E3.82.92.E8.AA.AD.E3.81.BF.E8.BE.BC.E3.82.81.E3.81.B0.E3.81.84.E3.81.84.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> どのようにしてページを読み込めばいいですか？ </h3>
+<p>そのウェブブラウザオブジェクトの {{ Interface("nsIWebNavigation") }} インターフェースを照会し、適切な URI とフラグとともに loadURI メソッドを呼び出してください。このインターフェースはまた、再読み込み、読み込み停止、履歴中の進むと戻る、のメソッドも持っています。
+</p>
+<h3 id=".E3.81.A9.E3.81.AE.E3.82.88.E3.81.86.E3.81.AB.E3.81.97.E3.81.A6.E8.AA.AD.E3.81.BF.E8.BE.BC.E3.81.BF.E3.82.92.E3.83.96.E3.83.AD.E3.83.83.E3.82.AF.E3.81.99.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> どのようにして読み込みをブロックするのですか？ </h3>
+<p>{{ Interface("nsIWebProgressListener") }} を実装し、それを nsIWebBrowser::addWebBrowserListener() メソッドを通じて適切なウェブブラウザオブジェクトとともに登録します。事後キャンセルにはコールバックを使用します。もしくは、下記に記すように nsIURIContentListener を実装します。 </p>
+<h3 id=".E3.81.A9.E3.81.AE.E3.82.88.E3.81.86.E3.81.AB.E3.81.97.E3.81.A6.E8.AA.AD.E3.81.BF.E8.BE.BC.E3.81.BF.E3.81.8C.E5.A7.8B.E3.81.BE.E3.82.8B.E5.89.8D.E3.81.AB.E3.81.9D.E3.81.AE.E8.AA.AD.E3.81.BF.E8.BE.BC.E3.81.BF.E3.82.92.E7.9B.A3.E8.A6.96.EF.BC.8F.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.BC.E3.82.BB.E3.83.97.E3.83.88.E3.81.99.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> どのようにして読み込みが始まる前にその読み込みを監視／インターセプトするのですか？ </h3>
+<p>{{ Interface("nsIURIContentListener") }} インターフェースを実装し、それを nsIWebBrowser::parentURIContentListener 属性を通じて適切なウェブブラウザオブジェクトとともに登録します。nsIURIContentListener::OnStartURIOpen() での変更を監視します。読み込みを続けたくなければその時点でその URI の読み込みを中止することが出来ます。
+</p><p>必要であれば nsIURIContentListener::IsPreferred() を実装することも出来ます。これは PR_TRUE を返し、あなたが常に優先 URI ハンドラーであることと、どのコンテンツタイプであれあなたが呼び出されることを確実にします。 </p>
+<h3 id=".E3.81.A9.E3.81.AE.E3.82.88.E3.81.86.E3.81.AB.E3.81.97.E3.81.A6.E3.82.A2.E3.82.A4.E3.83.86.E3.83.A0.E3.82.92.E3.82.AF.E3.83.AA.E3.83.83.E3.83.97.E3.83.9C.E3.83.BC.E3.83.89.E3.81.AB.E3.82.B3.E3.83.94.E3.83.BC.E3.81.99.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> どのようにしてアイテムをクリップボードにコピーするのですか？ </h3>
+<p>nsIServiceProvider::GetInterface (もしくは do_GetInterface() ヘルパーメソッド) を通じて適切なウェブブラウザオブジェクトから {{ Interface("nsIClipboardCommands") }} インターフェースを取得します。
+</p>
+<h3 id=".E3.81.A9.E3.81.AE.E3.82.88.E3.81.86.E3.81.AB.E3.81.97.E3.81.A6.E3.83.89.E3.82.AD.E3.83.A5.E3.83.A1.E3.83.B3.E3.83.88.E3.82.84.E3.83.87.E3.83.BC.E3.82.BF.E3.82.92.E3.83.87.E3.82.A3.E3.82.B9.E3.82.AF.E3.81.AB.E4.BF.9D.E5.AD.98.E3.81.99.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> どのようにしてドキュメントやデータをディスクに保存するのですか？ </h3>
+<p>そのウェブブラウザオブジェクトに実装された {{ Interface("nsIWebBrowserPersist") }} インターフェースを照会し、 そのブラウザオブジェクト上の saveURI() もしくは saveDocument() メソッドを呼び出します。
+</p><p>もう一つの方法としては、単体の webbrowser persist オブジェクト を作成し、その上にある {{ Interface("nsIWebBrowserPersist") }} インターフェースを呼び出して URI やドキュメントを保存します。ブラウザが参照している URI やドキュメント以外のものを保存しようとする時にはこの方法を勧めます。独自の {{ Interface("nsIWebProgressListener") }} オブジェクトを登録して進行状況と状況通知を監視します。
+</p>
+<h3 id=".E3.81.A9.E3.81.AE.E3.82.88.E3.81.86.E3.81.AB.E3.81.97.E3.81.A6.E3.83.87.E3.83.BC.E3.82.BF.EF.BC.8F.E3.83.89.E3.82.AD.E3.83.A5.E3.83.A1.E3.83.B3.E3.83.88.E3.82.92.E3.82.A6.E3.82.A7.E3.83.96.E3.82.84_FTP_.E3.82.B5.E3.82.A4.E3.83.88.E3.81.AB.E4.BF.9D.E5.AD.98.EF.BC.8F.E3.82.A2.E3.83.83.E3.83.97.E3.83.AD.E3.83.BC.E3.83.89.E3.81.99.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> どのようにしてデータ／ドキュメントをウェブや FTP サイトに保存／アップロードするのですか？ </h3>
+<p>再び webbrowser persist オブジェクトを使用しますが、この場合はターゲット URI にリモートロケーションを指定します。
+</p><p>パスワードで保護された場所 (例えば FTP サイト) にアップロードできるようにするには、ウェブ進行状況リスナーは必ず {{ Interface("nsIAuthPrompt") }} を実装する必要があります。この nsIAuthPrompt インターフェースによって、ネットワーキングレイヤーが認証に必要な値を得るためのユーザ名やパスワードのプロンプトを表示させることができます。この独 自の実装は、このダイアログを表示するかアップロードを成功させるのに必要な値を満たさなくてはなりません。 </p>
+<h3 id=".E3.81.A9.E3.81.AE.E3.82.88.E3.81.86.E3.81.AB.E3.81.97.E3.81.A6.E4.BF.9D.E5.AD.98.E3.81.8C.E5.AE.8C.E4.BA.86.E3.81.97.E3.81.9F.E3.81.93.E3.81.A8.E3.82.92.E7.9F.A5.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F.E9.80.B2.E8.A1.8C.E7.8A.B6.E6.B3.81.E3.82.92.E7.9B.A3.E8.A6.96.E3.81.99.E3.82.8B.E7.AD.89.E3.81.AE.E6.89.8B.E6.AE.B5.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> どのようにして保存が完了したことを知るのですか？進行状況を監視する等の手段ですか？ </h3>
+<p>独自の {{ Interface("nsIWebProgressListener") }} オブジェクトを実装して進行状況と状況通知を監視してください。
+</p><p>この原理を実演する <a class="external" href="http://developer.mozilla.org/samples/SimplePersist.cpp">簡単な例</a> があります。この SimplePersist() 関数は URL 文字列とファイルパス文字列を取ります。そのレスポンスとして、この関数はパーシストオブジェクトを生成し、リスナーを生成し、こ のオペレーションをスタートさせます。このオペレーションの進行時に OnStateChange や OnProgressChange 等、このリスナー上のメソッドが呼び出されることによって、組み込み開発者は何が起こっているのかを把握することができます。このオペレーションが完了す る と、STATE_STOP | STATE_IS_NETWORK 状況フラグの組み合わせによって OnStateChange が通知されます。
+</p><p>また、進行状況リスナーを用いて OnStateChange 中に提供されるリクエストを問い合わせることによって、さらに情報を得ることもできます。例えば、もしサーバのレスポンスヘッダを確認したい場合は、 OnStateChange の STATE_START | STATE_IS_REQUEST フラグと、{{ Interface("nsIHttpChannel") }} のための {{ Interface("nsIRequest") }} 引数 QI を確認します。そしてそれらのメソッドを呼び出してサーバからのレスポンスコードとその他の情報を判断します。
+</p><p>このサンプルを同期させる仕事、例えばリターンされる前に完了するためのパーシスタンスを待つこと、が残されています。ヒントとして は、パーシスタンス が終了したことを OnStateChange が示したときに、それを終了する SaveURI の呼び出し後にループを処理する独自のメッセージを追加することです。
+</p>
+<h3 id=".E3.81.A9.E3.81.AE.E3.82.88.E3.81.86.E3.81.AB.E3.81.97.E3.81.A6.E3.83.9A.E3.83.BC.E3.82.B8.E3.82.92.E3.83.97.E3.83.AA.E3.83.B3.E3.83.88.E3.81.99.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> どのようにしてページをプリントするのですか？ </h3>
+<p>ウェブ ブラウザ オブジェクトに {{ Interface("nsIWebBrowserPrint") }} の問い合わせをします。プリントしたいページでのプリント設定オブジェクト (例えば、nsIWebBrowserPrint:: GetGlobalPrintSettings からリターンされたもの) を提供する nsIWebBrowserPrint::Print() メソッドを呼び出します。
+</p>
+<h3 id=".E3.81.A9.E3.81.AE.E3.82.88.E3.81.86.E3.81.AB.E3.81.97.E3.81.A6.E3.83.97.E3.83.AA.E3.83.B3.E3.83.88.E3.81.AE.E3.83.97.E3.83.AC.E3.83.93.E3.83.A5.E3.83.BC.E3.82.92.E3.81.99.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> どのようにしてプリントのプレビューをするのですか？ </h3>
+<p>ウェブ ブラウザ オブジェクトに nsIWebBrowserPrint インターフェースの問い合わせをします。プレビューしたいページでのプリント設定オブジェクト (例えば、nsIWebBrowserPrint:: GetGlobalPrintSettings からリターンされたもの) を提供する nsIWebBrowserPrint::PrintPreview() メソッドを呼び出します。
+</p><p>この nsIWebBrowserPrint::PrintPreviewNavigate() メソッドはそのページ全体を通じて使用することができます。
+</p><p>プレビューモードを終了するには nsIWebBrowserPrint::ExitPrintPreview() を呼び出します。
+</p>
+<h3 id=".E3.81.A9.E3.81.AE.E3.82.88.E3.81.86.E3.81.AB.E3.81.97.E3.81.A6.E3.83.9D.E3.83.83.E3.83.97.E3.82.A2.E3.83.83.E3.83.97.E3.82.A6.E3.82.A4.E3.83.B3.E3.83.89.E3.82.A6.E3.82.92.E5.8B.95.E4.BD.9C.E3.81.95.E3.81.9B.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> どのようにしてポップアップウインドウを動作させるのですか？ </h3>
+<p>ウインドウ監視サービス (window watcher service) とともに {{ Interface("nsIWindowCreator") }} オブジェクトを実装し登録します。Gecko が新しいウインドウを開く必要のあるときにはいつでも nsIWindowCreator::CreateChromeWindow メソッドが呼び出されます。このメソッドは新しいブラウザウインドウを指定されたスタイルで作成し、nsIWebBrowserChrome インターフェースをそのウインドウに渡します。
+</p>
+<pre>nsCOMPtr&lt;nsIWindowWatcher&gt; wwatch(do_GetService(NS_WINDOWWATCHER_CONTRACTID));
+if (wwatch) {
+  wwatch-&gt;SetWindowCreator(myWindowCreator);
+}
+</pre>
+<h3 id=".E7.8B.AC.E8.87.AA.E3.81.AE.E7.B5.84.E3.81.BF.E8.BE.BC.E3.81.BF.E3.82.AF.E3.83.A9.E3.82.A4.E3.82.A2.E3.83.B3.E3.83.88.E3.81.A8.E4.BA.A4.E4.BF.A1.E3.81.99.E3.82.8B.E3.81.9F.E3.82.81.E3.81.AB.E3.83.96.E3.83.A9.E3.82.A6.E3.82.B6.E3.82.A6.E3.82.A4.E3.83.B3.E3.83.89.E3.82.A6.E4.B8.AD.E3.81.AB_JavaScript_.E3.81.8C.E5.BF.85.E8.A6.81.E3.81.A7.E3.81.99.E3.80.82.E3.81.A9.E3.81.AE.E3.82.88.E3.81.86.E3.81.AB.E3.81.99.E3.82.8C.E3.81.B0.E3.82.88.E3.81.84.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> 独自の組み込みクライアントと交信するためにブラウザウインドウ中に JavaScript が必要です。どのようにすればよいですか？ </h3>
+<p>起動時にカテゴリマネージャを使用して JS にグローバルオブジェクトのプロパティを次のように登録します。
+</p>
+<pre>nsCOMPtr&lt;nsICategoryManager&gt; catman =
+      do_GetService(NS_CATEGORYMANAGER_CONTRACTID);
+  if (!catman)
+    return NS_ERROR_FAILURE;
+
+  nsXPIDLCString previous;
+  catman-&gt;AddCategoryEntry(JAVASCRIPT_GLOBAL_PROPERTY_CATEGORY,
+                         "my_prop_name", "my_prop_contract_id",
+                         PR_TRUE, PR_TRUE, getter_Copies(previous));
+</pre>
+<p>これによって、どの JS ウインドウスコープ中でも my_prop_name が決定しだい、コントラクト ID "my_prop_contract_id" とともにひとつのコンポーネントがゆっくりと作成されます。
+</p>
+<h3 id=".E3.81.A9.E3.81.AE.E3.82.88.E3.81.86.E3.81.AB.E3.81.97.E3.81.A6_components.reg_.E3.81.AE.E3.82.88.E3.81.86.E3.81.AA.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E7.94.A8.E3.81.AE.E4.BB.A3.E6.9B.BF.E3.81.A8.E3.81.AA.E3.82.8B.E5.A0.B4.E6.89.80.E3.82.92.E6.8C.87.E5.AE.9A.E3.81.99.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> どのようにして components.reg のようなファイル用の代替となる場所を指定するのですか？ </h3>
+<p><small>Todo: Directory service provider</small>
+</p>
+<h3 id=".E3.81.A9.E3.81.AE.E3.82.88.E3.81.86.E3.81.AB.E3.81.97.E3.81.A6.E3.83.97.E3.83.AD.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E7.94.A8.E3.81.AE.E4.BB.A3.E6.9B.BF.E5.A0.B4.E6.89.80.E3.82.92.E6.8C.87.E5.AE.9A.E3.81.99.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> どのようにしてプロファイル用の代替場所を指定するのですか？ </h3>
+<p><small>Todo: Directory service provider</small>
+</p>
+<h3 id=".E3.81.A9.E3.81.AE.E3.82.88.E3.81.86.E3.81.AB.E3.81.97.E3.81.A6.E3.83.A6.E3.83.BC.E3.82.B6.E8.A8.AD.E5.AE.9A.E3.82.92.E8.A1.8C.E3.81.86.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> どのようにしてユーザ設定を行うのですか？ </h3>
+<p>Look at <a href="#How_do_I_set_the_network_proxy.3F">the proxy question</a> for all you need to know.
+</p>
+<h3 id=".E3.81.A9.E3.81.AE.E3.82.88.E3.81.86.E3.81.AB.E3.81.97.E3.81.A6_Cookie_.E3.81.AE.E8.A8.B1.E5.8F.AF.EF.BC.8F.E6.8B.92.E5.90.A6.E3.82.92.E7.AE.A1.E7.90.86.E3.81.99.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> どのようにして Cookie の許可／拒否を管理するのですか？ </h3>
+<p>Use the question <a href="#How_do_I_set_user_preferences.3F">#How do I set user preferences?</a> to learn how to set preferences, then the preference named "<code>network.cookie.cookieBehavior</code>" can be set to an int value to get various behaviors as described below.
+</p>
+<ul><li> The int value '0', or the absence of any pref for "<code>network.cookie.cookieBehavior</code>" means "allow all cookies"
+</li><li> The int value '1' means "allow cookies from the originating website"
+</li><li> The int value '2' means "block all cookies"
+</li></ul>
+<h3 id=".E3.81.A9.E3.81.AE.E3.82.88.E3.81.86.E3.81.AB.E3.81.97.E3.81.A6.E3.83.A6.E3.83.BC.E3.82.B6.E3.82.A8.E3.83.BC.E3.82.B8.E3.82.A7.E3.83.B3.E3.83.88.E6.96.87.E5.AD.97.E5.88.97.E3.82.92.E5.A4.89.E6.9B.B4.E3.81.99.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> どのようにしてユーザエージェント文字列を変更するのですか？ </h3>
+<p>ユーザエージェント文字列は nsIPrefs を通じて、もしくは prefs ファイルを編集することによってプログラム的に変更することができます。"general.useragent.override" プリファレンスを好きな値に設定します。あるいは、次の設定のひとつかそれ以上をユーザエージェント文字列の部分だけ修正します。
+</p>
+<ul><li> <code>general.useragent.vendor</code>
+</li><li> <code>general.useragent.vendorSub</code>
+</li><li> <code>general.useragent.vendorComment</code>
+</li><li> <code>general.useragent.product</code>
+</li><li> <code>general.useragent.productSub</code>
+</li><li> <code>general.useragent.productComment</code>
+</li><li> <code>general.useragent.misc</code>
+</li><li> <code>general.useragent.security</code>
+</li><li> <code>general.useragent.locale</code> </li></ul>
+<p>ユーザエージェント文字列に関する情報は <a class="external" href="http://www.mozilla.org/build/user-agent-strings.html">こちら</a> で参照することができます。
+</p>
+<h3 id=".E3.81.A9.E3.81.AE.E3.82.88.E3.81.86.E3.81.AB.E3.81.97.E3.81.A6.E7.8B.AC.E8.87.AA.E3.81.AE.E3.83.A1.E3.83.83.E3.82.BB.E3.83.BC.E3.82.B8.E3.80.81.E8.AD.A6.E5.91.8A.E3.80.81.E3.83.97.E3.83.AD.E3.83.B3.E3.83.97.E3.83.88.E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9.E3.82.92.E8.A1.A8.E7.A4.BA.E3.81.99.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> どのようにして独自のメッセージ、警告、プロンプトボックスを表示するのですか？ </h3>
+<p>独自のプロンプトサービスを実装登録する必要があります。このオブジェクトはどんなメッセージボックスでも表示が必要とされる場合にい つでも呼び出されま す。MFCEmbed の {{ Source("embedding/tests/mfcembed/components/PromptService.cpp", "実例") }} を参照してください。
+</p><p>初期化中でなおかつ NS_InitEmbedding の呼出し後に、次のようなプロンプトサービスを登録します。
+</p>
+<pre>nsCOMPtr&lt;nsIFactory&gt; promptFactory;
+rv = NS_NewPromptServiceFactory(getter_AddRefs(promptFactory));
+rv = nsComponentManager::RegisterFactory(kPromptServiceCID,
+         "Prompt Service",
+          "@mozilla.org/embedcomp/prompt-service;1",
+          promptFactory,
+          PR_TRUE); // replace existing
+</pre>
+<h3 id=".E3.81.A9.E3.81.AE.E3.82.88.E3.81.86.E3.81.AB.E3.81.97.E3.81.A6.E3.82.A6.E3.82.A7.E3.83.96_.E3.83.96.E3.83.A9.E3.82.A6.E3.82.B6_.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E3.81.8B.E3.82.89_DOM_.E3.83.89.E3.82.AD.E3.83.A5.E3.83.A1.E3.83.B3.E3.83.88.E3.82.92.E5.BE.97.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> どのようにしてウェブ ブラウザ オブジェクトから DOM ドキュメントを得るのですか？ </h3>
+<pre>nsCOMPtr&lt;nsIDOMDocument&gt; doc;
+nsCOMPtr&lt;nsIDOMWindow&gt; window;
+webBrowser-&gt;GetContentDOMWindow(getter_AddRefs(window));
+if (window) {
+  window-&gt;GetDocument(getter_AddRefs(doc));
+}
+</pre>
+<h3 id="docshell_.E3.81.A8.E3.81.AF.E4.BD.95.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> docshell とは何ですか？ </h3>
+<p>docshell に関する説明は <a class="external" href="http://www.mozilla.org/projects/embedding/docshell.html">こちら</a> で参照することができます。
+</p>
+<h3 id=".E3.81.A9.E3.81.AE.E3.82.88.E3.81.86.E3.81.AB.E3.81.97.E3.81.A6.E3.82.B3.E3.83.B3.E3.83.86.E3.82.AD.E3.82.B9.E3.83.88.E3.83.A1.E3.83.8B.E3.83.A5.E3.83.BC.E3.82.92.E5.AE.9F.E8.A3.85.E3.81.99.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> どのようにしてコンテキストメニューを実装するのですか？ </h3>
+<p>chrome オブジェクトに {{ Interface("nsIContextMenuListener") }} か {{ Interface("nsIContextMenuListener2") }} を実装してください。そのコンテキストに適用される DOM ノードと、どのメニューを表示する (ドキュメント、リンク、イメージ、選択されたテキストなど) のかを決める助けとなるいくつかのフラグの組み合わせを加 えた DOM イベントを伴って、nsIContextMenuListener::OnShowContextMenu() メソッドが呼び出されます。
+</p>
+<h3 id=".E3.81.A9.E3.81.AE.E3.82.88.E3.81.86.E3.81.AB.E3.81.97.E3.81.A6.E3.83.84.E3.83.BC.E3.83.AB.E3.83.81.E3.83.83.E3.83.97.E3.82.B9.E3.82.92.E5.AE.9F.E8.A3.85.E3.81.99.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> どのようにしてツールチップスを実装するのですか？ </h3>
+<p>chrome オブジェクトに {{ Interface("nsITooltipListener") }} インターフェースを実装します。ユーザが TITLE テキストを持ったアイテム上にマウスを持っていくと、ツールチップスを表示したり隠したりするメソッドが自動的に呼び出されます。このコントラクト ID は {{ Source("embedding/browser/webBrowser/nsCTooltipTextProvider.h", "こちら") }} に定義されています。
+</p><p>例として、mfcembed の {{ Source("embedding/tests/mfcembed/BrowserImpl.cpp", "BrowserImpl.cpp") }} と MFC に実装された単純な {{ Source("embedding/tests/mfcembed/BrowserToolTip.cpp", "CBrowserToolTip") }} クラスを参照してください。 </p>
+<h3 id=".E3.81.A9.E3.81.AE.E3.82.88.E3.81.86.E3.81.AB.E3.81.97.E3.81.A6_ALT_.E5.B1.9E.E6.80.A7.E3.82.92.E6.8C.81.E3.81.A3.E3.81.9F.E3.83.8E.E3.83.BC.E3.83.89.E7.94.A8.E3.81.AE.E3.83.84.E3.83.BC.E3.83.AB.E3.83.81.E3.83.83.E3.83.97.E3.82.92.E8.A6.8B.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> どのようにして ALT 属性を持ったノード用のツールチップを見るのですか？ </h3>
+<p>tool tip text provider service を実装します。これは {{ Interface("nsIToolTipTextProvider") }} の単純なサービスの実装です。ポインターが DOM ノードを指したときに、そのノードのために表示するテキストがあればそのテキストを決定するためにこのインターフェースが呼び出されます。
+</p><p>このデフォルトの {{ Source("embedding/browser/webBrowser/nsDocShellTreeOwner.cpp#884", "実装") }} は TITLE テキスト属性のみを返しますが、このサービスの背後にある原則 {{ 訳注("<a class='\"external\"' href='\"http://www.mozilla.gr.jp/standards/webtips0024.html\"'>参考ページ</a>") }} にも 従っています。ALT 属性をチェックするあなた独自のものとあなたが表示させたい他のものをデフォルトと置き換えてください。
+</p>
+<h3 id=".E3.81.A9.E3.81.AE.E3.82.88.E3.81.86.E3.81.AB.E3.81.97.E3.81.A6.E3.83.8D.E3.83.83.E3.83.88.E3.83.AF.E3.83.BC.E3.82.AF.E3.83.97.E3.83.AD.E3.82.AD.E3.82.B7.E3.82.92.E8.A8.AD.E5.AE.9A.E3.81.99.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> どのようにしてネットワークプロキシを設定するのですか？ </h3>
+<ul><li> Obtain a reference to an <code>nsIPref</code> instance using the contract id <code>NS_PREF_CONTRACTID</code>
+</li><li> Use one of the following methods to set preferences
+<ul><li> <code>SetUnicharPref</code>
+</li><li> <code>SetIntPref</code>
+</li><li> <code>SetBoolPref</code>
+</li></ul>
+</li><li> Tip: the set of valid name/value pairs is quite large and can be used to control many aspects of the browser, not just networking. However, the networking related settings are as follows
+<ul><li> Set the pref "<code>network.proxy.type</code>" to the int value '1' to cause the same effect as if the user chose the "Manual proxy configuration" radio button in the "Connection Settings" dialog. <strong>NONE OF YOUR PROXY SETTINGS WILL TAKE EFFECT UNLESS THIS ONE IS SET PROPERLY.</strong> The absence of this pref will cause the same effect as if the user chose the "Direct connection to the Internet" radio button.
+</li><li> Set the pref "<code>network.proxy.share_proxy_settings</code>" to the boolean value 'true' to give the same effect as if the user chose the "Use this proxy server for all protocols" checkbox. If this is set, the http proxy and port will be used for proxies on ftp, https, etc. The absence of this pref will cause the same effect as if the checkbox was not checked.
+</li><li> Set the pref "<code>network.proxy.http</code>" to the Unichar value of the hostname to which you want the browser to send http requests using the HTTP proxy protocol. When setting this pref, you must set the port pref as well, described next.
+</li><li> Set the pref "<code>network.proxy.http_port</code>" to the int value of the port for the proxy.
+</li><li> Set the pref "<code>network.proxy.no_proxies_on</code>" to the Unichar value that is the same as the user would have typed into the "No proxy for" text field in the "Connection Settings" dialog.
+</li><li> Additional useful pref names are: <code>network.proxy.{ssl,ftp,socks,gopher}</code> and <code>network.proxy.{ssl,ftp,socks,gopher}_port</code>
+</li></ul>
+</li><li> If you want to learn more about prefs, search your local filesystem for the "prefs.js" file in your mozilla user profile.
+</li></ul>
+<h3 id=".E3.81.A9.E3.81.AE.E3.82.88.E3.81.86.E3.81.AB.E3.81.97.E3.81.A6.E3.83.89.E3.83.A9.E3.83.83.E3.82.B0.EF.BC.86.E3.83.89.E3.83.AD.E3.83.83.E3.83.97.E3.82.B5.E3.83.9D.E3.83.BC.E3.83.88.E3.82.92.E7.84.A1.E5.8A.B9.E5.8C.96.E3.81.99.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> どのようにしてドラッグ＆ドロップサポートを無効化するのですか？ </h3>
+<p>When setting up your browser add a hook to the command manager which points to your {{ Interface("nsIWebBrowserChrome") }} implementation. This implementation should also implement {{ Interface("nsIClipboardDragDropHooks") }}. Deny the drop by setting the return value of the AllowDrop() function.
+</p>
+<pre>nsCOMPtr&lt;nsICommandManager&gt; CommandManager = do_GetInterface(iWebBrowser);
+if (CommandManager)
+{
+  nsCOMPtr&lt;nsIDOMWindow&gt; theDOMWindow = do_GetInterface(iWebBrowser);
+  nsCOMPtr&lt;nsICommandParams&gt; cmdParamsObj = do_CreateInstance(NS_COMMAND_PARAMS_CONTRACTID,&amp;rv);
+  cmdParamsObj-&gt;SetISupportsValue("addhook", reinterpret_cast&lt;nsISupports*&gt;(iChromeImplementation));
+  CommandManager-&gt;DoCommand("cmd_clipboardDragDropHook", cmdParamsObj, theDOMWindow);
+}
+</pre>
+{{ languages( { "en": "en/Mozilla_Embedding_FAQ/How_do_I..." } ) }}

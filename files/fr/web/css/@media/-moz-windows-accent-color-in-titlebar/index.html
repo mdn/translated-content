@@ -1,0 +1,46 @@
+---
+title: '-moz-windows-accent-color-in-titlebar'
+slug: Web/CSS/@media/-moz-windows-accent-color-in-titlebar
+tags:
+  - '@media'
+  - CSS
+  - Caractéristique média
+  - Non-standard
+translation_of: Archive/Web/CSS/@media/-moz-windows-accent-color-in-titlebar
+---
+<div>{{cssref}} {{Non-standard_header}}</div>
+
+<div class="note">
+<p><strong>Note </strong>: Depuis <a href="/fr/docs/Mozilla/Firefox/Releases/58">Firefox 58</a>, cette caractéristique média n'est plus disponible pour être utilisée sur du contenu web. Elle ne peut être utilisée que de façon interne (c'est-à-dire avec XUL et pour le code du chrome). Cf. {{bug(1396066)}} pour plus de détails.</p>
+</div>
+
+<p>La <a href="/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries#Cibler_des_caractéristiques_média">caractéristique média</a> <code><strong>-moz-windows-accent-color-in-titlebar</strong></code>, spécifique à Gecko et rattachée à la règle @ <a href="/fr/docs/Web/CSS/@media" title="The @media CSS at-rule lets you specify declarations that depend on the condition of a media query. The rule may be placed at the top level of your code or nested inside any other conditional group at-rule."><code>@media</code></a>, peut-être utilisée afin d'appliquer des styles selon que les couleurs d'accentuation de Microsoft Windows pour les barres de titres sont activées ou non.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<dl>
+ <dt>{{cssxref("&lt;integer&gt;")}}</dt>
+ <dd>Cette caractéristique vaut 1 si les couleurs d'accentuation sont activées pour les barres de titre des fenêtres (pour les versions récentes de Windows, par exemple Windows 10). Sinon, elle vaut 0.</dd>
+</dl>
+
+<p><br>
+ <strong>Média :</strong> {{cssxref("Media/Visual")}}<br>
+ <strong>Gestion des préfixes min/max :</strong> non</p>
+
+<h2 id="Exemples">Exemples</h2>
+
+<pre class="brush: css">@media (-moz-windows-accent-color-in-titlebar: 1) {
+  h1 {
+    color: -moz-win-accentcolortext;
+  }
+
+  body {
+    background-color: -moz-win-accentcolor;
+  }
+}</pre>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>Cette caractéristique est liée aux valeurs {{cssxref("&lt;color&gt;")}} <code>-moz-win-accentcolor</code> et <code>-moz-win-accentcolortext</code> qui permettent d'accéder aux couleurs d'accentuation de Windows depuis CSS.</li>
+</ul>

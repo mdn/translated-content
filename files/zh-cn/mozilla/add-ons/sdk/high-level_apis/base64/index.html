@@ -1,0 +1,65 @@
+---
+title: base64
+slug: Mozilla/Add-ons/SDK/High-Level_APIs/base64
+translation_of: Archive/Add-ons/Add-on_SDK/High-Level_APIs/base64
+---
+<p>{{AddonSidebar}}</p>
+
+<div class="note">
+<p>不稳定</p>
+</div>
+
+<p>使用Base64算法编码和解码数据</p>
+
+<pre class="brush: js">var base64 = require("sdk/base64");
+
+var encodedData = base64.encode("Hello, World");//"SGVsbG8sIFdvcmxk"
+var decodedData = base64.decode(encodedData);//"Hello, World"</pre>
+
+<h2 id="Globals">Globals</h2>
+
+<h3 id="函数">函数</h3>
+
+<h4 class="addon-sdk-api-name" id="encode(data_charset)"><code>encode(data, charset)</code></h4>
+
+<p>将数据编码成ASCII的Base64字符串。</p>
+
+<h5 id="参数">参数</h5>
+
+<p><strong>data : string</strong><br>
+ 需要被编码的字符串</p>
+
+<p><strong>charset : string</strong><br>
+ 字符串的编码字符集（可选）。唯一能接受的值<code>“UTF-8”</code>。为了进行编码和解码Unicode字符串，需要设置字符集参数：</p>
+
+<pre class="brush: js">var base64 = require("sdk/base64");
+
+var encodedData = base64.encode(unicodeString, "utf-8");
+</pre>
+
+<h5 id="返回">返回</h5>
+
+<p><strong>string</strong> : 编码后的Base64字符串。</p>
+
+<h4 class="addon-sdk-api-name" id="decode(data_charset)"><code>decode(data, charset)</code></h4>
+
+<p>解码一个已使用base-64编码的数据字符串</p>
+
+<h5 id="参数_2">参数</h5>
+
+<p><strong>data : string</strong><br>
+ 需要被解码的字符串</p>
+
+<p><strong>charset : string</strong><br>
+ 字符串的编码字符集（可选）。唯一能接受的值<code>“UTF-8”</code>。为了进行编码和解码Unicode字符串，需要设置字符集参数：</p>
+
+<pre class="brush: js">var base64 = require("sdk/base64");
+
+var decodedData = base64.decode(encodedData, "utf-8");
+</pre>
+
+<h5 id="返回_2">返回</h5>
+
+<p><strong>string</strong> : 解码后的字符串</p>
+
+<div id="xunlei_com_thunder_helper_plugin_d462f475-c18e-46be-bd10-327458d045bd"> </div>

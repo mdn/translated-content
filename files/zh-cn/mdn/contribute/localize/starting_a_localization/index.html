@@ -1,0 +1,65 @@
+---
+title: Starting a new MDN localization
+slug: MDN/Contribute/Localize/Starting_a_localization
+tags:
+  - 未翻译
+translation_of: MDN/Contribute/Localize/Starting_a_localization
+---
+<div>{{MDNSidebar}}</div>
+
+<p>If your language doesn't already have a <a href="/en-US/docs/Project:MDN/Localizing/Localization_projects" title="/en-US/docs/Project:MDN/Localizing/Localization_projects">localization project</a> on MDN, and you have the time and the enthusiasm to do so, you should consider starting a new one. This article is a guide to how to go about starting a localization project.</p>
+
+<h2 id="Getting_started">Getting started</h2>
+
+<p>If you'd like to start a localization project to translate MDN into your language, here are the steps you need to follow to get up and running.</p>
+
+<ol>
+ <li>First, <a href="https://localize.mozilla.org/projects/mdn/" title="https://localize.mozilla.org/projects/mdn/">check to see</a> if there's already a localization for that language.</li>
+ <li>Contact your locale's <a href="http://wiki.mozilla.org/L10n:Localization_Teams">Mozilla l10n team</a> and let them know that you want to start it.</li>
+ <li>Sign up to our <a href="/Project:en/Community">Mailing Lists</a> and head to the <a href="irc://irc.mozilla.org/mdn" title="irc://irc.mozilla.org/devmo">#mdn</a> IRC channel on <a class="link-irc" href="irc://irc.mozilla.org">irc.mozilla.org</a>.</li>
+ <li>Contact the <a href="mailto:mdn-admins@mozilla.org?subject=Starting%20a%20localization%20project" title="mailto:mdn-admins@mozilla.org?subject=Starting%20a%20localization%20project">MDN administration team</a> to let them know you're starting a new localization. You don't need their permission or anything, but we likes to know who you are. Let us know a little bit about you and which locale you're planning to start work on.</li>
+ <li>Add a row for your language to the list of <a href="/en-US/docs/Project:MDN/Localizing/Localization_projects" title="/en-US/docs/Project:MDN/Localizing/Localization_projects">localization projects</a>, and include anyone else who is planning to work on it.</li>
+ <li><a href="https://bugzilla.mozilla.org/enter_bug.cgi?alias=&amp;assigned_to=nobody%40mozilla.org&amp;blocked=&amp;bug_file_loc=http%3A%2F%2F&amp;bug_severity=normal&amp;bug_status=NEW&amp;comment=&amp;component=Localization&amp;contenttypeentry=&amp;contenttypemethod=autodetect&amp;contenttypeselection=text%2Fplain&amp;data=&amp;defined_groups=1&amp;dependson=&amp;description=&amp;flag_type-4=X&amp;flag_type-607=X&amp;flag_type-791=X&amp;flag_type-800=X&amp;form_name=enter_bug&amp;keywords=&amp;maketemplate=Remember%20values%20as%20bookmarkable%20template&amp;op_sys=All&amp;priority=--&amp;product=Mozilla%20Developer%20Network&amp;qa_contact=website%40mdn.bugs&amp;rep_platform=All&amp;requestee_type-4=&amp;requestee_type-607=&amp;requestee_type-791=&amp;requestee_type-800=&amp;short_desc=&amp;status_whiteboard=&amp;target_milestone=---&amp;version=unspecified" title="https://bugzilla.mozilla.org/enter_bug.cgi?alias=&amp;assigned_to=nobody%40mozilla.org&amp;blocked=&amp;bug_file_loc=http%3A%2F%2F&amp;bug_severity=normal&amp;bug_status=NEW&amp;comment=&amp;component=Localization&amp;contenttypeentry=&amp;contenttypemethod=autodetect&amp;contenttypeselection=text%2Fplain&amp;data=&amp;defined_groups=1&amp;dependson=&amp;description=&amp;flag_type-4=X&amp;flag_type-607=X&amp;flag_type-791=X&amp;flag_type-800=X&amp;form_name=enter_bug&amp;keywords=&amp;maketemplate=Remember%20values%20as%20bookmarkable%20template&amp;op_sys=All&amp;priority=--&amp;product=Mozilla%20Developer%20Network&amp;qa_contact=website%40mdn.bugs&amp;rep_platform=All&amp;requestee_type-4=&amp;requestee_type-607=&amp;requestee_type-791=&amp;requestee_type-800=&amp;short_desc=&amp;status_whiteboard=&amp;target_milestone=---&amp;version=unspecified">Create a bug</a> in <a href="http://bugzilla.mozilla.org">Bugzilla</a> requesting that your language be added to the list of languages supported by MDN. This bug should be in the "Mozilla Developer Network" &gt; "Localization" category. It will be automatically assigned to the correct person. This is needed so that your language shows up in the list of languages to choose from on the site; until this is done, you won't be able to continue.</li>
+ <li>Wait while the MDN team handles your request. If your bug isn't responded to within three or four days, please add a comment to the bug asking for an "ETA" for completion.</li>
+ <li>Once the locale has been added to MDN, you can <a href="https://localize.mozilla.org/projects/mdn/" title="https://localize.mozilla.org/projects/mdn/">use the Verbatim tool</a> to translate the user interface strings for the site, and you can begin translating articles on the wiki. While translating the site's strings in Verbatim isn't required, it does add a nice touch to have the user interface presented in your language.</li>
+</ol>
+
+<h2 id="Organizing_a_localization_project">Organizing a localization project</h2>
+
+<p>There are lots of great tips from various existing translation teams; you should feel free to adopt any of these ideas you choose. In addition, please feel free to add your own suggestions as well. See <a href="/profiles/traducción">this template</a> in the Spanish wiki for an example.</p>
+
+<ul>
+ <li>Use a macro to identify articles that are in the process of being translated. The macro should provide an information box that includes a link to the original version of the article. You may also wish to use page tags to indicate pages that need more translation work. This helps track articles that are in the process of being translated.</li>
+ <li>Use a macro to include articles that need to be translated in article lists with a flag or marker next to them indicating that the article hasn't been translated yet. This is a way to advertise important articles in need of translation. See <a href="/profiles/tradúceme">this template</a> in the Spanish version of MDN for an example.</li>
+ <li>Make use of the "Needs technical review" and "Needs editorial review" flags, to mark articles that have been translated but should be double-checked for technical and grammatical accuracy.</li>
+ <li>Use the "junk" tag to mark pages that need to be deleted. Since only admins have access to delete articles, this provides a way to mark that an article is obsolete until the admins get the page deleted.</li>
+ <li>Be sure to include translations of these MDN "how to" pages, and include additional pages as necessary to explain your localization team's policies and practices.</li>
+</ul>
+
+<p>To find help with your project, be sure to ask around on the dev-mdc mailing list, the <a href="irc://irc.mozilla.org/devmo" title="irc://irc.mozilla.org/devmo">#devmo</a> IRC channel, and other MDN-related discussion areas. See "<a href="/en-US/docs/Project:MDN/Contributing/Join_the_community" title="/en-US/docs/Project:MDN/Contributing/Join_the_community">Join the MDN community</a>" for pointers to community discussion channels that will help you find others interested in joining your localization team.</p>
+
+<p>You may also be able to find others interested in helping you by attending local Web development events, at your local hacker space, and the like. Be creative!</p>
+
+<h2 id="Localization_look_and_feel">Localization look and feel</h2>
+
+<p>The basic structure of each of the localizations of MDN should be essentially the same. In general, you should try to maintain the same hierarchy of pages, so that each page on each language corresponds to a similar page in each locale.</p>
+
+<p>You are welcome to link to external local pages, write your own articles, and translate everything from the English wiki. If you do decide to write your own articles, it would be helpful if you could provide an English translation for the English wiki so it can then get translated into all of the other localized wikis.</p>
+
+<p>Adding local resources you should keep a neutral point of view; that is, you shouldn't promote a particular perspective, and should instead simply provide the facts as best as possible (see information about the <a href="http://en.wikipedia.org/wiki/NPOV">NPOV</a> rule on Wikipedia). You should not link to commercial sites (like paid courses, web design companies, etc.). You should promote open standards and cross-browser compatibility over closed or proprietary methods wherever possible.</p>
+
+<div class="note">
+<p><strong>Note:</strong> Team leads are encouraged to monitor their locale's content for spam and other inappropriate materials and take steps to get them removed or corrected.</p>
+</div>
+
+<h2 id="Policy">Policy</h2>
+
+<p>All materials created and translated for the MDN should follow our <a href="/en-US/docs/Project:Copyrights">Copyright and Licensing Policies</a>.</p>
+
+<p>If you encounter problems of any sort—technical, policy, or other—please contact the <a href="mailto:mdn-admins@mozilla.org?subject=Localization%20question" title="mailto:mdn-admins@mozilla.org?subject=Localization%20question">MDN admin team</a>.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Project:MDN/Localizing" title="/en-US/docs/Project:MDN/Localizing">Localizing MDN</a></li>
+</ul>

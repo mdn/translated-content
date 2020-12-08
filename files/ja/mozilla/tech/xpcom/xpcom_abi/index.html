@@ -1,0 +1,54 @@
+---
+title: XPCOM ABI
+slug: Mozilla/Tech/XPCOM/XPCOM_ABI
+tags:
+  - XPCOM
+translation_of: Mozilla/Tech/XPCOM/XPCOM_ABI
+---
+<p><a href="ja/XPCOM">XPCOM</a> <abbr title="Application Binary Interface">ABI</abbr>は、XPCOMコンポーネントのバイナリインターフェースです。スクリプト言語（<a href="ja/JavaScript">JavaScript</a>など）によって書かれたXPCOMコンポーネントは、特に改変をしなくてもプラットフォーム（WindowsやOS Xなど）を越えて動作させられますが、コンパイルが必要な言語（C++など）で書かれたコンポーネントの場合、異なるプラットフォームで動かすためには再コンパイルが必要です。コンパイルされたXPCOMコンポーネントは多くの場合、「バイナリ」や「ネイティブ」などと呼ばれます。
+</p><p>一つのバイナリXPCOMコンポーネントは、すべてのプラットフォームで利用できる<code>.xpt</code>ファイルと、特定のプラットフォーム用で且つ特定のABIを持った<abbr title="Dynamic Link Library">DLL</abbr>（Windowsでは<code>.dll</code>、Linuxでは<code>.so</code>）から成ります。このABIを利用するアプリケーションだけが、このXPCOMコンポーネントを利用することができます。簡単に言えば、特定のABI用にビルドされたXPCOMコンポーネントは、同じABI用にビルドされたFirefox、Thunderbird、その他のXULRunnerアプリケーションに対してのみ互換性があります。
+</p><p><span id="ABI_Naming"></span>
+</p>
+<h2 id="ABIのネーミング">ABIのネーミング</h2>
+<p>各々のABIは、以下の形式の<sup><a href="https://developer.mozilla.org/ja/docs/XPCOM_ABI#endnote_TARGET_XPCOM_ABI">[TARGET_XPCOM_ABI]</a></sup>文字列によって名付けられています。：
+</p>
+<pre class="eval"><i>{CPU_ARCH}</i>-<i>{TARGET_COMPILER_ABI}</i>
+</pre>
+<p><i>{CPU_ARCH}</i><sup><a href="https://developer.mozilla.org/ja/docs/XPCOM_ABI#endnote_Platforms">[Platforms]</a></sup>は、以下のいずれかのCPUのアーキテクチャを意味します：
+</p>
+<ul><li> <code>x86</code> - i386およびそれ以降のシリーズ（x86-64 CPUの32bitモードも含みます）
+</li><li> <code>ppc</code> - PowerPCシリーズ
+</li><li> <code>Alpha</code> - Alphaシリーズ
+</li><li> <code>x86_64</code> - 64bitモードのAMD64/EMT64シリーズ（32bitモードの場合は<code>x86</code>と見なされます）
+</li><li> <code>sparc</code> - SPARCシリーズ
+</li><li> <code>ia64</code> - Itaniumシリーズ
+</li></ul>
+<p><i>{TARGET_COMPILER_ABI}</i><sup><a href="https://developer.mozilla.org/ja/docs/XPCOM_ABI#endnote_Platforms">[Platforms]</a></sup>は、以下のいずれかのコンパイラのABIを意味します：
+</p>
+<ul><li> <code>msvc</code> - Microsoft Visual C++
+</li><li> <code>n32</code> - IRIX 6 C++ Compiler
+</li><li> <code>gcc2</code> - GNU C++ Compiler 2.x
+</li><li> <code>gcc3</code> - GNU C++ Compiler 3.x or 4.x
+</li><li> <code>sunc</code> - Sun C++ Compiler
+</li><li> <code>ibmc</code> - IBM C++ Compiler
+</li></ul>
+<p>例:
+</p>
+<ul><li> Intel Pentiumプロセッサ用のGNU C++ Compiler 4.0.0によってビルドされたFirefoxは、<code>x86-gcc3</code>というXPCOM ABIを持ちます。
+</li></ul>
+<p>XPCOM ABI文字列は、<a href="ja/NsIXULRuntime">nsIXULRuntime</a>を使うことによってプログラムから取得できます。あなたのFirefoxあるいはThunderbirdのABIを取得するには、エラーコンソールを開いて（<code>ツール | エラーコンソール</code>から開けます）以下のJavaScriptコードを実行してください：
+</p>
+<pre class="eval">Components.classes["@mozilla.org/xre/app-info;1"]
+          .getService(Components.interfaces.nsIXULRuntime)
+          .XPCOMABI
+</pre>
+<p>もしCPUのアーキテクチャもしくはC++コンパイラのいずれかが未知の場合は、アプリケーションはXPCOM ABI文字列を持たず、それを取得しようと試みた際にはNS_ERROR_NOT_AVAILABLEというエラーを起こすでしょう。それは特徴的なABIだと思われますが、しかし私たちはそれに対して付ける名前を持っていません。
+</p><div class="blockIndicator note"><strong>註:</strong> Platforms</div> これは利用可能なCPUアーキテクチャやコンパイラのABIの完全なリストではありません。最新の情報は常に、ビルドシステムの中を探索することで見つけられるでしょう。
+<div class="blockIndicator note"><strong>註:</strong> TARGET_XPCOM_ABI</div> Mozillaのビルドシステムでは、XPCOM ABIを保持している変数は<code>TARGET_XPCOM_ABI</code>です。（これは内部の詳細情報で、拡張機能の開発者にとっては無関係です。）
+<p><span id="Extension_Installation"></span>
+</p>
+<h2 id="Extension_Installation_2">Extension Installation</h2>
+<p>アプリケーション（例：Firefox）がサポートするABIの名前は、ビルド時に埋め込まれます。その後、アプリケーションはサードパーティ製のバイナリXPCOMコンポーネントの互換性を調べるためにその値を使います。
+</p><p>互換性チェックとの共通点は、拡張機能のインストールの間にあります。もし、ある拡張機能がバイナリXPCOMを提供する場合、<a href="ja/Install_Manifests#targetPlatform">インストール定義</a>においてそれらのXPCOM ABIが宣言されているべきです。拡張機能の作者は、XPCOMコンポーネントをサポートしているマシンすべてのためにそれぞれビルド（コンパイル）して、<a href="ja/Bundles#Platform-specific_Subdirectories">プラットフォームごとのサブディレクトリ</a>に入れ、すべてのビルドを一つのXPIの中にパッケージングすることができます。拡張機能がインストールされる時、アプリケーションはそれ自身のABIに最も適したコンポーネントのビルドを選択します。もし適合するビルドが見つからなければ、その拡張機能は互換性がないと見なされ、アプリケーションはインストールを中断するでしょう。
+</p><p>もし、（<a href="#ABI_Naming">ABIのネーミング</a>で説明しているとおり、CPUアーキテクチャかC++コンパイラのいずれかが不明であった結果として）そのアプリケーションがXPCOM ABI文字列を持っていない場合、あなたはインストール定義などに記述するプラットフォーム名としてOSの名前を（XPCOM ABIを付けずに）使うべきです。
+</p>

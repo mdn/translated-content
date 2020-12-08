@@ -1,0 +1,106 @@
+---
+title: HTMLSelectElement.setCustomValidity()
+slug: Web/API/HTMLSelectElement/setCustomValidity
+translation_of: Web/API/HTMLSelectElement/setCustomValidity
+---
+<div>{{ APIRef("HTML DOM") }}</div>
+
+<p>La méthode <code><strong>HTMLSelectElement.setCustomValidity()</strong></code> définit le message de validation personnalisé de l'élément sélectionné avec le message renseigné. Utiliser une chaîne de caractère vide indique que l'élément <em>n'a pas</em> de message d'erreur de validation personnalisé.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="eval  language-html"><code class="language-html"><em>ElmSelectionne</em>.setCustomValidity(<em>message</em>);</code></pre>
+
+<h3 id="Paramètres">Paramètres</h3>
+
+<ul>
+ <li><em>message </em>est le {{domxref("DOMString")}} contenant le message d'erreur.</li>
+</ul>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Spécification</th>
+   <th scope="col">Statut</th>
+   <th scope="col">Commentaire</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#dom-cva-setcustomvalidity', 'HTMLSelectElement.setCustomValidity()')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Pas de changement depuis la dernière snapshot, {{SpecName('HTML5 W3C')}}.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', 'forms.html#dom-cva-setcustomvalidity', 'HTMLSelectElement.setCustomValidity()')}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td>Définition initiale, snapshot de {{SpecName('HTML WHATWG')}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Edge</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop(2.0)}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile(2.0)}}</td>
+   <td>1.0</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Form validation.</a></li>
+</ul>

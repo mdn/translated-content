@@ -1,0 +1,183 @@
+---
+title: Object
+slug: Web/JavaScript/Reference/Global_Objects/Object
+tags:
+  - Constructor
+  - JavaScript
+  - Object
+  - 对象
+  - 构造器
+translation_of: Web/JavaScript/Reference/Global_Objects/Object
+---
+<div>{{JSRef}}</div>
+
+<p><code><strong>Object</strong></code> 构造函数创建一个对象包装器。</p>
+
+<h2 id="语法">语法</h2>
+
+<pre class="notranslate">// 对象初始化器（Object initialiser）或对象字面量（literal）
+{ [ <var>nameValuePair1</var>[, <var>nameValuePair2</var>[, ...<var>nameValuePairN</var>] ] ] }
+
+// 以构造函数形式来调用
+new Object([<var>value</var>])</pre>
+
+<h3 id="参数">参数</h3>
+
+<dl>
+ <dt><code>nameValuePair1, nameValuePair2, ... nameValuePair<em>N</em></code></dt>
+ <dd>成对的名称（字符串）与值（任何值），其中名称通过冒号与值分隔。</dd>
+ <dt><code>value</code></dt>
+ <dd>任何值。</dd>
+</dl>
+
+<h2 id="描述">描述</h2>
+
+<p>在JavaScript中，几乎所有的对象都是<code>Object</code>类型的实例，它们都会从<code>Object.prototype</code>继承属性和方法。<code>Object</code> 构造函数为给定值创建一个对象包装器。<code>Object</code>构造函数，会根据给定的参数创建对象，具体有以下情况：</p>
+
+<ul>
+ <li>如果给定值是 {{jsxref("null")}} 或 {{jsxref("undefined")}}，将会创建并返回一个空对象</li>
+ <li>如果传进去的是一个基本类型的值，则会构造其包装类型的对象</li>
+ <li>如果传进去的是引用类型的值，仍然会返回这个值，经他们复制的变量保有和源对象相同的引用地址</li>
+</ul>
+
+<p>当以非构造函数形式被调用时，<code>Object</code> 的行为等同于 <code>new Object()</code>。</p>
+
+<p>可查看 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer">对象初始化/字面量语法</a>。</p>
+
+<h2 id="Properties" name="Properties"><code>Object</code> 构造函数的属性</h2>
+
+<dl>
+ <dt><code>Object.length</code></dt>
+ <dd>值为 1。</dd>
+</dl>
+
+<dl>
+ <dt>{{jsxref("Object.prototype")}}</dt>
+ <dd>可以为所有 Object 类型的对象添加属性。</dd>
+</dl>
+
+<h2 id="Object_构造函数的方法"><code>Object</code> 构造函数的方法</h2>
+
+<dl>
+ <dt>{{jsxref("Object.assign()")}}</dt>
+ <dd>通过复制一个或多个对象来创建一个新的对象。</dd>
+ <dt>{{jsxref("Object.create()")}}</dt>
+ <dd>使用指定的原型对象和属性创建一个新对象。</dd>
+ <dt>{{jsxref("Object.defineProperty()")}}</dt>
+ <dd>给对象添加一个属性并指定该属性的配置。</dd>
+ <dt>{{jsxref("Object.defineProperties()")}}</dt>
+ <dd>给对象添加多个属性并分别指定它们的配置。</dd>
+ <dt>{{jsxref("Object.entries()")}}</dt>
+ <dd>返回给定对象自身可枚举属性的 <code>[key, value]</code> 数组。</dd>
+ <dt>{{jsxref("Object.freeze()")}}</dt>
+ <dd>冻结对象：其他代码不能删除或更改任何属性。</dd>
+ <dt>{{jsxref("Object.getOwnPropertyDescriptor()")}}</dt>
+ <dd>返回对象指定的属性配置。</dd>
+ <dt>{{jsxref("Object.getOwnPropertyNames()")}}</dt>
+ <dd>返回一个数组，它包含了指定对象所有的可枚举或不可枚举的属性名。</dd>
+ <dt>{{jsxref("Object.getOwnPropertySymbols()")}}</dt>
+ <dd>返回一个数组，它包含了指定对象自身所有的符号属性。</dd>
+ <dt>{{jsxref("Object.getPrototypeOf()")}}</dt>
+ <dd>返回指定对象的原型对象。</dd>
+ <dt>{{jsxref("Object.is()")}}</dt>
+ <dd>比较两个值是否相同。所有 NaN 值都相等（这与==和===不同）。</dd>
+ <dt>{{jsxref("Object.isExtensible()")}}</dt>
+ <dd>判断对象是否可扩展。</dd>
+ <dt>{{jsxref("Object.isFrozen()")}}</dt>
+ <dd>判断对象是否已经冻结。</dd>
+ <dt>{{jsxref("Object.isSealed()")}}</dt>
+ <dd>判断对象是否已经密封。</dd>
+ <dt>{{jsxref("Object.keys()")}}</dt>
+ <dd>返回一个包含所有给定对象<strong>自身</strong>可枚举属性名称的数组。</dd>
+ <dt>{{jsxref("Object.preventExtensions()")}}</dt>
+ <dd>防止对象的任何扩展。</dd>
+ <dt>{{jsxref("Object.seal()")}}</dt>
+ <dd>防止其他代码删除对象的属性。</dd>
+ <dt>{{jsxref("Object.setPrototypeOf()")}}</dt>
+ <dd>设置对象的原型（即内部 <code>[[Prototype]]</code> 属性）。</dd>
+ <dt>{{jsxref("Object.values()")}}</dt>
+ <dd>返回给定对象自身可枚举值的数组。</dd>
+</dl>
+
+<h2 id="Object_实例和_Object_原型对象"><code>Object</code> 实例和 <code>Object</code> 原型对象</h2>
+
+<p>JavaScript中的所有对象都来自 <code>Object</code>；所有对象从{{jsxref("Object.prototype")}}继承方法和属性，尽管它们可能被覆盖。例如，其他构造函数的原型将覆盖 <code>constructor</code> 属性并提供自己的 <code>toString()</code> 方法。<code>Object</code> 原型对象的更改将传播到所有对象，除非受到这些更改的属性和方法将沿原型链进一步覆盖。</p>
+
+<h3 id="属性">属性</h3>
+
+<div>{{ page('zh-CN/docs/JavaScript/Reference/Global_Objects/Object/prototype', 'Properties') }}</div>
+
+<h3 id="Methods_of_Object_instances" name="Methods_of_Object_instances">方法</h3>
+
+<div>{{ page('zh-CN/docs/JavaScript/Reference/Global_Objects/Object/prototype', 'Methods') }}</div>
+
+<h2 id="Examples" name="Examples">示例</h2>
+
+<h3 id="Example.3A_Using_Object_given_undefined_and_null_types" name="Example.3A_Using_Object_given_undefined_and_null_types">给定 <code>undefined</code> 和 <code>null</code> 类型使用 <code>Object</code></h3>
+
+<p>下面的例子将一个空的 <code>Object</code> 对象存到 <code>o</code> 中：</p>
+
+<pre class="brush: js notranslate">var o = new Object();
+</pre>
+
+<pre class="brush: js notranslate">var o = new Object(undefined);
+</pre>
+
+<pre class="brush: js notranslate">var o = new Object(null);
+</pre>
+
+<h3 id="使用_Object_生成布尔对象">使用 <code>Object</code> 生成布尔对象</h3>
+
+<p>下面的例子将{{jsxref("Boolean")}} 对象存到 <code>o</code> 中：</p>
+
+<pre class="brush: js notranslate">// 等价于 o = new Boolean(true);
+var o = new Object(true);
+</pre>
+
+<pre class="brush: js notranslate">// 等价于 o = new Boolean(false);
+var o = new Object(Boolean());
+</pre>
+
+<h2 id="规范">规范</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES1')}}</td>
+   <td>{{Spec2('ES1')}}</td>
+   <td>Initial definition. Implemented in JavaScript 1.0.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.2', 'Object')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-object-objects', 'Object')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td>Added Object.assign, Object.getOwnPropertySymbols, Object.setPrototypeOf, Object.is</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-object-objects', 'Object')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td>Added Object.entries and Object.values.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容">浏览器兼容</h2>
+
+<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("javascript.builtins.Object")}}</p>
+
+<h2 id="See_also" name="See_also">相关链接</h2>
+
+<ul>
+ <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer">初始化对象</a></li>
+</ul>

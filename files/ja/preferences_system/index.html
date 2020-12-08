@@ -1,0 +1,42 @@
+---
+title: 設定システム
+slug: Preferences_System
+tags:
+  - Preferences system
+  - XUL
+translation_of: Mozilla/Preferences/Preferences_system
+---
+<p> </p>
+<p>このドキュメントはAviary Toolkitの新しい設定システムについて説明します。このシステムを使用して、様々なプラットフォーム (Windows、 MacOS X および GNOME) で表示して動くのに適した設定ウインドウを作ることができます。</p>
+<p><strong>注意:</strong> 設定システムは Firefox/Thunderbird 1.5 (alpha版、beta版を含む) をスタートするときのみ利用できます。Firefox 1.0ベースのアプリケーションおよび拡張機能でこれを使うことはできません。</p>
+<p>新しい設定システムは、いくつかの<a href="/ja/XUL" title="ja/XUL">XUL</a>要素と属性によって実装されます。以下のリンクをクリックすることで、それらについての参考となる情報にアクセスできます。:</p>
+<div class="moreinfo">  <p><strong><a href="/ja/docs/Preferences_System">設定システム</a>の資料:</strong></p>  <ul>    <li>簡単な紹介: <a href="/ja/docs/Preferences_System/Getting_Started">Getting Started</a> | <a href="/ja/docs/Preferences_System/Examples">サンプル</a> | <a href="/ja/docs/Preferences_System/Troubleshooting">トラブルシューティング</a></li>    <li>リファレンス: <code><a href="/ja/docs/Mozilla/Tech/XUL/prefwindow" title="prefwindow">prefwindow</a></code> | <code><a href="/ja/docs/Mozilla/Tech/XUL/prefpane" title="prefpane">prefpane</a></code> | <code><a href="/ja/docs/Mozilla/Tech/XUL/preferences" title="preferences">preferences</a></code> | <code><a href="/ja/docs/Mozilla/Tech/XUL/preference" title="preference">preference</a></code> | <a href="/ja/docs/Preferences_System/New_attributes">新しい属性</a></li>  </ul></div>
+<h3 id="使用方法">使用方法</h3>
+<p><span>this will eventually be moved from here</span></p>
+<p>典型的な設定ウィンドウのコードは、以下のようなものです。:</p>
+<pre>&lt;prefwindow id="appPreferences"
+            xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+  &lt;prefpane id="pane1" label="&amp;pane1.title;"&gt;
+    &lt;preferences&gt;
+      &lt;preference id="pref1" name="pref.name" type="bool"/&gt;
+    &lt;/preferences&gt;
+
+   .. 上のpreference要素を参照するユーザインターフェイス要素、例えば:
+    &lt;checkbox id="check1" preference="pref1"
+              label="&amp;check1.label;" accesskey="&amp;check1.accesskey;"/&gt;
+  &lt;/prefpane&gt;
+
+  &lt;prefpane id="pane2" label="&amp;pane2.title;" src="chrome://uri/to/pane.xul"/&gt;
+&lt;/prefwindow&gt;
+</pre>
+<p>ペインの内容は、内容となる要素をインラインで記述するか、または、動的なオーバーレイによって読み込まれるべき外部のリソースのchrome URIを指定することで、定義されます。必要に応じた異なるウィンドウタイトルを指定することが必要な場合、あなたがターゲットとし、そしてXULプリプロセッサを利用しようとしているプラットフォームごとのヒューマン・インターフェース・ガイドラインを注意深く読むべきです。また、プリプロセッサを使用して、それぞれのターゲットとするプラットフォームごとに適切なウィンドウの幅を（em単位で）指定する場合にも、注意してください。選択されたパネルが替わるのに合わせてウィンドウサイズを変更しないプラットフォーム（例：Windows）用に高さを（em単位で）指定する場合にも同様です。</p>
+<p>※日本語版注記：prefpaneの内容をすべてインラインで記述して、ウィンドウの幅も高さも指定しなければ、適切なウィンドウサイズに自動調整してくれるはず。</p>
+<h3 id="XULRunnerアプリケーションでの使用方法">XULRunnerアプリケーションでの使用方法</h3>
+<p>XULRunnerアプリケーションから設定ダイアログを開くために openDialog() メソッドを呼ぶ時は、ウィンドウの特性を示す文字列に"toolbar"が含まれているべきです。例:</p>
+<pre class="eval">var features = "chrome,titlebar,toolbar,centerscreen,modal";
+window.openDialog(url, "Preferences", features);
+</pre>
+<h3 id="Bugzilla">Bugzilla</h3>
+<p>（FirefoxおよびThunderbirdの設定ユーザインターフェイスではなく）設定のバインディングに関するバグのコンポーネントは、Toolkit:Preferences (<a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Toolkit">file a bug</a> <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?query_format=advanced&amp;product=Toolkit&amp;component=Preferences&amp;resolution=---&amp;chfieldto=Now">list open bugs</a>)です。</p>
+<p> </p>
+<p> </p>

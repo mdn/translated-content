@@ -1,0 +1,92 @@
+---
+title: '::-ms-value'
+slug: 'Web/CSS/::-ms-value'
+tags:
+  - CSS
+  - Non-standard
+  - Pseudo-element
+  - Reference
+translation_of: 'Archive/Web/CSS/::-ms-value'
+---
+<div>{{CSSRef}}{{Non-standard_header}}</div>
+
+<p>Le pseudo-élément <strong><code>::-ms-value</code></strong> est <a href="/fr/docs/Web/CSS/Extensions_CSS_Microsoft">un pseudo-élément spécifique à Microsoft</a> qui permet d'appliquer des règles sur les éléments {{HTMLElement("input")}} ou {{HTMLElement("select")}}. Seules certaines propriétés peuvent être paramétrées via ce pseudo-élément, les règles agissant sur d'autres propriétés n'auront donc aucun effet.</p>
+
+<h2 id="Propriétés_autorisées">Propriétés autorisées</h2>
+
+<p>Seules les propriétés suivantes peuvent être utilisées dans une règle dont le sélecteur contient <code>::-ms-value</code> (les autres propriétés sont ignorées).</p>
+
+<ul>
+ <li>{{cssxref("background-clip")}}</li>
+ <li>{{cssxref("background-color")}}</li>
+ <li>{{cssxref("background-image")}}</li>
+ <li>{{cssxref("background-origin")}}</li>
+ <li>{{cssxref("background-repeat")}}</li>
+ <li>{{cssxref("background-size")}}</li>
+ <li>{{cssxref("border-bottom-color")}}</li>
+ <li>{{cssxref("border-bottom-left-radius")}}</li>
+ <li>{{cssxref("border-bottom-right-radius")}}</li>
+ <li>{{cssxref("border-bottom-style")}}</li>
+ <li>{{cssxref("border-bottom-width")}}</li>
+ <li>{{cssxref("border-left-color")}}</li>
+ <li>{{cssxref("border-left-style")}}</li>
+ <li>{{cssxref("border-left-width")}}</li>
+ <li>{{cssxref("border-right-color")}}</li>
+ <li>{{cssxref("border-right-style ")}}</li>
+ <li>{{cssxref("border-right-width")}}</li>
+ <li>{{cssxref("border-top-color")}}</li>
+ <li>{{cssxref("border-top-left-radius")}}</li>
+ <li>{{cssxref("border-top-right-radius ")}}</li>
+ <li>{{cssxref("border-top-style")}}</li>
+ <li>{{cssxref("border-top-width")}}</li>
+ <li>{{cssxref("box-shadow")}}</li>
+ <li>{{cssxref("box-sizing")}}</li>
+ <li>{{cssxref("color")}}</li>
+ <li>{{cssxref("cursor")}}</li>
+ <li>{{cssxref("display")}} (valeurs <code>block</code>, <code>inline-block</code>, <code>none</code>)</li>
+ <li>{{cssxref("@font-face")}}</li>
+ <li>{{cssxref("font-size")}}</li>
+ <li>{{cssxref("font-style")}}</li>
+ <li>{{cssxref("font-weight")}}</li>
+ <li>{{cssxref("height")}}</li>
+ <li>{{cssxref("margin-bottom")}}</li>
+ <li>{{cssxref("margin-left")}}</li>
+ <li>{{cssxref("margin-right")}}</li>
+ <li>{{cssxref("margin-top")}}</li>
+ <li><code>-ms-background-position-x</code></li>
+ <li><code>-ms-background-position-y</code></li>
+ <li>{{cssxref("-ms-high-contrast-adjust")}}</li>
+ <li>{{cssxref("opacity")}}</li>
+ <li>{{cssxref("outline-color")}}</li>
+ <li>{{cssxref("outline-style")}}</li>
+ <li>{{cssxref("outline-width")}}</li>
+ <li>{{cssxref("padding-bottom")}}</li>
+ <li>{{cssxref("padding-left")}}</li>
+ <li>{{cssxref("padding-right")}}</li>
+ <li>{{cssxref("padding-top")}}</li>
+ <li>{{cssxref("transform")}}</li>
+ <li>{{cssxref("transform-origin")}}</li>
+ <li>{{cssxref("visibility")}}</li>
+ <li>{{cssxref("width")}}</li>
+</ul>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox">{{csssyntax}}</pre>
+
+<h2 id="Exemples">Exemples</h2>
+
+<pre class="brush: css">input::-ms-value {
+  color: lime;
+  font-style: italic;
+}</pre>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<p>Ce pseudo-élément est un pseudo-élément propriétaire lié à Trident/Microsoft et ne fait partie d'aucune spécification.</p>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<div class="hidden">Le tableau de compatibilité de cette page a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à consulter <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> et à nous envoyer une <em>pull request</em>.</div>
+
+<p>{{Compat("css.selectors.-ms-value")}}</p>

@@ -1,0 +1,45 @@
+---
+title: xpcshell
+slug: xpcshell
+tags:
+  - JavaScript
+  - Tests_automatisés
+  - Tools
+  - 'XPCOM:Liaisons_de_langage'
+  - XPConnect
+translation_of: Mozilla/Tech/XPCOM/Language_bindings/XPConnect/xpcshell
+---
+<p> </p>
+<h3 id="Pr.C3.A9requis" name="Pr.C3.A9requis">Prérequis</h3>
+<p><strong>xpcshell</strong> est un interpréteur JavaScript en ligne de commande utilisant <a href="/fr/XPConnect" title="fr/XPConnect">XPConnect</a>. C'est une application dans un terminal qui permet d'exécuter du code JavaScript, mais contrairement à l'interpréteur JS habituel, (<code>js</code>), xpcshell permet aux scripts d'accéder aux fonctionnalités <a href="/fr/XPCOM" title="fr/XPCOM">XPCOM</a> grâce à <a href="/fr/XPConnect" title="fr/XPConnect">XPConnect</a>.</p>
+<p>Vous devez utilisez votre propre <a href="/fr/Documentation_sur_la_compilation" title="fr/Documentation_sur_la_compilation">compilation du code de Mozilla</a> pour pouvoir utiliser xpcshell</p>
+<h3 id="Ex.C3.A9cuter_xpcshell" name="Ex.C3.A9cuter_xpcshell">Exécuter xpcshell</h3>
+<pre class="eval">./run-mozilla.sh ./xpcshell
+</pre>
+<p>xpcshell est presque toujours situé dans le même répertoire que <code>run-mozilla.sh</code>.</p>
+<pre class="eval">$ locate run-mozilla.sh
+/usr/lib/firefox-0.10.1/run-mozilla.sh
+/usr/lib/thunderbird-0.9/run-mozilla.sh
+/usr/local/mozilla/run-mozilla.sh
+/opt/mozilla/run-mozilla.sh
+/root/.Trash/mozilla/run-mozilla.sh
+</pre>
+<p>Choisissez un répertoire, placez vous dedans, et lancez <code>run-mozilla.sh xpcshell</code> s'il est présent (Il peut ne pas s'y trouver si vous n'avez pas une version de Firefox, Mozilla, Thunderbird, etc. permettant le débogage).</p>
+<pre class="eval">$ cd /opt/mozilla
+$ ./run-mozilla.sh ./xpcshell
+js&gt;
+</pre>
+<p>Vous pouvez saisir du JavaScript, directement à Mozilla !</p>
+<pre class="eval">js&gt; 5+7
+12
+js&gt; print("Bonjour !")
+Bonjour !
+js&gt;
+</pre>
+<h3 id="Voir_.C3.A9galement" name="Voir_.C3.A9galement">Voir également</h3>
+<ul>
+ <li>Presque tous les programmes Mozilla utilisent les composants <a href="/fr/XPCOM" title="fr/XPCOM">XPCOM</a> via <a href="/fr/XPConnect" title="fr/XPConnect">XPConnect</a>.</li>
+ <li>Lisez <a href="/fr/XPConnect/Utilisation_de_composants" title="fr/XPConnect/Utilisation_de_composants">XPConnect:Utilisation de composants</a> pour démarrer.</li>
+ <li><a class="external" href="http://www.mozilla.org/scriptable/XPCShell.html">Référence XPCShell (en)</a> - arguments en ligne de commande &amp; fonctions étendues.</li>
+ <li>Lisez <a href="/en/XPCShell/Profiling">en:XPCShell:Profiling</a> pour le profilage des scripts.</li>
+</ul>

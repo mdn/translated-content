@@ -1,0 +1,108 @@
+---
+title: nsIDOMFile
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsIDOMFile
+tags:
+  - DOM
+  - Firefox 3
+  - Interfaces
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMFile
+---
+<p>
+</p><p>
+<code>nsIDOMFile</code> インターフェイスは、フォーム上で input の type "file" を使ってサブミットされたファイルからデータを読み出します。これはオフラインで web アプリケーションを使っているユーザがフォームにサブミットした時に保存されるファイルを参照可能にし、そしてそのデータは読み込む事ができ、またインターネット接続が再開された時にアップロードが可能となります。
+</p><div class="blockIndicator note"><strong>註:</strong> </div>
+<p><br>
+</p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/content/base/public/nsIDOMFile.idl" rel="custom">content/base/public/nsIDOMFile.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">最終更新: Gecko 1.9 (Firefox 3)</span></div>
+</div>
+<p>Inherits from: <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
+</p><p><span id="Method_overview"></span>
+</p>
+<h2 id="Method_overview" name="Method_overview">Method overview</h2>
+<table class="standard-table"> <tbody><tr>
+<td> <code>DOMString <a href="#getAsBinary.28.29">getAsBinary</a>();</code>
+</td></tr>
+<tr>
+<td> <code>DOMString <a href="#getAsDataURL.28.29">getAsDataURL</a>();</code>
+</td></tr>
+<tr>
+<td> <code>DOMString <a href="#getAsText.28.29">getAsText</a>(in DOMString encoding);</code>
+</td></tr>
+</tbody></table>
+<p><span id="Attributes"></span>
+</p>
+<h2 id="Attributes" name="Attributes">Attributes</h2>
+<table class="standard-table"> <tbody><tr>
+<td class="header">Attribute
+</td><td class="header">Type
+</td><td class="header">Description
+</td></tr> <tr>
+<td><code>fileName</code>
+</td><td><code>DOMString</code>
+</td><td> <code>nsIDOMFile</code> オブジェクトから参照されるファイルの名前を含む読み込み専用の属性
+</td></tr>
+<tr>
+<td><code>fileSize</code>
+</td><td><code>unsigned long long</code>
+</td><td> 参照されたファイルのbyteのサイズ
+</td></tr>
+</tbody></table>
+<p><span id="Methods"></span>
+</p>
+<h2 id="Methods" name="Methods">Methods</h2>
+<p><span id="getAsBinary()"></span>
+</p>
+<h3 id="getAsBinary.28.29" name="getAsBinary.28.29">getAsBinary()</h3>
+<p>ファイル上のデータの生のバイナリフォーマットを含む <code><a href="ja/DOMString">DOMString</a></code> を
+返します。
+</p>
+<pre class="eval"> DOMString getAsBinary();
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0" name=".E5.BC.95.E6.95.B0">引数</h6>
+<p>無し。
+</p>
+<h6 id=".E8.BF.94.E3.82.8A.E5.80.A4" name=".E8.BF.94.E3.82.8A.E5.80.A4">返り値</h6>
+<p>ファイル上の生のバイナリを含む <code>DOMString</code> 。
+</p><p><span id="getAsDataURL()"></span>
+</p>
+<h3 id="getAsDataURL.28.29" name="getAsDataURL.28.29">getAsDataURL()</h3>
+<p>参照されたファイルのコンテンツを<code>data:</code> URL でエンコードした <code>DOMString</code>を返します。
+</p>
+<pre class="eval"> DOMString getAsDataURL();
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<p>無し
+</p>
+<h6 id="Return_value" name="Return_value">Return value</h6>
+<p><code>data:</code> URL としてエンコードされたファイルのデータを含む <code><a href="ja/DOMString">DOMString</a></code> </p><p><span id="getAsText()"></span>
+</p>
+<h3 id="getAsText.28.29" name="getAsText.28.29">getAsText()</h3>
+<p>与えられたエンコーディングを用いたテキストとして判断されたファイルのデータを <code>DOMString</code> として含んだファイルを返します。
+</p>
+<pre class="eval"> DOMString getAsText(
+   in DOMString encoding
+ );
+</pre>
+<h6 id="Parameters_2" name="Parameters_2">Parameters</h6>
+<dl><dt>&lt;tt&gt;encoding&lt;/tt&gt;
+</dt><dd> 指定したエンコードの文字列を利用して返り値のデータとします。もし、文字列が空であれば、UTF-8 が代りに使われます。
+</dd></dl>
+<h6 id="Return_value_2" name="Return_value_2">Return value</h6>
+<p>特定の &lt;tt&gt;エンコーディング&lt;/tt&gt; で解釈されたテキストとしてファイルのデータを含む<code><a href="ja/DOMString">DOMString</a></code> 。
+</p><p><span id="See_also"></span>
+</p>
+<h2 id="See_also" name="See_also">See also</h2>
+<p><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMFileList" title="">nsIDOMFileList</a></code>, <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMFileException" title="">nsIDOMFileException</a></code>
+</p>
+<div class="noinclude">
+</div>

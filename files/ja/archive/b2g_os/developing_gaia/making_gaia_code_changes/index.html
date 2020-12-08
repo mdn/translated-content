@@ -1,0 +1,137 @@
+---
+title: Gaia のコードに変更を加える
+slug: Archive/B2G_OS/Developing_Gaia/Making_Gaia_code_changes
+tags:
+  - Firefox OS
+  - Gaia
+  - 初心者
+translation_of: Archive/B2G_OS/Developing_Gaia/Making_Gaia_code_changes
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details open>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/ja/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<div class="summary">
+<p><span class="seoSummary">今やデスクトップでGaiaを実行していて、コードベースがどう動作するかをある程度理解し、プロジェクトにコントリビュート(貢献)し始める準備ができているでしょう。この記事では変更を加える方法と、取り組むべきバグの見つけ方を記述します。</span></p>
+</div>
+
+<h2 id="Gitのベストプラクティス">Gitのベストプラクティス</h2>
+
+<ol>
+ <li>Gaiaに変更を加える時は、まず最新をmasterから取得すべきです:
+  <pre class="brush: bash">cd path/to/gaia
+git checkout master
+git pull upstream master</pre>
+ </li>
+ <li>次に、あなたの修正を乗せるブランチをチェックアウトします:
+  <pre class="brush: bash">git checkout -b my-code-fix</pre>
+ </li>
+ <li>最後に、 <code>gaia/apps</code> ディレクトリに移動し、アプリファイルを変更します。</li>
+</ol>
+
+<h2 id="簡単なコード変更例">簡単なコード変更例</h2>
+
+<p>コード変更を見るには:</p>
+
+<ol>
+ <li>Gaiaコードベースに必要な変更を加え、変更を保存します。</li>
+ <li>FirefoxのMuletか、WebIDE内のsimulatorをシャットダウンします。</li>
+ <li><code>make</code>を使ってGaiaプロフィールをリビルドします。</li>
+ <li>FirefoxのMuletか、WebIDE内のsimulatorを再起動します。</li>
+</ol>
+
+<p>ロックスクリーンの時計の色変更のような簡単な例を見てみましょう:</p>
+
+<p><img alt="Gaia lockscreen showing the clock display in white text" src="https://mdn.mozillademos.org/files/7929/gaia-lockscreen-clock.png" style="display: block; height: 623px; margin: 0px auto; width: 369px;"></p>
+
+<ol>
+ <li>スタイルがどうやってセットされているのか見つける最良の方法は、開発者ツールを使うことです。デスクトップ版Firefoxで Ctrl/右 + クリックしてコンテキストメニューから <em>要素を調査</em> を選びます。</li>
+ <li>どのCSSファイルを編集するかがわかったら — ここでは <code>gaia/apps/system/lockscreen/style/lockscreen.css</code> — 画面右手側で、CSSファイルが望み通りの状態になるよう編集します。</li>
+ <li>変更に満足したら、ファイルディレクトリに移動して変更します。</li>
+ <li>次に、この節の最初で概説したステップに従い、変更を見ます。</li>
+</ol>
+
+<p><img alt="Gaia lockscreen showing the clock display modified from white to red text" src="https://mdn.mozillademos.org/files/7931/gaia-lockscreen-clock-modified.png" style="display: block; height: 622px; margin: 0px auto; width: 366px;"><br>
+ <br>
+ <br>
+ Gaia Firefox Muletのレンダリング制限:</p>
+
+<ul>
+ <li>デスクトップ版Firefoxレンダリングでは、アプリは実機の動作と比べてはるかに正確ですが、あちこちに違いがあるかもしれません。</li>
+ <li>デスクトップ版Firefoxでは全てのデバイスAPIをサポートしているわけではありません;有効なデバイスAPI一覧は <a href="https://github.com/mozilla-b2g/gaia/blob/master/build/preferences.js">preferences.js</a> に見ることができます。</li>
+</ul>
+
+<h2 id="取り組むべきバグを見つける場所">取り組むべきバグを見つける場所</h2>
+
+<p>Firefox OS のバグを見つける最良の方法は、 <a href="http://www.joshmatthews.net/bugsahoy/?b2g=1">Josh Matthews の、Bugs Ahoy(おーいバグ)、アプリ</a>です — これはMozilla の Bugzilla からバグを直接引き込んで、検索、閲覧しやすく表示してくれます。 いったん取り組むバグを見つけたら、Bugzilla ページに移動して"assigned to" 項目に自分自身を入力し、下記に示すように、作業を開始します。</p>
+
+<h3 id="有用なヒント">有用なヒント</h3>
+
+<ul>
+ <li>助言つき(mentored)バグに取り組む時、Gaiaコアチームの誰かがあなたの進捗をモニタし、コードとプロセスとの援助を提供します。あなたがFirefox OSの貢献プロセスの初心者である場合、 これらに参加するのは有用です。これらはFirefox OS Bugzilla ページの"Mentors"項目に入力されていることで示されます。 Bugs Ahoy で助言つきバグが一覧できます。</li>
+ <li>あなたが完全に新しいBugzillaユーザーである場合、自身をバグの担当にアサインできないかもしれません。できない場合、権限のある助言者にアサインしてもらうよう依頼するか、もしくは単にバグコメントで依頼して下さい。</li>
+ <li>多少経験を積んだ後、自身にバグのアサインできる権限を誰かに依頼するべきでしょう。</li>
+ <li>新しいコントリビューターが簡単なバグを探す場合、もう一つ探すのに良いホワイトボードエントリーは<code>[good first bug]</code>です。最初のバグに適したリストは <a href="http://www.joshmatthews.net/bugsahoy/?b2g=1&amp;simple=1">http://www.joshmatthews.net/bugsahoy/?b2g=1&amp;simple=1</a> で一覧できます。</li>
+ <li>貢献したいプロジェクトを探すのには検索結果を保存すべきです。例えば下記では Gaia Clock アプリのバグ検索が取得できます:</li>
+</ul>
+
+<p><a href="https://bugzilla.mozilla.org/buglist.cgi?columnlist=product%2Ccf_blocking_b2g%2Cbug_status%2Cresolution%2Cshort_desc&amp;resolution=---&amp;query_based_on=CLOCK&amp;query_format=advanced&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;component=Gaia%3A%3AClock&amp;product=Boot2Gecko&amp;known_name=CLOCK&amp;list_id=10497922">https://bugzilla.mozilla.org/buglist.cgi?columnlist=product%2Ccf_blocking_b2g%2Cbug_status%2Cresolution%2Cshort_desc&amp;resolution=---&amp;query_based_on=CLOCK&amp;query_format=advanced&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;component=Gaia%3A%3AClock&amp;product=Boot2Gecko&amp;known_name=CLOCK&amp;list_id=9776392</a></p>
+
+<h2 id="参考情報">参考情報</h2>
+
+<ul>
+ <li><a href="https://mozilla.app.box.com/s/wzgsb3lkqglv0dnfdgzs">Gaia powerpoints for visual/interaction specifications</a></li>
+ <li><a href="https://etherpad.mozilla.org/gaia-meeting-notes">Weekly Gaia meeting Etherpad</a></li>
+ <li><a href="https://datazilla.mozilla.org/">Datazilla</a>: Mozilla's performance test utility</li>
+</ul>

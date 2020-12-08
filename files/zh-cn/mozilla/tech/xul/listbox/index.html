@@ -1,0 +1,480 @@
+---
+title: listbox
+slug: Mozilla/Tech/XUL/listbox
+translation_of: Archive/Mozilla/XUL/listbox
+---
+<div class="noinclude">
+ <span class="breadcrumbs XULRef_breadcrumbs">
+ « <a href="/zh-CN/docs/XUL_Reference">XUL Reference home</a>    [
+ <a href="#Examples">示例</a> |
+ <a href="#Attributes">属性</a> |
+ <a href="#Properties">特性</a> |
+ <a href="#Methods">方法</a> |
+ <a href="#Related">相关</a> ]
+</span></div>
+<p>This element is used to create a list of items where one or more of the items may be selected. A listbox may contain multiple columns. There are numerous methods which allow the items in the listbox to be retrieved and modified.</p>
+<p>You may specify the number of rows to display in the list using the <code id="a-rows"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/rows">rows</a></code> attribute. Additional rows can be viewed using a scroll bar. A listbox is expected to contain <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/listitem" title="listitem">listitem</a></code> elements. All the rows in the listbox are the same height, which is the height of the tallest item in the list. If you wish to create a list with variable height rows, or with non-text content, you should instead use the <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/richlistbox" title="richlistbox">richlistbox</a></code> element.</p>
+<p>See <a href="/en/XUL_Tutorial/List_Controls" title="en/XUL_Tutorial/List_Controls">List Controls</a> for more information.</p>
+<dl>
+ <dt>
+  Attributes</dt>
+ <dd>
+  <a href="#a-disabled">disabled</a>, <a href="#a-disableKeyNavigation">disableKeyNavigation</a>, <a href="#a-preference">preference</a>, <a href="#a-rows">rows</a>, <a href="#a-seltype">seltype</a>, <a href="#a-suppressonselect">suppressonselect</a>, <a href="#a-tabindex">tabindex</a>, <a href="#a-value">value</a></dd>
+</dl>
+<dl>
+ <dt>
+  Properties</dt>
+ <dd>
+  <a href="#p-accessibleType">accessibleType</a>, <a href="#p-listbox.currentIndex">currentIndex</a>, <a href="#p-currentItem">currentItem</a>, <a href="#p-disabled">disabled</a>, <a href="#p-disableKeyNavigation">disableKeyNavigation</a>, <a href="#p-itemCount">itemCount</a>, <a href="#p-listBoxObject">listBoxObject</a>, <a href="#p-selectedCount">selectedCount</a>, <a href="#p-selectedIndex">selectedIndex</a>, <a href="#p-selectedItem">selectedItem</a>, <a href="#p-selectedItems">selectedItems</a>, <a href="#p-selType">selType</a>, <a href="#p-suppressOnSelect">suppressOnSelect</a>, <a href="#p-tabIndex">tabIndex</a>, <a href="#p-value">value</a></dd>
+</dl>
+<dl>
+ <dt>
+  Methods</dt>
+ <dd>
+  <a href="#m-addItemToSelection">addItemToSelection</a>, <a href="#m-appendItem">appendItem</a>, <a href="#m-clearSelection">clearSelection</a>, <a href="#m-ensureElementIsVisible">ensureElementIsVisible</a>, <a href="#m-ensureIndexIsVisible">ensureIndexIsVisible</a>, <a href="#m-getIndexOfFirstVisibleRow">getIndexOfFirstVisibleRow</a>, <a href="#m-getIndexOfItem">getIndexOfItem</a>, <a href="#m-getItemAtIndex">getItemAtIndex</a>, <a href="#m-getNumberofVisibleRows">getNumberofVisibleRows</a>, <a href="#m-getRowCount">getRowCount</a>, <a href="#m-getSelectedItem">getSelectedItem</a>, <a href="#m-insertItemAt">insertItemAt</a>, <a href="#m-invertSelection">invertSelection</a>, <a href="#m-moveByOffset">moveByOffset</a>, <a href="#m-removeItemAt">removeItemAt</a>, <a href="#m-removeItemFromSelection">removeItemFromSelection</a>, <a href="#m-scrollToIndex">scrollToIndex</a>, <a href="#m-selectAll">selectAll</a>, <a href="#m-selectItem">selectItem</a>, <a href="#m-selectItemRange">selectItemRange</a>, <a href="#m-timedSelect">timedSelect</a>, <a href="#m-toggleItemSelection">toggleItemSelection</a></dd>
+</dl>
+<h3 id="Examples" name="Examples">Examples</h3>
+<div class="float-right">
+ <img alt="Image:XUL_ref_listbox.png" class="internal" src="/@api/deki/files/461/=XUL_ref_listbox.png"></div>
+<pre> &lt;listbox id="theList"&gt;
+   &lt;listitem label="Ruby"/&gt;
+   &lt;listitem label="Emerald"/&gt;
+   &lt;listitem label="Sapphire" selected="true"/&gt;
+   &lt;listitem label="Diamond"/&gt;
+ &lt;/listbox&gt;
+
+</pre>
+<p><img alt="XulListBoxMultiColumn.PNG" class="internal default" src="/@api/deki/files/4189/=XulListBoxMultiColumn.PNG"></p>
+<pre style="margin-top: 0px; margin-right: 0px; margin-bottom: 1.7em; margin-left: 0px; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; font: normal normal normal 12px/normal 'Courier New', 'Andale Mono', monospace; color: rgb(37, 34, 29);">&lt;listbox id="theList" rows="10" width="400"&gt;
+  &lt;listhead&gt;
+     &lt;listheader label="1ct Gem" width="240"/&gt;
+     &lt;listheader label="Price" width="150"/&gt;
+  &lt;/listhead&gt;
+  &lt;listcols&gt;
+    &lt;listcol/&gt;
+    &lt;listcol flex="1"/&gt;
+  &lt;/listcols&gt;
+&lt;/listbox&gt;
+
+var theList = document.getElementById('theList ');
+ gems = [  {gem: "Ruby", Price: "$3,500 - $4,600"},
+           {gem: "Emerald", Price: "$700 - 4,250"},
+           {gem: "Blue Sapphire", Price: "$3,400 - $4,500"},
+           {gem: "Diamond", Price: "$5,600 - $16,000"}  ];
+for (var i = 0; i &lt; gems.length; i++)
+    {
+        var row = document.createElement('listitem');
+        var cell = document.createElement('listcell');
+        cell.setAttribute('label', gems[i].gem);
+        row.appendChild(cell);
+
+        cell = document.createElement('listcell');
+        cell.setAttribute('label',  gems[i].Price );
+        row.appendChild(cell);
+
+        theList.appendChild(row);
+    }
+</pre>
+<pre style="margin-top: 0px; margin-right: 0px; margin-bottom: 1.7em; margin-left: 0px; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; font: normal normal normal 12px/normal 'Courier New', 'Andale Mono', monospace; color: rgb(37, 34, 29);"> </pre>
+<h3 id="Attributes" name="Attributes">Attributes</h3>
+<p> </p><div id="a-disabled">
+
+
+<dl>
+ <dt><code id="a-disabled"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code></dt>
+ <dd> </dd>
+ <dd>
+ <h5 id="类型boolean">类型:<em>boolean</em></h5>
+ </dd>
+ <dd>
+ <h5 id="表示元素是被禁用的。">表示元素是被禁用的。</h5>
+
+ <p>如果这个元素的disabled属性被设置为true，表示元素被禁用，被禁用的属性在页面上通常会显示灰色文本，它无法响应用户的操作，它也无法得到光标。</p>
+
+ <p>然而，这个元素仍然能够响应鼠标事件，如果要启用这个元素，把disabled设置为false</p>
+ </dd>
+</dl>
+
+<h4 id="示例：">示例：</h4>
+
+<div class="float-right"><img alt="Image:XUL_ref_attr_disabled.png" src="https://mdn.mozillademos.org/files/1742/XUL_ref_attr_disabled.png"></div>
+
+<pre><code>// Disabling an element
+document.getElementById('buttonRemove').setAttribute("disabled", "true");
+
+// Enabling back an element by removing the "disabled" attribute
+document.getElementById('buttonRemove').removeAttribute("disabled");</code></pre>
+
+<p></p><div class="blockIndicator standardNote standardNoteBlock">
+    <p><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Firefox/Releases/3.5">Firefox 3.5 note</a></p>
+    <p style="font-weight: 400;">For <a href="https://developer.mozilla.org/en-US/docs/XUL/keyset" title="en/XUL/Keyset"><code>keyset</code></a> elements, support for this attribute was added in Firefox 3.5.</p>
+</div><p></p>
+</div> <div id="a-disableKeyNavigation">
+
+
+<dl>
+ <dt><code id="a-disableKeyNavigation"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/disableKeyNavigation">disableKeyNavigation</a></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>If this attribute is not used, the user can navigate to specific items within the element by pressing keys corresponding to letters in the item's label. This is done incrementally, so typing more letters with select more specific items. This feature may be disabled by setting this attribute to <code>true</code>.</dd>
+</dl>
+</div> <div id="a-preference">
+
+
+<dl>
+ <dt><code id="a-preference"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/preference">preference</a></code></dt>
+ <dd>Type: <em>id</em></dd>
+ <dd>Connects the element to a corresponding <code><a href="/en-US/docs/Mozilla/Tech/XUL/preference" title="preference">preference</a></code>. This attribute only has any effect when used inside a <code><a href="/en-US/docs/Mozilla/Tech/XUL/prefwindow" title="prefwindow">prefwindow</a></code>. More information is available in the <a href="../../../../en/Preferences_System" rel="internal">Preferences System</a> article.</dd>
+</dl>
+</div> <div id="a-rows">
+
+<dl>
+  <dt>
+    <code id="a-rows"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/rows">rows</a></code></dt>
+  <dd>
+    Type: <em>integer</em></dd>
+  <dd>
+    The number of rows to display in the element. If the element contains more than this number of rows, a scrollbar will appear which the user can use to scroll to the other rows. To get the actual number of rows in the element, use the <span id="m-getRowCount"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/getRowCount">getRowCount</a></code></span> method.</dd>
+</dl>
+</div> <div id="a-seltype">
+
+
+<dl>
+ <dt><code id="a-seltype"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/seltype">seltype</a></code></dt>
+ <dd>Type: <em>one of the values below</em></dd>
+ <dd>Used to indicate whether multiple selection is allowed.</dd>
+ <dd>
+ <dl>
+  <dt><code>single</code></dt>
+  <dd>Only one row may be selected at a time. (Default in <code>listbox</code> and <code>richlistbox</code>.)</dd>
+  <dt><code>multiple</code></dt>
+  <dd>Multiple rows may be selected at once. (Default in <code>tree</code>.)</dd>
+ </dl>
+ </dd>
+ <dd>
+ <p>For trees, you can also use the following values:</p>
+
+ <dl>
+  <dt><code>cell</code></dt>
+  <dd>Individual cells can be selected </dd>
+  <dt><code>text</code></dt>
+  <dd>Rows are selected; however, the selection highlight appears only over the text of the primary column.</dd>
+ </dl>
+
+ <p>For <code>richlistbox</code>, this is new in Firefox 3.5.</p>
+ </dd>
+</dl>
+</div> <div id="a-suppressonselect">
+
+
+<dl>
+ <dt><code id="a-suppressonselect"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/suppressonselect">suppressonselect</a></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>If this attribute is not specified, a select event is fired whenever an item is selected, either by the user or by calling one of the select methods. If set to <code>true</code>, the select event is never fired.</dd>
+</dl>
+</div> <div id="a-tabindex">
+
+
+<dl>
+ <dt><code id="a-tabindex"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/tabindex">tabindex</a></code></dt>
+ <dd>Type:<em>integer</em></dd>
+ <dd>当用户按下 "<kbd>tab</kbd>" 键时焦点移动到元素上的顺序。<code>tabindex</code> 数字越大，顺序越靠后。</dd>
+</dl>
+
+
+
+<p></p>
+</div> <div id="a-value">
+
+<dl>
+ <dt>
+  <code id="a-value"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code></dt>
+ <dd>
+  Type:
+  <i>
+   string</i>
+ </dd>
+ <dd>
+  The string attribute allows you to associate a data value with an element. It is not used for any specific purpose, but you can access it with a script for your own use.</dd>
+</dl>
+
+<p></p>
+</div><p></p>
+<h3 id="Properties" name="Properties">Properties</h3>
+<p> </p><div id="p-accessibleType">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/accessibleType">accessibleType</a></span></code></dt>
+ <dd>
+  Type:
+  <i>
+   integer</i>
+ </dd>
+ <dd>
+  A value indicating the type of accessibility object for the element.</dd>
+</dl>
+
+<p></p></div> <div id="p-listbox.currentIndex">
+
+<dl>
+ <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/listbox.currentIndex">currentIndex</a></span></code></dt>
+ <dd>Type: <em>integer</em></dd>
+ <dd>Set to the index of the currently focused item in the list. If no item is focused, the value will be <code>-1</code>. (or, on some platforms, <code>typeof(listboxcurrentIndex)</code> will be <code>undefined</code>) In a single selection list, the current index will always be the same as the selected index. In a multiple selection list, the currently focused row may be modified by the user without changing the selection by pressing the Control key and pressing the cursor keys to navigate.</dd>
+</dl></div> <div id="p-currentItem">
+
+<dl>
+ <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/currentItem">currentItem</a></span></code></dt>
+ <dd>Type: <em>listitem element</em></dd>
+ <dd>Returns the currently focused item in the list box, which is only useful in a multiple selection list box.</dd>
+</dl></div> <div id="p-disabled">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/disabled">disabled</a></span></code></dt>
+ <dd>
+  Type:
+  <i>
+   boolean</i>
+ </dd>
+ <dd>
+  Gets and sets the value of the <code id="a-disabled"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code> attribute.</dd>
+</dl>
+
+<p></p></div> <div id="p-disableKeyNavigation">
+<dl>
+  <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/disableKeyNavigation">disableKeyNavigation</a></span></code></dt>
+  <dd>Type: <em>boolean</em></dd>
+  <dd>Gets or sets the value of the <code id="a-disableKeyNavigation"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/disableKeyNavigation">disableKeyNavigation</a></code> attribute.</dd>
+</dl></div> <div id="p-itemCount">
+<dl>
+  <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/itemCount">itemCount</a></span></code> </dt>
+  <dd>Type: <em>integer</em></dd>
+  <dd>Read only property holding the number of child items.</dd>
+</dl>
+</div> <div id="p-listBoxObject">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/listBoxObject">listBoxObject</a></span></code></dt>
+  <dd>
+    Type: <em><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIListBoxObject" title="">nsIListBoxObject</a></code></em></dd>
+  <dd>
+    The <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIListBoxObject" title="">nsIListBoxObject</a></code> behind the list box. This property is read-only. Most of the features of the list box are already available directly in the <code><a href="/en-US/docs/Mozilla/Tech/XUL/listbox" title="listbox">listbox</a></code>, so you will rarely have need to use this box object directly.</dd>
+</dl></div> <div id="p-selectedCount">
+
+<dl>
+ <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/selectedCount">selectedCount</a></span></code></dt>
+ <dd>Type: <em>integer</em></dd>
+ <dd>Returns the number of items that are currently selected.</dd>
+</dl></div> <div id="p-selectedIndex">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/selectedIndex">selectedIndex</a></span></code></dt>
+ <dd>
+  Type:
+  <i>
+   integer</i>
+ </dd>
+ <dd>
+  Returns the index of the currently selected item. You may select an item by assigning its index to this property. By assigning <code>-1</code> to this property, all items will be deselected.</dd>
+</dl>
+
+<p></p></div> <div id="p-selectedItem">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/selectedItem">selectedItem</a></span></code></dt>
+ <dd>
+  Type:
+  <i>
+   element</i>
+ </dd>
+ <dd>
+  Holds the currently selected item. If no item is currently selected, this value will be <code>null</code>. You can select an item by setting this value. A select event will be sent to the element when it is changed either via this property, the <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/selectedIndex">selectedIndex</a></span></code> property, or changed by the user.</dd>
+</dl>
+
+<p></p></div> <div id="p-selectedItems">
+
+<dl>
+ <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/selectedItems">selectedItems</a></span></code></dt>
+ <dd>Type: <em>array of listitems</em></dd>
+ <dd>Returns an array of the selected items in the list.</dd>
+</dl></div> <div id="p-selType">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/selType">selType</a></span></code> </dt>
+ <dd>
+  Type: <em>string</em></dd>
+ <dd>
+  Gets and sets the value of the <code id="a-seltype"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/seltype">seltype</a></code> attribute.</dd>
+</dl>
+<p> </p></div> <div id="p-suppressOnSelect">
+
+<dl>
+ <dt><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/suppressOnSelect">suppressOnSelect</a></span></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>Gets and sets the value of the <code id="a-suppressonselect"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/suppressonselect">suppressonselect</a></code> attribute.</dd>
+</dl></div> <div id="p-tabIndex">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/tabIndex">tabIndex</a></span></code></dt>
+ <dd>
+  Type:
+  <i>
+   integer</i>
+ </dd>
+ <dd>
+  Gets and sets the value of the <code id="a-tabindex"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/tabindex">tabindex</a></code> attribute.</dd>
+</dl>
+
+<p></p></div> <div id="p-value">
+<dl>
+ <dt>
+  <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/value">value</a></span></code></dt>
+ <dd>
+  Type:
+  <i>
+   string</i>
+ </dd>
+ <dd>
+  Gets and sets the value of the <code id="a-value"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code> attribute.</dd>
+</dl>
+
+<p></p></div><p></p>
+<h3 id="Methods" name="Methods">Methods</h3>
+<p></p><table style="border: 1px solid rgb(204, 204, 204); margin: 0 0 10px 10px; padding: 0 10px; background: rgb(238, 238, 238); float: right; width: 250px;">
+<tbody>
+<tr>
+<td>
+<p><strong>Inherited Methods</strong><br>
+<small><code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.addEventListener">addEventListener()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.appendChild">appendChild()</a></code>, <span id="m-blur"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/blur">blur</a></code></span>, <span id="m-click"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/click">click</a></code></span>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.cloneNode">cloneNode()</a></code>, <a href="/En/DOM/Node.compareDocumentPosition" title="En/DOM/Node.compareDocumentPosition">compareDocumentPosition</a>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.dispatchEvent">dispatchEvent()</a></code>, <span id="m-doCommand"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/doCommand">doCommand</a></code></span>, <span id="m-focus"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/focus">focus</a></code></span>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttribute">getAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttributeNode">getAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttributeNodeNS">getAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttributeNS">getAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getBoundingClientRect">getBoundingClientRect()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getClientRects">getClientRects()</a></code>, <span id="m-getElementsByAttribute"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/getElementsByAttribute">getElementsByAttribute</a></code></span>, <span id="m-getElementsByAttributeNS"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/getElementsByAttributeNS">getElementsByAttributeNS</a></code></span>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getElementsByClassName">getElementsByClassName()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getElementsByTagName">getElementsByTagName()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getElementsByTagNameNS">getElementsByTagNameNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getFeature">getFeature()</a></code>, <a href="/En/DOM/Node.getUserData" title="En/DOM/Node.getUserData">getUserData</a>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasAttribute">hasAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasAttributeNS">hasAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasAttributes">hasAttributes()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasChildNodes">hasChildNodes()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.insertBefore">insertBefore()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.isDefaultNamespace">isDefaultNamespace()</a></code>, <a href="/En/DOM/Node.isEqualNode" title="En/DOM/Node.isEqualNode">isEqualNode</a>, <a href="/En/DOM/Node.isSameNode" title="En/DOM/Node.isSameNode">isSameNode</a>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.isSupported">isSupported()</a></code>, <a href="/En/DOM/Node.lookupNamespaceURI" title="En/DOM/Node.lookupNamespaceURI">lookupNamespaceURI</a>, <a href="/En/DOM/Node.lookupPrefix" title="En/DOM/Node.lookupPrefix">lookupPrefix</a>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.normalize">normalize()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.querySelector">querySelector()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.querySelectorAll">querySelectorAll()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeAttribute">removeAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeAttributeNode">removeAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeAttributeNS">removeAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeChild">removeChild()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeEventListener">removeEventListener()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.replaceChild">replaceChild()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttribute">setAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttributeNode">setAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttributeNodeNS">setAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttributeNS">setAttributeNS()</a></code>, <a href="/En/DOM/Node.setUserData" title="En/DOM/Node.setUserData">setUserData</a></small></p>
+
+</td>
+</tr>
+</tbody>
+</table> <dl>
+  <dt><span id="m-addItemToSelection"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/addItemToSelection">addItemToSelection( item )</a></code></span></dt>
+  <dd>Return type: <em>no return value</em></dd>
+  <dd>Selects the given <var>item</var>, without deselecting any other items that are already selected.</dd>
+</dl> <dl>
+  <dt>
+    <span id="m-appendItem"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/appendItem">appendItem( label, value )</a></code></span></dt>
+  <dd>
+    Return type: <em>element</em></dd>
+  <dd>
+    Creates a new item and adds it to the end of the existing list of items. You may optionally set a value. The function returns the newly created element.</dd>
+</dl> <dl>
+ <dt><span id="m-clearSelection"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/clearSelection">clearSelection()</a></code></span></dt>
+ <dd>Return type: <em>no return value</em></dd>
+ <dd>Deselects all of the items.  A select event is sent before the items are deselected.</dd>
+</dl> <dl>
+ <dt><span id="m-ensureElementIsVisible"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/ensureElementIsVisible">ensureElementIsVisible( element )</a></code></span></dt>
+ <dd>Return type: <em>no return value</em></dd>
+ <dd>If the specified element is not currently visible to the user, the displayed items are scrolled so that it is. If the item is already visible, no scrolling occurs.</dd>
+</dl> <dl>
+ <dt><span id="m-ensureIndexIsVisible"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/ensureIndexIsVisible">ensureIndexIsVisible( index )</a></code></span></dt>
+ <dd>Return type: <em>no return value</em></dd>
+ <dd>If the item at the specified index is not currently visible to the user the displayed items are scrolled so that it is. If the item is already visible, no scrolling occurs.</dd>
+</dl> <dl>
+ <dt><span id="m-getIndexOfFirstVisibleRow"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/getIndexOfFirstVisibleRow">getIndexOfFirstVisibleRow()</a></code></span></dt>
+ <dd>Return type: <em>integer</em></dd>
+ <dd>Returns the index of the first displayed row. Note that this is not the same as the first row -- if the displayed items have been scrolled down, this function will retrieve the index of the first row that the user can see.</dd>
+</dl> <dl>
+ <dt><span id="m-getIndexOfItem"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/getIndexOfItem">getIndexOfItem( item )</a></code></span></dt>
+ <dd>Return type: <em>integer</em></dd>
+ <dd>Returns the zero-based position of the specified item. Items are numbered starting at the first item displayed in the list.</dd>
+</dl> <dl>
+ <dt><span id="m-getItemAtIndex"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/getItemAtIndex">getItemAtIndex( index )</a></code></span></dt>
+ <dd>Return type: <em>element</em></dd>
+ <dd>Returns the element that is at the specified index.</dd>
+</dl> <dl>
+ <dt><span id="m-getNumberOfVisibleRows"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/getNumberOfVisibleRows">getNumberOfVisibleRows()</a></code></span></dt>
+ <dd>Return type: <em>integer</em></dd>
+ <dd>Returns the number of rows that are currently visible to the user.</dd>
+</dl> <dl>
+  <dt>
+    <span id="m-getRowCount"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/getRowCount">getRowCount()</a></code></span></dt>
+  <dd>
+    Return type: <em>integer</em></dd>
+  <dd>
+    Returns the total number of rows in the element, regardless of how many rows are displayed.</dd>
+</dl> <dl>
+ <dt><span id="m-getSelectedItem"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/getSelectedItem">getSelectedItem( index )</a></code></span></dt>
+ <dd>Return type: <em>element</em></dd>
+ <dd>When multiple items are selected, you can retrieve each selected item using this method. The argument <var>index</var> specifies the index in the list of the selected items, not the row number of the item. The item index is zero-based, thus this example will return the first selected item: <code>getSelectedItem(0)</code>.</dd>
+</dl> <dl>
+  <dt>
+    <span id="m-insertItemAt"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/insertItemAt">insertItemAt( index, label, value )</a></code></span></dt>
+  <dd>
+    Return type: <em>element</em></dd>
+  <dd>
+    This method creates a new item and inserts it at the specified position. You may optionally set a value. The new item element is returned.</dd>
+</dl> <dl>
+ <dt><span id="m-invertSelection"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/invertSelection">invertSelection()</a></code></span></dt>
+ <dd>Return type: <em>no return value</em></dd>
+ <dd>Reverses the selected state of all items. Selected items become deselected, and deselected items become selected.</dd>
+</dl> <dl>
+ <dt><span id="m-moveByOffset"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/moveByOffset">moveByOffset( offset , isSelecting, isSelectingRange)</a></code></span></dt>
+ <dd>Return type: <em>no return value</em></dd>
+ <dd>If <code>offset</code> is positive, adjusts the focused item forward by that many items. If <code>offset</code> is negative, adjusts the focused item backward by that many items. If <code>isSelecting</code> is <code>true</code>, then the selection is also adjusted. If <code>isSelectingRange</code> is also <code>true</code>, then the new item is selected in addition to any currently selected items. If <code>isSelectingRange</code> is <code>false</code>, any existing selection is cleared. Items that are hidden are skipped.</dd>
+</dl> <dl>
+  <dt>
+    <span id="m-removeItemAt"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/removeItemAt">removeItemAt( index )</a></code></span></dt>
+  <dd>
+    Return type: <em>element</em></dd>
+  <dd>
+    Removes the child item in the element at the specified index. The method returns the removed item.</dd>
+</dl> <dl>
+ <dt><span id="m-removeItemFromSelection"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/removeItemFromSelection">removeItemFromSelection( item )</a></code></span></dt>
+ <dd>Return type: <em>no return value</em></dd>
+ <dd>Deselects the specified item without deselecting other items.</dd>
+</dl> <dl>
+ <dt><span id="m-scrollToIndex"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/scrollToIndex">scrollToIndex( index )</a></code></span></dt>
+ <dd>Return type: <em>no return value</em></dd>
+ <dd>Scrolls the element to the specified index. This is different than <span id="m-ensureIndexIsVisible"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/ensureIndexIsVisible">ensureIndexIsVisible</a></code></span> because the view is always scrolled.</dd>
+</dl> <dl>
+  <dt>
+    <span id="m-selectAll"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/selectAll">selectAll()</a></code></span></dt>
+  <dd>
+    Return type: <em>no return value</em></dd>
+  <dd>
+    Selects all of the items. A select event is sent after the selection is made.</dd>
+</dl> <dl>
+  <dt>
+    <span id="m-selectItem"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/selectItem">selectItem( item )</a></code></span></dt>
+  <dd>
+    Return type: <em>no return value</em></dd>
+  <dd>
+    Deselects all of the currently selected items and selects the given item. A select event is sent after the selection is made.</dd>
+</dl> <dl>
+  <dt>
+    <span id="m-selectItemRange"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/selectItemRange">selectItemRange( startItem, endItem )</a></code></span></dt>
+  <dd>
+    Return type: <em>no return value</em></dd>
+  <dd>
+    Selects the items between the two items given as arguments, including the start and end items. All other items are deselected. This method does nothing for single-selection list boxes. A select event is sent after the selection is made.</dd>
+</dl> <dl>
+  <dt>
+    <span id="m-timedSelect"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/timedSelect">timedSelect( item, timeout )</a></code></span></dt>
+  <dd>
+    Return type: <em>no return value</em></dd>
+  <dd>
+    Selects the item specified by the argument item after the number of milliseconds given by the timeout argument. All other items are deselected.</dd>
+</dl> <dl>
+  <dt>
+    <span id="m-toggleItemSelection"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/toggleItemSelection">toggleItemSelection( item )</a></code></span></dt>
+  <dd>
+    Return type: <em>no return value</em></dd>
+  <dd>
+    If the specified item is selected, it is deselected. If it is not selected, it is selected. Other items in the list box that are selected are not affected, and retain their selected state.</dd>
+</dl><p></p>
+<h3 id="Related" name="Related">Related</h3>
+<dl>
+ <dt>
+  Elements</dt>
+ <dd>
+  <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/listcell" title="listcell">listcell</a></code>, <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/listcol" title="listcol">listcol</a></code>, <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/listcols" title="listcols">listcols</a></code>, <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/listhead" title="listhead">listhead</a></code>, <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/listheader" title="listheader">listheader</a></code>, <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/listitem" title="listitem">listitem</a></code></dd>
+</dl>
+<dl>
+ <dt>
+  Interfaces</dt>
+ <dd>
+  <a href="/en/XPCOM_Interface_Reference/nsIAccessibleProvider" title="en/nsIAccessibleProvider">nsIAccessibleProvider</a>, <a href="/en/NsIDOMXULMultiSelectControlElement" title="en/NsIDOMXULMultiSelectControlElement">nsIDOMXULMultiSelectControlElement</a></dd>
+</dl>
+<p> </p>

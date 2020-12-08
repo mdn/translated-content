@@ -1,0 +1,63 @@
+---
+title: HTTP Logging
+slug: HTTP_Logging
+tags:
+  - Necko
+translation_of: Mozilla/Debugging/HTTP_logging
+---
+<p>さてさて、Mozilla の HTTP レイヤーのお行儀が悪いみたいですか？それともおそらく誰かに HTTP ログをとってくれと頼まれたんですね？ さてどうしましょうか？ Firefox を走らせる前に環境変数をいくつか設定すれば、HTTP の動作ログを取ることができます。プラットフォームごとに以下のステップに従ってください。
+</p>
+<h3 id="HTTP_.E3.83.AD.E3.82.B0.E3.82.92.E6.9C.89.E5.8A.B9.E3.81.AB.E3.81.99.E3.82.8B"> HTTP ログを有効にする </h3>
+<h4 id="Windows"> Windows</h4>
+<p>Firefox が立ちあがっていないことを確認してください。DOS プロンプトをオープンし、以下のように入力してください (この例では Firefox がデフォルトの場所にインストールされているものと仮定しています)。
+</p>
+<pre>C:\&gt; set NSPR_LOG_MODULES=nsHttp:5,nsSocketTransport:5,nsHostResolver:5
+C:\&gt; set NSPR_LOG_FILE=C:\log.txt
+
+C:\&gt; cd "Program Files\Mozilla Firefox"
+C:\Program Files\Mozilla Firefox\&gt; .\firefox.exe
+</pre>
+<p>デバッグしようとしているプログラムをもう一度走らせてください。それが終わったら Firefox を終了してください。生成されたログファイルは <code>C:\log.txt</code> となります。
+</p>
+<h4 id="Linux"> Linux </h4>
+<p>Firefox が立ちあがっていないことを確認してください。新しいシェルをオープンし (この例では bash 互換のものと仮定しています) 次のように入力してください。
+</p>
+<pre>bash$ export NSPR_LOG_MODULES=nsHttp:5,nsSocketTransport:5,nsHostResolver:5
+bash$ export NSPR_LOG_FILE=/tmp/log.txt
+
+bash$ cd /path/to/firefox
+bash$ ./firefox
+</pre>
+<p>デバッグしようとしているプログラムをもう一度走らせてください。それが終わったら Firefox を終了してください。生成されたログファイルは <code>/tmp/log.txt</code> となります。
+</p>
+<h4 id="Mac_OS_X"> Mac OS X </h4>
+<p>Firefox が立ちあがっていないことを確認してください。ターミナルアプリケーション (ユーティリティアプリケーショングループ以下にあります) を立ち上げ、以下のコマンドを入力してください (この例では Firefox をデスクトップにインストールしてあり、かつ OS X のデフォルトのシェル bash を使っているものと仮定しています)。
+</p>
+<pre>hellomac:~ John$ export NSPR_LOG_MODULES=nsHttp:5,nsSocketTransport:5,nsHostResolver:5
+hellomac:~ John$ export NSPR_LOG_FILE=~/log.txt
+
+hellomac:~ John$ cd /Applications/Firefox.app/Contents/MacOS
+hellomac:/Applications/Firefox.app/Contents/MacOS John$ ./firefox-bin
+</pre>
+<p>デバッグしようとしているプログラムをもう一度走らせてください。それが終わったら Firefox を終了してください。生成されたログファイルはホームディレクトリの <code>log.txt</code> になります。注意：生成されたログファイルは UNIX 改行になるため閲覧するには UNIX のテキストファイルを扱えるエディタが必要になります。
+</p>
+<h3 id=".E3.81.9D.E3.81.AE.E4.BB.96.E3.81.AE.E3.82.AA.E3.83.97.E3.82.B7.E3.83.A7.E3.83.B3"> その他のオプション </h3>
+<ul><li> HTTP リクエスト/レスポンスヘッダーのログのみをとりたい場合には、<code>NSPR_LOG_MODULES=nsHttp:3</code> のみを設定してください。
+</li><li> <code>nsSocketTransport:5</code> はソケットレベルのログ出力をとらない場合には必要ありません (デバッグしたい事柄によっては、このレベルでログを取ると無駄な出力だらけになる場合もあります)。
+</li><li> <code>nsHostResolver:5</code> は、ホストリゾルバ (DNS クエリなど) のログ出力に興味がない場合は外しても構いません。
+</li><li> Firefox の便利な拡張機能として <a class="link-https" href="https://addons.mozilla.org/firefox/addon/3829">Live HTTP Headers</a> と呼ばれるものがあります。これを使うと HTTP リクエスト/レスポンスヘッダーのログのみを取ることができます。HTTP トラフィックをちょっとのぞいてみたい時にはとても手軽なツールです。
+</li><li> 最後に、Mozilla に組み込まれているログ機能では単に不十分だという時があります。そういう場合にはきちんとしたパケットレースツールを使わなければなりません。<a class="external" href="http://www.ethereal.com/">Ethereal</a> と <a class="external" href="http://ngrep.sourceforge.net/">ngrep</a> は素晴らしいツールで Windows 用とほとんどの UNIX 用があります (筆者が最後に確認した時点では OS X 用はありませんでした)。商用のパケットトレーサーはもっと良い機能を提供するかもしれませんが、ほとんどの部分では、こういった無料のトレーサーはとてもしっかりしていて Mozilla のネットワーク上の問題をみつけるには十分な機能をもっています。 </li></ul>
+<h3 id=".E5.8F.82.E7.85.A7"> 参照 </h3>
+<ul><li> 似たようなオプションが mailnews プロトコルのデバッグ時に使えます。<a class="external" href="http://www.mozilla.org/quality/mailnews/mail-troubleshoot.html">この文書</a> に mailnews のトラブルシューティングについての詳しい情報があります。
+</li><li> Windows プラットフォームでは Firefox ナイトリービルドを使って FTP のログをとることができます (なぜこれが Windows だけなのかといった質問はしないでください！)。 FTP ログを有効にするには、<code>NSPR_LOG_MODULES=nsFtp:5</code> を設定するだけです (古いバージョンでは <code>nsFtp</code> ではなく <code>nsFTPProtocol</code> にする必要があります)。
+</li></ul>
+<div class="originaldocinfo">
+<h2 id=".E5.8E.9F.E6.96.87.E6.9B.B8.E3.81.AE.E6.83.85.E5.A0.B1"> 原文書の情報 </h2>
+<ul><li> 著者: <a class="link-mailto" href="mailto:darin@meer.net">Darin Fisher</a>
+</li><li> 最終更新日: January 5, 2007
+</li><li> 著作権: Portions of this content are © 1998–2007 by individual mozilla.org contributors; content available under a Creative Commons license | <a class="external" href="http://www.mozilla.org/foundation/licensing/website-content.html">詳細</a>
+</li></ul>
+</div>
+<div class="noinclude">
+</div>
+{{ languages( { "en": "en/HTTP_Logging" } ) }}

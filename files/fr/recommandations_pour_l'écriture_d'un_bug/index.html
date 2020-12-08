@@ -1,0 +1,149 @@
+---
+title: Recommandations pour l'écriture d'un bug
+slug: Recommandations_pour_l'écriture_d'un_bug
+tags:
+  - QA
+translation_of: Mozilla/QA/Bug_writing_guidelines
+---
+<div class="note">
+<p><strong>Si vous avez besoin d'aide concernant les logiciels Mozilla (par exemple avec Firefox ou Thunderbird), utilisez l'une des <a class="external" href="https://support.mozilla.org/fr/">options d’assistance disponibles</a>. Ne modifiez pas cette page.</strong></p>
+
+<p>Si vous débutez dans l'assurance qualité de Mozilla, vous pouvez essayer d'obtenir de l'aide de contributeurs et contributrices plus expérimentés. Consultez la section Communauté de la page <a href="fr/Assurance_qualit%c3%a9">Assurance qualité</a> pour des indications. Si vous désirez rapporter un bug dans Firefox, vous pourrez également obtenir de l'assistance en anglais dans le <a href="https://matrix.to/#/!IzVMcpFSIBAkaCECOW:mozilla.org?via=mozilla.org">salon #fx-desktop-community</a> sur le <a href="https://chat.mozilla.org">serveur Matrix de Mozilla</a>. Pour une liste des autres projets (comme Thunderbird et SeaMonkey),  rendez-vous sur le wiki de Mozilla à la page <a href="https://wiki.mozilla.org/Matrix">Matrix</a>.</p>
+</div>
+
+<h2 id="Principes_de_base" name="Principes_de_base">Principes de base</h2>
+
+<p>Un rapport de bug rédigé de manière efficace est plus susceptible d'être corrigé. Ce guide explique comment procéder.</p>
+
+<ul>
+ <li>Soyez précis.</li>
+ <li>Soyez clairs – donnez des explications claires de façon à ce que d'autres puissent reproduire le bug.</li>
+ <li>Un seul bug par rapport.</li>
+ <li>Même le bug le plus insignifiant doit être rapporté – de petits problèmes peuvent en masquer de plus importants.</li>
+ <li>Séparez clairement les faits des suppositions.</li>
+</ul>
+
+<h2 id="Introduction" name="Introduction">Introduction</h2>
+
+<ol>
+ <li>Reproduisez votre bug en utilisant un build récent de l'application, afin de vous assurer qu'il n'a pas déjà été corrigé.</li>
+</ol>
+
+<p><span class="comment">Ajouter un lien vers FAQ sur "recent build"</span></p>
+
+<ol>
+ <li>Faites une recherche dans Bugzilla pour vérifier que votre bug n'a pas déjà été rapporté.</li>
+</ol>
+
+<p>(Tutoriel en anglais : <a class="external" href="http://www.mozilla.org/quality/help/screening-duplicates.html">tutoriel</a>).</p>
+
+<h2 id="Rapporter_un_nouveau_bug" name="Rapporter_un_nouveau_bug">Rapporter un nouveau bug</h2>
+
+<p><strong>ATTENTION ! La langue utilisée dans Bugzilla est uniquement l'anglais. Les exemples sont donnés en français à titre indicatif pour une meilleure clarté des instructions.</strong></p>
+
+<p>Si vous avez reproduit l'anomalie sur un build récent et que personne ne semble l'avoir déjà rapportée, alors :</p>
+
+<ol>
+ <li>Choisissez « <a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?format=guided">Enter a new bug »</a> (le formulaire est en anglais).</li>
+ <li>Sélectionnez le produit dans lequel vous avez trouvé le bug.</li>
+ <li>Remplissez le formulaire. Voici quelques éléments d'aide :</li>
+</ol>
+
+<p><strong>Component :</strong> (composant) La partie du logiciel dans laquelle apparaît le bug.</p>
+
+<p>Ce champ est obligatoire. Cliquez sur le mot « Component » pour obtenir une description de chaque composant. Si aucun ne vous semble approprié, choisissez un composant général (« General »).</p>
+
+<p><strong>OS :</strong> sur quel système d'exploitation l'avez-vous trouvé ? (par exemple Linux, Windows, Mac OS X).</p>
+
+<p>Si le bug se produit sur plusieurs systèmes d'exploitation, sélectionnez « All » (Tous). Si votre système d'exploitation n'apparaît pas dans la liste, choisissez « Other » (Autre).</p>
+
+<p><strong>Summary :</strong> (Résumé) Comment décririez-vous le bug, en 60 caractères maximum ?</p>
+
+<p>Un bon résumé doit permettre une identification rapide et exhaustive du rapport d'anomalie. Il doit décrire le problème rencontré et non la solution que vous préconiseriez.</p>
+
+<ul>
+ <li>Bon : « Cancelling a File Copy dialog crashes File Manager » (Annuler une boîte de dialogue de copie d'un fichier fait planter le Gestionnaire de Fichiers)</li>
+ <li>Mauvais : « Software crashes » (Le programme plante)</li>
+ <li>Mauvais : « Browser should work with my web site » (le navigateur devrait fonctionner avec mon site web)</li>
+</ul>
+
+<p><strong>Description :</strong> Les détails de votre rapport de bug, qui incluent :</p>
+
+<div class="highlight">
+<p><strong>Overview :</strong> (vue d'ensemble) Une version plus détaillée de votre résumé.</p>
+
+<pre class="eval notranslate">Drag-selecting any page crashes Mac builds in the NSGetFactory function. (La sélection à l'intérieur d'une page plante les builds MAC dans la fonction NSGetFactory)
+</pre>
+
+<p><strong>Steps to Reproduce :</strong> (Etapes permettant la reproduction) Les actions réduites à leur plus simple expression permettant de reproduire le bug. Préciser les éléments de configuration si nécessaire.</p>
+
+<pre class="eval notranslate">1) Ouvrir une page Web (J'ai utilisé la page d'exemple : resource:/res/samples/test0.html)
+
+2) Faire une sélection dans la page (Placer le pointeur de la souris n'importe où dans la page, appuyer sur le bouton droit et le maintenir appuyé, puis déplacer le pointeur vers le bas de la page).
+</pre>
+
+<p><strong>Actual Results :</strong> (Résultats actuels) Ce qui est arrivé après les étapes décrites ci-dessus.</p>
+
+<pre class="eval notranslate">L'application a planté.
+</pre>
+
+<p><strong>Expected Results :</strong> (Résultat attendu) Ce qui aurait dû arriver en l'absence de . bug.</p>
+
+<pre class="eval notranslate">La fenêtre devrait défiler vers le bas. Le texte devrait être sélectionné.
+(Ou, au moins, l'application ne devrait pas planter)
+</pre>
+
+<p><strong>Build Date &amp; Platform :</strong> (Date du build et plateforme) La date et la plateforme du build dans lequel le bug a été rencontré pour la première fois.</p>
+
+<pre class="eval notranslate">Build 2006-08-10 sur Mac OS 10.4.3
+</pre>
+
+<p><strong>Additional Builds and Platforms :</strong> (Builds et plateformes additionnels) Indiquer ici si le bug apparaît sur d'autres plateformes (ou navigateurs, si applicables).</p>
+
+<pre class="eval notranslate">N'apparaît pas sur Build 2006-08-10 sur Windows XP Home (Service Pack 2)
+</pre>
+
+<p><strong>Additional Information :</strong> (Information complémentaire) Toute autre information utile.</p>
+
+<p>Pour les bugs engendrant un crash:</p>
+
+<ul>
+ <li>Win32 : Si vous rencontrez une erreur Dr. Watson, veuillez noter le type d'erreur et le module ayant planté l'application (par exemple "Violation d'accès dans mozilla.exe").</li>
+ <li>Mac OS X : Quand l'application plante, cliquez sur le bouton "Report" (ou "Rapport d'erreur") dans la fenêtre qui s'affiche alors, puis copiez l'ensemble du texte contenu dans la zone de texte sous le message "Problem and system information" (ou "Information sur l'erreur rencontrée et le système"). Insérez-le dans votre rapport de bug. Il n'est pas nécessaire d'envoyer le rapport d'erreur à Apple. Fermez simplement la fenêtre une fois son texte copié.</li>
+ <li>Unix: Veuillez fournir une stack trace simplifiée, qui peut être générée en tapant l'instruction &lt;tt&gt;gdb mozilla core &lt;/tt&gt; dans une fenêtre Shell.</li>
+</ul>
+
+<pre class="notranslate">Date/Time:      2006-12-26 12:15:20.089 -0500
+OS Version:     10.4.8 (Build 8L2127)
+Report Version: 4
+
+Command: firefox-bin
+Path:    /Applications/Firefox.app/Contents/MacOS/firefox-bin
+Parent:  WindowServer [71]
+
+Version: 2.0.0.1 (2.0.0.1)
+
+PID:    114
+Thread: 0
+
+Exception:  EXC_BAD_ACCESS (0x0001)
+Codes:      KERN_PROTECTION_FAILURE (0x0002) at 0x000000ca
+
+Thread 0 Crashed:
+0   libxpcom_core.dylib 	0x0186329b AppendUTF8toUTF16(char const*, nsAString_internal&amp;) + 31
+1   libxpcom_core.dylib 	0x01822916 nsTextFormatter::smprintf_free(unsigned short*) + 3248
+... (many many more lines like this) ...</pre>
+</div>
+
+<p><strong>Add an attachment :</strong> (Attacher un fichier) Vous pouvez attacher des fichiers utiles à votre rapport de bug. Les informations de plus de 20 lignes doivent être fournies par ce biais. De même, si vous possédez un fichier HTML démontrant le bug, vous devriez l'attacher. Il n'est possible d'attacher qu'un seul fichier lors de la soumission du rapport d'anomalie, donc si votre démonstration en nécessite plusieurs, ouvrez à nouveau le rapport que vous venez de créer pour y ajouter des fichiers joints supplémentaires. Dans ce cas attachez tout fichier complémentaire (par exemple des images ou copies d'écran) en premier, puis, avant de le télécharger, modifiez dans le fichier HTML les adresses URL des fichiers précédemment attachés afin que votre démonstration fonctionne de manière automatique. Il est nécessaire de demander une autorisation si vous souhaitez attacher plus de 5 fichiers.</p>
+
+<p>Relisez minutieusement votre rapport d'anomalie pour en exclure toute erreur ou omission, puis cliquer sur le bouton « Commit » (valider). Votre rapport d'anomalie figurera désormais dans la base de données Bugzilla.</p>
+
+<div class="originaldocinfo">
+<ul>
+ <li>Auteur(s) : Gervase Markham, basé sur un original d'Eli Goldberg</li>
+ <li>Autres contributeurs : Claudius Gayle, Jan Leger, Felix Miata, Peter Mock, Chris Pratt, Chris Yeh et d'autres.</li>
+</ul>
+</div>
+
+<p>{{ languages( { "en": "en/Bug_writing_guidelines", "ja": "ja/Bug_writing_guidelines" } ) }}</p>

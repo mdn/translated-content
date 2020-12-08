@@ -1,0 +1,1698 @@
+---
+title: Parser API
+slug: Mozilla/Projects/SpiderMonkey/Parser_API
+tags:
+  - API
+  - Guide
+  - JavaScript
+  - SpiderMonkey
+translation_of: Mozilla/Projects/SpiderMonkey/Parser_API
+---
+<div>{{SpiderMonkeySidebar}}</div>
+
+<div class="summary">
+<p>最近の<a href="/ja/docs/Mozilla/Projects/SpiderMonkey/Build_Documentation">スタンドアロンの SpiderMonkey シェル</a>のビルドには、SpiderMonkey パーサーを反映したものが含まれています。これは JavaScript API として提供されています。これにより、シンタックスハイライト、静的解析、トランスレータ、コンパイラ、難読化ツールなど、JavaScript ソースプログラムを操作するツールを JavaScript で記述することが簡単になります。</p>
+</div>
+
+<div class="note">
+<p><strong>メモ:</strong> このページは SpiderMonkey 特有の振る舞いについて説明しており、不完全かもしれません。最新の ECMAScript 機能を含み、SpiderMonkey フォーマットとの下位互換性があるコミュニティ AST 規格については、<a href="https://github.com/estree/estree">ESTree の仕様</a>をご覧ください。</p>
+</div>
+
+<p>例:</p>
+
+<pre class="notranslate">&gt; var expr = Reflect.parse("obj.foo + 42").body[0].expression
+&gt; expr.left.property
+({loc:null, type:"Identifier", name:"foo"})
+&gt; expr.right
+({loc:{source:null, start:{line:1, column:10}, end:{line:1, column:12}}, type:"Literal", value:42})
+</pre>
+
+<p>Firefox 7 以降も利用可能です。次のようにしてグローバルオブジェクトにインポートすることができます。</p>
+
+<pre class="notranslate">Components.utils.import("resource://gre/modules/reflect.jsm")
+</pre>
+
+<p>または指定されたオブジェクトへ:</p>
+
+<pre class="notranslate">Components.utils.import("resource://gre/modules/reflect.jsm", obj)
+</pre>
+
+<h2 id="組み込みオブジェクト">組み込みオブジェクト</h2>
+
+<p>SpiderMonkey シェルであっても Firefox (インポート後) であっても、グローバルシングルトンオブジェクト <code>Reflect</code> は現在 <code>parse</code> メソッドだけを含んでいます。</p>
+
+<h2 id="Reflect_オブジェクトのプロパティ"><code>Reflect</code> オブジェクトのプロパティ</h2>
+
+<p><code>Reflect</code> オブジェクトは現在単一のメソッドで構成されています。</p>
+
+<h4 id="Reflect.parsesrc_options"><code>Reflect.parse(src[, options])</code></h4>
+
+<p><strong><span style="font-family: Courier New;">src</span></strong> を文字列に強制し、結果を JavaScript プログラムとして解析します。デフォルトでは、解析にされた抽象構文ツリー (AST) を表す Program オブジェクト（以下を参照）が返されます。</p>
+
+<p>追加のオプションは、以下のプロパティのいずれかを含めることができる <strong><span style="font-family: Courier New;">options</span></strong> オブジェクトを介して提供可能です:</p>
+
+<table style="border-color: #edf2f7; border-style: solid; border-width: 1px; width: 67%;">
+ <tbody>
+  <tr style="background-color: rgb(241, 246, 251);">
+   <td><strong><span style="font-family: Courier New;">loc</span></strong></td>
+   <td>Boolean</td>
+   <td>Default: <span style="font-family: Courier New;">true</span></td>
+  </tr>
+  <tr>
+   <td colspan="3">When <strong><span style="font-family: Courier New;">loc</span></strong> is <span style="font-family: Courier New;">true</span>, the parser includes source location information in the returned AST nodes.</td>
+  </tr>
+  <tr style="background-color: rgb(241, 246, 251);">
+   <td><strong><span style="font-family: Courier New;">source</span></strong></td>
+   <td>String</td>
+   <td>Default: <span style="font-family: Courier New;">null</span></td>
+  </tr>
+  <tr>
+   <td colspan="3">A description of the input source; typically a filename, path, or URL. This string is not meaningful to the parsing process, but is produced as part of the source location information in the returned AST nodes.</td>
+  </tr>
+  <tr style="background-color: rgb(241, 246, 251);">
+   <td><strong><span style="font-family: Courier New;">line</span></strong></td>
+   <td>Number</td>
+   <td>Default: <span style="font-family: Courier New;">1</span></td>
+  </tr>
+  <tr>
+   <td colspan="3">The initial line number to use for source location information.</td>
+  </tr>
+  <tr style="background-color: rgb(241, 246, 251);">
+   <td><strong><span style="font-family: Courier New;">builder</span></strong></td>
+   <td>Builder</td>
+   <td>Default: <span style="font-family: Courier New;">null</span></td>
+  </tr>
+  <tr>
+   <td colspan="3">
+    <p>A builder object, which can be used to produce AST nodes in custom data formats. The expected callback methods are described under <a href="/en/SpiderMonkey/Parser_API#Builder_objects" title="en/SpiderMonkey/Parser API#Builder objects">Builder Objects</a>.</p>
+   </td>
+  </tr>
+  <tr style="background-color: rgb(241, 246, 251);">
+   <td><strong><span style="font-family: Courier New;">target</span></strong></td>
+   <td>String</td>
+   <td>Default: <span style="font-family: Courier New;">script</span></td>
+  </tr>
+  <tr>
+   <td colspan="3">
+    <p>A type of the parsing target, can be either <span style="font-family: Courier New;">script</span> or <span style="font-family: Courier New;">module</span>.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>If parsing fails due to a syntax error, an instance of <code>SyntaxError</code> is thrown. The syntax error object thrown by <code>Reflect.parse()</code> has the same <code>message</code> property as the syntax error that would be thrown by <code>eval(src)</code>. The <code>lineNumber</code> and <code>fileName</code> properties of the syntax error object indicate the source location of the syntax error.</p>
+
+<h2 id="Node_オブジェクト">Node オブジェクト</h2>
+
+<p>By default, <code>Reflect.parse()</code> produces Node objects, which are plain JavaScript objects (i.e., their prototype derives from the standard <code>Object</code> prototype). All node types implement the following interface:</p>
+
+<pre class="notranslate">interface Node {
+    type: string;
+    loc: SourceLocation | null;
+}
+</pre>
+
+<p>The <code>type</code> field is a string representing the AST variant type. Each subtype of Node is documented below with the specific string of its <code>type</code> field. You can use this field to determine which interface a node implements.</p>
+
+<p>The <code>loc</code> field represents the source location information of the node. If the parser produced no information about the node's source location, the field is <code>null</code>; otherwise it is an object consisting of a start position (the position of the first character of the parsed source region) and an end position (the position of the first character <em>after</em> the parsed source region):</p>
+
+<pre class="notranslate">interface SourceLocation {
+    source: string | null;
+    start: Position;
+    end: Position;
+}
+</pre>
+
+<p>Each <code>Position</code> object consists of a <code>line</code> number (1-indexed) and a <code>column</code> number (0-indexed):</p>
+
+<pre class="notranslate">interface Position {
+    line: uint32 &gt;= 1;
+    column: uint32 &gt;= 0;
+}</pre>
+
+<h3 id="Programs">Programs</h3>
+
+<pre class="notranslate">interface Program &lt;: Node {
+    type: "Program";
+    body: [ Statement ];
+}
+</pre>
+
+<p>A complete program source tree.</p>
+
+<h3 id="Functions">Functions</h3>
+
+<pre class="notranslate">interface Function &lt;: Node {
+    id: Identifier | null;
+    params: [ Pattern ];
+    defaults: [ Expression ];
+    rest: Identifier | null;
+    body: BlockStatement | Expression;
+    generator: boolean;
+    expression: boolean;
+}
+</pre>
+
+<p>A function declaration or expression. The <code>body</code> of the function may be a block statement, or in the case of an <a href="/en/JavaScript/New_in_JavaScript/1.8#Expression_closures_%28Merge_into_own_page.2fsection%29" title="https://developer.mozilla.org/en/new_in_javascript_1.8#Expression_closures_(Merge_into_own_page.2fsection)">expression closure</a>, an expression.</p>
+
+<div class="note"><strong>メモ:</strong> Expression closures are SpiderMonkey-specific.</div>
+
+<p>If the <code>generator</code> flag is <code>true</code>, the function is a <a href="/en/JavaScript/Guide/Iterators_and_Generators" title="https://developer.mozilla.org/en/Core_JavaScript_1.5_Guide/Iterators_and_Generators">generator function</a>, i.e., contains a <code>yield</code> expression in its body (other than in a nested function).</p>
+
+<div class="note"><strong>メモ:</strong> Generators are SpiderMonkey-specific.</div>
+
+<p>If the <code>expression</code> flag is <code>true</code>, the function is an expression closure and the <code>body</code> field is an expression.</p>
+
+<h3 id="Statements">Statements</h3>
+
+<pre class="notranslate">interface Statement &lt;: Node { }
+</pre>
+
+<p>Any statement.</p>
+
+<pre class="notranslate">interface EmptyStatement &lt;: Statement {
+    type: "EmptyStatement";
+}
+</pre>
+
+<p>An empty statement, i.e., a solitary semicolon.</p>
+
+<pre class="notranslate">interface BlockStatement &lt;: Statement {
+    type: "BlockStatement";
+    body: [ Statement ];
+}
+</pre>
+
+<p>A block statement, i.e., a sequence of statements surrounded by braces.</p>
+
+<pre class="notranslate">interface ExpressionStatement &lt;: Statement {
+    type: "ExpressionStatement";
+    expression: Expression;
+}
+</pre>
+
+<p>An expression statement, i.e., a statement consisting of a single expression.</p>
+
+<pre class="notranslate">interface IfStatement &lt;: Statement {
+    type: "IfStatement";
+    test: Expression;
+    consequent: Statement;
+    alternate: Statement | null;
+}
+</pre>
+
+<p>An <code>if</code> statement.</p>
+
+<pre class="notranslate">interface LabeledStatement &lt;: Statement {
+    type: "LabeledStatement";
+    label: Identifier;
+    body: Statement;
+}
+</pre>
+
+<p>A labeled statement, i.e., a statement prefixed by a <code>break</code>/<code>continue</code> label.</p>
+
+<pre class="notranslate">interface BreakStatement &lt;: Statement {
+    type: "BreakStatement";
+    label: Identifier | null;
+}
+</pre>
+
+<p>A <code>break</code> statement.</p>
+
+<pre class="notranslate">interface ContinueStatement &lt;: Statement {
+    type: "ContinueStatement";
+    label: Identifier | null;
+}
+</pre>
+
+<p>A <code>continue</code> statement.</p>
+
+<pre class="notranslate">interface WithStatement &lt;: Statement {
+    type: "WithStatement";
+    object: Expression;
+    body: Statement;
+}
+</pre>
+
+<p>A <code>with</code> statement.</p>
+
+<pre class="notranslate">interface SwitchStatement &lt;: Statement {
+    type: "SwitchStatement";
+    discriminant: Expression;
+    cases: [ SwitchCase ];
+    lexical: boolean;
+}
+</pre>
+
+<p>A <code>switch</code> statement. The lexical flag is metadata indicating whether the <code>switch</code> statement contains any unnested <code>let</code> 宣言 (and therefore introduces a new lexical scope).</p>
+
+<pre class="notranslate">interface ReturnStatement &lt;: Statement {
+    type: "ReturnStatement";
+    argument: Expression | null;
+}
+</pre>
+
+<p>A <code>return</code> statement.</p>
+
+<pre class="notranslate">interface ThrowStatement &lt;: Statement {
+    type: "ThrowStatement";
+    argument: Expression;
+}
+</pre>
+
+<p>A <code>throw</code> statement.</p>
+
+<pre class="notranslate">interface TryStatement &lt;: Statement {
+    type: "TryStatement";
+    block: BlockStatement;
+    handler: CatchClause | null;
+    guardedHandlers: [ CatchClause ];
+    finalizer: BlockStatement | null;
+}
+</pre>
+
+<p>A <code>try</code> statement.</p>
+
+<div class="note"><strong>メモ:</strong> Multiple <code>catch</code> clauses are SpiderMonkey-specific.</div>
+
+<pre class="notranslate">interface WhileStatement &lt;: Statement {
+    type: "WhileStatement";
+    test: Expression;
+    body: Statement;
+}
+</pre>
+
+<p>A <code>while</code> statement.</p>
+
+<pre class="notranslate">interface DoWhileStatement &lt;: Statement {
+    type: "DoWhileStatement";
+    body: Statement;
+    test: Expression;
+}
+</pre>
+
+<p>A <code>do</code>/<code>while</code> statement.</p>
+
+<pre class="notranslate">interface ForStatement &lt;: Statement {
+    type: "ForStatement";
+    init: VariableDeclaration | Expression | null;
+    test: Expression | null;
+    update: Expression | null;
+    body: Statement;
+}
+</pre>
+
+<p>A <code>for</code> statement.</p>
+
+<pre class="notranslate">interface ForInStatement &lt;: Statement {
+    type: "ForInStatement";
+    left: VariableDeclaration |  Expression;
+    right: Expression;
+    body: Statement;
+    each: boolean;
+}
+</pre>
+
+<p>A <code>for</code>/<code>in</code> statement, or, if <code>each</code> is <code>true</code>, a <code>for each</code>/<code>in</code> statement.</p>
+
+<div class="note"><strong>メモ:</strong> The <code>for each</code> form is SpiderMonkey-specific.</div>
+
+<pre class="notranslate">interface ForOfStatement &lt;: Statement {
+    type: "ForOfStatement";
+    left: VariableDeclaration |  Expression;
+    right: Expression;
+    body: Statement;
+}</pre>
+
+<p>A <code>for</code>/<code>of</code> statement.</p>
+
+<pre class="notranslate">interface LetStatement &lt;: Statement {
+    type: "LetStatement";
+    head: [ VariableDeclarator ];
+    body: Statement;
+}
+</pre>
+
+<p>A <code>let</code> statement.</p>
+
+<div class="note"><strong>メモ:</strong> The <code>let</code> statement form is SpiderMonkey-specific.</div>
+
+<pre class="notranslate">interface DebuggerStatement &lt;: Statement {
+    type: "DebuggerStatement";
+}
+</pre>
+
+<p>A <code>debugger</code> statement.</p>
+
+<div class="note"><strong>メモ:</strong> The <code>debugger</code> statement is new in ECMAScript 5th edition, although SpiderMonkey has supported it for years.</div>
+
+<h3 id="宣言">宣言</h3>
+
+<pre class="notranslate">interface Declaration &lt;: Statement { }
+</pre>
+
+<p>Any declaration node. Note that 宣言 are considered statements; this is because 宣言 can appear in any statement context in the language recognized by the SpiderMonkey parser.</p>
+
+<div class="note"><strong>メモ:</strong> 宣言 in arbitrary nested scopes are SpiderMonkey-specific.</div>
+
+<pre class="notranslate">interface FunctionDeclaration &lt;: Function, Declaration {
+    type: "FunctionDeclaration";
+    id: Identifier;
+    params: [ Pattern ];
+    defaults: [ Expression ];
+    rest: Identifier | null;
+    body: BlockStatement | Expression;
+    generator: boolean;
+    expression: boolean;
+}
+</pre>
+
+<p>A function declaration.</p>
+
+<div class="note"><strong>メモ:</strong> The <code>id</code> field cannot be <code>null</code>.</div>
+
+<pre class="notranslate">interface VariableDeclaration &lt;: Declaration {
+    type: "VariableDeclaration";
+    宣言: [ VariableDeclarator ];
+    kind: "var" | "let" | "const";
+}
+</pre>
+
+<p>A variable declaration, via one of <code>var</code>, <code>let</code>, or <code>const</code>.</p>
+
+<pre class="notranslate">interface VariableDeclarator &lt;: Node {
+    type: "VariableDeclarator";
+    id: Pattern;
+    init: Expression | null;
+}
+</pre>
+
+<p>A variable declarator.</p>
+
+<div class="note"><strong>メモ:</strong> The <code>id</code> field cannot be <code>null</code>.</div>
+
+<div class="note"><strong>メモ:</strong> <code>let</code> and <code>const</code> are SpiderMonkey-specific.</div>
+
+<h3 id="Expressions">Expressions</h3>
+
+<pre class="notranslate">interface Expression &lt;: Node, Pattern { }</pre>
+
+<p>Any expression node. Since the left-hand side of an assignment may be any expression in general, an expression can also be a pattern.</p>
+
+<pre class="notranslate">interface ThisExpression &lt;: Expression {
+    type: "ThisExpression";
+}
+</pre>
+
+<p>A <code>this</code> expression.</p>
+
+<pre class="notranslate">interface ArrayExpression &lt;: Expression {
+    type: "ArrayExpression";
+    elements: [ Expression | null ];
+}</pre>
+
+<p>An array expression.</p>
+
+<pre class="notranslate">interface ObjectExpression &lt;: Expression {
+    type: "ObjectExpression";
+    properties: [ Property ];
+}</pre>
+
+<p>An object expression.</p>
+
+<pre class="notranslate">interface Property &lt;: Node {
+    type: "Property";
+    key: Literal | Identifier;
+    value: Expression;
+    kind: "init" | "get" | "set";
+}</pre>
+
+<p>A literal property in an object expression can have either a string or number as its <code>value</code>. Ordinary property initializers have a <code>kind</code> value <code>"init"</code>; getters and setters have the <code>kind</code> values <code>"get"</code> and <code>"set"</code>, respectively.</p>
+
+<pre class="notranslate">interface FunctionExpression &lt;: Function, Expression {
+    type: "FunctionExpression";
+    id: Identifier | null;
+    params: [ Pattern ];
+    defaults: [ Expression ];
+    rest: Identifier | null;
+    body: BlockStatement | Expression;
+    generator: boolean;
+    expression: boolean;
+}
+</pre>
+
+<p>A function expression.</p>
+
+<pre class="notranslate">interface ArrowExpression &lt;: Function, Expression {
+    type: "ArrowExpression";
+    params: [ Pattern ];
+    defaults: [ Expression ];
+    rest: Identifier | null;
+    body: BlockStatement | Expression;
+    generator: boolean;
+    expression: boolean;
+}
+</pre>
+
+<p>A fat arrow function expression, i.e., `let foo = (bar) =&gt; { /* body */ }`.</p>
+
+<pre class="notranslate">interface SequenceExpression &lt;: Expression {
+    type: "SequenceExpression";
+    expressions: [ Expression ];
+}</pre>
+
+<p>A sequence expression, i.e., a comma-separated sequence of expressions.</p>
+
+<pre class="notranslate">interface UnaryExpression &lt;: Expression {
+    type: "UnaryExpression";
+    operator: UnaryOperator;
+    prefix: boolean;
+    argument: Expression;
+}</pre>
+
+<p>A unary operator expression.</p>
+
+<pre class="notranslate">interface BinaryExpression &lt;: Expression {
+    type: "BinaryExpression";
+    operator: BinaryOperator;
+    left: Expression;
+    right: Expression;
+}</pre>
+
+<p>A binary operator expression.</p>
+
+<pre class="notranslate">interface AssignmentExpression &lt;: Expression {
+    type: "AssignmentExpression";
+    operator: AssignmentOperator;
+    left: Pattern;
+    right: Expression;
+}</pre>
+
+<p>An assignment operator expression.</p>
+
+<pre class="notranslate">interface UpdateExpression &lt;: Expression {
+    type: "UpdateExpression";
+    operator: UpdateOperator;
+    argument: Expression;
+    prefix: boolean;
+}</pre>
+
+<p>An update (increment or decrement) operator expression.</p>
+
+<pre class="notranslate">interface LogicalExpression &lt;: Expression {
+    type: "LogicalExpression";
+    operator: LogicalOperator;
+    left: Expression;
+    right: Expression;
+}</pre>
+
+<p>A logical operator expression.</p>
+
+<pre class="notranslate">interface ConditionalExpression &lt;: Expression {
+    type: "ConditionalExpression";
+    test: Expression;
+    alternate: Expression;
+    consequent: Expression;
+}</pre>
+
+<p>A conditional expression, i.e., a ternary <code>?</code>/<code>:</code> expression.</p>
+
+<pre class="notranslate">interface NewExpression &lt;: Expression {
+    type: "NewExpression";
+    callee: Expression;
+    arguments: [ Expression ];
+}</pre>
+
+<p>A <code>new</code> expression.</p>
+
+<pre class="notranslate">interface CallExpression &lt;: Expression {
+    type: "CallExpression";
+    callee: Expression;
+    arguments: [ Expression ];
+}</pre>
+
+<p>A function or method call expression.</p>
+
+<pre class="notranslate">interface MemberExpression &lt;: Expression {
+    type: "MemberExpression";
+    object: Expression;
+    property: Identifier | Expression;
+    computed: boolean;
+}</pre>
+
+<p>A member expression. If <code>computed === true</code>, the node corresponds to a computed <code>e1[e2]</code> expression and property is an <code>Expression</code>. If <code>computed === false</code>, the node corresponds to a static <code>e1.x</code> expression and property is an <code>Identifier</code>.</p>
+
+<pre class="notranslate">interface YieldExpression &lt;: Expression {
+    type: "YieldExpression";
+    argument: Expression | null;
+}
+</pre>
+
+<p>A <code>yield</code> expression.</p>
+
+<div class="note"><strong>メモ:</strong> <code>yield</code> expressions are SpiderMonkey-specific.</div>
+
+<pre class="notranslate">interface ComprehensionExpression &lt;: Expression {
+    type: "ComprehensionExpression";
+    body: Expression;
+    blocks: [ ComprehensionBlock | ComprehensionIf ];
+    filter: Expression | null;
+}
+</pre>
+
+<p>An <a href="/en/JavaScript/Guide/Obsolete_Pages/Working_with_Arrays#Array_comprehensions" title="https://developer.mozilla.org/en/Core_JavaScript_1.5_Guide/Working_with_Arrays#Array_comprehensions">array comprehension</a>. The <code>blocks</code> array corresponds to the sequence of <code>for</code> and <code>for each</code> blocks. The optional <code>filter</code> expression corresponds to the final <code>if</code> clause, if present.</p>
+
+<div class="note"><strong>メモ:</strong> Array comprehensions are SpiderMonkey-specific.</div>
+
+<pre class="notranslate">interface GeneratorExpression &lt;: Expression {
+    type: "GeneratorExpression";
+    body: Expression;
+    blocks: [ ComprehensionBlock | ComprehensionIf ];
+    filter: Expression | null;
+}
+</pre>
+
+<p>A <a href="/en/JavaScript/Guide/Iterators_and_Generators#Generator_expressions" title="https://developer.mozilla.org/en/Core_JavaScript_1.5_Guide/Iterators_and_Generators#Generator_expressions">generator expression</a>. As with array comprehensions, the <code>blocks</code> array corresponds to the sequence of <code>for</code> and <code>for each</code> blocks, and the optional <code>filter</code> expression corresponds to the final <code>if</code> clause, if present.</p>
+
+<div class="note"><strong>メモ:</strong> Generator expressions are SpiderMonkey-specific.</div>
+
+<pre class="notranslate">interface GraphExpression &lt;: Expression {
+    type: "GraphExpression";
+    index: uint32;
+    expression: Literal;
+}
+</pre>
+
+<p>A <a href="/en/JavaScript/Sharp_variables_in_JavaScript" title="https://developer.mozilla.org/en/Sharp_variables_in_JavaScript">graph expression</a>, aka "sharp literal," such as <code>#1={ self: #1# }</code>.</p>
+
+<div class="note"><strong>メモ:</strong> Graph expressions are SpiderMonkey-specific.</div>
+
+<pre class="notranslate">interface GraphIndexExpression &lt;: Expression {
+    type: "GraphIndexExpression";
+    index: uint32;
+}
+</pre>
+
+<p>A <a href="/en/JavaScript/Sharp_variables_in_JavaScript" title="https://developer.mozilla.org/en/Sharp_variables_in_JavaScript">graph index expression</a>, aka "sharp variable," such as <code>#1#</code>.</p>
+
+<div class="note"><strong>メモ:</strong> Graph index expressions are SpiderMonkey-specific.</div>
+
+<pre class="notranslate">interface LetExpression &lt;: Expression {
+    type: "LetExpression";
+    head: [ VariableDeclarator ];
+    body: Expression;
+}
+</pre>
+
+<p>A <code>let</code> expression.</p>
+
+<div class="note"><strong>メモ:</strong> The <code>let</code> expression form is SpiderMonkey-specific.</div>
+
+<h3 id="Patterns">Patterns</h3>
+
+<pre class="notranslate">interface Pattern &lt;: Node { }
+</pre>
+
+<p>JavaScript 1.7 introduced <a href="/en/JavaScript/New_in_JavaScript/1.7#Destructuring_assignment_%28Merge_into_own_page.2fsection%29" title="https://developer.mozilla.org/en/new_in_javascript_1.7#Destructuring_assignment_(Merge_into_own_page.2fsection)">destructuring assignment and binding</a> forms. All binding forms (such as function parameters, variable 宣言, and <code>catch</code> block headers) accept array and object destructuring patterns in addition to plain identifiers. The left-hand sides of assignment expressions can be arbitrary expressions, but in the case where the expression is an object or array literal, it is interpreted by SpiderMonkey as a destructuring pattern.</p>
+
+<p>Since the left-hand side of an assignment can in general be any expression, in an assignment context, a pattern can be any expression. In binding positions (such as function parameters, variable 宣言, and <code>catch</code> headers), patterns can only be identifiers in the base case, not arbitrary expressions.</p>
+
+<pre class="notranslate">interface ObjectPattern &lt;: Pattern {
+    type: "ObjectPattern";
+    properties: [ { key: Literal | Identifier, value: Pattern } ];
+}
+</pre>
+
+<p>An object-destructuring pattern. A literal property in an object pattern can have either a string or number as its <code>value</code>.</p>
+
+<pre class="notranslate">interface ArrayPattern &lt;: Pattern {
+    type: "ArrayPattern";
+    elements: [ Pattern | null ];
+}
+</pre>
+
+<p>An array-destructuring pattern.</p>
+
+<h3 id="Clauses">Clauses</h3>
+
+<pre class="notranslate">interface SwitchCase &lt;: Node {
+    type: "SwitchCase";
+    test: Expression | null;
+    consequent: [ Statement ];
+}
+</pre>
+
+<p>A <code>case</code> (if <code>test</code> is an <code>Expression</code>) or <code>default</code> (if <code>test === null</code>) clause in the body of a <code>switch</code> statement.</p>
+
+<pre class="notranslate">interface CatchClause &lt;: Node {
+    type: "CatchClause";
+    param: Pattern;
+    guard: Expression | null;
+    body: BlockStatement;
+}
+</pre>
+
+<p>A <code>catch</code> clause following a <code>try</code> block. The optional <code>guard</code> property corresponds to the optional expression guard on the bound variable.</p>
+
+<div class="note"><strong>メモ:</strong> The guard expression is SpiderMonkey-specific.</div>
+
+<pre class="notranslate">interface ComprehensionBlock &lt;: Node {
+    type: "ComprehensionBlock";
+    left: Pattern;
+    right: Expression;
+    each: boolean;
+}
+</pre>
+
+<p>A <code>for</code> or <code>for each</code> block in an array comprehension or generator expression.</p>
+
+<pre class="notranslate">interface ComprehensionIf &lt;: Node {
+    type: "ComprehensionIf";
+    test: Expression;
+}</pre>
+
+<p>An <code>if</code> filter in an array comprehension or generator filter.</p>
+
+<div class="note"><strong>メモ:</strong> Array comprehensions and generator expressions are SpiderMonkey-specific.</div>
+
+<h3 id="Miscellaneous">Miscellaneous</h3>
+
+<pre class="notranslate">interface Identifier &lt;: Node, Expression, Pattern {
+    type: "Identifier";
+    name: string;
+}
+</pre>
+
+<p>An identifier. Note that an identifier may be an expression or a destructuring pattern.</p>
+
+<pre class="notranslate">interface Literal &lt;: Node, Expression {
+    type: "Literal";
+    value: string | boolean | null | number | RegExp;
+}
+</pre>
+
+<p>A literal token. Note that a literal can be an expression.</p>
+
+<pre class="notranslate">enum UnaryOperator {
+    "-" | "+" | "!" | "~" | "typeof" | "void" | "delete"
+}
+</pre>
+
+<p>A unary operator token.</p>
+
+<pre class="notranslate">enum BinaryOperator {
+    "==" | "!=" | "===" | "!=="
+         | "&lt;" | "&lt;=" | "&gt;" | "&gt;="
+         | "&lt;&lt;" | "&gt;&gt;" | "&gt;&gt;&gt;"
+         | "+" | "-" | "*" | "/" | "%"
+         | "|" | "^" | "&amp;" | "in"
+         | "instanceof" | ".."
+}
+</pre>
+
+<p>A binary operator token.</p>
+
+<div class="note"><strong>メモ:</strong> The <code>..</code> operator is E4X-specific.</div>
+
+<pre class="notranslate">enum LogicalOperator {
+    "||" | "&amp;&amp;"
+}
+</pre>
+
+<p>A logical operator token.</p>
+
+<pre class="notranslate">enum AssignmentOperator {
+    "=" | "+=" | "-=" | "*=" | "/=" | "%="
+        | "&lt;&lt;=" | "&gt;&gt;=" | "&gt;&gt;&gt;="
+        | "|=" | "^=" | "&amp;="
+}
+</pre>
+
+<p>An assignment operator token.</p>
+
+<pre class="notranslate">enum UpdateOperator {
+    "++" | "--"
+}
+</pre>
+
+<p>An update (increment or decrement) operator token.</p>
+
+<h3 id="E4X">E4X</h3>
+
+<p>This section describes node types that are provided for E4X support. E4X has since been removed as of Gecko 21.</p>
+
+<p>{{ Obsolete_header() }}</p>
+
+<div class="note"><strong>メモ:</strong> E4X is not part of the ECMAScript standard (<a class="external" href="http://www.ecma-international.org/publications/standards/Ecma-262.htm" title="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMA-262</a>), but is a separate standard of its own (<a class="external" href="http://www.ecma-international.org/publications/standards/Ecma-357.htm" title="http://www.ecma-international.org/publications/standards/Ecma-357.htm">ECMA-357</a>).</div>
+
+<h4 id="宣言_2">宣言</h4>
+
+<pre class="notranslate">interface XMLDefaultDeclaration &lt;: Declaration {
+    type: "XMLDefaultDeclaration";
+    namespace: Expression;
+}
+</pre>
+
+<p>A <code>default xml namespace</code> declaration.</p>
+
+<h4 id="Expressions_2">Expressions</h4>
+
+<pre class="notranslate">interface XMLAnyName &lt;: Expression {
+    type: "XMLAnyName";
+}
+</pre>
+
+<p>The special E4X wildcard pseudo-identifier <code>*</code>.</p>
+
+<pre class="notranslate">interface XMLQualifiedIdentifier &lt;: Expression {
+    type: "XMLQualifiedIdentifier";
+    left: Identifier | XMLAnyName;
+    right: Identifier | Expression;
+    computed: boolean;
+}
+</pre>
+
+<p>An E4X qualified identifier, i.e., a pseudo-identifier using the namespace separator <code>::</code>. If the qualified identifier has a computed name (i.e., the <code>id::[expr]</code> form), then <code>computed</code> is <code>true</code> and the <code>right</code> property is an expression.</p>
+
+<pre class="notranslate">interface XMLFunctionQualifiedIdentifier &lt;: Expression {
+    type: "XMLFunctionQualifiedIdentifier";
+    right: Identifier | Expression;
+    computed: boolean;
+}
+</pre>
+
+<p>An E4X identifier qualified by the <code>function</code> keyword, e.g., <code>function::id</code>.</p>
+
+<div class="note"><strong>メモ:</strong> <code>function</code>-qualified identifiers are SpiderMonkey-specific.</div>
+
+<pre class="notranslate">interface XMLAttributeSelector &lt;: Expression {
+    type: "XMLAttributeSelector";
+    attribute: Expression;
+}
+</pre>
+
+<p>An E4X attribute selector expression, i.e., an <code>@</code> expression.</p>
+
+<pre class="notranslate">interface XMLFilterExpression &lt;: Expression {
+    type: "XMLFilterExpression";
+    left: Expression;
+    right: Expression;
+}
+</pre>
+
+<p>An E4X list filter expression, i.e., an expression of the form <code>expr.(expr)</code>.</p>
+
+<pre class="notranslate">interface XMLElement &lt;: XML, Expression {
+    type: "XMLElement";
+    contents: [ XML ];
+}
+</pre>
+
+<p>An E4X literal representing a single XML element.</p>
+
+<pre class="notranslate">interface XMLList &lt;: XML, Expression {
+    type: "XMLList";
+    contents: [ XML ];
+}
+</pre>
+
+<p>An E4X literal representing a list of XML elements.</p>
+
+<h4 id="XML">XML</h4>
+
+<pre class="notranslate">interface XML &lt;: Node { }
+</pre>
+
+<p>XML data.</p>
+
+<pre class="notranslate">interface XMLEscape &lt;: XML {
+    type: "XMLEscape";
+    expression: Expression;
+}
+</pre>
+
+<p>XML data with an escaped JavaScript expression.</p>
+
+<pre class="notranslate">interface XMLText &lt;: XML {
+    type: "XMLText";
+    text: string;
+}
+</pre>
+
+<p>Literal XML text.</p>
+
+<pre class="notranslate">interface XMLStartTag &lt;: XML {
+    type: "XMLStartTag";
+    contents: [ XML ];
+}
+</pre>
+
+<p>An XML start tag.</p>
+
+<pre class="notranslate">interface XMLEndTag &lt;: XML {
+    type: "XMLEndTag";
+    contents: [ XML ];
+}
+</pre>
+
+<p>An XML end tag.</p>
+
+<pre class="notranslate">interface XMLPointTag &lt;: XML {
+    type: "XMLPointTag";
+    contents: [ XML ];
+}
+</pre>
+
+<p>An XML point tag.</p>
+
+<pre class="notranslate">interface XMLName &lt;: XML {
+    type: "XMLName";
+    contents: string | [ XML ];
+}
+</pre>
+
+<p>An XML name.</p>
+
+<pre class="notranslate">interface XMLAttribute &lt;: XML {
+    type: "XMLAttribute";
+    value: string;
+}
+</pre>
+
+<p>An XML attribute value.</p>
+
+<pre class="notranslate">interface XMLCdata &lt;: XML {
+    type: "XMLCdata";
+    contents: string;
+}
+</pre>
+
+<p>An XML CDATA node.</p>
+
+<pre class="notranslate">interface XMLComment &lt;: XML {
+    type: "XMLComment";
+    contents: string;
+}
+</pre>
+
+<p>An XML comment.</p>
+
+<pre class="notranslate">interface XMLProcessingInstruction &lt;: XML {
+    type: "XMLProcessingInstruction";
+    target: string;
+    contents: string | null;
+}
+</pre>
+
+<p>An XML processing instruction.</p>
+
+<h2 id="ビルダーオブジェクト">ビルダーオブジェクト</h2>
+
+<p>The optional <strong><code>builder</code></strong> parameter to <code>Reflect.parse()</code> makes it possible to construct user-specified data from the parser, rather than the default <code>Node</code> objects. Builder objects may contain any of the callback methods described in this section.</p>
+
+<p>Each callback can produce any custom, user-defined datatype; these are referred to below as <code>CustomExpression</code>, <code>CustomStatement</code>, etc.</p>
+
+<div class="note"><strong>メモ:</strong> Because this library uses <code>null</code> for optional nodes, it is recommended that user-defined datatypes <strong>not</strong> use <code>null</code> as a representation of an AST node.</div>
+
+<p>If the <strong><code>loc</code></strong> option is enabled (see the <a href="/en/SpiderMonkey/Parser_API#Reflect.parse(src.5b.2c_options.5d)" title="en/SpiderMonkey/Parser API#Reflect.parse(src.5b.2c options.5d)">Reflect.parse() options</a> above), then each callback is provided with the source location information of the parsed node as an extra parameter.</p>
+
+<p>All builder callbacks are optional. When a callback is missing, the default format is used, but the provided builder methods are still used recursively for sub-nodes.</p>
+
+<h3 id="Programs_2">Programs</h3>
+
+<h5 id="programbody_loc"><code>program(body[, loc])</code></h5>
+
+<pre class="notranslate">body: [ CustomStatement ]
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomProgram</p>
+
+<p>Callback to produce a custom program node.</p>
+
+<h3 id="Statements_2">Statements</h3>
+
+<h5 id="emptyStatementloc"><code>emptyStatement([loc])</code></h5>
+
+<pre class="notranslate">loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom empty statement node.</p>
+
+<h5 id="blockStatementbody_loc"><code>blockStatement(body[, loc])</code></h5>
+
+<pre class="notranslate">body: CustomStatement
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom block statement node.</p>
+
+<h5 id="expressionStatementexpr_loc"><code>expressionStatement(expr[, loc])</code></h5>
+
+<pre class="notranslate">expr: CustomExpression
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom expression statement node.</p>
+
+<h5 id="labeledStatementlabel_body_loc"><code>labeledStatement(label, body[, loc])</code></h5>
+
+<pre class="notranslate">label: CustomIdentifier
+body: CustomStatement
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom labeled statement node.</p>
+
+<h5 id="ifStatementtest_cons_alt_loc"><code>ifStatement(test, cons, alt[, loc])</code></h5>
+
+<pre class="notranslate">test: CustomExpression
+cons: CustomStatement
+alt: CustomStatement | null
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom <code>if</code> statement node.</p>
+
+<h5 id="switchStatementdisc_cases_isLexical_loc"><code>switchStatement(disc, cases, isLexical[, loc])</code></h5>
+
+<pre class="notranslate">disc: CustomExpression
+cases: [ CustomSwitchCase ]
+isLexical: boolean
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom <code>switch</code> statement node. The <strong><code>isLexical</code></strong> flag is metadata indicating whether the <code>switch</code> statement contains any unnested <code>let</code> 宣言 (and therefore introduces a new lexical scope).</p>
+
+<h5 id="whileStatementtest_body_loc"><code>whileStatement(test, body[, loc])</code></h5>
+
+<pre class="notranslate">test: CustomExpression
+body: CustomStatement
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom <code>while</code> statement node.</p>
+
+<h5 id="doWhileStatementbody_test_loc"><code>doWhileStatement(body, test[, loc])</code></h5>
+
+<pre class="notranslate">body: CustomStatement
+test: CustomExpression
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom <code>do</code>-<code>while</code> statement node.</p>
+
+<h5 id="forStatementinit_test_update_body_loc"><code>forStatement(init, test, update, body[, loc])</code></h5>
+
+<pre class="notranslate">init: CustomVariableDeclaration | CustomExpression | null
+test: CustomExpression | null
+update: CustomExpression | null
+body: CustomStatement
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom <code>for</code> statement node.</p>
+
+<h5 id="forInStatementleft_right_body_isForEach_loc"><code>forInStatement(left, right, body, isForEach[, loc])</code></h5>
+
+<pre class="notranslate">left: CustomVariableDeclaration | CustomExpression
+right: CustomExpression
+body: CustomStatement
+isForEach: boolean
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom <code>for</code>-<code>in</code> statement node. The <strong><code>isForEach</code></strong> flag indicates whether the node is a <code>for each</code> statement.</p>
+
+<h5 id="breakStatementlabel_loc"><code>breakStatement(label[, loc])</code></h5>
+
+<pre class="notranslate">label: CustomIdentifier | null
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom <code>break</code> statement node.</p>
+
+<h5 id="continueStatementlabel_loc"><code>continueStatement(label[, loc])</code></h5>
+
+<pre class="notranslate">label: CustomIdentifier | null
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom <code>continue</code> statement node.</p>
+
+<h5 id="withStatementobj_body_loc"><code>withStatement(obj, body[, loc])</code></h5>
+
+<pre class="notranslate">obj: CustomExpression
+body: CustomStatement
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom <code>with</code> statement node.</p>
+
+<h5 id="returnStatementarg_loc"><code>returnStatement(arg[, loc])</code></h5>
+
+<pre class="notranslate">arg: CustomExpression | null
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom <code>return</code> statement node.</p>
+
+<h5 id="tryStatementbody_handlers_fin_loc"><code>tryStatement(body, handlers, fin[, loc])</code></h5>
+
+<pre class="notranslate">body: CustomStatement
+handlers: [ CustomCatchClause ]
+fin: CustomStatement | null
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom <code>try</code> statement node.</p>
+
+<h5 id="throwStatementarg_loc"><code>throwStatement(arg[, loc])</code></h5>
+
+<pre class="notranslate">arg: CustomExpression
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom <code>throw</code> statement node.</p>
+
+<h5 id="debuggerStatementloc"><code>debuggerStatement([loc])</code></h5>
+
+<pre class="notranslate">loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom <code>debugger</code> statement node.</p>
+
+<h5 id="letStatementhead_body_loc"><code>letStatement(head, body[, loc])</code></h5>
+
+<pre class="notranslate">head: [ CustomDeclarator ]
+body: CustomStatement
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomStatement</p>
+
+<p>Callback to produce a custom <code>let</code> statement node.</p>
+
+<h3 id="宣言_3">宣言</h3>
+
+<h5 id="functionDeclarationname_args_body_isGenerator_isExpression_loc"><code>functionDeclaration(name, args, body, isGenerator, isExpression[, loc])</code></h5>
+
+<pre class="notranslate">name: string
+args: [ CustomPattern ]
+body: CustomStatement | CustomExpression
+isGenerator: boolean
+isExpression: boolean
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomDeclaration</p>
+
+<p>Callback to produce a custom function declaration node.</p>
+
+<h5 id="variableDeclarationkind_dtors_loc"><code>variableDeclaration(kind, dtors[, loc])</code></h5>
+
+<pre class="notranslate">kind: "const" | "let" | "var"
+dtors: [ CustomDeclarator ]
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomDeclaration</p>
+
+<p>Callback to produce a custom variable declaration node.</p>
+
+<h5 id="variableDeclaratorpatt_init_loc"><code>variableDeclarator(patt, init[, loc])</code></h5>
+
+<pre class="notranslate">patt: CustomPattern
+init: CustomExpression | null
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomDeclarator</p>
+
+<p>Callback to produce a custom variable declarator node.</p>
+
+<h3 id="Expressions_3">Expressions</h3>
+
+<h5 id="sequenceExpressionexprs_loc"><code>sequenceExpression(exprs[, loc])</code></h5>
+
+<pre class="notranslate">exprs: [ CustomExpression ]
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom sequence expression node.</p>
+
+<h5 id="conditionalExpressiontest_cons_alt_loc"><code>conditionalExpression(test, cons, alt[, loc])</code></h5>
+
+<pre class="notranslate">test: CustomExpression
+cons: CustomExpression
+alt: CustomExpression
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom conditional expression node.</p>
+
+<h5 id="unaryExpressionop_arg_isPrefix_loc"><code>unaryExpression(op, arg, isPrefix[, loc])</code></h5>
+
+<pre class="notranslate">op: UnaryOperator
+arg: CustomExpression
+isPrefix: boolean
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom unary expression node.</p>
+
+<h5 id="binaryExpressionop_left_right_loc"><code>binaryExpression(op, left, right[, loc])</code></h5>
+
+<pre class="notranslate">op: BinaryOperator
+left: CustomExpression
+right: CustomExpression
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom binary expression node.</p>
+
+<h5 id="assignmentExpressionop_left_right_loc"><code>assignmentExpression(op, left, right[, loc])</code></h5>
+
+<pre class="notranslate">op: AssignmentOperator
+left: CustomExpression
+right: CustomExpression
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom assignment expression node.</p>
+
+<h5 id="logicalExpressionop_left_right_loc"><code>logicalExpression(op, left, right[, loc])</code></h5>
+
+<pre class="notranslate">op: LogicalOperator
+left: CustomExpression
+right: CustomExpression
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom logical expression node.</p>
+
+<h5 id="updateExpressionop_arg_isPrefix_loc"><code>updateExpression(op, arg, isPrefix[, loc])</code></h5>
+
+<pre class="notranslate">op: UpdateOperator
+arg: CustomExpression
+isPrefix: boolean
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom update expression node.</p>
+
+<h5 id="newExpressioncallee_args_loc"><code>newExpression(callee, args[, loc])</code></h5>
+
+<pre class="notranslate">callee: CustomExpression
+args: [ CustomExpression ]
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom <code>new</code>-expression node.</p>
+
+<h5 id="callExpressioncallee_args_loc"><code>callExpression(callee, args[, loc])</code></h5>
+
+<pre class="notranslate">callee: CustomExpression
+args: [ CustomExpression ]
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom function call node.</p>
+
+<h5 id="memberExpressionobj_prop_isComputed_loc"><code>memberExpression(obj, prop, isComputed[, loc])</code></h5>
+
+<pre class="notranslate">obj: CustomExpression
+prop: CustomIdentifier | CustomExpression
+isComputed: boolean
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom member expression node.</p>
+
+<h5 id="functionExpressionname_args_body_isGenerator_isExpression_loc"><code>functionExpression(name, args, body, isGenerator, isExpression[, loc])</code></h5>
+
+<pre class="notranslate">name: CustomIdentifier | null
+args: [ CustomPattern ]
+body: CustomStatement | CustomExpression
+isGenerator: boolean
+isExpression: boolean
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom function expression node.</p>
+
+<h5 id="arrayExpressionelts_loc"><code>arrayExpression(elts[, loc])</code></h5>
+
+<pre class="notranslate">elts: [ CustomExpression | null ]
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom array expression node.</p>
+
+<h5 id="objectExpressionprops_loc"><code>objectExpression(props[, loc])</code></h5>
+
+<pre class="notranslate">props: [ CustomObjectProperty ]
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom object expression node.</p>
+
+<h5 id="thisExpressionloc"><code>thisExpression([loc])</code></h5>
+
+<pre class="notranslate">loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom <code>this</code> expression node.</p>
+
+<h5 id="graphExpressionindex_expr_loc"><code>graphExpression(index, expr[, loc])</code></h5>
+
+<pre class="notranslate">index: uint32 &gt;= 1
+expr: CustomExpression
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom <code>graph</code> expression node.</p>
+
+<h5 id="graphIndexExpressionindex_loc"><code>graphIndexExpression(index[, loc])</code></h5>
+
+<pre class="notranslate">index: uint32 &gt;= 1
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom <code>graph index</code> expression node.</p>
+
+<h5 id="comprehensionExpressionbody_blocks_filter_loc"><code>comprehensionExpression(body, blocks, filter[, loc])</code></h5>
+
+<pre class="notranslate">body: CustomExpression
+blocks: [ CustomComprehensionBlock | CustomComprehensionIf ]
+filter: CustomExpression | null
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom <code>comprehension</code> expression node.</p>
+
+<h5 id="generatorExpressionbody_blocks_filter_loc"><code>generatorExpression(body, blocks, filter[, loc])</code></h5>
+
+<pre class="notranslate">body: CustomExpression
+blocks: [ CustomComprehensionBlock | CustomComprehensionIf ]
+filter: CustomExpression | null
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom <code>generator</code> expression node.</p>
+
+<h5 id="yieldExpressionarg_loc"><code>yieldExpression(arg[, loc])</code></h5>
+
+<pre class="notranslate">arg: CustomExpression
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom <code>yield</code> expression node.</p>
+
+<h5 id="letExpressionhead_body_loc"><code>letExpression(head, body[, loc])</code></h5>
+
+<pre class="notranslate">head: [ CustomDeclarator ]
+body: CustomExpression
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomExpression</p>
+
+<p>Callback to produce a custom <code>let</code> expression node.</p>
+
+<h3 id="Patterns_2">Patterns</h3>
+
+<h5 id="arrayPatternelts_loc"><code>arrayPattern(elts[, loc])</code></h5>
+
+<pre class="notranslate">elts: [ CustomPattern | null ]
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomPattern</p>
+
+<p>Callback to produce a custom array destructuring pattern node.</p>
+
+<h5 id="objectPatternprops_loc"><code>objectPattern(props[, loc])</code></h5>
+
+<pre class="notranslate">props: [ CustomPropertyPattern ]
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomPattern</p>
+
+<p>Callback to produce a custom object destructuring pattern node.</p>
+
+<h5 id="propertyPatternkey_patt_loc"><code>propertyPattern(key, patt[, loc])</code></h5>
+
+<pre class="notranslate">key: CustomLiteral | CustomIdentifier
+patt: CustomPattern
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomPropertyPattern</p>
+
+<p>Callback to produce a custom object property destructuring pattern node.</p>
+
+<h3 id="Clauses_2">Clauses</h3>
+
+<h5 id="switchCasetest_cons_loc"><code>switchCase(test, cons[, loc])</code></h5>
+
+<pre class="notranslate">test: CustomExpression | null
+cons: [ CustomStatement ]
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomSwitchCase</p>
+
+<p>Callback to produce a custom <code>case</code> or <code>default</code> clause node. The <strong><code>test</code></strong> argument is <code>null</code> if and only if the node is a <code>default</code> clause.</p>
+
+<h5 id="catchClausearg_guard_body_loc"><code>catchClause(arg, guard, body[, loc])</code></h5>
+
+<pre class="notranslate">arg: CustomPattern
+guard: CustomExpression
+body: CustomStatement
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomCatchClause</p>
+
+<p>Callback to produce a custom <code>catch</code> clause node.</p>
+
+<h5 id="comprehensionBlockleft_right_isForEach_loc"><code>comprehensionBlock(left, right, isForEach[, loc])</code></h5>
+
+<pre class="notranslate">left: CustomPattern
+right: CustomExpression
+isForEach: boolean
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomComprehensionBlock</p>
+
+<p>Callback to produce a custom comprehension block node. The <strong><code>isForEach</code></strong> flag indicates whether the node is a <code>for each</code> block.</p>
+
+<p><strong><code>comprehensionIf(test[, loc])</code></strong></p>
+
+<pre class="notranslate">test: CustomExpression
+loc: SourceLocation</pre>
+
+<p>戻り値: CustomComprehensionIf</p>
+
+<p>Callback to produce a custom comprehension if node.</p>
+
+<h3 id="Miscellaneous_2">Miscellaneous</h3>
+
+<h5 id="identifiername_loc"><code>identifier(name[, loc])</code></h5>
+
+<pre class="notranslate">name: string
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomIdentifier/CustomPattern/CustomExpression</p>
+
+<p>Callback to produce a custom identifier node.</p>
+
+<h5 id="literalval_loc"><code>literal(val[, loc])</code></h5>
+
+<pre class="notranslate">val: string | boolean | null | number | RegExp
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomLiteral / CustomExpression</p>
+
+<p>Callback to produce a custom literal node.</p>
+
+<h5 id="propertykind_key_val_loc"><code>property(kind, key, val[, loc])</code></h5>
+
+<pre class="notranslate">kind: "init" | "get" | "set"
+key: CustomLiteral | CustomIdentifier
+val: CustomExpression
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomObjectProperty</p>
+
+<p>Callback to produce a custom object property initializer node.</p>
+
+<h3 id="E4X_2">E4X</h3>
+
+<h4 id="宣言_4">宣言</h4>
+
+<h5 id="xmlDefaultDeclarationns_loc"><code>xmlDefaultDeclaration(ns[, loc])</code></h5>
+
+<pre class="notranslate">loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomDeclaration</p>
+
+<p>Callback to produce a custom XML default namespace declaration node.</p>
+
+<h4 id="Expressions_4">Expressions</h4>
+
+<h5 id="xmlAnyNameloc"><code>xmlAnyName([loc])</code></h5>
+
+<pre class="notranslate">loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomXMLAnyName/CustomXML/CustomExpression</p>
+
+<p>Callback to produce a custom XML node for the wildcard pseudo-identifier <code>*</code>.</p>
+
+<h5 id="xmlAttributeSelectorexpr_loc"><code>xmlAttributeSelector(expr[, loc])</code></h5>
+
+<pre class="notranslate">expr: CustomExpression
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomXML/CustomExpression</p>
+
+<p>Callback to produce a custom XML attribute selector node.</p>
+
+<h5 id="xmlFilterExpressionleft_right_loc"><code>xmlFilterExpression(left, right[, loc])</code></h5>
+
+<pre class="notranslate">left: CustomExpression
+right: CustomExpression
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomXML/CustomExpression</p>
+
+<p>Callback to produce a custom XML filter expression node.</p>
+
+<h5 id="xmlQualifiedIdentifierleft_right_isComputed_loc"><code>xmlQualifiedIdentifier(left, right, isComputed[, loc])</code></h5>
+
+<pre class="notranslate">left: CustomIdentifier | CustomXMLAnyName
+right: CustomIdentifier | CustomExpression
+isComputed: boolean
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomXML/CustomExpression</p>
+
+<p>Callback to produce a custom qualified identifier node.</p>
+
+<h5 id="xmlFunctionQualifiedIdentifierright_isComputed_loc"><code>xmlFunctionQualifiedIdentifier(right, isComputed[, loc])</code></h5>
+
+<pre class="notranslate">right: CustomIdentifier | CustomExpression
+isComputed: boolean
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomXML/CustomExpression</p>
+
+<p>Callback to produce a custom XML <code>function</code>-qualified identifier node.</p>
+
+<h5 id="xmlElementcontents_loc"><code>xmlElement(contents[, loc])</code></h5>
+
+<pre class="notranslate">contents: [ CustomXML ]
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomXML/CustomExpression</p>
+
+<p>Callback to produce a custom XML element node.</p>
+
+<h5 id="xmlListcontents_loc"><code>xmlList(contents[, loc])</code></h5>
+
+<pre class="notranslate">contents: [ CustomXML ]
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomXML/CustomExpression</p>
+
+<p>Callback to produce a custom XML list node.</p>
+
+<h4 id="XML_2">XML</h4>
+
+<h5 id="xmlEscapeexpr_loc"><code>xmlEscape(expr[, loc])</code></h5>
+
+<pre class="notranslate">expr: CustomExpression
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomXML</p>
+
+<p>Callback to produce a custom XML escape node.</p>
+
+<h5 id="xmlTexttext_loc"><code>xmlText(text[, loc])</code></h5>
+
+<pre class="notranslate">text: string
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomXML</p>
+
+<p>Callback to produce a custom XML text node.</p>
+
+<h5 id="xmlStartTagcontents_loc"><code>xmlStartTag(contents[, loc])</code></h5>
+
+<pre class="notranslate">contents: [ CustomXML ]
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomXML</p>
+
+<p>Callback to produce a custom XML start-tag node.</p>
+
+<h5 id="xmlEndTagcontents_loc"><code>xmlEndTag(contents[, loc])</code></h5>
+
+<pre class="notranslate">contents: [ CustomXML ]
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomXML</p>
+
+<p>Callback to produce a custom XML end-tag node.</p>
+
+<h5 id="xmlPointTagcontents_loc"><code>xmlPointTag(contents[, loc])</code></h5>
+
+<pre class="notranslate">contents: [ CustomXML ]
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomXML</p>
+
+<p>Callback to produce a custom XML point tag node.</p>
+
+<h5 id="xmlNamecontents_loc"><code>xmlName(contents[, loc])</code></h5>
+
+<pre class="notranslate">contents: string | [ CustomXML ]
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomXML</p>
+
+<p>Callback to produce a custom XML name node.</p>
+
+<h5 id="xmlAttributevalue_loc"><code>xmlAttribute(value[, loc])</code></h5>
+
+<pre class="notranslate">value: string
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomXML</p>
+
+<p>Callback to produce a custom XML attribute node.</p>
+
+<h5 id="xmlCdatacontents_loc"><code>xmlCdata(contents[, loc])</code></h5>
+
+<pre class="notranslate">contents: string
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomXML</p>
+
+<p>Callback to produce a custom XML <code>CDATA</code> node.</p>
+
+<h5 id="xmlCommentcontents_loc"><code>xmlComment(contents[, loc])</code></h5>
+
+<pre class="notranslate">contents: string
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomXML</p>
+
+<p>Callback to produce a custom XML comment node.</p>
+
+<h5 id="xmlProcessingInstructiontarget_contents_loc"><code>xmlProcessingInstruction(target, contents[, loc])</code></h5>
+
+<pre class="notranslate">target: string
+contents: string | null
+loc: SourceLocation
+</pre>
+
+<p><strong>戻り値:</strong> CustomXML</p>
+
+<p>Callback to produce a custom XML processing instruction node.</p>

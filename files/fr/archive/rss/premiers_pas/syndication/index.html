@@ -1,0 +1,101 @@
+---
+title: Syndication
+slug: Archive/RSS/Premiers_pas/Syndication
+tags:
+  - Premiers_pas
+  - RSS
+  - 'RSS:Premiers_pas'
+translation_of: Archive/RSS/Getting_Started/Syndicating
+---
+<p>Cette page explique la syndication Web avec RSS. Vous y apprendrez comment faire pour que visiteurs et machines trouvent facilement votre flux RSS.</p>
+
+<h3 id="Pr.C3.A9sentation_de_la_syndication" name="Pr.C3.A9sentation_de_la_syndication">Présentation de la syndication</h3>
+
+<p>La <strong>syndication</strong> (ou <strong>syndication Web</strong>) consiste à mettre à disposition d'autres personnes du contenu texte, photo, audio, ou vidéo. Lorsque vous écrivez sur votre blog, que vous produisez une émission de radio ou de télévision par Internet, vous syndiquez.</p>
+
+<p>RSS vous aide à syndiquer du contenu, en le présentant sous un format aisément exploitable par des machines.</p>
+
+<p>La syndication avec RSS implique 3 choses :</p>
+
+<ol>
+ <li>Créer un flux RSS.</li>
+ <li>Ajouter un élément <code><a href="fr/HTML/Element/link">&lt;link&gt;</a></code> spécial dans une ou des pages HTML.</li>
+ <li>Ajouter un élément <code><a href="fr/HTML/Element/a">&lt;a&gt;</a></code> spécial dans une ou des pages HTML.</li>
+</ol>
+
+<p>Nous avons déjà évoqué le 1er point - la création des flux RSS - aussi nous intéresserons nous plus particulièrement aux points 2 et 3 dans ce document.</p>
+
+<h3 id="Ajouter_l.27.C3.A9l.C3.A9ment_.3Clink.3E" name="Ajouter_l.27.C3.A9l.C3.A9ment_.3Clink.3E">Ajouter l'élément &lt;link&gt;</h3>
+
+<p>Souvent, les données présentes dans un flux RSS le sont également sur une page Web HTML. Lorsque c'est le cas, la page Web HTML peut signaler la présence du flux aux visiteurs et aux machines avec un code comme celui-ci :</p>
+
+<pre class="eval">&lt;link rel="alternate" type="application/rss+xml" href="<a class="external" href="http://example.com/feed" rel="freelink">http://example.com/feed</a>" /&gt;
+</pre>
+
+<p>Vous pouvez également annoncer le flux RSS depuis d'autres emplacements (par exemple, depuis un billet de blog). Vous pouvez utiliser dans ce cas un code similaire à ceci :</p>
+
+<pre class="eval">&lt;link rel="home" type="application/rss+xml" href="<a class="external" href="http://example.com/feed" rel="freelink">http://example.com/feed</a>" /&gt;
+</pre>
+
+<p>Remarquez que cela ressemble fortement au code précédent, la seule différence étant la valeur de l'attribut <code>rel</code> (la valeur de <code>rel</code> dans le code précédent était <code>alternate</code>, elle est ici <code>home</code>.</p>
+
+<div class="note">
+<p><strong>NOTE</strong> : Il y a pas mal d'abus dans l'utilisation de l'élément <code>&lt;link&gt;</code> pour la syndication RSS. Certains blogueurs veulent que les internautes puissent <em>s'abonner</em> à leur blog depuis n'importe quelle page (et pas uniquement leur <em>page d'accueil</em>). Beaucoup ont donc ajouté l'élément <code>&lt;link&gt;</code> avec un attribut <code>rel="alternate"</code> sur chaque page (dans les entrées du blog également, et pas uniquement sur la <em>page d'accueil</em>). C'est une mauvaise pratique ! Cela devrait être <code>rel="home"</code>. (Voir <a href="fr/Understanding_rel_and_rev">Understanding rel and rev</a> pour plus d'informations.) La chose la plus importante lorsque vous utilisez l'élément <code>&lt;link&gt;</code> pour la syndication de votre flux RSS est de mettre l'attribut <code>type="application/rss+xml"</code>.</p>
+</div>
+
+<h3 id="Ajouter_l.27.C3.A9l.C3.A9ment_.3Ca.3E" name="Ajouter_l.27.C3.A9l.C3.A9ment_.3Ca.3E">Ajouter l'élément &lt;a&gt;</h3>
+
+<p>L'utilisation de l'élement HTML <code>&lt;link&gt;</code> est très puissante mais elle est la plupart de temps <em>cachée</em>. Pour publier plus directement votre flux RSS, vous pouvez utiliser l'élément HTML <code>&lt;a&gt;</code>. Cela imite l'élément <code>&lt;link&gt;</code> que nous venons de voir.</p>
+
+<p>Quand vous faites un lien depuis la page Web où les données d'un flux RSS sont également présentes, utilisez :</p>
+
+<pre class="eval">&lt;a rel="alternate" type="application/rss+xml" href="<a class="external" href="http://example.com/feed" rel="freelink">http://example.com/feed</a>"&gt;…&lt;/a&gt;
+</pre>
+
+<p>Quand vous faites un lien depuis, par exemple, un article de blog, utilisez le code suivant :</p>
+
+<pre class="eval">&lt;a rel="home" type="application/rss+xml" href="<a class="external" href="http://example.com/feed" rel="freelink">http://example.com/feed</a>"&gt;…&lt;/a&gt;
+</pre>
+
+<p>Une nouvelle fois, remarquez que les deux codes sont très similaires. Seule la valeur de l'attribut <code>rel</code> change. La valeur de rel du premier code est <code>alternate</code> ; dans le second elle est <code>home</code>.</p>
+
+<h3 id="Ic.C3.B4nes_de_flux" name="Ic.C3.B4nes_de_flux">Icônes de flux</h3>
+
+<p>Les flux RSS (ainsi que les autres) utilisent une icône spécifique. Il est recommandé de l'utiliser lorsque vous créez le lien spécial <code>&lt;a&gt;</code> vers votre flux. Cette icône ressemble à cela :</p>
+
+<dl>
+ <dd><img alt="Image:Feed-icon-32x32.png"></dd>
+</dl>
+
+<p>Vous pouvez obtenir d'autres icônes de ce type sur le site <a class="external" href="http://feedicons.com/">Feed Icons</a>. Il existe différentes couleurs et tailles, et les fichiers sources sont disponibles également.</p>
+
+<h3 id="Techniques_de_syndication_avanc.C3.A9e" name="Techniques_de_syndication_avanc.C3.A9e">Techniques de syndication avancée</h3>
+
+<p>Bien que cette technique de syndication avancée ne soit pas nécessaire, son support est recommandé ; en particulier pour les sites Web et les applications avec de grande exigence de performance.</p>
+
+<p>Le protocole <a href="fr/HTTP">HTTP</a> -- l'une des technologies clef du Web -- fournit un moyen d'établir des priorités dans le type de contenu qu'un client HTTP préfère recevoir. Cette technique en tire avantage en faisant en sorte que le client <em>préfére</em> RSS (plutôt que HTML ou un autre format). Voici un exemple simple de ce qui peut être fait :</p>
+
+<pre class="eval">Accept: application/rss+xml, text/html
+</pre>
+
+<p>Cependant, avec des logiciels de production, cela ressemblera plus à :</p>
+
+<pre class="eval">Accept: application/rss+xml, application/xhtml+xml, text/html
+</pre>
+
+<p>Voici un exemple plus complet :</p>
+
+<pre class="eval">GET / HTTP/1.1
+Host: exemple.com
+Accept: application/rss+xml, application/xhtml+xml, text/html
+</pre>
+
+<p>Lorsqu'un serveur HTTP (ou un script côté serveur) reçoit ce code, il devrait rediriger le client HTTP vers le flux, en envoyant un code <code>HTTP 302 Found</code>. Ce qui donne quelque chose comme :</p>
+
+<pre class="eval">HTTP/1.1 302 Found
+Location: <a class="external" href="http://example.com/feed" rel="freelink">http://example.com/feed</a>
+</pre>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/RSS:Premiers_pas:Hello_World" style="float: left;">« Précédent</a><a href="/fr/docs/RSS:Premiers_pas:Blogs">Suivant  »</a></p>
+</div><p></p>

@@ -1,0 +1,132 @@
+---
+title: Manipulation de listes
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Manipulation_de_listes
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Manipulating_Lists
+---
+<p> </p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Modification_d'une_interface_XUL" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Les_objets_boîtes">Suivant  »</a></p>
+</div>
+<p>La boîte de liste XUL fournit un certain nombre de méthodes spécialisées.</p>
+<h3 id="Manipulation_d.27une_liste" name="Manipulation_d.27une_liste">Manipulation d'une liste</h3>
+<p>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/listbox" title="listbox">listbox</a></code> fournit de nombreuses méthodes pour rechercher et manipuler ses items. Bien que les boîtes de liste puissent être manipulées en utilisant les fonctions standard de <a href="/fr/DOM" title="fr/DOM">DOM</a>, il est recommandé d'employer les fonctions spécialisées de <code><a href="/fr/docs/Mozilla/Tech/XUL/listbox" title="listbox">listbox</a></code> autant que possible. Ces fonctions sont plus simples et feront correctement leur travail.</p>
+<p>La fonction <code>appendItem()</code> est utilisée pour ajouter un nouvel item à la fin d'une liste. Elle est similaire à la fonction <code><a href="/fr/DOM/element.appendChild" title="fr/DOM/element.appendChild">appendChild()</a></code> du DOM sauf qu'elle prend un libellé texte, et que vous n'avez pas à vous soucier où placer votre item dans la structure de la liste. Voici un exemple :</p>
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_1.xul">Voir</a></p>
+<pre>&lt;script&gt;
+function addItem(){
+  document.getElementById('laliste').appendItem("Jeudi", "jeu");
+}
+&lt;/script&gt;
+
+&lt;listbox id="laliste"/&gt;
+
+&lt;button label="Ajouter" oncommand="addItem();"/&gt;
+</pre>
+<p>La fonction <code>appendItem()</code> prend deux arguments, le libellé, dans l'exemple 'Jeudi', et une valeur 'jeu'. Les deux arguments correspondent aux attributs <code id="a-label"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/label">label</a></code> et <code id="a-value"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/value">value</a></code> dans l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/listitem" title="listitem">listitem</a></code>. L'attribut <code id="a-value"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/value">value</a></code> est optionnel et sert à affecter à un item une valeur que vous pouvez réutiliser ensuite dans un script.</p>
+<p>De même, il existe les fonctions <code>insertItemAt()</code> et <code>removeItemAt()</code>, qui ajoutent respectivement un nouvel item et suppriment un item existant. La syntaxe est la suivante :</p>
+<pre>list.insertItemAt(3, "Jeudi", "jeu");
+list.removeItemAt(3);
+</pre>
+<p>La fonction <code>insertItemAt()</code> prend un argument supplémentaire, la position pour insérer le nouvel item. Le nouvel item est inséré à cet index. Ainsi, dans l'exemple, le nouvel item sera ajouté à la position 3 et l'item qui avait cette position aura maintenant l'index 4. Rappelez-vous que le premier item est 0. La fonction <code>removeItemAt()</code> supprimera l'item à un index spécifique.</p>
+<p>Ces trois méthodes sont également disponibles pour plusieurs autres éléments XUL et fonctionnent de la même manière. En fait, ces méthodes font parties de l'interface <code><a class="external" href="http://www.xulplanet.com/references/xpcomref/ifaces/nsIDOMXULSelectControlElement.html">nsIDOMXULSelectControlElement</a></code> donc tous les éléments XUL qui implémentent cette interface héritent de ces méthodes. Les éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code>, <code><a href="/fr/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code> et <code><a href="/fr/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code> en font partie. Par exemple, pour ajouter un nouvel item à un <code><a href="/fr/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code>, vous pouvez employer la même syntaxe qu'une <code><a href="/fr/docs/Mozilla/Tech/XUL/listbox" title="listbox">listbox</a></code>. Le bon type d'élément sera ajouté dans chaque cas.</p>
+<h3 id="S.C3.A9lection_de_liste" name="S.C3.A9lection_de_liste">Sélection de liste</h3>
+<p>L'interface <code>nsIDOMXULSelectControlElement</code> fournit deux propriétés supplémentaires, <code>selectedIndex</code> et <code>selectedItem</code>. La première renvoie l'index de l'item sélectionné tandis que la seconde renvoie l'élément sélectionné. Par exemple, la valeur de retour de <code>selectedItem</code> sera le <code><a href="/fr/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code> sélectionné. Si aucun item n'est sélectionné, <code><code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propriétés/selectedIndex">selectedIndex</a></span></code></code> retournera '-1', et <code><code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propriétés/selectedItem">selectedItem</a></span></code></code> renverra 'null'.</p>
+<h4 id="R.C3.A9cup.C3.A9rer_l.27item_s.C3.A9lectionn.C3.A9" name="R.C3.A9cup.C3.A9rer_l.27item_s.C3.A9lectionn.C3.A9">Récupérer l'item sélectionné</h4>
+<p>Ces deux propriétés sont généralement inspectées durant un événement de sélection, comme dans l'exemple suivant :</p>
+<p><span id="Exemple_2"><a id="Exemple_2"></a><strong>Exemple 2</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_2.xul">Voir</a></p>
+<pre>&lt;listbox id="thelist" onselect="alert(this.selectedItem.label);"&gt;
+  &lt;listitem label="Petit"/&gt;
+  &lt;listitem label="Moyen"/&gt;
+  &lt;listitem label="Grand"/&gt;
+&lt;/listbox&gt;
+</pre>
+<p>L'événement de sélection est exécuté par une <code><a href="/fr/docs/Mozilla/Tech/XUL/listbox" title="listbox">listbox</a></code> quand un item de la liste est sélectionné. Le gestionnaire affiche ici une alerte contenant le libellé de l'item sélectionné dans la liste. Puisque l'événement de sélection s'est exécuté, nous pouvons supposer qu'un item est sélectionné. Dans d'autres cas, vous devrez vous assurer que <code>selectedItem</code> n'est pas 'null' avant de poursuivre.</p>
+<p>L'événement de sélection est également exécuté quand un bouton radio dans un <code><a href="/fr/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code> est sélectionné et quand un onglet est sélectionné dans l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code>. Cependant, les <code><a href="/fr/docs/Mozilla/Tech/XUL/menulists" title="menulists">menulists</a></code> ne génèrent pas d'événement de sélection ; vous pouvez écouter l'événement "command" à la place pour traiter la sélection d'un item.</p>
+<p>Pour l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tabs" title="tabs">tabs</a></code>, il est souvent plus commode d'employer les fonctions de l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code>. Il a aussi une fonction <code><code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propriétés/selectedIndex">selectedIndex</a></span></code></code> qui renverra l'index de l'onglet sélectionné. Cependant, pour récupérer l'item sélectionné, utilisez plutôt la fonction <code><code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propriétés/selectedTab">selectedTab</a></span></code></code> de <code><a href="/fr/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code>. Ou alors, utilisez la fonction <code><code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propriétés/selectedPanel">selectedPanel</a></span></code></code> pour récupérer la page d'onglet sélectionnée, ce qui renvoie le contenu associé à l'onglet.</p>
+<h4 id="Modifier_la_s.C3.A9lection" name="Modifier_la_s.C3.A9lection">Modifier la sélection</h4>
+<p>Toutes les propriétés de sélection décrites ci-dessus peuvent également se voir assigner une nouvelle valeur pour modifier la sélection. Dans l'exemple suivant, la propriété <code><code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propriétés/selectedIndex">selectedIndex</a></span></code></code> de l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code> est modifiée avec la valeur entrée dans un champ de saisie. Ce code n'est cependant pas performant ; par exemple, il ne vérifie pas si la valeur entrée est hors limite. Il est conseillé d'ajouter ce genre de vérification d'erreur.</p>
+<p><span id="Exemple_3"><a id="Exemple_3"></a><strong>Exemple 3</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_3.xul">Voir</a></p>
+<pre>&lt;script&gt;
+function doSelect(){
+  var val = document.getElementById('number').value;
+  val = Number(val);
+  if (val != null)
+    document.getElementById('level').selectedIndex = val - 1;
+}
+&lt;/script&gt;
+
+&lt;hbox align="center"&gt;
+  &lt;label value="Entrez un nombre compris entre 1 et 3 :"/&gt;
+  &lt;textbox id="number"/&gt;
+  &lt;button label="Sélectionnez" oncommand="doSelect();"/&gt;
+&lt;/hbox&gt;
+
+&lt;radiogroup id="level"&gt;
+  &lt;radio label="Excellent"/&gt;
+  &lt;radio label="Bon"/&gt;
+  &lt;radio label="Mauvais"/&gt;
+&lt;/radiogroup&gt;
+</pre>
+<p>Les boîtes de liste supportent aussi les sélections multiples et les fonctions de l'interface <code><a class="external" href="http://www.xulplanet.com/references/xpcomref/ifaces/nsIDOMXULMultiSelectControlElement.html">nsIDOMXULMultiSelectControlElement</a></code>. Cette interface fournit un certain nombre de fonctions dédiées pour contrôler la sélection multiple. Par exemple, la propriété <code><code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propriétés/selectedItems">selectedItems</a></span></code></code> contient une liste des items qui sont sélectionnés, alors que la propriété <code><code><span><a href="https://developer.mozilla.org/fr/docs/XUL/Propriétés/selectedCount">selectedCount</a></span></code></code> contient le nombre d'items sélectionnés. En général, vous utiliserez ces propriétés pour parcourir la liste et y effectuer quelques opérations sur chaque item. Faites attention lorsque vous parcourez les items sélectionnés de la liste ; si vous modifiez les items dans la liste pendant que vous les parcourez, la liste sera modifiée et les propriétés de sélection pourraient retourner des valeurs différentes. C'est une raison pour laquelle il est utile de manipuler la liste par item plutôt que par l'index.</p>
+<h4 id="Effacer_des_items_s.C3.A9lectionn.C3.A9s" name="Effacer_des_items_s.C3.A9lectionn.C3.A9s">Effacer des items sélectionnés</h4>
+<p>L'exemple suivant montre une méthode correcte de suppression des items sélectionnés :</p>
+<p><span id="Exemple_4"><a id="Exemple_4"></a><strong>Exemple 4</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_4.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_4.xul">Voir</a></p>
+<pre>&lt;script&gt;
+function deleteSelection(){
+  var list = document.getElementById('thelist');
+  var count = list.selectedCount;
+  while (count--){
+    var item = list.selectedItems[0];
+    list.removeItemAt(list.getIndexOfItem(item));
+  }
+}
+&lt;/script&gt;
+
+&lt;button label="Supprimer" oncommand="deleteSelection();"/&gt;
+
+&lt;listbox id="thelist" seltype="multiple"&gt;
+  &lt;listitem label="Cheddar"/&gt;
+  &lt;listitem label="Cheshire"/&gt;
+  &lt;listitem label="Edam"/&gt;
+  &lt;listitem label="Gouda"/&gt;
+  &lt;listitem label="Havartie"/&gt;
+&lt;/listbox&gt;
+</pre>
+<p>À l'intérieur de la boucle <code>while</code>,</p>
+<ul> <li>Nous récupérons d'abord l'item sélectionné à l'index 0. Le premier item sélectionné est toujours recherché car la taille du tableau diminuera au fur et à mesure que les items seront supprimés.</li> <li>Ensuite, nous supprimons l'item en utilisant la fonction <code>removeItemAt</code>. Comme cette fonction nécessite un index,</li> <li>Nous pouvons faire correspondre un item et son index en utilisant la fonction <code>getIndexOfItem()</code>. La fonction inverse correspondante est <code>getItemAtIndex()</code></li>
+</ul>
+<p>L'interface <code><a class="external" href="http://www.xulplanet.com/references/xpcomref/ifaces/nsIDOMXULMultiSelectControlElement.html">nsIDOMXULMultiSelectControlElement</a></code> fournit également des méthodes pour modifier les items sélectionnés. Par exemple, la fonction <code>addItemToSelection()</code> ajoute un nouvel item à la liste des items sélectionnés, sans vider la sélection existante. La fonction <code>removeItemFromSelection()</code> supprime un seul item dans la sélection.</p>
+<h3 id="D.C3.A9filement_de_liste" name="D.C3.A9filement_de_liste">Défilement de liste</h3>
+<p>Si la boîte de liste contient plus de lignes qu'elle ne peut en afficher, une barre de défilement apparaîtra pour permettre à l'utilisateur de faire défiler la liste. La position du défilement peut être ajustée en utilisant quelques méthodes de <code><a href="/fr/docs/Mozilla/Tech/XUL/listbox" title="listbox">listbox</a></code>.</p>
+<p>La méthode <code>scrollToIndex()</code> fait défiler jusqu'à une ligne donnée. Cette boîte de liste défilera jusqu'à ce que la ligne soit la première ligne visible, à moins que la ligne ne soit proche de la fin de la liste des items. La méthode <code>ensureIndexIsVisible()</code> est similaire puisqu'elle fait défiler la liste pour afficher une ligne, mais cette méthode ne défilera pas si l'item est déjà visible. Ainsi, la première fonction est utilisée pour faire défiler jusqu'à une ligne précise alors que la deuxième est utilisée pour s'assurer que la ligne soit visible. Il y a également <code>ensureItemIsVisible()</code> qui nécessite un item en argument au lieu d'un index. Comparez l'effet de ces deux fonctions à des positions de défilement différentes dans cet exemple :</p>
+<p><span id="Exemple_5"><a id="Exemple_5"></a><strong>Exemple 5</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_5.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_5.xul">Voir</a></p>
+<pre>&lt;button label="scrollToIndex"
+           oncommand="document.getElementById('thelist').scrollToIndex(4);"/&gt;
+&lt;button label="ensureIndexIsVisible"
+           oncommand="document.getElementById('thelist').ensureIndexIsVisible(4);"/&gt;
+
+&lt;listbox id="thelist" rows="5"&gt;
+  &lt;listitem label="1"/&gt;
+  &lt;listitem label="2"/&gt;
+  &lt;listitem label="3"/&gt;
+  &lt;listitem label="4"/&gt;
+  &lt;listitem label="5"/&gt;
+  &lt;listitem label="6"/&gt;
+  &lt;listitem label="7"/&gt;
+  &lt;listitem label="8"/&gt;
+  &lt;listitem label="9"/&gt;
+  &lt;listitem label="10"/&gt;
+  &lt;listitem label="11"/&gt;
+  &lt;listitem label="12"/&gt;
+&lt;/listbox&gt;
+</pre>
+<hr>
+<p>Nous verrons ensuite les objets boîtes XUL.</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Modification_d'une_interface_XUL" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Les_objets_boîtes">Suivant  »</a></p>
+</div>
+<p><span class="comment">Interwiki</span></p>

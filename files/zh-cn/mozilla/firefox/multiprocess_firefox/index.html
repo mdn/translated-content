@@ -1,0 +1,78 @@
+---
+title: 多进程 Firefox
+slug: Mozilla/Firefox/Multiprocess_Firefox
+tags:
+  - NeedsTranslation
+  - TopicStub
+translation_of: Mozilla/Firefox/Multiprocess_Firefox
+---
+<div>{{FirefoxSidebar}}</div><p>在目前版本的桌面版 Firefox 中，整个浏览器运行在单个操作系统进程中。尤其是 JavaScript 在同一进程中运行着用户界面（UI，也称 "chrome 代码"），它还搭载着所有网页（也称“内容”，即“标签页”）。<br>
+ <br>
+ 未来版本的 Firefox 将在单独的进程中运行浏览器界面，与网页内容的进程分离。这种架构的第一次迭代是所有浏览器标签页在同一个进程中运行，浏览器界面运行在另一个进程中。在未来的迭代中，我们期望有一个以上的内容进程。提供多进程 Firefox 的项目名为 Electrolysis，有时被简称为 e10s。</p>
+
+<p>普通的网页不会受到多进程 Firefox 的影响。Firefox 本身和 Firefox 附加组件的开发者将受到影响，如果他们的代码依赖于能直接访问 Web 内容。</p>
+
+<p>不同于此前的直接访问内容，chrome JavaScript 将使用<a href="/Firefox/Multiprocess_Firefox/Message_manager">消息管理器</a>来访问内容。为了帮助缓解过渡期，我们实现了<a href="/Firefox/Multiprocess_Firefox/Cross_Process_Object_Wrappers">跨进程对象包装器（CPOW）</a>和一些<a href="/Firefox/Multiprocess_Firefox/Limitations_of_chrome_scripts#Compatibility_shims">面向附加组件开发者的兼容性垫片</a>。如果你是一名附加组件开发者并且想知道自己是否受到影响，参见<a href="/Mozilla/Add-ons/Working_with_multiprocess_Firefox">多进程 Firefox 工作指南</a>。</p>
+
+<p>多进程 Firefox 目前在 <a class="external external-icon" href="https://www.mozilla.org/firefox/developer/">开发者版本</a> 默认启用。</p>
+
+<hr>
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="/Firefox/Multiprocess_Firefox/Technical_overview">技术概述</a></dt>
+ <dd>高等层面看待多进程 Firefox 如何被实现。</dd>
+ <dt><a href="/Firefox/Multiprocess_Firefox/Glossary">术语表</a></dt>
+ <dd>多进程 Firefox 领域相关的术语参考。</dd>
+ <dt><a href="/Firefox/Multiprocess_Firefox/Message_Manager">消息管理器</a></dt>
+ <dd>完整的指南，在 chrome 与内容之间通信的对象。</dd>
+ <dt><a href="/en-US/Add-ons/SDK/Guides/Multiprocess_Firefox_and_the_SDK">基于 SDK 的附加组件</a></dt>
+ <dd>如何迁移使用 Add-on SDK 开发的附加组件。</dd>
+ <dt><a href="/Firefox/Multiprocess_Firefox/Which_URIs_load_where">各类 URI 在哪里加载</a></dt>
+ <dd>各类 URI 的快速指南：chrome:, about:, file:, resource: - 在哪个进程被加载。</dd>
+</dl>
+</div>
+
+<div class="column-half">
+<dl>
+ <dt><a href="/Firefox/Multiprocess_Firefox/Motivation">动机</a></dt>
+ <dd>为什么我们要实现多进程的 Firefox：性能、安全和稳定性。</dd>
+ <dt><a href="/Mozilla/Add-ons/Working_with_multiprocess_Firefox">附加组件迁移指南</a></dt>
+ <dd>如果你是一名附加组件开发者，看看你的影响，以及如何更新你的代码。</dd>
+ <dt><a href="/Firefox/Multiprocess_Firefox/Cross_Process_Object_Wrappers">跨进程对象包装器（CPOW）</a></dt>
+ <dd>Cross Process Object Wrappers 是一个迁移辅助，使 chrome 代码能够访问内容。</dd>
+ <dt><a href="/Firefox/Multiprocess_Firefox/Debugging_frame_scripts">调试内容进程</a></dt>
+ <dd>如何调试运行在内容进程中的代码，包括框架和进程脚本。</dd>
+ <dt><a href="/docs/Mozilla/Firefox/Multiprocess_Firefox/Tab_selection_in_multiprocess_Firefox">多进程 Firefox 中的标签选择</a></dt>
+ <dd>多进程 Firefox 中如何切换标签页。</dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="/Firefox/Multiprocess_Firefox/Limitations_of_chrome_scripts">chrome 脚本的限制</a></dt>
+ <dd>哪些 chrome 代码的做法将不再有效，以及如何解决。</dd>
+</dl>
+</div>
+
+<div class="column-half">
+<dl>
+ <dt><a href="/Firefox/Multiprocess_Firefox/Limitations_of_frame_scripts">框架脚本的限制</a></dt>
+ <dd>哪些框架脚本的做法将不再有效，以及如何代替。</dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h2 id="联系我们">联系我们</h2>
+
+<p>有关此项目的更多信息、参与或提问。</p>
+
+<ul>
+ <li><strong>Electrolysis 项目页面</strong>: <a href="https://wiki.mozilla.org/Electrolysis">https://wiki.mozilla.org/Electrolysis</a></li>
+ <li><strong>IRC</strong>: #e10s on <a href="https://wiki.mozilla.org/IRC">irc.mozilla.org</a></li>
+ <li><strong>邮件列表</strong>: <a href="https://groups.google.com/forum/#!forum/mozilla.dev.tech.electrolysis">dev.tech.electrolysis</a></li>
+</ul>

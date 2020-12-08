@@ -1,0 +1,63 @@
+---
+title: Les contrôles numériques
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Les_contrôles_numériques
+tags:
+  - Firefox 3
+  - Traduction_à_relire
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Numeric_Controls
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL/Les_champs_de_saisie" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL/Les_contrôles_de_listes">Suivant  »</a></p>
+</div>
+
+<p>XUL comprend deux éléments servant aux entrées de valeurs ou de plages numériques, ainsi que de deux éléments pour la saisie des dates et heures. Ces éléments ne sont disponibles que dans Firefox 3 et suivant.</p>
+<h3 id="Champs_num.C3.A9rique" name="Champs_num.C3.A9rique">Champs numérique</h3>
+<p>Une boîte de texte peut servir à la saisie de nombres en lui définissant un attribut <code id="a-type"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/type">type</a></code> avec la valeur <code>number</code>. Ce type de boîte ne peut servir que pour entrer des nombres. Tout autre caractère tapé ne sera pas accepté et sera ignoré. De plus, des flèches apparaitront à côté de la boîte de texte pour permettre à l'utilisateur de faire défiler les valeurs.</p>
+<div class="float-right">
+  <img alt="Image:Controlguide-textbox-number.png" class="internal" src="/@api/deki/files/1249/=Controlguide-textbox-number.png"></div>
+<p>Comme avec les autres boîtes de texte, la valeur par défaut peut être définie avec l'attribut <code id="a-value"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/value">value</a></code>. Naturellement, cette valeur doit être un nombre. Toutefois, les valeurs minimale et maximale peuvent être définies avec les attributs <code id="a-min"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/min">min</a></code> et <code id="a-max"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/max">max</a></code>. S'ils sont précisés, vous pouvez contrôler l'intervalle de valeurs permis par la boîte de texte. Si l'utilisateur tente d'entrer une valeur inférieure ou supérieure à cet intervalle, elle sera réinitialisée avec le minimum ou le maximum. Par exemple, la boîte de texte suivante a un intervalle de 1 à 20.</p>
+<pre>&lt;textbox type="number" min="1" max="20"/&gt;
+</pre>
+<p>Comme la valeur par défaut n'est pas définie, la boîte aura la valeur 1, la valeur minimum. L'attribut <code id="a-min"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/min">min</a></code> est défini à <code>1</code> pour indiquer la plus petite valeur possible, et l'attribut <code id="a-max"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/max">max</a></code> est défini à <code>20</code> pour indiquer la plus grande valeur possible. Si la valeur minimale n'est pas définie, elle aura une valeur par défaut de 0. La valeur maximale par défaut est la valeur spéciale <code>Infinity</code> signifiant qu'il n'y a aucune limite.</p>
+<h4 id="Autres_attributs_des_champs_num.C3.A9riques" name="Autres_attributs_des_champs_num.C3.A9riques">Autres attributs des champs numériques</h4>
+<p>L'attribut <code id="a-increment"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/increment">increment</a></code> peut servir à spécifier de combien est modifiée la valeur lorsque les flèches sont pressées. La valeur par défaut est 1, mais une valeur différente permettra au nombre de changer d'une plus grosse valeur. L'exemple suivant effectue des écarts de multiples de 10.</p>
+<pre>&lt;textbox type="number" increment="10" max="100"/&gt;
+</pre>
+<p>Cette boîte de texte change par multiples de 10 de 0 à 100. Comme l'attribut <code id="a-min"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/min">min</a></code> n'a pas été défini, sa valeur par défaut est 0. Notez que l'utilisateur peut parfaitement entrer une autre valeur. L'attribut <code id="a-increment"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/increment">increment</a></code> n'affecte que les flèches. L'utilisateur peut également incrémenter ou décrémenter la valeur en utilisant les flèches haut et bas du clavier lorsque la boîte de texte à le focus.</p>
+<p>L'attribut <code id="a-decimalplaces"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/decimalplaces">decimalplaces</a></code> indique le nombre de décimales à afficher. La valeur par défaut est 0, ce qui signifie que la boîte n'affiche que des entiers. Une valeur différente permet d'afficher des nombres décimaux.</p>
+<pre>&lt;textbox type="number" decimalplaces="2"/&gt;
+</pre>
+<p>Dans cet exemple, deux chiffres après la virgule sont affichés. Les valeurs comportant d'autres décimales sont arrondies à 2 chiffres après la virgule.</p>
+<h3 id=".C3.89chelles_de_valeurs" name=".C3.89chelles_de_valeurs">Échelles de valeurs</h3>
+<p>Un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/scale" title="scale">scale</a></code> peut également être utilisé pour sélectionner une plage de valeurs. Plutôt que d'avoir une boîte de texte, un curseur glissant est utilisé. L'utilisateur peut déplacer le curseur de l'échelle pour ajuster la valeur.</p>
+<div class="float-right">
+  <img alt="Image:Controlguide-scale.png" class="internal" src="/@api/deki/files/1246/=Controlguide-scale.png"></div>
+<p>La plupart des attributs de la boîte de texte numérique peuvent servir avec une échelle : <code id="a-value"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/value">value</a></code>, <code id="a-min"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/min">min</a></code>, <code id="a-max"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/max">max</a></code> et <code id="a-increment"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/increment">increment</a></code> peuvent servir de la même façon. L'échelle de valeur n'affiche en fait aucune valeur, mais peut le faire grâce à un script. Une échelle déclenche un événement <code>change</code> à chaque fois que sa valeur est modifiée.</p>
+<pre>&lt;scale value="40" min="1" max="50"/&gt;
+</pre>
+<p>La valeur par défaut de cette échelle est 40, et elle a une plage comprise entre 1 et 50.</p>
+<p>Une boîte de texte numérique est employée généralement lorsque la valeur est importante pour l'utilisateur, comme un champs pour saisie un nombre de jours ou la taille maximale d'un fichier. Une échelle de valeur servira plutôt lorsque la valeur n'est pas très importante, comme l'augmentation ou la diminution d'un état, par exemple pour le volume sonore ou un zoom.</p>
+<p>La disposition par défaut d'une échelle est horizontale avec à gauche les valeurs les plus basses et à droite, les plus hautes. Vous pouvez toutefois modifier cette orientation avec les attributs <code id="a-orient"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/orient">orient</a></code> et <code id="a-dir"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/dir">dir</a></code>.</p>
+<pre>&lt;scale orient="vertical" dir="reverse"/&gt;
+</pre>
+<p>Cette échelle de valeurs s'affichera verticalement avec les valeurs les plus basses en bas, et les plus élevées en haut.</p>
+<h3 id="Champs_de_saisie_de_date_et_heure" name="Champs_de_saisie_de_date_et_heure">Champs de saisie de date et heure</h3>
+<p>Les éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/datepicker" title="datepicker">datepicker</a></code> et <code><a href="/fr/docs/Mozilla/Tech/XUL/timepicker" title="timepicker">timepicker</a></code> permettent à l'utilisateur d'entrer des dates et des heures. À leur utilisation, ils affichent une série de boîtes de texte numérique pour entrer chaque composants de la date et de l'heure.</p>
+<pre>&lt;datepicker value="2004/3/24"/&gt;
+&lt;timepicker value="15:30:00"/&gt;
+</pre>
+<div class="float-right">
+  <img alt="Image:Controlguide-timepicker.png" class="internal" src="/@api/deki/files/1253/=Controlguide-timepicker.png"></div>
+<p>L'attribut <code>value</code> permet de définir la valeur par défaut ; et si cet attribut est omis, le champ sera initialisé avec la date et l'heure courante. Le format de l'attribut est exactement comme ci-dessus, c'est-à-dire que les dates sont de la forme YYY/MM/DD et les heures sont de la forme HH:MM:SS (bien que les secondes et les autres colonnes peuvent être omises).</p>
+<p>Ces deux éléments garantissent que l'utilisateur a bien entré une valeur date et une heure. De cette manière, vous n'avez pas à vous soucier qu'il s'agit d'une date valide, en vérifiant que le jour n'est pas supérieur au nombre de jour dans le mois, en gérant les années bissextiles, et ainsi de suite.</p>
+<p>Tandis que <code><a href="/fr/docs/Mozilla/Tech/XUL/timepicker" title="timepicker">timepicker</a></code> ne possède qu'un seul style, <code><a href="/fr/docs/Mozilla/Tech/XUL/datepicker" title="datepicker">datepicker</a></code> possède trois variations différentes. Le style par défaut affiche trois champs pour l'année, le mois et le jour. L'attribut <code id="a-type"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/type">type</a></code> permet de choisir les deux autres. Une valeur de <code>grid</code> utilise une grille de calendrier, comme affichée dans l'image ci-dessous.</p>
+<p><img alt="Image:Controlsguide-datepicker-grid.png" class="internal" src="/@api/deki/files/1260/=Controlsguide-datepicker-grid.png"></p>
+<p>Vous pouvez également utiliser la valeur <code>popup</code> pour créer une combinaison des deux types. Ce type a trois champs pour entrer l'année, le mois et la date, ainsi qu'un bouton pour afficher un calendrier surgissant pour choisir un jour.</p>
+<pre>&lt;datepicker type="popup"/&gt;
+</pre>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL/Les_champs_de_saisie" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL/Les_contrôles_de_listes">Suivant  »</a></p>
+</div>

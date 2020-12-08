@@ -1,0 +1,111 @@
+---
+title: Objet Components
+slug: L'objet_Components
+tags:
+  - Référence_du_DOM_Gecko
+  - 'XPCOM:Liaisons_de_langage'
+  - XPConnect
+translation_of: Mozilla/Tech/XPCOM/Language_Bindings/Components_object
+---
+<p>L'objet <code>Components</code> est l'objet au travers duquel les fonctionnalités <a href="/fr/XPConnect" title="fr/XPConnect">XPConnect</a> sont reflétées en <a href="/fr/JavaScript" title="fr/JavaScript">JavaScript</a>. Il s'agit en réalité d'une instance native de l'interface <a href="https://dxr.mozilla.org/mozilla-central/source/js/src/xpconnect/idl/xpccomponents.idl" rel="custom">nsIXPCComponents</a> qui est reflétée en JavaScript comme un objet de niveau global à l'aide d'XPConnect.</p>
+
+<p>Certaines propriétés de <code>Components</code> ont besoin de privilèges élevés et peuvent ne pas fonctionner dans des pages Web.</p>
+
+<p>L'objet <code>Components</code> dispose des membres suivants :</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Membre</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td><code><a href="/fr/Components.classes" title="fr/Components.classes">classes</a></code></td>
+   <td>tableau de classes par ContractID</td>
+  </tr>
+  <tr>
+   <td><code><a href="/fr/Components.classesByID" title="fr/Components.classesByID">classesByID</a></code></td>
+   <td>tableau de classes par CID</td>
+  </tr>
+  <tr>
+   <td><code><a href="/fr/Components.Constructor" title="fr/Components.Constructor">Constructor</a></code></td>
+   <td>constructeur de constructeur de composants</td>
+  </tr>
+  <tr>
+   <td><code><a href="/fr/Components.Exception" title="fr/Components.Exception">Exception</a></code></td>
+   <td>constructeur d'exception XPConnect</td>
+  </tr>
+  <tr>
+   <td><code><a href="/fr/Components.ID" title="fr/Components.ID">ID</a></code></td>
+   <td>constructeur de nsID XPCOM</td>
+  </tr>
+  <tr>
+   <td><code><a href="/fr/Components.interfaces" title="fr/Components.interfaces">interfaces</a></code></td>
+   <td>tableau d'interfaces par nom d'interface</td>
+  </tr>
+  <tr>
+   <td><code><a href="/fr/Components.interfacesByID" title="fr/Components.interfacesByID">interfacesByID</a></code></td>
+   <td>tableau d'interfaces par IID</td>
+  </tr>
+  <tr>
+   <td><code><a href="/fr/Components.isSuccessCode" title="fr/Components.isSuccessCode">isSuccessCode</a></code></td>
+   <td>fonction pour déterminer si un résultat donné est un code de réussite</td>
+  </tr>
+  <tr>
+   <td><code><a href="/fr/Components.lastResult" title="fr/Components.lastResult">lastResult</a></code></td>
+   <td>code de résultat de l'appel XPConnect le plus récent</td>
+  </tr>
+  <tr>
+   <td><code><a href="/fr/Components.manager" title="fr/Components.manager">manager</a></code></td>
+   <td>le gestionnaire global de composants XPCOM</td>
+  </tr>
+  <tr>
+   <td><code><a href="/fr/Components.results" title="fr/Components.results">results</a></code></td>
+   <td>tableau des codes de résultats connus par nom</td>
+  </tr>
+  <tr>
+   <td><code><a href="/fr/Components.returnCode" title="fr/Components.returnCode">returnCode</a></code></td>
+   <td>résultat en attente pour l'appel courant</td>
+  </tr>
+  <tr>
+   <td><code><a href="/fr/Components.stack" title="fr/Components.stack">stack</a></code></td>
+   <td>pile d'appels JavaScript courante</td>
+  </tr>
+  <tr>
+   <td><code><a href="/fr/Components.utils" title="fr/Components.utils">utils</a></code></td>
+   <td>donne accès à différentes fonctionnalités utiles</td>
+  </tr>
+  <tr>
+   <td><code><a href="/Fr/Components.utils.evalInSandbox" title="Fr/Components.utils.evalInSandbox">utils.evalInSandbox</a></code></td>
+   <td>Lance du code JavaScript dans une sandbox, généralement pour lancer du code à privilèges restreints.</td>
+  </tr>
+  <tr>
+   <td><code><a href="/fr/Components.utils.forceGC" title="fr/Components.utils.forceGC">utils.forceGC</a></code></td>
+   <td> Force un cycle de garbage collection.</td>
+  </tr>
+  <tr>
+   <td><code><a href="/fr/Components.utils.getWeakReference" title="fr/Components.utils.getWeakReference">utils.getWeakReference</a></code></td>
+   <td> Obtient une référence faible à l'objet passé.</td>
+  </tr>
+  <tr>
+   <td><code><a href="/fr/Components.utils.import" title="fr/Components.utils.import">utils.import</a></code></td>
+   <td> Charge un module JS dans le script courant, sans partager de visibilité.</td>
+  </tr>
+  <tr>
+   <td><code><a href="/fr/Components.utils.lookupMethod" title="fr/Components.utils.lookupMethod">utils.lookupMethod</a></code></td>
+   <td>Examine une méthode ou propriété native (c'est-à-dire déclaré dans l'interface) d'un objet XPCOM. Sert à la même chose que <a href="/fr/XPCNativeWrapper" title="fr/XPCNativeWrapper">XPCNativeWrapper</a>.</td>
+  </tr>
+  <tr>
+   <td><code><a href="/fr/Components.utils.reportError" title="fr/Components.utils.reportError">utils.reportError</a></code></td>
+   <td>Rapporte un objet d'erreur JavaScript dans la <a href="/fr/Console_d'erreurs" title="fr/Console_d'erreurs">Console d'erreurs</a>.</td>
+  </tr>
+  <tr>
+   <td><code><a href="/fr/Components.utils.Sandbox" title="fr/Components.utils.Sandbox">utils.Sandbox</a></code></td>
+   <td>Crée des objets de sandbox pout utiliser avec <code>evalInSandbox</code>.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p><span class="comment">EDITORS! please keep descriptions of the following properties in sync with <a href="/fr/Components.utils">Components.utils</a> page.</span></p>
+
+<p></p>

@@ -1,0 +1,180 @@
+---
+title: Connecting to Remote Content
+slug: Archive/Mozilla/XUL/School_tutorial/Connecting_to_Remote_Content
+translation_of: Archive/Add-ons/Overlay_Extensions/XUL_School/Connecting_to_Remote_Content
+---
+<div>
+ <div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_School/Intercepting_Page_Loads" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_School/Custom_XUL_Elements_with_XBL">次のページ  »</a></p>
+</div></div>
+<h2 id="Using_XMLHttpRequest" name="Using_XMLHttpRequest">XMLHttpRequest の使用</h2>
+<p><a href="/ja/docs/XMLHttpRequest" title="XMLHttpRequest">XMLHttpRequest</a> は、HTTP を介してローカルのスクリプトとリモートサーバの間で XML を転送するための API です。これは、現代のウェブにとって不可欠な部分であり、すべてのメジャーなブラウザがサポートしています。XML に加え、JSON や HTML、プレーンテキストなど他の形式のデータの受け渡しにも使用できます。このセクションでは、XML と JSON のコミュニケーション機構について見ていきます。</p>
+<pre class="brush: js;auto-links:false">let url = "http://www.example.com/";
+let request =
+  Cc["@mozilla.org/xmlextras/xmlhttprequest;1"].
+    createInstance(Ci.nsIXMLHttpRequest);
+
+request.onload =
+  function(aEvent) {
+    window.alert("Response Text: " + aEvent.target.responseText);
+  };
+request.onerror =
+  function(aEvent) {
+    window.alert("Error Status: " + aEvent.target.status);
+  };
+request.open("GET", url, true);
+request.send(null);</pre>
+<p>この例では、XMLHttpRequest の呼び出しが非同期モードでどのように行われるかを実証しています。XMLHttpRequest クラスのインスタンスが作成され、これが要求を行うための機能をすべて保持していることが分かるでしょう。私たちは、このインスタンスを一般的な方法 (<code>new XMLHttpRequest()</code>) の代わりに XPCOM を使用して作成しています。この方法は、chrome コードと 非 chrome コードの両方で動作します。</p>
+<p>次の初期化では、<em>onload</em> と <em>onerror</em> ハンドラが、リモートサーバから返される応答を扱うコールバック関数に登録されます。どちらの場合も、<em>aEvent.target</em> は <a href="/ja/docs/nsIXMLHttpRequest" title="nsIXMLHttpRequest">nsIXMLHttpRequest</a> です。<em>onload</em> コールバック関数では、<em>responseText</em> パラメータにサーバからの応答がテキストとして含まれます。</p>
+<p>応答が XML ドキュメントの場合は、<em>responseXML</em> プロパティが DOM メソッドで操作できる XMLDocument を保持します。時々、サーバが XML Content-Type ヘッダを指定しないことがあります。これは、XML の解釈が自動的に行われるために必要です。このような場合は、<em>overrideMimeType</em> を使用して応答を強制的に XML として解釈させることができます。</p>
+<pre class="brush: js">request.overrideMimeType("text/xml"); // これは要求を送る前に行ってください！</pre>
+<p><em>open</em> メソッドは、要求を送信するための HTTP リクエストメソッドと URL の 2 個の必要なパラメータを取ります。HTTP リクエストメソッドは、"GET" または "POST", "PUT" のいずれかになります。POST リクエストを送信するには、要求の Content-Type をセットし、以下のように POST データを send() メソッドに渡す必要があります。</p>
+<pre class="brush: js">request.open("POST", url, true);
+request.setRequestHeader(
+    "Content-Type", "application/x-www-form-urlencoded");
+request.send("data=hello&amp;version=2");</pre>
+<p><em>open</em> メソッドの 3 番目のパラメータは、要求が非同期で行われるかどうかを指定します。非同期モードでのコードの実行は、<em>send</em> コールの後すぐに続行されます。同期モードでは、応答が返ってくるまで待機している間、コードとユーザインターフェースがブロックされます。</p>
+<div class="note">
+ 要求の処理には時間がかかるため、その間、ユーザを待たせておきたくないでしょう。それゆえ、<strong>XMLHttpRequest の呼び出しを常に非同期で行うことがとても重要です</strong>。</div>
+<p>それでは、リモートサーバとのコミュニケートに使用できる最も一般的なコンテンツの種類を見ていきましょう。</p>
+<h2 id="JSON_content" name="JSON_content">JSON content</h2>
+<p><a href="/ja/docs/JSON" title="JSON">JSON</a> は、データを表すためのとても軽量でシンプルな形式です。JavaScript で使用されるオブジェクトの表現に似ています。JavaScript と異なり、JSON 形式には、データ以外のいかなる実行可能なコードも含めることはできません。</p>
+<p>JSON は、以前は JavaScript の <a href="/ja/docs/eval" title="eval">eval</a> 関数を使用して解釈する方法がよく用いられていたため、これの使用は、セキュリティの面で危険なことでした。<em>eval</em> が文字列内に含まれるどんなコードでも実行してしまうため、開発者は、セキュリティーホールを閉じる回避策を工夫しなければなりませんでした。幸運なことに、Firefox には、拡張機能開発者のためのいくつかの代替策が提供されています。<a href="/ja/docs/JSON" title="JSON">JSON</a> のページに、Firefox や他のアプリケーションの異なるバージョンで JSON データを解釈する詳しい方法が説明されています。</p>
+<p>次のデータを解釈する必要があると仮定します:</p>
+<pre class="brush: js">{ "shops": [{ "name": "Apple", "code": "A001"}, {"name": "Orange"}], "total": 100 }</pre>
+<p><em>onload</em> コールバック関数が呼び出されると、<em>parse</em> メソッドを使用して responseText が JavaScript オブジェクトへ変換されます。このオブジェクトは、コード内の他の JavaScript オブジェクトと同じように使用できます。</p>
+<pre class="brush: js">request.onload = function(aEvent) {
+  let text = aEvent.target.responseText;
+  let jsObject = JSON.parse(text);
+
+  window.alert(jsObject.shops[1].name);  // =&gt; "Orange"
+  window.alert(jsObject.total);  // =&gt; 2;
+};</pre>
+<p>この JavaScript オブジェクトは、<em>stringify</em> メソッドでシリアライズして JSON データに戻すこともできます。</p>
+<pre class="brush:js">let string = JSON.stringify(jsObject);</pre>
+<h2 id="XML_content" name="XML_content">XML コンテンツ</h2>
+<p>XML は、最も人気のあるデータ交換の形式です。それでは、次の XML データがリモートサーバから返されると仮定しましょう:</p>
+<pre class="brush:xml">&lt;?xml version="1.0"?&gt;
+&lt;data&gt;
+  &lt;shops&gt;
+    &lt;shop&gt;
+      &lt;name&gt;Apple&lt;/name&gt;
+      &lt;code&gt;A001&lt;/code&gt;
+    &lt;/shop&gt;
+    &lt;shop&gt;
+     &lt;name&gt;Orange&lt;/name&gt;
+    &lt;/shop&gt;
+  &lt;/shops&gt;
+  &lt;total&gt;2&lt;/total&gt;
+&lt;/data&gt;</pre>
+<p>リモートサーバから正しい XML の応答があれば、UI にデータを表示したりローカルのデータソースに格納するために、XML ドキュメントオブジェクトを異なる DOM メソッドを使用して操作できます。</p>
+<pre class="brush: js">request.onload = function(aEvent) {
+  let responseXML = aEvent.target.responseXML;
+  let rootElement = responseXML.documentElement;
+
+  if (rootElement &amp;&amp;
+      "parseerror" != rootElement.tagName) {
+    let shopElements = rootElement.getElementsByTagName("shop");
+    let totalElement = rootElement.getElementsByTagName("total")[0];
+
+    window.alert(
+      shopElements[1].getElementsByTagName("name")[0].firstChild.nodeValue); // =&gt; Orange
+    window.alert(
+      totalElement.firstChild.nodeValue); // =&gt; 2
+  }
+};</pre>
+<p>簡単な XML ドキュメントに対しては DOM 関数を使用してもよいでしょう。しかし、DOM 操作のコードは、ドキュメントが入り組んでいるほど複雑になってしまいます。これらのドキュメントをより効果的に処理するために、2 つのツールが使用できます:</p>
+<h3 id="Using_XPath" name="Using_XPath">XPath を使用する</h3>
+<blockquote>
+ <p>XPath は XML Path Language の略称です。非 XML 構文を使って、柔軟な方法で XML 文書のいろいろな部分を指し示すことができます。</p>
+</blockquote>
+<p>これは、<a href="/ja/docs/XPath" title="XPath">XPath のページ</a>からの引用です。</p>
+<p>XPath の簡単なクエリ機構で、XML や HTML ドキュメント内の特定のノードへすばやくアクセスできます。また、前のセクションで説明したページの読み込みに割り込むテクニックを使用して、読み込まれたウェブページから情報を抽出するために使用することもできます。</p>
+<p>XPath は、サイズが大きく入り組んだ XML ファイルを受け取り、その中の一部のデータだけが必要なケースでとても役立ちます。XPath を使用して XML ドキュメント全体を解釈することは、パフォーマンスの面でよいアイデアとは言えません。</p>
+<h3 id="Using_XSLT" name="Using_XSLT">XSLT を使用する</h3>
+<p><a href="/ja/docs/XSLT" title="XSLT">XSLT</a> (eXtensible Stylesheet Language Transformations) は、XML ドキュメントを操作し、HTML や XUL など他の書式へ変換してテキスト出力するためのもう一つのツールです。</p>
+<p>ここでは、様々な出力形式へのすべての変換を取り上げることはできないため、XML ドキュメントから XUL への変換だけを見ていきます。</p>
+<p>はじめに、テンプレートとして使用される XSLT スタイルシートを作成する必要があります。このテンプレートは、受け取った XML (この場合は、上記の XML ドキュメントの例) を変換し、XUL 形式で出力します。<a class="external" href="http://www.w3schools.com/xsl/">XSLT チュートリアル</a>に、これらのテンプレートを構築するための詳細があります。</p>
+<pre class="brush:xml">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+  &lt;xsl:template match="/data"&gt;
+    &lt;xul:vbox&gt;
+      &lt;xsl:for-each select="shops/name"&gt;
+        &lt;xul:hbox&gt;
+          &lt;xul:label value="Name:" /&gt;
+          &lt;xul:label&gt;
+            &lt;xsl:value-of select="." /&gt;
+          &lt;/xul:label&gt;
+         &lt;/xul:hbox&gt;
+      &lt;/xsl:for-each&gt;
+      &lt;xul:hbox&gt;
+        &lt;xul:label value="Total:" /&gt;
+        &lt;xul:label&gt;
+          &lt;xsl:value-of select="total" /&gt;
+        &lt;/xul:label&gt;
+      &lt;/xul:hbox&gt;
+    &lt;/xul:vbox&gt;
+  &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</pre>
+<p>次に、XSLT スタイルシートをファイルストリームとして読み、ドキュメントオブジェクトに解釈する必要があります。その後、以下に示すように XSLT スタイルシートを XSLT プロセッサへインポートしてください。これで、プロセッサが変換を実行する準備が整います。</p>
+<pre class="brush: js">let domParser =
+  Cc["@mozilla.org/xmlextras/domparser;1"].
+    createInstance(Ci.nsIDOMParser);
+let fileStream =
+  Cc["@mozilla.org/network/file-input-stream;1"].
+    createInstance(Ci.nsIFileInputStream);
+let xsltProcessor =
+  Cc["@mozilla.org/document-transformer;1?type=xslt"].
+    createInstance(Ci.nsIXSLTProcessor);
+let xslDocument;
+
+fileStream.init(someXSLFile, -1, 0x01, 0444); // 読み込み専用
+
+// XSLT スタイルシートの fileStream から解釈
+xslDocument =
+  domParser.parseFromStream(
+    fileStream, null, fileStream.available(), "text/xml");
+
+// XSLT スタイルシートを XSLT プロセッサへインポート
+xsltProcessor.importStylesheet(xslDocument);</pre>
+<p>最後に、<a href="/ja/docs/XPCOM_Interface_Reference/nsIXSLTProcessor#transformToDocument.28.29" title="XPCOM Interface Reference/nsIXSLTProcessor#transformToDocument.28.29">transformToDocument</a>メソッドと <a href="/ja/docs/XPCOM_Interface_Reference/nsIXSLTProcessor#transformToFragment.28.29" title="XPCOM Interface Reference/nsIXSLTProcessor#transformToFragment.28.29">transformToFragment</a> メソッドのどちらかを使用して XML ドキュメントを変換してください。<em>transformToDocument</em> メソッドは、変換結果の DOM Document を返します。それに対して、<em>transformToFragment</em> メソッドは、DOM DocumentFragment ノードを返します。このコードの例では、XUL ドキュメントの最初の子ノードは、変換した後の XUL 要素に追加されます。</p>
+<pre class="brush: js">request.onload = function(aEvent) {
+  let responseXML = aEvent.target.responseXML;
+  let xulNode;
+
+  // XML ドキュメントを XUL ドキュメントへ変換
+  xulDocument = xsltProcessor.transformToDocument(responseXML);
+
+  // XUL ノードを XUL 要素へ追加
+  xulNode = document.adoptNode(xulDocument.firstChild);
+  document.getElementById("foo").appendChild(xulNode);
+}</pre>
+<p>このコードでは、XML ファイルを XUL へ変換し、それを UI に統合しました。</p>
+<div class="note">
+ リモートコンテンツを扱う時は、セキュリティを最優先で考慮しなければなりません。イベントハンドラを許可したり、いかなる種類のコードもあなたのパーサを通過させてはいけません。あなたが生成した XUL に JavaScript コードを含める必要がある場合は、リモートのソースからではなく、ローカルで追加されなければなりません。</div>
+<p>以下は、XSLT を使用できる実用的な状況です:</p>
+<ol>
+ <li>サイズの大きな XML ドキュメントを直接 XUL へ変換する。</li>
+ <li>入り組んだ XML ファイルから、必要なデータだけで構成された簡単な XML ドキュメントを生成する。こうすると、通常の DOM 関数を使用してデータを読むことができます。</li>
+ <li>XML を SQL ステートメントへ変換する。ローカルのデータベースで実行するスクリプトを生成するために使用できます。もちろん、エスケープ文字の扱いに十分注意し、SQL インジェクション攻撃に対する防御をあなた自身で行う必要があります。</li>
+ <li>XML を RDF へ変換する。これは、RDF がデフォルトの格納書式であった時はとても役立ちました。依然として RDF を中間書式として使用できます。この場合も、テンプレートを使用して XUL を生成し、データを表示します。</li>
+</ol>
+<h2 id="HTTP_debugging" name="HTTP_debugging">HTTP デバッグ</h2>
+<p>HTTP 要求のデバッグを開始する時、特に POST データにおいて、何のデータが送られたか正確に知ることは難しいことが分かるでしょう。このような場合は、<a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/966">Tamper Data</a> などの拡張機能を使用することをお勧めします。これは、HTTP/HTTPS 要求と Firefox で起こる応答を追跡する助けになります。</p>
+<p>この拡張機能をインストールすると、メニューバーに Tamper Data メニューの項目が追加されます:</p>
+<ul>
+ <li>[ツール] &gt; [Tamper Data]</li>
+ <li>または、[表示] &gt; [サイドバー] &gt; [Tamper Data]</li>
+</ul>
+<p>Tamper Data ビューを開くと、すべての要求と応答がビューに表示され始めます。拡張機能の自動更新 URL や Gmail などのウェブアプリケーションの動作など、Firefox に関するいくつかの興味深い動作が発見できるでしょう。</p>
+<p>"Start Tamper" ボタンをクリックすると、すべての要求に対して、そのデータが送信される前に手を加えるためのポップアップダイアログが表示されます。これは、要求時のデータの表示あるいは変更し、その結果を調査するために使用してください。通常の Firefox ウィンドウには数多くのウェブアクティビティがあります。ここでは多くの事が行えるため、控え目に使用してください。</p>
+<p>Tamper Data のチュートリアルは、<a class="external" href="http://www.jimbojw.com/wiki/index.php?title=Tamper_Data">Jimbojw.com の Wiki ページ</a>にあります。</p>
+<div class="note">
+ インターネット接続が無い場合やコンピュータが (空港やホテルの部屋などで) インターネットアクセスを提供しないローカルネットワークに接続されている場合など、極端なケースに備えて、リモートに接続する JavaScript コードを常にテストしてください。すべてが OK であるか悪い状態であるかについて、ユーザをエラーメッセージの嵐で困らせないようにしてください。</div>
+<div>
+ <div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_School/Intercepting_Page_Loads" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_School/Custom_XUL_Elements_with_XBL">次のページ  »</a></p>
+</div></div>
+<p><small>This tutorial was kindly donated to Mozilla by Appcoast.</small></p>

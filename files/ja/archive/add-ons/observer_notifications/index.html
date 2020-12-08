@@ -1,0 +1,49 @@
+---
+title: Observer Notifications
+slug: Archive/Add-ons/Observer_Notifications
+tags:
+  - Add-ons
+  - Extensions
+  - XPCOM
+translation_of: Mozilla/Tech/XPCOM/Observer_Notifications
+---
+<h2 id=".E3.82.AA.E3.83.96.E3.82.B6.E3.83.BC.E3.83.90.E3.81.AE.E9.A0.85.E7.9B.AE" name=".E3.82.AA.E3.83.96.E3.82.B6.E3.83.BC.E3.83.90.E3.81.AE.E9.A0.85.E7.9B.AE"> オブザーバの項目 </h2>
+<p>以下はアプリケーションの中で監視 (<span style="color: green;">observe</span>)できる項目 (<span style="color: green;">topics</span>)です。特に断りのない限り<a href="ja/NsIObserverService">オブザーバサービス</a>を使って項目に登録します。
+</p><p><span id="Application_startup"></span>
+</p>
+<h3 id=".E3.82.A2.E3.83.97.E3.83.AA.E3.82.B1.E3.83.BC.E3.82.B7.E3.83.A7.E3.83.B3.E3.81.AE.E8.B5.B7.E5.8B.95" name=".E3.82.A2.E3.83.97.E3.83.AA.E3.82.B1.E3.83.BC.E3.82.B7.E3.83.A7.E3.83.B3.E3.81.AE.E8.B5.B7.E5.8B.95"> アプリケーションの起動 </h3>
+<p>これらは起動時に監視できる項目です (出現順に並んでいます)。
+</p>
+<table class="standard-table"> <tbody><tr> <th>項目</th> <th>説明</th> </tr> <tr> <td>xpcom-startup</td> <td>xpcom が初期化されたときに呼ばれます。この時点では大半のものは利用できません。この項目をみるにはカテゴリマネージャに登録しなくてはいけません。</td> </tr> <tr> <td>app-startup</td> <td>アプリケーションの起動の一般的なイベント。この項目をみるにはカテゴリマネージャに登録しなくてはいけません。</td> </tr> <tr> <td>profile-do-change</td> <td>これはプロファイルが選択された後に発火 (<span style="color: green;">fire</span>) します。このイベントが起こるまではユーザ設定やブックマーク、プロファイルフォルダを使うもの全てにアクセスできないでしょう。このイベントはプロファイルの移行後に毎回起こります。 </td></tr> <tr> <td>profile-after-change</td> <td>これは profile-do-change の全てのオブサーバが通知された後に発火します。</td> </tr> <tr> <td>final-ui-startup</td> <td>アプリケーションの最初のウィンドウが表示される直前にトリガされます。</td> </tr> <tr> <td>sessionstore-windows-restored</td> <td> すべての初期ブラウザウィンドウが開かれたことを示すために、セッション復元処理によって送られます。この通知の後にはウィンドウは開かれ、chrome はロードされていますが、ウィンドウ内のタブはまだ復元中である可能性があることに注意してください。</td> </tr>
+</tbody></table>
+<p><br>
+<span id="Application_shutdown"></span>
+</p>
+<h3 id=".E3.82.A2.E3.83.97.E3.83.AA.E3.82.B1.E3.83.BC.E3.82.B7.E3.83.A7.E3.83.B3.E3.81.AE.E7.B5.82.E4.BA.86" name=".E3.82.A2.E3.83.97.E3.83.AA.E3.82.B1.E3.83.BC.E3.82.B7.E3.83.A7.E3.83.B3.E3.81.AE.E7.B5.82.E4.BA.86"> アプリケーションの終了 </h3>
+<p>これらは終了時に監視できる項目です (出現順に並んでいます)。
+</p>
+<table class="standard-table"> <tbody><tr> <th>項目</th> <th>説明</th> </tr> <tr> <td>quit-application-requested</td> <td>何かがアプリケーションの終了を要求したとき。この時点では終了を取り消すことができます。</td> </tr> <tr> <td>quit-application-granted</td> <td>全てのオブザーバが終了に同意した。</td> </tr> <tr> <td>quit-application</td> <td>アプリケーションがまさに終了しようとしている。</td> </tr> <tr> <td>profile-change-teardown</td> <td>終了の一部分で、この時点ではまだプロファイルのデータは利用可能です。</td> </tr> <tr> <td>profile-before-change</td> <td>プロファイルが失われる直前に呼ばれます。</td> </tr> <tr> <td>xpcom-shutdown</td> <td>これは終了です。この時点では大半のものは利用できないでしょう。</td> </tr>
+</tbody></table>
+<p><span id="IO_Notifications"></span>
+</p>
+<h3 id="IO_.E9.80.9A.E7.9F.A5" name="IO_.E9.80.9A.E7.9F.A5"> IO 通知 </h3>
+<p>これらの項目は IO サービスを監視して有用な情報を得るために使用します。
+</p>
+<table class="standard-table"> <tbody><tr> <th>項目</th> <th>説明</th> </tr> <tr> <td>offline-requested</td> <td>アプリケーションがオフライン状態に移行できるかどうかを問い合わせるために呼ばれます。オフラインへの移行はキャンセル可能です。<p></p><div class="note"><strong>註:</strong> あなたのコードがオフラインへの移行をキャンセルする場合には、<b>必ず</b>その旨をユーザに通知してください。</div><p></p></td> </tr> <tr> <td>network:offline-about-to-go-offline</td> <td>すべてのネットワーク IO がオフライン状態になる直前に呼ばれます。</td> </tr> <tr> <td>network:offline-status-changed</td> <td>オフライン状態が変更したときに呼ばれます。通知のデータ (<span style="color: green;">data</span>)は "offline" か "online" のどちらかで、新しい状態を示します。</td> </tr>
+</tbody></table>
+<p><span id="HTTP_requests"></span>
+</p>
+<h3 id="HTTP_.E3.83.AA.E3.82.AF.E3.82.A8.E3.82.B9.E3.83.88" name="HTTP_.E3.83.AA.E3.82.AF.E3.82.A8.E3.82.B9.E3.83.88"> HTTP リクエスト </h3>
+<p>これらは HTTP リクエストの間に監視できる項目です (<a href="ja/Setting_HTTP_request_headers">HTTP リクエストヘッダを設定する</a> と <a href="ja/Creating_Sandboxed_HTTP_Connections#HTTP_notifications">サンドボックス内の HTTP 接続を作成する</a> を参照してください)。両方ともサブジェクトパラメータとして <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIHttpChannel" title="">nsIHttpChannel</a></code> が渡されます。
+</p>
+<table class="standard-table"> <tbody><tr> <th>項目</th> <th>説明</th> </tr> <tr> <td>http-on-modify-request</td> <td>http リクエストが作られたときに呼ばれます。通信路 (<span style="color: green;">channel</span>)はヘッダーなどの変更などが可能です。</td> </tr> <tr> <td>http-on-examine-response</td> <td>Web サーバからのレスポンスを受け取った後に呼ばれます。通信路上でヘッダーが利用可能です。</td> </tr>
+</tbody></table>
+<p><span id="Cookies"></span>
+</p>
+<h3 id="Cookie" name="Cookie"> Cookie </h3>
+<p>これらの項目は Cookie が変更 (追加、変更、クリア、もしくは削除) されたか、Cookie の設定がブラウザによって拒否されたことを示します。詳しくは <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsICookieService" title="">nsICookieService</a></code> を参照して下さい。
+</p>
+<table class="standard-table"> <tbody><tr> <th>項目</th> <th>説明</th> </tr> <tr> <td>cookie-changed</td><td>Cookie が変更 (追加、変更、クリア、もしくは削除) された時に呼ばれます。</td> </tr> <tr> <td>cookie-rejected</td><td>Cookie の設定が (ユーザ設定に従って) ブラウザによって拒否された時に呼ばれます。</td> </tr>
+</tbody></table>
+<div class="noinclude">
+</div>

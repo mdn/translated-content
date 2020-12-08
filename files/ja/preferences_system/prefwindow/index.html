@@ -1,0 +1,84 @@
+---
+title: '&lt;prefwindow&gt; 要素リファレンス'
+slug: Preferences_System/prefwindow
+tags:
+  - Preferences system
+  - XUL
+---
+<p> </p>
+<h3 id=".E6.A6.82.E8.AA.AC" name=".E6.A6.82.E8.AA.AC"> 概説 </h3>
+<p><b><code>&lt;prefwindow&gt;</code></b> は設定ウィンドウの documentElement （言い替えると、 <code>&lt;window&gt;</code> や <code>&lt;dialog&gt;</code> のようなトップレベルの要素）です。
+</p><p>この要素は一つ以上の<code><a href="ja/Preferences_System/prefpane">&lt;prefpane&gt;</a></code> 要素を含んでいるべきです。
+</p>
+<h3 id="XUL.E6.A7.8B.E6.96.87" name="XUL.E6.A7.8B.E6.96.87"> XUL構文 </h3>
+<p>未定
+</p>
+<pre class="eval">&lt;prefwindow xmlns="<a class=" external" href="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" rel="freelink">http://www.mozilla.org/keymaster/gat...re.is.only.xul</a>"
+       id="window-id" windowtype="window:type" title="Options"
+       style="未定"&gt;
+  一つ以上のprefpane要素
+&lt;/prefwindow&gt;
+</pre>
+<h3 id=".E5.B1.9E.E6.80.A7" name=".E5.B1.9E.E6.80.A7"> 属性 </h3>
+<dl><dt> <code>lastSelected</code> </dt><dd>最後に選択されたペインの <code>id</code> 。設定ウィンドウが次に開かれたときに、そのペインを再び開くために使用されます。
+</dd><dt> <code>type</code> </dt><dd> <code>"prefwindow"</code> または <code>"child"</code> のどちらかでなくてはいけません。
+</dd><dd> <code>type="child"</code> は、トップレベルの設定ウィンドウから開かれるサブダイアログ（それは通常モーダルダイアログです）であることを示します。（MacOS XやGNOMEのように）設定を即座に適用する環境では、このサブダイアログは、それらの設定を書き込んでもよいかどうか確認されます。（Windowsのように）設定を即座に適用しない環境でサブダイアログが確認された時（OKボタンが押された時）は、なされた変更は親ウィンドウの<code>&lt;preferences&gt;</code>のセットに保持され、親ウィンドウが確認された時に保存されます。子ウィンドウとなる設定ウィンドウは、複数のペインを持つことはできません。
+</dd><dt> <code>dlgbuttons</code> </dt><dd> dialog要素の場合と同じです。
+</dd></dl>
+<h3 id=".E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3" name=".E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3"> プロパティ </h3>
+<dl><dt> <code>currentPane</code> （読み取り専用） </dt><dd> 現在選択されている <code>&lt;prefpane&gt;</code> 要素。他のペインを選択するには <code>showPane()</code> メソッドを使用してください。（<code>instantApply</code> に対するものと同じコメント）
+</dd><dt> <code>instantApply</code> （読み取り専用） </dt><dd> そのウィンドウが設定を即座に適用するモードかどうかを示します。値は真偽値のユーザ設定 <code>browser.preferences.instantApply</code> から読み込まれます。（？？　それは <code>&lt;field&gt;</code>として宣言されている、ということはあなたは値をセットすることが <i>できる</i> 、しかしながら私はそうすることが正当とは信じられない。）
+</dd><dt> <code>lastSelected</code> （読み取り専用） </dt><dd> <code>lastSelected</code> 属性の値を返します。
+</dd><dt> <code>preferencePanes</code> （読み取り専用） </dt><dd> <code>&lt;prefpane&gt;</code> 要素の <code>NodeList</code> 。
+</dd><dt> <code>type</code> （読み取り専用） </dt><dd> <code>type</code> 属性の値を返します。
+</dd></dl>
+<h3 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89"> メソッド </h3>
+<dl><dt> <code>void addPane(in DOMElement pane);</code> </dt><dd> 渡された <code>&lt;prefpane&gt;</code> 要素を設定ウィンドウに加えます。あなたはこのメソッドを、動的に生成された設定ペインをダイアログに加えるために使用できます。
+</dd><dt> <code>animate(aOldPane, aNewPane)</code> </dt><dd> これは公開メソッドではありません（？）
+</dd><dt> <code>DOMWindow openSubDialog(in string url, in string features, in object params);</code> </dt><dd> モーダルなサブダイアログを、設定ウィンドウの子ウィンドウとして開きます。このメソッドが使用される時 <code>modal</code> と <code>centerscreen</code> が自動的に付与されるために、それらを特性として示す必要が無い点を除いて、 <code>window.openDialog</code> に似ています。Firefoxの接続設定のような、モーダルなサブダイアログを開くためにこのメソッドを使用してください。
+</dd><dt> <code>DOMWindow openWindow(in string windowType, in string url, in string features, in object params);</code> </dt><dd> モーダルでないサブウィンドウを設定ウィンドウの子ウィンドウとして開きます。あなたはウィンドウタイプを指定することができ、そのタイプのウィンドウがすでに存在して開かれている場合、新しいウィンドウを開く代わりに、そのウィンドウがフォーカスされます。このようなサブウィンドウの例は、Firefoxの設定の例外ウィンドウです。
+</dd><dt> <code>void showPane(in DOMElement paneElement)</code> </dt><dd> 与えられたペインを選択して、必要であれば動的に読み込みます。 <code>paneElement</code> は同じウィンドウに含まれる <code>&lt;prefpane&gt;</code> 要素でなければなりません。
+</dd></dl>
+<p>注意：あなたは、そのウィンドウがすでに開かれていた場合に、 <code>openWindow()</code> を使って渡されたパラメータを受け取るために、サブウィンドウ内で <code>initWithParams()</code> 関数を定義することができます。例えば、Firefoxのパーミッションマネージャのユーザインターフェイスは、画像、ソフトウェアのインストール、そしてポップアップのブロックという3つのダイアログのために、同じウィンドウを使っています。それは、ウィンドウを閉じて開き直すことなくダイアログのタイプを切り替えるために <code>initWithParams()</code> を使っています。
+</p><p>提案される利用例のパターンは以下のようなものです:
+</p>
+<pre>// subwindow.js
+function onLoad(ev) {
+  // 何らかの初期化処理...
+
+  initWithParams(window.arguments[0]); // 私たちは一つだけのパラメータがこのウィンドウに渡されることを期待しています
+}
+
+function initWithParams(aParams) {
+  // これはすでに開かれているウィンドウが openWindow() を使ってアクティブにされる時にも呼ばれます
+}
+</pre>
+<h3 id=".E6.B3.A8.E6.84.8F" name=".E6.B3.A8.E6.84.8F">注意</h3>
+<h4 id=".E3.83.A2.E3.83.BC.E3.83.80.E3.83.AB.E3.81.AA.E3.82.B5.E3.83.96.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.82.92.E9.96.8B.E3.81.8F.E5.A0.B4.E5.90.88" name=".E3.83.A2.E3.83.BC.E3.83.80.E3.83.AB.E3.81.AA.E3.82.B5.E3.83.96.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.82.92.E9.96.8B.E3.81.8F.E5.A0.B4.E5.90.88">モーダルなサブダイアログを開く場合</h4>
+<p>サブダイアログは、 <code>window</code> を通じてではなく、 <code>document.documentElement</code> を通じてのみ開くことができます。そのため、 <code>openSubDialog()</code> を呼ぶ例は以下のようになります。:
+</p>
+<pre class="eval">document.documentElement.openSubDialog("<a class=" external" rel="freelink">chrome://myextension/content/options-sub.xul</a>", "", null)
+</pre>
+<p><br>
+</p>
+<h4 id="prefpane.E4.BB.A5.E5.A4.96.E3.81.AE.E5.AD.90.E3.82.92.E6.8C.81.E3.81.9F.E3.81.9B.E3.82.8B.E9.9A.9B.E3.81.AE.E6.B3.A8.E6.84.8F" name="prefpane.E4.BB.A5.E5.A4.96.E3.81.AE.E5.AD.90.E3.82.92.E6.8C.81.E3.81.9F.E3.81.9B.E3.82.8B.E9.9A.9B.E3.81.AE.E6.B3.A8.E6.84.8F">prefpane以外の子を持たせる際の注意</h4>
+<p>script要素で外部のスクリプトを読み込ませるなどの目的で、prefwindow要素の子にprefpane要素以外の要素を置く場合、すべてのprefpane要素の後にこれらの要素を記述します。最初のprefpane要素よりも前にこれらの要素を記述した場合、パネルの切り替えに失敗するなどの問題が起こることがあります。
+</p><p>誤：
+</p>
+<pre class="eval">&lt;prefwindow&gt;
+  &lt;script src="config.js"/&gt;
+  &lt;prefpane label="pane1" src="pane1.xul"/&gt;
+  &lt;prefpane label="pane2" src="pane2.xul"/&gt;
+&lt;/prefwindow&gt;
+</pre>
+<p>正：
+</p>
+<pre class="eval">&lt;prefwindow&gt;
+  &lt;prefpane label="pane1" src="pane1.xul"/&gt;
+  &lt;prefpane label="pane2" src="pane2.xul"/&gt;
+  &lt;script src="config.js"/&gt;
+&lt;/prefwindow&gt;
+</pre>
+<p><br>
+{{ Preferences_System_TOC() }}
+</p>{{ languages( { "en": "en/Preferences_System/prefwindow" } ) }}

@@ -1,0 +1,49 @@
+---
+title: 新しい属性
+slug: Mozilla/Preferences/Preferences_system/New_attributes
+tags:
+  - Preferences system
+  - XUL
+translation_of: Mozilla/Preferences/Preferences_system/New_attributes
+---
+<p><code><a href="ja/Preferences_System/prefwindow">&lt;prefwindow&gt;</a></code> の中に置かれたウィジェットは、（標準の属性に加えて）以下の属性を持つことができます。</p>
+<h3 id="preference" name="preference">preference</h3>
+<p>リンクされた <code><a href="ja/Preferences_System/preference">&lt;preference&gt;</a></code> 要素のidを指定します。この設定の <code>value</code> 属性とこのウィジェットの状態は常に同期されます。</p>
+<p>例えば以下の例は、設定 &lt;tt&gt;extensions.example.mypref&lt;/tt&gt; の値に基づいてtextboxの <code>value</code> を自動的に初期化します。またその逆に、ユーザがtextboxの値を変更した時、<code>&lt;preference&gt;</code> 要素の値は更新され、必要に応じて設定システムに書き込まれます。</p>
+<pre class="eval">&lt;preference id="my_pref" name="extensions.example.mypref" type="unichar"/&gt;
+&lt;textbox preference="my_pref"/&gt;
+</pre>
+<h3 id="preference-editable" name="preference-editable">preference-editable</h3>
+<p>既定の状態において、 <code><a href="ja/Preferences_System/preference">&lt;preference&gt;</a></code> 要素は、checkbox, colorpicker, radiogroup, textbox, listitem, listbox, そしてmenulistといったいくつかの標準的なウィジェットの値を自動的に変更します。これ以外のローカル名を持つ要素、例えばXBLによって定義されたウィジェットなどの値を更新したい場合は、<code>preference-editable="true"</code>属性をその要素に設定する必要があります。</p>
+<p>あなたのウィジェットが <code>&lt;preference&gt;</code> の値を変更するために、あなたはそのウィジェットの値が変更された後に<code>change</code>, <code>command</code>, または <code>input</code>イベントが発行されたかどうかを確認する必要があります。</p>
+<p><span class="comment">バグ # または何かテストケース？ 注意：これは現在、treeウィジェットにおいては機能しません。もしかしたらそれ以外にもいずれの要素でも機能しないかもしれません。（APIでは、バージョン1.8で利用可能になるだろうと書かれています）。</span></p>
+<h3 id="onsyncfrompreference_.E3.81.8A.E3.82.88.E3.81.B3_onsynctopreference" name="onsyncfrompreference_.E3.81.8A.E3.82.88.E3.81.B3_onsynctopreference">onsyncfrompreference および onsynctopreference</h3>
+<p>あなたはしばしば、与えられた設定の型に簡単には割り当てられない型のユーザインターフェイス要素を持つことがあるでしょう。例えば、チェックされた時に設定に保存される値を整数値の3、チェックされていない時の値を2とするcheckboxを使うことがあるでしょう。このユーザインターフェイス要素を初期化するためには、どちらの値もcheckbox要素に対しては無意味なので、あなたは既定の初期化処理に期待をかけることはできません。あなたは、設定の値をユーザインターフェイス要素の初期値に変換したり、ユーザインターフェイス要素の値を設定ファイルに書き込める何らかの値に変換したりする、関数を書く必要があります。これが、 onsyncfrompreference と onsynctopreference を使う理由です。</p>
+<p><code>onsyncfrompreference</code> は、要素が設定から初期化される時に呼ばれます。もしあなたがこのイベントに対する実装を提供する場合、ユーザインターフェイス要素を初期化するための値か、または、設定システムがユーザインターフェイス要素を既定の値で初期化する（言い替えれば、設定の値に基づいて初期化することを試みる）ことを示すための値 <code>undefined</code> の、いずれかを返すあなたの実装が、初期化処理の間に呼び出されるでしょう。以下のように、あなたは上の例のcheckboxを記述することができます。:</p>
+<pre>&lt;checkbox preference="foo.bar" onsyncfrompreference="return onsyncfrompreference();"/&gt;
+
+.. スクリプト:
+function onsyncfrompreference()
+{
+  var preference = document.getElementById("foo.bar");
+  return preference.value == 3;
+
+  // もしfoo.barが真偽値であり、チェックボックスを初期化するのにその値を使いたければ、
+  // この時、他の何らかの初期化動作を実行したければ、
+  // 私たちはまだこのメソッドの続きを実装することができるでしょう。
+}
+</pre>
+<p><code>onsynctopreference</code> は、現在の状態を指定された設定に書き込める形の値に変換するように、設定システムがそれぞれの要素に要求する時に、呼ばれます。あなたは、特別な値か、値を取得するのに標準的な方法を使うよう設定システムに対して通知するために <code>undefined</code> を返すことができます。上の例でいえば:</p>
+<pre>&lt;checkbox preference="foo.bar" onsynctopreference="return onsynctopreference();"/&gt;
+.. スクリプト:
+function onsynctopreference()
+{
+  var checkbox = document.getElementById("checkbox");
+  return checkbox.checked ? 3 : 2;
+}
+
+// もしfoo.barが真偽値で、その値を設定に書き込むために使いたいなら、
+// この時、他の何らかの初期化動作を実行したければ、
+// 私たちはまだこのメソッドの続きを実装することができるでしょう。
+</pre>
+<div class="moreinfo">  <p><strong><a href="/ja/docs/Preferences_System">設定システム</a>の資料:</strong></p>  <ul>    <li>簡単な紹介: <a href="/ja/docs/Preferences_System/Getting_Started">Getting Started</a> | <a href="/ja/docs/Preferences_System/Examples">サンプル</a> | <a href="/ja/docs/Preferences_System/Troubleshooting">トラブルシューティング</a></li>    <li>リファレンス: <code><a href="/ja/docs/Mozilla/Tech/XUL/prefwindow" title="prefwindow">prefwindow</a></code> | <code><a href="/ja/docs/Mozilla/Tech/XUL/prefpane" title="prefpane">prefpane</a></code> | <code><a href="/ja/docs/Mozilla/Tech/XUL/preferences" title="preferences">preferences</a></code> | <code><a href="/ja/docs/Mozilla/Tech/XUL/preference" title="preference">preference</a></code> | <a href="/ja/docs/Preferences_System/New_attributes">新しい属性</a></li>  </ul></div>

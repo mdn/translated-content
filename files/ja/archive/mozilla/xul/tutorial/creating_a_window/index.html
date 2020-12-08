@@ -1,0 +1,106 @@
+---
+title: ウィンドウを作成する
+slug: Archive/Mozilla/XUL/Tutorial/Creating_a_Window
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Creating_a_Window
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Manifest_Files" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Adding_Buttons">次のページ  »</a></p>
+</div>
+
+<p>このチュートリアルでは、単純なファイル検索ユーティリティを作成していきます。とはいっても、最初は XUL ファイルの基本的な<span style="border-bottom: 1px dashed green;" title="syntax">構文</span>の確認から始めたいと思います。</p>
+
+<p><span id="Creating_a_XUL_File"></span></p>
+
+<h3 id="XUL_.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.92.E4.BD.9C.E6.88.90.E3.81.99.E3.82.8B" name="XUL_.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.92.E4.BD.9C.E6.88.90.E3.81.99.E3.82.8B">XUL ファイルを作成する</h3>
+
+<p>XUL ファイルはどんな名称を付けてもかまいませんが、拡張子は .xul にする必要があります。 最も単純な XUL ファイルは、以下のような構造になります。</p>
+
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;window
+    id="findfile-window"
+    title="Find Files"
+    orient="horizontal"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+&lt;!-- Other elements go here --&gt;
+&lt;/window&gt;
+</pre>
+
+<p>この例で作成されるウィンドウは、UI 要素を含んでいないため何もしません。 UI 要素は次のセクションで追加する予定です。今回は上のコードについて、行単位で詳細に見ていきます。</p>
+
+<ol>
+ <li><strong>&lt;?xml version="1.0"?&gt;</strong><br>
+  この行は単に「これは XML ファイルである」ということを宣言しています。 通常、各 xul ファイルの先頭には、この行をそのままの形で記述しておくことが必要です。</li>
+ <li><strong>&lt;?xml-stylesheet href="<a class="external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;</strong><br>
+  この行は、このファイルに使用されるスタイルシートを指定しています。 XML ファイルがスタイルシートをインポートするためにはこの書式を使用します。 この例では、skin パッケージの global パートの中のスタイルがインポートされます。特定のファイルを指定していないため、 Mozilla は、ディレクトリの中から使用に適したファイルを決定します。 この場合、重要なもの全てが含まれている global.css ファイルが選択されます。 このファイルには、全ての XUL 要素に対するデフォルトの宣言が記述されています。 XML では、要素の表示方法に関する前提は全くないため、このファイルで表示方法を指示することになります。 大抵の場合は、この行を 各XUL ファイルの最上部に置いておきます。 また同様の構文を使用して、他のスタイルシートをインポートすることもできます。なお、固有のスタイルシートファイルを使用する場合でも、通常は、その中から global スタイルシートをインポートしておいた方がよいということを注記しておきます。</li>
+ <li><strong>&lt;window</strong><br>
+  この行は、ウィンドウ (<code><a href="/ja/docs/Mozilla/Tech/XUL/window" title="window">window</a></code>) の記述を行うことを宣言しています。 ユーザーインターフェイスのウィンドウはウィンドウごとにファイルを作成して記述します。 このタグは、HTML 文書全体を囲むという点で HTML タグによく似ていますが、文書ではなくユーザーインターフェイスを記述するという点が異なります。 <code><a href="/ja/docs/Mozilla/Tech/XUL/window" title="window">window</a></code> タグにはいくつかの属性が設定できます。 例では、4 つ設定されています。 例文では属性ごとに行を分けて書いていますが、そうしなければならないわけではありません。</li>
+ <li><strong>id="findfile-window"</strong><br>
+  <code><code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> 属性は、ウィンドウをスクリプトから参照するような場合の識別子として使用されます。通常、 <code>id</code> 属性は全ての要素に設定します。名前はどんなものでも構いませんが、関連性のあるものにしておく方が良いと思います。</li>
+ <li><strong>title="Find Files"</strong><br>
+  <code><code id="a-title"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/title">title</a></code></code> 属性には、ウィンドウが表示されたときに、タイトルバーに表示したいテキストを記述します。この例では、'Find Files' というテキストが表示されることになります。</li>
+ <li><strong>orient="horizontal"</strong><br>
+  <code><code id="a-orient"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code></code> 属性は、ウィンドウ内でアイテムの並べ方を規定します。<code>horizontal</code> という値によって、アイテムがウィンドウを横断して水平に並べられるべきであるという事を示します。 <code>vertical</code> という値を使用すれば、アイテムを縦一列に配置することもできます。これがデフォルト値なので、縦配置を使用したい場合は、この属性の記述自体を省略してもかまいません。</li>
+ <li><strong>xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;</strong><br>
+  この行は、XUL の名前空間を宣言します。全ての子要素が XUL である事を示すために、ウィンドウ要素でこの宣言を記述しておく必要があります。なお、この URL が実際にダウンロードされることはありません。Mozilla は、この URL を内部的に見分けます。</li>
+ <li><strong><span class="nowiki">&lt;!-- Other elements go here --&gt;</span></strong><br>
+  このコメント部分をウィンドウに表示する要素 (ボタン、メニュー、その他いろいろなユーザーインターフェース・コンポーネント) に置き換えることになります。今後のセクションでこれらを追加していきます。</li>
+ <li><strong>&lt;/window&gt;</strong><br>
+  そして最後に、ファイルの末尾で <code><a href="/ja/docs/Mozilla/Tech/XUL/window" title="window">window</a></code> タグを閉じる必要があります。</li>
+</ol>
+
+<p><span id="Opening_a_Window"></span></p>
+
+<h3 id=".E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.82.92.E9.96.8B.E3.81.8F" name=".E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.82.92.E9.96.8B.E3.81.8F">ウィンドウを開く</h3>
+
+<p>XUL ウィンドウを開くために、いろいろな方法を使用することができます。開発段階なら、Mozilla のブラウザ・ウィンドウのロケーションバーに URL (chrome: 、 file: 、または他の種類の URL のいずれでも) を入力するだけで可能です。または、XUL ファイルが Mozilla と関連付けられていれば、ファイルマネージャでダブルクリックすることでも可能なはずです。この場合、XUL ウィンドウは、新規に開かれるブラウザ・ウィンドウの中に出現することになりますが、開発の初期段階であればこれで充分だと思います。</p>
+
+<p>本格的なやり方は、言うまでもなく JavaScript を使用してウィンドウを開くことです。このために新しい構文は不要で、 <a href="/ja/HTML" title="ja/HTML">HTML</a> 文書の場合と同様に <code><a href="/ja/DOM/window.open" title="ja/DOM/window.open">window.open()</a></code> 関数を使用することで可能です。ただし、ブラウザに <a href="/ja/DOM/window.open#Window_functionality_features" title="ja/DOM/window.open#Window_functionality_features">chrome</a> 文書を開くことを示すために、「chrome」というフラグの追加が必要になります。開かれるウィンドウは、通常のブラウザウィンドウにはあるツールバーやメニューといったものがない状態で開かれます。実際の構文は、以下のようになります。</p>
+
+<pre>window.open(url,windowname,flags);
+
+※ このflags には "chrome"フラグを含める
+
+例:
+window.open("chrome://navigator/content/navigator.xul", "bmarks", "chrome,width=600,height=300");
+</pre>
+
+<div class="highlight">
+<p><span id="The_findfile.xul_example"></span></p>
+
+<h5 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AE.E4.BE.8B" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AE.E4.BE.8B">ファイル検索ダイアログの例</h5>
+それでは、実際に、ファイル検索ダイアログの基本的なファイルの作成にとりかかりましょう。<code>findfile.xul</code> という名前のファイルを作成して、<code>findfile.manifest</code> ファイルで指定したディレクトリに置きます。(このファイルは、<a href="/ja/XUL_Tutorial/Manifest_Files" title="ja/XUL_Tutorial/Manifest_Files">前のセクション</a>で作成しています)。このページの上部にある XUL のひな形を、このファイルに追加して保存します。</div>
+
+<p>Mozilla の起動時に、「-chrome」コマンドライン・パラメータを使用することで、XUL ファイルを開くことを指定することもできます。これを指定しないと、デフォルトで開くウィンドウ (通常はブラウザウィンドウ) が開くはずです。例えば、ファイル検索ダイアログは、以下のどちらでも開くことができます。</p>
+
+<pre>mozilla -chrome chrome://findfile/content/findfile.xul
+
+mozilla -chrome resource:/chrome/findfile/content/findfile.xul
+</pre>
+
+<p>このコマンドを (コマンドラインを持つプラットフォームなら) コマンドラインから実行することによって、Mozilla のブラウザウィンドウの代わりに、ファイル検索ダイアログがデフォルトで開くはずです。なお、まだウィンドウには何の UI 要素も配置していないので、実際に実行しても、ウィンドウが表示されるのを見ることはできません。次のセクションではいくつか要素を追加する予定です。</p>
+
+<p>どんな風に動作するかを見たいなら、以下の記述でブックマーク・ウィンドウを開いてみるのがよいでしょう。</p>
+
+<pre class="eval">mozilla -chrome <a class="external" rel="freelink">chrome://communicator/content/bookma...rksManager.xul</a>
+
+<span class="highlightred">Firefox を使っている場合は、下記になります</span>
+firefox -chrome <a class="external" rel="freelink">chrome://browser/content/bookmarks/bookmarksPanel.xul</a>
+</pre>
+
+<p>引数 「-chrome」 は、ファイルに対して何の<span style="border-bottom: 1px dashed green;" title="privilege">特権</span>も加えません。その代わり、指定されたファイルを、URL 入力欄やメニューといったブラウザ用の chrome を付加せずに、トップレベルのウィンドウとして、開くように作用します。chrome URL を使用してアクセスすることによってのみ特権が付与されます。</p>
+
+<div class="note"><a class="external" href="http://ted.mielczarek.org/code/mozilla/extensiondev/">Extension Developer's Extension</a>には、XULコードを入力すれば、結果を Mozilla の中でリアルタイムに確認できる XULエディタが入ってます！</div>
+
+<p>次のセクションでは、ウィンドウにボタンを追加してみます。</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Manifest_Files" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Adding_Buttons">次のページ  »</a></p>
+</div>

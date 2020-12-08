@@ -1,0 +1,137 @@
+---
+title: ツリーでの選択
+slug: Archive/Mozilla/XUL/Tutorial/Tree_Selection
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Tree_Selection
+---
+<div><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:More_Tree_Features" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Custom_Tree_Views">次のページ  »</a></p>
+</div></div>
+
+
+
+<p>このセクションでは、選択されているツリー項目の取得と選択範囲の設定の方法について説明します。</p>
+
+
+
+
+
+<h2 id="Getting_the_Selected_Tree_Items" name="Getting_the_Selected_Tree_Items">選択されているツリー項目の取得</h2>
+
+
+<p>ツリーにおける各項目 (コンテントツリービューの場合は、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></code> 要素と対応) は、それぞれ個別に選択することが可能です。 ツリーに <code><code id="a-seltype"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/seltype">seltype</a></code></code> 属性を加えて、値 <code>single</code> を設定することで、利用者は同時に 1 行だけしか選択できなくなります。 この設定をしない限りは、複数の行を一度に選択することが可能で、 選択した項目が連続している必要もありません。 このために、ツリーには項目の選択状態を確認するための関数が、いくつか用意されています。</p>
+
+
+
+
+<h3 id="Handling_the_Select_Event" name="Handling_the_Select_Event">select イベントの処理</h3>
+
+<p>まず、項目の選択操作が行われたことを検出する方法について見てみます。 そのためには、<a href="/ja/docs/XUL/Attribute/tree.onselect"><code>onselect()</code></a> イベントハンドラを <code><a href="/ja/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code> 要素に設定します。 利用者がツリー項目の選択を行ったときに、このイベントハンドラが呼び出されることになります。 また、利用者はカーソルキーを使って選択を変更することも可能です。 このときに項目表示を素早くスクロールさせるためにキーを押し続けると、押されている間はイベントハンドラが呼び出されません。 この挙動はパフォーマンスの面で効果があります。 またこのことから、カーソルが通過した多数の項目でのハイライト処理は、select イベントの発生とは関係なく行われているということも知ることができます。</p>
+
+<p><code>onselect</code> イベントハンドラの構文は、以下のようになります。</p>
+
+<pre class="brush:xml">&lt;tree id="treeset" onselect="alert('You selected something!');"&gt;
+</pre>
+
+
+
+<h3 id="Tree_Indicies" name="Tree_Indicies">ツリーのインデックス</h3>
+
+<p>ツリーには、<code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/currentIndex">currentIndex</a></span></code></code> プロパティがあり、そのときに選択されている項目のインデックスを取得するために利用できます。 このプロパティは、最初の行が選択されているときには 0 になります。</p>
+
+
+<p>インデックスを数えるとき、子の項目は、親の項目の直後に続けて含めるように数えていきます。 例えば、3 つのトップレベルの項目があり、それぞれが 2 つずつ子を持つとすると、全体では 9 項目になります。 このとき、最初の位置にあたる項目 (インデックスが 0) は、最初のトップレベルの項目になります。 次のインデックスが 1 の項目は、その最初の子になり、2 番目の子のインデックスは 2 になります。 また、2 番目のトップレベルの項目のインデックスは 3 になり、以下同様にして数えていきます。</p>
+
+
+<div class="float-right">
+  <img height="305" src="https://mdn.mozillademos.org/files/2400/seltree1.png" width="283"></div>
+
+
+<p>上の画像のツリーでは 8 行が表示されていて、そのうちの 2 行が選択されています。 最初の選択行のインデックスは 4 で、後の選択行のインデックスは 7 になります。 なお、閉じているため表示されていない行は、インデックスにはカウントされません。</p>
+
+
+
+
+<h3 id="Multiple_Selection" name="Multiple_Selection">複数行の選択</h3>
+
+
+<p>複数項目の選択が可能なツリーで、選択状態の行のリストを取得するためには、もう少し複雑な手順が必要になります。 選択されている行についての情報は、そのツリーに対応するビューの <code>selection</code> プロパティに保持されており、 その実体は <a href="http://xulplanet.com/references/objref/TreeSelection.html">TreeSelection</a> オブジェクトになります。 なお、ビュー側では、このオブジェクト自体の処理を実装する必要はありません。 ツリーにビューが結びつけられるときに、ツリーの方からビューの <code>selection</code> プロパティに自動的に設定されます。 ツリーから選択オブジェクトを取得するときは、 まず、ツリーの <code>view</code> プロパティでビューを取得し、 そのビューの <code>selection</code> プロパティから取得します。 取得した選択オブジェクトのメソッドを利用して、選択されている項目の集合を取得したり、選択状態を変更することが可能です。</p>
+
+
+
+<p>複数項目が選択可能なツリーでは、選択された項目が連続している必要はありません。 このため、<code>getRangeCount()</code> と <code>getRangeAt()</code> 関数を使って、連続した選択範囲ごとにブロックとして取得することになります。 最初の関数は、選択範囲のブロックがいくつあるかを返します。 つまり、1 項目だけが選択されている状態なら 1 が返されます。 この返り値の回数だけ <code>getRangeAt()</code> を繰り返し呼び出すコードを記述すれば、全ての選択範囲について先頭と末尾の項目のインデックスを取得することができます。</p>
+
+
+
+<p><code>getRangeAt()</code> 関数は、3 つの引数をとります。</p>
+
+<ul>
+  <li>最初の引数は、取得したい選択範囲を指定するためのインデックス値です。</li>
+  <li>2 番目の引数はオブジェクトで、関数によって選択範囲の先頭の項目のインデックスが設定されます。</li>
+  <li>3 番目の引数はオブジェクトで、関数によって選択範囲の末尾の項目のインデックスが設定されます。</li>
+</ul>
+
+
+<h4 id="getRangeAt_Example" name="getRangeAt_Example">getRangeAt の使用例</h4>
+
+<pre class="brush:js">var start = new Object();
+var end = new Object();
+var numRanges = tree.view.selection.getRangeCount();
+
+for (var t = 0; t &lt; numRanges; t++){
+  tree.view.selection.getRangeAt(t,start,end);
+  for (var v = start.value; v &lt;= end.value; v++){
+    alert("Item " + v + " is selected.");
+  }
+}
+</pre>
+
+
+
+<p>まず、「start」と「end」という名前で、2 つのオブジェクトを作成します。 次に、<code>getRangeCount()</code> 関数で選択範囲がいくつあるかを取得し、その数だけ繰り返して全ての選択範囲を処理します。 <code>getRangeAt()</code> 関数は、取得する選択範囲のインデックスと、「start」と「end」オブジェクトを渡して呼び出します。 関数では、先頭と末尾のインデックスを、それぞれ「start」と「end」オブジェクトの「value」プロパティに設定します。 したがって、最初の選択範囲が 3 番目から 7 番目の項目であるなら、<code>start.value</code> は 2 、 <code>end.value</code> は 6 になります。(インデックスは 0 から始まるので 1 減らす必要があります)。 また、この例を実行すると、選択中の項目のインデックスが alert ダイアログで表示されることになります。</p>
+
+
+<p>もし、単に特定の行が選択されているかどうかを知りたいだけならば <code>isSelected()</code> 関数を利用できます。 この関数に、調べたい行のインデックスを引数に渡して呼び出し、 値 true が返されれば、その行は選択されています。</p>
+
+<pre class="brush:js">alert(tree.view.selection.isSelected(3));
+</pre>
+
+
+
+
+
+<h2 id="Modifying_the_Tree_Selection" name="Modifying_the_Tree_Selection">ツリー項目の選択状態を変更する</h2>
+
+
+<p>選択オブジェクトには、項目の選択状態を変更するために利用可能な関数が、いくつか用意されています。 このうち、最も単純な関数は <a href="/ja/docs/XUL/Method/select"><code>select()</code></a> 関数で、 これはすべての選択を解除した後に、特定の１行を選択状態にします。 例えば、以下のコードは、インデックスが 5 の行を選択します。</p>
+
+<pre class="brush:js">tree.view.selection.select(5);
+</pre>
+
+<p>単純にツリーの <code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/currentIndex">currentIndex</a></span></code></code> プロパティを変更しても、選択されている項目を変更することはできません。 上の例で示したように、<code>selection</code> の <a href="/ja/docs/XUL/Method/select"><code>select()</code></a> 関数を使う必要があります。</p>
+
+<p>複数行の選択が可能なツリーの場合、 全ての行を選択するために、<a href="/ja/docs/XUL/Method/selectAll"><code>selectAll()</code></a> 関数を使うことができます。 ただし、入れ子になっている行のうち、閉じた状態のコンテナに置かれて表示されていないものは、選択されないことに注意してください。 また、選択を解除するには <a href="/ja/docs/XUL/Method/clearSelection"><code>clearSelection()</code></a> 関数を使います。 さらに、 <a href="/ja/docs/XUL/Method/invertSelection"><code>invertSelection()</code></a> 関数によって項目の選択状態を反転、 つまり、全ての選択されている行の選択解除と、全ての選択されていない行の選択を行うことも可能です。</p>
+
+<p>特定の範囲にある行のみを選択するためには、<code>rangedSelect()</code> 関数を使うことができます。 この関数は、2 つのインデックスの間にある全ての行を選択します。 以下にインデックスが 2 から 7 の行までを選択する例を示します。 なお、このとき、2 と 7 の行も選択されることを補足しておきます。</p>
+
+
+<pre class="brush:js">tree.view.selection.rangedSelect(2, 7, true);
+</pre>
+
+<p><code>rangedSelect()</code> の最後の引数では、現在の選択内容に追加するかどうかを指示します。 <code>true</code> の場合、現在の選択内容は維持したまま指定の範囲を追加し、 false の場合は、現在の選択内容は解除されます。</p>
+
+<p>また、<code>clearRange()</code> 関数を使用すれば、 特定の範囲に含まれる行の選択のみを解除することが可能です。 このとき、範囲外の行については選択内容は変化しません。</p>
+
+<pre class="brush:js">tree.view.selection.clearRange(2, 7);
+</pre>
+
+<p>次のセクションでは、カスタムツリービューの作り方を見ていきます。</p>
+
+
+
+<div><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:More_Tree_Features" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Custom_Tree_Views">次のページ  »</a></p>
+</div></div>

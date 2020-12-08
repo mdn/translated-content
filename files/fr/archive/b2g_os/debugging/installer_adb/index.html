@@ -1,0 +1,135 @@
+---
+title: Installer et utiliser ADB
+slug: Archive/B2G_OS/Debugging/Installer_ADB
+translation_of: Archive/B2G_OS/Debugging/Installing_ADB
+---
+<div class="summary">
+<p><span id="result_box" lang="fr"><span class="hps">De nombreux</span> <span class="hps">aspects du développement</span> <span class="hps">de Firefox</span> <span class="hps">OS</span> <span class="hps">nécessitent l'installation</span> <span class="hps">d'ADB</span><span>, </span>(<span class="hps">Android</span> <span class="hps">Debug</span><span> Bridge).</span> <span class="hps">Cet article explique</span> <span class="hps">comment faire</span> <span class="hps">et propose quelques</span> <span class="hps">commandes</span> usuelles et <span class="hps">utiles d'ADB</span><span>.</span></span></p>
+</div>
+
+<h2 id="Installer_ADB">Installer ADB</h2>
+
+<p>Vous pouvez installer adb à partir du paquet Android SDK disponible pour Mac, Linux et Windows — allez sur la page <a href="http://developer.android.com/sdk/index.html">Get the Android SDK</a>.</p>
+
+<p>Vous pouvez aussi installer cette <a href="https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/">extension Firefox</a>, ce qui est plus rapide.</p>
+
+<p>Si vous utilisez la dernière version stable de votre système d'exploitation, alors ADB a de grandes chances d'être maintenu par un membre de la communauté dans les dépôts :</p>
+
+<p>Le résumé suivant (WIP) indique comment télécharger ADB pour les distributions utilisant les dépôts de Debian, Fedora et Archlinux ainsi que pour Mac OS X.</p>
+
+<h3 id="Debian_et_distributions_dérivées_(TAILS_*buntu_Elementary_OS)">Debian et distributions dérivées (TAILS, *buntu, Elementary OS)</h3>
+
+<pre>sudo apt-get install android-tools-adb</pre>
+
+<h3 id="Fedora_19_20_21_et_distributions_dérivées">Fedora 19, 20, 21, et distributions dérivées</h3>
+
+<pre>sudo yum install android-tools</pre>
+
+<h3 id="Archlinux_et_distributions_dérivées">Archlinux et distributions dérivées</h3>
+
+<pre>yaourt -S android-tools android-udev</pre>
+
+<h3 id="Mac_OS_X">Mac OS X</h3>
+
+<p>Vous aurez besoin de Homebrew pour utiliser l'utilitaire adb : <a href="http://brew.sh">brew.sh</a>.</p>
+
+<p>Lancez ensuite la commande suivante :</p>
+
+<pre>brew install android-platform-tools</pre>
+
+<h3 id="Autre">Autre</h3>
+
+<p>Si votre distribution ne possède pas les paquets adb (par exemple Ubuntu 12.04 ou Fedora 17/18), vous aurez besoin d'installer <a class="external" href="http://developer.android.com/sdk/index.html" title="http://developer.android.com/sdk/index.html">le paquet starter Android SDK</a> pour votre plateforme (choisissez l'<em>ADT Bundle</em>, et non pas l'option <em>SDK Tools Only</em>). Puis démarrer le gestionnaire de paquet, <code>$SDK_HOME/tools/android</code>, et utiliser l'interface graphique pour installer "Android SDK Platform-tools".</p>
+
+<p>Regardez où <code>adb</code> est installé (généralement dans <code>usr/bin</code>, et peut être aussi à l'intérieur de <code>adt/platform-tools</code>, selon où vous l'avez installé). Pensez à ajouter ce répertoire à votre <code>PATH</code>. Vous pouvez faire ça en ajoutant la ligne</p>
+
+<pre>PATH=$SDK_HOME:$PATH</pre>
+
+<p>en remplaçant <code>$SDK_HOME</code> avec l'emplacement du SDK Android, dans votre <code>~/.bashrc</code> ou équivalent.</p>
+
+<h2 id="Dépannage">Dépannage</h2>
+
+<h3 id="Installer_les_bibliothèques_de_compatibilité_32_bits">Installer les bibliothèques de compatibilité 32 bits</h3>
+
+<p>Vous pourrez traiter de données en 32 bits. Si votre système d'exploitation est en 64 bits, cela signifie qu'il vous faudra des bibliothèques de compatibilité 32 bits.</p>
+
+<p>Le résumé ci-dessous (WIP) indique comment les télécharger depuis les dépôts de Debian et Archlinux :</p>
+
+<h3 id="Debian_et_distributions_dérivées_(TAILS_*buntu_Elementary_OS)_2">Debian et distributions dérivées (TAILS, *buntu, Elementary OS)</h3>
+
+<pre>sudo apt-get install ia32-libs</pre>
+
+<h3 id="Archlinux_et_distributions_dérivées_2">Archlinux et distributions dérivées</h3>
+
+<p>Pour intégrer des bibliothèques de compatibilité 32 bits, il faut indiquer à pacman que vous souhaitez les paquets venant de multilib.</p>
+
+<p>Le dépôt multilib devrait être présent par défaut, mais vous pouvez, dans le cas contraire, modifier votre pacman.conf et décommenter ou taper les lignes suivantes :</p>
+
+<pre>[multilib]
+
+Include = /etc/pacman.d/mirrorlist</pre>
+
+<p>Installez ensuite les paquets <a href="https://www.archlinux.org/packages/multilib/x86_64/lib32-libstdc++5/">lib32-libstdc++5</a> et <a href="https://www.archlinux.org/packages/multilib/x86_64/lib32-zlib/">lib32-zlib</a> à l'aide de la commande suivante :</p>
+
+<pre>yaourt -S lib32-libstdc++5 lib32-zlib</pre>
+
+<h3 id="Appareil_non_listé_par_'adb_devices'">Appareil non listé par 'adb devices'</h3>
+
+<p>Si votre appareil n'est pas affiché en tapant 'adb device', <a href="https://gist.github.com/justinpotts/f0b0c3883d5947c219b5">cliquez ici</a> pour suivre les étapes de résolutions.</p>
+
+<h2 id="Commandes_ADB_usuelles">Commandes ADB usuelles</h2>
+
+<p>Les sections suivantes expliquent quelques commandes usuelles d'adb.</p>
+
+<h3 id="Redémarrer_le_processus_b2g">Redémarrer le processus b2g</h3>
+
+<p>b2g est l'équivalent d'une application <a href="/en-US/docs/XULRunner" title="/en-US/docs/XULRunner">XULRunner</a> fonctionnant sur le téléphone sur un kernel basé sur Android. Si vous souhaitez le redémarrer, c'est une manière de mettre à zéro l'environnement applicatif sans redémarrer entièrement l'appareil. Vous pouvez faire cela en entrant la commande suivante dans votre terminal en ayant votre appareil connecté à votre ordinateur (ou lorsque le déboggeur est installé) :</p>
+
+<pre>adb shell killall b2g</pre>
+
+<h3 id="Activer_la_redirection_de_port_pour_le_déboggage">Activer la redirection de port pour le déboggage</h3>
+
+<p>Pour activer simplement la redirection de port (par exemple si vous souhaitez utiliser le gestionnaire d'applications pour débogger des applications Firefox OS sur un appareil), entrez la commande suivante dans votre terminal :</p>
+
+<pre class="language-html">adb forward tcp:6000 localfilesystem:/data/local/debugger-socket</pre>
+
+<p>Vous aurez besoin de faire ça à chaque fois que le téléphone est redémarré ou débranché puis rebranché. Vous pouvez changer le nombre du socket si nécessaire.</p>
+
+<h3 id="Rediriger_des_ports_à_une_machine_locale">Rediriger des ports à une machine locale</h3>
+
+<p>Pour rediriger des ports à une machine locale, vous aurez besoin de télécharger les binaires <a href="http://people.mozilla.org/~jmuizelaar/forward/">netcat et ssh</a>, et exécuter les commandes suivantes :</p>
+
+<pre class="brush: bash"># Ceci est un hack horrible, mais il fonctionne...
+hôte$ adb forward tcp:7979 tcp:6969
+
+# Crée quelques pipes nommés pour faire un netcat bi-directionnel
+téléphone$ mknod readback p
+hôte$ mknod readback p
+
+# cela met en place une connexion utilisable une seule fois pour se connecter à l'hôte
+# écoute sur les ports 6969 et 5959 et redirige toutes les informations entre elles
+téléphone$ ./netcat -l -p 6969 &lt; readback | ./netcat -l -p 5959 &gt; readback
+# connecte au port 7979 (port 6969 sur l'appareil) et le serveur ssh local et redirige toutes les informations entre elles
+hôte$ ./netcat localhost 7979 &lt; readback | ./netcat localhost 22 &gt; readback
+
+# maintenant lorsque nous nous connectons au port 5959 sur le téléphone cela sera comme si nous nous connectons au serveur ssh sur l'hôte
+
+# utilise le reverse netcat pour paramétrer une connexion ssh de retour à l'hôte et redirige le port 9999 sur l'appareil à 'localhost:8000' (cela peut être n'importe quoi comme 'google.com:80')
+téléphone$ ./ssh localhost -p 5959 -L 9999:localhost:8000</pre>
+
+<p>Celà redirigera le port 9999 sur l'appareil au port 8000 de l'hôte.</p>
+
+<p>Sinon vous pouvez utiliser un serveur SSH (<a href="http://people.mozilla.org/~jmuizelaar/forward/dropbear">dropbear</a> et <a href="http://people.mozilla.org/~jmuizelaar/forward/host_key">host_key</a>) directement sur l'appareil en entrant les commandes suivantes :</p>
+
+<pre class="brush: bash">téléphone$ DROPBEAR_PASSWORD=root ./dropbear -p 9000 -F -v -a -r host_key ./dropbear
+hôte$ adb forward tcp:8888 tcp:9000
+# l'<span class="short_text" id="result_box" lang="fr"><span class="hps">authentification avec clé publique à été codée en dur pour </span></span>fonctionner (<span id="result_box" lang="fr"><span class="hps">assurez-vous que</span> <span class="hps">vous avez</span> <span class="hps">une clé publique</span> <span class="hps">ssh</span> <span class="hps">à utiliser</span></span>)
+hôte$ ssh -vvv root@localhost -p 8888 -R 9999:people.mozilla.org:80
+</pre>
+
+<p>Plus de ressources :</p>
+
+<ul>
+ <li><a href="http://k.japko.eu/android-dropbear.html">Instructions pour compiler dropbear</a></li>
+ <li><a href="http://people.mozilla.org/~jmuizelaar/forward/dropbear-b2g.patch">Patch dropbear</a> pour désactiver le crash dû à des variables d'environnement manquantes <span class="short_text" id="result_box" lang="fr"><span class="hps">et</span> <span class="hps">succès</span> <span class="hps">d'authentification <span class="short_text" id="result_box" lang="fr"><span class="hps">codé en dur</span></span></span><span>.</span></span></li>
+</ul>

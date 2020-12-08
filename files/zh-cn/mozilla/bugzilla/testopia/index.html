@@ -1,0 +1,134 @@
+---
+title: Testopia
+slug: Mozilla/Bugzilla/Testopia
+translation_of: Mozilla/Bugzilla/Testopia
+---
+<p>Testopia 是bugzilla测试用例管理扩展工具。它可以帮助测试人员跟踪管理测试用例，并将测试用例运行结果整合进bug报告。testopia设计以软件测试为核心，使之可以跟踪软件工程中的几乎任何测试。</p>
+<h2 id="Testopia_2.5">Testopia 2.5</h2>
+<p>此版本直接支持bugzilla4.2，并且不在需要bugzilla 补丁。如果用户需要升级至2.5</p>
+<p>在安装前，请卸载已安装的bugzilla补丁。安装之需要直接将tar包解压在bugzilla的根目录下，并运行checksetup即可。感谢来自bugzilla团队的LpSolit，没有它就没有这些变化。</p>
+<h2 id="Testopia_2.4_-_重要通知！">Testopia 2.4 - 重要通知！</h2>
+<p>如果用户在大小写敏感的文件系统中升级，请一定要从扩展目录中删除已有的testopia文件夹。</p>
+<p>如果用户已经修改了testopia 的源代码，用户需要将他们合并到Testopia文件夹（capital T）。如果用户使用windows系统或其它大小写不敏感的文件系统，用户仅需要重命名已有文件夹即可，例如：testopia-old ，然后解压缩tar包。在删除老版本前，用户可以合并两个文件夹。</p>
+<p><b>API USERS 请注意:</b> 不再赞成使用Positional parameters。所有参数变量现在都应形成哈希对 (struct, dict, hashmap or whatever your language of choice calls key, value pairs).</p>
+<p>虽然，努力尝试继续支持positional parameters,但请注意有些api直到用户调用时才会失败。在后续版本中也许会完全去除对它的支持。</p>
+<p>一如既往，请在安装或升级前备份你已安装的系统。</p>
+<h2 id="Integration_Points">Integration Points</h2>
+<ul>
+  <li>
+    <p style="margin-bottom: 0in;">Testopia与Bugzilla产品一体化，组件化，版本化，且里程碑式地为高级对象提供一个单一的管理界面。</p>
+  </li>
+  <li>
+    <p style="margin-bottom: 0in;">Testopia 允许用户登录一个工具，使用bugzilla 组权限去限制访问，修改测试对象。</p>
+  </li>
+  <li>
+    <p style="margin-bottom: 0in;">Testopia允许用户附上用例测试结果中发现的缺陷，以便于软件开发过程的集中管理。</p>
+  </li>
+</ul>
+<h2 id="Features_for_version_2.4_(Bugzilla_3.6.x)" style="margin-top: 0in; margin-bottom: 0in;">Features for version 2.4 (Bugzilla 3.6.x)</h2>
+<ul>
+  <li>Bugzilla 3.6 support</li>
+</ul>
+<h2 id="Features_for_version_2.3_(Bugzilla_3.4.x)" style="margin-top: 0in; margin-bottom: 0in;">Features for version 2.3 (Bugzilla 3.4.x)</h2>
+<ul>
+  <li>支持XML导入，导出测试计划和子计划</li>
+  <li>支持CSV到处测试用例和结果</li>
+  <li>新报告：严重缺陷汇总</li>
+  <li>可以设置indidual case运行优先级</li>
+  <li>新的clone选项</li>
+  <li>使用最新的Extjs 3.0 library</li>
+  <li>将Testopia升级为Bugzilla extension</li>
+  <li>修改了一些bugs</li>
+</ul>
+<h2 id="Features_for_version_2.2_(Bugzilla_3.2_and_3.0.x)" style="margin-top: 0in; margin-bottom: 0in;">Features for version 2.2 (Bugzilla 3.2 and 3.0.x)</h2>
+<p>此版本主要是修复了一些bug，使之更好的兼容bugzilla 3.2 和 3.0.6。请确认根据自己的bugzilla版本下载正确的安装包。</p>
+<p>To install, do the following (see the <a href="http://wiki.mozilla.org/Testopia:README">README</a> for more detailed instructions):</p>
+<ol>
+  <li>解压Testopia 2.4 tar包到用户的Bugzilla目录.</li>
+  <li>打Bugzilla补丁.<br>
+    On Linux systems it should look something like:
+    <p style="border: 1px solid red; padding: 3px; width: 250px;"><code><b>patch -p0 -i extensions/testopia/patch-3.6</b></code></p>
+  </li>
+  <li>Run checksetup.pl</li>
+</ol>
+<p>升级Testopia步骤同上。只是需要先卸载以前的老补丁即可。如果同时升级bugzilla，请先升级bugzilla，再升级testopia。</p>
+<p><code><b>patch -p0 -R -i extensions/testopia/patch-&lt;version&gt;</b></code></p>
+<p>命令中&lt;version&gt; 代表Bugzilla版本号</p>
+<h2 id="Requirements">Requirements</h2>
+<p>我们决定尝试紧跟bugzilla最新稳定版本3.4，来完成自己的开发。这给我们提供稳定的代码。为任何软件开发插件或扩展，就像射击移动目标一样。这个决定使得我们可以集中更多时间在新特性上，而不是旧特性。因此，这就意味着新特性不会再支持早先的版本，除非我们有时间这么做。当然，任何想这么做的人，都是无上欢迎的。</p>
+<ul>
+  <li>
+    <p style="margin-bottom: 0in;">Bugzilla 3.6.x</p>
+  </li>
+  <li>
+    <p style="margin-bottom: 0in;">Mysql 5.0 or PostGres 8.1.x</p>
+  </li>
+  <li>
+    <p style="margin-bottom: 0in;">Mozilla compatible browser ;-)</p>
+  </li>
+  <li>
+    <p style="margin-bottom: 0in;">Additional Perl Modules: Text::CSV XML::Schema Validator XML::Schema::Parser (for importer) and JSON 2.10</p>
+  </li>
+</ul>
+<h2 id="TODO">TODO</h2>
+<ul>
+  <li>
+    <p style="margin-bottom: 0in;">User preferences</p>
+  </li>
+  <li>
+    <p style="margin-bottom: 0in;">Notification emails</p>
+  </li>
+  <li>
+    <p style="margin-bottom: 0in;">More Reports</p>
+  </li>
+</ul>
+<p>See the <a href="http://wiki.mozilla.org/Testopia:Roadmap">Roadmap</a> and <a href="https://bugzilla.mozilla.org/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;product=Testopia&amp;long_desc_type=substring&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;emailassigned_to1=1&amp;emailtype1=exact&amp;email1=&amp;emailassigned_to2=1&amp;emailreporter2=1&amp;emailqa_contact2=1&amp;emailtype2=exact&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">Bug List</a> for more details.</p>
+<h2 id="Links">Links</h2>
+<ul>
+  <li>
+    <p style="margin-bottom: 0in;"><a href="http://wiki.mozilla.org/Testopia:FAQ">FAQ</a></p>
+  </li>
+  <li>
+    <p style="margin-bottom: 0in;"><a href="http://wiki.mozilla.org/Testopia">Wiki</a></p>
+  </li>
+  <li>
+    <p style="margin-bottom: 0in;"><a href="http://landfill.mozilla.org/testopia2/testopia/doc/Manual.pdf">Docs</a></p>
+  </li>
+  <li>
+    <p style="margin-bottom: 0in;"><a href="https://bugzilla.mozilla.org/buglist.cgi?query_format=advanced&amp;product=Testopia&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;bug_status=UNCONFIRMED">Bugs</a> (Please read the <a href="https://wiki.mozilla.org/Testopia:Bug_Reporting_Guide">Bug Reporting Guide)</a></p>
+  </li>
+  <li>
+    <p style="margin-bottom: 0in;">Official Testopia <a href="http://testopia.blogspot.com/">Blog</a></p>
+  </li>
+  <li>
+    <p style="margin-bottom: 0in;">IRC: <a href="irc://irc.mozilla.org/testopia">#testopia</a> or <a href="irc://irc.mozilla.org/mozwebtools">#mozwebtools </a></p>
+  </li>
+  <li>
+    <p style="margin-bottom: 0in;">User Help <a href="mailto:support-webtools@lists.mozilla.org">support-webtools@lists.mozilla.org</a></p>
+  </li>
+  <li>
+    <p style="margin-bottom: 0in;">Developers <a href="mailto:dev-apps-webtools@lists.mozilla.org">dev-apps-webtools@lists.mozilla.org</a></p>
+  </li>
+  <li>
+    <p style="margin-bottom: 0in;"><a href="http://landfill.mozilla.org/testopia2/">Testopia on landfill (2.2 on Bugzilla 3.0.6)</a></p>
+  </li>
+  <li>
+    <p style="margin-bottom: 0in;"><a href="http://landfill.mozilla.org/testopia/">Testopia on landfill (2.2 on Bugzilla 3.2)</a></p>
+  </li>
+</ul>
+<h2 id="Downloads">Downloads</h2>
+<ul>
+  <li>
+    <p style="margin-bottom: 0in;"><a href="ftp://ftp.mozilla.org/pub/mozilla.org/webtools/testopia/testopia-2.5-BUGZILLA-4.2.tar.gz">Download 2.5 (Bugzilla 4.2)</a></p>
+  </li>
+  <li>
+    <p style="margin-bottom: 0in;"><a href="ftp://ftp.mozilla.org/pub/mozilla.org/webtools/testopia/testopia-2.4-BUGZILLA-3.6.tar.gz">Download 2.4 (Bugzilla 3.6 and 4.0)</a></p>
+  </li>
+  <li>
+    <p style="margin-bottom: 0in;"><a href="ftp://ftp.mozilla.org/pub/mozilla.org/webtools/testopia/">Archived Versions</a></p>
+  </li>
+</ul>
+<h2 id="Developers">Developers</h2>
+<p>Greg Hendricks<br>
+  Vance Baarda (former developer)<br>
+  Ed Fuentetaja (former developer)</p>

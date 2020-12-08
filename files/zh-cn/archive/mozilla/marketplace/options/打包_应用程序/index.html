@@ -1,0 +1,71 @@
+---
+title: 封装的应用程序
+slug: Archive/Mozilla/Marketplace/Options/打包_应用程序
+tags:
+  - 封装应用程序
+  - 应用市场
+  - 应用程序发布
+  - 应用程序种类
+translation_of: Archive/Mozilla/Marketplace/Options/Packaged_apps
+---
+<div class="summary">
+ <p><span class="seoSummary">一个封装的应用程序app就是把开放式Web应用程序的所有资源（HTML，CSS，JavaScript，应用程序的manifest，等等）<span class="seoSummary">封装</span>进一个ZIP文件，而不是将这些资源放在一个Web服务器上。这篇文档从一个开发者的视角提供了<span class="seoSummary">封装</span>应用程序的介绍，并且链接了你需要知道的有关<span class="seoSummary">封装</span>应用程序app的一切。 </span></p>
+</div>
+<p>一个<span class="seoSummary">封装</span>的应用程序就是一个zip文件， 它包含了能够使Web应用程序运行的所有资源， 并且在zip文件的根目录下包含有应用程序的<a href="/en-US/docs/Web/Apps/Manifest">manifest</a> 文件。应用程序的manifest提供了应用程序的详细信息，如：程序的描述, 图标等。如此<span class="seoSummary">封装</span>的应用程序然后才能够安装到Firefox OS设备, <a href="/en-US/Marketplace/Options/Open_web_apps_for_android">Android设备</a>,以及<a href="/en-US/Marketplace/Options/Open_web_apps_for_desktop">电脑桌面</a>。安装的应用程序在设备上运行时，仍然能够访问Web上面的资源，如在一个Web服务器上的数据库。</p>
+<p><a href="#types_of_packaged_apps"><span class="seoSummary">封装</span>的应用程序分三种类型</a>:  Web应用程序, 特权应用程序和认证的应用程序。虽然<span class="seoSummary">封装</span>应用程序能够发布任何开放的Web应用，但是特权应用和认证应用需要数字签名才能使用<a href="/en-US/Apps/Build/App_permissions">特权和认证API</a>。特权应用程序签名是应用市场审查流程的一部分，而认证应用程序签名是由设备厂商和运营商完成的。</p>
+<p>除了使用特权和认证API的能力之外，<span class="seoSummary">封装</span>应用程序安装到设备上之后，所有应用程序的资源都位于设备中，这也为用户提供了更快速的程序启动及响应。基于这些特征，<span class="seoSummary">封装</span>应用程序是开放Web应用程序发布到Firefox OS设备，<a href="/en-US/Marketplace/Options/Open_web_apps_for_android">Android设备</a>以及<a href="/en-US/Marketplace/Options/Open_web_apps_for_desktop">桌面</a>的推荐方法。</p>
+<div class="note">
+ <p><strong>注意:</strong> 当前的Firefox应用市场支持Web和特权<span class="seoSummary">封装的</span>应用。另外，Firefox应用市场仅仅支持Firefox OS的付费应用，并且支持Firefox OS, Android Firefox以及桌面Firefox的免费应用程序。 支持所有平台的的付费应用正在开发当中。</p>
+</div>
+<h2 id="封装应用程序的种类"><strong><span class="seoSummary">封装</span>应用程序的种类</strong></h2>
+<p>共有三种类型的<span class="seoSummary">封装</span>应用程序：Web应用程序，特权应用程序及认证应用程序。每种类型的<span class="seoSummary">封装</span>应用程序分别对应于Firefox OS中实现的<a href="https://developer.mozilla.org/en-US/Firefox_OS/Security/Security_model#App_Security">应用程序安全</a>模型的一个等级，本章接下来提供每个种类应用程序的更多信息。</p>
+<h3 id="Web应用程序">Web应用程序</h3>
+<p>web应用程序是没有使用特权和内置(认证的)API的程序, 当提交到应用市场的<span class="seoSummary">封装</span>应用程序被签注时，使用特殊的授权进程来保证特权和内置应用不被执行，因此Web应用程序不能使用特权和内置的APIs，这些应用程序也不需要特权和认证应用程序所要求的<a href="/en-US/Apps/CSP">内容安全政策</a>。</p>
+<p>Web应用在他的manifest.webapp文件中没有要求一定要有type域，因为type的默认值web就是正确的值。</p>
+<div class="note">
+ <p><strong>注意</strong>: Web应用可以 <a href="/en-US/Marketplace/Options/Self_publishing">自行发布</a> 或者通过Firefox应用市场来发布。</p>
+</div>
+<div class="note">
+ <p><strong>注意</strong>: Web应用也可以使用<a href="https://developer.mozilla.org/en-US/Marketplace/Options/Hosted_apps">托管应用程序（Hosted App）</a>机制来发布。</p>
+</div>
+<h3 id="特权应用程序"><strong>特权应用程序</strong></h3>
+<p>特权应用是使用了特权APIs的应用程序，与iOS和Android平台上的原生应用程序类似。当特权应用被提交到Firefox应用市场时，通过一个特别的进程来审核。这个审核进程给了应用程序用户一定程度的保障，潜在的安全，隐私及性能问题等都得到了仔细的审查。</p>
+<p>要指定一个应用为特权应用程序，只要在他的manifest.webapp文件中增加<a href="/en-US/docs/Web/Apps/Manifest#type"><code>type域</code></a>，并设定他的值为privileged。你的应用程序要访问的每个特权API都必须添加到应用程序<a href="/en-US/docs/Web/Apps/Manifest">manifest</a>中的permissions域中。</p>
+<p>Firefox OS和Android运行环境以及desktop对于特权应用程序强行使用下面的内容安全政策<a href="/en-US/docs/Security/CSP/Introducing_Content_Security_Policy">（CSP）</a>：</p>
+<pre class="brush: js">"default-src *; script-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline'"</pre>
+<div class="note">
+ <p><strong>注意</strong>: 特权应用程序只能通过Firefox应用市场来发布。</p>
+</div>
+<h3 id="内置应用程序"><strong>内置应用程序</strong></h3>
+<div class="geckoVersionNote">
+ <p>内置应用程序不像第三方开发者创建的应用程序，内置应用程序通常不是总是可用的，并且不能通过Firefox应用市场发布。内置APIs长期的目标是加强（harden）内置API的认证，使他们像特权程序一样可用。如果你有兴趣了解如何使一个特殊API可用，请在<a href="https://lists.mozilla.org/listinfo/dev-webapps">dev-webapps</a>邮件列表中提供反馈。</p>
+</div>
+<p>内置应用是使用了内置认证API的应用程序，他提供了访问设备上诸如默认的拨号器，系统设置应用这些关键系统功能。相对于特权应用程序，内置应用程序中的API权限许可都是隐含的，就是说他们不需要用户明确的核准即可使用。内置应用程序必须要设备厂商或运营商核准。</p>
+<p>要指定一个程序为内置应用程序，在manifest.webapp中设定<a href="/en-US/docs/Web/Apps/Manifest#type"><code>type</code></a>域为certified。你的应用程序要访问的每个特权API和内置API都必须添加到应用程序<a href="/en-US/docs/Web/Apps/Manifest">manifest</a>中的permissions域中。</p>
+<p>Firefox OS为内置应用程序实现了下面的内容安全政策CSP：</p>
+<pre class="brush: js">"default-src *; script-src 'self'; object-src 'none'; style-src 'self'"</pre>
+<p>相对特权应用程序，内置应用为CSP实现了更严格的规则。如果你想要了解背后的原因，请查阅 <a href="https://wiki.mozilla.org/Apps/Security#Default_CSP_policy">默认CSP政策</a> 和 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=768029">Bug 768029。</a></p>
+<div class="note">
+ <p><strong>注意</strong>: 内置应用程序只能通过设备制造商或运营商来预装到设备中，不能透过其他任何方式发布。</p>
+</div>
+<div class="note">
+ <p><strong>注意</strong>: 内置应用程序的内部代号是认证应用程序。</p>
+</div>
+<h2 id="测试封装的应用程序"><strong>测试<span class="seoSummary">封装</span>的应用程序</strong></h2>
+<p>为了测试目的，要安装<span class="seoSummary">封装</span>的应用程序到Firefox OS模拟器或设备，请参考<a href="/en-US/Firefox_OS/Using_the_App_Manager">应用程序管理器</a>。 另外，你能够从Web服务器上面安装一个<span class="seoSummary">封装</span>应用程序到设备上，参考<a href="/en-US/Marketplace/Options/Self_publishing">自行发布应用程序</a>中描述的步骤。 记住当你要自行发布应用程序时，只有<span class="seoSummary">封装</span>的应用程序才能被安装。</p>
+<h2 id="发布应用程序"><strong>发布应用程序</strong></h2>
+<p align="left">你有两种选择来发布你的应用程序：一个是在Firefox应用市场，另一个是自行发布。</p>
+<h3 id="Firefox应用市场发布程序"><strong>Firefox应用市场发布程序</strong></h3>
+<p align="left">提交<span class="seoSummary">封装</span>的应用程序到Firefox应用市场的过程在<a href="/en-US/Marketplace/Publishing"> 应用发布</a> 章节有已经有描述。</p>
+<p align="left">当你提交你的<span class="seoSummary">封装</span>的应用程序时， ZIP文件存储在Firefox应用市场的服务器里面，并且应用市场基于你ZIP文件中的应用程序manifest生成一个新的叫做mini-manifest的manifest。当用户安装你的应用程序时，mini-manifest被传递给<a href="/en-US/docs/Web/API/Apps.installPackage"><code>Apps.installPackage()</code></a><u>函数</u> 来安装应用程序。mini-manifest的存在是为了安装和升级的目的，并不在你运行应用程序时使用。</p>
+<h3 id="自行发布">自行发布</h3>
+<p>自行发布应用程序到Firefox应用市场外也是可能的，如在你自己的web服务器上面发布。详细内容请参考<a href="/en-US/Marketplace/Options/Self_publishing"> 自行发布应用程序</a>。</p>
+<h2 id="更新封装的应用程序">更新<span class="seoSummary">封装</span>的应用程序</h2>
+<p>更多有关更新应用程序的信息，请参考<a href="/en-US/docs/Web/Apps/Updating_apps"> 跟新应用程序 </a>章节。</p>
+<h2 id="更多信息">更多信息</h2>
+<ul>
+ <li><a href="/en-US/Firefox_OS/Security/Security_model">Firefox OS安全概要</a></li>
+ <li><a href="/en-US/Firefox_OS/Security/Application_security">应用程序安全</a></li>
+ <li><a href="https://github.com/robnyman/Firefox-OS-Boilerplate-App" title="https://github.com/robnyman/Firefox-OS-Boilerplate-App">Firefox OS样板应用程序</a></li>
+</ul>
+<p> </p>

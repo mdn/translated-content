@@ -1,0 +1,201 @@
+---
+title: XPCNativeWrapper
+slug: XPCNativeWrapper
+tags:
+  - DOM
+  - Extensions
+  - Sécurité
+  - XPCNativeWrapper
+translation_of: Mozilla/Tech/Xray_vision
+---
+<p>
+</p><p><code>XPCNativeWrapper</code> permet d'emballer un objet pour qu'il soit <a href="fr/Acc%c3%a8s_s%c3%a9curis%c3%a9_au_contenu_DOM_depuis_le_chrome">sur d'y accéder depuis du code privilègié</a>. Il peut être utilisé dans toutes les versions de Firefox, bien que son comportement ait été légèrement modifié depuis Firefox 1.5 (Gecko 1.8). Consultez <a class="external" href="http://kb.mozillazine.org/XPCNativeWrapper">les informations sur <code>XPCNativeWrapper</code> dans la base de connaissance de MozillaZine</a> pour connaître le comportement de <code>XPCNativeWrapper</code> dans les versions de Firefox antérieures à 1.5. Ce document traite de <code>XPCNativeWrapper</code> dans Firefox 1.5 et postérieurs.
+</p>
+<h3 id=".C3.80_quoi_sert_XPCNativeWrapper" name=".C3.80_quoi_sert_XPCNativeWrapper"> À quoi sert <code>XPCNativeWrapper</code> </h3>
+<p>Un <code>XPCNativeWrapper</code> restreint l'accès aux propriétés et méthodes des objets qu'il enveloppe. Les seules propriétés et méthodes accessibles au travers du <code>XPCNativeWrapper</code> sont celles définies dans les IDL ou définies par le niveau 0 du DOM (bien que certaines propriétés et méthodes du niveau 0 du DOM <a href="#Limitations_de_XPCNativeWrapper">ne fonctionnent pas sur un <code>XPCNativeWrapper</code></a>). En particulier, les propriétés ajoutées à un objet via JavaScript ne sont pas accessibles à travers un <code>XPCNativeWrapper</code>, pas plus que les accesseurs et mutateurs définis avec <code>__defineGetter__</code> et <code>__defineSetter__</code>. L'objectif est de pouvoir accéder en toute sécurité aux méthodes d'un objet définies dans les IDL .
+</p><p>Assurez-vous de lire la section concernant les <a href="#Bogues_connus">bugs connus</a>, en particulier si vous écrivez du code destiné à certaines versions de Firefox 1.5.0.x.
+</p>
+<h3 id="Types_de_XPCNativeWrapper" name="Types_de_XPCNativeWrapper"> Types de <code>XPCNativeWrapper</code> </h3>
+<p>Il existe trois types différents de <code>XPCNativeWrapper</code> dans Firefox 1.5. Chacun enveloppe un objet potentiellement non sur et <a href="#.C3.80_quoi_sert_XPCNativeWrapper">fournit un accès sécurisé à ses propriétés et méthodes</a>.
+</p><p>Les différences de comportement entre ces trois types sont déterminées par deux caractéristiques du <code>XPCNativeWrapper</code>. Un <code>XPCNativeWrapper</code> peut être <a href="#Explicite.2FImplicite"><i>explicite</i></a> (ou par opposition, <i>implicite</i>) et peut être <a href="#Profond.2FSuperficiel"><i>profond</i></a> (ou par opposition, <i>superficiel</i>). Le type de l'emballage créé est déterminé par <a href="#Cr.C3.A9ation_d.27objets_XPCNativeWrapper">la façon dont il est créé</a>, de la manière suivante :
+</p>
+<table class="standard-table">
+<tbody><tr>
+<th> Créé par
+</th><th> Explicite/Implicite
+</th><th> Profond/Superficiel
+</th></tr>
+<tr>
+<th> <a href="#_Script_prot.C3.A9g.C3.A9_acc.C3.A9dant_.C3.A0_un_objet_non_s.C3.A9curis.C3.A9">Un script protégé accédant à un objet non sécurisé</a>
+</th><td> Implicite
+</td><td> Profond
+</td></tr>
+<tr>
+<th> <a href="#Appel_du_constructeur_de_XPCNativeWrapper_avec_des_param.C3.A8tres">Appel du constructeur avec des paramètres</a>
+</th><td> Explicite
+</td><td> Superficiel
+</td></tr>
+<tr>
+<th> <a href="#Appel_du_constructeur_de_XPCNativeWrapper_sans_param.C3.A8tre">Appel du constructeur sans paramètre</a>
+</th><td> Explicite
+</td><td> Profond
+</td></tr></tbody></table>
+<h4 id="Explicite.2FImplicite" name="Explicite.2FImplicite"> Explicite/Implicite </h4>
+<p>La différence de comportement entre un <code>XPCNativeWrapper</code> explicite et un implicite est qu'un accès à une propriété d'un <code>XPCNativeWrapper</code> implicite depuis un script non <a href="#Qu.27est_ce_qu.27un_script_prot.C3.A9g.C3.A9_.3F">protégé</a> N'est PAS sûr. L'accès à la propriété sera transmis à travers l'objet <code>wrappedJSObject</code> du <code>XPCNativeWrapper</code>.
+</p><p>Ainsi, les scripts qui ne sont pas <a href="#Qu.27est-ce_qu.27un_script_prot.C3.A9g.C3.A9_.3F">protégés</a> n'ont pas à se soucier de bogues dûs au fait qu'un autre bout de code leur passerait un <code>XPCNativeWrapper</code> implicite. D'un autre côté, de tels scripts doivent se méfier des accès à des objets non sûrs.
+</p><p>Les accès aux propriétés d'un <code>XPCNativeWrapper</code> explicite sont sûrs, que le script appelant soit ou non <a href="#Qu.27est_ce_qu.27un_script_prot.C3.A9g.C3.A9_.3F">protégé</a>.
+</p>
+<h4 id="Profond.2FSuperficiel" name="Profond.2FSuperficiel"> Profond/Superficiel </h4>
+<p>La différence de comportement entre un <code>XPCNativeWrapper</code> profond et un superficiel est que, lors de l'accès à une propriété ou de l'appel d'une fonction sur un profond, la valeur renvoyée sera enveloppée dans son propre <code>XPCNativeWrapper</code>. Le nouvel <code>XPCNativeWrapper</code> sera également profond et sera <a href="#Explicite.2FImplicite">explicite</a> si et seulement si le <code>XPCNativeWrapper</code> dont la propriété est accédée était explicite. En revanche, l'accès à une propriété ou l'appel d'une fonction sur un emballage superficiel renverra une valeur qui peut être un objet non sûr.
+</p><p>Par exemple, admettons que nous ayons trois instances de <code>XPCNativeWrapper</code> pour le même objet <code>window</code>. Appelons les <code>deepExplicitWindow</code>, <code>deepImplicitWindow</code> et <code>shallowWindow</code>. Nous avons alors :
+</p>
+<pre class="eval">var doc1 = deepExplicitWindow.document;
+// doc1 est maintenant un <code>XPCNativeWrapper</code> profond et explicite
+// pour l'objet document. L'accès à doc1.open() est sûr.
+</pre>
+<pre class="eval">var doc2 = deepImplicitWindow.document;
+// Si le code appelant est paramétré avec xpcnativewrappers=yes, doc2 est
+// un <code>XPCNativeWrapper</code> profond et implicite pour l'objet document.
+// Autrement, doc2 est un objet document non sécurisé, puisque les accès
+// aux propriétés sont simplement transmises à un objet non sécurisé.
+</pre>
+<pre class="eval">var doc3 = shallowWindow.document;
+// doc3 est maintenant un objet document non sécurisé.
+</pre>
+<h3 id="Cr.C3.A9ation_d.27objets_XPCNativeWrapper" name="Cr.C3.A9ation_d.27objets_XPCNativeWrapper"> Création d'objets <code>XPCNativeWrapper</code> </h3>
+<p>Il existe trois manières différentes de créer un objet <code>XPCNativeWrapper</code> ; une pour chacun des trois types.
+</p>
+<h4 id="Script_prot.C3.A9g.C3.A9_acc.C3.A9dant_.C3.A0_un_objet_non_s.C3.A9curis.C3.A9" name="Script_prot.C3.A9g.C3.A9_acc.C3.A9dant_.C3.A0_un_objet_non_s.C3.A9curis.C3.A9"> Script protégé accédant à un objet non sécurisé </h4>
+<p>À chaque fois qu'un <a href="#Qu.27est-ce_qu.27un_objet_non_s.C3.A9curis.C3.A9_.3F">script protégé</a> accède à un objet non sécurisé, il obtient en retour un <code>XPCNativeWrapper</code> <a href="#Explicite.2FImplicite">implicite</a> et <a href="#Profond.2FSuperficiel">profond</a>. L'accès aux propriétés de ce <code>XPCNativeWrapper</code> depuis <a href="#Qu.27est-ce_qu.27un_objet_non_s.C3.A9curis.C3.A9_.3F">des scripts protégés</a> est sécurisé.
+</p><p>Un emballage créé de cette façon existera aussi longtemps que l'objet emballé, et accéder à cet objet deux fois de suite donnera le même <code>XPCNativeWrapper</code>.
+</p>
+<h5 id="Qu.27est-ce_qu.27un_script_prot.C3.A9g.C3.A9_.3F" name="Qu.27est-ce_qu.27un_script_prot.C3.A9g.C3.A9_.3F"> Qu'est-ce qu'un script protégé ? </h5>
+<p>Dans les versions de Firefox comprises entre la 1.5 et la 1.5.0.5, un script est protégé ou non selon son URI. Un script est protégé seulement si son URI commence par un préfixe protégé connu ; les scripts qui ne sont pas chargés par une URI (par exemple les composants implémentés en JavaScript) ne sont pas protégés. Les préfixes protégés dans Firefox 1.5 sont déterminés par le registre Chrome.
+</p><p>Par défaut, <b>tous les paquetages de contenu sont protégés</b>. De ce fait, toutes les URI commençant par "&lt;tt&gt;<a class=" external" rel="freelink">chrome://</a>&lt;nom du paquetage&gt;/content/&lt;/tt&gt;" (quel que soit le paquetage) sont protégées. Des paquetages individuels peuvent <a href="fr/Enregistrement_chrome#xpcnativewrappers">contourner ce comportement par une option</a> dans leur fichier manifeste chrome.
+</p><p>À partir de Firefox 1.5.0.6, les composants implémentés depuis JavaScript sont des scripts protégés. Par conséquent, un script est protégé s'il est soit chargé depuis une URI débutant par un préfixe protégé, ou est un composant implémenté en JavaScript.
+</p>
+<h5 id="Qu.27est-ce_qu.27un_objet_non_s.C3.A9curis.C3.A9_.3F" name="Qu.27est-ce_qu.27un_objet_non_s.C3.A9curis.C3.A9_.3F"> Qu'est-ce qu'un objet non sécurisé ? </h5>
+<p>Tous les objets sont soit sécurisés, soit non sécurisés. Un objet est sécurisé si une au moins de ces trois conditions est remplie :
+</p>
+<ol><li> son parent (propriété <code>__parent__</code> en JavaScript) est un objet sécurisé.
+</li><li> il est l'objet de visibilité racine d'un composant JavaScript.
+</li><li> il s'agit de l'objet <code>window</code> d'une <a href="#Qu.27est-ce_qu.27une_fen.C3.AAtre_s.C3.A9curis.C3.A9e_.3F">fenêtre sécurisée</a>.
+</li></ol>
+<p>Puisque tous les objets DOM d'une fenêtre disposent de l'objet <code>window</code> dans leur chaîne d'objets <code>__parent__</code>, ils seront sécurisés si et seulement si la fenêtre dans lesquelle ils se trouvent l'est.
+</p>
+<h5 id="Qu.27est-ce_qu.27une_fen.C3.AAtre_s.C3.A9curis.C3.A9e_.3F" name="Qu.27est-ce_qu.27une_fen.C3.AAtre_s.C3.A9curis.C3.A9e_.3F"> Qu'est-ce qu'une fenêtre sécurisée ? </h5>
+<p>Une fenêtre est sécurisée ou pas suivant son conteneur. Une fenêtre est sécurisée si une des conditions suivantes est remplie :
+</p>
+<ol><li> Il s'agit d'une fenêtre de premier niveau (comme <code>&lt;xul:window&gt;</code>, <code>&lt;xul:dialog&gt;</code>, ou une URI quelconque passée en ligne de commande avec l'option &lt;tt&gt;-chrome&lt;/tt&gt;).
+</li><li> Son parent est sécurisé, et une de ces trois options est valable :
+<ol><li> Elle n'est pas chargée dans un <code>&lt;xul:iframe&gt;</code> ou <code>&lt;xul:browser&gt;</code>.
+</li><li> Elle est chargée dans un <code>&lt;xul:iframe&gt;</code> ou <code>&lt;xul:browser&gt;</code> ne possédant pas d'attribut « type ».
+</li><li> Elle est chargée dans un <code>&lt;xul:iframe&gt;</code> ou <code>&lt;xul:browser&gt;</code> dont la valeur de l'attribut « type » n'est pas « content » ni ne débute par « content- ».
+</li></ol>
+</li></ol>
+<p>Notez que le fait qu'une fenêtre soit sécurisée <b>ne</b> dépend <b>pas</b> de l'URI chargée dans la fenêtre. Par conséquent, les exemples suivants créeront des fenêtres sécurisées s'ils sont utilisés à l'intérieur d'un document dont la fenêtre est déjà sécurisée :
+</p>
+<ul><li> <code>&lt;xul:browser&gt;</code>
+</li><li> <code>&lt;xul:browser type="chrome"&gt;</code>
+</li><li> <code>&lt;xul:browser type="rabid_dog"&gt;</code>
+</li><li> <code>&lt;xul:iframe type="foofy"&gt;</code>
+</li><li> <code>&lt;html:iframe&gt;</code>
+</li><li> <code>&lt;html:iframe type="content"&gt;</code>
+</li></ul>
+<p>Ce qui suit ne crée pas de fenêtres sécurisées :
+</p>
+<ul><li> <code>&lt;xul:browser type="content"&gt;</code>
+</li><li> <code>&lt;xul:iframe type="content-primary"&gt;</code>
+</li></ul>
+<p>Notez de même que toutes les fenêtres filles d'une fenêtre non sécurisée sont automatiquement non sécurisées.
+</p>
+<h5 id="Que_se_passe-t-il_lorsqu.27un_script_acc.C3.A8de_.C3.A0_un_objet_.3F" name="Que_se_passe-t-il_lorsqu.27un_script_acc.C3.A8de_.C3.A0_un_objet_.3F"> Que se passe-t-il lorsqu'un script accède à un objet ? </h5>
+<p>Le tableau ci-dessous décrit ce qui se produit lorsqu'un script accède à un objet et comment l'emballage est impliqué.
+</p>
+<table class="standard-table">
+<tbody><tr>
+<th> Script
+</th><th> Objet
+</th><th> Effets
+</th></tr>
+<tr>
+<td> Protégé </td><td> Sécurisé </td><td> Aucun emballage n'est créé et par conséquent le script obtient un accès complet à l'objet.
+</td></tr>
+<tr>
+<td> Protégé </td><td> Sécurisé </td><td> Un <code>XPCNativeWrapper</code> <a href="#Explicite.2FImplicite">implicite</a> et <a href="#Profond.2FSuperficiel">profond</a> est créé.
+</td></tr>
+<tr>
+<td> Non protégé </td><td> Sécurisé </td><td> Aucun emballage n'est créé, exactement comme dans le cas protégé/sécurisé.
+</td></tr>
+<tr>
+<td> Non protégé </td><td> Non sécurisé </td><td> Aucun emballage n'est créé, exactement comme dans le cas protégé/sécurisé.
+</td></tr></tbody></table>
+<h4 id="Appel_du_constructeur_XPCNativeWrapper_avec_des_param.C3.A8tres" name="Appel_du_constructeur_XPCNativeWrapper_avec_des_param.C3.A8tres"> Appel du constructeur <code>XPCNativeWrapper</code> avec des paramètres </h4>
+<p>Par exemple :
+</p>
+<pre class="eval">var contentWinWrapper = new XPCNativeWrapper(content,
+                                             "document");
+</pre>
+<p>Cette ligne va créer un <code>XPCNativeWrapper</code> <a href="#Explicite.2FImplicite">explicite</a> et <a href="#Profond.2FSuperficiel">superficiel</a>. Cette syntaxe a été conservée pour la compatibilité avec les versions antérieures à Firefox 1.5. Bien que toutes les propriétés de l'objet <code>contentWinWrapper</code> sont sécurisées, les valeurs renvoyées par ces propriétés NE le sont PAS (comme dans les versions antérieures à Firefox 1.5), puisque <code>XPCNativeWrapper</code> est <a href="#Profond.2FSuperficiel">superficiel</a>. Donc pour comparer le titre du document courant à la sélection de contenu actuelle, il faut procéder ainsi :
+</p>
+<pre class="eval">var winWrapper = new XPCNativeWrapper(content, "document",
+                                      "getSelection()");
+var docWrapper = new XPCNativeWrapper(winWrapper.document,
+                                      "title");
+return docWrapper.title == winWrapper.getSelection();
+</pre>
+<p>de la même manière qu'avec les versions antérieures à Firefox 1.5. Notez que l'argument <code>"getSelection()"</code> n'est pas strictement nécessaire ici ; si le code n'est pas destiné à être utilisé avec des versions antérieures à Firefox 1.5, il peut être supprimé. Un seul argument après l'objet emballé est nécessaire à Firefox 1.5 pour créer ce type de <code>XPCNativeWrapper</code>.
+</p>
+<h4 id="Appel_du_constructeur_XPCNativeWrapper_sans_param.C3.A8tre" name="Appel_du_constructeur_XPCNativeWrapper_sans_param.C3.A8tre"> Appel du constructeur <code>XPCNativeWrapper</code> sans paramètre </h4>
+<p>Par exemple :
+</p>
+<pre class="eval">var contentWinWrapper = new XPCNativeWrapper(content);
+</pre>
+<p>Cette ligne va créer un <code>XPCNativeWrapper</code> <a href="#Explicite.2FImplicite">explicite</a> et <a href="#Profond.2FSuperficiel">profond</a>. L'accès aux propriétés de ce <code>XPCNativeWrapper</code> est sécurisé, et les valeurs renvoyées seront également emballées dans des objets <code>XPCNativeWrapper</code> <a href="#Explicite.2FImplicite">explicites</a> et <a href="#Profond.2FSuperficiel">profonds</a>.
+</p>
+<h3 id="D.C3.A9finition_de_propri.C3.A9t.C3.A9s_.22expando.22_sur_XPCNativeWrapper" name="D.C3.A9finition_de_propri.C3.A9t.C3.A9s_.22expando.22_sur_XPCNativeWrapper"> Définition de propriétés "expando" sur <code>XPCNativeWrapper</code> </h3>
+<p>Il est possible de définir des propriétés "expando" (des propriétés dont les noms ne correspondent à aucune propriété IDL) sur des objets <code>XPCNativeWrapper</code>. En procédant ainsi, le chrome sera capable de voir ces propriétés expando, mais le contenu ne pourra pas. <b>Il n'existe pas de manière sécurisée de définir une propriété expando depuis le chrome et de la rendre accessible depuis le contenu.</b>
+</p>
+<h3 id="Dur.C3.A9e_de_vie_d.27un_XPCNativeWrapper" name="Dur.C3.A9e_de_vie_d.27un_XPCNativeWrapper"> Durée de vie d'un <code>XPCNativeWrapper</code> </h3>
+<p>Les objets <code>XPCNativeWrapper</code> explicites existent tant qu'ils sont référencés. Créé un nouvel <code>XPCNativeWrapper</code> explicite pour le même objet potentiellement non sécurisé créera un nouvel emballage ; c'est une chose à surveiller lors de la <a href="#D.C3.A9finition_de_propri.C3.A9t.C3.A9s_.22expando.22_sur_XPCNativeWrapper">définition de propriétés "expando"</a>.
+</p><p>Les objets <code>XPCNativeWrapper</code> implicites ont la même durée de vie que les objets qu'ils emballent.
+</p>
+<h3 id="Acc.C3.A8s_aux_propri.C3.A9t.C3.A9s_non_s.C3.A9curis.C3.A9es" name="Acc.C3.A8s_aux_propri.C3.A9t.C3.A9s_non_s.C3.A9curis.C3.A9es"> Accès aux propriétés non sécurisées </h3>
+<p>Si un accès non sécurisé à une propriété est nécessaire pour une raison précise, il suffit d'employer la propriété <code>wrappedJSObject</code> de l'emballage. Par exemple, si <code>docWrapper</code> est l'emballage de <code>doc</code>, alors
+</p>
+<pre class="eval">docWrapper.wrappedJSObject.prop
+</pre>
+<p>est identique à </p>
+<pre class="eval">doc.prop
+</pre>
+<h3 id="Bogues_connus" name="Bogues_connus"> Bogues connus </h3>
+<p>Il existe deux bogues de XPCNativeWrapper connus dans les versions 1.5.0.x :
+</p>
+<ol><li> Le {{ Bug(337095) }} concerne les versions de Firefox de 1.5 à 1.5.0.4 et empêche la création de l'emballage pour des scripts protégés dans certains cas. En particulier, si un script accède à une propriété ou appelle une fonction qui retourne un objet non sécurisé, un emballage est créé. Cependant, si une fonction dans un script protégé est appellée depuis C++ et qu'un objet non sécurisé est passé en tant qu'argument à cette fonction, l'emballage <i>ne</i> sera <i>pas</i> créé. Les fonctions qui souhaitent être appellées de cette manière doivent <a href="#Appel_du_constructeur_XPCNativeWrapper_sans_param.C3.A8tre">réaliser leur propre emballage</a>. Ce bogue est résolu dans Firefox 1.5.0.5 et supérieurs.
+</li><li> Le {{ Bug(345991) }} concerne les versions de Firefox de 1.5 à 1.5.0.5 et empêche les composants écrits en JavaScript d'être des scripts protégés. Ce bogue est résolu dans Firefox 1.5.0.6 et supérieurs.
+</li></ol>
+<h3 id="Limitations_de_XPCNativeWrapper" name="Limitations_de_XPCNativeWrapper"> Limitations de <code>XPCNativeWrapper</code> </h3>
+<p>Il existe certaines propriétés couramment utilisées et certains styles de programmation qui ne peuvent pas être employés avec <code>XPCNativeWrapper</code>. En particulier :
+</p>
+<ol><li> L'assignation ou la lecture d'une propriété <code>on*</code> sur un <code>XPCNativeWrapper</code> d'un noeud DOM ou d'un objet Window va générer une exception. (Utilisez plutôt <code>addEventListener</code>, et utilisez <code>"event.preventDefault();"</code> dans votre gestionnaire si vous utilisiez <code>"return false;"</code> auparavant.)
+</li><li> L'accès aux cadres par le nom de la fenêtre (par ex <code>window.frameName</code>) ne fonctionne pas sur un <code>XPCNativeWrapper</code>.
+</li><li> <code>document.all</code> ne fonctionne pas avec le <code>XPCNativeWrapper</code> d'un document.
+</li><li> L'accès aux items nommés par leurs noms ne fonctionne pas sur le <code>XPCNativeWrapper</code> d'un document HTML. Par exemple, si vous avez <code>&lt;form name="foo"&gt;</code> et que <code>docWrapper</code> est l'emballage du document HTML <code>doc</code>, alors <code>doc.foo</code> sera un <code>HTMLFormElement</code> tandis que <code>docWrapper.foo</code> sera <code>undefined</code>. Vous pouvez utiliser à la place <code>docWrapper.forms.namedItem("foo")</code> dans votre code.
+</li><li> L'accès aux noeuds par leurs id ne fonctionne pas sur le <code>XPCNativeWrapper</code> d'un document HTML. <code>getElementById</code> doit être utilisé à la place.
+</li><li> L'accès aux champs de saisie par leurs noms ne fonctionne pas sur le <code>XPCNativeWrapper</code> d'un formulaire HTML. Le code requis à la place est le suivant : <code>form.elements.namedItem("inputname")</code>.
+</li><li> L'accès aux éléments par leurs noms ne fonctionne pas sur le <code>XPCNativeWrapper</code> d'un <code>HTMLCollection</code>. Il est nécessaire d'utiliser la méthode <code>namedItem()</code>. Notez que <code>namedItem</code> renvoie uniquement le premier élément <code>input</code> de ce nom, même s'il en existe plusieurs (par exemple pour des boutons radio) au sein du formulaire.
+</li><li> L'appel de méthodes implémentées par des plugins NPAPI à travers le <code>XPCNativeWrapper</code> pour le nœud correspondant ne fonctionne pas.
+</li><li> La lecture ou l'affectation de propriétés implémentées par des plugins NPAPI à travers le <code>XPCNativeWrapper</code> pour le nœud correspondant ne fonctionne pas.
+</li><li> L'appel de méthodes implémentées via des liaisons XBL attachées à un nœud à travers le <code>XPCNativeWrapper</code> pour ce ce nœud ne fonctionne pas.
+</li><li> La lecture ou l'affectation de propriétés implémentées via des liaisons XBL à travers le <code>XPCNativeWrapper</code> pour le nœud correspondant ne fonctionne pas.
+</li><li> L'énumération des propriétés d'un <code>XPCNativeWrapper</code> via "<code>for (var p in wrapper)</code>" ne permet de récupérer les propriétés définies dans les IDL.
+</li><li> Object.prototype ne correspond pas à la chaîne de prototype d'un <code>XPCNativeWrapper</code>. Comme résultat, plusieurs propriétés <code>Objet.prototype</code> sont indéfinies sur un <code>XPCNativeWrapper</code> (pour être précis, ce sont <code>__proto__</code>, <code>__parent__</code>, <code>__count__</code>, <code>toSource</code>, <code>toLocaleString</code>, <code>valueOf</code>, <code>watch</code>, <code>unwatch</code>, <code>hasOwnProperty</code>, <code>isPrototypeOf</code>, <code>propertyIsEnumerable</code>, <code>__defineGetter__</code>, <code>__defineSetter__</code>, <code>__lookupGetter__</code>, et <code>__lookupSetter__</code>).
+</li><li> La méthode <code>importXPCNative</code> que l'ancienne implémentation <code>XPCNativeWrapper</code> utilisait n'est plus gérée.
+</li><li> L'accès aux classes standard (comme <code>Function</code>) au travers d'un XPCNativeWrapper ne fonctionnera pas. Pour créer des fonctions et objets avec une fenêtre particulière comme parent, utilisez la fonction <code>eval</code> de cette fenêtre.
+</li></ol>
+<p>L'article <a class="external" href="http://oreillynet.com/pub/a/network/2005/11/01/avoid-common-greasemonkey-pitfalls.html?page=3">Avoid Common Pitfalls in Greasemonkey</a> propose une explication élaborée de certaines de ces limitations (dans le contexte de scripts Greasemonkey).
+</p><p><br>
+</p>
+<div class="noinclude">
+</div>
+{{ languages( { "en": "en/XPCNativeWrapper", "es": "es/XPCNativeWrapper", "it": "it/XPCNativeWrapper", "ja": "ja/XPCNativeWrapper", "pl": "pl/XPCNativeWrapper" } ) }}

@@ -1,0 +1,75 @@
+---
+title: extIExtensions
+slug: Toolkit_API/extIExtensions
+tags:
+  - FUEL
+  - Interfaces
+  - SMILE
+  - STEEL
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/Toolkit_API/extIExtensions
+---
+<p></p>
+<p></p><div class="blockIndicator standardNote">
+<p>この記事は <a href="https://developer.mozilla.org/ja/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a>  の新機能について述べています</p>
+</div><p></p>
+<p><code>extIExtensions</code> インタフェースは、インストールされたすべての拡張機能のリストを提供します。<code>extIExtensions</code> は <code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/exthelper/extIApplication.idl" rel="custom">toolkit/components/exthelper/extIApplication.idl</a></code> で定義されています。</p>
+<p>XPCOM サービスを通して実装された <a class="internal" href="/ja/Toolkit_API/extIApplication" title="ja/Toolkit API/extIApplication"><code>extIApplication</code></a>: <a class="internal" href="/ja/Toolkit_API/FUEL" title="ja/Toolkit_API/FUEL">FUEL</a> (Firefox) または <a class="internal" href="/ja/Toolkit_API/STEEL" title="ja/Toolkit_API/STEEL">STEEL</a> (Thunderbird), <a class="internal" href="/ja/Toolkit_API/SMILE" title="ja/Toolkit_API/SMILE">SMILE</a> (SeaMonkey) のページの説明を参照してください。</p>
+<p>Firefox 4.0 または Thunderbird 3.2 以降、<strong>このインタフェースは <code>Application.extensions</code> を通して利用できない</strong>ので注意してください。代わりに、新しいアドオンマネージャが利用できます。MDC に適切なドキュメンテーションが追加されるまで、詳細は <a class="external" href="http://www.oxymoronical.com/blog/2010/03/How-were-breaking-some-extensions-in-the-near-future" title="http://www.oxymoronical.com/blog/2010/03/How-were-breaking-some-extensions-in-the-near-future">http://www.oxymoronical.com/blog/2010/03/How-were-breaking-some-extensions-in-the-near-future</a> を参照してください。</p>
+<h2 id="Method_overview" name="Method_overview">メソッドの概要</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>boolean <a href="#has.28.29">has</a>(in AString aId)</code></td>
+  </tr>
+  <tr>
+   <td><code><a class="internal" href="/en/Toolkit_API/extIExtension" title="En/FUEL/Extension">extIExtension</a> <a href="#get.28.29">get</a>(in AString aId)</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Attributes" name="Attributes">プロパティ</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">プロパティ</td>
+   <td class="header">型</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code>all</code></td>
+   <td><code>readonly attribute nsIVariant</code></td>
+   <td>アプリケーション内のすべての拡張機能を列挙した <a class="internal" href="/ja/Toolkit_API/extIExtension" title="ja/Toolkit_API/extIExtension">extIExtension</a> の配列。</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Methods" name="Methods">メソッド</h2>
+<h3 id="has.28.29" name="has.28.29">has()</h3>
+<p>指定した id の拡張機能が存在するかどうかを調べる。</p>
+<pre class="eval">boolean has(in AString aId)
+</pre>
+<h6 id="Parameters" name="Parameters">引数</h6>
+<dl>
+ <dt>
+  <code>aId</code></dt>
+ <dd>
+  拡張機能の id。</dd>
+</dl>
+<h6 id="Return_value" name="Return_value">戻り値</h6>
+<p>拡張機能が存在すれば <code>true</code>、さもなくば <code>false</code>。</p>
+<h3 id="get.28.29" name="get.28.29">get()</h3>
+<p>指定した id の拡張機能オブジェクトを取得する。</p>
+<pre class="eval">extIExtension get(in AString aId)
+</pre>
+<h6 id="Parameters_2" name="Parameters_2">引数</h6>
+<dl>
+ <dt>
+  <code>aId</code></dt>
+ <dd>
+  拡張機能の id。</dd>
+</dl>
+<h6 id="Return_value_2" name="Return_value_2">戻り値</h6>
+<p><a class="internal" href="/ja/Toolkit_API/extIExtension" title="ja/Toolkit_API/extIExtension">extension オブジェクト</a>、または指定した id の拡張機能が存在しない場合は <code>null</code>。</p>
+<h2 id="See_also" name="See_also">参照</h2>
+<p><a class="internal" href="/ja/Toolkit_API/FUEL" title="ja/Toolkit_API/FUEL">FUEL</a> (Firefox), <a class="internal" href="/ja/Toolkit_API/STEEL" title="ja/Toolkit_API/STEEL">STEEL</a> (Thunderbird), <a class="internal" href="/ja/Toolkit_API/SMILE" title="ja/Toolkit_API/SMILE">SMILE</a> (SeaMonkey)</p>
+<p>ext</p>

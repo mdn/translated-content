@@ -1,0 +1,149 @@
+---
+title: Parsing microformats in JavaScript
+slug: Archive/Web_Standards/Parsing_microformats_in_JavaScript
+tags:
+  - Firefox 3
+  - Microformats
+translation_of: Archive/Web_Standards/Parsing_microformats_in_JavaScript
+---
+<p>
+Firefox 3 では、microformat を<a href="ja/Using_microformats">管理</a>、パースするための新しい API が導入されました。この記事では、microformat からデータを取得する“力仕事”を処理する、一般的な microformat をパースするための API について研究します。この API は主に、新しい microformat を実装する際に利用されることを意図したものです。
+</p>
+<h2 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89">メソッド</h2>
+<h3 id="dateTimeGetter.28.29" name="dateTimeGetter.28.29">dateTimeGetter()</h3>
+<p>特に、microformat ノードから日付を取得します。テキストを取得した後、ISO 8601 形式の日付に正規化します。
+</p>
+<pre class="eval">normalizedDate = Microformats.parser.dateTimeGetter(propnode, parentnode);
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0" name=".E5.BC.95.E6.95.B0">引数</h6>
+<dl><dt>&lt;tt&gt;propnode&lt;/tt&gt;
+</dt><dd>チェックを行う DOM ノード。
+</dd><dt>&lt;tt&gt;parentnode&lt;/tt&gt;
+</dt><dd>プロパティの親ノード。そのプロパティがサブプロパティの場合、この値は親プロパティノードとなります。そうでなければ、この値は microformat ノードです。
+</dd></dl>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4" name=".E6.88.BB.E3.82.8A.E5.80.A4">戻り値</h6>
+<p>正規化された日付を含む文字列。
+</p>
+<h3 id="defaultGetter.28.29" name="defaultGetter.28.29">defaultGetter()</h3>
+<p>microformat のパターンを使って、与えられた microformat プロパティのための適切なテキストを決定します。これには、<code>abbr</code>、<code>img</code> と <code>alt</code>、<code>area</code> と <code>alt</code>、値の抜粋、などの判断が含まれます。
+</p>
+<pre class="eval">propertyValue = Microformats.parser.defaultGetter(propnode, parentnode, datatype);
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_2" name=".E5.BC.95.E6.95.B0_2">引数</h6>
+<dl><dt>&lt;tt&gt;propnode&lt;/tt&gt;
+</dt><dd>チェックを行う DOM ノード。
+</dd><dt>&lt;tt&gt;parentnode&lt;/tt&gt;
+</dt><dd>プロパティの親ノード。そのプロパティがサブプロパティの場合、この値は親プロパティノードとなります。そうでなければ、この値は microformat ノードです。
+</dd><dt>&lt;tt&gt;datatype&lt;/tt&gt;
+</dt><dd><code>innerHTML()</code> を使って検索を行う場合は「HTML」、<code>innerText()</code> を使って行う場合は「text」です。デフォルトは「text」です。
+</dd></dl>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4_2" name=".E6.88.BB.E3.82.8A.E5.80.A4_2">戻り値</h6>
+<p>プロパティの値を含む文字列。
+</p>
+<h3 id="emailGetter.28.29" name="emailGetter.28.29">emailGetter()</h3>
+<p>特に、microformat ノードからメールアドレスを取得します。件名が指定されていた場合や、<code>mailto:</code> 接頭辞が付いていた場合、それらは削除されます。
+</p>
+<pre class="eval">email = Microformats.parser.emailGetter(propnode, parentnode);
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_3" name=".E5.BC.95.E6.95.B0_3">引数</h6>
+<dl><dt>&lt;tt&gt;propnode&lt;/tt&gt;
+</dt><dd>チェックを行う DOM ノード。
+</dd><dt>&lt;tt&gt;parentnode&lt;/tt&gt;
+</dt><dd>プロパティの親ノード。そのプロパティがサブプロパティの場合、この値は親プロパティノードとなります。そうでなければ、この値は microformat ノードです。
+</dd></dl>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4_3" name=".E6.88.BB.E3.82.8A.E5.80.A4_3">戻り値</h6>
+<p>メールアドレスを含む文字列。
+</p>
+<h3 id="HTMLGetter.28.29" name="HTMLGetter.28.29">HTMLGetter()</h3>
+<p>特定の DOM ノー炉からすべての HTML を取得します。
+</p>
+<pre class="eval">html = Microformats.parser.HTMLGetter(propnode, parentnode);
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_4" name=".E5.BC.95.E6.95.B0_4">引数</h6>
+<dl><dt>&lt;tt&gt;propnode&lt;/tt&gt;
+</dt><dd>チェックを行う DOM ノード。
+</dd><dt>&lt;tt&gt;parentnode&lt;/tt&gt;
+</dt><dd>プロパティの親ノード。そのプロパティがサブプロパティの場合、この値は親プロパティノードとなります。そうでなければ、この値は microformat ノードです。
+</dd></dl>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4_4" name=".E6.88.BB.E3.82.8A.E5.80.A4_4">戻り値</h6>
+<p>文字列と HTML を取得するために呼び出すことができる関数を含むオブジェクト。
+</p><p></p><div class="note"><strong>註:</strong> これは HTML を文字列として返す代わりに、HTML を取得するなどの処理を行うために呼び出すことができる、いくつかの関数を伴ったオブジェクトを返します。</div>
+<p></p><p>戻り値のオブジェクトに対して呼び出せる関数は以下のものです。
+</p>
+<pre class="eval">string = html.toString();
+</pre>
+<p><code>innerText()</code> を使って、文字列を返します。
+</p>
+<pre class="eval">string = html.toHTML();
+</pre>
+<p><code>innerHTML()</code> を使って、ノードの HTML を返します。
+</p>
+<pre class="eval">string = html.replace(a, b);
+</pre>
+<p>HTML 内に出現した &lt;tt&gt;a&lt;/tt&gt; をすべて &lt;tt&gt;b&lt;/tt&gt; に置き換えた文字列を返します。
+</p>
+<pre class="eval">string = html.match(a);
+</pre>
+<p>HTML に対して、指定したマッチング操作を実施し、結果を返します。
+</p>
+<h3 id="iso8601FromDate" name="iso8601FromDate">iso8601FromDate</h3>
+<p>JavaScript の Date オブジェクトを ISO 8601 形式の日付に変換します。
+</p>
+<pre class="eval">isoDate = Microformats.parser.iso8601FromDate(date, punctuation)
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_5" name=".E5.BC.95.E6.95.B0_5">引数</h6>
+<dl><dt>&lt;tt&gt;date&lt;/tt&gt;
+</dt><dd>変換を行う JavaScript <code>Date</code> オブジェクト。
+</dd><dt>&lt;tt&gt;punctuation&lt;/tt&gt;
+</dt><dd>日付に「-」や「/」が含まれる場合は <code>true</code> とします。
+</dd></dl>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4_5" name=".E6.88.BB.E3.82.8A.E5.80.A4_5">戻り値</h6>
+<p>ISO 8601 形式の日付が含まれる文字列。
+</p>
+<h3 id="textGetter.28.29" name="textGetter.28.29">textGetter()</h3>
+<p>特定の DOM ノードから、すべてのタグを含む、すべてのテキストを取得します。これは内部的に <code><a href="#defaultGetter.28.29">defaultGetter()</a></code> を呼び出しています。
+</p>
+<pre class="eval">text = Microformats.parser.textGetter(propnode, parentnode);
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_6" name=".E5.BC.95.E6.95.B0_6">引数</h6>
+<dl><dt>&lt;tt&gt;propnode&lt;/tt&gt;
+</dt><dd>チェックを行う DOM ノード。
+</dd><dt>&lt;tt&gt;parentnode&lt;/tt&gt;
+</dt><dd>プロパティの親ノード。そのプロパティがサブプロパティの場合、この値は親プロパティノードとなります。そうでなければ、この値は microformat ノードです。
+</dd></dl>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4_6" name=".E6.88.BB.E3.82.8A.E5.80.A4_6">戻り値</h6>
+<p>指定された microformat ノードから取得された、タグを含む、すべてのテキストを含む文字列。
+</p>
+<h3 id="telGetter.28.29" name="telGetter.28.29">telGetter()</h3>
+<p>特に、microformat ノードから電話番号を取得します。これは、電話番号が「value」をそのサブプロパティのいずれかの名前として使っている一方で、「value」が <a class="external" href="http://microformats.org/wiki/hcard#Value_excerpting">値の抜粋</a> にも使われている、ということを処理します。
+</p>
+<pre class="eval">tel = Microformats.parser.telGetter(propnode, parentnode);
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_7" name=".E5.BC.95.E6.95.B0_7">引数</h6>
+<dl><dt>&lt;tt&gt;propnode&lt;/tt&gt;
+</dt><dd>チェックを行う DOM ノード。
+</dd><dt>&lt;tt&gt;parentnode&lt;/tt&gt;
+</dt><dd>プロパティの親ノード。そのプロパティがサブプロパティの場合、この値は親プロパティノードとなります。そうでなければ、この値は microformat ノードです。
+</dd></dl>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4_7" name=".E6.88.BB.E3.82.8A.E5.80.A4_7">戻り値</h6>
+<p>電話番号を含む文字列。
+</p>
+<h3 id="uriGetter.28.29" name="uriGetter.28.29">uriGetter()</h3>
+<p>特に、microformat ノードから URI を取得します。これは、<code>href</code>、<code>img</code>、<code>object</code>、あるいは <code>area</code> を検索して、完全な形式の URI を取得することで行われます。
+</p>
+<pre class="eval">uri = Microformats.parser.uriGetter(propnode, parentnode);
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_8" name=".E5.BC.95.E6.95.B0_8">引数</h6>
+<dl><dt>&lt;tt&gt;propnode&lt;/tt&gt;
+</dt><dd>チェックを行う DOM ノード。
+</dd><dt>&lt;tt&gt;parentnode&lt;/tt&gt;
+</dt><dd>プロパティの親ノード。そのプロパティがサブプロパティの場合、この値は親プロパティノードとなります。そうでなければ、この値は microformat ノードです。
+</dd></dl>
+<h6 id=".E6.88.BB.E3.82.8A.E5.80.A4_8" name=".E6.88.BB.E3.82.8A.E5.80.A4_8">戻り値</h6>
+<p>完全な形式の URI を含む文字列。
+</p>
+<h2 id=".E9.96.A2.E9.80.A3.E8.A8.98.E4.BA.8B" name=".E9.96.A2.E9.80.A3.E8.A8.98.E4.BA.8B">関連記事</h2>
+<p><a href="ja/Using_microformats">Using microformats</a>, <a href="ja/Describing_microformats_in_JavaScript">Describing microformats in JavaScript</a>
+</p>
+<div class="noinclude">
+</div>

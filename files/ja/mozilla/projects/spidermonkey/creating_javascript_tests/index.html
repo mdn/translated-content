@@ -1,0 +1,77 @@
+---
+title: JavaScript のテストを作成する
+slug: Mozilla/Projects/SpiderMonkey/Creating_JavaScript_tests
+translation_of: Mozilla/Projects/SpiderMonkey/Creating_JavaScript_tests
+---
+<div>{{SpiderMonkeySidebar("Tests")}}</div>
+
+<div class="summary">
+<p>主に 2 つの SpiderMonkey テストスイート: <strong>jstests</strong> (in js/src/tests) と <strong>jit-tests</strong> (in js/src/jit-test) があります。詳細については、<a href="/ja/docs/Mozilla/Projects/SpiderMonkey/Running_Automated_JavaScript_Tests">自動 JavaScript テストの実行</a>を参照してください。</p>
+</div>
+
+<p>新しいテストはどのテストスイートに属しますか？</p>
+
+<ol>
+ <li><strong>jit-tests</strong> は JIT の実装をテストすることを目的としています。正当性や機能性をテストするテストのみをこれらのスイートに追加してください。</li>
+ <li><strong>jstests</strong> is intended for tests of language-visible functionality. Please put tests of functionality into jstests even if related tests are in jit-tests, since jstests are closer to (and more easily converted to) <a href="https://github.com/tc39/test262/blob/master/README.md">test262</a> tests. (In fact, the test262 test suite is run as part of jstests.)</li>
+</ol>
+
+<p>Practical differences between the two test suites:</p>
+
+<ol>
+</ol>
+
+<p><strong>jstest</strong></p>
+
+<ol>
+ <li><strong>New jstest files </strong>should be put the code in the appropriate subdirectory of js/src/tests/non262/, or, under some scenarios, contributed directly to the <a href="https://github.com/tc39/test262/blob/master/README.md">test262 repository</a>.</li>
+ <li>jstests run in both the shell and the browser (although you can specify that the test should be run in only one of the two locations).</li>
+ <li>jstests automatically load js/src/tests/shell.js before they run, which creates a ton of functions.</li>
+ <li>Read more advice on jstests <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/Creating_JavaScript_tests/jsreftests">here</a>.</li>
+</ol>
+
+<p><strong>jit-test</strong></p>
+
+<ol>
+ <li><strong>New jit-test files </strong>should be put in js/src/jit-test/tests/basic or one of the other appropriate subdirectories of jit-test/tests. </li>
+ <li>jit-tests run only in the shell.</li>
+ <li>jit-tests do not load extra test functionality automatically.</li>
+</ol>
+
+<h2 id="Creating_the_test_case_file" name="Creating_the_test_case_file">新しいテストファイルを書く</h2>
+
+<p>Have a look at the existing files and follow what they do. All tests, in both suite, can use the <em>assertEq</em> function.</p>
+
+<p><strong>assertEq(v1, v2[, message])</strong></p>
+
+<p style="margin-left: 40px;">Check that v1 and v2 are the same value. If they're not, throw an exception (which will cause the test to fail).</p>
+
+<p>If you are writing a jstests, additional testing functionality is provided for you in shell.js files. You can read about them <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/Running_Automated_JavaScript_Tests">here</a>.</p>
+
+<h3 id="Performance_testing" name="Performance_testing">Performance testing and general advice</h3>
+
+<p><strong>Do not</strong> attempt to test the performance of engine features in the test suite. </p>
+
+<p>Please keep in mind that the JavaScript test suite is run on a wide variety of wildly varying hardware plaforms, from phones all the way up to servers. Even tests that check for polynomial time complexity will start to fail in a few years when they have sped up enough to run faster than the granularity of the OS scheduler or when run on platforms with higher latencies than your development workstation. These tests will also show up as infrequent oranges on our heavily loaded test machines, lowering the value of our test suite for everyone. Just don't do it, it's never worth it.</p>
+
+<p><strong>Do not</strong> add performance tests to the test suite.</p>
+
+<p>It is not generally even possible to tell if the speed of any particular feature is going to be important in the real world without running a real-world benchmark. It is <em>very</em> hard to write a good real-world benchmark. For this reason, the best place to find out if a change is performance sensitive is on arewefastyet.com.</p>
+
+<p><strong>Focus on writing fast, light tests that cover a single feature. There is basically no cost to adding a new test, so add as many feature tests as needed to cover each feature orthogonally. Remember that whenever a test fails, someone -- probably you -- is going to have to figure out what went wrong.</strong></p>
+
+<h3 id="Testing_your_test">Testing your test</h3>
+
+<p>Run your new test locally before checking it in (or posting it for review). Nobody likes patches that include failing tests!</p>
+
+<p>See<a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/Running_Automated_JavaScript_Tests"> Running Automated Javascript Tests</a> for instructions on how to run jstests or jit-tests.</p>
+
+<p>It's also a good sanity check to run each new test against an unpatched shell or browser. The test should fail if it's working properly.</p>
+
+<h3 id="Checking_in_completed_tests" name="Checking_in_completed_tests">Checking in completed tests</h3>
+
+<p>Tests are usually reviewed and pushed just like any other code change. Just include the test in your patch.</p>
+
+<p><strong>Security-sensitive tests should <strong>not</strong> be committed</strong> until the corresponding bug has been made public. Instead, ask a SpiderMonkey peer how to proceed.</p>
+
+<p>It is OK under certain circumstances to push new tests to certain repositories without a code review. Don't do this unless you know what you're doing. Ask a SpiderMonkey peer for details.</p>

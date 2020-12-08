@@ -1,0 +1,295 @@
+---
+title: nsIDownloadProgressListener
+slug: >-
+  Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsIDownloadProgressListener
+tags:
+  - Firefox 3
+  - Interfaces
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadProgressListener
+---
+<p><code>nsIDownloadProgressListener</code> インタフェースは、アプリケーションや拡張機能が、ダウンロードマネージャによって処理されているダウンロードの状況を監視する方法を提供します。開発者は、自分のコードでこのインタフェースを実装し、<code><a href="ja/NsIDownloadManager">nsIDownloadManager</a></code> の <code><a href="ja/NsIDownloadManager#addListener.28.29">addListener()</a></code> 関数を呼び出すだけで、監視を開始できます。</p>
+<p>ダウンロードマネージャの状況を監視する必要がなくなったら、<code>nsIDownloadManager</code> の <code><a href="ja/NsIDownloadManager#removeListener.28.29">removeListener()</a></code> 関数を呼び出せば監視が中止されます。</p>
+<p>ダウンロードの状況に変更があると、ダウンロードマネージャによって、ここで説明されているメソッドが呼び出されるので、必要なタイミングで処理を行えます。</p>
+<p>このインタフェースの挙動は、<code><a href="ja/NsIWebProgress">nsIWebProgress</a></code> インタフェースと非常に似ています。</p>
+<p><br>
+ </p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/downloads/public/nsIDownloadProgressListener.idl" rel="custom">toolkit/components/downloads/public/nsIDownloadProgressListener.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">最終更新: Gecko 1.9 (Firefox 3)</span></div>
+</div>
+<p>継承元: <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code></p>
+<h2 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E6.A6.82.E8.A6.81" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E6.A6.82.E8.A6.81">メソッドの概要</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="#onDownloadStateChange.28.29">onDownloadStateChange</a>(in short aState, in nsIDownload aDownload)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#onProgressChange.28.29">onProgressChange</a>(in <a href="ja/NsIWebProgress">nsIWebProgress</a> aWebProgress, in <a href="ja/NsIRequest">nsIRequest</a> aRequest, in long long aCurSelfProgress, in long long aMaxSelfProgress, in long long aCurTotalProgress, in long long aMaxTotalProgress, in <a href="ja/NsIDownload">nsIDownload</a> aDownload)</code></td>
+  </tr>
+  <tr>
+   <td><span class="icon-only-inline" title="これは廃止されたAPIであり、今後の動作は保障されていません。ご注意下さい。"><i class="icon-trash"> </i></span> <code>void <a href="#onStatusChange.28.29">onStatusChange</a>(in <a href="ja/NsIWebProgress">nsIWebProgress</a> aWebProgress, in <a href="ja/NsIRequest">nsIRequest</a> aRequest, in <a href="ja/Nsresult">nsresult</a> aStatus, in <a href="ja/Wstring">wstring</a> aMessage, in <a href="ja/NsIDownload">nsIDownload</a> aDownload)</code></td>
+  </tr>
+  <tr>
+   <td><span class="icon-only-inline" title="これは廃止されたAPIであり、今後の動作は保障されていません。ご注意下さい。"><i class="icon-trash"> </i></span> <code>void <a href="#onLocationChange.28.29">onLocationChange</a>(in <a href="ja/NsIWebProgress">nsIWebProgress</a> aWebProgress, in <a href="ja/NsIRequest">nsIRequest</a> aRequest, in <a href="ja/NsIURI">nsIURI</a> aLocation, in <a href="ja/NsIDownload">nsIDownload</a> aDownload)</code>x</td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#onSecurityChange.28.29">onSecurityChange</a>(in <a href="ja/NsIWebProgress">nsIWebProgress</a> aWebProgress, in <a href="ja/NsIRequest">nsIRequest</a> aRequest, in unsigned long aState, in <a href="ja/NsIDownload">nsIDownload</a> aDownload)</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id=".E5.B1.9E.E6.80.A7" name=".E5.B1.9E.E6.80.A7">属性</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">属性</td>
+   <td class="header">型</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code>document</code></td>
+   <td><code><a href="ja/NsIDOMDocument">nsIDOMDocument</a></code></td>
+   <td>ダウンロードマネージャのウィンドウを表すダウンロードドキュメント。</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89">メソッド</h2>
+<h3 id="onDownloadStateChange.28.29" name="onDownloadStateChange.28.29">onDownloadStateChange()</h3>
+<p>特定のダウンロードの状況に変更があったときに呼び出されます。</p>
+<pre class="eval"> void onDownloadStateChange(
+   in short aState,
+   in nsIDownload aDownload
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0" name=".E5.BC.95.E6.95.B0">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aState&lt;/tt&gt;</dt>
+ <dd>
+  ダウンロードの変更前の状況。<a href="ja/NsIDownloadManager#Constants">取り得る値の一覧</a> は <code><a href="ja/NsIDownloadManager">nsIDownloadManager</a></code> を参照してください。</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aDownload&lt;/tt&gt;</dt>
+ <dd>
+  ダウンロード状況に変更があったファイルを表す <code><a href="ja/NsIDownload">nsIDownload</a></code> オブジェクト。このオブジェクトから、ダウンロードの変更後の状況を取得できます。</dd>
+</dl>
+<h3 id="onStateChange.28.29" name="onStateChange.28.29">onStateChange()</h3>
+<p>特定のダウンロードの状況に変更があったときに呼び出されます。</p>
+<pre class="eval"> void onStateChange(
+   in nsIWebProgress aWebProgress,
+   in nsIRequest aRequest,
+   in unsigned long aStateFlags,
+   in nsresult aStatus,
+   in nsIDownload aDownload
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_2" name=".E5.BC.95.E6.95.B0_2">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aWebProgress&lt;/tt&gt;</dt>
+ <dd>
+  ダウンロードを監視するためにダウンロードマネージャによって利用される <code><a href="ja/NsIWebProgress">nsIWebProgress</a></code> インスタンス。</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aRequest&lt;/tt&gt;</dt>
+ <dd>
+  状況を変更した <code><a href="ja/NsIChannel">nsIChannel</a></code>。この引数は <code>NULL</code> を取ることができません。</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aStateFlags&lt;/tt&gt;</dt>
+ <dd>
+  ダウンロードの変更後の状況を示すフラグ。この値は、<code><a href="ja/NsIWebProgressListener">nsIWebProgressListener</a></code> の記事に書かれている <a href="ja/NsIWebProgressListener#.E7.8A.B6.E6.B3.81.E9.81.B7.E7.A7.BB.E3.83.95.E3.83.A9.E3.82.B0">状況遷移フラグ</a> のいずれかの組み合わせになります。</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aStatus&lt;/tt&gt;</dt>
+ <dd>
+  ダウンロードの変更後の状況に関する情報。詳しくは <code>nsIWebProgressListener</code>]] の [[nsIWebProgressListener#onStateChange|<code>onStateChange()</code> を参照してください。これは <code><a href="ja/NsIDownloadManager#Constants">nsIDownloadManager</a></code> の状況を示す定数 のいずれかになる場合もあります。</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aDownload&lt;/tt&gt;</dt>
+ <dd>
+  状況が変更されたダウンロード。</dd>
+</dl>
+<h3 id="onProgressChange.28.29" name="onProgressChange.28.29">onProgressChange()</h3>
+<p>ダウンロードの進捗レベルがダウンロードによって変更されたときに呼び出されます。</p>
+<pre class="eval"> void onProgressChange(
+   in nsIWebProgress aWebProgress,
+   in nsIRequest aRequest,
+   in long long aCurSelfProgress,
+   in long long aMaxSelfProgress,
+   in long long aCurTotalProgress,
+   in long long aMaxTotalProgress,
+   in nsIDownload aDownload
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_3" name=".E5.BC.95.E6.95.B0_3">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aWebProgress&lt;/tt&gt;</dt>
+ <dd>
+  ダウンロードを監視するためにダウンロードマネージャによって利用される <code><a href="ja/NsIWebProgress">nsIWebProgress</a></code> インスタンス。</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aRequest&lt;/tt&gt;</dt>
+ <dd>
+  状況を変更した <code><a href="ja/NsIChannel">nsIChannel</a></code>。この引数は <code>NULL</code> を取ることができません。</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aCurSelfProgress&lt;/tt&gt;</dt>
+ <dd>
+  &lt;tt&gt;aDownload&lt;/tt&gt; で指定されたダウンロードに対して行われた、現在の進捗の量。</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aMaxSelfProgress&lt;/tt&gt;</dt>
+ <dd>
+  ダウンロード完了を示すために達成しなければならない、個別進捗状況の値。</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aCurTotalProgress&lt;/tt&gt;</dt>
+ <dd>
+  すべてのダウンロードに対して行われた、現在の進捗の量。</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aMaxTotalProgress&lt;/tt&gt;</dt>
+ <dd>
+  すべてのダウンロード完了を示すために達成しなければならない、合計進捗状況の値。</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aDownload&lt;/tt&gt;</dt>
+ <dd>
+  進捗状況が &lt;tt&gt;aCurSelfProgress&lt;/tt&gt; と &lt;tt&gt;aMaxSelfProgress&lt;/tt&gt; の引数によって表される <code><a href="ja/NsIDownload">nsIDownload</a></code> オブジェクト。</dd>
+</dl>
+<h3 id="onStatusChange.28.29" name="onStatusChange.28.29">onStatusChange()</h3>
+<p>ダウンロードのリクエストの状況に変更があったときに呼び出されます。受け取る状況メッセージは、ユーザに直接表示することを意図したものです。</p>
+<div class="warning">
+ <b>警告:</b> このメソッドは Firefox 3 (Gecko 1.9) で削除されました。それ以前のバージョンでも、このメソッドが呼び出されているコードはありません。</div>
+<pre class="eval"> void onStatusChange(
+   in nsIWebProgress aWebProgress,
+   in nsIRequest aRequest,
+   in nsresult aStatus,
+   in wstring aMessage,
+   in nsIDownload aDownload
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_4" name=".E5.BC.95.E6.95.B0_4">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aWebProgress&lt;/tt&gt;</dt>
+ <dd>
+  ダウンロードを監視するためにダウンロードマネージャによって利用される <code><a href="ja/NsIWebProgress">nsIWebProgress</a></code> インスタンス。</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;nsIChannel&lt;/tt&gt;</dt>
+ <dd>
+  状況を変更した <code><a href="ja/NsIChannel">nsIChannel</a></code>。この引数は <code>NULL</code> を取ることができません。</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aStatus&lt;/tt&gt;</dt>
+ <dd>
+  ダウンロードの変更後の状況に関する情報。詳しくは <code>nsIWebProgressListener</code>]] の [[nsIWebProgressListener#onStateChange|<code>onStateChange()</code> を参照してください。</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aMessage&lt;/tt&gt;</dt>
+ <dd>
+  画面上に表示されることを意図した、ユーザが読める形での状況メッセージ</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aDownload&lt;/tt&gt;</dt>
+ <dd>
+  状況が変更されたダウンロード。</dd>
+</dl>
+<h3 id="onLocationChange.28.29" name="onLocationChange.28.29">onLocationChange()</h3>
+<div class="warning">
+ <b>警告:</b> このメソッドは Firefox 3 (Gecko 1.9) で削除されました。それ以前のバージョンでも、このメソッドが呼び出されているコードはありません。</div>
+<pre class="eval"> void onLocationChange(
+   in nsIWebProgress aWebProgress,
+   in nsIRequest aRequest,
+   in nsIURI aLocation,
+   in nsIDownload aDownload
+ );
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_5" name=".E5.BC.95.E6.95.B0_5">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aWebProgress&lt;/tt&gt;</dt>
+ <dd>
+  ダウンロードを監視するためにダウンロードマネージャによって利用される <code><a href="ja/NsIWebProgress">nsIWebProgress</a></code> インスタンス。</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aRequest&lt;/tt&gt;</dt>
+ <dd>
+  状況を変更した <code><a href="ja/NsIChannel">nsIChannel</a></code>。この引数は <code>NULL</code> を取ることができません。</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aLocation&lt;/tt&gt;</dt>
+ <dd>
+  ダウンロード中のファイルの URI。</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aDownload&lt;/tt&gt;</dt>
+ <dd>
+  ダウンロード中のファイルを表す <code><a href="ja/NsIDownload">nsIDownload</a></code> オブジェクト。</dd>
+</dl>
+<h3 id="onSecurityChange.28.29" name="onSecurityChange.28.29">onSecurityChange()</h3>
+<p>ダウンロード中に使われるセキュリティレベルが変更されたときに呼び出されます。例えば、最初のリクエストが HTTPS を通じて行われ、その後ダウンロードが HTTP に変わった場合、この関数が呼び出され、その遷移を通知します。</p>
+<pre class="eval"> void onSecurityChange(
+   in nsIWebProgress aWebProgress,
+   in nsIRequest aRequest,
+   in unsigned long aState,
+   in nsIDownload aDownload
+ );
+
+</pre>
+<h6 id=".E5.BC.95.E6.95.B0_6" name=".E5.BC.95.E6.95.B0_6">引数</h6>
+<dl>
+ <dt>
+  &lt;tt&gt;aWebProgress&lt;/tt&gt;</dt>
+ <dd>
+  ダウンロードを監視するためにダウンロードマネージャによって利用される <code><a href="ja/NsIWebProgress">nsIWebProgress</a></code> インスタンス。</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aRequest&lt;/tt&gt;</dt>
+ <dd>
+  状況を変更した <code><a href="ja/NsIChannel">nsIChannel</a></code>。この引数は <code>NULL</code> を取ることができません。</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aState&lt;/tt&gt;</dt>
+ <dd>
+  ダウンロードの変更後の状況。<a href="ja/NsIDownloadManager#Constants">取り得る値の一覧</a> は <code><a href="ja/NsIDownloadManager">nsIDownloadManager</a></code> を参照してください。</dd>
+</dl>
+<dl>
+ <dt>
+  &lt;tt&gt;aDownload&lt;/tt&gt;</dt>
+ <dd>
+  セキュリティレベルが変更されたダウンロード。</dd>
+</dl>
+<h2 id=".E9.96.A2.E9.80.A3.E8.A8.98.E4.BA.8B" name=".E9.96.A2.E9.80.A3.E8.A8.98.E4.BA.8B">関連記事</h2>
+<p><code><a href="ja/NsIDownloadManager">nsIDownloadManager</a></code>, <code><a href="ja/NsIDownload">nsIDownload</a></code>, <code><a href="ja/NsIWebProgressListener">nsIWebProgressListener</a></code></p>

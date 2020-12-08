@@ -1,0 +1,265 @@
+---
+title: Navigator.mozSetMessageHandler()
+slug: Archive/B2G_OS/API/Navigator/mozSetMessageHandler
+tags:
+  - API
+  - B2G
+  - Firefox OS
+  - Method
+  - Reference
+  - Référence(2)
+  - Web Activities
+  - Web アクティビティ
+  - WebAPI
+  - alarm
+translation_of: Archive/B2G_OS/API/Navigator/mozSetMessageHandler
+---
+<p></p><div class="warning">
+    <p style="text-align: center;">この API は <a href="/ja/docs/Mozilla/Firefox_OS">Firefox OS</a> 上で <a href="/ja/docs/Mozilla/Firefox_OS/Security/Application_security#App_Types">ウェブコンテンツまたは高度の権限を持つアプリ</a>より利用できます。</p>
+</div><p></p>
+
+<h2 id="概要"><span id="result_box" lang="en"><span class="hps">概要</span></span></h2>
+
+<p>アプリケーションはこのメソッドを使って、システムからのメッセージを処理してそれに反応する関数を登録できます。</p>
+
+<p>どのアプリケーションをどのメッセージに対して登録することもできますが、対応する許可設定があるアプリケーションにのみ送信されるメッセージもあります。例えば <code>sms-received</code> メッセージは <code>sms</code> の許可設定があるアプリケーションにのみ送信されます。</p>
+
+<p>システムメッセージは DOM イベントとは反対に、アプリケーションにそのハンドラーがない場合にはキューに残り続けます。アプリケーションにキューに入ったメッセージがあるかは、引数として適切なタイプを渡して <a href="/ja/docs/Web/API/Window/navigator/mozHasPendingMessage" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>navigator.mozHasPendingMessage()</code></a> を呼ぶことでチェックできます。メッセージハンドラーが設定されると、キューにある全メッセージが非同期にアプリケーションに渡されます。</p>
+
+<h2 id="構文"><span id="result_box" lang="en"><span class="hps">構文</span></span></h2>
+
+<pre>navigator.mozSetMessageHandler(type, handler);</pre>
+
+<h3 id="引数">引数</h3>
+
+<dl>
+ <dt> </dt>
+ <dt><code><span id="cke_bm_83S" style="display: none;"> </span>type</code></dt>
+ <dd><span id="result_box" lang="en"><span class="hps">type</span> は、登録するハンドラーがどの種類のメッセージ用かを表す文字列です。 </span></dd>
+ <dt><code>handler</code></dt>
+ <dd><span id="result_box" lang="en"><span class="hps">システムがメッセージを送信するとハンドラーが呼ばれます。ハンドラーが受け取る引数はメッセージタイプによって決まります。</span> </span></dd>
+</dl>
+
+<h2 id="Specification" name="Specification"><span id="result_box" lang="en"><span class="hps">メッセージタイプ</span></span></h2>
+
+<p><span id="result_box" lang="en"><span class="hps">現在、</span><span class="hps">Firefox OS</span> では以下のメッセージを登録できます。</span></p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">メッセージ名</th>
+   <th scope="col">ハンドラーのシグニチャー</th>
+   <th scope="col">許可設定</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>activity</code></td>
+   <td><code>f( <a href="/ja/docs/Web/API/MozActivityRequestHandler" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>MozActivityRequestHandler</code></a> request )</code></td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td><code>alarm</code></td>
+   <td><code>f( object unknown )</code></td>
+   <td>alarms</td>
+  </tr>
+  <tr>
+   <td><code>bluetooth-cancel</code></td>
+   <td><code>f( object unknown )</code></td>
+   <td>bluetooth</td>
+  </tr>
+  <tr>
+   <td><code>bluetooth-dialer-command</code></td>
+   <td><code>f( object unknown )</code></td>
+   <td>bluetooth</td>
+  </tr>
+  <tr>
+   <td><code>bluetooth-hfp-status-changed</code></td>
+   <td><code>f( object unknown )</code></td>
+   <td>bluetooth</td>
+  </tr>
+  <tr>
+   <td><code>bluetooth-opp-transfer-start</code></td>
+   <td><code>f( object unknown )</code></td>
+   <td>bluetooth</td>
+  </tr>
+  <tr>
+   <td><code>bluetooth-opp-transfer-complete</code></td>
+   <td><code>f( object unknown )</code></td>
+   <td>bluetooth</td>
+  </tr>
+  <tr>
+   <td><code>bluetooth-opp-receiving-file-confirmation</code></td>
+   <td><code>f( object unknown )</code></td>
+   <td>bluetooth</td>
+  </tr>
+  <tr>
+   <td><code>bluetooth-opp-update-progress</code></td>
+   <td><code>f( object unknown )</code></td>
+   <td>bluetooth</td>
+  </tr>
+  <tr>
+   <td><code>bluetooth-pairedstatuschanged</code></td>
+   <td><code>f( object unknown )</code></td>
+   <td>bluetooth</td>
+  </tr>
+  <tr>
+   <td><code>bluetooth-requestconfirmation</code></td>
+   <td><code>f( object unknown )</code></td>
+   <td>bluetooth</td>
+  </tr>
+  <tr>
+   <td><code>bluetooth-requestpincode</code></td>
+   <td><code>f( object unknown )</code></td>
+   <td>bluetooth</td>
+  </tr>
+  <tr>
+   <td><code>bluetooth-requestpasskey</code></td>
+   <td><code>f( object unknown )</code></td>
+   <td>bluetooth</td>
+  </tr>
+  <tr>
+   <td><code>headset-button</code></td>
+   <td><code>f( object unknown )</code></td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td><code>icc-stkcommand</code></td>
+   <td><code>f( object command )</code></td>
+   <td>settings</td>
+  </tr>
+  <tr>
+   <td><code>notification</code></td>
+   <td><code>f( object unknown )</code></td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td><code>push</code></td>
+   <td><code>f( object <a href="/ja/docs/Web/API/Simple_Push_API#push_.E3.83.A1.E3.83.83.E3.82.BB.E3.83.BC.E3.82.B8.E3.83.8F.E3.83.B3.E3.83.89.E3.83.A9.E3.83.BC.E3.82.92.E8.BF.BD.E5.8A.A0">registration</a> )</code></td>
+   <td><code>push</code></td>
+  </tr>
+  <tr>
+   <td><code>push-register</code></td>
+   <td><code>f (  )</code></td>
+   <td><code>push</code></td>
+  </tr>
+  <tr>
+   <td><code>sms-received</code></td>
+   <td><code>f( <a href="/ja/docs/Web/API/SmsMessage" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>SmsMessage</code></a> sms )</code></td>
+   <td style="white-space: nowrap;">sms</td>
+  </tr>
+  <tr>
+   <td><code>sms-sent</code></td>
+   <td><code>f( <a href="/ja/docs/Web/API/SmsMessage" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>SmsMessage</code></a> sms )</code></td>
+   <td>sms</td>
+  </tr>
+  <tr>
+   <td><code>telephony-call-ended</code></td>
+   <td><code>f( object call )</code></td>
+   <td>telephony</td>
+  </tr>
+  <tr>
+   <td><code>telephony-new-call</code></td>
+   <td><code>f( )</code></td>
+   <td>telephony</td>
+  </tr>
+  <tr>
+   <td><code>ussd-received</code></td>
+   <td><code>f( object ussd )</code></td>
+   <td>mobileconnection</td>
+  </tr>
+  <tr>
+   <td><code>wappush-received</code></td>
+   <td><code>f( object wappush )</code></td>
+   <td>wappush</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="仕様">仕様</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">注</th>
+  </tr>
+  <tr>
+   <td><a class="external" hreflang="en" lang="en" title="Unknownの仕様書">Unknown</a></td>
+   <td><span class="spec-">不明</span></td>
+   <td>システムメッセージングのインターフェイスを定義。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="ブラウザー互換性"><span class="short_text" id="result_box" lang="en"><span class="hps">ブラウザー互換性</span></span></h2>
+
+<p></p><p class="warning"><strong><a href="https://github.com/mdn/browser-compat-data">We're converting our compatibility data into a machine-readable JSON format</a></strong>.
+            This compatibility table still uses the old format,
+            because we haven't yet converted the data it contains.
+            <strong><a href="/ja/docs/MDN/Contribute/Structures/Compatibility_tables">Find out how you can help!</a></strong></p>
+
+<div class="htab">
+    <a id="AutoCompatibilityTable" name="AutoCompatibilityTable"></a>
+    <ul>
+        <li class="selected"><a>デスクトップ</a></li>
+        <li><a>モバイル</a></li>
+    </ul>
+</div><p></p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox OS</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td>1.0</td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="関連項目">関連項目</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/API/Window/navigator/mozHasPendingMessage" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>navigator.mozHasPendingMessage()</code></a></li>
+ <li><a href="/ja/docs/Web/API/Web_Activities" title="/en-US/docs/WebAPI/Web_Activities">Web Activities</a></li>
+ <li><a href="https://groups.google.com/forum/?fromgroups=#!topic/mozilla.dev.webapi/o8bkwx0EtmM" title="https://groups.google.com/forum/?fromgroups=#!topic/mozilla.dev.webapi/o8bkwx0EtmM">Mozilla WebAPI メーリングリストでの議論。</a></li>
+</ul>

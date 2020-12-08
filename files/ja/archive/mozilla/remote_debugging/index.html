@@ -1,0 +1,27 @@
+---
+title: Remote debugging
+slug: Archive/Mozilla/Remote_debugging
+translation_of: Archive/Mozilla/Remote_debugging
+---
+<p>When a bug is reproducible by a community member, but not on a developer's computer, a last-resort strategy is to debug it <em>on</em> the community member's computer. The crash victim should at least know how to run a debugger, if not how to use it, and should have a <a href="/En/Developer_Guide/Build_Instructions" title="En/Developer_Guide/Build_Instructions">debug build of Firefox</a> handy.</p>
+<p>This requires quite a bit of trust, in both directions. The developer trusts that his time is not being wasted: the crash is a real bug in Firefox. (That is, there's a legitimate reason it happens only on some computers, but that reason just hasn't been discovered.) The crash victim, in turn, trusts the developer with full access to his computer.</p>
+<p>A good place to start is a detailed stack (in gdb, use <code>bt</code> followed by <code>bt full)</code>.  There give more information about the stack than a Breakpad crash report: not only the names of the functions on the stack, but also the values they were passed.</p>
+<h2 id="コアダンプ">コアダンプ</h2>
+<p><a class="external" href="http://en.wikipedia.org/wiki/Core_dump">コアダンプ</a>はクラッシュしたプログラムのメモリの全てを含む。それはプログラムが終了した後でさえもデバッガにおいてクラッシュを見ることを可能とする。</p>
+<p>コアダンプを転送することは扱いにくい。それは大きく、個人情報を含むことができるからである。</p>
+<h3 id="MacやLinuxにおけるコアダンプ">MacやLinuxにおけるコアダンプ</h3>
+<p>Mac上でコアダンプを生成するため、「ulimit -c unlimited」をタイプして、コマンドラインからFirefoxを起動し、Firefoxをクラッシュする。Firefoxがクラッシュしたとき、コアは /Cores に位置する。そしてあなたはgdb(gdb firefox-bin corefile)にコアファイルをロードすることができる。そしてそれはgdb下でFirefoxを起動している間、あたかもクラッシュをキャッチしたかのようになるでしょう!</p>
+<p>MacやLinuxのコアダンプを転送するとき、（多分さらに）実行可能なFirefoxもまた転送しなければならないでしょう。</p>
+<h3 id="Windowsにおけるコアダンプ">Windowsにおけるコアダンプ</h3>
+<p>「minidumps」と呼ばれる。このセクションは拡張を必要とします。</p>
+<h2 id="Debugging_over_Bugzilla">Debugging over Bugzilla</h2>
+<p>Explain in the bug that you have a core file or can reproduce the crash as many times as needed. The developer can give you appropriate commands to type into the debugger.</p>
+<p>Examples: 367650, 374356, 393325, 418139</p>
+<h2 id="Debugging_over_IRC">Debugging over IRC</h2>
+<p>IRCで開発者を見つけ、デバッガでバグを捕らえたことを説明してください。 デバッグは通常多くのオブジェクトの表示を必要とするので、これはBugzillaでデバッグするよりはるかに早い。IRCにペーストするには長すぎるため<a class="external" href="http://pastebin.mozilla.org/" title="http://pastebin.mozilla.org/">pastebin.mozilla.org</a>を使いなさい。</p>
+<p>Examples: 391851</p>
+<h2 id="リモートデスクトップを用いてコンピュータを共有する">リモートデスクトップを用いてコンピュータを共有する</h2>
+<p><a class="external" href="http://en.wikipedia.org/wiki/VNC">VNC</a> や <a class="link-https" href="https://www.copilot.com/">Fog Creek Copilot</a>のような<a class="external" href="http://en.wikipedia.org/wiki/Remote_desktop_software">リモートデスクトップソフトウェア</a>を使用することであなたのコンピュータを制御することを開発者に提案してください。</p>
+<h2 id="本人が直接コンピュータを共有する">本人が直接コンピュータを共有する</h2>
+<p>カリフォルニアのマウンテンビューにたまたま住んでいるなら、しばらくの間、あなたは恐らくMozilla開発者にラップトップを手渡すことができます。</p>
+<p>Examples: 496391, 476241</p>

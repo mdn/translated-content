@@ -1,0 +1,77 @@
+---
+title: Date.prototype.getSeconds()
+slug: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
+translation_of: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
+---
+<p>{{JSRef("Global_Objects", "Date")}}</p>
+
+<p><strong><code>getSeconds()</code></strong> 方法根据本地时间，返回一个指定的日期对象的秒数。</p>
+
+<div>{{EmbedInteractiveExample("pages/js/date-getseconds.html")}}</div>
+
+
+
+<h2 id="Syntax" name="Syntax">语法</h2>
+
+<pre class="syntaxbox  language-html" style="margin-bottom: 0px; padding: 1em; border-left-width: 6px; border-left-style: solid; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; text-shadow: none; direction: ltr; white-space: normal; background-color: rgba(212, 221, 228, 0.498039);"><code class="language-html" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; color: inherit; text-shadow: none; direction: ltr;">dateObj.getSeconds()</code></pre>
+
+<h3 id="Parameters" name="Parameters">参数</h3>
+
+<p>无</p>
+
+<h3 id="Description" name="Description">描述</h3>
+
+<p>该方法返回一个 0 到 59 的整数值。</p>
+
+<h2 id="Examples" name="Examples">例子</h2>
+
+<h3 id="Example:_Using_getSeconds" name="Example:_Using_getSeconds">例子: 使用<code>getSeconds方法</code></h3>
+
+<p>下面第二条语句，基于日期对象 <code>Xmas95</code> 的值，把 30 赋值给变量 <code>secs</code>。</p>
+
+<pre class="brush:js  language-js" style="padding: 1em 0px 1em 30px; border-left-width: 6px; border-left-style: solid; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; text-shadow: none; direction: ltr; white-space: normal; background-color: rgba(234, 239, 242, 0.247059);"><code class="language-js" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; color: inherit; text-shadow: none; direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">var</span> Xmas95 <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="keyword token" style="color: #0077aa;">new</span> <span class="class-name token">Date</span><span class="punctuation token" style="color: #999999;">(</span><span class="string token" style="color: #669900;">"December 25, 1995 23:15:30"</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+<span class="keyword token" style="color: #0077aa;">var</span> secs <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> Xmas95<span class="punctuation token" style="color: #999999;">.</span><span class="function token">getSeconds<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span></code></pre>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 0px; background: transparent;"> </div>
+
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 19px; background: transparent;"> </div>
+
+<h2 id="规范" style="margin-bottom: 20px; line-height: 30px;">规范</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">规范版本</th>
+   <th scope="col">规范状态</th>
+   <th scope="col">注解</th>
+  </tr>
+  <tr>
+   <td>ECMAScript 1st Edition. Implemented in JavaScript 1.0</td>
+   <td>Standard</td>
+   <td>Initial definition.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.9.5.22', 'Date.prototype.getSeconds')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-date.prototype.getseconds', 'Date.prototype.getSeconds')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性" style="margin-bottom: 20px; line-height: 30px;">浏览器兼容性</h2>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p>{{Compat("javascript.builtins.Date.getSeconds")}}</p>
+
+<h2 id="See_Also" name="See_Also" style="margin-bottom: 20px; line-height: 30px;">相关链接</h2>
+
+<ul>
+ <li>{{jsxref("Date.prototype.getUTCSeconds()")}}</li>
+ <li>{{jsxref("Date.prototype.setSeconds()")}}</li>
+</ul>

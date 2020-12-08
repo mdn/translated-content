@@ -1,0 +1,128 @@
+---
+title: Response
+slug: Web/API/Response
+tags:
+  - API
+  - Experimental
+  - Fetch
+  - Fetch API
+  - Interface
+  - Reference
+  - Response
+translation_of: Web/API/Response
+---
+<div>{{APIRef("Fetch API")}}</div>
+
+<p><a href="/ja/docs/Web/API/Fetch_API">Fetch API</a> の <strong><code>Response</code></strong> インターフェイスは、リクエストのレスポンスを表します。</p>
+
+<p>{{domxref("Response.Response()")}} コンストラクタを使い、新しい Response オブジェクトを作ることができます。しかし、ServiceWorker の {{domxref("Fetchevent.respondWith")}} や {{domxref("GlobalFetch.fetch()")}} などのように、他のAPIからResponseオブジェクトが返されるのをより頻繁に目にするでしょう。</p>
+
+<h2 id="コンストラクタ">コンストラクタ</h2>
+
+<dl>
+ <dt>{{domxref("Response.Response","Response()")}}</dt>
+ <dd>新しい <code>Response</code> オブジェクトを返します。</dd>
+</dl>
+
+<h2 id="プロパティ">プロパティ</h2>
+
+<dl>
+ <dt>{{domxref("Response.headers")}} {{readonlyinline}}</dt>
+ <dd>レスポンスに関連した {{domxref("Headers")}} オブジェクトを含む。</dd>
+ <dt>{{domxref("Response.ok")}} {{readonlyinline}}</dt>
+ <dd>レスポンスが成功（200-299 の範囲のステータス）したか否かを通知する boolean 値を含む。</dd>
+ <dt>{{domxref("Response.redirected")}} {{ReadOnlyInline}}</dt>
+ <dd>レスポンスがリダイレクトの結果であるかどうかを示します。 つまり、その URL リストには複数のエントリーがあります。</dd>
+ <dt>{{domxref("Response.status")}} {{readonlyinline}}</dt>
+ <dd>HTTPステータスコードを返す。(例：200 成功)</dd>
+ <dt>{{domxref("Response.statusText")}} {{readonlyinline}}</dt>
+ <dd>ステータスコードに対応したステータスメッセージを含む（たとえば、200 で OK）。</dd>
+ <dt>{{domxref("Response.type")}} {{readonlyinline}}</dt>
+ <dd>レスポンスのタイプを示す。(例：basic,cors)</dd>
+ <dt>{{domxref("Response.url")}} {{readonlyinline}}</dt>
+ <dd>レスポンスのURLを返す。</dd>
+ <dt>{{domxref("Response.useFinalURL")}}</dt>
+ <dd>レスポンスの最後の URL かどうかを通知する boolean 値を含む。</dd>
+</dl>
+
+<p><code>Response</code> は {{domxref("Body")}} を実装しているため、次のプロパティも使用可能です:</p>
+
+<dl>
+ <dt>{{domxref("Body.body")}} {{readonlyInline}}</dt>
+ <dd>コンテンツのボディを示す {{domxref("ReadableStream")}} の単純なゲッターです。</dd>
+ <dt>{{domxref("Body.bodyUsed")}} {{readonlyInline}}</dt>
+ <dd>レスポンスで body が既に使用されているかどうかを示す {{domxref("Boolean")}} 値を保持する。</dd>
+</dl>
+
+<h2 id="メソッド">メソッド</h2>
+
+<dl>
+ <dt>{{domxref("Response.clone()")}}</dt>
+ <dd><code>Response</code> オブジェクトのクローンを生成する。</dd>
+ <dt>{{domxref("Response.error()")}}</dt>
+ <dd>ネットワークエラーに関連した新しい <code>Response</code> オブジェクトを返す。</dd>
+ <dt>{{domxref("Response.redirect()")}}</dt>
+ <dd>異なる URL で新しい response を生成する</dd>
+</dl>
+
+<p><code>Response</code>　は {{domxref("Body")}}　を実装しているため、次のメソッドも使用可能です:</p>
+
+<dl>
+ <dt>{{domxref("Body.arrayBuffer()")}}</dt>
+ <dd>{{domxref("Response")}} ストリームを取得し、それを完全に読み込む。これは、{{domxref("ArrayBuffer")}} で解決する promise を返す。</dd>
+ <dt>{{domxref("Body.blob()")}}</dt>
+ <dd>{{domxref("Response")}} ストリームを取得し、それを完全に読み込む。これは、 {{domxref("Blob")}} で解決する promise を返す。</dd>
+ <dt>{{domxref("Body.formData()")}}</dt>
+ <dd>{{domxref("Response")}} ストリームを取得し、それを完全に読み込む。これは、 {{domxref("FormData")}} オブジェクトで解決する promise を返す。</dd>
+ <dt>{{domxref("Body.json()")}}</dt>
+ <dd>{{domxref("Response")}} ストリームを取得し、それを完全に読み込む。これは、 {{jsxref("JSON")}} オブジェクトで解決する promise を返す。</dd>
+ <dt>{{domxref("Body.text()")}}</dt>
+ <dd>{{domxref("Response")}} ストリームを取得し、それを完全に読み込む。これは、{{domxref("USVString")}} （text）で解決する promise を返す。</dd>
+</dl>
+
+<h2 id="例">例</h2>
+
+<p><a href="https://github.com/mdn/fetch-examples/tree/gh-pages/basic-fetch">basic fetch example</a> (<a href="http://mdn.github.io/fetch-examples/basic-fetch/">run example live</a>) では image を取得するために単純な <code>fetch()</code> を使用し、それを {{htmlelement("img")}} タグの中に入れて表示しています。<code>fetch()</code> はプロミスを返し、then の引数として Response オブジェクトを渡します。image をリクエストするとき、レスポンスに正しい MIME タイプを設定するために、{{domxref("Body.blob")}}（{{domxref("Response")}} は body を実装しています）を実行する必要があることに注意してください。</p>
+
+<pre class="brush: js">var myImage = document.querySelector('.my-image');
+fetch('flowers.jpg').then(function(response) {
+  return response.blob();
+}).then(function(blob) {
+  var objectURL = URL.createObjectURL(blob);
+  myImage.src = objectURL;
+});</pre>
+
+<p>カスタム <code>Response</code> オブジェクトを生成するために、{{domxref("Response.Response()")}} コンストラクタを使用することもできます：</p>
+
+<pre class="brush: js">var myResponse = new Response();</pre>
+
+<h2 id="仕様">仕様</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Fetch','#response-class','Response')}}</td>
+   <td>{{Spec2('Fetch')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+
+
+
+<p>{{Compat("api.Response")}}</p>
+
+<h2 id="関連項目">関連項目</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
+ <li><a href="/ja/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
+ <li><a href="/ja/docs/Web/HTTP">HTTP</a></li>
+</ul>

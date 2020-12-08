@@ -1,0 +1,270 @@
+---
+title: Headless mode
+slug: Mozilla/Firefox/Headless_mode
+translation_of: Mozilla/Firefox/Headless_mode
+---
+<div>{{FirefoxSidebar}}</div>
+
+<p class="summary">Headless模式是运行Firefox的一种非常有用的方式。就像听起来一样，Firefox正常运行，但没有任何可见UI组件。虽然不太适合浏览网页，但它对自动化测试非常有用。本文提供了有关运行 headless Firefox 的所有知识。</p>
+
+<h2 id="Using_headless_mode">Using headless mode</h2>
+
+<p>This section provide usage instructions for headless mode.</p>
+
+<h3 id="Basic_usage">Basic usage</h3>
+
+<p>You can run Firefox in headless mode from the command line, by including the <code>-headless</code> flag. For example:</p>
+
+<pre class="brush: bash">/path/to/firefox -headless</pre>
+
+<h3 id="Taking_screenshots">Taking screenshots</h3>
+
+<p>Since Firefox 57, the <code>-screenshot</code> flag allows you to take screenshots of websites. The basic usage:</p>
+
+<pre class="brush: bash">/path/to/firefox -headless -screenshot https://developer.mozilla.com</pre>
+
+<p>This creates a full-height screenshot of <code>https://developer.mozilla.com,</code> in the active directory called <code>screenshot.png</code>, with a viewport width of 800px.</p>
+
+<p>You can omit <code>-headless</code> when using <code>-screenshot, </code>as it is implied:</p>
+
+<pre class="brush: bash">/path/to/firefox -screenshot https://developer.mozilla.com</pre>
+
+<p>To override the default values, mentioned above, you can use the following flags/features:</p>
+
+<ul>
+ <li><code>-screenshot name url</code> — Set a custom name for the screenshot by including it between the <code>-screenshot</code> flag and the URL you want to capture. You can specify other web-compatible image formats such as <code>.jpg</code>, <code>.bmp</code>, etc.</li>
+ <li><code>--window-size=x</code> — Set a custom viewport width when taking the screenshot (full height is maintained). Note that the single argument version of this doesn't work.</li>
+ <li><code>--window-size=x,y</code> — Set a custom viewport width and height to capture.</li>
+</ul>
+
+<p>For example, the following command creates a screenshot of <code>https://developer.mozilla.com</code>, in the active directory called <code>test.jpg</code>, with a viewport width of 800px, and a height of 1000px:</p>
+
+<pre class="brush: bash">/path/to/firefox -screenshot test.jpg  https://developer.mozilla.com --window-size=800,1000</pre>
+
+<h3 id="Browser_support">Browser support</h3>
+
+<p>Headless Firefox works on Fx55+ on Linux, and 56+ on Windows/Mac.</p>
+
+<h2 id="Automated_testing_with_headless_mode">Automated testing with headless mode</h2>
+
+<p>The most useful way to use headless Firefox, is to run automated tests. You can make your testing process much more efficient.</p>
+
+<h3 id="Selenium_in_Node.js">Selenium in Node.js</h3>
+
+<p>Here we'll create a <a href="http://www.seleniumhq.org/">Selenium</a> test, using <a href="https://nodejs.org/">Node.js</a> and the <code><a href="https://www.npmjs.com/package/selenium-webdriver">selenium-webdriver</a></code> package. For this guide, we'll assume that you already have basic familiarity with Selenium, Webdriver, and Node, and you already have a testing environment created. If now, work through our <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment#Setting_up_Selenium_in_Node">Setting up Selenium in Node</a> guide, and return when you have.</p>
+
+<p>First, confirm you've installed Node and the <code>selenium-webdriver</code> on your system. Then create a new file, called <code>selenium-test.js,</code> and follow the steps below to populate it with test code.</p>
+
+<div class="note">
+<p><strong>Note</strong>: Alternatively, you could clone our <a href="https://github.com/mdn/headless-examples">headless-examples repo</a>. This also includes a package file, so you can just use <code>npm install</code> to install necessary dependencies.</p>
+</div>
+
+<ol>
+ <li>
+  <p>Let's add some code. Inside this file, start by importing the main <code>selenium-webdriver</code> module, and the <code>firefox</code> submodule:</p>
+
+  <pre class="brush: js">var webdriver = require('selenium-webdriver'),
+    By = webdriver.By,
+    until = webdriver.until;
+
+var firefox = require('selenium-webdriver/firefox');</pre>
+ </li>
+ <li>
+  <p>Next, we create a new <code>binary</code> object representing Firefox Nightly, and add the <code>-headless</code> argument, so it will run in headless mode:</p>
+
+  <pre class="brush: js">var binary = new firefox.Binary(firefox.Channel.NIGHTLY);
+binary.addArguments("-headless");</pre>
+ </li>
+ <li>
+  <p>Now let's create a new driver instance for Firefox, using <code>setFirefoxOptions()</code> to include an options object, which specifies that we want to run the test using the above binary. This step will be unnecessary on Linux, and after headless mode lands in the release channel on Windows/Mac, but it is still useful if you want to test Nightly-specific features:</p>
+
+  <pre class="brush: js">var driver = new webdriver.Builder()
+    .forBrowser('firefox')
+    .setFirefoxOptions(new firefox.Options().setBinary(binary))
+    .build();</pre>
+
+  <p>Alternatively, you can use options to set the binary and the headless arguments:</p>
+
+  <pre class="brush: js">var firefoxOptions = new firefox.Options();
+firefoxOptions.setBinary('/path/to/binary');
+firefoxOptions.headless();
+
+const driver = new webdriver.Builder()
+   .forBrowser('firefox')
+   .setFirefoxOptions(firefoxOptions)
+   .build();
+</pre>
+ </li>
+ <li>
+  <p>Finally, add the following code, which performs a simple test on the Google search homepage:</p>
+
+  <pre class="brush: js">driver.get('https://www.google.com');
+driver.findElement(By.name('q')).sendKeys('webdriver');
+
+driver.sleep(1000).then(function() {
+  driver.findElement(By.name('q')).sendKeys(webdriver.Key.TAB);
+});
+
+driver.findElement(By.name('btnK')).click();
+
+driver.sleep(2000).then(function() {
+  driver.getTitle().then(function(title) {
+    if(title === 'webdriver - Google Search') {
+      console.log('Test passed');
+    } else {
+      console.log('Test failed');
+    }
+  });
+});
+
+driver.quit();</pre>
+ </li>
+ <li>
+  <p>Finally, run your test with following command:</p>
+
+  <pre class="brush: bash">node selenium-test</pre>
+ </li>
+</ol>
+
+<p>That's it! After a few seconds, you should see the message "Test passed" returned in the console.</p>
+
+<p><a href="https://mykzilla.org/2017/08/30/headless-firefox-in-node-js-with-selenium-webdriver/">Headless Firefox in Node.js with selenium-webdriver</a>, by Myk Melez, contains additional useful tips and tricks for running Node.js Selenium tests with headless mode.</p>
+
+<h3 id="Selenium_in_Java">Selenium in Java</h3>
+
+<div class="note">
+<p><strong>Note</strong>: Thanks a lot to nicholasdipiazza for writing these instructions!</p>
+</div>
+
+<p>This guide assumes you already have Geckodriver on your machine, as explained in  <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment#Setting_up_Selenium_in_Node">Setting up Selenium in Node</a>, and an IDE set up which supports Gradle projects.</p>
+
+<ol>
+ <li>
+  <p>Download our <a href="https://github.com/mdn/headless-examples/blob/master/headlessfirefox-gradle.zip">headlessfirefox-gradle.zip</a> archive (<a href="https://github.com/mdn/headless-examples/tree/master/headlessfirefox-gradle">see the source here</a>). Extract it, and import the headlessfirefox folder into your IDE, as a gradle project.</p>
+ </li>
+ <li>
+  <p>Edit the <code>build.gradle</code> file, to set selenium to a later version, if needed. At the time of writing, we used 3.5.3.</p>
+
+  <pre class="brush: java">group 'com.mozilla'
+version '1.0'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+   mavenCentral()
+}
+
+dependencies {
+   compile('org.seleniumhq.selenium:selenium-api:3.5.3')
+   compile('org.seleniumhq.selenium:selenium-remote-driver:3.5.3')
+   compile('org.seleniumhq.selenium:selenium-server:3.5.3')
+
+   testCompile group: 'junit', name: 'junit', version: '4.12'
+}</pre>
+ </li>
+ <li>
+  <p>Edit the <code>webdriver.gecko.driver</code> property, in the HeadlessFirefoxSeleniumExample.java file, to equal the path where you installed geckodriver (see line 15 below).</p>
+
+  <pre class="brush: java">package com.mozilla.example;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxBinary;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+
+import java.util.concurrent.TimeUnit;
+
+public class HeadlessFirefoxSeleniumExample {
+ public static void main(String [] args) {
+   FirefoxBinary firefoxBinary = new FirefoxBinary();
+   firefoxBinary.addCommandLineOptions("--headless");
+   System.setProperty("webdriver.gecko.driver", "/opt/geckodriver");
+   FirefoxOptions firefoxOptions = new FirefoxOptions();
+   firefoxOptions.setBinary(firefoxBinary);
+   FirefoxDriver driver = new FirefoxDriver(firefoxOptions);
+   try {
+     driver.get("http://www.google.com");
+     driver.manage().timeouts().implicitlyWait(4,
+         TimeUnit.SECONDS);
+     WebElement queryBox = driver.findElement(By.name("q"));
+     queryBox.sendKeys("headless firefox");
+     WebElement searchBtn = driver.findElement(By.name("btnK"));
+     searchBtn.click();
+     WebElement iresDiv = driver.findElement(By.id("ires"));
+     iresDiv.findElements(By.tagName("a")).get(0).click();
+     System.out.println(driver.getPageSource());
+   } finally {
+     driver.quit();
+   }
+ }
+}</pre>
+ </li>
+ <li>
+  <p>Run the java class, and you should see the HTML content of this page printed in your console/terminal.</p>
+ </li>
+</ol>
+
+<h3 id="Selenium_in_Python">Selenium in Python</h3>
+
+<p>This guide assumes you already have geckodriver on your machine, as explained in <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment#Setting_up_Selenium_in_Node">Setting up Selenium in Node</a>.</p>
+
+<ol>
+ <li>
+  <p>Install the latest version of the <a href="https://pypi.python.org/pypi/selenium">Python client for Selenium</a>.</p>
+ </li>
+ <li>
+  <p>Edit the following, to set the <code>executable_path</code> on line 11, to the path where you installed geckodriver:</p>
+
+  <pre class="brush: python">from selenium.webdriver import Firefox
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.support import expected_conditions as expected
+from selenium.webdriver.support.wait import WebDriverWait
+
+if __name__ == "__main__":
+    options = Options()
+    options.add_argument('-headless')
+    driver = Firefox(executable_path='geckodriver', firefox_options=options)
+    wait = WebDriverWait(driver, timeout=10)
+    driver.get('http://www.google.com')
+    wait.until(expected.visibility_of_element_located((By.NAME, 'q'))).send_keys('headless firefox' + Keys.ENTER)
+    wait.until(expected.visibility_of_element_located((By.CSS_SELECTOR, '#ires a'))).click()
+    print(driver.page_source)
+    driver.quit()</pre>
+ </li>
+ <li>
+  <p>Run the Python script, and you should see the HTML content of this page printed in your console/terminal.</p>
+ </li>
+</ol>
+
+<h3 id="Other_testing_solutions">Other testing solutions</h3>
+
+<ul>
+ <li>Slimerjs has Firefox support built in on Linux, with Mac and Windows support, coming soon. See <a href="https://adriftwith.me/coding/2017/04/21/headless-slimerjs-with-firefox/">Headless SlimerJS with Firefox</a> by Brendan Dahl for more details.</li>
+ <li><a href="https://github.com/DevExpress/testcafe">TestCafe</a> (v.0.18.0 and higher) also supports testing in headless Firefox, by default. See <a href="https://devexpress.github.io/testcafe/blog/testcafe-v0-18-0-released.html#testing-in-headless-firefox">the documentation</a> for the details.</li>
+</ul>
+
+<p>In addition, you can use headless Firefox to run automated tests written in most other popular testing apps, as long as you are able to set environment variables.</p>
+
+<h2 id="Troubleshooting_and_further_help">Troubleshooting and further help</h2>
+
+<p>If you are having trouble getting headless mode to work, then do not worry — we are here to help. This section is designed to be added to as more questions arise, and answers are found.</p>
+
+<ul>
+ <li>On Linux, certain libraries are currently required on your system, even though headless mode doesn't use them, as Firefox links against them. See {{bug(1372998)}}, for more details and progress towards a fix.</li>
+</ul>
+
+<p>If you want to ask the engineers a question, the best place to go is the <code>#headless</code> channel on <a href="https://wiki.mozilla.org/IRC">Mozilla IRC</a>. If you are pretty sure you've found a bug, file it on <a href="https://bugzilla.mozilla.org/">Mozilla Bugzilla</a>.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="https://intoli.com/blog/running-selenium-with-headless-firefox/">Using Selenium with Headless Firefox (on Windows)</a> by Andre Perunicic (uses Python)</li>
+ <li><a href="https://mykzilla.org/2017/08/30/headless-firefox-in-node-js-with-selenium-webdriver/">Headless Firefox in Node.js with selenium-webdriver</a> by Myk Melez</li>
+ <li><a href="https://adriftwith.me/coding/2017/04/21/headless-slimerjs-with-firefox/">Headless SlimerJS with Firefox</a> by Brendan Dahl</li>
+ <li><a href="http://blog.rousek.name/2017/09/08/going-headless-with-firefox-since-55/">Using Selenium with Headless Firefox on Travis-CI</a> by Josef Rousek</li>
+</ul>

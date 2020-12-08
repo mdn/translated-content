@@ -1,0 +1,193 @@
+---
+title: Generator推导式
+slug: Web/JavaScript/Reference/Operators/Generator_comprehensions
+translation_of: Archive/Web/JavaScript/Generator_comprehensions
+---
+<div class="warning"><strong>非标准的。不要使用！</strong><br>
+generator推导式是非标准的，而且它不太可能会被添加到ECMAScript。考虑到将来，请使用 {{jsxref("Statements/function*", "generator", "", 1)}}。
+<p> </p>
+</div>
+
+<p>{{jsSidebar("Operators")}}</p>
+
+<p>生成器推导语法是一种JavaScript表达式，它允许您基于现有的可迭代对象快速组合新的生成器函数。</p>
+
+<p>许多编程语言中都存在推导。</p>
+
+<p>看下面，原来Generator推导式语法在SpiderMonkey的不同之处，它是基于对ECMAScript4的提议。</p>
+
+<h2 id="语法">语法</h2>
+
+<pre class="syntaxbox">(for (x of iterable) x)
+(for (x of iterable) if (condition) x)
+(for (x of iterable) for (y of iterable) x + y)
+</pre>
+
+<h2 id="描述">描述</h2>
+
+<p>在Generator推导式中，这两种构成方式都是允许的：</p>
+
+<ul>
+ <li>{{jsxref("Statements/for...of", "for...of")}} </li>
+ <li>{{jsxref("Statements/if...else", "if")}}</li>
+</ul>
+
+<p>for-of迭代器是构成的第一个部分。当由多重部分构成时，后面for-of和if构成方式都是被允许的。</p>
+
+<h2 id="示例">示例</h2>
+
+<h3 id="单个构成部分的_generator推导式：">单个构成部分的 generator推导式：</h3>
+
+<pre class="brush:js">(for (i of [ 1, 2, 3 ]) i*i );
+// generator function which yields 1, 4, and 9
+
+[...(for (i of [ 1, 2, 3 ]) i*i )];
+// [1, 4, 9]
+
+var abc = [ "A", "B", "C" ];
+(for (letters of abc) letters.toLowerCase());
+// generator function which yields "a", "b", and "c"
+
+</pre>
+
+<h3 id="有if伴随的多重构成的gennerator推导式：">有if伴随的多重构成的gennerator推导式：</h3>
+
+<pre class="brush: js">var years = [ 1954, 1974, 1990, 2006, 2010, 2014 ];
+
+(for (year of years) if (year &gt; 2000) year);
+// generator function which yields 2006, 2010, and 2014
+
+(for (year of years) if (year &gt; 2000) if(year &lt; 2010) year);
+// generator function which yields 2006, the same as below:
+
+(for (year of years) if (year &gt; 2000 &amp;&amp; year &lt; 2010) year);
+// generator function which yields 2006
+</pre>
+
+<h3 id="Generator推导式与Generator函数对比">Generator推导式与Generator函数对比</h3>
+
+<p>用一种简单的方式来理解generator推导式的语法并与generator函数来做个比较。</p>
+
+<p>Example 1: 仅是 generator.</p>
+
+<pre class="brush: js">var numbers = [ 1, 2, 3 ];
+
+// Generator 函数
+(function*() {
+  for (let i of numbers) {
+    yield i * i;
+  }
+})()
+
+// Generator 推导式
+(for (i of numbers) i*i );
+
+// 结果: 两者都得到 yields [ 1, 4, 9 ]
+</pre>
+
+<p>Example 2: 在 generator 中用if.</p>
+
+<pre class="brush: js">var numbers = [ 1, 2, 3 ];
+
+// Generator 函数
+(function*() {
+  for (let i of numbers) {
+    if (i &lt; 3) {
+      yield i * 1;
+    }
+  }
+})()
+
+// Generator 推导式
+(for (i of numbers) if (i &lt; 3) i);
+
+// 结果: 两者都得到 yields [ 1, 2 ]</pre>
+
+<h2 id="规范">规范</h2>
+
+<p>Generator推导式是最初在ECMAScript 2015中进行拟稿,但是在14年8月27号修订中被移除了。 请参阅较旧版本的ES2015规范语义.</p>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>{{ CompatGeckoDesktop("30") }}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{ CompatGeckoMobile("30") }}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h3 id="SpiderMonkey的具体实现笔记">SpiderMonkey的具体实现笔记</h3>
+
+<ul>
+ <li>{{jsxref("Statements/let", "let")}} 作为标识符，因为let当前仅可用于JS版本1.7和XUL脚本标记.</li>
+ <li>目前还不支持解构 ({{bug(980828)}}).</li>
+</ul>
+
+<h3 id="与旧的JS1.7_JS1.8理解的区别">与旧的JS1.7 / JS1.8理解的区别</h3>
+
+<ul>
+ <li>ES2016 的解析为每个“for”节点创建一个范围，而不是作为一个整体的理解。
+  <ul>
+   <li>Old: <code>[...(()=&gt;x for (x of [0, 1, 2]))][1]() // 2</code></li>
+   <li>New: <code>[...(for (x of [0, 1, 2]) ()=&gt;x)][1]() // 1, 每个迭代都会创建一个新的x的绑定事件。</code></li>
+  </ul>
+ </li>
+ <li> ES2016的解析以“for”而不是赋值表达式开头。
+  <ul>
+   <li>Old: <code>(i * 2 for (i of numbers))</code></li>
+   <li>New: <code>(for (i of numbers) <code>i * 2</code>)</code></li>
+  </ul>
+ </li>
+ <li>ES2016 解析可以有多个if和for组件。</li>
+ <li>ES2016 解析仅这种方式工作<code>{{jsxref("Statements/for...of", "for...of")}}</code> 而不是<code>{{jsxref("Statements/for...in", "for...in")}}</code> 的方式迭代。</li>
+</ul>
+
+<h2 id="相关链接">相关链接</h2>
+
+<ul>
+ <li>{{jsxref("Statements/for...of", "for...of")}}</li>
+ <li>{{jsxref("Operators/Array_comprehensions", "Array comprehensions")}}</li>
+</ul>

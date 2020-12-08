@@ -1,0 +1,34 @@
+---
+title: JavaScript 1.8.1 の新機能
+slug: Web/JavaScript/New_in_JavaScript/1.8.1
+tags:
+  - Firefox 3.5
+  - Gecko 1.9.1
+  - JavaScript
+  - JavaScript 1.8.1
+translation_of: Archive/Web/JavaScript/New_in_JavaScript/1.8.1
+---
+<div>{{jsSidebar("New_in_JS")}}</div>
+
+<p>JavaScript 1.8.1 は JavaScript の構文的な部分に関してはほんのわずかな更新しかありません。しかし、このリリースでの主な変更は、パフォーマンスを改善する <a class="internal" href="/Ja/SpiderMonkey/Internals/Tracing_JIT" title="Ja/SpiderMonkey/Internals/Tracing JIT">Tracemonkey just-in-time コンパイラ</a> の追加です。</p>
+
+<p>branch callback を削除して operation callback に置き換えるという注目すべき API の変更があります。<a class="external" href="http://groups.google.com/group/mozilla.dev.tech.js-engine/browse_thread/thread/a4d1fe147761aacb#" title="http://groups.google.com/group/mozilla.dev.tech.js-engine/browse_thread/thread/a4d1fe147761aacb#">詳細はこのニュースグループの投稿を参照してください</a>。</p>
+
+<h2 id="言語に関する追加">言語に関する追加</h2>
+
+<dl>
+ <dt><a class="internal" href="/Ja/Core_JavaScript_1.5_Reference/Global_Objects/Object/GetPrototypeOf" rel="internal" title="Ja/Core JavaScript 1.5 Reference/Global Objects/Object/GetPrototypeOf"><code>Object.getPrototypeOf()</code></a></dt>
+ <dd>この新しいメソッドは指定されたオブジェクトのプロトタイプを返します。</dd>
+ <dt><a class="internal" href="/Ja/Using_native_JSON" title="Ja/Using native JSON">Using native JSON</a></dt>
+ <dd>Firefox 3.5 は <a class="internal" href="/ja/JSON" title="ja/JSON">JSON</a> をネイティブでサポートします。.</dd>
+ <dt>String オブジェクトの新しい trim メソッド</dt>
+ <dd><a class="internal" href="/ja/Core_JavaScript_1.5_Reference/Global_Objects/String" rel="internal" title="ja/Core JavaScript 1.5 Reference/Global Objects/String"><code>String</code></a> オブジェクトが <a class="internal" href="/Ja/Core_JavaScript_1.5_Reference/Global_Objects/String/Trim" rel="internal" title="Ja/Core JavaScript 1.5 Reference/Global Objects/String/Trim"><code>trim()</code></a>、 <a class="internal" href="/Ja/Core_JavaScript_1.5_Reference/Global_Objects/String/TrimLeft" rel="internal" title="Ja/Core JavaScript 1.5 Reference/Global Objects/String/TrimLeft"><code>trimLeft()</code></a>、そして <a class="internal" href="/Ja/Core_JavaScript_1.5_Reference/Global_Objects/String/TrimRight" rel="internal" title="Ja/Core JavaScript 1.5 Reference/Global Objects/String/TrimRight"><code>trimRight()</code></a> メソッドが定義されました。</dd>
+</dl>
+
+<h2 id="他の改善">他の改善</h2>
+
+<ul>
+ <li>オブジェクトおよび配列の初期化子によるプロパティの暗黙的な設定では JavaScript におけるセッターの定義を行わないようになりました。これはプロパティの値を設定するという振る舞いをより予測可能なものにします。詳細は <a class="new" href="../../../../web-tech/2009/04/29/object-and-array-initializers-should-not-invoke-setters-when-evaluated" rel="internal">オブジェクトおよび配列の初期化子は評価時にセッターの定義を行うべきではない</a> というブログ投稿を参照してください。</li>
+</ul>
+
+<p> </p>

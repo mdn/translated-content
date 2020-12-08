@@ -1,0 +1,120 @@
+---
+title: Navigator.mozTelephony
+slug: Archive/B2G_OS/API/Navigator/mozTelephony
+tags:
+  - API
+  - Certified
+  - Firefox OS
+  - Mobile
+  - Non-standard
+  - Property
+  - Telephony
+translation_of: Archive/B2G_OS/API/Navigator/MozTelephony
+---
+<p></p><section class="Quick_links" id="Quick_Links"><ol><li><strong><a href="/ja/docs/Mozilla/Firefox_OS/API/Archive"><code>Archive</code></a></strong></li><li class="toggle"><details open><summary>Firefox OS に関連するページ</summary><ol><li><a href="/ja/docs/Mozilla/Firefox_OS/API/MozAlarmsManager"><code>MozAlarmsManager</code></a></li><li><a href="/ja/docs/Mozilla/Firefox_OS/API/MozMobileNetworkInfo"><code>MozMobileNetworkInfo</code></a></li><li><a href="/ja/docs/Mozilla/Firefox_OS/API/MozWifiP2pGroupOwner"><code>MozWifiP2pGroupOwner</code></a></li></ol></details></li></ol></section><div class="warning">
+    <p style="text-align: center;">この API は <a href="/ja/docs/Mozilla/Firefox_OS/Security/Application_security">認定済みアプリ</a>のみ、 <a href="/ja/docs/Mozilla/Firefox_OS">Firefox OS</a> で有効になります。</p>
+</div><p></p>
+
+<h2 id="Summary" name="Summary">概要</h2>
+
+<p>ブラウザから電話の通話の初期化と制御に使用できる <a href="/ja/docs/Web/API/Telephony" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>Telephony</code></a> オブジェクトを返します。</p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="eval">var <em>phone</em> = window.navigator.mozTelephony;
+</pre>
+
+<h3 id="Value" name="Value">値</h3>
+
+<p><code>navigator.mozTelephony</code> は、<a href="/ja/docs/Web/API/Telephony" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>Telephony</code></a> オブジェクトへのアクセスを提供します。これは、ブラウザを実行中の端末の電話機能を制御するために使用します。</p>
+
+<h2 id="Specifications" name="Specifications">仕様</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><a class="external" href="https://wiki.mozilla.org/WebAPI/WebTelephony" hreflang="en" lang="en" title="Web Telephonyの仕様書">Web Telephony</a></td>
+   <td><span class="spec-Draft">ドラフト</span></td>
+   <td>Draft</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+
+<p>明らかな理由により、サポートはモバイルブラウザが優先されます。</p>
+
+<p></p><p class="warning"><strong><a href="https://github.com/mdn/browser-compat-data">現在、互換性データを可読形式の JSON フォーマットに置き換えているところです。</a></strong>
+            この互換性一覧は古い形式を使っており、これに含まれるデータの置き換えが済んでいません。
+            <strong><a href="/ja/docs/MDN/Contribute/Structures/Compatibility_tables">手助けしていただける場合は、こちらから！</a></strong></p>
+
+<div class="htab">
+    <a id="AutoCompatibilityTable" name="AutoCompatibilityTable"></a>
+    <ul>
+        <li class="selected"><a>デスクトップ</a></li>
+        <li><a>モバイル</a></li>
+    </ul>
+</div><p></p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>機能</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>基本サポート</td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>機能</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>基本サポート</td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td>12.0 (12.0)</td>
+   <td>1.0.1</td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/API/Telephony" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>Telephony</code></a></li>
+ <li><a href="/ja/docs/Web/API/TelephonyCall" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall</code></a></li>
+ <li><a href="/ja/docs/Web/API/CallEvent" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>CallEvent</code></a></li>
+</ul>

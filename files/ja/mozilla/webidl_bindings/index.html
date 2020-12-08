@@ -1,0 +1,1232 @@
+---
+title: WebIDL bindings
+slug: Mozilla/WebIDL_bindings
+translation_of: Mozilla/WebIDL_bindings
+---
+<div class="note">
+<p>注記: このドキュメントは getters/setters/creators/deleters の名前付け及びインデックス付けが必要です</p>
+</div>
+
+<p><a class="external" href="http://www.w3.org/TR/WebIDL/" title="http://www.w3.org/TR/WebIDL/">WebIDL </a>バインディングはビルド時に２つの物を生成します: 実際の WebIDL ファイルと WebIDL が Gecko の内部コードとどのように紐付けされるかを定義したメタデータのリストが入った設定ファイルです。</p>
+
+<p>すべてのWebIDLファイルは<a class="external external-icon" href="http://mxr.mozilla.org/mozilla-central/source/dom/webidl/" title="http://mxr.mozilla.org/mozilla-central/source/dom/webidl/"><code>dom/webidl</code></a> に配置され、このディレクトリにある <a class="external external-icon" href="http://mxr.mozilla.org/mozilla-central/source/dom/webidl/moz.build" title="http://mxr.mozilla.org/mozilla-central/source/dom/webidl/moz.build">moz.build</a> のリストに追加されます。</p>
+
+<p>Note that if you're adding new interfaces, then the test at <code><span class="s0"><a href="http://mxr.mozilla.org/mozilla-central/source/dom/tests/mochitest/general/test_interfaces.html">dom/tests/mochitest/general/test_interfaces.html</a> </span></code>will most likely fail. This is a signal that you need to get a review from a DOM peer. Resist the urge to just add your interfaces to the list without the review; it will just annoy the DOM peers and they'll make you get the review anyway.</p>
+
+<p>設定ファイルの <code><a class="external external-icon" href="http://mxr.mozilla.org/mozilla-central/source/dom/bindings/Bindings.conf" title="http://mxr.mozilla.org/mozilla-central/source/dom/bindings/Bindings.conf">dom/bindings/Bindings.conf</a></code> は一般的な Python の辞書で、インタフェースの名前とインタフェースの情報の紐付けをし、これらは <em>descriptor</em> と呼ばれています  これらは様々なエッジケースをハンドルする可能なすべての種類のオプションが記述されますが、多くの descriptor はとてもシンプルです。</p>
+
+<p>全ての生成されたコードは <code>mozilla::dom</code> 名前空間に配置されます  一つのインタフェースにつきインタフェースの名前と <code>Binding</code> がついた名前空間が生成され、インタフェースのバインディングに関連した全ての物事はこの名前空間で処理されます。</p>
+
+<p><code>dom/bindings</code> にある多くのヘルパーオブジェクトやユーティリティメソッドは全て <code>mozilla::dom</code> 名前空間を持ち、これらのヘッダーは全て <code>mozilla/dom</code> にエクスポートされます。</p>
+
+<h2 id="Adding_WebIDL_bindings_to_a_class" name="Adding_WebIDL_bindings_to_a_class">WebIDL バインディングをクラスに追加する</h2>
+
+<p><code>MyInterface</code>というインタフェースの WebIDL バインディングをインタフェースの実装をしている <code>mozilla::dom::MyInterface</code> クラスに追加するには、次の作業が必要になります::</p>
+
+<ol>
+ <li>
+  <p>もしほかのインターフェイスを継承しなければ、nsWrapperChache を継承しプロパティのキャッシュラッパーをトレースするための cycle collector クラスをフックします。オブジェクトの生成だけする場合や、他のオブジェクトを使わない場合などは、この手順は必要ありません。<br>
+   If your interface doesn't inherit from any other interfaces, inherit from <code>nsWrapperCache</code> and hook up the class to the cycle collector so it will trace the wrapper cache properly. Note that you may not need to do this if your objects can only be created, never gotten from other objects. If you also inherit from <code>nsISupports</code>, make sure the <code>nsISupports</code> comes before the <code>nsWrapperCache</code> in your list of parent classes. If your interface <em>does</em> inherit from another interface, just inherit from the C++ type that the other interface corresponds to.</p>
+
+  <p>If you do need to hook up cycle collection, it will look like this in the common case of also inheriting from nsISupports:</p>
+
+  <pre class="brush: cpp">// Add strong pointers your class holds here. If you do, change to using
+// NS_IMPL_CYCLE_COLLECTION_WRAPPERCACHE.
+NS_IMPL_CYCLE_COLLECTION_WRAPPERCACHE_0(MyClass)
+NS_IMPL_CYCLE_COLLECTING_ADDREF(MyClass)
+NS_IMPL_CYCLE_COLLECTING_RELEASE(MyClass)
+NS_INTERFACE_MAP_BEGIN_CYCLE_COLLECTION(MyClass)
+  NS_WRAPPERCACHE_INTERFACE_MAP_ENTRY
+  NS_INTERFACE_MAP_ENTRY(nsISupports)
+NS_INTERFACE_MAP_END</pre>
+ </li>
+ <li>あなたのクラスのインスタンスを与えるために毎回同じオブジェクトを返す<code>GetParentObject</code>のオーバーライドを実装してください (あなたが明示的に再編されたJSラッパーによる親オブジェクトの変更をハンドルするコードを書かない限りは)。そのアイデアは<code>GetParentObject</code>を辿れば最終的にはWindowsが得られ、すべてのWebIDLオブジェクトは特定のWindowと関連付けられることを示します。例えば、<code>nsINode:: GetParentObject</code>は、ノードの所有者ドキュメントを返します。GetParentObjectの返り値は<code>nsISupports</code>を単独で継承しているか対応する<code>nsISupports</code>を生成することができる<code>ToSupports()</code>メソッドを持っている必要があります。<code>MyInterface</code>の多くのインスタンスを迅速に作成することが予想される場合、<code>GetParentObject</code>の戻り値は、最適なパフォーマンスを得るため<code>nsWrapperCache<code>から自分自身を継承しなければなりません。<code>GetParentObject</code>か らnullを返すことは返却されるオブジェクトをセキュリティのためのランダムなグローバルオブジェクトを関連付けることがOKである場合に許可されてい ますが、これはWebコンテンツが無防備になるので通常OKではありません。ラッパーのキャッシュを必要としない場合は、再度、この操作を行う必要はありません。</code></code></li>
+ <li>Add the WebIDL for <code>MyInterface</code> in <code>dom/webidl</code> and to the list in <code>dom/webidl/moz.build</code>.</li>
+ <li>Add an entry to <code>dom/bindings/Bindings.conf</code> that sets some basic information about the implementation of the interface. If the C++ type is not <code>mozilla::dom::MyInterface</code>, you need to set the <code>'nativeType'</code> to the right type. If the type is not in the header file one gets by replacing '::' with '/' and appending '<code>.h</code>', then add a corresponding <code>'headerFile'</code> annotation (or <a href="#HeaderFile" title="#HeaderFile"><code>HeaderFile</code></a> annotation to the .webidl file). If you don't have to set any annotations, then you don't need to add an entry either and the code generator will simply assume the defaults here.</li>
+ <li>Add external interface entries to <code>Bindings.conf</code> for whatever non-WebIDL interfaces your new interface has as arguments or return values.</li>
+ <li>Implement a <code>WrapObject</code> override on <code>mozilla::dom::MyInterface</code> that just calls through to <code>mozilla::dom::MyInterfaceBinding::Wrap</code>. Note that if your C++ type is implementing multiple distinct Web IDL interfaces, you need to choose which <code>mozilla::dom::MyInterfaceBinding::Wrap</code> to call here. See <code>AudioContext::Wrap</code>, for example.</li>
+ <li>Expose whatever methods the interface needs on <code>mozilla::dom::MyInterface</code>. These can be inline, virtual, have any calling convention, and so forth, as long as they have the right argument types and return types. You can see an example of what the function declarations should look like by running <code>mach webidl-example MyInterface</code>. This will produce two files in <code>dom/bindings</code> in your objdir: <code>MyInterface-example.h</code> and <code>MyInterface-example.cpp</code>, which show a basic implementation of the interface using a class that inherits from <code>nsISupports</code> and has a wrapper cache.</li>
+</ol>
+
+<p>See this <a class="link-https" href="https://hg.mozilla.org/mozilla-central/rev/dd08c10193c6" title="https://hg.mozilla.org/mozilla-central/rev/dd08c10193c6">sample patch that migrates window.performance.* to WebIDL bindings</a>.</p>
+
+<div class="note"><strong>Note:</strong> If your object can only be reflected into JS by creating it, not by retrieving it from somewhere, you can skip steps 1 and 2 above and instead add <code>'wrapperCache': False</code> to your descriptor. You will need to flag the functions that return your object as <a href="#Creator" title="#Creator"><code>[NewObject]</code></a> in the WebIDL.</div>
+
+<h2 id="C_reflections_of_WebIDL_constructs">C++ reflections of WebIDL constructs</h2>
+
+<h3 id="C_reflections_of_WebIDL_operations_methods">C++ reflections of WebIDL operations (methods)</h3>
+
+<p><br>
+ A WebIDL operation is turned into a method call on the underlying C++ object. The return type and argument types are determined <a href="#typemapping" title="#typemapping">as described below</a>. In addition to those, all <a href="#Throws">methods that are allowed to throw</a> will get an <code>ErrorResult&amp;</code> argument appended to their argument list. Methods that use certain WebIDL types like <code>any</code> or <code>object</code> will get a <code>JSContext*</code> argument prepended to the argument list. Static methods will be passed a <a href="#GlobalObject" title="#GlobalObject"><code>const GlobalObject&amp;</code></a> for the relevant global. This argument comes before the <code>JSContext*</code> argument, if any.</p>
+
+<p>The name of the C++ method is simply the name of the WebIDL operation with the first letter converted to uppercase.</p>
+
+<p>WebIDL overloads are turned into C++ overloads: they simply call C++ methods with the same name and different signatures.</p>
+
+<p>For example, this webidl:</p>
+
+<pre>interface MyInterface
+{
+  void doSomething(long number);
+  double doSomething(MyInterface? otherInstance);
+
+  [Throws]
+  MyInterface doSomethingElse(optional long maybeNumber);
+  [Throws]
+  void doSomethingElse(MyInterface otherInstance);
+
+  void doTheOther(any something);
+
+  void doYetAnotherThing(optional boolean actuallyDoIt = false);
+
+  static void staticOperation(any arg);
+};
+</pre>
+
+<p>will require these method declarations:</p>
+
+<pre class="brush: cpp">class MyClass
+{
+  void DoSomething(int32_t aNumber);
+  double DoSomething(MyClass* aOtherInstance);
+
+  already_AddRefed DoSomethingElse(Optional aMaybeNumber,
+                                                ErrorResult&amp; rv);
+  void DoSomethingElse(MyClass&amp; aOtherInstance, ErrorResult&amp; rv);
+
+  void DoTheOther(JSContext* cx, JS::Value aSomething);
+
+  void DoYetAnotherThing(bool aActuallyDoIt);
+
+  static void StaticOperation(const GlobalObject&amp; aGlobal, JSContext* cx, JS::Value aSomething);
+}
+</pre>
+
+<h3 id="C_reflections_of_WebIDL_attributes">C++ reflections of WebIDL attributes</h3>
+
+<p>A WebIDL attribute is turned into a pair of method calls for the getter and setter on the underlying C++ object. A readonly attribute only has a getter and no setter.</p>
+
+<p>The getter's name is the name of the attribute with the first letter converted to uppercase. This has <code>Get</code> prepended to it if any of these conditions hold:</p>
+
+<ol>
+ <li>The type of the attribute is nullable.</li>
+ <li>The getter can throw.</li>
+ <li>The return value of the attribute is returned via an out parameter in the C++.</li>
+</ol>
+
+<p>The method signature for the getter looks just like an operation with no arguments and the attribute's type as the return type.</p>
+
+<p>The setter's name is <code>Set</code> followed by the name of the attribute with the first letter converted to uppercase. The method signature looks just like an operation with a void return value and a single argument whose type is the attribute's type.</p>
+
+<h3 id="C_reflections_of_WebIDL_constructors">C++ reflections of WebIDL constructors</h3>
+
+<p>A WebIDL constructor is turned into a static class method named <code>Constructor</code>. The arguments of this method will be the arguments of the WebIDL constructor, with a <a href="#GlobalObject" title="#GlobalObject"><code>const GlobalObject&amp;</code></a> for the relevant global prepended. For the non-worker case, the global is typically the inner window for the DOM Window the constructor function is attached to. If a <code>JSContext*</code> is also needed due to some of the argument types, it will come after the global. The return value of the constructor for <code>MyInterface</code> is exactly the same as that of a method returning an instance of <code>MyInterface</code>. Constructors are always allowed to throw.</p>
+
+<p>For example, this IDL:</p>
+
+<pre>[Constructor,
+ Constructor(unsigned long someNumber)]
+interface MyInterface
+{
+};
+</pre>
+
+<p>will require the following declarations in <code>MyClass</code>:</p>
+
+<pre class="brush: cpp">class MyClass {
+  // Various nsISupports stuff or whatnot
+  static
+  already_AddRefed Constructor(const GlobalObject&amp; aGlobal,
+                                        ErrorResult&amp; rv);
+  static
+  already_AddRefed Constructor(const GlobalObject&amp; aGlobal,
+                                        uint32_t aSomeNumber,
+                                        ErrorResult&amp; rv);
+};
+</pre>
+
+<h3 id="typemapping" name="typemapping">C++ reflections of WebIDL types</h3>
+
+<p>The exact C++ representation for WebIDL types can depend on the precise way that they're being used (e.g., return values, arguments, and sequence or dictionary members might all have different representations).</p>
+
+<p>Unless stated otherwise, a type only has one representation. Also, unless stated otherwise, nullable types are represented by wrapping <a href="#Nullable" title="#Nullable"><code>Nullable&lt;&gt;</code></a> around the base type.</p>
+
+<p>In all cases, optional arguments which do not have a default value are represented by wrapping <a href="#Optional" title="#Optional"><code>const Optional&lt;&gt;&amp;</code></a> around the representation of the argument type. If the argument type is a C++ reference, it will also become a <a href="#NonNull" title="#NonNull">NonNull&lt;&gt;</a> around the actual type of the object in the process. Optional arguments which do have a default value are just represented by the argument type itself, set to the default value if the argument was not in fact passed in.</p>
+
+<p>Variadic WebIDL arguments are treated as a <a href="#Sequence" title="#Sequence"><code>const Sequence&lt;&gt;&amp;</code></a> around the actual argument type.</p>
+
+<h4 id="any"><code>any</code></h4>
+
+<p><code>any</code> is represented in three different ways, depending on use:</p>
+
+<ul>
+ <li><code>any</code> arguments become <code>JS::Handle</code>. They will be in the compartment of the passed-in JSContext.</li>
+ <li><code>any</code> return values become a <code>JS::MutableHandle</code> out param appended to the argument list. This comes after all IDL arguments, but before the <code>ErrorResult&amp;</code>, if any, for the method. The return value is allowed to be in any compartment; bindings will wrap it into the context compartment as needed.</li>
+ <li><code>any</code> dictionary members and sequence elements become <code>JS::Value</code>. The dictionary members and sequence elements are guaranteed to be marked by whomever puts the sequence or dictionary on the stack, using <code>SequenceRooter</code> and <code>DictionaryRooter</code>.</li>
+</ul>
+
+<p>Methods using <code>any</code> always get a <code>JSContext*</code> argument.</p>
+
+<p>For example, this WebIDL:</p>
+
+<pre>interface Test {
+  attribute any myAttr;
+  any myMethod(any arg1, sequence arg2, optional any arg3);
+};
+</pre>
+
+<p>will correspond to these C++ function declarations:</p>
+
+<pre class="brush: cpp">void MyAttr(JSContext* cx, JS::MutableHandle retval);
+void SetMyAttr(JSContext* cx, JS::Handle value);
+void MyMethod(JSContext* cx, JS::Handle arg1,
+              const Sequence&amp; arg2,
+              const Optional &gt;&amp; arg3,
+              JS::MutableHandle retval);
+</pre>
+
+<h4 id="boolean"><code>boolean</code></h4>
+
+<p>The <code>boolean</code> WebIDL type is represented as a C++ <code>bool</code>.</p>
+
+<p>For example, this WebIDL:</p>
+
+<pre>interface Test {
+  attribute boolean myAttr;
+  boolean myMethod(optional boolean arg);
+};
+</pre>
+
+<p>will correspond to these C++ function declarations:</p>
+
+<pre class="brush: cpp">bool MyAttr();
+void SetMyAttr(bool value);
+JS::Value MyMethod(const Optional&amp; arg);
+</pre>
+
+<h4 id="Integer_types">Integer types</h4>
+
+<p>Integer WebIDL types are mapped to the corresponding C99 stdint types.</p>
+
+<p>For example, this WebIDL:</p>
+
+<pre>interface Test {
+  attribute short myAttr;
+  long long myMethod(unsigned long? arg);
+};
+</pre>
+
+<p>will correspond to these C++ function declarations:</p>
+
+<pre class="brush: cpp">int16_t MyAttr();
+void SetMyAttr(int16_t value);
+int64_t MyMethod(const Nullable&amp; arg);
+</pre>
+
+<h4 id="Floating_point_types">Floating point types</h4>
+
+<p>Floating point WebIDL types are mapped to the C++ type of the same name. So <code>float</code> and <code>unrestricted float</code> become a C++ <code>float</code>, while <code>double</code> and <code>unrestricted double</code> become a C++ <code>double</code>.</p>
+
+<p>For example, this WebIDL:</p>
+
+<pre>interface Test {
+  float myAttr;
+  double myMethod(unrestricted double? arg);
+};
+</pre>
+
+<p>will correspond to these C++ function declarations:</p>
+
+<pre class="brush: cpp">float MyAttr();
+void SetMyAttr(float value);
+double MyMethod(const Nullable&amp; arg);
+</pre>
+
+<h4 id="DOMString"><code>DOMString</code></h4>
+
+<p>Strings are reflected in three different ways, depending on use:</p>
+
+<ul>
+ <li>String arguments become <code>const nsAString&amp;</code>.</li>
+ <li>String return values become a <a href="#DOMString-helper" title="#DOMString-helper"><code>mozilla::dom::DOMString&amp;</code></a> out param appended to the argument list. This comes after all IDL arguments, but before the <code>ErrorResult&amp;</code>, if any, for the method. Note that this allows callees to declare their methods as taking an <code>nsAString&amp;</code> or <code>nsString&amp;</code> if desired.</li>
+ <li>Strings in sequences, dictionaries, owning unions, and variadic arguments become <code>nsString</code>.</li>
+</ul>
+
+<p>Nullable strings are represented by the same types as non-nullable ones, but the string will return true for <code>DOMStringIsNull()</code>. Returning null as a string value can be done using <code>SetDOMStringToNull</code> on the out param if it's an <code>nsAString</code> or calling <code>SetNull()</code> on a <code>DOMString</code>.</p>
+
+<p>For example, this WebIDL:</p>
+
+<pre>interface Test {
+  DOMString myAttr;
+  [Throws]
+  DOMString myMethod(sequence arg1, DOMString? arg2, optional DOMString arg3);
+};
+</pre>
+
+<p>will correspond to these C++ function declarations:</p>
+
+<pre class="brush: cpp">void GetMyAttr(nsString&amp; retval);
+void SetMyAttr(const nsAString&amp; value);
+void MyMethod(const Sequence&amp; arg1, const nsAString&amp; arg2,
+              const Optional&amp; arg3, nsString&amp; retval, ErrorResult&amp; rv);
+</pre>
+
+<h4 id="ByteString"><code>ByteString</code></h4>
+
+<p><code>ByteString</code> is reflected in three different ways, depending on use:</p>
+
+<ul>
+ <li><code>ByteString</code> arguments become <code>const nsACString&amp;</code>.</li>
+ <li><code>ByteString</code> return values become an <code>nsCString&amp;</code> out param appended to the argument list. This comes after all IDL arguments, but before the <code>ErrorResult&amp;</code>, if any, for the method.</li>
+ <li><code>ByteString</code> in sequences, dictionaries, owning unions, and variadic arguments becomes <code>nsCString</code>.</li>
+</ul>
+
+<p>Nullable <code>ByteString</code> are represented by the same types as non-nullable ones, but the string will return true for <code>IsVoid()</code>. Returning null as a string value can be done using <code>SetIsVoid()</code> on the out param.</p>
+
+<h4 id="object"><code>object</code></h4>
+
+<p><code>object</code> is represented in three different ways, depending on use:</p>
+
+<ul>
+ <li><code>object</code> arguments become <code>JS::Handle</code>. They will be in the compartment of the passed-in JSContext.</li>
+ <li><code>object</code> return values become a <code>JS::MutableHandle</code> out param appended to the argument list. This comes after all IDL arguments, but before the <code>ErrorResult&amp;</code>, if any, for the method. The return value is allowed to be in any compartment; bindings will wrap it into the context compartment as needed.</li>
+ <li><code>object</code> dictionary members and sequence elements become <code>JSObject*</code>. The dictionary members and sequence elements are guaranteed to be marked by whoever puts the sequence or dictionary on the stack, using <code>SequenceRooter</code> and <code>DictionaryRooter</code>.</li>
+</ul>
+
+<p>Methods using <code>object</code> always get a <code>JSContext*</code> argument.</p>
+
+<p>For example, this WebIDL:</p>
+
+<pre>interface Test {
+  object myAttr;
+  object myMethod(object arg1, object? arg2, sequence arg3, optional object arg4,
+                  optional object? arg5);
+};</pre>
+
+<p>will correspond to these C++ function declarations:</p>
+
+<pre class="brush: cpp">void GetMyAttr(JSContext* cx, JS::MutableHandle retval);
+void SetMyAttr(JSContext* cx, JS::Handle value);
+void MyMethod(JSContext* cx, JS::Handle arg1, JS::Handle arg2,
+              const Sequence&amp; arg3,
+              const Optional &gt;&amp; arg4,
+              const Optional &gt;&amp; arg5,
+              JS::MutableHandle retval);
+</pre>
+
+<h4 id="Interface_types">Interface types</h4>
+
+<p>There are four kinds of interface types in the WebIDL bindings. Callback interfaces are used to represent script objects that browser code can call into. External interfaces are used to represent objects that have not been converted to the WebIDL bindings yet. WebIDL interfaces are used to represent WebIDL binding objects. "SpiderMonkey" interfaces are used to represent objects that are implemented natively by the JavaScript engine (e.g., typed arrays).</p>
+
+<h5 id="Callback_interfaces">Callback interfaces</h5>
+
+<p>Callback interfaces are represented in C++ as objects inheriting from <a href="#CallbackInterface" title="#CallbackInterface"><code>mozilla::dom::CallbackInterface</code></a>, whose name, in the <code>mozilla::dom</code> namespace, matches the name of the callback interface in the WebIDL. The exact representation depends on how the type is being used.</p>
+
+<ul>
+ <li>Nullable arguments become <code>Foo*</code>.</li>
+ <li>Non-nullable arguments become <code>Foo&amp;</code>.</li>
+ <li>Return values become <code>already_AddRefed</code> or <code>Foo*</code> as desired. The pointer form is preferred because it results in faster code, but it should only be used if the return value was not addrefed (and so it can only be used if the return value is kept alive by the callee until at least the binding method has returned).</li>
+ <li>WebIDL callback interfaces in sequences, dictionaries, owning unions, and variadic arguments are represented by <code>nsRefPtr</code> if nullable and <a href="#OwningNonNull" title="#OwningNonNull"><code>OwningNonNull</code></a> otherwise.</li>
+</ul>
+
+<p>If the interface is a single-operation interface, the object exposes two methods that both invoke the same underlying JS callable. The first of these methods allows the caller to pass in a <code>this</code> object, while the second defaults to <code>undefined</code> as the <code>this</code> value. In either case, the <code>this</code> value is only used if the callback interface is implemented by a JS callable. If it's implemented by an object with a property whose name matches the operation, the object itself is always used as <code>this</code>.</p>
+
+<p>If the interface is not a single-operation interface, it just exposes a single method for every IDL method/getter/setter.</p>
+
+<p>The signatures of the methods correspond to the signatures for throwing IDL methods/getters/setters with an additional trailing "<code>mozilla::dom::CallbackObject::ExceptionHandling</code> <code>aExceptionHandling</code>" argument, defaulting to <code>eReportExceptions</code>. If <code>aReportExceptions</code> is set to <code>eReportExceptions</code>, the methods will report JS exceptions before returning. If <code>aReportExceptions</code> is set to <code>eRethrowExceptions</code>, JS exceptions will be stashed in the <code>ErrorResult</code> and will be reported when the stack unwinds to wherever the <code>ErrorResult</code> was set up.</p>
+
+<p>For example, this WebIDL:</p>
+
+<pre>callback interface MyCallback {
+  attribute long someNumber;
+  short someMethod(DOMString someString);
+};
+callback interface MyOtherCallback {
+  // single-operation interface
+  short doSomething(Node someNode);
+};
+interface MyInterface {
+  attribute MyCallback foo;
+  attribute MyCallback? bar;
+};</pre>
+
+<p>will lead to these C++ class declarations in the <code>mozilla::dom</code> namespace:</p>
+
+<pre class="brush: cpp">class MyCallback : public CallbackInterface
+{
+  int32_t GetSomeNumber(ErrorResult&amp; rv, ExceptionHandling aExceptionHandling = eReportExceptions);
+  void SetSomeNumber(int32_t arg, ErrorResult&amp; rv,
+                     ExceptionHandling aExceptionHandling = eReportExceptions);
+  int16_t SomeMethod(const nsAString&amp; someString, ErrorResult&amp; rv,
+                     ExceptionHandling aExceptionHandling = eReportExceptions);
+};
+
+class MyOtherCallback : public CallbackInterface
+{
+public:
+  int16_t
+  DoSomething(nsINode&amp; someNode, ErrorResult&amp; rv,
+              ExceptionHandling aExceptionHandling = eReportExceptions);
+
+  template
+  int16_t
+  DoSomething(const T&amp; thisObj, nsINode&amp; someNode, ErrorResult&amp; rv,
+              ExceptionHandling aExceptionHandling = eReportExceptions);
+};</pre>
+
+<p>and these C++ function declarations on the implementation of <code>MyInterface</code>:</p>
+
+<pre>already_AddRefed GetFoo();
+void SetFoo(MyCallback&amp;);
+already_AddRefed GetBar();
+void SetBar(MyCallback*);
+</pre>
+
+<p>A consumer of MyCallback would be able to use it like this:</p>
+
+<pre class="brush: cpp">void
+SomeClass::DoSomethingWithCallback(MyCallback&amp; aCallback)
+{
+  ErrorResult rv;
+  int32_t number = aCallback.GetSomeNumber(rv);
+  if (rv.Failed()) {
+    // The error has already been reported to the JS console; you can handle
+    // things however you want here.
+    return;
+  }
+
+  // For some reason we want to catch and rethrow exceptions from SetSomeNumber, say.
+  aCallback.SetSomeNumber(2*number, rv, eRethrowExceptions);
+  if (rv.Failed()) {
+    // The exception is now stored on rv. This code MUST report
+    // it usefully; otherwise it will assert.
+  }
+}
+</pre>
+
+<h5 id="External_interfaces">External interfaces</h5>
+
+<p>External interfaces are represented in C++ as objects that XPConnect knows how to unwrap to. This can mean XPCOM interfaces (whether declared in XPIDL or not) or it can mean some type that there's a castable native unwrapping function for. The C++ type to be used should be the <code>nativeType</code> listed for the external interface in the <a href="#Bindings.conf" title="#Bindings.conf"><code>Bindings.conf</code></a> file. The exact representation depends on how the type is being used.</p>
+
+<ul>
+ <li>Arguments become <code>nsIFoo*</code>.</li>
+ <li>Return values can be <code>already_AddRefed</code> or <code>nsIFoo*</code> as desired. The pointer form is preferred because it results in faster code, but it should only be used if the return value was not addrefed (and so it can only be used if the return value is kept alive by the callee until at least the binding method has returned).</li>
+ <li>External interfaces in sequences, dictionaries, owning unions, and variadic arguments are represented by <code>nsRefPtr.</code></li>
+</ul>
+
+<h5 id="WebIDL_interfaces">WebIDL interfaces</h5>
+
+<p>WebIDL interfaces are represented in C++ as C++ classes. The class involved must either be refcounted or must be explicitly annotated in <code>Bindings.conf</code> as being directly owned by the JS object. If the class inherits from <code>nsISupports</code>, then the canonical <code>nsISupports</code> must be on the primary inheritance chain of the object. If the interface has a parent interface, the C++ class corresponding to the parent must be on the primary inheritance chain of the object. This guarantees that a <code>void*</code> can be stored in the JSObject which can then be <code>reinterpret_cast</code> to any of the classes that correspond to interfaces the object implements. The C++ type to be used should be the <code>nativeType</code> listed for the interface in the <a href="#Bindings.conf" title="#Bindings.conf"><code>Bindings.conf</code></a> file, or <code>mozilla::dom::InterfaceName</code> if none is listed. The exact representation depends on how the type is being used.</p>
+
+<ul>
+ <li>Nullable arguments become <code>Foo*</code>.</li>
+ <li>Non-nullable arguments become <code>Foo&amp;</code>.</li>
+ <li>Return values become <code>already_AddRefed</code> or <code>Foo*</code> as desired. The pointer form is preferred because it results in faster code, but it should only be used if the return value was not addrefed (and so it can only be used if the return value is kept alive by the callee until at least the binding method has returned).</li>
+ <li>WebIDL interfaces in sequences, dictionaries, owning unions, and variadic arguments are represented by <code>nsRefPtr</code> if nullable and <a href="#OwningNonNull" title="#OwningNonNull"><code>OwningNonNull</code></a> otherwise.</li>
+</ul>
+
+<p>For example, this WebIDL:</p>
+
+<pre>interface MyInterface {
+  attribute MyInterface myAttr;
+  void passNullable(MyInterface? arg);
+  MyInterface? doSomething(sequence arg);
+  MyInterface doTheOther(sequence arg);
+  readonly attribute MyInterface? nullableAttr;
+  readonly attribute MyInterface someOtherAttr;
+  readonly attribute MyInterface someYetOtherAttr;
+};
+</pre>
+
+<p>Would correspond to these C++ function declarations:</p>
+
+<pre class="brush: cpp">already_AddRefed MyAttr();
+void SetMyAttr(MyClass&amp; value);
+void PassNullable(MyClass* arg);
+already_AddRefed doSomething(const Sequence &gt;&amp; arg);
+already_AddRefed doTheOther(const Sequence &gt;&amp; arg);
+already_Addrefed GetNullableAttr();
+MyClass* SomeOtherAttr();
+MyClass* SomeYetOtherAttr(); // Don't have to return already_AddRefed!
+</pre>
+
+<h5 id="SpiderMonkey_interfaces">"SpiderMonkey" interfaces</h5>
+
+<p>Typed array, array buffer, and array buffer view arguments are represented by the objects in <a href="#TypedArray" title="#TypedArray"><code>TypedArray.h</code></a>. For example, this WebIDL:</p>
+
+<pre>interface Test {
+  void passTypedArrayBuffer(ArrayBuffer arg);
+  void passTypedArray(ArrayBufferView arg);
+  void passInt16Array(Int16Array? arg);
+}
+</pre>
+
+<p>will correspond to these C++ function declarations:</p>
+
+<pre class="brush: cpp">void PassTypedArrayBuffer(const ArrayBuffer&amp; arg);
+void PassTypedArray(const ArrayBufferView&amp; arg);
+void PassInt16Array(const Nullable&amp; arg);
+</pre>
+
+<p>Typed array return values become a <code>JS::MutableHandle</code> out param appended to the argument list. This comes after all IDL arguments, but before the <code>ErrorResult&amp;</code>, if any, for the method. The return value is allowed to be in any compartment; bindings will wrap it into the context compartment as needed.</p>
+
+<p>Typed arrays store a <code>JSObject*</code> and hence need to be rooted properly. On-stack typed arrays can be declared as <code>RootedTypedArray</code> (e.g. <code>RootedTypedArray</code>). Typed arrays on the heap need to be traced.</p>
+
+<h4 id="Dictionary_types">Dictionary types</h4>
+
+<p>A dictionary argument is represented by a const reference to a struct whose name is the dictionary name in the <code>mozilla::dom</code> namespace. The struct has one member for each of the dictionary's members with the same name except the first letter uppercased and prefixed with "m". The members that have default values have types as described under the corresponding WebIDL type in this document. The members that don't have default values have those types wrapped in <a href="#Optional" title="#Optional"><code>Optional&lt;&gt;</code></a>.</p>
+
+<p>Dictionary return values are represented by an out parameter whose type is a non-const reference to the struct described above, with all the members that have default values preinitialized to those default values.</p>
+
+<p>Note that optional dictionary arguments are always considered to have a default value of <code>null</code>, so dictionary arguments are never wrapped in <code>Optional&lt;&gt;</code>.</p>
+
+<p>If necessary, dictionaries can be directly initialized from a <code>JS::Value</code> in C++ code by invoking their <code>Init()</code> method. Consumers doing this should declare their dictionary as <code>RootedDictionary</code>. When this is done, passing in a null scope object and even a null <code>JSContext*</code> is allowed if the passed-in <code>JS::Value</code> is <code>JS::NullValue()</code>. Likewise, a dictionary struct can be converted to a <code>JS::Value</code> in C++ by calling <code>ToJSValue</code> with the dictionary as the second argument. If <code>Init()</code> or <code>ToJSValue()</code> returns false, they will generally set a pending exception on the JSContext; reporting those is the responsibility of the caller.</p>
+
+<p>For example, this WebIDL:</p>
+
+<pre>dictionary Dict {
+  long foo = 5;
+  DOMString bar;
+};
+
+interface Test {
+  void initSomething(optional Dict arg);
+};
+</pre>
+
+<p>will correspond to this C++ function declaration:</p>
+
+<pre class="brush: cpp">void InitSomething(const Dict&amp; arg);
+</pre>
+
+<p>and the <code>Dict</code> struct will look like this:</p>
+
+<pre class="brush: cpp">struct Dict {
+  bool Init(JSContext* aCx, JS::Handle aVal, const char* aSourceDescription = "value");
+
+  Optional mBar;
+  int32_t mFoo;
+}
+</pre>
+
+<p>Note that the dictionary members are sorted in the struct in alphabetical order.</p>
+
+<h4 id="Enumeration_types">Enumeration types</h4>
+
+<p>WebIDL enumeration types are represented as C++ enums. The values of the C++ enum are named by taking the strings in the WebIDL enumeration, replacing all non-alphanumerics with underscores, and uppercasing the first letter, with a special case for the empty string, which becomes the value <code>_empty</code>.</p>
+
+<p>For a WebIDL enum named <code>MyEnum</code>, the C++ enum is named <code>MyEnum</code> and placed in the <code>mozilla::dom</code> namespace, while the values are placed in the <code>mozilla::dom::MyEnum</code> namespace. There is also a <code>mozilla::dom::MyEnumValues::strings</code> which is an array of <code>mozilla::dom::EnumEntry</code> structs that gives access to the string representations of the values.</p>
+
+<p>For example, this WebIDL:</p>
+
+<pre>enum MyEnum {
+  "something",
+  "something-else",
+  "",
+  "another"
+};
+</pre>
+
+<p>would lead to this C++ enum declaration:</p>
+
+<pre class="brush: cpp">MOZ_BEGIN_ENUM_CLASS(MyEnum, uint32_t)
+  Something,
+  Something_else,
+  _empty,
+  Another
+MOZ_END_ENUM_CLASS(MyEnum)
+
+namespace MyEnumValues {
+extern const EnumEntry strings[10];
+} // namespace MyEnumValues
+</pre>
+
+<h4 id="Callback_function_types">Callback function types</h4>
+
+<p>Callback functions are represented as an object, inheriting from <a href="#CallbackFunction" title="#CallbackFunction"><code>mozilla::dom::CallbackFunction</code></a>, whose name, in the <code>mozilla::dom</code> namespace, matches the name of the callback function in the WebIDL. If the type is nullable, a pointer is passed in; otherwise a reference is passed in.</p>
+
+<p>The object exposes two <code>Call</code> methods, which both invoke the underlying JS callable. The first <code>Call</code> method has the same signature as a throwing method declared just like the callback function, with an additional trailing "<code>mozilla::dom::CallbackObject::ExceptionHandling</code> <code>aExceptionHandling</code>" argument, defaulting to <code>eReportExceptions</code>, and calling it will invoke the callable with <code>undefined</code> as the <code>this</code> value. The second <code>Call</code> method allows passing in an explicit <code>this</code> value as the first argument. This second call method is a template on the type of the first argument, so the <code>this</code> value can be passed in in whatever form is most convenient, as long as it's either a type that can be wrapped by XPConnect or a WebIDL interface type.</p>
+
+<p>If <code>aReportExceptions</code> is set to <code>eReportExceptions</code>, the <code>Call</code> methods will report JS exceptions before returning. If <code>aReportExceptions</code> is set to <code>eRethrowExceptions</code>, JS exceptions will be stashed in the <code>ErrorResult</code> and will be reported when the stack unwinds to wherever the <code>ErrorResult</code> was set up.</p>
+
+<p>For example, this WebIDL:</p>
+
+<pre>callback MyCallback = long (MyInterface arg1, boolean arg2);
+interface MyInterface {
+  attribute MyCallback foo;
+  attribute MyCallback? bar;
+};</pre>
+
+<p>will lead to this C++ class declaration, in the <code>mozilla::dom</code> namespace:</p>
+
+<pre class="brush: cpp">class MyCallback : public CallbackFunction
+{
+public:
+  int32_t
+  Call(MyInterface&amp; arg1, bool arg2, ErrorResult&amp; rv,
+       ExceptionHandling aExceptionHandling = eReportExceptions);
+
+  template
+  int32_t
+  Call(const T&amp; thisObj, MyInterface&amp; arg1, bool arg2, ErrorResult&amp; rv,
+       ExceptionHandling aExceptionHandling = eReportExceptions);
+};</pre>
+
+<p>and these C++ function declarations in the <code>MyInterface</code> class:</p>
+
+<pre>already_AddRefed GetFoo();
+void SetFoo(MyCallback&amp;);
+already_AddRefed GetBar();
+void SetBar(MyCallback*);
+</pre>
+
+<p>A consumer of MyCallback would be able to use it like this:</p>
+
+<pre class="brush: cpp">void
+SomeClass::DoSomethingWithCallback(MyCallback&amp; aCallback, MyInterface&amp; aInterfaceInstance)
+{
+  ErrorResult rv;
+  int32_t number = aCallback.Call(aInterfaceInstance, false, rv);
+  if (rv.Failed()) {
+    // The error has already been reported to the JS console; you can handle
+    // things however you want here.
+    return;
+  }
+
+  // Now for some reason we want to catch and rethrow exceptions from the callback,
+  // and use "this" as the this value for the call to JS.
+  number = aCallback.Call(*this, true, rv, eRethrowExceptions);
+  if (rv.Failed()) {
+    // The exception is now stored on rv.  This code MUST report
+    // it usefully; otherwise it will assert.
+  }
+}
+</pre>
+
+<h5 id="sect1"></h5>
+
+<h4 id="Sequences">Sequences</h4>
+
+<p>Sequence arguments are represented by <a href="#Sequence" title="#Sequence"><code>const Sequence&amp;</code></a>, where <code>T</code> depends on the type of elements in the WebIDL sequence.</p>
+
+<p>Sequence return values are represented by an <code>nsTArray</code> out param appended to the argument list, where <code>T</code> is the return type for the elements of the WebIDL sequence. This comes after all IDL arguments, but before the <code>ErrorResult&amp;</code>, if any, for the method.</p>
+
+<h4 id="Arrays">Arrays</h4>
+
+<p>IDL array objects are not supported yet. The spec on these is likely to change drastically anyway.</p>
+
+<h4 id="Union_types">Union types</h4>
+
+<p>Union types are reflected as a struct in the <code>mozilla::dom</code> namespace. There are two kinds of union structs: one kind does not keep its members alive (is "non-owning"), and the other does (is "owning"). Const references to non-owning unions are used for plain arguments. Owning unions are used in dictionaries, sequences, and for variadic arguments. Union return values become a non-const owning union out param. The name of the struct is the concatenation of the names of the types in the union, with "Or" inserted between them, and for an owning struct "Owning" prepended. So for example, this IDL:</p>
+
+<pre>void passUnion((object or long) arg);
+(object or long) receiveUnion();
+void passSequenceOfUnions(sequence&lt;(object or long)&gt; arg);
+void passOtherUnion((HTMLDivElement or ArrayBuffer or EventInit) arg);
+</pre>
+
+<p>would correspond to these C++ function declarations:</p>
+
+<pre class="brush: cpp">void PassUnion(const ObjectOrLong&amp; aArg);
+void ReceiveUnion(OwningObjectObjectOrLong&amp; aArg);
+void PassSequenceOfUnions(const Sequence&amp; aArg);
+void PassOtherUnion(const HTMLDivElementOrArrayBufferOrEventInit&amp; aArg);
+</pre>
+
+<p>Union structs expose accessors to test whether they're of a given type and to get hold of the data of that type. They also expose setters that set the union as being of a particular type and return a reference to the union's internal storage where that type could be stored. The one exception is the <code>object</code> type, which uses a somewhat different form of setter where the <code>JSObject*</code> is passed in directly. For example, <code>ObjectOrLong</code> would have the following methods:</p>
+
+<pre class="brush: cpp">bool IsObject() const;
+JSObject* GetAsObject() const;
+void SetToObject(JSContext*, JSObject*);
+bool IsLong() const;
+int32_t GetAsLong() const;
+int32_t&amp; SetAsLong()
+</pre>
+
+<p>Owning unions used on the stack should be declared as a <code>RootedUnion</code>, for example, <code>RootedUnion</code>.</p>
+
+<h4 id="Date"><code>Date</code></h4>
+
+<p>WebIDL <code>Date</code> types are represented by a <code>mozilla::dom::Date</code> struct.</p>
+
+<h3 id="Stringifiers">Stringifiers</h3>
+
+<p>Named stringifiers operations in WebIDL will just invoke the corresponding C++ method.</p>
+
+<p>Anonymous stringifiers in WebIDL will invoke the C++ method called <code>Stringify</code>. So, for example, given this IDL:</p>
+
+<pre>interface FirstInterface {
+  stringifier;
+};
+
+interface SecondInterface {
+  stringifier DOMString getStringRepresentation();
+};
+</pre>
+
+<p>the corresponding C++ would be:</p>
+
+<pre>class FirstInterface {
+public:
+  void Stringify(nsAString&amp; aResult);
+};
+
+class SecondInterface {
+public:
+  void GetStringRepresentation(nsAString&amp; aResult);
+};
+</pre>
+
+<h3 id="Legacy_Callers">Legacy Callers</h3>
+
+<p>Only anonymous legacy callers are supported, and will invoke the C++ method called <code>LegacyCall</code>. This will be passed the JS "this" value as the first argument, then the arguments to the actual operation. A <code>JSContext</code> will be passed if any of the operation arguments need it. So for example, given this IDL:</p>
+
+<pre>interface InterfaceWithCall {
+  legacycaller long (float arg);
+};
+</pre>
+
+<p>the corresponding C++ would be:</p>
+
+<pre class="brush: cpp">class InterfaceWithCall {
+public:
+  int32_t LegacyCall(JS::Handle aThisVal, float aArgument);
+};
+</pre>
+
+<h3 id="Named_getters">Named getters</h3>
+
+<p>If the interface has a named getter, the binding will expect several methods on the C++ implementation:</p>
+
+<ul>
+ <li>A <code>NamedGetter</code> method. This takes a property name and returns whatever type the named getter is declared to return. It also has a boolean out param for whether a property with that name should exist at all.</li>
+ <li>A <code>NameIsEnumerable</code> method. This takes a property name and returns a boolean that indicates whether the property is enumerable.</li>
+ <li>A <code>GetSupportedNames</code> method. This takes an unsigned integer which corresponds to the flags passed to the <code>iterate</code> proxy trap and returns a list of property names. For implementations of this method, the important flags is <code>JSITER_HIDDEN</code>. If that flag is set, the call needs to return all supported property names. If it's not set, the call needs to return only the enumerable ones.</li>
+</ul>
+
+<p>The <code>NameIsEnumerable</code> and <code>GetSupportedNames</code> methods need to agree on which names are and are not enumerable. The <code>NamedGetter</code> and <code>GetSupportedNames</code> methods need to agree on which names are supported.</p>
+
+<p>So for example, given this IDL:</p>
+
+<pre>interface InterfaceWithNamedGetter {
+  getter long(DOMString arg);
+};
+</pre>
+
+<p>the corresponding C++ would be:</p>
+
+<pre class="brush: cpp">class InterfaceWithNamedGetter
+{
+public:
+  int32_t NamedGetter(const nsAString&amp; aName, bool&amp; aFound);
+  bool NameIsEnumerable(const nsAString&amp; aName);
+  void GetSupportedNames(unsigned aFlags, nsTArray&amp; aNames);
+};
+</pre>
+
+<h2 id="Throwing_exceptions_from_WebIDL_methods_getters_and_setters">Throwing exceptions from WebIDL methods, getters, and setters</h2>
+
+<p>WebIDL methods, getters, and setters that are <a href="#Throws">explicitly marked as allowed to throw</a> have an <code>ErrorResult&amp;</code> argument as their last argument. To throw an exception, simply call <code>Throw()</code> on the <code>ErrorResult&amp;</code> and return from your C++ back into the binding code.</p>
+
+<p>In cases when the specification calls for throwing a <code>TypeError</code>, you should use <code>ErrorResult::ThrowTypeError()</code> instead of calling <code>Throw()</code>.</p>
+
+<h2 class="note" id="Custom_extended_attributes">Custom extended attributes</h2>
+
+<p>Our WebIDL parser and code generator recognize several extended attributes that are not present in the WebIDL spec.</p>
+
+<h3 id="AliaspropName"><code>[Alias=propName]</code></h3>
+
+<p>This extended attribute can be specified on a method and indicates that another property with the specified name will also appear on the interface prototype object and will have the same Function object value as the property for the method. For example:</p>
+
+<pre>interface MyInterface {
+  [Alias=performSomething] void doSomething();
+};
+</pre>
+
+<p><code>MyInterface.prototype.performSomething</code> will have the same Function object value as <code>MyInterface.prototype.doSomething</code>.</p>
+
+<p>Multiple <code>[Alias]</code> extended attribute can be used on the one method. <code>[Alias]</code> cannot be used on a static method, nor on methods on a global interface (such as <code>Window</code>).</p>
+
+<p>Aside from regular property names, the name of an alias can be <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#Well-known_symbols">Symbol.iterator</a>. This is specified by writing <code>[Alias="@@iterator"]</code>.</p>
+
+<h3 id="ChromeOnly" name="ChromeOnly"><code>[ChromeOnly]</code></h3>
+
+<p>この拡張された属性はメソッド、属性、インターフェイスの一部・全体に定義することができます。</p>
+
+<p>[ChromeOnly]がついたインターフェイスメンバーは chrome ウィンドウだけで利用することができます。(webpage には見えません) web コンテンツから見るとインターフェイス自体が存在しないことになります。Xrays を使って chrome スクリプトをコンテンツ上で動かすことでメンバーが見られるようになります。</p>
+
+<p>インターフェイス全体に適用した場合、 <a href="#Func" title="#Func"><code>[Func]</code></a> を使った時のように、自動でシステムのスクリプトから呼び出されたか(chrome または、chrome ページから開始された Worker かどうか)チェックします。グローバルオブジェクトとして使えるか判断するために C++ の実装を呼び出すことはありません。これは Xrays 経由だと[ChromeOnly]インターフェイスオブジェクトにアクセスできることを意味しています。</p>
+
+<p>この拡張された属性は、 <code>[<a href="#AvailableIn">AvailableIn</a>]</code>, <code><code>[<a href="#CheckPermissions">CheckPermissions</a>]</code></code>,<code> [<a href="#Func">Func</a>]</code>,  <code>[<a href="#Pref">Pref</a>]と併用できます。もし他の属性を定義した場合、すべての条件をみたす時だけ使えるようになります。</code></p>
+
+<h3 id="Pref" name="Pref"><code>[Pref=prefname]</code></h3>
+
+<p>This extended attribute can be specified on any method, attribute, or constant on an interface or on an interface as a whole. It takes a value, which must be the name of a boolean preference.</p>
+
+<p>If specified on an interface member, the interface member involved is only exposed if the preference is set to <code>true</code>. An example of how this can be used:</p>
+
+<pre>interface MyInterface {
+  attribute long alwaysHere;
+  [Pref="my.pref.name"] attribute long onlyHereIfEnabled;
+};
+</pre>
+
+<p>If specifed on an interface as a whole, this functions like <a href="#Func" title="#Func"><code>[Func]</code></a> except that the binding will check the value of the preference directly without calling into the C++ implementation of the interface at all. This is useful when the enable check is simple and it's desirable to keep the prefname with the WebIDL declaration. The implementation can call <code>MyInterfaceBinding::PrefEnabled()</code> to check whether it is enabled or not. An example of how this can be used:</p>
+
+<pre>[Pref="my.pref.name"]
+interface MyConditionalInterface {
+};
+</pre>
+
+<p>This extended attibute can be specified together with <code>[<a href="#AvailableIn">AvailableIn</a>]</code>, <code><code><code>[<a href="#CheckPermissions">CheckPermissions</a>]</code></code></code>, <code>[<a href="#ChromeOnly">ChromeOnly</a>]</code>, and<code>[<a href="#Func">Func</a>]</code>. If more than one of these is specified, all conditions will need to test true for the interface or interface member to be exposed.</p>
+
+<h3 id="Func" name="Func"><code>[Func="funcname"]</code></h3>
+
+<p>This extended attribute can be specified on any method, attribute, or constant on an interface or on an interface as a whole. It takes a value, which must be the name of a static function.</p>
+
+<p>If specified on an interface member, the interface member involved is only exposed if the specified function returns <code>true</code>. An example of how this can be used:</p>
+
+<pre>interface MyInterface {
+  attribute long alwaysHere;
+  [Func="MyClass::StuffEnabled"] attribute long onlyHereIfEnabled;
+};
+</pre>
+
+<p>The function is invoked with two arguments: the <code>JSContext</code> that the operation is happening on and the <code>JSObject</code> for the global of the object that the property will be defined on if the function returns true. In particular, in the Xray case the <code>JSContext</code> is in the caller compartment (typically chrome) but the <code>JSObject</code> is in the target compartment (typically content). This allows the method implementation to select which compartment it cares about in its checks.</p>
+
+<p>The above IDL would also require the following C++:</p>
+
+<pre class="brush: cpp">class MyClass {
+  static bool StuffEnabled(JSContext* cx, JSObject* obj);
+};
+</pre>
+
+<p>If specified on an interface as a whole, then lookups for the interface object for this interface on a DOM Window will only find it if the specified function returns true. For objects that can only be created via a constructor, this allows disabling the functionality altogether and making it look like the feature is not implemented at all.</p>
+
+<p>An example of how <code>[Func]</code> can be used:</p>
+
+<pre>[Func="MyClass::MyConditionalInterfaceEnabled"]
+interface MyConditionalInterface {
+};
+</pre>
+
+<p>In this case, the C++ function is passed a <code>JS::Handle</code>. So the C++ in this case would look like this:</p>
+
+<pre class="brush: cpp">class MyClass {
+  static bool MyConditionalInterfaceEnabled(JSContext* cx, JS::Handle obj);
+};
+</pre>
+
+<p>Just like in the interface member case, the <code>JSContext</code> is in the caller compartment but the <code>JSObject</code> is the actual object the property would be defined on. In the Xray case that means obj is in the target compartment (typically content) and <code>cx</code> is typically chrome.</p>
+
+<p>This extended attibute can be specified together with <code>[<a href="#AvailableIn">AvailableIn</a>]</code>, <code>[<a href="#CheckPermissions">CheckPermissions</a>]</code>, <code>[<a href="#ChromeOnly">ChromeOnly</a>]</code>, and <code>[<a href="#Pref">Pref</a>]</code>. If more than one of these is specified, all conditions will need to test true for the interface or interface member to be exposed.</p>
+
+<h3 id="AvailableIn" name="AvailableIn"><code>[AvailableIn=Where]</code></h3>
+
+<p>This extended attribute can be specified on any method, attribute, or constant on an interface or on an interface as a whole. It takes a value, which must be either <code>PrivilegedApps</code> or <code>CertifiedApps</code>. The former will make the interface or interface member only visible in privileged or certified apps on Firefox OS. The latter will make the interface or interface member only visible in certified apps.</p>
+
+<p>This extended attibute can be specified together with <code>[<a href="#ChromeOnly">ChromeOnly</a>]</code>, <code>[<a href="#CheckPermissions">CheckPermissions</a>]</code>, <code>[<a href="#Func">Func</a>]</code>, and <code>[<a href="#Pref">Pref</a>]</code>. If more than one of these is specified, all conditions will need to test true for the interface or interface member to be exposed.</p>
+
+<h3 id="CheckPermissions" name="CheckPermissions"><code>[CheckPermissions="list of permissions"]</code></h3>
+
+<p>This extended attribute can be specified on any method, attribute, or constant on an interface or on an interface as a whole. It takes a whitespace-separated list of permissions to be checked before making the interface or interface member visible to a page or app. When multiple permission names are specified, <strong>at least one</strong> of them will need to be set to nsIPermissionManager::ALLOW_ACTION for the interface or interface member to be exposed.</p>
+
+<p>This extended attribute can be specified together with <code>[<a href="#AvailableIn">AvailableIn</a>]</code>, <code>[<a href="#ChromeOnly">ChromeOnly</a>]</code>, <code>[<a href="#Func">Func</a>]</code> and <code>[<a href="#Pref">Pref</a>]. </code>If more than one of these is specified, all conditions will need to test true for the interface or interface member to be exposed.</p>
+
+<h3 id="Throws" name="Throws"><code>[Throws]</code>, <code>[GetterThrows]</code>, <code>[SetterThrows]</code></h3>
+
+<p>Used to flag methods or attributes as allowing the C++ callee to throw. This causes the binding generator, and in many cases the JIT, to generate extra code to handle possible exceptions. Possibly-throwing methods and attributes get an <code>ErrorResult&amp;</code> argument.</p>
+
+<p><code>[Throws]</code> applies to both methods and attributes; for attributes it means both the getter and the setter can throw. <code>[GetterThrows]</code> applies only to attributes. <code>[SetterThrows]</code> applies only to non-readonly attributes.</p>
+
+<p>For bindings that involve workers, the above can all be specified with <code>MainThread</code> or <code>Workers</code> as a value. When doing this, if <code>[Throws]</code> is specified on an attribute, no matter what its value, then <code>[GetterThrows]</code> and <code>[SetterThrows]</code> will be ignored. So to have an attribute which can throw both when getting and setting on main thread but can only throw from the setter in workers, use <code>[SetterThrows, GetterThrows=MainThread]</code>.</p>
+
+<p>For interfaces flagged with <code>[JSImplementation]</code>, all methods and properties are assumed to be able to throw and do not need to be flagged as throwing.</p>
+
+<h3 id="DependsOn" name="DependsOn"><code>[DependsOn]</code></h3>
+
+<p>Used for a method or attribute to indicate what the return value depends on. Possible values are:</p>
+
+<dl>
+ <dt><code>Everything</code></dt>
+ <dd>This value can't actually be specified explicitly; this is the default value you get when <code>[DependsOn]</code> is not specified. This means we don't know anything about the return value's dependencies and hence can't rearrange other code that might change values around the method or attribute.</dd>
+ <dt id="DependsOn=DOMState"><code>DOMState</code></dt>
+ <dd>The return value depends on the state of the "DOM", by which we mean all objects specified via Web IDL. The return value is guaranteed to not depend on the state of the JS heap or other JS engine data structures, and is guaranteed to not change unless some function with <a href="#Affects=Everything"><code>[Affects=Everything]</code></a> is executed.</dd>
+ <dt><code>DeviceState</code></dt>
+ <dd>The return value depends on the state of the device we're running on (e.g., the system clock). The return value is guaranteed to not be affected by any code running inside Gecko itself, but we might get a new value every time the method or getter is called even if no Gecko code ran between the calls.</dd>
+ <dt id="DependsOn=Nothing"><code>Nothing</code></dt>
+ <dd>The return value is a constant that never changes. This value cannot be used on non-readonly attributes, since having a non-readonly attribute whose value never changes doesn't make sense.</dd>
+</dl>
+
+<p>Values other than <code>Everything</code>, when used in combination with <a href="#Affects=Nothing"><code>[Affects=Nothing]</code></a>, can used by the JIT to perform loop-hoisting and common subexpression elimination on the return values of IDL attributes and methods.</p>
+
+<h3 id="Affects" name="Affects"><code>[Affects]</code></h3>
+
+<p>Used for a method or attribute getter to indicate what sorts of state can be affected when the function is called. Attribute setters are, for now, assumed to affect everything. Possible values are:</p>
+
+<dl>
+ <dt id="Affects=Everything"><code>Everything</code></dt>
+ <dd>This value can't actually be specified explicitly; this is the default value you get when <code>[Affects]</code> is not specified. This means that calling the method or getter might change any mutable state in the DOM or JS heap.</dd>
+ <dt id="Affects=Nothing"><code>Nothing</code></dt>
+ <dd>Calling the method or getter will have no side-effects on either the DOM or the JS heap.</dd>
+</dl>
+
+<p>Methods and attribute getters with <code>[Affects=Nothing]</code> are allowed to throw exceptions, as long as they do so deterministically. In the case of methods, whether an exception is thrown is allowed to depend on the arguments, as long as calling the method with the same arguments will always either throw or not throw.</p>
+
+<p>The <code>Nothing</code> value, when used with <code>[DependsOn]</code> values other than <code>Everything</code>, can used by the JIT to perform loop-hoisting and common subexpression elimination on the return values of IDL attributes and methods, as well as code motion past DOM methods that might depend on system state but have no side effects.</p>
+
+<h3 id="Pure" name="Pure"><code>[Pure]</code></h3>
+
+<p>This is an alias for <code>[<a href="#Affects=Nothing">Affects=Nothing</a>, <a href="#DependsOn=DOMState">DependsOn=DOMState</a>]</code>. Attributes/methods flagged in this way promise that they will keep returning the same value as long as nothing that has <code>[Affects=Everything]</code> executes.</p>
+
+<h3 id="Constant" name="Constant"><code>[Constant]</code></h3>
+
+<p>This is an alias for <code>[<a href="#Affects=Nothing">Affects=Nothing</a>, <a href="#DependsOn=Nothing">DependsOn=Nothing</a>]</code>. Used to flag readonly attributes or methods that could have been annotated with <code>[Pure]</code> and also always return the same value. This should only be used when it's absolutely guaranteed that the return value of the attribute getter will always be the same from the JS engine's point of view.</p>
+
+<h3 id="NeedResolve" name="NeedResolve"><code>[NeedResolve]</code></h3>
+
+<p>Used to flag interfaces which have a custom resolve hook. This annotation will cause the <code>DoResolve</code> method to be called on the underlying C++ class when a property lookup happens on the object. The signature of this method is: <code>bool DoResolve(JSContext*, JS::Handle, JS::Handle, JS::MutableHandle)</code>. Here the passed-in object is the object the property lookup is happening on (which may be an Xray for the actual DOM object) and the jsid is the property name. The value that the property should have is returned in the <code>MutableHandle</code>, with <code>UndefinedValue()</code> indicating that the property does not exist.</p>
+
+<p>If this extended attribute is used, then the underlying C++ class must also implement a method called <code>GetOwnPropertyNames</code> with the signature <code>void GetOwnPropertyNames(JSContext* aCx, nsTArray&amp; aNames, ErrorResult&amp; aRv)</code>. This method will be called by the JS engine's enumerate hook and must provide a superset of all the property names that <code>DoResolve</code> might resolve. Providing names that <code>DoResolve</code> won't actually resolve is OK.</p>
+
+<h3 id="HeaderFile" name="HeaderFile"><code>[HeaderFile="path/to/headerfile.h"]</code></h3>
+
+<p>Indicates where the implementation can be found. Similar to the headerFile annotation in Bindings.conf.</p>
+
+<h3 id="JSImplementation" name="JSImplementation"><code>[JSImplementation="@mozilla.org/some-contractid;1"]</code></h3>
+
+<p>Used on an interface to provide the contractid of the <a href="#Implementing_WebIDL_using_Javascript" title="#Implementing_WebIDL_using_Javascript">JavaScript component implementing the interface</a>.</p>
+
+<h3 id="NavigatorProperty" name="NavigatorProperty"><code>[NavigatorProperty="propName"]</code></h3>
+
+<p>Setting this extended attribute to <code>propName</code> on an interface causes <code>window.navigator.propName</code> to be an instance of the interface.</p>
+
+<h3 id="StoreInSlot" name="StoreInSlot"><code>[StoreInSlot]</code></h3>
+
+<p>Used to flag attributes that can be gotten very quickly from the JS object by the JIT. Such attributes will have their getter called immediately when the JS wrapper for the DOM object is created, and the returned value will be stored directly on the JS object. Later gets of the attribute will not call the C++ getter and instead use the cached value. If the value returned by the attribute needs to change, the C++ code should call the <code>ClearCachedFooValue</code> method in the namespace of the relevant binding, where <code>foo</code> is the name of the attribute. This will immediately call the C++ getter and cache the value it returns, so it needs a <code>JSContext</code> to work on. This extended attribute can only be used in on attributes whose getters are <a href="#Pure"><code>[Pure]</code></a> or <a href="#Constant"><code>[Constant]</code></a> and which are not <a href="#Throws"><code>[Throws]</code></a> or <a href="#Throws"><code>[GetterThrows]</code></a>.</p>
+
+<p>So for example, given this IDL:</p>
+
+<pre>interface MyInterface {
+  [Pure, StoreInSlot] attribute long myAttribute;
+};
+</pre>
+
+<p>the C++ implementation of MyInterface would clear the cached value by calling <code>mozilla::dom::MyInterfaceBinding::ClearCachedMyAttributeValue(cx, this)</code>. This function will return false on error and the caller is responsible for handling any JSAPI exception that is set by the failure.</p>
+
+<p>If the attribute is not readonly, setting it will automatically clear the cached value and reget it again before the setter returns.</p>
+
+<h3 id="Cached" name="Cached"><code>[Cached]</code></h3>
+
+<p>Used to flag attributes that, when their getter is called, will cache the returned value on the JS object. This can be used to implement attributes whose value is a sequence or dictionary (which would otherwise end up returning a new object each time and hence not be allowed in WebIDL).</p>
+
+<p>Unlike <a href="#StoreInSlot"><code>[StoreInSlot]</code></a> this does <em>not</em> cause the getter to be eagerly called at JS wrapper creation time; the caching is lazy. <code>[Cached]</code> attributes must be <a href="#Pure"><code>[Pure]</code></a> or <a href="#Constant"><code>[Constant]</code></a>, because otherwise not calling the C++ getter would be observable, but are allowed to have throwing getters. Their cached value can be cleared by calling the <code>ClearCachedFooValue</code> method in the namespace of the relevant binding, where <code>foo</code> is the name of the attribute. Unlike <code>[StoreInSlot]</code> attributes, doing so will not immediately invoke the getter, so it does not need a <code>JSContext</code>.</p>
+
+<p>So for example, given this IDL:</p>
+
+<pre>interface MyInterface {
+  [Pure, StoreInSlot] attribute long myAttribute;
+};
+</pre>
+
+<p>the C++ implementation of MyInterface would clear the cached value by calling <code>mozilla::dom::MyInterfaceBinding::ClearCachedMyAttributeValue(this)</code>. JS-implemented WebIDL can clear the cached value by calling <code>this.__DOM_IMPL__.clearCachedMyAttributeValue()</code>.</p>
+
+<p>If the attribute is not readonly, setting it will automatically clear the cached value.</p>
+
+<h3 id="Frozen" name="Frozen"><code>[Frozen]</code></h3>
+
+<p>Used to flag attributes that, when their getter is called, will call <a href="/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze"><code>Object.freeze</code></a> on the return value before returning it. This extended attribute is only allowed on attributes that return sequences, and corresponds to returning a frozen <code>Array</code>.</p>
+
+<h3 id="ChromeConstructor" name="ChromeConstructor"><code>[ChromeConstructor]</code></h3>
+
+<p><code>[ChromeConstructor]</code> has the same behavior as <code>[Constructor]</code>, but the constructor will throw if it's not called from chrome code. The same usage rules and restrictions as those for <code>[Constructor]</code> apply. Note that <code>[Constructor]</code> and <code>[ChromeConstructor]</code> are mutually exclusive; while there can be multiple of either, there can never be both on the same interface.</p>
+
+<h3 id="BinaryName" name="BinaryName"><code>[BinaryName]</code></h3>
+
+<p><code>[BinaryName]</code> can be specified on method or attribute to change the C++ function name that will be used for the method or attribute. It takes a single string argument, which is the name you wish the method or attribute had instead of the one it actually has.</p>
+
+<p>For example, given this IDL:</p>
+
+<pre>interface InterfaceWithRenamedThings {
+  [BinaryName="renamedMethod"]
+  void someMethod();
+  [BinaryName="renamedAttribute"]
+  attribute long someAttribute;
+};
+</pre>
+
+<p>the corresponding C++ would be:</p>
+
+<pre class="brush: cpp">class InterfaceWithRenamedThings
+{
+public:
+  void RenamedMethod();
+  int32_t RenamedAttribute();
+  void SetRenamedAttribute(int32_t);
+};
+</pre>
+
+<h3 id="Exposed" name="Exposed"><code>[Exposed]</code></h3>
+
+<p><code>[Exposed]</code> is mostly <a href="http://heycam.github.io/webidl/#Exposed">defined by the Web IDL specification.</a> There is one Gecko-specific nonstandard extension: the <code>System</code> value. <code>[Exposed=System]</code> means the interface is available in situations when the global is a BackstagePass object. The most common examples are <a href="/en-US/docs/Mozilla/Tech/XPCOM/Guide/Building_components_in_JavaScript">JS components</a> and xpcshell.</p>
+
+<h2 class="note" id="Helper_objects">Helper objects</h2>
+
+<p>The C++ side of the bindings uses a number of helper objects.</p>
+
+<h3 id="Nullable" name="Nullable"><code>Nullable</code></h3>
+
+<p><code>Nullable&lt;&gt;</code> is a struct declared in <a class="external" href="http://mxr.mozilla.org/mozilla-central/source/dom/bindings/Nullable.h" title="http://mxr.mozilla.org/mozilla-central/source/dom/bindings/Nullable.h"><code>Nullable.h</code></a> and exported to <code>mozilla/dom/Nullable.h</code> that is used to represent nullable values of types that don't have a natural way to represent null.</p>
+
+<p><code>Nullable</code> has an <code>IsNull()</code> getter that returns whether null is represented and a <code>Value()</code> getter that returns a <code>const T&amp;</code> and can be used to get the value when it's not null.</p>
+
+<p><code>Nullable</code> has a <code>SetNull()</code> setter that sets it as representing null and two setters that can be used to set it to a value: <code>"void SetValue(T)"</code> (for setting it to a given value) and <code>"T&amp; SetValue()"</code> for directly modifying the underlying <code>T&amp;</code>.</p>
+
+<h3 id="Optional" name="Optional"><code>Optional</code></h3>
+
+<p><code>Optional&lt;&gt;</code> is a struct declared in <a class="external" href="http://mxr.mozilla.org/mozilla-central/source/dom/bindings/BindingDeclarations.h" title="http://mxr.mozilla.org/mozilla-central/source/dom/bindings/BindingUtils.h"><code>BindingDeclarations.h</code></a> and exported to <code>mozilla/dom/BindingDeclarations.h</code> that is used to represent optional arguments and dictionary members, but only those that have no default value.</p>
+
+<p><code>Optional</code> has a <code>WasPassed()</code> getter that returns true if a value is available. In that case, the <code>Value()</code> getter can be used to get a <code>const T&amp;</code> for the value.</p>
+
+<h3 id="NonNull" name="NonNull"><code>NonNull</code></h3>
+
+<p><code>NonNull</code> is a struct declared in <a class="external" href="http://mxr.mozilla.org/mozilla-central/source/dom/bindings/BindingUtils.h" title="http://mxr.mozilla.org/mozilla-central/source/dom/bindings/BindingUtils.h"><code>BindingUtils.h</code></a> and exported to <code>mozilla/dom/BindingUtils.h</code> that is used to represent non-null C++ objects. It has a conversion operator that produces <code>T&amp;</code>.</p>
+
+<h3 id="OwningNonNull" name="OwningNonNull"><code>OwningNonNull</code></h3>
+
+<p><code>OwningNonNull</code> is a struct declared in <a class="external" href="http://mxr.mozilla.org/mozilla-central/source/dom/bindings/BindingUtils.h" title="http://mxr.mozilla.org/mozilla-central/source/dom/bindings/BindingUtils.h"><code>BindingUtils.h</code></a> and exported to <code>mozilla/dom/BindingUtils.h</code> that is used to represent non-null C++ objects and holds a strong reference to them. It has a conversion operator that produces <code>T&amp;</code>.</p>
+
+<h3 id="TypedArrays" name="TypedArrays">Typed arrays, arraybuffers, array buffer views</h3>
+
+<p><code><a class="external" href="http://mxr.mozilla.org/mozilla-central/source/dom/bindings/TypedArray.h" title="http://mxr.mozilla.org/mozilla-central/source/dom/bindings/TypedArray.h">TypedArray.h</a></code> is exported to <code>mozilla/dom/TypedArray.h</code> and exposes structs that correspond to the various typed array types, as well as <code>ArrayBuffer</code> and <code>ArrayBufferView</code>, all in the <code>mozilla::dom</code> namespace. Each struct has a <code>Data()</code> method that returns a pointer to the relevant type (<code>uint8_t</code> for <code>ArrayBuffer</code> and <code>ArrayBufferView</code>) and a <code>Length()</code> method that returns the length in units of <code>*Data()</code>. So for example, <code>Int32Array</code> has a <code>Data()</code> returning i<code>nt32_t</code><code>*</code> and a <code>Length()</code> that returns the number of 32-bit ints in the array..</p>
+
+<h3 id="Sequence" name="Sequence"><code>Sequence</code></h3>
+
+<p><code>Sequence&lt;&gt;</code> is a type declared in <a class="external" href="http://mxr.mozilla.org/mozilla-central/source/dom/bindings/BindingDeclarations.h" title="http://mxr.mozilla.org/mozilla-central/source/dom/bindings/BindingUtils.h"><code>BindingDeclarations.h</code></a> and exported to <code>mozilla/dom/BindingDeclarations.h</code> that is used to represent sequence arguments. It's some kind of typed array, but which exact kind is opaque to consumers. This allows the binding code to change the exact definition (e.g., to use auto arrays of different sizes and so forth) without having to update all the callees.</p>
+
+<h3 id="CallbackFunction" name="CallbackFunction"><code>CallbackFunction</code></h3>
+
+<p><code>CallbackFunction</code> is a type declared in <a href="http://mxr.mozilla.org/mozilla-central/source/dom/bindings/CallbackFunction.h">CallbackFunction.h</a> and exported to <code>mozilla/dom/CallbackFunction.h</code> that is used as a common base class for all the generated callback function representations. This class inherits from <code>nsISupports</code>, and consumers must make sure to cycle-collect it, since it keeps JS objects alive.</p>
+
+<h3 id="CallbackInterface" name="CallbackInterface"><code>CallbackInterface</code></h3>
+
+<p><code>CallbackInterface</code> is a type declared in <a href="http://mxr.mozilla.org/mozilla-central/source/dom/bindings/CallbackInterface.h">CallbackInterface.h</a> and exported to <code>mozilla/dom/CallbackInterface.h</code> that is used as a common base class for all the generated callback interface representations. This class inherits from <code>nsISupports</code>, and consumers must make sure to cycle-collect it, since it keeps JS objects alive.</p>
+
+<h3 id="DOMString-helper" name="DOMString-helper"><code>DOMString</code></h3>
+
+<p><code>DOMString</code> is a class declared in <a href="http://mxr.mozilla.org/mozilla-central/source/dom/bindings/BindingDeclarations.h">BindingDeclarations.h</a> and exported to <code>mozilla/dom/BindingDeclarations.h</code> that is used for WebIDL <code>DOMString</code> return values. It has a conversion operator to <code>nsString&amp;</code> so that it can be passed to methods that take that type or <code>nsAString&amp;</code>, but callees that care about performance, have an <code>nsStringBuffer</code> available, and promise to hold on to the <code>nsStringBuffer</code> at least until the binding code comes off the stack can also take a <code>DOMString</code> directly for their string return value and call its <code>SetStringBuffer</code> method with the <code>nsStringBuffer</code> and its length. This allows the binding code to avoid extra reference-counting of the string buffer in many cases, and allows it to take a faster codepath even if it does end up having to addref the <code>nsStringBuffer</code>.</p>
+
+<h3 id="GlobalObject" name="GlobalObject"><code>GlobalObject</code></h3>
+
+<p><code>GlobalObject</code> is a class declared in <a href="http://mxr.mozilla.org/mozilla-central/source/dom/bindings/BindingDeclarations.h">BindingDeclarations.h</a> and exported to <code>mozilla/dom/BindingDeclarations.h</code> that is used to represent the global object for static attributes and operations (including constructors). It has a <code>Get()</code> method that returns the <code>JSObject*</code> for the global and a <code>GetAsSupports()</code> method that returns an <code>nsISupports*</code> for the global on the main thread, if such is available. It also has a <code>GetContext()</code> method that returns the <code>JSContext*</code> the call is happening on. A caveat: the compartment of the <code>JSContext</code> may not match the compartment of the global!</p>
+
+<h3 id="Date-struct" name="Date-struct"><code>Date</code></h3>
+
+<p><code>Date</code> is a class declared in <a href="http://mxr.mozilla.org/mozilla-central/source/dom/bindings/BindingDeclarations.h">BindingDeclarations.h</a> and exported to <code>mozilla/dom/BindingDeclarations.h</code> that is used to represent WebIDL Dates. It has a <code>TimeStamp()</code> method returning a double which represents a number of milliseconds since the epoch, as well as <code>SetTimeStamp()</code> methods that can be used to initialize it with a double timestamp or a JS <code>Date</code> object. It also has a <code>ToDateObject()</code> method that can be used to create a new JS <code>Date</code>.</p>
+
+<h3 id="ErrorResult" name="ErrorResult"><code>ErrorResult</code></h3>
+
+<p><code>ErrorResult</code> is a class declared in <a href="http://mxr.mozilla.org/mozilla-central/source/dom/bindings/ErrorResult.h">ErrorResult.h</a> and exported to <code>mozilla/ErrorResult.h</code> that is used to represent exceptions in WebIDL bindings. This has the following methods:</p>
+
+<ul>
+ <li><code>Throw</code>: allows throwing an <code>nsresult</code>. The <code>nsresult</code> must be a failure code.</li>
+ <li><code>ThrowTypeError</code>: allows throwing a <code>TypeError</code> with the given error message. The list of allowed <code>TypeError</code>s and corresponding messages is in <a href="http://mxr.mozilla.org/mozilla-central/source/dom/bindings/Errors.msg" title="http://mxr.mozilla.org/mozilla-central/source/dom/bindings/Errors.msg"><code>dom/bindings/Errors.msg</code></a>.</li>
+ <li><code>ThrowJSException</code>: allows throwing a preexisting JS exception value. However, the <code>MightThrowJSException()</code> method must be called before any such exceptions are thrown (even if no exception is thrown).</li>
+ <li><code>Failed</code>: checks whether an exception has been thrown on this <code>ErrorResult</code>.</li>
+ <li><code>ErrorCode</code>: returns a failure <code>nsresult</code> representing (perhaps incompletely) the state of this <code>ErrorResult</code>.</li>
+ <li><code>operator=</code>: takes an <code>nsresult</code> and acts like <code>Throw</code> if the result is an error code, and like a no-op otherwise (unless an exception has already been thrown, in which case it asserts). This should only be used for legacy code that has nsresult everywhere; we would like to get rid of this operator at some point.</li>
+</ul>
+
+<h2 id="Bindings.conf" name="Bindings.conf"><code>Bindings.conf</code> details</h2>
+
+<p>Write me. In particular, need to describe at least use of <code>concrete</code>, <code>prefable</code>, and <code>addExternalInterface</code>.</p>
+
+<h3 id="How_to_get_a_JSContext_passed_to_a_given_method">How to get a JSContext passed to a given method</h3>
+
+<p>In some rare cases you may need a <code>JSContext*</code> argument to be passed to a C++ method that wouldn't otherwise get such an argument. To see how to achieve this, search for <code>implicitJSContext</code> in <a href="https://developer.mozilla.org/en-US/docs/Mozilla/WebIDL_bindings#Bindings.conf" title="https://developer.mozilla.org/en-US/docs/Mozilla/WebIDL_bindings#Bindings.conf">dom/bindings/Bindings.conf</a>.</p>
+
+<h2 id="Implementing_WebIDL_using_Javascript">Implementing WebIDL using Javascript</h2>
+
+<p>It is possible to implement WebIDL interfaces in JavaScript within Gecko -- however, <strong>this is limited to interfaces that are not exposed in Web Workers</strong>. When the binding occurs, two objects are created:</p>
+
+<ul>
+ <li><em>Content-exposed object:</em> what gets exposed to the web page.</li>
+ <li><em>Implementation object:</em> running as a chrome-privileged script. This allows the implementation object to have various APIs that the content-exposed object does not.</li>
+</ul>
+
+<p>Because there are two types of objects, you have to be careful about which object you are creating.</p>
+
+<h3 id="Creating_JS-implemented_WebIDL_objects">Creating JS-implemented WebIDL objects</h3>
+
+<p>To create a JS-implemented WebIDL object, one must create both the chrome-side implementation object and the content-side page-exposed object. There are three ways to do this.</p>
+
+<h4 id="Using_the_WebIDL_constructor">Using the WebIDL constructor</h4>
+
+<p>If the interface has a constructor, a content-side object can be created by getting that constructor from the relevant content window and invoking it. For example:</p>
+
+<pre class="brush: js">var contentObject = new contentWin.RTCPeerConnection();</pre>
+
+<p>The returned object will be an Xray wrapper for the content-side object. Creating the object this way will automatically create the chrome-side object using its contractID.</p>
+
+<p>This method is limited to the constructor signatures exposed to webpages. Any additional configuration of the object needs to be done via <a href="#ChromeOnly" title="#ChromeOnly"><code>[ChromeOnly]</code></a> methods on the interface.</p>
+
+<p>Creating many objects this way can be slow due to the createInstance overhead involved.</p>
+
+<h4 id="Using_a__create_method">Using a <code>_create</code> method</h4>
+
+<p>A content-side object can be created for a given chrome-side object by invoking the static <code>_create</code> method on the interface. This method takes two arguments: the content window in which to create the object and the chrome-side object to use. For example:</p>
+
+<pre class="brush: js">var contentObject = RTCPeerConnection._create(contentWin,
+                                              new MyPeerConnectionImpl());           </pre>
+
+<p>However, if you are in a JS component, you may only be able to get to the correct interface object via some window object. In this case, the code would look more like:</p>
+
+<pre class="brush: js">var contentObject = contentWin.RTCPeerConnection._create(contentWin,
+                                                         new MyPeerConnectionImpl());           </pre>
+
+<p>Creating the object this way will not invoke its <code>__init</code> method or <code>init</code> method.</p>
+
+<h4 id="By_returning_a_chrome-side_object_from_a_JS-implemented_WebIDL_method">By returning a chrome-side object from a JS-implemented WebIDL method</h4>
+
+<p>If a JS-implemented WebIDL method is declared as returning a JS-implemented interface, then a non-WebIDL object returned from that method will be treated as the chrome-side part of a JS-implemented WebIdL object and the content-side part will be automatically created.</p>
+
+<p>Creating the object this way will not invoke its <code>__init</code> method or <code>init</code> method.</p>
+
+<h3 id="Implementing_a_WebIDL_object_in_JavaScript">Implementing a WebIDL object in JavaScript</h3>
+
+<p>To implement a WebIDL interface in JavaScript, first add a WebIDL file, in the same way as you would for a C++-implemented interface. To support implementation in JS, you must add an extended attribute <code>JSImplementation="CONTRACT_ID_STRING"</code> on your interface, where CONTRACT_ID_STRING is the XPCOM component contract ID of the JS implementation -- note ";1" is just a Mozilla convention for versioning APIs. Here's an example:</p>
+
+<pre>[Constructor(optional long firstNumber), JSImplementation="@mozilla.org/my-number;1"]
+interface MyNumber {
+  attribute long value;
+  readonly attribute long otherValue;
+  void doNothing();
+};</pre>
+
+<p>Next, create an XPCOM component that implements this interface. <a href="/en-US/docs/How_to_Build_an_XPCOM_Component_in_Javascript" title="/en-US/docs/How_to_Build_an_XPCOM_Component_in_Javascript">Basic directions</a> for how to do this can be found elsewhere on MDN. Use the same contract ID as you specified in the WebIDL file. The class ID doesn't matter, except that it should be a newly generated one. For <code>QueryInterface</code>, you only need to implement <code>nsISupports</code>, not anything corresponding to the WebIDL interface. The name you use for the XPCOM component should be distinct from the name of the interface, to avoid confusing error messages.</p>
+
+<p>WebIDL attributes are implemented as properties on the JS object or its prototype chain, whereas WebIDL methods are implemented as methods on the object or prototype. Note that any other instances of the interface that you are passed in as arguments are the full web-facing version of the object, and not the JS implementation, so you currently cannot access any private data.</p>
+
+<p>The WebIDL constructor invocation will first create your object. If the XPCOM component implements <code>nsIDOMGlobalPropertyInitializer</code><span id="summary_alias_container"><span id="short_desc_nonedit_display">, then the object's </span></span><code>init</code><span id="summary_alias_container"><span id="short_desc_nonedit_display"> method will be invoked with a single argument: the content window the constructor came from. This allows the JS implementation to know which content window it's associated with. The </span></span><code>init</code><span id="summary_alias_container"><span id="short_desc_nonedit_display"> method should not return anything. After this, the content-side object will be created. Then, </span></span>if there are any constructor arguments, the object's <code>__init</code> method will be invoked, with the constructor arguments as its arguments.</p>
+
+<p>If you want an instance of the class to be added to <code>window.navigator</code>, add an extended attribute<span class="difflineplus"> </span><code>NavigatorProperty="PropertyName"</code> which will make the instance available as <code>window.navigator.PropertyName</code>.</p>
+
+<h3 id="Checking_for_Permissions_or_Preferences">Checking for Permissions or Preferences</h3>
+
+<p>With JS-implemented WebIDL, the <code>init</code> method should only return undefined. If any other value, such as <code>null</code>, is returned, the bindings code will assert or crash. In other words, it acts like it has a "void" return type. Preference or permission checking should be implemented by adding an extended attribute to the WebIDL interface. This has the advantage that if the check fails, the constructor or object will not show up at all.</p>
+
+<p>For preference checking, add an extended attribute <code>Pref="myPref.enabled"</code> where <code>myPref.enabled</code> is the preference that should be checked. <code>SettingsLock</code> is an example of this.</p>
+
+<p>For permissions or other kinds of checking, add an extended attribute <code>Func="MyPermissionChecker"</code> where <code>MyPermissionChecker</code> is a function implemented in C++ that returns true if the interface should be enabled. This function can do whatever checking is needed. One example of this is <code>PushManager</code>.</p>
+
+<h3 id="Example">Example</h3>
+
+<p>Here's an example JS implementation of the above interface. The <code>invisibleValue</code> field will not be accessible to web content, but is usable by the doNothing() method.</p>
+
+<pre>Components.utils.import("resource://gre/modules/XPCOMUtils.jsm");
+
+function MyNumberInner() {
+  this.value = 111;
+  this.invisibleValue = 12345;
+}
+
+MyNumberInner.prototype = {
+  classDescription: "Get my number XPCOM Component",
+  classID: Components.ID("{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}"), // dummy UUID
+  contractID: "@mozilla.org/my-number;1",
+  QueryInterface: XPCOMUtils.generateQI([Components.interfaces.nsISupports]),
+  doNothing: function() {},
+  get otherValue() { return this.invisibleValue - 4; },
+  __init: function(firstNumber) {
+    if (arguments.length &gt; 0) {
+      this.value = firstNumber;
+    }
+  }
+}
+
+var components = [MyNumberInner];
+var NSGetFactory = XPCOMUtils.generateNSGetFactory(components);</pre>
+
+<p>Finally, add a component and a contract and whatever other manifest stuff you need to implement an XPCOM component.</p>
+
+<h3 id="Guarantees_provided_by_bindings">Guarantees provided by bindings</h3>
+
+<p>When implementing a WebIDL interface in JavaScript, certain guarantees will be provided by the binding implementation. For example, string or numeric arguments will actually be primitive strings or numbers. Dictionaries will contain only the properties that they are declared to have, and they will have the right types. Interface arguments will actually be objects implementing that interface.</p>
+
+<p>What the bindings will NOT guarantee is much of anything about <code>object</code> and <code>any</code> arguments. They will get cross-compartment wrappers that make touching them from chrome code not be an immediate security bug, but otherwise they can have quite surprising behavior if the page is trying to be malicious. Try to avoid using these types if possible.</p>
+
+<h3 id="Accessing_the_content_object_from_the_implementation">Accessing the content object from the implementation</h3>
+
+<p>If the JS implementation of the WebIDL interface needs to access the content object, it is available as a property called <code>__DOM_IMPL__</code> on the chrome implementation object. This property only appears after the content-side object has been created. So it is available in <code>__init</code> but not in <code>init</code>.</p>
+
+<h3 id="Determining_the_principal_of_the_caller_that_invoked_the_WebIDL_API">Determining the principal of the caller that invoked the WebIDL API</h3>
+
+<p>This can be done by calling <code>Component.utils.<span class="d">getWebIDLCallerPrincipal</span>()</code>.</p>
+
+<h3 id="Throwing_exceptions_from_JS-implemented_APIs">Throwing exceptions from JS-implemented APIs</h3>
+
+<p>There are two reasons a JS implemented API might throw. The first reason is that some unforeseen condition occurred and the second is that a specification requires an exception to be thrown.</p>
+
+<p>When throwing for an unforeseen condition, the exception will be reported to the console, and a sanitized NS_ERROR_UNEXPECTED exception will be thrown to the calling content script, with the file/line of the content code that invoked your API. This will avoid exposing chrome URIs and other implementation details to the content code.</p>
+
+<p>When throwing because a specification requires an exception, you need to communicate to the binding code that this is what you're doing. Right now this is done by throwing a <code>DOMError</code> from the window your WebIDL object is associated with (the one that was passed to your <code>init</code> method). The binding code will then rethrow just the message string of that <code>DOMError</code> to the web page, as a plain JS <code>Error</code>. This does not allow implementing exceptions per spec (e.g., there is no way to explicitly throw a <code>TypeError</code> or other <code>Error</code> subclass), unfortunately; we're still working on that. Since you know for this case the exception is being thrown because a spec requires it, you know you need to create the <code>DOMError</code>. An example of how this could work:</p>
+
+<pre class="brush: js">if (!isValid(passedInObject)) {
+  throw new this.contentWindow.DOMError("Error", "Object is invalid");
+}
+</pre>
+
+<p>In some cases you may need to perform operations whose exception message you just want to propagate to the content caller. This can be done like so:</p>
+
+<pre class="brush: js">try {
+  someOperationThatCanThrow();
+} catch (e) {
+  throw new this.contentWindow.DOMError(e.name, e.message);
+}
+</pre>
+
+<h3 id="Inheriting_from_interfaces_implemented_in_C">Inheriting from interfaces implemented in C++</h3>
+
+<p>It's possible to have an interface implemented in JavaScript inherit from an interface implemented in C++. To do so, simply have one interface inherit from the other and the bindings code will auto-generate a C++ object inheriting from the implementation of the parent interface. The class implementing the parent interface will need a constructor that takes an <code>nsPIDOMWindow*</code> (though it doesn't have to do anything with that argument).</p>
+
+<p>If the class implementing the parent interface is abstract and you want to use a specific concrete class as the implementation to inherit from, you will need to add a <code>defaultImpl</code> annotation to the descriptor for the parent interface in <code>Bindings.conf</code>. The value of the annotation is the C++ class to use as the parent for JS-implemented descendants; if <code>defaultImpl</code> is not specified, the <code>nativeType</code> will be used.</p>
+
+<p>For example, consider this interface that we wish to implement in JavaScript:</p>
+
+<pre>[<code>JSImplementation</code>="some-contract"]
+interface MyEventTarget : EventTarget {
+  attribute EventHandler onmyevent;
+  void dispatchTheEvent(); // Sends a "myevent" event to this EventTarget
+}
+</pre>
+
+<p>The implementation would look something like this, ignoring most of the XPCOM boilerplate:</p>
+
+<pre>function MyEventTargetImpl() {
+}
+MyEventTargetImpl.prototype = {
+  // QI to nsIDOMGlobalPropertyInitializer so we get init() called on us.
+  QueryInterface: XPCOMUtils.generateQI([Ci.nsIDOMGlobalPropertyInitializer]),
+
+  init: function(contentWindow) {
+    this.contentWindow = contentWindow;
+  }
+
+  get onmyevent() {
+    return this.__DOM_IMPL__.getEventHandler("onmyevent");
+  }
+
+  set onmyevent(handler) {
+    this.__DOM_IMPL__.setEventHandler("onmyevent", handler);
+  }
+
+  dispatchTheEvent: function() {
+    var event = new this.contentWindow.Event("myevent");
+    this.__DOM_IMPL__.dispatchEvent(event);
+  }
+};
+</pre>
+
+<p>The implementation would automatically support the API exposed on <code>EventTarget</code> (so, for example, <code>addEventListener</code>). Calling the <code>dispatchTheEvent</code> method would cause dispatch of an event that content script can see via listeners it has added.</p>
+
+<p>Note that in this case the chrome implementation is relying on some <code>[ChromeOnly]</code> methods on EventTarget that were added specifically to make it possible to easily implement event handlers. Other cases can do similar things as needed.</p>

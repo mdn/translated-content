@@ -1,0 +1,124 @@
+---
+title: Firefox OS 自动化测试
+slug: Archive/B2G_OS/Automated_testing
+tags:
+  - B2G
+  - QA
+  - 测试
+  - 自动化测试
+translation_of: Archive/B2G_OS/Automated_testing
+---
+<p></p>
+<div class="summary">
+ <p>Firefox OS 仍然处在开发中，在可预见的未来中则会对新的硬件加以支持，如何对其进行测试则显得非常重要。 该页面提供的文档主要是对 Firefox OS 多方面进行测试的信息，包括运行不同的测试，自动化，获取报告以及跟踪等。 </p>
+</div>
+<h2 id="入门">入门</h2>
+<dl>
+ <dt>
+  <a href="/en-US/Firefox_OS/Running_Tests_on_Firefox_OS_for_Developers">Firefox OS 中运行测试： 开发者指南</a></dt>
+ <dd>
+  这是一个运行测试时入门级的快速开发指南。如果您对 Mozilla 测试和自动化系统没有什么接触，则需要从此处开始。有经验者，则可能对如何运行及怎么运行感兴趣，可以跳过该指南，去学习下面更具体的细节知识。</dd>
+</dl>
+<h2 id="Gaia_测试">Gaia 测试</h2>
+<p>这些文章涵盖了主要的 Gaia 测试套件。</p>
+<dl>
+ <dt>
+  <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/gaia-ui-tests" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/gaia-ui-tests">Gaia UI 测试</a></dt>
+ <dd>
+  主要针对 Gaia UI 交互和特性的 Python 测试。</dd>
+ <dt>
+  <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Gaia_integration_tests">Gaia 集成测试</a></dt>
+ <dd>
+   基于 Marionette， 针对 Gaia 的 JavaScript 的集成测试。</dd>
+ <dt>
+  <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Gaia_unit_tests" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Gaia_unit_tests">Gaia 单元测试</a></dt>
+ <dd>
+  无 UI 交互的 Gaia 单元测试； 使用 JavaScript 实现，并不基于Marionette。</dd>
+ <dt>
+  <a href="/en-US/Firefox_OS/Platform/Automated_testing/Gaia_performance_tests">Gaia 性能测试</a></dt>
+ <dd>
+  基于内部仪器来测量 Gaia app 性能，是树状的测试框架。</dd>
+</dl>
+<h2 id="B2G_测试">B2G 测试</h2>
+<p>下面的指南涵盖了多个不同的测试框架，用于测试 B2G 功能的各个方面。</p>
+<dl>
+ <dt>
+  <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Mochitests" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Mochitests">Mochitests</a></dt>
+ <dd>
+  Gecko 功能和API 测试；基于 HTML &amp; JS。没有与 Gaia 交互。</dd>
+ <dt>
+  <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Reftests" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Reftests">Reftests</a></dt>
+ <dd>
+  Gecko 渲染正确性测试。</dd>
+ <dt>
+  <a href="/en-US/docs/Marionette/Marionette_JavaScript_Tests" title="/en-US/docs/Marionette/Marionette_JavaScript_Tests">WebAPI tests</a></dt>
+ <dd>
+  Gecko 基于 JS WebAPI 测试；绝大多数需要一个模拟器。</dd>
+ <dt>
+  <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/XPCShell" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/XPCShell">xpcshell tests</a></dt>
+ <dd>
+  Gecko XPCOM APIs 无头绪测试</dd>
+ <dt>
+  <a href="https://github.com/mozilla/b2gperf" title="https://github.com/mozilla/b2gperf">B2GPerf</a></dt>
+ <dd>
+  基于内部仪器来测量 Gaia app 性能。</dd>
+ <dt>
+  <a href="https://wiki.mozilla.org/Project_Eideticker" title="https://github.com/mozilla/eideticker">Eideticker</a></dt>
+ <dd>
+  提供了基于视频捕捉的 Firefox OS 性能测量。</dd>
+ <dt>
+  <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/endurance_tests" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/endurance_tests">耐久性测试</a></dt>
+ <dd>
+  长期运行的重复性测试，用于发现内存泄漏和稳定性问题。</dd>
+ <dt>
+  <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/MTBF_tests">MTBF 测试</a></dt>
+ <dd>
+  这是一个基于 non-restart gaia-ui-test 的测试框架。它会试图找到阻碍长时间运行测试的各种问题点。(当前，它由台湾团队来完成，仍然是一个开发中的测试框架)</dd>
+ <dt>
+  内存测试 — 即将推出</dt>
+ <dd>
+  Repetitive tests run per-commit to mozilla-central, reporting to <a href="https://areweslimyet.com/" title="https://areweslimyet.com/">https://areweslimyet.com/</a>, designed to find problems with memory usage.</dd>
+</dl>
+<h2 id="辅助文档">辅助文档</h2>
+<p>This section provides links to some of the supporting technologies that underpin Mozilla's tests, which you may want to find more information about.</p>
+<dl>
+ <dt>
+  <a href="/en-US/docs/Marionette" title="/en-US/docs/Marionette">Marionette</a></dt>
+ <dd>
+  基于 Selenium WebDriver 的远程测试驱动程序。</dd>
+ <dt>
+  <a href="/en-US/docs/Marionette/Marionette_JavaScript_Tools" title="/en-US/docs/Marionette/Marionette_JavaScript_Tools">Marionette JavaScript tests</a></dt>
+ <dd>
+  A node.js-based runner for Marionette.</dd>
+ <dt>
+  <a href="/en-US/docs/Marionette/Python_Marionette" title="/en-US/docs/Marionette/Python_Marionette">Marionette Python tests</a></dt>
+ <dd>
+  A Python runner for Marionette.</dd>
+</dl>
+<div class="note">
+ <p><strong>Note</strong>: If you want to run Marionette against a production build (to run gaia integration tests, gaia-ui-tests, etc.), you can <a href="https://github.com/mozilla-b2g/marionette-extension">install Marionette as an extension</a> (this currently only works for 1.3 builds, but more support will be added soon.)</p>
+</div>
+<h2 id="持续性集成测试和结果报告">持续性集成测试和结果报告</h2>
+<p>The following articles cover the continuous integration and result reporting mechanisms Mozilla uses to store and intepret test data.</p>
+<dl>
+ <dt>
+  <a href="/en-US/docs/Mozilla/Firefox_OS/TBPL">TBPL</a></dt>
+ <dd>
+  Understand the tests and builds that run on TBPL.</dd>
+ <dt>
+  <a href="https://wiki.mozilla.org/QA/Execution/Web_Testing/Automation/Jenkins">Jenkins</a></dt>
+ <dd>
+  Understand the tests that are run on real devices via Jenkins.</dd>
+ <dt>
+  <a href="https://wiki.mozilla.org/B2G/Datazilla" title="https://wiki.mozilla.org/B2G/Datazilla">Datazilla</a></dt>
+ <dd>
+  Understand which performance tests are reporting to the <a href="https://datazilla.mozilla.org/b2g/" title="https://datazilla.mozilla.org/b2g/">Datazilla dashboard</a>, and what those tests measure.</dd>
+ <dt>
+  <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Test_Execution_Chart" title="/en-US/docs/Mozilla/Firefox_OS/Testing/Test_Execution_Chart">Test execution chart</a></dt>
+ <dd>
+  A chart showing which tests are being run — on what devices and where — and which platforms are supported for each test.</dd>
+</dl>
+<dl>
+ <dt>
+   </dt>
+</dl>

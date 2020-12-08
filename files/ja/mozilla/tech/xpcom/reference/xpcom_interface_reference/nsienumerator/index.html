@@ -1,0 +1,40 @@
+---
+title: nsIEnumerator
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsIEnumerator
+tags:
+  - Interfaces
+  - XPCOM
+  - XPCOM API Reference
+  - XPCOM Interface Reference
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIEnumerator
+---
+<div>
+<div class="blockIndicator obsolete obsoleteHeader">
+<p><strong>廃止</strong><br>
+ この機能は廃止されました。一部のブラウザーでは引き続き機能する可能性がありますが、いつでも削除できるため使用は推奨されません。使用しないようにして下さい。</p>
+</div>
+</div>
+
+<p><a href="http://lxr.mozilla.org/mozilla/source/xpcom/ds/nsIEnumerator.idl">nsIEnumerator.idl</a></p>
+
+<div class="warning"><strong>警告:これは壊れたインターフェイスです</strong>;<strong>必要がない限り使用しないでください。列挙子に一般的に使用されるインターフェイスは</strong> <a href="/en-US/docs/XPCOM_Interface_Reference/nsISimpleEnumerator" title="nsISimpleEnumerator">nsISimpleEnumerator</a> です。</div>
+
+<h2 id="使用例">使用例</h2>
+
+<pre class="brush:js notranslate">var iter = --------();
+try {
+  iter.first();
+  do {
+    var data = iter.currentItem();
+    if( data instanceof Ci.nsI------ ) {
+      ...
+       ...
+    }
+    iter.next();
+  } while( Components.lastResult == 0 );
+} catch(e) {}
+</pre>
+
+<p><a href="http://www.google.com/search?&amp;q=warren%20harris%2004/21/1999%2016:11:03">この件に関するいくつかのメモについては、1999-04-21 16:11:03の "Warren Harris" からのEメールを検索して下さい。</a></p>
+
+<p><a href="http://www.geocrawler.com/archives/3/137/1999/4/150">このバージョン</a> は上手く機能していない様なので、 Google キャッシュを使用する必要があるかもしれません。</p>

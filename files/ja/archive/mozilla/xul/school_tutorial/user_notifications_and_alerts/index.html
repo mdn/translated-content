@@ -1,0 +1,70 @@
+---
+title: User Notifications and Alerts
+slug: Archive/Mozilla/XUL/School_tutorial/User_Notifications_and_Alerts
+translation_of: Archive/Add-ons/Overlay_Extensions/XUL_School/User_Notifications_and_Alerts
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_School/Custom_XUL_Elements_with_XBL" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_School/Mozilla_Documentation_Roadmap">次のページ  »</a></p>
+</div>
+<p>拡張機能が重要なイベントについてユーザに通知し、さらに何らかの応答を必要とするケースがしばしばあります。モーダルなダイアログや警告を用いることは、よい考えとは言えません。これらはユーザの操作に割り込み、他の何かが行われる前に即座に操作を妨げます。ユーザはこれを迷惑に感じ、そのダイアログに書かれたことを読まずに、すぐに閉じるようになるでしょう。または、あなたのアドオンを削除してしまうかもしれません。</p>
+<p>このセクションでは、ユーザに迷惑でない方法で通知し、操作を求められるようにするいくつかの代替策を提供します。</p>
+<h2 id="notificationbox_要素">notificationbox 要素</h2>
+<p>この要素はどこかで見たことがあるでしょう。最も頻繁に目にするものは、「パスワードを記憶」するか尋ねるメッセージです。これは、タブバーの直下、ページコンテンツの上部に現れる帯状のボックスで、テキストといくつかのボタンがあります。この種類の通知は、<a href="/ja/XUL/notificationbox" title="ja/XUL/notificationbox">notificationbox</a> 要素で実装されています。</p>
+<p>このような通知の実装はとても簡単です。ユーザの操作に割り込むことなくメッセージを読ませ、簡単に閉じられるため、警告や通知の表示方法として推奨される方法です。しかし、この方法には落とし穴もあります。これらの通知は現在のタブの<em>内側</em>に表示されるため、タブを切り替えると通知が見られなくなります。元のタブに戻ると、再び通知が表示されます。これらの通知は、アドオンをインストールしようとしている時やサイトにパスワードを入力した時など、現在表示されているタブに関連したものである場合に最も分かりやすくなります。</p>
+<p>notificationbox の作成はとても簡単で、様々なカスタマイズが可能です:</p>
+<div class="code panel" style="border-width: 1px;">
+ <div class="codeContent panelContent">
+  <pre class="brush: js">let nb = gBrowser.getNotificationBox();
+let acceptButton = new Object();
+let declineButton = new Object();
+let message =
+  this._bundle.getString("xulschoolhello.friendMessage.label");
+let that = this;
+
+acceptButton.label =
+  this._bundle.getString("xulschoolhello.acceptButton.label");
+acceptButton.accessKey =
+  this._bundle.getString("xulschoolhello.acceptButton.accesskey");
+acceptButton.popup = null;
+acceptButton.callback = function() { that.acceptRequest(); };
+// declineButton (拒否ボタン) も同様にする
+nb.appendNotification(
+  message, "xulschoolhello-friend-notification",
+  "<a class="external" rel="freelink">chrome://xulschoolhello/skin/friend-notification.png</a>",
+  nb.PRIORITY_INFO_HIGH, [ acceptButton, declineButton ]);</pre>
+ </div>
+</div>
+<p>すべてのブラウザタブがデフォルトで notificationbox を持っているため、オーバーレイを適用する必要はありません。<em>notificationbox</em> 要素は、<em>gBrowser</em> オブジェクトから取得することができます。この例では、<a href="/ja/XUL/tabbrowser#m-getNotificationBox" title="ja/XUL/tabbrowser#m-getNotificationBox">getNotificationBox</a> に引数を与えていないため、現在表示されているタブの notificationbox を取得します。<a href="/ja/XUL/notificationbox#m-appendNotification" title="ja/XUL/notificationbox#m-appendNotification">appendNotification</a> メソッドは、メッセージおよび要素の ID、画像 (32x32)、レベル、ボタンを引数に取ります。レベル引数は、メッセージの "強さ" を決定します。この強さは、通知が表示された時の背景色によって示されます。このレベルは、ユーザが高レベルの通知が表示されても閉じてしまうようになることを防ぐために、あなたのメッセージに相応しく、できるだけ低いものを適用してください。ボタンは、簡単な JavaScript データのオブジェクトで表します。これらの詳細はすべて、<a href="/ja/XUL/notificationbox" title="ja/XUL/notificationbox">notificationbox</a> のページで説明されています。</p>
+<p>通知ボックスは簡単に閉じられるように設計されています。すべての通知には閉じるボタンが追加されているため、あなたのカスタムボタン以外のものがクリックされる可能性を考慮してください。また、あなたのカスタムボタンがクリックされたら通知がすぐに閉じられなければなりません。通知ボックスは、シングルステップの処理のためだけに利用してください。</p>
+<h2 id="Alerts_サービス">Alerts サービス</h2>
+<p>これは、ユーザからの入力を必要としないイベントについて警告したい場合に、とてもよい選択肢です。警告は OS 固有の方法で表示されるため、ネイティブの外観になります。また、alert ボックス上のユーザによるクリックに動作を関連付けることができます。もう一つの利点は、警告の表示に XPCOM サービス (<a href="/ja/XPCOM_Interface_Reference/nsIAlertsService" title="ja/XPCOM Interface Reference/nsIAlertsService">nsIAlertsService</a>) を使用するため、chrome コードや非 chrome コードから簡単に警告を表示させられることです。しかし、警告は一時的にしか表示されない短所もあります。</p>
+<p>Alerts サービスの使い方は、notification ボックスと似ています:</p>
+<div class="code panel" style="border-width: 1px;">
+ <div class="codeContent panelContent">
+  <pre class="brush: js">let alertsService =
+  Cc["@mozilla.org/alerts-service;1"].getService(Ci.nsIAlertsService);
+let title = this._bundle.getString("xulschoolhello.greeting.title");
+let message = this._bundle.getString("xulschoolhello.greeting.label");
+
+alertsService.showAlertNotification(
+  "<a class="external" rel="freelink">chrome://xulschoolhello/skin/hello-notification.png</a>",
+  title, message, true, "", this, "XULSchool Hello Message");</pre>
+ </div>
+</div>
+<p>ここで引数として渡している <em>this</em> は、<a href="/ja/nsIObserver" title="ja/nsIObserver">nsIObserver</a> を実装するオブジェクトです。alert ボックス上のクリックを扱う必要がある場合にこのようにします。画像は任意のサイズにできますが、中くらいの固定サイズを使用することが推奨されます。</p>
+<p>警告を使用する際の主な不都合のあるところは、Alerts サービスのサポートがすべてのプラットフォームと Firefox のバージョンに対して保証されていないことです。Windows については Firefox 2 からサポートされています。Mac OS X については Firefox 3 からサポートが追加され、サードバーティ製ツールの Growl を通してのみ利用できます。また、Linux システムでは、Ubuntu Linux 上の Firefox 3 でのみ動作が確認されており、すべてのディストリビューションと Firefox のバージョンでテストされているわけではありません。</p>
+<p>サポートが一貫せず、これら警告表示の性質が一時的なものであるため、このサービスをユーザが知る必要があり、他の方法では得られない情報の表示に使用することはお勧めできません。</p>
+<h2 id="カスタム警告ボックス">カスタム警告ボックス</h2>
+<p>ユーザへの警告についてカスタムソリューションを作成することは、XUL オーバーレイと CSS による配置という利点を生かせば難しくありません。しかし、これらの解決策はバグが多くなる傾向があり、アクセシビリティの問題もあります。できるだけ、先に述べた 2 つの代替策を用いてください。ニーズに合った方法が他になければ、この解決策も許容できます。</p>
+<p>警告を表示する簡単な方法は、オーバーレイ内に隠しボックスを含めることです。このボックスの hidden 属性を取り除いてユーザに表示する前に、必要なコンテンツで埋めておいてください。この種類のボックスを配置する最も適した場所は、tabbrowser 要素の上部や下部です。上部に配置するとすべてのタブとコンテンツが押し下げられてしまうため、下部に配置し、現在のページの下部だけが切り取られるようにしたほうがよいでしょう。従うべきガイドラインは、notification ボックスのものと同じです。形を細長くし、有益な情報を表示し、簡単に閉じられるようにしてください。</p>
+<p>もう一つの選択肢も隠しボックスをオーバーレイに追加するものですが、CSS による配置指定で置く場所を決めます。この方法は、ボックスがページのコンテンツの前面に浮いた状態になるため、いくつかのことに注意してください。まず、タブを切り替えるとあなたの警告表示が消えてしまうでしょう。これは、browser の tabbox 要素が内部で deck を使用していることが原因であり、<a class="external" href="http://www.w3schools.com/Css/pr_pos_z-index.asp">z-index</a> の順序に影響します。いつ、警告が再び表示されるかを知るには、tab イベントを使用してコードを書かなければならないでしょう。考慮する必要のあるもう一つの問題は、Mac OS 版の Firefox 2 では、浮いた XUL 要素が透過されないことです。取り除くことのできない白地のボックスにするしかないでしょう。Firefox 3 以降では、<a href="/ja/XUL/panel" title="ja/XUL/panel">panel</a> 要素を使用することで回避できます。</p>
+<p>警告表示の推奨される位置は、browser の右下隅です。ここならば、ユーザが読むコンテンツや、最も重要な部分であるメニューやタイトルなどの妨げになることはありません。</p>
+<p>これが推奨される手段でないことを忘れないでください。複数の拡張機能がそれぞれ、独自の方法であなたに通知することを想像してみてください。おそらく、同時に通知されることさえあるかもしれません！ これは、UI の観点から良いことではないため、カスタムの警告ボックスは最終手段として用いてください。</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_School/Custom_XUL_Elements_with_XBL" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_School/Mozilla_Documentation_Roadmap">次のページ  »</a></p>
+</div>
+<p><span style="font-size: small;">This tutorial was kindly donated to Mozilla by Appcoast.</span></p>
+<div class="noinclude">
+
+</div>
+<p> </p>

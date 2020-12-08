@@ -1,0 +1,89 @@
+---
+title: Accès sécurisé au contenu DOM depuis le chrome
+slug: Accès_sécurisé_au_contenu_DOM_depuis_le_chrome
+tags:
+  - DOM
+  - Extensions
+  - Sécurité
+  - XPCNativeWrapper
+translation_of: Mozilla/Tech/Xray_vision
+---
+<p>
+</p>
+<h3 id="Introduction" name="Introduction"> Introduction </h3>
+<p>Les applications et les extensions scriptant des interfaces DOM sur du contenu non fiable (une page Web) doivent être prudentes et s'assurer que les informations utilisées proviennent bien de l'API DOM et non de propriétés JavaScript ou de fonctions getter et setter (accesseur/mutateur) redéfinies par une page malveillante. Firefox 1.0.3 et Mozilla 1.7.7 rendent la tâche plus difficile aux pages Web essayant de tromper les applications XUL en s'assurant que lorsque du JavaScript chrome accède à une propriété ou méthode DOM sur un objet, il obtiendra bien la propriété ou méthode DOM plutôt que la redéfinition faite par la page Web. <a href="fr/Firefox_1.5">Firefox 1.5</a> propose une solution plus générale qui est activée par défaut ; les extensions doivent explicitement le demander pour pouvoir effectuer des accès DOM non sûrs.
+</p><p>Il n'y a que deux manières « correctes » pour le code chrome d'accéder au DOM du contenu : l'accès direct et l'utilisation explicite de <a href="#.C3.80_propos_de_XPCNativeWrapper">XPCNativeWrapper</a>. En particulier, l'astuce <code>__proto__</code> couramment utilisée n'est sûre dans aucune version (voir « Exemples à ne PAS suivre » ci-dessous).
+</p><p>La table suivante rassemble les propriétés de sécurité des deux méthodes « correctes » :
+</p>
+<table>
+<tbody><tr>
+<th>
+</th><th> Accès direct
+</th><th> XPCNativeWrapper explicite
+</th></tr>
+<tr>
+<th> Firefox 1.0.2 et antérieur
+</th><td> non sécurisé
+</td><td> sécurisé
+</td></tr>
+<tr>
+<th> Firefox 1.0.3 et postérieur (1.0.x)
+</th><td> sécurisé lorsqu'il est certain que la propriété existe
+</td><td> sécurisé
+</td></tr>
+<tr>
+<th> Firefox 1.5
+</th><td> sécurisé avec <code>xpcnativewrappers=yes</code> (qui est le réglage par défaut)
+</td><td> sécurisé
+</td></tr></tbody></table>
+<h3 id="Acc.C3.A8s_direct" name="Acc.C3.A8s_direct"> Accès direct </h3>
+<p>Les scripts conçus pour s'exécuter uniquement dans Firefox 1.0.3 et les versions 1.0.x plus récentes ou qui utilisent <code>xpcnativewrappers=yes</code> dans Firefox 1.5 ou plus récent peuvent simplement appeler :
+</p>
+<pre class="eval">return contentWindow.document.title == contentWindow.getSelection();
+</pre>
+<p>L'accès direct est sécurisé dans Firefox 1.0.3 (et les versions 1.0.x suivantes) dans la mesure où l'objet a la garantie de bénéficier de la propriété ou de la méthode accédée par sa déclaration IDL. Par exemple, <code>foo.nodeType</code> est sûr si vous avez l'assurance que <code>foo</code> est de type <code>Node</code>, et <code>foo.getSelection()</code> est sûr si <code>foo</code> ne peut être qu'un objet <code>window</code>. Il peut être complexe d'y arriver -- par exemple, <code>nsIDOMNSHTMLDocument</code> a une méthode <code>open()</code>, mais <code>nsIDOMXULDocument</code> n'en a pas, par conséquent utiliser <code>document.open()</code> n'est PAS sûr dans Firefox 1.0.3, étant donné que <code>document</code> peut être un document XUL. Dans de tels cas, vous pouvez utiliser l'opérateur <code>instanceof</code> pour déterminer si vous avez un objet implémentant une interface IDL donnée (<code>nsIDOMNSHTMLDocument</code> dans ce cas précis).
+</p><p>Dans Firefox 1.5, l'accès direct est toujours sûr, sauf si votre extension utilise le paramètre <code>xpcnativewrappers=no</code> dans <a href="fr/Enregistrement_chrome">son fichier manifest</a>. Si ce paramètre n'est pas défini, l'utilisation de <a href="#.C3.80_propos_de_XPCNativeWrapper">XPCNativeWrapper</a> est implicite.
+</p>
+<h3 id="Utilisation_explicite_de_XPCNativeWrapper" name="Utilisation_explicite_de_XPCNativeWrapper"> Utilisation explicite de <a href="#.C3.80_propos_de_XPCNativeWrapper">XPCNativeWrapper</a> </h3>
+<pre class="eval">var winWrapper = new XPCNativeWrapper(contentWindow,
+                                      'document', 'getSelection()');
+var docWrapper = new XPCNativeWrapper(winWrapper.document, 'title');
+return docWrapper.title == winWrapper.getSelection();
+</pre>
+<p>Notez que cet exemple utilise <em>deux</em> wrappers pour obtenir <code>window.document.title</code>, un wrapper pour obtenir la propriété <code>document</code> de l'objet <code>window</code>, et un wrapper pour obtenir la propriété <code>title</code> du document.
+</p><p>L'utilisation de XPCNativeWrapper est sûre dans toutes les versions de Firefox, mais rend le code plus difficile à lire et vous devez faire attention à envelopper tous les objets DOM.
+</p><p>Pour plus d'informations sur cette syntaxe, consultez <a class="external" href="http://kb.mozillazine.org/XPCNativeWrapper">l'entrée sur <code>XPCNativeWrapper</code> de la MozillaZine KnowledgeBase</a>.
+</p>
+<h3 id=".C3.80_propos_de_XPCNativeWrapper" name=".C3.80_propos_de_XPCNativeWrapper"> À propos de XPCNativeWrapper </h3>
+<p><code><a href="fr/XPCNativeWrapper">XPCNativeWrapper</a></code> est une manière d'envelopper un objet de manière à ce que son accès par du code privilégié soit sûr.
+</p><p>Il y a deux façons d'utiliser <code>XPCNativeWrapper</code>. L'ancienne est de l'appeler explicitement. La nouvelle manière, <code>xpcnativewrappers=yes</code>, est disponible à partir de <a href="fr/Firefox_1.5">Firefox 1.5</a> et ses pré-versions Deer Park alpha et beta.
+</p>
+<h3 id="Exemples_.C3.A0_ne_PAS_suivre" name="Exemples_.C3.A0_ne_PAS_suivre"> Exemples à ne PAS suivre </h3>
+<p>MAUVAIS dans Firefox 1.0.2 et antérieur, car un script pourrait redéfinir l'accesseur <code>nodeType</code> :
+</p>
+<pre class="eval">return targetNode.nodeType == 1;
+</pre>
+<p>MAUVAIS dans Firefox 1.0.2 et antérieur, car un script pourrait redéfinir <code>getSelection</code> :
+</p>
+<pre class="eval">return contentWindow.getSelection();
+</pre>
+<p>MAUVAIS dans <em>toutes</em> les versions. Certains développeurs mal conseillés ont utilisé cette astuce dans le passé. Des scripts peuvent redéfinir <code>getSelection</code> dans d'anciennes versions <em>et</em> cela ne fonctionne plus du tout dans Firefox 1.0.3 et Mozilla 1.7.7 :
+</p>
+<pre class="eval">return contentWindow.__proto__.getSelection.call(contentWindow);
+</pre>
+<p>MAUVAIS dans Firefox 1.0.2 et antérieur, car un script pourrait redéfinir le second accesseur même si le premier est sûr :
+</p>
+<pre class="eval">var winWrapper = new XPCNativeWrapper(contentWindow, 'document');
+// accéder à contentWindow.document est à présent sûr, mais récupérer .title du
+// document obtenu ne l'est toujours pas.
+return winWrapper.document.title;
+</pre>
+<p>MAUVAIS dans les versions antérieurs à Firefox 1.5, car les scripts peuvent définir <code>document.open</code> pour les documents non-HTML, qui n'ont pas la fonction DOM <code>document.open</code> :
+</p>
+<pre class="eval">return contentWindow.document.open();
+</pre>
+<p><br>
+</p>
+<div class="noinclude">
+</div>
+{{ languages( { "en": "en/Safely_accessing_content_DOM_from_chrome", "ja": "ja/Safely_accessing_content_DOM_from_chrome", "pl": "pl/Bezpieczny_dost\u0119p_do_sk\u0142adnik\u00f3w_DOM_z_poziomu_chrome" } ) }}

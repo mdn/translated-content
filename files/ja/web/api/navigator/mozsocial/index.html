@@ -1,0 +1,49 @@
+---
+title: navigator.mozSocial
+slug: Web/API/Navigator/mozSocial
+tags:
+  - DOM
+  - Gecko DOM Reference
+  - Social
+translation_of: Archive/mozSocial
+---
+<div>
+ {{ApiRef}}{{non-standard_header}}{{fx_minversion_header("17.0")}}</div>
+<p><code>navigator.mozSocial</code> プロパティによって返される <code>MozSocial</code> オブジェクトは、ソーシャルメディアプロバイダーパネル内で利用することができます。ソーシャルメディアプロバイダーパネルが必要とする機能を提供します。</p>
+<div class="note">
+ <p><strong>注記:</strong> Mozilla は最終的に標準化のためにこの API の提出を予定していますが、まだ実行には至っていません。</p>
+</div>
+<h2 id="Attributes" name="Attributes">属性</h2>
+<dl>
+ <dt>
+  {{domxref("MozSocial.isVisible")}}</dt>
+ <dd>
+  真偽値を返す。コンテンツが表示されている場合は <code>true</code> を、表示されていない場合は <code>false</code> を返す。</dd>
+</dl>
+<h2 id="Methods" name="Methods">メソッド</h2>
+<dl>
+ <dt>
+  {{domxref("MozSocial.closePanel()")}}</dt>
+ <dd>
+  現在開いているフライアウトパネルを閉じます。</dd>
+ <dt>
+  {{domxref("MozSocial.getAttention()")}}</dt>
+ <dd>
+  ユーザの注意を引くために設計されたいくつかのアクションを実行します。実際の動作はプラットフォームによって異なる場合があり、ヴィジュアル効果、音声通知、画面の点滅、または他のいくつかの技術が用いられる場合があります。</dd>
+ <dt>
+  {{domxref("MozSocial.getWorker()")}}</dt>
+ <dd>
+  サービスワーカーへの参照を返します。コンテンツが一度この参照を持つと、サービスとの通信のために、<code>worker.port.postMessage()</code> メソッドを呼び出すことが可能となります。</dd>
+ <dt>
+  {{domxref("MozSocial.openChatWindow()")}}</dt>
+ <dd>
+  ブラウザウィンドウの下部に固定されたチャットウィンドウを開きます。その機能は概ね個人チャットとなると考えられますが、提供者によって異なる場合があります。</dd>
+ <dt>
+  {{domxref("MozSocial.openPanel()")}}</dt>
+ <dd>
+  指定された垂直オフセットで、サイドバーに付属するフライアウトパネルを開きます。これは例えば、サイドバー通知に対応する実際の対話の表示に用いられます。</dd>
+</dl>
+<h2 id="See_also" name="See_also">関連情報</h2>
+<ul>
+ <li><a href="/ja/docs/Social_API" title="Social_API">Social API</a></li>
+</ul>

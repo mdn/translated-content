@@ -1,0 +1,62 @@
+---
+title: Enumerator.item
+slug: Archive/Web/JavaScript/Extensions_Microsoft/Enumerator/item
+tags:
+  - JavaScript
+  - Non-standard
+  - Reference
+translation_of: Archive/Web/JavaScript/Microsoft_Extensions/Enumerator/item
+---
+<div>{{JSRef}}{{Non-standard_header}}</div>
+
+<div class="warning"><strong>Attention ! </strong>Cette méthode est spécifique à Microsoft et est uniquement prise en charge par Internet Explorer.</div>
+
+<p>La méthode <strong><code>Enumerator.item()</code></strong> renvoie l'élément courant de la collection.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre>enumObj.item()</pre>
+
+<h3 id="Valeur_de_retour">Valeur de retour</h3>
+
+<p>Cette méthode renvoie la valeur de l'élément courant. Si la collection est vide, cette méthode renverra {{jsxref("undefined")}}.</p>
+
+<h2 id="Exemples">Exemples</h2>
+
+<pre class="brush: js">function ShowDrives() {
+  var s = "";
+  var bytesPerGB = 1024 * 1024 * 1024;
+  var fso = new ActiveXObject("Scripting.FileSystemObject");
+  var e = new Enumerator(fso.Drives);
+  e.moveFirst();
+  while (e.atEnd() == false) {
+    var drv = e.item();
+    s += drv.Path + " - ";
+    if (drv.IsReady) {
+      var freeGB = drv.FreeSpace / bytesPerGB;
+      var totalGB = drv.TotalSize / bytesPerGB;
+      s += freeGB.toFixed(3) + " GB free of ";
+      s += totalGB.toFixed(3) + " GB";
+    } else {
+      s += "Not Ready";
+    }
+    s += "&lt;br /&gt;";
+    e.moveNext();
+  }
+  return(s);
+}
+</pre>
+
+<h2 id="Prérequis">Prérequis</h2>
+
+<p>Cette fonctionnalité est prise en charge pour les modes suivants : Quirks, Internet Explorer 6 en mode standard, Internet Explorer 7 en mode standard, Internet Explorer 8 en mode standard, Internet Explorer 9 en mode standard et Internet Explorer 10 en mode standard. Cette fonctionnalité n'est pas prise en charge dans les applications Windows 8.x Store.</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>{{jsxref("Enumerator")}}</li>
+ <li>{{jsxref("Enumerator.atEnd()")}}</li>
+ <li>{{jsxref("Enumerator.moveFirst()")}}</li>
+ <li>{{jsxref("Enumerator.moveNext()")}}</li>
+ <li><a href="/fr/docs/Web/JavaScript/Extensions_JavaScript_Microsoft">Les extensions JavaScript spécifiques de Microsoft</a></li>
+</ul>

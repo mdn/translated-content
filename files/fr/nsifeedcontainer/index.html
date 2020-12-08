@@ -1,0 +1,101 @@
+---
+title: nsIFeedContainer
+slug: nsIFeedContainer
+tags:
+  - Interfaces
+  - Référence_de_l'API_XPCOM
+  - 'XPCOM:Références'
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIFeedContainer
+---
+<p>L'interface <code>nsIFeedContainer</code> fournit des champs standards utilisés à la fois par les flux (<code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFeed" title="">nsIFeed</a></code>) et les entrées de flux (<code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFeedEntry" title="">nsIFeedEntry</a></code>).</p>
+<p><br>
+ </p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/feeds/public/nsIFeedContainer.idl" rel="custom">toolkit/components/feeds/public/nsIFeedContainer.idl</a></code><span style="text-align: right; float: right;"><a href="/fr/docs/Interfaces/À_propos_des_interfaces_scriptables" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">Last changed in Gecko 1.8.1 (Firefox 2 / Thunderbird 2 / SeaMonkey 1.1)</span></div>
+</div><p></p>
+<p>Hérité de : <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFeedElementBase" title="">nsIFeedElementBase</a></code> Implémenté par : <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFeed" title="">nsIFeed</a></code></p>
+<h2 id="Synoptique" name="Synoptique">Synoptique</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code><a href="#normalize.28.29">normalize</a>();</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Attributs" name="Attributs">Attributs</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Attribut</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>authors</code></td>
+   <td><code><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIArray" title="">nsIArray</a></code> </code></td>
+   <td>Une liste d'objets <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFeedPerson" title="">nsIFeedPerson</a></code> qui décrit l'auteur du flux ou de l'entrée de flux.</td>
+  </tr>
+  <tr>
+   <td>&lt;code&gt;categories</td>
+   <td><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIArray" title="">nsIArray</a></code></td>
+   <td>Une liste de catégories présentes dans un flux ou une entrée de flux.
+    <div class="note">
+     <b>Note :</b> La liste retournée contiendra des objets <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFeedCategory" title="">nsIFeedCategory</a></code>, cependant cette interface n'est pas encore implémentée.</div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>contributors</code></td>
+   <td><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIArray" title="">nsIArray</a></code></td>
+   <td>Une liste d'objets <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFeedPerson" title="">nsIFeedPerson</a></code> qui décrit les contributeurs au flux ou aux entrées de flux.</td>
+  </tr>
+  <tr>
+   <td><code>fields</code></td>
+   <td><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWritablePropertyBag2" title="">nsIWritablePropertyBag2</a></code></td>
+   <td>Fournit un accès à l'ensemble des champs présents dans le document. Les champs Atom et RSS courants sont normalisés, et comprennent certaines extensions d'espace de nommage telle que "dc:subject" et "content:encoded". Les clients peuvent éviter la normalisation en vérifiant le type du flux et en accédant à des champs spécifiques.
+    <p>On accède aux espaces de nommages courants en utilisant des préfixes, tel que <code>get("dc:subject");</code>. Pour plus d'informations à propos des préfixes, voir <code><a href="https://developer.mozilla.org/fr/docs/XPCOM_Interface_Reference/nsIFeedResult#registerExtensionPrefix()()">nsIFeedResult.registerExtensionPrefix()()</a></code>.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>id</code></td>
+   <td><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/AString" title="">AString</a></code></td>
+   <td>Une chaîne qui identifie le flux ou l'entrée de flux. Tout les flux ne la contiennent pas, mais les formats de flux les plus importants possèdent des ID pour chaque entrée.</td>
+  </tr>
+  <tr>
+   <td><code>link</code></td>
+   <td><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI" title="">nsIURI</a></code></td>
+   <td>Une URI contenant le lien original du flux ou de l'entrée.</td>
+  </tr>
+  <tr>
+   <td><code>rights</code></td>
+   <td><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFeedTextConstruct" title="">nsIFeedTextConstruct</a></code></td>
+   <td>Les droits ou la licence d'utilisation du flux ou de l'entrée de flux.</td>
+  </tr>
+  <tr>
+   <td><code>title</code></td>
+   <td><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFeedTextConstruct" title="">nsIFeedTextConstruct</a></code></td>
+   <td>Le titre du flux ou de l'entrée de flux. Souvenez-vous que certains flux n'ont pas de titre, et que certains titres contiennent des balises, aussi soyez prudent en utilisant cet attribut.</td>
+  </tr>
+  <tr>
+   <td><code>updated</code></td>
+   <td><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/AString" title="">AString</a></code></td>
+   <td>Une chaîne contenant la date de la dernière mise à jour du flux ou de l'entrée de flux, au format <a class="external" href="http://www.ietf.org/rfc/rfc0822.txt">RFC822</a>. Cette chaîne peut être analysée par du code JavaScript et du code mail.</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="M.C3.A9thodes" name="M.C3.A9thodes">Méthodes</h2>
+<h3 id="normalize.28.29" name="normalize.28.29">normalize()</h3>
+<p>Synchronise les champs d'un conteneur avec ses attributs propres.</p>
+<pre class="eval"> void normalize();
+</pre>
+<h2 id="Voir_.C3.A9galement" name="Voir_.C3.A9galement">Voir également</h2>
+<ul>
+ <li><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI" title="">nsIURI</a></code></li>
+ <li><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFeedTextConstruct" title="">nsIFeedTextConstruct</a></code></li>
+</ul>

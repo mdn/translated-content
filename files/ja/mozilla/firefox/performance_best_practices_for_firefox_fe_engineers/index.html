@@ -1,0 +1,207 @@
+---
+title: Firefox フロントエンドエンジニアのためのパフォーマンスベストプラクティス
+slug: Mozilla/Firefox/Performance_best_practices_for_Firefox_fe_engineers
+translation_of: Mozilla/Firefox/Performance_best_practices_for_Firefox_fe_engineers
+---
+<h2 id="可能であればメインスレッドを避けること">可能であればメインスレッドを避けること</h2>
+
+<p>メインスレッドはユーザーイベントを処理し、描画を行います。また、多くの JavaScript はメインスレッドで動きます。</p>
+
+<p>メインスレッドを避けるほどに、ユーザーイベントや描画、応答が素早くできます。</p>
+
+<p>メインスレッドから何か計算する必要がある場合、 <a href="/ja/docs/Web/API/Web_Workers_API/Using_web_workers">Worker</a> を使うことをおすすめします。また、より高い権限が必要な場合は <a href="/en-US/docs/Web/API/ChromeWorker">ChromeWorker</a> (Firefoxのみ)を使うことを検討してください。</p>
+
+<h2 id="requestIdleCallback">requestIdleCallback</h2>
+
+<p>どうしてもメインスレッドで何らかの長い処理をしないといけない場合、おそらく存在するであろうユーザーが何もしない空き時間に、小さなパーツに分割して実行することを検討してください。</p>
+
+<p>RequestIdleCallback ではこちらが役に立つでしょう。 <a href="https://hacks.mozilla.org/2016/11/cooperative-scheduling-with-requestidlecallback/">こちらの Hacks ブログをチェックしてください。</a></p>
+
+<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1353206">そして、いつか、DOM コンテキスト以外でも可能となるでしょう！</a></p>
+
+<h2 id="Hide_your_panels">Hide your panels</h2>
+
+<p>If you’re adding a new &lt;popup&gt; or &lt;panel&gt; to a XUL document, set the hidden=”true” attribute on it by default. That way, the binding is applied on demand, and we can save time when constructing the XUL document.</p>
+
+<h2 id="Get_familiar_with_the_pipeline_that_gets_pixels_to_the_screen">Get familiar with the pipeline that gets pixels to the screen</h2>
+
+<p><img alt="This is the pipeline that a browser uses to get pixels to the screen." src="https://mdn.mozillademos.org/files/14995/pasted%20image%200.png" style="height: 167px; width: 1093px;"></p>
+
+<div class="note">
+<p>The above image is used under <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a>, courtesy of <a href="https://developers.google.com/web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing">this page</a> from our friends at Google, which itself is well worth the read.</p>
+</div>
+
+<p>For 60fps, the above needs to occur in 16ms or less.</p>
+
+<p>Note that <a href="https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame">the requestAnimationFrame API</a> allows you to queue up JavaScript to run very soon after a trip through this pipeline has been completed. This is useful because the last trip through the pipeline likely cached layout and style information which (assuming the DOM hasn't been dirtied somehow) should still be valid and cheap to access (see the sections below on synchronous style and layout flushes).</p>
+
+<h2 id="Detecting_and_Avoiding_Synchronous_Style_Flushes">Detecting and Avoiding Synchronous Style Flushes</h2>
+
+<h3 id="What_are_Style_Flushes">What are Style Flushes?</h3>
+
+<p>When CSS is applied to a document (HTML or XUL, it doesn’t matter), we do a calculation to determine what CSS styles will apply to each element.</p>
+
+<p>This will happen during the first time the page loads and CSS is first applied, but can happen again if JavaScript modifies the DOM - for example, by changing DOM node attributes (either directly or via APIs like <code>classList.add</code> / <code>classList.remove</code> / <code>classList.toggle</code>), or adding / removing / moving DOM nodes. Note that because styles are normally scoped to the entire document, the cost of doing these style calculations is proportional to the number of DOM nodes in the document (and the number of styles being applied).</p>
+
+<p>It is expected that over time, script will update the DOM, requiring us to recalculate styles. Normally, however, the changes to the DOM just result in the standard style calculation that occurs immediately after the JavaScript has finished running during the 16ms window.</p>
+
+<p>It is possible for JavaScript to force multiple, synchronous style calculations (or “style flushes”) to occur during the 16ms window, which greatly increases the probability of going over the 16ms limit, causing us to skip painting one or more frames. Skipping frames is called <strong>jank</strong>.</p>
+
+<p>Generally speaking, you force a synchronous style flush any time you query for style information after the DOM has changed. Depending on whether or not <a href="https://gist.github.com/paulirish/5d52fb081b3570c81e3a">the style information you’re asking for has something to do with size or position</a>, you may also cause a layout re-calculation (also referred to as “layout flush” or “reflow”), which is also an expensive step (see the section on Detecting and Avoiding Synchronous Reflow below).</p>
+
+<p>To avoid this: avoid reading style information if you can. If you must read style information, do so at the very beginning of the frame before any changes to the DOM have occurred since the last style flush (perhaps by using <a href="https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame</a> to set a callback at the start of a frame). At the start of a frame, style values are cached from the last calculation and more cheaply accessed when the document hasn’t yet undergone any change.</p>
+
+<h3 id="Writing_tests_to_ensure_you_don’t_add_more_synchronous_style_flushes">Writing tests to ensure you don’t add more synchronous style flushes</h3>
+
+<p>Unlike reflow, there isn’t a “observer” mechanism for style recalculations. There is, however, <a href="http://searchfox.org/mozilla-central/rev/78cefe75fb43195e7f5aee1d8042b8d8fc79fc70/dom/interfaces/base/nsIDOMWindowUtils.idl#1865-1874">an attribute on nsIDOMWindowUtils</a> that records a count of how many style calculations have occurred for a particular DOM window.</p>
+
+<p>It should be possible to write a test that gets the <code>nsIDOMWindowUtils</code> for a browser window, records the count of styleFlushes, then <strong>synchronously calls the function</strong> that you want to test, and immediately after checks the styleFlushes attribute again. If the value went up, your code caused synchronous style flushes to occur.</p>
+
+<p>Note that your test and function must be called synchronously in order for this test to be accurate. If you ever go back to the event loop (by yielding, waiting for an event, etc), style flushes unrelated to your code are likely to run, and your test will give you a false positive.</p>
+
+<h2 id="Detecting_and_Avoiding_Synchronous_Reflow">Detecting and Avoiding Synchronous Reflow</h2>
+
+<div class="note">
+<p>This is also sometimes called “sync Layout” or “sync Layout calculations”</p>
+</div>
+
+<p>“Sync Reflow” is a term bandied about a lot, and has negative connotations. It's not unusual for an engineer to have only the vaguest sense of what it is - and to only know to avoid it.</p>
+
+<p>This section will attempt to demystify things.</p>
+
+<p>The first time a document (XUL or HTML) loads, we parse the markup, and then apply styles. Once the styles have been calculated, we then need to calculate where things are going to be placed on the page. This layout step can be seen in the “16ms” pipeline graphic above, and occurs just before we paint things to be composited for the user to see.</p>
+
+<p>It is expected that over time, script will update the DOM, requiring us to recalculate styles, and then update layout. Normally, however, the changes to the DOM just result in the standard style calculation that occurs immediately after the JavaScript has finished running during the 16ms window.</p>
+
+<p>Also note that since <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=67752">the early days</a>, Gecko has had the notion of interruptible reflow. This means that size and position calculations can be broken up over several of those 16ms windows. Gecko will decide when an interruptible reflow has taken too long, and then bail out to paint. It will continue the reflow in the next 16ms window. <strong>Interruptible reflow is fine.</strong> Interruptible reflow only happens during initial document load.</p>
+
+<p>Uninterruptible reflow is what we want to <strong>avoid at all costs</strong>. Uninterruptible reflow occurs when some DOM node’s styles have changed such that the size or position of one or more nodes in the document will need to be updated, and then <strong>JavaScript asks for the size or position of anything</strong>. <a href="https://gist.github.com/paulirish/5d52fb081b3570c81e3a">Here’s a comprehensive list of things that JavaScript can ask for that can cause uninterruptible reflow</a>.</p>
+
+<p>Here’s a simple example, cribbed from <a href="http://paulrouget.com/e/fxoshud">this blog post by Paul Rouget</a>:</p>
+
+<p><code>div1.style.margin = "200px";        // Line 1<br>
+ var height1 = div1.clientHeight;    // Line 2<br>
+ div2.classList.add("foobar");       // Line 3<br>
+ var height2 = div2.clientHeight;    // Line 4<br>
+ doSomething(height1, height2);      // Line 5</code></p>
+
+<p>At line 1, we’re setting some style information on a DOM node that’s going to result in a reflow - but (at just line 1) it’s okay, because that reflow will happen after the style calculation.</p>
+
+<p>Note line 2 though - we’re asking for the height of some DOM node. This means that Gecko needs to synchronously calculate layout using an uninterruptible reflow in order to answer the question that JavaScript is asking (“What is the clientHeight of div1?”).</p>
+
+<p>It’s possible for our example to avoid this synchronous, uninterruptible reflow by moving lines 2 and 4 above line 1. Assuming there weren’t any style changes requiring size or position recalculation above line 1, the clientHeight information should be cached since the last reflow, and will not result in a new layout calculation.</p>
+
+<p>If you can avoid querying for the size or position of things in JavaScript, that’s the safest option - especially because it’s always possible that something earlier in this tick of JS execution caused a style change in the DOM without you knowing it.</p>
+
+<p>You could also potentially move your query into a requestAnimationFrame callback. This will run your code after the last frame is painted, and all of the layout data should be cached. Assuming no DOM properties affecting size or position have been changed in the meantime, accessing those cached values should be free.</p>
+
+<h3 id="nsIDOMWindowUtils.getBoundsWithoutFlushing">nsIDOMWindowUtils.getBoundsWithoutFlushing</h3>
+
+<p><code>getBoundsWithoutFlushing</code> does exactly what it says - it allows you to get the rect for some DOM node in a window without flushing layout. This means that the information you get is potentially stale, but allows you to avoid a sync reflow.</p>
+
+<h3 id="nsIDOMWindowUtils.getRootBounds">nsIDOMWindowUtils.getRootBounds</h3>
+
+<p>Similar to above - but allows you to get dimensions of the containing window without causing a sync reflow.</p>
+
+<h3 id="nsIDOMWindowUtils.getScrollXY">nsIDOMWindowUtils.getScrollXY</h3>
+
+<p>Similar to above - but allows you to get the window scroll offsets without causing a sync reflow.</p>
+
+<h3 id="Writing_tests_to_ensure_you_don’t_add_more_unintentional_reflow">Writing tests to ensure you don’t add more unintentional reflow</h3>
+
+<p>We have something called <a href="http://searchfox.org/mozilla-central/rev/78cefe75fb43195e7f5aee1d8042b8d8fc79fc70/docshell/base/nsIReflowObserver.idl">nsIReflowObserver</a>, which allows us to detect both interruptible and uninterruptible reflows. A number of tests have been written that exercise various functions of the browser (<a href="http://searchfox.org/mozilla-central/rev/78cefe75fb43195e7f5aee1d8042b8d8fc79fc70/browser/base/content/test/general/browser_tabopen_reflows.js">opening tabs</a>, <a href="http://searchfox.org/mozilla-central/source/browser/base/content/test/general/browser_windowopen_reflows.js">opening windows</a>) and ensures that we don’t add new uninterruptible reflows accidentally while those actions occur.</p>
+
+<p>You should add tests like this for your feature if you happen to be touching the DOM.</p>
+
+<h3 id="Detecting_Over-painting_with_Paint_Flashing">Detecting Over-painting with Paint Flashing</h3>
+
+<p>Painting is, in general, cheaper than both style calculation and layout calculation - but the more you can avoid, the better.</p>
+
+<p>Generally speaking, the larger an area that needs to be repainted, the longer it takes. Similarly, the more things that need to be repainted, the longer it takes.</p>
+
+<p>Our graphics team has added a handy feature to help you detect when and where paints are occurring. This feature is called “paint flashing”, and it can be activated for both web content and the browser chrome. Paint flashing tints each region being painted with a randomly selected colour so that it’s more easy to see what on the screen is being painted.</p>
+
+<p>You can activate paint flashing for browser chrome by setting <code>nglayout.debug.paint_flashing_chrome</code> to true.</p>
+
+<p>You can activate paint flashing for web content by setting <code>nglayout.debug.paint_flashing</code> to true.</p>
+
+<p>Now exercise your function and see what’s painting. See a lot of flashing / colours? That means a lot of painting is going on.</p>
+
+<p>Painting occurs on the main thread. The more things we can take off of the main thread, the better. If you’re overpainting, it’s a good idea to figure out why.</p>
+
+<p>Perhaps you’re animating something that requires a repaint? For example, transitioning the background-color of a DOM node from red to blue will result in a repaint for every frame of the animation, and paint flashing will reveal that. Consider using a different animation that can be accelerated by the GPU - these occur off of the main thread, and have a much higher probability of running at 60fps (see the section below labeled “Rely on the Compositor for Animations” for further details).</p>
+
+<p>Perhaps you’re touching some DOM nodes in such a way that unexpected repaints are occurring in an area that don’t need it. Best to investigate and try to remove those as best you can. Sometimes, our graphics layer invalidates regions in ways that might not be clear to you, and a section outside of the thing that just repainted will also repaint. Sometimes this can be addressed by ensuring that the thing changing is on its own layer (though this comes at a memory cost). You can put something on its own layer by setting its z-index, or by setting the <a href="https://developer.mozilla.org/en/docs/Web/CSS/will-change">will-change style</a> on the node, though this should be used sparingly.</p>
+
+<p>If you’re unsure why something is repainting, consider talking to our always helpful Graphics team in the #gfx IRC channel, and they can probably advise you. Note that a significant number of the Graphics team members are in the Eastern Time zone, so let that information guide your timing when you ask questions in #gfx.</p>
+
+<h2 id="Adding_Nodes_with_documentFragment">Adding Nodes with documentFragment</h2>
+
+<p>There is periodically the need to add a series of DOM nodes as children to another DOM node. For example, for things like our XUL menupopup’s, one often has JavaScript dynamically inserting menuitem’s.</p>
+
+<p>Inserting items into the DOM comes with a cost. If you’re adding a number of children to a DOM node in a loop, it’s often cheaper to batch those adds into a single insertion.</p>
+
+<p>Thanks to <a href="https://developer.mozilla.org/en/docs/Web/API/Document/createDocumentFragment">the createDocumentFragment API</a>, this is very straight-forward.</p>
+
+<p>This example has been cribbed from <a href="https://davidwalsh.name/documentfragment">davidwalsh’s blog post</a>:</p>
+
+<p><code>// Create the fragment<br>
+ var frag = document.createDocumentFragment();<br>
+ // Create numerous list items, add to fragment<br>
+ for(var x = 0; x &lt; 10; x++) {<br>
+     var li = document.createElement("li");<br>
+     li.innerHTML = "List item " + x;<br>
+     frag.appendChild(li);<br>
+ }</code></p>
+
+<p><code>// Mass-add the fragment nodes to the list<br>
+ listNode.appendChild(frag);</code></p>
+
+<p>The above is strictly cheaper that individually adding each node to the DOM.</p>
+
+<h2 id="The_Gecko_Profiler_Add-on_is_your_friend">The Gecko Profiler Add-on is your friend</h2>
+
+<p>The Gecko Profiler is your best friend when diagnosing performance problems and looking for bottlenecks.</p>
+
+<p>There’s plenty of excellent documentation on MDN about the Gecko Profiler:</p>
+
+<ul>
+ <li><a href="/en-US/docs/Mozilla/Performance/Reporting_a_Performance_Problem">Basic instructions for gathering and sharing a performance profile</a></li>
+ <li><a href="en-US/docs/Mozilla/Performance/Profiling_with_the_Built-in_Profiler">Advanced profile analysis</a></li>
+</ul>
+
+<h2 id="Don’t_Guess._Measure.">Don’t Guess. Measure.</h2>
+
+<p>If you’re working on a performance improvement, this should go without saying: ensure that what you care about is actually improving by measuring before and after.</p>
+
+<p>Landing a speculative performance enhancement is the same thing as landing speculative bug fixes - these things need to be tested. Even if that means instrumenting a function with a <code>Date.now()</code> recording at the entrance, and a <code>Date.now()</code> at the exits in order to measure processing time changes.</p>
+
+<p>Prove to yourself that you’ve actually improved something by measuring before and after.</p>
+
+<h3 id="window.performance">window.performance</h3>
+
+<p>The <a href="/en-US/docs/Web/API/Performance_API">Performance API</a> is very useful for taking high-resolution measurements. This is usually much better than using your own hand-rolled timers to measure how long things take.</p>
+
+<p>Also, the Gecko Profiler back-end is in the process of being modified to expose things like markers (from window.performance.mark).</p>
+
+<h2 id="Rely_on_the_Compositor_for_animations._Main_thread_animation_should_be_treated_as_deprecated.">Rely on the Compositor for animations. Main thread animation should be treated as deprecated.</h2>
+
+<p><a href="https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/">Here’s an excellent article about doing that.</a></p>
+
+<h2 id="Use_IndexedDB_for_Storage">Use IndexedDB for Storage</h2>
+
+<p><a href="en-US/docs/Web/HTML/Using_the_application_cache">AppCache</a> and <a href="/en-US/docs/Web/API/Storage/LocalStorage">LocalStorage</a> are synchronous storage APIs that will block the main thread when you use them. Avoid them at all costs!</p>
+
+<p><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">IndexedDB</a> is preferable, as the API is asynchronous (all disk operations occur off of the main thread), and can be accessed from Web Workers.</p>
+
+<p>IndexedDB is also arguably better than storing and retrieving JSON from a file - particularly if the JSON encoding or decoding is occurring on the main thread. IndexedDB will do JS object serialization and deserialization for you using the Structured Clone algorithm, meaning that you can stash <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#Supported_types">things like Maps, Sets, Dates, Blobs, and more</a>, without having to do conversions for JSON compatibility.</p>
+
+<p>A Promise-based wrapper for IndexedDB, <a href="http://searchfox.org/mozilla-central/source/toolkit/modules/IndexedDB.jsm">IndexedDB.jsm</a>, is available for chrome code.</p>
+
+<h2 id="Test_on_weak_hardware">Test on weak hardware</h2>
+
+<p>For the folks paid to work on Firefox, we tend to have pretty powerful hardware for development. This is great, because it reduces build times, and means we can do our work faster.</p>
+
+<p>We should remind ourselves that the majority of our user base is unlikely to have similar hardware. Look at the <a href="https://metrics.mozilla.com/firefox-hardware-survey/">Firefox Hardware Report</a> to get a sense of what our users are working with. Test on slower machines to make it more obvious to yourself if what you’ve written impacts the performance of the browser.</p>
+
+<p> </p>

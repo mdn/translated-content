@@ -1,0 +1,140 @@
+---
+title: Ajout de gestionnaires d'évènements
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Ajout_de_gestionnaires_d'évènements
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_Event_Handlers
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Menus_défilants" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Plus_sur_les_gestionnaires_d'évènements">Suivant  »</a></p>
+</div>
+
+<p>La boîte de dialogue de recherche de fichiers est tout à fait correcte à ce stade. Nous ne l'avons pas beaucoup optimisée mais nous avons facilement créé une interface utilisateur. Dans ce qui suit, nous allons montrer comment lui ajouter des scripts.</p>
+
+<h3 id="Utilisation_de_scripts" name="Utilisation_de_scripts">Utilisation de scripts</h3>
+
+<p>Pour rendre la boîte de dialogue de recherche de fichiers fonctionnelle, nous avons besoin d'ajouter des scripts qui vont s'exécuter quand l'utilisateur interagira avec le dialogue. Nous voudrions ajouter un script pour gérer le bouton « Rechercher », le bouton « Annuler » et pour gérer chaque commande du menu. Nous écrirons ces scripts en utilisant des fonctions <a href="/fr/JavaScript" title="fr/JavaScript">JavaScript</a> de la même manière qu'en <a href="/fr/HTML" title="fr/HTML">HTML</a>.</p>
+
+<p>Vous pouvez utiliser l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/script" title="script">script</a></code> pour inclure des scripts dans des fichiers XUL. Vous pouvez aussi inclure le script directement dans le fichier XUL entre les balises <code><a href="/fr/docs/Mozilla/Tech/XUL/script" title="script">script</a></code> ouvrante et fermante, mais il est préférable de placer le code dans un fichier séparé. Votre fenêtre XUL se chargera un peu plus rapidement. Nous utiliserons alors l'attribut <code id="a-src"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/src">src</a></code> pour lier un fichier de script externe.</p>
+
+<div class="highlight">
+<h4 id="Notre_exemple_de_recherche_de_fichiers" name="Notre_exemple_de_recherche_de_fichiers">Notre exemple de recherche de fichiers</h4>
+
+<p>Ajoutons un script au dialogue de recherche de fichiers. Bien que le nom du fichier de script n'ait pas d'importance, il est courant de lui donner le même nom que celui du fichier XUL, avec l'extension 'js'. Dans ce cas, on utilisera 'findfile.js'. Ajoutez la ligne ci-dessous juste après la balise <code><a href="/fr/docs/Mozilla/Tech/XUL/window" title="window">window</a></code> ouvrante et AVANT tout autre élément.</p>
+
+<pre class="eval"><span class="highlightred">&lt;script src="findfile.js"/&gt;</span>
+</pre>
+
+<p>Nous créerons le fichier de script plus tard, quand nous connaîtrons son contenu. Nous y définirons des fonctions que nous pourrons appeler dans des gestionnaires d'événements.</p>
+</div>
+
+<p>Nous pouvons inclure de multiples scripts dans un fichier XUL en utilisant de multiples balises <code><a href="/fr/docs/Mozilla/Tech/XUL/script" title="script">script</a></code>, chacune pointant vers un script différent. Nous pouvons utiliser des URLs relatives ou absolues. Par exemple, nous pouvons utiliser des URLs sous les formes suivantes :</p>
+
+<pre class="eval">&lt;script src="findfile.js"/&gt;
+&lt;script src="<a class="external" rel="freelink">chrome://findfiles/content/help.js</a>"/&gt;
+&lt;script src="<span class="nowiki">http://www.example.com/js/items.js</span>"/&gt;
+</pre>
+
+<p>Ce tutoriel n'a pas pour but de décrire comment écrire du JavaScript. C'est un sujet vaste et il existe déjà beaucoup de documentation le traitant.</p>
+
+<div class="note">Par défaut, la console JavaScript n'affiche que les erreurs provenant des contenus Web. Pour voir les erreurs JavaScript du chrome, il est nécessaire de modifier la préférence <code>javascript.options.showInConsole</code> à 'true'. Vous pouvez également faire du débogage en modifiant la préférence <code>javascript.options.strict</code>. En la définissant à 'true', les erreurs causés par des codes non standard, mal écrits, ou syntaxiquement erronés seront affichés dans la console d'erreurs.</div>
+
+<h3 id="R.C3.A9ponse_aux_.C3.A9v.C3.A9nements" name="R.C3.A9ponse_aux_.C3.A9v.C3.A9nements">Réponse aux événements</h3>
+
+<p>Le script contiendra le code qui répondra aux différents événements déclenchés par l'utilisateur ou par d'autres situations. Il existe environ une trentaine d'événements pouvant être gérés de différentes manières. Un événement classique est le bouton de souris ou la touche pressée par l'utilisateur. Chaque élément XUL a la capacité de déclencher certains événements dans des situations différentes. Quelques déclenchements d'événements sont spécifiques à certains éléments.</p>
+
+<p>Chaque événement a un nom, par exemple, 'mousemove' est le nom de l'événement qui est déclenché quand l'utilisateur passe la souris au-dessus d'un élément d'interface utilisateur. XUL utilise le mécanisme d'événement défini par le <a class="external" href="http://www.yoyodesign.org/doc/w3c/dom2/events/Overview.html">DOM Events</a> (Version traduite). Quand survient une action devant déclencher un événement, telle que le déplacement de la souris par l'utilisateur, un objet 'event' correspondant à ce type d'événement est créé. Des propriétés sont assignées à cet objet event telles que la position de la souris, la touche pressée, etc.</p>
+
+<p>L'événement est ensuite envoyé au XUL par phases.</p>
+
+<ul>
+ <li>Dans la phase de capture, l'événement est d'abord envoyé à la fenêtre, puis au document, suivi par chaque ancêtre de l'élément XUL visé, jusqu'à ce qu'il l'atteigne.</li>
+ <li>Dans la phase de ciblage, l'événement est envoyé à l'élément XUL cible.</li>
+ <li>Pendant la phase de diffusion, l'événement est envoyé à chaque élément dans l'autre sens jusqu'à ce qu'il atteigne à nouveau la fenêtre.</li>
+</ul>
+
+<p>Vous pouvez réagir à un événement pendant la phase de capture ou de diffusion. Une fois que l'événement a terminé de se propager, l'action correspondant au comportement natif de l'élément est déclenchée.</p>
+
+<p>Par exemple, quand la souris passe sur un bouton inclus dans une boîte, un événement 'mousemove' est généré et envoyé d'abord à la fenêtre, puis au document et ensuite à la boîte. Cela complète la phase de capture. Ensuite, l'événement 'mousemove' est envoyé au bouton. Enfin la phase de diffusion se traduit par le renvoi de l'événement vers la boîte, puis le document et enfin la fenêtre. La phase de diffusion est par essence l'inverse de la phase de capture. Notez que certains événements ne passent pas par la phase de diffusion.</p>
+
+<p>Vous pouvez attacher des scrutateurs à chaque élément pour être à l'écoute des événements pendant chaque étape de leur propagation. Étant donné qu'un simple événement est passé à tous les ancêtres, vous pouvez attacher un scrutateur à un élément spécifique ou à un élément supérieur dans la hiérarchie. Naturellement, un événement attaché à un élément parent recevra une notification de tous les éléments qu'il contient, alors qu'un événement attaché à un bouton recevra seulement des événements concernant ce bouton. C'est utile si vous désirez gérer plusieurs éléments avec un code identique ou similaire.</p>
+
+<p><span class="comment">Une fois que vous gérez un événement, sans vous souciez du stade de sa propagation, vous voudrez probablement le stopper avant qu'il ne soit envoyé à d'autres éléments, ce qui, en substance, signifie que vous voulez interrompre les phases de capture et de diffusion. Il existe plusieurs façons d'y parvenir, en fonction de la manière avec laquelle vous avez attaché le scrutateur d'événement à un élément.</span></p>
+
+<p>L'événement le plus utilisé est l'événement 'command'. L'événement 'command' est déclenché quand l'utilisateur active un élément, par exemple en pressant un bouton, en cochant une case ou en sélectionnant une entrée d'un menu. L'événement 'command' est pratique car il gère automatiquement les différentes méthodes d'activation d'un élément. Par exemple, l'événement 'command' se produira indifféremment si l'utilisateur utilise sa souris pour cliquer le bouton ou s'il presse la touche <code>Entrée</code>.</p>
+
+<p>Il y a deux manières d'attacher un scrutateur d'événement à un élément. Premièrement, en utilisant un attribut avec un script comme valeur. Deuxièmement, en appelant la méthode <code>addEventListener</code> d'un élément. La première manière peut seulement gérer les événements en phase de diffusion mais est plus simple à écrire. La seconde peut gérer les événements sur chaque phase et peut aussi être utilisée pour attacher plusieurs scrutateurs pour un événement à un élément. L'utilisation de la « forme par attribut » est une manière plus commune pour la plupart des événements.</p>
+
+<h3 id="Scrutateurs_d.27.C3.A9v.C3.A9nements_par_attributs" name="Scrutateurs_d.27.C3.A9v.C3.A9nements_par_attributs">Scrutateurs d'événements par attributs</h3>
+
+<p>Pour utiliser la forme par attribut, placez un attribut sur un élément à l'endroit que vous voulez, son nom devra être le nom de l'événement précédé par le mot « on ». Par exemple, l'attribut correspondant à l'événement 'command' est <code id="a-oncommand"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/oncommand">oncommand</a></code>. La valeur de l'attribut devra être le code à exécuter quand l'événement se produira. Typiquement, ce code sera court et appellera une fonction définie dans un script séparé. Voici un exemple de réponse lorsqu'un bouton est pressé :</p>
+
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_events_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_events_1.xul">Voir</a></p>
+
+<pre>&lt;button label="OK" oncommand="alert('Le bouton a été pressé !');"/&gt;</pre>
+
+<p>Puisque l'événement 'command' va se diffuser, il est également possible de placer le scrutateur d'événement sur un élément conteneur. Dans l'exemple ci-dessous, le scrutateur a été placé sur une boîte et il recevra les événements pour tous ses éléments.</p>
+
+<p><span id="Exemple_2"><a id="Exemple_2"></a><strong>Exemple 2</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_events_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_events_2.xul">Voir</a></p>
+
+<pre>&lt;vbox oncommand="alert(event.target.tagName);"&gt;
+   &lt;button label="OK"/&gt;
+   &lt;checkbox label="Voir les images"/&gt;
+&lt;/vbox&gt;
+</pre>
+
+<p>Dans cet exemple, l'événement 'command' va se diffuser du bouton ou de la case à cocher jusqu'à la boîte, où il sera traité. Si un second scrutateur (l'attribut <code id="a-oncommand"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/oncommand">oncommand</a></code>) était placé sur le bouton, son code serait appelé en premier, suivi par le gestionnaire de la boîte. L'objet event est transmis aux gestionnaires d'événements comme un argument implicite nommé 'event'. Il est utilisé pour obtenir des informations spécifiques à propos de l'événement. Une des plus utilisées est la propriété 'target' (cible) de l'événement, qui cible l'élément à partir duquel l'événement s'est produit. Dans l'exemple, nous affichons une alerte contenant le nom de l'élément cible. La cible est très utile lors de l'utilisation d'un événement en diffusion dans le cas où vous auriez une série de boutons gérée par un même script.</p>
+
+<p>Vous noterez que la syntaxe de l'attribut est identique à celle utilisée pour les événements dans les documents HTML. En fait, HTML et XUL partagent le même mécanisme d'événement. Une différence importante est que l'événement 'click' (ou l'attribut <code id="a-onclick"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/onclick">onclick</a></code>) est utilisé en HTML pour répondre aux boutons, alors qu'on devra utiliser l'événement 'command' en XUL. XUL possède un événement 'click', mais il répond uniquement aux clics de souris, pas à l'utilisation du clavier. Ainsi, l'événement 'click' devra être évité en XUL, sauf si vous avez une raison d'avoir un élément uniquement géré avec la souris. De plus, tandis que l'événement 'command' ne sera pas envoyé si un élément est désactivé, l'événement 'click' sera envoyé sans tenir compte de l'état activé ou non de l'élément.</p>
+
+<div class="highlight">
+<h4 id="Notre_exemple_de_recherche_de_fichiers_2" name="Notre_exemple_de_recherche_de_fichiers_2">Notre exemple de recherche de fichiers</h4>
+
+<p>Un gestionnaire <code id="a-oncommand"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/oncommand">oncommand</a></code> peut être placé sur les boutons « Rechercher » et « Annuler » dans le dialogue de recherche de fichiers. L'appui sur le bouton « Rechercher » devrait démarrer la recherche. Comme nous n'implémenterons pas cette partie, nous l'omettrons. En revanche, l'appui sur le bouton « Annuler » devrait fermer la fenêtre. Le code ci-dessous montre comment le faire. Pendant que nous y sommes, ajoutons le même code à l'item de menu « Fermer ».</p>
+
+<pre class="eval">&lt;menuitem label="Fermer" accesskey="c" <span class="highlightred">oncommand="window.close();"</span>/&gt;
+...
+
+&lt;button id="cancel-button" label="Annuler"
+     <span class="highlightred">oncommand="window.close();</span>"/&gt;
+</pre>
+Deux gestionnaires ont été ajoutés ici. L'attribut <code id="a-oncommand"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/oncommand">oncommand</a></code> a été ajouté à l'item de menu « Fermer ». En utilisant ce gestionnaire, l'utilisateur pourra fermer la fenêtre en cliquant sur l'item de menu ou en le sélectionnant par le clavier. Le gestionnaire <code id="a-oncommand"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/oncommand">oncommand</a></code> a également été ajouté au bouton « Annuler ».</div>
+
+<h3 id="Scrutateurs_d.27.C3.A9v.C3.A9nements_DOM" name="Scrutateurs_d.27.C3.A9v.C3.A9nements_DOM">Scrutateurs d'événements DOM</h3>
+
+<p>La seconde façon d'ajouter un gestionnaire d'événement est d'appeler la méthode <code>addEventListener</code> d'un élément. Celle-ci vous permet d'attacher dynamiquement un scrutateur d'événement et de scruter les événements durant la phase de capture. La syntaxe est la suivante :</p>
+
+<p><span id="Exemple_3"><a id="Exemple_3"></a><strong>Exemple 3</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_events_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_events_3.xul">Voir</a></p>
+
+<pre>&lt;button id="okbutton" label="OK"/&gt;
+
+&lt;script&gt;
+function buttonPressed(event) {
+   alert('Le bouton a été pressé !');
+}
+
+var button = document.getElementById("okbutton");
+button.addEventListener('command', buttonPressed, true);
+&lt;/script&gt;
+</pre>
+
+<p>La fonction <code><a href="/fr/DOM/document.getElementById" title="fr/DOM/document.getElementById">getElementById()</a></code> retourne l'élément ayant un identifiant id, dans notre cas, le bouton. La fonction <code><a href="/fr/DOM/element.addEventListener" title="fr/DOM/element.addEventListener">addEventListener()</a></code> est appelée pour ajouter un nouveau scrutateur d'événement en phase de capture. Le premier argument est le nom de l'événement à scruter. Le deuxième argument est la fonction du scrutateur d'événement qui sera appelée quand l'événement se produira. Enfin, le dernier argument devra être 'true' pour les scrutateurs en phase de capture. Vous pouvez également scruter durant la phase de diffusion en donnant la valeur 'false' au dernier argument. La fonction scrutateur d'événement passée comme deuxième argument devra avoir un argument, l'objet 'event', comme vous le voyez dans la déclaration de la fonction buttonPressed ci-dessus.</p>
+
+<hr>
+<div class="highlight">
+<p>Le dialogue de recherche de fichiers à ce stade : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-events.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-events.xul">Voir</a></p>
+</div>
+
+<p>Dans la prochaine section, nous aborderons plus en détail l'objet <code>event</code>.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Menus_défilants" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Plus_sur_les_gestionnaires_d'évènements">Suivant  »</a></p>
+</div>
+
+<p><span class="comment">Interwiki</span></p>
+
+<p> </p>

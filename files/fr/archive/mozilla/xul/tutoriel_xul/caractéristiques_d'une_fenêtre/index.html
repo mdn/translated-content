@@ -1,0 +1,76 @@
+---
+title: Caractéristiques d'une fenêtre
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Caractéristiques_d'une_fenêtre
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Features_of_a_Window
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Exemple_XBL" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Créer_des_boîtes_de_dialogue">Suivant  »</a></p>
+</div>
+
+<p>Nous avons déjà vu quelques caractéristiques de fenêtres. Nous allons en aborder d'autres dans cette section.</p>
+
+<h3 id="Cr.C3.A9er_une_autre_fen.C3.AAtre" name="Cr.C3.A9er_une_autre_fen.C3.AAtre">Créer une autre fenêtre</h3>
+
+<p>Vous pouvez créer une seconde fenêtre pour votre application de la même manière que vous avez créé la première. Il suffit de créer un second fichier XUL contenant le code de la nouvelle fenêtre. Comme en HTML, vous pouvez utiliser la fonction <code><a href="/fr/DOM/window.open" title="fr/DOM/window.open">window.open()</a></code> pour ouvrir la seconde fenêtre. Cette fonction retournera une référence à la fenêtre nouvellement ouverte. Vous pouvez utiliser cette référence pour appeler des fonctions de l'autre fenêtre.</p>
+
+<p>La fonction <code>open</code> prend trois arguments. Le premier est l'URL du fichier que vous souhaitez ouvrir. Le deuxième est le nom interne de la fenêtre. Le troisième est une liste de drapeaux de paramètres d'affichage. Le drapeau <code>chrome</code> est important pour ouvrir la fenêtre comme un fichier <a href="/fr/DOM/window.open#Fonctionnalit.C3.A9s_de_barres_d.27outils_et_de_chrome" title="fr/DOM/window.open#Fonctionnalit.C3.A9s_de_barres_d.27outils_et_de_chrome">chrome</a>. Si vous n'ajoutez pas le drapeau <code>chrome</code>, le fichier sera ouvert dans une nouvelle fenêtre du navigateur.</p>
+
+<p>Par exemple :</p>
+
+<pre>var myWin = window.open("chrome://findfile/content/findfile.xul","findfile","chrome");</pre>
+
+<h3 id="Sp.C3.A9cifier_la_largeur_et_la_hauteur" name="Sp.C3.A9cifier_la_largeur_et_la_hauteur">Spécifier la largeur et la hauteur</h3>
+
+<p>Vous aurez noté que lorsque des éléments sont ajoutés à une fenêtre, la largeur de la fenêtre s'étend pour s'adapter aux nouveaux éléments. La fenêtre n'est en fait qu'une boîte flexible et qui prend par défaut une orientation verticale. Vous pouvez également spécifier la largeur et la hauteur directement dans la balise <code><a href="/fr/docs/Mozilla/Tech/XUL/window" title="window">window</a></code>. Cela, bien sûr, oblige la fenêtre à prendre une taille spécifique. Si vous ôtez ces spécifications, la taille sera déterminée par les éléments qui la constituent.</p>
+
+<pre>&lt;window
+  id="findfile-window"
+  title="Recherche de fichiers"
+  width="400"
+  height="450"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+</pre>
+
+<p>Dans cet exemple, la fenêtre sera ouverte avec une largeur de 400 pixels et une hauteur de 450 pixels. Même s'il n'y a pas assez d'éléments pour lui faire adopter cette taille, la fenêtre s'ouvrira toujours à cette taille et il y aura un espace vierge dans l'espace restant. S'il y a trop d'éléments, la fenêtre n'adaptera pas ses dimensions pour en tenir compte. L'utilisateur devra alors redimensionner la boîte de dialogue. Vous devez faire attention, lorsque vous spécifiez une largeur et une hauteur, à ce que la fenêtre ne soit ni trop petite, ni trop grande. Vous devez considérer les thèmes graphiques ou la langue propres à l'utilisateur.</p>
+
+<div class="note">Notez que vous devez spécifier à la fois la largeur <strong>et</strong> la hauteur. Si vous ne spécifiez qu'une des deux valeurs, l'autre sera mise à '0'. Pour que la fenêtre détermine sa taille automatiquement, omettez les toutes les deux.</div>
+
+<p>La largeur et la hauteur déterminent seulement la taille initiale de la fenêtre. L'utilisateur peut toujours redimensionner la fenêtre, à condition que celle-ci soit redimensionnable.</p>
+
+<h3 id="Autres_propri.C3.A9t.C3.A9s_de_fen.C3.AAtre" name="Autres_propri.C3.A9t.C3.A9s_de_fen.C3.AAtre">Autres propriétés de fenêtre</h3>
+
+<p>Les drapeaux ci-après peuvent être utilisés comme troisième argument de la fonction <code>window.open</code>. Votre système d'exploitation peut ne pas les supporter tous. Vous pouvez également utiliser un des drapeaux pré-existants, que vous devriez trouver dans une référence JavaScript. Vous pouvez désactiver une propriété en la réglant sur 'no', par exemple <code>dialog='no'</code>.</p>
+
+<dl>
+ <dt><code>alwaysLowered</code></dt>
+ <dd>La fenêtre apparaîtra toujours derrière les autres fenêtres.</dd>
+ <dt><code>alwaysRaised</code></dt>
+ <dd>La fenêtre apparaîtra toujours devant les autres fenêtres.</dd>
+ <dt><code>centerscreen</code></dt>
+ <dd>À son ouverture, la fenêtre sera centrée à l'écran.</dd>
+ <dt><code>dependent</code></dt>
+ <dd>La position de la fenêtre sera toujours relative à la fenêtre qui l'a ouverte. Si la position de la fenêtre initiale est modifiée, la seconde fenêtre bougera automatiquement de même manière.</dd>
+ <dt><code>dialog</code></dt>
+ <dd>la fenêtre est une boîte de dialogue pouvant apparaître différemment.</dd>
+ <dt><code>modal</code></dt>
+ <dd>La boite de dialogue est modale. La fenêtre qui a ouvert la fenêtre modale ne peut pas être utilisée tant que la fenêtre modale n'est pas fermée.</dd>
+ <dt><code>resizable</code></dt>
+ <dd>L'utilisateur peut redimensionner la fenêtre.</dd>
+</dl>
+
+<p><small>Voir également <a href="/fr/DOM/window.open" title="fr/DOM/window.open">la référence DOM de window.open()</a>.</small></p>
+
+<hr>
+<p>Nous allons voir ensuite comment ouvrir des boîtes de dialogue secondaires.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Exemple_XBL" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Créer_des_boîtes_de_dialogue">Suivant  »</a></p>
+</div>
+
+<p><span class="comment">Interwiki</span></p>

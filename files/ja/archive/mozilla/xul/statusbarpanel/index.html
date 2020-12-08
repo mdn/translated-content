@@ -1,0 +1,104 @@
+---
+title: statusbarpanel
+slug: Archive/Mozilla/XUL/statusbarpanel
+tags:
+  - Deprecated
+  - XUL Elements
+  - XUL Reference
+translation_of: Archive/Mozilla/XUL/statusbarpanel
+---
+<div class="noinclude"><div class="blockIndicator deprecated deprecatedHeader">
+            <p><strong><span class="icon-only-inline" title="これは廃止されたAPIであり、今後の動作は保障されていません。ご注意下さい。"><i class="icon-trash"> </i></span> 非推奨</strong><br>この機能はウェブ標準から削除されました。まだ対応しているプラウザーがあるかもしれませんが、ゆくゆくはなくなるものです。使用を避け、できれば既存のコードを更新してください。このページの下部にある<a href="#Browser_compatibility">ブラウザーの対応</a>を見て判断してください。この機能は突然動作しなくなる可能性があることに注意してください。</p>
+        </div> <span class="breadcrumbs XULRef_breadcrumbs">
+ « <a href="/ja/docs/XUL/XUL_Reference">XUL リファレンス HOME</a>    [
+ <a href="#Examples">例</a> |
+ <a href="#Attributes">属性</a> |
+ <a href="#Properties">プロパティ</a> |
+ <a href="#Methods">メソッド</a> |
+ <a href="#Related">関連項目</a> ]
+</span></div>
+<p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/statusbar" title="statusbar">statusbar</a></code></code> の個々の要素。これは、異なる描画がされるボタンの特別な種類です。通常のボタンとは異なり、<code>statusbarpanel</code> はラベルか画像のどちらか一方を持つことができます。この要素は、短いラベルまたはステータスを示すアイコンと共に使用されます。例えば、ユーザがオンラインかどうかを示したり、新しいメッセージがないかどうかを示したりします。</p>
+<dl> <dt>属性</dt> <dd><a href="#a-crop">crop</a>, <a href="#a-image">image</a>, <a href="#a-label">label</a></dd>
+</dl>
+<dl> <dt>プロパティ</dt> <dd><a href="#p-image">image</a>, <a href="#p-label">label</a></dd>
+</dl>
+<dl> <dt>スタイルクラス</dt> <dd><a href="#s-statusbarpanel-iconic">statusbarpanel-iconic</a>, <a href="#s-statusbarpanel-iconic-text">statusbarpanel-iconic-text</a>, <a href="#s-statusbarpanel-menu-iconic">statusbarpanel-menu-iconic</a></dd>
+</dl>
+<h3 id="Examples" name="Examples">例</h3>
+<pre>&lt;statusbar&gt;
+	&lt;statusbarpanel label="Left panel"/&gt;
+	&lt;spacer flex="1"/&gt;
+	&lt;progressmeter mode="determined" value="82"/&gt;
+	&lt;statusbarpanel label="Right panel"/&gt;
+&lt;/statusbar&gt;
+</pre>
+<p><img alt="Image:XUL_ref_statusbar.png" class="internal" src="/@api/deki/files/1826/=XUL_ref_statusbar.png"></p>
+<h3 id="Attributes" name="Attributes">属性</h3>
+<p> </p><div id="a-crop">
+
+
+<dl>
+ <dt><code id="a-crop"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/crop">crop</a></code></dt>
+ <dd>型: <em>下記の値のいずれか一つ</em></dd>
+ <dd>要素の label に与えられた空間が小さ過ぎるときは、<code>crop</code> 属性によって指定された側のテキストが切り取られます。テキストが切り取られた場所には省略記号 (ellipsis)が使用されます。ボックスの方向が反対の場合は、切り取られる場所も反対側になります。</dd>
+</dl>
+
+<ul>
+ <li><code>start</code>: テキストは先頭から切り取られます。</li>
+ <li><code>end</code>: テキストは末尾から切り取られます。</li>
+ <li><code>left</code>: <span title="これは非推奨 API です。未だ動作しているかも知れませんが、将来的に削除される可能性があります。"><i class="icon-thumbs-down-alt"> </i></span> テキストは左側から切り取られます。</li>
+ <li><code>right</code>: <span title="これは非推奨 API です。未だ動作しているかも知れませんが、将来的に削除される可能性があります。"><i class="icon-thumbs-down-alt"> </i></span> テキストは右側から切り取られます。</li>
+ <li><code>center</code>: テキストの中央が切り取られ、通常、テキストの先頭と末尾が表示されます。</li>
+ <li><code>none</code>: テキストは省略記号を使用して切り取られません。しかし、テキストがあまりに長い場合は単純に削除されます。削除する側は CSS の行揃え (text alignment)に依存します。</li>
+</ul>
+
+
+</div> <div id="a-image">
+
+<dl>
+  <dt>
+    <code id="a-image"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/image">image</a></code></dt>
+  <dd>
+    型: 画像の <em>URL</em></dd>
+  <dd>
+    要素上に表示する画像の URL。この属性が空または除外された場合、画像は表示されません。画像の位置は <code id="a-dir"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/dir">dir</a></code> 属性および <code id="a-orient"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code> 属性によって決定されます。</dd>
+</dl>
+
+
+</div> <div id="a-label">
+
+<dl><dt> <code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code> </dt><dd> 型: <em>文字列型</em> </dd><dd> 要素上に表示するlabel。 省略された場合、テキストは表示されない。 </dd></dl>
+
+
+</div>
+<h3 id="Properties" name="Properties">プロパティ</h3>
+<div id="p-image">
+<dl><dt> <code><span><a href="http://api/ja/docs/XUL/Property/image">image</a></span></code> </dt><dd> 型: <em>image の URL</em> </dd><dd> <code id="a-image"><a href="http://api/ja/docs/Mozilla/Tech/XUL/Attribute/image">image</a></code> 属性の値の取得と設定。 </dd></dl>
+</div> <div id="p-label">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/label">label</a></span></code></dt>
+  <dd>
+    型: <em>文字列型</em></dd>
+  <dd>
+    <code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code> 属性の値の取得と設定。</dd>
+</dl>
+
+</div> <table style="border: 1px solid rgb(204, 204, 204); margin: 0px 0px 10px 10px; padding: 0px 10px; background: rgb(238, 238, 238) none repeat scroll 0% 50%;"> <tbody> <tr> <td> <p><strong>XUL 要素からの継承</strong><br> <small> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/align">align</a></span></code>, , <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/allowEvents">allowEvents</a></span></code>, , <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/boxObject">boxObject</a></span></code>, <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/builder">builder</a></span></code>, , , , <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/className">className</a></span></code>, , , , , <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/collapsed">collapsed</a></span></code>, <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/contextMenu">contextMenu</a></span></code>, <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/controllers">controllers</a></span></code>, <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/database">database</a></span></code>, <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/datasources">datasources</a></span></code>, <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/dir">dir</a></span></code>, , , <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/flex">flex</a></span></code>, <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/height">height</a></span></code>, <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/hidden">hidden</a></span></code>, <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/id">id</a></span></code>, , , <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/left">left</a></span></code>, , <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/maxHeight">maxHeight</a></span></code>, <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/maxWidth">maxWidth</a></span></code>, <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/menu">menu</a></span></code>, <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/minHeight">minHeight</a></span></code>, <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/minWidth">minWidth</a></span></code>, , , , , , , <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/observes">observes</a></span></code>, <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/ordinal">ordinal</a></span></code>, <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/orient">orient</a></span></code>, , <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/pack">pack</a></span></code>, , <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/persist">persist</a></span></code>, , , , <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/ref">ref</a></span></code>, <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/resource">resource</a></span></code>, , , , , <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/statusText">statusText</a></span></code>, <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/style">style</a></span></code>, ,, <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/tooltip">tooltip</a></span></code>, <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/tooltipText">tooltipText</a></span></code>, <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/top">top</a></span></code>, <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/width">width</a></span></code></small></p> </td> </tr> </tbody>
+</table>
+<h3 id="Methods" name="Methods">メソッド</h3>
+<div style="border: 1px solid rgb(204, 204, 204); margin: 0px 0px 10px 10px; padding: 0px 10px; background: rgb(238, 238, 238) none repeat scroll 0% 50%;">
+<p><strong>XUL 要素からの継承</strong><br>
+<small> <span id="m-blur"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/blur">blur</a></code></span>, <span id="m-click"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/click">click</a></code></span>, <span id="m-doCommand"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/doCommand">doCommand</a></code></span>, <span id="m-focus"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/focus">focus</a></code></span>, <span id="m-getElementsByAttribute"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getElementsByAttribute">getElementsByAttribute</a></code></span>, <span id="m-getElementsByAttributeNS"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getElementsByAttributeNS">getElementsByAttributeNS</a></code></span> </small></p>
+<p><strong>DOM 要素からの継承</strong><br>
+<small> <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.addEventListener">addEventListener()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.appendChild">appendChild()</a></code>, <a class="internal" href="/ja/DOM/Node.compareDocumentPosition" title="ja/DOM/Node.compareDocumentPosition">compareDocumentPosition</a>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.dispatchEvent">dispatchEvent()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getAttribute">getAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getAttributeNode">getAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getAttributeNodeNS">getAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getAttributeNS">getAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getElementsByTagName">getElementsByTagName()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getElementsByTagNameNS">getElementsByTagNameNS()</a></code>, <a class="internal" href="/ja/DOM/Node.getFeature" title="ja/DOM/Node.getFeature">getFeature</a>, <a class="internal" href="/ja/DOM/Node.getUserData" title="ja/DOM/Node.getUserData">getUserData</a>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.hasAttribute">hasAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.hasAttributeNS">hasAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.hasAttributes">hasAttributes()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.hasChildNodes">hasChildNodes()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.insertBefore">insertBefore()</a></code>, <a class="internal" href="/ja/DOM/Node.isEqualNode" title="ja/DOM/Node.isEqualNode">isEqualNode</a>, <a class="internal" href="/ja/DOM/Node.isSameNode" title="ja/DOM/Node.isSameNode">isSameNode</a>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.isSupported">isSupported()</a></code>, <a class="internal" href="/ja/DOM/Node.lookupNamespaceURI" title="ja/DOM/Node.lookupNamespaceURI">lookupNamespaceURI</a>, <a class="internal" href="/ja/DOM/Node.lookupPrefix" title="ja/DOM/Node.lookupPrefix">lookupPrefix</a>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.normalize">normalize()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeAttribute">removeAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeAttributeNode">removeAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeAttributeNS">removeAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeChild">removeChild()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeEventListener">removeEventListener()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.replaceChild">replaceChild()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.setAttribute">setAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.setAttributeNode">setAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.setAttributeNodeNS">setAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.setAttributeNS">setAttributeNS()</a></code>, <a class="internal" href="/ja/DOM/Node.setUserData" title="ja/DOM/Node.setUserData">setUserData</a></small></p>
+</div>
+<h3 id="Style_classes" name="Style_classes">スタイルクラス</h3>
+<p>次のクラスは要素のスタイルに使用されます。これらのクラスは、ユーザの選択したテーマとより自然に適合させるため、要素のスタイルを直接変更する代わりに使用します。</p>
+<dl><dt> <code><a href="https://developer.mozilla.org/ja/docs/XUL/Style/statusbarpanel-iconic">statusbarpanel-iconic</a></code> </dt><dd> <code><a href="/ja/docs/Mozilla/Tech/XUL/statusbarpanel" title="statusbarpanel">statusbarpanel</a></code> 上に画像を表示するために使用するクラス。画像の指定は <code id="a-src"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/src">src</a></code> 属性を使用します。画像はラベルの代わりに表示されます。 </dd></dl> <dl><dt> <code><a href="https://developer.mozilla.org/ja/docs/XUL/Style/statusbarpanel-iconic-text">statusbarpanel-iconic-text</a></code> </dt><dd> <code><a href="/ja/docs/Mozilla/Tech/XUL/statusbarpanel" title="statusbarpanel">statusbarpanel</a></code> 上に画像と同時にテキストラベルを表示するために使用するクラス。テキストの指定は <code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code> を使用します。画像はラベルの前に表示されます。 </dd></dl> <dl><dt> <code><a href="https://developer.mozilla.org/ja/docs/XUL/Style/statusbarpanel-menu-iconic">statusbarpanel-menu-iconic</a></code> </dt><dd> <code><a href="/ja/docs/Mozilla/Tech/XUL/statusbarpanel" title="statusbarpanel">statusbarpanel</a></code> 上に画像を表示するために使用するクラス。popup メニューを表示することもできます。画像の指定は <code id="a-src"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/src">src</a></code> 属性を使用し、<code><a href="/ja/docs/Mozilla/Tech/XUL/statusbarpanel" title="statusbarpanel">statusbarpanel</a></code> 内に <code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code> 要素を置きます。画像はラベルの代わりに表示されます。 </dd></dl>
+<h3 id="Related" name="Related">関連項目</h3>
+<dl> <dt>要素</dt> <dd><code><a href="/ja/docs/Mozilla/Tech/XUL/statusbar" title="statusbar">statusbar</a></code></dd>
+</dl>
+<div class="noinclude">
+
+</div>

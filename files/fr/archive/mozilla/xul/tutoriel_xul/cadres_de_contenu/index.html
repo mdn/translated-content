@@ -1,0 +1,86 @@
+---
+title: Cadres de contenu
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Cadres_de_contenu
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Content_Panels
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Grilles" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Séparateurs">Suivant  »</a></p>
+</div>
+
+<p>Dans cette section, nous regarderons comment ajouter des cadres qui peuvent afficher des pages HTML ou d'autres fichiers XUL.</p>
+
+<h3 id="Ajout_de_cadres_enfants" name="Ajout_de_cadres_enfants">Ajout de cadres enfants</h3>
+
+<p>Parfois, vous souhaitez qu'une partie d'un document soit chargée à partir d'une autre page. D'autres fois, vous voulez changer une partie de la fenêtre. Un bon exemple est un assistant qui vous guide pas-à-pas à travers un certain nombre d'écrans, en vous posant une série de questions. Chaque fois que l'utilisateur clique sur le bouton suivant, l'écran suivant de l'assistant est affiché.</p>
+
+<p>Vous pouvez créer une interface d'assistant en ouvrant une fenêtre différente pour chaque écran. Cette approche pose trois problèmes. Premièrement, chaque fenêtre peut apparaître à une position différente sur l'écran (bien qu'il existe une alternative à cela). Deuxièmement, les éléments tels que les boutons suivant ou précédent sont les mêmes tout au long de l'interface. Ce serait bien mieux si seul le contenu de l'assistant changeait. Troisièmement, il sera difficile de coordonner les scripts tournant dans les différentes fenêtres.</p>
+
+<div class="note">Notez que XUL a un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/wizard" title="wizard">wizard</a></code> qui peut être utilisé pour créer des assistants. Il sera décrit dans <a href="/fr/Tutoriel_XUL/Création_d'un_assistant" title="fr/Tutoriel_XUL/Création_d'un_assistant">une prochaine section</a>.</div>
+
+<p>Une meilleure approche est d'utiliser l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/iframe" title="iframe">iframe</a></code>, qui fonctionne comme l'élément HTML du même nom. Il crée un document séparé dans la fenêtre. Il a l'avantage de pouvoir être placé n'importe où et son contenu chargé à partir d'un fichier différent. Indiquez l'URL que vous souhaitez afficher dans le cadre avec l'attribut <code id="a-src"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/src">src</a></code>. Cette URL peut pointer sur n'importe quelle sorte de fichiers, bien qu'elle pointe habituellement sur un fichier HTML ou un autre fichier XUL. Vous pouvez utiliser un script pour changer le contenu de ce cadre sans affecter la fenêtre principale.</p>
+
+<p>Dans la fenêtre du navigateur Mozilla, l'endroit où la page Web doit être affichée est créé en utilisant un cadre <code><a href="/fr/docs/Mozilla/Tech/XUL/iframe" title="iframe">iframe</a></code>. Lorsque l'utilisateur entre une URL ou clique sur un lien du document, la source du cadre est changée.</p>
+
+<h4 id="Exemple_iframe" name="Exemple_iframe">Exemple <code>iframe</code></h4>
+
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_cpanels_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_cpanels_1.xul">Voir</a></p>
+
+<pre>&lt;toolbox&gt;
+   &lt;toolbar id="nav-toolbar"&gt;
+     &lt;toolbarbutton label="Précédent"/&gt;
+     &lt;toolbarbutton label="Suivant"/&gt;
+     &lt;textbox id="urlfield"/&gt;
+   &lt;/toolbar&gt;
+&lt;/toolbox&gt;
+
+&lt;iframe id="content-body" src="http://www.mozilla-europe.org/fr/" flex="1"/&gt;
+</pre>
+
+<div class="float-right"><img alt="Image:xultu_cpanels1.png" class="internal" src="/@api/deki/files/1510/=Xultu_cpanels1.png"></div>
+
+<p>Ici, l'exemple crée une interface très simple pour un navigateur Web. Une boîte contenant deux éléments a été créée : un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/toolbox" title="toolbox">toolbox</a></code> et un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/iframe" title="iframe">iframe</a></code>. Un bouton « Précédent », un bouton « Suivant » et un champ de saisie des URLs ont été ajoutés sur la barre d'outils. Les pages Web apparaissent à l'intérieur du cadre <code><a href="/fr/docs/Mozilla/Tech/XUL/iframe" title="iframe">iframe</a></code>. Dans ce cas, c'est la page d'accueil du site qui apparaîtra par défaut.</p>
+
+<p>Cet exemple n'est pas fonctionnellement complet. Par la suite, nous ajouterons un script qui changera l'attribut de <code id="a-src"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/src">src</a></code> au moment désiré, par exemple quand l'utilisateur appuie sur la touche <code>Entrée</code>.</p>
+
+<h3 id="Navigateurs" name="Navigateurs">Navigateurs</h3>
+
+<p>Il existe un second type de cadre de contenu, utilisant la balise <code><a href="/fr/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code>. Vous l'utiliserez quand vous voudrez créer un cadre qui montre le contenu comme un navigateur. En réalité, l'élément <code>iframe</code> peut aussi le faire, mais le navigateur (browser) possède certaines caractéristiques supplémentaires. Par exemple, l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code> conserve un historique pour utiliser les boutons « Précédent » et « Suivant ». Le navigateur peut aussi charger des pages avec des <code>referers</code> et d'autres états. La balise <code><a href="/fr/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code> doit être utilisée essentiellement lorsque vous voulez créer une interface semblable au navigateur, mais l'<code><a href="/fr/docs/Mozilla/Tech/XUL/iframe" title="iframe">iframe</a></code> peut être utilisé lorsque vous avez juste besoin d'un cadre simple.</p>
+
+<p>Un élément similaire, <code><a href="/fr/docs/Mozilla/Tech/XUL/tabbrowser" title="tabbrowser">tabbrowser</a></code>, fournit la fonctionnalité du <code><a href="/fr/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code>, mais fournit également une barre d'onglets pour basculer entre de multiples pages. C'est le composant graphique utilisé par le navigateur Mozilla pour son interface de navigation par onglets. L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tabbrowser" title="tabbrowser">tabbrowser</a></code> est en réalité implémenté comme un <code><a href="/fr/docs/Mozilla/Tech/XUL/tabbox" title="tabbox">tabbox</a></code> contenant un ensemble d'éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code>. Ces deux types de navigateur offrent un contrôle similaire sur les pages à afficher.</p>
+
+<h4 id="Exemple_de_browser" name="Exemple_de_browser">Exemple de <code>browser</code></h4>
+
+<p><span id="Exemple_2"><a id="Exemple_2"></a><strong>Exemple 2</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_cpanels_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_cpanels_2.xul">Voir</a>.</p>
+
+<pre>&lt;browser src="http://www.mozilla.org" flex="1"/&gt;</pre>
+
+<p>Comme avec l'<code><a href="/fr/docs/Mozilla/Tech/XUL/iframe" title="iframe">iframe</a></code>, vous pouvez indiquer l'URL dans un navigateur utilisant l'attribut <code id="a-src"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/src">src</a></code>. Pour un <code><a href="/fr/docs/Mozilla/Tech/XUL/tabbrowser" title="tabbrowser">tabbrowser</a></code>, vous ne pouvez pas définir l'url directement comme ceci, étant donné qu'il n'affiche pas qu'une seule URL. À la place, vous devez utiliser un script et appeler la fonction <code>loadURI</code>.</p>
+
+<p>Il y a trois catégories de navigateurs, selon le genre de contenu que vous voulez afficher. Le type peut être indiqué en utilisant l'attribut <code id="a-type"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/type">type</a></code>.</p>
+
+<p>Le premier type est le type par défaut utilisé si vous omettez cet attribut. Dans ce cas, le contenu chargé à l'intérieur du navigateur est traité comme s'il faisait partie de la même application et avait accès à la fenêtre extérieure. Cela signifie que lorsqu'un script chargé à l'intérieur du navigateur essaie d'obtenir la fenêtre la plus élevée, il obtiendra la fenêtre XUL extérieure.</p>
+
+<p>Ce comportement conviendrait pour un cadre XUL fils qui fait partie de votre application, mais il ne serait pas adapté pour un navigateur qui chargerait des pages Web. À la place, vous voudrez restreindre la page Web au seul accès de son contenu. Vous pouvez noter qu'une fenêtre de navigateur Mozilla possède du contenu XUL pour les barres d'outils et de statut et ainsi de suite avec un <code><a href="/fr/docs/Mozilla/Tech/XUL/tabbrowser" title="tabbrowser">tabbrowser</a></code> formant la zone principale. Cette zone interne affiche une page Web, mais celle-ci ne peut pas accéder au XUL l'entourant. C'est parce le second type de navigateur est utilisé en définissant l'attribut <code id="a-type"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/type">type</a></code> avec la valeur 'content'. Il empêche le contenu de remonter jusqu'à la fenêtre XUL. Un exemple :</p>
+
+<pre>&lt;browser src="http://www.mozilla.org" type="content" flex="1"/&gt;</pre>
+
+<div class="note">Il est important que vous définissiez l'attribut <code id="a-type"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/type">type</a></code> correctement si vous envisagez d'afficher des sites Web distants à l'intérieur de l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code>.</div>
+
+<p>Le <code><a href="/fr/docs/Mozilla/Tech/XUL/tabbrowser" title="tabbrowser">tabbrowser</a></code> définit le type 'content' automatiquement sur tous les onglets de navigation qu'il crée. Vous n'avez donc pas à le définir explicitement pour les onglets de navigation.</p>
+
+<p>Le troisième type sert lorsque votre fenêtre contient plusieurs éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code>, comme par exemple si vous aviez un panneau latéral affichant du contenu supplémentaire. Renseignez l'attribut <code id="a-type"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/type">type</a></code> sur l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/browser" title="browser">browser</a></code> principal avec la valeur 'content-primary' pour spécifier le contenu primaire. Il fonctionne comme avec la valeur 'content' excepté le fait que le contenu à l'intérieur est accessible en utilisant la propriété 'content' de la fenêtre XUL. L'accès au contenu du navigateur principal en utilisant un script s'en trouve simplifié. <code><a href="/fr/docs/Mozilla/Tech/XUL/tabbrowser" title="tabbrowser">tabbrowser</a></code> définit automatiquement l'attribut <code id="a-type"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/type">type</a></code> avec cette valeur 'content-primary' pour tous les navigateurs visibles, ce qui vous permet de cette manière de toujours pouvoir avoir accès au contenu visible.</p>
+
+<hr>
+<p>Dans la section suivante, nous allons voir comment créer des séparateurs.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Grilles" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Séparateurs">Suivant  »</a></p>
+</div>
+
+<p><span class="comment">Interwiki</span></p>

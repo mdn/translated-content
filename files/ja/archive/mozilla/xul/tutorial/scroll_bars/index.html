@@ -1,0 +1,77 @@
+---
+title: スクロールバー
+slug: Archive/Mozilla/XUL/Tutorial/Scroll_Bars
+translation_of: Archive/Mozilla/XUL/Tutorial/Scroll_Bars
+---
+<p>
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Splitters" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Toolbars">次のページ  »</a></p>
+</div>
+<p>今回は、ウィンドウにスクロールバーを追加する方法を見ていこうと思います。
+</p><p><span id="Adding_Scroll_Bars"></span>
+</p>
+<h3 id=".E3.82.B9.E3.82.AF.E3.83.AD.E3.83.BC.E3.83.AB.E3.83.90.E3.83.BC.E3.82.92.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B" name=".E3.82.B9.E3.82.AF.E3.83.AD.E3.83.BC.E3.83.AB.E3.83.90.E3.83.BC.E3.82.92.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B"> スクロールバーを追加する </h3>
+<p>スクロールバーは、多くの場合、利用者が大きな文書内を移動できるようにするために使用されます。
+それ以外では、特定の範囲の値を入力する必要がある場合にも使うことができます。
+スクロールバーを作成する方法はたくさんありますが、
+XUL では <code><code><a href="/ja/docs/Mozilla/Tech/XUL/scrollbar" title="scrollbar">scrollbar</a></code></code> タグを使って作ることができます。
+また、テキスト入力欄のような要素では、その内容が非常に大きい場合には、必要に応じて自動的にスクロールバーが追加されます。
+</p><p>このセクションでは、単独で動作するスクロールバーの作り方について説明します。
+これは、おそらく、それほど頻繁に使用されることはないと思いますが、
+利用者はスクロールバーを調整することによって、入力値を設定することができます。
+スクロールバーは、いくつかの部品で構成されています。
+まず、スライダーがあります。これはスクロールバーの主要部分で、調整用のボックスを持っています。
+それと、両端の 2 つの矢印ボタンです。
+スクロールバーは、これらの要素すべてを、自動的に生成します。
+</p><p>スクロールバーの画像を、以下に示します。
+</p><p><img alt="画像:scroll1.png">
+</p><p>スクロールバーの構文を、以下に示します。
+</p>
+<pre>&lt;scrollbar
+    id="identifier"
+    orient="horizontal"
+    curpos="20"
+    maxpos="100"
+    increment="1"
+    pageincrement="10"/&gt;
+</pre>
+<p>スクロールバーの属性は以下のようになります。
+</p>
+<dl><dt> <code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code>
+</dt><dd> スクロールバーの一意な識別子です。
+</dd></dl>
+<dl><dt> <code id="a-orient"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code>
+</dt><dd> スクロールバーの向きを指定します。デフォルトは <code>horizontal</code> で、左から右の方へ広げるためのスクロールバーを生成します。<code>vertical</code> を指定した場合は、上から下の方へ広げるためのスクロールバーを生成します。
+</dd></dl>
+<dl><dt> <code id="a-curpos"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/curpos">curpos</a></code>
+</dt><dd> スクロールバー上で、前後にスライドできるボックスである、<span style="border-bottom: 1px dashed green;" title="thumb">サム</span>の現在の位置を指定します。指定可能な値の範囲は、0 から <code><code id="a-maxpos"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/maxpos">maxpos</a></code></code> の間になります。値に単位は必要はありません。デフォルト値は 0 になります。
+</dd></dl>
+<dl><dt> <code id="a-maxpos"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/maxpos">maxpos</a></code>
+</dt><dd> スクロールバーのサムを最大位置に移動したときの値を指定します。値は数値で、単位はありません。デフォルト値は 100 になります。
+</dd></dl>
+<dl><dt> <code id="a-increment"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/increment">increment</a></code>
+</dt><dd> 利用者が、スクロールバーの矢印をクリックしたとき、 <code><code id="a-curpos"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/curpos">curpos</a></code></code> の値がどれだけ変化するかを指定します。 デフォルト値は 1 になります。
+</dd></dl>
+<dl><dt> <code id="a-pageincrement"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/pageincrement">pageincrement</a></code>
+</dt><dd> 利用者がスクロールバーでページ送り操作をしたとき、 <code><code id="a-curpos"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/curpos">curpos</a></code></code> の値がどれだけ変化するかを指定します。ページ送りは、スクロールバーのサムと矢印の間のトレイ部分をクリックすることで可能です。デフォルト値は 10 になります。
+</dd></dl>
+<p>上の構文として示した例では、0 から 100 までの値をもつことのできるスクロールバーを作ります。
+この 100 という値は、この例からは何と対応するものかはわかりませんが、ひょっとしたら、何かのリストの行数と対応しているのかもしれません。
+ここには必要な任意の値を設定することが可能です。
+この例のスクロールバーの初期値は <code><code id="a-curpos"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/curpos">curpos</a></code></code>で指定されている値 20 になります。
+スクロールバーの矢印をクリックすると、値は 1 増減します。
+スクロールバーでページ送り操作をすると、値は 10 変化します。
+</p><p>利用者がスクロールバーの矢印をクリックすると、サムは <code><code id="a-increment"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/increment">increment</a></code></code> の値によって指定された量だけ動きます。
+この属性の値を増やすと、スクロールバーはクリックのたびにもっとたくさん動くことになります。
+スクロールバーの左端または上端の位置の値は、0 で、
+スクロールバーの右端または下端の値は、<code><code id="a-maxpos"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/maxpos">maxpos</a></code></code> によって指定した値になります。
+</p><p>スクロールバーの値を調整することによって、サムを好きな位置に移動することが可能です。
+また、利用者が矢印をクリックしたときに動く量も、好きな値に設定することができます。
+</p><p>次のセクションでは、ツールバーの作り方を見ていきます。
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Splitters" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Toolbars">次のページ  »</a></p>
+</div>
+<p><br>
+</p>
+<div class="noinclude">
+</div>

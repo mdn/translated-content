@@ -1,0 +1,96 @@
+---
+title: 为这个EventTarget附加事件.
+slug: Web/API/EventTarget/attachEvent
+translation_of: Web/API/EventTarget/addEventListener
+---
+<p>{{APIRef("DOM Events")}}</p>
+
+<p>{{ Non-standard_header() }}</p>
+
+<h2 id="摘要">摘要</h2>
+
+<p>这是早期IE浏览器（IE8及早期版本）的一个专有的替代性标准，替代EventTarget.addEventListener()方法，{{domxref("EventTarget.addEventListener()")}} 方法</p>
+
+<h2 id="Syntax" name="Syntax">语法</h2>
+
+<pre class="syntaxbox"><em>attached</em> = <em>target</em>.attachEvent(<em>eventNameWithOn</em>, <em>callback</em>)
+
+</pre>
+
+<dl>
+ <dt> 作用的元素（target）</dt>
+ <dd>一个用于监听事件的文档对象模型元素</dd>
+ <dt>事件名伴随On（eventNameWithOn）</dt>
+ <dd>监听的事件名以on前置，类似一个属性的管理者，譬如当你使用onclick时能够监听你的click事件</dd>
+ <dt>回调函数</dt>
+ <dd>当目标触发事件时回调函数被调用。这个函数被调用时不带参数，并且这些都将设置在<a href="/en-US/docs/Web/API/Window/window"><code>window</code> object.</a>这个对象中</dd>
+ <dt>附加</dt>
+ <dt>    是否成功附加上属性会以布尔值表示</dt>
+</dl>
+
+<h2 id="规范">规范</h2>
+
+<p>不存在于任何标准规范中</p>
+
+<p>微软在MSDN有详细描述 <a href="https://msdn.microsoft.com/en-us/library/ms536343(v=vs.85).aspx">has a description on MSDN</a>.</p>
+
+<h2 id="Browser_Compatibility" name="Browser_Compatibility">浏览器是否合适</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>6 thru 10 [1]</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatNo() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatNo() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1]: <code>attachEvent()</code> 不再被IE11支持。</p>
+
+<p>{{domxref("EventTarget.addEventListener()")}}被IE9+支持.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{domxref("EventTarget.detachEvent()")}}</li>
+ <li>{{domxref("EventTarget.fireEvent()")}}</li>
+</ul>

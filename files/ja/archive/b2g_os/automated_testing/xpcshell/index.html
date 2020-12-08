@@ -1,0 +1,46 @@
+---
+title: XPCShell
+slug: Archive/B2G_OS/Automated_testing/XPCShell
+translation_of: Archive/B2G_OS/Automated_testing/XPCShell
+---
+<div class="summary">
+ <p><span class="seoSummary"><a href="/en-US/docs/Writing_xpcshell-based_unit_tests" title="/en-US/docs/Writing_xpcshell-based_unit_tests">XPCShellのテスト</a>はGecko XPCOM APIのヘッドレステストです。あなたはB2G上でXPCShellのテストを実行することができます; この記事の中でどのように実行するか書かれています。現在、これらは主にエミュレータ上でテストされており、しかしデバイス上でもうまく実行される理屈です。</span></p>
+</div>
+<div class="note">
+ <p><strong>注意</strong>: この記事の<code>$B2G_HOME</code>はクローンしたB2Gリポジトリを指します。</p>
+</div>
+<h2 id="必須要件">必須要件</h2>
+<ul>
+ <li>テスト対象をテストするためにB2Gをビルドする必要があります (参照: <a href="/ja/Firefox_OS/Building_and_installing_Firefox_OS" title="/ja/Firefox_OS/Building_and_installing_Firefox_OS">Firefox OS のビルドとインストール</a>)</li>
+ <li>いくつかのPythonパッケージ、virtualenvかそれ以外をインストールする必要があります:
+  <pre>pip install marionette_client</pre>
+ </li>
+ <li>requirements.txtファイルもまた利便性のために取り込むべきです:
+  <pre>wget people.mozilla.com/~ahalberstadt/runxpcshell-requirements.txt
+pip install -r runxpcshell-requirements.txt
+</pre>
+ </li>
+ <li><code>adb</code>をパスの通った場所に置くか<code>--adbpath</code>で指定 (Linux上では<code>$B2G_HOME/out/host/linux-x86/bin/adb</code>で見つかるでしょう) されているか確認します</li>
+ <li><a href="http://busybox.net/downloads/binaries/latest/busybox-armv6l">Busybox</a>のローカルコピーを持っていること (これは厳密には必要ではないがセットアップ時の要求を軽減する)</li>
+</ul>
+<h2 id="テストを実行する">テストを実行する</h2>
+<p>以下のターミナルコマンドの中から一つを使ってxpcshellテストを実行することができます:</p>
+<p>emulatorを使う場合:</p>
+<pre>cd $B2G_HOME/objdir-gecko
+make package-tests
+cd dist/test-package-stage/xpcshell
+python runtestsb2g.py --b2gpath $B2G_HOME --adbpath $ADB_PATH --emulator arm --use-device-libs --manifest &lt;<a href="https://developer.mozilla.org/en-US/docs/Mozilla/QA/Writing_xpcshell-based_unit_tests#Adding_your_tests_to_the_xpcshell_manifest">path_to_xpcshell_manifest</a>&gt; --testing-modules-dir &lt;path_to_testing_modules_dir&gt; --busybox &lt;path_to_busybox_binary&gt;</pre>
+<p>実機を使う場合:</p>
+<pre>cd $B2G_HOME/objdir-gecko
+make package-tests
+cd dist/test-package-stage/xpcshell
+python runtestsb2g.py --b2gpath $B2G_HOME --adbpath $ADB_PATH --use-device-libs --manifest &lt;<a href="https://developer.mozilla.org/en-US/docs/Mozilla/QA/Writing_xpcshell-based_unit_tests#Adding_your_tests_to_the_xpcshell_manifest">path_to_xpcshell_manifest</a>&gt; --testing-modules-dir &lt;path_to_testing_modules_dir&gt;</pre>
+<p>通常のデスクトップ用のxpcshellテストのように<code>--total-chunks</code> and <code>--this-chunks</code>オプションを加えることもできます:</p>
+<pre>python runtestsb2g.py --help</pre>
+<p>サポートする引数をすべてリストします。</p>
+<p><code>runtestsb2g.py</code>を起動したあと、テストランナーがエミュレータを起動する (エミュレータ上でテストを実行する場合) かデバイスを再起動する (デバイス上でテストを実行する場合) でしょう、そしてテストを実行開始します。なぜならばエミュレータは遅く、テストプロファイルをプッシュし、B2Gを再起動する必要があり、テストは開始に数分かかります。</p>
+<p>テスト終了時、エミュレータはシャットダウンします。実機の場合再起動します。</p>
+<h3 id="busyboxの手動インストール">busyboxの手動インストール</h3>
+<p>デバイス上でxpcshellテストを実行するときは<code>--busybox</code>はいりません。そのようなテスト実行のセットアップはとても時間がかかります。幸いにもテストを実行する前に手動でインストールできます。手動インストールの例は<a href="https://github.com/mozilla/Negatus/blob/master/setup-tools.sh" title="https://github.com/mozilla/Negatus/blob/master/setup-tools.sh">https://github.com/mozilla/Negatus/blob/master/setup-tools.sh</a>をご覧ください。</p>
+<h2 id="エミュレータをダウンロードしてxpcshellテストの実行">エミュレータをダウンロードしてxpcshellテストの実行</h2>
+<p>もし違うコンフィグ (otoroのような) でB2Gをビルドしてエミュレータ上でテストを実行したいなら、あなた自身がエミュレータをビルドすることなくテストを実行することができます。  <code>runreftestb2g.py</code>と<code>--b2gpath /path/to/unpacked/emulator</code>の代わりに<code>--b2gpath $B2G_HOME</code>引数を置き換えた上記と同じ命令を使って、最新のtrunkのarmエミュレータをダウンロードします。</p>

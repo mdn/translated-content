@@ -1,0 +1,131 @@
+---
+title: SpeechSynthesisUtterance.lang
+slug: Web/API/SpeechSynthesisUtterance/lang
+translation_of: Web/API/SpeechSynthesisUtterance/lang
+---
+<div>{{APIRef("Web Speech API")}} {{SeeCompatTable}}<br>
+{{domxref("SpeechSynthesisUtterance")}}インターフェースの<strong>lang</strong>プロパティは、発話の言語を取得、設定します。</div>
+
+<div> </div>
+
+<p> </p>
+
+<p>If unset, the app's (i.e. the {{htmlelement("html")}} {{htmlattrxref("lang", "html")}} value) lang will be used, or the user-agent default if that is unset too.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">var myLang = speechSynthesisUtteranceInstance.lang;
+speechSynthesisUtteranceInstance.lang = 'en-US';
+</pre>
+
+<h3 id="Value">Value</h3>
+
+<p>A {{domxref("DOMString")}} representing a BCP 47 language tag.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush: js"><code class="language-js"><span class="keyword token">var</span> synth <span class="operator token">=</span> window<span class="punctuation token">.</span>speechSynthesis<span class="punctuation token">;</span>
+
+<span class="keyword token">var</span> inputForm <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'form'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="keyword token">var</span> inputTxt <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'input'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<span class="keyword token">var</span> voiceSelect <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'select'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+
+<span class="keyword token">var</span> voices <span class="operator token">=</span> synth<span class="punctuation token">.</span><span class="function token">getVoices</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code>
+
+  ...
+
+inputForm.onsubmit = function(event) {
+  event.preventDefault();
+
+  var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
+  var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
+  for(i = 0; i &lt; voices.length ; i++) {
+    if(voices[i].name === selectedOption) {
+      utterThis.voice = voices[i];
+    }
+  }
+  utterThis.lang = 'en-US';
+  synth.speak(utterThis);
+  inputTxt.blur();
+}</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Speech API', '#dfn-utterancelang', 'lang')}}</td>
+   <td>{{Spec2('Web Speech API')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatChrome(33)}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop(49)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>7</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>2.0</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>7.1</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
+</ul>

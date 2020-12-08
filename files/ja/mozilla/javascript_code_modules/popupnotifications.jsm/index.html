@@ -1,0 +1,213 @@
+---
+title: PopupNotifications.jsm
+slug: Mozilla/JavaScript_code_modules/PopupNotifications.jsm
+tags:
+  - Modules
+  - Notifications
+translation_of: Mozilla/JavaScript_code_modules/PopupNotifications.jsm
+---
+<p>{{ gecko_minversion_header("2.0") }}</p>
+
+<p><code>PopupNotifications.jsm</code> JavaScript コードモジュールはポップアップ通知ボックスサービスを提供します。このサービスを使うことにより、例えば、位置情報に関連する通知の表示といった機能を実現できます。</p>
+
+<p><img alt="popupnotification.png" class="default internal" src="/@api/deki/files/4905/=popupnotification.png"></p>
+
+<p>このサービスを使用するためには、最初に、あなたの JavaScript スコープへとコードモジュールをインポートする必要があります：</p>
+
+<pre>Components.utils.import("resource://gre/modules/PopupNotifications.jsm");
+</pre>
+
+<p>モジュールを一度インポートすれば、エクスポートされた <code>PopupNotifications</code> オブジェクトを使用できるようになります。このオブジェクトは、ポップアップ通知パネルの作成と表示のためのメソッドを提供します。</p>
+
+<div class="note"><strong>註：</strong>このコードモジュールは Firefox の chrome ウィンドウによってインポートされます。そのため、多くの拡張機能では改めてインポートする必要はありません。</div>
+
+<h2 id="メソッド概要">メソッド概要</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="/ja/JavaScript_code_modules/PopupNotifications.jsm#locationChange()" title="ja/JavaScript code modules/PopupNotifications.jsm#locationChange()">locationChange</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>Notification <a href="/en/JavaScript_code_modules/PopupNotifications.jsm#getNotification()" title="en/JavaScript code modules/PopupNotifications.jsm#getNotification()">getNotification</a>(id, browser);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="/ja/JavaScript_code_modules/PopupNotifications.jsm#remove()" title="ja/JavaScript code modules/PopupNotifications.jsm#remove()">remove</a>(notification);</code></td>
+  </tr>
+  <tr>
+   <td><code>Notification <a href="/ja/JavaScript_code_modules/PopupNotifications.jsm#show()" title="ja/JavaScript code modules/PopupNotifications.jsm#show()">show</a>(browser, id, message, anchorID, mainAction, secondaryActions, options);</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="プロパティ">プロパティ</h2>
+
+<table class="standard-table" style="width: auto;">
+ <tbody>
+  <tr>
+   <td class="header">属性</td>
+   <td class="header">型</td>
+   <td class="header">詳細</td>
+  </tr>
+  <tr>
+   <td><code>isPanelOpen</code></td>
+   <td><code>Boolean</code></td>
+   <td>通知パネルが現在表示されているのであれば <code>true</code> を、そうでない場合は <code>false</code> を返します。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="メソッド">メソッド</h2>
+
+<h3 id="locationChange()">locationChange()</h3>
+
+<p>使用者 (consumer)は、ポップアップ通知モジュールに現在のブラウザのロケーションが変更されたことを知らせるために、このメソッドを呼び出します。これにより通知サービスは、必要に応じて、アクティブな通知を更新することができます。</p>
+
+<div class="note"><strong>註：</strong>Firefox のウィンドウ中で PopupNotifications オブジェクトを使用している場合、あなたは、このメソッドを呼び出す必要はありません。Firefox のコードが自動でうまく取り扱ってくれます。</div>
+
+<pre>void locationChange();
+</pre>
+
+<h6 id="引数">引数</h6>
+
+<p>無し。</p>
+
+<h3 id="getNotification()">getNotification()</h3>
+
+<p>指定した <code>browser</code> 要素および ID に関連づけられている <code>Notification</code> オブジェクトを取得します。</p>
+
+<pre><code>Notification</code> getNotification(
+ string id
+ XULElement browser
+);
+</pre>
+
+<h6 id="引数_2">引数</h6>
+
+<dl>
+ <dt><code>id</code></dt>
+ <dd>検索に使用する <code>Notification</code> ID。</dd>
+ <dt><code>browser</code></dt>
+ <dd><code>Notification</code> オブジェクトを検索する XUL {{ XULElem("browser") }} 要素。 <code>null</code> である場合、現在選択されている {{ XULElem("browser") }} に関連づけられている<code> Notification</code> オブジェクトが検索されます。</dd>
+</dl>
+
+<h6 id="返り値">返り値</h6>
+
+<p>与えられた引数に対応する <code>Notification</code> オブジェクト。対応する<code> Notification </code>オブジェクトが無い場合は <code>null</code> を返します。</p>
+
+<h3 id="remove()">remove()</h3>
+
+<p>指定された通知を削除します。</p>
+
+<pre>void remove(
+  Notification notification
+);
+</pre>
+
+<h6 id="引数_3">引数</h6>
+
+<dl>
+ <dt><code>notification</code></dt>
+ <dd>削除する通知を表す <code>Notification</code> オブジェクト。</dd>
+</dl>
+
+<h3 id="show()">show()</h3>
+
+<p>新しいポップアップ通知を追加し、ユーザーへと表示します。</p>
+
+<pre>Notification show(
+  browser,
+  id,
+  message,
+  anchorID,
+  mainAction,
+  secondaryActions,
+  options
+);
+</pre>
+
+<h6 id="引数_4">引数</h6>
+
+<dl>
+ <dt><code>browser</code></dt>
+ <dd>通知を結びつける XUL {{ XULElem("browser") }} 要素。この値は <code>null</code> であってはいけません。現在のタブへと通知を結びつける場合であれば、単純に <code>gBrowser.selectedBrowser</code> を指定する事が可能です。</dd>
+ <dt><code>id</code></dt>
+ <dd>表示される通知の種類を示すユニーク ID 文字列。例えば、位置情報に関連する通知の場合のIDは "geolocation" となります。同じ ID を持つ通知は、同時にひとつしか表示されません。指定した ID の通知が既に通知されていた場合、新しい通知によって古い通知は置き換えられることになります。</dd>
+ <dt><code>message</code></dt>
+ <dd>通知パネルに表示される文字列。</dd>
+ <dt><code>anchorID</code></dt>
+ <dd>通知ポップアップのアンカーを表示することとなる要素の ID。（つまり、ポップアップの矢印が指し示すであろう要素のことです）　<code>null</code> に指定した場合、通知は PopupNotification オブジェクトのアイコンボックスを表示元とします。この anchorID は、PopupNotification オブジェクトのアイコンボックスの内側に含まれる要素を指定しなければなりません。（Firefox ウィンドウであれば、グローバル PopupNotifications オブジェクトは <code>notification-popup-box</code> 要素を使用します）</dd>
+ <dt><code>mainAction</code></dt>
+ <dd>通知パネル中に描画されるボタンを定義するフィールドを含む JavaScript オブジェクトリテラル。詳しくは下記の <a href="/ja/JavaScript_code_modules/PopupNotifications.jsm#Notification_actions" title="ja/JavaScript code modules/PopupNotifications.jsm#Notification actions">Notification actions</a> を参照してください。</dd>
+ <dt><code>secondaryActions</code></dt>
+ <dd>Notification action オブジェクトの配列。これらは通知パネルのボタンのドロップダウンメニューへ項目を追加するのに使われます。</dd>
+ <dt><code>options</code></dt>
+ <dd>通知のオプションとなるプロパティを含む JavaScript オブジェクト。詳しくは下記の <a href="/ja/JavaScript_code_modules/PopupNotifications.jsm#Notification_actions" title="ja/JavaScript code modules/PopupNotifications.jsm#Notification options">Notification options</a> を参照してください。</dd>
+</dl>
+
+<h6 id="返り値_2">返り値</h6>
+
+<p>追加された通知に対応する <a href="/ja/JavaScript_code_modules/PopupNotifications.jsm#The_Notification_object" title="ja/JavaScript code modules/PopupNotifications.jsm#The Notification object"><code>Notification</code></a> オブジェクトを返します。</p>
+
+<h2 id="Notification_actions">Notification actions</h2>
+
+<p>Notification action オブジェクトは、通知に結び付いたアクションのためのユーザーインターフェースを記述します。<strong>main action</strong> は通知パネル中に表示されるボタンの挙動を記述するために使われます。一方、<strong>secondary actions</strong> はボタンからドロップダウン表示されるメニューの挙動を記述するのにつかわれます。</p>
+
+<p>Notification action は以下のプロパティを含まなければなりません：</p>
+
+<dl>
+ <dt><code>label</code></dt>
+ <dd>アクションを説明するラベルのテキスト。</dd>
+ <dt><code>accessKey</code></dt>
+ <dd>アクションを発動するキーストロークを示す文字列。</dd>
+ <dt><code>callback</code></dt>
+ <dd>ユーザーがアクションを選択した際に実行される JavaScript 関数。</dd>
+</dl>
+
+<h2 id="Notification_options">Notification options</h2>
+
+<p>Notification options オブジェクトは通知パネルの更なるカスタマイズを指定できます。以下のプロパティをどのように組み合わせた場合でもカスタマイズは提供されます：</p>
+
+<dl>
+ <dt><code>persistence</code></dt>
+ <dd>通知を存在させ続ける、ページのロード回数を示す整数値。一度に大量のページのロードが発生した場合、通知は自動的に消えるかもしれません。</dd>
+ <dt><code>timeout</code></dt>
+ <dd>少なくとも通知が自動的には消えない時間を指定するタイムスタンプ（UNIX エポックからの経過ミリ秒）。タイムアウト値を指定した通知は、ユーザーの操作によって非表示にならない限り、指定された時間までは自動的に消えることはありません。大抵の使用時において、このパラメータ値は <code>Date.now()</code> に、通知を表示し続ける時間量を示すオフセット値を加えます。（例：30秒とする場合は <code>Date.now() + 30000</code> 。）</dd>
+ <dt><code>persistWhileVisible</code></dt>
+ <dd>ロケーションの変更をまたいでも通知を表示させたままにするかどうかを指定する真偽値。<code>true</code> の場合、別のロケーションへと移動しても、通知は表示されたままになります。</dd>
+ <dt><code>dismissed</code></dt>
+ <dd><strong>非表示通知 (dismissed notification) </strong> として通知を追加するかどうかを指定する真偽値。非表示通知 はアンカーのクリックによってアクティベートされます。この指定により、あなたが作成した通知は、ユーザーがアンカーをクリックした後に表示されます。</dd>
+ <dt><code>eventCallback</code></dt>
+ <dd>通知の状態が変更されたときに呼び出される JavaScript 関数。コールバック関数の最初の引数は、発生した状態の変更を示す文字列となります。詳しくは下記の <a href="/ja/JavaScript_code_modules/PopupNotifications.jsm#Notification_events" title="ja/JavaScript code modules/PopupNotifications.jsm#Notification events">Notification events</a> を参照してください。</dd>
+ <dt><code>neverShow</code></dt>
+ <dd>真偽値。<code>true</code> に指定した場合、ポップアップが表示されるのを永続的に妨げます。通知としてアンカーアイコンのみを表示する目的に使用できます。</dd>
+ <dt><code>removeOnDismissal</code></dt>
+ <dd>通知が非表示である場合（すなわち、ユーザーの操作でポップアップが閉じられている場合はいつでも）、この設定を <code>true</code> にされている通知は削除されます。</dd>
+ <dt><code>popupIconURL</code> {{ fx_minversion_inline("11") }}</dt>
+ <dd>ポップアップに表示される画像の URL を指定する文字列。 これは通常、 CSS で {{ cssxref("list-style-image") }} と <code>.popup-notification-icon[popupid=...]</code> セレクタ―を用いて指定されています。</dd>
+</dl>
+
+<h2 id="Notification_events">Notification events</h2>
+
+<p><code>show()</code> を呼び出す際に <code>options</code> パラメータを使用してイベントコールバックを指定した場合、通知の状態の変更に応じてコールバック関数が呼び出されます。コールバック関数の最初の引数は、状態の変更を示す以下の文字列のうちのいずれかひとつとなります：</p>
+
+<dl>
+ <dt>"dismissed"</dt>
+ <dd>（クリックやタブ切り替えといった）ユーザーの操作によって通知が消えた場合。"removed" とは異なり、通知は再び表示することが可能です。</dd>
+ <dt>"removed"</dt>
+ <dd>通知上でのユーザーの操作、または新たなロケーションへブラウザが移動することによって通知が削除場合。</dd>
+ <dt>"shown"</dt>
+ <dd>通知が表示された場合。通知の非表示と再表示の度に発火します。</dd>
+</dl>
+
+<h2 id="The_Notification_object">The Notification object</h2>
+
+<p>いずれの通知も <code>Notification</code> オブジェクトによって提供されます。このオブジェクトは通知の表示と管理に必要なすべてのデータを含み、1つのメソッドを持っています。<code>anchorElement</code> プロパティは通知のアンカー要素を返します。 <code>remove()</code>メソッドは通知を除去します。</p>
+
+<h2 id="関連項目">関連項目</h2>
+
+<ul>
+ <li><a href="/ja/Using_popup_notifications" title="ja/Using popup notifications">Using popup notifications</a></li>
+</ul>
+
+<p>{{ languages( { "en": "en/JavaScript_code_modules/PopupNotifications.jsm" } ) }}</p>

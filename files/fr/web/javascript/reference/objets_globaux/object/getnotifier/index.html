@@ -1,0 +1,53 @@
+---
+title: Object.getNotifier()
+slug: Web/JavaScript/Reference/Objets_globaux/Object/getNotifier
+tags:
+  - JavaScript
+  - Méthode
+  - Object
+  - Obsolete
+  - Reference
+translation_of: Archive/Web/JavaScript/Object.getNotifier
+---
+<div>{{JSRef}}{{obsolete_header}}</div>
+
+<p>La méthode <strong><code>Object.getNotifer()</code></strong> est utilisée pour créer un objet qui permet de déclencher des changements (tels que perçus par <code>Object.observe</code><code>()</code>) de façon synthétique. Cette API a été dépréciée et retirée des navigateurs.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox">Object.getNotifier(<em>obj</em>)</pre>
+
+<h3 id="Paramètres">Paramètres</h3>
+
+<dl>
+ <dt><code>obj</code></dt>
+ <dd>L'objet dont on souhaite récupérer le notificateur (<em>notifier</em>) associé.</dd>
+</dl>
+
+<h3 id="Valeur_de_retour">Valeur de retour</h3>
+
+<p>L'objet de notification associé à l'objet passé en argument.</p>
+
+<h2 id="Description">Description</h2>
+
+<p>Le notificateur est utilisé pour déclencher des changements qui pourront être observés avec <code>Object.observe()</code>.</p>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<p><a href="https://github.com/arv/ecmascript-object-observe">Proposition de spécification</a>.</p>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<div>
+<div class="hidden">Le tableau de compatibilité de cette page a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à consulter <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> et à nous envoyer une <em>pull request</em>.</div>
+
+<p>{{Compat("javascript.builtins.Object.getNotifier")}}</p>
+</div>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>{{jsxref("Object.observe()")}} {{obsolete_inline}}</li>
+ <li>{{jsxref("Object.unobserve()")}} {{obsolete_inline}}</li>
+ <li>{{jsxref("Array.observe()")}} {{obsolete_inline}}</li>
+</ul>

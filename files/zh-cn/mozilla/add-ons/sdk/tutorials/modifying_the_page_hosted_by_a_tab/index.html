@@ -1,0 +1,109 @@
+---
+title: 修改标签页中页面
+slug: Mozilla/Add-ons/SDK/Tutorials/Modifying_the_Page_Hosted_by_a_Tab
+tags:
+  - Add-on SDK
+translation_of: Archive/Add-ons/Add-on_SDK/Tutorials/Modifying_the_Page_Hosted_by_a_Tab
+---
+<div class="note">
+<p>为了进一步学习本教程，你需要安装 <a href="/en-US/Add-ons/SDK/Tutorials/Installation">Add-on SDK</a> 和学习 <a href="/en-US/Add-ons/SDK/Tutorials/Getting_Started_With_cfx">cfx的基本使用</a></p>
+
+<p>这篇教程使用<a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Low-Level_APIs/ui_button_action">动作按钮</a>API，需要Firefox 29或更新版本。</p>
+</div>
+
+<p>为了修改特定标签页中的页面, 可以使用<code> <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/High-Level_APIs/tabs">tab</a></code>对象的<code>attach()</code> 方法加载一个script脚本到页面中。因为他们的工作是和Web内容进行交互，所以这些脚本被称为content scripts(内容脚本)。</p>
+
+<p>这是个简单的示例:</p>
+
+<pre class="brush: js">var button = require("sdk/ui/button/action").ActionButton({
+  id: "style-tab",
+  label: "Style Tab",
+  icon: "./icon-16.png",
+  onClick: function() {
+    require("sdk/tabs").activeTab.attach({
+      contentScript: 'document.body.style.border = "5px solid red";'
+    });
+  }
+});</pre>
+
+<p>要运行这个示例你必须保存一个名为”icon-16.png“的图标文件在你的Add-on目录下的”data”目录下。你可以下载这个图标： <img alt="" src="https://mdn.mozillademos.org/files/7661/icon-16.png" style="width: 16px; height: 16px;">。</p>
+
+<p>这个插件创建一个按钮，其中包含Mozilla的图标作为一个图标。这个按钮产生一个点击事件处理程序，处理事件中将获取当前活动标签页和加载一个脚本到该标签页中的页面。使用<code>contentscript</code>选项指定加载的脚本，该脚本只绘制一个红色边框页。</p>
+
+<p>然后在浏览器窗口中打开任何网页，点击按钮 。你会看到一个红色的边界出现在页面中, 就像这样:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6531/tabattach-bbc.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+
+<h2 id="保持Content_Script在一个单独的文件中">保持Content Script在一个单独的文件中</h2>
+
+<p>在上面的例子中我们的<code>content script</code>作为一个字符串来直接使用.除非脚本非常简单，你应该保持脚本作为一个单独的文件。这使得代码更容易维护、调试和审查。</p>
+
+<p>比如，我们把上面的脚本代码保存在Add-on目录下的data目录中并取名为<code>my-script.js</code>，在代码中可以这样加载脚本：</p>
+
+<pre class="brush: js">var self = require("sdk/self");
+
+var button = require("sdk/ui/button/action").ActionButton({
+  id: "style-tab",
+  label: "Style Tab",
+  icon: "./icon-16.png",
+  onClick: function() {
+    require("sdk/tabs").activeTab.attach({
+      contentScriptFile: self.data.url("my-script.js")
+    });
+  }
+});
+</pre>
+
+<p>你可以加载多个脚本，同时这些脚本可以直接相互作用。所以你可以加载 <a href="http://jquery.com/">jQuery</a>, 然后在你的其他 content script使用它。</p>
+
+<h2 id="与Content_Script传递信息">与Content Script传递信息</h2>
+
+<p>你的扩展插件脚本Add-on script和内容脚本content script 不能直接访问对方的变量和函数，但他们之间可以互相发送消息。</p>
+
+<p>从一方发送消息到另外一方, 发送方需要调用 <code>port.emit()发送消息，</code> 同时接收方使用<code>port.on()</code>接收消息。</p>
+
+<ul>
+ <li>在 content script 中, <code>port</code> 是全局对象 <code>self</code> 的属性之一.</li>
+ <li>在 content script 中, <code>tab.attach()</code> 返回一个其中包含 <code>port</code> 属性的 <a href="/en-US/Add-ons/SDK/Low-Level_APIs/content_worker">worker</a> 对象，你可以使用它来向 content script 发送消息</li>
+</ul>
+
+<p>让我们重写上面的例子来从附加内容脚本 content script 传递一个消息。现在content script 需要像下面这样:</p>
+
+<pre class="brush: js">// "self" is a global object in content scripts
+// Listen for a "drawBorder"
+self.port.on("drawBorder", function(color) {
+  document.body.style.border = "5px solid " + color;
+});
+</pre>
+
+<p>在 add-on script 扩展脚本中，我们使用 <code>attach()方法返回的对象向 content script</code> 中发送一个“drawBorder”消息：</p>
+
+<pre class="brush: js">var self = require("sdk/self");
+var tabs = require("sdk/tabs");
+
+var button = require("sdk/ui/button/action").ActionButton({
+  id: "style-tab",
+  label: "Style Tab",
+  icon: "./icon-16.png",
+  onClick: function() {
+    var worker = tabs.activeTab.attach({
+      contentScriptFile: self.data.url("my-script.js")
+    });
+    worker.port.emit("drawBorder", "red");
+  }
+});
+</pre>
+
+<p>名为 <code>drawBorder</code> 的消息并不是一个内置的消息, 而是通过 <code>port.emit()方法自定义的。</code></p>
+
+<h2 id="注入_CSS">注入 CSS</h2>
+
+<p>不像 <a href="/en-US/Add-ons/SDK/High-Level_APIs/page-mod"><code>page-mod</code></a> API, <code>tab.attach()</code> 不允许你直接注入CSS到页面中。</p>
+
+<p>你需要使用 JavaScript 来修改页面的样式，就像前面的示例那样。</p>
+
+<h2 id="学习更多">学习更多</h2>
+
+<p>要了解更多关于在SDK中标签页的使用, 可以查看<a href="/en-US/Add-ons/SDK/Tutorials/Open_a_Web_Page">打开一个网页</a>教程,  <a href="/en-US/Add-ons/SDK/Tutorials/List_Open_Tabs">列出打开的标签页</a>教程, 和<a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs"><code>tabs</code> API 参考手册</a>.</p>
+
+<p>要学习更多关于content scripts, 查看 <a href="/en-US/Add-ons/SDK/Guides/Content_Scripts">content scripts guide</a>.</p>

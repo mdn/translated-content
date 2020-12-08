@@ -1,0 +1,101 @@
+---
+title: WebIDE のトラブルシューティング
+slug: Tools/WebIDE/Troubleshooting
+translation_of: Archive/WebIDE/Troubleshooting
+---
+<div>{{ToolsSidebar}}</div><h2 id="Connecting_to_Firefox_OS_over_USB" name="Connecting_to_Firefox_OS_over_USB">USB 経由で Android 版 Firefox に接続する</h2>
+
+<p>Android OS で実行している Firefox のインスタンスに接続できない場合は、以下の項目を確認してください:</p>
+
+<ul>
+ <li>Firefox のバージョンを確認する: デバイスで <strong>Android 版 Firefox 36 以降</strong>を実行していることを確認してください。WebIDE はこれより古いバージョンを自動的に検出できず、ポートフォワーディングを有効化してデバイスのポートに接続しなければなりません。<a class="external external-icon" href="/ja/docs/Tools/Remote_Debugging/Firefox_for_Android">こちら</a>の手順に従ってください。</li>
+ <li>Firefox でリモートデバッグを有効化しているか確認する: Android 版 Firefox を起動してメニューを開き、<code>設定</code>を選択します。そして、<code>高度な設定 &gt; USB 経由でリモートデバッグする</code>にチェックを入れてください。</li>
+ <li>デバイスの開発者向けオプションで、USB デバッグを有効にしてください。</li>
+ <li>まだ WebIDE のウィンドウにデバイスが表示されない場合は、電話機で<code>リモートデバッグ</code>の有効化を再度行ってください。
+  <ul>
+   <li>デバイスをコンピューターから切り離して、デバイス側で<code>リモートデバッグ</code>を無効にします。</li>
+   <li>デバイスをコンピューターに接続して、<code>リモートデバッグ</code>を有効化します。ここで、デバイス側のデバッガのインスタンスが再起動します。</li>
+   <li>WebIDE から再び接続してみてください。</li>
+  </ul>
+ </li>
+ <li>使用している USB ケーブルの確認:
+  <ul>
+   <li>USB ケーブルをいったん外し、再び接続してください。</li>
+   <li>USB ケーブルを、コンピューターの別の USB ポートに接続してください。つなぎ替えが必要であるかもしれません。</li>
+   <li>別の USB ケーブルで試してください。電話機に同梱されるケーブルは低品質で、接続が失敗することがあります。</li>
+   <li>短い USB ケーブルを使用してください。長い USB ケーブルではうまく動作しないことがあります。</li>
+  </ul>
+ </li>
+ <li>Linux を使用している場合の確認事項:
+  <ul>
+   <li><a class="external external-icon" href="http://developer.android.com/tools/device.html#setting-up">開発用に端末をセットアップする</a> のステップ 3 に記載されているとおりに、<code>udev</code> のルールファイルにルールを追加してください。Android の <a href="http://developer.android.com/tools/device.html#VendorIds"><code>idVendor</code> 値</a>のリストが役に立つでしょう。そして、デバイスを表示させるために <code>adb devices</code> を実行してください。デバイスが "no permission" と表示される場合は、adb サーバーの再起動が必要です (例: <code>adb kill-server;adb start-server</code>)。</li>
+   <li>Debian が提供する <code>android-tools-adb</code> パッケージを使用する場合は、ADB Helper を使用するために既存の ADB サーバーをすべて終了しなければならないでしょう。このパッケージは ADB Helper が依存している、サーバーへの TCP 接続を無効化します。</li>
+  </ul>
+ </li>
+ <li>Windows を使用している場合の確認事項:
+  <ul>
+   <li>Android デバイスが正常に認識されていて、Android SDK に含まれている Google USB Driver を使用していることを確認してください。</li>
+  </ul>
+ </li>
+ <li>Mac OS X を使用している場合の確認事項:
+  <ul>
+   <li>EasyTether を使用している場合は、EasyTether のアンインストールまたは無効化が必要です: <code>sudo kextunload /System/Library/Extensions/EasyTetherUSBEthernet.kext</code></li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Connecting_to_Firefox_for_Android_over_Wi-Fi" name="Connecting_to_Firefox_for_Android_over_Wi-Fi">Wi-Fi 経由で Android 版 Firefox に接続する</h2>
+
+<ul>
+ <li>Firefox のバージョンを確認する: Wi-Fi デバッグを使用するには Firefox 42 以降と、Android 版 Firefox 42 以降を実行している Android デバイスが必要です。</li>
+ <li>デスクトップ版 Firefox を実行するコンピューターと Android デバイスの両方を、同じ Wi-Fi ネットワークに接続しなければなりません。
+  <ul>
+   <li>詳しくいうとデスクトップ側で、Wi-Fi ネットワークへのルートがある有線ネットワークを使用することは<strong>できません</strong>。代わりに、両方を Wi-Fi に直接接続してください。</li>
+  </ul>
+ </li>
+ <li>バーコードスキャンアプリをインストール済みなのを確認してください。<a href="https://play.google.com/store/apps/details?id=com.google.zxing.client.android">これ</a>を推奨します。</li>
+ <li>Wi-Fi ネットワークによっては Wi-Fi 端末検索に使うパケットをブロックすることがあります。ネットワーク管理者にこうした行為が許可されているかを確認してください:
+  <ul>
+   <li>コンピューターと Android デバイスは UDP マルチキャストパケットをポート 50624-50625 からマルチキャストアドレス 224.0.0.115 に送受信できなければなりません。</li>
+   <li>ネットワークルーターが UDP マルチキャストパケットをサポートしていなければなりません。</li>
+   <li>ルーターはこの UDP マルチキャストパケットをフォワードせず、実効的にはつまり、両方の端末は他のホップを経由せずに直接同じルーターと通信する必要があります。</li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Unable_to_load_project_list" name="Unable_to_load_project_list">プロジェクトの一覧を読み込みできない</h2>
+
+<p>あるバージョンの Firefox で WebIDE を開いた後に、同じプロファイルを使用したまま Firefox をダウングレードすると、ダウングレード後の Firefox で WebIDE を開いた際に "Unable to load project list" というエラーが表示されることがあります。</p>
+
+<p>これは WebIDE が使用するストレージシステム (<a href="/ja/docs/Web/API/IndexedDB_API">IndexedDB</a>) で、新しいバージョンの Firefox 向けに内部ファイルの移動や再構築が必要になったときに発生します。古いバージョンの Firefox では、プロジェクトの一覧にアクセスできなくなります。</p>
+
+<p>データは失われていませんがプロジェクトの一覧にアクセスするには、プロファイルを使用していた新しいバージョンの Firefox を使用し続けなければなりません。</p>
+
+<p>やむを得ず古いバージョンの Firefox を使用する場合は以下の手順でプロジェクト一覧のみ削除できますが、サポート外の手順ですのでさらなるトラブルやデータの喪失を招く可能性があります:</p>
+
+<ol>
+ <li>Firefox を閉じます。</li>
+ <li>Firefox のプロファイルのディレクトリーを開きます。</li>
+ <li>プロファイルのディレクトリー内で <code>storage</code> フォルダを探します。</li>
+ <li>このフォルダ配下のファイルツリー内に、<code>4268914080AsptpcPerjo</code> (データベース名のハッシュ) で始まる名前のファイルやフォルダが見つかるでしょう。
+  <ul>
+   <li>例えば、<code>&lt;profile&gt;/storage/permanent/indexeddb+++fx-devtools/idb</code> に存在します。</li>
+  </ul>
+ </li>
+ <li>該当するファイルやフォルダを削除します。</li>
+ <li>再び Firefox と WebIDE を開きます。</li>
+</ol>
+
+<h2 id="Enable_logging" name="Enable_logging">ログ取得を有効化する</h2>
+
+<p>診断情報を収集するために、詳細なログを取得できます:</p>
+
+<ol start="1" style="list-style-type: decimal;">
+ <li><a class="external external-icon" href="http://kb.mozillazine.org/About:config">about:config</a> を開き、新しい設定項目 <code>extensions.adbhelper@mozilla.org.sdk.console.logLevel</code> を作成して、文字列値 <code>all</code> を設定します。また、<code>extensions.adbhelper@mozilla.org.debug</code> を <code>true</code> に設定します。</li>
+ <li><a class="external external-icon" href="https://support.mozilla.org/ja/kb/disable-or-remove-add-ons">アドオンマネージャ</a>で ADB Helper アドオンを無効化して、再び有効化します。</li>
+ <li><a href="/ja/docs/Tools/Browser_Console">ブラウザーコンソール</a>を開くと、接頭辞 <code>adb</code> が付加されたメッセージが表示されます。メッセージが表示されない場合は、<a href="/ja/docs/Tools/WebIDE/Troubleshooting#Get_help">支援を求めてください</a>。</li>
+</ol>
+
+<h2 id="Get_help" name="Get_help">支援を求める</h2>
+
+<p><a class="external external-icon" href="https://wiki.mozilla.org/DevTools/GetInvolved#Communication">IRC の #devtools ルーム</a>を訪れて、支援を求めてください。</p>

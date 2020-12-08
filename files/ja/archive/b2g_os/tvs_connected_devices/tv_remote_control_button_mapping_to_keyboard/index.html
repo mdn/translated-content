@@ -1,0 +1,148 @@
+---
+title: TV リモコンボタンのキーボードへのマッピング
+slug: >-
+  Archive/B2G_OS/TVs_connected_devices/TV_remote_control_button_mapping_to_keyboard
+tags:
+  - Controls
+  - Firefox OS
+  - Gaia
+  - Remote
+  - TV
+  - keyboard
+translation_of: Mozilla/Firefox_OS_for_TV/TV_remote_control_button_mapping_to_keyboard
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/ja/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<p class="summary">このTVリモコンボタンをキーボードを使ってシュミレーションする方法を簡潔に記します。</p>
+
+<p>We use the keyboard to simulate TV remote control buttons when developing apps for Firefox OS on TV. The following explains the keyboard equivalents to the TV remote control buttons in the three different platforms: Mac OS X, Windows and Linux.</p>
+
+<h2 id="Mac_OS_X">Mac OS X</h2>
+
+<table class="standard-table" style="height: 171px; width: 260px;">
+ <tbody>
+  <tr>
+   <td><strong>リモコン</strong></td>
+   <td><strong>キーボード</strong></td>
+  </tr>
+  <tr>
+   <td><kbd>home</kbd></td>
+   <td><kbd>fn</kbd> + <kbd>left</kbd></td>
+  </tr>
+  <tr>
+   <td><kbd>back</kbd></td>
+   <td><kbd>backspace</kbd></td>
+  </tr>
+  <tr>
+   <td><kbd>enter</kbd></td>
+   <td><kbd>return</kbd></td>
+  </tr>
+  <tr>
+   <td><kbd>option</kbd></td>
+   <td><kbd>fn</kbd> + <kbd>ctrl</kbd> + <kbd>I</kbd></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Windows">Windows</h2>
+
+<table class="standard-table" style="height: 171px; width: 260px;">
+ <tbody>
+  <tr>
+   <td><strong>リモコン</strong></td>
+   <td><strong>キーボード</strong></td>
+  </tr>
+  <tr>
+   <td><kbd>home</kbd></td>
+   <td><kbd>home</kbd></td>
+  </tr>
+  <tr>
+   <td><kbd>back</kbd></td>
+   <td><kbd>backspace</kbd></td>
+  </tr>
+  <tr>
+   <td><kbd>enter</kbd></td>
+   <td><kbd>enter</kbd></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Linux">Linux</h2>
+
+<table class="standard-table" style="height: 171px; width: 270px;">
+ <tbody>
+  <tr>
+   <td><strong>リモコン</strong></td>
+   <td><strong>キーボード</strong></td>
+  </tr>
+  <tr>
+   <td><kbd>home</kbd></td>
+   <td><kbd>home</kbd></td>
+  </tr>
+  <tr>
+   <td><kbd>back</kbd></td>
+   <td><kbd>backspace</kbd></td>
+  </tr>
+  <tr>
+   <td><kbd>enter</kbd></td>
+   <td><kbd>enter</kbd></td>
+  </tr>
+  <tr>
+   <td><kbd>option</kbd></td>
+   <td><kbd>shift</kbd> + <kbd>F10</kbd></td>
+  </tr>
+ </tbody>
+</table>

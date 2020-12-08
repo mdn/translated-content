@@ -1,0 +1,26 @@
+---
+title: International characters in XUL JavaScript
+slug: Archive/Mozilla/XUL/International_characters_in_XUL_JavaScript
+tags:
+  - Internationalization
+  - JavaScript
+translation_of: Archive/Mozilla/XUL/International_characters_in_XUL_JavaScript
+---
+<h2 id="Introduction" name="Introduction">はじめに</h2>
+<p><a href="/ja/docs/Mozilla/Firefox/Releases/1.5">Firefox 1.5</a> などのアプリケーションで使用されている <a href="/ja/docs/Mozilla/Gecko">Gecko</a> 1.8 は、<a href="/ja/docs/XUL">XUL</a> ファイルから読み込まれた <a href="/ja/docs/JavaScript">JavaScript</a> ファイルでの非 ASCII 文字のサポートが追加されました。</p>
+<p>実質的に世界中のどんな言語で使われるどんな文字でもそのようなスクリプトファイルで使えるのです。例えば次のような行を扱うことができます：</p>
+<pre>var text = "Ein schönes Beispiel eines mehrsprachigen Textes: 日本語";
+</pre>
+<p>この例ではドイツ語と日本語の文字が混じっています。</p>
+<p>以前のバージョンでは XUL から読み込まれた JS ファイルは常に <a href="http://en.wikipedia.org/wiki/ISO_8859-1#Code_table">ISO-8859-1</a> (Latin-1) として解釈されていました。ローカルの場合もリモートの場合もです。Unicode エスケープ（<a href="#Cross-version_compatibility">下で扱います</a>）は機能していました。</p>
+<h2 id="How_the_character_encoding_is_determined_in_Gecko_1.8_and_later" name="How_the_character_encoding_is_determined_in_Gecko_1.8_and_later">Gecko 1.8 以降で文字エンコーディングを判定する方法</h2>
+<p>JavaScript ファイルが <code>chrome://</code> URL から読み込まれたとき、<span class="inlineIndicator todo todoInline"><strong>FIXME:</strong> <em></em></span> <a href="/ja/docs/Byte_Order_Mark">Byte Order Mark</a> (<a href="https://ja.wikipedia.org/wiki/Byte_Order_Mark" title="BOM">BOM</a>) によってそのスクリプトの文字エンコーディングを判定します。そうでない場合は、（<code>&lt;?xml?&gt;</code> タグの <code>encoding</code> 属性を利用して指定できる）XUL ファイルで使用されているものと同じ文字エンコーディングとして判定されます。デフォルトでは UTF-8 が使われます。これは実際世界中のすべて文字を表現することができます。</p>
+<p>スクリプトファイルが HTTP 経由で読み込まれた場合、HTTP ヘッダの <code>Content-Type</code> ヘッダの部分に文字エンコーディング宣言が含まれていることがあります。例えば：</p>
+<pre>Content-Type: application/x-javascript; charset=UTF-8
+</pre>
+<p>charset パラメータが指定されていなければ上記のルールが適用されます。</p>
+<h2 id="Cross-version_compatibility" name="Cross-version_compatibility">バージョン間の互換性</h2>
+<p>Gecko 1.8 とそれ以前のバージョンで同じコードを動作させたいのであれば ASCII だけを使ってください。 しかし <a href="/ja/docs/JavaScript/Guide/Values,_variables,_and_literals#Unicode_escape_sequences">Unicode エスケープ</a> を使うことができます。 これを使用すると先の例は次のように書き換えられます。</p>
+<pre>var text = "Ein sch\u00F6nes Beispiel eines mehrsprachigen Textes: \u65E5\u672C\u8A9E";
+</pre>
+<p>代替策として、<a href="/ja/docs/XPCOM_Interface_Reference/nsIStringBundle">nsIStringBundle</a> か <a href="/ja/docs/XUL/Tutorial/Property_Files">XUL の &lt;stringbundle&gt; 要素</a> を利用して property ファイルを使うこともできます。このことで XUL のローカライゼーションも可能になります。ただ、ウェブ上の XUL ファイルではこれが利用できません。<a href="/ja/docs/Extensions">拡張機能</a> など、特権を持ったコードでのみ利用できます。</p>

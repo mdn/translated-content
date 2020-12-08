@@ -1,0 +1,177 @@
+---
+title: Personnaliser le clavier dans Firefox OS
+slug: Archive/B2G_OS/Developing_Gaia/Personnaliser_le_clavier
+tags:
+  - Firefox OS
+  - Guide
+  - keyboard
+translation_of: Archive/B2G_OS/Developing_Gaia/Customizing_the_keyboard
+---
+<div class="summary">
+<p>Ce document explique comment ajouter des agencements de clavier contenant leur propres langues/scripts à Firefox OS v1.2 et supérieur .</p>
+</div>
+
+<h2 id="Statut_de_l'application_clavier_Gaia_intégrée_architecture_système">Statut de l'application clavier Gaia intégrée &amp; architecture système</h2>
+
+<p>Deux fonctionnalités majeures du clavier ont été implémentées dans Firefox OS depuis octobre 2013 :</p>
+
+<ul>
+ <li>Une option de compilation pour activer ou désactiver l'inclusion du clavier/dictionnaire du vérificateur d'orthographe dans la compilation de l'application clavier Gaia intégrée (voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=884752" title="FIXED: keyboard build-time customization">bug 884752</a>).</li>
+ <li>Une fonctionnalité au niveau du système d'exploitation qui permet à l'utilisateur d'installer une application clavier tierce depuis le Firefox Marketplace. Elle sera disponible à partir de Firefox OS v2.0. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=816869" title="FIXED: [Meta] Enable third-party keyboards">bug 816869</a> et <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=964670" title="FIXED: [Keyboard][User Story] Enable 3rd party keyboard framework with OOP">bug 964670</a> pour plus de détails.</li>
+</ul>
+
+<p>Pour ajouter un nouvel agencement de clavier sur votre téléphone, vous pouvez mettre un fichier d'agencement dans Gaia et compiler l'application clavier en utilisant la configuration de compilation, ou développer votre propre application clavier et l'installer sur le téléphone. Nous allons voir comment réaliser chacune de ces opérations.</p>
+
+<h2 id="Développer_votre_propre_application_clavier">Développer votre propre application clavier</h2>
+
+<p>Vous pouvez vous servir de l'application clavier de Gaia comme d'un modèle. Les idées de base sont :</p>
+
+<ul>
+ <li>Dans le fichier<em>manifest</em> , déclarez votre application comme ayant le role de <code>input</code> dans la propriété <a href="/fr/Apps/Manifeste#role"><code>role</code></a>.</li>
+ <li>Assurez-vous d'avoir spécifié la permission <code>input</code> dans la propriété <a href="/fr/Apps/Manifeste#permissions"><code>permissions</code></a></li>
+</ul>
+
+<p>Une fois que c'est fait, vous pouvez installer votre clavier et il sera affiché dans la moitié basse de l'écran à chaque fois que l'utilisateur sera sur un champ de saisie. Pour gérer l'espace pris par le clavier, vous pouvez :</p>
+
+<ul>
+ <li>utiliser la méthode classique <code>window.resizeTo</code> pour mettre à jour la surface qui doit être prise par l'application</li>
+ <li>utiliser la nouvelle <code>navigator.mozInputMethod</code> API pour modifier le contenu en fonction de l'<code>input</code>. Voir la méthode <a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/InputMethod.webidl">WebIDL de l'API</a> pour plus de détails. Beaucoup de ces méthodes affichent les mêmes caractères mais génèrent pourtant des évènements différents (<a href="/fr/docs/Web/API/KeyboardEvent">KeyboardEvent</a>, <a href="/fr/docs/Web/API/CompositionEvent">CompositionEvent</a>, etc), alors assurez vous d'utiliser <a href="https://wiki.mozilla.org/WebAPI/KeboardIME">la bonne méthode selon le cas d'utilisation(en anglais)</a>.</li>
+</ul>
+
+<div class="note">
+<p><strong>À noter</strong>: La démonstration du <a href="https://github.com/mozilla-b2g/gaia/tree/master/dev_apps/test-keyboard-app">clavier LOL</a> doit vous aider à mieux comprendre comment les applications clavier sont conçues, et vous servir de modèle pour vos propres applications clavier.</p>
+</div>
+
+<h2 id="Inclure_un_agencement_personnalisé_dans_l'application_clavier_de_Gaia">Inclure un agencement personnalisé dans l'application clavier de Gaia</h2>
+
+<ol>
+ <li>Voir le fichier <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/keyboard/CONFIGURE">CONFIGURE de l'application clavier</a> pour plus d'informations. Selon les langues à ajouter, vous devrez éventuellement ajouter un dictionnaire ou ajouter un Input Method (IME) interactif (pour les langages asiatiques)</li>
+ <li>Si vous ajoutez des agencements pour de nouvelles langues, vous pouvez les ajouter comme agencements par défaut dans <a href="https://github.com/mozilla-b2g/gaia/blob/master/build/config/keyboard-layouts.json">build/config/keyboard-layouts.json</a>.</li>
+</ol>
+
+<h3 id="IME_Asiatiques">IME Asiatiques</h3>
+
+<p>Les langues de l'Asie orientale (<a href="https://fr.wikipedia.org/wiki/Chinois,_japonais_et_cor%C3%A9en">le chinois, le japonais, et le coréen</a>) utilisent une graphie composée de milliers de caractères. Comme il est impossible d'avoir des milliers de touches sur un clavier matériel ou logiciel, les utilisateurs se servent d'un programme d'indexation appelé <a href="https://fr.wikipedia.org/wiki/M%C3%A9thode_d%27entr%C3%A9e">éditeur de méthode de saisie (ou <em>input method editor</em>)</a> (IME) qui permet de convertir une série de symboles en caractères.<br>
+ <br>
+ La façon dont les symboles doivent être convertis et l'efficacité de la méthode reposent sur l'implémentation du programme (et repose souvent sur la science du <a href="https://fr.wikipedia.org/wiki/Traitement_automatique_du_langage_naturel">traitement du langage naturel</a> qui ne peut être traitée entièrement ici). Pour économiser de la mémoire, il est conseillé que les données soient compilées dans un blob binaire et interprétées comme un <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/ArrayBuffer">tableau buffer</a>. Les structures JSON complexes ne fonctionneront pas sur certains appareils.</p>
+
+<h4 id="L'Interface_du_moteur_IM_dans_l'application_clavier_de_Gaia">L'Interface du moteur IM dans l'application clavier de Gaia</h4>
+
+<p>Si vous disposez d'une bibliothèque IME pour convertir des symboles en caractères, vous devrez utiliser l'interface définie dans l'application clavier de Gaia pour recevoir des symboles et afficher des caractères. <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/keyboard/js/keyboard/input_method_manager.js">La version de l'API est documentée sur Github</a>.</p>
+
+<p>Nous encourageons les implémentations d'IME pour affiner cette API de Gaia.</p>
+
+<h4 id="Faire_fonctionner_le_moteur_IM_avec_l'agencement">Faire fonctionner le moteur IM avec l'agencement</h4>
+
+<p>Pour faire fonctionner le moteur IM avec votre agencement de clavier :</p>
+
+<ol>
+ <li>Ajoutez un agencement dans layout.js comme décrit précédemment.</li>
+ <li>Utilisez la propriété <code>imEngine</code> pour faire référence au moteur IM. Lorsque l'agencement est activé, l'application de clavier chargera le script situé à  <code>keyboard/js/imes/&lt;moteurIM&gt;/&lt;moteurIM&gt;.js</code>.</li>
+ <li>Paramétrez les API pour recevoir/envoyer des touches/caractères lorsque le script est chargé et initialisé.</li>
+ <li>Gérez les saisies de l'utilisateur comme vous le souhaitez. Généralement, lorsque l'utilisateur utilise des touches du clavier, cela envoie des données au moteur IM.</li>
+</ol>
+
+<h4 id="Implémentations_connues">Implémentations connues :</h4>
+
+<ul>
+ <li><a href="https://github.com/timdream/jszhuyin">JSZhuyin</a> est la première implémentation du clavier Gaia avec un moteur IM asiatique, pour le chinois traditionnel et qui intègre l'IME Zhuyin.</li>
+ <li><a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/keyboard/js/imes/jskanji">JSKanji</a> est un prototype de moteur IM pour le japonais.</li>
+ <li><a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/keyboard/js/imes/jspinyin">JSPinyin</a> est écrit pour le chinois simplifié et fonctionne en saisissant des symboles Pinyin.</li>
+ <li>Pour démonstration, <a href="http://chewing.csie.net/">Chewing</a>, est une version C/C++ open-source de l'IME Zhuyin pour le chinois traditionnel et a été <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=845685">cross-compilé avec emscripten</a> puis lié au clavier Gaia.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=835261">JSHangul</a> est un prototype de moteur IM pour le coréen et est en cours de développement.</li>
+</ul>
+
+<h3 id="Les_nouvelles_locales_et_la_localisation">Les nouvelles locales et la localisation</h3>
+
+<p>Ce qui suit peut s'appliquer aux systèmes d'écriture alphabétiques, ceux qui utilisent un alphasyllabaire (comme la devanagari) ou un système idéographique (comme le chinois) sont plus complexes.</p>
+
+<p>Généralement, deux éléments sont nécessaires : un <strong>clavier </strong>et un <strong>lexique </strong>(pour la prédiction du texte).</p>
+
+<h4 id="Créer_un_agencement_clavier">Créer un agencement clavier</h4>
+
+<p>L'agencement du clavier est contenu dans un fichier JavaScript et définit les touches du clavier et la correspondances entre les touches et les lettres et les symboles, ainsi que les options de clavier utilisées avec les pressions longues. La méthode la plus simple consiste à récupérer un clavier existant sur <a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/keyboard/js/layouts">GitHub</a>, de le renommer et de l'ajuster.</p>
+
+<p>Tout d'abord, il faut changer l'en-tête. Si, par exemple, votre clavier d'origine est proche du clavier anglais (en-US) et que vous voulez en créer un pour la locale gaélique écossaise (gd), vous pouvez éditer le fichier suivant (grâce à un éditeur comme Notepad++) :</p>
+
+<pre>Keyboards.en = {
+ label: 'English',
+ shortLabel: 'En',
+ imEngine: 'latin',
+ types: ['text', 'url', 'email', 'number', 'password'],
+ autoCorrectLanguage: 'en_us',
+ menuLabel: 'English',</pre>
+
+<p>en :</p>
+
+<pre>Keyboards.gd = {
+ label: 'Scottish Gaelic',
+ shortLabel: 'gd',
+ imEngine: 'latin',
+ types: ['text', 'url', 'email', 'number', 'password'],
+ autoCorrectLanguage: 'gd_gb',
+ menuLabel: 'Gàidhlig',</pre>
+
+<p>Le champ <code>label</code> doit être celui de votre langue en anglais, le champ <code>shortLabel</code> ne doit pas mesurer plus de trois caractères. Il sera utilisé comme abréviation sur le clavier afin que l'utilisateur sache quel langage il utilise. Vous pouvez utiliser le code ISO de la langue ou autre chose si vous pensez que c'est pertinent. Le champ <code>menuLabel</code> est le nom de la langue exprimé dans la langue en question : c'est ce que l'utilisateur verra dans le menu des options.</p>
+
+<p>Si l'agencement du clavier est proche de celui que vous souhaitez, la seule chose à faire consiste à modifier les caractères alternatifs (auxquels on accède avec une pression longue sur la touche) :</p>
+
+<pre>alt: {
+  a: 'áàâäåãāæ',
+  c: 'çćč',
+  e: 'éèêëēę€ɛ',
+  i: 'ïíìîīį',
+  o: 'öõóòôōœøɵ',
+  u: 'üúùûū',
+  s: 'ßśš$',
+  S: 'ŚŠ$',
+  n: 'ñń',
+  l: 'ł£',
+  y: 'ÿ¥',
+  z: 'žźż',
+  '.': ',?!;:'
+},</pre>
+
+<p>Vous pouvez ainsi changer l'ordre des caractères affichés lors de la pression longue. Pour notre exemple, le gaélique utilise plus d'accents graves que d'accents aigus et on peut changer l'ordre en :</p>
+
+<pre>a: 'àáâäåãāæ',</pre>
+
+<p>On peut aussi vouloir proposer des consonnes pointées et ajouter de nouvelles lignes comme celle-ci :</p>
+
+<pre><span class="nx">b</span><span class="o">:</span> <span class="s1">'ḃ'</span><span class="p">,</span></pre>
+
+<p>On peut également vérifier l'agencement alternatif (celui qui propose les nombres, la ponctuation, etc.) et le symbole monétaire affiché.</p>
+
+<h4 id="Créer_un_lexique">Créer un lexique</h4>
+
+<p>Avoir un lexique permet de proposer une prédiction à la saisie (plutôt que les utilisateurs aient à taper chaque lettre de chaque mot). Pour le construire, vous avez (idéalement) besoin d'un corpus de mots classés par fréquence d'utilisation. Par exemple, le mot <em>demain</em> est plus fréquemment utilisé que <em>démiurge </em>et devrait donc être proposé avant lorsque l'utilisateur saisit un texte.</p>
+
+<p>Pour le faire, on assigne des nombres de 1 (fréquence la plus faible) à 255 (fréquence la plus forte) à chaque mot (c'est-à-dire chaque ligne) du lexique (un fichier XML dont vous pouvez trouver un exemple <a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/keyboard/js/imes/latin/dictionaries">ici</a>). Voici ce que vous devrez créer :</p>
+
+<pre>&lt;wordlist locale="gd" description="Gàidhlig" date="1401554807" version="1"&gt;
+ &lt;w f="255" flags=""&gt;a&lt;/w&gt;
+ &lt;w f="254" flags=""&gt;an&lt;/w&gt;
+ &lt;w f="247" flags=""&gt;agus&lt;/w&gt;</pre>
+
+<p>Même si le corpus est construit rapidement à partir d'un texte suffisamment important (et en comptant les fréquences des mots de ce corpus), cela permettra d'assurer la fonctionnalité de prédiction. Si vous ne disposez pas de telles données au format numérique pour votre locale, utilisez votre connaissance du lexique pour trier manuellement les termes les plus communs selon vous.</p>
+
+<h4 id="Construire_les_fichiers">Construire les fichiers</h4>
+
+<p>Une fois que vous disposez du fichier javascript et du fichier de lexique, allez dans <a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/keyboard/js/imes/latin/dictionaries">ce répertoire gaia</a> puis ouvrez <em>Makefile</em>. Ajoutez le nom du dictionnaire à votre liste (si, pour l'exemple, il est nommé <em>gd_wordlist.xml</em>), cela sera :</p>
+
+<pre>ga.dict \
+gd.dict \</pre>
+
+<p>Assurez vous que le fichier <code>gd_worldlist.xml</code> soit dans le répertoire puis lancez <code>$ make gd.dict</code></p>
+
+<p>Si vous êtes arrivés jusqu'à ce point et que vous n'arrivez pas à passer cette dernière étape de construction, merci de <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox%20OS">remplir un bug</a> (<strong>Composant : Gaia Keyboard</strong>) et de joindre vos fichiers en expliquant le problème. Quelqu'un devrait pouvoir vous aider.<strong> Assurez-vous de soumettre le correctif comme une pull request, et de le marquer <em>à revoir (review) par quelqu'un</em>, sinon, le bug pourra passer inaperçu.</strong></p>
+
+<h4 id="Tester_une_nouvelle_locale">Tester une nouvelle locale</h4>
+
+<p>Une fois que vous avez construit et envoyé les fichiers pour la nouvelle locale, vous pouvez simplement tester votre clavier et lexique sur la page web de démonstration qui utilise l'application clavier. Vous pouvez le clôner et l'essayer localement depuis <a href="https://github.com/timdream/gaia-keyboard-demo">ici</a>. En cliquant sur 'En', vous pouvez parcourir les différentes locales. Si vous ne pouvez pas trouver la vôtre, cliquez sur le bouton situé en haut à droite pour cocher/décocher les claviers que vous souhaitez tester.</p>
+
+<h2 id="Discussion_et_QA_(qualité)">Discussion et QA (qualité)</h2>
+
+<p>Rendez-vous sur la liste de diffusion <a href="https://lists.mozilla.org/listinfo/dev-gaia">dev-gaia</a> ou sur le canal #gaia sur irc.mozilla.org (voir <a href="https://wiki.mozilla.org/IRC">Mozilla IRC (en anglais)</a> pour plus de détails. #mozilla-taiwan est le canal chinois pour ce sujet.<br>
+ <br>
+  </p>

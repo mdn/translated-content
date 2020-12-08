@@ -1,0 +1,37 @@
+---
+title: Making a Mozilla installation modifiable
+slug: Creating_a_Mozilla_Extension/Making_a_Mozilla_installation_modifiable
+tags:
+  - Add-ons
+  - Extensions
+translation_of: >-
+  Archive/Mozilla/Creating_a_Mozilla_extension/Making_a_Mozilla_installation_modifiable
+---
+<p>
+</p><p>Mozilla の UI は、<a href="ja/XUL">XUL</a> (後述)、<a href="ja/XBL">XBL</a> (他のチュートリアルのトピック)、<a href="ja/JavaScript">JavaScript</a>、<a href="ja/CSS">CSS</a>、そしてイメージファイルで構成されています。XUL、XBL、JavaScript、CSS はテキスト形式のファイルで、テキストエディタがあれば編集できます。イメージファイルは GIF か JPG か PNG フォーマットのファイルで、編集するには画像編集プログラムが必要です。
+</p><p>次に、UI を構成するファイルは JAR アーカイブにまとめられます。これはただの ZIP ファイルの拡張子を変えたもので、「manifest」というファイルを含んでいます。これは、アーカイブの内容について書いてある特別なフォーマットのファイルで、Mozilla はこのファイルを読んで行うべき処理を決定します。
+</p><p>JAR アーカイブはバイナリファイルですが、Mozilla の UI はマシンコードにコンパイルされるわけではありません。Mozilla は、起動する度にその UI をアーカイブ中のファイルからビルドします。そのため、アーカイブ中のファイルを変更してアプリを再起動するだけで、変更点の確認ができます。このため、Mozilla の UI はコンパイルベースのアプリケーションより修正が簡単になっています。
+</p><p>Mozilla の UI ファイルは通常 JAR アーカイブに格納されていますが、代わりにアーカイブされていない形の UI ファイルを使うこともできます。これは、コードを修正する前にアーカイブからファイルを取り出したり、修正した後にアーカイブへファイルを追加したりする必要がないので、拡張機能の開発者にとってとても有効な手段です。最初に一度だけアーカイブを解凍する必要がありますが、それだけで後は好きなだけ変更ができます。
+</p><p>Mozilla を修正可能にするには、まず最初に unzip ユーティリティを使って アーカイブから UI ファイルを取り出します。次に Mozilla の UI ファイルのレジストリを修正し、オリジナルの JAR アーカイブの代わりに、取り出したファイルを使うように設定します。もし以下の説明でうまく動かない場合は、Patch Maker を試してください。このツールは、アーカイブからファイルを取り出し、Mozilla のレジストリを書き換えるパッチを作ってくれます。
+</p><p>アーカイブは Mozilla がインストールされているディレクトリの <code>chrome</code> サブディレクトリに格納されています。unzip ユーティリティを使って、ディレクトリにある .jar 拡張子のファイルをすべて解凍しましょう。<code>.jar</code> ファイルが配置されているのと同じディレクトリ (<code>chrome</code> ディレクトリ) に解凍したか確かめてください。bash ライクなシェルがある Unix ライクな OS では、<code>chrome</code> ディレクトリで次のコマンドを実行すれば、この作業は完了します。
+</p>
+<pre class="eval">for file in *.jar; do unzip $file; done
+</pre>
+<p>DOS のようなシェルを持つ OS では、次のコマンドを実行すれば作業完了です。
+</p>
+<pre class="eval">for %file in (*.jar); do unzip %file
+</pre>
+<p><span style="color: darkgreen; background: #ef9;">【訳注: 】</span> そのディレクトリにあるプラットフォーム固有のファイル — <code>en-mac.jar</code>、<code>en-unix.jar</code>、そして <code>en-win.jar</code> — については、使っているプラットフォームに対応した物だけ解凍してください。<span style="color: darkgreen; background: #ef9;">【訳注: 上記のコマンドを実行した場合は、自分の使っているプラットフォームに対応した .jar ファイルをもう一度解凍して、ファイルを上書き (プロンプトに A と答える) してください】</span>
+</p><p>ファイルを解凍したら、オリジナルの JAR アーカイブの代わりに 解凍されたファイルを使うように Mozilla chrome レジストリを修正します。chrome レジストリとは、主要な Mozilla コンポーネントとその UI ファイルが <code>chrome</code> ディレクトリのどこに配置されているかが書かれているファイルです。これは <code>chrome</code> ディレクトリの <code>chrome.rdf</code> と <code>installed-chrome.txt</code> のどちらか (または両方) にあたります。
+</p><p>このレジストリには、JAR アーカイブ内のディレクトリを指す <code>jar:resource:/chrome/SOMETHING.jar!/SOMETHING-ELSE...</code> という形の URL がいくつも含まれています。この URL が解凍したファイルを指すように、まず先頭の <code>jar:</code> を取り除き、次に真ん中ぐらいの <code>SOMETHING.jar!</code> という部分を取り除きます。もし Perl が使えるなら、次のコマンドで行うことができます。
+</p>
+<pre class="eval">perl -pi.orig -e 's/(jar:)|(\/[^.\/]+\.jar!)//g' chrome.rdf installed-chrome.txt
+</pre>
+<p>例えば、<code>jar:resource:/chrome/comm.jar!/content/necko/</code> という URL は <code>resource:/chrome/content/necko/</code> に変更されます。
+</p><p>ここまできたら、修正した Mozilla を起動してみましょう。元々入っている Mozilla ではなく、新しくインストールして修正した Mozilla を起動していること、もし Windows を使っていて「高速起動」機能を有効にしているのなら、それを終了させたことを確認してください。Mozilla が立ち上がり、普通の Web ブラウザウインドウが出てきたなら、Mozilla を修正できるようになりました！ <span>[mention that if you have Perl, you can also do this with Patch Maker]</span>
+</p><p></p><div style="text-align: right;" class="prevnext">
+    <p><a style="float: left;" href="/ja/docs/Creating_a_Mozilla_Extension:Tinderbox">« 前のページ</a><a href="/ja/docs/Creating_a_Mozilla_Extension:Finding_the_file_to_modify">次のページ  »</a></p>
+</div>
+<p></p>
+<div class="noinclude">
+</div>

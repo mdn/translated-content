@@ -1,0 +1,212 @@
+---
+title: 多进程 Firefox 与 SDK
+slug: Mozilla/Add-ons/SDK/Guides/Multiprocess_Firefox_and_the_SDK
+translation_of: Archive/Add-ons/Add-on_SDK/Guides/Multiprocess_Firefox_and_the_SDK
+---
+<p>我们目前正在使 Firefox 变为多进程，它为浏览器界面使用一个操作系统进程，为运行的网页使用另一个进程来执行代码，这个项目被称为 "electrolysis" 或者 "e10s"。更多信息请参考<a href="/en-US/Firefox/Multiprocess_Firefox">多进程 Firefox 相关页面</a>。</p>
+
+<p>本文章介绍了开发者如何测试基于 SDK 的附加组件是否与多进程的 Firefox 兼容，以及如何解决出现的问题。</p>
+
+<h2 id="SDK_的合约">SDK 的合约</h2>
+
+<p>SDK 为附加组件的开发者承诺了：</p>
+
+<ul>
+ <li><a href="/en-US/Add-ons/SDK/High-Level_APIs">顶层 API</a> 对多进程 Firefox 完全工作。如果并没有，请报告为 SDK 中的 bug。</li>
+ <li><a href="/en-US/Add-ons/SDK/Low-Level_APIs">底层 API</a> 也许不工作。如果你在使用底层 API，考虑检查、测试和重构某些代码。</li>
+</ul>
+
+<p>在实践中，大多数底层 API 将正常工作，但可以直接访问网页内容的底层 API 无法正常工作。</p>
+
+<h2 id="兼容性垫片">兼容性垫片</h2>
+
+<p>举例来说，你可能认为这是行不通的：</p>
+
+<pre class="brush: js">var contentDocument = require("sdk/window/utils")
+  .getMostRecentBrowserWindow().content.document;</pre>
+
+<p>但是，Firefox 为附加组件提供了许多 API 的兼容性垫片。这意味着许多 API，包括上述例子的那个，仍然工作。虽然有两条警示需注意：</p>
+
+<ul>
+ <li>这些垫片不完美：某些附加组件在有垫片的情况下仍然不工作。举例来说，许多垫片通过为内容对象返回跨进称对象包装器来工作，并且这<a href="/en-US/Firefox/Multiprocess_Firefox/Cross_Process_Object_Wrappers#Limitations_of_CPOWs">并非始终以同样的方式</a>作为内容对象。</li>
+ <li>这些垫片可能对性能有不良影响，我们希望人们最终去除它们。</li>
+</ul>
+
+<p>We don't yet have a complete list of low-level APIs that are not multiprocess compatible: that is, will not work without the shims. Where we know that a low-level API is not multiprocess compatible, we've indicated that in the documentation page for it.</p>
+
+<h2 id="测试">测试</h2>
+
+<p>To test whether an add-on works without the shims, use the <a href="/en-US/Add-ons/SDK/Tools/package_json#permissions">"multiprocess" permission</a>.</p>
+
+<div class="note">
+<p><strong>Note</strong> that you can only do this if you are using <a href="/en-US/Add-ons/SDK/Tools/jpm">jpm</a>. You can't use the <a href="/en-US/Add-ons/SDK/Tools/package_json#permissions">"multiprocess" permission</a> if you are using <a href="/en-US/Add-ons/SDK/Tools/cfx">cfx</a>.</p>
+</div>
+
+<p>Setting this permission will disable the shims for your add-on, so you can test to see if it's really multiprocess compatible or not.</p>
+
+<p>However, there's a catch: some of the SDK's APIs themselves still depend on the shims. So by setting the <a href="/en-US/Add-ons/SDK/Tools/package_json#permissions">"multiprocess" permission</a>, your add-on might not work, even if you are only using high-level APIs. For example:</p>
+
+<pre class="brush: js">var selection = require("sdk/selection");
+
+function myListener() {
+  console.log(selection.text);
+}
+
+selection.on('select', myListener);
+</pre>
+
+<p>This add-on will not work if you've set the <a href="/en-US/Add-ons/SDK/Tools/package_json#permissions">"multiprocess" permission</a>, because <code><a href="/en-US/Add-ons/SDK/High-Level_APIs/selection">sdk/selection</a></code> depends on the shims. We're working on fixing these problems: see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1004745">bug 1004745</a> and its dependencies.</p>
+
+<h2 id="使用框架脚本">使用框架脚本</h2>
+
+<p>If the shims don't enable your add-on to work properly, or you're trying to remove your dependency on the shims, then the solution is the same as it is for all add-ons:</p>
+
+<ul>
+ <li>factor the code that needs access to content objects into frame scripts</li>
+ <li>use the message manager to load the frame scripts into the content process</li>
+ <li>use the message manager to exchange messages with the frame scripts</li>
+</ul>
+
+<p>In the rest of this section we'll outline some SDK-specific details of using the message manager. However, you'll also need to read the main <a href="/en-US/Firefox/Multiprocess_Firefox/The_message_manager">message manager documentation</a> for the details on working with frame scripts.</p>
+
+<div class="note">
+<p>If you're used to working with content scripts in the SDK, then frame scripts might feel similar, but they're actually very different. Frame scripts are more like a part of the main add-on code that just happens to be running in the content process.</p>
+
+<p>Differences between frame scripts and content scripts include:</p>
+
+<ul>
+ <li>the <a href="/en-US/Firefox/Multiprocess_Firefox/Frame_script_environment">environment for frame scripts</a> and the <a href="/en-US/Add-ons/SDK/Guides/Two_Types_of_Scripts#API_Access_for_Add-on_Code_and_Content_Scripts">environment for content scripts</a> are totally different:
+
+  <ul>
+   <li>content scripts have a very similar environment to scripts loaded by web pages, plus the <code><a href="/en-US/Add-ons/SDK/Guides/Content_Scripts/self">self</a></code> global.</li>
+   <li>frame scripts also have access to web content, but have a different set of APIs for communicating with the chrome process, and access to the <a href="/en-US/docs/Components_object">Components object</a>, which enables them to use privileged <a href="/en-US/docs/Mozilla/Tech/XPCOM">XPCOM</a> APIs and load <a href="/en-US/docs/Mozilla/JavaScript_code_modules">JSMs</a>.</li>
+  </ul>
+ </li>
+ <li>content scripts are reloaded when a new document is loaded. Frame scripts aren't: once a frame script is loaded into a tab it remains loaded until the tab is closed. For more details, see the article on <a href="/en-US/Firefox/Multiprocess_Firefox/Message_Manager/Frame_script_loading_and_lifetime">frame script lifetime</a>.</li>
+</ul>
+</div>
+
+<h3 id="访问消息管理器">访问消息管理器</h3>
+
+<h4 id="全局消息管理器">全局消息管理器</h4>
+
+<p>To access the <a href="/en-US/Firefox/Multiprocess_Firefox/Message_Manager/Message_manager_overview#Global_frame_message_manager">global message manager</a>, you load the <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageListenerManager">nsIMessageListenerManager</a> service. Before you can do this in an SDK add-on, you have to <code>require("chrome")</code> to get access to the <code><a href="/en-US/docs/Components_object">Components</a></code> object:</p>
+
+<pre class="brush: js">const {Cc, Ci} = require("chrome");
+
+var globalMM = Cc["@mozilla.org/globalmessagemanager;1"]
+  .getService(Ci.nsIMessageListenerManager);</pre>
+
+<h4 id="窗口消息管理器">窗口消息管理器</h4>
+
+<p>The <a href="/en-US/Firefox/Multiprocess_Firefox/Message_Manager/Message_manager_overview#Window_message_manager">window message manager</a> is available as the <code>messageManager</code> property of a chrome window. To understand what a chrome window is, you need to distinguish three sorts of windows:</p>
+
+<ul>
+ <li>a content window is the <a href="/en-US/docs/Web/API/Window">Window</a> object familiar to Web developers as the global object for JavaScript loaded from an HTML document. This is the same window that content scripts in the SDK access.</li>
+ <li>a chrome window, also called a browser window. This is a Firefox application window, hosting the Firefox UI as well as a collection of tabs, each of which can in turn host a DOM window to display web content. This is the global for traditional overlay-based add-ons. In the SDK, the low-level <a href="/en-US/Add-ons/SDK/Low-Level_APIs/window_utils">window/utils</a> module works with these sorts of windows.</li>
+ <li>an SDK window, as made available by the high level <a href="/en-US/Add-ons/SDK/High-Level_APIs/windows">windows</a> module. Each SDK window maps to a chrome window, but omits most of the chrome window's properties, including <code>messageManager</code>. If you have an SDK window you can convert it to a chrome window using <a href="/en-US/Add-ons/SDK/High-Level_APIs/windows#Converting_to_chrome_windows">viewFor</a>.</li>
+</ul>
+
+<p>So to get a window message manager from the SDK, you have a couple of options:</p>
+
+<p>(1) Use the <a href="/en-US/Add-ons/SDK/Low-Level_APIs/window_utils">window/utils</a> module:</p>
+
+<pre class="brush: js">// Note that although this code uses window/utils,
+// it's safe to run in the chrome process because
+// it only accesses chrome objects.
+
+// get the active chrome window
+var browserWindow = require("sdk/window/utils").getMostRecentBrowserWindow();
+
+var windowMM = browserWindow.messageManager;</pre>
+
+<p>(2) Use <code>viewFor</code> to convert an SDK window to a chrome window:</p>
+
+<pre class="brush: js">// get the active SDK window
+var windows = require("sdk/windows").browserWindows;
+var activeWindow = windows.activeWindow;
+
+// convert it to a chrome window
+var browserWindow = require("sdk/view/core").viewFor(activeWindow);
+
+var windowMM = browserWindow.messageManager;</pre>
+
+<h4 id="浏览器消息管理器">浏览器消息管理器</h4>
+
+<p>The <a href="/en-US/Firefox/Multiprocess_Firefox/Message_Manager/Message_manager_overview#Browser_message_manager">browser message manager</a> is available as the <code>messageManager</code> property of an XUL <code><a href="/en-US/docs/XUL/browser">browser</a></code>.</p>
+
+<p>In the SDK, to get a <code>browser</code> for a given tab, you can use the <a href="/en-US/Add-ons/SDK/Low-Level_APIs/tabs_utils">tabs/utils</a> module's <code><a href="/en-US/Add-ons/SDK/Low-Level_APIs/tabs_utils#getBrowserForTab%28tab%29">getBrowserForTab</a></code> function. <code>getBrowserForTab</code> expects an XUL tab as an argument, so if you have an <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs">SDK tab</a> object, you'll need to convert it to an XUL tab using <code><a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs#Converting_to_XUL_tabs">viewFor</a></code>:</p>
+
+<pre class="brush: js">// get the active SDK tab
+var tab = require("sdk/tabs").activeTab;
+// convert it to an XUL tab
+var xulTab = require("sdk/view/core").viewFor(tab);
+// get the XUL browser for this tab
+var xulBrowser = require("sdk/tabs/utils").getBrowserForTab(xulTab);
+
+var browserMM = xulBrowser.messageManager;</pre>
+
+<p>Again, although this code uses tabs/utils, it's safe to run in the chrome process because it only accesses chrome objects.</p>
+
+<h3 id="载入框架脚本">载入框架脚本</h3>
+
+<p>You can load frame scripts using the message manager, passing in a chrome:// or resource:// URL pointing to the script. With the SDK, the simplest approach is to keep frame scripts under your add-on's data directory, and pass in a resource:// URL created using <a href="/en-US/Add-ons/SDK/High-Level_APIs/self#data.url(name)">self.data.url</a>:</p>
+
+<pre class="brush: js">const self = require("sdk/self");
+
+messageManager.loadFrameScript(self.data.url("frame-script.js"), false);</pre>
+
+<p>Note that unlike the APIs to load content scripts, you can only load a single frame script here.</p>
+
+<h3 id="例子">例子</h3>
+
+<p>For example, this add-on trivially accesses content directly using a low-level API:</p>
+
+<pre class="brush: js">function logContent() {
+  var contentDocument = require("sdk/window/utils")
+    .getMostRecentBrowserWindow().content.document;
+  console.log(contentDocument.body.innerHTML);
+}
+
+require("sdk/ui/button/action").ActionButton({
+  id: "log-content",
+  label: "Log Content",
+  icon: "./icon-16.png",
+  onClick: logContent
+});</pre>
+
+<p>This add-on will work by default due to the shims, but will break if you set multiprocessCompatible. So you could rewrite the add-on to use frame scripts:</p>
+
+<pre class="brush: js">/*
+frame-script.js is in the "data" directory, and has this content:
+
+sendAsyncMessage("sdk-low-level-apis-e10s@jetpack:got-content",
+                 content.document.body.innerHTML);
+
+*/
+
+const self = require("sdk/self");
+
+function logContentAsync() {
+  var tab = require("sdk/tabs").activeTab;
+  var xulTab = require("sdk/view/core").viewFor(tab);
+  var xulBrowser = require("sdk/tabs/utils").getBrowserForTab(xulTab);
+
+  var browserMM = xulBrowser.messageManager;
+  browserMM.loadFrameScript(self.data.url("frame-script.js"), false);
+  browserMM.addMessageListener("sdk-low-level-apis-e10s@jetpack:got-content",
+                               logContent);
+}
+
+function logContent(message) {
+  console.log(message.data);
+}
+
+require("sdk/ui/button/action").ActionButton({
+  id: "log-content",
+  label: "Log Content",
+  icon: "./icon-16.png",
+  onClick: logContentAsync
+});</pre>
+
+<p>现在附加组件能正常工作了，即使你设置了 multiprocessCompatible。</p>

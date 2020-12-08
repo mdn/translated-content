@@ -1,0 +1,237 @@
+---
+title: TelephonyCall
+slug: Archive/B2G_OS/API/TelephonyCall
+tags:
+  - API
+  - B2G
+  - Certified
+  - DOM
+  - DOM Reference
+  - Firefox OS
+  - Mobile
+  - Non-standard
+  - Reference
+  - Telephony
+translation_of: Archive/B2G_OS/API/TelephonyCall
+---
+<p></p><section class="Quick_links" id="Quick_Links"><ol><li><strong><a href="/ja/docs/Mozilla/Firefox_OS/API/Web_Telephony_API">Web Telephony API</a></strong></li><li><strong><a href="/ja/docs/Mozilla/Firefox_OS/API/Archive"><code>Archive</code></a></strong></li><li class="toggle"><details open><summary>イベント</summary><ol><li><a href="/ja/docs/Web/Events/incoming"><code>incoming</code></a></li></ol></details></li><li class="toggle"><details open><summary>Web Telephony API に関連するページ</summary><ol><li><a href="/ja/docs/Mozilla/Firefox_OS/API/CallEvent"><code>CallEvent</code></a></li><li><a href="/ja/docs/Mozilla/Firefox_OS/API/CallGroup"><code>CallGroup</code></a></li><li><a href="/ja/docs/Mozilla/Firefox_OS/API/MMICall"><code>MMICall</code></a></li><li><a href="/ja/docs/Mozilla/Firefox_OS/API/Telephony"><code>Telephony</code></a></li><li><a href="/ja/docs/Mozilla/Firefox_OS/API/TelephonyCall"><code>TelephonyCall</code></a></li><li><a href="/ja/docs/Mozilla/Firefox_OS/API/TelephonyCallGroup"><code>TelephonyCallGroup</code></a></li></ol></details></li></ol></section><div class="warning">
+    <p style="text-align: center;">この API は <a href="/ja/docs/Mozilla/Firefox_OS/Security/Application_security">認定済みアプリ</a>のみ、 <a href="/ja/docs/Mozilla/Firefox_OS">Firefox OS</a> で有効になります。</p>
+</div><p></p>
+
+<p><a href="/docs/Web/API/Web_Telephony_API">Web Telephony API</a> の <code>TelephonyCall</code> インターフェイスは、1 回の電話の通話を表します。通話に関する情報を提供し、通話の制御と通話の状態変化を検出する機構が使用できます。</p>
+
+<h2 id="Properties" name="Properties">プロパティ</h2>
+
+<dl>
+ <dt><a href="/ja/docs/Web/API/TelephonyCall/disconnectedReason" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.disconnectedReason</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">読取専用 </span></dt>
+ <dd>通話が切断された理由を示す <a href="/ja/docs/Web/API/DOMString" title="DOMString は、UTF-16 文字列です。JavaScript では UTF-16 文字列を用いるため、DOMString は直接 String に対応します。"><code>DOMString</code></a> 文字列 (原因がエラーによるものか、通話が終了したか、応答が無かったかなど)。</dd>
+ <dt><a href="/ja/docs/Web/API/TelephonyCall/emergency" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.emergency</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">読取専用 </span></dt>
+ <dd>発信番号が緊急通報の番号かどうかを示す <a href="/ja/docs/Web/API/Boolean" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>Boolean</code></a> 値。</dd>
+ <dt><a href="/ja/docs/Web/API/TelephonyCall/group" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.group</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">読取専用 </span></dt>
+ <dd><a href="/ja/docs/Web/API/TelephonyCallGroup" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCallGroup</code></a> (グループ通話) が属する先 (もしあれば) を示す <a href="/ja/docs/Web/API/DOMString" title="DOMString は、UTF-16 文字列です。JavaScript では UTF-16 文字列を用いるため、DOMString は直接 String に対応します。"><code>DOMString</code></a> 文字列。</dd>
+ <dt><a href="/ja/docs/Web/API/TelephonyCall/id" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.id</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">読取専用 </span></dt>
+ <dd>通話に対応する電話番号を示す <a href="/ja/docs/Web/API/DOMString" title="DOMString は、UTF-16 文字列です。JavaScript では UTF-16 文字列を用いるため、DOMString は直接 String に対応します。"><code>DOMString</code></a> 文字列。</dd>
+ <dt><a href="/ja/docs/Web/API/TelephonyCall/secondId" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.secondId</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">読取専用 </span></dt>
+ <dd>CDMA ネットワークで通話中に着信があった場合の電話番号を示す <a href="/ja/docs/Web/API/DOMString" title="DOMString は、UTF-16 文字列です。JavaScript では UTF-16 文字列を用いるため、DOMString は直接 String に対応します。"><code>DOMString</code></a> 文字列。</dd>
+ <dt><a href="/ja/docs/Web/API/TelephonyCall/mergeable" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.mergeable</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">読取専用 </span></dt>
+ <dd>現在の通話が <a href="/ja/docs/Web/API/TelephonyCallGroup" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCallGroup</code></a> (グループ通話) に追加できるかどうかを示す <a href="/ja/docs/Web/API/Boolean" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>Boolean</code></a> 値。</dd>
+ <dt><a href="/ja/docs/Web/API/TelephonyCall/serviceId" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.serviceId</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">読取専用 </span></dt>
+ <dd>発信者のサービス名を示す <a href="/ja/docs/Web/API/DOMString" title="DOMString は、UTF-16 文字列です。JavaScript では UTF-16 文字列を用いるため、DOMString は直接 String に対応します。"><code>DOMString</code></a> 文字列。</dd>
+ <dt><a href="/ja/docs/Web/API/TelephonyCall/state" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.state</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">読取専用 </span></dt>
+ <dd>通話の状態を示す <a href="/ja/docs/Web/API/DOMString" title="DOMString は、UTF-16 文字列です。JavaScript では UTF-16 文字列を用いるため、DOMString は直接 String に対応します。"><code>DOMString</code></a> 文字列。</dd>
+ <dt><a href="/ja/docs/Web/API/TelephonyCall/switchable" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.switchable</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">読取専用 </span></dt>
+ <dd>現在の通話が "connected" と "held" を切り替えられるかどうかを示す <a href="/ja/docs/Web/API/Boolean" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>Boolean</code></a> 値。</dd>
+</dl>
+
+<h3 id="Event_Handlers" name="Event_Handlers">イベントハンドラ</h3>
+
+<dl>
+ <dt><a href="/ja/docs/Web/API/TelephonyCall/onalerting" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.onalerting</code></a></dt>
+ <dd>キャリアとの接続待ち中に、呼び出し音 (アラート) 発生時に呼び出される関数。</dd>
+ <dt><a href="/ja/docs/Web/API/TelephonyCall/onconnected" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.onconnected</code></a></dt>
+ <dd>通話が接続された時に一度呼び出される関数。</dd>
+ <dt><a href="/ja/docs/Web/API/TelephonyCall/onconnecting" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.onconnecting</code></a></dt>
+ <dd>ダイヤル入力後の接続相手を待つ間に呼び出される関数。</dd>
+ <dt><a href="/ja/docs/Web/API/TelephonyCall/ondialing" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.ondialing</code></a></dt>
+ <dd>通話の <a href="/ja/docs/Web/API/TelephonyCall/number" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>ダイヤル番号</code></a> の入力開始時に呼び出される関数。</dd>
+ <dt><a href="/ja/docs/Web/API/TelephonyCall/ondisconnected" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.ondisconnected</code></a></dt>
+ <dd>通話を終了し、切断した後に呼び出される関数。</dd>
+ <dt><a href="/ja/docs/Web/API/TelephonyCall/ondisconnecting" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.ondisconnecting</code></a></dt>
+ <dd>通話の切断を開始した時に呼び出される関数。</dd>
+ <dt><a href="/ja/docs/Web/API/TelephonyCall/ongroupchange" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.ongroupchange</code></a></dt>
+ <dd>通話の <a href="/ja/docs/Web/API/TelephonyCallGroup" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCallGroup</code></a> (および <a href="/ja/docs/Web/API/TelephonyCall/group" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.group</code></a> プロパティ) が変化した時に呼び出される関数。</dd>
+ <dt><a href="/ja/docs/Web/API/TelephonyCall/onholding" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.onholding</code></a></dt>
+ <dd>通話を保留状態にする指示が発行された時に呼び出される関数。</dd>
+ <dt><a href="/ja/docs/Web/API/TelephonyCall/onheld" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.onheld</code></a></dt>
+ <dd>通話が保留中の時に呼び出される関数。</dd>
+ <dt><a href="/ja/docs/Web/API/TelephonyCall/onresuming" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.onresuming</code></a></dt>
+ <dd>直前の保留から通話が再開される時に呼び出される関数。</dd>
+ <dt><a href="/ja/docs/Web/API/TelephonyCall/onstatechange" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.onstatechange</code></a></dt>
+ <dd><a href="/ja/docs/Web/API/TelephonyCall/state" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>通話状態</code></a> が変化した時に呼び出される関数。</dd>
+</dl>
+
+<h3 id="Obsolete_properties" name="Obsolete_properties">廃止されたプロパティ</h3>
+
+<dl>
+ <dt><a href="/ja/docs/Web/API/TelephonyCall/error" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.error</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">読取専用 </span></dt>
+ <dd>通話の接続成功時に返されるエラーを示す <a href="/ja/docs/Web/API/DOMString" title="DOMString は、UTF-16 文字列です。JavaScript では UTF-16 文字列を用いるため、DOMString は直接 String に対応します。"><code>DOMString</code></a> 文字列。これは、エラーメッセージが返されると混乱するため廃止され、よりセマンティックな効果のある <a href="/ja/docs/Web/API/TelephonyCall/disconnectedReason" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.disconnectedReason</code></a> に置き換えられました。</dd>
+ <dt><a href="/ja/docs/Web/API/TelephonyCall/number" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.number</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">読取専用 </span></dt>
+ <dd>通話に対応する電話番号を示す <a href="/ja/docs/Web/API/DOMString" title="DOMString は、UTF-16 文字列です。JavaScript では UTF-16 文字列を用いるため、DOMString は直接 String に対応します。"><code>DOMString</code></a> 文字列。Firefox OS 2.0 以降で <a href="/ja/docs/Web/API/TelephonyCall/id" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.id</code></a> に置き換えられました。</dd>
+ <dt><a href="/ja/docs/Web/API/TelephonyCall/secondNumber" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.secondNumber</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">読取専用 </span></dt>
+ <dd>CDMA ネットワークで通話中に着信があった場合の電話番号を示す <a href="/ja/docs/Web/API/DOMString" title="DOMString は、UTF-16 文字列です。JavaScript では UTF-16 文字列を用いるため、DOMString は直接 String に対応します。"><code>DOMString</code></a> 文字列。Firefox OS 2.0 以降で <a href="/ja/docs/Web/API/TelephonyCall/SecondId" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.SecondId</code></a> に置き換えられました。</dd>
+</dl>
+
+<h3 id="Obsolete_event_handlers" name="Obsolete_event_handlers">廃止されたイベントハンドラ</h3>
+
+<dl>
+ <dt><a href="/ja/docs/Web/API/TelephonyCall/onerror" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.onerror</code></a></dt>
+ <dd>エラーにより通話が成功しなかった時に呼び出される関数。これは、<a href="/ja/docs/Web/API/TelephonyCall/ondisconnected" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.ondisconnected</code></a> とよく似ていますが、セマンティック的により狭く役立たないため廃止されました。</dd>
+ <dt><a href="/ja/docs/Web/API/TelephonyCall/onincoming" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.onincoming</code></a></dt>
+ <dd>着信呼び出しが検出された時に呼び出される関数。</dd>
+</dl>
+
+<h2 id="Methods" name="Methods">メソッド</h2>
+
+<p><em><code>TelephonyCall</code> は、<a href="/ja/docs/Web/API/EventTarget" title="EventTarget は、イベントを受け取り、そのためのリスナーを持つ可能性があるオブジェクトにより実装されたインターフェースです。"><code>EventTarget</code></a> インターフェイスからのメソッドも継承します。</em></p>
+
+<dl>
+ <dt><a href="/ja/docs/Web/API/TelephonyCall/answer" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.answer()</code></a></dt>
+ <dd>着信呼び出しに応答します。</dd>
+ <dt><a href="/ja/docs/Web/API/TelephonyCall/hangUp" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.hangUp()</code></a></dt>
+ <dd>通話を終了します。</dd>
+ <dt><a href="/ja/docs/Web/API/TelephonyCall/hold" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.hold()</code></a></dt>
+ <dd>通話を保留にします。</dd>
+ <dt><a href="/ja/docs/Web/API/TelephonyCall/resume" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>TelephonyCall.resume()</code></a></dt>
+ <dd>直前に保留になっていた通話を再開します。</dd>
+</dl>
+
+<h2 id="Examples" name="Examples">例</h2>
+
+<pre class="brush: js">// Telephony object
+var tel = navigator.mozTelephony;
+
+// Place a call
+tel.dial("123456789").then(function(call) {
+  call.number;
+});
+
+// Receive a call
+tel.onincoming = function (e) {
+  var incomingCall = e.call;
+
+  // Get the id/number of the incoming call
+  console.log(incomingCall.id);
+
+  // Answer the call
+  incomingCall.answer();
+};</pre>
+
+<h2 id="Specifications" name="Specifications">仕様</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><a class="external" href="https://wiki.mozilla.org/WebAPI/WebTelephony" hreflang="en" lang="en" title="Web Telephonyの仕様書">Web Telephony</a></td>
+   <td><span class="spec-Draft">ドラフト</span></td>
+   <td>Draft</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+
+<p>明らかな理由により、サポートはモバイルブラウザが優先されます。</p>
+
+<div><p class="warning"><strong><a href="https://github.com/mdn/browser-compat-data">現在、互換性データを可読形式の JSON フォーマットに置き換えているところです。</a></strong>
+            この互換性一覧は古い形式を使っており、これに含まれるデータの置き換えが済んでいません。
+            <strong><a href="/ja/docs/MDN/Contribute/Structures/Compatibility_tables">手助けしていただける場合は、こちらから！</a></strong></p>
+
+<div class="htab">
+    <a id="AutoCompatibilityTable" name="AutoCompatibilityTable"></a>
+    <ul>
+        <li class="selected"><a>デスクトップ</a></li>
+        <li><a>モバイル</a></li>
+    </ul>
+</div></div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>機能</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>基本サポート</td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>機能</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>基本サポート</td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td>12.0 (12.0)</td>
+   <td>1.0.1</td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+  </tr>
+  <tr>
+   <td><code>id</code> および <code>secondId</code></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td>30.0 (30.0)</td>
+   <td>2.0</td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+  </tr>
+  <tr>
+   <td><code>disconnectedReason</code></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td>37.0 (37.0)</td>
+   <td>2.2</td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+   <td><span style="color: #f00;">未サポート</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><a href="/docs/Web/Guide/API/Telephony/Using_the_Web_Telephony_API">Web Telephony API の使用</a></li>
+ <li><a href="/ja/docs/Web/API/Telephony" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>Telephony</code></a></li>
+ <li><a href="/ja/docs/Web/API/CallEvent" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>CallEvent</code></a></li>
+ <li><a href="/ja/docs/Web/API/Navigator/mozTelephony" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>Navigator.mozTelephony</code></a></li>
+</ul>

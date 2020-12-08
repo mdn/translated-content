@@ -1,0 +1,27 @@
+---
+title: Firefox Mobile for developers
+slug: Mozilla/Mobile/Firefox_Mobile_for_developers
+tags:
+  - Mobile
+  - NeedsUpdate
+translation_of: Mozilla/Mobile/Firefox_Mobile_for_developers
+---
+<h2 id="Compiling_and_testing" name="Compiling_and_testing">Compiling and testing</h2>
+<p>Instructions for building and testing Firefox Mobile can be found at <a class="link-https" href="https://wiki.mozilla.org/Mobile/Fennec/Android" rel="freelink">https://wiki.mozilla.org/Mobile/Fennec/Android</a></p>
+<h2 id="User_agent" name="User_agent">User agent</h2>
+<p>See <a href="/ja/docs/Gecko_user_agent_string_reference" title="Gecko_user_agent_string_reference">Gecko User Agent string reference</a> for details on the User-Agent headers sent by Firefox on mobile devices.  For more information about user agents, please see our article on <a href="/ja/docs/Browser_Detection_and_Cross_Browser_Support" title="Browser Detection and Cross Browser Support">Browser Detection</a>.</p>
+<h2 id="Mobile-specific_APIs" name="Mobile-specific_APIs">Mobile-specific APIs</h2>
+<p>There are some APIs that are specific to mobile, or are more useful to mobile.  They are listed below.</p>
+<h3 id="CSS_for_touch-specific_UI_elements" name="CSS_for_touch-specific_UI_elements">CSS for touch-specific UI elements</h3>
+<p>Mozilla supports the <a href="/ja/docs/CSS/Media_queries#-moz-touch-enabled" title="CSS/Media queries"><code>-moz-touch-enabled</code> CSS media query</a> that you can use to change CSS if you're on a touch device.  This is available and will work on Firefox for desktops as well, but is more likely to be useful for mobile devices.  You can use this to render larger buttons for people to press.</p>
+<h3 id="Viewport_meta_tag" name="Viewport_meta_tag">Viewport meta tag</h3>
+<p>Firefox supports the <code>viewport</code> meta tag on Mobile devices.  For details, see <a href="/ja/docs/Mobile/Viewport_meta_tag" title="Mobile/Using the viewport meta tag to improve the mobile browsing experience">Using the viewport meta tag to improve the mobile browsing experience</a>.</p>
+<p>More information on the <a href="http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html" title="http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html">viewport meta tag can be found in the Safari reference documentation</a>.</p>
+<div class="note">
+  <strong>注記:</strong> The <code>viewport</code> meta tag is ignored on desktop versions of Firefox.</div>
+<h3 id="Media_queries" name="Media_queries">Media queries</h3>
+<p><a href="/ja/docs/CSS/Media_queries" title="CSS/Media queries">CSS Media queries</a> are supported in Firefox for desktops and mobile devices.  They can be used to change layout based on screen size and are the best way to build a UI that will work on desktops and mobile devices.</p>
+<h2 id="See_also" name="See_also">関連情報</h2>
+<ul>
+  <li><a href="http://starkravingfinkle.org/blog/2009/11/fennec-mobile-optimzed-web-pages/" title="http://starkravingfinkle.org/blog/2009/11/fennec-mobile-optimzed-web-pages/">Mark Finkle on Mobile Optimized Web pages</a></li>
+</ul>

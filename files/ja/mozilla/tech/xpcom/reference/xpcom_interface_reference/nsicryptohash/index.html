@@ -1,0 +1,265 @@
+---
+title: nsICryptoHash
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsICryptoHash
+tags:
+  - Add-ons
+  - Extensions
+  - Interfaces
+  - 'Interfaces:Scriptable'
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsICryptoHash
+---
+<p> </p>
+
+<h3 id=".E5.B0.8E.E5.85.A5" name=".E5.B0.8E.E5.85.A5">導入</h3>
+
+<p><code>nsICryptoHash</code> はデータの暗号化ハッシュ関数を計算するために使用することができます。例えば、ファイルの MD5 ハッシュを計算することができます。サポートされているハッシュアルゴリズムは MD2 と MD5, SHA-1, SHA-256, SHA-384 そして SHA-512 です。このインターフェースは <a href="ja/Firefox_1.5">Firefox 1.5</a> 以上でのみ利用できます。</p>
+
+<div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/netwerk/base/public/nsICryptoHash.idl" rel="custom">netwerk/base/public/nsICryptoHash.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">最終更新: Gecko 1.8 (Firefox 1.5 / Thunderbird 1.5 / SeaMonkey 1.0)</span></div>
+</div>
+
+<h3 id=".E5.AE.9A.E6.95.B0" name=".E5.AE.9A.E6.95.B0">定数</h3>
+
+<h4 id=".E3.83.8F.E3.83.83.E3.82.B7.E3.83.A5.E3.82.A2.E3.83.AB.E3.82.B4.E3.83.AA.E3.82.BA.E3.83.A0" name=".E3.83.8F.E3.83.83.E3.82.B7.E3.83.A5.E3.82.A2.E3.83.AB.E3.82.B4.E3.83.AA.E3.82.BA.E3.83.A0">ハッシュアルゴリズム</h4>
+
+<p>これらの定数はこのインターフェースでサポートされているハッシュアルゴリズムを表しています。利用可能な値は以下の通りです:</p>
+
+<ul>
+ <li><code>MD2</code></li>
+ <li><code>MD5</code></li>
+ <li><code>SHA1</code></li>
+ <li><code>SHA512</code></li>
+ <li><code>SHA256</code></li>
+ <li><code>SHA384</code></li>
+</ul>
+
+<h3 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89">メソッド</h3>
+
+<h4 id="init" name="init">init</h4>
+
+<pre>void init(in unsigned long aAlgorithm);
+</pre>
+
+<p>インタフェースで定義された定数の1つを指定してどのハッシュアルゴリズムを使用するか指示して、<code>init()</code> はオブジェクトを初期化します。どんなデータであれオブジェクトを更新する前にこのメソッドか <code><a href="#initWithString">initWithString()</a></code> を呼ばなければなりません。</p>
+
+<h5 id=".E3.83.91.E3.83.A9.E3.83.A1.E3.82.BF" name=".E3.83.91.E3.83.A9.E3.83.A1.E3.82.BF">パラメタ</h5>
+
+<p><code>aAlgorithm</code></p>
+
+<dl>
+ <dd>使用するハッシュアルゴリズム。インタフェースで定義されている定数の 1 つでなくてはなりません。</dd>
+</dl>
+
+<h5 id=".E4.BE.8B.E5.A4.96" name=".E4.BE.8B.E5.A4.96">例外</h5>
+
+<p><code><span class="nowiki">NS_ERROR_INVALID_ARG</span></code></p>
+
+<dl>
+ <dd>サポートされていないアルゴリズムの種類が渡されたことを示します。</dd>
+</dl>
+
+<h4 id="initWithString" name="initWithString">initWithString</h4>
+
+<pre>void initWithString(in ACString aAlgorithm);
+</pre>
+
+<p><code>initWithString()</code> は <code>"MD5"</code> のような文字列としてアルゴリズムの名前を指定することで、どのハッシュアルゴリズムを使用するか指定し、オブジェクトを初期化します。 どんなデータであれオブジェクトを更新する前にこのメソッドか <code><a href="#init">init()</a></code> を呼ばなければなりません。</p>
+
+<h5 id=".E3.83.91.E3.83.A9.E3.83.A1.E3.82.BF_2" name=".E3.83.91.E3.83.A9.E3.83.A1.E3.82.BF_2">パラメタ</h5>
+
+<p><code>aAlgorithm</code></p>
+
+<dl>
+ <dd>使用するハッシュアルゴリズム</dd>
+</dl>
+
+<h5 id=".E4.BE.8B.E5.A4.96_2" name=".E4.BE.8B.E5.A4.96_2">例外</h5>
+
+<p><code>NS_ERROR_INVALID_ARG</code></p>
+
+<dl>
+ <dd>サポートされていないアルゴリズムの種類が渡されたことを示します。</dd>
+</dl>
+
+<h4 id="update" name="update">update</h4>
+
+<pre>void update([const, array, size_is(aLen)] in octet aData, in unsigned long aLen);
+</pre>
+
+<p><code>update()</code> はハッシュを計算されるデータの配列をオブジェクトに追加します。このメソッドのを使った例は<a href="#.E6.96.87.E5.AD.97.E5.88.97.E3.81.AE.E3.83.8F.E3.83.83.E3.82.B7.E3.83.A5.E3.82.92.E8.A8.88.E7.AE.97.E3.81.99.E3.82.8B">文字列のハッシュを計算する</a>を参照してください。</p>
+
+<h5 id=".E3.83.91.E3.83.A9.E3.83.A1.E3.82.BF_3" name=".E3.83.91.E3.83.A9.E3.83.A1.E3.82.BF_3">パラメタ</h5>
+
+<p><code>aData</code></p>
+
+<dl>
+ <dd>ハッシュを計算されるバッファ</dd>
+</dl>
+
+<p><code>aLen</code></p>
+
+<dl>
+ <dd><code>aData</code> バッファの長さ</dd>
+</dl>
+
+<h5 id=".E4.BE.8B.E5.A4.96_3" name=".E4.BE.8B.E5.A4.96_3">例外</h5>
+
+<p><code>NS_ERROR_NOT_INITIALIZED</code></p>
+
+<dl>
+ <dd><code><a href="#init">init()</a></code> か <code><a href="#initWithString">initWithString()</a></code> が呼び出されていないことを表します。</dd>
+</dl>
+
+<h4 id="updateFromStream" name="updateFromStream">updateFromStream</h4>
+
+<pre>void updateFromStream(in nsIInputStream aStream, in unsigned long aLen);
+</pre>
+
+<p><code>updateFromStream()</code> は <code><a href="ja/NsIInputStream">nsIInputStream</a></code> からハッシュを計算されるデータを追加します。このメソッドのを使った例は<a href="#.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AE.E3.83.8F.E3.83.83.E3.82.B7.E3.83.A5.E3.82.92.E8.A8.88.E7.AE.97.E3.81.99.E3.82.8B">ファイルのハッシュを計算する</a>を参照してください。</p>
+
+<h5 id=".E3.83.91.E3.83.A9.E3.83.A1.E3.82.BF_4" name=".E3.83.91.E3.83.A9.E3.83.A1.E3.82.BF_4">パラメタ</h5>
+
+<p><code>aStream</code></p>
+
+<dl>
+ <dd>読み込まれる入力ストリーム</dd>
+</dl>
+
+<p><code>aLen</code></p>
+
+<dl>
+ <dd>与えられた <code>aStream</code> をどれだけ読み込むか。<code>PR_UINT32_MAX</code> が渡されることは利用できる全てのデータがハッシュを更新するために使われることを示しています。</dd>
+</dl>
+
+<h5 id=".E4.BE.8B.E5.A4.96_4" name=".E4.BE.8B.E5.A4.96_4">例外</h5>
+
+<p><code>NS_ERROR_NOT_INITIALIZED</code></p>
+
+<dl>
+ <dd><code><a href="#init">init()</a></code> か <code><a href="#initWithString">initWithString()</a></code> が呼び出されていないことを表します。<code>NS_ERROR_NOT_AVAILABLE</code></dd>
+ <dd>ハッシュを計算するための要求された量のデータのが利用できないことを示しています。</dd>
+</dl>
+
+<h4 id="finish" name="finish">finish</h4>
+
+<pre>ACString finish(in PRBool aASCII);
+</pre>
+
+<p><code>finish()</code> はハッシュオブジェクトを完成させ、実際のハッシュデータを生成します。</p>
+
+<h5 id=".E3.83.91.E3.83.A9.E3.83.A1.E3.82.BF_5" name=".E3.83.91.E3.83.A9.E3.83.A1.E3.82.BF_5">パラメタ</h5>
+
+<p><code>aASCII</code></p>
+
+<dl>
+ <dd>もし true なら戻り値は base-64 エンコードされた文字列です。もし false なら戻り値にはバイナリデータです。</dd>
+</dl>
+
+<h5 id=".E6.88.BB.E3.82.8A.E5.80.A4" name=".E6.88.BB.E3.82.8A.E5.80.A4">戻り値</h5>
+
+<p>このメソッドはオブジェクトから読み込まれたハッシュデータを返します。これはバイナリか base-64 エンコードされた文字列のどちらかが可能です。</p>
+
+<h5 id=".E4.BE.8B.E5.A4.96_5" name=".E4.BE.8B.E5.A4.96_5">例外</h5>
+
+<p><code>NS_ERROR_NOT_INITIALIZED</code></p>
+
+<dl>
+ <dd><code><a href="#init">init()</a></code> か <code><a href="#initWithString">initWithString()</a></code> が呼び出されていないことを表します。</dd>
+</dl>
+
+<div class="note"><strong>注意:</strong> このメソッドは <code><a href="#init">init()</a></code> が呼ばれた後ではいつでも呼ばれるかもしれません。この呼び出しはオブジェクトを初期化する前の状態にリセットします。</div>
+
+<h3 id=".E3.82.B5.E3.83.B3.E3.83.97.E3.83.AB.E3.82.B3.E3.83.BC.E3.83.89" name=".E3.82.B5.E3.83.B3.E3.83.97.E3.83.AB.E3.82.B3.E3.83.BC.E3.83.89">サンプルコード</h3>
+
+<div class="note"><strong>注意:</strong> 下のサンプルは Firefox 2 で実装された <a href="ja/New_in_JavaScript_1.7">JavaScript 1.7</a> の機能を使っています。この例を Firefox 1.5 で使うには、<span style="border-bottom: 1px dashed green;" title="array comprehension">配列内包</span>をループに置き換えて下さい。</div>
+
+<h4 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AE.E3.83.8F.E3.83.83.E3.82.B7.E3.83.A5.E3.82.92.E8.A8.88.E7.AE.97.E3.81.99.E3.82.8B" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AE.E3.83.8F.E3.83.83.E3.82.B7.E3.83.A5.E3.82.92.E8.A8.88.E7.AE.97.E3.81.99.E3.82.8B">ファイルのハッシュを計算する</h4>
+
+<p><code>nsICryptoHash</code> を使うと簡単にファイルのハッシュを計算することができます。<code>nsICryptoHash</code> のインスタンスを作り、ファイルから入力ストリームを開き、ファイルのハッシュを更新する必要があります。以下の例はファイルの MD5 ハッシュを計算する方法を示しています:</p>
+
+<pre>// 便宜上ここではハードコードしています。
+var path = "c:\\windows\\notepad.exe";
+var f = Components.classes["@mozilla.org/file/local;1"]
+                  .createInstance(Components.interfaces.nsILocalFile);
+f.initWithPath(path);
+var istream = Components.classes["@mozilla.org/network/file-input-stream;1"]
+                        .createInstance(Components.interfaces.nsIFileInputStream);
+// 読み出すためにストリームを開きます。
+istream.init(f, 0x01, 0444, 0);
+var ch = Components.classes["@mozilla.org/security/hash;1"]
+                   .createInstance(Components.interfaces.nsICryptoHash);
+// MD5 アルゴリズムを使います。
+ch.init(ch.MD5);
+// これはファイル全体を読む込むことを updateFromStream に指示します。
+const PR_UINT32_MAX = 0xffffffff;
+ch.updateFromStream(istream, PR_UINT32_MAX);
+// ここで false を渡すとバイナリデータが戻ってきます
+// true は base-64 文字列が戻ってきます
+var hash = ch.finish(false);
+
+// 1 バイトに対して 2 つの 16 進数コードを返す。
+function toHexString(charCode)
+{
+  return ("0" + charCode.toString(16)).slice(-2);
+}
+
+// バイナリのハッシュデータを 16 進数文字列に変換する。
+var s = Array.from(hash, (c, i) =&gt; toHexString(hash.charCodeAt(i))).join("");
+// s は今 16 進数でハッシュを保持しています。
+</pre>
+
+<p>私の Windows XP SP2 システムでは、これはハッシュの値として <code>5eb63bbbe01eeed093cb22bb8f5acdc3</code> を返しましたが、 あなたのマイレージは違うかもしれません。単純ですがこの例はインターフェースの大部分の機能を示しました。</p>
+
+<p>最初に注意すべきことは <code><a href="#init">init()</a></code> メソッドを呼んだときに、使うハッシュアルゴリズムを指定しなければならいないことです。利用可能なアルゴリズムの全てはインタフェースの<a href="#.E5.AE.9A.E6.95.B0">定数</a>として指定されています。</p>
+
+<p>さらに注意すべきことは <code><a href="#updateFromStream">updateFromStream()</a></code> メソッドを呼び出したとき、2 番目のパラメタは呼び出すバイト数であることがです。ここで <code>PR_UINT32_MAX</code> を渡すことでファイル全体を読み出したいことを要求します。</p>
+
+<p>最後に <code><a href="#finish">finish()</a></code> メソッドの呼び出しがハッシュ値を生成することに注意してください。このメソッドの 1 つのパラメタはこの例ではバイナリデータを返すために <code>false</code> です。<code>true</code> を渡すことで base 64 エンコードされた文字列としてハッシュを返します。この例ではバイナリデータを使い、ハッシュプログラムが通常出力するように結果を 16 進数文字列を生成しました。</p>
+
+<h4 id=".E6.96.87.E5.AD.97.E5.88.97.E3.81.AE.E3.83.8F.E3.83.83.E3.82.B7.E3.83.A5.E3.82.92.E8.A8.88.E7.AE.97.E3.81.99.E3.82.8B" name=".E6.96.87.E5.AD.97.E5.88.97.E3.81.AE.E3.83.8F.E3.83.83.E3.82.B7.E3.83.A5.E3.82.92.E8.A8.88.E7.AE.97.E3.81.99.E3.82.8B">文字列のハッシュを計算する</h4>
+
+<p>もう一つの一般的な操作は文字列のハッシュを計算することです。ハッシュ関数はバイトで計算するため、最初に文字列を <code><a href="ja/NsIScriptableUnicodeConverter">nsIScriptableUnicodeConverter</a></code> とあ指定した Unicode エンコーディングを使いバイトの並びに変換する必要があります。</p>
+
+<div class="note"><strong>注意:</strong> 異なるエンコーディングは異なるハッシュ値を生成します!もしあなたが結果を比較するなら、常に同じエンコーディングを使うべきです。</div>
+
+<p>下の例では 文字列を UTF-8 エンコーディングでバイトに変換し、その MD5 ハッシュを計算する方法を示しています。前の例と同じように結果は 16 進数文字列として計算しました。</p>
+
+<pre>var str = "hello world";
+var converter = Components.classes["@mozilla.org/intl/scriptableunicodeconverter"]
+                          .createInstance(Components.interfaces.nsIScriptableUnicodeConverter);
+// ここでは UTF-8 を使います。他のエンコーディングも選ぶこともできます。
+converter.charset = "UTF-8";
+// result は出力用パラメータです。
+// result.value は配列の長さを保持します。
+var result = {};
+// data はバイトの配列です。
+var data = converter.convertToByteArray(str, result);
+var ch = Components.classes["@mozilla.org/security/hash;1"]
+                   .createInstance(Components.interfaces.nsICryptoHash);
+ch.init(ch.MD5);
+ch.update(data, data.length);
+var hash = ch.finish(false);
+
+// 1 バイトに対して 2 つの 16 進数コードを返す。
+function toHexString(charCode)
+{
+  return ("0" + charCode.toString(16)).slice(-2);
+}
+
+// バイナリのハッシュデータを 16 進数文字列に変換する。
+var s = Array.from(hash, (c, i) =&gt; toHexString(hash.charCodeAt(i))).join("");
+// 今 s はハッシュを 16 進数で保持しており、以下のようになるはずです。
+// 5eb63bbbe01eeed093cb22bb8f5acdc3
+</pre>
+
+<p>この例では、ハッシュを計算されるバイトの配列を渡すために <code><a href="#update">update()</a></code> メソッドを使いました。先ほどの例と同じように、バイナリの結果を 16 進数文字列に変換しています。</p>

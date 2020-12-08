@@ -1,0 +1,80 @@
+---
+title: Séparateurs
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Séparateurs
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Splitters
+---
+<p> </p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Cadres_de_contenu" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Barres_de_défilement">Suivant  »</a></p>
+</div>
+<p>Ici, nous allons voir comment ajouter des séparateurs dans une fenêtre.</p>
+<h3 id="D.C3.A9coupage_d.27une_bo.C3.AEte" name="D.C3.A9coupage_d.27une_bo.C3.AEte">Découpage d'une boîte</h3>
+<p>Il arrive des fois où vous voulez disposer de deux sections dans une fenêtre que l'utilisateur peut redimensionner à son gré. Un exemple est la fenêtre du navigateur Mozilla, où vous pouvez changer la taille du panneau latéral en déplaçant le trait d'intersection des deux cadres. Vous pouvez aussi cacher ce panneau latéral en cliquant sur la poignée de ce trait.</p>
+<h4 id=".C3.89l.C3.A9ment_splitter" name=".C3.89l.C3.A9ment_splitter">Élément <code>splitter</code></h4>
+<p>Cette fonctionnalité est accomplie en utilisant un élément appelé <code><a href="/fr/docs/Mozilla/Tech/XUL/splitter" title="splitter">splitter</a></code>. Il crée une barre étroite entre les deux sections en permettant de redimensionner chaque côté. Vous pouvez placer un séparateur où vous voulez pour vous permettre de redimensionner les éléments situés avant lui et les éléments situés après lui dans une même boîte.</p>
+<p>Lorsqu'un séparateur est placé à l'intérieur d'une boîte horizontale, il permet un redimensionnement horizontal. Lorsqu'un séparateur est placé à l'intérieur d'une boîte verticale, il permet un redimensionnement vertical.</p>
+<p>La syntaxe d'un séparateur est la suivante :</p>
+<pre>&lt;splitter
+    id="identifier"
+    state="open"
+    collapse="before"
+    resizebefore="closest"
+    resizeafter="closest"&gt;
+</pre>
+<p>Les attributs sont les suivants :</p>
+<dl> <dt><code id="a-id"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/id">id</a></code> </dt> <dd>L'identifiant unique d'un séparateur.</dd> <dt><code id="a-state"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/state">state</a></code> </dt> <dd>Indique l'état d'un séparateur. Mettez lui la valeur 'open', valeur par défaut, pour que le panneau redimensionnable soit initialement ouvert ou mettez lui la valeur 'collapsed' pour qu'un des panneaux soit complètement réduit et que l'autre occupe toute la place.</dd> <dt><code id="a-collapse"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/collapse">collapse</a></code> </dt> <dd>Il indique de quel côté le panneau doit se réduire quand la poignée du séparateur est cliquée ou quand le séparateur est initialisée avec un état 'collapsed'. Mettez lui la valeur 'before' pour désigner l'élément avant le séparateur ou la valeur 'after' pour désigner l'élément après le séparateur. Si vous l'initialisez avec la valeur 'none', qui est aussi la valeur par défaut, la poignée du séparateur ne réduira pas les panneaux quand elle est cliquée.</dd> <dt><code id="a-resizebefore"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/resizebefore">resizebefore</a></code> </dt> <dd>Lorsqu'un séparateur est déplacé, les éléments sur sa gauche sont redimensionnés. Cet attribut indique quel élément est concerné. Mettez la valeur 'closest' pour que l'élément immédiatement à gauche du séparateur soit redimensionné. Mettez la valeur 'farthest' pour que l'élément le plus éloigné à gauche du séparateur soit redimensionné (le premier élément de la boîte). La valeur par défaut est 'closest'.</dd> <dt><code id="a-resizeafter"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/resizeafter">resizeafter</a></code> </dt> <dd>Lorsqu'un séparateur est déplacé, les éléments sur sa droite sont redimensionnés. Cet attribut indique quel élément est concerné. Mettez la valeur 'closest' pour que l'élément immédiatement à droite du séparateur soit redimensionné. Mettez la valeur 'farthest' pour que l'élément le plus éloigné à droite du séparateur soit redimensionné (le dernier élément de la boîte). Cet attribut peut aussi avoir la valeur 'grow', dans ce cas, les éléments à droite du séparateur ne changent pas de taille lorsque le séparateur est déplacé. La valeur par défaut est 'closest'.</dd>
+</dl>
+<p>Si vous employez l'attribut <code id="a-collapse"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/collapse">collapse</a></code>, vous devrez aussi ajouter l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/grippy" title="grippy">grippy</a></code> à l'intérieur de l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/splitter" title="splitter">splitter</a></code> afin que l'utilisateur puisse utiliser la poignée pour réduire un panneau.</p>
+<h4 id="Exemple_avec_splitter" name="Exemple_avec_splitter">Exemple avec <code>splitter</code></h4>
+<p>Un exemple vous sera utile :</p>
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_splitter_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_splitter_1.xul">Voir</a></p>
+<pre>&lt;vbox flex="1"&gt;
+  &lt;iframe id="content-1" width="60" height="20" src="w1.html"/&gt;
+  &lt;splitter collapse="before" resizeafter="farthest"&gt;
+    &lt;grippy/&gt;
+  &lt;/splitter&gt;
+  &lt;iframe id="content-2" width="60" height="20" src="w2.html"/&gt;
+  &lt;iframe id="content-3" width="60" height="20" src="w3.html"/&gt;
+  &lt;iframe id="content-4" width="60" height="20" src="w4.html"/&gt;
+&lt;/vbox&gt;
+</pre>
+<div class="float-right"><img alt="Image:xultu_splitter1.png" class=" internal" src="/@api/deki/files/1545/=Xultu_splitter1.png"></div>
+<p>Ici, quatre cadres <code><a href="/fr/docs/Mozilla/Tech/XUL/iframe" title="iframe">iframe</a></code> ont été créés et un séparateur a été placé entre le premier et le second. L'attribut <code id="a-collapse"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/collapse">collapse</a></code> a été affecté d'une valeur 'before' pour signifier que si la poignée est cliquée, le premier cadre va disparaître, et le séparateur et les cadres restants vont glisser vers la gauche. La poignée du séparateur est centrée sur la barre de séparation.</p>
+<p>La valeur 'farthest' a été affectée à l'attribut <code id="a-resizeafter"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/resizeafter">resizeafter</a></code> du séparateur. Elle signifie que lorsque le séparateur est déplacé, l'élément le plus éloigné après lui changera sa taille. Dans ce cas, il s'agit du quatrième cadre.</p>
+<p>Aucune valeur n'a été spécifiée pour l'attribut <code id="a-resizebefore"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/resizebefore">resizebefore</a></code> qui aura donc sa valeur 'closest' par défaut. Dans ce cas, il n'y a qu'un cadre avant le séparateur, c'est donc le premier cadre qui changera de taille.</p>
+<p>Les deuxième et troisième cadres ne changeront leur taille que si vous déplacez le séparateur suffisamment loin sur la droite jusqu'à ce que le quatrième cadre ait atteint sa largeur minimale.</p>
+<p>Les quatre cadres avec le séparateur dans un état réduit :</p>
+<p><img alt="Image:xultu_splitter2.png" class=" internal" src="/@api/deki/files/1546/=Xultu_splitter2.png"></p>
+<p>Une image des quatre cadres avec le séparateur redimensionné vers la droite est montrée ci dessous. Notez que les deux cadres du milieu n'ont pas changé leur dimension. Seuls les premier et quatrième cadres ont changé de dimension. Vous pouvez seulement voir une partie du quatrième cadre. Si vous continuez à déplacer le séparateur vers la droite, les deux autres cadres vont se réduire.</p>
+<p><img alt="Image:xultu_splitter3.png" class=" internal" src="/@api/deki/files/1547/=Xultu_splitter3.png"></p>
+<p>Vous pouvez utiliser des propriétés de style telles que <code id="a-min-width"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/min-width">min-width</a></code>, <code id="a-max-width"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/max-width">max-width</a></code> sur les cadres pour spécifier leurs largeurs minimales ou maximales ou leurs hauteurs dans la boîte. Si vous faites cela, le séparateur va le détecter et ne permettra pas de le déplacer au-delà des tailles minimales ou maximales.</p>
+<p>Par exemple, si vous spécifiez un minimum de 30 pixels en largeur sur le quatrième cadre, il ne se réduira pas en dessous de cette taille. Les deux autres cadres vont alors se réduire. Si vous mettez une largeur minimale de 50 pixels sur le premier cadre, vous ne pourrez déplacer le séparateur que de 10 pixels vers la gauche (car il démarre à 60 pixels de large). Toutefois, vous pouvez toujours faire disparaître le cadre.</p>
+<p>Vous pouvez également placer plus d'un séparateur dans une boîte si vous le souhaitez, dans ce cas vous pourrez réduire les différentes parties de son contenu. De façon similaire, il n'y a pas que les cadres qui peuvent êre réduits, n'importe quel élément peut l'être.</p>
+<div class="highlight">
+<h3 id="Notre_exemple_de_recherche_de_fichiers" name="Notre_exemple_de_recherche_de_fichiers">Notre exemple de recherche de fichiers</h3>
+<p>Voyons ce que devient notre exemple de recherche de fichiers avec un séparateur. Une possibilité serait d'inclure les résultats de la recherche dans la boîte de dialogue. Nous ajouterons une zone entre les critères de recherche et les boutons du bas. Un séparateur permettra de réduire ou masquer les résultats de la recherche.</p>
+<pre class="eval">&lt;/tabbox&gt;
+
+ <span class="highlightred">&lt;iframe src="results.html"/&gt;  &lt;splitter resizeafter="grow"/&gt;</span>
+
+ &lt;hbox&gt;
+</pre>
+<p>Ici, un séparateur et un cadre ont été ajoutés à la boîte de dialogue. Nous n'avons plus besoin de l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code> après la boîte d'onglets, donc nous l'enlèverons. Le contenu du cadre provient d'un fichier appelé '<code>result.html</code>'. Créez ce fichier et mettez ce que vous souhaitez dedans pour l'instant. Le cadre sera remplacé <a href="/fr/Tutoriel_XUL/Arbres" title="fr/Tutoriel_XUL/Arbres">plus tard</a> par la liste des résultats lorsque vous saurez comment la créer. Pour l'instant, il nous servira à expliquer le séparateur.</p>
+<p>Le séparateur a été initialisé avec la valeur 'before' sur l'attribut <code id="a-collapse"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/collapse">collapse</a></code>, ce qui signifie que l'élément juste avant le séparateur va se réduire. Ici, il s'agit du cadre. Comme montré sur les images ci-dessous, lorsque la poignée est cliquée, le cadre est masqué et les boutons glissent vers le haut.</p>
+<p>L'attribut <code id="a-resizeafter"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/resizeafter">resizeafter</a></code> a été initialisé avec une valeur 'grow' pour que les éléments situés après le séparateur se déplace vers la bas lorsque celui ci est déplacé vers le bas. Le contenu dans le cadre peut s'agrandir sans restriction. Vous noterez que la fenêtre ne se redimensionne pas automatiquement. Vous remarquerez également que c'est un séparateur horizontal parce qu'il a été placé dans une boîte verticale.</p>
+<p>Etat normal :</p>
+<p><img alt="Image:xultu_splitter4.png" class=" internal" src="/@api/deki/files/1548/=Xultu_splitter4.png"></p>
+<p>Etat réduit :</p>
+<p><img alt="Image:xultu_splitter5.png" class=" internal" src="/@api/deki/files/1549/=Xultu_splitter5.png"></p>
+<p>Exemple de recherche de fichiers : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfiles-splitter.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfiles-splitter.xul">Voir</a></p>
+</div>
+<hr>
+<p>Dans la section suivante, nous verrons comment créer une barre de défilement.</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Cadres_de_contenu" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Barres_de_défilement">Suivant  »</a></p>
+</div>
+<p><span class="comment">Interwiki</span></p>

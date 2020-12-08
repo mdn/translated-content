@@ -1,0 +1,101 @@
+---
+title: Toolkit version format
+slug: Mozilla/Toolkit_version_format
+tags:
+  - Toolkit API
+translation_of: Mozilla/Toolkit_version_format
+---
+<p>このドキュメントは Firefox 1.5 (<a href="ja/XULRunner">XULRunner</a> 1.8)以降で使われているバージョン形式のリファレンスです。この形式は拡張マネージャ、ソフトウェアの更新、およびプラットフォームのその他の部分で使われています。 最低限、以下の場所のバージョンはこの形式に従っていなければなりません。</p>
+
+<ul>
+ <li><a href="ja/Install_Manifests">install</a> および <a href="ja/Update_Manifest">update</a> manifests にある<a href="ja/Install_Manifests#version">Addon</a> および <a href="ja/Install_Manifests#targetApplication">target application</a>のバージョン</li>
+ <li>設定値 <code>app.extensions.version</code>, <code>extensions.lastAppVersion</code></li>
+ <li><a href="ja/NsIXULAppInfo">nsIXULAppInfo</a>が返すバージョン</li>
+ <li><a href="ja/XULRunner">XULRunner</a>アプリケーションの<a href="ja/XUL_Application_Packaging"><code>application.ini</code></a></li>
+ <li><a href="ja/Chrome_Registration">chrome manifests</a>にある<a href="ja/Chrome_Registration#appversion">appversion flag</a>.</li>
+</ul>
+
+<p><a href="ja/NsIVersionComparator">nsIVersionComparator</a> をあなたのアプリケーションからバージョンの比較に使うことができます。</p>
+
+<p>Firefox/Thunderbird 1.0 で使われていた古いバージョン形式については下の {{ Anch("古いバージョン形式") }} を参照してください。</p>
+
+<p>{{ 英語版章題("Version format") }}</p>
+
+<h3 id=".E3.83.90.E3.83.BC.E3.82.B8.E3.83.A7.E3.83.B3.E5.BD.A2.E5.BC.8F" name=".E3.83.90.E3.83.BC.E3.82.B8.E3.83.A7.E3.83.B3.E5.BD.A2.E5.BC.8F">バージョン形式</h3>
+
+<p><strong>バージョン文字列</strong> はドットで区切られた1つ以上の<em>バージョンパート</em>から成ります。</p>
+
+<p>それぞれの <strong>バージョンパート</strong> はそれ自身が <code>&lt;数値-a&gt;&lt;文字列-b&gt;&lt;数値-c&gt;&lt;文字列-d&gt;</code> という4つのパートの並びに解析されます。それぞれのパートは任意です。 数値は10進整数で (マイナスかもしれない)、文字列は ASCII です。</p>
+
+<p>有効なバージョンパートのいくつかの例:</p>
+
+<ul>
+ <li><code>0</code> (as in <code>1.0</code>): <code>&lt;数値-a&gt;=0</code></li>
+ <li><code>5a</code> (as in <code>1.5a</code>): <code>&lt;数値-a&gt;=5</code>, <code>&lt;文字列-b&gt;=a</code></li>
+ <li><code>5pre4</code> (as in <code>3.5pre4</code>): <code>&lt;数値-a&gt;=5</code>, <code>&lt;文字列-b&gt;=pre</code>, <code>&lt;数値-c&gt;=4</code></li>
+ <li><code>*</code> (as in <code>1.0.*</code>): <code>&lt;string-b&gt;=*</code></li>
+</ul>
+
+<p>可読性と後方互換性のために、以下のような特別な解析ルールが適用されます。</p>
+
+<ul>
+ <li>バージョンパートがアスタリスク一つならば、 無限に大きい数字として解釈される:<br>
+  <code>1.5.0.*</code> は <code>1.5.0.<em>(無限)</em></code> という意味です。</li>
+ <li>文字列-b がプラス記号ならば, 数値-a は Firefox 1.0.x のバージョンフォーマットとの互換性のため1増加される:<br>
+  <code>1.0+</code> は <code>1.1pre</code> と同じです。</li>
+</ul>
+
+<p>バージョンパートを文字列と数値の並びに分ける原理は、バージョンパートを比較する際、数値部分は数値として比較され(例: '1.0pre1' &lt; '1.0pre10')、文字列部分はバイト単位で比較されるというものです。 バージョンがどの様にして比較されるかについての詳細は次のセクションを参照してください。</p>
+
+<p>{{ 英語版章題("Comparing versions") }}</p>
+
+<h3 id=".E3.83.90.E3.83.BC.E3.82.B8.E3.83.A7.E3.83.B3.E3.81.AE.E6.AF.94.E8.BC.83" name=".E3.83.90.E3.83.BC.E3.82.B8.E3.83.A7.E3.83.B3.E3.81.AE.E6.AF.94.E8.BC.83">バージョンの比較</h3>
+
+<p>二つのバージョン文字列が比較される時、 左のバージョンパートから順に右に向かって比較されます。 空であったり欠けているバージョンパートは <code>0</code> と同義です。</p>
+
+<p>あるポイントで、一方のバージョン文字列のバージョンパートが、もう一方のバージョン文字列の対応するバージョンパートよりも大きければ、最初のバージョン文字列は他方のバージョン文字列よりも大きいということになります。</p>
+
+<p>そうでなければ、バージョン文字列は同一です。欠落しているバージョンパートは <code>0</code> であるのと同じように扱われるので、次のバージョン文字列は全て同じであるということに注意してください。<br>
+ <code>1</code> 、 <code>1.0</code> 、 <code>1.0.</code> 、 <code>1.0.0</code> 、 そして <code>1.0...</code> も</p>
+
+<p>{{ 英語版章題("Comparing version parts") }}</p>
+
+<h4 id=".E3.83.90.E3.83.BC.E3.82.B8.E3.83.A7.E3.83.B3.E3.83.91.E3.83.BC.E3.83.88.E3.81.AE.E6.AF.94.E8.BC.83" name=".E3.83.90.E3.83.BC.E3.82.B8.E3.83.A7.E3.83.B3.E3.83.91.E3.83.BC.E3.83.88.E3.81.AE.E6.AF.94.E8.BC.83">バージョンパートの比較</h4>
+
+<p>バージョンパートも同様に左から右に比較されます。 パート A と C は数値として比較され、パート B と D はバイト単位で比較されます。文字列が存在する場合は存在しない場合よりも必ず小さくなります。 (<code>1.6a</code> は <code>1.6</code> よりも小さい)。</p>
+
+<p>{{ 英語版章題("Examples") }}</p>
+
+<h3 id=".E4.BE.8B" name=".E4.BE.8B">例</h3>
+
+<pre class="eval notranslate">1.-1
+&lt; 1 == 1. == 1.0 == 1.0.0
+&lt; 1.1a &lt; 1.1aa &lt; 1.1ab &lt; 1.1b &lt; 1.1c
+&lt; 1.1whatever
+&lt; 1.1pre == 1.1pre0 == 1.0+
+&lt; 1.1pre1a &lt; 1.1pre1aa &lt; 1.1pre1b &lt; 1.1pre1
+&lt; 1.1pre2
+&lt; 1.1pre10
+&lt; 1.1.-1
+&lt; 1.1 == 1.1.0 == 1.1.00
+&lt; 1.10
+&lt; 1.* &lt; 1.*.1
+&lt; 2.0
+</pre>
+
+<p>{{ 英語版章題("Older version formats") }}</p>
+
+<h3 id=".E5.8F.A4.E3.81.84.E3.83.90.E3.83.BC.E3.82.B8.E3.83.A7.E3.83.B3.E5.BD.A2.E5.BC.8F" name=".E5.8F.A4.E3.81.84.E3.83.90.E3.83.BC.E3.82.B8.E3.83.A7.E3.83.B3.E5.BD.A2.E5.BC.8F">古いバージョン形式</h3>
+
+<p>Firefox/Thunderbird 1.0 では、次のようなより単純なバージョン形式を用いていました。</p>
+
+<pre class="eval notranslate">major[.minor[.release[.build]]][+]
+</pre>
+
+<p><code>{{ mediawiki.external('..') }}</code> は任意の要素であることを意味しており, <code>major</code>, <code>minor</code>, <code>release</code>, <code>build</code> はすべて正の整数です。</p>
+
+
+
+<div class="noinclude"></div>
+
+<p>{{ languages( { "en": "en/Toolkit_version_format", "es": "es/Formato_para_la_versi\u00f3n_del_Toolkit", "zh-cn": "cn/\u7248\u672c\u683c\u5f0f\u8bf4\u660e" } ) }}</p>

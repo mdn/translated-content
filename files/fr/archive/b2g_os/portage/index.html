@@ -1,0 +1,244 @@
+---
+title: Porter Boot to Gecko
+slug: Archive/B2G_OS/Portage
+tags:
+  - B2G
+  - B2GOS
+  - Mobile
+translation_of: Archive/B2G_OS/Porting_B2G_OS/basics
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/fr/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/fr/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/fr/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<p class="summary">B2G OS utilise un noyau dérivé d'<a href="http://www.android.com/" title="http://www.android.com/">Android</a>, avec par dessus une interface utilisateur basée sur <a href="/en-US/docs/Gecko" title="Gecko">Gecko</a>. Cet article fournit un guide de base sur la façon de porter le système d'exploitation sur de nouveaux appareils.</p>
+
+<p>Ce guide suppose que vous faite un portage sur un nouvel appareil qui exécute déjà Android; si vous faites un portage vers un autre type d'appareil, le travail va nécessiter davantage d'investissement.</p>
+
+<div class="note">
+<p><strong>Note </strong>: Vous pouvez trouver de l'aide concernant le portage sur le canal IRC #fxos et sur <a href="https://discourse.mozilla-community.org/c/firefox-os-participation/porting">Mozilla Discourse.</a></p>
+</div>
+
+<h2 id="Configurer_votre_système_de_build">Configurer votre système de build</h2>
+
+<p>La première étape consiste à configurer votre système de buid; vous pouvez suivre le guide <a href="/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites" title="en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites">pré-requis pour compiler B2G OS</a>.</p>
+
+<h2 id="Créer_une_sauvegarde_locale_du_système_Android_d'origine">Créer une sauvegarde locale du système Android d'origine</h2>
+
+<p>Ensuite, vous devez faire une sauvegarde de votre appareil Android avant de commencer à l'atomiser avec vos builds de test de B2G. De plus, certaines parties seront nécessaires pour le processus de build et d'installation. Pour le nom de l'appareil, nous recommandons l'utilisation de "_" au lieu de "-". Voir le <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1243349" title="FIXED: Firefox fails to link against nspr libraries">bug 1243349</a> pour les raisons de ce choix. </p>
+
+<pre class="brush: bash">mkdir sauvegarde_de_mon_appareil
+cd sauvegarde_de_mon_appareil
+adb pull /system system</pre>
+
+<h2 id="Cloner_les_répertoires_B2G">Cloner les répertoires B2G</h2>
+
+<p>La première étape consiste à cloner le dépôt B2G ainsi que le dépôt contenant les manifestes.</p>
+
+<pre class="brush: bash">git clone https://github.com/mozilla-b2g/B2G.git
+git clone https://github.com/mozilla-b2g/b2g-manifest.git</pre>
+
+<h2 id="Ajouter_un_nouvel_appareil_à_config.sh">Ajouter un nouvel appareil à config.sh</h2>
+
+<p>L'étape suivante consiste à ajouter un nouvel appareil à <a href="https://github.com/mozilla-b2g/B2G/blob/master/config.sh" title="https://github.com/mozilla-b2g/B2G/blob/master/config.sh"><code>config.sh</code></a> dans le dépôt B2G;  vous pouvez utiliser un de ceux qui existent comme modèle. Ceci implique simplement de fournir les instructions permettant de récupérer les bons fichiers pour faire le build.</p>
+
+<h2 id="Créer_un_manifeste_pour_le_nouvel_appareil">Créer un manifeste pour le nouvel appareil</h2>
+
+<p>Mainenant, vous devez ajouter un fichier manifeste pour le nouvel appareil. Utilisez l'un des manifestes existant comme modèle. Vous pouvez utiliser le manifeste <a href="https://github.com/mozilla-b2g/b2g-manifest/blob/master/hamachi.xml" title="https://github.com/mozilla-b2g/b2g-manifest/blob/master/hamachi.xml">hamachi</a> comme référence. Une fois que c'est fait, vous pouvez ajouter et livrer votre nouveau manifeste dans votre dépôt local b2g-manifest :</p>
+
+<pre class="brush: bash">git add mon-nouvel-appareil.xml
+git commit
+</pre>
+
+<p>Ensuite, il faudra indiquer au fichier <a href="https://github.com/mozilla-b2g/B2G/blob/master/config.sh" title="https://github.com/mozilla-b2g/B2G/blob/master/config.sh"><code>config.sh</code></a> d'utiliser votre dépôt local b2g-manifest à la place du dépôt officiel. Pour réaliser cela, modifiez la valeur des variables GITREPO et BRANCH dans le fichier <a href="https://github.com/mozilla-b2g/B2G/blob/master/config.sh" title="https://github.com/mozilla-b2g/B2G/blob/master/config.sh"><code>config.sh</code></a> pour qu'elles pointent vers l'emplacement de votre dépôt local et de la branche souhaitée, par exemple :</p>
+
+<pre class="brush: bash"><span class="nv">GITREPO</span><span class="o">=</span><span class="k">${</span><span class="nv">GITREPO</span><span class="k">:-</span><span class="s2">"file:///home/votrenom/b2g-manifest"</span><span class="k">}</span>
+<span class="nv">BRANCH</span><span class="o">=</span><span class="k">${</span><span class="nv">BRANCH</span><span class="k">:-master</span><span class="k">}</span></pre>
+
+<h2 id="Créer_une_arborescence_de_configuration_pour_le_nouvel_appareil">Créer une arborescence de configuration pour le nouvel appareil</h2>
+
+<p>Créer une nouvelle arborescence pour le nouvel appareil. Elle doit se trouver dans <code>device/<em>&lt;manufacturer&gt;</em>/<em>&lt;device_id&gt;</em></code>. Cette arborescence doit inclure au moins :</p>
+
+<ul>
+ <li><code>AndroidBoard.mk</code></li>
+ <li><code>AndroidProducts.mk</code></li>
+ <li><code>BoardConfig.mk</code></li>
+ <li><code>extract-files.sh</code></li>
+ <li><code>full_&lt;device_id&gt;.mk</code></li>
+ <li>fichiers idc pour l'écran tactile</li>
+ <li>fichiers init (<code>init.rc</code>, <code>init.&lt;target&gt;.rc</code>, <code>uevent.rc</code>, ...)</li>
+</ul>
+
+<p>Ici, le contenu peut grandement différer d'un appareil à l'autre. En particulier, les fichiers BoardConfig.mk et extract-files.sh peuvent différer significativement. Cette partie nécessite pas mal de modifications, de test et de débogage pour déterminer quels blobs binaires doivent être extraits. Pour avoir une meilleure idée de qu'on est supposé trouver ici, jetez un oeil à <a href="https://github.com/mozilla-b2g/android-device-hamachi" title="https://github.com/mozilla-b2g/android-device-hamachi">configuration pour l'appareil hamachi</a>. Rappelez-vous de référencer correctement votre propre arborescence de configuration dans le manifeste aue vous avez créé pour votre nouvel appareil.</p>
+
+<div class="note">
+<p><strong>Note:</strong> Si vous pouvez trouver une référence existante sur <a href="http://www.cyanogenmod.com/" title="http://www.cyanogenmod.com/">CyanogenMod</a> pour votre appareil, ces informations accélèreront le processus de portage. Le forum <a href="http://forum.xda-developers.com/" title="http://forum.xda-developers.com/">XDA</a> est un autre bon endroit pour discuter et vérifier des informations.</p>
+</div>
+
+<h2 id="Reconstruire_boot.img">Reconstruire boot.img</h2>
+
+<p>Une fois que tout cà est fait, vous devez reconstruire l'image de boot. Ce n'est habituellement pas nécessaire pour le noyau lui-même mais pour récupérer les modifications dans <code>init.rc</code>.</p>
+
+<h3 id="Modifications_dans_init.rc">Modifications dans init.rc</h3>
+
+<p>Le init.rc que vous utilisez n'est <strong>pas</strong> celui fourni par B2G; à la place, vous devez le récupérer depuis votre appareil.</p>
+
+<p>Les principales choses que vous aurez besoin de modifier sont :</p>
+
+<h4 id="Importer_init.b2g.rc">Importer init.b2g.rc</h4>
+
+<p>Ajouter les lignes suivantes pour importer <code>init.b2g.rc</code>:</p>
+
+<pre class="brush: bash">on early-init
+    start ueventd
+    import /init.b2g.rc</pre>
+
+<h4 id="Corriger_les_permissions">Corriger les permissions</h4>
+
+<p>Corrigez les permissions des fichiers <code>/system/b2g/b2g</code>, <code>/system/b2g/updater et /system/b2g/plugin-container</code>; ceci doit être fait après les lignes qui montent le système de fichier en lecture/écriture:</p>
+
+<pre class="brush: bash">chmod 0755 /system/b2g/b2g
+chmod 0755 /system/b2g/updater
+chmod 0755 /system/b2g/plugin-container</pre>
+
+<p>Vous pourriez vouloir commencer en modifiant <code>init.rc</code> provenent du nouvel appareil au lieu d'utiliser le <code>init.rc</code> fourni par le système de build; dans ce cas, vous devez vous rappeler de renseigner <code>TARGET_PROVIDES_INIT_RC</code> dans <code>BoardConfig.mk</code>.</p>
+
+<h3 id="Noyau_pré-compilé_vs._compiler_le_noyau_depuis_le_code_source">Noyau pré-compilé vs. compiler le noyau depuis le code source</h3>
+
+<p>Vous pouvez utiliser un noyau pré-compilé ou vous pouvez compiler le noyau à partir du code source. Pour compiler le noyau à partir du code source, ajoutez AndroidKernel.mk et la configuration du noyau dans l'arborescence de configuration de l'appareil.</p>
+
+<p>Le <a href="https://github.com/andreasgal/B2G/tree/master/glue/gonk/device/toro/maguro" title="https://github.com/andreasgal/B2G/tree/master/glue/gonk/device/toro/maguro">maguro</a> sur l'ancien système de build est un exemple qui compile le noyau à partir du code source.</p>
+
+<h3 id="Extraire_et_modifier_une_image_de_boot_existante">Extraire et modifier une image de boot existante</h3>
+
+<p>Il est possible de récupérer l'image de boot d'un téléphone en extrayant le contenu des devices <code>/dev/mtd/mtd1</code> ou <code>/dev/mtd/mtd2</code>, le fichier image résultat peut ensuite être facilement récupéré :</p>
+
+<pre class="brush: bash">adb shell 'cat /dev/mtd/mtd1 &gt; /sdcard/boot.img'
+adb pull /sdcard/boot.img
+</pre>
+
+<p>Une fois que le fichier de l'image de boot a été obtenu, il peut être décompressé à l'aide d'un utilitaire tel que <a href="http://whiteboard.ping.se/Android/Unmkbootimg" title="Unmkbootimg">unmkbootimg</a>. L'outil va extraire à la fois l'image du noyau (zimage) et le disque mémoire (ramdisk initramfs.cpio.gz) et également afficher une commande permettant de re-compiler l'image avec les mêmes paramètres que ceux utilisés pour l'image d'origine, par exemple :</p>
+
+<pre class="brush: bash">$ unmkbootimg boot.img
+Kernel size 3872576
+Kernel address 0x208000
+Ramdisk size 265102
+Ramdisk address 0x1500000
+Secondary size 0
+Secondary address 0x1100000
+Kernel tags address 0x200100
+Flash page size 2048
+Board name is ""
+Command line "androidboot.hardware=aphone"
+Extracting kernel to file zImage ...
+Extracting root filesystem to file initramfs.cpio.gz ...
+All done.
+---------------
+To recompile this image, use:
+  mkbootimg --kernel zImage --ramdisk initramfs.cpio.gz --base 0x200000 --cmdline 'androidboot.hardware=aphone' -o new_boot.img
+---------------
+</pre>
+
+<p>Pour modifier le fichier ramdisk, créez un répertoire destination et extrayez-le dedans:</p>
+
+<pre class="brush: bash">mkdir initramfs_dir
+cd initramfs_dir
+gunzip -c ../initramfs.cpio.gz | cpio -i
+</pre>
+
+<p>Faîtes toutes les modifications nécessaires (telles que la modification de init.rc) puis recompressez le ramdisk en utilisant <code>mkbootfs</code> et assurez-vous que la version a été compilée avec les outils B2G de l'hôte :</p>
+
+<pre class="brush: bash">/path/vers/votre/B2G/out/host/linux-x86/bin/mkbootfs . | gzip &gt; ../newinitramfs.cpio.gz
+</pre>
+
+<p>Enfin, retournez au répertoire de premier niveau et re-compressez l'image de boot en utilisant <code>mkbootimg</code>; assurez-vous également que vous utilisez la version compilée avec loutils de l'autre hôte B2G:</p>
+
+<pre class="brush: bash">/path/vers/votre/B2G/out/host/linux-x86/bin/mkbootimg --kernel zImage --ramdisk newinitramfs.cpio.gz --base 0x200000 --cmdline 'androidboot.hardware=aphone' -o newboot.img
+</pre>
+
+<p>Si vous copiez maintenant votre nouvelle image de boot dans <code>out/target/product/$DEVICE/boot.img</code> (où $DEVICE est le nom de votre device), elle sera automatiquement flashée quand <code>flash.sh</code> est appelé. Alternativement, vous pouvez la flasher à la main avec les commandes suivantes :</p>
+
+<pre class="brush: bash">adb reboot bootloader
+fastboot flash boot newboot.img
+fastboot reboot
+</pre>
+
+<h2 id="Ajouter_le_nouvel_appareil_à_flash.sh">Ajouter le nouvel appareil à flash.sh</h2>
+
+<p>Ajoutez le nouvel appareil à <code>flash.sh</code>; les spécificités sur la façon de faire cela dépendront des outils qui seront utilisés pour flasher le nouvel appareil.</p>
+
+<h2 id="Configurer_compiler_et_flasher_le_nouvel_appareil">Configurer, compiler et flasher le nouvel appareil</h2>
+
+<p>Maintenant, vous pouvez essayer de compiler et de flasher votre nouvel appareil:</p>
+
+<pre class="brush: bash">ANDROIDFS_DIR=sauvegarde_de_mon_appareil ./config.sh &lt;device_id&gt; '../b2g-manifest/default.xml'
+./build.sh
+./flash.sh</pre>
+
+<h2 id="Test_et_débogage">Test et débogage</h2>
+
+<p>Nous avons besoin d'ajouter certains détails ici; en fait, c'est tout l'article qui pourrait nécessiter de l'aide.</p>
+
+<h2 id="FAQ">FAQ</h2>
+
+<p>À venir.</p>
+
+<h2 id="Voir_également">Voir également</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Mozilla/Firefox_OS" title="en-US/docs/Mozilla/Firefox_OS">B2G OS</a></li>
+ <li><a href="https://github.com/mozilla-b2g/B2G" title="https://github.com/mozilla-b2g/B2G">code source de B2G sur Github</a></li>
+ <li><a href="http://www.android.com/" title="http://www.android.com/">Site web Android</a></li>
+ <li><a href="https://autonome.wordpress.com/2013/01/15/firefox-os-devices-and-dark-matter/" title="https://autonome.wordpress.com/2013/01/15/firefox-os-devices-and-dark-matter/">Une liste de projets existant sur le blog de Dietrich Ayala</a> pour porter B2G OS sur certains appareils</li>
+</ul>

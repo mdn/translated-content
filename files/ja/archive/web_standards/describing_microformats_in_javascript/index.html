@@ -1,0 +1,102 @@
+---
+title: Describing microformats in JavaScript
+slug: Archive/Web_Standards/Describing_microformats_in_JavaScript
+tags:
+  - Firefox 3
+  - Microformats
+translation_of: Archive/Web_Standards/Describing_microformats_in_JavaScript
+---
+<p>
+microformats は、オブジェクトを説明するいくつかの標準的なメンバを伴った、標準化された構造形式を用いることで、JavaScript によって記述できます。
+</p>
+<h3 id="microformat_.E5.AE.9A.E7.BE.A9.E5.BD.A2.E5.BC.8F" name="microformat_.E5.AE.9A.E7.BE.A9.E5.BD.A2.E5.BC.8F">microformat 定義形式</h3>
+<p>microformat の定義には以下の項目が含まれていなくてはなりません。
+</p>
+<dl><dt><code>mfVersion</code>
+</dt><dd>定義の記述に利用される microformat API のバージョン番号を指定します。Firefox 3 では 0.8 と指定します。
+</dd><dt><code>mfObject</code>
+</dt><dd>microformat を実装する JavaScript オブジェクト。
+</dd><dt><code>className</code>
+</dt><dd>HTML 内で参照されている microformat のクラス名を指定する文字列。
+</dd><dt><code>required</code>
+</dt><dd>指定が必須とされるプロトタイプ名を示す配列。すべてのプロパティがオプションの場合、これは省略しても構いません。
+</dd><dt><code>properties</code>
+</dt><dd>microformat のプロパティを記述した構造体。
+</dd></dl>
+<h3 id=".E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3.E3.81.AE.E4.BB.95.E6.A7.98" name=".E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3.E3.81.AE.E4.BB.95.E6.A7.98">プロパティの仕様</h3>
+<p><code>properties</code> 構造体の各プロパティは、その名前によって指定され、そのプロパティが必要とする場合には追加の属性が含まれる場合もあります。標準の属性は以下の通りです。
+</p>
+<dl><dt><code>plural</code>
+</dt><dd>真偽値。<code>true</code> の場合、プロパティは複数の値を持つことができます。プロパティが複数の場合、配列として返されます。
+</dd><dt><code>virtual</code>
+</dt><dd>真偽値。プロパティが仮想かどうかを示します。仮想の場合、<code>virtualGetter()</code> メソッドが呼ばれると、そのプロパティが存在しない場合は新規作成を試みます。
+</dd><dt><code>virtualGetter</code>
+</dt><dd>仮想プロパティの値を取得するために呼び出される関数。これは <code>virtual</code> が <code>true</code> の場合のみ利用されます。
+</dd><dt><code>value</code>
+</dt><dd>プロパティのデフォルト値。
+</dd><dt><code>subproperties</code>
+</dt><dd>プロパティには、それ自身に複数のプロパティを持たせることができます。その場合は、プロパティ内部の <code>subproperties</code> 構造体に、それらのプロパティを追加します。
+</dd><dt><code>dataType</code>
+</dt><dd>プロパティによって指定されているデータの形式。取り得る値は、<blockquote>
+</blockquote></dd><dt><code>dateTime</code>
+</dt><dd>ISO 形式の日付
+</dd><dt><code>anyURI</code>
+</dt><dd>URI
+</dd><dt><code>email</code>
+</dt><dd>メールアドレス
+</dd><dt><code>tel</code>
+</dt><dd>電話番号
+</dd><dt><code>HTML</code>
+</dt><dd>タグを含む HTML
+</dd><dt><code>float</code>
+</dt><dd>浮動小数点数
+</dd><dt><code>microformat</code>
+</dt><dd>microformat
+</dd><dt><code>microformat_property</code>
+</dt><dd><code>microformat</code> によって指定された microformat 内の特定のプロパティ
+</dd><dt><code>custom</code>
+</dt><dd>独自データ
+</dd></dl>
+<h3 id=".E3.82.B7.E3.83.B3.E3.83.97.E3.83.AB.E3.81.AA.E4.BE.8B" name=".E3.82.B7.E3.83.B3.E3.83.97.E3.83.AB.E3.81.AA.E4.BE.8B">シンプルな例</h3>
+<p>連絡先情報を定義するための hCard microformat では、住所の定義に <code>adr</code> microformat を利用します。<code>adr</code> microformat は以下のように定義されます。
+</p>
+<pre>var adr_definition = {
+  mfVersion: 0.8,
+  mfObject: adr,
+  className: "adr",
+  properties: {
+    "type" : {
+      plural: true,
+      types: ["work", "home", "pref", "postal", "dom", "intl", "parcel"]
+    },
+    "post-office-box" : {
+    },
+    "street-address" : {
+      plural: true
+    },
+    "extended-address" : {
+    },
+    "locality" : {
+    },
+    "region" : {
+    },
+    "postal-code" : {
+    },
+    "country-name" : {
+    }
+  }
+};
+</pre>
+<p>ここでのプロパティは至って単純です。<code>type</code> プロパティは、オブジェクト (職場や自宅など) によって表される住所の形式を示します。<code>plural</code> プロパティが <code>true</code> になっていることから、複数の形式を指定できます。これにより、例えば、小鼓の受け取り先として職場の住所を指定することができます。
+</p><p><code>street-address</code> プロパティもまた <code>plural</code> となっています。これにより、<code>street-address</code> 配列内に複数行の住所情報を含めることができます。
+</p><p>microformat は、以下のように <code><a href="ja/Using_microformats#add.28.29">Microformats.add()</a></code> を呼び出すことで、microformat API に登録できます。
+</p>
+<pre class="eval">Microformats.add("adr", adr_definition);
+</pre>
+<p></p><div class="note"><strong>註:</strong> なお、<code>adr</code> microformat は Firefox 3 以降には標準で含まれていますので、利用したい場合に、わざわざ自分で追加する必要はありません。</div>
+<p></p>
+<h3 id=".E9.96.A2.E9.80.A3.E8.A8.98.E4.BA.8B" name=".E9.96.A2.E9.80.A3.E8.A8.98.E4.BA.8B">関連記事</h3>
+<p><a href="ja/Using_microformats">Using microformats</a>, <a href="ja/Parsing_microformats_in_JavaScript">Parsing microformats in JavaScript</a>
+</p>
+<div class="noinclude">
+</div>

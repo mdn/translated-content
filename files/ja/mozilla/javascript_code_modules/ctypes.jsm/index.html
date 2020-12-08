@@ -1,0 +1,199 @@
+---
+title: ctypes.jsm
+slug: Mozilla/JavaScript_code_modules/ctypes.jsm
+tags:
+  - 要更新
+---
+<div>{{gecko_minversion_header("2.0")}}</div>
+<div class="note">
+  <strong>註:</strong> <code>ctypes.jsm</code> コードモジュールは機能性の強化のために API 改訂中です。よってこの文書はそれが完了した際に改訂されるでしょう。</div>
+<p><code>ctypes.jsm</code> JavaScript コードモジュールは、自前のバイナリ XPCOM コンポーネントを書くことなく JavaScript コードから C 互換な外部ライブラリ関数の呼び出しを可能にします。</p>
+<div class="note">
+  <strong>註:</strong> <code>ctypes.jsm</code> JavaScript コードモジュールは chrome ――つまり、アプリケーション自身またはアドオンの内部からだけ利用することができます。</div>
+<p>ctypes を利用するにはまず、 JavaScript スコープの中にコードモジュールをインポートする必要があります:</p>
+<pre><span class="nowiki">Components.utils.import("resource://gre/modules/ctypes.jsm")</span></pre>
+<p>一度モジュールをインポートしたら、あとは外部ライブラリを読み込むために利用することができます。</p>
+<h2 id=".E3.83.A9.E3.82.A4.E3.83.96.E3.83.A9.E3.83.AA.E3.82.92.E9.96.8B.E3.81.8F" name=".E3.83.A9.E3.82.A4.E3.83.96.E3.83.A9.E3.83.AA.E3.82.92.E9.96.8B.E3.81.8F">ライブラリを開く</h2>
+<p>外部ライブラリを利用する前に、開く必要があります。これは <code>ctypes.open()</code> 関数を用いて行います。</p>
+<pre>var lib = ctypes.open(name);
+</pre>
+<p>ライブラリ <code>name</code> はパス名の文字列、または {{interface("nsILocalFile")}} オブジェクトのどちらかで指定できます。</p>
+<p>ライブラリが無事に読み込まれると、<code>ctypes.open()</code> は節「<a href="/ja/docs/JavaScript_code_modules/ctypes.jsm#.e3.83.a9.e3.82.a4.e3.83.96.e3.83.a9.e3.83.aa.e3.82.aa.e3.83.96.e3.82.b8.e3.82.a7.e3.82.af.e3.83.88.e3.81.ae.e5.88.a9.e7.94.a8">ライブラリオブジェクトの利用</a>」で説明されるライブラリオブジェクトを返します。ライブラリの読み込みに失敗すると、 <code>null</code> を返します。</p>
+<h2 id=".E3.83.A9.E3.82.A4.E3.83.96.E3.83.A9.E3.83.AA.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E3.81.AE.E5.88.A9.E7.94.A8" name=".E3.83.A9.E3.82.A4.E3.83.96.E3.83.A9.E3.83.AA.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E3.81.AE.E5.88.A9.E7.94.A8">ライブラリオブジェクトの利用</h2>
+<p>一度ライブラリが開かれたら、<code>アクセスしたい</code><code>あらゆる関数</code><code>を</code>ライブラリオブジェクトの <code>declare() メソッドを呼び出すことで</code><code>宣言する必要があります。</code></p>
+<pre>var func = lib.declare(name, abi, returnType, argType1, ...)
+</pre>
+<dl>
+  <dt>name</dt>
+  <dd>宣言する関数の名前。これは開いたライブラリの中で妥当なシンボルでなければならない。</dd>
+  <dt>abi</dt>
+  <dd>利用する呼び出しの取り決め。通常これは <code>ctypes.default_abi</code> になるが、関数が Win32 API の場合は <code>ctypes.stdcall_abi</code> を利用する必要がある。</dd>
+  <dt>returnType</dt>
+  <dd>関数が返す型。これは<a href="/ja/docs/JavaScript_code_modules/ctypes.jsm#.e5.9e.8b.e5.ae.9a.e6.95.b0">型定数</a>の一つでなければならない。</dd>
+  <dt>argType1...</dt>
+  <dd>入力引数型の 0 個以上のリスト。これらは<a href="/ja/docs/JavaScript_code_modules/ctypes.jsm#.e5.9e.8b.e5.ae.9a.e6.95.b0">型定数</a>から選ばれなければならない。</dd>
+</dl>
+<p>一度ライブラリから関数が宣言されたら、ほかの関数と同様に呼び出すことができます。</p>
+<p>ライブラリの利用を終えたら、その <code>close()</code> メソッドを呼んで閉じる必要があります:</p>
+<pre>lib.close();
+</pre>
+<h2 id=".E5.9E.8B.E5.AE.9A.E6.95.B0" name=".E5.9E.8B.E5.AE.9A.E6.95.B0">型定数</h2>
+<p>次の定数は ctypes で対応しているデータ型を定義しています。</p>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <td class="header">定数</td>
+      <td class="header">説明</td>
+    </tr>
+    <tr>
+      <td><code>ctypes.void_t</code></td>
+      <td>返り型でのみ可能。なにも返さないことを示す。</td>
+    </tr>
+    <tr>
+      <td>ctypes.bool</td>
+      <td>8 ビット真偽値</td>
+    </tr>
+    <tr>
+      <td>ctypes.int8_t</td>
+      <td>8 ビット符号付き整数</td>
+    </tr>
+    <tr>
+      <td>ctypes.int16_t</td>
+      <td>16 ビット符号付き整数</td>
+    </tr>
+    <tr>
+      <td>ctypes.int32_t</td>
+      <td>32 ビット符号付き整数</td>
+    </tr>
+    <tr>
+      <td>ctypes.int64_t</td>
+      <td>64 ビット符号付き整数</td>
+    </tr>
+    <tr>
+      <td>ctypes.uint8_t</td>
+      <td>8 ビット符号なし整数</td>
+    </tr>
+    <tr>
+      <td>ctypes.uint16_t</td>
+      <td>16 ビット符号なし整数</td>
+    </tr>
+    <tr>
+      <td>ctypes.uint32_t</td>
+      <td>32 ビット符号なし整数</td>
+    </tr>
+    <tr>
+      <td>ctypes.uint64_t</td>
+      <td>64 ビット符号なし整数</td>
+    </tr>
+    <tr>
+      <td>ctypes.float</td>
+      <td>浮動小数点数</td>
+    </tr>
+    <tr>
+      <td>ctypes.double</td>
+      <td>倍精度浮動小数点数</td>
+    </tr>
+    <tr>
+      <td>ctypes.string</td>
+      <td>C 文字列 (<code>char *</code>)</td>
+    </tr>
+    <tr>
+      <td>ctypes.ustring</td>
+      <td>16 ビット C 文字列 (<code>char16_t *</code>)</td>
+    </tr>
+  </tbody>
+</table>
+<h2 id=".E4.BE.8B.3A_Windows_.E3.83.AB.E3.83.BC.E3.83.81.E3.83.B3.E3.81.AE.E5.91.BC.E3.81.B3.E5.87.BA.E3.81.99" name=".E4.BE.8B.3A_Windows_.E3.83.AB.E3.83.BC.E3.83.81.E3.83.B3.E3.81.AE.E5.91.BC.E3.81.B3.E5.87.BA.E3.81.99">例: Windows ルーチンの呼び出す</h2>
+<p>この例は Win32 API を呼び出すために ctypes を利用する方法を説明します。</p>
+<pre class="brush: js">Components.utils.import("resource://gre/modules/ctypes.jsm");
+
+var lib = ctypes.open("C:\\WINDOWS\\system32\\user32.dll");
+
+/* Declare the signature of the function we are going to call */
+var msgBox = lib.declare("MessageBoxW",
+                         ctypes.stdcall_abi,
+                         ctypes.int32_t,
+                         ctypes.int32_t,
+                         ctypes.ustring,
+                         ctypes.ustring,
+                         ctypes.int32_t);
+var MB_OK = 3;
+
+var ret = msgBox(0, "Hello world", "title", MB_OK);
+
+lib.close();</pre>
+<p>3行目で、<code>user32.dll</code> システムライブラリが読み込まれています。6 行目は Windows 関数 <a href="http://msdn.microsoft.com/ja-jp/library/ms645505%28VS.85%29.aspx"><code>MessageBoxW</code></a> を呼び出すメソッドとなる <code>msgBox()</code> を宣言しています。15 行目は <code>msgBox()</code> ルーチンを呼び、警告を表示します。</p>
+<p>利用を終えたら私たちが最後に行うのは、ライブラリを閉じるために <code>lib.close()</code> を呼び出すことです。</p>
+<p>パスすべてを定義するのではなく、単にファイル名を与えることもできます。</p>
+<pre>var lib = ctypes.open("user32.dll");
+</pre>
+<p>あるいは拡張子抜きで。</p>
+<pre>var lib = ctypes.open("user32");
+</pre>
+<p>フルパスが与えられなかった場合、Windows は DLL 探すために次の検索順を利用します:</p>
+<ol>
+  <li>アプリケーションが読み込まれたディレクトリ。</li>
+  <li>システムディレクトリ。</li>
+  <li>16 ビットシステムディレクトリ。</li>
+  <li>Windows ディレクトリ。</li>
+  <li>現在のディレクトリ。</li>
+  <li><code>PATH</code> 環境変数に載っているディレクトリ。</li>
+</ol>
+<p>(<a href="http://msdn.microsoft.com/ja-JP/library/ms682586%28VS.85%29.aspx">http://msdn.microsoft.com/ja-jp/library/ms682586%28VS.85%29.aspx</a> より)</p>
+<h2 id=".E4.BE.8B.3A_Mac_OS_X_.E3.81.A7_Carbon_.E3.83.AB.E3.83.BC.E3.83.81.E3.83.B3.E3.81.AE.E5.91.BC.E3.81.B3.E5.87.BA.E3.81.99" name=".E4.BE.8B.3A_Mac_OS_X_.E3.81.A7_Carbon_.E3.83.AB.E3.83.BC.E3.83.81.E3.83.B3.E3.81.AE.E5.91.BC.E3.81.B3.E5.87.BA.E3.81.99">例: Mac OS X で Carbon ルーチンの呼び出す</h2>
+<p>この例は Mac OS X で Carbon 関数を呼び出すために ctypes を利用する方法を説明します。</p>
+<pre class="brush: js">/* build a Str255 ("Pascal style") string from the passed-in string */
+
+function makeStr(str) {
+  return String.fromCharCode(str.length) + str;
+}
+
+Components.utils.import("resource://gre/modules/ctypes.jsm");
+
+var carbon = ctypes.open("/System/Library/Frameworks/Carbon.framework/Carbon");
+
+stdAlert = carbon.declare("StandardAlert",       /* function name */
+               ctypes.default_abi,    /* ABI type */
+               ctypes.int16_t,        /* return type */
+               ctypes.int16_t,        /* alert type */
+               ctypes.string,         /* primary text */
+               ctypes.string,         /* secondary text */
+               ctypes.uint32_t,       /* alert param */
+               ctypes.int16_t);       /* item hit */
+
+var hit = 0;
+var msgErr = makeStr("Carbon Says...");
+var msgExp = makeStr("We just called the StandardAlert Carbon function from JavaScript!");
+
+var err = stdAlert(1, msgErr, msgExp, 0, hit);
+
+carbon.close();
+</pre>
+<p>The <code>makeStr()</code> 関数は入力として標準の JavaScript 文字列を取り、バイト長の後に文字列そのものの文字が続く Carbon 形式の「Pascal」文字列を返すユーティリティルーチンです。これは文字列が実際に 256 文字以下の場合にだけ正しく動作することを忘れないでください。 長い場合は見事に失敗します。</p>
+<p>9 行目で、システムの Carbon フレームワークから Carbon ライブラリが読み込まれています。</p>
+<p>11 行目は Carbon の <code>StandardAlert</code> ルーチンを呼び出す、<code>stdAlert()</code> 関数を宣言しています。既定の ABI を利用し、 16 ビット整数 (Carbon の <code>OSErr</code> 値) を返し、そして整数（警告タイプ）と 2 つの文字列、私たちは利用しないパラメータブロックへのポインタ、ヒットした項目を返すために用いるもう 1 つの整数を受け入れます。詳しくは <a href="http://developer.apple.com/legacy/mac/library/documentation/Carbon/Reference/Dialog_Manager/Reference/reference.html#//apple_ref/c/func/StandardAlert"><code>StandardAlert</code></a> に関する Apple の文書を参照してください。</p>
+<p>その後、私たちは必要な Str255 文字列を 2 つ生成するために <code>makeStr() を用いて単にパラメータを構成し、<code>stdAlert()</code> を呼び出すと、次の警告ウィンドウが作り出されます:</code></p>
+<p><img alt="ctype-mac-dialog.png" class="internal default" src="/@api/deki/files/3842/=ctype-mac-dialog.png"></p>
+<p>利用を終えたら私たちが最後に行うのは、ライブラリを閉じるために <code>carbon.close()</code> を呼び出すことです。</p>
+<h2 id=".E4.BE.8B.3A_Linux_.E3.81.A7_LibC_.E3.83.AB.E3.83.BC.E3.83.81.E3.83.B3.E3.81.AE.E5.91.BC.E3.81.B3.E5.87.BA.E3.81.99" name=".E4.BE.8B.3A_Linux_.E3.81.A7_LibC_.E3.83.AB.E3.83.BC.E3.83.81.E3.83.B3.E3.81.AE.E5.91.BC.E3.81.B3.E5.87.BA.E3.81.99">例: Linux で LibC ルーチンの呼び出す</h2>
+<p>この例は Linux で libc 関数を呼び出すために ctypes を利用する方法を説明します。</p>
+<pre class="brush: js">/* import js-ctypes */
+Components.utils.import("resource://gre/modules/ctypes.jsm");
+
+/* open a library */
+var libc = ctypes.open("libc.so.6");
+
+/* import a function */
+var puts = libc.declare("puts", /* function name */
+                           ctypes.default_abi, /* call ABI */
+                           ctypes.int32_t, /* return type */
+                           ctypes.string /* argument type */
+);
+var ret = puts("Hello World from js-ctypes!");
+</pre>
+<h2 id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE" name=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE">関連項目</h2>
+<ul>
+  <li><a href="/ja/docs/JavaScript_code_modules/Using">Using JavaScript code modules</a></li>
+  <li><a href="/ja/docs/JavaScript_code_modules">JavaScript code modules</a></li>
+  <li><a href="/ja/docs/Components.utils.import"><code>Components.utils.import</code></a></li>
+</ul>

@@ -1,0 +1,51 @@
+---
+title: BluetoothManager.enabled
+slug: Archive/B2G_OS/API/BluetoothManager/enabled
+tags:
+  - API
+  - Firefox OS
+  - Non Standard
+  - Property
+  - Reference
+  - Web Bluetooth
+  - WebAPI
+translation_of: Archive/B2G_OS/API/BluetoothManager/enabled
+---
+<p></p><section class="Quick_links" id="Quick_Links"><ol><li><strong><a href="/ja/docs/Web/API/Web_Bluetooth_API">Web Bluetooth API</a></strong></li><li><strong><a href="/ja/docs/Web/API/Archive"><code>Archive</code></a></strong></li><li class="toggle"><details open><summary>Bluetooth API に関連するページ</summary><ol><li><a href="/ja/docs/Web/API/BluetoothAdvertisingData"><code>BluetoothAdvertisingData</code></a></li><li><a href="/ja/docs/Web/API/BluetoothDevice"><code>BluetoothDevice</code></a></li><li><a href="/ja/docs/Web/API/BluetoothGATTCharacteristic"><code>BluetoothGATTCharacteristic</code></a></li><li><a href="/ja/docs/Web/API/BluetoothGATTDescriptor"><code>BluetoothGATTDescriptor</code></a></li><li><a href="/ja/docs/Web/API/BluetoothGATTRemoteServer"><code>BluetoothGATTRemoteServer</code></a></li></ol></details></li></ol></section><p></p>
+
+<p></p><div class="overheadIndicator nonStandard nonStandardHeader">
+      <p><strong><span title="この API は標準化されていません。"><i class="icon-warning-sign"> </i></span> 非標準</strong><br>
+      この機能は現在 W3C の標準化のプロセスに乗っていませんが、Firefox OS プラットフォームではサポートされています。将来は動作が変わるかもしれませんし、他のブラウザーで広くサポートされているわけでもありませんが、Firefox OS アプリ専用のコードで使うには適しています。</p>
+      </div><p></p>
+
+<p></p><div class="warning">
+    <p style="text-align: center;">この API は <a href="/ja/docs/Mozilla/Firefox_OS/Security/Application_security">認定済みアプリ</a>のみ、 <a href="/ja/docs/Mozilla/Firefox_OS">Firefox OS</a> で有効になります。</p>
+</div><p></p>
+
+<h2 id="概要">概要</h2>
+
+<p><code>enabled</code> プロパティはBluetoothがオン(<code>true</code>) またはオフ (<code>false</code>)であることを示します</p>
+
+<div class="note">
+<p><strong>注:</strong> Bluetoothの有効化／無効化は <a href="/docs/Web/API/Settings_API" title="/en-US/docs/WebAPI/Settings">Settings API</a> の<code> bluetooth.enabled の設定を変更する事</code>によってのみ実行されます。この設定を変更する度に <a href="/ja/docs/Web/API/BluetoothManager" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>BluetoothManager</code></a> オブジェクトは <code><a href="/ja/docs/Web/Reference/Events/enabled" title="/ja/docs/Web/Reference/Events/enabled">enabled</a></code> または <code><a href="/ja/docs/Web/Reference/Events/disabled" title="/ja/docs/Web/Reference/Events/disabled">disabled</a></code> イベントを発行します。これらイベントは <a href="/ja/docs/Web/API/BluetoothManager/onenabled" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>BluetoothManager.onenabled</code></a> および <a href="/ja/docs/Web/API/BluetoothManager/ondisabled" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>BluetoothManager.ondisabled</code></a> イベントハンドラを利用して取得することができます。</p>
+</div>
+
+<h2 id="構文">構文</h2>
+
+<pre class="syntaxbox">var enabled = navigator.mozBluetooth.enabled</pre>
+
+<h2 id="値">値</h2>
+
+<p>bool値を返します。</p>
+
+<h2 id="Specification" name="Specification">仕様</h2>
+
+<p>正式な仕様の一部ではありません。 <a href="http://www.w3.org/2012/sysapps/">W3C's System Applications Working Group</a> で協議される必要があります。</p>
+
+<h2 id="参考">参考</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/API/BluetoothManager_(Firefox_OS)" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>BluetoothManager_(Firefox_OS)</code></a></li>
+ <li><a href="/docs/WebAPI/WebBluetooth">Web Bluetooth</a></li>
+ <li>The <a href="/docs/Web/API/Settings_API" title="/en-US/docs/WebAPI/Settings">Settings API</a></li>
+</ul>

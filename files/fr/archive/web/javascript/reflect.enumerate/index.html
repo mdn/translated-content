@@ -1,0 +1,79 @@
+---
+title: Reflect.enumerate()
+slug: Archive/Web/JavaScript/Reflect.enumerate
+tags:
+  - ECMAScript 2015
+  - JavaScript
+  - Méthode
+  - Obsolete
+  - Reference
+  - Reflect
+translation_of: Archive/Web/JavaScript/Reflect.enumerate
+---
+<div>{{JSRef}}{{obsolete_header}}</div>
+
+<p>La méthode statique <code><strong>Reflect</strong></code><strong><code>.enumerate()</code></strong> renvoie un itérateur qui déroule les propriétés propres énumérables et les propriétés héritées énumérables de l'objet cible. Cette méthode a été <a href="https://github.com/tc39/ecma262/pull/367">retirée de la septième édition d'ECMAScript</a> et est désormais dépréciée dans les navigateurs.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox notranslate">Reflect.enumerate(cible)
+</pre>
+
+<h3 id="Paramètres">Paramètres</h3>
+
+<dl>
+ <dt><code>cible</code></dt>
+ <dd>L'objet cible dont on veut obtenir les propriétés.</dd>
+</dl>
+
+<h3 id="Valeur_de_retour">Valeur de retour</h3>
+
+<p>Un itérateur qui liste les propriétés propres énumérables de l'objet cible ainsi que ses propriétés héritées énumérables.</p>
+
+<h3 id="Exceptions_levées">Exceptions levées</h3>
+
+<p>Une erreur {{jsxref("TypeError")}} si <code>cible</code> n'est pas un {{jsxref("Object")}}.</p>
+
+<h2 id="Description">Description</h2>
+
+<p>La méthode <code>Reflect.enumerate</code> renvoie un itérateur qui liste les propriétés énumérables d'un objet cible, celles qui sont propres et celles qui sont héritées.</p>
+
+<h2 id="Exemples">Exemples</h2>
+
+<pre class="brush: js notranslate">var obj = { x: 1, y: 2 };
+
+for (var nom of Reflect.enumerate(obj)) {
+  console.log(nom);
+}
+// affiche "x" et "y"
+</pre>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Spécification</th>
+   <th scope="col">État</th>
+   <th scope="col">Commentaires</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES2015', '#sec-reflect.enumerate', 'Reflect.enumerate')}}</td>
+   <td>{{Spec2('ES2015')}}</td>
+   <td>Définition initiale. Retirée avec ECMAScript 2016 (ES7).</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<div class="hidden">Ce tableau de compatibilité a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à envoyer une <em>pull request</em> sur <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>.</div>
+
+<p>{{Compat("javascript.builtins.Reflect.enumerate")}}</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>{{jsxref("Reflect")}}</li>
+ <li><code><a href="/fr/docs/Web/JavaScript/Reference/Instructions/for...in">for...in</a></code></li>
+</ul>

@@ -1,0 +1,36 @@
+---
+title: Adding the structure
+slug: Creating_a_Mozilla_Extension/Adding_the_structure
+tags:
+  - Add-ons
+  - Extensions
+translation_of: Archive/Mozilla/Creating_a_Mozilla_extension/Adding_the_structure
+---
+<p>
+</p><p>今回の拡張機能の UI はステータスバー上のアイコンです。この UI を実装するために、<code><a href="ja/XUL/statusbarpanel">statusbarpanel</a></code> 要素を <code>navigator.xul</code> ファイルの <code><a href="ja/XUL/statusbar">statusbar</a></code> 要素に追加します。
+</p>
+<pre class="eval">&lt;statusbar id="status-bar" class="chromeclass-status"
+         ondragdrop="nsDragAndDrop.drop(event, contentAreaDNDObserver);"&gt;
+&lt;statusbarpanel id="component-bar"/&gt;
+&lt;statusbarpanel id="statusbar-display"
+        label="&amp;statusText.label;" flex="1"/&gt;
+&lt;statusbarpanel class="statusbarpanel-progress"&gt;
+  &lt;progressmeter class="progressmeter-statusbar"
+          id="statusbar-icon" mode="normal" value="0"/&gt;
+&lt;/statusbarpanel&gt;
+<span>&lt;statusbarpanel class="statusbarpanel-iconic"
+          id="tinderbox-status" status="none"/&gt;</span>
+&lt;statusbarpanel class="statusbarpanel-iconic" id="offline-status"/&gt;
+&lt;statusbarpanel class="statusbarpanel-iconic" id="security-button"
+                onclick="BrowserPageInfo(null, 'securityTab')"/&gt;
+&lt;/statusbar&gt;
+</pre>
+<p><code>statusbar</code> XUL 要素は、アプリケーションの状態を表示するステータスバーを定義しています。これにはテキストメッセージ (例えば、Mozilla でドキュメントをロードし終えた時に表示される「完了」や、グラフィカルなメッセージ (例えば、Mozilla で表示しているドキュメントが SSL で暗号化されているかどうかを示す鍵のアイコン) を含めることができます。
+</p><p>ステータスバーは <code>statusbarpanel</code> XUL 要素で定義される複数のパネルから構成されています。各ステータスバーパネルは別々の情報を表示します。グラフィカルパネル (我々が作っている、アイコンを表示するようなもの) には <code><a href="ja/XUL/Style/statusbarpanel-iconic">statusbarpanel-iconic</a></code> class が追加されます。これで、CSS スタイルシートで要素の見た目が定義されるようになります。
+</p><p><code>status</code> 属性は、XUL の <code>statusbarpanel</code> 要素の定義にはありませんが、この拡張機能では現在の Tinderbox の状態を保持するのに使います。Tinderbox のステータスをサーバから取得する毎に <code>status</code> 属性の値を更新します。また、<code>status</code> の値に対応するアイコンが表示されるように CSS ルールを定義します。すべての XUL 要素は、XUL レンダリングエンジンが認識するもの以外に、追加の属性を持つことができます。エンジンは追加された属性を無視するので、属性を追加することで問題が起こったり、(CSS で明示的に指定する場合を除き) GUI 部品を表示する方法が変更されたりすることはありません。
+</p><p></p><div style="text-align: right;" class="prevnext">
+    <p><a style="float: left;" href="/ja/docs/Creating_a_Mozilla_Extension:Finding_the_code_to_modify">« 前のページ</a><a href="/ja/docs/Creating_a_Mozilla_Extension:Specifying_the_appearance">次のページ  »</a></p>
+</div>
+<p></p>
+<div class="noinclude">
+</div>

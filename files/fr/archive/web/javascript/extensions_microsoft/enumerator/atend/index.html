@@ -1,0 +1,62 @@
+---
+title: Enumerator.atEnd
+slug: Archive/Web/JavaScript/Extensions_Microsoft/Enumerator/atEnd
+tags:
+  - JavaScript
+  - Microsoft
+  - Méthode
+  - Non-standard
+  - Reference
+translation_of: Archive/Web/JavaScript/Microsoft_Extensions/Enumerator/atEnd
+---
+<div>{{JSRef}}{{Non-standard_header}}</div>
+
+<p>La méthode <strong><code>Enumerator.atEnd()</code></strong> renvoie un booléen qui indique si l'énumérateur a atteint la fin de la collection.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre><code>monEnum.atEnd()</code>
+</pre>
+
+<h3 id="Valeur_de_retour">Valeur de retour</h3>
+
+<p>Un booléen (cf. {{jsxref("Boolean")}}) qui indique si l'énumérateur est parvenu à la fin de la collection ou si la collection est vide ou si l'élément courant vaut {{jsxref("undefined")}}. Sinon, la méthode renvoie <code>false</code>.</p>
+
+<h2 id="Exemples">Exemples</h2>
+
+<p>Dans l'exemple suivant, on utilise la méthode <code>atEnd()</code> afin de déterminer si on a atteint la fin d'une liste de disques :</p>
+
+<pre class="brush: js">function ShowDrives() {
+  var s = "";
+  var bytesPerGB = 1024 * 1024 * 1024;
+  var fso = new ActiveXObject("Scripting.FileSystemObject");
+  var e = new Enumerator(fso.Drives);
+  e.moveFirst();
+  while (e.atEnd() == false) {
+    var drv = e.item();
+    s += drv.Path + " - ";
+    if (drv.IsReady) {
+      var freeGB = drv.FreeSpace / bytesPerGB;
+      var totalGB = drv.TotalSize / bytesPerGB;
+      s += freeGB.toFixed(3) + " GB free of ";
+      s += totalGB.toFixed(3) + " GB";
+    } else {
+      s += "Not Ready";
+    }
+    s += "&lt;br /&gt;";
+    e.moveNext();
+  }
+  return(s);
+}
+</pre>
+
+<h2 id="Prérequis">Prérequis</h2>
+
+<p>Cette fonctionnalité est prise en charge pour les modes suivants : Quirks, Internet Explorer 6 en mode standard, Internet Explorer 7 en mode standard, Internet Explorer 8 en mode standard, Internet Explorer 9 en mode standard et Internet Explorer 10 en mode standard. Cette fonctionnalité n'est pas prise en charge dans les applications Windows 8.x Store.</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>{{jsxref("Enumerator")}}</li>
+ <li><a href="/fr/docs/Web/JavaScript/Extensions_JavaScript_Microsoft">Les extensions JavaScript spécifiques de Microsoft</a></li>
+</ul>

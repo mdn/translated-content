@@ -1,0 +1,58 @@
+---
+title: 修改 Gaia 代码
+slug: Archive/B2G_OS/Developing_Gaia/Making_Gaia_code_changes
+translation_of: Archive/B2G_OS/Developing_Gaia/Making_Gaia_code_changes
+---
+<div class="summary">
+ <p><span class="seoSummary">现在您已经在桌面上运行 Gaia， 并且对源代码的工作方式有了一定程度的理解，下一步就应该准备好为项目做贡献了。本文则描述了如何修改代码以及如何在代码中找到 bug 出现的位置。 </span></p>
+</div>
+<h2 id="Git_最佳实践">Git 最佳实践</h2>
+<ol>
+ <li>当对 Gaia 修改时， 首先需要从 master 上获取最新的代码：
+  <pre class="brush: bash">cd path/to/gaia
+git checkout master
+git pull </pre>
+ </li>
+ <li>下面切换到您解决问题的分支：
+  <pre class="brush: bash">git checkout -b my-code-fix</pre>
+ </li>
+ <li>最后，到 <code>gaia/apps</code> 目录下，可以修改对应的文件了。</li>
+</ol>
+<div class="note">
+ <p><b>注意</b>: 在 <code>gaia/profile-debug/</code> 目录下，您会找到  <code>webapps/</code>， 但其中只包含需要运行的 app 的manifest 文件，而 app 是存在于  <code>gaia/apps/</code> 目录下的。</p>
+</div>
+<h2 id="简单的代码修改示例">简单的代码修改示例</h2>
+<p>您可以按照需求对代码作出修改，保存修改，在 Firefox 桌面中运行 Gaia 并刷新 tab 页以查看效果。  Let's do something simple like change the text colour of the clock on the lock screen:</p>
+<p><img alt="Gaia lockscreen showing the clock display in white text" src="https://mdn.mozillademos.org/files/7929/gaia-lockscreen-clock.png" style="width: 369px; height: 623px; margin: 0px auto; display: block;"></p>
+<ol>
+ <li>The best way to find how this style is set is to use the developer tools. Ctrl/right + click on the clock in Firefox Desktop and select <em>Inspect Element</em> from the context menu.</li>
+ <li>You can then work out which CSS file to edit — <code>gaia/apps/system/style/lockscreen.css</code> in this case — and then make your changes in the CSS styles on the right hand side of the display to get it to the state you want.</li>
+ <li>When you are happy with the change, go and make the change in the file directly.</li>
+ <li>Next, refresh the tab (or use the Reload application button) and the HTTP server serves the changes instantly:</li>
+</ol>
+<p><img alt="Gaia lockscreen showing the clock display modified from white to red text" src="https://mdn.mozillademos.org/files/7931/gaia-lockscreen-clock-modified.png" style="width: 366px; height: 622px; margin: 0px auto; display: block;"><br>
+ <br>
+ <br>
+ Limitations of Gaia Desktop Firefox rendering:</p>
+<ul>
+ <li>In the Desktop Firefox rendering, the apps are fairly accurate compared to how they work on a real phone, but you may notice some differences here and there.</li>
+ <li>Not all device APIs are supported in desktop Firefox; you can find a list of the ones that are enabled in <a href="https://github.com/mozilla-b2g/gaia/blob/master/build/preferences.js#L106">preferences.js</a>.</li>
+</ul>
+<h2 id="发现_bug_出现的地方">发现 bug 出现的地方</h2>
+<p>The best way to find Firefox OS bugs to work on is to consult <a href="http://www.joshmatthews.net/bugsahoy/?b2g=1">Josh Matthews' Bugs Ahoy app</a> — this pulls in bugs directly from Mozilla's Bugzilla and displays them in an easy to search and browse way. One you have found a bug that you want to work on, go to its Bugzilla page, enter yourself in the "assigned to" field, and start work, as indicated above.</p>
+<h3 id="有用的提示">有用的提示</h3>
+<ul>
+ <li>When you work on mentored bugs, one of the Gaia core team will monitor your progress and provide help with the code and process. If you are a beginner to the Firefox OS contribution process, signing up for one of these can be helpful. These are indicated in Firefox OS Bugzilla pages by an entry in the "Mentors" field. Buys Ahoy lists mentored bugs.</li>
+ <li>If you are a completely new Bugzilla user, you may not be able to assign yourself to work on a bug. If you can’t, ask the mentor assigned to that bug to assign you if it has one, or just ask in the bug comments otherwise.</li>
+ <li>After you have a bit more experience, you should ask someone to give you permission to assign bugs to yourself.</li>
+ <li>Another good whiteboard entry to look out for is <code>[good first bug]</code>, if you are a new contributor and want to start with something simple. You can list just good first bugs using <a href="http://www.joshmatthews.net/bugsahoy/?b2g=1&amp;simple=1">http://www.joshmatthews.net/bugsahoy/?b2g=1&amp;simple=1</a>.</li>
+ <li>You should save a search for projects you want to contribute to. For example, the following would give you a Gaia Clock app bug search:</li>
+</ul>
+<p><a href="https://bugzilla.mozilla.org/buglist.cgi?columnlist=product%2Ccf_blocking_b2g%2Cbug_status%2Cresolution%2Cshort_desc&amp;resolution=---&amp;query_based_on=CLOCK&amp;query_format=advanced&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;component=Gaia%3A%3AClock&amp;product=Boot2Gecko&amp;known_name=CLOCK&amp;list_id=10497922">https://bugzilla.mozilla.org/buglist.cgi?columnlist=product%2Ccf_blocking_b2g%2Cbug_status%2Cresolution%2Cshort_desc&amp;resolution=---&amp;query_based_on=CLOCK&amp;query_format=advanced&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;component=Gaia%3A%3AClock&amp;product=Boot2Gecko&amp;known_name=CLOCK&amp;list_id=9776392</a></p>
+<h2 id="参考">参考</h2>
+<ul>
+ <li><a href="https://mozilla.app.box.com/s/wzgsb3lkqglv0dnfdgzs">Gaia powerpoints for visual/interaction specifications</a></li>
+ <li><a href="https://etherpad.mozilla.org/gaia-meeting-notes">Weekly Gaia meeting Etherpad</a></li>
+ <li><a href="https://datazilla.mozilla.org/">Datazilla</a>: Mozilla's performance test utility<br>
+   </li>
+</ul>

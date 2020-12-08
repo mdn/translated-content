@@ -1,0 +1,23 @@
+---
+title: 'Thunderbird 拡張機能のビルド その２: 拡張機能のファイルレイアウト'
+slug: >-
+  Extensions/Thunderbird/Building_a_Thunderbird_extension_2:_extension_filesystem
+translation_of: >-
+  Mozilla/Thunderbird/Thunderbird_extensions/Building_a_Thunderbird_extension_2:_extension_filesystem
+---
+<p>拡張機能は <a href="/ja/docs/Bundles">Bundle</a> としても知られる XPI 形式の圧縮ファイルにパッケージ化され、配布されます。それは<strong> install.rdf </strong>と、 <strong>chrome.manifest</strong> 、 <strong>chrome </strong>フォルダを含みます。 <strong>chrome</strong> フォルダは実際のコンテンツファイルを含む、 <strong>content</strong> フォルダを含みます。コンテンツファイルには実際に何かをする機能拡張のコードを含みます。このチュートリアルが終わったとき、あなたの拡張機能は以下のようになるでしょう:</p>
+<pre class="eval">myfirstext.xpi:                                //created in step 8
+              /install.rdf                     //created in step 3
+              /chrome.manifest                 //created in step 4
+              /chrome/
+              /chrome/content/
+              /chrome/content/myhelloworld.xul //created in step 5
+              /chrome/content/overlay.js       //created in step 6
+              /chrome/locale/*                 //Building an Extension# <a href="/en/Building_an_Extension#Localization" title="https://developer.mozilla.org/en/Building_an_Extension#Localization">Localization</a>
+              /defaults/preferences/           //Building an Extension# <a href="/en/Building_an_Extension#Defaults_Files" title="https://developer.mozilla.org/en/Building_an_Extension#Defaults_Files">Defaults Files</a>
+</pre>
+<p>あなたはこれらのファイルを手動で作成するのではなく、開発者センターにある<a href="/ja/developers/tools/builder">アドオンビルダー</a>を使用することが出来ます。これは必須のファイルとフォルダを含んだ拡張機能フレームワークを含む圧縮パッケージを作成します。解凍した圧縮パッケージの中には、 'myfirstext' と呼ばれるディレクトリがあり、このチュートリアルに従うことでそれらのファイルを編集します。</p>
+<p>チュートリアルページに従うことで、 <strong>locale</strong> フォルダと <strong>defaults</strong> フォルダの記述方法、XPIファイルへのそれらのファイルのパッケージの方法を経験するでしょう。 あなたはより一般的なドキュメント『<a href="/ja/docs/Building_an_Extension"><strong>拡張機能のビルド</strong></a>』により <strong>locale</strong> フォルダと <strong>defaults</strong> フォルダについての情報を見つけることが出来るでしょう。<br>
+ <br>
+ {{ Previous("Extensions/Thunderbird/Building_a_Thunderbird_extension") }}</p>
+<p>{{ Next("Extensions/Thunderbird/Building_a_Thunderbird_extension_3:_install_manifest") }}</p>

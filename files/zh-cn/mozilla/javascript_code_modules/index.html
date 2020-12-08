@@ -1,0 +1,84 @@
+---
+title: JavaScript 代码模块
+slug: Mozilla/JavaScript_code_modules
+tags:
+  - Add-ons(加载项)
+  - JavaScript
+  - TopicStub
+  - XPCOM
+  - mo
+  - 扩展
+  - 模块
+translation_of: Mozilla/JavaScript_code_modules
+---
+<p>{{Non-standard_Header}}</p>
+
+<div class="blockIndicator note">
+<p><strong>注意:</strong> JavaScript代码模块和JavaScript 标准中的模块(module)不是一回事。 要学习如何使用标准中的模块，请点击 {{JSxRef("Statements/export", "export")}} 和 {{JSxRef("Statements/import", "import")}} 查看。</p>
+</div>
+
+<p>JavaScript 代码模块用于具备不同权限的作用域之间的代码共享。例如，Firefox 可以使用模块，也可以通过扩展来使用模块，以避免重复代码。</p>
+
+<table class="topicpage-table">
+ <tbody>
+  <tr>
+   <td>
+    <h2 id="话题总览">话题总览</h2>
+
+    <dl>
+     <dt><a href="/en-US/docs/JavaScript_code_modules/Using" title="./Using">使用JavaScript代码模块</a></dt>
+     <dd>介绍如何使用JavaScript代码模块</dd>
+     <dt><a href="/en-US/docs/Components.utils.import" title="Components.utils.import">Component.utils.import</a></dt>
+     <dd>如何导入一个JavaScript的代码模块。</dd>
+     <dt><a href="/en-US/docs/Components.utils.unload" title="Components.utils.unload">Component.utils.unload</a> {{gecko_minversion_inline("7.0")}}</dt>
+     <dd>如何上传一个JavaScript的代码模块</dd>
+     <dt><a href="/en-US/docs/Code_snippets/Modules" title="Code_snippets/Modules">代码片段: Module</a></dt>
+     <dd>如何使用模块代码的实例。</dd>
+     <dt><a class="external" href="http://wiki.mozilla.org/Labs/JS_Modules">Mozilla实验室的 JS Modules</a></dt>
+     <dd>本页面列出了JS模块的列表，以及下载链接和文档，扩展开发人员可以在代码中使用它们。</dd>
+    </dl>
+
+    <dl>
+    </dl>
+   </td>
+   <td>
+    <h2 id="标准代码模块">标准代码模块</h2>
+
+    <dl>
+     <dt><a href="/en-US/docs/Mozilla/js-ctypes" title="./ctypes.jsm">ctypes.jsm</a> {{fx_minversion_inline("3.6")}}</dt>
+     <dd>提供一个允许JS代码在不需要开发一个XPCOM元素的前提下调用本地库的接口。</dd>
+     <dt><a href="/en-US/docs/JavaScript_code_modules/FileUtils.jsm" title="./FileUtils.jsm"><strong style="font-weight: bold;">FileUtils.jsm</strong></a> {{gecko_minversion_inline("1.9.2")}}</dt>
+     <dd>提供处理文件的有用的方法</dd>
+     <dt><a href="/en-US/docs/JavaScript_code_modules/Geometry.jsm" title="JavaScript code modules/Geometry.jsm">Geometry.jsm</a> {{gecko_minversion_inline("2.0")}}</dt>
+     <dd>提供用于对点和矩形执行基本几何操作的方法。</dd>
+     <dt><a href="/en-US/docs/JavaScript_code_modules/ISO8601DateUtils.jsm" title="./ISO8601DateUtils.jsm">ISO8601DateUtils.jsm</a></dt>
+     <dd>提供在JavaScript <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Date" title="JavaScript/ Reference/Global Objects/Date"><code>Date</code></a> 对象和ISO 8601 data字符串之间转换的方法。</dd>
+     <dt><a href="/en-US/docs/JavaScript_code_modules/Dict.jsm" title="JavaScript code modules/Dict.jsm">Dict.jsm</a> {{gecko_minversion_inline("5.0")}}</dt>
+     <dd>提供一个可以访问键值对词典的API。</dd>
+     <dt><a href="/en-US/docs/JavaScript_code_modules/NetUtil.jsm" title="./NetUtil.jsm"><strong style="font-weight: bold;">NetUtil.jsm</strong></a></dt>
+     <dd>提供一些有用的网络实用函数，使您能够轻松地将输入流中的数据异步复制到输出流的。</dd>
+     <dt><a href="/en-US/docs/JavaScript_code_modules/PopupNotifications.jsm" title="JavaScript code modules/PopupNotifications.jsm">PopupNotifications.jsm</a> {{gecko_minversion_inline("2.0")}}</dt>
+     <dd>提供一种给用户弹出非模态(non-modal)通知的简便方法</dd>
+     <dt><a href="/en-US/docs/JavaScript_code_modules/openLocationLastURL.jsm" title="./openLocationLastURL.jsm">openLocationLastURL.jsm</a> {{gecko_minversion_inline("1.9.1.4")}}</dt>
+     <dd>提供读取使用文件菜单中的“打开定位(Open Location)” 时打开的最后一个URL的能力。</dd>
+     <dt><a href="/en-US/docs/JavaScript_code_modules/DownloadLastDir.jsm" title="JavaScript/Code modules/DownloadLastDir.jsm">DownloadLastDir.jsm</a> {{gecko_minversion_inline("2.0")}}</dt>
+     <dd>提供最后一次下载时的目录路径。</dd>
+     <dt><a href="/en-US/docs/Localization_and_Plurals" title="Localization and Plurals">PluralForm.jsm</a></dt>
+     <dd>提供获取当前区域使用的正确的复数形式的一种简便方法，当然也可以使用一种指定的复数规则来将一个词语复数化。</dd>
+     <dt><a href="/en-US/docs/JavaScript_code_modules/Services.jsm" title="./Services.jsm">Services.jsm</a> {{gecko_minversion_inline("2.0")}}</dt>
+     <dd>提供getter来方便地获取对一些常用服务的访问。</dd>
+     <dt><a href="/en-US/docs/JavaScript_code_modules/source-editor.jsm" title="JavaScript_code_modules/source-editor.jsm">source-editor.jsm</a> {{fx_minversion_inline("11.0")}}</dt>
+     <dd>源编辑器(Souce Editor)是指那些you开发者工具所提供的编辑器，如样式编辑器；此接口实现了源编辑器，并且允许你与之交互。</dd>
+     <dt><a href="/en-US/docs/JavaScript_code_modules/XPCOMUtils.jsm" title="./XPCOMUtils.jsm">XPCOMUtils.jsm</a></dt>
+     <dd>包含一些为JS组件加载器所加载的JavaScript组件的实用程序。</dd>
+     <dt><a href="/en-US/docs/JavaScript_code_modules/PerfMeasurement.jsm" title="JavaScript/Code_modules/PerfMeasurement.jsm">PerfMeasurement.jsm</a> {{fx_minversion_inline("4.0")}}</dt>
+     <dd>提供对底层硬件和操作系统性能测量工具的访问。</dd>
+     <dt><a href="/en-US/docs/Addons/Add-on_Manager" title="Addons/Add-on_Manager">AddonManager.jsm</a> {{gecko_minversion_inline("2.0")}}</dt>
+     <dd>安装、管理和卸载加载项(add-ons)的接口。</dd>
+     <dt><a href="/en-US/docs/Addons/Add-on_Repository" title="Addons/Add-on Repository">AddonRepository.jsm</a> {{gecko_minversion_inline("2.0")}}</dt>
+     <dd>允许搜索加载项(add-ons)列表。</dd>
+    </dl>
+   </td>
+  </tr>
+ </tbody>
+</table>

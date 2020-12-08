@@ -1,0 +1,38 @@
+---
+title: CSS improvements in Firefox 3
+slug: CSS_improvements_in_Firefox_3
+tags:
+  - CSS
+  - Firefox 3
+translation_of: Mozilla/Firefox/releases/3/CSS_improvements
+---
+<p>{{ Fx_minversion_header(3) }}
+</p><p>Firefox 3 では、CSS 実装の多くの改善がなされています。これらの変更は、ドキュメンテーション中の特定のページ上で文書化されていますが、この記事は、それらのすべての概要を提供することで、開発者が容易にこれらの変更内容について知ることができるようにしています。
+</p>
+<ul><li>{{ Cssxref("display") }} プロパティの値 <code>inline-block</code> と <code>inline-table</code> が実装されました。
+</li><li>{{ Cssxref("font-size-adjust") }} プロパティが全てのプラットフォームで動くようになりました。以前は Windows でしかサポートされていませんでした。
+</li><li>{{ Cssxref("color") }} に対する <code>rgba()</code> と <code>hsla()</code> のサポート ({{ Bug(147017) }})
+</li><li>{{ Cssxref(":default") }} 擬似クラスのサポート ({{ Bug(302186) }})
+</li><li>{{ Cssxref("width") }} と {{ Cssxref("min-width") }}、{{ Cssxref("max-width") }} プロパティに <code>-moz-max-content </code> と <code>-moz-min-content</code>、<code>-moz-fit-content</code>、<code>-moz-available</code> 値が追加されました（{{ Bug(311415) }} と {{ Bug(402706) }}）。
+</li><li>HTML ソフトハイフン (<code>&amp;shy;</code>) がサポートされました。
+</li><li>CSS 2.1 仕様に従い、プロポーショナルフォントにおける事前整形されたタブの動作が大きく改善されました。
+</li><li>{{ Cssxref("ime-mode") }} プロパティがサポートされました。
+</li><li>HTML に CSS プロパティ <code>text-rendering</code> のサポートが追加されました。 ({{ Bug(387969) }})
+</li><li>CSS プロパティ <code>-moz-border-<var>*</var>-start</code> と <code>-moz-border-<var>*</var>-end</code> が実装されました。 ({{ Bug(74880) }})
+</li><li>残っていたほぼすべての CSS プロパティで <code>-moz-initial</code> が実装されました。(<code>quotes</code> と <code>-moz-border-<var>*</var>-colors</code> を除く) {{ Bug(80887) }}
+</li><li><code>window.getComputedStyle</code> が、サポートされているすべての CSS プロパティをサポートするようになりました。 ({{ Bug(316981) }})
+</li><li>{{ Cssxref("content") }} の値 <code>none</code> がサポートされました。 {{ Bug(378535) }}
+</li><li>{{ Cssxref("cursor") }} の値 <code>none</code> がサポートされました。 {{ Bug(346690) }}
+</li><li>背景画像が <code>-moz-border-radius</code> にそって正しくクリッピングされるようになりました。 {{ Bug(24998) }} </li><li>{{ Cssxref("white-space") }} の値 <code>pre-wrap</code> がサポートされました。 {{ Bug(261081) }}
+</li><li><a href="ja/CSS/%3afirst-child">:first-child</a> や <a href="ja/CSS/%3aonly-child">:only-child</a>、<a href="ja/CSS/%3alast-child">:last-child</a> ({{ Bug(73586) }})、<a href="ja/CSS/%3aempty">:empty</a> ({{ Bug(98997) }})、 + 結合子 ({{ Bug(229915) }}) のようなセレクタは動的に更新されるようになりました。({{ Bug(401291) }}).
+</li><li>{{ Cssxref("z-index") }} プロパティの負の値が正しくサポートされました。
+</li></ul>
+<p>{{ 英語版章題("See also") }}
+</p>
+<h3 id=".E5.8F.82.E7.85.A7" name=".E5.8F.82.E7.85.A7">参照</h3>
+<ul><li> <a href="ja/Firefox_3_for_developers">Firefox 3 for developers</a>
+</li><li> <a href="ja/DOM_improvements_in_Firefox_3">DOM improvements in Firefox 3</a>
+</li></ul>
+<div class="noinclude">
+</div>
+{{ languages( { "en": "en/CSS_improvements_in_Firefox_3", "es": "es/Mejoras_CSS_en_Firefox_3", "fr": "fr/Am\u00e9liorations_CSS_dans_Firefox_3", "pl": "pl/Poprawki_CSS_w_Firefoksie_3" } ) }}

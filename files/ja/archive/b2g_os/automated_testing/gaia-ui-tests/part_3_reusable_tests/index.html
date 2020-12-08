@@ -1,0 +1,183 @@
+---
+title: 'パート 3: コードを再利用可能テストに更新する'
+slug: Archive/B2G_OS/Automated_testing/gaia-ui-tests/Part_3_Reusable_tests
+translation_of: Archive/B2G_OS/Automated_testing/gaia-ui-tests/Part_3_Reusable_tests
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/ja/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/Mozilla/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_2_Marionette_Firefox_OS_interactions" style="float: left;">« 前のページ</a><a href="/ja/docs/Mozilla/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_4_Reusing_commands_Firefox_OS_setup">次のページ  »</a></p>
+</div><p></p>
+
+<div class="summary">
+<p><span class="seoSummary">パート2では、Marionetteのクライアントコマンドを使用するとFirefox OSの制御が簡単にできることを学びましたが、Pythonのコンソールにそれらを入力するのは、遅くて退屈です。テスト自動化の重要な利点は、それが自律的に実行できることです。すべてのコードをPythonのファイルにコマンドを置き、次に一度にすべてを実行することができるように、このパートでそれを行う方法を学習します。</span></p>
+</div>
+
+<h2 id="テストケースの要約">テストケースの要約</h2>
+
+<p>連絡先アプリを開き、新しい連絡先を追加する - パート2では、こんな典型的なテストケースを実行する手順をたどってきました:</p>
+
+<ol>
+ <li>Firefox OSのロックを解除 (オプション; 第2部では、手動でロック画面をオフにしました。それゆえ、以下のコードでこれを含みません。)</li>
+ <li>連絡先アプリに切り替え</li>
+ <li>新しい連絡先の追加アイコンをタップします</li>
+ <li>連絡先の名前を入力</li>
+ <li>タップして完了</li>
+ <li>しばらく待って、連絡先が存在していることを確認します</li>
+</ol>
+
+<h2 id="Pythonのファイルに我々のテストを置きます">Pythonのファイルに我々のテストを置きます</h2>
+
+<p>Pythonのファイルにこれらのステップをすべて入れた場合、それを再利用し、はるかに素早く実行できます。あなたに都合の良いディレクトリを選んで、そこに <code>test_add_contact.py </code>と呼ばれる新しいテキストファイルを作成します。</p>
+
+<p>以下に示すように、このファイルにパート2で見たコマンドを入力します。良い習慣であるため、Pythonのクラス構造を使用し、チュートリアルの今後のステップでの良い基盤を作ります。</p>
+
+<pre class="brush: python">import time
+from marionette import Marionette
+
+class TestContacts:
+
+    def __init__(self):
+        self.test_add_contacts()
+
+    def test_add_contacts(self):
+        # Create the client for this session. Assuming you're using the default port on a Marionette instance running locally
+        self.marionette = Marionette()
+        self.marionette.start_session()
+
+        # Switch context to the homescreen iframe and tap on the contacts icon
+        time.sleep(2)
+        home_frame = self.marionette.find_element('css selector', 'div.homescreen iframe')
+        self.marionette.switch_to_frame(home_frame)
+        contacts_icon = self.marionette.find_element('xpath', "//div[@class='icon']//span[contains(text(),'Contacts')]")
+        contacts_icon.tap()
+
+        # Switch context back to the base frame
+        self.marionette.switch_to_frame()
+        time.sleep(2)
+
+        # Switch context to the contacts app
+        contacts_frame = self.marionette.find_element('css selector', "iframe[data-url*='contacts']")
+        self.marionette.switch_to_frame(contacts_frame)
+
+        # Tap [+] to add a new Contact
+        self.marionette.find_element('id', 'add-contact-button').tap()
+        time.sleep(2)
+
+        # Type name into the fields
+        self.marionette.find_element('id', 'givenName').send_keys('John')
+        self.marionette.find_element('id', 'familyName').send_keys('Doe')
+
+        # Tap done
+        self.marionette.find_element('id', 'save-button').tap()
+        time.sleep(2)
+
+        # Close the Marionette session now that the test is finished
+        self.marionette.delete_session()
+
+if __name__ == '__main__':
+    TestContacts()
+</pre>
+
+<div class="note">
+<p><strong>注意</strong>: コード内で、パート２でカバーしていないと気づく1つの追加事項は、Python <code>time.sleep()</code>関数です— これは、次の行に継続する前に、一定時間スクリプトを停止します (秒単位で定義) 。ユーザが手動でボタンをタップすることなどや、FirefoxのOSが結果のアクションを完了するのを待つことをシミュレートする必要があるため、自動テストにこれらの行を追加しました。遅延なしにこのスクリプトを実行した場合は、 Pythonはすべてを瞬時に完了し、Firefox OSが追いつくことができないために、おそらくテストは失敗となるだろう。</p>
+</div>
+
+<p>今、ターミナルでテストが保存されているディレクトリに移動し、次のコマンドを実行して、テストを実行することができます:</p>
+
+<pre class="brush: bash">python test_add_contact.py</pre>
+
+<div class="note">
+<p><strong>注意</strong>: Pythonのインデントルールに注意してください。 コピーして貼り付けた後は、コードを実行するためにすべてを正しくインデントする必要があるかもしれません。これに関連するエラーが発生した場合は、すべてのインデントレベルはタブで区切られていることを確認します。</p>
+</div>
+
+<div class="note">
+<p><strong>注意</strong>: また、上記のコードを使用して挿入された名前はは"John Doe"であることがわかります。パート２での"Foo Bar"という名前と違います。コードが正常に実行し、別の連絡先を追加するように、我々はこうしました。 同じ名前の連絡先を追加しようとする場合、Firefox OSでは重複する連絡先についての警告が表示されます。現時点では、テストの実行を繰り返す最善の方法は、FirefoxのOSのインターフェースに入り、毎回実行する前に、手動で連絡先を削除することです。</p>
+</div>
+
+<h2 id="アサーションを追加する">アサーションを追加する</h2>
+
+<p>自動テストに重要となり、我々のテストにまだ欠落している一点は、アサーションです — Firefox OSが望む状態に達しているかどうか (つまりテストが成功したかどうか)、というレポートまたは指標となるもの。新しい連絡先がアプリ内に存在するかどうかを確認するためにいくつかのコードを追加することでこれをやります。<br>
+  <br>
+ <code># Close the Marionette session...</code>行の直前に、このコードに追加し、クラスの他の行と同じレベルにインデントされていることを確認します:</p>
+
+<pre class="brush: python"># Now let's find the contact item and get its text
+contact_name = self.marionette.find_element('css selector', 'li.contact-item:not([data-group$="ice"]) p').text
+assert contact_name == 'John Doe'</pre>
+
+<p>古い連絡先を削除し、次のようにテストを再実行してみてください:</p>
+
+<pre class="brush: bash">python test_add_contact.py</pre>
+
+<p>全てがうまく実行できらた素晴らしい、今度は機能テストがあります！</p>
+
+<div class="note">
+<p><strong>注意</strong>: アサーションが失敗した場合は、以前の'Foo Bar'の連絡先はもう存在していないことを確認してください。アサートの前にCSSセレクタは、実際には、リスト内の最初の連絡先を拾っています。(アサートを呼ぶ前に<code> print "Contact name: %s" % contact_name</code> と呼ぶことで、見ることができます。).</p>
+</div>
+
+<div class="note">
+<p><strong>注意</strong>: アサーションは現在何もしないように見えますが、<a href="/Firefox_OS/Platform/Automated_testing/gaia-ui-tests/Part_5_Introducing_a_test_runner">Part 5: Introducing a test runner</a>で紹介されているように、テストランナーを使用し始めるときアサーションはとても重要です。unittestのようなテストランナーは、アサーションを使ってテストが正常か完了したかどうかを確認し、次にこれらのテストの結果 (OK or FAIL)を返します。</p>
+</div>
+
+<h2 id="タイミングに関する注意">タイミングに関する注意</h2>
+
+<p>自動テストを書く時に、対処するのが最も困難なことの一つは、タイミングです。Firefox OSが最後の一つを完了する前に、テストが次のステップに移行するなら、失敗を得る可能性が高いです。<br>
+  <br>
+ 上述したように、サンプルコードではこの問題を解決するために<code>time.sleep(x)</code>コマンドを追加しました。しかしながら、<code>time.sleep(x)</code>を使用することは良い方法ではありません。ハードコードされた設定時間を使用すると、テスト実行に長すぎたり、長さが足りなかったりする可能性があります。後者は最悪のケースであります; それは、偽陰性のテスト結果 (実際にアプリは完全に機能するが、テストが期待するより少し遅く振る舞う時に、失敗とレポートされるテストの意味) を生じます。</p>
+
+<p>次のパートでは、テストの特定部分を抽象化して、独立したPythonの関数にするよう進行します。そして、<code>sleep() </code>関数を、適切な動的待機で置き換えます。</p>
+
+<div id="divLookup" style="background-color: transparent; color: #000000; position: absolute; top: 3277px; left: 463px; padding: 0px; border-radius: 2px;"><img></div>

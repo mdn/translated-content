@@ -1,0 +1,64 @@
+---
+title: 基本操作
+slug: Tools/Memory/Basic_operations
+translation_of: Tools/Memory/Basic_operations
+---
+<div>{{ToolsSidebar}}</div><h2 id="Opening_the_Memory_tool" name="Opening_the_Memory_tool">メモリーツールを開く</h2>
+
+<p>Firefox 50 より前のバージョンでは、メモリーツールをデフォルトで無効化しています。有効化するには開発ツールのオプションを開き、"標準の Firefox 開発ツール" 配下の "メモリー" にチェックを入れてください:</p>
+
+<p>{{EmbedYouTube("qi-0CoCOXwc")}}</p>
+
+<p>Firefox 50 より、メモリーツールをデフォルトで有効化しています。</p>
+
+<h2 id="Taking_a_heap_snapshot" name="Taking_a_heap_snapshot">ヒープのスナップショットを採取する</h2>
+
+<p>" スナップショットを採取 " ボタンまたはツールの左側にあるカメラのアイコンをクリックすると、ヒープのスナップショットを採取します:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13651/memory-1-small.png" style="display: block; height: 244px; margin: 0px auto; width: 900px;"></p>
+
+<p>スナップショットは、右側にある大きなペインを占めています。左側には、新しいスナップショットの項目をタイムスタンプ、サイズ、保存や削除のためのコントロールとともに表示します:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13653/memory-2-small.png" style="display: block; height: 243px; margin: 0px auto; width: 900px;"></p>
+
+<h2 id="Clearing_a_snapshot" name="Clearing_a_snapshot">スナップショットを削除する</h2>
+
+<p>" X "  印のアイコンをクリックすると、スナップショットを削除します:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13655/memory-3-small.png" style="display: block; height: 243px; margin: 0px auto; width: 900px;"></p>
+
+<h2 id="Saving_and_loading_snapshots" name="Saving_and_loading_snapshots">スナップショットの保存と読み込み</h2>
+
+<p>メモリーツールを閉じると、保存していないスナップショットはすべて破棄されます。" 保存 " をクリックすると、スナップショットを保存します:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13657/memory-4-small.png" style="display: block; height: 243px; margin: 0px auto; width: 900px;"></p>
+
+<p>保存先やファイル名を求められます。そしてファイルは、<code>.fxsnapshot</code> という拡張子をつけて保存されます。</p>
+
+<p>既存の <code>.fxsnapshot</code> ファイルからスナップショットを読み込むには、四角形から上向きの矢印が出ているデザインのインポートボタン (Firefox 49 より前のバージョンでは、" Import... " というラベルがついていました) をクリックします:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13659/memory-5-small.png" style="display: block; height: 243px; margin: 0px auto; width: 900px;"></p>
+
+<p>ディスク上のファイルを選択するよう、求められます。</p>
+
+<h2 id="Comparing_snapshots" name="Comparing_snapshots">スナップショットを比較する</h2>
+
+<p>Firefox 45 より、2 つのヒープのスナップショットの差分を確認できます。これは 2 つのスナップショット間で、メモリーのアロケートや空き状態の違いを表示します。</p>
+
+<p>差分を作成するには、カメラのアイコンの隣にあるベン図のボタンを押下してください (Firefox 47 より前は、" +/- " 印のアイコンでした)。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13661/memory-6-small.png" style="display: block; height: 243px; margin: 0px auto; width: 900px;"></p>
+
+<p>始めにベースラインのスナップショット、続いて比較するスナップショットを選択するよう求められます。ツールが 2 つのスナップショットの差分を表示します:</p>
+
+<p>{{EmbedYouTube("3Ow-mdK6b2M")}}</p>
+
+<div class="note">
+<p>差分を表示しているとき、ドミネータービューやツリーマップは使用できません。</p>
+</div>
+
+<h2 id="Recording_call_stacks" name="Recording_call_stacks">コールスタックを記録する</h2>
+
+<p>メモリーツールは、コードのどこでメモリの割り当てを行っているかを表示できます。ただしこの情報の記録は実行時の負荷が高いため、スナップショット内でメモリー呼び出しを行った場所を確認したい場合は、メモリー割り当ての<em>前に</em>ツールに対してメモリー呼び出しを記録するよう要求しなければなりません。記録するには、"コールスタックを記録" (Firefox 49 より前は "割り当てスタックを記録" でした) にチェックを入れます:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13663/memory-7-small.png" style="display: block; height: 243px; margin: 0px auto; width: 900px;"></p>

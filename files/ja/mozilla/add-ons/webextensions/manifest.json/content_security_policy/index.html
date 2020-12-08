@@ -1,0 +1,121 @@
+---
+title: content_security_policy
+slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy
+tags:
+  - Add-ons
+  - Extensions
+  - WebExtensions
+translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy
+---
+<div>{{AddonSidebar}}</div>
+
+<table class="fullwidth-table standard-table">
+ <tbody>
+  <tr>
+   <th scope="row" style="width: 30%;">型</th>
+   <td><code>String</code></td>
+  </tr>
+  <tr>
+   <th scope="row">必須</th>
+   <td>いいえ</td>
+  </tr>
+  <tr>
+   <th scope="row">例</th>
+   <td>
+    <pre class="brush: json no-line-numbers">
+"content_security_policy": "default-src 'self'"</pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>拡張機能はデフォルトでCSP(content security policy)が適用されています。デフォルトのポリシーの場合、ソースは <a href="/ja/docs/Web/HTML/Element/script">&lt;script&gt;</a> タグ及び <a href="/ja/docs/Web/HTML/Element/object">&lt;object&gt;</a> タグからのみロードできるように制限されており、 <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>のような潜在的に安全でない慣習(バッドプラクティス)は制限されます。この実装のより詳細は <a href="/ja/Add-ons/WebExtensions/Content_Security_Policy#Default_content_security_policy">Default content security policy</a>を見てください。</p>
+
+<p><code>"content_security_policy"</code> manifestキーを使用して、アドオンのセキュリティを緩くしたり逆にもっと制限することができます。  このキーは、Content-Security-Policy HTTPヘッダーと同じ方法で指定されます。 CSP  の文法の一般的な記述は<a href="/ja/docs/Web/HTTP/CSP">CSPを使用する</a>を見てください。</p>
+
+<p>例として以下のような使用方法が可能です：</p>
+
+<ul>
+ <li>拡張機能にパッケージ外からスクリプトやオブジェクトの読み込みを許可する、その方法は URL を{{CSP("script-src")}} や {{CSP("object-src")}} ディレクティブで指定する</li>
+ <li>拡張機能にインラインスクリプトの実行を許可する、その方法は<a href="/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#Unsafe_inline_script"> <code>"script-src"</code> ディレクティブでスクリプトのハッシュを指定する</a></li>
+ <li>拡張機能に <code>eval()</code> やそれに類する機能を許可する、その方法は <code>'unsafe-eval'</code> を {{CSP("script-src")}} ディレクティブの中に入れる</li>
+ <li>その他のコンテンツを許可されたソースのみ、例えば画像やスタイルシートのみに制限する、適切な<a href="/ja/docs/Web/HTTP/Headers/Content-Security-Policy">ポリシーディレクティブ</a>を使って。</li>
+</ul>
+
+<p>指定できるポリシーには以下のような制限があります。</p>
+
+<ul>
+ <li>ポリシーは少なくとも {{CSP("script-src")}} ディレクティブ及び {{CSP("object-src")}} ディレクティブを含む必要があり、 {{CSP("script-src")}} ディレクティブは <code>'self'</code>キーワードを含まなければならない。</li>
+ <li>外部のソースを使用する場合は<code>https:</code> スキームを使用しなければならない。</li>
+ <li><a href="https://publicsuffix.org/list/">public suffix list</a> 内のドメインのリモートリソースはワイルドカードを使用禁止(よって "*.co.uk" と "*.blogspot.com" は許可されないが、 "*.foo.blogspot.com" は許可される)。</li>
+ <li>すべてのソースはホストを指定しなければならない。</li>
+ <li><code>blob:</code>, <code>filesystem:</code>, <code>moz-extension:</code>, <code>https:</code> スキームのリソースのみ指定することができる。</li>
+ <li><code>'none'</code>, <code>'self'</code>, <code>'unsafe-eval'</code> <a href="/ja/docs/Web/HTTP/Headers/Content-Security-Policy/default-src#Sources">キーワード</a>のみ指定することができる。{{訳注("chromeと同様unsafe-inlineは許可されない")}}</li>
+</ul>
+
+<h2 id="例">例</h2>
+
+<h3 id="有効な例">有効な例</h3>
+
+<p>"https://example.com" からのリモートスクリプトを許可: (<em>注</em> <a href="#exampleNote_1">1</a><sup><a href="#exampleNote_1"> </a></sup>を見よ)</p>
+
+<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' https://example.com; object-src 'self'"</pre>
+
+<p>"jquery.com" のサブドメインからのリモートスクリプトを許可:</p>
+
+<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' https://*.jquery.com; object-src 'self'"</pre>
+
+<p><a href="/ja/Add-ons/WebExtensions/Content_Security_Policy#eval%28%29_and_friends"><code>eval()</code> and friends</a>を許可:</p>
+
+<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';"</pre>
+
+<p>次のインラインスクリプトを許可: <code>"&lt;script&gt;alert('Hello, world.');&lt;/script&gt;"</code>:</p>
+
+<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' 'sha256-qznLcsROx4GACP2dm0UCKCzCG+HiZ1guq6ZZDob/Tng='; object-src 'self'"</pre>
+
+<p>他のポリシーはそのままだが、画像は拡張機能にパッケージされていることを要求する:</p>
+
+<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'"</pre>
+
+<p>すべてのコンテンツが拡張機能にパッケージされていることを要求する:</p>
+
+<pre class="brush: json no-line-numbers">"content_security_policy": "default-src 'self'"
+</pre>
+
+<h3 id="無効な例">無効な例</h3>
+
+<p><code>"object-src"</code> ディレクティブが省略されているポリシー:</p>
+
+<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' https://*.jquery.com;"</pre>
+
+<p> <code>"script-src"</code> ディレクティブにおいて <code>"self"</code> キーワードが入っていないポリシー:</p>
+
+<pre class="brush: json no-line-numbers">"content_security_policy": "script-src https://*.jquery.com; object-src 'self'"</pre>
+
+<p>リモートソーススキームが <code>https</code> ではない:</p>
+
+<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' <strong>http</strong>://code.jquery.com; object-src 'self'"</pre>
+
+<p>ワイルドカードを通常のドメインに使用している:</p>
+
+<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' https://<strong>*.blogspot.com</strong>; object-src 'self'"</pre>
+
+<p>リモートソーススキームは https だがホストがない:</p>
+
+<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' https:; object-src 'self'"</pre>
+
+<p>ディレクティブに現在サポートしていない <code>'unsafe-inline'</code>キーワードが含まれている:</p>
+
+<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' 'unsafe-inline'; object-src 'self'"</pre>
+
+<p><span id="exampleNote_1">1. 注<em>記: 有効な例は正しい CSP のキーの使い方を表しますが、'unsafe-eval', 'unsafe-inline', リモートスクリプト、リモートソースを CSP に指定する拡張機能は</em></span><span><em>、主なセキュリティの問題から、addons.mozilla.org に載せる拡張機能には許可されません。</em></span></p>
+
+<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p> </p>
+
+<p>{{Compat("webextensions.manifest.content_security_policy")}}</p>
+
+<p> </p>

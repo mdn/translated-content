@@ -1,0 +1,484 @@
+---
+title: Content Scripts
+slug: Mozilla/Add-ons/SDK/Guides/Content_Scripts
+translation_of: Archive/Add-ons/Add-on_SDK/Guides/Content_Scripts
+---
+<article id="wikiArticle">
+<p><span class="seoSummary">アドオンの多くはウェブページへアクセスし修正する必要があります。しかしアドオンのメインのコードは直接ウェブコンテンツにアクセスできません。 代わりにアドオン SDK は <em>content scripts </em>と呼ばれる別のスクリプトからウェブコンテンツにアクセスします。このページでは content scripts の開発・実装方法を記述します。</span></p>
+
+<p>SDK を扱う上で content scripts はあなたを混乱させてしまうかもしれませんが、おそらくそれを使わなければなりません。下記は５つの基本原則です:</p>
+
+<ul>
+ <li>"main.js" を含むアドオンのメインコードやその他の "lib" 以下のモジュールは、SDK の<a href="/en-US/Add-ons/SDK/High-Level_APIs">高水準</a>または<a href="/en-US/Add-ons/SDK/Low-Level_APIs">低水準</a>なAPIを利用できますが、ウェブコンテンツには直接アクセスできません</li>
+ <li>content scripts は<a href="/en-US/Add-ons/SDK/Guides/Two_Types_of_Scripts#API_Access_for_Add-on_Code_and_Content_Scripts"> SDK の API を使用できません</a> (no access to globals <code>exports</code>, <code>require</code>) が、ウェブコンテンツに直接アクセスできます</li>
+ <li><a href="/en-US/Add-ons/SDK/High-Level_APIs/page-mod">page-mod</a> や <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs">tabs</a> のような content scripts を扱う SDK の API は、アドオンのメインコードから content scripts をウェブページにロードする機能を提供します</li>
+ <li>content scripts は文字列として読み込まれますが、アドオンの "data" ディレクトリ以下に別々のファイルとして保存します。jpm はデフォルトでは "data" を作らないので、 自分でディレクトリを作成し content scripts を置く必要があります</li>
+ <li>message-passing API でメインコードと content scripts とでお互いにコミュニケーションすることができます</li>
+</ul>
+
+<p>This complete add-on illustrates all of these principles. Its "main.js" attaches a content script to the current tab using the <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs">tabs</a> module. In this case the content script is passed in as a string. The content script simply replaces the content of the page:</p>
+
+<pre class="brush: js">// main.js
+var tabs = require("sdk/tabs");
+var contentScriptString = 'document.body.innerHTML = "&lt;h1&gt;this page has been eaten&lt;/h1&gt;";'
+
+tabs.activeTab.attach({
+  contentScript: contentScriptString
+});</pre>
+
+<p>The following high-level SDK modules can use content scripts to modify web pages:</p>
+
+<ul>
+ <li><a href="/en-US/Add-ons/SDK/High-Level_APIs/page-mod">page-mod</a>: enables you to attach content scripts to web pages that match a specific URL pattern.</li>
+ <li><a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs">tabs</a>: exports a <code>Tab</code> object for working with a browser tab. The <code>Tab</code> object includes an <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs#attach(options)"><code>attach()</code></a> function to attach a content script to the tab.</li>
+ <li><a href="/en-US/Add-ons/SDK/High-Level_APIs/page-worker">page-worker</a>: lets you retrieve a web page without displaying it. You can attach content scripts to the page, to access and manipulate the page's DOM.</li>
+ <li><a href="/en-US/Add-ons/SDK/High-Level_APIs/context-menu">context-menu</a>: use a content script to interact with the page in which the menu is invoked.</li>
+</ul>
+
+<p>Additionally, some SDK user interface components - panel, sidebar, frame - are specified using HTML, and use separate scripts to interact with this content. In many ways these are like content scripts, but they're not the focus of this article. To learn about how to interact with the content for a given user interface module, please see the module-specific documentation: <a href="/en-US/Add-ons/SDK/High-Level_APIs/panel">panel</a>, <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_sidebar">sidebar</a>, <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_frame">frame</a>.</p>
+
+<p>Almost all the examples presented in this guide are available as complete, but minimal, add-ons in the <a href="https://github.com/mdn/addon-sdk-content-scripts">addon-sdk-content-scripts repository</a> on GitHub.</p>
+
+<h2 id="Loading_content_scripts">Loading content scripts</h2>
+
+<article id="wikiArticle">
+<p>You can load a single script by assigning a string to either the <code>contentScript</code> or the <code>contentScriptFile</code> option. The <code>contentScript</code> option treats the string itself as a script:</p>
+
+<pre class="brush: js">// main.js
+
+var pageMod = require("sdk/page-mod");
+var contentScriptValue = 'document.body.innerHTML = ' +
+                         ' "&lt;h1&gt;Page matches ruleset&lt;/h1&gt;";';
+
+pageMod.PageMod({
+  include: "*.mozilla.org",
+  contentScript: contentScriptValue
+});</pre>
+
+<p>The <code>contentScriptFile</code> option treats the string as a resource:// URL pointing to a script file stored in your add-on's <code>data</code> directory. jpm doesn't make a "data" directory by default, so you must add it and put your content scripts in there.</p>
+
+<p>This add-on supplies a URL pointing to the file "content-script.js", located in the <code>data</code> subdirectory under the add-on's root directory:</p>
+
+<pre class="brush: js">// main.js
+
+var data = require("sdk/self").data;
+var pageMod = require("sdk/page-mod");
+
+pageMod.PageMod({
+  include: "*.mozilla.org",
+  contentScriptFile: data.url("content-script.js")
+});</pre>
+
+<pre class="brush: js">// content-script.js
+
+document.body.innerHTML = "&lt;h1&gt;Page matches ruleset&lt;/h1&gt;";</pre>
+
+<div class="note">
+<p>From Firefox 34 onwards, you can use "./content-script.js" as an alias for self.data.url("content-script.js"). So you can rewrite the above main.js code like this:</p>
+
+<pre class="brush: js">var pageMod = require("sdk/page-mod");
+
+pageMod.PageMod({
+  include: "*.mozilla.org",
+  contentScriptFile: "./content-script.js"
+});
+</pre>
+</div>
+
+<div class="warning">
+<p>Unless your content script is extremely simple and consists only of a static string, don't use <code>contentScript</code>: if you do, you may have problems getting your add-on approved on AMO.</p>
+
+<p>Instead, keep the script in a separate file and load it using <code>contentScriptFile</code>. This makes your code easier to maintain, secure, debug and review.</p>
+</div>
+
+<p>You can load multiple scripts by passing an array of strings to either <code>contentScript</code> or <code>contentScriptFile</code>:</p>
+
+<pre class="brush: js">// main.js
+
+var tabs = require("sdk/tabs");
+
+tabs.on('ready', function(tab) {
+  tab.attach({
+      contentScript: ['document.body.style.border = "5px solid red";', 'window.alert("hi");']
+  });
+});
+</pre>
+
+<pre class="brush: js">// main.js
+
+var data = require("sdk/self").data;
+var pageMod = require("sdk/page-mod");
+
+pageMod.PageMod({
+  include: "*.mozilla.org",
+  contentScriptFile: [data.url("jquery.min.js"), data.url("my-content-script.js")]
+});</pre>
+
+<p>If you do this, the scripts can interact directly with each other, just like scripts loaded by the same web page.</p>
+
+<p>You can also use <code>contentScript</code> and <code>contentScriptFile</code> together. If you do this, scripts specified using <code>contentScriptFile</code> are loaded before those specified using <code>contentScript</code>. This enables you to load a JavaScript library like jQuery by URL, then pass in a simple script inline that can use jQuery:</p>
+
+<pre class="brush: js">// main.js
+
+var data = require("sdk/self").data;
+var pageMod = require("sdk/page-mod");
+
+var contentScriptString = '$("body").html("&lt;h1&gt;Page matches ruleset&lt;/h1&gt;");';
+
+pageMod.PageMod({
+  include: "*.mozilla.org",
+  contentScript: contentScriptString,
+  contentScriptFile: data.url("jquery.js")
+});</pre>
+
+<div class="warning">
+<p>Unless your content script is extremely simple and consists only of a static string, don't use <code>contentScript</code>: if you do, you may have problems getting your add-on approved on AMO.</p>
+
+<p>Instead, keep the script in a separate file and load it using <code>contentScriptFile</code>. This makes your code easier to maintain, secure, debug and review.</p>
+</div>
+
+<h3 id="Controlling_when_to_attach_the_script">Controlling when to attach the script</h3>
+
+<p>The <code>contentScriptWhen</code> option specifies when the content script(s) should be loaded. It takes one of:</p>
+
+<ul>
+ <li><code>"start"</code>: load the scripts immediately after the document element for the page is inserted into the DOM. At this point the DOM content hasn't been loaded yet, so the script won't be able to interact with it.</li>
+ <li><code>"ready"</code>: load the scripts after the DOM for the page has been loaded: that is, at the point the <a href="https://developer.mozilla.org/en/Gecko-Specific_DOM_Events">DOMContentLoaded</a> event fires. At this point, content scripts are able to interact with the DOM content, but externally-referenced stylesheets and images may not have finished loading.</li>
+ <li><code>"end"</code>: load the scripts after all content (DOM, JS, CSS, images) for the page has been loaded, at the time the <a href="https://developer.mozilla.org/en/DOM/window.onload">window.onload event</a> fires.</li>
+</ul>
+
+<p>The default value is <code>"end"</code>.</p>
+
+<p>Note that <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs#attach(options)"><code>tab.attach()</code></a> doesn't accept contentScriptWhen, because it's generally called after the page has loaded.</p>
+
+<h3 id="Passing_configuration_options">Passing configuration options</h3>
+
+<p>The <code>contentScriptOptions</code> is a JSON object that is exposed to content scripts as a read-only value under the <code><a href="/en-US/Add-ons/SDK/Guides/Content_Scripts/self">self</a>.options</code> property:</p>
+
+<pre class="brush: js">// main.js
+
+var tabs = require("sdk/tabs");
+
+tabs.on('ready', function(tab) {
+  tab.attach({
+      contentScript: 'window.alert(self.options.message);',
+      contentScriptOptions: {"message" : "hello world"}
+  });
+});</pre>
+
+<p>Any kind of jsonable value (object, array, string, etc.) can be used here.</p>
+
+<h2 id="Accessing_the_DOM">Accessing the DOM</h2>
+
+<p>Content scripts can access the DOM of a page, of course, just like any scripts that the page has loaded (page scripts). But content scripts are insulated from page scripts:</p>
+
+<ul>
+ <li>content scripts don't see any JavaScript objects added to the page by page scripts</li>
+ <li>if a page script has redefined the behavior of some DOM object, the content script sees the original behavior.</li>
+</ul>
+
+<p>The same applies in reverse: page scripts can't see JavaScript objects added by content scripts.</p>
+
+<p>For example, consider a page that adds a variable <code>foo</code> to the <code>window</code> object using a page script:</p>
+
+<pre class="brush: html">&lt;!DOCTYPE html"&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;script&gt;
+    window.foo = "hello from page script"
+    &lt;/script&gt;
+  &lt;/head&gt;
+&lt;/html&gt;</pre>
+
+<p>Another script loaded into the page after this script will be able to access <code>foo</code>. But a content script will not:</p>
+
+<pre class="brush: js">// main.js
+
+var tabs = require("sdk/tabs");
+var mod = require("sdk/page-mod");
+var self = require("sdk/self");
+
+var pageUrl = self.data.url("page.html")
+
+var pageMod = mod.PageMod({
+  include: pageUrl,
+  contentScript: "console.log(window.foo);"
+})
+
+tabs.open(pageUrl);</pre>
+
+<pre>console.log: my-addon: null
+</pre>
+
+<p>There are good reasons for this insulation. First, it means that content scripts don't leak objects to web pages, potentially opening up security holes. Second, it means that content scripts can create objects without worrying about whether they might clash with objects added by page scripts.</p>
+
+<p>This insulation means that, for example, if a web page loads the jQuery library, then the content script won't be able to see the <code>jQuery</code> object added by the library - but the content script can add its own <code>jQuery</code> object, and it won't clash with the page script's version.</p>
+
+<h3 id="Interacting_with_page_scripts">Interacting with page scripts</h3>
+
+<p>Usually the insulation between content scripts and page scripts is what you want. But sometimes you might want to interact with page scripts: you might want to share objects between content scripts and page scripts or to send messages between them. If you need to do this, read about <a href="/en-US/Add-ons/SDK/Guides/Content_Scripts/Interacting_with_page_scripts">interacting with page scripts</a>.</p>
+
+<h3 id="Event_listeners">Event listeners</h3>
+
+<p>You can listen for DOM events in a content script just as you can in a normal page script, but there are two important differences:</p>
+
+<p>First, if you define an event listener by passing it as a string into <a href="https://developer.mozilla.org/en/DOM/element.setAttribute"><code>setAttribute()</code></a>, then the listener is evaluated in the page's context, so it will not have access to any variables defined in the content script.</p>
+
+<p>For example, this content script will fail with the error "theMessage is not defined":</p>
+
+<pre class="brush: js">var theMessage = "Hello from content script!";
+anElement.setAttribute("onclick", "alert(theMessage);");</pre>
+
+<p>Second, if you define an event listener by direct assignment to a <a href="/en-US/docs/Web/API/GlobalEventHandlers">global event handler</a> like <code>onclick</code>, then the assignment might be overridden by the page. For example, here's an add-on that tries to add a click handler by assignment to <code>window.onclick</code>:</p>
+
+<pre class="brush: js">var myScript = "window.onclick = function() {" +
+               "  console.log('unsafewindow.onclick: ' + window.document.title);" +
+               "}";
+
+require("sdk/page-mod").PageMod({
+  include: "*",
+  contentScript: myScript,
+  contentScriptWhen: "start"
+});</pre>
+
+<p>This will work fine on most pages, but will fail on pages which also assign to <code>onclick</code>:</p>
+
+<pre class="brush: html">&lt;html&gt;
+  &lt;head&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;script&gt;
+    window.onclick = function() {
+      window.alert("it's my click now!");
+    }
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+
+<p>For these reasons, it's better to add event listeners using <a href="https://developer.mozilla.org/en/DOM/element.addEventListener"><code>addEventListener()</code></a>, defining the listener as a function:</p>
+
+<pre class="brush: js">var theMessage = "Hello from content script!";
+
+anElement.onclick = function() {
+  alert(theMessage);
+};
+
+anotherElement.addEventListener("click", function() {
+  alert(theMessage);
+});</pre>
+
+<h2 id="Communicating_with_the_add-on">Communicating with the add-on</h2>
+
+<p>To enable add-on scripts and content scripts to communicate with each other, each end of the conversation has access to a <code>port</code> object.</p>
+
+<ul>
+ <li>to send messages from one side to the other, use <code>port.emit()</code></li>
+ <li>to receive messages sent from the other side, use <code>port.on()</code></li>
+</ul>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7873/content-scripting-overview.png" style="display: block; margin-left: auto; margin-right: auto;">Messages are asynchronous: that is, the sender does not wait for a reply from the recipient but just emits the message and continues processing.</p>
+
+<p>Here's a simple add-on that sends a message to a content script using <code>port</code>:</p>
+
+<pre class="brush: js">// main.js
+
+var tabs = require("sdk/tabs");
+var self = require("sdk/self");
+
+tabs.on("ready", function(tab) {
+  worker = tab.attach({
+    contentScriptFile: self.data.url("content-script.js")
+  });
+  worker.port.emit("alert", "Message from the add-on");
+});
+
+tabs.open("http://www.mozilla.org");</pre>
+
+<pre class="brush: js">// content-script.js
+
+self.port.on("alert", function(message) {
+  window.alert(message);
+});</pre>
+
+<div class="note">
+<p>The context-menu module doesn't use the communication model described here. To learn about communicating with content scripts loaded using context-menu, see the <a href="/en-US/Add-ons/SDK/High-Level_APIs/context-menu">context-menu documentation</a>. </p>
+</div>
+
+<h3 id="Accessing_port_in_the_content_script">Accessing <code>port</code> in the content script</h3>
+
+<p>In the content script the <code>port</code> object is available as a property of the global <a href="/en-US/Add-ons/SDK/Guides/Content_Scripts/self"><code>self</code></a> object. So to emit a message from a content script:</p>
+
+<pre class="brush: js">self.port.emit("myContentScriptMessage", myContentScriptMessagePayload);</pre>
+
+<p>To receive a message from the add-on code:</p>
+
+<pre class="brush: js">self.port.on("myAddonMessage", function(myAddonMessagePayload) {
+  // Handle the message
+});</pre>
+
+<div class="note">
+<p><span>Note that the global <a href="/en-US/Add-ons/SDK/Guides/Content_Scripts/self"><code>self</code></a> object is completely different from the <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/High-Level_APIs/self"><code>self</code> module</a>, which provides an API for an add-on to access its data files and ID.</span></p>
+</div>
+
+<h3 id="Accessing_port_in_the_add-on_script">Accessing <code>port</code> in the add-on script</h3>
+
+<p>In the add-on code, the channel of communication between the add-on and a particular content script context is encapsulated by the <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Low-Level_APIs/content_worker"><code>worker</code></a> object. So the <code>port</code> object for communicating with a content script is a property of the corresponding <code>worker</code> object.</p>
+
+<p>However, the worker is not exposed to add-on code in quite the same way in all modules.</p>
+
+<h4 id="From_page-worker">From <code>page-worker</code></h4>
+
+<p>The <code>page-worker</code> object integrates the worker API directly. So to receive messages from a content script associated with a <code>page-worker</code> you use <code>pageWorker.port.on()</code>:</p>
+
+<pre class="brush: js">// main.js
+
+var pageWorkers = require("sdk/page-worker");
+var self = require("sdk/self");
+
+var pageWorker = require("sdk/page-worker").Page({
+  contentScriptFile: self.data.url("content-script.js"),
+  contentURL: "http://en.wikipedia.org/wiki/Internet"
+});
+
+pageWorker.port.on("first-para", function(firstPara) {
+  console.log(firstPara);
+});</pre>
+
+<p>To emit user-defined messages from your add-on you can just call <code>pageWorker.port.emit()</code>:</p>
+
+<pre class="brush: js">// main.js
+
+var pageWorkers = require("sdk/page-worker");
+var self = require("sdk/self");
+
+pageWorker = require("sdk/page-worker").Page({
+  contentScriptFile: self.data.url("content-script.js"),
+  contentURL: "http://en.wikipedia.org/wiki/Internet"
+});
+
+pageWorker.port.on("first-para", function(firstPara) {
+  console.log(firstPara);
+});
+
+pageWorker.port.emit("get-first-para");</pre>
+
+<pre class="brush: js">// content-script.js
+
+self.port.on("get-first-para", getFirstPara);
+
+function getFirstPara() {
+  var paras = document.getElementsByTagName("p");
+  if (paras.length &gt; 0) {
+    var firstPara = paras[0].textContent;
+    self.port.emit("first-para", firstPara);
+  }
+}</pre>
+
+<h4 id="From_page-mod">From <code>page-mod</code></h4>
+
+<p>A single <code>page-mod</code> object might attach its scripts to multiple pages, each with its own context in which the content scripts are executing, so it needs a separate channel (worker) for each page.</p>
+
+<p>So <code>page-mod</code> does not integrate the worker API directly. Instead, each time a content script is attached to a page, the page-mod emits an <code>attach</code> event, whose listener is passed the worker for that context. By supplying a listener to <code>attach</code> you can access the <code>port</code> object for content scripts attached to that page by this page-mod:</p>
+
+<pre class="brush: js">// main.js
+
+var pageMods = require("sdk/page-mod");
+var self = require("sdk/self");
+
+var pageMod = pageMods.PageMod({
+  include: ['*'],
+  contentScriptFile: self.data.url("content-script.js"),
+  onAttach: startListening
+});
+
+function startListening(worker) {
+  worker.port.on('click', function(html) {
+    worker.port.emit('warning', 'Do not click this again');
+  });
+}</pre>
+
+<pre class="brush: js">// content-script.js
+
+window.addEventListener('click', function(event) {
+  self.port.emit('click', event.target.toString());
+  event.stopPropagation();
+  event.preventDefault();
+}, false);
+
+self.port.on('warning', function(message) {
+  window.alert(message);
+});
+</pre>
+
+<p>In the add-on above there are two messages:</p>
+
+<ul>
+ <li><code>click</code> is sent from the page-mod to the add-on, when the user clicks an element in the page</li>
+ <li><code>warning</code> sends a silly string back to the page-mod</li>
+</ul>
+
+<h4 id="From_Tab.attach()">From <code>Tab.attach()</code></h4>
+
+<p>The <code>Tab.attach()</code> method returns the worker you can use to communicate with the content script(s) you attached.</p>
+
+<p>This add-on adds a button to Firefox: when the user clicks the button, the add-on attaches a content script to the active tab, sends the content script a message called "my-addon-message", and listens for a response called "my-script-response":</p>
+
+<pre class="brush: js">//main.js
+
+var tabs = require("sdk/tabs");
+var buttons = require("sdk/ui/button/action");
+var self = require("sdk/self");
+
+buttons.ActionButton({
+  id: "attach-script",
+  label: "Attach the script",
+  icon: "./icon-16.png",
+  onClick: attachScript
+});
+
+function attachScript() {
+  var worker = tabs.activeTab.attach({
+    contentScriptFile: self.data.url("content-script.js")
+  });
+  worker.port.on("my-script-response", function(response) {
+    console.log(response);
+  });
+  worker.port.emit("my-addon-message", "Message from the add-on");
+}
+</pre>
+
+<pre class="brush: js">// content-script.js
+
+self.port.on("my-addon-message", handleMessage);
+
+function handleMessage(message) {
+  alert(message);
+  self.port.emit("my-script-response", "Response from content script");
+}</pre>
+
+<h3 id="The_port_API">The port API</h3>
+
+<p>See the <a href="/en-US/Add-ons/SDK/Guides/Content_Scripts/port">reference page for the <code>port</code> object</a>.</p>
+</article>
+
+<h3 id="The_postMessage_API">The postMessage API</h3>
+
+<p>Before the <code>port</code> object was added, add-on code and content scripts communicated using a different API:</p>
+
+<ul>
+ <li>the content script called <code>self.postMessage()</code> to send and <code>self.on()</code> to receive</li>
+ <li>the add-on script called <code>worker.postMessage()</code> to send and <code>worker.on()</code>to receive</li>
+</ul>
+
+<p>The API is still available and <a href="/en-US/Add-ons/SDK/Guides/Content_Scripts/using_postMessage">documented</a>, but there's no reason to use it instead of the <code>port</code> API described here. The exception is the <a href="/en-US/Add-ons/SDK/High-Level_APIs/context-menu">context-menu</a> module, which still uses postMessage.</p>
+
+<h3 id="Content_script_to_content_script">Content script to content script</h3>
+
+<p>Content scripts can only communicate with each other directly if they have been loaded into the same context. For example, if a single call to <code>Tab.attach()</code> attaches two content scripts, then they can see each other directly, just as page scripts loaded by the same page can. But if you call <code>Tab.attach()</code> twice, attaching a content script each time, then these content scripts can't communicate with each other. You must then relay messages through the main add-on code using the port API.</p>
+
+<h2 id="Cross-domain_content_scripts">Cross-domain content scripts</h2>
+
+<p>By default, content scripts don't have any cross-domain privileges. In particular, they can't access content hosted in an <code>iframe</code>, if that content is served from a different domain, or make cross-domain XMLHttpRequests.</p>
+
+<p>However, you can enable these features for specific domains by adding them to your add-on's <a href="/en-US/Add-ons/SDK/Tools/package_json">package.json</a> under the <code>"cross-domain-content"</code> key, which itself lives under the <code>"permissions"</code> key. See the article on <a href="/en-US/Add-ons/SDK/Guides/Content_Scripts/Cross_Domain_Content_Scripts">cross-domain content scripts</a>.</p>
+</article>

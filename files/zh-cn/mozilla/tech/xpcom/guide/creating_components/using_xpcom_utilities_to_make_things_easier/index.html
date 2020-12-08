@@ -1,0 +1,388 @@
+---
+title: 创建XPCOM组件/使用XPCOM工具类让事情变得简单
+slug: >-
+  Mozilla/Tech/XPCOM/Guide/Creating_components/Using_XPCOM_Utilities_to_Make_Things_Easier
+tags:
+  - XPCOM
+  - 所有分类
+translation_of: >-
+  Mozilla/Tech/XPCOM/Guide/Creating_components/Using_XPCOM_Utilities_to_Make_Things_Easier
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/Creating_XPCOM_Components:Creating_the_Component_Code" style="float: left;">« 上一页</a><a href="/zh-CN/docs/Creating_XPCOM_Components:Starting_WebLock">下一页  »</a></p>
+</div><p></p>
+
+<p>本章回顾你已经在教程第一部分建立的代码 (see <a href="cn/Creating_XPCOM_Components/Creating_the_Component_Code#webLock1.cpp">webLock1.cpp</a> in the previous chapter) 并且使用 XPCOM 工具类让代码更容易更有效. 同时，介绍一个在XPCOM和Gecko API中广泛使用基本的字符串类型.</p>
+
+<p>作为起点，第一部分描述可以替代<code>webLock1.cpp</code>中的很多代码的<em>C++ 宏</em> . 很多用来完成软件组织和组件注册的代码都可以缩减为精简的数据结构和宏代码.</p>
+
+<h3 id="XPCOM_Macros" name="XPCOM_Macros">XPCOM Macros</h3>
+
+<p>XPCOM 架构包含了一系列宏让C++开发变得简单. 尽管有某些重叠(例如，高层的宏可以用其他的宏来组织)，他们通常可以组织成如下的类别.</p>
+
+<h4 id="Generic_XPCOM_Module_Macros" name="Generic_XPCOM_Module_Macros">Generic XPCOM Module Macros</h4>
+
+<p>The work in the <a href="cn/Creating_XPCOM_Components/Creating_the_Component_Code">previous chapter</a> was useful in setting up the generic component code. But there are only a few places in that code that are unique to the <strong>WebLock</strong> component, and it was a lot of typing. To write a different component library, you could copy the listing at the end of the chapter, change very little, and paste it into a new project. To avoid these kinds of redundancies, to regulate the way generic code is written, and to save typing, XPCOM provides<em>generic module macros</em> that expand into the module code you've already seen.</p>
+
+<p>Since these macros expand into "generic" implementations, they may not offer as much flexibility as you have when you are writing your own implementation. But they have the advantage of allowing much more rapid development. To get an idea about how much can be handled with the macros described in this section, compare the code listing in <a href="#weblock2.cpp">weblock2.cpp</a> at the end of the chapter with <a href="cn/Creating_XPCOM_Components/Creating_the_Component_Code#webLock1.cpp">webLock1.cpp</a> in the previous chapter.</p>
+
+<p>The module macros include one set of macros that define the exported <code>NSGetModule</code> entry point, the required <code>nsIModule</code> implementation code and another that creates a generic factory for your implementation class. Used together, these macros can take care of a lot of the component implementation code and leave you working on the actual logic for your component.</p>
+
+<div class="side-note">
+<p>Note that all of the macros described in this section are similar but are used in slightly different situations. Some differ only in whether or not a method is called when the module is created and/or destroyed. <a href="#XPCOM_Module_Macros">XPCOM Module Macros</a> lists the macros discussed in this section.</p>
+</div>
+
+<p><span id="XPCOM_Module_Macros"><a id="XPCOM_Module_Macros"></a><strong>XPCOM Module Macros</strong></span></p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Macro</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>NS_IMPL_NSGETMODULE(name, components)</code></td>
+   <td>Implements the <code>nsIModule</code> interface with the module name of <code>name</code> and the component list in <code>components</code>.</td>
+  </tr>
+  <tr>
+   <td><code>NS_IMPL_NSGETMODULE_WITH_CTOR(name, components, ctor)</code></td>
+   <td>Same as above but allows for a special function to be called when the module is created.</td>
+  </tr>
+  <tr>
+   <td><code>NS_IMPL_NSGETMODULE_WITH_DTOR(name, components, dtor)</code></td>
+   <td>Same as the first macro but allows for a special function to be called when the module is destroyed.</td>
+  </tr>
+  <tr>
+   <td><code>NS_IMPL_NSGETMODULE_WITH_CTOR_DTOR(name, components, ctor, dtor)</code></td>
+   <td>This combines the last two macros so that you can define functions to be called at the construction and destruction of the module object.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h5 id="Module_Implementation_Macros" name="Module_Implementation_Macros">Module Implementation Macros</h5>
+
+<p>The general case is to use <code>NS_IMPL_NSGETMODULE</code>, which doesn't take any callbacks, but all the macros follow the same general pattern. All of these macros work on an array of structures represented by the <code>components</code> parameter. Each structure describes a CID that is to be registered with XPCOM.</p>
+
+<p>The first parameter for each of these macros is an arbitrary string that names the module. In a debugging environment, this string will be printed to the screen when the component library is loaded or unloaded. You should pick a name that makes sense and helps you keep track of things. The four required parts<sup><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Guide/Creating_components/Using_XPCOM_Utilities_to_Make_Things_Easier#endnote_other-parts">[other-parts]</a></sup> of the structure contain the following information:</p>
+
+<ul>
+ <li>A human readable class name</li>
+ <li>the class ID (CID)</li>
+ <li>the contract ID (an optional but recommended argument)</li>
+ <li>a constructor for the given object</li>
+</ul>
+
+<pre>static const nsModuleComponentInfo components[] =
+{
+  { "Pretty Class Name",
+    CID,
+    CONTRACT_ID,
+    Constructor
+  },
+  // ...
+};
+</pre>
+
+<p>The important thing to note in the fictitious listing above is that it can support multiple components in a module. Modules such as the networking libraries in Gecko ("necko") have over 50 components declared in a single <code>nsModuleComponentInfo</code> array like this.</p>
+
+<p>The first entry of the <code>nsModuleComponentInfo</code> above is the name of the component. Though it isn't used that much internally at the present time, this name should be something that meaningfully describes the module.</p>
+
+<p>The second entry of the <code>nsModuleComponentInfo</code> is the CID. The usual practice is to put the class ID (CID) into a <code>#define</code> and use the define to declare the CID in the components list. Many CIDs take the following form:</p>
+
+<pre>#define NS_IOSERVICE_CID                             \
+{ /* 9ac9e770-18bc-11d3-9337-00104ba0fd40 */         \
+    0x9ac9e770,                                      \
+    0x18bc,                                          \
+    0x11d3,                                          \
+    {0x93, 0x37, 0x00, 0x10, 0x4b, 0xa0, 0xfd, 0x40} \
+}
+</pre>
+
+<p>The next entry is the Contract ID string, which is also usually defined in a <code>#define</code> in a header file.</p>
+
+<p>These three entries constitute the required parameters for the <code>RegisterFactoryLocation</code> method we looked at in the prior chapter. When you use these implementation macros, you must declare a constructor for the object, and this keeps you from having to write a factory object.</p>
+
+<h5 id="Factory_Macros" name="Factory_Macros">Factory Macros</h5>
+
+<p>The factory macro makes it easy to write factory implementations. Given the class name <code>ConcreteClass</code>, the factory macro declaration is:</p>
+
+<pre>NS_GENERIC_FACTORY_CONSTRUCTOR(ConcreteClass)
+</pre>
+
+<p>This results in a function called <code>ConcreteClassConstructor</code> that can be used in the <code>nsModuleComponentInfo</code> structure.</p>
+
+<pre>#include "nsIGenericFactory.h"
+
+static const nsModuleComponentInfo components[] =
+{
+  { "Pretty Class Name",
+    SAMPLE_CID,
+    "@company.com/sample",
+    SampleConstructor
+  }
+}
+
+NS_IMPL_NSGETMODULE(nsSampleModule, components)
+</pre>
+
+<p>Most of the components in the Mozilla browser client use this approach.</p>
+
+<h4 id="Common_Implementation_Macros" name="Common_Implementation_Macros">Common Implementation Macros</h4>
+
+<p>Every XPCOM object implements <code>nsISupports</code>, but writing this implementation over and over is tedious. Unless you have very special requirements for managing reference counting or handling interface discovery, the<em>implementation macros</em> that XPCOM provides can be used. Instead of implementing the <code>nsISupports</code> yourself, <code>NS_IMPL_ISUPPORTS1</code> can expand to the implementation of <code>AddRef</code>, <code>Release</code>, and <code>QueryInterface</code> for any object.</p>
+
+<pre>NS_IMPL_ISUPPORTS1(classname, interface1)
+</pre>
+
+<p>Also, if you implement more than one interface, you can simply change the <code>1</code> in the macro to the number of interfaces you support and list the interfaces, separated by commas. For example:</p>
+
+<pre>NS_IMPL_ISUPPORTS2(classname, interface1, interface2)
+NS_IMPL_ISUPPORTSn(classname, interface1, ..., interfacen)
+</pre>
+
+<p>These macros automatically add the <code>nsISupports</code> entry for you, so you don't need to do something like this:</p>
+
+<pre class="eval">NS_IMPL_ISUPPORTS2(classname, interface1, <strong>nsISupports</strong>)
+</pre>
+
+<p><br>
+ Take a close look at the above example. Note that it uses the actual name of the interface and not an IID. Inside the macro, the interface name expands to <code>NS_GET_IID()</code>, which is another macro that extracts the IID from the generated header of the interface. When an interface is written in XPIDL, the headers include static declarations of their IIDs. On any interface that is generated by XPIDL, you can call <code>NS_GET_IID()</code> to obtain the IID which is associated with that interface.</p>
+
+<pre>// returns a reference to a shared nsIID object\
+static const nsIID iid1 = NS_GET_IID(nsISupports);
+
+// constructs a new nsIID object
+static const nsIID iid2 = NS_ISUPPORTS_IID;
+</pre>
+
+<p>In order to use <code>NS_IMPL_ISUPPORTSn</code>, you must be sure that a member variable of type <code>nsrefcnt</code> is defined and named <code>mRefCnt</code> in your class. But why even bother when you can use another macro?</p>
+
+<h4 id="Declaration_Macros" name="Declaration_Macros">Declaration Macros</h4>
+
+<p><code>NS_DECL_NSISUPPORTS</code> declares <code>AddRef</code>, <code>Release</code>, and <code>QueryInterface</code> for you, and it also defines the <code>mRefCnt</code> required by <code>NS_IMPL_ISUPPORTS</code>. Furthermore, <code>NS_DECL_</code> appended with any interface name in all caps will declare all of the methods of that interface for you. For example, <code>NS_DECL_NSIFOO</code> will declare all of the methods of <code>nsIFoo</code> provided that it exists and that <code>nsIFoo.h</code> was generated by the XPIDL compiler. Consider the following real class:</p>
+
+<pre>class myEnumerator : public nsISimpleEnumerator
+{
+  public:
+    NS_DECL_ISUPPORTS
+    NS_DECL_NSISIMPLEENUMERATOR
+
+    myEnumerator();
+    virtual ~myEnumerator() {}
+};
+</pre>
+
+<p>The declaration of this <code>nsISimpleEnumerator</code> class doesn't include any methods other than the contructor and destructor. Instead, the class uses the <code>NS_DECL_</code> macro<sup><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Guide/Creating_components/Using_XPCOM_Utilities_to_Make_Things_Easier#endnote_nsISupports-warning">[nsISupports-warning]</a></sup>.</p>
+
+<p>Using these declaration macros not only saves a tremendous amount of time when you're writing the code, it can also save time if you make changes to your IDL file, since the C++ header file will then automatically include the updated list of methods to be supported.</p>
+
+<div class="side-note">
+<p>The <code>NS_INIT_ISUPPORTS</code> macro is also a bit of a special case. Historically, it gets called in the constructor for your class and sets <code>mRefCnt</code> to zero. However, a change in XPCOM that occurred before Mozilla 1.3 makes <code>NS_INIT_ISUPPORTS</code> no longer necessary: <code>mRefCnt</code>'s type has been changed from an integer to a class that provides its own auto-initialization. If you are building with versions earlier than Mozilla 1.3, this macro is still required.</p>
+</div>
+
+<p>The following table summarizes the macro usage in this portion of the <code>weblock.cpp</code> source file:</p>
+
+<p><span id="Common_XPCOM_Macros"><a id="Common_XPCOM_Macros"></a><strong>Common XPCOM Macros</strong></span></p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>NS_IMPL_ISUPPORTSn</code></td>
+   <td>Implements <code>nsISupports</code> for a given class with <code>n</code> number of interfaces</td>
+  </tr>
+  <tr>
+   <td><code>NS_DECL_ISUPPORTS</code></td>
+   <td>Declares methods of <code>nsISupports</code> including <code>mRefCnt</code></td>
+  </tr>
+  <tr>
+   <td><code>NS_INIT_ISUPPORTS</code></td>
+   <td>Initializes <code>mRefCnt</code> to zero. Must be called in class's constructor</td>
+  </tr>
+  <tr>
+   <td><code>NS_GET_IID</code></td>
+   <td>Returns the IID given the name of an interface. Interface must be generated by XPIDL</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Using the macros described here, the code for the <strong>WebLock</strong> component has gone from around 340 lines of code to just under 40. Clearly from a code maintenance point of view, this kind of reduction is outstanding. The entire source file with these macros included appears in <a href="#weblock2.cpp">weblock2.cpp</a>.</p>
+
+<h3 id="weblock2.cpp" name="weblock2.cpp">weblock2.cpp</h3>
+
+<p>The listing below shows the generic module code from <a href="cn/Creating_XPCOM_Components/Creating_the_Component_Code#webLock1.cpp">webLock1.cpp</a> using the macros described in this chapter:</p>
+
+<p><span id="weblock2.cpp"><a id="weblock2.cpp"></a><strong>weblock2.cpp</strong></span></p>
+
+<pre>#include "nsIGenericFactory.h"
+#include "nsISupportsUtils.h"
+
+#define SAMPLE_CID \
+{ 0x777f7150, 0x4a2b, 0x4301, \
+{ 0xad, 0x10, 0x5e, 0xab, 0x25, 0xb3, 0x22, 0xaa}}
+
+class Sample: public nsISupports
+{
+  public:
+    Sample();
+    virtual ~Sample();
+
+    NS_DECL_ISUPPORTS
+};
+
+Sample::Sample()
+{
+  // note: in newer versions of Gecko (1.3 or later)
+  // you don't have to do this:
+  NS_INIT_ISUPPORTS();
+}
+
+Sample::~Sample()
+{
+}
+
+NS_IMPL_ISUPPORTS1(Sample, nsISupports);
+
+NS_GENERIC_FACTORY_CONSTRUCTOR(Sample);
+
+static const nsModuleComponentInfo components[] =
+{
+  { "Pretty Class Name",
+    SAMPLE_CID,
+    "@company.com/sample",
+    SampleConstructor
+  }
+};
+
+NS_IMPL_NSGETMODULE(nsSampleModule, components)
+</pre>
+
+<h3 id="String_Classes_in_XPCOM" name="String_Classes_in_XPCOM">String Classes in XPCOM</h3>
+
+<p>Strings are usually thought of as linear sequences of characters. In C++, the string literal "XPCOM", for example, consists of 6 consecutive bytes, where `X' is at byte offset zero and a null character is at byte offset 5. Other kinds of strings like "wide" strings use two bytes to represent each character, and are often used to deal with Unicode strings.</p>
+
+<p>The string classes in XPCOM are not just limited to representing a null terminated sequence of characters, however. They are fairly complex because they support the Gecko layout engine and other subsystems that manage large chunks of data. Additionally, in some versions of Mozilla the string classes support sequences of characters broken up into multiple fragments (fragments which may or may not be null terminated)<sup><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Guide/Creating_components/Using_XPCOM_Utilities_to_Make_Things_Easier#endnote_nulls-in-strings">[nulls-in-strings]</a></sup>.</p>
+
+<p>All string classes in XPCOM derive from one of two abstract classes<sup><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Guide/Creating_components/Using_XPCOM_Utilities_to_Make_Things_Easier#endnote_other-string-classes">[other-string-classes]</a></sup>: <code>nsAString</code> and <code>nsACString</code>. The former handles double byte characters, and the latter tends to be used in more general circumstances, but both of these classes define the functionality of a string. You can see these classes being passed as arguments in many of the XPCOM interfaces we'll look at in the following chapters.</p>
+
+<h4 id="Using_Strings" name="Using_Strings">Using Strings</h4>
+
+<p>Explaining how all the string classes work is outside the scope of this book, but we can show you how to use strings in the <strong>WebLock</strong> component. The first thing to note is that the string classes themselves are not frozen, which means that you should not link against them when you can avoid it.</p>
+
+<p>Linking the full string library (<code>.lib</code> or <code>.a</code>) into a component may raise its footprint by more than 100k (on Windows), which in many cases is an unacceptable gain (see the <a href="cn/XPCOM_string_guide">XPCOM string guide</a>). For <strong>WebLock</strong>, where the string classes need to be only wrappers around already existing string data, trading advanced functionality for a much smaller footprint is the right way to go. The <strong>WebLock</strong> string classes don't need to append, concatenate, search, or do any other real work on the string data; they just need to represent <code>char*</code> and other data and pass them to methods that expect an <code>nsACString</code>.</p>
+
+<h4 id="nsEmbedString_and_nsEmbedCString" name="nsEmbedString_and_nsEmbedCString"><code>nsEmbedString</code> and <code>nsEmbedCString</code></h4>
+
+<p>The strings used in this tutorial are <code>nsEmbedString</code> and <code>nsEmbedCString</code>, which implement the <code>nsAString</code> abstract class and the <code>nsACString</code> abstract classes, respectively. This first example shows an <code>nsEmbedCString</code> being used to pass an <code>nsACString</code> to a method that's not expected to modify the string.</p>
+
+<pre>// in IDL: method(in ACString thing);
+
+char* str = "How now brown cow?";
+nsEmbedCString data(str);
+rv = object-&gt;Method(data);
+</pre>
+
+<p>In this next example, the method is going to set the value of the string - as it might need to do when it returns the name of the current user or the last viewed URL.</p>
+
+<pre>// in IDL:  attribute ACString data;
+
+nsEmbedCString data;
+method-&gt;GetData(data);
+
+// now to extract the data from the url class:
+
+const char* aStringURL = data.get();
+</pre>
+
+<p>Note that the memory pointed to by <code>aStringURL</code> after the call to <code>url.get()</code> is owned by the URL string object. If you need to keep this string data around past the lifetime of the string object, you must make a copy.</p>
+
+<div class="side-note">
+<p><span id="String_Size"><a id="String_Size"></a><strong>String Size</strong></span></p>
+
+<p>The examples above illustrate the use of the single byte string class, <code>nsEmbedCString</code>. The double byte version, <code>nsEmbedString</code>, has the same functionality but the constructor takes <code>nsAString</code> and the .get() method returns the type <code>PRUnichar*</code>. Note that <code>PRUnichar</code> is a two byte value. In the coming chapters, you'll see examples that use this version in the <strong>WebLock</strong> component.</p>
+</div>
+
+<h3 id="Smart_Pointers" name="Smart_Pointers">Smart Pointers</h3>
+
+<p>All of the interfaces that you've seen so far are reference counted. Leaking a reference by not releasing an object, as the code below demonstrates, can be a major problem.</p>
+
+<pre>{
+  nsISupports* value = nsnull;
+  object-&gt;method(&amp;value);
+  if (!value) return;
+
+  // ...
+
+  if (NS_FAILED(error))
+    return;   // &lt;------------ leaks |value|
+  //...
+
+  NS_RELEASE(value);  // release our reference
+}
+</pre>
+
+<p>A method returns an <code>nsISupports</code> interface pointer that has been reference counted before it is returned (assuming it wasn't <code>nsnull</code>). If you handle an error condition by returning prematurely, whatever value points at will leak-it will never be deleted. This is a trivial fix in this example, but in real code, this can easily happen in <code>goto</code> constructs, or in deep nesting with early <code>return</code>s.</p>
+
+<p>Having more than one interface pointer that needs to be released when a block goes out of scope begs for a tool that can aid the developer. In XPCOM, this tool is the <code>nsCOMPtr</code>, or<em>smart pointer</em> class, which can save you countless hours and simplify your code when you're dealing with interface pointers. Using smart pointers, the code above can be simplified to:</p>
+
+<pre>{
+  nsCOMPtr&lt;nsISupports&gt; value;
+  object-&gt;method(getter_AddRefs(value));
+  if (!value) return;
+
+  // ...
+
+  if (NS_FAILED(error))
+    return;
+  // ...
+}
+</pre>
+
+<p>The style or syntax may be unfamilar, but smart pointers are worth learning and using because they simplify the task of managing references. <code>nsCOMPtr</code> is a C++ template class that acts almost exactly like raw pointers, that can be compared and tested, and so on. When you pass them to a getter, you must do something special, however: You must wrap the variable with the function <code>getter_AddRefs</code>, as in the example above.</p>
+
+<p>You cannot call the <code>nsISupports</code> <code>AddRef</code> or <code>Release</code> methods on a <code>nsCOMPtr</code>. But this restriction is desirable, since the <code>nsCOMPtr</code> is handling reference counting for you. If for some reason you need to adjust the reference count, you must assign the <code>nsCOMPtr</code> to a new variable and <code>AddRef</code> that. This is a common pattern when you have a local <code>nsCOMPtr</code> in a function and you must pass back a reference to it, as in the following:</p>
+
+<pre>SomeClass::Get(nsISupports** aResult)
+{
+  if (!aResult)
+    return NS_ERROR_NULL_POINTER;
+
+  nsCOMPtr&lt;nsISupports&gt; value;
+  object-&gt;method(getter_AddRefs(value));
+
+  *aResult = value.get();
+  NS_IF_ADDREF(*aResult);
+  return NS_OK;
+}
+</pre>
+
+<p>The first thing that this method does is check to see that the caller passed a valid address. If not, it doesn't even try to continue. Next, it calls another method on an object that is presumed to exist in this context. You can call a <code>.get()</code> method on the <code>nsCOMPtr</code> and have it returned for use as a raw pointer. This raw pointer can then be assigned to a variable and have its reference updated by <code>NS_IF_ADDREF</code>. Be very careful with the result of <code>.get()</code>, however. You should never call <code>Release</code> on this result because it may result in a crash. Instead, to explicitly release the object being held by a <code>nsCOMPtr</code>, you can assign zero to that pointer.</p>
+
+<p>Another nice feature of smart pointers - the part that makes them smart - is that you can <code>QueryInterface</code> them quite easily. For example, there are two interfaces for representing a file on a file system, the <code>nsIFile</code> and <code>nsILocalFile</code>, and they are both implemented by an object. Although we haven't formally introduced these two interfaces, the next code sample shows how simple it is to switch between these two interface:</p>
+
+<pre>SomeClass::DoSomething(nsIFile* aFile)
+{
+  if (!aFile)
+    return NS_ERROR_NULL_POINTER;
+
+  nsresult rv;
+  nsCOMPtr&lt;nsILocalFile&gt; localFile = do_QueryInterface(aFile, &amp;rv);
+  // ...
+}
+</pre>
+
+<p>If the <code>QueryInterface</code> is successful, <code>localFile</code> will be non-null, and <code>rv</code> will be set to <code>NS_OK</code>. If <code>QueryInterface</code> fails, <code>localFile</code> will be null, and <code>rv</code> will be set to a specific error code corresponding to the reason for the failure. In this construct, the result code <code>rv</code> is an optional parameter. If you don't care what the error code is, you can simply drop it from the function call.</p>
+
+<p>From this point on, we'll be using <code>nsCOMPtr</code>s as much as possible in <strong>WebLock</strong>. For a complete listing of smart pointer functionality, see <a class="external" href="http://www.mozilla.org/projects/xpcom/nsCOMPtr/">mozilla.org's <code>nsCOMPtr</code> documentation</a><span class="comment">XXX this should be in devmo</span>.</p>
+
+<ol>
+ <li><div class="blockIndicator note"><strong>Note:</strong> other-parts</div> This section discusses the main parameters of this structure. For a complete listing of all available options you can look at the complete reference in the <a href="cn/XPCOM_API_Reference">XPCOM API Reference</a>.</li>
+ <li><div class="blockIndicator note"><strong>Note:</strong> nsISupports-warning</div> Note that <code>NS_DECL_ISUPPORTS</code> doesn't obey the general rule in which every interface has a declaration macro of the form <code>NS_DECL_INTERFACENAME</code>, where <code>INTERFACENAME</code> is the name of the interface being compiled.</li>
+ <li><div class="blockIndicator note"><strong>Note:</strong> nulls-in-strings</div> The string classes may also support embedded nulls.</li>
+ <li><div class="blockIndicator note"><strong>Note:</strong> other-string-classes</div> There are other abstract string classes, but they are outside the scope of this book.</li>
+</ol>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/Creating_XPCOM_Components:Creating_the_Component_Code" style="float: left;">« 上一页</a><a href="/zh-CN/docs/Creating_XPCOM_Components:Starting_WebLock">下一页  »</a></p>
+</div> <p></p><div class="licenseblock">
+<p>Copyright (c) 2003 by Doug Turner and Ian Oeschger. This material may be distributed only subject to the terms and conditions set forth in the <a class="external" href="http://www.opencontent.org/openpub/" rel="noopener">Open Publication License</a>, v1.02 or later. Distribution of substantively modified versions of this document is prohibited without the explicit permission of the copyright holder. Distribution of the work or derivative of the work in any standard (paper) book form is prohibited unless prior permission is obtained from the copyright holder.</p>
+</div><p></p>

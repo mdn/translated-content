@@ -1,0 +1,303 @@
+---
+title: Utilisation des composants XPCOM
+slug: Mozilla/Tech/XPCOM/Guide/Creating_components/Using_XPCOM_Components
+translation_of: Mozilla/Tech/XPCOM/Guide/Creating_components/Using_XPCOM_Components
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Mozilla/Tech/XPCOM/Guide/Creating_components/An_Overview_of_XPCOM" style="float: left;">« Précédent</a><a href="/fr/docs/Mozilla/Tech/XPCOM/Guide/Creating_components/Component_Internals">Suivant  »</a></p>
+</div> Une des meilleures façons de commencer à travailler avec XPCOM - surtout quand vous concevez l'interface d'un composant qui sera utilisé par d'autres(<a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XPCOM/Guide/Creating_components/Starting_WebLock">WebLock</a>) - est de regarder comment les clients utilisent déjà des composants XPCOM.<p></p>
+
+<p>Les applications sophistiqués comme le navigateur Mozilla sont des utilisateurs de modules XPCOM. En fait, la quasi-totalité des fonctionnalités associees au navigateur - la navigation, la gestion des fenêtres, la gestion des cookies, les signets, la sécurité, la recherche, de rendu et d'autres caractéristiques - sont définies par des composants XPCOM et consultée par le biais de leurs interfaces. Mozilla est <em>fait</em> de composants XPCOM.</p>
+
+<p>Ce chapitre montre comment Mozilla utilise certains de ces objets XPCOM, tels que le CookieManager, et explique comment l'accès au composant de Weblock sera défini.</p>
+
+<h3 id="Exemples_de_composants">Exemples de composants</h3>
+
+<p>Pour en savoir plus sur l'utilisation de composant particulier référez vous à <a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XPCOM/Reference">API XPCOM référence</a> . Pour l'instant, ili est important de comprendre comment un composant est  utilisé par le navigateur Mozilla.</p>
+
+<h4 id="Gestionnaire_de_Cookies">Gestionnaire de Cookies</h4>
+
+<p>Gestion des cookies est l'une des nombreux fonctionnalités qui est mise disposition du navigateur sous la forme de composant XPCOM et qui peut être réutilisé par les développeurs qui veulent des fonctionnalités similaires dans leurs applications. Chaque fois qu'un utilisateur accède à la boîte de dialogue de Cookie Manager pour afficher, organiser, ou supprimer les cookies qui ont été stockées sur le système, ils utilisent le composant CookieManager en coulisses. <a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XPCOM/Guide/Creating_components/Using_XPCOM_Components#The_Cookie_Manager_Dialog">La boite de dialogue du gestionnaire de cookies</a> montre interface utilisateur qui est présenté à l'utilisateur dans Mozilla pour l'utilisation du composant CookieManager.</p>
+
+<p><span id="Boite_de_dialogue_du_gestionnaire_de_cookies"><a id="Boite_de_dialogue_du_gestionnaire_de_cookies"></a><strong>Boite de dialogue du gestionnaire de cookies</strong></span></p>
+
+<p><img alt="Image:cookie_mgr_dlog.png" class="internal" src="/@api/deki/files/625/=Cookie_mgr_dlog.png"></p>
+
+<p>Cette boite de dialogue est écrit en <abbr>XUL</abbr> et en JavaScript, et utilise une partie de XPCOM appelé <em>XPConnect</em> pour se connecter de manière transparente au composant CookieManager (voir <a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XPCOM/Guide/Creating_components/Using_XPCOM_Components#Connecting_to_Components_from_the_Interface">Connexion à des interfaces de composants</a> ci-dessous). XUL expose les fonctionnalités du composant CookieManager, il est tres utilisé dans l'environement Mozilla.</p>
+
+<p>La fonctionnalité du composant CookieManager est disponible à travers l'interface <code>nsICookieManager</code>, ses méthodes publiques sont exposées dans le tableau ci-dessous.</p>
+
+<p><span id="Interface_nsICookieManager"><a id="Interface_nsICookieManager"></a><strong>Interface nsICookieManager</strong></span></p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>removeAll</code></td>
+   <td>Retirez tous les cookies de la liste des cookies.</td>
+  </tr>
+  <tr>
+   <td><code>enumerator</code></td>
+   <td>Énumérer la liste des cookies.</td>
+  </tr>
+  <tr>
+   <td><code>remove</code></td>
+   <td>Retirer un cookie particulier de la liste.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Linterface XPCOM garanti la stabilitée, même si il y a des changements sous-jacentes. Les interfaces sont <em>publics</em> et les implémentations sont privés. Lorsque l'utilisateur sélectionne l'un des cookies affichés dans la liste, puis clique sur le bouton Supprimer, la méthode <code>Remove</code> de <code>nsICookieManager</code> est appelée. La fonction est réalisée par le composant CookieManager, et le cookie sélectionné est supprimé du disque et retiré de la liste affichée.</p>
+
+<p>L'extrait <a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XPCOM/Guide/Creating_components/Using_XPCOM_Components#Getting_the_CookieManager_Component_in_JavaScript">Utiliser le composant CookieManager en JavaScript</a> montre comment <code>Remove()</code> peut être appelé à partir de JavaScript:</p>
+
+<p><span id="Utiliser_le_composant_CookieManager_en_JavaScript"><a id="Utiliser_le_composant_CookieManager_en_JavaScript"></a><strong>Utiliser le composant CookieManager en JavaScript</strong></span></p>
+
+<pre>// xpconnect to cookiemanager
+// get the cookie manager component in JavaScript
+var cmgr = Components.classes["@mozilla.org/cookiemanager;1"]
+                     .getService();
+cmgr = cmgr.QueryInterface(Components.interfaces.nsICookieManager);
+
+// called as part of a largerDeleteAllCookies() function
+function FinalizeCookieDeletions() {
+  for (var c=0; c&lt;deletedCookies.length; c++) {
+    cmgr.remove(deletedCookies[c].host,
+                deletedCookies[c].name,
+                deletedCookies[c].path);
+  }
+  deletedCookies.length = 0;
+}
+</pre>
+
+<div class="side-note">
+<p><span id="Connexion_%C3%A0_l'interface_d'un_composant"><a id="Connexion_%C3%A0_l'interface_d'un_composant"></a><strong>Connexion à l'interface d'un composant</strong></span></p>
+
+<div class="side-note">
+<p>L'interface Mozilla utilise JavaScript pour accèder aux composants XPCOM par l'intermediaire de <a href="https://developer.mozilla.org/fr/docs/XPConnect">XPConnect</a>.</p>
+
+<p>XPConnect via <a href="https://developer.mozilla.org/fr/docs/XPIDL">XPIDL</a> est appeler à partir d'objets JavaScript, qui représentent des instances de composants comme CookieManager.</p>
+
+<p>XPConnect lie le code d'application de l'interface utilisateur du navigateur Mozilla(XUL basé sur Gecko), à l'environnement JavaScript(comme <a href="https://developer.mozilla.org/fr/docs/xpcshell">xpcshell</a>)..</p>
+</div>
+
+<p>Les arrangements contractuels que permet XPCOM ouvre la voie à <em>l'interopérabilité binaire, </em>pour l'accès, l'utilisation et la réutilisation des composants XPCOM. Ils permettent d'utiliser des composants écrits dans d'autres langages tels que JavaScript, Python et autres.</p>
+
+<p>Dans le navigateur Mozilla, les composants sont souvant utilisés à partir de JavaScript. En fait, une recherche du code source Mozilla révèle que le composant CookieManager est appelée <em>seulement</em> à partir de JavaScript. C'est ce que nous allons faire dans ce tutoriel.</p>
+</div>
+
+<div class="side-note">
+<p><span id="JavaScript_et_Mozilla"><a id="JavaScript_et_Mozilla"></a><strong>JavaScript et Mozilla</strong></span></p>
+
+<div class="side-note">
+<p>JavaScript est la <em>lingua franca</em> du navigateur Mozilla, et les liaisons entre elle et XPCOM sont forts et bien définie. <em>scriptabilité</em> , cette capacité à obtenir et utiliser des composants XPCOM à partir de JavaScript et d'autres langages pour lesquels fixations XPConnect ont été créés, est une caractéristique essentielle de XPCOM.</p>
+</div>
+
+<h4 id="Le_composant_WebBrowserFind">Le composant <code>WebBrowserFind</code></h4>
+
+<p>Les composants sont utilisés partout - dans les fonctionnalités du navigateur de haut niveau tels que <code>nsWebBrowserFind</code> , qui fournit les méthodes<code> find()</code> et <code>findNext()</code> pour trouver du contenu dans les pages Web, et dans les tâches de bas niveau tels que la manipulation des données.</p>
+
+<p>En plus du composant CookieManager, le composant WebBrowserFind est une autre partie d'un grand ensemble d'interfaces du navigation Web que vous pouvez utiliser. Son interface <code>nsIWebBrowserFind</code> est présentée dans <a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XPCOM/Guide/Creating_components/Using_XPCOM_Components#The_nsIWebBrowserFind_Interface">L'interface nsIWebBrowserFind</a> .</p>
+</div>
+
+<p><span id="Les_m%C3%A9thodes_de_nsIWebBrowserFind"><a id="Les_m%C3%A9thodes_de_nsIWebBrowserFind"></a><strong>Les méthodes de nsIWebBrowserFind</strong></span></p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>findNext</code></td>
+   <td>Trouver la prochaine occurrence de la chaîne recherchée.</td>
+  </tr>
+  <tr>
+   <td><code>findBackwards</code></td>
+   <td>Attribut booléen qui ajuste <code>findNext()</code> pour rechercher vers le début du document.</td>
+  </tr>
+  <tr>
+   <td><code>searchFrames</code></td>
+   <td>Attribut booléen qui indique si la recherche s'efectue dans les sous-fenêtres du document actuel.</td>
+  </tr>
+  <tr>
+   <td><code>matchCase</code></td>
+   <td>Attribut booléen qui indique la sensibilité à la casse.</td>
+  </tr>
+  <tr>
+   <td><code>entireWord</code></td>
+   <td>Attribut booléen qui indique si le mot entier doit correspondre.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Quand vous utilisez l'interface d'un composant, vous pouvez demander si il suportr d'autres interfaces. Ce service, qui est défini dans <code>nsISupports</code> est mis en œuvre par tous les composants XPCOM, vous permet d'interroger et de passer d'une interface à un composant dans le cadre des <em>runtime object typing</em>. Il est géré par <code>QueryInterface</code>, qui a été introduit dans le chapitre <a class="internal" href="https://developer.mozilla.org/fr/Creating_XPCOM_Components/An_Overview_of_XPCOM">Vue d'ensemble du XPCOM</a> . L'<a href="https://developer.mozilla.org/fr/XPCOM_API_Reference">API de référence</a> XPCOM fournit une référence complète des composants XPCOM disponibles dans Mozilla.</p>
+
+<h4 id="The_WebLock_Component">The WebLock Component</h4>
+
+<p>Now it's time to look at the <strong>WebLock</strong> component as another example of XPCOM components (since you'll be creating it shortly). In object-oriented programming, it's typical to design the interface first-to define the functionality that's going to be provided in the abstract, without worrying about how this functionality will be achieved. So we'll put aside the details of the implementation until the next chapter and look at the component from the outside-at the interface to the WebLock component.</p>
+
+<p><span id="The_IWebLock_Interface"><a id="The_IWebLock_Interface"></a><strong>The IWebLock Interface</strong></span></p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>lock</code></td>
+   <td>Lock the browser to the current site (or to the whitelist of approved sites read from disk).</td>
+  </tr>
+  <tr>
+   <td><code>unlock</code></td>
+   <td>Unlock the browser for unrestricted use.</td>
+  </tr>
+  <tr>
+   <td><code>addSite</code></td>
+   <td>Add a new site to the whitelist.</td>
+  </tr>
+  <tr>
+   <td><code>removeSite</code></td>
+   <td>Remove a given site from the whitelist.</td>
+  </tr>
+  <tr>
+   <td><code>sites</code></td>
+   <td>Enumerator for the list of approved sites read in from the whitelist.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The WebLock component is software that implements all of these methods in the way described by the interface definition. It registers itself for use when the browser starts up, and provides a factory that creates an instance of it for use when the user or administrator clicks the weblock icon in the browser's user interface.</p>
+
+<h3 id="Component_Use_in_Mozilla">Component Use in Mozilla</h3>
+
+<p>So how are components obtained and used in Mozilla? You've seen some enticing snippets of JavaScript in earlier sections of this chapter, but we haven't explained how XPCOM makes components available in general.</p>
+
+<p>This section discusses practical component use in Mozilla. It's divided into three subsections: one about actually finding all these binary components in Mozilla and two others corresponding to the two main ways that clients typically access XPCOM components:</p>
+
+<h4 id="Finding_Mozilla_Components">Finding Mozilla Components</h4>
+
+<p>This book attempts to provide reference information for XPCOM components and their interfaces that are frozen as of the time of this writing. The <a class="external" href="http://www.mozilla.org/projects/embedding/">Mozilla embedding project</a> tracks the currently frozen interfaces.</p>
+
+<p>Mozilla also has some tools that can find and display information about the interfaces available in Gecko such as the <em>XPCOM Component Viewer</em>, described below, and <a class="external" href="http://mxr.mozilla.org/">MXR</a>, which is a web-based source code viewing tool.</p>
+
+<p>The challenge to making good information about XPCOM components available to prospective clients, however, is that the process of freezing the interfaces that are implemented by these components is still ongoing. The Component Viewer does not distinguish between components that are frozen and those that are not. In the source code you view in MXR, interfaces that have been frozen are marked at the top with <code>@status frozen</code>.</p>
+
+<h5 id="The_XPCOM_Component_Viewer">The XPCOM Component Viewer</h5>
+
+<p>The <a class="external" href="http://addons.mozilla.org/firefox/2230/">XPCOM Component Viewer</a> is an add-on you can install in your browser (in sandbox, not available for now).<br>
+ Alternatively, you can try <a class="external" href="http://xpcomviewer.mozdev.org/ ">XPCOMViewer</a>, a similar add-on.</p>
+
+<p><span id="XPCOM_Component_Viewer"><a id="XPCOM_Component_Viewer"></a><strong>XPCOM Component Viewer</strong></span></p>
+
+<p><img alt="Image:using-component-viewer.png" class="internal" src="/@api/deki/files/922/=Using-component-viewer.png"></p>
+
+<p>The left column shows the components - in this case a subset returned from a search on "gfx" as part of the contract ID and the right column a list of the interfaces. When you open a component on the left, you can see the interfaces it implements along with a list of the methods provided by each interface.</p>
+
+<p>The XPCOM Component Viewer can be extremely useful for this sort of gross interrogation, but again: it displays <em>all</em> of the components and interfaces in your build, many of which are not practical for actual reuse or stable enough to be used reliably in your own application development. Use comprehensive lists like this with caution.</p>
+
+<p> </p>
+
+<h4 id="Using_XPCOM_Components_in_Your_Cpp">Using XPCOM Components in Your Cpp</h4>
+
+<p>XPConnect makes it easy to acecss XPCOM components as JavaScript objects, but using XPCOM components in C++ is not much more difficult.</p>
+
+<p><a href="#Managing_Cookies_from_Cpp">Managing Cookies from Cpp</a> duplicates code from <a href="#Getting_the_CookieManager_Component_in_JavaScript">Getting the CookieManager Component in JavaScript</a>, but in C++ instead of JavaScript.</p>
+
+<p><span id="Managing_Cookies_from_Cpp"><a id="Managing_Cookies_from_Cpp"></a><strong>Managing Cookies from Cpp</strong></span></p>
+
+<pre>nsCOMPtr&lt;nsIServiceManager&gt; servMan;
+nsresult rv = NS_GetServiceManager(getter_AddRefs(servMan));
+if (NS_FAILED(rv))
+  return -1;
+
+nsCOMPtr&lt;nsICookieManager&gt; cookieManager;
+rv = servMan-&gt;GetServiceByContractID("@<a class="linkification-ext" href="http://mozilla.org/cookiemanager">mozilla.org/cookiemanager</a>",
+                                     NS_GET_IID(nsICookieManager),
+                                     getter_AddRefs(cookieManager));
+
+if (NS_FAILED(rv))
+  return -1;
+
+PRUint32 len;
+deletedCookies-&gt;GetLength(&amp;len);
+
+for (int c=0; c&lt;len; c++)
+    cookieManager-&gt;Remove(deletedCookies[c].host,
+                          deletedCookies[c].name,
+                          deletedCookies[c].path,
+                          PR_FALSE);
+</pre>
+
+<p>XXX: In the original document, there were only the first three parameters to the |Remove| call. I added |PR_FALSE| as a fourth parameter because the interface seems to require it: <a class="linkification-ext external" href="http://lxr.mozilla.org/mozilla/source/netwerk/cookie/public/nsICookieManager.idl#64">http://lxr.mozilla.org/mozilla/source/netwerk/cookie/public/nsICookieManager.idl#64</a> This problem also appears in the JavaScript version below, and I've added |false| as a fourth parameter there as well.</p>
+
+<p>If your application is written in C++, then <a href="#Managing_Cookies_from_Cpp">Managing Cookies from Cpp</a> shows the steps you take to get an XPCOM component, specify the interface on that component you want to use, and call methods on that interface.</p>
+
+<h4 id="XPConnect_Using_XPCOM_Components_From_Script">XPConnect: Using XPCOM Components From Script</h4>
+
+<p>The CookieManager component we discussed at the beginning of this chapter provides a good opportunity to talk further about using components from JavaScript. In the following code fragment from the Cookie Manager dialog in Mozilla, you can see a singleton of the CookieManager component being created with the <code>getService()</code> method and used to provide the functionality that lets users load and remove cookies from the user interface.</p>
+
+<p><span id="Managing_Cookies_from_JavaScript"><a id="Managing_Cookies_from_JavaScript"></a><strong>Managing Cookies from JavaScript</strong></span></p>
+
+<pre>var cmgr = Components.classes["@mozilla.org/cookiemanager;1"]
+                     .getService();
+cmgr = cmgr.QueryInterface(Components.interfaces.nsICookieManager);
+
+function loadCookies() {
+  // load cookies into a table
+  var enumerator = cmgr.enumerator;
+  var count = 0;
+  var showPolicyField = false;
+  while (enumerator.hasMoreElements()) {
+    var nextCookie = enumerator.getNext();
+    nextCookie = nextCookie.QueryInterface(Components.interfaces.nsICookie);
+    /* .... */
+}
+function FinalizeCookieDeletions() {
+  for (var c=0; c&lt;deletedCookies.length; c++) {
+    cmgr.remove(deletedCookies[c].host,
+                deletedCookies[c].name,
+                deletedCookies[c].path,
+                false);
+  }
+  deletedCookies.length = 0;
+}
+</pre>
+
+<p>XXX: In the original document, there were only the first three parameters to the |remove| call. I added |false| as a fourth parameter because the interface seems to require it: <a class="linkification-ext external" href="http://lxr.mozilla.org/mozilla/source/netwerk/cookie/public/nsICookieManager.idl#64">http://lxr.mozilla.org/mozilla/source/netwerk/cookie/public/nsICookieManager.idl#64</a> This problem also appears in the C++ version above, and I've added |PR_FALSE| as a fourth parameter there as well.</p>
+
+<p>Beyond the methods that are being called on the CookieManager itself (e.g., <code>cookiemanager.remove</code>, which maps to the <code>remove()</code> function in <a href="#The_nsICookieManager_Interface">The nsICookieManager Interface</a>), note the special XPConnect objects and methods that reflect the XPCOM component into JavaScript.</p>
+
+<p><code>Components</code> is the JavaScript object that controls the connection to components, and <code>classes</code> is an array of all of the classes you can ask for by contract ID. To instantiate an XPCOM component in JavaScript, you create a new <code>Component</code> object and pass in the contract ID for the component you want and ask for either a singleton or an instance of that component to be returned:</p>
+
+<pre>var cmgr = Components.classes["@mozilla.org/cookiemanager;1"]
+                     .getService();
+</pre>
+
+<p>The resulting <code>cookiemanager</code> object then provides access to all of the methods for that component that have been defined in IDL and compiled into the type library. Using the CookieManager component, you could write code like this to delete all cookies from the system:</p>
+
+<pre>cmgr = Components.classes["@<a class="linkification-ext" href="http://mozilla.org/cookiemanager;1">mozilla.org/cookiemanager;1</a>"]
+                 .getService();
+cmgr = cmgr.QueryInterface(Components.interfaces.nsICookieManager);
+
+// delete all cookies
+function trashEm() {
+   cmgr.removeAll();
+}
+</pre>
+
+<p>Another vital feature of the XPConnect glue this example shows is the availability of the <code>QueryInterface</code> method on all objects that are reflected into JavaScript from XPCOM. As in C++, you can use this method to ask for other interfaces that are available on the given object.</p>
+
+<div class="side-note">
+<p><span id="Services_Versus_Regular_Instances"><a id="Services_Versus_Regular_Instances"></a><strong>Services Versus Regular Instances</strong></span></p>
+
+<p>Whether to have clients use your component as an instance or a service is a design question, really, and something you should be clear about in the documentation for your component. Actually, the <code>getService()</code> method in the example here calls through to the <code>createInstance()</code> method that is also available from the Component object and caches the result, making it a singleton rather than a normal instance.</p>
+
+<p>The singleton design pattern that is used to create services is described in <a href="/en/Creating_XPCOM_Components/An_Overview_of_XPCOM#XPCOM_Services">XPCOM Services</a>.</p>
+</div>
+
+<p>Remember, <code>QueryInterface</code> allows you to query an object for the interfaces it supports. In the case of the snippet in <a href="#The_nsICookieManager_Interface">The nsICookieManager Interface</a>, the <code>QueryInterface</code> method is being used to get the <code>nsICookie</code> interface from the enumerator so that, for instance, the JavaScript code can access the <code>value</code> and <code>name</code> attributes for each cookie.</p>
+
+<ol>
+ <li><div class="blockIndicator note"><strong>Note :</strong> cookie-manager-ui</div> Note that the interface is not part of the component itself. XPCOM makes it easy to use components like CookieManager from Mozilla's Cross Platform Front End (XPFE) and other user interfaces, but the component itself doesn't provide its own UI.</li>
+ <li><div class="blockIndicator note"><strong>Note :</strong> private-xpcom-interfaces</div> There are exceptions to this. Some XPCOM interfaces are also private and not made for general use. Private interfaces do not have the same requirements as the ones that are made available publicly in IDL.</li>
+ <li><div class="blockIndicator note"><strong>Note :</strong> cookie-manager-in-tutorial</div> The CookieManager component is used to persist for the web locking functionality described in this tutorial.</li>
+</ol>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Mozilla/Tech/XPCOM/Guide/Creating_components/An_Overview_of_XPCOM" style="float: left;">« Précédent</a><a href="/fr/docs/Mozilla/Tech/XPCOM/Guide/Creating_components/Component_Internals">Suivant  »</a></p>
+</div> <p></p><div class="licenseblock">
+<p>Copyright (c) 2003 by Doug Turner and Ian Oeschger. This material may be distributed only subject to the terms and conditions set forth in the <a class="external" href="http://www.opencontent.org/openpub/" rel="noopener">Open Publication License</a>, v1.02 or later. Distribution of substantively modified versions of this document is prohibited without the explicit permission of the copyright holder. Distribution of the work or derivative of the work in any standard (paper) book form is prohibited unless prior permission is obtained from the copyright holder.</p>
+</div><p></p>

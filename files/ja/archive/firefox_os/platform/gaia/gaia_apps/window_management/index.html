@@ -1,0 +1,408 @@
+---
+title: Window Management
+slug: Archive/Firefox_OS/Platform/Gaia/Gaia_apps/Window_Management
+tags:
+  - Apps
+  - B2G
+  - Firefox OS
+  - Window Management
+  - system
+translation_of: Archive/B2G_OS/Platform/Gaia/Gaia_apps/Window_Management
+---
+<div class="summary">
+<p><span class="seoSummary">一般的に、ウィンドウマネージャーはグラフィックユーザーインターフェイスのウィンドウの配置や表示を制御するアプリケーションの一部です。この記事では Firefox OS がウィンドウ管理をどのようにハンドリングしているか記載しています。</span></p>
+</div>
+
+<p>Firefox OS では、ウィンドウ管理は <a href="/ja/Firefox_OS/Platform/Gaia/Gaia_apps/System">System アプリ</a>の一部で、以下の責務があります。</p>
+
+<ul>
+ <li>アプリのライフサイクルとアプリ間のインタラクション</li>
+ <li>UI 要素のレイアウト、リサイズ、回転、表示とアニメーション、変換</li>
+ <li>web activity や Notification、タスクマネージャーのようなシステム全体の UI ロジック</li>
+ <li>ポップアップ、コンテキストメニュー、エラーページのようなアプリ仕様 UI 機能</li>
+</ul>
+
+<p>各アイテムの説明にいく前に、Gaia でアプリがどのように起動するかを説明します。</p>
+
+<h2 id="Gaia_でのアプリ起動説明">Gaia でのアプリ起動説明</h2>
+
+<p>Firefox OS ではアプリの起動方法はいくつかあります。例えばほかのアプリから作られたシステムメッセージ経由で起動したり、ホームスクリーン上のアイコンをタップすることによる起動などあります。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7709/app-launch-flow.png" style="width: 728px; height: 414px; display: block; margin: 0px auto;"></p>
+
+<p>アプリを開く制御のイベントは Gecko エンジンや System アプリによってハンドリングされます。これについては下で説明します。</p>
+
+<h3 id="アプリ構造">アプリ構造</h3>
+
+<p>Gaia の webapps はHTML、CSS、JavaScript、image、マニフェストなどのアプリケーションアセットのすべてが含まれる zip ファイルである <a href="/ja/Marketplace/Publishing/Packaged_apps">パッケージ型アプリ</a>があります。Gaia の webapp は以下の基本構造で構成されています。</p>
+
+<div class="code-block">
+<div class="highlight">
+<pre><code class="brush: bash">apps</code><code class="o">/</code><code class="p">[</code><code class="n">app</code> <code class="n">name</code><code class="p">]</code><code class="o">/</code>
+ <code class="o">-</code> <code class="n">js</code>
+ <code class="o">-</code> <code class="n">styles</code>
+ <code class="o">-</code> <code class="n">locales</code>
+ <code class="o">-</code> <code class="n">test</code>
+ <code class="o">-</code> <code class="n">index</code><code class="p">.</code><code class="n">html</code>
+ <code class="o">-</code> <code class="n">manifest</code><code class="p">.</code><code class="n">webapp</code>
+</pre>
+</div>
+</div>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7497/app_load_process.png" style="width: 2262px; height: 1979px; margin: 0px auto; display: block;"></p>
+
+<p>ビルトインの Gaia アプリがホームスクリーンから起動した際、Gecko は <em>manifest://[app name].gaiamobile.org:8080 </em>という URL を開こうとし、manifest.webapp の場所に変換して マニフェストの <em>launch_path</em> で定義されている index ファイルを実行します。(すべてのビルトインアプリは launch_path は index.htmlです。)  index.html ファイルでは必要となるスタイルシートや JavaScript をロードします。</p>
+
+<div class="note">
+<p><strong>注意</strong>：インフォーマルな慣習として、Gaia アプリの メイン JavaScript のエントリーポイントは通常 <code>[app name].js</code> もしくは <code>main.js</code> です。</p>
+</div>
+
+<h3 id="アプリ起動シーケンス">アプリ起動シーケンス</h3>
+
+<p>イベントは Gecko へ通知されます。Gecko の準備ができていれば、<a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/system/js/app_window_factory.js">system/js/app_window_factory.js </a>から <code>AppwindowFactory</code> に アプリの起動イベントである <code>webapps</code> イベントか、システムメッセージの保留をハンドリングするための <code>open-app </code>イベントが送られます。</p>
+
+<pre class="brush: js">window.addEventListener('applicationready', function appReady(e) {
+  window.removeEventListener('applicationready', appReady);
+  window.addEventListener('webapps-launch', self);
+  window.addEventListener('webapps-close', self);
+  window.addEventListener('open-app', self);
+});</pre>
+
+<p><span style="background-color: #ffff00;">イベントハンドリング部分の詳しい説明として、<code>this.launch(config) </code>はアプリウィンドウもしくはアクティビティとして起動します。アプリを閉じると、<code>Appwindow</code> は 閉じるイベントである <code>webapps-close</code> イベントを受信します。</span></p>
+
+<p><code>launch()</code> メソッドのメイン処理は以下の通りです。</p>
+
+<pre class="brush: js">var app = AppWindowManager.getApp(config.origin);
+if (app) {
+  app.reviveBrowser();
+} else if (config.origin !== homescreenLauncher.origin) {
+  new AppWindow(config);
+} else if (config.origin == homescreenLauncher.origin) {
+  homescreenLauncher.getHomescreen().ensure();
+}</pre>
+
+<p>コードでは最初に、アプリ変数の存在をチェックし、Gecko で再度起動させます。アプリ変数が無いとき、通常アプリであれば アプリのための <code>AppWindow</code> インスタンスを生成します。それ意外は <code>homesecreenLauncher</code> から起動した場合です。最後のケースの場合、必要となる操作を実行します。</p>
+
+<h3 id="AppWindow">AppWindow</h3>
+
+<p>Firefox OS はウェブページがアプリとして動作するように特殊な <a href="https://developer.mozilla.org/ja/docs/WebAPI/Browser">mozBrowser API </a>を利用します。ウィンドウ管理のルートは内部の iFrame(ウィンドウ) をラップするための mozBrowserAPI です。moz-browser タイプの特殊な iFrame は実際のブラウザとして動作する iFrame を作成します。</p>
+
+<p><code>AppWindow</code> は<code> mozBrowser </code>iFrame の生成、包含、管理をします。<code>AppWindow</code> は自信の<code> mozBrowser </code>iFrame<code> </code>が発火したすべての<code> mozBrowser </code>イベントを操作し、適切な UI 機能を表示します。</p>
+
+<h2 id="アプリライフサイクル管理">アプリライフサイクル管理</h2>
+
+<p>アプリの完全なライフサイクルは以下の通りです。</p>
+
+<ul>
+ <li>アプリの起動</li>
+ <li>システム DOM ツリーへの iframe 注入</li>
+ <li>アプリ表示アニメーション</li>
+ <li>アプリ表示</li>
+ <li>アプリ非表示アニメーション</li>
+ <li>アプリ非表示</li>
+ <li>DOM ツリーからの iframe 削除</li>
+ <li>アプリ終了</li>
+</ul>
+
+<h3 id="アプリの起動">アプリの起動</h3>
+
+<p>ユーザーがホームスクリーン上のアイコンをタップしたとき、ホームスクリーンは  Gecko エンジンに適切なアプリがオープンされたことを <a href="/ja/docs/Web/API/Navigator.mozApps">mozApps API </a>を使って通知します。</p>
+
+<h3 id="アプリの_kill">アプリの kill</h3>
+
+<p>アプリは以下の条件下で終了されます。</p>
+
+<ul>
+ <li>アプリクラッシュ</li>
+ <li><a href="https://developer.mozilla.org/en-US/Firefox_OS/Debugging/Debugging_OOMs#Process_priorities">OOM Killer </a>による終了</li>
+ <li>タスクマネージャー経由によるアプリ終了</li>
+ <li>window.close()  のコール</li>
+</ul>
+
+<p>アクティビティアプリは、非表示アニメーションを表示する前に、DOM ツリーから終了されたアプリの iFrame を削除します。前面でないアプリのとき、アプリ終了する際即時に iframe を除去します。</p>
+
+<p>アプリは以下の条件下で中断します。</p>
+
+<ul>
+ <li>web activity の場合、呼び出されたアクティビティが表示されたとき</li>
+ <li>Popups の場合、アプリが window.open を呼び出した時開きます</li>
+ <li>アプリの場合、何もしません</li>
+</ul>
+
+<h3 id="アプリの再起動">アプリの再起動</h3>
+
+<p>アプリは以下の条件で再起動します。</p>
+
+<ul>
+ <li>homescreen アプリ: ホームボタンが押された時</li>
+ <li>ゾンビアプリはタスクマネージャから同じ URL が開かれるか、エッジジェスチャーからスワイプした場合に復活します</li>
+</ul>
+
+<h2 id="アプリのレンダリング">アプリのレンダリング</h2>
+
+<p>アプリ起動時、以下のブロックによりスクリーンは描画されます。</p>
+
+<ul>
+ <li>System header</li>
+ <li>App iframe</li>
+ <li>Bottom wrapper bar (ブラウザが chrome モードの場合)</li>
+</ul>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7711/app-window-layout.png" style="width: 393px; height: 348px; display: block; margin: 0px auto;"></p>
+
+<p>アプリレイアウト</p>
+
+<p>アプリの iFrame のメインコンテナは以下のようになっています。</p>
+
+<pre class="brush: html">&lt;iframe id="browser2" mozallowfullscreen="true" mozbrowser="true" remote="true"...
+... src="", data-url="" data-frame-type="window" data-frame-origin="..."&gt;
+&lt;/iframe&gt;</pre>
+
+<p>iframe には以下の要素を含みます。</p>
+
+<ul>
+ <li>Launch path (<code>data-url</code>, <code>data-frame-origin</code>)</li>
+ <li>mozbrowser iframe 属性 (<code>mozallowfullscreen="true"</code>, <code>mozbrowser="true"</code>)</li>
+ <li>コンテナ、オーバーレイ、アプリ仕様の UI</li>
+</ul>
+
+<h3 id="AppWindow_のリサイズ">AppWindow のリサイズ</h3>
+
+<p>AppWindow は以下の条件の場合にリサイズします。</p>
+
+<ul>
+ <li> system アプリは回転の変更があるまでリサイズしない</li>
+ <li>一般的なアプリは以下の条件でリサイズします
+  <ul>
+   <li>system アプリのによるリサイズ</li>
+   <li>キーボードの開閉アニメーション</li>
+   <li>ステータスバーの変更</li>
+   <li><code>window.resizedBy()</code> または <code>window.resizeTo()</code> のコール</li>
+   <li>ソフトウェアのホームボタン押下</li>
+  </ul>
+ </li>
+</ul>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7713/app-area.png" style="width: 715px; height: 305px; margin: 0px auto; display: block;"></p>
+
+<p>要約すると、ウィンドウサイズは以下のものに影響を受けます。</p>
+
+<ul>
+ <li>回転状態</li>
+ <li>キーボード状態</li>
+ <li>警告画面の状態 (has call, has message, etc.)</li>
+ <li>Chrome ナビゲーション状態</li>
+ <li>フルスクリーン状態( <code>manifest.fullscreen</code> / <code>parentWindow)</code></li>
+ <li>ソフトウェアホームボタン状態</li>
+</ul>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7715/app-area2.png" style="width: 687px; height: 330px; margin: 0px auto; display: block;"></p>
+
+<h3 id="アプリウィンドウの回転">アプリウィンドウの回転</h3>
+
+<p>アプリ画面の回転は各アプリから制御可能です。もしくはシステムから全体的に回転の制御はできます。orientation プロパティを manifest.webapp に記載することで、アプリ画面の回転を指定出来ます。以下はその一例です。</p>
+
+<pre class="brush: json">"orientation": "default",</pre>
+
+<p>orientation API を利用して回転のロック / アンロックを制御することも出来ます。</p>
+
+<pre class="brush: js">screen.mozLockOrientation([‘portrait-primary’]);
+
+screen.mozUnlockOrientation();</pre>
+
+<p>強制的に回転させるパラメータ値はいくつか存在します。</p>
+
+<ul>
+ <li><code>default</code>: システムのデフォルト回転</li>
+ <li><code>portrait</code>: ポートレートとして画面を描画</li>
+ <li><code>landscape</code>: ランドスケープとして画面を描</li>
+</ul>
+
+<p>入手可能な詳細な情報については、<a href="/en-US/docs/Web/API/Screen.lockOrientation">Screen.lockOrientation</a> を参照してくたさい。また、サンプルは <a href="https://github.com/mozilla-b2g/gaia/blob/master/dev_apps/uitest/js/API/orientation.js">gaia/dev_apps/uitest/js/API/orientation.js から入手出来ます。</a></p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7717/app-orientation.png" style="width: 745px; height: 530px; margin: 0px auto; display: block;"></p>
+
+<h3 id="アプリの可視性">アプリの可視性</h3>
+
+<p>System アプリはスクリーンがオフになった時だけバックグラウンドになりますが、一般のアプリは以下のいくつかの条件の時にバックグラウンドになります。</p>
+
+<ul>
+ <li>オーディオの競合</li>
+ <li>プロセスポリシー</li>
+ <li>レンダリング</li>
+</ul>
+
+<div class="note">
+<p><strong>注意</strong>: ページの可視性は親 iframe が非アクティブの期間は継承されます。</p>
+</div>
+
+<p>アプリは以下の時は常にフォアグランドになります。</p>
+
+<ul>
+ <li>オープンアニメーション開始時</li>
+ <li>アニメーション終了時のスワイプイン</li>
+ <li>ロックスクリーンがアンロック時</li>
+</ul>
+
+<p>以下の時は、常にバックグラウンドです。</p>
+
+<ul>
+ <li>終了アニメーションの非表示時</li>
+ <li>電話呼び出し表示して 3 秒後</li>
+ <li>スクリーンオフ時</li>
+</ul>
+
+<p>上記以外の例外もいくつかあります。</p>
+
+<ul>
+ <li>通常のチャンネルで音楽を再生するアプリ</li>
+ <li>web activities をインラインで呼ぶアプリ</li>
+ <li><code>window.open('', '', 'dialog')を開いているアプリ</code></li>
+</ul>
+
+<h3 id="アプリウィンドウのアニメーションとトランジション">アプリウィンドウのアニメーションとトランジション</h3>
+
+<p>Gaia のウィンドウマネージャーも、アプリウィンドウのアニメーションと滑らかなユーザーエクスペリエンスを実現するためのトランジションを提供してます。</p>
+
+<p>アプリウィンドウのアニメーションとトランジションは、以下の状態で管理されています。</p>
+
+<ul>
+ <li><code>表示中アプリ</code> — 現在のアプリ</li>
+ <li><code>起動中アプリ </code>/ 起動中アプリ群 — 起動中アプリのまとまり</li>
+ <li><code>オープンフレーム </code>/ クローズフレーム — 表示 / 非表示アニメーションのためのトランジションフレーム</li>
+</ul>
+
+<p><code>setDisplayedApp()</code> メソッド呼び出し中は、アプリは以下の図にあるとおりの状態を遷移して起動します。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7719/app-animations-state-manchine.png" style="width: 704px; height: 358px; display: block; margin: 0px auto;"></p>
+
+<p>Firefox OS アニメーション管理のための以下のようなトリックが組み込まれています。</p>
+
+<ul>
+ <li>アプリを開く前に、バックグラウンド状態からの復帰を保証する必要があります。そのため、通常 1 x 1 のスクリーンショットを最描画時に撮っています。</li>
+ <li>アプリが開ける状態になれば、次のアプリのアニメーションと現在のアプリのアニメーションの描画を同時に行います。</li>
+ <li>アプリの開始、終了の間は画面回転のロック / アンロックのコードを実行します。</li>
+ <li>アプリが1度リサイズされている時だけ、開始時のリサイズを行います。それ以外はリサイズ処理をスキップします。</li>
+ <li> ページの可視性を 1x 1のスクリーンショットを撮ることにより変更します。(上述参照)</li>
+</ul>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7721/app-switching-flow.png" style="width: 530px; height: 258px; display: block; margin: 0px auto;"></p>
+
+<h2 id="アプリウィンドウの_UI_仕様">アプリウィンドウの UI 仕様</h2>
+
+<p>ブラウザーの chrome やモーダルダイアログ、コンテキストメニュー、ポップアップやエラーページのように、特定のアプリに関連するいくつかの UI 要素が存在します。</p>
+
+<p>この事について以下の議論をしてみましょう。</p>
+
+<h3 id="モーダルダイアログ">モーダルダイアログ</h3>
+
+<p>Oデスクトップ版 Firefox では、web 開発ツールのコンソールを開き alert()や confirm() 、prompt()  コマンドを入力すると、コンテンツ上にの中央に表示されるダイアログを得ることができます。これは、Firefox OS でモーダルダイアログと同等のものになります。</p>
+
+<p><br>
+ <img alt="" src="https://mdn.mozillademos.org/files/7723/modal-dialogs.png" style="width: 715px; height: 357px; margin: 0px auto; display: block;"></p>
+
+<h3 id="コンテキストメニューダイアログ">コンテキストメニューダイアログ</h3>
+
+<p>コンテキストメニュー(もきくは長押メニュー)はモバイル開発のコンセプトの１つです。一般のアプリとして作られている場合、頻繁に利用されるアクションはユーザーにとってアプリを利用しやすいように表示されるべきです。コンテキストメニューは、すぐには表示されないが、すぐに利用可能にするべきアクションのための配置場所を提供します、<br>
+ <br>
+ <img alt="" src="https://mdn.mozillademos.org/files/7725/context-menu-dialogs.png" style="width: 722px; height: 360px; display: block; margin: 0px auto;"></p>
+
+<h3 id="(https)認証ダイアログ">(https)認証ダイアログ</h3>
+
+<p><a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/system/js/app_authentication_dialog.js">system/js/app_authentication_dialog.js </a>に定義しています</p>
+
+<h3 id="日付、時刻等の選択ダイアログ">日付、時刻等の選択ダイアログ</h3>
+
+<p><a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/system/js/value_selector">system/js/value_selector/</a> に定義しています</p>
+
+<h3 id="権限ダイアログ">権限ダイアログ</h3>
+
+<p><a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/system/js/permission_manager.js">system/js/permission_manager.js</a> と <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/system/js/media_recording.js">system/js/media_recording.js</a> (トレイパネルのユーティリティ)に定義しています</p>
+
+<h2 id="特殊なアプリ">特殊なアプリ</h2>
+
+<p>特殊なアプリに含まれる特殊な機能を実行するために、特別なアプリウィンドウオブジェクトを必要とするアプリが存在します。</p>
+
+<ul>
+ <li>ホームスクリーン</li>
+ <li>FTU</li>
+ <li>キーボード</li>
+ <li>通信量管理</li>
+ <li>Secure camera (ロックスクリーン内)</li>
+ <li>ロックスクリーン</li>
+</ul>
+
+<h2 id="子ウィンドウ管理">子ウィンドウ管理</h2>
+
+<p>子アプリウィンドウは直接的または、間接的にほかのアプリやページから開かれます。例えば、以下のようなものです。</p>
+
+<ul>
+ <li>警告ウィンドウ</li>
+ <li>ポップアップウィンドウ</li>
+ <li>アクティビティウィンドウ</li>
+ <li>信頼された UI / 信頼されたウィンドウ</li>
+</ul>
+
+<p>子ウィンドウが通常終了した場合、親ウィンドウは再度開かれます。ある種の子ウィンドウは、他の子ウィンドウを伴うこともあります。親子のプロセス管理が重要になってきます。</p>
+
+<h2 id="警告ウィンドウ">警告ウィンドウ</h2>
+
+<p>警告ウィンドウは以下の警告で利用されます。</p>
+
+<ul>
+ <li>電話呼び出し - 電話アプリ</li>
+ <li>アラーム画面 - 時計アプリ</li>
+ <li>パーミッション確認</li>
+</ul>
+
+<p>現在これらの警告ウィンドウは、デフォルト回転(ポートレート優先)に強制されます。</p>
+
+<h2 id="信頼された_UI">信頼された UI</h2>
+
+<p>Persona や mozPay API は信頼された UI を利用します。これらは全体の 80% に定められています。信頼された UI が動作している間はホームスクリーンの一部が表示されるようになっています。<br>
+ <br>
+ <img alt="" src="https://mdn.mozillademos.org/files/7727/trusted-ui.png" style="width: 737px; height: 516px; display: block; margin: 0px auto;"></p>
+
+<h2 id="履歴管理">履歴管理</h2>
+
+<p>このセクションでは、FIrefox OS での履歴管理のハンドリングをする、いくつかのコンポーネントを説明します。</p>
+
+<h3 id="タスクマネージャー">タスクマネージャー</h3>
+
+<p>タスクマネージャー(カードビュー)はホームボタンの長押しでトリガーされます。端末のアプリ履歴を表示し、アプリを終了することが可能です。</p>
+
+<p>Firefox 2.0 から、表示されて存在しているふりをするゾンビアプリも取得可能な機能になっています。</p>
+
+<h3 id="Web_activity_配置">Web activity 配置</h3>
+
+<p>インラインのアクティビティはアクティビティのデータを提供するための新しい参照ページを作成します。<br>
+ <br>
+ ウィンドウアクティビティは、存在しているウィンドウが消費したアクティビティデータを再利用します。</p>
+
+<h3 id="エッジジェスチャー(実験的)">エッジジェスチャー(実験的)</h3>
+
+<p>実験的エッジジェスチャー機能は Firefox OS 2.0 以上の開発者モードで利用可能です。そして、アプリや web ページ間の移動を画面端の右/左からスワイプすることで可能にします。</p>
+
+<h4 id="次に表示されるアプリはどのように選ばれるの？">次に表示されるアプリはどのように選ばれるの？</h4>
+
+<ul>
+ <li>アクティブアプリの子ウィンドウ</li>
+ <li>新しく起動したもの</li>
+ <li>アプリスタックの次に積まれているウィンドウ</li>
+</ul>
+
+<h4 id="前に表示されるアプリはどのように選ばれるの？">前に表示されるアプリはどのように選ばれるの？</h4>
+
+<ul>
+ <li>アクティブアプリの親ウィンドウ</li>
+ <li>前に起動されたものF</li>
+ <li>アプリスタックで現在のウィンドウより前に積まれたウィンドウ</li>
+</ul>
+
+<h3 id="スクリーンショット管理">スクリーンショット管理</h3>
+
+<p>スクリーンショットツールはタスクマネージャーがアプリの履歴を表示するために利用します。アプリの終了アニメーション中にアプリのスクリーンショットは撮られます。</p>
+
+<h2 id="関連項目">関連項目</h2>
+
+<p><a href="http://alivedise.github.io/blog/2013/02/23/from-browser-to-browser/">From Browser to Browser</a></p>

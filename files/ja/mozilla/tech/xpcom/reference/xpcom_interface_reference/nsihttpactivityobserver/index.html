@@ -1,0 +1,172 @@
+---
+title: nsIHttpActivityObserver
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsIHttpActivityObserver
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIHttpActivityObserver
+---
+<p><code>nsIHttpActivityObserver</code> はデバッガーやトラフィックモニターのようなHTTPの転送アクティビティの通知を要求するクライアントにより実装されるインターフェースです。</p>
+<div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/netwerk/protocol/http/public/nsIHttpActivityObserver.idl" rel="custom">netwerk/protocol/http/public/nsIHttpActivityObserver.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">最終更新: Gecko 1.9.2 (Firefox 3.6 / Thunderbird 3.1 / Fennec 1.0)</span></div>
+</div>
+<p>継承元: <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code></p>
+<h2 id="Method_overview" name="Method_overview">メソッドの概要</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void observeActivity(in <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code> aHttpChannel, in PRUint32 aActivityType, in PRUint32 aActivitySubtype,<br>
+                         in PRTime aTimestamp, in PRUint64 aExtraSizeData, in ACString aExtraStringSize);</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="属性"> 属性</h2>
+<table class="standard-table" style="width: auto;">
+ <tbody>
+  <tr>
+   <td class="header">Attribute</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>isActive</code></td>
+   <td><code>boolean</code></td>
+   <td>
+    <p>インターフェースがアクティブで、HTTPの活動を通知されたい場合は<code> true、</code> それ以外の場合は <code>false。</code> もし <code>false </code>の場合, <code><a href="https://developer.mozilla.org/ja/docs/nsIHttpActivityObserver#observeActivity()">observeActivity()</a></code> メソッドは呼び出されない。</p>
+    <div class="note">
+     <strong>注意:</strong> この属性は互換性のためだけに存在するもので、使用されるべきではありません。</div>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Activity_type_constants" name="Activity type constants">アクティビティタイプ定数</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">定数</td>
+   <td class="header">値</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code>ACTIVITY_TYPE_SOCKET_TRANSPORT</code></td>
+   <td>0x0001</td>
+   <td>Socket の転送活動が発生した。</td>
+  </tr>
+  <tr>
+   <td><code>ACTIVITY_TYPE_HTTP_TRANSPORT</code></td>
+   <td>0x0002</td>
+   <td>HTTP の転送活動が発生した。</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Activity_subtype_constants" name="Activity subtype constants">アクティビティサブタイプ定数</h2>
+<table class="standard-table" style="width: 914px; height: 194px;">
+ <tbody>
+  <tr>
+   <td class="header">定数</td>
+   <td class="header">値</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><span style="font-family: monospace;">ACTIVITY_SUBTYPE_REQUEST_</span><code>HEADER</code></td>
+   <td>0x5001</td>
+   <td>
+    <p>HTTP リクエストが送信キューにキューイングされた。Observer は <code>aExtraStringData </code>からリクエストヘッダを<span style="font-family: monospace;">参照できる。</span></p>
+   </td>
+  </tr>
+  <tr>
+   <td><span style="font-family: monospace;">ACTIVITY_SUBTYPE_REQUEST_BODY_SENT</span></td>
+   <td>0x5002</td>
+   <td>HTTP リクエストのボディが送信された。</td>
+  </tr>
+  <tr>
+   <td><span style="font-family: monospace;">ACTIVITY_SUBTYPE_RESPONSE_</span><code>START</code></td>
+   <td>0x5003</td>
+   <td>HTTP レスポンスを受信し始めた。</td>
+  </tr>
+  <tr>
+   <td><span style="font-family: monospace;">ACTIVITY_SUBTYPE_RESPONSE_HEADER</span></td>
+   <td>0x5004</td>
+   <td>HTTPのレスポンスヘッダを受信した。</td>
+  </tr>
+  <tr>
+   <td><span style="font-family: monospace;">ACTIVITY_SUBTYPE_RESPONSE_COMPLETE</span></td>
+   <td>0x5005</td>
+   <td>HTTPのレスポンスを完全に受信し終えた。</td>
+  </tr>
+  <tr>
+   <td><span style="font-family: monospace;">ACTIVITY_SUBTYPE_TRANSACTION_CLOSE</span></td>
+   <td>0x5006</td>
+   <td>HTTPのトランザクションが閉じられた。</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Methods" name="Methods">メソッド</h2>
+<h3 id="eatCookie.28.29" name="eatCookie.28.29">observeActivity()</h3>
+<p>HTTPの転送アクティビティが発生した際に呼び出されます。HTTPの活動が発生した際に行うべき処理はこのメソッドに定義します。</p>
+<pre class="eval">void observeActivity(
+  in nsISupports aHttpChannel,
+  in PRUint32 aActivityType,
+  in PRUint32 aActivitySubtype,
+  in PRTime aTimestamp,
+  in PRUint64 aExtraSizeData,
+  in ACString aExtraStringData
+);
+</pre>
+<h6 id="Parameters" name="Parameters">値</h6>
+<dl>
+ <dt>
+  <code>aHttpChannel</code></dt>
+ <dd>
+  活動が発生した <a href="/NsIHttpChannel" title="NsIHttpChannel">HTTP チャンネル</a>。</dd>
+ <dt>
+  <code>aActivityType</code></dt>
+ <dd>
+  発生したアクティビティのタイプ; <a href="/ja/nsIHttpActivityObserver#.e3.82.a2.e3.82.af.e3.83.86.e3.82.a3.e3.83.93.e3.83.86.e3.82.a3.e3.82.bf.e3.82.a4.e3.83.97.e5.ae.9a.e6.95.b0" title="ja/nsIHttpActivityObserver#.e3.82.a2.e3.82.af.e3.83.86.e3.82.a3.e3.83.93.e3.83.86.e3.82.a3.e3.82.bf.e3.82.a4.e3.83.97.e5.ae.9a.e6.95.b0">アクティビティタイプ定数</a>で定義された値のうちの1つ。</dd>
+ <dt>
+  <code>aActivitySubtype</code></dt>
+ <dd>
+  発生したアクティビティのタイプをさらに細かく分類したサブタイプ。アクティビティのタイプが <code>ACTIVITY_TYPE_SOCKET_TRANSPORT</code> の場合、 この値は <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISocketTransport" title="">nsISocketTransport</a></code> で定義された <code>STATUS_*</code> 定数のどれかになります。もしアクティビティのタイプが <code>ACTIVITY_TYPE_HTTP_TRANSACTION</code> の場合、この値は前述の<a href="/ja/nsIHttpActivityObserver#.e3.82.a2.e3.82.af.e3.83.86.e3.82.a3.e3.83.93.e3.83.86.e3.82.a3.e3.82.b5.e3.83.96.e3.82.bf.e3.82.a4.e3.83.97.e5.ae.9a.e6.95.b0" title="ja/nsIHttpActivityObserver#.e3.82.a2.e3.82.af.e3.83.86.e3.82.a3.e3.83.93.e3.83.86.e3.82.a3.e3.82.b5.e3.83.96.e3.82.bf.e3.82.a4.e3.83.97.e5.ae.9a.e6.95.b0">アクティビティサブタイプ定数</a>で定義された定数のどれかになります。</dd>
+ <dt>
+  <code>aTimestamp</code></dt>
+ <dd>
+  活動が発生した時刻です。1970年1月1日午前零時<span class="kana">を基準とした経過時刻がマイクロ秒で表されます。</span></dd>
+ <dt>
+  <code>aExtraSizeData</code></dt>
+ <dd>
+  追加のサイズデータが利用できる場合にその値が渡されます。後述の<a href="/ja/nsIHttpActivityObserver#.e3.82.a2.e3.82.af.e3.83.86.e3.82.a3.e3.83.93.e3.83.86.e3.82.a3.e3.83.87.e3.83.bc.e3.82.bf.e3.82.92.e6.89.b1.e3.81.86" title="ja/nsIHttpActivityObserver#.e3.82.a2.e3.82.af.e3.83.86.e3.82.a3.e3.83.93.e3.83.86.e3.82.a3.e3.83.87.e3.83.bc.e3.82.bf.e3.82.92.e6.89.b1.e3.81.86">アクティビティデータを扱う</a>もご覧ください。</dd>
+ <dt>
+  <code>aExtraStringData</code></dt>
+ <dd>
+  追加の文字列データが利用できる場合にその値が渡されます。後述の<a href="/ja/nsIHttpActivityObserver#.e3.82.a2.e3.82.af.e3.83.86.e3.82.a3.e3.83.93.e3.83.86.e3.82.a3.e3.83.87.e3.83.bc.e3.82.bf.e3.82.92.e6.89.b1.e3.81.86" title="ja/nsIHttpActivityObserver#.e3.82.a2.e3.82.af.e3.83.86.e3.82.a3.e3.83.93.e3.83.86.e3.82.a3.e3.83.87.e3.83.bc.e3.82.bf.e3.82.92.e6.89.b1.e3.81.86">アクティビティデータを扱う</a>もご覧ください。</dd>
+</dl>
+<h2 id="Interpreting_activity_data" name="Interpreting activity data">アクティビティデータを扱う</h2>
+<p><code>aActivityType</code> および <code>aActivitySubtype</code> フィールドの値によって, <code>aExtraSizeData</code> と <code>aExtraStringData</code> パラメータは違う意味を持ちます。</p>
+<h3 id="ソケット転送アクティビティ">ソケット転送アクティビティ</h3>
+<p>もしアクティビティのタイプが <code>ACTIVITY_TYPE_SOCKET_TRANSPORT</code> かつサブタイプが <code>STATUS_SENDING_TO</code> であれば、 <code>aExtraSizeData</code> パラメータは送信されたバイト数を含むことになります。1つの HTTP トランザクションは分割されたソケットの書き出しによって、複数のチャンクから構成される事があるため、それぞれのソケットアクティビティで通知されるのはそのチャンクで転送されたバイト数のみとなります。</p>
+<h3 id="HTTP_トランザクションアクティビティ">HTTP トランザクションアクティビティ</h3>
+<p>通知されたアクティビティのタイプが <code>ACTIVITY_TYPE_HTTP_TRANSACTION</code> の場合、 追加のデータを含むものは3種類あります:</p>
+<dl>
+ <dt>
+  <code>ACTIVITY_SUBTYPE_REQUEST_HEADER</code></dt>
+ <dd>
+  <code>aExtraStringData</code> はヘッダの文字列を含みます。</dd>
+ <dt>
+  <code>ACTIVITY_SUBTYPE_RESPONSE_HEADER</code></dt>
+ <dd>
+  <code>aExtraStringData</code> はレスポンスヘッダの文字列を含みます。</dd>
+ <dt>
+  <code>ACTIVITY_SUBTYPE_RESPONSE_COMPLETE</code></dt>
+ <dd>
+  <code>aExtraSizeData</code> はトータルで受信したバイト数を含みます。</dd>
+</dl>
+<h2 id="参照">参照</h2>
+<ul>
+ <li><a href="/en/Monitoring_HTTP_activity" title="en/Monitoring HTTP activity">HTTP アクティビティのモニタリング</a></li>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIHttpActivityDistributor" title="">nsIHttpActivityDistributor</a></code></li>
+</ul>

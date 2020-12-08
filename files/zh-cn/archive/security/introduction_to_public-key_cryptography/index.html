@@ -1,0 +1,475 @@
+---
+title: Introduction to Public-Key Cryptography
+slug: Archive/Security/Introduction_to_Public-Key_Cryptography
+translation_of: Archive/Security/Introduction_to_Public-Key_Cryptography
+---
+<p>公钥密码及相关标准和技术是许多产品（如签名和加密电子邮件、单点登录和安全套接字层（SSL）通信）安全功能的基础。本文介绍了公钥密码的基本概念。For an overview of SSL, see "<a href="/en-US/docs/Archive/Security/Introduction_to_SSL" title="en/Introduction_to_SSL">Introduction to SSL</a>." For an overview of encryption and decryption, see "<a href="/en-US/docs/Encryption_and_Decryption">Encryption and Decryption</a>." Information on digital signatures is available from "<a href="/en-US/docs/Digital_Signatures">Digital Signatures</a>."</p>
+
+<p>公钥密码是一套成熟的技术和标准，用于保护通信免受窃听、篡改和模拟攻击.</p>
+
+<ul>
+ <li>加密和解密允许两个通信方伪装他们发送给对方的信息. 发送者在发送信息之前对其进行加密. 接收者在接收到信息后对其进行解密. 在传输过程中，入侵者无法理解加密信息.</li>
+ <li>篡改检测允许信息接收者验证信息在传输过程中没有被修改. 任何修改数据或替换假消息的尝试都将被检测到.</li>
+ <li>身份验证允许信息的接收者确定其来源，即确认发送者的身份.</li>
+ <li>不可否认性防止信息发送者在以后的日期声称信息从未被发送.</li>
+</ul>
+
+<p>以下各节介绍了构成这些功能基础的公钥加密的概念.</p>
+
+<ul>
+ <li><a href="#Certificates_and_Authentication">证书和认证</a></li>
+ <li><a href="#Managing_Certificates">管理证书</a></li>
+</ul>
+
+<p><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><span style="font-size: 37.33327865600586px;"><strong>证书和认证</strong></span></font></p>
+
+<ul>
+ <li><a href="#A_Certificate_Identifies_Someone_or_Something">证书证明某人或某事</a></li>
+ <li><a href="#Authentication_Confirms_an_Identity">身份验证</a></li>
+ <li><a href="#How_Certificates_Are_Used">证书应用</a></li>
+ <li><a href="#Contents_of_a_Certificate">证书内容</a></li>
+ <li><a href="#How_CA_Certificates_Are_Used_to_Establish_Trust">如何使用CA证书建立信任</a></li>
+</ul>
+
+<h3 id="A_Certificate_Identifies_Someone_or_Something" name="A_Certificate_Identifies_Someone_or_Something">证书证明某人或某事</h3>
+
+<p>A <em>certificate</em> is an electronic document used to identify an individual, a server, a company, or some other entity and to associate that identity with a public key. Like a driver's license, a passport, or other commonly used personal IDs, a certificate provides generally recognized proof of a person's identity. Public-key cryptography uses certificates to address the problem of impersonation.</p>
+
+<p>To get a driver's license, you typically apply to a government agency, such as the Department of Motor Vehicles, which verifies your identity, your ability to drive, your address, and other information before issuing the license. To get a student ID, you apply to a school or college, which performs different checks (such as whether you have paid your tuition) before issuing the ID. To get a library card, you may need to provide only your name and a utility bill with your address on it.</p>
+
+<p>Certificates work much the same way as any of these familiar forms of identification. 证书颁发机构（CA）是验证身份并颁发证书的实体. 它们可以是独立的第三方，也可以是运行自己的证书颁发服务器软件（如红帽证书系统）的组织. 验证身份所用的方法因给定CA的策略而异，正如验证其他形式的身份所用的方法因颁发ID的人和使用ID的目的而异. In general, before issuing a certificate, the CA must use its published verification procedures for that type of certificate to ensure that an entity requesting a certificate is in fact who it claims to be.</p>
+
+<p>CA颁发的证书将特定的公钥绑定到证书标识的实体的名称（例如雇员或服务器的名称）. 证书有助于防止使用假公钥进行模拟. 只有经过证书认证的公钥才能与证书标识的实体所拥有的相应私钥一起使用.</p>
+
+<p>除了公钥之外，证书还始终包括它标识的实体的名称、过期日期、颁发证书的CA的名称、序列号和其他信息. 最重要的是，证书总是包含颁发CA的数字签名. CA的数字签名允许证书作为“介绍信”使用，这些用户知道并信任CA，但不知道证书标识的实体.</p>
+
+<p>For more information about the role of CAs, see "<a href="#How_CA_Certificates_Are_Used_to_Establish_Trust">How CA Certificates Are Used to Establish Trust</a>".</p>
+
+<h3 id="Authentication_Confirms_an_Identity" name="Authentication_Confirms_an_Identity">身份验证</h3>
+
+<p><em>Authentication</em> is the process of confirming an identity. In the context of network interactions, authentication involves the confident identification of one party by another party. Authentication over networks can take many forms. Certificates are one way of supporting authentication.</p>
+
+<p>Network interactions typically take place between a client, such as browser software running on a personal computer, and a server, such as the software and hardware used to host a Web site. <em>Client authentication</em> refers to the confident identification of a client by a server (that is, identification of the person assumed to be using the client software). <em>Server authentication</em> refers to the confident identification of a server by a client (that is, identification of the organization assumed to be responsible for the server at a particular network address).</p>
+
+<p>Client and server authentication are not the only forms of authentication that certificates support. For example, the digital signature on an email message, combined with the certificate that identifies the sender, provide strong evidence that the person identified by that certificate did indeed send that message. Similarly, a digital signature on an HTML form, combined with a certificate that identifies the signer, can provide evidence, after the fact, that the person identified by that certificate did agree to the contents of the form. In addition to authentication, the digital signature in both cases ensures a degree of nonrepudiation-that is, a digital signature makes it difficult for the signer to claim later not to have sent the email or the form.</p>
+
+<p>Client authentication is an essential element of network security within most intranets or extranets. The sections that follow contrast two forms of client authentication:</p>
+
+<ul>
+ <li><strong>Password-Based Authentication.</strong> Almost all server software permits client authentication by means of a name and password. For example, a server might require a user to type a name and password before granting access to the server. The server maintains a list of names and passwords; if a particular name is on the list, and if the user types the correct password, the server grants access.</li>
+ <li><strong>Certificate-Based Authentication.</strong> 基于证书的客户端身份验证是SSL协议的一部分. 客户端对随机生成的数据进行数字签名，并通过网络发送证书和签名数据. 服务器使用公钥密码技术验证签名并确认证书的有效性.</li>
+</ul>
+
+<h4 id="Password-Based_Authentication" name="Password-Based_Authentication">Password-Based Authentication</h4>
+
+<p>Figure 4 shows the basic steps involved in authenticating a client by means of a name and password. Figure 4 assumes the following:</p>
+
+<ul>
+ <li>The user has already decided to trust the server, either without authentication or on the basis of server authentication via SSL.</li>
+ <li>The user has requested a resource controlled by the server.</li>
+ <li>The server requires client authentication before permitting access to the requested resource.</li>
+</ul>
+
+<p><img alt="Figure 4. Using a Password to Authenticate a Client to a Server" class="internal" src="https://mdn.mozillademos.org/files/10319/01pswd.png" style="height: 189px; width: 451px;"></p>
+
+<p>These are the steps shown in Figure 4<span class="nowiki">:</span></p>
+
+<ol>
+ <li>In response to an authentication request from the server, the client displays a dialog box requesting the user's name and password for that server. The user must supply a name and password separately for each new server the user wishes to use during a work session.</li>
+ <li>The client sends the name and password across the network, either in the clear or over an encrypted SSL connection.</li>
+ <li>The server looks up the name and password in its local password database and, if they match, accepts them as evidence authenticating the user's identity.</li>
+ <li>The server determines whether the identified user is permitted to access the requested resource, and if so allows the client to access it.</li>
+</ol>
+
+<p>With this arrangement, the user must supply a new password for each server, and the administrator must keep track of the name and password for each user, typically on separate servers.</p>
+
+<p>Proper implementation does not store passwords in plaintext. Instead it concatenates the password with a random per-user value (so called "salt") and stores the hash value of the result along with the salt. This makes certain kinds of brute-force atacks more difficult.</p>
+
+<p>As shown in the next section, one of the advantages of certificate-based authentication is that it can be used to replace the first three steps in Figure 4 with a mechanism that allows the user to supply just one password (which is not sent across the network) and allows the administrator to control user authentication centrally.</p>
+
+<h4 id="Certificate-Based_Authentication" name="Certificate-Based_Authentication">Certificate-Based Authentication</h4>
+
+<p>图5显示了如何使用证书和SSL协议进行客户端身份验证. 为了向服务器验证用户身份，客户端对随机生成的数据进行数字签名，并通过网络发送证书和签名数据.在本讨论中，可以将与某些数据相关联的数字签名视为客户端向服务器提供的证据. 服务器根据此证据验证用户的身份.</p>
+
+<p>与图4一样，图5假设用户已经决定信任服务器并请求了资源，并且服务器在评估是否授予对请求的资源的访问权限的过程中请求了客户端身份验证.</p>
+
+<p><img alt="Figure 5. Using a Certificate to Authenticate a Client to a Server" class="internal" src="https://mdn.mozillademos.org/files/10321/02cert.png" style="height: 248px; width: 479px;"></p>
+
+<p>与图4所示的过程不同，图5所示的过程需要使用SSL. 图5还假设客户端有一个有效的证书，可以用来向服务器标识客户端. 基于证书的身份验证通常被认为比基于密码的身份验证更可取，因为它基于用户所拥有的（私钥）以及用户所知道的（保护私钥的密码）. 但是，需要注意的是，只有在未经授权的人员没有访问用户的机器或密码、设置了客户端软件的私钥数据库的密码以及设置软件以合理的频繁间隔请求密码的情况下，这两个假设才是真的.</p>
+
+<div class="note">基于密码的身份验证或基于证书的身份验证都不能解决与对单个计算机或密码的物理访问相关的安全问题. 公钥密码只能验证用于签名某些数据的私钥是否与证书中的公钥对应. 用户有责任保护机器的物理安全并对私钥密码保密.</div>
+
+<p>These are the steps shown in Figure 5<span class="nowiki">:</span></p>
+
+<ol>
+ <li>客户端软件（如Communicator）维护私钥数据库，这些私钥对应于为该客户端颁发的任何证书中发布的公钥. 客户端在给定会话期间第一次需要访问该数据库时（例如，用户第一次尝试访问需要基于证书的客户机身份验证的启用了SSL的服务器时），会请求该数据库的密码. 输入此密码一次后，用户在会话的其余部分不需要再次输入，即使在访问其他启用SSL的服务器时也是如此.</li>
+ <li>客户端解锁私钥数据库，检索用户证书的私钥，并使用该私钥对根据客户端和服务器的输入随机生成的一些数据进行数字签名. 这些数据和数字签名构成了私钥有效性的“证据”. 数字签名只能使用该私钥创建，并且可以使用对应的公钥针对已签名的数据进行验证，该数据对于SSL会话是唯一的.</li>
+ <li>客户端通过网络发送用户证书和证据（随机生成的经过数字签名的数据片段）.</li>
+ <li>服务器使用证书和证据来验证用户的身份. (For a detailed discussion of the way this works, see "<a href="/en-US/docs/Archive/Security/Introduction_to_SSL" title="en/Introduction_to_SSL">Introduction to SSL</a>.")</li>
+ <li>At this point the server may optionally perform other authentication tasks, such as checking that the certificate presented by the client is stored in the user's entry in an LDAP directory. The server then continues to evaluate whether the identified user is permitted to access the requested resource. This evaluation process can employ a variety of standard authorization mechanisms, potentially using additional information in an LDAP directory, company databases, and so on. If the result of the evaluation is positive, the server allows the client to access the requested resource.</li>
+</ol>
+
+<p>As you can see by comparing Figure 5 to Figure 4, certificates replace the authentication portion of the interaction between the client and the server. Instead of requiring a user to send passwords across the network throughout the day, single sign-on requires the user to enter the private-key database password just once, without sending it across the network. For the rest of the session, the client presents the user's certificate to authenticate the user to each new server it encounters. Existing authorization mechanisms based on the authenticated user identity are not affected.</p>
+
+<h3 id="How_Certificates_Are_Used" name="How_Certificates_Are_Used">证书应用</h3>
+
+<p>证书有一个目的：建立信任. 它们的使用取决于它们用于确保的信任类型. 某些类型的证书用于验证演示者的身份; 其他用于验证对象或项未被篡改.</p>
+
+<ul>
+ <li><a href="#SSL_Protocol">SSL Protocol</a></li>
+ <li><a href="#Signed_and_Encrypted_Email">Signed and Encrypted Email</a></li>
+ <li><a href="#Signle_Sign-On">Single Sign-On</a></li>
+ <li><a href="#Object_Signing">Object Signing</a></li>
+</ul>
+
+<h4 id="SSL_Protocol" name="SSL_Protocol">SSL Protocol</h4>
+
+<p>安全套接字层（SSL）协议是一组规则，用于管理服务器身份验证、客户端身份验证以及服务器和客户端之间的加密通信. SSL在Internet上广泛使用，特别是用于涉及交换机密信息（如信用卡号码）的交互.</p>
+
+<p>SSL至少需要一个服务器SSL证书. 作为初始“握手”过程的一部分，服务器向客户机提供其证书以验证服务器的身份. 身份验证过程使用公钥加密和数字签名来确认服务器实际上就是它声称的服务器. 一旦服务器经过身份验证，客户机和服务器就使用对称密钥加密技术（这是非常快速的），对它们在会话剩余时间内交换的所有信息进行加密，并检测可能发生的任何篡改.</p>
+
+<p>可以选择将服务器配置为需要客户端身份验证和服务器身份验证. 在这种情况下，在成功完成服务器身份验证之后，客户端还必须向服务器提供其证书，以便在建立加密的SSL会话之前验证客户端的身份.</p>
+
+<p>For an overview of client authentication over SSL and how it differs from password-based authentication, see "<a href="#Authentication_Confirms_an_Identity">Authentication Confirms an Identity</a>". For more detailed information about SSL, see "<a href="/en-US/docs/Archive/Security/Introduction_to_SSL" title="en/Introduction_to_SSL">Introduction to SSL</a>."</p>
+
+<h4 id="Signed_and_Encrypted_Email" name="Signed_and_Encrypted_Email">Signed and Encrypted Email</h4>
+
+<p>Some email programs support digitally signed and encrypted email using a widely accepted protocol known as Secure Multipurpose Internet Mail Extension (S/MIME). Using S/MIME to sign or encrypt email messages requires the sender of the message to have an S/MIME certificate.</p>
+
+<p>An email message that includes a digital signature provides some assurance that it was in fact sent by the person whose name appears in the message header, thus providing authentication of the sender. If the digital signature cannot be validated by the email software on the receiving end, the user will be alerted.</p>
+
+<p>The digital signature is unique to the message it accompanies. If the message received differs in any way from the message that was sent-even by the addition or deletion of a comma-the digital signature cannot be validated. Therefore, signed email also provides some assurance that the email has not been tampered with. As discussed at the beginning of this document, this kind of assurance is known as nonrepudiation. In other words, signed email makes it very difficult for the sender to deny having sent the message. This is important for many forms of business communication. (For information about the way digital signatures work, see "<a href="#Digital_Signatures">Digital Signatures</a>".)</p>
+
+<p>S/MIME also makes it possible to encrypt email messages. This is also important for some business users. However, using encryption for email requires careful planning. If the recipient of encrypted email messages loses his or her private key and does not have access to a backup copy of the key, for example, the encrypted messages can never be decrypted.</p>
+
+<h4 id="Single_Sign-On" name="Single_Sign-On">Single Sign-On</h4>
+
+<p>Network users are frequently required to remember multiple passwords for the various services they use. For example, a user might have to type a different password to log into the network, collect email, use directory services, use the corporate calendar program, and access various servers. Multiple passwords are an ongoing headache for both users and system administrators. Users have difficulty keeping track of different passwords, tend to choose poor ones, and tend to write them down in obvious places. Administrators must keep track of a separate password database on each server and deal with potential security problems related to the fact that passwords are sent over the network routinely and frequently.</p>
+
+<p>Solving this problem requires some way for a user to log in once, using a single password, and get authenticated access to all network resources that user is authorized to use-without sending any passwords over the network. This capability is known as <em>single sign-on.</em></p>
+
+<p>Both client SSL certificates and S/MIME certificates can play a significant role in a comprehensive single sign-on solution. For example, one form of single sign-on relies on SSL client authentication (see "<a href="#Certificate-Based_Authentication">Certificate-Based Authentication</a>"). A user can log in once, using a single password to the local client's private-key database, and get authenticated access to all SSL-enabled servers that user is authorized to use-without sending any passwords over the network. This approach simplifies access for users, because they don't need to enter passwords for each new server. It also simplifies network management, since administrators can control access by controlling lists of certificate authorities (CAs) rather than much longer lists of users and passwords.</p>
+
+<p>In addition to using certificates, a complete single-sign on solution must address the need to interoperate with enterprise systems, such as the underlying operating system, that rely on passwords or other forms of authentication.</p>
+
+<h4 id="Object_Signing" name="Object_Signing">Object Signing</h4>
+
+<p>通信器支持一组称为对象签名的工具和技术. 对象签名使用公钥加密的标准技术，使用户可以获得关于他们下载的代码的可靠信息，就像他们可以获得关于收缩包装软件的可靠信息一样.</p>
+
+<p>最重要的是，对象签名帮助用户和网络管理员实现有关通过内部网或Internet分发的软件的决策，例如，是否允许由给定实体签名的Java小程序在特定用户的计算机上使用特定的计算机功能.</p>
+
+<p>使用对象签名技术签名的“对象”可以是applet或其他Java代码、JavaScript脚本、插件或任何类型的文件. “签名”是数字签名. 签名对象及其签名通常存储在一个称为JAR文件的特殊文件中.</p>
+
+<p>希望使用对象签名技术对文件进行签名的软件开发人员和其他人员必须首先获得对象签名证书.</p>
+
+<h3 id="Contents_of_a_Certificate" name="Contents_of_a_Certificate">证书类型</h3>
+
+<p>常见的证书类型包括:</p>
+
+<ul>
+ <li><strong>Client SSL certificates.</strong> 用于通过SSL（客户端身份验证）将客户端标识到服务器. 通常，假定客户的身份与人类的身份相同，例如企业中的员工. See "<a href="#Certificate-Based_Authentication">Certificate-Based Authentication</a>" for a description of the way client SSL certificates are used for client authentication. Client SSL certificates can also be used as part of a single sign-on solution.</li>
+</ul>
+
+<dl>
+ <dt>示例：银行向客户提供一个客户端SSL证书，该证书允许银行的服务器识别该客户并授权访问该客户的帐户. 公司可能会给新员工一个客户端SSL证书，允许公司的服务器识别该员工并授权访问公司的服务器.</dt>
+</dl>
+
+<ul>
+ <li><strong>Server SSL certificates.</strong> 用于通过SSL（服务器身份验证）向客户端标识服务器. 服务器身份验证可以与客户端身份验证一起使用，也可以不使用客户端身份验证. 服务器身份验证是加密SSL会话的要求. For more information, see "<a href="#SSL_Protocol">SSL Protocol</a>".</li>
+</ul>
+
+<dl>
+ <dt><strong>Example:</strong> Internet sites that engage in electronic commerce (commonly known as e-commerce) usually support certificate-based server authentication, at a minimum, to establish an encrypted SSL session and to assure customers that they are dealing with a web site identified with a particular company. The encrypted SSL session ensures that personal information sent over the network, such as credit card numbers, cannot easily be intercepted.</dt>
+</dl>
+
+<ul>
+ <li><strong>S/MIME certificates.</strong> Used for signed and encrypted email. As with client SSL certificates, the identity of the client is typically assumed to be the same as the identity of a human being, such as an employee in an enterprise. A single certificate may be used as both an S/MIME certificate and an SSL certificate (see "<a href="#Signed_and_Encrypted_Email">Signed and Encrypted Email</a>"). S/MIME certificates can also be used as part of a single sign-on solution.</li>
+</ul>
+
+<dl>
+ <dt><strong>Examples:</strong> A company deploys combined S/MIME and SSL certificates solely for the purpose of authenticating employee identities, thus permitting signed email and client SSL authentication but not encrypted email. Another company issues S/MIME certificates solely for the purpose of both signing and encrypting email that deals with sensitive financial or legal matters.</dt>
+</dl>
+
+<ul>
+ <li><strong>Object-signing certificates.</strong> Used to identify signers of Java code, JavaScript scripts, or other signed files. For more information, see "<a href="#Object_Signing">Object Signing</a>".</li>
+</ul>
+
+<dl>
+ <dt><strong>Example:</strong> A software company signs software distributed over the Internet to provide users with some assurance that the software is a legitimate product of that company. Using certificates and digital signatures in this manner can also make it possible for users to identify and control the kind of access downloaded software has to their computers.</dt>
+</dl>
+
+<ul>
+ <li><strong>CA certificates.</strong> 用于识别CA. 客户端和服务器软件使用CA证书来确定哪些其他证书可以被信任. For more information, see "<a href="#How_CA_Certificates_Are_Used_to_Establish_Trust">How CA Certificates Are Used to Establish Trust</a>".</li>
+</ul>
+
+<dl>
+ <dt>示例：存储在Firefox中的CA证书决定了Firefox副本可以验证的其他证书。管理员可以通过控制存储在每个用户的Firefox副本中的CA证书来实现公司安全策略的某些方面。</dt>
+</dl>
+
+<h3 id="证书内容">证书内容</h3>
+
+<p>The contents of certificates are organized according to the X.509 v3 certificate specification, which has been recommended by the International Telecommunications Union (ITU), an international standards body, since 1988.</p>
+
+<p>Users don't usually need to be concerned about the exact contents of a certificate. However, system administrators working with certificates may need some familiarity with the information provided here.</p>
+
+<h4 id="Certificate_Data_Formats">Certificate Data Formats</h4>
+
+<p>Certificate requests and certificates can be created, stored, and installed in multiple formats: binary and text. All of these formats conform to X.509 standards. Three examples of binary formats are DER-encoded certificates, PKCS #7 certificate chains, and Netscape Certificate Sequence. Any of the binary formats can be imported in text form, which begins with the line:</p>
+
+<p><code>-----BEGIN CERTIFICATE-----</code></p>
+
+<p>Following this line is the certificate data, which can be in any of the binary formats described. This data should be base-64 encoded, as described by RFC 1113. The certificate information is followed by this line:</p>
+
+<p><code>-----END CERTIFICATE-----</code></p>
+
+<h4 id="Distinguished_Names" name="Distinguished_Names">Distinguished Names</h4>
+
+<p>An X.509 v3 certificate binds a distinguished name (DN) to a public key. A DN is a series of name-value pairs, such as <code>uid=doe</code>, that uniquely identify an entity-that is, the certificate <em>subject.</em></p>
+
+<p>For example, this might be a typical DN for an employee of Example Corp:</p>
+
+<pre class="eval">uid=doe,e=doe@<code>example.net</code>,cn=John Doe,o=Example Corp.,c=US
+</pre>
+
+<p>The abbreviations before each equal sign in this example have these meanings:</p>
+
+<ul>
+ <li><code>uid</code><span class="nowiki">: user ID</span></li>
+ <li><code>e</code><span class="nowiki">: email address</span></li>
+ <li><code>cn</code><span class="nowiki">: the user's common name</span></li>
+ <li><code>o</code><span class="nowiki">: organization</span></li>
+ <li><code>c</code><span class="nowiki">: country</span></li>
+</ul>
+
+<p>DNs may include a variety of other name-value pairs. They are used to identify both certificate subjects and entries in directories that support the Lightweight Directory Access Protocol (LDAP).</p>
+
+<p>The rules governing the construction of DNs can be quite complex and are beyond the scope of this document. For comprehensive information about DNs, see <em><a class="external" href="https://www.ietf.org/rfc/rfc1485.txt">A String Representation of Distinguished Names</a>]</em> at the following URL:</p>
+
+<pre class="eval"><a class="external" href="https://www.ietf.org/rfc/rfc1485.txt" rel="freelink">https://www.ietf.org/rfc/rfc1485.txt</a>
+</pre>
+
+<h4 id="A_Typical_Certificate" name="A_Typical_Certificate">A Typical Certificate</h4>
+
+<p>Every X.509 certificate consists of two sections:</p>
+
+<ul>
+ <li>The data section includes the following information:
+  <ul>
+   <li>The version number of the X.509 standard supported by the certificate.</li>
+   <li>The certificate's serial number. Every certificate issued by a CA has a serial number that is unique among the certificates issued by that CA.</li>
+   <li>Information about the user's public key, including the algorithm used and a representation of the key itself.</li>
+   <li>The DN of the CA that issued the certificate.</li>
+   <li>The period during which the certificate is valid (for example, between 1:00 p.m. on November 15, 1999 and 1:00 p.m. November 15, 2000)</li>
+   <li>The DN of the certificate subject (for example, in a client SSL certificate this would be the user's DN), also called the subject name.</li>
+   <li>Optional <em>certificate extensions,</em> which may provide additional data used by the client or server. For example, the certificate type extension indicates the type of certificate-that is, whether it is a client SSL certificate, a server SSL certificate, a certificate for signing email, and so on. Certificate extensions can also be used for a variety of other purposes.</li>
+  </ul>
+ </li>
+ <li>The signature section includes the following information:
+  <ul>
+   <li>The cryptographic algorithm, or cipher, used by the issuing CA to create its own digital signature.</li>
+   <li>The CA's digital signature, obtained by hashing all of the data in the certificate together and encrypting it with the CA's private key.</li>
+  </ul>
+ </li>
+</ul>
+
+<p>Here are the data and signature sections of a certificate in human-readable format:</p>
+
+<pre class="eval">Certificate:
+Data:
+ Version: v3 (0x2)
+ Serial Number: 3 (0x3)
+ Signature Algorithm: PKCS #1 MD5 With RSA Encryption
+ Issuer: OU=Ace Certificate Authority, O=Ace Industry, C=US
+ Validity:
+  Not Before: Fri Oct 17 18:36:25 1997
+  Not  After: Sun Oct 17 18:36:25 1999
+ Subject: CN=Jane Doe, OU=Finance, O=Ace Industry, C=US
+ Subject Public Key Info:
+  Algorithm: PKCS #1 RSA Encryption
+  Public Key:
+   Modulus:
+    00:ca:fa:79:98:8f:19:f8:d7:de:e4:49:80:48:e6:2a:2a:86:
+    ed:27:40:4d:86:b3:05:c0:01:bb:50:15:c9:de:dc:85:19:22:
+    43:7d:45:6d:71:4e:17:3d:f0:36:4b:5b:7f:a8:51:a3:a1:00:
+    98:ce:7f:47:50:2c:93:36:7c:01:6e:cb:89:06:41:72:b5:e9:
+    73:49:38:76:ef:b6:8f:ac:49:bb:63:0f:9b:ff:16:2a:e3:0e:
+    9d:3b:af:ce:9a:3e:48:65:de:96:61:d5:0a:11:2a:a2:80:b0:
+    7d:d8:99:cb:0c:99:34:c9:ab:25:06:a8:31:ad:8c:4b:aa:54:
+    91:f4:15
+   Public Exponent: 65537 (0x10001)
+  Extensions:
+   Identifier: Certificate Type
+    Critical: no
+    Certified Usage:
+     SSL Client
+   Identifier: Authority Key Identifier
+    Critical: no
+    Key Identifier:
+     f2:f2:06:59:90:18:47:51:f5:89:33:5a:31:7a:e6:5c:fb:36:
+     26:c9
+  Signature:
+   Algorithm: PKCS #1 MD5 With RSA Encryption
+   Signature:
+    6d:23:af:f3:d3:b6:7a:df:90:df:cd:7e:18:6c:01:69:8e:54:65:fc:06:
+    30:43:34:d1:63:1f:06:7d:c3:40:a8:2a:82:c1:a4:83:2a:fb:2e:8f:fb:
+    f0:6d:ff:75:a3:78:f7:52:47:46:62:97:1d:d9:c6:11:0a:02:a2:e0:cc:
+    2a:75:6c:8b:b6:9b:87:00:7d:7c:84:76:79:ba:f8:b4:d2:62:58:c3:c5:
+    b6:c1:43:ac:63:44:42:fd:af:c8:0f:2f:38:85:6d:d6:59:e8:41:42:a5:
+    4a:e5:26:38:ff:32:78:a1:38:f1:ed:dc:0d:31:d1:b0:6d:67:e9:46:a8:
+    d:c4
+</pre>
+
+<p>Here is the same certificate displayed in the 64-byte-encoded form interpreted by software:</p>
+
+<pre class="eval"><span class="nowiki">
+ -----BEGIN CERTIFICATE-----
+ MIICKzCCAZSgAwIBAgIBAzANBgkqhkiG9w0BAQQFADA3MQswCQYDVQQGEwJVUzER
+ MA8GA1UEChMITmV0c2NhcGUxFTATBgNVBAsTDFN1cHJpeWEncyBDQTAeFw05NzEw
+ MTgwMTM2MjVaFw05OTEwMTgwMTM2MjVaMEgxCzAJBgNVBAYTAlVTMREwDwYDVQQK
+ EwhOZXRzY2FwZTENMAsGA1UECxMEUHViczEXMBUGA1UEAxMOU3Vwcml5YSBTaGV0
+ dHkwgZ8wDQYJKoZIhvcNAQEFBQADgY0AMIGJAoGBAMr6eZiPGfjX3uRJgEjmKiqG
+ 7SdATYazBcABu1AVyd7chRkiQ31FbXFOGD3wNktbf6hRo6EAmM5/R1AskzZ8AW7L
+ iQZBcrXpc0k4du+2Q6xJu2MPm/8WKuMOnTuvzpo+SGXelmHVChEqooCwfdiZywyZ
+ NMmrJgaoMa2MS6pUkfQVAgMBAAGjNjA0MBEGCWCGSAGG+EIBAQQEAwIAgDAfBgNV
+ HSMEGDAWgBTy8gZZkBhHUfWJM1oxeuZc+zYmyTANBgkqhkiG9w0BAQQFAAOBgQBt
+ I6/z07Z635DfzX4XbAFpjlRl/AYwQzTSYx8GfcNAqCqCwaSDKvsuj/vwbf91o3j3
+ UkdGYpcd2cYRCgKi4MwqdWyLtpuHAH18hHZ5uvi00mJYw8W2wUOsY0RC/a/IDy84
+ hW3WWehBUqVK5SY4/zJ4oTjx7dwNMdGwbWfpRqjd1A==
+ -----END CERTIFICATE-----
+ </span>
+</pre>
+
+<h3 id="How_CA_Certificates_Are_Used_to_Establish_Trust" name="How_CA_Certificates_Are_Used_to_Establish_Trust">如何使用CA证书建立信任</h3>
+
+<p>证书颁发机构（CA）是验证身份并颁发证书的实体。它们可以是独立的第三方，也可以是运行自己的证书颁发服务器软件的组织。</p>
+
+<p>任何支持证书的客户端或服务器软件都维护一组受信任的CA证书。 这些CA证书确定软件可以验证哪些其他证书，换句话说，软件可以信任哪些证书的颁发者。 在最简单的情况下，软件只能验证由其中一个拥有证书的CA颁发的证书。 受信任的CA证书也可能是CA证书链的一部分，每个证书链都是由其上面的CA在证书层次结构中颁发的。</p>
+
+<p>以下各节说明了证书层次结构和证书链如何确定软件可以信任哪些证书。</p>
+
+<ul>
+ <li><a href="#CA_Hierarchies">CA Hierarchies</a></li>
+ <li><a href="#Certificate_Chains">Certificate Chains</a></li>
+ <li><a href="#Verifying_a_Certificate_Chain">Verifying a Certificate Chain</a></li>
+</ul>
+
+<h4 id="CA_Hierarchies" name="CA_Hierarchies">CA Hierarchies</h4>
+
+<p>在大型组织中，可以将颁发证书的责任委派给多个不同的证书颁发机构。 例如，所需的证书数量可能太多，单个CA无法维护； 不同的组织单元可能有不同的政策要求；或者，对于CA来说，其实际位置可能与它向其颁发证书的人位于同一地理区域中是很重要的。</p>
+
+<p>可以将颁发证书的职责委托给下级CA。X.509标准包括一个用于建立如图6所示的CA层次结构的模型。</p>
+
+<p><img alt="Figure 6. Example of a Hierarchy of Certificate Authorities" class="internal" src="https://mdn.mozillademos.org/files/10309/14HIER.png" style="height: 317px; width: 394px;"></p>
+
+<p>在这个模型中，根CA位于层次结构的顶部。 根CA的证书是一个自签名证书：也就是说，该证书由证书标识的根CA所在的同一实体进行数字签名。 直接隶属于根CA的CA具有由根CA签名的CA证书。 层次结构中下级CA下的CA的CA证书由上级下级CA签名。</p>
+
+<p>组织在建立CA层次结构方面有很大的灵活性。 图6只显示了一个示例；还有许多其他安排是可能的。</p>
+
+<h4 id="Certificate_Chains" name="Certificate_Chains">Certificate Chains</h4>
+
+<p>CA层次结构反映在证书链中。 证书链是由连续的ca颁发的一系列证书。图7显示了一个证书链，从通过两个从属CA证书标识某个实体的证书到根CA的CA证书（基于图6所示的CA层次结构）。</p>
+
+<p><img alt="Figure 7. Example of a Certificate Chain" class="internal" src="https://mdn.mozillademos.org/files/10311/15chn.png" style="height: 435px; width: 439px;"></p>
+
+<p>证书链跟踪证书从层次结构中的分支到层次结构的根的路径。 I在证书链中，会发生以下情况：</p>
+
+<ul>
+ <li>每个证书后面都有其颁发者的证书。</li>
+ <li>每个证书都包含该证书颁发者的名称（DN），该名称与链中下一个证书的使用者名称相同。</li>
+</ul>
+
+<p>在图7中，工程CA证书包含颁发该证书的CA（即USA CA）的DN。 USA CA的DN也是链中下一个证书的使用者名称。</p>
+
+<ul>
+ <li>每个证书都用其颁发者的私钥签名。签名可以使用颁发者证书中的公钥进行验证，该证书是链中的下一个证书。</li>
+</ul>
+
+<p>在图7中，美国CA证书中的公钥可用于验证美国CA在工程CA证书上的数字签名。</p>
+
+<h4 id="Verifying_a_Certificate_Chain" name="Verifying_a_Certificate_Chain">Verifying a Certificate Chain</h4>
+
+<p>Certificate chain verification is the process of making sure a given certificate chain is well-formed, valid, properly signed, and trustworthy. Red Hat software uses the following procedure for forming and verifying a certificate chain, starting with the certificate being presented for authentication:</p>
+
+<ol>
+ <li>The certificate validity period is checked against the current time provided by the verifier's system clock.</li>
+ <li>The issuer's certificate is located. The source can be either the verifier's local certificate database (on that client or server) or the certificate chain provided by the subject (for example, over an SSL connection).</li>
+ <li>The certificate signature is verified using the public key in the issuer's certificate.</li>
+ <li>If the issuer's certificate is trusted by the verifier in the verifier's certificate database, verification stops successfully here. Otherwise, the issuer's certificate is checked to make sure it contains the appropriate subordinate CA indication in the Red Hat certificate type extension, and chain verification returns to step 1 to start again, but with this new certificate. Figure 8 presents an example of this process.</li>
+</ol>
+
+<p><img alt="Figure 8. Verifying a Certificate Chain All the Way to the Root CA" class="internal" src="https://mdn.mozillademos.org/files/10313/16chver.png" style="height: 412px; width: 460px;"></p>
+
+<p>Figure 8 shows what happens when only Root CA is included in the verifier's local database. If a certificate for one of the intermediate CAs shown in Figure 8, such as Engineering CA, is found in the verifier's local database, verification stops with that certificate, as shown in Figure 9.</p>
+
+<p><img alt="Figure 9. Verifying a Certificate Chain to an Intermediate CA" class="internal" src="https://mdn.mozillademos.org/files/10315/19chver.png" style="height: 233px; width: 446px;"></p>
+
+<p>Expired validity dates, an invalid signature, or the absence of a certificate for the issuing CA at any point in the certificate chain causes authentication to fail. For example, Figure 10 shows how verification fails if neither the Root CA certificate nor any of the intermediate CA certificates are included in the verifier's local database.</p>
+
+<p><img alt="Figure 10. A Certificate Chain That Can't Be Verified" class="internal" src="https://mdn.mozillademos.org/files/10317/20chver.png" style="height: 406px; width: 456px;"></p>
+
+<p>For general information about the way digital signatures work, see "<a href="#Digital_Signatures">Digital Signatures</a>". For a more detailed description of the signature verification process in the context of SSL client and server authentication, see "<a href="/en-US/docs/Archive/Security/Introduction_to_SSL" title="en/Introduction_to_SSL">Introduction to SSL</a>."</p>
+
+<h2 id="Managing_Certificates" name="Managing_Certificates">Managing Certificates</h2>
+
+<p>从加密电子邮件到访问网站，许多应用程序都使用证书。 证书的生命周期分为两个主要阶段：颁发证书的时间点（颁发和注册）和证书不再有效的时间段（续订或吊销）。 还有一些方法可以在证书的生命周期中对其进行管理。 使有关证书的信息可用于其他应用程序是发布证书，然后备份密钥对，以便在证书丢失时可以恢复。</p>
+
+<ul>
+ <li><a href="#Issuing_Certificates">颁发证书</a></li>
+ <li><a href="#Certificates_and_the_LDAP_Directory">证书和LDAP目录</a></li>
+ <li><a href="#Key_Management">密钥管理</a></li>
+ <li><a href="#Renewing_and_Revoking_Certificates">更新和撤销证书</a></li>
+ <li><a href="#Registration_Authorities">Registration Authorities</a></li>
+</ul>
+
+<h3 id="Issuing_Certificates" name="Issuing_Certificates">颁发证书</h3>
+
+<p>颁发证书的过程取决于颁发证书的证书颁发机构及其使用目的。 签发非数字身份证明的程序也有类似的变化。 例如，如果你想从加州机动车辆管理局（Department of Motor Vehicles in California）拿到一张普通身份证（而不是驾照），要求很简单：你需要出示一些身份证明，比如一张写有你地址的公用事业账单和一张学生身份证。 如果你想获得一张正规的驾驶执照，你还需要参加一次考试——第一次拿到驾照时要参加一次驾驶考试，续签驾照时要参加一次笔试。 如果你想得到一个18轮的商业许可证，要求要严格得多。 如果您居住在其他州或国家，对各种许可证的要求将有所不同。</p>
+
+<p>同样，不同的ca对于颁发不同类型的证书有不同的过程。 在某些情况下，唯一的要求可能是你的电子邮件地址。在其他情况下，您的UNIX或Windows登录名和密码可能就足够了。 在比额表的另一端，对于证明可以批准大额支出或作出其他敏感决定的人的证书，签发过程可能需要公证文件、背景调查和个人面谈。</p>
+
+<p>根据组织的策略，颁发证书的过程可以从对用户完全透明到需要大量用户参与和复杂的过程不等。 一般来说，颁发证书的过程应该高度灵活，因此组织可以根据其不断变化的需要对其进行调整。</p>
+
+<p>颁发证书是可以由单独的注册机构处理的几种管理任务之一。</p>
+
+<h3 id="Certificates_and_the_LDAP_Directory" name="Certificates_and_the_LDAP_Directory">证书和LDAP目录</h3>
+
+<p>The Lightweight Directory Access Protocol (LDAP) for accessing directory services supports great flexibility in the management of certificates within an organization. System administrators can store much of the information required to manage certificates in an LDAP-compliant directory. For example, a CA can use information in a directory to prepopulate a certificate with a new employee's legal name and other information. The CA can leverage directory information in other ways to issue certificates one at a time or in bulk, using a range of different identification techniques depending on the security policies of a given organization. Other routine management tasks, such as key management and renewing and revoking certificates, can be partially or fully automated with the aid of the directory.</p>
+
+<p>Information stored in the directory can also be used with certificates to control access to various network resources by different users or groups. Issuing certificates and other certificate management tasks can thus be an integral part of user and group management.</p>
+
+<p>In general, high-performance directory services are an essential ingredient of any enterprise certificate management strategy.</p>
+
+<h3 id="Key_Management" name="Key_Management">密钥管理</h3>
+
+<p>在颁发证书之前，必须生成证书中包含的公钥和相应的私钥。 有时，为一个人颁发一个证书和密钥对（用于签名操作）和另一个证书和密钥对（用于加密操作）可能是有用的。单独的签名和加密证书使得只在本地计算机上保留私有签名密钥成为可能，从而提供最大的不可否认性，并在某个中心位置备份私有加密密钥，在用户丢失原始密钥或离开公司时可以在该位置检索该密钥。</p>
+
+<p>密钥可以由客户端软件生成，也可以由CA集中生成，并通过LDAP目录分发给用户。 在本地密钥生成和集中密钥生成之间进行选择时需要权衡。例如，本地密钥生成提供了最大的不可否认性，但可能需要用户更多地参与发布过程。灵活的密钥管理能力对于大多数组织来说是必不可少的。</p>
+
+<p>密钥恢复，或者在精心定义的条件下检索加密密钥备份的能力，可能是证书管理的关键部分（取决于组织如何使用证书）。Key recovery schemes usually involve an <em>m of n</em> mechanism: for example, <em>m</em> of <em>n</em> managers within an organization might have to agree, and each contribute a special code or key of their own, before a particular person's encryption key can be recovered. 这种机制确保在恢复加密密钥之前，必须有几个授权人员同意。</p>
+
+<h3 id="Renewing_and_Revoking_Certificates" name="Renewing_and_Revoking_Certificates">Renewing and Revoking Certificates</h3>
+
+<p>Like a driver's license, a certificate specifies a period of time during which it is valid. Attempts to use a certificate for authentication before or after its validity period will fail. Therefore, mechanisms for managing certificate renewal are essential for any certificate management strategy. For example, an administrator may wish to be notified automatically when a certificate is about to expire, so that an appropriate renewal process can be completed in plenty of time without causing the certificate's subject any inconvenience. The renewal process may involve reusing the same public-private key pair or issuing a new one.</p>
+
+<p>A driver's license can be suspended even if it has not expired-for example, as punishment for a serious driving offense. Similarly, it's sometimes necessary to revoke a certificate before it has expired-for example, if an employee leaves a company or moves to a new job within the company.</p>
+
+<p>Certificate revocation can be handled in several different ways. For some organizations, it may be sufficient to set up servers so that the authentication process includes checking the directory for the presence of the certificate being presented. When an administrator revokes a certificate, the certificate can be automatically removed from the directory, and subsequent authentication attempts with that certificate will fail even though the certificate remains valid in every other respect. Another approach involves publishing a certificate revocation list (CRL)-that is, a list of revoked certificates-to the directory at regular intervals and checking the list as part of the authentication process. For some organizations, it may be preferable to check directly with the issuing CA each time a certificate is presented for authentication. This procedure is sometimes called real-time status checking.</p>
+
+<h3 id="Registration_Authorities" name="Registration_Authorities">Registration Authorities</h3>
+
+<p>由证书标识的实体（有时称为最终实体）和ca之间的交互是证书管理的一个重要部分。 这些交互包括证书注册、证书检索、证书续订、证书吊销以及密钥备份和恢复等操作。一般来说，CA必须能够在响应请求之前验证最终实体的身份。 此外，有些请求需要经过授权的管理员或经理的批准才能提供服务。</p>
+
+<p>如前所述，不同的ca在颁发证书之前用于验证身份的方法可能有很大的不同，这取决于证书的使用组织和目的。 为了提供最大的操作灵活性，与终端实体的交互可以与CA的其他功能分离，并由一个称为注册机构（RA）的单独服务处理。</p>
+
+<p>An RA acts as a front end to a CA by receiving end entity requests, authenticating them, and forwarding them to the CA. After receiving a response from the CA, the RA notifies the end entity of the results. RAs can be helpful in scaling an PKI across different departments, geographical areas, or other operational units with varying policies and authentication requirements.</p>
+
+<div class="originaldocinfo">
+<h3 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h3>
+
+<ul>
+ <li>Author(s): Ella Deon Lackey</li>
+ <li>Last Updated Date: 2012</li>
+ <li>Copyright Information: © 2012 Red Hat, Inc.</li>
+ <li>Link: <a href="https://access.redhat.com/documentation/en-US/Red_Hat_Certificate_System_Common_Criteria_Certification/8.1/html/Deploy_and_Install_Guide/index.html">Red Hat Certificate System Common Criteria Certification 8.1: Deployment, Planning, and Installation</a></li>
+</ul>
+</div>

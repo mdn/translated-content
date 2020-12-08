@@ -1,0 +1,122 @@
+---
+title: Focus et Selection
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Focus_et_Selection
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Focus_and_Selection
+---
+<p> </p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Raccourcis_clavier" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Commandes">Suivant  »</a></p>
+</div>
+<p>Cette section va décrire comment manipuler le focus et la sélection des éléments.</p>
+<h3 id=".C3.89l.C3.A9ments_focalis.C3.A9s" name=".C3.89l.C3.A9ments_focalis.C3.A9s">Éléments focalisés</h3>
+<p>L'élément focalisé est l'élément qui reçoit les événements entrants. S'il y a trois champs de saisie sur une fenêtre, celui qui détient le focus est celui dans lequel l'utilisateur peut taper du texte. Un seul élément à la fois peut détenir le focus.</p>
+<p>L'utilisateur peut changer le focus en cliquant sur un élément avec la souris ou en appuyant sur la touche <code>Tab</code> (tabulation). Lorsque la touche tabulation est appuyée, le focus passe à l'élément suivant. Pour revenir en arrière, il suffit d'appuyer sur les touches <code>Maj</code> (shift) et <code>Tab</code> simultanément.</p>
+<h4 id="R.C3.A9arrangement_de_l.27ordre_des_tabulations" name="R.C3.A9arrangement_de_l.27ordre_des_tabulations">Réarrangement de l'ordre des tabulations</h4>
+<p>Vous pouvez changer l'ordre dans lequel les éléments seront focalisés quand l'utilisateur appuiera sur la touche <code>Tab</code> en ajoutant un attribut <code id="a-tabindex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/tabindex">tabindex</a></code> à un élément. Cet attribut doit être renseigné avec un nombre. Lorsque l'utilisateur appuiera sur la touche <code>Tab</code>, le focus sera donné à l'élément ayant l'index de tabulation consécutif le plus haut. Cela implique que vous pouvez ordonner les éléments en définissant des indices pour séquencer les éléments. Toutefois, vous n'aurez normalement pas à définir l'attribut <code id="a-tabindex"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/tabindex">tabindex</a></code>. Dans ce cas, un appui sur la touche tabulation donnera le focus à l'élément suivant affiché. Vous avez seulement besoin de définir des indices de tabulation si vous voulez utiliser un ordre différent. Voici un exemple :</p>
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_1.xul">Voir</a></p>
+<pre>&lt;button label="Bouton 1" tabindex="2"/&gt;
+&lt;button label="Bouton 2" tabindex="1"/&gt;
+&lt;button label="Bouton 3" tabindex="3"/&gt;
+</pre>
+<h4 id="L.27.C3.A9v.C3.A9nement_focus" name="L.27.C3.A9v.C3.A9nement_focus">L'événement focus</h4>
+<p>L'événement 'focus' est utilisé pour réagir lorsqu'un élément obtient le focus. L'événement 'blur' est utilisé pour réagir lorsqu'un un élément perd le focus. Vous pouvez réagir aux changements de focus en ajoutant un attribut <code><a href="/fr/DOM/element.onfocus" title="fr/DOM/element.onfocus">onfocus</a></code> ou <code><a href="/fr/DOM/element.onblur" title="fr/DOM/element.onblur">onblur</a></code> à un élément. Ils fonctionnent de la même façon que leurs homologues HTML. Vous pouvez utiliser ces événements pour mettre un élément en surbrillance ou afficher un texte dans la barre d'état. L'exemple suivant peut s'appliquer à une fonction de gestion des événements de focus.</p>
+<p><span id="Exemple_2"><a id="Exemple_2"></a><strong>Exemple 2</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_2.xul">Voir</a></p>
+<pre>&lt;script&gt;
+
+function displayFocus(){
+  var elem=document.getElementById('sbar');
+  elem.setAttribute('value','Entrez votre numéro de téléphone.');
+}
+
+&lt;/script&gt;
+
+&lt;textbox id="tbox1"/&gt;
+&lt;textbox id="tbox2" onfocus="displayFocus();"/&gt;
+&lt;description id="sbar" value=""/&gt;
+</pre>
+<p>Quand l'événement 'focus' est déclenché, il va appeler la fonction <code>displayFocus</code>. Cette fonction va changer la valeur du libellé texte. Nous pourrions développer cet exemple pour effacer le texte quand l'événement 'blur' a lieu. Généralement, vous utiliserez les événements focus et blur pour mettre à jour certaines parties de votre interface, quand l'utilisateur sélectionne des éléments. Par exemple, vous pouvez mettre à jour un total quand l'utilisateur entre des valeurs dans d'autres champs, ou utiliser les événements de focus pour vérifier certaines valeurs. N'affichez pas de messages d'alerte pendant un événement focus ou blur, car ils pourraient distraire l'utilisateur et ils dégradent le design de l'interface.</p>
+<p>Vous pouvez aussi ajouter dynamiquement des gestionnaires d'événements en utilisant la fonction DOM <code><a href="/fr/DOM/element.addEventListener" title="fr/DOM/element.addEventListener">addEventListener</a></code>. Vous pouvez l'utiliser pour n'importe quel élément et type d'événement. Elle prend trois paramètres : le type d'événement, une fonction à exécuter quand l'événement est produit et un booléen indiquant la phase de capture de l'événement.</p>
+<h4 id="Obtention_de_l.27.C3.A9l.C3.A9ment_actuellement_focalis.C3.A9" name="Obtention_de_l.27.C3.A9l.C3.A9ment_actuellement_focalis.C3.A9">Obtention de l'élément actuellement focalisé</h4>
+<p>L'élément ayant le focus est pris en charge par un objet appelé « répartiteur de commandes », dont il ne peut y avoir qu'une instance par fenêtre. Le répartiteur de commandes garde la trace de l'objet qui a le focus pendant que l'utilisateur se sert de l'interface. Le répartiteur de commandes a d'autres rôles, qui seront abordés <a href="/fr/Tutoriel_XUL/Commandes" title="fr/Tutoriel_XUL/Commandes">plus tard dans la section des commandes</a>. Pour le moment, nous allons nous intéresser à quelques fonctions relatives au focus du répartiteur de commandes.</p>
+<p>Vous pouvez récupérer le répartiteur de commandes d'une fenêtre en utilisant la propriété <code>commandDispatcher</code> du document. À partir de là, vous pouvez obtenir l'élément focalisé avec la propriété <code>focusedElement</code> du répartiteur. L'exemple ci-dessous illustre ce cas.</p>
+<p><span id="Exemple_3"><a id="Exemple_3"></a><strong>Exemple 3</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_3.xul">Voir</a></p>
+<pre>&lt;window id="focus-example" title="Exemple Focus"
+        onload="init();"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;script&gt;
+function init(){
+  addEventListener("focus",setFocusedElement,true);
+}
+
+function setFocusedElement(){
+  var focused = document.commandDispatcher.focusedElement;
+  document.getElementById("focused").value = focused.tagName;
+}
+&lt;/script&gt;
+
+&lt;hbox&gt;
+  &lt;label control="username" value="Nom d'utilisateur:"/&gt;
+  &lt;textbox id="username"/&gt;
+&lt;/hbox&gt;
+
+&lt;button label="Bonjour"/&gt;
+&lt;checkbox label="Se souvenir de ce choix"/&gt;
+
+&lt;label id="focused" value="-pas de focus-"/&gt;
+
+&lt;/window&gt;
+</pre>
+<p>Dans cet exemple, un gestionnaire d'événement de focus est attaché à la fenêtre. Nous voulons utiliser un gestionnaire de capture d'événements, donc la méthode <code><a href="/fr/DOM/element.addEventListener" title="fr/DOM/element.addEventListener">addEventListener</a></code> doit être utilisée. Elle associe un gestionnaire de capture d'événements à la fenêtre qui appellera la méthode <code>setFocusedElement</code>. Cette méthode récupère l'élément focalisé depuis le répartiteur de commandes et modifie un libellé avec le nom de sa balise. Quand l'élément focalisé change, le libellé montre le nom de l'élément.</p>
+<p>Plusieurs choses sont à noter :</p>
+<ul> <li>Premièrement, quand le champ de saisie est focalisé, le nom de la balise est 'html:input', et non 'textbox' comme on aurait pu s'y attendre. C'est parce que les champs de saisie XUL sont implémentés avec le composant HTML 'input', donc l'événement focus est en fait reçu pour cet élément.</li> <li>Deuxièmement, un clic sur le libellé du champ de saisie donne le focus au champ de saisie. C'est parce que le libellé possède un attribut <code id="a-control"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/control">control</a></code> pointant vers l'id du champ de saisie.</li> <li>Enfin, l'autre libellé qui affiche la propriété nom n'a pas d'attribut <code id="a-control"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/control">control</a></code>, donc un clic dessus n'affecte pas l'élément focalisé. Seuls les éléments focalisables peuvent être focalisés.</li>
+</ul>
+<h4 id="Rendre_un_libell.C3.A9_focalisable" name="Rendre_un_libell.C3.A9_focalisable">Rendre un libellé focalisable</h4>
+<p>Si vous créez <a href="/fr/Tutoriel_XUL/Introduction_à_XBL" title="fr/Tutoriel_XUL/Introduction_à_XBL">des éléments personnalisés</a>, vous pouvez décider si un élément peut prendre le focus ou non. Il vous suffit d'utiliser la propriété de style spéciale <code>-moz-user-focus</code>. Cette propriété détermine si un élément peut être focalisé ou non. Par exemple, vous pouvez rendre un libellé focalisable, comme dans l'exemple ci-dessous.</p>
+<p><span id="Exemple_4"><a id="Exemple_4"></a><strong>Exemple 4</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_4.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_4.xul">Voir</a></p>
+<pre>&lt;label id="focused" style="-moz-user-focus: normal;"
+      onkeypress="alert('Étiquette focalisée');" value="Focalise moi"/&gt;
+</pre>
+<p>La propriété de style est réglée à 'normal'. Vous pouvez aussi la définir à 'ignore' pour désactiver le focus pour un élément. Toutefois, elle ne doit pas être utilisée pour désactiver un élément ; l'attribut ou la propriété <code id="a-disabled"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/disabled">disabled</a></code> doit être utilisée dans ce cas, car elle a été conçue pour. Dans l'exemple, une fois le libellé focalisé, il peut réagir aux événements du clavier. Évidemment, le libellé ne donne aucune indication sur son focus, car il n'est normalement pas prévue pour cet usage.</p>
+<h4 id="Changer_le_focus" name="Changer_le_focus">Changer le focus</h4>
+<p>Il existe plusieurs façons de changer d'élément focalisé. La plus simple est d'appeler la méthode <code><a href="/fr/DOM/element.focus" title="fr/DOM/element.focus">focus</a></code> de l'élément XUL que vous voulez focaliser. La méthode <code><a href="/fr/DOM/element.blur" title="fr/DOM/element.blur">blur</a></code> peut être employée afin d'enlever le focus d'un élément. L'exemple suivant met en pratique ces principes :</p>
+<p><span id="Exemple_5"><a id="Exemple_5"></a><strong>Exemple 5</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_5.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_5.xul">Voir</a></p>
+<pre>&lt;textbox id="addr"/&gt;
+
+&lt;button label="Focus" oncommand="document.getElementById('addr').focus()"/&gt;
+</pre>
+<p>Vous pouvez aussi utiliser les méthodes <code>advanceFocus</code> et <code>rewindFocus</code> du répartiteur de commandes. Ces méthodes changent le focus respectivement vers l'élément suivant ou précédent de la séquence de tabulation. Elles correspondent aux actions réalisées lorsque l'utilisateur appuie sur <code>Tab</code> ou <code>Maj</code>+<code>Tab</code>.</p>
+<p>Pour les champs de saisie, un attribut spécial, <code id="a-focused"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/focused">focused</a></code> est ajouté quand l'élément obtient le focus. Vous pouvez vérifier la présence de cet attribut pour déterminer si l'élément a le focus, soit depuis un script, soit depuis une feuille de styles. Il aura la valeur 'true' si le champ de saisie a le focus, et le cas échéant, l'attribut ne sera pas présent.</p>
+<p>Supposons que vous souhaitez déplacer le focus vers le prochain emplacement connu par le navigateur. pour y arriver, un utilisateur va typiquement appuyer sur la touche <code>Tab</code>. Vous pouvez faire la même chose dès lors que vous disposez d'un document de navigation XUL en faisant :</p>
+<pre>   document.commandDispatcher.advanceFocus();
+</pre>
+<p>En fait, l'objet <code>commandDispatcher</code> implémente simplement l'interface <a href="/fr/Interfaces" title="fr/Interfaces">nsIDOMXULCommandDispatcher</a>. D'autres fonctions peuvent également vous intéressez si vous manipulez des focus.</p>
+<h4 id="Comportements_sp.C3.A9cifiques_de_plate-forme" name="Comportements_sp.C3.A9cifiques_de_plate-forme">Comportements spécifiques de plate-forme</h4>
+<dl> <dt>Mac OS X </dt> <dd>Il existe une préférence appelée « Full Keyboard Access » (FKA - Accès au clavier complet). XUL respecte ce mécasnisme. Cela signifie que si la préférence FKA est sur 'off', seuls les champs de saisie, les listes et les arbres peuvent recevoir le focus au clavier, ainsi que vos scripts utilisant <code>focus()</code>.</dd>
+</dl>
+<h3 id="Gestion_des_modifications_de_texte" name="Gestion_des_modifications_de_texte">Gestion des modifications de texte</h3>
+<p>Deux événements peuvent être utilisés lorsque l'utilisateur modifie la le contenu d'un champ de saisie. Naturellement, ces événements seront uniquement transmis au champ de saisie ayant le focus.</p>
+<ul> <li>L'événement 'input' est transmis chaque fois que le contenu du champ est modifié. La nouvelle valeur sera différente de l'ancienne. Vous devriez utiliser cet événement au lieu d'utiliser les événements clavier, car certaines touches, par exemple <code>Maj</code>, ne modifient pas la valeur. De plus, l'événement 'input' ne se déclenche pas si une touche est enfoncée et s'il y a déjà plus de caractères dans le champ de saisie qu'il ne peut en contenir.</li> <li>L'événement 'change' est similaire dans le sens où il est transmis seulement lorsque le champ est modifié. Cependant, cet événement n'est déclenché qu'au moment où le champ de saisie perd le focus, et seulement si son contenu a été modifié.</li>
+</ul>
+<h3 id="S.C3.A9lection_de_texte" name="S.C3.A9lection_de_texte">Sélection de texte</h3>
+<p>Lorsque vous travaillez avec un champ de saisie, vous pouvez récupérer uniquement le texte que l'utilisateur a sélectionné. Ou alors vous pouvez changer la sélection.</p>
+<p>Les champs de saisie XUL offrent la possibilité de récupérer et de modifier une sélection. La plus simple et de sélectionner tout le texte du champ. Cela implique l'utilisation de la méthode <code>select</code> du champ de saisie.</p>
+<pre>tbox.select();</pre>
+<p>Toutefois, vous pouvez aussi sélectionner seulement une partie du texte. Il vous suffit d'utiliser la fonction <code>setSelectionRange</code>. Elle prend deux paramètres, le premier représente le caractère de départ et le second le caractère suivant le dernier que vous voulez sélectionner. Les valeurs commencent à zéro, donc le premier caractère est indicé à '0', le second à '1' et ainsi de suite.</p>
+<pre>tbox.setSelectionRange(4,8);</pre>
+<p>Cet exemple va sélectionner le cinquième caractère affiché, ainsi que le sixième, le septième et le huitième. S'il n'y avait que six caractères présents dans le champ, seuls le cinquième et le sixième auraient été sélectionnés. Aucune erreur ne serait signalée.</p>
+<p>Si vous utilisez la même valeur pour les deux paramètres, le début et la fin de la sélection changent pour la même position. Le résultat revient à changer la position du curseur dans le champ de saisie. Par exemple, la ligne ci-dessous peut être utilisée pour ramener le curseur au début du texte.</p>
+<pre>tbox.setSelectionRange(0,0);</pre>
+<p>Vous pouvez récupérer la sélection en cours en utilisant les propriétés <code>selectionStart</code> et <code>selectionEnd</code>. Ces propriétés définissent respectivement le début et la fin de la sélection. Si les deux sont définies à la même valeur, aucun texte n'est sélectionné, mais les valeurs représentent la position du curseur. Une fois que vous avez les valeurs de début et de fin, vous pouvez récupérer la section de chaîne du texte.</p>
+<p>Vous pouvez récupérer et modifier le contenu du champ de saisie en utilisant la propriété <code>value</code>.</p>
+<p>Une autre propriété utile des champs de saisie est la propriété <code>textLength</code> qui contient le nombre total de caractères dans le champ.</p>
+<hr>
+<p>Dans la prochaine section, nous découvrirons comment utiliser les commandes.</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Raccourcis_clavier" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Commandes">Suivant  »</a></p>
+</div>
+<p><span class="comment">Interwiki</span></p>

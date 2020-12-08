@@ -1,0 +1,177 @@
+---
+title: 创建一个皮肤
+slug: Mozilla/Tech/XUL/Tutorial/Creating_a_Skin
+translation_of: Archive/Mozilla/XUL/Tutorial/Creating_a_Skin
+---
+<p>本节讲述如何创建一个简单的皮肤，简单起见，我们只将其应用于查找文件对话框。</p>
+
+<h3 id="A_Simple_Skin" name="A_Simple_Skin">一个简单的皮肤。</h3>
+
+<p>下图是当前的查找文件对话框的样子。我们将创建一个应用于其上的皮肤。当然，一个皮肤可以应用于任何程序，但是当我们只关注于文件查找对话框时，事情就回简单些。因此我们只修改findfile.css 而 不修改global.css 文件。本节假设你正在使用经典的皮肤。你可能希望再工作之前留有一个原来皮肤的备份。</p>
+
+<p><img alt="Image:cskin1.jpg"></p>
+
+<p>你需要再用户皮肤中创建文件'findfile.css' 。或者你可以临时把他放在内容目录中并用样式表指令引用。你也可以直接修改当前的findfile.css文件，看看他会变的怎样，或者你可以创建一个用户皮肤并连接到其上。</p>
+
+<h4 id="Creating_a_Custom_Skin_Package" name="Creating_a_Custom_Skin_Package">创建用户皮肤包</h4>
+
+<p>创建皮肤，步骤如下：（如果使用火狐1.5或以上，参见 <a href="/en/XUL_Tutorial/Manifest_Files" title="en/XUL_Tutorial/Manifest_Files">配置文件</a> 代替以下步骤）</p>
+
+<ol>
+ <li>创建一个放置皮肤文件的文件夹。</li>
+ <li>从经典或现代皮肤文件夹中复制配置文件 (contents.rdf) 到这个新建的文件夹。</li>
+ <li>修改配置文件引用你的皮肤。比如：将 'classic/1.0' 改为 'blueswayedshoes/1.0'.</li>
+ <li>在文件‘chrome/installed-chrome.txt’ 中增加如下一行： <code><a class="external" href="skin,install,url,file:///stuff/blueswayedshoes/" rel="freelink">skin,install,url,file:///stuff/blueswayedshoes/</a></code> 其中最后一部分是你现在创建的目录。务必在最后加一个斜杠。</li>
+</ol>
+
+<p>把文件findfile.css 复制到新目录。我们将使用它作为新皮肤的基础。我们可以使用 '<a class="external" rel="freelink">chrome://findfile/skin/findfile.css'来引用它</a>。</p>
+
+<h4 id="Adding_Style_Rules" name="Adding_Style_Rules">添加样式规则</h4>
+
+<p>首先决定要做怎样的改变。我们会修改颜色、改变按钮样式、稍微改变间隔，让我们从菜单、工具栏、标签面板开始。</p>
+
+<p>把下面的内容加到findfile.css 就会产生如下图的改变。</p>
+
+<pre>window &gt; box {
+  background-color: #0088CC;
+}
+
+menubar,menupopup,toolbar,tabpanels {
+  background-color: lightblue;
+  border-top: 1px solid white;
+  border-bottom: 1px solid #666666;
+  border-left: 1px solid white;
+  border-right: 1px solid #666666;
+}
+
+caption {
+  background-color: lightblue;
+}
+</pre>
+
+<p><img alt="Image:cskin2.jpg" class="internal" src="/@api/deki/files/627/=Cskin2.jpg"></p>
+
+<ul>
+ <li>窗口的内框 (包围窗口全部内容的box)被改为蓝色。</li>
+ <li>你可以在标签的间隙和窗口的底部看到这种蓝色。</li>
+ <li>四个元素 <code>：<code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menubar" title="menubar">menubar</a></code></code>、 <code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code><span style="font-family: Verdana,Tahoma,sans-serif;">、</span></code><code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/toolbar" title="toolbar">toolbar</a></code></code>、<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/tabpanels" title="tabpanels">tabpanels</a></code></code> 是浅蓝色</li>
+ <li>边框改为3D样式，仔细看就会发现。</li>
+ <li><code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/caption" title="caption">caption</a></code></code> 的底色也被改变用以适应背景色的改变。</li>
+</ul>
+
+<p>上面的第一条规则(用于 'window &gt; box') 制定窗口的内框使用不同的颜色，这可能不是最好的办法，我们可以使用样式类来做出这样的改变。那样做的话，我们可以修改XUL文件，不必要求box是窗口的第一个子元素。</p>
+
+<pre class="eval"><strong>CSS:</strong>
+.findfilesbox {
+  background-color: #0088CC;
+}
+
+<strong>XUL:</strong>
+&lt;vbox <span class="highlightred">class="findfilesbox"</span> orient="vertical" flex="100%"&gt;
+&lt;toolbox&gt;
+</pre>
+
+<h4 id="Rounding_on_the_Tabs" name="Rounding_on_the_Tabs">把标签修圆</h4>
+
+<p>下面，修改标签。我们将要使选中的标签变为粗体，并且修圆标签。</p>
+
+<pre>tab:first-child {
+  -moz-border-radius: 4px 0px 0px 0px;
+}
+
+tab:last-child {
+  -moz-border-radius: 0px 4px 0px 0px;
+}
+
+tab[selected="true"] {
+  color: #000066;
+  font-weight: bold;
+  text-decoration: underline;
+}
+</pre>
+
+<div class="float-right"><img alt="Image:cskin3.jpg" class="internal" src="/@api/deki/files/628/=Cskin3.jpg"></div>
+
+<p>这里添加了两条规则，第一条将第一个标签修圆，第二条将最后一个标签修圆。这里使用了一个特殊的样式规则, <code><a href="/en/CSS/-moz-border-radius" title="en/CSS/-moz-border-radius">-moz-border-radius</a></code>, 他再边框的角上创建一个圆弧。第一个标签的左上角，第二个标签的右上角用4个像素修圆而其他的角都设为0，这相当于没有修圆，值越大就越接近圆，值越小就越接近矩形。</p>
+
+<p>最后的规则只有当标签的属性 <code><code id="a-selected"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/selected">selected</a></code></code> 设为 <code>true</code>时才有效，他是使选中的标签的文字以粗体，下划线、深蓝色显示，注意图中只有第一个标签这样显示，第二个不会，因为他没有被选中。</p>
+
+<h4 id="Adding_Toolbar_Icons" name="Adding_Toolbar_Icons">添加工具栏按钮</h4>
+
+<p>有时候我们很难区分工具栏上的按钮和菜单栏的命令，如果我们为工具栏的按钮添加图标就会更清楚。火狐的创造者为例如打开保存等按钮创建了图标，我们直接用再这里可以节省时间。我们可以使用 <code><a href="/en/CSS/list-style-image" title="en/CSS/list-style-image">list-style-image</a></code> CSS 属性为按钮添加图标。</p>
+
+<pre>#opensearch {
+  list-style-image: url("chrome://editor/skin/icons/btn1.gif");
+  -moz-image-region: rect(48px 16px 64px 0);
+  -moz-box-orient: vertical;
+}
+
+#savesearch {
+  list-style-image: url("chrome://editor/skin/icons/btn1.gif");
+  -moz-image-region: rect(80px 16px 96px 0);
+  -moz-box-orient: vertical;
+}
+</pre>
+
+<div class="float-right"><img alt="Image:cskin4.jpg" class="internal" src="/@api/deki/files/629/=Cskin4.jpg"></div>
+
+<p>Mozilla provides a custom style property <code><a href="/en/CSS/-moz-image-region" title="en/CSS/-moz-image-region">-moz-image-region</a></code> which can be used to make an element use part of an image. You can think of it as a clip region for the image. You set the property to a position and size within an image and the button will display only that section of the image. This allows you to use the same image for multiple buttons and set a different region for each one. When you have lots of buttons, with states for hover, active and disabled, this saves space that would normally be occupied by mutliple images. In the code above, we use the same image for each button, but set a different image region each one. If you look at this image (btn1.gif), you will notice that it contains a grid of smaller images, each one 16 by 16 pixels.</p>
+
+<p>The <code><a href="/en/CSS/-moz-box-orient" title="en/CSS/-moz-box-orient">-moz-box-orient</a></code> property is used to orient the button vertically, so that the image appears above the label. This property has the same meaning as the <code><code id="a-orient"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code></code> attribute. This is convenient because the skin cannot change the XUL. Most of the box attributes have corresponding CSS properties.</p>
+
+<h4 id="Other_Changes" name="Other_Changes">其他改变</h4>
+
+<p>Next, we'll make a couple of changes to the buttons along the bottom, again reusing some icons from Mozilla to save time. If creating your own skin, you will need to create new icons or copy the icons to new files. If following the example in this section, just copy the files to your new skin and change the URLs accordingly.</p>
+
+<pre>#find-button {
+  list-style-image: url("chrome://global/skin/checkbox/images/cbox-check.jpg");
+  font-weight: bold;
+}
+
+#cancel-button {
+  list-style-image: url("chrome://global/skin/icons/images/close-button.jpg");
+}
+
+button:hover {
+  color: #000066;
+}
+</pre>
+
+<div class="float-right"><img alt="Image:cskin5.jpg" class="internal" src="/@api/deki/files/630/=Cskin5.jpg"></div>
+
+<p>We add some images to the buttons and make the Find button have bold text to indicate that it is the default button. The last rule applies to buttons when the mouse is hovering over them. We set the text color to dark blue in this case. Finally, some minor changes to the spacing around the items, by setting margins:</p>
+
+<pre>tabbox {
+  margin: 4px;
+}
+
+toolbarbutton {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+</pre>
+
+<p>After those changes, the find files dialog now looks like the image.</p>
+
+<p><img alt="Image:cskin6.jpg" class="internal" src="/@api/deki/files/631/=Cskin6.jpg"></p>
+
+<p>As you can see, some simple changes to the style rules has resulted in quite a different appearance to the find files dialog. We could continue by changing the menus, the grippies on the toolbar and the input and checkbox elements.</p>
+
+<h3 id="Creating_a_Global_Skin" name="Creating_a_Global_Skin">创建全局皮肤</h3>
+
+<p>The skin created above is simple and only applies to the find files dialog. Some of the changes made to the skin could be placed in the global style sheets (those in the global directory of the skin) to be applied to all applications. For example, having different images for the check boxes in the find files dialog as other windows looks a little odd. This change should really be moved into the global style sheet.</p>
+
+<p>Try moving the CSS styles from findfile.css into global.css and then look at some of the dialogs in Mozilla. (The cookie viewer is a good example.) You will notice that it has adopted the rules that we have added. Some of the rules conflict with those already in the global stylesheets. For example, rules are already defined for buttons and tabs and so on and we defined additional rules for them. When changing the global skin, you would need to merge the changes into the existing rules.</p>
+
+<p>For the best skinnability, it is best to declare appearance related style rules in the global directory rather than in individual style files. This includes colors, fonts and general widget appearances. If you change the color of something in a local skin file (such as findfile.css), the dialog may look odd if the user changes their global skin. Don't expect the user to be using the default one.</p>
+
+<div class="highlight">
+<p>Our Find files example with this skin: <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-cskin.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-cskin.xul">View</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-cskin.css">Stylesheet</a></p>
+</div>
+
+<h3 id="See_also"><small>See also</small></h3>
+
+<p><small><a href="/en/CSS_Reference/Mozilla_Extensions" title="en/CSS_Reference/Mozilla_Extensions">Mozilla CSS extensions</a>, and <a href="/en/CSS_Reference" title="en/CSS_Reference">CSS reference</a></small></p>
+
+<p><br>
+ 下一章讨论 <a href="/en/XUL_Tutorial/Localization" title="en/XUL_Tutorial/Localization">XUL程序的本地化</a></p>

@@ -1,0 +1,79 @@
+---
+title: Protection contre le pistage
+slug: Mozilla/Firefox/Privacy/protection_contre_le_pistage
+tags:
+  - Bloquage
+  - Pistage
+  - Privé
+  - Vie privée
+translation_of: Mozilla/Firefox/Privacy/Tracking_Protection
+---
+<div>{{FirefoxSidebar}}</div><h2 id="Qu'est-ce_que_la_protection_contre_le_pistage">Qu'est-ce que la protection contre le pistage ?</h2>
+
+<p>Depuis la version 42, Firefox pour bureau et Firefox pour Android incluent une protection contre le pistage. En navigation privée, Firefox bloque le contenu chargé depuis des domaines qui pistent les utilisateurs à travers les sites.</p>
+
+<p>Certains contenus bloqués font partie de la mise en page, et les utilisateurs pourraient constater des problèmes de mise en page lorsque Firefox bloque ces chargements. Parfois, lorsque la page fonctionne de telle manière que d'autres éléments remplissent les espaces laissés par les éléments bloqués, les utilisateurs ne remarqueront rien.</p>
+
+<p>Quand Firefox bloque un contenu, il écrit un message dans la console web comme ceci :</p>
+
+<pre>The resource at "http://some/url" was blocked because tracking protection is enabled.</pre>
+
+<p>Notez qu'avec Firefox pour Android, vous pouvez accéder à la sortie de la console en utilisant le debogueur distant.</p>
+
+<p>L'interface utilisateur de Firefox indiquera aux utilisateurs quand un contenu a été bloqué et leur permet de le débloquer pour la session en cours s'ils le souhaitent. Les utilisateurs pourront aussi  désactiver complêtement les protections contre le pistage s'ils le souhaitent.</p>
+
+<h2 id="Comment_Firefox_choisit_quoi_bloquer">Comment Firefox choisit quoi bloquer ?</h2>
+
+<p>Le contenu est bloqué selon le domaine à partir duquel il est chargé.</p>
+
+<p>Firefox contient une liste de sites qui ont été identifiés comme étant engagés dans une politique de suivi des utilisateurs au travers des différents sites visités. Quand la protection anti-tracking est activée, Firefox bloque le contenu provenant des sites de cette listes.</p>
+
+<p>Les sites surveillant les utilisateurs sont, le plus souvent, des sites tiers de publicité et d'analyse.</p>
+
+<h2 id="Ce_que_cela_signifie_pour_votre_site">Ce que cela signifie pour votre site</h2>
+
+<p>Bien évidemment, cela signifie que quand la protection anti-pistage est activée:</p>
+
+<ul>
+ <li>le contenu fourni par les pisteurs tiers ne sera pas visible par les utilisateurs</li>
+ <li>votre site ne pourra pas utiliser les services de publicité et d'analyse de sites tiers qui pratiquent le pistage.</li>
+</ul>
+
+<p>Plus subtilement, si d'autres parties de votre site dependent de pisteurs pour être chargés, alors ces parties ne seront pas fonctionnelles quand la protection anti-pistage est activées. Par exemple, si votre site inclus un rappel qui se lance quand le contenu d'un site de pistage est chargé, alors le rappel ne sera pas utilisé.</p>
+
+<p>Par exemple, vous ne devez pas utiliser Google Analytics de cette façon :</p>
+
+<pre class="brush:html example-bad">&lt;a href="http://www.example.com" onclick="trackLink('http://www.example.com', event);"&gt;Visit example.com&lt;/a&gt;
+&lt;script&gt;
+function trackLink(url,event) {
+    event.preventDefault();
+    ga('send', 'event', 'outbound', 'click', url, {
+     'transport': 'beacon',
+     'hitCallback': function() {
+       document.location = url;
+     }
+   });
+}
+&lt;/script&gt;</pre>
+
+<p>A la place, vous devez prendre en compte le cas où Google Analytics est manquant vérifiant si l'objet `ga` est initialisé :</p>
+
+<pre class="brush:html example-good">&lt;a href="http://www.example.com" onclick="trackLink('http://www.example.com', event);"&gt;Visit example.com&lt;/a&gt;
+&lt;script&gt;
+function trackLink(url,event) {
+    event.preventDefault();
+    if (window.ga &amp;&amp; <span class="pl-smi">ga</span>.loaded) {
+         ga('send', 'event', 'outbound', 'click', url, {
+         'transport': 'beacon',
+         'hitCallback': function() { document.location = url; }
+       });
+    } else {
+        document.location = url;
+    }
+}
+&lt;/script&gt;
+</pre>
+
+<p>Pour plus d'information sur cette technique : <a href="https://hacks.mozilla.org/2016/01/google-analytics-privacy-and-event-tracking/">Google Analytics, Privacy, and Event Tracking</a>.</p>
+
+<p>A noter qu'être dependant de l'utilisation de l'outil tiers de cette manière n'est pas une bonne pratique, car cela veut dire que votre site peut être cassé si l'outil tiers est lent ou inaccessible, ou si le tracker est bloqué par un add-on.</p>

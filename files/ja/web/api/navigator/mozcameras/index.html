@@ -1,0 +1,52 @@
+---
+title: Navigator.mozCameras
+slug: Web/API/Navigator/mozCameras
+tags:
+  - API
+  - DOM
+  - Firefox OS
+  - Gecko DOM Reference
+  - Graphics
+  - Non Standard
+  - Property
+  - WebAPI
+translation_of: Archive/B2G_OS/API/Navigator/mozCameras
+---
+<p>{{APIRef("Firefox OS")}}</p>
+
+<p>{{ non-standard_header() }}</p>
+
+<p>{{B2GOnlyHeader2('privileged')}}</p>
+
+<h2 id="Summary" name="Summary">概要</h2>
+
+<p>ユーザの端末で利用可能なカメラへのアクセスに用いる {{domxref("CameraManager")}} オブジェクトを返します。</p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="eval">var cameraManager = window.navigator.mozCameras;
+</pre>
+
+<h3 id="Value" name="Value">値</h3>
+
+<p><code>navigator.mozCameras</code> は、端末で利用可能なカメラへのアクセスに用いる {{domxref("CameraManager")}} オブジェクトです。</p>
+
+<h2 id="Specification" name="Specification">仕様</h2>
+
+<p>標準仕様には含まれていません。WebRTC がモバイル端末で広くサポートされるようになった時、これと置き換えられる予定です。</p>
+
+<h2 id="Permissions" name="Permissions">許可設定</h2>
+
+<p>Firefox OS 1.4 まで、Camera API は Certified API だったためサードパーティアプリからはアクセスできませんでした。Firefox OS 2.0 からは許可レベルが Privileged に下げられたため、開発者が独自のアプリで利用できるようになりました。</p>
+
+<pre class="brush: json">"permissions": {
+  "camera": {
+    "description": "Required for accessing cameras on the device."
+  }
+}</pre>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><a href="/docs/WebRTC" title="/docs/WebRTC">WebRTC API</a></li>
+</ul>

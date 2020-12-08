@@ -1,0 +1,152 @@
+---
+title: DOM ツリーの作成方法
+slug: Web/API/Document_Object_Model/How_to_create_a_DOM_tree
+tags:
+  - AJAX
+  - Add-ons
+  - DOM
+  - Extensions
+  - JXON
+  - XML
+translation_of: Web/API/Document_object_model/How_to_create_a_DOM_tree
+---
+<p>{{draft}}</p>
+
+<p>このページでは JavaScript において <a class="external" href="http://www.w3.org/TR/DOM-Level-3-Core/core.html">DOM Core</a> API を用いて DOM オブジェクトを作成したり変更したりする方法を解説します。これはすべての Gecko ベースアプリケーション（Firefox など）で特権付きコード（拡張機能）でも特権なしコード（ウェブページ）でも利用できます。</p>
+
+<h2 id="英語版章題('Dynamically_creating_a_DOM_tree')_DOM_ツリーの動的作成">{{ 英語版章題('Dynamically creating a DOM tree') }}DOM ツリーの動的作成</h2>
+
+<p>次の XML 文書を考えます。</p>
+
+<pre class="brush: xml">&lt;?xml version="1.0"?&gt;
+&lt;people&gt;
+  &lt;person first-name="eric" middle-initial="H" last-name="jung"&gt;
+    &lt;address street="321 south st" city="denver" state="co" country="usa"/&gt;
+    &lt;address street="123 main st" city="arlington" state="ma" country="usa"/&gt;
+  &lt;/person&gt;
+
+  &lt;person first-name="jed" last-name="brown"&gt;
+    &lt;address street="321 north st" city="atlanta" state="ga" country="usa"/&gt;
+    &lt;address street="123 west st" city="seattle" state="wa" country="usa"/&gt;
+    &lt;address street="321 south avenue" city="denver" state="co" country="usa"/&gt;
+  &lt;/person&gt;
+&lt;/people&gt;
+</pre>
+
+<p>次のように W3C DOM API を使うことでこの文書のインメモリ表現を作成することができます。Mozilla はこの API をサポートしています。</p>
+
+<pre class="brush: js">var doc = document.implementation.createDocument("", "", null);
+var peopleElem = doc.createElement("people");
+
+var personElem1 = doc.createElement("person");
+personElem1.setAttribute("first-name", "eric");
+personElem1.setAttribute("middle-initial", "h");
+personElem1.setAttribute("last-name", "jung");
+
+var addressElem1 = doc.createElement("address");
+addressElem1.setAttribute("street", "321 south st");
+addressElem1.setAttribute("city", "denver");
+addressElem1.setAttribute("state", "co");
+addressElem1.setAttribute("country", "usa");
+personElem1.appendChild(addressElem1);
+
+var addressElem2 = doc.createElement("address");
+addressElem2.setAttribute("street", "123 main st");
+addressElem2.setAttribute("city", "arlington");
+addressElem2.setAttribute("state", "ma");
+addressElem2.setAttribute("country", "usa");
+personElem1.appendChild(addressElem2);
+
+var personElem2 = doc.createElement("person");
+personElem2.setAttribute("first-name", "jed");
+personElem2.setAttribute("last-name", "brown");
+
+var addressElem3 = doc.createElement("address");
+addressElem3.setAttribute("street", "321 north st");
+addressElem3.setAttribute("city", "atlanta");
+addressElem3.setAttribute("state", "ga");
+addressElem3.setAttribute("country", "usa");
+personElem2.appendChild(addressElem3);
+
+var addressElem4 = doc.createElement("address");
+addressElem4.setAttribute("street", "123 west st");
+addressElem4.setAttribute("city", "seattle");
+addressElem4.setAttribute("state", "wa");
+addressElem4.setAttribute("country", "usa");
+personElem2.appendChild(addressElem4);
+
+var addressElem5 = doc.createElement("address");
+addressElem5.setAttribute("street", "321 south avenue");
+addressElem5.setAttribute("city", "denver");
+addressElem5.setAttribute("state", "co");
+addressElem5.setAttribute("country", "usa");
+personElem2.appendChild(addressElem5);
+
+peopleElem.appendChild(personElem1);
+peopleElem.appendChild(personElem2);
+doc.appendChild(peopleElem);
+</pre>
+
+<p><a href="/ja/XUL_Tutorial/Document_Object_Model" title="ja/XUL_Tutorial/Document_Object_Model">XUL チュートリアルの DOM の章</a> も参照してください。</p>
+
+<p>You can automate the creation of a DOM tree using a <a href="/en/JXON#JXON_reverse_algorithms" title="en/JXON#JXON_reverse_algorithms">JXON reverse algorithm</a> in association with the following JSON representation:</p>
+
+<pre class="brush: js">{
+  "people": {
+    "person": [{
+      "address": [{
+        "@street": "321 south st",
+        "@city": "denver",
+        "@state": "co",
+        "@country": "usa"
+      }, {
+        "@street": "123 main st",
+        "@city": "arlington",
+        "@state": "ma",
+        "@country": "usa"
+      }],
+      "@first-name": "eric",
+      "@middle-initial": "H",
+      "@last-name": "jung"
+    }, {
+      "address": [{
+        "@street": "321 north st",
+        "@city": "atlanta",
+        "@state": "ga",
+        "@country": "usa"
+      }, {
+        "@street": "123 west st",
+        "@city": "seattle",
+        "@state": "wa",
+        "@country": "usa"
+      }, {
+        "@street": "321 south avenue",
+        "@city": "denver",
+        "@state": "co",
+        "@country": "usa"
+      }],
+      "@first-name": "jed",
+      "@last-name": "brown"
+    }]
+  }
+}
+</pre>
+
+<h3 id="英語版章題('So_what')_つまり">{{ 英語版章題('So what?') }}つまり ?</h3>
+
+<p>DOM ツリーを <a href="/ja/Using_XPath" title="ja/Using_XPath"> XPath 式を用いてクエリすること</a> や、文字列に変換すること、<a href="/ja/Parsing_and_serializing_XML" title="ja/Parsing_and_serializing_XML"> XMLSerializer</a> を用いてローカルあるいはリモートのファイルに書き出すこと（あらかじめ文字列に変換する必要はない）、<a href="/ja/DOM/XMLHttpRequest" title="ja/DOM/XMLHttpRequest">ウェブサーバに POST すること</a>（<code>XMLHttpRequest</code> 経由）、<a href="/ja/XSLT" title="ja/XSLT">XSLT</a> を用いて変換すること、<a href="/ja/XLink" title="ja/XLink">XLink</a> されることなど、さまざまな利用法があります。</p>
+
+<p>RDF は適さない（あるいは RDF が嫌いなだけという場合でも）データを DOM ツリーを用いて作ることができます。別の応用例として、XUL は XML であるため、アプリケーションの UI を動的に操作したり、ダウンロードやアップロードをしたり、保存や読み込みをしたり、変換したりといったことがかなり簡単にできます。</p>
+
+<h2 id="英語版章題('See_also')_参照">{{ 英語版章題('See also') }}参照</h2>
+
+<ul>
+ <li><a class="internal" href="/ja/XML" title="ja/XML">XML</a></li>
+ <li><a class="internal" href="/ja/JXON" title="ja/JXON">JXON</a></li>
+ <li><a class="internal" href="/ja/XPath" title="ja/XPath">XPath</a></li>
+ <li><a class="internal" href="/ja/E4X" title="ja/E4X">E4X (ECMAScript for XML)</a></li>
+ <li><a class="internal" href="/ja/Parsing_and_serializing_XML" title="ja/Parsing_and_serializing_XML">Parsing and serializing XML</a></li>
+ <li><a class="internal" href="/ja/DOM/XMLHttpRequest" title="ja/XMLHttpRequest">XMLHttpRequest</a></li>
+</ul>
+
+<div>{{ languages( { "en": "en/How_to_create_a_DOM_tree", "fr": "fr/Comment_cr\u00e9er_un_arbre_DOM", "zh-cn": "cn/How_to_create_a_DOM_tree"}) }}</div>

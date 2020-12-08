@@ -1,0 +1,34 @@
+---
+title: throw 文
+slug: Web/JavaScript/Guide/Exception_Handling_Statements/throw_Statement
+---
+<h3 id="throw_.E6.96.87" name="throw_.E6.96.87">throw 文</h3>
+<p><code>throw</code> 文は例外を投げるために使用します。例外を投げるときは、投げたい値からなる式を指定してください。</p>
+<pre class="eval">throw expression;
+</pre>
+<p>特定の型の式だけではなく、あらゆる式を投げることができます。下記のコードは様々な型の例外を投げています。</p>
+<pre class="eval">throw "Error2";
+throw 42;
+throw true;
+throw {toString: function() { return "I'm an object!"; } };
+</pre>
+<div class="note">
+  <strong>注意：</strong>例外を投げる際にオブジェクトを指定することができます。すると、<code>catch</code> ブロックでそのオブジェクトのプロパティを参照できるようになります。次の例では <code>UserException</code> という種類の <code>myUserException</code> というオブジェクトを作ります。また、このオブジェクトを throw 文で使用します。</div>
+<pre class="eval">// UserException という種類のオブジェクトを作成
+function UserException (message)
+{
+  this.message=message;
+  this.name="UserException";
+}
+
+// 文字列として使用されるとき（例：エラーコンソール上）に
+// 例外を整形する
+UserException.prototype.toString = function ()
+{
+  return this.name + ': "' + this.message + '"';
+}
+
+// そのオブジェクトの種類のインスタンスを作成し、それを投げる
+throw new UserException("Value too high");
+</pre>
+<p>{{ PreviousNext("JavaScript/Guide/Exception_Handling_Statements", "JavaScript/Guide/Exception_Handling_Statements/try...catch_Statement") }}</p>

@@ -1,0 +1,483 @@
+---
+title: Debugging Mozilla on Linux FAQ
+slug: Debugging_Mozilla_on_Linux_FAQ
+tags:
+  - Developing Mozilla
+---
+<p>Linux における Mozilla のデバッグ FAQ です。ここで解説している方法を使うと、デバッグがしやすくなり、GDB が抱えている問題点への対応も楽になります。
+</p><p>GDB の問題点の中には Mozilla によって悪化するものがあります。そのうち最も深刻な問題は、GDB のメモリの使い方で、Mozilla コンポーネントのデバッグ中に発生します。GDB は、Mozilla デバッグ中に何百メガにもなることがあります。この問題を回避するために必要なことは、Mozilla のコンポーネント・ライブラリを 1 つづつ必要な時にだけロードすることです。このプロセスについては、この FAQ で <a href="#.E3.83.87.E3.83.90.E3.83.83.E3.82.AC.E3.81.8C.E3.83.A1.E3.83.A2.E3.83.AA.E3.82.92.E3.81.9F.E3.81.8F.E3.81.95.E3.82.93.E9.A3.9F.E3.81.A3.E3.81.A6.E3.81.97.E3.81.BE.E3.81.84.E3.81.BE.E3.81.99.E3.80.82_.E3.81.A9.E3.81.86.E3.82.84.E3.81.A3.E3.81.A6.E8.A7.A3.E6.B1.BA.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F">解説</a> しています。このような問題が発生するのは、コンピュータが 256 メガ以下の RAM しか積んでいない時です。
+</p><p>ディストリビューションの多くが使っている GDB のバージョンは、少し古くなっています。このドキュメント執筆時点での GDB の最新バージョンは 6.8 です。バージョン 5.0 以降は、以前のバージョンよりも Mozilla のデバッグにずっと便利になっています。これらのバージョンでは、シンボルをロードするのが遅いという問題が解決されていて、さらに、以前のバージョンよりもスレッドの機能が改善されています。しかし、GDB が Mozilla との組み合わせでメモリを大量に使用するという問題については、5.0 リリースの GDB でも解決されていません。
+</p><p>GDB の最新のコピーは <a class="external" href="http://sourceware.cygnus.com/GDB/">sourceware の GDB サイト</a> にあります。
+</p>
+<h5 id="Linux_.E3.81.A7_Mozilla_.E3.82.92.E3.83.87.E3.83.90.E3.83.83.E3.82.B0.E3.81.99.E3.82.8B.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F" name="Linux_.E3.81.A7_Mozilla_.E3.82.92.E3.83.87.E3.83.90.E3.83.83.E3.82.B0.E3.81.99.E3.82.8B.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> Linux で Mozilla をデバッグするにはどうしたらいいのですか？ </h5>
+<p><code>firefox</code> スクリプトは、ブラウザを起動するものですが、デバッガの起動にも使うことができます。以下のようにしてください。
+</p>
+<pre class="eval">[blizzard@gunhead bin]$ cd mozilla/dist/bin
+[blizzard@gunhead bin]$ ./firefox -g
+</pre>
+<p>こうすると実際には ddd が起動しますが、これは GDB のグラフィカルなフロントエンドです。もし ddd がインストールされていないか、gdb を利用したければ、
+</p>
+<pre class="eval">[blizzard@gunhead bin]$ ./firefox -g -d gdb
+</pre>
+<p>GDB の使い方についてはこのドキュメントの範囲を超えています。GDB のドキュメントは、GDB のあるシステムであれば info ページ形式で提供されています。gnome ヘルプブラウザを使って読むといいでしょう。Linux の info リーダーは使いにくいという人が多いからです。
+</p><p>さらに、グラフィカルなフロントエンドを GDB に使うこともできます。<a class="external" href="http://www.gnu.org/software/ddd/">ddd</a> や <a class="external" href="http://sourceware.org/insight/">insight</a> のようなものです。
+</p><p>以下のサイトにはもっと詳しい情報があります。
+</p>
+<ul><li> <a class=" external" href="http://sourceware.org/gdb/current/onlinedocs/gdb_toc.html" rel="freelink">http://sourceware.org/gdb/current/on...s/gdb_toc.html</a>
+</li><li> <a class=" external" href="http://www.gnu.org/manual/ddd/" rel="freelink">http://www.gnu.org/manual/ddd/</a>
+</li></ul>
+<h5 id="Firefox_.E3.81.AE.E3.83.87.E3.83.90.E3.83.83.E3.82.B0.E4.B8.AD.E3.81.AB.E3.81.93.E3.81.AE_FAQ_.E3.82.92.E8.A6.8B.E3.82.8B.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F" name="Firefox_.E3.81.AE.E3.83.87.E3.83.90.E3.83.83.E3.82.B0.E4.B8.AD.E3.81.AB.E3.81.93.E3.81.AE_FAQ_.E3.82.92.E8.A6.8B.E3.82.8B.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> Firefox のデバッグ中にこの FAQ を見るにはどうしたらいいですか？ </h5>
+<p>既定では、Firefox のプロセスはすべて「default」という名前の同じ<a class="external" href="http://support.mozilla.com/ja/kb/Profiles">プロファイル</a>を使用します。Firefox のプロセスがすでに実行されている場合、次に実行したプロセスはそのプロファイルが使用中であることに気付いて、起動することを拒みます。
+</p><p>そのため、デバッグ用に別のプロファイルを使用してください。これはいずれにしても良い選択です。なぜなら、プロファイルには様々な重要なデータも含まれていますが、デバッグのためのセッションがこれらを削除してしまう可能性があるためです。コマンドラインで以下のようにしてプロファイルを指定できます。
+</p>
+<pre class="eval">$ <b>./firefox -no-remote -P MyDebugProfile</b>
+</pre>
+<p>(引数 <code>-no-remote</code> はリモート用コードを無効にします。いくつかのプラットフォームでは、リモーティングが一度に二つのプロファイルを利用することを妨げます。)
+</p>
+<h5 id=".E3.83.87.E3.83.90.E3.83.83.E3.82.AC.E3.81.8C.E3.83.A1.E3.83.A2.E3.83.AA.E3.82.92.E3.81.9F.E3.81.8F.E3.81.95.E3.82.93.E9.A3.9F.E3.81.A3.E3.81.A6.E3.81.97.E3.81.BE.E3.81.84.E3.81.BE.E3.81.99.E3.80.82.E3.81.A9.E3.81.86.E3.82.84.E3.81.A3.E3.81.A6.E8.A7.A3.E6.B1.BA.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F" name=".E3.83.87.E3.83.90.E3.83.83.E3.82.AC.E3.81.8C.E3.83.A1.E3.83.A2.E3.83.AA.E3.82.92.E3.81.9F.E3.81.8F.E3.81.95.E3.82.93.E9.A3.9F.E3.81.A3.E3.81.A6.E3.81.97.E3.81.BE.E3.81.84.E3.81.BE.E3.81.99.E3.80.82.E3.81.A9.E3.81.86.E3.82.84.E3.81.A3.E3.81.A6.E8.A7.A3.E6.B1.BA.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> デバッガがメモリをたくさん食ってしまいます。どうやって解決したらいいのですか？ </h5>
+<p>この FAQ のはじめに触れたように、GDB は Mozilla の共有ライブラリをロードする時にたくさんのメモリを使います。これを解決するには、共有ライブラリを本当に必要な時になって初めてロードするようにします。
+</p><p>しかし、ここで重要なことがあります。libc や pthreads のようなベース・ライブラリをロードしてから、GDB が共有ライブラリをロードするのを止めるようにしてください。こういったベース・ライブラリがロードされていないと、GDB が Linux でスレッドをきちんとデバッグすることができなくなります。Mozilla は、pthreads をネットワーク・ライブラリに使うため、スレッド化された環境で動作する必要があります。
+</p><p>そのためには次のようにするのが一番です。main にブレークポイントを設定し、プログラムを main まで実行し、この時点でライブラリの自動ロードをオフにします。ここからは、プログラムを走らせておくことができます。以下に例を挙げます。
+</p>
+<pre class="eval">[blizzard@gunhead mozilla]$ <b>cd dist/bin/</b>
+[blizzard@gunhead bin]$ <b>./mozilla -g</b>
+.//run-mozilla.sh -g ./mozilla-bin
+MOZILLA_FIVE_HOME=/home/blizzard/src/mozilla/mozilla/dist/bin
+  LD_LIBRARY_PATH=/home/blizzard/src/mozilla/mozilla/dist/bin
+       SHLIB_PATH=/home/blizzard/src/mozilla/mozilla/dist/bin
+          LIBPATH=/home/blizzard/src/mozilla/mozilla/dist/bin
+      MOZ_PROGRAM=./mozilla-bin
+      MOZ_TOOLKIT=
+        moz_debug=1
+     moz_debugger=
+/usr/bin/gdb ./mozilla-bin -x /tmp/mozargs22288
+GNU gdb 19991004
+Copyright 1998 Free Software Foundation, Inc.
+GDB is free software, covered by the GNU General Public License, and you are
+welcome to change it and/or distribute copies of it under certain conditions.
+Type "show copying" to see the conditions.
+There is absolutely no warranty for GDB. Type "show warranty" for details.
+This GDB was configured as "i386-redhat-linux"...
+(gdb) <b>b main</b>
+Breakpoint 1 at 0x804ec45: file nsAppRunner.cpp, line 811.
+(gdb) <b>r</b>
+Starting program: /home/blizzard/src/mozilla/mozilla/dist/bin/./mozilla-bin
+
+Breakpoint 1, main (argc=1, argv=0xbffff894) at nsAppRunner.cpp:811
+811       InstallUnixSignalHandlers(argv[0]);
+(gdb) <b>set auto-solib-add 0</b>
+(gdb) <b>c</b>
+Continuing.
+nsNativeComponentLoader: autoregistering begins.
+[...]
+</pre>
+<p>GDB に関数を定義して上記の動作を自動的に行なわせるのは簡単です。ホーム・ディレクトリにある &lt;tt&gt;.gdbinit&lt;/tt&gt; ファイルにこの関数を追加してください。
+</p>
+<pre class="eval">def prun
+        tbreak main
+        run
+        set auto-solib-add 0
+end
+</pre>
+<h5 id=".E5.85.B1.E6.9C.89.E3.83.A9.E3.82.A4.E3.83.96.E3.83.A9.E3.83.AA.E3.82.92.E3.83.AD.E3.83.BC.E3.83.89.E3.81.99.E3.82.8B.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F" name=".E5.85.B1.E6.9C.89.E3.83.A9.E3.82.A4.E3.83.96.E3.83.A9.E3.83.AA.E3.82.92.E3.83.AD.E3.83.BC.E3.83.89.E3.81.99.E3.82.8B.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> 共有ライブラリをロードするにはどうしたらいいのですか？ </h5>
+<p>共有ライブラリ自動ロードをオフにしている場合には、共有ライブラリを随時ロードする必要があります。GDB には、プログラムが立ちあがっている時にライブラリをロードするコマンドがあります。<code>sharedlibrary</code> コマンドです。GDB で使う時には、<code>shar</code> と短縮することもできます。このコマンドの引数は、ロードするライブラリの正規表現です。
+</p><p>バージョン 4.18 のデバッガでは以下のようになります。
+</p>
+<pre class="eval">^C
+Program received signal SIGINT, Interrupt.
+0x404ccdeb in __sigsuspend (set=0xbf5ffbc0)
+    at ../sysdeps/unix/sysv/linux/sigsuspend.c:48
+48      ../sysdeps/unix/sysv/linux/sigsuspend.c: No such file or directory.
+Current language:  auto; currently c
+(gdb) <b>shar glib</b>
+Reading symbols from /usr/lib/libglib-1.2.so.0...done.
+(gdb)
+</pre>
+<p>バージョン 5.x のデバッガでは以下のようになります。
+</p>
+<pre class="eval">^C
+Program received signal SIGINT, Interrupt.
+[Switching to Thread 2051 (runnable)]
+0x404ccdeb in __sigsuspend (set=0xbf5ffbac)
+    at ../sysdeps/unix/sysv/linux/sigsuspend.c:48
+48      ../sysdeps/unix/sysv/linux/sigsuspend.c: No such file or directory.
+Current language:  auto; currently c
+(gdb) <b>shar gtk</b>
+Reading symbols from /usr/lib/libgtk-1.2.so.0...done.
+Loaded symbols for /usr/lib/libgtk-1.2.so.0
+Reading symbols from /usr/lib/gtk/themes/engines/libthinice.so...done.
+Loaded symbols for /usr/lib/gtk/themes/engines/libthinice.so
+(gdb)
+</pre>
+<p>上記からわかるように、GDB では、2 つ以上のライブラリを同じロード・コマンドでロードすることができます。
+</p>
+<h5 id=".E3.81.A9.E3.81.AE.E3.83.A9.E3.82.A4.E3.83.96.E3.83.A9.E3.83.AA.E3.81.8C.E3.83.AD.E3.83.BC.E3.83.89.E6.B8.88.E3.81.BF.E3.81.AA.E3.81.AE.E3.81.8B.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.82.8F.E3.81.8B.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F" name=".E3.81.A9.E3.81.AE.E3.83.A9.E3.82.A4.E3.83.96.E3.83.A9.E3.83.AA.E3.81.8C.E3.83.AD.E3.83.BC.E3.83.89.E6.B8.88.E3.81.BF.E3.81.AA.E3.81.AE.E3.81.8B.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.82.8F.E3.81.8B.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> どのライブラリがロード済みなのかはどうしたらわかるのですか？ </h5>
+<p>ロード済みのライブラリを調べるには、<code>info sharedlibrary</code> コマンドを使います。
+</p>
+<pre class="eval">(gdb) <b>info shar</b>
+From        To          Syms Read   Shared Object Library
+0x4044a000  0x4044d08c  Yes         /lib/libdl.so.2
+0x4044e000  0x4048ff90  Yes         /usr/lib/libstdc  -libc6.1-1.so.2
+0x40491000  0x404ad9d8  Yes         /lib/libm.so.6
+0x404ae000  0x405a285c  Yes         /lib/libc.so.6
+0x40000000  0x40013ed0  Yes         /lib/ld-linux.so.2
+0x40607000  0x4061554c  No          /usr/lib/libz.so.1
+0x40763000  0x4088af74  No          /usr/lib/libgtk-1.2.so.0
+0x4088b000  0x408c04d4  No          /usr/lib/libgdk-1.2.so.0
+[...]
+</pre>
+<h5 id="GDB_.E3.81.8C.E5.85.B1.E6.9C.89.E3.83.A9.E3.82.A4.E3.83.96.E3.83.A9.E3.83.AA.E3.82.92.E3.83.AD.E3.83.BC.E3.83.89.E3.81.99.E3.82.8B.E3.81.AE.E3.81.AB.E3.82.84.E3.81.9F.E3.82.89.E3.81.A8.E6.99.82.E9.96.93.E3.81.8C.E3.81.8B.E3.81.8B.E3.82.8A.E3.81.BE.E3.81.99.E3.80.82.E4.B8.80.E4.BD.93.E4.BD.95.E3.81.8C.E8.B5.B7.E3.81.93.E3.81.A3.E3.81.A6.E3.81.84.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F" name="GDB_.E3.81.8C.E5.85.B1.E6.9C.89.E3.83.A9.E3.82.A4.E3.83.96.E3.83.A9.E3.83.AA.E3.82.92.E3.83.AD.E3.83.BC.E3.83.89.E3.81.99.E3.82.8B.E3.81.AE.E3.81.AB.E3.82.84.E3.81.9F.E3.82.89.E3.81.A8.E6.99.82.E9.96.93.E3.81.8C.E3.81.8B.E3.81.8B.E3.82.8A.E3.81.BE.E3.81.99.E3.80.82.E4.B8.80.E4.BD.93.E4.BD.95.E3.81.8C.E8.B5.B7.E3.81.93.E3.81.A3.E3.81.A6.E3.81.84.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> GDB が共有ライブラリをロードするのにやたらと時間がかかります。一体何が起こっているのですか？ </h5>
+<p>バージョン 5 より古い GDB は、非常に遅いアルゴリズムを使って、ロード済みシンボルのリストを、シンボル・テーブルにシンボルを付け足す度に、検索しています。この問題は GDB のバージョン 5 でフィックスされています。それ以前のバージョンについてはフィックスがありません。
+</p>
+<h5 id=".E3.83.AD.E3.83.BC.E3.83.89.E3.81.95.E3.82.8C.E3.81.A6.E3.81.84.E3.81.AA.E3.81.84.E3.83.A9.E3.82.A4.E3.83.96.E3.83.A9.E3.83.AA.E3.81.AB.E3.83.96.E3.83.AC.E3.83.BC.E3.82.AF.E3.83.9D.E3.82.A4.E3.83.B3.E3.83.88.E3.82.92.E3.82.BB.E3.83.83.E3.83.88.E3.81.99.E3.82.8B.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F" name=".E3.83.AD.E3.83.BC.E3.83.89.E3.81.95.E3.82.8C.E3.81.A6.E3.81.84.E3.81.AA.E3.81.84.E3.83.A9.E3.82.A4.E3.83.96.E3.83.A9.E3.83.AA.E3.81.AB.E3.83.96.E3.83.AC.E3.83.BC.E3.82.AF.E3.83.9D.E3.82.A4.E3.83.B3.E3.83.88.E3.82.92.E3.82.BB.E3.83.83.E3.83.88.E3.81.99.E3.82.8B.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> ロードされていないライブラリにブレークポイントをセットするにはどうしたらいいのですか？ </h5>
+<p>残念ながら、ロードされていないライブラリで GDB にブレークポイントを設定する方法はありません。実際のコンポーネントがロードされた時にブレークポイントを設定するのに本当に興味があるという場合には、次の章を読んでください。
+</p><p>ライブラリがロードされた時にどうしてもブレークポイントを設定したいという場合には、<code>_dl_open</code> というシンボルにブレークポイントを設定することができます。この関数は、新しいライブラリがロードされた時に呼び出されます。ブレークポイントを設定するのは、ライブラリがロードされたのを確認してからにしてください。
+</p>
+<h5 id=".E3.82.B3.E3.83.B3.E3.83.9D.E3.83.BC.E3.83.8D.E3.83.B3.E3.83.88.E3.81.8C.E3.83.AD.E3.83.BC.E3.83.89.E3.81.95.E3.82.8C.E3.81.9F.E6.99.82.E3.81.AB.E3.83.96.E3.83.AC.E3.83.BC.E3.82.AF.E3.83.9D.E3.82.A4.E3.83.B3.E3.83.88.E3.82.92.E3.82.BB.E3.83.83.E3.83.88.E3.81.99.E3.82.8B.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F" name=".E3.82.B3.E3.83.B3.E3.83.9D.E3.83.BC.E3.83.8D.E3.83.B3.E3.83.88.E3.81.8C.E3.83.AD.E3.83.BC.E3.83.89.E3.81.95.E3.82.8C.E3.81.9F.E6.99.82.E3.81.AB.E3.83.96.E3.83.AC.E3.83.BC.E3.82.AF.E3.83.9D.E3.82.A4.E3.83.B3.E3.83.88.E3.82.92.E3.82.BB.E3.83.83.E3.83.88.E3.81.99.E3.82.8B.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> コンポーネントがロードされた時にブレークポイントをセットするにはどうしたらいいのですか？ </h5>
+<p>XPCOM の機能の一つに次のようなものがあります。ある環境変数を設定すると、特定のコンポーネントをロードした時にプログラムをデバッガに落としてくれるというものです。
+</p><p>必ず、<code>XPCOM_BREAK_ON_LOAD</code> という環境変数を設定してから、Mozilla を立ちあげるようにしてください。この変数は、ロードするライブラリの名前を含む文字列で設定してください。例えば、<code>raptor</code> あるいは <code>necko</code> という名前のライブラリがロードされた時に止めたいという場合には、この変数を <code>raptor:necko</code> に設定することができます。以下に例を挙げます。
+</p>
+<pre class="eval">(gdb) <b>set env XPCOM_BREAK_ON_LOAD raptor:necko</b>
+(gdb) <b>prun</b>
+</pre>
+<h5 id=".E3.81.93.E3.82.93.E3.81.AA.E3.81.93.E3.81.A8.E9.9B.A3.E3.81.97.E3.81.99.E3.81.8E.E3.81.A6.E3.82.84.E3.81.A3.E3.81.A6.E3.82.89.E3.82.8C.E3.81.BE.E3.81.9B.E3.82.93.E3.80.82.E5.8B.95.E4.BD.9C.E3.81.99.E3.82.8B_.gdbinit_.E3.81.8C.E6.AC.B2.E3.81.97.E3.81.84.E3.82.93.E3.81.A7.E3.81.99.E3.81.91.E3.81.A9.E3.80.82" name=".E3.81.93.E3.82.93.E3.81.AA.E3.81.93.E3.81.A8.E9.9B.A3.E3.81.97.E3.81.99.E3.81.8E.E3.81.A6.E3.82.84.E3.81.A3.E3.81.A6.E3.82.89.E3.82.8C.E3.81.BE.E3.81.9B.E3.82.93.E3.80.82.E5.8B.95.E4.BD.9C.E3.81.99.E3.82.8B_.gdbinit_.E3.81.8C.E6.AC.B2.E3.81.97.E3.81.84.E3.82.93.E3.81.A7.E3.81.99.E3.81.91.E3.81.A9.E3.80.82"> こんなこと難しすぎてやってられません。動作する .gdbinit が欲しいんですけど。</h5>
+<p>了解です。これをコピーしてください。
+</p>
+<pre class="eval"># .gdbinit file for debugging Mozilla
+
+# run when using the auto-solib-add trick
+def prun
+  tbreak main
+  run
+  set auto-solib-add 0
+  cont
+end
+
+# run -mail, when using the auto-solib-add trick
+def pmail
+  tbreak main
+  run -mail
+  set auto-solib-add 0
+  cont
+end
+
+# define "pu" command to display PRUnichar * strings (100 chars max)
+def pu
+  set $uni = $arg0
+  set $i = 0
+  while (*$uni &amp;&amp; $i++&lt;100)
+    if (*$uni &lt; 0x80)
+      print *(char*)$uni++
+    else
+      print /x *(short*)$uni++
+    end
+  end
+end
+
+# define "ps" command to display nsString/nsAutoString/nsCString/nsCAutoString
+def ps
+  set $ns = $arg0
+  if ($ns-&gt;mCharSize)
+    pu $ns-&gt;mUStr
+  else
+    print $ns-&gt;mStr
+  end
+end
+</pre>
+<p>関数の定義が 4 つ入っています。
+</p>
+<ul><li> "prun" は、ブラウザを起動しライブラリのロードを使用不可にします。
+</li><li> "pmail" は、メールを起動します。
+</li><li> "pu" は、(PRUnichar *) 文字列を 1 つ表示します。
+</li><li> "ps" は、nsString を 1 つ表示します。
+</li></ul>
+<h5 id=".E3.83.96.E3.83.AC.E3.83.BC.E3.82.AF.E3.83.9D.E3.82.A4.E3.83.B3.E3.83.88.E3.82.92.E3.82.BB.E3.83.83.E3.83.88.E3.81.A7.E3.81.8D.E3.81.BE.E3.81.9B.E3.82.93.E3.80.82.E3.81.A9.E3.81.86.E3.81.97.E3.81.A6.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F" name=".E3.83.96.E3.83.AC.E3.83.BC.E3.82.AF.E3.83.9D.E3.82.A4.E3.83.B3.E3.83.88.E3.82.92.E3.82.BB.E3.83.83.E3.83.88.E3.81.A7.E3.81.8D.E3.81.BE.E3.81.9B.E3.82.93.E3.80.82.E3.81.A9.E3.81.86.E3.81.97.E3.81.A6.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> ブレークポイントをセットできません。どうしてですか？ </h5>
+<p>多分、ブレークポイントを設定できないのは、ブレークポイントが配置されているライブラリがまだロードされていないからです。ライブラリが Mozilla に本当にロードされているのにブレークポイントが設定できないという場合には、上の <a href="#.E5.85.B1.E6.9C.89.E3.83.A9.E3.82.A4.E3.83.96.E3.83.A9.E3.83.AA.E3.82.92.E3.83.AD.E3.83.BC.E3.83.89.E3.81.99.E3.82.8B.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F">共有ライブラリをロードする</a> を読んでください。ライブラリがまだロードされていないという場合には、ロードされるまで待たなければなりません。ブレークポイントを、ライブラリがロードされ次第設定したいという場合には、上の <a href="#.E3.82.B3.E3.83.B3.E3.83.9D.E3.83.BC.E3.83.8D.E3.83.B3.E3.83.88.E3.81.8C.E3.83.AD.E3.83.BC.E3.83.89.E3.81.95.E3.82.8C.E3.81.9F.E6.99.82.E3.81.AB.E3.83.96.E3.83.AC.E3.83.BC.E3.82.AF.E3.83.9D.E3.82.A4.E3.83.B3.E3.83.88.E3.82.92.E3.82.BB.E3.83.83.E3.83.88.E3.81.99.E3.82.8B.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F">コンポーネントがロードされた時にブレークする</a> および <a href="#.E3.83.AD.E3.83.BC.E3.83.89.E3.81.95.E3.82.8C.E3.81.A6.E3.81.84.E3.81.AA.E3.81.84.E3.83.A9.E3.82.A4.E3.83.96.E3.83.A9.E3.83.AA.E3.81.AB.E3.83.96.E3.83.AC.E3.83.BC.E3.82.AF.E3.83.9D.E3.82.A4.E3.83.B3.E3.83.88.E3.82.92.E3.82.BB.E3.83.83.E3.83.88.E3.81.99.E3.82.8B.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F">ライブラリがロードされた時にブレークする</a> を見てください。
+</p>
+<h5 id="PRUnichar_.E3.82.92.E8.A1.A8.E7.A4.BA.E3.81.99.E3.82.8B.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F" name="PRUnichar_.E3.82.92.E8.A1.A8.E7.A4.BA.E3.81.99.E3.82.8B.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> PRUnichar を表示するにはどうしたらいいのですか？ </h5>
+<p>対応方法が各種提案されています。
+</p>
+<pre class="eval">(gdb) <b>print ((PRUnichar*)uri.mBuffer)[0]@16</b>
+$47 = {114, 100, 102, 58, 110, 117, 108, 108, 0, 0, 8, 0, 0, 0, 37432,
+16514}
+(gdb) <b>print aURI</b>
+$1 = (const PRUnichar *) 0x855e6e0
+(gdb) <b>x/32ch aURI</b>
+0x855e6e0:      104 'h' 116 't' 116 't' 112 'p' 58 ':'  47 '/'  47 '/'  119 'w'
+0x855e6f0:      119 'w' 119 'w' 46 '.'  109 'm' 111 'o' 122 'z' 105 'i' 108 'l'
+0x855e700:      108 'l' 97 'a'  46 '.'  111 'o' 114 'r' 103 'g' 47 '/'  115 's'
+0x855e710:      116 't' 97 'a'  114 'r' 116 't' 47 '/'  0 '\0'  25 '\031'       0 '\0'
+(gdb)
+</pre>
+<p>あるいは、&lt;tt&gt;.gdbinit&lt;/tt&gt; にヘルパー関数を定義してください。
+</p>
+<pre class="eval"><span class="nowiki"># "pu"コマンドを定義して PRUnichar * 文字列を (最大 100 文字) 表示する。
+ def pu
+   set $uni = $arg0
+   set $i = 0
+   while (*$uni &amp;&amp; $i  &lt;100)
+     if (*$uni &lt; 0x80)
+       print *(char*)$uni
+     else
+       print /x *(short*)$uni
+     end
+   end
+ end
+
+ # "ps" コマンドを定義して nsString/nsAutoString/nsCString/nsCAutoString を表示する。
+ def ps
+   set $ns = $arg0
+   if ($ns-&gt;mCharSize)
+     pu $ns-&gt;mUStr
+   else
+     print $ns-&gt;mStr
+   end
+ end</span>
+</pre>
+<p>あるいは、<code>#ifdef NS_DEBUG</code> コードのどこかに "punichar" という小さなヘルパー関数を定義してください。
+</p>
+<h5 id="nsString_.E3.82.92.E8.A1.A8.E7.A4.BA.E3.81.99.E3.82.8B.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F" name="nsString_.E3.82.92.E8.A1.A8.E7.A4.BA.E3.81.99.E3.82.8B.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> nsString を表示するにはどうしたらいいのですか？ </h5>
+<p>ToNewCString() メソッドを、表示したい nsString 上で呼びだすことができます。こうするとメモリーリークが少し起きますが、1 つの GDB セッション中に数回しか呼びださないのであれば問題にはならないはずです。<a class=" link-mailto" href="mailto:(akkana@netscape.com" rel="freelink">(akkana@netscape.com</a> より)
+</p>
+<pre class="eval">(gdb) <b>p string.ToNewCString()</b>
+</pre>
+<h5 id=".E3.83.9D.E3.82.A4.E3.83.B3.E3.82.BF.E3.81.8C.E6.8C.87.E3.81.97.E3.81.A6.E3.81.84.E3.82.8B.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E3.81.AE.E5.85.B7.E8.B1.A1.E3.82.BF.E3.82.A4.E3.83.97.E3.82.92.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.BC.E3.83.95.E3.82.A7.E3.82.A4.E3.82.B9.E3.83.9D.E3.82.A4.E3.83.B3.E3.82.BF.E3.81.A7.E6.8C.87.E5.AE.9A.E3.81.99.E3.82.8B.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F" name=".E3.83.9D.E3.82.A4.E3.83.B3.E3.82.BF.E3.81.8C.E6.8C.87.E3.81.97.E3.81.A6.E3.81.84.E3.82.8B.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E3.81.AE.E5.85.B7.E8.B1.A1.E3.82.BF.E3.82.A4.E3.83.97.E3.82.92.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.BC.E3.83.95.E3.82.A7.E3.82.A4.E3.82.B9.E3.83.9D.E3.82.A4.E3.83.B3.E3.82.BF.E3.81.A7.E6.8C.87.E5.AE.9A.E3.81.99.E3.82.8B.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> ポインタが指しているオブジェクトの具象タイプをインターフェイスポインタで指定するにはどうしたらいいのですか？ </h5>
+<p>ポインタが指しているオブジェクトの具象タイプを XPCOM インターフェイス・ポインタで指定するには、そのオブジェクトの vtable のシンボルの短縮名を指すようにしてください。
+</p>
+<pre class="eval">(gdb) <b>p aKidFrame</b>
+$1 = (nsIFrame *) 0x85058d4
+(gdb) <b>x/wa *(void**)aKidFrame</b>
+0x4210d380 &lt;__vt_14<b>nsRootBoxFrame</b>&gt;: 0x0
+(gdb) <b>p *(nsRootBoxFrame*)aKidFrame</b>
+ <var>[ all the member variables of aKidFrame ]</var>
+</pre>
+<p>(gcc 3.x を使っている場合には、出力が上記 (gcc 2.9x でのもの) と少し違ってきますが、ここで注目してほしいのは、最初のバーチャル関数の短縮名ではなく、vtable シンボル (この場合には <code>_ZTV14nsRootBoxFrame</code>) です。最初のバーチャル関数を指定変更しないクラスもあるからです (通常は <code>QueryInterface</code> なので指定変更しますが)。)
+</p><p>注意してほしいのは、指しているオブジェクトの実装を含んだ共有ライブラリがロードされていない場合には、何も得ないことになるということです。上の <a href="#.E5.85.B1.E6.9C.89.E3.83.A9.E3.82.A4.E3.83.96.E3.83.A9.E3.83.AA.E3.82.92.E3.83.AD.E3.83.BC.E3.83.89.E3.81.99.E3.82.8B.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F">共有ライブラリをロードするにはどうしたらいいのですか？</a> および <a href="#.E3.81.A9.E3.81.AE.E3.83.A9.E3.82.A4.E3.83.96.E3.83.A9.E3.83.AA.E3.81.8C.E3.83.AD.E3.83.BC.E3.83.89.E6.B8.88.E3.81.BF.E3.81.AA.E3.81.AE.E3.81.8B.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.82.8F.E3.81.8B.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F">ロード済みのライブラリを調べるにはどうしたらいいのですか？</a> を読んでください。
+</p>
+<h5 id="GDB_.E3.81.AE_.22run.22_.E3.82.84_.22prun.22_.E3.81.8C_.22error_in_loading_shared_libraries.22_.E3.82.92.E5.90.90.E3.81.84.E3.81.A6.E5.A4.B1.E6.95.97.E3.81.97.E3.81.BE.E3.81.99.E3.80.82" name="GDB_.E3.81.AE_.22run.22_.E3.82.84_.22prun.22_.E3.81.8C_.22error_in_loading_shared_libraries.22_.E3.82.92.E5.90.90.E3.81.84.E3.81.A6.E5.A4.B1.E6.95.97.E3.81.97.E3.81.BE.E3.81.99.E3.80.82"> GDB の "run" や "prun" が "error in loading shared libraries" を吐いて失敗します。</h5>
+<p>GDB において mozilla-bin を走らせようとすると、以下にあげるようなメッセージと似たエラーを吐いて失敗します。
+</p>
+<pre class="eval">Starting program: /u/dmose/s/mozilla/mozilla-all/mozilla/dist/bin/./mozilla-bin
+/u/dmose/s/mozilla/mozilla-all/mozilla/dist/bin/./mozilla-bin: error in loading shared libraries: libraptorgfx.so: cannot open shared object file: No such file or directory
+</pre>
+<p>おそらく、LD_LIBRARY_PATH が、.cshrc あるいは .profile によってリセットされています。GDB マニュアルには次のような記述があります。
+</p>
+<dl><dd><code><span class="nowiki">警告：GDB は、`SHELL' 環境変数が存在する場合には (存在しなければ `/bin/sh') そこで指定されているシェルを使ってプログラムを実行します。`SHELL' 変数が初期設定ファイル -- C シェルであれば `.cshrc'、BASH であれば `.bashrc' -- を指定している場合には、その初期設定ファイル中に設定した変数が全てプログラムに影響を及ぼします。環境変数の設定を、ログオンした時だけに実行されるファイル、`.login' あるいは `.profile' など、に移すことができます。</span></code>
+</dd></dl>
+<h5 id="GDB.2Fddd_.E3.82.92.E4.BD.BF.E3.81.A3.E3.81.A6.E3.82.A2.E3.83.97.E3.83.AA.E3.82.B1.E3.83.BC.E3.82.B7.E3.83.A7.E3.83.B3.E3.81.AB.E5.BC.95.E6.95.B0.E3.82.92.E6.B8.A1.E3.81.99.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F" name="GDB.2Fddd_.E3.82.92.E4.BD.BF.E3.81.A3.E3.81.A6.E3.82.A2.E3.83.97.E3.83.AA.E3.82.B1.E3.83.BC.E3.82.B7.E3.83.A7.E3.83.B3.E3.81.AB.E5.BC.95.E6.95.B0.E3.82.92.E6.B8.A1.E3.81.99.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> GDB/ddd を使ってアプリケーションに引数を渡すにはどうしたらいいのですか？ </h5>
+<p>現時点では引数の受け渡しは <code>./mozilla -g your-list-of-arguments</code> を使えばできるはずです。例えば、スタートアップ時にメールを立ちあげたい場合には、以下のような Mozilla スクリプトを呼びだすことができます: <code>./mozilla -g -mail</code>
+</p>
+<h5 id="prun_.E3.81.A7.E5.BC.95.E6.95.B0.E3.82.92.E6.B8.A1.E3.81.99.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F" name="prun_.E3.81.A7.E5.BC.95.E6.95.B0.E3.82.92.E6.B8.A1.E3.81.99.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> prun で引数を渡すにはどうしたらいいのですか？ </h5>
+<p>GDB で引数を設定してから prun を呼びだしてください。以下に設定方法の例を挙げます。
+</p>
+<pre class="eval">(gdb) <b>set args <a class=" external" href="http://www.mozilla.org" rel="freelink">http://www.mozilla.org</a></b>
+(gdb) <b>prun</b>
+</pre>
+<h5 id="Mozilla_.E3.81.8C.E7.95.B0.E5.B8.B8.E7.B5.82.E4.BA.86.E3.81.97.E3.81.A6.E3.81.84.E3.81.BE.E3.81.99.E3.80.82.E3.81.A9.E3.81.93.E3.81.AB.E3.83.96.E3.83.AC.E3.83.BC.E3.82.AF.E3.83.9D.E3.82.A4.E3.83.B3.E3.83.88.E3.82.92.E3.82.BB.E3.83.83.E3.83.88.E3.81.99.E3.82.8C.E3.81.B0_Mozilla_.E3.81.8C.E3.81.A9.E3.81.93.E3.81.A7.E7.B5.82.E4.BA.86.E3.81.97.E3.81.A6.E3.81.84.E3.82.8B.E3.81.8B.E3.82.8F.E3.81.8B.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F" name="Mozilla_.E3.81.8C.E7.95.B0.E5.B8.B8.E7.B5.82.E4.BA.86.E3.81.97.E3.81.A6.E3.81.84.E3.81.BE.E3.81.99.E3.80.82.E3.81.A9.E3.81.93.E3.81.AB.E3.83.96.E3.83.AC.E3.83.BC.E3.82.AF.E3.83.9D.E3.82.A4.E3.83.B3.E3.83.88.E3.82.92.E3.82.BB.E3.83.83.E3.83.88.E3.81.99.E3.82.8C.E3.81.B0_Mozilla_.E3.81.8C.E3.81.A9.E3.81.93.E3.81.A7.E7.B5.82.E4.BA.86.E3.81.97.E3.81.A6.E3.81.84.E3.82.8B.E3.81.8B.E3.82.8F.E3.81.8B.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> Mozilla が異常終了しています。どこにブレークポイントをセットすれば Mozilla がどこで終了しているかわかるのですか？ </h5>
+<p>Linux では、2 つのシンボルがこの問題を引き起こしている可能性があります。<code>PR_ASSERT()</code> および <code>NS_ASSERTION()</code> です。プログラムが終了する前にキャッチしてどこで発生しているかを調べるには、2 箇所で中断することができます。
+</p>
+<pre class="eval">(gdb) <b>b abort</b>
+(gdb) <b>b exit</b>
+</pre>
+<h5 id=".E7.A7.81.E3.81.AF_Minefield_.E3.81.AE.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.81.A8.E5.90.91.E3.81.8D.E5.90.88.E3.81.A3.E3.81.A6.E3.81.84.E3.82.8B.E3.81.AE.E3.81.AB.E3.80.81.E3.83.87.E3.83.90.E3.83.83.E3.82.AC.E3.81.AF.E3.81.82.E3.81.9F.E3.81.8B.E3.82.82.E3.81.99.E3.81.A7.E3.81.AB.E3.83.97.E3.83.AD.E3.82.BB.E3.82.B9.E3.81.8C.E7.B5.82.E4.BA.86.E3.81.97.E3.81.9F.E3.81.8B.E3.81.AE.E3.82.88.E3.81.86.E3.81.AB.E6.8C.AF.E3.82.8B.E8.88.9E.E3.81.84.E3.81.BE.E3.81.99.E3.80.82.E3.81.AA.E3.81.9C.E3.81.A7.E3.81.97.E3.82.87.E3.81.86.EF.BC.9F" name=".E7.A7.81.E3.81.AF_Minefield_.E3.81.AE.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.81.A8.E5.90.91.E3.81.8D.E5.90.88.E3.81.A3.E3.81.A6.E3.81.84.E3.82.8B.E3.81.AE.E3.81.AB.E3.80.81.E3.83.87.E3.83.90.E3.83.83.E3.82.AC.E3.81.AF.E3.81.82.E3.81.9F.E3.81.8B.E3.82.82.E3.81.99.E3.81.A7.E3.81.AB.E3.83.97.E3.83.AD.E3.82.BB.E3.82.B9.E3.81.8C.E7.B5.82.E4.BA.86.E3.81.97.E3.81.9F.E3.81.8B.E3.81.AE.E3.82.88.E3.81.86.E3.81.AB.E6.8C.AF.E3.82.8B.E8.88.9E.E3.81.84.E3.81.BE.E3.81.99.E3.80.82.E3.81.AA.E3.81.9C.E3.81.A7.E3.81.97.E3.82.87.E3.81.86.EF.BC.9F"> 私は Minefield のウィンドウと向き合っているのに、デバッガはあたかもすでにプロセスが終了したかのように振る舞います。なぜでしょう？ </h5>
+<p>Firefox は、特に最近のビルドでは、起動時に新しいプロセスで自らを再起動することがあります。この現象が起きた場合、GDB は自動的に新しいプロセスに付随しません。(これに関しては GDB で設定できますが、より良い方法があります。)
+</p><p>実行中のプロセスに GDB が付随しているかどうかは、以下のようにして調べられます。
+</p>
+<pre class="eval">(gdb) <b>info task</b>
+</pre>
+<p>回復するには、まず実際の Firefox のプロセスの pid を見つけて、GDB の <code>attach</code> コマンドを実行します。
+</p>
+<pre class="eval">(gdb) <b>attach 533</b>
+Attaching to program: `/home/kaitlin/mozilla/obj-ff-debug/dist/bin/firefox-bin', process 533.
+Reading symbols for shared libraries ++... done
+0x90009cd7 in read ()
+</pre>
+<p>必ずひとつのプロセスで Firefox を実行するよう <code>firefox</code> に伝えるには、デバッグを始める前に以下の環境変数を設定します。
+</p>
+<pre class="eval">$ <b>MOZ_NO_REMOTE=1; export MOZ_NO_REMOTE</b>
+$ <b>NO_EM_RESTART=1; export NO_EM_RESTART</b>
+$ <b>./firefox -g</b>
+</pre>
+<p><code>MOZ_NO_REMOTE=1</code> はコマンドラインオプション <code>-no-remote</code> と同等です (Firefox を含むすべての <a href="ja/XULRunner">XULRunner</a> アプリケーションにより認識されます)。既に動作している Firefox のプロセスを使うために見つけようとする、リモート用コードを無効にします。
+</p><p>Firefox 自身の再起動に関する、もう一つの起こり得る理由はプロファイルマネージャです。プロファイルマネージャを避けるためには、<code>-P <i>profileName</i></code> または <code>-p <i>directory</i></code> を利用してコマンドライン <code>firefox</code> でプロファイルを指定します。
+</p>
+<h5 id=".E3.83.87.E3.83.90.E3.83.83.E3.82.AC.E3.81.AB_SIG32_.E3.81.8C.E5.87.BA.E3.81.A6.E3.81.84.E3.81.BE.E3.81.99.E3.80.82.E3.81.A9.E3.81.86.E3.82.84.E3.81.A3.E3.81.A6.E8.A7.A3.E6.B1.BA.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F" name=".E3.83.87.E3.83.90.E3.83.83.E3.82.AC.E3.81.AB_SIG32_.E3.81.8C.E5.87.BA.E3.81.A6.E3.81.84.E3.81.BE.E3.81.99.E3.80.82.E3.81.A9.E3.81.86.E3.82.84.E3.81.A3.E3.81.A6.E8.A7.A3.E6.B1.BA.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> デバッガに SIG32 が出ています。どうやって解決したらいいのですか？ </h5>
+<p>SIG32 が Mozilla のデバッグ中に出ている場合には、共有ライブラリのロードを pthreads ライブラリがロードされるまえにオフにした可能性があります。例えば、<code>.gdbinit</code> ファイルに <code>set auto-solib-add 0</code> を指定しているなどです。
+</p><p>こういった場合には、次のいずれかの方法で対処することができます。
+</p>
+<ul><li> その指定を削除し、<a href="#.E3.83.87.E3.83.90.E3.83.83.E3.82.AC.E3.81.8C.E3.83.A1.E3.83.A2.E3.83.AA.E3.82.92.E3.81.9F.E3.81.8F.E3.81.95.E3.82.93.E9.A3.9F.E3.81.A3.E3.81.A6.E3.81.97.E3.81.BE.E3.81.84.E3.81.BE.E3.81.99.E3.80.82_.E3.81.A9.E3.81.86.E3.82.84.E3.81.A3.E3.81.A6.E8.A7.A3.E6.B1.BA.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F">GDB のメモリの使い方</a> で説明しているメソッドを代わりに使います。
+</li><li> GDB あるいは <code>.gdbinit</code> ファイルで <code>handle SIG32 noprint</code> を使います。
+</li></ul>
+<p>あるいは、問題があるのは pthread ライブラリかもしれません。ライブラリのシンボルが除去されていると、GDB はスレッド・イベントにフックすることができず、SIG32 シグナルが出ることになります。libpthread が除去されているかどうかを調べるには、<code>file /lib/libpthread*</code> の出力に <code>'stripped'</code> があるかどうかを調べてください。この問題点を Gentoo Linux でフィックスするには、<code>"nostrip"</code> を <code>/etc/make.conf</code> の <code>FEATURES</code> に追加してから glibc を再構築してください。
+</p>
+<h5 id=".E7.AB.B6.E5.90.88.E7.8A.B6.E6.85.8B.E3.82.92.E3.83.87.E3.83.90.E3.83.83.E3.82.B0.E3.81.99.E3.82.8B.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.99.E3.82.8C.E3.81.B0.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.E3.80.82NS_ASSERTION_.E6.99.82.E3.81.AB.E7.95.B0.E3.82.8B.E5.8B.95.E4.BD.9C.E3.82.92.E3.81.95.E3.81.9B.E3.82.8B.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.E3.80.82" name=".E7.AB.B6.E5.90.88.E7.8A.B6.E6.85.8B.E3.82.92.E3.83.87.E3.83.90.E3.83.83.E3.82.B0.E3.81.99.E3.82.8B.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.99.E3.82.8C.E3.81.B0.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.E3.80.82NS_ASSERTION_.E6.99.82.E3.81.AB.E7.95.B0.E3.82.8B.E5.8B.95.E4.BD.9C.E3.82.92.E3.81.95.E3.81.9B.E3.82.8B.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.E3.80.82"> 競合状態をデバッグするにはどうすればいいのですか。NS_ASSERTION 時に異る動作をさせるにはどうしたらいいのですか。</h5>
+<p>Linux は、マルチスレッド・アプリケーションに有用な core ファイルを生成できないので、デバッガでめったに現れない状況を見つけ出すのは少し難しいかもしれません。
+</p><p><code>--enable-crash-on-assert</code> スイッチを <code>configure</code> に設定していない限り、現時点では、<a href="ja/XPCOM_DEBUG_BREAK">XPCOM_DEBUG_BREAK</a> 環境変数を使って <a href="ja/NS_ASSERTION">NS_ASSERTION</a> (実際には nsDebug::Break) の動作を変更することができます。
+</p>
+<h5 id="Linux_.E3.81.AB.E3.81.AF.E3.81.A9.E3.82.93.E3.81.AA.E3.83.91.E3.83.95.E3.82.A9.E3.83.BC.E3.83.9E.E3.83.B3.E3.82.B9.E3.83.84.E3.83.BC.E3.83.AB.E3.81.8C.E3.81.82.E3.82.8A.E3.81.BE.E3.81.99.E3.81.8B.E3.80.82" name="Linux_.E3.81.AB.E3.81.AF.E3.81.A9.E3.82.93.E3.81.AA.E3.83.91.E3.83.95.E3.82.A9.E3.83.BC.E3.83.9E.E3.83.B3.E3.82.B9.E3.83.84.E3.83.BC.E3.83.AB.E3.81.8C.E3.81.82.E3.82.8A.E3.81.BE.E3.81.99.E3.81.8B.E3.80.82"> Linux にはどんなパフォーマンスツールがありますか。</h5>
+<p><a class="link-mailto" href="mailto:jim_nance@yahoo.com">Jim Nance</a> が <a class="external" href="http://www.mozilla.org/performance/jprof.html">jprof</a> という、サンプリングを使ってパフォーマンスを分析するツールを作っています。他のツールは、<a class="external" href="http://www.mozilla.org/performance/tools.html#profiling">パフォーマンスツールのページ</a> に載っています。
+</p><p>残念ながら、Linux 用には Quantify のようなツールはありません。<a class="external" href="http://www.mozilla.org/unix/solaris.html">Solaris</a> では <a class="external" href="http://www.mozilla.org/unix/quantify.html">Quantify</a> を実行することになります。
+</p>
+<h5 id="Mozilla_.E3.81.AE.E3.83.87.E3.83.90.E3.83.83.E3.82.AC.E3.82.92_emacs_.E3.81.82.E3.82.8B.E3.81.84.E3.81.AF_xemacs_.E3.81.A7.E5.AE.9F.E8.A1.8C.E3.81.99.E3.82.8B.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.E3.80.82" name="Mozilla_.E3.81.AE.E3.83.87.E3.83.90.E3.83.83.E3.82.AC.E3.82.92_emacs_.E3.81.82.E3.82.8B.E3.81.84.E3.81.AF_xemacs_.E3.81.A7.E5.AE.9F.E8.A1.8C.E3.81.99.E3.82.8B.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.E3.80.82"> Mozilla のデバッガを emacs あるいは xemacs で実行するにはどうしたらいいのですか。</h5>
+<p>Emacs および XEmacs には、視覚的なデバッグ用のモードがあり、これを使っているプログラマがたくさんいます。ですが、環境変数を設定すると、デバッガと Mozilla に、どこからシンボルをロードするのか、および、どこでコンポーネントをみつけるのか、をきちんと知らせることができるようになります。
+</p><p>最も簡単にこういった環境変数を設定するには、ビルドの dist/bin ディレクトリにある <code>run-mozilla.sh</code> スクリプトを使います。このスクリプトで、エディタ、シェルまたはデバッガで実行するのに必要な環境を設定します。その他にも、このスクリプトを使って /bin/bash (またはお好みのシェル) を実行し、適切な構成をしたシェルをセットアップする方法です。こうすると、このシェルでどんなコマンドも実行することができます。
+</p>
+<pre class="eval">[blizzard@gunhead bin]$ <b>./run-mozilla.sh /bin/bash</b>
+MOZILLA_FIVE_HOME=/home/blizzard/src/mozilla/build/dist/bin
+  LD_LIBRARY_PATH=/home/blizzard/src/mozilla/build/dist/bin
+     LIBRARY_PATH=/home/blizzard/src/mozilla/build/dist/bin
+       SHLIB_PATH=/home/blizzard/src/mozilla/build/dist/bin
+          LIBPATH=/home/blizzard/src/mozilla/build/dist/bin
+       ADDON_PATH=/home/blizzard/src/mozilla/build/dist/bin
+      MOZ_PROGRAM=/bin/bash
+      MOZ_TOOLKIT=
+        moz_debug=0
+     moz_debugger=
+[blizzard@gunhead bin]$
+</pre>
+<h5 id="GDB_5_.E3.81.8C.E4.BB.A5.E5.89.8D.E3.81.AF.E5.8B.95.E4.BD.9C.E3.81.97.E3.81.A6.E3.81.84.E3.81.9F.E3.81.AE.E3.81.AB.E4.BB.8A.E3.81.AF_Mozilla_.E3.81.8C.E8.B5.B7.E5.8B.95.E3.81.97.E3.81.AA.E3.81.8F.E3.81.AA.E3.81.A3.E3.81.A6.E3.81.97.E3.81.BE.E3.81.84.E3.81.BE.E3.81.97.E3.81.9F.E3.80.82.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F" name="GDB_5_.E3.81.8C.E4.BB.A5.E5.89.8D.E3.81.AF.E5.8B.95.E4.BD.9C.E3.81.97.E3.81.A6.E3.81.84.E3.81.9F.E3.81.AE.E3.81.AB.E4.BB.8A.E3.81.AF_Mozilla_.E3.81.8C.E8.B5.B7.E5.8B.95.E3.81.97.E3.81.AA.E3.81.8F.E3.81.AA.E3.81.A3.E3.81.A6.E3.81.97.E3.81.BE.E3.81.84.E3.81.BE.E3.81.97.E3.81.9F.E3.80.82.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> GDB 5 が以前は動作していたのに今は Mozilla が起動しなくなってしまいました。どうしたらいいのですか？ </h5>
+<p>最近スレッドが変更になった (といっても 2004 年のこと。詳細は {{ Bug(57051) }} を見てください) ために問題が生じているシステムがあります。Mozilla の初期化の途中までいくとウインドウを表示する前に失敗します。
+</p><p>最近 GDB が変更になり、この問題は修正されています。<a class="external" href="http://sources.redhat.com/insight/">Insight の最新バージョン</a>、あるいは、GUI がお好みでないという場合には <a class="external" href="http://sources.redhat.com/gdb/">GDB の最新バージョン</a> を、ダウンロードしてビルドしてください。
+</p>
+<h5 id="Mozilla_.E3.82.92_Valgrind_.E3.81.A7.E8.B5.B0.E3.82.89.E3.81.9B.E3.82.8B.E3.81.A8.E3.82.B9.E3.82.BF.E3.83.BC.E3.83.88.E3.82.A2.E3.83.83.E3.83.97.E3.81.A7.E3.82.AF.E3.83.A9.E3.83.83.E3.82.B7.E3.83.A5.E3.81.97.E3.81.BE.E3.81.99.E3.80.82.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F" name="Mozilla_.E3.82.92_Valgrind_.E3.81.A7.E8.B5.B0.E3.82.89.E3.81.9B.E3.82.8B.E3.81.A8.E3.82.B9.E3.82.BF.E3.83.BC.E3.83.88.E3.82.A2.E3.83.83.E3.83.97.E3.81.A7.E3.82.AF.E3.83.A9.E3.83.83.E3.82.B7.E3.83.A5.E3.81.97.E3.81.BE.E3.81.99.E3.80.82.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> Mozilla を Valgrind で走らせるとスタートアップでクラッシュします。どうしたらいいのですか？ </h5>
+<p>Mozilla の GTK 2 ビルドには ORBit がありますが、これは malloc() が使うメモリ配置に依存します。システム・インプリメンテーションは 8 バイトに位置合わせをしますが、Valgrind はデフォルトでは 4 バイトに位置合わせをします。このことによって ORBit がクラッシュします。
+</p><p>Mozilla を Valgrind で実行するには、Valgrind に <code>--alignment=8</code> オプションを付けて使うことをお薦めします。
+</p>
+<h5 id="gdb_.E3.81.A7_JavaScript_.E3.81.AE.E3.82.B9.E3.82.BF.E3.83.83.E3.82.AF.E3.82.92.E8.A6.8B.E3.82.8B.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F" name="gdb_.E3.81.A7_JavaScript_.E3.81.AE.E3.82.B9.E3.82.BF.E3.83.83.E3.82.AF.E3.82.92.E8.A6.8B.E3.82.8B.E3.81.AB.E3.81.AF.E3.81.A9.E3.81.86.E3.81.97.E3.81.9F.E3.82.89.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.EF.BC.9F"> gdb で JavaScript のスタックを見るにはどうしたらいいのですか？ </h5>
+<p>JavaScript スタックはネイティブスタックの中には現れません (例えば、the stuff gdb prints with bt/where)。しかしながら、gdb プロンプトで <code>call DumpJSStack()</code> を入力することで JS スタックを表示するための関数を実行することができます。Mozilla のデバッグビルドを利用する必要があることに注意してください (さもないとシンボルが見つからないエラーが起こります)。また、この関数の出力はブラウザを起動したターミナルに送られることにも注意してください。もし異なるターミナルの中で gdb を起動している場合、そこでなにも起きていないかのように見えるでしょう！
+</p><p>以下にデバッグしているセッションの例を挙げます。 </p>
+<pre>[...Firefox は既に起動しており、gdb で接続します...]
+
+$ gdb -p `pgrep firefox-bin`
+[...大量の出力...]
+
+(gdb) break nsSecretDecoderRing::Encrypt
+Breakpoint 1 at 0xb25bb780: file /home/dolske/ff/ff-trunk/mozilla/security/manager/ssl/src/nsSDR.cpp, line 139.
+
+(gdb) c
+Continuing.
+
+[...Gmail に移動し、無作為なユーザ名とパスワードを入力、それを Firefox に覚えさせる...]
+
+Breakpoint 1, nsSecretDecoderRing::Encrypt (this=0x8febf30, data=0x8ea1620 "fakeuser", dataLen=8,
+    result=0xbff16a10, _retval=0xbff16a0c)
+    at /home/dolske/ff/ff-trunk/mozilla/security/manager/ssl/src/nsSDR.cpp:139
+139       nsNSSShutDownPreventionLock locker;
+
+(gdb) bt
+
+#0  nsSecretDecoderRing::Encrypt (this=0x8febf30, data=0x8ea1620 "fakeuser", dataLen=8, result=0xbff16a10,
+    _retval=0xbff16a0c) at /home/dolske/ff/ff-trunk/mozilla/security/manager/ssl/src/nsSDR.cpp:139
+#1  0xb25bb268 in nsSecretDecoderRing::EncryptString (this=0x8febf30, text=0x8ea1620 "fakeuser",
+    _retval=0xbff16bc8) at /home/dolske/ff/ff-trunk/mozilla/security/manager/ssl/src/nsSDR.cpp:232
+#2  0xb7ddb729 in NS_InvokeByIndex_P ()
+    at /home/dolske/ff/ff-trunk/mozilla/xpcom/reflect/xptinfo/src/xptiInterfaceInfo.cpp:73
+#3  0xb698890b in XPCWrappedNative::CallMethod (ccx=@0xbff16d00, mode=XPCWrappedNative::CALL_METHOD)
+    at /home/dolske/ff/ff-trunk/mozilla/js/src/xpconnect/src/xpcwrappednative.cpp:2346
+#4  0xb699595c in XPC_WN_CallMethod (cx=0x8408d40, obj=0xaeca2e60, argc=1, argv=0x8fd7b54, vp=0xbff16e14)
+    at /home/dolske/ff/ff-trunk/mozilla/js/src/xpconnect/src/xpcwrappednativejsops.cpp:1467
+#5  0xb7e67d71 in js_Invoke (cx=0x8408d40, argc=1, vp=0x8fd7b4c, flags=0)
+    at /home/dolske/ff/ff-trunk/mozilla/js/src/jsinterp.c:1386
+#6  0xb7e72cf9 in js_Interpret (cx=0x8408d40, pc=0x8ecfc2e ":", result=0xbff172d0)
+    at /home/dolske/ff/ff-trunk/mozilla/js/src/jsinterp.c:4146
+#7  0xb7e67de8 in js_Invoke (cx=0x8408d40, argc=1, vp=0x8fd798c, flags=2)
+    at /home/dolske/ff/ff-trunk/mozilla/js/src/jsinterp.c:1406
+#8  0xb69828a0 in nsXPCWrappedJSClass::CallMethod (this=0x8ed0c50, wrapper=0x8ed1a00, methodIndex=5,
+    info=0x89b2800, nativeParams=0xbff175a4)
+    at /home/dolske/ff/ff-trunk/mozilla/js/src/xpconnect/src/xpcwrappedjsclass.cpp:1441
+#9  0xb697b27b in nsXPCWrappedJS::CallMethod (this=0x8ed1a00, methodIndex=5, info=0x89b2800, params=0xbff175a4)
+    at /home/dolske/ff/ff-trunk/mozilla/js/src/xpconnect/src/xpcwrappedjs.cpp:567
+#10 0xb7ddc4fb in PrepareAndDispatch (methodIndex=&lt;value optimized out&gt;, self=0x8ed04d0,
+    args=&lt;value optimized out&gt;)
+    at /home/dolske/ff/ff-trunk/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_gcc_x86_unix.cpp:95
+#11 0xb7ddb729 in NS_InvokeByIndex_P ()
+    at /home/dolske/ff/ff-trunk/mozilla/xpcom/reflect/xptinfo/src/xptiInterfaceInfo.cpp:73
+#12 0xb698890b in XPCWrappedNative::CallMethod (ccx=@0xbff17914, mode=XPCWrappedNative::CALL_METHOD)
+    at /home/dolske/ff/ff-trunk/mozilla/js/src/xpconnect/src/xpcwrappednative.cpp:2346
+#13 0xb699595c in XPC_WN_CallMethod (cx=0x8408d40, obj=0xafdfe8e0, argc=1, argv=0x8fd7974, vp=0xbff17a28)
+    at /home/dolske/ff/ff-trunk/mozilla/js/src/xpconnect/src/xpcwrappednativejsops.cpp:1467
+#14 0xb7e67d71 in js_Invoke (cx=0x8408d40, argc=1, vp=0x8fd796c, flags=0)
+    at /home/dolske/ff/ff-trunk/mozilla/js/src/jsinterp.c:1386
+#15 0xb7e72cf9 in js_Interpret (cx=0x8408d40, pc=0x89ac0ab ":", result=0xbff17ee4)
+    at /home/dolske/ff/ff-trunk/mozilla/js/src/jsinterp.c:4146
+#16 0xb7e67de8 in js_Invoke (cx=0x8408d40, argc=1, vp=0x8fd7944, flags=2)
+    at /home/dolske/ff/ff-trunk/mozilla/js/src/jsinterp.c:1406
+#17 0xb69828a0 in nsXPCWrappedJSClass::CallMethod (this=0x89b5200, wrapper=0x89b5320, methodIndex=3,
+    info=0x89b2b38, nativeParams=0xbff181b8)
+    at /home/dolske/ff/ff-trunk/mozilla/js/src/xpconnect/src/xpcwrappedjsclass.cpp:1441
+#18 0xb697b27b in nsXPCWrappedJS::CallMethod (this=0x89b5320, methodIndex=3, info=0x89b2b38, params=0xbff181b8)
+    at /home/dolske/ff/ff-trunk/mozilla/js/src/xpconnect/src/xpcwrappedjs.cpp:567
+#19 0xb7ddc4fb in PrepareAndDispatch (methodIndex=&lt;value optimized out&gt;, self=0x89b5168,
+    args=&lt;value optimized out&gt;)
+    at /home/dolske/ff/ff-trunk/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_gcc_x86_unix.cpp:95
+#20 0xb7ddb729 in NS_InvokeByIndex_P ()
+    at /home/dolske/ff/ff-trunk/mozilla/xpcom/reflect/xptinfo/src/xptiInterfaceInfo.cpp:73
+#21 0xb698890b in XPCWrappedNative::CallMethod (ccx=@0xbff18528, mode=XPCWrappedNative::CALL_METHOD)
+    at /home/dolske/ff/ff-trunk/mozilla/js/src/xpconnect/src/xpcwrappednative.cpp:2346
+#22 0xb699595c in XPC_WN_CallMethod (cx=0x8408d40, obj=0xaec97e00, argc=1, argv=0x8fd7938, vp=0xbff1863c)
+    at /home/dolske/ff/ff-trunk/mozilla/js/src/xpconnect/src/xpcwrappednativejsops.cpp:1467
+#23 0xb7e67d71 in js_Invoke (cx=0x8408d40, argc=1, vp=0x8fd7930, flags=0)
+    at /home/dolske/ff/ff-trunk/mozilla/js/src/jsinterp.c:1386
+#24 0xb7e72cf9 in js_Interpret (cx=0x8408d40, pc=0x8ebf995 ":", result=0xbff18af8)
+    at /home/dolske/ff/ff-trunk/mozilla/js/src/jsinterp.c:4146
+#25 0xb7e67de8 in js_Invoke (cx=0x8408d40, argc=1, vp=0x8fd77d4, flags=2)
+    at /home/dolske/ff/ff-trunk/mozilla/js/src/jsinterp.c:1406
+#26 0xb7e7bf6c in js_InternalInvoke (cx=0x8408d40, obj=0xaec960a0, fval=-1361882496, flags=0, argc=1,
+    argv=0x8fd77d0, rval=0xbff18bfc) at /home/dolske/ff/ff-trunk/mozilla/js/src/jsinterp.c:1462
+#27 0xb7e286d4 in JS_CallFunctionValue (cx=0x8408d40, obj=0xaec960a0, fval=-1361882496, argc=1, argv=0x8fd77d0,
+...
+
+(gdb) call DumpJSStack()
+
+[...出力を見る Firefox を起動したターミナルの中を読みに行く...]
+
+0 [native frame]
+1 anonymous(plainText = "fakeuser") ["file:///home/dolske/ff/ff-trunk/mozilla/obj-ff/dist/bin/components/storage-Legacy.js":865]
+    cipherText = null
+    userCanceled = false
+    converter = [xpconnect wrapped nsIScriptableUnicodeConverter @ 0x8fc9c60 (native @ 0x8f5c110)]
+    plainOctet = "fakeuser"
+    this = [object Object]
+2 anonymous(sortByRealm = [function]) ["file:///home/dolske/ff/ff-trunk/mozilla/obj-ff/dist/bin/components/storage-Legacy.js":719]
+    writeLine = [function]
+    hostname = "https://www.google.com"
+    lastRealm = null
+    firstEntry = false
+    userCanceled = false
+    login = [xpconnect wrapped nsILoginInfo @ 0x8e6c398 (native @ 0x8ed5680)]
+    hostrealm = "https://www.google.com"
+    encUsername = undefined
+    encPassword = "MDIEEPgAAAAAAAAAAAAAAAAAAAEwFAYIKoZIhvcNAwcECKV3kVgnFYFtBAgbBsB+kXooKQ=="
+    outputStream = [xpconnect wrapped (nsISupports, nsIFileOutputStream, nsISafeOutputStream) @ 0x8fce5a0 (native @ 0x903bb10)]
+    this = [object Object]
+3 anonymous(login = [xpconnect wrapped nsILoginInfo @ 0x8e6c398 (native @ 0x8ed5680)]) ["file:///home/dolske/ff/ff-trunk/mozilla/obj-ff/dist/bin/components/storage-Legacy.js":197]
+    clone = undefined
+    key = "https://www.google.com"
+    rollback = [xpconnect wrapped nsILoginInfo @ 0x8edfa20 (native @ 0x8eddcc8)],[xpconnect wrapped nsILoginInfo @ 0x8ee0708 (native @ 0x8edfb58)],[xpconnect wrapped nsILoginInfo @ 0x8ee0d30 (native @ 0x8ee06f8)]
+    ok = undefined
+    this = [object Object]
+4 [native frame]
+5 anonymous(login = [xpconnect wrapped nsILoginInfo @ 0x885c2c0 (native @ 0x8ed5680)]) ["file:///home/dolske/ff/ff-trunk/mozilla/obj-ff/dist/bin/components/nsLoginManager.js":364]
+    logins = [xpconnect wrapped nsILoginInfo @ 0x8f8fd30 (native @ 0x8eddcc8)],[xpconnect wrapped nsILoginInfo @ 0x8fe6430 (native @ 0x8edfb58)],[xpconnect wrapped nsILoginInfo @ 0x8ff6318 (native @ 0x8ee06f8)]
+    this = [object Object]
+6 [native frame]
+7 anonymous(aNotificationBar = [object XULElement @ 0x8f7e920 (native @ 0x8a4e638)], aButton = [object Object]) ["file:///home/dolske/ff/ff-trunk/mozilla/obj-ff/dist/bin/components/nsLoginManagerPrompter.js":360]
+    this = [object BackstagePass @ 0x86e03b8 (native @ 0x811a87c)]
+8 _doButtonCommand(aEvent = [object XULCommandEvent @ 0x8674298 (native @ 0x8fdea24)]) ["chrome://global/content/bindings/notification.xml":393]
+    button = [object Object]
+    callback = [function]
+    result = undefined
+    this = [object XULElement @ 0x8f7e920 (native @ 0x8a4e638)]
+9 oncommand(event = [object XULCommandEvent @ 0x8674298 (native @ 0x8fdea24)]) ["chrome://browser/content/browser.xul":1]
+    this = [object XULElement @ 0x8f34b20 (native @ 0x8a5c0e0)]</pre>
+<h5 id=".E8.B3.AA.E5.95.8F.E3.81.8C.E3.81.82.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8C.E3.80.81.E8.AA.B0.E3.81.AB.E8.81.9E.E3.81.91.E3.81.B0.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.E3.80.82" name=".E8.B3.AA.E5.95.8F.E3.81.8C.E3.81.82.E3.82.8B.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8C.E3.80.81.E8.AA.B0.E3.81.AB.E8.81.9E.E3.81.91.E3.81.B0.E3.81.84.E3.81.84.E3.81.AE.E3.81.A7.E3.81.99.E3.81.8B.E3.80.82"> 質問があるのですが、誰に聞けばいいのですか。</h5>
+<p>かつては netscape.public.mozilla.unix というニュースグループがありましたが、今は存在しません。irc.mozilla.org の <a class="link-irc" href="irc://irc.mozilla.org/developers">#developers チャンネル</a> で質問を投げてみてください。
+</p>
+<div class="originaldocinfo">
+<h2 id=".E5.8E.9F.E6.96.87.E6.9B.B8.E3.81.AE.E6.83.85.E5.A0.B1" name=".E5.8E.9F.E6.96.87.E6.9B.B8.E3.81.AE.E6.83.85.E5.A0.B1"> 原文書の情報 </h2>
+<ul><li> 著者: <a class=" link-mailto" href="mailto:blizzard@mozilla.org" rel="freelink">blizzard@mozilla.org</a>, <a class="link-mailto" href="mailto:bruce@cybersight.com">Bruce Mitchener</a>, Dan Mosedale, and others
+</li><li> 最終更新日: December 28, 2004
+</li><li> 著作権: Portions of this content are © 1998–2007 by individual mozilla.org contributors; content available under a Creative Commons license | <a class="external" href="http://www.mozilla.org/foundation/licensing/website-content.html">詳細</a>
+</li></ul>
+</div>
+{{ languages( { "en": "en/Debugging_on_Linux" } ) }}

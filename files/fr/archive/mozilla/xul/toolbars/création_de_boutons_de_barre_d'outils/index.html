@@ -1,0 +1,127 @@
+---
+title: Création de boutons de barre d'outils
+slug: Archive/Mozilla/XUL/Toolbars/Création_de_boutons_de_barre_d'outils
+tags:
+  - Extensions
+translation_of: Archive/Mozilla/XUL/Toolbars/Creating_toolbar_buttons
+---
+<p> </p>
+<p>Cet article explique comment ajouter un bouton à la barre d'outils d'une application (comme Firefox, Thunderbird, Nvu, etc.) en utilisant la technique des <a href="fr/Overlays_XUL">overlays</a>. Cet article s'adresse aux développeurs d'<a href="fr/Extensions">extensions</a> connaissant les bases de <a href="fr/XUL">XUL</a> et <a href="fr/CSS">CSS</a>.</p>
+<p>Le lecteur est supposé être familiarisé avec les bases de la création d'extensions pour Firefox et avoir fait fonctionner <a href="fr/Construire_une_extension">sa première extension</a>. Un tutoriel vous guidant à travers le processus depuis le début est <a href="fr/Boutons_de_barre_d'outils_personnalis%c3%a9s">également disponible</a>.</p>
+<p> </p>
+<h3 id="Cr.C3.A9ation_d.27un_overlay" name="Cr.C3.A9ation_d.27un_overlay">Création d'un overlay</h3>
+<p>Avant tout, vous devez créer un overlay pour le document qui contient la barre d'outils que vous souhaitez améliorer. Le but de ce tutoriel n'est pas d'expliquer les overlays — vous pouvez trouver de précieuses informations à ce sujet dans le Tutoriel XUL.</p>
+<p>Pour créer un overlay sur un document, vous devez connaître son URI. Vous trouverez en bas de cette page la <a href="#Liste_des_fen.C3.AAtres_o.C3.B9_les_overlays_de_la_barre_d.27outils_sont_fr.C3.A9quents">liste des documents où les overlays sont créés le plus fréquemment</a>.</p>
+<div class="note">
+ Note : certains placent un overlay sur
+ <i>
+  <a class="external" rel="freelink">chrome://messenger/content/mailWindowOverlay.xul</a></i>
+ . Cela devrait faire apparaitre le bouton sur toutes les fenêtres auxquelles mailWindowOverlay.xul s'applique (c'est-à-dire la fenêtre principale et la fenêtre de messages). Cela doit être vérifié.</div>
+<h3 id="Ajout_d.27un_bouton_.C3.A0_la_barre_d.27outils" name="Ajout_d.27un_bouton_.C3.A0_la_barre_d.27outils">Ajout d'un bouton à la barre d'outils</h3>
+<p>Les applications toolkit ont une barre d'outils personnalisable. La méthode la plus pratique dans une extension est donc d'ajouter les boutons de la barre d'outils dans la palette plutôt que de les ajouter directement dans la barre d'outils. Cette dernière option est possible mais peu recommandée et plus difficile à mettre en œuvre.</p>
+<p>L'ajout d'un bouton à la palette de la barre d'outils est très simple. Il suffit d'ajouter ce code à l'overlay :</p>
+<pre>
+&lt;toolbarpalette id="BrowserToolbarPalette"&gt;
+  &lt;toolbarbutton id="myextension-button" class="toolbarbutton-1"
+    label="&amp;toolbarbutton.label;" tooltiptext="&amp;toolbarbutton.tooltip;"
+    oncommand="MyExtension.onToolbarButtonCommand(event);"/&gt;
+&lt;/toolbarpalette&gt;
+</pre>
+<p>Notes :</p>
+<ul>
+ <li>L'id de palette (BrowserToolbarPalette dans l'exemple) dépend de la fenêtre dans laquelle vous désirez ajouter un bouton. Voir ci-dessous la <a href="#Liste_des_fen.C3.AAtres_o.C3.B9_les_overlays_de_la_barre_d.27outils_sont_fr.C3.A9quents">liste des ID de palette les plus communément utilisées</a>.</li>
+ <li><code>class="toolbarbutton-1"</code> permet au bouton de la barre d'outils d'apparaitre correctement en mode icône et texte.</li>
+ <li>Il faut également indiquer la commande qui doit être exécutée dans l'attribut <code>oncommand</code>. Si vous avez besoin de prendre en charge le clic du milieu (roulette), vous devez ajouter la prise en charge <code>onclick</code> et vérifier <code>event.button</code>.</li>
+</ul>
+<pre>onclick: function(event) {
+  switch(event.button) {
+    case 0:
+      // Clic gauche
+      break;
+    case 1:
+      // Clic milieu
+      break;
+    case 2:
+      // Clic droit
+      break;
+  }
+}
+</pre>
+<p>Pour ajouter plus de boutons, il suffit de mettre d'autres éléments <code>&lt;toolbarbutton&gt;</code> dans l'élément <code>&lt;toolbarpalette&gt;</code>. Placez les éléments autres que des boutons de barre d'outils dans un élément <code>&lt;toolbaritem&gt;</code>.</p>
+<h3 id="Application_d.27un_style_sur_le_bouton" name="Application_d.27un_style_sur_le_bouton">Application d'un style sur le bouton</h3>
+<p>Le plus souvent, les boutons ont des icônes. Pour attacher une image à un bouton, on utilise une des fonctionnalités standard de Mozilla pour le personnaliser. Si vous n'êtes pas familier avec celle-ci, lisez <a class="external" href="http://www.borngeek.com/firefox/toolbar-tutorial/ch_5.html">la section skinning de l'excellent Toolbar Tutorial de Jonah Bishop</a> (en anglais). Bien que l'article décrive la création d'une barre d'outils complètement personnalisée plutôt que d'un simple bouton, il contient une très bonne explication des techniques que nous allons employer.</p>
+<h3 id="Taille_des_ic.C3.B4nes" name="Taille_des_ic.C3.B4nes">Taille des icônes</h3>
+<p>Les boutons pour la barre d'outils peuvent avoir deux tailles différentes — grande et petite. Ceci implique que vous allez devoir fournir de icônes différentes pour chaque bouton de votre barre d'outils. Vous trouverez ci-dessous les dimensions des icônes dans diverses applications (n'hésitez pas à en ajouter d'autres) :</p>
+<p>&lt;tr&gt; &lt;td&gt;Firefox 1.0 (Winstripe)&lt;/td&gt; &lt;td&gt;24x24&lt;/td&gt; &lt;td&gt;16x16&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;Thunderbird 1.0 (Qute)&lt;/td&gt; &lt;td&gt;24x24&lt;/td&gt; &lt;td&gt;16x16&lt;/td&gt; &lt;/tr&gt; &lt;/table&gt;</p>
+<h3 id="Feuille_de_style" name="Feuille_de_style">Feuille de style</h3>
+<p>Pour paramétrer l'image de votre bouton de barre d'outils, utilisez les règles CSS suivantes :</p>
+<pre>/*  skin/toolbar-button.css  */
+
+#myextension-button {
+  list-style-image: url("chrome://myextension/skin/btn_large.png");
+}
+
+toolbar[iconsize="small"] #myextension-button {
+  list-style-image: url("chrome://myextension/skin/btn_small.png");
+}
+</pre>
+<h3 id="Appliquer_la_feuille_de_style" name="Appliquer_la_feuille_de_style">Appliquer la feuille de style</h3>
+<p>Souvenez-vous d'associer la feuille de style que vous avez créée à la fois à l'overlay et à la fenêtre de personnalisation de la barre d'outils.</p>
+<pre>&lt;?xml-stylesheet href="chrome://myextension/skin/toolbar-button.css" type="text/css"?&gt;
+</pre>
+<p>Pour l'associer à la fenêtre de personnalisation (<code><a class="external" rel="freelink">chrome://global/content/customizeToolbar.xul</a></code>), vous pouvez utiliser &lt;tt&gt;skin/contents.rdf&lt;/tt&gt;, comme ceci :</p>
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:chrome="http://www.mozilla.org/rdf/chrome#"&gt;
+
+  &lt;Seq about="urn:mozilla:skin:root"&gt;
+    &lt;li resource="urn:mozilla:skin:classic/1.0"/&gt;
+  &lt;/Seq&gt;
+
+  &lt;Description about="urn:mozilla:skin:classic/1.0"&gt;
+    &lt;chrome:packages&gt;
+      &lt;Seq about="urn:mozilla:skin:classic/1.0:packages"&gt;
+        &lt;li resource="urn:mozilla:skin:classic/1.0:myextension"/&gt;
+      &lt;/Seq&gt;
+    &lt;/chrome:packages&gt;
+  &lt;/Description&gt;
+
+  &lt;Seq about="urn:mozilla:stylesheets"&gt;
+    &lt;li resource="chrome://global/content/customizeToolbar.xul"/&gt;
+  &lt;/Seq&gt;
+
+  &lt;Seq about="chrome://global/content/customizeToolbar.xul"&gt;
+    &lt;li&gt;chrome://myextension/skin/toolbar-button.css&lt;/li&gt;
+  &lt;/Seq&gt;
+&lt;/RDF&gt;
+</pre>
+<p>Les extensions pour Firefox et Thunderbird 1.5 doivent plutôt utiliser quelque chose de semblable à ceci dans le <a href="fr/Chrome.manifest">chrome.manifest</a> :</p>
+<pre class="eval">skin	myextension	classic/1.0	chrome/skin/
+style	<a class="external" rel="freelink">chrome://global/content/customizeToolbar.xul</a>	<a class="external" rel="freelink">chrome://myextension/skin/toolbar-button.css</a>
+</pre>
+<h3 id="Erreurs_fr.C3.A9quentes" name="Erreurs_fr.C3.A9quentes">Erreurs fréquentes</h3>
+<p>Voici une liste des erreurs fréquemment commises par les auteurs d'extensions, avec leurs symptômes et leurs solutions.</p>
+<p><b>Problème :</b> un assemblage de tous les boutons standards est dessiné à la place de votre propre icône.</p>
+<p><b>Cause :</b> feuille de style mal formée ou non appliquée.</p>
+<p><b>Solution :</b> vérifiez votre feuille de style, vérifiez si votre <code>content.rdf</code> (ou <code>chrome.manifest</code>) est correct, assurez-vous que vous n'avez pas oublié d'appliquer la feuille de style à <code>customizeToolbar.xul</code>.</p>
+<h3 id="Liste_des_fen.C3.AAtres_o.C3.B9_les_overlays_de_la_barre_d.27outils_sont_fr.C3.A9quents" name="Liste_des_fen.C3.AAtres_o.C3.B9_les_overlays_de_la_barre_d.27outils_sont_fr.C3.A9quents">Liste des fenêtres où les overlays de la barre d'outils sont fréquents</h3>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Application (nom du thème)&lt;/th&gt;
+    <pre class="eval">
+   &lt;td class="header"&gt;Taille de la grande icône&lt;/th&gt;
+   &lt;td class="header"&gt;Taille de la petite icône&lt;/th&gt;
+</pre>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>URL Applications et fenêtres modifiées Id de la palette <small><a class="external" rel="freelink">chrome://browser/content/browser.xul</a></small>Firefox - Fenêtre principaleBrowserToolbarPalette <small><a class="external" rel="freelink">chrome://messenger/content/messenger.xul</a></small>Thunderbird - Fenêtre principaleMailToolbarPalette <small><a class="external" rel="freelink">chrome://messenger/content/</a> messengercompose/messengercompose.xul</small>Thunderbird - Fenêtre de rédaction MsgComposeToolbarPalette <small><a class="external" rel="freelink">chrome://messenger/content/addressbo...ddressbook.xul</a></small>Thunderbird - Carnet d'adressesAddressBookToolbarPalette <small><a class="external" rel="freelink">chrome://editor/content/editor.xul</a></small>Nvu - Fenêtre principaleNvuToolbarPalette <small><a class="external" rel="freelink">chrome://calendar/content/calendar.xul</a></small>Sunbird - Fenêtre principalecalendarToolbarPalette</p>
+<h3 id="Plus_d.27informations" name="Plus_d.27informations">Plus d'informations</h3>
+<ul>
+ <li>La référence XulPlanet.com : <a class="external" href="http://xulplanet.com/references/elemref/ref_toolbarbutton.html"><code>&lt;toolbarbutton&gt;</code></a>, <a class="external" href="http://xulplanet.com/references/elemref/ref_toolbaritem.html"><code>&lt;toolbaritem&gt;</code></a>.</li>
+ <li><a class="external" href="http://forums.mozillazine.org/viewtopic.php?t=220220">How to adjust toolbarbutton's label position</a></li>
+ <li><a class="external" href="http://forums.mozillazine.org/viewtopic.php?t=189667">Une discussion sur le forum de MozillaZine (en)</a> à propos de l'ajout d'une entrée dans la barre d'outils (et pas seulement dans la palette de personnalisation) juste après l'installation de l'extension. Notez qu'il n'est pas recommandé de le faire.</li>
+ <li>Il existe <a href="fr/Bouton_de_barre_d'outils_personnalis%c3%a9/SeaMonkey">une autre page</a> sur MDC avec des information sur l'ajout de boutons à diverses fenêtres dans SeaMonkey. On peut également y trouver des informations utiles sur les overlays pour ChatZilla.</li>
+</ul>

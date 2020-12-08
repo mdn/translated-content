@@ -1,0 +1,108 @@
+---
+title: Firefox OS 2.5 pour les développeurs
+slug: Archive/B2G_OS/Releases/2.5
+tags:
+  - '2.5'
+  - Firefox OS
+  - Notes de version
+translation_of: Archive/B2G_OS/Releases/2.5
+---
+<div>
+<p class="summary">Cette page détaille les fonctionnalités développeurs nouvellement implémentées dans Gecko et qui sont spécifiques à Firefox OS 2.5, ainsi que les fonctionnalités du produit et des outils de développement, et d'autres points notables de cette nouvelle version.</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong> : Le composant Gecko de Firefox OS 2.5 est basé sur celui de Firefox <strong>à partir de la version 38</strong>.</p>
+</div>
+
+<h2 id="Fonctionnalités_du_produit">Fonctionnalités du produit</h2>
+
+<p>Cette section énumère différentes catégories de fonctionnalités nouvelles ou améliorées.</p>
+
+<h3 id="Nouvelles_fonctionnalités_systèmes">Nouvelles fonctionnalités systèmes</h3>
+
+<dl>
+ <dt> </dt>
+ <dt>L'app Bugzilla Lite</dt>
+ <dd>Fournit la possibilité de signaler des bogues/demandes de fonctionnalités directement depuis l'appareil (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1180660" title="FIXED: [meta] Bugzilla Lite v2.5 tracking">bug 1180660</a>.)</dd>
+ <dt>Modules</dt>
+ <dd>Fournit la possibilité de personnaliser l'expérience de l'utilisateur selon ses envies (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1180672" title="addon support">bug 1180672</a>.)</dd>
+ <dt>Écrans d'accueil remplaçables</dt>
+ <dd>L'utilisateur peut maintenant choisir entre plusieurs écrans d'accueil différents (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1180665" title="FIXED: Support replaceable homescreen">bug 1180665</a>.)</dd>
+ <dt>L'API Web Speech</dt>
+ <dd>Permet aux développeurs d'implémenter des applications qui peuvent être contrôlées par la voix (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1051148" title="FIXED: Implementation of Webspeech API &amp; PocketSphinx Integration">bug 1051148</a>.)</dd>
+ <dt>Épinglage de la page web</dt>
+ <dd>Cette fonction permet de parcourir le web et d'épingler un site web sur l'écran d'accueil de sorte que les utilisateurs puissent avoir un accès facile et rapide aux contenus qui les intéressent (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1180669" title="FIXED: Pin the web support">bug 1180669</a>.)</dd>
+ <dt>Protection contre le pistage</dt>
+ <dd>Les utilisateurs peuvent à présent naviguer en sécurité sur le web sans être pistés (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1180674" title="FIXED: [Meta] Tracking Protection">bug 1180674</a>.)</dd>
+ <dt>Durée de démarrage et performances de l'appareil</dt>
+ <dd>Les régressions de performances/démarrage ont été éradiquées de Firefox OS 2.5, garantissant une bonne expérience dès l'allumage de l'appareil (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1180695" title="Device startup time">bug 1180695</a>, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1180696" title="FIXED: app startup times">bug 1180696</a>.)</dd>
+ <dt>Personnalisation après le premier démarrage</dt>
+ <dd>Les vendeurs d'appareils ont désormais la possibilité de proposer à leurs clients des applications de leur choix lors du premier démarrage (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1180707" title="FIXED: late customisation">bug 1180707</a>.)</dd>
+ <dt>Expérience RTL améliorée</dt>
+ <dd>Firefox OS 2.5 dispose d'un bien meilleur support des langues RTL, assurant ainsi un meilleur support des langues pour toute notre base d'utilisateurs (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1179459" title="RTL Support for Firefox OS 2.5">bug 1179459</a>.)</dd>
+ <dt>Première implémentation de la nouvelle architecture de Gaia (NGA, soit New Gaia Architecture)</dt>
+ <dd>La première étape consiste à séparer les architectures frontend et backend des applications Gaia, ce qui permettra de nombreuses améliorations dans le futur (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1180716" title="NGA FE/BE split support">bug 1180716</a>.)</dd>
+ <dt>Voir le code source</dt>
+ <dd>Quand l'appareil est en mode développeur, les utilisateurs peuvent directement voir dessus le code source des applications intégrées (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1188671" title="FIXED: Implement View Source">bug 1188671</a>.)</dd>
+ <dt>API Presentation</dt>
+ <dd> Autorise le développeur à activer des contenus web pour accéder à des affichages externes de type présentation puis à les utiliser pour faire des présentations web (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1184073" title="[meta] 2-UAs support for Presentation API">bug 1184073</a>.)</dd>
+ <dt> </dt>
+ <dt>
+ <h3 id="Firefox_OS_TV–fonctionnalités_spécifiques">Firefox OS TV–fonctionnalités spécifiques</h3>
+ </dt>
+ <dt>Navigateur TV</dt>
+ <dd> Support du facteur d'encombrement TV pour le navigateur de Firefox OS (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1190158" title="FIXED: [Browser app] Firefox Browser app on the main home screen">bug 1190158</a>.)</dd>
+ <dt>Intégration de Compte Firefox dans le Navigateur TV</dt>
+ <dd> Permet aux utilisateurs des TV de synchroniser leurs marque-pages et historique via leur Compte Firefox dans le navigateur (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1194108" title="FIXED: [meta][browser] Firefox Account in TV">bug 1194108</a>.)</dd>
+ <dt>Récepteur de requête pour l'API Presentation</dt>
+ <dd>Permet aux TV sous Firefox OS de recevoir des URLs envoyées depuis d'autres appareils via des appels à l'API Presentation (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1205999" title="FIXED: [TV][2.5] (TV side) TV to receive URL sent from Fennec">bug 1205999</a>.)</dd>
+ <dt><strong>Métriques pour la TV</strong></dt>
+ <dd> Les métriques de Firefox OS sont maintenant activées pour le facteur d'encombrement TV (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1199319" title="[TV][meta] TV Metrics">bug 1199319</a>.)</dd>
+</dl>
+
+<h2 id="Nouvelles_fonctionnalités_des_DevTools">Nouvelles fonctionnalités des DevTools</h2>
+
+<div class="note">
+<p><strong>Note</strong> : Vous pouvez toujours trouver des détails sur les nouveaux outils de développement Firefox et sur ceux à venir en regardant dans la <a href="https://hacks.mozilla.org/category/developer-tools/">catégorie Mozilla Hacks Developer Tools</a>.</p>
+</div>
+
+<h2 id="Modifications_de_la_plate-forme_et_ajouts_en_détail">Modifications de la plate-forme et ajouts en détail</h2>
+
+<div class="note">
+<p><strong>Note</strong> : Notre présente liste comporte les fonctionnalités les plus importantes de Firefox OS. Pour une liste plus complète des ajouts aux caractéristiques générales de Gecko (qui sont en général également présentes dans Firefox OS 2.5), consultez les plus récentes <a href="/fr/docs/Mozilla/Firefox/Versions">notes de version de Firefox pour développeurs</a>.</p>
+</div>
+
+<h3 id="JavaScript">JavaScript</h3>
+
+<ul>
+ <li>L'<a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Intl">API ECMAScript Internationalization</a> a été activée dans Firefox OS. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=866301" title="FIXED: Enable ECMAScript Internationalization API for Firefox OS">bug 866301</a> pour plus de détails sur l'implémentation, et le message de blog <a href="https://hacks.mozilla.org/2014/12/introducing-the-javascript-internationalization-api/">Introducing the JavaScript Internationalization API</a> pour des exemples d'utilisation.</li>
+</ul>
+
+<h3 id="Changements_de_l'API_Web">Changements de l'API Web</h3>
+
+<ul>
+ <li>L'<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">API Web Speech</a> permet d'incorporer des données vocales dans des applications web — aussi bien de la reconnaissance vocale que de la synthèse vocale (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1051148" title="FIXED: Implementation of Webspeech API &amp; PocketSphinx Integration">bug 1051148</a>.)</li>
+ <li>L'<a href="/fr/docs/WebAPI/Camera">API Camera</a> a été enrichie avec deux nouvelles méthodes pour contrôler l'enregistrement vidéo : <a href="/fr/docs/Web/API/CameraControl/pauseRecording" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>CameraControl.pauseRecording()</code></a> et <a href="/fr/docs/Web/API/CameraControl/resumeRecording" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>CameraControl.resumeRecording()</code></a> (voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1187364" title="FIXED: [Gecko][Camera] Pause and Resume support during video recording">bug 1187364</a>.)</li>
+ <li>L'<a href="/en-US/docs/Web/API/Data_Store_API">API Data Store</a> est maintenant disponible pour les applications privilégiées de l'écran d'accueil. Ainsi, les applications tierces de l'écran d'accueil peuvent accéder aux mêmes stockages de données que celles par défaut et elles peuvent fournir des fonctionnalités équivalentes. Voir le <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1181329" title="FIXED: [User Story] Make DataStore available to privileged homescreen apps">bug 1181329</a> pour les détails de l'implémentation de la fonctionnalité, et <a href="/en-US/docs/Web/API/Data_Store_API/Using_the_Data_Store_API#Privileged_homescreen_apps">Using the Data Store API</a> pour les détails du code spécifique.</li>
+ <li>L'interface <a href="/fr/docs/Web/API/DeviceStorage" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>DeviceStorage</code></a> dispose d'une nouvelle propriété <a href="/fr/docs/Web/API/Boolean" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>Boolean</code></a> qui retourne <code>true</code> si la zone de stockage est presque pleine (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1204618" title="FIXED: [DeviceStorage] Add a new API to query the current low-disk-space status">bug 1204618</a>.)</li>
+ <li>L'<a href="/fr/docs/Web/Guide/Telephony">API Telephony</a> dispose d'une nouvelle méthode permettant à une application d'être désignée comme le propriétaire des appels téléphoniques à partir de la stratégie <a href="/en-US/docs/Web/API/AudioChannels_API">AudioChannel</a> — <a href="/fr/docs/Web/API/Telephony/ownAudioChannel" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>Telephony.ownAudioChannel()</code></a> (voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1129882" title="FIXED: [B2G] Using the new audio channel design to manage the telephony's sound">bug 1129882</a>.)</li>
+ <li>L'<a href="/en-US/docs/Web/API/Browser_API">API Browser</a> dispose d'une nouvelle méthode pour récupérer les microdonnées des pages chargées : <a href="/fr/docs/Web/API/HTMLIFrameElement/getStructuredData" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>HTMLIFrameElement.getStructuredData()</code></a> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1195801" title="FIXED: Add API function for fetching Microdata data to the Browser API">bug 1195801</a>.)</li>
+ <li>L'<a href="/en-US/docs/Web/API/Browser_API">API Browser</a> dispose d'une nouvelle méthode pour récupérer le manifeste d'une application chargée : <a href="/fr/docs/Web/API/HTMLIFrameElement/getManifest" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>HTMLIFrameElement.getManifest()</code></a> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1169633" title="FIXED: [Browser API] getWebManifest()">bug 1169633</a>.)</li>
+ <li>L'événement <code><a href="/fr/docs/Web/Reference/Events/mozbrowserasyncscroll" title="/fr/docs/Web/Reference/Events/mozbrowserasyncscroll">mozbrowserasyncscroll</a></code> de l'<a href="/en-US/docs/Web/API/Browser_API">API Browser</a> a été supprimé (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=898075" title="FIXED: Remove the mozbrowserasyncscroll event">bug 898075</a>.)</li>
+</ul>
+
+<h2 id="Bogues_et_régressions">Bogues et régressions</h2>
+
+<p>Un appui long sur une image en mode édition provoque l'apparition d'un menu contextuel dont les options ne fonctionnent pas correctement à cause d'un sélecteur d'activité incorrect. Cette régression a été corrigée début octobre (voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1198522" title="FIXED: Long pressing on an image in edit mode will bring up a menu that does not function">bug 1198522</a>.)</p>
+
+<h2 id="Annonces_de_sécurité">Annonces de sécurité</h2>
+
+<p>Aucune jusqu'à présent.</p>
+
+<h2 id="Anciennes_versions">Anciennes versions</h2>
+
+<p></p><div class="multiColumnList">
+<ul>
+<li><a href="/fr/docs/Mozilla/Firefox_OS/Versions/2.0">Firefox OS 2.0 pour les développeurs</a></li><li><a href="/fr/docs/Mozilla/Firefox_OS/Versions/1.4">Firefox OS 1.4 pour les développeurs</a></li><li><a href="/fr/docs/Mozilla/Firefox_OS/Versions/1.3">Firefox OS 1.3 pour les développeurs</a></li><li><a href="/fr/docs/Mozilla/Firefox_OS/Versions/1.2">Firefox OS 1.2 pour les développeurs</a></li><li><a href="/fr/docs/Mozilla/Firefox_OS/Versions/1.1">Firefox OS 1.1 pour les développeurs</a></li><li><a href="/fr/docs/Mozilla/Firefox_OS/Versions/1.0.1">Firefox OS 1.0.1 pour les développeurs</a></li></ul>
+</div><p></p>

@@ -1,0 +1,198 @@
+---
+title: ツールバーとツールバーボタンの追加
+slug: Archive/Mozilla/XUL/School_tutorial/Adding_Toolbars_and_Toolbar_Buttons
+tags:
+  - Toolbars
+  - XUL
+translation_of: >-
+  Archive/Add-ons/Overlay_Extensions/XUL_School/Adding_Toolbars_and_Toolbar_Buttons
+---
+<div>
+  <div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/School_tutorial/Adding_Menus_and_Submenus" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/School_tutorial/Adding_events_and_commands">次のページ  »</a></p>
+</div></div>
+<h2 id="Adding_a_new_toolbar" name="Adding_a_new_toolbar">新しいツールバーの追加</h2>
+<p>新しいツールバーは Firefox に簡単に追加できますが、同様に、間違った方法でも簡単に追加できてしまいます。</p>
+<p>Firefox のツールバーは、ほとんどの部分がカスタマイズ可能です。ユーザによっては、追加のツールバーを好まないかもしれません。あるいは、ツールバーボタンを配置し直したり複数のツールバーを統合したいかもしれません。Firefox は、これらのカスタマイズをデフォルトで可能にしているため、このセクションに書かれたことに注意を払わないと、ツールバーが簡単にカスタマイズできるようにはなりません。</p>
+<p>まずはじめに、あなたの拡張機能のボタンをツールバーパレットに追加する必要があります。<a href="/ja/docs/XUL/toolbarpalette" title="XUL/toolbarpalette">toolbarpalette</a> 要素は、すべてのツールバーボタンと Firefox のツールバーアイテム、拡張機能によって追加されたアイテムの集合です。ボタンを追加するために必要なことは、メインブラウザのオーバーレイ内で、パレットオーバーレイを適用することだけです。</p>
+<pre class="brush:xml">&lt;overlay id="xulschoolhello-browser-overlay"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+  &lt;toolbarpalette id="BrowserToolbarPalette"&gt;
+    &lt;toolbarbutton id="xulschoolhello-hello-world-button"
+      class="toolbarbutton-1 chromeclass-toolbar-additional"
+      label="&amp;xulschoolhello.helloWorld.label;"
+      tooltiptext="&amp;xulschoolhello.helloWorld.tooltip;"
+      oncommand="XULSchoolChrome.BrowserOverlay.doSomething(event);" /&gt;
+    &lt;!-- More buttons here. --&gt;
+  &lt;/toolbarpalette&gt;
+  &lt;!-- More overlay stuff. --&gt;
+&lt;/overlay&gt;
+</pre>
+<p>上記のコードをざっと見て分かることは、<em>toolbarpalette</em> 要素が <em>window</em> 要素の外側にあることです。オーバーレイ内で <em>toolbarpalette</em> 要素を <em>window</em> 要素の内側に置くと、おかしなエラーが起こってしまいます。</p>
+<div class="note">
+  <p><a href="/ja/docs/XUL/toolbarbutton" title="XUL/toolbarbutton">toolbarbutton</a> には、常に <em>label</em> 属性と <em>tooltiptext</em> 属性を設定してください。<a href="/ja/docs/XUL/toolbaritem" title="XUL/toolbaritem">toolbaritem</a> の場合は、<em>label</em> の代わりに <em>title</em> 属性を使用してください。ツールチップは、ユーザがそのボタンをクリックする前にボタンの動作を知ることができるため、とても重要です。</p>
+</div>
+<p>ツールバーボタンの画像は CSS で設定してください:</p>
+<pre class="brush:css">#xulschoolhello-hello-world-button {
+  list-style-image: url("chrome://xulschoolhello/skin/hellow-world.png");
+}
+</pre>
+<p>ツールバーボタンに画像を設定することは、それほど単純ではありません。異なるシステムでのボタンの外観を考慮し、ボタンの状態についても考慮する必要があります。このことは、後で取り上げます。</p>
+<p>ツールバーのスタイルを定義した CSS ファイルは、オーバーレイのファイルだけでなく、chrome.manifest ファイルにも含める必要があります。両方に含めないと、ツールバーのカスタマイズダイアログが正しく動作しません。chrome.manifest ファイルに次の行を追加してください:</p>
+<pre class="brush:text">style chrome://global/content/customizeToolbar.xul chrome://xulschoolhello/skin/toolbar.css
+</pre>
+<p>ツールバーアイテムに XBL バインディングを使用する (方法は後で説明します) 場合は、それらのファイルにも CSS ファイルを含めなければなりません。それらを、上記のように、ファイルごとに新しい行を追加します。</p>
+<p>ここまでのツールバーパレットにボタンを追加するコードで、ユーザがカスタマイズダイアログを使用して現在の Firefox のツールバーにボタンを追加できるようになりました。多くの場合、これはあなたの望んだデフォルトの動作ではないでしょう。これでは、ユーザがカスタマイズダイアログを開かないとボタンを見つけることができません。ほとんどのユーザは Firefox のツールバーをカスタマイズする方法を知らないことを心に留めてください。</p>
+<p>次は、私たち独自の <a href="/ja/docs/XUL/toolbar" title="XUL/toolbar">toolbar</a> を追加しましょう。これも同様に、オーバーレイ内に記述します。</p>
+<pre class="brush:xml">&lt;window id="main-window"&gt;
+  &lt;toolbox id="navigator-toolbox"&gt;
+    &lt;toolbar id="xulschoolhello-toolbar" toolbarname="&amp;xulschoolhello.toolbarName.label;"
+      accesskey="&amp;xulschoolhello.toolbar.accesskey;"
+      customizable="true" mode="icons" context="toolbar-context-menu"
+      defaultset="xulschoolhello-hello-world-button"
+      insertbefore="PersonalToolbar" /&gt;
+  &lt;/toolbox&gt;
+&lt;/window&gt;</pre>
+<p>(Note for Mac OS X: &lt;window id="main-window"&gt;  and &lt;/window&gt; are not required)</p>
+<p>私たちのツールバーは、メインブラウザウィンドウ内の <a href="/ja/docs/XUL/toolbox" title="XUL/toolbox">toolbox</a> 要素の子要素として追加されます。toolbox は、メインメニューバーを含む Firefox のツールバーの集合です。では、ここで使用した属性を見てみましょう:</p>
+<ul>
+  <li><em>toolbarname</em> 属性は、[表示] &gt; [ツールバー] メニューに表示される名前です。このメニューでツールバーを表示したり隠したりします。</li>
+  <li><em>customizable</em> 属性は、ユーザがツールバーをカスタマイズできるようにするかどうかを決定します。通常は、ユーザにツールバーを変更させたくない強い理由がない限り、この値を <em>true</em> に設定します。</li>
+  <li><em>mode</em> 属性は、<em>icons</em> (アイコンのみの表示) に設定しましょう。これは、ユーザがカスタマイズダイアログから変更できます。</li>
+  <li><em>context</em> 属性は、ツールバーをカスタマイズ可能にしたいときは設定されなければなりません。この属性の値には、ユーザがツールバーを右クリックした時に表示され、ツールバーのカスタマイズオプションが含まれるポップアップ要素の ID を指定します。このポップアップは、常にメインウィンドウの一部にあるので、独自に実装する必要はありません。</li>
+  <li><em>defaultset</em> 属性には、あなたのツールバーにデフォルトで含めたいアイコンの ID を列挙します。ID をカンマで区切ってください。また、<em>spacer</em> および <em>separator</em>, <em>spring</em> の特殊な値も使用できます。<em>spacer</em> は空のスペース、<em>separator</em> は区切りの縦線、<em>spring</em> は伸縮自在のスペースです。</li>
+  <li>最後に、<em>insertbefore</em> 属性は、ブックマークツールバーの上に配置することを指定しています。これは、個人設定によって異なりますが、Mac OS のテーマではブックマークツールバーが常に最後になるように設計されています (残りのツールバーよりも明るい色です)。また、ブックマークはユーザがアクセスしやすくなければならないため、ユーザビリティの観点からも分かりやすくなります。</li>
+</ul>
+<p>以上がツールバーの基本です。これらの基本を押さえておけば、簡単なツールバーとツールバーボタンを Firefox に追加できるようになります。次は、あなたが<strong>素敵な</strong>ツールバーを作れるように、ツールバーの詳細を見ていきましょう。</p>
+<h2 id="Toolbar_buttons" name="Toolbar_buttons">ツールバーボタン</h2>
+<p>ツールバーには、必要に応じて追加できるいくつかのボタンの種類と要素があります。<a href="/ja/docs/XUL/toolbarbutton" title="XUL/toolbarbutton">toolbarbutton</a> 要素には、様々な方法でボタンの動作を変更できるようにする <em>type</em> 属性があります。この属性に <em>menu</em> や <em>menu-button</em> を設定すると、メインの Firefox ツールバーの戻るボタンと進むボタンのように、ポップアップメニューを開くボタンにできます。ツールバーに多くのオプションを含めたい時は、メニューツールバーボタンが手軽です。他の種類の <em>checkbox</em> や <em>radio</em> は、ユーザがボタンをクリックすると状態が変更されるボタンにしたい場合に役立ちます。詳しくは、<a href="/ja/docs/XUL/Attribute/toolbarbutton.type" title="XUL/Attribute/toolbarbutton.type">type 属性</a>の仕様をお読みください。</p>
+<div class="note">
+  <p>一部のユーザは低解像度の小さなスクリーンで利用していることを心に留めてください。コンテンツがその最小サイズに達し、端が途切れるまで Firefox ウィンドウを小さくすると、UI 要素が消えることに気付くでしょう。ツールバーのサイズを大胆に変更してテストし、UI に必要な最小サイズに達する前に Firefox がコンテンツを切り取らないようにしてください。</p>
+</div>
+<p>ボタンよりも手の込んだものがツールバーに必要な場合は、代わりに <a href="/ja/docs/XUL/toolbaritem" title="XUL/toolbaritem">toolbaritem</a> 要素が使用できます。この要素は、どのような XUL コンテンツでも置くことができる、ただのラッパです。しかしながら、変わった見た目のツールバーは、ユーザを混乱させ、いらだたせる原因となるので注意すべきです。カスタムのツールバーアイテムを用いることは控えてください。</p>
+<h3 id="Toolbar_button_icons" name="Toolbar_button_icons">ツールバーボタンのアイコン</h3>
+<p>ツールバーボタンのアイコンと CSS 規則の作成は、拡張機能作成の中でも最も難しい作業の一つです。ボタンの画像の作成自体は、それほど難しいことではありませんが、すべてのオペレーティングシステム上の Firefox に馴染むアイコンにすることは難しい作業です。以下は、Windows XP および Windows Vista, Mac OS X, Linux 上の Firefox 3.0 のアイコンセットです。</p>
+<p><strong>Windows</strong></p>
+<p><img alt="Toolbar-win.png" class="default" src="/@api/deki/files/5960/=Toolbar-win.png"></p>
+<p><strong>Mac OS X (Lion and above)</strong></p>
+<p><img alt="Toolbar-mac-lion.png" class="default" src="/@api/deki/files/5958/=Toolbar-mac-lion.png"></p>
+<p><strong>Mac OS X</strong></p>
+<p><img alt="Toolbar-mac.png" class="default" src="/@api/deki/files/5959/=Toolbar-mac.png"></p>
+<p><strong>Linux (Gnome)</strong></p>
+<p><img alt="Toolbar-gnome.png" class="default" src="/@api/deki/files/5957/=Toolbar-gnome.png"></p>
+<p><img alt="Toolbar-gnome-small.png" class="default" src="/@api/deki/files/5956/=Toolbar-gnome-small.png"></p>
+<div class="note">
+  <p>注意: 上記の画像はおそらく、残りの素材と異なり、各々が同じ CC ライセンスで配布されていません。</p>
+</div>
+<p>オペレーティングシステムごとに多くの違いがあるでしょう？ それでは、最も重要な部分を見ていきましょう:</p>
+<ul>
+  <li>Windows では、[戻る] ボタンと [進む] ボタンを除くすべてのアイコンのサイズは 24×24 ピクセルです。カラフルで精密なアイコンが使用されています。Windows XP のアイコンは緑色を基調としていますが、Windows Vista と Windows 7 のアイコンは輝度が高く、青色を基調としています。ほとんどの Windows のアイコンには、順に、デフォルト、ホバー、無効、有効の 4 つの状態があります。ホバー状態は、マウスポインタがボタンの上に置かれ、ボタンが無効でない時にセットされます。有効状態は、ユーザがボタンをクリックしている時にセットされます。これは、ボタンをクリックして押されたままの状態の時にはっきりと見ることができます。このページの背景が白いと見分けがつきませんが、無効状態には半透過のグラフィックが使用されています。半透過にすることで、ツールバーの背景が何色でも馴染ませることができます。</li>
+  <li>Mac OS X では、[戻る] ボタンと [進む] ボタンを除くすべてのアイコンのサイズは 36×23 ピクセルです。これらはすべて、グレーを基調とし、中央にとてもシンプルなグラフィックが描かれています。。ほとんどのアイコンには、デフォルト、無効、有効の 3 つの状態があります。透過は使用されていません。</li>
+  <li>Linux では、すべてのアイコンのサイズは 24×24 ピクセルです。Firefox は <a class="external" href="http://www.gtk.org/" title="http://www.gtk.org/">GTK</a> アプリケーションであるため、可能な限り <a class="external" href="https://developer.gnome.org/gtk3/stable/gtk3-Stock-Items.html">GTK のアイコンセット</a> が使用されます。上記の画像のアイコンは、GTK より提供されないものです。GTK アイコンは、"<a class="external" rel="freelink">moz-icon://stock/gtk-go-back?size=menu</a>" のように特別な URL を用いてアクセスします。Linux 上の Firefox にこの URL を入力すると、対応するアイコンが表示されます。Linux のアイコンには、デフォルトと無効の状態があります。無効状態のアイコンは、Windows のように透過が使用されます。</li>
+</ul>
+<p>次は、前述の 4 つのシステムに適用されるツールバーの CSS を見ていきましょう。あなたのツールバーがすべてのシステムで正しく見えるようにしたいときは、システムごとに異なるアイコンセットを用意しなければなりません。良いアイコンを作るには、細部に多くの注意を払わなければならないため、この作業をグラフィックデザイナに依頼することを検討すべきです。</p>
+<p>オペレーティングシステムごとに異なる skin ディレクトリを指定するには、chrome.manifest ファイル内で Manifest Flag を使用します:</p>
+<pre class="brush:text">skin xulschoolhello classic/1.0 jar:chrome/xulschoolhello.jar!/skin/unix/
+skin xulschoolhello classic/1.0 jar:chrome/xulschoolhello.jar!/skin/win/    os=WINNT
+skin xulschoolhello classic/1.0 jar:chrome/xulschoolhello.jar!/skin/winaero/ os=WINNT osversion&gt;=6
+skin xulschoolhello classic/1.0 jar:chrome/xulschoolhello.jar!/skin/mac/    os=Darwin
+</pre>
+<p>システムごとに異なる skin ディレクトリがあります。他のほとんどのシステムが Unix ベースであるため、Unix 用のテーマがデフォルトになっています。ディレクトリを分けておくことで、一つのシステムのテーマを、残りの他のシステム用のテーマを気にせずに変更することができます。一方では、すべてのシステムで同じ画像や CSS を複数用意しなければならない場合があります。例えば、拡張機能のロゴアイコンは同じでしょう。同じアイコンのコピーを 4 個も用意するよりも、"共通" のディレクトリを使用したいでしょう。</p>
+<div class="note">
+  <p>画像ファイルは、拡張機能のパッケージの中でも、とても多くの容量を占めます。ほとんどの拡張機能は数百キロバイト以下のサイズです。あなたの拡張機能のサイズが大きすぎるときは、画像ファイルのサイズを減らしてください。</p>
+</div>
+<p>私たちが見つけた最善の解決策は、chrome.manifest ファイルに次のように記述し、OS 固有の skin ファイルのパッケージ名を分けることです。</p>
+<pre class="brush:text">skin xulschoolhello classic/1.0 jar:chrome/xulschoolhello.jar!/skin/all/
+skin xulschoolhello-os classic/1.0 jar:chrome/xulschoolhello.jar!/skin/unix/
+skin xulschoolhello-os classic/1.0 jar:chrome/xulschoolhello.jar!/skin/win/    os=WINNT
+skin xulschoolhello-os classic/1.0 jar:chrome/xulschoolhello.jar!/skin/winaero/ os=WINNT osversion&gt;=6
+skin xulschoolhello-os classic/1.0 jar:chrome/xulschoolhello.jar!/skin/mac/    os=Darwin
+</pre>
+<p>ここで行ったことは、<em>all</em> ディレクトリを指す "共通" スタイル用の新しいエントリを追加し、OS 固有のエントリが <em>xulschoolhello-os</em> という異なるパッケージ名を使用するように変更しただけです。今後、<em><a class="external" rel="freelink">chrome://xulschoolhello/skin/</a></em> と <em><a class="external" rel="freelink">chrome://xulschoolhello-os/skin/</a></em> を指定する時は注意してください。少々手の込んだことをしていますが、うまく動作します。</p>
+<p>画像ファイルについて、なぜアイコンが一つずつファイルに分けられておらず、一つのファイルにまとめられているのか疑問に思うことがあるでしょう。理由の一つは、多くのファイルを管理しなければならなくなり、いくつかのファイルを変更した場合に他の外観と矛盾していないか、個々のファイルを確認する作業が必要になるからです。すべてのアイコンを一つのファイルにまとめておけば、この作業がとても簡単になります。また、一つのファイルにすればパフォーマンスが向上します。このファイルから特定の部分のアイコンを取り出すには、<a href="/ja/docs/CSS/-moz-image-region" title="CSS/-moz-image-region">-moz-image-region</a> CSS プロパティを使用します。</p>
+<p>以下は、<em>toolbarbutton</em> に適用される CSS の 3 つのメジャーなプラットフォームでの例です。この例では、すべてのボタンに <em>xs-hw-toolbarbutton</em> のようなクラス名がセットされているものと仮定しています。</p>
+<p>Windows:</p>
+<pre class="brush:css">/* この 2 番目と 3 番目のセレクタは、インストールされたテーマとの
+   競合を防ぐために必要です。 */
+toolbarbutton.xulschoolhello-toolbarbutton,
+window:not([active="true"]) toolbarbutton.xulschoolhello-toolbarbutton,
+toolbar[iconsize="small"] toolbarbutton.xulschoolhello-toolbarbutton {
+  list-style-image: url("chrome://xulschoolhello-os/skin/toolbar.png");
+}
+
+#xulschoolhello-hello-world-button {
+  -moz-image-region: rect(0px, 24px, 24px, 0px);
+}
+
+#xulschoolhello-hello-world-button:not([disabled="true"]):hover {
+  -moz-image-region: rect(24px, 24px, 48px, 0px);
+}
+
+#xulschoolhello-hello-world-button[disabled="true"] {
+  -moz-image-region: rect(48px, 24px, 72px, 0px);
+}
+
+#xulschoolhello-hello-world-button:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(72px, 24px, 96px, 0px);
+}
+</pre>
+<p>Mac OS X:</p>
+<pre class="brush:css">/* この 2 番目と 3 番目のセレクタは、インストールされたテーマとの
+   競合を防ぐために必要です。 */
+toolbarbutton.xulschoolhello-toolbarbutton,
+window:not([active="true"]) toolbarbutton.xulschoolhello-toolbarbutton,
+toolbar[iconsize="small"] toolbarbutton.xulschoolhello-toolbarbutton {
+  list-style-image: url("chrome://xulschoolhello-os/skin/toolbar.png");
+}
+
+#xulschoolhello-hello-world-button {
+  -moz-image-region: rect(0px, 36px, 23px, 0px);
+}
+
+#xulschoolhello-hello-world-button[disabled="true"] {
+  -moz-image-region: rect(23px, 36px, 46px, 0px);
+}
+
+#xulschoolhello-hello-world-button:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(46px, 36px, 69px, 0px);
+}
+</pre>
+<p>Linux:</p>
+<pre class="brush:css">/* この 2 番目と 3 番目のセレクタは、インストールされたテーマとの
+   競合を防ぐために必要です。 */
+toolbarbutton.xulschoolhello-toolbarbutton,
+window:not([active="true"]) toolbarbutton.xulschoolhello-toolbarbutton,
+toolbar[iconsize="small"] toolbarbutton.xulschoolhello-toolbarbutton {
+  list-style-image: url("chrome://xulschoolhello-os/skin/toolbar.png");
+}
+
+#xulschoolhello-hello-world-button {
+  -moz-image-region: rect(0px, 24px, 24px, 0px);
+  /* Or: list-style-image: url("moz-icon://stock/gtk-some-icon?size=menu"); */
+}
+
+#xulschoolhello-hello-world-button[disabled="true"] {
+  -moz-image-region: rect(24px, 24px, 48px, 0px);
+}
+</pre>
+<p>Windows と Linux のテーマには、すべてのツールバーボタンにデフォルトで適用されるいくつかの CSS 規則があります。これらの規則は、ボタンのように見せるためのものです。(お勧めはできませんが) 何らかの理由でデフォルトのスタイルを上書きしたい場合は、次の規則を記述する必要があります:</p>
+<pre>-moz-appearance: none;
+</pre>
+<p><a href="/ja/docs/CSS/-moz-appearance" title="CSS/-moz-appearance">-moz-appearance</a> は、多くの場合、要素の元の外観を取り除きたいときに使用されます。このように記述することで、ボタンの元の外観を定義するすべての CSS 規則を簡単に取り除けます。ただし、完全にプレーンな外観にするには、他に 2 つの CSS 規則を上書きする必要があります。</p>
+<h2 id="The_Customize_Toolbars_Dialog" name="The_Customize_Toolbars_Dialog">ツールバーのカスタマイズダイアログ</h2>
+<p>Firefox には、ツールバーをカスタマイズするオプションがあります。前にもすでに説明したことですが、私たちの勧める方法に従えば、問題を起こさずに、あなたのツールバーとツールバーのカスタマイズダイアログの互換性を保つことができます。このダイアログは、メニューバーの [表示] &gt; [ツールバー] &gt; [カスタマイズ...] から、またはメインツールバー (または、正しい <em>context</em> 属性を持つツールバー) を右クリックし、[カスタマイズ...] をクリックすることで開けます。</p>
+<p>カスタマイズダイアログ下部のコントロールについても考慮してください。あなたのツールバーボタンを、[アイコンのみ]、[アイコンとテキスト]、[テキストのみ]、[小さいアイコンを使用] のすべての組み合わせでテストし、別のツールバーにもアイコンを置いてみてください。また、[初期設定に戻す] ボタンが正しく動作するかどうかもテストしてください。<em>toolbarbutton</em> や <em>toolbaritem</em> 以外の要素をツールバーに追加すると、エラーが起こる原因になります。カスタマイズダイアログが開いた状態と OK ボタンをクリックした後でもアイコンが正しく表示されるようにしてください。XBL バインディングを使用している場合は、ツールバーをカスタマイズした後でもすべて通常の動作をするようにしてください。これらすべてをテストすることはとても重要です。カスタマイズダイアログが開くと、Firefox がツールバーの DOM を変更し、カスタマイズできるようにするための要素を追加します。これにより、特定の CSS が壊れ、DOM まわりを移動した時に XBL バインディングが内部の状態を失うかもしれません。</p>
+<h2 id="Adding_toolbar_buttons_to_existing_toolbars" name="Adding_toolbar_buttons_to_existing_toolbars">既存のツールバーへのボタンの追加</h2>
+<p>最後に、最も一般的なメインツールバーにボタンを一つ追加するだけのケースがあります。この場合も、オーバーレイを使用してボタンをパレットに追加する必要があります。初回起動時にあなたのボタンをメインツールバーに追加するには、JavaScript コードを使用しなければなりません。特定のボタンについて、追加される場所を想定すべきではありません。ユーザがボタンを好きな場所に移動したり削除したりできることを覚えておいてください。<a href="/ja/docs/Code_snippets/Toolbar#Adding_button_by_default" title="Code snippets/Toolbar#Adding button by default">ツールバーのコードの例</a>のページにサンプルコードがあるので使用してください。</p>
+<p>あなたのボタンが重複して表示されることを防ぐため、すでに配置されているか検証してください。ボタンがすでに追加されていることを示す設定をセットするのがよいでしょう。ユーザが選択すれば、永久に取り除いておくことができます。もう一つの方法は、<a href="/ja/docs/Toolkit_API/extIExtension" title="FUEL:Extension">FUEL の firstRun</a> プロパティを使用することです。これも同様の設定を使用します。</p>
+<pre class="brush: js">let extension = Application.extensions.get(YOUR_EXTENSION_UUID);
+
+if (extension.firstRun) {
+  // ここにボタンを追加するコードを記述します。
+}</pre>
+<p>FUEL ライブラリは、Firefox 3 以降のバージョンで動作します。</p>
+<p><small>This tutorial was kindly donated to Mozilla by Appcoast.</small></p>
+<div>
+  <div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/School_tutorial/Adding_Menus_and_Submenus" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/School_tutorial/Adding_events_and_commands">次のページ  »</a></p>
+</div></div>

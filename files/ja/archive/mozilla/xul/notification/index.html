@@ -1,0 +1,122 @@
+---
+title: notification
+slug: Archive/Mozilla/XUL/notification
+tags:
+  - XUL Elements
+  - XUL Reference
+translation_of: Archive/Mozilla/XUL/notification
+---
+<div class="noinclude"><span class="breadcrumbs XULRef_breadcrumbs">
+ « <a href="/ja/docs/XUL/XUL_Reference">XUL リファレンス HOME</a>    [
+ <a href="#Examples">例</a> |
+ <a href="#Attributes">属性</a> |
+ <a href="#Properties">プロパティ</a> |
+ <a href="#Methods">メソッド</a> |
+ <a href="#Related">関連項目</a> ]
+</span></div>
+<p>notification は有益なメッセージを表示するために使用します。通常は <a href="/ja/XUL/notificationbox" title="ja/XUL/notificationbox">notificationbox</a> の一部として使用されます。この notificationbox には閉じるためのボタンが含まれます。</p>
+<dl><dt> 属性 </dt><dd> <a href="#a-image">image</a>, <a href="#a-label">label</a>, <a href="#a-priority">priority</a>, <a href="#a-persistence">persistence</a>, <a href="#a-notification.type">type</a>, <a href="#a-value">value</a> </dd></dl> <dl><dt> プロパティ </dt><dd> <a href="#p-accessibleType">accessibleType</a>, <a href="#p-control">control</a>, <a href="#p-image">image</a>, <a href="#p-label">label</a>, <a href="#p-priority">priority</a>, <a href="#p-persistence">persistence</a>, <a href="#p-type">type</a>, <a href="#p-value">value</a> </dd></dl> <dl><dt> メソッド </dt><dd> <a href="#m-close">close</a> </dd></dl>
+<h3 id="Examples" name="Examples">例</h3>
+<pre>&lt;notification label="This is a warning"/&gt;
+</pre>
+<h3 id="Attributes" name="Attributes">属性</h3>
+<p> </p><div id="a-image">
+
+<dl>
+  <dt>
+    <code id="a-image"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/image">image</a></code></dt>
+  <dd>
+    型: 画像の <em>URL</em></dd>
+  <dd>
+    要素上に表示する画像の URL。この属性が空または除外された場合、画像は表示されません。画像の位置は <code id="a-dir"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/dir">dir</a></code> 属性および <code id="a-orient"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code> 属性によって決定されます。</dd>
+</dl>
+
+
+</div> <div id="a-label">
+
+<dl><dt> <code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code> </dt><dd> 型: <em>文字列型</em> </dd><dd> 要素上に表示するlabel。 省略された場合、テキストは表示されない。 </dd></dl>
+
+
+</div> <div id="a-persistence">
+
+<dl><dt> <code id="a-persistence"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/persistence">persistence</a></code> </dt><dd> 型: <em>整数型</em> </dd><dd> persistence を 0 以外の値に設定すると、<code><a href="/ja/docs/Mozilla/Tech/XUL/notificationbox" title="notificationbox">notificationbox</a></code> の <span id="m-removeTransientNotifications"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/removeTransientNotifications">removeTransientNotifications</a></code></span> メソッドはそれらを削除しません。これは、他の notification には影響を与えずに notification のグループを閉じるために使用します。 </dd></dl>
+
+</div> <div id="a-priority">
+
+<dl><dt> <code id="a-priority"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/priority">priority</a></code> </dt><dd> 型: <em>整数型</em> </dd><dd> notification が現れる順番を指定する数値。これは <code><a href="/ja/docs/Mozilla/Tech/XUL/notificationbox" title="notificationbox">notificationbox</a></code> の <span id="m-appendNotification"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/appendNotification">appendNotificationappendNotification</a></code></span> メソッド内に記述された定数の一つでなければなりません。 </dd></dl>
+
+</div> <div id="a-notification.type">
+
+<dl><dt> <code id="a-notification.type"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/notification.type">type</a></code> </dt><dd> 型: <em>下記の値のいずれか一つ</em> </dd><dd> priority から決定される notification の種類を指示します。 </dd></dl>
+<ul> <li><code>info</code>: 重要性の低い通知。</li> <li><code>warning</code>: 通常の警告通知。</li> <li><code>critical</code>: 重大な通知。</li>
+</ul>
+
+</div> <div id="a-value">
+
+<dl><dt> <code id="a-value"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code> </dt><dd> 型: <em>文字列型</em> </dd><dd> 文字列の属性はデータ値を要素に関連付けます。特定の目的のために使われるわけではありませんが、スクリプトからあなた自身の用途のためにアクセスできます。 </dd></dl>
+
+
+</div>
+<h3 id="Properties" name="Properties">プロパティ</h3>
+<p> </p><div id="p-accessibleType">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/accessibleType">accessibleType</a></span></code> </dt><dd> 型: <em>整数型</em> </dd><dd> 要素の accessibility オブジェクトの種類を示す値。 </dd></dl>
+
+</div> <div id="p-image">
+<dl><dt> <code><span><a href="http://api/ja/docs/XUL/Property/image">image</a></span></code> </dt><dd> 型: <em>image の URL</em> </dd><dd> <code id="a-image"><a href="http://api/ja/docs/Mozilla/Tech/XUL/Attribute/image">image</a></code> 属性の値の取得と設定。 </dd></dl>
+</div> <div id="p-label">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/label">label</a></span></code></dt>
+  <dd>
+    型: <em>文字列型</em></dd>
+  <dd>
+    <code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code> 属性の値の取得と設定。</dd>
+</dl>
+
+</div> <div id="p-persistence">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/persistence">persistence</a></span></code> </dt><dd> 型: <em>整数型</em> </dd><dd> <code id="a-persistence"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/persistence">persistence</a></code> 属性の値の取得と設定。 </dd></dl>
+</div> <div id="p-priority">
+<dl><dt> <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/priority">priority</a></span></code> </dt><dd> 型: <em>文字列型</em> </dd><dd> <code id="a-priority"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/priority">priority</a></code> 属性の値の取得と設定。 </dd></dl>
+</div> <div id="p-type">
+
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/type">type</a></span></code></dt>
+  <dd>
+    型: <em>文字列型</em></dd>
+  <dd>
+    <code id="a-type"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/type">type</a></code> 属性の値の取得と設定。</dd>
+</dl>
+
+</div> <div id="p-value">
+<dl>
+  <dt>
+    <code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/value">value</a></span></code></dt>
+  <dd>
+    型: <em>文字列型</em></dd>
+  <dd>
+    <code id="a-value"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code> 属性の値の取得と設定。</dd>
+</dl>
+</div>
+<h3 id="Methods" name="Methods">メソッド</h3>
+<table style="border: 1px solid rgb(204, 204, 204); margin: 0 0 10px 10px; padding: 0 10px; background: rgb(238, 238, 238); float: right; width: 250px;">
+<tbody>
+<tr>
+<td>
+<p><strong>XUL 要素からの継承</strong><br>
+<small> <span id="m-blur"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/blur">blur</a></code></span>, <span id="m-click"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/click">click</a></code></span>, <span id="m-doCommand"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/doCommand">doCommand</a></code></span>, <span id="m-focus"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/focus">focus</a></code></span>, <span id="m-getElementsByAttribute"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getElementsByAttribute">getElementsByAttribute</a></code></span> <span id="m-getElementsByAttributeNS"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/getElementsByAttributeNS">getElementsByAttributeNS</a></code></span></small></p> <p><strong>DOM 要素からの継承</strong><br>
+<small> <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.addEventListener">addEventListener()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.appendChild">appendChild()</a></code>, <a href="/ja/DOM/Node.compareDocumentPosition" title="ja/DOM/Node.compareDocumentPosition">compareDocumentPosition</a>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.dispatchEvent">dispatchEvent()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getAttribute">getAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getAttributeNode">getAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getAttributeNodeNS">getAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getAttributeNS">getAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getElementsByTagName">getElementsByTagName()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.getElementsByTagNameNS">getElementsByTagNameNS()</a></code>, <a href="/ja/DOM/Node.getFeature" title="ja/DOM/Node.getFeature">getFeature</a>, <a href="/ja/DOM/Node.getUserData" title="ja/DOM/Node.getUserData">getUserData</a>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.hasAttribute">hasAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.hasAttributeNS">hasAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.hasAttributes">hasAttributes()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.hasChildNodes">hasChildNodes()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.insertBefore">insertBefore()</a></code>, <a href="/ja/DOM/Node.isEqualNode" title="ja/DOM/Node.isEqualNode">isEqualNode</a>, <a href="/ja/DOM/Node.isSameNode" title="ja/DOM/Node.isSameNode">isSameNode</a>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.isSupported">isSupported()</a></code>, <a href="/ja/DOM/Node.lookupNamespaceURI" title="ja/DOM/Node.lookupNamespaceURI">lookupNamespaceURI</a>, <a href="/ja/DOM/Node.lookupPrefix" title="ja/DOM/Node.lookupPrefix">lookupPrefix</a>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.normalize">normalize()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeAttribute">removeAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeAttributeNode">removeAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeAttributeNS">removeAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeChild">removeChild()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.removeEventListener">removeEventListener()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.replaceChild">replaceChild()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.setAttribute">setAttribute()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.setAttributeNode">setAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.setAttributeNodeNS">setAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/DOM/element.setAttributeNS">setAttributeNS()</a></code>, <a href="/ja/DOM/Node.setUserData" title="ja/DOM/Node.setUserData">setUserData</a></small></p>
+
+</td>
+</tr>
+</tbody>
+</table> <dl>
+  <dt><span id="m-close"><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Method/close">close</a></code></span></dt>
+  <dd>戻り値の型: none</dd>
+  <dd>notification を閉じ、これを内包する <code><a href="/ja/docs/Mozilla/Tech/XUL/notificationbox" title="notificationbox">notificationbox</a></code> から削除します。</dd>
+</dl>
+<h3 id="Related" name="Related">関連項目</h3>
+<dl><dt> 要素 </dt><dd> <code><a href="/ja/docs/Mozilla/Tech/XUL/notificationbox" title="notificationbox">notificationbox</a></code> </dd></dl>
+<div class="noinclude">
+
+</div>

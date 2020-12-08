@@ -1,0 +1,48 @@
+---
+title: enumKeys
+slug: >-
+  Archive/Mozilla/XPInstall/Référence_de_l_API_XPInstall/Objet_WinReg/Méthodes/enumKeys
+translation_of: Archive/Mozilla/XPInstall/Reference/WinReg_Object/Methods/enumKeys
+---
+<p> </p>
+<h3 id="enumKeys" name="enumKeys">enumKeys</h3>
+<p>Énumère les sous-clefs de registre de la clef donnée.</p>
+<h4 id="M.C3.A9thode_de" name="M.C3.A9thode_de">Méthode de</h4>
+<p>Objet <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_WinReg">WinReg</a></p>
+<h4 id="Syntaxe" name="Syntaxe">Syntaxe</h4>
+<pre class="eval">String enumKeys ( Chaîne key, int subkeyIndex );
+</pre>
+<h4 id="Param.C3.A8tres" name="Param.C3.A8tres">Paramètres</h4>
+<p>La méthode <code>enumKeys</code> a les paramètres suivants :</p>
+<dl>
+ <dt>
+  <code>key</code></dt>
+ <dd>
+  Le chemin de la clef vers l'emplacement approprié dans la hiérarchie de clefs, tel que <code>"Software\\Netscape\\Navigator\\Mail"</code>.</dd>
+ <dt>
+  <code>subkeyIndex</code></dt>
+ <dd>
+  Un entier représentant l'index base 0 de la clef dont on cherche la valeur.</dd>
+</dl>
+<h4 id="Retour" name="Retour">Retour</h4>
+<p>Le nom en cas de succès ou <code>NULL</code> si la valeur référencée n'existe pas.</p>
+<h4 id="Description" name="Description">Description</h4>
+<p>La méthode <code>enumKeys</code> peut être utilisée pour définir une itération dans les sous-clefs d'une clef donnée. L'exemple suivant montre comment utiliser la méthode <code>enumKeys</code> pour trouver le sous-répertoire des plugins dans les différentes installations des navigateurs basés sur Mozilla :</p>
+<pre class="eval">var winreg = getWinRegistry();
+winreg.setRootKey(winreg.HKEY_LOCAL_MACHINE);
+var index = 0;
+var baseKey = "Software\\Mozilla";
+while ( (MozillaVersion = winreg.enumKeys(baseKey,index)) != null )
+{
+  logComment("MozillaVersion = " + MozillaVersion);
+  subkey = baseKey + "\\" + MozillaVersion + "\\Extensions";
+  pluginsDir = winreg.getValueString ( subkey, "Plugins" );
+  if ( pluginsDir )
+    logComment("pluginsDir = " +  pluginsDir);
+  else
+    logComment("No plugins dir for " + baseKey + "\\" + MozillaVersion);
+  index++;
+}
+</pre>
+<p><span class="comment">Interwiki Language Links</span></p>
+<p>{{ languages( { "en": "en/XPInstall_API_Reference/WinReg_Object/Methods/enumKeys" } ) }}</p>

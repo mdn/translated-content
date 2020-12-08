@@ -1,0 +1,113 @@
+---
+title: WindowClient.focused
+slug: Web/API/WindowClient/focused
+translation_of: Web/API/WindowClient/focused
+---
+<div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
+
+<p>La propriété <strong><code>focused</code></strong> , en lecture seule de l'interface  {{domxref("WindowClient")}} , est un {{domxref("Boolean")}} qui indique si client actuel a le focus .</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">myFocused = WindowClient.focused;</pre>
+
+<h3 id="Value">Value</h3>
+
+<p>A {{domxref("Boolean")}}.</p>
+
+<h2 id="Example">Example</h2>
+
+<pre class="brush: js">self.addEventListener('notificationclick', function(event) {
+  console.log('On notification click: ', event.notification.tag);
+  event.notification.close();
+
+  // This looks to see if the current is already open and
+  // focuses if it is
+  event.waitUntil(clients.matchAll({
+    type: "window"
+  }).then(function(clientList) {
+    for (var i = 0; i &lt; clientList.length; i++) {
+      var client = clientList[i];
+      if (client.url == '/' &amp;&amp; 'focus' in client) {
+        if(!client.focused)
+          return client.focus();
+        }
+      }
+    }
+    if (clients.openWindow)
+      return clients.openWindow('/');
+  }));
+});</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Service Workers', '#window-client-interface', 'WindowClient')}}</td>
+   <td>{{Spec2('Service Workers')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilité_des_Navigateurs">Compatibilité des Navigateurs</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatChrome(42.0)}}</td>
+   <td>{{ CompatGeckoDesktop("44.0") }}<sup>[1]</sup></td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{ CompatGeckoMobile("44.0") }}</td>
+   <td>{{ CompatVersionUnknown }}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatChrome(42.0)}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Service workers (and <a href="/en-US/docs/Web/API/Push_API">Push</a>) have been disabled in the <a href="https://www.mozilla.org/en-US/firefox/organizations/">Firefox 45 and 52 Extended Support Releases</a> (ESR.)</p>

@@ -1,0 +1,54 @@
+---
+title: 'Confidentialité, intégrité et disponibilité'
+slug: Apprendre/Confidentialité_intégrité_et_disponibilité
+tags:
+  - Beginner
+  - Security
+  - Tutorial
+translation_of: 'Archive/Security/Confidentiality,_Integrity,_and_Availability'
+---
+<div>{{IncludeSubnav("/fr/Apprendre")}}</div>
+<div class="summary">
+<p>Cet article aborde les objectifs majeurs qu'on retrouve en sécurité : la confidentialité, l'intégrité et la disponibilité.</p>
+</div>
+
+<table class="learn-box standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Prérequis :</th>
+   <td>Il n'y a pas de prérequis pour cet article.</td>
+  </tr>
+  <tr>
+   <th scope="row">Objectifs :</th>
+   <td>Vous apprendrez les concepts de confidentialité, d'intégrité et de disponibilité et comment ceux-ci peuvent affecter les données et les systèmes.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>En sécurité de l'information, le modèle classique définit trois objectifs : maintenir la confidentialité, l'intégrité et la disponibilité des données. Chacun de ces objectifs porte sur un aspect différent de protection des informations.</p>
+
+<h2 id="Pédagogie_active">Pédagogie active</h2>
+
+<p><em>Il n'y a, pour le moment, pas d'éléments de pédagogie active pour cette section. <a href="/fr/docs/MDN/D%C3%A9buter_sur_MDN">Vous pouvez néanmoins contribuer</a>.</em></p>
+
+<h2 id="Aller_plus_loin">Aller plus loin</h2>
+
+<h3 id="La_confidentialité">La confidentialité</h3>
+
+<p><em>La confidentialité</em> correspond à la protection des informations afin que celles-ci ne soient pas accessibles pour des personnes ou entités non-autorisées. Autrement dit, seules les personnes autorisées doivent pouvoir accéder aux données sensibles. Prenons par exemple les données de votre compte bancaire. Vous devriez pouvoir y accéder, cela ne fait aucun doute, les employés de la banque qui traitent avec vous ont également besoin d'y accéder mais en dehors de ces personnes, nul autre ne devrait pouvoir y accéder. Échouer à conserver cettte confidentialité signifie que quelqu'un qui n'aurait pas du accéder aux données a réussi à le faire. Cet accès peut avoir été accidentel ou intentionnel. Un tel échec est généralement appelé « faille » ou « brêche » et, généralement, il n'existe pas de solution pour empêcher à l'intrus de consulter les données auxquelles il a eu accès. Une fois qu'un secret a été révélé, il n'est plus possible de le cacher à nouveau. Si les informations de votre compte en banque sont publiées sur un site web public, tout le monde pourra avoir accès à ces données et il sera impossible d'effacer ce qui aura été consulté de la mémoire des personnes, de notes écrites, de captures d'écrans… De nos jours, la plupart des incidents de sécurités rapportés dans les médias sont dus à des échecs en termes de confidentialité.</p>
+
+<p>Pour résumer, une faille dans la confidentialité signifique que quelqu'un a eu accès à des informations alors qu'il n'aurait pas du pouvoir y accéder.</p>
+
+<h3 id="L'intégrité">L'intégrité</h3>
+
+<p><em>L'intégrité</em> correspond au fait de s'assurer de l'authenticité des informations auxquelles on accède :  les informations ne doivent pas avoir été modifiées et doivent provenir d'une source sûre. Prenons l'exemple d'un site web sur lequel vous vendez des produits. Si un attaquant peut acheter des produits sur votre site et modifier les prix des produits, il pourra acheter n'importe quoi à n'importe quel prix. Il y aurait donc une faille d'intégrité car les informations (ici le prix d'un produit) ont été modifiées sans votre autorisation. Un autre scénario où on peut observer une telle faille d'intégrité peut être le suivant : vous essayez de vous connecter à un site web et un attaquant malveillant intercepte les communications entre vous et le « vrai » site pour vous rediriger vers un autre site web. Dans ce cas, c'est la source d'information qui n'est pas sûre et c'est pour cette raison qu'on a une faille d'intégrité.</p>
+
+<h3 id="La_disponibilité">La disponibilité</h3>
+
+<p><em>La disponibilité</em> signifie que les informations peuvent être consultées par les utilisateurs autorisés.</p>
+
+<h2 id="Prochaines_étapes">Prochaines étapes</h2>
+
+<ul>
+ <li><a href="/fr/Apprendre/Vulnérabilités">Les vulnérabilités</a></li>
+</ul>

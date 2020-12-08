@@ -1,0 +1,125 @@
+---
+title: nsIFeed
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsIFeed
+tags:
+  - Interfaces
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIFeed
+---
+<p><code>nsIFeed</code> インターフェースは単一の Atom か RSS(Really Simple Syndication) ニュースフィードに相当します。アイテムかフィードのエントリにアクセスするのと同じように、フィードに関する情報を提供する属性を含んでいます。</p>
+<p><br>
+ </p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/feeds/public/nsIFeed.idl" rel="custom">toolkit/components/feeds/public/nsIFeed.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">最終更新: Gecko 1.8.1 (Firefox 2 / Thunderbird 2 / SeaMonkey 1.1)</span></div>
+</div>
+<p>継承元: <code><a href="ja/NsIFeedContainer">nsIFeedContainer</a></code></p>
+<h2 id=".E5.B1.9E.E6.80.A7" name=".E5.B1.9E.E6.80.A7">属性</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">属性</td>
+   <td class="header">型</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code>cloud</code></td>
+   <td><code><a href="ja/NsIWritablePropertyBag2">nsIWritablePropertyBag2</a></code></td>
+   <td>フィードの <code>cloud</code> 属性が何なのか確証を持っている人は誰もいません。XML-RPC か SOAP サービスと関係があるように推測されます。</td>
+  </tr>
+  <tr>
+   <td><code>enclosureCount</code></td>
+   <td><code>long</code></td>
+   <td>フィードに関連づけられたエンクロージャの数を表します。</td>
+  </tr>
+  <tr>
+   <td><code>generator</code></td>
+   <td><code><a href="ja/NsIFeedGenerator">nsIFeedGenerator</a></code></td>
+   <td>フィードを生成したソフトウェアを記述します。</td>
+  </tr>
+  <tr>
+   <td><code>image</code></td>
+   <td><code><a href="ja/NsIWritablePropertyBag2">nsIWritablePropertyBag2</a></code></td>
+   <td>RSS 2 で定義された画像の URL とメターデータを提供します。</td>
+  </tr>
+  <tr>
+   <td><code>items</code></td>
+   <td><code><a href="ja/NsIArray">nsIArray</a></code></td>
+   <td><code><a href="ja/NsIFeedEntry">nsIFeedEntry</a></code> オブジェクトの配列として、アイテムの配列かフィードのエントリを定義します。</td>
+  </tr>
+  <tr>
+   <td><code>skipDays</code></td>
+   <td><code><a href="ja/NsIArray">nsIArray</a></code></td>
+   <td>一週間の中でフィードがフェッチされたくない曜日の配列です。配列のそれぞれのエントリは、週のスキップする曜日の名前です。例えば、月曜日にフェッチをスキップする、フィードが月曜日にフェッチされたくないならこの配列の中に "Monday" と指定します。
+    <div class="note">
+     <b>注意:</b> このフィールドはまれにしか実装されていません</div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>skipHours</code></td>
+   <td><code><a href="ja/NsIArray">nsIArray</a></code></td>
+   <td>一日の中でフェッチすべきでない時間の配列です。時間は、0(真夜中)から 23 (午後11:00)までの整数値で表され、常に UTC を使って表されます。
+    <div class="note">
+     <b>注意:</b> このフィールドはまれにしか実装されていません</div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>subtitle</code></td>
+   <td><code><a href="ja/NsIFeedTextConstruct">nsIFeedTextConstruct</a></code></td>
+   <td>フィードの description と subtitle, 及び適切な拡張に基づいてフィードのサブタイトルを返します。</td>
+  </tr>
+  <tr>
+   <td><code>textInput</code></td>
+   <td><code><a href="ja/NsIWritablePropertyBag2">nsIWritablePropertyBag2</a></code></td>
+   <td>フィードのソースに読者が返信を送ることを可能にするテキストボックスに関する情報。サポートしているアグリゲータはフィードと一緒に表示することができる
+    <div class="note">
+     <b>注意:</b> このフィールドは滅多に使われておらず、多くのアグリゲータと非互換です。</div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>type</code></td>
+   <td><code>long</code></td>
+   <td>フィードが提供するコンテントの種類を表します。取りうる種類の型は:
+    <dl>
+     <dt>
+      <code>TYPE_FEED</code></dt>
+     <dd>
+      標準のテキストベースのフィード。</dd>
+    </dl>
+    <dl>
+     <dt>
+      <code>TYPE_AUDIO</code></dt>
+     <dd>
+      Podcast のような音声フィード</dd>
+    </dl>
+    <dl>
+     <dt>
+      <code>TYPE_IMAGE</code></dt>
+     <dd>
+      Photocast のような画像フィード</dd>
+    </dl>
+    <dl>
+     <dt>
+      <code>TYPE_VIDEO</code></dt>
+     <dd>
+      Videocast のようなビデオフィード</dd>
+    </dl>
+    <p>
+     <i>
+      この属性は読み込み専用です。</i>
+    </p>
+    <div class="note">
+     <b>注意:</b> これを値のビットマスクと考えるべきです。ある時には、type は一緒に OR された一つ以上の値を含みます。これが Firefox 2 の前または後で起こるかどうかは明確ではありません。</div>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2 id=".E5.8F.82.E7.85.A7" name=".E5.8F.82.E7.85.A7">参照</h2>
+<p><a href="ja/NsIFeedContainer">nsIFeedContainer</a></p>

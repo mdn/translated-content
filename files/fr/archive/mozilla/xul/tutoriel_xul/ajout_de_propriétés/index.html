@@ -1,0 +1,168 @@
+---
+title: Ajout de propriétés
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Ajout_de_propriétés
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XBL
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_Properties_to_XBL-defined_Elements
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Héritage_d'attributs_XBL" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Ajout_de_méthodes">Suivant  »</a></p>
+</div>
+
+<p>Nous allons voir comment ajouter des propriétés personnalisées aux éléments XBL (eXtended Binding Language).</p>
+
+<h3 id="L.27interface_XBL" name="L.27interface_XBL">L'interface XBL</h3>
+
+<p><a href="/fr/JavaScript" title="fr/JavaScript">JavaScript</a> et le <a href="/fr/DOM" title="fr/DOM">DOM</a> fournissent un moyen pour obtenir et définir les propriétés des éléments. Avec XBL, vous pouvez définir vos propres propriétés pour les éléments que vous créez. Vous pouvez aussi ajouter des méthodes qui peuvent être appelées. De cette façon, tout ce dont vous avez besoin est d'obtenir une référence à l'élément (en utilisant <code><a href="/fr/DOM/document.getElementById" title="fr/DOM/document.getElementById">getElementById</a></code> ou une fonction similaire) et ainsi obtenir ou modifier ses propriétés additionnelles et appeler ses méthodes.</p>
+
+<p>Il y a trois types d'items que vous pouvez ajouter.</p>
+
+<ul>
+ <li>Les <em>champs</em> sont utilisés pour contenir une valeur simple.</li>
+ <li>Les <em>propriétés</em> peuvent aussi être utilisées pour contenir une valeur mais elles peuvent aussi contenir du code pouvant être exécuté lorsqu'une tentative est faite pour récupérer ou modifier la valeur.</li>
+ <li>Les <em>méthodes</em> sont des fonctions qui peuvent être exécutées.</li>
+</ul>
+
+<p>Chacun des trois est défini dans un élément <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#implementation">implementation</a></code>, qui doit être un fils de l'élément de liaison <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#binding">binding</a></code>. À l'intérieur de la balise <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#implementation">implementation</a></code>, vous définirez pour chacun d'eux un élément <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#field">field</a></code>, un élément <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#property">property</a></code> et un élément <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#method">method</a></code> selon ce que vous voulez. La syntaxe générale est celle-ci :</p>
+
+<pre>&lt;binding id="nom-élément"&gt;
+  &lt;content&gt;
+    -- le contenu vient ici --
+  &lt;/content&gt;
+  &lt;implementation&gt;
+    &lt;field name="nom-champ-1"/&gt;
+    &lt;field name="nom-champ-2"/&gt;
+    &lt;field name="nom-champ-3"/&gt;
+
+    &lt;property name="nom-propriété-1"/&gt;
+    &lt;property name="nom-propriété-2"/&gt;
+    &lt;property name="nom-propriété-3"/&gt;
+    .
+    .
+    .
+    &lt;method name="nom-méthode-1"&gt;
+      -- le contenu vient ici --
+    &lt;/method&gt;
+    .
+    .
+    .
+  &lt;/implementation&gt;
+&lt;/binding&gt;
+</pre>
+
+<h3 id="Les_champs" name="Les_champs">Les champs</h3>
+
+<p>Chaque champ est défini en utilisant l'élément <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#field">field</a></code>. Souvent, les champs correspondent à un attribut placé sur l'élément comme <code>label</code> ou <code>disabled</code>, mais ils ne le devraient pas.</p>
+
+<p>L'attribut <code>name</code> de <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#field">field</a></code> est utilisé pour indiquer le nom du champ. Vous pouvez utiliser le nom dans un script pour obtenir et déterminer une valeur. L'exemple ci-dessous crée un bouton qui génère et stocke un nombre aléatoire. Vous pouvez rechercher ce même nombre plusieurs fois en obtenant la propriété <code>number</code> du bouton. Le plus gros du travail ici est fait par les gestionnaires <code>oncommand</code>. Plus tard, nous verrons comment transformer cela en XBL.</p>
+
+<pre class="eval"><strong>XUL:</strong>
+
+&lt;box id="random-box" class="randomizer"/&gt;
+
+&lt;button label="Générer"
+           oncommand="document.getElementById('random-box').number=Math.random();"/&gt;
+&lt;button label="Voir"
+           oncommand="alert(document.getElementById('random-box').number)"/&gt;
+
+<strong>XBL:</strong>
+
+&lt;binding id="randomizer"&gt;
+  &lt;implementation&gt;
+    &lt;field name="number"/&gt;
+  &lt;/implementation&gt;
+&lt;/binding&gt;
+</pre>
+
+<p>Un champ <code>number</code> mémorisant le nombre aléatoire a été défini dans la liaison. Les deux boutons spéciaux définissent et obtiennent la valeur de ce champ. La syntaxe est très similaire pour obtenir et définir les propriétés des éléments HTML. Dans cet exemple, aucun contenu n'a été placé à l'intérieur que ce soit la boîte XUL ou sa définition dans XBL, ce qui est parfaitement valide.</p>
+
+<p>Cet exemple n'est pas tout à fait correct car il n'y a pas de valeur par défaut assignée dans le champ. Pour en mettre une, ajoutez la valeur par défaut dans le contenu de la balise <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#field">field</a></code>. Par exemple :</p>
+
+<pre>&lt;field name="number"&gt;
+  25
+&lt;/field&gt;
+</pre>
+
+<p>Ici, la valeur '25' sera affectée comme valeur par défaut du champ "number". En fait, vous pourriez aussi insérer un script au sein de la balise <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#field">field</a></code> pour calculer la valeur par défaut. Cela pourrait être nécessaire si la valeur a besoin d'être calculée. Par exemple, le champ suivant donne une valeur par défaut égale à l'heure courante :</p>
+
+<pre>&lt;field name="currentTime"&gt;
+  new Date().getTime();
+&lt;/field&gt;
+</pre>
+
+<h3 id="Les_propri.C3.A9t.C3.A9s" name="Les_propri.C3.A9t.C3.A9s">Les propriétés</h3>
+
+<p>Parfois vous voulez valider la donnée qui est assignée à une propriété. Ou bien, vous souhaitez que la valeur soit calculée dynamiquement lorsqu'on le lui demande. Par exemple, si vous souhaitez une propriété qui prenne en compte l'heure courante, vous voudrez que sa valeur soit générée au besoin. Dans ces cas là, vous avez besoin d'utiliser une balise <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#property">property</a></code> à la place de la balise <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#field">field</a></code>. Sa syntaxe est similaire mais comporte des particularités supplémentaires.</p>
+
+<h4 id="Attributs_onget_et_onset" name="Attributs_onget_et_onset">Attributs onget et onset</h4>
+
+<p>Vous pouvez utiliser les attributs <code>onget</code> et <code>onset</code> pour que le code soit exécuté lorsque la propriété est lue ou modifiée. Ajoutez les à l'élément <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#property">property</a></code> et définissez leur valeur dans un script qui, au choix, obtient ou déclare la valeur de la propriété.</p>
+
+<p>Par exemple, vous pouvez assigner un script à la valeur de <code>onget</code> pour calculer le temps courant. Chaque fois qu'un script tente d'accéder à la valeur de la propriété, le script <code>onget</code> sera appelé pour fournir la valeur. Le script devra retourner la valeur qui devrait être traitée comme étant la valeur de la propriété.</p>
+
+<p>Le gestionnaire <code>onset</code> est similaire mais est appelé chaque fois qu'un script tente d'assigner une nouvelle valeur à la propriété. Ce script devrait stocker la valeur quelque part, ou la valider. Par exemple, certaines propriétés pourraient juste être capables de stocker des nombres. Les tentatives pour assigner des caractères alphabétiques à ce genre de propriétés ne devraient pas fonctionner.</p>
+
+<pre>&lt;property name="size"
+          onget="return 77;"
+          onset="alert('Modifié en :'+val); return val;"/&gt;
+</pre>
+
+<p>Cette propriété retournera toujours '77' lorsqu'elle sera récupérée. Lorsqu'elle sera affectée, un message d'alerte s'affichera et indiquera la valeur à assigner à la propriété. La variable spéciale <code>val</code> contient cette valeur. Utilisez-la pour la valider ou la stocker. La propriété <code>onset</code> devrait aussi retourner la nouvelle valeur.</p>
+
+<p>Ce qui suit décrit le comportement d'un cas typique :</p>
+
+<p>Il y a deux éléments, l'un appelé "banana" et l'autre "orange". Chacun d'eux a une propriété spécifique appelée 'size'. Lorsque la ligne de script suivante est exécutée :</p>
+
+<pre>banana.size = orange.size;
+</pre>
+
+<ol>
+ <li>Le script <code>onget</code> est appelé pour la propriété "size" de "orange". Il calcule la valeur et la retourne.</li>
+ <li>Le gestionnaire <code>onset</code> de la propriété "size" de "banana" est appelé. Ce script utilise la valeur passée dans la variable <code>val</code> et l'assigne à la propriété "size" de "banana" de façon quelconque.</li>
+</ol>
+
+<p>Notez que contrairement à un champ, une propriété ne contient pas de valeur. Tenter de définir une propriété qui n'a pas de gestionnaire <code>onset</code> provoquera une erreur. Vous utiliserez souvent un champ séparé pour mémoriser la valeur actuelle de la propriété. Il est aussi commun que les propriétés correspondent à un attribut dans l'élément défini XBL. L'exemple suivant fait correspondre une propriété à un attribut sur un élément.</p>
+
+<pre>&lt;property name="size"
+          onget="return this.getAttribute('size');"
+          onset="return this.setAttribute('size',val);"
+/&gt;
+</pre>
+
+<p>Chaque fois qu'un script tente d'obtenir la valeur de la propriété, elle est récupérée d'un attribut de même nom de l'élément XUL. Chaque fois qu'un script tente de définir la valeur de la propriété, elle est affectée à l'attribut 'size' de l'élément. C'est pratique parce qu'ainsi vous pouvez modifier la propriété ou l'attribut et tous les deux auront la même valeur.</p>
+
+<h4 id=".C3.89l.C3.A9ments_getter_et_setter" name=".C3.89l.C3.A9ments_getter_et_setter">Éléments <code>getter</code> et <code>setter</code></h4>
+
+<p>Vous pouvez utiliser une syntaxe alternative pour les attributs <code>onget</code> et <code>onset</code> pouvant être utile pour des scripts plus longs. Vous pouvez remplacer l'attribut <code>onget</code> par l'élément fils nommé <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#getter">getter</a></code>. De même, vous pouvez remplacer l'attribut <code>onset</code> par l'élément <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#setter">setter</a></code>. L'exemple ci-dessous le montre :</p>
+
+<pre>&lt;property name="number"&gt;
+  &lt;getter&gt;
+    return this.getAttribute('number');
+  &lt;/getter&gt;
+  &lt;setter&gt;
+    var v = parseInt(val,10);
+    if (!isNaN(v)) return this.setAttribute('number',''+v);
+    else return this.getAttribute('number');"
+  &lt;/setter&gt;
+&lt;/property&gt;
+</pre>
+
+<p>La propriété dans cet exemple ne pourra contenir que des valeurs d'entiers. Si d'autres caractères sont entrés, ils sont supprimés. S'il n'y a aucun chiffre, la valeur n'est pas modifiée. Ces opérations sont effectuées dans le code au sein de l'élément <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#setter">setter</a></code>. La valeur réelle de la propriété est stockée dans l'attribut <code>number</code>.</p>
+
+<p>Vous pouvez utilisez l'une ou l'autre syntaxe pour créer des gestionnaires de lecture et d'affectation.</p>
+
+<h4 id="Attribut_readonly" name="Attribut_readonly">Attribut <code>readonly</code></h4>
+
+<p>Vous pouvez rendre un champ ou une propriété en lecture seule en ajoutant un attribut <code>readonly</code> à la balise <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#field">field</a></code> ou à la balise <code><a href="/fr/docs/XBL/Référence_XBL_1.0/Éléments#property">property</a></code>, et en le déclarant à 'true'. Toute tentative d'affecter une valeur à une propriété en lecture seule échouera.</p>
+
+<hr>
+<p>La prochaine section montre comment ajouter des méthodes aux éléments définis en XBL.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Héritage_d'attributs_XBL" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Ajout_de_méthodes">Suivant  »</a></p>
+</div>
+
+<p><span class="comment">Interwiki</span></p>

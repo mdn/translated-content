@@ -1,0 +1,46 @@
+---
+title: hostsファイルを編集する
+slug: Archive/B2G_OS/Developing_Firefox_OS/modifying_hosts_file
+tags:
+  - Android
+  - B2G
+  - Firefox OS
+  - hosts
+translation_of: Archive/B2G_OS/Developing_Firefox_OS/modifying_hosts_file
+---
+<div class="summary">
+ <p>時々、マシンのhostsファイルを変更することが必要になるでしょう。攻撃のためや、望ましくない接続をブロックしたり、リクエストを特定IPにリダイレクトしたり、など。この記事ではFirefox OSの電話機でhostsファイルを変更する方法を説明します。それはLinuxの例では /system/etc に、新し目のMac OSXバージョンでは単に etc/ の場所にあります。</p>
+</div>
+<h2 id="電話機の準備">電話機の準備</h2>
+<p>電話機で<a href="/ja/Firefox_OS/Debugging/Developer_settings#The_Developer_panel">Developer settings panel</a>に移動して、下記をチェックします:</p>
+<ul>
+ <li>"Remote Debugging" (Firefox OS 1.4以上ではセレクトメニューで"ADB and Devtools"を選択します)</li>
+ <li>"Console Enabled"</li>
+</ul>
+<p>次に電話機をコンピュータに接続します。</p>
+<p>この時点で、hostsファイルの編集手順はAndroidと同様です。Android開発者は調子に慣れるでしょう。</p>
+<h2 id="ターミナルでのステップ">ターミナルでのステップ</h2>
+<ol>
+ <li>ターミナルウィンドウを開きます。</li>
+ <li>端末上に /system
+  &lt;style type="text/css"&gt;
+  &lt;/style&gt;
+  <span style="font-size: 90.0%; font-family: arial,sans,sans-serif; color: #000000; text-align: left;">パーティションを再マウントし、読み書きのパーミッションを得ます。</span>
+  <pre class="brush: bash">adb remount</pre>
+ </li>
+ <li>hostsファイルをコンピュータに取得します。
+  <pre class="brush: bash">adb pull /system/etc/hosts /tmp</pre>
+ </li>
+ <li>/tmp/hosts 内のhostsファイルを必要に応じ変更して保存します。例えば:
+  <pre class="brush: bash">127.0.0.1         localhost
+ip.to.re.direct   hostName</pre>
+ </li>
+ <li>変更したhostsファイルを端末へプッシュします。
+  <pre class="brush: bash">adb push /tmp/hosts /system/etc/hosts</pre>
+ </li>
+</ol>
+<p>やりました; もうhostsファイルが更新されているはずです。</p>
+<div class="note">
+ <p><strong>記</strong>: ADBをもっと学習するには? <a href="http://developer.android.com/tools/help/adb.html" title="http://developer.android.com/tools/help/adb.html">ADB documentation</a>を見てみて下さい。</p>
+</div>
+<p> </p>

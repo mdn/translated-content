@@ -1,0 +1,74 @@
+---
+title: Logging
+slug: Mozilla/Projects/NSPR/Reference/Logging
+translation_of: Mozilla/Projects/NSPR/Reference/Logging
+---
+<p>{{ PreviousNext("NSPR API Reference:System Information and Environment Variables", "NSPR API Reference:Instrumentation Counters") }}</p>
+<p>This chapter describes the global functions you use to perform logging. NSPR provides a set of logging functions that conditionally write <code>printf()</code> style strings to the console or to a log file. NSPR uses this facility itself for its own development debugging purposes.</p>
+<p>You can select events to be logged by module or level. A module is a user-defined class of log events. A level is a numeric value that indicates the seriousness of the event to be logged. You can combine module and level criteria to get highly selective logging.</p>
+<p>NSPR also provides "assert"-style macros and functions to aid in application debugging.</p>
+<ul>
+  <li>{{ Anch("Conditional Compilation and Execution") }}</li>
+  <li>{{ Anch("Log Types and Variables") }}</li>
+  <li>{{ Anch("Logging Functions and Macros") }}</li>
+  <li>{{ Anch("Use Example") }}</li>
+</ul>
+<h3 id="Conditional_Compilation_and_Execution" name="Conditional_Compilation_and_Execution">Conditional Compilation and Execution</h3>
+<p>NSPR's logging facility is conditionally compiled in and enabled for applications using it. These controls are platform dependent. Logging is not compiled in for the Win16 platform. Logging is compiled into the NSPR debug builds; logging is not compiled into the NSPR optimized builds. コンパイル時に <code>#define</code> で、<code>DEBUG</code> または <code>FORCE_PR_LOGをセットするとアプリケーション・プログラムで</code>NSPR loggingが有効になります。.</p>
+<p>To enable NSPR logging and/or the debugging aids in your application, compile using the NSPR debug build headers and runtime. Set one of the compile-time defines when you build your application.</p>
+<p>Execution-time control of NSPR's logging uses two environment variables. These variables control which modules and levels are logged as well as the file name of the log file. By default, no logging is enabled at execution time.</p>
+<h3 id="Log_Types_and_Variables" name="Log_Types_and_Variables">Log Types and Variables</h3>
+<p>Two types supporting NSPR logging are exposed in the API:</p>
+<ul>
+  <li><a href="/en/PRLogModuleInfo" title="en/PRLogModuleInfo">PRLogModuleInfo</a></li>
+  <li><a href="/en/PRLogModuleLevel" title="en/PRLogModuleLevel">PRLogModuleLevel</a></li>
+</ul>
+<p>Two environment variables control the behavior of logging at execution time:</p>
+<ul>
+  <li><a href="/en/NSPR_LOG_MODULES" title="en/NSPR_LOG_MODULES">NSPR_LOG_MODULES</a></li>
+  <li><a href="/en/NSPR_LOG_FILE" title="en/NSPR_LOG_FILE">NSPR_LOG_FILE</a></li>
+</ul>
+<h3 id="Logging_Functions_and_Macros" name="Logging_Functions_and_Macros">Logging Functions and Macros</h3>
+<p>The functions and macros for logging are:</p>
+<ul>
+  <li><a href="/en/PR_NewLogModule" title="en/PR_NewLogModule">PR_NewLogModule</a></li>
+  <li><a href="/en/PR_SetLogFile" title="en/PR_SetLogFile">PR_SetLogFile</a></li>
+  <li><a href="/en/PR_SetLogBuffering" title="en/PR_SetLogBuffering">PR_SetLogBuffering</a></li>
+  <li><a href="/en/PR_LogPrint" title="en/PR_LogPrint">PR_LogPrint</a></li>
+  <li><a href="/en/PR_LogFlush" title="en/PR_LogFlush">PR_LogFlush</a></li>
+  <li><a href="/en/PR_LOG_TEST" title="en/PR_LOG_TEST">PR_LOG_TEST</a></li>
+  <li><a href="/en/PR_LOG" title="en/PR_LOG">PR_LOG</a></li>
+  <li><a href="/en/PR_ASSERT" title="en/PR_ASSERT">PR_Assert</a></li>
+  <li><a href="/en/PR_ASSERT" title="en/PR_ASSERT">PR_ASSERT</a></li>
+  <li><a href="/en/PR_STATIC_ASSERT" title="en/PR_STATIC_ASSERT">PR_STATIC_ASSERT</a> (new in NSPR 4.6.6<span class="comment">XXX this hasn't been released yet; the number is a logical guess</span>)</li>
+  <li><a href="/en/PR_NOT_REACHED" title="en/PR_NOT_REACHED">PR_NOT_REACHED</a></li>
+</ul>
+<h3 id="Use_Example" name="Use_Example">Use Example</h3>
+<p>The following sample code fragment demonstrates use of the logging and debugging aids.</p>
+<ul>
+  <li>Compile the program with DEBUG defined.</li>
+  <li>Before running the compiled program, set the environment variable NSPR_LOG_MODULES to userStuff:5</li>
+</ul>
+<pre class="eval">static void UserLogStuff( void )
+{
+    PRLogModuleInfo *myLM;
+    PRIntn i;
+
+    PR_STATIC_ASSERT(5 &gt; 4); /* NSPR 4.6.6 or newer */
+
+    myLM = PR_NewLogModule( "userStuff" );
+    PR_ASSERT( myLM );
+
+    PR_LOG( myLM, PR_LOG_NOTICE, ("Log a Notice %d\n", 999 ));
+    for (i = 0; i &lt; 10 ; i++ )
+    {
+        PR_LOG( myLM, PR_LOG_DEBUG, ("Log Debug number: %d\n", i));
+        PR_Sleep( 500 );
+    }
+    PR_LOG( myLM, PR_LOG_NOTICE, ("That's all folks\n");
+
+} /* end UserLogStuff() */
+</pre>
+<p>{{ PreviousNext("NSPR API Reference:System Information and Environment Variables", "NSPR API Reference:Instrumentation Counters") }}</p>
+<h3 id="See_also">See also</h3>
+<p><a class="external" href="http://www.mozilla.org/projects/nspr/reference/html/prlog.html" title="http://www.mozilla.org/projects/nspr/reference/html/prlog.html">NSPR Logging reference</a></p>

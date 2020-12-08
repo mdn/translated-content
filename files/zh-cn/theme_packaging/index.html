@@ -1,0 +1,108 @@
+---
+title: Theme Packaging
+slug: Theme_Packaging
+tags:
+  - Themes
+  - Toolkit API
+translation_of: Mozilla/Thunderbird/Thunderbird_extensions/Theme_Packaging
+---
+<p> </p>
+<p>This document describes how to package <a href="cn/Themes">themes</a> for Firefox and Thunderbird.</p>
+<div class="note">
+ <p><strong>Note:</strong> This article is out of date, in that it still talks about the contents.rdf file, which has been deprecated since Gecko 1.8, and is no longer supported starting with Gecko 1.9.2. You <strong>must</strong> use the chrome.manifest method for registering chrome to be forward compatible. It would be greatly appreciated if someone with theming experience could work on an update to this article.</p>
+</div>
+<h3 id="Pre-requisites" name="Pre-requisites">Pre-requisites</h3>
+<p>Making a theme for Firefox or Thunderbird requires knowledge of Cascading Stylesheets (<a href="cn/CSS">CSS</a>), probably <a href="cn/XBL">XBL</a>, and some graphic design and aesthetic skill (...or maybe not). This document describes only how Themes are packaged in order to be shown in Firefox's Themes window.</p>
+<h3 id="Theme_File_Layout" name="Theme_File_Layout">Theme File Layout</h3>
+<p>Firefox/Thunderbird themes are packaged in a JAR file with the following structure:</p>
+<pre class="eval">theme.jar:
+  install.rdf
+  contents.rdf
+  preview.png
+  icon.png
+  browser/<i>files</i>
+  global/<i>files</i>
+  mozapps/<i>files</i>
+  communicator/<i>files</i>
+  ...
+
+</pre>
+<ul>
+ <li>You must have a top-level <a href="cn/Chrome.manifest">chrome.manifest</a> (Firefox/Thunderbird 1.5) or contents.rdf file which registers the chrome for the theme (as before) and also an <a href="cn/Install.rdf">install.rdf</a> manifest that specifies metadata that is displayed in the Themes window.</li>
+ <li>preview.png is a preview image which will show in the scrolling preview area in the Themes window. It can be any size.</li>
+ <li>icon.png is a 32x32 PNG (may contain alpha transparency) which will show up in the Themes list in the Themes window.</li>
+</ul>
+<h3 id="install.rdf" name="install.rdf">install.rdf</h3>
+<p>Your <a href="cn/Install.rdf">install.rdf</a> manifest will look something like this:</p>
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+
+&lt;RDF xmlns="<span class="nowiki">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span>"
+     xmlns:em="<span class="nowiki">http://www.mozilla.org/2004/em-rdf#</span>"&gt;
+
+  &lt;Description about="urn:mozilla:install-manifest"&gt;
+    &lt;em:type&gt;4&lt;/em:type&gt;<i>more properties</i>
+  &lt;/Description&gt;
+&lt;/RDF&gt;
+</pre>
+<h4 id="Required_install.rdf_Properties" name="Required_install.rdf_Properties">Required install.rdf Properties</h4>
+<p>Your install.rdf file must have the following properties. See the <a href="cn/Install.rdf">install.rdf Reference</a> for more information:</p>
+<ul>
+ <li>em:id</li>
+ <li>em:version</li>
+ <li>em:type</li>
+ <li>em:targetApplication</li>
+ <li>em:name</li>
+ <li>em:internalName</li>
+</ul>
+<h4 id="Optional_install.rdf_Properties" name="Optional_install.rdf_Properties">Optional install.rdf Properties</h4>
+<ul>
+ <li>em:description</li>
+ <li>em:creator</li>
+ <li>em:contributor</li>
+ <li>em:homepageURL</li>
+ <li>em:updateURL</li>
+</ul>
+<p>Note that if your theme will be made available on the <a class="external" href="http://addons.mozilla.org" rel="freelink">http://addons.mozilla.org</a> website, it should not include an updateURL.</p>
+<h4 id="Sample_install.rdf_File" name="Sample_install.rdf_File">Sample install.rdf File</h4>
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+
+&lt;RDF xmlns="<span class="nowiki">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span>"
+     xmlns:em="<span class="nowiki">http://www.mozilla.org/2004/em-rdf#</span>"&gt;
+
+  &lt;Description about="urn:mozilla:install-manifest"&gt;
+    &lt;em:id&gt;{18b64b56-d42f-428d-a88c-baa413bc413f}&lt;/em:id&gt;
+    &lt;em:version&gt;1.0&lt;/em:version&gt;
+    &lt;em:type&gt;4&lt;/em:type&gt;
+
+    &lt;!-- Target Application this extension can install into,
+         with minimum and maximum supported versions. --&gt;
+    &lt;em:targetApplication&gt;
+      &lt;Description&gt;
+        &lt;em:id&gt;{ec8030f7-c20a-464f-9b0e-13a3a9e97384}&lt;/em:id&gt;
+        &lt;em:minVersion&gt;0.8&lt;/em:minVersion&gt;
+        &lt;em:maxVersion&gt;0.9&lt;/em:maxVersion&gt;
+      &lt;/Description&gt;
+    &lt;/em:targetApplication&gt;
+
+    &lt;!-- Front End MetaData --&gt;
+    &lt;em:name&gt;New Theme 1&lt;/em:name&gt;
+    &lt;em:description&gt;A test theme for Firefox&lt;/em:description&gt;
+    &lt;em:creator&gt;Ben Goodger&lt;/em:creator&gt;
+    &lt;em:contributor&gt;John Doe&lt;/em:contributor&gt;
+    &lt;em:homepageURL&gt;<span class="nowiki">http://www.bengoodger.com/</span>&lt;/em:homepageURL&gt;
+
+    &lt;!-- Front End Integration Hooks (used by Theme Manager)--&gt;
+    &lt;em:internalName&gt;newtheme1&lt;/em:internalName&gt;
+  &lt;/Description&gt;
+&lt;/RDF&gt;
+</pre>
+<p>The following are some common target application GUIDs that you can use in your targetApplication properties:</p>
+<pre class="eval">Firefox      {ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+Thunderbird  {3550f703-e582-4d05-9a08-453d09bdfdc6}
+Sunbird      {718e30fb-e89b-41dd-9da7-e25a45638b28}
+</pre>
+<h3 id="Official_References_for_Toolkit_API" name="Official_References_for_Toolkit_API">Official References for <a href="cn/Toolkit_API">Toolkit API</a></h3>
+<div>
+ {{page("/en-US/docs/Toolkit_API/Official_References")}}</div>
+<div class="noinclude">
+  </div>

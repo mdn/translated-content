@@ -1,0 +1,145 @@
+---
+title: <hgroup>
+slug: Web/HTML/Element/hgroup
+tags:
+  - Experimental
+  - HTML
+  - HTML セクション
+  - HTML5
+  - 'HTML:フローコンテンツ'
+  - 'HTML:知覚可能コンテンツ'
+  - 'HTML:見出しコンテンツ'
+  - Reference
+  - ウェブ
+  - 要素
+translation_of: Web/HTML/Element/hgroup
+---
+<div>{{HTMLRef}}</div>
+
+<p><strong>HTML の <code>&lt;hgroup&gt;</code> 要素</strong>は、文書のセクションの、複数レベルの見出しを表します。これは <code><a href="/ja/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;–&lt;h6&gt;</a></code> 要素のセットをグループ化します。</p>
+
+<div>{{EmbedInteractiveExample("pages/tabbed/hgroup.html", "tabbed-standard")}}</div>
+
+<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
+   <td><a href="/ja/docs/Web/HTML/Content_categories#Flow_content">フローコンテンツ</a>, 見出しコンテンツ, 知覚可能コンテンツ</td>
+  </tr>
+  <tr>
+   <th scope="row">許可されている内容</th>
+   <td>1個以上の {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}},{{HTMLElement("h4")}}, {{HTMLElement("h5")}},{{HTMLElement("h6")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">タグの省略</th>
+   <td>{{no_tag_omission}}</td>
+  </tr>
+  <tr>
+   <th scope="row">許可されている親要素</th>
+   <td><a href="/ja/docs/Web/HTML/Content_categories#Flow_content">フローコンテンツ</a>を受け入れるすべての要素</td>
+  </tr>
+  <tr>
+   <th scope="row">許可されている ARIA ロール</th>
+   <td>{{ARIARole("tab")}}, {{ARIARole("presentation")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">DOM インターフェイス</th>
+   <td>{{domxref("HTMLElement")}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Attributes" name="Attributes">属性</h2>
+
+<p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>のみがあります。</p>
+
+<h2 id="Usage_notes" name="Usage_notes">使用上の注意</h2>
+
+<div class="note">
+<p><code>&lt;hgroup&gt;</code> 要素は HTML5 (W3C) 仕様から削除されましたが、 WHATWG 版の HTML には依然として含まれています。ほとんどのブラウザーで部分的に実装されており、実装が削除される可能性は低くなっています。<br>
+ ただし、<code>&lt;hgroup&gt;</code> 要素の主要な目的は <a href="/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#The_HTML5_outline_algorithm">HTML 仕様書で定義されたアウトラインのアルゴリズム</a>によって見出しをどのように表示するかに作用することですが、<strong>どのブラウザーでもアウトラインのアルゴリズムは実装されていないため</strong>、 <code>&lt;hgroup&gt;</code> のセマンティクスは実際のところ、理論上のものになっています。<br>
+ HTML5 (W3C) 仕様書では、<code>&lt;hgroup&gt;</code>を使用せずに<a href="https://www.w3.org/TR/html5/common-idioms.html#sub-head">副見出し、サブタイトル、代替タイトル、スローガン</a>をマークアップする方法についてアドバイスを提供しています。</p>
+</div>
+
+<p><code>&lt;hgroup&gt;</code> 要素は、<em>複数レベル</em>の見出しを構成するために文書のセクションの主見出しと副次的な見出し（副見出しや副題など）をグループ化することが可能です。</p>
+
+<p>言い換えると、 <code>&lt;hgroup&gt;</code> 要素は副次的な子の <code><a href="/ja/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;–&lt;h6&gt;</a></code> がアウトライン内で独自のセクションを生成することを妨げます。これらの <code><a href="/ja/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;–&lt;h6&gt;</a></code> 要素は <code>&lt;hgroup&gt;</code> の子でなければ通常どおりです。</p>
+
+<p>よって <a href="/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#The_HTML5_outline_algorithm">HTML 仕様書で定義されているアウトラインのアルゴリズム</a>で生成される理論的なアウトラインでは、<code>&lt;hgroup&gt;</code> は全体としてひとつの論理的な見出しを構成します。そして <code>&lt;hgroup&gt;</code> の子である <code><a href="/ja/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;–&lt;h6&gt;</a></code> とともに、理論的なアウトライン内でひとつの論理的な見出しを構成するために<em>複数レベル</em>のユニットとしてのアウトラインになります。</p>
+
+<p>このようなアウトラインの (理論的ではない) <em>描画</em>ビューを生成するために、マルチレベルの性質を伝えるため <code>&lt;hgroup&gt;</code> の見出しをどのように描画するかについて、レンダリングツールのデザインでいくつかの選択が必要です。例えば以下のように、描画されたアウトラインで <code>&lt;hgroup&gt;</code> を表示するさまざまな方法が考えられます:</p>
+
+<ul>
+ <li>主見出しの後および最初の副次的な見出しの前にコロンと空白 (“<code>: </code>”) または同様の句読点を置く形で (および同じまたは同様の句読点を、他の副次的な見出しの前に置いて) <code>&lt;hgroup&gt;</code> を描画されたアウトラインで表示する</li>
+ <li>主見出しの後に、括弧でくくった副次的な見出しを置く形で、<code>&lt;hgroup&gt;</code> を描画されたアウトラインで表示する</li>
+</ul>
+
+<p>以下の HTML 文書で考えてみましょう。</p>
+
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
+&lt;title&gt;HTML Standard&lt;/title&gt;
+&lt;body&gt;
+  &lt;hgroup id="document-title"&gt;
+    &lt;h1&gt;HTML&lt;/h1&gt;
+    &lt;h2&gt;Living Standard — Last Updated 12 August 2016&lt;/h2&gt;
+  &lt;/hgroup&gt;
+  &lt;p&gt;Some intro to the document.&lt;/p&gt;
+  &lt;h2&gt;Table of contents&lt;/h2&gt;
+  &lt;ol id=toc&gt;...&lt;/ol&gt;
+  &lt;h2&gt;First section&lt;/h2&gt;
+  &lt;p&gt;Some intro to the first section.&lt;/p&gt;
+&lt;/body&gt;</pre>
+
+<p>この文書のアウトラインを描画すると、以下のようになるでしょう。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/14599/outline-colon.png" style="height: 99px; width: 450px;"></p>
+
+<p>ここでは主見出し「<em>HTML</em>」の後にコロンと空白を置いて、副次的な見出し「<em>Living Standard — Last Updated 12 August 2016</em>」が続きます。</p>
+
+<p>あるいは、以下のようにアウトラインを描画することもできるでしょう。</p>
+
+<p><img alt="Rendered outline that includes an &lt;hgroup> element, with parens around the secondary heading" src="https://mdn.mozillademos.org/files/14601/outline-paren.png" style="height: 106px; width: 450px;"></p>
+
+<p>ここでは主見出し「<em>HTML</em>」の後に、括弧でくくった副次的な見出し「<em> (Living Standard — Last Updated 12 August 2016)</em>」があります。</p>
+
+<h2 id="Examples" name="Examples">例</h2>
+
+<pre class="brush: html">&lt;hgroup id="document-title"&gt;
+  &lt;h1&gt;HTML&lt;/h1&gt;
+  &lt;h2&gt;Living Standard — Last Updated 12 August 2016&lt;/h2&gt;
+&lt;/hgroup&gt;
+</pre>
+
+<h2 id="Specifications" name="Specifications">仕様書</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-hgroup-element', '&lt;hgroup&gt;')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+
+<p class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</p>
+
+<p>{{Compat("html.elements.hgroup")}}</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>他のセクション関連要素: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}</li>
+ <li><a class="deki-ns current" href="/ja/docs/Sections_and_Outlines_of_an_HTML5_document" title="Sections and Outlines of an HTML5 document">HTML5 文書のセクションとアウトライン</a></li>
+</ul>

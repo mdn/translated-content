@@ -1,0 +1,89 @@
+---
+title: XUL 程序打包
+slug: XUL_程序打包
+translation_of: Archive/Mozilla/XULRunner/XUL_Application_Packaging
+---
+<p><a href="/en-US/docs/XULRunner" title="XULRunner">XULRunner</a> application packages are standard <a href="/en-US/docs/Bundles" title="Bundles">toolkit bundles</a> (like a Firefox extension), with one additional manifest file (<code>application.ini</code>) which helps describe the application. XUL app packages are typically ZIPped into an archive with the extension .xulapp or .xpi. They can be installed with a XULRunner command-line flag "-install-app" (see the <a href="/en-US/docs/XULRunner_1.8.0.4_Release_Notes" title="XULRunner_1.8.0.4_Release_Notes">XULRunner 1.8.0.4 Release Notes</a>).</p>
+<h2 id="application.ini" name="application.ini">application.ini</h2>
+<p>The <code>application.ini</code> manifest is located at the root of the extension and provides metadata that allows XULRunner to launch the application properly. It is parsed as a Windows-style INI file with <code>{{mediawiki.external('Headings')}}</code> and <code>Key=Value</code> pairs. Lines beginning with <code>;</code> or <code>#</code> are treated as comments.</p>
+<p>A sample application.ini file can be found in {{Source("xulrunner/examples/simple/application.ini", "the mozilla source tree")}}.</p>
+<h3 id="The_.5BApp.5D_section" name="The_.5BApp.5D_section">The [App] section</h3>
+<p>The <code>App</code> section specifies metadata about the application</p>
+<dl>
+  <dt>
+    Name</dt>
+  <dd>
+    Specifies the application name.<br>
+    REQUIRED<br>
+    Example: <code>Name=TestApplication</code></dd>
+  <dt>
+    Version</dt>
+  <dd>
+    Specifies the application version number.<br>
+    REQUIRED<br>
+    See <a href="/en-US/docs/Toolkit_version_format" title="Toolkit_version_format">Toolkit version format</a> for version numbering details<br>
+    Example: <code>Version=0.1</code></dd>
+  <dt>
+    BuildID</dt>
+  <dd>
+    Specifies a unique build identifier. This is typically a date identifier, and should be different for every released version of an application.<br>
+    REQUIRED<br>
+    Example: <code>BuildID=20060201</code></dd>
+  <dt>
+    ID</dt>
+  <dd>
+    Specifies the unique application ID<br>
+    REQUIRED<br>
+    The application ID, like <a href="/en-US/docs/Install_Manifests#id" title="Install_Manifests#id">extension IDs</a>, can be formatted either like an email <code><a class="link-mailto" href="mailto:ApplicationName@vendor.tld" rel="freelink">ApplicationName@vendor.tld</a></code> or a UUID <code>{12345678-1234-1234-1234-123456789abc}</code>. The email format is recommended for newly developed applications.<br>
+    Example: <code><a class="link-mailto" href="mailto:ID=TestApplication@example.tld" rel="freelink">ID=TestApplication@example.tld</a></code></dd>
+  <dt>
+    Vendor</dt>
+  <dd>
+    Specifies the application vendor<br>
+    OPTIONAL<br>
+    Example: <code>Vendor=Grinch Productions</code></dd>
+  <dt>
+    Profile</dt>
+  <dd>
+    Specifies the path to use for the application's profile, based within the user's application data directory<br>
+    OPTIONAL<br>
+    Example: <code>Profile=MyAppData</code></dd>
+</dl>
+<h3 id="The_.5BGecko.5D_section" name="The_.5BGecko.5D_section">The [Gecko] section</h3>
+<p>The <code>Gecko</code> section specifies what version of XULRunner is required by the application.</p>
+<dl>
+  <dt>
+    MinVersion</dt>
+  <dd>
+    Specifies the minimum XULRunner version needed by this application. If there are binary components, MinVersion must equal the version of the libxul SDK which is used to build the application.<br>
+    REQUIRED<br>
+    Example: <code>MinVersion=1.8</code></dd>
+  <dt>
+    MaxVersion</dt>
+  <dd>
+    Specify the maximum XULRunner version needed by this application.<br>
+    OPTIONAL - default value is any XULRunner less than XULRunner 2<br>
+    Example: <code>MaxVersion=1.8.0.*</code></dd>
+</dl>
+<h3 id="The_.5BXRE.5D_section" name="The_.5BXRE.5D_section">The [XRE] section</h3>
+<p>The <code>XRE</code> section specifies various features of XULRunner startup that can be enabled</p>
+<dl>
+  <dt id="em">
+    EnableExtensionManager</dt>
+  <dd>
+    Specifies whether to enable extensions and extension management. Legal values are 1 and 0.<br>
+    OPTIONAL - default is 0<br>
+    Note: This option does not add menu items that make the extension/theme manager available in the UI; that is the responsibility of the application author.<br>
+    Example: <code>EnableExtensionManager=1</code></dd>
+  <dt>
+    EnableProfileMigrator</dt>
+  <dd>
+    Specifies whether, when the application is launched for the first time and there are no profiles, to enable profile migration code through the nsIProfileMigrator interface. Legal values are 1 and 0.<br>
+    OPTIONAL - default is 0<br>
+    Note: The application author is responsible for implementing the {{Source("toolkit/profile/public/nsIProfileMigrator.idl", "nsIProfileMigrator interface")}}; if an implementation is not found no migration will be performed.<br>
+    Example: <code>EnableProfileMigrator=1</code></dd>
+</dl>
+<h3 id="The_.5BCrash_Reporting.5D_Section" name="The_.5BCrash_Reporting.5D_Section">The [Crash Reporting] Section</h3>
+<ul>
+  <li><a href="/en-US/docs/Using_Crash_Reporting_in_a_XULRunner_Application" title="Using_Crash_Reporting_in_a_XULRunner_Application">Using Crash Reporting in a XULRunner Application</a></li>
+</ul>

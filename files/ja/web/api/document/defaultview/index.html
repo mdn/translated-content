@@ -1,0 +1,97 @@
+---
+title: document.defaultView
+slug: Web/API/Document/defaultView
+tags:
+  - API
+  - Document
+  - HTML DOM
+  - Property
+  - Reference
+translation_of: Web/API/Document/defaultView
+---
+<div>{{ApiRef}}</div>
+
+<p>ブラウザーにおいて、<strong><code>document.defaultView</code></strong> はドキュメントに関連付けられている {{domxref("window")}} オブジェクトを返します。もし存在しない場合は <code>null</code> を返します。</p>
+
+<h2 id="例">例</h2>
+
+<pre class="syntaxbox">var <var>win</var> = document.defaultView;
+</pre>
+
+<p>このプロパティは読み取り専用です。</p>
+
+<h2 id="仕様">仕様</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#dom-document-defaultview', 'Document.defaultView')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>変更なし</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', 'browsers.html#dom-document-defaultview', 'Document.defaultView')}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td>初期の定義</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="ブラウザー互換性">ブラウザー互換性</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>機能</th>
+   <th>Firefox (Gecko)</th>
+   <th>Chrome</th>
+   <th>Internet Explorer</th>
+   <th>Edge</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>基本サポート</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatIE("9.0")}}</td>
+   <td>0.10</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>機能</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Android</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>基本サポート</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>

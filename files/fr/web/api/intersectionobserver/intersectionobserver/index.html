@@ -1,0 +1,81 @@
+---
+title: IntersectionObserver.IntersectionObserver()
+slug: Web/API/IntersectionObserver/IntersectionObserver
+tags:
+  - API
+  - Constructeur
+  - Constructor
+  - Intersection Observer
+  - IntersectionObserver
+  - IntersectionObserver API
+  - Reference
+translation_of: Web/API/IntersectionObserver/IntersectionObserver
+---
+<div>{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}</div>
+
+<p><span class="seoSummary">Le constructeur <strong><code>IntersectionObserver()</code></strong> crée et retourne un nouvel objet {{domxref("IntersectionObserver")}}.</span> Le <code>rootMargin</code> (marges de la racine), si spécifié, est vérifié pour s'assurer qu'il est syntaxiquement correct, les seuils d'intersection aussi pour vérifier qu'ils sont tous sur l'intervalle entre 0.0 et 1.0 inclus, et en fin que la liste des seuils d'intersection est triée par ordre croissant. Si la liste des seuils est vide, sa valeur par défaut est [0.0].</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox">let <em>observer</em> = new IntersectionObserver(<em>fonctionRappel[, </em><em>options</em>]);</pre>
+
+<h3 id="Paramètres">Paramètres</h3>
+
+<dl>
+ <dt><code>fonctionRappel</code></dt>
+ <dd>Une fonction appelée lorsque la proportion de l'élément visible franchit un seuil. La fonciton de rappel reçoit en entrée deux paramètres:
+ <dl>
+  <dt><code>entrées</code></dt>
+  <dd>une liste d'objets {{domxref("IntersectionObserverEntry")}}, chacun représentant un seuil qui a été franchi, que ce soit en passant au-dessus ou en-dessous du pourcentage spécifié par le seuil.</dd>
+  <dt><code>observateur</code></dt>
+  <dd>L'{{domxref("IntersectionObserver")}} pour lequel la fonction de rappel est invoquée.</dd>
+ </dl>
+ </dd>
+ <dt><code>options</code> {{optional_inline}}</dt>
+ <dd>un objet optionnel qui paramètre l'observateur. Si <code>options</code> n'est pas spécifié, l'observateur utilise la fenêtre du document comme racine, sans marge, et un seuil de 0% (signifiant que le moindre changement d'un pixel suffira à déclencher la fonction de rappel). Vous pouvez fournir dans l'objet options les propriétés suivantes :
+ <dl>
+  <dt><code>root</code></dt>
+  <dd>Un objet {{domxref("Element")}} qui est racine de la cible désignée, dont le rectangle attaché sera considéré comme la fenêtre. Toute portion de l'élément cible non visible dans la zone couverte par le <code>root</code> n'est pas considérée visible.</dd>
+  <dt><code>rootMargin</code></dt>
+  <dd>Une chaîne de caractères spécifiant un ensemble de décalages à ajouter au {{Glossary('bounding_box')}} de la racine au moment de calculer les intersections, en réduisant ou grossissant la racine à des fins de calcul. La syntaxe est approximativement la même que celle pour la propriété CSS {{cssxref("margin")}} ; voir {{SectionOnPage("/fr-FR/docs/Web/API/Intersection_Observer_API", "L'élément racine et sa marge externe")}} pour plus d'informations sur le fonctionnement des marges et la syntaxe. Sa valeur par défaut est "0px 0px 0px 0px".</dd>
+  <dt><code>threshold</code></dt>
+  <dd>Un nombre ou un tableau de nombres entre 0.0 et 1.0 (inclus), spécifiant des seuils  définis comme ratios de la hauteur visible d'un élément cible observé par rapport à sa hauteur totale. Une valeur de 0.0 signifie que tout pixel visible de l'élément le rend visible et 1.0 que l'entièreté de l'élément doit être visible. Voir {{SectionOnPage("/fr-FR/docs/Web/API/Intersection_Observer_API", "Thresholds")}} pour une description plus approfondie de l'usage des seuils d'intersection. Le seuil par défaut est 0.0.</dd>
+ </dl>
+ </dd>
+</dl>
+
+<h3 id="Valeur_de_retour">Valeur de retour</h3>
+
+<p>Un nouvel {{domxref("IntersectionObserver")}} pouvant être utilisé pour observer la visibilité d'un élément cible au sein de l'élément <code>root</code> spécifié franchissant un des seuils de visibilité spécifiés. Appeler sa méthode {{domxref("IntersectionObserver.observe", "observe()")}} pour commencer à observer les changements de visibilité d'un élément cible.</p>
+
+<h3 id="Erreurs">Erreurs</h3>
+
+<dl>
+ <dt><code>SyntaxError</code></dt>
+ <dd>Le <code>rootMargin</code> spécifié est invalide.</dd>
+ <dt>RangeError</dt>
+ <dd>Une ou plusieurs des valeurs du <code>threshold</code> est en dehors de l'intervalle allant de 0.0 à 1.0.</dd>
+</dl>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Spécification</th>
+   <th scope="col">Statut</th>
+   <th scope="col">Commentaire</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('IntersectionObserver','#dom-intersectionobserver-intersectionobserver','IntersectionObserver constructor')}}</td>
+   <td>{{Spec2('IntersectionObserver')}}</td>
+   <td>Définition initiale.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p>{{Compat("api.IntersectionObserver.IntersectionObserver")}}</p>

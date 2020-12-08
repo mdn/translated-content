@@ -1,0 +1,104 @@
+---
+title: 框架脚本环境
+slug: Mozilla/Firefox/Multiprocess_Firefox/Message_Manager/Frame_script_environment
+translation_of: Mozilla/Firefox/Multiprocess_Firefox/Message_Manager/Frame_script_environment
+---
+<div>{{FirefoxSidebar}}</div><p>框架脚本的全局是 <a href="http://dxr.mozilla.org/mozilla-central/source/dom/base/nsIMessageManager.idl#345">ContentFrameMessageManager</a>，提供下列环境：</p>
+
+<table class="fullwidth-table standard-table">
+ <tbody>
+  <tr>
+   <td><code>content</code></td>
+   <td>The DOM window of the content loaded in the browser. may be <code>null</code> (see below)</td>
+  </tr>
+  <tr>
+   <td><code>docShell</code></td>
+   <td>The <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDocShell"><code>nsIDocShell</code></a> associated with the browser.</td>
+  </tr>
+  <tr>
+   <td><code>addEventListener()</code></td>
+   <td>Listen to events from content.</td>
+  </tr>
+  <tr>
+   <td><code>removeEventListener()</code></td>
+   <td>Stop listening to events from content.</td>
+  </tr>
+  <tr>
+   <td><code>addMessageListener()</code></td>
+   <td>Listen to messages from chrome.</td>
+  </tr>
+  <tr>
+   <td><code>removeMessageListener()</code></td>
+   <td>Stop listening to messages from chrome.</td>
+  </tr>
+  <tr>
+   <td><code>sendAsyncMessage()</code></td>
+   <td>Send an asynchronous message to chrome.</td>
+  </tr>
+  <tr>
+   <td><code>sendSyncMessage()</code></td>
+   <td>Send a synchronous message to chrome.</td>
+  </tr>
+  <tr>
+   <td><code>dump()</code></td>
+   <td>Print a message to the console.</td>
+  </tr>
+  <tr>
+   <td><code>atob()</code></td>
+   <td>Base64 decode.</td>
+  </tr>
+  <tr>
+   <td><code>btoa()</code></td>
+   <td>Base64 encode.</td>
+  </tr>
+  <tr>
+   <td><code>Components</code></td>
+   <td>The usual <a href="/en-US/docs/Components_object"><code>Components</code> object</a>.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>特别注意，框架脚本使用<code> content </code>访问 DOM 窗口，而不是 <code>window</code>：</p>
+
+<pre class="brush: js">// frame script
+var links = content.document.getElementsByTagName("a");</pre>
+
+<p>All the frame scripts running in a tab share this global. However, any top-level variables defined by a script are not stored on the global: instead, top-level variables are stored in a special per-script object that delegates to the per-tab global. This means you don't have to worry about global variables you define conflicting with global variables defined by another frame script. You can still access the global directly via <code>this</code>.</p>
+
+<p>框架脚本使用系统主体运行。如果你想使用其他主题，可以使用 <a href="/en-US/docs/Components.utils.Sandbox"><code>Sandbox</code></a>。</p>
+
+<p>Frame scripts run with <a href="https://developer.mozilla.org/en-US/docs/Security_check_basics#Principals">system privileges</a> and have access to the <a href="https://developer.mozilla.org/en-US/docs/Components_object">Components</a> object, enabling them to use <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM">XPCOM</a> objects and <a href="https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules">JSMs</a>. However, some APIs  that work in the chrome process will not work in a frame script. See <a href="/en-US/Firefox/Multiprocess_Firefox/Limitations_of_frame_scripts">Limitations of frame scripts</a> for more details.</p>
+
+<h2 id="事件">事件</h2>
+
+<p>Besides the regular DOM events being captured/bubbling up from content the current <code>content</code> object the following additional events get fired in a frame script environment:</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><a href="/en-US/docs/Web/Reference/Events/unload">unload</a></td>
+   <td>
+    <dl>
+     <dt style="float: left; text-align: right; width: 120px;">Bubbles</dt>
+     <dd style="margin: 0 0 0 120px;">No</dd>
+    </dl>
+
+    <p>Fires when the frame script environment is shut down, i.e. when a tab gets closed.</p>
+
+    <p>If you use a capturing event listener on the <code>ContentFrameMessageManager</code>, you should verify that its <code>event.target</code> is set to the <code>ContentFrameMessageManager</code> global object in order to avoid handling <code>unload</code> events from content.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Web/Events/DOMWindowCreated">DOMWindowCreated</a></td>
+   <td>
+    <p>Fires when a new <code>content</code> object is created.<br>
+     <br>
+     This can be used if a framescript needs to interact with individual DOM windows instead of simply listening for events bubbling up from content.<br>
+     Another use is to interact with the content very early in the page load process, long before <a href="/en-US/docs/Web/Events/DOMContentLoaded">DOMContentLoaded</a> event is fired.<br>
+      </p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p> </p>

@@ -1,0 +1,535 @@
+---
+title: 创建_XPCOM_组件/XPCOM_简介
+slug: Mozilla/Tech/XPCOM/Guide/Creating_components/An_Overview_of_XPCOM
+tags:
+  - XPCOM
+  - 所有分类
+translation_of: Mozilla/Tech/XPCOM/Guide/Creating_components/An_Overview_of_XPCOM
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/创建_XPCOM_组件:前言" style="float: left;">« 上一页</a><a href="/zh-CN/docs/创建_XPCOM_组件:使用_XPCOM_组件">下一页  »</a></p>
+</div><p></p>
+
+<p>这是一本关于 XPCOM 的书. 这本书是以编写一个 XPCOM 组件的方式来组织的, 但是这个过程涵盖了 XPCOM 组件模型主要的出发点, 概念和术语.</p>
+
+<p>本章以 XPCOM 的快速导览开始, 简单介绍了 XPCOM 和组件开发的基本概念和技术. 本章的大部分内容从一个很高的角度介绍了这些概念, 这些概念将在创建一个称为 <strong>WebLock</strong> 的 Mozilla 组件过程中逐渐透彻的讲述.</p>
+
+<h3 id="XPCOM_.E8.A7.A3.E5.86.B3.E6.96.B9.E6.A1.88" name="XPCOM_.E8.A7.A3.E5.86.B3.E6.96.B9.E6.A1.88">XPCOM 解决方案</h3>
+
+<p>Cross Platform Component Object Module (XPCOM) 是一个允许开发人员把一个大的工程划分成小的模块的框架. 这些小模块称为<em>组件</em>, 它们在运行时刻组装在一起.</p>
+
+<p>XPCOM 的目标是使软件的不同部分分别开发, 相互独立. 为了是应用的不同组件之间能够互操作, XPCOM 把组件的<em>实现</em>与<em>接口</em>(后面讨论<a href="#接口">接口</a>)分开. 同时 XPCOM 还提供了加载和操纵这些组件的库和工具以及服务, 以帮助开发人员编写跨平台的代码和组件版本管理; 因此组件可以在不破坏应用或者重新生成应用的同时被替换被更新. 通过使用 XPCOM, 开发人员创建的组件可以在不同的应用中被重用, 或者替换当前应用中的组件以改变应用的功能.</p>
+
+<p>XPCOM 不只提供组件软件开发的支持, 它同时提供一个开发平台的大多数功能的支持:</p>
+
+<ul>
+ <li>组件管理</li>
+ <li>文件抽象</li>
+ <li>对象消息传递</li>
+ <li>内存管理</li>
+</ul>
+
+<p>我们将在后面的章节中详细讨论上面的条目, 但是现在, 仅仅把 XPCOM 想象成一个 <em>组件开发平台</em>, 它提供了上面的这些特性.</p>
+
+<h3 id="Gecko" name="Gecko">Gecko</h3>
+
+<p>XPCOM 尽管在许多方面类似于 Microsoft COM, 但 XPCOM 被设计成主要应用于应用层. XPCOM 的最重要的应用是 <em>Gecko</em>, 一个开源的, 遵循标准的, 嵌入式 web 浏览器和 工具包.</p>
+
+<p>XPCOM 是访问 Gecko 库和嵌入或扩展 Gecko 的方法. 本书着重于后者 - 扩展 Gecko - 但是本书中描述的基本思想对嵌入 Gecko 的开发人员也很重要.</p>
+
+<p>Gecko 应用在许多 internet 程序中, 主要是浏览器. 包括 Gateway/AOL Instant AOL device 和 Nokia Media Terminal. Gecko 最近还被应用于的 Compuserve 客户端, AOL for Mac OS X, Netscape 7, 当然还包括 Mozilla 客户端. Gecko 是目前而言主流的开源浏览器.</p>
+
+<h3 id=".E7.BB.84.E4.BB.B6" name=".E7.BB.84.E4.BB.B6">组件</h3>
+
+<p>XPCOM 允许把一个大的工程分解为一些小部分. 这些小部分称为组件, 通常是一些小的可重用的二进制库(在 Windows 下表现为一个 DLL (动态联接库), Unix 下为一个 DSO (分布式共享对象), 这些二进制库可以包含一个或多个组件. 当多个相关组件被封装到一个二进制库, 这个库也称为<em>模块</em>.</p>
+
+<p>把软件划分成不同的组件可以使开发和维护工作变得更容易. 除了这个好处, 模块化组件化的编程还有下面的优势:</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">优点</td>
+   <td class="header">描述</td>
+  </tr>
+  <tr>
+   <td>重用</td>
+   <td>模块化的代码可以在其他应用和环境中被重用.</td>
+  </tr>
+  <tr>
+   <td>更新</td>
+   <td>在不需要重新编译整个应用的情况下更新组件.</td>
+  </tr>
+  <tr>
+   <td>性能</td>
+   <td>代码按照模块化组织, 模块就不必要立刻被加载, 而是以 "lazy" 方式加载, 或者根本不需要加载. 这样就可以提升应用的整体性能.</td>
+  </tr>
+  <tr>
+   <td>维护</td>
+   <td>甚至在不更新组件的情况下, 按照模块化的方式设计应用也能够使你对感兴趣的部分的维护变得更容易.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Mozilla 有几百万行代码, 没有那个人能够彻底搞明白整个代码的细节. 面对这样的一个系统, 最好的方式是把它划分成一些小的, 更容易管理的部分; 同时使用组件模型来编程, 把相关组件组织到各个模块中去. 比如说, Mozilla 的网络库就包含了 HTTP, FTP, 及其他协议的组件, 这些组件被塞到一个单独的库里. 这个库就是网络模块, 也就是通常所说的 "necko."</p>
+
+<p>但是把事物划分开来并不一定就好, 有许多事物作为一个整体组织起来才是最好的方式, 或者根本就不能划分开来. 比如说, 一个小孩就可能不吃没有果酱的三明志, 对于他来说, 果酱和三明志是缺一不可的整体. 同样的情形也会存在于某些软件中, 某些需要紧耦合的仅仅在内部使用的部分就并不需要费力去把它拆开成为小的模块.</p>
+
+<p>Gecko 中的 HTTP (超文本传输协议)  组件并不会暴露它内部的类, 它是作为一个整体来使用. 组件内部的事物不应该暴露给 XPCOM. 在 Mozilla 早期的开发中, 有些组件的创建并不适当, 但是随着开发的深入, 这些部分会被逐渐移出 XPCOM.</p>
+
+<h3 id=".E6.8E.A5.E5.8F.A3" name=".E6.8E.A5.E5.8F.A3">接口</h3>
+
+<p>把软件划分成组件通常一个好的解决方法, 但是我们该怎么做呢? 基本的思路是按照功能进行划分, 理解这些功能块之间的如何进行通信. 这些组件之间的通信通道就构成了各个组件的边界, 这些边界形式的描述为<em>接口</em>.</p>
+
+<p>接口并不是编程中的一个新的概念. 从我们的第一个 "HelloWorld" 程序开始我们就一直在不知不觉的使用它, 这里的接口就存在于我们的应用程序和打印程序之间. 应用程序使用 <code>stdio</code> 库提供的接口来把 "hello world" 字符串打印到屏幕上. XPCOM 与 "HelloWorld" 程序的不同之处在于 XPCOM 会在运行时刻找到这个屏幕打印的功能, 而 XPCOM 事前根本就不需要在编译的时刻了解 <code>stdio</code> 库提供了什么东西.</p>
+
+<p>接口允许开发人员把功能的具体实现<em>封装</em>在组件内部, 而客户程序不需要了解这个功能是如何实现的, 它只需要使用它就行了.</p>
+
+<div class="side-note">
+<p><span id="%E6%8E%A5%E5%8F%A3%E4%B8%8E%E6%8C%89%E7%85%A7%E5%A5%91%E7%BA%A6(Contract)%E7%BC%96%E7%A8%8B"><a id="%E6%8E%A5%E5%8F%A3%E4%B8%8E%E6%8C%89%E7%85%A7%E5%A5%91%E7%BA%A6(Contract)%E7%BC%96%E7%A8%8B"></a><strong>接口与按照契约(Contract)编程</strong></span></p>
+
+<p>一个接口在组件与客户程序之间达成契约. 并没有任何强制措施保证认同这个契约, 但是忽略它会是致命的. 在基于组件的编程中, 组件保证它提供的接口是<em>不变的</em> - 不同版本的组件都要提供同样的访问方法 - 这就与使用它的客户程序达成了一种契约. 从这种角度来说, 基于组件的编程通常也称为<em>按照契约编程</em>.</p>
+</div>
+
+<h4 id=".E6.8E.A5.E5.8F.A3.E4.B8.8E.E5.B0.81.E8.A3.85" name=".E6.8E.A5.E5.8F.A3.E4.B8.8E.E5.B0.81.E8.A3.85">接口与封装</h4>
+
+<p>组件边界之间的抽象对软件的可维护性与可重用性是致关重要的. 举个例子来说, 考虑下面一个没有很好封装的类. 在下面的例子中, 使用可自由访问的 public 的初始化方法可能会出问题.</p>
+
+<p><span id="SomeClass%E7%B1%BB%E5%88%9D%E5%A7%8B%E5%8C%96"><a id="SomeClass%E7%B1%BB%E5%88%9D%E5%A7%8B%E5%8C%96"></a><strong>SomeClass类初始化</strong></span></p>
+
+<pre>class SomeClass
+{
+  public:
+    // Constructor
+    SomeClass();
+
+    // Virtual Destructor
+    virtual ~SomeClass();
+
+    // init method
+    void Init();
+
+    void DoSomethingUseful();
+};
+</pre>
+
+<p>系统要工作正常, 客户程序员必须注意到组件程序员建立的潜规则. 这就是这个未很好封装的类的契约: 这是一套关于何时该调用一个方法, 调用这个方法之前应该做什么的规则. 这个规则可能指出 <code>DoSomethingUseful</code> 方法只能在调用 <code>Init()</code> 之后被使用. <code>DoSomethingUseful</code> 方法可能会做某些检查工作以保证条件满足 - <code>Init</code> 已经被调用.</p>
+
+<p>除了在代码中给出注释告诉客户程序员关于 <code>Init()</code> 规则之外, 程序员可以使他的契约更明晰. 首先对象的构造函数可以封装起来, 然后向客户程序员提供一个声明 <code>DoSomethingUseful</code> 方法的<em>虚基类</em>. 通过这种方式, 构造函数和初始化函数被隐藏起来. 在这种<em>半封装</em>条件下, 这个类只向客户程序暴露一些良好定义的可调用方法(或者称为接口). 一旦按照这种方式封装一个类, 客户程序只能看到的是下面的接口:</p>
+
+<p><span id="SomeInterface%E5%B0%81%E8%A3%85"><a id="SomeInterface%E5%B0%81%E8%A3%85"></a><strong>SomeInterface封装</strong></span></p>
+
+<pre>class SomeInterface
+{
+  public:
+    virtual void DoSomethingUseful() = 0;
+};
+</pre>
+
+<p>实现类就可以从这个虚基类派生, 实现接口的功能. 客户程序使用类厂(factory pattern)模式来创建对象(参看<a href="#类厂">类厂</a>), 而封装类的内部实现. XPCOM 以这种方式把客户程序屏蔽在组件的内部工作之外, 而客户程序也只依赖于提供所需要功能的接口.</p>
+
+<h4 id="nsISupports_.E5.9F.BA.E6.8E.A5.E5.8F.A3" name="nsISupports_.E5.9F.BA.E6.8E.A5.E5.8F.A3"><code>nsISupports</code> 基接口</h4>
+
+<p>组件与基于接口的编程的两个最基本的问题是: 一个是<em>组件生存期</em>, 也称为<em>对象所属关系</em>; 另一个是<em>接口查询</em>, 它是在运行时刻确定接口能够提供哪些接口. 这一节介绍基接口 <code>nsISupports</code> - 它是 XPCOM 中所有接口的父接口, 它提供了上面两个问题的解决方案.</p>
+
+<h5 id=".E5.AF.B9.E8.B1.A1.E6.89.80.E5.B1.9E.E5.85.B3.E7.B3.BB" name=".E5.AF.B9.E8.B1.A1.E6.89.80.E5.B1.9E.E5.85.B3.E7.B3.BB">对象所属关系</h5>
+
+<p>在 XPCOM 中, 由于组件可以实现任意多的不同接口, 接口必须是<em>引用计数的</em>. 组件在内部跟踪客户程序对它的接口引用了多少次, 当接口计数为零的时候组件就会卸载它自己.</p>
+
+<p>当一个组件创建后, 组件内部有一个整数在跟踪这个引用计数值. 客户程序实例化组件就会自动对这个引用计数加一; 在组件的整个生存期内, 引用计数或加或减, 总是大于零的. 如果在某个时刻, 所有的客户程序对该组件都失去了兴趣, 引用计数减到零, 组件就会卸载自己.</p>
+
+<p>客户程序使用相关接口是一个非常直接的过程. XPCOM 有一些工具让我们更方便的使用接口, 我们会在后面讲述. 如果客户程序在使用接口的时候忘记对接口的引用计数进行相关操作, 就会对组件的维护工作带来某些问题. 此时, 由于组件的引用计数始终不为零, 它就永远不会释放, 从而导致内存泄漏. 引用计数系统就象 XPCOM 的许多其他事物一样, 是客户与组件之间的契约. 如果遵守这些契约, 就会工作得很正常, 反之不然. 由创建接口指针的函数负责对初始化的接口引用加1, 这个引用也称为<em>所属引用</em>.</p>
+
+<div class="side-note">
+<p><span id="XPCOM%E4%B8%AD%E7%9A%84%E6%8C%87%E9%92%88"><a id="XPCOM%E4%B8%AD%E7%9A%84%E6%8C%87%E9%92%88"></a><strong>XPCOM中的指针</strong></span></p>
+
+<p>XPCOM 中的<em>指针</em>术语指的是接口指针. 它与常规指针相比有细微的差别, 毕竟它们都指向的是某个内存区域. 但是 XPCOM 指针指向的都是从 nsISupports 基接口派生而来的接口实现, 这个基接口包括三个基本的方法: <code>AddRef</code>, <code>Release</code>, 和 <code>QueryInterface</code>.</p>
+</div>
+
+<p><code>nsISupports</code> 接口提供了对接口查询与引用计数基本的支持. 这个接口的成员方法包括: <code>QueryInterface</code>, <code>AddRef</code>, 和 <code>Release</code>. 这些方法提供了从一个对象获取正确接口的基本方法, 加引用计数, 释放不再使用的对象. <code>nsISupports</code> 接口的声明如下:</p>
+
+<p><span id="%3Ccode%3EnsISupports%3C/code%3E_%E6%8E%A5%E5%8F%A3"><a id="%3Ccode%3EnsISupports%3C/code%3E_%E6%8E%A5%E5%8F%A3"></a><strong><code>nsISupports</code> 接口</strong></span></p>
+
+<pre>class Sample: public nsISupports
+{
+  private:
+    nsrefcnt mRefCnt;
+  public:
+    Sample();
+    virtual ~Sample();
+
+    NS_IMETHOD QueryInterface(const nsIID &amp;aIID, void **aResult);
+    NS_IMETHOD_(nsrefcnt) AddRef(void);
+    NS_IMETHOD_(nsrefcnt) Release(void);
+};
+</pre>
+
+<p>接口中使用的各种数据类型见<a href="#XPCOM_类型">XPCOM 类型</a>一节. <code>nsISupports</code> 接口的实现代码如下:</p>
+
+<p><span id="%3Ccode%3EnsISupports%3C/code%3E_%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0"><a id="%3Ccode%3EnsISupports%3C/code%3E_%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0"></a><strong><code>nsISupports</code> 接口实现</strong></span></p>
+
+<pre>Sample::Sample()
+{
+  // initialize the reference count to 0
+  mRefCnt = 0;
+}
+Sample::~Sample()
+{
+}
+
+// typical, generic implementation of QI
+NS_IMETHODIMP Sample::QueryInterface(const nsIID &amp;aIID,
+                                  void **aResult)
+{
+  if (aResult == NULL) {
+    return NS_ERROR_NULL_POINTER;
+  }
+  *aResult = NULL;
+  if (aIID.Equals(kISupportsIID)) {
+    *aResult = (void *) this;
+  }
+  if (*aResult == NULL) {
+    return NS_ERROR_NO_INTERFACE;
+  }
+  // add a reference
+  AddRef();
+  return NS_OK;
+}
+
+NS_IMETHODIMP_(nsrefcnt) Sample::AddRef()
+{
+  return ++mRefCnt;
+}
+
+NS_IMETHODIMP_(nsrefcnt) Sample::Release()
+{
+  if (--mRefCnt == 0) {
+    delete this;
+    return 0;
+  }
+  // optional: return the reference count
+  return mRefCnt;
+}
+</pre>
+
+<h5 id=".E5.AF.B9.E8.B1.A1.E6.8E.A5.E5.8F.A3.E7.9A.84.E5.8F.91.E7.8E.B0" name=".E5.AF.B9.E8.B1.A1.E6.8E.A5.E5.8F.A3.E7.9A.84.E5.8F.91.E7.8E.B0">对象接口的发现</h5>
+
+<p><em>继承</em>是面向对象编程中另一个非常重要的话题. 继承是通过一个类派生另一个类的方法. 当一个类继承另一个类, 继承类可以<em>重载</em>基类的缺省动作, 而不需要拷贝基类的代码, 从而创建更加专有的类. 如下所示:</p>
+
+<p><span id="%E7%AE%80%E5%8D%95%E7%B1%BB%E7%BB%A7%E6%89%BF"><a id="%E7%AE%80%E5%8D%95%E7%B1%BB%E7%BB%A7%E6%89%BF"></a><strong>简单类继承</strong></span></p>
+
+<pre>class Shape
+{
+  private:
+    int m_x;
+    int m_y;
+
+  public:
+    virtual void Draw() = 0;
+    Shape();
+    virtual ~Shape();
+};
+
+class Circle : public Shape
+{
+  private:
+    int m_radius;
+  public:
+    virtual Draw();
+    Circle(int x, int y, int radius);
+    virtual ~Circle();
+};
+</pre>
+
+<p><code>Circle</code> 从 <code>Shape</code> 类派生. <code>Circle</code> 本身也是一个 <code>Shape</code>, 但是 <code>Shape</code> 并不一定是 <code>Circle</code>. 在这种情况下, <code>Shape</code> 是<em>基类</em>, <code>Circle</code> 是 <code>Shape</code> 的子类.</p>
+
+<p>在 XPCOM 中, 所有的类都派生自 <code>nsISupports</code> 接口, 这样所有的对象都提供 <code>nsISupports</code>接口, 但是这些对象是更专有的类, 在运行时刻必须能找到它. 比如说在<a href="#简单类继承">简单类继承</a>例子中, 如果对象是一个 <code>Circle</code>, 你就可以调用 <code>Shape</code> 类的方法. 就是为什么在 XPCOM 中, 所有的对象都派生自 <code>nsISupports</code> 接口: 它允许客户程序根据需要发现和访问不同的接口.</p>
+
+<p>在 C++ 中, 我们可以使用 <code>dynamic_cast&lt;&gt;</code> 来把一个 <code>Shape</code> 对象的指针强制转化成一个 <code>Circle</code> 指针, 如果不能转化就抛出异常. 但是在 XPCOM 中, 由于性能开销和平台兼容性问题, 采用 RTTI (运行时刻类型信息) 的方法是不行的.</p>
+
+<div class="side-note">
+<p><span id="XPCOM_%E4%B8%AD%E7%9A%84%E5%BC%82%E5%B8%B8"><a id="XPCOM_%E4%B8%AD%E7%9A%84%E5%BC%82%E5%B8%B8"></a><strong>XPCOM 中的异常</strong></span></p>
+
+<p>XPCOM 并不直接支持 C++ 的异常处理. 在 XPCOM 中, 所有的异常必须在组件内部处理, 而不能跨越接口的边界. 然后接口方法返回一个 <code>nsresult</code> 错误值(这些错误码请参考 <a href="/cn/XPCOM_API_Reference" title="cn/XPCOM_API_Reference">XPCOM API Reference</a>). 客户程序根据这些错误码进行"异常"处理.</p>
+</div>
+
+<p>XPCOM 没有采用 C++ RTTI 机制来实现对象指针的动态转化, 它使用 <code>QueryInterface</code> 方法来把一个对象指针 cast 成正确的接口指针.</p>
+
+<p>每个接口使用称为 "uuidgen" 的工具来生成专有ID. 这个 ID 是一个全局唯一的 128-bit 值. 在接口的语境中, 这个 ID 又称为 <em>IID</em>. (组件语境中, 这个 ID 代表的是一个契约)</p>
+
+<p>当客户程序想查询一个对象是否支持某个接口, 它把接口的 IID 值传递给这个对象的 <code>QueryInterface</code> 方法. 如果对象支持这个接口, 它就会对自己的引用计数加1, 然后返回指向那个专有接口的指针. 反之, 如果不支持这个接口, 它会返回一个错误码.</p>
+
+<pre>class nsISupports {
+  public:
+    long QueryInterface(const nsIID &amp; uuid,
+                        void **result) = 0;
+    long AddRef(void) = 0;
+    long Release(void) = 0;
+};
+</pre>
+
+<p><code>QueryInterface</code> 的第一个参数是一个 <code>nsIID</code> 类型的引用, 它封装了 IID. <code>nsIID</code> 类有三种方法: <code>Equals</code>, <code>Parse</code>, 和 <code>ToString</code>. <code>Equals</code> 在接口查询中是最重要的, 它用来比较两个 <code>nsIID</code> 对象是否相同.</p>
+
+<p>在客户以 IID 调用 <code>nsISupports</code> 接口的 <code>QueryInterface</code> 方法时, 我们必须保证返回一个有效的 result 参数(在<a href="/cn/Creating_XPCOM_Components/Using_XPCOM_Utilities_to_Make_Things_Easier" title="cn/Creating_XPCOM_Components/Using_XPCOM_Utilities_to_Make_Things_Easier">Using XPCOM Utilities to Make Things Easier</a> 一章中, 我们将看到怎样更方便的实现一个 <code>nsIID</code> 类). <code>QueryInterface</code> 方法应该支持该组件所有接口的查询.</p>
+
+<p>在 <code>QueryInterface</code> 方法的实现中, IID 参数与组件支持 <code>nsIID</code> 类进行比较. 如果匹配, 对象的 <code>this</code> 指针转化为 <code>void</code> 指针, 引用计数加1, 把 <code>void</code> 指针返回给客户程序.</p>
+
+<p>在上面的例子中, 仅仅使用 C 方式的类型转化就足够了. 但是在把 <code>void</code> 指针 cast 成接口指针的时候, 还有更多的问题, 因为返回的接口指针必须与 vtable (virtual table) 相对应. 当出现菱形多重继承的时候, 可能这种接口转化就会有问题.</p>
+
+<h3 id="XPCOM_.E7.9A.84ID" name="XPCOM_.E7.9A.84ID">XPCOM 的ID</h3>
+
+<p>除了上一节中的接口 IID, XPCOM 还使用两种 ID 来区分类与组件.</p>
+
+<div class="side-note">
+<p><span id="XPCOM_ID%E7%B1%BB"><a id="XPCOM_ID%E7%B1%BB"></a><strong>XPCOM ID类</strong></span></p>
+
+<p><code>nsIID</code> 类实际上是一种 <code>nsID</code> 类. 其他的 <code>nsID</code>, CID 和 IID, 分别指的是一个实体类和一个专有的接口.</p>
+
+<p><code>nsID</code> 类提供 <code>Equals</code> 类似的方法, 来比较 ID. 请参考 <a href="/cn/Creating_XPCOM_Components/Creating_the_Component_Code#Identifiers_in_XPCOM" title="cn/Creating_XPCOM_Components/Creating_the_Component_Code#Identifiers_in_XPCOM">Identifiers in XPCOM</a> 一节, 其中对 <code>nsID</code> 类有更多的讨论.</p>
+</div>
+
+<h4 id="CID" name="CID">CID</h4>
+
+<p>CID 是一个唯一的 128-bit 值, 类似于 IID, 它用于全局标识唯一的类或者组件. <code>nsISupports</code> 的 CID 就象:</p>
+
+<p><code>00000000-0000-0000-c000-000000000046</code></p>
+
+<p>由于 CID 比较长, 通常我们都使用#define来定义它:</p>
+
+<pre>#define SAMPLE_CID \
+{ 0x777f7150, 0x4a2b, 0x4301, \
+{ 0xad, 0x10, 0x5e, 0xab, 0x25, 0xb3, 0x22, 0xaa}}
+</pre>
+
+<p>我们将会看到许多 <code>NS_DEFINE_CID</code> 的定义. 下面的宏用 CID 定义了一个静态变量:</p>
+
+<pre>static NS_DEFINE_CID(kWebShellCID, NS_WEB_SHELL_CID);
+</pre>
+
+<p>CID 有时也称为<em>类 ID</em>. 如果一个类实现了多个接口, 当CID 在该类发布后, 就与该类的 IID 一起被冻结了.</p>
+
+<h4 id=".E5.A5.91.E7.BA.A6_ID" name=".E5.A5.91.E7.BA.A6_ID">契约 ID</h4>
+
+<p>契约 ID 是一个用于访问组件的可读(to humen)的字符串. 一个 CID 或者一个契约 ID 可以用于从一个组件管理器获取组件. 下面是一个用于 LDAP 操作组件的契约 ID:</p>
+
+<pre>"@mozilla.org/network/ldap-operation;1"
+</pre>
+
+<p>契约 ID 的格式是: 用斜杠分开的组件的<em>域</em>, <em>模块</em>, <em>组件名</em>, <em>版本号</em>.</p>
+
+<p>与 CID 类似, 契约 ID 指的是组件实现而不是接口. 但是契约 ID 并不像CID那样，被限定为某个专有实现, 它更通用. 一个契约 ID 只是指明需要实现的一组接口，可以通过任意数量的CID满足这个需要. 契约 ID 与 CID 的这种不同, 使得组件重写成为可能.</p>
+
+<h3 id=".E7.B1.BB.E5.8E.82" name=".E7.B1.BB.E5.8E.82">类厂</h3>
+
+<p>把代码划分成组件, 客户代码通常使用 <code>new</code> 操作符来构造实例对象:</p>
+
+<pre>SomeClass* component = new SomeClass();
+</pre>
+
+<p>这种模式或多或少地需要客户对组件有一定的了解，至少要知道组件的大小. <em>类厂设计模式</em>此时可以用来封装对象的构造过程. 类厂模式的目的是在不暴露对象的实现和初始化的前提下创建对象. 在 <code>SomeClass</code> 例子中, 可以按照类厂模式把 <code>SomeClass</code> 对象的构造和初始化封装在 <code>New_SomeInterface</code> 函数中:</p>
+
+<p><span id="%E5%B0%81%E8%A3%85%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><a id="%E5%B0%81%E8%A3%85%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"></a><strong>封装构造函数</strong></span></p>
+
+<pre>int New_SomeInterface(SomeInterface** ret)
+{
+  // create the object
+  SomeClass* out = new SomeClass();
+  if (!out) return -1;
+
+  // init the object
+  if (out-&gt;Init() == FALSE)
+  {
+    delete out;
+    return -1;
+  }
+
+  // cast to the interface
+  *ret = static_cast&lt;SomeInterface*&gt;(out);
+  return 0;
+}
+</pre>
+
+<p>类厂本身是一个管理组件实例化的类. 在 XPCOM 中, 类厂要实现 <code>nsIFactory</code> 接口, 它们就象上面的代码一样要使用类厂设计模式来封装对象的构造和初始化.</p>
+
+<p><a href="#封装构造函数">封装构造函数</a> 的例子是一个简单的无状态的类厂版本, 实际的编程要复杂一些, 一般的类厂都需要保存状态. 类厂至少应该保存那些对象已经被创建了的信息. 如果类厂管理的实例被存放在一个动态联接库中, 还需要知道什么时候可以卸载这个动态联接库. 当类厂保存了这样的信息, 就可以向类厂查询一个对象是否已经被创建.</p>
+
+<p>另一个需要保存的信息是关于<em>单件(singleton)</em>. 如果一个类厂已经创建了一个单件类型的类, 后续的创建该单件的函数调用将返回已经创建的对象. 尽管有更好的工具和方式来管理单件(在讨论 <code>nsIServiceManager</code> 会看到), 开发人员可能仍然需要通过这种方式来保证只有一个单件对象被创建.</p>
+
+<p>厂模式可以完全利用函数来做, 状态可以保存在全局变量中; 但是使用类的方式来实现厂模式还有更多的好处. 其一是: 我们可以管理从 <code>nsISupports</code> 接口派生而来的类厂本身的生存期. 当我们试图把多个类厂划分成一组, 然后确定是否能卸载这一组类厂的时候, 这一点非常重要. 另一个好处是: 类厂可以引入其他需要支持的接口. 在我们后面讨论 <code>nsIClassInfo</code> 接口的时候, 我们会看到某些类厂使用这个接口支持信息查询, 诸如这个对象是用什么语言写的, 对象支持的接口等等. 这种派生自 <code>nsISupports</code> 的 "future-proofing" 特性非常关键.</p>
+
+<h4 id="XPIDL_.E4.B8.8E.E7.B1.BB.E5.9E.8B.E5.BA.93" name="XPIDL_.E4.B8.8E.E7.B1.BB.E5.9E.8B.E5.BA.93">XPIDL 与类型库</h4>
+
+<p>定义接口的简单而强劲的方法是使用<em>接口定义语言</em>(IDL) - 这实际上是在一个跨平台而语言无关开发环境下定义接口的需求. XPCOM 使用的是源自于 CORBA OMG 接口定义语言(IDL)的变体, 称为 XPIDL, 来定义接口, XPIDL 可以定义接口的方法, 属性, 常量, 以及接口继承.</p>
+
+<p>采用 XPIDL 定义接口还存在一些缺陷. 它不支持多继承, 同时 XPIDL 定义的方法名不能相同，你不能有两个相同名字但是所接受的参数不同的函数. - 不能像 C++ 语言的成员函数一样通过参数不同重载, 毕竟接口同时要支持类似于 C 这样的语言.</p>
+
+<pre>void FooWithInt(in int x);
+void FooWithString(in string x);
+void FooWithURI(in nsIURI x);
+</pre>
+
+<p>然而尽管有这些问题, XPIDL 的功能仍然是非常强大的. XPIDL 能自动生成以 <em>.xpt</em> 为后缀的<em>类型库</em>, 或者说 typelibs. 类型库是接口的二进制表示, 它向非 C++ 语言提供接口的访问与控制. 非 C++ 语言通过类型库来了解接口支持哪些方法, 如何调用这些方法, 这称为 <em>XPConnect</em>. XPConnect 是 XPCOM 向类似于 JavaScript 这样的语言提供组件访问的 Wrapper. 参看<a href="/cn/Creating_XPCOM_Components/Using_XPCOM_Components#Connecting_to_Components_from_the_Interface" title="cn/Creating_XPCOM_Components/Using_XPCOM_Components#Connecting_to_Components_from_the_Interface">Connecting to Components from the Interface</a>获取更多关于 XPConnect 的信息.</p>
+
+<p>从其他类型的语言访问接口, 常常说成是接口被<em>反射(reflected)</em>到这种语言. 每一个被反射的接口必须提供相应的类型库. 当前可以使用 C, C++, 和 JavaScript 来编写组件.</p>
+
+<div class="side-note">
+<p><span id="%E4%BD%BF%E7%94%A8%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80%E7%BC%96%E5%86%99%E7%BB%84%E4%BB%B6"><a id="%E4%BD%BF%E7%94%A8%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80%E7%BC%96%E5%86%99%E7%BB%84%E4%BB%B6"></a><strong>使用其他语言编写组件</strong></span></p>
+
+<p>在使用其他语言创建组件的时候, 不需要利用 XPCOM 提供给 C++ 程序员的工具(诸如一些宏, 智能指针等等, 我们可以方便的利用到这种语言本身来创建组件. 比如说, 基于 Python 的 XPCOM 组件可以从 JavaScript 来调用.</p>
+
+<p>参看 <a href="/cn/Creating_XPCOM_Components/Resources" title="cn/Creating_XPCOM_Components/Resources">Resources</a> 获取更多使用其他语言来创建组件的信息.</p>
+</div>
+
+<p>所有的 XPCOM 接口都用 XPIDL 语法来定义. <em>xpidl 编译器</em>会从这个 IDL 文件产生类型库和 C++ 头文件. 在<a href="/cn/Creating_XPCOM_Components/Starting_WebLock#Defining_the_WebLock_Interface_in_XPIDL" title="cn/Creating_XPCOM_Components/Starting_WebLock#Defining_the_WebLock_Interface_in_XPIDL">Defining the WebLock Interface in XPIDL</a> 一节详细描述了 XPIDL 语法.</p>
+
+<h3 id="XPCOM_.E6.9C.8D.E5.8A.A1" name="XPCOM_.E6.9C.8D.E5.8A.A1">XPCOM 服务</h3>
+
+<p>当客户需要某个组件提供的功能的时候, 通常都是<em>实例化</em>一个新的组件对象. 比如说, 客户程序需要某些处理文件, 这里每个组件就代表一个文件, 客户可能会同时处理多个这样的组件.</p>
+
+<p>但是在某些情况下对象表示的是一种<em>服务</em>, 这种服务只能有一个拷贝(尽管会有多个服务同时运行). 每次客户程序访问服务提供的功能时, 客户程序都是与同一个服务实例在打交道. 比如说, 一个用户查询公司的电话号码数据库, 数据库作为一个<em>对象</em>对用户来说都是同一的. 如若不然的话, 就需要维护两个数据库拷贝, 这种开销将非常大, 而且还存在数据内容不一致的问题. 单件设计模式就是提供系统中需要的这种单点访问功能.</p>
+
+<p>XPCOM 不仅提供了对组件的支持和管理服务, 它还包含了许多编写跨平台组件所需要的其他服务. 其中包括: 跨平台文件抽象, 向 XPCOM 开发人员提供同一而强大的文件访问功能. 目录服务, 提供应用和特定系统定位信息. 内存管理, 保证所有对象使用同样的内存分配器. 事件通知机制, 允许传递简单消息. 本教程将在后面展现如何使用这些服务, <a href="/cn/XPCOM_API_Reference" title="cn/XPCOM_API_Reference">XPCOM API Reference</a> 一节有完整的接口索引列表.</p>
+
+<h3 id="XPCOM_.E7.B1.BB.E5.9E.8B" name="XPCOM_.E7.B1.BB.E5.9E.8B">XPCOM 类型</h3>
+
+<p>XPCOM 声明了许多数据类型和简单宏, 这些东西将在我们后面的例子中看到. 大多数的宏都是简单的重定义, 下一节我们会描述一些最常用的数据类型.</p>
+
+<h4 id=".E6.96.B9.E6.B3.95.E7.B1.BB.E5.9E.8B" name=".E6.96.B9.E6.B3.95.E7.B1.BB.E5.9E.8B">方法类型</h4>
+
+<p>下面的类型用在 XPCOM 方法调用的参数和返回值定义中.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>NS_IMETHOD</code></td>
+   <td>声明方法返回值. XPCOM 的方法缺省的返回值声明.</td>
+  </tr>
+  <tr>
+   <td><code>NS_IMETHODIMP</code></td>
+   <td>方法实现返回值. XPCOM 方法函数返回的时候缺省采用这种类型的返回值.</td>
+  </tr>
+  <tr>
+   <td><code>NS_IMETHODIMP_(type)</code></td>
+   <td>特定类型的方法实现返回值. 诸如 <code>AddRef</code> 和 <code>Release</code> 的方法不返回缺省类型, 这种返回值的不一致虽然有点不舒服, 但是必需的.</td>
+  </tr>
+  <tr>
+   <td><code>NS_IMPORT</code></td>
+   <td>共享库内部使用的符号局部声明</td>
+  </tr>
+  <tr>
+   <td><code>NS_EXPORT</code></td>
+   <td>共享库导出的符号声明.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id=".E5.BC.95.E7.94.A8.E8.AE.A1.E6.95.B0" name=".E5.BC.95.E7.94.A8.E8.AE.A1.E6.95.B0">引用计数</h4>
+
+<p>下面的宏提供对引用计数的基本操作.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>NS_ADDREF</code></td>
+   <td>调用 <code>nsISupports</code> 对象的 <code>AddRef</code> 方法.</td>
+  </tr>
+  <tr>
+   <td><code>NS_IF_ADDREF</code></td>
+   <td>与上一个方法类似, 不同之处在于这个宏在<code>AddRef之前</code>会检查对象指针是否为空(虚函数指针).</td>
+  </tr>
+  <tr>
+   <td><code>NS_RELEASE</code></td>
+   <td>调用 <code>nsISupports</code> 对象的 <code>Release</code> 方法.</td>
+  </tr>
+  <tr>
+   <td><code>NS_IF_RELEASE</code></td>
+   <td>与上一个方法类似, 不同之处在于这个宏<code>在调用Release</code>之前会检查空指针.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id=".E7.8A.B6.E6.80.81.E7.A0.81" name=".E7.8A.B6.E6.80.81.E7.A0.81">状态码</h3>
+
+<p>下面的宏测试状态码.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>NS_FAILED</code></td>
+   <td>如果传递的状态码为失败, 则返回真.</td>
+  </tr>
+  <tr>
+   <td><code>NS_SUCCEEDED</code></td>
+   <td>如果传递的状态码为成功, 则返回真.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id=".E5.8F.98.E9.87.8F.E6.98.A0.E5.B0.84" name=".E5.8F.98.E9.87.8F.E6.98.A0.E5.B0.84">变量映射</h3>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>nsrefcnt</code></td>
+   <td>缺省的引用计数类型, 是一个 32-bit 整数.</td>
+  </tr>
+  <tr>
+   <td><code>nsresult</code></td>
+   <td>缺省数据类型, 是一个 32-bit 整数.</td>
+  </tr>
+  <tr>
+   <td><code>nsnull</code></td>
+   <td>缺省 null 类型.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id=".E9.80.9A.E7.94.A8_XPCOM_.E9.94.99.E8.AF.AF.E7.A0.81" name=".E9.80.9A.E7.94.A8_XPCOM_.E9.94.99.E8.AF.AF.E7.A0.81">通用 XPCOM 错误码</h3>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>NS_ERROR_NOT_INITIALIZED</code></td>
+   <td>如果实例未初试化, 返回该值.</td>
+  </tr>
+  <tr>
+   <td><code>NS_ERROR_ALREADY_INITIALIZED</code></td>
+   <td>如果实例已初试化, 返回该值.</td>
+  </tr>
+  <tr>
+   <td><code>NS_ERROR_NOT_IMPLEMENTED</code></td>
+   <td>如果方法未实现, 返回该值.</td>
+  </tr>
+  <tr>
+   <td><code>NS_ERROR_NO_INTERFACE</code></td>
+   <td>如果组件不支持某种类型接口, 返回该值.</td>
+  </tr>
+  <tr>
+   <td><code>NS_ERROR_NULL_POINTER</code></td>
+   <td>如果指针指向 <code>nsnull</code>, 返回该值 .</td>
+  </tr>
+  <tr>
+   <td><code>NS_ERROR_FAILURE</code></td>
+   <td>如果某个方法失效, 返回该值, 这时一个通用的错误值.</td>
+  </tr>
+  <tr>
+   <td><code>NS_ERROR_UNEXPECTED</code></td>
+   <td>如果一个未预料的错误发生, 返回该值.</td>
+  </tr>
+  <tr>
+   <td><code>NS_ERROR_OUT_OF_MEMORY</code></td>
+   <td>如果无法进行内存分配, 返回该值.</td>
+  </tr>
+  <tr>
+   <td><code>NS_ERROR_FACTORY_NOT_REGISTERED</code></td>
+   <td>如果一个请求的类型未注册, 返回该值.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/创建_XPCOM_组件:前言" style="float: left;">« 上一页</a><a href="/zh-CN/docs/创建_XPCOM_组件:使用_XPCOM_组件">下一页  »</a></p>
+</div> <p></p><div class="licenseblock">
+<p>Copyright (c) 2003 by Doug Turner and Ian Oeschger. This material may be distributed only subject to the terms and conditions set forth in the <a class="external" href="http://www.opencontent.org/openpub/" rel="noopener">Open Publication License</a>, v1.02 or later. Distribution of substantively modified versions of this document is prohibited without the explicit permission of the copyright holder. Distribution of the work or derivative of the work in any standard (paper) book form is prohibited unless prior permission is obtained from the copyright holder.</p>
+</div><p></p>
+
+<p></p>

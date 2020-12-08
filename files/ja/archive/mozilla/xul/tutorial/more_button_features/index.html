@@ -1,0 +1,111 @@
+---
+title: その他のボタン機能
+slug: Archive/Mozilla/XUL/Tutorial/More_Button_Features
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/More_Button_Features
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Using_Spacers" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:The_Box_Model">次のページ  »</a></p>
+</div>
+
+<p>このセクションでは、ボタンが持っている付加的な機能について見ていきます。</p>
+
+<p><span id="Adding_an_Image"></span></p>
+
+<h2 id=".E7.94.BB.E5.83.8F.E3.82.92.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B" name=".E7.94.BB.E5.83.8F.E3.82.92.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B">画像を追加する</h2>
+
+<p>ボタンに画像を追加するには、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code> 要素に対して、 URL を指定した <code><code id="a-image"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/image">image</a></code></code> 属性を設定します。 画像は、この URL から読み込まれてボタンに表示されます。URL は、相対 URL でも、絶対 URL でもかまいません。</p>
+
+<p>下に示すボタンは、ラベルと「happy.png」という画像の両方を持っています。 画像はラベルの左側に表示されるはずです。 画像の表示位置は、後述する 2 つの属性を使用することで変更することができます。</p>
+
+<p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_1.xul">表示</a></p>
+
+<pre>&lt;button label="Help" image="happy.png"/&gt;
+</pre>
+
+<p><span id="Button_with_CSS_image"></span></p>
+
+<h3 id="CSS_.E3.81.AB.E3.82.88.E3.82.8B.E7.94.BB.E5.83.8F.E3.81.AE.E6.8C.87.E5.AE.9A" name="CSS_.E3.81.AB.E3.82.88.E3.82.8B.E7.94.BB.E5.83.8F.E3.81.AE.E6.8C.87.E5.AE.9A">CSS による画像の指定</h3>
+
+<p>画像を指定するもう 1 つの方法として、CSS の <code><a href="ja/CSS/list-style-type">list-style-image</a></code> スタイルプロパティをボタンに対して設定する方法があります。 この方法は、XUL ファイルを変更することなく、「スキン」（この場合、表示される画像の内容）の変更することを可能にするために設計されています。 以下に例を示します。</p>
+
+<p><span id="%E4%BE%8B_2"><a id="%E4%BE%8B_2"></a><strong>例 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_2.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_2.xul">表示</a></p>
+
+<pre>&lt;button id="find-button"
+  label="Find" style="list-style-image: url('happy.png')"/&gt;
+</pre>
+
+<p>この例では、「happy.png」画像がボタンに表示されます。 <code><code id="a-style"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/style">style</a></code></code> 属性の機能は、HTML のものと同様です。 仕様上は、<code><code id="a-style"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/style">style</a></code></code> 属性は全ての XUL 要素に対して使用できます。 実際には、スタイルの宣言は XUL ファイルから分離された、スタイルシートの方で行なうべきであるという事に注意してください。</p>
+
+<p><span id="Positioning_the_Images"></span></p>
+
+<h2 id=".E7.94.BB.E5.83.8F.E3.81.AE.E8.A1.A8.E7.A4.BA.E4.BD.8D.E7.BD.AE" name=".E7.94.BB.E5.83.8F.E3.81.AE.E8.A1.A8.E7.A4.BA.E4.BD.8D.E7.BD.AE">画像の表示位置</h2>
+
+<p>デフォルトでは、ボタンの画像はラベルの左側に表示されます。 2 つの属性を使用して、表示位置を制御することが可能です。</p>
+
+<p><code><code id="a-dir"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/dir">dir</a></code></code> 属性は、画像とテキストの並びの順序 (<span style="color: green;">direction</span>) をコントロールします。 この属性に、<code>reverse</code> という値を設定することで、画像はテキストの右側に表示されます。 値を、<code>normal</code> にするか、この属性を設定しなければ、画像はテキストの左側に表示されます。</p>
+
+<p><code><code id="a-orient"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code></code> 属性は、画像をテキストの上または下に配置する場合に使用します。 デフォルト値は <code>horizontal</code> で、画像は右または左に配置されます。 <code>vertical</code> という値を設定することで、画像を上または下に配置することが可能です。 <code>vertical</code> に設定した場合、<code><code id="a-dir"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/dir">dir</a></code></code> 属性は、画像が上か下かをコントロールします。 値は左右の場合と同じものが使用され、<code>normal</code> は、画像をテキストの上に配置するという意味になり、<code>reverse</code> は、画像をテキストの下に配置するという意味になります。</p>
+
+<p><span id="%E4%BE%8B_3"><a id="%E4%BE%8B_3"></a><strong>例 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_3.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_3.xul">表示</a></p>
+
+<div class="float-right"><img alt="画像:advbtns1.png"></div>
+
+<pre>&lt;button label="Left" image="happy.png"/&gt;
+&lt;button label="Right" image="happy.png" dir="reverse"/&gt;
+&lt;button label="Above" image="happy.png" orient="vertical"/&gt;
+&lt;button label="Below" image="happy.png" orient="vertical" dir="reverse"/&gt;
+</pre>
+
+<p>この例は、ボタンの配置について 4 種類全てを示しています。 属性の値にデフォルト値が使用できる場合は、属性の指定が省略されていますので注意してください。</p>
+
+<p><span id="Buttons_with_Extra_Content"></span></p>
+
+<h2 id=".E4.BB.96.E3.81.AE.E8.A6.81.E7.B4.A0.E3.82.92.E5.90.AB.E3.82.80.E3.83.9C.E3.82.BF.E3.83.B3" name=".E4.BB.96.E3.81.AE.E8.A6.81.E7.B4.A0.E3.82.92.E5.90.AB.E3.82.80.E3.83.9C.E3.82.BF.E3.83.B3">他の要素を含むボタン</h2>
+
+<p>ボタンの開始と終了タグによって任意の要素を囲むことにより、ボタンの内部にその内容を生成させることが可能です。 これは頻繁に使うようなものではないと思いますが、カスタム要素を作成するような場合には使用する事になるかもしれません。</p>
+
+<p>次の例は、途中の 2 つの単語が赤で表示されるボタンを作成します。</p>
+
+<p><span id="%E4%BE%8B_4"><a id="%E4%BE%8B_4"></a><strong>例 4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_4.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_4.xul">表示</a></p>
+
+<pre>&lt;button&gt;
+  &lt;description value="This is a"/&gt;
+  &lt;description value="rather strange" style="color: red;"/&gt;
+  &lt;description value="button"/&gt;
+&lt;/button&gt;
+</pre>
+
+<p>ボタンの中には、どんな XUL 要素でも置くことが出来ます。 HTML 要素は無視されるため、置きたい場合は、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/description" title="description">description</a></code></code> 要素によってラップする必要があります。 ボタンに <code><code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> 属性が指定されていた場合、ボタン内部に置かれた全ての内容をラベルがオーバライドするため、ラベルの値のみが表示されます。</p>
+
+<p><span id="Button_with_menupopup"></span></p>
+
+<h3 id=".E3.83.A1.E3.83.8B.E3.83.A5.E3.83.BC.E4.BB.98.E3.81.8D.E3.83.9C.E3.82.BF.E3.83.B3" name=".E3.83.A1.E3.83.8B.E3.83.A5.E3.83.BC.E4.BB.98.E3.81.8D.E3.83.9C.E3.82.BF.E3.83.B3">メニュー付きボタン</h3>
+
+<p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/menupopup" title="menupopup">menupopup</a></code></code> をボタンの内部に置くことによって、ボタンが押されたときに <code><code><a href="/ja/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code></code> のようにメニューをドロップダウンさせる事が可能です。 但し、この場合は、<code><a href="ja/XUL/Attribute/button.type">type</a></code> 属性の値として <code>menu</code> を設定する必要があります。</p>
+
+<p><span id="%E4%BE%8B_5"><a id="%E4%BE%8B_5"></a><strong>例 5</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_5.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_5.xul">表示</a></p>
+
+<div class="float-right"><img alt="画像:advbtns2.jpg"></div>
+
+<pre>&lt;button type="menu" label="Device"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="Printer"/&gt;
+    &lt;menuitem label="Mouse"/&gt;
+    &lt;menuitem label="Keyboard"/&gt;
+  &lt;/menupopup&gt;
+&lt;/button&gt;
+</pre>
+
+<p>この例では、ユーザがボタンをクリックすると 3 つの項目を含んだメニューがポップアップします。 <code><code><a href="/ja/docs/Mozilla/Tech/XUL/menulist" title="menulist">menulist</a></code></code> と違って、ポップアップしたメニューの項目をクリックしてもボタンのラベルが変化しないことに注意してください。 このタイプのボタンは、メニューの各項目に実行するタスクのスクリプトを関連付けることで、実行したい操作を選択するためのメニューとして使われます。 メニューについての詳細は、もう少し後のセクションで見ていく予定です。</p>
+
+<p><code><a href="ja/XUL/Attribute/button.type">type</a></code> 属性の値として <code>menu-button</code> を設定することもできます。 この場合もメニューの付いたボタンが作成されますが、外見が違っています。 上の画像で違いを示します。 左のボタンが「<code>menu</code>」で、右のボタンが「<code>menu-button</code>」で作成したものです。 どちらにも、メニューが存在する事を示す矢印が表示されています。 左の「<code>menu</code>」の方は、ユーザがボタンのどこをクリックしてもメニューが表示されます。 右の「<code>menu-button</code>」の方は、ユーザがメニューを出すには矢印をクリックしなければなりません。</p>
+
+<p>次のセクションでは、XUL 要素がウィンドウ内でどのように配置されるかについて、さらに詳しく学びます。</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Using_Spacers" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:The_Box_Model">次のページ  »</a></p>
+</div>

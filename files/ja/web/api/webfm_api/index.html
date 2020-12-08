@@ -1,0 +1,135 @@
+---
+title: WebFM API
+slug: Web/API/WebFM_API
+tags:
+  - B2G
+  - Firefox OS
+  - Non Standard
+  - WebAPI
+  - WebFM
+translation_of: Archive/B2G_OS/API/WebFM_API
+---
+<p>{{ non-standard_header() }}</p>
+<p>{{ B2GOnlyHeader2('installed') }}</p>
+<h2 id="概要">概要</h2>
+<p>WebFM API は、端末の FM ラジオへのアクセスを提供します。これは、ラジオの ON/OFF とラジオ局の切り替え、周波数のチューニングができます。この API は、{{domxref("FMRadio")}} オブジェクトの {{domxref("window.navigator.mozFMRadio","navigator.mozFMRadio")}} プロパティを通じて利用できます。</p>
+<h2 id="ラジオの_ONOFF_を切り替える">ラジオの ON/OFF を切り替える</h2>
+<p>基本的に、ラジオは {{domxref("FMRadio.enable()")}} メソッドで ON に切り替え、{{domxref("FMRadio.disable()")}} メソッドで OFF に切り替えます。</p>
+<p>ラジオを ON にする前に、アンテナが使用可能か確認することが賢明です (アンテナ無しでは端末に搭載されたラジオが信号を受信できません)。この情報は、{{domxref("FMRadio.antennaAvailable")}} プロパティ経由で利用可能です。モバイル端末上では、ヘッドフォンケーブルがアンテナとして使用されます。このケーブルは抜き差し可能なため、アンテナの利用可能状態が変化するたびに WebFM API が {{event("antennaavailablechange")}} イベントを発行します。</p>
+<p>ラジオを ON にするには、ラジオの周波数を指定する必要があります。この周波数 (MHz 単位) は、{{domxref("FMRadio.enable()")}} に渡される数値です。</p>
+<pre class="brush: js">// The frequency of the radio station
+// to listen express in MHz
+var frequency = 99.1;
+var radio = navigator.mozFMRadio;
+
+if (radio.antennaAvailable) {
+  radio.enable(frequency);
+} else {
+  alert("ヘッドフォンを接続する必要があります");
+}
+
+radio.addEventListener('antennaavailablechange', function () {
+  if (radio.antennaAvailable) {
+    radio.enable(frequency);
+  } else {
+    radio.disable();
+  }
+})
+</pre>
+<div class="note">
+ <p><strong>補足:</strong> 音声は端末で利用可能な <code>通常</code> のオーディオチャンネルに出力されます。</p>
+</div>
+<h2 id="周波数の切り替え">周波数の切り替え</h2>
+<p>周波数の切り替えは、手動または自動でできます。いかなる場合も、端末のラジオに受信される現在のラジオ周波数は、常に {{domxref("FMRadio.frequency")}} プロパティで利用可能です。このプロパティは、<a href="http://ja.wikipedia.org/wiki/%E3%83%98%E3%83%AB%E3%83%84" title="http://ja.wikipedia.org/wiki/%E3%83%98%E3%83%AB%E3%83%84">MHz</a> 単位の周波数を表す数値です。</p>
+<h3 id="周波数の手動設定">周波数の手動設定</h3>
+<p>{{domxref("FMRadio.setFrequency()")}} メソッドは、受信する新しい周波数を設定するために使用されます。しかし、設定できる値には制限があります。このメソッドは、メソッド呼び出しの成功またはエラーを扱う {{domxref("DOMRequest")}} オブジェクトを返します。周波数は、次の要件を満たさなければなりません:</p>
+<ul>
+ <li>周波数は、{{domxref("FMRadio.frequencyLowerBound")}} および {{domxref("FMRadio.frequencyUpperBound")}} で定義された範囲内でなければなりません。範囲外の周波数が設定されると、エラーが返されます。</li>
+ <li>周波数は、{{domxref("FMRadio.channelWidth")}} の値を基準にしてステップされます。このステップ値を外れた場合、適切に周波数の誤差が丸められます。例えば、100MHz が正しい周波数で、{{domxref("FMRadio.channelWidth","channelWidth")}} の値に 0.2 が設定されていた場合、100.15 の周波数を設定しようとすると、100.2 に丸められた結果が返されます。</li>
+</ul>
+<pre class="brush: js">var change = radio.setFrequency(frequency);
+
+change.onerror = function () {
+  var min = radio.frequencyLowerBound;
+  var max = radio.frequencyUpperBound;
+  console.warn('周波数は次の範囲内でなければなりません: [' + min + ',' + max + ']');
+}
+
+change.onsuccess = function () {
+  console.log('周波数に次の値を設定しました: ' + radio.frequency);
+}
+</pre>
+<h3 id="周波数の自動探索">周波数の自動探索</h3>
+<p>WebFM API は、ラジオチャンネルを自動的にシークする便利な手段を提供しています。結論から先に言うと、{{domxref("FMRadio.seekUp()")}} (現在よりも高い周波数のラジオチャンネルを見つけるために使用) および {{domxref("FMRadio.seekDown()")}} メソッドを使用します。前者は現在より高い周波数のラジオチャンネルを見つけるため、後者は低い周波数のラジオチャンネルを見つけるために使用します。これらのメソッドは、各メソッド呼び出しの成功またはエラーを扱う {{domxref("DOMRequest")}} オブジェクトを返します。</p>
+<p>両方のメソッドは、{{domxref("FMRadio.frequencyLowerBound","frequencyLowerBound")}} または {{domxref("FMRadio.frequencyUpperBound","frequencyUpperBound")}} の値に達すると、折り返して周波数が探索されます。新しいラジオチャンネルが見つけた場合、現在の周波数を変更し、{{event("frequencychange")}} イベントを発行します。</p>
+<p>同時に 2 回探索することはできません (つまり、現在より高い周波数と低い周波数を同時に探索することはできません)。これを試そうとするとエラーが返されます。しかし、必要であれば、{{domxref("FMRadio.cancelSeek()")}} メソッドを呼び出して探索を中止することもできます。このメソッドも {{domxref("DOMRequest")}} オブジェクトを返します。</p>
+<pre class="brush: js">var radio   = navigator.mozFMRadio;
+var seeking = false;
+var UP      = document.querySelector("button.up");
+var DOWN    = document.querySelector("button.down");
+
+// When the frequency change, the seek
+// functions automatically stop to seek.
+radio.onfrequencychange = function () {
+  seeking = false;
+}
+
+function seek(direction) {
+  var cancel, search;
+
+  // If the radio is already seeking
+  // we will cancel the current search.
+  if (seeking) {
+    var cancel = radio.cancelSeek();
+    cancel.onsuccess = function () {
+      seeking = false;
+
+      // Once the radio no longer seek,
+      // we can try to seek as expected
+      seek(direction);
+    }
+
+  // Let's seek up
+  } else if (direction === 'up') {
+    // Just to be sure that the radio is turned on
+    if (!radio.enabled) {
+      radio.enable(radio.frequencyLowerBound);
+    }
+    search = radio.seekUp();
+
+  // Let's seek up
+  } else if (direction === 'down' {
+    // Just to be sure that the radio is turned on
+    if (!radio.enabled) {
+      radio.enable(radio.frequencyUpperBound);
+    }
+    search = radio.seekDown();
+  }
+
+  if (search) {
+    search.onsuccess = function () {
+      // Ok, we are seeking now.
+      seeking = true;
+    };
+    search.onerror = function () {
+      // Something goes wrong... ok, let's try again.
+      seek(direction);
+    }
+  }
+}
+
+UP.addEventListener('click', function () {
+  seek('up');
+});
+
+DOWN.addEventListener('click', function () {
+  seek('down');
+});
+</pre>
+<h2 id="仕様書">仕様書</h2>
+<p>仕様はありません。</p>
+<h2 id="参照">参照</h2>
+<ul>
+ <li>{{domxref("FMRadio")}}</li>
+ <li><a href="https://github.com/mozilla-b2g/gaia/tree/master/apps/fm" title="https://github.com/mozilla-b2g/gaia/tree/master/apps/fm">Gaia の FM ラジオアプリ</a></li>
+</ul>

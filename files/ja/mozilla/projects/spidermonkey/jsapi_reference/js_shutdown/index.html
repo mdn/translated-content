@@ -1,0 +1,34 @@
+---
+title: JS ShutDown
+slug: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_ShutDown
+tags:
+  - JSAPI Reference
+  - SpiderMonkey
+translation_of: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_ShutDown
+---
+<p>
+
+</p><div class="breadcrumbs"><a href="/ja" title="ja">メインページ</a> » <a href="/ja/docs/SpiderMonkey" title="SpiderMonkey">SpiderMonkey</a> »
+ <a href="/ja/docs/SpiderMonkey/JSAPI_Reference" title="JSAPI_Reference">JSAPI リファレンス</a> »
+ <code>JS_ShutDown</code></div>
+
+<p></p>
+
+<p>ランタイム間で共有している資源を解放します。</p>
+
+<p><span class="comment">Free all resources shared among runtimes.</span></p>
+
+<h2 id=".E6.A7.8B.E6.96.87" name=".E6.A7.8B.E6.96.87">構文</h2>
+
+<pre class="eval">void <strong>JS_ShutDown</strong>(void);
+</pre>
+
+<h2 id=".E8.AA.AC.E6.98.8E" name=".E8.AA.AC.E6.98.8E">説明</h2>
+
+<p>ランタイム間で共有している資源を解放する関数です。この関数を呼ぶのは<code>JSRuntime</code>オブジェクトが存在しないとき(具体的には、<code><a href="/ja/JS_DestroyRuntime" title="ja/JS_DestroyRuntime">JS_DestroyRuntime</a></code>を読んだ後のプログラムの最後など)だけにしてください。 <span class="comment">Frees all resources shared among runtimes. Call this only when no &lt;code&gt;JSRuntime&lt;/code&gt;s exist (for example, at the end of the program, after calling &lt;code&gt;<a href="/ja/JS_DestroyRuntime">JS_DestroyRuntime</a>&lt;/code&gt;).</span></p>
+
+<p>利用時の注意点: この関数は<code><a class="external" href="http://mxr.mozilla.org/seamonkey/source/js/src/jsdtoa.c">jsdtoa.c</a></code>が確保するメモリ領域と、<code><a href="/ja/JS_THREADSAFE" title="ja/JS_THREADSAFE">JS_THREADSAFE</a></code>オプションを有効にしたビルドにおける<code><a class="external" href="http://mxr.mozilla.org/seamonkey/source/js/src/jslock.c">jslock.c</a></code>が確保するmutex領域を解放します。 <span class="comment">Implementation note: This cleans up memory allocated by &lt;code&gt;<a class="external" href="http://mxr.mozilla.org/seamonkey/source/js/src/jsdtoa.c">jsdtoa.c</a>&lt;/code&gt; and, in &lt;code&gt;<a href="/ja/JS_THREADSAFE">JS_THREADSAFE</a>&lt;/code&gt; builds, mutexes allocated by &lt;code&gt;<a class="external" href="http://mxr.mozilla.org/seamonkey/source/js/src/jslock.c">jslock.c</a>&lt;/code&gt;.</span></p>
+
+<p>{{ LXRSearch("ident", "i", "JS_ShutDown") }}</p>
+
+<p>{{ languages( { "en": "en/JS_ShutDown" } ) }}</p>

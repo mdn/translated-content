@@ -1,0 +1,181 @@
+---
+title: Se préparer pour la première construction de B2G
+slug: Archive/B2G_OS/Preparing_for_your_first_B2G_build
+tags:
+  - B2G OS
+  - Build documentation
+  - compiler b2g os
+translation_of: Archive/B2G_OS/Preparing_for_your_first_B2G_build
+---
+<div class="summary">
+<p>Avant de pouvoir construire B2G, vous devez cloner le dépôt et configurer votre arborescence. Cet article explique comment faire.</p>
+</div>
+
+<p>En fonction de votre connexion internet, l'étape de configuration prend un certain nombre d'heures pour télécharger les fichiers nécessaires à la construction de B2G OS. L'attente n'est pas aussi amusante que l'action, donc après avoir lu cette page et une fois lancé le script de configuration, pensez à utiliser ce temps pour mettre en place et tester le <a class="vt-p" href="/fr/docs/Outils/Simulateur_Firefox_OS" title="/en-US/docs/Mozilla/Firefox_OS/Using_Firefox_OS_Simulator">simulateur B2G OS</a>,  commencez à vous familiariser avec la <a href="/fr/Apps">documentation pour les développeurs d'applications</a>, y compris la conception et la construction d'une application, et à vous familiariser avec les informations sur les étapes à venir.</p>
+
+<div class="note">
+<p><strong>Note</strong> : Si vous utilisez OS X pour compiler B2G OS pour un Flame, rendez-vous sur la page <a href="/fr/docs/B2G_OS/Building_and_installing_Boot_to_Gecko/Compiler_pour_le_Flame_sur_OS_X">Compiler B2G OS pour un Flame sur OS X</a>.</p>
+</div>
+
+<div class="warning">
+<p>Si vous êtes sur <strong>Archlinux,</strong> veuillez également consulter ce <a href="https://discourse.mozilla-community.org/t/building-b2g-os-on-arch-linux/9791">sujet sur Discourse</a>.</p>
+</div>
+
+<h2 id="Cloner_le_dépot_B2G">Cloner le dépot  B2G</h2>
+
+<p>Nous disposons de plusieurs utilitaires pour construire B2G OS, tous inclus dans un unique dépôt. La première étape consiste à télécharger ces outils avec git pour créer notre répertoire de travail :</p>
+
+<pre>git clone git://github.com/mozilla-b2g/B2G.git &amp;&amp; cd B2G</pre>
+
+<p>Si vous rencontrez une erreur UnicodeEncodeError: ascii codec error ici, essayez de spécifier votre utilisateur git avec</p>
+
+<pre>vim ~/.gitconfig
+</pre>
+
+<p>(tapez "i" pour passer en mode insertion) puis ces lignes :</p>
+
+<pre><code>[user]
+       name = votrenom
+       email = votre adressemail@url.tld</code>
+[color]
+       ui = auto</pre>
+
+<p>Pressez la touche "échap" et quittez avec ":wq"</p>
+
+<ul>
+ <li>Configurez B2G pour l'appareil :</li>
+</ul>
+
+<pre class="line-numbers  language-html"><code class="language-html">$ ./config.sh <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>appareil</span><span class="punctuation token">&gt;</span></span></code></pre>
+
+<p>où appareil = flame-kk ou aries</p>
+
+<ul>
+ <li>Compilez et flashez B2G</li>
+ <li>branchez votre appareil qui possède une version de base android ou firefox os</li>
+</ul>
+
+<pre class="line-numbers  language-html"><code class="language-html">$ ./build.sh
+$ ./flash.sh</code></pre>
+
+<p><strong>Notes :</strong></p>
+
+<ul>
+ <li>Si vous obtenez une erreur selon laquelle la version de base ne correspond pas au moment de la compilation, cela signifie que vous n'avez pas la version requise d'Android/B2G présente sur votre appareil. Vous devrez flasher la version d'Android spécifiée par le script de compilation ou mettre la main sur un dossier de sauvegardes.</li>
+</ul>
+
+<div class="note"><strong>Note :</strong> Il ne s'agit pas de la liste complète des cibles de compilation, voyez <code>config.sh</code> ou vous référer à la page des <a href="/fr/docs/B2G_OS/Building_and_installing_Boot_to_Gecko/Appareils_compatibles">Appareils compatibles</a>.</div>
+
+<p>Si votre cible de compilation ne figure pas dans la liste, vous devriez vous arrêter tout de suite et aider à <a href="/fr/docs/B2G_OS/Porter_Firefox_OS">porter B2G OS !</a></p>
+
+<h3 id="Configurer_une_version_pour_un_appareil_mobile">Configurer une version pour un appareil mobile</h3>
+
+<div class="warning"><strong>Important</strong> : <span id="result_box" lang="fr"><span class="hps">Rappelez-vous</span> <span class="hps">que seuls les</span> <span class="hps">appareils fonctionnant au moins sous <strong>Android</strong></span><strong> <span class="hps">4.3</span></strong> <span class="hps">(</span><strong><span class="hps">Jellybean, Kitkat et Lollipop</span></strong><span>) </span><span class="hps">sont pris en charge</span><span>.</span> <span class="hps">Veuillez vérifier que votre</span> <span class="hps">téléphone</span> <span class="hps">fonctionne avec la dernière version compatible</span><span>, sinon</span> <span class="hps">ces prochaines étapes</span> <span class="hps"><em>vont</em> échouer</span><span class="hps">.</span></span> Référez-vous à la page <a href="/fr/docs/B2G_OS/Building_and_installing_Boot_to_Gecko/Appareils_compatibles">Appareils compatibles</a> pour plus de détails.</div>
+
+<h3 id="Blobs_propriétaires">Blobs propriétaires</h3>
+
+<p>Lorsque vous installez B2G OS sur un appareil, vous avez besoin d'inclure un ensemble de blobs propriétaires. Ceux-ci sont extraits de l'appareil lorsque vous lancez votre première compilation, mais nous vous conseillons de faire également une sauvegarde complète dans un endroit sûr pour référence ultérieure. Une fois B2G OS installé, il n'y a plus aucun moyen de récupérer ces fichiers !</p>
+
+<p>Assurez-vous d'avoir le <a href="/fr/docs/B2G_OS/Déboguer/Les_paramètres_développeurs#Débogage_via_USB">débogage distant</a> activé dans les <a href="/fr/docs/B2G_OS/Déboguer/Les_paramètres_développeurs">paramètres développeurs</a> de votre appareil. Vérifiez que ce dernier est visible avec la commande <code>adb devices</code> ; vous devriez voir quelque chose de similaire à ceci :</p>
+
+<pre style="font-size: 14px;"><code>$ adb devices
+List of devices attached
+ABCXXXXXXX       device</code></pre>
+
+<p>Si aucun appareil n'est listé, vérifiez vos règles UDEV.</p>
+
+<div class="note"><strong>Note :</strong> Si vous avez des problèmes de permissions, vérifiez que votre écran est déverrouillé et que vous avez autorisé l'accès à votre téléphone. Un message s'affiche sur votre appareil dans ce but. Si le problème persiste, utilisez <code>adb root </code>et <code>adb remount</code><span lang="fr">.</span></div>
+
+<p>Sauvegardez les partitions du téléphone avec la commande <code>adb pull</code> :</p>
+
+<pre><code>adb pull /system &lt;répertoire cible de la sauvegarde&gt;/system
+</code></pre>
+
+<p>En fonction du téléphone, vous devrez peut-être récupérer également les répertoires <code>/data</code> et <code>/vendor</code> :</p>
+
+<pre><code>adb pull /data &lt;répertoire cible de la sauvegarde&gt;/data
+adb pull /vendor &lt;répertoire cible de la sauvegarde&gt;/vendor</code>
+</pre>
+
+<p>Si les commandes pull échouent avec un message "insufficient permission", essayez ce qui suit :</p>
+
+<ul>
+ <li>Vérifiez que vous avez accordé les permissions root dans votre ROM personnalisée (e.g. sous CyanogenMod, modifiez <em>Paramètres &gt; Système &gt; Options pour les développeurs &gt; Accès root</em> en <em>Applications et ADB</em> ou <em>ADB uniquement</em>).</li>
+ <li>Vérifiez que vous avez correctement configuré les règles udev  (voir <a href="#Pour_Linux_:_configurez_les_règles_udev_de_votre_téléphone">Pour Linux : configurez les règles udev de votre téléphone</a>).</li>
+</ul>
+
+<h2 id="Prochaine_étape">Prochaine étape</h2>
+
+<p>À ce stade, vous devriez être prêt à <a href="/fr/docs/B2G_OS/Compiler">Compiler B2G OS</a>.</p>
+
+<h2 id="Options_de_configuration_avancées">Options de configuration avancées</h2>
+
+<h3 id="Configurer_la_compilation_en_utilisant_une_sauvegarde_système">Configurer la compilation en utilisant une sauvegarde système</h3>
+
+<p>Si votre téléphone n'a plus Android installé et que votre arborescence B2G ne contient pas les blobs binaires, mais que vous avez une sauvegarde des partitions systèmes, vous pourrez construire une version à partir de celle-ci de cette manière :</p>
+
+<pre><code>ANDROIDFS_DIR=&lt;chemin absolu vers le répertoire parent du répertoire système&gt; ./config.sh &lt;cible&gt;
+</code></pre>
+
+<p>Le système de compilation recherchera une sauvegarde existante dans un dossier <code>backup-&lt;cible&gt;/system</code>, il ne vous sera pas nécessaire de spécifier le répertoire si les fichiers sont placés à cet endroit.</p>
+
+<h3 id="Compiler_en_utilisant_une_version_personnalisée_de_Gecko">Compiler en utilisant une version personnalisée de Gecko</h3>
+
+<p>Il peut arriver que vous souhaitez, ou avez besoin, de compiler une version de Boot to Gecko basée sur une version de Gecko différente de celle utilisée par défaut (définie dans le manifeste). Vous pouvez faire cela en éditant le fichier <code>.userconfig</code>. Par exemple, si vous souhaitez compiler une version utilisant mozilla-central :</p>
+
+<pre><code>export GECKO_PATH=/chemin/vers/mozilla-central
+export GECKO_OBJDIR=/chemin/vers/mozilla-central/objdir-gonk</code>
+</pre>
+
+<div class="note">
+<p><strong>Note</strong> : Sous Mac OS X, le répertoire mozilla-central doit se situer dans un système de fichiers sensible à la casse.</p>
+</div>
+
+<p id="Building_a_branch">Notez que cette étape peut être faite avant ou après avoir récupéré le dépôt (i.e. avant l'étape <code>config.sh</code> ci-dessus) ou plus tard.  Vous pouvez également conserver plusieurs versions (avec débogage activé ou non, etc) en ayant plusieurs fichiers userconfig (avec des paramètres différents--chacun nécessitant évidemment un OBJDIR différent) et en faisant un lien symbolique .userconfig qui pointe sur la configuration que vous voulez compiler à ce moment.</p>
+
+<p>Pour plus d'informations, lisez <a class="vt-p" href="/fr/docs/B2G_OS/Customisation_avec_le_fichier_.userconfig#Changer_l'arbre_source_de_Gecko" title="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Customization_with_the_.userconfig_file#Changing_the_Gecko_source_tree">Changer l'arborescence source de Gecko</a>.</p>
+
+<h3 id="Construction_d'une_branche">Construction d'une branche</h3>
+
+<p>Si vous souhaitez compiler une branche autre que celle par défaut (<strong>remarque : la branche par défaut n'est pas forcément "master" !</strong>), vous devrez préfixer l'appel à config.sh avec le nom de la branche, comme ceci :</p>
+
+<pre><code>BRANCH=nom-branche ./config.sh &lt;appareil&gt;</code></pre>
+
+<p>Les noms de branches sont relativement logiques et suivent en général les noms de produits/versions, donc <code>v1-train</code>, <code>v1.0.0</code>, <code>v1.0.1</code>, <code>v1.1</code>, <code>v1.1.0hd</code>, <code>v1.2, v1.3, v1.4, v2.0</code> et ainsi de suite au fur et à mesure. Comme exemple, pour compiler B2G OS 1.2, pour l'émulateur Arm, vous devez saisir</p>
+
+<pre><code>BRANCH=v1.2 ./config.sh emulator</code></pre>
+
+<p>Si vous avez déjà lancé config.sh, vous pouvez voir les noms des branches, en allant dans <code>B2G/.repo/manifests</code> et en faisant "<code>git branch -a</code>" (ce n'est pas renseigné temps que ce n'est pas encore fait.) <strong>Le nom de la branche est indiqué comme mot-clé final sur la ligne, e.g. "<code>v1-train</code>" ou "<code>master</code>"</strong>:</p>
+
+<pre><code>  remotes/origin/master
+  remotes/origin/v1-train
+  remotes/origin/v1.0.0
+  remotes/origin/v1.0.1</code></pre>
+
+<p>Voir <a class="vt-p" href="/fr/docs/B2G_OS/Customisation_avec_le_fichier_.userconfig" title="Mozilla/Firefox_OS/Customization_with_the_.userconfig_file">Personnalisation avec le fichier .userconfig</a> pour des possibilités supplémentaires de personnalisation.</p>
+
+<h3 id="Copier_votre_arborescence_B2G_vers_une_nouvelle_machine">Copier votre arborescence B2G vers une nouvelle machine</h3>
+
+<p>Si vous avez déjà préparé une arborescence complète pour B2G et que vous devez changer de machine (chanceux !), vous vous simplifierez la vie en migrant simplement toute l'arborescence B2G de votre ancien ordinateur vers le nouveau, plutôt que de tout reconfigurer. Pour cela, montez le système de fichier de votre ancienne machine sur la nouvelle, puis faîtes ceci :</p>
+
+<pre><code>rsync -a <em>source</em>/ <em>dest</em>/
+</code></pre>
+
+<p>Où <code>source</code> correspond au chemin complet de l'arborescence source (avec la barre oblique / à la fin), <code>dest</code> correspond au chemin de destination de la copie (le / à la fin est également important !).</p>
+
+<div class="note"><strong>Note :</strong> Si vous copiez les fichiers à partir d'une machine avec une architecture différente n'oubliez pas d'éxécuter '<em>./build.sh clean'</em> avant de démarrer la compilation. SInon, vous risquez de rencontrer des problèmes de compilation.</div>
+
+<p>Si vous suivez ces étapes, vous pouvez sauter tout le reste de cet article et passer directement à la <a class="vt-p" href="/fr/docs/B2G_OS/Compiler" title="Mozilla/Firefox_OS/Building">compilation</a>.</p>
+
+<h3 id="Mettre_à_jour_votre_arborescence_B2G">Mettre à jour votre arborescence B2G</h3>
+
+<p>Quand le répertoire est mis à jour vers une nouvelle version de B2G, vous pourrez mettre à jour votre arborescence. Pour ce faire, utilisez les commandes suivantes :</p>
+
+<pre><code>git fetch origin
+git checkout origin/master</code></pre>
+
+<p>Vous pouvez vérifier que les commandes ont réussi avec :</p>
+
+<pre><code>git show HEAD</code></pre>
+
+<p>Puis en vérifiant que la modification indiquée par la commande correspond à celle donnée par : <a class="vt-p" href="https://github.com/mozilla-b2g/B2G/commits/master" title="https://github.com/mozilla-b2g/B2G/commits/master">https://github.com/mozilla-b2g/B2G/commits/master</a></p>

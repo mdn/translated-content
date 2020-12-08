@@ -1,0 +1,85 @@
+---
+title: Navigator.mozTelephony
+slug: Archive/B2G_OS/API/Navigator/MozTelephony
+translation_of: Archive/B2G_OS/API/Navigator/MozTelephony
+---
+<p></p><section class="Quick_links" id="Quick_Links"><ol><li><strong><a href="/zh-CN/docs/Web/API/Archive"><code>Archive</code></a></strong></li><li class="toggle"><details open><summary>Related pages for Firefox OS</summary><ol><li><a href="/zh-CN/docs/Web/API/MozAlarmsManager"><code>MozAlarmsManager</code></a></li><li><a href="/zh-CN/docs/Web/API/MozMobileNetworkInfo"><code>MozMobileNetworkInfo</code></a></li><li><a href="/zh-CN/docs/Web/API/MozWifiP2pGroupOwner"><code>MozWifiP2pGroupOwner</code></a></li></ol></details></li></ol></section><p></p>
+
+<p></p><div class="overheadIndicator nonStandard nonStandardHeader">
+      <p><strong><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span> 非标准</strong><br>
+      该特性是非标准的，请尽量不要在生产环境中使用它！</p>
+      </div><p></p>
+
+<p></p><div class="warning">
+    <p style="text-align: center;">此 API 仅在 <a href="/zh-CN/docs/Mozilla/Firefox_OS">Firefox OS</a> 的<a href="/zh-CN/docs/Mozilla/Firefox_OS/Security/Application_security#App_Types">内部应用程序</a>中可用。</p>
+</div><p></p>
+
+<h2 id="Summary" name="Summary">概要</h2>
+
+<p>返回一个你可以用来从浏览器启动和控制电话呼叫的<a href="/zh-CN/docs/Web/API/Telephony" title="此页面仍未被本地化, 期待您的翻译!"><code>Telephony</code></a>对象。</p>
+
+<h2 id="Syntax" name="Syntax">语法</h2>
+
+<pre class="eval">var <em>phone</em> = window.navigator.mozTelephony;
+</pre>
+
+<h2 id="Value" name="Value">值</h2>
+
+<p><code>navigator.mozTelephony</code>是一个可以用来控制浏览器正在运行的设备上电话功能的<a href="/zh-CN/docs/Web/API/Telephony" title="此页面仍未被本地化, 期待您的翻译!"><code>Telephony</code></a>对象</p>
+
+<h2 id="详述">详述</h2>
+
+<p>这是一个非标准实现，但正在作为<a href="http://www.w3.org/2012/sysapps/" title="http://www.w3.org/2012/sysapps/">系统应用工作组</a>的一部分被W3C讨论。</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">详述</th>
+   <th scope="col">状态</th>
+   <th scope="col">内容</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><a class="external" href="https://wiki.mozilla.org/WebAPI/WebTelephony" hreflang="en" lang="en" title="Web Telephony">Web Telephony</a></td>
+   <td><span class="spec-Draft">Draft</span></td>
+   <td>Editor Draft (WIP).</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器适应性">浏览器适应性</h2>
+
+<p>由于诸多原因, 其主要的支持预期在手机浏览器上。</p>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>功能</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>基本支持</td>
+   <td><span style="color: #f00;">未实现</span></td>
+   <td>12.0 (12.0)</td>
+   <td><span style="color: #f00;">未实现</span></td>
+   <td><span style="color: #f00;">未实现</span></td>
+   <td><span style="color: #f00;">未实现</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="参见">参见</h2>
+
+<ul>
+ <li><a href="../../../../en/DOM/Using_the_Telephony_API" title="en/DOM/Using the Telephony API">Using the Telephony API</a></li>
+ <li><a href="/zh-CN/docs/Web/API/Telephony" title="此页面仍未被本地化, 期待您的翻译!"><code>Telephony</code></a></li>
+ <li><a href="/zh-CN/docs/Web/API/TelephonyCall" title="此页面仍未被本地化, 期待您的翻译!"><code>TelephonyCall</code></a></li>
+ <li><a href="/zh-CN/docs/Web/API/CallEvent" title="此页面仍未被本地化, 期待您的翻译!"><code>CallEvent</code></a></li>
+</ul>

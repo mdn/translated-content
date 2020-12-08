@@ -1,0 +1,25 @@
+---
+title: mozIStorageStatementParams
+slug: >-
+  Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/mozIStorageStatementParams
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageStatementParams
+---
+<p>このインターフェースは定義済みのプロパティを1つも持ちませんが、与えられたステートメントのSQL内で見つかった名前付きパラメータに基づいたプロパティを持ちます。例えば、次のようにステートメントを構築します：</p>
+<pre class="brush: js">var statement = dbConn.createStatement("SELECT * FROM table_name WHERE id = :item_id");
+</pre>
+<p>このオブジェクトは <code>item_id</code> という1つのプロパティを持つことになり、次のようにして値を名前付きパラメータに束縛することができる：</p>
+<pre class="brush: js">statement.params.item_id = 2;
+</pre>
+<p>なぜ値をハードコーディングせずに、パラメータへの束縛を行うべきかについてのより詳しい情報は、<a class="internal" href="/ja/Storage#Binding_Parameters" title="ja/Storage#Binding Parameters">overview document about binding parameters</a>をご覧ください。</p>
+<h2 id="プロパティの列挙">プロパティの列挙</h2>
+<p> このオブジェクトの全てのプロパティは <code><a class="internal" href="/en/Core_JavaScript_1.5_Reference/Statements/for...in" title="En/Core JavaScript 1.5 Reference/Statements/For...in">for..in</a></code> により列挙することが出来ます:</p>
+<pre class="brush: js">// valuesToBind は ステートメントの実行前にバインドすべき
+// key-value ペアを持つオブジェクト
+for (let param in statement.params)
+  statement.params[param] = valuesToBind[param];
+</pre>
+<h2 id="参照">参照</h2>
+<ul>
+ <li><a href="/en/Storage" title="en/Storage">Storage</a></li>
+ <li><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageStatement" title="">mozIStorageStatement</a></code></li>
+</ul>

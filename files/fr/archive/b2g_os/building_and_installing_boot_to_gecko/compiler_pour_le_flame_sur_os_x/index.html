@@ -1,0 +1,174 @@
+---
+title: Compiler Firefox OS pour le Flame sur Mac OS X
+slug: >-
+  Archive/B2G_OS/Building_and_installing_Boot_to_Gecko/Compiler_pour_le_Flame_sur_OS_X
+tags:
+  - Documentation de compilation
+  - Firefox OS
+  - Flame
+  - Guide
+  - Mac OS X
+translation_of: Archive/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X
+---
+<p><span class="seoSummary">Cet article donne les instructions sur la façon de compiler Firefox OS pour les appareils Flame en utilisant un système Mac OS X comme plate-forme de compilation.</span></p>
+
+<div class="note"><strong>Note :</strong> Ce guide part du principe que le célèbre gestionnaire de paquets <a href="brew.sh">Homebrew</a> est installé. Si ce n'est pas le cas, vous allez devoir soit l'installer, soit installer un gestionnaire de paquets équivalent et apprendre à vous en servir.</div>
+
+<h2 id="Préparation_de_l'environnement_de_compilation">Préparation de l'environnement de compilation</h2>
+
+<p>La première étape consiste à <a href="/fr/Firefox_OS/Prerequis_pour_construire_Firefox_OS#Installation_des_pr.C3.A9requis_pour_OS_X">installer les prérequis pour la compilation</a> comme d'habitude. Installez ensuite binutils afin que la commande <code>objdump</code> soit disponible pour les builds de débogage :</p>
+
+<pre>brew install binutils</pre>
+
+<p>Créez une image disque en utilisant le système de fichiers journalisé et sensible à la casse HFS+ puis montez l'image avec les commandes suivantes.</p>
+
+<pre>hdiutil create -volname 'firefoxos' -type SPARSE -fs 'Case-sensitive Journaled HFS+' -size 40g ~/firefoxos.sparseimage
+open ~/firefoxos.sparseimage
+cd /Volumes/firefoxos/</pre>
+
+<div class="note">
+<p><strong>Note :</strong> Comme l'image est créée en tant qu'image de type "sparse", seuls les blocs du disque réellement utilisés prendront de l'espace disque sur le support physique. Cela signifie qu'une image de 40 Go, comme celle ci-dessus, ne prendra pas vraiment jusqu'à 40 Go d'espace. Au lieu de ça, elle va croître progressivement au fur et à mesure que vous y écrirez des données.</p>
+</div>
+
+<h2 id="Clonage_du_dépôt_B2G">Clonage du dépôt B2G</h2>
+
+<p>Évidemment, avant de pouvoir lancer votre première compilation, il est nécessaire de cloner le dépôt B2G. Il est important de noter que cela ne va pas tout récupérer. Seuls le système de construction et les utilitaires de configuration seront obtenus. La quasi-totalité du code proprement dit se trouve dans le principal dépôt <a href="/fr/docs/Mercurial" title="Mercurial">Mercurial</a> de Mozilla ; ces fichiers seront rapatriés plus tard lors du processus de configuration.</p>
+
+<p>Pour cloner le dépôt, utilisez <a href="https://git-scm.com/">git</a> :</p>
+
+<pre style="font-size: 14px;">git clone git://github.com/mozilla-b2g/B2G.git</pre>
+
+<p>Une fois l'opération terminée (ça ne devrait prendre qu'une minute avec une connexion rapide), utilisez <code>cd</code> pour aller dans le répertoire B2G :</p>
+
+<pre>cd B2G</pre>
+
+<h2 id="Configuration_de_B2G_pour_le_flame">Configuration de B2G pour le flame</h2>
+
+<p>Après avoir récupéré le cœur du système de construction de B2G, vous devez le configurer pour l'appareil sur lequel vous prévoyez de l'installer ; dans le cas présent, il s'agit du "flame". Exécutez la commande suivante depuis le répertoire B2G :</p>
+
+<pre>./config.sh flame-kk</pre>
+
+<p>C'est à ce moment que la plus grande partie du code sera téléchargée. Le code source faisant environ une quinzaine de giga-octets, le téléchargement va prendre un certain temps même avec une connexion internet rapide. Même avec une bonne connexion haut-débit, cela peut prendre une heure ou davantage.</p>
+
+<div class="note">
+<p><strong>Note :</strong> Sérieusement, cela prendra vraiment énormément de temps si vous avez une connexion Internet plutôt lente. Tenez-en compte (ainsi que des coûts de connexion au méga-octet que vous pourriez avoir à payer) avant d'effectuer cette étape.</p>
+</div>
+
+<h3 id="Sauvegarde_des_fichiers_importants_de_l'appareil">Sauvegarde des fichiers importants de l'appareil</h3>
+
+<p>Avant de commencer le processus d'installation, il est important de faire une sauvegarde de certains fichiers clés de l'appareil. Ceux-ci seront nécessaires si vous avez besoin de reflasher l'appareil. </p>
+
+<p>À ce stade, branchez votre Flame s'il ne l'était pas déjà ; le processus de configuration aura besoin d'y accéder. Utilisez la commande <code>adb devices</code> pour vérifier s'il est connecté :</p>
+
+<pre>adb devices -l
+</pre>
+
+<p>Seront listés tous les appareils compatibles Android ou B2G connectés. Si le vôtre n'est pas dans la liste, c'est que quelque chose n'est pas connecté correctement.</p>
+
+<p>Après avoir obtenu la confirmation que l'appareil est bien connecté, vous pouvez réaliser la sauvegarde avec les commandes suivantes :</p>
+
+<pre>mkdir flame-backup
+cd flame-backup
+adb pull /system system
+adb pull /data data</pre>
+
+<p>À noter, si vous compilez pour la première fois, vous pouvez décider de partir sur la version la plus récente de l'image de base du flame ; voir <a href="https://developer.mozilla.org//fr/Firefox_OS/Guide_Telephone_Developpeur/Flame/mettre_a_jour_Flame#Flashage_vers_la_dernière_image_(2.5)">https://developer.mozilla.org//fr/Firefox_OS/Guide_Telephone_Developpeur/Flame/mettre_a_jour_Flame#Flashage_vers_la_dernière_image_(2.5)</a> pour davantage de détails.</p>
+
+<h3 id="Contournement_d'un_problème_de_compilation_avec_Mac_OS_X">Contournement d'un problème de compilation avec Mac OS X</h3>
+
+<p>Un problème peut survenir lors de la compilation sur Mac OS X. La communauté Mozilla a conçu une solution pour celui-ci ; elle a été testée sur Mac OS X 10.9.4 "Mavericks."</p>
+
+<h4 id="mkfs.vfat_non_existant">mkfs.vfat non existant</h4>
+
+<p>Il est nécessaire d'installer un port de <code><a href="https://github.com/sv99/dosfstools-osx">dosfstools</a></code> afin de pouvoir utiliser l'image.</p>
+
+<pre><code><code>brew create https://github.com/sv99/dosfstools-osx.git</code></code></pre>
+
+<p>Éditez ensuite la formule que <code>brew</code> va utiliser pour construire le logiciel <code>dosfstools</code> :</p>
+
+<pre class="brush: js"><code>require "formula"
+
+class Dosfstools &lt; Formula
+  homepage "https://github.com/sv99/dosfstools-osx"
+  url "https://github.com/sv99/dosfstools-osx.git"
+  sha1 ""
+
+  def install
+    system "make", "install"
+  end
+end
+</code></pre>
+
+<p>À présent, vous êtes prêt pour l'installer :</p>
+
+<pre><code><code>brew install dosfstools</code></code></pre>
+
+<h3 id="Modification_de_la_configuration_pour_contourner_les_bogues">Modification de la configuration pour contourner les bogues</h3>
+
+<p>Dans certaines circonstances, des bogues du système de construction peuvent empêcher la compilation sur Mac OS X. Les cas en question sont :</p>
+
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1039223">Bug 1039223</a> - La compilation pour le flame échoue en indiquant l'absence de dt.img</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1027682">Bug 1027682</a> - [Flame][Build] Échec de la compilation sur Mac OS X 10.9, fichier elf.h introuvable</li>
+</ul>
+
+<p>Utilisez votre éditeur de texte préféré pour créer un fichier appelé <code>.userconfig</code> dans le répertoire B2G. Le contenu suivant doit être placé à l'intérieur de ce fichier <code>.userconfig</code> :</p>
+
+<div>
+<div>
+<pre><code><code># .userconfig for Flame build 14.08.2014
+# osx repo change
+# Bug 1039223 - Build for flame fails complaining of missing dt.img
+# https://bugzilla.mozilla.org/show_bug.cgi?id=1039223
+pushd device/qcom/common/dtbtool
+patch -N &lt;&lt; EOF
+--- a/dtbtool/dtbtool.c
++++ b/dtbtool/dtbtool.c
+@@ -616,7 +616,7 @@ int main(int argc, char **argv)
+        extract "qcom,msm-id" parameter
+      */
+     while ((dp = readdir(dir)) != NULL) {
+-        if ((dp-&gt;d_type == DT_REG)) {
++        if ((dp-&gt;d_type == DT_REG||dp-&gt;d_type == DT_UNKNOWN)) {
+             flen = strlen(dp-&gt;d_name);
+             if ((flen &gt; 4) &amp;&amp;
+                 (strncmp(&amp;dp-&gt;d_name[flen-4], ".dtb", 4) == 0)) {
+EOF
+
+popd
+
+# Bug 1027682 - [Flame][Build] Failed to build on Mac OS X 10.9, elf.h file not found
+# https://bugzilla.mozilla.org/show_bug.cgi?id=1027682
+if [[ ! -e /usr/local/include/elf.h ]]; then
+  cp "${B2G_DIR}/external/elfutils/libelf/elf.h" /usr/local/include
+  echo "Bug 1027682: elf.h copied into /usr/local/include"
+fi
+
+# Disable First Time User experience
+export NOFTU=1
+echo "NOFTU = ${NOFTU}"
+
+# Enable gaia developer mode
+export DEVICE_DEBUG=1
+echo "DEVICE_DEBUG = ${DEVICE_DEBUG}"
+
+# Keeping both debug and non-debug objects
+#export GECKO_PATH=${B2G_DIR}/mozilla-inbound
+echo "GECKO_PATH = ${GECKO_PATH}"
+
+export B2G_DEBUG=1
+echo "B2G_DEBUG = ${B2G_DEBUG}"
+
+#export GECKO_OBJDIR=${GECKO_PATH}/objdir-gonk
+if [[ "${B2G_DEBUG}" != "0" ]]; then
+  export GECKO_OBJDIR=${GECKO_OBJDIR}-debug
+fi
+echo "GECKO_OBJDIR = ${GECKO_OBJDIR}"</code></code></pre>
+
+<h2 id="Lancement_de_votre_première_compilation">Lancement de votre première compilation</h2>
+
+<p>Maintenant vous êtes enfin prêt à lancer la compilation ! Lancez-la de la même manière que pour toute autre compilation de Firefox OS :</p>
+
+<pre><code><code>./build.sh</code></code></pre>
+</div>
+</div>

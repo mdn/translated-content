@@ -1,0 +1,205 @@
+---
+title: Gabarits
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Gabarits
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Templates
+---
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Introduction_à_RDF" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Exemples_de_syntaxe_de_gabarits">Suivant  »</a></p>
+</div>
+
+<p>Dans cette section, nous allons voir comment peupler des éléments avec des données.</p>
+
+<h3 id="Peuplement_des_.C3.A9l.C3.A9ments" name="Peuplement_des_.C3.A9l.C3.A9ments">Peuplement des éléments</h3>
+
+<p>XUL apporte une méthode permettant de créer des éléments à partir de données fournies par <abbr title="Resource Description Framework">RDF</abbr>, que ce soit à partir d'un fichier RDF ou à partir d'une source de données interne. Plusieurs sources de données sont déjà fournies avec Mozilla comme les marque-pages, l'historique et les messages mails. Plus de détails seront donnés dans <a href="/fr/Tutoriel_XUL/Sources_de_données_RDF" title="fr/Tutoriel_XUL/Sources_de_données_RDF">une prochaine section</a>.</p>
+
+<p>Habituellement, les éléments tels que les <code><a href="/fr/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code> et <code><a href="/fr/docs/Mozilla/Tech/XUL/menuitem" title="menuitem">menuitem</a></code> seront peuplés avec des données. Cependant, vous pouvez utiliser d'autres éléments si vous le voulez, bien qu'ils soient utilisés pour des cas spécifiques. Néanmoins nous commencerons avec ces autres éléments parce que les arbres et menus nécessitent plus de code.</p>
+
+<p>Pour permettre la création d'éléments basés sur des données RDF, vous avez besoin de fournir un gabarit simple (<abbr title="Note du Traducteur">Ndt</abbr> : template) qui sera dupliqué pour chaque élément devant être créé. En gros, vous fournissez juste le premier élément et les suivants seront construits sur le même modèle.</p>
+
+<p>Le gabarit est créé en utilisant l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/template" title="template">template</a></code>. À l'intérieur de celui-ci, vous pouvez placer les éléments que vous voulez utiliser pour chaque élément construit. L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/template" title="template">template</a></code> doit être placé à l'intérieur du conteneur qui contiendra les éléments construits. Par exemple, si vous utilisez un arbre <code><a href="/fr/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code>, vous devez placer l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/template" title="template">template</a></code> à l'intérieur de l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code>.</p>
+
+<h4 id="Exemple_simple_de_gabarit" name="Exemple_simple_de_gabarit">Exemple simple de gabarit</h4>
+
+<p>C'est mieux d'expliquer avec un exemple. Prenons un exemple simple où nous voulons créer un bouton pour chaque marque-page principal. Mozilla fournit une source de données pour les marque-pages, pouvant être ainsi utilisée pour récupérer les données. Cet exemple ne récupérera que les marque-pages principaux (ou les dossiers des marque-pages) car nous allons créer des boutons. Pour les marque-pages fils, nous devrions utiliser un élément qui affiche une hiérarchie tel qu'un arbre ou un menu.</p>
+
+<div class="note">Cet exemple et tous les autres qui font référence à des sources de données RDF interne, et ils ne fonctionneront que si vous les chargez à partir d'une url chrome. Pour des raisons de sécurité, Mozilla ne permet pas d'y accéder à partir de fichiers extérieurs.</div>
+
+<p>Pour voir cet exemple, vous devrez créer un paquet chrome contenant le fichier à charger (vous pouvez le faire facilement, consultez <a href="/fr/Tutoriel_XUL/Les_fichiers_manifest" title="fr/Tutoriel_XUL/Les_fichiers_manifest">les fichiers manifest</a>). Vous pouvez alors entrer l'URL chrome dans le champ de saisie des URLs du navigateur.</p>
+
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_templates_1.xul.txt">Source</a></p>
+
+<pre>&lt;vbox datasources="rdf:bookmarks" ref="NC:BookmarksRoot" flex="1"&gt;
+  &lt;template&gt;
+    &lt;button uri="rdf:*" label="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+  &lt;/template&gt;
+&lt;/vbox&gt;
+</pre>
+
+<div class="float-right"><img alt="Image:xultu_templates1.jpg" class="internal" src="/@api/deki/files/1558/=Xultu_templates1.jpg"></div>
+
+<p>Ici une boîte verticale a été créée contenant une colonne de boutons, un pour chaque marque-page principal. Vous pouvez voir que le <code><a href="/fr/docs/Mozilla/Tech/XUL/template" title="template">template</a></code> ne contient qu'un seul <code><a href="/fr/docs/Mozilla/Tech/XUL/button" title="button">button</a></code>. Cet unique bouton est utilisé comme modèle pour tout les autres boutons qu'il sera nécessaire de créer. Vous pouvez voir sur l'image qu'un ensemble de boutons a été créé, un pour chaque marque-page.</p>
+
+<p>Essayez d'ajouter un marque-page dans le navigateur pendant que vous avez cet exemple ouvert dans une fenêtre. Vous noterez que les boutons seront mis à jour instantanément (Vous devez donner le focus à la fenêtre pour voir le changement).</p>
+
+<h4 id="Conteneurs_et_sources_de_donn.C3.A9es" name="Conteneurs_et_sources_de_donn.C3.A9es">Conteneurs et sources de données</h4>
+
+<p>Le gabarit lui-même est placé à l'intérieur d'une boîte verticale. La boîte a deux attributs qui lui permet d'être utilisée pour les gabarits, indiquant d'où les données proviennent. Le premier attribut de la boîte est <code id="a-datasources"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/datasources">datasources</a></code>. Il est utilisé pour déclarer la source de données RDF qui fournira les données pour créer les éléments. Dans le cas présent, 'rdf:bookmarks' est indiqué. Vous devinez probablement qu'il signifie qu'il faut utiliser la source de données des marque-pages. Cette source de données est fournie par Mozilla. Pour utiliser votre propre source de données, spécifiez l'URL d'un fichier RDF dans l'attribut <code id="a-datasources"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/datasources">datasources</a></code>, comme le montre l'exemple suivant :</p>
+
+<pre>&lt;box datasources="chrome://zoo/content/animals.rdf"
+     ref="http://www.some-fictitious-zoo.com/all-animals"&gt;
+</pre>
+
+<p>Vous pouvez spécifier plusieurs sources de données à la fois, en les séparant avec un espace dans la valeur de l'attribut. Ainsi, l'affichage de données provenant de multiples sources est possible.</p>
+
+<p>L'attribut <code id="a-ref"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/ref">ref</a></code> indique l'endroit dans la source de données à partir duquel vous voulez récupérer les données. Dans le cas des marque-pages, la valeur 'NC:BookmarksRoot' est utilisée pour indiquer la racine de la hiérarchie des marque-pages. Les autres valeurs que vous pouvez indiquer dépendront de la source de données que vous utiliserez. Si vous utilisez votre propre fichier RDF, la valeur correspondra à la valeur d'un attribut <code id="a-about"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/about">about</a></code> d'un élément RDF <code>Bag</code>, <code>Seq</code> ou <code>Alt</code>.</p>
+
+<h4 id=".C3.80_l.27int.C3.A9rieur_d.27un_gabarit" name=".C3.80_l.27int.C3.A9rieur_d.27un_gabarit">À l'intérieur d'un gabarit</h4>
+
+<p>En ajoutant ces deux attributs à la boîte du dessus, vous permettez la génération d'éléments en utilisant le gabarit. Cependant, les éléments à l'intérieur du gabarit nécessite une déclaration différente. Vous noterez dans l'exemple du dessus que le bouton a un attribut <code id="a-uri"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/uri">uri</a></code> et a une valeur inhabituelle pour l'attribut <code id="a-label"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/label">label</a></code>.</p>
+
+<p>Un attribut à l'intérieur d'un gabarit qui commence par 'rdf:' indique que la valeur doit être prise à partir de la source de données. Dans l'exemple plus haut, c'est le cas de l'attribut <code id="a-label"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/label">label</a></code>. Le reste de la valeur réfère au nom de la propriété dans la source de données. Elle est construite en prenant l'URL de l'espace de nom utilisé par la source de données et en y ajoutant le nom de la propriété. Ici, nous utilisons seulement le nom du marque-page mais d'autres champs sont disponibles.</p>
+
+<p>L'attribut <code id="a-label"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/label">label</a></code> des boutons est renseigné avec cet URI spécial parce que nous voulons que les libellés des boutons aient le nom des marque-pages. Nous pouvons mettre cet URI sur n'importe quel attribut de l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/button" title="button">button</a></code>, ou n'importe quel élément. Les valeurs de ces attributs sont remplacées par les données fournies par la source de données qui, ici, sont les marque-pages. Pour finir, les libellés des boutons sont définis par les noms des marque-pages.</p>
+
+<p>L'exemple du dessous montre comment nous pourrions assigner d'autres attributs d'un bouton à partir de la source de données. Bien sûr, cela implique que la source de données fournisse les ressources appropriées. Si une ressource particulière est inexistante, la valeur de l'attribut sera une chaîne vide.</p>
+
+<pre>&lt;button class="rdf:http://www.example.com/rdf#class"
+        uri="rdf:*"
+        label="rdf:http://www.example.com/rdf#name"
+        crop="rdf:http://www.example.com/rdf#crop"/&gt;
+</pre>
+
+<p>Comme vous pouvez le voir, vous pouvez générer dynamiquement une liste d'éléments avec les attributs fournis par une source de données séparée.</p>
+
+<p>L'attribut <code id="a-uri"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/uri">uri</a></code> est utilisé pour spécifier l'élément où la génération du contenu commencera. Le contenu extérieur ne sera généré qu'une seule fois, tandis que le contenu intérieur sera généré pour chaque ressource. Nous en verrons plus à ce propos quand nous créerons <a href="/fr/Tutoriel_XUL/Arbres_et_Gabarits" title="fr/Tutoriel_XUL/Arbres_et_Gabarits">des gabarits pour les arbres</a>.</p>
+
+<h4 id="Plus_d.27exemples" name="Plus_d.27exemples">Plus d'exemples</h4>
+
+<p>En ajoutant ces fonctionnalités au conteneur dans lequel est le gabarit, qui dans ce cas est une boîte, et aux éléments à l'intérieur du gabarit, nous pouvons générer de multiples listes de contenu à partir de données externes. Nous pouvons bien sûr mettre plus d'un élément à l'intérieur du gabarit, et ajouter une référence RDF spéciale dans les attributs sur n'importe quel élément. L'exemple suivant le montre :</p>
+
+<p><span id="Exemple_2"><a id="Exemple_2"></a><strong>Exemple 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_templates_2.xul.txt">Source</a></p>
+
+<pre>&lt;vbox datasources="rdf:bookmarks" ref="NC:BookmarksRoot" flex="1"&gt;
+  &lt;template&gt;
+    &lt;vbox uri="rdf:*"&gt;
+      &lt;button label="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+      &lt;label value="rdf:http://home.netscape.com/NC-rdf#URL"/&gt;
+    &lt;/vbox&gt;
+  &lt;/template&gt;
+&lt;/vbox&gt;
+</pre>
+
+<p>Cet exemple crée une boîte verticale avec un bouton et un libellé pour chaque marque-page. Le bouton contiendra le nom du marque-page et le libellé contiendra l'URL.</p>
+
+<p>Les nouveaux éléments qui sont créés ne sont fonctionnellement pas différents de ceux que vous mettez directement dans le fichier XUL. L'attribut <code id="a-id"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/id">id</a></code> est ajouté à tous les éléments créés au travers du gabarit, et il est assigné à la valeur qui identifie la ressource. Vous pouvez l'utiliser pour identifier la ressource.</p>
+
+<p>Vous pouvez aussi spécifier de multiples ressources dans le même attribut en les séparant avec un espace, comme dans l'exemple qui suit (<a class="external" href="http://xulfr.org/xulplanet/xultu/templateex.html">en savoir plus sur la syntaxe des ressources</a>).</p>
+
+<p><span id="Exemple_3"><a id="Exemple_3"></a><strong>Exemple 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_templates_3.xul.txt">Source</a></p>
+
+<pre>&lt;vbox datasources="rdf:bookmarks" ref="NC:BookmarksRoot"
+     flex="1"&gt;
+  &lt;template&gt;
+    &lt;label uri="rdf:*" value="rdf:http://home.netscape.com/NC-rdf#Name rdf:http://home.netscape.com/NC-rdf#URL"/&gt;
+  &lt;/template&gt;
+&lt;/vbox&gt;
+</pre>
+
+<h3 id="Comment_sont_construits_les_gabarits" name="Comment_sont_construits_les_gabarits">Comment sont construits les gabarits</h3>
+
+<p>Quand un élément a un attribut <code id="a-datasources"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/datasources">datasources</a></code>, cela indique que l'élément est susceptible d'être généré à partir d'un gabarit. Notez que ce n'est pas la balise <code><a href="/fr/docs/Mozilla/Tech/XUL/template" title="template">template</a></code> qui détermine si le contenu sera généré, mais bien l'attribut <code id="a-datasources"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/datasources">datasources</a></code>. Quand cet attribut est présent, un objet que l'on appelle <em>un constructeur</em> est ajouté à l'élément. C'est cet objet qui est responsable de la génération du contenu à partir du gabarit. En javascript, vous pouvez accéder à l'objet constructeur par la propriété <code>builder</code>, bien qu'habituellement vous en aurez seulement besoin pour régénérer le contenu dans les situations où il ne le fait pas automatiquement.</p>
+
+<p>Il y a deux différents types de constructeur. Le premier est un <em>constructeur de contenu</em> utilisé dans la plupart des situations, et l'autre est <em>un constructeur d'arbres</em> utilisé uniquement avec les éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code>.</p>
+
+<h4 id="Constructeur_de_contenu" name="Constructeur_de_contenu">Constructeur de contenu</h4>
+
+<p>Le constructeur de contenu prend le contenu situé à l'intérieur de l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/template" title="template">template</a></code> et le duplique pour chaque ligne. Par exemple, si l'utilisateur a dix marque-pages dans l'exemple du dessus, dix éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/label" title="label">label</a></code> seront créés et ajoutés en tant que fils à l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/vbox" title="vbox">vbox</a></code>. Si vous utilisez les fonctions DOM pour traverser l'arbre, vous trouverez ces éléments à ces emplacements et pourrez récupérer leurs propriétés. Ces éléments sont affichés, mais pas l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/template" title="template">template</a></code>, bien qu'il existe encore dans l'arbre du document. De plus, l'attribut <code id="a-id"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/id">id</a></code> de chaque libellé sera initialisé avec la ressource RDF de la ligne correspondante.</p>
+
+<p>Le constructeur de contenu démarre toujours à partir de l'élément qui à l'attribut <code>uri="rdf:*"</code>. Si l'attribut <code id="a-uri"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/uri">uri</a></code> est placé à l'intérieur d'autres éléments, ces derniers ne seront créés qu'une seule fois. Dans l'exemple ci-dessous, un <code><a href="/fr/docs/Mozilla/Tech/XUL/hbox" title="hbox">hbox</a></code> sera créé et rempli avec un <code><a href="/fr/docs/Mozilla/Tech/XUL/label" title="label">label</a></code> pour chaque item.</p>
+
+<pre>&lt;template&gt;
+  &lt;hbox&gt;
+    &lt;label uri="rdf:*" value="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+  &lt;/hbox&gt;
+&lt;/template&gt;
+</pre>
+
+<p>S'il y a du contenu à l'intérieur de l'élément qui a l'attribut <code id="a-datasources"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/datasources">datasources</a></code> mais en dehors de l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/template" title="template">template</a></code>, ce contenu apparaîtra également. Ce faisant, vous pouvez mélanger du contenu statique et dynamique dans un gabarit.</p>
+
+<h4 id="Constructeur_d.27arbres" name="Constructeur_d.27arbres">Constructeur d'arbres</h4>
+
+<p>Le constructeur d'arbres, d'autre part, ne génère pas d'éléments DOM pour chaque ligne. À la place, il récupère les données directement à partir de la source de données RDF quand il en a besoin. Comme les arbres ont souvent besoins d'afficher des centaines de lignes de données, c'est plus efficace comme ceci. Créer un élément pour chaque cellule serait trop coûteux. Cependant, en contre partie, ces arbres ne peuvent afficher que du texte (<abbr title="Note du Traducteur">NdT</abbr> : ainsi que des images et des cases à cocher), et comme aucun élément n'est créé, vous ne pouvez pas utiliser les propriétés CSS de manière habituelle pour décorer les cellules de l'arbre.</p>
+
+<p>Le constructeur d'arbres est utilisé seulement pour les arbres. Les autres éléments n'utilisent que le constructeur de contenu. Ceci n'est pas un problème étant donné que les autres éléments comme les menus n'ont généralement pas besoin d'afficher beaucoup d'items. Il est possible également d'utiliser le constructeur de contenu pour les arbres, ainsi un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code> et d'autres seront crées pour chaque ligne.</p>
+
+<h3 id="R.C3.A8gles" name="R.C3.A8gles">Règles</h3>
+
+<p>Dans l'image du précédent exemple, vous avez pu noter que le troisième bouton est simplement un bouton avec des tirets comme libellé. C'est un séparateur dans la liste des marque-pages. Au cas où nous l'utiliserions, la source de données RDF des marque-pages stocke les séparateurs comme si ils étaient des marque-pages normaux. Ce que nous voulons faire est d'ajouter un petit espace à la place d'un bouton pour les ressources "séparateur". Ce qui signifie que nous voulons avoir deux différents types de contenu à créer, un type pour les marque-pages normaux, et un autre type pour les séparateurs.</p>
+
+<p>Nous pouvons le faire en utilisant un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/rule" title="rule">rule</a></code>. Nous définissons une règle pour chaque variation des éléments que nous avons à créer. Dans notre cas, nous aurons besoin d'une règle pour les marque-pages, et une règle pour les séparateurs. Les attributs placés sur l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/rule" title="rule">rule</a></code> déterminent quelle règle s'applique sur quelle ressource RDF.</p>
+
+<p>Pour savoir quelle règle s'applique sur les données, chaque élément <code><a href="/fr/docs/Mozilla/Tech/XUL/rule" title="rule">rule</a></code> est analysé en séquence pour une vérification de concordance. De fait, l'ordre dans lequel vous définissez les règles est important. Les règles du début ont priorité sur les règles suivantes.</p>
+
+<h4 id="Exemple_de_r.C3.A8gles" name="Exemple_de_r.C3.A8gles">Exemple de règles</h4>
+
+<p>L'exemple suivant modifie l'exemple précédant avec deux règles.</p>
+
+<p><span id="Exemple_4"><a id="Exemple_4"></a><strong>Exemple 4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_templates_4.xul.txt">Source</a></p>
+
+<pre>&lt;window
+  id="example-window"
+  title="Liste des marque-pages"
+  xmlns:html="http://www.w3.org/1999/xhtml"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+ &lt;vbox datasources="rdf:bookmarks" ref="NC:BookmarksRoot" flex="1"&gt;
+   &lt;template&gt;
+
+    &lt;rule rdf:type="http://home.netscape.com/NC-rdf#BookmarkSeparator"&gt;
+     &lt;spacer uri="rdf:*" height="16"/&gt;
+    &lt;/rule&gt;
+
+    &lt;rule&gt;
+      &lt;button uri="rdf:*" label="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+    &lt;/rule&gt;
+
+  &lt;/template&gt;
+ &lt;/vbox&gt;
+
+&lt;/window&gt;
+</pre>
+
+<div class="float-right"><img alt="Image:xultu_templates2.jpg" class="internal" src="/@api/deki/files/1559/=Xultu_templates2.jpg"></div>
+
+<p>En utilisant deux règles, nous permettont au contenu du gabarit d'être généré sélectivement. Dans le premier <code><a href="/fr/docs/Mozilla/Tech/XUL/rule" title="rule">rule</a></code>, les séparateurs de marque-pages sont sélectionnés, comme nous pouvons le voir par l'attribut <code>rdf:type</code>. Le second <code><a href="/fr/docs/Mozilla/Tech/XUL/rule" title="rule">rule</a></code> n'ayant aucun attribut, il sélectionne tout le reste.</p>
+
+<p>Tous les attributs placés dans l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/rule" title="rule">rule</a></code>, sont utilisés comme critère de sélection. Dans notre cas, la source de données des marque-pages fournit une propriété <code>rdf:type</code> pour distinguer les séparateurs. Cet attribut contient une valeur spéciale pour les séparateurs dans la source de données RDF. C'est ainsi qu'on peut les distinguer des marque-pages. Vous pouvez utiliser une technique similaire pour n'importe quel attribut que l'on peut mettre sur un élément RDF <code>Description</code>.</p>
+
+<p>La valeur spéciale d'URL donnée dans l'exemple du dessus pour la première règle, est utilisée pour les séparateurs. Elle signifie que les séparateurs s'appliqueront à la première règle en générant un élément <code><a href="/fr/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code> d'une hauteur de 16 pixels. Les éléments qui ne sont pas des séparateurs ne correspondront pas à la première règle, et atterriront dans la deuxième règle. Celle-ci n'a aucun attribut. Elle correspond à n'importe quelle donnée. Ce qui bien sûr, est ce que nous voulons pour le reste des données.</p>
+
+<p>Vous avez dû noter que, parce que nous voulons un attribut provenant de l'espace de nommage du RDF (rdf:type), nous avions besoin d'ajouter la déclaration de cet espace de nommage dans la balise <code><a href="/fr/docs/Mozilla/Tech/XUL/window" title="window">window</a></code>. Si nous n'avions pas fait cela, l'attribut serait attribué à l'espace de nommage XUL. Parce qu'il n'existe pas dans cet espace, la règle ne s'appliquerait pas. Si nous utilisons des attributs provenant de notre propre espace de nommage, vous devez ajouter la déclaration de votre espace de nommage pour qu'ils soient reconnus.</p>
+
+<p>Vous devez deviner ce qui arriverait si la seconde règle était enlevée. Le résultat serait alors un simple <code><a href="/fr/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code>, sans aucun marque-page puisqu'ils ne correspondent à aucune règle.</p>
+
+<p>Dit plus simplement, une règle correspond si tous les attributs placés dans l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/rule" title="rule">rule</a></code> correspondent aux attributs de la ressource RDF. Dans le cas d'un fichier RDF, les ressources seraient les éléments <code>Description</code>.</p>
+
+<p>Il y a cependant quelques petites exceptions. Vous ne pouvez pas faire la correspondance avec les attributs <code>XULAttr|id</code>, <code>rdf:property</code> ou <code>rdf:instanceOf</code>. Mais puisque vous utiliserez vos propres attributs dans votre propre espace de nommage, ces exceptions n'auront probablement pas d'importance de toute façon.</p>
+
+<p>Notez qu'un gabarit sans règle, comme dans le premier exemple, est équivalent fonctionnellement à un gabarit qui possède un seul <code><a href="/fr/docs/Mozilla/Tech/XUL/rule" title="rule">rule</a></code> sans attribut.</p>
+
+<hr>
+<p>Nous allons voir maintenant l'utilisation des gabarits avec les arbres.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Introduction_à_RDF" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Exemples_de_syntaxe_de_gabarits">Suivant  »</a></p>
+</div>
+
+<p><span class="comment">Interwiki</span></p>

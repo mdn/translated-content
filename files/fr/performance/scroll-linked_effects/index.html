@@ -1,0 +1,98 @@
+---
+title: Effets liés au défilement
+slug: Performance/Scroll-linked_effects
+translation_of: Mozilla/Performance/Scroll-linked_effects
+---
+<p class="summary">La définition d’un effet lié au défilement est un effet mis en œuvre dans une page web où quelque chose change en fonction de la position de défilement, par exemple une propriété de positionnement, dans le but de créer un effet de parallaxe. Cet article aborde les effets liés au défilement, leur impact sur les perfomances, les outils associés, et les techniques possibles d’atténuation.</p>
+
+<h2 id="Les_effets_de_défilement_expliqués">Les effets de défilement expliqués</h2>
+
+<p>Souvent, les effets de défilement sont mis en œuvre en écoutant l’événement {{event("scroll")}} puis en mettant à jour des éléments de la page d’une certaine façon (généralement les propriétés CSS {{cssxref("position")}} ou {{cssxref("transform")}}). Vous pouvez trouver un exemple de ces effets ici : <a class="external" href="https://github.com/RByers/css-houdini-drafts/blob/master/css-scroll-api/UseCases.md">CSS Scroll API: Use Cases</a>.</p>
+
+<p>Ces effets fonctionnent très bien avec les navigateurs où le défilement se fait de manière synchrone sur le <em>thread</em> (fil d’exécution) principal du navigateur. Toutefois, la plupart des navigateurs supportent aujourd’hui une sorte de défilement asynchrone afin de proposer aux utilisatrices et utilisateurs une expérience stable à 60 images par seconde. Dans le modèle de défilement asynchrone, la position visuelle du défilement est mise à jour dans le <em>thread</em> de composition, et est visible à l’utilisatrice et l’utilisateur avant que l’évènement {{event("scroll")}} soit mis à jour dans le DOM et émis sur le <em>thread</em> principal. Cela signifie que les effets mis en œuvre seront légèrement en retard par rapport à la position du défilement telle que l’utilisatrice ou l’utilisateur la voit à l’écran. Cela peut rendre l’effet décalé ou saccadé, ce que nous voulons éviter.</p>
+
+<p>Les exemples suivants présentent des effets qui fonctionneraient <em>mal</em> avec le scroll asynchrone, accompagnés de versions équivalentes qui fonctionnent correctement.</p>
+
+<h3 id="Exemple_1_positionnement_sticky">Exemple 1 : positionnement sticky</h3>
+
+<p>Voici une mise en œuvre d’un effet de <a href="/fr/docs/Web/CSS/position#Positionnement_adh%C3%A9rent_(sticky)">positionnement <em>sticky</em> (adhérent)</a>, où la div <code>"toolbar"</code> va adhérer au haut de l’écran à mesure que vous défilez vers le bas.</p>
+
+<pre class="brush: html">&lt;body style="height: 5000px" onscroll="document.getElementById('toolbar').style.top = Math.max(100, window.scrollY) + 'px'"&gt;
+ &lt;div id="toolbar" style="position: absolute; top: 100px; width: 100px; height: 20px; background-color: green"&gt;&lt;/div&gt;
+&lt;/body&gt;</pre>
+
+<p>Cette mise en œuvre de positionnement <em>sticky</em> s’appuie sur un gestionnaire d’évènement <code>scroll</code> pour repositionner la div <code>"toolbar"</code>. Comme le gestionnaire d’évènement <code>scroll </code>est exécuté dans le JavaScript sur le <em>thread</em> principal du navigateur, il sera asynchrone par rapport au défilement vu par l’utilisatrice ou l’utilisateur. Par conséquent, avec le défilement asynchrone, le gestionnaire d’évènement sera retardé par rapport au défilement visible, et ainsi la div ne restera pas visuellement fixe comme prévu. Au lieu de cela, elle va se déplacer avec le défilement de l’utilisatrice ou utilisateur, puis « sauter » vers sa position attendue quand le gestionnaire d’évènement <code>scroll</code> est exécuté. Ces déplacements et sauts constants produisent un effet visuel saccadé. Une manière de mettre cela en œuvre sans le gestionnaire d’évènement <code>scroll</code> est d’utiliser la propriété CSS conçue dans ce but :</p>
+
+<pre class="brush: html">&lt;body style="height: 5000px"&gt;
+ &lt;div id="toolbar" style="position: sticky; top: 0px; margin-top: 100px; width: 100px; height: 20px; background-color: green"&gt;&lt;/div&gt;
+&lt;/body&gt;</pre>
+
+<p>Cette version fonctionne bien avec le défilement asynchrone car la position de la div <code>"toolbar"</code> est mise à jour par le navigateur à mesure que l’utilisatrice ou l’utilisateur fait défiler la page.</p>
+
+<h3 id="Exemple_2_défilement_magnétique">Exemple 2 : défilement magnétique</h3>
+
+<p>{{deprecated_header}}</p>
+
+<p>Voici une mise en œuvre de défilement magnétique, où la position du défilement est ramenée vers une destination particulière quand le défilement de l’utilisatrice ou utilisateur s’arrête près de cette destination.</p>
+
+<pre class="brush: html">&lt;body style="height: 5000px"&gt;
+ &lt;script&gt;
+    function snap(destination) {
+        if (Math.abs(destination - window.scrollY) &lt; 3) {
+            scrollTo(window.scrollX, destination);
+        } else if (Math.abs(destination - window.scrollY) &lt; 200) {
+            scrollTo(window.scrollX, window.scrollY + ((destination - window.scrollY) / 2));
+            setTimeout(snap, 20, destination);
+        }
+    }
+    var timeoutId = null;
+    addEventListener("scroll", function() {
+        if (timeoutId) clearTimeout(timeoutId);
+        timeoutId = setTimeout(snap, 200, parseInt(document.getElementById('snaptarget').style.top));
+    }, true);
+ &lt;/script&gt;
+ &lt;div id="snaptarget" style="position: relative; top: 200px; width: 100%; height: 200px; background-color: green"&gt;&lt;/div&gt;
+&lt;/body&gt;</pre>
+
+<p>Dans cet exemple, un gestionnaire d’évènement <code>scroll</code> détecte si la position du défilement est à moins de 200 pixels du haut de la div <code>"snaptarget"</code>. Le cas échéant, il déclenche une animation pour ramener la position du défilement sur le haut de la div. Comme cette animation est gérée par JavaScript sur le <em>thread</em> principal du navigateur, elle peut être interrompue par d’autres codes JavaScript s’exécutant dans d’autres onglets ou d’autres fenêtres. Par conséquent, il peut arriver que l’animation apparaisse saccadée et pas aussi fluide qu’attendu. À la place, utiliser la propriété CSS {{cssxref("CSS_Scroll_Snap_Points", "snap points")}} permettra au navigateur de gérer l’animation de manière asynchrone, produisant un effet visuel fluide.</p>
+
+<pre class="brush: html">&lt;body style="height: 5000px"&gt;
+ &lt;style&gt;
+    body {
+        scroll-snap-type: proximity;
+        scroll-snap-destination: 0 0;
+    }
+    #snaptarget {
+        scroll-snap-coordinate: 0 -8px;
+    }
+ &lt;/style&gt;
+ &lt;div id="snaptarget" style="position: relative; top: 200px; width: 100%; height: 200px; background-color: green"&gt;&lt;/div&gt;
+&lt;/body&gt;</pre>
+
+<p>Cette version fonctionne de manière fluide dans le navigateur même si le <em>thread</em> principal du navigateur est occupé par de longs scripts.</p>
+
+<h3 id="Autres_effets">Autres effets</h3>
+
+<p>Dans de nombreux cas, les effets liés au défilement peuvent être réécris en utilisant le CSS et en faisant en sorte qu’ils soient calculés sur le <em>thread</em> de composition. Toutefois, dans certains cas, les API actuelles proposées par les navigateurs ne permettent pas cela. Dans tous les cas, cependant, Firefox affichera un avertissement dans la console de développement (à partir de la version 46) s’il détecte la présence d’un effet lié au défilement sur une page. Les pages qui utilisent des effets de défilement sans écouter les évènements <code>scroll</code> en JavaScript n’auront pas cet avertissement. Voir l’article de blog <a href="https://staktrace.com/spout/entry.php?id=834">Asynchronous scrolling in Firefox</a> pour des exemples supplémentaires d’effets qui peuvent être implementés en utilisant CSS pour éviter les saccades.</p>
+
+<h2 id="Améliorations_futures">Améliorations futures</h2>
+
+<p>À l’avenir, nous aimerions supporter davantage d’effets dans le compositeur. Dans ce but, nous avons besoin de vous (oui, vous !) pour nous en dire plus sur le genre d’effets liés au défilement que vous essayez de mettre en œuvre, afin que nous puissions trouver de bons moyens de les supporter dans le compositeur. Actuellement, il y a quelques propositions d’API qui permettraient de tels effets, et elles ont chacune leurs avantages et leurs inconvénients. Les propositions actuellement à l’étude sont :</p>
+
+<ul>
+ <li><a href="https://w3c.github.io/web-animations/">Web Animations</a> : Une nouvelle API pour contrôler precisément les animations web en JavaScript, avec une <a href="https://wiki.mozilla.org/Platform/Layout/Extended_Timelines">proposition additionelle</a> de relier la position de défilement au temps et d’utiliser cela comme ligne temporelle pour l’animation.</li>
+ <li><a href="https://docs.google.com/document/d/18GGuTRGnafai17PDWjCHHAvFRsCfYUDYsi720sVPkws/edit?pli=1#heading=h.iy9r1phg1ux4">CompositorWorker</a> : Permet à JavaScript d’être exécuté sur le <em>thread</em> compositeur par petits fragments, à condition qu’il ne fasse pas baisser le nombre d’images par seconde.</li>
+ <li><a href="https://docs.google.com/document/d/1VnvAqeWFG9JFZfgG5evBqrLGDZYRE5w6G5jEDORekPY/edit?pli=1">Scroll Customization</a> : Introduit une nouvelle API permettant au contenu de définir comment un delta de défilement est appliqué et consommé. Au moment où ces lignes sont écrites (<time datetime="2015-12-14T21:20:35+01:00">décembre 2015</time>), Mozilla ne prévoit pas de supporter cette proposition, mais elle est inclue pour l’exhaustivité.</li>
+</ul>
+
+<h3 id="Appel_à_l’action">Appel à l’action</h3>
+
+<p>Si vous avez des pensées et des opinions sur :</p>
+
+<ul>
+ <li>une ou plusieurs des propositions dans le contexte les effets liés au défilement </li>
+ <li>des effets liés au défilement que vous essayez de mettre en œuvre ;</li>
+ <li>toute autre idée ou problème en relation ;</li>
+</ul>
+
+<p>Contactez-nous ! Vous pouvez vous joindre à la discussion sur la liste de diffusion <a href="https://lists.w3.org/Archives/Public/public-houdini/">public-houdini</a>.</p>

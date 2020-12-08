@@ -1,0 +1,109 @@
+---
+title: PowerManager
+slug: Web/API/PowerManager
+tags:
+  - API
+  - B2G
+  - Firefox OS
+  - Non-standard
+  - Power Management
+  - Reference
+  - WebAPI
+translation_of: Archive/B2G_OS/API/MozPowerManager
+---
+<p>{{ ApiRef() }}</p>
+<p>{{ non-standard_header() }}</p>
+<p>{{ B2GOnlyHeader2('certified') }}</p>
+<p>L'interface PowerManager permet de contrôler explicitement les composants de l'appareil consommant de l'énergie.</p>
+<h2 id="Présentation_de_l'interface">Présentation de l'interface</h2>
+<pre class="brush: js"><code class="idl-code">callback wakeLockListener = void (DOMString topic, DOMString state);</code>
+
+interface PowerManager
+{
+  attribute boolean cpuSleepAllowed
+  attribute double screenBrightness
+  attribute boolean screenEnabled
+
+  void addWakeLockListener(wakeLockListener listener);
+  void factoryReset();
+  DOMString getWakeLockState(DOMString topic)
+  void powerOff();
+  void reboot();
+  void removeWakeLockListener(wakeLockListener listener);
+};</pre>
+<h2 id="Propriétés">Propriétés</h2>
+<dl>
+ <dt>
+  {{domxref("PowerManager.screenEnabled")}}</dt>
+ <dd>
+  Cette propriété est un booléen permettant de consulter ou définir l'état de l'écran de l'appareil. <code>true</code> correspond à un écran actif <code>false</code> à un écran éteint.</dd>
+ <dt>
+  {{domxref("PowerManager.screenBrightness")}}</dt>
+ <dd>
+  Cette propriété définit la luminosité du rétro-éclairage de l'écran sur une échelle de 0 (min) à 1 (max). Définir cet attribut modifie la luminosité de l'écran.</dd>
+ <dt>
+  {{domxref("PowerManager.cpuSleepAllowed")}}</dt>
+ <dd>
+  Cette propriété détermine si le processeur de l'appareil passera en veille après l'extinction de l'écran. Définir cet attribut à <code>false</code> inhibe la mise en veille du processeur de l'appareil.</dd>
+</dl>
+<h2 id="Méthodes">Méthodes</h2>
+<dl>
+ <dt>
+  {{domxref("PowerManager.addWakeLockListener()")}}</dt>
+ <dd>
+  Enregistre un gestionnaire d'événements qui sera appelé à chaque changement d'état par rapport à la mise en veille de la ressource donnée.</dd>
+ <dt>
+  {{domxref("PowerManager.factoryReset()")}}</dt>
+ <dd>
+  Appeler cette méthode reconfigure l'appareil dans sa configuration usine (toutes les données utilisateurs seront perdues).</dd>
+ <dt>
+  {{domxref("PowerManager.getWakeLockState()")}}</dt>
+ <dd>
+  Retourne l'état de verrouillage d'une ressource donnée de l'appareil.</dd>
+ <dt>
+  {{domxref("PowerManager.powerOff()")}}</dt>
+ <dd>
+  Appeler cette méthode éteint l'appareil.</dd>
+ <dt>
+  {{domxref("PowerManager.reboot()")}}</dt>
+ <dd>
+  Cette méthode éteint l'appareil et le redémarre.</dd>
+ <dt>
+  {{domxref("PowerManager.removeWakeLockListener()")}}</dt>
+ <dd>
+  Permet de retirer un gestionnaire d'événements défini précédemment avec {{domxref("PowerManager.addWakeLockListener()","addWakeLockListener")}}.</dd>
+</dl>
+<h2 id="Specification" name="Specification">Exemple</h2>
+<pre class="brush: js">var screenTimeout;
+var power = window.navigator.mozPower;
+var powerAction = {
+  unlocked: function suspendDevice() {
+    power.<code>cpuSleepAllowed = true;</code>
+    power.screenEnabled   = false;
+  },
+
+  'locked-background': function shutOffOnlyScreen() {
+    power.<code>cpuSleepAllowed = false;</code>
+    power.screenEnabled   = false;
+  }
+}
+
+function screenLockListener(topic, state) {
+  if ('screen' !== topic) return;
+
+  window.clearTimeout(screenTimeout);
+
+  if (powerAction[state]) {
+    screenTimeout = window.setTimeout(powerAction[state], 3000);
+  }
+}
+
+power.addWakeLockListener(screenLockListener);
+</pre>
+<h2 id="Specification" name="Specification">Spécification</h2>
+<p>Cette API ne fait partie d'aucune spécification.</p>
+<h2 id="Voir_aussi">Voir aussi</h2>
+<ul>
+ <li>{{ domxref("window.navigator.mozPower","navigator.mozPower") }}</li>
+ <li>{{ domxref("window.navigator.requestWakeLock()","navigator.requestWakeLock()") }}</li>
+</ul>

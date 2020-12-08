@@ -1,0 +1,69 @@
+---
+title: Faire fonctionner le code de Gaia
+slug: Archive/B2G_OS/Developing_Gaia/Faire_fonctionner_code_Gaia
+tags:
+  - B2G
+  - Contributing
+  - Firefox
+  - Firefox OS
+  - Gaia
+  - running firefox os locally
+translation_of: Archive/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase
+---
+<div class="summary">
+<p><span class="seoSummary">Cet article décrit les étapes nécessaires au lancement de Gaia en local. Il liste également les outils pouvant être utilisés.</span></p>
+</div>
+
+<p>Pour commencer, il est nécessaire de préciser qu'<strong>il n'est pas nécessaire de construire Gecko ou B2G</strong> pour contribuer à Gaia. Les seuls éléments obligatoires sont d'avoir téléchargé le code source de Gaia, de pouvoir le lancer et de pouvoir l'éditer.<br>
+ <br>
+ Voici les différentes façons dont vous pouvez lancer Gaia :</p>
+
+<ul>
+ <li>« <em>Flasher</em> » votre téléphone avec une version (<em>build</em>) de Gaia mise à jour.</li>
+ <li>Lancer Gaia depuis une version (<em>build</em>) de B2G pour ordinateur (<em>B2G Desktop</em>).</li>
+ <li>Lancer Gaia depuis WebIDE.</li>
+ <li>Lancer Gaia depuis l'outil Firefox Mulet pour lancer Gaia sur l'ordinateur.</li>
+</ul>
+
+<p>Vous trouverez des informations plus précises sur ces méthodes sur la page concernant <a href="/en-US/Firefox_OS/Developing_Gaia/Different_ways_to_run_Gaia">les différentes façons de lancer Gaia</a>. Sur cette page, vous trouverez également des liens vers plus d'informations. En général, les différentes méthodes sont ordonnées de la plus complexe (mais la plus réaliste) à la plus simple (mais moins réaliste).</p>
+
+<p>Dans cet article, nous verrons surtout comment lancer Gaia dans Firefox Mulet ou le WebIDE — pour la plupart des changements que vous souhaiterez apporter au code de Gaia, ce sera la méthode la plus rapide. En revanche, certaines fonctionnalités ne seront pas supportées (comme certaines API matérielles ainsi que les interactions avec les composants matériels du téléphone) et pour celles-ci, vous aurez besoin d'un vrai appareil.</p>
+
+<div class="note">
+<p><strong>Note </strong>: Pour recevoir plus d'aide sur Gaia, n'hésitez pas à vous rendre sur le canal IRC #gaia (voir <a href="https://wiki.mozilla.org/IRC">Mozilla IRC</a> pour plus d'informations) ainsi que sur la liste de diffusion <a href="https://lists.mozilla.org/listinfo/dev-gaia">dev-gaia</a>.</p>
+</div>
+
+<h2 id="Lancer_votre_compilation_de_Gaia">Lancer votre compilation de Gaia</h2>
+
+<ol>
+ <li>Tout d'abord, faites un <em>fork</em> du dépôt principal de <a href="https://github.com/mozilla-b2g/gaia">Gaia sur Github</a>.</li>
+ <li>Ensuite, clônez votre <em>fork</em> en local :
+  <pre class="brush: bash">git clone https://github.com/your-username/gaia.git</pre>
+ </li>
+ <li>Ajoutez une <em>remote</em> <code>upstream</code> comme ceci :
+  <pre class="brush: bash">cd gaia
+git remote add upstream https://github.com/mozilla-b2g/gaia</pre>
+ </li>
+ <li>Vous devez maintenant créer un profil de débogage  de Gaia. Lancez la commande <code>make</code> dans le répertoire de votre dépôt pour créer un profil dans le dossier <code>profile</code> (qui est réglé pour permettre un meilleur débogage). Il créera des versions hébergées (non empaquetées) des applications Gaia, qui pourront être servies directement via le serveur local HTTPD contenu dans une extension Firefox . Ainsi, quand vous effectuez un changement, il suffit juste de rafraîchir la fenêtre du navigateur pour voir le résultat (plutôt que d'avoir à reconstruire le profil, de l'envoyer à l'appareil, etc...). Cette méthode est vraiment pratique pour bidouiller rapidement du CSS/JS/HTML.</li>
+ <li>Une fois votre profil de débogage construit, vous pouvez le lancer dans <a href="/en-US/Firefox_OS/Developing_Gaia/Different_ways_to_run_Gaia#Using_Gaia_in_Firefox_Mulet">Mulet</a> ou <a href="/en-US/Firefox_OS/Developing_Gaia/Different_ways_to_run_Gaia#Using_Gaia_inside_WebIDE_with_a_Firefox_OS_Simulator">WebIDE</a>, en suivant les instructions de ces liens.</li>
+</ol>
+
+<h2 id="Dépannage_et_problèmes_connus">Dépannage et problèmes connus</h2>
+
+<h3 id="Erreur_Python_executable_python3_is_v3.x_which_is_not_supported_by_gyp.">Erreur: Python executable "python3" is v3.x, which is not supported by gyp.</h3>
+
+<p>Avec certaines distributions Linux (ex : Archlinux), la version de <code>python</code> par défaut est <code>python3</code>. Cela fait planter <code>npm</code> en lançant certaines commandes commands (ex : en lançant les tests). Pour résoudre cela une fois pour toute, vous pouvez lancer la commande suivante :</p>
+
+<pre>npm config set python python2</pre>
+
+<p>Vous pouvez jeter un œil à cette <a href="http://stackoverflow.com/questions/20454199/how-to-use-a-different-version-of-python-duing-npm-install">page Stack Overflow</a> pour d'autres solutions.</p>
+
+<p>Vous pouvez maintenant supprimer votre répertoire <code>node_modules</code> et lancer une nouvelle fois la commande ayant échoué.</p>
+
+<h3 id="Please_Install_NodeJS_--_(use_aptitude_on_linux_or_homebrew_on_osx)">Please Install NodeJS -- (use aptitude on linux or homebrew on osx)</h3>
+
+<p>Vous pouvez rencontrer cette erreur, alors que vous êtes certain d'avoir bien installé nodejs. Il est probable que vous utilisiez Debian ou une distribution basée sur Debian comme Ubuntu. Sur ces distributions, NodeJS est contenu dans le package <code>nodejs</code>, et vous devez installer le package <code>nodejs-legacy</code> pour que tout se déroule correctement :</p>
+
+<pre>sudo aptitude install nodejs-legacy</pre>
+
+<p>Si vous rencontrer des problèmes pour installer ce package, c'est surement que vous utilisez <a href="http://www.ubuntuupdates.org/ppa/chris_lea_nodejs">Le PPA pour NODE de Chris Lea</a>; veillez à le supprimer avant de continuer.</p>

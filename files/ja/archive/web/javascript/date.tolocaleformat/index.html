@@ -1,0 +1,81 @@
+---
+title: Date.prototype.toLocaleFormat()
+slug: Archive/Web/JavaScript/Date.toLocaleFormat
+tags:
+  - Date
+  - JavaScript
+  - Method
+  - Non-standard
+  - Prototype
+  - Reference
+translation_of: Archive/Web/JavaScript/Date.toLocaleFormat
+---
+<div>{{JSRef}} {{non-standard_header}}</div>
+
+<p>非標準の <strong><code>toLocaleFormat()</code></strong> メソッドは、指定した書式を用いて日付を文字列に変換します。{{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} は、標準に準拠した方法で日付をフォーマットする代替です。{{jsxref("Date.prototype.toLocaleDateString()")}} の新しいバージョンも参照してください。</p>
+
+<p><strong>この機能は Firefox 58 以降で廃止されていますので動作しません。</strong>詳細および移行方法については <a href="/ja/docs/Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat">Warning: Date.prototype.toLocaleFormat is deprecated</a> をご覧ください。</p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="syntaxbox"><var>dateObj</var>.toLocaleFormat(<var>formatString</var>)</pre>
+
+<h3 id="Parameters" name="Parameters">引数</h3>
+
+<dl>
+ <dt><code>formatString</code></dt>
+ <dd>C 言語の <a class="external" href="http://www.opengroup.org/onlinepubs/007908799/xsh/strftime.html"><code>strftime()</code></a> 関数で期待されるのと同じ書式のフォーマット文字列。</dd>
+</dl>
+
+<h3 id="Return_value" name="Return_value">戻り値</h3>
+
+<p>指定された書式を用いて与えられた日付を表す文字列。</p>
+
+<h2 id="Description" name="Description">説明</h2>
+
+<p><code>toLocaleFormat()</code> メソッドは、生成された日付または時刻の書式をソフトウェアで制御する機能を提供します。月や曜日の名前は、オペレーティングシステムのロケールを用いてローカライズされます。しかし、月日の順序や他のローカライズタスクについては、表示する順序を使用者が制御するため、自動的に扱われません。あなたは、フォーマット文字列がユーザのシステム設定によって適切にローカライズされるように気を付けなければなりません。使用されるロケールがブラウザのロケールと同じである必要がないことにも意識してください。</p>
+
+<p>拡張機能と XULRunner の開発者は、<code>chrome://<em>somedomain</em>/locale/<em>somefile.ext</em></code> URIを用いて <code>.dtd</code> や <code>.properties</code> ファイルからフォーマット文字列を読み込むのは<strong>避けなければならない</strong>ことを知っています。<code>.dtd</code>/<code>.properties</code> ファイルと <code>toLocaleFormat()</code> メソッドは同じロケールを使う必要がないためです。これは、思いがけない見かけ、または曖昧であったり読めなかったりする日付を返す結果になります。</p>
+
+<p>使用されるロケールの振る舞いはプラットフォームに依存することにも注意してください。ユーザは使用されるロケールを変更しているかもしれません。システムロケールを使用してフォーマット文字列を選ぶと、場合によっては適切でない可能性があります。より一般的な {{jsxref("Global_Objects/Date", "Date")}} オブジェクトの <code>toLocale*</code> メソッドの使用を検討してください。または、日付を独自にローカライズし、このメソッドを使う代わりに {{jsxref("Global_Objects/Date", "Date")}} オブジェクトの <code>get*</code> メソッドのいずれかを使って表示されるようにしてください。</p>
+
+<h2 id="Examples" name="Examples">例</h2>
+
+<h3 id="toLocaleFormat()_を使う"><code>toLocaleFormat()</code> を使う</h3>
+
+<pre class="brush: js example-bad">var today = new Date();
+var date = today.toLocaleFormat('%A, %B %e, %Y'); // 悪い例
+</pre>
+
+<p>この例では、<code>toLocaleFormat()</code> は "Wednesday, October 3, 2007" のような文字列を返します。この例のフォーマット文字列は適切にローカライズされていないことに注意してください。これは、上述の問題を起こします。</p>
+
+<h2 id="Polyfill" name="Polyfill">互換コード</h2>
+
+<p><a href="https://github.com/abritinthebay/datejs/wiki/Format-Specifiers">DateJS</a> ライブラリを用いた {{jsxref("Date.prototype.toLocaleDateString()")}} 互換のコード:</p>
+
+<pre class="brush: js">if (!Date.prototype.toLocaleFormat) {
+    (function() {
+        Date.prototype.toLocaleFormat = function(formatString) {
+            return this.format(formatString);
+        };
+    }());
+}</pre>
+
+<h2 id="Specifications" name="Specifications">仕様</h2>
+
+<p>仕様の一部ではありません。JavaScript 1.6 で実装。</p>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p>{{Compat("javascript.builtins.Date.toLocaleFormat")}}</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>{{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}</li>
+ <li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
+ <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
+ <li>{{jsxref("Date.prototype.toLocaleTimeString()")}}</li>
+</ul>

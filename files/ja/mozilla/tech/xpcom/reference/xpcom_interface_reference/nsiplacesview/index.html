@@ -1,0 +1,128 @@
+---
+title: nsIPlacesView
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/NsIPlacesView
+tags:
+  - Developing Mozilla
+  - Extensions
+  - Interfaces
+  - Places
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIPlacesView
+---
+<p>nsIPlacesViewインターフェイスは、ビューにとらわれずに、<a href="/ja/Displaying_Places_information_using_views" title="ja/Displaying Places information using views">Placesビュー</a>についての情報にアクセスするための<br>
+ 手段を提供します。</p>
+<p>例えば、ツリー、リスト、またはその他の類似のリストでは、選択された表現の形式が違います。コントローラーは、こういった違いに注意を払うべきではありません。生成したビューの種類に依存した、選択された表現の形式を把握するために、コントローラコードが必要とされるべきではありません。むしろ、それぞれのビューにおいて、選択した表現の形式をコントローラーが理解できる形に変換する必要があります。<code>nsIPlacesView</code>インターフェイスを実装することにより、ビューは以上の作業などを行います。</p>
+<div class="note">
+ <p><code>nsIPlacesView</code> は現在IDLが存在しません。現在、<a href="/ja/Displaying_Places_information_using_views" title="ja/Displaying Places information using views">組み込みのPlacesビュー</a>の各々に直接実装されています。</p>
+</div>
+<h2 id="Method_overview" name="Method_overview">メソッド一覧</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>nsINavHistoryResultNode[] </code><a href="#getDragableSelection()" title="#getDragableSelection()"><code>getDragableSelection</code></a><code>();</code></td>
+  </tr>
+  <tr>
+   <td><code>nsINavHistoryResultNode[][</code><code>] </code><a href="#getRemovableSelectionRanges()"><code>getRemovableSelectionRanges</code></a><code>();</code></td>
+  </tr>
+  <tr>
+   <td><code>nsINavHistoryResult </code><a href="#getResult()"><code>getResult</code></a><code>();</code></td>
+  </tr>
+  <tr>
+   <td><code>nsINavHistoryContainerResultNode </code><a href="#getResultNode()"><code>getResultNode</code></a><code>();</code></td>
+  </tr>
+  <tr>
+   <td><code>nsINavHistoryResultNode[] </code><a href="#getSelectionNodes()"><code>getSelectionNodes</code></a><code>();</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#selectAll.28.29">selectAll</a>();</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Attributes" name="Attributes">属性</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">属性</td>
+   <td class="header">型</td>
+   <td class="header">詳細</td>
+  </tr>
+  <tr>
+   <td><code>hasSelection</code></td>
+   <td><code>boolean</code></td>
+   <td>アイテムが選択されているかどうか。  <em>読み取り専用。</em></td>
+  </tr>
+  <tr>
+   <td><code>insertionPoint</code></td>
+   <td><code><a href="/ja/InsertionPoint" title="ja/InsertionPoint">InsertionPoint</a></code></td>
+   <td>
+    <p>新規アイテムの、ドロップ、貼り付け、または作成の際に挿入される位置（<code>InsertionPoint</code>型）。<em>読み取り専用。</em></p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>place</code></td>
+   <td><code>string</code></td>
+   <td>
+    <p>ビューに表示されているルートPlaceのURI（文字列型）。これはビューの更新により、動的に変更される可能性があります。<a class="internal" href="/ja/Displaying_Places_information_using_views#Connecting_a_view_to_its_data" title="ja/Displaying Places information using
+            views#Connecting a view to its data">Displaying Places information using views</a>の例を参照してください。</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>selectedNode</code></td>
+   <td><code><a href="/ja/nsINavHistoryResultNode" title="ja/nsINavHistoryResultNode">nsINavHistoryResultNode</a></code></td>
+   <td>ビュー中で選択されているノード。選択されているノードが複数ある場合、この値はnullとなります。<em>読み取り専用。</em></td>
+  </tr>
+ </tbody>
+</table>
+<p> </p>
+<h2 id="Methods" name="Methods">メソッド</h2>
+<h3 id="init.28.29" name="init.28.29">getDragableSelection()</h3>
+<p>ビューからドラッグ可能である、選択されている<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryResultNode" title="">nsINavHistoryResultNode</a></code>オブジェクトの配列を返します。</p>
+<pre class="eval">nsINavHistoryResultNode[] getDragableSelection();
+</pre>
+<h6 id="Parameters" name="Parameters">パラメータ</h6>
+<p>無し。</p>
+<h6 id="戻り値">戻り値</h6>
+<p><code>nsINavHistoryResultNode</code>オブジェクトの配列。</p>
+<h3 id="getRemovableSelection.28.29" name="getRemovableSelection.28.29">getRemovableSelectionRanges()</h3>
+<p>ビューから削除可能なnsINavHistoryResultNode オブジェクトの配列の配列を返します。内包されているそれぞれの配列は、削除されうる連続的なノードの範囲を示します。</p>
+<pre class="eval">nsINavHistoryResultNode[][] getRemovableSelectionRanges();
+</pre>
+<h6 id="Parameters" name="Parameters">パラメータ</h6>
+<p>無し。</p>
+<h6 id="Return_value_2" name="Return_value_2">戻り値</h6>
+<p><code>nsINavHistoryResultNode</code>オブジェクトの配列の配列。</p>
+<h3 id="getResult">getResult()</h3>
+<p>ビューに表示されている<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryResult" title="">nsINavHistoryResult</a></code>オブジェクトを返します。</p>
+<pre>nsINavHistoryResult getResult();
+</pre>
+<h6 id="Parameters" name="Parameters">パラメータ</h6>
+<p>無し。</p>
+<h6 id="戻り値_2">戻り値</h6>
+<p>ビューに表示されている<code>nsINavHistoryResult</code>オブジェクト。</p>
+<h3 id="getResultNode">getResultNode()</h3>
+<p>ビューの結果の、<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryContainerResultNode" title="">nsINavHistoryContainerResultNode</a></code>オブジェクトのルートノードを返します。</p>
+<pre>nsINavHistoryContainerResultNode getResultNode();
+</pre>
+<h6 id="Parameters" name="Parameters">パラメータ</h6>
+<p>無し。</p>
+<h6 id="戻り値_3">戻り値</h6>
+<p>ビューの結果の、<code>nsINavHistoryContainerResultNode</code> のルート。</p>
+<h3 id="getSelection.28.29" name="getSelection.28.29">getSelectionNodes()</h3>
+<p>ビューで現在選択されている全ての<code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryResultNode" title="">nsINavHistoryResultNode</a></code>オブジェクトの配列を返します。モデル中での現象によっては、同様のオーダー、または同様のコンテナ、同様のプロバイダであっても、ノードは必ずしも返されるというわけではありません。</p>
+<pre class="eval">nsINavHistoryResultNode[] getSelectionNodes();
+</pre>
+<h6 id="Parameters" name="Parameters">パラメータ</h6>
+<p>無し。</p>
+<h6 id="戻り値_4">戻り値</h6>
+<p>選択されている<code>nsINavHistoryResultNode</code>オブジェクトの配列。</p>
+<h3 id="selectAll.28.29" name="selectAll.28.29">selectAll()</h3>
+<p>ビューで表示されているノードを全て選択する。</p>
+<pre class="eval">void selectAll();
+</pre>
+<h6 id="Parameters" name="Parameters">パラメータ</h6>
+<p>無し。</p>
+<h3 class="editable" id="参照"><span>参照 </span></h3>
+<div class="editIcon">
+ <a href="/../../../../ja/Core_JavaScript_1.5_Reference/Global_Objects/RegExp#" style="" title="編集部分"><span class="icon"><img alt="編集部分" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+<ul>
+ <li><a href="/ja/Displaying_Places_information_using_views" title="ja/Displaying Places information using views">Displaying Places information using views</a></li>
+</ul>

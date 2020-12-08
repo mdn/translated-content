@@ -1,0 +1,84 @@
+---
+title: ValidityState
+slug: Web/API/ValidityState
+tags:
+  - API
+  - Constraint Validation API
+  - Forms
+  - HTML DOM
+  - Interface
+translation_of: Web/API/ValidityState
+---
+<div>{{APIRef("HTML DOM")}} {{gecko_minversion_header("2.0")}}</div>
+
+<p><strong><code>ValidityState</code></strong> インターフェイスは、制約の検証に関して、要素が持つことになる<em>妥当性の状態</em>を表します。要素の値が不正な場合に、なぜ検証に失敗するのかを知る手がかりにもなります。</p>
+
+<h2 id="Properties" name="Properties">プロパティ</h2>
+
+<p>下記のプロパティはどれも真偽値を返します。<code>true</code> は指定された検証が失敗したことを表します。ただし <code>valid</code> プロパティの <code>true</code> だけは、要素の値が全ての制約に適合していることを表します。</p>
+
+<dl>
+ <dt>{{domxref("ValidityState.badInput")}} {{ReadOnlyInline}}</dt>
+ <dd>入力値をブラウザが処理できないことを示す {{jsxref("Boolean")}} です。</dd>
+ <dt>{{domxref("ValidityState.customError")}} {{ReadOnlyInline}}</dt>
+ <dd>その要素のカスタム検証メッセージが、 <code>setCustomValidity()</code> メソッドによって空文字以外に設定されていることを示す {{jsxref("Boolean")}} です。</dd>
+ <dt>{{domxref("ValidityState.patternMismatch")}} {{ReadOnlyInline}}</dt>
+ <dd>値が、指定された {{htmlattrxref("pattern", "input")}} と一致しないことを示す {{jsxref("Boolean")}} です。</dd>
+ <dt>{{domxref("ValidityState.rangeOverflow")}} {{ReadOnlyInline}}</dt>
+ <dd>値が、 {{htmlattrxref("max", "input")}} 属性で指定された最大値を超えていることを示す {{jsxref("Boolean")}} です。</dd>
+ <dt>{{domxref("ValidityState.rangeUnderflow")}} {{ReadOnlyInline}}</dt>
+ <dd>値が、{{htmlattrxref("min", "input")}} 属性で指定された最小値を下回っていることを示す {{jsxref("Boolean")}} です。</dd>
+ <dt>{{domxref("ValidityState.stepMismatch")}} {{ReadOnlyInline}}</dt>
+ <dd>値が、{{htmlattrxref("step", "input")}} 属性で決められた規則に合わないことを示す {{jsxref("Boolean")}} です。(つまり、step の値で割り切れないことを表します)</dd>
+ <dt>{{domxref("ValidityState.tooLong")}} {{ReadOnlyInline}}</dt>
+ <dd>値が、{{domxref("HTMLInputElement")}} や {{domxref("HTMLTextAreaElement")}} オブジェクトの <code>maxlength</code> を超えていることを示す {{jsxref("Boolean")}} です。<br>
+ <em><strong>注:</strong> Gecko では <code>maxlength</code> より長い値はそもそも入力できないので、<code>true</code> になることは決してありません。</em></dd>
+ <dt>{{domxref("ValidityState.tooShort")}} {{ReadOnlyInline}}</dt>
+ <dd>値が、{{domxref("HTMLInputElement")}} や {{domxref("HTMLTextAreaElement")}} オブジェクトの <code>minlength</code> を下回っていることを示す {{jsxref("Boolean")}} です。</dd>
+ <dt>{{domxref("ValidityState.typeMismatch")}} {{ReadOnlyInline}}</dt>
+ <dd>値が、({{htmlattrxref("type", "input")}} が <code>email</code> や <code>url</code> の場合に)求められる構文規則に従っていないことを示す {{jsxref("Boolean")}} です。</dd>
+ <dt>{{domxref("ValidityState.valid")}} {{ReadOnlyInline}}</dt>
+ <dd>要素が全ての制約の検証に適合し、有効であることを示す {{jsxref("Boolean")}} です。</dd>
+ <dt>{{domxref("ValidityState.valueMissing")}} {{ReadOnlyInline}}</dt>
+ <dd>{{htmlattrxref("required", "input")}} 属性が指定されているのに要素の値がないことを示す {{jsxref("Boolean")}} です。</dd>
+</dl>
+
+<h2 id="Specifications" name="Specifications">仕様</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">策定状況</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{ SpecName('HTML WHATWG', 'forms.html#the-constraint-validation-api', 'ValidityState') }}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>現行の標準</td>
+  </tr>
+  <tr>
+   <td>{{ SpecName('HTML5.1', '#the-constraint-validation-api', 'ValidityState') }}</td>
+   <td>{{Spec2('HTML5.1')}}</td>
+   <td>前回のスナップショット {{SpecName('HTML5 W3C')}} から変更なし</td>
+  </tr>
+  <tr>
+   <td>{{ SpecName('HTML5 W3C', 'forms.html#the-constraint-validation-api', 'ValidityState') }}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td>このインターフェイスを含む {{SpecName('HTML WHATWG')}} の最初のスナップショット</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+
+
+
+<p>{{Compat("api.ValidityState")}}</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/HTML/HTML5/Constraint_validation">制約の検証</a></li>
+ <li><a href="/ja/docs/Web/Guide/HTML/Forms/Data_form_validation">フォームデータの検証</a></li>
+</ul>

@@ -1,0 +1,199 @@
+---
+title: ツリー
+slug: Archive/Mozilla/XUL/Tutorial/Trees
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Trees
+---
+<div class="prevnext" style="text-align: right;">
+<p><a href="/ja/docs/XUL_Tutorial:XPCOM_Examples" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:More_Tree_Features">次のページ »</a></p>
+</div>
+
+<p>XUL では、ツリーを利用して表や階層リストを作成する方法を提供しています。</p>
+
+
+
+<h3 id=".E3.83.84.E3.83.AA.E3.83.BC" name=".E3.83.84.E3.83.AA.E3.83.BC">ツリー</h3>
+
+<p>XUL の要素の中で最も複雑ものの 1 つに、<a href="ja/XUL/tree">ツリー</a>があります。 ツリーは、テキスト行を複数の列に分けて表示するために使用されます。 このとき、行はフラットに並べたり、階層を作って整理したりすることができます。 ツリーでは、利用者による行の並べ替えや、個々の列の非表示化、表示幅の変更を行う操作も可能です。 ツリーの例としては、メールアプリケーションのメッセージリストや Mozilla のブックマークウィンドウなどがあります。</p>
+
+<p>いくつかの点で、ツリーは<a href="ja/XUL/listbox">リストボックス</a>と類似しています。 どちらも複数の行と列を持った表を作成するのに利用でき、 どちらも各列に見出しをつけることができます。 また、相違点もあります。 行の入れ子は、ツリーでのみサポートされ、リストボックスではできません。 逆に、中に含むことができる内容については、リストボックスでは任意の種類のものが可能ですが、ツリーではテキストと画像のみに限られます。</p>
+
+<p>ツリーは 2 つの部分、「列のセット」と「本体」から構成されています。</p>
+
+<ul>
+ <li>列のセットは、一連の <code><a href="ja/XUL/treecol">treecol</a></code> 要素で定義されます。個々の <code>treecol</code> は 1 つの列に対応しており、ツリーの上端に見出しとして表示されることになります。</li>
+ <li>ツリー本体は、ツリーに表示されるデータを保持するもので、<code><a href="ja/XUL/treechildren">treechildren</a></code> タグによって作成されます。</li>
+</ul>
+
+<p>ツリーは、その本体が単一のウィジェットから構成されていて、それがツリー内のすべてのデータの描画を行います。 これはツリー独特の構造で、 例えばリストボックスの場合は、本体は <code><a href="ja/XUL/listitem">listitem</a></code> と <code><a href="ja/XUL/listcell">listcell</a></code> タグで指定される個々の行の集合として構成されています。 このために、ツリーでは、表示される全てのデータは、ツリービューと呼ばれる別のオブジェクトから供給されます。 具体的には、セルを実際に表示するタイミングで、ツリーのウィジェットからツリービューへ表示する内容について問い合わせが行われ、その結果がツリーへ描画されることになります。 ツリーは、実際に表示が必要な行の情報のみをビューへ問い合わせる点で効率的です。 これにより、表示中の内容に必要なデータのみを読み込むようにビューを最適化することができます。 極端な話、たとえツリーに数千の行があったとしても、ほとんどの行は表示エリアの境界の外にあって、スクロールさせない限りは見えないため、ツリーでは情報を保持しません。 このため、ツリーは行数がどれだけ増加しても、パフォーマンスの問題が発生しないスケーラブルなオブジェクトであるといえます。 ただし、ビューオブジェクトのパフォーマンスは、別途考慮する必要があります。</p>
+
+<p>ツリービューとは、<a href="ja/NsITreeView">nsITreeView</a> インターフェイスを実装したオブジェクトのことです。 このインターフェイスには 30 のプロパティと関数があるので、ツリービューを作成するためには、それらを適宜実装していくことになります。 これらの関数は、ツリーオブジェクトから、対応するデータや状態を取得するために必要に応じて呼び出されます。 例えば、<code>getCellText()</code> 関数は、ツリー中の個別のセルに対してつけるべきラベルを取得するときに呼び出されます。</p>
+
+<p>ツリービューを使用する利点としては、 対象のデータを、そのデータにおける最適な方法で保持できることや、データをその行の表示に応じてオンデマンドで読み込めることがあります。 これらによって、ツリーを利用する場合に高い柔軟性を得ることができるわけです。</p>
+
+<p>単純なツリーの場合は特にそうなのですが、ツリーごとに毎回 30 ものプロパティやメソッドを持ったツリービューを実装するのは、当然ながら非常に面倒な作業になります。 幸い、XUL には、面倒な作業のほとんどが済んでいるビューの実装が 2 つ、組み込みで用意されています。 ほとんどのツリー、特に初めてツリーを使うような場合には、この組み込みビューのどちらかを利用することになると思います。 また、必要ならビューを完全にスクラッチから実装することもできます。 その場合は、データを<a href="ja/A_re-introduction_to_JavaScript#Arrays">配列</a>や JavaScript のデータ構造として保持するか、あるいは XML ファイルから読み込むことを検討するとよいかもしれません。</p>
+
+<p>ツリーの本体全部が単一のウィジェットであるため、 通常のやり方では、個別に行や列のスタイルを変えることはできません。 これは、<a href="ja/XUL_Tutorial/List_Controls#.E8.A4.87.E6.95.B0.E5.88.97.E3.82.92.E6.8C.81.E3.81.A4.E3.83.AA.E3.82.B9.E3.83.88.E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9">リストボックス</a>のように、 個々のセルを表示するための要素が存在しないことに起因しています。 子要素を持つ代わりに、ツリー本体のすべての描画は、ビューから供給されるデータを元に行われることになります。 これは重要な点なのですが、多くの XUL 開発者がこの側面を理解するのに難儀しています。 なお、ツリーのセルの外観を変更するためには、ビュー側でいくつかのキーワードを行と列に関連付けるようにする必要があります。 そして特別な CSS 構文を使って、ツリー本体の構成部分でキーワードと対応するものについてスタイルを設定します。 これは、ある意味 CSS クラスを利用した場合と似ています。 ツリーのスタイル付けの詳細については、<a href="ja/XUL_Tutorial/Styling_a_Tree">後のセクション</a>で説明する予定です。</p>
+
+
+
+<h3 id=".E3.83.84.E3.83.AA.E3.83.BC.E9.96.A2.E9.80.A3.E3.81.AE.E8.A6.81.E7.B4.A0" name=".E3.83.84.E3.83.AA.E3.83.BC.E9.96.A2.E9.80.A3.E3.81.AE.E8.A6.81.E7.B4.A0">ツリー関連の要素</h3>
+
+<p>詳細はこの後に説明しますが、 ツリーは <code><code><a href="/ja/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code></code> 要素で作成することが可能です。 また、それ以外にツリーに表示される列の定義に関する要素が 2 つあります。</p>
+
+<dl>
+ <dt><code><a href="/ja/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code></dt>
+ <dd>ツリーの最も外側の要素です。</dd>
+ <dt><code><a href="/ja/docs/Mozilla/Tech/XUL/treecols" title="treecols">treecols</a></code></dt>
+ <dd><code><code><a href="/ja/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code></code> 要素を<span style="border-bottom: 1px dashed green;" title="placeholder">置くための場所</span>です。</dd>
+ <dt><code><a href="/ja/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code></dt>
+ <dd>ツリーの 1 つの列を宣言します。この要素には、列内のデータをどのような順で並べるかや、ユーザが列幅を変えられるかといった追加情報も指定できます。また <code><code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> 属性は常に指定しておく必要があります。Mozilla 1.8 以降で必須ではなくなりましたが、以前の Mozilla は列を並べ替えたり隠したりする際に <code><code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> によって列を識別したため必須でした。なお必須ではなくとも、列に <code><code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> を指定しておくことは良い考えだと思います。</dd>
+ <dt><code><a href="/ja/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code></dt>
+ <dd>表示される個々の行や列を含んだツリーの本体です。</dd>
+</dl>
+
+
+
+<h5 id="2_.E3.81.A4.E3.81.AE.E5.88.97.E3.82.92.E6.8C.81.E3.81.A4.E3.83.84.E3.83.AA.E3.83.BC.E3.81.AE.E4.BE.8B" name="2_.E3.81.A4.E3.81.AE.E5.88.97.E3.82.92.E6.8C.81.E3.81.A4.E3.83.84.E3.83.AA.E3.83.BC.E3.81.AE.E4.BE.8B">2 つの列を持つツリーの例</h5>
+
+<p>以下に 2 つの列を持つツリーの例を示します。</p>
+
+<p><span id="%E4%BE%8B1"><a id="%E4%BE%8B1"></a><strong>例1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_trees_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_trees_1.xul">表示</a></p>
+
+<pre>&lt;tree flex="1"&gt;
+
+  &lt;treecols&gt;
+    &lt;treecol id="nameColumn" label="Name" flex="1"/&gt;
+    &lt;treecol id="addressColumn" label="Address" flex="2"/&gt;
+  &lt;/treecols&gt;
+
+  &lt;treechildren/&gt;
+
+&lt;/tree&gt;
+</pre>
+
+<p>まず、表全体が <code><code><a href="/ja/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code></code> 要素で囲われています。 これにより、表またはツリーとして使用される部分を 1 つの要素として宣言します。 また、HTML のテーブルと同様に、ツリー内のデータは、常に行に基づいて構成されます。 そのため、列は <code><code><a href="/ja/docs/Mozilla/Tech/XUL/treecols" title="treecols">treecols</a></code></code> タグの中にまとめて指定することになります。</p>
+
+<p>ツリーには、いくつ列を追加してもかまいません。 <a href="ja/XUL_Tutorial/List_Controls">リストボックス</a>と同様に、ツリーでも列の見出し行が表示されます。 また、利用者が個々の列について表示の有無を設定できるように、ツリーの右上隅にドロップダウンメニューが表示されます。 個々の列は、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code></code> 要素により作成することができ、 見出しに表示するラベルは、この要素の <code>label</code> 属性を使用して設定できます。 また、ツリーが <span style="border-bottom: 1px dashed green;" title="flexible">伸縮可能</span>な場合、列もツリーに応じて伸縮できるように、伸縮可能に設定したいはずです。 この例では、<code>flex</code> 属性の比率に従って、2 番目の列の幅は、最初の列のおおよそ 2 倍になります。 なお、ツリーでは全ての列は <code><code><a href="/ja/docs/Mozilla/Tech/XUL/treecols" title="treecols">treecols</a></code></code> 要素内に直接置く必要があります。</p>
+
+<p>この例では、ツリーにデータを与えるためのビューが指定されていないため、 列の見出しと空のツリー本体以外は見ることはできません。 さらに表示するべきデータがないため、本体部分を見るためには、ウィンドウをリサイズする必要があります。 このツリーは伸縮可能であるため、本体も利用可能なスペースに応じて伸張します。 ツリーを伸縮可能に設定することは、ごく普通に行われています。 ツリーのデータは、表示されている情報の中でも最も重要であることが多いため、 リサイズに応じてツリーが大きくなるようにするのは有意義なことが多いからです。 しかしながら、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code></code> 要素に <code><code id="a-rows"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/rows">rows</a></code></code> 属性を設定することで、 ツリー内に、特定の行数のみを表示させるようにすることも可能です。 なお、この属性はユーザインターフェイスにおいて何行表示させるかを指定するものであり、データが何行あるかを指定するものではありません。 全体の行数はツリービューによって与えられます。 データの行数が表示行数を超える場合、利用者が残りの部分を閲覧できるようにスクロールバーが表示されます。 <code><code id="a-rows"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/rows">rows</a></code></code> 属性を指定しない場合、デフォルト値は 0 なので、データがないときは、なにも表示されません。 この場合も、ツリーを伸縮可能にしておくことで、利用できるスペースがあるときには、あわせて大きくなるようにできるため <code><code id="a-rows"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/rows">rows</a></code></code> 属性を明示的に設定する必要はありません。</p>
+
+
+
+<h3 id=".E3.82.B3.E3.83.B3.E3.83.86.E3.83.B3.E3.83.88.E3.83.84.E3.83.AA.E3.83.BC.E3.83.93.E3.83.A5.E3.83.BC" name=".E3.82.B3.E3.83.B3.E3.83.86.E3.83.B3.E3.83.88.E3.83.84.E3.83.AA.E3.83.BC.E3.83.93.E3.83.A5.E3.83.BC">コンテントツリービュー</h3>
+
+<p>ツリーに表示するデータは、XULタグではなくビューから与えられると述べたところですが、 偶然にも、組み込みのツリービューに、XUL タグからデータを取り出すような仕組みになっているものがあります。 少し混乱するかもしれませんが、 つまり組み込みビューのうちの 1 つでは、ツリーに供給するデータに関する情報を指定するために、いくつかのタグを使用できるということです。</p>
+
+<dl>
+ <dt><code><a href="/ja/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></dt>
+ <dd>ツリーの親となる単独の行と、その子孫を含んでいます。この要素は、利用者に選択されうる項目としても働きます。<code>treeitem</code> タグは、選択時に子孫も含めて選択されるように、行全体を囲みます。</dd>
+ <dt><code><a href="/ja/docs/Mozilla/Tech/XUL/treerow" title="treerow">treerow</a></code></dt>
+ <dd>ツリー中の 1 つの行に対応します。<code><code><a href="/ja/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></code> タグの中に置く必要があります。</dd>
+ <dt><code><a href="/ja/docs/Mozilla/Tech/XUL/treecell" title="treecell">treecell</a></code></dt>
+ <dd>ツリー中の 1 つのセルに対応します。この要素は、<code>treerow</code> 要素の中に置きます。</dd>
+</dl>
+
+<p>便利なことに、これらのタグは <code><code><a href="/ja/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code></code> タグの中に直接置くことができます。 これらのタグを、上に記述した順で入れ子に置いていくことで、ツリー本体に表示するデータを定義することができます。 この場合、ツリーは組み込みのツリービューを利用することになります。 このツリービューは、コンテントツリービューと呼ばれ、これらの要素で指定されたラベルと値をツリーのデータとして供給します。 つまり、ツリーで行の表示が必要になったとき、 ツリーはコンテントツリービューの <code>getCellText()</code> 関数を呼び出してセルのラベルを問い合わせ、 該当する <code><code><a href="/ja/docs/Mozilla/Tech/XUL/treecell" title="treecell">treecell</a></code></code> 要素のラベルとして設定されているデータを取得することになります。</p>
+
+<p>なお、これらの 3 つの要素は、直接表示されることはなく、 ビューが供給するデータの取得元としてのみ使用されます。 したがって、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></code> 要素と、その関連要素に対して適用可能な属性は、ほんの一握りです。 具体的には、<code><code id="a-style"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/style">style</a></code></code> 属性などの CSS プロパティを利用して外観を変えたり、 伸縮可能性 (<code><code id="a-flex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code>) や、方向 (<code><code id="a-orient"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code></code>) などボックス関連の機能を利用するようなことはできません。</p>
+
+<p>実際、ツリー固有の属性を別にすれば、 有効な属性は、セルのテキストラベルを設定するための <code><code id="a-label"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code> 属性と、画像を設定する <code><code id="a-src"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/src">src</a></code></code> 属性のみです。 なお、ツリーには、スタイルを付けたり、他の機能についての設定するために特別な方法が用意されており、 それらについては、<a href="ja/XUL_Tutorial/Styling_a_Tree">後のセクション</a>で説明する予定です。</p>
+
+<p>また、イベントについても <code><code><a href="/ja/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></code> や、その子要素へは送信されず、全て <code><code><a href="/ja/docs/Mozilla/Tech/XUL/treechildren" title="treechildren">treechildren</a></code></code> 要素へ送信されます。</p>
+
+<p><code>treeitem</code> 系の要素が、他の XUL 要素と異質であることが、XUL 開発者を混乱させる共通の原因になっています。 コンテントツリービューの本質はビューであり、単にツリーに供給するセルのデータをツリー内に置かれたタグから取得しているだけに過ぎません。 したがって、別の種類のビューを利用する場合、データは他のところから供給されるため、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></code> 系の要素はまったく必要ありません。</p>
+
+
+
+<h4 id=".E3.82.B3.E3.83.B3.E3.83.86.E3.83.B3.E3.83.88.E3.83.84.E3.83.AA.E3.83.BC.E3.83.93.E3.83.A5.E3.83.BC.E3.81.AE.E4.BE.8B" name=".E3.82.B3.E3.83.B3.E3.83.86.E3.83.B3.E3.83.88.E3.83.84.E3.83.AA.E3.83.BC.E3.83.93.E3.83.A5.E3.83.BC.E3.81.AE.E4.BE.8B">コンテントツリービューの例</h4>
+
+<p>それでは、コンテントツリービューを利用して、複数の列を持つ単純なツリーの作り方を見てみましょう。 メールメッセージのリストとして使えるものを作成してみることにします。 したがって、このリストには、送信者 (<span style="color: green;">Sender</span>) や題名 (<span style="color: green;">Subject</span>) など、複数の列を作成します。</p>
+
+<p><span id="%E4%BE%8B2"><a id="%E4%BE%8B2"></a><strong>例2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_trees_2.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_trees_2.xul">表示</a></p>
+
+<pre>&lt;tree flex="1"&gt;
+
+  &lt;treecols&gt;
+    &lt;treecol id="sender" label="Sender" flex="1"/&gt;
+    &lt;treecol id="subject" label="Subject" flex="2"/&gt;
+  &lt;/treecols&gt;
+
+  &lt;treechildren&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="joe@somewhere.com"/&gt;
+        &lt;treecell label="Top secret plans"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="mel@whereever.com"/&gt;
+        &lt;treecell label="Let's do lunch"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+  &lt;/treechildren&gt;
+
+&lt;/tree&gt;
+</pre>
+
+<div class="float-right"></div>
+
+<p>画像から明らかなように、2 つの行 (<span style="color: green;">row</span>) を持ったツリーが作成されています。</p>
+
+<p>また、このツリーは 2 つの列 (<span style="color: green;">column</span>) を持ち、 2 列目は 1 列目よりも幅が広くとられています。 通常、列は伸縮可能にすると思いますが、<code><code id="a-width"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/width">width</a></code></code> 属性により明示的に幅を指定することも可能です。 <code><code><a href="/ja/docs/Mozilla/Tech/XUL/treecol" title="treecol">treecol</a></code></code> 要素は、ツリーの列の数と同じ数を置く必要があります。 そうしないと、おかしな挙動が発生するかもしれません。</p>
+
+<p>見出し行は自動的に生成されます。 また、右上隅のボタンで、列を隠したり表示させたりすることができます。 このボタンを表示したくない場合は、ツリーに対して <code><code id="a-hidecolumnpicker"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/hidecolumnpicker">hidecolumnpicker</a></code></code> 属性を置いて、値 <code>true</code> を設定します。 このボタンを非表示にすることで、利用者が列を隠すことを抑止できます。</p>
+
+<p>各列に <code><code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> 属性を設定するようにしてください。 そうしないと、Mozilla の古いバージョンで、列の表示と非表示の切り替えが動作しません。</p>
+
+<p><code>treechildren</code> 要素は、すべての行を囲むように置きます。 その中には個々の行が置かれており、場合によって入れ子の行を含んでいることがあります。 単純なツリーでは、各行は <code><code><a href="/ja/docs/Mozilla/Tech/XUL/treeitem" title="treeitem">treeitem</a></code></code> と <code><code><a href="/ja/docs/Mozilla/Tech/XUL/treerow" title="treerow">treerow</a></code></code> 要素からなっています。 <code>treerow</code> 要素は、1 つの行に含まれるすべてのセルを囲み、<code>treeitem</code> 要素は、1 つの行と、そのすべての子孫を囲みます。 なお、入れ子になった行を持つツリーについては、<a href="ja/XUL_Tutorial/More_Tree_Features">次のセクション</a>で説明します。</p>
+
+<p>行の中には、個々のツリーのセルを置きます。 これらのセルは、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/treecell" title="treecell">treecell</a></code></code> 要素を使用して作成します。 セルのテキストは <code>label</code> 属性で与えます。 ツリーに表示されるときは、その行で最初の <code><code><a href="/ja/docs/Mozilla/Tech/XUL/treecell" title="treecell">treecell</a></code></code> 要素が、最初の列に表示される内容と対応し、 2 番目の <code><code><a href="/ja/docs/Mozilla/Tech/XUL/treecell" title="treecell">treecell</a></code></code> 要素が 2 列目に表示される内容に対応するといったように、順に対応しています。</p>
+
+<p>利用者は、マウスクリックかキーボードからのハイライト操作によって、ツリーの行を選択することができます。 シフトキーかコントロールキーを押した状態で、追加したい行をクリックすることで、複数の項目を選択することも可能です。 複数選択を無効にしたい場合は、ツリーに <code><code id="a-seltype"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/seltype">seltype</a></code></code> 属性を置いて、値 を <code>single</code> に設定します。 これにより、利用者は 1 度に 1 行しか選択できないようになります。</p>
+
+<div class="highlight">
+
+
+<h4 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AB.E3.83.84.E3.83.AA.E3.83.BC.E3.82.92.E8.BF.BD.E5.8A.A0" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AB.E3.83.84.E3.83.AA.E3.83.BC.E3.82.92.E8.BF.BD.E5.8A.A0">ファイル検索ダイアログにツリーを追加</h4>
+
+<p>それでは、ファイル検索ダイアログに検索結果の表示のためにツリーを加えてみましょう。 このツリーでは、コンテントツリービューを使用します。 <a href="ja/XUL_Tutorial/Splitters">スプリッター</a>のときに、当座の間に合わせとして、<a href="ja/XUL_Tutorial/Content_Panels">iframe</a> を置いた場所に、次のコードを加える必要があります。</p>
+
+<pre class="eval"><span class="highlightred">&lt;tree flex="1"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="name" label="Filename" flex="1"/&gt;
+    &lt;treecol id="location" label="Location" flex="2"/&gt;
+    &lt;treecol id="size" label="Size" flex="1"/&gt;
+  &lt;/treecols&gt;
+
+  &lt;treechildren&gt;
+   &lt;treeitem&gt;
+     &lt;treerow&gt;
+       &lt;treecell label="mozilla"/&gt;
+       &lt;treecell label="/usr/local"/&gt;
+       &lt;treecell label="2520 bytes"/&gt;
+     &lt;/treerow&gt;
+   &lt;/treeitem&gt;
+  &lt;/treechildren&gt;
+&lt;/tree&gt;</span>
+
+&lt;splitter collapse="before" resizeafter="grow"/&gt;
+</pre>
+
+<p>追加したツリーに「ファイル名」「場所」「サイズ」の 3 つの列が加えられています。 2 列目の幅は、2 倍の伸縮性を設定しているので、2 倍広く表示されます。 ここでは、行の情報は、とりあえず行を持った表の外観を確認するために、1 行だけを加えてあります。 現実の実装では、行の情報は、検索を実行するスクリプトによって動的に追加されるか、 検索結果のデータを保持するカスタムビューを作成することになるでしょう。</p>
+
+<p><span id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"><a id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"></a><strong>ここまでのファイル検索ダイアログの例</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-trees.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-trees.xul">表示</a></p>
+</div>
+
+<p>次のセクションでは、さらに高度なツリーの作成について学びます。</p>
+
+<div class="prevnext" style="text-align: right;">
+<p><a href="/ja/docs/XUL_Tutorial:XPCOM_Examples" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:More_Tree_Features">次のページ »</a></p>
+</div>
+
+
+
+<div class="noinclude"></div>

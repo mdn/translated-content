@@ -1,0 +1,281 @@
+---
+title: window
+slug: Mozilla/Tech/XUL/window
+translation_of: Archive/Mozilla/XUL/window
+---
+<div class="noinclude"><span class="breadcrumbs XULRef_breadcrumbs">
+ « <a href="/zh-CN/docs/XUL_Reference">XUL Reference home</a>    [
+ <a href="#Examples">示例</a> |
+ <a href="#Attributes">属性</a> |
+ <a href="#Properties">特性</a> |
+ <a href="#Methods">方法</a> |
+ <a href="#Related">相关</a> ]
+</span></div>
+
+<p>window标签用来描述一个窗口的顶级结构，在 XUL文档中，他是一个根节点。默认情况下，它里面的控件是水平排列的。作为一个box容器， <a class="internal" href="/en/XUL/box" title="en/XUL/box">box</a>的属性都可以被使用. 默认的, 窗口将有一个特定于平台的框架围绕着他。</p>
+
+<p>如果需要给窗口添加一个图标，你需要首先创建一个 icon 文件，也就是例如 <var>&lt;windowid&gt;</var><code>.ico</code> 和 <var>&lt;windowid&gt;</var><code>.xpm</code> ，然后将他们放置到 <var>项目文件夹的</var><code>/chrome/icons/default/</code> 目录下. 这里所说的的 <var>&lt;windowid&gt;</var> 是此窗口内window标签的id. 这样，您就能为每个窗口设置不同的图标了。</p>
+
+<p>如果没有将 "<span class="nowiki">chrome://global/skin/</span>"下的指定css文件引用进来, 此窗口将不能正常加载 ，有可能看不见 或者被打开的时候出现漏洞.</p>
+
+<div class="note">
+<p><strong>注意:</strong> 通过<span title="(Firefox 3.6 / Thunderbird 3.1 / Fennec 1.0)">Gecko 1.9.2</span>标记, 当一个窗口通过查看动作引起的“激活”或“失活”事件被“激活”或“失活”时，你可以侦测到。这方面的信息，请查看  <a href="/en/XUL/Events#Window_activation_events" title="https://developer.mozilla.org/en/XUL/Events#Window_activation_events">窗口激活事件</a>.</p>
+</div>
+
+<p>更多的信息请查看 <a href="/en/XUL_Tutorial/Creating_a_Window" title="en/XUL_Tutorial/Creating_a_Window">XUL tutorial</a>.</p>
+
+<dl>
+ <dt>标记属性</dt>
+ <dd><a href="#a-accelerated">accelerated</a>, <a href="#a-chromemargin">chromemargin</a>, <a href="#a-disablechrome">disablechrome</a>, <a href="#a-disablefastfind">disablefastfind</a>, <a href="#a-drawintitlebar">drawintitlebar</a>, <a href="#a-fullscreenbutton">fullscreenbutton</a>, <a href="#a-height">height</a>, <a href="#a-hidechrome">hidechrome</a>, <a href="#a-id">id</a>, <a href="#a-lightweightthemes">lightweightthemes</a>, <a href="#a-lightweightthemesfooter">lightweightthemesfooter</a>, <a href="#a-screenX">screenX</a>, <a href="#a-screenY">screenY</a>, <a href="#a-sizemode">sizemode</a>, <a href="#a-title">title</a>, <a href="#a-width">width</a>, <a href="#a-windowtype">windowtype</a></dd>
+</dl>
+
+<h3 id="Examples" name="Examples">实例</h3>
+
+<pre class="brush: xml">&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+&lt;!-- Extremely recommended to keep this css include!! --&gt;
+&lt;window id="rootWnd" title="Register Online!"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+  &lt;vbox&gt;
+    &lt;hbox&gt;
+      &lt;image src="application_form.png"/&gt;
+      &lt;description&gt;Register Online!&lt;/description&gt;
+    &lt;/hbox&gt;
+    &lt;groupbox align="start"&gt;
+      &lt;caption label="Your Information"/&gt;
+      &lt;radiogroup&gt;
+        &lt;vbox&gt;
+          &lt;hbox&gt;
+            &lt;label control="your-fname" value="Enter first name:"/&gt;
+            &lt;textbox id="your-fname" value="Johan"/&gt;
+          &lt;/hbox&gt;
+          &lt;hbox&gt;
+            &lt;label control="your-lname" value="Enter last name:"/&gt;
+            &lt;textbox id="your-lname" value="Hernandez"/&gt;
+          &lt;/hbox&gt;
+          &lt;hbox&gt;
+            &lt;button oncommand="alert('save!')"&gt;
+              &lt;description&gt;Save&lt;/description&gt;
+            &lt;/button&gt;
+          &lt;/hbox&gt;
+        &lt;/vbox&gt;
+      &lt;/radiogroup&gt;
+    &lt;/groupbox&gt;
+  &lt;/vbox&gt;
+&lt;/window&gt;
+</pre>
+
+<h3 id="Attributes" name="Attributes">标记属性</h3>
+
+<p></p><div id="a-accelerated">
+<dl><dt><code id="a-accelerated"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/accelerated">accelerated</a></code> </dt><dd>Type: <em>boolean</em></dd><dd>Set this attribute to <code>true</code> to allow hardware layer managers to accelerate the window.</dd></dl>
+</div><div id="a-activetitlebarcolor">
+
+<dl>
+ <dt>
+  <code id="a-activetitlebarcolor"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/activetitlebarcolor">activetitlebarcolor</a></code> </dt>
+ <dd>
+  Type: <em>color string</em></dd>
+ <dd>
+  Specify background color of the window's titlebar when it is active (foreground). Moreover this hides separator between titlebar and window contents. <em>This only affects Mac OS X.</em></dd>
+</dl>
+
+<p> </p>
+</div><div id="a-chromemargin">
+
+<dl> <dt><code id="a-chromemargin"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/chromemargin">chromemargin</a></code> </dt> <dd>Type: <em>margin string</em></dd> <dd>Controls the amount of chrome that should be visible on each side of the window. The specified string should contain four numbers, separated by commas, indicating the margin in pixels for the top, right, bottom, and left edges of the window, respectively. This value may be -1 to use the default margin for that side on the current platform, 0 to have no system border (that is, to extend the client area to the edge of the window), or a value greater than zero to indicate how much less than the default default width you wish the margin on that side to be. If this value turns out to be less than 0, 0 is used.</dd>
+</dl>
+</div><div id="a-disablechrome">
+
+<dl> <dt><code id="a-disablechrome"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/disablechrome">disablechrome</a></code> </dt> <dd>Type: <em>boolean</em></dd> <dd>Set this attribute to <code>true</code> to disable chrome in the window. This is used to hide chrome when showing in-browser UI such as the <code>about:addons</code> page, and causes the toolbars to be hidden, with only the tab strip (and, if currently displayed, the add-on bar) left showing.</dd> <div class="note"><strong>Note:</strong> This has no effect if the tabs on top preference is turned off.</div>
+</dl>
+</div><div id="a-disablefastfind">
+<dl><dt><code id="a-disablefastfind"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/disablefastfind">disablefastfind</a></code></dt><dd>Type: <em>boolean</em></dd><dd>Put <code>disablefastfind="true"</code> on the root element of a XUL document, which is intended to be loaded in a tab, to disable the find bar for the tab with this document. This is used to prevent the find bar from being displayed when it's not supported by the content (such as in the Add-ons manager tab).</dd></dl>
+</div><div id="a-drawintitlebar">
+
+<dl> <dt><code id="a-drawintitlebar"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/drawintitlebar">drawintitlebar</a></code> </dt> <dd>Type: <em>boolean</em></dd> <dd>If this attribute is <code>true</code>, the top of the window's content area will begin at the top edge of the title bar, instead of below the title bar. This allows the window to draw in the title bar. This is supported only from <code><a href="/en-US/docs/Mozilla/Tech/XUL/window" title="window">window</a></code> elements, and is ignored on platforms that don't support drawing into the title bar.</dd>
+</dl>
+</div><div id="a-fullscreenbutton">
+
+<dl> <dt><code id="a-fullscreenbutton"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/fullscreenbutton">fullscreenbutton</a></code> </dt> <dd>Type: <em>boolean</em></dd> <dd>Set this attribute to <code>true</code> to display a button in the window chrome to allow the user to switch the window into full screen mode. Supported on Mac OS X 10.7 Lion and later and on Windows. The window receives a "fullscreen" event once the change has been made.</dd>
+</dl>
+</div><div id="a-height">
+
+
+<dl>
+ <dt><code id="a-height"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/height">height</a></code></dt>
+ <dd>Type: <em>string</em> (representing an integer)</dd>
+ <dd>The preferred height of the element in pixels. The actual displayed height may be different if the element or its contents have a minimum or maximum height. The CSS height property may also be used.</dd>
+</dl>
+</div><div id="a-hidechrome">
+
+
+<dl>
+ <dt><code id="a-hidechrome"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/hidechrome">hidechrome</a></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>Set this attribute to <code>true</code> to have the chrome including the titlebar hidden.</dd>
+</dl>
+</div><div id="a-id">
+
+<dl>
+ <dt>
+  <code id="a-id"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></dt>
+ <dd>
+  类型: <em>元素的ID，在主窗口中必须唯一</em></dd>
+ <dd>
+  一个唯一的标识一边开发者能够定义. 你可以使用方法 <code><a href="/cn/DOM/document.getElementById" title="cn/DOM/document.getElementById">getElementById()</a></code> 或者其他 DOM 的函数并在样式表中添加对元素的引用。</dd>
+</dl>
+
+<p></p>
+</div><div id="a-inactivetitlebarcolor">
+
+
+<dl>
+ <dt><code id="a-inactivetitlebarcolor"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/inactivetitlebarcolor">inactivetitlebarcolor</a></code> </dt>
+ <dd>Type: <em>color string</em></dd>
+ <dd>Specify background color of the window's titlebar when it is inactive (background). Moreover this hides separator between titlebar and window contents. <em>This affects only on Mac OS X.</em></dd>
+</dl>
+</div><div id="a-lightweightthemes">
+
+<dl> <dt><code id="a-lightweightthemes"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/lightweightthemes">lightweightthemes</a></code> </dt> <dd>Type: <em>boolean</em></dd> <dd><code>true</code> if the window supports <a href="/en/Themes/Lightweight_themes" title="en/Themes/Lightweight themes">lightweight themes</a>, otherwise <code>false</code>.</dd>
+</dl>
+</div><div id="a-lightweightthemesfooter">
+
+<dl> <dt><code id="a-lightweightthemesfooter"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/lightweightthemesfooter">lightweightthemesfooter</a></code> </dt> <dd>Type: <em>id</em></dd> <dd>Specifies the ID of an element to which a <a href="/en/Themes/Lightweight_themes" title="en/Themes/Lightweight themes">lightweight theme</a>'s footer image will be applied.</dd>
+</dl>
+</div><div id="a-screenX">
+
+
+<dl>
+ <dt><code id="a-screenX"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/screenX">screenX</a></code></dt>
+ <dd>Type: <em>integer</em></dd>
+ <dd>The horizontal position at which the window appears on the screen.</dd>
+</dl>
+</div><div id="a-screenY">
+
+
+<dl>
+ <dt><code id="a-screenY"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/screenY">screenY</a></code></dt>
+ <dd>Type: <em>integer</em></dd>
+ <dd>The vertical position at which the window appears on the screen.</dd>
+</dl>
+</div><div id="a-sizemode">
+
+
+<dl>
+ <dt><code id="a-sizemode"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/sizemode">sizemode</a></code></dt>
+ <dd>Type: <em>one of the values below</em></dd>
+ <dd>The state of the <code><a href="/en-US/docs/Mozilla/Tech/XUL/window" title="window">window</a></code>. It can have one of the following values:</dd>
+ <dd>
+ <dl>
+  <dt><code>maximized</code></dt>
+  <dd>The window is maximized, and occupies the full size of the screen.</dd>
+  <dt><code>normal</code></dt>
+  <dd>The window appears in a normal state at the desired size.</dd>
+ </dl>
+ </dd>
+</dl>
+
+<p>This attribute is used to save and restore the state of a window (together with the <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/persist">persist</a></span></code> attribute) and for CSS styles (e.g. to hide the resizer grippy on maximized windows).</p>
+
+<div class="note"><strong>Note:</strong> When a window is minimized, the <code>sizemode</code> attribute is not updated. This is done so that if a window is closed while minimized, its persisted <code>sizemode</code> attribute wouldn't be <code>minimized</code>.</div>
+
+<p>Setting this attribute does not change the window state. Use <a href="/en-US/docs/Web/API/Window/maximize" title="The documentation about this has not yet been written; please consider contributing!"><code>window.maximize()</code></a>, <a href="/en-US/docs/Web/API/Window/restore" title="This method is currently not working, but you can use:"><code>window.restore()</code></a>, or <a href="/en-US/docs/Web/API/Window/minimize" title="The Window.minimize() method sets the window to a minimized state."><code>window.minimize()</code></a> to change the window state.</p>
+
+<p>To get the window state from JavaScript code, use <a href="/en-US/docs/Web/API/Window/windowState" title="The windowState read-only property of the Window interface returns the window's current state."><code>window.windowState</code></a>. Listen to the <a href="/en/XUL/Events#Window_events" title="en/XUL/Events#Window_events"><code>sizemodechange</code> event</a> dispatched to the DOM window to get notified when the window state changes.</p>
+
+
+</div><div id="a-title">
+
+
+<dl>
+ <dt><code id="a-title"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/title">title</a></code></dt>
+ <dd>Type: <em>string</em></dd>
+ <dd>The text to appear in the title bar of the window.</dd>
+</dl>
+</div><div id="a-width">
+
+
+<dl>
+ <dt><code id="a-width"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/width">width</a></code></dt>
+ <dd>Type: <em>string</em> (representing an integer)</dd>
+ <dd>The preferred width of the element. The value should not include a unit as all values are in pixels. The actual displayed width may be different if the element or its contents have a minimum or maximum width, or the size is adjusted by the flexibility or alignment of its parent. The CSS width property may also be used.</dd>
+</dl>
+
+
+</div><div id="a-windowtype">
+
+<dl>
+ <dt>
+  <code id="a-windowtype"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/windowtype">windowtype</a></code></dt>
+ <dd>
+  Type: <em>string</em></dd>
+ <dd>
+  Set to a string which can be used to identify the type of window. This might be used, for example, to distinguish between a browser window and an editor window. Some of Mozilla's window handling functions use this attribute to group windows of the same type together.</dd>
+</dl>
+<div class="note">
+ <p>Values for window type as found on MXR: <a href="http://mxr.mozilla.org/mozilla-release/search?string=windowtype">http://mxr.mozilla.org/mozilla-release/search?string=windowtype</a></p>
+ <p><strong>navigator:browser </strong>- Looks like if window has gBrowser it has this window type</p>
+ <p><strong>devtools:scratchpad </strong>- Scratchpad windows</p>
+ <p><strong>navigator:view-source</strong> - The view source windows</p>
+</div>
+
+<p> </p>
+</div><p></p>
+
+<h3 id="Properties" name="Properties">属性</h3>
+
+<p></p><table style="border: 1px solid rgb(204, 204, 204); margin: 0px 0px 10px 10px; padding: 0px 10px; background: rgb(238, 238, 238) none repeat scroll 0% 50%;"> <tbody> <tr> <td> <p><strong>Inherited Properties</strong><br> <small> <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/align">align</a></span></code>, , <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/allowEvents">allowEvents</a></span></code>, , <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/boxObject">boxObject</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/builder">builder</a></span></code>, , , , <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/className">className</a></span></code>, , , , , <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/collapsed">collapsed</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/contextMenu">contextMenu</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/controllers">controllers</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/database">database</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/datasources">datasources</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/dir">dir</a></span></code>, , , <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/flex">flex</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/height">height</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/hidden">hidden</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/id">id</a></span></code>, , , <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/left">left</a></span></code>, , <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/maxHeight">maxHeight</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/maxWidth">maxWidth</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/menu">menu</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/minHeight">minHeight</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/minWidth">minWidth</a></span></code>, , , , , , , <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/observes">observes</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/ordinal">ordinal</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/orient">orient</a></span></code>, , <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/pack">pack</a></span></code>, , <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/persist">persist</a></span></code>, , , , <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/ref">ref</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/resource">resource</a></span></code>, , , , , <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/statusText">statusText</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/style">style</a></span></code>, ,, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/tooltip">tooltip</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/tooltipText">tooltipText</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/top">top</a></span></code>, <code><span><a href="https://developer.mozilla.org/zh-CN/docs/XUL/Property/width">width</a></span></code></small></p> </td> </tr> </tbody>
+</table><p></p>
+
+<h3 id="Methods" name="Methods">方法</h3>
+
+<p></p><table style="border: 1px solid rgb(204, 204, 204); margin: 0px 0px 10px 10px; padding: 0px 10px; background: rgb(238, 238, 238) none repeat scroll 0% 50%;"> <tbody> <tr> <td> <p><strong>Inherited from XUL element</strong><br> <small> <span id="m-blur"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/blur">blur</a></code></span>, <span id="m-click"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/click">click</a></code></span>, <span id="m-doCommand"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/doCommand">doCommand</a></code></span>, <span id="m-focus"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/focus">focus</a></code></span>, <span id="m-getElementsByAttribute"><code><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Method/getElementsByAttribute">getElementsByAttribute</a></code></span></small></p> <p><strong>Inherited from DOM element</strong><br> <small> <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.addEventListener">addEventListener()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.appendChild">appendChild()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.dispatchEvent">dispatchEvent()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttribute">getAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttributeNode">getAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttributeNodeNS">getAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getAttributeNS">getAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getElementsByTagName">getElementsByTagName()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.getElementsByTagNameNS">getElementsByTagNameNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasAttribute">hasAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasAttributeNS">hasAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasAttributes">hasAttributes()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.hasChildNodes">hasChildNodes()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.insertBefore">insertBefore()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.isSupported">isSupported()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.normalize">normalize()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeAttribute">removeAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeAttributeNode">removeAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeAttributeNS">removeAttributeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeChild">removeChild()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.removeEventListener">removeEventListener()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.replaceChild">replaceChild()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttribute">setAttribute()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttributeNode">setAttributeNode()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttributeNodeNS">setAttributeNodeNS()</a></code>, <code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/element.setAttributeNS">setAttributeNS()</a></code></small></p> </td> </tr> </tbody>
+</table><p></p>
+
+<p>另请参阅: <a href="/en/DOM/window#Methods" title="en/DOM/window#Methods">DOM <code>window</code> object methods</a><strong> </strong></p>
+
+<h3 id="Note" name="Note">请注意</h3>
+
+<p>DTD文件如果丢失或者不可访问，而XUL文件中却引用了其中的内容，将会引起 "XML Parsing Error: undefined entity...&lt;window" 的错误。DOCTYPE声明中系统关键字后如果含有文件名，将会引起没有提示的加载失败， 而唯一的错误提示将会是在下一个XUL元素加载时出现未定义实体的错误。</p>
+
+<h3 id="Related" name="Related">关联元素</h3>
+
+<dl>
+ <dd><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/prefwindow" title="prefwindow">prefwindow</a></code>, <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/dialog" title="dialog">dialog</a></code>, <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/dialogheader" title="dialogheader">dialogheader</a></code></dd>
+</dl>
+
+<h3 id="相关的话题">相关的话题</h3>
+
+<dl>
+</dl>
+
+<h4 id="用户注意事项">用户注意事项</h4>
+
+<p>如果要更改窗口标题栏中的图标， 请参考这里： <a href="/en/Window_icons" title="en/Window_icons">Window icons</a>.</p>
+
+<p>如果要将小图标添加到地址栏和浏览器选项卡(即对话框不是弹出)，请使用下面的代码片段来使用html名称空间和链接。</p>
+
+<pre class="brush: xml">&lt;window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	xmlns:html="http://www.w3.org/1999/xhtml"&gt;
+
+&lt;!-- Icon from chrome --&gt;
+&lt;html:link rel="icon" href="chrome://myExtension/content/path/to/favicon.png"/&gt;
+
+&lt;!-- From a remote site --&gt;
+&lt;html:link rel="icon" href="http://www.mozilla.org/favicon.ico"/&gt;
+</pre>
+
+<p>由于Firefox3.6之前的代码不能正常工作 ——会出现以下提示: "Warning: XUL box for box element contained an inline link child, forcing all its children to be wrapped in a block". 如果这段代码放在window标签之间， 它将会使窗口内的所有其他控件都变得乱七八糟.而如果放在 <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/box" title="box">box</a></code> 标签之间, 窗口控件呈现反而很不错, 但是依然会引起错误。 这一问题可以如下解决:</p>
+
+<pre class="brush: xml">&lt;html:link rel="icon" href="chrome://myExtension/content/path/to/favicon.png" style="display:none"/&gt;
+</pre>
+
+<p>or</p>
+
+<pre class="brush: xml">&lt;html:head&gt;
+  &lt;html:link rel="icon" href="chrome://myExtension/content/path/to/favicon.png"/&gt;
+&lt;/html:head&gt;
+</pre>
+
+<p></p>

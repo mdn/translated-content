@@ -1,0 +1,29 @@
+---
+title: FAQ
+slug: Extensions/Thunderbird/FAQ
+tags:
+  - Add-ons
+  - Extensions
+  - 要更新
+translation_of: Mozilla/Thunderbird/Thunderbird_extensions/FAQ
+---
+<p>これは <a href="ja/Extensions/Thunderbird">Thunderbird 拡張機能</a>の開発における最も一般的な問題に対する簡単な回答集です。</p>
+<p>開発についてのドキュメントは、私たちのチュートリアルや <a href="ja/Building_a_Thunderbird_extension">Thunderbird 拡張機能の構築</a>または MozillaZine の <a href="ja/Getting_started_with_extension_development_(external)">Getting started tutorial</a>(英語) をお試しください。</p>
+<p>{{ 英語版章題("Setting up a development environment") }}</p>
+<h3 id=".E9.96.8B.E7.99.BA.E7.92.B0.E5.A2.83.E3.82.92.E3.82.BB.E3.83.83.E3.83.88.E3.82.A2.E3.83.83.E3.83.97.E3.81.99.E3.82.8B" name=".E9.96.8B.E7.99.BA.E7.92.B0.E5.A2.83.E3.82.92.E3.82.BB.E3.83.83.E3.83.88.E3.82.A2.E3.83.83.E3.83.97.E3.81.99.E3.82.8B">開発環境をセットアップする</h3>
+<p>開発の前に<a href="ja/Setting_up_extension_development_environment">拡張機能の開発環境のセットアップ</a>を読むのを忘れないでください！</p>
+<p>{{ 英語版章題("Creating a Development Profile") }}</p>
+<h4 id=".E9.96.8B.E7.99.BA.E7.94.A8.E3.83.97.E3.83.AD.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.92.E4.BD.9C.E6.88.90.E3.81.99.E3.82.8B" name=".E9.96.8B.E7.99.BA.E7.94.A8.E3.83.97.E3.83.AD.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.92.E4.BD.9C.E6.88.90.E3.81.99.E3.82.8B">開発用プロファイルを作成する</h4>
+<p>Thunderbird のナイトリービルドや拡張機能の開発は、あなたのプロファイルやメールを破壊する可能性があるため、プロファイルを分けて開発したものを実行する必要があります。新しいプロファイルを作成するには、シェル (または DOS プロンプト) を開き、次のコマンドを実行してください:</p>
+<pre>thunderbird -ProfileManager</pre>
+<p>このプロファイルの内部を調べるために、他のプロファイルよりもアクセスしやすいパスと名前にしたいでしょう。</p>
+<p>新しいプロファイルで起動するのは簡単です:</p>
+<pre>thunderbird -P "profile name"</pre>
+<p>{{ 英語版章題("Running Simultaneous Copies of Thunderbird With Different Profiles") }}</p>
+<h4 id=".E7.95.B0.E3.81.AA.E3.82.8B.E3.83.97.E3.83.AD.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.A7_Thunderbird_.E3.81.AE.E3.82.B3.E3.83.94.E3.83.BC.E3.82.92.E5.90.8C.E6.99.82.E3.81.AB.E8.B5.B7.E5.8B.95.E3.81.99.E3.82.8B" name=".E7.95.B0.E3.81.AA.E3.82.8B.E3.83.97.E3.83.AD.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.A7_Thunderbird_.E3.81.AE.E3.82.B3.E3.83.94.E3.83.BC.E3.82.92.E5.90.8C.E6.99.82.E3.81.AB.E8.B5.B7.E5.8B.95.E3.81.99.E3.82.8B">異なるプロファイルで Thunderbird のコピーを同時に起動する</h4>
+<p>Thunderbird を異なるプロファイルで起動するには、あなたの個人プロファイルで実行する Thunerbird を残したまま起動するために、次のように環境変数 <i>MOZ_NO_REMOTE</i> を設定する必要があります:</p>
+<pre>Windows: set MOZ_NO_REMOTE=1
+*nix: export MOZ_NO_REMOTE=1
+</pre>
+<p>便利な方法として、この変数をエクスポートしたシェルスクリプトやバッチファイルから Thunderbird を開発用のプロファイルで起動すると手軽に行うことができます。</p>
+<p>{{ languages( { "en": "en/Extensions/Thunderbird/FAQ" } ) }}</p>

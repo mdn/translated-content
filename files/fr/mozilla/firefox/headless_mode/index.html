@@ -1,0 +1,124 @@
+---
+title: Le mode headless
+slug: Mozilla/Firefox/Headless_mode
+tags:
+  - Automatisation
+  - Firefox
+  - Mode Headless
+  - QA
+  - node.js
+  - test
+translation_of: Mozilla/Firefox/Headless_mode
+---
+<div>{{FirefoxSidebar}}</div><p class="summary">Le mode « <em>headless</em> » permet d'utiliser Firefox mais sans afficher les éléments d'interface. Ça ne présente pas d'intérêt pour surfer sur le Web, mais cela permet de réaliser des tests automatisés. Cet article fournit les informations pertinentes pour pouvoir utiliser le mode <em>headless</em> de Firefox.</p>
+
+<h2 id="Utiliser_le_mode_headless">Utiliser le mode <em>headless</em></h2>
+
+<p>Vous pouvez démarrer Firefox dans son mode <em>headless</em> grâce à une ligne de commande incluant le drapeau (<em>flaTg</em>) <code>-headless</code>. Par exemple :</p>
+
+<pre class="brush: bash">/chemin/vers/firefox -headless</pre>
+
+<p>Pour le moment, nous n'avons pas inclus davantage d'options, mais plus seront ajoutées plus tard.</p>
+
+<p>Par exemple, nous travaillons à implémenter une option <code>--screenshot</code>, qui permettra de faire des captures d'écran depuis le mode <em>headless</em> de Firefox. Voir {{bug(1378010)}} pour suivre l'avancée.</p>
+
+<h3 id="Prise_en_charge">Prise en charge</h3>
+
+<p>Le mode <em>headless</em> de Firefox fonctionne à partir de la version 55 sur Linux et à partir de la version 56+ sur Windows et Mac.</p>
+
+<h2 id="Tests_industrialisés_à_l'aide_du_mode_headless">Tests industrialisés à l'aide du mode <em>headless</em></h2>
+
+<p>La façon la plus utile d'utiliser ce mode <em>headless</em> est de faire tourner des tests industrialisés dans Firefox. Cela signifie que vous pouvez rendre votre processus de test bien plus efficace grâce à ce mode.</p>
+
+<h3 id="Selenium">Selenium</h3>
+
+<p>Pour fournir un exemple d'utilisation du mode headless pour test industrialisés, nous allons créer un test recourant à <a href="http://www.seleniumhq.org/">Selenium</a> via <a href="https://nodejs.org/">Node.js</a> et <a>selenium-webdriver</a>. Pour cela, nous supposons que vous êtes déjà à l'aise avec les bases de Selenium, Webdriver et Node, puis que vous avez préparé un environnement de test. Si vous ne l'avez pas fait, rendez-vous sur le guide développant la <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment#Setting_up_Selenium_in_Node">mise en place d'un environnement de test</a>, puis revenez lire cette documentation.</p>
+
+<p>Tout d'abord, soyez sûr d'avoir installé Node ainsi que <code>selenium-webdriver</code> sur votre machine. Ensuite, créez un nouveau fichier nommé <code>selenium-test.js</code>.</p>
+
+<div class="note">
+<p><strong>Note :</strong> Vous pouvez également cloner ce dépôt : <a href="https://github.com/mdn/headless-examples">headless-examples</a> qui contient un fichier de <em>package</em>. Il suffit donc de lancer <code>npm install</code> afin d'installer les dépendances nécessaires.</p>
+</div>
+
+<ol>
+ <li>
+  <p>Ajouter quelques lignes de code. À l'intérieur de ce fichier, commencez en important le module principal selenium-webdriver, ainsi que le sous-module firefox :</p>
+
+  <pre class="brush: js">var webdriver = require('selenium-webdriver'),
+    By = webdriver.By,
+    until = webdriver.until;
+
+var firefox = require('selenium-webdriver/firefox');</pre>
+ </li>
+ <li>
+  <p>Puis, créez un objet <code>binary</code> qui représente Firefox Nightly et ajouter l'argument <code>-headless</code> afin qu'il puisse être lancé avec ce mode :</p>
+
+  <pre class="brush: js">var binary = new firefox.Binary(firefox.Channel.NIGHTLY);
+binary.addArguments("-headless");</pre>
+ </li>
+ <li>
+  <p>Maintenant, créez une nouvelle instance de driver utilisant Firefox et utilisez <code>setFirefoxOptions()</code> afin d'inclure une option qui spécifiera que le test devra tourner sur le Nightly channel de Firefox (cette étape n'est pas nécessaire sur Linux, mais reste utile pour utiliser les fonctions avancées de la version Nightly de Firefox sur Windows/Mac tant que celle-ci n'est pas disponible en <em>release</em>) :</p>
+
+  <pre class="brush: js">var driver = new webdriver.Builder()
+    .forBrowser('firefox')
+    .setFirefoxOptions(new firefox.Options().setBinary(binary))
+    .build();</pre>
+ </li>
+ <li>
+  <p>Il faut maintenant ajouter la ligne de code qui initiera la navigation sur la page de recherche Google :</p>
+
+  <pre class="brush: js">driver.get('https://www.google.com');
+driver.findElement(By.name('q')).sendKeys('webdriver');
+
+driver.sleep(1000).then(function() {
+  driver.findElement(By.name('q')).sendKeys(webdriver.Key.TAB);
+});
+
+driver.findElement(By.name('btnK')).click();
+
+driver.sleep(2000).then(function() {
+  driver.getTitle().then(function(title) {
+    if(title === 'webdriver - Google Search') {
+      console.log('Test passed');
+    } else {
+      console.log('Test failed');
+    }
+  });
+});
+
+driver.quit();</pre>
+ </li>
+ <li>
+  <p>Enfin, démarrez le test en utilisant la commande suivante :</p>
+
+  <pre class="brush: bash">node selenium-test</pre>
+ </li>
+</ol>
+
+<p>Et c'est tout ! Après quelques secondes, vous devriez voir apparaître le message "Test passed" sur la console</p>
+
+<p>L'article <em><a href="https://mykzilla.org/2017/08/30/headless-firefox-in-node-js-with-selenium-webdriver/">Headless Firefox in Node.js with selenium-webdriver</a></em> de Myk Melez continent d'autres conseils utiles pour créer un test industrialisé via Node.js et Selenium dans le mode <em>headless</em>.</p>
+
+<h3 id="D'autres_solutions_de_test">D'autres solutions de test</h3>
+
+<p>Slimerjs supporte Firefox sur Linux et bientôt sur Mac et Windows. Voir l'article <em><a href="https://adriftwith.me/coding/2017/04/21/headless-slimerjs-with-firefox/">Headless SlimerJS with Firefox</a></em> de Brendan Dahl pour plus détails.</p>
+
+<p>De plus, vous pourrez utiliser le mode headless de Firefox pour faire tourner des tests industrialisés développés dans la plupart des autres applications de tests, pour autant qu'elles permettent de définir une variable d'environnement.</p>
+
+<h2 id="Dépannage_et_aide_supplémentaire">Dépannage et aide supplémentaire</h2>
+
+<p>Si vous avez le moindre problème en utilisant le mode <em>headless</em>, ne vous inquiétez pas, nous sommes ici pour vous aider. Cette section a pour but de référencer toutes vos questions et les réponses que nous leur apportons.</p>
+
+<ul>
+ <li>Sur Linux, certaines bibliothèques sont nécessaires pour faire tourner le mode <em>headless</em> de Firefox, même si ce dernier ne les utilise pas directement. Voir le {{bug(1372998)}} pour suivre la résolution du problème.</li>
+</ul>
+
+<p>Si vous souhaitez poser une question à nos ingénieurs, le meilleur moyen est de se rendre sur le <a href="https://wiki.mozilla.org/IRC">canal IRC</a> <code>#headless</code> de Mozilla. Si vous êtes certain d'avoir trouvé un bug, documentez le sur la plateforme <a href="https://bugzilla.mozilla.org/">Mozilla Bugzilla</a>.</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="https://intoli.com/blog/running-selenium-with-headless-firefox/"><em>Using Selenium with Headless Firefox (on Windows)</em> (en anglais)</a> par Andre Perunicic (utilise Python)</li>
+ <li><em><a href="https://mykzilla.org/2017/08/30/headless-firefox-in-node-js-with-selenium-webdriver/">Headless Firefox in Node.js with selenium-webdriver </a></em><a href="https://mykzilla.org/2017/08/30/headless-firefox-in-node-js-with-selenium-webdriver/">(en anglais)</a> par Myk Melez</li>
+ <li><a href="https://adriftwith.me/coding/2017/04/21/headless-slimerjs-with-firefox/"><em>Headless SlimerJS with Firefox</em> (en anglais)</a> par Brendan Dahl</li>
+</ul>

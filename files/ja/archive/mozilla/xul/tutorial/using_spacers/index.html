@@ -1,0 +1,157 @@
+---
+title: スペーサーを使用する
+slug: Archive/Mozilla/XUL/Tutorial/Using_Spacers
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Using_Spacers
+---
+<p>
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Adding_HTML_Elements" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:More_Button_Features">次のページ  »</a></p>
+</div>
+<p>このセクションでは、複数の要素を作成したときに、要素間のスペースを調整する方法について学びます。
+</p><p><span id="Adding_Spacers"></span>
+</p>
+<h3 id=".E3.82.B9.E3.83.9A.E3.83.BC.E3.82.B5.E3.83.BC.E3.82.92.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B" name=".E3.82.B9.E3.83.9A.E3.83.BC.E3.82.B5.E3.83.BC.E3.82.92.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B"> スペーサーを追加する </h3>
+<p>ユーザーインターフェイスを開発する上で考慮するべき問題の 1 つとして、利用者によって使っているディスプレイが異なっているということがあります。
+高解像度の大型ディスプレイ装置を使う利用者もいれば、低解像度のものを使う利用者もいます。
+さらに、異なったプラットフォームには、ユーザーインターフェイスの点で特殊な用件を考慮する必要があるものもあります。
+また複数の言語をサポートする場合は、同じテキストでも他の言語より広いスペースが必要になるような言語があるかもしれません。
+</p><p>複数のプラットフォームや言語をサポートする必要のあるアプリケーションでは、こういった問題に配慮して、ウィンドウのレイアウトで多めにスペースを置いておくのが普通です。
+また、プラットフォームやユーザーインターフェイスのツールキットの中には、利用者に表示する内容に応じて、自動的にリサイズと再配置を行うような賢いコンポーネントを提供している物もあります。(例えば、Java で使用しているレイアウトマネージャーなどです)
+</p><p>XUL にも、要素の配置とサイズ変更を自動的に行なう機能があります。
+これまでのファイル検索ダイアログの作成作業で見てきたように、ウィンドウは内部にある要素に適した大きさで表示され、何かを追加するたびに大きくなっていきます。
+</p><p>XUL は、「ボックス・モデル」という名称のレイアウト・システムを使用しています。
+詳細については、<a href="ja/XUL_Tutorial/The_Box_Model">後のセクション</a>で触れますが、基本的にはウィンドウ上の要素を一連のボックスに所属させることで分割していき、各ボックスの位置と大きさを、開発者が定義可能な仕様に基づいて動的に変更することで最適なレイアウトを行います。
+現時点では、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> 要素がボックスのひとつであるという事だけ押さえておいてください。
+</p><p>ボックスの詳細に進む前に、レイアウトに有用な XUL 要素である、スペーサー (<code><code><a href="/ja/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code></code>) を、まずは導入しておきます。
+スペーサーは非常に単純で、例の後で説明する 1 つの属性しか必要ありません。
+最も簡単なスペーサーは以下のようになります。
+</p>
+<pre class="eval">&lt;spacer flex="1"/&gt;
+</pre>
+<p>スペーサーはウィンドウに何もないスペースを設定するのに使用します。
+スペーサーの最も有効な能力は、利用者がウィンドウのサイズを変更するのに合わせて、大きくなったり小さくなったりすることです。
+これは、ボタンをウィンドウの右端または一番下に設定する際、ウィンドウの大きさが変化しても右端または一番下から動かないようにするために使うことができます。
+後で説明しますが、複数のスペーサーを組み合わせることで、いろいろなレイアウト効果を作成できます。
+</p><p>上記の構文が示す通り、スペーサーは <code><code id="a-flex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code> という名称の属性を 1 つ持っています。
+これはスペーサーの伸縮性 (<span style="color: green;">flexibility</span>) を定義するために使用します。
+上の例では、スペーサーの <code><code id="a-flex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code> の値に 1 を設定しています。
+これにより、スペーサー要素は伸縮性のあるものになります。
+このスペーサーをウィンドウの中に直接置いた場合、ウィンドウのサイズが変化すると、合わせてスペーサーも伸縮します。
+</p><p>ファイル検索ダイアログにスペーサーを追加する作業を始める前に、まず現在のダイアログがリサイズされたらどうなるかを見てみることにします。
+</p><p><img alt="画像:springs1.jpg">
+</p><p>ファイル検索ウィンドウの大きさを変更しても、要素は最初の位置から動かない事がわかります。
+ウィンドウのスペースは広くなりましたが、移動したり大きさが変更された要素は 1 つも無いはずです。
+</p><p>次に、スペーサーをテキストボックスと Find ボタンの間に追加したら、どのように変わるかを見てみます。
+</p><p><img alt="画像:springs2.jpg">
+</p><p>スペーサーを追加してウィンドウをサイズ変更すると、スペーサーが出来たスペースを埋めるようにして拡大されるのがわかると思います。
+拡大したスペーサーに押されて、ボタンは右に移動しています。
+</p>
+<div class="highlight">
+<p><span id="Our_find_file_example"></span>
+</p>
+<h4 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AE.E4.BE.8B" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AE.E4.BE.8B"> ファイル検索ダイアログの例 </h4>
+<p>それでは、ファイル検索ダイアログの正しい位置に、スペーサーを追加しましょう。
+以下のコードのように Find ボタンの直前に挿入してください。
+</p>
+<pre class="eval"><span class="highlightred">&lt;spacer flex="1"/&gt;</span>
+
+&lt;button id="find-button" label="Find"/&gt;
+</pre>
+<p><span id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"><a id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"></a><strong>ここまでのファイル検索ダイアログの例</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-springs.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-springs.xul">表示</a>
+</p>
+</div>
+<p><span id="More_About_Flexibility"></span>
+</p>
+<h3 id=".E4.BC.B8.E7.B8.AE.E6.80.A7.E3.81.AB.E3.81.A4.E3.81.84.E3.81.A6.E3.82.82.E3.81.86.E5.B0.91.E3.81.97" name=".E4.BC.B8.E7.B8.AE.E6.80.A7.E3.81.AB.E3.81.A4.E3.81.84.E3.81.A6.E3.82.82.E3.81.86.E5.B0.91.E3.81.97"> 伸縮性についてもう少し </h3>
+<p>XUL がウィンドウ内に要素をレイアウトする時には、その要素の適切な幅と高さを計算し、もしその要素が伸縮性を持つものであればスペースを追加します。
+要素の幅と高さについての情報を指定しなければ、要素のデフォルトの大きさはその内容から決定されます。
+このことはダイアログの Cancel ボタンが、いつも中のテキストに応じた幅に設定されていることから確認できると思います。
+非常に長いラベルを持つボタンを作成すれば、そのボタンのデフォルトの大きさは、ラベル全体を保持するのに充分な大きさになるはずです。
+また、テキストボックスなどの他の要素も、それぞれ適切なデフォルトサイズを決める方法を持っています。
+</p><p><code><code id="a-flex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code> 属性は、その要素が所属するボックス (この例では、ウィンドウ) に合わせて大きさを変更可能かどうかを指定するのに使用されます。
+これまで、<code><code id="a-flex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code> 属性を、スペーサーに適用する例について説明してきましたが、実は、<code><code id="a-flex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code> 属性は他の任意の要素にも適用することが可能です。
+Find ボタンの方をリサイズさせる場合の例を示します。
+</p><p><img alt="画像:springs3.jpg">
+</p><p>画像で示すように、Find ボタンに <code><code id="a-flex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code> 属性を与えると、ウィンドウのリサイズ時にボタンもリサイズされるようになります。
+このことから、スペーサーは特別な要素でもなんでもなく、ただの隠れたボタンのようなものだと考えることも出来ます。
+スペーサーの動作は、画面に表示されるものが何も無いこと以外、ボタンとほとんど変わりません。
+</p><p>上の画像から、Find ボタンが大きくなっているだけではなく、メインラベルとボタンの間のスペースも大きくなっていることも確認できます。
+このスペースは、その前に追加したスペーサーによるものなのですが、このスペーサーもまたリサイズされています。
+注意深く見ると、ウィンドウのサイズが変化した分が、スペーサーとボタンに対して均等に分配されていることがわかると思います。
+増えたスペースの半分はスペーサーが受け取り、残りの半分はボタンが受け取っています。
+</p><p>この効果は、スペーサーと Find ボタンの双方が <code><code id="a-flex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code> 属性を持っていることから生じています。
+ボタンとスペーサーのどちらにも伸縮性があるため、両方とも同じようにサイズ変更された訳です。
+</p><p>では、ある要素を別の要素の 2 倍大きくしたいような時はどうすればいいでしょう？ <code><code id="a-flex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code> 属性の値には、1 より大きな数値を使用することもできます。
+<code><code id="a-flex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code> 属性の値は、伸縮する割合を示します。
+ある要素の <code>flex</code> が 1 で、次の要素の <code>flex</code> が 2 であれば、2 番目の要素は最初の要素の 2 倍拡大されることになります。
+要するに、<code>flex</code> が 2 であるということは、その要素の持っている伸縮性は、<code>flex</code> が 1 である要素の 2 倍であるという意味になります。
+</p><p><code><code id="a-flex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code> 属性は、要素の実際の大きさを指定している訳ではなく、
+空きスペースを子供のコンテナボックスの間に分配する方法を示しています。
+(ボックスについては後のセクションで見ていきます)。
+伸縮性の値は、子供のボックスのデフォルトサイズが確定した後に、ボックスに残った空きスペースを分配するために使用されます。
+例えば、200 ピクセルのボックスがあり、その中に伸縮性のあるボタンが 2 つあるとします。最初のボタンは 50 ピクセルで、もう一つは 90 ピクセルであるとすると、60 ピクセル分のスペースが残っているはずです。
+両方のボタンの <code>flex</code>の値が 1 である場合、スペースが分配されることにより、各ボタンに 30 ピクセル分の幅が追加されます。
+もし、2 つめのボタンの伸縮性を 2 に増やすと、最初のボタンは 20 ピクセル分の追加スペースを受け取って拡大され、2 つめのボタンは 40 ピクセル分の追加スペースを受け取ることになります。
+</p><p><code><code id="a-flex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code> 属性は、あらゆる要素に設定できますが、
+XUL ボックス中に、直接置いた要素に設定した場合のみ意味を持ちます。
+つまり、<code><code id="a-flex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code> 属性自体は、HTML 要素を含めて、何にでも設定することが可能ですが、設定した要素がボックス要素の中に無い場合は、なんの効果も発生しないという事です。
+</p><p><span id="Flex_examples"></span>
+</p>
+<h4 id="flex_.E6.8C.87.E5.AE.9A.E3.81.AE.E4.BE.8B" name="flex_.E6.8C.87.E5.AE.9A.E3.81.AE.E4.BE.8B"> flex 指定の例 </h4>
+<p>flex の指定について、いくつかの例を示します。
+</p>
+<pre class="eval">Example 1:
+  &lt;button label="Find" flex="1"/&gt;
+  &lt;button label="Cancel" flex="1"/&gt;
+
+Example 2:
+  &lt;button label="Find" flex="10"/&gt;
+  &lt;button label="Cancel" flex="1"/&gt;
+
+Example 3:
+  &lt;button label="Find" flex="2"/&gt;
+  &lt;button label="Replace"/&gt;
+  &lt;button label="Cancel" flex="4"/&gt;
+
+Example 4:
+  &lt;button label="Find" flex="2"/&gt;
+  &lt;button label="Replace" flex="2"/&gt;
+  &lt;button label="Cancel" flex="3"/&gt;
+
+Example 5:
+  &lt;html:div&gt;
+    &lt;button label="Find" flex="2"/&gt;
+    &lt;button label="Replace" flex="2"/&gt;
+  &lt;/html:div&gt;
+
+Example 6:
+  &lt;button label="Find" flex="145"/&gt;
+  &lt;button label="Replace" flex="145"/&gt;
+</pre>
+<dl><dt> Example 1 </dt><dd> この例では、伸縮性は 2 つのボタンに均等に分配されます。どちらのボタンも同じ長さでサイズが変更されます。
+</dd><dt> Example 2 </dt><dd> この例では、どちらのボタンも大きくなりますが、Find ボタンは Cancel ボタンが大きくなった分の 10 倍大きくなります。 Find ボタンは 10 倍の <code>flex</code> 値を持っているためです。 利用可能なスペースは、10 対 1 の割合で Find ボタンと 、Cancel ボタンに割り振られることになります。
+</dd><dt> Example 3 </dt><dd> この例では、2 つのボタンだけが伸縮可能なものとして設定されています。Replace ボタンの大きさが変更されることはありませんが、他の 2 つは可変です。Cancel ボタンは、<code>flex</code>の値が、Find ボタンの 2 倍大きく設定されているため、リサイズされる度合いも、常に Find ボタンの 2 倍になります。
+</dd><dt> Example 4 </dt><dd> この例では、3 つのボタン全てが伸縮可能です。Find ボタンと Replace ボタンは常に同じ大きさですが、Cancel ボタンはこれらよりやや大きく (正確には 50% 大きく) なります。
+</dd><dt> Example 5 </dt><dd> この例では、2 つのボタンが <code>div</code> 要素の中に置かれています。ボタンはボックスの中に直接あるわけではないので、伸縮性は無意味です。<code>flex</code> 属性を削除しても、何の影響もありません。
+</dd><dt> Example 6 </dt><dd> この例では、2 つのボタンの <code>flex</code> の値が同じなので、同じように伸縮します。<code>flex</code> の値を 145 の代わりに 1 にしても効果は全く変わりません。この例では違いがありませんので、読みやすくするため、もっと小さい数字を使用することを推奨します。
+</dd></dl>
+<p>伸縮性以外の、ボタンのラベルや、ボタンの最小サイズといった要因も実際のボタンのサイズに影響することに注意してください。
+例えば、ボタンはラベルの表示に必要なサイズよりも、小さく縮小されることはありません。
+</p><p><code>flex</code> の値に 0 を指定する事は、<code><code id="a-flex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code> 属性を設定しないのと同じ意味になります。
+つまり、その要素は伸縮可能ではないという事を示します。
+実際の XUL ファイルでは、<code>flex</code> 値がパーセント表記で指定されている場合もあります。
+このパーセント表記には (処理上は) 特別な意味はなく、単にパーセント記号がないものとして扱われます。
+</p><p>ファイル検索ダイアログを垂直方向にリサイズすると、ボタンがウィンドウの高さに合うようにリサイズされる事が確認できます。
+これは、全てのボタンが、ウィンドウによって暗黙に与えられた垂直方向の伸縮性を持っているためです。
+これを変更する方法については、次のセクションで説明します。
+</p><p>次のセクションでは、いくつかのボタンの追加機能について学びます。
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Adding_HTML_Elements" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:More_Button_Features">次のページ  »</a></p>
+</div>
+
+<div class="noinclude">
+</div>

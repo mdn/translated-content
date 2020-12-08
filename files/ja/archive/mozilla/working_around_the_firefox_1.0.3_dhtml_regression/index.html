@@ -1,0 +1,63 @@
+---
+title: Working around the Firefox 1.0.3 DHTML regression
+slug: Archive/Mozilla/Working_around_the_Firefox_1.0.3_DHTML_regression
+tags:
+  - DHTML
+translation_of: Archive/Mozilla/Working_around_the_Firefox_1.0.3_DHTML_regression
+---
+<h2 id="The_Problem" name="The_Problem">問題</h2>
+
+<p>以下の問題は FireFox 1.0.4 リリースで既にフィックスされています。この文書はバージョン 1.0.3 のみに適用されます。</p>
+
+<p>FireFox 1.0.3 では変更され、これは前のバージョンで適切に動作していたページ上にあらわれる以下のエラーの原因となります:</p>
+
+
+<pre>Error: uncaught exception: [Exception... "Illegal operation
+on WrappedNative prototype object"
+nsresult: "0x8057000c (NS_ERROR_XPC_BAD_OP_ON_WN_PROTO)"
+location: "JS frame :: <i>file_url</i> :: anonymous :: line 789"  data: no]
+</pre>
+
+
+<p>もし、あなたがこのエラーに遭遇した場合、解決法は 2 つあります。</p>
+
+
+<h2 id="Solution:_If_.22file_url.22_is_a_Chrome-related_file" name="Solution:_If_.22file_url.22_is_a_Chrome-related_file">解決法："file_url"はクロームに関連したファイルである場合</h2>
+
+<p>変更は FireFox 1.0.3 で実施されました。それは、いかにしてクロームから DOM の内容にアクセスするかについての変更です。これらの変更とあなたが書く必要あるコードの変更について、 <a href="/ja/docs/Safely_accessing_content_DOM_from_chrome">クロームからの DOM の内容への安全なアクセス</a>についての概要に記載されています。</p>
+
+
+<h2 id="Solution.2FWorkaround:_If_.22file_url.22_is_a_non-Chrome_.js_or_.html_file" name="Solution.2FWorkaround:_If_.22file_url.22_is_a_non-Chrome_.js_or_.html_file">解決策／動作環境："file_url"が"非クローム.js"または.html ファイルである場合</h2>
+
+<p>もしこの場合、FireFox 1.0.3 の主要なセキュリティをフィックスしている間、我々が不注意に紹介したバグの中で走らせることになります。これらのワークアラウンド(動作環境)は以下に記載します:</p>
+
+<h3 id="Gecko-based_browsers" name="Gecko-based_browsers">Geckoベースのブラウザ</h3>
+
+<pre class="brush:js">var elementProto = Element.prototype;
+
+elementProto.__proto__ = {
+  get text() { return this.firstChild.nodeValue; },
+  __proto__: elementProto.__proto__
+};
+</pre>
+
+<p><b>Note:</b> <code>get text() {...}</code> シンタックスは、非 Gecko ブラウザでは機能しません。</p>
+
+
+<h3 id="All_browsers" name="All_browsers">すべてのブラウザ</h3>
+
+<pre class="brush:js">var elementProto = Element.prototype;
+var elementGrandProto = elementProto.__proto__ = {
+  __proto__: elementProto.__proto__
+};
+
+elementGrandProto.__defineGetter__('text',
+  function () { return this.firstChild.nodeValue; }
+);</pre>
+
+
+<p><b>注記:</b> もしあなたが、あらかじめ定義されたプロトタイプの属性を上書きしようとするならば、これらの例で処理したように、その後の代わりに DOM のプロトタイプの先頭にそれらのバニラオブジェクトを置く必要があるかもしれません。この場合、すべてのブラウザに対して DOM のプロトタイプをリセットすることは注意して下さい。 ( FireFox 1.0.3 に対してだけは、ユーザエージェントと <code>Element.prototype</code> のリセットを検出する必要があります。他のブラウザは <code>__proto__</code> をサポートしません。そのため、既存のプロトタイプチェインに挿入しないで下さい)</p>
+
+
+<h2 id="For_more_information" name="For_more_information">さらなる情報</h2>
+<p>追加情報は、 <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=290777">バグ 290777</a>を参照して下さい。</p>

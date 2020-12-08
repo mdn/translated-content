@@ -1,0 +1,159 @@
+---
+title: Gaiaを実行する色々な方法
+slug: Archive/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia
+tags:
+  - B2G
+  - Firefox
+  - Firefox OS
+translation_of: Archive/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia
+---
+<div class="summary">
+<p><span class="seoSummary">Gaiaを実行するのは、WebIDE経由のsimulatorや、デスクトップ版Firefox内で直接や、専用のデスクトップビルド(デスクトップ B2G)や、エミュレータや、互換のモバイル端末で可能です。この記事ではそれぞれの方法の要約と、詳細情報へのリンクを提供します。</span></p>
+</div>
+
+<h2 id="実物にどれだけ近いか">実物にどれだけ近いか?</h2>
+
+<p dir="ltr" id="docs-internal-guid-46d8bd5f-ac65-2c23-a6c9-cc3bc3dc3cd5">この記事で詳しく述べるGaia実行用の方法は、他のものより実端末の経験に近いです。実行が簡単な順だと、次の通りです:</p>
+
+<ol dir="ltr">
+ <li>Simulator内でのGaia</li>
+ <li>B2Gデスクトップ内でのGaia</li>
+ <li>Firefox Mulet内でのGaia</li>
+ <li>エミュレータ内でのGaia</li>
+ <li>電話機に焼いたGaia</li>
+ <li>電話機に焼いたGaia+Gecko</li>
+</ol>
+
+<p>“出荷製品に近いか” の順番はこの正反対です。取り組む機能によっては、問題に合った環境を見つけないといけないでしょう。</p>
+
+<h2 id="Firefox_OS_SimulatorによってWebIDE内のGaiaを使用する">Firefox OS SimulatorによってWebIDE内のGaiaを使用する</h2>
+
+<p>最速の方法は<a href="/ja/docs/Tools/WebIDE">WebIDE</a>(デスクトップ版Firefoxで利用できる開発ツール)経由でGaiaを試す事です。これはHTML5のwebアプリをFirefox OS端末・Firefox OS Simulatorでテスト、デプロイ、デバッグするための数々の便利なツールを、ブラウザから直接に提供します。<br>
+ <br>
+ デスクトップ版 Firefox ブラウザ 34+で、WebIDE を <em>ツール &gt; Web 開発 &gt; WebIDE </em>から開きます。右上の実行メニューを開いて Simulator をインストール、起動します。</p>
+
+<p>自分の Gaia ビルドを実行するには、手順が少し複雑ですが、まだとても簡単です:</p>
+
+<ol>
+ <li>これを実行してみる前に、自身で Gaia デバイスデバッグプロファイルをビルドすべきです — 自分のGaia リポジトリクローンに移動し、 <code>DEVICE_DEBUG=1 make を実行します。これは</code>内部の Gaia アプリをすぐにデバッグできることと、加えてsimulatorを起動するごとにリモートデバッグの確認ダイアログを承認しなくてよいことを意味します。</li>
+ <li>Firefox を開きます(<a href="https://nightly.mozilla.org/">Nightly</a> 推奨)</li>
+ <li>WebIDE を <em>ツール &gt; Web 開発 &gt; WebIDE</em> から開きます。</li>
+ <li>WebIDEで<em> ランタイム &gt; シミュレータをインストール</em> を選びオプションを選択してFirefox OS Simulator をインストールします。Gaia バージョンと同じシミュレータバージョンを使っているのを確認します (例えば、あなたのGaia ブランチが 2.1 の場合、Firefox OS Simulator 2.1を使う必要があります)。</li>
+ <li>デスクトップ版Firefox に戻り <em>ツール &gt; アドオン</em> を選択します。Firefox OS Simulator 2.2 の<em>設定</em> ボタン(または自身の Gaia を組み込もうとするあらゆるバージョン)をクリックします。</li>
+ <li>設定で <em>Select a custom Gaia directory</em>をクリックし、次にGaia デバイスデバッグプロファイルのディレクトリを選択します。</li>
+ <li>WebIDE内でSimulatorを起動すると、今度はあなたの Gaia プロファイルを実行しているはずです。</li>
+</ol>
+
+<div class="note">
+<p><strong>記</strong>: シミュレータをリセットしたい場合、カスタムGaiaプロファイルはもう動作していません。Firefoxの <a href="/about:config">about:config</a>へ移動する必要があり、<code>extensions.fxos_2_2_simulator@mozilla.org.gaiaProfile</code> 設定を探し (2_2 はカスタマイズするシミュレータのバージョンによって違うかもしれません)、ダブルクリックして、出てきたダイアログボックスで空の値を入れ、OKを押します。</p>
+</div>
+
+<div class="note">
+<p><strong>記</strong>: Gaia の master ブランチは速く変わるため、時々最新発行のシミュレータがいくらか遅れをとります。master ブランチを実行しようとしていてそれが動作しないのに気づいた場合、 (この時 WebIDE は通常 "Operation timed out" のエラーメッセージを出します)、最新のnightly シミュレータ ブランチをダウンロードして、それで代用してみるべきです — <a href="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-central/">Nightly Mozilla Central</a> を見て、自身のシステムにあった <em>fxos-simulator-*.xpi</em> ファイルをダウンロードします。記憶すべきは、この nightly ビルドは機能リリースするために自動更新はしません。更新を所得したい場合、公式ビルドに戻る必要があるでしょう。</p>
+</div>
+
+<h2 id="B2G_デスクトップ">B2G デスクトップ</h2>
+
+<p>B2G デスクトップは、Firefox OS 端末で使われるアプリのランタイムのデスクトップ版で、Gaia をデスクトップコンピュータで実行できます。これはもうすぐFirefox Mulet (下記を見て)に置き換えられます(いったんMulet が十分安定した時に)。</p>
+
+<p><a href="http://nightly.mozilla.org/#Desktop%20Boot2Gecko">B2G デスクトップのnightly ビルド</a>を<a href="http://nightly.mozilla.org/">Firefox Nightly サイト</a>からダウンロードできます。 どのバージョンをターゲットにするかによって、latest-mozilla-b2g18 の特定バージョンが望まれるかもしれません。Linux (32 bit と 64 bit)や OS X や Windows用のビルドがあります。</p>
+
+<p>Nightlyビルドはgaiaの最近のバージョンでパッケージされています。いったんアーカイブをダウンロードしたら、必要なのはフォルダに展開して b2g バイナリを展開済みフォルダから実行するだけです。</p>
+
+<pre class="brush: bash">$ cd b2g
+$ ./b2g</pre>
+
+<p>あなた自身の開発用バージョンの Gaia と共にB2G を実行するには、まずあなたのクローンからのビルドプロファイルが必要です:</p>
+
+<pre class="brush: bash">$ cd /path/to/gaia
+$ DEBUG=1 DESKTOP=0 make</pre>
+
+<p>これは <code>gaia</code> ディレクトリ内に <code>profile</code> というディレクトリを生成します。<code>DEBUG</code>パートは Gaia を、デフォルトのパッケージアプリ(変更のたびに再度パッケージ化が要る)ではなく、ビルトインのwebサーバ上のホスト型アプリとして実行します。profileディレクトリへのパスは、上記コマンド実行後の最終行を見ることで見つけられて、それは次のようなものです:</p>
+
+<pre class="brush: bash">Profile Ready: please run [b2g|firefox] -profile /path/to/gaia/profile</pre>
+
+<p>B2G デスクトップを生成されたプロファイルで、このように実行できます:</p>
+
+<pre class="brush: bash">$ ./b2g /path/to/gaia/profile</pre>
+
+<p>望むなら、あなた自身の B2G デスクトップをソースからビルドできます。</p>
+
+<div class="note">
+<p><strong>記:</strong> OS Xでは、 <code>b2g</code> バイナリは B2G.app の内部にあるでしょう。このプラットフォームで B2G デスクトップを実行するには、下記のコマンドが必要となるでしょう:<br>
+ <code>./B2G.app/Contents/MacOS/b2g /path/to/gaia/profile</code></p>
+</div>
+
+<h2 id="Firefox_Mulet内のGaiaを使用する">Firefox Mulet内のGaiaを使用する</h2>
+
+<p>Firefox Muletと呼ぶFirefoxの特殊ビルド内でGaiaを実行することもできます。これには素早い開発サイクルと、標準web開発ツールやデバッガが利用できるメリットがあります。</p>
+
+<div class="note">
+<p><strong>記</strong>: Firefox Mulet は現在開発の初期段階で、たぶんバグを見つけるでしょう。それらに出くわしたら報告して下さい。</p>
+</div>
+
+<ol>
+ <li>まず最初に、 <a href="https://github.com/mozilla-b2g/gaia">Gaia</a> リポジトリを自身のマシンにクローンします (このプロジェクトに貢献したい場合、一番よい方法は<a href="https://developer.mozilla.org/ja/Firefox_OS/Developing_Gaia/Running_the_Gaia_codebase#Running_your_own_Gaia_build">Running your own Gaia build</a> を見て下さい。) Mulet は Gaia 2.2 以上だけで動作するので、master ブランチを使うのが妙案でしょう。</li>
+ <li>次に、Gaiaリポジトリに <code>cd</code> して、<code>make</code> を使って自身のプロファイルをビルドします (色々な変数の種類については <a href="/ja/Firefox_OS/Developing_Gaia/make_options_reference">make オプションのリファレンス</a>を見て下さい。)  将来的には、Mulet は複数のビルドタイプをサポートし、もっと簡単にアプリをデバッグできるツールが追加されるでしょう。 (例えば、更新をテストする場合に個々のアプリを再起動すること)</li>
+ <li>いまやnightly Firefox Mulet ビルドのダウンロードが必要です — <a href="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-central/">Mozilla Central</a> で見つかります。 Mulet ビルドは <code>firefox-*</code> で始まる名前のパッケージ、例えば <code>firefox-36.0a1.en-US.mac64.dmg</code> — となり、あなたの開発マシンに適切なビルドを選択して下さい。</li>
+ <li>いったんダウンロードすると、Mulet ビルドを Firefox Nightly ビルドを上書きしない安全な場所にインストールします。例えばMac OS Xでは、"mulet"というアプリケーションの中にフォルダを作り、そこにドラッグします。</li>
+ <li>いまや Mulet ビルドを、 開いた時に使うプロファイルとしてGaia プロファイルを渡して ( <code>-profile</code> オプションで指定) コマンドラインから実行します。例えば Mac OS Xではアプリケーションフォルダ内からこのように実行できます:
+  <pre class="brush: bash">./mulet/FirefoxNightly.app/Contents/MacOS/firefox-bin -profile /Users/my-home-folder/git/gaia/profile/</pre>
+ </li>
+</ol>
+
+<p>結果 Mulet ビルドが、次のように起動します:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/9467/mulet-screenshot.png" style="width: 800px; height: 491px; display: block; margin: 0px auto;"><br>
+ この画面で、Gaiaアプリをデバッグするために使える標準 Firefox <a href="https://developer.mozilla.org/ja/docs/Tools/Tools_Toolbox">Toolbox</a>や、更に左側に実行している Firefox OS のエミュレーションや、その他数々のGaiaコンテキストに有益なツールを入手しました。エミュレータの上のコントロールは次のことができます:</p>
+
+<ul>
+ <li>エミュレータの色々な画面サイズが選べます (これは基本的に<a href="/ja/docs/Tools/Responsive_Design_View">レスポンシブデザインビュー</a>です)。</li>
+ <li>エミュレータ画面の回転</li>
+ <li>タッチイベントシミュレーションのオン・オフ (オフの時、マウスでUIとopenアプリのドラッグはできません。)</li>
+ <li>スクリーンショットを撮る</li>
+</ul>
+
+<div class="note">
+<p><strong>記</strong>: 現在ホームボタンは動作しておらず、時には画面が不調になります。ブラウザのタブをリフレッシュする事で、この問題を回避できます。</p>
+</div>
+
+<h2 id="実端末にGaiaを書き込む">実端末にGaiaを書き込む</h2>
+
+<div class="warning">
+<p><strong>重要</strong>: Gaia をTarako や Spice Fire Oneといった低メモリ端末に書き込んでみる場合、特別に低メモリに最適化されたGaiaブランチ、例えば <a href="https://github.com/mozilla-b2g/gaia/tree/v1.3t">1.3t branch</a>を焼くべきです。低メモリ端末にGaiaのmasterブランチを焼いてみるのは、たぶん電話機が反応しない結果になるでしょう。</p>
+</div>
+
+<p dir="ltr" id="docs-internal-guid-46d8bd5f-ac6a-0884-5265-76e0fe740fa6">実端末に Gaia の新バージョンを書き込むには:</p>
+
+<ol dir="ltr">
+ <li>まずGaiaリポジトリがあなたのコンピュータにクローンされていて、 <a href="/ja/Firefox_OS/Debugging/Installing_ADB">ADB</a> がインストールされているのを確認します。</li>
+ <li><a href="/ja/Firefox_OS/Debugging/Developer_settings#Debugging_via_USB">USB経由のデバッグ</a> が有効になっているのを確認します。</li>
+ <li>端末をUSB経由でコンピュータに接続します。</li>
+ <li>端末が接続すると、下記のコマンドを処理できます。あるいは (Windows や Linux ディストリビューションのユーザは) OEM USB ドライバのページを確認して、コンピュータに正しいUSBドライバをセットアップしないといけない可能性もあります。</li>
+ <li>Gaia リポジトリで次のコマンドを実行して、電話機を再起動して Gaia ソースコードを更新します:
+  <pre class="brush: bash">$ make reset-gaia</pre>
+ </li>
+ <li>非システムアプリをテストするには、端末わ再起動することなく、次のコマンドでインストールできます:
+  <pre class="brush: bash" dir="ltr">$ make install-gaia</pre>
+ </li>
+ <li>特定アプリだけをインストールする場合、APP 変数で次のように引き渡せます:
+  <pre class="brush: bash">$ make install-gaia APP=browser</pre>
+ </li>
+</ol>
+
+<div class="note">
+<p dir="ltr"><strong>記</strong>: <code>make install-gaia</code> / <code>make reset-gaia</code> を使って端末にGaiaをプッシュすると、デフォルトで 1倍の解像度アセットのGaiaをビルドします。もっと高い解像度アセットを指定するには、makeオプションの <code>GAIA_DEV_PIXELS_PER_PX</code> or <code>GAIA_DPPX</code> を使う必要があります (このオプションについてのより詳細は<a href="/ja/Firefox_OS/Developing_Gaia/make_options_reference#High_resolution_image_assets"> 高解像度イメージアセット</a> を見て下さい)。この方法で端末に Gaia をプッシュした時は、関連の make オプションに端末のスケールファクタを付けて指定します、例えば Flame端末向けには <code>make install-gaia GAIA_DEV_PIXELS_PER_PX=1.5</code> とする (または 2, や 2.5, など; スケールファクタの値は <a href="/ja/Apps/Build/Icon_implementation_for_apps#512_icon_for_device_display">512 icon for device display</a>内の表を見て下さい。)</p>
+</div>
+
+<p dir="ltr">端末が正しくUSB接続されているか確認するには、こう打ちます:</p>
+
+<pre class="brush: bash" dir="ltr">$ adb devices</pre>
+
+<p dir="ltr">こんな結果を得るでしょう:</p>
+
+<pre class="brush: bash" dir="ltr">List of devices attached
+emulator-5554  device</pre>
+
+<h2 id="エミュレータや実機でGeckoとGaiaをビルドして使用する">エミュレータや実機でGeckoとGaiaをビルドして使用する</h2>
+
+<p>互換モバイル端末を持っていれば、<a href="/ja/docs/Mozilla/Firefox_OS/Building_and_installing_Firefox_OS" title="Mozilla/Firefox_OS/Building_and_installing_Firefox_OS">あなた独自バージョンの Firefox OSをビルド・インストール</a>できて、エミュレータ上や端末にプッシュして、これを実行できます。</p>

@@ -1,0 +1,274 @@
+---
+title: ドキュメントオブジェクトモデル
+slug: Archive/Mozilla/XUL/Tutorial/Document_Object_Model
+tags:
+  - DOM
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Document_Object_Model
+---
+<p>
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Broadcasters_and_Observers" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Modifying_a_XUL_Interface">次のページ  »</a></p>
+</div>
+<p>ドキュメントオブジェクトモデル (DOM) は、XUL 要素に対して、要素の情報を取得したり、変更を行うために使用できます。
+</p><p><span id="DOM_Introduction"></span>
+</p>
+<h3 id="DOM_.E3.81.AE.E6.A6.82.E8.A6.81" name="DOM_.E3.81.AE.E6.A6.82.E8.A6.81"> DOM の概要 </h3>
+<p><a href="ja/DOM">ドキュメントオブジェクトモデル</a> (DOM) は、XUL ノードをツリー構造で保持するために用いられます。
+XUL ファイルが読み込まれるとき、タグが解析されて、1 つのタグ、または 1 つのテキストブロックを 1 つのノードとする階層型の文書構造 (DOM 構造) に変換されます。
+また、さまざまなメソッドが DOM 構造の内容を調べたり、変更したりするために提供されており、これらを利用して目的の操作を行うことが可能です。
+さらに、一部の XUL 要素には、追加の関数が提供されており、これらを使うことも可能です。
+</p><p>個々の XUL ファイルが読み込まれたとき、対応する文書 (<span style="color: green;">document</span>) オブジェクトが、ウィンドウやフレーム内に表示するために作成されます。
+ウィンドウには、同時に 1 つの文書しか関連付けることができませんが、色々なメソッドを使って付加的な文書を読み込ませることは可能です。
+</p><p>Mozilla では、<a href="ja/JavaScript">JavaScript</a> を使って <a href="ja/DOM">DOM</a> にアクセスしたり操作したりすることが可能です。
+多くの DOM オブジェクトが、スクリプトからアクセス可能な関数を持っていますが、
+DOM が「JavaScript からアクセス可能な API のひとつである」ことは重要なので覚えておいてください。
+別の言い方をすれば、JavaScript 自身は、純粋なスクリプト言語であり、スクリプトからこれらのオブジェクトにアクセスできるのは、Mozilla がこれらのオブジェクトへのアクセス方法を提供しているからにすぎないということです。
+</p><p><a href="ja/JavaScript">JavaScript</a> では、グローバルオブジェクトが常に 1 つ存在して、いつでも利用することが可能になっています。
+このグローバルオブジェクトは、(<i>object</i>.<i>property</i> のような形式で) オブジェクト名で修飾しなくともプロパティやメソッドの参照ができます。
+例えば、このグローバルオブジェクトが 「<code>name</code>」というプロパティを持っている場合、
+<code>name</code> がどのオブジェクトに属しているかを指定しなくても、単に「<code>name = 7</code>」 というコードだけで変更することが可能です。
+ブラウザコンテキストでは、ウィンドウがグローバルオブジェクトになっており、これは XUL の場合であっても該当します。
+したがって、このグローバルオブジェクトはウィンドウごとに異なることになります。
+また、フレーム構成の場合、各フレームはそれぞれ別個のウィンドウオブジェクトを持っています。
+</p><p>また、ウィンドウは、しばしば <code><a href="ja/DOM/window.window">window</a></code> プロパティを使って参照されます。
+この指定はオプションなのですが、参照しているメソッドのスコープを明示するために、ときどき利用されます。
+例えば、以下の 2 つの行は、どちらも新しいウィンドウを開くために、同一の機能を呼び出します。
+</p>
+<pre>window.open("test.xul","_new");
+open("test.xul","_new");
+</pre>
+<p>スクリプトのトップレベルで、つまり他の関数の外部で関数や変数を宣言すると、実際にはグローバルオブジェクトのプロパティを宣言していることになります。
+XUL でも、宣言した関数は、それぞれウィンドウオブジェクトのプロパティとして設定されます。
+例えば、以下のコードは、「Message」というテキストで 2 回<a href="ja/DOM/window.alert">アラート</a>を表示します。
+</p>
+<pre>function getText(){
+  return "Message";
+}
+
+alert(getText());
+alert(window.getText());
+</pre>
+<p>このため、他のウィンドウで使用されているスクリプトの中で宣言されている変数にアクセスしたり、関数を呼び出したりするために必要なことは、そのウィンドウの <code><a href="ja/DOM/window">window</a></code> オブジェクトを使用することだけです。
+例えば、上の 2 つの例を 1 つのスクリプトファイルにまとめて、getText() 関数を、他のウィンドウ (開いた test.xul ウィンドウ) の中から呼び出したいとします。
+これは、以下のようにして行うことが可能です。
+</p>
+<pre>alert(window.opener.getText());
+</pre>
+<p>各ウィンドウには <code><a href="ja/DOM/window.opener">opener</a></code> プロパティがあり、そのウィンドウを開いたウィンドウオブジェクトを保持しています。
+この例では <code>opener</code> で、開き元のウィンドウを取得して、そこで使われているスクリプトの中で宣言された <code>getText()</code> 関数を呼び出しています。
+なお、<code>opener</code> プロパティを <code>window</code> という識別子で修飾しているのは、<code>opener</code> が、<code>window</code> のプロパティであることを明示するためであることを補足しておきます。
+</p><p><code>window</code> の <code><a href="ja/DOM/window.open">open()</a></code> メソッドは、新しいウィンドウへの参照を返すので、開き元のウィンドウからも、新しいウィンドウの関数を呼び出すことが可能です。
+しかしながら、これを利用するときに考慮するべき重要な注意事項が 1 つあります。
+それは、<code><a href="ja/DOM/window.open">open()</a></code> メソッドは、ウィンドウが完全にロードされる前に戻るために、戻った直後は、新しいウィンドウ上の関数が、まだ利用可能な状態になっていないことが多いという点です。
+</p><p>ウィンドウオブジェクトは、DOM のどの水準の仕様にも定義されていませんが、Mozilla では、しばしば、これを「<a>DOM 水準 0</a>」に含まれているとみなします。
+「DOM 水準 0」とは、一部の開発者の間で、(NN 3.0 か IE3.0 に含まれる関数で) DOM と似たコンセプトの関数ではあるものの、仕様化が及んでいないものを示すために使われていた名前です。
+ウィンドウに表示されている実際の文書は、<code><a href="ja/DOM/window">window</a></code> の <code><a href="ja/DOM/window.document">document</a></code> プロパティを使って取得できます。
+なお、<code>document</code> プロパティは、<code>window</code> の中でも最もよく参照されるプロパティの 1 つであるため、 通常は「<code>window.</code>」で修飾せずに参照します。
+</p><p>Mozilla は、文書の種類に応じて、いくつか異なる文書オブジェクトを提供しています。
+主要な文書としては、<a href="ja/HTML">HTML</a>、<a href="ja/XML">XML</a>、<a href="ja/XUL">XUL</a> の 3 つがあり、<a class="external" href="http://www.xulplanet.com/references/objref/HTMLDocument.html">HTMLDocument</a>、<a class="external" href="http://www.xulplanet.com/references/objref/XMLDocument.html">XMLDocument</a>、<a class="external" href="http://www.xulplanet.com/references/objref/XULDocument.html">XULDocument</a> が、それぞれ対応する文書オブジェクトになります。
+言うまでもないですが、最後の文書型が XUL 用です。
+これら 3 つの文書型は、類似している点が多いため、
+実際のコードについても、同一の基本実装を共有しています。
+また逆に、いずれかの文書型に固有な関数もいくつか存在しています。
+</p><p><span id="Retrieving_Elements"></span>
+</p>
+<h3 id=".E8.A6.81.E7.B4.A0.E3.81.AE.E5.8F.96.E5.BE.97" name=".E8.A6.81.E7.B4.A0.E3.81.AE.E5.8F.96.E5.BE.97"> 要素の取得 </h3>
+<p>文書中の要素を取得するためには、要素に <code><a href="ja/DOM/element.id">id</a></code> 属性を設定しておき、 <code>document</code> の <code><a href="ja/DOM/document.getElementById">getElementById()</a></code> メソッドを使うのが、最もよく利用される方法になります。
+このため、このチュートリアルでも、ファイル検索ダイアログの多くの要素に、<code><code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> 属性を設定しています。
+例えば、以下のコードによって、チェックボックスの状態を知ることができます。
+</p>
+<pre>var state = document.getElementById('casecheck').checked;
+</pre>
+<p>この、<code>casecheck</code> という値は、「case sensitive」 <a href="ja/XUL_Tutorial/Input_Controls#Checkboxes_and_Radio_Buttons">チェックボックス</a>の <code><code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> と対応しています。
+チェック状態の取得が済んだら、その結果を検索の実行をするときの指示として使用できます。
+それ以外のチェックボックス、あるいは <code><code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> 属性が設定された任意の要素についても、おおむね同じように処理することが可能です。
+例えば、テキスト入力欄から、入力されたテキストの取得が必要といった場合にも、利用できます。
+</p>
+<div class="highlight">
+<p><span id="Our_find_files_example"></span>
+</p>
+<h4 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AE.E4.BE.8B" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AE.E4.BE.8B"> ファイル検索ダイアログの例 </h4>
+<p>ファイル検索ダイアログが表示されたときに、最初から<a href="ja/XUL_Tutorial/Progress_Meters">プログレスバー</a>や、検索結果のためのダミーの<a href="ja/XUL_Tutorial/Trees">ツリーデータ</a>が表示されていても意味がありません。
+これらは、その要素を見てみるために、とりあえず追加したものです。
+今回は、これらを取り除いて、Find ボタンが押されたときに表示するように修正してみることにしましょう。
+まず、初期状態では<span style="border-bottom: 1px dashed green;" title="invisible">不可視</span>にする必要があります。
+要素を可視状態にするかどうかの制御には、<code><code id="a-hidden"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/hidden">hidden</a></code></code> 属性が使用されます。
+</p><p>プログレスメータを、<code><code id="a-hidden"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/hidden">hidden</a></code></code> を使用して、初期状態では隠されているように変更します。
+また、スクリプトから、表示したり隠したりするために参照できるように、<code><code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code> 属性も追加しておきます。
+あわせて、<a href="ja/XUL_Tutorial/Splitters">スプリッター</a>と結果ツリーも、表示する必要があるのは検索実行後だけなので、それらも隠しておくことにしましょう。
+</p>
+<pre class="eval">&lt;tree <span class="highlightred">id="results" hidden="true"</span> flex="1"&gt;
+  .
+  .
+  .
+&lt;splitter <span class="highlightred">id="splitbar"</span> resizeafter="grow" <span class="highlightred">hidden="true"</span>/&gt;
+
+&lt;hbox&gt;
+
+  &lt;progressmeter <span class="highlightred">id="progmeter"</span> value="50%"
+    style="margin: 4px;" <span class="highlightred">hidden="true"</span>/&gt;
+</pre>
+<p><code><code id="a-hidden"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/hidden">hidden</a></code></code> 属性が追加され、値は <code>true</code> に設定されています。
+これによって、要素は最初に表示されたときには隠されるようになります。
+</p><p>続いて、Find ボタンが押されたときに呼ばれる関数の追加に取りかかりましょう。
+このスクリプトは、別のファイル &lt;tt&gt;findfile.js&lt;/tt&gt; に置くことにします。
+<a href="ja/XUL_Tutorial/Adding_Event_Handlers">これまでのセクション</a>で、XUL ファイルに <code><code><a href="/ja/docs/Mozilla/Tech/XUL/script" title="script">script</a></code></code> 要素が追加されていると思います。
+もし、まだ追加していないのであれば、以下のように追加して下さい。 また、<code><code id="a-oncommand"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/oncommand">oncommand</a></code></code> ハンドラの Find ボタンへの追加も行っておきます。
+</p>
+<pre class="eval">&lt;script src="findfile.js"/&gt;
+  .
+  .
+  .
+&lt;button id="find-button" label="Find"
+   <span class="highlightred">oncommand="doFind();"</span>/&gt;
+</pre>
+<p>それでは、&lt;tt&gt;findfile.js&lt;/tt&gt; という名前のファイルを、&lt;tt&gt;findfile.xul&lt;/tt&gt; と同じディレクトリに作成してください。
+作成したファイルに <code>doFind()</code> 関数を追加します。
+なお、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/script" title="script">script</a></code></code> タグによって、コードを直接含めることも可能ではありますが、いくつかの理由によって、外部から読み込む方がパフォーマンスが高くなります。
+このため、スクリプトは、イベントハンドラに直接置かれる短い断片を除いて、常に別のファイルに置くべきだと思います。
+</p>
+<pre class="eval">function doFind(){
+  var meter = document.getElementById('progmeter');
+  meter.hidden = false;
+}
+</pre>
+<p>この関数は、まずプログレスメータの参照を、id である <code>progmeter</code> を使用して取得します。
+そして、次の行で、<code><code id="a-hidden"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/hidden">hidden</a></code></code> 属性の状態を変えるため、要素は再び可視状態になります。
+</p><p>最後に、アラートダイアログをポップアップして検索対象を表示するようにしておきます。
+もちろん、これは完成版で実現したい挙動ではありませんが、とりあえずは確認のために、起こるはずの動作を表示するように追加しておくことにします。
+</p>
+<pre class="eval">function doFind(){
+  var meter=document.getElementById('progmeter');
+  meter.hidden = false;
+  <span class="highlightred">var searchtext=document.getElementById('find-text').value;
+  alert("Searching for \"" + searchtext + "\"");</span>
+}
+</pre>
+<p>これで、アラートダイアログによって、Find ボタンをクリックしたときに何が起きるはずなのかが分かるようになります。
+ここでは割愛しますが、ドロップダウンリストから、選択内容を取得するようなコードをさらに追加していくことも可能です。
+</p><p><span id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"><a id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"></a><strong>ここまでのファイル検索ダイアログの例</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-dom.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-dom.xul">表示</a>
+</p>
+</div>
+<p><span id="XUL_Element_DOM"></span>
+</p>
+<h3 id="XUL_.E8.A6.81.E7.B4.A0.E3.81.A8_DOM" name="XUL_.E8.A6.81.E7.B4.A0.E3.81.A8_DOM"> XUL 要素と DOM </h3>
+<p>すべての XUL 要素は、それぞれ「属性」「プロパティ」「子要素」を 1 セットずつ持っています。
+</p>
+<ul><li> 属性は、ソース (XUL ファイル) で宣言されるもので、例えば「<code>flex="1"</code>」の記述は、<code><code id="a-flex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code> 属性を <code>1</code> という値で設定することを示します。
+</li><li> プロパティは、JavaScript からドット構文を使って利用するもので、例えば、「<i>element</i><code>.hidden</code>」は、要素の <code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/hidden">hidden</a></span></code></code> プロパティを参照します。
+</li><li> 子要素は要素の子タグのことで、ソースでは要素内に入れ子になっています。 </li></ul>
+<p>DOM メソッドを用いると、要素の属性、プロパティ、子要素を動的に操作することが可能です。
+</p><p>まず「属性とプロパティは別のものである」ことに注意するのは重要です。
+名前が規定された属性があることは、必ず対応する同じ名前のプロパティがあることを意味しません。
+とはいっても、多くの場合、対応するプロパティが存在するのも事実です。
+例えば、ある要素の flex の値を得るには、 <code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/flex">flex</a></span></code></code> プロパティが使えます。
+この場合、内部のコードでは、単に属性の値を返すだけですが、
+他のプロパティでは、XUL はもっと複雑な計算を行っているかもしれません。
+</p><p>下記に示すメソッドを利用して、要素の任意の属性を操作することが可能です。
+</p>
+<dl><dt> <a href="ja/DOM/element.getAttribute">getAttribute</a> ( name )
+</dt><dd> <code>name</code> で指定された名前の属性の値を返します。
+</dd><dt> <a href="ja/DOM/element.hasAttribute">hasAttribute</a> ( name )
+</dt><dd> <code>name</code> で指定された名前の属性が、値を持っていれば <code>true</code> を返します。
+</dd><dt> <a href="ja/DOM/element.setAttribute">setAttribute</a> ( name , value )
+</dt><dd> <code>name</code> で指定された名前の属性の値を、<code>value</code> で指定された値に設定します。
+</dd><dt> <a href="ja/DOM/element.removeAttribute">removeAttribute</a> ( name )
+</dt><dd> <code>name</code> で指定された名前の属性を削除します。
+</dd></dl>
+<p>これらの関数を利用すれば、いつでも属性の値を取得したり変更したりすることが可能です。
+例えば、<code><code id="a-flex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code> 属性の値を使用するためには、以下のようなコードが利用できます。
+</p>
+<pre> var box = document.getElementById('somebox');
+ var flex = box.getAttribute("flex");
+
+ var box2 = document.getElementById('anotherbox');
+ box2.setAttribute("flex", "2");
+</pre>
+<p>といっても、 <code><code id="a-flex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code> 属性に関しては、代わりに使うことのできる、<a href="ja/XUL/Property/flex">対応するスクリプトプロパティ</a>を持っています。
+これを使っても、特別な効果が追加されるわけではありませんが、少しタイピング量を少なくできます。
+以下の例は、上の例と動作は同じですが、<code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/flex">flex</a></span></code></code> プロパティを使うように変更したものです。
+</p>
+<pre> var box = document.getElementById('somebox');
+ var flex = box.flex;
+
+ var box2 = document.getElementById('anotherbox');
+ box2.flex = 2;
+</pre>
+<p>要素の参照を得ることができれば、その要素のプロパティを呼び出すことが可能です。
+例えば、ある要素の <code><code><span><a href="https://developer.mozilla.org/ja/docs/XUL/Property/hidden">hidden</a></span></code></code> プロパティを得るためには、
+<i>element</i> をその要素への参照とすると、
+<i>element</i><code>.hidden</code> という構文を用いることができます。
+リファレンスを見たとき、リストされているプロパティのほとんどは、要素間に共通する属性に関係していることに気がつくと思います。
+また、プロパティと属性で、違いがある場合ももちろんあります。
+例えば、隠されている要素に対して、<code>getAttribute("hidden")</code> を呼び出したときには、<strong><font color="green">文字列として</font></strong> <code>"true"</code> を返しますが、
+<code>hidden</code> プロパティを用いた場合は、<strong><font color="green">真偽値として</font></strong> <code>true</code> を返します。
+この場合は、型変換が済んでいるため、プロパティのほうが使いやすくなっています。
+</p><p>それぞれの文書型で同様なのですが、XUL 要素には、<a href="ja/HTML">HTML</a> 要素や <a href="ja/XML">XML</a> 要素と同様に、個別の要素オブジェクトが存在しています。
+これら全ての XUL 要素オブジェクトは、<code><a class="external" href="http://www.xulplanet.com/references/objref/XULElement.html">XULElement</a></code> インターフェイスを実装しています。 正確には「XUL 要素」とは「XUL 名前空間で宣言された要素」のこと指しています。
+このため、 XUL 要素は、他の XML 文書に加えられたときでも、<code>XULElement</code> で規定されたインターフェイスを持ち、逆に XUL でない要素を、XUL 文書に加えてもこのインターフェイスは持ちません。
+<code>XULElement</code> インターフェイスは、XUL 要素に特有のプロパティやメソッドをいくつか持っています。
+また、多くのプロパティやメソッドを、汎用の DOM Element インターフェイスから継承しています。
+</p><p>名前空間とは、要素の種別を指定する URI です。以下に例を示します。
+</p>
+<pre>&lt;button xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"/&gt;
+&lt;button xmlns="http://www.w3.org/1999/xhtml"/&gt;
+&lt;html:button xmlns:html="http://www.w3.org/1999/xhtml"/&gt;
+&lt;html:button xmlns:html="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"/&gt;
+</pre>
+<p>名前空間は <code>xmlns</code> 属性を使って指定します。
+</p>
+<ul><li> 最初のボタンは、XUL 名前空間に置かれているので、 XUL 要素です。
+</li><li> 2 番目の要素は、XHTML 名前空間が与えられているので、XHTML 要素になります。
+</li><li> 3 番目の例では、接頭辞「html」が名前空間「<span class="nowiki">http://www.w3.org/1999/xhtml</span>」にマップされています。このように、コロンをつけた接頭辞構文を使って、特定の名前空間を使うこともできます。1 つのドキュメント内に名前空間をいくつか使っていて、どの名前空間かを正確にする必要があるときに、この構文を使用します。これにより、このケースでは、XHTML ボタンが作られることになります。
+</li><li> 4 番目のボタンは少し紛らわしいものですが、重要なのは URI であって接頭辞ではないことを明確にするために示しています。この例は、接頭辞は「html」ですが、URI が、XUL 名前空間であるために、これは XUL ボタンであって、HTML ボタンではありません。
+</li></ul>
+<p>最後の例で示した、何が名前空間を決定するかを区別することは重要です。
+実際、接頭辞に用いられる実テキストは、どの種別の要素かを特定するために影響を与えません。
+</p><p>DOM では、いくつかの名前空間と関連する関数を、名前空間を意識しない関数に似せるようにして提供しています。
+例えば、<code><a href="ja/DOM/element.getAttributeNS">getAttributeNS()</a></code> 関数は、付加的な引数によって、特定の名前空間にある属性を指定可能であること以外は、<code><a href="ja/DOM/element.getAttribute">getAttribute()</a></code> 関数と類似しています。
+</p><p>多くの XUL 要素は、その要素に固有な独自のプロパティを持っています。
+各要素で使用可能な属性やプロパティの完全なガイドには、<a href="ja/XUL_Reference">XUL リファレンス</a>を参照してください。
+</p><p><span id="Navigating_the_DOM"></span>
+</p>
+<h3 id="DOM_.E3.81.AE.E6.AD.A9.E3.81.8D.E6.96.B9" name="DOM_.E3.81.AE.E6.AD.A9.E3.81.8D.E6.96.B9"> DOM の歩き方 </h3>
+<p>DOM は、単一のルートノードが、複数の子を持つ形式の、ツリー構造になっています。
+ルートノードへの参照は、<code>document</code> の <code><a href="ja/DOM/document.documentElement">documentElement</a></code> プロパティを使って取得することが可能です。
+このルートノードは常に要素ですが、ツリーの中の他のノードはそうであるとは限りません。
+ツリーの中の要素は、XUL ソース中のタグと対応していますが、ツリーの中には、テキストノードや、コメントノードなど、他のタイプもいくつか見ることができます。
+XUL の場合、ルート要素は、XUL 文書の <code><code><a href="/ja/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> タグになります。
+また、ツリーの中の各ノードには、子ノードを持っているものがあり、その子ノードにも、さらにそれぞれの子ノードを持っているものもあります。
+このように、DOM はツリー構造であるため、いくつかのプロパティを使ってツリーの中を歩きまわることができます。
+よく使われるメソッドを以下に示します。
+</p>
+<dl><dt> <a href="ja/DOM/element.firstChild">firstChild</a> </dt><dd> ノードの最初の子ノードへの参照です。
+</dd><dt> <a href="ja/DOM/element.lastChild">lastChild</a> </dt><dd> ノードの最後の子ノードへの参照です。
+</dd><dt> <a href="ja/DOM/element.childNodes">childNodes</a> </dt><dd> ノードの子のリストを保持しています。
+</dd><dt> <a href="ja/DOM/element.parentNode">parentNode</a> </dt><dd> ノードの親ノードへの参照です。
+</dd><dt> <a href="ja/DOM/element.nextSibling">nextSibling</a> </dt><dd> ノードの兄弟ノードの順序で、次のノードへの参照です。
+</dd><dt> <a href="ja/DOM/element.previousSibling">previousSibling</a> </dt><dd> ノードの兄弟ノードの順序で、前のノードへの参照です。
+</dd></dl>
+<p>これらのプロパティを利用して、様々な方法で文書内を歩き回ることができます。
+例えば、<code><a href="ja/DOM/element.firstChild">firstChild</a></code> プロパティを使って要素の最初の子を取得し、それから <code><a href="ja/DOM/element.nextSibling">nextSibling</a></code> プロパティを使って、子ノードの間を歩いていくことが可能です。
+あるいは、同じことを <code><a href="ja/DOM/element.childNodes">childNodes</a></code> リストの項目を繰り返し処理することでも行えます。
+なお、Mozilla では、後者のほうが効率がよくなります。
+</p><p>以下の例は、ルートノードの子ノードに繰り返し処理を行う方法を示しています。
+</p>
+<pre>var childNodes = document.documentElement.childNodes;
+for (var i = 0; i &lt; childNodes.length; i++) {
+  var child = childNodes[i];
+  // do something with child
+}
+</pre>
+<p>この、<code>childNodes</code> 変数は、文書のルート要素の子ノードを保持しています。
+それから、子ノードに対して繰り返し処理するために for ループを使用し、各項目には配列のようにアクセスしています。
+</p><p><small>関連ページ: <a href="ja/A_re-introduction_to_JavaScript">JavaScript 再入門</a>、<a href="ja/Core_JavaScript_1.5_Reference">JavaScript リファレンス</a></small> </p><p>次のセクションでは、 DOM の変更の仕方について学びます。
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Broadcasters_and_Observers" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Modifying_a_XUL_Interface">次のページ  »</a></p>
+</div>
+<p><br>
+</p>
+<div class="noinclude">
+</div>

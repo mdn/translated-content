@@ -1,0 +1,108 @@
+---
+title: DOM Interfaces
+slug: Archive/Mozilla/XBL/XBL_1.0_Reference/DOM_Interfaces
+tags:
+  - XBL
+translation_of: Archive/Mozilla/XBL/XBL_1.0_Reference/DOM_Interfaces
+---
+<p> </p>
+<h2 id="DocumentXBL_.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.95.E3.82.A7.E3.83.BC.E3.82.B9" name="DocumentXBL_.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.95.E3.82.A7.E3.83.BC.E3.82.B9">DocumentXBL インタフェース</h2>
+<p><code>DocumentXBL</code> インタフェースは、バインディングドキュメントを読み込んだり、取得したりするためのメソッドを含んでいます。このインタフェースは XBL をサポートする DOM ドキュメントによって実装されています。</p>
+<h3 id="IDL_.E5.AE.9A.E7.BE.A9" name="IDL_.E5.AE.9A.E7.BE.A9">IDL 定義</h3>
+<pre>interface DocumentXBL {
+  NodeList getAnonymousNodes(in Element elt);
+  Element getAnonymousElementByAttribute(in Element elt,
+                                         in DOMString attrName,
+                                         in DOMString attrValue);
+  /* 実装されていません
+  void addBinding(in Element elt,
+                  in DOMString bindingURL);
+  void removeBinding(in Element elt,
+                      in DOMString bindingURL);
+  */
+
+  Element getBindingParent(in Node node);
+  Document loadBindingDocument(in DOMString documentURL);
+};
+</pre>
+<h3 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89">メソッド</h3>
+<h4 id="getAnonymousNodes" name="getAnonymousNodes">getAnonymousNodes</h4>
+<p><code>getAnonymousNodes メソッドは、指定された要素の全ての無名子要素を取得します。</code></p>
+<ul>
+  <li><i>引数</i>
+    <ul>
+      <li><code>elt</code> - 無名子要素の取得対象となる要素。</li>
+    </ul>
+  </li>
+  <li><i>戻り値</i>
+    <ul>
+      <li><code>NodeList</code> - The return value of <code>getAnonymousNodes</code> is a <code>NodeList</code> that represents the anonymous children of an element after insertion points and element tags have been applied.This means that, depending on the details regarding the insertion points of the binding, it's possible that some non-anonymous nodes appear in the list. See <a class="external" href="http://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/d89ed07aea746c50" title="http://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/d89ed07aea746c50">"Not so anonymous nodes" on mozilla.dev.platform</a> for some discussion about this.</li>
+    </ul>
+  </li>
+</ul>
+<h4 id="getAnonymousElementByAttribute" name="getAnonymousElementByAttribute">getAnonymousElementByAttribute</h4>
+<p>The <code>getAnonymousElementByAttribute</code> methods retrieves an anonymous decendant with a specified attribute value. Typically used with an (arbitary) <code>anonid</code> attribute to retrieve a specific anonymous child in an XBL binding.</p>
+<ul>
+  <li><i>引数</i>
+    <ul>
+      <li><code>elt</code> - The element to retrieve anonymous children for.</li>
+      <li><code>attrName</code> - The attribute name to look up.</li>
+      <li><code>attrValue</code> - The attribute value to match.</li>
+    </ul>
+  </li>
+  <li><i>戻り値</i>
+    <ul>
+      <li><code>Element</code> - The return value of <code>getAnonymousElementByAttribute</code> is an anonymous decendant of the given element with matching attribute name and value.</li>
+    </ul>
+  </li>
+</ul>
+<h4 id="addBinding" name="addBinding">addBinding</h4>
+<p><em>実装されていません</em> The <code>addBinding</code> method attaches the specified binding (and any bindings that the binding inherits from) to an element. This call is not necessarily synchronous. The binding may not be attached yet when the call completes. See <a href="ja/XBL/XBL_1.0_Reference/Binding_Attachment_and_Detachment#Attachment_using_the_DOM">here</a> for more information.</p>
+<ul>
+  <li><i>引数</i>
+    <ul>
+      <li><code>elt</code> - The element to attach a binding to.</li>
+      <li><code>bindingURL</code> of type <code>DOMString</code> - A URI that specifies the location of a specific binding to attach.</li>
+    </ul>
+  </li>
+  <li><i>戻り値なし</i></li>
+</ul>
+<h4 id="removeBinding" name="removeBinding">removeBinding</h4>
+<p><em>実装されていません</em> The <code>removeBinding</code> method detaches the specified binding (and any bindings that the binding inherits from explicitly using the <code>extends</code> attribute) from the element. See <a href="ja/XBL/XBL_1.0_Reference/Binding_Attachment_and_Detachment#The_bindingdetached_Event">here</a> for more information.</p>
+<ul>
+  <li><i>引数</i>
+    <ul>
+      <li><code>elt</code> - The element to remove a binding from.</li>
+      <li><code>bindingURL</code> of type <code>DOMString</code> - A URI that specifies the location of a specific binding to detach.</li>
+    </ul>
+  </li>
+  <li><i>戻り値なし</i></li>
+</ul>
+<h4 id="getBindingParent" name="getBindingParent">getBindingParent</h4>
+<p>The <code>getBindingParent</code> method is used to obtain the bound element with the binding attached that is responsible for the generation of the specified anonymous node. This method enables an author to determine the scope of any content node. When content at the document-level scope is passed in as an argument, the property's value is <code>null</code>.</p>
+<ul>
+  <li><i>引数</i>
+    <ul>
+      <li><code>node</code> - The node for which the bound element responsible for generation is desired.</li>
+    </ul>
+  </li>
+  <li><i>戻り値</i>
+    <ul>
+      <li><code>Element</code> - The return value of <code>getBindingParent</code> is the element responsible for the given anonymous node.</li>
+    </ul>
+  </li>
+</ul>
+<h4 id="loadBindingDocument" name="loadBindingDocument">loadBindingDocument</h4>
+<p><code>loadBindingDocument</code> メソッドは特定のドキュメント (<code>loadBindingDocument</code> メソッドがその上で呼び出されるような) 内部で使うための指定のドキュメントを同期して得るために使うことができます。 得られたバインディングドキュメントは DOM を使ってプログラム的に修正することができます。 それに続くドキュメントの内部で要素に結びつけられたどのバインディングも修正されたバインディングドキュメントから構築されます。</p>
+<ul>
+  <li><i>引数</i>
+    <ul>
+      <li><code>documentURL</code> of type <code><a class="external" href="http://www.w3.org/TR/2000/CR-DOM-Level-2-20000510/core.html#DOMString">DOMString</a></code> - バインディングドキュメントの URL。</li>
+    </ul>
+  </li>
+  <li><i>戻り値</i>
+    <ul>
+      <li><code>Document</code> - <code>loadBindingDocument</code> の戻り値は、バインディングドキュメントで定義されたバインディングに結びつけるために呼び出したドキュメントによって使われたバインディングドキュメントです。</li>
+    </ul>
+  </li>
+</ul>

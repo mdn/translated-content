@@ -1,0 +1,61 @@
+---
+title: ドミネーター
+slug: Tools/Memory/Dominators
+translation_of: Tools/Memory/Dominators
+---
+<div>{{ToolsSidebar}}</div><div class="summary" id="Concepts">
+<p>本記事では JavaScript のようなガベージコレクションを行う言語に適用される <em>到達可能性</em>、<em>シャロー</em>サイズと <em>保持</em>サイズ、支配ノードの概念を紹介します。</p>
+
+<p>オブジェクト自体は小さくても他の大きなオブジェクトを多数参照する場合があり、ガベージコレクターが多くのメモリーを解放できなくなる可能性があることから、この概念はメモリーの分析において重要です。</p>
+
+<p>メモリーツールの <a href="/ja/docs/Tools/Memory/Dominators_view">ドミネータービュー</a>を使用して、ページ内の支配ノードを確認できます。</p>
+</div>
+
+<p>JavaScript のようにガベージコレクションを行う言語では、通常プログラマーはメモリーの解放について悩む必要はありません。プログラマーはオブジェクトを作成および使用するだけでよく、オブジェクトが不要になればランタイムがクリーンアップを引き受けて、オブジェクトが占有していたメモリを解放します。</p>
+
+<h2 id="Reachability" name="Reachability">到達可能性</h2>
+
+<p>現代の JavaScript 実装では、ランタイムは <em>Reachability</em> に基づいてオブジェクトが不要であるかを判断します。このシステムでは、ヒープを 1 つ以上のグラフで表します。グラフ内の各ノードはオブジェクトを表し、ノード (の縁) 同士の接続はあるオブジェクトから別のオブジェクトへの参照を表します。グラフはルートノードから始まります。本記事の図ではルートノードを "R" で示します。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/12383/memory-graph.svg" style="display: block; height: 268px; margin-left: auto; margin-right: auto; width: 384px;"></p>
+
+<p>ガベージコレクションを行うとき、ランタイムはグラフをルートから走査して、発見したすべてのオブジェクトに印をつけます。発見されないオブジェクトは到達性がないので、解放できます。</p>
+
+<p>従ってオブジェクトの到達性がなくなると (例えば、スコープから外れたローカル変数1個からしか参照されていないオブジェクト)、そのオブジェクトが参照するオブジェクトも、他のオブジェクトから参照されていなければ到達性がなくなります:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/12375/memory-graph-unreachable.svg" style="display: block; height: 267px; margin-left: auto; margin-right: auto; width: 383px;"></p>
+
+<p>逆に、到達性がある他のオブジェクトがそれらを参照し続けている間は、維持され続けることになります。</p>
+
+<h2 id="Shallow_and_retained_size" name="Shallow_and_retained_size">シャローサイズと保持サイズ</h2>
+
+<p>この考え方から、オブジェクトのサイズを調べる方法が 2 つに区別されます:</p>
+
+<ul>
+ <li><em>シャローサイズ</em>: オブジェクト自体のサイズ</li>
+ <li><em>保持サイズ</em>: オブジェクト自体のサイズと、オブジェクトが維持し続けている他のオブジェクトのサイズを合算したサイズ</li>
+</ul>
+
+<p>通常、オブジェクトのシャローサイズは小さいのですが、保持サイズは参照により他のオブジェクトを含むために大きくなります。保持サイズは " このオブジェクトが存在しなくなると、メモリーがどれだけ解放されるか？ " という疑問への答えになりますので、メモリー使用量の分析において重要な概念です。</p>
+
+<h2 id="Dominators" name="Dominators">支配ノード</h2>
+
+<p>関連する概念として支配ノードがあります。ルートノードからノード A に至るすべてのパスがノード B を通るとき、ノード B はノード A を支配すると言います:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/12379/memory-graph-dominators.svg" style="display: block; height: 309px; margin-left: auto; margin-right: auto; width: 471px;"></p>
+
+<p>ノード A の支配ノードのいずれかが解放されると、ノード A 自体はガベージコレクションの対象に適した状態になります。</p>
+
+<p><a id="immediate_dominator" name="immediate_dominator">ノード B はノード A を支配しているが、ノード A の他の支配ノードが支配していないとき、ノード B はノード A の隣接支配ノードとなります:</a></p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/12381/memory-graph-immediate-dominator.svg" style="display: block; height: 309px; margin-left: auto; margin-right: auto; width: 467px;"></p>
+
+<p><a id="multiple-paths" name="multiple-paths">オブジェクト A が別のオブジェクト B および C から参照されている場合は少々とらえにくいのですが、どちらも A の支配ノードではありません。</a>これは、B または C のどちらかをグラフから削除しても、A は他の参照元によって維持され続けるためです。代わりに A の隣接支配ノードは、最初の共通の祖先になります:<br>
+ <img alt="" src="https://mdn.mozillademos.org/files/12331/memory-graph-dominator-multiple-references.svg" style="display: block; height: 283px; margin-left: auto; margin-right: auto; width: 211px;"></p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><a href="https://en.wikipedia.org/wiki/Dominator_%28graph_theory%29">Dominators in graph theory</a></li>
+ <li><a href="https://en.wikipedia.org/wiki/Tracing_garbage_collection">Tracing garbage collection</a></li>
+</ul>

@@ -1,0 +1,36 @@
+---
+title: Positionnement dans une pile
+slug: Archive/Mozilla/XUL/Tutoriel_XUL/Positionnement_dans_une_pile
+tags:
+  - Tutoriel_XUL
+  - Tutoriels
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Stack_Positioning
+---
+<p> </p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Piles_et_Paquets" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Onglets">Suivant  »</a></p>
+</div>
+<p>Cette section va décrire comment positionner des éléments dans une pile (stack).</p>
+<h3 id="Placement_des_enfants_d.27une_pile" name="Placement_des_enfants_d.27une_pile">Placement des enfants d'une pile</h3>
+<p>Normalement, les éléments enfants d'une pile s'étirent pour s'ajuster à la dimension de la pile. Toutefois, vous pouvez aussi placer ces enfants à des coordonnées précises. Par exemple, si la pile a deux boutons comme enfants, l'un d'eux peut être placé à 20 pixels du bord gauche et 50 pixels du bord supérieur. Le second bouton peut être placé à 100 pixels du bord gauche et 5 pixels du bord supérieur.</p>
+<p>La position d'un élément enfant doit être précisée en plaçant deux attributs sur chaque élément. Pour le positionnement horizontal, utilisez l'attribut <code id="a-left"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/left">left</a></code> et pour le positionnement vertical, utilisez l'attribut <code id="a-top"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/top">top</a></code>. Si vous ne mettez pas ces attributs sur un enfant de la pile, celui-ci va s'étirer pour s'ajuster à la dimension de la pile.</p>
+<p><span id="Exemple_1"><a id="Exemple_1"></a><strong>Exemple 1</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_bulletins_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_bulletins_1.xul">Voir</a></p>
+<div class="float-right"><img alt="Image:xultu_ex_4_4_1.png" class=" internal" src="/@api/deki/files/1519/=Xultu_ex_4_4_1.png"></div>
+<pre>&lt;stack&gt;
+   &lt;button label="Goblins" left="5" top="5"/&gt;
+   &lt;button label="Trolls" left="60" top="20"/&gt;
+   &lt;button label="Vampires" left="10" top="60"/&gt;
+&lt;/stack&gt;
+</pre>
+<p>La pile <code><a href="/fr/docs/Mozilla/Tech/XUL/stack" title="stack">stack</a></code> contient trois éléments, chacun d'eux est positionné aux coordonnées précisées par les attributs <code id="a-left"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/left">left</a></code> et <code id="a-top"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/top">top</a></code>. Ici, les trois éléments enfants sont des boutons, mais les éléments n'ont pas à être tous du même type. Il peut y avoir n'importe quels éléments, même des boîtes ou d'autres piles.</p>
+<p>Les dimensions d'une pile sont déterminées par les positions de ses éléments enfants. La pile aura toujours des dimensions permettant à ses éléments enfants d'être visibles. Ainsi, si vous initialisez l'attribut <code id="a-left"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/left">left</a></code> d'un enfant à la valeur de '400', la pile aura une largeur d'environ 400 pixels plus la largeur de cet élément enfant. Vous pouvez outrepasser cette taille avec des propriétés de style variées telles que <code>width</code> et <code>max-width</code>.</p>
+<p>Vous pouvez utiliser un script pour ajuster les valeurs des attributs <code id="a-left"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/left">left</a></code> et <code id="a-top"><a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Attributs/top">top</a></code> et de ce fait, rendre les éléments mobiles. Les piles présentent l'avantage suivant : lorsqu'un élément positionné de façon absolue change sa position, la position des autres éléments n'est pas affectée. Si vous essayez de déplacer des éléments dans une boîte normale, les autres éléments vont bouger en réaction.</p>
+<p>Il est également possible de placer des éléments enfants de telle manière qu'ils se superposent. Lorsque les éléments enfants se dessinent, ils sont affichés dans l'ordre où ils sont apparus dans la pile. De ce fait, le premier enfant d'une pile apparaît en arrière plan, suivi du second et ainsi de suite. Le dernier enfant apparaît au premier plan. Vous pouvez utiliser les fonctions DOM pour modifier l'ordre des éléments.</p>
+<p>Lorsqu'ils répondent aux événements de la souris, les éléments au premier plan vont capturer les événements en premier. Cela signifie que si deux boutons se superposent, le bouton au premier plan va capturer le clic de la souris à l'endroit où il couvre l'autre bouton.</p>
+<hr>
+<p>La prochaine section décrit les onglets, qui sont comme des paquets (deck) mais fournissent leur propre système d'utilisation.</p>
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/fr/docs/Tutoriel_XUL:Piles_et_Paquets" style="float: left;">« Précédent</a><a href="/fr/docs/Tutoriel_XUL:Onglets">Suivant  »</a></p>
+</div>
+<p><span class="comment">Interwiki</span></p>

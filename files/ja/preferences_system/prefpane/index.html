@@ -1,0 +1,79 @@
+---
+title: '&lt;prefpane&gt; 要素リファレンス'
+slug: Preferences_System/prefpane
+tags:
+  - Preferences system
+  - XUL
+---
+<p> </p>
+<h3 id=".E6.A6.82.E8.AA.AC" name=".E6.A6.82.E8.AA.AC"> 概説 </h3>
+<p><b><code>&lt;prefpane&gt;</code></b> は、設定ウィンドウの <i>ペイン</i> （タブ）を意味する要素です。それは <code><a href="ja/Preferences_System/prefwindow">&lt;prefwindow&gt;</a></code> 要素の子要素でなければいけません。
+</p><p>一般的に、一つの <code>&lt;prefpane&gt;</code> 要素は子要素として一つの <code><a href="ja/Preferences_System/preferences">&lt;preferences&gt;</a></code> 要素と、ユーザインターフェイスのための追加の要素を含みます。
+</p><p><code>&lt;prefpane&gt;</code> 要素は、全ての内容をインラインの要素として含めるか、または、<code>src="<a class=" external" rel="freelink">chrome://uri/to/overlay.xul</a>"</code> 属性によって示された、外部のオーバーレイ用リソースのchrome URIを参照することができます。外部のリソースは、ペインが選択された時に読み込まれます。後者の方法は、あなたの設定ウィンドウの内容が非常に大きい場合に、ウィンドウがユーザに対して表示されるよりも前に一つのペインだけが読み込まれるのに必要な時間と同程度に、ウィンドウ全体が読み込まれるまでの時間を減らすために使うことができます。
+</p>
+<h3 id="XUL.E6.A7.8B.E6.96.87" name="XUL.E6.A7.8B.E6.96.87"> XUL構文 </h3>
+<pre class="eval">&lt;prefpane id="paneGeneral" label="General" src="<a class=" external" rel="freelink">chrome://path/to/paneOverlay.xul</a>"/&gt;
+</pre>
+<p>または
+</p>
+<pre class="eval">&lt;prefpane id="paneGeneral" label="General" onpaneload="onGeneralPaneLoad(event);"&gt;
+  &lt;preferences&gt;
+    &lt;preference id="pref_one" name="extensions.myextension.one" type="bool"/&gt;
+     ... さらにいくつかの設定 ...
+  &lt;/preferences&gt;
+
+  &lt;checkbox label="Number one?" preference="pref_one"/&gt;
+  ... さらにいくつかのユーザインターフェイス要素 ...
+&lt;/prefpane&gt;
+</pre>
+<h3 id=".E5.B1.9E.E6.80.A7" name=".E5.B1.9E.E6.80.A7"> 属性 </h3>
+<dl><dt> <code>id</code> </dt><dd> ペインのID。これは動的なオーバーレイで要素をマッチングするために使われることがありますが、もしペインの動的な読み込みを使わない場合でも、すべての <code>&lt;prefpane&gt;</code> 要素に対してidを提供する必要があります。
+</dd><dt> <code>image</code> </dt><dd> ペインのボタンに使用される画像のURL。（実行時にこの属性を動的に変更しても、ペインのボタンの画像は更新されません。）
+</dd><dt> <code>label</code> </dt><dd> ペインのボタンのラベル文字列。
+</dd><dt> <code>selected</code> </dt><dd> そのペインが現在選択されている（アクティブである）かどうかを示します。（XULの作成時にこの属性を指定しても、機能しません。代わりに <code>&lt;prefwindow&gt;</code> 要素の <code>lastSelected</code> 属性を使ってください。）<span class="comment">これはよくありません。</span>
+</dd><dt> <code>src</code> </dt><dd> 前述の通り、そのペインの内容を提供するオーバーレイ用リソースのURLを指定します。
+</dd></dl>
+<h3 id=".E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3" name=".E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3"> プロパティ </h3>
+<p>（todo: 実行時にこれらの属性やプロパティに値をセットした時に何が起こるのかを調べること。私はこれらの全てが実行時に機能するとは思わない。）
+</p>
+<dl><dt> <code>contentHeight</code> （読み取り専用） </dt><dd> 現在のペインの内容の高さ（ピクセル単位）。
+</dd><dt> <code>image</code> </dt><dd> <code>image</code> 属性の値を設定または取得します。（実行時にこのプロパティに値を設定しても機能しません。）
+</dd><dt> <code>label</code> </dt><dd> <code>label</code> 属性の値を設定または取得します。（実行時にこのプロパティに値を設定しても機能しません。）
+</dd><dt> <code>loaded</code> </dt><dd> そのペインが完全に読み込まれているかどうかを示します。<span class="comment">このプロパティはコード内で、本当に読み取り専用になっていなくてはなりません。</span>
+</dd><dt> <code>preferenceElements</code> （読み取り専用） </dt><dd> <code>preference</code> 属性を持つ子要素の <code>NodeList</code> 。
+</dd><dt> <code>preferences</code> （読み取り専用） </dt><dd> 全ての子要素である <code>&lt;preference&gt;</code> 要素の <code>NodeList</code> 。
+</dd><dt> <code>selected</code> </dt><dd> <code>selected</code> 属性の値を設定または取得します。
+</dd><dt> <code>src</code> </dt><dd> <code>src</code> 属性の値を設定または取得します。
+</dd></dl>
+<h3 id=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89" name=".E3.83.A1.E3.82.BD.E3.83.83.E3.83.89"> メソッド </h3>
+<dl><dt> <code>DOMElement getPreferenceElement(in DOMElement startElement)</code> </dt><dd> ??
+</dd><dt> <code>DOMElement preferenceForElement(in DOMElement element);</code> </dt><dd> 渡された要素を監視している <code>&lt;preference&gt;</code> 要素（言い替えると、 <code>element</code> の <code>preference</code> 属性で指定されている要素）を取得します。
+</dd><dt> <code>void userChangedValue(in DOMElement element);</code> </dt><dd> 設定システムのウィジェットの中でユーザが変更した値は、(1)の理由のため、自動的には状態の変化に追従しません。そのウィジェットに関連づけられた preference 要素は、そのウィジェット自身に保持されている状態に基づいて更新されるべきです。例えば、もしあなたがlistbox要素を使っていて、ユーザがlistboxの内容を（アイテムの追加や削除などで）変更し、あなたがその変更を preference 要素に同期的に反映させたい場合、あなたは <code>onsynctopreference</code> イベントハンドラを、 preference 要素に書き込まれるべき値を返すlistbox要素に記述し、あなたがリストの内容について preference 要素の値を変更するような編集を行う度に、 <code>userChangedValue</code> メソッドを呼ばなくてはいけません。
+</dd><dd> (1) それのために状態の変化が追従するウィジェットに関する例としては、 "command" イベントが発行される時に状態が自動的に追従する、 checkbox 要素が含まれます。
+</dd><dd>※日本語版注記：上の説明が分かりにくいので解説。この設定システムは、ユーザがUI要素を操作して状態が変化した場合に限って、UI要素の状態の変化を、その要素に関連づけられたpreference要素の値に反映させる。例えばcheckbox要素がクリックされてチェック状態がONになった場合、関連づけられたpreference要素のvalueは追従してtrueになる。しかし、（他の設定に連動するなどして）スクリプト操作でcheckboxの状態をONにした場合は、関連づけられたpreference要素のvalueは追従しないため変化しない。このような場合は、userChangedValueメソッドにcheckboxを渡して、その時のcheckbox要素の状態をpreference要素のvalueに強制的に反映させることができる。
+</dd><dt> <code>void writePreferences(in boolean flushToDisk);</code> </dt><dd> このペインの中での変更をすべて設定に書き込みます。オプション指定によって、ディスクに設定を書き込みます。
+</dd></dl>
+<h3 id=".E3.82.A4.E3.83.99.E3.83.B3.E3.83.88" name=".E3.82.A4.E3.83.99.E3.83.B3.E3.83.88"> イベント </h3>
+<dl><dt> <code>paneload</code> </dt><dd> このイベントは、そのペインが完全に読み込まれた時（例えば、オーバーレイが完全に統合された時）に、ペインの要素において発行されます。あなたはこの要素の <code>onpaneload</code> 属性によって、このイベントのためのイベントハンドラを置くことができます。
+</dd></dl>
+<h3 id=".E8.A4.87.E6.95.B0.E3.81.AE_prefpanes_.E8.A6.81.E7.B4.A0.E3.81.AE.E4.BD.BF.E7.94.A8.E6.96.B9.E6.B3.95" name=".E8.A4.87.E6.95.B0.E3.81.AE_prefpanes_.E8.A6.81.E7.B4.A0.E3.81.AE.E4.BD.BF.E7.94.A8.E6.96.B9.E6.B3.95"> 複数の <code>prefpane</code>s 要素の使用方法 </h3>
+<p>注意：複数の <code>prefpane</code> 要素を同じ<code>prefwindow</code> 要素の中で使う時は、 <code>&lt;script&gt;</code> 要素を <code>prefpane</code> 要素よりも後に置いてもいいですが、それらよりも前に置いてはいけません。さもなくば、そのダイアログは異常な挙動を示し、正常に表示されないでしょう。
+</p><p>正常に働かせるためには、 <code>&lt;script&gt;</code> タグは以下の設定ダイアログの例のように記述してください。:
+</p>
+<pre class="eval">&lt;prefwindow&gt;
+  &lt;prefpane id="paneGeneral" label="General"&gt;
+    ...
+  &lt;/prefpane&gt;
+
+  &lt;prefpane id="paneSecurity" label="Security"&gt;
+    ...
+  &lt;/prefpane&gt;
+
+  &lt;script type="application/javascript" src="<a class=" external" rel="freelink">chrome://myext/content/script0.js</a>"&gt;
+  &lt;script type="application/javascript" src="<a class=" external" rel="freelink">chrome://myext/content/script1.js</a>"&gt;
+&lt;/prefwindow&gt;
+</pre>
+<p>複数のペインを含むダイアログを開く場合、<code>openDialog</code>の機能指定に<code>toolbar</code>を入れておかないといけません。例：
+</p><p>window.openDialog("chrome//example/content/prefwin.xul", "", "chrome,toolbar");
+</p><p>{{ Preferences_System_TOC() }}
+</p>{{ languages( { "en": "en/Preferences_System/prefpane" } ) }}

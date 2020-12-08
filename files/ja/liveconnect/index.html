@@ -1,0 +1,69 @@
+---
+title: LiveConnect
+slug: LiveConnect
+translation_of: Archive/Web/LiveConnect
+---
+<p>
+</p>
+<div><b>LiveConnect</b> は、JavaScript から Java クラスなどのメソッドを呼べる機能を既存の Java の機能を利用して提供するアプリケーション作成用のインターフェースの名称です。
+<div class="note">LiveConnect は Mozilla 2.0 で削除される予定です。詳細は <a class="external" href="http://boomswaggerboom.wordpress.com/2007/04/16/javaplugin-cleanup-for-mozilla-20/">Josh の blog 投稿</a> を参照してください。</div>
+<p>アプレットに対する LiveConnect は HTML ページのアプレットタグの "MAYSCRIPT" 属性を利用して有効化されます。
+アプレットは netscape.javascript パッケージを利用して JavaScript のオブジェクトを参照することが可能になり、
+スクリプトは直接アプレットのメソッドを呼ぶことが可能になります (document.applets.name.methodName() 経由で)。
+標準的な Java オブジェクトは JavaScript コードから作成と制御の両方が可能です。(たとえば、"new java.lang.String('javascript string')" を java.* パッケージの階層にいるクラスのコードに記述するか、新しい "Packages" オブジェクトをクラスのために階層の外で定義して利用するかです。)
+LiveConnect use by applets is enabled via the use of the "MAYSCRIPT" attribute in applet tags on an HTML page, following which the applet may refer to classes in the netscape.javascript package to access Javascript objects, and scripts may directly call applet methods (using the syntax document.applets.name.methodName()). </p>
+</div>
+<table class="topicpage-table">
+<tbody><tr><td>
+<p><span id="Documentation"></span>
+</p>
+<h4 id="解説文書"> <a>解説文書</a> </h4>
+<dl><dt> <a href="ja/Core_JavaScript_1.5_Guide/LiveConnect_Overview">Core JavaScript 1.5 Guide:LiveConnect Overview</a>
+</dt><dd> <small>Liveconnect の概要</small>
+</dd></dl>
+<dl><dt> <a href="ja/Core_JavaScript_1.5_Reference/LiveConnect">Core JavaScript 1.5 Reference:LiveConnect</a>
+</dt><dd> <small>LiveConnect のために利用される Java クラス、そしてそのコンストラクタとメソッド。</small>
+</dd></dl>
+<dl><dt> <a class="external" href="http://www.mozilla.org/js/liveconnect/lc3_method_overloading.html">Java Method Overloading and LiveConnect 3</a>
+</dt><dd> <small>LiveConnect が Java メソッドを JavaScript からオーバーロードするために利用する技術。</small>
+</dd></dl>
+<dl><dt> <a class="external" href="http://www.mozilla.org/js/liveconnect/liveconnect-exceptions.html">LiveConnect Exceptions</a>
+</dt><dd> <small>Java と JavaScript にて他のところで発生した例外を受け取る方法。?</small>
+</dd></dl>
+<dl><dt> <a class="external" href="http://www.mozilla.org/quality/browser/front-end/testcases/oji/liveconnecttest.html">Liveconnect Testcases</a>
+</dt><dd> <small>間違った HTML タグにあるアプレットを正常に動かすために。</small>
+</dd></dl>
+</td>
+<td>
+<p><span id="Community"></span>
+</p>
+<h4 id="コミュニティー"> コミュニティー </h4>
+<ul><li> Java のフォーラム (英語)...
+</li></ul>
+<p></p><ul>
+  <li><a href="https://lists.mozilla.org/listinfo/dev-tech-java"> メーリングリストとして</a></li>
+
+
+  <li><a href="http://groups.google.com/group/mozilla.dev.tech.java"> ニュースグループとして</a></li>
+  <li><a href="http://groups.google.com/group/mozilla.dev.tech.java/feeds"> フィードとして</a></li>
+</ul>
+<p></p>
+<ul><li> Javascript のフォーラム (英語)...
+</li></ul>
+<p></p><ul>
+  <li><a href="https://lists.mozilla.org/listinfo/dev-tech-js-engine"> メーリングリストとして</a></li>
+
+
+  <li><a href="http://groups.google.com/group/mozilla.dev.tech.js-engine"> ニュースグループとして</a></li>
+  <li><a href="http://groups.google.com/group/mozilla.dev.tech.js-engine/feeds"> フィードとして</a></li>
+</ul>
+<p></p><p><span id="Related_Topics"></span>
+</p>
+<h4 id="関連事項"> 関連事項 </h4>
+<dl><dd> <a href="ja/JavaScript">JavaScript</a>, <a href="ja/Plugins">Plugins</a>
+</dd></dl>
+</td></tr></tbody></table>
+<p><br>
+</p>
+<div class="noinclude">
+</div>

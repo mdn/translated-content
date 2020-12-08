@@ -1,0 +1,241 @@
+---
+title: XML 数据
+slug: Web/Guide/CSS/Getting_started/XML_data
+tags:
+  - CSS
+  - Web
+  - 中级
+  - 实例
+  - 开始学CSS
+  - 指南
+  - 需要更新
+translation_of: Archive/Beginner_tutorials/XML_data
+---
+<p>{{ CSSTutorialTOC() }}</p>
+
+<p>此页面包含一个如何使用CSS和XML数据的示例。</p>
+
+<p>你将创建一个XML文档范例，和使之在浏览器中展现的样式表。</p>
+
+<p>这是 <a href="../../../../en/CSS/Getting_Started" rel="internal">CSS tutorial</a> 第二部分的第三节。<br>
+ 前一章节: <a href="/en-US/docs/Web/Guide/CSS/Getting_Started/SVG_and_CSS" title="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/SVG_and_CSS">SVG</a><br>
+ 后一章节:  <a href="/en/CSS/Getting_Started/XBL_bindings" title="https://developer.mozilla.org/en/CSS/Getting_Started/XBL_bindings">XBL binding</a></p>
+
+<h3 id="Information:_XML_data" name="Information:_XML_data">信息: XML 数据</h3>
+
+<p><em><a href="/en/XML" title="en/XML">XML</a></em> (eXtensible Markup Language 可扩展标记语言) 是一种可用于任何类型的结构化数据的通用型语言。</p>
+
+<p>默认情况下，Mozilla 浏览器会将 XML 按照非常类似XML文件的原始数据的方式展现。你可以看到定义数据结构的具体的标签。</p>
+
+<p>通过将你的XML文档与CSS样式表链接，你可以定义展现XML的其他方式。为了实现这一点，样式表建立了映射规则，将XML文档中的标签映射为HTML中使用的展现类型。</p>
+
+<table style="background-color: #fffff4; border: 1px solid #36b; margin-bottom: 1em; padding: 1em;">
+ <caption>示例</caption>
+ <tbody>
+  <tr>
+   <td>XML文档中的数据采用&lt;<code>INFO&gt;</code> 标签。你希望文档中的 <small>INFO</small> 元素像 HTML 的段落一样展现。.
+    <p>在该文档的样式表中，你指定了 <small>INFO</small> 元素的展现方式：</p>
+
+    <div style="width: 30em;">
+    <pre class="eval">
+INFO {
+  display: block;
+  margin: 1em 0;
+  }
+</pre>
+    </div>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>在display属性中最常用的值是：</p>
+
+<table style="margin-left: 2em;">
+ <tbody>
+  <tr>
+   <td style="padding-right: 2em;"><code>block</code></td>
+   <td>Displayed like HTML's <small>DIV</small> (for headings, paragraphs)</td>
+  </tr>
+  <tr>
+   <td><code>inline</code></td>
+   <td>Displayed like HTML's <small>SPAN</small> (for emphasis within text)</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>如同对待HTML一样，通过设置字体、间距和其他细节来添加你自己的样式规则。</p>
+
+<table style="background-color: #f4f4f4; border: 1px solid #36b; margin-bottom: 1em; padding: 1em;">
+ <caption>更多细节</caption>
+ <tbody>
+  <tr>
+   <td>其他display的值可以展现类似于列表项目的元素，或者类似表格组件的元素。
+    <p>请查看CSS规范中的<a class="external" href="http://www.w3.org/TR/CSS21/visuren.html#propdef-display">The display property</a> ，来获取全部display类型。</p>
+
+    <p>单独使用CSS，display的结构必须与文档结构一致。其它方式是修改display的结构—例如：使用XBL添加内容，使用JavaScript修改DOM。</p>
+
+    <p>请查看 <a href="/en/XML" title="en/XML">XML</a> 页面，来获取更多关于XML in Mozilla的信息。</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Action:_An_XML_demonstration" name="Action:_An_XML_demonstration">实例: XML 演示</h3>
+
+<p>新建一个 XML 文件： <code>doc9.xml </code>。复制粘帖以下内容，注意滚动以获得全部：</p>
+
+<div style="width: 48em; height: 12em; overflow: auto;">
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;!-- XML demonstration --&gt;
+
+&lt;?xml-stylesheet type="text/css" href="style9.css"?&gt;
+
+&lt;!DOCTYPE planet&gt;
+&lt;planet&gt;
+
+&lt;ocean&gt;
+&lt;name&gt;Arctic&lt;/name&gt;
+&lt;area&gt;13,000&lt;/area&gt;
+&lt;depth&gt;1,200&lt;/depth&gt;
+&lt;/ocean&gt;
+
+&lt;ocean&gt;
+&lt;name&gt;Atlantic&lt;/name&gt;
+&lt;area&gt;87,000&lt;/area&gt;
+&lt;depth&gt;3,900&lt;/depth&gt;
+&lt;/ocean&gt;
+
+&lt;ocean&gt;
+&lt;name&gt;Pacific&lt;/name&gt;
+&lt;area&gt;180,000&lt;/area&gt;
+&lt;depth&gt;4,000&lt;/depth&gt;
+&lt;/ocean&gt;
+
+&lt;ocean&gt;
+&lt;name&gt;Indian&lt;/name&gt;
+&lt;area&gt;75,000&lt;/area&gt;
+&lt;depth&gt;3,900&lt;/depth&gt;
+&lt;/ocean&gt;
+
+&lt;ocean&gt;
+&lt;name&gt;Southern&lt;/name&gt;
+&lt;area&gt;20,000&lt;/area&gt;
+&lt;depth&gt;4,500&lt;/depth&gt;
+&lt;/ocean&gt;
+
+&lt;/planet&gt;
+</pre>
+</div>
+
+<p>新建一个 CSS 文件： <code>style9.css 。</code>复制粘帖以下内容，注意滚动以获得全部：</p>
+
+<div style="width: 48em; height: 12em; overflow: auto;">
+<pre>/*** XML demonstration ***/
+
+planet:before {
+  display: block;
+  width: 8em;
+  font-weight: bold;
+  font-size: 200%;
+  content: "Oceans";
+  margin: -.75em 0px .25em -.25em;
+  padding: .1em .25em;
+  background-color: #cdf;
+  }
+
+planet {
+  display: block;
+  margin: 2em 1em;
+  border: 4px solid #cdf;
+  padding: 0px 1em;
+  background-color: white;
+  }
+
+ocean {
+  display: block;
+  margin-bottom: 1em;
+  }
+
+name {
+  display: block;
+  font-weight: bold;
+  font-size: 150%;
+  }
+
+area {
+  display: block;
+  }
+
+area:before {
+  content: "Area: ";
+  }
+
+area:after {
+  content: " million km\B2";
+  }
+
+depth {
+  display: block;
+  }
+
+depth:before {
+  content: "Mean depth: ";
+  }
+
+depth:after {
+  content: " m";
+  }
+</pre>
+</div>
+
+<p>在你的浏览器中打开该文档：</p>
+
+<table style="border: 2px outset #36b; padding: 1em;">
+ <tbody>
+  <tr>
+   <td>
+    <div style="border: 2px solid #cdf; border-bottom: none; padding: .5em 8em 1em .5em;">
+    <p style="font-size: 150%; font-weight: bold; margin: -1em 0px 0px 0px; padding: .1em .25em; background-color: #cdf; width: 8em;">Oceans</p>
+
+    <p style="font-size: 75%; margin: .25em 0px 0px 0px; line-height: 110%;"><strong>Arctic</strong><br>
+     Area: 13,000 million km²<br>
+     Mean depth: 1,200 m</p>
+
+    <p style="font-size: 75%; margin: .5em 0px 0px 0px; line-height: 110%;"><strong>Atlantic</strong><br>
+     Area: 87,000 million km²<br>
+     Mean depth: 3,900 m</p>
+
+    <p style="font-size: 75%; margin: .5em 0px 0px 0px; line-height: 110%;"><strong>. . .</strong></p>
+    </div>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p><br>
+ 此演示的注解：</p>
+
+<ul>
+ <li>Unicode 字符 上标 2（在 "million km²" 中），在CSS文件中被编码为 <code>\B2</code> 。</li>
+ <li>标题 "Oceans" 有一个负的上边距，所以它可以上移至边框顶部显示。</li>
+</ul>
+
+<p> </p>
+
+<table style="background-color: #fffff4; border: 1px solid #36b; margin-bottom: 1em; padding: 1em;">
+ <caption>挑战</caption>
+ <tbody>
+  <tr>
+   <td>修改样式表使文档可以作为表格展现。
+    <p>（请参见 CSS 规范的 <a class="external" href="http://www.w3.org/TR/CSS21/tables.html">Tables</a> 章节作为参考。）</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="What_next.3F" name="What_next.3F">接下来？</h4>
+
+<p>如果你难以理解此页面，或者你有其他意见，请提交到讨论页： <a href="/Talk:en/CSS/Getting_Started/XML_data" title="Talk:en/CSS/Getting_Started/XML_data">Discussion</a> 。</p>
+
+<p>这是本教程的最后一页。请查看此 wiki 的 <a href="/en/CSS" title="en/CSS">CSS</a> 主页，获取更多Mozilla CSS 信息。</p>

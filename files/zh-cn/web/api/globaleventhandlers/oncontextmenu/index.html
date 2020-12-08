@@ -1,0 +1,28 @@
+---
+title: GlobalEventHandlers.oncontextmenu
+slug: Web/API/GlobalEventHandlers/oncontextmenu
+translation_of: Web/API/GlobalEventHandlers/oncontextmenu
+---
+<div>{{ ApiRef("HTML DOM") }}</div>
+
+<h3 id="Summary" name="Summary">概述</h3>
+
+<p>获取或设置当前窗口contextmenu事件的事件处理函数。除非默认行为已经阻止了(看下面的例子是如何阻止的)，否则右键菜单会被激活。注意此事件会发生在没有阻止右键事件的情况下而且这不取决于此元素是否拥有了<a href="http://hacks.mozilla.org/2011/11/html5-context-menus-in-firefox-screencast-and-code/" title="http://hacks.mozilla.org/2011/11/html5-context-menus-in-firefox-screencast-and-code/">"contextmenu"属性</a>.</p>
+
+<h3 id="Syntax" name="Syntax">语法</h3>
+
+<pre class="eval">window.oncontextmenu = funcRef;
+//funcRef是个函数引用
+</pre>
+
+<h3 id="Example" name="Example">例子</h3>
+
+<p>这个例子会取消页面右键的功能：</p>
+
+<pre class="eval">window.oncontextmenu = function () {
+   return false;
+}
+//该窗口禁止使用右键
+</pre>
+
+<p>{{ languages( {"en": "en/DOM/window.oncontextmenu" } ) }}</p>

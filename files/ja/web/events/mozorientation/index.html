@@ -1,0 +1,88 @@
+---
+title: MozOrientation
+slug: Web/Events/MozOrientation
+tags:
+  - DOM
+  - Gecko DOM Reference
+  - Orientation
+  - 要更新
+translation_of: Archive/Events/MozOrientation
+---
+<div>
+ {{ApiRef}}{{gecko_minversion_header("1.9.2")}}{{obsolete_header("6.0")}}</div>
+<div class="warning">
+ <strong>注記:</strong> この試験的 API は Gecko 6.0 {{geckoRelease("6.0")}} で削除され、同時に標準の {{domxref("DeviceOrientationEvent")}} が実装されています。標準 API を使用して下さい。</div>
+<h2 id="Summary" name="Summary">概要</h2>
+<p>ウィンドウ上での <code>MozOrientation</code> イベント。</p>
+<div class="note">
+ <strong>注記:</strong> This below describes how these values worked for the now obsolete MozOrientation. </div>
+<p>The X axis represents the amount of right-to-left tilt. This value is 0 if the device is level along the X axis, and approaches 1 as the device is tilted toward the left, and -1 as the device is tilted toward the right.</p>
+<p>The Y axis represents the amount of front-to-back tilt. The value is 0 if the device is level along the Y axis, and approaches 1 as you tilt the device backward (away from you) and -1 as you tilt the device frontward (toward you).</p>
+<p>The Z axis represents acceleration vertically. The value is <code>-1</code> when the device is undergoing standard Earth gravity (9.8m/sec<sup>2</sup>) but not moving. Moving the device upward causes the value to increase. The value is <code>0</code> if the device is being thrust upward. In free fall (weightless or falling as a result of a drop), the value remains <code>-1</code>.</p>
+<p>In weightlessness, all values would be zero when the device is not moving, regardless of orientation, and would only change when being accelerated.</p>
+<p>In Firefox versions 3.6, 4, and 5 Gecko utilized <code>MozOrientation</code> which was also built to support orientation data but with different APIs from the specified <code>DeviceOrientationEvent</code>.</p>
+<p>To normalize between the two you can do something like this:</p>
+<pre class="brush:js">function orientationhandler(evt) {
+
+  // For FF3.6+
+  if (!evt.gamma &amp;&amp; !evt.beta) {
+    evt.gamma = -(evt.x * (180 / Math.PI));
+    evt.beta = -(evt.y * (180 / Math.PI));
+  }
+
+  // use evt.gamma, evt.beta, and evt.alpha
+  // according to dev.w3.org/geo/api/spec-source-orientation
+
+}
+
+window.addEventListener('deviceorientation', orientationhandler, false);
+window.addEventListener('MozOrientation',    orientationhandler, false);
+</pre>
+<h2 id="Example" name="Example">例</h2>
+<pre class="brush:js">window.addEventListener("MozOrientation", doFunc, true);
+</pre>
+<p>以下の例はイベントが起きているときにブラウザウィンドウに生の加速度センサーデータを表示するだけです。</p>
+<pre class="brush:html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8" /&gt;
+&lt;title&gt;MozOrientation イベント&lt;/title&gt;
+&lt;style&gt;
+body {
+  font-size: 12px;
+  color: rgb(0, 220, 98);
+  background-color: black;
+}
+&lt;/style&gt;
+&lt;script&gt;
+var count = 0;
+
+function handleOrientation(orientData) {
+  count++;
+  var d = document.body;
+
+  d.innerHTML = "&lt;p&gt; count = " + count +  "&lt;/p&gt;" +
+                "&lt;p&gt; x = " + orientData.x + "&lt;/p&gt;" +
+                "&lt;p&gt; y = " + orientData.y + "&lt;/p&gt;" +
+                "&lt;p&gt; z = " + orientData.z + "&lt;/p&gt;";
+}
+
+window.addEventListener("MozOrientation", handleOrientation, true);
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<h2 id="Notes" name="Notes">注記</h2>
+<p>このイベントは加速度センサーが現在のデバイスで利用可能な場合のみディスパッチされます。</p>
+<h2 id="Specification" name="Specification">仕様</h2>
+<p>どの仕様書にも含まれません。</p>
+<h2 id="See_also" name="See_also">関連情報</h2>
+<ul>
+ <li><a href="/ja/docs/Detecting_device_orientation" title="Detecting device orientation">デバイスの傾きの検出</a></li>
+ <li>{{interface("nsIDOMOrientationEvent")}}</li>
+ <li>{{interface("nsIAcceleration")}}</li>
+ <li>{{interface("nsIAccelerationListener")}}</li>
+ <li>{{interface("nsIAccelerometer")}}</li>
+</ul>

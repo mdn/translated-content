@@ -1,0 +1,53 @@
+---
+title: Le menu environements
+slug: Outils/WebIDE/The_runtime_menu
+translation_of: Archive/WebIDE/The_runtime_menu
+---
+<div>{{ToolsSidebar}}</div><p>Une fois qu'un environnement est sélectionné, il est possible d'accéder aux options de l'environnement :</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/12161/webide-runtime-settings.png" style="display: block; height: 712px; margin-left: auto; margin-right: auto; width: 811px;">Cela sert à :</p>
+
+<ul>
+ <li><a href="/fr/docs/Tools/WebIDE/The_runtime_menu#Runtime_info">voir les informations sur l'environnement</a></li>
+ <li><a href="/fr/docs/Tools/WebIDE/The_runtime_menu#Permissions_table">voir un tableau des permissions de l'application</a></li>
+ <li><a href="/fr/docs/Tools/WebIDE/The_runtime_menu#Device_preferences">voir et éditer les préférences de l'appareil</a></li>
+ <li><a href="/fr/docs/Tools/WebIDE/The_runtime_menu#Device_settings">voit et éditer les paramètres de l'appareil</a></li>
+ <li><a href="/fr/docs/Tools/WebIDE/The_runtime_menu#Screenshot">prendre une capture d'écran</a></li>
+ <li>déconnecter depuis l'environnement</li>
+</ul>
+
+<h2 id="Informations_de_l'environnement">Informations de l'environnement</h2>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/12163/webide-runtime-info.png" style="display: block; height: 712px; margin-left: auto; margin-right: auto; width: 811px;"></p>
+
+<h2 id="Tableau_des_permissions">Tableau des permissions</h2>
+
+<p>Un tableau résumant les <a href="/fr/Apps/Build/App_permissions">permissions de l'application</a> pour l'environnement sélectionné, indiquant pour chaque API et chaque <a href="/fr/Marketplace/Options/Packaged_apps#Types_of_packaged_apps"> type d'application</a> laquelle est autorisée (✓), refusée (✗) ou bien si l'avis de l'utilisateur est demandé (!).</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/12165/webide-permissions-table.png" style="display: block; height: 712px; margin-left: auto; margin-right: auto; width: 1013px;"></p>
+
+<h2 id="Preferences_de_l'appareil">Preferences de l'appareil</h2>
+
+<p>Un tableau listant les préférences qui peuvent être éditées et sont disponibles dans dans l'environnement via le <a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPrefService">service Preferences</a>. Il s'agit de valeurs de configurations de plateforme qui exposent le même jeu de donée que la page about:config de Firefox, mais pour l'appareil.</p>
+
+<p>Parce que ces préférences sont très sensibles en terme de sécurité, il est nécessaire de désactiver l'option de <a href="/fr/docs/Tools/WebIDE/Running_and_debugging_apps#Unrestricted_app_debugging_(including_certified_apps.2C_main_process.2C_etc.)">restrictions des privilèges des outils de développements</a> avant de pouvoir les modifier.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/12167/webide-device-preferences.png" style="display: block; height: 712px; margin-left: auto; margin-right: auto; width: 1013px;"></p>
+
+<h2 id="Paramètres_de_l'appareil">Paramètres de l'appareil</h2>
+
+<div class="note">
+<p>Nouveau dans Firefox OS 2.5.</p>
+</div>
+
+<p>Un tableau listant et permettant l'édition des paramètres qui peuvent être contrôlés dans l'application de paramétrage de Firefox OS. La plupart des choses sur l'appareil ont une interface pour changer le paramètre, telles que le volume et l'alarme qui se trouvent dans les paramètres de l'appareil.</p>
+
+<p>Ces paramètres sont moins sensibles et peuvent être modifiés sans avoir besoin de privilèges spéciaux.</p>
+
+<p>Pour pouvoir utiliser cette fonctionnalité, vous devez avoir Firefox 38 ou plus récent, et vous connecter à un Firefox OS 2.5 ou plus récent.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/12169/webide-device-settings.png" style="display: block; height: 712px; margin-left: auto; margin-right: auto; width: 1013px;"></p>
+
+<h2 id="Screenshot"><strong>Screenshot</strong></h2>
+
+<p>Une commande pour prendre une capture d'écran de l'environnement.</p>

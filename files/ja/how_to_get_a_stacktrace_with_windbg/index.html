@@ -1,0 +1,139 @@
+---
+title: WinDbg でスタックトレースを得るには
+slug: How_to_get_a_stacktrace_with_WinDbg
+tags:
+  - Developing Mozilla
+translation_of: Mozilla/How_to_get_a_stacktrace_with_WinDbg
+---
+<h2 id="導入">導入</h2>
+
+<p>クラッシュやハングが起きた際のスタックトレース（コールスタック）を取得したいけれども、それが特別なクラッシュやハングであるために <a class="external" href="http://kb.mozillazine.org/Talkback">Talkback</a> や <a class="external" href="http://kb.mozillazine.org/Breakpad" title="http://kb.mozillazine.org/Breakpad">Breakpad</a> では上手くいかない場合がしばしばあります。この記事では、そのような場合に WinDbg を使って Windows 上でスタックトレースを取得する方法を説明します。（Thunderbird や他のプロダクトのスタックトレースを得たい場合は、以下の文章における "Firefox" の箇所を適宜読み替えてください。）</p>
+
+<h2 id="Requirements" name="Requirements">必要なもの</h2>
+
+<p>スタックトレースを取得するためには、以下のソフトウェアをインストールしておく必要があります。</p>
+
+<h3 id="Debugging_Tools_for_Windows" name="Debugging_Tools_for_Windows">Debugging Tools for Windows</h3>
+
+<p>Microsoft は Debugging Tools for Windows を無償で配布しており、今回必要となる WinDbg がこの中に含まれています。これを <a class="external external-icon" href="https://docs.microsoft.com/en-us/windows-hardware/drivers/download-the-wdk">WDK と WinDbg のダウンロード</a> からダウンロードします（64 ビット版の Windows をお使いの方でも 32 ビット版が必要になります）。WinDbg を入手する方法には 2 種類あり、「スタンドアロンの Debugging Tools for Windows (WinDbg)」をインストールするものと、Visual Studio 2013 をインストールした状態で「WDK 8.1 Update」 をインストールするものがあります。無事にインストールが終われば、基本的な設定は以上です。</p>
+
+<h3 id="A_Firefox_nightly_or_release" name="A_Firefox_nightly_or_release">Firefox の Nightly 版とリリース版について</h3>
+
+<p>WinDbg を使用する際には、 デバッグする Firefox のバージョンに合ったデバッグシンボルを <a href="/en-US/docs/Using_the_Mozilla_symbol_server" title="Using_the_Mozilla_symbol_server">Mozilla symbol server</a> から入手する必要があります（次の節で説明します）。デバッグする Firefox には <a class="external external-icon" href="https://ftp.mozilla.org/pub/firefox/nightly/">公式の Nightly ビルド</a> やリリース版を利用できます。</p>
+
+<h2 id="Debugging" name="Debugging">デバッグ</h2>
+
+<p>デバッグを始めるにあたり、まずは Firefox が起動していないことを確認し、WinDbg をスタートメニューから起動します。</p>
+
+<ul>
+ <li>スタンドアロン型の場合: スタート =&gt; すべてのプログラム =&gt; Debugging Tools for Windows (X86) =&gt; WinDbg (X86)</li>
+ <li>WDK 8.1 Update の場合: スタート =&gt; すべてのプログラム =&gt; Windows Kit =&gt; Debugging Tools for Windows (X86) =&gt; WinDbg (X86)</li>
+</ul>
+
+<p>WinDbg が起動したら <strong>File</strong> メニューをクリックし、次に <strong>Open Executable...</strong> をクリックします。ファイルを選択する画面が開くので、デバッグしたい firefox.exe をプログラムフォルダ（C:\Program Files\Mozilla Firefox など）から探して開きます。</p>
+
+<p>ここで "Command" テキストウィンドウが開くはずです。この画面の上側にはデバッグの出力が、下端にはコマンド入力用のテキストボックスが表示されています（境界をドラッグすれば領域を変更できます）。さて、デバッグを始める前に必要なコマンドがいくつかあるため、これらを Command ウィンドウの入力部へ一行ずつ入力する必要があります。コマンドの入力については次の項で説明します。</p>
+
+<div class="note">
+<p>補足: すべてのコマンドは書かれている通りに一行ずつ入力しなければなりません。</p>
+
+<ul>
+ <li>間違いを避けるには、各行ごとにコピー・ペーストするのが最も簡単でしょう。</li>
+ <li>コマンドの中にはピリオド (.) やパイプ (|) で始まるものがありますが、これらも正しく入力しなければなりません。</li>
+ <li>たとえデバッグ中に何も問題が生じなくとも、デバッグログを提供していただけると、開発者の参考になる場合があります。</li>
+</ul>
+</div>
+
+<h3 id="デバッグを始める">デバッグを始める</h3>
+
+<p>デバッガの中に Firefox を起動することができたので、次は Mozilla symbol server からデバッグシンボルを WinDbg にダウンロードするための設定を行います。シンボルを読み込むには、以下に示す 3 つのコマンドを一行ずつ Enter を押して入力します（詳しくは <a href="/en-US/docs/Using_the_Mozilla_symbol_server" title="Using_the_Mozilla_symbol_server">Using the Mozilla symbol server</a> を参照してください）。</p>
+
+<pre>.sympath SRV*c:\symbols*http://symbols.mozilla.org/firefox;SRV*c:\symbols*http://msdl.microsoft.com/download/symbols
+.symfix+ c:\symbols
+.reload /f
+</pre>
+
+<p>シンボルのダウンロードが終わるまでしばらく待ちます。約 70MB ほどをダウンロードするため、ネットワークへの接続環境によっては時間がかかるかもしれません。WinDbg  における入力部の横に "Busy" と表示されている場合、シンボルのダウンロード中であることを示しています。</p>
+
+<p>ダウンロードが終わった次は、WinDbg が子プロセスを監視したり、Flash Player に固有のイベントを無視したり、読み込んだモジュールのログを記録させたりするための設定を行います。以下に示す 5 つのコマンドを一行ずつ入力してください（.logopen のコマンドを入力して "Log file could not be opened" と表示された場合、その場所にファイルを書き込む権限がない可能性があります。マイドキュメントなど、書き込み権限のあるパスを指定してください）。</p>
+
+<pre>.logopen /t c:\temp\firefox-debug.log
+.childdbg 1
+.tlist
+sxn gp
+lm
+</pre>
+
+<p>.tlist のコマンドの出力に firefox.exe が 2 つ以上あった場合、これは既に Firefox が起動していたことを表しています。もしデバッガの起動前に Firefox を終了していないと、有益なデバッグ結果は得られません。</p>
+
+<p>それでは、<strong>Debug</strong> メニューをクリックし、続いて <strong>Go</strong> をクリックしてください。<strong>Firefox の実行中にコマンドをデバッガへ入力することはできません。</strong>Firefox を起動できたら、調べたいクラッシュや問題を再現してみてください。</p>
+
+<div class="note">デバッガにテキストが数行ほど表示された後に Firefox の起動が止まってしまった場合、「ブレークポイント」で止まっていることがあります。コマンドが入力できる状態で、かつクラッシュを示すエラーが表示されていない場合、そのままもう一度 <strong>Debug</strong> =&gt; <strong>Go</strong> の順にクリックしてください。</div>
+
+<p>ブラウザがクラッシュすると、WinDbg の Command ウィンドウにエラー（"Access violation" など）が表示されます。 Firefox がハングしていて、かつデバッガにコマンドを入力できない場合、<strong>Debug</strong> =&gt; <strong>Break</strong> の順にクリックしてください。ブラウザがクラッシュしたり停止したら、次のステップに進んでください。</p>
+
+<h3 id="クラッシュやハングした後">クラッシュやハングした後</h3>
+
+<p>バグレポートのコメント欄やサポートのリクエストに記載できるよう、デバッグ情報を取得する必要があります。以下に示す 3 つのコマンドを一行ずつ Enter で入力し、スタックトレースやクラッシュ・ハングの解析、読み込まれていたモジュールのログを取得します。</p>
+
+<pre>~* kp
+!analyze -v -f
+lm</pre>
+
+<p>これらの処理が終わると、.logopen コマンドで指定した場所に <strong>firefox-debug_(デバッグ日時).log</strong> のファイルが作成されているはずです。デバッグ情報を開発者のコミュニティに伝えるには、<a class="external external-icon" href="https://support.mozilla.com/">サポートのリクエスト</a> にこのファイルを送信したり、<a class="external external-icon" href="https://bugzilla.mozilla.org/">Bugzilla</a> にこのファイルを添付するなどの方法があります。</p>
+
+<h3 id="minidump_の作成">minidump の作成</h3>
+
+<p>問題が生じている箇所を特定する開発者にとって、スタックトレースだけでは不十分であることが時々あります。このとき、開発者は "minidump" や "full memory dump" を求めることがあります。これらのファイルには、プロセスの実行時に関するより詳細な情報が含まれており、<a href="/en-US/docs/Capturing_a_minidump" title="Capturing a minidump">開発者に渡す minidump は WinDbg で簡単に作成できます</a>。</p>
+
+<h3 id="FAQ">FAQ</h3>
+
+<p>Q: Windows 7 (32-bit or 64-bit) で実行しましたが、WinDbg の Command ウィンドウに 'ntdll32!LdrpDoDebuggerBreak+0x2c' や 'ntdll32!LdrpDoDebuggerBreak+0x30' という例外が表示されてしまいました。どうすればよいですか？</p>
+
+<p>A: 例外メッセージの後ろにそれぞれ 'int 3' と表示されている場合、以下のコマンドを WinDbg で実行してください。</p>
+
+<pre><span style="font-size: small;">bp ntdll!LdrpDoDebuggerBreak+0x30
+bp ntdll!LdrpDoDebuggerBreak+0x2c
+eb ntdll!LdrpDoDebuggerBreak+0x30 0x90
+eb ntdll!LdrpDoDebuggerBreak+0x2c 0x90</span>
+</pre>
+
+<p>コマンドは一行ごとに Enter で入力してください。64 ビット版 Windows を使用している場合は、"ntdll" の部分を "ntdll32" に置き換えて入力してください。<br>
+ <br>
+ Q: スタックトレース上の最初の 4 フレームが次のようになりました。</p>
+
+<pre>0012fe20 7c90e89a ntdll!KiFastSystemCallRet
+0012fe24 7c81cd96 ntdll!ZwTerminateProcess+0xc
+0012ff20 7c81cdee kernel32!_ExitProcess+0x62
+
+0012ff34 6000179e kernel32!ExitProcess+0x14
+</pre>
+
+<p>何か間違っているのでしょうか？</p>
+
+<p>A: "Debug child processes also" のチェックボックスを選択しないまま Firefox を起動しています。一旦デバッガをデタッチし、チェックを入れた状態で再度 Firefox を起動してください。</p>
+
+<p>Q: WinDbg で firefox.exe のチェックサムを計算できません。これは通常動作ですか？</p>
+
+<p>A: 通常動作なので無視しても大丈夫です。</p>
+
+<p>Q: WinDbg が "Save information for workspace?" と尋ねてきたときは yes と no のどちらをクリックすればよいのでしょうか？</p>
+
+<p>A: yes をクリックすると、次回のデバッグ時に firefox.exe のシンボルが格納されている場所を指定する手間が省けます。この情報を WinDbg に保存させたくない場合は no をクリックしてください。</p>
+
+<p>Q: 各スレッドに "wow64" と表示されていますが大丈夫でしょうか？</p>
+
+<p>A: いいえ、32 ビット版の Mozilla ソフトウェアを 64 ビット版の WinDbg で起動しています。32 ビット版の WinDbg をダウンロードし、再度インストールし直してください。</p>
+
+<h3 id="トラブルシューティング_シンボルをダウンロードできない">トラブルシューティング: シンボルをダウンロードできない</h3>
+
+<p>どの手段を使ってもシンボルをダウンロードできない場合、Internet Explorer が <strong>オフライン作業</strong> モードになっている可能性があります。これに関する警告は WinDbg にも Visual C++ にも Visual Studio にも表示されることはありません。コマンドラインから symchk.exe を使用してシンボルをダウンロードしようとしても失敗します。この原因は、Microsoft がシンボルファイルをダウンロードする際に、Internet Explorer のインターネット設定・プロキシ設定を用いているからです。Internet Explorer の「ファイル」メニューをクリックし、「オフライン作業」のチェックを外してください。</p>
+
+<h2 id="See_also" name="See_also">参考情報</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Using_the_Mozilla_symbol_server" title="Using_the_Mozilla_symbol_server">symbol server</a> を利用すると、メモリアドレスを読みやすい文字列に変換できます</li>
+ <li><a href="/en-US/docs/Using_the_Mozilla_source_server" title="Using_the_Mozilla_source_server">source server</a> を利用すると、メモリアドレスをソースコードの行数に変換できます</li>
+</ul>
+
+<div id="divCleekiAttrib" style="display: none;"></div>

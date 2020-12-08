@@ -1,0 +1,97 @@
+---
+title: Firefox OSの自動テスト
+slug: Archive/B2G_OS/Automated_testing
+tags:
+  - Automated testing
+  - QA
+  - Testing
+translation_of: Archive/B2G_OS/Automated_testing
+---
+<p></p>
+
+<div class="summary">
+<p>Firefox OSはまだ開発中であり、新しいハードウェアのサポートが間近に迫っていることを考えれば、テストの仕方を知ることは今後重要になると言えます。<span class="seoSummary">このページは複数の違うテストの実行、自動化、そして結果のレポートとトラッキングを含む、Firefox OSのテストの多角的な側面に関する情報の記事を提供しています。</span></p>
+</div>
+
+<h2 id="導入">導入</h2>
+
+<dl>
+ <dt><a href="/Firefox_OS/Running_Tests_on_Firefox_OS_for_Developers">Firefox OS上でテストを実行する: 開発者向けガイド</a></dt>
+ <dd>まずは、開発者に注目したテスト実行の導入ガイドです。もしあなたがMozillaのテスト実行と自動化システムを経験していないならまず読んでください。すでにテストを経験しているなら、おそらく実行したいテストと方法のアイデアにあわせて、以下のより特化した詳細なガイドにスキップできます。</dd>
+</dl>
+
+<h2 id="Gaiaのテスト">Gaiaのテスト</h2>
+
+<p>これらの記事はGaiaの性能を試す試験を受けさせるように設計された主なテストスイートをカバーします。</p>
+
+<dl>
+ <dt><a href="/Firefox_OS/Platform/Automated_testing/gaia-ui-tests" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/gaia-ui-tests">Gaia UIテスト</a></dt>
+ <dd>Gaia UIの相互作用と機能のPython製テスト。</dd>
+ <dt><a href="/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Gaia_integration_tests">Gaia総合テスト</a></dt>
+ <dd>JavaScriptによるMarionetteベースのGaia総合テスト。</dd>
+ <dt><a href="/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Gaia_unit_tests" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Gaia_unit_tests">Gaiaユニットテスト</a></dt>
+ <dd>GaiaのUI相互作用を伴わないユニットテスト; Marionetteベースではないが、JavaScriptで書かれています。</dd>
+ <dt><a href="https://developer.mozilla.org/en-US/Firefox_OS/Automated_testing/Raptor">Raptor: Performance Tools for Gaia</a></dt>
+ <dd>Raptor はFirefox OSに特化したパフォーマンス測定ツールで、既存のパフォーマンステストツールを改良するのを狙っています。</dd>
+ <dt><a href="https://wiki.mozilla.org/Project_Eideticker" title="https://github.com/mozilla/eideticker">Eideticker</a></dt>
+ <dd>ビデオキャプチャベースでFirefox OSにパフォーマンス計測を提供します。</dd>
+</dl>
+
+<p><strong><a href="/docs/Mozilla/Firefox_OS/Platform/Automated_testing/MTBF_tests">MTBFテスト</a></strong></p>
+
+<dl>
+ <dd>MTBFテストは再開しないgaia-ui-testベースのテストフレームワークです。MTBFテストは長時間テストを妨げる種類の問題の特定を試します。(現在はまだ発展途上のテストフレームワークであり、台湾QAチームが所有しています)</dd>
+</dl>
+
+<h2 id="B2Gのテスト">B2Gのテスト</h2>
+
+<p>以下のガイドはB2Gの機能性の様々な側面をテストする異なる数のテストハーネスをカバーします。</p>
+
+<dl>
+ <dt><a href="/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Mochitests" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Mochitests">Mochitests</a></dt>
+ <dd>Geckoの機能とAPIのテスト; HTML &amp; JSベース。Gaiaと相互作用しません。</dd>
+ <dt><a href="/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Reftests" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/Reftests">Reftests</a></dt>
+ <dd>Geckoのレンダリング正確性テスト。</dd>
+ <dt><a href="/docs/Mozilla/QA/Marionette/Marionette_JavaScript_Tests" title="/ja/docs/Mozilla/QA/Marionette/Marionette_JavaScript_Tests">WebAPIのテスト</a></dt>
+ <dd>GeckoのJSベースのWebAPIテスト; ほとんどにエミュレータが必要になります。</dd>
+ <dt><a href="/Firefox_OS/Platform/Testing/XPCShell" title="/ja/Firefox_OS/Platform/Testing/XPCShell">xpcshellのテスト</a></dt>
+ <dd>GeckoのXPCOM APIsのヘッドレステスト。</dd>
+ <dt><a href="/Firefox_OS/Automated_testing/Cppunit" title="/en-US/docs/Mozilla/Firefox_OS/Automated_testing/Cppunit">cppunit tests</a></dt>
+ <dd>C++ 単体のヘッドレステスト。</dd>
+</dl>
+
+<h2 id="解説ドキュメント">解説ドキュメント</h2>
+
+<p>このセクションはMozillaのテストについて詳細な情報を探すなら、テストに根拠を与えるいくつかの技術解説へのリンクを提供します。</p>
+
+<dl>
+ <dt><a href="/docs/Mozilla/QA/Marionette" title="/ja/docs/Mozilla/QA/Marionette">Marionette</a></dt>
+ <dd>Selenium WebDriverベースのリモートテストドライバ。</dd>
+ <dt><a href="/docs/Marionette/Marionette_JavaScript_Tools" title="/en-US/docs/Marionette/Marionette_JavaScript_Tools">Marionette JavaScript tests</a></dt>
+ <dd>node.jsベースのMarionetteテストランナー。</dd>
+ <dt><a href="/docs/Marionette/Python_Marionette" title="/en-US/docs/Marionette/Python_Marionette">Marionette Python client</a></dt>
+ <dd>Python版Marionetteテストランナー。</dd>
+ <dt><a href="https://wiki.mozilla.org/Build:TryServer">Try server</a></dt>
+ <dd>Mozilla's standard server for testing patches before checking them into the core repository. See also the <a href="http://trychooser.pub.build.mozilla.org/">TryChooser Syntax Builder</a>.</dd>
+</dl>
+
+<div class="note">
+<p><strong>注意</strong>: もし製品版ビルドに対してMarionetteを実行したいなら (gaia総合テスト、gaia-ui-tests、等の実行)、<a href="https://github.com/mozilla-b2g/marionette-extension">拡張機能としてMarionetteをインストール</a>することができます (今は1.3ビルドのみ動きますが、他のサポートもすぐに追加されます)</p>
+</div>
+
+<h2 id="継続的インテグレーションと結果報告">継続的インテグレーションと結果報告</h2>
+
+<p>以下の記事はMozillaがテストデータの保存と解釈するのに使用する継続的インテグレーションと結果報告のメカニズムをカバーします。</p>
+
+<dl>
+ <dt><a href="/docs/Mozilla/Firefox_OS/Treeherder">Treeherder</a></dt>
+ <dd>Treeherderによるテストとビルドを理解することができます。</dd>
+ <dt><a href="https://raptor.mozilla.org/">Raptor</a></dt>
+ <dd>Visualization of performance tests run against the <a href="https://developer.mozilla.org/en-US/Firefox_OS/Automated_testing/Raptor">Raptor</a> tool.</dd>
+ <dt><a href="/docs/Mozilla/Firefox_OS/Platform/Automated_testing/Test_Execution_Chart" title="/en-US/docs/Mozilla/Firefox_OS/Testing/Test_Execution_Chart">Test execution chart</a></dt>
+ <dd>テストが実行開始しているか、どのデバイス上でまたはどこでテストしているか、そして各テストがどのパフォーマンスをサポートしているかのチャートを見ることができます。</dd>
+</dl>
+
+<h2 class="Community" name="Community" id="Community">ユニットテストフレームワークのビデオ</h2>
+
+<p></p><div class="intrinsic-wrapper"><div class="intrinsic-container "><iframe src="https://www.youtube.com/embed/LxnRIm0wLLo?rel=0&amp;html5=1"></iframe></div></div><p></p>

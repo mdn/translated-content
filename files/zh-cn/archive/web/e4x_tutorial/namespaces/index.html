@@ -1,0 +1,33 @@
+---
+title: Namespaces
+slug: Archive/Web/E4X_tutorial/Namespaces
+translation_of: Archive/Web/E4X_tutorial/Namespaces
+---
+<h2 id="E4X_与_命令空间">E4X 与 命令空间</h2>
+<p>通常情况下，XML 文档包含来自多种命令空间的元素。你可以通过声明为你的 E4X 对象设置默认的命名空间。</p>
+<pre class="brush: js">default xml namespace = "http://www.w3.org/1999/xhtml";
+</pre>
+<p>通过重复的声明，你可以随时更改相同范围内 E4X 的命名空间。</p>
+<pre class="brush: js">default xml namespace = "http://www.w3.org/1999/xhtml";
+var a = &lt;p&gt;Some text&lt;/p&gt;;
+default xml namespace = "http://www.mozilla.org/keymaster/gat...re.is.only.xul";
+var b = &lt;label&gt;More text&lt;/label&gt;;
+a.appendChild(b);
+</pre>
+<p>得出</p>
+<p><code>&lt;p xmlns="<a class="external" href="http://www.w3.org/1999/xhtml" rel="freelink">http://www.w3.org/1999/xhtml</a>"&gt;<br>
+   Some text<br>
+   &lt;label xmlns="<a class="external" href="http://www.mozilla.org/keymaster/gat...re.is.only.xul" rel="freelink">http://www.mozilla.org/keymaster/gat...re.is.only.xul</a>"&gt;More text&lt;/label&gt;<br>
+ &lt;/p&gt; </code></p>
+<h2 id="name()">name()</h2>
+<p>在 XML 对象上调用 name() 会返回一个 QName 对象（Qualified Name）。QName 在支持 E4X 的 JavaScript 实现中是一个全局的构造函数。QName 对象有两个特别重要的属性：localName 返回元素的名字，且没有任何命名空间前缀；uri 返回元素所在的命名空间。</p>
+<pre class="brush: js">var info = a.name();
+info.localName; // returns 'p'.
+info.uri; // returns "http://www.w3.org/1999/xhtml"</pre>
+<p>没有在任何命令空间的元素，他们的 uri 是一个空字符串。</p>
+<p>Namespace 全局构造函数和 QName 非常相似。Namespace 的不同之处是 toString 方法，以及 Namespace 用 prefix 属性来代替 localName 属性<sup>[1]</sup> 。</p>
+<p>关于 E4X 的命名空间，更多的内容请参见 <a href="/cn/E4X/Processing_XML_with_E4X#Handling_namespaces" title="cn/E4X/Processing_XML_with_E4X#Handling_namespaces">Processing XML with E4X</a> 。</p>
+<h2 id="译者注">译者注</h2>
+<ol>
+ <li>原文中没有详细讲，获得 Namespace 对象的方法是调用 .namespace()。其中 QName 的 toString 方法会输出 Namespace::name 的形式，而 Namespace 的 toString 只会输出命名空间。</li>
+</ol>

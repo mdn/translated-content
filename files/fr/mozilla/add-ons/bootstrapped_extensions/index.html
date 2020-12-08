@@ -1,0 +1,348 @@
+---
+title: Modules complémentaires bootstrapés
+slug: Mozilla/Add-ons/Bootstrapped_extensions
+tags:
+  - Extensions
+  - Guide
+  - Modules complémentaires
+translation_of: Archive/Add-ons/Bootstrapped_extensions
+---
+<p>{{LegacyAddonsNotice}}{{AddonSidebar}}</p>
+
+<p>{{ gecko_minversion_header("2.0") }}</p>
+
+<p><span id="result_box" lang="fr"><span>Les extensions traditionnelles incluent des <strong>superpositions</strong>, dans lesquelles l'application peut charger XUL depuis le paquet de l'extension et l'appliquer automatiquement sur sa propre interface utilisateur.</span> <span>Bien que la création d'extensions, qui ajoutent à l'interface utilisateur de l'application, soit relativement simple, cela signifie que la mise à jour, l'installation ou la désactivation d'une extension nécessite un redémarrage de l'application.</span></span></p>
+
+<p><span id="result_box" lang="fr"><span>Gecko 2.0 {{geckoRelease ("2.0")}} introduit des <strong>extensions "bootstrapées"</strong>.</span> <span>Ce sont des extensions spéciales qui, au lieu d'utiliser une superposition pour appliquer leur interface utilisateur à l'application, s'insèrent par programmation dans l'application.</span> <span>Ceci est fait en utilisant un fichier de script spécial inclus dans l'extension qui contient les fonctions que le navigateur appelle pour commander à l'extension d'installer, désinstaller, démarrer et arrêter.</span></span></p>
+
+<p><span id="result_box" lang="fr"><span>Toute l'application fait appel à ce fichier de script;</span> <span>l'extension est responsable de l'ajout et de la suppression de son interface utilisateur et de la gestion des autres tâches d'installation et d'arrêt nécessaires.</span></span></p>
+
+<p><span id="result_box" lang="fr"><span>Cet article explique comment fonctionnent les extensions "bootstrap".</span> <span>Consultez ce didacticiel sur la <a href="https://developer.mozilla.org/fr/Add-ons/How_to_convert_an_overlay_extension_to_restartless">conversion d'une extension superposée en une opération sans redémarrage</a> pour obtenir un guide pratique étape par étape de la migration.</span></span></p>
+
+<h2 id="Le_processus_de_démarrage_et_d'arrêt"><span class="short_text" id="result_box" lang="fr"><span>Le processus de démarrage et d'arrêt</span></span></h2>
+
+<p><span id="result_box" lang="fr"><span>Une fonctionnalité clé des extensions "bootstrapées" est qu'elles doivent pouvoir démarrer et arrêter à la demande de l'application.</span> <span>Lorsque la fonction de </span></span> <code>startup()</code> <em>(</em><span lang="fr"><span><em>démarrage)</em> de l'extension est appelée, elle doit injecter manuellement son interface utilisateur et tout autre comportement dans l'application.</span> <span>De même, lorsque sa fonction <code>shutdown()</code> <em>(arrêt)</em> est appelée, elle doit supprimer tout ce qu'elle a ajouté à l'application, ainsi que toutes les références à l'un de ses objets.</span></span></p>
+
+<p><span id="result_box" lang="fr"><span>Il existe plusieurs scénarios dans lesquels la fonction <code>startup()</code> peut être appelée,</span> <span>par exemple :</span></span></p>
+
+<ul>
+ <li><span id="result_box" lang="fr"><span>lorsque l'extension est installée pour la première fois, en supposant qu'elle soit compatible avec l'application et activée.</span></span></li>
+ <li><span id="result_box" lang="fr"><span>lorsque l'extension est activée à l'aide de la fenêtre du gestionnaire de modules complémentaires.</span></span></li>
+ <li><span id="result_box" lang="fr"><span>lorsque l'application est démarrée, si l'extension est activée et compatible avec l'application.</span></span></li>
+</ul>
+
+<p>Quelques exemples  <span id="result_box" lang="fr"><span>de situations où la fonction <code>shutdown()</code> peut être appelée :</span></span></p>
+
+<ul>
+ <li><span id="result_box" lang="fr"><span>lorsque l'extension est désinstallée, si elle est actuellement activée.</span></span></li>
+ <li><span class="short_text" id="result_box" lang="fr"><span>lorsque l'extension est désactivée.</span></span></li>
+ <li><span id="result_box" lang="fr"><span>lorsque l'utilisateur quitte l'application, si l'extension est activée.</span></span></li>
+</ul>
+
+<h2 id="Notes_sur_la_modification_de_l'interface_utilisateur_de_l'application"><span id="result_box" lang="fr"><span>Notes sur la modification de l'interface utilisateur de l'application</span></span></h2>
+
+<h3 id="chrome.manifest_dans_les_extensions_bootstrapées">chrome.manifest dans les extensions "bootstrapées"</h3>
+
+<p>Vous pouvez utiliser un fichier <a href="https://developer.mozilla.org/fr/docs/Enregistrement_chrome#Exemple_de_fichier_manifest_chrome"><code>chrome.manifest</code></a> dans l'extension "bootstrapée" pour :</p>
+
+<ul>
+ <li><span id="result_box" lang="fr"><span>Rendre le contenu de votre module complémentaire disponible via une URL <code>chrome://</code> (en utilisant les instructions </span></span> <code>content</code> <em>(</em><span lang="fr"><span><em>contenu)</em>, </span></span> <code>locale</code> <em>(</em><span lang="fr"><span><em>langue)</em> et </span></span> <code>skin</code> <em>(</em><span lang="fr"><span><em>habillage)</em> dans le manifeste).</span></span></li>
+ <li>Remplacer les URI du <code>chrome://</code> existant avec votre contenu (en utilisant l'instruction <code>override</code> <em>(passer outre)</em>).</li>
+</ul>
+
+<p>Toutes les instructions <code>chrome.manifest</code> ne sont pas supportées dans les extensions bootstrapées, <span id="result_box" lang="fr"><span>par exemple, vous ne pouvez toujours pas enregistrer d'</span></span> <a href="https://developer.mozilla.org/fr/docs/Overlays_XUL">Overlays XUL</a> à partir d'une extension "bootstrapée". Voir la documentation <a href="https://developer.mozilla.org/fr/docs/Enregistrement_chrome"><code>Enregistrement chrome</code></a> pour les détails.</p>
+
+<p><span id="result_box" lang="fr"><span>Dans Firefox 10 et versions ultérieures, le fichier <code>chrome.manifest</code> situé dans la racine du XPI du module complémentaire (c'est-à-dire un frère du fichier <code>install.rdf</code>) est chargé automatiquement.</span> <span>Dans Firefox 8 et 9, vous devez charger / décharger manuellement le manifeste en utilisant {{ifmethod ("nsIComponentManager", "addBootstrappedManifestLocation")}} et {{ifmethod ("nsIComponentManager", "removeBootstrappedManifestLocation")}}.</span> <span>Cette fonctionnalité n'était pas disponible dans les versions de Firefox avant 8.</span></span></p>
+
+<h3 id="Ajout_manuel_d'une_interface_utilisateur">Ajout manuel d'une interface utilisateur</h3>
+
+<p><span id="result_box" lang="fr"><span>Si vous décidez de développer une extension "bootstrapée", qui modifie l'interface utilisateur de l'application, voici quelques suggestions pour vous aider à démarrer.</span></span></p>
+
+<p><span id="result_box" lang="fr"><span>Vous devez rechercher les éléments d'interface utilisateur de l'application appropriés par leur ID en appelant {{domxref ("document.getElementById ()")}}, puis les manipuler pour injecter votre interface utilisateur.</span> <span>Par exemple, vous pouvez accéder à la barre de menus de Firefox avec <code>document.getElementById ("main-menubar")</code>.</span></span></p>
+
+<p><span id="result_box" lang="fr"><span>Assurez-vous qu'au moment de l'arrêt, vous supprimez toute interface utilisateur que vous avez ajoutée.</span></span></p>
+
+<h2 id="Création_d'une_extension_bootstrapée">Création d'une extension "bootstrapée"</h2>
+
+<p><span id="result_box" lang="fr"><span>Pour marquer une extension comme "bootstrappable", vous devez ajouter l'élément suivant à son</span></span> <a href="https://developer.mozilla.org/fr/Add-ons/Install_Manifests">manifeste d'installation</a> :</p>
+
+<pre><code>&lt;em:bootstrap&gt;true&lt;/em:bootstrap&gt;</code></pre>
+
+<p>Alors, vous devez ajouter un fichier <a href="https://developer.mozilla.org/fr/docs/Extensions/bootstrap.js"><code><strong>bootstrap.js</strong></code></a> qui contient les fonctions requises ; <span class="short_text" id="result_box" lang="fr"><span>elles devraient être à côté du fichier</span></span> <a href="https://developer.mozilla.org/fr/Add-ons/Install_Manifests"><code>install.rdf</code></a> dans le paquet de l'extension.</p>
+
+<h3 id="Rétrocompatibilité"><span class="short_text" id="result_box" lang="fr"><span>Rétrocompatibilité</span></span></h3>
+
+<p><span id="result_box" lang="fr"><span>Parce que les anciennes versions de Firefox ne connaissent pas la propriété <code>bootstrap</code> ou le fichier <code>bootstrap.js</code>, il n'est pas trop difficile de créer un XPI qui fonctionnera à la fois comme une extension "bootstrapable" et comme une extension traditionnelle.</span> <span>Créez votre extension en tant qu'extension "bootstrapable", puis ajoutez les "overlays" <em>(superpositions)</em> traditionnels.</span> <span>Les versions plus récentes de Firefox utiliseront le script <code>bootstrap.js</code>, en ignorant les composants et les superpositions, alors que les versions plus anciennes utiliseront les superpositions.</span></span></p>
+
+<h2 id="Points_d'entrée_Bootstrap"><span class="short_text" id="result_box" lang="fr"><span>Points d'entrée Bootstrap</span></span></h2>
+
+<p><span id="result_box" lang="fr"><span>Le script <code>bootstrap.js</code> doit contenir plusieurs fonctions spécifiques, appelées par le navigateur pour gérer l'extension.</span> <span>Le script est exécuté dans un bac à sable privilégié, qui est mis en cache jusqu'à ce que l'extension soit arrêtée.</span></span></p>
+
+<h3 id="startup_(démarrage)">startup <em>(démarrage)</em></h3>
+
+<p><span id="result_box" lang="fr"><span>Appelé lorsque l'extension doit se démarrer elle-même.</span> <span>Il se produit au moment du lancement de l'application, lorsque l'extension est activée après avoir été désactivée ou après son arrêt afin d'installer une mise à jour.</span> <span>Il peut être appelé plusieurs fois pendant la durée de vie de l'application.</span></span></p>
+
+<p><span id="result_box" lang="fr"><span>C'est à ce moment que votre extension doit injecter son interface utilisateur, démarrer toutes les tâches qu'elle peut avoir besoin d'exécuter et ainsi de suite.</span></span></p>
+
+<pre>void startup(
+  data,
+  reason
+);
+</pre>
+
+<h6 id="Paramètres">Paramètres</h6>
+
+<dl>
+ <dt><code>data </code><em>(donnée)</em></dt>
+ <dd>Une <a href="#Données bootstrap">donnée bootstrap</a>.</dd>
+ <dt><code>reason <em>(motif)</em></code></dt>
+ <dd>Une des <a href="#Constantes causales">constantes causales</a>, <span id="result_box" lang="fr"><span>indiquant pourquoi l'extension est en cours de démarrage.</span></span> Ce peut être l'une d'entre elles : <code>APP_STARTUP</code>, <code>ADDON_ENABLE</code>, <code>ADDON_INSTALL</code>, <code>ADDON_UPGRADE ou</code> <code>ADDON_DOWNGRADE</code>.</dd>
+</dl>
+
+<h3 id="shutdown_(arrêt)">shutdown <em>(arrêt)</em></h3>
+
+<p><span id="result_box" lang="fr"><span>Appelé lorsque l'extension doit se fermer, par exemple lorsque l'application est en cours de fermeture, ou lorsqu'elle est sur le point d'être mise à niveau ou désactivée.</span> <span>Toute interface utilisateur qui a été injectée doit être supprimée, les tâches doivent être arrêtées et les objets éliminés.</span></span></p>
+
+<pre>void shutdown(
+  data,
+  reason
+);
+</pre>
+
+<h6 id="Paramètres_2">Paramètres</h6>
+
+<dl>
+ <dt><code>data <em>(donnée)</em></code></dt>
+ <dd>Une <a href="#Données bootstrap">donnée bootstrap</a>.</dd>
+ <dt><code>reason <em>(motif)</em></code></dt>
+ <dd>Une des <a href="#Constantes causales">constantes causales</a>, indiquant pourquoi l'extension est en train de se fermet. Ce peut être l'une d'entre elles : <code>APP_SHUTDOWN</code>, <code>ADDON_DISABLE</code>, <code>ADDON_UNINSTALL</code>, <code>ADDON_UPGRADE</code> ou <code>ADDON_DOWNGRADE</code>.</dd>
+</dl>
+
+<h3 id="install_(installation)">install <em>(installation)</em></h3>
+
+<p><span id="result_box" lang="fr"><span>Votre script "bootstrap" doit inclure une fonction <code>install()</code> que l'application appelle avant le premier appel </span></span> <code>startup()</code> <span lang="fr"><span> après l'installation, la mise à niveau ou le déclassement de l'extension.</span></span></p>
+
+<pre>void install(
+  data,
+  reason
+);
+</pre>
+
+<h6 id="Paramètres_3">Paramètres</h6>
+
+<dl>
+ <dt><code>data <em>(donnée)</em></code></dt>
+ <dd>Une <a href="#Données bootstrap">donnée bootstrap</a>.</dd>
+ <dt><code>reason <em>(motif)</em></code></dt>
+ <dd>Une des <a href="#Constantes causales">constantes causales</a>, indiquant pourquoi l'extension est en train d'être installée. Ce peut être l'une d'entre elles : <code>ADDON_INSTALL</code>, <code>ADDON_UPGRADE</code>, ou <code>ADDON_DOWNGRADE</code>.</dd>
+</dl>
+
+<h3 id="uninstall_(désinstallation)">uninstall <em>(désinstallation)</em></h3>
+
+<p>Cette fonction est appelée après le dernier appel à <code>shutdown()</code>  <span id="result_box" lang="fr"><span>avant qu'une version particulière de l'extension soit désinstallée.</span></span> Il n'est pas appelé si <code>install()</code>  <span class="short_text" id="result_box" lang="fr"><span>n'a jamais été appelé</span></span> .</p>
+
+<div class="note"><strong>Note :</strong> <span id="result_box" lang="fr"><span>Si vous ouvrez le gestionnaire de modules complémentaires, puis cliquez sur «Supprimer» sur un module complémentaire, il n'appellera pas la fonction de désinstallation immédiatement.</span> <span>Il s'agit d'une désinstallation en raison de l'option "Annuler" disponible.</span> <span>Si le gestionnaire de modules complémentaires est fermé ou qu'un autre événement se déroule de telle sorte que l'option "Annuler" devient indisponible, la désinstallation en dur a lieu et la fonction de désinstallation est appelée.</span></span></div>
+
+<div class="note"><strong>Note :</strong> <span id="result_box" lang="fr"><span>La fonction de désinstallation s'exécute sur déclassement et mise à niveau, ainsi vous devriez vous assurer qu'il s'agit d'une désinstallation en faisant ceci :</span></span><br>
+<code>function uninstall(aData, aReason) {</code><br>
+<code>     if (aReason == ADDON_UNINSTALL) {</code><br>
+<code>          console.log('really uninstalling');</code><br>
+<code>     } else {</code><br>
+<code>          console.log('not a permanent uninstall, likely an upgrade or downgrade');</code><br>
+<code>     }</code><br>
+<code>}</code></div>
+
+<pre>void uninstall(
+  data,
+  reason
+);
+</pre>
+
+<h6 id="Paramètres_4">Paramètres</h6>
+
+<dl>
+ <dt><code>data <em>(donnée)</em></code></dt>
+ <dd>Une <a href="#Données bootstrap">donnée bootstrap</a>.</dd>
+ <dt><code>reason</code></dt>
+ <dd>Une des <a href="#Constantes causales">constantes causales,</a> indiquant pourquoi l'extension est en train d'être désinstallée. Ce peut être l'une d'entre elles : <code>ADDON_UNINSTALL</code>, <code>ADDON_UPGRADE</code> ou <code>ADDON_DOWNGRADE</code>.</dd>
+</dl>
+
+<h2 id="Constantes_causales"><a id="Constantes causales" name="Constantes causales">Constantes causales</a></h2>
+
+<p>La fonction bootstrap accepte un paramètre <code>reason</code> (motif), qui explique pourquoi l'extension est appelée. Les constantes causales sont :</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Constante</td>
+   <td class="header">Valeur</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>APP_STARTUP</code></td>
+   <td>1</td>
+   <td>L'application est démarrée.</td>
+  </tr>
+  <tr>
+   <td><code>APP_SHUTDOWN</code></td>
+   <td>2</td>
+   <td>L'application est fermée.</td>
+  </tr>
+  <tr>
+   <td><code>ADDON_ENABLE</code></td>
+   <td>3</td>
+   <td><span class="short_text" id="result_box" lang="fr"><span>Le module complémentaire est activé.</span></span></td>
+  </tr>
+  <tr>
+   <td><code>ADDON_DISABLE</code></td>
+   <td>4</td>
+   <td>Le module complémentaire est désactivé. (également <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=620541">envoyé pendant la désinstallation</a>)</td>
+  </tr>
+  <tr>
+   <td><code>ADDON_INSTALL</code></td>
+   <td>5</td>
+   <td>Le module complémentaire est installé.</td>
+  </tr>
+  <tr>
+   <td><code>ADDON_UNINSTALL</code></td>
+   <td>6</td>
+   <td>Le module complémentaire est désinstallé.</td>
+  </tr>
+  <tr>
+   <td><code>ADDON_UPGRADE</code></td>
+   <td>7</td>
+   <td>Le module complémentaire est mis à jour.</td>
+  </tr>
+  <tr>
+   <td><code>ADDON_DOWNGRADE</code></td>
+   <td>8</td>
+   <td>Le module complémentaire est déclassé.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Données_bootstrap"><a id="Données bootstrap" name="Données bootstrap">Données bootstrap</a></h2>
+
+<p><span id="result_box" lang="fr"><span>Chacun des points d'entrée est transmis à une structure de données simple contenant des informations utiles sur le module complémentaire "bootstrapé".</span> <span>Plus d'informations sur l'extension peuvent être obtenues en appelant</span></span> <code><a href="/en-US/docs/Addons/Add-on_Manager/AddonManager#getAddonByID()">AddonManager.getAddonByID()</a></code>. <span id="result_box" lang="fr"><span>Les données sont un objet JavaScript simple avec les propriétés suivantes :</span></span></p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Propriété</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>id</code></td>
+   <td><code>chaîne de caractères</code></td>
+   <td>L'ID du module complémentaire est "bootstrapé".</td>
+  </tr>
+  <tr>
+   <td><code>version</code></td>
+   <td><code>chaîne de caractères</code></td>
+   <td>La version du module complémentaire est "bootstrapée".</td>
+  </tr>
+  <tr>
+   <td><code>installPath <em>(chemin d'installation)</em></code></td>
+   <td><code>nsIFile</code></td>
+   <td><span id="result_box" lang="fr"><span>L'emplacement d'installation du module complémentaire est "bootstrapé".</span> <span>Il peut s'agir d'un répertoire ou d'un fichier XPI selon que le module complémentaire est installé décompressé ou non.</span></span></td>
+  </tr>
+  <tr>
+   <td><code>resourceURI </code><em>(URI ressource)</em></td>
+   <td><code>nsIURI</code></td>
+   <td><span id="result_box" lang="fr"><span>L'URI pointe sur la racine des fichiers complémentaires, il peut s'agir d'un URI <code>jar:</code> ou <code>file:</code> , selon que le module complémentaire est installé ou non.</span></span> {{ gecko_minversion_inline("7.0") }}</td>
+  </tr>
+  <tr>
+   <td><code>oldVersion </code><em>(ancienne version)</em></td>
+   <td><code>chaîne de caractères</code></td>
+   <td>La précédente version installée, si le motif est <code>ADDON_UPGRADE</code> ou <code>ADDON_DOWNGRADE</code>, et si la méthode est <code>install</code> ou<code>startup</code>. {{ gecko_minversion_inline("22.0") }}</td>
+  </tr>
+  <tr>
+   <td><code>newVersion </code><em>(nouvelle version)</em></td>
+   <td><code>chaîne de caractères</code></td>
+   <td>La version à installer, si le motif est <code>ADDON_UPGRADE</code> ou <code>ADDON_DOWNGRADE</code>, et si la méthode est <code>shutdown</code> ou <code>uninstall</code>. {{ gecko_minversion_inline("22.0") }}</td>
+  </tr>
+ </tbody>
+</table>
+
+<div class="note">
+<p><strong>Note :</strong> <span id="result_box" lang="fr"><span>Un module complémentaire peut être mis à niveau / déclassé au démarrage de l'application, dans ce cas, le motif de la méthode </span></span> <code>startup</code> <span lang="fr"><span> est <code>APP_STARTUP</code> et la propriété <code>oldVersion</code> n'est pas définie.</span> <span>Sachez également que, dans certaines circonstances, une mise à niveau ou un déclassement additif peut se produire sans que la méthode de désinstallation soit appelée.</span></span></p>
+</div>
+
+<h2 id="Débogueur_de_module_complémentaire">Débogueur de module complémentaire</h2>
+
+<p><span id="result_box" lang="fr"><span>A partir de Firefox 31, vous pouvez utiliser le <a href="https://developer.mozilla.org/fr/Add-ons/Add-on_Debugger">débogueur de module complémentaire</a> pour déboguer les modules complémentaires "bootstrapés".</span></span></p>
+
+<h2 id="Localisation_(L10n)">Localisation (L10n)</h2>
+
+<p><span id="result_box" lang="fr"><span>La localisation des modules complémentaires "bootstrapés" est très similaire à celle de Firefox 7, car c'est à ce moment-là que la compatibilité de chrome.manifest a démarré.</span></span></p>
+
+<h3 id="Fichiers_JS_et_JSM_-_Utilisation_des_fichiers_de_propriétés">Fichiers JS et JSM - Utilisation des fichiers de propriétés</h3>
+
+<p>Pour localiser vos fichiers .js et .jsm , vous avez à utiliser <a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/Tutoriel_XUL/Les_fichiers_de_propri%C3%A9t%C3%A9s">les fichiers de propriétés</a>.</p>
+
+<p>Le minimum absolument nécessaire est :</p>
+
+<ol>
+ <li>Fichier : install.rdf</li>
+ <li>Fichier : chrome.manifest</li>
+ <li>Fichier : bootstrap.js</li>
+ <li>Dossier : locale <em>(langue)</em>
+  <ol>
+   <li>Dossier : VALID_LOCALE_HERE <em>(localisation valide ici)</em>
+    <ol>
+     <li>Fichier : ANYTHING.properties <em>(toutes les propriétés)</em></li>
+    </ol>
+   </li>
+  </ol>
+ </li>
+</ol>
+
+<p><span id="result_box" lang="fr"><span>Dans le dossier "locale", vous devez disposer de dossiers pour chacune des langues que vous souhaitez fournir;</span> <span>chaque dossier doit être nommé avec un nom "locale" valide (exemple : fr).</span> <span>Dans ce dossier, doit exister un fichier de propriétés.</span> <span>Dans le fichier chrome.manifest, ces paramètres régionaux doivent être définis.</span> <span>Par exemple, si vous disposez d'un sous-dossier fr dans le dossier "locale", votre fichier chrome.manifest devra contenir : locale NAME_OF_YOUR_ADDON fr locale/fr/</span></span></p>
+
+<p>Ici un exemple : <a href="https://github.com/Noitidart/l10n/tree/properties">GitHub :: l10n-properties</a> - <span id="result_box" lang="fr"><span>au démarrage de ce module, il affichera une invite indiquant USA ou Grande-Bretagne, avec laquelle choisir la langue la plus proche de la vôtre.</span> <span>Vous pouvez tester différents "locale" en allant sur </span></span> about:config <span lang="fr"><span> et en changeant les préférences de general.useragent.locale, et en désactivant puis en réactivant le module complémentaire.</span></span></p>
+
+<h3 id="Fichiers_XUL_et_HTML_-_Utilisation_d'entités_à_partir_de_fichiers_DTD">Fichiers XUL et HTML - Utilisation d'entités à partir de fichiers DTD</h3>
+
+<p><span id="result_box" lang="fr"><span>Plusieurs pages HTML sont utilisées, mais elles ne peuvent pas être localisées avec des fichiers DTD.</span> <span>Il y a trois changements que vous devez faire :</span></span></p>
+
+<ol>
+ <li><span id="result_box" lang="fr"><span>Vous devez changer l'extension du fichier HTML en</span></span> <code>.xhtml</code></li>
+ <li>Le doctype <span id="result_box" lang="fr"><span>doit être défini pointant sur un fichier DTD dans votre dossier "locale", ainsi par exemple</span></span> : <code>&lt;!DOCTYPE html SYSTEM <span class="pl-s1">"chrome://l10n/locale/mozilla.dtd"</span>&gt;</code></li>
+ <li>Vous devez ajouter l'attribut xmlns à la balise html, par exemple : <code>&lt;<span class="pl-ent">html</span> <span class="pl-e">xmlns</span>=<span class="pl-s1"><span class="pl-pds">"</span>http://www.w3.org/1999/xhtml<span class="pl-pds">"</span></span>&gt;</code></li>
+ <li>Si vous avez plusieurs fichiers DTD lisez ceci : <a href="https://developer.mozilla.org/fr/docs/Utilisation_de_plusieurs_DTD">Utilisation de plusieurs DTD</a></li>
+</ol>
+
+<p><span class="short_text" id="result_box" lang="fr"><span>Le minimum nécessaire est</span></span> :</p>
+
+<ol>
+ <li>Fichier : install.rdf</li>
+ <li>Fichier : chrome.manifest</li>
+ <li>Fichier : bootstrap.js</li>
+ <li>Dossier : locale
+  <ol>
+   <li>Dossier : VALID_LOCALE_HERE
+    <ol>
+     <li>Fichier : ANYTHING.dtd</li>
+    </ol>
+   </li>
+  </ol>
+ </li>
+</ol>
+
+<p><span id="result_box" lang="fr"><span>Le fichier chrome.manifest doit inclure une définition pour le contenu, par exemple:</span></span> <code>content NAME_OF_YOUR_ADDON ./</code></p>
+
+<p>Le fichier chrome.manifest doit aussi inclure une ligne pointant sur le dossier "locale", <span class="short_text" id="result_box" lang="fr"><span>comme dans la section de propriété ci-dessus</span></span>, si vous avez un dossier nommé en-US dans le dossier "locale", le fichier chrome.manifest doit contenir : <code>locale NAME_OF_YOUR_ADDON en-US locale/en-US/</code></p>
+
+<p>ici un exemple de module complémentaire qui ouvre une page HTML et une page  XUL sur install : <a href="https://github.com/Noitidart/l10n/tree/c456cc82a8a66b6d552cd8c2299cd2babc383af0">GitHub :: l10n-xhtml-xul</a>. <span id="result_box" lang="fr"><span>Voici un exemple montrant comment utiliser une page HTML localisée en tant que page d'options</span></span> : <a href="https://github.com/Noitidart/l10n/tree/html-options">GitHub :: l10n-html-options</a>. Vous pouvez aller sur about:config et changer la valeur de la préférence <code>general.useragent.locale </code><code>en-US</code> par <code>en-GB</code> et recharger la page ouverte pour voir les changements sur les paramètres régionaux.</p>
+
+<h2 id="Plus_de_lecture">Plus de lecture</h2>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/fr/Add-ons/How_to_convert_an_overlay_extension_to_restartless">Comment convertir une extension superposée en redémarrage</a> un guide étape par étape. Quelques exemples de code sont fournis. La page est basée et étendue à partir du guide étape par étape de Dave Garrett <a class="external" href="https://flagfox.wordpress.com/2014/01/19/writing-restartless-addons/">convert an old overlay based extension into a restartless addon</a> <em>(<span id="result_box" lang="fr"><span>convertir une ancienne extension basée sur une superposition en un module complémentaire sans redémarrage).</span></span></em></li>
+ <li>Dave Townsend fournit un code basique <a class="external" href="http://www.oxymoronical.com/blog/2011/01/Playing-with-windows-in-restartless-bootstrapped-extensions">charger l'interface utilisateur pour chaque fenêtre ouverte</a> (en) dans un module complémentaire "bootstrapé".</li>
+ <li>Mark Finkle fournit quelques exemples simples de code pour <a class="external" href="http://starkravingfinkle.org/blog/2011/01/bootstrap-jones-adventures-in-restartless-add-ons/">modules complémentaires sans redémarrage dans Firefox mobile</a>, <a class="external" href="http://starkravingfinkle.org/blog/2011/01/restartless-add-ons-more-resources/">ajouter des ressources (comme la fenêtre d'options)</a> (en) pour les extensions "bootstrapées" et <a class="external" href="http://starkravingfinkle.org/blog/2011/01/restartless-add-ons-%e2%80%93-default-preferences/">utilisation des préférences par defaut</a> (en) sans fichier <code>default/preferences/prefs.js</code> .</li>
+ <li>Kris Maglione écrit au sujet de <a class="external" href="http://maglione-k.users.sourceforge.net/bootstrapped.xhtml">les exigences pour les procédures de nettoyage</a> (en) dans les modules complémentaires "bootstrapés".</li>
+ <li>Edward Lee montre quelques <a class="external" href="http://ed.agadak.net/2011/01/restartless-add-on-example-code">modèles de codage utiles et exemples</a> que vous pouvez utiliser dans votre module complémentaire "bootstrapé".</li>
+ <li>Documentation pour <a href="https://developer.mozilla.org/fr/Add-ons/Inline_Options">Options en ligne</a> dans Firefox 7 et suivants.</li>
+</ul>

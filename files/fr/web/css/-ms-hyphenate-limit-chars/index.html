@@ -1,0 +1,46 @@
+---
+title: '-ms-hyphenate-limit-chars'
+slug: Web/CSS/-ms-hyphenate-limit-chars
+tags:
+  - CSS
+  - Non-standard
+  - Propriété
+  - Reference
+translation_of: Archive/Web/CSS/-ms-hyphenate-limit-chars
+---
+<div>{{CSSRef}}{{Non-standard_header}}</div>
+
+<p>La propriété CSS <code><strong>-ms-hyphenate-limit-chars</strong></code> est <a href="/fr/docs/Web/CSS/Extensions_CSS_Microsoft">une propriété spécifique à Microsoft</a> qui définit une à trois valeurs indiquant le nombre minimal de caractères utilisés pour un mot tronqué pour passer à la ligne. Si le mot n'a pas suffisamment de caractères avant ou après le passage à la ligne, aucune césure n'est appliquée sur le mot.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<p>La propriété <strong><code>-ms-hyphenate-limit-chars</code></strong> est définie de la façon suivante.</p>
+
+<h3 id="Valeurs">Valeurs</h3>
+
+<dl>
+ <dt><code>auto</code></dt>
+ <dd>
+ <p>Cette valeur correspond à la valeur composite <code>5 2 2</code> qui signifie que le mot doit mesurer au moins 5 caractères pour être sujet à une césure, qu'il faut au moins 2 caractères avant la césure et 2 caractères après la césure.</p>
+ </dd>
+ <dt><code>&lt;integer&gt; {1,3}</code></dt>
+ <dd>
+ <p>Une à trois valeurs entières (cf. {{cssxref("&lt;integer&gt;")}}) qui décrivent respectivement la taille minimale du mot, le nombre de caractères minimal avant la césure et le nombre de caractères minimal après la césure.</p>
+
+ <p>Lorsque la troisième valeur n'est pas indiquée, la valeur utilisée est égale à la seconde valeur.</p>
+
+ <p>Si la deuxième et troisième valeurs sont absentes, elles utilisent la même valeur que <code>auto</code>.</p>
+
+ <p>Note : il n'est pas possible d'utiliser des valeurs négatives.</p>
+ </dd>
+</dl>
+
+<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+
+<pre class="syntaxbox">{{csssyntax}}</pre>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<p>Cette propriété est une propriété non-standard et ne fait partie d'aucune spécification.</p>
+
+<p>{{cssinfo}}</p>

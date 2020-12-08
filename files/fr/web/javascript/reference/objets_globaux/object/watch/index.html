@@ -1,0 +1,150 @@
+---
+title: Object.prototype.watch()
+slug: Web/JavaScript/Reference/Objets_globaux/Object/watch
+tags:
+  - JavaScript
+  - Méthode
+  - Non-standard
+  - Object
+  - Prototype
+  - Reference
+translation_of: Archive/Web/JavaScript/Object.watch
+---
+<div>{{JSRef}}{{non-standard_header}}</div>
+
+<div class="warning">
+<p><strong>Méthode dépréciée !</strong> Ne pas utiliser <code>watch()</code> et {{jsxref("Object.prototype.unwatch", "unwatch()")}}. En effet, ces deux méthodes n'ont été implémentées qu'avec Gecko et sont dépréciées. <strong>Elle sont retirées avec à partir de Firefox 58</strong>. De plus, l'ajout de points d'arrêts conditionnels a de graves impacts sur les performances, notamment sur les objets globaux comme <code>window</code>. Il est conseillé d'utiliser les <a href="/fr/docs/Web/JavaScript/Guide/Utiliser_les_objets#D.C3.A9finir_des_getters_et_setters">accesseurs et mutateurs</a> ou <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Proxy">les proxies</a>. Attention également à ne pas confondre {{jsxref("Object.prototype.watch", "Object.watch")}} et {{jsxref("Object.prototype.observe", "Object.observe")}}.</p>
+</div>
+
+<p>La méthode <code><strong>watch()</strong></code> permet d'appeler une fonction lorsqu'une propriété est affectée.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox"><var>obj</var>.watch(<var>prop</var>, <var>handler</var>)</pre>
+
+<h3 id="Paramètres">Paramètres</h3>
+
+<dl>
+ <dt><code>prop</code></dt>
+ <dd>Le nom d'une propriété d'un objet dont on souhaite surveiller les changements.</dd>
+ <dt><code>handler</code></dt>
+ <dd>Une fonction à appeler quand la valeur de la propriété est modifiée.</dd>
+</dl>
+
+<h3 id="Valeur_de_retour">Valeur de retour</h3>
+
+<p>{{jsxref("undefined")}}.</p>
+
+<h2 id="Description">Description</h2>
+
+<p>Cette méthode permet de surveiller les assignations à une propriété appelée <code>prop</code> de l'objet courant, et appelle <code>handler(prop, ancienneValeur, nouvelleValeur)</code> dès que <code>prop</code> est définie et enregistre la valeur de retour dans cette propriété. Un tel point de surveillance peut filtrer (ou rendre null) l'assignation de la valeur, en renvoyant une valeur <code>nouvelleValeur</code> modifiée (ou en renvoyant <code>ancienneValeur</code>).</p>
+
+<p>Si une propriété pour laquelle un point de surveillance avait été défini, celui-ci ne disparait pas. Si la propriété est recréée par la suite, le point de surveillance sera toujours en activité.</p>
+
+<p>Pour retirer un point de surveillance, utilisez la méthode {{jsxref("Object.unwatch", "unwatch()")}}/ Par défaut, la méthode <code>watch</code> est héritée par tous les objets descendant d'<code>Object</code>.</p>
+
+<p>Le débogueur JavaScript a des fonctionnalités similaires à celles fournies par cette méthode, ainsi que d'autres options de débogage. Pour en savoir plus, voir <a href="/fr/docs/Outils/Debugger">le débogueur JavaScript</a>.</p>
+
+<p>Dans Firefox, <code>handler</code> n'est appelé que pour les assignations par script, pas depuis du code natif. Par exemple, <code>window.watch('location', myHandler)</code> n'appellera pas <code>myHandler</code> si l'utilisateur clique sur un lien vers une cible dans le document courant. Par contre, <code>window.location += '#myAnchor'</code> appellera <code>myHandler</code> :</p>
+
+<h2 id="Exemples">Exemples</h2>
+
+<h3 id="Utiliser_watch_et_unwatch">Utiliser <code>watch</code> et <code>unwatch</code></h3>
+
+<pre class="brush:js">var o = {p:1};
+o.watch("p",
+   function (id, oldval, newval) {
+      console.log("o." + id + " a été modifiée de " + oldval + " en " + newval);
+      return newval;
+   });
+
+o.p = 2;
+o.p = 3;
+delete o.p;
+o.p = 4;
+
+o.unwatch('p');
+o.p = 5;
+</pre>
+
+<p>Ce script affiche la sortie suivante :</p>
+
+<pre class="eval">o.p a été modifiée de 1 en 2
+o.p a été modifiée de 2 en 3
+o.p a été modifiée de undefined en 4
+</pre>
+
+<h3 id="Utiliser_watch_pour_valider_les_propriétés_d'un_objet">Utiliser <code>watch</code> pour valider les propriétés d'un objet</h3>
+
+<p>La méthode <code>watch</code> peut être utilisée pour tester les assignations d'une propriété d'objet. Cet exemple s'assure que toute Personne a un nom valide et un age entre 0 et 200.</p>
+
+<pre class="brush: js">Personne = function(name,age) {
+  this.watch("age", Personne.prototype._isValidAssignment);
+  this.watch("nom", Personne.prototype._isValidAssignment);
+  this.nom = nom;
+  this.age = age;
+}
+
+Personne.prototype.toString = function() {
+  return this.nom + ", " + this.age;
+};
+
+Personne.prototype._isValidAssignment = function(id, oldval, newval) {
+  if (id == "nom" &amp;&amp; (!newval || newval.length &gt; 30)) {
+    throw new RangeError("nom invalide pour " + this);
+  }
+  if (id == "age"  &amp;&amp; (newval &lt; 0 || newval &gt; 200)) {
+    throw new RangeError("âge invalide pour " + this);
+  }
+  return newval;
+}
+
+will = new Personne("Will", 29);
+console.log(will);   // Will, 29
+
+try {
+  will.nom = "";
+} catch (e) {
+  console.log(e);
+}
+
+try {
+  will.age = -4;
+} catch (e) {
+  console.log(e);
+}
+</pre>
+
+<p>Ce script affichera la sortie suivante :</p>
+
+<pre class="eval">Will, 29
+RangeError: nom invalide pour Will, 29
+RangeError: âge invalide pour Will, 29
+</pre>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<p>Cette méthode ne fait partie d'aucune spécification. Elle a été implémentée avec JavaScript 1.2.</p>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<div>
+<div class="hidden">Le tableau de compatibilité de cette page a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à consulter <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> et à nous envoyer une <em>pull request</em>.</div>
+
+<p>{{Compat("javascript.builtins.Object.watch")}}</p>
+</div>
+
+<h2 id="Notes_de_compatibilité">Notes de compatibilité</h2>
+
+<ul>
+ <li>Cette <a class="external link-https" href="https://gist.github.com/384583">prothèse d'émulation</a> (<em>polyfill</em>) permet d'utiliser <code>watch</code> dans les différents navigateurs compatibles avec ES5</li>
+ <li>Utiliser un objet {{jsxref("Proxy")}} permet d'avoir accès à plus d'informations, de façon plus profonde sur la manière dont les propriétés sont changées.</li>
+ <li>Appeler <code>watch()</code> sur un objet {{domxref("Document")}} renvoyait une exception {{jsxref("TypeError")}} depuis Firefox 23 ({{bug(903332)}}). Cette régression a été résolue avec Firefox 27.</li>
+</ul>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>{{jsxref("Object.unwatch()")}}</li>
+ <li>{{jsxref("Object.observe()")}}{{obsolete_inline}}</li>
+</ul>

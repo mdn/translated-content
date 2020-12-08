@@ -1,0 +1,102 @@
+---
+title: VRDisplayCapabilities.hasExternalDisplay
+slug: Web/API/VRDisplayCapabilities/hasExternalDisplay
+translation_of: Web/API/VRDisplayCapabilities/hasExternalDisplay
+---
+<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+
+<p>{{domxref("VRDisplayCapabilities")}} インターフェイスの <strong><code>hasExternalDisplay</code></strong> 読取専用プロパティは，デバイスのプライマリディスプレイから分離したVRディスプレイかどうかを示す {{domxref("Boolean")}} を返します．</p>
+
+<div class="note">
+<p><span style="font-size: 14px; line-height: 21px;"><strong>注記</strong></span>: 表示中のVRコンテンツがそのデバイスの他のコンテンツを隠してしまう場合 <code>false</code> を返します．この場合，表示されないので，アプリはVRコンテンツのミラリングしようとしたり非VRなUIを更新しようとするべきではありません．</p>
+
+<p><span style="font-size: 14px; line-height: 21px;"><strong>訳注</strong></span>: スマートフォンのVRを考えるとわかりやすいと思います．Oculus RiftのようなPC接続のVR専用のディスプレイを持たない環境の場合，このプロパティは <code>false</code> になります．</p>
+</div>
+
+<h2 id="シンタックス">シンタックス</h2>
+
+<pre class="brush: js">var hasAnExternalDisplay = vrDisplayCapabilitiesInstance.<code>hasExternalDisplay</code>;</pre>
+
+<h3 id="値">値</h3>
+
+<p>{{domxref("Boolean")}} の値．</p>
+
+<h2 id="例">例</h2>
+
+<pre>TBD.</pre>
+
+<h2 id="仕様">仕様</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('WebVR', '#dom-vrdisplaycapabilities-hasexternaldisplay', 'hasExternalDisplay')}}</td>
+   <td>{{Spec2('WebVR')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="参照">参照</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
+ <li><a href="http://mozvr.com/">MozVr.com</a> — Mozilla VRチームのデモ，ダウンロード，その他のリソース．</li>
+</ul>

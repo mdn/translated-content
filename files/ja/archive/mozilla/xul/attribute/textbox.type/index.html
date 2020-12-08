@@ -1,0 +1,30 @@
+---
+title: textbox.type
+slug: Archive/Mozilla/XUL/Attribute/textbox.type
+tags:
+  - XUL Attributes
+  - XUL Reference
+translation_of: Archive/Mozilla/XUL/Attribute/textbox.type
+---
+<div class="noinclude"><span class="breadcrumbs xulRefAttr_breadcrumbs">« <a href="/ja/docs/XUL/XUL_Reference">XUL リファレンス HOME</a></span></div>
+
+<dl>
+ <dt><code id="a-textbox.type"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/textbox.type">type</a></code></dt>
+ <dd>型: <em>下記の値のいずれか一つ</em></dd>
+ <dd>特別な形式の textbox を使用するには、下記の値のいずれか一つを type 属性に設定します。</dd>
+</dl>
+
+<ul>
+ <li><code>autocomplete</code>: 自動補完をサポートする textbox。自動補完 textbox についての詳しい情報は、自動補完 (autocomplete)のドキュメントをご覧ください。(<a href="/ja/XUL/textbox_(Mozilla_autocomplete)" title="ja/XUL/textbox_(Mozilla_autocomplete)">Mozilla</a>) (<a href="/ja/XUL/textbox_(Firefox_autocomplete)" title="ja/XUL/textbox_(Firefox_autocomplete)">Firefox</a>)</li>
+ <li><code>number</code>: 数字のみを入力することができる textbox。さらに、値を増減するための矢印ボタンが textbox の次に現れます。number textbox を設定するための属性は次のものがあります <code id="a-min"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/min">min</a></code> および <code id="a-max"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/max">max</a></code>, <code id="a-increment"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/increment">increment</a></code>, <code id="a-wraparound"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/wraparound">wraparound</a></code>, <code id="a-hidespinbuttons"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/hidespinbuttons">hidespinbuttons</a></code>。 </li>
+ <li><code>password</code>: 入力した内容を隠す textbox。パスワードの入力に使用されます。</li>
+ <li><code>timed</code>: この textbox は、ユーザが文字を入力して時間が経つと command イベントを発生させます。遅延時間は <code id="a-timeout"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/timeout">timeout</a></code> 属性で設定します。この形式は例えば、ユーザが入力した window の情報を更新するために使用します。ユーザが時間内にさらにキーを入力すれば、タイマーを発動させないために継続的に更新する必要はありません。ユーザが Enter キーを押下した場合にも command イベントが発生します。</li>
+</ul>
+
+<div class="noinclude">
+<h3 id="See_also" name="See_also">参照</h3>
+
+<ul>
+ <li><code id="a-type"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/type">type</a></code></li>
+</ul>
+</div>

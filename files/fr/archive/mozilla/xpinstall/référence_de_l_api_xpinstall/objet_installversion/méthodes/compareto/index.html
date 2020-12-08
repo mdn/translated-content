@@ -1,0 +1,104 @@
+---
+title: compareTo
+slug: >-
+  Archive/Mozilla/XPInstall/Référence_de_l_API_XPInstall/Objet_InstallVersion/Méthodes/compareTo
+translation_of: Archive/Mozilla/XPInstall/Reference/InstallVersion_Object/Methods/compareTo
+---
+<p> </p>
+<h3 id="compareTo" name="compareTo">compareTo</h3>
+<p>Compare les informations de version spécifiées dans cet objet à celles spécifiées dans le paramètre <code>version</code>.</p>
+<h4 id="M.C3.A9thode_de" name="M.C3.A9thode_de">Méthode de</h4>
+<p>Objet <a href="fr/R%c3%a9f%c3%a9rence_de_l'API_XPInstall/Objet_InstallVersion">InstallVersion</a></p>
+<h4 id="Syntaxe" name="Syntaxe">Syntaxe</h4>
+<pre class="eval">compareTo ( InstallVersion version);
+</pre>
+<pre class="eval">compareTo ( String version);
+</pre>
+<pre class="eval">compareTo ( int major, int minor, int release, int build);
+</pre>
+<h4 id="Param.C3.A8tres" name="Param.C3.A8tres">Paramètres</h4>
+<p>La méthode <code>compareTo</code> a les paramètres suivants :</p>
+<dl>
+ <dt>
+  <code>maj</code></dt>
+ <dd>
+  Le numéro de version majeur.</dd>
+ <dt>
+  <code>min</code></dt>
+ <dd>
+  Le numéro de version mineur.</dd>
+ <dt>
+  <code>rev</code></dt>
+ <dd>
+  Le numéro de révision.</dd>
+ <dt>
+  <code>bld</code></dt>
+ <dd>
+  Le numéro de compilation.</dd>
+ <dt>
+  <code>version</code></dt>
+ <dd>
+  Une chaîne représentant les informations de version au format <code>4.1.2.1234</code>.</dd>
+</dl>
+<h4 id="Retour" name="Retour">Retour</h4>
+<p>Si les versions sont les mêmes, cette méthode retourne <code>0</code>. Si la version de cet objet représente une version plus petite (précédente) que celle représentée dans le paramètre <code>version</code>, cette méthode retourne un nombre négatif. Autrement, elle retourne un nombre positif. En particulier, cette méthode retourne l'un des nombres suivants :</p>
+<dl>
+ <dt>
+  -4 </dt>
+ <dd>
+  La version de l'objet a un numéro majeur plus petit (plus ancien) que le paramètre <code>version</code>.</dd>
+ <dt>
+  -3 </dt>
+ <dd>
+  La version de l'objet a un numéro mineur plus petit (plus ancien) que le paramètre <code>version</code>.</dd>
+ <dt>
+  -2 </dt>
+ <dd>
+  La version de l'objet a un numéro de version plus petit (plus ancien) que le paramètre <code>version</code>.</dd>
+ <dt>
+  -1 </dt>
+ <dd>
+  La version de l'objet a un numéro de compilation plus petit (plus ancien) que le paramètre <code>version</code>.</dd>
+ <dt>
+  0 </dt>
+ <dd>
+  Les numéros de version sont égaux ; les deux objets représentent la même version.</dd>
+ <dt>
+  1 </dt>
+ <dd>
+  La version de l'objet a un numéro de compilation plus grand (plus récent) que le paramètre <code>version</code>.</dd>
+ <dt>
+  2 </dt>
+ <dd>
+  La version de l'objet a un numéro de version plus grand (plus récent) que le paramètre <code>version</code>.</dd>
+ <dt>
+  3 </dt>
+ <dd>
+  La version de l'objet a un numéro mineur plus grand (plus récent) que le paramètre <code>version</code>.</dd>
+ <dt>
+  4 </dt>
+ <dd>
+  La version de l'objet a un numéro majeur plus grand (plus récent) que le paramètre <code>version</code>.</dd>
+</dl>
+<p>Les constantes suivantes sont définies et disponible pour vérifier la valeur retournée par <code>compareTo</code> :</p>
+<ul>
+ <li><code>InstallVersion.MAJOR_DIFF</code></li>
+ <li><code>InstallVersion.MINOR_DIFF</code></li>
+ <li><code>InstallVersion.REL_DIFF</code></li>
+ <li><code>InstallVersion.BLD_DIFF</code></li>
+ <li><code>InstallVersion.EQUAL</code></li>
+ <li><code>InstallVersion.MAJOR_DIFF_MINUS</code></li>
+ <li><code>InstallVersion.MINOR_DIFF_MINUS</code></li>
+ <li><code>InstallVersion.REL_DIFF_MINUS</code></li>
+ <li><code>InstallVersion.BLD_DIFF_MINUS</code></li>
+</ul>
+<h4 id="Exemple" name="Exemple">Exemple</h4>
+<p>Ce code est utilise la méthode <code>compareTo</code> pour déterminer si oui ou non la version 3.2.1 du logiciel « Royal Airways » a été précédemment installée :</p>
+<pre class="eval">existingVI = InstallTrigger.getVersion("/royalairways/royalsw");
+
+if ( existingVI.compareTo("3.2.1") &lt;= 0 ) {
+   // ... procède à la mise à jour ...
+   }
+</pre>
+<p><span class="comment">Interwiki Languages Links</span></p>
+<p>{{ languages( { "en": "en/XPInstall_API_Reference/InstallVersion_Object/Methods/compareTo" } ) }}</p>

@@ -1,0 +1,514 @@
+---
+title: JSAPI Cookbook
+slug: Mozilla/Projects/SpiderMonkey/JSAPI_Cookbook
+tags:
+  - SpiderMonkey
+translation_of: Mozilla/Projects/SpiderMonkey/JSAPI_Cookbook
+---
+<p>この記事は僅かなJavaScript共通の用語であるJSAPIについて記載しています。</p>
+
+<div class="note"><strong>Note:</strong>  <a class="internal" href="/En/SpiderMonkey/FOSS" title="En/SpiderMonkey/FOSS">FOSS</a> wiki ページには、 SpiderMonkey と JSAPI を使用する際に生活を楽にする他のライブラリやプログラムへのリンクがいくつか含まれています。</div>
+
+<h2 id="基礎">基礎</h2>
+
+<h3 id="Finding_the_global_object">Finding the global object</h3>
+
+<p>それらのレシピの多くは、最初に現在の大域オブジェクトを見つけることを要求します。</p>
+
+<pre class="eval notranslate">// <strong>JavaScript</strong>
+var global = this;
+</pre>
+
+<p>There is a function, <code><a href="/en/SpiderMonkey/JSAPI_Reference/JS_GetGlobalForScopeChain">JS_GetGlobalForScopeChain</a>(cx)</code>という関数があります。最良の考え方でありときにそれは大域オブジェクトの取得する場合最良の方法です。しかし<code><a href="/en/SpiderMonkey/JSAPI_Reference/JSNative">JSNative</a></code> の中では、これを実行する正しい方法は:</p>
+
+<pre class="eval notranslate">/* <strong>JSAPI</strong> */
+JSBool myNative(JSContext *cx, uintN argc, jsval *vp)
+{
+    CallArgs args = CallArgsFromVp(argc, vp);
+    JSObject *global = <a href="/en-US/docs/SpiderMonkey/JSAPI_Reference/JS_GetGlobalForObject" title="/en-US/docs/SpiderMonkey/JSAPI_Reference/JS_GetGlobalForObject">JS_GetGlobalForObject</a>(cx, &amp;args.callee());
+    ...
+}
+</pre>
+
+<h3 id="関数定義">関数定義</h3>
+
+<pre class="eval notranslate">// <strong>JavaScript</strong>
+function justForFun() {
+    return null;
+}
+</pre>
+
+<pre class="eval notranslate">/* <strong>JSAPI</strong> */
+JSBool justForFun(JSContext *cx, uintN argc, jsval *vp)
+{
+    JS_SET_RVAL(cx, vp, <a href="/en/SpiderMonkey/JSAPI_Reference/JSVAL_NULL" title="en/SpiderMonkey/JSAPI_Reference/JSVAL_NULL">JSVAL_NULL</a>);
+    return JS_TRUE;
+}
+
+...
+
+/*
+ * Add this to your JSContext setup code.
+ * This makes your C function visible as a global function in JavaScript.
+ */
+if (!<a href="/en/SpiderMonkey/JSAPI_Reference/JS_DefineFunction" title="en/SpiderMonkey/JSAPI_Reference/JS_DefineFunction">JS_DefineFunction</a>(cx, global, "justForFun", &amp;justForFun, 0, 0))
+    return JS_FALSE;
+</pre>
+
+<p>JSAPI関数を一度に定義する場合、JS_DefineFunctions. を用います。 <code><a href="/en/SpiderMonkey/JSAPI_Reference/JS_DefineFunctions" title="en/SpiderMonkey/JSAPI_Reference/JS_DefineFunctions">JS_DefineFunctions</a></code>.</p>
+
+<h3 id="配列の生成">配列の生成</h3>
+
+<pre class="eval notranslate">// <strong>JavaScript</strong>
+var x = [];  // or "x = Array()", or "x = new Array"
+</pre>
+
+<pre class="eval notranslate">/* <strong>JSAPI</strong> */
+JSObject *x = <a href="/en/SpiderMonkey/JSAPI_Reference/JS_NewArrayObject" title="en/SpiderMonkey/JSAPI_Reference/JS_NewArrayObject">JS_NewArrayObject</a>(cx, 0, NULL);
+if (x == NULL)
+    return JS_FALSE;
+</pre>
+
+<h3 id="オブジェクトの生成">オブジェクトの生成</h3>
+
+<pre class="eval notranslate">// <strong>JavaScript</strong>
+var x = {};  // or "x = Object()", or "x = new Object"
+</pre>
+
+<pre class="eval notranslate">/* <strong>JSAPI</strong> */
+JSObject *x = <a href="/en/SpiderMonkey/JSAPI_Reference/JS_NewObject" title="en/SpiderMonkey/JSAPI_Reference/JS_NewObject">JS_NewObject</a>(cx, NULL, NULL, NULL);
+if (x == NULL)
+    return JS_FALSE;
+</pre>
+
+<h3 id="オブジェクトの生成と初期化">オブジェクトの生成と初期化</h3>
+
+<pre class="eval notranslate">// <strong>JavaScript</strong>
+var person = new Person("Dave", 24);
+</pre>
+
+<p>JavaScriptではとても単純に処理されています。しかし、JSAPIのアプリケーションでは以下に記述するように３つのことを処理する必要があります:</p>
+
+<ul>
+ <li>コンストラクタを参照する、 <code>Person</code></li>
+ <li>引数を準備する <code>("Dave", 24)</code></li>
+ <li><code>new</code> キーワードで示す処理を擬似的に作り出すために <a href="/en/SpiderMonkey/JSAPI_Reference/JS_New" title="en/SpiderMonkey/JSAPI_Reference/JS_New"><code>JS_New</code></a> を呼び出します。</li>
+</ul>
+
+<p>(コンストラクタがどのよいうな引数も取らないならば、２番目の段階は省略して ３段階目の処理である <code><a href="/en/SpiderMonkey/JSAPI_Reference/JS_New" title="en/SpiderMonkey/JSAPI_Reference/JS_New">JS_New</a>(cx, constructor, 0, NULL)</code> を呼び出せます。）</p>
+
+<pre class="eval notranslate">/* <strong>JSAPI</strong> */
+
+jsval constructor_val;
+JSObject *constructor; /* BUG - not rooted */
+JSString *name_str;
+jsval argv[2];  /* BUG - not rooted */
+JSObject *obj;
+
+/* Step 1 - Get the value of |Person| and check that it is an object. */
+if (!<a href="/en/SpiderMonkey/JSAPI_Reference/JS_GetProperty" title="en/SpiderMonkey/JSAPI_Reference/JS_GetProperty">JS_GetProperty</a>(cx, <a href="/en/SpiderMonkey/JSAPI_Reference/JS_GetGlobalObject" title="en/SpiderMonkey/JSAPI_Reference/JS_GetGlobalObject">JS_GetGlobalObject</a>(cx), "Person", &amp;constructor_val))
+    return JS_FALSE;
+if (<a href="/en/SpiderMonkey/JSAPI_Reference/JSVAL_IS_PRIMITIVE" title="en/SpiderMonkey/JSAPI_Reference/JSVAL_IS_PRIMITIVE">JSVAL_IS_PRIMITIVE</a>(constructor_val)) {
+    <a href="/en/SpiderMonkey/JSAPI_Reference/JS_ReportError" title="en/SpiderMonkey/JSAPI_Reference/JS_ReportError">JS_ReportError</a>(cx, "Person is not a constructor");
+    return JS_FALSE;
+}
+constructor = <a href="/en/SpiderMonkey/JSAPI_Reference/JSVAL_TO_OBJECT" title="en/SpiderMonkey/JSAPI_Reference/JSVAL_TO_OBJECT">JSVAL_TO_OBJECT</a>(constructor_val);
+
+/* Step 2 - Set up the arguments. */
+name_str = <a href="/en/SpiderMonkey/JSAPI_Reference/JS_NewStringCopyZ" title="en/SpiderMonkey/JSAPI_Reference/JS_NewStringCopyZ">JS_NewStringCopyZ</a>(cx, "Dave");
+if (!name_str)
+    return JS_FALSE;
+argv[0] = <a href="/en/SpiderMonkey/JSAPI_Reference/STRING_TO_JSVAL" title="en/SpiderMonkey/JSAPI_Reference/STRING_TO_JSVAL">STRING_TO_JSVAL</a>(name_str);
+argv[1] = <a href="/en/SpiderMonkey/JSAPI_Reference/INT_TO_JSVAL" title="en/SpiderMonkey/JSAPI_Reference/INT_TO_JSVAL">INT_TO_JSVAL</a>(24);
+
+/* Step 3 - Call |new Person(...argv)|, passing the arguments. */
+obj = <a href="/en/SpiderMonkey/JSAPI_Reference/JS_New" title="en/SpiderMonkey/JSAPI_Reference/JS_New">JS_New</a>(cx, constructor, 2, argv);
+if (!obj)
+    return JS_FALSE;
+</pre>
+
+<h3 id="大域的なJS関数の呼び出し">大域的なJS関数の呼び出し</h3>
+
+<pre class="eval notranslate">// <strong>JavaScript</strong>
+var r = foo();  // where f is a global function
+</pre>
+
+<pre class="eval notranslate">/* <strong>JSAPI</strong>
+ *
+ * Suppose the script defines a global JavaScript
+ * function foo() and we want to call it from C.
+ */
+jsval r;
+if (!<a href="/en/SpiderMonkey/JSAPI_Reference/JS_CallFunctionName" title="en/SpiderMonkey/JSAPI_Reference/JS_CallFunctionName">JS_CallFunctionName</a>(cx, <a href="/en/SpiderMonkey/JSAPI_Reference/JS_GetGlobalObject" title="en/SpiderMonkey/JSAPI_Reference/JS_GetGlobalObject">JS_GetGlobalObject</a>(cx), "foo", 0, NULL, &amp;r))
+   return JS_FALSE;
+</pre>
+
+<h3 id="局所変数を投資てJS関数を呼び出す">局所変数を投資てJS関数を呼び出す</h3>
+
+<pre class="eval notranslate">// <strong>JavaScript</strong>
+var r = f();  // where f is a local variable
+</pre>
+
+<pre class="eval notranslate">/* <strong>JSAPI</strong>
+ *
+ * Suppose f is a local C variable of type jsval.
+ */
+jsval r;
+if (!<a href="/en/SpiderMonkey/JSAPI_Reference/JS_CallFunctionValue" title="en/SpiderMonkey/JSAPI_Reference/JS_CallFunctionValue">JS_CallFunctionValue</a>(cx, NULL, f, 0, NULL, &amp;r)
+    return JS_FALSE;
+</pre>
+
+<h3 id="Returning_an_integer" name="Returning_an_integer">整数の戻り値</h3>
+
+<pre class="eval notranslate">// <strong>JavaScript</strong>
+return 23;
+</pre>
+
+<pre class="eval notranslate">/* <strong>JSAPI</strong>
+ *
+ * Warning: This only works for integers that fit in 32 bits.
+ * Otherwise, convert the number to floating point (see the next example).
+ */
+<a href="/en/SpiderMonkey/JSAPI_Reference/JS_SET_RVAL" title="en/SpiderMonkey/JSAPI_Reference/JS_SET_RVAL">JS_SET_RVAL</a>(cx, vp, <a href="/en/SpiderMonkey/JSAPI_Reference/INT_TO_JSVAL" title="en/SpiderMonkey/JSAPI_Reference/INT_TO_JSVAL">INT_TO_JSVAL</a>(23));
+return JS_TRUE;
+</pre>
+
+<h3 id="Returning_a_floating-point_number" name="Returning_a_floating-point_number">浮動小数点少数の戻り値</h3>
+
+<pre class="eval notranslate">// <strong>JavaScript</strong>
+return 3.14159;
+</pre>
+
+<pre class="eval notranslate">/* <strong>JSAPI</strong> */
+<a href="/en/SpiderMonkey/JSAPI_Reference/jsdouble" title="en/SpiderMonkey/JSAPI_Reference/jsdouble">jsdouble</a> n = 3.14159;
+return <a href="/en/SpiderMonkey/JSAPI_Reference/JS_NewNumberValue" title="en/SpiderMonkey/JSAPI_Reference/JS_NewNumberValue">JS_NewNumberValue</a>(cx, n, rval);
+</pre>
+
+<h2 id="Exception_handling" name="Exception_handling">例外処理</h2>
+
+<h3 id="throw" name="throw"><code>throw</code></h3>
+
+<p>新規に最も共通の用語である <code>エラー</code> オブジェクトを生成した場合、それをハンドラに投げる場合 <a href="/en/SpiderMonkey/JSAPI_Reference/JS_ReportError" title="en/SpiderMonkey/JSAPI_Reference/JS_ReportError"><code>JS_ReportError</code></a> が処理を行います。 Note JavaScript の例外はC++の例外処理とは異なります。JSAPIコードでは呼び出し側に誤りを通知するために <code>JS_FALSE</code> を返す必要があります。</p>
+
+<pre class="notranslate">// <strong>JavaScript</strong>
+throw new Error("Failed to grow " + varietal + ": too many greenflies.");
+</pre>
+
+<pre class="notranslate">/* <strong>JSAPI</strong> */
+<a>JS_ReportError</a>(cx, "Failed to grow %s: too many greenflies.", varietal);
+return JS_FALSE;
+</pre>
+
+<p>エラーメッセージを他国間対応にするには、 <code>SyntaxError</code> や <code>TypeError</code>等のようにエラー種別を投げるように、 <a href="/en/SpiderMonkey/JSAPI_Reference/JS_ReportErrorNumber" title="en/SpiderMonkey/JSAPI_Reference/JS_ReportErrorNumber"><code>JS_ReportErrorNumber</code></a> を代わりに用います。</p>
+
+<p>JavaScriptでは <code>Error</code> オブジェクトだけでなく、他の値を渡す事もサポートしています。 C/C++ から <code>jsval</code> という値を受け取るために<a href="/en/SpiderMonkey/JSAPI_Reference/JS_SetPendingException" title="en/SpiderMonkey/JSAPI_Reference/JS_SetPendingException"><code>JS_SetPendingException</code></a> を使います。</p>
+
+<pre class="eval notranslate">// <strong>JavaScript</strong>
+throw exc;
+</pre>
+
+<pre class="eval notranslate">/* <strong>JSAPI</strong> */
+<a href="/en/SpiderMonkey/JSAPI_Reference/JS_SetPendingException" title="en/SpiderMonkey/JSAPI_Reference/JS_SetPendingException">JS_SetPendingException</a>(cx, exc);
+return JS_FALSE;
+</pre>
+
+<p><code>JS_ReportError</code> が新規に <code>Error</code> オブジェクトを生成するとき、現在実行中のスタックの先頭にあるJavaScriptコードの行の属性である <code>fileName</code> と <code>lineNumber</code> をセットします。　これは通常、あなたが本当に必要としているものとは一致しないネイティブ関数を呼び出したコードの行になります。JSAPIコードは直接 <code>Error</code> オブジェクトを生成し、コンストラクタに追加の引数を渡す事でことでこれを無視することができます:</p>
+
+<pre class="eval notranslate">// <strong>JavaScript</strong>
+throw new Error(message, filename, lineno);
+</pre>
+
+<pre class="eval notranslate">/* <strong>JSAPI</strong> */
+JSBool ThrowError(JSContext *cx, JSObject *global,
+                  const char *message, const char *filename, int32 lineno)
+{
+    JSString *messageStr;
+    JSString *filenameStr;
+    jsval args[3];
+    jsval exc;
+
+    messageStr = JS_NewStringCopyZ(cx, message);
+    if (!messageStr)
+        return JS_FALSE;
+    filenameStr = JS_NewStringCopyZ(cx, filename);
+    if (!filenameStr)
+        return JS_FALSE;
+
+    args[0] = STRING_TO_JSVAL(messageStr);
+    args[1] = STRING_TO_JSVAL(filenameStr);
+    args[2] = INT_TO_JSVAL(lineno);
+    if (<a href="/en/SpiderMonkey/JSAPI_Reference/JS_CallFunctionName" title="en/SpiderMonkey/JSAPI_Reference/JS_CallFunctionName">JS_CallFunctionName</a>(cx, global, "Error", 3, args, &amp;exc))
+        <a href="/en/SpiderMonkey/JSAPI_Reference/JS_SetPendingException" title="en/SpiderMonkey/JSAPI_Reference/JS_SetPendingException">JS_SetPendingException</a>(cx, exc);
+    return JS_FALSE;
+}
+
+...
+
+return ThrowError(cx, global, message, __FILE__, __LINE__);
+</pre>
+
+<p>ここのJSAPIコードは、<code>new</code> がJSAPIを用いて擬似的に作り出すことが難しいため、 <code>new</code> なしに <code>throw Error(message)</code> を擬似的に作り出します。この場合、スクリプトが <code>Error</code>を再定義しなければ、同じ事になります。</p>
+
+<h3 id="catch" name="catch"><code>catch</code></h3>
+
+<pre class="eval notranslate">// <strong>JavaScript</strong>
+try {
+    // try some stuff here; for example:
+    foo();
+    bar();
+} catch (exc) {
+    // do error-handling stuff here
+}
+</pre>
+
+<pre class="eval notranslate">/* <strong>JSAPI</strong> */
+    jsval exc;
+
+    /* try some stuff here; for example: */
+    if (!JS_CallFunctionName(cx, global, "foo", 0, NULL, &amp;r))
+        goto catch_block;  /* instead of returning JS_FALSE */
+    if (!JS_CallFunctionName(cx, global, "bar", 0, NULL, &amp;r))
+        goto catch_block;  /* instead of returning JS_FALSE */
+    return JS_TRUE;
+
+catch_block:
+    if (!<a href="/en/SpiderMonkey/JSAPI_Reference/JS_GetPendingException" title="en/SpiderMonkey/JSAPI_Reference/JS_GetPendingException">JS_GetPendingException</a>(cx, &amp;exc))
+        return JS_FALSE;
+    <a href="/en/SpiderMonkey/JSAPI_Reference/JS_ClearPendingException" title="en/SpiderMonkey/JSAPI_Reference/JS_ClearPendingException">JS_ClearPendingException</a>(cx);
+    /* do error-handling stuff here */
+    return JS_TRUE;
+</pre>
+
+<h3 id="finally" name="finally"><code>finally</code></h3>
+
+<pre class="eval notranslate">// <strong>JavaScript</strong>
+try {
+   foo();
+   bar();
+} finally {
+   cleanup();
+}
+</pre>
+
+<p>C/C++の浄化コードがJSAPI内にコールバックしなければ、処理は単純になります:</p>
+
+<pre class="eval notranslate">/* <strong>JSAPI</strong> */
+    <a href="/En/SpiderMonkey/JSAPI_Reference/JSBool" title="En/SpiderMonkey/JSAPI_Reference/JSBool">JSBool</a> success = JS_FALSE;
+
+    if (!JS_CallFunctionName(cx, global, "foo", 0, NULL, &amp;r))
+        goto finally_block;  /* instead of returning JS_FALSE immediately */
+    if (!JS_CallFunctionName(cx, global, "bar", 0, NULL, &amp;r))
+        goto finally_block;
+    success = JS_TRUE;
+    /* Intentionally fall through to the finally block. */
+
+finally_block:
+    cleanup();
+    return success;
+</pre>
+
+<p>しかしながら、 <code>cleanup()</code> が実際にJavaScriptの関数であれば、それらはcatchされます。エラーが発生したとき、 <code>JSContext</code><em>の例外処理の待機がセットされます。</em> これは上の例で <code>foo()</code> や <code>bar()</code> で発生するならば、待機中の例外処理は より悪い状態になるであろう <code>cleanup()</code> 処理を呼び出しているときにセットされます。これを避ける為に、JSAPIコードの実装では <code>finally</code> ブロックには以下のことが必要ですt:</p>
+
+<ul>
+ <li>古い例外を保存する</li>
+ <li>cleanupコードを走らせる為に、待機中の例外処理をクリアします</li>
+ <li>あなたのcleanup処理wp実行します</li>
+ <li>古い例外を復帰させます</li>
+ <li>例外が発生していたならば、例外処理を上位に伝えるために、JS_FALSEを戻り値として返します</li>
+</ul>
+
+<pre class="eval notranslate">/* <strong>JSAPI</strong> */
+    <a href="/En/SpiderMonkey/JSAPI_Reference/JSBool" title="En/SpiderMonkey/JSAPI_Reference/JSBool">JSBool</a> success = JS_FALSE;
+    <a href="/en/SpiderMonkey/JSAPI_Reference/JSExceptionState" title="en/SpiderMonkey/JSAPI_Reference/JSExceptionState">JSExceptionState</a> *exc_state;
+
+    if (!JS_CallFunctionName(cx, global, "foo", 0, NULL, &amp;r))
+        goto finally_block;  /* instead of returning JS_FALSE immediately */
+    if (!JS_CallFunctionName(cx, global, "bar", 0, NULL, &amp;r))
+        goto finally_block;
+    success = JS_TRUE;
+    /* Intentionally fall through to the finally block. */
+
+finally_block:
+    exc_state = <a href="/en/SpiderMonkey/JSAPI_Reference/JS_SaveExceptionState" title="en/SpiderMonkey/JSAPI_Reference/JS_SaveExceptionState">JS_SaveExceptionState</a>(cx);
+    if (exc_state == NULL)
+        return JS_FALSE;
+    <a href="/en/SpiderMonkey/JSAPI_Reference/JS_ClearPendingException" title="en/SpiderMonkey/JSAPI_Reference/JS_ClearPendingException">JS_ClearPendingException</a>(cx);
+
+    if (!JS_CallFunctionName(cx, global, "cleanup", 0, NULL, &amp;r)) {
+        /* The new error replaces the previous one, so discard the saved exception state. */
+        <a href="/en/SpiderMonkey/JSAPI_Reference/JS_DropExceptionState" title="en/SpiderMonkey/JSAPI_Reference/JS_DropExceptionState">JS_DropExceptionState</a>(cx, exc_state);
+        return JS_FALSE;
+    }
+    <a href="/en/SpiderMonkey/JSAPI_Reference/JS_RestoreExceptionState" title="en/SpiderMonkey/JSAPI_Reference/JS_RestoreExceptionState">JS_RestoreExceptionState</a>(cx, exc_state);
+    return success;
+</pre>
+
+<h2 id="Object_properties" name="Object_properties">オブジェクトの属性</h2>
+
+<h3 id="Getting_a_property" name="Getting_a_property">属性の取得</h3>
+
+<pre class="eval notranslate">// <strong>JavaScript</strong>
+var x = y.myprop;
+</pre>
+
+<p>JSAPI関数で、属性を取得する関数が <code><a href="/en/SpiderMonkey/JSAPI_Reference/JS_GetProperty" title="en/SpiderMonkey/JSAPI_Reference/JS_GetProperty">JS_GetProperty</a></code>です。<code>JSObject *</code> を引数として必要とします。 JavaScriptの値は、通常 <code>jsval</code> 変数に保存されるため、変数のキャストまたは変換が必要になります。</p>
+
+<p><code>y</code> (ブール値、数値、文字列、 <code>null</code>, または <code>undefined</code>などではなく)がオブジェクトであることが確実な場合、これは非常に単純です。 <code><a href="/en/SpiderMonkey/JSAPI_Reference/JSVAL_TO_OBJECT" title="en/SpiderMonkey/JSAPI_Reference/JSVAL_TO_OBJECT">JSVAL_TO_OBJECT</a></code> を使い、 <code>y</code> を <code>JSObject *</code>の型にキャストします。</p>
+
+<pre class="eval notranslate">/* <strong>JSAPI</strong> */
+jsval x;
+
+assert(<a href="/en/SpiderMonkey/JSAPI_Reference/JSVAL_IS_OBJECT" title="en/SpiderMonkey/JSAPI_Reference/JSVAL_IS_PRIMITIVE">!JSVAL_IS_PRIMITIVE</a>(y));
+if (!<a href="/en/SpiderMonkey/JSAPI_Reference/JS_GetProperty" title="en/SpiderMonkey/JSAPI_Reference/JS_GetProperty">JS_GetProperty</a>(cx, <a href="/en/SpiderMonkey/JSAPI_Reference/JSVAL_TO_OBJECT" title="en/SpiderMonkey/JSAPI_Reference/JSVAL_TO_OBJECT">JSVAL_TO_OBJECT</a>(y), "myprop", &amp;x))
+    return JS_FALSE;
+</pre>
+
+<p>もし <code>y</code> がオブジェクトでなければ、コードは壊れます。これはときに受け入れ難いことです。代替的にJavaScriptに振る舞いを擬似的に実行することになります。非常に良い考えですJavaScriptはクラッシュしません。しかし、その正確な振る舞いの実装では、非常に複雑なものになります。</p>
+
+<p>多くの実装では、特別に処理が扱いやすくなるわけではありません。通常、 <code>!<a href="/en/SpiderMonkey/JSAPI_Reference/JSVAL_IS_PRIMITIVE" title="en/SpiderMonkey/JSAPI_Reference/JSVAL_IS_PRIMITIVE">JSVAL_IS_PRIMITIVE</a>(y)</code> を検査し、良いメッセージとともに <code>Error</code> を投げることが最良な処理です。</p>
+
+<pre class="eval notranslate">/* <strong>JSAPI</strong> */
+jsval x;
+
+if (<a href="/en/SpiderMonkey/JSAPI_Reference/JSVAL_IS_PRIMITIVE" title="en/SpiderMonkey/JSAPI_Reference/JSVAL_IS_PRIMITIVE">JSVAL_IS_PRIMITIVE</a>(y))
+    return ThrowError(cx, global, "Parameter y must be an object.", __FILE__, __LINE__);  /* see the <a href="#throw">#throw</a> example */
+if (!<a href="/en/SpiderMonkey/JSAPI_Reference/JS_GetProperty" title="en/SpiderMonkey/JSAPI_Reference/JS_GetProperty">JS_GetProperty</a>(cx, <a href="/en/SpiderMonkey/JSAPI_Reference/JSVAL_TO_OBJECT" title="en/SpiderMonkey/JSAPI_Reference/JSVAL_TO_OBJECT">JSVAL_TO_OBJECT</a>(y), "myprop", &amp;x))
+    return JS_FALSE;
+</pre>
+
+<h3 id="Setting_a_property" name="Setting_a_property">属性の設定</h3>
+
+<pre class="eval notranslate">// <strong>JavaScript</strong>
+y.myprop = x;
+</pre>
+
+<p><code>y</code> がオブジェクトではない場合を懸念するならば、上述の属性の取得を参照して下さい。</p>
+
+<pre class="eval notranslate">/* <strong>JSAPI</strong> */
+assert(!<a href="/en/SpiderMonkey/JSAPI_Reference/JSVAL_IS_PRIMITIVE" title="en/SpiderMonkey/JSAPI_Reference/JSVAL_IS_PRIMITIVE">JSVAL_IS_PRIMITIVE</a>(y));
+if (!<a href="/en/SpiderMonkey/JSAPI_Reference/JS_SetProperty" title="en/SpiderMonkey/JSAPI_Reference/JS_SetProperty">JS_SetProperty</a>(cx, <a href="/en/SpiderMonkey/JSAPI_Reference/JSVAL_TO_OBJECT" title="en/SpiderMonkey/JSAPI_Reference/JSVAL_TO_OBJECT">JSVAL_TO_OBJECT</a>(y), "myprop", &amp;x))
+    return JS_FALSE;
+</pre>
+
+<h3 id="Checking_for_a_property" name="Checking_for_a_property">属性の検査</h3>
+
+<pre class="eval notranslate">// <strong>JavaScript</strong>
+if ("myprop" in y) {
+    // then do something
+}
+</pre>
+
+<p><code>y</code> がオブジェクトではない場合を懸念するならば、上述の属性の取得を参照して下さい。</p>
+
+<pre class="eval notranslate">/* <strong>JSAPI</strong> */
+JSBool found;
+
+assert(!<a href="/en/SpiderMonkey/JSAPI_Reference/JSVAL_IS_PRIMITIVE" title="en/SpiderMonkey/JSAPI_Reference/JSVAL_IS_PRIMITIVE">JSVAL_IS_PRIMITIVE</a>(y));
+if (!<a href="/en/SpiderMonkey/JSAPI_Reference/JS_HasProperty" title="en/SpiderMonkey/JSAPI_Reference/JS_HasProperty">JS_HasProperty</a>(cx, <a href="/en/SpiderMonkey/JSAPI_Reference/JSVAL_TO_OBJECT" title="en/SpiderMonkey/JSAPI_Reference/JSVAL_TO_OBJECT">JSVAL_TO_OBJECT</a>(y), "myprop", &amp;found))
+    return JS_FALSE;
+if (found) {
+    // then do something
+}
+</pre>
+
+<h3 id="固定属性を定義する">固定属性を定義する</h3>
+
+<p>これはビルトイン関数 <code>Object.defineProperty()</code>に関わる最初の３つの例です。この関数は、オブジェクトの個別の属性の挙動に関してはっきりした操作をJavaScriptのコードに与えます。</p>
+
+<p>この関数を使って、上書きや削除できない固定属性を生成できます。<code>writable: false</code> によって属性を読み出し専用に作り、 <code>configurable: false</code> に設定して、再定義や削除されることから防ぎます。 フラグ <code>enumerable: true</code> は　forループ内にあるときにこの属性が設定されます。</p>
+
+<pre class="eval notranslate">// <strong>JavaScript</strong>
+Object.defineProperty(obj, "prop", {value: 123,
+                                    writable: false,
+                                    enumerable: true,
+                                    configurable: false});
+</pre>
+
+<p>JSAPI関数の類似した関数に、 <code><a href="/en/SpiderMonkey/JSAPI_Reference/JS_DefineProperty" title="en/SpiderMonkey/JSAPI_Reference/JS_DefineProperty">JS_DefineProperty</a></code>があります。属性 <code>JSPROP_READONLY</code> を持っており、その属性は<code>writeable: false</code>に一致します。<code>JSPROP_ENUMERATE</code> は <code>enumerable: true</code>,に一致し、 <code>JSPROP_PERMANENT</code> は <code>configurable: false</code>にその属性が一致します。これらの設定の相対的な挙動を得るためには、必要ない属性のビットを単純に省いて下さい。</p>
+
+<pre class="eval notranslate">/* <strong>JSAPI</strong> */
+if (!JS_DefineProperty(cx, obj, "prop", INT_TO_JSVAL(123),
+                       JS_PropertyStub, JS_StrictPropertyStub,
+                       JSPROP_READONLY | JSPROP_ENUMERATE | JSPROP_PERMANENT)) {
+   return JS_FALSE;
+}
+</pre>
+
+<h3 id="設定と取得の属性の定義">設定と取得の属性の定義</h3>
+
+<p><code>Object.defineProperty()</code> は二つのアクセス関数の属性を定義する為に用いることができます。</p>
+
+<pre class="eval notranslate">// <strong>JavaScript</strong>
+Object.defineProperty(obj, "prop", {get: GetPropFunc,
+                                    set: SetPropFunc,
+                                    enumerable: true});
+</pre>
+
+<p>JSAPIバージョンでは、 <code>GetPropFunc</code> と <code>SetPropFunc</code> が <a href="/en/SpiderMonkey/JSAPI_Reference/JSNative" title="en/SpiderMonkey/JSAPI_Reference/JSNative"><code>JSNative</code></a>型のC/C++ 関数関数として用意されています。of type .</p>
+
+<pre class="eval notranslate">/* <strong>JSAPI</strong> */
+if (!JS_DefineProperty(cx, obj, "prop", JSVAL_VOID,
+                       (JSPropertyOp) GetPropFunc, (JSStrictPropertyOp) SetPropFunc,
+                       JSPROP_SHARED | JSPROP_NATIVE_ACCESSORS | JSPROP_ENUMERATE)) {
+    return JS_FALSE;
+}
+</pre>
+
+<h3 id="取得のための呼び出し専用属性の定義">取得のための呼び出し専用属性の定義</h3>
+
+<pre class="eval notranslate">// <strong>JavaScript</strong>
+Object.defineProperty(obj, "prop", {get: GetPropFunc,
+                                    enumerable: true});
+</pre>
+
+<p>JSAPIバージョン では、属性を読み出し専用に定義し、設定用にはNULLを通します。</p>
+
+<pre class="eval notranslate">/* <strong>JSAPI</strong> */
+if (!JS_DefineProperty(cx, obj, "prop", JSVAL_VOID,
+                       GetPropFunc, NULL,
+                       JSPROP_SHARED | JSPROP_NATIVE_ACCESSORS | JSPROP_ENUMERATE)) {
+    return JS_FALSE;
+}
+</pre>
+
+<h2 id="Prototypes" name="Prototypes">プロトタイプチェインの働き</h2>
+
+<h3 id="String.prototypeにネイティブでは読み出し専用属性を定義します">String.prototypeにネイティブでは読み出し専用属性を定義します</h3>
+
+<pre class="eval notranslate">// <strong>JavaScript</strong>
+Object.defineProperty(String.prototype, "md5sum", {get: GetMD5Func,
+                                                   enumerable: true});
+</pre>
+
+<p>何かが大域的なStringオブジェクトを別な何かに取り替えるならば、以下のようなトリックは動作しません。</p>
+
+<pre class="eval notranslate">/* <strong>JSAPI</strong> */
+JSObject   *string, *string_prototype;
+jsval       val;
+
+// Get the String constructor from the global object.
+if (!JS_GetProperty(cx, global, "String", &amp;val))
+    return JS_FALSE;
+if (JSVAL_IS_PRIMITIVE(val))
+    return ThrowError(cx, global, "String is not an object", __FILE__, __LINE__);
+string = JSVAL_TO_OBJECT(val);
+
+// Get String.prototype.
+if (!JS_GetProperty(cx, string, "prototype", &amp;val))
+    return JS_FALSE;
+if (JSVAL_IS_PRIMITIVE(val))
+    return ThrowError(cx, global, "String.prototype is not an object", __FILE__, __LINE__);
+string_prototype = JSVAL_TO_OBJECT(val);
+
+// ...and now we can add some new functionality to all strings.
+if (!JS_DefineProperty(cx, string_prototype, "md5sum", JSVAL_VOID, GetMD5Func, NULL,
+                       JSPROP_SHARED | JSPROP_NATIVE_ACCESSORS | JSPROP_ENUMERATE))
+    return JS_FALSE;
+</pre>
+
+<h2 id="Wanted" name="Wanted">Wanted</h2>
+
+<ul>
+ <li>Simulating <code>for</code> and <code>for each</code>.</li>
+ <li>Actually outputting errors.</li>
+</ul>

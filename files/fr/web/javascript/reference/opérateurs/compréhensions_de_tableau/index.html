@@ -1,0 +1,209 @@
+---
+title: Compréhensions de tableau
+slug: Web/JavaScript/Reference/Opérateurs/Compréhensions_de_tableau
+tags:
+  - JavaScript
+  - Non-standard
+  - Obsolete
+  - Opérateurs
+  - Reference
+translation_of: Archive/Web/JavaScript/Array_comprehensions
+---
+<div>{{jsSidebar("Operators")}}{{Obsolete_Header(58)}}</div>
+
+<div class="warning"><strong>Non-standard. Ne pas utiliser !</strong><br>
+Les compréhensions de tableau ne sont pas standard et ont été retirées à partir de Firefox 58. Pour obtenir des fonctionnalités équivalentes, il est conseillés d'utiliser {{jsxref("Array.prototype.map")}}, {{jsxref("Array.prototype.filter")}}, {{jsxref("Fonctions/Fonctions_fléchées", "les fonctions fléchées", "", 1)}} et la{{jsxref("Opérateurs/Opérateurs/Affecter_par_décomposition", "décomposition", "", 1)}}.</div>
+
+<p>La syntaxe de <strong>compréhension de tableau</strong> était une expression JavaScript permettant de construire rapidement un nouveau tableau à partir d'un tableau existant. Toutefois, cette syntaxe a été retirée du standard et de l'implémentation qui en est faite par Firefox. Elle ne doit pas être utilisée.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox">[for (x of itérable) x]
+[for (x of itérable) if (condition) x]
+[for (x of itérable) for (y of itérable) x + y]
+</pre>
+
+<h2 id="Description">Description</h2>
+
+<p>Dans une compréhension de tableau, on peut utiliser deux types de composants :</p>
+
+<ul>
+ <li>{{jsxref("Instructions/for...of", "for...of")}} et</li>
+ <li>{{jsxref("Instructions/if...else", "if")}}</li>
+</ul>
+
+<p>L'itération basée sur <code>for...of</code> sera toujours le premier composant. On peut utiliser plusieurs <code>for...of</code> ou instructions <code>if</code>.</p>
+
+<p>Les compréhensions de tableau furent proposées pour être standardisées avec ECMAScript 2016. Elles fournissent une notation raccourcie pour pouvoir construire un nouveau tableau basé sur le contenu d'un autre tableau. Les compréhensions sont proches des fonctions {{jsxref("Array.prototype.map", "map()")}} et {{jsxref("Array.prototype.filter", "filter()")}} qui peuvent être combinées pour arriver au même effet.</p>
+
+<p>La compréhension qui suit prend un tableau de nombres et crée un nouveau tableau qui contiendra les doubles de chaque élément :</p>
+
+<pre class="brush: js">var nombres = [1, 2, 3, 4];
+var doublés = [for (i of nombres) i * 2];
+console.log(doublés); // affiche 2,4,6,8
+</pre>
+
+<p>Cela est équivalent à l'opération suivante, qui utilise {{jsxref("Array.prototype.map", "map()")}} :</p>
+
+<pre class="brush: js">var doublés = nombres.map(i =&gt; i * 2);
+</pre>
+
+<p>Les compréhensions peuvent également être utilisées pour sélectionner certains éléments qui respectent un critère donné. Voici par exemple une compréhension qui ne sélectionne que les nombres pairs :</p>
+
+<pre class="brush: js">var nombres = [1, 2, 3, 21, 22, 30];
+var pairs = [for (i of nombres) if (i % 2 === 0) i];
+console.log(pairs); // affiche 2,22,30
+</pre>
+
+<p>Ici, la méthode {{jsxref("Array.prototype.filter", "filter()")}} peut être utilisée pour parvenir au même résultat :</p>
+
+<pre class="brush: js">var pairs = nombres.filter(i =&gt; i % 2 === 0);
+</pre>
+
+<p>{{jsxref("Array.prototype.map", "map()")}} et {{jsxref("Array.prototype.filter", "filter()")}} peuvent être utilisés pour traduire une compréhension de tableau.</p>
+
+<p>Voici un autre exemple de compréhension, qui ne prend que les nombres pairs et qui les double :</p>
+
+<pre class="brush: js">var nombres = [1, 2, 3, 21, 22, 30];
+var pairsDoublés = [for (i of nombres) if (i % 2 === 0) i * 2];
+console.log(pairsDoublés); // affiche 4,44,60
+</pre>
+
+<p>Les crochets d'une compréhension introduisent un bloc implicite pour les portées. Les nouvelles variables (comme <code>i</code> dans l'exemple), sont traitées comme si elles avaient été déclarées avec {{jsxref("Instructions/let","let")}}. Cela signifie donc que ces variables ne pourront pas être utilisées en dehors de la compréhension.</p>
+
+<p>L'élément d'entrée d'une compréhension de tableau ne doit pas nécessairement être un tableau, il est également possible d'utiliser <a href="/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs">des itérateurs et des générateurs</a>.</p>
+
+<p>Une chaîne de caractères peut aussi être utilisé comme élément de départ :</p>
+
+<pre class="brush: js">var str = 'abcdef';
+var consonnes = [for (c of str) if (!(/[aeiouyAEIOUY]/).test(c)) c].join(''); // 'bcdf'
+var avecZéros = [for (c of str) c+'0' ].join(''); // 'a0b0c0d0e0f0'
+</pre>
+
+<p>Là encore, la structure de l'élément d'entrée n'est pas préservée, il faut donc utiliser {{jsxref("Array.prototype.join", "join()")}} pour récupérer une chaîne.</p>
+
+<h2 id="Exemples">Exemples</h2>
+
+<h3 id="Compréhensions_de_tableaux_simples">Compréhensions de tableaux simples</h3>
+
+<pre class="brush:js">[for (i of [ 1, 2, 3 ]) i*i ];
+// [ 1, 4, 9 ]
+
+var abc = [ "A", "B", "C" ];
+[for (lettres of abc) lettres.toLowerCase()];
+// [ "a", "b", "c" ]</pre>
+
+<h3 id="Compréhensions_de_tableaux_utilisant_if">Compréhensions de tableaux utilisant <code>if</code></h3>
+
+<pre class="brush: js">var années = [ 1954, 1974, 1990, 2006, 2010, 2014 ];
+[for (année of années) if (année &gt; 2000) année];
+// [ 2006, 2010, 2014 ]
+[for (année of années) if (année &gt; 2000) if(année &lt; 2010) année];
+// [ 2006 ] qui correspond aussi à
+[for (année of années) if (année &gt; 2000 &amp;&amp; année &lt; 2010) année];
+// [ 2006 ]</pre>
+
+<h3 id="Comparaison_avec_map_et_filter">Comparaison avec <code>map</code> et <code>filter</code></h3>
+
+<p>Afin de mieux comprendre la syntaxe des compréhensions, on peut la comparer avec les méthodes de l'objet Array {{jsxref("Array.map", "map")}} et {{jsxref("Array.filter", "filter")}} :</p>
+
+<pre class="brush: js">var nombres = [ 1, 2, 3 ];
+
+nombres.map(function (i) { return i * i });
+nombres.map(i =&gt; i*i);
+[for (i of nombres) i*i ];
+// tous vaudront [ 1, 4, 9 ]
+
+nombres.filter(function (i) { return i &lt; 3 });
+nombres.filter(i =&gt; i &lt; 3);
+[for (i of nombres) if (i &lt; 3) i];
+// on obtiendra [ 1, 2 ] pour ces trois instructions
+</pre>
+
+<h3 id="Les_compréhensions_manipulant_deux_tableaux">Les compréhensions manipulant deux tableaux</h3>
+
+<p>On peut itérer deux fois avec <code>for...of</code> afin de travailler avec deux tableaux :</p>
+
+<pre class="brush: js">var nombres = [ 1, 2, 3 ];
+var lettres = [ "a", "b", "c" ];
+
+var produitCartésien = [for (i of nombres) for (j of lettres) i+j];
+// [ "1a", "1b", "1c", "2a", "2b", "2c", "3a", "3b", "3c" ]
+
+var grille = [for (i of nombres) [for (j of lettres) i+j]];
+// [
+//  ["1a", "1b", "1c"],
+//  ["2a", "2b", "2c"],
+//  ["3a", "3b", "3c"]
+// ]
+
+[for (i of nombres) if (i &gt; 1) for (j of lettres) if(j &gt; "a") i+j]
+// ["2b", "2c", "3b", "3c"], correspond à :
+
+[for (i of nombres) for (j of lettres) if (i &gt; 1) if(j &gt; "a") i+j]
+// ["2b", "2c", "3b", "3c"]
+
+[for (i of nombres) if (i &gt; 1) [for (j of lettres) if(j &gt; "a") i+j]]
+// [["2b", "2c"], ["3b", "3c"]], ne correspond pas à :
+
+[for (i of nombres) [for (j of lettres) if (i &gt; 1) if(j &gt; "a") i+j]]
+// [[], ["2b", "2c"], ["3b", "3c"]]
+</pre>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<p>Ce point faisait initialement partie du brouillon ECMAScript 2015 mais fut retiré dans la révision 27 (août 2014). Veuillez vous référer aux révisions précédentes pour la sémantique utilisée.</p>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<div class="hidden">Ce tableau de compatibilité a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à envoyer une <em>pull request</em> sur <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>.</div>
+
+<p>{{Compat("javascript.operators.array_comprehensions")}}</p>
+
+<h2 id="Notes_spécifiques_relatives_à_l'implémentation_de_SpiderMonkey">Notes spécifiques relatives à l'implémentation de SpiderMonkey</h2>
+
+<ul>
+ <li><a href="/fr/docs/Web/JavaScript/Reference/Instructions/let"><code>let</code></a> en tant qu'identifiant n'est plus supporté. <code>let</code> est seulement disponible pour JS 1.7 et les balises des scripts XUL.</li>
+ <li>La déconstruction des tableaux n'est pas encore supportée.</li>
+</ul>
+
+<h2 id="Différences_avec_les_compréhensions_précédentes_JS1.7JS1.8">Différences avec les compréhensions précédentes JS1.7/JS1.8</h2>
+
+<div class="warning">
+<p>Les compréhensions « JS1.7 / JS1.8 » ont été retirées à partir de Gecko 46 ({{bug(1220564)}}).</p>
+</div>
+
+<p><strong>Ancienne syntaxe pour les compréhensions (ne plus l'utiliser) :</strong></p>
+
+<pre class="brush: js example-bad">[X for (Y in Z)]
+[X for each (Y in Z)]
+[X for (Y of Z)]
+</pre>
+
+<p>Les différences :</p>
+
+<ul>
+ <li>Les compréhensions ESNext créent une portée par nœud «for » au lieu d'une portée par compréhension.
+  <ul>
+   <li>Ancienne syntaxe : <code>[()=&gt;x for (x of [0, 1, 2])][1]() // 2</code></li>
+   <li>Nouvelle syntaxe : <code>[for (x of [0, 1, 2]) ()=&gt;x][1]() // 1, </code>chaque itération crée une nouvelle liaison pour <code>x</code>.</li>
+  </ul>
+ </li>
+ <li>Les compréhensions ESNext débutent avec "for" et non plus avec une expression d'assignation :
+  <ul>
+   <li>Ancienne syntaxe : <code>[i * 2 for (i of nombres)]</code></li>
+   <li>Nouvelle syntaxe : <code>[for (i of nombres) i * 2]</code></li>
+  </ul>
+ </li>
+ <li>Les compréhensions ESNext peuvent comporter plusieurs composants <code>if</code> et <code>for</code>.</li>
+ <li>Les compréhensions ESNext ne fonctionnent qu'avec <code>{{jsxref("Instructions/for...of", "for...of")}}</code> et ne fonctionnent pas avec  <code>{{jsxref("Instructions/for...in", "for...in")}}</code>.</li>
+</ul>
+
+<p>Pour quelques suggestions pour migrer du code, voir le bug {{bug("1220564")}} et notamment le commentaire #42.</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>{{jsxref("Instructions/for...of", "for...of")}}</li>
+ <li>{{jsxref("Opérateurs/Compréhensions_de_générateurs", "Les compréhensions de générateurs", "" ,1)}}</li>
+</ul>

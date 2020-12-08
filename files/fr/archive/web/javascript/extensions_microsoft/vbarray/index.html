@@ -1,0 +1,108 @@
+---
+title: VBArray
+slug: Archive/Web/JavaScript/Extensions_Microsoft/VBArray
+tags:
+  - JavaScript
+  - Microsoft
+  - Non-standard
+  - Reference
+  - VBArray
+translation_of: Archive/Web/JavaScript/Microsoft_Extensions/VBArray
+---
+<div>{{JSRef}}{{Non-standard_header}}</div>
+
+<div class="warning"><strong>Attention ! </strong>Cet objet est spécifique à Microsoft et est uniquement pris en charge par Internet Explorer.</div>
+
+<p>L'objet <strong><code>VBArray</code></strong> permet d'accéder à des tableaux Visual Basic.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre>varName = new VBArray(safeArray);</pre>
+
+<h3 id="Paramètres">Paramètres</h3>
+
+<dl>
+ <dt><code>safeArray</code></dt>
+ <dd>Une valeur <code>VBArray</code>.</dd>
+</dl>
+
+<h3 id="Notes">Notes</h3>
+
+<p>Les tableaux VBArray sont uniquement accessibles en lecture seule et ne peuvent pas être créés directement. L'argument <em>safeArray</em> doit être une valeur VBArray valide. L'obtention d'une telle valeur ne peut se faire que via un contrôle ActiveX ou via un autre objet.</p>
+
+<p>Les tableaux VBArray peuvent avoir plusieurs dimensions, dont chacune a un ensemble d'indices différents.</p>
+
+<h2 id="Exemples">Exemples</h2>
+
+<p>The following example consists of three parts. The first part is VBScript code to create a Visual Basic safe array. The second part is JavaScript code that converts the Visual Basic safe array to a JavaScript array. Both of these parts go into the &lt;HEAD&gt; section of an HTML page. The third part is the JavaScript code that goes in the &lt;BODY&gt; section to run the other two parts.</p>
+
+<pre class="brush: js">&lt;head&gt;
+  &lt;script type="text/vbscript"&gt;
+  &lt;!--
+  Function CreateVBArray()
+     Dim i, j, k
+     Dim a(2, 2)
+     k = 1
+     For i = 0 To 2
+        For j = 0 To 2
+           a(j, i) = k
+           document.writeln(k)
+           k = k + 1
+        Next
+        document.writeln("&lt;br /&gt;")
+     Next
+     CreateVBArray = a
+  End Function
+  --&gt;
+  &lt;/script&gt;
+
+  &lt;script type="text/javascript"&gt;
+  &lt;!--
+  function VBArrayTest(vbarray) {
+     var a = new VBArray(vbarray);
+     var b = a.toArray();
+     var i;
+     for (i = 0; i &lt; 9; i++) {
+       console.log(b[i]);
+     }
+  }
+  --&gt;
+  &lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;script type="text/javascript"&gt;
+    &lt;!--
+    VBArrayTest(CreateVBArray());
+    --&gt;
+  &lt;/script&gt;
+&lt;/body&gt;</pre>
+
+<h2 id="Propriétés">Propriétés</h2>
+
+<p>L'objet <code>VBArray</code> ne possède aucune propriété.</p>
+
+<h2 id="Méthodes">Méthodes</h2>
+
+<dl>
+ <dt><a href="/fr/docs/Web/JavaScript/Microsoft_JavaScript_extensions/VBArray/dimensions"><code>VBArray.dimensions()</code></a></dt>
+ <dd>Cette méthode renvoie le nombre de dimensions du tableau <code>VBArray</code>.</dd>
+ <dt><a href="/fr/docs/Web/JavaScript/Microsoft_JavaScript_extensions/VBArray/getItem"><code>VBArray.getItem()</code></a></dt>
+ <dd>Cette méthode renvoie l'élément à l'emplacement indiqué.</dd>
+ <dt><a href="/fr/docs/Web/JavaScript/Microsoft_JavaScript_extensions/VBArray/lbound"><code>VBArray.lbound()</code></a></dt>
+ <dd>Cette méthode renvoie l'indice le plus bas du <code>VBArray</code> pour la dimension indiquée.</dd>
+ <dt><a href="/fr/docs/Web/JavaScript/Microsoft_JavaScript_extensions/VBArray/toArray"><code>VBArray.toArray()</code></a></dt>
+ <dd>Cette méthode renvoie un tableau JavaScript standard converti à partir de l'objet <code>VBArray</code>.</dd>
+ <dt><a href="/fr/docs/Web/JavaScript/Microsoft_JavaScript_extensions/VBArray/ubound"><code>VBArray.ubound()</code></a></dt>
+ <dd>Cette méthode renvoie l'indice le plus haut du <code>VBArray</code> pour la dimension indiquée.</dd>
+</dl>
+
+<h2 id="Prérequis">Prérequis</h2>
+
+<p>Cette fonctionnalité est prise en charge par les modes suivants : Quirks, Internet Explorer 6 en mode standard, Internet Explorer 7 en mode standard, Internet Explorer 8 en mode standard, Internet Explorer 9 en mode standard et Internet Explorer 10 en mode standard. Elle n'est pas prise en charge par les applications Windows 8.x Store.</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>{{jsxref("Array")}}</li>
+</ul>

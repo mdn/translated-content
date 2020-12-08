@@ -1,0 +1,25 @@
+---
+title: Cookies In Thunderbird
+slug: Mozilla/Thunderbird/Cookies_In_Thunderbird
+tags:
+  - Cookies
+  - thunderbird
+translation_of: Mozilla/Thunderbird/Cookies_In_Thunderbird
+---
+<div class="blockIndicator standardNote">
+<p>この記事は <a href="https://developer.mozilla.org/ja/docs/Mozilla/Thunderbird/Releases/3">Thunderbird 3</a>  の新機能について述べています</p>
+</div>
+<p>Thunderbird 3 より前のバージョンの Cookie ポリシーは、(RSS に対するものだけで) とても限定的でした。Thunderbird 3 では、<a class="internal" href="/ja/Gecko" title="ja/Gecko">Gecko</a> の Cookie ポリシーをいくつかの変更を加えて利用します。</p>
+<ul> <li>mailnews でない URL または場所 (リモートコンテンツ) の Cookie は有効になります。</li> <li>メール内のリモートコンテンツは Cookie を使用できますが、ユーザがメール内のリモートコンテンツの表示を許可した場合に限ります。</li> <li>RSS フィードアイテムの表示は、Web ページと同様に Cookie が許可されます。</li>
+</ul>
+<p>これらはすべて、Gecko の Cookie ポリシーが、その内部のポリシーとユーザ設定を基に Cookie を許可していることを条件とします。</p>
+<h2 id="危険性">危険性</h2>
+<p>新しい Cookie ポリシーは、次の領域や方法において、危険性やリスクを引き起こすかもしれません:</p>
+<ul> <li>メールに、メールアドレスと関連付けられた Cookie を許可する <ul> <li>&lt;img src="<a class=" external" href="http://tracker.net/?email=you@example.com" rel="freelink">http://tracker.net/?email=you@example.com</a>"&gt; は、tracker.net が Cookie をセットし、後でページを表示することで Cookie とメールアドレスまたはプロファイルを読む。</li> <li>シナリオ: nytimes.com がメールに Web バグを埋め込んで日刊ニュースを送信し、そこから RSS を読んだすべてのメールアドレスまたは識別子を追跡する。</li> </ul> </li>
+</ul>
+<h3 id="リファレンス">リファレンス</h3>
+<ul> <li><a class="internal" href="/ja/Gecko" title="ja/Gecko">Gecko</a> における Cookie の詳しい情報は、<a class="internal" href="/Special:Tags?tag=Cookies" title="Special:Tags?tag=Cookies">Cookies</a> タグの付いたページを参照してください。</li>
+</ul>
+<div class="noinclude">
+
+</div>

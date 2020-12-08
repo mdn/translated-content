@@ -1,0 +1,69 @@
+---
+title: JSPropertyDescriptor
+slug: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JSPropertyDescriptor
+translation_of: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JSPropertyDescriptor
+---
+<div>{{SpiderMonkeySidebar("JSAPI")}}</div>
+
+<div class="summary">描述符是一个用于声明一个属性是否可以被修改,是否可以被删除,是否可以被枚举的一个对象</div>
+
+<h2 id="内容">内容</h2>
+
+<p>每一个属性只拥有一个描述符对象,但是这个对象中拥有多个键值,用来描述这个属性,下表说明了描述符中可以拥有的键值.</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td class="header">Field Name</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>getter</code></td>
+   <td><code>get</code> 语法为属性绑定一个函数,每当查询该属性时便调用对应的函数,查询的结构为该函数的返回值</td>
+  </tr>
+  <tr>
+   <td><code>setter</code></td>
+   <td>如果试着改变一个属性的值，那么对应的 <em>setter</em> 函数将被执行</td>
+  </tr>
+  <tr>
+   <td><code>value</code></td>
+   <td>描述指定属性的值 , 可以是任何有效的 <em>Javascript</em> 值(函数 , 对象 , 字符串 ...).</td>
+  </tr>
+  <tr>
+   <td><code>configurable</code></td>
+   <td>当且仅当该属性的 <em>configurable</em> 为 true 时，该属性 <code>描述符</code> 才能够被改变, 同时该属性也能从对应的对象上被删除.</td>
+  </tr>
+  <tr>
+   <td><code>enumerable</code></td>
+   <td>描述指定的属性是否是 <a href="https://www.yuque.com/hardtoname/ur9xy2/rwbt5g#o93qms">可枚举</a> 的.</td>
+  </tr>
+  <tr>
+   <td><code>writable</code></td>
+   <td>当且仅当该属性的 <em>writable</em> 为 <code>true</code> 时, <em>value</em> 才能被赋值运算符改变。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Description" name="Description">描述</h2>
+
+<p><em>描述符</em> 是描述对象属性的属性 , 对象里目前存在的属性描述符有两种主要形式：<strong>数据描述符 </strong>和 <strong>存取描述符</strong>. 可以通过 <em>Object.getOwnPropertyDescriptor()</em> 函数来获取某个对象下指定属性的对应的 <em>描述符</em> .</p>
+
+<h2 id="示例">示例</h2>
+
+<p>下面将演示通过 <em>Object.defineProperty()</em> 函数定义一个对象的属性.</p>
+
+<pre class="brush: js">var language = {}; // 定义一个空对象 language
+
+Object.defineProperty(language, 'log', { // 定义 language 对象下的 log 属性
+    value : ['CN','EN'],
+    writable : true,
+    enumerable : true,
+    configurable : true
+})</pre>
+
+<p>此时这是一个可读可写可枚举的属性 此时我们将这三个值都设为了 true 此时上面这段代码等价于:</p>
+
+<pre class="brush: js">var language = {}; // 定义一个空对象 language
+
+languange.log = ['CN','EN']; // 定义 language 对象下的 log 属性
+</pre>

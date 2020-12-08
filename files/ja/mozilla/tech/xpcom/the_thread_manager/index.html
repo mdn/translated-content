@@ -1,0 +1,130 @@
+---
+title: The Thread Manager
+slug: Mozilla/Tech/XPCOM/The_Thread_Manager
+tags:
+  - Firefox 3
+  - Threads
+translation_of: Mozilla/Tech/XPCOM/The_Thread_Manager
+---
+<p>
+</p><p>Firefox 3 で導入されたスレッドマネージャは、スレッドを作成して、処理を行うイベントをそのスレッドに割り当てる便利な方法を提供します。
+</p><p><span id="Interfaces"></span>
+</p>
+<h3 id=".E3.82.A4.E3.83.B3.E3.82.BF.E3.83.95.E3.82.A7.E3.83.BC.E3.82.B9" name=".E3.82.A4.E3.83.B3.E3.82.BF.E3.83.95.E3.82.A7.E3.83.BC.E3.82.B9">インタフェース</h3>
+<p>スレッドのサポートを提供するインタフェースは、以下のようにいくつか存在します。
+</p>
+<dl><dt><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThreadManager" title="">nsIThreadManager</a></code>
+</dt><dd>スレッドを作成できるようにするスレッドマネージャそのもの。
+</dd><dt><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThread" title="">nsIThread</a></code>
+</dt><dd>この <code>nsIThread</code> インタフェースは、オペレーティングシステムのスレッドをカプセル化したもので、コードからマルチスレッドに対する簡易なクロスプラットフォームアクセスを提供します。
+</dd><dt><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThreadPool" title="">nsIThreadPool</a></code>
+</dt><dd>スレッドプールは、限られた一連のワーカースレッドを提供します。イベントをプールに割り当てる際、プールは、そのイベントを処理するために利用可能なワーカースレッドを選択する役割を果たします。
+</dd><dt><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThreadInternal" title="">nsIThreadInternal</a></code>
+</dt><dd><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThread" title="">nsIThread</a></code> のサブクラスで、XPCOM のスレッドオブジェクトによって実装されており、スレッドへのアクティビティ割り当て監視サポートを提供します。
+</dd><dt><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThreadObserver" title="">nsIThreadObserver</a></code>
+</dt><dd>スレッドを監視する機能を提供します。スレッドにイベントが割り当てられた際や、それらのイベントの処理が完了した際に、通知を受け取ることができます。
+</dd><dt><code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThreadEventFilter" title="">nsIThreadEventFilter</a></code>
+</dt><dd>このインタフェースは <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThreadInternal" title="">nsIThreadInternal</a></code> 内の <code><a href="ja/NsIThreadInternal#pushEventQueue.28.29">pushEventQueue()</a></code> メソッドで使われており、イベントのフィルタリングを可能にします。
+</dd></dl>
+<p><span id="Using_the_Thread_Manager"></span>
+</p>
+<h3 id=".E3.82.B9.E3.83.AC.E3.83.83.E3.83.89.E3.83.9E.E3.83.8D.E3.83.BC.E3.82.B8.E3.83.A3.E3.81.AE.E4.BD.BF.E3.81.84.E6.96.B9" name=".E3.82.B9.E3.83.AC.E3.83.83.E3.83.89.E3.83.9E.E3.83.8D.E3.83.BC.E3.82.B8.E3.83.A3.E3.81.AE.E4.BD.BF.E3.81.84.E6.96.B9">スレッドマネージャの使い方</h3>
+<p>スレッドマネージャを使用するには、各スレッドのワーキングコードを <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIRunnable" title="">nsIRunnable</a></code> XPCOM オブジェクトにカプセル化しなければなりません。このオブジェクトは全体を JavaScript で書くことができ、それほど難しくありません。
+</p><div class="blockIndicator note"><strong>註:</strong> DOM はスレッドセーフではないので、バックグラウンドスレッドから DOM や ユーザーインタフェースにアクセスしてはいけません。クラッシュの原因となります。</div>
+<p>このセクションでは簡単な例を見ていきます。
+</p><p><span id="The_background_thread"></span>
+</p>
+<h4 id=".E3.83.90.E3.83.83.E3.82.AF.E3.82.B0.E3.83.A9.E3.82.A6.E3.83.B3.E3.83.89.E3.82.B9.E3.83.AC.E3.83.83.E3.83.89" name=".E3.83.90.E3.83.83.E3.82.AF.E3.82.B0.E3.83.A9.E3.82.A6.E3.83.B3.E3.83.89.E3.82.B9.E3.83.AC.E3.83.83.E3.83.89">バックグラウンドスレッド</h4>
+<p>まず、バックグラウンドスレッドで行われる処理を扱う XPCOM オブジェクトが必要になります。
+</p>
+<pre>var workingThread = function(threadID, number) {
+  this.threadID = threadID;
+  this.number = number;
+  this.result = 0;
+};
+
+workingThread.prototype = {
+  run: function() {
+    try {
+      // ここでワーキングスレッドが処理を行う
+
+      for (var i = 0; i&lt;= this.number; i++) {
+        this.result += i;
+      }
+
+      // 処理が終了したら、終了を知らせるためにメインスレッドにコールバックする
+
+      main.dispatch(new mainThread(this.threadID, this.result),
+        background.DISPATCH_NORMAL);
+    } catch(err) {
+      Components.utils.reportError(err);
+    }
+  },
+
+  QueryInterface: function(iid) {
+    if (iid.equals(Components.interfaces.nsIRunnable) ||
+        iid.equals(Components.interfaces.nsISupports)) {
+            return this;
+    }
+    throw Components.results.NS_ERROR_NO_INTERFACE;
+  }
+};
+</pre>
+<p>このスレッドのコンストラクタでは、スレッドの ID と 数値をローカル変数に保存し、result 変数を 0 に設定しています。 これらの変数はスレッドの実行時に使用されます。
+</p><p>このオブジェクトにはコンストラクタのほかに 2 つのメソッドがあります:
+</p>
+<dl><dt><code>run()</code>
+</dt><dd><code>run()</code> メソッドは <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThread" title="">nsIThread</a></code> インタフェースの <code>dispatch()</code> メソッドが呼び出されたときに呼び出されます。これはバックグラウンドスレッドで実際の作業を行うルーチンです。 この例では、0 から &lt;tt&gt;this.number&lt;/tt&gt; までのすべての数の合計を計算しています。 計算が終了すると、 <code>mainThread</code> オブジェクトを使ってメインスレッドにアクセスし、計算結果を共有するためにコールバックをメインスレッドにディスパッチします。
+</dd><dt><code>QueryInterface()</code>
+</dt><dd>スレッドの XPCOM オブジェクトは <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIRunnable" title="">nsIRunnable</a></code> インタフェースを扱う必要があるため、オブジェクトが <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIRunnable" title="">nsIRunnable</a></code> インタフェースを扱っているかを尋ねるためにこのメソッドが呼び出されたときに、正しい反応を返さなければなりません。
+</dd></dl>
+<p><span id="The_main_thread"></span>
+</p>
+<h4 id=".E3.83.A1.E3.82.A4.E3.83.B3.E3.82.B9.E3.83.AC.E3.83.83.E3.83.89" name=".E3.83.A1.E3.82.A4.E3.83.B3.E3.82.B9.E3.83.AC.E3.83.83.E3.83.89">メインスレッド</h4>
+<p>メインスレッドを扱う XPCOM オブジェクトはバックグラウンドタスクからのコールバックとして使用されます。このオブジェクトの <code>run()</code> メソッドは、バックグラウンドスレッドが計算結果をユーザーに知らせようとしたときに呼び出されます。バックグラウンドスレッドはユーザーインタフェースに触れることができず、メインスレッドに依頼しなければならないため、このオブジェクトが必要になります。
+</p>
+<pre>var mainThread = function(threadID, result) {
+  this.threadID = threadID;
+  this.result = result;
+};
+
+mainThread.prototype = {
+  run: function() {
+    try {
+      // ここでワーキングスレッドの完了に対して反応を返す
+      alert('Thread ' + this.threadID + ' finished with result: ' + this.result);
+    } catch(err) {
+      Components.utils.reportError(err);
+    }
+  },
+
+  QueryInterface: function(iid) {
+    if (iid.equals(Components.interfaces.nsIRunnable) ||
+        iid.equals(Components.interfaces.nsISupports)) {
+            return this;
+    }
+    throw Components.results.NS_ERROR_NO_INTERFACE;
+  }
+};
+</pre>
+<p>この例では <code>run()</code> メソッドは単純に警告ボックスを使ってユーザーに出力を表示します。
+</p><p><span id="Putting_it_all_together"></span>
+</p>
+<h4 id=".E4.BB.95.E4.B8.8A.E3.81.92" name=".E4.BB.95.E4.B8.8A.E3.81.92">仕上げ</h4>
+<p>実際にスレッドマネージャを使ってバックグラウンドでこれらの計算を行うには、まず &lt;tt&gt;workingThread&lt;/tt&gt; のタスクを実行する <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThread" title="">nsIThread</a></code> オブジェクトを作成する必要があります:
+</p>
+<pre class="eval">var background = Components.classes["@mozilla.org/thread-manager;1"].getService().newThread(0);
+</pre>
+<p>それに加えて、メインスレッドの <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIThread" title="">nsIThread</a></code> の参照を得る必要があります:
+</p>
+<pre class="eval">var main = Components.classes["@mozilla.org/thread-manager;1"].getService().mainThread;
+</pre>
+<p>この情報を得たら、タスクをバックグラウンドスレッドに割り当てることができます。
+</p>
+<pre class="eval">background.dispatch(new workingThread(1, 5000000), background.DISPATCH_NORMAL);
+</pre>
+<p>これによりバックグラウンドスレッドの実行が開始され、0 と 5,000,000 の間のすべての数の合計が計算されます。作業が終了すると、メインスレッドの <code>run()</code> メソッドが呼び出され、結果をユーザーと共有します。それまでの間、メインスレッドはユーザーの操作に反応するなどの自分の作業を続けることができます。
+</p><p><br>
+</p>
+<div class="noinclude">
+</div>

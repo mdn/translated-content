@@ -1,0 +1,149 @@
+---
+title: スタイルシートの追加
+slug: Archive/Mozilla/XUL/Tutorial/Adding_Style_Sheets
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_Style_Sheets
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Persistent_Data" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Styling_a_Tree">次のページ  »</a></p>
+</div>
+<p>これまでに作成してきた要素では、外観についてはほとんど変更しませんでした。 XUL では、要素の外観をカスタマイズするために CSS (Cascading Style Sheets) を使用することになります。</p>
+<h3 id=".E3.82.B9.E3.82.BF.E3.82.A4.E3.83.AB.E3.82.B7.E3.83.BC.E3.83.88" name=".E3.82.B9.E3.82.BF.E3.82.A4.E3.83.AB.E3.82.B7.E3.83.BC.E3.83.88">スタイルシート</h3>
+<p>スタイルシートとは、要素のスタイル情報を含んだファイルのことです。 スタイルシートは、もともとは HTML 要素のために設計されたものですが、 <a href="ja/XUL_Reference">XUL 要素</a>を含めて、任意の <a href="ja/XML">XML</a> に適用することが可能です。 スタイルシートには、フォント (font)、色 (color)、境界線 (border)、要素の大きさといった情報が含まれています。</p>
+<p>Mozilla では、特に指定が無い場合、各 XUL ウィンドウにデフォルトのスタイルシートを適用します。 多くの場合は、デフォルトのままでも十分ですが、 場合によっては、カスタムスタイルシートを使用したい状況もあるかもしれません。 この場合、通常は、それぞれの XUL ファイルに対して、1 つずつスタイルシートを関連付けることになります。</p>
+<p>スタイルシートは、どこでも好きな場所に置くことができます。 例えば、リモートに格納された XUL ファイルを、HTTP の URL でアクセスする場合は、 スタイルシートも同様にリモートに置くことが可能です。 また、chrome システムの一部としてインストールするために XUL パッケージを作成した場合には、2 つの選択肢があります。 1 つめは、XUL ファイルと同じディレクトリにスタイルシートを格納する方法ですが、 この方法には、そのアプリケーションをテーマに対応させることができなくなるという短所があります。 このため、2 つめの方法では、スタイルシートをテーマの一部として含めておくようにします。</p>
+<div class="highlight">
+  <p>ここで、ファイル検索ダイアログをテーマ対応にして構築する場合のスタイルシートの置き場所ついて検討してみましょう。 ファイル検索ダイアログは、<code><a class="external" rel="freelink">chrome://findfile/content/findfile.xul</a></code> というURLで参照することができるため、 スタイルシートファイルも、<code><a class="external" rel="freelink">chrome://findfile/skin/findfile.css</a></code> でアクセス可能な場所に保存しておくのが良いでしょう。</p>
+</div>
+<p>なお、スタイルシートは、これまで見てきた XUL の例の中でも既に使われていました。 これらの例の全ての XUL ファイルの 2行目は、いつも下記の内容だったはずです。</p>
+<pre>&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+</pre>
+<p>この行は、<code><a class="external" rel="freelink">chrome://global/skin/</a></code> で提供されているスタイルを使用するべきであることを指示しています。 Mozilla では、これは <code>global.css</code> ファイルが指定されたと解釈され、 このファイルに含まれる XUL 要素に対するデフォルトのスタイル情報が読み込まれます。 このスタイルシートでは、たくさんのフォントや、色、境界線の指定を、要素の外観をより良くするために適用しているため、 この行を取り去った場合も機能的には動作しますが、見た目はかなり素気ないものになるはずです。</p>
+<h3 id=".E3.82.B9.E3.82.BF.E3.82.A4.E3.83.AB.E3.82.92.E5.A4.89.E6.9B.B4.E3.81.99.E3.82.8B" name=".E3.82.B9.E3.82.BF.E3.82.A4.E3.83.AB.E3.82.92.E5.A4.89.E6.9B.B4.E3.81.99.E3.82.8B">スタイルを変更する</h3>
+<p>しかしながら、デフォルトの要素の外観が、望むものではない場合もあると思います。 この場合は、独自のスタイルシートを追加する必要があります。 これまでは、要素上の <code><code id="a-style"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/style">style</a></code></code> 属性を利用して、スタイルを適用してきました。 この方法でも動作はしますが、実際には最良の方法ではありません。 より優れた方法をとる場合は、個別にスタイルシートを作成します。 これによって、外観の変更がスキンを変更するだけで容易に行えるようになります。</p>
+<p>しかしながら、限定的ではあるものの、<code><code id="a-style"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/style">style</a></code></code> 属性を使用することが容認される場合もあります。 具体的には、スクリプトからスタイルを変更する場合や、レイアウトの変更が要素の意味にも影響するような場合です。 (といっても、やはり可能な限りこの属性の使用は回避するべきだと思います)。</p>
+<p>なお、インストールされているファイルに対しては、マニフェストファイルを作るか、修正してからでないと、スキンをインストールすることはできません。</p>
+<h4 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AE.E4.BE.8B" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AE.E4.BE.8B">ファイル検索ダイアログの例</h4>
+<div class="highlight">
+  <p>それでは、ファイル検索ダイアログを、別のスタイルファイルからスタイルを設定するように変更してみましょう。 まず、以下に <code>findfile.xul</code> で変更した行を示します。</p>
+  <pre class="eval"><span class="highlightred">&lt;?xml-stylesheet href="<a class="external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;</span>
+&lt;?xml-stylesheet href="findfile.css" type="text/css"?&gt;
+  ...
+<span class="highlightred">&lt;spacer class="titlespace"/&gt;</span>
+  &lt;groupbox orient="horizontal"&gt;
+    <span class="nowiki">&lt;caption label="Search Criteria"/&gt;</span>
+
+      &lt;menulist id="searchtype"&gt;
+        &lt;menupopup&gt;
+          &lt;menuitem label="Name"/&gt;
+          &lt;menuitem label="Size"/&gt;
+          &lt;menuitem label="Date Modified"/&gt;
+        &lt;/menupopup&gt;
+      &lt;/menulist&gt;
+      <span class="highlightred">&lt;spacer class="springspace"/&gt;</span>
+      &lt;menulist id="searchmode"&gt;
+        &lt;menupopup&gt;
+          &lt;menuitem label="Is"/&gt;
+          &lt;menuitem label="Is Not"/&gt;
+        &lt;/menupopup&gt;
+      &lt;/menulist&gt;
+
+      <span class="highlightred">&lt;spacer class="springspace"/&gt;
+      &lt;menulist id="find-text" flex="1"</span>
+          editable="true"
+          datasources="<a class="external" rel="freelink">file:///mozilla/recents.rdf</a>"
+          ref="<span class="nowiki">http://www.xulplanet.com/rdf/recent/all</span>"/&gt;
+  ...
+<span class="highlightred">&lt;spacer class="titlespace"/&gt;
+&lt;hbox&gt;
+
+  &lt;progressmeter id="progmeter" value="50%" style="display:none;"/&gt;</span>
+</pre>
+  <p>ここでは、新しい <code>xml-stylesheet</code> の行が、スタイルシートをインポートするために使用されています。 インポートするファイルには、これまで直接 XUL ファイルの中に記述していたスタイルが含まれることになります。 同様の指定を繰り返すことで、任意の数のスタイルシートを取り込むことが可能です。 なお、この例ではスタイルシートは <code>findfile.xul</code> と同じディレクトリに置かれています。</p>
+  <p>また、上記のコードでは、これまで置かれていたいくつかのスタイルを削除しています。 ただし、<code>progressmeter</code> の <code>display</code> プロパティについては、 スクリプトから変更されるため、削除せずに残してあります。 このようにしても、プログレスバーを初期状態から表示させたい状況は通常考えられないため、この実装が問題になることは無いはずです。 といっても、実際に必要になった場合、個別のスタイルシートの方に置くようにしても構いません。 また、スペーサーには、スタイルシートから参照できるように、<code>class</code> を追加しています。</p>
+  <p>さらに、スタイルシートも新たに作成する必要があります。 とりあえずは、XUL ファイルと同じディレクトリに <code>findfile.css</code> というファイル名で作成することにします。 (通常、スタイルシートは、別のスキンのための場所に置きます)。 そして、このファイルには、以下に示すスタイルの宣言を加えます。</p>
+  <pre>#find-text {
+  min-width: 15em;
+}
+
+#progmeter {
+  margin: 4px;
+}
+
+.springspace {
+  width: 10px;
+}
+
+.titlespace {
+  height: 10px;
+}
+</pre>
+  <p>上記のスタイルで指定している内容自体は、これまでと同等のものにすぎませんが、 これによって、第三者がファイル検索ダイアログの外観を変更するような場合には、 スタイル宣言の追加と変更のために、このファイルを修正するかスキンを変更するだけで済むため、より簡単な作業で済むはずです。 なお、利用者がインターフェースのスキンを変更した場合は、 これらのファイルはデフォルトで適用されるディレクトリとは別の場所に置かれたものが使用されます。</p>
+</div>
+<h3 id=".E3.82.B9.E3.82.BF.E3.82.A4.E3.83.AB.E3.82.B7.E3.83.BC.E3.83.88.E3.82.92.E3.82.A4.E3.83.B3.E3.83.9D.E3.83.BC.E3.83.88.E3.81.99.E3.82.8B" name=".E3.82.B9.E3.82.BF.E3.82.A4.E3.83.AB.E3.82.B7.E3.83.BC.E3.83.88.E3.82.92.E3.82.A4.E3.83.B3.E3.83.9D.E3.83.BC.E3.83.88.E3.81.99.E3.82.8B">スタイルシートをインポートする</h3>
+<p>XUL から、スタイルシートを使用するためにインポートする方法は、少し前にも説明していますが、 以下の例で示すような記述になります。</p>
+<pre>&lt;?xml-stylesheet href="chrome://bookmarks/skin/" type="text/css"?&gt;
+</pre>
+<p>これは、ブックマークウィンドウ用 XUL ファイルの最初の方に記述されている内容と、おそらくは同じです。 この指定によって、<code>bookmark.css</code> というブックマーク用のスタイルシートをインポートします。 ここでは特定のファイル名を指定していませんが、 Mozilla のスキンシステムは十分洗練されているので、適切なスタイルシートが自動的に選択されます。 なお、同様の指定は、グローバルスタイルシートファイル (<code><a class="external" rel="freelink">chrome://global/skin</a></code>) のときにも行っています。</p>
+<p>また、スタイルシートは CSS の <code>import</code> ディレクティブを使用することで、 他のスタイルシートからインポートすることも可能です。 このため、通常は、各 XUL ファイルからは、それぞれに関連付けられた 1 つのスタイルシートだけをインポートし、 共通のグローバルスタイルシートは、そのスタイルシートからインポートするようにします。 これは、以下に示すコードによって行なうことが可能です。 これによって、XUL ファイルからグローバルスタイルシートをインポートする指定を削除できます。</p>
+<pre class="eval"><b>XUL からのスタイルのインポート:</b>
+&lt;?xml-stylesheet href="<a class="external" rel="freelink">chrome://global/skin/</a>"  type="text/css"?&gt;
+
+<b>CSS からのスタイルのインポート:</b>
+@import url(<a class="external" rel="freelink">chrome://global/skin/</a>);
+</pre>
+<p>2 つめの構文の方が、XUL ファイル自体と依存関係があるファイル数を減少させることができるので好まれています。</p>
+<div class="highlight">
+  <p>それでは、<code>findfile.xul</code> から、グローバルスタイルシートのインポートを削除して <code>findfile.css</code> に追加してください。</p>
+</div>
+<p>全ての要素は <a href="ja/CSS">CSS</a> を使うことでスタイルを設定することが可能です。 このとき、スタイルを設定したい要素を選択するためにセレクタ (selector) を使用します。 (セレクタとは、スタイルルールの中括弧 "{" の前の部分のことです)。 以下に、有効なセレクタの一部を一覧にまとめたものを示します。</p>
+<dl>
+  <dt>
+    button</dt>
+  <dd>
+    全ての <code>button</code> 要素に適用されます。</dd>
+  <dt>
+    #special-button</dt>
+  <dd>
+    <code>id</code> が <code>special-button</code> である要素に適用されます。</dd>
+  <dt>
+    .bigbuttons</dt>
+  <dd>
+    <code>class</code> が <code>bigbuttons</code> である、全ての要素に適用されます。</dd>
+  <dt>
+    button.bigbuttons</dt>
+  <dd>
+    <code>class</code> が <code>bigbuttons</code> である、全ての <code>button</code> 要素に適用されます。</dd>
+  <dt>
+    toolbar &gt; button</dt>
+  <dd>
+    <code>toolbar</code> 要素の中に直接置かれた、全ての <code>button</code> 要素に適用されます。</dd>
+  <dt>
+    toolbar &gt; button.bigbuttons</dt>
+  <dd>
+    <code>toolbar</code> 要素の中に直接置かれた、<code>class</code> が <code>bigbuttons</code> である、全ての <code>button</code> 要素に適用されます。</dd>
+  <dt>
+    button.bigbuttons:hover</dt>
+  <dd>
+    <code>class</code> が <code>bigbuttons</code> である、全ての <code>button</code> 要素が該当しますが、実際にスタイルが適用されるのはマウスがその要素の上にあるときのみです。</dd>
+  <dt>
+    button#special-button:active</dt>
+  <dd>
+    <code>id</code> が <code>special-button</code> である要素が該当しますが、適用されるのはアクティブ (その要素上でマウスボタンが押されている状態) のときのみです。</dd>
+  <dt>
+    box[orient="horizontal"]</dt>
+  <dd>
+    <code>orient</code> 属性が <code>horizontal</code> に設定されている、全ての <code>box</code> 要素に適用されます。</dd>
+</dl>
+<p>これらのルールは、必要に応じて任意に組み合わせることが可能です。 要素のスタイル付けを指定する際には、いつも可能な限り正確な指定を行うことを心がけてください。 そのほうが効率的ですし、間違った対象にスタイルを付けてしまう可能性も減らすことができるはずです。</p>
+<div class="highlight">
+  <p><span id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"><a id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"></a><strong>ここまでのファイル検索ダイアログの例</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-style.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-style.xul">表示</a></p>
+</div>
+<p>次のセクションでは、ツリーにスタイルを適用する方法を見ていきます。</p>
+
+<div><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Persistent_Data" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Styling_a_Tree">次のページ  »</a></p>
+</div></div>

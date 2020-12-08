@@ -1,0 +1,727 @@
+---
+title: Creating the Component Code
+slug: Mozilla/Tech/XPCOM/Guide/Creating_components/Creating_the_Component_Code
+tags:
+  - XPCOM
+  - 所有分类
+translation_of: Mozilla/Tech/XPCOM/Guide/Creating_components/Creating_the_Component_Code
+---
+<p> </p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/Creating_XPCOM_Components:Component_Internals" style="float: left;">« 上一页</a><a href="/zh-CN/docs/Creating_XPCOM_Components:Using_XPCOM_Utilities_to_Make_Things_Easier">下一页  »</a></p>
+</div><p></p>
+
+<p>这一章叙述处理你的组件和XPCOM之间关联的基本代码。让组件被找到和注册是这个章节的目的。在后续章节中，我们开始建立<strong>WebLock</strong>组件本身的功能。</p>
+
+<p>注：有些部分采用英汉对照的方式。避免翻译的不准确！</p>
+
+<div class="side-note">
+<p><span id="Use_the_Calculator_(After_Learning_Long_Division)"><a id="Use_the_Calculator_(After_Learning_Long_Division)"></a><strong>Use the Calculator (After Learning Long Division)</strong></span></p>
+
+<p>You have to write a fair amount of code to create a component library that gets loaded into XPCOM. 一个XPCOM组件起码要实现三个XPCOM要求的接口, 通常还有其他一些. 这一章包含了可能你不会需要的更多代码，不过<a href="/cn/Creating_XPCOM_Components/Using_XPCOM_Utilities_to_Make_Things_Easier" title="cn/Creating_XPCOM_Components/Using_XPCOM_Utilities_to_Make_Things_Easier">Using XPCOM Utilities to Make Things Easier</a>会教你一些更简单和优雅的使用通用宏建立XPCOM组件的方式, 本章主要讲述基本的内容。 As in grade school when you learned long division, better tools like calculators come <em>after</em> you figure out what's actually happening. In this case, the long-hand implementation gives us an opportunity to talk about various features of XPCOM.</p>
+</div>
+
+<h3 id="What_We.27ll_Be_Working_On" name="What_We.27ll_Be_Working_On">What We'll Be Working On</h3>
+
+<p>The component we'll be working on in this book controls a special mode in your browser that prevents users from leaving the current domain or a set of safe domains. Once enabled, this weblock mode is password protected and persists until it is turned off by the password holder. It can be used to make the browser into a safe viewer for children, or for targeted "kiosk browsing," where the content is restricted to a particular server. <a href="#Web_Lock_User_Interface">Web Lock User Interface</a> shows the icon that is used to activate the web lock mode (leftmost in the status bar) once you have installed the <strong>WebLock</strong> component and the extra user interface.</p>
+
+<h3 id="接下来的内容"> 接下来的内容</h3>
+
+<p>文章后续的内容，将向读者描述一个使浏览器处在受控模式(web lock mode)的组件，该组件采用密码保护的方式防止用户从当前域或者一组安全的域中离开。这个组件可以使用在为未成年人提供受限内容或者是在一些小型电子浏览器中防止页面跳出特定服务内容。在用户安装了WebLock组件和额外的用户接口后，在状态栏的最左边，如图<a href="#Web_Lock_User_Interface">Web Lock User Interface</a>，可以用图标来激活受控模式(web lock mode)</p>
+
+<p><span id="Web_Lock_User_Interface"><a id="Web_Lock_User_Interface"></a><strong>Web Lock User Interface</strong></span></p>
+
+<p><img alt="Image:web-lock-ui.png" class="internal" src="/@api/deki/files/2727/=Web-lock-ui.png"></p>
+
+<p>实际上组件<strong>WebLock</strong>做的大多数事情是准备组件本身，找到需要的XPCOM接口, 并且挂接到现有的Gecko Browser功能.</p>
+
+<h3 id="Component_Registration" name="Component_Registration">Component Registration 组件注册</h3>
+
+<p>All XPCOM components - whether they're stored in shared libraries (DLLs, DSOs or dylibs), JavaScript files, or some other file - need to be <em>registered</em> before they can be used. Registration is a process that happens in all XPCOM applications, whether they're embedded Gecko clients, Mozilla, Netscape 7, Compuserve, or any other software that uses XPCOM. Registration provides the information that applications need in order to use components properly.</p>
+
+<p>所有的XPCOM 组件- 无论是存储在shared libraries (<abbr title="Dynamic Link Library (Windows)">DLLs</abbr>, <abbr title="Dynamic Shared Object (Linux)">DSOs</abbr> 还是 <abbr title="Dynamically linked library (OS X)">dylibs</abbr>), JavaScript文件,或者其他文件 - 使用前需要被<em>注册. </em>使用XPCOM的Gecko clients, Mozilla, Netscape 7, Compuserve, 或者其他程序，都需要注册，才能获得合适的组件信息。</p>
+
+<p>The <strong>WebLock</strong> component must do a number of things to register itself. Specifically, the component library has to contain implementations for the component-related interfaces described in this chapter: <code>nsIModule</code> and <code>nsIFactory</code>, which are entry points for your implementation code.</p>
+
+<p>想要注册 WebLock 组件必须做许多事情. 特别是, 组件库需要包含本章介绍的组件定义的接口: <code>nsIModule</code> and <code>nsIFactory</code>, 这是你的代码入口.</p>
+
+<p>Once your component implements these interfaces, the rest of the registration process itself is simple. Applications typically use <code>regxpcom</code>, described in the next section.</p>
+
+<p>如果你的组件实现了这些接口，注册将变的很容易. 应用中通常使用<code>regxpcom</code>注册, 在下一节描述.</p>
+
+<h4 id="regxpcom_.E7.A8.8B.E5.BA.8F" name="regxpcom_.E7.A8.8B.E5.BA.8F"><code>regxpcom</code> 程序</h4>
+
+<p>一个明确的注册组件方法是运行<code>regxpcom</code>. 不带任何参数启动<code>regxpcom</code>时, 程序把组件注册在缺省的组件注册表. 我们建议你如果是运行应用, 你可以拷贝你的组件到对应程序安装目录下的<code>components</code>目录. 拷贝好以后，运行<code>regxpcom</code>将注册包含你的组件在内的所有那个目录中的组件.</p>
+
+<p><code>regxpcom</code>在1.4 或更高版本有一些新的参数. 参看 <code>regxpcom 加&lt;code&gt;-h</code> 选项。</p>
+
+<h4 id=".E5.8F.A6.E5.A4.96.E7.9A.84.E6.B3.A8.E5.86.8C.E6.96.B9.E6.B3.95" name=".E5.8F.A6.E5.A4.96.E7.9A.84.E6.B3.A8.E5.86.8C.E6.96.B9.E6.B3.95">另外的注册方法</h4>
+
+<p>Gecko embedding 应用可能提供其他注册组件的方法. XPInstall, 是一个跨平台的安装技术，Mozilla用来安装浏览器和其他组件，这是一个选择。参看<a href="/cn/Creating_XPCOM_Components/Packaging_WebLock" title="cn/Creating_XPCOM_Components/Packaging_WebLock">Packaging WebLock</a>. 你可以询问你想要扩展的应用的作者看是否有其他扩展方法.</p>
+
+<h3 id="WebLock_Module_.E6.BA.90.E4.BB.A3.E7.A0.81.E6.A6.82.E8.A7.88" name="WebLock_Module_.E6.BA.90.E4.BB.A3.E7.A0.81.E6.A6.82.E8.A7.88">WebLock Module 源代码概览</h3>
+
+<p>As we mentioned in the previous section, components have layers. There are three main parts to every XPCOM component. From the innermost and moving outward, the first object is the XPCOM object. This is the object that contains the business logic, that implements functionality such as starting a network download, implementing interfaces that listen to the download progress, or providing a new content type handler. In <strong>Weblock</strong>, this is the part that brings together various Gecko services and prevents users from leaving the list of acceptable domains. In a way, the factory and module layers are glue to plug the XPCOM object into the larger XPCOM system.</p>
+
+<p>在前面的章节我们提到，组件是分层的.每一个XPCOM组件都有三部分.从内到外, 第一个对象是XPCOM对象. 这个对象包含了交互逻辑, 负责载入network, 执行一个监听载入过程或新content type的接口。. 在<strong>Weblock</strong>中, 这部分综合了各种Gecko服务并且防止用户离开允许的一些domain. In a way, the factory and module layers are glue to plug the XPCOM object into the larger XPCOM system.</p>
+
+<p>One layer above the object itself is the <code>nsIFactory</code> object. This object provides basic abstraction of the XPCOM object itself. As you can see in <span class="lang lang-en"><a href="/en/Creating_XPCOM_Components/Creating_the_Component_Code#Onion_Peel_View_of_XPCOM_Component_Creation" title="en/Creating_XPCOM_Components/Creating_the_Component_Code#Onion_Peel_View_of_XPCOM_Component_Creation"><font color="#638fa2">Onion Peel View of XPCOM Component Creation</font></a> </span>, the main accessor for the XPCOM object is <code>CreateInstance</code>, which is expected to return the object that matches a given CID and IID pair.</p>
+
+<p>XPCOM的上层是 <code>nsIFactory</code> 对象. nsIFactory是对XPCOM的基本抽象. 如同你在 <a href="#Onion_Peel_View_of_XPCOM_Component_Creation">Onion Peel View of XPCOM Component Creation</a>中看到的, 通过CreateInstance与XPCOM对象进行交互, 返回一个匹配给定的CID 和IID 的两个对象.</p>
+
+<p>Moving another layer outward is the <code>nsIModule</code>. This interface provides yet another abstraction of the <code>nsIFactory</code> object, and may allow for multiple <code>nsIFactory</code> objects. The key to this interface is that the return type of <code>getClassObject</code> does not have to be an <code>nsIFactory</code>. Instead, the <code>nsIModule</code> can ask for implementation details about the XPCOM object. This is very useful if the caller is required to know information about the component like its threading module, whether or not it's a singleton, its implementation language, and so forth. The interface used in this case is <code>nsIClassInfo</code>. Starting from the outside in, <span class="lang lang-en"><a href="/en/Creating_XPCOM_Components/Creating_the_Component_Code#Onion_Peel_View_of_XPCOM_Component_Creation" title="en/Creating_XPCOM_Components/Creating_the_Component_Code#Onion_Peel_View_of_XPCOM_Component_Creation"><font color="#638fa2">Onion Peel View of XPCOM Component Creation</font></a> </span>represents the sequence for constructing an XPCOM object.</p>
+
+<p>最外层是<code>nsIModule对象</code>. 他提供了对<code>nsIFactory</code> 的进一步抽象, 而且可能允许多个<code>nsIFactory</code>对象. 关键点是这个接口的方法<code>getClassObject</code>返回的不一定非要是<code>nsIFactory</code>. <code>nsIModule</code> 也可以用来询问 XPCOM 对象的细节. This is very useful if the caller is required to know information about the component like its threading module, whether or not it's a singleton, its implementation language, and so forth. 这是可以使用接口<code>nsIClassInfo</code>. 从外到内, <a href="#Onion_Peel_View_of_XPCOM_Component_Creation">Onion Peel View of XPCOM Component Creation</a> 表示了建立XPCOM对象的顺序.</p>
+
+<p><span id="Onion_Peel_View_of_XPCOM_Component_Creation"><a id="Onion_Peel_View_of_XPCOM_Component_Creation"></a><strong>Onion Peel View of XPCOM Component Creation</strong></span></p>
+
+<p><img alt="Image:xpcom-is-an-onion.png" class="internal" src="/@api/deki/files/2732/=Xpcom-is-an-onion.png"></p>
+
+<p>Before we begin looking at the various parts of the component and how they'll be implemented in the source, let's look at the module in <code>weblock.cpp</code> as a whole to see where we're going. The source we're referring to is listed in its entirety at the end of this chapter (see <a href="/cn/Creating_XPCOM_Components/Creating_the_Component_Code#webLock1.cpp" title="cn/Creating_XPCOM_Components/Creating_the_Component_Code#webLock1.cpp">webLock1.cpp</a>).</p>
+
+<p><strong>WebLock</strong> 组件的源代码包含三个类. 为了让<strong>WebLock</strong>组件工作在 Mozilla中, 你要为<strong>WebLock</strong>组件建立一个接口, <code>iWebLock</code>, where the actual work specific to the the web locking features happens. 建立 <code>WebLockModule</code> 实现<code>nsIModule</code>接口, 你也要建立 <code>WebLockFactory</code>实现 <code>nsIFactory</code>来建立一个为你的客户处理组件实例的工厂. These three interface implementations - of the component functionality, of the <code>nsIModule</code> interface, and of the <code>nsIFactory</code> interface that creates and manages instances for clients - are the basic sets of code you need to write to create an XPCOM component.</p>
+
+<div class="side-note">
+<p><span id="Basic_Structure_of_the_WebLock_Component_Source"><a id="Basic_Structure_of_the_WebLock_Component_Source"></a><strong>Basic Structure of the WebLock Component Source</strong></span></p>
+
+<p>The <code>weblock1.cpp</code> source file that defines these classes and the code you need to create a basic component has the following structure:</p>
+
+<pre class="eval">   * required includes and constants
+   * <strong>WebLock</strong>: public <code>iWebLock</code>
+   * <strong>WebLockFactory</strong>: public <code>nsIFactory</code>
+   * <strong>WebLockModule</strong>: public <code>nsIModule</code>
+</pre>
+
+<p>在XPCOM中, 所有这些类要实现 <code>nsISupports</code>.</p>
+</div>
+
+<h3 id=".E6.9B.B4.E8.BF.9B.E4.B8.80.E6.AD.A5:_.E9.9C.80.E8.A6.81.E7.9A.84_Includes_and_Constants" name=".E6.9B.B4.E8.BF.9B.E4.B8.80.E6.AD.A5:_.E9.9C.80.E8.A6.81.E7.9A.84_Includes_and_Constants">更进一步: 需要的 Includes and Constants</h3>
+
+<p>Let's take a look at the first several lines of code in the component and discuss what they mean in XPCOM. The includes and definitions at the top of an XPCOM source file can give you an idea about some of the data types and techniques we'll be discussing more in the upcoming chapters.</p>
+
+<p>介绍一下XPCOM的component代码里面前几行的意思。</p>
+
+<p>例如，<code>MOZILLA_STRICT_API</code>是一个变量，它用来遮蔽某些私有的、非XPCOM的头文件。 For example, <code>MOZILLA_STRICT_API</code> is a variable that shields you from certain private, non-XPCOM headers. For example, including <a href="https://dxr.mozilla.org/mozilla-central/source/xpcom/components/nsIComponentManager.idl" rel="custom">nsIComponentManager.idl</a> without <code>MOZILLA_STRICT_API</code> defined will include the following headers, which are not supported across versions (unfrozen):</p>
+
+<ul>
+ <li><a href="https://dxr.mozilla.org/mozilla-central/source/xpcom/glue/nsComponentManagerUtils.h" rel="custom">nsComponentManagerUtils.h</a></li>
+ <li><a href="https://dxr.mozilla.org/mozilla-central/source/xpcom/components/nsComponentManagerObsolete.h" rel="custom">nsComponentManagerObsolete.h</a></li>
+</ul>
+
+<p>These variables are picked up by files that do not specify themselves as <code>MOZILLA_STRICT_API</code>.</p>
+
+<p><span id="Includes_and_Constants_in_%3Ccode%3Eweblock1.cpp%3C/code%3E"><a id="Includes_and_Constants_in_%3Ccode%3Eweblock1.cpp%3C/code%3E"></a><strong>Includes and Constants in <code>weblock1.cpp</code></strong></span></p>
+
+<pre>#include &lt;stdio.h&gt;
+
+// may be defined at the project level
+// in the makefile
+#define MOZILLA_STRICT_API
+
+#include "nsIModule.h"
+#include "nsIFactory.h"
+
+#include "nsIComponentManager.h"
+#include "nsIComponentRegistrar.h"
+
+// use classes to handle IIDs
+// classes provide methods for comparison: Equals, etc.
+static const nsIID kIModuleIID   = NS_IMODULE_IID;
+static const nsIID kIFactoryIID   = NS_IFACTORY_IID;
+static const nsIID kISupportsIID = NS_ISUPPORTS_IID;
+static const nsIID kIComponentRegistrarIID = NS_ICOMPONENTREGISTRAR_IID;
+
+
+// generate unique ID here with uuidgen
+#define SAMPLE_CID \
+{ 0x777f7150, 0x4a2b, 0x4301, \
+{ 0xad, 0x10, 0x5e, 0xab, 0x25, 0xb3, 0x22, 0xaa}}
+
+static const nsCID kSampleCID = SAMPLE_CID;
+</pre>
+
+<p><code>nsIModule.h</code> and <code>nsIFactory.h</code> are required to build your module successfully. They define the module and factory interfaces, and they contain a couple of important macros as well (see the following chapter for information about using these macros). The two other includes, <code>nsIComponentManager.h</code> and <code>nsIComponentRegistrar.h</code>, provide functions such as <code>RegisterFactoryLocation</code> that are required to implement the module and factory classes in your code.</p>
+
+<h4 id=".E6.A0.87.E8.AF.86.E7.AC.A6_in_XPCOM" name=".E6.A0.87.E8.AF.86.E7.AC.A6_in_XPCOM">标识符 in XPCOM</h4>
+
+<p>一组 <code>nsIID</code> 变量实际上是一些处理XPCOM用来支持客户和组件之间关系的128-bit标识符. The variable <code>kIFactoryIID</code>, for example, provides methods like <code>Equals()</code> that can be used to facilitate comparisons in the code, as in the following example from the Mozilla source:</p>
+
+<p><span id="Using_Class_Methods_to_Handle_Identifiers"><a id="Using_Class_Methods_to_Handle_Identifiers"></a><strong>Using Class Methods to Handle Identifiers</strong></span></p>
+
+<pre>if (aIID.Equals(NS_GET_IID(nsISupports)))
+{
+  *aInstancePtr = (void*)(nsISupports*)this;
+  NS_ADDREF_THIS();
+  return NS_OK;
+}
+</pre>
+
+<p>最后, <code>SAMPLE_CID</code> 是一个唯一标示组件的 CID . 所有的XPCOM中使用的128-bit数字 - 类和接口 IDs - 都是 UUIDs的例子, or <em>universal unique identifiers</em>, which were discussed in <a href="/cn/Creating_XPCOM_Components/What_is_XPCOM%3f#Object_Interface_Discovery" title="cn/Creating_XPCOM_Components/What_is_XPCOM?#Object_Interface_Discovery">Object Interface Discovery</a>.</p>
+
+<div class="side-note">
+<p>Generating CIDs</p>
+
+<p>为组件建立一个CID，你可以使用大多数Unix版本以及Miscrosoft Visual C++都包含的<code>uuidgen</code> 工具. <code>uuidgen</code> is a command-line tool that returns a unique 128-bit number when you call it with no arguments:</p>
+
+<pre>$ uuidgen
+ce32e3ff-36f8-425f-94be-d85b26e634ee
+</pre>
+
+<p>On Windows, a program called <code>guidgen.exe</code> does the same thing and also provides a graphical user interface if you'd rather point and click. Or you can use one of the special "bots" on IRC in <a class="link-irc" href="irc://irc.mozilla.org/mozilla">#developers</a>, where you can also get help from human beings.</p>
+
+<pre>irc irc.mozilla.org
+/join #developers
+/msg mozbot uuid
+</pre>
+
+<p>This command makes the bot generate and return a UUID, which you can then copy into your component source code.</p>
+</div>
+
+<p>Now that we've looked at the preliminaries, it's time to discuss the classes that this module provides and the way that they define the relationships of the component in XPCOM.</p>
+
+<h4 id="Coding_for_the_Registration_Process" name="Coding_for_the_Registration_Process">Coding for the Registration Process</h4>
+
+<p>当 XPCOM 第一次发现你的组件(via XPInstall or <code>regxpcom</code>, both of which are discussed in <a href="#Component_Installation_Overview">Component Installation Overview</a>), 第一件事是装载你的库并找到符号<code>NSGetModule</code>. 当这个专用的入口被调用, 它被传送XPCOM's Component Manager和组件存在的共享库位置.</p>
+
+<p>Component Manager是一个是XPCOM实现的用来包含建立对象和提供一些所有组件的综合信息的接口。磁盘的位置是通过另外一个接口 <code>nsIFile</code>传送的. This interface is XPCOM's abstraction of files and directories. An <code>nsIFile</code> object is usually a file or directory on a local volume, but it may represent something on a network volume as well.</p>
+
+<pre>nsresult NSGetModule(nsIComponentManager *servMgr,
+                     nsIFile* location,
+                     nsIModule** result);
+</pre>
+
+<p>XPCOM 需要成功调用 <code>NSGetModule</code>并返回接口<code>nsIModule</code>. 当你写一个 XPCOM 组件, 你实现了 <code>nsIModule</code> to do all of the necessary registration, unregistration, and object creation. <code>nsIModule</code> 有4个方法必须实现.<code>nsIModule</code> has four methods that must be implemented.</p>
+
+<h4 id="The_Registration_Methods" name="The_Registration_Methods">The Registration Methods</h4>
+
+<p>Two closely related registration methods are declared below.</p>
+
+<pre>NS_IMETHOD RegisterSelf(nsIComponentManager *aCompMgr,
+                        nsIFile *aLocation,
+                        const char *aLoaderStr,
+                        const char *aType) = 0;
+
+NS_IMETHOD UnregisterSelf(nsIComponentManager *aCompMgr,
+                          nsIFile *aLocation,
+                          const char *aLoaderStr) = 0;
+</pre>
+
+<p><code>RegisterSelf</code> 在组件第一次被XPCOM注册的时候调用. 他只执行一次, which gives you a chance to add any one time setup functionality. The <code>RegisterSelf</code> 允许你的组件告诉XPCOM 你将支持什么功能. 注意所有你在 <code>RegisterSelf</code> 中做的都应该在 <code>UnregisterSelf</code>中撤销.</p>
+
+<p>首先, <code>NSGetModule</code>入口从你的库中被调用, 返回一个指向<code>nsIModule</code>的实现. 然后XPCOM调用<code>RegisterSelf</code>, passing parameters that we'll examine here.</p>
+
+<h5 id="The_RegisterSelf_Method" name="The_RegisterSelf_Method">The RegisterSelf Method</h5>
+
+<p>The first parameter is the <code>nsIComponentManager</code>, which provides a kind of entry point into managing the registration process. 你可以调用<code>QueryInterface</code> 来查找访问下面所述的其他组件管理接口.</p>
+
+<div class="side-note">
+<p><span id="The_Many_Faces_of_the_XPCOM_Component_Manager"><a id="The_Many_Faces_of_the_XPCOM_Component_Manager"></a><strong>The Many Faces of the XPCOM Component Manager</strong></span></p>
+
+<p>三个主要的组件管理接口, <code>nsIComponentManager</code>, <code>nsIServiceManager</code>, and <code>nsIComponentRegistrar</code>, are described below:</p>
+
+<ul>
+ <li><code>nsIComponentManager</code> - 建立组件并且返回组件实现细节。</li>
+ <li><code>nsIServiceManager</code> - 提供访问单根组件并且返回单根状态信息。</li>
+ <li><code>nsIComponentRegistrar</code> - 注册和注销工厂和组件；处理自动注册和发现已经注册的组件列表。</li>
+</ul>
+</div>
+
+<p>Your <code>RegisterSelf</code> method may call <code>QueryInterface</code> on the <code>nsIComponentManager</code> interface parameter to obtain the <code>nsIComponentRegistrar</code> or <code>nsIServiceManager</code>. <code>nsIServiceManager</code> can be used to obtain a singleton service, which can be useful if you have to register with a service other than the <code>nsIComponentRegistrar</code> if necessary. For example, you may want to get the service that is responsible for an event you want to be notified about. See <a href="/cn/Creating_XPCOM_Components/Starting_WebLock#Getting_Called_at_Startup" title="cn/Creating_XPCOM_Components/Starting_WebLock#Getting_Called_at_Startup">Getting Called at Startup</a> for an example of this.</p>
+
+<p>第二个参数<code>RegisterSelf</code>是正在注册组件的位置. This parameter is useful when the component needs to know where it has been installed or registered - as, for example, when other files must be stored or accessed relative to the component. This method is only called once, so you have to persist the location if you are going to use it later.</p>
+
+<p>The next two parameters are usually passed into the <code>nsIComponentRegistrar</code> methods and used by XPCOM to determine how to handle the component's registration. The <code>aLoaderStr</code> parameter, which is opaque and should not be modified, distinguishes components that are loaded from the same location specified by the <code>nsIFile</code> parameter. A single ZIP archive may store several XPCOM components, where every component in the archive has the same <code>nsIFile</code> parameter but the <code>aLoaderStr</code> parameter can be used to refer to the location within the ZIP archive.</p>
+
+<p>The last parameter specifies what kind of loader to use on the component. This is reserved as an optimization, for the most part, but it can be a useful way to extend XPCOM. Since XPCOM already knows internally what kind of file it has just loaded and called <code>RegisterSelf</code> on, passing this value to the registration methods is a shortcut for determining what kind of component is being registered.</p>
+
+<h5 id="nsIComponentRegistrar_Methods" name="nsIComponentRegistrar_Methods">nsIComponentRegistrar Methods</h5>
+
+<p>为了告诉XPCOM这个组件库实现了什么，调用方法:</p>
+
+<pre>NS_IMETHOD RegisterFactoryLocation(const nsCID &amp; aClass,
+                                   const char *aClassName,
+                                   const char *aContractID,
+                                   nsIFile *aFile,
+                                   const char *aLoaderStr,
+                                   const char *aType) = 0;
+</pre>
+
+<p>The last three parameters are the same as the three passed into the <code>RegisterSelf</code> method of <code>nsIModule</code> objects. All you have to do is forward these parameters from your <code>RegisterSelf</code> call into this method, leaving just the first three parameters.</p>
+
+<p>For any class that implements an XPCOM interface, the implementation must have a class identifier if it is to be shared with other parts of code via XPCOM. This identifier, called a CID, uniquely specifies the implementation. This CID can be created via the tool <code>uuidgen</code> on most operating systems, as in <a href="#The_Many_Faces_of_the_XPCOM_Component_Manager">The Many Faces of the XPCOM Component Manager</a> above. Given a CID and an IID, you can refer to any class in XPCOM. Consider the following:</p>
+
+<p><span id="Referencing_Objects_by_ID"><a id="Referencing_Objects_by_ID"></a><strong>Referencing Objects by ID</strong></span></p>
+
+<p><img alt="Image:referencing-objects-by-id.png" class="internal" src="/@api/deki/files/2676/=Referencing-objects-by-id.png"></p>
+
+<p>In this case, you have two implementations of the <code>nsISupports</code> interface. Each implementation has a separate CID. The interface also as an IID which is the same for both implementations. When specifying implementation A, the two required pieces of information are the CID of A and the IID of the interface that A supports. The code to register such an object is simple:</p>
+
+<pre>NS_IMETHODIMP
+SampleModule::RegisterSelf(nsIComponentManager *aCompMgr,
+                           nsIFile* aPath,
+                           const char* registryLocation,
+                           const char* componentType)
+{
+    printf("Hello Mozilla Registration!\n\n");
+    nsIComponentRegistrar* compReg = nsnull;
+    nsresult rv =
+      aCompMgr-&gt;QueryInterface(kIComponentRegistrarIID,(void**)&amp; compReg);
+    if (NS_FAILED(rv))
+        return rv;
+    rv = compReg-&gt;RegisterFactoryLocation(kSampleCID,
+                                          "Sample Class",
+                                          nsnull,
+                                          aPath,
+                                          registryLocation,
+                                          componentType);
+    compReg-&gt;Release();
+    return rv;
+}
+</pre>
+
+<p>Unregistration follows the same logic. To unregister, all you have to do is pass the CID and the file which is passed into <code>UnregisterSelf</code>.</p>
+
+<h4 id=".E5.BB.BA.E7.AB.8B.E4.BD.A0.E7.9A.84.E7.BB.84.E4.BB.B6.E7.9A.84.E4.B8.80.E4.B8.AA.E5.AE.9E.E4.BE.8B" name=".E5.BB.BA.E7.AB.8B.E4.BD.A0.E7.9A.84.E7.BB.84.E4.BB.B6.E7.9A.84.E4.B8.80.E4.B8.AA.E5.AE.9E.E4.BE.8B">建立你的组件的一个实例</h4>
+
+<p>上面的例子用了 CID, 一旦注册以后，任何使用 XPCOM 的客户都可以访问你的组件，通过contract ID or CID. (Note that <code>RegisterSelf</code> method above does not register a contract ID - it simply passes null. This prevents clients from ever accessing the component with a contract ID.)</p>
+
+<p>为了让其他人访问, 你要公开组件包括它支持的接口的 CID 和/或者 contract ID. 上面的例子中，某人可能通过下面的方法建立一个 <strong>Sample</strong>对象 :</p>
+
+<pre>nsIComponentManager* compManager;  // assume initialized
+
+nsISupports* sample;
+compManager-&gt;CreateInstance(kSampleCID,
+                            nsnull,
+                            kISupportsIID,
+                            (void**)&amp;sample);
+</pre>
+
+<p>In the above snippet, we assume that the component manager has been initialized. In many cases this value is passed in or easily accessible. 如果还没有建立组件管理者，你总可以调用<code>NS_GetComponentManager()</code>来建立它. <a href="/cn/XPCOM_API_Reference" title="cn/XPCOM_API_Reference">XPCOM API Reference</a>中列出了一些全局的XPCOM方法.</p>
+
+<p>The first parameter of the call to <code>CreateInstance</code> specifies the component the client code is looking for, which is the same value passed to <code>RegisterFactoryLocation</code>. The next parameter is for aggregation, which the <strong>WebLock</strong> component does not support. The third parameter is the interface used to talk to the component. The last parameter is the out variable which will contain a valid object if and only if the method succeeds<sup><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Guide/Creating_components/Creating_the_Component_Code#endnote_non-null-out">[non-null-out]</a></sup>. The implementation of <code>CreateInstance</code> will ensure that the result will support the passed IID, <code>kISupportsIID</code>. The type of the variable <code>sample</code> should match the IID passed in as <code>kISupportsIID</code>.</p>
+
+<p>当 <code>CreateInstance</code> 被调用, XPCOM 查询所有的注册组件来匹配CID. XPCOM然后会装载对应的匹配 CID的组件，如果他还没有被装载的话. XPCOM 然后调用库的 <code>NSGetModule</code>. 最后它调用模块上的 <code>GetClassObject</code>. 这个方法是你来实现的，返回匹配 CID/IID 对的<code>nsIFactory</code>. To prepare your component code, you need to create a factory object for each object that you have registered with XPCOM.</p>
+
+<p>The main function that must be implemented in the <code>nsIFactory</code> interface is <code>CreateInstance</code>. The implementation follows a simple algorithm:</p>
+
+<ol>
+ <li>Create the raw object.</li>
+ <li>If that fails, return an out of memory error code.</li>
+ <li>Call <code>QueryInterface</code> on the new object.</li>
+ <li>If that fails, null the out param and free the new object.</li>
+ <li>Return the <code>nsresult</code> value from <code>QueryInterface</code>.</li>
+</ol>
+
+<p>Often, you don't have to create the object first because the factory implicitly knows what IIDs are supported. When this is not the case, however, doing it this way further abstracts the factories from their concrete classes. If you have a factory that knows every IID supported by the concrete base class, for example, then when you go to add a new supported interface you add this IID comparison in both the factory and the <code>QueryInterface</code> implementation in the concrete class.</p>
+
+<pre>NS_IMETHODIMP
+SampleFactory::CreateInstance(nsISupports *aOuter,
+                              const nsIID &amp; iid,
+                              void * *result)
+{
+  if (!result)
+    return NS_ERROR_INVALID_ARG;
+
+  Sample* sample = new Sample();
+  if (!sample)
+    return NS_ERROR_OUT_OF_MEMORY;
+
+  nsresult rv = sample-&gt;QueryInterface(iid, result);
+
+  if (NS_FAILED(rv)) {
+    *result = nsnull;
+    delete sample;
+  }
+
+  return rv;
+}
+</pre>
+
+<h3 id="webLock1.cpp" name="webLock1.cpp"><code>webLock1.cpp</code></h3>
+
+<p>Before any of the improvements and XPCOM tools we describe in the following chapter are brought in, the source code for the <strong>WebLock</strong> component that implements all the necessary interfaces looks like this.</p>
+
+<pre>#include &lt;stdio.h&gt;
+
+#define MOZILLA_STRICT_API
+
+#include "nsIModule.h"
+#include "nsIFactory.h"
+
+#include "nsIComponentManager.h"
+#include "nsIComponentRegistrar.h"
+
+static const nsIID kIModuleIID = NS_IMODULE_IID;
+static const nsIID kIFactoryIID = NS_IFACTORY_IID;
+static const nsIID kISupportsIID = NS_ISUPPORTS_IID;
+static const nsIID kIComponentRegistrarIID = NS_ICOMPONENTREGISTRAR_IID;
+
+
+#define SAMPLE_CID \
+{ 0x777f7150, 0x4a2b, 0x4301, \
+{ 0xad, 0x10, 0x5e, 0xab, 0x25, 0xb3, 0x22, 0xaa}}
+
+static const nsCID kSampleCID = SAMPLE_CID;
+
+class Sample: public nsISupports {
+  private:
+    nsrefcnt mRefCnt;
+  public:
+    Sample();
+    virtual ~Sample();
+
+    NS_IMETHOD QueryInterface(const nsIID &amp;aIID, void **aResult);
+    NS_IMETHOD_(nsrefcnt) AddRef(void);
+    NS_IMETHOD_(nsrefcnt) Release(void);
+
+};
+
+Sample::Sample()
+{
+  mRefCnt = 0;
+}
+
+Sample::~Sample()
+{
+}
+
+NS_IMETHODIMP
+Sample::QueryInterface(const nsIID &amp;aIID,
+                       void **aResult)
+{
+  if (aResult == NULL) {
+    return NS_ERROR_NULL_POINTER;
+  }
+  *aResult = NULL;
+  if (aIID.Equals(kISupportsIID)) {
+    *aResult = (void *) this;
+  }
+  if (*aResult == NULL) {
+    return NS_ERROR_NO_INTERFACE;
+  }
+  AddRef();
+  return NS_OK;
+}
+
+NS_IMETHODIMP_(nsrefcnt) Sample::AddRef()
+{
+  return ++mRefCnt;
+}
+
+NS_IMETHODIMP_(nsrefcnt) Sample::Release()
+{
+  if (--mRefCnt == 0) {
+    delete this;
+    return 0;
+  }
+  return mRefCnt;
+}
+
+
+
+// factory implementation class for component
+class SampleFactory: public nsIFactory{
+  private:
+    nsrefcnt mRefCnt;
+  public:
+    SampleFactory();
+    virtual ~SampleFactory();
+
+    NS_IMETHOD QueryInterface(const nsIID &amp;aIID, void **aResult);
+    NS_IMETHOD_(nsrefcnt) AddRef(void);
+    NS_IMETHOD_(nsrefcnt) Release(void);
+
+    NS_IMETHOD CreateInstance(nsISupports *aOuter, const nsIID &amp; iid, void * *result);
+    NS_IMETHOD LockFactory(PRBool lock);
+
+};
+
+SampleFactory::SampleFactory()
+{
+  mRefCnt = 0;
+}
+SampleFactory::~SampleFactory()
+{
+}
+
+NS_IMETHODIMP
+SampleFactory::QueryInterface(const nsIID &amp;aIID,
+                              void **aResult)
+{
+  if (aResult == NULL) {
+    return NS_ERROR_NULL_POINTER;
+  }
+  *aResult = NULL;
+  if (aIID.Equals(kISupportsIID)) {
+    *aResult = (void *) this;
+  }
+  else if (aIID.Equals(kIFactoryIID)) {
+    *aResult = (void *) this;
+  }
+
+  if (*aResult == NULL) {
+    return NS_ERROR_NO_INTERFACE;
+  }
+  AddRef();
+  return NS_OK;
+}
+
+NS_IMETHODIMP_(nsrefcnt) SampleFactory::AddRef()
+{
+  return ++mRefCnt;
+}
+
+NS_IMETHODIMP_(nsrefcnt) SampleFactory::Release()
+{
+  if (--mRefCnt == 0) {
+    delete this;
+    return 0;
+  }
+  return mRefCnt;
+}
+
+
+NS_IMETHODIMP
+SampleFactory::CreateInstance(nsISupports *aOuter,
+                              const nsIID &amp; iid,
+                              void * *result)
+{
+  if (!result)
+    return NS_ERROR_INVALID_ARG;
+
+  Sample* sample = new Sample();
+  if (!sample)
+    return NS_ERROR_OUT_OF_MEMORY;
+
+  nsresult rv = sample-&gt;QueryInterface(iid, result);
+
+  if (NS_FAILED(rv)) {
+    *result = nsnull;
+    delete sample;
+  }
+
+  return rv;
+}
+
+
+NS_IMETHODIMP
+SampleFactory::LockFactory(PRBool lock)
+{
+  return NS_ERROR_NOT_IMPLEMENTED;
+}
+
+
+
+
+
+
+// Module implementation
+class SampleModule : public nsIModule
+{
+  public:
+    SampleModule();
+    virtual ~SampleModule();
+
+  // nsISupports methods:
+  NS_IMETHOD QueryInterface(const nsIID &amp; uuid, void * *result);
+  NS_IMETHOD_(nsrefcnt) AddRef(void);
+  NS_IMETHOD_(nsrefcnt) Release(void);
+
+  // nsIModule methods:
+  NS_IMETHOD GetClassObject(nsIComponentManager *aCompMgr,
+                            const nsCID &amp; aClass,
+                            const nsIID &amp; aIID,
+                            void * *aResult);
+  NS_IMETHOD RegisterSelf(nsIComponentManager *aCompMgr,
+                          nsIFile *aLocation,
+                          const char *aLoaderStr,
+                          const char *aType);
+  NS_IMETHOD UnregisterSelf(nsIComponentManager *aCompMgr,
+                            nsIFile *aLocation,
+                            const char *aLoaderStr);
+  NS_IMETHOD CanUnload(nsIComponentManager *aCompMgr,
+                       PRBool *_retval);
+
+  private:
+    nsrefcnt mRefCnt;
+};
+
+
+//----------------------------------------------------------------------
+
+SampleModule::SampleModule()
+{
+  mRefCnt = 0;
+}
+
+SampleModule::~SampleModule()
+{
+}
+
+
+// nsISupports implemention
+NS_IMETHODIMP_(nsrefcnt)
+SampleModule::AddRef(void)
+{
+  return ++mRefCnt;
+}
+
+
+NS_IMETHODIMP_(nsrefcnt)
+SampleModule::Release(void)
+{
+  if (--mRefCnt == 0) {
+    mRefCnt = 1; /* stabilize */
+    delete this;
+    return 0;
+  }
+  return mRefCnt;
+}
+
+NS_IMETHODIMP
+SampleModule::QueryInterface(REFNSIID aIID,
+                             void** aInstancePtr)
+{
+  if (!aInstancePtr)
+    return NS_ERROR_NULL_POINTER;
+
+  nsISupports* foundInterface;
+
+  if (aIID.Equals(kIModuleIID)) {
+    foundInterface = (nsIModule*) this;
+  }
+  else if ( aIID.Equals(kISupportsIID) ) {
+    foundInterface = (nsISupports*) this;
+  }
+  else {
+    foundInterface = 0;
+  }
+
+  if (foundInterface) {
+    foundInterface-&gt;AddRef();
+    *aInstancePtr = foundInterface;
+    return NS_OK;
+  }
+
+  *aInstancePtr = foundInterface;
+  return NS_NOINTERFACE;
+}
+
+
+// Create a factory object for creating instances of aClass.
+NS_IMETHODIMP
+SampleModule::GetClassObject(nsIComponentManager *aCompMgr,
+                             const nsCID&amp; aClass,
+                             const nsIID&amp; aIID,
+                             void** result)
+{
+
+  if (!kSampleCID.Equals(aClass))
+    return NS_ERROR_FACTORY_NOT_REGISTERED;
+
+  if (!result)
+    return NS_ERROR_INVALID_ARG;
+
+  SampleFactory* factory = new SampleFactory();
+  if (!factory)
+    return NS_ERROR_OUT_OF_MEMORY;
+
+  nsresult rv = factory-&gt;QueryInterface(aIID, result);
+
+  if (NS_FAILED(rv)) {
+    *result = nsnull;
+    delete factory;
+  }
+
+  return rv;
+}
+
+
+//----------------------------------------
+
+
+NS_IMETHODIMP
+SampleModule::RegisterSelf(nsIComponentManager *aCompMgr,
+                           nsIFile* aPath,
+                           const char* registryLocation,
+                           const char* componentType)
+{
+
+  nsIComponentRegistrar* compReg = nsnull;
+
+  nsresult rv =
+    aCompMgr-&gt;QueryInterface(kIComponentRegistrarIID, (void**)&amp;compReg);
+  if (NS_FAILED(rv))
+    return rv;
+
+  rv = compReg-&gt;RegisterFactoryLocation(kSampleCID,
+                                        "Sample Class",
+                                        nsnull,
+                                        aPath,
+                                        registryLocation,
+                                        componentType);
+
+  compReg-&gt;Release();
+
+  return rv;
+}
+
+NS_IMETHODIMP
+SampleModule::UnregisterSelf(nsIComponentManager* aCompMgr,
+                             nsIFile* aPath,
+                             const char* registryLocation)
+{
+
+  nsIComponentRegistrar* compReg = nsnull;
+
+  nsresult rv = aCompMgr-&gt;QueryInterface(kIComponentRegistrarIID, (void**)&amp;compReg);
+  if (NS_FAILED(rv))
+    return rv;
+
+  rv = compReg-&gt;UnregisterFactoryLocation(kSampleCID, aPath);
+
+  compReg-&gt;Release();
+
+  return rv;
+}
+
+NS_IMETHODIMP
+SampleModule::CanUnload(nsIComponentManager *aCompMgr, PRBool *okToUnload)
+{
+  *okToUnload = PR_FALSE; // we do not know how to unload.
+  return NS_OK;
+}
+
+//----------------------------------------------------------------------
+
+extern "C" NS_EXPORT nsresult NSGetModule(nsIComponentManager *servMgr,
+                                          nsIFile* location,
+                                          nsIModule** return_cobj)
+{
+  nsresult rv = NS_OK;
+
+  // Create and initialize the module instance
+  SampleModule *m = new SampleModule();
+  if (!m) {
+    return NS_ERROR_OUT_OF_MEMORY;
+  }
+
+  // Increase refcnt and store away nsIModule interface to m in return_cobj
+  rv = m-&gt;QueryInterface(kIModuleIID, (void**)return_cobj);
+  if (NS_FAILED(rv)) {
+    delete m;
+  }
+  return rv;
+}
+</pre>
+
+<ol>
+ <li><div class="blockIndicator note"><strong>Note:</strong> non-null-out</div> The <code>CreateInstance</code> method guarantees that if the out variable is non-null, it is valid.</li>
+</ol>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/Creating_XPCOM_Components:Component_Internals" style="float: left;">« 上一页</a><a href="/zh-CN/docs/Creating_XPCOM_Components:Using_XPCOM_Utilities_to_Make_Things_Easier">下一页  »</a></p>
+</div> <p></p><div class="licenseblock">
+<p>Copyright (c) 2003 by Doug Turner and Ian Oeschger. This material may be distributed only subject to the terms and conditions set forth in the <a class="external" href="http://www.opencontent.org/openpub/" rel="noopener">Open Publication License</a>, v1.02 or later. Distribution of substantively modified versions of this document is prohibited without the explicit permission of the copyright holder. Distribution of the work or derivative of the work in any standard (paper) book form is prohibited unless prior permission is obtained from the copyright holder.</p>
+</div><p></p>

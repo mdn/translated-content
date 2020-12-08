@@ -1,0 +1,126 @@
+---
+title: Projet Nightly ASan
+slug: Mozilla/Testing/ASan_Nightly_Project
+tags:
+  - Bug
+  - Firefox
+  - Testing
+  - asan
+  - bogue
+  - nightly
+  - test
+translation_of: Mozilla/Testing/ASan_Nightly_Project
+---
+<p>{{ApiRef}}</p>
+
+<article id="wikiArticle">
+<p>Documentation déplacée dans la documentation de Firefox:<br>
+ <a class="external external-icon" href="https://firefox-source-docs.mozilla.org/tools/sanitizer/asan_nightly.html" rel="noopener">https://firefox-source-docs.mozilla.org/tools/sanitizer/asan_nightly.html</a></p>
+</article>
+
+<p>Le <strong>Projet Nightly</strong> <strong>ASan</strong> consiste à créer un navigateur Firefox Nightly incluant l'outil populaire <a href="https://github.com/google/sanitizers/wiki/AddressSanitizer">AddressSanitizer</a> et à l'améliorer avec des capacités de génération de rapports de plantage à distance pour toutes erreurs détectées.</p>
+
+<p>Le but du projet est de trouver de subtiles altérations de la mémoire survenant lors d'une navigation normale qui ne feraient pas planter du tout le navigateur ou qui feraient planter de telle sorte que nous ne puissions pas déterminer quel est le problème exact à partir du vidage de la mémoire sur incident. Nous disposons de beaucoup de rapports de plantage inopérants et les traces AddressSanitizer sont généralement beaucoup plus exploitables par elles-mêmes (en particulier les traces d'utilisation après libération). Une partie de ce projet consiste à déterminer si des rapports de plantage d'ASan sont exploitables et combien uniquement en surfant. Le succès du projet dépend bien entendu aussi du nombre de participants.</p>
+
+<p>Vous pouvez télécharger la dernière version en utilisant l'un des liens ci-dessous. Les builds sont mises à jour quotidiennement comme les builds nocturnes régulières (comme pour les builds régulières, vous pouvez aller sur <em>"Help"</em> → <em>"About Nightly"</em> pour forcer une vérification de mise à jour ou confirmer que vous utilisez la dernière version).</p>
+
+<div class="note">
+<p>Si vous êtes venu ici à la recherche de versions ASan standard (par exemple pour le fuzzing ou comme développeur voulant reproduire un plantage), vous devriez probablement <a href="/fr/docs/Mozilla/Testing/Firefox_and_Address_Sanitizer">aller ici</a> à la place.</p>
+</div>
+
+<h3 id="Exigences">Exigences</h3>
+
+<p>Les exigences actuelles sont :</p>
+
+<ul>
+ <li>Système d'exploitation basé sur Linux</li>
+ <li>16 Go de RAM recommandés</li>
+ <li>Special ASan Nightly Firefox Build
+  <ul>
+   <li><a href="https://index.taskcluster.net/v1/task/gecko.v2.mozilla-central.nightly.latest.firefox.linux64-asan-reporter-opt/artifacts/public/build/target.tar.bz2">Téléchargement pour Linux</a></li>
+   <li><a href="https://index.taskcluster.net/v1/task/gecko.v2.mozilla-central.nightly.latest.firefox.win64-asan-reporter-nightly-repackage-signing/artifacts/public/build/target.installer.exe">Téléchargement pour Windows</a></li>
+  </ul>
+ </li>
+</ul>
+
+<p>Si vous utilisez déjà Nightly, il devrait être possible de partager le profil avec l'instance Nightly ordinaire. Si vous utilisez normalement une version bêta ou version finale (et que vous souhaitez pouvoir y revenir), vous devriez envisager d'utiliser un second profil.</p>
+
+<div class="warning">
+<p><strong>Utilisateurs Windows :</strong> Veuillez noter que les versions de Windows affichent actuellement une erreur lors de l'installation (voir la section "Problèmes connus" ci-dessous), mais l'installation fonctionne néanmoins. Nous travaillons sur la problème.</p>
+</div>
+
+<div class="note">
+<p>Si vous exécutez dans un environnement avec toutes sortes de restrictions de sécurité supplémentaires (par exemple le sandboxing de processus personnalisé), assurez-vous que votre répertoire /tmp est accessible en écriture et que le binaire  <code>llvm-symbolizer</code> livré est exécutable depuis le processus de Firefox.</p>
+</div>
+
+<h3 id="Préférences">Préférences</h3>
+
+<p>Si vous souhaitez que votre rapport d'accident soit identifiable, vous pouvez aller dans <code>about:config</code> et définir <strong><code>asanreporter.clientid</code></strong> avec votre <strong>adresse e-mail valide</strong>. Ce n'est pas obligatoire, vous pouvez bien sûr signaler des traces de pantage de manière anonyme. Si vous décidez d'envoyer des rapports avec votre adresse e-mail et que vous avez un compte Bugzilla, pensez à utiliser la même adresse e-mail que celle utilisée pour votre compte Bugzilla. Nous vous mettrons en CC sur les bogues déposés à partir de vos rapports de plantage Si votre adresse e-mail n'appartient pas à un compte Bugzilla, nous ne la publierons pas mais nous l'utiliserons uniquement pour trouver des réponses aux questions soulevées par vos rapports de plantage.</p>
+
+<div class="note">
+<p>La définition de cette préférence nous permet de vous contacter au cas où nous aurions des questions sur votre configuration/système d'exploitation. Veuillez envisager de l'utiliser afin que nous puissions revenir vers vous si nécessaire.</p>
+</div>
+
+<h3 id="Programme_de_Bug_Bounty">Programme de Bug Bounty</h3>
+
+<p>Comme récompense spéciale pour participer au programme, nous avons décidé de traiter tous les rapports soumis comme s'ils étaient enregistrés directement dans Bugzilla. Cela signifie que les rapports :</p>
+
+<ul>
+ <li>qui indiquent un problème de sécurité critique ou élevé</li>
+ <li><strong>et</strong> que cela peut être corrigé par nos développeurs</li>
+</ul>
+
+<p>sont éligibles pour une prime de bogue selon <a href="https://www.mozilla.org/en-US/security/client-bug-bounty/">les règles de notre programme de Bug Bounty</a>. Comme le rapport n'inclura généralement aucune étape de reproduction ou de test, il recevra très probablement une prime inférieure. Comme avec les rapports de bogue habituels, nous récompensons généralement le premier signalement (identifiable) d'un problème.</p>
+
+<div class="warning">
+<p>Si vous souhaitez participer au programme de récompense, assurez-vous de régler votre préférence <strong><code>asanreporter.clientid</code></strong> comme indiqué ci-dessus. Nous ne pouvons pas récompenser les rapports soumis sans adresse e-mail.</p>
+</div>
+
+<h3 id="Problèmes_connus">Problèmes connus</h3>
+
+<p>Cette section répertorie toutes les limitations actuellement connues des versions Nightly ASan considérées comme des bogues.</p>
+
+<ul>
+ <li><s>Flash is currently not working</s></li>
+ <li><s><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1477490">Bug 1477490</a> - <strong>Windows:</strong> Stack instrumentation disabled due to false positives</s></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1478096">Bug 1478096</a> - <strong>Windows:</strong> Error during install with maintenanceservice_tmp.exe</li>
+ <li>Il a été rapporté que les performances d'ASan Nightly sont particulièrement mauvaises si vous exécutez sur un écran avec un taux de rafraîchissement de 120hz. Le passage à 60 Hz devrait améliorer considérablement les performances.</li>
+</ul>
+
+<p>Notez que ces bogues sont <strong>specifiques</strong> à ASan Nightly comme indiqué dans la <a href="https://bugzilla.mozilla.org/showdependencytree.cgi?id=1386297&amp;hide_resolved=0">liste des dépendances de suivi de bogues</a>. Pour la liste complète des bogues trouvés par ce projet, voir plutôt <a href="https://bugzilla.mozilla.org/showdependencytree.cgi?id=1479399&amp;hide_resolved=0">cette liste</a> et notez que certains bogues peuvent ne pas être affichés parce qu'ils sont des bogues de sécurité.</p>
+
+<p>Si vous rencontrez un bogue qui ne figure pas dans cette liste, veuillez déposer un bogue sur <a href="https://bugzilla.mozilla.org/">bugzilla.mozilla.org</a> ou envoyer un courriel à <a href="mailto:choller@mozilla.com?subject=%5BASan%20Nightly%20Project%5D%5BBug%20Report%5D">choller@mozilla.com</a>. Lorsque vous déposez un rapport de bogue, cela aide grandement, si vous mettez en CC cette adresse e-mail et marquez le bogue comme bloquant le <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1386297">bug 1386297</a>.</p>
+
+<h3 id="FAQ">FAQ</h3>
+
+<h4 id="Quelles_sont_les_données_supplémentaires_collectées">Quelles sont les données supplémentaires collectées ?</h4>
+
+<p>Le projet ne collecte que les traces ASan et (si vous le définissez dans les préférences) votre adresse e-mail. Nous ne collectons aucune autre donnée de navigateur, en particulier ni les sites que vous consultez ni le contenu de la page. Il s'agit vraiment de traces de plantage soumises à un emplacement distant.</p>
+
+<div class="note">
+<p>Le navigateur Nightly ASan possède également toutes les capacités de collecte de données d'un navigateur Nightly normal. La réponse ci-dessus se réfère uniquement à ce que ce projet recueille <strong>en plus </strong>de ce que le navigateur Nightly normal peut collecter.</p>
+</div>
+
+<h4 id="Quel_est_limpact_sur_les_performances">Quel est l'impact sur les performances ?</h4>
+
+<p>La version Nightly ASan ne s'accompagne que d'un léger ralentissement au démarrage et à la navigation, parfois même pas perceptible. La consommation de RAM est cependant beaucoup plus élevée qu'avec une version normale. Soyez prêt à redémarrer parfois votre navigateur, surtout si vous utilisez beaucoup d'onglets à la fois. En outre, les mises à jour sont plus volumineuses que les mises à jour ordinaires, ce qui signifie que les temps de téléchargement des mises à jour seront plus longs, en particulier si votre connexion Internet est plus lente.</p>
+
+<div class="warning">
+<p>Si vous rencontrez des problèmes de performance, voir aussi la section "Problèmes connus" ci-dessus, en particulier le problème du ralentissement de la vitesse de rafraîchissement de l'écran de Firefox.</p>
+</div>
+
+<h4 id="Et_la_stabilité">Et la stabilité ?</h4>
+
+<p>Le navigateur est aussi stable qu'une version Nightly standard. Différentes personnes ont surfé avec pour leur travail au quotidien depuis des semaines maintenant et nous avons à peine reçu que quelques rapports de plantage.</p>
+
+<h4 id="Comment_puis-je_confirmer_que_jutilise_la_bonne_version">Comment puis-je confirmer que j'utilise la bonne version ?</h4>
+
+<p>Si vous ouvrez <code>about:support</code> et tapez <em>"asanreporter"</em> dans le champ de recherche, vous devriez voir une entrée appelée <code><strong>asanreporter.apiurl</strong></code> associée à une URL. Ne modifiez pas cette valeur.</p>
+
+<div class="warning">
+<p>Depuis Firefox 64, la fonctionnalité <em>"ASan Crash Reporter"</em>  n'est plus listée dans le répertoire <code>about:support</code></p>
+</div>
+
+<h4 id="Y_aura-t-il_prise_en_charge_de_macOS">Y aura-t-il prise en charge de macOS ?</h4>
+
+<p>Nous travaillons sur le support pour Mac, mais cela pourrait prendre plus de temps parce que nous n'avons pas de couverture ASan CI sur Mac en raison de contraintes matérielles. Si vous travaillez sur l'ingénierie de publication et que vous souhaitez contribuer à ce que Mac, par exemple, arrive plus tôt, n'hésitez pas à <a href="mailto:choller@mozilla.com?subject=%5BASan%20Nightly%20Project%5D%20">me contacter</a>.</p>

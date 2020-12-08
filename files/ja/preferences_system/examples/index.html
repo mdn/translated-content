@@ -1,0 +1,38 @@
+---
+title: サンプル
+slug: Preferences_System/Examples
+tags:
+  - MDC Project
+  - Preferences system
+  - XUL
+translation_of: Mozilla/Preferences/Preferences_system/Examples
+---
+<div>{{Preferences_System_TOC}}</div>
+
+<h2 id="Example_preferences_dialog" name="Example_preferences_dialog">設定ダイアログの例</h2>
+
+<pre class="brush:xml">&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="<span class="nowiki">chrome://global/skin/</span>" type="text/css"?&gt;
+
+&lt;prefwindow
+  id="stockwatcher2-prefs"
+  title="StockWatcher 2 Options"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;prefpane id="sw2-stock-pane" label="Stock Settings"&gt;
+  &lt;preferences&gt;
+    &lt;preference id="pref_symbol" name="stockwatcher2.symbol" type="string"/&gt;
+  &lt;/preferences&gt;
+
+  &lt;hbox align="center"&gt;
+    &lt;label control="symbol" value="Stock to watch: "/&gt;
+    &lt;textbox preference="pref_symbol" id="symbol" maxlength="4"/&gt;
+  &lt;/hbox&gt;
+&lt;/prefpane&gt;
+
+&lt;/prefwindow&gt;</pre>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+<ul>
+<li><a href="/ja/docs/Adding_preferences_to_an_extension">設定を拡張機能に加える</a></li>
+</ul>

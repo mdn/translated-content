@@ -1,0 +1,104 @@
+---
+title: JS_NewObject
+slug: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_NewObject
+tags:
+  - JSAPI Reference
+  - SpiderMonkey
+translation_of: Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_NewObject
+---
+<p>
+
+</p><div class="breadcrumbs"><a href="/ja" title="ja">メインページ</a> » <a href="/ja/docs/SpiderMonkey" title="SpiderMonkey">SpiderMonkey</a> »
+ <a href="/ja/docs/SpiderMonkey/JSAPI_Reference" title="JSAPI_Reference">JSAPI リファレンス</a> »
+ <code>JS_NewObject</code></div>
+
+<p></p>
+
+<p>{{ 英語版章題("Summary") }}</p>
+
+<h2 id=".E6.A6.82.E8.A6.81" name=".E6.A6.82.E8.A6.81">概要</h2>
+
+<p>オブジェクトのインスタンスを生成する関数です。<span class="comment">Instantiates a new object.</span></p>
+
+<p>{{ 英語版章題("Syntax") }}</p>
+
+<h2 id=".E6.A7.8B.E6.96.87" name=".E6.A7.8B.E6.96.87">構文</h2>
+
+<pre>JSObject * JS_NewObject(JSContext *cx, JSClass *clasp, JSObject *proto,
+    JSObject *parent);
+</pre>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Name</th>
+   <th>Type</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td><code>cx</code></td>
+   <td><code>JSContext *</code></td>
+   <td>ランタイム環境へのアクセスに用いる JSContext ポインタ<span class="comment">Pointer to a JS context from which to derive runtime information.</span></td>
+  </tr>
+  <tr>
+   <td><code>clasp</code></td>
+   <td><code>JSClass *</code></td>
+   <td>オブジェクト生成に用いるクラスへのポインタ<span class="comment">Pointer to the class to use for the new object.</span></td>
+  </tr>
+  <tr>
+   <td><code>proto</code></td>
+   <td><code>JSObject *</code></td>
+   <td>クラスとして用いる prototype オブジェクトへのポインタ<span class="comment">Pointer to the prototype object to use for the new class.</span></td>
+  </tr>
+  <tr>
+   <td><code>parent</code></td>
+   <td><code>JSObject *</code></td>
+   <td>新規オブジェクトの<code>__parent__</code>プロパティになる親オブジェクトへのポインタ。<span class="comment">Pointer to which to set the new object's &lt;code&gt;__parent__&lt;/code&gt; property.</span></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>{{ 英語版章題("Description") }}</p>
+
+<h2 id=".E8.AA.AC.E6.98.8E" name=".E8.AA.AC.E6.98.8E">説明</h2>
+
+<p><code>JS_NewObject</code>は、引数に指定したクラス、プロトタイプ、親オブジェクトを元にしてオブジェクトのインスタンスを生成する関数です。<code>cx</code>は、新規オブジェクトを生成するランタイム環境の子となるコンテキストへのポインタです。<code>clasp</code>は、<code>finalize</code>のような内部で定義されたメソッドを使う既存クラスへのポインタです。<code>proto</code>は、新規に生成するオブジェクトのプロトタイプとなるオブジェクトへのポインタです。 <span class="comment">&lt;code&gt;JS_NewObject&lt;/code&gt; instantiates a new object based on a specified class, prototype, and parent object. &lt;code&gt;cx&lt;/code&gt; is a pointer to a context associated with the runtime in which to establish the new object. &lt;code&gt;clasp&lt;/code&gt; is a pointer to an existing class to use for internal methods, such as &lt;code&gt;finalize&lt;/code&gt;. &lt;code&gt;proto&lt;/code&gt; is an optional pointer to the prototype object with which to associate the new object.</span></p>
+
+<p>Set <code>proto</code> to <code>NULL</code> to force JS to assign a prototype object for you. In this case, <code>JS_NewObject</code> attempts to assign the new object the prototype object belonging to <code>clasp</code>, if one is defined there. Otherwise, it creates an empty object stub for the prototype.</p>
+
+<p>引数<code>parent</code>は、新たに生成したオブジェクトをプロパティとして持つ親オブジェクトを指定するものです。<code>__parent__</code>プロパティを設定したくない時は、<code>parent</code>に<code>NULL</code>を指定してください。 <span class="comment">&lt;code&gt;parent&lt;/code&gt; is an optional pointer to an existing object to which to set the new object's parent object property. You can set parent to &lt;code&gt;NULL&lt;/code&gt; if you do not want to set the &lt;code&gt;__parent__&lt;/code&gt; property.</span></p>
+
+<p><code>JS_NewObject</code>が成功したとき、その返値は生成したオブジェクトのインスタンスへのポインタになり、失敗した時はNULLを返します。 <span class="comment">On success, &lt;code&gt;JS_NewObject&lt;/code&gt; returns a pointer to the newly instantiated object. Otherwise it returns &lt;code&gt;NULL&lt;/code&gt;.</span></p>
+
+<p>{{ 英語版章題("Notes") }}</p>
+
+<h3 id=".E6.B3.A8.E8.A8.98" name=".E6.B3.A8.E8.A8.98">注記</h3>
+
+<p>既存オブジェクトのプロパティとなるオブジェクトを生成するには、<code><a href="ja/JS_DefineObject">JS_DefineObject</a></code>を用いてください。 <span class="comment">To create a new object that is a property of an existing object, use &lt;code&gt;JS_DefineObject&lt;/code&gt;.</span></p>
+
+<p>{{ 英語版章題("See Also") }}</p>
+
+<h2 id=".E5.8F.82.E7.85.A7" name=".E5.8F.82.E7.85.A7">参照</h2>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td>Groups</td>
+   <td><a href="ja/JSAPI_Reference#Functions">Functions</a></td>
+  </tr>
+  <tr>
+   <td>Documents</td>
+   <td>{{ LXRSearch("ident", "i", "JS_NewObject", "LXR ID Search") }}</td>
+  </tr>
+  <tr>
+   <td>Entries</td>
+   <td>
+    <p><a href="ja/JSClass">JSClass</a>, <a href="ja/JS_ConstructObject">JS_ConstructObject</a>, <a href="ja/JS_DefineObject">JS_DefineObject</a>, <a href="ja/JS_GetFunctionObject">JS_GetFunctionObject</a>, <a href="ja/JS_NewArrayObject">JS_NewArrayObject</a>, <a href="ja/JS_ValueToObject">JS_ValueToObject</a></p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<div class="noinclude"> </div>
+
+<p>{{ languages( { "en": "en/JS_NewObject" } ) }}</p>

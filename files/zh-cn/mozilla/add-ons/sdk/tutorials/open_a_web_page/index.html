@@ -1,0 +1,52 @@
+---
+title: 打开Web页面
+slug: Mozilla/Add-ons/SDK/Tutorials/Open_a_Web_Page
+translation_of: Archive/Add-ons/Add-on_SDK/Tutorials/Open_a_Web_Page
+---
+{{AddonSidebar}}
+
+<div class="note"><span>学习本教程之前你需要学习 <a href="/zh-CN/docs/Mozilla/Add-ons/SDK/Tutorials/Getting_Started_%28jpm%29"><code>jpm</code> 基础</a>。</span></div>
+
+<p>打开一个新的网页，你可以使用 <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs"><code>tabs</code></a> 模块：</p>
+
+<pre class="brush: js">var tabs = require("sdk/tabs");
+tabs.open({
+"http://www.example.com");
+</pre>
+
+<p>这个函数是异步的，所以你不能立即获取一个可以检查的标签对象。要做到这一点，通过一个回调函数为open()。将回调函数赋值给 onready 属性，并将通过标签作为参数：</p>
+
+<pre class="brush: js">var tabs = require("sdk/tabs");
+tabs.open({
+  url: "http://www.example.com",
+  onReady: function onReady(tab) {
+    console.log(tab.title);
+  }
+});
+</pre>
+
+<div class="warning">
+<p>尽管这样，你还是不能直接访问到标签页中的任何宿主内容（具体概念请查阅相关内容：<span class="tcnt">JavaScript 本地对象、内置对象、宿主对象</span> ）。</p>
+</div>
+
+<p>
+要访问标签页的内容，你需要使用 tab.attach()把一个脚本添加到该标签页。此add-on加载加载一个页面，然后将一个脚本附加到该页，该将向页面添加红色边框：</p>
+
+<pre class="brush: js">var tabs = require("sdk/tabs");
+tabs.open({
+  url: "http://www.example.com",
+  onReady: runScript
+});
+
+function runScript(tab) {
+  tab.attach({
+    contentScript: "document.body.style.border = '5px solid red';"
+  });
+}
+</pre>
+
+<h2 id="学习更多">学习更多</h2>
+
+<p>要了解更多关于SDK中标签如何工作, 查看 <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs"><code>tabs</code> API reference</a>.</p>
+
+<p>要了解更多关于在标签中运行脚本, 查看 <a href="/en-US/Add-ons/SDK/Tutorials/Modifying_the_Page_Hosted_by_a_Tab">tutorial on using <code>tab.attach()</code></a>.</p>

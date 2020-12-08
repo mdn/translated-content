@@ -1,0 +1,334 @@
+---
+title: TV リモコンのナビゲーションを実装する
+slug: Archive/B2G_OS/TVs_connected_devices/TV_remote_control_navigation
+tags:
+  - Controller
+  - Controls
+  - Firefox OS
+  - JavaScript
+  - Navigation
+  - TV
+  - spatial navigation
+translation_of: Mozilla/Firefox_OS_for_TV/TV_remote_control_navigation
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/ja/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/ja/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<p class="summary">User experience design for TVs is very different to smart phones. The screen is much larger, but users have to navigate apps using a TV remote control — other more familar mechanisms such as mouse or touch screen are not available. This article explains how the controls in Gaia's TV apps were developed.</p>
+
+<h2 id="マウスを使わずにフォーカスをあてたり視覚を扱う">マウスを使わずにフォーカスをあてたり視覚を扱う</h2>
+
+<p>When the only user navigation is via arrow keys on a remote control, an app has to decide by itself which element should be highlighted next — above the current position, below it, etc. The app also needs to record which element the cursor stops on, to focus it. Such a mechanism is called <strong>Spatial Navigation</strong>. To implement this, we have to consider the following specifics:</p>
+
+<ol>
+ <li>How to choose the next element from a number of nearby DOM elements without explicit context.</li>
+ <li>How to trigger the function registered on the currently-focused element when users press the corresponding key (e.g. the &lt;kbd&gt;ENTER&lt;/kbd&gt; key to trigger <code>onclick</code>.)</li>
+</ol>
+
+<p>We’ll talk about the first point later on — the <a href="#Existing_libraries">Existing libraries</a> section discusses available out-of-the-box libraries inside Gaia, and the <a href="#Algorithm_design">Algorithm design</a> section talk about the implementations of the algorithms used in those libraries.</p>
+
+<p>Turning our attention to the second point, we can place the &lt;kbd&gt;ENTER&lt;/kbd&gt; key <code>EventListener</code> to identify the current focus, and then call the handler to be executed. This operating way is similar to delegation. Here is the event listener used in Home app:</p>
+
+<pre class="brush: js" dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; color: #000000; font-family: courier new; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">onEnter: function() {</span>
+<span style="background-color: transparent; color: #000000; font-family: courier new; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">    ...</span>
+<span style="background-color: transparent; color: #000000; font-family: courier new; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">    var focusElem = this.focusElem;</span>
+<span style="background-color: transparent; color: #000000; font-family: courier new; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">    ...</span>
+<span style="background-color: transparent; color: #000000; font-family: courier new; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">    if (focusElem === this.settingsButton) {</span>
+<span style="background-color: transparent; color: #000000; font-family: courier new; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">      this.openSettings();</span>
+<span style="background-color: transparent; color: #000000; font-family: courier new; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">    } else if (focusElem === this.editButton) {</span>
+<span style="background-color: transparent; color: #000000; font-family: courier new; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">      ...</span>
+<span style="background-color: transparent; color: #000000; font-family: courier new; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">      this.edit.toggleEditMode();</span>
+<span style="background-color: transparent; color: #000000; font-family: courier new; font-size: 13.333333333333332px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">      ...</span></pre>
+
+<p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"> </p>
+
+<p>The main logic is clear: when the current focus stops on the <code>settingsButton</code> or <code>editButton</code>, we call <code>openSettings()</code> or <code>toggleEditMode()</code> respectively; that is, we simply call the corresponding handler. If there are many objects, we can directly dispatch custom events to trigger <code>EventListeners</code> for each element, which can avoid lengthy enumeration of handlers using <code>if..else if</code>.</p>
+
+<div class="note">
+<p><strong>Note:</strong> Keyboard events are sent from root elements. The focused elements in the real DOM tree will not influence the event target.</p>
+</div>
+
+<div>
+<p>For the focused objects in Gaia, we’ll directly call <a href="/ja/docs/Web/API/HTMLElement/focus" title="指定要素を（可能な場合）フォーカス状態にします。"><code>HTMLElement.focus()</code></a> in each case and assign the real focus in DOM Tree to it (that is, the object returned by <a href="/ja/docs/Web/API/Document/activeElement" title="Returns the currently focused element, that is, the element that will get keystroke events if the user types any. This attribute is read only."><code>document.activeElement()</code></a>.) Then we change the object’s style with a CSS <a href="/ja/docs/Web/CSS/:focus" title="CSS の :focus 疑似クラスは、フォーカスを持っている (フォームの入力のような) 要素を表します。普通はユーザーが要素をクリックやタップをしたり、キーボードの［タブ］キーで選択したりしたときです。"><code>:focus</code></a> pseudo class. <a href="/ja/docs/Web/API/HTMLElement/focus" title="指定要素を（可能な場合）フォーカス状態にします。"><code>HTMLElement.focus()</code></a> itself will not report a success or failure.</p>
+
+<p>In some special situations, such as calling focus() on an <a href="/ja/docs/Web/HTML/Element/iframe" title="HTML のインラインフレーム要素 (&lt;iframe>) は、入れ子になった閲覧コンテキスト (browsing context) を表現し、効果的に現在のページに他の HTML ページを埋め込むことができます。"><code>&lt;iframe&gt;</code></a>, focus() cannot be called directly — in such cases we have to execute <a href="/ja/docs/Web/API/HTMLElement/blur" title="blur メソッドは指定要素からフォーカスを外します。"><code>document.activeElement.blur()</code></a> first. See <a href="https://wiki.mozilla.org/User:Johnhu/System_Merge#TV_specific_window_manager_is_created_and_can_be_loaded_on_demand_.28meta:_bug_1179642.29">TV specific window manager is created and can be loaded on demand</a> for other common focus() failure situations and potential solutions.</p>
+</div>
+
+<h2 id="既存ライブラリ">既存ライブラリ</h2>
+
+<p>Some libraries for keyboard navigation are included inside the <a href="https://github.com/mozilla-b2g/gaia">Gaia repo</a>. <code><a href="https://github.com/mozilla-b2g/gaia/blob/master/shared/js/smart-screen/spatial_navigator.js">SpatialNavigator</a></code> and <code><a href="https://github.com/mozilla-b2g/gaia/blob/master/shared/js/smart-screen/simple_key_navigation.js">SimpleKeyNavigation</a></code> keep track of which element on the screen is currently being focused. <code><a href="https://github.com/mozilla-b2g/gaia/blob/master/shared/js/smart-screen/key_navigation_adapter.js">KeyNavigationAdapter</a></code> is an event wrapper for arrow keys. Let's explain them in a little more detail.</p>
+
+<h3 id="SpatialNavigator">SpatialNavigator</h3>
+
+<p>This library provides a generic algorithm to navigate among a collection of elements. It keeps track of a set of elements and the “currently focused element”, and you can send it a direction (left, right, up, or down) to navigate to other elements close to the current focus. We use “<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect">getBoundingClientRect</a>” to determine the real positions of elements on the screen. You can just ask the library to find the next target for you automatically, however sometimes the target may not be the one you expected. In these cases, you have to carry out an “except” condition before calling the navigation algorithm of the library. We will talk about this algorithm in the next section.</p>
+
+<h3 id="SimpleKeyNavigation">SimpleKeyNavigation</h3>
+
+<p>Although this library stores an array of elements, it only allows navigation in one dimension at a time (horizontal or vertical.) The order of focus is determined only by the position of elements inside the array rather than their real position on the screen. It also listens to key events automatically. If your user interface is simple, this can be a suitable lightweight choice for navigation.</p>
+
+<p>This library is most suitable for small amounts of elements whose relative positions don't change. It's commonly used for modal dialog button sets, such as alert and confirm dialogs. </p>
+
+<h3 id="KeyNavigationAdapter">KeyNavigationAdapter</h3>
+
+<p>This wrapper class listens to raw key events and organizes them to be handled by higher-level custom events, allowing apps to handle them more efficiently. For example, the <code>keydown</code> events of the four arrow keys are combined into a single <code>move</code> event while the corresponding <code>keyup</code> events become a single <code>move-keyup</code> event. The arguments passed to the event handlers of these two custom events are exactly the same as what <code>SpatialNavigator</code> accepts in its own methods, allowing easier integration of these two libraries in your app.</p>
+
+<h2 id="アルゴリズム設計">アルゴリズム設計</h2>
+
+<p>Compared with general web pages, it’s much more important for an app to have a highly customizable spatial navigation function because of its complex behaviors. For instance, some authors may prefer moving the focus among elements based on some specified order or intend to adjust the order dynamically. The existing one in Fennec doesn’t do enough for our use cases on TV, so we’ve already filed a meta bug (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1114536" title="Support basic spatial navigation for web pages on non-touch device">バグ 1114536</a>.) Before this work is completed, we still need an alternative function to help us develop apps on TV. That’s why we implemented <a href="https://github.com/mozilla-b2g/gaia/blob/master/shared/js/smart-screen/spatial_navigator.js">SpatialNavigator.js</a> in Gaia. Let’s look into how it works.</p>
+
+<p><code>SpatialNavigator</code> maintains a list of focusable elements. You can pass them in at the initialization stage and modify them later as needed. In addition, the module also keeps track of the currently-focused element.</p>
+
+<p>Let’s look at an example — we have five elements, one of which is currently focused (the blue element with the yellow frame represents), and the other four which are to the right of the first one in slightly different places. We split the area around the currently-focused element into 9 slices:</p>
+
+<ol start="0">
+ <li>Top left.</li>
+ <li>Top.</li>
+ <li>Top right.</li>
+ <li>Left.</li>
+ <li>The currently focused element.</li>
+ <li>Right.</li>
+ <li>Bottom left.</li>
+ <li>Bottom.</li>
+ <li>Bottom right.</li>
+</ol>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/11531/p1.jpg" style="display: block; height: 364px; margin: 0px auto; width: 500px;"></p>
+
+<p>When you query <code>SpatialNavigator.js</code> to find out what element to move to if the &lt;kbd&gt;RIGHT&lt;/kbd&gt; arrow key is pressed, it will first work out what focusable elements are to the right of the currently-focused element. First, it lengthens the right hand edge of the currently-focused element.</p>
+
+<p>Refering to the numbers in the picture, we all agree that elements located in areas 2, 5 and 8 (top right, right, and bottom right slices) should be considered "on the right". The library calculates the center point of each focusable element in the list and filters the elements with center points located the slices mentioned above (element C is considered to belong to slice 5 since its center point is close to its edge.)</p>
+
+<div class="note">
+<p><strong>Note</strong>: Some elements may overlap: we treat elements with center points located inside the nearest half of the currently-focused element (in this example, the right half) as candidates as well.</p>
+</div>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/11533/p2.jpg" style="display: block; height: 333px; margin: 0px auto; width: 500px;"></p>
+
+<p>The most important part is how to determine the weight of the candidates and sort them.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/11535/p3.jpg" style="display: block; height: 364px; margin: 0px auto; width: 500px;"></p>
+
+<p>In the module, we define three priority levels:</p>
+
+<ol>
+ <li>Higher priority is given to elements with centers inside the slices that are adjacent to the currently-focused element (slice 5 in this case), than to slices that are diagonally placed (2 and 8).</li>
+ <li>Next, for the adjacent slices we calculate the distance between the closest edge of each candidate (left side in this case) and the nearest edge of the currently-focused element (right in this case) — the red lines in the graphic. The shorter distance, the higher the given priority.</li>
+ <li>Last, the lowest priority — for the adjacent slices we calculate the shortest distance between the edge of each candidate and the horizontal boundary line of the slice to which the candidate belongs — the blue arrows in the graphic. If there are two boundary lines needing to be considered, the upper one or the left one will be chosen first. The same principle is used here: shorter distance means higher priority.</li>
+ <li>For candidates in diagonal slices, priority levels 2 and 3 are awapped over — therefore a shorter vertical distance gives a higher priority than a shorter horizontal distance for diagonals (this is why the order given below is ... A, D and not ... D, A.)</li>
+</ol>
+
+<p>The priority order we end up with is B, C, A, D — the focus will be moved to element B when you press the RIGHT arrow key.</p>
+
+<p> </p>
+
+<h3 id="Algorithm_issues_and_improvements">Algorithm issues and improvements</h3>
+
+<p>The algorithm above is our first version. However, we encountered a problem when it went live, with situations where you have a large element close to the currently-focused element, but whose center doesn't sit inside the adjacent slice (A in the diagram), and a small element further away, whose center does sit inside the adjacent slice (B in the diagram):</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/11537/p4.jpg" style="display: block; height: 366px; margin: 0px auto; width: 500px;"></p>
+
+<p>We expect the focus to be moved to element A when pressing the &lt;kbd&gt;DOWN&lt;/kbd&gt; key from the currently-focused element, but unfortunately the focus jumps to element B instead — this isn’t intuitive.</p>
+
+<p>Let's look at a similar situation where the &lt;kbd&gt;DOWN&lt;/kbd&gt; key is pressed and discuss a potential solution. We altered the algorithm to give equal priority to every element overlapping the adjacent slice — regardless of how much they overlap. However then we encountered another problem. If for example you have two elements below the currently-focused element, one that largely overlaps the adjacent slice but is slightly further away (E in the diagram), and one that only slightly overlaps the adjacent slice but is slightly closer (D in the diagram), the former gets a higher priority and is focused next. Again, this isn't what users would expect — you'd expect E to be focused before D.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/11539/p5.jpg" style="display: block; height: 367px; margin: 0px auto; width: 500px;"></p>
+
+<p>To combat this, we added a threshold to determine whether we should treat an element as a candidate or not — a customizable property to adjust the minimum percentage by which an element needs to overlap the adjacent slice before it is granted the associated higher priority.</p>
+
+<h2 id="Example">Example</h2>
+
+<p>Now we've discussed the technology we've made available for implementing spatial navigation, let's looks at an example implementation. This section discusses the HOME app from Gaia.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/11541/p6.jpg" style="display: block; height: 357px; margin: 0px auto; width: 550px;"></p>
+
+<h3 id="Including_the_libraries">Including the libraries</h3>
+
+<p>First, the app includes <code>spatialNavigator</code> and <code>keyNavigationAdapter</code> — this comes from <a href="https://github.com/mozilla-b2g/gaia/blob/master/tv_apps/smart-home/index.html">index.html</a>:</p>
+
+<pre class="brush: html">...
+&lt;!-- Shared TV library for keyboard-based navigating --&gt;
+...
+&lt;script defer src="shared/js/smart-screen/spatial_navigator.js"&gt;&lt;/script&gt;
+&lt;script defer src="shared/js/smart-screen/key_navigation_adapter.js"&gt;&lt;/script&gt;
+&lt;!-- Specific code --&gt;</pre>
+
+<p>(It also partially uses <code>simpleKeyNavigation</code>, but we won't discuss this further.)</p>
+
+<h3 id="Initialization">Initialization</h3>
+
+<p>When activating the app, we initialize the two libraries (see <a href="https://github.com/mozilla-b2g/gaia/blob/master/tv_apps/smart-home/js/home.js">home.js</a>):</p>
+
+<pre class="brush: js">...
+init: function() {
+  ...
+  var collection = that._getNavigateElements();
+  that.spatialNavigator = new SpatialNavigator(collection);
+  that.spatialNavigator.straightOnly = true;
+  that.keyNavigatorAdapter = new KeyNavigationAdapter();
+  that.keyNavigatorAdapter.init();
+  that.keyNavigatorAdapter.on('move', that.onMove.bind(that));
+  // All behaviors which no need to have multple events while holding the
+  // key should use keyup.
+  that.keyNavigatorAdapter.on('enter-keyup', that.onEnter.bind(that));
+  ...
+  that.spatialNavigator.on('focus', that.handleFocus.bind(that));
+  that.spatialNavigator.on('unfocus', that.handleUnfocus.bind(that));</pre>
+
+<p>First we call <code>_getNavigateElements()</code>, which returns an array containing <code>HTMLElement</code> and is stored in the variable <code>collection</code>. Second, we send the array to the initialization parameter of <code>SpatialNavigator</code> mentioned before. This tells <code>SpatialNavigator</code> which elements are focusable. We also assign <code>straightOnly</code> as the preference for judging which elements will considered candidates for spatial navigation — diagonally placed elements will not be listed as candidates. You can <a href="https://github.com/mozilla-b2g/gaia/blob/master/shared/js/smart-screen/spatial_navigator.js#L58-L95">refer here for options</a> other than <code>straightOnly</code>.</p>
+
+<h3 id="Defining_the_elements_to_be_navigated">Defining the elements to be navigated</h3>
+
+<p>Let’s look at the content of <code>_getNavigateElements()</code>:</p>
+
+<pre class="brush: js">  navigableIds:
+      ['search-button', 'search-input', 'settings-group', 'filter-tab-group'],
+  navigableClasses: ['filter-tab', 'command-button'],
+  ...
+  _getNavigateElements: function() {
+    var elements = [];
+    this.navigableIds.forEach(function(id) {
+      var elem = document.getElementById(id);
+      if (elem) {
+        elements.push(elem);
+      }
+    });
+    this.navigableClasses.forEach(function(className) {
+      var elems = document.getElementsByClassName(className);
+      if (elems.length) {
+        // Change HTMLCollection to array before concatenating
+        elements = elements.concat(Array.prototype.slice.call(elems));
+      }
+    });
+    elements = elements.concat(this.navigableScrollable);
+    return elements;
+  },</pre>
+
+<p><code>_getNavigateElements()</code> has two <code>forEach</code> loops that iterate through the <code>navigableIds</code> and <code>navigableClasses</code> arrays respectively. The former uses HTML object IDs to indicate which objects should be spatially navigated; the latter does the same thing with HTML object classes.</p>
+
+<h3 id="Receiving_key_events_and_finding_focus_targets">Receiving key events and finding focus targets</h3>
+
+<p>Back in <code>init()</code>, we initialize <code>keyNavigatorAdapter</code> and register two event listeners, <code>move</code> and <code>enter-keyup</code>, to receive keyboard events. The <code>move</code> event will be triggered by pressing one of the &lt;kbd&gt;UP&lt;/kbd&gt;, &lt;kbd&gt;DOWN&lt;/kbd&gt;, &lt;kbd&gt;LEFT&lt;/kbd&gt;, or &lt;kbd&gt;RIGHT&lt;/kbd&gt; keys, taking the appropriate <code>left</code>, <code>right</code>, <code>up</code>, and <code>down</code> string as a parameter in each case. We can now just call <code>spatialNavigator</code> in the event listener to find the next focus target:</p>
+
+<pre class="brush: js">  onMove: function(key) {
+    ...
+    var focus = this.spatialNavigator.getFocusedElement();
+    if (!(focus.CLASS_NAME == 'XScrollable' &amp;&amp; focus.move(key))) {
+      this.spatialNavigator.move(key);
+    }
+  },
+</pre>
+
+<p>Here we first find out the currently-focused object by using <code>spatialNavigator.getFocusedElement()</code>. The HOME app includes a XScrollable object which is an object has its own spatial navigator and manages the element set by itself, so we just hand out the keyboard event to this XScrollable object once it got focus. We skip this specific situation and directly send the <code>key</code> parameter into <code>spatialNavigator.move()</code> to find the next object. After finding the next object, <code>spatialNavigator.move()</code> triggers the focus event:</p>
+
+<pre class="brush: js">  handleFocus: function(elem) {
+    if (elem.CLASS_NAME == 'XScrollable') {
+      this._focusScrollable = elem;
+      elem.focus();
+      this.checkFocusedGroup();
+    } else if (elem.nodeName) {
+      switch(elem.nodeName.toLowerCase()) {
+        case 'menu-group':
+          this.handleFocusMenuGroup(elem);
+          break;
+        default:
+          elem.focus();
+          this._focus = elem;
+          this._focusScrollable = undefined;
+          this.checkFocusedGroup(elem);
+          break;
+      }
+    ...
+  },</pre>
+
+<p>The code above executes the necessary actions for different focused elements. We'll not say much more for brevity.</p>
+
+<h3 id="Dynamically_changing_object_collections">Dynamically changing object collections</h3>
+
+<p>With these event being handled, we've made a prototype of a TV app. We have not mentioned about dynamically and programmatically changing object collections of spatial navigations. Here is a brief example.</p>
+
+<p>In the HOME app there are <code>menuGroup</code> elements that contain hidden subitems (developed as <a href="/en-US/docs/Web/Web_Components">Web Components</a> — these can be regarded as <code>HTMLElements</code> with custom behaviors.) We want the following behaviors to happen:</p>
+
+<ol>
+ <li>The user navigates to a <code>menuGroup</code>.</li>
+ <li>The <code>menuGroup</code> expands and shows its sub-items.</li>
+ <li>The sub-items should be added as targets for spatial navigation, while the <code>menuGroup</code> should be removed from the list of targets.</li>
+</ol>
+
+<p>The third step is handled using the following code:</p>
+
+<pre class="brush: js">  handleFocusMenuGroup: function(menuGroup) {
+    var self = this;
+    menuGroup.once('opened', function() {
+      self.spatialNavigator.remove(menuGroup);
+      var childElement = menuGroup.firstElementChild;
+      var firstFocusable = null;
+      while(childElement) {
+        switch(childElement.nodeName.toLowerCase()) {
+          ...
+          default:
+            firstFocusable = firstFocusable || childElement;
+            self.spatialNavigator.add(childElement);
+        }
+        childElement = childElement.nextElementSibling;
+      }
+    ...
+    if (firstFocusable) {
+      self.spatialNavigator.focus(firstFocusable);
+    }
+ }</pre>
+
+<p>After expanding, the <code>menuGroup</code> fires an <code>opened</code> event, triggering the callback function. In the callback function, we first call <code>spatialNavigator.remove(menuGroup) </code>to remove <code>menuGroup</code> from the navigation target list, then we use a <code>while</code> loop to cycle through all the child elements of <code>menuGroup</code> and add them as navigation targets with <code>spatialNavigator.add(childElement)</code>. The <code>switch case</code> is used to exclude some exceptions that should not be added.</p>
+
+<p>Finally, we call <code>spatialNavigator.focus(firstFocusable)</code> to programmtically move focus to the first item. This call will trigger <code>spatialNavigator</code> to fire focus events and finally call the <code>handleFocus()</code> function mentioned before.</p>

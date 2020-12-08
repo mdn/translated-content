@@ -1,0 +1,302 @@
+---
+title: PerfMeasurement.jsm
+slug: Mozilla/JavaScript_code_modules/PerfMeasurement.jsm
+translation_of: Mozilla/JavaScript_code_modules/PerfMeasurement.jsm
+---
+<p>{{ gecko_minversion_header("2.0") }}</p>
+
+<p><code>PerfMeasurement.jsm</code> JavaScript コードモジュールを使用すると、コードの詳細なパフォーマンス測定値を取得できます。</p>
+
+<p>{{ note("The <code>PerfMeasurement.jsm</code> JavaScript code module can only be used from chrome -- that is, from within the application itself or an add-on.") }}</p>
+
+<p>Before you can use this module, you need to import it into your scope:</p>
+
+<pre><span class="plain">Components.utils.import("resource://gre/modules/PerfMeasurement.jsm")</span></pre>
+
+<p>See <a href="/en/Performance/Measuring_performance_using_the_PerfMeasurement.jsm_code_module" title="en/Performance/Measuring performance using the PerfMeasurement.jsm code module">Measuring performance using the PerfMeasurement.jsm code module</a> for details on how to use this API.</p>
+
+<div class="note"><strong>Note:</strong> At present, <code>PerfMeasurement.jsm</code> is only functional on Linux, but it is planned to add support for Windows ({{ Bug(583322) }}) and OSX ({{ Bug(583323) }}) as well, and we welcome patches for other operating systems.</div>
+
+<h2 id="Method_overview">Method overview</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>static bool <a href="/en/JavaScript_code_modules/PerfMeasurement.jsm#canMeasureSomething()" title="en/JavaScript code modules/PerfMeasurement.jsm#canMeasureSomething()">canMeasureSomething</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="/en/JavaScript_code_modules/PerfMeasurement.jsm#reset()" title="en/JavaScript code modules/PerfMeasurement.jsm#reset()">reset</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="/en/JavaScript_code_modules/PerfMeasurement.jsm#start()" title="en/JavaScript code modules/PerfMeasurement.jsm#start()">start</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="/en/JavaScript_code_modules/PerfMeasurement.jsm#stop()" title="en/JavaScript code modules/PerfMeasurement.jsm#stop()">stop</a>();</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Member_fields">Member fields</h2>
+
+<h3 id="Recorded_data_variables">Recorded data variables</h3>
+
+<p>These variables provide access to the recorded data. Any measurable event that was not being recorded has a value of -1 (that is, 0xFFFFFFFFFFFFFFFF).</p>
+
+<div class="note"><strong>Note:</strong> These values are all zeroed (or set to -1, for events not being measured) when you initialize the <code>PerfMeasurement</code> object, then they are not zeroed again unless you explicitly call the {{ manch("reset") }} method. This lets you accumulate measurements over multiple passes through code that you want to analyze.</div>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Variable</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>cpu_cycles</code></td>
+   <td><code>uint64</code></td>
+   <td>The number of CPU cycles elapsed.</td>
+  </tr>
+  <tr>
+   <td><code>instructions</code></td>
+   <td><code>uint64</code></td>
+   <td>The number of instructions executed.</td>
+  </tr>
+  <tr>
+   <td><code>cache_references</code></td>
+   <td><code>uint64</code></td>
+   <td>The number of memory accesses that occurred.</td>
+  </tr>
+  <tr>
+   <td><code>cache_misses</code></td>
+   <td><code>uint64</code></td>
+   <td>The number of times memory accesses missed the cache.</td>
+  </tr>
+  <tr>
+   <td><code>branch_instructions</code></td>
+   <td><code>uint64</code></td>
+   <td>The number of branch instructions executed.</td>
+  </tr>
+  <tr>
+   <td><code>branch_misses</code></td>
+   <td><code>uint64</code></td>
+   <td>The number of times branch prediction guessed wrong.</td>
+  </tr>
+  <tr>
+   <td><code>bus_cycles</code></td>
+   <td><code>uint64</code></td>
+   <td>The number of memory bus cycles that elapsed.</td>
+  </tr>
+  <tr>
+   <td><code>page_faults</code></td>
+   <td><code>uint64</code></td>
+   <td>The number of page exceptions the OS handled.</td>
+  </tr>
+  <tr>
+   <td><code>major_page_faults</code></td>
+   <td><code>uint64</code></td>
+   <td>The number of times page faults required disk access.</td>
+  </tr>
+  <tr>
+   <td><code>context_switches</code></td>
+   <td><code>uint64</code></td>
+   <td>The number of context switches that occurred involving the thread being profiled.</td>
+  </tr>
+  <tr>
+   <td><code>cpu_migrations</code></td>
+   <td><code>uint64</code></td>
+   <td>The number of times the profiled thread migrated from one CPU core to another.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Event_types_measured_constant">Event types measured constant</h3>
+
+<p>The <code>eventsMeasured</code> constant provides a mask indicating which event types were recorded.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Variable</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>eventsMeasured</code></td>
+   <td><code>EventMask</code></td>
+   <td>A bit mask of the <a href="/en/JavaScript_code_modules/PerfMeasurement.jsm#Event_mask_constants" title="en/JavaScript code modules/PerfMeasurement.jsm#Event mask constants">event types</a> recorded; this can differ from the events requested if the platform doesn't support all of the event types you specified when creating the <code>PerfMeasurement</code> object.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Constants">Constants</h2>
+
+<h3 id="Event_mask_constants">Event mask constants</h3>
+
+<p>These constants are used to construct the mask indicating which events you want to monitor.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Constant</td>
+   <td class="header">Value</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>CPU_CYCLES</code></td>
+   <td><code>0x00000001</code></td>
+   <td>Measure CPU cycles elapsed.</td>
+  </tr>
+  <tr>
+   <td><code>INSTRUCTIONS</code></td>
+   <td><code>0x00000002</code></td>
+   <td>Measure the number of instructions executed.</td>
+  </tr>
+  <tr>
+   <td><code>CACHE_REFERENCES</code></td>
+   <td><code>0x00000004</code></td>
+   <td>Measure the number of cache references.</td>
+  </tr>
+  <tr>
+   <td><code>CACHE_MISSES</code></td>
+   <td><code>0x00000008</code></td>
+   <td>Measure the number of cache misses.</td>
+  </tr>
+  <tr>
+   <td><code>BRANCH_INSTRUCTIONS</code></td>
+   <td><code>0x00000010</code></td>
+   <td>Measure the number of branch instructions executed.</td>
+  </tr>
+  <tr>
+   <td><code>BRANCH_MISSES</code></td>
+   <td><code>0x00000020</code></td>
+   <td>Measure the number of times branch prediction guesses wrong.</td>
+  </tr>
+  <tr>
+   <td><code>BUS_CYCLES</code></td>
+   <td><code>0x00000040</code></td>
+   <td>Measure the number of bus cycles elapsed.</td>
+  </tr>
+  <tr>
+   <td><code>PAGE_FAULTS</code></td>
+   <td><code>0x00000080</code></td>
+   <td>Measure the number of page faults that occurred.</td>
+  </tr>
+  <tr>
+   <td><code>MAJOR_PAGE_FAULTS</code></td>
+   <td><code>0x00000100</code></td>
+   <td>Measure the number of major page faults that occurred.</td>
+  </tr>
+  <tr>
+   <td><code>CONTEXT_SWITCHES</code></td>
+   <td><code>0x00000200</code></td>
+   <td>Measure the number of context switches that occurred.</td>
+  </tr>
+  <tr>
+   <td><code>CPU_MIGRATIONS</code></td>
+   <td><code>0x00000400</code></td>
+   <td>Measure the number of context switches that occurred.</td>
+  </tr>
+  <tr>
+   <td><code>ALL</code></td>
+   <td><code>0x000007FF</code></td>
+   <td>Measure all available events.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Number_of_available_event_types">Number of available event types</h3>
+
+<p>The <code>NUM_MEASURABLE_EVENTS</code> constant tells you how many types of events can be measured.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Constant</td>
+   <td class="header">Value</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>NUM_MEASURABLE_EVENTS</code></td>
+   <td><code>11</code></td>
+   <td>The number of types of events that can be measured.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Constructor">Constructor</h2>
+
+<p>Creates a new <code>PerfMeasurement</code> object, configured to record the specified event types.</p>
+
+<pre>PerfMeasurement(
+  EventMask toMeasure
+);
+</pre>
+
+<h6 id="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>toMeasure</code></dt>
+ <dd>A mask of all of the event types you want to record; see <a href="/en/JavaScript_code_modules/PerfMeasurement#Event_mask_constants" title="en/JavaScript code modules/PerfMeasurement#Event mask constants">Event mask constants</a> for a list of values. OR together all the event types you want to record, and pass that value here. Pass <code>PerfMeasurement.ALL</code> to record all event types.</dd>
+</dl>
+
+<h6 id="Return_value">Return value</h6>
+
+<p>A new <code>PerfMeasurement</code> object configured to record the specified event types.</p>
+
+<h2 id="Methods">Methods</h2>
+
+<h3 id="canMeasureSomething()">canMeasureSomething()</h3>
+
+<p>Indicates whether or not the platform on which your code is running supports this code module.</p>
+
+<pre>static bool canMeasureSomething();
+</pre>
+
+<h6 id="Parameters_2">Parameters</h6>
+
+<p>None.</p>
+
+<h6 id="Return_value_2">Return value</h6>
+
+<p>If even one of the <a href="/en/JavaScript_code_modules/PerfMeasurement.jsm#Event_mask_constants" title="en/JavaScript code modules/PerfMeasurement.jsm#Event mask constants">event types</a> can be recorded, this will return <code>true</code>. Otherwise, it returns <code>false</code>.</p>
+
+<h3 id="reset()">reset()</h3>
+
+<p>Resets all the enabled counters to zero.</p>
+
+<pre>void reset();
+</pre>
+
+<h6 id="Parameters_3">Parameters</h6>
+
+<p>None.</p>
+
+<h3 id="start()">start()</h3>
+
+<p>Starts measuring the performance indicators that were specified when the <code>PerfMeasurement</code> object was created.</p>
+
+<pre>void start();
+</pre>
+
+<h6 id="Parameters_4">Parameters</h6>
+
+<p>None.</p>
+
+<h3 id="stop()">stop()</h3>
+
+<p>Stops measuring performance data. For each enabled counter, the number of measured events of that type that occurred are added to the appropriate visible variable.</p>
+
+<pre>void stop();
+</pre>
+
+<h6 id="Parameters_5">Parameters</h6>
+
+<p>None.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en/Performance/Measuring_performance_using_the_PerfMeasurement.jsm_code_module" title="en/Performance/Measuring performance using the PerfMeasurement.jsm code module">Measuring performance using the PerfMeasurement.jsm code module</a></li>
+ <li><a href="/en/Performance/JS::PerfMeasurement" title="en/Performance/JS::PerfMeasurement">JS::PerfMeasurement</a></li>
+ <li><a href="/en/Performance" title="en/Performance">Performance</a></li>
+</ul>

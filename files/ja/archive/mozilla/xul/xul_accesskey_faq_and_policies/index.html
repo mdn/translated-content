@@ -1,0 +1,76 @@
+---
+title: XUL Accesskey FAQ and Policies
+slug: Archive/Mozilla/XUL/XUL_Accesskey_FAQ_and_Policies
+tags:
+  - XUL
+translation_of: Archive/Mozilla/XUL/XUL_Accesskey_FAQ_and_Policies
+---
+<p>
+</p>
+<h3 id=".E3.82.A2.E3.82.AF.E3.82.BB.E3.82.B9.E3.82.AD.E3.83.BC.E3.81.A8.E3.81.AF" name=".E3.82.A2.E3.82.AF.E3.82.BB.E3.82.B9.E3.82.AD.E3.83.BC.E3.81.A8.E3.81.AF"> アクセスキーとは </h3>
+<p>アクセスキーとは、Web ページや (アプリケーションの) メニュー、ダイアログに含まれる、アンダーラインの引かれた文字で、その要素をクリックしたときと同じことをキーボードですばやく実現する方法を示したものです。例えば Apply ボタンを見ると A の文字にアンダーラインが引かれています。Windows や UNIX では、&lt;kbd&gt;Alt+A&lt;/kbd&gt; を押せば、そのボタンをクリックしたのと同じ結果になります。Mac OS では、アクセスキーが有効なのは <a href="ja/HTML">HTML</a> 内のみで、<a href="ja/XUL">XUL</a> 上では使えません。また、&lt;kbd&gt;Alt&lt;/kbd&gt; キーの代わりに &lt;kbd&gt;Control&lt;/kbd&gt; キーを使用します。
+</p><p><span style="color: darkgreen; background: #ef9;">【訳注: 】</span>
+</p>
+<h3 id=".E3.83.95.E3.82.A9.E3.83.BC.E3.83.A0.E3.82.B3.E3.83.B3.E3.83.88.E3.83.AD.E3.83.BC.E3.83.AB.E3.81.AB.E3.82.A2.E3.82.AF.E3.82.BB.E3.82.B9.E3.82.AD.E3.83.BC.E3.82.92.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B.E3.81.AB.E3.81.AF" name=".E3.83.95.E3.82.A9.E3.83.BC.E3.83.A0.E3.82.B3.E3.83.B3.E3.83.88.E3.83.AD.E3.83.BC.E3.83.AB.E3.81.AB.E3.82.A2.E3.82.AF.E3.82.BB.E3.82.B9.E3.82.AD.E3.83.BC.E3.82.92.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B.E3.81.AB.E3.81.AF"> フォームコントロールにアクセスキーを追加するには </h3>
+<p>アクセスキーを <a href="ja/HTML">HTML</a> や <a href="ja/XUL">XUL</a> のフォームコントロールやラベルに追加するには、accesskey 属性を使います。例えば、XUL のボタンにアクセスキーを追加する方法は次のようになります。
+</p>
+<table style="margin: 0;"> <tbody><tr>
+<td><code>&lt;button label="Apply instantly" accesskey="A" /&gt;</code>
+</td><td style="background-color: #DDF; border: blue outset; padding: 3px;"><span style="">A</span>pply instantly
+</td></tr> <tr>
+<td colspan="2">- または -
+</td></tr> <tr>
+<td><code>&lt;button label="Apply instantly" accesskey="a" /&gt;</code>
+</td><td style="background-color: #DDF; border: blue outset; padding: 3px;">Apply inst<span style="">a</span>ntly
+</td></tr>
+</tbody></table>
+<p>Mozilla では、国際化のため、もうひとつ別に抽象化レイヤーを用意し、DTD を使います。上の例は次のようになります。
+</p><p><code>&lt;button label="Apply instantly" accesskey="&amp;applyInstantly.accesskey" /&gt;</code>
+</p><p>(<code>accesskey</code> instead of <code>akey</code> ではなく <code>accesskey</code> と書きます)
+</p><p><span style="color: darkgreen; background: #ef9;">【訳注: 】</span>
+</p><p>ダイアログの表示に <code>confirm()</code>、<code>confirmEx()</code>、<code>prompt()</code> といったメソッドを使う場合は、ボタンやチェックボックスのテキスト内で、アクセスキーに設定したい文字の前に &amp; を加えます。例えば "Do it &amp;now" だと、n がアンダーラインの引かれたアクセスキーになります。ダイアログに実際のアンパサンドを表示させるには <code>&amp;&amp;</code> と書きます。
+</p>
+<h3 id=".E3.82.A2.E3.82.AF.E3.82.BB.E3.82.B9.E3.82.AD.E3.83.BC.E3.81.A8.E3.81.AA.E3.82.8B.E6.96.87.E5.AD.97.E3.81.AE.E9.81.B8.E3.81.B3.E6.96.B9" name=".E3.82.A2.E3.82.AF.E3.82.BB.E3.82.B9.E3.82.AD.E3.83.BC.E3.81.A8.E3.81.AA.E3.82.8B.E6.96.87.E5.AD.97.E3.81.AE.E9.81.B8.E3.81.B3.E6.96.B9"> アクセスキーとなる文字の選び方 </h3>
+<ul><li> accesskey 属性は大文字・小文字を区別します
+<ul><li> 上に例として示した 2 つのボタンの違いは、指定されたアクセスキーの文字種 (大文字・小文字) であるという点に注意してください。Mozilla のアクセスキーの実装は、まず (指定されたアクセスキーと) 同じ文字種の文字にアンダーラインを引こうとし、もし見つからなかった場合はもう一方の文字種の文字にアンダーラインを引く、という仕組みになっています。普通は、ある単語の 1 文字目にアンダーラインを引きたいのですから、この気まぐれな実装には十分気を付けてください。
+</li></ul>
+</li><li> 重複を避けて
+<ul><li> ひとつのウィンドウで同じアクセスキーの文字を 2 回使うことはできません。
+</li><li> 同じウィンドウのドロップダウンメニューには特に注意が必要です。例えばブックマークマネージャでは、F、E、V、T、H (ファイル、編集、表示、タスク、ヘルプ) の 5 つは使えません。
+</li><li> 協力者募集中: XUL ファイル内のアクセスキーの重複や欠落を自動的にチェックするツールがあれば便利ですね。
+</li></ul>
+</li><li> 見やすく
+<ul><li> ラベルの最初または 2 番目の単語の 1 文字目を使ってください。
+</li><li> そのラベル特有の子音や母音を使ってください。
+</li><li> w、m、大文字など、横幅が広い文字を使ってください。
+</li><li> p、g、q、y など、下に飛び出た部分 (ディセンダー) を含む文字は避けてください。
+</li><li> ディセンダーを含む文字の隣の文字は避けてください。
+</li><li> i、l など、幅が 1 ピクセルしかないような文字も避けてください。
+</li></ul>
+</li><li> 覚えやすく
+<ul><li> まず、最も重要なプロンプトから手を加えてください。そうすれば、それらには最も適切なアクセスキーを割り当てることが可能です。
+</li><li> Mozilla に同じようなプロンプトが他にあって、アクセスキーが割り当てられている場合は、それと同じアクセスキーを使ってください。また、Properties など、Windows で使われている標準的なアクセスキーもあります。
+</li><li> もしなければ、プロンプトに含まれる最初の単語の 1 文字目を試してください。
+</li><li> 次に、他の単語の 1 文字目を試してください。
+</li><li> (ダイアログの残りのアクセスキーを選び終わって) 最後になったら、動作を示す単語から声に出して発音する文字を選んでください。
+</li></ul>
+</li><li> アクセスキーを割り当てない一般的な要素
+<ul><li> OK ボタン
+</li><li> Cancel (キャンセル) ボタン
+</li><li> Close (閉じる) ボタン
+</li><li> タブパネルのラベル
+</li><li> ツールバーボタン
+</li><li> ツリーアイテム
+</li><li> リストアイテム
+</li><li> カラムヘッダ
+</li></ul>
+</li></ul>
+<h3 id=".E7.9F.A5.E3.81.A3.E3.81.A6.E3.81.8A.E3.81.8F.E3.81.B9.E3.81.8D.E9.87.8D.E8.A6.81.E3.81.AA.E3.83.90.E3.82.B0.E3.81.AF.E3.81.82.E3.82.8A.E3.81.BE.E3.81.99.E3.81.8B.3F" name=".E7.9F.A5.E3.81.A3.E3.81.A6.E3.81.8A.E3.81.8F.E3.81.B9.E3.81.8D.E9.87.8D.E8.A6.81.E3.81.AA.E3.83.90.E3.82.B0.E3.81.AF.E3.81.82.E3.82.8A.E3.81.BE.E3.81.99.E3.81.8B.3F"> 知っておくべき重要なバグはありますか? </h3>
+<ul><li> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=143065" title="FIXED: Scope of accesskey should be limited to a tab panel/-moz-deck">バグ 143065</a> - アクセスキーの範囲が現在開いているタブパネルに限定されない
+</li></ul>
+<h3 id=".E3.82.A2.E3.82.AF.E3.82.BB.E3.82.B9.E3.82.AD.E3.83.BC.E3.82.92.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B.E5.BF.85.E8.A6.81.E3.81.8C.E3.81.82.E3.82.8B.E3.81.AE.E3.81.AF.E3.81.A9.E3.81.93.E3.81.A7.E3.81.99.E3.81.8B.3F" name=".E3.82.A2.E3.82.AF.E3.82.BB.E3.82.B9.E3.82.AD.E3.83.BC.E3.82.92.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B.E5.BF.85.E8.A6.81.E3.81.8C.E3.81.82.E3.82.8B.E3.81.AE.E3.81.AF.E3.81.A9.E3.81.93.E3.81.A7.E3.81.99.E3.81.8B.3F"> アクセスキーを追加する必要があるのはどこですか? </h3>
+<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=129179" title="Meta bug: hook up XUL accesskeys throughout the UI">バグ 129179</a> (XUL アクセスキー関連のメタバグ) の依存関係をチェックするか、要約に「accesskey」あるいは「mnemonic」といった単語を含むバグを検索するか、アンダーラインの引かれた文字を含む要素が見つからないダイアログを探してください。
+</p><p>Keyboard Navigation コンポーネントにバグを登録し、そこにメタバグ <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=129179" title="Meta bug: hook up XUL accesskeys throughout the UI">バグ 129179</a> の依存関係を設定してください。
+</p>
+<div class="noinclude">
+</div>

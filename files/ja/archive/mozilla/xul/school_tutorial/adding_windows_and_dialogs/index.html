@@ -1,0 +1,121 @@
+---
+title: ウィンドウとダイアログの追加
+slug: Archive/Mozilla/XUL/School_tutorial/Adding_windows_and_dialogs
+translation_of: Archive/Add-ons/Overlay_Extensions/XUL_School/Adding_windows_and_dialogs
+---
+<div>
+  <div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/School_tutorial/The_Box_Model" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/School_tutorial/Adding_sidebars">次のページ  »</a></p>
+</div></div>
+<h2 id="Opening_windows_and_dialogs" name="Opening_windows_and_dialogs">ウィンドウとダイアログを開く</h2>
+<p>新しいウィンドウを開くには、HTML と同じように JavaScript の <a href="/ja/docs/DOM/window.open" title="DOM/window.open">window.open</a> 関数を使用します。</p>
+<pre class="brush: js">window.open(
+  "chrome://xulschoolhello/content/someWindow.xul",
+  "xulschoolhello-some-window",
+  "chrome,centerscreen");</pre>
+<p>最初の引数は開く URL です。2 番目の引数は window を識別する id です。残りは、window の振る舞いや外観についての特性を任意で指定するカンマ区切りのリストです。この値が null または空の場合、新しいウィンドウにメインウィンドウのデフォルトのツールバーが追加されますが、このようなことはあまりしないでしょう。<a href="/ja/docs/DOM/window.open" title="DOM/window.open">window.open</a> のページに、その特性を指定するための値についての詳しい説明があります。以下の特性は特に重要なので覚えておいてください:</p>
+<ul>
+  <li>"chrome"。これは、chrome からのみ使用され、通常の HTML の JavaScript からは使用できません。これは、ウェブページではなく、chrome ドキュメントが開かれることを示します。つまり、開くドキュメントはウィンドウ全体を定義し、内部のコンテンツ領域だけではないことを意味します。XUL ウィンドウやダイアログを開く場合は、常に指定しなければなりません。</li>
+  <li>"modal"。モーダルウィンドウは、閉じられるまで、その親ウィンドウの操作をブロックします。警告ウィンドウが例として挙げられます。モーダルウィンドウは、ユーザのブラウジングに割り込み、表示されただけで煩わしくなるため、できるだけ利用を避けるべきです。この特性は、ユーザが何かをしなければ続ける方法が無い場合にのみ使用してください。<strong>アプリケーションの起動時にモーダルウィンドウを開いてはいけません。</strong></li>
+  <li>"resizable"。 ユーザがウィンドウのサイズを変更可能にするかどうかを示します。一般的に、データソースから動的に生成されるコンテンツを表示するのでない限り、ウィンドウのサイズを変更可能にすべきではありません。リストやツリーなどのコンテンツは、それらが正しく表示されるように、ウィンドウのサイズを変更可能にする必要があるでしょう。</li>
+</ul>
+<p>新しいダイアログを開くには、<em>open</em> の拡張版である <a href="/ja/docs/DOM/window.openDialog" title="DOM/window.openDialog">window.openDialog</a> 関数を使用します。この関数は、ダイアログに任意のパラメータのセットを渡すことができます。</p>
+<div class="code panel" style="border-width: 1px;">
+  <div class="codeContent panelContent">
+    <pre class="brush: js">let someValue = 2;
+let returnValue = { accepted : false , result : "" };
+
+window.openDialog(
+  "<a rel="freelink">chrome://xulschoolhello/content/someDialog.xul</a>",
+  "xulschoolhello-some-dialog", "chrome,centerscreen",
+  someValue, returnValue); // ダイアログに必要なだけ追加のパラメータを渡せます。
+
+// if (returnValue.accepted) { do stuff }</pre>
+  </div>
+</div>
+<p>渡したパラメータは、ダイアログのコード内で <em>window.arguments</em> プロパティを通して利用できます:</p>
+<div class="code panel" style="border-width: 1px;">
+  <div class="codeContent panelContent">
+    <pre class="brush: js">let someValue = window.arguments[0];
+let returnValue = window.arguments[1];
+
+// returnValue.accepted = true;
+// returnValue.result = "something";
+</pre>
+  </div>
+</div>
+<p>上記の例の <em>returnValue</em> という名前のパラメータは、ダイアログでユーザが行った変更を反映するためのオブジェクトです。これは、ダイアログからオープナーへ値を返す最も簡単な方法です。ただし、オープナーはダイアログが閉じられるまで待機しているので注意してください。<em>openDialog</em> 関数を呼び出すと、ユーザがダイアログを閉じるまで何も返しません。</p>
+<h2 id="Common_Dialogs_and_the_Prompt_Service" name="Common_Dialogs_and_the_Prompt_Service">共通のダイアログとプロンプトサービス</h2>
+<p>共通のダイアログにはいくつかの種類があります。ここでは、それらの XUL コードや JavaScript コードを一から書くような車輪の再発明をせずに、簡単に作成する方法を説明します。新しいダイアログが必要になった場合、本当にこれらの共通のダイアログで実装できるか確認し、可能であれば使用してください。これらは、OS との統合、アクセシビリティ、ローカライズがすべてテストされているため、手軽に使用できます。</p>
+<p>拡張機能で共通のダイアログを作成するときは、<a href="/ja/docs/XPCOM_Interface_Reference/nsIPromptService" title="NsIPromptService">プロンプトサービス</a>の使用をお勧めします。プロンプトサービスのページの説明と例を注意深く読んでください。プロンプトサービスでは、多くの役立つ関数が使用できます。<em>window</em> オブジェクトにも同等の単純な関数がありますが、これらは特権のない HTML の JavaScript コードで使用するためのものです。</p>
+<h3 id="Alert" name="Alert">警告ダイアログ</h3>
+<p>alert は、最も単純な形のダイアログです。ユーザに読ませるテキストメッセージを表示し、OK ボタンをクリックすると閉じます。私たちの例では、<a href="/ja/docs/DOM/window.alert" title="DOM/window.alert">window.alert</a> 関数を使用して警告メッセージのダイアログを開いていますが、これは正しい方法ではありません。この関数を何らかの問題をデバッグし、プログラムがコードの特定の行に達したことを知ったり変数の値を調べたりするために使用するだけなら良いでしょう。しかし、最終的に公開する拡張機能では <em>alert</em> の呼び出しをしてはいけません。</p>
+<p><em>window.alert</em> を使用すると、[JavaScript Application] というタイトルの警告ウィンドウになり、メッセージのソースが正しく定義されていないことを示します。プロンプトサービスを使用すると、さらによい警告表示ができます。次の例では、警告の表示に プロンプトサービスを使用しています:</p>
+<pre class="brush: js">let prompts =
+  Cc["@mozilla.org/embedcomp/prompt-service;1"].
+    getService(Ci.nsIPromptService);
+
+prompts.alert(window, "Alert Title", "Hello!");</pre>
+<p>ここでも、メッセージの文字列を直接書かずに、ローカライズされた文字列を使用するべきです。</p>
+<p>プロンプトサービスを使用すると、ダイアログのタイトルを設定できます。また、警告の親ウィンドウを設定できますが、通常は現在のウィンドウに設定してください。値に null を渡すと、現在のアクティブなウィンドウが設定されます。</p>
+<h3 id="Confirm" name="Confirm">確認ダイアログ</h3>
+<p>確認ダイアログは、テキストと [はい]/[いいえ] のボタンを表示し、ユーザに答えを選択させます。HTML では、<a href="/ja/docs/DOM/window.confirm" title="DOM/window.confirm">window.confirm</a> 関数を使用してください。プロンプトサービスには、これと似た振る舞いをする <em>confirm</em> メソッドがあります:</p>
+<pre class="brush: js">let prompts =
+  Cc["@mozilla.org/embedcomp/prompt-service;1"].
+    getService(Ci.nsIPromptService);
+
+if (prompts.confirm(window, "Confirm Title", "Would you like to continue?")) {
+  // do something.
+} else {
+  // do something else
+}</pre>
+<p>このメソッドは、ユーザの反応を示す真偽値を返します。</p>
+<h3 id="Others" name="Others">その他</h3>
+<p>特権のない JavaScript は、ユーザが入力したテキストを受け取るために <a href="/ja/docs/DOM/window.prompt" title="DOM/window.prompt">window.prompt</a> 関数を使用することもできます。プロンプトサービスは、テキストやパスワード、ユーザ名とパスワード、"今後同様に処理する" のチェックボックスを含むダイアログなど、様々な形式の入力ができるとても高度な関数のセットです。<a href="/ja/docs/XPCOM_Interface_Reference/nsIPromptService#confirmEx" title="nsIPromptService#confirmEx">confirmEx</a> および <a href="/ja/docs/XPCOM_Interface_Reference/nsIPromptService#prompt" title="nsIPromptService#prompt">prompt</a> は、最もカスタマイズ可能なメソッドです。これらには、多くの一般的な形式のダイアログのオプションがあります。</p>
+<p>プロンプトサービスを使用すれば、XUL コードを短くし、Mozilla が試験済みのコードを安心して使用することができます。</p>
+<h2 id="The_Dialog_Element" name="The_Dialog_Element">ダイアログ要素</h2>
+<p>プロンプトサービスで不十分な場合は、独自の XUL ダイアログを作成しなければなりません。幸運にも、<a href="/ja/docs/XUL/dialog" title="XUL/dialog">dialog</a> 要素を一般的な <em>window</em> 要素の代わりにドキュメントのルートとして使用すれば、プラットフォームから多くの助けを得ることができます。</p>
+<p>OK ボタンやキャンセルボタンを持つ簡単な XUL ウィンドウを定義することとの大きな違いがどこにあるのか、疑問に思うかもしれません。このセクションで扱うダイアログは、とても簡単で、XUL を使用して実装することほど難しくありません。また、複雑な事情もあります。ダイアログの位置やボタンがオペレーティングシステムごとに異なります。細かいことですが、ウィンドウサイズやマージン、パディングがすべてのシステムで異なるため、ダイアログをスクラッチから書いたりダイアログのデフォルトの CSS スタイルを書き換えたりすることは避けてください。</p>
+<p><em>dialog</em> 要素は、これらをすべて透過的に扱います。必要なことは、ダイアログに必要なボタンと関連付けられた動作を定義することだけです。</p>
+<pre class="brush:xml">&lt;dialog id="xulschoolhello-hello-dialog"
+  title="&amp;xulschoolhello.helloDialog.title;"
+  buttons="accept,cancel"
+  ondialogaccept="return XULSchoolChrome.HelloDialog.accept();"
+  ondialogcancel="return XULSchoolChrome.HelloDialog.cancel();"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;</pre>
+<p><a href="/ja/docs/XUL/dialog" title="XUL/dialog">dialog</a> 要素の仕様を注意深く読んでください。幅広い様々なボタンを選ぶことができ、それらに必要な動作を関連付け、ラベルの書き換えや完全にカスタマイズされたボタンを追加できることが分かるでしょう。これらはすべて、オペレーティングシステムごとの外観の違いを気にせずに行えます。どのようなダイアログでも不変の規則が一つあります。OK ボタンやキャンセルボタンをクリックすると、関連付けられた関数が false を返さなくてもダイアログが閉じられます。特に、キャンセルボタンがクリックされた時に false を返してはいけません。一般に、ダイアログは簡単に閉じられなければなりません。</p>
+<div class="panel" style="border-width: 1px;">
+  <div class="panelContent">
+    <p>ダイアログを固定サイズにしてはいけません。潜在的なローカライズの問題を引き起こします。ダイアログのサイズは、その内容によって最適なサイズに合わせられます。しかしながら、ダイアログの内容があなたのコードによって動的に生成されたり引き伸ばされたりする場合は、ダイアログを適切なサイズに変更する必要があるでしょう。この場合は、<a href="/ja/docs/DOM/window.sizeToContent" title="DOM/window.sizeToContent">window.sizeToContent</a> 関数を使用してください。</p>
+  </div>
+</div>
+<h2 id="Input_Controls" name="Input_Controls">入力コントロール</h2>
+<p>拡張機能で追加されるほとんどの XUL ウィンドウやダイアログには、ちょっとした入力フォームがあります。よく使用されるフォーム要素とその XUL ウィンドウでの使用方法を見ていきましょう。XUL チュートリアルに補足する必要のあるフォームの説明はそれほど多くありません。まずは、以下のリンク先のセクションを読んでください:</p>
+<ul>
+  <li><a href="/ja/docs/XUL_Tutorial/Input_Controls" title="XUL Tutorial/Input Controls">入力コントロール</a></li>
+  <li><a href="/ja/docs/XUL_Tutorial/Numeric_Controls" title="XUL Tutorial/Numeric Controls">数値コントロール</a></li>
+  <li><a href="/ja/docs/XUL_Tutorial/List_Controls" title="XUL Tutorial/List Controls">リストコントロール</a></li>
+</ul>
+<p>以下のセクションでは、入力コントロールを扱うときに考慮すべきその他の点を扱います。</p>
+<h3 id="Groupboxes" name="Groupboxes">グループボックス</h3>
+<p><a href="/ja/docs/XUL/groupbox" title="XUL/groupbox">groupbox</a> 要素は、簡単に理解できるでしょう。これは、XUL コントロールをまとめてグループ化し、コンテンツの周りを視覚的な境界線でスタイル付けする box コンテナです。グループ化されているものが一目でわかるでしょう。また、グループ化された要素にタイトルを付ける <a href="/ja/docs/XUL/caption" title="XUL/caption">caption</a> 要素がこの要素と共によく使用されます。</p>
+<p><em>groupbox</em> は、見た目を整えるための要素ではなく、論理的なものです。境界線だけが必要な場合は、CSS を使用してください。<em>groupbox</em> 要素は、囲まれた要素が同じ機能を共有していることを示し、同じウィンドウ内の他の要素やグループから分けるために使用されます。またアクセシビリティ機能にも役立ちます。スクリーンリーダは、コンテンツ内のテキストを読み上げる前にキャプションを読み上げるでしょう。境界線を描画したくないときは、CSS を使用してスタイルを変更してください。Firefox の設定ウィンドウに、この例があります。セクションが <em>groupbox</em> を使用して定義されていますが、デフォルトのスタイルとは多少異なります。</p>
+<h3 id="Attribute_Persistence" name="Attribute_Persistence">属性値の永続性</h3>
+<p>リストボックスからのオプションの選択やテキストボックスへのテキストの入力など、ユーザの操作によってウィンドウの状態が変更されます。ユーザがそのウィンドウを閉じて再び開いた場合、すべてのコントロールはデフォルトにリセットされます。これは、望まれた動作ではないでしょう。何らかの方法でユーザが変更した属性の値を記憶させておき、ウィンドウを開き直しても前回の状態が読み込まれるようにする必要があります。</p>
+<p>ほとんどの XUL 要素は、この場合に相応しい <a href="/ja/docs/XUL/Attribute/persist" title="XUL/Attribute/persist">persist</a> 属性をサポートしています。<em>persist</em> 属性にスペースで区切られた属性名のリストを設定すると、ウィンドウの "セッション" を超えて、その属性値が維持されます。</p>
+<pre class="brush:js">&lt;checkbox id="xulschoolhello-some-checkbox"
+  label="&amp;xulschoolhello.someText.label;"
+
+  checked="false" persist="checked" /&gt;</pre>
+<p><em>persist</em> 属性を動作させたいときは、必ず、その要素に <em>id</em> 属性を設定しなければなりません。<em>document.persist</em> 関数を使用して永続性をプログラム内で設定することもできます:</p>
+<pre class="brush: js">document.persist("xulschoolhello-some-checkbox", "checked");</pre>
+<p>永続化されたデータは、ユーザプロファイルの <em>localstore.rdf</em> ファイル内に格納されます。あなたの拡張機能で永続性をテストする時は、このファイルを変更するか削除する必要があるでしょう。</p>
+<h3 id="Focus_and_Tabbing" name="Focus_and_Tabbing">フォーカスとタブ</h3>
+<p>キーボードだけでウィンドウ内のすべての入力コントロールへ移動できるようにすることが、アクセシビリティを確保するために必要です。ほとんどの Firefox ウィンドウでは、Tab キーを押すことで移動できます。Tab キーを押すごとにウィンドウ内の次のコントロールへフォーカスが移動します。</p>
+<p>一般的には、キーボードによるフォーカスのためにする必要なことは何もありません。Firefox は、自動的にウィンドウ内の最初の入力コントロールへフォーカスを移動し、Tab キーが押されると、XUL ドキュメント内で見つかった次のアイテムにフォーカスを移動します。とても複雑なレイアウトにしたい場合やカスタマイズされた Tab キーの振る舞いが必要な場合は、コントロールに <a href="/ja/docs/XUL/Property/tabIndex" title="XUL/Property/tabIndex">tabindex</a> 属性を設定してください。また、ウィンドウの読み込みなどのイベントに応じて要素にフォーカスを移動するために <a href="/ja/docs/XUL/Method/focus" title="XUL/Method/focus">focus</a> 関数を使用することもできます。フォーカスの移動を変更するときは、アクセスできないコントロールが無いように注意してください。</p>
+<p>通常はフォーカスを受け取らない要素へのフォーカスを有効にするために、CSS プロパティの <a href="/ja/docs/CSS/-moz-user-focus" title="CSS/-moz-user-focus">-moz-user-focus</a> が使用できます。ただし、このような変更は控え目にしてください。</p>
+<div>
+  <div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL/School_tutorial/The_Box_Model" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL/School_tutorial/Adding_sidebars">次のページ  »</a></p>
+</div></div>
+<p><small>This tutorial was kindly donated to Mozilla by Appcoast.</small></p>

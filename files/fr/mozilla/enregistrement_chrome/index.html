@@ -1,0 +1,168 @@
+---
+title: Enregistrement chrome
+slug: Mozilla/Enregistrement_chrome
+tags:
+  - API_du_toolkit
+translation_of: Mozilla/Chrome_Registration
+---
+<p> </p>
+
+<h3 id="D.C3.A9finition_du_chrome" name="D.C3.A9finition_du_chrome">Définition du chrome</h3>
+
+<p>Le <a href="/fr/Chrome" title="fr/Chrome">chrome</a> est l'ensemble des éléments de l'interface utilisateur d'une application qui sont situés en dehors de la zone de contenu d'une fenêtre. Les barres d'outils, les barres de menus, les barres de progression, et les titres de fenêtres sont tous des exemples d'éléments qui font habituellement partie du chrome.</p>
+
+<h3 id="Fournisseurs_de_chrome" name="Fournisseurs_de_chrome">Fournisseurs de chrome</h3>
+
+<p>Ce qui fournit le chrome pour un type de fenêtre donnée (par exemple pour la fenêtre du navigateur) est appelé un fournisseur de chrome (Chrome Provider). Les fournisseurs collaborent pour fournir un jeu complet de chrome pour une fenêtre particulière, depuis les images des boutons de la barre d'outils jusqu'aux fichiers décrivant le texte, le contenu et l'apparence de la fenêtre elle-même.</p>
+
+<p>Il y trois types basiques de fournisseurs de chrome :</p>
+
+<h4 id="content" name="content">content</h4>
+
+<p>Le fichier principal pour la description d'une fenêtre provient du fournisseur « <code>content</code> », et il peut s'agir de n'importe quel type de fichier que Mozilla peut afficher. Il s'agit généralement de fichiers XUL, puisque XUL est conçu pour décrire le contenu de fenêtres et de boîtes de dialogue. Les fichiers JavaScript définissant l'interface utilisateur font également partie des paquetages content, ainsi que la plupart des fichiers de liaisons XBL.</p>
+
+<h4 id="locale" name="locale">locale</h4>
+
+<p>Les applications localisables (disponibles en plusieurs langues) ont leurs informations de localisation dans des fournisseurs « <code>locale</code> ». Cela permet aux traducteurs de fournir un paquetage différent pour traduire toute une application sans toucher au reste du code source. Les deux principaux types de fichiers de localisation sont les fichiers <em>DTD</em> et les fichiers <em>properties</em> de style Java.</p>
+
+<h4 id="skin" name="skin">skin</h4>
+
+<p>Un fournisseur « <code>skin</code> » est responsable de la fourniture complète des fichiers décrivant l'apparence visuelle du chrome. Typiquement, un thème graphique fournit des fichiers CSS et des images.</p>
+
+<h3 id="Le_registre_chrome" name="Le_registre_chrome">Le registre chrome</h3>
+
+<p>L'environnement d'exécution Gecko s'occupe d'un service appelé le registre chrome fournissant une cartographie complète permettant de lier les noms de paquetages chrome et leurs emplacements physiques sur le disque.</p>
+
+<p>Le registre chrome est configurable et persistant, un utilisateur peut donc installer des fournisseurs de chrome différents et sélectionner un thème ou une langue préférée. Tout ceci est accompli au travers d'xpinstall et du gestionnaire d'extensions.</p>
+
+<p>Afin d'informer le registre chrome de la présence d'un nouveau chrome, un texte de présentation appelé <code>manifest</code> est utilisé : il s'agit du fichier <code>chrome.manifest</code> à la racine d'une extension ou d'un thème, ou d'une application XULRunner.</p>
+
+<p>Ces fichiers sont de simples fichiers textes présentés ligne par ligne. Chaque ligne est interprétée individuellement. Si la ligne peut être interprétée, le registre chrome réalise l'action identifiée par cette ligne, autrement, le registre chrome ignorera cette ligne (et affichera un message d'alerte dans la console d'erreurs d'exécution).</p>
+
+<pre class="eval">locale nomdupaquetage nomlocale chemin/vers/fichiers
+skin nomdupaquetage nomskin chemin/vers/fichiers
+</pre>
+
+<h3 id="Instructions_du_fichier_manifest" name="Instructions_du_fichier_manifest">Instructions du fichier manifest</h3>
+
+<h4 id="Commentaires" name="Commentaires">Commentaires</h4>
+
+<p>Une ligne est un commentaire si elle commence par le caractère « <code>#</code>» ; tous les autres caractères sur la ligne seront ignorés.</p>
+
+<pre class="eval"># cette ligne est un commentaire - vous pouvez mettre ce que vous voulez ici
+</pre>
+
+<h4 id="content_2" name="content_2">content</h4>
+
+<p>Un paquetage de type content est enregistré par la ligne :</p>
+
+<pre class="eval">content <em>nomdupaquetage</em> <em>uri/vers/fichiers/</em> <em>[drapeaux]</em>
+</pre>
+
+<p>Ceci va enregistrer un emplacement à utiliser lors de la résolution de l'URI <code>chrome://<em>nomdupaquetage</em>/content/...</code>. L'URI peut être absolue ou relative à l'emplacement du fichier manifeste. Notez qu'elle doit se terminer par une barre oblique « <code>/</code> ».</p>
+
+<h4 id="locale_2" name="locale_2">locale</h4>
+
+<p>Un paquetage de type locale est enregistré par la ligne :</p>
+
+<pre class="eval">locale <em>nomdupaquetage</em> <em>nomlocale</em> <em>uri/vers/fichiers/</em> <em>[drapeaux]</em>
+</pre>
+
+<p>Ceci va enregistrer un paquetage locale lors de la résolution de l'URI <code>chrome://<em>nomdupaquetage</em>/locale/...</code> . La chaîne <em>nomlocale</em> est habituellement un identifiant de langue comme « en » ou de langue spécifique à un pays comme « en-US ». Si plus d'une localisation est enregistrée pour un paquetage, le registre chrome sélectionnera la plus appropriée en fonction des préférences de l'utilisateur.</p>
+
+<h4 id="skin_2" name="skin_2">skin</h4>
+
+<p>Un paquetage de thème est enregistré par la ligne :</p>
+
+<pre class="eval">skin <em>nomdupaquetage</em> <em>nomskin</em> <em>uri/vers/fichiers/</em> <em>[drapeaux]</em>
+</pre>
+
+<p>Ceci va enregistrer un paquetage de thème lors de la résolution de l'URI <code><a class="external" rel="freelink">chrome://nomdupaquetage/skin/</a>...</code> . La chaîne <em>nomskin</em> est une chaîne opaque identifiant le thème installé. Si plus d'un thème est enregistré pour un paquetage, le registre chrome sélectionnera le plus approprié en fonction des préférences de l'utilisateur.</p>
+
+<h4 id="style" name="style">style</h4>
+
+<p>Les overlays de style (CSS personnalisée qui sera appliquée à une page chrome) sont enregistrés avec la syntaxe suivante :</p>
+
+<pre class="eval">style chrome://<em>URI-vers-style</em> chrome://<em>stylesheet-URI</em> <em>[drapeaux]</em>
+</pre>
+
+<h4 id="override" name="override">override</h4>
+
+<p>Dans certains cas, une extension ou une application embarquant le moteur peut avoir envie de remplacer un fichier chrome fourni par l'application ou par XULRunner. Pour autoriser ce remplacement, le manifeste d'enregistrement chrome doit contenir des instructions « override » :</p>
+
+<pre class="eval">override chrome://<em>paquetage</em>/<em>type</em>/<em>uri-originelle.qqc</em> <em>nouvelle-URI-résolue</em> <em>[drapeaux]</em>
+</pre>
+
+<p>Note : les overrides ne sont pas récursifs (donc remplacer <a class="external" rel="freelink">chrome://foo/content/bar/</a> par <a class="external" rel="freelink">file:///home/john/blah/</a> ne fera généralement pas ce que vous désirez ou vous attendez à voir).</p>
+
+<div class="note">
+<p>Un bogue est actuellement présent dans les versions de Gecko antérieures à 1.8.0.13 et 1.8.1.5, ainsi que dans des compilations plus anciennes, où l'utilisation d'une URL relative pour le paramètre <em>nouvelle-URI-résolue</em> ne fonctionnera pas. Il est nécessaire de fournir une URL complètement qualifiée (c'est-à-dire qui peut être résolue n'importe où, pas uniquement dans le répertoire dans lequel le manifeste chrome se trouve). Étant donné que le développeur d'extension ou d'application est incapable de prédire ce que sera le chemin vers un tel fichier, il est actuellement uniquement possible d'utiliser cette directive avec une autre URL chrome:// comme paramètre <em>nouvelle-URI-résolue</em>. Voir le {{ Bug(323455) }}.</p>
+</div>
+
+<h3 id="Drapeaux_de_fichiers_manifest" name="Drapeaux_de_fichiers_manifest">Drapeaux de fichiers manifest</h3>
+
+<p>Dans les fichiers manifest, plusieurs drapeaux séparés par des virgules peuvent être ajoutés à la fin des lignes d'enregistrement. Ces drapeaux indiquent des attributs spéciaux du chrome dans ce paquetage ou limite les conditions d'utilisation de la ligne.</p>
+
+<h4 id="application" name="application">application</h4>
+
+<p>Des extensions peuvent s'installer dans plusieurs applications différentes. Certaines lignes d'enregistrement chrome peuvent toutefois être réservées à une application particulière. Le drapeau</p>
+
+<pre class="eval">application=<em>app-ID</em>
+</pre>
+
+<p>indique que l'instruction ne doit être appliquée que si l'extension est installée dans une application ayant pour identifiant <em>app-ID</em>. Plusieurs drapeaux <em>application</em> peuvent être fournis sur une même ligne, auquel cas elle sera appliquée si n'importe lequel d'entre-eux correspond.</p>
+
+<h4 id="appversion" name="appversion">appversion</h4>
+
+<p>Des extensions peuvent s'installer dans plusieurs versions différentes d'une application. Il peut y avoir des lignes d'enregistrements chrome qui ne s'appliquent qu'à une version particulière de l'application. Le drapeau</p>
+
+<pre class="eval">appversion=<em>version</em>
+appversion&lt;<em>version</em>
+appversion&lt;=<em>version</em>
+appversion&gt;<em>version</em>
+appversion&gt;=<em>version</em>
+</pre>
+
+<p>indique que l'instruction ne doit s'appliquer que si l'extension est installée dans la version de l'application indiquée. Plusieurs drapeaux <code>appversion</code> peuvent figurer sur la même ligne, auquel cas la ligne sera appliquée si n'importe lequel d'entre-eux correspond. La chaîne de version doit se conformer au <a href="/fr/Format_de_version_du_toolkit" title="fr/Format_de_version_du_toolkit">Format de version du toolkit</a>.</p>
+
+<h4 id="platform_.28paquetages_propres_.C3.A0_la_plateforme.29" name="platform_.28paquetages_propres_.C3.A0_la_plateforme.29">platform (paquetages propres à la plateforme)</h4>
+
+<p>Certains paquetages sont marqués à l'aide d'un drapeau particulier indiquant qu'ils sont propres à une plateforme. Certaines parties de content, skin ou locale peuvent être différents selon la plateforme sur laquelle l'application est exécutée. Ces paquetages contiennent trois jeux de fichiers différents, pour Windows/OS2, Macintosh et les plateformes de type Unix. Par exemple, l'ordre des boutons « OK » et « Annuler » dans un dialogue n'est pas le même d'une plateforme à l'autre, de même que le nom de certains éléments.</p>
+
+<p>L'indicateur « platform » n'est pris en compte que dans le cas d'un enregistrement content, il n'est pas reconnu dans le cas d'un enregistrement locale ou string. Cependant, il s'applique aux parties content, locale et skin lorsque spécifié.</p>
+
+<p>Pour indiquer qu'un paquetage est propre à une plateforme, ajoutez l'indicateur « platform » après le chemin sur la ligne <code>content</code>, par exemple :</p>
+
+<pre class="eval">content global-platform jar:toolkit.jar!/toolkit/content/global-platform/ platform
+</pre>
+
+<p>Une fois ceci spécifié dans votre fichier manifest, assurez-vous ensuite que, sous le répertoire global-platform, les sous-répertoires <code>win</code> (Windows/OS2), <code>mac</code> (OS9/OSX), ou <code>unix</code> (tous les autres cas) sont présents. Tout ce qui se trouve en dehors de ces sous-répertoires sera ignoré.</p>
+
+<h4 id="xpcnativewrappers" name="xpcnativewrappers">xpcnativewrappers</h4>
+
+<p>Les paquetages chrome peuvent décider s'ils utilisent ou non le mécanisme de sécurité XPCNativeWrapper pour protéger leur code contre du contenu malveillant auquel ils pourraient eccéder. Consultez <a href="/fr/Accès_sécurisé_au_contenu_DOM_depuis_le_chrome" title="fr/Accès_sécurisé_au_contenu_DOM_depuis_le_chrome">Accès sécurisé au contenu DOM depuis le chrome</a> pour plus de détails.</p>
+
+<p>Dans les versions alpha de Firefox 1.5 alpha (les alphas Deer Park), ce drapeau est *désactivé* par défaut, et doit être activé explicitement en spécifiant <code>xpcnativewrappers=yes</code>.</p>
+
+<p>À partir de la première version beta de Firefox 1.5, ce drapeau est activé par défaut, et les extensions qui ont besoin d'accès non sécurisés aux objets du contenu devront spécifier explicitement <code>xpcnativewrappers=no</code>.</p>
+
+<p>Le drapeau xpcnativewrappers ne s'applique qu'au paquetages de type content : il n'est pas reconnu par les enregistrements locale ou skin.</p>
+
+<h3 id="Exemple_de_fichier_manifest_chrome" name="Exemple_de_fichier_manifest_chrome">Exemple de fichier manifest chrome</h3>
+
+<pre class="eval">content       necko              jar:comm.jar!/content/necko/ xpcnativewrappers=yes
+locale        necko       fr     jar:fr.jar!/locale/fr/necko/
+content       xbl-marquee        jar:comm.jar!/content/xbl-marquee/
+content       pipnss             jar:pipnss.jar!/content/pipnss/
+locale        pipnss      fr     jar:fr.jar!/locale/fr/pipnss/
+content       pippki             jar:pippki.jar!/content/pippki/ xpcnativewrappers=yes
+locale        pippki      fr     jar:fr.jar!/locale/fr/pippki/
+content       global-platform    jar:toolkit.jar!/content/global-platform/ platform
+skin          global      classic/1.0 jar:classic.jar!/skin/classic/global/
+override <a class="external" rel="freelink">chrome://global/content/netError.xhtml</a> jar:embedder.jar!/global/content/netError.xhtml
+content       inspector          jar:inspector.jar!/content/inspector/ xpcnativewrappers=no
+</pre>
+
+<h3 id="Anciens_fichiers_manifest_de_type_contents.rdf" name="Anciens_fichiers_manifest_de_type_contents.rdf">Anciens fichiers manifest de type contents.rdf</h3>
+
+<p>Avant que les fichiers texte de type manifest soient mis en place (avec Firefox 1.5 et la version 1.8 du toolkit), des fichiers RDF appelés « contents.rdf » étaient utilisés pour les enregistrements chrome. Ce format n'est plus recommandé, cependant la suite Mozilla (SeaMonkey) ne permet pas encore d'utiliser les fichiers texte au format manifest, et des fichiers contents.rdf sont toujours nécessaires pour les extensions qui désirent maintenir une rétrocompatibilité avec Firefox 1.0 ou la suite.</p>

@@ -1,0 +1,110 @@
+---
+title: XUL_教程/输入控件
+slug: Mozilla/Tech/XUL/Tutorial/Input_Controls
+tags:
+  - XUL_教程
+translation_of: Archive/Mozilla/XUL/Tutorial/Input_Controls
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Adding_Labels_and_Images" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:Numeric_Controls">下一页  »</a></p>
+</div><p></p>
+<p> </p>
+<h3 id=".E6.96.87.E6.9C.AC.E8.BE.93.E5.85.A5.E6.A1.86" name=".E6.96.87.E6.9C.AC.E8.BE.93.E5.85.A5.E6.A1.86">文本输入框</h3>
+<p>HTML有一个输入元素可以用于文本输入操作。 XUL 有一个相似的元素, <code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code></code>, 用于文本输入。 不用任何属性, <code>textbox</code> 元素创建一个框让用户可以输入文本。文本框具有像HTML的输入操作相同的许多属性。下面列出其中一部份：</p>
+<dl>
+ <dt>
+  <code id="a-id"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code> </dt>
+ <dd>
+  控件的唯一性标识。</dd>
+ <dt>
+  <code id="a-class"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/class">class</a></code> </dt>
+ <dd>
+  输入框的样式。</dd>
+ <dt>
+  <code id="a-value"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code> </dt>
+ <dd>
+  如果你要输入框显示一个默认值，可以指定此属性。</dd>
+ <dt>
+  <code id="a-disabled"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code> </dt>
+ <dd>
+  如果需要禁用文本输入框可以将这个属性设为<code>true</code>。</dd>
+ <dt>
+  <code id="a-type"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/type">type</a></code> </dt>
+ <dd>
+  你可以将这个属性的值设为<code>password</code>, 创建一个输入框隐藏用户的输入内容。 通常用于密码输入框。</dd>
+ <dt>
+  <code id="a-maxlength"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/maxlength">maxlength</a></code> </dt>
+ <dd>
+  输入框允许输入的字符最大数量。</dd>
+</dl>
+<p>注解：在HTML里, 使用<code>input</code>元素区分几个不同类型的字段，在XUL里用每种类型对元素进行区分。</p>
+<p>下面列出输入框的一些属性:</p>
+<p><span id="%E4%BE%8B1"><a id="%E4%BE%8B1"></a><strong>例1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_inputs_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_inputs_1.xul">View</a></p>
+<pre>&lt;label control="some-text" value="Enter some text"/&gt;
+&lt;textbox id="some-text"/&gt;
+&lt;label control="some-password" value="Enter a password"/&gt;
+&lt;textbox id="some-password" type="password" maxlength="8"/&gt;
+</pre>
+<h4 id=".E5.A4.9A.E8.A1.8C.E6.96.87.E6.9C.AC.E8.BE.93.E5.85.A5.E6.A1.86" name=".E5.A4.9A.E8.A1.8C.E6.96.87.E6.9C.AC.E8.BE.93.E5.85.A5.E6.A1.86">多行文本输入框</h4>
+<p>上面的<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code></code> 例子创建的输入框仅仅可以输入一行文本。HTML也有一个<code>textarea</code>元素用来创建一个大的文本输入区域。在XUL，你可以使用<code>textbox</code>元素达到很好的效果 -- 这两种元素都不是很常用。如果你设置<code><code id="a-multiline"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/multiline">multiline</a></code></code>属性为<code>true</code>，文本输入框将显示为多行。</p>
+<p><span id="%E4%BE%8B2"><a id="%E4%BE%8B2"></a><strong>例2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_inputs_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_inputs_2.xul">View</a></p>
+<pre>&lt;textbox multiline="true"
+           value="This is some text that could wrap onto multiple lines."/&gt;
+</pre>
+<p>就像HTML中的<code>textarea</code>，你可以使用 <code>rows</code> 和<code>cols</code> 属性设置大小。这可以设置显示字符的行和列数量。</p>
+<div class="highlight">
+ <h4 id=".E6.88.91.E4.BB.AC.E6.96.87.E4.BB.B6.E6.9F.A5.E6.89.BE.E7.9A.84.E4.BE.8B.E5.AD.90" name=".E6.88.91.E4.BB.AC.E6.96.87.E4.BB.B6.E6.9F.A5.E6.89.BE.E7.9A.84.E4.BE.8B.E5.AD.90">我们文件查找的例子</h4>
+ <p>让我们给文件查找对话框添加一个搜索输入框。我们将要使用 <code>textbox</code> 元素。</p>
+ <pre class="eval"><span class="highlightred">&lt;label value="Search for:" control="find-text"/&gt;</span>
+<span class="highlightred">&lt;textbox id="find-text"/&gt;</span>
+
+&lt;button id="find-button" label="Find"/&gt;
+</pre>
+ <div class="float-right">
+  <div class="float-right">
+   <img alt="Image:inputs1.png" class="internal" src="/@api/deki/files/730/=Inputs1.png"></div>
+ </div>
+ <p>将这些行插入到在前一节最后我们创建的按钮的前面。如果你打开这个窗口，你将会看到像显示的图片一样的效果。</p>
+ <p>注解：标签和文本输入框现在已经显示在窗口里。文本输入框已具有完全的功能你可以在它里面输入文本和选中文本。使用<code><code id="a-control"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/control">control</a></code></code> 属性后因此当<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/label" title="label">label</a></code></code> 被点击后输入框被选中。</p>
+ <h3 id=".E5.A4.9A.E9.80.89.E5.92.8C.E5.8D.95.E9.80.89.E6.8C.89.E9.92.AE" name=".E5.A4.9A.E9.80.89.E5.92.8C.E5.8D.95.E9.80.89.E6.8C.89.E9.92.AE">多选和单选按钮</h3>
+ <p>另外两个元素是用于创建多选输入框和单选按钮。它们是按钮的变体。多选输入框元素(checkbox element)有多个选择项，可以被选或不选。单选按钮的用法相似，它有一个集合并且只能选择其中之一。</p>
+ <p>你可以像使用按钮的属性一样使用多选输入框和单选按钮。下面的例子向你展示一些简单的多选输入框和单选按钮。</p>
+ <pre>&lt;checkbox id="case-sensitive" checked="true" label="Case sensitive"/&gt;
+&lt;radio id="orange" label="Orange"/&gt;
+&lt;radio id="violet" selected="true" label="Violet"/&gt;
+&lt;radio id="yellow" label="Yellow"/&gt;
+</pre>
+ <p>第一行创建一个简单的 <code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/checkbox" title="checkbox">checkbox</a></code></code>。当用户点击多选项，它在选中和非选中之间切换。<code><code id="a-checked"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/checked">checked</a></code></code> 属性可以用在表明它的默认状态。你可以将它的值设为<code>true</code>或者<code>false</code>。<code><code id="a-label"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code></code>属性可以用于设置显示在多选项旁边的文本。对于<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/radio" title="radio">radio</a></code></code> 按钮，你可以使用 <code><code id="a-selected"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/selected">selected</a></code></code> 属性代替 <code><code id="a-checked"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/checked">checked</a></code></code> 属性。设置它的值为 <code>true</code> 让默认选中其中的一个单选按钮，或者不选中其他的单选按钮。</p>
+ <h4 id=".E5.8D.95.E9.80.89.E9.A1.B9.E7.BB.84.E5.85.83.E7.B4.A0" name=".E5.8D.95.E9.80.89.E9.A1.B9.E7.BB.84.E5.85.83.E7.B4.A0">单选项组元素</h4>
+ <p>为了把单选按钮组合在一起，你需要用到<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code></code> 元素。 在单选按钮组中同一时间只允许其中的一个单选按钮被选中。在其中的一个中点击将会把同一组中的其他按钮都设成关闭。下面的例子很好地示范了这一点。</p>
+ <p><span id="%E4%BE%8B3"><a id="%E4%BE%8B3"></a><strong>例3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_inputs_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_inputs_3.xul">View</a></p>
+ <pre>&lt;radiogroup&gt;
+  &lt;radio id="orange" label="Orange"/&gt;
+  &lt;radio id="violet" selected="true" label="Violet"/&gt;
+  &lt;radio id="yellow" label="Yellow"/&gt;
+&lt;/radiogroup&gt;
+</pre>
+ <h4 id=".E5.B1.9E.E6.80.A7" name=".E5.B1.9E.E6.80.A7">属性</h4>
+ <p>像按钮一样，多选框和单选按钮可以用文本标签和图片进行包装，当它被按下时通过切换图片来表达选中或没选中。多选项有很多与按钮相同的属性:</p>
+ <dl>
+  <dt>
+   <code id="a-label"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code> </dt>
+  <dd>
+   在多选项或单选按钮上的文本标签。</dd>
+  <dt>
+   <code id="a-disabled"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code> </dt>
+  <dd>
+   设为<code>true</code> 或 <code>false</code> 去禁用或启用多选项或单选按钮。</dd>
+  <dt>
+   <code id="a-accesskey"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/accesskey">accesskey</a></code> </dt>
+  <dd>
+   用于选中元素的快捷键。字母会在标签中以下划线显示。</dd>
+ </dl>
+ <div class="highlight">
+  <p><span id="%E5%88%B0%E7%9B%AE%E5%89%8D%E4%B8%BA%E6%AD%A2%E6%96%87%E4%BB%B6%E6%9F%A5%E6%89%BE%E7%9A%84%E4%BE%8B%E5%AD%90"><a id="%E5%88%B0%E7%9B%AE%E5%89%8D%E4%B8%BA%E6%AD%A2%E6%96%87%E4%BB%B6%E6%9F%A5%E6%89%BE%E7%9A%84%E4%BE%8B%E5%AD%90"></a><strong>到目前为止文件查找的例子</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-inputs.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-inputs.xul">View</a></p>
+ </div>
+ <p>在下一节，我们将可以看到一些适用于<a href="/XUL_Tutorial:Numeric_Controls" title="XUL Tutorial:Numeric Controls">输入和选择数值</a>的元素。</p>
+ <div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Adding_Labels_and_Images" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:Numeric_Controls">下一页  »</a></p>
+</div></div>
+<p></p>

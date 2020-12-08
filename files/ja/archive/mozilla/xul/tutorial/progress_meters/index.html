@@ -1,0 +1,72 @@
+---
+title: プログレスメーター
+slug: Archive/Mozilla/XUL/Tutorial/Progress_Meters
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Progress_Meters
+---
+<p>
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:List_Controls" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Adding_HTML_Elements">次のページ  »</a></p>
+</div>
+<p>このセクションでは、プログレスメーターの作り方を見ていきます。
+</p><p><span id="Adding_a_Progress_Meter"></span>
+</p>
+<h3 id=".E3.83.97.E3.83.AD.E3.82.B0.E3.83.AC.E3.82.B9.E3.83.A1.E3.83.BC.E3.82.BF.E3.83.BC.E3.82.92.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B" name=".E3.83.97.E3.83.AD.E3.82.B0.E3.83.AC.E3.82.B9.E3.83.A1.E3.83.BC.E3.82.BF.E3.83.BC.E3.82.92.E8.BF.BD.E5.8A.A0.E3.81.99.E3.82.8B"> プログレスメーターを追加する </h3>
+<p>プログレスメーターは、実行中の操作がどのくらい進んだかを表示するためのバーです。
+このメーターを見かける典型的な場面は、ファイルをダウンロードしているときや、時間のかかる操作を実行しているときです。
+XUL には、こういったメーターを作るために使える、
+プログレスメーター (<code><a href="/ja/docs/Mozilla/Tech/XUL/progressmeter" title="progressmeter">progressmeter</a></code>) 要素があります。
+プログレスメーターには 2 種類あり、1 つは「既定 (<span style="color: green;">determinate</span>) 」、もう 1 つは「未定 (<span style="color: green;">undeterminate</span>) 」プログレスメーターになります。
+</p><p>既定プログレスメーターは、操作に必要な時間が判明しているときに使用します。
+このプログレスメーターは、操作の進み具合に応じて増えていき、端まで一杯になったときには、操作が完了しているはずであることを示します。
+このメーターは、サイズがわかっているファイルを、ダウンロードするダイアログなどで利用できます。
+</p><p>未定プログレスメーターは、操作にかかる時間が不明な場合に使用します。
+このプログレスメーターは、使用しているプラットフォームやテーマに応じて、「理髪店の回転灯」や「箱が左右にスライドする」ようなアニメーションをします。
+</p><p>既定プログレスメーター:
+<img alt="画像:prog-det.png">
+</p><p>未定プログレスメーター:
+<img alt="画像:prog-udet.png">
+</p><p>プログレスメーターの文法は以下の通りです。
+</p>
+<pre>&lt;progressmeter
+    id="identifier"
+    mode="determined"
+    value="50"/&gt;
+</pre>
+<p>各属性は以下の通りです。
+</p>
+<dl><dt> <code id="a-id"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code> </dt><dd> プログレスメーターの一意な識別子です
+</dd><dt> <a href="ja/XUL/Attribute/progressmeter.mode">mode</a> </dt><dd> プログレスメーターの種類です。この属性を <code>determined</code> と指定すると、そのプログレスメーターは、端まで達したことで処理の完了を示す、既定プログレスメーターになります。この属性を <code>undetermined</code> に指定すると、そのプログレスメーターは、処理にかかる時間が不明な場合に使う、未定プログレスメーターになります。この属性を指定しない場合、デフォルトの値は既定 (<code>determined</code>) になります。
+</dd><dt> <code id="a-value"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code> </dt><dd> プログレスメーターの現在の値です。 この属性は既定プログレスメーターでのみ意味があります。 設定値は 0 から 100 の間の<span style="border-bottom: 1px dashed green;" title="percentage">割合</span>を示す整数で指定しなければなりません。 設定値は処理の進行に合わせてスクリプトから変更していきます。
+</dd></dl>
+<p><span id="The_find_files_example"></span>
+</p>
+<h4 id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AE.E4.BE.8B" name=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E6.A4.9C.E7.B4.A2.E3.83.80.E3.82.A4.E3.82.A2.E3.83.AD.E3.82.B0.E3.81.AE.E4.BE.8B"> ファイル検索ダイアログの例 </h4>
+<div class="highlight">
+<p>それでは、作成中のファイル検索ダイアログにプログレスメーターを追加してみましょう。
+普通なら、検索にかかるファイルがいくつなのか、検索にどれだけ時間がかかるかのかは、事前にわからないため、未定プログレスメーターを使うところです。
+でも、開発中にずっとアニメーションしているのは気が散りますから、とりあえずは普通のやつを追加することにします。
+通常、プログレスメーターは、検索を実行している間だけ表示されると思います。プログレスメーターを出したり消したりするスクリプトは後のセクションで追加する予定です。
+</p>
+<pre class="eval">&lt;hbox&gt;
+   <span class="highlightred">&lt;progressmeter value="50" style="margin: 4px;"/&gt;</span>
+   &lt;spacer flex="1"/&gt;
+&lt;/hbox&gt;
+</pre>
+<p><img alt="画像:progress1.png">
+</p><p>ウィンドウ上でメーターが見えるように、<code>value</code> 属性を 50% と指定してあります。
+また、ウィンドウの端にくっつかないようにマージンを 4 ピクセルに指定しています。
+既に述べたように、検索が行なわれている間だけプログレスバーを表示させたいので、必要に応じて、スクリプトで表示したり隠したりします。
+</p><p><span id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"><a id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A4%9C%E7%B4%A2%E3%83%80%E3%82%A4%E3%82%A2%E3%83%AD%E3%82%B0%E3%81%AE%E4%BE%8B"></a><strong>ここまでのファイル検索ダイアログの例</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-progress.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-progress.xul">表示</a>
+</p>
+</div>
+<p>次のセクションでは、ウィンドウに、HTML を使って要素を追加する方法について学びます。
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:List_Controls" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Adding_HTML_Elements">次のページ  »</a></p>
+</div>
+
+<div class="noinclude">
+</div>

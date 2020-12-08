@@ -1,0 +1,40 @@
+---
+title: XUL_教程/增加标签和图像
+slug: Mozilla/Tech/XUL/Tutorial/Adding_Labels_and_Images
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_Labels_and_Images
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Adding_Buttons" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:Input_Controls">下一页  »</a></p>
+</div> <p></p>
+<p> </p>
+<p>这一章描述了向窗口中加入标签和图像的方法。另外，我们将看到如何将一些元素包含到一个组中。</p>
+<h3 id=".E6.96.87.E6.9C.AC.E5.85.83.E7.B4.A0" name=".E6.96.87.E6.9C.AC.E5.85.83.E7.B4.A0">文本元素</h3>
+<p>在不使用标记的情况下,你不能直接向XUL文件中插入文本，它也不会做任何显示。为了达到这个目的你使用如下两个XUL元素来完成。</p>
+<h4 id=".E6.A0.87.E7.AD.BE.E5.85.83.E7.B4.A0" name=".E6.A0.87.E7.AD.BE.E5.85.83.E7.B4.A0">标签元素</h4>
+<p>将文本加入到将文本加入到窗体中的一个最基本的方法就是使用<code><a href="/zh-CN/docs/Mozilla/Tech/XUL/label" title="label">label</a></code>元素。请看下面的例子：</p>
+<p><span id="Example_1"><a id="Example_1"></a><strong>Example 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_1.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_1.xul">View</a></p>
+<pre>&lt;label value="This is some text"/&gt;
+</pre>
+<p><code><code id="a-value"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/value">value</a></code></code>属性被用于指定要显示的文本。这样设置的文本在显示的时候不会换行，所以适合于较短的文本。这种语法适用于多数情况中使用的标签。</p>
+<p>如果文本需要换行，你可以如下例所示将文本放在开启和关闭元素之间：</p>
+<p><span id="Example_2"><a id="Example_2"></a><strong>Example 2</strong></span> :</p>
+<pre>&lt;label&gt;This is some longer text that will wrap onto several lines.&lt;/label&gt;
+</pre>
+<p>就像HTML，换行和多余的空格将被压缩为一个空格。 接下来, 我们可以在 <a href="/cn/XUL_Tutorial/Element_Positioning" title="cn/XUL_Tutorial/Element_Positioning">找到怎么去控制元素的宽度</a> 这样我们就可以很容易地控制换行。</p>
+<h5 id=".E6.93.8D.E4.BD.9C.28Control.29.E5.B1.9E.E6.80.A7" name=".E6.93.8D.E4.BD.9C.28Control.29.E5.B1.9E.E6.80.A7">操作(Control)属性</h5>
+<p>你可以使用 <code><code id="a-control"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/control">control</a></code></code> 属性去设置关联的标签。当用户在标签上进行点击操作时，已关联的控件就会被触发。<a href="/cn/Accessibility" title="cn/Accessibility">accessibility</a>这种关联的辅助操作很重要，这样屏幕阅读器就可以对选中的文本进行语音提示。设置<code>control</code>属性的值会触发与这个值对应的<code><code id="a-id"><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code></code>的元素。 <span id="Example_3"><a id="Example_3"></a><strong>Example 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_3.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_3.xul">View</a></p>
+<pre>&lt;label value="Click here:" control="open-button"/&gt;
+&lt;button id="open-button" label="Open"/&gt;
+</pre>
+<p>在上面这个例子中，在标签上点击会使得按钮被触发。</p>
+<h4 id=".E6.8F.8F.E8.BF.B0.28Descriptive.29.E5.85.83.E7.B4.A0" name=".E6.8F.8F.E8.BF.B0.28Descriptive.29.E5.85.83.E7.B4.A0">描述(Descriptive)元素</h4>
+<p>在没有一些特定的关联操作的文本时你可以使用 <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/description" title="description">description</a></code> 标签。 这个元素使用于在对话框的上面或实例的一组控制的文本提示信息. 与 <code><a href="/zh-CN/docs/Mozilla/Tech/XUL/label" title="label">label</a></code> 元素一样, 你既可以在 <code>value</code> 属性中指定单行的文本也可以在开合标签之间填充一大块的文本。在描述元素的大多数属性和文本内容的语法是与标签元素(label)是一样的。</p>
+<p><span id="%E4%BE%8B4"><a id="%E4%BE%8B4"></a><strong>例4</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_2.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_textimage_2.xul">View</a></p>
+<pre>&lt;description&gt;
+  This longer section of text is displayed.
+&lt;/description&gt;
+</pre>
+<p>从内部看, 标签元素(<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/label" title="label">label</a></code></code>)和描述元素( <code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/description" title="description">description</a></code></code>)是相同的。标签元素(<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/label" title="label">label</a></code></code>)用于有操作的标签，就像一个文本框(text field)。 操作属性仅仅为标签提供支持。 描述元素(<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/description" title="description">description</a></code></code>)用于其他描述性的情况，如对话框(<code><code><a href="/zh-CN/docs/Mozilla/Tech/XUL/dialog" title="dialog">dialog</a></code></code>)上面的提示信息文本。</p>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/zh-CN/docs/XUL_Tutorial:Adding_Buttons" style="float: left;">« 上一页</a><a href="/zh-CN/docs/XUL_Tutorial:Input_Controls">下一页  »</a></p>
+</div><p></p>

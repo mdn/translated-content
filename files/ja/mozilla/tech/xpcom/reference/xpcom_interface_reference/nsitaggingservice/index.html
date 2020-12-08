@@ -1,0 +1,180 @@
+---
+title: nsITaggingService
+slug: Mozilla/Tech/XPCOM/Reference/XPCOM_Interface_Reference/nsITaggingService
+tags:
+  - Interfaces
+  - 'Interfaces:Scriptable'
+  - Places
+  - XPCOM
+  - XPCOM API Reference
+  - XPCOM Interface Reference
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsITaggingService
+---
+<div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/places/public/nsITaggingService.idl" rel="custom">toolkit/components/places/public/nsITaggingService.idl</a></code><span style="text-align: right; float: right;"><a href="/ja/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+&gt;インタフェースはあるURIに対するタグの付与とその除去を行う機能、与えられたタグからURIを取り出す機能、およびあるURIに関連付けられた全てのタグを取得するメソッドを提供します。
+</span>
+
+  <div style="height: 42px; position: relative; padding: 2px; width: auto;">
+
+  <div style="top: 22px; font-size: 11px; position: absolute;">1.0</div>
+
+  <div style="top: 22px; font-size: 11px; position: absolute; left: 0px; text-align: right; float: right; width: 100%;">66</div>
+
+  <div style="height: 8px; top: 16px; background: #dd0000; left: 0px; position: absolute; width: 8.571428571428571%;"></div>
+
+<div style="height: 8px; top: 16px; left: 8.571428571428571%; background: #00dd00; position: absolute; width: 91.42857142857143%;" title="Introduced in Gecko 1.9 (Firefox 3)"></div>
+
+<div style="top: 0px; font-size: 11px; position: absolute; left: 8.571428571428571%;">Introduced</div>
+<div style="top: 22px; font-size: 11px; position: absolute; left: 8.571428571428571%;">Gecko 1.9</div>
+
+    <div style="height: 8px; top: 16px; left: 10.928571428571429%; background: #eeee00; position: absolute; width: 1%; border-radius: 4px; -webkit-border-radius: 4px;" title="Last changed in Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)"></div>
+
+</div>
+
+<div style="background: #eee; padding: 2px;">
+継承元: <code><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
+<span style="text-align: right; float: right;">最終更新: Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)</span></div>
+</div>
+
+<p>実装: <code>@mozilla.org/browser/tagging-service;1</code> このサービスを使うには以下のものを使用して下さい。</p>
+
+<pre class="eval">var taggingSvc = Components.classes["@mozilla.org/browser/tagging-service;1"]
+                           .getService(Components.interfaces.nsITaggingService);
+</pre>
+
+<h2 id="メソッドの概要">メソッドの概要</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="#tagURI.28.29">tagURI</a>(in <a href="/ja/XPCOM_Interface_Reference/nsIURI" title="ja/XPCOM_Interface_Reference/nsIURI">nsIURI</a> aURI, in <a href="/ja/XPCOM_Interface_Reference/NsIVariant" title="ja/XPCOM_Interface_Reference/NsIVariant">nsIVariant</a> aTags);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#untagURI.28.29">untagURI</a>(in <a href="/ja/XPCOM_Interface_Reference/nsIURI" title="ja/XPCOM_Interface_Reference/nsIURI">nsIURI</a> aURI, in <a href="/ja/XPCOM_Interface_Reference/NsIVariant" title="ja/XPCOM_Interface_Reference/NsIVariant">nsIVariant</a> aTags);</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/ja/XPCOM_Interface_Reference/NsIVariant" title="ja/XPCOM_Interface_Reference/NsIVariant">nsIVariant</a> <a href="#getURIsForTag.28.29">getURIsForTag</a>(in AString aTag);</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/ja/XPCOM_Interface_Reference/NsIVariant" title="ja/XPCOM_Interface_Reference/NsIVariant">nsIVariant</a> </code><code><a href="#getTagsForURI.28.29">getTagsForURI</a>(in <a href="/ja/XPCOM_Interface_Reference/nsIURI" title="ja/XPCOM_Interface_Reference/nsIURI">nsIURI</a> aURI, [任意] out unsigned long length, [retval, array, size_is(length)] out wstring aTags);</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="属性">属性</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">属性</td>
+   <td class="header">型</td>
+   <td class="header">説明</td>
+  </tr>
+  <tr>
+   <td><code>allTags</code></td>
+   <td><code><a href="/ja/XPCOM_Interface_Reference/NsIVariant" title="ja/XPCOM_Interface_Reference/NsIVariant">nsIVariant</a></code></td>
+   <td>データベース内で URI に付与したタグの全てを（名前順で）受け取ります。</td>
+  </tr>
+  <tr>
+   <td><code>tagContainerIconSpec</code></td>
+   <td><code><a href="/ja/AUTF8String" title="ja/AUTF8String">AUTF8String</a></code></td>
+   <td>タグコンテナアイコンの URL 仕様を受け取ります</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="メソッド">メソッド</h2>
+
+<h3 id="tagURI.28.29" name="tagURI.28.29"><a name="tagURI()">tagURI()</a></h3>
+
+<p>与えられたタグのセットをある URI に付与します。 URI が持つ現在のタグのセットはそのまま残ります。 <code>aTags</code> に含まれるタグのうち、既に与えられた URI にセットされているものがあればそれは無視されます。</p>
+
+<pre class="eval"> void tagURI(
+  in nsIURI aURI,
+  in nsIVariant aTags
+);
+</pre>
+
+<h6 id="引数">引数</h6>
+
+<dl>
+ <dt><code>aURI</code></dt>
+ <dd>タグ付けする URI です。</dd>
+ <dt><code>aTags</code></dt>
+ <dd>与えられた URI に対して付与するタグの配列です。</dd>
+</dl>
+
+<h3 id="untagURI.28.29" name="untagURI.28.29"><a name="untagURI()">untagURI()</a></h3>
+
+<p>ある URI からタグを取り除きます。 aTags に含まれるタグのうち、与えられた URI に設定されていないものは無視されます。</p>
+
+<pre class="eval"> void untagURI(
+  in nsIURI aURI,
+  in nsIVariant aTags
+);
+</pre>
+
+<h6 id="Parameters_2" name="Parameters_2">引数</h6>
+
+<dl>
+ <dt><code>aURI</code></dt>
+ <dd>タグ付けを解除する URI です。</dd>
+ <dt><code>aTags</code></dt>
+ <dd>URI から取り除くタグの配列です。NULL を渡すと与えられた URI から全てのタグを取り除きます。</dd>
+</dl>
+
+<h3 id="getURIsForTag.28.29" name="getURIsForTag.28.29"><a name="getURIsForTag()">getURIsForTag()</a></h3>
+
+<p>このメソッドは、与えられたタグが付与されている全ての URI を取得します。</p>
+
+<pre class="eval"> nsIVariant getURIsForTag(
+  in AString aTag
+);
+</pre>
+
+<h6 id="Parameters_3" name="Parameters_3">引数</h6>
+
+<dl>
+ <dt><code>aTag</code></dt>
+ <dd>タグ名です。</dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value">返値</h6>
+
+<p><code>aTag</code> で指定されたタグが付与された全ての URI の配列</p>
+
+<h3 id="getTagsForURI.28.29" name="getTagsForURI.28.29"><a name="getTagsForURI()">getTagsForURI()</a></h3>
+
+<p>与えられたURIに付与されている全てのタグを取得します。</p>
+
+<pre class="eval">nsIVariant getTagsForURI(
+  in nsIURI aURI,
+  [任意] out unsigned long length,
+  [retval, array, size_is(length)] out wstring aTags
+);
+</pre>
+
+<h6 id="Parameters_4" name="Parameters_4">引数</h6>
+
+<dl>
+ <dt><code>aURI</code></dt>
+ <dd>タグを返す URI です。</dd>
+ <dt><code>length</code> <span class="inlineIndicator optional optionalInline">Optional</span></dt>
+ <dd>戻る際に aTags に返されたタグの数が入ります。任意ですが、 Gecko 2.0 より前は必須の引数でした。</dd>
+ <dt><code>aTags</code></dt>
+ <dd>戻る際に URI に付与されたタグの配列が入ります。</dd>
+</dl>
+
+<h6 id="Return_value_2" name="Return_value_2">返値</h6>
+
+<p>タグの配列（名前順）です。</p>
+
+<h3 id="関連情報">関連情報</h3>
+
+<ul>
+ <li><a href="/ja/Places" title="ja/Places">Places</a></li>
+ <li><a href="/ja/Using_the_Places_tagging_service" title="ja/Using_the_Places_tagging_service">Using the Places tagging service</a></li>
+</ul>

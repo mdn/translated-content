@@ -1,0 +1,111 @@
+---
+title: Firefox OS 1.1 pour les développeurs
+slug: Archive/B2G_OS/Releases/1.1
+tags:
+  - Firefox OS
+  - Notes de version
+translation_of: Archive/B2G_OS/Releases/1.1
+---
+<div class="summary">
+<p><span class="seoSummary">Firefox OS 1.1 est une pré-version de Firefox OS, initialement distribuée auprès des partenaires pour être publiée le 21 octobre 2013. Son composant Gecko est basé sur Firefox 18 (voir <a href="/fr/docs/Mozilla/Firefox/Versions/18" title="/en-US/docs/Mozilla/Firefox/Releases/24">Firefox 18 pour les développeurs</a>) tout comme pour <a href="/en-US/Firefox_OS/Releases/1.0.1">Firefox OS 1.0.1</a>, mais avec certaines corrections de bogues supplémentaires et l'ajout d'APIs. Cette page détaille les fonctionnalités pour développeur nouvellement implémentées dans Firefox OS 1.1.</span></p>
+</div>
+
+<h2 id="HTML">HTML</h2>
+
+<p>Spécifique à Firefox OS :</p>
+
+<ul>
+ <li><code>&lt;input type="file"&gt;</code> activé (voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=832923" title="FIXED: Implement &lt;input type='file'> on B2G">bug 832923</a> pour les détails).</li>
+</ul>
+
+<h2 id="JavaScript">JavaScript</h2>
+
+<p>Spécifique à Firefox OS :</p>
+
+<ul>
+ <li>Lors de la détection du support <code>&lt;video&gt;</code> pour différents formats, <code>HTMLMediaElement.prototype.canPlayType</code> retourne à présent de manière correcte <code>false</code> pour les vidéos h.264.</li>
+</ul>
+
+<h2 id="DOMAPI">DOM/API</h2>
+
+<p>Spécifique à Firefox OS :</p>
+
+<ul>
+ <li><span id="summary_alias_container"><span id="short_desc_nonedit_display">API Device Storage : Lors de l'obtention d'un curseur à partir de <code>navigator.getDeviceStorage("sdcard").enumerate</code>, <code><span id="summary_alias_container"><span id="short_desc_nonedit_display">this.done</span></span></code> est indéfini (voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=902565" title='this.done in cursor callback of naviagtor.getDeviceStorage("sdcard").enumerate is undefined'>bug 902565</a>). Cela est corrigé dans Firefox 1.2. Le bogue référencé aborde de possibles vérifications de compatibilité/contournements pour ce problème. </span></span></li>
+ <li>Les APIs relatives aux SMS, MMS et MobileMessage sont arrivées
+  <ul>
+   <li><a href="/fr/docs/Web/API/Window/navigator/mozMobileMessage" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>window.navigator.mozMobileMessage</code></a></li>
+   <li><a href="/fr/docs/Web/API/Window/navigator/mozSms" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>window.navigator.mozSms</code></a></li>
+   <li><a href="/fr/docs/Web/API/MozMmsEvent" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>MozMmsEvent</code></a></li>
+   <li><a href="/fr/docs/Web/API/MozMmsMessage" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>MozMmsMessage</code></a></li>
+   <li><a href="/fr/docs/Web/API/MozMobileMessageManager" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>MozMobileMessageManager</code></a></li>
+   <li><a href="/fr/docs/Web/API/MozMobileMessageThread" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>MozMobileMessageThread</code></a></li>
+   <li><a href="/fr/docs/Web/API/MozSmsEvent" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>MozSmsEvent</code></a></li>
+   <li><a href="/fr/docs/Web/API/MozSmsFilter" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>MozSmsFilter</code></a></li>
+   <li><a href="/fr/docs/Web/API/MozSmsManager" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>MozSmsManager</code></a></li>
+   <li><a href="/fr/docs/Web/API/MozSmsMessage" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>MozSmsMessage</code></a></li>
+   <li><a href="/fr/docs/Web/API/MozSmsSegmentInfo" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>MozSmsSegmentInfo</code></a></li>
+   <li>nsIMobileMessageCallback (API interne à Gecko)</li>
+   <li>nsIMobileMessageCursorCallback (API interne à Gecko)</li>
+   <li>nsIMobileMessageService (API interne à Gecko)</li>
+   <li>nsIMobileMessageDatabaseService (API interne à Gecko)</li>
+   <li>nsIMmsService (API interne à Gecko)</li>
+   <li>
+    <div>nsISmsService (API interne à Gecko)</div>
+   </li>
+  </ul>
+ </li>
+ <li><a href="/en-US/docs/WebAPI/Simple_Push">Simple Push</a> (API de notifications Push) est arrivé</li>
+ <li><a href="http://help.vodafone.co.nz/app/answers/detail/a_id/3230">WAP Push</a> est arrivé</li>
+</ul>
+
+<h2 id="Support_HD_dans_Firefox_OS">Support HD dans Firefox OS</h2>
+
+<p>Depuis Firefox OS 1.1, il existe des versions HD disponibles pour apporter ce support à des appareils avec écrans à haute densité. Il s'agit principalement d'un changement visuel uniquement, traité de la même façon que s'il s'agissait d'autres appareils de résolutions différentes, et rien de plus ne sera visible comme différence au niveau de la plate-forme sous-jacente.</p>
+
+<h2 id="Problèmes_corrigés_dans_Firefox_OS">Problèmes corrigés dans Firefox OS</h2>
+
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=817972">817972</a> : [Bluetooth][File-Transfer] Support du transfert de plusieurs fichiers.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=834672">834672</a>: AppProtocolHandler.js ne devrait pas lever d'exception.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=839500">839500</a> : identity.js, dans Gaia, ouvre un processus navigateur qui reste bloqué en avant-plan. Par conséquent, si vous ouvrez l'application marketplace, vous perdez ~10% de mémoire disponible jusqu'au redémarrage du téléphone.</li>
+ <li>Correction mémoire pour les connexions Persona.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=834773">834773</a>: Utiliser l'activité Choisir et valider une image pour la galerie — l'application se bloque sans percevoir de résutat pendant 5–10 secondes</li>
+</ul>
+
+<p><a href="http://mzl.la/1bqXGXS">Plantages résolus</a></p>
+
+<h2 id="Fonctionnalités_notables_de_Firefox_OS_1.1">Fonctionnalités notables de Firefox OS 1.1</h2>
+
+<ul>
+ <li>Le support des Messages Multimédia (MMS) a été ajouté à l'application des messages ce qui permet d'envoyer des images, vidéos et sons aux contacts, ou un message textuel à plusieurs personnes en même temps.</li>
+ <li>L'enregistrement des images, vidéo et sons depuis le navigateur est maintenant géré.</li>
+ <li>Les contacts des comptes de messagerie peuvent à présent être importés depuis Gmail et Windows Live Mail (Outlook).</li>
+ <li>Le téléchargement des pièces-jointes graphiques, audio et vidéo a été implémenté.</li>
+ <li>Les images de la Galerie peuvent maintenant être mises en pièce-jointe et envoyées.</li>
+ <li>Le mode brouillon pour les courriels a été implémenté.</li>
+ <li>Améliorations du téléphone et des contacts, comme la possibilité d'ajouter facilement un numéro composé à un contact existant ou l'affichage de suggestions pour trouver facilement des contacts.</li>
+ <li>Implémentation de diffusion cellulaire pour la distribution simultanée de messages d'urgence aux utilisateurs abonnés.</li>
+ <li>Améliorations significatives des performances concernant la vitesse du défilement et du lancement des applications.</li>
+ <li>Recherche dans <strong>Musique</strong> pour trouver de la musique par artiste, album ou titre de chanson.</li>
+ <li>Firefox OS offre des fonctionnalités dans l'<strong>Agenda</strong> telles que :
+  <ul>
+   <li>Vues séparées pour les détails et l'édition.</li>
+   <li>Sélection d'une notification sonore d'alarme.</li>
+   <li>Création d'un événement directement à une date et une heure spécifiques.</li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="http://www.mozilla.org/en-US/firefox/os/notes/1.1/" title="http://www.mozilla.org/en-US/firefox/os/notes/1.1/">Notes de Firefox OS 1.1</a></li>
+</ul>
+
+<h2 id="Anciennes_versions">Anciennes versions</h2>
+
+<p></p><div class="multiColumnList">
+<ul>
+<li><a href="/fr/docs/Mozilla/Firefox_OS/Versions/1.0.1">Firefox OS 1.0.1 pour les développeurs</a></li></ul>
+</div><p></p>

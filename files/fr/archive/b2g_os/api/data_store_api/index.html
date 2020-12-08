@@ -1,0 +1,203 @@
+---
+title: Data Store API
+slug: Archive/B2G_OS/API/Data_Store_API
+tags:
+  - API
+  - Certified
+  - Firefox OS
+  - Interface
+  - Non-standard
+  - Obsolete
+  - Reference
+  - WebAPI
+translation_of: Archive/B2G_OS/API/Data_Store_API
+---
+<div>
+<div class="blockIndicator nonStandard nonStandardHeader">
+<p><strong>Non-standard</strong><br>
+ Cette fonctionnalité ne fait pas partie des normes actuelles du W3C, mais elle est prise en charge sur la plate-forme Firefox OS. Bien que les implémentations puissent changer à l'avenir et qu'il ne soit pas largement pris en charge par les navigateurs, il convient pour une utilisation dans le code dédié aux applications Firefox OS.</p>
+</div>
+
+<div class="blockIndicator warning">
+<p style="text-align: center;">Cette API est disponible sur <a href="/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a> pour <a href="/en-US/docs/Mozilla/Firefox_OS/Security/Application_security#App_Types">les applications internes</a> uniquement.</p>
+</div>
+</div>
+
+<div class="summary">
+<p>L'<strong>API Data Store</strong> fournit un mécanisme de stockage puissant et flexible que les applications Firefox OS peuvent utiliser pour stocker et partager des données. Il s’agit en fait d’un magasin intermédiaire permettant à plusieurs applications de partager des données entre elles rapidement, efficacement et en toute sécurité, malgré les différences entre les structures de données des API, les formats, etc.</p>
+</div>
+
+<h2 id="Concepts_et_usages">Concepts et usages</h2>
+
+<p>L'API Data Store a été créée pour permettre à plusieurs applications <a href="/en-US/Firefox_OS">Firefox OS</a>, avec des structures de données et des mécanismes de stockage potentiellement différents, de créer, de maintenir et de partager efficacement les mêmes objets de données entre elles. Chaque application peut ensuite importer les données dans sa propre base <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> locale pour indexer en fonction de leurs besoins en matière de requête. Cela n'est toutefois pas nécessaire et vous pouvez simplement écrire directement dans le magasin de données de l'API du magasin de données.</p>
+
+<div class="note">
+<p><strong>Note</strong>: Pour plus d'informations concernant le fonctionnement de l'API Data Store avec des exemples, consultez notre article <a href="/en-US/docs/Web/API/Data_Store_API/Using_the_Data_Store_API">Utiliser l'API Data Store</a>.</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: L'API Data Store est disponible dans <a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Web Workers</a>, à partir de Firefox 32 (Firefox OS 2.0; voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=949325" title="FIXED: C++ wrapper to support DataStore API on the worker">bug 949325</a>.)</p>
+</div>
+
+<p>Il y a plusieurs raisons d'utiliser cette API, comme :</p>
+
+<ul>
+ <li><span class="tlid-translation translation" lang="fr"><span title="">Permettre</span></span><span class="tlid-translation translation" lang="fr"><span title=""> à une application de créer des données qu’elle peut ensuite partager avec d’autres applications.</span></span></li>
+ <li><span class="tlid-translation translation" lang="fr"><span title="">Permettre à plusieurs applications de fournir des données au même</span></span> data store.</li>
+ <li><span class="tlid-translation translation" lang="fr"><span title="">Permettre la lecture seule des data stores tels que les contacts Facebook (en d’autres termes, il permet à une application de créer et de gérer les données, tandis que d’autres applications peuvent seulement lire les données du store)</span></span>.</li>
+ <li><span class="tlid-translation translation" lang="fr"><span title="">Permettre la lecture/écriture du data store, de sorte que plusieurs applications puissent contribuer sur le même data store.</span> <span title="">Un exemple serait les contacts standard de l'appareil, qui peuvent être mis à jour à la fois par l'application Contacts intégrée et par les applications tierces.</span></span></li>
+ <li><span class="tlid-translation translation" lang="fr"><span title="">Permettre la conservation du cache de stockage local de données d'un data store, avec des notifications permettant à l'application de savoir quand des modifications ont été apportées au data store principal afin que le cache puisse être mis à jour.</span></span></li>
+</ul>
+
+<p>Chaque data store appartient à une application spécifique (comme spécifié par le champ <code>datastores-owned</code> dans le manifeste de l'application - voir <a href="#Manifest_fields">Manifest_fields</a>, ci-dessous). Cette propriété donne à l'application le droit de remplir le data store et de déclarer si le magasin de données est <code>readonly</code> (ce qui signifie que les autres applications ne peuvent lire que les données) ou <code>readwrite</code> (ce qui signifie que d'autres applications peuvent modifier les données ainsi que les lire.) Les autres applications peuvent accéder à un data store en le nommant dans le champ <code>datastores-access</code> de son manifeste. </p>
+
+<p>Lorsqu'une application souhaite accéder à un data store, elle doit appeler <a href="/en-US/docs/Web/API/Navigator/getDataStores" title="The documentation about this has not yet been written; please consider contributing!"><code>Navigator.getDataStores()</code></a>. La valeur résultante de cette méthode est un objet <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value."><code>Promise</code></a> qui sera résolu avec un tableau d'objets <a href="/en-US/docs/Web/API/DataStore" title="The documentation about this has not yet been written; please consider contributing!"><code>DataStore</code></a>. À partir de ces objets <code>DataStore</code>, l'application peut lire et modifier des valeurs à l'aide de différentes méthodes du <code>DataStore</code> telles que <a href="/en-US/docs/Web/API/DataStore/get" title="The documentation about this has not yet been written; please consider contributing!"><code>DataStore.get()</code></a> et <a href="/en-US/docs/Web/API/DataStore/insert" title="The documentation about this has not yet been written; please consider contributing!"><code>DataStore.insert()</code></a>.</p>
+
+<div class="note">
+<p><strong>Note</strong>: L'API Data Store n'impose pas pour le moment de limitations sur l'espace de stockage. Cela sera surement changé dans un futur proche.</p>
+</div>
+
+<h3 id="Gestion_du_changement_et_résolution_des_conflits">Gestion du changement et résolution des conflits</h3>
+
+<p>Quand plusieurs applications effectuent des changements dans un data store, cela peut créer des conflits. Cependant, toutes les modifications effectuées ( en utilisant <a href="/en-US/docs/Web/API/DataStore/update" title="The documentation about this has not yet been written; please consider contributing!"><code>DataStore.update()</code></a>, <a href="/en-US/docs/Web/API/DataStore/add" title="The documentation about this has not yet been written; please consider contributing!"><code>DataStore.add()</code></a>, reçoivent un <code>revisionId</code>, un UUID reçu dans l'évenement <code>change</code> est déclenché chaque fois qu'une opération est effectuée sur le data store par une application ayant accès à celui-ci. Cela peut être lu à partir de la propriété <a href="/en-US/docs/Web/API/DataStore/revisionId" title="The documentation about this has not yet been written; please consider contributing!"><code>DataStore.revisionId</code></a></p>
+
+<p>La propriété <code>revisionId</code> peut être incluse en tant que paramètre facultatif dans les méthodes <a href="/en-US/docs/Web/API/DataStore/add" title="The documentation about this has not yet been written; please consider contributing!"><code>DataStore.add()</code></a>, <a href="/en-US/docs/Web/API/DataStore/put" title="The documentation about this has not yet been written; please consider contributing!"><code>DataStore.put()</code></a>, <a href="/en-US/docs/Web/API/DataStore/remove" title="The documentation about this has not yet been written; please consider contributing!"><code>DataStore.remove()</code></a>, <a href="/en-US/docs/Web/API/DataStore/clear" title="The documentation about this has not yet been written; please consider contributing!"><code>DataStore.clear()</code></a>, and <a href="/en-US/docs/Web/API/DataStore/sync" title="The documentation about this has not yet been written; please consider contributing!"><code>DataStore.sync()</code></a>. Elles utilisent essentiellement <code>revisionId</code> pour éviter les conflit - l'opération est annulée si cette <code>revisionId</code> n'est pas la dernière connue par le data store (c'est-à-dire si une autre application a apporté une modification plus récente).</p>
+
+<p>Lorsque l'événement <code>change</code> est déclenché, il reçoit un objet <a href="/en-US/docs/Web/API/DataStoreChangeEvent" title="The documentation about this has not yet been written; please consider contributing!"><code>DataStoreChangeEvent</code></a>, donnant à l'application l'accès à:</p>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/DataStoreChangeEvent/revisionId" title="The documentation about this has not yet been written; please consider contributing!"><code>DataStoreChangeEvent.revisionId</code></a>: Le <code>revisionId</code> le plus récent.</li>
+ <li><a href="/en-US/docs/Web/API/DataStoreChangeEvent/id" title="The documentation about this has not yet been written; please consider contributing!"><code>DataStoreChangeEvent.id</code></a>: La clef du dernier objet changé, qui peut être vide si l'opération etait  <code>clear()</code>.</li>
+ <li><a href="/en-US/docs/Web/API/DataStoreChangeEvent/operation" title="The documentation about this has not yet been written; please consider contributing!"><code>DataStoreChangeEvent.operation</code></a>: L'opération qui a été effectuée — <code>add()</code>, <code>remove()</code>, etc.</li>
+ <li><a href="/en-US/docs/Web/API/DataStoreChangeEvent/owner" title="The documentation about this has not yet been written; please consider contributing!"><code>DataStoreChangeEvent.owner</code></a>: L'URl du manifest de l'application qui a effectué cette oppération.</li>
+</ul>
+
+<p>Quand une application veut savoir ce qui a changé, elle peut le faire en demandant le "delta" entre le dernier <code>revisionId</code> et l'actuel. Cela s'effectue avec la méthode <a href="/en-US/docs/Web/API/DataStore/sync" title="The documentation about this has not yet been written; please consider contributing!"><code>DataStore.sync()</code></a> . Vous pouvez autoriser votre application à gérer les changements des données en utilisant <code>sync()</code> lors du démarage de l'application et <a href="/en-US/docs/Web/API/Onchange" title="The documentation about this has not yet been written; please consider contributing!"><code>onchange</code></a> en lui passant le<code>revisionId</code> actuel pour vérifier de nouveau.</p>
+
+<h3 id="Filtrage_des_donnée">Filtrage des donnée</h3>
+
+<p>Comme indiqué ci-dessus, l'API Data Store n'est pas responsable du filtrage des données ni de la création d'index. Au lieu de cela, elle laisse cela au mécanisme de stockage local de l'application (généralement  <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>); L'API Data Store permet simplement de mettre à jour les index locaux, via l'objet <a href="/en-US/docs/Web/API/DataStoreCursor" title="The documentation about this has not yet been written; please consider contributing!"><code>DataStoreCursor</code></a>, créé lors de l'appel de <code>sync()</code>.</p>
+
+<h2 id="Champs_du_manifest">Champs du manifest</h2>
+
+<p>Le manifest propriétaire du data store DOIT inclure le champ <code>datastores</code> pourrevendiquer la propriété, par exemple :</p>
+
+<pre class="brush: json">"datastores-owned": {
+  "myData": {
+    "access": "readwrite",
+    "description": "mon data store"
+  }
+}
+</pre>
+
+<p>Vous pouvez inclure différentes propriétés pour représenter différents data stores, et chacun peut utiliser <code>readonly</code>/<code>readwrite</code> pour spécifier si le data store peut être lu / modifié par d'autres applications. Une description est également incluse pour décrire le data store.</p>
+
+<p>Les autres application qui veulent accèder au data store mais qui ne leur appartient pas doivent inclure le champ<code>datastores-access</code> , par exemple :</p>
+
+<pre class="brush: json">"datastores-access": {
+  "myData": {
+    "access": "readonly",
+    "description": "Lire et modifier mon data store"
+  }
+}
+</pre>
+
+<p>Sans ce champ, la réponse par défaut est "no access". Encore, plusieurs propriétées peuvent être incluses si vous voulez accèder à plusieurs data stores, et un accès <code>readonly</code> ou <code>readwrite</code> peut être mis pour déclarer le type d'accès dont l'application a besoin.</p>
+
+<p>En termes de permissions, le propriétaire du data store gagne toujours contre les applications tières. Si le propriétaire déclare <code>"readonly": true</code> dans le manifest, toutes les applications tières seront <code>readonly</code>, même si elles déclarent <code>"access": "readwrite"</code> dans leur manifest. Bien sûr, cela n’est pas très utile si le propriétaire autorise la modification du magasin de données par des applications tierces. Pour le moment, Data Store est une API certifiée. Il est probable que les privilèges reviendront à la finalisation du modèle de sécurité.</p>
+
+<div class="note">
+<p><strong>Note</strong>: Rappelez-vous également que dans de tels cas, vous devez utiliser le champ <a href="https://developer.mozilla.org/en-US/Apps/Build/Manifest#type">type</a> de votre manifeste pour déclarer explicitement que votre application est une application interne / certifiée : <code>"type": "certified"</code>.</p>
+</div>
+
+<h2 id="Interfaces_de_l'API_Data_Store">Interfaces de l'API Data Store</h2>
+
+<p>L'API Data Store contient les interfaces suivantes :</p>
+
+<dl>
+ <dt><a href="/en-US/docs/Web/API/DataStore" title="The documentation about this has not yet been written; please consider contributing!"><code>DataStore</code></a></dt>
+ <dd>L'interface <strong><code>DataStore</code></strong> représente  un ensemble de données récupérées, et inclut des propriétés standards pour accèder au nom du store, le propriétaire, etc. mais aussi des méthodes pour lire, modifier et syncroniser les données, et le gestionnaire d'évenements  <code>onchange</code> pour réagire aux changements dans les données.</dd>
+ <dt><a href="/en-US/docs/Web/API/DataStoreCursor" title="The documentation about this has not yet been written; please consider contributing!"><code>DataStoreCursor</code></a></dt>
+ <dd>Cette interface permet à l'application de parcourir une liste d'objets  <a href="/en-US/docs/Web/API/DataStoreTask" title="The documentation about this has not yet been written; please consider contributing!"><code>DataStoreTask</code></a> représentant l'historique des changements du data store, pour utiliser lors de la syncronisation des données.</dd>
+ <dt><a href="/en-US/docs/Web/API/DataStoreChangeEvent" title="The documentation about this has not yet been written; please consider contributing!"><code>DataStoreChangeEvent</code></a></dt>
+ <dd>Cette interface représente l'évenement lié à un enregistrement changé dans le data store, par exemple elle est renvoyée une fois qu'une modification est effectuée et que l'événement <code>change</code> est déclenché (voir <a href="/en-US/docs/Web/API/DataStore/onchange" title="The documentation about this has not yet been written; please consider contributing!"><code>DataStore.onchange</code></a> pour le gestionnaire), à utiliser lors de la synchronisation de modifications individuelles.</dd>
+ <dt><a href="/en-US/docs/Web/API/DataStoreTask" title="The documentation about this has not yet been written; please consider contributing!"><code>DataStoreTask</code></a></dt>
+ <dd>Cette interface représente un enregistrement changé dans le data store quand  est utilisé pour parcourir l'historique des modifications du data store.</dd>
+</dl>
+
+<h2 id="Example" name="Example">Exemples</h2>
+
+<p>Nous avons écrit quelques exemples qui vont ensemble, pour expliquer comment différentes applications peuvent avoir différents usages du même data store :</p>
+
+<ul>
+ <li><a href="https://github.com/mdn/data-store-contacts-editor">L'éditeur de contacts Data Store</a> crée un data store nommé "contacts" sur la machine sur laquelle il est installé, ajoute quelques données et autorise l'utilisateur à ajouter et supprimer des contacts.</li>
+ <li><a href="https://github.com/mdn/data-store-contacts-viewer">Le visionneur de contacts Data Store</a> a un accès en lecture uniquement au data store "contacts". Il lit les données et les affiche à l'utilisateur via une interface, avec une carte Google Maps de l'emplacement de l'utilisateur sélectionné, affiché dans un <a href="/en-US/docs/Web/HTML/Element/iframe" title="The HTML Inline Frame element (&lt;iframe>) represents a nested browsing context, embedding another HTML page into the current one."><code>&lt;iframe&gt;</code></a> pour contourner les restrictions CSP des applications certifiées.</li>
+</ul>
+
+<p>Continuez à vous référer à ces exemples et lisez <a href="/en-US/docs/Web/API/Data_Store_API/Using_the_Data_Store_API">Utilisation de l'API Data Store</a> pour des explications et des exemples de code.</p>
+
+<div class="note">
+<p><strong>Note</strong>: Sachez que pour tester des exemples de magasin de données, vous devez vous assurer que vos applications sont internes / certifiées (voir ci-dessus pour les champs de manifeste nécessaires) et utilisez App Manager ou WebIDE pour simuler un environnement dans lequel une application interne / certifiée peut être exécutée. Suivez ces liens pour savoir comment faire cela en utilisant chaque outil: <a href="/en-US/Firefox_OS/Using_the_App_Manager#Debugging_Certified_Apps_2">App Manager: Debugger les applications certifiées</a> et <a href="/en-US/docs/Tools/WebIDE#Debugging_certified_apps_%28including_main_process%29">WebIDE: Debugger les applications certifiées</a>.</p>
+</div>
+
+<h2 id="Caractéristiques">Caractéristiques</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Caractéristiques</th>
+   <th scope="col">Statut</th>
+   <th scope="col">Commentaires</th>
+  </tr>
+  <tr>
+   <td><a class="external" href="https://airpingu.github.io/data-store-api/index.html" hreflang="en" lang="en" title="The 'Data Store API' specification">API Data Store</a></td>
+   <td><span class="spec-Draft">Brouillon</span></td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+
+
+<p>La discussion concernant la création de cette API a eu lieu dans diverses <a href="https://lists.mozilla.org/listinfo">listes de diffusion Mozilla</a> et ailleurs. Vous trouverez un résumé de la discussion et d'autres indications sur le <a href="https://wiki.mozilla.org/WebAPI/DataStore">Wiki de Mozilla</a>. Pour plus d'informations et de questions, envoyez un courrier à la liste de diffusion <a href="https://lists.mozilla.org/listinfo/dev-webapi">dev-webapi</a>.</p>
+
+<h2 id="Compatibilité">Compatibilité</h2>
+
+<div>Supporté dans Firefox OS 1.0.1.</div>
+
+<div>Disponible dans web workers dans Firefox OS 2.0.</div>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/Data_Store_API/Using_the_Data_Store_API">Utiliser l'API Data Store</a></li>
+ <li><a href="https://github.com/mdn/data-store-contacts-editor">Éditeur de contacts Data Store</a></li>
+ <li><a href="https://github.com/mdn/data-store-contacts-viewer">Visionneur de contacts Data Store</a></li>
+</ul>
+
+<section id="Quick_Links">
+<h3 id="Liens">Liens</h3>
+
+<ol>
+ <li data-default-state="open"><strong><a href="#">Guides</a></strong>
+
+  <ol>
+   <li><a href="/en-US/docs/Web/API/Data_Store_API/Using_the_Data_Store_API">Utiliser l'API Data Store</a></li>
+  </ol>
+ </li>
+ <li data-default-state="open"><strong><a href="#">Exemples</a></strong>
+  <ol>
+   <li><a href="https://github.com/mdn/data-store-contacts-editor">Éditeur de contacts Data Store</a></li>
+   <li><a href="https://github.com/mdn/data-store-contacts-viewer">Visionneur de contacts Data Store</a></li>
+  </ol>
+ </li>
+ <li data-default-state="open"><strong><a href="#">Interfaces</a></strong>
+  <ol>
+   <li><a href="/en-US/docs/Web/API/DataStore" title="The documentation about this has not yet been written; please consider contributing!"><code>DataStore</code></a></li>
+   <li><a href="/en-US/docs/Web/API/DataStoreCursor" title="The documentation about this has not yet been written; please consider contributing!"><code>DataStoreCursor</code></a></li>
+   <li><a href="/en-US/docs/Web/API/DataStoreChangeEvent" title="The documentation about this has not yet been written; please consider contributing!"><code>DataStoreChangeEvent</code></a></li>
+   <li><a href="/en-US/docs/Web/API/DataStoreTask" title="The documentation about this has not yet been written; please consider contributing!"><code>DataStoreTask</code></a></li>
+  </ol>
+ </li>
+</ol>
+</section>

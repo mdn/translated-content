@@ -1,0 +1,64 @@
+---
+title: window.importDialog
+slug: Web/API/Window/importDialog
+tags:
+  - Traduction_à_relire
+translation_of: Archive/Web/Window.importDialog
+---
+<p>{{ ApiRef() }}</p>
+<div class="note">
+ Cette page vient d'être traduite, mais elle a besoin d'un relecteur différent du traducteur. Pensez également à toujours vérifier le contenu avec sa toute dernière version en anglais.</div>
+<h2 id="Résumé">Résumé</h2>
+<p>Puisque ouvrir une nouvelle fenêtre sur une plateforme mobile n'est pas vraiment approprié, l'équipe de Firefox Mobile a créé la méthode <code>importDialog()</code> pour remplacer {{ domxref("window.openDialog()") }}. Au lieu d'ouvrir une nouvelle fenêtre, elle fusionne l'élément XUL <code>dialog</code> spécifié avec la fenêtre principale.</p>
+<h2 id="Syntaxe">Syntaxe</h2>
+<pre><em>newDialog</em> = importDialog(<em>aParent</em>, <span style="font-style: italic;">aSrc</span>, aArguments)
+</pre>
+<dl>
+ <dt>
+  <code>newDialog</code></dt>
+ <dd>
+  La fenêtre ouverte.</dd>
+ <dt>
+  <code>aParent</code></dt>
+ <dd>
+  L'élément parent de la boîte de dialogue. Peut être <code>null</code>.</dd>
+ <dt>
+  <code>aSrc</code></dt>
+ <dd>
+  L'URL chrome vers la boîte de dialogue XUL.</dd>
+ <dt>
+  <code>aArguments</code></dt>
+ <dd>
+  Un objet JavaScript contenant les données à passer à la boîte de dialogue.</dd>
+</dl>
+<h2 id="Exemple">Exemple</h2>
+<pre class="eval language-html"><em>newDialog</em> = importDialog(<em>aParent</em>, <span style="font-style: italic;">aSrc</span>, aArguments)
+</pre>
+<dl>
+ <dt>
+  <code>newDialog</code></dt>
+ <dd>
+  La fenêtre ouverte</dd>
+ <dt>
+  <code>aParent</code></dt>
+ <dd>
+  La parent de la fenêtre, éventuellement <code>null</code>.</dd>
+ <dt>
+  <code>aSrc</code></dt>
+ <dd>
+  L'URL chrome  de la boîte de dialogue XUL.</dd>
+ <dt>
+  <code>aArguments</code></dt>
+ <dd>
+  Un objet JavaScript contenant les données à transférer à la boîte de dialogue.</dd>
+</dl>
+<h2 id="Notes">Notes</h2>
+<p>Le XUL passé à la méthode <code>importDialog()</code> est très similaire à celui passé à la méthode {{ domxref("window.openDialog()") }}, avec cependant quelques limitations et mises en garde :</p>
+<ul>
+ <li>La racine doit être un élément <code>&lt;dialog&gt;</code>.</li>
+ <li>Les scripts ne doivent pas être chargés via la balise <code>&lt;script&gt;</code>, mais depuis un attribut de l'élément <code>&lt;dialog&gt;</code> .</li>
+</ul>
+<p>Le XUL est fusionné avec la fenêtre spécifiée, un peu à la manière d'un overlay. En conséquence, des conflits entre les identifiants (attributs <code>id</code>) et les scripts JavaScript sont possibles, comme avec les overlays. Prenez cela en considération.</p>
+<h2 id="Spécification">Spécification</h2>
+<p>{{ DOM0() }}</p>
+<p>{{ languages( { "en": "en/DOM/window.importDialog", "fr": "fr/DOM/window.importDialog" } ) }}</p>

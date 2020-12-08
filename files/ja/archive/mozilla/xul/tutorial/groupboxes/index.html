@@ -1,0 +1,106 @@
+---
+title: グループボックス
+slug: Archive/Mozilla/XUL/Tutorial/Groupboxes
+tags:
+  - Tutorials
+  - XUL
+  - XUL_Tutorial
+translation_of: Archive/Mozilla/XUL/Tutorial/Groupboxes
+---
+<p>
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Box_Model_Details" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Adding_More_Elements">次のページ  »</a></p>
+</div>
+<p>このセクションでは、要素をグループにまとめる方法について説明します。
+</p><p><span id="Groupboxes"></span>
+</p>
+<h3 id=".E3.82.B0.E3.83.AB.E3.83.BC.E3.83.97.E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9" name=".E3.82.B0.E3.83.AB.E3.83.BC.E3.83.97.E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9"> グループボックス </h3>
+<p>HTML では、関連する要素をグループ化するために使用可能な、<code>fieldset</code> 要素が提供されています。<span style="color: darkgreen; background: #ef9;">【訳注: HTML 4.0 以降です】</span>
+多くの場合には、グループ化された要素が関連していることを示すために周囲に境界線が描画されます。
+具体例をあげるとチェックボックスをグループ化するような場合に使用されます。
+XUL でも、同等な要素として <code><code><a href="/ja/docs/Mozilla/Tech/XUL/groupbox" title="groupbox">groupbox</a></code></code> を提供しており、やはり同じような目的のために使用可能です。
+</p><p>その名前が示しているように、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/groupbox" title="groupbox">groupbox</a></code></code> はボックスの一種です。
+このため、内部の要素はボックスの規則に従って配置されます。
+グループボックスと通常のボックスには 2 つ違いがあります。
+</p>
+<ol><li> デフォルトでグループボックスの周囲には、(<span style="border-bottom: 1px dashed green;" title="bevel">ベベル</span>のついた) 溝状スタイルの境界線が描画されます。この振る舞いは、CSS でスタイルを変えることによって変更できます。
+</li><li> グループボックスには、キャプションを設定できます。これは境界線の上辺にそって置かれます。
+</li></ol>
+<p>ボックスの一種なので、グループボックスでも <code><code id="a-orient"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code></code> や <code><code id="a-flex"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Attribute/flex">flex</a></code></code> といったボックスと同じ属性を使うことができます。
+大抵の場合、グループボックスの内部には、何らかの形で関連性があるものを置きますが、必要ならばどんな要素を置いてもかまいません。
+</p><p>グループボックスの上辺にかかって表示されるラベルは、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/caption" title="caption">caption</a></code></code> 要素を使って作ることができます。
+これは、HTML の <code>legend</code> 要素と同じような動作をします。
+<code><code><a href="/ja/docs/Mozilla/Tech/XUL/caption" title="caption">caption</a></code></code> 要素は、グループ内の最初の子要素として、1 つだけ置いておけば十分です。
+</p><p><span id="A_simple_groupbox_example"></span>
+</p>
+<h4 id=".E5.8D.98.E7.B4.94.E3.81.AA.E3.82.B0.E3.83.AB.E3.83.BC.E3.83.97.E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9.E3.81.AE.E4.BE.8B" name=".E5.8D.98.E7.B4.94.E3.81.AA.E3.82.B0.E3.83.AB.E3.83.BC.E3.83.97.E3.83.9C.E3.83.83.E3.82.AF.E3.82.B9.E3.81.AE.E4.BE.8B"> 単純なグループボックスの例 </h4>
+<p>以下の例は、単純なグループボックスを示しています。
+</p><p><span id="%E4%BE%8B_1"><a id="%E4%BE%8B_1"></a><strong>例 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_titledbox_1.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_titledbox_1.xul">表示</a>
+</p>
+<div class="float-right"><img alt="画像:titledbox1.png"></div>
+<pre>&lt;groupbox&gt;
+  &lt;caption label="Answer"/&gt;
+  &lt;description value="Banana"/&gt;
+  &lt;description value="Tangerine"/&gt;
+  &lt;description value="Phone Booth"/&gt;
+  &lt;description value="Kiwi"/&gt;
+&lt;/groupbox&gt;
+</pre>
+<p>この例では、4 つのテキストが Answer というラベルをもつボックス内に表示されます。
+デフォルトではグループボックスは垂直配置であることに注意して下さい。
+垂直配置は、テキスト要素を 1 つのカラムに並べていくような場合に必要です。
+</p><p><span id="More_complex_captions"></span>
+</p>
+<h4 id=".E3.82.88.E3.82.8A.E8.A4.87.E9.9B.91.E3.81.AA.E3.82.AD.E3.83.A3.E3.83.97.E3.82.B7.E3.83.A7.E3.83.B3" name=".E3.82.88.E3.82.8A.E8.A4.87.E9.9B.91.E3.81.AA.E3.82.AD.E3.83.A3.E3.83.97.E3.82.B7.E3.83.A7.E3.83.B3"> より複雑なキャプション </h4>
+<p>より複雑なキャプションを設定するために、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/caption" title="caption">caption</a></code></code> 要素を、開始と終了タグで構成して、間に子要素を加えることも可能です。
+例えば、Mozilla のフォント設定パネルでは、キャプションとしてドロップダウンメニューを使っています。
+キャプションとして、どんな要素でも使用することができますが、チェックボックスかドロップダウンメニューのどちらか使う場合が、ほとんどだと思います。
+</p><p><span id="%E4%BE%8B_2"><a id="%E4%BE%8B_2"></a><strong>例 2</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_titledbox_2.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_titledbox_2.xul">表示</a>
+</p>
+<div class="float-right"><img alt="画像:groupbox2.png"></div>
+<pre>&lt;groupbox flex="1"&gt;
+  &lt;caption&gt;
+    &lt;checkbox label="Enable Backups"/&gt;
+  &lt;/caption&gt;
+  &lt;hbox&gt;
+    &lt;label control="dir" value="Directory:"/&gt;
+    &lt;textbox id="dir" flex="1"/&gt;
+  &lt;/hbox&gt;
+  &lt;checkbox label="Compress archived files"/&gt;
+&lt;/groupbox&gt;
+</pre>
+<p>この例では、キャプションとしてチェックボックスが使われています。
+このチェックボックスのチェック状態が変更されるのに応じて、グループボックスに含まれるコンテントの<span style="border-bottom: 1px dashed green;" title="enable">有効</span>と<span style="border-bottom: 1px dashed green;" title="disable">無効</span>を切り替えるために、スクリプトが使用されるかもしれません。
+グループボックスにはラベルとテキスト入力欄をもつ水平ボックスが置かれています。
+ウィンドウが広げられたときにテキスト入力欄が広がるために、テキスト入力欄とグループボックスの両方が<span style="border-bottom: 1px dashed green;" title="flexible">伸縮可能</span>になっています。
+グループボックスは<span style="border-bottom: 1px dashed green;" title="vertical orientation">垂直配置</span>であるため、後ろのチェックボックスはテキスト入力欄の下に表示されます。
+なお、<a href="ja/XUL_Tutorial/Adding_More_Elements">次のセクション</a>では、ファイル検索ダイアログにグループボックスを加えてみる予定です。
+</p><p><span id="Radio_Groups"></span>
+</p>
+<h3 id=".E3.83.A9.E3.82.B8.E3.82.AA.E3.82.B0.E3.83.AB.E3.83.BC.E3.83.97" name=".E3.83.A9.E3.82.B8.E3.82.AA.E3.82.B0.E3.83.AB.E3.83.BC.E3.83.97"> ラジオグループ </h3>
+<p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/radio" title="radio">radio</a></code></code> 要素をグループ化するために、<code><code><a href="/ja/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code></code> 要素を使用します。
+<code><code><a href="/ja/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code></code> も、ボックスの一種です。
+グループの内部には、どんな要素でも置くことができ、
+ラジオボタンのための特殊な処理を除けば、他種類のボックスと同じように動作します。
+</p><p>ラジオグループの内部に置かれたラジオボタンは、ネストしたボックスの中にあるものも含めて、全てグループ化されます。
+これは、次の例に示すように、ラジオグループの構造の中にラジオボタン以外の要素を加える場合に利用できます。
+</p><p><span id="%E4%BE%8B_3"><a id="%E4%BE%8B_3"></a><strong>例 3</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_titledbox_3.xul.txt">ソース</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_titledbox_3.xul">表示</a>
+</p>
+<pre>&lt;radiogroup&gt;
+  &lt;radio id="no" value="no" label="No Number"/&gt;
+  &lt;radio id="random" value="random" label="Random Number"/&gt;
+  &lt;hbox&gt;
+    &lt;radio id="specify" value="specify" label="Specify Number:"/&gt;
+    &lt;textbox id="specificnumber"/&gt;
+  &lt;/hbox&gt;
+&lt;/radiogroup&gt;
+</pre>
+<p><code><code><a href="/ja/docs/Mozilla/Tech/XUL/radiogroup" title="radiogroup">radiogroup</a></code></code> 要素では境界線は描画されないことを注記しておきます。
+もし、キャプションや境界線が必要な場合は、グループボックスで囲うようにしてください。
+</p><p>次のセクションでは、ファイル検索ダイアログに、これまで学んだ追加要素をいくつか追加してみます。
+</p><div class="prevnext" style="text-align: right;">
+    <p><a href="/ja/docs/XUL_Tutorial:Box_Model_Details" style="float: left;">« 前のページ</a><a href="/ja/docs/XUL_Tutorial:Adding_More_Elements">次のページ  »</a></p>
+</div>
+
+<div class="noinclude">
+</div>

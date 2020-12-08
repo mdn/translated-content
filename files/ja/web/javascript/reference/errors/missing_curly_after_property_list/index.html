@@ -1,0 +1,51 @@
+---
+title: 'SyntaxError: missing } after property list'
+slug: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
+tags:
+  - Errors
+  - JavaScript
+  - SyntaxError
+translation_of: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
+---
+<div>{{jsSidebar("Errors")}}</div>
+
+<h2 id="メッセージ">メッセージ</h2>
+
+<pre class="syntaxbox">SyntaxError: missing } after property list
+</pre>
+
+<h2 id="Error_type">Error type</h2>
+
+<p>{{jsxref("SyntaxError")}}</p>
+
+<h2 id="何がうまくいかなかったのか？">何がうまくいかなかったのか？</h2>
+
+<p>どこかに <a href="/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer">object initializer</a> 構文の誤りがあります。実際に波括弧を忘れているかもしれませんが、セミコロンが不足ている可能性もあります。また、閉じ波括弧や括弧が正しい順序になっているかも確認してください。コードをインデントやフォーマットすると、多少見通しが良くなります。</p>
+
+<h2 id="例">例</h2>
+
+<h3 id="カンマ忘れ">カンマ忘れ</h3>
+
+<p>多くの場合、object initializer コードにカンマ忘れがあります：</p>
+
+<pre class="brush: js example-bad">var obj = {
+  a: 1,
+  b: { myProp: 2 }
+  c: 3
+};
+</pre>
+
+<p>次のように修正できます：</p>
+
+<pre class="brush: js example-good">var obj = {
+  a: 1,
+  b: { myProp: 2 },
+  c: 3
+};
+</pre>
+
+<h2 id="関連項目">関連項目</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer">Object initializer</a></li>
+</ul>

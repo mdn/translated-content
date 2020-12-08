@@ -1,0 +1,64 @@
+---
+title: 'TypeError: can''t define property "x": "obj" is not extensible'
+slug: Web/JavaScript/Reference/Errors/Cant_define_property_object_not_extensible
+tags:
+  - Error
+  - Errors
+  - JavaScript
+  - TypeError
+translation_of: Web/JavaScript/Reference/Errors/Cant_define_property_object_not_extensible
+---
+<div>{{jsSidebar("Errors")}}</div>
+
+<h2 id="メッセージ">メッセージ</h2>
+
+<pre class="syntaxbox">TypeError: can't define property "x": "obj" is not extensible (Firefox)
+TypeError: Cannot define property: "x", object is not extensible. (Chrome)
+</pre>
+
+<h2 id="エラータイプ">エラータイプ</h2>
+
+<p>{{jsxref("TypeError")}}</p>
+
+<h2 id="何がうまくいかなかったのか？">何がうまくいかなかったのか？</h2>
+
+<p>通常、オブジェクトは拡張可能で、新しいプロパティを追加できます。しかしこの場合は、{{jsxref("Object.preventExtensions()")}} がオブジェクトをもはや拡張できないものに設定しているため、拡張不可のマークが付けられたときにあったプロパティ以上のプロパティを追加できません。</p>
+
+<h2 id="例">例</h2>
+
+<p><a href="/ja/docs/Web/JavaScript/Reference/Strict_mode">strict モード</a>では、拡張不可のオブジェクトに新しいプロパティを追加しようとすると <code>TypeError</code> をスローします。非 strict モードでは、"x" プロパティの追加は暗黙的に無視されます。</p>
+
+<pre class="brush: js example-bad">'use strict';
+
+var obj = {};
+Object.preventExtensions(obj);
+
+obj.x = 'foo';
+// TypeError: can't define property "x": "obj" is not extensible
+</pre>
+
+<p><a href="/ja/docs/Web/JavaScript/Reference/Strict_mode">strict モード</a>と非 strict モード共に、拡張不可のオブジェクトに新しいプロパティを追加しようとして {{jsxref("Object.defineProperty()")}} を呼び出すと、例外をスローします。</p>
+
+<pre class="brush: js example-bad">var obj = { };
+Object.preventExtensions(obj);
+
+Object.defineProperty(obj,
+  'x', { value: "foo" }
+);
+// TypeError: can't define property "x": "obj" is not extensible
+</pre>
+
+<p>このエラーを修正するには、{{jsxref("Object.preventExtensions()")}} の呼び出しを削除するか、オブジェクトが拡張不可とマークされる前にプロパティを追加するように移動する必要があります。もちろん、必要がないのであれば、追加しようとしているプロパティを削除しても良いです。</p>
+
+<pre class="brush: js example-good">'use strict';
+
+var obj = {};
+obj.x = 'foo'; // add property first and only then prevent extensions
+
+Object.preventExtensions(obj);</pre>
+
+<h2 id="関連項目">関連項目</h2>
+
+<ul>
+ <li>{{jsxref("Object.preventExtensions()")}}</li>
+</ul>

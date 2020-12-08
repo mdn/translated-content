@@ -1,0 +1,69 @@
+---
+title: 截屏
+slug: Archive/B2G_OS/Debugging/taking_screenshots
+tags:
+  - Firefox OS
+  - 截屏
+  - 调试
+translation_of: Archive/B2G_OS/Debugging/taking_screenshots
+---
+<div class="summary">
+ <p><span class="seoSummary">在许多场合下截屏都是非常有用的，例如将你的工作展示给客户端或者在 Marketplace 中发布应用。本文则对在 Firefox OS 手机中如何截屏进行了说明。</span></p>
+</div>
+<div class="note">
+ <p><strong>Note</strong>: Android 会觉得非常熟悉。这些步骤都是类似的。</p>
+</div>
+<h2 id="准备你的手机">准备你的手机</h2>
+<ol>
+ <li>在手机上到 <a href="/en-US/Firefox_OS/Debugging/Developer_settings">Developer Settings </a> 查看远程调试和终端是否使能</li>
+ <li>确保你的手机已经  <a href="/en-US/Firefox_OS/Debugging/Installing_ADB">ADB installed</a> 并且正常工作</li>
+ <li>通过 USB 将手机连接到电脑</li>
+</ol>
+<h2 id="截屏">截屏</h2>
+<p>你当前可以有 4 种方式可以实现： 使用终端，在 Eclipse 中使用 DDMS， 在手机上使用手机上的组合按键，或者使用 App Manager。</p>
+<h3 id="终端">终端</h3>
+<p>打开一个终端窗口，依次输入下面 3 个命令：</p>
+<ol>
+ <li>使用下面的命令截屏（如果你想要称之为其他的名称，可以修改 <code>screenshot.png</code>）<br>
+  <code>adb shell screencap -p /sdcard/screenshot.png</code></li>
+ <li>从电脑中获取图片：<br>
+  <code>adb pull /sdcard/screenshot.png</code></li>
+ <li>在设备中删除截屏图片<br>
+  <code>adb shell rm /sdcard/screenshot.png</code></li>
+</ol>
+<p>Alternatively, you can use ffmpeg:</p>
+<ol>
+ <li>Make sure you have ffmpeg installed:
+  <ol>
+   <li>On Mac, if you use MacPorts, you can do this with <code>sudo port install ffmpeg</code>. For homebrew, do <code>brew install ffmpeg</code>.</li>
+   <li>On Linux (Ubuntu/Debian), use <code>sudo apt-get install ffmpeg</code>.</li>
+  </ol>
+ </li>
+ <li><code>cd</code> into the <code>B2G/gaia</code> directory.</li>
+ <li>Use the <code>make screenshot</code> command to take a screenshot.</li>
+ <li>You now have a screenshot called <code>screenshot.png</code>.</li>
+</ol>
+<h3 id="DDMS">DDMS</h3>
+<p>Open Eclipse.</p>
+<ol>
+ <li>Open DDMS: <em>Window &gt; Open Perspective &gt; Other &gt; DDMS</em>.</li>
+ <li>On the left side panel, in the <em>Devices</em> tab, click the <em>Screen capture</em> button.</li>
+ <li>A new window appears with several options; click on <em>Save</em> button to save your screenshot.</li>
+</ol>
+<div class="note">
+ <p><strong>Note</strong>: To learn more about DDMS, have a look at the <a href="http://developer.android.com/tools/debugging/ddms.html" title="DDMS documentation">DDMS documentation</a> .</p>
+</div>
+<h3 id="Phone_button_combination">Phone button combination</h3>
+<ol>
+ <li>On Firefox OS versions up to 2.0, simultaneously hold down the <em>Home</em> and <em>Power</em> buttons for a few seconds.</li>
+ <li>On Firefox OS version 2.1 and beyond, simultaneously hold down the <em>Volume Down</em> and <em>Power</em> buttons for a few seconds.</li>
+</ol>
+<p>This takes a screenshot, which is saved in your Gallery. You can now copy the picture from your SDCard to your computer using whatever method suits you best.</p>
+<div class="note">
+ <p><strong>Note</strong>: The button combination change was made because many people feel that <em>Home</em> and <em>Power</em> is more difficult to do that it should be, especially with one hand, plus devices with no hardware <em>Home</em> button are not very well supported (you can't use a software <em>Home</em> button in many places in Gaia, such as the lock screen.)</p>
+</div>
+<h3 id="App_ManagerSimulator">App Manager/Simulator</h3>
+<ol>
+ <li>Go to the <a href="https://developer.mozilla.org/en-US/Firefox_OS/Using_the_App_Manager">App Manager</a>, connect to your phone, and navigate to the <strong>Device</strong> tab on the left.</li>
+ <li>Click on the <strong>Screenshot</strong> button at the bottom of the page (is at the same place that you startes the simulator).</li>
+</ol>

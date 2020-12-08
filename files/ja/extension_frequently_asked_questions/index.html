@@ -1,0 +1,82 @@
+---
+title: Extension Frequently Asked Questions
+slug: Extension_Frequently_Asked_Questions
+tags:
+  - Add-ons
+  - Extensions
+translation_of: Archive/Mozilla/Extension_Frequently_Asked_Questions
+---
+<p>ここには<a href="ja/Extensions">拡張機能</a>開発の一般的な問題への答えを置いています。現在、これらは主に Firefox に対して書かれています。しかし、全てではありませんが、ほとんどは簡単に SeaMonkey, Thunderbird またはその他のアプリケーションに対しても言い換えられるはずです。
+</p><p>もし開発を始めるための記事をお探しでしたら、私たちのチュートリアル <a href="ja/Building_an_Extension">拡張機能の作成方法</a> か <a class="external" href="http://kb.mozillazine.org/Getting_started_with_extension_development">MozillaZine のスタートチュートリアル</a> をお試し下さい。<a class="external" href="http://ted.mielczarek.org/code/mozilla/extensionwiz/">拡張機能ウィザード</a> を使うと拡張機能の作成を開始するためのテンプレートを生成できます。
+</p><p>必ず<a href="ja/Setting_up_extension_development_environment">開発用の設定をしてください</a>。
+</p><p>{{ 英語版章題("Debugging") }}
+</p>
+<h3 id=".E3.83.87.E3.83.90.E3.83.83.E3.82.B0" name=".E3.83.87.E3.83.90.E3.83.83.E3.82.B0"> デバッグ </h3>
+<p>拡張機能をデバッグしようとする前に<a href="ja/Setting_up_extension_development_environment">開発のための設定をしなければなりません。</a>
+</p><p><a href="ja/Venkman">Venkman</a> JavaScript デバッガーは複雑な分岐で役に立つでしょう。拡張機能コードを動作させるときには "Debug -&gt; Exclude Browser Files" オプションを切っておくことを忘れないでください。
+</p><p>{{ 英語版章題("How can I see errors in my code?") }}
+</p>
+<h4 id=".E3.81.A9.E3.81.86.E3.82.84.E3.81.A3.E3.81.A6.E3.82.B3.E3.83.BC.E3.83.89.E3.81.AE.E4.B8.AD.E3.81.AE.E3.82.A8.E3.83.A9.E3.83.BC.E3.82.92.E8.A6.8B.E3.81.A4.E3.81.91.E3.82.8B.E3.81.93.E3.81.A8.E3.81.8C.E3.81.A7.E3.81.8D.E3.81.BE.E3.81.99.E3.81.8B.3F" name=".E3.81.A9.E3.81.86.E3.82.84.E3.81.A3.E3.81.A6.E3.82.B3.E3.83.BC.E3.83.89.E3.81.AE.E4.B8.AD.E3.81.AE.E3.82.A8.E3.83.A9.E3.83.BC.E3.82.92.E8.A6.8B.E3.81.A4.E3.81.91.E3.82.8B.E3.81.93.E3.81.A8.E3.81.8C.E3.81.A7.E3.81.8D.E3.81.BE.E3.81.99.E3.81.8B.3F"> どうやってコードの中のエラーを見つけることができますか? </h4>
+<p><a href="ja/Setting_up_extension_development_environment"><b>javascript.options.showInConsole</b> を <b>true</b> に設定</a>すると、エラーが<a href="ja/Error_Console">エラーコンソール</a>へ報告されるようになります。全ての JavaScript エラーをコンソールに出力することで、コード内のバグを見つけ出すのがより簡単になります。<a class="link-https" href="https://addons.mozilla.org/en-US/firefox/216">JavaScript デバッガアドオンの Venkman</a> を使ってみるのもいいでしょう。
+</p><p>{{ 英語版章題("How can I display what my extension is doing?") }}
+</p>
+<h4 id=".E6.8B.A1.E5.BC.B5.E6.A9.9F.E8.83.BD.E3.81.8C.E5.AE.9F.E8.A1.8C.E3.81.97.E3.81.A6.E3.81.84.E3.82.8B.E3.81.93.E3.81.A8.E3.82.92.E8.A1.A8.E7.A4.BA.E3.81.99.E3.82.8B.E3.81.AB.E3.81.AF.3F" name=".E6.8B.A1.E5.BC.B5.E6.A9.9F.E8.83.BD.E3.81.8C.E5.AE.9F.E8.A1.8C.E3.81.97.E3.81.A6.E3.81.84.E3.82.8B.E3.81.93.E3.81.A8.E3.82.92.E8.A1.A8.E7.A4.BA.E3.81.99.E3.82.8B.E3.81.AB.E3.81.AF.3F"> 拡張機能が実行していることを表示するには? </h4>
+<p><code><a href="ja/DOM/window.alert">alert()</a></code> か <code><a href="ja/DOM/window.dump">dump()</a></code> 機能、<code><a href="ja/Components.utils.reportError">Components.utils.reportError()</a></code>、または <code><a href="ja/NsIConsoleService">nsIConsoleService</a></code> を使うと、変数のデータやデバッグ用のテキストを表示することができます。
+</p><p>{{ 英語版章題("Why doesn\'t my script run properly?") }}
+</p>
+<h4 id=".E3.81.AA.E3.81.9C.E7.A7.81.E3.81.AE.E3.82.B9.E3.82.AF.E3.83.AA.E3.83.97.E3.83.88.E3.81.AF.E6.AD.A3.E3.81.97.E3.81.8F.E5.8B.95.E4.BD.9C.E3.81.97.E3.81.AA.E3.81.84.E3.81.AE.E3.81.A7.E3.81.97.E3.82.87.E3.81.86.E3.81.8B.EF.BC.9F" name=".E3.81.AA.E3.81.9C.E7.A7.81.E3.81.AE.E3.82.B9.E3.82.AF.E3.83.AA.E3.83.97.E3.83.88.E3.81.AF.E6.AD.A3.E3.81.97.E3.81.8F.E5.8B.95.E4.BD.9C.E3.81.97.E3.81.AA.E3.81.84.E3.81.AE.E3.81.A7.E3.81.97.E3.82.87.E3.81.86.E3.81.8B.EF.BC.9F"> なぜ私のスクリプトは正しく動作しないのでしょうか？ </h4>
+<p>あなたのスクリプトが期待通り動作しないなら、まずエラーコンソール (<a href="#How_can_I_see_errors_in_my_code.3F">上</a> を見てください) で確認すべきです。
+</p><p>一般的なミスとして window を完全に読み込む前に DOM にアクセスしようとすることが挙げられます。スクリプトのトップレベル (つまり、全ての関数の外側) に初期化コードを置いているとこれが発生します。<code>load</code> イベントリスナーを使い、window が読み込み終わってからコードを実行するようにします：
+</p>
+<pre class="eval">function exampleBrowserStartup(event)
+{
+  // ここにスタートアップ用のコード
+}
+window.addEventListener("load", exampleBrowserStartup, false);
+</pre>
+<p>{{ 英語版章題("Accessing the document of a webpage doesn\'t work") }}
+</p>
+<h4 id="Web_.E3.83.9A.E3.83.BC.E3.82.B8.E3.81.AE.E3.83.89.E3.82.AD.E3.83.A5.E3.83.A1.E3.83.B3.E3.83.88.E3.81.B8.E3.82.A2.E3.82.AF.E3.82.BB.E3.82.B9.E3.81.A7.E3.81.8D.E3.81.AA.E3.81.84" name="Web_.E3.83.9A.E3.83.BC.E3.82.B8.E3.81.AE.E3.83.89.E3.82.AD.E3.83.A5.E3.83.A1.E3.83.B3.E3.83.88.E3.81.B8.E3.82.A2.E3.82.AF.E3.82.BB.E3.82.B9.E3.81.A7.E3.81.8D.E3.81.AA.E3.81.84"> Web ページのドキュメントへアクセスできない </h4>
+<p>browser.xul オーバーレイから現在の Web ページを参照するには、ブラウザウィンドウ自体のドキュメントである <code>document</code> の代わりに <code>content.document</code> を使ってください。詳しいことは <a href="ja/Working_with_windows_in_chrome_code#Content_windows">chrome コードで window を動作させる</a>を見てください。
+</p><p>標準では <a href="ja/XPCNativeWrapper">XPCNativeWrapper</a> が Web ページのスクリプトが定義したオブジェクトへのアクセス及びその他を妨害します。
+</p><p>{{ 英語版章題("I get an XML parsing error, but the file looks fine!") }}
+</p>
+<h4 id="XML_.E3.83.91.E3.83.BC.E3.82.B9.E3.82.A8.E3.83.A9.E3.83.BC.E3.81.8C.E5.87.BA.E3.81.BE.E3.81.97.E3.81.9F.E3.81.8C.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AB.E5.95.8F.E9.A1.8C.E3.81.AF.E3.81.AA.E3.81.84.E3.82.88.E3.81.86.E3.81.A7.E3.81.99.EF.BC.81" name="XML_.E3.83.91.E3.83.BC.E3.82.B9.E3.82.A8.E3.83.A9.E3.83.BC.E3.81.8C.E5.87.BA.E3.81.BE.E3.81.97.E3.81.9F.E3.81.8C.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AB.E5.95.8F.E9.A1.8C.E3.81.AF.E3.81.AA.E3.81.84.E3.82.88.E3.81.86.E3.81.A7.E3.81.99.EF.BC.81"> XML パースエラーが出ましたがファイルに問題はないようです！ </h4>
+<p>パースエラー (<font color="red">赤い文字列</font>と <font color="red">-------------^</font> が下部に出る) の原因としてよくあるのは、スクリプトや属性値の中に XML で特別な意味を持つ文字である &amp; や &lt; が存在する事によるものです。例えば
+</p>
+<pre class="eval">&lt;button oncommand="window.open('<span class="nowiki">http://example.com/</span>q?param1=value<b>&amp;param2</b>=val2')"/&gt;
+</pre>
+<p>または
+</p>
+<pre class="eval">&lt;script&gt;function lesser(a,b) { return <b>a &lt; b</b> ? a : b; }&lt;/script&gt;
+</pre>
+<p>この問題は次の方法のうち一つで解決できます。
+</p>
+<ol>
+<li>XML に矛盾しない表現に文字を置き換える (例: "&amp;" -&gt; "&amp;amp;", "&lt;" -&gt; "&amp;lt;")</li>
+<li>(スクリプトなどのテキストノードの場合) CDATA タグで囲う
+<pre>&lt;script&gt;&lt;![CDATA[
+   function lesser(a,b) {
+     return a &lt; b ? a : b;
+   }
+ ]]&gt;&lt;/script&gt;</pre>
+</li>
+<li>別のファイルにスクリプトを置きそれを読み込む
+<pre>&lt;script type="application/x-javascript" src="our.js"/&gt;</pre>
+</li></ol>
+<p>{{ 英語版章題("Example code") }}
+</p>
+<h3 id=".E3.82.B5.E3.83.B3.E3.83.97.E3.83.AB.E3.82.B3.E3.83.BC.E3.83.89" name=".E3.82.B5.E3.83.B3.E3.83.97.E3.83.AB.E3.82.B3.E3.83.BC.E3.83.89"> サンプルコード </h3>
+<p>何か便利なことをするためにどんなコードを使えばいいのかを調べるには、それと同じ事を行っている拡張機能 (もしくは Mozilla 自体の一部) を探して、そのコードを見るのが一番簡単です。(XPI ファイルと JAR ファイルは ZIP フォーマットを使っています。)
+</p><p>また、<a>MDC の拡張機能関係の項目のリスト</a> 、<a href="ja/Code_snippets">コードサンプル</a> 、 <a class="external" href="http://kb.mozillazine.org/Category:Example_code">MozillaZine のサンプルコードページ</a> などのドキュメントも参照して下さい。
+</p><p>{{ 英語版章題("Where can I get more help?") }}
+</p>
+<h3 id=".E3.81.A9.E3.81.93.E3.81.A7.E3.83.98.E3.83.AB.E3.83.97.E3.82.92.E3.82.82.E3.81.A3.E3.81.A8.E5.BE.97.E3.82.89.E3.82.8C.E3.81.BE.E3.81.99.E3.81.8B.3F" name=".E3.81.A9.E3.81.93.E3.81.A7.E3.83.98.E3.83.AB.E3.83.97.E3.82.92.E3.82.82.E3.81.A3.E3.81.A8.E5.BE.97.E3.82.89.E3.82.8C.E3.81.BE.E3.81.99.E3.81.8B.3F"> どこでヘルプをもっと得られますか? </h3>
+<p><a href="ja/Extensions/Other_Resources">拡張機能:その他の資料</a> と <a href="ja/Extensions/Community">拡張機能:コミュニティ</a> を見てください。
+</p><p>ヘルプを求める前に、必ず<a href="#Debugging">デバッグ用の設定</a>を行い、関係のあるメッセージが<a href="#How_can_I_display_what_my_extension_is_doing.3F">エラーコンソールに表示されていないか</a>を確認してください。また、尋ねる前に少なくとも簡単な検索ぐらいはするのを忘れないで下さい。そしてこの FAQ を読んでください！
+</p><p><br>
+</p><p><br>
+</p>
+<div class="noinclude">
+</div>
+{{ languages( { "de": "de/Erweiterungen_FAQ", "en": "en/Extension_Frequently_Asked_Questions", "es": "es/Preguntas_frecuentes_sobre_Extensiones", "fr": "fr/Foire_aux_questions_sur_les_extensions", "it": "it/Domande_frequenti_sulle_Estensioni", "pl": "pl/Cz\u0119sto_zadawane_pytania_dotycz\u0105ce_rozszerze\u0144", "ru": "ru/FAQ_\u043f\u043e_\u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u0438\u044f\u043c" } ) }}

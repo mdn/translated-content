@@ -1,0 +1,527 @@
+---
+title: Plug-in Basics
+slug: Gecko_Plugin_API_Reference/Plug-in_Basics
+tags:
+  - Gecko Plugin API Reference
+  - NPAPI
+  - NeedsEditorialReview
+  - Plugins
+  - 翻訳中
+translation_of: Plugins/Guide/Plug-in_Basics
+---
+<div class="prevnext" style="text-align: right;">
+<p><a href="/ja/docs/Gecko_Plugin_API_Reference:Preface" style="float: left;">« 前のページ</a><a href="/ja/docs/Gecko_Plugin_API_Reference:Plug-in_Development_Overview">次のページ »</a></p>
+</div>
+
+<h3 id=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.AE.E4.BD.BF.E3.82.8F.E3.82.8C.E6.96.B9" name=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.AE.E4.BD.BF.E3.82.8F.E3.82.8C.E6.96.B9">プラグインの使われ方</h3>
+
+<p>プラグインは <a href="ja/Gecko">Gecko</a> ベースのブラウザの柔軟性を増す豊富な多種の機能を提供します。以下のようなプラグインが現在利用できます:</p>
+
+<ul>
+ <li>Adobe Flash や Adobe Acrobat のようなマルチメディアのビュアー</li>
+ <li>オブジェクトの組み込みや圧縮/解凍サービスを提供するユーティリティ</li>
+ <li>個人情報からゲームまで及ぶアプリケーション</li>
+</ul>
+
+<p>新しく革新的なプラグインを作成する増え続ける独立したソフトウェアのベンダーによって見せられたとき、プラグイン技術に対する可能性の範囲は無限のようにみえます。</p>
+
+<p>プラグイン API で、以下のことができる動的に読み込まれるプラグインを作成できます:</p>
+
+<ul>
+ <li>一つ以上の MIME タイプを登録する</li>
+ <li>ブラウザウィンドウの一部へ描画する</li>
+ <li>キーボードとマウスのイベントを受け取る</li>
+ <li>URL を使ってネットワークからデータを得る</li>
+ <li>URL へデータを送信する</li>
+ <li>新しい URL へリンクするハイパーリンクやホットスポットを追加する</li>
+ <li><a href="ja/HTML">HTML</a> ページ上の一部に描画する</li>
+ <li>ネイティブコードから <a href="ja/JavaScript">JavaScript</a>/<a href="ja/DOM">DOM</a> と通信する</li>
+</ul>
+
+<p>「インストールされているプラグイン」ページを見ることでどのプラグインがシステムにインストールされていてブラウザに適切に結びつけられているのかが分かります。<span class="comment">ヘルプメニューに行き、ヘルプをクリックしその後「プラグインについて」。</span> ロケーションバー内で "about:plugins" と入力してください。「インストールされたプラグイン」ページでは MIME タイプやそれに割り当てられた個々の MIME タイプに対するタイプ、説明、ファイルの拡張子やプラグインの現在の状態（有効か無効）と一緒に個々のインストールされたプラグインを列挙されています。view-source 内でこの情報は単に JavaScript から集められたことに注意してください。</p>
+
+<p>プラグインはプラットフォーム固有のものなので、プラグインを展開したいすべてのオペレーティングシステムやプロセッサのプラットフォームへそれらを移植しなければなりません。</p>
+
+<h4 id=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.A8.E3.83.98.E3.83.AB.E3.83.91.E3.83.BC.E3.82.A2.E3.83.97.E3.83.AA.E3.82.B1.E3.83.BC.E3.82.B7.E3.83.A7.E3.83.B3" name=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.A8.E3.83.98.E3.83.AB.E3.83.91.E3.83.BC.E3.82.A2.E3.83.97.E3.83.AA.E3.82.B1.E3.83.BC.E3.82.B7.E3.83.A7.E3.83.B3">プラグインとヘルパーアプリケーション</h4>
+
+<p>プラグインの前に、ヘルパーアプリケーションがあります。ヘルパーアプリケーションはブラウザから起動できる分けられた、独立したアプリケーションです。プラグインのように、ブラウザはヘルパーアプリケーションにマップされた MIME タイプに出くわすと、ブラウザはそれを起動します。プラグインとは異なり、ヘルパーアプリケーションは独自のアプリケーション空間内でブラウザとは分かれて実行されてブラウザやウェブとは相互作用しません。</p>
+
+<p>ブラウザが MIME タイプに出くわすと、常に最初に登録されているプラグインを最初に検索します。MIME タイプに一致するものがなければ、ヘルパーアプリケーションを探します。</p>
+
+<p>プラグインとヘルパーアプリケーションは異なるアプリケーションの必要なものを満たします。<span class="comment">ヘルパーアプリケーションについての更なる情報に関しては、Netscape オンラインヘルプを参照してください。</span></p>
+
+<h3 id=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.AE.E5.8B.95.E4.BD.9C.E3.81.AE.E4.BB.95.E6.96.B9" name=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.AE.E5.8B.95.E4.BD.9C.E3.81.AE.E4.BB.95.E6.96.B9">プラグインの動作の仕方</h3>
+
+<p>アプリケーションとは異なり、プラグインのライフサイクルはそれを呼ぶウェブページによって完全に制御されています。このセクションではブラウザ内でのプラグインの動作の仕方の概観を与えます。</p>
+
+<p>Gecko が起動したとき、システム上の特定の場所内のプラグインモジュールを探します。Gecko が異なるシステム上のプラグインモジュールをどこから探すのかについての更なる情報に関しては、<a href="/ja/docs/Gecko_Plugin_API_Reference/Plug-in_Basics#Gecko_のプラグインの見つけ方">Gecko のプラグインの見つけ方</a>を参照してください。</p>
+
+<p>プラグインを起動するメディアタイプの組み込まれたデータを含むページをユーザが開いたとき、ブラウザは以下の一連の動作で反応します:</p>
+
+<ul>
+ <li>一致する MIME タイプを持つプラグインを調べる</li>
+ <li>プラグインのコードをメモリに読み込む</li>
+ <li>プラグインを初期化する</li>
+ <li>プラグインの新しいインスタンスを作成する</li>
+</ul>
+
+<p>Gecko は同時に単一のページ上やいくつかの開いたウィンドウ内に同じプラグインの複数のインスタンスを読み込んだりできます。例えば、（もちろんいくつかの RealAudio ファイルを同時に演奏するのはほとんどよい考えではないけれども）いくつかの組み込みの RealAudio クリップがあるページを見れば、ブラウザは必要なだけの数の RealPlayer プラグインのインスタンスを作成します。 ユーザがページを離れたり閉じたりしたとき、プラグインのインスタンスは削除されます。プラグインの最後のインスタンスが削除されたとき、プラグインのコードはメモリから開放されます。読み込まれていないときプラグインはディスク空間以外はリソースを消費しません。次のセクション <a href="/ja/docs/Gecko_Plugin_API_Reference/Plug-in_Basics#ランタイムモデルの理解">ランタイムモデルの理解</a> ではより詳細にこれらの段階を説明します。</p>
+
+<h3 id=".E3.83.A9.E3.83.B3.E3.82.BF.E3.82.A4.E3.83.A0.E3.83.A2.E3.83.87.E3.83.AB.E3.81.AE.E7.90.86.E8.A7.A3" name=".E3.83.A9.E3.83.B3.E3.82.BF.E3.82.A4.E3.83.A0.E3.83.A2.E3.83.87.E3.83.AB.E3.81.AE.E7.90.86.E8.A7.A3">ランタイムモデルの理解</h3>
+
+<p>プラグインは一つ以上の MIME タイプに結びつけられた動的なコードモジュールです。ブラウザが起動したとき、利用可能なプラグインを列挙し（この段階はプラットフォームによって変わります）、プラグインに対する MIME タイプを決めるために個々のプラグインからリソースを読み込んで、MIME タイプに対する個々のプラグインライブラリを登録します。</p>
+
+<p>以下の段階では読み込みから削除までのプラグインの一生の概要を説明しています:</p>
+
+<ul>
+ <li>（HTML ページや個別のファイル内で）プラグインに対して登録された MIME タイプのデータに出くわすと、まだ読み込まれていなければ、メモリにプラグインのコードを動的に読み込んで、プラグインの新しいインスタンスを作成します。</li>
+</ul>
+
+<p>プラグインのコードが最初に読み込まれたとき Gecko はプラグイン API 関数 <a href="ja/NP_Initialize">NP_Initialize</a> を呼びます。慣例により、すべてのプラグイン固有の関数には接頭辞 "NPP" が付き、すべてのブラウザ固有の関数には接頭辞 "NPN" がついています。</p>
+
+<div class="note">
+<p><strong>注</strong>: <code>NP_Initialize</code> と <code>NP_Shutdown</code> は技術的にはプラグインがブラウザに渡す関数表の一部ではありません。ブラウザはプラグインソフトウェアが読み込まれたときと開放されたときにそれらを呼びます。これらの関数はプラグイン DLL からエクスポートされシステムテーブルの検索でアクセスされ、これはいかなる特定のプラグインのインスタンスとも関連していないという意味です。再び、初期化と破棄についての更なる情報に関しては <a href="/ja/docs/Gecko_Plugin_API_Reference/Initialization_and_Destruction">Initialization and Destruction</a> を参照してください。</p>
+</div>
+
+<ul>
+ <li>インスタンスが作成されたときにブラウザはプラグイン API 関数 <a href="ja/NPP_New">NPP_New</a> を呼びます。(a) 単一のページ上に複数の組み込みのオブジェクトがあるか、(b) いくつかのブラウザウィンドウが開いておりそれぞれが同じデータ型を表示しているならば、同じプラグインの複数のインスタンスが存在し得ます。</li>
+ <li>プラグインのインスタンスはユーザがインスタンスのページを離れるかウィンドウを閉じるかすると削除されます。Gecko はインスタンスが削除されていることをプラグインに通知するために関数 <a href="ja/NPP_Destroy">NPP_Destroy</a> を呼びます。</li>
+ <li>最後のプラグインのインスタンスが削除されるとき、プラグインのコードはメモリから解放されます。Gecko は関数 <a href="ja/NP_Shutdown">NP_Shutdown</a> を呼びます。プラグインは読み込まれていないとき（ディスク空間以外は）リソースを消費しません。</li>
+</ul>
+
+<div class="note">
+<p><strong>注</strong>: プラグイン API の呼び出しやコールバックではメインの Navigator スレッドを使っています。一般的に、プラグインの一生の任意の段階で処理を扱うために追加のスレッドをプラグインに生成させたいならば、プラグイン API の呼び出しからそれらを分離するように注意すべきです。</p>
+</div>
+
+<p>これらのメソッドの使用についての更なる情報については <a href="/ja/docs/Gecko_Plugin_API_Reference/Initialization_and_Destruction">Initialization and Destruction</a> を参照してください。</p>
+
+<h3 id=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.AE.E6.A4.9C.E5.87.BA" name=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.AE.E6.A4.9C.E5.87.BA">プラグインの検出</h3>
+
+<p>Gecko はさまざまな場所から特定の順序でプラグインを探します。次のセクション<a href="/ja/docs/Gecko_Plugin_API_Reference/Plug-in_Basics#Gecko_のプラグインの見つけ方">Gecko のプラグインの見つけ方</a>ではこの規則を記述しており、以下のセクション<a href="/ja/docs/Gecko_Plugin_API_Reference/Plug-in_Basics#MIME_タイプによるプラグインの確認">MIME タイプによるプラグインの確認</a>では自分でプラグインを探してどのプラグインがどの MIME タイプに対して登録されているかをはっきりさせるための JavaScript の使い方を説明しています。</p>
+
+<h4 id="Gecko_.E3.81.AE.E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.AE.E8.A6.8B.E3.81.A4.E3.81.91.E6.96.B9" name="Gecko_.E3.81.AE.E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.AE.E8.A6.8B.E3.81.A4.E3.81.91.E6.96.B9">Gecko のプラグインの見つけ方</h4>
+
+<p>Gecko ベースのブラウザが Windows や Unix システム上で起動したとき、<code>MOZ_PLUGIN_PATH</code> によって向けられたパス内のプラグインモジュールを調べます。その後で、そのプラットフォームに対するプラグインディレクトリ内を調べます:</p>
+
+<ul>
+ <li>MS Windows: ブラウザアプリケーションと同じディレクトリ内の <code>plugins</code> サブディレクトリ。</li>
+ <li>Mac OS: <code>Plug-ins</code> フォルダ。Plug-ins フォルダ内のプラグインへリンクする Macintosh エイリアスをインストールしていれば Mac OS プラグインは異なるディレクトリ内にあってもいいです。</li>
+ <li>Unix: <code>usr/local/lib/netscape/plugins</code> または <code>$HOME/.mozilla/plugins</code>。 異なるディレクトリを使いたければ、<code>MOZ_PLUGIN_PATH</code> 環境変数にそのファイルパスを設定して、例えば、<strong>$HOME/yourplugins:/usr/local/lib/netscape/plugins</strong> のようにしてください。Gecko はこの変数が指定するすべてのディレクトリを探します。ローカルユーザの位置は、もしあれば、ネットワークの位置に優先します。</li>
+ <li>Mac OS X: プラグインは以下の場所内のアプリケーションバンドルとともに読み込まれます: <code>BUNDLE/Contents/Plug-Ins</code> と <code>BUNDLE/Contents/MacOS/plugins</code>。また、ブラウザは <code>~/Library/Internet Plugins</code> それから <code>/Library/Internet Plugins</code> を読み取ります。これらのディレクトリ内で、プラグインは日付で順序づけられます。</li>
+</ul>
+
+<p>すべてのプラットフォーム上で、<code>plug-ins</code> サブディレクトリやフォルダはブラウザアプリケーションと同じディレクトリでなければなりません。手動によってか、バイナリのインストーラープログラムを使うことによってか、ブラウザがインストールを行うために使う、インストールスクリプトを書くために XPInstall API を使うことによって、ユーザはプラグインをこのディレクトリ内にインストールできます。これらの選択肢についての更なる情報に関しては、<a href="/ja/docs/Gecko_Plugin_API_Reference/Plug-in_Development_Overview#プラグインのインストール">プラグインのインストール</a>を参照してください。</p>
+
+<p>どのプラグインが現在インストールされているのかを調べるには、ヘルプメニュー (MS Windows や Unix) や "?"（ヘルプ）メニュー (Mac OS) から「プラグインについて」を選択してください。Gecko はすべてのインストールされたプラグインやそれらの扱う MIME タイプ、及びプラグインによって提供される任意の説明情報を列挙するページを表示します。</p>
+
+<p>Windows 上では、インストールされたプラグインはそれらのサポートする MIME タイプを扱えるように自動的に設定されます。複数のプラグインが同じ MIME タイプを扱うならば、最初に登録されたプラグインがその MIME タイプを扱います。MIME タイプが割り当てられる方法についての情報に関しては、<a href="/ja/docs/Gecko_Plugin_API_Reference/Plug-in_Development_Overview#プラグインの登録">プラグインの登録</a>を参照してください。</p>
+
+<h4 id="MIME_.E3.82.BF.E3.82.A4.E3.83.97.E3.81.AB.E3.82.88.E3.82.8B.E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.AE.E7.A2.BA.E8.AA.8D" name="MIME_.E3.82.BF.E3.82.A4.E3.83.97.E3.81.AB.E3.82.88.E3.82.8B.E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.AE.E7.A2.BA.E8.AA.8D">MIME タイプによるプラグインの確認</h4>
+
+<p>JavaScript 内の <code>enabledPlugin</code> プロパティは特定の MIME タイプに対してどのプラグインが設定されているのかを決めるのに使えます。プラグインは複数の MIME タイプをサポートすることができ個々の MIME タイプは複数のプラグインによってサポートされるかもしれないけれども、一つのプラグインだけが一つの MIME タイプに対して設定できます。<code>enabledPlugin</code> プロパティは特定の MIME タイプに対して設定されたプラグインを表す Plugin オブジェクトへの参照です。</p>
+
+<p>例えば、ユーザに MIME タイプに対して設定されたプラグインがあればページ上の <code>object</code> 要素を動的に作成するために、どのプラグインがある MIME タイプに対して設定されているのかを知る必要があるかもしれません。</p>
+
+<p>以下の例では Adobe Flash プラグインがインストールされているのかを調べるために JavaScript を使っています。インストールされていれば、ムービーが表示されます。</p>
+
+<pre>// Adobe Flash ムービーを表示できますか
+var mimetype = navigator.mimeTypes["application/x-shockwave-flash"];
+
+if (mimetype) {
+   // はい、ではプラグインで表示できますか
+   var plugin = mimetype.enabledPlugin;
+   if (plugin) {
+      // はい、だからインラインでデータを表示します
+      document.writeln("ここにムービーがあります: &lt;object data='mymovie.swf' height='100' width='100'&gt;&lt;/object&gt;");
+   } else {
+      // いいえ、だからデータへのリンクを提供します
+      document.writeln("ムービーを見るために&lt;a href='mymovie.swf'&gt;ここをクリックしてください&lt;/a&gt;。");
+   }
+} else {
+   // いいえ、だからそのように伝えます
+   document.writeln("すいません、このムービーを表示できません。");
+}
+</pre>
+
+<h3 id=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E6.A7.8B.E9.80.A0.E3.81.AE.E6.A6.82.E8.A6.B3" name=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E6.A7.8B.E9.80.A0.E3.81.AE.E6.A6.82.E8.A6.B3">プラグイン構造の概観</h3>
+
+<p>このセクションはプラグインを開発するときに必要となる基本的な情報の概観です。</p>
+
+<ul>
+ <li><a href="/ja/docs/Gecko_Plugin_API_Reference/Plug-in_Basics#プラグイン_API_の理解">プラグイン API の理解</a></li>
+ <li><a href="/ja/docs/Gecko_Plugin_API_Reference/Plug-in_Basics#プラグインとプラットフォーム非依存">プラグインとプラットフォーム非依存</a></li>
+</ul>
+
+<h4 id=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3_API_.E3.81.AE.E7.90.86.E8.A7.A3" name=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3_API_.E3.81.AE.E7.90.86.E8.A7.A3">プラグイン API の理解</h4>
+
+<p>プラグインはソースが標準 C の文法に従うネイティブコードライブラリです。プラグイン・アプリケーション・プログラミング・インターフェース (API) は二つのグループの関数や一連の共有データ構造で構成されています。</p>
+
+<ul>
+ <li>プラグインメソッドはプラグイン内で実装する関数です。Gecko はこれらの関数を呼びます。API 内のすべてのプラグイン関数の名前は <code>NPP_</code> で始まり、例えば、<code>NPP_New</code> です。直接のライブラリのエントリポイントでどの特定のプラグインのインスタンスとも関連づけられていないいくつかの関数（例えば、<code>NP_Initialize</code> や <code>NP_Shutdown</code>）があります。</li>
+ <li>ブラウザメソッドは Gecko によって実装される関数です。プラグインがこれらの関数を呼びます。API 内のすべてのブラウザ関数の名前は <code>NPN_</code> で始まり、例えば、<code>NPN_Write</code> です。</li>
+ <li>データ構造体はプラグイン API 内で使うために定義されたプラグイン固有の型です。構造体の名前は <code>NP</code> で始まり、例えば、 <code>NPWindow</code> です。</li>
+</ul>
+
+<p>API 内のすべてのプラグイン名は <code>NP</code> で始まります。一般的に、すべての API 関数の操作はすべてのプラットフォーム上で同じです。これが変わる場合には、リファレンスセクション内の関数に対するリファレンス項目で違いを説明しています。</p>
+
+<h4 id=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.A8.E3.83.97.E3.83.A9.E3.83.83.E3.83.88.E3.83.95.E3.82.A9.E3.83.BC.E3.83.A0.E9.9D.9E.E4.BE.9D.E5.AD.98" name=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.A8.E3.83.97.E3.83.A9.E3.83.83.E3.83.88.E3.83.95.E3.82.A9.E3.83.BC.E3.83.A0.E9.9D.9E.E4.BE.9D.E5.AD.98">プラグインとプラットフォーム非依存</h4>
+
+<p>プラグインはブラウザを実行している特定のプラットフォームでネイティブな動的なコードモジュールです。それはアプリケーションやアプレットというよりも、コードライブラリで、ブラウザからのみ動作します。プラグインはプラットフォーム固有ではあるけれども、プラグイン API は最大限の柔軟性を提供しすべてのプラットフォーム越しに機能的に一致するように設計されています。このガイドでは MS Windows、Mac OS X、や Unix プラットフォームに対してコードを書く上でのプラットフォーム固有の違いについて言及しています。</p>
+
+<p>ネイティブコードを利用することでメディアタイプ駆動で高いパフォーマンスを提供するプラグインを書くためにプラグイン API を使えます。プラグインはシームレスにプラットフォーム非依存のコードを統合し、新しいデータ型に対するサポートを提供することで Gecko の中核機能を強化する機会を提供します。</p>
+
+<p>プラグインのファイル形式はプラットフォームに依存します:</p>
+
+<ul>
+ <li>MS Windows: .DLL (Dynamic Link Library) ファイル</li>
+ <li>Unix: .SO or .DSO (Shared Objects) ファイル</li>
+ <li>Mac OS: PowerPC 共有ライブラリファイル。</li>
+ <li>Mac OS X: PPC/x86/ユニバーサル 読み込み可能 Mach-O バンドル</li>
+</ul>
+
+<h3 id=".E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.82.92.E6.8C.81.E3.81.A4.E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.A8.E6.8C.81.E3.81.9F.E3.81.AA.E3.81.84.E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3" name=".E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.82.92.E6.8C.81.E3.81.A4.E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.81.A8.E6.8C.81.E3.81.9F.E3.81.AA.E3.81.84.E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3">ウィンドウを持つプラグインと持たないプラグイン</h3>
+
+<p>独自のネイティブなウィンドウやウェブページ上のフレームに描画するプラグインを書けます。代わりに、描画するウィンドウを必要としないプラグインを書けます。ウィンドウを持たないプラグインを使うことでウェブページのデザインや機能の可能性を広げます。しかし、ウィンドウを持つプラグインは一般的により開発しやすく使う上でより安定しているので、プラグインはデフォルトでウィンドウを持つことに注意してください。</p>
+
+<ul>
+ <li>ウィンドウを持つプラグインはウェブページ上の独自のネイティブなウィンドウに描画されます。ウィンドウを持つプラグインは不透明で常にウェブページの HTML 部分のトップに来ます。</li>
+ <li>ウィンドウを持たないプラグインはネイティブウィンドウ内に描画される必要はありません。それは独自の描画ターゲットに描画されます。ウィンドウを持たないプラグインは不透明や透明になることができ、HTML 部分で呼び出すことができます。</li>
+</ul>
+
+<p>プラグインがウィンドウを持つかどうかはそれをどのように定義したかに依存します。</p>
+
+<p>ウェブページ上でプラグインが表示される方法はそれらを呼び出す HTML 要素に依って決まります。これはコンテンツの開発者やウェブページの製作者次第です。要素やその属性に依存して、プラグインは表示や非表示にすることができ、ウェブページの一部としてや独自のウィンドウ内のフルページとして表示できます。 どの HTML 表示モードでもウェブページはウィンドウを持つプラグインや持たないプラグインを表示できます。しかし、プラグインはウィンドウタイプが意味を持つように表示されていなければなりません。HTML がプラグインの表示モードを決める方法についての情報に関しては、「プラグイン表示のための HTML の使用」を参照してください。</p>
+
+<p> </p>
+
+<h3 id=".E3.83.87.E3.83.95.E3.82.A9.E3.83.AB.E3.83.88.E3.81.AE.E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3" name=".E3.83.87.E3.83.95.E3.82.A9.E3.83.AB.E3.83.88.E3.81.AE.E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3">デフォルトのプラグイン</h3>
+
+<p>特定のプラグインが HTML 内で参照されたメディアを扱うように登録されていなかったとき、Gecko はデフォルトのプラグインを呼び出し、ユーザがその MIME タイプに対する正しいプラグインを見つけてインストールするのを助けます。</p>
+
+<p>デフォルトのプラグインが読み込まれたときに HTML ページのプラグインウィンドウ内に現れる青いパズルピースはブラウザが要求されたメディアを表示したり実行するのに必要な部分を書いているという意味を持っています。</p>
+
+<p> </p>
+
+<p>プラグイン HTML 要素のコードの書かれ方はユーザがプラグインのピースをクリックしたときに取られる振る舞いを決めます。ブラウザが与えられた MIME タイプを扱えなかったときに、デフォルトのプラグインはメディアを定義する <code>object</code> 要素内で参照されるプラグインがあるかどうかを調べます。あれば、デフォルトのプラグインはユーザに指定された場所からプラグインをダウンロードするように促します。プラグインが <code>object</code> 要素内で指定されていなければ、デフォルトのプラグインは指定されたメディアタイプの扱い方についてのさらに特化した情報を提供するであろう、他の <code>object</code> 要素のような子要素を探します。</p>
+
+<h3 id=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E8.A1.A8.E7.A4.BA.E3.81.AE.E3.81.9F.E3.82.81.E3.81.AE_HTML_.E3.81.AE.E4.BD.BF.E7.94.A8" name=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E8.A1.A8.E7.A4.BA.E3.81.AE.E3.81.9F.E3.82.81.E3.81.AE_HTML_.E3.81.AE.E4.BD.BF.E7.94.A8">プラグイン表示のための HTML の使用</h3>
+
+<p>ユーザがプラグインを呼び出すウェブページを見るときにときに、プラグインが表示される（またはされない）方法は二つの要因に依存します:</p>
+
+<ul>
+ <li>開発者によるプラグインの書き方はそれが独自のウィンドウ内に表示されるのかウィンドウを持たないのかを決めます。</li>
+ <li>プラグインを呼び出すためにコンテンツの提供者が HTML 要素を使う使い方はその表示モードを決めます。つまり、それがページ内に組み込まれるのか、部分の一部なのか、独自の分割されたページに表示されるのか、隠されるのか。</li>
+</ul>
+
+<p>このセクションでは HTML 要素の使用と表示モードについて議論しています。ウィンドウの保持や非保持の操作についての情報に関しては、<a href="/ja/docs/Gecko_Plugin_API_Reference/Plug-in_Basics#ウィンドウを持つプラグインと持たないプラグイン">ウィンドウを持つプラグインと持たないプラグイン</a>を参照してください。</p>
+
+<p>個々のプラグイン表示モードの説明とそれを実現するために使う HTML 要素については、<a href="/ja/docs/Gecko_Plugin_API_Reference/Plug-in_Basics#プラグイン表示モード">プラグイン表示モード</a>に行ってください。 HTML 要素とその属性についての詳細に関しては、以下に進んでください:</p>
+
+<ul>
+ <li><a href="/ja/docs/Gecko_Plugin_API_Reference/Plug-in_Basics#プラグイン表示のための_object_要素の使用">プラグイン表示のための object 要素の使用</a></li>
+ <li><a href="/ja/docs/Gecko_Plugin_API_Reference/Plug-in_Basics#プラグイン表示のための_embed_要素の使用">プラグイン表示のための embed 要素の使用</a></li>
+</ul>
+
+<h4 id=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E8.A1.A8.E7.A4.BA.E3.83.A2.E3.83.BC.E3.83.89" name=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E8.A1.A8.E7.A4.BA.E3.83.A2.E3.83.BC.E3.83.89">プラグイン表示モード</h4>
+
+<p>プラグインを表示する HTML を書いていようと HTML 製作者がページに含めるプラグインを開発していようと、どのように表示モードがプラグインの表示の仕方に影響を与えるのかを理解している必要があります。</p>
+
+<p>プラグインは、ウィンドウを持つ持たないにかかわらず、以下の表示モードのうちの一つを取ります:</p>
+
+<ul>
+ <li>ウェブページに組み込まれていて表示</li>
+ <li>ウェブページに組み込まれていて非表示</li>
+ <li>独自のウィンドウ内でフルページで表示される</li>
+</ul>
+
+<p><strong>組み込まれたプラグイン</strong>は比較的大きい HTML ドキュメントの一部でありドキュメントが表示されるときに読み込まれます。（非表示なければ）プラグインは長方形のページの一部として表示されます。組み込みのプラグインは Adobe Flash プラグインのように、ページ内のテキストに関連付けられたマルチメディアの画像としてよく使われます。Gecko がドキュメント内で <code>object</code> と <code>embed</code> 要素に出くわすと、それはそれぞれ <code>data</code> と <code>src</code> 属性によって表されるファイルを見つけて表示しようとします。<code>object</code> 要素の <code>height</code> と <code>width</code> 属性は HTML ページ内の組み込みプラグインの大きさを決めます。例えば、この <code>object</code> 要素はビデオを表示するプラグインを呼びます:</p>
+
+<pre>&lt;object data="newave.avi" type="video/avi"
+        width="320" height="200"
+        autostart="true" loop="true"&gt;
+&lt;/object&gt;
+</pre>
+
+<p><strong>非表示のプラグイン</strong>は呼ばれたときにスクリーン上に描画されない一種の組み込みのプラグインです。 <code>embed</code> 要素の <code>hidden</code> 属性を使うことで作成されます。ここに例があります:</p>
+
+<pre>&lt;embed src="audiplay.aiff" type="audio/x-aiff" hidden="true"&gt;
+</pre>
+
+<div class="note">
+<p><strong>注</strong>: プラグインが <code>hidden</code> 属性とともに呼ばれるならばプラグインがウィンドウを持つかどうかは意味がありません。</p>
+</div>
+
+<p><code>object</code> 要素を使うことによってでも非表示のプラグインを作成することができます。<code>object</code> 要素は <code>hidden</code> 属性を持たないけれども、<code>object</code> 要素の大きさの属性をオーバーライドする <a href="ja/CSS">CSS</a> 規則を作成することができます。</p>
+
+<pre class="eval">object {
+  visibility: visible;
+}
+
+object.hiddenObject {
+  visibility:   hidden !important;
+  width:        0px    !important;
+  height:       0px    !important;
+  margin:       0px    !important;
+  padding:      0px    !important;
+  border-style: none   !important;
+  border-width: 0px    !important;
+  max-width:    0px    !important;
+  max-height:   0px    !important;
+}
+</pre>
+
+<p>この場合、これらの特別な定義を受け取る <code>object</code> 要素は非表示の class を取るでしょう。Using the <code>class</code> 属性と以上の CSS ブロックを使うことで、<code>embed</code> 要素内での非表示のプラグインの振る舞いを真似ることができます:</p>
+
+<pre>  &lt;object data="audiplay.aiff" type="audio/x-aiff" class="hiddenObject"&gt;&lt;/object&gt;
+</pre>
+
+<p><strong>フルページプラグイン</strong>は HTML ページの一部ではない表示のプラグインです。サーバーはファイル拡張子に基づいて、プラグインによって登録されたメディア (MIME) を探して、ブラウザにファイルを送り始めます。Gecko は MIME タイプを調べてそのタイプに対して登録されたプラグインを見つけると適切なプラグインを読み込みます。この種のプラグインはウェブページを満たします。フルページプラグインは Adobe Acrobat のように、ドキュメントビュアーによく使われます。</p>
+
+<div class="note">
+<p><strong>注</strong>: ブラウザはフルページプラグインに対して自動的にスクロールバーを表示しません。プラグインはそれが必要ならば独自のスクロールバーを描画しなければなりません。</p>
+</div>
+
+<p>ブラウザのユーザインターフェイスはどのプラグインが表示されているの可にかかわらず比較的一定のままです。プラグインデータを表示しないアプリケーションウィンドウの一部は変わりません。プラグインの使用にかかわらず、移動、履歴、ファイルのオープンのような、ブラウザの基本的な操作はすべてのページに適用されます。</p>
+
+<h4 id=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E8.A1.A8.E7.A4.BA.E3.81.AE.E3.81.9F.E3.82.81.E3.81.AE_object_.E8.A6.81.E7.B4.A0.E3.81.AE.E4.BD.BF.E7.94.A8" name=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E8.A1.A8.E7.A4.BA.E3.81.AE.E3.81.9F.E3.82.81.E3.81.AE_object_.E8.A6.81.E7.B4.A0.E3.81.AE.E4.BD.BF.E7.94.A8">プラグイン表示のための <code>object</code> 要素の使用</h4>
+
+<p><code>object</code> 要素はウェブページ内の特別なメディアを一般的に含めるための HTML 仕様の一部です。それは、プラグイン、Java コンポーネント、ActiveX コントロール、アプレットや画像を含む、多様なオブジェクトタイプを HTML ページ内に組み込みます。<code>object</code> 要素の属性は組み込むオプジェクトのタイプ、オブジェクトの実装（コード）のタイプと場所やオブジェクトのデータのタイプと実装を決めます。</p>
+
+<p>プラグインは元々 <code>object</code> 要素よりも <code>embed</code> 要素とともに機能するように設計されました（<a href="/ja/docs/Gecko_Plugin_API_Reference/Plug-in_Basics#プラグイン表示のための_embed_要素の使用">プラグイン表示のための embed 要素の使用</a>を参照してください）。しかし <code>object</code> 要素それ自体はここでいくらかの柔軟性を提供します。特に、ブラウザが要素によって呼び出されたオブジェクトをサポートできないならば、<code>object</code> 要素によって他のオブジェクトを呼び出せます。共にプラグインに対して使われる <code>embed</code> 要素はそうではありません。</p>
+
+<p><code>object</code> 要素は <a class="external" href="http://www.w3c.org/MarkUp/">HTML W3C 標準</a> の一部でもあります。</p>
+
+<p>また、<code>applet</code> 要素とは異なり、<code>object</code> は開きタグと閉じタグの間で入れ子にされた、他の <code>object</code> 要素を含む他の HTML 要素を含めることができます。だから、例えば、Gecko は - ページに組み込まれた Java クラスや ActiveX プラグインに対して使われる - <code>object</code> 要素の <code>classid</code> 属性をサポートしていないけれども、異なるプラグイン実装をサポートするために <code>object</code> 要素は入れ子にすることができます。</p>
+
+<p>プラグインへの ActiveX コントロールの組み込みや ActiveX アプリケーションへのプラグインの組み込みについての更なる情報に関しては以下の<a href="/ja/docs/Gecko_Plugin_API_Reference/Plug-in_Basics#プラグインリファレンス">プラグインリファレンス</a>セクション内の Mozilla ActiveX プロジェクトページを参照してください。</p>
+
+<p>以下の例では Gecko により適合したマークアップがされており、親 <code>object</code> 要素の子として含む、入れ子になった <code>object</code> 要素の使用法を示しています。</p>
+
+<p>例 1: 入れ子の <code>object</code> 要素</p>
+
+<pre>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;例 1: 入れ子の object 要素&lt;/title&gt;
+&lt;style type="text/css"&gt;
+  .myPlugin {
+     width:  470px;
+     height: 231px;
+  }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;&lt;p&gt;
+&lt;object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+        codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,30,0"
+        class="myPlugin"&gt;
+
+  &lt;param name="movie" value="foo.swf"/&gt;
+  &lt;param name="quality" value="high"/&gt;
+  &lt;param name="salign" value="tl"/&gt;
+  &lt;param name="menu" value="0"/&gt;
+
+       &lt;object data="foo_movie.swf"
+               type="application/x-shockwave-flash"
+               class="myPlugin"/&gt;
+
+         &lt;param name="quality" value="high"/&gt;
+         &lt;param name="salign" value="tl"/&gt;
+         &lt;param name="menu" value="0"/&gt;
+
+          &lt;object type="*" class="myPlugin"&gt;
+            &lt;param name="pluginspage"
+                   value="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"/&gt;
+          &lt;/object&gt;
+
+       &lt;/object&gt;
+&lt;/object&gt;
+&lt;/p&gt;&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>最も外側の <code>object</code> 要素は <code>classid</code> を定義しています。一番目の入れ子にされた <code>object</code> は Adobe Flash プラグインを読み込むために <code>type</code> の値 <code>application/x-shockwave-flash</code> を使い、最も内側の <code>object</code> はまだ必要なプラグインを持っていないユーザのためにダウンロードページをさらしています。この入れ子は <code>object</code> 要素の使用法としてはかなりよくあるもので、異なるブラウザに対してコードをフォークするのを避けられます。</p>
+
+<h4 id="Nesting_Rules_for_HTML_Elements" name="Nesting_Rules_for_HTML_Elements">Nesting Rules for HTML Elements</h4>
+
+<p>The rules for descending into nested <code>object</code> and <code>embed</code> elements are as follows:</p>
+
+<ul>
+ <li>The browser looks at the MIME type of the top element. If it knows how to deal with that MIME type (i.e., by loading a plug-in that's been registered for it), then it does so.</li>
+ <li>If the browser cannot handle the MIME type, it looks in the element for a pointer to a plug-in that can be used to handle that MIME type. The browser downloads the requested plug-in.</li>
+ <li>If the MIME type is unknown and there is no reference to a plug-in that can be used, the browser descends into the child element, where these rules for handling MIME types are repeated.</li>
+</ul>
+
+<p>The rest of this section is a brief introduction to this HTML element. For more information on the <code>object</code> element and other elements used for plug-in display, see <a class="external" href="http://www.w3.org/TR/html401/struct/objects.html">W3C HTML 4.01 specification</a>.</p>
+
+<p>To embed a variety of object types in an HTML page, use the <code>object</code> element.</p>
+
+<pre>&lt;object
+  classid="classFile"
+  data="dataLocation"
+  codebase="classFileDir"
+  type="MIMEtype"
+  align="alignment"
+  height="pixHeight"
+  width="pixWidth"
+  id="name"
+ &gt;
+
+...
+
+&lt;/object&gt;
+</pre>
+
+<p>The first set of <code>object</code> element attributes are URLs.</p>
+
+<ul>
+ <li><code>classid</code> is the <code>URL</code> of the specific object implementation. This attribute is similar to the <code>code</code> attribute of the <code>applet</code> element. Though Gecko does not support this <code>object</code> attribute, you can nest <code>object</code> elements with different attributes to use the <code>object</code> element for embedding plug-ins on any browser platform (see the example above).</li>
+ <li><code>data</code> represents the <code>URL</code> of the object's data; this is equivalent to the <code>src</code> attribute of <code>embed</code>.</li>
+ <li><code>codebase</code> represents the <code>URL</code> of the plug-in; this is the same as the <code>codebase</code> attribute of the <code>applet</code> element. For plug-ins, <code>codebase</code> is the same as <code>pluginspace</code>.</li>
+ <li><code>type</code> represents the MIME type of the plug-in; this is the same as the <code>type</code> attribute of <code>embed</code>.</li>
+ <li><code>height</code>, <code>width</code>, <code>align</code> are basic <code>img/embed/applet</code> attributes supported by <code>object</code>. <code>height</code> and <code>width</code> are required for <code>object</code> elements that resolve to <code>embed</code> elements.</li>
+ <li>Use the <code>id</code> attribute, which specifies the name of the plug-in, if the plug-in is communicating with JavaScript. This is equivalent to the <code>name</code> attribute of <code>applet</code> and <code>embed</code>. It must be unique.</li>
+</ul>
+
+<h4 id="Using_the_Appropriate_Attributes" name="Using_the_Appropriate_Attributes">Using the Appropriate Attributes</h4>
+
+<p>It's up to you to provide enough attributes and to make sure that they do not conflict; for example, the values of <code>width</code> and <code>height</code> may be wrong for the plug-in. Otherwise, the plug-in cannot be embedded.</p>
+
+<p>Gecko interprets the attributes as follows: When the browser encounters an <code>object</code> element, it goes through the element attributes, ignoring or parsing as appropriate. It analyzes the attributes to determine the object type, then determines whether the browser can handle the type.</p>
+
+<ul>
+ <li>If the browser can handle the type-that is, if a plug-in exists for that type-then all elements and attributes up to the closing <code>&lt;/object&gt;</code> element, except <code>param</code> elements and other <code>object</code> elements, are filtered.</li>
+ <li>If the browser cannot handle the type, or cannot determine the type, it cannot embed the object. Subsequent HTML is parsed as normal.</li>
+</ul>
+
+<h4 id="Using_the_embed_Element_for_Plug-in_Display" name="Using_the_embed_Element_for_Plug-in_Display">Using the <code>embed</code> Element for Plug-in Display</h4>
+
+<p>A plug-in runs in an HTML page in a browser window. The HTML author uses the HTML <code>embed</code> element to invoke the plug-in and control its display. Though the <code>object</code> element is the preferred way to invoke plug-ins (see <a href="/ja/docs/Gecko_Plugin_API_Reference/Plug-in_Basics#Using_the_object_Element_for_Plug-in_Display">Using the object Element for Plug-in Display</a>), the <code>embed</code> element can be used for backward compatibility with Netscape 4.x browsers, and in cases where you specifically want to prompt the user to install a plug-in, because the default plug-in is only automatically invoked when you use the <code>embed</code> element.</p>
+
+<p>Gecko loads an embedded plug-in when the user displays an HTML page that contains an embedded object whose MIME type is registered by a plug-in. Plug-ins are embedded in much the same way as GIF or JPEG images are, except that a plug-in can be live and respond to user events, such as mouse clicks.</p>
+
+<p>The <code>embed</code> element has the following syntax and attributes:</p>
+
+<pre>&lt;embed
+  src="location"
+  type="mimetype"
+  pluginspage="instrUrl"
+  pluginurl="pluginUrl"
+  align="left"|"right"|"top"|"bottom"
+  border="borderWidth"
+  frameborder="no"
+  height="height"
+  width="width"
+  units="units"
+  hidden="true|false"
+  hspace="horizMargin"
+  vspace="vertMargin"
+  name="pluginName"
+  palette="foreground"|"background"
+ &gt;
+
+...
+
+&lt;/embed&gt;
+</pre>
+
+<p>You must include either the <code>src</code> attribute or the <code>type</code> attribute in an <code>embed</code> element. If you do not, then there is no way of determing the media type, and so no plug-in loads.</p>
+
+<p>The <code>src</code> attribute is the <code>URL</code> of the file to run. The <code>type</code> attribute specifies the MIME type of the plug-in needed to run the file. Navigator uses either the value of the <code>type</code> attribute or the suffix of the filename given as the source to determine which plug-in to use.</p>
+
+<p>Use <code>type</code> to specify the media type or MIME type necessary to display the plug-in. It is good practice to include the MIME type in all the plug-in HTML elements. You can use <code>type</code> for a plug-in that requires no data, for example, a plug-in that draws an analog clock or fetches all of its data dynamically. For a visible plug-in, you must include <code>width</code> and <code>height</code> if you use <code>type</code>; no default value is used.</p>
+
+<p>The <code>pluginurl</code> attribute is the URL of the plug-in or of the XPI in which the plug-in is stored (see <a href="/ja/docs/Gecko_Plugin_API_Reference/Plug-in_Development_Overview#Installing_Plug-ins">Installing Plug-ins</a> for more information on the XPI file format).</p>
+
+<p>The <code>embed</code> element has a number of attributes that determine the appearance and size of the plug-in instance, including these:</p>
+
+<ul>
+ <li>The <code>border</code> and <code>frameborder</code> attributes specify the size of a border for the plug-in or draw a borderless plug-in</li>
+ <li><code>height</code>, <code>width</code>, and <code>units</code> determine the size of the plug-in in the HTML page. If the plug-in is not hidden, the <code>height</code> and <code>width</code> attributes are required.</li>
+ <li><code>hspace</code> and <code>vspace</code> create a margin of the specified width, in pixels, around the plug-in.</li>
+ <li><code>align</code> specifies the alignment for the plug-in relative to the web page.</li>
+</ul>
+
+<p>Use the <code>hidden</code> attribute if you do not want the plug-in to be visible. In this case, you do not need the attributes that describe plug-in appearance. In fact, <code>hidden</code> overrides those attributes if they are present.</p>
+
+<p>Use the <code>name</code> attribute, which specifies the name of the plug-in or plug-in instance, if the plug-in is communicating with JavaScript.</p>
+
+<p>For example, this <code>embed</code> element loads a picture with the imaginary data type dgs.</p>
+
+<pre>&lt;embed src="mypic.dgs" width="320" height="200" border="25" align="right"&gt;
+</pre>
+
+<p>Gecko interprets the attributes as follows:</p>
+
+<ul>
+ <li><code>src</code>: Load the data file and determine the MIME type of the data.</li>
+ <li><code>width</code> and <code>height</code>: Set the area of the page handled by the plug-in to 320 by 200 pixels. In general, use CSS to control the size and location of elements within an HTML page.</li>
+ <li><code>border</code>: Draw a border 25 pixels wide around the plug-in.</li>
+ <li><code>align</code>: Align the plug-in at the right side of the web page.</li>
+</ul>
+
+<p>The following example shows an <code>embed</code> element nested within an <code>object</code> element, which latter is necessary for browsers that do not support the <code>embed</code> element.</p>
+
+<p>Example 2: <code>embed</code> within <code>object</code></p>
+
+<pre>&lt;object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+   codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,30,0"
+   width="749" height="68"&gt;
+
+ &lt;param name="movie" value="foo.swf"&gt;
+ &lt;param name="quality" value="high"&gt;
+ &lt;param name="bgcolor" value="#EEEEEE"&gt;
+ &lt;param name="salign" value="tl"&gt;
+ &lt;param name="menu" value="0"&gt;
+
+ &lt;embed src="foo.swf"
+   quality="high" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"
+   type="application/x-shockwave-flash"
+   width="749"
+   height="68"
+   bgcolor="#EEEEEE"
+   salign="tl"
+   menu="0"&gt;
+
+ &lt;/embed&gt;
+
+&lt;/object&gt;
+</pre>
+
+<h4 id="Using_Custom_embed_Attributes" name="Using_Custom_embed_Attributes">Using Custom <code>embed</code> Attributes</h4>
+
+<p>In addition to these standard attributes, you can create private, plug-in-specific attributes and use them in the <code>embed</code> attribute to pass extra information between the HTML page and the plug-in code. The browser ignores these nonstandard attributes when parsing the HTML, but it passes all attributes to the plug-in, allowing the plug-in to examine the list for any private attributes that could modify its behavior.</p>
+
+<p>For example, a plug-in that displays video could have private attributes that determine whether to start the plug-in automatically or loop the video automatically on playback, as in the following <code>embed</code> element:</p>
+
+<pre>&lt;embed src="myavi.avi" width="100" height="125" autostart="true" loop="true"&gt;
+</pre>
+
+<p><br>
+ With this <code>embed</code> element, Gecko passes the values to the plug-in, using the arg parameters of the <code>NPP_New</code> call that creates the plug-in instance.</p>
+
+<pre class="eval">argc = 5
+argn = {"src", "width", "height", "autostart", "loop"}
+argv = {"movie.avi", "100", "125", "true", "true"}
+</pre>
+
+<p>Gecko interprets the attributes as follows:</p>
+
+<ul>
+ <li><code>src</code>: Load the data file and determine the MIME type of the data.</li>
+ <li><code>width</code> and <code>height</code>: Set the area of the page handled by the plug-in to 100 by 125 pixels.</li>
+ <li><code>autostart</code> and <code>loop</code>: Ignore these private attributes and pass them along to the plug-in with the rest of the attributes.</li>
+</ul>
+
+<p>The plug-in must scan its list of attributes to determine whether it should automatically start the video and loop it on playback. Note that with an <code>object</code> element, <code>param</code> values are also sent in this array after the attributes, separated by a <code>param</code> entry.</p>
+
+<h3 id=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.83.AA.E3.83.95.E3.82.A1.E3.83.AC.E3.83.B3.E3.82.B9" name=".E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3.E3.83.AA.E3.83.95.E3.82.A1.E3.83.AC.E3.83.B3.E3.82.B9">プラグインリファレンス</h3>
+
+<ul>
+ <li><a class="external" href="http://www.mozilla.org/projects/plugins/">Mozilla プラグインプロジェクトのページ</a></li>
+ <li><a class="external" href="http://www.iol.ie/~locka/mozilla/mozilla.htm">Mozilla ActiveX プロジェクト</a></li>
+</ul>
+
+<div class="noinclude">
+<div class="prevnext" style="text-align: right;">
+<p><a href="/ja/docs/Gecko_Plugin_API_Reference:Preface" style="float: left;">« 前のページ</a><a href="/ja/docs/Gecko_Plugin_API_Reference:Plug-in_Development_Overview">次のページ »</a></p>
+</div>
+</div>

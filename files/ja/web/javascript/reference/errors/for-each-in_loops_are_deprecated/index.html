@@ -1,0 +1,168 @@
+---
+title: 'Warning: JavaScript 1.6''s for-each-in loops are deprecated'
+slug: Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated
+tags:
+  - JavaScript
+  - Warning
+translation_of: Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated
+---
+<div>{{jsSidebar("Errors")}}</div>
+
+<h2 id="メッセージ">メッセージ</h2>
+
+<pre class="syntaxbox">Warning: JavaScript 1.6's for-each-in loops are deprecated; consider using ES6 for-of instead
+</pre>
+
+<h2 id="エラータイプ">エラータイプ</h2>
+
+<p>警告</p>
+
+<h2 id="何がうまくいかなかったのか？">何がうまくいかなかったのか？</h2>
+
+<p>JavaScript 1.6 の {{jsxref("Statements/for_each...in", "for each (variable in obj)")}} ステートメントは非推奨で、近い将来削除される予定です。</p>
+
+<h2 id="例">例</h2>
+
+<h3 id="オブジェクトの反復">オブジェクトの反復</h3>
+
+<p>特定のオブジェクトの値を反復するために、{{jsxref("Statements/for_each...in", "for each...in")}} が使用されています。</p>
+
+<h4 id="非推奨の構文">非推奨の構文</h4>
+
+<pre class="brush: js example-bad">var object = { a: 10, b: 20 };
+
+for each (var x in object) {
+  console.log(x);        // 10
+                         // 20
+}
+</pre>
+
+<h4 id="代わりの標準構文">代わりの標準構文</h4>
+
+<p>指定したオブジェクトのキーを反復して、ループ内のそれぞれの値を取得するために、標準の {{jsxref("Statements/for...in", "for...in")}} ループを使用できます：</p>
+
+<pre class="brush: js example-good">var object = { a: 10, b: 20 };
+
+for (var key in object) {
+  var x = object[key];
+  console.log(x);        // 10
+                         // 20
+}
+</pre>
+
+<p>または、{jsxref("Statements/for...of", "for...of")}}（ES2015）と {{jsxref("Object.values")}}（ES2017）を使用して、特定のオブジェクトの配列値を取得して、次のように反復処理できます：</p>
+
+<pre class="brush: js example-good">var object = { a: 10, b: 20 };
+
+for (var x of Object.values(object)) {
+  console.log(x);        // 10
+                         // 20
+}
+</pre>
+
+<h3 id="配列の反復">配列の反復</h3>
+
+<p>{{jsxref("Statements/for_each...in", "for each...in")}} は、特定の配列要素を反復するために使用されていました。</p>
+
+<h4 id="非推奨の構文_2">非推奨の構文</h4>
+
+<pre class="brush: js example-bad">var array = [10, 20, 30];
+
+for each (var x in array) {
+  console.log(x);        // 10
+                         // 20
+                         // 30
+}
+</pre>
+
+<h4 id="代わりの標準構文_2">代わりの標準構文</h4>
+
+<p>{{jsxref("Statements/for...of", "for...of")}}（ES2015）で同様のループができます。</p>
+
+<pre class="brush: js example-good">var array = [10, 20, 30];
+
+for (var x of array) {
+  console.log(x);        // 10
+                         // 20
+                         // 30
+}
+</pre>
+
+<h3 id="null_の可能性がある配列の反復">null の可能性がある配列の反復</h3>
+
+<p>指定した値が <code>null</code> か <code>undefined</code> だった場合、 {{jsxref("Statements/for_each...in", "for each...in")}} は何もしませんが、{{jsxref("Statements/for...of", "for...of")}} は例外をスローします。</p>
+
+<h4 id="非推奨の構文_3">非推奨の構文</h4>
+
+<pre class="brush: js example-bad">function func(array) {
+  for each (var x in array) {
+    console.log(x);
+  }
+}
+func([10, 20]);        // 10
+                       // 20
+func(null);            // prints nothing
+func(undefined);       // prints nothing
+</pre>
+
+<h4 id="代わりの標準構文_3">代わりの標準構文</h4>
+
+<p>{{jsxref("Statements/for_each...in", "for each...in")}} ステートメントを書き換えて、{{jsxref("Statements/for...of", "for...of")}} でも <code>null</code> か <code>undefined</code> を扱えるようにするには、{{jsxref("Statements/for...of", "for...of")}} の周囲をガードする必要があります。</p>
+
+<pre class="brush: js example-good">function func(array) {
+  if (array) {
+    for (var x of array) {
+      console.log(x);
+    }
+  }
+}
+func([10, 20]);        // 10
+                       // 20
+func(null);            // prints nothing
+func(undefined);       // prints nothing
+</pre>
+
+<h3 id="オブジェクトのキーバリューペアを反復する">オブジェクトのキー/バリューペアを反復する</h3>
+
+<h4 id="非推奨の構文_4">非推奨の構文</h4>
+
+<p>{{jsxref("Statements/for_each...in", "for each...in")}} と非推奨の {{jsxref("Iterator")}} オブジェクトを使用した、特定のオブジェクトのキー/バリューペアを反復する非推奨の語彙があります。</p>
+
+<pre class="brush: js example-bad">var object = { a: 10, b: 20 };
+
+for each (var [key, value] in Iterator(object)) {
+  console.log(key, value);  // "a", 10
+                            // "b", 20
+}
+</pre>
+
+<h4 id="代わりの標準構文_4">代わりの標準構文</h4>
+
+<p>指定したオブジェクトのキーを反復して、ループ内のそれぞれの値を取得するために、標準の {{jsxref("Statements/for...in", "for...in")}} ループを使用できます：</p>
+
+<pre class="brush: js example-good">var object = { a: 10, b: 20 };
+
+for (var key in object) {
+  var value = object[key];
+  console.log(key, value);  // "a", 10
+                            // "b", 20
+}
+</pre>
+
+<p>または、{jsxref("Statements/for...of", "for...of")}}（ES2015）と {{jsxref("Object.values")}}（ES2017）を使用して、特定のオブジェクトの配列値を取得して、次のように反復処理できます：</p>
+
+<pre class="brush: js example-good">var object = { a: 10, b: 20 };
+
+for (var [key, value] of Object.entries(object)) {
+  console.log(key, value);  // "a", 10
+                            // "b", 20
+}
+</pre>
+
+<h2 id="関連項目">関連項目</h2>
+
+<ul>
+ <li>{{jsxref("Statements/for...of", "for...of")}}</li>
+ <li>{{jsxref("Object.values")}}</li>
+ <li>{{jsxref("Object.entries")}}</li>
+</ul>

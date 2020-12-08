@@ -1,0 +1,209 @@
+---
+title: Firefox OS style guide
+slug: Archive/B2G_OS/UX/Style_guide
+tags:
+  - Apps
+  - Design
+  - Firefox OS
+  - Firefox OS UX
+  - UX
+  - Writing
+  - copy
+translation_of: Archive/B2G_OS/Firefox_OS_apps/Copy_styleguide
+---
+<div class="summary">
+<p>このガイドは、Firefox OSアプリのコピーを書くために守るルールを概説しますが、アプリのインターフェイス用に良いコピーを書くための一般的なガイドとしても使えます。</p>
+</div>
+
+<article class="approved text-content">
+<div class="boxed translate-rendered">
+<p><span style="font-family: arial; font-size: 13px;">スタイルガイドには英語での内容も含まれており、そのまま翻訳しています。関連するものを選んで適用してください。</span></p>
+
+<h2 id="一般的な用語選択">一般的な用語選択</h2>
+
+<ul>
+ <li><strong>タップ</strong>: 「タップ」の用語を使います。誤り: 「選択」, 「クリック」, 「押下」, など。</li>
+ <li><strong>スペース</strong>: 「ストレージ」ではなく「スペース」を使用してください。</li>
+ <li><strong>電話機</strong>: 電話機専用のことを述べる時に使います。</li>
+ <li><strong>タブレット</strong>: タブレット専用のことを述べる時に使います。</li>
+ <li><strong>モバイル端末</strong>: 電話機とタブレットの両方りのことを述べる時に使います。特定端末の触れるかもしれない時には"モバイル端末"を使わないでください。</li>
+ <li><strong>アプリ</strong>: いつでも アプリケーションではなく、"アプリ" を使います。名詞の一部分でないときには大文字を使わないでください。</li>
+ <li><strong>Please と Thank you</strong>: 英語を書く時にはこれらの言葉は使わないでください。システム通知では、ユーザを邪魔する不必要な長さになることがあります。しかしながら、他の言語で"please" と “thank you” に対応する、ローカル文化に依存するローカル用語の使用は自由です。</li>
+ <li><strong>Firefox Marketplace</strong>: "Firefox Marketplace" が最初に挙がります。 "Marketplace" はそれに続く受け入れ可能なもので、常に大文字化します。また決して Mozilla Marketplace　としないでください。</li>
+ <li><strong>フリー</strong>: この用語は国際化が難しいものです。それは英語で "コストのないもの" と "制限のないもの" の両方だからであり、しかしその他の言葉ではとても難しい意味だからです。全体を通して、使うか避けるかをはっきりとしてください。</li>
+ <li><strong>FxOS</strong>: これは Firefox OS の公式な略称ですが、外部のコミュニケーションに使用すべきではありません。</li>
+ <li><strong>サインイン</strong>: 「サインイン」を使用してください。動詞としては、ハイフンなしでスペースで別れた"Sign in"を使います。大文字化するかはコンテキストに依存します。大文字化の節を見てください。形容詞としては Sign-In を使用します。誤り: Login, Log in, Signin</li>
+ <li><strong>Wi-Fi</strong>: Wi-Fi の綴りは「WiFi」や「wifi」や「wifi」ではなく、WとFを大文字にしてハイフンをつけてた「Wi-Fi」を使用してください。</li>
+ <li><strong>email</strong>: 一語で、小文字で、ハイフンなしです。誤り: E-Mail, Email, など 例外: email が固有名詞でアプリ名として使われる時には、E-Mail の綴りを使うことができます。</li>
+</ul>
+
+<h2 id="フォーマット">フォーマット</h2>
+
+<ul>
+ <li><strong>http://</strong>: は通信のURLの前につけるべきではありません。</li>
+ <li><strong>Web</strong>: 複合語の一部でなければ「Web」の 1 文字目は大文字にしてください。</li>
+ <li><strong>頭字語</strong>: ピリオドなしの大文字を使用します。例外としてブランド名の一部であるとか、その結果別の用語の綴りになる場合を除きます。</li>
+ <li><strong>Internet</strong>: 常に大文字化します。</li>
+ <li><strong>Pancake</strong>:  タブレットのブラウジング機器について述べる時は大文字化し、おいしい朝食の食べ物について述べる時は小文字のままです。</li>
+ <li><strong>Sync</strong>: Firefox の中の機能について語る時は大文字化し、記述用語としてのみ使う場合は小文字のままです。</li>
+ <li><strong>URLs</strong>: 全て大文字で、ピリオドなしです。(頭字語を見よ)</li>
+ <li><strong>Numbers</strong>: 数字を書くのではなく、アラビア数字 (1, 2, 3 など) を使います。千とか100万とか大きな数字は数字を書きます。</li>
+ <li><strong>ファイルサイズの表示</strong>
+  <ul>
+   <li>1 KB 未満の場合の表示は、 &lt;1 KB</li>
+   <li>1 KB 〜 1,023 KB の時の表示は、 357 KB</li>
+   <li>1 MB 〜 1,047 MB の時の表示は、 2.5MB (小数第1位まで)</li>
+   <li>1 GB 以上の時の表示は、 3.8 GB (小数第1位まで)</li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="個別のインターフェイス機能">個別のインターフェイス機能</h2>
+
+<div class="column-container">
+<div class="column-half">
+<ul>
+ <li><strong>タイトル (A)</strong>:
+
+  <ul>
+   <li>センテンスケース (最初の単語と固有名詞の 1 文字目のみ大文字にする記法)。</li>
+   <li>疑問文以外は文末の句読点を省略してください。</li>
+   <li>1 行以内におさめてください。</li>
+   <li>核となる部分は、最初の数語に記載してください。</li>
+  </ul>
+ </li>
+ <li><strong>ボタン (B)</strong>:
+  <ul>
+   <li>タイトルケース (すべての単語の 1 文字目を大文字にする記法)。</li>
+   <li>1 〜 2 語以内におさめてください。</li>
+   <li>ボタンの動作は、明確な動詞で記述してください。例えば「キャンセル」「履歴を消去」「メールを追加」「すべて選択」など。</li>
+  </ul>
+ </li>
+</ul>
+</div>
+
+<div class="column-half">
+<p style="text-align: center;"><img alt="" src="https://mdn.mozillademos.org/files/9353/Writing%20Style1.png" style="max-width: 240px; width: 70%;"></p>
+</div>
+</div>
+
+<div class="column-container">
+<div class="column-half">
+<ul>
+ <li><strong>ダイアログ本文 (C):</strong>
+
+  <ul>
+   <li>センテンスケース (最初の単語と固有名詞の 1 文字目のみ大文字にする記法)。</li>
+  </ul>
+ </li>
+ <li><strong>ダイアログボタン (B):</strong>
+  <ul>
+   <li>タイトルケース (すべての単語の 1 文字目を大文字にする記法)。</li>
+   <li>1 〜 2 語以内におさめてください。</li>
+   <li>ボタンの動作は、上記のように、明確な動詞で記述してください。</li>
+  </ul>
+ </li>
+</ul>
+</div>
+
+<div class="column-half">
+<p style="text-align: center;"><img alt="" src="https://mdn.mozillademos.org/files/9355/Writing%20Style2.png" style="max-width: 240px; width: 70%;"></p>
+</div>
+</div>
+
+<div class="column-container">
+<div class="column-half">
+<ul>
+ <li><strong>リストボタン / リストアイテム (D):</strong>
+
+  <ul>
+   <li>タイトルケース (すべての単語の 1 文字目を大文字にする記法)。</li>
+   <li>副ラベルではセンテンスケース (最初の単語と固有名詞の 1 文字目のみ大文字にする記法)。</li>
+   <li>1 〜 2 語以内におさめてください。</li>
+   <li>それぞれの文末が、宣言文や疑問文になるよう厳密に守ってください。Firefox OS インターフェイス内のリストでは、絶対に必要な場合を除き、厳密に守る必要はありません。</li>
+  </ul>
+ </li>
+</ul>
+</div>
+
+<div class="column-half">
+<p style="text-align: center;"><img alt="" src="https://mdn.mozillademos.org/files/9357/Writing%20Style3.png" style="max-width: 240px; width: 70%;"></p>
+</div>
+</div>
+
+<div class="column-container">
+<div class="column-half">
+<ul>
+ <li><strong>値選択リスト (E):</strong>
+
+  <ul>
+   <li>センテンスケース (最初の単語と固有名詞の 1 文字目のみ大文字にする記法)。</li>
+   <li>1 〜 2 語以内におさめてください。</li>
+   <li>文末の句読点なし。</li>
+  </ul>
+ </li>
+</ul>
+</div>
+
+<div class="column-half">
+<p style="text-align: center;"><img alt="" src="https://mdn.mozillademos.org/files/9359/Writing%20Style4.png" style="max-width: 240px; width: 70%;"></p>
+</div>
+</div>
+
+<ul>
+ <li><strong>フォーム:</strong>
+
+  <ul>
+   <li>ネガティブボタンは左に、ポシティブボタンは右に配置してください。</li>
+   <li>汎用的なラベルは「キャンセル」と「OK」です。</li>
+  </ul>
+ </li>
+ <li><strong>タブ / フィルタ</strong>: タイトルケースで、文末の制限なしで扱われます。1 〜 2 語以内におさめてください。</li>
+ <li><strong>ステータス通知 / 確認 / バナー</strong>: センテンスケースで、疑問文以外では文末の句読点を避けます。</li>
+</ul>
+
+<h2 id="文法">文法</h2>
+
+<ul>
+ <li><strong>ダッシュ</strong>: ハイフン (-) は、2つ以上の言葉から成るアイデアを作る時に使われ、常に接続されます。エンダッシュ (–) は数字や日付といった範囲に使われ、これも接続されます。エムダッシュ (—) は関連づけるために使われますが、概念同士を分けます。これは文章内や続く文章の両方、また接続される/されない場合ともに当てはまります。</li>
+ <li><strong>感嘆符</strong>: 使ってもOKですが、使いすぎないで。</li>
+ <li>プレーンクォートではなくスマートクォートを (“このように”) 使用してください。一般的に句読点はクオート記号の中に付け、感嘆符と疑問符もそうします。例外として感嘆符や疑問符が単にクオート記号内の一部分ではなく、文全体にかかる場合を除きます。</li>
+ <li><strong>スラッシュ</strong>: URL では、前向きのスラッシュ “/” を使います … バックスラッシュ “\” ではなく。</li>
+ <li><strong>文末の句読点</strong>: Firefox OS 文章の全ての場合で使います。疑問文や、一緒に繋がった複数の文を除いて、OS自体の多くの場合は使用を避けます。</li>
+ <li><strong>タイトルケース</strong>: タイトルケースは、各単語の最初の文字を大文字化するものです。内容が疑問文形式である場合を除き、句読点は必要でありません。アラビア語のように、タイトルケースを用いない言語があるのに留意してください。作業している言語にとってタイトルケースが適切である場合にのみ使用してください。</li>
+ <li><strong>センテンスケース</strong>: センテンスケースは、最初の単語の最初の文字と、固有名詞のみ大文字化します。センテンスケースを用いない言語があるのに留意してください。作業している言語にとってセンテンスケースが適切である場合にのみ使用してください。</li>
+ <li><strong>大文字化</strong>:
+  <ul>
+   <li>タイトルと副タイトル/副ヘッダ: タイトルケースを使います。</li>
+   <li>アクションボタン: タイトルケースを使います。</li>
+   <li>リストボタン / リスト項目: ラベルにはタイトルケースを使います副ラベルにはセンテンスケースを使います。</li>
+   <li>タブ / フィルタ: タイトルケースを使います。</li>
+   <li>値選択リスト: センテンスケースを使います。</li>
+   <li>アプリ名: アプリケーション名はタイトルケースで表示されますが、個々のセッティングやモードは小文字で表示されます。</li>
+   <li>ステータス通知: センテンスケースを使います。</li>
+   <li>ヘッダ: タイトルケースを使います。</li>
+   <li>本文の中身:  センテンスケースを使います。</li>
+  </ul>
+ </li>
+ <li>縮約系: 縮約系は使用可能で、もっと人間らしい経験を提供ために推奨されます。</li>
+</ul>
+
+<h2 id="一般的なスタイルのベストプラクティス">一般的なスタイルのベストプラクティス</h2>
+
+<ul>
+ <li><strong>俗語</strong>: 技術的な俗語を避けます。</li>
+ <li><strong>カンマ</strong>: Mozilla の通信ではシリアル・カンマ (別名 オックスフォード・カンマ) は使いません。</li>
+ <li><strong>簡潔なエラー説明</strong>: そのときの状況や、ユーザが解決するためにできることを、簡潔に説明するようにしてください。</li>
+ <li><strong>ユーザの指定</strong>: たいていの状況で「あなた」「あなたが」といった表現は避けてください。ユーザとデバイスの境界は区別してください。 例えば、「あなたの画像は削除されました」の代わりに「画像は削除されました」と言います。</li>
+ <li><strong>アプリについての記事</strong>: アプリケーション名の前に冠詞を付けないでください。例えば「Take photos with the Camera」ではなく「Take photos with Camera」を使用してください。</li>
+</ul>
+</div>
+</article>
+
+<ul>
+</ul>
+
+<h2 id="Display_of_file_size_units" name="Display_of_file_size_units"> </h2>
+
+<ul>
+</ul>

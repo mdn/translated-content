@@ -1,0 +1,22 @@
+---
+title: XPIDL
+slug: Mozilla/Tech/XPIDL
+tags:
+  - XPCOM
+translation_of: Mozilla/Tech/XPIDL
+---
+<p><strong>XPIDL</strong> est un langage de description d'interfaces utilisé pour spécifier les classes de l'interface <a href="/fr/XPCOM" title="fr/XPCOM">XPCOM</a>.</p>
+<p>Les langages de description d'interfaces (IDL) sont utilisés pour décrire des interfaces d'une manière indépendante d'un langage et d'une machine. Les IDL permettent de définir des interfaces qui peuvent alors être employées par des outils pour générer automatiquement des spécifications d'interfaces propres à un langage donné.</p>
+<p>Un de ces outils est <a href="/fr/XPIDL:xpidl" title="fr/XPIDL/xpidl">xpidl</a>, utilisé pour générer des fichiers d'en-têtes C++, des informations typelib et plusieurs autres choses.</p>
+<h2 id=".C3.89criture_de_fichiers_interface_XPIDL" name=".C3.89criture_de_fichiers_interface_XPIDL">Écriture de fichiers interface XPIDL</h2>
+<p>XPIDL ressemble fortement à <a class="external" href="http://www.omg.org/gettingstarted/omg_idl.htm">OMG IDL</a> avec une syntaxe étendue pour traiter les IID et des types supplémentaires. Quelques exemples sont disponibles dans les répertoires <a class="external" href="http://lxr.mozilla.org/mozilla/source/xpcom/base">xpcom/base</a> et <a class="external" href="http://lxr.mozilla.org/mozilla/source/xpcom/ds">xpcom/ds</a> des sources de Mozilla.</p>
+<ul>
+  <li><a class="external" href="http://www.mozilla.org/scriptable/xpidl/syntax.html">syntaxe XPIDL</a> (non à jour)</li>
+  <li><a href="/fr/XPIDL/Syntaxe" title="fr/XPIDL/Syntaxe">XPIDL:Syntaxe</a> <small>(<a href="/en/XPIDL/Syntax">en:XPIDL:Syntax</a></small>) (XPIDL <a class="external" href="http://en.wikipedia.org/wiki/Extended_Backus-Naur_form">EBNF</a>)</li>
+  <li><a class="external" href="http://www.mozilla.org/scriptable/xpidl/idl-authors-guide/index.html">XPIDL Author's Guide</a> (globalement à jour)</li>
+</ul>
+<h2 id="Ressources" name="Ressources">Ressources</h2>
+<ul>
+  <li><a class="external" href="http://www.mozilla.org/scriptable/xpidl/notes/">Quelques notes non triées</a> dont <a class="external" href="http://www.mozilla.org/scriptable/xpidl/notes/keywords.txt">une liste de mots clés</a>.</li>
+  <li><a href="/fr/XPIDL/xpidl" title="fr/XPIDL/xpidl">xpidl</a> est un outil pour générer des entêtes C++, des interfaces Java, des typelibs <a href="/fr/XPConnect" title="fr/XPConnect">XPConnect</a>, et de la documentation HTML à partir de fichiers XPIDL.</li>
+</ul>
